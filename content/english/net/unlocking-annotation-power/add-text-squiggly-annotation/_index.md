@@ -113,22 +113,22 @@ In conclusion, Groupdocs.Annotation for .NET provides developers with a robust s
 
 ## FAQ's
 
-### Q: Can Groupdocs.Annotation support annotation on various file formats?##
+### Q: Can Groupdocs.Annotation support annotation on various file formats?
 
 A: Yes, Groupdocs.Annotation supports annotation on a wide range of file formats, including PDFs, Word documents, Excel sheets, and more.
 
-### Q: Is Groupdocs.Annotation compatible with both desktop and web applications?##
+### Q: Is Groupdocs.Annotation compatible with both desktop and web applications?
 
 A: Absolutely! Groupdocs.Annotation can be seamlessly integrated into both desktop and web applications, offering flexibility and versatility.
 
-### Q: Are there any licensing options available for Groupdocs.Annotation?##
+### Q: Are there any licensing options available for Groupdocs.Annotation?
 
 A: Yes, Groupdocs.Annotation offers flexible licensing options tailored to suit individual or enterprise needs, including temporary licenses for trial purposes.
 
-### Q: Can annotations created using Groupdocs.Annotation be customized?##
+### Q: Can annotations created using Groupdocs.Annotation be customized?
 
 A: Certainly! Groupdocs.Annotation provides extensive customization options for annotations, allowing developers to tailor annotations to their specific requirements.
 
-### Q: Does Groupdocs.Annotation offer support and documentation for developers?##
+### Q: Does Groupdocs.Annotation offer support and documentation for developers?
 
 A: Indeed! Groupdocs.Annotation provides comprehensive documentation and dedicated support forums to assist developers in utilizing its features effectively.
