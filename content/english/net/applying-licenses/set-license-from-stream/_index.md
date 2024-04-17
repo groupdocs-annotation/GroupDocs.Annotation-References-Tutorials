@@ -1,11 +1,11 @@
 ---
-title: Set License from Stream - GroupDocs.Annotation .NET
-linktitle: Set License from Stream - GroupDocs.Annotation .NET
+title: Set License from Stream
+linktitle: Set License from Stream
 second_title: GroupDocs.Annotation .NET API
 description: Unlock the full potential of document annotation in .NET with GroupDocs.Annotation. Follow our step-by-step guide for seamless integration.
 type: docs
 weight: 11
-url: /net/applying-licenses/set-license-from-stream-groupdocs-annotation-dotnet/
+url: /net/applying-licenses/set-license-from-stream/
 ---
 ## Introduction
 Welcome to the comprehensive guide on using GroupDocs.Annotation for .NET to enhance your document annotation capabilities. Whether you're a seasoned developer or just starting out, this tutorial will walk you through each step, ensuring you harness the full potential of this powerful tool.

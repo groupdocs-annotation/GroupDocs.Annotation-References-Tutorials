@@ -1,11 +1,11 @@
 ---
-title: Set Metered License - GroupDocs.Annotation .NET
-linktitle: Set Metered License - GroupDocs.Annotation .NET
+title: Set Metered License
+linktitle: Set Metered License
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to set up a metered license for GroupDocs.Annotation .NET to resource usage and document annotation capabilities in your .NET applications.
 type: docs
 weight: 12
-url: /net/applying-licenses/set-metered-license-groupdocs-annotation-dotnet/
+url: /net/applying-licenses/set-metered-license/
 ---
 ## Introduction
 GroupDocs.Annotation for .NET is a powerful library that empowers developers to add document annotation capabilities to their .NET applications effortlessly. Whether you're building a document management system, collaboration platform, or any application that involves document review and markup, GroupDocs.Annotation for .NET provides a comprehensive set of tools to streamline the process.
