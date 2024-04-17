@@ -30,7 +30,7 @@ using GroupDocs.Annotation.Options;
 ## Step 1: Define Output Path
 Specify the output path where the annotated document will be saved:
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Step 2: Initialize Annotator
 Create an instance of the `Annotator` class, passing the document filename as a parameter:

@@ -32,7 +32,7 @@ Now that we have set up our development environment and imported the required na
 ## Step 1: Initialize Preview Options
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(
-    pageNumber => new FileStream(Path.Combine(Constants.GetOutputDirectoryPath(), $"cells_page{pageNumber}.png"), FileMode.Create),
+    pageNumber => new FileStream(Path.Combine("Your Document Directory", $"cells_page{pageNumber}.png"), FileMode.Create),
     (number, stream) => stream.Dispose()
 );
 ```
@@ -50,7 +50,7 @@ using (Annotator annotator = new Annotator("input.xlsx"))
 ```
 ## Step 4: Display Success Message
 ```csharp
-Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {Constants.GetOutputDirectoryPath()}.");
+Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {"Your Document Directory"}.");
 ```
 
 ## Conclusion

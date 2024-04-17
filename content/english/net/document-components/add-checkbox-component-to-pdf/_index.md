@@ -27,7 +27,7 @@ using GroupDocs.Annotation.Options;
 Now, let's break down the example into multiple steps:
 ## Step 1: Define Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 Here, we define the output path where the modified PDF document will be saved.
 ## Step 2: Initialize Annotator

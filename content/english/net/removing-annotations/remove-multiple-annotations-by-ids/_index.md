@@ -28,7 +28,7 @@ using GroupDocs.Annotation.Options;
 
 ## Step 1: Define the Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 In this step, we define the path where the modified document with removed annotations will be saved.
 ## Step 2: Instantiate Annotator Object

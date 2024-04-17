@@ -32,7 +32,7 @@ using Point = GroupDocs.Annotation.Models.Point;
 ```
 ## Step 1: Define Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 Here, we define the output path where the annotated document will be saved.
 ## Step 2: Initialize Annotator

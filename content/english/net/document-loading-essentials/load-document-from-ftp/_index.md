@@ -29,7 +29,7 @@ Now, let's delve into the process of loading a document from FTP and adding anno
 ## Step 1: Define Output Path
 Specify the output path where the annotated document will be saved.
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Step 2: Load Document from FTP
 Retrieve the document from the FTP server using the provided file path.

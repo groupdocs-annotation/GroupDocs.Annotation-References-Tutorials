@@ -31,7 +31,7 @@ using GroupDocs.Annotation.Options;
 Now that you have the prerequisites in place and the necessary namespaces imported, let's dive into annotating a password-protected document using GroupDocs.Annotation for .NET. Below is a step-by-step guide to help you accomplish this task:
 ## Step 1: Load the Document
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 LoadOptions loadOptions = new LoadOptions() { Password = "1234" };
 ```
 In this step, we define the output path for the annotated document and specify the load options, including the password required to open the password-protected document.

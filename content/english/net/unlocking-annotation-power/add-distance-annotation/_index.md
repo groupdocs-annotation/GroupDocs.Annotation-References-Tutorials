@@ -86,7 +86,7 @@ annotator.Add(distance);
 Save the annotated document to the desired location on your system.
 
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 annotator.Save(outputPath);
 ```
 

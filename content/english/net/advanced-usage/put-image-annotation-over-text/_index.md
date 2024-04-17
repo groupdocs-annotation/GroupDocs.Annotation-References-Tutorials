@@ -29,7 +29,7 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 ## Step 1: Define Output Path
 First, define the output path where the annotated document will be saved:
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "annotated_document.pdf");
+string outputPath = Path.Combine("Your Document Directory", "annotated_document.pdf");
 ```
 ## Step 2: Initialize Annotator
 Initialize the `Annotator` object by providing the input document path:

@@ -29,7 +29,7 @@ using System.Net;
 To annotate a PDF document from a URL, follow these steps:
 ### Step 1.1: Define Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ### Step 1.2: Specify URL
 ```csharp

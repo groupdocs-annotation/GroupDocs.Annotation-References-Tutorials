@@ -37,7 +37,7 @@ Define the preview options, including the desired page resolution and format. Ad
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
-        var pagePath = Path.Combine(Constants.GetOutputDirectoryPath(), $"result_with_resolution_{pageNumber}.png");
+        var pagePath = Path.Combine("Your Document Directory", $"result_with_resolution_{pageNumber}.png");
         return File.Create(pagePath);
     });
 ```
@@ -55,7 +55,7 @@ Utilize the GeneratePreview method to generate previews for the document based o
 ## Step 5: Display Success Message
 Inform the user about the successful generation of document previews and provide the output directory path for reference.
 ```csharp
-    Console.WriteLine($"\nDocument preview with resolution generated successfully.\nCheck output in {Constants.GetOutputDirectoryPath()}.");
+    Console.WriteLine($"\nDocument preview with resolution generated successfully.\nCheck output in {"Your Document Directory"}.");
 }
 ```
 

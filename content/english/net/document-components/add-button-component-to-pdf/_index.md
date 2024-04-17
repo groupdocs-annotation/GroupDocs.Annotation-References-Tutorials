@@ -27,7 +27,7 @@ using GroupDocs.Annotation.Options;
 ```
 ## Step 1: Initialize Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Step 2: Add Button Component
 ```csharp

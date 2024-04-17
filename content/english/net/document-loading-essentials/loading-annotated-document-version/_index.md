@@ -33,7 +33,7 @@ using GroupDocs.Annotation.Options;
 Now that we've covered the prerequisites and namespace imports, let's dive into the step-by-step process of loading annotated document versions using GroupDocs.Annotation for .NET.
 ## Step 1: Define Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Step 2: Specify Load Options
 ```csharp

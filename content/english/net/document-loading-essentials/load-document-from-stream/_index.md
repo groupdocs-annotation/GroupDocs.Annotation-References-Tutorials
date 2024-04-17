@@ -28,7 +28,7 @@ Now, let's break down the annotation process into multiple steps:
 ## Step 1: Load Document from Stream
 Firstly, you need to load the document from a stream. Here's how you can achieve it:
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 using (Annotator annotator = new Annotator(File.OpenRead("input.pdf")))
 {
 ```

@@ -30,7 +30,7 @@ using System.IO;
 ```
 ## Step 1: Define Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 Specify the path where you want to save the modified document after removing replies.
 ## Step 2: Load Document and Annotations

@@ -32,7 +32,7 @@ To annotate a document stored in Azure Blob Storage, follow these steps:
 ### Step 1: Set Output Path
 Define the output path where the annotated document will be saved.
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ### Step 2: Download Document
 Retrieve the document from Azure Blob Storage by invoking the `DownloadFile` method.

@@ -37,7 +37,7 @@ Now, let's walk through the process of removing annotations from a document usin
 First, define the output path where the document with removed annotations will be saved. You can use the `Path.Combine` method to combine the directory path with the output file name.
 
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
 ## Step 2: Initialize Annotator

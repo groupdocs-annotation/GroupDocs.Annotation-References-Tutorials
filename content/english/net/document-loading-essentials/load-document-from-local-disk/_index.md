@@ -27,7 +27,7 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 ## Step 1: Load Document from Local Disk
 First, you need to load the document from your local disk. Use the following code snippet:
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```

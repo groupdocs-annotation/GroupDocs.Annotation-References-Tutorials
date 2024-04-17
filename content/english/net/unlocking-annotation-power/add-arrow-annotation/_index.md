@@ -27,7 +27,7 @@ using GroupDocs.Annotation.Options;
 ## Step 1: Initialize Annotator
 Initialize the annotator by providing the input document file path.
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```

@@ -52,7 +52,7 @@ annotator.Update(annotations);
 ## Step 5: Save Document
 Save the document with the modified annotations to the desired location.
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 annotator.Save(outputPath);
 ```
 ## Step 6: Display Confirmation

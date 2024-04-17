@@ -37,7 +37,7 @@ Now, let's break down the process of adding a watermark annotation into multiple
 First, we need to define the output path where the annotated document will be saved. We'll use the `Path` class from `System.IO` namespace to combine the output directory path with the filename.
 
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
 ## Step 2: Initialize Annotator

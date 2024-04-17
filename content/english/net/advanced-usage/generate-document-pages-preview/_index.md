@@ -33,7 +33,7 @@ Initialize the Annotator object by providing the path to the input PDF file.
 using (Annotator annotator = new Annotator("input.pdf"))
 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 {
-    var pagePath = Path.Combine(Constants.GetOutputDirectoryPath(), $"result_{pageNumber}.png");
+    var pagePath = Path.Combine("Your Document Directory", $"result_{pageNumber}.png");
     return File.Create(pagePath);
 });
 ```

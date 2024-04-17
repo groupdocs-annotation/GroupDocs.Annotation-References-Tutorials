@@ -31,7 +31,7 @@ using System.IO;
 Now, let's walk through the process of loading a document from an Amazon S3 bucket and annotating it using Groupdocs.Annotation for .NET.
 ## Step 1: Define Output Path
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Step 2: Specify Document Key
 ```csharp

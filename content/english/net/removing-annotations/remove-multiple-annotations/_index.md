@@ -39,7 +39,7 @@ annotator.Remove(annotator.Get());
 ## Step 3: Save the Document
 After removing the annotations, save the modified document to the desired location.
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 annotator.Save(outputPath);
 ```
 ## Step 4: Display Success Message

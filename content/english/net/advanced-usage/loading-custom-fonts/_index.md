@@ -36,7 +36,7 @@ Define the preview options to specify how the document previews will be generate
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 {
-    var pagePath = Path.Combine(Constants.GetOutputDirectoryPath(), $"result_with_font_{pageNumber}.png");
+    var pagePath = Path.Combine("Your Document Directory", $"result_with_font_{pageNumber}.png");
     return File.Create(pagePath);
 });
 previewOptions.PreviewFormat = PreviewFormats.PNG;
@@ -50,7 +50,7 @@ annotator.Document.GeneratePreview(previewOptions);
 ## Step 4: Display Output Path
 Finally, display a message indicating the successful generation of document previews along with the output directory path:
 ```csharp
-Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {Constants.GetOutputDirectoryPath()}.");
+Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {"Your Document Directory"}.");
 ```
 
 ## Conclusion

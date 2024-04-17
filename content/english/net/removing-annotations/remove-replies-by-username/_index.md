@@ -29,7 +29,7 @@ using System.IO;
 ## Step 1: Define Output Path
 Begin by specifying the output path where the annotated document will be saved. You can use the `Path.Combine` method to combine directory paths:
 ```csharp
-string outputPath = Path.Combine(Constants.GetOutputDirectoryPath(), "result" + Path.GetExtension("input.pdf"));
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Step 2: Load Annotated Document
 Load the document that contains annotations with replies using the `Annotator` class:
