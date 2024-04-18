@@ -17,7 +17,7 @@ Before diving into the world of annotating documents using GroupDocs.Annotation 
 
 ### 1. Install GroupDocs.Annotation for .NET
 
-Begin by downloading and installing GroupDocs.Annotation for .NET. You can download the latest version from the [official download page](https://releases.groupdocs.com/annotation/net/).
+Begin by downloading and installing GroupDocs.Annotation for .NET. You can download the latest version from the [download page](https://releases.groupdocs.com/annotation/net/).
 
 ## Importing Namespaces
 

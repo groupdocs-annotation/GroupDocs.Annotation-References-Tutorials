@@ -14,11 +14,11 @@ Before diving into the intricacies of using GroupDocs.Annotation for .NET, ensur
 ### 1. .NET Development Environment Setup
 Ensure you have a working .NET development environment set up on your machine. This includes having the .NET SDK installed, along with an Integrated Development Environment (IDE) such as Visual Studio.
 ### Setting up .NET SDK
-1. Visit the official .NET website and download the latest version of the .NET SDK.
+1. Visit the .NET website and download the latest version of the .NET SDK.
 2. Follow the installation instructions provided for your operating system.
 3. Verify the installation by opening a command prompt and typing `dotnet --version`.
 ### 2. GroupDocs.Annotation Installation
-To use GroupDocs.Annotation for .NET, you need to install the necessary packages into your project. You can download the required package from the official GroupDocs website or utilize package managers like NuGet.
+To use GroupDocs.Annotation for .NET, you need to install the necessary packages into your project. You can download the required package from the GroupDocs website or utilize package managers like NuGet.
 ### Installing via NuGet Package Manager
 1. Open your project in Visual Studio.
 2. Right-click on your project in the Solution Explorer and select "Manage NuGet Packages".
