@@ -1,0 +1,83 @@
+---
+title: पीडीएफ दस्तावेज़ में बटन घटक जोड़ें
+linktitle: पीडीएफ दस्तावेज़ में बटन घटक जोड़ें
+second_title: GroupDocs.Annotation .NET API
+description: .NET के लिए Groupdocs.Annotation का उपयोग करके इंटरैक्टिव बटन घटकों के साथ अपने पीडीएफ दस्तावेज़ों को बेहतर बनाएं। निर्बाध एकीकरण के लिए हमारे चरण-दर-चरण ट्यूटोरियल का पालन करें।
+type: docs
+weight: 10
+url: /hi/net/document-components/add-button-component-to-pdf/
+---
+## परिचय
+इस ट्यूटोरियल में, हम आपको .NET के लिए Groupdocs.Annotation का उपयोग करके एक पीडीएफ दस्तावेज़ में एक बटन घटक जोड़ने की प्रक्रिया के बारे में मार्गदर्शन करेंगे। यह चरण-दर-चरण मार्गदर्शिका यह सुनिश्चित करेगी कि आप इस सुविधा को अपने प्रोजेक्ट में आसानी से एकीकृत कर सकें।
+## आवश्यक शर्तें
+शुरू करने से पहले, सुनिश्चित करें कि आपके पास निम्नलिखित आवश्यक शर्तें हैं:
+1.  .NET के लिए Groupdocs.Annotation: सुनिश्चित करें कि आपने .NET लाइब्रेरी के लिए Groupdocs.Annotation स्थापित किया है। आप इसे यहां से डाउनलोड कर सकते हैं[यहाँ](https://releases.groupdocs.com/annotation/net/).
+2. विकास परिवेश: .NET फ्रेमवर्क स्थापित करके एक उपयुक्त विकास परिवेश स्थापित करें।
+
+## नामस्थान आयात करें
+आगे बढ़ने से पहले, अपने प्रोजेक्ट में आवश्यक नामस्थान आयात करें:
+```csharp
+using System;
+using System.Collections.Generic;
+using System.IO;
+using GroupDocs.Annotation.Models;
+using GroupDocs.Annotation.Models.AnnotationModels;
+using GroupDocs.Annotation.Models.FormatSpecificComponents.Pdf;
+using GroupDocs.Annotation.Options;
+```
+## चरण 1: आउटपुट पथ आरंभ करें
+```csharp
+string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
+```
+## चरण 2: बटन घटक जोड़ें
+```csharp
+using (Annotator annotator = new Annotator("input.pdf"))
+{
+    ButtonComponent button = new ButtonComponent
+    {
+        Box = new Rectangle(100, 100, 100, 100),
+        PenColor = 65535,
+        Style = BorderStyle.Dashed,
+        BorderWidth = 0,
+        BorderColor = 0,
+        AlternateName = "Name",
+        PartialName = "Patial Name",
+        NormalCaption = "Caption",
+        ButtonColor = 16761035,
+        Replies = new List<Reply>
+        {
+            new Reply
+            {
+                Comment = "First comment",
+                RepliedOn = DateTime.Now
+            },
+            new Reply
+            {
+                Comment = "Second comment",
+                RepliedOn = DateTime.Now
+            }
+        }
+    };
+    annotator.Add(button);
+    annotator.Save("result.pdf");
+}
+```
+## चरण 3: आउटपुट पथ प्रदर्शित करें
+```csharp
+Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
+```
+बधाई हो! आपने .NET के लिए Groupdocs.Annotation का उपयोग करके PDF दस्तावेज़ में सफलतापूर्वक एक बटन घटक जोड़ा है।
+
+## निष्कर्ष
+इस ट्यूटोरियल में, हमने दिखाया है कि .NET के लिए Groupdocs.Annotation का उपयोग करके पीडीएफ दस्तावेज़ों में बटन घटकों को कैसे शामिल किया जाए। इन चरणों का पालन करके, आप अपने पीडीएफ दस्तावेज़ों को इंटरैक्टिव सुविधाओं के साथ बढ़ा सकते हैं।
+## अक्सर पूछे जाने वाले प्रश्न
+### क्या मैं बटन का स्वरूप अनुकूलित कर सकता हूँ?
+हां, आप अपनी आवश्यकताओं के अनुसार बटन घटक के आकार, रंग और शैली जैसे विभिन्न गुणों को अनुकूलित कर सकते हैं।
+### क्या .NET के लिए Groupdocs.Annotation सभी PDF संस्करणों के साथ संगत है?
+.NET के लिए Groupdocs.Annotation पीडीएफ संस्करणों की एक विस्तृत श्रृंखला का समर्थन करता है, जो अधिकांश दस्तावेज़ों के साथ संगतता सुनिश्चित करता है।
+### क्या मैं एक ही पीडीएफ दस्तावेज़ में एकाधिक बटन घटक जोड़ सकता हूँ?
+बिल्कुल, आप .NET के लिए Groupdocs.Annotation का उपयोग करके एक पीडीएफ दस्तावेज़ में आवश्यकतानुसार उतने बटन घटक जोड़ सकते हैं।
+### क्या .NET के लिए Groupdocs.Annotation अन्य फ़ाइल स्वरूपों के लिए समर्थन प्रदान करता है?
+हां, पीडीएफ के अलावा, .NET के लिए Groupdocs.Annotation DOCX, PPTX और XLSX सहित कई अन्य दस्तावेज़ प्रारूपों का समर्थन करता है।
+### क्या परीक्षण प्रयोजनों के लिए कोई परीक्षण संस्करण उपलब्ध है?
+ हां, आप .NET के लिए Groupdocs.Annotation के निःशुल्क परीक्षण तक पहुंच सकते हैं[यहाँ](https://releases.groupdocs.com/).
