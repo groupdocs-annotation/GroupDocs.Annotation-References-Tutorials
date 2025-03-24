@@ -3,7 +3,6 @@ title: Dodaj adnotację dotyczącą redakcji tekstu do dokumentu
 linktitle: Dodaj adnotację dotyczącą redakcji tekstu do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje redakcyjne tekstu do dokumentów PDF za pomocą GroupDocs.Annotation dla .NET. Chroń poufne informacje bez wysiłku.
-type: docs
 weight: 23
 url: /pl/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

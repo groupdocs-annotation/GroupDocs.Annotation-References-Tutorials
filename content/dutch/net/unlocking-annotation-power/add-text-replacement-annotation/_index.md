@@ -3,7 +3,6 @@ title: Voeg een annotatie voor tekstvervanging toe aan het document
 linktitle: Voeg een annotatie voor tekstvervanging toe aan het document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u moeiteloos tekstvervangende annotaties aan uw .NET-documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter uw mogelijkheden voor documentmanipulatie.
-type: docs
 weight: 24
 url: /nl/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

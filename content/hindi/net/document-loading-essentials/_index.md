@@ -3,7 +3,6 @@ title: दस्तावेज़ लोड करने की अनिवा
 linktitle: दस्तावेज़ लोड करने की अनिवार्यताएँ
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET का उपयोग करके दस्तावेज़ लोड करने के लिए आवश्यक ट्यूटोरियल खोजें। Amazon S3, Azure, FTP, स्थानीय डिस्क, स्ट्रीम और बहुत कुछ के साथ सहजता से एकीकृत करें।
-type: docs
 weight: 20
 url: /hi/net/document-loading-essentials/
 ---

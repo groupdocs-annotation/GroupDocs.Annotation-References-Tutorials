@@ -3,7 +3,6 @@ title: 使用版本密钥获取注释列表
 linktitle: 使用版本密钥获取注释列表
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation 增强您的 .NET 应用程序以实现无缝文档注释。请遵循我们的分步指南进行有效集成。
-type: docs
 weight: 18
 url: /zh/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ List<AnnotationBase> annotations = annotator.GetVersion("CUSTOM_VERSION");
 ### 我可以购买 GroupDocs.Annotation 的临时许可证用于测试目的吗？
 是的，可以购买临时许可证以方便产品的测试和评估。
 ### 在哪里可以找到 GroupDocs.Annotation for .NET 的综合文档？
-您可以参考 GroupDocs 网站上提供的文档，获取有关使用该产品的详细指导[这里]( https://reference.groupdocs.com/annotation/net/).
+您可以参考 GroupDocs 网站上提供的文档，获取有关使用该产品的详细指导[这里]( https://tutorials.groupdocs.com/annotation/net/).

@@ -3,7 +3,6 @@ title: Genera anteprima senza commenti
 linktitle: Genera anteprima senza commenti
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come integrare perfettamente le funzionalità di annotazione dei documenti nelle tue applicazioni .NET utilizzando GroupDocs.Annotation per .NET.
-type: docs
 weight: 14
 url: /it/net/advanced-usage/generate-preview-without-comments/
 ---

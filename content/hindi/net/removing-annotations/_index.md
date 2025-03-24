@@ -3,7 +3,6 @@ title: एनोटेशन हटाना
 linktitle: एनोटेशन हटाना
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation ट्यूटोरियल्स के साथ .NET में एनोटेशन को कुशलतापूर्वक प्रबंधित करने का तरीका जानें। अपने दस्तावेज़ वर्कफ़्लो को सुव्यवस्थित करें और सहयोग को निर्बाध रूप से बढ़ाएं।
-type: docs
 weight: 25
 url: /hi/net/removing-annotations/
 ---

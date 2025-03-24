@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού περιοχής στο έγγρα�
 linktitle: Προσθήκη σχολιασμού περιοχής στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Βελτιώστε τη συνεργασία του εγγράφου σας με το Groupdocs.Annotation για .NET. Μάθετε πώς να προσθέτετε σχολιασμούς περιοχής βήμα προς βήμα.
-type: docs
 weight: 10
 url: /el/net/unlocking-annotation-power/add-area-annotation/
 ---

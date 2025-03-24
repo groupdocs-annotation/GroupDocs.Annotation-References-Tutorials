@@ -3,7 +3,6 @@ title: Usuń odpowiedzi według identyfikatora w .NET
 linktitle: Usuń odpowiedzi według identyfikatora w .NET
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak usuwać odpowiedzi według identyfikatora w platformie .NET przy użyciu GroupDocs.Annotation. Postępuj zgodnie z naszym samouczkiem krok po kroku, aby efektywnie zarządzać adnotacjami w dokumentach.
-type: docs
 weight: 16
 url: /pl/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ dziedzinie programowania .NET możliwość zarządzania adnotacjami w dokumentac
 ## Warunki wstępne
 Zanim zagłębisz się w samouczek dotyczący usuwania odpowiedzi według identyfikatora w platformie .NET przy użyciu GroupDocs.Annotation, upewnij się, że spełniasz następujące wymagania wstępne:
 ### 1. Instalacja GroupDocs.Adnotation
- Najpierw musisz zainstalować GroupDocs.Annotation dla .NET. Bibliotekę możesz pobrać ze strony[Tutaj](https://releases.groupdocs.com/annotation/net/) i postępuj zgodnie z instrukcjami instalacji zawartymi w dokumentacji[Tutaj](https://reference.groupdocs.com/annotation/net/).
+ Najpierw musisz zainstalować GroupDocs.Annotation dla .NET. Bibliotekę możesz pobrać ze strony[Tutaj](https://releases.groupdocs.com/annotation/net/) i postępuj zgodnie z instrukcjami instalacji zawartymi w dokumentacji[Tutaj](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Podstawowa znajomość C# i .NET
 Aby zapoznać się z przykładami zawartymi w tym samouczku, konieczna jest znajomość języka programowania C# i frameworku .NET.
 ### 3. Dokument z adnotacjami i odpowiedziami

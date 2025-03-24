@@ -3,7 +3,6 @@ title: Eliminar anotaciones en .NET
 linktitle: Eliminar anotaciones en .NET
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a eliminar anotaciones de documentos PDF usando Groupdocs.Annotation en .NET. Simplifique su proceso de gestión de documentos digitales.
-type: docs
 weight: 10
 url: /es/net/removing-annotations/remove-annotations/
 ---

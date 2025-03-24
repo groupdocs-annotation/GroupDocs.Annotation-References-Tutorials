@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci vodoznaku
 linktitle: Přidejte do dokumentu anotaci vodoznaku
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak snadno přidávat anotace vodoznaku do vašich dokumentů pomocí GroupDocs.Annotation pro .NET. Zvyšte srozumitelnost a bezpečnost dokumentů.
-type: docs
 weight: 28
 url: /cs/net/unlocking-annotation-power/add-watermark-annotation/
 ---

@@ -3,7 +3,6 @@ title: Parola Korumalı Belgeleri Yükle
 linktitle: Parola Korumalı Belgeleri Yükle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET ile işbirliğini ve belge incelemesini geliştirin. .NET uygulamalarınızda PDF'ye ve daha sorunsuz bir şekilde açıklama ekleyin.
-type: docs
 weight: 17
 url: /tr/net/document-loading-essentials/load-password-protected-documents/
 ---

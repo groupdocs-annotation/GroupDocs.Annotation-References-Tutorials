@@ -3,7 +3,6 @@ title: दस्तावेज़ में लिंक एनोटेशन 
 linktitle: दस्तावेज़ में लिंक एनोटेशन जोड़ें
 second_title: GroupDocs.Annotation .NET API
 description: जानें कि .NET के लिए Groupdocs.Annotation का उपयोग करके दस्तावेज़ों में लिंक एनोटेशन कैसे जोड़ें। सहयोग और अन्तरक्रियाशीलता को सहजता से बढ़ाएँ।
-type: docs
 weight: 16
 url: /hi/net/unlocking-annotation-power/add-link-annotation/
 ---

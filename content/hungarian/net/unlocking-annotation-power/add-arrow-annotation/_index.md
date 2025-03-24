@@ -3,7 +3,6 @@ title: Nyíl megjegyzés hozzáadása a dokumentumhoz
 linktitle: Nyíl megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá nyilakkal ellátott megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozatmentesen fokozza a dokumentumok tisztaságát és interaktivitását.
-type: docs
 weight: 11
 url: /hu/net/unlocking-annotation-power/add-arrow-annotation/
 ---

@@ -3,7 +3,6 @@ title: Töltse be a dokumentumot a helyi lemezről
 linktitle: Töltse be a dokumentumot a helyi lemezről
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET segítségével felszabadíthatja a dokumentum-annotáció erejét. Zökkenőmentesen integrálja az annotációs funkciókat .NET-alkalmazásaiba.
-type: docs
 weight: 13
 url: /hu/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### Kipróbálhatom a GroupDocs.Annotation for .NET szolgáltatást a vásárlás előtt?
  Igen, letölthet egy ingyenes próbaverziót a webhelyről[itt](https://releases.groupdocs.com/).
 ### Hol találom a GroupDocs.Annotation for .NET dokumentációját?
- Hozzáférhet a dokumentációhoz[itt](https://reference.groupdocs.com/annotation/net/).
+ Hozzáférhet a dokumentációhoz[itt](https://tutorials.groupdocs.com/annotation/net/).
 ### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Annotation for .NET számára?
  Ideiglenes jogosítványt szerezhet be[itt](https://purchase.groupdocs.com/temporary-license/).
 ### Támogatás érhető el a GroupDocs.Annotation for .NET számára?

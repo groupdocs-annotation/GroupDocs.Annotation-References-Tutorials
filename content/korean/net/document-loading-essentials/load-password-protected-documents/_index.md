@@ -3,7 +3,6 @@ title: 비밀번호로 보호된 문서 로드
 linktitle: 비밀번호로 보호된 문서 로드
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 공동 작업 및 문서 검토를 강화하세요. .NET 앱에서 PDF에 주석을 추가하는 등 더욱 원활하게 수행할 수 있습니다.
-type: docs
 weight: 17
 url: /ko/net/document-loading-essentials/load-password-protected-documents/
 ---

@@ -3,7 +3,6 @@ title: Colocar anotação de imagem sobre texto
 linktitle: Colocar anotação de imagem sobre texto
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como adicionar anotações de imagem sobre texto no .NET usando GroupDocs.Annotation para gerenciamento e colaboração eficientes de documentos.
-type: docs
 weight: 21
 url: /pt/net/advanced-usage/put-image-annotation-over-text/
 ---

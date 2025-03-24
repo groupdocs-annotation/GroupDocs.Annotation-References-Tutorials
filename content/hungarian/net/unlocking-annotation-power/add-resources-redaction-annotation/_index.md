@@ -3,7 +3,6 @@ title: Erőforrás-szerkesztési megjegyzés hozzáadása a dokumentumhoz
 linktitle: Erőforrás-szerkesztési megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Javítsa a dokumentumkezelési munkafolyamatokat a GroupDocs.Annotation for .NET segítségével. A hatékonyság érdekében zökkenőmentesen integrálja a Resources Redaction Annotationt a .NET-be.
-type: docs
 weight: 19
 url: /hu/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

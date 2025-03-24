@@ -3,7 +3,6 @@ title: Ta bort flera anteckningar i .NET
 linktitle: Ta bort flera anteckningar i .NET
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du tar bort flera kommentarer effektivt i .NET med GroupDocs.Annotation. Följ vår steg-för-steg handledning för sömlös integration i dina applikationer.
-type: docs
 weight: 12
 url: /sv/net/removing-annotations/remove-multiple-annotations/
 ---

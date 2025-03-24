@@ -3,7 +3,6 @@ title: إزالة التعليقات التوضيحية حسب المعرف
 linktitle: إزالة التعليقات التوضيحية حسب المعرف
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إزالة التعليقات التوضيحية حسب المعرف باستخدام GroupDocs.Annotation لـ .NET. تبسيط سير عمل المستندات الخاصة بك بكفاءة.
-type: docs
 weight: 11
 url: /ar/net/removing-annotations/remove-annotations-by-id/
 ---

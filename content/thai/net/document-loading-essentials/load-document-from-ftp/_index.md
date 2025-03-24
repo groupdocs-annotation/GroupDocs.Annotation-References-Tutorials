@@ -3,7 +3,6 @@ title: โหลดเอกสารจาก FTP
 linktitle: โหลดเอกสารจาก FTP
 second_title: GroupDocs.Annotation .NET API
 description: ปรับปรุงแอปพลิเคชัน .NET ของคุณด้วย GroupDocs.Annotation เพื่อคำอธิบายประกอบเอกสารที่ราบรื่น รวมการสอนทีละขั้นตอน
-type: docs
 weight: 12
 url: /th/net/document-loading-essentials/load-document-from-ftp/
 ---

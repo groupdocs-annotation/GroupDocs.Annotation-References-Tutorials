@@ -3,7 +3,6 @@ title: 문서 텍스트 콘텐츠 정보 가져오기
 linktitle: 문서 텍스트 콘텐츠 정보 가져오기
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 원활하게 주석을 달 수 있습니다. 주석 기능을 .NET 애플리케이션에 손쉽게 통합하세요.
-type: docs
 weight: 17
 url: /ko/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ annotator.Save("output.pdf");
 ### .NET용 GroupDocs.Annotation에 대한 지원은 어디서 찾을 수 있나요?
  에서 지원을 요청하고 질문을 할 수 있습니다.[GroupDocs 포럼](https://forum.groupdocs.com/c/annotation/10).
 ### .NET용 GroupDocs.Annotation은 문서를 제공합니까?
- 예, .NET용 GroupDocs.Annotation에 대한 포괄적인 문서를 사용할 수 있습니다.[여기](https://reference.groupdocs.com/annotation/net/).
+ 예, .NET용 GroupDocs.Annotation에 대한 포괄적인 문서를 사용할 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).

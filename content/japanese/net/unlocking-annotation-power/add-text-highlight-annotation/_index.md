@@ -3,7 +3,6 @@ title: テキスト強調表示注釈をドキュメントに追加
 linktitle: テキスト強調表示注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントにテキスト ハイライト注釈を追加する方法を学びます。この包括的な機能により、コラボレーションと生産性が向上します。
-type: docs
 weight: 22
 url: /ja/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

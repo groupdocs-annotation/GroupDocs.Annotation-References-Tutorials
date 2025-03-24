@@ -3,7 +3,6 @@ title: स्ट्रीम से लाइसेंस सेट करें
 linktitle: स्ट्रीम से लाइसेंस सेट करें
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation के साथ .NET में दस्तावेज़ एनोटेशन की पूरी क्षमता को अनलॉक करें। निर्बाध एकीकरण के लिए हमारी चरण-दर-चरण मार्गदर्शिका का पालन करें।
-type: docs
 weight: 11
 url: /hi/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /hi/net/applying-licenses/set-license-from-stream/
 ट्यूटोरियल में जाने से पहले, सुनिश्चित करें कि आपके पास निम्नलिखित आवश्यक शर्तें हैं:
 1.  .NET के लिए GroupDocs.Annotation: सुनिश्चित करें कि आपने .NET के लिए GroupDocs.Annotation को डाउनलोड और इंस्टॉल कर लिया है।[लिंक को डाउनलोड करें](https://releases.groupdocs.com/annotation/net/).
 2.  लाइसेंस: GroupDocs.Annotation के लिए एक वैध लाइसेंस प्राप्त करें। आप इनमें से किसी एक को खरीद सकते हैं[यहाँ](https://purchase.groupdocs.com/buy) या अस्थायी लाइसेंस का अनुरोध करें[यहाँ](https://purchase.groupdocs.com/temporary-license/).
-3.  दस्तावेज़ीकरण: अपने आप को इससे परिचित कराएं[प्रलेखन](https://reference.groupdocs.com/annotation/net/) GroupDocs.Annotation के लिए। यह एपीआई कार्यप्रणाली में विस्तृत जानकारी प्रदान करता है।
+3.  दस्तावेज़ीकरण: अपने आप को इससे परिचित कराएं[प्रलेखन](https://tutorials.groupdocs.com/annotation/net/) GroupDocs.Annotation के लिए। यह एपीआई कार्यप्रणाली में विस्तृत जानकारी प्रदान करता है।
 
 ## नामस्थान आयात करें
 सबसे पहले, आइए आपके .NET प्रोजेक्ट में GroupDocs.Annotation का उपयोग शुरू करने के लिए आवश्यक नेमस्पेस आयात करें:
@@ -63,6 +62,6 @@ else
 ### क्या मैं खरीदने से पहले .NET के लिए GroupDocs.Annotation आज़मा सकता हूँ?
  हाँ, आप निःशुल्क परीक्षण लाइसेंस का अनुरोध कर सकते हैं[यहाँ](https://releases.groupdocs.com/) .NET के लिए GroupDocs.Annotation की क्षमताओं का पता लगाने के लिए।
 ### मैं .NET के लिए GroupDocs.Annotation के लिए नवीनतम दस्तावेज़ कैसे प्राप्त कर सकता हूँ?
- आप इसका उल्लेख कर सकते हैं[प्रलेखन](https://reference.groupdocs.com/annotation/net/) विस्तृत एपीआई संदर्भों और ट्यूटोरियल तक पहुंचने के लिए .NET के लिए GroupDocs.Annotation के लिए।
+ आप इसका उल्लेख कर सकते हैं[प्रलेखन](https://tutorials.groupdocs.com/annotation/net/) विस्तृत एपीआई संदर्भों और ट्यूटोरियल तक पहुंचने के लिए .NET के लिए GroupDocs.Annotation के लिए।
 ### यदि मुझे अपने लाइसेंस के साथ कोई समस्या आती है तो क्या होगा?
 यदि आपको अपने लाइसेंस के साथ कोई समस्या आती है, तो सहायता के लिए GroupDocs सहायता टीम से संपर्क करें।

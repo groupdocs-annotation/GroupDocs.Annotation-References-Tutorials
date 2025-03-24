@@ -3,7 +3,6 @@ title: Laddar anpassade teckensnitt
 linktitle: Laddar anpassade teckensnitt
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du sömlöst laddar anpassade teckensnitt i GroupDocs.Annotation för .NET för att förbättra dokumentkommentarer. Följ våra steg-för-steg för enkel integration.
-type: docs
 weight: 20
 url: /sv/net/advanced-usage/loading-custom-fonts/
 ---

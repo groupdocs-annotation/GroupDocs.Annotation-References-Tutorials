@@ -3,7 +3,6 @@ title: Podstawowe informacje dotyczące ładowania dokumentów
 linktitle: Podstawowe informacje dotyczące ładowania dokumentów
 second_title: GroupDocs.Adnotacja .NET API
 description: Odkryj niezbędne samouczki dotyczące ładowania dokumentów przy użyciu GroupDocs.Annotation .NET. Bezproblemowo integruj się z Amazon S3, Azure, FTP, dyskiem lokalnym, strumieniami i nie tylko.
-type: docs
 weight: 20
 url: /pl/net/document-loading-essentials/
 ---

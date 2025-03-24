@@ -3,7 +3,6 @@ title: Načíst dokument z FTP
 linktitle: Načíst dokument z FTP
 second_title: GroupDocs.Annotation .NET API
 description: Vylepšete své aplikace .NET pomocí GroupDocs.Annotation pro bezproblémové anotování dokumentů. Včetně návodu krok za krokem.
-type: docs
 weight: 12
 url: /cs/net/document-loading-essentials/load-document-from-ftp/
 ---

@@ -3,7 +3,6 @@ title: संस्करण कुंजी का उपयोग करके
 linktitle: संस्करण कुंजी का उपयोग करके एनोटेशन की सूची प्राप्त करें
 second_title: GroupDocs.Annotation .NET API
 description: निर्बाध दस्तावेज़ एनोटेशन के लिए GroupDocs.Annotation के साथ अपने .NET अनुप्रयोगों को बेहतर बनाएं। प्रभावी एकीकरण के लिए हमारी चरण-दर-चरण मार्गदर्शिका का पालन करें।
-type: docs
 weight: 18
 url: /hi/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ List<AnnotationBase> annotations = annotator.GetVersion("CUSTOM_VERSION");
 ### क्या मैं परीक्षण उद्देश्यों के लिए GroupDocs.Annotation के लिए एक अस्थायी लाइसेंस खरीद सकता हूँ?
 हां, उत्पाद के परीक्षण और मूल्यांकन की सुविधा के लिए अस्थायी लाइसेंस खरीद के लिए उपलब्ध हैं।
 ### मुझे .NET के लिए GroupDocs.Annotation के लिए व्यापक दस्तावेज़ कहाँ मिल सकते हैं?
- उत्पाद के उपयोग पर विस्तृत मार्गदर्शन के लिए आप GroupDocs वेबसाइट पर उपलब्ध दस्तावेज़ का संदर्भ ले सकते हैं[यहाँ]( https://reference.groupdocs.com/annotation/net/).
+ उत्पाद के उपयोग पर विस्तृत मार्गदर्शन के लिए आप GroupDocs वेबसाइट पर उपलब्ध दस्तावेज़ का संदर्भ ले सकते हैं[यहाँ]( https://tutorials.groupdocs.com/annotation/net/).

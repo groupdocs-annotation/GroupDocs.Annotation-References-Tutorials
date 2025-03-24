@@ -3,7 +3,6 @@ title: Tetapkan Lisensi dari File
 linktitle: Tetapkan Lisensi dari File
 second_title: GroupDocs.Annotasi .NET API
 description: Integrasikan kemampuan anotasi dokumen yang kuat ke dalam aplikasi .NET Anda secara lancar dengan GroupDocs.Annotation untuk .NET.
-type: docs
 weight: 10
 url: /id/net/applying-licenses/set-license-from-file/
 ---

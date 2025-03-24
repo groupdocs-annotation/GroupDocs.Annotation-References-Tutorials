@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφου από τη ροή
 linktitle: Φόρτωση εγγράφου από τη ροή
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να σχολιάζετε έγγραφα στο .NET χωρίς κόπο με το GroupDocs.Annotation. Ενισχύστε τη συνεργασία και την παραγωγικότητα.
-type: docs
 weight: 14
 url: /el/net/document-loading-essentials/load-document-from-stream/
 ---

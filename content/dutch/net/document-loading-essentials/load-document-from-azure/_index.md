@@ -3,7 +3,6 @@ title: Document laden vanuit Azure
 linktitle: Document laden vanuit Azure
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u documenten in .NET kunt annoteren met GroupDocs.Annotation. Stapsgewijze zelfstudie voor naadloze integratie met Azure Blob Storage.
-type: docs
 weight: 11
 url: /nl/net/document-loading-essentials/load-document-from-azure/
 ---

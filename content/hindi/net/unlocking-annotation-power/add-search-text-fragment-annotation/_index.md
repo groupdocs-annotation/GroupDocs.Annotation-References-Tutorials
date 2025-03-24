@@ -3,7 +3,6 @@ title: दस्तावेज़ में खोज टेक्स्ट फ
 linktitle: दस्तावेज़ में खोज टेक्स्ट फ़्रैगमेंट एनोटेशन जोड़ें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation की शक्ति का अन्वेषण करें और आसानी से अपने अनुप्रयोगों में दस्तावेज़ एनोटेशन क्षमताओं को जोड़ें।
-type: docs
 weight: 20
 url: /hi/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

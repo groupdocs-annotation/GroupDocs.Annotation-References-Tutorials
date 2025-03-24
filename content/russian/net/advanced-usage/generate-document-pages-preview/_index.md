@@ -3,7 +3,6 @@ title: Создать предварительный просмотр стран
 linktitle: Создать предварительный просмотр страниц документа
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как эффективно создавать предварительный просмотр страниц документа с помощью GroupDocs.Annotation для .NET. Улучшите свои рабочие процессы управления документами с помощью этого комплексного решения.
-type: docs
 weight: 12
 url: /ru/net/advanced-usage/generate-document-pages-preview/
 ---

@@ -3,7 +3,6 @@ title: Rimuovere più annotazioni in .NET
 linktitle: Rimuovere più annotazioni in .NET
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come rimuovere più annotazioni in modo efficiente in .NET utilizzando GroupDocs.Annotation. Segui il nostro tutorial passo passo per una perfetta integrazione nelle tue applicazioni.
-type: docs
 weight: 12
 url: /it/net/removing-annotations/remove-multiple-annotations/
 ---

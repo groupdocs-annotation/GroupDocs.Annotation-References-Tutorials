@@ -3,7 +3,6 @@ title: Szerezze be a megjegyzések listáját a verziókulcs használatával
 linktitle: Szerezze be a megjegyzések listáját a verziókulcs használatával
 second_title: GroupDocs.Annotation .NET API
 description: Bővítse .NET-alkalmazásait a GroupDocs.Annotation segítségével a zökkenőmentes dokumentumannotáció érdekében. Kövesse lépésenkénti útmutatónkat a hatékony integráció érdekében.
-type: docs
 weight: 18
 url: /hu/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ Támogatást kérhet a GroupDocs.Annotation fórumon, vagy közvetlenül kapcsol
 ### Vásárolhatok ideiglenes licencet a GroupDocs.Annotation számára tesztelési célból?
 Igen, a termék tesztelésének és értékelésének megkönnyítése érdekében ideiglenes licencek vásárolhatók.
 ### Hol találom a GroupDocs.Annotation for .NET átfogó dokumentációját?
- A termék használatával kapcsolatos részletes útmutatásért tekintse meg a GroupDocs webhelyén elérhető dokumentációt[itt]( https://reference.groupdocs.com/annotation/net/).
+ A termék használatával kapcsolatos részletes útmutatásért tekintse meg a GroupDocs webhelyén elérhető dokumentációt[itt]( https://tutorials.groupdocs.com/annotation/net/).

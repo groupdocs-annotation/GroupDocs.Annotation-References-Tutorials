@@ -3,7 +3,6 @@ title: Met wachtwoord beveiligde documenten laden
 linktitle: Met wachtwoord beveiligde documenten laden
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter de samenwerking en documentbeoordeling met GroupDocs.Annotation voor .NET. Annoteer PDF en meer naadloos in uw .NET-apps.
-type: docs
 weight: 17
 url: /nl/net/document-loading-essentials/load-password-protected-documents/
 ---

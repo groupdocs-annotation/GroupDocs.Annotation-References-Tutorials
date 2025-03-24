@@ -3,7 +3,6 @@ title: Načíst dokumenty chráněné heslem
 linktitle: Načíst dokumenty chráněné heslem
 second_title: GroupDocs.Annotation .NET API
 description: Vylepšete spolupráci a kontrolu dokumentů s GroupDocs.Annotation pro .NET. Bezproblémově anotujte PDF a další ve svých aplikacích .NET.
-type: docs
 weight: 17
 url: /cs/net/document-loading-essentials/load-password-protected-documents/
 ---

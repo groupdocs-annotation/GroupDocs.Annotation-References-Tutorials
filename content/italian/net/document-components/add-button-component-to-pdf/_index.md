@@ -3,7 +3,6 @@ title: Aggiungi il componente pulsante al documento PDF
 linktitle: Aggiungi il componente pulsante al documento PDF
 second_title: API GroupDocs.Annotation .NET
 description: Migliora i tuoi documenti PDF con componenti pulsanti interattivi utilizzando Groupdocs.Annotation per .NET. Segui il nostro tutorial passo passo per un'integrazione perfetta.
-type: docs
 weight: 10
 url: /it/net/document-components/add-button-component-to-pdf/
 ---

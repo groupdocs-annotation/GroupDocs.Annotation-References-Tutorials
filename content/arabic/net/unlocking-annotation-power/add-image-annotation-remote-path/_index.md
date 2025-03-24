@@ -3,7 +3,6 @@ title: إضافة تعليق توضيحي للصورة إلى المستند (ا
 linktitle: إضافة تعليق توضيحي للصورة إلى المستند (المسار البعيد)
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية للصور إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. تعزيز إدارة المستندات من خلال إمكانات التعليقات التوضيحية القوية.
-type: docs
 weight: 15
 url: /ar/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

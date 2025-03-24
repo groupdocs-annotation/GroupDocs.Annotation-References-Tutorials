@@ -3,7 +3,6 @@ title: 문서에 텍스트 취소선 주석 추가
 linktitle: 문서에 텍스트 취소선 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 취소선 주석을 추가하는 방법을 알아보세요. 협업 및 문서 검토 프로세스를 효율적으로 향상합니다.
-type: docs
 weight: 26
 url: /ko/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

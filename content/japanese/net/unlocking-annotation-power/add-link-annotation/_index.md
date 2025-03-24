@@ -3,7 +3,6 @@ title: ドキュメントにリンク注釈を追加する
 linktitle: ドキュメントにリンク注釈を追加する
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用してドキュメントにリンク注釈を追加する方法を学びます。コラボレーションと対話性を簡単に強化します。
-type: docs
 weight: 16
 url: /ja/net/unlocking-annotation-power/add-link-annotation/
 ---

@@ -3,7 +3,6 @@ title: Lägg till länkkommentar till dokument
 linktitle: Lägg till länkkommentar till dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till länkkommentarer till dokument med Groupdocs.Annotation för .NET. Förbättra samarbete och interaktivitet utan ansträngning.
-type: docs
 weight: 16
 url: /sv/net/unlocking-annotation-power/add-link-annotation/
 ---

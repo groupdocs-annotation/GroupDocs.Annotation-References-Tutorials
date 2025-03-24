@@ -3,7 +3,6 @@ title: Set Document Preview Resolution
 linktitle: Set Document Preview Resolution
 second_title: GroupDocs.Annotation .NET API
 description: Elevate document collaboration with Groupdocs.Annotation for .NET streamline annotation and preview functionalities seamlessly.
-type: docs
 weight: 23
 url: /net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ In today's digital age, efficient document management and collaboration are para
 Before diving into harnessing the capabilities of Groupdocs.Annotation for .NET, ensure you have the following prerequisites in place:
 1. Installation of Groupdocs.Annotation for .NET: Begin by downloading and installing the Groupdocs.Annotation for .NET library. You can obtain the necessary files from the [download link](https://releases.groupdocs.com/annotation/net/).
 2. Development Environment: Have a suitable development environment set up, including Visual Studio or any other preferred IDE for .NET development.
-3. Access to Documentation: Familiarize yourself with the comprehensive documentation provided by Groupdocs.Annotation for .NET. You can refer to the [documentation](https://reference.groupdocs.com/annotation/net/) for detailed insights into the library's functionalities and usage.
+3. Access to Documentation: Familiarize yourself with the comprehensive documentation provided by Groupdocs.Annotation for .NET. You can refer to the [documentation](https://tutorials.groupdocs.com/annotation/net/) for detailed insights into the library's functionalities and usage.
 4. Basic Understanding of .NET Framework: Ensure you have a fundamental understanding of the .NET framework and C# programming language to effectively utilize Groupdocs.Annotation for .NET.
 
 ## Importing Necessary Namespaces
@@ -53,7 +52,7 @@ Utilize the GeneratePreview method to generate previews for the document based o
     annotator.Document.GeneratePreview(previewOptions);
 ```
 ## Step 5: Display Success Message
-Inform the user about the successful generation of document previews and provide the output directory path for reference.
+Inform the user about the successful generation of document previews and provide the output directory path for tutorials.
 ```csharp
     Console.WriteLine($"\nDocument preview with resolution generated successfully.\nCheck output in {"Your Document Directory"}.");
 }

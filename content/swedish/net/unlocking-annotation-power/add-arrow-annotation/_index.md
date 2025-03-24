@@ -3,7 +3,6 @@ title: Lägg till pilkommentar i dokumentet
 linktitle: Lägg till pilkommentar i dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till pilkommentarer till dina dokument med GroupDocs.Annotation för .NET. Förbättra dokumentets tydlighet och interaktivitet utan ansträngning.
-type: docs
 weight: 11
 url: /sv/net/unlocking-annotation-power/add-arrow-annotation/
 ---

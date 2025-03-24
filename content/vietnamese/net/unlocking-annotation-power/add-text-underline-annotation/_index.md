@@ -3,7 +3,6 @@ title: Thêm chú thích gạch chân văn bản vào tài liệu
 linktitle: Thêm chú thích gạch chân văn bản vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích gạch chân văn bản vào tài liệu bằng GroupDocs.Annotation cho .NET. Tăng cường hợp tác và giao tiếp dễ dàng.
-type: docs
 weight: 27
 url: /vi/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

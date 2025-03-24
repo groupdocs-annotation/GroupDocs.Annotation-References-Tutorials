@@ -3,7 +3,6 @@ title: Tải tài liệu từ đĩa cục bộ
 linktitle: Tải tài liệu từ đĩa cục bộ
 second_title: GroupDocs.Annotation .NET API
 description: Khai phá sức mạnh của chú thích tài liệu bằng GroupDocs.Annotation cho .NET. Tích hợp liền mạch các tính năng chú thích vào các ứng dụng .NET của bạn.
-type: docs
 weight: 13
 url: /vi/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Tóm lại, GroupDocs.Annotation cho .NET cung cấp một giải pháp mạnh m
 ### Tôi có thể dùng thử GroupDocs.Annotation cho .NET trước khi mua không?
  Có, bạn có thể tải xuống bản dùng thử miễn phí từ[đây](https://releases.groupdocs.com/).
 ### Tôi có thể tìm tài liệu về GroupDocs.Annotation cho .NET ở đâu?
- Bạn có thể truy cập tài liệu[đây](https://reference.groupdocs.com/annotation/net/).
+ Bạn có thể truy cập tài liệu[đây](https://tutorials.groupdocs.com/annotation/net/).
 ### Làm cách nào tôi có thể nhận được giấy phép tạm thời cho GroupDocs.Annotation cho .NET?
  Bạn có thể xin giấy phép tạm thời từ[đây](https://purchase.groupdocs.com/temporary-license/).
 ### Có hỗ trợ cho GroupDocs.Annotation cho .NET không?

@@ -3,7 +3,6 @@ title: Szövegcsere megjegyzés hozzáadása a dokumentumhoz
 linktitle: Szövegcsere megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá könnyedén szöveghelyettesítő megjegyzéseket .NET-dokumentumaihoz a GroupDocs.Annotation for .NET segítségével. Növelje dokumentumkezelési képességeit.
-type: docs
 weight: 24
 url: /hu/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

@@ -3,7 +3,6 @@ title: Załaduj dokument z adresu URL
 linktitle: Załaduj dokument z adresu URL
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak programowo dodawać adnotacje do dokumentów PDF przy użyciu GroupDocs.Annotation dla .NET. Samouczek krok po kroku z przykładami kodu.
-type: docs
 weight: 15
 url: /pl/net/document-loading-essentials/load-document-from-url/
 ---

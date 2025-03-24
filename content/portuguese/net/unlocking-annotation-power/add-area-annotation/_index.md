@@ -3,7 +3,6 @@ title: Adicionar anotação de área ao documento
 linktitle: Adicionar anotação de área ao documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprimore a colaboração de seus documentos com Groupdocs.Annotation for .NET. Aprenda como adicionar anotações de área passo a passo.
-type: docs
 weight: 10
 url: /pt/net/unlocking-annotation-power/add-area-annotation/
 ---

@@ -3,7 +3,6 @@ title: Импорт аннотаций из документа
 linktitle: Импорт аннотаций из документа
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как импортировать аннотации из документов в .NET с помощью GroupDocs.Annotation. Следуйте нашему пошаговому руководству для бесшовной интеграции.
-type: docs
 weight: 19
 url: /ru/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### Как получить временную лицензию для GroupDocs.Annotation?
  Вы можете приобрести временную лицензию для GroupDocs.Annotation на сайте[страница временной лицензии](https://purchase.groupdocs.com/temporary-license/).
 ### Где я могу найти подробную документацию по GroupDocs.Annotation?
- Подробная документация для GroupDocs.Annotation доступна.[здесь](https://reference.groupdocs.com/annotation/net/).
+ Подробная документация для GroupDocs.Annotation доступна.[здесь](https://tutorials.groupdocs.com/annotation/net/).
 ### Где я могу обратиться за поддержкой по любым вопросам или вопросам, касающимся GroupDocs.Annotation?
  Для получения поддержки посетите GroupDocs.Annotation.[Форум](https://forum.groupdocs.com/c/annotation/10) где вы можете обратиться за помощью к экспертам и сообществу.

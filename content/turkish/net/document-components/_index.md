@@ -3,7 +3,6 @@ title: Belge Bileşenleri
 linktitle: Belge Bileşenleri
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation .NET'i kullanarak düğmeler, onay kutuları ve açılır menüler gibi etkileşimli bileşenleri PDF belgelerine entegre etmeye ilişkin kapsamlı eğitimleri keşfedin.
-type: docs
 weight: 24
 url: /tr/net/document-components/
 ---

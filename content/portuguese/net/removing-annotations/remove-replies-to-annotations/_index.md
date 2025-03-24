@@ -3,7 +3,6 @@ title: Remover respostas a anotações no .NET
 linktitle: Remover respostas a anotações no .NET
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como remover respostas a anotações no .NET usando GroupDocs.Annotation. Guia passo a passo com exemplos de código.
-type: docs
 weight: 15
 url: /pt/net/removing-annotations/remove-replies-to-annotations/
 ---

@@ -3,7 +3,6 @@ title: Ta bort anteckningar efter ID
 linktitle: Ta bort anteckningar efter ID
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du tar bort anteckningar med ID med GroupDocs.Annotation för .NET. Effektivisera ditt dokumentarbetsflöde på ett effektivt sätt.
-type: docs
 weight: 11
 url: /sv/net/removing-annotations/remove-annotations-by-id/
 ---

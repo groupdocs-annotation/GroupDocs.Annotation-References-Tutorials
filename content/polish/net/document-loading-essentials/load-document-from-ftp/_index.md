@@ -3,7 +3,6 @@ title: Załaduj dokument z FTP
 linktitle: Załaduj dokument z FTP
 second_title: GroupDocs.Adnotacja .NET API
 description: Ulepsz swoje aplikacje .NET za pomocą GroupDocs.Annotation, aby móc bezproblemowo dodawać adnotacje do dokumentów. W zestawie tutorial krok po kroku.
-type: docs
 weight: 12
 url: /pl/net/document-loading-essentials/load-document-from-ftp/
 ---

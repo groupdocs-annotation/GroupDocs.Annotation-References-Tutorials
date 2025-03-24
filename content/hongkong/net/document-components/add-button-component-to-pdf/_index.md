@@ -3,7 +3,6 @@ title: 將按鈕組件新增至 PDF 文檔
 linktitle: 將按鈕組件新增至 PDF 文檔
 second_title: GroupDocs.Annotation .NET API
 description: 使用 Groupdocs.Annotation for .NET，透過互動式按鈕元件增強您的 PDF 文件。請按照我們的逐步教學進行無縫整合。
-type: docs
 weight: 10
 url: /zh-hant/net/document-components/add-button-component-to-pdf/
 ---

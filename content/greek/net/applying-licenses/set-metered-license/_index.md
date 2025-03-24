@@ -3,7 +3,6 @@ title: Ορισμός μετρημένης άδειας
 linktitle: Ορισμός μετρημένης άδειας
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να ρυθμίζετε μια μετρημένη άδεια για το GroupDocs.Annotation .NET για τη χρήση πόρων και τις δυνατότητες σχολιασμού τεκμηρίωσης στις εφαρμογές σας .NET.
-type: docs
 weight: 12
 url: /el/net/applying-licenses/set-metered-license/
 ---

@@ -3,7 +3,6 @@ title: 刪除 .NET 中的註釋
 linktitle: 刪除 .NET 中的註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 .NET 中的 Groupdocs.Annotation 從 PDF 文件中刪除註解。簡化您的數位文件管理流程。
-type: docs
 weight: 10
 url: /zh-hant/net/removing-annotations/remove-annotations/
 ---

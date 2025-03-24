@@ -3,7 +3,6 @@ title: Document Components
 linktitle: Document Components
 second_title: GroupDocs.Annotation .NET API
 description: Discover comprehensive tutorials on integrating interactive components like buttons, checkboxes, and dropdowns into PDF documents using GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /net/document-components/
 ---

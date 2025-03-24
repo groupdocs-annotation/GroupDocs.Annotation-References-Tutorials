@@ -3,7 +3,6 @@ title: Définir une licence limitée
 linktitle: Définir une licence limitée
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment configurer une licence limitée pour GroupDocs.Annotation .NET pour utiliser les ressources et documenter les fonctionnalités d'annotation dans vos applications .NET.
-type: docs
 weight: 12
 url: /fr/net/applying-licenses/set-metered-license/
 ---

@@ -3,7 +3,6 @@ title: バージョンキーを使用してアノテーションのリストを�
 linktitle: バージョンキーを使用してアノテーションのリストを取得する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET アプリケーションを強化し、シームレスなドキュメント注釈を追加します。効果的な統合を行うには、ステップバイステップのガイドに従ってください。
-type: docs
 weight: 18
 url: /ja/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ GroupDocs.Annotation フォーラムにアクセスするか、サポート チ�
 ### テスト目的で GroupDocs.Annotation の一時ライセンスを購入できますか?
 はい、製品のテストと評価を容易にするために、一時ライセンスを購入できます。
 ### GroupDocs.Annotation for .NET の包括的なドキュメントはどこで見つけられますか?
-製品の使用に関する詳細なガイダンスについては、GroupDocs Web サイトで入手可能なドキュメントを参照してください。[ここ]( https://reference.groupdocs.com/annotation/net/).
+製品の使用に関する詳細なガイダンスについては、GroupDocs Web サイトで入手可能なドキュメントを参照してください。[ここ]( https://tutorials.groupdocs.com/annotation/net/).

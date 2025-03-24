@@ -3,7 +3,6 @@ title: Agregar anotación de campo de texto al documento
 linktitle: Agregar anotación de campo de texto al documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda cómo integrar perfectamente anotaciones de campos de texto en sus aplicaciones .NET utilizando Groupdocs.Annotation para .NET.
-type: docs
 weight: 21
 url: /es/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ En este tutorial, profundizaremos en una de las funcionalidades fundamentales de
 ## Requisitos previos
 Antes de sumergirse en la implementación, asegúrese de tener implementados los siguientes requisitos previos:
 ### 1. Instalación de Groupdocs.Annotation para .NET
- En primer lugar, debe descargar e instalar Groupdocs.Annotation para .NET. Puedes encontrar el enlace de descarga.[aquí](https://releases.groupdocs.com/annotation/net/) . Siga las instrucciones de instalación proporcionadas en la documentación.[aquí](https://reference.groupdocs.com/annotation/net/) para configurar la biblioteca correctamente.
+ En primer lugar, debe descargar e instalar Groupdocs.Annotation para .NET. Puedes encontrar el enlace de descarga.[aquí](https://releases.groupdocs.com/annotation/net/) . Siga las instrucciones de instalación proporcionadas en la documentación.[aquí](https://tutorials.groupdocs.com/annotation/net/) para configurar la biblioteca correctamente.
 ### 2. Configuración del entorno de desarrollo
 Asegúrese de tener un entorno de desarrollo configurado para el desarrollo .NET. Esto incluye tener un IDE compatible como Visual Studio y .NET Framework instalado en su sistema.
 ### 3. Comprensión básica de la programación en C#

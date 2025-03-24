@@ -3,7 +3,6 @@ title: FTP에서 문서 로드
 linktitle: FTP에서 문서 로드
 second_title: GroupDocs.Annotation .NET API
 description: 원활한 문서 주석을 위해 GroupDocs.Annotation을 사용하여 .NET 애플리케이션을 강화하세요. 단계별 튜토리얼이 포함되어 있습니다.
-type: docs
 weight: 12
 url: /ko/net/document-loading-essentials/load-document-from-ftp/
 ---

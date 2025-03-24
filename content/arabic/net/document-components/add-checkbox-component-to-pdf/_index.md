@@ -3,7 +3,6 @@ title: إضافة مكون خانة الاختيار إلى وثيقة PDF
 linktitle: إضافة مكون خانة الاختيار إلى وثيقة PDF
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة مكون Checkbox إلى مستندات PDF باستخدام Groupdocs.Annotation لـ .NET. قم بتحسين ملفات PDF الخاصة بك باستخدام العناصر التفاعلية.
-type: docs
 weight: 11
 url: /ar/net/document-components/add-checkbox-component-to-pdf/
 ---

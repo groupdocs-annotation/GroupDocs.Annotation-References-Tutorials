@@ -3,7 +3,6 @@ title: Добавить аннотацию редактирования ресу
 linktitle: Добавить аннотацию редактирования ресурсов в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Улучшите рабочие процессы управления документами с помощью GroupDocs.Annotation для .NET. Для повышения эффективности можно легко интегрировать аннотацию редактирования ресурсов в вашу .NET.
-type: docs
 weight: 19
 url: /ru/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

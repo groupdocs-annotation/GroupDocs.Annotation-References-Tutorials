@@ -3,7 +3,6 @@ title: Lijst met annotaties ophalen met versiesleutel
 linktitle: Lijst met annotaties ophalen met versiesleutel
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter uw .NET-toepassingen met GroupDocs.Annotation voor naadloze documentannotatie. Volg onze stapsgewijze handleiding voor effectieve integratie.
-type: docs
 weight: 18
 url: /nl/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ kunt ondersteuning zoeken door het GroupDocs.Annotation-forum te bezoeken of rec
 ### Kan ik een tijdelijke licentie voor GroupDocs.Annotation aanschaffen voor testdoeleinden?
 Ja, er zijn tijdelijke licenties te koop om het testen en evalueren van het product te vergemakkelijken.
 ### Waar kan ik uitgebreide documentatie vinden voor GroupDocs.Annotation voor .NET?
- U kunt de documentatie raadplegen die beschikbaar is op de GroupDocs-website voor gedetailleerde richtlijnen voor het gebruik van het product[hier]( https://reference.groupdocs.com/annotation/net/).
+ U kunt de documentatie raadplegen die beschikbaar is op de GroupDocs-website voor gedetailleerde richtlijnen voor het gebruik van het product[hier]( https://tutorials.groupdocs.com/annotation/net/).

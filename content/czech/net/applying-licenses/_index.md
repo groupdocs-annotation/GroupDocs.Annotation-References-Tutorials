@@ -3,7 +3,6 @@ title: Uplatňování licencí
 linktitle: Uplatňování licencí
 second_title: GroupDocs.Annotation .NET API
 description: Odemkněte plný potenciál anotací dokumentů v .NET s GroupDocs.Annotation. Postupujte podle našich podrobných výukových programů pro bezproblémovou integraci.
-type: docs
 weight: 26
 url: /cs/net/applying-licenses/
 ---

@@ -3,7 +3,6 @@ title: เปลี่ยนคุณภาพของภาพ
 linktitle: เปลี่ยนคุณภาพของภาพ
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีปรับปรุงคุณภาพของภาพในไฟล์ PDF โดยใช้ Groupdocs.Annotation สำหรับ .NET ปฏิบัติตามคำแนะนำทีละขั้นตอนของเรา
-type: docs
 weight: 10
 url: /th/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ url: /th/net/advanced-usage/change-image-quality/
 ## ข้อกำหนดเบื้องต้น
 ก่อนที่เราจะเจาะลึกบทช่วยสอน ตรวจสอบให้แน่ใจว่าคุณมีข้อกำหนดเบื้องต้นต่อไปนี้:
 ### 1. การติดตั้ง Groupdocs.Annotation สำหรับ .NET
- ขั้นแรก ดาวน์โหลดและติดตั้งไลบรารี Groupdocs.Annotation สำหรับ .NET จากเว็บไซต์ คุณสามารถค้นหาลิงค์ดาวน์โหลด[ที่นี่](https://releases.groupdocs.com/annotation/net/) - ปฏิบัติตามคำแนะนำในการติดตั้งที่ให้ไว้ในเอกสารประกอบ[ที่นี่](https://reference.groupdocs.com/annotation/net/) เพื่อตั้งค่าห้องสมุดให้ถูกต้อง
+ ขั้นแรก ดาวน์โหลดและติดตั้งไลบรารี Groupdocs.Annotation สำหรับ .NET จากเว็บไซต์ คุณสามารถค้นหาลิงค์ดาวน์โหลด[ที่นี่](https://releases.groupdocs.com/annotation/net/) - ปฏิบัติตามคำแนะนำในการติดตั้งที่ให้ไว้ในเอกสารประกอบ[ที่นี่](https://tutorials.groupdocs.com/annotation/net/) เพื่อตั้งค่าห้องสมุดให้ถูกต้อง
 ### 2. ความคุ้นเคยกับภาษาการเขียนโปรแกรม C#
 ความเข้าใจพื้นฐานเกี่ยวกับภาษาการเขียนโปรแกรม C# ถือเป็นสิ่งสำคัญในการปฏิบัติตามพร้อมกับตัวอย่างที่ให้ไว้ในบทช่วยสอนนี้
 ### 3. การเข้าถึงไฟล์ PDF และรูปภาพอินพุต

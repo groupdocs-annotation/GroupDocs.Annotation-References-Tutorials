@@ -3,7 +3,6 @@ title: Töltse be a dokumentumot az Azure-ból
 linktitle: Töltse be a dokumentumot az Azure-ból
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan fűzhet megjegyzéseket dokumentumokhoz .NET-ben a GroupDocs.Annotation használatával. Lépésről lépésre bemutató oktatóanyag az Azure Blob Storage zökkenőmentes integrációjához.
-type: docs
 weight: 11
 url: /hu/net/document-loading-essentials/load-document-from-azure/
 ---

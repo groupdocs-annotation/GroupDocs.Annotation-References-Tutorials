@@ -3,7 +3,6 @@ title: Add Image Annotation to Document (Local Path)
 linktitle: Add Image Annotation to Document (Local Path)
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to add image annotations to documents using GroupDocs.Annotation for .NET. Enhance document processing capabilities with ease.
-type: docs
 weight: 14
 url: /net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
@@ -13,7 +12,7 @@ GroupDocs.Annotation for .NET is a powerful library that allows developers to ad
 Before we begin, make sure you have the following prerequisites:
 1. Basic knowledge of C# programming language.
 2. Visual Studio installed on your system.
-3. GroupDocs.Annotation for .NET library installed or referenced in your project.
+3. GroupDocs.Annotation for .NET library installed or tutorialsd in your project.
 4. An input document (e.g., PDF) and an image file for annotation.
 ## Import Namespaces
 First, you need to import the necessary namespaces to your C# file. These namespaces provide access to the classes and methods required for working with GroupDocs.Annotation.

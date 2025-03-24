@@ -3,7 +3,6 @@ title: 向文档添加链接注释
 linktitle: 向文档添加链接注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 将链接注释添加到文档。轻松增强协作和互动。
-type: docs
 weight: 16
 url: /zh/net/unlocking-annotation-power/add-link-annotation/
 ---

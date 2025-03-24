@@ -3,7 +3,6 @@ title: URL에서 문서 로드
 linktitle: URL에서 문서 로드
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 프로그래밍 방식으로 PDF 문서에 주석을 추가하는 방법을 알아보세요. 코드 예제가 포함된 단계별 튜토리얼입니다.
-type: docs
 weight: 15
 url: /ko/net/document-loading-essentials/load-document-from-url/
 ---

@@ -3,7 +3,6 @@ title: 로컬 디스크에서 문서 로드
 linktitle: 로컬 디스크에서 문서 로드
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서 주석의 강력한 기능을 활용해 보세요. 주석 기능을 .NET 애플리케이션에 원활하게 통합합니다.
-type: docs
 weight: 13
 url: /ko/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### 구매하기 전에 .NET용 GroupDocs.Annotation을 사용해 볼 수 있나요?
  예, 다음에서 무료 평가판을 다운로드할 수 있습니다.[여기](https://releases.groupdocs.com/).
 ### .NET용 GroupDocs.Annotation에 대한 설명서는 어디서 찾을 수 있나요?
- 문서에 액세스할 수 있습니다.[여기](https://reference.groupdocs.com/annotation/net/).
+ 문서에 액세스할 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).
 ### .NET용 GroupDocs.Annotation의 임시 라이센스를 얻으려면 어떻게 해야 합니까?
  임시면허를 취득하실 수 있습니다.[여기](https://purchase.groupdocs.com/temporary-license/).
 ### .NET용 GroupDocs.Annotation에 대한 지원이 제공됩니까?

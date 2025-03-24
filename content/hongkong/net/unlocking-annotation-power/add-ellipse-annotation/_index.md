@@ -3,7 +3,6 @@ title: 在文件中新增橢圓註釋
 linktitle: 在文件中新增橢圓註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 在 .NET 中新增橢圓註解。輕鬆增強協作和溝通。
-type: docs
 weight: 13
 url: /zh-hant/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού υπογράμμισης κειμέ
 linktitle: Προσθήκη σχολιασμού υπογράμμισης κειμένου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς με υπογράμμιση κειμένου σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Ενισχύστε τη συνεργασία και την επικοινωνία χωρίς κόπο.
-type: docs
 weight: 27
 url: /el/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

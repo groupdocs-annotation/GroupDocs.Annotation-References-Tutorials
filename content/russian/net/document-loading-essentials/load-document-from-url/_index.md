@@ -3,7 +3,6 @@ title: Загрузить документ по URL
 linktitle: Загрузить документ по URL
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как программно комментировать PDF-документы с помощью GroupDocs.Annotation для .NET. Пошаговое руководство с примерами кода.
-type: docs
 weight: 15
 url: /ru/net/document-loading-essentials/load-document-from-url/
 ---

@@ -3,7 +3,6 @@ title: Удаление ответов по имени пользователя 
 linktitle: Удаление ответов по имени пользователя в .NET
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как легко комментировать документы с помощью Groupdocs.Annotation для .NET. Улучшите сотрудничество и управление документами с помощью этого мощного инструмента.
-type: docs
 weight: 17
 url: /ru/net/removing-annotations/remove-replies-by-username/
 ---

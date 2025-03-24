@@ -3,7 +3,6 @@ title: Usuwanie adnotacji
 linktitle: Usuwanie adnotacji
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak efektywnie zarządzać adnotacjami w platformie .NET dzięki samouczkom GroupDocs.Annotation. Usprawnij obieg dokumentów i bezproblemowo usprawnij współpracę.
-type: docs
 weight: 25
 url: /pl/net/removing-annotations/
 ---

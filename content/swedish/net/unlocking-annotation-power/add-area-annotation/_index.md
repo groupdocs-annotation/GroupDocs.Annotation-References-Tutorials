@@ -3,7 +3,6 @@ title: Lägg till områdesanteckning till dokumentet
 linktitle: Lägg till områdesanteckning till dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Förbättra ditt dokumentsamarbete med Groupdocs.Annotation för .NET. Lär dig hur du lägger till områdesanteckningar steg för steg.
-type: docs
 weight: 10
 url: /sv/net/unlocking-annotation-power/add-area-annotation/
 ---

@@ -3,7 +3,6 @@ title: 注釈機能のロックを解除する
 linktitle: 注釈機能のロックを解除する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET チュートリアルでアノテーションの力を解き放ちます。さまざまな注釈を段階的に追加し、コラボレーションを簡単に強化する方法を学びましょう。
-type: docs
 weight: 23
 url: /ja/net/unlocking-annotation-power/
 ---

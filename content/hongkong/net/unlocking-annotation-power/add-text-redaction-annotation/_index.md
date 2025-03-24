@@ -3,7 +3,6 @@ title: 在文件中新增文字密文註釋
 linktitle: 在文件中新增文字密文註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 將文字密文註解新增至 PDF 文件。輕鬆保護敏感資訊。
-type: docs
 weight: 23
 url: /zh-hant/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

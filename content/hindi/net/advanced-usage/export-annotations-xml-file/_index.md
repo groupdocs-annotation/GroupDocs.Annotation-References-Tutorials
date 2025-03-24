@@ -3,7 +3,6 @@ title: एक्सएमएल फ़ाइल से एनोटेशन न
 linktitle: एक्सएमएल फ़ाइल से एनोटेशन निर्यात करें
 second_title: GroupDocs.Annotation .NET API
 description: अपने दस्तावेज़ प्रबंधन वर्कफ़्लो को कुशलतापूर्वक सरल बनाते हुए, .NET के लिए GroupDocs.Annotation का उपयोग करके XML फ़ाइलों से एनोटेशन निर्यात करना सीखें।
-type: docs
 weight: 11
 url: /hi/net/advanced-usage/export-annotations-xml-file/
 ---

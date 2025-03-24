@@ -3,7 +3,6 @@ title: Megjegyzések eltávolítása azonosító alapján
 linktitle: Megjegyzések eltávolítása azonosító alapján
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan távolíthat el megjegyzéseket azonosító alapján a GroupDocs.Annotation for .NET használatával. Racionalizálja hatékonyan a dokumentumok munkafolyamatát.
-type: docs
 weight: 11
 url: /hu/net/removing-annotations/remove-annotations-by-id/
 ---

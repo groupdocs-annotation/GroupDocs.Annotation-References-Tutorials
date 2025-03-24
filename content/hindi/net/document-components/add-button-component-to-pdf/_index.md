@@ -3,7 +3,6 @@ title: पीडीएफ दस्तावेज़ में बटन घट
 linktitle: पीडीएफ दस्तावेज़ में बटन घटक जोड़ें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए Groupdocs.Annotation का उपयोग करके इंटरैक्टिव बटन घटकों के साथ अपने पीडीएफ दस्तावेज़ों को बेहतर बनाएं। निर्बाध एकीकरण के लिए हमारे चरण-दर-चरण ट्यूटोरियल का पालन करें।
-type: docs
 weight: 10
 url: /hi/net/document-components/add-button-component-to-pdf/
 ---

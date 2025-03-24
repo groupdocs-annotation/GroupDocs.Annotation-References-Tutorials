@@ -3,7 +3,6 @@ title: Supprimer les annotations par ID
 linktitle: Supprimer les annotations par ID
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment supprimer des annotations par ID à l’aide de GroupDocs.Annotation pour .NET. Rationalisez efficacement votre flux de documents.
-type: docs
 weight: 11
 url: /fr/net/removing-annotations/remove-annotations-by-id/
 ---

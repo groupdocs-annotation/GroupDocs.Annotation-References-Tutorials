@@ -3,7 +3,6 @@ title: قم بإزالة التعليقات التوضيحية باستخدام 
 linktitle: قم بإزالة التعليقات التوضيحية باستخدام خيارات الحفظ في .NET
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إزالة التعليقات التوضيحية من ملف PDF والمستندات الأخرى في .NET باستخدام GroupDocs.Annotation. دليل خطوة بخطوة مع أمثلة التعليمات البرمجية.
-type: docs
 weight: 14
 url: /ar/net/removing-annotations/remove-annotations-using-save-options/
 ---

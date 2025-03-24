@@ -3,7 +3,6 @@ title: Állítsa be a mért licencet
 linktitle: Állítsa be a mért licencet
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan állíthat be mérőszámos licencet a GroupDocs.Annotation .NET számára az erőforrás-használathoz és a .NET-alkalmazások dokumentumfeljegyzési képességeinek biztosításához.
-type: docs
 weight: 12
 url: /hu/net/applying-licenses/set-metered-license/
 ---

@@ -3,7 +3,6 @@ title: Applicazione delle licenze
 linktitle: Applicazione delle licenze
 second_title: API GroupDocs.Annotation .NET
 description: Sfrutta tutto il potenziale dell'annotazione dei documenti in .NET con GroupDocs.Annotation. Segui i nostri tutorial passo passo per un'integrazione perfetta.
-type: docs
 weight: 26
 url: /it/net/applying-licenses/
 ---

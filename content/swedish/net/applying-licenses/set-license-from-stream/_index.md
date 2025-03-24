@@ -3,7 +3,6 @@ title: Ställ in licens från Stream
 linktitle: Ställ in licens från Stream
 second_title: GroupDocs.Annotation .NET API
 description: Lås upp den fulla potentialen för dokumentkommentarer i .NET med GroupDocs.Annotation. Följ vår steg-för-steg-guide för sömlös integration.
-type: docs
 weight: 11
 url: /sv/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ Välkommen till den omfattande guiden om hur du använder GroupDocs.Annotation f
 Innan du dyker in i handledningen, se till att du har följande förutsättningar på plats:
 1.  GroupDocs.Annotation for .NET: Se till att du har laddat ner och installerat GroupDocs.Annotation for .NET från[nedladdningslänk](https://releases.groupdocs.com/annotation/net/).
 2.  Licens: Skaffa en giltig licens för GroupDocs.Annotation. Du kan antingen köpa en från[här](https://purchase.groupdocs.com/buy) eller begära en tillfällig licens[här](https://purchase.groupdocs.com/temporary-license/).
-3.  Dokumentation: Bekanta dig med[dokumentation](https://reference.groupdocs.com/annotation/net/) för GroupDocs.Annotation. Det ger detaljerade insikter i API-funktionerna.
+3.  Dokumentation: Bekanta dig med[dokumentation](https://tutorials.groupdocs.com/annotation/net/) för GroupDocs.Annotation. Det ger detaljerade insikter i API-funktionerna.
 
 ## Importera namnområden
 Låt oss först importera de nödvändiga namnrymden för att börja använda GroupDocs.Annotation i ditt .NET-projekt:
@@ -63,6 +62,6 @@ Ja, du behöver en giltig licens för att låsa upp alla funktioner i GroupDocs.
 ### Kan jag prova GroupDocs.Annotation för .NET innan jag köper?
  Ja, du kan begära en gratis testlicens[här](https://releases.groupdocs.com/) för att utforska funktionerna i GroupDocs.Annotation för .NET.
 ### Hur kan jag få den senaste dokumentationen för GroupDocs.Annotation för .NET?
- Du kan hänvisa till[dokumentation](https://reference.groupdocs.com/annotation/net/) för GroupDocs.Annotation för .NET för att få tillgång till detaljerade API-referenser och handledningar.
+ Du kan hänvisa till[dokumentation](https://tutorials.groupdocs.com/annotation/net/) för GroupDocs.Annotation för .NET för att få tillgång till detaljerade API-referenser och handledningar.
 ### Vad händer om jag stöter på problem med min licens?
 Om du stöter på några problem med din licens, kontakta GroupDocs supportteam för hjälp.

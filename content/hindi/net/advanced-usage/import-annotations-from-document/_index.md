@@ -3,7 +3,6 @@ title: दस्तावेज़ से एनोटेशन आयात क
 linktitle: दस्तावेज़ से एनोटेशन आयात करें
 second_title: GroupDocs.Annotation .NET API
 description: जानें कि GroupDocs.Annotation का उपयोग करके .NET में दस्तावेज़ों से एनोटेशन कैसे आयात करें। निर्बाध एकीकरण के लिए हमारे चरण-दर-चरण ट्यूटोरियल का पालन करें।
-type: docs
 weight: 19
 url: /hi/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### मैं GroupDocs.Annotation के लिए अस्थायी लाइसेंस कैसे प्राप्त कर सकता हूं?
  आप GroupDocs.Annotation के लिए एक अस्थायी लाइसेंस प्राप्त कर सकते हैं[अस्थायी लाइसेंस पृष्ठ](https://purchase.groupdocs.com/temporary-license/).
 ### मुझे GroupDocs.Annotation के लिए व्यापक दस्तावेज़ कहाँ मिल सकते हैं?
- GroupDocs.Annotation के लिए विस्तृत दस्तावेज़ उपलब्ध है[यहाँ](https://reference.groupdocs.com/annotation/net/).
+ GroupDocs.Annotation के लिए विस्तृत दस्तावेज़ उपलब्ध है[यहाँ](https://tutorials.groupdocs.com/annotation/net/).
 ### मैं GroupDocs.Annotation से संबंधित किसी भी समस्या या प्रश्न के लिए सहायता कहां से प्राप्त कर सकता हूं?
  सहायता के लिए, GroupDocs.Annotation पर जाएँ[मंच](https://forum.groupdocs.com/c/annotation/10) जहां आप विशेषज्ञों और समुदाय से सहायता ले सकते हैं।

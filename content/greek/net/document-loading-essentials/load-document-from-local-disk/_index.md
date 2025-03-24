@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφου από τοπικό δίσκο
 linktitle: Φόρτωση εγγράφου από τοπικό δίσκο
 second_title: GroupDocs.Annotation .NET API
 description: Ξεκλειδώστε τη δύναμη του σχολιασμού εγγράφων με το GroupDocs.Annotation για .NET. Ενσωματώστε απρόσκοπτα τις λειτουργίες σχολιασμού στις εφαρμογές σας .NET.
-type: docs
 weight: 13
 url: /el/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### Μπορώ να δοκιμάσω το GroupDocs.Annotation για .NET πριν το αγοράσω;
  Ναι, μπορείτε να κάνετε λήψη μιας δωρεάν δοκιμής από[εδώ](https://releases.groupdocs.com/).
 ### Πού μπορώ να βρω τεκμηρίωση για το GroupDocs.Annotation για .NET;
- Μπορείτε να αποκτήσετε πρόσβαση στην τεκμηρίωση[εδώ](https://reference.groupdocs.com/annotation/net/).
+ Μπορείτε να αποκτήσετε πρόσβαση στην τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/annotation/net/).
 ### Πώς μπορώ να αποκτήσω μια προσωρινή άδεια για το GroupDocs.Annotation για .NET;
  Μπορείτε να αποκτήσετε προσωρινή άδεια από[εδώ](https://purchase.groupdocs.com/temporary-license/).
 ### Είναι διαθέσιμη υποστήριξη για το GroupDocs.Annotation για .NET;

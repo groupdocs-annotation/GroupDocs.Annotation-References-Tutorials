@@ -3,7 +3,6 @@ title: Tải tài liệu từ URL
 linktitle: Tải tài liệu từ URL
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách chú thích các tài liệu PDF theo chương trình bằng GroupDocs.Annotation cho .NET. Hướng dẫn từng bước với các ví dụ về mã.
-type: docs
 weight: 15
 url: /vi/net/document-loading-essentials/load-document-from-url/
 ---

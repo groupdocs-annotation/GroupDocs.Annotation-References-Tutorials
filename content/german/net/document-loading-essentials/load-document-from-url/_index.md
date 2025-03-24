@@ -3,7 +3,6 @@ title: Dokument von URL laden
 linktitle: Dokument von URL laden
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie PDF-Dokumente mit GroupDocs.Annotation für .NET programmgesteuert mit Anmerkungen versehen. Schritt-für-Schritt-Anleitung mit Codebeispielen.
-type: docs
 weight: 15
 url: /de/net/document-loading-essentials/load-document-from-url/
 ---

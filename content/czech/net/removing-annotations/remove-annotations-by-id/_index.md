@@ -3,7 +3,6 @@ title: Odebrat poznámky podle ID
 linktitle: Odebrat poznámky podle ID
 second_title: GroupDocs.Annotation .NET API
 description: Přečtěte si, jak odstranit anotace podle ID pomocí GroupDocs.Annotation for .NET. Efektivně zjednodušte pracovní tok dokumentů.
-type: docs
 weight: 11
 url: /cs/net/removing-annotations/remove-annotations-by-id/
 ---

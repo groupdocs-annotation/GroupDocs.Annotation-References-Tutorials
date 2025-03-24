@@ -3,7 +3,6 @@ title: दस्तावेज़ घटक
 linktitle: दस्तावेज़ घटक
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET का उपयोग करके पीडीएफ दस्तावेज़ों में बटन, चेकबॉक्स और ड्रॉपडाउन जैसे इंटरैक्टिव घटकों को एकीकृत करने पर व्यापक ट्यूटोरियल खोजें।
-type: docs
 weight: 24
 url: /hi/net/document-components/
 ---

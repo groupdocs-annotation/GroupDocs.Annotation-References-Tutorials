@@ -3,7 +3,6 @@ title: 측정 라이센스 설정
 linktitle: 측정 라이센스 설정
 second_title: GroupDocs.Annotation .NET API
 description: .NET 응용 프로그램의 리소스 사용 및 문서 주석 기능을 위해 GroupDocs.Annotation .NET용 계량 라이센스를 설정하는 방법을 알아보세요.
-type: docs
 weight: 12
 url: /ko/net/applying-licenses/set-metered-license/
 ---

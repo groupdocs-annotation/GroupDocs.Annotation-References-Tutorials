@@ -3,7 +3,6 @@ title: ลบคำอธิบายประกอบด้วย ID
 linktitle: ลบคำอธิบายประกอบด้วย ID
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีลบคำอธิบายประกอบด้วย ID โดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงขั้นตอนการทำงานเอกสารของคุณอย่างมีประสิทธิภาพ
-type: docs
 weight: 11
 url: /th/net/removing-annotations/remove-annotations-by-id/
 ---

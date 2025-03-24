@@ -3,7 +3,6 @@ title: Ek açıklamaları kimliğe göre kaldır
 linktitle: Ek açıklamaları kimliğe göre kaldır
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak ek açıklamaları kimliğe göre nasıl kaldıracağınızı öğrenin. Belge iş akışınızı verimli bir şekilde kolaylaştırın.
-type: docs
 weight: 11
 url: /tr/net/removing-annotations/remove-annotations-by-id/
 ---

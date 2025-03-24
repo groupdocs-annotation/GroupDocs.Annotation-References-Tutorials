@@ -3,7 +3,6 @@ title: Voeg afstandannotatie toe aan document
 linktitle: Voeg afstandannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u afstandsannotaties aan documenten toevoegt met GroupDocs.Annotation voor .NET. Verbeter moeiteloos de samenwerking en communicatie.
-type: docs
 weight: 12
 url: /nl/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ A: Ja, GroupDocs.Annotation ondersteunt annotaties in een breed scala aan docume
 
 ### Vraag: Waar kan ik de documentatie voor GroupDocs.Annotation voor .NET vinden?
 
- A: U kunt de beschikbare gedetailleerde documentatie raadplegen[hier](https://reference.groupdocs.com/annotation/net/).
+ A: U kunt de beschikbare gedetailleerde documentatie raadplegen[hier](https://tutorials.groupdocs.com/annotation/net/).
 
 ### Vraag: Hoe kan ik ondersteuning of hulp krijgen bij GroupDocs.Annotation?
 

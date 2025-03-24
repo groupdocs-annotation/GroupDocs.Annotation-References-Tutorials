@@ -3,7 +3,6 @@ title: Entfernen Sie mehrere Anmerkungen in .NET
 linktitle: Entfernen Sie mehrere Anmerkungen in .NET
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation mehrere Anmerkungen effizient in .NET entfernen. Befolgen Sie unsere Schritt-für-Schritt-Anleitung für eine nahtlose Integration in Ihre Anwendungen.
-type: docs
 weight: 12
 url: /de/net/removing-annotations/remove-multiple-annotations/
 ---

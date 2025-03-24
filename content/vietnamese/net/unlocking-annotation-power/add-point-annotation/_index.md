@@ -3,7 +3,6 @@ title: Thêm chú thích điểm vào tài liệu
 linktitle: Thêm chú thích điểm vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm Chú thích điểm vào tệp PDF bằng GroupDocs.Annotation cho .NET. Hướng dẫn từng bước để tích hợp liền mạch.
-type: docs
 weight: 17
 url: /vi/net/unlocking-annotation-power/add-point-annotation/
 ---

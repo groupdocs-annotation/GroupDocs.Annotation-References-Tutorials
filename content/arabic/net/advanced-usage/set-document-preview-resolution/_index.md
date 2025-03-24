@@ -3,7 +3,6 @@ title: ضبط دقة معاينة المستند
 linktitle: ضبط دقة معاينة المستند
 second_title: GroupDocs.Annotation .NET API
 description: يمكنك رفع مستوى التعاون في المستندات باستخدام Groupdocs.Annotation لـ .NET لتبسيط التعليقات التوضيحية ومعاينة الوظائف بسلاسة.
-type: docs
 weight: 23
 url: /ar/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ url: /ar/net/advanced-usage/set-document-preview-resolution/
 قبل الغوص في الاستفادة من إمكانيات Groupdocs.Annotation لـ .NET، تأكد من توفر المتطلبات الأساسية التالية:
 1.  تثبيت Groupdocs.Annotation لـ .NET: ابدأ بتنزيل وتثبيت Groupdocs.Annotation لمكتبة .NET. يمكنك الحصول على الملفات الضرورية من[رابط التحميل](https://releases.groupdocs.com/annotation/net/).
 2. بيئة التطوير: قم بإعداد بيئة تطوير مناسبة، بما في ذلك Visual Studio أو أي بيئة تطوير متكاملة مفضلة أخرى لتطوير .NET.
-3. الوصول إلى الوثائق: تعرف على الوثائق الشاملة المقدمة من Groupdocs.Annotation لـ .NET. يمكنك الرجوع إلى[توثيق](https://reference.groupdocs.com/annotation/net/) للحصول على رؤى تفصيلية حول وظائف المكتبة واستخدامها.
+3. الوصول إلى الوثائق: تعرف على الوثائق الشاملة المقدمة من Groupdocs.Annotation لـ .NET. يمكنك الرجوع إلى[توثيق](https://tutorials.groupdocs.com/annotation/net/) للحصول على رؤى تفصيلية حول وظائف المكتبة واستخدامها.
 4. الفهم الأساسي لـ .NET Framework: تأكد من أن لديك فهمًا أساسيًا لـ .NET Framework ولغة البرمجة C# لاستخدام Groupdocs.Annotation لـ .NET بشكل فعال.
 
 ## استيراد مساحات الأسماء الضرورية

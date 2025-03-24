@@ -3,7 +3,6 @@ title: Szövegszerkesztési megjegyzés hozzáadása a dokumentumhoz
 linktitle: Szövegszerkesztési megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá szövegszerkesztő megjegyzéseket PDF-dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Könnyedén megvédheti az érzékeny információkat.
-type: docs
 weight: 23
 url: /hu/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

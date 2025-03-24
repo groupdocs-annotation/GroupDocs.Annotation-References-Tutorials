@@ -3,7 +3,6 @@ title: Aggiungi annotazione ellisse al documento
 linktitle: Aggiungi annotazione ellisse al documento
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere annotazioni ellittiche ai documenti in .NET utilizzando GroupDocs.Annotation. Migliora la collaborazione e la comunicazione senza sforzo.
-type: docs
 weight: 13
 url: /it/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

@@ -3,7 +3,6 @@ title: Belge Önizleme Çözünürlüğünü Ayarla
 linktitle: Belge Önizleme Çözünürlüğünü Ayarla
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET ile belge işbirliğini geliştirin, açıklama ekleme ve önizleme işlevlerini sorunsuz bir şekilde kolaylaştırın.
-type: docs
 weight: 23
 url: /tr/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ Günümüzün dijital çağında, verimli belge yönetimi ve işbirliği hem iş
 Groupdocs.Annotation for .NET'in yeteneklerinden yararlanmaya başlamadan önce aşağıdaki önkoşulların yerine getirildiğinden emin olun:
 1.  Groupdocs.Annotation for .NET kurulumu: Groupdocs.Annotation for .NET kitaplığını indirip yükleyerek başlayın. Gerekli dosyaları adresinden temin edebilirsiniz.[İndirme: {link](https://releases.groupdocs.com/annotation/net/).
 2. Geliştirme Ortamı: Visual Studio veya .NET geliştirme için tercih edilen diğer herhangi bir IDE de dahil olmak üzere uygun bir geliştirme ortamı kurun.
-3. Belgelere Erişim: Groupdocs.Annotation for .NET tarafından sağlanan kapsamlı belgelere aşina olun. Şuraya başvurabilirsiniz:[dokümantasyon](https://reference.groupdocs.com/annotation/net/) Kütüphanenin işlevleri ve kullanımına ilişkin ayrıntılı bilgiler için.
+3. Belgelere Erişim: Groupdocs.Annotation for .NET tarafından sağlanan kapsamlı belgelere aşina olun. Şuraya başvurabilirsiniz:[dokümantasyon](https://tutorials.groupdocs.com/annotation/net/) Kütüphanenin işlevleri ve kullanımına ilişkin ayrıntılı bilgiler için.
 4. .NET Framework Temel Anlayışı: Groupdocs.Annotation for .NET'i etkili bir şekilde kullanmak için .NET framework ve C# programlama dili hakkında temel bir anlayışa sahip olduğunuzdan emin olun.
 
 ## Gerekli Ad Alanlarını İçe Aktarma

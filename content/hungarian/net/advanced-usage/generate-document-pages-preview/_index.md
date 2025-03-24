@@ -3,7 +3,6 @@ title: Dokumentumoldalak előnézetének létrehozása
 linktitle: Dokumentumoldalak előnézetének létrehozása
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan hozhat létre hatékony dokumentumoldal-előnézetet a GroupDocs.Annotation for .NET használatával. Fokozza dokumentumkezelési munkafolyamatait ezzel az átfogóval.
-type: docs
 weight: 12
 url: /hu/net/advanced-usage/generate-document-pages-preview/
 ---

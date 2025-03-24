@@ -3,7 +3,6 @@ title: Загрузить документ с локального диска
 linktitle: Загрузить документ с локального диска
 second_title: GroupDocs.Аннотация .NET API
 description: Раскройте возможности аннотаций документов с помощью GroupDocs.Annotation для .NET. Легко интегрируйте функции аннотаций в свои приложения .NET.
-type: docs
 weight: 13
 url: /ru/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### Могу ли я попробовать GroupDocs.Annotation для .NET перед покупкой?
  Да, вы можете загрузить бесплатную пробную версию с сайта[здесь](https://releases.groupdocs.com/).
 ### Где я могу найти документацию по GroupDocs.Annotation для .NET?
- Вы можете получить доступ к документации[здесь](https://reference.groupdocs.com/annotation/net/).
+ Вы можете получить доступ к документации[здесь](https://tutorials.groupdocs.com/annotation/net/).
 ### Как получить временную лицензию на GroupDocs.Annotation для .NET?
  Вы можете получить временную лицензию[здесь](https://purchase.groupdocs.com/temporary-license/).
 ### Доступна ли поддержка GroupDocs.Annotation для .NET?

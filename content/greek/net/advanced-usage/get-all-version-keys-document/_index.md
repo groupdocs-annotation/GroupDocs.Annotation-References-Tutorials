@@ -3,7 +3,6 @@ title: Λάβετε όλα τα κλειδιά έκδοσης στο έγγρα�
 linktitle: Λάβετε όλα τα κλειδιά έκδοσης στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να ανακτάτε όλα τα κλειδιά έκδοσης σε ένα έγγραφο χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τις δυνατότητες διαχείρισης εγγράφων σας με αυτό το ολοκληρωμένο.
-type: docs
 weight: 16
 url: /el/net/advanced-usage/get-all-version-keys-document/
 ---

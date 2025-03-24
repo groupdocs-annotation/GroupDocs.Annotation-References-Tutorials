@@ -3,7 +3,6 @@ title: Tetapkan Lisensi dari Stream
 linktitle: Tetapkan Lisensi dari Stream
 second_title: GroupDocs.Annotasi .NET API
 description: Buka potensi penuh anotasi dokumen di .NET dengan GroupDocs.Annotation. Ikuti panduan langkah demi langkah kami untuk integrasi yang lancar.
-type: docs
 weight: 11
 url: /id/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ Selamat datang di panduan komprehensif tentang penggunaan GroupDocs.Annotation u
 Sebelum masuk ke tutorial, pastikan Anda memiliki prasyarat berikut:
 1.  GroupDocs.Annotation untuk .NET: Pastikan Anda telah mengunduh dan menginstal GroupDocs.Annotation untuk .NET dari[tautan unduhan](https://releases.groupdocs.com/annotation/net/).
 2.  Lisensi: Dapatkan lisensi yang valid untuk GroupDocs.Annotation. Anda dapat membelinya dari[Di Sini](https://purchase.groupdocs.com/buy) atau meminta izin sementara[Di Sini](https://purchase.groupdocs.com/temporary-license/).
-3.  Dokumentasi: Biasakan diri Anda dengan[dokumentasi](https://reference.groupdocs.com/annotation/net/) untuk GroupDocs.Anotasi. Ini memberikan wawasan mendetail tentang fungsi API.
+3.  Dokumentasi: Biasakan diri Anda dengan[dokumentasi](https://tutorials.groupdocs.com/annotation/net/) untuk GroupDocs.Anotasi. Ini memberikan wawasan mendetail tentang fungsi API.
 
 ## Impor Namespace
 Pertama, mari impor namespace yang diperlukan untuk mulai menggunakan GroupDocs.Annotation di proyek .NET Anda:
@@ -63,6 +62,6 @@ Ya, Anda memerlukan lisensi yang valid untuk membuka fungsionalitas penuh GroupD
 ### Bisakah saya mencoba GroupDocs.Annotation untuk .NET sebelum membeli?
  Ya, Anda dapat meminta lisensi uji coba gratis[Di Sini](https://releases.groupdocs.com/) untuk mengeksplorasi kemampuan GroupDocs.Annotation untuk .NET.
 ### Bagaimana saya bisa mendapatkan dokumentasi terbaru untuk GroupDocs.Annotation untuk .NET?
- Anda dapat merujuk ke[dokumentasi](https://reference.groupdocs.com/annotation/net/) untuk GroupDocs.Annotation untuk .NET untuk mengakses referensi dan tutorial API terperinci.
+ Anda dapat merujuk ke[dokumentasi](https://tutorials.groupdocs.com/annotation/net/) untuk GroupDocs.Annotation untuk .NET untuk mengakses referensi dan tutorial API terperinci.
 ### Bagaimana jika saya mengalami masalah dengan lisensi saya?
 Jika Anda mengalami masalah apa pun dengan lisensi Anda, hubungi tim dukungan GroupDocs untuk mendapatkan bantuan.

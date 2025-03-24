@@ -3,7 +3,6 @@ title: 產生文件頁面預覽
 linktitle: 產生文件頁面預覽
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 有效地產生文件頁面預覽。透過此綜合功能增強您的文件管理工作流程。
-type: docs
 weight: 12
 url: /zh-hant/net/advanced-usage/generate-document-pages-preview/
 ---

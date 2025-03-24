@@ -3,7 +3,6 @@ title: Добавить аннотацию точки в документ
 linktitle: Добавить аннотацию точки в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавить точечную аннотацию в PDF-файлы с помощью GroupDocs.Annotation для .NET. Пошаговое руководство по плавной интеграции.
-type: docs
 weight: 17
 url: /ru/net/unlocking-annotation-power/add-point-annotation/
 ---

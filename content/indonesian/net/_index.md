@@ -1,7 +1,6 @@
 ---
 title: Tutorial dan Contoh GroupDocs.Annotation untuk .NET
 linktitle: GroupDocs.Annotation untuk Tutorial .NET
-type: docs
 weight: 10
 url: /id/net/
 description: Buka potensi penuh GroupDocs.Annotation untuk .NET dengan tutorial kami. Integrasikan dengan lancar, tingkatkan kolaborasi, dan sederhanakan alur kerja.

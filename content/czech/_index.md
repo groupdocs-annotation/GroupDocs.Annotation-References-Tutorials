@@ -3,7 +3,6 @@ title: Zvládnutí GroupDocs.Annotation - Návody a průvodce
 linktitle: GroupDocs.Výukové programy pro anotace
 additionalTitle: Reference API GroupDocs
 description: Odemkněte plný potenciál GroupDocs.Annotation pomocí našich výukových programů. Vylepšete spolupráci a zefektivněte pracovní postupy pomocí komplexních průvodců a tipů.
-type: docs
 weight: 11
 url: /cs/
 is_root: true

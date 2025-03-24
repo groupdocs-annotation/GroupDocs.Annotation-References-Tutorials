@@ -3,7 +3,6 @@ title: إضافة تعليق توضيحي لخط النص إلى المستند
 linktitle: إضافة تعليق توضيحي لخط النص إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية نصية إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. تعزيز عمليات التعاون ومراجعة المستندات بكفاءة.
-type: docs
 weight: 26
 url: /ar/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

@@ -3,7 +3,6 @@ title: Carica documento da Azure
 linktitle: Carica documento da Azure
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come annotare i documenti in .NET utilizzando GroupDocs.Annotation. Esercitazione dettagliata per un'integrazione perfetta con Archiviazione BLOB di Azure.
-type: docs
 weight: 11
 url: /it/net/document-loading-essentials/load-document-from-azure/
 ---

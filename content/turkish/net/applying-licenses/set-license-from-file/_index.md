@@ -3,7 +3,6 @@ title: Lisansı Dosyadan Ayarla
 linktitle: Lisansı Dosyadan Ayarla
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET ile güçlü belge açıklama özelliklerini .NET uygulamalarınıza sorunsuz bir şekilde entegre edin.
-type: docs
 weight: 10
 url: /tr/net/applying-licenses/set-license-from-file/
 ---

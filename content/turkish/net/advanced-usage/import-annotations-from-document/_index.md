@@ -3,7 +3,6 @@ title: Belgeden Ek Açıklamaları İçe Aktar
 linktitle: Belgeden Ek Açıklamaları İçe Aktar
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation'ı kullanarak .NET'teki belgelerden ek açıklamaları nasıl içe aktaracağınızı öğrenin. Sorunsuz entegrasyon için adım adım eğitimimizi izleyin.
-type: docs
 weight: 19
 url: /tr/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ Evet, GroupDocs.Annotation, PDF, DOCX, PPTX, XLSX ve daha fazlasını içeren ç
 ### GroupDocs.Annotation için nasıl geçici lisans alabilirim?
  GroupDocs.Annotation için geçici bir lisansı şuradan alabilirsiniz:[geçici lisans sayfası](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation'a ilişkin kapsamlı belgeleri nerede bulabilirim?
- GroupDocs.Annotation için ayrıntılı belgeler mevcuttur[Burada](https://reference.groupdocs.com/annotation/net/).
+ GroupDocs.Annotation için ayrıntılı belgeler mevcuttur[Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation ile ilgili herhangi bir sorun veya soru için nereden destek alabilirim?
  Destek için GroupDocs.Annotation'ı ziyaret edin.[forum](https://forum.groupdocs.com/c/annotation/10) uzmanlardan ve topluluktan yardım alabileceğiniz yer.

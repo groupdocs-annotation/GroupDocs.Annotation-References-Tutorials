@@ -3,7 +3,6 @@ title: إضافة تعليق توضيحي لجزء نص البحث إلى الم
 linktitle: إضافة تعليق توضيحي لجزء نص البحث إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: اكتشف قوة GroupDocs.Annotation لـ .NET وأضف إمكانات التعليقات التوضيحية للمستندات بسهولة إلى تطبيقاتك.
-type: docs
 weight: 20
 url: /ar/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

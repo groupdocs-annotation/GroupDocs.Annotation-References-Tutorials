@@ -3,7 +3,6 @@ title: Belgeye Kaynak Redaksiyon Açıklaması Ekleme
 linktitle: Belgeye Kaynak Redaksiyon Açıklaması Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET ile belge yönetimi iş akışlarını geliştirin. Verimli bir şekilde Kaynak Redaksiyonu Ek Açıklamasını .NET'inize sorunsuz bir şekilde entegre edin.
-type: docs
 weight: 19
 url: /tr/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

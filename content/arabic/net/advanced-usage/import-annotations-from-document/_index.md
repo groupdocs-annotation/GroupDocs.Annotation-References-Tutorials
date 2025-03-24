@@ -3,7 +3,6 @@ title: استيراد التعليقات التوضيحية من المستند
 linktitle: استيراد التعليقات التوضيحية من المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية استيراد التعليقات التوضيحية من المستندات في .NET باستخدام GroupDocs.Annotation. اتبع البرنامج التعليمي خطوة بخطوة لتحقيق التكامل السلس.
-type: docs
 weight: 19
 url: /ar/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### كيف يمكنني الحصول على ترخيص مؤقت لـ GroupDocs.Annotation؟
  يمكنك الحصول على ترخيص مؤقت لـ GroupDocs.Annotation من[صفحة الترخيص المؤقتة](https://purchase.groupdocs.com/temporary-license/).
 ### أين يمكنني العثور على وثائق شاملة لـ GroupDocs.Annotation؟
- الوثائق التفصيلية لـ GroupDocs.Annotation متاحة[هنا](https://reference.groupdocs.com/annotation/net/).
+ الوثائق التفصيلية لـ GroupDocs.Annotation متاحة[هنا](https://tutorials.groupdocs.com/annotation/net/).
 ### أين يمكنني طلب الدعم لأية مشكلات أو استفسارات تتعلق بـ GroupDocs.Annotation؟
  للحصول على الدعم، قم بزيارة GroupDocs.Annotation[المنتدى](https://forum.groupdocs.com/c/annotation/10) حيث يمكنك طلب المساعدة من الخبراء والمجتمع.

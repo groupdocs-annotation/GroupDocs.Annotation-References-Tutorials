@@ -3,7 +3,6 @@ title: Thêm chú thích đánh dấu văn bản vào tài liệu
 linktitle: Thêm chú thích đánh dấu văn bản vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích đánh dấu văn bản vào tài liệu bằng GroupDocs.Annotation cho .NET. Nâng cao sự hợp tác và năng suất với tính năng toàn diện này.
-type: docs
 weight: 22
 url: /vi/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

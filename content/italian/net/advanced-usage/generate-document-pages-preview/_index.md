@@ -3,7 +3,6 @@ title: Genera anteprima delle pagine del documento
 linktitle: Genera anteprima delle pagine del documento
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come generare in modo efficiente l'anteprima delle pagine dei documenti utilizzando GroupDocs.Annotation per .NET. Migliora i flussi di lavoro di gestione dei documenti con questo strumento completo.
-type: docs
 weight: 12
 url: /it/net/advanced-usage/generate-document-pages-preview/
 ---

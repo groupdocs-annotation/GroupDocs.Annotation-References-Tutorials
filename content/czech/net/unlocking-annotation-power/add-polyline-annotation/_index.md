@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci křivky
 linktitle: Přidejte do dokumentu anotaci křivky
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat anotace křivek do dokumentů pomocí GroupDocs.Annotation for .NET. Vylepšete spolupráci a procesy kontroly dokumentů bez námahy.
-type: docs
 weight: 18
 url: /cs/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Ano, můžete přizpůsobit různé vlastnosti anotací, jako je barva, neprůhl
 ### Nabízí GroupDocs.Annotation for .NET bezplatnou zkušební verzi?
  Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET návštěvou[tento odkaz](https://releases.groupdocs.com/).
 ### Kde najdu dokumentaci k GroupDocs.Annotation pro .NET?
- Můžete najít dokumentaci pro GroupDocs.Annotation pro .NET[tady](https://reference.groupdocs.com/annotation/net/).
+ Můžete najít dokumentaci pro GroupDocs.Annotation pro .NET[tady](https://tutorials.groupdocs.com/annotation/net/).
 ### Jak mohu získat podporu pro jakékoli problémy nebo dotazy související s GroupDocs.Annotation pro .NET?
  Podporu můžete získat návštěvou fóra GroupDocs.Annotation[tady](https://forum.groupdocs.com/c/annotation/10).

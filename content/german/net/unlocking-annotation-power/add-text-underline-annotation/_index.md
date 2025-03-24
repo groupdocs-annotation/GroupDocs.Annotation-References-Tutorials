@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Textunterstreichungsanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Textunterstreichungsanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET Textunterstreichungsanmerkungen zu Dokumenten hinzufügen. Verbessern Sie mühelos die Zusammenarbeit und Kommunikation.
-type: docs
 weight: 27
 url: /de/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

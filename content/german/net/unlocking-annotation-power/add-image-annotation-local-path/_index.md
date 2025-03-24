@@ -3,7 +3,6 @@ title: Bildanmerkung zum Dokument hinzufügen (lokaler Pfad)
 linktitle: Bildanmerkung zum Dokument hinzufügen (lokaler Pfad)
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Bildanmerkungen zu Dokumenten hinzufügen. Erweitern Sie die Möglichkeiten der Dokumentenverarbeitung ganz einfach.
-type: docs
 weight: 14
 url: /de/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

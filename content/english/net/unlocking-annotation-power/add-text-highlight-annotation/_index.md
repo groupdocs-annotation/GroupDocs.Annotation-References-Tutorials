@@ -3,7 +3,6 @@ title: Add Text Highlight Annotation to Document
 linktitle: Add Text Highlight Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to add text highlight annotations to documents using GroupDocs.Annotation for .NET. Enhance collaboration and productivity with this comprehensive.
-type: docs
 weight: 22
 url: /net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

@@ -3,7 +3,6 @@ title: 文档加载要点
 linktitle: 文档加载要点
 second_title: GroupDocs.Annotation .NET API
 description: 了解使用 GroupDocs.Annotation .NET 加载文档的基本教程。与 Amazon S3、Azure、FTP、本地磁盘、流等无缝集成。
-type: docs
 weight: 20
 url: /zh/net/document-loading-essentials/
 ---

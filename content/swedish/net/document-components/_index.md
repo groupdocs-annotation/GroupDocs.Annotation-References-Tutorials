@@ -3,7 +3,6 @@ title: Dokumentkomponenter
 linktitle: Dokumentkomponenter
 second_title: GroupDocs.Annotation .NET API
 description: Upptäck omfattande självstudier om att integrera interaktiva komponenter som knappar, kryssrutor och rullgardinsmenyer i PDF-dokument med GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /sv/net/document-components/
 ---

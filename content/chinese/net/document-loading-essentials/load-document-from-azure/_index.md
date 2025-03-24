@@ -3,7 +3,6 @@ title: 从 Azure 加载文档
 linktitle: 从 Azure 加载文档
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 在 .NET 中对文档进行注释。与 Azure Blob 存储无缝集成的分步教程。
-type: docs
 weight: 11
 url: /zh/net/document-loading-essentials/load-document-from-azure/
 ---

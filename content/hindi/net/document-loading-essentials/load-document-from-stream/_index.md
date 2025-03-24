@@ -3,7 +3,6 @@ title: स्ट्रीम से दस्तावेज़ लोड कर
 linktitle: स्ट्रीम से दस्तावेज़ लोड करें
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation के साथ .NET में दस्तावेज़ों को सहजता से एनोटेट करना सीखें। सहयोग और उत्पादकता बढ़ाएँ.
-type: docs
 weight: 14
 url: /hi/net/document-loading-essentials/load-document-from-stream/
 ---

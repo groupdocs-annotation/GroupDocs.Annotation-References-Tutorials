@@ -3,7 +3,6 @@ title: Document laden vanaf FTP
 linktitle: Document laden vanaf FTP
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter uw .NET-toepassingen met GroupDocs.Annotation voor naadloze documentannotatie. Inclusief stap-voor-stap handleiding.
-type: docs
 weight: 12
 url: /nl/net/document-loading-essentials/load-document-from-ftp/
 ---

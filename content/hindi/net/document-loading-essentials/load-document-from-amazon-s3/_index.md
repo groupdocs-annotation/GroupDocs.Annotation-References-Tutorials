@@ -3,7 +3,6 @@ title: Amazon S3 से दस्तावेज़ लोड करें
 linktitle: Amazon S3 से दस्तावेज़ लोड करें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए Groupdocs.Annotation के साथ दस्तावेज़ों को प्रोग्रामेटिक रूप से एनोटेट करना सीखें। निर्बाध एकीकरण के लिए चरण-दर-चरण ट्यूटोरियल।
-type: docs
 weight: 10
 url: /hi/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### क्या मैं खरीदने से पहले .NET के लिए Groupdocs.Annotation आज़मा सकता हूँ?
  हां, आप उपलब्ध निःशुल्क परीक्षण संस्करण तक पहुंच कर .NET के लिए Groupdocs.Annotation की सुविधाओं का पता लगा सकते हैं[यहाँ](https://releases.groupdocs.com/).
 ### मुझे .NET के लिए Groupdocs.Annotation के लिए दस्तावेज़ कहाँ मिल सकते हैं?
-.NET के लिए Groupdocs.Annotation के लिए व्यापक दस्तावेज़ उपलब्ध है[यहाँ](https://reference.groupdocs.com/annotation/net/).
+.NET के लिए Groupdocs.Annotation के लिए व्यापक दस्तावेज़ उपलब्ध है[यहाँ](https://tutorials.groupdocs.com/annotation/net/).
 ### क्या मुझे .NET के लिए Groupdocs.Annotation का मूल्यांकन करने के लिए अस्थायी लाइसेंस की आवश्यकता है?
  आप मूल्यांकन उद्देश्यों के लिए एक अस्थायी लाइसेंस प्राप्त कर सकते हैं[यहाँ](https://purchase.groupdocs.com/temporary-license/).
 ### मैं .NET के लिए Groupdocs.Annotation के लिए सहायता या समर्थन कहां से प्राप्त कर सकता हूं?

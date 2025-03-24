@@ -3,7 +3,6 @@ title: Amazon S3 からドキュメントをロードする
 linktitle: Amazon S3 からドキュメントをロードする
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用してプログラムでドキュメントに注釈を付ける方法を学びます。シームレスな統合のためのステップバイステップのチュートリアル。
-type: docs
 weight: 10
 url: /ja/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation for .NET は、PDF、DOCX、PPTX などを含む幅広い�
 ### 購入する前に Groupdocs.Annotation for .NET を試すことはできますか?
 はい、利用可能な無料試用版にアクセスして、Groupdocs.Annotation for .NET の機能を探索できます。[ここ](https://releases.groupdocs.com/).
 ### Groupdocs.Annotation for .NET のドキュメントはどこで見つけられますか?
-Groupdocs.Annotation for .NET の包括的なドキュメントが利用可能です[ここ](https://reference.groupdocs.com/annotation/net/).
+Groupdocs.Annotation for .NET の包括的なドキュメントが利用可能です[ここ](https://tutorials.groupdocs.com/annotation/net/).
 ### Groupdocs.Annotation for .NET を評価するには一時ライセンスが必要ですか?
 評価目的の一時ライセンスは、次から取得できます。[ここ](https://purchase.groupdocs.com/temporary-license/).
 ### Groupdocs.Annotation for .NET に関するサポートやサポートはどこに問い合わせればよいですか?

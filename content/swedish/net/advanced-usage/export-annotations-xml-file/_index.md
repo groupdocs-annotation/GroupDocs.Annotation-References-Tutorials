@@ -3,7 +3,6 @@ title: Exportera anteckningar från XML-fil
 linktitle: Exportera anteckningar från XML-fil
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du exporterar anteckningar från XML-filer med GroupDocs.Annotation för .NET, vilket förenklar arbetsflödet för dokumenthantering effektivt.
-type: docs
 weight: 11
 url: /sv/net/advanced-usage/export-annotations-xml-file/
 ---

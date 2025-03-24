@@ -3,7 +3,6 @@ title: Jelszóval védett dokumentumok betöltése
 linktitle: Jelszóval védett dokumentumok betöltése
 second_title: GroupDocs.Annotation .NET API
 description: Fokozza az együttműködést és a dokumentumok áttekintését a GroupDocs.Annotation for .NET segítségével. A .NET-alkalmazásaiban zökkenőmentesen írhat megjegyzéseket PDF-re és még sok másra.
-type: docs
 weight: 17
 url: /hu/net/document-loading-essentials/load-password-protected-documents/
 ---

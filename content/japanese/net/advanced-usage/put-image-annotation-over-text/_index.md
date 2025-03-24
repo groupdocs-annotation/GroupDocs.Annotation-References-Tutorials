@@ -3,7 +3,6 @@ title: テキストの上に画像の注釈を配置する
 linktitle: テキストの上に画像の注釈を配置する
 second_title: GroupDocs.Annotation .NET API
 description: 効率的なドキュメント管理とコラボレーションのために、GroupDocs.Annotation を使用して .NET のテキストに画像注釈を追加する方法を学びます。
-type: docs
 weight: 21
 url: /ja/net/advanced-usage/put-image-annotation-over-text/
 ---

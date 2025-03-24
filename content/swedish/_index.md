@@ -3,7 +3,6 @@ title: Bemästra GroupDocs.Annotation - Handledningar och guider
 linktitle: Handledningar för GroupDocs.Annotation
 additionalTitle: GroupDocs API-referenser
 description: Lås upp den fulla potentialen hos GroupDocs.Annotation med våra handledningar. Förbättra samarbetet och effektivisera arbetsflöden med omfattande guider och tips.
-type: docs
 weight: 11
 url: /sv/
 is_root: true

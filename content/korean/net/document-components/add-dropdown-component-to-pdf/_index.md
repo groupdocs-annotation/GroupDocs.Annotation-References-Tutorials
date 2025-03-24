@@ -3,7 +3,6 @@ title: PDF 문서에 드롭다운 구성 요소 추가
 linktitle: PDF 문서에 드롭다운 구성 요소 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 PDF에 드롭다운 구성 요소를 추가하는 방법을 알아보세요. 원활한 통합을 위한 단계별 가이드를 따르세요.
-type: docs
 weight: 12
 url: /ko/net/document-components/add-dropdown-component-to-pdf/
 ---

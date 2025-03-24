@@ -3,7 +3,6 @@ title: Dodaj adnotację o redakcji zasobów do dokumentu
 linktitle: Dodaj adnotację o redakcji zasobów do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Usprawnij przepływ pracy w zakresie zarządzania dokumentami dzięki GroupDocs.Annotation dla platformy .NET. Bezproblemowo zintegruj adnotację redakcyjną zasobów z platformą .NET, aby uzyskać wydajną pracę.
-type: docs
 weight: 19
 url: /pl/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

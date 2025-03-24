@@ -3,7 +3,6 @@ title: Ładowanie niestandardowych czcionek
 linktitle: Ładowanie niestandardowych czcionek
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bezproblemowo ładować niestandardowe czcionki w GroupDocs.Annotation dla .NET, aby ulepszyć adnotacje w dokumentach. Postępuj zgodnie z naszymi instrukcjami krok po kroku, aby ułatwić integrację.
-type: docs
 weight: 20
 url: /pl/net/advanced-usage/loading-custom-fonts/
 ---

@@ -3,7 +3,6 @@ title: Ladda lösenordsskyddade dokument
 linktitle: Ladda lösenordsskyddade dokument
 second_title: GroupDocs.Annotation .NET API
 description: Förbättra samarbete och dokumentgranskning med GroupDocs.Annotation för .NET. Annotera PDF och mer sömlöst i dina .NET-appar.
-type: docs
 weight: 17
 url: /sv/net/document-loading-essentials/load-password-protected-documents/
 ---

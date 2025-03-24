@@ -3,7 +3,6 @@ title: Definir licença do arquivo
 linktitle: Definir licença do arquivo
 second_title: API GroupDocs.Annotation .NET
 description: Integre recursos poderosos de anotação de documentos em seus aplicativos .NET perfeitamente com GroupDocs.Annotation for .NET.
-type: docs
 weight: 10
 url: /pt/net/applying-licenses/set-license-from-file/
 ---

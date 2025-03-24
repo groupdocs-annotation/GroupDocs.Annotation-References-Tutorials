@@ -3,7 +3,6 @@ title: Genereer een voorbeeld zonder annotaties
 linktitle: Genereer een voorbeeld zonder annotaties
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter de samenwerking en annotatie aan documenten binnen .NET-toepassingen met GroupDocs.Annotation voor .NET. Met deze krachtige bibliotheek kunt u eenvoudig documenten annoteren, markeren en beoordelen.
-type: docs
 weight: 13
 url: /nl/net/advanced-usage/generate-preview-without-annotations/
 ---

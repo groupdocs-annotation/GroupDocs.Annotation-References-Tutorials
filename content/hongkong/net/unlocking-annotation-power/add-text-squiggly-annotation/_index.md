@@ -3,7 +3,6 @@ title: 在文件中新增文字波浪註釋
 linktitle: 在文件中新增文字波浪註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 輕鬆地將文字波浪線註解新增至文件中。加強協作和文件審查流程。
-type: docs
 weight: 25
 url: /zh-hant/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

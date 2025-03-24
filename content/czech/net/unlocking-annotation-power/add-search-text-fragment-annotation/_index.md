@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci fragmentu vyhledávacího textu
 linktitle: Přidejte do dokumentu anotaci fragmentu vyhledávacího textu
 second_title: GroupDocs.Annotation .NET API
 description: Prozkoumejte sílu GroupDocs.Annotation pro .NET a bez námahy přidejte do svých aplikací možnosti anotací dokumentů.
-type: docs
 weight: 20
 url: /cs/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

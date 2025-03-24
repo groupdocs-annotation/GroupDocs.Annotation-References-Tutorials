@@ -3,7 +3,6 @@ title: Legen Sie die gemessene Lizenz fest
 linktitle: Legen Sie die gemessene Lizenz fest
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie eine getaktete Lizenz für GroupDocs.Annotation .NET für die Ressourcennutzung und Dokumentanmerkungsfunktionen in Ihren .NET-Anwendungen einrichten.
-type: docs
 weight: 12
 url: /de/net/applying-licenses/set-metered-license/
 ---

@@ -3,7 +3,6 @@ title: Załaduj dokumenty chronione hasłem
 linktitle: Załaduj dokumenty chronione hasłem
 second_title: GroupDocs.Adnotacja .NET API
 description: Usprawnij współpracę i przeglądanie dokumentów dzięki GroupDocs.Annotation dla platformy .NET. Bezproblemowo dodawaj adnotacje do plików PDF i nie tylko w aplikacjach .NET.
-type: docs
 weight: 17
 url: /pl/net/document-loading-essentials/load-password-protected-documents/
 ---

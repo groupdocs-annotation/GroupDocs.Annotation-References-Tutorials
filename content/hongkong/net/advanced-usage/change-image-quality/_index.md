@@ -3,7 +3,6 @@ title: 改變影像品質
 linktitle: 改變影像品質
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 來增強 PDF 檔案中的影像品質。請遵循我們的逐步指南。
-type: docs
 weight: 10
 url: /zh-hant/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ url: /zh-hant/net/advanced-usage/change-image-quality/
 ## 先決條件
 在我們深入學習本教程之前，請確保您具備以下先決條件：
 ### 1.安裝Groupdocs.Annotation for .NET
-首先，從網站下載並安裝 Groupdocs.Annotation for .NET 函式庫。你可以找到下載鏈接[這裡](https://releases.groupdocs.com/annotation/net/)。請按照文件中提供的安裝說明進行操作[這裡](https://reference.groupdocs.com/annotation/net/)正確設定庫。
+首先，從網站下載並安裝 Groupdocs.Annotation for .NET 函式庫。你可以找到下載鏈接[這裡](https://releases.groupdocs.com/annotation/net/)。請按照文件中提供的安裝說明進行操作[這裡](https://tutorials.groupdocs.com/annotation/net/)正確設定庫。
 ### 2.熟悉C#程式語言
 對 C# 程式語言的基本了解對於遵循本教程中提供的範例至關重要。
 ### 3. 存取輸入 PDF 和圖像文件

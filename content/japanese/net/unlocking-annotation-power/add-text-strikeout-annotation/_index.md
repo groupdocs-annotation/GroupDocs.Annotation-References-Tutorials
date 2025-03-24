@@ -3,7 +3,6 @@ title: テキストの取り消し線注釈をドキュメントに追加する
 linktitle: テキストの取り消し線注釈をドキュメントに追加する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントにテキストの取り消し線の注釈を追加する方法を学びます。コラボレーションと文書レビューのプロセスを効率的に強化します。
-type: docs
 weight: 26
 url: /ja/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

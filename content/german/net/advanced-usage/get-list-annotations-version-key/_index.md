@@ -3,7 +3,6 @@ title: Rufen Sie die Liste der Anmerkungen mithilfe des Versionsschlüssels ab
 linktitle: Rufen Sie die Liste der Anmerkungen mithilfe des Versionsschlüssels ab
 second_title: GroupDocs.Annotation .NET-API
 description: Erweitern Sie Ihre .NET-Anwendungen mit GroupDocs.Annotation für eine nahtlose Dokumentanmerkung. Befolgen Sie unsere Schritt-für-Schritt-Anleitung für eine effektive Integration.
-type: docs
 weight: 18
 url: /de/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ Sie können Unterstützung suchen, indem Sie das GroupDocs.Annotation-Forum besu
 ### Kann ich zu Testzwecken eine temporäre Lizenz für GroupDocs.Annotation erwerben?
 Ja, temporäre Lizenzen können erworben werden, um das Testen und Bewerten des Produkts zu erleichtern.
 ### Wo finde ich eine umfassende Dokumentation zu GroupDocs.Annotation für .NET?
- Ausführliche Anleitungen zur Verwendung des Produkts finden Sie in der Dokumentation auf der GroupDocs-Website[Hier]( https://reference.groupdocs.com/annotation/net/).
+ Ausführliche Anleitungen zur Verwendung des Produkts finden Sie in der Dokumentation auf der GroupDocs-Website[Hier]( https://tutorials.groupdocs.com/annotation/net/).

@@ -3,7 +3,6 @@ title: テキストの下線注釈をドキュメントに追加する
 linktitle: テキストの下線注釈をドキュメントに追加する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントにテキストの下線注釈を追加する方法を学習します。コラボレーションとコミュニケーションを簡単に強化します。
-type: docs
 weight: 27
 url: /ja/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

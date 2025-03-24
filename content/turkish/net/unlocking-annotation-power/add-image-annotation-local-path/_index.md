@@ -3,7 +3,6 @@ title: Belgeye Görüntü Açıklaması Ekleme (Yerel Yol)
 linktitle: Belgeye Görüntü Açıklaması Ekleme (Yerel Yol)
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelere resim açıklamalarını nasıl ekleyeceğinizi öğrenin. Belge işleme yeteneklerini kolaylıkla geliştirin.
-type: docs
 weight: 14
 url: /tr/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

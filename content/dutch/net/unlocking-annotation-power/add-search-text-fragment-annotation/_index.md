@@ -3,7 +3,6 @@ title: Voeg zoektekstfragmentannotatie toe aan document
 linktitle: Voeg zoektekstfragmentannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Ontdek de kracht van GroupDocs.Annotation voor .NET en voeg moeiteloos documentannotatiemogelijkheden toe aan uw toepassingen.
-type: docs
 weight: 20
 url: /nl/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

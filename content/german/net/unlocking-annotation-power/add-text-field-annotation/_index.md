@@ -3,7 +3,6 @@ title: Textfeldanmerkung zum Dokument hinzufügen
 linktitle: Textfeldanmerkung zum Dokument hinzufügen
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit Groupdocs.Annotation for .NET Textfeldanmerkungen nahtlos in Ihre .NET-Anwendungen integrieren.
-type: docs
 weight: 21
 url: /de/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ In diesem Tutorial befassen wir uns mit einer der grundlegenden Funktionen von G
 ## Voraussetzungen
 Bevor Sie mit der Implementierung beginnen, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 ### 1. Installation von Groupdocs.Annotation für .NET
- Zunächst müssen Sie Groupdocs.Annotation für .NET herunterladen und installieren. Den Download-Link finden Sie hier[Hier](https://releases.groupdocs.com/annotation/net/) . Befolgen Sie die Installationsanweisungen in der Dokumentation[Hier](https://reference.groupdocs.com/annotation/net/) um die Bibliothek richtig einzurichten.
+ Zunächst müssen Sie Groupdocs.Annotation für .NET herunterladen und installieren. Den Download-Link finden Sie hier[Hier](https://releases.groupdocs.com/annotation/net/) . Befolgen Sie die Installationsanweisungen in der Dokumentation[Hier](https://tutorials.groupdocs.com/annotation/net/) um die Bibliothek richtig einzurichten.
 ### 2. Einrichtung der Entwicklungsumgebung
 Stellen Sie sicher, dass Sie eine Entwicklungsumgebung für die .NET-Entwicklung eingerichtet haben. Dazu gehört, dass eine kompatible IDE wie Visual Studio und .NET Framework auf Ihrem System installiert ist.
 ### 3. Grundlegendes Verständnis der C#-Programmierung

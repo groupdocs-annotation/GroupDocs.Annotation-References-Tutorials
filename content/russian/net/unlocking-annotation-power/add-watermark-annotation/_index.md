@@ -3,7 +3,6 @@ title: Добавить аннотацию водяного знака в док
 linktitle: Добавить аннотацию водяного знака в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как легко добавлять аннотации к вашим документам с помощью GroupDocs.Annotation для .NET. Повысьте четкость и безопасность документов.
-type: docs
 weight: 28
 url: /ru/net/unlocking-annotation-power/add-watermark-annotation/
 ---

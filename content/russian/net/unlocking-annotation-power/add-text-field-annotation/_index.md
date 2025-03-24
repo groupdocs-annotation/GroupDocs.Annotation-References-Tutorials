@@ -3,7 +3,6 @@ title: Добавить аннотацию текстового поля в до
 linktitle: Добавить аннотацию текстового поля в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как легко интегрировать аннотации текстовых полей в ваши приложения .NET с помощью Groupdocs.Annotation for .NET.
-type: docs
 weight: 21
 url: /ru/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ Groupdocs.Annotation for .NET — это мощный инструмент, ко
 ## Предварительные условия
 Прежде чем приступить к реализации, убедитесь, что у вас есть следующие предварительные условия:
 ### 1. Установка Groupdocs.Annotation для .NET.
- Прежде всего вам необходимо скачать и установить Groupdocs.Annotation для .NET. Вы можете найти ссылку для скачивания[здесь](https://releases.groupdocs.com/annotation/net/) . Следуйте инструкциям по установке, приведенным в документации.[здесь](https://reference.groupdocs.com/annotation/net/) чтобы правильно настроить библиотеку.
+ Прежде всего вам необходимо скачать и установить Groupdocs.Annotation для .NET. Вы можете найти ссылку для скачивания[здесь](https://releases.groupdocs.com/annotation/net/) . Следуйте инструкциям по установке, приведенным в документации.[здесь](https://tutorials.groupdocs.com/annotation/net/) чтобы правильно настроить библиотеку.
 ### 2. Настройка среды разработки
 Убедитесь, что у вас настроена среда разработки для разработки .NET. Это включает в себя установку в вашей системе совместимой IDE, такой как Visual Studio и .NET Framework.
 ### 3. Базовое понимание программирования на C#.

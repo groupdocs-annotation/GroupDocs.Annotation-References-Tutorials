@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Pfeilanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Pfeilanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Pfeilanmerkungen zu Ihren Dokumenten hinzufügen. Verbessern Sie mühelos die Klarheit und Interaktivität von Dokumenten.
-type: docs
 weight: 11
 url: /de/net/unlocking-annotation-power/add-arrow-annotation/
 ---

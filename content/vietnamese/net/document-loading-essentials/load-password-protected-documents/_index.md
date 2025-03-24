@@ -3,7 +3,6 @@ title: Tải tài liệu được bảo vệ bằng mật khẩu
 linktitle: Tải tài liệu được bảo vệ bằng mật khẩu
 second_title: GroupDocs.Annotation .NET API
 description: Tăng cường cộng tác và đánh giá tài liệu với GroupDocs.Annotation for .NET. Chú thích PDF và liền mạch hơn trong ứng dụng .NET của bạn.
-type: docs
 weight: 17
 url: /vi/net/document-loading-essentials/load-password-protected-documents/
 ---

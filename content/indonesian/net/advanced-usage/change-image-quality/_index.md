@@ -3,7 +3,6 @@ title: Ubah Kualitas Gambar
 linktitle: Ubah Kualitas Gambar
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara meningkatkan kualitas gambar dalam file PDF menggunakan Groupdocs.Annotation untuk .NET. Ikuti panduan langkah demi langkah kami.
-type: docs
 weight: 10
 url: /id/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ Di era digital saat ini, kualitas gambar dalam dokumen PDF dapat berdampak signi
 ## Prasyarat
 Sebelum kita mendalami tutorialnya, pastikan Anda memiliki prasyarat berikut:
 ### 1. Instalasi Groupdocs.Annotation untuk .NET
- Pertama, unduh dan instal Groupdocs.Annotation untuk perpustakaan .NET dari situs web. Anda dapat menemukan tautan unduhan[Di Sini](https://releases.groupdocs.com/annotation/net/) . Ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://reference.groupdocs.com/annotation/net/) untuk mengatur perpustakaan dengan benar.
+ Pertama, unduh dan instal Groupdocs.Annotation untuk perpustakaan .NET dari situs web. Anda dapat menemukan tautan unduhan[Di Sini](https://releases.groupdocs.com/annotation/net/) . Ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://tutorials.groupdocs.com/annotation/net/) untuk mengatur perpustakaan dengan benar.
 ### 2. Familiar dengan Bahasa Pemrograman C#
 Pemahaman dasar tentang bahasa pemrograman C# sangat penting untuk diikuti bersama dengan contoh yang diberikan dalam tutorial ini.
 ### 3. Akses untuk Memasukkan File PDF dan Gambar

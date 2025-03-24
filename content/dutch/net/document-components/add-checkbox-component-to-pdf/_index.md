@@ -3,7 +3,6 @@ title: Voeg een selectievakje-component toe aan een PDF-document
 linktitle: Voeg een selectievakje-component toe aan een PDF-document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u een Checkbox-component aan PDF-documenten toevoegt met Groupdocs.Annotation voor .NET. Verbeter uw PDF's met interactieve elementen.
-type: docs
 weight: 11
 url: /nl/net/document-components/add-checkbox-component-to-pdf/
 ---

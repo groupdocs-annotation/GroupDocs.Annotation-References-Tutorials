@@ -3,7 +3,6 @@ title: 從 URL 載入文檔
 linktitle: 從 URL 載入文檔
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 以程式設計方式註解 PDF 文件。帶有程式碼範例的分步教程。
-type: docs
 weight: 15
 url: /zh-hant/net/document-loading-essentials/load-document-from-url/
 ---

@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφων που προστατεύονται με 
 linktitle: Φόρτωση εγγράφων που προστατεύονται με κωδικό πρόσβασης
 second_title: GroupDocs.Annotation .NET API
 description: Βελτιώστε τη συνεργασία και τον έλεγχο εγγράφων με το GroupDocs.Annotation για .NET. Σημειώστε το PDF και περισσότερα απρόσκοπτα στις εφαρμογές σας .NET.
-type: docs
 weight: 17
 url: /el/net/document-loading-essentials/load-password-protected-documents/
 ---

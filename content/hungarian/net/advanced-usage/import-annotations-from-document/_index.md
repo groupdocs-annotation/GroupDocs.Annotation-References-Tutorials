@@ -3,7 +3,6 @@ title: Megjegyzések importálása a dokumentumból
 linktitle: Megjegyzések importálása a dokumentumból
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan importálhat megjegyzéseket a .NET-ben lévő dokumentumokból a GroupDocs.Annotation segítségével. Kövesse lépésről lépésre bemutató oktatóanyagunkat a zökkenőmentes integráció érdekében.
-type: docs
 weight: 19
 url: /hu/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ Igen, a GroupDocs.Annotation a dokumentumformátumok széles skáláját támoga
 ### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Annotation számára?
  Ideiglenes licencet szerezhet be a GroupDocs.Annotation számára a[ideiglenes licenc oldal](https://purchase.groupdocs.com/temporary-license/).
 ### Hol találom a GroupDocs.Annotation átfogó dokumentációját?
- A GroupDocs.Annotation részletes dokumentációja elérhető[itt](https://reference.groupdocs.com/annotation/net/).
+ A GroupDocs.Annotation részletes dokumentációja elérhető[itt](https://tutorials.groupdocs.com/annotation/net/).
 ### Hol kérhetek támogatást a GroupDocs.Annotation szolgáltatással kapcsolatos problémák vagy kérdések esetén?
  Támogatásért keresse fel a GroupDocs.Annotation webhelyet[fórum](https://forum.groupdocs.com/c/annotation/10) ahol szakértőktől és a közösségtől kérhet segítséget.

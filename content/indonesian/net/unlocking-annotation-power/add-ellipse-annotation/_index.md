@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Ellipse ke Dokumen
 linktitle: Tambahkan Anotasi Ellipse ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi elips ke dokumen di .NET menggunakan GroupDocs.Annotation. Tingkatkan kolaborasi dan komunikasi dengan mudah.
-type: docs
 weight: 13
 url: /id/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

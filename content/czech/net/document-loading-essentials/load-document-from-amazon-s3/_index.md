@@ -3,7 +3,6 @@ title: Načíst dokument z Amazon S3
 linktitle: Načíst dokument z Amazon S3
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak programově anotovat dokumenty pomocí Groupdocs.Annotation pro .NET. Výukový program krok za krokem pro bezproblémovou integraci.
-type: docs
 weight: 10
 url: /cs/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation for .NET podporuje širokou škálu formátů dokumentů, v
 ### Mohu vyzkoušet Groupdocs.Annotation pro .NET před nákupem?
  Ano, můžete prozkoumat funkce Groupdocs.Annotation pro .NET přístupem k bezplatné zkušební verzi, která je k dispozici[tady](https://releases.groupdocs.com/).
 ### Kde najdu dokumentaci ke Groupdocs.Annotation pro .NET?
- dispozici je obsáhlá dokumentace pro Groupdocs.Annotation pro .NET[tady](https://reference.groupdocs.com/annotation/net/).
+ dispozici je obsáhlá dokumentace pro Groupdocs.Annotation pro .NET[tady](https://tutorials.groupdocs.com/annotation/net/).
 ### Potřebuji dočasnou licenci k vyhodnocení Groupdocs.Annotation pro .NET?
  Dočasnou licenci pro zkušební účely můžete získat od[tady](https://purchase.groupdocs.com/temporary-license/).
 ### Kde mohu hledat pomoc nebo podporu pro Groupdocs.Annotation pro .NET?

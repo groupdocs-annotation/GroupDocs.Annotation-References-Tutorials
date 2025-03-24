@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού αντικατάστασης κει
 linktitle: Προσθήκη σχολιασμού αντικατάστασης κειμένου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς αντικατάστασης κειμένου στα έγγραφά σας .NET χωρίς κόπο χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τις δυνατότητες χειρισμού εγγράφων σας.
-type: docs
 weight: 24
 url: /el/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

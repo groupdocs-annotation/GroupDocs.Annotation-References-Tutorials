@@ -3,7 +3,6 @@ title: 按 ID 刪除多個註釋
 linktitle: 按 ID 刪除多個註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 在 .NET 中按 ID 刪除多個註釋，從而輕鬆增強您的文件管理功能。
-type: docs
 weight: 13
 url: /zh-hant/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

@@ -3,7 +3,6 @@ title: Aggiungi annotazione di redazione testo al documento
 linktitle: Aggiungi annotazione di redazione testo al documento
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere annotazioni di redazione del testo ai documenti PDF utilizzando GroupDocs.Annotation per .NET. Proteggi le informazioni sensibili senza sforzo.
-type: docs
 weight: 23
 url: /it/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

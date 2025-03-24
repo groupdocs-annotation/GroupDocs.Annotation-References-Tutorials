@@ -3,7 +3,6 @@ title: Adicionar anotação de texto ondulada ao documento
 linktitle: Adicionar anotação de texto ondulada ao documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como adicionar facilmente anotações de texto onduladas a documentos usando Groupdocs.Annotation for .NET. Aprimore os processos de colaboração e revisão de documentos.
-type: docs
 weight: 25
 url: /pt/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

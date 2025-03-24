@@ -3,7 +3,6 @@ title: Imposta la risoluzione dell'anteprima del documento
 linktitle: Imposta la risoluzione dell'anteprima del documento
 second_title: API GroupDocs.Annotation .NET
 description: Migliora la collaborazione sui documenti con Groupdocs.Annotation per .NET, semplifica le funzionalità di annotazione e anteprima senza soluzione di continuità.
-type: docs
 weight: 23
 url: /it/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ Nell'era digitale di oggi, la gestione efficiente dei documenti e la collaborazi
 Prima di immergerti nello sfruttamento delle funzionalità di Groupdocs.Annotation per .NET, assicurati di disporre dei seguenti prerequisiti:
 1.  Installazione di Groupdocs.Annotation per .NET: iniziare scaricando e installando la libreria Groupdocs.Annotation per .NET. È possibile ottenere i file necessari da[Link per scaricare](https://releases.groupdocs.com/annotation/net/).
 2. Ambiente di sviluppo: disporre di un ambiente di sviluppo adatto, incluso Visual Studio o qualsiasi altro IDE preferito per lo sviluppo .NET.
-3. Accesso alla documentazione: acquisisci familiarità con la documentazione completa fornita da Groupdocs.Annotation per .NET. Puoi fare riferimento a[documentazione](https://reference.groupdocs.com/annotation/net/) per approfondimenti dettagliati sulle funzionalità e sull'utilizzo della biblioteca.
+3. Accesso alla documentazione: acquisisci familiarità con la documentazione completa fornita da Groupdocs.Annotation per .NET. Puoi fare riferimento a[documentazione](https://tutorials.groupdocs.com/annotation/net/) per approfondimenti dettagliati sulle funzionalità e sull'utilizzo della biblioteca.
 4. Comprensione di base di .NET Framework: assicurati di avere una conoscenza fondamentale di .NET Framework e del linguaggio di programmazione C# per utilizzare in modo efficace Groupdocs.Annotation per .NET.
 
 ## Importazione degli spazi dei nomi necessari

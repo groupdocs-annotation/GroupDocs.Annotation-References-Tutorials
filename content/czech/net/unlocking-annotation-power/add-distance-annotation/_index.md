@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci vzdálenosti
 linktitle: Přidejte do dokumentu anotaci vzdálenosti
 second_title: GroupDocs.Annotation .NET API
 description: Zjistěte, jak přidat poznámky vzdálenosti k dokumentům pomocí GroupDocs.Annotation for .NET. Vylepšete spolupráci a komunikaci bez námahy.
-type: docs
 weight: 12
 url: /cs/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ Odpověď: Ano, GroupDocs.Annotation podporuje poznámky v široké řadě form�
 
 ### Otázka: Kde najdu dokumentaci k GroupDocs.Annotation pro .NET?
 
- Odpověď: Můžete se podívat na podrobnou dostupnou dokumentaci[tady](https://reference.groupdocs.com/annotation/net/).
+ Odpověď: Můžete se podívat na podrobnou dostupnou dokumentaci[tady](https://tutorials.groupdocs.com/annotation/net/).
 
 ### Otázka: Jak mohu získat podporu nebo pomoc s GroupDocs.Annotation?
 

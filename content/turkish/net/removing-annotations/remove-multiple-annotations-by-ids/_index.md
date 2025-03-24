@@ -3,7 +3,6 @@ title: Kimliklere Göre Birden Çok Ek Açıklamayı Kaldırma
 linktitle: Kimliklere Göre Birden Çok Ek Açıklamayı Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation'ı kullanarak .NET'te kimliklere göre birden çok ek açıklamayı nasıl kaldıracağınızı öğrenin ve belge yönetimi becerilerinizi zahmetsizce geliştirin.
-type: docs
 weight: 13
 url: /tr/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

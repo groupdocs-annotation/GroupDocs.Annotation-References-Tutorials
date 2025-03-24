@@ -3,7 +3,6 @@ title: Stel de documentvoorbeeldresolutie in
 linktitle: Stel de documentvoorbeeldresolutie in
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter de samenwerking aan documenten met Groupdocs.Annotation voor .NET stroomlijn annotatie- en preview-functionaliteiten naadloos.
-type: docs
 weight: 23
 url: /nl/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ In het huidige digitale tijdperk zijn efficiënt documentbeheer en samenwerking 
 Voordat u de mogelijkheden van Groupdocs.Annotation voor .NET gaat benutten, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
 1.  Installatie van Groupdocs.Annotation voor .NET: Begin met het downloaden en installeren van de Groupdocs.Annotation voor .NET-bibliotheek. U kunt de benodigde bestanden verkrijgen via de[download link](https://releases.groupdocs.com/annotation/net/).
 2. Ontwikkelomgeving: zorg dat u een geschikte ontwikkelomgeving hebt opgezet, inclusief Visual Studio of een andere gewenste IDE voor .NET-ontwikkeling.
-3. Toegang tot documentatie: maak uzelf vertrouwd met de uitgebreide documentatie van Groupdocs.Annotation voor .NET. U kunt verwijzen naar de[documentatie](https://reference.groupdocs.com/annotation/net/) voor gedetailleerd inzicht in de functionaliteiten en het gebruik van de bibliotheek.
+3. Toegang tot documentatie: maak uzelf vertrouwd met de uitgebreide documentatie van Groupdocs.Annotation voor .NET. U kunt verwijzen naar de[documentatie](https://tutorials.groupdocs.com/annotation/net/) voor gedetailleerd inzicht in de functionaliteiten en het gebruik van de bibliotheek.
 4. Basiskennis van .NET Framework: Zorg ervoor dat u een fundamenteel begrip heeft van het .NET-framework en de programmeertaal C# om Groupdocs.Annotation voor .NET effectief te kunnen gebruiken.
 
 ## Noodzakelijke naamruimten importeren

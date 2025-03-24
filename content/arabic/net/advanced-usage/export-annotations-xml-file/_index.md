@@ -3,7 +3,6 @@ title: تصدير التعليقات التوضيحية من ملف XML
 linktitle: تصدير التعليقات التوضيحية من ملف XML
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية تصدير التعليقات التوضيحية من ملفات XML باستخدام GroupDocs.Annotation لـ .NET، مما يؤدي إلى تبسيط سير عمل إدارة المستندات بكفاءة.
-type: docs
 weight: 11
 url: /ar/net/advanced-usage/export-annotations-xml-file/
 ---

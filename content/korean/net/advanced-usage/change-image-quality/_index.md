@@ -3,7 +3,6 @@ title: 이미지 품질 변경
 linktitle: 이미지 품질 변경
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 PDF 파일의 이미지 품질을 향상시키는 방법을 알아보세요. 단계별 가이드를 따르세요.
-type: docs
 weight: 10
 url: /ko/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ url: /ko/net/advanced-usage/change-image-quality/
 ## 전제 조건
 튜토리얼을 시작하기 전에 다음 전제 조건이 충족되었는지 확인하세요.
 ### 1. .NET용 Groupdocs.Annotation 설치
- 먼저 웹사이트에서 Groupdocs.Annotation for .NET 라이브러리를 다운로드하여 설치합니다. 다운로드 링크를 찾을 수 있습니다[여기](https://releases.groupdocs.com/annotation/net/) . 설명서에 제공된 설치 지침을 따르십시오.[여기](https://reference.groupdocs.com/annotation/net/) 라이브러리를 올바르게 설정하려면
+ 먼저 웹사이트에서 Groupdocs.Annotation for .NET 라이브러리를 다운로드하여 설치합니다. 다운로드 링크를 찾을 수 있습니다[여기](https://releases.groupdocs.com/annotation/net/) . 설명서에 제공된 설치 지침을 따르십시오.[여기](https://tutorials.groupdocs.com/annotation/net/) 라이브러리를 올바르게 설정하려면
 ### 2. C# 프로그래밍 언어에 대한 지식
 이 튜토리얼에서 제공되는 예제를 따라가려면 C# 프로그래밍 언어에 대한 기본적인 이해가 필수적입니다.
 ### 3. 입력 PDF 및 이미지 파일에 대한 액세스

@@ -3,7 +3,6 @@ title: 문서 페이지 미리보기 생성
 linktitle: 문서 페이지 미리보기 생성
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서 페이지 미리 보기를 효율적으로 생성하는 방법을 알아보세요. 이 포괄적인 기능을 통해 문서 관리 워크플로를 향상하세요.
-type: docs
 weight: 12
 url: /ko/net/advanced-usage/generate-document-pages-preview/
 ---

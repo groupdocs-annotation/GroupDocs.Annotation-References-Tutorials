@@ -3,7 +3,6 @@ title: Carica documento da FTP
 linktitle: Carica documento da FTP
 second_title: API GroupDocs.Annotation .NET
 description: Migliora le tue applicazioni .NET con GroupDocs.Annotation per annotare facilmente i documenti. Tutorial passo passo incluso.
-type: docs
 weight: 12
 url: /it/net/document-loading-essentials/load-document-from-ftp/
 ---

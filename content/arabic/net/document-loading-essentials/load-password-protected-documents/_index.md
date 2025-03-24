@@ -3,7 +3,6 @@ title: تحميل المستندات المحمية بكلمة مرور
 linktitle: تحميل المستندات المحمية بكلمة مرور
 second_title: GroupDocs.Annotation .NET API
 description: تعزيز التعاون ومراجعة المستندات باستخدام GroupDocs.Annotation لـ .NET. قم بإضافة تعليقات توضيحية إلى ملف PDF والمزيد بسلاسة أكبر في تطبيقات .NET الخاصة بك.
-type: docs
 weight: 17
 url: /ar/net/document-loading-essentials/load-password-protected-documents/
 ---

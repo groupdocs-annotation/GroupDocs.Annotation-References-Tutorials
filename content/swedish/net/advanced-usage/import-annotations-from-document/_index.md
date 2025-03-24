@@ -3,7 +3,6 @@ title: Importera anteckningar från dokument
 linktitle: Importera anteckningar från dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du importerar kommentarer från dokument i .NET med GroupDocs.Annotation. Följ vår steg-för-steg handledning för sömlös integration.
-type: docs
 weight: 19
 url: /sv/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ Ja, GroupDocs.Annotation stöder ett brett utbud av dokumentformat, inklusive PD
 ### Hur kan jag få en tillfällig licens för GroupDocs.Annotation?
  Du kan skaffa en tillfällig licens för GroupDocs.Annotation från[sida för tillfällig licens](https://purchase.groupdocs.com/temporary-license/).
 ### Var kan jag hitta omfattande dokumentation för GroupDocs.Annotation?
- Detaljerad dokumentation för GroupDocs.Annotation finns tillgänglig[här](https://reference.groupdocs.com/annotation/net/).
+ Detaljerad dokumentation för GroupDocs.Annotation finns tillgänglig[här](https://tutorials.groupdocs.com/annotation/net/).
 ### Var kan jag söka support för eventuella problem eller frågor angående GroupDocs.Annotation?
  För support, besök GroupDocs.Annotation[forum](https://forum.groupdocs.com/c/annotation/10) där du kan söka hjälp från experter och samhället.

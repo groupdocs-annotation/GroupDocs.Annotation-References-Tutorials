@@ -3,7 +3,6 @@ title: Thêm chú thích soạn thảo văn bản vào tài liệu
 linktitle: Thêm chú thích soạn thảo văn bản vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích biên tập văn bản vào tài liệu PDF bằng GroupDocs.Annotation cho .NET. Bảo vệ thông tin nhạy cảm một cách dễ dàng.
-type: docs
 weight: 23
 url: /vi/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

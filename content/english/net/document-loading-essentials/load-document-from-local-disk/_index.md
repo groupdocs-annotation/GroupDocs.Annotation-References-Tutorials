@@ -3,7 +3,6 @@ title: Load Document from Local Disk
 linktitle: Load Document from Local Disk
 second_title: GroupDocs.Annotation .NET API
 description: Unlock the power of document annotation with GroupDocs.Annotation for .NET. Seamlessly integrate annotation features into your .NET applications.
-type: docs
 weight: 13
 url: /net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ In conclusion, GroupDocs.Annotation for .NET provides a robust solution for inte
 ### Can I try GroupDocs.Annotation for .NET before purchasing?
 Yes, you can download a free trial from [here](https://releases.groupdocs.com/).
 ### Where can I find documentation for GroupDocs.Annotation for .NET?
-You can access the documentation [here](https://reference.groupdocs.com/annotation/net/).
+You can access the documentation [here](https://tutorials.groupdocs.com/annotation/net/).
 ### How can I obtain a temporary license for GroupDocs.Annotation for .NET?
 You can obtain a temporary license from [here](https://purchase.groupdocs.com/temporary-license/).
 ### Is support available for GroupDocs.Annotation for .NET?

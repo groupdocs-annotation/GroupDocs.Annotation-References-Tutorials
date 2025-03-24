@@ -3,7 +3,6 @@ title: Usuń adnotacje według identyfikatora
 linktitle: Usuń adnotacje według identyfikatora
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak usuwać adnotacje według identyfikatora za pomocą GroupDocs.Annotation dla .NET. Usprawnij efektywnie obieg dokumentów.
-type: docs
 weight: 11
 url: /pl/net/removing-annotations/remove-annotations-by-id/
 ---

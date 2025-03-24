@@ -3,7 +3,6 @@ title: Menerapkan Lisensi
 linktitle: Menerapkan Lisensi
 second_title: GroupDocs.Annotasi .NET API
 description: Buka potensi penuh anotasi dokumen di .NET dengan GroupDocs.Annotation. Ikuti tutorial langkah demi langkah kami untuk integrasi yang lancar.
-type: docs
 weight: 26
 url: /id/net/applying-licenses/
 ---

@@ -3,7 +3,6 @@ title: Abstandsanmerkung zum Dokument hinzufügen
 linktitle: Abstandsanmerkung zum Dokument hinzufügen
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET Distanzanmerkungen zu Dokumenten hinzufügen. Verbessern Sie mühelos die Zusammenarbeit und Kommunikation.
-type: docs
 weight: 12
 url: /de/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ A: Ja, GroupDocs.Annotation unterstützt Anmerkungen zu einer Vielzahl von Dokum
 
 ### F: Wo finde ich die Dokumentation für GroupDocs.Annotation für .NET?
 
- A: Sie können sich auf die verfügbare ausführliche Dokumentation beziehen[Hier](https://reference.groupdocs.com/annotation/net/).
+ A: Sie können sich auf die verfügbare ausführliche Dokumentation beziehen[Hier](https://tutorials.groupdocs.com/annotation/net/).
 
 ### F: Wie kann ich Unterstützung oder Hilfe zu GroupDocs.Annotation erhalten?
 

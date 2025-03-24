@@ -3,7 +3,6 @@ title: एफ़टीपी से दस्तावेज़ लोड कर
 linktitle: एफ़टीपी से दस्तावेज़ लोड करें
 second_title: GroupDocs.Annotation .NET API
 description: निर्बाध दस्तावेज़ एनोटेशन के लिए GroupDocs.Annotation के साथ अपने .NET अनुप्रयोगों को बेहतर बनाएं। चरण-दर-चरण ट्यूटोरियल शामिल है।
-type: docs
 weight: 12
 url: /hi/net/document-loading-essentials/load-document-from-ftp/
 ---

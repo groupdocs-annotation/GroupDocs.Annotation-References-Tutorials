@@ -3,7 +3,6 @@ title: Ladda dokument från lokal disk
 linktitle: Ladda dokument från lokal disk
 second_title: GroupDocs.Annotation .NET API
 description: Lås upp kraften i dokumentkommentarer med GroupDocs.Annotation för .NET. Integrera annoteringsfunktioner sömlöst i dina .NET-applikationer.
-type: docs
 weight: 13
 url: /sv/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Sammanfattningsvis erbjuder GroupDocs.Annotation för .NET en robust lösning f�
 ### Kan jag prova GroupDocs.Annotation för .NET innan jag köper?
  Ja, du kan ladda ner en gratis testversion från[här](https://releases.groupdocs.com/).
 ### Var kan jag hitta dokumentation för GroupDocs.Annotation för .NET?
- Du kan komma åt dokumentationen[här](https://reference.groupdocs.com/annotation/net/).
+ Du kan komma åt dokumentationen[här](https://tutorials.groupdocs.com/annotation/net/).
 ### Hur kan jag få en tillfällig licens för GroupDocs.Annotation för .NET?
  Du kan få en tillfällig licens från[här](https://purchase.groupdocs.com/temporary-license/).
 ### Finns stöd tillgängligt för GroupDocs.Annotation för .NET?

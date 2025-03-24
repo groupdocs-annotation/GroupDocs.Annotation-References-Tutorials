@@ -3,7 +3,6 @@ title: Ta bort anteckningar i .NET
 linktitle: Ta bort anteckningar i .NET
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du tar bort kommentarer från PDF-dokument med Groupdocs.Annotation i .NET. Förenkla din digitala dokumenthanteringsprocess.
-type: docs
 weight: 10
 url: /sv/net/removing-annotations/remove-annotations/
 ---

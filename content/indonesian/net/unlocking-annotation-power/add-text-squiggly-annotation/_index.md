@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen
 linktitle: Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi teks berlekuk-lekuk ke dokumen dengan mudah menggunakan Groupdocs.Annotation untuk .NET. Meningkatkan kolaborasi dan proses peninjauan dokumen.
-type: docs
 weight: 25
 url: /id/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

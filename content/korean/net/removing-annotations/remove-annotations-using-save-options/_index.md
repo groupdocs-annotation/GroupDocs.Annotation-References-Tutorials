@@ -3,7 +3,6 @@ title: .NET에서 저장 옵션을 사용하여 주석 제거
 linktitle: .NET에서 저장 옵션을 사용하여 주석 제거
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 PDF 및 .NET의 기타 문서에서 주석을 제거하는 방법을 알아보세요. 코드 예제가 포함된 단계별 가이드입니다.
-type: docs
 weight: 14
 url: /ko/net/removing-annotations/remove-annotations-using-save-options/
 ---

@@ -3,7 +3,6 @@ title: Добавить аннотацию выделения текста в д
 linktitle: Добавить аннотацию выделения текста в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавлять аннотации выделения текста в документы с помощью GroupDocs.Annotation для .NET. Улучшите сотрудничество и производительность с помощью этого комплексного решения.
-type: docs
 weight: 22
 url: /ru/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

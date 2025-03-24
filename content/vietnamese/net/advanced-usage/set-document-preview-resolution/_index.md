@@ -3,7 +3,6 @@ title: Đặt độ phân giải xem trước tài liệu
 linktitle: Đặt độ phân giải xem trước tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Nâng cao khả năng cộng tác trên tài liệu với Groupdocs.Annotation dành cho .NET hợp lý hóa các chức năng xem trước và chú thích một cách liền mạch.
-type: docs
 weight: 23
 url: /vi/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ Trong thời đại kỹ thuật số ngày nay, việc cộng tác và quản l
 Trước khi đi sâu vào khai thác các khả năng của Groupdocs.Annotation cho .NET, hãy đảm bảo bạn có sẵn các điều kiện tiên quyết sau:
 1.  Cài đặt Groupdocs.Annotation cho .NET: Bắt đầu bằng cách tải xuống và cài đặt thư viện Groupdocs.Annotation cho .NET. Bạn có thể lấy các tập tin cần thiết từ[Liên kết tải xuống](https://releases.groupdocs.com/annotation/net/).
 2. Môi trường phát triển: Đã thiết lập môi trường phát triển phù hợp, bao gồm Visual Studio hoặc bất kỳ IDE ưa thích nào khác để phát triển .NET.
-3. Truy cập vào Tài liệu: Làm quen với tài liệu toàn diện do Groupdocs.Annotation cho .NET cung cấp. Bạn có thể tham khảo các[tài liệu](https://reference.groupdocs.com/annotation/net/) để biết thông tin chi tiết về chức năng và cách sử dụng của thư viện.
+3. Truy cập vào Tài liệu: Làm quen với tài liệu toàn diện do Groupdocs.Annotation cho .NET cung cấp. Bạn có thể tham khảo các[tài liệu](https://tutorials.groupdocs.com/annotation/net/) để biết thông tin chi tiết về chức năng và cách sử dụng của thư viện.
 4. Hiểu biết cơ bản về .NET Framework: Đảm bảo bạn có hiểu biết cơ bản về .NET framework và ngôn ngữ lập trình C# để sử dụng hiệu quả Groupdocs.Annotation cho .NET.
 
 ## Nhập các không gian tên cần thiết

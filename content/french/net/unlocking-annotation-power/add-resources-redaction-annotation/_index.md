@@ -3,7 +3,6 @@ title: Ajouter une annotation de rédaction de ressources au document
 linktitle: Ajouter une annotation de rédaction de ressources au document
 second_title: API GroupDocs.Annotation .NET
 description: Améliorez les flux de travail de gestion de documents avec GroupDocs.Annotation pour .NET. Intégrez de manière transparente l'annotation de rédaction des ressources dans votre .NET pour une efficacité accrue.
-type: docs
 weight: 19
 url: /fr/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

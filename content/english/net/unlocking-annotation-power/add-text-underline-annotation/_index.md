@@ -3,7 +3,6 @@ title: Add Text Underline Annotation to Document
 linktitle: Add Text Underline Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to add text underline annotations to documents using GroupDocs.Annotation for .NET. Enhance collaboration and communication effortlessly.
-type: docs
 weight: 27
 url: /net/unlocking-annotation-power/add-text-underline-annotation/
 ---

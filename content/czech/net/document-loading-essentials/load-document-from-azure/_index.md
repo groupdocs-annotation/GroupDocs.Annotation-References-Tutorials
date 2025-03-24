@@ -3,7 +3,6 @@ title: Načíst dokument z Azure
 linktitle: Načíst dokument z Azure
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak anotovat dokumenty v .NET pomocí GroupDocs.Annotation. Podrobný kurz pro bezproblémovou integraci s Azure Blob Storage.
-type: docs
 weight: 11
 url: /cs/net/document-loading-essentials/load-document-from-azure/
 ---

@@ -3,7 +3,6 @@ title: Tải tài liệu từ FTP
 linktitle: Tải tài liệu từ FTP
 second_title: GroupDocs.Annotation .NET API
 description: Nâng cao các ứng dụng .NET của bạn với GroupDocs.Annotation để chú thích tài liệu liền mạch. Hướng dẫn từng bước bao gồm.
-type: docs
 weight: 12
 url: /vi/net/document-loading-essentials/load-document-from-ftp/
 ---

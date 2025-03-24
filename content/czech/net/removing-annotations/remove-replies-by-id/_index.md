@@ -3,7 +3,6 @@ title: Odebrat odpovědi podle ID v .NET
 linktitle: Odebrat odpovědi podle ID v .NET
 second_title: GroupDocs.Annotation .NET API
 description: Přečtěte si, jak odstranit odpovědi podle ID v .NET pomocí GroupDocs.Annotation. Postupujte podle našeho podrobného návodu pro efektivní správu anotací dokumentů.
-type: docs
 weight: 16
 url: /cs/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ oblasti vývoje .NET je schopnost spravovat anotace v dokumentech zásadní pro 
 ## Předpoklady
 Než se pustíte do výukového programu o odstraňování odpovědí podle ID v .NET pomocí GroupDocs.Annotation, ujistěte se, že máte následující předpoklady:
 ### 1. Instalace GroupDocs.Annotation
- Nejprve musíte nainstalovat GroupDocs.Annotation pro .NET. Knihovnu si můžete stáhnout z[tady](https://releases.groupdocs.com/annotation/net/) a postupujte podle pokynů k instalaci uvedených v dokumentaci[tady](https://reference.groupdocs.com/annotation/net/).
+ Nejprve musíte nainstalovat GroupDocs.Annotation pro .NET. Knihovnu si můžete stáhnout z[tady](https://releases.groupdocs.com/annotation/net/) a postupujte podle pokynů k instalaci uvedených v dokumentaci[tady](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Základní porozumění C# a .NET
 Znalost programovacího jazyka C# a frameworku .NET je nezbytná pro dodržení příkladů v tomto tutoriálu.
 ### 3. Dokument s poznámkami s odpověďmi

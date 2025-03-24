@@ -3,7 +3,6 @@ title: 设置计量许可证
 linktitle: 设置计量许可证
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何为 GroupDocs.Annotation .NET 设置计量许可证，以实现 .NET 应用程序中的资源使用和文档注释功能。
-type: docs
 weight: 12
 url: /zh/net/applying-licenses/set-metered-license/
 ---

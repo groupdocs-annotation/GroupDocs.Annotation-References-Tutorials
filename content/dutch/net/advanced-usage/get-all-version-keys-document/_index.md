@@ -3,7 +3,6 @@ title: Alle versiesleutels op document ophalen
 linktitle: Alle versiesleutels op document ophalen
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u alle versiesleutels van een document kunt ophalen met GroupDocs.Annotation voor .NET. Verbeter uw mogelijkheden voor documentbeheer met dit uitgebreide programma.
-type: docs
 weight: 16
 url: /nl/net/advanced-usage/get-all-version-keys-document/
 ---

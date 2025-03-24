@@ -3,7 +3,6 @@ title: Add Text Strikeout Annotation to Document
 linktitle: Add Text Strikeout Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to add text strikeout annotations to documents using GroupDocs.Annotation for .NET. Enhance collaboration and document review processes efficiently.
-type: docs
 weight: 26
 url: /net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

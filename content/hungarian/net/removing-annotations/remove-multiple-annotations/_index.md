@@ -3,7 +3,6 @@ title: Több megjegyzés eltávolítása a .NET-ből
 linktitle: Több megjegyzés eltávolítása a .NET-ből
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan távolíthat el hatékonyan több megjegyzést a .NET-ben a GroupDocs.Annotation segítségével. Kövesse lépésenkénti oktatóanyagunkat az alkalmazásaiba való zökkenőmentes integráció érdekében.
-type: docs
 weight: 12
 url: /hu/net/removing-annotations/remove-multiple-annotations/
 ---

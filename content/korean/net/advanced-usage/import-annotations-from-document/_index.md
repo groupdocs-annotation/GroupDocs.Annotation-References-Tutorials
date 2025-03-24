@@ -3,7 +3,6 @@ title: 문서에서 주석 가져오기
 linktitle: 문서에서 주석 가져오기
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET 문서에서 주석을 가져오는 방법을 알아보세요. 원활한 통합을 위해 단계별 튜토리얼을 따르세요.
-type: docs
 weight: 19
 url: /ko/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### GroupDocs.Annotation에 대한 임시 라이센스를 얻으려면 어떻게 해야 합니까?
  GroupDocs.Annotation에 대한 임시 라이센스를 다음에서 얻을 수 있습니다.[임시 라이센스 페이지](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation에 대한 포괄적인 문서는 어디에서 찾을 수 있습니까?
- GroupDocs.Annotation에 대한 자세한 문서를 사용할 수 있습니다.[여기](https://reference.groupdocs.com/annotation/net/).
+ GroupDocs.Annotation에 대한 자세한 문서를 사용할 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation과 관련된 문제나 질문에 대한 지원은 어디에서 찾을 수 있습니까?
  지원을 받으려면 GroupDocs.Annotation을 방문하세요.[법정](https://forum.groupdocs.com/c/annotation/10) 전문가와 커뮤니티로부터 도움을 구할 수 있습니다.

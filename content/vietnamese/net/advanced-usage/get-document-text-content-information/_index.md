@@ -3,7 +3,6 @@ title: Nhận thông tin nội dung văn bản tài liệu
 linktitle: Nhận thông tin nội dung văn bản tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Chú thích tài liệu một cách liền mạch với GroupDocs.Annotation dành cho .NET. Tích hợp các chức năng chú thích vào các ứng dụng .NET của bạn một cách dễ dàng.
-type: docs
 weight: 17
 url: /vi/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Có, GroupDocs.Annotation for .NET hỗ trợ nhiều định dạng tài liệu
 ### Tôi có thể tìm hỗ trợ cho GroupDocs.Annotation cho .NET ở đâu?
  Bạn có thể tìm kiếm sự hỗ trợ và đặt câu hỏi trên[diễn đàn GroupDocs](https://forum.groupdocs.com/c/annotation/10).
 ### GroupDocs.Annotation cho .NET có cung cấp tài liệu nào không?
- Có, có sẵn tài liệu toàn diện về GroupDocs.Annotation cho .NET[đây](https://reference.groupdocs.com/annotation/net/).
+ Có, có sẵn tài liệu toàn diện về GroupDocs.Annotation cho .NET[đây](https://tutorials.groupdocs.com/annotation/net/).

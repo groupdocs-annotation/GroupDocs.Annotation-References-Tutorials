@@ -3,7 +3,6 @@ title: 문서 로딩 필수사항
 linktitle: 문서 로딩 필수사항
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET을 사용하여 문서를 로드하기 위한 필수 튜토리얼을 알아보세요. Amazon S3, Azure, FTP, 로컬 디스크, 스트림 등과 원활하게 통합됩니다.
-type: docs
 weight: 20
 url: /ko/net/document-loading-essentials/
 ---

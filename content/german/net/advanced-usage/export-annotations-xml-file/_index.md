@@ -3,7 +3,6 @@ title: Anmerkungen aus XML-Datei exportieren
 linktitle: Anmerkungen aus XML-Datei exportieren
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Anmerkungen aus XML-Dateien exportieren und so Ihren Dokumentenverwaltungsworkflow effizient vereinfachen.
-type: docs
 weight: 11
 url: /de/net/advanced-usage/export-annotations-xml-file/
 ---

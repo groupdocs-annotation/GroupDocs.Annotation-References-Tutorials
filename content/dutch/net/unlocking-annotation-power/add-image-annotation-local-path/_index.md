@@ -3,7 +3,6 @@ title: Afbeeldingannotatie toevoegen aan document (lokaal pad)
 linktitle: Afbeeldingannotatie toevoegen aan document (lokaal pad)
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u afbeeldingannotaties aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter eenvoudig de documentverwerkingsmogelijkheden.
-type: docs
 weight: 14
 url: /nl/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

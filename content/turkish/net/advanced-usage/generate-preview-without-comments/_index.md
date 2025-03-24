@@ -3,7 +3,6 @@ title: Yorumsuz Önizleme Oluştur
 linktitle: Yorumsuz Önizleme Oluştur
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belge açıklama özelliklerini .NET uygulamalarınıza nasıl sorunsuz bir şekilde entegre edeceğinizi öğrenin.
-type: docs
 weight: 14
 url: /tr/net/advanced-usage/generate-preview-without-comments/
 ---

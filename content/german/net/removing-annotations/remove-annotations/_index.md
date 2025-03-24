@@ -3,7 +3,6 @@ title: Entfernen Sie Anmerkungen in .NET
 linktitle: Entfernen Sie Anmerkungen in .NET
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mithilfe von Groupdocs.Annotation in .NET Anmerkungen aus PDF-Dokumenten entfernen. Vereinfachen Sie Ihren digitalen Dokumentenverwaltungsprozess.
-type: docs
 weight: 10
 url: /de/net/removing-annotations/remove-annotations/
 ---

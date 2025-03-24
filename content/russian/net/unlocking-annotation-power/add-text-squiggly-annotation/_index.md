@@ -3,7 +3,6 @@ title: Добавить текстовую волнистую аннотацию
 linktitle: Добавить текстовую волнистую аннотацию в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как легко добавлять текстовые волнистые аннотации к документам с помощью Groupdocs.Annotation для .NET. Улучшите процессы сотрудничества и проверки документов.
-type: docs
 weight: 25
 url: /ru/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

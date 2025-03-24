@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Bidang Teks ke Dokumen
 linktitle: Tambahkan Anotasi Bidang Teks ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara mengintegrasikan anotasi bidang teks dengan lancar ke dalam aplikasi .NET Anda menggunakan Groupdocs.Annotation untuk .NET.
-type: docs
 weight: 21
 url: /id/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ Dalam tutorial ini, kita akan mempelajari salah satu fungsi dasar Groupdocs.Anno
 ## Prasyarat
 Sebelum mendalami penerapannya, pastikan Anda memiliki prasyarat berikut:
 ### 1. Instalasi Groupdocs.Annotation untuk .NET
- Pertama dan terpenting, Anda perlu mengunduh dan menginstal Groupdocs.Annotation untuk .NET. Anda dapat menemukan tautan unduhan[Di Sini](https://releases.groupdocs.com/annotation/net/) . Ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://reference.groupdocs.com/annotation/net/) untuk mengatur perpustakaan dengan benar.
+ Pertama dan terpenting, Anda perlu mengunduh dan menginstal Groupdocs.Annotation untuk .NET. Anda dapat menemukan tautan unduhan[Di Sini](https://releases.groupdocs.com/annotation/net/) . Ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://tutorials.groupdocs.com/annotation/net/) untuk mengatur perpustakaan dengan benar.
 ### 2. Pengaturan Lingkungan Pengembangan
 Pastikan Anda memiliki lingkungan pengembangan yang disiapkan untuk pengembangan .NET. Ini termasuk menginstal IDE yang kompatibel seperti Visual Studio dan .NET Framework di sistem Anda.
 ### 3. Pemahaman Dasar Pemrograman C#

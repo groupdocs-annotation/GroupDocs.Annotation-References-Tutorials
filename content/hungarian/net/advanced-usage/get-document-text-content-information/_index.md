@@ -3,7 +3,6 @@ title: Dokumentumszöveg-tartalmi információk beszerzése
 linktitle: Dokumentumszöveg-tartalmi információk beszerzése
 second_title: GroupDocs.Annotation .NET API
 description: A GroupDocs.Annotation for .NET segítségével zökkenőmentesen jegyzetelhet dokumentumokat. Könnyedén integrálhatja a megjegyzések funkcióit .NET-alkalmazásaiba.
-type: docs
 weight: 17
 url: /hu/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Igen, a GroupDocs.Annotation for .NET különféle dokumentumformátumokat támo
 ### Hol találok támogatást a GroupDocs.Annotation for .NET számára?
  Támogatást kérhet és kérdéseket tehet fel a[GroupDocs fórum](https://forum.groupdocs.com/c/annotation/10).
 ### A GroupDocs.Annotation for .NET kínál valamilyen dokumentációt?
- Igen, a GroupDocs.Annotation for .NET átfogó dokumentációja elérhető[itt](https://reference.groupdocs.com/annotation/net/).
+ Igen, a GroupDocs.Annotation for .NET átfogó dokumentációja elérhető[itt](https://tutorials.groupdocs.com/annotation/net/).

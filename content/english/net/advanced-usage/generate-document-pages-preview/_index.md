@@ -3,7 +3,6 @@ title: Generate Document Pages Preview
 linktitle: Generate Document Pages Preview
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to generate document pages preview efficiently using GroupDocs.Annotation for .NET. Enhance your document management workflows with this comprehensive.
-type: docs
 weight: 12
 url: /net/advanced-usage/generate-document-pages-preview/
 ---

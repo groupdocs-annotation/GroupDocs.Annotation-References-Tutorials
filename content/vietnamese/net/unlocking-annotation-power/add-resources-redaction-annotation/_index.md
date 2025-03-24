@@ -3,7 +3,6 @@ title: Thêm chú thích biên tập tài nguyên vào tài liệu
 linktitle: Thêm chú thích biên tập tài nguyên vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Nâng cao quy trình quản lý tài liệu với GroupDocs.Annotation cho .NET. Tích hợp liền mạch Chú thích biên tập tài nguyên vào .NET của bạn để đạt hiệu quả.
-type: docs
 weight: 19
 url: /vi/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

@@ -3,7 +3,6 @@ title: Uzyskaj informacje o zawartości tekstu dokumentu
 linktitle: Uzyskaj informacje o zawartości tekstu dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Bezproblemowo dodawaj adnotacje do dokumentów za pomocą GroupDocs.Annotation dla platformy .NET. Bezproblemowo integruj funkcje adnotacji z aplikacjami .NET.
-type: docs
 weight: 17
 url: /pl/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Tak, GroupDocs.Annotation dla .NET obsługuje różne formaty dokumentów, w tym
 ### Gdzie mogę znaleźć pomoc dotyczącą GroupDocs.Annotation dla .NET?
  Możesz szukać wsparcia i zadawać pytania na stronie[Forum GroupDocs](https://forum.groupdocs.com/c/annotation/10).
 ### Czy GroupDocs.Annotation for .NET oferuje jakąkolwiek dokumentację?
- Tak, dostępna jest obszerna dokumentacja GroupDocs.Annotation dla .NET[Tutaj](https://reference.groupdocs.com/annotation/net/).
+ Tak, dostępna jest obszerna dokumentacja GroupDocs.Annotation dla .NET[Tutaj](https://tutorials.groupdocs.com/annotation/net/).

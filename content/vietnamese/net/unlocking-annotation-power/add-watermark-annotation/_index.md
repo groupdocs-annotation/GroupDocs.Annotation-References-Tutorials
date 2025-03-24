@@ -3,7 +3,6 @@ title: Thêm chú thích hình mờ vào tài liệu
 linktitle: Thêm chú thích hình mờ vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích hình mờ vào tài liệu của bạn một cách dễ dàng bằng GroupDocs.Annotation for .NET. Tăng cường sự rõ ràng và bảo mật của tài liệu.
-type: docs
 weight: 28
 url: /vi/net/unlocking-annotation-power/add-watermark-annotation/
 ---

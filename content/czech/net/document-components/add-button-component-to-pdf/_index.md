@@ -3,7 +3,6 @@ title: Přidat komponentu tlačítka do dokumentu PDF
 linktitle: Přidat komponentu tlačítka do dokumentu PDF
 second_title: GroupDocs.Annotation .NET API
 description: Vylepšete své dokumenty PDF pomocí interaktivních tlačítek pomocí Groupdocs.Annotation pro .NET. Postupujte podle našeho podrobného návodu pro bezproblémovou integraci.
-type: docs
 weight: 10
 url: /cs/net/document-components/add-button-component-to-pdf/
 ---

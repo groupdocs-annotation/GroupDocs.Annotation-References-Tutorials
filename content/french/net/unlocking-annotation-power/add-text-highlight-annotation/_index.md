@@ -3,7 +3,6 @@ title: Ajouter une annotation de surbrillance de texte au document
 linktitle: Ajouter une annotation de surbrillance de texte au document
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment ajouter des annotations de surbrillance de texte à des documents à l'aide de GroupDocs.Annotation pour .NET. Améliorez la collaboration et la productivité avec cette solution complète.
-type: docs
 weight: 22
 url: /fr/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

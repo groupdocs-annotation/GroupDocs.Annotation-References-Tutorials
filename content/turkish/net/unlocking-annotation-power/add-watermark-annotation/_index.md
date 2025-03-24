@@ -3,7 +3,6 @@ title: Belgeye Filigran Açıklaması Ekleme
 linktitle: Belgeye Filigran Açıklaması Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelerinize filigran açıklamalarını zahmetsizce nasıl ekleyeceğinizi öğrenin. Belge netliğini ve güvenliğini artırın.
-type: docs
 weight: 28
 url: /tr/net/unlocking-annotation-power/add-watermark-annotation/
 ---

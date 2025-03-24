@@ -3,7 +3,6 @@ title: ドキュメントにポイント注釈を追加
 linktitle: ドキュメントにポイント注釈を追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して PDF にポイント アノテーションを追加する方法を学びます。シームレスな統合のためのステップバイステップのガイド。
-type: docs
 weight: 17
 url: /ja/net/unlocking-annotation-power/add-point-annotation/
 ---

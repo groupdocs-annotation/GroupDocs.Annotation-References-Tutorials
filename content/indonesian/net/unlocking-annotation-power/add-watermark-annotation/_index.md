@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Tanda Air ke Dokumen
 linktitle: Tambahkan Anotasi Tanda Air ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi tanda air ke dokumen Anda dengan mudah menggunakan GroupDocs.Annotation untuk .NET. Meningkatkan kejelasan dan keamanan dokumen.
-type: docs
 weight: 28
 url: /id/net/unlocking-annotation-power/add-watermark-annotation/
 ---

@@ -3,7 +3,6 @@ title: テキスト置換注釈をドキュメントに追加
 linktitle: テキスト置換注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して、.NET ドキュメントにテキスト置換注釈を簡単に追加する方法を学びます。ドキュメントの操作能力を強化します。
-type: docs
 weight: 24
 url: /ja/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

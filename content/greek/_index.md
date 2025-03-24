@@ -3,7 +3,6 @@ title: Mastering GroupDocs.Annotation - Εκμάθηση και οδηγοί
 linktitle: GroupDocs.Annotation Tutorials
 additionalTitle: Αναφορές API GroupDocs
 description: Ξεκλειδώστε πλήρως τις δυνατότητες του GroupDocs.Annotation με τα σεμινάρια μας. Βελτιώστε τη συνεργασία και βελτιστοποιήστε τις ροές εργασίας με περιεκτικούς οδηγούς και συμβουλές.
-type: docs
 weight: 11
 url: /el/
 is_root: true

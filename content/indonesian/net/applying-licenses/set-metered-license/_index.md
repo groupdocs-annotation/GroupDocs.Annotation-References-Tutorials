@@ -3,7 +3,6 @@ title: Tetapkan Lisensi Terukur
 linktitle: Tetapkan Lisensi Terukur
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menyiapkan lisensi terukur untuk GroupDocs.Annotation .NET untuk penggunaan sumber daya dan kemampuan anotasi dokumen di aplikasi .NET Anda.
-type: docs
 weight: 12
 url: /id/net/applying-licenses/set-metered-license/
 ---

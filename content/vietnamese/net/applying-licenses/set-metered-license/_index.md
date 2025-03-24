@@ -3,7 +3,6 @@ title: Đặt giấy phép đo lường
 linktitle: Đặt giấy phép đo lường
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thiết lập giấy phép đo lường cho GroupDocs.Annotation .NET để sử dụng tài nguyên và khả năng chú thích tài liệu trong các ứng dụng .NET của bạn.
-type: docs
 weight: 12
 url: /vi/net/applying-licenses/set-metered-license/
 ---

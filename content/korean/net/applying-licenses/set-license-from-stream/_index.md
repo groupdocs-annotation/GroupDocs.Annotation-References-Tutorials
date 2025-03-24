@@ -3,7 +3,6 @@ title: 스트림에서 라이선스 설정
 linktitle: 스트림에서 라이선스 설정
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET에서 문서 주석의 잠재력을 최대한 활용하세요. 원활한 통합을 위한 단계별 가이드를 따르세요.
-type: docs
 weight: 11
 url: /ko/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /ko/net/applying-licenses/set-license-from-stream/
 튜토리얼을 시작하기 전에 다음 전제 조건이 충족되었는지 확인하세요.
 1.  .NET용 GroupDocs.Annotation: 다음에서 .NET용 GroupDocs.Annotation을 다운로드하여 설치했는지 확인하십시오.[다운로드 링크](https://releases.groupdocs.com/annotation/net/).
 2.  라이센스: GroupDocs.Annotation에 대한 유효한 라이센스를 얻습니다. 다음 중 하나를 구매하실 수 있습니다.[여기](https://purchase.groupdocs.com/buy) 또는 임시 라이센스를 요청하세요[여기](https://purchase.groupdocs.com/temporary-license/).
-3.  문서화:[선적 서류 비치](https://reference.groupdocs.com/annotation/net/) GroupDocs.Annotation용. API 기능에 대한 자세한 통찰력을 제공합니다.
+3.  문서화:[선적 서류 비치](https://tutorials.groupdocs.com/annotation/net/) GroupDocs.Annotation용. API 기능에 대한 자세한 통찰력을 제공합니다.
 
 ## 네임스페이스 가져오기
 먼저 .NET 프로젝트에서 GroupDocs.Annotation 사용을 시작하는 데 필요한 네임스페이스를 가져옵니다.
@@ -63,6 +62,6 @@ else
 ### 구매하기 전에 .NET용 GroupDocs.Annotation을 사용해 볼 수 있나요?
  예, 무료 평가판 라이센스를 요청할 수 있습니다[여기](https://releases.groupdocs.com/) .NET용 GroupDocs.Annotation의 기능을 살펴보세요.
 ### .NET용 GroupDocs.Annotation에 대한 최신 설명서를 어떻게 구할 수 있나요?
- 당신은[선적 서류 비치](https://reference.groupdocs.com/annotation/net/) 자세한 API 참조 및 튜토리얼에 액세스하려면 .NET용 GroupDocs.Annotation을 사용하세요.
+ 당신은[선적 서류 비치](https://tutorials.groupdocs.com/annotation/net/) 자세한 API 참조 및 튜토리얼에 액세스하려면 .NET용 GroupDocs.Annotation을 사용하세요.
 ### 라이센스에 문제가 발생하면 어떻게 됩니까?
 라이센스에 문제가 있는 경우 GroupDocs 지원 팀에 문의하여 도움을 받으십시오.

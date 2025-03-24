@@ -3,7 +3,6 @@ title: 从流加载文档
 linktitle: 从流加载文档
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 轻松注释 .NET 中的文档。增强协作和生产力。
-type: docs
 weight: 14
 url: /zh/net/document-loading-essentials/load-document-from-stream/
 ---

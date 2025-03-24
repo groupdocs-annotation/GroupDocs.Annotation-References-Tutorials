@@ -3,7 +3,6 @@ title: Adicionar anotação de sublinhado de texto ao documento
 linktitle: Adicionar anotação de sublinhado de texto ao documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como adicionar anotações de sublinhado de texto a documentos usando GroupDocs.Annotation for .NET. Melhore a colaboração e a comunicação sem esforço.
-type: docs
 weight: 27
 url: /pt/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

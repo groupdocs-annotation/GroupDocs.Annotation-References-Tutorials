@@ -3,7 +3,6 @@ title: Aangepaste lettertypen laden
 linktitle: Aangepaste lettertypen laden
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u naadloos aangepaste lettertypen kunt laden in GroupDocs.Annotation voor .NET om documentannotaties te verbeteren. Volg onze stap-voor-stap voor eenvoudige integratie.
-type: docs
 weight: 20
 url: /nl/net/advanced-usage/loading-custom-fonts/
 ---

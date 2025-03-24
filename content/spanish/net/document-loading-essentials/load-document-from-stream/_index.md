@@ -3,7 +3,6 @@ title: Cargar documento desde la secuencia
 linktitle: Cargar documento desde la secuencia
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a anotar documentos en .NET sin esfuerzo con GroupDocs.Annotation. Mejore la colaboración y la productividad.
-type: docs
 weight: 14
 url: /es/net/document-loading-essentials/load-document-from-stream/
 ---

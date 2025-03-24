@@ -3,7 +3,6 @@ title: स्थानीय डिस्क से दस्तावेज़ 
 linktitle: स्थानीय डिस्क से दस्तावेज़ लोड करें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation के साथ दस्तावेज़ एनोटेशन की शक्ति को अनलॉक करें। अपने .NET अनुप्रयोगों में एनोटेशन सुविधाओं को निर्बाध रूप से एकीकृत करें।
-type: docs
 weight: 13
 url: /hi/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### क्या मैं खरीदने से पहले .NET के लिए GroupDocs.Annotation आज़मा सकता हूँ?
  हाँ, आप नि:शुल्क परीक्षण डाउनलोड कर सकते हैं[यहाँ](https://releases.groupdocs.com/).
 ### मुझे .NET के लिए GroupDocs.Annotation के लिए दस्तावेज़ कहाँ मिल सकते हैं?
- आप दस्तावेज़ तक पहुंच सकते हैं[यहाँ](https://reference.groupdocs.com/annotation/net/).
+ आप दस्तावेज़ तक पहुंच सकते हैं[यहाँ](https://tutorials.groupdocs.com/annotation/net/).
 ### मैं .NET के लिए GroupDocs.Annotation के लिए अस्थायी लाइसेंस कैसे प्राप्त कर सकता हूं?
  आप यहां से अस्थायी लाइसेंस प्राप्त कर सकते हैं[यहाँ](https://purchase.groupdocs.com/temporary-license/).
 ### क्या .NET के लिए GroupDocs.Annotation के लिए समर्थन उपलब्ध है?

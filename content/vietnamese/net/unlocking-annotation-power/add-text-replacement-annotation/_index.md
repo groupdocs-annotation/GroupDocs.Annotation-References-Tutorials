@@ -3,7 +3,6 @@ title: Thêm chú thích thay thế văn bản vào tài liệu
 linktitle: Thêm chú thích thay thế văn bản vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích thay thế văn bản vào tài liệu .NET của bạn một cách dễ dàng bằng cách sử dụng GroupDocs.Annotation for .NET. Nâng cao khả năng thao tác tài liệu của bạn.
-type: docs
 weight: 24
 url: /vi/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

@@ -3,7 +3,6 @@ title: Obracanie dokumentów PDF
 linktitle: Obracanie dokumentów PDF
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak łatwo obracać dokumenty PDF za pomocą Groupdocs.Annotation dla .NET. Popraw efektywność zarządzania dokumentami.
-type: docs
 weight: 22
 url: /pl/net/advanced-usage/rotating-pdf-documents/
 ---

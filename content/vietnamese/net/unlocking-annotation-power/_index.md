@@ -3,7 +3,6 @@ title: Mở khóa sức mạnh chú thích
 linktitle: Mở khóa sức mạnh chú thích
 second_title: GroupDocs.Annotation .NET API
 description: Khai phá sức mạnh của chú thích với hướng dẫn GroupDocs.Annotation for .NET. Tìm hiểu cách thêm các chú thích khác nhau từng bước và tăng cường cộng tác một cách dễ dàng.
-type: docs
 weight: 23
 url: /vi/net/unlocking-annotation-power/
 ---

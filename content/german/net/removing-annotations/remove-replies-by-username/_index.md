@@ -3,7 +3,6 @@ title: Entfernen Sie Antworten nach Benutzernamen in .NET
 linktitle: Entfernen Sie Antworten nach Benutzernamen in .NET
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie Dokumente mit Groupdocs.Annotation für .NET nahtlos mit Anmerkungen versehen. Verbessern Sie die Zusammenarbeit und Dokumentenverwaltung mit diesem leistungsstarken Tool.
-type: docs
 weight: 17
 url: /de/net/removing-annotations/remove-replies-by-username/
 ---

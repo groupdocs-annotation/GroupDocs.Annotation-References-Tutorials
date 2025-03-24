@@ -3,7 +3,6 @@ title: Načíst dokument ze streamu
 linktitle: Načíst dokument ze streamu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak snadno anotovat dokumenty v .NET pomocí GroupDocs.Annotation. Zlepšete spolupráci a produktivitu.
-type: docs
 weight: 14
 url: /cs/net/document-loading-essentials/load-document-from-stream/
 ---

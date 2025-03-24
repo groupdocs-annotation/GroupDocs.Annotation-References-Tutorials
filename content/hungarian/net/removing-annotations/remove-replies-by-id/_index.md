@@ -3,7 +3,6 @@ title: Távolítsa el a válaszokat azonosító alapján a .NET-ben
 linktitle: Távolítsa el a válaszokat azonosító alapján a .NET-ben
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan távolíthat el válaszokat azonosító alapján a .NET-ben a GroupDocs.Annotation segítségével. Kövesse lépésenkénti oktatóanyagunkat a hatékony dokumentumannotációk kezeléséhez.
-type: docs
 weight: 16
 url: /hu/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /hu/net/removing-annotations/remove-replies-by-id/
 ## Előfeltételek
 Mielőtt belevágna a válaszok azonosító alapján történő eltávolításáról szóló oktatóanyagba a .NET-ben a GroupDocs.Annotation használatával, győződjön meg arról, hogy rendelkezik a következő előfeltételekkel:
 ### 1. GroupDocs.Annotation telepítése
- Először is telepítenie kell a GroupDocs.Annotation for .NET programot. A könyvtárat innen töltheti le[itt](https://releases.groupdocs.com/annotation/net/) és kövesse a dokumentációban található telepítési utasításokat[itt](https://reference.groupdocs.com/annotation/net/).
+ Először is telepítenie kell a GroupDocs.Annotation for .NET programot. A könyvtárat innen töltheti le[itt](https://releases.groupdocs.com/annotation/net/) és kövesse a dokumentációban található telepítési utasításokat[itt](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. A C# és a .NET alapvető ismerete
 A C# programozási nyelv és a .NET keretrendszer ismerete szükséges az oktatóanyagban található példák követéséhez.
 ### 3. Megjegyzésekkel ellátott dokumentum válaszokkal

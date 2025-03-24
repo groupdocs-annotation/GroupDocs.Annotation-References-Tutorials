@@ -3,7 +3,6 @@ title: Dapatkan Informasi Konten Teks Dokumen
 linktitle: Dapatkan Informasi Konten Teks Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Beri anotasi pada dokumen secara lancar dengan GroupDocs.Annotation untuk .NET. Integrasikan fungsi anotasi ke dalam aplikasi .NET Anda dengan mudah.
-type: docs
 weight: 17
 url: /id/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Ya, GroupDocs.Annotation untuk .NET mendukung berbagai format dokumen termasuk P
 ### Di mana saya dapat menemukan dukungan untuk GroupDocs.Annotation untuk .NET?
  Anda dapat mencari dukungan dan mengajukan pertanyaan di[Forum Grup Dokumen](https://forum.groupdocs.com/c/annotation/10).
 ### Apakah GroupDocs.Annotation untuk .NET menawarkan dokumentasi apa pun?
- Ya, dokumentasi komprehensif untuk GroupDocs.Annotation untuk .NET tersedia[Di Sini](https://reference.groupdocs.com/annotation/net/).
+ Ya, dokumentasi komprehensif untuk GroupDocs.Annotation untuk .NET tersedia[Di Sini](https://tutorials.groupdocs.com/annotation/net/).

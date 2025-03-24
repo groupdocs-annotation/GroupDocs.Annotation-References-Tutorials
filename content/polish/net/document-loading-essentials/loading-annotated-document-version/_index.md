@@ -3,7 +3,6 @@ title: Ładowanie wersji dokumentu z adnotacjami
 linktitle: Ładowanie wersji dokumentu z adnotacjami
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bez wysiłku ładować wersje dokumentów z adnotacjami przy użyciu GroupDocs.Annotation dla .NET. Uprość procesy współpracy i przeglądu.
-type: docs
 weight: 16
 url: /pl/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Tak, GroupDocs.Annotation obsługuje dodawanie adnotacji do dokumentów w format
 ### Czy dostępna jest bezpłatna wersja próbna programu GroupDocs.Annotation dla platformy .NET?
  Tak, możesz uzyskać dostęp do bezpłatnej wersji próbnej z[Tutaj](https://releases.groupdocs.com/).
 ### Gdzie mogę znaleźć dokumentację GroupDocs.Annotation dla .NET?
- Możesz zapoznać się ze szczegółową dokumentacją[Tutaj](https://reference.groupdocs.com/annotation/net/).
+ Możesz zapoznać się ze szczegółową dokumentacją[Tutaj](https://tutorials.groupdocs.com/annotation/net/).
 ### Jak mogę uzyskać tymczasową licencję na GroupDocs.Annotation dla .NET?
  Możesz nabyć licencję tymczasową od[ten link](https://purchase.groupdocs.com/temporary-license/).
 ### Gdzie mogę uzyskać pomoc lub zadać pytania dotyczące GroupDocs.Annotation dla .NET?

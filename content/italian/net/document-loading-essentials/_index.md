@@ -3,7 +3,6 @@ title: Elementi essenziali per il caricamento dei documenti
 linktitle: Elementi essenziali per il caricamento dei documenti
 second_title: API GroupDocs.Annotation .NET
 description: Scopri tutorial essenziali per caricare documenti utilizzando GroupDocs.Annotation .NET. Integrazione perfetta con Amazon S3, Azure, FTP, disco locale, flussi e altro ancora.
-type: docs
 weight: 20
 url: /it/net/document-loading-essentials/
 ---

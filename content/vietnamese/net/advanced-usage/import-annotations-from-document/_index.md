@@ -3,7 +3,6 @@ title: Nhập chú thích từ tài liệu
 linktitle: Nhập chú thích từ tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách nhập chú thích từ tài liệu trong .NET bằng GroupDocs.Annotation. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch.
-type: docs
 weight: 19
 url: /vi/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ Có, GroupDocs.Annotation hỗ trợ nhiều định dạng tài liệu, bao g�
 ### Làm cách nào tôi có thể nhận được giấy phép tạm thời cho GroupDocs.Annotation?
  Bạn có thể nhận được giấy phép tạm thời cho GroupDocs.Annotation từ[trang giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/).
 ### Tôi có thể tìm tài liệu toàn diện về GroupDocs.Annotation ở đâu?
- Tài liệu chi tiết về GroupDocs.Annotation có sẵn[đây](https://reference.groupdocs.com/annotation/net/).
+ Tài liệu chi tiết về GroupDocs.Annotation có sẵn[đây](https://tutorials.groupdocs.com/annotation/net/).
 ### Tôi có thể tìm kiếm sự hỗ trợ cho bất kỳ vấn đề hoặc thắc mắc nào liên quan đến GroupDocs.Annotation ở đâu?
  Để được hỗ trợ, hãy truy cập GroupDocs.Annotation[diễn đàn](https://forum.groupdocs.com/c/annotation/10) nơi bạn có thể tìm kiếm sự trợ giúp từ các chuyên gia và cộng đồng.

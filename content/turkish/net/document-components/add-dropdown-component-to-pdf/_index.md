@@ -3,7 +3,6 @@ title: PDF Belgesine Açılır Bileşen Ekleme
 linktitle: PDF Belgesine Açılır Bileşen Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak PDF'lere açılır bileşenleri nasıl ekleyeceğinizi öğrenin. Sorunsuz entegrasyon için adım adım kılavuzumuzu izleyin.
-type: docs
 weight: 12
 url: /tr/net/document-components/add-dropdown-component-to-pdf/
 ---

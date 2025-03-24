@@ -3,7 +3,6 @@ title: Aggiungi il componente a discesa al documento PDF
 linktitle: Aggiungi il componente a discesa al documento PDF
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere componenti a discesa ai PDF utilizzando GroupDocs.Annotation per .NET. Segui la nostra guida passo passo per un'integrazione perfetta.
-type: docs
 weight: 12
 url: /it/net/document-components/add-dropdown-component-to-pdf/
 ---

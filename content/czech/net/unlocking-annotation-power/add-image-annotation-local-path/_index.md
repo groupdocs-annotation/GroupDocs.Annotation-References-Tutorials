@@ -3,7 +3,6 @@ title: Přidat k dokumentu poznámku obrázku (místní cesta)
 linktitle: Přidat k dokumentu poznámku obrázku (místní cesta)
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat popisky obrázků do dokumentů pomocí GroupDocs.Annotation for .NET. Snadno vylepšete možnosti zpracování dokumentů.
-type: docs
 weight: 14
 url: /cs/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

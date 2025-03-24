@@ -3,7 +3,6 @@ title: Grundlagen zum Laden von Dokumenten
 linktitle: Grundlagen zum Laden von Dokumenten
 second_title: GroupDocs.Annotation .NET-API
 description: Entdecken Sie wichtige Tutorials zum Laden von Dokumenten mit GroupDocs.Annotation .NET. Nahtlose Integration mit Amazon S3, Azure, FTP, lokaler Festplatte, Streams und mehr.
-type: docs
 weight: 20
 url: /de/net/document-loading-essentials/
 ---

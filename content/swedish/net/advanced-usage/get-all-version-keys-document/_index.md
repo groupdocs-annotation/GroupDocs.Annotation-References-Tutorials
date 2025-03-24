@@ -3,7 +3,6 @@ title: Få alla versionsnycklar på dokument
 linktitle: Få alla versionsnycklar på dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du hämtar alla versionsnycklar på ett dokument med GroupDocs.Annotation för .NET. Förbättra dina dokumenthanteringsmöjligheter med detta omfattande.
-type: docs
 weight: 16
 url: /sv/net/advanced-usage/get-all-version-keys-document/
 ---

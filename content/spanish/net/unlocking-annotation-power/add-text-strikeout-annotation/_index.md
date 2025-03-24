@@ -3,7 +3,6 @@ title: Agregar anotación de tachado de texto al documento
 linktitle: Agregar anotación de tachado de texto al documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a agregar anotaciones de texto tachado a documentos usando GroupDocs.Annotation para .NET. Mejore los procesos de colaboración y revisión de documentos de manera eficiente.
-type: docs
 weight: 26
 url: /es/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

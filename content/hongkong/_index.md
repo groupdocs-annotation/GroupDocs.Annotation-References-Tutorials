@@ -3,7 +3,6 @@ title: 掌握 GroupDocs.Annotation - 教學與指南
 linktitle: GroupDocs.註解教程
 additionalTitle: GroupDocs API 參考
 description: 透過我們的教程釋放 GroupDocs.Annotation 的全部潛力。透過全面的指南和提示加強協作並簡化工作流程。
-type: docs
 weight: 11
 url: /zh-hant/
 is_root: true

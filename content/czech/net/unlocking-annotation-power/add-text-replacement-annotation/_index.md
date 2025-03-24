@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci nahrazující text
 linktitle: Přidejte do dokumentu anotaci nahrazující text
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak do dokumentů .NET snadno přidávat anotace nahrazující text pomocí GroupDocs.Annotation for .NET. Vylepšete své možnosti manipulace s dokumenty.
-type: docs
 weight: 24
 url: /cs/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

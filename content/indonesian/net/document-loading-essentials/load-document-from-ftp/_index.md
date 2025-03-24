@@ -3,7 +3,6 @@ title: Muat Dokumen dari FTP
 linktitle: Muat Dokumen dari FTP
 second_title: GroupDocs.Annotasi .NET API
 description: Tingkatkan aplikasi .NET Anda dengan GroupDocs.Annotation untuk anotasi dokumen yang lancar. Tutorial langkah demi langkah disertakan.
-type: docs
 weight: 12
 url: /id/net/document-loading-essentials/load-document-from-ftp/
 ---

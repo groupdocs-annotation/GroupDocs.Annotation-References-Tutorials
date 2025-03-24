@@ -3,7 +3,6 @@ title: PDF ドキュメントにドロップダウン コンポーネントを�
 linktitle: PDF ドキュメントにドロップダウン コンポーネントを追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドロップダウン コンポーネントを PDF に追加する方法を学びます。シームレスな統合については、ステップバイステップのガイドに従ってください。
-type: docs
 weight: 12
 url: /ja/net/document-components/add-dropdown-component-to-pdf/
 ---

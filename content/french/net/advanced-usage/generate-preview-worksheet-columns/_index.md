@@ -3,7 +3,6 @@ title: Générer un aperçu des colonnes de la feuille de calcul
 linktitle: Générer un aperçu des colonnes de la feuille de calcul
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment annoter des documents à l'aide de GroupDocs.Annotation pour .NET. Tutoriel étape par étape pour les développeurs .NET. Améliorez vos applications.
-type: docs
 weight: 15
 url: /fr/net/advanced-usage/generate-preview-worksheet-columns/
 ---

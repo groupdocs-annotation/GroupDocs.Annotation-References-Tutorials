@@ -3,7 +3,6 @@ title: Conceptos básicos de carga de documentos
 linktitle: Conceptos básicos de carga de documentos
 second_title: API GroupDocs.Annotation .NET
 description: Descubra tutoriales esenciales para cargar documentos usando GroupDocs.Annotation .NET. Integre perfectamente con Amazon S3, Azure, FTP, disco local, transmisiones y más.
-type: docs
 weight: 20
 url: /es/net/document-loading-essentials/
 ---

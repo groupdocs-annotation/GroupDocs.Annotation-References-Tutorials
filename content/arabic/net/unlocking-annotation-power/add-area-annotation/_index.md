@@ -3,7 +3,6 @@ title: إضافة تعليق توضيحي للمنطقة إلى المستند
 linktitle: إضافة تعليق توضيحي للمنطقة إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: قم بتحسين التعاون في المستندات باستخدام Groupdocs.Annotation لـ .NET. تعرف على كيفية إضافة التعليقات التوضيحية للمنطقة خطوة بخطوة.
-type: docs
 weight: 10
 url: /ar/net/unlocking-annotation-power/add-area-annotation/
 ---

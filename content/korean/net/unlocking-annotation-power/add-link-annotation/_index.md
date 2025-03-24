@@ -3,7 +3,6 @@ title: 문서에 링크 주석 추가
 linktitle: 문서에 링크 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 문서에 링크 주석을 추가하는 방법을 알아보세요. 손쉽게 협업과 상호작용성을 강화하세요.
-type: docs
 weight: 16
 url: /ko/net/unlocking-annotation-power/add-link-annotation/
 ---

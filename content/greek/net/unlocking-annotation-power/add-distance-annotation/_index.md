@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού απόστασης στο έγγρ�
 linktitle: Προσθήκη σχολιασμού απόστασης στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς απόστασης σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Ενισχύστε τη συνεργασία και την επικοινωνία χωρίς κόπο.
-type: docs
 weight: 12
 url: /el/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ### Ε: Πού μπορώ να βρω την τεκμηρίωση για το GroupDocs.Annotation για .NET;
 
- Α: Μπορείτε να ανατρέξετε στη λεπτομερή διαθέσιμη τεκμηρίωση[εδώ](https://reference.groupdocs.com/annotation/net/).
+ Α: Μπορείτε να ανατρέξετε στη λεπτομερή διαθέσιμη τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/annotation/net/).
 
 ### Ε: Πώς μπορώ να λάβω υποστήριξη ή βοήθεια με το GroupDocs.Annotation;
 

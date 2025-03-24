@@ -3,7 +3,6 @@ title: Lägg till kryssrutakomponent till PDF-dokument
 linktitle: Lägg till kryssrutakomponent till PDF-dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till en kryssrutekomponent till PDF-dokument med Groupdocs.Annotation för .NET. Förbättra dina PDF-filer med interaktiva element.
-type: docs
 weight: 11
 url: /sv/net/document-components/add-checkbox-component-to-pdf/
 ---

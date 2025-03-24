@@ -3,7 +3,6 @@ title: Opanowanie GroupDocs.Adnotacja - Poradniki i przewodniki
 linktitle: Poradniki dotyczące adnotacji GroupDocs
 additionalTitle: Referencje API GroupDocs
 description: Odblokuj pełny potencjał GroupDocs.Annotation dzięki naszym samouczkom. Usprawnij współpracę i usprawnij przepływ pracy dzięki kompleksowym przewodnikom i wskazówkom.
-type: docs
 weight: 11
 url: /pl/
 is_root: true

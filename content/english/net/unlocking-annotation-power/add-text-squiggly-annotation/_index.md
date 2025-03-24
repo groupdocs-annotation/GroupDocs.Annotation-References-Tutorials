@@ -3,7 +3,6 @@ title: Add Text Squiggly Annotation to Document
 linktitle: Add Text Squiggly Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to effortlessly add text squiggly annotations to documents using Groupdocs.Annotation for .NET. Enhance collaboration and document review processes.
-type: docs
 weight: 25
 url: /net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

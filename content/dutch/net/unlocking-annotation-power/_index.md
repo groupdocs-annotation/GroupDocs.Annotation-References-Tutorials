@@ -3,7 +3,6 @@ title: Annotatiekracht ontgrendelen
 linktitle: Annotatiekracht ontgrendelen
 second_title: GroupDocs.Annotation .NET API
 description: Ontgrendel de kracht van annotatie met GroupDocs.Annotation voor .NET-tutorials. Leer stap voor stap verschillende annotaties toevoegen en verbeter moeiteloos de samenwerking.
-type: docs
 weight: 23
 url: /nl/net/unlocking-annotation-power/
 ---

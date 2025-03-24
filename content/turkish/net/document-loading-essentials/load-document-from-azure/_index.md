@@ -3,7 +3,6 @@ title: Azure'dan Belge Yükle
 linktitle: Azure'dan Belge Yükle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation'ı kullanarak .NET'te belgelere nasıl açıklama ekleyeceğinizi öğrenin. Azure Blob Depolama ile sorunsuz entegrasyon için adım adım öğretici.
-type: docs
 weight: 11
 url: /tr/net/document-loading-essentials/load-document-from-azure/
 ---

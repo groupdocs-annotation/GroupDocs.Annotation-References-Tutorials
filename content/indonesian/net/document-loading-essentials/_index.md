@@ -3,7 +3,6 @@ title: Hal Penting Pemuatan Dokumen
 linktitle: Hal Penting Pemuatan Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Temukan tutorial penting untuk memuat dokumen menggunakan GroupDocs.Annotation .NET. Integrasikan secara mulus dengan Amazon S3, Azure, FTP, disk lokal, aliran, & lainnya.
-type: docs
 weight: 20
 url: /id/net/document-loading-essentials/
 ---

@@ -3,7 +3,6 @@ title: Muat Dokumen dari Disk Lokal
 linktitle: Muat Dokumen dari Disk Lokal
 second_title: GroupDocs.Annotasi .NET API
 description: Buka kekuatan anotasi dokumen dengan GroupDocs.Annotation untuk .NET. Integrasikan fitur anotasi dengan mulus ke dalam aplikasi .NET Anda.
-type: docs
 weight: 13
 url: /id/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Kesimpulannya, GroupDocs.Annotation untuk .NET memberikan solusi kuat untuk meng
 ### Bisakah saya mencoba GroupDocs.Annotation untuk .NET sebelum membeli?
  Ya, Anda dapat mengunduh uji coba gratis dari[Di Sini](https://releases.groupdocs.com/).
 ### Di mana saya dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET?
- Anda dapat mengakses dokumentasinya[Di Sini](https://reference.groupdocs.com/annotation/net/).
+ Anda dapat mengakses dokumentasinya[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 ### Bagaimana saya bisa mendapatkan lisensi sementara untuk GroupDocs.Annotation untuk .NET?
  Anda dapat memperoleh lisensi sementara dari[Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### Apakah dukungan tersedia untuk GroupDocs.Annotation untuk .NET?

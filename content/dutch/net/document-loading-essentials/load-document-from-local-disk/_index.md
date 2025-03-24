@@ -3,7 +3,6 @@ title: Document laden vanaf lokale schijf
 linktitle: Document laden vanaf lokale schijf
 second_title: GroupDocs.Annotation .NET API
 description: Ontgrendel de kracht van documentannotatie met GroupDocs.Annotation voor .NET. Integreer annotatiefuncties naadloos in uw .NET-applicaties.
-type: docs
 weight: 13
 url: /nl/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Concluderend biedt GroupDocs.Annotation voor .NET een robuuste oplossing voor he
 ### Kan ik GroupDocs.Annotation voor .NET uitproberen voordat ik het aanschaf?
  Ja, u kunt een gratis proefversie downloaden van[hier](https://releases.groupdocs.com/).
 ### Waar kan ik documentatie vinden voor GroupDocs.Annotation voor .NET?
- U heeft toegang tot de documentatie[hier](https://reference.groupdocs.com/annotation/net/).
+ U heeft toegang tot de documentatie[hier](https://tutorials.groupdocs.com/annotation/net/).
 ### Hoe kan ik een tijdelijke licentie verkrijgen voor GroupDocs.Annotation voor .NET?
  Een tijdelijke licentie kunt u verkrijgen bij[hier](https://purchase.groupdocs.com/temporary-license/).
 ### Is er ondersteuning beschikbaar voor GroupDocs.Annotation voor .NET?

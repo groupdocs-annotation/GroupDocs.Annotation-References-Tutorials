@@ -3,7 +3,6 @@ title: Punktanmerkung zum Dokument hinzufügen
 linktitle: Punktanmerkung zum Dokument hinzufügen
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Punktanmerkungen zu PDFs hinzufügen. Schritt-für-Schritt-Anleitung für eine nahtlose Integration.
-type: docs
 weight: 17
 url: /de/net/unlocking-annotation-power/add-point-annotation/
 ---

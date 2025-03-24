@@ -3,7 +3,6 @@ title: Pontos megjegyzés hozzáadása a dokumentumhoz
 linktitle: Pontos megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá pontjegyzeteket PDF-fájlokhoz a GroupDocs.Annotation for .NET segítségével. Lépésről lépésre útmutató a zökkenőmentes integrációhoz.
-type: docs
 weight: 17
 url: /hu/net/unlocking-annotation-power/add-point-annotation/
 ---

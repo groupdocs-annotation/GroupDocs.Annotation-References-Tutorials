@@ -3,7 +3,6 @@ title: 旋转 PDF 文档
 linktitle: 旋转 PDF 文档
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 轻松旋转 PDF 文档。提高文档管理效率。
-type: docs
 weight: 22
 url: /zh/net/advanced-usage/rotating-pdf-documents/
 ---

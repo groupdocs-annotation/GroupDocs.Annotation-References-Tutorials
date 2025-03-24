@@ -3,7 +3,6 @@ title: 设置文档预览分辨率
 linktitle: 设置文档预览分辨率
 second_title: GroupDocs.Annotation .NET API
 description: 使用 Groupdocs.Annotation for .NET 提升文档协作，无缝简化注释和预览功能。
-type: docs
 weight: 23
 url: /zh/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ url: /zh/net/advanced-usage/set-document-preview-resolution/
 在深入利用 Groupdocs.Annotation for .NET 的功能之前，请确保满足以下先决条件：
 1. 安装 Groupdocs.Annotation for .NET：首先下载并安装 Groupdocs.Annotation for .NET 库。您可以从以下位置获取必要的文件[下载链接](https://releases.groupdocs.com/annotation/net/).
 2. 开发环境：设置合适的开发环境，包括 Visual Studio 或任何其他用于 .NET 开发的首选 IDE。
-3. 访问文档：熟悉 Groupdocs.Annotation for .NET 提供的综合文档。您可以参考[文档](https://reference.groupdocs.com/annotation/net/)详细了解图书馆的功能和使用情况。
+3. 访问文档：熟悉 Groupdocs.Annotation for .NET 提供的综合文档。您可以参考[文档](https://tutorials.groupdocs.com/annotation/net/)详细了解图书馆的功能和使用情况。
 4. 对 .NET Framework 的基本了解：确保您对 .NET 框架和 C# 编程语言有基本的了解，以有效利用 Groupdocs.Annotation for .NET。
 
 ## 导入必要的命名空间

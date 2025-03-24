@@ -3,7 +3,6 @@ title: Rotation de documents PDF
 linktitle: Rotation de documents PDF
 second_title: API GroupDocs.Annotation .NET
 description: Apprenez à faire pivoter des documents PDF sans effort à l'aide de Groupdocs.Annotation pour .NET. Améliorer l’efficacité de la gestion des documents.
-type: docs
 weight: 22
 url: /fr/net/advanced-usage/rotating-pdf-documents/
 ---

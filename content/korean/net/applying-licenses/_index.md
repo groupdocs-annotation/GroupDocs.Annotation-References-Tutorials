@@ -3,7 +3,6 @@ title: 라이센스 적용
 linktitle: 라이센스 적용
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET에서 문서 주석의 잠재력을 최대한 활용하세요. 원활한 통합을 위해 단계별 튜토리얼을 따르세요.
-type: docs
 weight: 26
 url: /ko/net/applying-licenses/
 ---

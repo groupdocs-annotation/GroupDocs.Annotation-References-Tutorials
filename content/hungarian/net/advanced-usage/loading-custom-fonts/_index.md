@@ -3,7 +3,6 @@ title: Egyéni betűtípusok betöltése
 linktitle: Egyéni betűtípusok betöltése
 second_title: GroupDocs.Annotation .NET API
 description: Tanulja meg, hogyan tölthet be zökkenőmentesen egyéni betűtípusokat a GroupDocs.Annotation for .NET-be a dokumentumok megjegyzéseinek javítása érdekében. Kövesse lépésről lépésre az egyszerű integráció érdekében.
-type: docs
 weight: 20
 url: /hu/net/advanced-usage/loading-custom-fonts/
 ---

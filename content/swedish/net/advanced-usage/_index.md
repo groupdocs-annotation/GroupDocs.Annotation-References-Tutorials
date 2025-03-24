@@ -3,7 +3,6 @@ title: Avancerad användning
 linktitle: Avancerad användning
 second_title: GroupDocs.Annotation .NET API
 description: Upptäck avancerade självstudiekurser för GroupDocs.Annotation .NET. Förbättra dokumenthanteringen med steg-för-steg-guider om bildkvalitet, anteckningsexport med mera.
-type: docs
 weight: 22
 url: /sv/net/advanced-usage/
 ---

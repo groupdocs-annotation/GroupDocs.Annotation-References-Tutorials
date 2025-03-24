@@ -3,7 +3,6 @@ title: Válaszok eltávolítása felhasználónév alapján a .NET-ben
 linktitle: Válaszok eltávolítása felhasználónév alapján a .NET-ben
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan lehet zökkenőmentesen megjegyzéseket fűzni dokumentumokhoz a Groupdocs.Annotation for .NET használatával. Fokozza az együttműködést és a dokumentumkezelést ezzel a hatékony eszközzel.
-type: docs
 weight: 17
 url: /hu/net/removing-annotations/remove-replies-by-username/
 ---

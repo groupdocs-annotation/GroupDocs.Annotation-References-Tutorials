@@ -3,7 +3,6 @@ title: Aggiungi annotazione immagine al documento (percorso remoto)
 linktitle: Aggiungi annotazione immagine al documento (percorso remoto)
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere annotazioni di immagini ai documenti utilizzando GroupDocs.Annotation per .NET. Migliora la gestione dei documenti con potenti funzionalità di annotazione.
-type: docs
 weight: 15
 url: /it/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

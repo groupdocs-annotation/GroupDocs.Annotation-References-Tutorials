@@ -3,7 +3,6 @@ title: Hivatkozási megjegyzés hozzáadása a dokumentumhoz
 linktitle: Hivatkozási megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá hivatkozásokat a dokumentumokhoz a Groupdocs.Annotation for .NET használatával. Fokozza az együttműködést és az interaktivitást könnyedén.
-type: docs
 weight: 16
 url: /hu/net/unlocking-annotation-power/add-link-annotation/
 ---

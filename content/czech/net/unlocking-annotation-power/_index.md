@@ -3,7 +3,6 @@ title: Odemykání funkce anotace
 linktitle: Odemykání funkce anotace
 second_title: GroupDocs.Annotation .NET API
 description: Odemkněte sílu anotací s GroupDocs.Annotation for .NET výukových programů. Naučte se přidávat různé anotace krok za krokem a vylepšete spolupráci bez námahy.
-type: docs
 weight: 23
 url: /cs/net/unlocking-annotation-power/
 ---

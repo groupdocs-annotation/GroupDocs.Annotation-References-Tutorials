@@ -3,7 +3,6 @@ title: Belgeye Nokta Açıklaması Ekle
 linktitle: Belgeye Nokta Açıklaması Ekle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak PDF'lere Nokta Açıklaması eklemeyi öğrenin. Sorunsuz entegrasyon için adım adım kılavuz.
-type: docs
 weight: 17
 url: /tr/net/unlocking-annotation-power/add-point-annotation/
 ---

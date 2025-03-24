@@ -3,7 +3,6 @@ title: أضف تعليقًا توضيحيًا متعدد الخطوط إلى ا�
 linktitle: أضف تعليقًا توضيحيًا متعدد الخطوط إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية متعددة الخطوط إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. تعزيز عمليات التعاون ومراجعة المستندات دون عناء.
-type: docs
 weight: 18
 url: /ar/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### هل يقدم GroupDocs.Annotation for .NET نسخة تجريبية مجانية؟
  نعم، يمكنك الاستفادة من النسخة التجريبية المجانية من GroupDocs.Annotation لـ .NET من خلال زيارة الموقع[هذا الرابط](https://releases.groupdocs.com/).
 ### أين يمكنني العثور على وثائق GroupDocs.Annotation لـ .NET؟
- يمكنك العثور على وثائق GroupDocs.Annotation لـ .NET[هنا](https://reference.groupdocs.com/annotation/net/).
+ يمكنك العثور على وثائق GroupDocs.Annotation لـ .NET[هنا](https://tutorials.groupdocs.com/annotation/net/).
 ### كيف يمكنني الحصول على الدعم لأية مشكلات أو استفسارات تتعلق بـ GroupDocs.Annotation لـ .NET؟
  يمكنك الحصول على الدعم من خلال زيارة منتدى GroupDocs.Annotation[هنا](https://forum.groupdocs.com/c/annotation/10).

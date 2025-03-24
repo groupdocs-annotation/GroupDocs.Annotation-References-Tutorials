@@ -3,7 +3,6 @@ title: パスワードで保護されたドキュメントをロードする
 linktitle: パスワードで保護されたドキュメントをロードする
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してコラボレーションとドキュメント レビューを強化します。 .NET アプリで PDF などにシームレスに注釈を付けます。
-type: docs
 weight: 17
 url: /ja/net/document-loading-essentials/load-password-protected-documents/
 ---

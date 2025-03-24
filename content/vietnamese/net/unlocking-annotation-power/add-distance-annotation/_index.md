@@ -3,7 +3,6 @@ title: Thêm chú thích khoảng cách vào tài liệu
 linktitle: Thêm chú thích khoảng cách vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích khoảng cách vào tài liệu bằng GroupDocs.Annotation cho .NET. Tăng cường hợp tác và giao tiếp dễ dàng.
-type: docs
 weight: 12
 url: /vi/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ Trả lời: Có, GroupDocs.Annotation hỗ trợ chú thích trên nhiều đ�
 
 ### Câu hỏi: Tôi có thể tìm tài liệu về GroupDocs.Annotation cho .NET ở đâu?
 
- A: Bạn có thể tham khảo tài liệu chi tiết có sẵn[đây](https://reference.groupdocs.com/annotation/net/).
+ A: Bạn có thể tham khảo tài liệu chi tiết có sẵn[đây](https://tutorials.groupdocs.com/annotation/net/).
 
 ### Câu hỏi: Làm cách nào tôi có thể nhận được hỗ trợ hoặc trợ giúp với GroupDocs.Annotation?
 

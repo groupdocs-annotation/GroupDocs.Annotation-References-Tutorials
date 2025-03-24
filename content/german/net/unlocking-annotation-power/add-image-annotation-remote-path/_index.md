@@ -3,7 +3,6 @@ title: Bildanmerkung zum Dokument hinzufügen (Remote-Pfad)
 linktitle: Bildanmerkung zum Dokument hinzufügen (Remote-Pfad)
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Bildanmerkungen zu Dokumenten hinzufügen. Verbessern Sie die Dokumentenverwaltung mit leistungsstarken Anmerkungsfunktionen.
-type: docs
 weight: 15
 url: /de/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

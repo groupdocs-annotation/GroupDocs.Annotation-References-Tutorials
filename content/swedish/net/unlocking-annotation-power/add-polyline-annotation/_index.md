@@ -3,7 +3,6 @@ title: Lägg till polylinjeanteckning till dokumentet
 linktitle: Lägg till polylinjeanteckning till dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till polyline-kommentarer till dokument med GroupDocs.Annotation för .NET. Förbättra samarbets- och dokumentgranskningsprocesser utan ansträngning.
-type: docs
 weight: 18
 url: /sv/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Ja, du kan anpassa olika egenskaper för kommentarer som färg, opacitet, stil o
 ### Erbjuder GroupDocs.Annotation för .NET en gratis provperiod?
  Ja, du kan använda en gratis provversion av GroupDocs.Annotation för .NET genom att besöka[den här länken](https://releases.groupdocs.com/).
 ### Var kan jag hitta dokumentation för GroupDocs.Annotation för .NET?
- Du hittar dokumentationen för GroupDocs.Annotation för .NET[här](https://reference.groupdocs.com/annotation/net/).
+ Du hittar dokumentationen för GroupDocs.Annotation för .NET[här](https://tutorials.groupdocs.com/annotation/net/).
 ### Hur kan jag få support för eventuella problem eller frågor relaterade till GroupDocs.Annotation for .NET?
  Du kan få support genom att besöka forumet GroupDocs.Annotation[här](https://forum.groupdocs.com/c/annotation/10).

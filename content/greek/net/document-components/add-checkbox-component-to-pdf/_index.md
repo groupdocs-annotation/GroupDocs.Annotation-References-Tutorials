@@ -3,7 +3,6 @@ title: Προσθήκη στοιχείου πλαισίου ελέγχου στ�
 linktitle: Προσθήκη στοιχείου πλαισίου ελέγχου στο έγγραφο PDF
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς μπορείτε να προσθέσετε ένα στοιχείο πλαισίου ελέγχου σε έγγραφα PDF χρησιμοποιώντας το Groupdocs.Annotation για .NET. Βελτιώστε τα PDF σας με διαδραστικά στοιχεία.
-type: docs
 weight: 11
 url: /el/net/document-components/add-checkbox-component-to-pdf/
 ---

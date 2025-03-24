@@ -3,7 +3,6 @@ title: Azureからドキュメントをロードする
 linktitle: Azureからドキュメントをロードする
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET でドキュメントに注釈を付ける方法を学びます。 Azure Blob Storage とのシームレスな統合のためのステップバイステップのチュートリアル。
-type: docs
 weight: 11
 url: /ja/net/document-loading-essentials/load-document-from-azure/
 ---

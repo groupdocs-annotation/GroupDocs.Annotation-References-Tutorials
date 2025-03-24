@@ -3,7 +3,6 @@ title: Gerar colunas de planilha de visualização
 linktitle: Gerar colunas de planilha de visualização
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como fazer anotações em documentos usando GroupDocs.Annotation for .NET. Tutorial passo a passo para desenvolvedores .NET. Aprimore seus aplicativos.
-type: docs
 weight: 15
 url: /pt/net/advanced-usage/generate-preview-worksheet-columns/
 ---

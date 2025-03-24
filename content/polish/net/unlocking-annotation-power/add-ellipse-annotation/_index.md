@@ -3,7 +3,6 @@ title: Dodaj adnotację w postaci elipsy do dokumentu
 linktitle: Dodaj adnotację w postaci elipsy do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje w kształcie elipsy do dokumentów w platformie .NET przy użyciu GroupDocs.Annotation. Usprawnij współpracę i komunikację bez wysiłku.
-type: docs
 weight: 13
 url: /pl/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

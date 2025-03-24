@@ -1,7 +1,6 @@
 ---
 title: .NET용 GroupDocs.Annotation의 튜토리얼 및 예
 linktitle: .NET 튜토리얼용 GroupDocs.Annotation
-type: docs
 weight: 10
 url: /ko/net/
 description: 튜토리얼을 통해 .NET용 GroupDocs.Annotation의 잠재력을 최대한 활용해 보세요. 원활하게 통합하고 협업을 강화하며 워크플로를 간소화합니다.

@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Textersetzungsanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Textersetzungsanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos Textersetzungsanmerkungen zu Ihren .NET-Dokumenten hinzufügen. Erweitern Sie Ihre Fähigkeiten zur Dokumentenbearbeitung.
-type: docs
 weight: 24
 url: /de/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

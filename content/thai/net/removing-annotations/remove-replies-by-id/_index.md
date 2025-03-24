@@ -3,7 +3,6 @@ title: ลบการตอบกลับด้วย ID ใน .NET
 linktitle: ลบการตอบกลับด้วย ID ใน .NET
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีลบการตอบกลับด้วย ID ใน .NET โดยใช้ GroupDocs.Annotation ปฏิบัติตามบทช่วยสอนทีละขั้นตอนของเราเพื่อการจัดการคำอธิบายประกอบเอกสารที่มีประสิทธิภาพ
-type: docs
 weight: 16
 url: /th/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /th/net/removing-annotations/remove-replies-by-id/
 ## ข้อกำหนดเบื้องต้น
 ก่อนที่จะเจาะลึกบทช่วยสอนเกี่ยวกับการลบการตอบกลับด้วย ID ใน .NET โดยใช้ GroupDocs.Annotation ตรวจสอบให้แน่ใจว่าคุณมีข้อกำหนดเบื้องต้นต่อไปนี้:
 ### 1. การติดตั้ง GroupDocs.Annotation
- ขั้นแรก คุณต้องติดตั้ง GroupDocs.Annotation สำหรับ .NET คุณสามารถดาวน์โหลดห้องสมุดได้จาก[ที่นี่](https://releases.groupdocs.com/annotation/net/) และปฏิบัติตามคำแนะนำในการติดตั้งที่ให้ไว้ในเอกสารประกอบ[ที่นี่](https://reference.groupdocs.com/annotation/net/).
+ ขั้นแรก คุณต้องติดตั้ง GroupDocs.Annotation สำหรับ .NET คุณสามารถดาวน์โหลดห้องสมุดได้จาก[ที่นี่](https://releases.groupdocs.com/annotation/net/) และปฏิบัติตามคำแนะนำในการติดตั้งที่ให้ไว้ในเอกสารประกอบ[ที่นี่](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. ความเข้าใจพื้นฐานเกี่ยวกับ C# และ .NET
 จำเป็นต้องมีความคุ้นเคยกับภาษาการเขียนโปรแกรม C# และเฟรมเวิร์ก .NET พร้อมด้วยตัวอย่างในบทช่วยสอนนี้
 ### 3. เอกสารคำอธิบายประกอบพร้อมคำตอบ

@@ -3,7 +3,6 @@ title: 向文档添加点注释
 linktitle: 向文档添加点注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 将点注释添加到 PDF。无缝集成的分步指南。
-type: docs
 weight: 17
 url: /zh/net/unlocking-annotation-power/add-point-annotation/
 ---

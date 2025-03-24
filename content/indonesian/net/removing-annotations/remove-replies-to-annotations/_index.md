@@ -3,7 +3,6 @@ title: Hapus Balasan Anotasi di .NET
 linktitle: Hapus Balasan Anotasi di .NET
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menghapus balasan anotasi di .NET menggunakan GroupDocs.Annotation. Panduan langkah demi langkah dengan contoh kode.
-type: docs
 weight: 15
 url: /id/net/removing-annotations/remove-replies-to-annotations/
 ---

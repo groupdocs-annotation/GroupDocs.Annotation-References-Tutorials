@@ -3,7 +3,6 @@ title: エリア注釈をドキュメントに追加
 linktitle: エリア注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用してドキュメントのコラボレーションを強化します。エリアの注釈を追加する方法を段階的に学習します。
-type: docs
 weight: 10
 url: /ja/net/unlocking-annotation-power/add-area-annotation/
 ---

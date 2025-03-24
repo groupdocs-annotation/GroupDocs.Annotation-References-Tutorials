@@ -3,7 +3,6 @@ title: Загрузить документ из потока
 linktitle: Загрузить документ из потока
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как легко аннотировать документы в .NET с помощью GroupDocs.Annotation. Улучшите сотрудничество и производительность.
-type: docs
 weight: 14
 url: /ru/net/document-loading-essentials/load-document-from-stream/
 ---

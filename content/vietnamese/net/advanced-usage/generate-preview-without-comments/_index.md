@@ -3,7 +3,6 @@ title: Tạo bản xem trước mà không cần nhận xét
 linktitle: Tạo bản xem trước mà không cần nhận xét
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách tích hợp liền mạch các khả năng chú thích tài liệu vào các ứng dụng .NET của bạn bằng GroupDocs.Annotation for .NET.
-type: docs
 weight: 14
 url: /vi/net/advanced-usage/generate-preview-without-comments/
 ---

@@ -3,7 +3,6 @@ title: การใช้ใบอนุญาต
 linktitle: การใช้ใบอนุญาต
 second_title: GroupDocs.Annotation .NET API
 description: ปลดล็อกศักยภาพสูงสุดของคำอธิบายประกอบเอกสารใน .NET ด้วย GroupDocs.Annotation ปฏิบัติตามบทช่วยสอนทีละขั้นตอนของเราเพื่อการบูรณาการที่ราบรื่น
-type: docs
 weight: 26
 url: /th/net/applying-licenses/
 ---

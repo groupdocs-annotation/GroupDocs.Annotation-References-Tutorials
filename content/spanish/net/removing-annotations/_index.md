@@ -3,7 +3,6 @@ title: Eliminar anotaciones
 linktitle: Eliminar anotaciones
 second_title: API GroupDocs.Annotation .NET
 description: Descubra cómo administrar eficientemente las anotaciones en .NET con los tutoriales de GroupDocs.Annotation. Optimice el flujo de trabajo de sus documentos y mejore la colaboración sin problemas.
-type: docs
 weight: 25
 url: /es/net/removing-annotations/
 ---

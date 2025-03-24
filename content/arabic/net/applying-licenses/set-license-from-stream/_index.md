@@ -3,7 +3,6 @@ title: قم بتعيين الترخيص من الدفق
 linktitle: قم بتعيين الترخيص من الدفق
 second_title: GroupDocs.Annotation .NET API
 description: أطلق العنان للإمكانات الكاملة للتعليق التوضيحي للمستند في .NET باستخدام GroupDocs.Annotation. اتبع دليلنا خطوة بخطوة للتكامل السلس.
-type: docs
 weight: 11
 url: /ar/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /ar/net/applying-licenses/set-license-from-stream/
 قبل الغوص في البرنامج التعليمي، تأكد من توفر المتطلبات الأساسية التالية:
 1.  GroupDocs.Annotation لـ .NET: تأكد من تنزيل وتثبيت GroupDocs.Annotation لـ .NET من[رابط التحميل](https://releases.groupdocs.com/annotation/net/).
 2.  الترخيص: احصل على ترخيص صالح لـ GroupDocs.Annotation. يمكنك إما شراء واحدة من[هنا](https://purchase.groupdocs.com/buy) أو طلب ترخيص مؤقت[هنا](https://purchase.groupdocs.com/temporary-license/).
-3.  التوثيق: تعرف على[توثيق](https://reference.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation. يوفر رؤى تفصيلية حول وظائف واجهة برمجة التطبيقات (API).
+3.  التوثيق: تعرف على[توثيق](https://tutorials.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation. يوفر رؤى تفصيلية حول وظائف واجهة برمجة التطبيقات (API).
 
 ## استيراد مساحات الأسماء
 أولاً، لنستورد مساحات الأسماء الضرورية لبدء استخدام GroupDocs.Annotation في مشروع .NET الخاص بك:
@@ -63,6 +62,6 @@ else
 ### هل يمكنني تجربة GroupDocs.Annotation لـ .NET قبل الشراء؟
  نعم، يمكنك طلب ترخيص تجريبي مجاني[هنا](https://releases.groupdocs.com/) لاستكشاف إمكانيات GroupDocs.Annotation لـ .NET.
 ### كيف يمكنني الحصول على أحدث الوثائق الخاصة بـ GroupDocs.Annotation لـ .NET؟
- يمكنك الرجوع إلى[توثيق](https://reference.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation لـ .NET للوصول إلى مراجع API التفصيلية والبرامج التعليمية.
+ يمكنك الرجوع إلى[توثيق](https://tutorials.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation لـ .NET للوصول إلى مراجع API التفصيلية والبرامج التعليمية.
 ### ماذا لو واجهت مشاكل مع الترخيص الخاص بي؟
 إذا واجهت أية مشكلات تتعلق بالترخيص الخاص بك، فاتصل بفريق دعم GroupDocs للحصول على المساعدة.

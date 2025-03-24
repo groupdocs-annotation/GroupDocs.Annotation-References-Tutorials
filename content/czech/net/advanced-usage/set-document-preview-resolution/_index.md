@@ -3,7 +3,6 @@ title: Nastavte rozlišení náhledu dokumentu
 linktitle: Nastavte rozlišení náhledu dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Vylepšete spolupráci na dokumentech s Groupdocs.Annotation pro .NET bezproblémově zefektivněte funkce anotace a náhledu.
-type: docs
 weight: 23
 url: /cs/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ dnešní digitální době je efektivní správa dokumentů a spolupráce prvoř
 Než se ponoříte do využití možností Groupdocs.Annotation pro .NET, ujistěte se, že máte splněny následující předpoklady:
 1.  Instalace Groupdocs.Annotation pro .NET: Začněte stažením a instalací knihovny Groupdocs.Annotation pro .NET. Potřebné soubory můžete získat z[odkaz ke stažení](https://releases.groupdocs.com/annotation/net/).
 2. Vývojové prostředí: Mějte nastavené vhodné vývojové prostředí, včetně Visual Studia nebo jiného preferovaného IDE pro vývoj .NET.
-3. Přístup k dokumentaci: Seznamte se s komplexní dokumentací, kterou poskytuje Groupdocs.Annotation pro .NET. Můžete odkazovat na[dokumentace](https://reference.groupdocs.com/annotation/net/) pro podrobné informace o funkcích a využití knihovny.
+3. Přístup k dokumentaci: Seznamte se s komplexní dokumentací, kterou poskytuje Groupdocs.Annotation pro .NET. Můžete odkazovat na[dokumentace](https://tutorials.groupdocs.com/annotation/net/) pro podrobné informace o funkcích a využití knihovny.
 4. Základní porozumění .NET Framework: Ujistěte se, že máte základní znalosti o .NET frameworku a programovacím jazyku C#, abyste mohli efektivně využívat Groupdocs.Annotation pro .NET.
 
 ## Import nezbytných jmenných prostorů

@@ -3,7 +3,6 @@ title: 按 ID 删除多个注释
 linktitle: 按 ID 删除多个注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 在 .NET 中按 ID 删除多个注释，从而轻松增强您的文档管理功能。
-type: docs
 weight: 13
 url: /zh/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

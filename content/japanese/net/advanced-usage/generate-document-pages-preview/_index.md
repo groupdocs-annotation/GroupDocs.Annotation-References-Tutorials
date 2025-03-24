@@ -3,7 +3,6 @@ title: ドキュメントページのプレビューを生成
 linktitle: ドキュメントページのプレビューを生成
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメント ページのプレビューを効率的に生成する方法を学びます。この包括的な機能により、ドキュメント管理ワークフローを強化します。
-type: docs
 weight: 12
 url: /ja/net/advanced-usage/generate-document-pages-preview/
 ---

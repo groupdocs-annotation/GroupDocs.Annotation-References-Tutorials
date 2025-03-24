@@ -3,7 +3,6 @@ title: Carregar documento do FTP
 linktitle: Carregar documento do FTP
 second_title: API GroupDocs.Annotation .NET
 description: Aprimore seus aplicativos .NET com GroupDocs.Annotation para anotações contínuas em documentos. Tutorial passo a passo incluído.
-type: docs
 weight: 12
 url: /pt/net/document-loading-essentials/load-document-from-ftp/
 ---

@@ -3,7 +3,6 @@ title: Dodaj adnotację zastępującą tekst do dokumentu
 linktitle: Dodaj adnotację zastępującą tekst do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bez wysiłku dodawać adnotacje zastępujące tekst do dokumentów .NET, korzystając z GroupDocs.Annotation dla .NET. Zwiększ swoje możliwości manipulowania dokumentami.
-type: docs
 weight: 24
 url: /pl/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

@@ -3,7 +3,6 @@ title: Dodaj adnotację o polilinii do dokumentu
 linktitle: Dodaj adnotację o polilinii do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje polilinii do dokumentów za pomocą GroupDocs.Annotation dla .NET. Bez wysiłku usprawnij procesy współpracy i przeglądu dokumentów.
-type: docs
 weight: 18
 url: /pl/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Tak, możesz dostosować różne właściwości adnotacji, takie jak kolor, kryc
 ### Czy GroupDocs.Annotation dla .NET oferuje bezpłatną wersję próbną?
  Tak, możesz skorzystać z bezpłatnej wersji próbnej GroupDocs.Annotation dla .NET, odwiedzając stronę[ten link](https://releases.groupdocs.com/).
 ### Gdzie mogę znaleźć dokumentację GroupDocs.Annotation dla .NET?
- Dokumentację GroupDocs.Annotation for .NET można znaleźć[Tutaj](https://reference.groupdocs.com/annotation/net/).
+ Dokumentację GroupDocs.Annotation for .NET można znaleźć[Tutaj](https://tutorials.groupdocs.com/annotation/net/).
 ### Jak mogę uzyskać pomoc w przypadku jakichkolwiek problemów lub zapytań związanych z GroupDocs.Annotation for .NET?
  Możesz uzyskać pomoc, odwiedzając forum GroupDocs.Annotation[Tutaj](https://forum.groupdocs.com/c/annotation/10).

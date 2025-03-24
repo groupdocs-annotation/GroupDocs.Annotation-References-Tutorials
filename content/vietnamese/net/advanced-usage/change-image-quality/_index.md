@@ -3,7 +3,6 @@ title: Thay đổi chất lượng hình ảnh
 linktitle: Thay đổi chất lượng hình ảnh
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách nâng cao chất lượng hình ảnh trong tệp PDF bằng Groupdocs.Annotation for .NET. Thực hiện theo hướng dẫn từng bước của chúng tôi.
-type: docs
 weight: 10
 url: /vi/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ Trong thời đại kỹ thuật số ngày nay, chất lượng hình ảnh tro
 ## Điều kiện tiên quyết
 Trước khi chúng ta đi sâu vào hướng dẫn, hãy đảm bảo bạn có sẵn các điều kiện tiên quyết sau:
 ### 1. Cài đặt Groupdocs.Annotation cho .NET
- Đầu tiên tải và cài đặt thư viện Groupdocs.Annotation for .NET từ trang web. Bạn có thể tìm thấy liên kết tải xuống[đây](https://releases.groupdocs.com/annotation/net/) . Thực hiện theo các hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://reference.groupdocs.com/annotation/net/) để thiết lập thư viện một cách chính xác.
+ Đầu tiên tải và cài đặt thư viện Groupdocs.Annotation for .NET từ trang web. Bạn có thể tìm thấy liên kết tải xuống[đây](https://releases.groupdocs.com/annotation/net/) . Thực hiện theo các hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://tutorials.groupdocs.com/annotation/net/) để thiết lập thư viện một cách chính xác.
 ### 2. Làm quen với ngôn ngữ lập trình C#
 Cần phải có hiểu biết cơ bản về ngôn ngữ lập trình C# cùng với các ví dụ được cung cấp trong hướng dẫn này.
 ### 3. Truy cập vào tệp PDF và hình ảnh đầu vào

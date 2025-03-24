@@ -3,7 +3,6 @@ title: Ustaw licencję taryfową
 linktitle: Ustaw licencję taryfową
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak skonfigurować licencję taryfową dla GroupDocs.Annotation .NET w celu wykorzystania zasobów i możliwości dodawania adnotacji do dokumentów w aplikacjach .NET.
-type: docs
 weight: 12
 url: /pl/net/applying-licenses/set-metered-license/
 ---

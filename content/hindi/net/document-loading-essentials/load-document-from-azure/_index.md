@@ -3,7 +3,6 @@ title: Azure से दस्तावेज़ लोड करें
 linktitle: Azure से दस्तावेज़ लोड करें
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation का उपयोग करके .NET में दस्तावेज़ों को एनोटेट करना सीखें। Azure ब्लॉब स्टोरेज के साथ सहज एकीकरण के लिए चरण-दर-चरण ट्यूटोरियल।
-type: docs
 weight: 11
 url: /hi/net/document-loading-essentials/load-document-from-azure/
 ---

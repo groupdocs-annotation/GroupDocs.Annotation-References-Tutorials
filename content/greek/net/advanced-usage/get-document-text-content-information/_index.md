@@ -3,7 +3,6 @@ title: Λάβετε πληροφορίες περιεχομένου κειμέν
 linktitle: Λάβετε πληροφορίες περιεχομένου κειμένου εγγράφου
 second_title: GroupDocs.Annotation .NET API
 description: Σχολιάστε έγγραφα απρόσκοπτα με το GroupDocs.Annotation για .NET. Ενσωματώστε τις λειτουργίες σχολιασμού στις εφαρμογές σας .NET χωρίς κόπο.
-type: docs
 weight: 17
 url: /el/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ annotator.Save("output.pdf");
 ### Πού μπορώ να βρω υποστήριξη για το GroupDocs.Annotation για .NET;
  Μπορείτε να αναζητήσετε υποστήριξη και να κάνετε ερωτήσεις σχετικά με το[Φόρουμ GroupDocs](https://forum.groupdocs.com/c/annotation/10).
 ### Το GroupDocs.Annotation για .NET προσφέρει κάποια τεκμηρίωση;
- Ναι, είναι διαθέσιμη ολοκληρωμένη τεκμηρίωση για το GroupDocs.Annotation για .NET[εδώ](https://reference.groupdocs.com/annotation/net/).
+ Ναι, είναι διαθέσιμη ολοκληρωμένη τεκμηρίωση για το GroupDocs.Annotation για .NET[εδώ](https://tutorials.groupdocs.com/annotation/net/).

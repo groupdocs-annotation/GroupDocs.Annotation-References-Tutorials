@@ -3,7 +3,6 @@ title: Unlocking Annotation Power
 linktitle: Unlocking Annotation Power
 second_title: GroupDocs.Annotation .NET API
 description: Unlock the power of annotation with GroupDocs.Annotation for .NET tutorials. Learn to add various annotations step-by-step and enhance collaboration effortlessly.
-type: docs
 weight: 23
 url: /net/unlocking-annotation-power/
 ---

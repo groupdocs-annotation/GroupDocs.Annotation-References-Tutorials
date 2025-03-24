@@ -1,7 +1,6 @@
 ---
 title: Zelfstudies en voorbeelden van GroupDocs.Annotation voor .NET
 linktitle: GroupDocs.Annotation voor .NET-zelfstudies
-type: docs
 weight: 10
 url: /nl/net/
 description: Ontgrendel het volledige potentieel van GroupDocs.Annotation voor .NET met onze tutorials. Naadloos integreren, verbeteren van de samenwerking en stroomlijnen van workflows.

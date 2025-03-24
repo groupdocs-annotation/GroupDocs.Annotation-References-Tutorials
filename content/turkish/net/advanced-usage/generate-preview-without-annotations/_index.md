@@ -3,7 +3,6 @@ title: Ek Açıklamalar Olmadan Önizleme Oluştur
 linktitle: Ek Açıklamalar Olmadan Önizleme Oluştur
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak .NET uygulamaları içindeki belge işbirliğini ve açıklamaları geliştirin. Bu güçlü kitaplıkla belgelere kolayca açıklama ekleyin, işaretleyin ve inceleyin.
-type: docs
 weight: 13
 url: /tr/net/advanced-usage/generate-preview-without-annotations/
 ---

@@ -3,7 +3,6 @@ title: 高级用法
 linktitle: 高级用法
 second_title: GroupDocs.Annotation .NET API
 description: 发现 GroupDocs.Annotation .NET 的高级使用教程。通过有关图像质量、注释导出等的分步指南增强文档管理。
-type: docs
 weight: 22
 url: /zh/net/advanced-usage/
 ---

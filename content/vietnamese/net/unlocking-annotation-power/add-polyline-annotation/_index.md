@@ -3,7 +3,6 @@ title: Thêm chú thích đa tuyến vào tài liệu
 linktitle: Thêm chú thích đa tuyến vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích đa dòng vào tài liệu bằng GroupDocs.Annotation cho .NET. Tăng cường quá trình cộng tác và xem xét tài liệu một cách dễ dàng.
-type: docs
 weight: 18
 url: /vi/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Có, bạn có thể tùy chỉnh các thuộc tính khác nhau của chú thíc
 ### GroupDocs.Annotation cho .NET có cung cấp bản dùng thử miễn phí không?
  Có, bạn có thể tận dụng bản dùng thử miễn phí GroupDocs.Annotation cho .NET bằng cách truy cập[liên kết này](https://releases.groupdocs.com/).
 ### Tôi có thể tìm tài liệu về GroupDocs.Annotation cho .NET ở đâu?
- Bạn có thể tìm tài liệu về GroupDocs.Annotation for .NET[đây](https://reference.groupdocs.com/annotation/net/).
+ Bạn có thể tìm tài liệu về GroupDocs.Annotation for .NET[đây](https://tutorials.groupdocs.com/annotation/net/).
 ### Làm cách nào tôi có thể nhận được hỗ trợ cho bất kỳ vấn đề hoặc truy vấn nào liên quan đến GroupDocs.Annotation cho .NET?
  Bạn có thể nhận được hỗ trợ bằng cách truy cập diễn đàn GroupDocs.Annotation[đây](https://forum.groupdocs.com/c/annotation/10).

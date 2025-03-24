@@ -3,7 +3,6 @@ title: Get All Version Keys on Document
 linktitle: Get All Version Keys on Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to retrieve all version keys on a document using GroupDocs.Annotation for .NET. Enhance your document management capabilities with this comprehensive.
-type: docs
 weight: 16
 url: /net/advanced-usage/get-all-version-keys-document/
 ---

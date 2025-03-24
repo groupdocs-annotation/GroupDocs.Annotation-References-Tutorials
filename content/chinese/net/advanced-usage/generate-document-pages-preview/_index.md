@@ -3,7 +3,6 @@ title: 生成文档页面预览
 linktitle: 生成文档页面预览
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 高效生成文档页面预览。通过此综合功能增强您的文档管理工作流程。
-type: docs
 weight: 12
 url: /zh/net/advanced-usage/generate-document-pages-preview/
 ---

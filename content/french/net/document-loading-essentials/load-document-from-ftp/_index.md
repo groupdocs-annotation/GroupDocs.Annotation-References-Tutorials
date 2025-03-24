@@ -3,7 +3,6 @@ title: Charger un document depuis FTP
 linktitle: Charger un document depuis FTP
 second_title: API GroupDocs.Annotation .NET
 description: Améliorez vos applications .NET avec GroupDocs.Annotation pour une annotation transparente des documents. Tutoriel étape par étape inclus.
-type: docs
 weight: 12
 url: /fr/net/document-loading-essentials/load-document-from-ftp/
 ---

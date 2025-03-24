@@ -3,7 +3,6 @@ title: Xóa chú thích
 linktitle: Xóa chú thích
 second_title: GroupDocs.Annotation .NET API
 description: Khám phá cách quản lý hiệu quả các chú thích trong .NET với hướng dẫn GroupDocs.Annotation. Hợp lý hóa quy trình làm việc tài liệu của bạn và tăng cường cộng tác một cách liền mạch.
-type: docs
 weight: 25
 url: /vi/net/removing-annotations/
 ---

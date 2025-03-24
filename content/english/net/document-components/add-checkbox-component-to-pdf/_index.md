@@ -3,7 +3,6 @@ title: Add Checkbox Component to PDF Document
 linktitle: Add Checkbox Component to PDF Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to add a Checkbox Component to PDF documents using Groupdocs.Annotation for .NET. Enhance your PDFs with interactive elements.
-type: docs
 weight: 11
 url: /net/document-components/add-checkbox-component-to-pdf/
 ---

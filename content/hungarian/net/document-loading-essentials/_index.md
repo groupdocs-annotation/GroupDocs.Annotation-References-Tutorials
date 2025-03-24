@@ -3,7 +3,6 @@ title: A dokumentumbetöltés alapjai
 linktitle: A dokumentumbetöltés alapjai
 second_title: GroupDocs.Annotation .NET API
 description: Fedezze fel a dokumentumok GroupDocs.Annotation .NET használatával történő betöltéséhez szükséges alapvető oktatóanyagokat. Zökkenőmentesen integrálható az Amazon S3-mal, Azure-ral, FTP-vel, helyi lemezzel, adatfolyamokkal stb.
-type: docs
 weight: 20
 url: /hu/net/document-loading-essentials/
 ---

@@ -3,7 +3,6 @@ title: Získejte všechny klíče verzí v dokumentu
 linktitle: Získejte všechny klíče verzí v dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak načíst všechny klíče verzí v dokumentu pomocí GroupDocs.Annotation for .NET. Vylepšete své možnosti správy dokumentů s tímto komplexním.
-type: docs
 weight: 16
 url: /cs/net/advanced-usage/get-all-version-keys-document/
 ---

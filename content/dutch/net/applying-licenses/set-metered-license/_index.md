@@ -3,7 +3,6 @@ title: Gemeten licentie instellen
 linktitle: Gemeten licentie instellen
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u een gemeten licentie voor GroupDocs.Annotation .NET instelt voor het gebruik van bronnen en het documenteren van annotatiemogelijkheden in uw .NET-toepassingen.
-type: docs
 weight: 12
 url: /nl/net/applying-licenses/set-metered-license/
 ---

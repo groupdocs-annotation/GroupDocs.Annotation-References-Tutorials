@@ -3,7 +3,6 @@ title: Establecer licencia medida
 linktitle: Establecer licencia medida
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a configurar una licencia medida para GroupDocs.Annotation .NET para el uso de recursos y capacidades de anotación de documentos en sus aplicaciones .NET.
-type: docs
 weight: 12
 url: /es/net/applying-licenses/set-metered-license/
 ---

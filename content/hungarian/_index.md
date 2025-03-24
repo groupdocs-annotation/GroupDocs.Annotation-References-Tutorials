@@ -3,7 +3,6 @@ title: GroupDocs.Annotation elsajátítása – oktatóanyagok és útmutatók
 linktitle: GroupDocs.Annotation oktatóanyagok
 additionalTitle: GroupDocs API referenciák
 description: Használja ki a GroupDocs.Annotation teljes potenciálját oktatóanyagainkkal. Fokozza az együttműködést és egyszerűsítse a munkafolyamatokat átfogó útmutatókkal és tippekkel.
-type: docs
 weight: 11
 url: /hu/
 is_root: true

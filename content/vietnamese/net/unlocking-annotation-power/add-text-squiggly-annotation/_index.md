@@ -3,7 +3,6 @@ title: Thêm chú thích nguệch ngoạc văn bản vào tài liệu
 linktitle: Thêm chú thích nguệch ngoạc văn bản vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách dễ dàng thêm các chú thích nguệch ngoạc văn bản vào tài liệu bằng Groupdocs.Annotation cho .NET. Tăng cường hợp tác và quá trình xem xét tài liệu.
-type: docs
 weight: 25
 url: /vi/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

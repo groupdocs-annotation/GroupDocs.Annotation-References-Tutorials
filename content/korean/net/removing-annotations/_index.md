@@ -3,7 +3,6 @@ title: 주석 제거
 linktitle: 주석 제거
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation 튜토리얼을 통해 .NET에서 주석을 효율적으로 관리하는 방법을 알아보세요. 문서 작업 흐름을 간소화하고 협업을 원활하게 강화하세요.
-type: docs
 weight: 25
 url: /ko/net/removing-annotations/
 ---

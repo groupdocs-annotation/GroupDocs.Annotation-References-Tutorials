@@ -3,7 +3,6 @@ title: Tải tài liệu từ Azure
 linktitle: Tải tài liệu từ Azure
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách chú thích tài liệu trong .NET bằng GroupDocs.Annotation. Hướng dẫn từng bước để tích hợp liền mạch với Azure Blob Storage.
-type: docs
 weight: 11
 url: /vi/net/document-loading-essentials/load-document-from-azure/
 ---

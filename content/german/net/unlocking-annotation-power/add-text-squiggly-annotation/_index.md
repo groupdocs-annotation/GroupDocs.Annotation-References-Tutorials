@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit Groupdocs.Annotation für .NET mühelos Textanmerkungen zu Dokumenten hinzufügen. Verbessern Sie die Prozesse der Zusammenarbeit und Dokumentenprüfung.
-type: docs
 weight: 25
 url: /de/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

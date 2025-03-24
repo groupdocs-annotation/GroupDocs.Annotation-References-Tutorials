@@ -3,7 +3,6 @@ title: Solicitar licencias
 linktitle: Solicitar licencias
 second_title: API GroupDocs.Annotation .NET
 description: Libere todo el potencial de la anotación de documentos en .NET con GroupDocs.Annotation. Siga nuestros tutoriales paso a paso para una integración perfecta.
-type: docs
 weight: 26
 url: /es/net/applying-licenses/
 ---

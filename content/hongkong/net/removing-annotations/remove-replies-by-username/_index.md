@@ -3,7 +3,6 @@ title: 在 .NET 中按使用者名稱刪除回复
 linktitle: 在 .NET 中按使用者名稱刪除回复
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 無縫註釋文件。利用這個強大的工具增強協作和文件管理。
-type: docs
 weight: 17
 url: /zh-hant/net/removing-annotations/remove-replies-by-username/
 ---

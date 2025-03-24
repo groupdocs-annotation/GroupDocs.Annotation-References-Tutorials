@@ -3,7 +3,6 @@ title: Dapatkan Daftar Anotasi menggunakan Kunci Versi
 linktitle: Dapatkan Daftar Anotasi menggunakan Kunci Versi
 second_title: GroupDocs.Annotasi .NET API
 description: Tingkatkan aplikasi .NET Anda dengan GroupDocs.Annotation untuk anotasi dokumen yang lancar. Ikuti panduan langkah demi langkah kami untuk integrasi yang efektif.
-type: docs
 weight: 18
 url: /id/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ Anda dapat mencari dukungan dengan mengunjungi forum GroupDocs.Annotation atau m
 ### Bisakah saya membeli lisensi sementara untuk GroupDocs.Annotation untuk tujuan pengujian?
 Ya, lisensi sementara tersedia untuk dibeli guna memfasilitasi pengujian dan evaluasi produk.
 ### Di mana saya dapat menemukan dokumentasi komprehensif untuk GroupDocs.Annotation untuk .NET?
- Anda dapat merujuk ke dokumentasi yang tersedia di situs web GroupDocs untuk panduan rinci tentang penggunaan produk[Di Sini]( https://reference.groupdocs.com/annotation/net/).
+ Anda dapat merujuk ke dokumentasi yang tersedia di situs web GroupDocs untuk panduan rinci tentang penggunaan produk[Di Sini]( https://tutorials.groupdocs.com/annotation/net/).

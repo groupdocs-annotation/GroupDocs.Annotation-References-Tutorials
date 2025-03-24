@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Wasserzeichenanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Wasserzeichenanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos Wasserzeichenanmerkungen zu Ihren Dokumenten hinzufügen. Verbessern Sie die Klarheit und Sicherheit von Dokumenten.
-type: docs
 weight: 28
 url: /de/net/unlocking-annotation-power/add-watermark-annotation/
 ---

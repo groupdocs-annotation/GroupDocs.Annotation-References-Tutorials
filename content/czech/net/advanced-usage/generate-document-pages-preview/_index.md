@@ -3,7 +3,6 @@ title: Generování náhledu stránek dokumentu
 linktitle: Generování náhledu stránek dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak efektivně generovat náhled stránek dokumentu pomocí GroupDocs.Annotation pro .NET. Vylepšete své pracovní postupy pro správu dokumentů pomocí tohoto komplexního řešení.
-type: docs
 weight: 12
 url: /cs/net/advanced-usage/generate-document-pages-preview/
 ---

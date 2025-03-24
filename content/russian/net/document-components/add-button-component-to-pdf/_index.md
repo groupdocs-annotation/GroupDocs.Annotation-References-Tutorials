@@ -3,7 +3,6 @@ title: Добавить компонент кнопки в PDF-документ
 linktitle: Добавить компонент кнопки в PDF-документ
 second_title: GroupDocs.Аннотация .NET API
 description: Улучшите свои PDF-документы с помощью интерактивных компонентов кнопок с помощью Groupdocs.Annotation для .NET. Следуйте нашему пошаговому руководству для бесшовной интеграции.
-type: docs
 weight: 10
 url: /ru/net/document-components/add-button-component-to-pdf/
 ---

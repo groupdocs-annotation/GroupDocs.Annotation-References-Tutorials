@@ -3,7 +3,6 @@ title: Odebrat odpovědi na anotace v .NET
 linktitle: Odebrat odpovědi na anotace v .NET
 second_title: GroupDocs.Annotation .NET API
 description: Přečtěte si, jak odstranit odpovědi na anotace v .NET pomocí GroupDocs.Annotation. Podrobný průvodce s příklady kódu.
-type: docs
 weight: 15
 url: /cs/net/removing-annotations/remove-replies-to-annotations/
 ---

@@ -3,7 +3,6 @@ title: إزالة الردود حسب المعرف في .NET
 linktitle: إزالة الردود حسب المعرف في .NET
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إزالة الردود حسب المعرف في .NET باستخدام GroupDocs.Annotation. اتبع برنامجنا التعليمي خطوة بخطوة لإدارة التعليقات التوضيحية للمستندات بكفاءة.
-type: docs
 weight: 16
 url: /ar/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /ar/net/removing-annotations/remove-replies-by-id/
 ## المتطلبات الأساسية
 قبل الغوص في البرنامج التعليمي حول إزالة الردود بواسطة المعرف في .NET باستخدام GroupDocs.Annotation، تأكد من أن لديك المتطلبات الأساسية التالية:
 ### 1. مستندات المجموعة. تثبيت التعليقات التوضيحية
- أولاً، تحتاج إلى تثبيت GroupDocs.Annotation لـ .NET. يمكنك تحميل المكتبة من[هنا](https://releases.groupdocs.com/annotation/net/) واتبع تعليمات التثبيت المتوفرة في الوثائق[هنا](https://reference.groupdocs.com/annotation/net/).
+ أولاً، تحتاج إلى تثبيت GroupDocs.Annotation لـ .NET. يمكنك تحميل المكتبة من[هنا](https://releases.groupdocs.com/annotation/net/) واتبع تعليمات التثبيت المتوفرة في الوثائق[هنا](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. الفهم الأساسي لـ C# و.NET
 يعد الإلمام بلغة البرمجة C# وإطار عمل .NET ضروريًا لمتابعة الأمثلة الواردة في هذا البرنامج التعليمي.
 ### 3. وثيقة مشروحة مع الردود

@@ -3,7 +3,6 @@ title: Entfernen Sie Antworten nach ID in .NET
 linktitle: Entfernen Sie Antworten nach ID in .NET
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation Antworten nach ID in .NET entfernen. Befolgen Sie unsere Schritt-für-Schritt-Anleitung für eine effiziente Verwaltung von Dokumentanmerkungen.
-type: docs
 weight: 16
 url: /de/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ Im Bereich der .NET-Entwicklung ist die Fähigkeit, Anmerkungen in Dokumenten zu
 ## Voraussetzungen
 Bevor Sie mit dem Tutorial zum Entfernen von Antworten nach ID in .NET mithilfe von GroupDocs.Annotation beginnen, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
 ### 1. GroupDocs.Annotation-Installation
- Zunächst müssen Sie GroupDocs.Annotation für .NET installieren. Sie können die Bibliothek herunterladen unter[Hier](https://releases.groupdocs.com/annotation/net/) und befolgen Sie die Installationsanweisungen in der Dokumentation[Hier](https://reference.groupdocs.com/annotation/net/).
+ Zunächst müssen Sie GroupDocs.Annotation für .NET installieren. Sie können die Bibliothek herunterladen unter[Hier](https://releases.groupdocs.com/annotation/net/) und befolgen Sie die Installationsanweisungen in der Dokumentation[Hier](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Grundlegendes Verständnis von C# und .NET
 Um den Beispielen in diesem Tutorial folgen zu können, sind Kenntnisse der Programmiersprache C# und des .NET-Frameworks erforderlich.
 ### 3. Kommentiertes Dokument mit Antworten

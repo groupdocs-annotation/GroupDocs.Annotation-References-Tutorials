@@ -3,7 +3,6 @@ title: Voeg ellipsannotatie toe aan document
 linktitle: Voeg ellipsannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u ellipsannotaties toevoegt aan documenten in .NET met behulp van GroupDocs.Annotation. Verbeter moeiteloos de samenwerking en communicatie.
-type: docs
 weight: 13
 url: /nl/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

@@ -3,7 +3,6 @@ title: リソース墨消し注釈をドキュメントに追加
 linktitle: リソース墨消し注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメント管理ワークフローを強化します。 Resources Redaction Annotation を .NET にシームレスに統合して効率化します。
-type: docs
 weight: 19
 url: /ja/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

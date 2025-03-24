@@ -3,7 +3,6 @@ title: Voeg gebiedsannotatie toe aan document
 linktitle: Voeg gebiedsannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter uw samenwerking aan documenten met Groupdocs.Annotation voor .NET. Leer stap voor stap hoe u gebiedsannotaties toevoegt.
-type: docs
 weight: 10
 url: /nl/net/unlocking-annotation-power/add-area-annotation/
 ---

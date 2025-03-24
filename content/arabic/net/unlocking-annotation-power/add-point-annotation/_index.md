@@ -3,7 +3,6 @@ title: إضافة تعليق توضيحي إلى المستند
 linktitle: إضافة تعليق توضيحي إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة التعليقات التوضيحية النقطية إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET. دليل خطوة بخطوة للتكامل السلس.
-type: docs
 weight: 17
 url: /ar/net/unlocking-annotation-power/add-point-annotation/
 ---

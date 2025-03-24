@@ -3,7 +3,6 @@ title: Sbloccare il potere dell'annotazione
 linktitle: Sbloccare il potere dell'annotazione
 second_title: API GroupDocs.Annotation .NET
 description: Sfrutta tutta la potenza dell'annotazione con i tutorial di GroupDocs.Annotation per .NET. Impara ad aggiungere varie annotazioni passo dopo passo e migliora la collaborazione senza sforzo.
-type: docs
 weight: 23
 url: /it/net/unlocking-annotation-power/
 ---

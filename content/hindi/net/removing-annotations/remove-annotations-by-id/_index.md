@@ -3,7 +3,6 @@ title: आईडी द्वारा एनोटेशन हटाएं
 linktitle: आईडी द्वारा एनोटेशन हटाएं
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation का उपयोग करके आईडी द्वारा एनोटेशन हटाने का तरीका जानें। अपने दस्तावेज़ वर्कफ़्लो को कुशलतापूर्वक सुव्यवस्थित करें।
-type: docs
 weight: 11
 url: /hi/net/removing-annotations/remove-annotations-by-id/
 ---

@@ -3,7 +3,6 @@ title: Exporter des annotations à partir d'un fichier XML
 linktitle: Exporter des annotations à partir d'un fichier XML
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment exporter des annotations à partir de fichiers XML à l'aide de GroupDocs.Annotation pour .NET, simplifiant ainsi efficacement votre flux de travail de gestion de documents.
-type: docs
 weight: 11
 url: /fr/net/advanced-usage/export-annotations-xml-file/
 ---

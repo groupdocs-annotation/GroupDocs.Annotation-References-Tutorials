@@ -3,7 +3,6 @@ title: Gerar visualização de páginas de documentos
 linktitle: Gerar visualização de páginas de documentos
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como gerar visualização de páginas de documentos com eficiência usando GroupDocs.Annotation for .NET. Aprimore seus fluxos de trabalho de gerenciamento de documentos com este abrangente.
-type: docs
 weight: 12
 url: /pt/net/advanced-usage/generate-document-pages-preview/
 ---

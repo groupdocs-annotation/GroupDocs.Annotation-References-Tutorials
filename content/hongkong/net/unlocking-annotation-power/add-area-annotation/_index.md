@@ -3,7 +3,6 @@ title: 將區域註釋新增至文檔
 linktitle: 將區域註釋新增至文檔
 second_title: GroupDocs.Annotation .NET API
 description: 使用 Groupdocs.Annotation for .NET 增強文件協作。了解如何逐步新增區域註解。
-type: docs
 weight: 10
 url: /zh-hant/net/unlocking-annotation-power/add-area-annotation/
 ---

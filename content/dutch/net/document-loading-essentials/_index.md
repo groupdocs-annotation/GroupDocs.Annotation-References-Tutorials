@@ -3,7 +3,6 @@ title: Basisprincipes voor het laden van documenten
 linktitle: Basisprincipes voor het laden van documenten
 second_title: GroupDocs.Annotation .NET API
 description: Ontdek essentiële tutorials voor het laden van documenten met GroupDocs.Annotation .NET. Naadloze integratie met Amazon S3, Azure, FTP, lokale schijf, streams en meer.
-type: docs
 weight: 20
 url: /nl/net/document-loading-essentials/
 ---

@@ -3,7 +3,6 @@ title: Belgeye Metin Değiştirme Açıklaması Ekle
 linktitle: Belgeye Metin Değiştirme Açıklaması Ekle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak .NET belgelerinize metin değiştirme ek açıklamalarını zahmetsizce nasıl ekleyeceğinizi öğrenin. Belge işleme yeteneklerinizi geliştirin.
-type: docs
 weight: 24
 url: /tr/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

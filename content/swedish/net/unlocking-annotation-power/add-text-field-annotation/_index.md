@@ -3,7 +3,6 @@ title: Lägg till textfältkommentar till dokument
 linktitle: Lägg till textfältkommentar till dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du sömlöst integrerar textfältsanteckningar i dina .NET-applikationer med Groupdocs.Annotation for .NET.
-type: docs
 weight: 21
 url: /sv/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ I den här handledningen kommer vi att fördjupa oss i en av de grundläggande f
 ## Förutsättningar
 Innan du går in i implementeringen, se till att du har följande förutsättningar på plats:
 ### 1. Installation av Groupdocs.Annotation för .NET
- Först och främst måste du ladda ner och installera Groupdocs.Annotation för .NET. Du hittar nedladdningslänken[här](https://releases.groupdocs.com/annotation/net/) . Följ installationsinstruktionerna i dokumentationen[här](https://reference.groupdocs.com/annotation/net/) för att ställa in biblioteket korrekt.
+ Först och främst måste du ladda ner och installera Groupdocs.Annotation för .NET. Du hittar nedladdningslänken[här](https://releases.groupdocs.com/annotation/net/) . Följ installationsinstruktionerna i dokumentationen[här](https://tutorials.groupdocs.com/annotation/net/) för att ställa in biblioteket korrekt.
 ### 2. Inställning av utvecklingsmiljö
 Se till att du har en utvecklingsmiljö inställd för .NET-utveckling. Detta inkluderar att ha en kompatibel IDE som Visual Studio och .NET Framework installerad på ditt system.
 ### 3. Grundläggande förståelse för C#-programmering

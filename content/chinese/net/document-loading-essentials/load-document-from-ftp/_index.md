@@ -3,7 +3,6 @@ title: 从 FTP 加载文档
 linktitle: 从 FTP 加载文档
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation 增强您的 .NET 应用程序以实现无缝文档注释。包括分步教程。
-type: docs
 weight: 12
 url: /zh/net/document-loading-essentials/load-document-from-ftp/
 ---

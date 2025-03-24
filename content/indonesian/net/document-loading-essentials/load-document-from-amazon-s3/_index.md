@@ -3,7 +3,6 @@ title: Muat Dokumen dari Amazon S3
 linktitle: Muat Dokumen dari Amazon S3
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara membuat anotasi dokumen secara terprogram dengan Groupdocs.Annotation untuk .NET. Tutorial langkah demi langkah untuk integrasi yang lancar.
-type: docs
 weight: 10
 url: /id/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation untuk .NET mendukung berbagai format dokumen, termasuk PDF,
 ### Bisakah saya mencoba Groupdocs.Annotation untuk .NET sebelum membeli?
  Ya, Anda dapat menjelajahi fitur Groupdocs.Annotation untuk .NET dengan mengakses versi uji coba gratis yang tersedia[Di Sini](https://releases.groupdocs.com/).
 ### Di mana saya dapat menemukan dokumentasi untuk Groupdocs.Annotation untuk .NET?
-Dokumentasi komprehensif untuk Groupdocs.Annotation untuk .NET tersedia[Di Sini](https://reference.groupdocs.com/annotation/net/).
+Dokumentasi komprehensif untuk Groupdocs.Annotation untuk .NET tersedia[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 ### Apakah saya memerlukan lisensi sementara untuk mengevaluasi Groupdocs.Annotation untuk .NET?
  Anda dapat memperoleh lisensi sementara untuk tujuan evaluasi dari[Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### Di mana saya dapat mencari bantuan atau dukungan untuk Groupdocs.Annotation untuk .NET?

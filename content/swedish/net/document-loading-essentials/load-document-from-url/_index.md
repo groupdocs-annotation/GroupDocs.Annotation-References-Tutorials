@@ -3,7 +3,6 @@ title: Ladda dokument från URL
 linktitle: Ladda dokument från URL
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du annoterar PDF-dokument programmatiskt med GroupDocs.Annotation för .NET. Steg-för-steg handledning med kodexempel.
-type: docs
 weight: 15
 url: /sv/net/document-loading-essentials/load-document-from-url/
 ---

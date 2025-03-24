@@ -3,7 +3,6 @@ title: Κατάργηση απαντήσεων ανά όνομα χρήστη σ
 linktitle: Κατάργηση απαντήσεων ανά όνομα χρήστη στο .NET
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να σχολιάζετε απρόσκοπτα έγγραφα χρησιμοποιώντας το Groupdocs.Annotation για .NET. Βελτιώστε τη συνεργασία και τη διαχείριση εγγράφων με αυτό το ισχυρό εργαλείο.
-type: docs
 weight: 17
 url: /el/net/removing-annotations/remove-replies-by-username/
 ---

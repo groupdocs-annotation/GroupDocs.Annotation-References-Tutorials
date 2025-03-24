@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci úpravy textu
 linktitle: Přidejte do dokumentu anotaci úpravy textu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat textové redigované anotace do dokumentů PDF pomocí GroupDocs.Annotation for .NET. Chraňte citlivé informace bez námahy.
-type: docs
 weight: 23
 url: /cs/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

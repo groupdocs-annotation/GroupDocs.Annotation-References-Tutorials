@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci odkazu
 linktitle: Přidejte do dokumentu anotaci odkazu
 second_title: GroupDocs.Annotation .NET API
 description: Zjistěte, jak přidat anotace odkazů do dokumentů pomocí Groupdocs.Annotation pro .NET. Vylepšete spolupráci a interaktivitu bez námahy.
-type: docs
 weight: 16
 url: /cs/net/unlocking-annotation-power/add-link-annotation/
 ---

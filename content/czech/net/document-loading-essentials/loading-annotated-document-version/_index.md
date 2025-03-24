@@ -3,7 +3,6 @@ title: Načítání anotované verze dokumentu
 linktitle: Načítání anotované verze dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak bez námahy načíst verze s poznámkami pomocí GroupDocs.Annotation pro .NET. Zjednodušte spolupráci a procesy kontroly.
-type: docs
 weight: 16
 url: /cs/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Ano, GroupDocs.Annotation podporuje anotování dokumentů ve formátech jako PD
 ### Je k dispozici bezplatná zkušební verze pro GroupDocs.Annotation pro .NET?
  Ano, máte přístup k bezplatné zkušební verzi z[tady](https://releases.groupdocs.com/).
 ### Kde najdu dokumentaci k GroupDocs.Annotation pro .NET?
- Můžete se podívat na podrobnou dokumentaci[tady](https://reference.groupdocs.com/annotation/net/).
+ Můžete se podívat na podrobnou dokumentaci[tady](https://tutorials.groupdocs.com/annotation/net/).
 ### Jak mohu získat dočasnou licenci pro GroupDocs.Annotation pro .NET?
  Dočasnou licenci můžete získat od[tento odkaz](https://purchase.groupdocs.com/temporary-license/).
 ### Kde mohu hledat podporu nebo se ptát na GroupDocs.Annotation pro .NET?

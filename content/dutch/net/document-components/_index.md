@@ -3,7 +3,6 @@ title: Documentcomponenten
 linktitle: Documentcomponenten
 second_title: GroupDocs.Annotation .NET API
 description: Ontdek uitgebreide tutorials over het integreren van interactieve componenten zoals knoppen, selectievakjes en vervolgkeuzelijsten in PDF-documenten met behulp van GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /nl/net/document-components/
 ---

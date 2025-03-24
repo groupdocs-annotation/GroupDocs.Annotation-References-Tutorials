@@ -3,7 +3,6 @@ title: Làm chủ GroupDocs.Annotation - Hướng dẫn và Hướng dẫn
 linktitle: Hướng dẫn GroupDocs.Annotation
 additionalTitle: Tài liệu tham khảo API GroupDocs
 description: Khai thác toàn bộ tiềm năng của GroupDocs.Annotation bằng các hướng dẫn của chúng tôi. Tăng cường cộng tác và hợp lý hóa quy trình làm việc với các hướng dẫn và mẹo toàn diện.
-type: docs
 weight: 11
 url: /vi/
 is_root: true

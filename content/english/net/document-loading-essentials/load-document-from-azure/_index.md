@@ -3,7 +3,6 @@ title: Load Document from Azure
 linktitle: Load Document from Azure
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to annotate documents in .NET using GroupDocs.Annotation. Step-by-step tutorial for seamless integration with Azure Blob Storage.
-type: docs
 weight: 11
 url: /net/document-loading-essentials/load-document-from-azure/
 ---
@@ -75,7 +74,7 @@ CloudStorageAccount cloudStorageAccount = new CloudStorageAccount(storageCredent
 CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
 ```
 ### Step 3: Retrieve Container Reference
-Obtain a reference to the specified container.
+Obtain a tutorials to the specified container.
 ```csharp
 CloudBlobContainer container = cloudBlobClient.GetContainerReference(containerName);
 ```

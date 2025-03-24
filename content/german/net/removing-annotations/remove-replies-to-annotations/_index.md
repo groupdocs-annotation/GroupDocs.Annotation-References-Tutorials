@@ -3,7 +3,6 @@ title: Entfernen Sie Antworten auf Anmerkungen in .NET
 linktitle: Entfernen Sie Antworten auf Anmerkungen in .NET
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation Antworten auf Anmerkungen in .NET entfernen. Schritt-für-Schritt-Anleitung mit Codebeispielen.
-type: docs
 weight: 15
 url: /de/net/removing-annotations/remove-replies-to-annotations/
 ---

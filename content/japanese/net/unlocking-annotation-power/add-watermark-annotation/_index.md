@@ -3,7 +3,6 @@ title: 文書に透かし注釈を追加する
 linktitle: 文書に透かし注釈を追加する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して、ドキュメントに透かし注釈を簡単に追加する方法を学びます。文書の明瞭さとセキュリティを強化します。
-type: docs
 weight: 28
 url: /ja/net/unlocking-annotation-power/add-watermark-annotation/
 ---

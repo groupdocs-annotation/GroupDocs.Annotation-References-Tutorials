@@ -3,7 +3,6 @@ title: 将资源编辑注释添加到文档
 linktitle: 将资源编辑注释添加到文档
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 增强文档管理工作流程。将资源编辑注释无缝集成到您的 .NET 中以提高效率。
-type: docs
 weight: 19
 url: /zh/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

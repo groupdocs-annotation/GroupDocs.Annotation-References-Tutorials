@@ -3,7 +3,6 @@ title: ファイルからライセンスを設定
 linktitle: ファイルからライセンスを設定
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して、強力なドキュメント注釈機能を .NET アプリケーションにシームレスに統合します。
-type: docs
 weight: 10
 url: /ja/net/applying-licenses/set-license-from-file/
 ---

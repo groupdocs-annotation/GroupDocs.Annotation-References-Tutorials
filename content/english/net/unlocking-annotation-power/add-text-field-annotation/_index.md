@@ -3,7 +3,6 @@ title: Add Text Field Annotation to Document
 linktitle: Add Text Field Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to seamlessly integrate text field annotations into your .NET applications using Groupdocs.Annotation for .NET.
-type: docs
 weight: 21
 url: /net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ In this tutorial, we'll delve into one of the fundamental functionalities of Gro
 ## Prerequisites
 Before diving into the implementation, ensure you have the following prerequisites in place:
 ### 1. Installation of Groupdocs.Annotation for .NET
-First and foremost, you need to download and install Groupdocs.Annotation for .NET. You can find the download link [here](https://releases.groupdocs.com/annotation/net/). Follow the installation instructions provided in the documentation [here](https://reference.groupdocs.com/annotation/net/) to set up the library correctly.
+First and foremost, you need to download and install Groupdocs.Annotation for .NET. You can find the download link [here](https://releases.groupdocs.com/annotation/net/). Follow the installation instructions provided in the documentation [here](https://tutorials.groupdocs.com/annotation/net/) to set up the library correctly.
 ### 2. Development Environment Setup
 Make sure you have a development environment set up for .NET development. This includes having a compatible IDE such as Visual Studio and .NET Framework installed on your system.
 ### 3. Basic Understanding of C# Programming

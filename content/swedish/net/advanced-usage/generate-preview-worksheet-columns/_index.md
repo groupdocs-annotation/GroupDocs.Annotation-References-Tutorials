@@ -3,7 +3,6 @@ title: Generera kolumner för förhandsgranskning av arbetsblad
 linktitle: Generera kolumner för förhandsgranskning av arbetsblad
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du kommenterar dokument med GroupDocs.Annotation för .NET. Steg-för-steg handledning för .NET-utvecklare. Förbättra dina applikationer.
-type: docs
 weight: 15
 url: /sv/net/advanced-usage/generate-preview-worksheet-columns/
 ---

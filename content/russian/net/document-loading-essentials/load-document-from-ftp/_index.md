@@ -3,7 +3,6 @@ title: Загрузить документ с FTP
 linktitle: Загрузить документ с FTP
 second_title: GroupDocs.Аннотация .NET API
 description: Усовершенствуйте свои приложения .NET с помощью GroupDocs.Annotation для удобного аннотирования документов. Пошаговое руководство включено.
-type: docs
 weight: 12
 url: /ru/net/document-loading-essentials/load-document-from-ftp/
 ---

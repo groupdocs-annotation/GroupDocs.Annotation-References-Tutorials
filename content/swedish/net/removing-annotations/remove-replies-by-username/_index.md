@@ -3,7 +3,6 @@ title: Ta bort svar efter användarnamn i .NET
 linktitle: Ta bort svar efter användarnamn i .NET
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du sömlöst kommenterar dokument med Groupdocs.Annotation för .NET. Förbättra samarbete och dokumenthantering med detta kraftfulla verktyg.
-type: docs
 weight: 17
 url: /sv/net/removing-annotations/remove-replies-by-username/
 ---

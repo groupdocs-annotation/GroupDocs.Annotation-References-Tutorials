@@ -3,7 +3,6 @@ title: 将搜索文本片段注释添加到文档
 linktitle: 将搜索文本片段注释添加到文档
 second_title: GroupDocs.Annotation .NET API
 description: 探索 GroupDocs.Annotation for .NET 的强大功能，轻松地将文档注释功能添加到您的应用程序中。
-type: docs
 weight: 20
 url: /zh/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

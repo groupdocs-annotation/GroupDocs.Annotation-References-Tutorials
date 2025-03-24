@@ -3,7 +3,6 @@ title: Ορισμός άδειας χρήσης από το αρχείο
 linktitle: Ορισμός άδειας χρήσης από το αρχείο
 second_title: GroupDocs.Annotation .NET API
 description: Ενσωματώστε τις ισχυρές δυνατότητες σχολιασμού εγγράφων στις εφαρμογές σας .NET απρόσκοπτα με το GroupDocs.Annotation για .NET.
-type: docs
 weight: 10
 url: /el/net/applying-licenses/set-license-from-file/
 ---

@@ -3,7 +3,6 @@ title: PDFドキュメントにボタンコンポーネントを追加
 linktitle: PDFドキュメントにボタンコンポーネントを追加
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用して、インタラクティブなボタン コンポーネントで PDF ドキュメントを強化します。シームレスな統合については、段階的なチュートリアルに従ってください。
-type: docs
 weight: 10
 url: /ja/net/document-components/add-button-component-to-pdf/
 ---

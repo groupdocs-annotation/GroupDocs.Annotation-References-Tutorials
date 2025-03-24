@@ -3,7 +3,6 @@ title: Generate Preview without Annotations
 linktitle: Generate Preview without Annotations
 second_title: GroupDocs.Annotation .NET API
 description: Enhance document collaboration and annotation within .NET applications using GroupDocs.Annotation for .NET. Easily annotate, mark up, and review documents with this powerful library.
-type: docs
 weight: 13
 url: /net/advanced-usage/generate-preview-without-annotations/
 ---

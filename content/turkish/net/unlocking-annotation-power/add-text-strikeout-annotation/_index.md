@@ -3,7 +3,6 @@ title: Belgeye Üstü Çizili Metin Açıklaması Ekleme
 linktitle: Belgeye Üstü Çizili Metin Açıklaması Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelere üstü çizili metin açıklamalarını nasıl ekleyeceğinizi öğrenin. İşbirliği ve belge inceleme süreçlerini verimli bir şekilde geliştirin.
-type: docs
 weight: 26
 url: /tr/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

@@ -3,7 +3,6 @@ title: 将复选框组件添加到 PDF 文档
 linktitle: 将复选框组件添加到 PDF 文档
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 将复选框组件添加到 PDF 文档。使用交互式元素增强您的 PDF。
-type: docs
 weight: 11
 url: /zh/net/document-components/add-checkbox-component-to-pdf/
 ---

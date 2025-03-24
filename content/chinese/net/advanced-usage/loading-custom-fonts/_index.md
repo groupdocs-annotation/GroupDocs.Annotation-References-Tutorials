@@ -3,7 +3,6 @@ title: 加载自定义字体
 linktitle: 加载自定义字体
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何在 GroupDocs.Annotation for .NET 中无缝加载自定义字体以增强文档注释。请按照我们的步骤轻松集成。
-type: docs
 weight: 20
 url: /zh/net/advanced-usage/loading-custom-fonts/
 ---

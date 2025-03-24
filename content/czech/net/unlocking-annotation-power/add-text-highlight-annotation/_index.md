@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci se zvýrazněním textu
 linktitle: Přidejte do dokumentu anotaci se zvýrazněním textu
 second_title: GroupDocs.Annotation .NET API
 description: Zjistěte, jak přidat poznámky ke zvýraznění textu do dokumentů pomocí GroupDocs.Annotation for .NET. Vylepšete spolupráci a produktivitu s tímto komplexním řešením.
-type: docs
 weight: 22
 url: /cs/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

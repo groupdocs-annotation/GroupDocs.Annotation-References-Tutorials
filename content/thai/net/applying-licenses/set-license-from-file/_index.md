@@ -3,7 +3,6 @@ title: ตั้งค่าใบอนุญาตจากไฟล์
 linktitle: ตั้งค่าใบอนุญาตจากไฟล์
 second_title: GroupDocs.Annotation .NET API
 description: ผสานรวมความสามารถในการใส่คำอธิบายประกอบเอกสารอันทรงพลังเข้ากับแอปพลิเคชัน .NET ของคุณได้อย่างราบรื่นด้วย GroupDocs.Annotation สำหรับ .NET
-type: docs
 weight: 10
 url: /th/net/applying-licenses/set-license-from-file/
 ---

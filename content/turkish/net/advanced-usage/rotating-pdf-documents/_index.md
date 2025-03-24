@@ -3,7 +3,6 @@ title: PDF Belgelerini Döndürme
 linktitle: PDF Belgelerini Döndürme
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET'i kullanarak PDF belgelerini zahmetsizce nasıl döndüreceğinizi öğrenin. Belge yönetimi verimliliğini artırın.
-type: docs
 weight: 22
 url: /tr/net/advanced-usage/rotating-pdf-documents/
 ---

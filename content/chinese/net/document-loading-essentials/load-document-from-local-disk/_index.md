@@ -3,7 +3,6 @@ title: 从本地磁盘加载文档
 linktitle: 从本地磁盘加载文档
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 释放文档注释的强大功能。将注释功能无缝集成到您的 .NET 应用程序中。
-type: docs
 weight: 13
 url: /zh/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### 我可以在购买前试用 GroupDocs.Annotation for .NET 吗？
 是的，您可以从以下位置下载免费试用版[这里](https://releases.groupdocs.com/).
 ### 在哪里可以找到 GroupDocs.Annotation for .NET 的文档？
-您可以访问文档[这里](https://reference.groupdocs.com/annotation/net/).
+您可以访问文档[这里](https://tutorials.groupdocs.com/annotation/net/).
 ### 如何获取 GroupDocs.Annotation for .NET 的临时许可证？
 您可以从以下地址获取临时许可证[这里](https://purchase.groupdocs.com/temporary-license/).
 ### 是否支持 GroupDocs.Annotation for .NET？

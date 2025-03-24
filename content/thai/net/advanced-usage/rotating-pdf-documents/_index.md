@@ -3,7 +3,6 @@ title: การหมุนเอกสาร PDF
 linktitle: การหมุนเอกสาร PDF
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีหมุนเอกสาร PDF ได้อย่างง่ายดายโดยใช้ Groupdocs.Annotation สำหรับ .NET ปรับปรุงประสิทธิภาพการจัดการเอกสาร
-type: docs
 weight: 22
 url: /th/net/advanced-usage/rotating-pdf-documents/
 ---

@@ -3,7 +3,6 @@ title: إضافة تعليق توضيحي للمسافة إلى المستند
 linktitle: إضافة تعليق توضيحي للمسافة إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة التعليقات التوضيحية عن بعد إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. تعزيز التعاون والتواصل دون عناء.
-type: docs
 weight: 12
 url: /ar/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ### س: أين يمكنني العثور على وثائق GroupDocs.Annotation لـ .NET؟
 
- ج: يمكنك الرجوع إلى الوثائق التفصيلية المتاحة[هنا](https://reference.groupdocs.com/annotation/net/).
+ ج: يمكنك الرجوع إلى الوثائق التفصيلية المتاحة[هنا](https://tutorials.groupdocs.com/annotation/net/).
 
 ### س: كيف يمكنني الحصول على الدعم أو المساعدة فيما يتعلق بـ GroupDocs.Annotation؟
 

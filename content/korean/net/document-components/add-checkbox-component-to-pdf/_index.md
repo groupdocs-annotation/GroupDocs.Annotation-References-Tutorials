@@ -3,7 +3,6 @@ title: PDF 문서에 확인란 구성 요소 추가
 linktitle: PDF 문서에 확인란 구성 요소 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 PDF 문서에 확인란 구성 요소를 추가하는 방법을 알아보세요. 대화형 요소로 PDF를 향상시키세요.
-type: docs
 weight: 11
 url: /ko/net/document-components/add-checkbox-component-to-pdf/
 ---

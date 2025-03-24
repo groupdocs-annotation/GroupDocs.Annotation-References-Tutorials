@@ -3,7 +3,6 @@ title: إزالة الردود على التعليقات التوضيحية في
 linktitle: إزالة الردود على التعليقات التوضيحية في .NET
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إزالة الردود على التعليقات التوضيحية في .NET باستخدام GroupDocs.Annotation. دليل خطوة بخطوة مع أمثلة التعليمات البرمجية.
-type: docs
 weight: 15
 url: /ar/net/removing-annotations/remove-replies-to-annotations/
 ---

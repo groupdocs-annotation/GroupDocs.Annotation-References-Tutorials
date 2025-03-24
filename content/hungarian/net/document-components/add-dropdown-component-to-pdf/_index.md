@@ -3,7 +3,6 @@ title: Legördülő komponens hozzáadása a PDF-dokumentumhoz
 linktitle: Legördülő komponens hozzáadása a PDF-dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá legördülő listát a PDF-fájlokhoz a GroupDocs.Annotation for .NET segítségével. Kövesse lépésenkénti útmutatónkat a zökkenőmentes integráció érdekében.
-type: docs
 weight: 12
 url: /hu/net/document-components/add-dropdown-component-to-pdf/
 ---

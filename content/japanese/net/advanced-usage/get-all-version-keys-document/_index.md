@@ -3,7 +3,6 @@ title: ドキュメント上のすべてのバージョン キーを取得する
 linktitle: ドキュメント上のすべてのバージョン キーを取得する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメント上のすべてのバージョン キーを取得する方法を学びます。この包括的な機能を使用して文書管理機能を強化します。
-type: docs
 weight: 16
 url: /ja/net/advanced-usage/get-all-version-keys-document/
 ---

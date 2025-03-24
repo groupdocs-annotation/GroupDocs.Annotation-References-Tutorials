@@ -3,7 +3,6 @@ title: Annotációk exportálása XML-fájlból
 linktitle: Annotációk exportálása XML-fájlból
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan exportálhat megjegyzéseket XML-fájlokból a GroupDocs.Annotation for .NET segítségével, amely hatékonyan leegyszerűsíti a dokumentumkezelési munkafolyamatot.
-type: docs
 weight: 11
 url: /hu/net/advanced-usage/export-annotations-xml-file/
 ---

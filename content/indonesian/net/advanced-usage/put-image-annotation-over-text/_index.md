@@ -3,7 +3,6 @@ title: Letakkan Anotasi Gambar di atas Teks
 linktitle: Letakkan Anotasi Gambar di atas Teks
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi gambar pada teks di .NET menggunakan GroupDocs.Annotation untuk manajemen dokumen dan kolaborasi yang efisien.
-type: docs
 weight: 21
 url: /id/net/advanced-usage/put-image-annotation-over-text/
 ---

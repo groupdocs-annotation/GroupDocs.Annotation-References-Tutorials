@@ -3,7 +3,6 @@ title: Загрузка пользовательских шрифтов
 linktitle: Загрузка пользовательских шрифтов
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как легко загружать пользовательские шрифты в GroupDocs.Annotation для .NET, чтобы улучшить аннотации документов. Следуйте нашим шагам для легкой интеграции.
-type: docs
 weight: 20
 url: /ru/net/advanced-usage/loading-custom-fonts/
 ---

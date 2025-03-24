@@ -3,7 +3,6 @@ title: Odblokowanie mocy adnotacji
 linktitle: Odblokowanie mocy adnotacji
 second_title: GroupDocs.Adnotacja .NET API
 description: Odblokuj moc adnotacji dzięki samouczkom GroupDocs.Annotation for .NET. Naucz się dodawać różne adnotacje krok po kroku i bez wysiłku usprawnij współpracę.
-type: docs
 weight: 23
 url: /pl/net/unlocking-annotation-power/
 ---

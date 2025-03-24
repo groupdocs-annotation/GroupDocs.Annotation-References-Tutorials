@@ -3,7 +3,6 @@ title: 將折線註解新增至文檔
 linktitle: 將折線註解新增至文檔
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 將折線註解新增至文件。輕鬆增強協作和文件審核流程。
-type: docs
 weight: 18
 url: /zh-hant/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ GroupDocs.Annotation for .NET 支援流行的文件格式，例如 PDF 和 Micro
 ### GroupDocs.Annotation for .NET 是否提供免費試用？
 是的，您可以存取 GroupDocs.Annotation for .NET 免費試用版[這個連結](https://releases.groupdocs.com/).
 ### 在哪裡可以找到 GroupDocs.Annotation for .NET 的文件？
-您可以找到 GroupDocs.Annotation for .NET 的文檔[這裡](https://reference.groupdocs.com/annotation/net/).
+您可以找到 GroupDocs.Annotation for .NET 的文檔[這裡](https://tutorials.groupdocs.com/annotation/net/).
 ### 對於與 GroupDocs.Annotation for .NET 相關的任何問題或查詢，如何獲得支援？
 您可以透過造訪 GroupDocs.Annotation 論壇獲得支持[這裡](https://forum.groupdocs.com/c/annotation/10).

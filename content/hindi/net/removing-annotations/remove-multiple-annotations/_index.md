@@ -3,7 +3,6 @@ title: .NET में एकाधिक एनोटेशन हटाएँ
 linktitle: .NET में एकाधिक एनोटेशन हटाएँ
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation का उपयोग करके .NET में एकाधिक एनोटेशन को कुशलतापूर्वक हटाने का तरीका जानें। अपने अनुप्रयोगों में निर्बाध एकीकरण के लिए हमारे चरण-दर-चरण ट्यूटोरियल का पालन करें।
-type: docs
 weight: 12
 url: /hi/net/removing-annotations/remove-multiple-annotations/
 ---

@@ -3,7 +3,6 @@ title: Belge Yükleme Esasları
 linktitle: Belge Yükleme Esasları
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation .NET'i kullanarak belgeleri yüklemeye yönelik temel eğitimleri keşfedin. Amazon S3, Azure, FTP, yerel disk, akışlar ve daha fazlasıyla sorunsuz bir şekilde entegre olun.
-type: docs
 weight: 20
 url: /tr/net/document-loading-essentials/
 ---

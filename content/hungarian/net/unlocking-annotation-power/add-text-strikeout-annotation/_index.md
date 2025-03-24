@@ -3,7 +3,6 @@ title: Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz
 linktitle: Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat szöveges áthúzott megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET használatával. Hatékonyan fokozza az együttműködést és a dokumentum-ellenőrzési folyamatokat.
-type: docs
 weight: 26
 url: /hu/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

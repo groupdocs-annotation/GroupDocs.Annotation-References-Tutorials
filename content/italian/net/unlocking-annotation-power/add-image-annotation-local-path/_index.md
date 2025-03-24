@@ -3,7 +3,6 @@ title: Aggiungi annotazione immagine al documento (percorso locale)
 linktitle: Aggiungi annotazione immagine al documento (percorso locale)
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere annotazioni di immagini ai documenti utilizzando GroupDocs.Annotation per .NET. Migliora facilmente le capacità di elaborazione dei documenti.
-type: docs
 weight: 14
 url: /it/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

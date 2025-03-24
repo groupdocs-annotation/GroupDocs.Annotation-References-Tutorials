@@ -3,7 +3,6 @@ title: Dokument von FTP laden
 linktitle: Dokument von FTP laden
 second_title: GroupDocs.Annotation .NET-API
 description: Erweitern Sie Ihre .NET-Anwendungen mit GroupDocs.Annotation für eine nahtlose Dokumentanmerkung. Schritt-für-Schritt-Anleitung enthalten.
-type: docs
 weight: 12
 url: /de/net/document-loading-essentials/load-document-from-ftp/
 ---

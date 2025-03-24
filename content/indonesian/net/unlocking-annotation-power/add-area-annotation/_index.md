@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Area ke Dokumen
 linktitle: Tambahkan Anotasi Area ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Tingkatkan kolaborasi dokumen Anda dengan Groupdocs.Annotation untuk .NET. Pelajari cara menambahkan anotasi area selangkah demi selangkah.
-type: docs
 weight: 10
 url: /id/net/unlocking-annotation-power/add-area-annotation/
 ---

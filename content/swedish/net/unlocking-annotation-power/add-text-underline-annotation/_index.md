@@ -3,7 +3,6 @@ title: Lägg till text understruken kommentar i dokumentet
 linktitle: Lägg till text understruken kommentar i dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till textunderstrukna kommentarer i dokument med GroupDocs.Annotation för .NET. Förbättra samarbete och kommunikation utan ansträngning.
-type: docs
 weight: 27
 url: /sv/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

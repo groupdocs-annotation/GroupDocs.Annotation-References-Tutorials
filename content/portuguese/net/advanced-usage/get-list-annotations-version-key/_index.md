@@ -3,7 +3,6 @@ title: Obtenha lista de anotações usando chave de versão
 linktitle: Obtenha lista de anotações usando chave de versão
 second_title: API GroupDocs.Annotation .NET
 description: Aprimore seus aplicativos .NET com GroupDocs.Annotation para anotações contínuas em documentos. Siga nosso guia passo a passo para uma integração eficaz.
-type: docs
 weight: 18
 url: /pt/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ Você pode buscar suporte visitando o fórum GroupDocs.Annotation ou entrando em
 ### Posso adquirir uma licença temporária do GroupDocs.Annotation para fins de teste?
 Sim, licenças temporárias estão disponíveis para compra para facilitar o teste e a avaliação do produto.
 ### Onde posso encontrar documentação abrangente para GroupDocs.Annotation for .NET?
- Você pode consultar a documentação disponível no site GroupDocs para obter orientações detalhadas sobre como usar o produto[aqui]( https://reference.groupdocs.com/annotation/net/).
+ Você pode consultar a documentação disponível no site GroupDocs para obter orientações detalhadas sobre como usar o produto[aqui]( https://tutorials.groupdocs.com/annotation/net/).

@@ -3,7 +3,6 @@ title: Genera colonne di anteprima del foglio di lavoro
 linktitle: Genera colonne di anteprima del foglio di lavoro
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come annotare i documenti utilizzando GroupDocs.Annotation per .NET. Tutorial passo passo per gli sviluppatori .NET. Migliora le tue applicazioni.
-type: docs
 weight: 15
 url: /it/net/advanced-usage/generate-preview-worksheet-columns/
 ---

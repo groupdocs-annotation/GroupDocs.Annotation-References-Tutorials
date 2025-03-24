@@ -3,7 +3,6 @@ title: Lägg till textersättningsanteckning till dokumentet
 linktitle: Lägg till textersättningsanteckning till dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till textersättningskommentarer till dina .NET-dokument utan ansträngning med GroupDocs.Annotation för .NET. Förbättra dina dokumenthanteringsmöjligheter.
-type: docs
 weight: 24
 url: /sv/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

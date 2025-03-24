@@ -3,7 +3,6 @@ title: Genereer een voorbeeld van documentpagina's
 linktitle: Genereer een voorbeeld van documentpagina's
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u efficiënt een voorbeeld van documentpagina's kunt genereren met GroupDocs.Annotation voor .NET. Verbeter uw documentbeheerworkflows met dit uitgebreide programma.
-type: docs
 weight: 12
 url: /nl/net/advanced-usage/generate-document-pages-preview/
 ---

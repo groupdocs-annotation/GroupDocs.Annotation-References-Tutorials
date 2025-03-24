@@ -3,7 +3,6 @@ title: تحميل المستند من القرص المحلي
 linktitle: تحميل المستند من القرص المحلي
 second_title: GroupDocs.Annotation .NET API
 description: أطلق العنان لقوة التعليقات التوضيحية للمستند باستخدام GroupDocs.Annotation لـ .NET. قم بدمج ميزات التعليقات التوضيحية بسلاسة في تطبيقات .NET الخاصة بك.
-type: docs
 weight: 13
 url: /ar/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### هل يمكنني تجربة GroupDocs.Annotation لـ .NET قبل الشراء؟
  نعم، يمكنك تنزيل نسخة تجريبية مجانية من[هنا](https://releases.groupdocs.com/).
 ### أين يمكنني العثور على وثائق GroupDocs.Annotation لـ .NET؟
- يمكنك الوصول إلى الوثائق[هنا](https://reference.groupdocs.com/annotation/net/).
+ يمكنك الوصول إلى الوثائق[هنا](https://tutorials.groupdocs.com/annotation/net/).
 ### كيف يمكنني الحصول على ترخيص مؤقت لـ GroupDocs.Annotation لـ .NET؟
  يمكنك الحصول على ترخيص مؤقت من[هنا](https://purchase.groupdocs.com/temporary-license/).
 ### هل يتوفر الدعم لـ GroupDocs.Annotation لـ .NET؟

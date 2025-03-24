@@ -3,7 +3,6 @@ title: 從 Amazon S3 載入文檔
 linktitle: 從 Amazon S3 載入文檔
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 以程式設計方式註解文件。無縫整合的分步教程。
-type: docs
 weight: 10
 url: /zh-hant/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation for .NET 支援多種文件格式，包括 PDF、DOCX、PPT
 ### 我可以在購買前嘗試 Groupdocs.Annotation for .NET 嗎？
 是的，您可以透過造訪可用的免費試用版來探索 Groupdocs.Annotation for .NET 的功能[這裡](https://releases.groupdocs.com/).
 ### 在哪裡可以找到 Groupdocs.Annotation for .NET 的文件？
-提供了 Groupdocs.Annotation for .NET 的綜合文檔[這裡](https://reference.groupdocs.com/annotation/net/).
+提供了 Groupdocs.Annotation for .NET 的綜合文檔[這裡](https://tutorials.groupdocs.com/annotation/net/).
 ### 我是否需要臨時授權來評估 .NET 的 Groupdocs.Annotation？
 您可以從以下位置取得用於評估目的的臨時許可證：[這裡](https://purchase.groupdocs.com/temporary-license/).
 ### 我可以在哪裡尋求 Groupdocs.Annotation for .NET 的協助或支援？

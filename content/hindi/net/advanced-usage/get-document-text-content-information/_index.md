@@ -3,7 +3,6 @@ title: दस्तावेज़ की पाठ्य सामग्री 
 linktitle: दस्तावेज़ की पाठ्य सामग्री की जानकारी प्राप्त करें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation के साथ दस्तावेज़ों को निर्बाध रूप से एनोटेट करें। एनोटेशन कार्यप्रणाली को अपने .NET अनुप्रयोगों में सहजता से एकीकृत करें।
-type: docs
 weight: 17
 url: /hi/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ annotator.Save("output.pdf");
 ### मुझे .NET के लिए GroupDocs.Annotation के लिए समर्थन कहां मिल सकता है?
  आप समर्थन मांग सकते हैं और प्रश्न पूछ सकते हैं[ग्रुपडॉक्स फोरम](https://forum.groupdocs.com/c/annotation/10).
 ### क्या .NET के लिए GroupDocs.Annotation कोई दस्तावेज़ पेश करता है?
- हाँ, .NET के लिए GroupDocs.Annotation के लिए व्यापक दस्तावेज़ उपलब्ध है[यहाँ](https://reference.groupdocs.com/annotation/net/).
+ हाँ, .NET के लिए GroupDocs.Annotation के लिए व्यापक दस्तावेज़ उपलब्ध है[यहाँ](https://tutorials.groupdocs.com/annotation/net/).

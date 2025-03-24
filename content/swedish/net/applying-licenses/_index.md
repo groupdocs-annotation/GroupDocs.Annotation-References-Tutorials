@@ -3,7 +3,6 @@ title: Ansöker om licenser
 linktitle: Ansöker om licenser
 second_title: GroupDocs.Annotation .NET API
 description: Lås upp den fulla potentialen för dokumentkommentarer i .NET med GroupDocs.Annotation. Följ våra steg-för-steg tutorials för sömlös integration.
-type: docs
 weight: 26
 url: /sv/net/applying-licenses/
 ---

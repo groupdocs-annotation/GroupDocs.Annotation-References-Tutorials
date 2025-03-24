@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού τμήματος κειμένου �
 linktitle: Προσθήκη σχολιασμού τμήματος κειμένου αναζήτησης στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Εξερευνήστε τη δύναμη του GroupDocs.Annotation για .NET και προσθέστε αβίαστα τις δυνατότητες σχολιασμού εγγράφων στις εφαρμογές σας.
-type: docs
 weight: 20
 url: /el/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

@@ -3,7 +3,6 @@ title: Töltse be a dokumentumot az Amazon S3-ból
 linktitle: Töltse be a dokumentumot az Amazon S3-ból
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan fűzhet programozott megjegyzéseket dokumentumokhoz a Groupdocs.Annotation for .NET segítségével. Lépésről lépésre bemutató útmutató a zökkenőmentes integrációhoz.
-type: docs
 weight: 10
 url: /hu/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ A Groupdocs.Annotation for .NET a dokumentumformátumok széles skáláját tám
 ### Kipróbálhatom a Groupdocs.Annotation for .NET-et vásárlás előtt?
  Igen, felfedezheti a Groupdocs.Annotation for .NET szolgáltatásait, ha eléri az ingyenes próbaverziót[itt](https://releases.groupdocs.com/).
 ### Hol találom a Groupdocs.Annotation for .NET dokumentációját?
- Groupdocs.Annotation for .NET átfogó dokumentációja elérhető[itt](https://reference.groupdocs.com/annotation/net/).
+ Groupdocs.Annotation for .NET átfogó dokumentációja elérhető[itt](https://tutorials.groupdocs.com/annotation/net/).
 ### Szükségem van ideiglenes licencre a Groupdocs.Annotation for .NET értékeléséhez?
  Ideiglenes engedélyt kiértékelési célból szerezhet be[itt](https://purchase.groupdocs.com/temporary-license/).
 ### Hol kérhetek segítséget vagy támogatást a Groupdocs.Annotation for .NET-hez?

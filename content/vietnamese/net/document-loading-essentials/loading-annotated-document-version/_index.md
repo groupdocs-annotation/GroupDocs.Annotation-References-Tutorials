@@ -3,7 +3,6 @@ title: Đang tải phiên bản tài liệu có chú thích
 linktitle: Đang tải phiên bản tài liệu có chú thích
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách tải các phiên bản tài liệu có chú thích một cách dễ dàng bằng GroupDocs.Annotation for .NET. Đơn giản hóa quá trình cộng tác và đánh giá.
-type: docs
 weight: 16
 url: /vi/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Có, GroupDocs.Annotation hỗ trợ chú thích tài liệu ở các định d�
 ### Có bản dùng thử miễn phí GroupDocs.Annotation cho .NET không?
  Có, bạn có thể truy cập phiên bản dùng thử miễn phí từ[đây](https://releases.groupdocs.com/).
 ### Tôi có thể tìm tài liệu về GroupDocs.Annotation cho .NET ở đâu?
- Bạn có thể tham khảo tài liệu chi tiết[đây](https://reference.groupdocs.com/annotation/net/).
+ Bạn có thể tham khảo tài liệu chi tiết[đây](https://tutorials.groupdocs.com/annotation/net/).
 ### Làm cách nào tôi có thể nhận được giấy phép tạm thời cho GroupDocs.Annotation cho .NET?
  Bạn có thể có được giấy phép tạm thời từ[liên kết này](https://purchase.groupdocs.com/temporary-license/).
 ### Tôi có thể tìm kiếm hỗ trợ hoặc đặt câu hỏi về GroupDocs.Annotation cho .NET ở đâu?

@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Ellipsenanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Ellipsenanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation Ellipsenanmerkungen zu Dokumenten in .NET hinzufügen. Verbessern Sie mühelos die Zusammenarbeit und Kommunikation.
-type: docs
 weight: 13
 url: /de/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

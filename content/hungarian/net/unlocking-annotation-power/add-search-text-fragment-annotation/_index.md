@@ -3,7 +3,6 @@ title: Keresési szövegtöredék megjegyzés hozzáadása a dokumentumhoz
 linktitle: Keresési szövegtöredék megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Fedezze fel a GroupDocs.Annotation for .NET erejét, és könnyedén adjon hozzá dokumentumjegyzetelési képességeket alkalmazásaihoz.
-type: docs
 weight: 20
 url: /hu/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

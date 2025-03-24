@@ -3,7 +3,6 @@ title: Добавить аннотацию ссылки в документ
 linktitle: Добавить аннотацию ссылки в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавлять аннотации ссылок к документам с помощью Groupdocs.Annotation для .NET. Улучшайте сотрудничество и интерактивность без особых усилий.
-type: docs
 weight: 16
 url: /ru/net/unlocking-annotation-power/add-link-annotation/
 ---

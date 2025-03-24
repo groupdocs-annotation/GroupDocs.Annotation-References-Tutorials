@@ -3,7 +3,6 @@ title: Dokumentum betöltése a Streamből
 linktitle: Dokumentum betöltése a Streamből
 second_title: GroupDocs.Annotation .NET API
 description: A GroupDocs.Annotation segítségével megtudhatja, hogyan fűzhet könnyedén megjegyzéseket a .NET-ben lévő dokumentumokhoz. Növelje az együttműködést és a termelékenységet.
-type: docs
 weight: 14
 url: /hu/net/document-loading-essentials/load-document-from-stream/
 ---

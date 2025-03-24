@@ -3,7 +3,6 @@ title: Komponenty dokumentu
 linktitle: Komponenty dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Objevte komplexní výukové programy o integraci interaktivních komponent, jako jsou tlačítka, zaškrtávací políčka a rozevírací seznamy, do dokumentů PDF pomocí GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /cs/net/document-components/
 ---

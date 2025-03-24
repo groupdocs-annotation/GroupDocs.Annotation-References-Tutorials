@@ -3,7 +3,6 @@ title: Verwijder antwoorden op ID in .NET
 linktitle: Verwijder antwoorden op ID in .NET
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u antwoorden op ID kunt verwijderen in .NET met behulp van GroupDocs.Annotation. Volg onze stapsgewijze zelfstudie voor efficiënt beheer van documentannotaties.
-type: docs
 weight: 16
 url: /nl/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ Op het gebied van .NET-ontwikkeling is de mogelijkheid om annotaties in document
 ## Vereisten
 Voordat u ingaat op de tutorial over het verwijderen van antwoorden op ID in .NET met behulp van GroupDocs.Annotation, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
 ### 1. Installatie van GroupDocs.Annotation
- Eerst moet u GroupDocs.Annotation voor .NET installeren. U kunt de bibliotheek downloaden van[hier](https://releases.groupdocs.com/annotation/net/) en volg de installatie-instructies in de documentatie[hier](https://reference.groupdocs.com/annotation/net/).
+ Eerst moet u GroupDocs.Annotation voor .NET installeren. U kunt de bibliotheek downloaden van[hier](https://releases.groupdocs.com/annotation/net/) en volg de installatie-instructies in de documentatie[hier](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Basiskennis van C# en .NET
 Bekendheid met de programmeertaal C# en het .NET-framework is noodzakelijk om de voorbeelden in deze tutorial te volgen.
 ### 3. Geannoteerd document met antwoorden

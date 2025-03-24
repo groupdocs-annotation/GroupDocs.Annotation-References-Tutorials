@@ -3,7 +3,6 @@ title: Memutar Dokumen PDF
 linktitle: Memutar Dokumen PDF
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara memutar dokumen PDF dengan mudah menggunakan Groupdocs.Annotation untuk .NET. Meningkatkan efisiensi manajemen dokumen.
-type: docs
 weight: 22
 url: /id/net/advanced-usage/rotating-pdf-documents/
 ---

@@ -3,7 +3,6 @@ title: ตั้งค่าใบอนุญาตจากสตรีม
 linktitle: ตั้งค่าใบอนุญาตจากสตรีม
 second_title: GroupDocs.Annotation .NET API
 description: ปลดล็อกศักยภาพสูงสุดของคำอธิบายประกอบเอกสารใน .NET ด้วย GroupDocs.Annotation ปฏิบัติตามคำแนะนำทีละขั้นตอนของเราเพื่อการบูรณาการที่ราบรื่น
-type: docs
 weight: 11
 url: /th/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /th/net/applying-licenses/set-license-from-stream/
 ก่อนที่จะเข้าสู่บทช่วยสอน ตรวจสอบให้แน่ใจว่าคุณมีข้อกำหนดเบื้องต้นต่อไปนี้:
 1.  GroupDocs.Annotation สำหรับ .NET: ตรวจสอบให้แน่ใจว่าคุณได้ดาวน์โหลดและติดตั้ง GroupDocs.Annotation สำหรับ .NET จาก[ลิ้งค์ดาวน์โหลด](https://releases.groupdocs.com/annotation/net/).
 2.  ใบอนุญาต: รับใบอนุญาตที่ถูกต้องสำหรับ GroupDocs.Annotation คุณสามารถซื้อได้จาก[ที่นี่](https://purchase.groupdocs.com/buy) หรือขอใบอนุญาตชั่วคราว[ที่นี่](https://purchase.groupdocs.com/temporary-license/).
-3.  เอกสารประกอบ: ทำความคุ้นเคยกับ[เอกสารประกอบ](https://reference.groupdocs.com/annotation/net/) สำหรับ GroupDocs คำอธิบายประกอบ โดยให้ข้อมูลเชิงลึกโดยละเอียดเกี่ยวกับฟังก์ชันการทำงานของ API
+3.  เอกสารประกอบ: ทำความคุ้นเคยกับ[เอกสารประกอบ](https://tutorials.groupdocs.com/annotation/net/) สำหรับ GroupDocs คำอธิบายประกอบ โดยให้ข้อมูลเชิงลึกโดยละเอียดเกี่ยวกับฟังก์ชันการทำงานของ API
 
 ## นำเข้าเนมสเปซ
 ขั้นแรก เรามานำเข้าเนมสเปซที่จำเป็นเพื่อเริ่มใช้ GroupDocs.Annotation ในโปรเจ็กต์ .NET ของคุณ:
@@ -63,6 +62,6 @@ else
 ### ฉันสามารถลองใช้ GroupDocs.Annotation สำหรับ .NET ก่อนซื้อได้หรือไม่
  ใช่ คุณสามารถขอใบอนุญาตทดลองใช้ฟรีได้[ที่นี่](https://releases.groupdocs.com/) เพื่อสำรวจความสามารถของ GroupDocs.Annotation สำหรับ .NET
 ### ฉันจะรับเอกสารล่าสุดสำหรับ GroupDocs.Annotation สำหรับ .NET ได้อย่างไร
- คุณสามารถอ้างถึง[เอกสารประกอบ](https://reference.groupdocs.com/annotation/net/) สำหรับ GroupDocs.Annotation สำหรับ .NET เพื่อเข้าถึงการอ้างอิง API และบทช่วยสอนโดยละเอียด
+ คุณสามารถอ้างถึง[เอกสารประกอบ](https://tutorials.groupdocs.com/annotation/net/) สำหรับ GroupDocs.Annotation สำหรับ .NET เพื่อเข้าถึงการอ้างอิง API และบทช่วยสอนโดยละเอียด
 ### จะเกิดอะไรขึ้นหากฉันประสบปัญหาเกี่ยวกับใบอนุญาตของฉัน
 หากคุณพบปัญหาใดๆ เกี่ยวกับใบอนุญาตของคุณ โปรดติดต่อทีมสนับสนุน GroupDocs เพื่อขอความช่วยเหลือ

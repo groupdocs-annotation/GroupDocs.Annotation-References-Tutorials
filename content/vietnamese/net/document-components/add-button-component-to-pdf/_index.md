@@ -3,7 +3,6 @@ title: Thêm thành phần nút vào tài liệu PDF
 linktitle: Thêm thành phần nút vào tài liệu PDF
 second_title: GroupDocs.Annotation .NET API
 description: Nâng cao tài liệu PDF của bạn bằng các thành phần nút tương tác bằng Groupdocs.Annotation for .NET. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch.
-type: docs
 weight: 10
 url: /vi/net/document-components/add-button-component-to-pdf/
 ---

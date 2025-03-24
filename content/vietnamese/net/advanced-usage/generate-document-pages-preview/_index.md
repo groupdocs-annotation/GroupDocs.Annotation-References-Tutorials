@@ -3,7 +3,6 @@ title: Tạo bản xem trước trang tài liệu
 linktitle: Tạo bản xem trước trang tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách tạo bản xem trước trang tài liệu một cách hiệu quả bằng GroupDocs.Annotation cho .NET. Nâng cao quy trình quản lý tài liệu của bạn với tính năng toàn diện này.
-type: docs
 weight: 12
 url: /vi/net/advanced-usage/generate-document-pages-preview/
 ---

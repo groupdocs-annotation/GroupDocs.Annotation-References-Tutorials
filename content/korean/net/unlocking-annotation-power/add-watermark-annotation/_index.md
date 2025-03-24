@@ -3,7 +3,6 @@ title: 문서에 워터마크 주석 추가
 linktitle: 문서에 워터마크 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 워터마크 주석을 쉽게 추가하는 방법을 알아보세요. 문서의 명확성과 보안을 강화합니다.
-type: docs
 weight: 28
 url: /ko/net/unlocking-annotation-power/add-watermark-annotation/
 ---

@@ -3,7 +3,6 @@ title: Usuń wiele adnotacji według identyfikatorów
 linktitle: Usuń wiele adnotacji według identyfikatorów
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak usunąć wiele adnotacji według identyfikatorów w .NET za pomocą GroupDocs.Annotation, co bez wysiłku zwiększa możliwości zarządzania dokumentami.
-type: docs
 weight: 13
 url: /pl/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

@@ -3,7 +3,6 @@ title: Ekspor Anotasi dari File XML
 linktitle: Ekspor Anotasi dari File XML
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara mengekspor anotasi dari file XML menggunakan GroupDocs.Annotation untuk .NET, menyederhanakan alur kerja manajemen dokumen Anda secara efisien.
-type: docs
 weight: 11
 url: /id/net/advanced-usage/export-annotations-xml-file/
 ---

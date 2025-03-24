@@ -3,7 +3,6 @@ title: Belgeye Ok Açıklaması Ekle
 linktitle: Belgeye Ok Açıklaması Ekle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelerinize ok açıklamalarını nasıl ekleyeceğinizi öğrenin. Belge netliğini ve etkileşimini zahmetsizce geliştirin.
-type: docs
 weight: 11
 url: /tr/net/unlocking-annotation-power/add-arrow-annotation/
 ---

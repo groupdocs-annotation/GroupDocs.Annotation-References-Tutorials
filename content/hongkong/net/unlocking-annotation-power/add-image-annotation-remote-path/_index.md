@@ -3,7 +3,6 @@ title: 將影像註釋新增至文件（遠端路徑）
 linktitle: 將影像註釋新增至文件（遠端路徑）
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 將影像註解新增至文件。透過強大的註解功能增強文件管理。
-type: docs
 weight: 15
 url: /zh-hant/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφου από το Azure
 linktitle: Φόρτωση εγγράφου από το Azure
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να σχολιάζετε έγγραφα στο .NET χρησιμοποιώντας το GroupDocs.Annotation. Βήμα προς βήμα μάθημα για απρόσκοπτη ενσωμάτωση με το Azure Blob Storage.
-type: docs
 weight: 11
 url: /el/net/document-loading-essentials/load-document-from-azure/
 ---

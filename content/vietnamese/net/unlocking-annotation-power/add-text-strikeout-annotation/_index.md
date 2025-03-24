@@ -3,7 +3,6 @@ title: Thêm chú thích gạch bỏ văn bản vào tài liệu
 linktitle: Thêm chú thích gạch bỏ văn bản vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích gạch ngang văn bản vào tài liệu bằng GroupDocs.Annotation cho .NET. Tăng cường hợp tác và quá trình xem xét tài liệu một cách hiệu quả.
-type: docs
 weight: 26
 url: /vi/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

@@ -3,7 +3,6 @@ title: Aggiungi annotazione freccia al documento
 linktitle: Aggiungi annotazione freccia al documento
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere annotazioni con frecce ai tuoi documenti utilizzando GroupDocs.Annotation per .NET. Migliora la chiarezza e l'interattività dei documenti senza sforzo.
-type: docs
 weight: 11
 url: /it/net/unlocking-annotation-power/add-arrow-annotation/
 ---

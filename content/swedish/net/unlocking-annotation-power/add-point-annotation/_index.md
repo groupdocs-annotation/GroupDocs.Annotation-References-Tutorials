@@ -3,7 +3,6 @@ title: Lägg till punktkommentar till dokument
 linktitle: Lägg till punktkommentar till dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till punktkommentarer till PDF-filer med GroupDocs.Annotation för .NET. Steg-för-steg-guide för sömlös integration.
-type: docs
 weight: 17
 url: /sv/net/unlocking-annotation-power/add-point-annotation/
 ---

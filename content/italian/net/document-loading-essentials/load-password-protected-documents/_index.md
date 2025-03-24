@@ -3,7 +3,6 @@ title: Carica documenti protetti da password
 linktitle: Carica documenti protetti da password
 second_title: API GroupDocs.Annotation .NET
 description: Migliora la collaborazione e la revisione dei documenti con GroupDocs.Annotation per .NET. Annota PDF e altro ancora senza problemi nelle tue app .NET.
-type: docs
 weight: 17
 url: /it/net/document-loading-essentials/load-password-protected-documents/
 ---

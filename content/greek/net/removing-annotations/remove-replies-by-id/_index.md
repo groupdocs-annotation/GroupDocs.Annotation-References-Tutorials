@@ -3,7 +3,6 @@ title: Κατάργηση απαντήσεων κατά αναγνωριστικ
 linktitle: Κατάργηση απαντήσεων κατά αναγνωριστικό στο .NET
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να αφαιρείτε τις απαντήσεις κατά αναγνωριστικό στο .NET χρησιμοποιώντας το GroupDocs.Annotation. Ακολουθήστε το βήμα προς βήμα εκμάθησή μας για αποτελεσματική διαχείριση σχολιασμών εγγράφων.
-type: docs
 weight: 16
 url: /el/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /el/net/removing-annotations/remove-replies-by-id/
 ## Προαπαιτούμενα
 Πριν ξεκινήσετε τον οδηγό για την κατάργηση απαντήσεων με αναγνωριστικό στο .NET χρησιμοποιώντας GroupDocs.Annotation, βεβαιωθείτε ότι έχετε τις ακόλουθες προϋποθέσεις:
 ### 1. Εγκατάσταση GroupDocs.Annotation
- Αρχικά, πρέπει να εγκαταστήσετε το GroupDocs.Annotation για .NET. Μπορείτε να κατεβάσετε τη βιβλιοθήκη από[εδώ](https://releases.groupdocs.com/annotation/net/) και ακολουθήστε τις οδηγίες εγκατάστασης που παρέχονται στην τεκμηρίωση[εδώ](https://reference.groupdocs.com/annotation/net/).
+ Αρχικά, πρέπει να εγκαταστήσετε το GroupDocs.Annotation για .NET. Μπορείτε να κατεβάσετε τη βιβλιοθήκη από[εδώ](https://releases.groupdocs.com/annotation/net/) και ακολουθήστε τις οδηγίες εγκατάστασης που παρέχονται στην τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Βασική κατανόηση της C# και .NET
 Η εξοικείωση με τη γλώσσα προγραμματισμού C# και το πλαίσιο .NET είναι απαραίτητη για να ακολουθήσετε μαζί με τα παραδείγματα σε αυτό το σεμινάριο.
 ### 3. Σχολιασμένο έγγραφο με απαντήσεις

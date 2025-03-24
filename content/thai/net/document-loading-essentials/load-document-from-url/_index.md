@@ -3,7 +3,6 @@ title: โหลดเอกสารจาก URL
 linktitle: โหลดเอกสารจาก URL
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีใส่คำอธิบายประกอบในเอกสาร PDF โดยทางโปรแกรมโดยใช้ GroupDocs.Annotation สำหรับ .NET บทช่วยสอนทีละขั้นตอนพร้อมตัวอย่างโค้ด
-type: docs
 weight: 15
 url: /th/net/document-loading-essentials/load-document-from-url/
 ---

@@ -3,7 +3,6 @@ title: การใช้งานขั้นสูง
 linktitle: การใช้งานขั้นสูง
 second_title: GroupDocs.Annotation .NET API
 description: ค้นพบบทช่วยสอนการใช้งานขั้นสูงสำหรับ GroupDocs.Annotation .NET ปรับปรุงการจัดการเอกสารด้วยคำแนะนำทีละขั้นตอนเกี่ยวกับคุณภาพของภาพ การส่งออกคำอธิบายประกอบ และอื่นๆ
-type: docs
 weight: 22
 url: /th/net/advanced-usage/
 ---

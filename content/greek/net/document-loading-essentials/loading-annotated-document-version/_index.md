@@ -3,7 +3,6 @@ title: Φόρτωση σχολιασμένης έκδοσης εγγράφου
 linktitle: Φόρτωση σχολιασμένης έκδοσης εγγράφου
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να φορτώνετε εύκολα σχολιασμένες εκδόσεις εγγράφων χρησιμοποιώντας το GroupDocs.Annotation για .NET. Απλοποιήστε τις διαδικασίες συνεργασίας και αναθεώρησης.
-type: docs
 weight: 16
 url: /el/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### Υπάρχει διαθέσιμη δωρεάν δοκιμή για το GroupDocs.Annotation για το .NET;
  Ναι, μπορείτε να έχετε πρόσβαση στη δωρεάν δοκιμαστική έκδοση από[εδώ](https://releases.groupdocs.com/).
 ### Πού μπορώ να βρω τεκμηρίωση για το GroupDocs.Annotation για .NET;
- Μπορείτε να ανατρέξετε στην αναλυτική τεκμηρίωση[εδώ](https://reference.groupdocs.com/annotation/net/).
+ Μπορείτε να ανατρέξετε στην αναλυτική τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/annotation/net/).
 ### Πώς μπορώ να αποκτήσω μια προσωρινή άδεια για το GroupDocs.Annotation για .NET;
  Μπορείτε να αποκτήσετε μια προσωρινή άδεια από[αυτός ο σύνδεσμος](https://purchase.groupdocs.com/temporary-license/).
 ### Πού μπορώ να αναζητήσω υποστήριξη ή να κάνω ερωτήσεις σχετικά με το GroupDocs.Annotation για .NET;

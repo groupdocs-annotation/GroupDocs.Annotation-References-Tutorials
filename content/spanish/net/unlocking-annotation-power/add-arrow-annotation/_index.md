@@ -3,7 +3,6 @@ title: Agregar anotación de flecha al documento
 linktitle: Agregar anotación de flecha al documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a agregar anotaciones de flechas a sus documentos usando GroupDocs.Annotation para .NET. Mejore la claridad y la interactividad de los documentos sin esfuerzo.
-type: docs
 weight: 11
 url: /es/net/unlocking-annotation-power/add-arrow-annotation/
 ---

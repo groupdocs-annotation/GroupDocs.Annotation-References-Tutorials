@@ -3,7 +3,6 @@ title: Voeg tekstmarkeringannotatie toe aan document
 linktitle: Voeg tekstmarkeringannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u annotaties met tekstmarkering aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter de samenwerking en productiviteit met dit uitgebreide programma.
-type: docs
 weight: 22
 url: /nl/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

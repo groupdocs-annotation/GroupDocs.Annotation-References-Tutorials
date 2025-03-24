@@ -3,7 +3,6 @@ title: Ställ in upplösning för förhandsgranskning av dokument
 linktitle: Ställ in upplösning för förhandsgranskning av dokument
 second_title: GroupDocs.Annotation .NET API
 description: Förbättra dokumentsamarbetet med Groupdocs.Annotation för .NET effektiviserar annoterings- och förhandsgranskningsfunktionerna sömlöst.
-type: docs
 weight: 23
 url: /sv/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ dagens digitala tidsålder är effektiv dokumenthantering och samarbete avgöran
 Innan du går in i att utnyttja funktionerna i Groupdocs.Annotation för .NET, se till att du har följande förutsättningar på plats:
 1.  Installation av Groupdocs.Annotation för .NET: Börja med att ladda ner och installera Groupdocs.Annotation for .NET-biblioteket. Du kan hämta de nödvändiga filerna från[nedladdningslänk](https://releases.groupdocs.com/annotation/net/).
 2. Utvecklingsmiljö: Ha en lämplig utvecklingsmiljö inrättad, inklusive Visual Studio eller någon annan föredragen IDE för .NET-utveckling.
-3. Tillgång till dokumentation: Bekanta dig med den omfattande dokumentationen från Groupdocs.Annotation för .NET. Du kan hänvisa till[dokumentation](https://reference.groupdocs.com/annotation/net/) för detaljerade insikter om bibliotekets funktioner och användning.
+3. Tillgång till dokumentation: Bekanta dig med den omfattande dokumentationen från Groupdocs.Annotation för .NET. Du kan hänvisa till[dokumentation](https://tutorials.groupdocs.com/annotation/net/) för detaljerade insikter om bibliotekets funktioner och användning.
 4. Grundläggande förståelse för .NET Framework: Se till att du har en grundläggande förståelse för .NET-ramverket och programmeringsspråket C# för att effektivt kunna använda Groupdocs.Annotation för .NET.
 
 ## Importera nödvändiga namnområden

@@ -3,7 +3,6 @@ title: Generate Preview Worksheet Columns
 linktitle: Generate Preview Worksheet Columns
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to annotate documents using GroupDocs.Annotation for .NET. Step-by-step tutorial for .NET developers. Enhance your applications.
-type: docs
 weight: 15
 url: /net/advanced-usage/generate-preview-worksheet-columns/
 ---

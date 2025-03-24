@@ -3,7 +3,6 @@ title: Metnin Üzerine Resim Açıklamasını Yerleştirin
 linktitle: Metnin Üzerine Resim Açıklamasını Yerleştirin
 second_title: GroupDocs.Annotation .NET API'si
 description: Verimli belge yönetimi ve işbirliği için GroupDocs.Annotation'ı kullanarak .NET'te metnin üzerine resim açıklamalarını nasıl ekleyeceğinizi öğrenin.
-type: docs
 weight: 21
 url: /tr/net/advanced-usage/put-image-annotation-over-text/
 ---

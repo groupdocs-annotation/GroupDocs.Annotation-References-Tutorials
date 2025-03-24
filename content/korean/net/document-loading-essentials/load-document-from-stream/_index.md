@@ -3,7 +3,6 @@ title: 스트림에서 문서 로드
 linktitle: 스트림에서 문서 로드
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET 문서에 손쉽게 주석을 추가하는 방법을 알아보세요. 협업과 생산성을 향상하세요.
-type: docs
 weight: 14
 url: /ko/net/document-loading-essentials/load-document-from-stream/
 ---

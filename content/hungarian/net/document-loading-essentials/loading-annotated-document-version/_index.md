@@ -3,7 +3,6 @@ title: Annotált dokumentum verzió betöltése
 linktitle: Annotált dokumentum verzió betöltése
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan tölthet be könnyedén megjegyzésekkel ellátott dokumentumverziókat a GroupDocs.Annotation for .NET segítségével. Egyszerűsítse az együttműködési és felülvizsgálati folyamatokat.
-type: docs
 weight: 16
 url: /hu/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Igen, a GroupDocs.Annotation támogatja a PDF, DOCX, PPTX, XLSX stb. formátumú
 ### Elérhető ingyenes próbaverzió a GroupDocs.Annotation for .NET számára?
  Igen, elérheti az ingyenes próbaverziót innen[itt](https://releases.groupdocs.com/).
 ### Hol találom a GroupDocs.Annotation for .NET dokumentációját?
- Olvassa el a részletes dokumentációt[itt](https://reference.groupdocs.com/annotation/net/).
+ Olvassa el a részletes dokumentációt[itt](https://tutorials.groupdocs.com/annotation/net/).
 ### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Annotation for .NET számára?
  Ideiglenes jogosítványt szerezhet be[ez a link](https://purchase.groupdocs.com/temporary-license/).
 ### Hol kérhetek támogatást, vagy hol tehetek fel kérdéseket a GroupDocs.Annotation for .NET-hez kapcsolódóan?

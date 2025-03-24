@@ -3,7 +3,6 @@ title: Belgeyi Yerel Diskten Yükle
 linktitle: Belgeyi Yerel Diskten Yükle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET ile belgeye açıklama eklemenin gücünün kilidini açın. Ek açıklama özelliklerini .NET uygulamalarınıza sorunsuz bir şekilde entegre edin.
-type: docs
 weight: 13
 url: /tr/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Sonuç olarak, GroupDocs.Annotation for .NET, belge açıklama yeteneklerini .NE
 ### Satın almadan önce GroupDocs.Annotation for .NET'i deneyebilir miyim?
  Evet, ücretsiz deneme sürümünü şuradan indirebilirsiniz:[Burada](https://releases.groupdocs.com/).
 ### GroupDocs.Annotation for .NET belgelerini nerede bulabilirim?
- Dokümantasyona ulaşabilirsiniz[Burada](https://reference.groupdocs.com/annotation/net/).
+ Dokümantasyona ulaşabilirsiniz[Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation for .NET için nasıl geçici lisans alabilirim?
  adresinden geçici lisans alabilirsiniz.[Burada](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation for .NET için destek mevcut mu?

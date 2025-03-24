@@ -3,7 +3,6 @@ title: Ellipszis megjegyzés hozzáadása a dokumentumhoz
 linktitle: Ellipszis megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat ellipszis jelöléseket a .NET-ben található dokumentumokhoz a GroupDocs.Annotation segítségével. Fokozza az együttműködést és a kommunikációt erőfeszítés nélkül.
-type: docs
 weight: 13
 url: /hu/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

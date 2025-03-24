@@ -3,7 +3,6 @@ title: Aggiungi annotazione filigrana al documento
 linktitle: Aggiungi annotazione filigrana al documento
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere facilmente annotazioni in filigrana ai tuoi documenti utilizzando GroupDocs.Annotation per .NET. Migliora la chiarezza e la sicurezza dei documenti.
-type: docs
 weight: 28
 url: /it/net/unlocking-annotation-power/add-watermark-annotation/
 ---

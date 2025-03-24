@@ -3,7 +3,6 @@ title: تحميل المستند من بروتوكول نقل الملفات
 linktitle: تحميل المستند من بروتوكول نقل الملفات
 second_title: GroupDocs.Annotation .NET API
 description: قم بتحسين تطبيقات .NET الخاصة بك باستخدام GroupDocs.Annotation للحصول على تعليقات توضيحية سلسة للمستندات. وشملت البرنامج التعليمي خطوة بخطوة.
-type: docs
 weight: 12
 url: /ar/net/document-loading-essentials/load-document-from-ftp/
 ---

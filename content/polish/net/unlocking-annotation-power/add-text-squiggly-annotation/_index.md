@@ -3,7 +3,6 @@ title: Dodaj falistą adnotację tekstową do dokumentu
 linktitle: Dodaj falistą adnotację tekstową do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bez wysiłku dodawać faliste adnotacje tekstowe do dokumentów za pomocą Groupdocs.Annotation for .NET. Usprawnij procesy współpracy i przeglądu dokumentów.
-type: docs
 weight: 25
 url: /pl/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

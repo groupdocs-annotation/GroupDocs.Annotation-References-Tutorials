@@ -3,7 +3,6 @@ title: URL से दस्तावेज़ लोड करें
 linktitle: URL से दस्तावेज़ लोड करें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation का उपयोग करके पीडीएफ दस्तावेज़ों को प्रोग्रामेटिक रूप से एनोटेट करना सीखें। कोड उदाहरणों के साथ चरण-दर-चरण ट्यूटोरियल।
-type: docs
 weight: 15
 url: /hi/net/document-loading-essentials/load-document-from-url/
 ---

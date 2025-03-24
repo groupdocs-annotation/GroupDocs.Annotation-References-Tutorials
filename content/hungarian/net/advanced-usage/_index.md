@@ -3,7 +3,6 @@ title: Speciális használat
 linktitle: Speciális használat
 second_title: GroupDocs.Annotation .NET API
 description: Fedezze fel a GroupDocs.Annotation .NET speciális használati útmutatóit. Fokozza a dokumentumkezelést a képminőséggel, a megjegyzések exportálásával és egyebekkel kapcsolatos lépésről lépésre szóló útmutatókkal.
-type: docs
 weight: 22
 url: /hu/net/advanced-usage/
 ---

@@ -3,7 +3,6 @@ title: Ajouter une annotation de zone au document
 linktitle: Ajouter une annotation de zone au document
 second_title: API GroupDocs.Annotation .NET
 description: Améliorez votre collaboration documentaire avec Groupdocs.Annotation pour .NET. Découvrez comment ajouter des annotations de zone étape par étape.
-type: docs
 weight: 10
 url: /fr/net/unlocking-annotation-power/add-area-annotation/
 ---

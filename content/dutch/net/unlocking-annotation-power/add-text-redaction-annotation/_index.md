@@ -3,7 +3,6 @@ title: Voeg tekstredactieannotatie toe aan document
 linktitle: Voeg tekstredactieannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u tekstredactieannotaties aan PDF-documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Beveilig gevoelige informatie moeiteloos.
-type: docs
 weight: 23
 url: /nl/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

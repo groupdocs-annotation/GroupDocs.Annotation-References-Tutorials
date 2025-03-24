@@ -3,7 +3,6 @@ title: مكونات الوثيقة
 linktitle: مكونات الوثيقة
 second_title: GroupDocs.Annotation .NET API
 description: اكتشف برامج تعليمية شاملة حول دمج المكونات التفاعلية مثل الأزرار ومربعات الاختيار والقوائم المنسدلة في مستندات PDF باستخدام GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /ar/net/document-components/
 ---

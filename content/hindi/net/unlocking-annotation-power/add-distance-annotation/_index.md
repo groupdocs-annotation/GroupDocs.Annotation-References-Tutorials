@@ -3,7 +3,6 @@ title: दस्तावेज़ में दूरी एनोटेशन 
 linktitle: दस्तावेज़ में दूरी एनोटेशन जोड़ें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों में दूरी एनोटेशन जोड़ने का तरीका जानें। सहजता से सहयोग और संचार बढ़ाएँ।
-type: docs
 weight: 12
 url: /hi/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ### प्रश्न: मुझे .NET के लिए GroupDocs.Annotation के लिए दस्तावेज़ कहां मिल सकते हैं?
 
- उ: आप उपलब्ध विस्तृत दस्तावेज़ का संदर्भ ले सकते हैं[यहाँ](https://reference.groupdocs.com/annotation/net/).
+ उ: आप उपलब्ध विस्तृत दस्तावेज़ का संदर्भ ले सकते हैं[यहाँ](https://tutorials.groupdocs.com/annotation/net/).
 
 ### प्रश्न: मैं GroupDocs.Annotation से समर्थन या सहायता कैसे प्राप्त कर सकता हूं?
 

@@ -3,7 +3,6 @@ title: 検索テキストフラグメントの注釈をドキュメントに追�
 linktitle: 検索テキストフラグメントの注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET の機能を活用し、ドキュメントの注釈機能をアプリケーションに簡単に追加します。
-type: docs
 weight: 20
 url: /ja/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

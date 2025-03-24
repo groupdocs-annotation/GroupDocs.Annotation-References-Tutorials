@@ -3,7 +3,6 @@ title: Добавить аннотацию редактирования текс
 linktitle: Добавить аннотацию редактирования текста в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавлять аннотации редактирования текста в документы PDF с помощью GroupDocs.Annotation для .NET. Защитите конфиденциальную информацию без особых усилий.
-type: docs
 weight: 23
 url: /ru/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

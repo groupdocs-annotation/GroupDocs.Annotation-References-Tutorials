@@ -3,7 +3,6 @@ title: 문서에 거리 주석 추가
 linktitle: 문서에 거리 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 거리 주석을 추가하는 방법을 알아보세요. 손쉽게 협업과 커뮤니케이션을 강화하세요.
-type: docs
 weight: 12
 url: /ko/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ A: 예, GroupDocs.Annotation은 PDF, Word, Excel, PowerPoint 등을 포함한 �
 
 ### Q: .NET용 GroupDocs.Annotation 설명서는 어디에서 찾을 수 있습니까?
 
- A: 사용 가능한 자세한 문서를 참조할 수 있습니다.[여기](https://reference.groupdocs.com/annotation/net/).
+ A: 사용 가능한 자세한 문서를 참조할 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).
 
 ### 질문: GroupDocs.Annotation에 대한 지원을 받으려면 어떻게 해야 합니까?
 

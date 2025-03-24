@@ -3,7 +3,6 @@ title: URLからドキュメントをロード
 linktitle: URLからドキュメントをロード
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してプログラムで PDF ドキュメントに注釈を付ける方法を学びます。コード例を含むステップバイステップのチュートリアル。
-type: docs
 weight: 15
 url: /ja/net/document-loading-essentials/load-document-from-url/
 ---
