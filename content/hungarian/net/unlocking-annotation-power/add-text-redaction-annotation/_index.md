@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá szövegszerkesztő megjegyzéseket
 weight: 23
 url: /hu/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Szövegszerkesztési megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Szövegszerkesztő megjegyzés hozzáadása a dokumentumhoz kulcsfontosságú lépés lehet a bizalmas információk biztonságos kezelésében. A GroupDocs.Annotation for .NET robusztus megoldást kínál ennek zökkenőmentes elérésére. Ebben az oktatóanyagban lépésről lépésre végigvezetjük Önt a szövegszerkesztő megjegyzések dokumentumához való hozzáadásának folyamatán.
 ## Előfeltételek

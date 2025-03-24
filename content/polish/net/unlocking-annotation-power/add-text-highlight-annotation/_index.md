@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje z wyróżnianiem tekstu do dok
 weight: 22
 url: /pl/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Dodaj adnotację wyróżnienia tekstu do dokumentu
+
 ## Wstęp
 dziedzinie zarządzania dokumentami i współpracy GroupDocs.Annotation dla .NET okazuje się solidnym rozwiązaniem, umożliwiającym programistom bezproblemową integrację adnotacji z wyróżnianiem tekstu w swoich aplikacjach. Ten samouczek stanowi kompleksowy przewodnik dotyczący dodawania adnotacji z wyróżnianiem tekstu do dokumentów przy użyciu programu GroupDocs.Annotation for .NET. Dzięki instrukcjom krok po kroku i szczegółowym objaśnieniom zyskasz biegłość w wykorzystywaniu możliwości tej potężnej biblioteki.
 ## Warunki wstępne

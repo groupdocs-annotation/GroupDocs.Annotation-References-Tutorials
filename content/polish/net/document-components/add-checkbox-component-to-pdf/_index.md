@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodać komponent Checkbox do dokumentów PDF za p
 weight: 11
 url: /pl/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Dodaj komponent pola wyboru do dokumentu PDF
+
 ## Wstęp
 W tym samouczku przeprowadzimy Cię przez proces dodawania komponentu Checkbox do dokumentu PDF za pomocą Groupdocs.Annotation dla .NET.
 ## Warunki wstępne

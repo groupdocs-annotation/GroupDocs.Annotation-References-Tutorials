@@ -6,6 +6,9 @@ description: Tìm hiểu cách xoay tài liệu PDF dễ dàng bằng Groupdocs.
 weight: 22
 url: /vi/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# Xoay tài liệu PDF
+
 ## Giới thiệu
 Xoay tài liệu PDF có thể là một nhiệm vụ quan trọng khi xử lý các tệp cần được xem hoặc xử lý theo cách khác. Trong hướng dẫn này, chúng ta sẽ khám phá cách xoay tài liệu PDF từng bước bằng cách sử dụng Groupdocs.Annotation cho .NET.
 ## Điều kiện tiên quyết

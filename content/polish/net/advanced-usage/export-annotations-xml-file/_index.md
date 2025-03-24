@@ -6,6 +6,9 @@ description: Dowiedz się, jak eksportować adnotacje z plików XML za pomocą G
 weight: 11
 url: /pl/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# Eksportuj adnotacje z pliku XML
+
 ## Wstęp
 dzisiejszej erze cyfrowej efektywne zarządzanie dokumentami ma kluczowe znaczenie zarówno dla firm, jak i osób prywatnych. Dzięki mnóstwu dostępnych narzędzi GroupDocs.Annotation dla .NET wyróżnia się jako niezawodne rozwiązanie do dodawania adnotacji i zarządzania plikami PDF. W tym samouczku zagłębimy się w proces eksportowania adnotacji z plików XML za pomocą GroupDocs.Annotation dla .NET. Pod koniec tego przewodnika będziesz wyposażony w wiedzę niezbędną do bezproblemowego eksportowania adnotacji, usprawniając przepływ pracy w zarządzaniu dokumentami.
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: Leer hoe u tekstveldannotaties naadloos kunt integreren in uw .NET-
 weight: 21
 url: /nl/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Voeg tekstveldannotatie toe aan document
+
 ## Invoering
 Groupdocs.Annotation voor .NET is een krachtige tool waarmee ontwikkelaars moeiteloos annotatiefuncties aan hun .NET-applicaties kunnen toevoegen. Of u nu werkt aan een documentbeheersysteem, een samenwerkingsplatform of een andere toepassing waarbij documentannotatie essentieel is, Groupdocs.Annotation vereenvoudigt het proces met zijn uitgebreide reeks functies en intuïtieve API.
 In deze tutorial gaan we dieper in op een van de fundamentele functionaliteiten van Groupdocs.Annotation voor .NET: het toevoegen van een tekstveldannotatie aan een document. Door deze stapsgewijze handleiding te volgen, leert u hoe u tekstveldannotaties naadloos kunt integreren in uw .NET-toepassingen, waardoor de gebruikerservaring en samenwerkingsmogelijkheden worden verbeterd.

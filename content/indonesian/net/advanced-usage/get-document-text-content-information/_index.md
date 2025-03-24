@@ -6,6 +6,9 @@ description: Beri anotasi pada dokumen secara lancar dengan GroupDocs.Annotation
 weight: 17
 url: /id/net/advanced-usage/get-document-text-content-information/
 ---
+
+# Dapatkan Informasi Konten Teks Dokumen
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah alat canggih yang memungkinkan pengembang mengintegrasikan fungsi anotasi ke dalam aplikasi .NET mereka dengan lancar. Baik Anda sedang membangun sistem manajemen dokumen, platform kolaborasi, atau aplikasi lain apa pun yang memerlukan anotasi dokumen, GroupDocs.Annotation untuk .NET menyederhanakan proses dengan serangkaian fitur komprehensif dan API yang mudah digunakan.
 ## Prasyarat

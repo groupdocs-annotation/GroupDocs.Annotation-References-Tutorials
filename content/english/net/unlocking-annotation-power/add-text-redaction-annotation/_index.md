@@ -6,6 +6,9 @@ description: Learn how to add text redaction annotations to PDF documents using 
 weight: 23
 url: /net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Add Text Redaction Annotation to Document
+
 ## Introduction
 Adding a text redaction annotation to a document can be a crucial step in securely managing sensitive information. GroupDocs.Annotation for .NET provides a robust solution to achieve this seamlessly. In this tutorial, we'll guide you through the process of adding a text redaction annotation to your document step by step.
 ## Prerequisites

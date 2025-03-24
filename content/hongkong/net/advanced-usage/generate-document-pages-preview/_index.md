@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 有效地產生文
 weight: 12
 url: /zh-hant/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# 產生文件頁面預覽
+
 ## 介紹
 在文件管理和協作領域，GroupDocs.Annotation for .NET 是一款脫穎而出的多功能工具。無論您是希望將註釋功能整合到應用程式中的開發人員，還是尋求高效文件協作的業務用戶，GroupDocs.Annotation 都能提供全面的解決方案。本教學將引導您完成使用 GroupDocs.Annotation for .NET 產生文件頁面預覽的過程，並將每個步驟分解為易於理解的區塊。
 ## 先決條件

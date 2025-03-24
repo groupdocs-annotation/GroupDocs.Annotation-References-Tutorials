@@ -6,6 +6,9 @@ description: Learn how to enhance image quality in PDF files using Groupdocs.Ann
 weight: 10
 url: /net/advanced-usage/change-image-quality/
 ---
+
+# Change Image Quality
+
 ## Introduction
 In today's digital age, the quality of images within PDF documents can significantly impact user experience and document readability. With Groupdocs.Annotation for .NET, a powerful library designed for .NET developers, enhancing image quality in PDF files becomes a straightforward task. In this tutorial, we'll delve into the step-by-step process of improving image quality using this versatile tool.
 ## Prerequisites

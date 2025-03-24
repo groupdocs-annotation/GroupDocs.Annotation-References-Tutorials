@@ -6,6 +6,9 @@ description: Verbessern Sie die Zusammenarbeit an Dokumenten mit Groupdocs.Annot
 weight: 23
 url: /de/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Legen Sie die Auflösung der Dokumentvorschau fest
+
 ## Einführung
 Im heutigen digitalen Zeitalter sind effiziente Dokumentenverwaltung und Zusammenarbeit für Unternehmen und Privatpersonen gleichermaßen von größter Bedeutung. Angesichts der Fülle an Dokumenten, die täglich im Umlauf sind, kann die Gewährleistung nahtloser Anmerkungs- und Vorschaufunktionen die Produktivität erheblich steigern und Arbeitsabläufe optimieren. Hier kommt Groupdocs.Annotation für .NET ins Spiel – ein leistungsstarkes Toolkit, das Entwickler mit robusten Anmerkungsfunktionen für verschiedene Dokumentformate ausstatten soll.
 ## Voraussetzungen

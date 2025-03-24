@@ -6,6 +6,9 @@ url: /ja/net/
 description: チュートリアルを使用して、GroupDocs.Annotation for .NET の可能性を最大限に引き出します。シームレスに統合し、コラボレーションを強化し、ワークフローを合理化します。
 is_root: true
 ---
+
+# .NET の GroupDocs.Annotation のチュートリアルと例
+
 ## 導入
 
 GroupDocs.Annotation for .NET は、開発者が強力な注釈機能を .NET アプリケーションに統合するための堅牢なプラットフォームを提供します。初心者でも経験豊富な開発者でも、私たちのチュートリアルでは、GroupDocs.Annotation for .NET の可能性を最大限に活用するために知っておくべきことをすべてカバーしています。

@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till textunderstrukna kommentarer i dokumen
 weight: 27
 url: /sv/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Lägg till text understruken kommentar i dokumentet
+
 ## Introduktion
 I den här självstudien går vi igenom processen att lägga till en understruken text i ett dokument med GroupDocs.Annotation för .NET. Textunderstrukna kommentarer kan vara användbara för att framhäva specifika delar av ett dokument, till exempel viktiga stycken eller nyckelpunkter.
 ## Förutsättningar

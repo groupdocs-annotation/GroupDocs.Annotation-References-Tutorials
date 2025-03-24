@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメントに�
 weight: 17
 url: /ja/net/advanced-usage/get-document-text-content-information/
 ---
+
+# ドキュメントのテキストコンテンツ情報を取得する
+
 ## 導入
 GroupDocs.Annotation for .NET は、開発者が注釈機能を .NET アプリケーションにシームレスに統合できるようにする強力なツールです。ドキュメント管理システム、コラボレーション プラットフォーム、またはドキュメントの注釈を必要とするその他のアプリケーションを構築している場合でも、GroupDocs.Annotation for .NET は、その包括的な機能セットと使いやすい API によってプロセスを簡素化します。
 ## 前提条件

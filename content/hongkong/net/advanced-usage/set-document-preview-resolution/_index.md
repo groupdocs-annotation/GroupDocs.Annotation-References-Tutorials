@@ -6,6 +6,9 @@ description: 使用 Groupdocs.Annotation for .NET 提昇文件協作，無縫簡
 weight: 23
 url: /zh-hant/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# 設定文件預覽分辨率
+
 ## 介紹
 在當今的數位時代，高效的文件管理和協作對於企業和個人都至關重要。由於每天都有大量文件流通，確保無縫註釋和預覽功能可以顯著提高生產力並簡化工作流程。 Groupdocs.Annotation for .NET 是一個強大的工具包，旨在為開發人員提供各種文件格式的強大註釋功能。
 ## 先決條件

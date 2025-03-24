@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích mũi tên vào tài liệu củ
 weight: 11
 url: /vi/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Thêm chú thích mũi tên vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm chú thích mũi tên vào tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Chú thích mũi tên rất hữu ích để chỉ hướng hoặc chỉ ra các phần tử cụ thể trong tài liệu.
 ## Điều kiện tiên quyết

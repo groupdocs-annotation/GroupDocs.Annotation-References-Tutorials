@@ -6,6 +6,9 @@ description: Aprenda como importar anotações de documentos em .NET usando Grou
 weight: 19
 url: /pt/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Importar anotações do documento
+
 ## Introdução
 No domínio do desenvolvimento .NET, GroupDocs.Annotation se destaca como uma ferramenta versátil para integrar recursos de anotação em seus aplicativos. Esteja você procurando adicionar comentários, destacar texto ou desenhar formas em documentos, o GroupDocs.Annotation for .NET oferece uma solução abrangente. Este tutorial irá guiá-lo através do processo de importação de anotações de um documento usando GroupDocs.Annotation, passo a passo.
 ## Pré-requisitos

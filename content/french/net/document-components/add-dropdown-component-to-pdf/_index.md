@@ -6,6 +6,9 @@ description: Découvrez comment ajouter des composants déroulants aux PDF à l'
 weight: 12
 url: /fr/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Ajouter un composant déroulant au document PDF
+
 ## Introduction
 GroupDocs.Annotation pour .NET fournit un ensemble d'outils puissants pour annoter des documents PDF par programmation. Une fonctionnalité utile est la possibilité d'ajouter des composants déroulants aux documents PDF, améliorant ainsi leur interactivité et leur convivialité.
 ## Conditions préalables

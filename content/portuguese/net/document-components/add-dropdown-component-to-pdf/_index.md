@@ -6,6 +6,9 @@ description: Aprenda como adicionar componentes suspensos a PDFs usando GroupDoc
 weight: 12
 url: /pt/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Adicionar componente suspenso ao documento PDF
+
 ## Introdução
 GroupDocs.Annotation for .NET fornece um poderoso conjunto de ferramentas para anotar documentos PDF de forma programática. Um recurso útil é a capacidade de adicionar componentes suspensos a documentos PDF, melhorando sua interatividade e usabilidade.
 ## Pré-requisitos

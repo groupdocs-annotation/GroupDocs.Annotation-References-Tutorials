@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak PDF'lere açılır bile�
 weight: 12
 url: /tr/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# PDF Belgesine Açılır Bileşen Ekleme
+
 ## giriiş
 GroupDocs.Annotation for .NET, PDF belgelerine programlı olarak açıklama eklemek için güçlü bir araç seti sağlar. Yararlı özelliklerden biri, PDF belgelerine açılır bileşenler ekleyerek bunların etkileşimini ve kullanılabilirliğini artırma yeteneğidir.
 ## Önkoşullar

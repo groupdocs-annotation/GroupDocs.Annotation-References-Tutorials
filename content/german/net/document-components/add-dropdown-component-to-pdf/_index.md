@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Dropdown-K
 weight: 12
 url: /de/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Dropdown-Komponente zum PDF-Dokument hinzufügen
+
 ## Einführung
 GroupDocs.Annotation für .NET bietet leistungsstarke Tools zum programmgesteuerten Kommentieren von PDF-Dokumenten. Eine nützliche Funktion ist die Möglichkeit, Dropdown-Komponenten zu PDF-Dokumenten hinzuzufügen und so deren Interaktivität und Benutzerfreundlichkeit zu verbessern.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Pelajari cara menghapus anotasi berdasarkan ID menggunakan GroupDoc
 weight: 11
 url: /id/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Hapus Anotasi berdasarkan ID
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses menghapus anotasi berdasarkan ID mereka menggunakan GroupDocs.Annotation untuk .NET. Anotasi dapat mengacaukan dokumen Anda, dan menghapusnya secara selektif dapat menyederhanakan alur kerja Anda. Kami akan memandu Anda langkah demi langkah, memastikan Anda memahami setiap tahap dengan jelas.
 ## Prasyarat

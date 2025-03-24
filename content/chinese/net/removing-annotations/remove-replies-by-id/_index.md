@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 在 .NET 中按 ID 删除�
 weight: 16
 url: /zh/net/removing-annotations/remove-replies-by-id/
 ---
+
+# 在 .NET 中按 ID 删除回复
+
 ## 介绍
 在 .NET 开发领域，管理文档中的注释的能力对于各种应用程序至关重要。无论您使用的是 PDF、Word 文档还是其他格式，以编程方式操作注释的能力都将开启一个充满可能性的世界。 GroupDocs.Annotation 是处理 .NET 中注释的强大工具之一。
 ## 先决条件

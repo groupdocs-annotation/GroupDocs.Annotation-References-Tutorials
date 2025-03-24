@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Textredakt
 weight: 23
 url: /de/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Textredaktionsanmerkung hinzu
+
 ## Einführung
 Das Hinzufügen einer Textredaktionsanmerkung zu einem Dokument kann ein entscheidender Schritt bei der sicheren Verwaltung sensibler Informationen sein. GroupDocs.Annotation für .NET bietet eine robuste Lösung, um dies nahtlos zu erreichen. In diesem Tutorial führen wir Sie Schritt für Schritt durch den Prozess des Hinzufügens einer Textredaktionsanmerkung zu Ihrem Dokument.
 ## Voraussetzungen

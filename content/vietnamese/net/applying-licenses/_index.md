@@ -6,6 +6,9 @@ description: Khai phá toàn bộ tiềm năng của chú thích tài liệu tro
 weight: 26
 url: /vi/net/applying-licenses/
 ---
+
+# Xin giấy phép
+
 ## Giới thiệu
 
 Bạn có phải là nhà phát triển .NET đang tìm cách nâng cao khả năng chú thích tài liệu của mình không? Đừng tìm đâu xa! GroupDocs.Annotation dành cho .NET cung cấp một bộ công cụ toàn diện để tích hợp liền mạch các tính năng chú thích mạnh mẽ vào ứng dụng của bạn. Trong danh sách hướng dẫn này, chúng tôi sẽ hướng dẫn bạn các phương pháp áp dụng giấy phép khác nhau để khai thác toàn bộ tiềm năng của GroupDocs.Annotation cho .NET.

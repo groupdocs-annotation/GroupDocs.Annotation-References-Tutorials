@@ -6,6 +6,9 @@ description: Tìm hiểu cách tạo bản xem trước trang tài liệu một 
 weight: 12
 url: /vi/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Tạo bản xem trước trang tài liệu
+
 ## Giới thiệu
 Trong lĩnh vực cộng tác và quản lý tài liệu, GroupDocs.Annotation dành cho .NET nổi bật như một công cụ linh hoạt. Cho dù bạn là nhà phát triển đang tìm cách tích hợp các tính năng chú thích vào ứng dụng của mình hay người dùng doanh nghiệp đang tìm cách cộng tác tài liệu hiệu quả, GroupDocs.Annotation đều cung cấp giải pháp toàn diện. Hướng dẫn này sẽ hướng dẫn bạn qua quá trình tạo bản xem trước trang tài liệu bằng GroupDocs.Annotation cho .NET, chia nhỏ từng bước thành các phần dễ hiểu.
 ## Điều kiện tiên quyết

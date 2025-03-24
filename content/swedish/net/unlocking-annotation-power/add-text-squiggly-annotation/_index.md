@@ -6,6 +6,9 @@ description: Lär dig hur du enkelt lägger till snirkliga kommentarer till doku
 weight: 25
 url: /sv/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Lägg till en snirklig textanteckning i dokumentet
+
 ## Introduktion
 
 Groupdocs.Annotation for .NET är ett mångsidigt bibliotek som gör det möjligt för utvecklare att integrera robusta anteckningsfunktioner i sina .NET-applikationer utan ansträngning. Oavsett om du arbetar med PDF-filer, Word-dokument eller andra populära filformat, erbjuder Groupdocs.Annotation en sömlös lösning för att kommentera och förbättra dokumentsamarbetet.

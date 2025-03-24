@@ -6,6 +6,9 @@ description: Pelajari cara meningkatkan kualitas gambar dalam file PDF menggunak
 weight: 10
 url: /id/net/advanced-usage/change-image-quality/
 ---
+
+# Ubah Kualitas Gambar
+
 ## Perkenalan
 Di era digital saat ini, kualitas gambar dalam dokumen PDF dapat berdampak signifikan terhadap pengalaman pengguna dan keterbacaan dokumen. Dengan Groupdocs.Annotation for .NET, perpustakaan canggih yang dirancang untuk pengembang .NET, meningkatkan kualitas gambar dalam file PDF menjadi tugas yang mudah. Dalam tutorial ini, kita akan mempelajari proses langkah demi langkah untuk meningkatkan kualitas gambar menggunakan alat serbaguna ini.
 ## Prasyarat

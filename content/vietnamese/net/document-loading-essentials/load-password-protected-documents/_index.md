@@ -6,6 +6,9 @@ description: Tăng cường cộng tác và đánh giá tài liệu với GroupD
 weight: 17
 url: /vi/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Tải tài liệu được bảo vệ bằng mật khẩu
+
 ## Giới thiệu
 Trong thế giới phát triển nhanh chóng ngày nay, hợp tác là chìa khóa thành công. Cho dù bạn đang làm việc trên một dự án với đồng nghiệp, khách hàng hay đối tác thì khả năng chú thích và chia sẻ tài liệu một cách hiệu quả có thể cải thiện đáng kể năng suất và hợp lý hóa quy trình công việc. GroupDocs.Annotation for .NET cung cấp giải pháp mạnh mẽ để chú thích PDF và các định dạng tài liệu khác trực tiếp trong ứng dụng .NET của bạn, cho phép quá trình cộng tác và xem xét tài liệu liền mạch.
 ## Điều kiện tiên quyết

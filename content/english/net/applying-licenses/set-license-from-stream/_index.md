@@ -6,6 +6,9 @@ description: Unlock the full potential of document annotation in .NET with Group
 weight: 11
 url: /net/applying-licenses/set-license-from-stream/
 ---
+
+# Set License from Stream
+
 ## Introduction
 Welcome to the comprehensive guide on using GroupDocs.Annotation for .NET to enhance your document annotation capabilities. Whether you're a seasoned developer or just starting out, this tutorial will walk you through each step, ensuring you harness the full potential of this powerful tool.
 ## Prerequisites

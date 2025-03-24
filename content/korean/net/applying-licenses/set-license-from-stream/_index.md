@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET에서 문서 주석의 �
 weight: 11
 url: /ko/net/applying-licenses/set-license-from-stream/
 ---
+
+# 스트림에서 라이선스 설정
+
 ## 소개
 .NET용 GroupDocs.Annotation을 사용하여 문서 주석 기능을 향상시키는 방법에 대한 포괄적인 가이드에 오신 것을 환영합니다. 숙련된 개발자이든 이제 막 시작하는 개발자이든 이 튜토리얼에서는 각 단계를 안내하여 이 강력한 도구의 잠재력을 최대한 활용할 수 있도록 도와드립니다.
 ## 전제 조건

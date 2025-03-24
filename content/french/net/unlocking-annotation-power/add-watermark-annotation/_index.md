@@ -6,6 +6,9 @@ description: Découvrez comment ajouter facilement des annotations en filigrane 
 weight: 28
 url: /fr/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Ajouter une annotation en filigrane au document
+
 ## Introduction
 Dans ce didacticiel, nous allons parcourir le processus d'ajout d'une annotation en filigrane à un document à l'aide de GroupDocs.Annotation pour .NET. Les annotations en filigrane sont utiles pour indiquer le statut d'un document, le marquer comme confidentiel ou ajouter toute autre information pertinente.
 

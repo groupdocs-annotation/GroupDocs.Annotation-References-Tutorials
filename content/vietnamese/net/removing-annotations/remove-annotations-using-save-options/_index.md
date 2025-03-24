@@ -6,6 +6,9 @@ description: Tìm hiểu cách xóa chú thích khỏi PDF và các tài liệu 
 weight: 14
 url: /vi/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# Xóa chú thích bằng tùy chọn lưu trong .NET
+
 ## Giới thiệu
 
 GroupDocs.Annotation for .NET là một công cụ mạnh mẽ cho phép các nhà phát triển thêm chức năng chú thích vào các ứng dụng .NET của họ một cách dễ dàng. Cho dù bạn đang làm việc trên hệ thống quản lý tài liệu, nền tảng cộng tác hay bất kỳ ứng dụng nào khác liên quan đến xử lý tài liệu, GroupDocs.Annotation đều cung cấp một bộ tính năng toàn diện để chú thích liền mạch các định dạng PDF và tài liệu khác.

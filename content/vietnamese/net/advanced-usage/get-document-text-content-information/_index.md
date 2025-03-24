@@ -6,6 +6,9 @@ description: Chú thích tài liệu một cách liền mạch với GroupDocs.A
 weight: 17
 url: /vi/net/advanced-usage/get-document-text-content-information/
 ---
+
+# Nhận thông tin nội dung văn bản tài liệu
+
 ## Giới thiệu
 GroupDocs.Annotation dành cho .NET là một công cụ mạnh mẽ cho phép các nhà phát triển tích hợp liền mạch các chức năng chú thích vào các ứng dụng .NET của họ. Cho dù bạn đang xây dựng hệ thống quản lý tài liệu, nền tảng cộng tác hay bất kỳ ứng dụng nào khác yêu cầu chú thích tài liệu, GroupDocs.Annotation dành cho .NET sẽ đơn giản hóa quy trình bằng bộ tính năng toàn diện và API dễ sử dụng.
 ## Điều kiện tiên quyết

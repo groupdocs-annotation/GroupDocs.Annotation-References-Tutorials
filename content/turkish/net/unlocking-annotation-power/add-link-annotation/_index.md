@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET'i kullanarak belgelere bağlantı aç
 weight: 16
 url: /tr/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Belgeye Bağlantı Açıklaması Ekle
+
 ## giriiş
 Groupdocs.Annotation for .NET, geliştiricilerin kapsamlı açıklama işlevlerini .NET uygulamalarına zahmetsizce entegre etmelerini sağlayan güçlü bir kitaplıktır. Sunduğu temel özelliklerden biri, belgelere bağlantı açıklamaları ekleyerek işbirliğini ve etkileşimi geliştirme yeteneğidir.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: Aprenda como recuperar todas as chaves de versão em um documento u
 weight: 16
 url: /pt/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Obtenha todas as chaves de versão no documento
+
 ## Introdução
 No mundo digital acelerado de hoje, a gestão documental eficaz é crucial tanto para empresas como para indivíduos. Esteja você colaborando em projetos, revisando contratos ou simplesmente organizando seus arquivos, ter as ferramentas certas pode fazer toda a diferença. GroupDocs.Annotation for .NET oferece uma solução abrangente para anotar e manipular documentos em aplicativos .NET. Neste tutorial, exploraremos como aproveitar GroupDocs.Annotation for .NET para recuperar todas as chaves de versão em um documento.
 ## Pré-requisitos

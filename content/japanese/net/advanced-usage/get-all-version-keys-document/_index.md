@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメント上�
 weight: 16
 url: /ja/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# ドキュメント上のすべてのバージョン キーを取得する
+
 ## 導入
 今日のペースの速いデジタル世界では、効果的な文書管理は企業にとっても個人にとっても同様に重要です。プロジェクトで共同作業している場合でも、契約書を確認している場合でも、単にファイルを整理している場合でも、適切なツールがあれば大きな違いが生まれます。 GroupDocs.Annotation for .NET は、.NET アプリケーション内でドキュメントに注釈を付け、操作するための包括的なソリューションを提供します。このチュートリアルでは、GroupDocs.Annotation for .NET を利用してドキュメント上のすべてのバージョン キーを取得する方法を検討します。
 ## 前提条件

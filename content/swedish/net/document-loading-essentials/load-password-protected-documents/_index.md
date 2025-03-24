@@ -6,6 +6,9 @@ description: Förbättra samarbete och dokumentgranskning med GroupDocs.Annotati
 weight: 17
 url: /sv/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Ladda lösenordsskyddade dokument
+
 ## Introduktion
 dagens snabba värld är samarbete nyckeln till framgång. Oavsett om du arbetar med ett projekt med kollegor, kunder eller partners, kan förmågan att kommentera och dela dokument effektivt förbättra produktiviteten och effektivisera arbetsflöden. GroupDocs.Annotation for .NET erbjuder en kraftfull lösning för att kommentera PDF och andra dokumentformat direkt i dina .NET-applikationer, vilket möjliggör sömlösa samarbets- och dokumentgranskningsprocesser.
 ## Förutsättningar

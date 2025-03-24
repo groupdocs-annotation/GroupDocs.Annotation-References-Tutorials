@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan komponen tarik-turun ke PDF menggunakan G
 weight: 12
 url: /id/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Tambahkan Komponen Dropdown ke Dokumen PDF
+
 ## Perkenalan
 GroupDocs.Annotation for .NET menyediakan seperangkat alat canggih untuk membuat anotasi dokumen PDF secara terprogram. Salah satu fitur yang berguna adalah kemampuan untuk menambahkan komponen dropdown ke dokumen PDF, sehingga meningkatkan interaktivitas dan kegunaannya.
 ## Prasyarat

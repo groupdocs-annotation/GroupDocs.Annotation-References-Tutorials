@@ -6,6 +6,9 @@ description: Tìm hiểu cách xóa câu trả lời cho chú thích trong .NET 
 weight: 15
 url: /vi/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# Xóa câu trả lời cho chú thích trong .NET
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng ta sẽ khám phá cách xóa câu trả lời cho các chú thích trong .NET bằng GroupDocs.Annotation. GroupDocs.Annotation là một thư viện .NET mạnh mẽ cho phép các nhà phát triển chú thích tài liệu một cách dễ dàng. Cho dù đó là thêm nhận xét, đánh dấu văn bản hay thêm tem, GroupDocs.Annotation đều cung cấp một bộ công cụ toàn diện để chú thích tài liệu.
 ## Điều kiện tiên quyết

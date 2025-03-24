@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan fűzhet programozott megjegyzéseket PDF-dokume
 weight: 15
 url: /hu/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Dokumentum betöltése az URL-ről
+
 ## Bevezetés
 GroupDocs.Annotation for .NET egy olyan funkciókban gazdag könyvtár, amely lehetővé teszi a fejlesztők számára, hogy .NET-alkalmazásaikat könnyedén annotációs képességekkel adják hozzá. A GroupDocs.Annotation segítségével programozottan megjegyzéseket fűzhet a PDF-dokumentumokhoz, így a felhasználók szöveget emelhetnek ki, megjegyzéseket fűzhetnek hozzá, alakzatokat rajzolhatnak stb. Ez az oktatóanyag végigvezeti a dokumentum URL-ből való betöltésének, megjegyzések hozzáadásának és a megjegyzésekkel ellátott dokumentum mentésének lépésein a GroupDocs.Annotation for .NET segítségével.
 ## Előfeltételek

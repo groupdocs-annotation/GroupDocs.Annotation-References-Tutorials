@@ -6,6 +6,9 @@ description: Zjistěte, jak přidat poznámky ke zvýraznění textu do dokument
 weight: 22
 url: /cs/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Přidejte do dokumentu anotaci se zvýrazněním textu
+
 ## Úvod
 oblasti správy dokumentů a spolupráce se GroupDocs.Annotation for .NET ukazuje jako robustní řešení, které umožňuje vývojářům bezproblémově integrovat poznámky se zvýrazněním textu do svých aplikací. Tento výukový program slouží jako komplexní průvodce přidáváním textových zvýrazněných anotací do dokumentů pomocí GroupDocs.Annotation pro .NET. Prostřednictvím podrobných pokynů a podrobných vysvětlení získáte odbornost ve využívání schopností této výkonné knihovny.
 ## Předpoklady

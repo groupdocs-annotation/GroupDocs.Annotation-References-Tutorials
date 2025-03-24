@@ -6,6 +6,9 @@ description: Découvrez comment ajouter des annotations soulignées de texte à 
 weight: 27
 url: /fr/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Ajouter une annotation de soulignement de texte au document
+
 ## Introduction
 Dans ce didacticiel, nous allons parcourir le processus d'ajout d'une annotation de soulignement de texte à un document à l'aide de GroupDocs.Annotation pour .NET. Les annotations soulignées de texte peuvent être utiles pour mettre en valeur des parties spécifiques d'un document, telles que des passages importants ou des points clés.
 ## Conditions préalables

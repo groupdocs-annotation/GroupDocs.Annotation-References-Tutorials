@@ -6,6 +6,9 @@ description: Aprenda como melhorar a qualidade da imagem em arquivos PDF usando 
 weight: 10
 url: /pt/net/advanced-usage/change-image-quality/
 ---
+
+# Alterar qualidade da imagem
+
 ## Introdução
 Na era digital de hoje, a qualidade das imagens nos documentos PDF pode impactar significativamente a experiência do usuário e a legibilidade do documento. Com Groupdocs.Annotation for .NET, uma biblioteca poderosa projetada para desenvolvedores .NET, melhorar a qualidade da imagem em arquivos PDF torna-se uma tarefa simples. Neste tutorial, nos aprofundaremos no processo passo a passo para melhorar a qualidade da imagem usando esta ferramenta versátil.
 ## Pré-requisitos

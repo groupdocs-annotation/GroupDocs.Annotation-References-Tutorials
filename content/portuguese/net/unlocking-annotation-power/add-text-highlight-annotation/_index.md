@@ -6,6 +6,9 @@ description: Aprenda como adicionar anotações de destaque de texto a documento
 weight: 22
 url: /pt/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Adicionar anotação de destaque de texto ao documento
+
 ## Introdução
 No domínio do gerenciamento e colaboração de documentos, o GroupDocs.Annotation for .NET surge como uma solução robusta, capacitando os desenvolvedores a integrarem perfeitamente anotações de destaque de texto em seus aplicativos. Este tutorial serve como um guia abrangente para adicionar anotações de destaque de texto a documentos usando GroupDocs.Annotation for .NET. Através de instruções passo a passo e explicações detalhadas, você ganhará proficiência no aproveitamento dos recursos desta poderosa biblioteca.
 ## Pré-requisitos

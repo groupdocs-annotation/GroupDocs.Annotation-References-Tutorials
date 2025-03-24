@@ -6,6 +6,9 @@ description: Tìm hiểu cách xóa chú thích khỏi tài liệu PDF bằng Gr
 weight: 10
 url: /vi/net/removing-annotations/remove-annotations/
 ---
+
+# Xóa chú thích trong .NET
+
 ## Giới thiệu
 Chú thích đóng một vai trò quan trọng trong việc quản lý tài liệu kỹ thuật số, cho phép người dùng đánh dấu, nhận xét và đánh dấu các phần quan trọng trong tệp. Tuy nhiên, có thể sẽ có lúc bạn cần xóa chú thích khỏi tài liệu. Trong hướng dẫn này, chúng ta sẽ khám phá cách xóa chú thích trong .NET bằng Groupdocs.Annotation, một công cụ mạnh mẽ để chú thích và thao tác tài liệu.
 ## Điều kiện tiên quyết

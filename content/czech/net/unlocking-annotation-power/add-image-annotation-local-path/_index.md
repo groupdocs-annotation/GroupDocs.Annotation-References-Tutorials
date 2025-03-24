@@ -6,6 +6,9 @@ description: Naučte se přidávat popisky obrázků do dokumentů pomocí Group
 weight: 14
 url: /cs/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Přidat k dokumentu poznámku obrázku (místní cesta)
+
 ## Úvod
 GroupDocs.Annotation for .NET je výkonná knihovna, která umožňuje vývojářům přidávat do dokumentů různé typy anotací programově. V tomto tutoriálu se naučíme, jak přidat do dokumentu anotace obrázků pomocí místní cesty.
 ## Předpoklady

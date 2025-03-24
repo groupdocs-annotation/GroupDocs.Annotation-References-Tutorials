@@ -6,6 +6,9 @@ url: /pt/net/
 description: Desbloqueie todo o potencial do GroupDocs.Annotation for .NET com nossos tutoriais. Integre perfeitamente, aprimore a colaboração e simplifique os fluxos de trabalho.
 is_root: true
 ---
+
+# Tutoriais e exemplos de GroupDocs.Annotation para .NET
+
 ## Introdução
 
 GroupDocs.Annotation for .NET fornece uma plataforma robusta para desenvolvedores integrarem poderosos recursos de anotação em seus aplicativos .NET. Quer você seja um desenvolvedor iniciante ou experiente, nossos tutoriais cobrem tudo o que você precisa saber para aproveitar todo o potencial do GroupDocs.Annotation for .NET.

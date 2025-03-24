@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak .NET'teki belgelerden ek açıkl
 weight: 19
 url: /tr/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Belgeden Ek Açıklamaları İçe Aktar
+
 ## giriiş
 .NET geliştirme alanında, GroupDocs.Annotation, açıklama özelliklerini uygulamalarınıza entegre etmek için çok yönlü bir araç olarak duruyor. Belgelere yorum eklemek, metni vurgulamak veya şekil çizmek istiyorsanız GroupDocs.Annotation for .NET kapsamlı bir çözüm sunar. Bu eğitim, GroupDocs.Annotation'ı kullanarak bir belgeden ek açıklamaları içe aktarma sürecinde size adım adım rehberlik edecektir.
 ## Önkoşullar

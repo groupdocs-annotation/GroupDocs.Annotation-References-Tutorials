@@ -6,6 +6,9 @@ description: Poznaj możliwości GroupDocs.Annotation dla .NET i bez wysiłku do
 weight: 20
 url: /pl/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Dodaj adnotację fragmentu wyszukiwania do dokumentu
+
 ## Wstęp
 W dziedzinie programowania .NET GroupDocs.Annotation wyróżnia się jako potężne narzędzie do płynnego dodawania adnotacji do dokumentów. Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero wkraczasz w świat .NET, ten kompleksowy samouczek przeprowadzi Cię przez podstawy korzystania z GroupDocs.Annotation dla .NET, od importowania przestrzeni nazw po opanowanie zawiłości dodawania adnotacji fragmentów wyszukiwanego tekstu do dokumenty.
 ## Wstęp

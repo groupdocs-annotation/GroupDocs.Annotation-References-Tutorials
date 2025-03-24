@@ -6,6 +6,9 @@ description: Verbessern Sie die Zusammenarbeit und Dokumentenprüfung mit GroupD
 weight: 17
 url: /de/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Laden Sie passwortgeschützte Dokumente
+
 ## Einführung
 In der heutigen schnelllebigen Welt ist Zusammenarbeit der Schlüssel zum Erfolg. Unabhängig davon, ob Sie mit Kollegen, Kunden oder Partnern an einem Projekt arbeiten, kann die Möglichkeit, Dokumente effizient zu kommentieren und zu teilen, die Produktivität erheblich steigern und Arbeitsabläufe optimieren. GroupDocs.Annotation für .NET bietet eine leistungsstarke Lösung zum Kommentieren von PDF- und anderen Dokumentformaten direkt in Ihren .NET-Anwendungen und ermöglicht so eine nahtlose Zusammenarbeit und Dokumentüberprüfungsprozesse.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích gạch chân văn bản vào t�
 weight: 27
 url: /vi/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Thêm chú thích gạch chân văn bản vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng ta sẽ tìm hiểu quy trình thêm chú thích gạch chân văn bản vào tài liệu bằng GroupDocs.Annotation cho .NET. Chú thích gạch chân văn bản có thể hữu ích để nhấn mạnh các phần cụ thể của tài liệu, chẳng hạn như các đoạn văn quan trọng hoặc các điểm chính.
 ## Điều kiện tiên quyết

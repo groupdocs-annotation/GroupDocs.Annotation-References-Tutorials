@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 將文字欄位註
 weight: 21
 url: /zh-hant/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# 將文字欄位註解新增至文檔
+
 ## 介紹
 Groupdocs.Annotation for .NET 是一個功能強大的工具，可讓開發人員輕鬆地將註解功能新增至他們的 .NET 應用程式。無論您是在開發文件管理系統、協作平台，還是任何需要文件註釋的應用程序，Groupdocs.Annotation 都可以透過其全面的功能集和直覺的 API 簡化流程。
 在本教學中，我們將深入研究 .NET 的 Groupdocs.Annotation 的基本功能之一：在文件中新增文字欄位註解。透過遵循此逐步指南，您將了解如何將文字欄位註解無縫整合到 .NET 應用程式中，從而增強使用者體驗和協作功能。

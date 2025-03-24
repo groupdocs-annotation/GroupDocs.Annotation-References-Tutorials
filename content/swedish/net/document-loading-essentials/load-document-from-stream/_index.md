@@ -6,6 +6,9 @@ description: Lär dig hur du enkelt kommenterar dokument i .NET med GroupDocs.An
 weight: 14
 url: /sv/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Ladda dokument från Stream
+
 ## Introduktion
 GroupDocs.Annotation for .NET är ett kraftfullt bibliotek som ger utvecklare möjlighet att integrera dokumentkommentarer i sina .NET-applikationer utan ansträngning. Oavsett om du bygger ett dokumenthanteringssystem, en samarbetsplattform eller en e-learning-applikation, tillhandahåller GroupDocs.Annotation en mångsidig uppsättning verktyg för att kommentera PDF-filer, Word-dokument, Excel-ark och mer.
 ## Förutsättningar

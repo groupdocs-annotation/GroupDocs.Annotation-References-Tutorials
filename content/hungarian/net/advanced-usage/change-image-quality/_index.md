@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan javíthatja a PDF-fájlok képminőségét a Gr
 weight: 10
 url: /hu/net/advanced-usage/change-image-quality/
 ---
+
+# Képminőség módosítása
+
 ## Bevezetés
 A mai digitális korban a PDF-dokumentumokban lévő képek minősége jelentősen befolyásolhatja a felhasználói élményt és a dokumentumok olvashatóságát. A Groupdocs.Annotation for .NET segítségével, amely a .NET-fejlesztők számára készült hatékony könyvtár, a PDF-fájlok képminőségének javítása egyszerű feladattá válik. Ebben az oktatóanyagban lépésről lépésre elmélyítjük a képminőség javításának folyamatát ezzel a sokoldalú eszközzel.
 ## Előfeltételek

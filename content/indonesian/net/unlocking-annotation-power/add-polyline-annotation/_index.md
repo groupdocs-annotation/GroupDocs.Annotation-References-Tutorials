@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi polyline ke dokumen menggunakan G
 weight: 18
 url: /id/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Tambahkan Anotasi Polyline ke Dokumen
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah alat canggih yang memungkinkan pengembang membuat anotasi dokumen PDF dan Microsoft Office secara terprogram. Di antara fitur-fiturnya adalah kemampuan untuk menambahkan anotasi polyline ke dokumen, meningkatkan kolaborasi dan proses peninjauan dokumen.
 ## Prasyarat

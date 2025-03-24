@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して、.NET でのドキュメン�
 weight: 11
 url: /ja/net/applying-licenses/set-license-from-stream/
 ---
+
+# ストリームからライセンスを設定
+
 ## 導入
 GroupDocs.Annotation for .NET を使用してドキュメントの注釈機能を強化するための包括的なガイドへようこそ。経験豊富な開発者でも、初心者でも、このチュートリアルでは各ステップを順を追って説明し、この強力なツールの可能性を最大限に活用できるようにします。
 ## 前提条件

@@ -6,6 +6,9 @@ description: Verbessern Sie Ihre Zusammenarbeit an Dokumenten mit Groupdocs.Anno
 weight: 10
 url: /de/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Bereichsanmerkung zum Dokument hinzufügen
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Hinzufügens von Bereichsanmerkungen zu Dokumenten mithilfe von Groupdocs.Annotation für .NET. Bereichsanmerkungen sind eine wertvolle Funktion, die es Benutzern ermöglicht, bestimmte Bereiche eines Dokuments hervorzuheben und so für Klarheit und Kontext zum Inhalt zu sorgen.
 ## Voraussetzungen

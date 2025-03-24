@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 增強文件管理工作流程
 weight: 19
 url: /zh-hant/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# 將資源編輯註釋新增至文檔
+
 ## 介紹
 在 .NET 開發領域，整合高效的文件註解工具可以顯著提高生產力並簡化工作流程。 GroupDocs.Annotation for .NET 作為一個強大的解決方案出現，提供了大量的功能來無縫註釋和操作文件。本教學深入探討了整合和利用資源修訂註解的過程，這是 GroupDocs.Annotation for .NET 中的強大功能。
 ## 先決條件

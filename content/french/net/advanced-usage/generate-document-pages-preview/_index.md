@@ -6,6 +6,9 @@ description: Découvrez comment générer efficacement un aperçu des pages d'un
 weight: 12
 url: /fr/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Générer un aperçu des pages du document
+
 ## Introduction
 Dans le domaine de la gestion documentaire et de la collaboration, GroupDocs.Annotation for .NET se distingue comme un outil polyvalent. Que vous soyez un développeur cherchant à intégrer des fonctionnalités d'annotation dans votre application ou un utilisateur professionnel recherchant une collaboration documentaire efficace, GroupDocs.Annotation fournit une solution complète. Ce didacticiel vous guidera tout au long du processus de génération d'un aperçu des pages de document à l'aide de GroupDocs.Annotation pour .NET, en décomposant chaque étape en morceaux facilement digestibles.
 ## Conditions préalables

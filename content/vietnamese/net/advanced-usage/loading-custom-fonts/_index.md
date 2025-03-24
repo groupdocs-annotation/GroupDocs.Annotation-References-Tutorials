@@ -6,6 +6,9 @@ description: Tìm hiểu cách tải liền mạch các phông chữ tùy chỉn
 weight: 20
 url: /vi/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Đang tải phông chữ tùy chỉnh
+
 ## Giới thiệu
 GroupDocs.Annotation for .NET là một thư viện mạnh mẽ cho phép các nhà phát triển thêm các tính năng chú thích vào ứng dụng .NET của họ một cách dễ dàng. Một trong những chức năng chính mà nó cung cấp là khả năng tải phông chữ tùy chỉnh, cho phép tùy chỉnh nâng cao và tính linh hoạt trong chú thích tài liệu.
 ## Điều kiện tiên quyết

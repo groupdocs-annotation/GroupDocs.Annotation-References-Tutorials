@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 �
 weight: 22
 url: /ko/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# 문서에 텍스트 강조 주석 추가
+
 ## 소개
 문서 관리 및 공동 작업 영역에서 .NET용 GroupDocs.Annotation은 개발자가 텍스트 강조 주석을 응용 프로그램에 원활하게 통합할 수 있도록 지원하는 강력한 솔루션으로 등장합니다. 이 튜토리얼은 .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 강조 주석을 추가하는 방법에 대한 포괄적인 가이드 역할을 합니다. 단계별 지침과 자세한 설명을 통해 이 강력한 라이브러리의 기능을 활용하는 데 능숙해질 것입니다.
 ## 전제 조건

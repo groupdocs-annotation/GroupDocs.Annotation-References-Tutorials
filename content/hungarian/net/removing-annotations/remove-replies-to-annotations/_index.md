@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan távolíthatja el a megjegyzésekre adott vála
 weight: 15
 url: /hu/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# Távolítsa el a válaszokat a megjegyzésekre a .NET-ben
+
 ## Bevezetés
 Ebben az oktatóanyagban megvizsgáljuk, hogyan távolíthatjuk el a megjegyzésekre adott válaszokat a .NET-ben a GroupDocs.Annotation segítségével. A GroupDocs.Annotation egy hatékony .NET-könyvtár, amely lehetővé teszi a fejlesztők számára, hogy könnyedén megjegyzéseket fűzzenek a dokumentumokhoz. Legyen szó megjegyzések hozzáfűzéséről, szöveg kiemeléséről vagy bélyegzésről, a GroupDocs.Annotation átfogó eszköztárat biztosít a dokumentumok kommentálásához.
 ## Előfeltételek

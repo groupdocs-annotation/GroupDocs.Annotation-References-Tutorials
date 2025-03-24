@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation 释放 .NET 中文档注释的全部潜
 weight: 26
 url: /zh/net/applying-licenses/
 ---
+
+# 申请许可证
+
 ## 介绍
 
 您是一位希望增强文档注释功能的 .NET 开发人员吗？别再犹豫了！ GroupDocs.Annotation for .NET 提供了一套全面的工具，可将强大的注释功能无缝集成到您的应用程序中。在本教程列表中，我们将引导您了解应用许可证的各种方法，以释放 GroupDocs.Annotation for .NET 的全部潜力。

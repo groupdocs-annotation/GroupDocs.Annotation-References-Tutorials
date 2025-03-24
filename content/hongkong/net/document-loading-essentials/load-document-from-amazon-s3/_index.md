@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 以程式設計方
 weight: 10
 url: /zh-hant/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# 從 Amazon S3 載入文檔
+
 ## 介紹
 在當今的數位時代，文件管理對於企業和個人都至關重要。 Groupdocs.Annotation for .NET 提供了一個強大的解決方案，用於以程式設計方式註釋文檔，使開發人員能夠增強文檔協作並簡化工作流程。在本教程中，我們將深入研究使用 Groupdocs.Annotation for .NET 的基礎知識，將每個範例分解為多個步驟，以引導您無縫地完成流程。
 ## 先決條件

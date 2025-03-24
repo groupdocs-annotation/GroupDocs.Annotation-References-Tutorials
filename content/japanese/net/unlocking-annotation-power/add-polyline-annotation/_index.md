@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメントに�
 weight: 18
 url: /ja/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# ポリライン注釈をドキュメントに追加
+
 ## 導入
 GroupDocs.Annotation for .NET は、開発者が PDF および Microsoft Office ドキュメントにプログラムで注釈を付けることができる強力なツールです。その機能には、ドキュメントにポリライン注釈を追加する機能があり、コラボレーションとドキュメント レビュー プロセスが強化されます。
 ## 前提条件

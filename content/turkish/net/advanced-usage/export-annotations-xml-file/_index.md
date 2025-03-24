@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak XML dosyalarından ek a�
 weight: 11
 url: /tr/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# XML Dosyasından Ek Açıklamaları Dışa Aktarma
+
 ## giriiş
 Günümüzün dijital çağında, verimli belge yönetimi hem işletmeler hem de bireyler için çok önemlidir. Çok sayıda mevcut araçla GroupDocs.Annotation for .NET, PDF dosyalarına açıklama eklemek ve bunları yönetmek için güvenilir bir çözüm olarak öne çıkıyor. Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak XML dosyalarından ek açıklamaları dışa aktarma sürecini ayrıntılı olarak ele alacağız. Bu kılavuzun sonunda, ek açıklamaları sorunsuz bir şekilde dışa aktarma ve belge yönetimi iş akışınızı geliştirme bilgisine sahip olacaksınız.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: Découvrez comment ajouter des annotations d'ellipse aux documents 
 weight: 13
 url: /fr/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Ajouter une annotation Ellipse au document
+
 ## Introduction
 Dans ce didacticiel, vous apprendrez à ajouter une annotation ellipse à un document à l'aide de GroupDocs.Annotation pour .NET. Ce guide étape par étape vous guidera tout au long du processus, en veillant à ce que vous compreniez clairement chaque étape.
 ## Conditions préalables

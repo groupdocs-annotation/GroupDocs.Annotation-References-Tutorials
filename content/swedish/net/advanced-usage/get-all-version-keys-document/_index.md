@@ -6,6 +6,9 @@ description: Lär dig hur du hämtar alla versionsnycklar på ett dokument med G
 weight: 16
 url: /sv/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Få alla versionsnycklar på dokument
+
 ## Introduktion
 I dagens snabba digitala värld är effektiv dokumenthantering avgörande för både företag och privatpersoner. Oavsett om du samarbetar i projekt, granskar kontrakt eller helt enkelt organiserar dina filer, kan ha rätt verktyg göra stor skillnad. GroupDocs.Annotation för .NET erbjuder en omfattande lösning för att kommentera och manipulera dokument i .NET-applikationer. I den här handledningen kommer vi att undersöka hur man kan utnyttja GroupDocs.Annotation för .NET för att hämta alla versionsnycklar på ett dokument.
 ## Förutsättningar

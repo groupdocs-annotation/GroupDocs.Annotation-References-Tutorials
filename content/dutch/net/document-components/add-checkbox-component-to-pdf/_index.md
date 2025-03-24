@@ -6,6 +6,9 @@ description: Leer hoe u een Checkbox-component aan PDF-documenten toevoegt met G
 weight: 11
 url: /nl/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Voeg een selectievakje-component toe aan een PDF-document
+
 ## Invoering
 In deze zelfstudie begeleiden we u bij het toevoegen van een Checkbox-component aan een PDF-document met behulp van Groupdocs.Annotation voor .NET.
 ## Vereisten

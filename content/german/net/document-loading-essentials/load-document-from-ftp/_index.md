@@ -6,6 +6,9 @@ description: Erweitern Sie Ihre .NET-Anwendungen mit GroupDocs.Annotation für e
 weight: 12
 url: /de/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# Dokument von FTP laden
+
 ## Einführung
 GroupDocs.Annotation für .NET ist eine vielseitige Bibliothek, die entwickelt wurde, um Dokumentanmerkungsfunktionen in .NET-Anwendungen mühelos zu ermöglichen. Unabhängig davon, ob Sie mit PDFs, Microsoft Office-Dokumenten, Bildern oder anderen Formaten arbeiten, bietet diese Bibliothek eine einheitliche Lösung zum Hinzufügen von Anmerkungen wie Kommentaren, Hervorhebungen und Formen, um die Zusammenarbeit und Dokumentenverwaltung zu verbessern.
 ## Voraussetzungen

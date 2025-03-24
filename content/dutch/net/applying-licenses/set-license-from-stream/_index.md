@@ -6,6 +6,9 @@ description: Ontgrendel het volledige potentieel van documentannotatie in .NET m
 weight: 11
 url: /nl/net/applying-licenses/set-license-from-stream/
 ---
+
+# Licentie instellen vanuit Stream
+
 ## Invoering
 Welkom bij de uitgebreide handleiding over het gebruik van GroupDocs.Annotation voor .NET om uw documentannotatiemogelijkheden te verbeteren. Of u nu een doorgewinterde ontwikkelaar bent of net begint, deze tutorial begeleidt u bij elke stap, zodat u het volledige potentieel van deze krachtige tool kunt benutten.
 ## Vereisten

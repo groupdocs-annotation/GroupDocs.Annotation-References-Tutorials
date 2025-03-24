@@ -6,6 +6,9 @@ description: Dowiedz się, jak usuwać odpowiedzi według identyfikatora w platf
 weight: 16
 url: /pl/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Usuń odpowiedzi według identyfikatora w .NET
+
 ## Wstęp
 dziedzinie programowania .NET możliwość zarządzania adnotacjami w dokumentach ma kluczowe znaczenie dla różnych aplikacji. Niezależnie od tego, czy pracujesz z plikami PDF, dokumentami programu Word czy innymi formatami, możliwość programowego manipulowania adnotacjami otwiera świat możliwości. Jednym z potężnych narzędzi do obsługi adnotacji w .NET jest GroupDocs.Annotation.
 ## Warunki wstępne

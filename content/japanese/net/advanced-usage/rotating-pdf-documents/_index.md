@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET を使用して PDF ドキュメン�
 weight: 22
 url: /ja/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# PDF ドキュメントの回転
+
 ## 導入
 PDF ドキュメントの回転は、別の方法で表示または処理する必要があるファイルを処理する場合に重要なタスクとなることがあります。このチュートリアルでは、Groupdocs.Annotation for .NET を使用して PDF ドキュメントを回転する方法を段階的に説明します。
 ## 前提条件

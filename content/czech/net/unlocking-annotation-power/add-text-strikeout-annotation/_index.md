@@ -6,6 +6,9 @@ description: Naučte se přidávat textové přeškrtnuté anotace do dokumentů
 weight: 26
 url: /cs/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Přidejte do dokumentu poznámku s přeškrtnutím textu
+
 ## Úvod
 tomto tutoriálu prozkoumáme, jak přidat anotaci s přeškrtnutím textu do dokumentu pomocí GroupDocs.Annotation pro .NET. Tato knihovna poskytuje výkonné nástroje pro anotaci různých typů dokumentů, zlepšuje spolupráci a procesy kontroly dokumentů.
 ## Předpoklady

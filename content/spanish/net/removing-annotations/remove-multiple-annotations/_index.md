@@ -6,6 +6,9 @@ description: Aprenda cómo eliminar múltiples anotaciones de manera eficiente e
 weight: 12
 url: /es/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Eliminar múltiples anotaciones en .NET
+
 ## Introducción
 Las anotaciones desempeñan un papel crucial en la gestión de documentos, mejorando la colaboración y la comunicación. Sin embargo, hay casos en los que es posible que necesite eliminar varias anotaciones de manera eficiente dentro de su aplicación .NET. En este tutorial, profundizaremos en cómo lograr esto usando GroupDocs.Annotation para .NET. ¡Empecemos!
 ## Requisitos previos

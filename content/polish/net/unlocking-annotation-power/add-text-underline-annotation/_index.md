@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać podkreślenia tekstu do dokumentów za p
 weight: 27
 url: /pl/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Dodaj adnotację podkreślenia tekstu do dokumentu
+
 ## Wstęp
 W tym samouczku omówimy proces dodawania adnotacji podkreślenia tekstu do dokumentu za pomocą programu GroupDocs.Annotation for .NET. Adnotacje podkreślenia tekstu mogą być przydatne do podkreślania określonych części dokumentu, takich jak ważne fragmenty lub kluczowe punkty.
 ## Warunki wstępne

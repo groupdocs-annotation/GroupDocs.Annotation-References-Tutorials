@@ -6,6 +6,9 @@ description: Fedezze fel az átfogó oktatóanyagokat az interaktív összetevő
 weight: 24
 url: /hu/net/document-components/
 ---
+
+# Dokumentum komponensek
+
 ## Bevezetés
 
 A GroupDocs.Annotation for .NET egy robusztus oktatóanyag-készletet kínál, amely segít a fejlesztőknek az interaktív összetevők zökkenőmentes integrálásában a PDF-dokumentumokba. Ebben a cikkben elmélyülünk ezeknek az oktatóanyagoknak a részleteiben, és feltárjuk, hogyan tehetik lehetővé PDF-fájljai funkcionalitásának és felhasználói élményének javítását.

@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation 釋放 .NET 中文件註解的全部潛
 weight: 11
 url: /zh-hant/net/applying-licenses/set-license-from-stream/
 ---
+
+# 從 Stream 設定許可證
+
 ## 介紹
 歡迎閱讀使用 GroupDocs.Annotation for .NET 增強文件註解功能的綜合指南。無論您是經驗豐富的開發人員還是剛起步，本教學都將引導您完成每個步驟，確保您充分利用這個強大工具的潛力。
 ## 先決條件

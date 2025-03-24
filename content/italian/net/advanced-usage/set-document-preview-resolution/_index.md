@@ -6,6 +6,9 @@ description: Migliora la collaborazione sui documenti con Groupdocs.Annotation p
 weight: 23
 url: /it/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Imposta la risoluzione dell'anteprima del documento
+
 ## introduzione
 Nell'era digitale di oggi, la gestione efficiente dei documenti e la collaborazione sono fondamentali sia per le aziende che per i privati. Con la pletora di documenti che circolano quotidianamente, garantire funzionalità di annotazione e anteprima senza soluzione di continuità può migliorare significativamente la produttività e semplificare i flussi di lavoro. Inserisci Groupdocs.Annotation per .NET, un potente toolkit progettato per fornire agli sviluppatori solide funzionalità di annotazione per vari formati di documenti.
 ## Prerequisiti

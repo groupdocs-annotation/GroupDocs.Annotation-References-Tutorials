@@ -6,6 +6,9 @@ description: Aprenda a agregar anotaciones de puntos a archivos PDF usando Group
 weight: 17
 url: /es/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Agregar anotación de puntos al documento
+
 ## Introducción
 GroupDocs.Annotation para .NET es una poderosa herramienta que permite a los desarrolladores agregar varios tipos de anotaciones a documentos mediante programación. En este tutorial, nos centraremos en agregar una anotación de punto a un documento usando C#.
 ## Requisitos previos

@@ -6,6 +6,9 @@ description: Tanulja meg, hogyan tölthet be zökkenőmentesen egyéni betűtíp
 weight: 20
 url: /hu/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Egyéni betűtípusok betöltése
+
 ## Bevezetés
 GroupDocs.Annotation for .NET egy hatékony könyvtár, amely lehetővé teszi a fejlesztők számára, hogy .NET-alkalmazásaikhoz annotációs funkciókat könnyedén hozzák fel. Az egyik kulcsfontosságú funkció, amelyet kínál, az egyéni betűtípusok betöltésének képessége, amely lehetővé teszi a fokozott testreszabást és a dokumentum megjegyzéseinek rugalmasságát.
 ## Előfeltételek

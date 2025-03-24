@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak belgelere üstü çizili
 weight: 26
 url: /tr/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Belgeye Üstü Çizili Metin Açıklaması Ekleme
+
 ## giriiş
 Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bir belgeye üstü çizili açıklama ekinin nasıl ekleneceğini inceleyeceğiz. Bu kitaplık, çeşitli belge türlerine açıklama eklemek, işbirliğini ve belge inceleme süreçlerini geliştirmek için güçlü araçlar sağlar.
 ## Önkoşullar

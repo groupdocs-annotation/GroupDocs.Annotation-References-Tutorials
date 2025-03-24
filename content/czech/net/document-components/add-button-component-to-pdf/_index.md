@@ -6,6 +6,9 @@ description: Vylepšete své dokumenty PDF pomocí interaktivních tlačítek po
 weight: 10
 url: /cs/net/document-components/add-button-component-to-pdf/
 ---
+
+# Přidat komponentu tlačítka do dokumentu PDF
+
 ## Úvod
 tomto tutoriálu vás provedeme procesem přidání komponenty tlačítka do dokumentu PDF pomocí Groupdocs.Annotation pro .NET. Tento podrobný průvodce zajistí, že tuto funkci snadno integrujete do svého projektu.
 ## Předpoklady

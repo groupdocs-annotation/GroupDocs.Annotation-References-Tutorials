@@ -6,6 +6,9 @@ description: Bővítse PDF-dokumentumait interaktív gombelemekkel a Groupdocs.A
 weight: 10
 url: /hu/net/document-components/add-button-component-to-pdf/
 ---
+
+# Gombkomponens hozzáadása a PDF-dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük Önt egy gombkomponens PDF-dokumentumhoz való hozzáadásának folyamatán a Groupdocs.Annotation for .NET segítségével. Ez a lépésenkénti útmutató biztosítja, hogy ezt a funkciót könnyedén beépíthesse projektjébe.
 ## Előfeltételek

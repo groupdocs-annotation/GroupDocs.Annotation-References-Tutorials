@@ -6,6 +6,9 @@ description: 了解如何为 GroupDocs.Annotation .NET 设置计量许可证，�
 weight: 12
 url: /zh/net/applying-licenses/set-metered-license/
 ---
+
+# 设置计量许可证
+
 ## 介绍
 GroupDocs.Annotation for .NET 是一个功能强大的库，使开发人员能够轻松地将文档注释功能添加到其 .NET 应用程序中。无论您是构建文档管理系统、协作平台还是任何涉及文档审阅和标记的应用程序，GroupDocs.Annotation for .NET 都提供了一套全面的工具来简化流程。
 在本教程中，我们将深入研究为 GroupDocs.Annotation .NET 设置计量许可证的过程。计量许可证允许您只需为您消耗的资源付费，使其成为适合任何规模项目的经济高效的解决方案。通过执行下面概述的步骤，您将能够将 GroupDocs.Annotation 无缝集成到您的 .NET 应用程序中，同时优化资源使用并保持预算控制。

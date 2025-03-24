@@ -6,6 +6,9 @@ description: Tìm hiểu cách chú thích liền mạch các tài liệu bằng
 weight: 17
 url: /vi/net/removing-annotations/remove-replies-by-username/
 ---
+
+# Xóa câu trả lời theo tên người dùng trong .NET
+
 ## Giới thiệu
 Groupdocs.Annotation for .NET là một công cụ mạnh mẽ để chú thích các tài liệu một cách liền mạch trong các ứng dụng .NET của bạn. Cho dù bạn đang làm việc với tệp PDF, tài liệu Word hay bất kỳ định dạng tệp được hỗ trợ nào khác, thư viện này sẽ đơn giản hóa quy trình thêm chú thích, đánh dấu và nhận xét, đồng thời nâng cao khả năng cộng tác và quản lý tài liệu.
 ## Điều kiện tiên quyết

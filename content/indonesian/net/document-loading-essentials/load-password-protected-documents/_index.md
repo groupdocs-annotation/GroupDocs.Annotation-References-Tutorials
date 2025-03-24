@@ -6,6 +6,9 @@ description: Tingkatkan kolaborasi & tinjauan dokumen dengan GroupDocs.Annotatio
 weight: 17
 url: /id/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Muat Dokumen yang Dilindungi Kata Sandi
+
 ## Perkenalan
 Di dunia yang serba cepat saat ini, kolaborasi adalah kunci kesuksesan. Baik Anda mengerjakan proyek bersama kolega, klien, atau mitra, kemampuan untuk membuat anotasi dan berbagi dokumen secara efisien dapat meningkatkan produktivitas dan menyederhanakan alur kerja secara signifikan. GroupDocs.Annotation for .NET menawarkan solusi canggih untuk membuat anotasi PDF dan format dokumen lainnya langsung dalam aplikasi .NET Anda, memungkinkan proses kolaborasi dan peninjauan dokumen yang lancar.
 ## Prasyarat

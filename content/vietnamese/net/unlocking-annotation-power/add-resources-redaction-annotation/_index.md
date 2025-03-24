@@ -6,6 +6,9 @@ description: Nâng cao quy trình quản lý tài liệu với GroupDocs.Annotat
 weight: 19
 url: /vi/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Thêm chú thích biên tập tài nguyên vào tài liệu
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, việc tích hợp các công cụ hiệu quả để chú thích tài liệu có thể nâng cao đáng kể năng suất và hợp lý hóa quy trình công việc. GroupDocs.Annotation cho .NET nổi lên như một giải pháp mạnh mẽ, cung cấp vô số chức năng để chú thích và thao tác tài liệu một cách liền mạch. Hướng dẫn này đi sâu vào quá trình tích hợp và sử dụng Chú thích biên tập tài nguyên, một tính năng mạnh mẽ trong GroupDocs.Annotation cho .NET.
 ## Điều kiện tiên quyết

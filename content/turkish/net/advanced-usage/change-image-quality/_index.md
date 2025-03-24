@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET'i kullanarak PDF dosyalarındaki gör
 weight: 10
 url: /tr/net/advanced-usage/change-image-quality/
 ---
+
+# Görüntü Kalitesini Değiştir
+
 ## giriiş
 Günümüzün dijital çağında, PDF belgelerindeki görüntülerin kalitesi, kullanıcı deneyimini ve belgenin okunabilirliğini önemli ölçüde etkileyebilir. .NET geliştiricileri için tasarlanmış güçlü bir kitaplık olan Groupdocs.Annotation for .NET ile PDF dosyalarındaki görüntü kalitesini artırmak basit bir görev haline gelir. Bu eğitimde, bu çok yönlü aracı kullanarak görüntü kalitesini iyileştirme sürecini adım adım inceleyeceğiz.
 ## Önkoşullar

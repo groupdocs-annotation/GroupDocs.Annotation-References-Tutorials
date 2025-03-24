@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 來增強 PDF 檔�
 weight: 10
 url: /zh-hant/net/advanced-usage/change-image-quality/
 ---
+
+# 改變影像品質
+
 ## 介紹
 在當今的數位時代，PDF 文件中的影像品質可以顯著影響使用者體驗和文件可讀性。借助為 .NET 開發人員設計的功能強大的 Groupdocs.Annotation for .NET 庫，增強 PDF 文件中的圖像品質成為一項簡單的任務。在本教程中，我們將深入研究使用這個多功能工具來提高影像品質的逐步過程。
 ## 先決條件

@@ -6,6 +6,9 @@ description: Lär dig hur du importerar kommentarer från dokument i .NET med Gr
 weight: 19
 url: /sv/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Importera anteckningar från dokument
+
 ## Introduktion
 Inom området .NET-utveckling står GroupDocs.Annotation som ett mångsidigt verktyg för att integrera anteckningsfunktioner i dina applikationer. Oavsett om du vill lägga till kommentarer, markera text eller rita former på dokument erbjuder GroupDocs.Annotation för .NET en heltäckande lösning. Denna handledning guidar dig genom processen att importera kommentarer från ett dokument med hjälp av GroupDocs.Annotation, steg för steg.
 ## Förutsättningar

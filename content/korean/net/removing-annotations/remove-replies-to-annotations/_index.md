@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET에서 주석에 대한 �
 weight: 15
 url: /ko/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# .NET에서 주석에 대한 응답 제거
+
 ## 소개
 이 튜토리얼에서는 GroupDocs.Annotation을 사용하여 .NET에서 주석에 대한 응답을 제거하는 방법을 살펴보겠습니다. GroupDocs.Annotation은 개발자가 문서에 쉽게 주석을 달 수 있는 강력한 .NET 라이브러리입니다. 주석 추가, 텍스트 강조 표시, 스탬프 추가 등 GroupDocs.Annotation은 문서 주석을 위한 포괄적인 도구 세트를 제공합니다.
 ## 전제 조건

@@ -6,6 +6,9 @@ description: A GroupDocs.Annotation for .NET segítségével zökkenőmentesen j
 weight: 17
 url: /hu/net/advanced-usage/get-document-text-content-information/
 ---
+
+# Dokumentumszöveg-tartalmi információk beszerzése
+
 ## Bevezetés
 GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják az annotációs funkciókat .NET-alkalmazásaikba. Függetlenül attól, hogy dokumentumkezelő rendszert, együttműködési platformot vagy bármilyen más, dokumentumjegyzeteket igénylő alkalmazást épít, a GroupDocs.Annotation for .NET leegyszerűsíti a folyamatot átfogó szolgáltatáskészletével és könnyen használható API-jával.
 ## Előfeltételek

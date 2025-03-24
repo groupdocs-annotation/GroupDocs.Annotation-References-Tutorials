@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET에서 여러 주석을 �
 weight: 12
 url: /ko/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# .NET에서 여러 주석 제거
+
 ## 소개
 주석은 문서 관리에서 중요한 역할을 하며 협업과 커뮤니케이션을 향상시킵니다. 그러나 .NET 애플리케이션 내에서 여러 주석을 효율적으로 제거해야 하는 경우가 있습니다. 이 튜토리얼에서는 .NET용 GroupDocs.Annotation을 사용하여 이를 수행하는 방법을 자세히 살펴보겠습니다. 시작하자!
 ## 전제 조건

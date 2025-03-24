@@ -6,6 +6,9 @@ description: Pelajari cara mengintegrasikan anotasi bidang teks dengan lancar ke
 weight: 21
 url: /id/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Tambahkan Anotasi Bidang Teks ke Dokumen
+
 ## Perkenalan
 Groupdocs.Annotation for .NET adalah alat canggih yang memungkinkan pengembang menambahkan fitur anotasi ke aplikasi .NET mereka dengan mudah. Baik Anda sedang mengerjakan sistem manajemen dokumen, platform kolaboratif, atau aplikasi apa pun yang memerlukan anotasi dokumen, Groupdocs.Annotation menyederhanakan proses dengan serangkaian fitur komprehensif dan API intuitif.
 Dalam tutorial ini, kita akan mempelajari salah satu fungsi dasar Groupdocs.Annotation untuk .NET: menambahkan anotasi bidang teks ke dokumen. Dengan mengikuti panduan langkah demi langkah ini, Anda akan mempelajari cara mengintegrasikan anotasi bidang teks dengan lancar ke dalam aplikasi .NET Anda, sehingga meningkatkan pengalaman pengguna dan kemampuan kolaborasi.

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan fűzhet megjegyzéseket dokumentumokhoz a Group
 weight: 15
 url: /hu/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Előzetes munkalap oszlopok létrehozása
+
 ## Bevezetés
 Üdvözöljük átfogó oktatóanyagunkban a GroupDocs.Annotation for .NET képességeinek kihasználásáról! Ebben az útmutatóban végigvezetjük Önt ennek a hatékony eszköznek a dokumentumok hatékony megjegyzéseinek felhasználásának folyamatán. Akár tapasztalt fejlesztő, akár újonc a .NET-fejlesztés világában, ez az oktatóanyag felvértezi azokat a tudást és készségeket, amelyek szükségesek ahhoz, hogy a megjegyzési funkciókat zökkenőmentesen integrálhassa alkalmazásaiba.
 ## Előfeltételek

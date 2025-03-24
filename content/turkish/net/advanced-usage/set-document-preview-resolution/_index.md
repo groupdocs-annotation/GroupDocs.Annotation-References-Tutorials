@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET ile belge işbirliğini geliştirin, 
 weight: 23
 url: /tr/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Belge Önizleme Çözünürlüğünü Ayarla
+
 ## giriiş
 Günümüzün dijital çağında, verimli belge yönetimi ve işbirliği hem işletmeler hem de bireyler için çok önemlidir. Günlük olarak dolaşan çok sayıda belgeyle, kesintisiz açıklama ve önizleme özelliklerinin sağlanması üretkenliği önemli ölçüde artırabilir ve iş akışlarını kolaylaştırabilir. Groupdocs.Annotation for .NET'e girin - geliştiricilere çeşitli belge formatları için sağlam açıklama işlevleri sağlamak üzere tasarlanmış güçlü bir araç seti.
 ## Önkoşullar

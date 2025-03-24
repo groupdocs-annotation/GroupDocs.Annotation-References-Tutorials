@@ -6,6 +6,9 @@ description: Découvrez comment annoter des documents de manière transparente �
 weight: 17
 url: /fr/net/removing-annotations/remove-replies-by-username/
 ---
+
+# Supprimer les réponses par nom d'utilisateur dans .NET
+
 ## Introduction
 Groupdocs.Annotation for .NET est un outil puissant pour annoter des documents de manière transparente au sein de vos applications .NET. Que vous travailliez avec des documents PDF, Word ou tout autre format de fichier pris en charge, cette bibliothèque simplifie le processus d'ajout d'annotations, de surlignages et de commentaires, améliorant ainsi les capacités de collaboration et de gestion de documents.
 ## Conditions préalables

@@ -6,6 +6,9 @@ description: Nâng cao khả năng cộng tác trên tài liệu với Groupdocs
 weight: 23
 url: /vi/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Đặt độ phân giải xem trước tài liệu
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, việc cộng tác và quản lý tài liệu hiệu quả là điều tối quan trọng đối với các doanh nghiệp cũng như cá nhân. Với vô số tài liệu được lưu hành hàng ngày, việc đảm bảo khả năng xem trước và chú thích liền mạch có thể nâng cao đáng kể năng suất và hợp lý hóa quy trình công việc. Nhập Groupdocs.Annotation for .NET - một bộ công cụ mạnh mẽ được thiết kế để trao quyền cho các nhà phát triển với các chức năng chú thích mạnh mẽ cho các định dạng tài liệu khác nhau.
 ## Điều kiện tiên quyết

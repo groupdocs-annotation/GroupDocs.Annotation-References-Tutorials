@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm Chú thích điểm vào tệp PDF bằng G
 weight: 17
 url: /vi/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Thêm chú thích điểm vào tài liệu
+
 ## Giới thiệu
 GroupDocs.Annotation for .NET là một công cụ mạnh mẽ cho phép các nhà phát triển thêm nhiều loại chú thích khác nhau vào tài liệu theo chương trình. Trong hướng dẫn này, chúng tôi sẽ tập trung vào việc thêm Chú thích điểm vào tài liệu bằng C#.
 ## Điều kiện tiên quyết

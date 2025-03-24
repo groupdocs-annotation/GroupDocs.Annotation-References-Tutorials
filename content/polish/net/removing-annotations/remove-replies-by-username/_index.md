@@ -6,6 +6,9 @@ description: Dowiedz się, jak bezproblemowo dodawać adnotacje do dokumentów z
 weight: 17
 url: /pl/net/removing-annotations/remove-replies-by-username/
 ---
+
+# Usuń odpowiedzi według nazwy użytkownika w .NET
+
 ## Wstęp
 Groupdocs.Annotation dla .NET to potężne narzędzie do płynnego dodawania adnotacji do dokumentów w aplikacjach .NET. Niezależnie od tego, czy pracujesz z plikami PDF, dokumentami programu Word, czy dowolnym innym obsługiwanym formatem plików, ta biblioteka upraszcza proces dodawania adnotacji, wyróżnień i komentarzy, poprawiając możliwości współpracy i zarządzania dokumentami.
 ## Warunki wstępne

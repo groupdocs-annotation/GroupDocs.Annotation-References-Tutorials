@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 將文件註解功
 weight: 14
 url: /zh-hant/net/advanced-usage/generate-preview-without-comments/
 ---
+
+# 生成不含註釋的預覽
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個功能強大的工具，可讓開發人員將註解功能無縫合併到他們的 .NET 應用程式中。無論您是在文件管理系統、協作平台或任何其他需要文件註釋功能的應用程式上工作，GroupDocs.Annotation 都提供了一套全面的工具來增強應用程式的功能。
 ## 先決條件

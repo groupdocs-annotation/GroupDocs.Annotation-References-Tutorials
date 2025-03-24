@@ -6,6 +6,9 @@ description: Découvrez comment ajouter des annotations de distance aux document
 weight: 12
 url: /fr/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Ajouter une annotation de distance au document
+
 ## Introduction
 Dans ce didacticiel, vous apprendrez comment ajouter une annotation à distance à un document à l'aide de GroupDocs.Annotation pour .NET. Suivez ces étapes pour accomplir la tâche :
 ## Conditions préalables

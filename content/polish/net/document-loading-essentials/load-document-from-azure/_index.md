@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje do dokumentów w .NET przy uż
 weight: 11
 url: /pl/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Załaduj dokument z platformy Azure
+
 ## Wstęp
 W dziedzinie zarządzania dokumentami i współpracy GroupDocs.Annotation dla .NET okazuje się solidnym rozwiązaniem, umożliwiającym bezproblemowe dodawanie adnotacji i oznaczanie w aplikacjach .NET. W tym samouczku omówiono zawiłości wykorzystania programu GroupDocs.Annotation dla platformy .NET do dodawania adnotacji do dokumentów, oferując wskazówki krok po kroku od wymagań wstępnych do zaawansowanego użycia.
 ## Warunki wstępne

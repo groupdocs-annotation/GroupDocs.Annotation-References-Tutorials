@@ -6,6 +6,9 @@ description: Scopri come annotare facilmente i documenti utilizzando Groupdocs.A
 weight: 17
 url: /it/net/removing-annotations/remove-replies-by-username/
 ---
+
+# Rimuovere le risposte per nome utente in .NET
+
 ## introduzione
 Groupdocs.Annotation per .NET è un potente strumento per annotare documenti senza problemi all'interno delle tue applicazioni .NET. Che tu stia lavorando con PDF, documenti Word o qualsiasi altro formato di file supportato, questa libreria semplifica il processo di aggiunta di annotazioni, evidenziazioni e commenti, migliorando le funzionalità di collaborazione e gestione dei documenti.
 ## Prerequisiti

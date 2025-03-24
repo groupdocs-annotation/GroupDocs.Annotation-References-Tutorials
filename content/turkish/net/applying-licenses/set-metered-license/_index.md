@@ -6,6 +6,9 @@ description: .NET uygulamalarınızdaki kaynak kullanımı ve belge ek açıklam
 weight: 12
 url: /tr/net/applying-licenses/set-metered-license/
 ---
+
+# Ölçülü Lisansı Ayarla
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin .NET uygulamalarına zahmetsizce belge açıklama özellikleri eklemesine olanak tanıyan güçlü bir kitaplıktır. İster bir belge yönetim sistemi, işbirliği platformu veya belge inceleme ve işaretlemeyi içeren herhangi bir uygulama oluşturuyor olun, GroupDocs.Annotation for .NET, süreci kolaylaştırmak için kapsamlı bir araç seti sağlar.
 Bu öğreticide, GroupDocs.Annotation .NET için ölçülü lisans ayarlama sürecini ayrıntılı olarak ele alacağız. Ölçülü lisans, yalnızca tükettiğiniz kaynaklar için ödeme yapmanıza olanak tanır ve bu da onu her ölçekteki proje için uygun maliyetli bir çözüm haline getirir. Aşağıda özetlenen adımları izleyerek, kaynak kullanımını optimize ederken ve bütçe kontrolünü sürdürürken GroupDocs.Annotation'ı .NET uygulamanıza sorunsuz bir şekilde entegre edebileceksiniz.

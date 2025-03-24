@@ -6,6 +6,9 @@ description: Verimli belge yönetimi ve işbirliği için GroupDocs.Annotation'�
 weight: 21
 url: /tr/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Metnin Üzerine Resim Açıklamasını Yerleştirin
+
 ## giriiş
 .NET geliştirme dünyasında GroupDocs.Annotation, belgelere açıklamalar eklemek, işbirliğini ve belge yönetimini daha verimli hale getirmek için güçlü bir çözüm sunar. Yaygın gereksinimlerden biri, GroupDocs.Annotation for .NET kullanılarak sorunsuz bir şekilde gerçekleştirilebilen metin üzerine resim açıklamaları koymaktır.
 ## Önkoşullar

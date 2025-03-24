@@ -6,6 +6,9 @@ description: Aprenda como anotar documentos em .NET usando GroupDocs.Annotation.
 weight: 11
 url: /pt/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Carregar documento do Azure
+
 ## Introdução
 No domínio do gerenciamento e colaboração de documentos, o GroupDocs.Annotation for .NET surge como uma solução robusta, facilitando funcionalidades contínuas de anotação e marcação em aplicativos .NET. Este tutorial investiga as complexidades de aproveitar o GroupDocs.Annotation for .NET para anotar documentos, oferecendo orientação passo a passo, desde os pré-requisitos até o uso avançado.
 ## Pré-requisitos

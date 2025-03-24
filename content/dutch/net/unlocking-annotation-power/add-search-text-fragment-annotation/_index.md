@@ -6,6 +6,9 @@ description: Ontdek de kracht van GroupDocs.Annotation voor .NET en voeg moeitel
 weight: 20
 url: /nl/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Voeg zoektekstfragmentannotatie toe aan document
+
 ## Invoering
 Op het gebied van .NET-ontwikkeling onderscheidt GroupDocs.Annotation zich als een krachtig hulpmiddel voor het naadloos annoteren van documenten. Of u nu een doorgewinterde ontwikkelaar bent of net de wereld van .NET betreedt, deze uitgebreide tutorial leidt u door de essentie van het gebruik van GroupDocs.Annotation voor .NET, van het importeren van naamruimten tot het beheersen van de fijne kneepjes van het toevoegen van zoektekstfragmentannotaties aan uw documenten.
 ## Invoering

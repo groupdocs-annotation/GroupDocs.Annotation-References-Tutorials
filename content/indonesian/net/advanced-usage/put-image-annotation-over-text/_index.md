@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi gambar pada teks di .NET mengguna
 weight: 21
 url: /id/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Letakkan Anotasi Gambar di atas Teks
+
 ## Perkenalan
 Dalam dunia pengembangan .NET, GroupDocs.Annotation menawarkan solusi canggih untuk menambahkan anotasi ke dokumen, menjadikan kolaborasi dan manajemen dokumen lebih efisien. Salah satu persyaratan umum adalah menempatkan anotasi gambar di atas teks, yang dapat dilakukan dengan lancar menggunakan GroupDocs.Annotation untuk .NET.
 ## Prasyarat

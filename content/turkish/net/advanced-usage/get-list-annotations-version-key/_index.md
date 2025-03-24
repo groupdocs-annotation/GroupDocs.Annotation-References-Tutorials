@@ -6,6 +6,9 @@ description: Sorunsuz belge açıklaması için .NET uygulamalarınızı GroupDo
 weight: 18
 url: /tr/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Sürüm Anahtarını Kullanarak Ek Açıklamaların Listesini Alma
+
 ## giriiş
 .NET geliştirme dünyasında, belgeleri verimli bir şekilde yönetmek ve değiştirmek çok önemlidir. İster PDF'lere açıklama eklemek, ister Word belgeleri üzerinde ortak çalışmak veya Excel sayfalarını işaretlemek olsun, doğru araçlara sahip olmak iş akışlarını kolaylaştırabilir ve üretkenliği artırabilir. GroupDocs.Annotation for .NET, geliştiricilerin .NET uygulamaları içinde belgelere sorunsuz bir şekilde açıklama eklemesine ve bunları yönetmesine olanak tanıyan araçlardan biridir.
 ## Önkoşullar

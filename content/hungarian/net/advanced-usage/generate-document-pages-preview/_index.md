@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan hozhat létre hatékony dokumentumoldal-előné
 weight: 12
 url: /hu/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Dokumentumoldalak előnézetének létrehozása
+
 ## Bevezetés
 A dokumentumkezelés és az együttműködés terén a GroupDocs.Annotation for .NET sokoldalú eszközként tűnik ki. Függetlenül attól, hogy Ön fejlesztő, aki annotációs funkciókat kíván integrálni az alkalmazásába, vagy üzleti felhasználó, aki hatékony dokumentum-együttműködést keres, a GroupDocs.Annotation átfogó megoldást kínál. Ez az oktatóanyag végigvezeti a dokumentumoldalak előnézetének létrehozásának folyamatán a GroupDocs.Annotation for .NET használatával, minden lépést könnyen emészthető darabokra bontva.
 ## Előfeltételek

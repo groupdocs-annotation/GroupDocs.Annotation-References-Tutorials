@@ -6,6 +6,9 @@ description: Leer hoe u moeiteloos kronkelige annotaties aan documenten kunt toe
 weight: 25
 url: /nl/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Voeg tekstkronkelige annotatie toe aan document
+
 ## Invoering
 
 Groupdocs.Annotation voor .NET is een veelzijdige bibliotheek waarmee ontwikkelaars moeiteloos robuuste annotatiemogelijkheden in hun .NET-applicaties kunnen integreren. Of u nu werkt met PDF's, Word-documenten of andere populaire bestandsformaten, Groupdocs.Annotation biedt een naadloze oplossing voor het annoteren en verbeteren van de samenwerking aan documenten.

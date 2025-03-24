@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie Anmerkungen nach ID mit GroupDocs.Annotation 
 weight: 11
 url: /de/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Anmerkungen nach ID entfernen
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Entfernens von Anmerkungen anhand ihrer IDs mithilfe von GroupDocs.Annotation für .NET. Anmerkungen können Ihre Dokumente unübersichtlich machen, und wenn Sie sie gezielt entfernen, können Sie Ihren Arbeitsablauf optimieren. Wir führen Sie Schritt für Schritt und stellen sicher, dass Sie jede Phase klar verstehen.
 ## Voraussetzungen

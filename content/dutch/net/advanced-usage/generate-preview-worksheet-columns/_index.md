@@ -6,6 +6,9 @@ description: Leer hoe u documenten kunt annoteren met GroupDocs.Annotation voor 
 weight: 15
 url: /nl/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Genereer voorbeeldwerkbladkolommen
+
 ## Invoering
 Welkom bij onze uitgebreide tutorial over het benutten van de mogelijkheden van GroupDocs.Annotation voor .NET! In deze handleiding begeleiden we u bij het gebruik van deze krachtige tool om documenten effectief te annoteren. Of u nu een doorgewinterde ontwikkelaar bent of een nieuwkomer in de wereld van .NET-ontwikkeling, deze tutorial zal u voorzien van de kennis en vaardigheden die nodig zijn om annotatiefuncties naadloos in uw toepassingen te integreren.
 ## Vereisten

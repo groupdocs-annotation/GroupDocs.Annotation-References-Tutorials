@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi gambar ke dokumen menggunakan Gro
 weight: 14
 url: /id/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Tambahkan Anotasi Gambar ke Dokumen (Jalur Lokal)
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah perpustakaan canggih yang memungkinkan pengembang menambahkan berbagai jenis anotasi ke dokumen secara terprogram. Dalam tutorial ini, kita akan mempelajari cara menambahkan anotasi gambar ke dokumen menggunakan jalur lokal.
 ## Prasyarat

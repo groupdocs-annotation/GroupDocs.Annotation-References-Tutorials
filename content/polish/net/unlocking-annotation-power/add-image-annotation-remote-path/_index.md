@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje graficzne do dokumentów za po
 weight: 15
 url: /pl/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Dodaj adnotację obrazu do dokumentu (ścieżka zdalna)
+
 ## Wstęp
 W tym samouczku omówimy proces dodawania adnotacji graficznych do dokumentu za pomocą GroupDocs.Annotation dla .NET. Ta biblioteka zapewnia zaawansowane narzędzia do programowego dodawania adnotacji do różnych typów dokumentów.
 ## Warunki wstępne

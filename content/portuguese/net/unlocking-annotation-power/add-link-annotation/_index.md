@@ -6,6 +6,9 @@ description: Aprenda como adicionar anotações de link a documentos usando Grou
 weight: 16
 url: /pt/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Adicionar anotação de link ao documento
+
 ## Introdução
 Groupdocs.Annotation for .NET é uma biblioteca poderosa que permite aos desenvolvedores integrar funcionalidades de anotação abrangentes em seus aplicativos .NET sem esforço. Um dos principais recursos que oferece é a capacidade de adicionar anotações de links a documentos, melhorando a colaboração e a interatividade.
 ## Pré-requisitos

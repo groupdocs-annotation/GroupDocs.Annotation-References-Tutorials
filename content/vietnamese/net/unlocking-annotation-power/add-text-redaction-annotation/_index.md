@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích biên tập văn bản vào tà
 weight: 23
 url: /vi/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Thêm chú thích soạn thảo văn bản vào tài liệu
+
 ## Giới thiệu
 Thêm chú thích chỉnh sửa văn bản vào tài liệu có thể là một bước quan trọng trong việc quản lý thông tin nhạy cảm một cách an toàn. GroupDocs.Annotation for .NET cung cấp một giải pháp mạnh mẽ để đạt được điều này một cách liền mạch. Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn từng bước trong quá trình thêm chú thích chỉnh sửa văn bản vào tài liệu của bạn.
 ## Điều kiện tiên quyết

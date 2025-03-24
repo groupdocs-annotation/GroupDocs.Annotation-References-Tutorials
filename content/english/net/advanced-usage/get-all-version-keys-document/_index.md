@@ -6,6 +6,9 @@ description: Learn how to retrieve all version keys on a document using GroupDoc
 weight: 16
 url: /net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Get All Version Keys on Document
+
 ## Introduction
 In today's fast-paced digital world, effective document management is crucial for businesses and individuals alike. Whether you're collaborating on projects, reviewing contracts, or simply organizing your files, having the right tools can make all the difference. GroupDocs.Annotation for .NET offers a comprehensive solution for annotating and manipulating documents within .NET applications. In this tutorial, we'll explore how to leverage GroupDocs.Annotation for .NET to retrieve all version keys on a document.
 ## Prerequisites

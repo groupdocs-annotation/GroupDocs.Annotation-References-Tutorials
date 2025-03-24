@@ -6,6 +6,9 @@ description: Buka potensi penuh anotasi dokumen di .NET dengan GroupDocs.Annotat
 weight: 26
 url: /id/net/applying-licenses/
 ---
+
+# Menerapkan Lisensi
+
 ## Perkenalan
 
 Apakah Anda seorang pengembang .NET yang ingin meningkatkan kemampuan anotasi dokumen Anda? Tidak perlu mencari lagi! GroupDocs.Annotation for .NET menyediakan rangkaian alat komprehensif untuk mengintegrasikan fitur anotasi canggih dengan lancar ke dalam aplikasi Anda. Dalam daftar tutorial ini, kami akan memandu Anda melalui berbagai metode penerapan lisensi untuk membuka potensi penuh GroupDocs.Annotation untuk .NET.

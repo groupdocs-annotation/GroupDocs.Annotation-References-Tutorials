@@ -6,6 +6,9 @@ description: Aprenda a agregar anotaciones de flechas a sus documentos usando Gr
 weight: 11
 url: /es/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Agregar anotación de flecha al documento
+
 ## Introducción
 En este tutorial, lo guiaremos a través del proceso de agregar anotaciones de flechas a sus documentos usando GroupDocs.Annotation para .NET. Las anotaciones de flechas son útiles para indicar dirección o señalar elementos específicos dentro de un documento.
 ## Requisitos previos

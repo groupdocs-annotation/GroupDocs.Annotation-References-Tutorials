@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi gambar ke dokumen menggunakan Gro
 weight: 15
 url: /id/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Tambahkan Anotasi Gambar ke Dokumen (Jalur Jarak Jauh)
+
 ## Perkenalan
 Dalam tutorial ini, kita akan memandu proses menambahkan anotasi gambar ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Pustaka ini menyediakan alat canggih untuk membuat anotasi berbagai jenis dokumen secara terprogram.
 ## Prasyarat

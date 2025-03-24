@@ -6,6 +6,9 @@ description: Tìm hiểu cách xóa câu trả lời theo ID trong .NET bằng G
 weight: 16
 url: /vi/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Xóa câu trả lời theo ID trong .NET
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, khả năng quản lý chú thích trong tài liệu là rất quan trọng đối với nhiều ứng dụng. Cho dù bạn đang làm việc với tệp PDF, tài liệu Word hay các định dạng khác, việc có khả năng thao tác với các chú thích theo chương trình sẽ mở ra vô số khả năng. Một công cụ mạnh mẽ để xử lý các chú thích trong .NET là GroupDocs.Annotation.
 ## Điều kiện tiên quyết

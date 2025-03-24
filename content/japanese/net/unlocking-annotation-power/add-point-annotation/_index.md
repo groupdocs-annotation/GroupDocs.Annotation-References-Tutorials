@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して PDF にポイント �
 weight: 17
 url: /ja/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# ドキュメントにポイント注釈を追加
+
 ## 導入
 GroupDocs.Annotation for .NET は、開発者がプログラムによってドキュメントにさまざまな種類の注釈を追加できる強力なツールです。このチュートリアルでは、C# を使用してドキュメントにポイント注釈を追加することに焦点を当てます。
 ## 前提条件

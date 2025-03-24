@@ -6,6 +6,9 @@ description: Leer hoe u vervolgkeuzelijsten aan PDF's kunt toevoegen met GroupDo
 weight: 12
 url: /nl/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Voeg een dropdown-component toe aan een PDF-document
+
 ## Invoering
 GroupDocs.Annotation voor .NET biedt een krachtige set tools voor het programmatisch annoteren van PDF-documenten. Een handige functie is de mogelijkheid om vervolgkeuzelijsten aan PDF-documenten toe te voegen, waardoor de interactiviteit en bruikbaarheid ervan wordt vergroot.
 ## Vereisten

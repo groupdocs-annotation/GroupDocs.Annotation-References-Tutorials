@@ -6,6 +6,9 @@ description: Naučte se, jak načíst všechny klíče verzí v dokumentu pomoc�
 weight: 16
 url: /cs/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Získejte všechny klíče verzí v dokumentu
+
 ## Úvod
 V dnešním uspěchaném digitálním světě je efektivní správa dokumentů klíčová pro podniky i jednotlivce. Ať už spolupracujete na projektech, kontrolujete smlouvy nebo jednoduše organizujete své soubory, mít ty správné nástroje mohou znamenat rozdíl. GroupDocs.Annotation for .NET nabízí komplexní řešení pro anotování a manipulaci s dokumenty v aplikacích .NET. V tomto tutoriálu prozkoumáme, jak využít GroupDocs.Annotation pro .NET k načtení všech klíčů verzí v dokumentu.
 ## Předpoklady

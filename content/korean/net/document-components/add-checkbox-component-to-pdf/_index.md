@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 PDF 문서에 확인�
 weight: 11
 url: /ko/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# PDF 문서에 확인란 구성 요소 추가
+
 ## 소개
 이 자습서에서는 .NET용 Groupdocs.Annotation을 사용하여 PDF 문서에 확인란 구성 요소를 추가하는 과정을 안내합니다.
 ## 전제 조건

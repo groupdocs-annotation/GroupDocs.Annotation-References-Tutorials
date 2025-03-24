@@ -6,6 +6,9 @@ description: Tích hợp liền mạch khả năng chú thích tài liệu mạn
 weight: 10
 url: /vi/net/applying-licenses/set-license-from-file/
 ---
+
+# Đặt giấy phép từ tệp
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, chú thích tài liệu đã trở thành một công cụ thiết yếu cho quá trình cộng tác, đánh giá và phản hồi trong các ngành khác nhau. GroupDocs.Annotation dành cho .NET cung cấp một giải pháp mạnh mẽ cho các nhà phát triển đang tìm cách tích hợp chức năng chú thích vào các ứng dụng .NET của họ một cách liền mạch.
 ## Điều kiện tiên quyết

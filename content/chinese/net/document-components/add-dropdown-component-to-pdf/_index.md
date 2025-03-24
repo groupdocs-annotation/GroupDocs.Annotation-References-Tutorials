@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 将下拉组件添
 weight: 12
 url: /zh/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# 向 PDF 文档添加下拉组件
+
 ## 介绍
 GroupDocs.Annotation for .NET 提供了一组功能强大的工具，用于以编程方式注释 PDF 文档。一项有用的功能是能够向 PDF 文档添加下拉组件，从而增强其交互性和可用性。
 ## 先决条件

@@ -6,6 +6,9 @@ description: Découvrez comment supprimer efficacement plusieurs annotations dan
 weight: 12
 url: /fr/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Supprimer plusieurs annotations dans .NET
+
 ## Introduction
 Les annotations jouent un rôle crucial dans la gestion des documents, améliorant la collaboration et la communication. Cependant, il existe des cas dans lesquels vous devrez peut-être supprimer efficacement plusieurs annotations au sein de votre application .NET. Dans ce didacticiel, nous verrons comment y parvenir à l'aide de GroupDocs.Annotation pour .NET. Commençons!
 ## Conditions préalables

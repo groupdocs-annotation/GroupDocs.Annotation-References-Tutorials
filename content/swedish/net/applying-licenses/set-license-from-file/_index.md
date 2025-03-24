@@ -6,6 +6,9 @@ description: Integrera kraftfulla dokumentkommentarer i dina .NET-applikationer 
 weight: 10
 url: /sv/net/applying-licenses/set-license-from-file/
 ---
+
+# Ställ in licens från fil
+
 ## Introduktion
 dagens digitala tidsålder har dokumentkommentarer blivit ett viktigt verktyg för samarbets-, gransknings- och feedbackprocesser i olika branscher. GroupDocs.Annotation for .NET erbjuder en kraftfull lösning för utvecklare som vill integrera annoteringsfunktioner i sina .NET-applikationer sömlöst.
 ## Förutsättningar

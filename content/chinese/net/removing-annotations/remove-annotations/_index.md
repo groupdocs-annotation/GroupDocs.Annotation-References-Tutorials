@@ -6,6 +6,9 @@ description: 了解如何使用 .NET 中的 Groupdocs.Annotation 从 PDF 文档�
 weight: 10
 url: /zh/net/removing-annotations/remove-annotations/
 ---
+
+# 删除 .NET 中的注释
+
 ## 介绍
 注释在数字文档管理中发挥着至关重要的作用，允许用户突出显示、评论和标记文件中的重要部分。但是，有时您可能需要从文档中删除注释。在本教程中，我们将探索如何使用 Groupdocs.Annotation（用于文档注释和操作的强大工具）删除 .NET 中的注释。
 ## 先决条件

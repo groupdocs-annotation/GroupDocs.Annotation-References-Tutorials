@@ -6,6 +6,9 @@ description: Tìm hiểu cách chú thích tài liệu theo chương trình vớ
 weight: 10
 url: /vi/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# Tải tài liệu từ Amazon S3
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, việc quản lý tài liệu là rất quan trọng đối với các doanh nghiệp và cá nhân. Groupdocs.Annotation for .NET cung cấp giải pháp mạnh mẽ để chú thích tài liệu theo chương trình, cho phép các nhà phát triển tăng cường cộng tác tài liệu và hợp lý hóa quy trình làm việc. Trong hướng dẫn này, chúng tôi sẽ đi sâu vào các nguyên tắc cơ bản của việc sử dụng Groupdocs.Annotation cho .NET, chia nhỏ từng ví dụ thành nhiều bước để hướng dẫn bạn thực hiện quy trình một cách liền mạch.
 ## Điều kiện tiên quyết

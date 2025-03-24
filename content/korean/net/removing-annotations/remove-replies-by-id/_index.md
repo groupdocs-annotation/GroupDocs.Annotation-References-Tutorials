@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET에서 ID별 응답을 제
 weight: 16
 url: /ko/net/removing-annotations/remove-replies-by-id/
 ---
+
+# .NET에서 ID별 답장 제거
+
 ## 소개
 .NET 개발 영역에서 문서 내의 주석을 관리하는 기능은 다양한 애플리케이션에 매우 중요합니다. PDF, Word 문서 또는 기타 형식으로 작업하는 경우 프로그래밍 방식으로 주석을 조작하는 기능이 있으면 가능성의 세계가 열립니다. .NET에서 주석을 처리하는 강력한 도구 중 하나는 GroupDocs.Annotation입니다.
 ## 전제 조건

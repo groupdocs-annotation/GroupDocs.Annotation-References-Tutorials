@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till länkkommentarer till dokument med Gro
 weight: 16
 url: /sv/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Lägg till länkkommentar till dokument
+
 ## Introduktion
 Groupdocs.Annotation for .NET är ett kraftfullt bibliotek som gör det möjligt för utvecklare att integrera omfattande annoteringsfunktioner i sina .NET-applikationer utan ansträngning. En av nyckelfunktionerna som den erbjuder är möjligheten att lägga till länkkommentarer till dokument, vilket förbättrar samarbete och interaktivitet.
 ## Förutsättningar

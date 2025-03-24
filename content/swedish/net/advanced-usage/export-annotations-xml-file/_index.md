@@ -6,6 +6,9 @@ description: Lär dig hur du exporterar anteckningar från XML-filer med GroupDo
 weight: 11
 url: /sv/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# Exportera anteckningar från XML-fil
+
 ## Introduktion
 dagens digitala tidsålder är effektiv dokumenthantering avgörande för både företag och privatpersoner. Med den uppsjö av tillgängliga verktyg framstår GroupDocs.Annotation för .NET som en pålitlig lösning för att kommentera och hantera PDF-filer. I den här handledningen kommer vi att fördjupa oss i processen att exportera kommentarer från XML-filer med GroupDocs.Annotation för .NET. I slutet av den här guiden kommer du att vara utrustad med kunskapen för att sömlöst exportera kommentarer, vilket förbättrar ditt arbetsflöde för dokumenthantering.
 ## Förutsättningar

@@ -6,6 +6,9 @@ description: Aprenda como adicionar anotações de seta aos seus documentos usan
 weight: 11
 url: /pt/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Adicionar anotação de seta ao documento
+
 ## Introdução
 Neste tutorial, orientaremos você no processo de adição de anotações de seta aos seus documentos usando GroupDocs.Annotation for .NET. As anotações de seta são úteis para indicar direção ou apontar elementos específicos em um documento.
 ## Pré-requisitos

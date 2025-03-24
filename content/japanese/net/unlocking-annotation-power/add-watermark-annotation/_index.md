@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して、ドキュメント�
 weight: 28
 url: /ja/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# 文書に透かし注釈を追加する
+
 ## 導入
 このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにウォーターマーク注釈を追加するプロセスを説明します。透かし注釈は、文書のステータスを示したり、文書を機密としてマークしたり、その他の関連情報を追加したりするのに役立ちます。
 

@@ -6,6 +6,9 @@ description: A GroupDocs.Annotation segítségével megtudhatja, hogyan fűzhet 
 weight: 14
 url: /hu/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Dokumentum betöltése a Streamből
+
 ## Bevezetés
 GroupDocs.Annotation for .NET egy hatékony könyvtár, amely felhatalmazza a fejlesztőket arra, hogy könnyedén integrálják a dokumentumjegyzetelési képességeket .NET-alkalmazásaikba. Függetlenül attól, hogy dokumentumkezelő rendszert, együttműködési platformot vagy e-learning alkalmazást épít, a GroupDocs.Annotation sokoldalú eszközkészletet biztosít PDF-ek, Word-dokumentumok, Excel-lapok és egyebek megjegyzéseinek rögzítéséhez.
 ## Előfeltételek

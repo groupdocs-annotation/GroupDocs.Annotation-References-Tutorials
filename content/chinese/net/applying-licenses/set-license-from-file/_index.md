@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 将强大的文档注释功能
 weight: 10
 url: /zh/net/applying-licenses/set-license-from-file/
 ---
+
+# 从文件设置许可证
+
 ## 介绍
 在当今的数字时代，文档注释已成为各行业协作、审阅和反馈流程的重要工具。 GroupDocs.Annotation for .NET 为寻求将注释功能无缝集成到 .NET 应用程序中的开发人员提供了强大的解决方案。
 ## 先决条件

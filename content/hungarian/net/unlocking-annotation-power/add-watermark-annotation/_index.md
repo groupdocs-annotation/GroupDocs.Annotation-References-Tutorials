@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET segítségével megtudhatja, hogyan a
 weight: 28
 url: /hu/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Vízjel megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban a GroupDocs.Annotation for .NET segítségével vízjel megjegyzés hozzáadásának folyamatát mutatjuk be. A vízjel megjegyzések hasznosak egy dokumentum állapotának jelzésére, bizalmasként való megjelölésére vagy bármilyen más releváns információ hozzáadására.
 

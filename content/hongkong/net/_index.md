@@ -6,6 +6,9 @@ url: /zh-hant/net/
 description: 透過我們的教學釋放 GroupDocs.Annotation for .NET 的全部潛能。無縫整合、增強協作並簡化工作流程。
 is_root: true
 ---
+
+# GroupDocs.Annotation for .NET 的教學與範例
+
 ## 介紹
 
 GroupDocs.Annotation for .NET 為開發人員提供了一個強大的平台，將強大的註解功能整合到他們的 .NET 應用程式中。無論您是初學者還是經驗豐富的開發人員，我們的教學課程都涵蓋了您需要了解的所有內容，以充分利用 GroupDocs.Annotation for .NET 的潛力。

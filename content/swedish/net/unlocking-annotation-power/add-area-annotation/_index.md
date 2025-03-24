@@ -6,6 +6,9 @@ description: Förbättra ditt dokumentsamarbete med Groupdocs.Annotation för .N
 weight: 10
 url: /sv/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Lägg till områdesanteckning till dokumentet
+
 ## Introduktion
 I den här handledningen guidar vi dig genom processen att lägga till områdesanteckningar till dokument med Groupdocs.Annotation för .NET. Områdesanteckningar är en värdefull funktion som låter användare markera specifika områden i ett dokument, vilket ger klarhet och sammanhang till innehållet.
 ## Förutsättningar

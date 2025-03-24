@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till bildkommentarer till dokument med Grou
 weight: 14
 url: /sv/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Lägg till bildkommentar till dokument (lokal sökväg)
+
 ## Introduktion
 GroupDocs.Annotation för .NET är ett kraftfullt bibliotek som gör det möjligt för utvecklare att lägga till olika typer av kommentarer till dokument programmässigt. I den här handledningen kommer vi att lära oss hur du lägger till bildkommentarer till ett dokument med hjälp av en lokal sökväg.
 ## Förutsättningar

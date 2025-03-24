@@ -6,6 +6,9 @@ description: Découvrez comment annoter des documents par programmation avec Gro
 weight: 10
 url: /fr/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# Charger un document depuis Amazon S3
+
 ## Introduction
 À l’ère numérique d’aujourd’hui, la gestion documentaire est cruciale pour les entreprises comme pour les particuliers. Groupdocs.Annotation for .NET fournit une solution puissante pour annoter des documents par programmation, permettant aux développeurs d'améliorer la collaboration documentaire et de rationaliser les flux de travail. Dans ce didacticiel, nous approfondirons les principes fondamentaux de l'utilisation de Groupdocs.Annotation pour .NET, en décomposant chaque exemple en plusieurs étapes pour vous guider tout au long du processus de manière transparente.
 ## Conditions préalables

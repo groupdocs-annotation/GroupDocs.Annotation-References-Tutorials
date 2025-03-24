@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Bildanmerk
 weight: 14
 url: /de/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Bildanmerkung zum Dokument hinzufügen (lokaler Pfad)
+
 ## Einführung
 GroupDocs.Annotation für .NET ist eine leistungsstarke Bibliothek, mit der Entwickler programmgesteuert verschiedene Arten von Anmerkungen zu Dokumenten hinzufügen können. In diesem Tutorial erfahren Sie, wie Sie mithilfe eines lokalen Pfads Bildanmerkungen zu einem Dokument hinzufügen.
 ## Voraussetzungen

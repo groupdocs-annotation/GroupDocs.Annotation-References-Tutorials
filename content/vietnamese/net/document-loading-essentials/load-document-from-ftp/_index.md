@@ -6,6 +6,9 @@ description: Nâng cao các ứng dụng .NET của bạn với GroupDocs.Annota
 weight: 12
 url: /vi/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# Tải tài liệu từ FTP
+
 ## Giới thiệu
 GroupDocs.Annotation for .NET là một thư viện đa năng được thiết kế để hỗ trợ khả năng chú thích tài liệu trong các ứng dụng .NET một cách dễ dàng. Cho dù bạn đang xử lý tệp PDF, tài liệu Microsoft Office, hình ảnh hay các định dạng khác, thư viện này đều cung cấp giải pháp thống nhất để thêm chú thích, chẳng hạn như nhận xét, đánh dấu và hình dạng, nhằm nâng cao khả năng cộng tác và quản lý tài liệu.
 ## Điều kiện tiên quyết

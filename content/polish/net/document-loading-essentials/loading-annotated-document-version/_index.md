@@ -6,6 +6,9 @@ description: Dowiedz się, jak bez wysiłku ładować wersje dokumentów z adnot
 weight: 16
 url: /pl/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Ładowanie wersji dokumentu z adnotacjami
+
 ## Wstęp
 dzisiejszej epoce cyfrowej adnotacje w dokumentach stały się niezbędnym narzędziem do współpracy, przeglądania i przekazywania informacji zwrotnych w różnych branżach. Niezależnie od tego, czy jesteś programistą integrującym funkcje adnotacji w swojej aplikacji, czy użytkownikiem chcącym wykorzystać te możliwości, GroupDocs.Annotation dla .NET zapewnia potężne rozwiązanie. W tym samouczku zagłębimy się w proces ładowania wersji dokumentów z adnotacjami przy użyciu GroupDocs.Annotation dla .NET.
 ## Warunki wstępne

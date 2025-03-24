@@ -6,6 +6,9 @@ description: Dowiedz się, jak usuwać adnotacje z dokumentów PDF za pomocą Gr
 weight: 10
 url: /pl/net/removing-annotations/remove-annotations/
 ---
+
+# Usuń adnotacje w .NET
+
 ## Wstęp
 Adnotacje odgrywają kluczową rolę w zarządzaniu dokumentami cyfrowymi, umożliwiając użytkownikom wyróżnianie, komentowanie i oznaczanie ważnych sekcji w plikach. Może się jednak zdarzyć, że zajdzie potrzeba usunięcia adnotacji z dokumentu. W tym samouczku omówimy, jak usunąć adnotacje w platformie .NET przy użyciu Groupdocs.Annotation, potężnego narzędzia do dodawania adnotacji i manipulowania dokumentami.
 ## Warunki wstępne

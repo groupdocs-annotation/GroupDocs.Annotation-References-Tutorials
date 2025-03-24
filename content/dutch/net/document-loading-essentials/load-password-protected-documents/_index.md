@@ -6,6 +6,9 @@ description: Verbeter de samenwerking en documentbeoordeling met GroupDocs.Annot
 weight: 17
 url: /nl/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Met wachtwoord beveiligde documenten laden
+
 ## Invoering
 In de snelle wereld van vandaag is samenwerking de sleutel tot succes. Of u nu met collega's, klanten of partners aan een project werkt, de mogelijkheid om documenten efficiënt te annoteren en te delen kan de productiviteit aanzienlijk verbeteren en de workflows stroomlijnen. GroupDocs.Annotation voor .NET biedt een krachtige oplossing voor het annoteren van PDF- en andere documentformaten rechtstreeks binnen uw .NET-applicaties, waardoor naadloze samenwerking en documentbeoordelingsprocessen mogelijk worden.
 ## Vereisten

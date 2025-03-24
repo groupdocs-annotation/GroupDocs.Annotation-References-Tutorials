@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 문서에 원활하게
 weight: 17
 url: /ko/net/removing-annotations/remove-replies-by-username/
 ---
+
+# .NET에서 사용자 이름별 회신 제거
+
 ## 소개
 Groupdocs.Annotation for .NET은 .NET 응용 프로그램 내에서 문서에 원활하게 주석을 달기 위한 강력한 도구입니다. PDF, Word 문서 또는 기타 지원되는 파일 형식으로 작업하는 경우 이 라이브러리는 주석, 강조 표시 및 설명 추가 프로세스를 단순화하고 공동 작업 및 문서 관리 기능을 향상시킵니다.
 ## 전제 조건

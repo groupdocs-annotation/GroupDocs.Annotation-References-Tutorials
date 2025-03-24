@@ -6,6 +6,9 @@ description: Aprenda a agregar anotaciones de subrayado de texto a documentos us
 weight: 27
 url: /es/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Agregar anotación de subrayado de texto al documento
+
 ## Introducción
 En este tutorial, recorreremos el proceso de agregar una anotación de subrayado de texto a un documento usando GroupDocs.Annotation para .NET. Las anotaciones de subrayado de texto pueden resultar útiles para enfatizar partes específicas de un documento, como pasajes importantes o puntos clave.
 ## Requisitos previos

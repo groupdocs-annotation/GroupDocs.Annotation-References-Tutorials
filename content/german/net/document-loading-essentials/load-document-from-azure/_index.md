@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie Dokumente in .NET mit GroupDocs.Annotation mi
 weight: 11
 url: /de/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Dokument aus Azure laden
+
 ## Einführung
 Im Bereich der Dokumentenverwaltung und -zusammenarbeit erweist sich GroupDocs.Annotation für .NET als robuste Lösung, die nahtlose Annotations- und Markup-Funktionen innerhalb von .NET-Anwendungen ermöglicht. Dieses Tutorial befasst sich mit den Feinheiten der Nutzung von GroupDocs.Annotation für .NET zum Kommentieren von Dokumenten und bietet eine Schritt-für-Schritt-Anleitung von den Voraussetzungen bis zur erweiterten Verwendung.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: تعرف على كيفية إضافة مكون Checkbox إلى مس
 weight: 11
 url: /ar/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# إضافة مكون خانة الاختيار إلى وثيقة PDF
+
 ## مقدمة
 في هذا البرنامج التعليمي، سنرشدك خلال عملية إضافة مكون Checkbox إلى مستند PDF باستخدام Groupdocs.Annotation for .NET.
 ## المتطلبات الأساسية

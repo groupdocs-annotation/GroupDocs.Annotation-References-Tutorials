@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 공동 작업 및 문�
 weight: 17
 url: /ko/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# 비밀번호로 보호된 문서 로드
+
 ## 소개
 오늘날 빠르게 변화하는 세상에서 협업은 성공의 열쇠입니다. 동료, 고객 또는 파트너와 함께 프로젝트를 진행 중이든 문서에 효율적으로 주석을 달고 공유하는 기능은 생산성을 크게 향상시키고 작업 흐름을 간소화할 수 있습니다. .NET용 GroupDocs.Annotation은 .NET 응용 프로그램 내에서 직접 PDF 및 기타 문서 형식에 주석을 달 수 있는 강력한 솔루션을 제공하여 원활한 공동 작업 및 문서 검토 프로세스를 가능하게 합니다.
 ## 전제 조건

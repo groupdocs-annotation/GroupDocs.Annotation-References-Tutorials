@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni di redazione del testo ai docume
 weight: 23
 url: /it/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Aggiungi annotazione di redazione testo al documento
+
 ## introduzione
 L'aggiunta di un'annotazione di oscuramento del testo a un documento può essere un passaggio cruciale nella gestione sicura delle informazioni sensibili. GroupDocs.Annotation per .NET fornisce una soluzione solida per raggiungere questo obiettivo senza problemi. In questo tutorial ti guideremo passo dopo passo attraverso il processo di aggiunta di un'annotazione di redazione del testo al tuo documento.
 ## Prerequisiti

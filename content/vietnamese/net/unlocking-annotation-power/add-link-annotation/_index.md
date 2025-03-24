@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích liên kết vào tài liệu b�
 weight: 16
 url: /vi/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Thêm chú thích liên kết vào tài liệu
+
 ## Giới thiệu
 Groupdocs.Annotation for .NET là một thư viện mạnh mẽ cho phép các nhà phát triển tích hợp các chức năng chú thích toàn diện vào các ứng dụng .NET của họ một cách dễ dàng. Một trong những tính năng chính mà nó cung cấp là khả năng thêm chú thích liên kết vào tài liệu, tăng cường cộng tác và tương tác.
 ## Điều kiện tiên quyết

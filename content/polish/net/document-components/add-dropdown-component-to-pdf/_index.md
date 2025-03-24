@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać komponenty rozwijane do plików PDF za p
 weight: 12
 url: /pl/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Dodaj komponent rozwijany do dokumentu PDF
+
 ## Wstęp
 GroupDocs.Annotation dla .NET zapewnia potężny zestaw narzędzi do programowego dodawania adnotacji do dokumentów PDF. Jedną z przydatnych funkcji jest możliwość dodawania rozwijanych komponentów do dokumentów PDF, zwiększając ich interaktywność i użyteczność.
 ## Warunki wstępne

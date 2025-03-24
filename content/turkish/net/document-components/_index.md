@@ -6,6 +6,9 @@ description: GroupDocs.Annotation .NET'i kullanarak düğmeler, onay kutuları v
 weight: 24
 url: /tr/net/document-components/
 ---
+
+# Belge Bileşenleri
+
 ## giriiş
 
 GroupDocs.Annotation for .NET, geliştiricilerin etkileşimli bileşenleri PDF belgelerine sorunsuz bir şekilde entegre etmelerine yardımcı olacak güçlü bir dizi eğitim sağlar. Bu makalede, bu eğitimlerin ayrıntılarını inceleyerek PDF'lerinizin işlevselliğini ve kullanıcı deneyimini geliştirmenize nasıl yardımcı olduklarını keşfedeceğiz.

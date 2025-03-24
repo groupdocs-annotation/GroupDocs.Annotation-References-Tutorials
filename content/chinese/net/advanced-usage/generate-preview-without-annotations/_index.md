@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 增强 .NET 应用程序内的
 weight: 13
 url: /zh/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# 生成不带注释的预览
+
 ## 介绍
 在当今的数字时代，文档的高效协作是生产力和成功的关键。无论您是与分散在全球各地的团队成员一起开展项目，还是与客户就重要合同进行协作，无缝注释和审查文档的能力都至关重要。借助 GroupDocs.Annotation for .NET，您可以将文档协作提升到新的水平，从而可以直接在 .NET 应用程序中轻松进行注释、标记和审阅。
 ## 先决条件

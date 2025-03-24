@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje graficzne do tekstu w platform
 weight: 21
 url: /pl/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Umieść adnotację obrazu nad tekstem
+
 ## Wstęp
 świecie programowania .NET GroupDocs.Annotation oferuje potężne rozwiązanie do dodawania adnotacji do dokumentów, zwiększając efektywność współpracy i zarządzania dokumentami. Jednym z typowych wymagań jest umieszczanie adnotacji graficznych nad tekstem, co można bezproblemowo wykonać za pomocą GroupDocs.Annotation dla .NET.
 ## Warunki wstępne

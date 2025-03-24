@@ -6,6 +6,9 @@ description: Tìm hiểu cách chú thích các tài liệu PDF theo chương tr
 weight: 15
 url: /vi/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Tải tài liệu từ URL
+
 ## Giới thiệu
 GroupDocs.Annotation for .NET là một thư viện giàu tính năng cho phép các nhà phát triển thêm khả năng chú thích vào các ứng dụng .NET của họ một cách dễ dàng. Với GroupDocs.Annotation, bạn có thể chú thích các tài liệu PDF theo chương trình, cho phép người dùng đánh dấu văn bản, thêm nhận xét, vẽ hình, v.v. Hướng dẫn này sẽ hướng dẫn bạn các bước tải tài liệu từ một URL, thêm chú thích và lưu tài liệu được chú thích bằng GroupDocs.Annotation cho .NET.
 ## Điều kiện tiên quyết

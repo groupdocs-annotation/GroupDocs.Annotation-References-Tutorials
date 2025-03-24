@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi elips ke dokumen di .NET mengguna
 weight: 13
 url: /id/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Tambahkan Anotasi Ellipse ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, Anda akan mempelajari cara menambahkan anotasi elips ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Panduan langkah demi langkah ini akan memandu Anda melalui prosesnya, memastikan bahwa Anda memahami setiap langkah dengan jelas.
 ## Prasyarat

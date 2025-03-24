@@ -6,6 +6,9 @@ description: Learn how to remove multiple annotations by IDs in .NET using Group
 weight: 13
 url: /net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# Remove Multiple Annotations by IDs
+
 ## Introduction
 In the world of document management and collaboration, GroupDocs.Annotation for .NET emerges as a powerful tool, enabling developers to annotate and manipulate documents seamlessly within their .NET applications. This tutorial will delve into one of the essential functionalities offered by GroupDocs.Annotation for .NET: removing multiple annotations by IDs. By following this step-by-step guide, you'll gain a comprehensive understanding of how to efficiently remove annotations, empowering you to enhance your document management capabilities.
 ## Prerequisites

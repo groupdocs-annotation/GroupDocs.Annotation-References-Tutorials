@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET ile güçlü belge açıklama özelli
 weight: 10
 url: /tr/net/applying-licenses/set-license-from-file/
 ---
+
+# Lisansı Dosyadan Ayarla
+
 ## giriiş
 Günümüzün dijital çağında belge açıklaması, çeşitli sektörlerdeki işbirliği, inceleme ve geri bildirim süreçleri için önemli bir araç haline geldi. GroupDocs.Annotation for .NET, açıklama işlevselliğini .NET uygulamalarına sorunsuz bir şekilde entegre etmek isteyen geliştiriciler için güçlü bir çözüm sunar.
 ## Önkoşullar

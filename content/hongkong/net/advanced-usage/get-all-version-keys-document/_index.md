@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 擷取文件上的
 weight: 16
 url: /zh-hant/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# 取得文件上的所有版本金鑰
+
 ## 介紹
 在當今快節奏的數位世界中，有效的文件管理對於企業和個人都至關重要。無論您是在專案上進行協作、審查合約還是只是組織文件，擁有正確的工具都可以發揮重要作用。 GroupDocs.Annotation for .NET 提供了在 .NET 應用程式中註解和操作文件的全面解決方案。在本教學中，我們將探討如何利用 GroupDocs.Annotation for .NET 擷取文件上的所有版本金鑰。
 ## 先決條件

@@ -6,6 +6,9 @@ description: Mejore sus aplicaciones .NET con GroupDocs.Annotation para realizar
 weight: 18
 url: /es/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Obtener lista de anotaciones usando la clave de versión
+
 ## Introducción
 En el mundo del desarrollo .NET, gestionar y manipular documentos de manera eficiente es primordial. Ya sea anotando archivos PDF, colaborando en documentos de Word o marcando hojas de Excel, tener las herramientas adecuadas puede optimizar los flujos de trabajo y aumentar la productividad. GroupDocs.Annotation para .NET es una de esas herramientas que permite a los desarrolladores anotar y manipular documentos sin problemas dentro de sus aplicaciones .NET.
 ## Requisitos previos

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 在 .NET 中的文本上添
 weight: 21
 url: /zh/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# 将图像注释放在文本上
+
 ## 介绍
 在 .NET 开发领域，GroupDocs.Annotation 提供了一个强大的解决方案，用于向文档添加注释，从而使协作和文档管理更加高效。一项常见的要求是将图像注释放在文本上，这可以使用 GroupDocs.Annotation for .NET 无缝完成。
 ## 先决条件

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET で ID によって返信
 weight: 16
 url: /ja/net/removing-annotations/remove-replies-by-id/
 ---
+
+# .NET で ID による応答を削除する
+
 ## 導入
 .NET 開発の領域では、ドキュメント内の注釈を管理する機能はさまざまなアプリケーションにとって重要です。 PDF、Word ドキュメント、またはその他の形式で作業している場合でも、プログラムで注釈を操作できる機能があれば、可能性の世界が広がります。 .NET で注釈を処理するための強力なツールの 1 つは、GroupDocs.Annotation です。
 ## 前提条件

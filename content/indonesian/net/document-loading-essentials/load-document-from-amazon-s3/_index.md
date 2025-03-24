@@ -6,6 +6,9 @@ description: Pelajari cara membuat anotasi dokumen secara terprogram dengan Grou
 weight: 10
 url: /id/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# Muat Dokumen dari Amazon S3
+
 ## Perkenalan
 Di era digital saat ini, pengelolaan dokumen sangat penting bagi bisnis dan individu. Groupdocs.Annotation for .NET memberikan solusi ampuh untuk membuat anotasi dokumen secara terprogram, memungkinkan pengembang meningkatkan kolaborasi dokumen dan menyederhanakan alur kerja. Dalam tutorial ini, kami akan mempelajari dasar-dasar penggunaan Groupdocs.Annotation untuk .NET, membagi setiap contoh menjadi beberapa langkah untuk memandu Anda melalui proses dengan lancar.
 ## Prasyarat

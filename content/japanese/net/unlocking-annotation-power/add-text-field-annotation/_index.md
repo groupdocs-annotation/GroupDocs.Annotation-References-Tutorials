@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET を使用して、テキスト フィ
 weight: 21
 url: /ja/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# テキストフィールドの注釈をドキュメントに追加
+
 ## 導入
 Groupdocs.Annotation for .NET は、開発者が .NET アプリケーションに注釈機能を簡単に追加できる強力なツールです。ドキュメント管理システム、共同作業プラットフォーム、またはドキュメントの注釈が不可欠なアプリケーションに取り組んでいる場合でも、Groupdocs.Annotation の包括的な機能セットと直感的な API によりプロセスが簡素化されます。
 このチュートリアルでは、Groupdocs.Annotation for .NET の基本機能の 1 つである、ドキュメントへのテキスト フィールドの注釈の追加について詳しく説明します。このステップバイステップ ガイドに従うことで、テキスト フィールドの注釈を .NET アプリケーションにシームレスに統合し、ユーザー エクスペリエンスとコラボレーション機能を強化する方法を学びます。

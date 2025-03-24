@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET에서 문서에 주석을
 weight: 11
 url: /ko/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Azure에서 문서 로드
+
 ## 소개
 문서 관리 및 공동 작업 영역에서 .NET용 GroupDocs.Annotation은 .NET 응용 프로그램 내에서 원활한 주석 및 마크업 기능을 지원하는 강력한 솔루션으로 등장합니다. 이 튜토리얼에서는 문서에 주석을 달기 위해 .NET용 GroupDocs.Annotation을 활용하는 복잡한 과정을 자세히 살펴보고 전제 조건부터 고급 사용법까지 단계별 지침을 제공합니다.
 ## 전제 조건

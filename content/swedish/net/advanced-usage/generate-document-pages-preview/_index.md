@@ -6,6 +6,9 @@ description: Lär dig hur du genererar förhandsgranskning av dokumentsidor effe
 weight: 12
 url: /sv/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Generera förhandsgranskning av dokumentsidor
+
 ## Introduktion
 När det gäller dokumenthantering och samarbete framstår GroupDocs.Annotation för .NET som ett mångsidigt verktyg. Oavsett om du är en utvecklare som vill integrera anteckningsfunktioner i din applikation eller en affärsanvändare som söker effektivt dokumentsamarbete, tillhandahåller GroupDocs.Annotation en heltäckande lösning. Den här handledningen guidar dig genom processen att skapa förhandsvisning av dokumentsidor med GroupDocs.Annotation för .NET, och dela upp varje steg i lättsmälta bitar.
 ## Förutsättningar

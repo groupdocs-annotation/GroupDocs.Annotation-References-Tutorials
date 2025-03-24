@@ -6,6 +6,9 @@ description: GroupDocs.Annotation .NET を使用してドキュメントをロ�
 weight: 20
 url: /ja/net/document-loading-essentials/
 ---
+
+# ドキュメントの読み込みの基本事項
+
 ## 導入
 
 GroupDocs.Annotation を使用して、.NET アプリケーションでのドキュメント アノテーションの可能性を最大限に引き出します。この包括的なガイドでは、さまざまなソースからドキュメントをロードするための基本的なチュートリアルを詳しく説明します。 Amazon S3、Azure、FTP、ローカル ディスク、ストリーム、URL からファイルを取得する場合でも、注釈付きドキュメント バージョンを処理する場合でも、GroupDocs.Annotation はプロセスを簡素化し、シームレスな統合と強化されたコラボレーションを可能にします。

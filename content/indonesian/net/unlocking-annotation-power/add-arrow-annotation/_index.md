@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi panah ke dokumen Anda menggunakan
 weight: 11
 url: /id/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Tambahkan Anotasi Panah ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses menambahkan anotasi panah ke dokumen Anda menggunakan GroupDocs.Annotation untuk .NET. Anotasi panah berguna untuk menunjukkan arah atau menunjukkan elemen tertentu dalam dokumen.
 ## Prasyarat

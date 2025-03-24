@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi garis bawah teks ke dokumen mengg
 weight: 27
 url: /id/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Tambahkan Anotasi Garis Bawah Teks ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, kita akan memandu proses menambahkan anotasi garis bawah teks ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Anotasi garis bawah teks dapat berguna untuk menekankan bagian tertentu dari dokumen, seperti bagian penting atau poin penting.
 ## Prasyarat

@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 통해 문서 공동 작업을 향�
 weight: 23
 url: /ko/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# 문서 미리보기 해상도 설정
+
 ## 소개
 오늘날의 디지털 시대에는 효율적인 문서 관리와 협업이 기업과 개인 모두에게 가장 중요합니다. 매일 순환되는 수많은 문서에서 원활한 주석 및 미리보기 기능을 보장하면 생산성이 크게 향상되고 작업 흐름이 간소화될 수 있습니다. .NET용 Groupdocs.Annotation을 입력하세요. 다양한 문서 형식에 대한 강력한 주석 기능을 개발자에게 제공하도록 설계된 강력한 도구 키트입니다.
 ## 전제 조건

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak belgelere sürekli çizg
 weight: 18
 url: /tr/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Belgeye Çoklu Çizgi Açıklaması Ekleme
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin PDF ve Microsoft Office belgelerine program aracılığıyla açıklama eklemesine olanak tanıyan güçlü bir araçtır. Özellikleri arasında, belgelere çoklu çizgi açıklamaları ekleme, işbirliğini ve belge inceleme süreçlerini geliştirme yeteneği yer almaktadır.
 ## Önkoşullar

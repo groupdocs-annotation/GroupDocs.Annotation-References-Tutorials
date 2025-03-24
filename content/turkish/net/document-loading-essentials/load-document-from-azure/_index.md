@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak .NET'te belgelere nasıl açıkl
 weight: 11
 url: /tr/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Azure'dan Belge Yükle
+
 ## giriiş
 Belge yönetimi ve işbirliği alanında, GroupDocs.Annotation for .NET, .NET uygulamaları içindeki kusursuz açıklama ve işaretleme işlevlerini kolaylaştıran sağlam bir çözüm olarak ortaya çıkıyor. Bu eğitimde, belgelere açıklama eklemek için GroupDocs.Annotation for .NET'ten yararlanmanın incelikleri ele alınmakta ve ön koşullardan ileri düzey kullanıma kadar adım adım rehberlik sunulmaktadır.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích hình elip vào tài liệu tro
 weight: 13
 url: /vi/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Thêm chú thích hình elip vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, bạn sẽ tìm hiểu cách thêm chú thích hình elip vào tài liệu bằng GroupDocs.Annotation cho .NET. Hướng dẫn từng bước này sẽ hướng dẫn bạn thực hiện quy trình, đảm bảo rằng bạn hiểu rõ từng bước.
 ## Điều kiện tiên quyết

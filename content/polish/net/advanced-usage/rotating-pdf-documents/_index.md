@@ -6,6 +6,9 @@ description: Dowiedz się, jak łatwo obracać dokumenty PDF za pomocą Groupdoc
 weight: 22
 url: /pl/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# Obracanie dokumentów PDF
+
 ## Wstęp
 Obracanie dokumentów PDF może być kluczowym zadaniem w przypadku plików, które należy przeglądać lub przetwarzać w inny sposób. W tym samouczku omówimy krok po kroku, jak obracać dokumenty PDF za pomocą Groupdocs.Annotation dla .NET.
 ## Warunki wstępne

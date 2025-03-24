@@ -6,6 +6,9 @@ description: Migliora la collaborazione sui documenti con Groupdocs.Annotation p
 weight: 10
 url: /it/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Aggiungi annotazione area al documento
+
 ## introduzione
 In questo tutorial ti guideremo attraverso il processo di aggiunta di annotazioni di area ai documenti utilizzando Groupdocs.Annotation per .NET. Le annotazioni di area sono una funzionalità preziosa che consente agli utenti di evidenziare aree specifiche di un documento, fornendo chiarezza e contesto al contenuto.
 ## Prerequisiti

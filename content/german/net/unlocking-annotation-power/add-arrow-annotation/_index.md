@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Pfeilanmer
 weight: 11
 url: /de/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Pfeilanmerkung hinzu
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Hinzufügens von Pfeilanmerkungen zu Ihren Dokumenten mithilfe von GroupDocs.Annotation für .NET. Pfeilanmerkungen sind nützlich, um die Richtung anzugeben oder auf bestimmte Elemente innerhalb eines Dokuments hinzuweisen.
 ## Voraussetzungen

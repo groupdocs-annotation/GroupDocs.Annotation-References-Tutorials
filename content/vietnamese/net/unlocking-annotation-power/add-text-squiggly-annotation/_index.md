@@ -6,6 +6,9 @@ description: Tìm hiểu cách dễ dàng thêm các chú thích nguệch ngoạ
 weight: 25
 url: /vi/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Thêm chú thích nguệch ngoạc văn bản vào tài liệu
+
 ## Giới thiệu
 
 Groupdocs.Annotation for .NET là một thư viện linh hoạt cho phép các nhà phát triển tích hợp khả năng chú thích mạnh mẽ vào các ứng dụng .NET của họ một cách dễ dàng. Cho dù bạn đang làm việc với tệp PDF, tài liệu Word hay các định dạng tệp phổ biến khác, Groupdocs.Annotation đều cung cấp giải pháp liền mạch để chú thích và nâng cao khả năng cộng tác trên tài liệu.

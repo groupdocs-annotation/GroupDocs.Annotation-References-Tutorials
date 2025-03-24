@@ -6,6 +6,9 @@ description: Ontdek hoe u annotaties in .NET efficiënt kunt beheren met GroupDo
 weight: 25
 url: /nl/net/removing-annotations/
 ---
+
+# Annotaties verwijderen
+
 ## Invoering
 
 Wilt u uw documentbeheerproces in .NET stroomlijnen? GroupDocs.Annotation biedt een uitgebreide reeks zelfstudies waarmee u annotaties naadloos kunt verwijderen. Annotaties spelen een cruciale rol bij de samenwerking en beoordelingsprocessen aan documenten. Er zijn echter gevallen waarin het verwijderen van annotaties noodzakelijk wordt, vanwege revisies, fouten of updates. In deze serie zelfstudies verdiepen we ons in verschillende methoden en technieken om annotaties efficiënt te verwijderen met GroupDocs.Annotation voor .NET.

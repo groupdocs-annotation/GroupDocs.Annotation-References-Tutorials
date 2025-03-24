@@ -6,6 +6,9 @@ description: GroupDocs.Annotation ile .NET'te belgelere zahmetsizce nasıl açı
 weight: 14
 url: /tr/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Belgeyi Akıştan Yükle
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin belge açıklama özelliklerini .NET uygulamalarına zahmetsizce entegre etmelerine olanak tanıyan güçlü bir kitaplıktır. İster bir belge yönetim sistemi, ister bir işbirliği platformu, ister bir e-öğrenme uygulaması oluşturuyor olun, GroupDocs.Annotation, PDF'lere, Word belgelerine, Excel sayfalarına ve daha fazlasına açıklama eklemek için çok yönlü bir araç seti sağlar.
 ## Önkoşullar

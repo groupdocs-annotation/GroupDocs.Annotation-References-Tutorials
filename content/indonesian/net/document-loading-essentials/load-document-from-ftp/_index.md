@@ -6,6 +6,9 @@ description: Tingkatkan aplikasi .NET Anda dengan GroupDocs.Annotation untuk ano
 weight: 12
 url: /id/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# Muat Dokumen dari FTP
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah perpustakaan serbaguna yang dirancang untuk memfasilitasi kemampuan anotasi dokumen dalam aplikasi .NET dengan mudah. Baik Anda menangani PDF, dokumen Microsoft Office, gambar, atau format lainnya, pustaka ini menyediakan solusi terpadu untuk menambahkan anotasi, seperti komentar, sorotan, dan bentuk, untuk meningkatkan kolaborasi dan manajemen dokumen.
 ## Prasyarat

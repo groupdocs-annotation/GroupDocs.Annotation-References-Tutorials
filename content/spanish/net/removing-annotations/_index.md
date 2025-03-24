@@ -6,6 +6,9 @@ description: Descubra cómo administrar eficientemente las anotaciones en .NET c
 weight: 25
 url: /es/net/removing-annotations/
 ---
+
+# Eliminar anotaciones
+
 ## Introducción
 
 ¿Está buscando optimizar su proceso de gestión de documentos en .NET? GroupDocs.Annotation ofrece un conjunto completo de tutoriales para ayudarle a eliminar anotaciones sin problemas. Las anotaciones desempeñan un papel vital en los procesos de revisión y colaboración de documentos. Sin embargo, hay casos en los que es necesario eliminar anotaciones, ya sea debido a revisiones, errores o actualizaciones. En esta serie de tutoriales, profundizamos en varios métodos y técnicas para eliminar anotaciones de manera eficiente usando GroupDocs.Annotation para .NET.

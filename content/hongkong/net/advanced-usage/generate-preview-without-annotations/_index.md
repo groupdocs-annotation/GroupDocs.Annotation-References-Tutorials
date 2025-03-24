@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 增強 .NET 應用程式內的
 weight: 13
 url: /zh-hant/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# 生成不含註釋的預覽
+
 ## 介紹
 在當今的數位時代，文件的高效協作是生產力和成功的關鍵。無論您是與分散在全球各地的團隊成員一起開展項目，還是與客戶就重要合約進行協作，無縫註釋和審查文件的能力都至關重要。透過 GroupDocs.Annotation for .NET，您可以將文件協作提升到新的水平，從而可以直接在 .NET 應用程式中輕鬆進行註釋、標記和審查。
 ## 先決條件

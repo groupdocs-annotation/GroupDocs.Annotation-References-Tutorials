@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation mehrere Anmerkungen 
 weight: 12
 url: /de/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Entfernen Sie mehrere Anmerkungen in .NET
+
 ## Einführung
 Anmerkungen spielen eine entscheidende Rolle bei der Dokumentenverwaltung und verbessern die Zusammenarbeit und Kommunikation. Es gibt jedoch Fälle, in denen Sie möglicherweise mehrere Anmerkungen innerhalb Ihrer .NET-Anwendung effizient entfernen müssen. In diesem Tutorial erfahren Sie, wie Sie dies mit GroupDocs.Annotation für .NET erreichen. Lass uns anfangen!
 ## Voraussetzungen

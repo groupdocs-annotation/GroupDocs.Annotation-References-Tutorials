@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET'i kullanarak belgelere nasıl sorunsu
 weight: 17
 url: /tr/net/removing-annotations/remove-replies-by-username/
 ---
+
+# .NET'te Kullanıcı Adına Göre Yanıtları Kaldırma
+
 ## giriiş
 Groupdocs.Annotation for .NET, .NET uygulamalarınızdaki belgelere sorunsuz bir şekilde açıklama eklemek için güçlü bir araçtır. İster PDF'lerle, ister Word belgeleriyle, ister desteklenen herhangi bir dosya biçimiyle çalışıyor olun, bu kitaplık, ek açıklamalar, vurgular ve yorumlar ekleme sürecini basitleştirerek işbirliği ve belge yönetimi yeteneklerini geliştirir.
 ## Önkoşullar

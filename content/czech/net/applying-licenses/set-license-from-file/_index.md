@@ -6,6 +6,9 @@ description: Pomocí GroupDocs.Annotation for .NET bezproblémově integrujte v�
 weight: 10
 url: /cs/net/applying-licenses/set-license-from-file/
 ---
+
+# Nastavit licenci ze souboru
+
 ## Úvod
 dnešní digitální době se anotace dokumentů stala nezbytným nástrojem pro spolupráci, kontrolu a zpětnou vazbu v různých průmyslových odvětvích. GroupDocs.Annotation for .NET nabízí výkonné řešení pro vývojáře, kteří se snaží hladce integrovat funkce anotací do svých aplikací .NET.
 ## Předpoklady

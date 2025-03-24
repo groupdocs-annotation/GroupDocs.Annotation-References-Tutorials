@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích hình ảnh vào tài liệu b�
 weight: 15
 url: /vi/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Thêm chú thích hình ảnh vào tài liệu (Đường dẫn từ xa)
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng ta sẽ tìm hiểu quy trình thêm chú thích hình ảnh vào tài liệu bằng GroupDocs.Annotation cho .NET. Thư viện này cung cấp các công cụ mạnh mẽ để chú thích các loại tài liệu khác nhau theo chương trình.
 ## Điều kiện tiên quyết

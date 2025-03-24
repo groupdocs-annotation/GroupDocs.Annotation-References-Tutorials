@@ -6,6 +6,9 @@ description: Learn how to effortlessly add text squiggly annotations to document
 weight: 25
 url: /net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Add Text Squiggly Annotation to Document
+
 ## Introduction
 
 Groupdocs.Annotation for .NET is a versatile library that enables developers to integrate robust annotation capabilities into their .NET applications effortlessly. Whether you're working with PDFs, Word documents, or other popular file formats, Groupdocs.Annotation provides a seamless solution for annotating and enhancing document collaboration.

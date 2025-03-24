@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá könnyedén szöveghelyettesítő 
 weight: 24
 url: /hu/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Szövegcsere megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük Önt a GroupDocs.Annotation for .NET segítségével szöveghelyettesítő megjegyzés hozzáadásának folyamatán. Ez a hatékony könyvtár lehetővé teszi a fejlesztők számára, hogy programozottan kezeljék és megjegyzésekkel láthassák el a különféle típusú dokumentumokat. Ennek az oktatóanyagnak a végére olyan ismeretekkel rendelkezik, amelyek segítségével zökkenőmentesen integrálhatja a szöveghelyettesítő megjegyzéseket .NET-alkalmazásaiba.
 ## Előfeltételek

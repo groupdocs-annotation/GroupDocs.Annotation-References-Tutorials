@@ -6,6 +6,9 @@ description: Usprawnij współpracę i przeglądanie dokumentów dzięki GroupDo
 weight: 17
 url: /pl/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Załaduj dokumenty chronione hasłem
+
 ## Wstęp
 dzisiejszym dynamicznym świecie współpraca jest kluczem do sukcesu. Niezależnie od tego, czy pracujesz nad projektem ze współpracownikami, klientami czy partnerami, możliwość wydajnego dodawania adnotacji i udostępniania dokumentów może znacząco poprawić produktywność i usprawnić przepływ pracy. GroupDocs.Annotation dla .NET oferuje zaawansowane rozwiązanie do dodawania adnotacji do plików PDF i innych formatów dokumentów bezpośrednio w aplikacjach .NET, umożliwiając bezproblemową współpracę i procesy przeglądania dokumentów.
 ## Warunki wstępne

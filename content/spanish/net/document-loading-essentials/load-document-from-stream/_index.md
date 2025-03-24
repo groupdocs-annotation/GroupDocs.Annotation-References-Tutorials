@@ -6,6 +6,9 @@ description: Aprenda a anotar documentos en .NET sin esfuerzo con GroupDocs.Anno
 weight: 14
 url: /es/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Cargar documento desde la secuencia
+
 ## Introducción
 GroupDocs.Annotation para .NET es una poderosa biblioteca que permite a los desarrolladores integrar capacidades de anotación de documentos en sus aplicaciones .NET sin esfuerzo. Ya sea que esté creando un sistema de gestión de documentos, una plataforma de colaboración o una aplicación de aprendizaje electrónico, GroupDocs.Annotation proporciona un conjunto versátil de herramientas para anotar archivos PDF, documentos de Word, hojas de Excel y más.
 ## Requisitos previos

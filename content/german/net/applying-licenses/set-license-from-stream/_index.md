@@ -6,6 +6,9 @@ description: Schöpfen Sie mit GroupDocs.Annotation das volle Potenzial der Doku
 weight: 11
 url: /de/net/applying-licenses/set-license-from-stream/
 ---
+
+# Lizenz aus Stream festlegen
+
 ## Einführung
 Willkommen beim umfassenden Leitfaden zur Verwendung von GroupDocs.Annotation für .NET zur Verbesserung Ihrer Dokumentanmerkungsfunktionen. Egal, ob Sie ein erfahrener Entwickler sind oder gerade erst anfangen, dieses Tutorial führt Sie durch jeden Schritt und stellt sicher, dass Sie das volle Potenzial dieses leistungsstarken Tools nutzen.
 ## Voraussetzungen

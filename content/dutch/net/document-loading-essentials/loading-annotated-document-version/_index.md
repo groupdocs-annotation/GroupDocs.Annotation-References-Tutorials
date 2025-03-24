@@ -6,6 +6,9 @@ description: Leer hoe u moeiteloos geannoteerde documentversies kunt laden met G
 weight: 16
 url: /nl/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Geannoteerde documentversie laden
+
 ## Invoering
 In het huidige digitale tijdperk is documentannotatie een essentieel hulpmiddel geworden voor samenwerking, beoordeling en feedback in verschillende sectoren. Of u nu een ontwikkelaar bent die annotatiefuncties in uw toepassing integreert of een gebruiker die deze mogelijkheden wil benutten, GroupDocs.Annotation voor .NET biedt een krachtige oplossing. In deze zelfstudie verdiepen we ons in het proces van het laden van geannoteerde documentversies met GroupDocs.Annotation voor .NET.
 ## Vereisten

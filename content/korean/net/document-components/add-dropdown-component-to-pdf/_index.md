@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 PDF에 드롭다운 �
 weight: 12
 url: /ko/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# PDF 문서에 드롭다운 구성 요소 추가
+
 ## 소개
 .NET용 GroupDocs.Annotation은 프로그래밍 방식으로 PDF 문서에 주석을 달기 위한 강력한 도구 세트를 제공합니다. 유용한 기능 중 하나는 PDF 문서에 드롭다운 구성 요소를 추가하여 상호 작용성과 유용성을 향상시키는 기능입니다.
 ## 전제 조건

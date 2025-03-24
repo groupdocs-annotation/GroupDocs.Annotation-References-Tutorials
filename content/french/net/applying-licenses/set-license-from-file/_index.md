@@ -6,6 +6,9 @@ description: Intégrez de puissantes fonctionnalités d'annotation de documents 
 weight: 10
 url: /fr/net/applying-licenses/set-license-from-file/
 ---
+
+# Définir la licence à partir du fichier
+
 ## Introduction
 À l'ère numérique d'aujourd'hui, l'annotation de documents est devenue un outil essentiel pour les processus de collaboration, de révision et de feedback dans divers secteurs. GroupDocs.Annotation pour .NET offre une solution puissante pour les développeurs cherchant à intégrer de manière transparente la fonctionnalité d'annotation dans leurs applications .NET.
 ## Conditions préalables

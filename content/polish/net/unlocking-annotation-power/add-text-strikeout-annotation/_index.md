@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać przekreślone adnotacje tekstowe do doku
 weight: 26
 url: /pl/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Dodaj przekreśloną adnotację tekstową do dokumentu
+
 ## Wstęp
 tym samouczku omówimy, jak dodać przekreśloną adnotację tekstową do dokumentu za pomocą programu GroupDocs.Annotation dla platformy .NET. Ta biblioteka zapewnia zaawansowane narzędzia do dodawania adnotacji do różnych typów dokumentów, usprawniające współpracę i procesy przeglądania dokumentów.
 ## Warunki wstępne

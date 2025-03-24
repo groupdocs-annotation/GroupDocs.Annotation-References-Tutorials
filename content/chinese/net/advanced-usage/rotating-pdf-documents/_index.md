@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 轻松旋转 PDF �
 weight: 22
 url: /zh/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# 旋转 PDF 文档
+
 ## 介绍
 当处理需要以不同方式查看或处理的文件时，旋转 PDF 文档可能是一项至关重要的任务。在本教程中，我们将探索如何使用 Groupdocs.Annotation for .NET 逐步旋转 PDF 文档。
 ## 先决条件

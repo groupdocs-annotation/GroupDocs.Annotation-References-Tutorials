@@ -6,6 +6,9 @@ description: Pelajari cara memuat font khusus dengan lancar di GroupDocs.Annotat
 weight: 20
 url: /id/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Memuat Font Khusus
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah perpustakaan canggih yang memungkinkan pengembang menambahkan fitur anotasi ke aplikasi .NET mereka dengan mudah. Salah satu fungsi utama yang ditawarkannya adalah kemampuan untuk memuat font khusus, memungkinkan peningkatan penyesuaian dan fleksibilitas dalam anotasi dokumen.
 ## Prasyarat

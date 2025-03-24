@@ -6,6 +6,9 @@ description: Découvrez comment charger sans effort des versions de documents an
 weight: 16
 url: /fr/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Chargement de la version du document annoté
+
 ## Introduction
 À l'ère numérique d'aujourd'hui, l'annotation de documents est devenue un outil essentiel de collaboration, de révision et de feedback dans divers secteurs. Que vous soyez un développeur intégrant des fonctionnalités d'annotation dans votre application ou un utilisateur cherchant à tirer parti de ces fonctionnalités, GroupDocs.Annotation pour .NET fournit une solution puissante. Dans ce didacticiel, nous aborderons le processus de chargement des versions de documents annotées à l'aide de GroupDocs.Annotation pour .NET.
 ## Conditions préalables

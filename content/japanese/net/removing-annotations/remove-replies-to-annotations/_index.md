@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET の注釈への返信を�
 weight: 15
 url: /ja/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# .NET での注釈への応答の削除
+
 ## 導入
 このチュートリアルでは、GroupDocs.Annotation を使用して .NET の注釈への応答を削除する方法を検討します。 GroupDocs.Annotation は、開発者がドキュメントに簡単に注釈を付けることができる強力な .NET ライブラリです。コメントの追加、テキストの強調表示、スタンプの追加など、GroupDocs.Annotation はドキュメントに注釈を付けるための包括的なツール セットを提供します。
 ## 前提条件

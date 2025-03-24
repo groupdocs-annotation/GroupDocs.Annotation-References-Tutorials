@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 將強大的文件註解功能
 weight: 10
 url: /zh-hant/net/applying-licenses/set-license-from-file/
 ---
+
+# 從文件設定許可證
+
 ## 介紹
 在現今的數位時代，文件註釋已成為各行業協作、審閱和回饋流程的重要工具。 GroupDocs.Annotation for .NET 為尋求將註釋功能無縫整合到 .NET 應用程式中的開發人員提供了強大的解決方案。
 ## 先決條件

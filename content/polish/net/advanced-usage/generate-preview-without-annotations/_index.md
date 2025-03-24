@@ -6,6 +6,9 @@ description: Usprawnij współpracę nad dokumentami i dodawaj adnotacje w aplik
 weight: 13
 url: /pl/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Generuj podgląd bez adnotacji
+
 ## Wstęp
 dzisiejszej epoce cyfrowej efektywna współpraca nad dokumentami jest kluczem do produktywności i sukcesu. Niezależnie od tego, czy pracujesz nad projektem z członkami zespołu rozproszonymi po całym świecie, czy współpracujesz z klientami przy ważnych kontraktach, możliwość płynnego dodawania adnotacji i przeglądania dokumentów jest kluczowa. Dzięki GroupDocs.Annotation dla .NET możesz przenieść współpracę nad dokumentami na wyższy poziom, umożliwiając łatwe dodawanie adnotacji, oznaczanie i przeglądanie bezpośrednio w aplikacjach .NET.
 ## Warunki wstępne

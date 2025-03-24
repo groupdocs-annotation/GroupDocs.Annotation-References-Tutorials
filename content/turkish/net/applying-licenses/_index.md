@@ -6,6 +6,9 @@ description: GroupDocs.Annotation ile .NET'te belge açıklamasının tüm potan
 weight: 26
 url: /tr/net/applying-licenses/
 ---
+
+# Lisansların Uygulanması
+
 ## giriiş
 
 Belge açıklama yeteneklerinizi geliştirmek isteyen bir .NET geliştiricisi misiniz? Başka yerde arama! GroupDocs.Annotation for .NET, güçlü açıklama özelliklerini uygulamalarınıza sorunsuz bir şekilde entegre etmek için kapsamlı bir araç paketi sağlar. Bu eğitim listesinde, GroupDocs.Annotation for .NET'in tüm potansiyelini açığa çıkarmak için çeşitli lisans uygulama yöntemleri konusunda size yol göstereceğiz.

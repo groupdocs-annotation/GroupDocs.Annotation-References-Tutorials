@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak .NET'teki belgelere elips ek aç
 weight: 13
 url: /tr/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Belgeye Elips Açıklaması Ekle
+
 ## giriiş
 Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bir belgeye nasıl elips ek açıklaması ekleyeceğinizi öğreneceksiniz. Bu adım adım kılavuz, süreç boyunca size yol gösterecek ve her adımı net bir şekilde anlamanızı sağlayacaktır.
 ## Önkoşullar

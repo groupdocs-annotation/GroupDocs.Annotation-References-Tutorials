@@ -6,6 +6,9 @@ description: Améliorez votre collaboration documentaire avec Groupdocs.Annotati
 weight: 10
 url: /fr/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Ajouter une annotation de zone au document
+
 ## Introduction
 Dans ce didacticiel, nous vous guiderons tout au long du processus d'ajout d'annotations de zone aux documents à l'aide de Groupdocs.Annotation pour .NET. Les annotations de zones sont une fonctionnalité précieuse qui permet aux utilisateurs de mettre en évidence des zones spécifiques d'un document, apportant ainsi clarté et contexte au contenu.
 ## Conditions préalables

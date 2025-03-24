@@ -6,6 +6,9 @@ description: Découvrez comment annoter des documents à l'aide de GroupDocs.Ann
 weight: 15
 url: /fr/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Générer un aperçu des colonnes de la feuille de calcul
+
 ## Introduction
 Bienvenue dans notre didacticiel complet sur l'exploitation des capacités de GroupDocs.Annotation pour .NET ! Dans ce guide, nous vous guiderons tout au long du processus d'utilisation de cet outil puissant pour annoter efficacement des documents. Que vous soyez un développeur chevronné ou un nouveau venu dans le monde du développement .NET, ce didacticiel vous dotera des connaissances et des compétences nécessaires pour intégrer de manière transparente les fonctionnalités d'annotation dans vos applications.
 ## Conditions préalables

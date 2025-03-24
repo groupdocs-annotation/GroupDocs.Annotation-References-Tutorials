@@ -6,6 +6,9 @@ description: Odemkněte sílu anotací dokumentů s GroupDocs.Annotation pro .NE
 weight: 13
 url: /cs/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Načíst dokument z místního disku
+
 ## Úvod
 Odemknutí potenciálu anotací dokumentů nebylo nikdy snazší s GroupDocs.Annotation pro .NET. Tento výkonný nástroj umožňuje vývojářům bezproblémově integrovat robustní anotační funkce do jejich aplikací .NET. V tomto komplexním průvodci vás provedeme procesem využití GroupDocs.Annotation pro .NET k anotaci dokumentů krok za krokem. Ať už jste zkušený vývojář nebo teprve začínáte, tento výukový program vás vybaví znalostmi pro zlepšení spolupráce na dokumentech a zefektivnění vašeho pracovního postupu.
 ## Předpoklady

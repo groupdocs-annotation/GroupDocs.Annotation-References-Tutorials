@@ -6,6 +6,9 @@ description: Verbessern Sie die Arbeitsabläufe bei der Dokumentenverwaltung mit
 weight: 19
 url: /de/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Ressourcen-Schwärzungsanmerkung hinzu
+
 ## Einführung
 Im Bereich der .NET-Entwicklung kann die Integration effizienter Tools zur Dokumentanmerkung die Produktivität erheblich steigern und Arbeitsabläufe optimieren. GroupDocs.Annotation für .NET erweist sich als robuste Lösung, die eine Fülle von Funktionen zum nahtlosen Kommentieren und Bearbeiten von Dokumenten bietet. Dieses Tutorial befasst sich mit dem Prozess der Integration und Nutzung von Resources Redaction Annotation, einer leistungsstarken Funktion in GroupDocs.Annotation für .NET.
 ## Voraussetzungen

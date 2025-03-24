@@ -6,6 +6,9 @@ description: Tìm hiểu cách chú thích tài liệu trong .NET bằng GroupDo
 weight: 11
 url: /vi/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Tải tài liệu từ Azure
+
 ## Giới thiệu
 Trong lĩnh vực cộng tác và quản lý tài liệu, GroupDocs.Annotation dành cho .NET nổi lên như một giải pháp mạnh mẽ, hỗ trợ các chức năng đánh dấu và chú thích liền mạch trong các ứng dụng .NET. Hướng dẫn này đi sâu vào sự phức tạp của việc tận dụng GroupDocs.Annotation cho .NET để chú thích tài liệu, cung cấp hướng dẫn từng bước từ điều kiện tiên quyết đến cách sử dụng nâng cao.
 ## Điều kiện tiên quyết

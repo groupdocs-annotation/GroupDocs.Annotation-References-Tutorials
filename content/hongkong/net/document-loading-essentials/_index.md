@@ -6,6 +6,9 @@ description: 了解使用 GroupDocs.Annotation .NET 載入文件的基本教學�
 weight: 20
 url: /zh-hant/net/document-loading-essentials/
 ---
+
+# 文件載入重點
+
 ## 介紹
 
 使用 GroupDocs.Annotation 釋放 .NET 應用程式中文件註解的全部潛力。在本綜合指南中，我們將深入研究從各種來源載入文件的基本教程。無論是從 Amazon S3、Azure、FTP、本機磁碟、串流、URL 擷取文件，或是處理已註解的文件版本，GroupDocs.Annotation 都能簡化流程，實現無縫整合並增強協作。

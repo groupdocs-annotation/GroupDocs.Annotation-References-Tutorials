@@ -6,6 +6,9 @@ description: Objevte, jak efektivně spravovat anotace v .NET pomocí GroupDocs.
 weight: 25
 url: /cs/net/removing-annotations/
 ---
+
+# Odebírání anotací
+
 ## Úvod
 
 Chcete zefektivnit proces správy dokumentů v .NET? GroupDocs.Annotation nabízí komplexní sadu výukových programů, které vám pomohou bez problémů odstranit anotace. Anotace hrají zásadní roli při spolupráci na dokumentech a procesech kontroly. Existují však případy, kdy je odstranění anotací nutné, ať už kvůli revizím, chybám nebo aktualizacím. V této sérii výukových programů se ponoříme do různých metod a technik pro účinné odstranění anotací pomocí GroupDocs.Annotation pro .NET.

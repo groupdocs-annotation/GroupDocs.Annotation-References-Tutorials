@@ -6,6 +6,9 @@ description: Scopri come impostare una licenza a consumo per GroupDocs.Annotatio
 weight: 12
 url: /it/net/applying-licenses/set-metered-license/
 ---
+
+# Imposta la licenza a consumo
+
 ## introduzione
 GroupDocs.Annotation per .NET è una potente libreria che consente agli sviluppatori di aggiungere facilmente funzionalità di annotazione di documenti alle proprie applicazioni .NET. Che tu stia creando un sistema di gestione dei documenti, una piattaforma di collaborazione o qualsiasi applicazione che implichi la revisione e il markup dei documenti, GroupDocs.Annotation per .NET fornisce un set completo di strumenti per semplificare il processo.
 In questo tutorial approfondiremo il processo di configurazione di una licenza a consumo per GroupDocs.Annotation .NET. Una licenza a consumo ti consente di pagare solo per le risorse che consumi, rendendola una soluzione conveniente per progetti di qualsiasi scala. Seguendo i passaggi descritti di seguito, sarai in grado di integrare perfettamente GroupDocs.Annotation nella tua applicazione .NET ottimizzando l'utilizzo delle risorse e mantenendo il controllo del budget.

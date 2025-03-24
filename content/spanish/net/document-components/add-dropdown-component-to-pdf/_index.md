@@ -6,6 +6,9 @@ description: Aprenda a agregar componentes desplegables a archivos PDF usando Gr
 weight: 12
 url: /es/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Agregar componente desplegable al documento PDF
+
 ## Introducción
 GroupDocs.Annotation para .NET proporciona un potente conjunto de herramientas para anotar documentos PDF mediante programación. Una característica útil es la capacidad de agregar componentes desplegables a documentos PDF, mejorando su interactividad y usabilidad.
 ## Requisitos previos

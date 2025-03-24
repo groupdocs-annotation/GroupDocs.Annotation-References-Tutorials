@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメントに�
 weight: 26
 url: /ja/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# テキストの取り消し線注釈をドキュメントに追加する
+
 ## 導入
 このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにテキストの取り消し線の注釈を追加する方法を説明します。このライブラリは、さまざまな種類のドキュメントに注釈を付け、コラボレーションとドキュメント レビュー プロセスを強化するための強力なツールを提供します。
 ## 前提条件

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak ek açıklamaları kimli
 weight: 11
 url: /tr/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Ek açıklamaları kimliğe göre kaldır
+
 ## giriiş
 Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak ek açıklamaları kimliklerine göre kaldırma sürecinde size yol göstereceğiz. Ek açıklamalar belgelerinizi karmaşıklaştırabilir ve bunları seçerek kaldırmak iş akışınızı kolaylaştırabilir. Her aşamayı net bir şekilde anlamanızı sağlayarak size adım adım rehberlik edeceğiz.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan állíthat be mérőszámos licencet a GroupDoc
 weight: 12
 url: /hu/net/applying-licenses/set-metered-license/
 ---
+
+# Állítsa be a mért licencet
+
 ## Bevezetés
 GroupDocs.Annotation for .NET egy hatékony könyvtár, amely felhatalmazza a fejlesztőket arra, hogy .NET-alkalmazásaikat könnyedén adják hozzá dokumentumjegyzetelési képességeket. Függetlenül attól, hogy dokumentumkezelő rendszert, együttműködési platformot vagy bármilyen dokumentum-ellenőrzést és -jelölést igénylő alkalmazást épít, a GroupDocs.Annotation for .NET átfogó eszközkészletet kínál a folyamat egyszerűsítésére.
 Ebben az oktatóanyagban a GroupDocs.Annotation .NET mérőszámos licencének beállításának folyamatát mutatjuk be. A mért licenc lehetővé teszi, hogy csak a felhasznált erőforrásokért fizessen, így költséghatékony megoldást jelent bármilyen méretű projekthez. Az alábbiakban vázolt lépések követésével zökkenőmentesen integrálhatja a GroupDocs.Annotationt .NET-alkalmazásába, miközben optimalizálja az erőforrás-felhasználást és fenntartja a költségvetés ellenőrzését.

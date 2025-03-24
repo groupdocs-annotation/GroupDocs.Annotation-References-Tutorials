@@ -6,6 +6,9 @@ description: Belge açıklamalarını geliştirmek için GroupDocs.Annotation fo
 weight: 20
 url: /tr/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Özel Yazı Tiplerini Yükleme
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin .NET uygulamalarına zahmetsizce açıklama özellikleri eklemelerine olanak tanıyan güçlü bir kitaplıktır. Sunduğu temel işlevlerden biri, belge açıklamalarında gelişmiş özelleştirme ve esneklik sağlayan özel yazı tiplerini yükleme yeteneğidir.
 ## Önkoşullar

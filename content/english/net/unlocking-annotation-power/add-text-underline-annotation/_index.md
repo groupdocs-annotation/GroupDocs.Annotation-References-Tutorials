@@ -6,6 +6,9 @@ description: Learn how to add text underline annotations to documents using Grou
 weight: 27
 url: /net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Add Text Underline Annotation to Document
+
 ## Introduction
 In this tutorial, we'll walk through the process of adding a text underline annotation to a document using GroupDocs.Annotation for .NET. Text underline annotations can be useful for emphasizing specific parts of a document, such as important passages or key points.
 ## Prerequisites

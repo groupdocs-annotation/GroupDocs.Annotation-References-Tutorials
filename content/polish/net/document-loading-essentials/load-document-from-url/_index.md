@@ -6,6 +6,9 @@ description: Dowiedz się, jak programowo dodawać adnotacje do dokumentów PDF 
 weight: 15
 url: /pl/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Załaduj dokument z adresu URL
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to bogata w funkcje biblioteka, która umożliwia programistom łatwe dodawanie funkcji adnotacji do aplikacji .NET. Dzięki GroupDocs.Annotation możesz programowo dodawać adnotacje do dokumentów PDF, umożliwiając użytkownikom wyróżnianie tekstu, dodawanie komentarzy, rysowanie kształtów i nie tylko. Ten samouczek przeprowadzi Cię przez etapy ładowania dokumentu z adresu URL, dodawania adnotacji i zapisywania dokumentu z adnotacjami przy użyciu GroupDocs.Annotation for .NET.
 ## Warunki wstępne

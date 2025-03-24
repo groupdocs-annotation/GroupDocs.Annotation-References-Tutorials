@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation 增强您的 .NET 应用程序以实现
 weight: 18
 url: /zh/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# 使用版本密钥获取注释列表
+
 ## 介绍
 在 .NET 开发领域，有效管理和操作文档至关重要。无论是注释 PDF、协作处理 Word 文档还是标记 Excel 工作表，拥有正确的工具都可以简化工作流程并提高工作效率。 GroupDocs.Annotation for .NET 就是这样一种工具，它使开发人员能够在其 .NET 应用程序中无缝地注释和操作文档。
 ## 先决条件

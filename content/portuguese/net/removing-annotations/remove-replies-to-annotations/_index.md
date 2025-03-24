@@ -6,6 +6,9 @@ description: Aprenda como remover respostas a anotações no .NET usando GroupDo
 weight: 15
 url: /pt/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# Remover respostas a anotações no .NET
+
 ## Introdução
 Neste tutorial, exploraremos como remover respostas a anotações em .NET usando GroupDocs.Annotation. GroupDocs.Annotation é uma biblioteca .NET poderosa que permite aos desenvolvedores anotar documentos com facilidade. Seja adicionando comentários, destacando texto ou adicionando carimbos, GroupDocs.Annotation fornece um conjunto abrangente de ferramentas para anotação de documentos.
 ## Pré-requisitos

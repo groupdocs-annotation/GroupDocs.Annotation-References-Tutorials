@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit Groupdocs.Annotation for .NET Textfeldanm
 weight: 21
 url: /de/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Textfeldanmerkung zum Dokument hinzufügen
+
 ## Einführung
 Groupdocs.Annotation for .NET ist ein leistungsstarkes Tool, mit dem Entwickler mühelos Annotationsfunktionen zu ihren .NET-Anwendungen hinzufügen können. Unabhängig davon, ob Sie an einem Dokumentenmanagementsystem, einer Plattform für die Zusammenarbeit oder einer anderen Anwendung arbeiten, bei der Dokumentanmerkungen unerlässlich sind, Groupdocs.Annotation vereinfacht den Prozess mit seinen umfassenden Funktionen und der intuitiven API.
 In diesem Tutorial befassen wir uns mit einer der grundlegenden Funktionen von Groupdocs.Annotation für .NET: dem Hinzufügen einer Textfeldanmerkung zu einem Dokument. Wenn Sie dieser Schritt-für-Schritt-Anleitung folgen, erfahren Sie, wie Sie Textfeldanmerkungen nahtlos in Ihre .NET-Anwendungen integrieren und so das Benutzererlebnis und die Möglichkeiten zur Zusammenarbeit verbessern.

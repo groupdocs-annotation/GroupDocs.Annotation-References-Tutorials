@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie eine getaktete Lizenz für GroupDocs.Annotati
 weight: 12
 url: /de/net/applying-licenses/set-metered-license/
 ---
+
+# Legen Sie die gemessene Lizenz fest
+
 ## Einführung
 GroupDocs.Annotation für .NET ist eine leistungsstarke Bibliothek, die es Entwicklern ermöglicht, ihren .NET-Anwendungen mühelos Dokumentanmerkungsfunktionen hinzuzufügen. Unabhängig davon, ob Sie ein Dokumentenverwaltungssystem, eine Plattform für die Zusammenarbeit oder eine andere Anwendung erstellen, die die Überprüfung und Markierung von Dokumenten umfasst, bietet GroupDocs.Annotation für .NET einen umfassenden Satz an Tools zur Optimierung des Prozesses.
 In diesem Tutorial befassen wir uns mit dem Prozess der Einrichtung einer getakteten Lizenz für GroupDocs.Annotation .NET. Mit einer gebührenpflichtigen Lizenz zahlen Sie nur für die Ressourcen, die Sie verbrauchen, was sie zu einer kostengünstigen Lösung für Projekte jeder Größenordnung macht. Wenn Sie die unten beschriebenen Schritte befolgen, können Sie GroupDocs.Annotation nahtlos in Ihre .NET-Anwendung integrieren und gleichzeitig die Ressourcennutzung optimieren und die Budgetkontrolle beibehalten.

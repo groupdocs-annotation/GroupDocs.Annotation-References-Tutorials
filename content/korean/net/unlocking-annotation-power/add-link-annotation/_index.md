@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 문서에 링크 주�
 weight: 16
 url: /ko/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# 문서에 링크 주석 추가
+
 ## 소개
 .NET용 Groupdocs.Annotation은 개발자가 포괄적인 주석 기능을 .NET 응용 프로그램에 손쉽게 통합할 수 있게 해주는 강력한 라이브러리입니다. 제공되는 주요 기능 중 하나는 문서에 링크 주석을 추가하여 공동 작업과 상호 작용을 향상시키는 기능입니다.
 ## 전제 조건

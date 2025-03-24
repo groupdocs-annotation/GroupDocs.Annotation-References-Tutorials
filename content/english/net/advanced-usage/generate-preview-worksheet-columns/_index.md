@@ -6,6 +6,9 @@ description: Learn how to annotate documents using GroupDocs.Annotation for .NET
 weight: 15
 url: /net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Generate Preview Worksheet Columns
+
 ## Introduction
 Welcome to our comprehensive tutorial on harnessing the capabilities of GroupDocs.Annotation for .NET! In this guide, we'll walk you through the process of utilizing this powerful tool to annotate documents effectively. Whether you're a seasoned developer or a newcomer to the world of .NET development, this tutorial will equip you with the knowledge and skills necessary to integrate annotation features seamlessly into your applications.
 ## Prerequisites

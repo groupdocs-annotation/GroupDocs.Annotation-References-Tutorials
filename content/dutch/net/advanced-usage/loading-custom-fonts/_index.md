@@ -6,6 +6,9 @@ description: Leer hoe u naadloos aangepaste lettertypen kunt laden in GroupDocs.
 weight: 20
 url: /nl/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Aangepaste lettertypen laden
+
 ## Invoering
 GroupDocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos annotatiefuncties aan hun .NET-applicaties kunnen toevoegen. Een van de belangrijkste functionaliteiten die het biedt, is de mogelijkheid om aangepaste lettertypen te laden, waardoor verbeterde aanpassingen en flexibiliteit bij documentannotatie mogelijk zijn.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET D
 weight: 12
 url: /de/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Abstandsanmerkung zum Dokument hinzufügen
+
 ## Einführung
 In diesem Tutorial erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET einem Dokument eine Distanzanmerkung hinzufügen. Befolgen Sie diese Schritte, um die Aufgabe auszuführen:
 ## Voraussetzungen

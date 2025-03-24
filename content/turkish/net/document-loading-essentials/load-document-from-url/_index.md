@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak PDF belgelerine programl
 weight: 15
 url: /tr/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Belgeyi URL'den Yükle
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin .NET uygulamalarına zahmetsizce açıklama ekleme yetenekleri eklemelerine olanak tanıyan, zengin özelliklere sahip bir kitaplıktır. GroupDocs.Annotation ile PDF belgelerine programlı olarak açıklama ekleyerek kullanıcıların metni vurgulamasına, yorum eklemesine, şekil çizmesine ve daha fazlasına olanak tanıyabilirsiniz. Bu öğretici, GroupDocs.Annotation for .NET'i kullanarak bir URL'den belge yükleme, ek açıklamalar ekleme ve açıklamalı belgeyi kaydetme adımlarında size yol gösterecektir.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 無縫註解文件。輕鬆地
 weight: 17
 url: /zh-hant/net/advanced-usage/get-document-text-content-information/
 ---
+
+# 取得文件文字內容訊息
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個功能強大的工具，可讓開發人員將註解功能無縫整合到他們的 .NET 應用程式中。無論您是建立文件管理系統、協作平台或任何其他需要文件註釋的應用程序，GroupDocs.Annotation for .NET 都可以透過其全面的功能集和易於使用的 API 簡化流程。
 ## 先決條件

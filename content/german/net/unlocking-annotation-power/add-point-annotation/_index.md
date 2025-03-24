@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Punktanmer
 weight: 17
 url: /de/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Punktanmerkung zum Dokument hinzufügen
+
 ## Einführung
 GroupDocs.Annotation für .NET ist ein leistungsstarkes Tool, mit dem Entwickler programmgesteuert verschiedene Arten von Anmerkungen zu Dokumenten hinzufügen können. In diesem Tutorial konzentrieren wir uns auf das Hinzufügen einer Punktanmerkung zu einem Dokument mithilfe von C#.
 ## Voraussetzungen

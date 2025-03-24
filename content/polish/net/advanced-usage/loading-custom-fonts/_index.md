@@ -6,6 +6,9 @@ description: Dowiedz się, jak bezproblemowo ładować niestandardowe czcionki w
 weight: 20
 url: /pl/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Ładowanie niestandardowych czcionek
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to potężna biblioteka, która umożliwia programistom łatwe dodawanie funkcji adnotacji do aplikacji .NET. Jedną z kluczowych funkcjonalności, jakie oferuje, jest możliwość ładowania niestandardowych czcionek, co pozwala na większe dostosowywanie i elastyczność w zakresie adnotacji w dokumencie.
 ## Warunki wstępne

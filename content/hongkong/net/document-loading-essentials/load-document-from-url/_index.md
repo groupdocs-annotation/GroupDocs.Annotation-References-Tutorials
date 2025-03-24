@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 以程式設計方
 weight: 15
 url: /zh-hant/net/document-loading-essentials/load-document-from-url/
 ---
+
+# 從 URL 載入文檔
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個功能豐富的程式庫，可讓開發人員輕鬆地將註解功能新增至其 .NET 應用程式。透過 GroupDocs.Annotation，您可以透過程式設計對 PDF 文件進行註釋，從而允許使用者突出顯示文字、添加註釋、繪製形狀等。本教學將引導您完成從 URL 載入文件、新增註解以及使用 GroupDocs.Annotation for .NET 儲存已註解的文件的步驟。
 ## 先決條件

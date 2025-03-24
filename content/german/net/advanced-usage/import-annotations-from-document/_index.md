@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation Anmerkungen aus Doku
 weight: 19
 url: /de/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Anmerkungen aus Dokument importieren
+
 ## Einführung
 Im Bereich der .NET-Entwicklung gilt GroupDocs.Annotation als vielseitiges Tool zur Integration von Annotationsfunktionen in Ihre Anwendungen. Egal, ob Sie Kommentare hinzufügen, Text hervorheben oder Formen in Dokumenten zeichnen möchten, GroupDocs.Annotation für .NET bietet eine umfassende Lösung. Dieses Tutorial führt Sie Schritt für Schritt durch den Prozess des Importierens von Anmerkungen aus einem Dokument mithilfe von GroupDocs.Annotation.
 ## Voraussetzungen

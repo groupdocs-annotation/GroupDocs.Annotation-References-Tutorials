@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni di sottolineatura di testo ai do
 weight: 27
 url: /it/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Aggiungi annotazione di sottolineatura del testo al documento
+
 ## introduzione
 In questo tutorial, esamineremo il processo di aggiunta di un'annotazione di sottolineatura di testo a un documento utilizzando GroupDocs.Annotation per .NET. Le annotazioni di sottolineatura del testo possono essere utili per enfatizzare parti specifiche di un documento, come passaggi importanti o punti chiave.
 ## Prerequisiti

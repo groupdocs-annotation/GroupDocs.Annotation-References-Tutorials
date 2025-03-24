@@ -6,6 +6,9 @@ description: Lär dig hur du kommenterar dokument med GroupDocs.Annotation för 
 weight: 15
 url: /sv/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Generera kolumner för förhandsgranskning av arbetsblad
+
 ## Introduktion
 Välkommen till vår omfattande handledning om att utnyttja funktionerna i GroupDocs.Annotation för .NET! I den här guiden går vi igenom processen med att använda detta kraftfulla verktyg för att effektivt kommentera dokument. Oavsett om du är en erfaren utvecklare eller en nykomling i .NET-utvecklingsvärlden, kommer denna handledning att utrusta dig med de kunskaper och färdigheter som krävs för att sömlöst integrera annoteringsfunktioner i dina applikationer.
 ## Förutsättningar

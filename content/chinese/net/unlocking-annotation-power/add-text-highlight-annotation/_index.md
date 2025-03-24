@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 将文本突出显
 weight: 22
 url: /zh/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# 向文档添加文本突出显示注释
+
 ## 介绍
 在文档管理和协作领域，GroupDocs.Annotation for .NET 作为一个强大的解决方案出现，使开发人员能够将文本突出显示注释无缝集成到他们的应用程序中。本教程作为使用 GroupDocs.Annotation for .NET 向文档添加文本突出显示注释的综合指南。通过分步说明和详细解释，您将能够熟练地利用这个强大的库的功能。
 ## 先决条件

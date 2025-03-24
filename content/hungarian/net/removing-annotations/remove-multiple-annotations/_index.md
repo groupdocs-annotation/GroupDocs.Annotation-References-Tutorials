@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan távolíthat el hatékonyan több megjegyzést 
 weight: 12
 url: /hu/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Több megjegyzés eltávolítása a .NET-ből
+
 ## Bevezetés
 A megjegyzések döntő szerepet játszanak a dokumentumkezelésben, javítják az együttműködést és a kommunikációt. Vannak azonban olyan esetek, amikor több megjegyzést is hatékonyan el kell távolítania a .NET-alkalmazáson belül. Ebben az oktatóanyagban megvizsgáljuk, hogyan lehet ezt elérni a GroupDocs.Annotation for .NET használatával. Kezdjük el!
 ## Előfeltételek

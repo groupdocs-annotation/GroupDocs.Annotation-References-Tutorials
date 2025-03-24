@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 在 .NET 中有效刪除多
 weight: 12
 url: /zh-hant/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# 刪除 .NET 中的多個註釋
+
 ## 介紹
 註釋在文件管理、增強協作和溝通方面發揮著至關重要的作用。但是，在某些情況下，您可能需要在 .NET 應用程式中有效地刪除多個註解。在本教程中，我們將深入研究如何使用 GroupDocs.Annotation for .NET 來完成此任務。讓我們開始吧！
 ## 先決條件

@@ -6,6 +6,9 @@ description: Aprenda a agregar anotaciones de resaltado de texto a documentos us
 weight: 22
 url: /es/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Agregar anotación de resaltado de texto al documento
+
 ## Introducción
 En el ámbito de la gestión de documentos y la colaboración, GroupDocs.Annotation para .NET surge como una solución sólida que permite a los desarrolladores integrar sin problemas anotaciones de resaltado de texto en sus aplicaciones. Este tutorial sirve como una guía completa para agregar anotaciones de resaltado de texto a documentos usando GroupDocs.Annotation para .NET. A través de instrucciones paso a paso y explicaciones detalladas, adquirirá competencia para aprovechar las capacidades de esta poderosa biblioteca.
 ## Requisitos previos

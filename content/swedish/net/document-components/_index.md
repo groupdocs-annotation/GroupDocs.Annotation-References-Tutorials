@@ -6,6 +6,9 @@ description: Upptäck omfattande självstudier om att integrera interaktiva komp
 weight: 24
 url: /sv/net/document-components/
 ---
+
+# Dokumentkomponenter
+
 ## Introduktion
 
 GroupDocs.Annotation för .NET tillhandahåller en robust uppsättning handledningar för att hjälpa utvecklare att sömlöst integrera interaktiva komponenter i PDF-dokument. I den här artikeln kommer vi att fördjupa oss i detaljerna i dessa handledningar och utforska hur de ger dig möjlighet att förbättra funktionaliteten och användarupplevelsen av dina PDF-filer.

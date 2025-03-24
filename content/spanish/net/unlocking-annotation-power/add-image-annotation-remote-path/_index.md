@@ -6,6 +6,9 @@ description: Aprenda a agregar anotaciones de imágenes a documentos usando Grou
 weight: 15
 url: /es/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Agregar anotación de imagen al documento (ruta remota)
+
 ## Introducción
 En este tutorial, recorreremos el proceso de agregar anotaciones de imágenes a un documento usando GroupDocs.Annotation para .NET. Esta biblioteca proporciona herramientas poderosas para anotar varios tipos de documentos mediante programación.
 ## Requisitos previos

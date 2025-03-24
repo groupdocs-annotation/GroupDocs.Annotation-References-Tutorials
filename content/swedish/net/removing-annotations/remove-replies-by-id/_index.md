@@ -6,6 +6,9 @@ description: Lär dig hur du tar bort svar med ID i .NET med GroupDocs.Annotatio
 weight: 16
 url: /sv/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Ta bort svar efter ID i .NET
+
 ## Introduktion
 När det gäller .NET-utveckling är förmågan att hantera anteckningar i dokument avgörande för en mängd olika applikationer. Oavsett om du arbetar med PDF-filer, Word-dokument eller andra format, öppnar en värld av möjligheter att ha möjligheten att manipulera kommentarer programmatiskt. Ett kraftfullt verktyg för att hantera kommentarer i .NET är GroupDocs.Annotation.
 ## Förutsättningar

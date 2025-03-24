@@ -6,6 +6,9 @@ description: Leer hoe u annotaties uit PDF- en andere documenten in .NET kunt ve
 weight: 14
 url: /nl/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# Annotaties verwijderen met behulp van opslagopties in .NET
+
 ## Invoering
 
 GroupDocs.Annotation voor .NET is een krachtige tool waarmee ontwikkelaars eenvoudig annotatiefunctionaliteit aan hun .NET-applicaties kunnen toevoegen. Of u nu werkt aan een documentbeheersysteem, samenwerkingsplatform of een andere toepassing waarbij documentverwerking betrokken is, GroupDocs.Annotation biedt een uitgebreide reeks functies om naadloos aantekeningen te maken in PDF- en andere documentformaten.

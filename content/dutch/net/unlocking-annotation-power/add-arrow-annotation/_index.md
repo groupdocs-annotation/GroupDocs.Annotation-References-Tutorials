@@ -6,6 +6,9 @@ description: Leer hoe u pijlannotaties aan uw documenten kunt toevoegen met Grou
 weight: 11
 url: /nl/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Voeg pijlannotatie toe aan document
+
 ## Invoering
 In deze zelfstudie begeleiden we u bij het toevoegen van pijlannotaties aan uw documenten met behulp van GroupDocs.Annotation voor .NET. Pijlannotaties zijn handig om de richting aan te geven of om specifieke elementen in een document aan te wijzen.
 ## Vereisten

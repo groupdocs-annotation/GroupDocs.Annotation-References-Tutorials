@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak PDF'lere Nokta Açıklam
 weight: 17
 url: /tr/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Belgeye Nokta Açıklaması Ekle
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin belgelere programlı olarak çeşitli türde ek açıklamalar eklemesine olanak tanıyan güçlü bir araçtır. Bu eğitimde, C# kullanarak bir belgeye Nokta Açıklaması eklemeye odaklanacağız.
 ## Önkoşullar

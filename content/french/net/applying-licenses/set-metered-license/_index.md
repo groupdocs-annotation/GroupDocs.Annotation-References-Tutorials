@@ -6,6 +6,9 @@ description: Découvrez comment configurer une licence limitée pour GroupDocs.A
 weight: 12
 url: /fr/net/applying-licenses/set-metered-license/
 ---
+
+# Définir une licence limitée
+
 ## Introduction
 GroupDocs.Annotation for .NET est une bibliothèque puissante qui permet aux développeurs d'ajouter sans effort des fonctionnalités d'annotation de documents à leurs applications .NET. Que vous construisiez un système de gestion de documents, une plateforme de collaboration ou toute autre application impliquant la révision et le balisage de documents, GroupDocs.Annotation pour .NET fournit un ensemble complet d'outils pour rationaliser le processus.
 Dans ce didacticiel, nous aborderons le processus de configuration d'une licence limitée pour GroupDocs.Annotation .NET. Une licence mesurée vous permet de payer uniquement pour les ressources que vous consommez, ce qui en fait une solution rentable pour les projets de toute envergure. En suivant les étapes décrites ci-dessous, vous pourrez intégrer de manière transparente GroupDocs.Annotation dans votre application .NET tout en optimisant l'utilisation des ressources et en maintenant le contrôle budgétaire.

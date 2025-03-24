@@ -6,6 +6,9 @@ description: Leer hoe u afbeeldingannotaties aan documenten kunt toevoegen met G
 weight: 14
 url: /nl/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Afbeeldingannotatie toevoegen aan document (lokaal pad)
+
 ## Invoering
 GroupDocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars programmatisch verschillende soorten annotaties aan documenten kunnen toevoegen. In deze zelfstudie leren we hoe u afbeeldingannotaties aan een document kunt toevoegen met behulp van een lokaal pad.
 ## Vereisten

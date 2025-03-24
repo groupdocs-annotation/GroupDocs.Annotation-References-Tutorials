@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 為文件新增文
 weight: 27
 url: /zh-hant/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# 在文件中新增文字下劃線註釋
+
 ## 介紹
 在本教學中，我們將逐步介紹使用 GroupDocs.Annotation for .NET 在文件中新增文字下劃線註解的過程。文字下劃線註釋可用於強調文件的特定部分，例如重要段落或關鍵點。
 ## 先決條件

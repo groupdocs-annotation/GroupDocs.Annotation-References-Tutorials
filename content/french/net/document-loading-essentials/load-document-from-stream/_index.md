@@ -6,6 +6,9 @@ description: Apprenez à annoter des documents dans .NET sans effort avec GroupD
 weight: 14
 url: /fr/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Charger un document à partir d'un flux
+
 ## Introduction
 GroupDocs.Annotation for .NET est une bibliothèque puissante qui permet aux développeurs d'intégrer sans effort des fonctionnalités d'annotation de documents dans leurs applications .NET. Que vous construisiez un système de gestion de documents, une plateforme de collaboration ou une application d'apprentissage en ligne, GroupDocs.Annotation fournit un ensemble polyvalent d'outils pour annoter des PDF, des documents Word, des feuilles Excel, etc.
 ## Conditions préalables

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 프로그래밍 방식
 weight: 15
 url: /ko/net/document-loading-essentials/load-document-from-url/
 ---
+
+# URL에서 문서 로드
+
 ## 소개
 .NET용 GroupDocs.Annotation은 개발자가 .NET 응용 프로그램에 주석 기능을 쉽게 추가할 수 있도록 하는 기능이 풍부한 라이브러리입니다. GroupDocs.Annotation을 사용하면 프로그래밍 방식으로 PDF 문서에 주석을 달 수 있으므로 사용자는 텍스트 강조 표시, 주석 추가, 도형 그리기 등을 수행할 수 있습니다. 이 자습서에서는 URL에서 문서를 로드하고, 주석을 추가하고, GroupDocs.Annotation for .NET을 사용하여 주석이 달린 문서를 저장하는 단계를 안내합니다.
 ## 전제 조건

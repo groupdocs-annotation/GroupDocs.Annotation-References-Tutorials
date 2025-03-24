@@ -6,6 +6,9 @@ description: Přečtěte si, jak anotovat dokumenty pomocí GroupDocs.Annotation
 weight: 15
 url: /cs/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Generovat náhled sloupců listu
+
 ## Úvod
 Vítejte v našem komplexním tutoriálu o využití schopností GroupDocs.Annotation pro .NET! V této příručce vás provedeme procesem využití tohoto mocného nástroje k efektivnímu anotování dokumentů. Ať už jste zkušený vývojář nebo nováček ve světě vývoje .NET, tento tutoriál vás vybaví znalostmi a dovednostmi nezbytnými k bezproblémové integraci funkcí anotací do vašich aplikací.
 ## Předpoklady

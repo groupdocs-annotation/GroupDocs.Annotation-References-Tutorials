@@ -6,6 +6,9 @@ description: Přečtěte si, jak odstranit odpovědi na anotace v .NET pomocí G
 weight: 15
 url: /cs/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# Odebrat odpovědi na anotace v .NET
+
 ## Úvod
 tomto tutoriálu prozkoumáme, jak odstranit odpovědi na anotace v .NET pomocí GroupDocs.Annotation. GroupDocs.Annotation je výkonná knihovna .NET, která umožňuje vývojářům snadno anotovat dokumenty. Ať už se jedná o přidávání komentářů, zvýrazňování textu nebo přidávání razítek, GroupDocs.Annotation poskytuje komplexní sadu nástrojů pro anotaci dokumentů.
 ## Předpoklady

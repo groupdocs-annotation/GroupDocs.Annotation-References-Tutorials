@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation에서 사용자 정의 글꼴을 원�
 weight: 20
 url: /ko/net/advanced-usage/loading-custom-fonts/
 ---
+
+# 사용자 정의 글꼴 로드
+
 ## 소개
 .NET용 GroupDocs.Annotation은 개발자가 .NET 응용 프로그램에 주석 기능을 쉽게 추가할 수 있게 해주는 강력한 라이브러리입니다. 제공되는 주요 기능 중 하나는 사용자 정의 글꼴을 로드하여 문서 주석의 사용자 정의 및 유연성을 향상시키는 기능입니다.
 ## 전제 조건

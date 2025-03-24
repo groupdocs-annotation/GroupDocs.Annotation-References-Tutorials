@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá távolságjegyzeteket a dokumentum
 weight: 12
 url: /hu/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Távolság megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebből az oktatóanyagból megtudhatja, hogyan adhat hozzá távolsági megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. A feladat végrehajtásához kövesse az alábbi lépéseket:
 ## Előfeltételek

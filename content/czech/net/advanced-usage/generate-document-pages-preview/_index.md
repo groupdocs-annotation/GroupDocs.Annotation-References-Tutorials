@@ -6,6 +6,9 @@ description: Naučte se, jak efektivně generovat náhled stránek dokumentu pom
 weight: 12
 url: /cs/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Generování náhledu stránek dokumentu
+
 ## Úvod
 V oblasti správy dokumentů a spolupráce GroupDocs.Annotation for .NET vyniká jako všestranný nástroj. Ať už jste vývojář, který chce integrovat funkce anotací do své aplikace, nebo podnikový uživatel, který hledá efektivní spolupráci na dokumentech, GroupDocs.Annotation poskytuje komplexní řešení. Tento tutoriál vás provede procesem generování náhledu stránek dokumentu pomocí GroupDocs.Annotation pro .NET, přičemž každý krok rozdělí na snadno stravitelné kousky.
 ## Předpoklady

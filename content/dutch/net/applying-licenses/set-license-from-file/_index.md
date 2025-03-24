@@ -6,6 +6,9 @@ description: Integreer krachtige mogelijkheden voor documentannotatie naadloos i
 weight: 10
 url: /nl/net/applying-licenses/set-license-from-file/
 ---
+
+# Licentie instellen vanuit bestand
+
 ## Invoering
 In het huidige digitale tijdperk is documentannotatie een essentieel hulpmiddel geworden voor samenwerkings-, beoordelings- en feedbackprocessen in verschillende sectoren. GroupDocs.Annotation voor .NET biedt een krachtige oplossing voor ontwikkelaars die annotatiefunctionaliteit naadloos in hun .NET-applicaties willen integreren.
 ## Vereisten

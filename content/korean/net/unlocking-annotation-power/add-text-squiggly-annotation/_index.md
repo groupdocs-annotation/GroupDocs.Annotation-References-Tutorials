@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 문서에 구불구불
 weight: 25
 url: /ko/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# 문서에 텍스트 구불구불한 주석 추가
+
 ## 소개
 
 .NET용 Groupdocs.Annotation은 개발자가 강력한 주석 기능을 .NET 응용 프로그램에 손쉽게 통합할 수 있게 해주는 다용도 라이브러리입니다. PDF, Word 문서 또는 기타 널리 사용되는 파일 형식으로 작업하는 경우 Groupdocs.Annotation은 주석을 추가하고 문서 공동 작업을 향상시키기 위한 완벽한 솔루션을 제공합니다.

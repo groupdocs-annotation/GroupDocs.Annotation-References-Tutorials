@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 从 PDF 和 .NET 中的其�
 weight: 14
 url: /zh/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# 使用 .NET 中的保存选项删除注释
+
 ## 介绍
 
 GroupDocs.Annotation for .NET 是一个功能强大的工具，允许开发人员轻松地将注释功能添加到他们的 .NET 应用程序中。无论您是在文档管理系统、协作平台还是涉及文档处理的任何其他应用程序上工作，GroupDocs.Annotation 都提供了一套全面的功能来无缝注释 PDF 和其他文档格式。

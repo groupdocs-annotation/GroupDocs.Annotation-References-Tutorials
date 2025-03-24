@@ -6,6 +6,9 @@ description: Tăng cường cộng tác và chú thích tài liệu trong các �
 weight: 13
 url: /vi/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Tạo bản xem trước không có chú thích
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, việc cộng tác hiệu quả trên các tài liệu là chìa khóa mang lại năng suất và thành công. Cho dù bạn đang làm việc trong một dự án với các thành viên trong nhóm rải rác trên toàn cầu hay cộng tác với khách hàng về các hợp đồng quan trọng thì khả năng chú thích và xem xét tài liệu một cách liền mạch là rất quan trọng. Với GroupDocs.Annotation dành cho .NET, bạn có thể đưa hoạt động cộng tác tài liệu của mình lên một tầm cao mới, cho phép dễ dàng chú thích, đánh dấu và xem xét trực tiếp trong các ứng dụng .NET của bạn.
 ## Điều kiện tiên quyết

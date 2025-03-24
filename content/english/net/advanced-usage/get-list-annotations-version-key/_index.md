@@ -6,6 +6,9 @@ description: Enhance your .NET applications with GroupDocs.Annotation for seamle
 weight: 18
 url: /net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Get List of Annotations using Version Key
+
 ## Introduction
 In the world of .NET development, managing and manipulating documents efficiently is paramount. Whether it's annotating PDFs, collaborating on Word documents, or marking up Excel sheets, having the right tools can streamline workflows and boost productivity. GroupDocs.Annotation for .NET is one such tool that empowers developers to annotate and manipulate documents seamlessly within their .NET applications.
 ## Prerequisites

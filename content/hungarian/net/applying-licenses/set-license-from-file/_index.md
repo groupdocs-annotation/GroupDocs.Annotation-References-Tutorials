@@ -6,6 +6,9 @@ description: A GroupDocs.Annotation for .NET segítségével zökkenőmentesen i
 weight: 10
 url: /hu/net/applying-licenses/set-license-from-file/
 ---
+
+# Állítsa be a licencet a fájlból
+
 ## Bevezetés
 Napjaink digitális korában a dokumentum-annotáció az együttműködés, az áttekintés és a visszajelzési folyamatok alapvető eszközévé vált a különböző iparágakban. A GroupDocs.Annotation for .NET hatékony megoldást kínál azoknak a fejlesztőknek, akik zökkenőmentesen szeretnék integrálni az annotációs funkciókat .NET-alkalmazásaikba.
 ## Előfeltételek

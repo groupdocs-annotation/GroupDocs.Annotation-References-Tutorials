@@ -6,6 +6,9 @@ description: 効率的なドキュメント管理とコラボレーションの�
 weight: 21
 url: /ja/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# テキストの上に画像の注釈を配置する
+
 ## 導入
 .NET 開発の世界では、GroupDocs.Annotation はドキュメントに注釈を追加し、コラボレーションとドキュメント管理をより効率的にするための強力なソリューションを提供します。一般的な要件の 1 つは、テキストの上に画像の注釈を配置することです。これは、GroupDocs.Annotation for .NET を使用してシームレスに実現できます。
 ## 前提条件

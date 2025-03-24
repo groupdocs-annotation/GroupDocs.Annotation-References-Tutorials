@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie benutzerdefinierte Schriftarten nahtlos in Gr
 weight: 20
 url: /de/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Laden benutzerdefinierter Schriftarten
+
 ## Einführung
 GroupDocs.Annotation für .NET ist eine leistungsstarke Bibliothek, die es Entwicklern ermöglicht, mühelos Anmerkungsfunktionen zu ihren .NET-Anwendungen hinzuzufügen. Eine der wichtigsten Funktionen ist die Möglichkeit, benutzerdefinierte Schriftarten zu laden, was eine verbesserte Anpassung und Flexibilität bei der Dokumentanmerkung ermöglicht.
 ## Voraussetzungen

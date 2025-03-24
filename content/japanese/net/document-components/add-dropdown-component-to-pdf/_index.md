@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドロップダウン 
 weight: 12
 url: /ja/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# PDF ドキュメントにドロップダウン コンポーネントを追加
+
 ## 導入
 GroupDocs.Annotation for .NET は、PDF ドキュメントにプログラムで注釈を付けるための強力なツール セットを提供します。便利な機能の 1 つは、PDF ドキュメントにドロップダウン コンポーネントを追加して、対話性と使いやすさを向上させる機能です。
 ## 前提条件

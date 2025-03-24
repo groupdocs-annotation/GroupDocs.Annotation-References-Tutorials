@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till text genomstrukna kommentarer i dokume
 weight: 26
 url: /sv/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Lägg till text genomstruken kommentar i dokumentet
+
 ## Introduktion
 den här handledningen kommer vi att undersöka hur du lägger till en text genomstruken kommentar till ett dokument med GroupDocs.Annotation för .NET. Detta bibliotek tillhandahåller kraftfulla verktyg för att kommentera olika dokumenttyper, förbättra samarbete och dokumentgranskning.
 ## Förutsättningar

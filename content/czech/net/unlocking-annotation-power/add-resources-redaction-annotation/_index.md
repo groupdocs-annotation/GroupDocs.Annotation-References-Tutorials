@@ -6,6 +6,9 @@ description: Vylepšete pracovní postupy správy dokumentů pomocí GroupDocs.A
 weight: 19
 url: /cs/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Přidejte do dokumentu Anotaci redakce zdrojů
+
 ## Úvod
 oblasti vývoje .NET může integrace účinných nástrojů pro anotaci dokumentů výrazně zvýšit produktivitu a zefektivnit pracovní postupy. GroupDocs.Annotation for .NET se ukazuje jako robustní řešení, které nabízí nepřeberné množství funkcí pro bezproblémové anotování a manipulaci s dokumenty. Tento výukový program se ponoří do procesu integrace a využití Resources Redaction Annotation, výkonné funkce v rámci GroupDocs.Annotation pro .NET.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Scopri come annotare i documenti a livello di codice con Groupdocs.
 weight: 10
 url: /it/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# Carica il documento da Amazon S3
+
 ## introduzione
 Nell'era digitale di oggi, la gestione dei documenti è fondamentale sia per le aziende che per i privati. Groupdocs.Annotation per .NET fornisce una potente soluzione per annotare i documenti a livello di codice, consentendo agli sviluppatori di migliorare la collaborazione sui documenti e semplificare i flussi di lavoro. In questo tutorial, approfondiremo i fondamenti dell'utilizzo di Groupdocs.Annotation per .NET, suddividendo ogni esempio in più passaggi per guidarti attraverso il processo senza problemi.
 ## Prerequisiti

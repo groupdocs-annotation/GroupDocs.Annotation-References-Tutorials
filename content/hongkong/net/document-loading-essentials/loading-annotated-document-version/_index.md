@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 輕鬆載入已註
 weight: 16
 url: /zh-hant/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# 載入已註解的文檔版本
+
 ## 介紹
 在現今的數位時代，文件註釋已成為各行業協作、審閱和回饋的重要工具。無論您是將註釋功能整合到應用程式中的開發人員還是希望利用這些功能的用戶，GroupDocs.Annotation for .NET 都提供了強大的解決方案。在本教學中，我們將深入研究使用 GroupDocs.Annotation for .NET 載入已註解的文件版本的過程。
 ## 先決條件

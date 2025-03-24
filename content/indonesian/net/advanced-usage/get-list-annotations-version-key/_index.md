@@ -6,6 +6,9 @@ description: Tingkatkan aplikasi .NET Anda dengan GroupDocs.Annotation untuk ano
 weight: 18
 url: /id/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Dapatkan Daftar Anotasi menggunakan Kunci Versi
+
 ## Perkenalan
 Dalam dunia pengembangan .NET, mengelola dan memanipulasi dokumen secara efisien adalah hal yang terpenting. Baik itu membuat anotasi PDF, berkolaborasi pada dokumen Word, atau menandai lembar Excel, memiliki alat yang tepat dapat menyederhanakan alur kerja dan meningkatkan produktivitas. GroupDocs.Annotation for .NET adalah salah satu alat yang memberdayakan pengembang untuk membuat anotasi dan memanipulasi dokumen dengan lancar dalam aplikasi .NET mereka.
 ## Prasyarat

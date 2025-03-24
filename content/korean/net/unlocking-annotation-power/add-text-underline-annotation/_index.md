@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 �
 weight: 27
 url: /ko/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# 문서에 텍스트 밑줄 주석 추가
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 밑줄 주석을 추가하는 과정을 안내합니다. 텍스트 밑줄 주석은 중요한 구절이나 핵심 사항과 같은 문서의 특정 부분을 강조하는 데 유용할 수 있습니다.
 ## 전제 조건

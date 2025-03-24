@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till textmarkeringskommentarer i dokument m
 weight: 22
 url: /sv/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Lägg till textmarkeringskommentar till dokument
+
 ## Introduktion
 När det gäller dokumenthantering och samarbete framstår GroupDocs.Annotation för .NET som en robust lösning som ger utvecklare möjlighet att sömlöst integrera textmarkeringskommentarer i sina applikationer. Den här handledningen fungerar som en omfattande guide för att lägga till textmarkeringskommentarer till dokument med GroupDocs.Annotation för .NET. Genom steg-för-steg-instruktioner och detaljerade förklaringar kommer du att få färdighet i att utnyttja funktionerna i detta kraftfulla bibliotek.
 ## Förutsättningar

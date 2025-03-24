@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till ellipskommentarer till dokument i .NET
 weight: 13
 url: /sv/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Lägg till Ellipsannotering i dokumentet
+
 ## Introduktion
 I den här handledningen får du lära dig hur du lägger till en ellipskommentar till ett dokument med GroupDocs.Annotation för .NET. Den här steg-för-steg-guiden leder dig genom processen och säkerställer att du förstår varje steg tydligt.
 ## Förutsättningar

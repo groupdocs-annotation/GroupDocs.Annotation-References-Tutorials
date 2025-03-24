@@ -6,6 +6,9 @@ description: Pelajari cara mengimpor anotasi dari dokumen di .NET menggunakan Gr
 weight: 19
 url: /id/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Impor Anotasi dari Dokumen
+
 ## Perkenalan
 Dalam bidang pengembangan .NET, GroupDocs.Annotation berdiri sebagai alat serbaguna untuk mengintegrasikan kemampuan anotasi ke dalam aplikasi Anda. Baik Anda ingin menambahkan komentar, menyorot teks, atau menggambar bentuk pada dokumen, GroupDocs.Annotation untuk .NET menawarkan solusi komprehensif. Tutorial ini akan memandu Anda melalui proses mengimpor anotasi dari dokumen menggunakan GroupDocs.Annotation, langkah demi langkah.
 ## Prasyarat

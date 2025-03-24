@@ -6,6 +6,9 @@ description: Vylepšete spolupráci na dokumentech s Groupdocs.Annotation pro .N
 weight: 23
 url: /cs/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Nastavte rozlišení náhledu dokumentu
+
 ## Úvod
 dnešní digitální době je efektivní správa dokumentů a spolupráce prvořadá pro podniky i jednotlivce. S množstvím dokumentů, které denně kolují, může zajištění bezproblémových funkcí poznámek a náhledů výrazně zvýšit produktivitu a zefektivnit pracovní postupy. Enter Groupdocs.Annotation for .NET – výkonná sada nástrojů navržená tak, aby umožnila vývojářům robustní anotační funkce pro různé formáty dokumentů.
 ## Předpoklady

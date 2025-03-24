@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してコラボレーショ�
 weight: 17
 url: /ja/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# パスワードで保護されたドキュメントをロードする
+
 ## 導入
 今日のペースの速い世界では、コラボレーションが成功の鍵となります。同僚、顧客、パートナーとプロジェクトに取り組んでいる場合でも、ドキュメントに効率的に注釈を付けて共有できる機能により、生産性が大幅に向上し、ワークフローが合理化されます。 GroupDocs.Annotation for .NET は、.NET アプリケーション内で PDF やその他のドキュメント形式に直接注釈を付けるための強力なソリューションを提供し、シームレスなコラボレーションとドキュメント レビュー プロセスを可能にします。
 ## 前提条件

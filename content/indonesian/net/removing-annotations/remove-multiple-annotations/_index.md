@@ -6,6 +6,9 @@ description: Pelajari cara menghapus beberapa anotasi secara efisien di .NET men
 weight: 12
 url: /id/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Hapus Beberapa Anotasi di .NET
+
 ## Perkenalan
 Anotasi memainkan peran penting dalam manajemen dokumen, meningkatkan kolaborasi dan komunikasi. Namun, ada kalanya Anda mungkin perlu menghapus beberapa anotasi secara efisien dalam aplikasi .NET Anda. Dalam tutorial ini, kita akan mempelajari cara melakukannya menggunakan GroupDocs.Annotation untuk .NET. Mari kita mulai!
 ## Prasyarat

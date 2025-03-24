@@ -6,6 +6,9 @@ description: .NET에서 Groupdocs.Annotation을 사용하여 PDF 문서에서 �
 weight: 10
 url: /ko/net/removing-annotations/remove-annotations/
 ---
+
+# .NET에서 주석 제거
+
 ## 소개
 주석은 디지털 문서 관리에서 중요한 역할을 하며 사용자가 파일 내의 중요한 섹션을 강조 표시하고 주석을 달고 표시할 수 있도록 해줍니다. 그러나 문서에서 주석을 제거해야 하는 경우가 있을 수 있습니다. 이 튜토리얼에서는 문서 주석 및 조작을 위한 강력한 도구인 Groupdocs.Annotation을 사용하여 .NET에서 주석을 제거하는 방법을 살펴보겠습니다.
 ## 전제 조건

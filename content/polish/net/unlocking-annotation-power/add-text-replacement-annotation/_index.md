@@ -6,6 +6,9 @@ description: Dowiedz się, jak bez wysiłku dodawać adnotacje zastępujące tek
 weight: 24
 url: /pl/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Dodaj adnotację zastępującą tekst do dokumentu
+
 ## Wstęp
 W tym samouczku przeprowadzimy Cię przez proces dodawania adnotacji zastępującej tekst do dokumentów za pomocą GroupDocs.Annotation dla .NET. Ta potężna biblioteka pozwala programistom programowo manipulować i dodawać adnotacje do różnych typów dokumentów. Pod koniec tego samouczka będziesz wyposażony w wiedzę niezbędną do bezproblemowej integracji adnotacji zastępujących tekst z aplikacjami .NET.
 ## Warunki wstępne

@@ -6,6 +6,9 @@ description: Förbättra dokumentsamarbetet med Groupdocs.Annotation för .NET e
 weight: 23
 url: /sv/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Ställ in upplösning för förhandsgranskning av dokument
+
 ## Introduktion
 dagens digitala tidsålder är effektiv dokumenthantering och samarbete avgörande för både företag och privatpersoner. Med den uppsjö av dokument som cirkulerar dagligen, kan säkerställande av sömlösa antecknings- och förhandsgranskningsfunktioner avsevärt förbättra produktiviteten och effektivisera arbetsflöden. Gå in i Groupdocs.Annotation for .NET - en kraftfull verktygslåda utformad för att ge utvecklare robusta anteckningsfunktioner för olika dokumentformat.
 ## Förutsättningar

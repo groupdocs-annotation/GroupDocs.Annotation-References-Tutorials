@@ -6,6 +6,9 @@ description: Pelajari cara membuat anotasi dokumen di .NET dengan mudah mengguna
 weight: 14
 url: /id/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Muat Dokumen dari Aliran
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah perpustakaan canggih yang memberdayakan pengembang untuk mengintegrasikan kemampuan anotasi dokumen ke dalam aplikasi .NET mereka dengan mudah. Baik Anda sedang membangun sistem manajemen dokumen, platform kolaborasi, atau aplikasi e-learning, GroupDocs.Annotation menyediakan seperangkat alat serbaguna untuk membuat anotasi PDF, dokumen Word, lembar Excel, dan banyak lagi.
 ## Prasyarat

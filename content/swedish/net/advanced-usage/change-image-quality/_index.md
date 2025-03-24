@@ -6,6 +6,9 @@ description: Lär dig hur du förbättrar bildkvaliteten i PDF-filer med Groupdo
 weight: 10
 url: /sv/net/advanced-usage/change-image-quality/
 ---
+
+# Ändra bildkvalitet
+
 ## Introduktion
 I dagens digitala tidsålder kan kvaliteten på bilder i PDF-dokument avsevärt påverka användarupplevelsen och dokumentets läsbarhet. Med Groupdocs.Annotation for .NET, ett kraftfullt bibliotek designat för .NET-utvecklare, blir det en enkel uppgift att förbättra bildkvaliteten i PDF-filer. I den här handledningen kommer vi att fördjupa oss i processen steg-för-steg för att förbättra bildkvaliteten med detta mångsidiga verktyg.
 ## Förutsättningar

@@ -6,6 +6,9 @@ description: Tìm hiểu cách xuất chú thích từ tệp XML bằng GroupDoc
 weight: 11
 url: /vi/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# Xuất chú thích từ tệp XML
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, việc quản lý tài liệu hiệu quả là rất quan trọng đối với các doanh nghiệp và cá nhân. Với vô số công cụ có sẵn, GroupDocs.Annotation for .NET nổi bật như một giải pháp đáng tin cậy để chú thích và quản lý tệp PDF. Trong hướng dẫn này, chúng ta sẽ đi sâu vào quá trình xuất chú thích từ tệp XML bằng GroupDocs.Annotation cho .NET. Đến cuối hướng dẫn này, bạn sẽ được trang bị kiến thức để xuất chú thích một cách liền mạch, nâng cao quy trình quản lý tài liệu của mình.
 ## Điều kiện tiên quyết

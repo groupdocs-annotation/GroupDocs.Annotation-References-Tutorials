@@ -6,6 +6,9 @@ description: GroupDocs.Annotation .NET을 사용하여 버튼, 확인란, 드롭
 weight: 24
 url: /ko/net/document-components/
 ---
+
+# 문서 구성요소
+
 ## 소개
 
 .NET용 GroupDocs.Annotation은 개발자가 대화형 구성 요소를 PDF 문서에 원활하게 통합하는 데 도움이 되는 강력한 자습서 세트를 제공합니다. 이 기사에서는 이러한 튜토리얼의 세부 사항을 자세히 살펴보고 PDF의 기능과 사용자 경험을 향상시키는 방법을 살펴보겠습니다.

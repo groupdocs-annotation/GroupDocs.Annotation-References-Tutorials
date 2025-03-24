@@ -6,6 +6,9 @@ description: 了解如何在 GroupDocs.Annotation for .NET 中无缝加载自定
 weight: 20
 url: /zh/net/advanced-usage/loading-custom-fonts/
 ---
+
+# 加载自定义字体
+
 ## 介绍
 GroupDocs.Annotation for .NET 是一个功能强大的库，使开发人员能够轻松地将注释功能添加到其 .NET 应用程序中。它提供的关键功能之一是能够加载自定义字体，从而增强文档注释的自定义和灵活性。
 ## 先决条件

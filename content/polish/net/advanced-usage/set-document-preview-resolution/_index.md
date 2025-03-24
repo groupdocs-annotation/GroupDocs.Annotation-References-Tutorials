@@ -6,6 +6,9 @@ description: Usprawnij współpracę nad dokumentami dzięki Groupdocs.Annotatio
 weight: 23
 url: /pl/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Ustaw rozdzielczość podglądu dokumentu
+
 ## Wstęp
 dzisiejszej epoce cyfrowej wydajne zarządzanie dokumentami i współpraca mają ogromne znaczenie zarówno dla firm, jak i osób prywatnych. Przy dużej liczbie dokumentów krążących codziennie, zapewnienie płynnego dodawania adnotacji i możliwości podglądu może znacznie zwiększyć produktywność i usprawnić przepływ pracy. Wprowadź Groupdocs.Annotation dla .NET — potężny zestaw narzędzi zaprojektowany, aby zapewnić programistom niezawodne funkcje adnotacji dla różnych formatów dokumentów.
 ## Warunki wstępne

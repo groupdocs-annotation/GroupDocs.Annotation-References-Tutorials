@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメント管�
 weight: 19
 url: /ja/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# リソース墨消し注釈をドキュメントに追加
+
 ## 導入
 .NET 開発の領域では、ドキュメント注釈用の効率的なツールを統合すると、生産性が大幅に向上し、ワークフローが合理化されます。 GroupDocs.Annotation for .NET は堅牢なソリューションとして登場し、ドキュメントにシームレスに注釈を付けて操作するための豊富な機能を提供します。このチュートリアルでは、GroupDocs.Annotation for .NET 内の強力な機能である Resources Redaction Annotation を統合して利用するプロセスについて詳しく説明します。
 ## 前提条件

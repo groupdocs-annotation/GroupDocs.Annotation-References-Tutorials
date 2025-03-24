@@ -6,6 +6,9 @@ description: Förbättra dokumentsamarbete och anteckningar inom .NET-applikatio
 weight: 13
 url: /sv/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Skapa förhandsgranskning utan anteckningar
+
 ## Introduktion
 dagens digitala tidsålder är effektivt samarbete kring dokument nyckeln till produktivitet och framgång. Oavsett om du arbetar med ett projekt med teammedlemmar utspridda över hela världen eller samarbetar med kunder i viktiga kontrakt, är förmågan att kommentera och granska dokument sömlöst avgörande. Med GroupDocs.Annotation för .NET kan du ta ditt dokumentsamarbete till nästa nivå, vilket möjliggör enkel anteckning, markering och granskning direkt i dina .NET-applikationer.
 ## Förutsättningar

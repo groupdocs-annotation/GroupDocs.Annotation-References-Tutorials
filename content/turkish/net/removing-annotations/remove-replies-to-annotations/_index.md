@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak .NET'te ek açıklamalara verile
 weight: 15
 url: /tr/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# .NET'te Ek Açıklamalara Verilen Yanıtları Kaldırma
+
 ## giriiş
 Bu öğreticide, GroupDocs.Annotation'ı kullanarak .NET'te ek açıklamalara verilen yanıtların nasıl kaldırılacağını inceleyeceğiz. GroupDocs.Annotation, geliştiricilerin belgelere kolaylıkla açıklama eklemesine olanak tanıyan güçlü bir .NET kitaplığıdır. Yorum eklemek, metni vurgulamak veya damga eklemek olsun, GroupDocs.Annotation, belgeye açıklama eklemek için kapsamlı bir araç seti sağlar.
 ## Önkoşullar

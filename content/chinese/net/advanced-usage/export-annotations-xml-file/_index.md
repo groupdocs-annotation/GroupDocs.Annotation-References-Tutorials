@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 从 XML 文件导�
 weight: 11
 url: /zh/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# 从 XML 文件导出注释
+
 ## 介绍
 在当今的数字时代，高效的文档管理对于企业和个人都至关重要。凭借大量可用工具，GroupDocs.Annotation for .NET 成为注释和管理 PDF 文件的可靠解决方案。在本教程中，我们将深入研究使用 GroupDocs.Annotation for .NET 从 XML 文件导出注释的过程。在本指南结束时，您将具备无缝导出注释的知识，从而增强您的文档管理工作流程。
 ## 先决条件

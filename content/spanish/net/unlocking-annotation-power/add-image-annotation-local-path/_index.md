@@ -6,6 +6,9 @@ description: Aprenda a agregar anotaciones de imágenes a documentos usando Grou
 weight: 14
 url: /es/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Agregar anotación de imagen al documento (ruta local)
+
 ## Introducción
 GroupDocs.Annotation para .NET es una poderosa biblioteca que permite a los desarrolladores agregar varios tipos de anotaciones a documentos mediante programación. En este tutorial, aprenderemos cómo agregar anotaciones de imágenes a un documento usando una ruta local.
 ## Requisitos previos

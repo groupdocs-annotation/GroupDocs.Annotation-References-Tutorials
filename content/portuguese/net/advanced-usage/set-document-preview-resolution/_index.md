@@ -6,6 +6,9 @@ description: Eleve a colaboração de documentos com Groupdocs.Annotation for .N
 weight: 23
 url: /pt/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Definir resolução de visualização do documento
+
 ## Introdução
 Na era digital de hoje, o gerenciamento eficiente de documentos e a colaboração são fundamentais para empresas e indivíduos. Com a infinidade de documentos circulando diariamente, garantir recursos contínuos de anotação e visualização pode aumentar significativamente a produtividade e agilizar os fluxos de trabalho. Digite Groupdocs.Annotation for .NET - um poderoso kit de ferramentas projetado para capacitar os desenvolvedores com funcionalidades robustas de anotação para vários formatos de documentos.
 ## Pré-requisitos

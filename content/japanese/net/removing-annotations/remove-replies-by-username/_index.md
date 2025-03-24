@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET を使用してドキュメントに�
 weight: 17
 url: /ja/net/removing-annotations/remove-replies-by-username/
 ---
+
+# .NET でユーザー名による返信を削除する
+
 ## 導入
 Groupdocs.Annotation for .NET は、.NET アプリケーション内でドキュメントにシームレスに注釈を付けるための強力なツールです。 PDF、Word ドキュメント、またはその他のサポートされているファイル形式で作業しているかどうかに関係なく、このライブラリを使用すると、注釈、ハイライト、コメントを追加するプロセスが簡素化され、コラボレーション機能とドキュメント管理機能が強化されます。
 ## 前提条件

@@ -6,6 +6,9 @@ description: Pelajari cara mengekspor anotasi dari file XML menggunakan GroupDoc
 weight: 11
 url: /id/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# Ekspor Anotasi dari File XML
+
 ## Perkenalan
 Di era digital saat ini, pengelolaan dokumen yang efisien sangat penting bagi bisnis dan individu. Dengan banyaknya alat yang tersedia, GroupDocs.Annotation untuk .NET menonjol sebagai solusi andal untuk membuat anotasi dan mengelola file PDF. Dalam tutorial ini, kita akan mempelajari proses mengekspor anotasi dari file XML menggunakan GroupDocs.Annotation untuk .NET. Di akhir panduan ini, Anda akan dibekali dengan pengetahuan untuk mengekspor anotasi dengan lancar, sehingga meningkatkan alur kerja manajemen dokumen Anda.
 ## Prasyarat

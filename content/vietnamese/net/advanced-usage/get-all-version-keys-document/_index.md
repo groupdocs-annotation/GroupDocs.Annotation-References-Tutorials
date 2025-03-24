@@ -6,6 +6,9 @@ description: Tìm hiểu cách truy xuất tất cả các khóa phiên bản tr
 weight: 16
 url: /vi/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Nhận tất cả các khóa phiên bản trên tài liệu
+
 ## Giới thiệu
 Trong thế giới kỹ thuật số phát triển nhanh chóng ngày nay, việc quản lý tài liệu hiệu quả là rất quan trọng đối với các doanh nghiệp cũng như cá nhân. Cho dù bạn đang cộng tác trong các dự án, xem xét hợp đồng hay chỉ đơn giản là sắp xếp các tệp của mình thì việc có các công cụ phù hợp có thể tạo nên sự khác biệt. GroupDocs.Annotation for .NET cung cấp giải pháp toàn diện để chú thích và thao tác tài liệu trong các ứng dụng .NET. Trong hướng dẫn này, chúng ta sẽ khám phá cách tận dụng GroupDocs.Annotation cho .NET để truy xuất tất cả các khóa phiên bản trên tài liệu.
 ## Điều kiện tiên quyết

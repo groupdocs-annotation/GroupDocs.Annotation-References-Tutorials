@@ -6,6 +6,9 @@ description: Lås upp den fulla potentialen för dokumentkommentarer i .NET med 
 weight: 11
 url: /sv/net/applying-licenses/set-license-from-stream/
 ---
+
+# Ställ in licens från Stream
+
 ## Introduktion
 Välkommen till den omfattande guiden om hur du använder GroupDocs.Annotation för .NET för att förbättra dina dokumentkommentarer. Oavsett om du är en erfaren utvecklare eller precis har börjat, kommer den här handledningen att leda dig genom varje steg, vilket säkerställer att du utnyttjar den fulla potentialen i detta kraftfulla verktyg.
 ## Förutsättningar

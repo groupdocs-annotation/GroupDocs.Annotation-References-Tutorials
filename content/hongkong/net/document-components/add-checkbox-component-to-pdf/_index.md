@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 將複選框元件
 weight: 11
 url: /zh-hant/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# 將複選框元件新增至 PDF 文檔
+
 ## 介紹
 在本教學中，我們將引導您完成使用 Groupdocs.Annotation for .NET 將複選框元件新增至 PDF 文件的過程。
 ## 先決條件

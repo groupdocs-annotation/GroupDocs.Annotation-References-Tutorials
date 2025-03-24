@@ -6,6 +6,9 @@ description: Learn how to add text highlight annotations to documents using Grou
 weight: 22
 url: /net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Add Text Highlight Annotation to Document
+
 ## Introduction
 In the realm of document management and collaboration, GroupDocs.Annotation for .NET emerges as a robust solution, empowering developers to seamlessly integrate text highlight annotations into their applications. This tutorial serves as a comprehensive guide to adding text highlight annotations to documents using GroupDocs.Annotation for .NET. Through step-by-step instructions and detailed explanations, you will gain proficiency in harnessing the capabilities of this powerful library.
 ## Prerequisites

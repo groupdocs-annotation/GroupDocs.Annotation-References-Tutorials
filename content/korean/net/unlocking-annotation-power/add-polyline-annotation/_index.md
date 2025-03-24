@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 폴리라인
 weight: 18
 url: /ko/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# 문서에 폴리라인 주석 추가
+
 ## 소개
 .NET용 GroupDocs.Annotation은 개발자가 프로그래밍 방식으로 PDF 및 Microsoft Office 문서에 주석을 달 수 있는 강력한 도구입니다. 그 기능 중에는 문서에 폴리라인 주석을 추가하여 협업 및 문서 검토 프로세스를 향상시키는 기능이 있습니다.
 ## 전제 조건

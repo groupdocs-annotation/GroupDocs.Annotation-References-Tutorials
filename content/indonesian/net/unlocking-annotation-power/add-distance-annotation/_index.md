@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi jarak ke dokumen menggunakan Grou
 weight: 12
 url: /id/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Tambahkan Anotasi Jarak ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, Anda akan mempelajari cara menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Ikuti langkah-langkah berikut untuk menyelesaikan tugas:
 ## Prasyarat

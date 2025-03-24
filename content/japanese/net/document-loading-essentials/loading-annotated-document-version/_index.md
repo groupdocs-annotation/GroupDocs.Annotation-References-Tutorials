@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して、注釈付きドキ�
 weight: 16
 url: /ja/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# 注釈付きドキュメントのバージョンをロードしています
+
 ## 導入
 今日のデジタル時代では、ドキュメントの注釈はさまざまな業界でコラボレーション、レビュー、フィードバックに不可欠なツールとなっています。注釈機能をアプリケーションに統合する開発者であっても、これらの機能の活用を検討しているユーザーであっても、GroupDocs.Annotation for .NET は強力なソリューションを提供します。このチュートリアルでは、GroupDocs.Annotation for .NET を使用して、注釈付きドキュメント バージョンを読み込むプロセスを詳しく説明します。
 ## 前提条件

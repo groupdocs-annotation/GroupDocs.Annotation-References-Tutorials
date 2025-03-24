@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat szövegkiemeléseket a dokumentumokhoz a 
 weight: 22
 url: /hu/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Szövegkiemelés megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 dokumentumkezelés és az együttműködés területén a GroupDocs.Annotation for .NET robusztus megoldásként jelenik meg, amely lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják a szövegkiemeléseket az alkalmazásaikba. Ez az oktatóanyag átfogó útmutatóként szolgál szövegkiemelési megjegyzések hozzáadásához a dokumentumokhoz a GroupDocs.Annotation for .NET használatával. A lépésről lépésre szóló utasítások és részletes magyarázatok révén jártasságot szerezhet ennek a nagy teljesítményű könyvtárnak a képességeinek kiaknázásában.
 ## Előfeltételek

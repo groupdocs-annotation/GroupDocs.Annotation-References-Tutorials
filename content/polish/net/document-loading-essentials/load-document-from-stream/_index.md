@@ -6,6 +6,9 @@ description: Dowiedz się, jak bez wysiłku dodawać adnotacje do dokumentów w 
 weight: 14
 url: /pl/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Załaduj dokument ze strumienia
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to potężna biblioteka, która umożliwia programistom bezproblemową integrację funkcji adnotacji w dokumentach z aplikacjami .NET. Niezależnie od tego, czy tworzysz system zarządzania dokumentami, platformę współpracy czy aplikację do e-learningu, GroupDocs.Annotation zapewnia wszechstronny zestaw narzędzi do dodawania adnotacji do plików PDF, dokumentów Word, arkuszy Excel i nie tylko.
 ## Warunki wstępne

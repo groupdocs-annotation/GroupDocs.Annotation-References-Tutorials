@@ -6,6 +6,9 @@ description: Leer hoe u antwoorden op ID kunt verwijderen in .NET met behulp van
 weight: 16
 url: /nl/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Verwijder antwoorden op ID in .NET
+
 ## Invoering
 Op het gebied van .NET-ontwikkeling is de mogelijkheid om annotaties in documenten te beheren van cruciaal belang voor een verscheidenheid aan toepassingen. Of u nu met PDF's, Word-documenten of andere formaten werkt, de mogelijkheid om annotaties programmatisch te manipuleren opent een wereld aan mogelijkheden. Een krachtig hulpmiddel voor het verwerken van annotaties in .NET is GroupDocs.Annotation.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET'i kullanarak belgelere zahmetsizce da
 weight: 25
 url: /tr/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Belgeye Dalgalı Metin Açıklaması Ekleme
+
 ## giriiş
 
 Groupdocs.Annotation for .NET, geliştiricilerin güçlü açıklama özelliklerini .NET uygulamalarına zahmetsizce entegre etmelerine olanak tanıyan çok yönlü bir kitaplıktır. İster PDF'lerle, ister Word belgeleriyle, ister diğer popüler dosya formatlarıyla çalışıyor olun, Groupdocs.Annotation, belgeye açıklama eklemek ve belge işbirliğini geliştirmek için kusursuz bir çözüm sunar.

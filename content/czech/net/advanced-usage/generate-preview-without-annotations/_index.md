@@ -6,6 +6,9 @@ description: Vylepšete spolupráci na dokumentech a anotaci v rámci aplikací 
 weight: 13
 url: /cs/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Generovat náhled bez poznámek
+
 ## Úvod
 dnešní digitální době je efektivní spolupráce na dokumentech klíčem k produktivitě a úspěchu. Ať už pracujete na projektu se členy týmu roztroušenými po celém světě nebo spolupracujete s klienty na důležitých smlouvách, schopnost bezproblémově anotovat a revidovat dokumenty je zásadní. S GroupDocs.Annotation for .NET můžete posunout spolupráci na dokumentech na další úroveň, což umožňuje snadnou anotaci, označování a kontrolu přímo ve vašich aplikacích .NET.
 ## Předpoklady

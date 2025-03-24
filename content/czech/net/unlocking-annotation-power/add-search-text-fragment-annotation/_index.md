@@ -6,6 +6,9 @@ description: Prozkoumejte sílu GroupDocs.Annotation pro .NET a bez námahy při
 weight: 20
 url: /cs/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Přidejte do dokumentu anotaci fragmentu vyhledávacího textu
+
 ## Úvod
 V oblasti vývoje .NET GroupDocs.Annotation vyniká jako výkonný nástroj pro bezproblémové anotování dokumentů. Ať už jste ostřílený vývojář nebo teprve vstupujete do světa .NET, tento obsáhlý tutoriál vás provede základy používání GroupDocs.Annotation pro .NET, od importu jmenných prostorů až po zvládnutí složitostí přidávání anotací fragmentů vyhledávacího textu do vašich dokumenty.
 ## Úvod

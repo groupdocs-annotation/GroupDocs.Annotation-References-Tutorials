@@ -6,6 +6,9 @@ description: Naučte se, jak přidat bodové anotace do PDF pomocí GroupDocs.An
 weight: 17
 url: /cs/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Přidání bodové anotace do dokumentu
+
 ## Úvod
 GroupDocs.Annotation for .NET je výkonný nástroj, který umožňuje vývojářům přidávat různé typy anotací do dokumentů programově. V tomto tutoriálu se zaměříme na přidání bodové anotace do dokumentu pomocí C#.
 ## Předpoklady

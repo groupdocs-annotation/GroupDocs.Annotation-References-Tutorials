@@ -6,6 +6,9 @@ description: Learn how to add watermark annotations to your documents effortless
 weight: 28
 url: /net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Add Watermark Annotation to Document
+
 ## Introduction
 In this tutorial, we'll walk through the process of adding a watermark annotation to a document using GroupDocs.Annotation for .NET. Watermark annotations are useful for indicating the status of a document, marking it as confidential, or adding any other relevant information.
 

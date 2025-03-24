@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak PDF belgelerine metin re
 weight: 23
 url: /tr/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Belgeye Metin Redaksiyon Açıklaması Ekleme
+
 ## giriiş
 Bir belgeye metin redaksiyonu açıklaması eklemek, hassas bilgilerin güvenli bir şekilde yönetilmesinde çok önemli bir adım olabilir. GroupDocs.Annotation for .NET, bunu sorunsuz bir şekilde başarmak için güçlü bir çözüm sağlar. Bu öğreticide, belgenize metin redaksiyonu ek açıklaması ekleme sürecinde size adım adım rehberlik edeceğiz.
 ## Önkoşullar

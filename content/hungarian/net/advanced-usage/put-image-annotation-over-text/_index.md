@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá képjegyzeteket szöveghez a .NET-
 weight: 21
 url: /hu/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Helyezze a kép megjegyzést a szöveg fölé
+
 ## Bevezetés
 .NET-fejlesztés világában a GroupDocs.Annotation hatékony megoldást kínál megjegyzések hozzáadására a dokumentumokhoz, így hatékonyabbá téve az együttműködést és a dokumentumkezelést. Az egyik gyakori követelmény a képfeljegyzések szöveg fölé helyezése, amely zökkenőmentesen megvalósítható a GroupDocs.Annotation for .NET használatával.
 ## Előfeltételek

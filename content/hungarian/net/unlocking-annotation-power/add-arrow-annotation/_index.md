@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá nyilakkal ellátott megjegyzéseke
 weight: 11
 url: /hu/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Nyíl megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük Önt a nyilas megjegyzések hozzáadásának folyamatán a GroupDocs.Annotation for .NET segítségével. A nyíl megjegyzések hasznosak az irány jelzésére vagy a dokumentumon belüli meghatározott elemek kijelzésére.
 ## Előfeltételek

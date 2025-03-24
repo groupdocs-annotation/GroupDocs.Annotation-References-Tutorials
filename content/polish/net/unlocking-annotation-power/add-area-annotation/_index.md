@@ -6,6 +6,9 @@ description: Usprawnij współpracę nad dokumentami dzięki Groupdocs.Annotatio
 weight: 10
 url: /pl/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Dodaj adnotację obszaru do dokumentu
+
 ## Wstęp
 W tym samouczku przeprowadzimy Cię przez proces dodawania adnotacji obszarów do dokumentów przy użyciu Groupdocs.Annotation for .NET. Adnotacje obszarowe to cenna funkcja, która pozwala użytkownikom wyróżniać określone obszary dokumentu, zapewniając przejrzystość i kontekst treści.
 ## Warunki wstępne

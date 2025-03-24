@@ -6,6 +6,9 @@ description: Vylepšete spolupráci na dokumentech pomocí Groupdocs.Annotation 
 weight: 10
 url: /cs/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Přidejte k dokumentu anotaci oblasti
+
 ## Úvod
 V tomto tutoriálu vás provedeme procesem přidávání anotací oblastí do dokumentů pomocí Groupdocs.Annotation pro .NET. Oblastní anotace jsou cennou funkcí, která uživatelům umožňuje zvýraznit konkrétní oblasti dokumentu a poskytuje obsahu jasnost a kontext.
 ## Předpoklady

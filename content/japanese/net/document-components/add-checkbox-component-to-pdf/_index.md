@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET を使用して PDF ドキュメン�
 weight: 11
 url: /ja/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# PDFドキュメントにチェックボックスコンポーネントを追加
+
 ## 導入
 このチュートリアルでは、Groupdocs.Annotation for .NET を使用して PDF ドキュメントにチェックボックス コンポーネントを追加するプロセスを説明します。
 ## 前提条件

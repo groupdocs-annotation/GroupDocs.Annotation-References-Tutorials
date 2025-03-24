@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat szöveges aláhúzás megjegyzéseket a d
 weight: 27
 url: /hu/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Szöveg aláhúzás megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban a GroupDocs.Annotation for .NET használatával szöveges aláhúzás megjegyzések hozzáadásának folyamatát mutatjuk be. A szöveg aláhúzott megjegyzései hasznosak lehetnek a dokumentum bizonyos részei, például a fontos részek vagy kulcspontok kiemelésére.
 ## Előfeltételek

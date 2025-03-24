@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi tautan ke dokumen menggunakan Gro
 weight: 16
 url: /id/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Tambahkan Anotasi Tautan ke Dokumen
+
 ## Perkenalan
 Groupdocs.Annotation for .NET adalah perpustakaan canggih yang memungkinkan pengembang mengintegrasikan fungsi anotasi komprehensif ke dalam aplikasi .NET mereka dengan mudah. Salah satu fitur utama yang ditawarkannya adalah kemampuan untuk menambahkan anotasi tautan ke dokumen, meningkatkan kolaborasi dan interaktivitas.
 ## Prasyarat

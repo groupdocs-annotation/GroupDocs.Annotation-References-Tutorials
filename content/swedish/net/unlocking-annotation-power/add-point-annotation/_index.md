@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till punktkommentarer till PDF-filer med Gr
 weight: 17
 url: /sv/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Lägg till punktkommentar till dokument
+
 ## Introduktion
 GroupDocs.Annotation för .NET är ett kraftfullt verktyg som gör det möjligt för utvecklare att lägga till olika typer av kommentarer till dokument programmatiskt. I den här handledningen kommer vi att fokusera på att lägga till en punktkommentar till ett dokument med C#.
 ## Förutsättningar

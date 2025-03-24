@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi teks berlekuk-lekuk ke dokumen de
 weight: 25
 url: /id/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen
+
 ## Perkenalan
 
 Groupdocs.Annotation for .NET adalah perpustakaan serbaguna yang memungkinkan pengembang mengintegrasikan kemampuan anotasi yang kuat ke dalam aplikasi .NET mereka dengan mudah. Baik Anda bekerja dengan PDF, dokumen Word, atau format file populer lainnya, Groupdocs.Annotation memberikan solusi sempurna untuk membuat anotasi dan meningkatkan kolaborasi dokumen.

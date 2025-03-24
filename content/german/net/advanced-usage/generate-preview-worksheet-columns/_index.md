@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie Dokumente mit GroupDocs.Annotation für .NET 
 weight: 15
 url: /de/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Generieren Sie Vorschau-Arbeitsblattspalten
+
 ## Einführung
 Willkommen zu unserem umfassenden Tutorial zur Nutzung der Funktionen von GroupDocs.Annotation für .NET! In diesem Leitfaden führen wir Sie durch den Prozess der Verwendung dieses leistungsstarken Tools zum effektiven Kommentieren von Dokumenten. Egal, ob Sie ein erfahrener Entwickler oder ein Neuling in der Welt der .NET-Entwicklung sind, dieses Tutorial vermittelt Ihnen die Kenntnisse und Fähigkeiten, die Sie benötigen, um Anmerkungsfunktionen nahtlos in Ihre Anwendungen zu integrieren.
 ## Voraussetzungen

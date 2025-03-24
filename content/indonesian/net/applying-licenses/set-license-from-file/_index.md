@@ -6,6 +6,9 @@ description: Integrasikan kemampuan anotasi dokumen yang kuat ke dalam aplikasi 
 weight: 10
 url: /id/net/applying-licenses/set-license-from-file/
 ---
+
+# Tetapkan Lisensi dari File
+
 ## Perkenalan
 Di era digital saat ini, anotasi dokumen telah menjadi alat penting untuk proses kolaborasi, peninjauan, dan umpan balik di berbagai industri. GroupDocs.Annotation for .NET menawarkan solusi ampuh bagi pengembang yang ingin mengintegrasikan fungsionalitas anotasi ke dalam aplikasi .NET mereka dengan mulus.
 ## Prasyarat

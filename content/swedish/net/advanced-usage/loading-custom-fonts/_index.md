@@ -6,6 +6,9 @@ description: Lär dig hur du sömlöst laddar anpassade teckensnitt i GroupDocs.
 weight: 20
 url: /sv/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Laddar anpassade teckensnitt
+
 ## Introduktion
 GroupDocs.Annotation for .NET är ett kraftfullt bibliotek som gör det möjligt för utvecklare att lägga till anteckningsfunktioner till sina .NET-applikationer utan ansträngning. En av nyckelfunktionerna som den erbjuder är möjligheten att ladda anpassade typsnitt, vilket möjliggör förbättrad anpassning och flexibilitet i dokumentkommentarer.
 ## Förutsättningar

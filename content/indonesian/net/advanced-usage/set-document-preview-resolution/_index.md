@@ -6,6 +6,9 @@ description: Tingkatkan kolaborasi dokumen dengan Groupdocs.Annotation untuk .NE
 weight: 23
 url: /id/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Tetapkan Resolusi Pratinjau Dokumen
+
 ## Perkenalan
 Di era digital saat ini, pengelolaan dokumen dan kolaborasi yang efisien adalah hal yang terpenting bagi bisnis dan individu. Dengan banyaknya dokumen yang beredar setiap hari, memastikan kemampuan anotasi dan pratinjau yang lancar dapat meningkatkan produktivitas dan menyederhanakan alur kerja secara signifikan. Masukkan Groupdocs.Annotation for .NET - perangkat canggih yang dirancang untuk memberdayakan pengembang dengan fungsi anotasi yang kuat untuk berbagai format dokumen.
 ## Prasyarat

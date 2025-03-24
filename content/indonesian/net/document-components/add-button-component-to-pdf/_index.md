@@ -6,6 +6,9 @@ description: Sempurnakan dokumen PDF Anda dengan komponen tombol interaktif meng
 weight: 10
 url: /id/net/document-components/add-button-component-to-pdf/
 ---
+
+# Tambahkan Komponen Tombol ke Dokumen PDF
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses menambahkan Komponen Tombol ke dokumen PDF menggunakan Groupdocs.Annotation untuk .NET. Panduan langkah demi langkah ini akan memastikan bahwa Anda dapat dengan mudah mengintegrasikan fitur ini ke dalam proyek Anda.
 ## Prasyarat

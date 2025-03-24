@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 在 .NET 中按 ID 刪除�
 weight: 13
 url: /zh-hant/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# 按 ID 刪除多個註釋
+
 ## 介紹
 在文件管理和協作領域，GroupDocs.Annotation for .NET 成為一種強大的工具，使開發人員能夠在其 .NET 應用程式中無縫地註釋和操作文件。本教學將深入研究 GroupDocs.Annotation for .NET 提供的基本功能之一：透過 ID 刪除多個註解。透過遵循本逐步指南，您將全面了解如何有效刪除註釋，從而增強您的文件管理能力。
 ## 先決條件

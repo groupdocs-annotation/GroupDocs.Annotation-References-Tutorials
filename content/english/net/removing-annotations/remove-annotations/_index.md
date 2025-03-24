@@ -6,6 +6,9 @@ description: Learn how to remove annotations from PDF documents using Groupdocs.
 weight: 10
 url: /net/removing-annotations/remove-annotations/
 ---
+
+# Remove Annotations in .NET
+
 ## Introduction
 Annotations play a crucial role in digital document management, allowing users to highlight, comment, and mark up important sections within files. However, there may come a time when you need to remove annotations from a document. In this tutorial, we'll explore how to remove annotations in .NET using Groupdocs.Annotation, a powerful tool for document annotation and manipulation.
 ## Prerequisites

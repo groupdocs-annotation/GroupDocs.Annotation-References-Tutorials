@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 增强协作和文档审阅。
 weight: 17
 url: /zh/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# 加载受密码保护的文档
+
 ## 介绍
 在当今快节奏的世界中，协作是成功的关键。无论您是与同事、客户还是合作伙伴一起处理项目，高效注释和共享文档的能力都可以显着提高工作效率并简化工作流程。 GroupDocs.Annotation for .NET 提供了一个强大的解决方案，可以直接在 .NET 应用程序中注释 PDF 和其他文档格式，从而实现无缝协作和文档审阅流程。
 ## 先决条件

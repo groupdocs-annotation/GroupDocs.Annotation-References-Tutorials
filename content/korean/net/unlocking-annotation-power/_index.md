@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation 튜토리얼을 통해 주석의 강�
 weight: 23
 url: /ko/net/unlocking-annotation-power/
 ---
+
+# 주석 기능 잠금 해제
+
 ## 소개
 
 .NET용 GroupDocs.Annotation의 주석 기능을 활용하기 위한 포괄적인 자습서를 살펴보세요. 숙련된 개발자이든 이제 막 시작하는 개발자이든 이 튜토리얼은 문서 공동 작업 및 의사소통을 손쉽게 향상할 수 있는 단계별 지침을 제공합니다.

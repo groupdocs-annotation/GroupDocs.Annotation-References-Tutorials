@@ -6,6 +6,9 @@ description: Pelajari cara membuat anotasi dokumen PDF secara terprogram menggun
 weight: 15
 url: /id/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Muat Dokumen dari URL
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah perpustakaan kaya fitur yang memungkinkan pengembang menambahkan kemampuan anotasi ke aplikasi .NET mereka dengan mudah. Dengan GroupDocs.Annotation, Anda dapat membuat anotasi dokumen PDF secara terprogram, memungkinkan pengguna menyorot teks, menambahkan komentar, menggambar bentuk, dan banyak lagi. Tutorial ini akan memandu Anda melalui langkah-langkah memuat dokumen dari URL, menambahkan anotasi, dan menyimpan dokumen beranotasi menggunakan GroupDocs.Annotation untuk .NET.
 ## Prasyarat

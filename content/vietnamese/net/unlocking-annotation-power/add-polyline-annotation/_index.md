@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích đa dòng vào tài liệu bằ
 weight: 18
 url: /vi/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Thêm chú thích đa tuyến vào tài liệu
+
 ## Giới thiệu
 GroupDocs.Annotation for .NET là một công cụ mạnh mẽ cho phép các nhà phát triển chú thích các tài liệu PDF và Microsoft Office theo chương trình. Một trong những tính năng của nó là khả năng thêm chú thích đa tuyến vào tài liệu, tăng cường quá trình cộng tác và xem xét tài liệu.
 ## Điều kiện tiên quyết

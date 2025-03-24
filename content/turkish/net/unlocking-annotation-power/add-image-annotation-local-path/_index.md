@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak belgelere resim açıkla
 weight: 14
 url: /tr/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Belgeye Görüntü Açıklaması Ekleme (Yerel Yol)
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin belgelere programlı olarak çeşitli türde ek açıklamalar eklemesine olanak tanıyan güçlü bir kitaplıktır. Bu eğitimde, yerel bir yol kullanarak bir belgeye resim açıklamalarının nasıl ekleneceğini öğreneceğiz.
 ## Önkoşullar

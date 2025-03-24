@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して PDF ドキュメン�
 weight: 23
 url: /ja/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# テキスト墨消し注釈をドキュメントに追加
+
 ## 導入
 文書にテキスト編集注釈を追加することは、機密情報を安全に管理するための重要なステップとなる可能性があります。 GroupDocs.Annotation for .NET は、これをシームレスに実現するための堅牢なソリューションを提供します。このチュートリアルでは、文書にテキスト編集注釈を追加するプロセスを段階的に説明します。
 ## 前提条件

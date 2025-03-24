@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 将文本字段注
 weight: 21
 url: /zh/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# 将文本字段注释添加到文档
+
 ## 介绍
 Groupdocs.Annotation for .NET 是一个功能强大的工具，允许开发人员轻松地将注释功能添加到他们的 .NET 应用程序中。无论您是在开发文档管理系统、协作平台，还是任何需要文档注释的应用程序，Groupdocs.Annotation 都可以通过其全面的功能集和直观的 API 简化流程。
 在本教程中，我们将深入研究 .NET 的 Groupdocs.Annotation 的基本功能之一：向文档添加文本字段注释。通过遵循此分步指南，您将了解如何将文本字段注释无缝集成到 .NET 应用程序中，从而增强用户体验和协作功能。

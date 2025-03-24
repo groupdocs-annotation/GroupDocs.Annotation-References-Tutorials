@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して、ドキュメント�
 weight: 13
 url: /ja/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# ローカルディスクからドキュメントをロード
+
 ## 導入
 GroupDocs.Annotation for .NET を使用すると、ドキュメント アノテーションの可能性を最大限に引き出すことがかつてないほど簡単になります。この強力なツールを使用すると、開発者は堅牢な注釈機能を .NET アプリケーションにシームレスに統合できます。この包括的なガイドでは、GroupDocs.Annotation for .NET を活用してドキュメントに注釈を付けるプロセスを段階的に説明します。経験豊富な開発者であっても、初心者であっても、このチュートリアルではドキュメントの共同作業を強化し、ワークフローを合理化するための知識を身につけることができます。
 ## 前提条件

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 ID별로 주석을 제
 weight: 11
 url: /ko/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# ID별로 주석 제거
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 ID별로 주석을 제거하는 과정을 안내합니다. 주석은 문서를 복잡하게 만들 수 있으며 선택적으로 주석을 제거하면 작업 흐름을 간소화할 수 있습니다. 각 단계를 명확하게 이해할 수 있도록 단계별로 안내해 드립니다.
 ## 전제 조건

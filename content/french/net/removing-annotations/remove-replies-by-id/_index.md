@@ -6,6 +6,9 @@ description: Découvrez comment supprimer les réponses par ID dans .NET à l’
 weight: 16
 url: /fr/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Supprimer les réponses par ID dans .NET
+
 ## Introduction
 Dans le domaine du développement .NET, la capacité à gérer les annotations dans les documents est cruciale pour diverses applications. Que vous travailliez avec des PDF, des documents Word ou d'autres formats, la possibilité de manipuler les annotations par programmation ouvre un monde de possibilités. GroupDocs.Annotation est un outil puissant pour gérer les annotations dans .NET.
 ## Conditions préalables

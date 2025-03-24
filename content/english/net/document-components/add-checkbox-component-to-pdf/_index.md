@@ -6,6 +6,9 @@ description: Learn how to add a Checkbox Component to PDF documents using Groupd
 weight: 11
 url: /net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Add Checkbox Component to PDF Document
+
 ## Introduction
 In this tutorial, we'll guide you through the process of adding a Checkbox Component to a PDF document using Groupdocs.Annotation for .NET.
 ## Prerequisites

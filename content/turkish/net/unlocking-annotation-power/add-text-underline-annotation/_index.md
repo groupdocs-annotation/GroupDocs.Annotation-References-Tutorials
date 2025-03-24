@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak belgelere metin altı ç
 weight: 27
 url: /tr/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Belgeye Metin Altı Çizili Açıklaması Ekleme
+
 ## giriiş
 Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bir belgeye metin altı çizili ek açıklama ekleme sürecini anlatacağız. Metin altı çizili ek açıklamalar, bir belgenin önemli pasajlar veya önemli noktalar gibi belirli bölümlerini vurgulamak için yararlı olabilir.
 ## Önkoşullar

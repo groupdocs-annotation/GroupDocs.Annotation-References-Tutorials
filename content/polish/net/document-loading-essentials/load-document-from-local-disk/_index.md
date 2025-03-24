@@ -6,6 +6,9 @@ description: Odblokuj moc adnotacji w dokumentach dzięki GroupDocs.Annotation d
 weight: 13
 url: /pl/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Załaduj dokument z dysku lokalnego
+
 ## Wstęp
 Uwolnienie potencjału adnotacji w dokumentach nigdy nie było łatwiejsze dzięki GroupDocs.Annotation dla .NET. To potężne narzędzie umożliwia programistom bezproblemową integrację niezawodnych funkcji adnotacji z aplikacjami .NET. W tym obszernym przewodniku przeprowadzimy Cię krok po kroku przez proces wykorzystania GroupDocs.Annotation dla .NET do dodawania adnotacji do dokumentów. Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero zaczynasz, ten samouczek wyposaży Cię w wiedzę niezbędną do usprawnienia współpracy nad dokumentami i usprawnienia przepływu pracy.
 ## Warunki wstępne

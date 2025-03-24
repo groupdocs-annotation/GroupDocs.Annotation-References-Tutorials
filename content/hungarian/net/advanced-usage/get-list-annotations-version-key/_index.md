@@ -6,6 +6,9 @@ description: Bővítse .NET-alkalmazásait a GroupDocs.Annotation segítségéve
 weight: 18
 url: /hu/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Szerezze be a megjegyzések listáját a verziókulcs használatával
+
 ## Bevezetés
 A .NET fejlesztés világában a dokumentumok hatékony kezelése és kezelése a legfontosabb. Legyen szó megjegyzésekről PDF-dokumentumokban, Word-dokumentumokon való együttműködésről vagy Excel-lapok jelöléséről, a megfelelő eszközökkel egyszerűsítheti a munkafolyamatokat és növelheti a termelékenységet. A GroupDocs.Annotation for .NET egy ilyen eszköz, amely felhatalmazza a fejlesztőket arra, hogy a .NET-alkalmazásaikon belül zökkenőmentesen jegyezzenek fel és kezeljenek dokumentumokat.
 ## Előfeltételek

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 刪除 .NET 中註解的回
 weight: 15
 url: /zh-hant/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# 刪除 .NET 中註釋的回复
+
 ## 介紹
 在本教學中，我們將探討如何使用 GroupDocs.Annotation 刪除 .NET 中註解的回應。 GroupDocs.Annotation 是一個功能強大的 .NET 程式庫，可讓開發人員輕鬆註解文件。無論是新增註解、突出顯示文字或新增圖章，GroupDocs.Annotation 都提供了一套全面的文件註釋工具。
 ## 先決條件

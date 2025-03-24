@@ -6,6 +6,9 @@ description: Dowiedz się, jak efektywnie zarządzać adnotacjami w platformie .
 weight: 25
 url: /pl/net/removing-annotations/
 ---
+
+# Usuwanie adnotacji
+
 ## Wstęp
 
 Chcesz usprawnić proces zarządzania dokumentami w .NET? GroupDocs.Annotation oferuje kompleksowy zestaw samouczków ułatwiających bezproblemowe usuwanie adnotacji. Adnotacje odgrywają kluczową rolę w procesach współpracy i przeglądania dokumentów. Są jednak przypadki, w których usunięcie adnotacji staje się konieczne ze względu na poprawki, błędy lub aktualizacje. W tej serii samouczków zagłębiamy się w różne metody i techniki skutecznego usuwania adnotacji przy użyciu GroupDocs.Annotation dla .NET.

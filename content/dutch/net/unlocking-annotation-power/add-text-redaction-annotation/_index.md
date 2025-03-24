@@ -6,6 +6,9 @@ description: Leer hoe u tekstredactieannotaties aan PDF-documenten kunt toevoege
 weight: 23
 url: /nl/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Voeg tekstredactieannotatie toe aan document
+
 ## Invoering
 Het toevoegen van een annotatie voor tekstredactie aan een document kan een cruciale stap zijn bij het veilig beheren van gevoelige informatie. GroupDocs.Annotation voor .NET biedt een robuuste oplossing om dit naadloos te bereiken. In deze zelfstudie begeleiden we u stap voor stap bij het toevoegen van een annotatie voor tekstredactie aan uw document.
 ## Vereisten

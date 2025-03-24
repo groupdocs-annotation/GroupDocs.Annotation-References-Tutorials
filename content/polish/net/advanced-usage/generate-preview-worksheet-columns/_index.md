@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje do dokumentów za pomocą Grou
 weight: 15
 url: /pl/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Wygeneruj kolumny arkusza podglądu
+
 ## Wstęp
 Witamy w naszym kompleksowym samouczku na temat wykorzystania możliwości GroupDocs.Annotation dla .NET! W tym przewodniku przeprowadzimy Cię przez proces wykorzystania tego potężnego narzędzia do skutecznego dodawania adnotacji do dokumentów. Niezależnie od tego, czy jesteś doświadczonym programistą, czy nowicjuszem w świecie programowania .NET, ten samouczek wyposaży Cię w wiedzę i umiejętności niezbędne do płynnej integracji funkcji adnotacji z aplikacjami.
 ## Warunki wstępne

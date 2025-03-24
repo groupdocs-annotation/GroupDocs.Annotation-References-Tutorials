@@ -6,6 +6,9 @@ description: Khám phá các hướng dẫn toàn diện về cách tích hợp 
 weight: 24
 url: /vi/net/document-components/
 ---
+
+# Thành phần tài liệu
+
 ## Giới thiệu
 
 GroupDocs.Annotation dành cho .NET cung cấp một bộ hướng dẫn mạnh mẽ để giúp các nhà phát triển tích hợp liền mạch các thành phần tương tác vào tài liệu PDF. Trong bài viết này, chúng tôi sẽ đi sâu vào chi tiết của các hướng dẫn này, khám phá cách chúng hỗ trợ bạn nâng cao chức năng và trải nghiệm người dùng cho các tệp PDF của bạn.

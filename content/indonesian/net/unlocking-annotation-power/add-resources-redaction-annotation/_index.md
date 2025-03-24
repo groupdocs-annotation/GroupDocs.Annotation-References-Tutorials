@@ -6,6 +6,9 @@ description: Tingkatkan alur kerja manajemen dokumen dengan GroupDocs.Annotation
 weight: 19
 url: /id/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Tambahkan Anotasi Redaksi Sumber Daya ke Dokumen
+
 ## Perkenalan
 Dalam bidang pengembangan .NET, mengintegrasikan alat yang efisien untuk anotasi dokumen dapat meningkatkan produktivitas dan menyederhanakan alur kerja secara signifikan. GroupDocs.Annotation untuk .NET muncul sebagai solusi tangguh, menawarkan banyak fungsi untuk membuat anotasi dan memanipulasi dokumen dengan lancar. Tutorial ini mempelajari proses pengintegrasian dan pemanfaatan Anotasi Redaksi Sumber Daya, sebuah fitur canggih dalam GroupDocs.Annotation untuk .NET.
 ## Prasyarat

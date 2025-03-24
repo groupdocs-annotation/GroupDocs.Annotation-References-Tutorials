@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till distanskommentarer till dokument med G
 weight: 12
 url: /sv/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Lägg till avståndsanteckning till dokument
+
 ## Introduktion
 I den här handledningen kommer du att lära dig hur du lägger till en distanskommentar till ett dokument med GroupDocs.Annotation för .NET. Följ dessa steg för att utföra uppgiften:
 ## Förutsättningar

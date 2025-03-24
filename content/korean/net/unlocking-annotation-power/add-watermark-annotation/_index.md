@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 워터마크
 weight: 28
 url: /ko/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# 문서에 워터마크 주석 추가
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 워터마크 주석을 추가하는 과정을 안내합니다. 워터마크 주석은 문서의 상태를 표시하거나 기밀로 표시하거나 기타 관련 정보를 추가하는 데 유용합니다.
 

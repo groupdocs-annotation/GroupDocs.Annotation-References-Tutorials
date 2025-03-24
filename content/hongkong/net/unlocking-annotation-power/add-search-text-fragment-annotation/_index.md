@@ -6,6 +6,9 @@ description: 探索 GroupDocs.Annotation for .NET 的強大功能，輕鬆地將
 weight: 20
 url: /zh-hant/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# 將搜尋文字片段註解新增至文檔
+
 ## 介紹
 在 .NET 開發領域，GroupDocs.Annotation 作為無縫註釋文件的強大工具脫穎而出。無論您是經驗豐富的開發人員還是剛剛踏入.NET 世界，這個全面的教程將引導您了解使用GroupDocs.Annotation for .NET 的基本知識，從導入命名空間到掌握向您的文檔添加搜索文本片段註釋的複雜性。
 ## 介紹

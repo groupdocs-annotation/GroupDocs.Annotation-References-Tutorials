@@ -6,6 +6,9 @@ description: Naučte se, jak přidat komponentu Checkbox do dokumentů PDF pomoc
 weight: 11
 url: /cs/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Přidat komponentu zaškrtávacího políčka do dokumentu PDF
+
 ## Úvod
 V tomto tutoriálu vás provedeme procesem přidání komponenty Checkbox do dokumentu PDF pomocí Groupdocs.Annotation pro .NET.
 ## Předpoklady

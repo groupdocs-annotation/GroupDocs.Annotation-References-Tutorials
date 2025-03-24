@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till polyline-kommentarer till dokument med
 weight: 18
 url: /sv/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Lägg till polylinjeanteckning till dokumentet
+
 ## Introduktion
 GroupDocs.Annotation for .NET är ett kraftfullt verktyg som låter utvecklare kommentera PDF- och Microsoft Office-dokument programmatiskt. Bland dess funktioner är möjligheten att lägga till polyline-kommentarer till dokument, vilket förbättrar samarbete och dokumentgranskning.
 ## Förutsättningar

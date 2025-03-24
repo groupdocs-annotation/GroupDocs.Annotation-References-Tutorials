@@ -6,6 +6,9 @@ description: Dowiedz się, jak bezproblemowo integrować adnotacje pól tekstowy
 weight: 21
 url: /pl/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Dodaj adnotację pola tekstowego do dokumentu
+
 ## Wstęp
 Groupdocs.Annotation dla .NET to potężne narzędzie, które umożliwia programistom łatwe dodawanie funkcji adnotacji do aplikacji .NET. Niezależnie od tego, czy pracujesz w systemie zarządzania dokumentami, platformie współpracy, czy dowolnej aplikacji, w której niezbędne są adnotacje w dokumentach, Groupdocs.Annotation upraszcza ten proces dzięki wszechstronnemu zestawowi funkcji i intuicyjnemu interfejsowi API.
 W tym samouczku zagłębimy się w jedną z podstawowych funkcjonalności Groupdocs.Annotation dla .NET: dodawanie adnotacji w polu tekstowym do dokumentu. Postępując zgodnie z tym przewodnikiem krok po kroku, dowiesz się, jak bezproblemowo zintegrować adnotacje pól tekstowych z aplikacjami .NET, poprawiając wygodę użytkownika i możliwości współpracy.

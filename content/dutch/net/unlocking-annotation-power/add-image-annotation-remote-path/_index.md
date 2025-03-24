@@ -6,6 +6,9 @@ description: Leer hoe u afbeeldingannotaties aan documenten kunt toevoegen met G
 weight: 15
 url: /nl/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Afbeeldingannotatie toevoegen aan document (pad op afstand)
+
 ## Invoering
 In deze zelfstudie doorlopen we het proces van het toevoegen van afbeeldingsannotaties aan een document met behulp van GroupDocs.Annotation voor .NET. Deze bibliotheek biedt krachtige tools voor het programmatisch annoteren van verschillende soorten documenten.
 ## Vereisten

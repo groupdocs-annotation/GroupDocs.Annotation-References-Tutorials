@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan Anotasi Titik ke PDF menggunakan GroupDoc
 weight: 17
 url: /id/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Tambahkan Anotasi Poin ke Dokumen
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah alat canggih yang memungkinkan pengembang menambahkan berbagai jenis anotasi ke dokumen secara terprogram. Dalam tutorial ini, kita akan fokus menambahkan Anotasi Titik ke dokumen menggunakan C#.
 ## Prasyarat

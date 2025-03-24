@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till vattenstämpelkommentarer till dina do
 weight: 28
 url: /sv/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Lägg till vattenstämpelkommentar till dokumentet
+
 ## Introduktion
 I den här handledningen går vi igenom processen att lägga till en vattenstämpelkommentar till ett dokument med GroupDocs.Annotation för .NET. Vattenstämpelkommentarer är användbara för att indikera status för ett dokument, markera det som konfidentiellt eller lägga till annan relevant information.
 

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 XML 파일에서 주�
 weight: 11
 url: /ko/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# XML 파일에서 주석 내보내기
+
 ## 소개
 오늘날의 디지털 시대에 효율적인 문서 관리는 기업과 개인 모두에게 중요합니다. 다양한 도구를 사용할 수 있는 .NET용 GroupDocs.Annotation은 PDF 파일에 주석을 달고 관리하기 위한 안정적인 솔루션으로 돋보입니다. 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 XML 파일에서 주석을 내보내는 프로세스를 자세히 살펴보겠습니다. 이 가이드를 마치면 주석을 원활하게 내보내 문서 관리 작업 흐름을 향상시키는 지식을 갖추게 될 것입니다.
 ## 전제 조건

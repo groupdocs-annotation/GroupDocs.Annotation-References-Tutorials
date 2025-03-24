@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서 페이지 미�
 weight: 12
 url: /ko/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# 문서 페이지 미리보기 생성
+
 ## 소개
 문서 관리 및 공동 작업 영역에서 .NET용 GroupDocs.Annotation은 다용도 도구로 돋보입니다. 응용 프로그램에 주석 기능을 통합하려는 개발자이거나 효율적인 문서 공동 작업을 원하는 비즈니스 사용자라면 GroupDocs.Annotation은 포괄적인 솔루션을 제공합니다. 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 문서 페이지 미리 보기를 생성하는 과정을 안내하고 각 단계를 쉽게 이해할 수 있는 단위로 나눕니다.
 ## 전제 조건

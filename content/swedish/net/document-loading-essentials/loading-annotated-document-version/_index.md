@@ -6,6 +6,9 @@ description: Lär dig hur du enkelt laddar kommenterade dokumentversioner med Gr
 weight: 16
 url: /sv/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Laddar kommenterad dokumentversion
+
 ## Introduktion
 dagens digitala tidsålder har dokumentkommentarer blivit ett viktigt verktyg för samarbete, granskning och feedback i olika branscher. Oavsett om du är en utvecklare som integrerar anteckningsfunktioner i din applikation eller en användare som vill utnyttja dessa funktioner, erbjuder GroupDocs.Annotation för .NET en kraftfull lösning. I den här handledningen kommer vi att fördjupa oss i processen att ladda kommenterade dokumentversioner med GroupDocs.Annotation för .NET.
 ## Förutsättningar

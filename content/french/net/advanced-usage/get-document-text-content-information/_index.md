@@ -6,6 +6,9 @@ description: Annotez des documents en toute transparence avec GroupDocs.Annotati
 weight: 17
 url: /fr/net/advanced-usage/get-document-text-content-information/
 ---
+
+# Obtenir des informations sur le contenu du texte du document
+
 ## Introduction
 GroupDocs.Annotation for .NET est un outil puissant qui permet aux développeurs d'intégrer de manière transparente des fonctionnalités d'annotation dans leurs applications .NET. Que vous construisiez un système de gestion de documents, une plateforme de collaboration ou toute autre application nécessitant une annotation de documents, GroupDocs.Annotation pour .NET simplifie le processus grâce à son ensemble complet de fonctionnalités et son API facile à utiliser.
 ## Conditions préalables

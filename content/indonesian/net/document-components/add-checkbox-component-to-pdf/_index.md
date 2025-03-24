@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan Komponen Kotak Centang ke dokumen PDF men
 weight: 11
 url: /id/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Tambahkan Komponen Kotak Centang ke Dokumen PDF
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses menambahkan Komponen Kotak Centang ke dokumen PDF menggunakan Groupdocs.Annotation untuk .NET.
 ## Prasyarat

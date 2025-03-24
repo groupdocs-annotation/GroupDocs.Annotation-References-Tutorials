@@ -6,6 +6,9 @@ description: 使用 Groupdocs.Annotation for .NET 增强文档协作。了解如
 weight: 10
 url: /zh/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# 将区域注释添加到文档
+
 ## 介绍
 在本教程中，我们将指导您完成使用 Groupdocs.Annotation for .NET 向文档添加区域注释的过程。区域注释是一项很有价值的功能，它允许用户突出显示文档的特定区域，从而提供内容的清晰度和上下文。
 ## 先决条件

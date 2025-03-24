@@ -6,6 +6,9 @@ description: Naučte se, jak bez námahy načíst verze s poznámkami pomocí Gr
 weight: 16
 url: /cs/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Načítání anotované verze dokumentu
+
 ## Úvod
 dnešní digitální době se anotace dokumentů stala nezbytným nástrojem pro spolupráci, kontrolu a zpětnou vazbu v různých odvětvích. Ať už jste vývojář integrující funkce anotací do své aplikace nebo uživatel, který chce tyto schopnosti využít, GroupDocs.Annotation for .NET poskytuje výkonné řešení. V tomto tutoriálu se ponoříme do procesu načítání verzí anotovaných dokumentů pomocí GroupDocs.Annotation pro .NET.
 ## Předpoklady

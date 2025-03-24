@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 문서 공동 작업�
 weight: 10
 url: /ko/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# 문서에 영역 주석 추가
+
 ## 소개
 이 튜토리얼에서는 .NET용 Groupdocs.Annotation을 사용하여 문서에 영역 주석을 추가하는 과정을 안내합니다. 영역 주석은 사용자가 문서의 특정 영역을 강조 표시하여 내용에 대한 명확성과 맥락을 제공할 수 있는 유용한 기능입니다.
 ## 전제 조건

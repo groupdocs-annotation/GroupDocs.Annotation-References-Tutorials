@@ -6,6 +6,9 @@ description: Naučte se přidávat anotace křivek do dokumentů pomocí GroupDo
 weight: 18
 url: /cs/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Přidejte do dokumentu anotaci křivky
+
 ## Úvod
 GroupDocs.Annotation for .NET je výkonný nástroj, který umožňuje vývojářům programově anotovat dokumenty PDF a Microsoft Office. Mezi jeho funkce patří schopnost přidávat k dokumentům anotace křivek, což zlepšuje spolupráci a procesy kontroly dokumentů.
 ## Předpoklady

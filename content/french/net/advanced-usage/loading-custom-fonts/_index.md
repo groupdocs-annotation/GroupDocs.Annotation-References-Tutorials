@@ -6,6 +6,9 @@ description: Découvrez comment charger de manière transparente des polices per
 weight: 20
 url: /fr/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Chargement de polices personnalisées
+
 ## Introduction
 GroupDocs.Annotation for .NET est une bibliothèque puissante qui permet aux développeurs d'ajouter facilement des fonctionnalités d'annotation à leurs applications .NET. L'une des fonctionnalités clés qu'il offre est la possibilité de charger des polices personnalisées, permettant une personnalisation et une flexibilité améliorées dans l'annotation des documents.
 ## Conditions préalables

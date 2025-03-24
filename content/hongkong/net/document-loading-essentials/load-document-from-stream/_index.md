@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 輕鬆註解 .NET 中的文
 weight: 14
 url: /zh-hant/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# 從串流載入文檔
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個功能強大的程式庫，可讓開發人員輕鬆地將文件註解功能整合到他們的 .NET 應用程式中。無論您是建立文件管理系統、協作平台還是電子學習應用程序，GroupDocs.Annotation 都提供了一組多功能工具來註釋 PDF、Word 文件、Excel 工作表等。
 ## 先決條件

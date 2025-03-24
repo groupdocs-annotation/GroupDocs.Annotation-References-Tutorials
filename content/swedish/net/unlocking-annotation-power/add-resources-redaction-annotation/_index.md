@@ -6,6 +6,9 @@ description: Förbättra arbetsflöden för dokumenthantering med GroupDocs.Anno
 weight: 19
 url: /sv/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Lägg till resurser Redaktionskommentar till dokument
+
 ## Introduktion
 Inom .NET-utvecklingens område kan integrering av effektiva verktyg för dokumentkommentarer avsevärt förbättra produktiviteten och effektivisera arbetsflöden. GroupDocs.Annotation för .NET framstår som en robust lösning som erbjuder en uppsjö av funktioner för att kommentera och manipulera dokument sömlöst. Den här handledningen tar upp processen för att integrera och använda Resources Redaction Annotation, en kraftfull funktion inom GroupDocs.Annotation för .NET.
 ## Förutsättningar

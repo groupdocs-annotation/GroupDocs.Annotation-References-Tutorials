@@ -6,6 +6,9 @@ description: GroupDocs.Annotation .NET을 사용하여 문서를 로드하기 �
 weight: 20
 url: /ko/net/document-loading-essentials/
 ---
+
+# 문서 로딩 필수사항
+
 ## 소개
 
 GroupDocs.Annotation을 사용하여 .NET 응용 프로그램에서 문서 주석의 잠재력을 최대한 활용하세요. 이 포괄적인 가이드에서는 다양한 소스에서 문서를 로드하기 위한 기본 튜토리얼을 자세히 살펴보겠습니다. Amazon S3, Azure, FTP, 로컬 디스크, 스트림, URL에서 파일을 검색하거나 주석이 달린 문서 버전을 처리하는 등 GroupDocs.Annotation은 프로세스를 단순화하여 원활한 통합과 향상된 협업을 가능하게 합니다.
