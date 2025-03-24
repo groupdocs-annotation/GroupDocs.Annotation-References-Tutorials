@@ -6,6 +6,9 @@ description: Erweitern Sie Ihre PDF-Dokumente mit interaktiven Schaltflächenkom
 weight: 10
 url: /de/net/document-components/add-button-component-to-pdf/
 ---
+
+# Schaltflächenkomponente zum PDF-Dokument hinzufügen
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Hinzufügens einer Schaltflächenkomponente zu einem PDF-Dokument mithilfe von Groupdocs.Annotation für .NET. Diese Schritt-für-Schritt-Anleitung stellt sicher, dass Sie diese Funktion problemlos in Ihr Projekt integrieren können.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Dowiedz się, jak usunąć wiele adnotacji według identyfikatorów
 weight: 13
 url: /pl/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# Usuń wiele adnotacji według identyfikatorów
+
 ## Wstęp
 świecie zarządzania dokumentami i współpracy GroupDocs.Annotation dla .NET okazuje się potężnym narzędziem, umożliwiającym programistom płynne dodawanie adnotacji i manipulowanie dokumentami w aplikacjach .NET. W tym samouczku omówimy jedną z podstawowych funkcji oferowanych przez GroupDocs.Annotation dla .NET: usuwanie wielu adnotacji według identyfikatorów. Postępując zgodnie z tym przewodnikiem krok po kroku, uzyskasz kompleksową wiedzę na temat skutecznego usuwania adnotacji, co umożliwi Ci zwiększenie możliwości zarządzania dokumentami.
 ## Warunki wstępne

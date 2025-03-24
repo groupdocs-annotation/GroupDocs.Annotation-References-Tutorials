@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'in gücünü keşfedin ve uygulamalar
 weight: 20
 url: /tr/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Belgeye Arama Metni Parçası Ek Açıklaması Ekle
+
 ## giriiş
 .NET geliştirme alanında GroupDocs.Annotation, belgelere sorunsuz bir şekilde açıklama eklemek için güçlü bir araç olarak öne çıkıyor. İster deneyimli bir geliştirici olun ister .NET dünyasına adım atın, bu kapsamlı eğitim size GroupDocs.Annotation for .NET'i kullanmanın temelleri konusunda, ad alanlarını içe aktarmaktan, arama metninize arama metni parçası ek açıklamaları eklemenin inceliklerini öğrenmeye kadar yol gösterecektir. belgeler.
 ## giriiş

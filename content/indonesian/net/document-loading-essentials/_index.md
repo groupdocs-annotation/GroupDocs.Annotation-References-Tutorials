@@ -6,6 +6,9 @@ description: Temukan tutorial penting untuk memuat dokumen menggunakan GroupDocs
 weight: 20
 url: /id/net/document-loading-essentials/
 ---
+
+# Hal Penting Pemuatan Dokumen
+
 ## Perkenalan
 
 Buka potensi penuh anotasi dokumen di aplikasi .NET Anda dengan GroupDocs.Annotation. Dalam panduan komprehensif ini, kami akan mempelajari tutorial dasar untuk memuat dokumen dari berbagai sumber. Baik itu mengambil file dari Amazon S3, Azure, FTP, disk lokal, aliran, URL, atau menangani versi dokumen yang dianotasi, GroupDocs.Annotation menyederhanakan proses, memungkinkan integrasi yang lancar dan kolaborasi yang ditingkatkan.

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation ile .NET'te belge açıklamasının tüm potan
 weight: 11
 url: /tr/net/applying-licenses/set-license-from-stream/
 ---
+
+# Lisansı Akıştan Ayarla
+
 ## giriiş
 Belge açıklama yeteneklerinizi geliştirmek için GroupDocs.Annotation for .NET kullanımına ilişkin kapsamlı kılavuza hoş geldiniz. İster deneyimli bir geliştirici olun ister yeni başlıyor olun, bu eğitim size her adımda yol gösterecek ve bu güçlü aracın tüm potansiyelinden yararlanmanızı sağlayacaktır.
 ## Önkoşullar

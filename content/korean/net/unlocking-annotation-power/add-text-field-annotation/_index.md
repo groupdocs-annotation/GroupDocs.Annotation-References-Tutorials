@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 텍스트 필드 주�
 weight: 21
 url: /ko/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# 문서에 텍스트 필드 주석 추가
+
 ## 소개
 .NET용 Groupdocs.Annotation은 개발자가 .NET 응용 프로그램에 주석 기능을 손쉽게 추가할 수 있게 해주는 강력한 도구입니다. 문서 관리 시스템, 협업 플랫폼 또는 문서 주석이 필수적인 응용 프로그램에서 작업하는 경우 Groupdocs.Annotation은 포괄적인 기능 세트와 직관적인 API를 통해 프로세스를 단순화합니다.
 이 자습서에서는 .NET용 Groupdocs.Annotation의 기본 기능 중 하나인 문서에 텍스트 필드 주석을 추가하는 방법을 살펴보겠습니다. 이 단계별 가이드를 따르면 텍스트 필드 주석을 .NET 애플리케이션에 원활하게 통합하여 사용자 경험과 공동 작업 기능을 향상시키는 방법을 배우게 됩니다.

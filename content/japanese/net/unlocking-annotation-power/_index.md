@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET チュートリアルでアノテー�
 weight: 23
 url: /ja/net/unlocking-annotation-power/
 ---
+
+# 注釈機能のロックを解除する
+
 ## 導入
 
 GroupDocs.Annotation for .NET の注釈機能を活用するための包括的なチュートリアルをご覧ください。経験豊富な開発者であっても、初心者であっても、これらのチュートリアルでは、ドキュメントのコラボレーションとコミュニケーションを簡単に強化するための段階的なガイダンスを提供します。

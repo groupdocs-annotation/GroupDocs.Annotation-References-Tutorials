@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 이미지 �
 weight: 15
 url: /ko/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# 문서에 이미지 주석 추가(원격 경로)
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 이미지 주석을 추가하는 과정을 안내합니다. 이 라이브러리는 프로그래밍 방식으로 다양한 유형의 문서에 주석을 달 수 있는 강력한 도구를 제공합니다.
 ## 전제 조건

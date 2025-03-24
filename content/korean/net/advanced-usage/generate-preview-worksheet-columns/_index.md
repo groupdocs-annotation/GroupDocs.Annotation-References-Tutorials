@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 주석을 �
 weight: 15
 url: /ko/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# 미리보기 워크시트 열 생성
+
 ## 소개
 .NET용 GroupDocs.Annotation의 기능 활용에 대한 포괄적인 튜토리얼에 오신 것을 환영합니다! 이 가이드에서는 문서에 효과적으로 주석을 달기 위해 이 강력한 도구를 활용하는 과정을 안내해 드립니다. 숙련된 개발자이든 .NET 개발 세계를 처음 접하는 초보자이든 관계없이 이 튜토리얼은 주석 기능을 애플리케이션에 원활하게 통합하는 데 필요한 지식과 기술을 제공합니다.
 ## 전제 조건

@@ -6,6 +6,9 @@ description: Přečtěte si, jak odstranit anotace z dokumentů PDF pomocí Grou
 weight: 10
 url: /cs/net/removing-annotations/remove-annotations/
 ---
+
+# Odebrat anotace v .NET
+
 ## Úvod
 Anotace hrají klíčovou roli při správě digitálních dokumentů a umožňují uživatelům zvýrazňovat, komentovat a označovat důležité části v souborech. Může však nastat chvíle, kdy budete muset z dokumentu odstranit anotace. V tomto tutoriálu prozkoumáme, jak odstranit anotace v .NET pomocí Groupdocs.Annotation, mocného nástroje pro anotaci a manipulaci s dokumenty.
 ## Předpoklady

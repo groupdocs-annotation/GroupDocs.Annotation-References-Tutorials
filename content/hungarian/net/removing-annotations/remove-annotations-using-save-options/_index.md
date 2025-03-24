@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan távolíthat el megjegyzéseket PDF-ből és m�
 weight: 14
 url: /hu/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# Távolítsa el a megjegyzéseket a .NET mentési beállításaival
+
 ## Bevezetés
 
 GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy .NET-alkalmazásaikhoz annotálási funkciókat könnyedén hozzák fel. Függetlenül attól, hogy dokumentumkezelő rendszeren, együttműködési platformon vagy bármely más, dokumentumfeldolgozást igénylő alkalmazáson dolgozik, a GroupDocs.Annotation a szolgáltatások átfogó készletét kínálja a PDF és más dokumentumformátumok zökkenőmentes kommentálásához.

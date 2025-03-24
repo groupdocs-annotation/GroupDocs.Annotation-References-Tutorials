@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation Bildanmerkungen übe
 weight: 21
 url: /de/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Platzieren Sie Bildanmerkungen über Text
+
 ## Einführung
 In der Welt der .NET-Entwicklung bietet GroupDocs.Annotation eine leistungsstarke Lösung zum Hinzufügen von Anmerkungen zu Dokumenten und macht die Zusammenarbeit und Dokumentenverwaltung effizienter. Eine häufige Anforderung besteht darin, Bildanmerkungen über Text zu platzieren, was mit GroupDocs.Annotation für .NET nahtlos bewerkstelligt werden kann.
 ## Voraussetzungen

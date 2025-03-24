@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET アプリケーション�
 weight: 12
 url: /ja/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# FTPからドキュメントをロード
+
 ## 導入
 GroupDocs.Annotation for .NET は、.NET アプリケーション内でドキュメントの注釈機能を簡単に利用できるように設計された多用途ライブラリです。 PDF、Microsoft Office ドキュメント、画像、その他の形式を扱う場合でも、このライブラリはコメント、ハイライト、図形などの注釈を追加してコラボレーションとドキュメント管理を強化するための統合ソリューションを提供します。
 ## 前提条件

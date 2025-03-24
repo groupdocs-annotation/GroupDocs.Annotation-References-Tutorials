@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 .NET 응용 프로그�
 weight: 13
 url: /ko/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# 주석 없이 미리보기 생성
+
 ## 소개
 오늘날의 디지털 시대에는 효율적인 문서 공동작업이 생산성과 성공의 열쇠입니다. 전 세계에 흩어져 있는 팀 구성원과 함께 프로젝트를 진행하든, 중요한 계약을 위해 고객과 협업하든, 문서에 원활하게 주석을 달고 검토하는 능력은 매우 중요합니다. .NET용 GroupDocs.Annotation을 사용하면 문서 공동 작업을 한 단계 더 발전시켜 .NET 응용 프로그램 내에서 직접 주석, 마크업 및 검토를 쉽게 수행할 수 있습니다.
 ## 전제 조건

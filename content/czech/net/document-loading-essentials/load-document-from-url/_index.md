@@ -6,6 +6,9 @@ description: Naučte se, jak programově anotovat dokumenty PDF pomocí GroupDoc
 weight: 15
 url: /cs/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Načíst dokument z adresy URL
+
 ## Úvod
 GroupDocs.Annotation for .NET je knihovna s bohatými funkcemi, která umožňuje vývojářům bez námahy přidávat možnosti anotací do jejich aplikací .NET. Pomocí GroupDocs.Annotation můžete programově anotovat dokumenty PDF, což uživatelům umožňuje zvýrazňovat text, přidávat komentáře, kreslit tvary a další. Tento výukový program vás provede kroky načítání dokumentu z adresy URL, přidáváním anotací a ukládáním anotovaného dokumentu pomocí GroupDocs.Annotation for .NET.
 ## Předpoklady

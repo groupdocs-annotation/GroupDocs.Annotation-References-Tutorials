@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation Anmerkungen aus PDF-
 weight: 14
 url: /de/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# Entfernen Sie Anmerkungen mithilfe der Speicheroptionen in .NET
+
 ## Einführung
 
 GroupDocs.Annotation für .NET ist ein leistungsstarkes Tool, mit dem Entwickler problemlos Annotationsfunktionen zu ihren .NET-Anwendungen hinzufügen können. Unabhängig davon, ob Sie an einem Dokumentenmanagementsystem, einer Kollaborationsplattform oder einer anderen Anwendung arbeiten, die die Dokumentverarbeitung umfasst, bietet GroupDocs.Annotation umfassende Funktionen zum nahtlosen Kommentieren von PDF- und anderen Dokumentformaten.

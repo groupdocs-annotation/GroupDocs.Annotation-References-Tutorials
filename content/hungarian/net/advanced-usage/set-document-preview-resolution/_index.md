@@ -6,6 +6,9 @@ description: Növelje a dokumentumok együttműködését a Groupdocs.Annotation
 weight: 23
 url: /hu/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Állítsa be a dokumentum előnézeti felbontását
+
 ## Bevezetés
 Napjaink digitális korában a hatékony dokumentumkezelés és együttműködés a vállalkozások és magánszemélyek számára egyaránt kiemelkedő jelentőségű. A naponta keringő rengeteg dokumentum révén a zökkenőmentes annotációs és előnézeti képességek biztosítása jelentősen növelheti a termelékenységet és egyszerűsítheti a munkafolyamatokat. Lépjen be a Groupdocs.Annotation for .NET-be – egy hatékony eszköztár, amelyet arra terveztek, hogy a fejlesztőket robusztus annotációs funkciókkal ruházza fel különféle dokumentumformátumokhoz.
 ## Előfeltételek

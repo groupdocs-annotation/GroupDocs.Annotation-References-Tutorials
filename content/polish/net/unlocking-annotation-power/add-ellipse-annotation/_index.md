@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje w kształcie elipsy do dokumen
 weight: 13
 url: /pl/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Dodaj adnotację w postaci elipsy do dokumentu
+
 ## Wstęp
 W tym samouczku dowiesz się, jak dodać adnotację w kształcie elipsy do dokumentu za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik krok po kroku przeprowadzi Cię przez proces, upewniając się, że dobrze rozumiesz każdy krok.
 ## Warunki wstępne

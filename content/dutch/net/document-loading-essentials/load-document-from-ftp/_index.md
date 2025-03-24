@@ -6,6 +6,9 @@ description: Verbeter uw .NET-toepassingen met GroupDocs.Annotation voor naadloz
 weight: 12
 url: /nl/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# Document laden vanaf FTP
+
 ## Invoering
 GroupDocs.Annotation voor .NET is een veelzijdige bibliotheek die is ontworpen om de annotatiemogelijkheden van documenten binnen .NET-toepassingen moeiteloos te vergemakkelijken. Of u nu te maken heeft met PDF's, Microsoft Office-documenten, afbeeldingen of andere formaten, deze bibliotheek biedt een uniforme oplossing voor het toevoegen van annotaties, zoals opmerkingen, markeringen en vormen, om de samenwerking en het documentbeheer te verbeteren.
 ## Vereisten

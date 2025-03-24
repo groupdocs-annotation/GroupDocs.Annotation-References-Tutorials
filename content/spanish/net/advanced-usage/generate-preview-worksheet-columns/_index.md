@@ -6,6 +6,9 @@ description: Aprenda a anotar documentos utilizando GroupDocs.Annotation para .N
 weight: 15
 url: /es/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Generar columnas de hoja de trabajo de vista previa
+
 ## Introducción
 Bienvenido a nuestro tutorial completo sobre cómo aprovechar las capacidades de GroupDocs.Annotation para .NET. En esta guía, lo guiaremos a través del proceso de utilización de esta poderosa herramienta para anotar documentos de manera efectiva. Ya sea que sea un desarrollador experimentado o un recién llegado al mundo del desarrollo .NET, este tutorial le brindará el conocimiento y las habilidades necesarias para integrar funciones de anotación sin problemas en sus aplicaciones.
 ## Requisitos previos

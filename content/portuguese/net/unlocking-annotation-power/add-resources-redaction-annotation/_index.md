@@ -6,6 +6,9 @@ description: Aprimore os fluxos de trabalho de gerenciamento de documentos com G
 weight: 19
 url: /pt/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Adicionar anotação de redação de recursos ao documento
+
 ## Introdução
 No domínio do desenvolvimento .NET, a integração de ferramentas eficientes para anotação de documentos pode aumentar significativamente a produtividade e agilizar os fluxos de trabalho. GroupDocs.Annotation for .NET surge como uma solução robusta, oferecendo uma infinidade de funcionalidades para anotar e manipular documentos de forma integrada. Este tutorial se aprofunda no processo de integração e utilização do Resources Redaction Annotation, um recurso poderoso do GroupDocs.Annotation for .NET.
 ## Pré-requisitos

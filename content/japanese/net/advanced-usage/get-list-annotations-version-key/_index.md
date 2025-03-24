@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET アプリケーション�
 weight: 18
 url: /ja/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# バージョンキーを使用してアノテーションのリストを取得する
+
 ## 導入
 .NET 開発の世界では、ドキュメントを効率的に管理および操作することが最も重要です。 PDF への注釈付け、Word 文書での共同作業、Excel シートのマークアップなど、適切なツールがあればワークフローが合理化され、生産性が向上します。 GroupDocs.Annotation for .NET は、開発者が .NET アプリケーション内でドキュメントにシームレスに注釈を付け、操作できるようにするツールの 1 つです。
 ## 前提条件

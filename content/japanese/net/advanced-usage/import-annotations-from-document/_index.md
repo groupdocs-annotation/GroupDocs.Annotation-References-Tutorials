@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET のドキュメントか�
 weight: 19
 url: /ja/net/advanced-usage/import-annotations-from-document/
 ---
+
+# ドキュメントから注釈をインポート
+
 ## 導入
 .NET 開発の分野では、GroupDocs.Annotation はアノテーション機能をアプリケーションに統合するための多用途ツールとして機能します。コメントの追加、テキストの強調表示、ドキュメント上での図形の描画など、GroupDocs.Annotation for .NET は包括的なソリューションを提供します。このチュートリアルでは、GroupDocs.Annotation を使用してドキュメントから注釈をインポートするプロセスを段階的に説明します。
 ## 前提条件

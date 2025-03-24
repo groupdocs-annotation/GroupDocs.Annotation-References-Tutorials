@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET でドキュメントに�
 weight: 11
 url: /ja/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Azureからドキュメントをロードする
+
 ## 導入
 ドキュメント管理とコラボレーションの領域では、GroupDocs.Annotation for .NET が堅牢なソリューションとして登場し、.NET アプリケーション内でのシームレスな注釈およびマークアップ機能を促進します。このチュートリアルでは、GroupDocs.Annotation for .NET を活用してドキュメントに注釈を付ける方法の複雑さを掘り下げ、前提条件から高度な使用法まで段階的なガイダンスを提供します。
 ## 前提条件

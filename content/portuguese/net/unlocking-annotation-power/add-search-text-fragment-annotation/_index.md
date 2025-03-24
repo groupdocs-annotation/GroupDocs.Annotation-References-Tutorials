@@ -6,6 +6,9 @@ description: Explore o poder do GroupDocs.Annotation for .NET e adicione facilme
 weight: 20
 url: /pt/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Adicionar anotação de fragmento de texto de pesquisa ao documento
+
 ## Introdução
 No domínio do desenvolvimento .NET, GroupDocs.Annotation se destaca como uma ferramenta poderosa para anotar documentos de forma integrada. Quer você seja um desenvolvedor experiente ou esteja apenas entrando no mundo do .NET, este tutorial abrangente irá guiá-lo pelos fundamentos do uso do GroupDocs.Annotation for .NET, desde a importação de namespaces até o domínio das complexidades da adição de anotações de fragmentos de texto de pesquisa ao seu documentos.
 ## Introdução

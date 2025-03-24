@@ -6,6 +6,9 @@ description: 了解有关使用 GroupDocs.Annotation .NET 将按钮、复选框�
 weight: 24
 url: /zh/net/document-components/
 ---
+
+# 文档组件
+
 ## 介绍
 
 GroupDocs.Annotation for .NET 提供了一组强大的教程，可帮助开发人员将交互式组件无缝集成到 PDF 文档中。在本文中，我们将深入研究这些教程的详细信息，探索它们如何帮助您增强 PDF 的功能和用户体验。

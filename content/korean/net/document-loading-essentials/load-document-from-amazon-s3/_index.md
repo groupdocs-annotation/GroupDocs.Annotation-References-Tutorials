@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 프로그래밍 방식
 weight: 10
 url: /ko/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# Amazon S3에서 문서 로드
+
 ## 소개
 오늘날의 디지털 시대에 문서 관리는 기업과 개인 모두에게 중요합니다. .NET용 Groupdocs.Annotation은 프로그래밍 방식으로 문서에 주석을 달 수 있는 강력한 솔루션을 제공하므로 개발자는 문서 공동 작업을 강화하고 작업 흐름을 간소화할 수 있습니다. 이 자습서에서는 .NET용 Groupdocs.Annotation 사용의 기본 사항을 자세히 살펴보고 각 예제를 여러 단계로 나누어 프로세스를 원활하게 안내합니다.
 ## 전제 조건

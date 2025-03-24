@@ -6,6 +6,9 @@ description: Aprenda como carregar fontes personalizadas perfeitamente no GroupD
 weight: 20
 url: /pt/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Carregando fontes personalizadas
+
 ## Introdução
 GroupDocs.Annotation for .NET é uma biblioteca poderosa que permite aos desenvolvedores adicionar recursos de anotação a seus aplicativos .NET sem esforço. Uma das principais funcionalidades que oferece é a capacidade de carregar fontes personalizadas, permitindo maior personalização e flexibilidade na anotação de documentos.
 ## Pré-requisitos

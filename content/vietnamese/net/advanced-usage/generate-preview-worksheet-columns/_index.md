@@ -6,6 +6,9 @@ description: Tìm hiểu cách chú thích tài liệu bằng GroupDocs.Annotati
 weight: 15
 url: /vi/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Tạo cột bảng tính xem trước
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn toàn diện của chúng tôi về cách khai thác các khả năng của GroupDocs.Annotation cho .NET! Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình sử dụng công cụ mạnh mẽ này để chú thích tài liệu một cách hiệu quả. Cho dù bạn là nhà phát triển dày dạn kinh nghiệm hay người mới tham gia vào thế giới phát triển .NET, hướng dẫn này sẽ trang bị cho bạn kiến thức và kỹ năng cần thiết để tích hợp liền mạch các tính năng chú thích vào ứng dụng của bạn.
 ## Điều kiện tiên quyết

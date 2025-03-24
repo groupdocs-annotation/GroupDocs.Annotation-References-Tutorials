@@ -6,6 +6,9 @@ description: Aprenda a generar una vista previa de páginas de documentos de man
 weight: 12
 url: /es/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Generar vista previa de páginas de documentos
+
 ## Introducción
 En el ámbito de la gestión de documentos y la colaboración, GroupDocs.Annotation para .NET se destaca como una herramienta versátil. Si es un desarrollador que busca integrar funciones de anotación en su aplicación o un usuario empresarial que busca una colaboración eficiente en documentos, GroupDocs.Annotation proporciona una solución integral. Este tutorial lo guiará a través del proceso de generación de vista previa de páginas de documentos usando GroupDocs.Annotation para .NET, dividiendo cada paso en partes fácilmente digeribles.
 ## Requisitos previos

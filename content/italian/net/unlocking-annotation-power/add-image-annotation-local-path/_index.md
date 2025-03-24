@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni di immagini ai documenti utilizz
 weight: 14
 url: /it/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Aggiungi annotazione immagine al documento (percorso locale)
+
 ## introduzione
 GroupDocs.Annotation per .NET è una potente libreria che consente agli sviluppatori di aggiungere vari tipi di annotazioni ai documenti a livello di codice. In questo tutorial impareremo come aggiungere annotazioni immagine a un documento utilizzando un percorso locale.
 ## Prerequisiti

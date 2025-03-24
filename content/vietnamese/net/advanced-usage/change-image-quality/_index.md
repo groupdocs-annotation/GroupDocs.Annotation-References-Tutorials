@@ -6,6 +6,9 @@ description: Tìm hiểu cách nâng cao chất lượng hình ảnh trong tệp
 weight: 10
 url: /vi/net/advanced-usage/change-image-quality/
 ---
+
+# Thay đổi chất lượng hình ảnh
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, chất lượng hình ảnh trong tài liệu PDF có thể tác động đáng kể đến trải nghiệm người dùng và khả năng đọc tài liệu. Với Groupdocs.Annotation for .NET, một thư viện mạnh mẽ được thiết kế dành cho các nhà phát triển .NET, việc nâng cao chất lượng hình ảnh trong tệp PDF trở thành một nhiệm vụ đơn giản. Trong hướng dẫn này, chúng ta sẽ đi sâu vào quy trình từng bước cải thiện chất lượng hình ảnh bằng cách sử dụng công cụ đa năng này.
 ## Điều kiện tiên quyết

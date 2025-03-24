@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 将图像注释添
 weight: 15
 url: /zh/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# 将图像注释添加到文档（远程路径）
+
 ## 介绍
 在本教程中，我们将逐步介绍使用 GroupDocs.Annotation for .NET 将图像注释添加到文档的过程。该库提供了强大的工具，用于以编程方式注释各种类型的文档。
 ## 先决条件

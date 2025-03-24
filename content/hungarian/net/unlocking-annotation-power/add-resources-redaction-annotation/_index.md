@@ -6,6 +6,9 @@ description: Javítsa a dokumentumkezelési munkafolyamatokat a GroupDocs.Annota
 weight: 19
 url: /hu/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Erőforrás-szerkesztési megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 .NET-fejlesztés területén a hatékony dokumentumjegyzetelési eszközök integrálása jelentősen növelheti a termelékenységet és egyszerűsítheti a munkafolyamatokat. A GroupDocs.Annotation for .NET robusztus megoldásként jelenik meg, amely számos funkciót kínál a dokumentumok zökkenőmentes kommentálásához és kezeléséhez. Ez az oktatóanyag a GroupDocs.Annotation for .NET hatékony funkciója, a Resources Redaction Annotation integrálásának és használatának folyamatát mutatja be.
 ## Előfeltételek

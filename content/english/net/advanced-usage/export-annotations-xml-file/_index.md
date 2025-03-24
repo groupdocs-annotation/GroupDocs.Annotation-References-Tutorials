@@ -6,6 +6,9 @@ description: Learn how to export annotations from XML files using GroupDocs.Anno
 weight: 11
 url: /net/advanced-usage/export-annotations-xml-file/
 ---
+
+# Export Annotations from XML File
+
 ## Introduction
 In today's digital age, efficient document management is crucial for businesses and individuals alike. With the plethora of tools available, GroupDocs.Annotation for .NET stands out as a reliable solution for annotating and managing PDF files. In this tutorial, we'll delve into the process of exporting annotations from XML files using GroupDocs.Annotation for .NET. By the end of this guide, you'll be equipped with the knowledge to seamlessly export annotations, enhancing your document management workflow.
 ## Prerequisites

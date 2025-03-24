@@ -6,6 +6,9 @@ description: Scopri come rimuovere le annotazioni in base all'ID utilizzando Gro
 weight: 11
 url: /it/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Rimuovi annotazioni per ID
+
 ## introduzione
 In questo tutorial ti guideremo attraverso il processo di rimozione delle annotazioni in base ai loro ID utilizzando GroupDocs.Annotation per .NET. Le annotazioni possono ingombrare i tuoi documenti e rimuoverle in modo selettivo può semplificare il tuo flusso di lavoro. Ti guideremo passo dopo passo, assicurandoti di comprendere chiaramente ogni fase.
 ## Prerequisiti

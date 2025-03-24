@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 輕鬆旋轉 PDF �
 weight: 22
 url: /zh-hant/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# 旋轉 PDF 文檔
+
 ## 介紹
 當處理需要以不同方式檢視或處理的文件時，旋轉 PDF 文件可能是一項至關重要的任務。在本教學中，我們將探索如何使用 Groupdocs.Annotation for .NET 逐步旋轉 PDF 文件。
 ## 先決條件

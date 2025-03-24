@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET d
 weight: 26
 url: /de/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Fügen Sie dem Dokument durchgestrichene Textanmerkungen hinzu
+
 ## Einführung
 In diesem Tutorial erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET eine durchgestrichene Textanmerkung zu einem Dokument hinzufügen. Diese Bibliothek bietet leistungsstarke Tools zum Kommentieren verschiedener Dokumenttypen und verbessert die Zusammenarbeit und Dokumentüberprüfungsprozesse.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET'i kullanarak PDF belgelerine Onay Kut
 weight: 11
 url: /tr/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# PDF Belgesine Onay Kutusu Bileşeni Ekleme
+
 ## giriiş
 Bu öğreticide, Groupdocs.Annotation for .NET'i kullanarak bir PDF belgesine Onay Kutusu Bileşeni ekleme sürecinde size yol göstereceğiz.
 ## Önkoşullar

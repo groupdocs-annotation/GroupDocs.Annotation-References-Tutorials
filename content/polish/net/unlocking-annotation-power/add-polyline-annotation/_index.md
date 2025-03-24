@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje polilinii do dokumentów za po
 weight: 18
 url: /pl/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Dodaj adnotację o polilinii do dokumentu
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to potężne narzędzie, które umożliwia programistom programowe dodawanie adnotacji do dokumentów PDF i Microsoft Office. Wśród jego funkcji znajduje się możliwość dodawania adnotacji poliliniowych do dokumentów, usprawniających współpracę i procesy przeglądania dokumentów.
 ## Warunki wstępne

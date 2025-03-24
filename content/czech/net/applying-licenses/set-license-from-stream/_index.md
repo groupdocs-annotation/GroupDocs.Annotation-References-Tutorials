@@ -6,6 +6,9 @@ description: Odemkněte plný potenciál anotací dokumentů v .NET s GroupDocs.
 weight: 11
 url: /cs/net/applying-licenses/set-license-from-stream/
 ---
+
+# Nastavit licenci ze streamu
+
 ## Úvod
 Vítejte v obsáhlém průvodci používáním GroupDocs.Annotation for .NET ke zlepšení možností anotací dokumentů. Ať už jste zkušený vývojář nebo teprve začínáte, tento tutoriál vás provede každým krokem a zajistí, že využijete plný potenciál tohoto mocného nástroje.
 ## Předpoklady

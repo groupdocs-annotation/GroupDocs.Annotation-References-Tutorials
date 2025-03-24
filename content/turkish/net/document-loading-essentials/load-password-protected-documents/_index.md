@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET ile işbirliğini ve belge incelemesi
 weight: 17
 url: /tr/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Parola Korumalı Belgeleri Yükle
+
 ## giriiş
 Günümüzün hızlı dünyasında işbirliği başarının anahtarıdır. İster iş arkadaşlarınızla, müşterilerinizle veya ortaklarınızla bir proje üzerinde çalışıyor olun, belgelere verimli bir şekilde açıklama ekleme ve paylaşma yeteneği, verimliliği önemli ölçüde artırabilir ve iş akışlarını kolaylaştırabilir. GroupDocs.Annotation for .NET, PDF ve diğer belge formatlarına doğrudan .NET uygulamalarınızda açıklama eklemek için güçlü bir çözüm sunarak kusursuz işbirliği ve belge inceleme süreçlerine olanak tanır.
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 PDF 및 .NET의 기타 문서�
 weight: 14
 url: /ko/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# .NET에서 저장 옵션을 사용하여 주석 제거
+
 ## 소개
 
 .NET용 GroupDocs.Annotation은 개발자가 .NET 응용 프로그램에 주석 기능을 쉽게 추가할 수 있는 강력한 도구입니다. 문서 관리 시스템, 공동 작업 플랫폼 또는 문서 처리와 관련된 기타 응용 프로그램에서 작업하는 경우 GroupDocs.Annotation은 PDF 및 기타 문서 형식에 원활하게 주석을 달 수 있는 포괄적인 기능 세트를 제공합니다.

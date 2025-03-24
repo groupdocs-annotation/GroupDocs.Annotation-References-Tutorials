@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 �
 weight: 26
 url: /ko/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# 문서에 텍스트 취소선 주석 추가
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 취소선 주석을 추가하는 방법을 살펴보겠습니다. 이 라이브러리는 다양한 문서 유형에 주석을 추가하고 협업 및 문서 검토 프로세스를 향상시키는 강력한 도구를 제공합니다.
 ## 전제 조건

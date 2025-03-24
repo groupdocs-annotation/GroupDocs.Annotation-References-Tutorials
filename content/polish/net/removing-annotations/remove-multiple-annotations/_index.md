@@ -6,6 +6,9 @@ description: Dowiedz się, jak skutecznie usuwać wiele adnotacji w platformie .
 weight: 12
 url: /pl/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Usuń wiele adnotacji w .NET
+
 ## Wstęp
 Adnotacje odgrywają kluczową rolę w zarządzaniu dokumentami, usprawniając współpracę i komunikację. Istnieją jednak przypadki, w których może być konieczne skuteczne usunięcie wielu adnotacji w aplikacji .NET. W tym samouczku omówimy, jak to osiągnąć za pomocą GroupDocs.Annotation dla .NET. Zacznijmy!
 ## Warunki wstępne

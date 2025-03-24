@@ -6,6 +6,9 @@ description: Přečtěte si, jak odstranit odpovědi podle ID v .NET pomocí Gro
 weight: 16
 url: /cs/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Odebrat odpovědi podle ID v .NET
+
 ## Úvod
 oblasti vývoje .NET je schopnost spravovat anotace v dokumentech zásadní pro různé aplikace. Ať už pracujete s PDF, dokumenty Wordu nebo jinými formáty, možnost programově manipulovat s poznámkami otevírá svět možností. Jedním z výkonných nástrojů pro práci s anotacemi v .NET je GroupDocs.Annotation.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: 了解使用 GroupDocs.Annotation .NET 加载文档的基本教程�
 weight: 20
 url: /zh/net/document-loading-essentials/
 ---
+
+# 文档加载要点
+
 ## 介绍
 
 使用 GroupDocs.Annotation 释放 .NET 应用程序中文档注释的全部潜力。在本综合指南中，我们将深入研究从各种来源加载文档的基本教程。无论是从 Amazon S3、Azure、FTP、本地磁盘、流、URL 检索文件，还是处理带注释的文档版本，GroupDocs.Annotation 都能简化流程，实现无缝集成并增强协作。

@@ -6,6 +6,9 @@ description: Naučte se importovat anotace z dokumentů v .NET pomocí GroupDocs
 weight: 19
 url: /cs/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Importovat anotace z dokumentu
+
 ## Úvod
 oblasti vývoje .NET představuje GroupDocs.Annotation všestranný nástroj pro integraci možností anotací do vašich aplikací. Ať už chcete přidat komentáře, zvýrazňovat text nebo kreslit tvary na dokumenty, GroupDocs.Annotation for .NET nabízí komplexní řešení. Tento tutoriál vás krok za krokem provede procesem importu anotací z dokumentu pomocí GroupDocs.Annotation.
 ## Předpoklady

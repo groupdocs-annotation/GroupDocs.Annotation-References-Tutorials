@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi pengganti teks ke dokumen .NET An
 weight: 24
 url: /id/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Tambahkan Anotasi Pengganti Teks ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses menambahkan Anotasi Pengganti Teks ke dokumen Anda menggunakan GroupDocs.Annotation untuk .NET. Pustaka yang kuat ini memungkinkan pengembang untuk memanipulasi dan membuat anotasi berbagai jenis dokumen secara terprogram. Di akhir tutorial ini, Anda akan dibekali dengan pengetahuan untuk mengintegrasikan anotasi pengganti teks dengan lancar ke dalam aplikasi .NET Anda.
 ## Prasyarat

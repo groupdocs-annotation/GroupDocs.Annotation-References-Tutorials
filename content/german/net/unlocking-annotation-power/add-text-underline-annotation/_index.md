@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET T
 weight: 27
 url: /de/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Textunterstreichungsanmerkung hinzu
+
 ## Einführung
 In diesem Tutorial führen wir den Prozess des Hinzufügens einer Textunterstreichungsanmerkung zu einem Dokument mithilfe von GroupDocs.Annotation für .NET durch. Textunterstreichungsanmerkungen können nützlich sein, um bestimmte Teile eines Dokuments hervorzuheben, beispielsweise wichtige Passagen oder wichtige Punkte.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Khám phá các hướng dẫn cần thiết để tải tài liệ
 weight: 20
 url: /vi/net/document-loading-essentials/
 ---
+
+# Những điều cơ bản về tải tài liệu
+
 ## Giới thiệu
 
 Khai phá toàn bộ tiềm năng của chú thích tài liệu trong các ứng dụng .NET của bạn với GroupDocs.Annotation. Trong hướng dẫn toàn diện này, chúng tôi sẽ đi sâu vào các hướng dẫn cơ bản để tải tài liệu từ nhiều nguồn khác nhau. Cho dù đó là truy xuất tệp từ Amazon S3, Azure, FTP, ổ đĩa cục bộ, luồng, URL hay xử lý các phiên bản tài liệu có chú thích, GroupDocs.Annotation đều đơn giản hóa quy trình, cho phép tích hợp liền mạch và cộng tác nâng cao.

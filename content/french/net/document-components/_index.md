@@ -6,6 +6,9 @@ description: Découvrez des didacticiels complets sur l'intégration de composan
 weight: 24
 url: /fr/net/document-components/
 ---
+
+# Composants du document
+
 ## Introduction
 
 GroupDocs.Annotation pour .NET fournit un ensemble complet de didacticiels pour aider les développeurs à intégrer de manière transparente des composants interactifs dans les documents PDF. Dans cet article, nous approfondirons les détails de ces didacticiels, explorant comment ils vous permettent d'améliorer les fonctionnalités et l'expérience utilisateur de vos PDF.

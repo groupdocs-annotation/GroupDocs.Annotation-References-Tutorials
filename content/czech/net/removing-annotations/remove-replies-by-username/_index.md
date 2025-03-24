@@ -6,6 +6,9 @@ description: Naučte se, jak plynule anotovat dokumenty pomocí Groupdocs.Annota
 weight: 17
 url: /cs/net/removing-annotations/remove-replies-by-username/
 ---
+
+# Odebrat odpovědi podle uživatelského jména v .NET
+
 ## Úvod
 Groupdocs.Annotation for .NET je výkonný nástroj pro bezproblémové anotování dokumentů ve vašich aplikacích .NET. Ať už pracujete s PDF, dokumenty Wordu nebo jakýmkoli jiným podporovaným formátem souborů, tato knihovna zjednodušuje proces přidávání anotací, zvýraznění a komentářů, zlepšuje spolupráci a možnosti správy dokumentů.
 ## Předpoklady

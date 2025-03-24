@@ -6,6 +6,9 @@ description: 효율적인 문서 관리 및 공동 작업을 위해 GroupDocs.An
 weight: 21
 url: /ko/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# 텍스트 위에 이미지 주석 넣기
+
 ## 소개
 .NET 개발 분야에서 GroupDocs.Annotation은 문서에 주석을 추가하여 공동 작업과 문서 관리를 더욱 효율적으로 만드는 강력한 솔루션을 제공합니다. 일반적인 요구 사항 중 하나는 텍스트 위에 이미지 주석을 추가하는 것인데, 이는 .NET용 GroupDocs.Annotation을 사용하여 원활하게 수행할 수 있습니다.
 ## 전제 조건

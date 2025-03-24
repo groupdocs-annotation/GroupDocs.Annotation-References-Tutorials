@@ -6,6 +6,9 @@ description: Descubra tutoriales esenciales para cargar documentos usando GroupD
 weight: 20
 url: /es/net/document-loading-essentials/
 ---
+
+# Conceptos básicos de carga de documentos
+
 ## Introducción
 
 Libere todo el potencial de la anotación de documentos en sus aplicaciones .NET con GroupDocs.Annotation. En esta guía completa, profundizaremos en los tutoriales fundamentales para cargar documentos de diversas fuentes. Ya sea recuperando archivos de Amazon S3, Azure, FTP, disco local, transmisiones, URL o manejando versiones de documentos anotados, GroupDocs.Annotation simplifica el proceso, permitiendo una integración perfecta y una colaboración mejorada.

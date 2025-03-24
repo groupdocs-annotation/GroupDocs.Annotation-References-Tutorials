@@ -6,6 +6,9 @@ description: Nâng cao khả năng cộng tác tài liệu của bạn với Gro
 weight: 10
 url: /vi/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Thêm chú thích khu vực vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm chú thích vùng vào tài liệu bằng Groupdocs.Annotation cho .NET. Chú thích vùng là một tính năng có giá trị cho phép người dùng làm nổi bật các vùng cụ thể của tài liệu, mang lại sự rõ ràng và ngữ cảnh cho nội dung.
 ## Điều kiện tiên quyết

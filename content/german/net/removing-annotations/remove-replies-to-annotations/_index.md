@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation Antworten a
 weight: 15
 url: /de/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# Entfernen Sie Antworten auf Anmerkungen in .NET
+
 ## Einführung
 In diesem Tutorial erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation Antworten auf Anmerkungen in .NET entfernen. GroupDocs.Annotation ist eine leistungsstarke .NET-Bibliothek, mit der Entwickler Dokumente problemlos mit Anmerkungen versehen können. Ganz gleich, ob es um das Hinzufügen von Kommentaren, das Hervorheben von Text oder das Hinzufügen von Stempeln geht: GroupDocs.Annotation bietet einen umfassenden Satz an Werkzeugen für die Kommentierung von Dokumenten.
 ## Voraussetzungen

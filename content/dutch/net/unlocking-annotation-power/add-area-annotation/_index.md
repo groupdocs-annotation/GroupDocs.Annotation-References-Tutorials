@@ -6,6 +6,9 @@ description: Verbeter uw samenwerking aan documenten met Groupdocs.Annotation vo
 weight: 10
 url: /nl/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Voeg gebiedsannotatie toe aan document
+
 ## Invoering
 In deze zelfstudie begeleiden we u bij het toevoegen van gebiedsannotaties aan documenten met behulp van Groupdocs.Annotation voor .NET. Gebiedsannotaties zijn een waardevolle functie waarmee gebruikers specifieke gebieden van een document kunnen markeren, waardoor de inhoud duidelijkheid en context krijgt.
 ## Vereisten

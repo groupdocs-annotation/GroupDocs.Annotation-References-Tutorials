@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan tölthet be könnyedén megjegyzésekkel ellát
 weight: 16
 url: /hu/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Annotált dokumentum verzió betöltése
+
 ## Bevezetés
 Napjaink digitális korában a dokumentumok megjegyzései az együttműködés, az áttekintés és a visszacsatolás alapvető eszközévé váltak a különböző iparágakban. Függetlenül attól, hogy Ön fejlesztő, aki annotációs funkciókat integrálja alkalmazásába, vagy felhasználó, aki szeretné kihasználni ezeket a képességeket, a GroupDocs.Annotation for .NET hatékony megoldást kínál. Ebben az oktatóanyagban a megjegyzésekkel ellátott dokumentumverziók betöltésének folyamatát mutatjuk be a GroupDocs.Annotation for .NET használatával.
 ## Előfeltételek

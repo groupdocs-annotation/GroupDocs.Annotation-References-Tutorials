@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak belgelerinize filigran a
 weight: 28
 url: /tr/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Belgeye Filigran Açıklaması Ekleme
+
 ## giriiş
 Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bir belgeye filigran ek açıklaması ekleme sürecini anlatacağız. Filigran ek açıklamaları bir belgenin durumunu belirtmek, onu gizli olarak işaretlemek veya diğer ilgili bilgileri eklemek için kullanışlıdır.
 

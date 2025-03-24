@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak belgelere nasıl açıkl
 weight: 15
 url: /tr/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Önizleme Çalışma Sayfası Sütunları Oluştur
+
 ## giriiş
 GroupDocs.Annotation for .NET'in yeteneklerinden yararlanmaya ilişkin kapsamlı eğitimimize hoş geldiniz! Bu kılavuzda, belgelere etkili bir şekilde açıklama eklemek için bu güçlü aracı kullanma sürecinde size yol göstereceğiz. İster deneyimli bir geliştirici olun ister .NET geliştirme dünyasına yeni giren biri olun, bu eğitim sizi ek açıklama özelliklerini uygulamalarınıza sorunsuz bir şekilde entegre etmek için gerekli bilgi ve becerilerle donatacaktır.
 ## Önkoşullar

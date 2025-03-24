@@ -6,6 +6,9 @@ description: Ontgrendel het volledige potentieel van documentannotatie in .NET m
 weight: 26
 url: /nl/net/applying-licenses/
 ---
+
+# Licenties toepassen
+
 ## Invoering
 
 Bent u een .NET-ontwikkelaar en wilt u de annotatiemogelijkheden van uw documenten verbeteren? Zoek niet verder! GroupDocs.Annotation voor .NET biedt een uitgebreid pakket tools waarmee u krachtige annotatiefuncties naadloos in uw toepassingen kunt integreren. In deze zelfstudiegids leiden we u door verschillende methoden voor het toepassen van licenties om het volledige potentieel van GroupDocs.Annotation voor .NET te benutten.

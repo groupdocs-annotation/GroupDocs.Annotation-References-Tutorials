@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 向文档添加距
 weight: 12
 url: /zh/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# 向文档添加距离注释
+
 ## 介绍
 在本教程中，您将学习如何使用 GroupDocs.Annotation for .NET 向文档添加距离注释。请按照以下步骤完成任务：
 ## 先决条件

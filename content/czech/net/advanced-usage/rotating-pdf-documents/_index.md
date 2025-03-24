@@ -6,6 +6,9 @@ description: Naučte se, jak snadno otáčet dokumenty PDF pomocí Groupdocs.Ann
 weight: 22
 url: /cs/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# Otáčení dokumentů PDF
+
 ## Úvod
 Otáčení dokumentů PDF může být zásadním úkolem při práci se soubory, které je třeba prohlížet nebo zpracovávat jinak. V tomto tutoriálu prozkoumáme, jak otáčet dokumenty PDF krok za krokem pomocí Groupdocs.Annotation pro .NET.
 ## Předpoklady

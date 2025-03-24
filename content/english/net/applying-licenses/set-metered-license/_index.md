@@ -6,6 +6,9 @@ description: Learn how to set up a metered license for GroupDocs.Annotation .NET
 weight: 12
 url: /net/applying-licenses/set-metered-license/
 ---
+
+# Set Metered License
+
 ## Introduction
 GroupDocs.Annotation for .NET is a powerful library that empowers developers to add document annotation capabilities to their .NET applications effortlessly. Whether you're building a document management system, collaboration platform, or any application that involves document review and markup, GroupDocs.Annotation for .NET provides a comprehensive set of tools to streamline the process.
 In this tutorial, we'll delve into the process of setting up a metered license for GroupDocs.Annotation .NET. A metered license allows you to pay only for the resources you consume, making it a cost-effective solution for projects of any scale. By following the steps outlined below, you'll be able to seamlessly integrate GroupDocs.Annotation into your .NET application while optimizing resource usage and maintaining budgetary control.

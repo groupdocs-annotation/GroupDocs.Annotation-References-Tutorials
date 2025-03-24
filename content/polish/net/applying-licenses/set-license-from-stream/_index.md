@@ -6,6 +6,9 @@ description: Odblokuj pełny potencjał adnotacji dokumentów w .NET dzięki Gro
 weight: 11
 url: /pl/net/applying-licenses/set-license-from-stream/
 ---
+
+# Ustaw licencję ze strumienia
+
 ## Wstęp
 Witamy w kompleksowym przewodniku dotyczącym korzystania z GroupDocs.Annotation dla .NET w celu zwiększenia możliwości dodawania adnotacji w dokumentach. Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero zaczynasz, ten samouczek przeprowadzi Cię przez każdy krok, upewniając się, że wykorzystasz pełny potencjał tego potężnego narzędzia.
 ## Warunki wstępne

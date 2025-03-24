@@ -6,6 +6,9 @@ url: /cs/net/
 description: Odemkněte plný potenciál GroupDocs.Annotation pro .NET pomocí našich výukových programů. Bezproblémová integrace, vylepšení spolupráce a zjednodušení pracovních postupů.
 is_root: true
 ---
+
+# Návody a příklady GroupDocs.Annotation pro .NET
+
 ## Úvod
 
 GroupDocs.Annotation for .NET poskytuje vývojářům robustní platformu pro integraci výkonných možností anotací do jejich aplikací .NET. Ať už jste začátečník nebo zkušený vývojář, naše výukové programy pokrývají vše, co potřebujete vědět, abyste mohli využít plný potenciál GroupDocs.Annotation pro .NET.

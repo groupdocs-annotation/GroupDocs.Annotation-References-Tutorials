@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá pontjegyzeteket PDF-fájlokhoz a G
 weight: 17
 url: /hu/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Pontos megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 A GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy különféle típusú megjegyzéseket adhassanak a dokumentumokhoz programozottan. Ebben az oktatóanyagban arra fogunk összpontosítani, hogy pont megjegyzést adjunk egy dokumentumhoz C# használatával.
 ## Előfeltételek

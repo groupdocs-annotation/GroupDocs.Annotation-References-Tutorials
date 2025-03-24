@@ -6,6 +6,9 @@ description: Lär dig hur du annoterar PDF-dokument programmatiskt med GroupDocs
 weight: 15
 url: /sv/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Ladda dokument från URL
+
 ## Introduktion
 GroupDocs.Annotation for .NET är ett funktionsrikt bibliotek som gör det möjligt för utvecklare att lägga till anteckningsfunktioner till sina .NET-applikationer utan ansträngning. Med GroupDocs.Annotation kan du annotera PDF-dokument programmatiskt, så att användare kan markera text, lägga till kommentarer, rita former och mer. Den här handledningen går igenom stegen för att ladda ett dokument från en URL, lägga till kommentarer och spara det kommenterade dokumentet med GroupDocs.Annotation för .NET.
 ## Förutsättningar

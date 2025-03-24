@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET'i kullanarak PDF belgelerini zahmetsi
 weight: 22
 url: /tr/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# PDF Belgelerini Döndürme
+
 ## giriiş
 Farklı şekilde görüntülenmesi veya işlenmesi gereken dosyalarla uğraşırken PDF belgelerini döndürmek çok önemli bir görev olabilir. Bu öğreticide, Groupdocs.Annotation for .NET'i kullanarak PDF belgelerinin adım adım nasıl döndürüleceğini keşfedeceğiz.
 ## Önkoşullar

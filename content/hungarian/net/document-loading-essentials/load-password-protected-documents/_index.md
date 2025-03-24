@@ -6,6 +6,9 @@ description: Fokozza az együttműködést és a dokumentumok áttekintését a 
 weight: 17
 url: /hu/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Jelszóval védett dokumentumok betöltése
+
 ## Bevezetés
 mai rohanó világban az együttműködés a siker kulcsa. Akár egy projekten dolgozik kollégáival, ügyfeleivel vagy partnereivel, a dokumentumok hatékony megjegyzéseinek és megosztásának képessége jelentősen javíthatja a termelékenységet és egyszerűsítheti a munkafolyamatokat. A GroupDocs.Annotation for .NET hatékony megoldást kínál a PDF és más dokumentumformátumok közvetlenül a .NET-alkalmazásokon belüli megjegyzésekhez, lehetővé téve a zökkenőmentes együttműködést és a dokumentum-ellenőrzési folyamatokat.
 ## Előfeltételek

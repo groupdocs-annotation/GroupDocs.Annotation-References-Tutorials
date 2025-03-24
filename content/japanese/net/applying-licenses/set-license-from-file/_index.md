@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して、強力なドキュ�
 weight: 10
 url: /ja/net/applying-licenses/set-license-from-file/
 ---
+
+# ファイルからライセンスを設定
+
 ## 導入
 今日のデジタル時代では、ドキュメントの注釈は、さまざまな業界のコラボレーション、レビュー、フィードバックのプロセスに不可欠なツールとなっています。 GroupDocs.Annotation for .NET は、注釈機能を .NET アプリケーションにシームレスに統合しようとしている開発者に強力なソリューションを提供します。
 ## 前提条件

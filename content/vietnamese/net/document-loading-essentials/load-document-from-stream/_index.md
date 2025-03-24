@@ -6,6 +6,9 @@ description: Tìm hiểu cách chú thích tài liệu trong .NET một cách d�
 weight: 14
 url: /vi/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Tải tài liệu từ luồng
+
 ## Giới thiệu
 GroupDocs.Annotation dành cho .NET là một thư viện mạnh mẽ cho phép các nhà phát triển tích hợp khả năng chú thích tài liệu vào các ứng dụng .NET của họ một cách dễ dàng. Cho dù bạn đang xây dựng hệ thống quản lý tài liệu, nền tảng cộng tác hay ứng dụng học tập điện tử, GroupDocs.Annotation đều cung cấp một bộ công cụ linh hoạt để chú thích các tệp PDF, tài liệu Word, trang tính Excel, v.v.
 ## Điều kiện tiên quyết

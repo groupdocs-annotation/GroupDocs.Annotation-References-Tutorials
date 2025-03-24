@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni di evidenziazione del testo ai d
 weight: 22
 url: /it/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Aggiungi annotazione di evidenziazione del testo al documento
+
 ## introduzione
 Nell'ambito della gestione e della collaborazione dei documenti, GroupDocs.Annotation per .NET emerge come una soluzione solida, che consente agli sviluppatori di integrare perfettamente le annotazioni di evidenziazione del testo nelle loro applicazioni. Questa esercitazione funge da guida completa per aggiungere annotazioni di evidenziazione del testo ai documenti utilizzando GroupDocs.Annotation per .NET. Attraverso istruzioni passo passo e spiegazioni dettagliate, acquisirai competenza nello sfruttare le capacità di questa potente libreria.
 ## Prerequisiti

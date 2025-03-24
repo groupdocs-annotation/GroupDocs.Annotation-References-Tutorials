@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET で ID ごとに複数の
 weight: 13
 url: /ja/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# ID による複数の注釈の削除
+
 ## 導入
 ドキュメント管理とコラボレーションの世界では、GroupDocs.Annotation for .NET が強力なツールとして登場し、開発者が .NET アプリケーション内でドキュメントにシームレスに注釈を付けたり操作したりできるようになります。このチュートリアルでは、GroupDocs.Annotation for .NET が提供する重要な機能の 1 つである、ID による複数の注釈の削除について詳しく説明します。このステップバイステップのガイドに従うことで、注釈を効率的に削除する方法を包括的に理解し、ドキュメント管理機能を強化できるようになります。
 ## 前提条件

@@ -6,6 +6,9 @@ description: Aprenda a agregar anotaciones de imágenes sobre texto en .NET usan
 weight: 21
 url: /es/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Poner anotación de imagen sobre texto
+
 ## Introducción
 En el mundo del desarrollo .NET, GroupDocs.Annotation ofrece una poderosa solución para agregar anotaciones a documentos, haciendo que la colaboración y la gestión de documentos sean más eficientes. Un requisito común es colocar anotaciones de imágenes sobre texto, lo que se puede lograr sin problemas utilizando GroupDocs.Annotation para .NET.
 ## Requisitos previos

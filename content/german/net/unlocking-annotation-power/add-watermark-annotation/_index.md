@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos W
 weight: 28
 url: /de/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Wasserzeichenanmerkung hinzu
+
 ## Einführung
 In diesem Tutorial führen wir den Prozess des Hinzufügens einer Wasserzeichenanmerkung zu einem Dokument mithilfe von GroupDocs.Annotation für .NET durch. Wasserzeichenanmerkungen sind nützlich, um den Status eines Dokuments anzuzeigen, es als vertraulich zu kennzeichnen oder andere relevante Informationen hinzuzufügen.
 

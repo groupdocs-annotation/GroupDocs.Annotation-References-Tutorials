@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET ile belge yönetimi iş akışların�
 weight: 19
 url: /tr/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Belgeye Kaynak Redaksiyon Açıklaması Ekleme
+
 ## giriiş
 .NET geliştirme alanında, belge açıklamalarına yönelik etkili araçların entegre edilmesi üretkenliği önemli ölçüde artırabilir ve iş akışlarını kolaylaştırabilir. GroupDocs.Annotation for .NET, belgelere sorunsuz bir şekilde açıklama eklemek ve işlemek için çok sayıda işlevsellik sunan güçlü bir çözüm olarak ortaya çıkıyor. Bu eğitimde, GroupDocs.Annotation for .NET'in güçlü bir özelliği olan Resources Redaction Annotation'ı entegre etme ve kullanma süreci ele alınmaktadır.
 ## Önkoşullar

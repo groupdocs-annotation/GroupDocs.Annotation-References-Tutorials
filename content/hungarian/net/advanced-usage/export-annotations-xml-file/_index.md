@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan exportálhat megjegyzéseket XML-fájlokból a 
 weight: 11
 url: /hu/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# Annotációk exportálása XML-fájlból
+
 ## Bevezetés
 mai digitális korban a hatékony dokumentumkezelés létfontosságú a vállalkozások és a magánszemélyek számára egyaránt. A rendelkezésre álló eszközök sokaságával a GroupDocs.Annotation for .NET megbízható megoldásként tűnik ki a PDF-fájlok megjegyzéseinek készítésére és kezelésére. Ebben az oktatóanyagban a megjegyzések XML-fájlokból történő exportálásának folyamatát mutatjuk be a GroupDocs.Annotation for .NET segítségével. Az útmutató végére birtokában lesz a megjegyzések zökkenőmentes exportálásához szükséges tudásnak, ami javítja a dokumentumkezelési munkafolyamatot.
 ## Előfeltételek

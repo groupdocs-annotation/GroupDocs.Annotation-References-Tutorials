@@ -6,6 +6,9 @@ description: Naučte se přidávat popisky obrázků do dokumentů pomocí Group
 weight: 15
 url: /cs/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Přidat k dokumentu poznámku obrázku (vzdálená cesta)
+
 ## Úvod
 V tomto tutoriálu si projdeme proces přidávání anotací obrázků do dokumentu pomocí GroupDocs.Annotation for .NET. Tato knihovna poskytuje výkonné nástroje pro programové anotování různých typů dokumentů.
 ## Předpoklady

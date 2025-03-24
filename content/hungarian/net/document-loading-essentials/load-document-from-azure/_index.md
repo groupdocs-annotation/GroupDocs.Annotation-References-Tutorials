@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan fűzhet megjegyzéseket dokumentumokhoz .NET-be
 weight: 11
 url: /hu/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Töltse be a dokumentumot az Azure-ból
+
 ## Bevezetés
 A dokumentumkezelés és az együttműködés területén a GroupDocs.Annotation for .NET robusztus megoldásként jelenik meg, amely megkönnyíti a zökkenőmentes annotációt és a jelölési funkciókat a .NET-alkalmazásokon belül. Ez az oktatóanyag a GroupDocs.Annotation for .NET használatának bonyolult dokumentumaival foglalkozik, és lépésről lépésre útmutatást nyújt az előfeltételektől a haladó használatig.
 ## Előfeltételek

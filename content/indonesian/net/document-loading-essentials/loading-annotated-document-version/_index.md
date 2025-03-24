@@ -6,6 +6,9 @@ description: Pelajari cara memuat versi dokumen beranotasi dengan mudah mengguna
 weight: 16
 url: /id/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Memuat Versi Dokumen Beranotasi
+
 ## Perkenalan
 Di era digital saat ini, anotasi dokumen telah menjadi alat penting untuk kolaborasi, peninjauan, dan umpan balik di berbagai industri. Baik Anda seorang pengembang yang mengintegrasikan fitur anotasi ke dalam aplikasi Anda atau pengguna yang ingin memanfaatkan kemampuan ini, GroupDocs.Annotation untuk .NET memberikan solusi yang ampuh. Dalam tutorial ini, kita akan mempelajari proses memuat versi dokumen beranotasi menggunakan GroupDocs.Annotation untuk .NET.
 ## Prasyarat

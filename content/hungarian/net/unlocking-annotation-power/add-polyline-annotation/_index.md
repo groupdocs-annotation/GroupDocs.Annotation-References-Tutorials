@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá vonallánc megjegyzéseket a dokum
 weight: 18
 url: /hu/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Vonallánc megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 A GroupDocs.Annotation for .NET egy hatékony eszköz, amellyel a fejlesztők programozottan megjegyzéseket fűzhetnek PDF és Microsoft Office dokumentumokhoz. Jellemzői közé tartozik az a képesség, hogy vonalláncos megjegyzéseket adjon a dokumentumokhoz, javítva az együttműködést és a dokumentum-ellenőrzési folyamatokat.
 ## Előfeltételek

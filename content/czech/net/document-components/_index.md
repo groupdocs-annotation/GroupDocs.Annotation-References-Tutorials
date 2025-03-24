@@ -6,6 +6,9 @@ description: Objevte komplexní výukové programy o integraci interaktivních k
 weight: 24
 url: /cs/net/document-components/
 ---
+
+# Komponenty dokumentu
+
 ## Úvod
 
 GroupDocs.Annotation for .NET poskytuje robustní sadu výukových programů, které vývojářům pomohou hladce integrovat interaktivní komponenty do dokumentů PDF. V tomto článku se ponoříme do podrobností těchto výukových programů a prozkoumáme, jak vám umožňují vylepšit funkčnost a uživatelskou zkušenost vašich souborů PDF.

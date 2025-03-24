@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET ile belge işbirliğinizi geliştirin
 weight: 10
 url: /tr/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Belgeye Alan Açıklaması Ekle
+
 ## giriiş
 Bu öğreticide, Groupdocs.Annotation for .NET'i kullanarak belgelere alan açıklamaları ekleme sürecinde size rehberlik edeceğiz. Alan açıklamaları, kullanıcıların bir belgenin belirli alanlarını vurgulamasına olanak tanıyan, içeriğe açıklık ve bağlam kazandıran değerli bir özelliktir.
 ## Önkoşullar

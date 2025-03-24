@@ -6,6 +6,9 @@ description: Khám phá cách quản lý hiệu quả các chú thích trong .NE
 weight: 25
 url: /vi/net/removing-annotations/
 ---
+
+# Xóa chú thích
+
 ## Giới thiệu
 
 Bạn đang tìm cách hợp lý hóa quy trình quản lý tài liệu của mình trong .NET? GroupDocs.Annotation cung cấp một bộ hướng dẫn toàn diện để giúp bạn xóa chú thích một cách liền mạch. Chú thích đóng một vai trò quan trọng trong quá trình cộng tác và đánh giá tài liệu. Tuy nhiên, có những trường hợp cần phải xóa chú thích do sửa đổi, lỗi hoặc cập nhật. Trong loạt hướng dẫn này, chúng tôi đi sâu vào các phương pháp và kỹ thuật khác nhau để xóa chú thích một cách hiệu quả bằng cách sử dụng GroupDocs.Annotation cho .NET.

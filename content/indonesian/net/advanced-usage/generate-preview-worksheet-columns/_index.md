@@ -6,6 +6,9 @@ description: Pelajari cara membuat anotasi dokumen menggunakan GroupDocs.Annotat
 weight: 15
 url: /id/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# Hasilkan Kolom Lembar Kerja Pratinjau
+
 ## Perkenalan
 Selamat datang di tutorial komprehensif kami tentang memanfaatkan kemampuan GroupDocs.Annotation untuk .NET! Dalam panduan ini, kami akan memandu Anda melalui proses penggunaan alat canggih ini untuk membuat anotasi dokumen secara efektif. Baik Anda seorang pengembang berpengalaman atau pendatang baru di dunia pengembangan .NET, tutorial ini akan membekali Anda dengan pengetahuan dan keterampilan yang diperlukan untuk mengintegrasikan fitur anotasi dengan mulus ke dalam aplikasi Anda.
 ## Prasyarat

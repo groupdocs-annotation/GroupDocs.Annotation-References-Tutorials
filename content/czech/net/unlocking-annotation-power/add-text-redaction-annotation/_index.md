@@ -6,6 +6,9 @@ description: Naučte se přidávat textové redigované anotace do dokumentů PD
 weight: 23
 url: /cs/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Přidejte do dokumentu anotaci úpravy textu
+
 ## Úvod
 Přidání textové anotace do dokumentu může být zásadním krokem v bezpečné správě citlivých informací. GroupDocs.Annotation for .NET poskytuje robustní řešení, jak toho dosáhnout. V tomto tutoriálu vás krok za krokem provedeme procesem přidání anotace textové redakce do vašeho dokumentu.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Learn how to add text strikeout annotations to documents using Grou
 weight: 26
 url: /net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Add Text Strikeout Annotation to Document
+
 ## Introduction
 In this tutorial, we'll explore how to add a text strikeout annotation to a document using GroupDocs.Annotation for .NET. This library provides powerful tools for annotating various document types, enhancing collaboration and document review processes.
 ## Prerequisites

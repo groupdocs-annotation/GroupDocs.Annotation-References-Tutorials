@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi coretan teks ke dokumen menggunak
 weight: 26
 url: /id/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Tambahkan Anotasi Coretan Teks ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, kita akan mempelajari cara menambahkan anotasi coretan teks ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Pustaka ini menyediakan alat canggih untuk membuat anotasi berbagai jenis dokumen, meningkatkan kolaborasi, dan proses peninjauan dokumen.
 ## Prasyarat

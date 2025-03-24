@@ -6,6 +6,9 @@ description: Leer hoe u de beeldkwaliteit in PDF-bestanden kunt verbeteren met G
 weight: 10
 url: /nl/net/advanced-usage/change-image-quality/
 ---
+
+# Wijzig de beeldkwaliteit
+
 ## Invoering
 In het huidige digitale tijdperk kan de kwaliteit van afbeeldingen in PDF-documenten een aanzienlijke invloed hebben op de gebruikerservaring en de leesbaarheid van documenten. Met Groupdocs.Annotation voor .NET, een krachtige bibliotheek ontworpen voor .NET-ontwikkelaars, wordt het verbeteren van de beeldkwaliteit in PDF-bestanden een eenvoudige taak. In deze tutorial gaan we dieper in op het stapsgewijze proces van het verbeteren van de beeldkwaliteit met behulp van deze veelzijdige tool.
 ## Vereisten

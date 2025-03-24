@@ -6,6 +6,9 @@ url: /id/net/
 description: Buka potensi penuh GroupDocs.Annotation untuk .NET dengan tutorial kami. Integrasikan dengan lancar, tingkatkan kolaborasi, dan sederhanakan alur kerja.
 is_root: true
 ---
+
+# Tutorial dan Contoh GroupDocs.Annotation untuk .NET
+
 ## Perkenalan
 
 GroupDocs.Annotation for .NET menyediakan platform yang kuat bagi pengembang untuk mengintegrasikan kemampuan anotasi yang kuat ke dalam aplikasi .NET mereka. Baik Anda seorang pemula atau pengembang berpengalaman, tutorial kami mencakup semua yang perlu Anda ketahui untuk memanfaatkan potensi penuh GroupDocs.Annotation untuk .NET.

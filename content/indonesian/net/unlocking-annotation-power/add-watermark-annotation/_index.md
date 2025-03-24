@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi tanda air ke dokumen Anda dengan 
 weight: 28
 url: /id/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Tambahkan Anotasi Tanda Air ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, kita akan memandu proses menambahkan anotasi tanda air ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Anotasi tanda air berguna untuk menunjukkan status dokumen, menandainya sebagai rahasia, atau menambahkan informasi relevan lainnya.
 

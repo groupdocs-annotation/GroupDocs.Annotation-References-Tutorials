@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 以编程方式对
 weight: 10
 url: /zh/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# 从 Amazon S3 加载文档
+
 ## 介绍
 在当今的数字时代，文档管理对于企业和个人都至关重要。 Groupdocs.Annotation for .NET 提供了一个强大的解决方案，用于以编程方式注释文档，使开发人员能够增强文档协作并简化工作流程。在本教程中，我们将深入研究使用 Groupdocs.Annotation for .NET 的基础知识，将每个示例分解为多个步骤，以指导您无缝地完成该过程。
 ## 先决条件

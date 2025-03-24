@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 轻松加载带注
 weight: 16
 url: /zh/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# 加载带注释的文档版本
+
 ## 介绍
 在当今的数字时代，文档注释已成为各行业协作、审阅和反馈的重要工具。无论您是将注释功能集成到应用程序中的开发人员还是希望利用这些功能的用户，GroupDocs.Annotation for .NET 都提供了强大的解决方案。在本教程中，我们将深入研究使用 GroupDocs.Annotation for .NET 加载带注释的文档版本的过程。
 ## 先决条件

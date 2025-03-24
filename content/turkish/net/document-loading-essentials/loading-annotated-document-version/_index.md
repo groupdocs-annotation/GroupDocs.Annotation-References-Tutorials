@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak açıklamalı belge sür
 weight: 16
 url: /tr/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Açıklamalı Belge Sürümünün Yüklenmesi
+
 ## giriiş
 Günümüzün dijital çağında belge açıklaması, çeşitli sektörlerde işbirliği, inceleme ve geri bildirim için önemli bir araç haline geldi. İster açıklama özelliklerini uygulamanıza entegre eden bir geliştirici olun, ister bu yeteneklerden yararlanmak isteyen bir kullanıcı olun, GroupDocs.Annotation for .NET güçlü bir çözüm sunar. Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak açıklamalı belge sürümlerini yükleme işlemini ayrıntılı olarak ele alacağız.
 ## Önkoşullar

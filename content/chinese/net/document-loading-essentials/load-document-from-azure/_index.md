@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 在 .NET 中对文档进行
 weight: 11
 url: /zh/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# 从 Azure 加载文档
+
 ## 介绍
 在文档管理和协作领域，GroupDocs.Annotation for .NET 作为一个强大的解决方案出现，促进 .NET 应用程序中的无缝注释和标记功能。本教程深入探讨了利用 GroupDocs.Annotation for .NET 来注释文档的复杂性，提供从先决条件到高级用法的分步指导。
 ## 先决条件

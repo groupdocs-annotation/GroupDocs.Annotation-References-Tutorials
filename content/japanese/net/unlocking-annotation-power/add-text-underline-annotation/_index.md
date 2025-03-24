@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメントに�
 weight: 27
 url: /ja/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# テキストの下線注釈をドキュメントに追加する
+
 ## 導入
 このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにテキストの下線注釈を追加するプロセスを説明します。テキストの下線注釈は、重要な箇所や重要なポイントなど、文書の特定の部分を強調するのに役立ちます。
 ## 前提条件

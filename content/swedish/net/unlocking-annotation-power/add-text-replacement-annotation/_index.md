@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till textersättningskommentarer till dina 
 weight: 24
 url: /sv/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Lägg till textersättningsanteckning till dokumentet
+
 ## Introduktion
 I den här handledningen guidar vi dig genom processen att lägga till en textersättningsanteckning till dina dokument med hjälp av GroupDocs.Annotation för .NET. Detta kraftfulla bibliotek låter utvecklare manipulera och kommentera olika typer av dokument programmatiskt. I slutet av denna handledning kommer du att vara utrustad med kunskapen för att sömlöst integrera textersättningsanteckningar i dina .NET-program.
 ## Förutsättningar

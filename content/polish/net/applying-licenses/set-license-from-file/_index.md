@@ -6,6 +6,9 @@ description: Bezproblemowo integruj zaawansowane możliwości dodawania adnotacj
 weight: 10
 url: /pl/net/applying-licenses/set-license-from-file/
 ---
+
+# Ustaw licencję z pliku
+
 ## Wstęp
 dzisiejszej epoce cyfrowej adnotacje w dokumentach stały się niezbędnym narzędziem do współpracy, przeglądania i przekazywania informacji zwrotnych w różnych branżach. GroupDocs.Annotation dla .NET oferuje zaawansowane rozwiązanie dla programistów chcących bezproblemowo zintegrować funkcjonalność adnotacji z aplikacjami .NET.
 ## Warunki wstępne

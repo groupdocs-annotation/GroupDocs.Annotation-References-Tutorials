@@ -6,6 +6,9 @@ description: Lär dig hur du kommenterar dokument i .NET med GroupDocs.Annotatio
 weight: 11
 url: /sv/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Ladda dokument från Azure
+
 ## Introduktion
 När det gäller dokumenthantering och samarbete framstår GroupDocs.Annotation för .NET som en robust lösning som underlättar sömlösa antecknings- och uppmärkningsfunktioner inom .NET-applikationer. Denna handledning fördjupar sig i krångligheterna med att utnyttja GroupDocs.Annotation för .NET för att kommentera dokument, och erbjuder steg-för-steg-vägledning från förutsättningar till avancerad användning.
 ## Förutsättningar

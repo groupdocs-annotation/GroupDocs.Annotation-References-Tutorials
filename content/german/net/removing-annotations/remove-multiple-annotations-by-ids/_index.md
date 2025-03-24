@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation mehrere Anmerkungen 
 weight: 13
 url: /de/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# Entfernen Sie mehrere Anmerkungen nach IDs
+
 ## Einführung
 In der Welt der Dokumentenverwaltung und -zusammenarbeit erweist sich GroupDocs.Annotation für .NET als leistungsstarkes Tool, das es Entwicklern ermöglicht, Dokumente innerhalb ihrer .NET-Anwendungen nahtlos mit Anmerkungen zu versehen und zu bearbeiten. Dieses Tutorial befasst sich mit einer der wesentlichen Funktionen von GroupDocs.Annotation für .NET: dem Entfernen mehrerer Annotationen nach IDs. Wenn Sie dieser Schritt-für-Schritt-Anleitung folgen, erhalten Sie ein umfassendes Verständnis dafür, wie Sie Anmerkungen effizient entfernen und so Ihre Funktionen zur Dokumentenverwaltung verbessern können.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích thay thế văn bản vào tài
 weight: 24
 url: /vi/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Thêm chú thích thay thế văn bản vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm Chú thích thay thế văn bản vào tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Thư viện mạnh mẽ này cho phép các nhà phát triển thao tác và chú thích nhiều loại tài liệu khác nhau theo chương trình. Đến cuối hướng dẫn này, bạn sẽ được trang bị kiến thức để tích hợp liền mạch các chú thích thay thế văn bản vào các ứng dụng .NET của mình.
 ## Điều kiện tiên quyết

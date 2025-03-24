@@ -6,6 +6,9 @@ description: Découvrez comment ajouter des annotations d'image aux documents à
 weight: 15
 url: /fr/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Ajouter une annotation d'image au document (chemin distant)
+
 ## Introduction
 Dans ce didacticiel, nous allons parcourir le processus d'ajout d'annotations d'image à un document à l'aide de GroupDocs.Annotation pour .NET. Cette bibliothèque fournit des outils puissants pour annoter différents types de documents par programmation.
 ## Conditions préalables

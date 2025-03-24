@@ -6,6 +6,9 @@ description: Mejore sus documentos PDF con componentes de botones interactivos u
 weight: 10
 url: /es/net/document-components/add-button-component-to-pdf/
 ---
+
+# Agregar componente de botón al documento PDF
+
 ## Introducción
 En este tutorial, lo guiaremos a través del proceso de agregar un componente de botón a un documento PDF usando Groupdocs.Annotation para .NET. Esta guía paso a paso garantizará que pueda integrar fácilmente esta función en su proyecto.
 ## Requisitos previos

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak .NET'te kimliğe göre yanıtlar
 weight: 16
 url: /tr/net/removing-annotations/remove-replies-by-id/
 ---
+
+# .NET'te Yanıtları Kimliğe Göre Kaldırma
+
 ## giriiş
 .NET geliştirme alanında, belgelerdeki ek açıklamaları yönetme yeteneği çeşitli uygulamalar için çok önemlidir. İster PDF'ler, Word belgeleri veya diğer formatlarla çalışıyor olun, ek açıklamaları programlı olarak değiştirme yeteneğine sahip olmak, bir olasılıklar dünyasının kapılarını açar. .NET'te ek açıklamaları işlemeye yönelik güçlü araçlardan biri GroupDocs.Annotation'dur.
 ## Önkoşullar

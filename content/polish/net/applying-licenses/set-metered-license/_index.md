@@ -6,6 +6,9 @@ description: Dowiedz się, jak skonfigurować licencję taryfową dla GroupDocs.
 weight: 12
 url: /pl/net/applying-licenses/set-metered-license/
 ---
+
+# Ustaw licencję taryfową
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to potężna biblioteka, która umożliwia programistom łatwe dodawanie funkcji adnotacji do dokumentów do aplikacji .NET. Niezależnie od tego, czy tworzysz system zarządzania dokumentami, platformę współpracy, czy jakąkolwiek aplikację obejmującą przeglądanie i oznaczanie dokumentów, GroupDocs.Annotation dla .NET zapewnia kompleksowy zestaw narzędzi usprawniających ten proces.
 W tym samouczku omówimy proces konfigurowania licencji taryfowej dla GroupDocs.Annotation .NET. Licencja licznikowa pozwala płacić tylko za zużyte zasoby, co czyni ją opłacalnym rozwiązaniem dla projektów o dowolnej skali. Wykonując kroki opisane poniżej, będziesz w stanie bezproblemowo zintegrować GroupDocs.Annotation z aplikacją .NET, optymalizując jednocześnie wykorzystanie zasobów i zachowując kontrolę budżetową.

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan távolíthat el több megjegyzést azonosítók
 weight: 13
 url: /hu/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# Több megjegyzés eltávolítása azonosítók alapján
+
 ## Bevezetés
 dokumentumkezelés és együttműködés világában a GroupDocs.Annotation for .NET hatékony eszközként jelenik meg, amely lehetővé teszi a fejlesztők számára, hogy a .NET-alkalmazásaikon belül zökkenőmentesen jegyezzenek fel és kezeljenek dokumentumokat. Ez az oktatóanyag a GroupDocs által kínált egyik alapvető funkcióval foglalkozik. Annotation for .NET: több megjegyzés eltávolítása azonosítók alapján. Ennek a lépésről-lépésre szóló útmutatónak a követésével átfogó ismereteket szerezhet arról, hogyan távolíthatja el hatékonyan a megjegyzéseket, és ezáltal javíthatja dokumentumkezelési képességeit.
 ## Előfeltételek

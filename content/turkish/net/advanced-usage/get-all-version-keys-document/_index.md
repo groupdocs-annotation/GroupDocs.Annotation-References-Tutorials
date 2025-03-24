@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak bir belgedeki tüm sür�
 weight: 16
 url: /tr/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Tüm Sürüm Anahtarlarını Belgeye Alın
+
 ## giriiş
 Günümüzün hızlı tempolu dijital dünyasında, etkili belge yönetimi hem işletmeler hem de bireyler için çok önemlidir. İster projeler üzerinde işbirliği yapıyor olun, ister sözleşmeleri gözden geçiriyor olun, ister yalnızca dosyalarınızı düzenliyor olun, doğru araçlara sahip olmak büyük fark yaratabilir. GroupDocs.Annotation for .NET, .NET uygulamaları içindeki belgelere açıklama eklemek ve bunları değiştirmek için kapsamlı bir çözüm sunar. Bu öğreticide, bir belgedeki tüm sürüm anahtarlarını almak için GroupDocs.Annotation for .NET'ten nasıl yararlanılacağını keşfedeceğiz.
 ## Önkoşullar

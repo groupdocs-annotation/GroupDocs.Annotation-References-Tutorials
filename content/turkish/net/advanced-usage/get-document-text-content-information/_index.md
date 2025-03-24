@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET ile belgelere sorunsuz bir şekilde a
 weight: 17
 url: /tr/net/advanced-usage/get-document-text-content-information/
 ---
+
+# Belge Metni İçeriği Bilgisini Al
+
 ## giriiş
 GroupDocs.Annotation for .NET, geliştiricilerin açıklama işlevlerini .NET uygulamalarına sorunsuz bir şekilde entegre etmelerine olanak tanıyan güçlü bir araçtır. İster bir belge yönetim sistemi, işbirliği platformu veya belge açıklaması gerektiren başka bir uygulama oluşturuyor olun, GroupDocs.Annotation for .NET, kapsamlı özellikleri ve kullanımı kolay API'si ile süreci basitleştirir.
 ## Önkoşullar

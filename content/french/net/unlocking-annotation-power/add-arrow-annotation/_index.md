@@ -6,6 +6,9 @@ description: Découvrez comment ajouter des annotations fléchées à vos docume
 weight: 11
 url: /fr/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Ajouter une annotation de flèche au document
+
 ## Introduction
 Dans ce didacticiel, nous vous guiderons tout au long du processus d'ajout d'annotations fléchées à vos documents à l'aide de GroupDocs.Annotation pour .NET. Les annotations fléchées sont utiles pour indiquer une direction ou souligner des éléments spécifiques dans un document.
 ## Conditions préalables

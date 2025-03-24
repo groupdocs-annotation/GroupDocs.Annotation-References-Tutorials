@@ -6,6 +6,9 @@ description: Pelajari cara menghapus anotasi dari PDF dan dokumen lain di .NET m
 weight: 14
 url: /id/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# Hapus Anotasi Menggunakan Opsi Simpan di .NET
+
 ## Perkenalan
 
 GroupDocs.Annotation for .NET adalah alat canggih yang memungkinkan pengembang menambahkan fungsionalitas anotasi ke aplikasi .NET mereka dengan mudah. Baik Anda sedang mengerjakan sistem manajemen dokumen, platform kolaborasi, atau aplikasi lain apa pun yang melibatkan pemrosesan dokumen, GroupDocs.Annotation menyediakan serangkaian fitur lengkap untuk membuat anotasi PDF dan format dokumen lainnya dengan lancar.

@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 PDF 문서에 텍스�
 weight: 23
 url: /ko/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# 문서에 텍스트 교정 주석 추가
+
 ## 소개
 문서에 텍스트 편집 주석을 추가하는 것은 중요한 정보를 안전하게 관리하는 데 있어 중요한 단계가 될 수 있습니다. .NET용 GroupDocs.Annotation은 이를 원활하게 달성할 수 있는 강력한 솔루션을 제공합니다. 이 튜토리얼에서는 문서에 텍스트 수정 주석을 추가하는 과정을 단계별로 안내합니다.
 ## 전제 조건

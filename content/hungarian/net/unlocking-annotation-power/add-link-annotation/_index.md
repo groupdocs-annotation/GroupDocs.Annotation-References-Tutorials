@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá hivatkozásokat a dokumentumokhoz 
 weight: 16
 url: /hu/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Hivatkozási megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 A Groupdocs.Annotation for .NET egy nagy teljesítményű könyvtár, amely lehetővé teszi a fejlesztők számára, hogy könnyedén integráljanak átfogó annotációs funkciókat .NET-alkalmazásaikba. Az egyik legfontosabb szolgáltatása az, hogy hivatkozási megjegyzéseket adhat a dokumentumokhoz, javítva az együttműködést és az interaktivitást.
 ## Előfeltételek

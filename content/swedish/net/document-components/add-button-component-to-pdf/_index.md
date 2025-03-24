@@ -6,6 +6,9 @@ description: Förbättra dina PDF-dokument med interaktiva knappkomponenter med 
 weight: 10
 url: /sv/net/document-components/add-button-component-to-pdf/
 ---
+
+# Lägg till knappkomponent till PDF-dokument
+
 ## Introduktion
 den här handledningen guidar vi dig genom processen att lägga till en knappkomponent till ett PDF-dokument med hjälp av Groupdocs.Annotation för .NET. Denna steg-för-steg-guide kommer att se till att du enkelt kan integrera den här funktionen i ditt projekt.
 ## Förutsättningar

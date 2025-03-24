@@ -6,6 +6,9 @@ description: Aprenda como anotar documentos programaticamente com Groupdocs.Anno
 weight: 10
 url: /pt/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
+
+# Carregar documento do Amazon S3
+
 ## Introdução
 Na era digital de hoje, a gestão de documentos é crucial tanto para empresas como para indivíduos. Groupdocs.Annotation for .NET fornece uma solução poderosa para anotar documentos de forma programática, permitindo que os desenvolvedores aprimorem a colaboração em documentos e simplifiquem os fluxos de trabalho. Neste tutorial, nos aprofundaremos nos fundamentos do uso do Groupdocs.Annotation for .NET, dividindo cada exemplo em várias etapas para guiá-lo perfeitamente pelo processo.
 ## Pré-requisitos

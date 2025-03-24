@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni di collegamento ai documenti uti
 weight: 16
 url: /it/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Aggiungi annotazione collegamento al documento
+
 ## introduzione
 Groupdocs.Annotation per .NET è una potente libreria che consente agli sviluppatori di integrare facilmente funzionalità di annotazione complete nelle loro applicazioni .NET. Una delle funzionalità principali che offre è la possibilità di aggiungere annotazioni di collegamento ai documenti, migliorando la collaborazione e l'interattività.
 ## Prerequisiti

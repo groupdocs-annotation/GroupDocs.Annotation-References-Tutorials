@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan integrálhatja zökkenőmentesen szövegmezős 
 weight: 21
 url: /hu/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Szövegmező megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Groupdocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy annotációs funkciókat könnyedén adják hozzá .NET-alkalmazásaikhoz. Függetlenül attól, hogy dokumentumkezelő rendszeren, együttműködési platformon vagy bármely olyan alkalmazáson dolgozik, ahol elengedhetetlen a dokumentumok megjegyzése, a Groupdocs.Annotation leegyszerűsíti a folyamatot átfogó szolgáltatáskészletével és intuitív API-jával.
 Ebben az oktatóanyagban a Groupdocs.Annotation for .NET egyik alapvető funkciójával foglalkozunk: szövegmező-annotáció hozzáadása a dokumentumhoz. Ennek a lépésenkénti útmutatónak a követésével megtanulhatja, hogyan integrálhatja zökkenőmentesen a szövegmezős megjegyzéseket .NET-alkalmazásaiba, javítva a felhasználói élményt és az együttműködési lehetőségeket.

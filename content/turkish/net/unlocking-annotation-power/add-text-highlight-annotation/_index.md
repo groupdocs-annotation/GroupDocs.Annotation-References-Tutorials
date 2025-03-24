@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak belgelere metin vurgulam
 weight: 22
 url: /tr/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Belgeye Metin Vurgu Açıklaması Ekleme
+
 ## giriiş
 Belge yönetimi ve işbirliği alanında GroupDocs.Annotation for .NET, geliştiricilerin metin vurgulama ek açıklamalarını uygulamalarına sorunsuz bir şekilde entegre etmelerine olanak tanıyan güçlü bir çözüm olarak ortaya çıkıyor. Bu öğretici, GroupDocs.Annotation for .NET kullanarak belgelere metin vurgulama ek açıklamaları ekleme konusunda kapsamlı bir kılavuz görevi görür. Adım adım talimatlar ve ayrıntılı açıklamalar sayesinde bu güçlü kütüphanenin yeteneklerinden yararlanma konusunda yeterlilik kazanacaksınız.
 ## Önkoşullar

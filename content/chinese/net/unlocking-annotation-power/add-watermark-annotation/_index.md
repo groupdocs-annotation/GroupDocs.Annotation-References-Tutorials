@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 轻松地将水印
 weight: 28
 url: /zh/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# 向文档添加水印注释
+
 ## 介绍
 在本教程中，我们将逐步介绍使用 GroupDocs.Annotation for .NET 向文档添加水印注释的过程。水印注释可用于指示文档的状态、将其标记为机密或添加任何其他相关信息。
 

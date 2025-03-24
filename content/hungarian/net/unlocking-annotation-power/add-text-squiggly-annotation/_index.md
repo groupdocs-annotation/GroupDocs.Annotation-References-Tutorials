@@ -6,6 +6,9 @@ description: Tanulja meg, hogyan adhat könnyedén szöveges, kacskaringós megj
 weight: 25
 url: /hu/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Szövegszerű megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 
 Groupdocs.Annotation for .NET egy sokoldalú könyvtár, amely lehetővé teszi a fejlesztők számára, hogy robusztus annotációs képességeket könnyedén integráljanak .NET-alkalmazásaikba. Akár PDF-ekkel, Word-dokumentumokkal vagy más népszerű fájlformátumokkal dolgozik, a Groupdocs.Annotation zökkenőmentes megoldást kínál a megjegyzések készítésére és a dokumentumokkal való együttműködés javítására.

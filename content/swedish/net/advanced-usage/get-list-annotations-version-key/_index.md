@@ -6,6 +6,9 @@ description: Förbättra dina .NET-applikationer med GroupDocs.Annotation för s
 weight: 18
 url: /sv/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Hämta lista över kommentarer med versionsnyckel
+
 ## Introduktion
 I en värld av .NET-utveckling är det viktigt att hantera och manipulera dokument effektivt. Oavsett om det gäller att kommentera PDF-filer, samarbeta i Word-dokument eller märka upp Excel-ark, kan de rätta verktygen effektivisera arbetsflöden och öka produktiviteten. GroupDocs.Annotation for .NET är ett sådant verktyg som ger utvecklare möjlighet att kommentera och manipulera dokument sömlöst i sina .NET-applikationer.
 ## Förutsättningar

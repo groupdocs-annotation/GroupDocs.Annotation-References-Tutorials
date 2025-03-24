@@ -6,6 +6,9 @@ description: Leer hoe u annotaties met tekstonderstrepingen aan documenten kunt 
 weight: 27
 url: /nl/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Voeg tekstonderstrepingsannotatie toe aan document
+
 ## Invoering
 In deze zelfstudie doorlopen we het proces van het toevoegen van een tekstonderstrepingsannotatie aan een document met behulp van GroupDocs.Annotation voor .NET. Annotaties met tekstonderstrepingen kunnen handig zijn om specifieke delen van een document te benadrukken, zoals belangrijke passages of belangrijke punten.
 ## Vereisten

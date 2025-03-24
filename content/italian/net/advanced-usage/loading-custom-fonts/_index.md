@@ -6,6 +6,9 @@ description: Scopri come caricare facilmente caratteri personalizzati in GroupDo
 weight: 20
 url: /it/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Caricamento di caratteri personalizzati
+
 ## introduzione
 GroupDocs.Annotation per .NET è una potente libreria che consente agli sviluppatori di aggiungere facilmente funzionalità di annotazione alle proprie applicazioni .NET. Una delle funzionalità chiave che offre è la possibilità di caricare caratteri personalizzati, consentendo una maggiore personalizzazione e flessibilità nell'annotazione dei documenti.
 ## Prerequisiti

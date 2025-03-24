@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá jelölőnégyzet-összetevőt PDF-
 weight: 11
 url: /hu/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Jelölőnégyzet-összetevő hozzáadása a PDF-dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük a jelölőnégyzet-összetevő PDF-dokumentumhoz való hozzáadásának folyamatán a Groupdocs.Annotation for .NET segítségével.
 ## Előfeltételek

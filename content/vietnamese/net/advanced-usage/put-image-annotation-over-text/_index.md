@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích hình ảnh trên văn bản tr
 weight: 21
 url: /vi/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Đặt chú thích hình ảnh lên văn bản
+
 ## Giới thiệu
 Trong thế giới phát triển .NET, GroupDocs.Annotation cung cấp một giải pháp mạnh mẽ để thêm chú thích vào tài liệu, giúp việc cộng tác và quản lý tài liệu hiệu quả hơn. Một yêu cầu chung là đặt chú thích hình ảnh lên trên văn bản, việc này có thể được thực hiện liền mạch bằng cách sử dụng GroupDocs.Annotation for .NET.
 ## Điều kiện tiên quyết

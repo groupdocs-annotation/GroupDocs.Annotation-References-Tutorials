@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 輕鬆地將文字
 weight: 24
 url: /zh-hant/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# 在文件中新增文字替換註釋
+
 ## 介紹
 在本教學中，我們將引導您完成使用 GroupDocs.Annotation for .NET 將文字取代註解新增至文件的流程。這個功能強大的庫允許開發人員以程式設計方式操作和註釋各種類型的文件。在本教程結束時，您將具備將文字替換註解無縫整合到 .NET 應用程式中的知識。
 ## 先決條件

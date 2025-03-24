@@ -6,6 +6,9 @@ description: Odemkněte plný potenciál anotací dokumentů v .NET s GroupDocs.
 weight: 26
 url: /cs/net/applying-licenses/
 ---
+
+# Uplatňování licencí
+
 ## Úvod
 
 Jste vývojář .NET a chcete vylepšit své možnosti anotací dokumentů? Už nehledejte! GroupDocs.Annotation for .NET poskytuje komplexní sadu nástrojů pro bezproblémovou integraci výkonných funkcí anotací do vašich aplikací. V tomto seznamu výukového programu vás provedeme různými metodami použití licencí, abychom odemkli plný potenciál GroupDocs.Annotation pro .NET.

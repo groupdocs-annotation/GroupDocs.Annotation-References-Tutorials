@@ -6,6 +6,9 @@ description: Pelajari cara menghapus balasan anotasi di .NET menggunakan GroupDo
 weight: 15
 url: /id/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# Hapus Balasan Anotasi di .NET
+
 ## Perkenalan
 Dalam tutorial ini, kita akan mempelajari cara menghapus balasan anotasi di .NET menggunakan GroupDocs.Annotation. GroupDocs.Annotation adalah perpustakaan .NET yang kuat yang memungkinkan pengembang membuat anotasi dokumen dengan mudah. Baik itu menambahkan komentar, menyorot teks, atau menambahkan stempel, GroupDocs.Annotation menyediakan seperangkat alat lengkap untuk anotasi dokumen.
 ## Prasyarat

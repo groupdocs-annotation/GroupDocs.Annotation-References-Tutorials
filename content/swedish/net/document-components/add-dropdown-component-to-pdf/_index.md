@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till rullgardinskomponenter till PDF-filer 
 weight: 12
 url: /sv/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Lägg till dropdown-komponent till PDF-dokument
+
 ## Introduktion
 GroupDocs.Annotation för .NET tillhandahåller en kraftfull uppsättning verktyg för att kommentera PDF-dokument programmatiskt. En användbar funktion är möjligheten att lägga till rullgardinskomponenter till PDF-dokument, vilket förbättrar deras interaktivitet och användbarhet.
 ## Förutsättningar

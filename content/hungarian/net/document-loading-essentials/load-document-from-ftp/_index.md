@@ -6,6 +6,9 @@ description: Bővítse .NET-alkalmazásait a GroupDocs.Annotation segítségéve
 weight: 12
 url: /hu/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# Dokumentum betöltése FTP-ről
+
 ## Bevezetés
 A GroupDocs.Annotation for .NET egy sokoldalú könyvtár, amelyet arra terveztek, hogy könnyedén megkönnyítse a .NET-alkalmazásokon belüli dokumentumjegyzetelési lehetőségeket. Akár PDF-ekkel, Microsoft Office dokumentumokkal, képekkel vagy más formátumokkal foglalkozik, ez a könyvtár egységes megoldást kínál megjegyzések, például megjegyzések, kiemelések és alakzatok hozzáadására az együttműködés és a dokumentumkezelés javítása érdekében.
 ## Előfeltételek

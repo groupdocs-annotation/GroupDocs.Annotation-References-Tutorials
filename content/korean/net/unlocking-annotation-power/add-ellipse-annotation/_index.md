@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET 문서에 타원 주석�
 weight: 13
 url: /ko/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# 문서에 타원 주석 추가
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 타원 주석을 추가하는 방법을 알아봅니다. 이 단계별 가이드는 각 단계를 명확하게 이해할 수 있도록 프로세스를 안내합니다.
 ## 전제 조건

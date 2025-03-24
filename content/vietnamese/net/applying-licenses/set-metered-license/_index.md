@@ -6,6 +6,9 @@ description: Tìm hiểu cách thiết lập giấy phép đo lường cho Group
 weight: 12
 url: /vi/net/applying-licenses/set-metered-license/
 ---
+
+# Đặt giấy phép đo lường
+
 ## Giới thiệu
 GroupDocs.Annotation dành cho .NET là một thư viện mạnh mẽ cho phép các nhà phát triển thêm khả năng chú thích tài liệu vào các ứng dụng .NET của họ một cách dễ dàng. Cho dù bạn đang xây dựng hệ thống quản lý tài liệu, nền tảng cộng tác hay bất kỳ ứng dụng nào liên quan đến việc xem xét và đánh dấu tài liệu, GroupDocs.Annotation dành cho .NET đều cung cấp một bộ công cụ toàn diện để hợp lý hóa quy trình.
 Trong hướng dẫn này, chúng ta sẽ đi sâu vào quá trình thiết lập giấy phép đo lường cho GroupDocs.Annotation .NET. Giấy phép có đồng hồ đo cho phép bạn chỉ trả tiền cho những tài nguyên bạn sử dụng, khiến giấy phép này trở thành giải pháp tiết kiệm chi phí cho các dự án ở mọi quy mô. Bằng cách làm theo các bước được nêu bên dưới, bạn sẽ có thể tích hợp liền mạch GroupDocs.Annotation vào ứng dụng .NET của mình trong khi tối ưu hóa việc sử dụng tài nguyên và duy trì kiểm soát ngân sách.

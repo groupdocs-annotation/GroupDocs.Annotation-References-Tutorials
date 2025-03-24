@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して、.NET でのドキュメン�
 weight: 26
 url: /ja/net/applying-licenses/
 ---
+
+# ライセンスの適用
+
 ## 導入
 
 あなたは、ドキュメントの注釈機能を強化したいと考えている .NET 開発者ですか?これ以上探さない！ GroupDocs.Annotation for .NET は、強力な注釈機能をアプリケーションにシームレスに統合するための包括的なツール スイートを提供します。このチュートリアル リストでは、GroupDocs.Annotation for .NET の可能性を最大限に引き出すためにライセンスを適用するさまざまな方法を説明します。

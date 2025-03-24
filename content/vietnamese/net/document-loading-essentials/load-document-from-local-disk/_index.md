@@ -6,6 +6,9 @@ description: Khai phá sức mạnh của chú thích tài liệu bằng GroupDo
 weight: 13
 url: /vi/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Tải tài liệu từ đĩa cục bộ
+
 ## Giới thiệu
 Khai phá tiềm năng của chú thích tài liệu chưa bao giờ dễ dàng hơn thế với GroupDocs.Annotation dành cho .NET. Công cụ mạnh mẽ này trao quyền cho các nhà phát triển tích hợp các tính năng chú thích mạnh mẽ một cách liền mạch vào các ứng dụng .NET của họ. Trong hướng dẫn toàn diện này, chúng tôi sẽ hướng dẫn bạn quy trình tận dụng GroupDocs.Annotation cho .NET để chú thích từng tài liệu. Cho dù bạn là nhà phát triển dày dạn kinh nghiệm hay mới bắt đầu, hướng dẫn này sẽ trang bị cho bạn kiến thức để nâng cao khả năng cộng tác trên tài liệu và hợp lý hóa quy trình làm việc của bạn.
 ## Điều kiện tiên quyết

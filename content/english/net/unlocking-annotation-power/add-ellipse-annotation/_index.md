@@ -6,6 +6,9 @@ description: Learn how to add ellipse annotations to documents in .NET using Gro
 weight: 13
 url: /net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Add Ellipse Annotation to Document
+
 ## Introduction
 In this tutorial, you'll learn how to add an ellipse annotation to a document using GroupDocs.Annotation for .NET. This step-by-step guide will walk you through the process, ensuring that you understand each step clearly.
 ## Prerequisites

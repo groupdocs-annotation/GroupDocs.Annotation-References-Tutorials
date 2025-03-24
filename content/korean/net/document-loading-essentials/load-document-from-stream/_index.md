@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET 문서에 손쉽게 주�
 weight: 14
 url: /ko/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# 스트림에서 문서 로드
+
 ## 소개
 .NET용 GroupDocs.Annotation은 개발자가 문서 주석 기능을 .NET 응용 프로그램에 쉽게 통합할 수 있도록 지원하는 강력한 라이브러리입니다. 문서 관리 시스템, 공동 작업 플랫폼 또는 e-러닝 응용 프로그램을 구축하는 경우 GroupDocs.Annotation은 PDF, Word 문서, Excel 시트 등에 주석을 달 수 있는 다양한 도구 세트를 제공합니다.
 ## 전제 조건

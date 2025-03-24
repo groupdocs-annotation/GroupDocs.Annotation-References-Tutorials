@@ -6,6 +6,9 @@ description: Leer hoe u doorgehaalde annotaties aan documenten kunt toevoegen me
 weight: 26
 url: /nl/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Voeg tekstdoorgehaalde annotatie toe aan document
+
 ## Invoering
 In deze zelfstudie onderzoeken we hoe u een doorgehaalde annotatie aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Deze bibliotheek biedt krachtige tools voor het annoteren van verschillende documenttypen, waardoor de samenwerking en documentbeoordelingsprocessen worden verbeterd.
 ## Vereisten

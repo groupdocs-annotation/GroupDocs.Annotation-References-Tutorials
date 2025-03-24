@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá képes megjegyzéseket a dokumentu
 weight: 15
 url: /hu/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Képannotáció hozzáadása a dokumentumhoz (távoli elérési út)
+
 ## Bevezetés
 Ebben az oktatóanyagban a GroupDocs.Annotation for .NET segítségével képjegyzetek dokumentumhoz való hozzáadásának folyamatát mutatjuk be. Ez a könyvtár hatékony eszközöket biztosít a különféle típusú dokumentumok programozott megjegyzéseinek rögzítéséhez.
 ## Előfeltételek

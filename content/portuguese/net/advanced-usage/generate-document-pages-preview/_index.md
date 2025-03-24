@@ -6,6 +6,9 @@ description: Aprenda como gerar visualização de páginas de documentos com efi
 weight: 12
 url: /pt/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Gerar visualização de páginas de documentos
+
 ## Introdução
 No domínio do gerenciamento e colaboração de documentos, GroupDocs.Annotation for .NET se destaca como uma ferramenta versátil. Quer você seja um desenvolvedor que deseja integrar recursos de anotação em seu aplicativo ou um usuário empresarial que busca uma colaboração eficiente de documentos, o GroupDocs.Annotation oferece uma solução abrangente. Este tutorial irá guiá-lo através do processo de geração de visualização de páginas de documentos usando GroupDocs.Annotation for .NET, dividindo cada etapa em partes de fácil digestão.
 ## Pré-requisitos

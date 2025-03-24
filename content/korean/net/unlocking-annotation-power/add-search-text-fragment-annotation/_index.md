@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation의 강력한 기능을 살펴보고 �
 weight: 20
 url: /ko/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# 문서에 검색 텍스트 조각 주석 추가
+
 ## 소개
 .NET 개발 영역에서 GroupDocs.Annotation은 문서에 원활하게 주석을 달기 위한 강력한 도구로 돋보입니다. 숙련된 개발자이거나 .NET의 세계에 입문한 사람이든 관계없이 이 포괄적인 튜토리얼은 네임스페이스 가져오기부터 검색 텍스트 조각 주석을 서류.
 ## 소개

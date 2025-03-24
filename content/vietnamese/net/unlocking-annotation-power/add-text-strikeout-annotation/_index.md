@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích gạch ngang văn bản vào t�
 weight: 26
 url: /vi/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Thêm chú thích gạch bỏ văn bản vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng ta sẽ khám phá cách thêm chú thích gạch ngang văn bản vào tài liệu bằng GroupDocs.Annotation cho .NET. Thư viện này cung cấp các công cụ mạnh mẽ để chú thích các loại tài liệu khác nhau, tăng cường quá trình cộng tác và xem xét tài liệu.
 ## Điều kiện tiên quyết

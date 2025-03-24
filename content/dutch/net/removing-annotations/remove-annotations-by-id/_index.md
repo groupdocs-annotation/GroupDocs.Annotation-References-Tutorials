@@ -6,6 +6,9 @@ description: Leer hoe u annotaties op ID kunt verwijderen met GroupDocs.Annotati
 weight: 11
 url: /nl/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Annotaties op ID verwijderen
+
 ## Invoering
 In deze zelfstudie leiden we u door het proces van het verwijderen van annotaties op basis van hun ID's met behulp van GroupDocs.Annotation voor .NET. Annotaties kunnen uw documenten onoverzichtelijk maken, en het selectief verwijderen ervan kan uw workflow stroomlijnen. We begeleiden u stap voor stap, zodat u elke fase duidelijk begrijpt.
 ## Vereisten

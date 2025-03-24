@@ -6,6 +6,9 @@ description: Tìm hiểu cách tải các phiên bản tài liệu có chú thí
 weight: 16
 url: /vi/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Đang tải phiên bản tài liệu có chú thích
+
 ## Giới thiệu
 Trong thời đại kỹ thuật số ngày nay, chú thích tài liệu đã trở thành một công cụ thiết yếu để cộng tác, đánh giá và phản hồi trong các ngành khác nhau. Cho dù bạn là nhà phát triển tích hợp các tính năng chú thích vào ứng dụng của mình hay người dùng đang tìm cách tận dụng những khả năng này, GroupDocs.Annotation dành cho .NET đều cung cấp một giải pháp mạnh mẽ. Trong hướng dẫn này, chúng ta sẽ đi sâu vào quá trình tải các phiên bản tài liệu có chú thích bằng GroupDocs.Annotation cho .NET.
 ## Điều kiện tiên quyết

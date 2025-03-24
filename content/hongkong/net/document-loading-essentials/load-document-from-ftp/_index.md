@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation 增強您的 .NET 應用程式以實現
 weight: 12
 url: /zh-hant/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# 從 FTP 載入文檔
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個多功能函式庫，旨在輕鬆促進 .NET 應用程式中的文件註解功能。無論您處理的是 PDF、Microsoft Office 文件、圖像還是其他格式，該程式庫都提供了用於新增註釋（例如註釋、突出顯示和形狀）的統一解決方案，以增強協作和文件管理。
 ## 先決條件

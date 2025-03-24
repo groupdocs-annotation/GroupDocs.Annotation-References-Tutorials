@@ -6,6 +6,9 @@ description: Verbeter de samenwerking aan documenten met Groupdocs.Annotation vo
 weight: 23
 url: /nl/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Stel de documentvoorbeeldresolutie in
+
 ## Invoering
 In het huidige digitale tijdperk zijn efficiënt documentbeheer en samenwerking van cruciaal belang voor zowel bedrijven als particulieren. Omdat er dagelijks een overvloed aan documenten circuleert, kan het garanderen van naadloze annotatie- en previewmogelijkheden de productiviteit aanzienlijk verhogen en de workflows stroomlijnen. Voer Groupdocs.Annotation for .NET in - een krachtige toolkit die is ontworpen om ontwikkelaars te voorzien van robuuste annotatiefunctionaliteiten voor verschillende documentformaten.
 ## Vereisten

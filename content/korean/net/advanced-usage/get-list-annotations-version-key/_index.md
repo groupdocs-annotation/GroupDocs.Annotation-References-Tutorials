@@ -6,6 +6,9 @@ description: 원활한 문서 주석을 위해 GroupDocs.Annotation을 사용하
 weight: 18
 url: /ko/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# 버전 키를 사용하여 주석 목록 가져오기
+
 ## 소개
 .NET 개발 세계에서는 문서를 효율적으로 관리하고 조작하는 것이 무엇보다 중요합니다. PDF에 주석을 달거나, Word 문서에서 공동 작업을 하거나, Excel 시트에 마크업을 하는 등 올바른 도구를 사용하면 작업 흐름을 간소화하고 생산성을 높일 수 있습니다. .NET용 GroupDocs.Annotation은 개발자가 .NET 응용 프로그램 내에서 문서에 원활하게 주석을 달고 조작할 수 있도록 지원하는 도구 중 하나입니다.
 ## 전제 조건

@@ -6,6 +6,9 @@ description: Pelajari cara menghapus anotasi dari dokumen PDF menggunakan Groupd
 weight: 10
 url: /id/net/removing-annotations/remove-annotations/
 ---
+
+# Hapus Anotasi di .NET
+
 ## Perkenalan
 Anotasi memainkan peran penting dalam pengelolaan dokumen digital, memungkinkan pengguna menyorot, mengomentari, dan menandai bagian penting dalam file. Namun, mungkin ada saatnya Anda perlu menghapus anotasi dari dokumen. Dalam tutorial ini, kita akan mempelajari cara menghapus anotasi di .NET menggunakan Groupdocs.Annotation, alat yang ampuh untuk anotasi dan manipulasi dokumen.
 ## Prasyarat

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 从 .NET 中的文档导入
 weight: 19
 url: /zh/net/advanced-usage/import-annotations-from-document/
 ---
+
+# 从文档导入注释
+
 ## 介绍
 在 .NET 开发领域，GroupDocs.Annotation 是一种将注释功能集成到应用程序中的多功能工具。无论您是想在文档上添加注释、突出显示文本还是绘制形状，GroupDocs.Annotation for .NET 都能提供全面的解决方案。本教程将指导您逐步完成使用 GroupDocs.Annotation 从文档导入注释的过程。
 ## 先决条件

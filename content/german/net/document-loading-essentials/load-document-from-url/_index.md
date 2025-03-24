@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie PDF-Dokumente mit GroupDocs.Annotation für .
 weight: 15
 url: /de/net/document-loading-essentials/load-document-from-url/
 ---
+
+# Dokument von URL laden
+
 ## Einführung
 GroupDocs.Annotation für .NET ist eine funktionsreiche Bibliothek, die es Entwicklern ermöglicht, ihren .NET-Anwendungen mühelos Annotationsfunktionen hinzuzufügen. Mit GroupDocs.Annotation können Sie PDF-Dokumente programmgesteuert mit Anmerkungen versehen, sodass Benutzer Text hervorheben, Kommentare hinzufügen, Formen zeichnen und mehr können. Dieses Tutorial führt Sie durch die Schritte zum Laden eines Dokuments von einer URL, zum Hinzufügen von Anmerkungen und zum Speichern des mit Anmerkungen versehenen Dokuments mithilfe von GroupDocs.Annotation für .NET.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 PDF 파일의 이미�
 weight: 10
 url: /ko/net/advanced-usage/change-image-quality/
 ---
+
+# 이미지 품질 변경
+
 ## 소개
 오늘날의 디지털 시대에 PDF 문서 내의 이미지 품질은 사용자 경험과 문서 가독성에 큰 영향을 미칠 수 있습니다. .NET 개발자를 위해 설계된 강력한 라이브러리인 .NET용 Groupdocs.Annotation을 사용하면 PDF 파일의 이미지 품질을 향상시키는 작업이 간단해집니다. 이 튜토리얼에서는 이 다용도 도구를 사용하여 이미지 품질을 향상시키는 단계별 프로세스를 살펴보겠습니다.
 ## 전제 조건

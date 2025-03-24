@@ -6,6 +6,9 @@ description: Découvrez comment ajouter des annotations de rédaction de texte a
 weight: 23
 url: /fr/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Ajouter une annotation de rédaction de texte au document
+
 ## Introduction
 L’ajout d’une annotation de rédaction de texte à un document peut être une étape cruciale dans la gestion sécurisée des informations sensibles. GroupDocs.Annotation pour .NET fournit une solution robuste pour y parvenir de manière transparente. Dans ce didacticiel, nous vous guiderons étape par étape tout au long du processus d'ajout d'une annotation de rédaction de texte à votre document.
 ## Conditions préalables

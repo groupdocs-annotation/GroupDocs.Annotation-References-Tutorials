@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して ID によって注釈
 weight: 11
 url: /ja/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# ID による注釈の削除
+
 ## 導入
 このチュートリアルでは、GroupDocs.Annotation for .NET を使用して、ID に基づいて注釈を削除するプロセスについて説明します。注釈はドキュメントを乱雑にする可能性があるため、注釈を選択して削除するとワークフローを合理化できます。各段階を明確に理解できるように、段階的にガイドします。
 ## 前提条件

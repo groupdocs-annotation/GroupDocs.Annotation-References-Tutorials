@@ -6,6 +6,9 @@ description: Zjistěte, jak přidat poznámky vzdálenosti k dokumentům pomocí
 weight: 12
 url: /cs/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Přidejte do dokumentu anotaci vzdálenosti
+
 ## Úvod
 V tomto tutoriálu se naučíte, jak přidat anotaci vzdálenosti k dokumentu pomocí GroupDocs.Annotation for .NET. Chcete-li provést úkol, postupujte takto:
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích hình mờ vào tài liệu c�
 weight: 28
 url: /vi/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Thêm chú thích hình mờ vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng ta sẽ tìm hiểu quy trình thêm chú thích hình mờ vào tài liệu bằng GroupDocs.Annotation cho .NET. Chú thích hình mờ rất hữu ích để cho biết trạng thái của tài liệu, đánh dấu tài liệu đó là bí mật hoặc thêm bất kỳ thông tin liên quan nào khác.
 

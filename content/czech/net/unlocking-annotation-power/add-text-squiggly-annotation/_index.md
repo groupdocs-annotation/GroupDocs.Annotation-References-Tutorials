@@ -6,6 +6,9 @@ description: Naučte se, jak bez námahy přidávat do dokumentů klikaté texto
 weight: 25
 url: /cs/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Přidejte do dokumentu klikatou textovou anotaci
+
 ## Úvod
 
 Groupdocs.Annotation for .NET je všestranná knihovna, která umožňuje vývojářům bez námahy integrovat robustní možnosti anotací do jejich aplikací .NET. Ať už pracujete s PDF, dokumenty Wordu nebo jinými oblíbenými formáty souborů, Groupdocs.Annotation poskytuje bezproblémové řešení pro přidávání poznámek a zlepšování spolupráce na dokumentech.

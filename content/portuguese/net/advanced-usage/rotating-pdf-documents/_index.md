@@ -6,6 +6,9 @@ description: Aprenda como girar documentos PDF sem esforço usando Groupdocs.Ann
 weight: 22
 url: /pt/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# Rotação de documentos PDF
+
 ## Introdução
 rotação de documentos PDF pode ser uma tarefa crucial ao lidar com arquivos que precisam ser visualizados ou processados de maneira diferente. Neste tutorial, exploraremos como girar documentos PDF passo a passo usando Groupdocs.Annotation for .NET.
 ## Pré-requisitos

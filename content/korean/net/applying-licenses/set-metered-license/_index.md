@@ -6,6 +6,9 @@ description: .NET 응용 프로그램의 리소스 사용 및 문서 주석 기�
 weight: 12
 url: /ko/net/applying-licenses/set-metered-license/
 ---
+
+# 측정 라이센스 설정
+
 ## 소개
 .NET용 GroupDocs.Annotation은 개발자가 .NET 응용 프로그램에 문서 주석 기능을 쉽게 추가할 수 있도록 지원하는 강력한 라이브러리입니다. 문서 관리 시스템, 공동 작업 플랫폼 또는 문서 검토 및 마크업과 관련된 응용 프로그램을 구축하는 경우 .NET용 GroupDocs.Annotation은 프로세스를 간소화하는 포괄적인 도구 세트를 제공합니다.
 이 자습서에서는 GroupDocs.Annotation .NET에 대한 계량 라이센스를 설정하는 과정을 자세히 살펴보겠습니다. 계량형 라이선스를 사용하면 소비한 리소스에 대해서만 비용을 지불할 수 있으므로 모든 규모의 프로젝트에 비용 효율적인 솔루션이 됩니다. 아래 설명된 단계를 따르면 리소스 사용을 최적화하고 예산 제어를 유지하면서 GroupDocs.Annotation을 .NET 응용 프로그램에 원활하게 통합할 수 있습니다.

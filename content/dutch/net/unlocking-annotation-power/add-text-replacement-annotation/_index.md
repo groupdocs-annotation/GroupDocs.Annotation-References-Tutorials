@@ -6,6 +6,9 @@ description: Leer hoe u moeiteloos tekstvervangende annotaties aan uw .NET-docum
 weight: 24
 url: /nl/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Voeg een annotatie voor tekstvervanging toe aan het document
+
 ## Invoering
 In deze zelfstudie begeleiden we u bij het toevoegen van een tekstvervangende annotatie aan uw documenten met behulp van GroupDocs.Annotation voor .NET. Met deze krachtige bibliotheek kunnen ontwikkelaars verschillende soorten documenten programmatisch manipuleren en annoteren. Aan het einde van deze zelfstudie beschikt u over de kennis om annotaties voor tekstvervanging naadloos te integreren in uw .NET-toepassingen.
 ## Vereisten

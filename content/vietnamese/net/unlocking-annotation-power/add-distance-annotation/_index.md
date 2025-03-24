@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm chú thích khoảng cách vào tài liệu
 weight: 12
 url: /vi/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Thêm chú thích khoảng cách vào tài liệu
+
 ## Giới thiệu
 Trong hướng dẫn này, bạn sẽ tìm hiểu cách thêm chú thích khoảng cách vào tài liệu bằng GroupDocs.Annotation cho .NET. Thực hiện theo các bước sau để hoàn thành nhiệm vụ:
 ## Điều kiện tiên quyết

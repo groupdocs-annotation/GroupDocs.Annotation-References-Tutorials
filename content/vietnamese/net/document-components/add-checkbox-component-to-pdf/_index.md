@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm Thành phần hộp kiểm vào tài liệu
 weight: 11
 url: /vi/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Thêm thành phần hộp kiểm vào tài liệu PDF
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm Thành phần hộp kiểm vào tài liệu PDF bằng Groupdocs.Annotation cho .NET.
 ## Điều kiện tiên quyết

@@ -6,6 +6,9 @@ description: Tingkatkan kolaborasi dan anotasi dokumen dalam aplikasi .NET mengg
 weight: 13
 url: /id/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Hasilkan Pratinjau tanpa Anotasi
+
 ## Perkenalan
 Di era digital saat ini, kolaborasi dokumen yang efisien adalah kunci produktivitas dan kesuksesan. Baik Anda mengerjakan proyek dengan anggota tim yang tersebar di seluruh dunia atau berkolaborasi dengan klien dalam kontrak penting, kemampuan untuk membuat anotasi dan meninjau dokumen dengan lancar sangatlah penting. Dengan GroupDocs.Annotation untuk .NET, Anda dapat meningkatkan kolaborasi dokumen Anda, memungkinkan anotasi, markup, dan peninjauan yang mudah langsung dalam aplikasi .NET Anda.
 ## Prasyarat

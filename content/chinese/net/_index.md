@@ -6,6 +6,9 @@ url: /zh/net/
 description: 通过我们的教程释放 GroupDocs.Annotation for .NET 的全部潜力。无缝集成、增强协作并简化工作流程。
 is_root: true
 ---
+
+# GroupDocs.Annotation for .NET 的教程和示例
+
 ## 介绍
 
 GroupDocs.Annotation for .NET 为开发人员提供了一个强大的平台，将强大的注释功能集成到他们的 .NET 应用程序中。无论您是初学者还是经验丰富的开发人员，我们的教程都涵盖了您需要了解的所有内容，以充分利用 GroupDocs.Annotation for .NET 的潜力。

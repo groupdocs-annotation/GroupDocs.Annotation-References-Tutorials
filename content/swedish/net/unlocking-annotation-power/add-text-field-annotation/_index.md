@@ -6,6 +6,9 @@ description: Lär dig hur du sömlöst integrerar textfältsanteckningar i dina 
 weight: 21
 url: /sv/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Lägg till textfältkommentar till dokument
+
 ## Introduktion
 Groupdocs.Annotation för .NET är ett kraftfullt verktyg som låter utvecklare lägga till anteckningsfunktioner till sina .NET-applikationer utan ansträngning. Oavsett om du arbetar med ett dokumenthanteringssystem, en samarbetsplattform eller någon applikation där dokumentkommentarer är avgörande, förenklar Groupdocs.Annotation processen med sin omfattande uppsättning funktioner och intuitiva API.
 I den här handledningen kommer vi att fördjupa oss i en av de grundläggande funktionerna i Groupdocs.Annotation för .NET: lägga till en textfältkommentar till ett dokument. Genom att följa den här steg-för-steg-guiden lär du dig hur du integrerar textfältsanteckningar sömlöst i dina .NET-applikationer, vilket förbättrar användarupplevelsen och samarbetsmöjligheterna.

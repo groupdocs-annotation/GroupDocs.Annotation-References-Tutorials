@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 거리 주�
 weight: 12
 url: /ko/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# 문서에 거리 주석 추가
+
 ## 소개
 이 튜토리얼에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 거리 주석을 추가하는 방법을 배웁니다. 작업을 완료하려면 다음 단계를 따르세요.
 ## 전제 조건

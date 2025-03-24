@@ -6,6 +6,9 @@ description: .NET で Groupdocs.Annotation を使用して PDF ドキュメン�
 weight: 10
 url: /ja/net/removing-annotations/remove-annotations/
 ---
+
+# .NET の注釈を削除する
+
 ## 導入
 注釈はデジタル文書管理において重要な役割を果たし、ユーザーがファイル内の重要なセクションを強調表示したり、コメントしたり、マークアップしたりできるようにします。ただし、ドキュメントから注釈を削除する必要が生じる場合もあります。このチュートリアルでは、ドキュメントの注釈と操作のための強力なツールである Groupdocs.Annotation を使用して .NET で注釈を削除する方法を説明します。
 ## 前提条件

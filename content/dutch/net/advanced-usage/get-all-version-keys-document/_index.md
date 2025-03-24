@@ -6,6 +6,9 @@ description: Leer hoe u alle versiesleutels van een document kunt ophalen met Gr
 weight: 16
 url: /nl/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Alle versiesleutels op document ophalen
+
 ## Invoering
 In de snelle digitale wereld van vandaag is effectief documentbeheer cruciaal voor zowel bedrijven als particulieren. Of u nu aan projecten samenwerkt, contracten beoordeelt of eenvoudigweg uw bestanden ordent, de juiste tools kunnen het verschil maken. GroupDocs.Annotation voor .NET biedt een uitgebreide oplossing voor het annoteren en manipuleren van documenten binnen .NET-toepassingen. In deze zelfstudie onderzoeken we hoe u GroupDocs.Annotation voor .NET kunt gebruiken om alle versiesleutels van een document op te halen.
 ## Vereisten

@@ -6,6 +6,9 @@ description: A GroupDocs.Annotation segítségével tárja fel a .NET dokumentum
 weight: 26
 url: /hu/net/applying-licenses/
 ---
+
+# Licencek alkalmazása
+
 ## Bevezetés
 
 Ön .NET-fejlesztő, aki szeretné javítani dokumentumannotációs képességeit? Ne keressen tovább! A GroupDocs.Annotation for .NET egy átfogó eszköztárat kínál a hatékony annotációs funkciók zökkenőmentes integrálásához az alkalmazásaiba. Ebben az oktatóanyagban végigvezetjük a licencek alkalmazásának különféle módszerein, hogy kiaknázhassa a GroupDocs.Annotation for .NET teljes potenciálját.

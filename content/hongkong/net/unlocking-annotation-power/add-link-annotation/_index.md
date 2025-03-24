@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 將連結註解新
 weight: 16
 url: /zh-hant/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# 在文件中新增連結註釋
+
 ## 介紹
 Groupdocs.Annotation for .NET 是一個功能強大的程式庫，使開發人員能夠輕鬆地將全面的註釋功能整合到他們的 .NET 應用程式中。它提供的關鍵功能之一是能夠為文件添加連結註釋，從而增強協作和互動性。
 ## 先決條件

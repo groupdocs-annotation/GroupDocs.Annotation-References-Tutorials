@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan kérheti le egy dokumentum összes verziókulcs
 weight: 16
 url: /hu/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Szerezze be a dokumentum összes verziókulcsát
+
 ## Bevezetés
 A mai rohanó digitális világban a hatékony dokumentumkezelés kulcsfontosságú a vállalkozások és magánszemélyek számára egyaránt. Akár projekteken dolgozik, akár szerződéseket tekint át, akár egyszerűen rendszerezi fájljait, a megfelelő eszközök birtokában mindent megtehet. A GroupDocs.Annotation for .NET átfogó megoldást kínál a .NET-alkalmazásokon belüli dokumentumok annotálására és kezelésére. Ebben az oktatóanyagban megvizsgáljuk, hogyan használhatja fel a GroupDocs.Annotation for .NET-et a dokumentum összes verziókulcsának lekéréséhez.
 ## Előfeltételek

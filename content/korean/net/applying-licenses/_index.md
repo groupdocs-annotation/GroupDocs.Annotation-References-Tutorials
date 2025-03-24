@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET에서 문서 주석의 �
 weight: 26
 url: /ko/net/applying-licenses/
 ---
+
+# 라이센스 적용
+
 ## 소개
 
 문서 주석 기능을 향상시키려는 .NET 개발자이신가요? 더 이상 보지 마세요! .NET용 GroupDocs.Annotation은 강력한 주석 기능을 응용 프로그램에 원활하게 통합할 수 있는 포괄적인 도구 모음을 제공합니다. 이 튜토리얼 목록에서는 .NET용 GroupDocs.Annotation의 잠재력을 최대한 활용하기 위해 라이센스를 적용하는 다양한 방법을 안내합니다.

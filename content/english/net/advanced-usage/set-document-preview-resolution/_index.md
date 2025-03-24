@@ -6,6 +6,9 @@ description: Elevate document collaboration with Groupdocs.Annotation for .NET s
 weight: 23
 url: /net/advanced-usage/set-document-preview-resolution/
 ---
+
+# Set Document Preview Resolution
+
 ## Introduction
 In today's digital age, efficient document management and collaboration are paramount for businesses and individuals alike. With the plethora of documents circulating daily, ensuring seamless annotation and preview capabilities can significantly enhance productivity and streamline workflows. Enter Groupdocs.Annotation for .NET - a powerful toolkit designed to empower developers with robust annotation functionalities for various document formats.
 ## Prerequisites

@@ -6,6 +6,9 @@ description: Learn how to seamlessly load custom fonts in GroupDocs.Annotation f
 weight: 20
 url: /net/advanced-usage/loading-custom-fonts/
 ---
+
+# Loading Custom Fonts
+
 ## Introduction
 GroupDocs.Annotation for .NET is a powerful library that enables developers to add annotation features to their .NET applications effortlessly. One of the key functionalities it offers is the ability to load custom fonts, allowing for enhanced customization and flexibility in document annotation.
 ## Prerequisites

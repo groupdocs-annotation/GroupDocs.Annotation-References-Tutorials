@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 將影像註解新
 weight: 14
 url: /zh-hant/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# 將圖像註釋新增至文件（本機路徑）
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個功能強大的程式庫，可讓開發人員以程式設計方式為文件添加各種類型的註解。在本教程中，我們將學習如何使用本機路徑向文件添加圖像註釋。
 ## 先決條件

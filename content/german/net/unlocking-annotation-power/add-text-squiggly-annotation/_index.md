@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit Groupdocs.Annotation für .NET mühelos T
 weight: 25
 url: /de/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu
+
 ## Einführung
 
 Groupdocs.Annotation für .NET ist eine vielseitige Bibliothek, die es Entwicklern ermöglicht, mühelos robuste Annotationsfunktionen in ihre .NET-Anwendungen zu integrieren. Ganz gleich, ob Sie mit PDFs, Word-Dokumenten oder anderen gängigen Dateiformaten arbeiten, Groupdocs.Annotation bietet eine nahtlose Lösung zum Kommentieren und Verbessern der Zusammenarbeit an Dokumenten.

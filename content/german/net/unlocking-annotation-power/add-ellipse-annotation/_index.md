@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation Ellipsenanm
 weight: 13
 url: /de/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Ellipsenanmerkung hinzu
+
 ## Einführung
 In diesem Tutorial erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET eine Ellipsenanmerkung zu einem Dokument hinzufügen. Diese Schritt-für-Schritt-Anleitung führt Sie durch den Prozess und stellt sicher, dass Sie jeden Schritt klar verstehen.
 ## Voraussetzungen

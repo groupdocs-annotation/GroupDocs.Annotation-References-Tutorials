@@ -6,6 +6,9 @@ description: Ulepsz swoje aplikacje .NET za pomocą GroupDocs.Annotation, aby m�
 weight: 18
 url: /pl/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Uzyskaj listę adnotacji przy użyciu klucza wersji
+
 ## Wstęp
 W świecie programowania .NET efektywne zarządzanie dokumentami i manipulowanie nimi jest sprawą najwyższej wagi. Niezależnie od tego, czy chodzi o dodawanie adnotacji do plików PDF, współpracę nad dokumentami programu Word, czy zaznaczanie arkuszy programu Excel, posiadanie odpowiednich narzędzi może usprawnić przepływ pracy i zwiększyć produktywność. GroupDocs.Annotation dla .NET to jedno z takich narzędzi, które umożliwia programistom łatwe dodawanie adnotacji i manipulowanie dokumentami w aplikacjach .NET.
 ## Warunki wstępne

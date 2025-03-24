@@ -6,6 +6,9 @@ description: Naučte se, jak snadno anotovat dokumenty v .NET pomocí GroupDocs.
 weight: 14
 url: /cs/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# Načíst dokument ze streamu
+
 ## Úvod
 GroupDocs.Annotation for .NET je výkonná knihovna, která umožňuje vývojářům bez námahy integrovat možnosti anotací dokumentů do jejich aplikací .NET. Ať už vytváříte systém správy dokumentů, platformu pro spolupráci nebo e-learningovou aplikaci, GroupDocs.Annotation poskytuje všestrannou sadu nástrojů pro anotování PDF, dokumentů Word, listů Excelu a dalších.
 ## Předpoklady

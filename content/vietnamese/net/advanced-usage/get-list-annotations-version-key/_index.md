@@ -6,6 +6,9 @@ description: Nâng cao các ứng dụng .NET của bạn với GroupDocs.Annota
 weight: 18
 url: /vi/net/advanced-usage/get-list-annotations-version-key/
 ---
+
+# Nhận danh sách chú thích bằng khóa phiên bản
+
 ## Giới thiệu
 Trong thế giới phát triển .NET, việc quản lý và thao tác tài liệu một cách hiệu quả là điều tối quan trọng. Cho dù đó là chú thích trên tệp PDF, cộng tác trên tài liệu Word hay đánh dấu trang tính Excel, việc có các công cụ phù hợp có thể hợp lý hóa quy trình làm việc và tăng năng suất. GroupDocs.Annotation for .NET là một trong những công cụ cho phép các nhà phát triển chú thích và thao tác tài liệu một cách liền mạch trong các ứng dụng .NET của họ.
 ## Điều kiện tiên quyết

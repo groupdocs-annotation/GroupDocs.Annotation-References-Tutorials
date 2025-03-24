@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till bildkommentarer till dokument med Grou
 weight: 15
 url: /sv/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---
+
+# Lägg till bildkommentar till dokument (fjärrsökväg)
+
 ## Introduktion
 I den här handledningen går vi igenom processen att lägga till bildkommentarer till ett dokument med GroupDocs.Annotation för .NET. Detta bibliotek tillhandahåller kraftfulla verktyg för att annotera olika typer av dokument programmatiskt.
 ## Förutsättningar

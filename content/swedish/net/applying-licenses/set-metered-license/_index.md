@@ -6,6 +6,9 @@ description: Lär dig hur du ställer in en uppmätt licens för GroupDocs.Annot
 weight: 12
 url: /sv/net/applying-licenses/set-metered-license/
 ---
+
+# Ställ in mätlicens
+
 ## Introduktion
 GroupDocs.Annotation for .NET är ett kraftfullt bibliotek som ger utvecklare möjlighet att lägga till dokumentkommentarfunktioner till sina .NET-applikationer utan ansträngning. Oavsett om du bygger ett dokumenthanteringssystem, en samarbetsplattform eller någon applikation som involverar dokumentgranskning och uppmärkning, tillhandahåller GroupDocs.Annotation för .NET en omfattande uppsättning verktyg för att effektivisera processen.
 I den här handledningen kommer vi att fördjupa oss i processen för att ställa in en uppmätt licens för GroupDocs.Annotation .NET. En mätlicens tillåter dig att endast betala för de resurser du förbrukar, vilket gör det till en kostnadseffektiv lösning för projekt av alla skala. Genom att följa stegen som beskrivs nedan kommer du att sömlöst kunna integrera GroupDocs.Annotation i din .NET-applikation samtidigt som du optimerar resursanvändningen och bibehåller budgetkontrollen.

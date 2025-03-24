@@ -6,6 +6,9 @@ description: Pelajari cara memutar dokumen PDF dengan mudah menggunakan Groupdoc
 weight: 22
 url: /id/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# Memutar Dokumen PDF
+
 ## Perkenalan
 Memutar dokumen PDF bisa menjadi tugas penting ketika menangani file yang perlu dilihat atau diproses secara berbeda. Dalam tutorial ini, kita akan mempelajari cara memutar dokumen PDF langkah demi langkah menggunakan Groupdocs.Annotation untuk .NET.
 ## Prasyarat

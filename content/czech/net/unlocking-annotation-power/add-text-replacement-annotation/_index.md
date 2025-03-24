@@ -6,6 +6,9 @@ description: Naučte se, jak do dokumentů .NET snadno přidávat anotace nahraz
 weight: 24
 url: /cs/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Přidejte do dokumentu anotaci nahrazující text
+
 ## Úvod
 V tomto tutoriálu vás provedeme procesem přidávání anotace nahrazování textu do vašich dokumentů pomocí GroupDocs.Annotation for .NET. Tato výkonná knihovna umožňuje vývojářům programově manipulovat a anotovat různé typy dokumentů. Na konci tohoto kurzu budete vybaveni znalostmi pro bezproblémovou integraci anotací nahrazujících text do vašich aplikací .NET.
 ## Předpoklady

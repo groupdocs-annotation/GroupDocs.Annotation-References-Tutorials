@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET ile belgeye açıklama eklemenin güc
 weight: 13
 url: /tr/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Belgeyi Yerel Diskten Yükle
+
 ## giriiş
 GroupDocs.Annotation for .NET ile belgeye açıklama eklemenin potansiyelini açığa çıkarmak hiç bu kadar kolay olmamıştı. Bu güçlü araç, geliştiricilerin sağlam açıklama özelliklerini .NET uygulamalarına sorunsuz bir şekilde entegre etmelerine olanak tanır. Bu kapsamlı kılavuzda, belgelere adım adım açıklama eklemek için GroupDocs.Annotation for .NET'ten yararlanma sürecinde size yol göstereceğiz. İster deneyimli bir geliştirici olun ister yeni başlıyor olun, bu eğitim sizi belgelerde işbirliğini geliştirecek ve iş akışınızı kolaylaştıracak bilgilerle donatacaktır.
 ## Önkoşullar

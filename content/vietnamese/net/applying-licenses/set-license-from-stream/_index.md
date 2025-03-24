@@ -6,6 +6,9 @@ description: Khai phá toàn bộ tiềm năng của chú thích tài liệu tro
 weight: 11
 url: /vi/net/applying-licenses/set-license-from-stream/
 ---
+
+# Đặt giấy phép từ luồng
+
 ## Giới thiệu
 Chào mừng bạn đến với hướng dẫn toàn diện về cách sử dụng GroupDocs.Annotation cho .NET để nâng cao khả năng chú thích tài liệu của bạn. Cho dù bạn là nhà phát triển dày dạn kinh nghiệm hay mới bắt đầu, hướng dẫn này sẽ hướng dẫn bạn từng bước, đảm bảo bạn khai thác toàn bộ tiềm năng của công cụ mạnh mẽ này.
 ## Điều kiện tiên quyết

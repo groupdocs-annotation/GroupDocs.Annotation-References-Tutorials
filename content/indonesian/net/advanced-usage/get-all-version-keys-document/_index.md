@@ -6,6 +6,9 @@ description: Pelajari cara mengambil semua kunci versi pada dokumen menggunakan 
 weight: 16
 url: /id/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Dapatkan Semua Kunci Versi di Dokumen
+
 ## Perkenalan
 Di dunia digital yang serba cepat saat ini, pengelolaan dokumen yang efektif sangat penting bagi bisnis dan individu. Baik Anda berkolaborasi dalam proyek, meninjau kontrak, atau sekadar mengatur file, memiliki alat yang tepat dapat membuat perbedaan besar. GroupDocs.Annotation untuk .NET menawarkan solusi komprehensif untuk membuat anotasi dan memanipulasi dokumen dalam aplikasi .NET. Dalam tutorial ini, kita akan mempelajari cara memanfaatkan GroupDocs.Annotation untuk .NET untuk mengambil semua kunci versi pada dokumen.
 ## Prasyarat

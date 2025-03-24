@@ -6,6 +6,9 @@ description: Tingkatkan kolaborasi dokumen Anda dengan Groupdocs.Annotation untu
 weight: 10
 url: /id/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Tambahkan Anotasi Area ke Dokumen
+
 ## Perkenalan
 Dalam tutorial ini, kami akan memandu Anda melalui proses menambahkan anotasi area ke dokumen menggunakan Groupdocs.Annotation untuk .NET. Anotasi area adalah fitur berharga yang memungkinkan pengguna menyorot area tertentu pada dokumen, memberikan kejelasan dan konteks pada konten.
 ## Prasyarat

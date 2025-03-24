@@ -6,6 +6,9 @@ description: Naučte se, jak anotovat dokumenty v .NET pomocí GroupDocs.Annotat
 weight: 11
 url: /cs/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Načíst dokument z Azure
+
 ## Úvod
 V oblasti správy dokumentů a spolupráce se GroupDocs.Annotation for .NET ukazuje jako robustní řešení, které umožňuje bezproblémové funkce anotací a značek v aplikacích .NET. Tento výukový program se ponoří do složitosti využití GroupDocs.Annotation pro .NET k anotaci dokumentů a nabízí podrobné pokyny od nezbytných předpokladů až po pokročilé použití.
 ## Předpoklady

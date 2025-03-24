@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 PDF에 점 주석을 �
 weight: 17
 url: /ko/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# 문서에 점 주석 추가
+
 ## 소개
 .NET용 GroupDocs.Annotation은 개발자가 프로그래밍 방식으로 문서에 다양한 유형의 주석을 추가할 수 있는 강력한 도구입니다. 이 튜토리얼에서는 C#을 사용하여 문서에 점 주석을 추가하는 방법에 중점을 둘 것입니다.
 ## 전제 조건

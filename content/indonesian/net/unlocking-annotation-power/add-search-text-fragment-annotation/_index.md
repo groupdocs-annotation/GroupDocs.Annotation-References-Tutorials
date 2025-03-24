@@ -6,6 +6,9 @@ description: Jelajahi kecanggihan GroupDocs.Annotation untuk .NET dan tambahkan 
 weight: 20
 url: /id/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Tambahkan Anotasi Fragmen Teks Pencarian ke Dokumen
+
 ## Perkenalan
 Dalam bidang pengembangan .NET, GroupDocs.Annotation menonjol sebagai alat yang ampuh untuk membuat anotasi dokumen dengan lancar. Baik Anda seorang pengembang berpengalaman atau baru saja memasuki dunia .NET, tutorial komprehensif ini akan memandu Anda memahami esensi penggunaan GroupDocs.Annotation untuk .NET, mulai dari mengimpor namespace hingga menguasai seluk-beluk menambahkan anotasi fragmen teks pencarian ke dokumen.
 ## Perkenalan

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET にカスタム フォントをシー
 weight: 20
 url: /ja/net/advanced-usage/loading-custom-fonts/
 ---
+
+# カスタムフォントのロード
+
 ## 導入
 GroupDocs.Annotation for .NET は、開発者が注釈機能を .NET アプリケーションに簡単に追加できるようにする強力なライブラリです。これが提供する重要な機能の 1 つは、カスタム フォントを読み込む機能であり、これにより、ドキュメントの注釈のカスタマイズと柔軟性が強化されます。
 ## 前提条件

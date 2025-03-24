@@ -6,6 +6,9 @@ description: Sorunsuz belge açıklaması için .NET uygulamalarınızı GroupDo
 weight: 12
 url: /tr/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# Belgeyi FTP'den Yükle
+
 ## giriiş
 GroupDocs.Annotation for .NET, .NET uygulamaları içindeki belge açıklama yeteneklerini zahmetsizce kolaylaştırmak için tasarlanmış çok yönlü bir kitaplıktır. İster PDF'ler, Microsoft Office belgeleri, resimler veya diğer formatlarla çalışıyor olun, bu kitaplık, işbirliğini ve belge yönetimini geliştirmek amacıyla yorumlar, vurgular ve şekiller gibi ek açıklamalar eklemek için birleşik bir çözüm sunar.
 ## Önkoşullar

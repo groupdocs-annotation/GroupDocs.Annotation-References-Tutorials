@@ -6,6 +6,9 @@ description: Lär dig hur du tar bort kommentarer från PDF och andra dokument i
 weight: 14
 url: /sv/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# Ta bort anteckningar med hjälp av sparaalternativ i .NET
+
 ## Introduktion
 
 GroupDocs.Annotation for .NET är ett kraftfullt verktyg som gör det möjligt för utvecklare att lägga till anteckningsfunktionalitet till sina .NET-applikationer med lätthet. Oavsett om du arbetar med ett dokumenthanteringssystem, en samarbetsplattform eller någon annan applikation som involverar dokumentbearbetning, tillhandahåller GroupDocs.Annotation en omfattande uppsättning funktioner för att sömlöst kommentera PDF och andra dokumentformat.

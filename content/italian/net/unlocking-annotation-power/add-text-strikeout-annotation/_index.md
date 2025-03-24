@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni di testo barrate ai documenti ut
 weight: 26
 url: /it/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Aggiungi annotazione di testo barrato al documento
+
 ## introduzione
 In questo tutorial esploreremo come aggiungere un'annotazione di testo barrato a un documento utilizzando GroupDocs.Annotation per .NET. Questa libreria fornisce potenti strumenti per annotare vari tipi di documenti, migliorando la collaborazione e i processi di revisione dei documenti.
 ## Prerequisiti

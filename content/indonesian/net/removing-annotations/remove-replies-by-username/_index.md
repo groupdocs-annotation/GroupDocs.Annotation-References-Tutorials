@@ -6,6 +6,9 @@ description: Pelajari cara membuat anotasi dokumen dengan lancar menggunakan Gro
 weight: 17
 url: /id/net/removing-annotations/remove-replies-by-username/
 ---
+
+# Hapus Balasan berdasarkan Nama Pengguna di .NET
+
 ## Perkenalan
 Groupdocs.Annotation for .NET adalah alat yang ampuh untuk membuat anotasi dokumen dengan lancar dalam aplikasi .NET Anda. Baik Anda bekerja dengan PDF, dokumen Word, atau format file lain yang didukung, pustaka ini menyederhanakan proses penambahan anotasi, sorotan, dan komentar, sehingga meningkatkan kemampuan kolaborasi dan manajemen dokumen.
 ## Prasyarat

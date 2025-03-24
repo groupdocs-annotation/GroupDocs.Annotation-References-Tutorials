@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET 문서에서 주석을 �
 weight: 19
 url: /ko/net/advanced-usage/import-annotations-from-document/
 ---
+
+# 문서에서 주석 가져오기
+
 ## 소개
 .NET 개발 영역에서 GroupDocs.Annotation은 주석 기능을 응용 프로그램에 통합하기 위한 다목적 도구입니다. 문서에 설명을 추가하거나 텍스트를 강조 표시하거나 도형을 그리려는 경우 .NET용 GroupDocs.Annotation은 포괄적인 솔루션을 제공합니다. 이 튜토리얼에서는 GroupDocs.Annotation을 사용하여 문서에서 주석을 가져오는 과정을 단계별로 안내합니다.
 ## 전제 조건

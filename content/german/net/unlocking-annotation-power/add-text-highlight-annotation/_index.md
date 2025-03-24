@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET T
 weight: 22
 url: /de/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Texthervorhebungsanmerkung hinzu
+
 ## Einführung
 Im Bereich der Dokumentenverwaltung und -zusammenarbeit erweist sich GroupDocs.Annotation für .NET als robuste Lösung, die es Entwicklern ermöglicht, Texthervorhebungsanmerkungen nahtlos in ihre Anwendungen zu integrieren. Dieses Tutorial dient als umfassende Anleitung zum Hinzufügen von Texthervorhebungsanmerkungen zu Dokumenten mithilfe von GroupDocs.Annotation für .NET. Durch Schritt-für-Schritt-Anleitungen und ausführliche Erklärungen werden Sie in der Lage sein, die Möglichkeiten dieser leistungsstarken Bibliothek zu nutzen.
 ## Voraussetzungen

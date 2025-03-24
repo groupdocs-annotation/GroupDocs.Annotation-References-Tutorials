@@ -6,6 +6,9 @@ description: Verbeter de samenwerking en annotatie aan documenten binnen .NET-to
 weight: 13
 url: /nl/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Genereer een voorbeeld zonder annotaties
+
 ## Invoering
 In het huidige digitale tijdperk is efficiënte samenwerking aan documenten de sleutel tot productiviteit en succes. Of u nu aan een project werkt met teamleden verspreid over de hele wereld of samenwerkt met klanten aan belangrijke contracten, de mogelijkheid om documenten naadloos te annoteren en te beoordelen is van cruciaal belang. Met GroupDocs.Annotation voor .NET kunt u uw samenwerking aan documenten naar een hoger niveau tillen, waardoor u eenvoudig annotaties, markeringen en beoordelingen rechtstreeks binnen uw .NET-toepassingen kunt maken.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Fokozza a dokumentumok együttműködését a Groupdocs.Annotation 
 weight: 10
 url: /hu/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# Területi megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük a Groupdocs.Annotation for .NET használatával területi megjegyzések hozzáadásának folyamatán. A területi megjegyzések értékes funkció, amely lehetővé teszi a felhasználók számára, hogy kiemeljék a dokumentum bizonyos területeit, egyértelművé és kontextusba helyezve a tartalmat.
 ## Előfeltételek

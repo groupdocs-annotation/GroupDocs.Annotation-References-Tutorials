@@ -6,6 +6,9 @@ description: GroupDocs.Annotation を使用して .NET で複数の注釈を効�
 weight: 12
 url: /ja/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# .NET での複数の注釈の削除
+
 ## 導入
 注釈は文書管理において重要な役割を果たし、コラボレーションとコミュニケーションを強化します。ただし、.NET アプリケーション内で複数の注釈を効率的に削除する必要がある場合があります。このチュートリアルでは、GroupDocs.Annotation for .NET を使用してこれを実現する方法を詳しく説明します。始めましょう！
 ## 前提条件

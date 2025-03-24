@@ -6,6 +6,9 @@ description: Scopri come integrare perfettamente le funzionalità di annotazione
 weight: 14
 url: /it/net/advanced-usage/generate-preview-without-comments/
 ---
+
+# Genera anteprima senza commenti
+
 ## introduzione
 GroupDocs.Annotation per .NET è un potente strumento che consente agli sviluppatori di incorporare funzionalità di annotazione nelle proprie applicazioni .NET senza problemi. Che tu stia lavorando su un sistema di gestione dei documenti, una piattaforma di collaborazione o qualsiasi altra applicazione che richieda funzionalità di annotazione dei documenti, GroupDocs.Annotation fornisce un set completo di strumenti per migliorare la funzionalità della tua applicazione.
 ## Prerequisiti

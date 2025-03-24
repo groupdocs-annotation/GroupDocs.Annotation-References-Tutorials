@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 將文字反白顯
 weight: 22
 url: /zh-hant/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# 在文件中新增文字突出顯示註釋
+
 ## 介紹
 在文件管理和協作領域，GroupDocs.Annotation for .NET 作為一個強大的解決方案出現，使開發人員能夠將文字突出顯示註釋無縫整合到他們的應用程式中。本教學課程作為使用 GroupDocs.Annotation for .NET 為文件新增文字突出顯示註解的綜合指南。透過逐步說明和詳細解釋，您將能夠熟練地利用這個強大的庫的功能。
 ## 先決條件

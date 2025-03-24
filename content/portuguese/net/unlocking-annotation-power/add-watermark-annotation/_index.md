@@ -6,6 +6,9 @@ description: Aprenda como adicionar anotações de marca d'água aos seus docume
 weight: 28
 url: /pt/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Adicionar anotação de marca d'água ao documento
+
 ## Introdução
 Neste tutorial, percorreremos o processo de adição de uma anotação de marca d’água a um documento usando GroupDocs.Annotation for .NET. As anotações de marca d'água são úteis para indicar o status de um documento, marcá-lo como confidencial ou adicionar qualquer outra informação relevante.
 

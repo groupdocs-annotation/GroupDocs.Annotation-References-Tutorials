@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodać adnotację punktu do plików PDF za pomoc�
 weight: 17
 url: /pl/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# Dodaj adnotację punktową do dokumentu
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to potężne narzędzie, które pozwala programistom programowo dodawać różne typy adnotacji do dokumentów. W tym samouczku skupimy się na dodaniu adnotacji punktu do dokumentu przy użyciu języka C#.
 ## Warunki wstępne

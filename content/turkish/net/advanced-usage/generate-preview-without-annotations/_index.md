@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak .NET uygulamaları için
 weight: 13
 url: /tr/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Ek Açıklamalar Olmadan Önizleme Oluştur
+
 ## giriiş
 Günümüzün dijital çağında, belgeler üzerinde verimli işbirliği, üretkenliğin ve başarının anahtarıdır. İster dünyanın dört bir yanına dağılmış ekip üyeleriyle bir proje üzerinde çalışıyor olun ister müşterilerle önemli sözleşmeler üzerinde işbirliği yapıyor olun, belgelere sorunsuz bir şekilde açıklama ekleme ve inceleme yeteneği çok önemlidir. GroupDocs.Annotation for .NET ile belge işbirliğinizi bir sonraki düzeye taşıyabilir, doğrudan .NET uygulamalarınız içinde kolay açıklama ekleme, işaretleme ve inceleme olanağı sağlayabilirsiniz.
 ## Önkoşullar

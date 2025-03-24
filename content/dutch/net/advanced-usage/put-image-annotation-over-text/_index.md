@@ -6,6 +6,9 @@ description: Leer hoe u beeldannotaties over tekst in .NET kunt toevoegen met Gr
 weight: 21
 url: /nl/net/advanced-usage/put-image-annotation-over-text/
 ---
+
+# Plaats beeldannotatie over tekst
+
 ## Invoering
 In de wereld van .NET-ontwikkeling biedt GroupDocs.Annotation een krachtige oplossing voor het toevoegen van annotaties aan documenten, waardoor samenwerking en documentbeheer efficiënter worden. Een veel voorkomende vereiste is het plaatsen van beeldannotaties over tekst, wat naadloos kan worden gerealiseerd met behulp van GroupDocs.Annotation voor .NET.
 ## Vereisten

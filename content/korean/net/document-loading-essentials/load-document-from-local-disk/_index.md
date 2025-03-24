@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서 주석의 강�
 weight: 13
 url: /ko/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# 로컬 디스크에서 문서 로드
+
 ## 소개
 .NET용 GroupDocs.Annotation을 사용하면 문서 주석의 잠재력을 활용하는 것이 그 어느 때보다 쉬워졌습니다. 이 강력한 도구를 사용하면 개발자는 강력한 주석 기능을 .NET 애플리케이션에 원활하게 통합할 수 있습니다. 이 종합 가이드에서는 .NET용 GroupDocs.Annotation을 활용하여 문서에 주석을 추가하는 과정을 단계별로 안내합니다. 숙련된 개발자이든 이제 막 시작하는 개발자이든 이 튜토리얼을 통해 문서 공동 작업을 향상하고 작업 흐름을 간소화하는 데 필요한 지식을 얻을 수 있습니다.
 ## 전제 조건

@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET を使用して PDF ファイルの�
 weight: 10
 url: /ja/net/advanced-usage/change-image-quality/
 ---
+
+# 画質を変更する
+
 ## 導入
 今日のデジタル時代では、PDF ドキュメント内の画像の品質は、ユーザー エクスペリエンスとドキュメントの読みやすさに大きな影響を与える可能性があります。 .NET 開発者向けに設計された強力なライブラリである Groupdocs.Annotation for .NET を使用すると、PDF ファイルの画質を向上させることが簡単な作業になります。このチュートリアルでは、この多用途ツールを使用して画質を向上させるプロセスを段階的に詳しく説明します。
 ## 前提条件

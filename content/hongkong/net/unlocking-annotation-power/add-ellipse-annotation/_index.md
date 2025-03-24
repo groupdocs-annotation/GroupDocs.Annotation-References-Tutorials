@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 在 .NET 中新增橢圓註
 weight: 13
 url: /zh-hant/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# 在文件中新增橢圓註釋
+
 ## 介紹
 在本教學中，您將學習如何使用 GroupDocs.Annotation for .NET 將橢圓註解新增至文件中。本逐步指南將引導您完成整個過程，確保您清楚地理解每個步驟。
 ## 先決條件

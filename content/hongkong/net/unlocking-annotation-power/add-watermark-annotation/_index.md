@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 輕鬆地將浮水
 weight: 28
 url: /zh-hant/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# 在文件中添加浮水印註釋
+
 ## 介紹
 在本教學中，我們將逐步介紹使用 GroupDocs.Annotation for .NET 在文件中新增浮水印註解的過程。水印註釋可用於指示文件的狀態、將其標記為機密或新增任何其他相關資訊。
 

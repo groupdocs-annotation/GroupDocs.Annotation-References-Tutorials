@@ -6,6 +6,9 @@ description: A GroupDocs.Annotation segítségével tárja fel a .NET dokumentum
 weight: 11
 url: /hu/net/applying-licenses/set-license-from-stream/
 ---
+
+# Licenc beállítása a Streamből
+
 ## Bevezetés
 Üdvözöljük a GroupDocs.Annotation for .NET használatáról szóló átfogó útmutatóban, amellyel javíthatja dokumentumannotálási képességeit. Akár tapasztalt fejlesztő, akár csak most kezdi, ez az oktatóanyag végigvezeti Önt minden lépésen, és biztosítja, hogy teljes mértékben kiaknázhassa e hatékony eszközben rejlő lehetőségeket.
 ## Előfeltételek

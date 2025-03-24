@@ -6,6 +6,9 @@ description: 通过 GroupDocs.Annotation 教程了解如何在 .NET 中有效管
 weight: 25
 url: /zh/net/removing-annotations/
 ---
+
+# 删除注释
+
 ## 介绍
 
 您是否希望简化 .NET 中的文档管理流程？ GroupDocs.Annotation 提供了一套全面的教程来帮助您无缝删除注释。注释在文档协作和审阅过程中发挥着至关重要的作用。但是，在某些情况下，由于修订、错误或更新，有必要删除注释。在本系列教程中，我们深入研究了使用 GroupDocs.Annotation for .NET 有效删除注释的各种方法和技术。

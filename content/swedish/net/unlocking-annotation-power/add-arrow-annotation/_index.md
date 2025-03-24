@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till pilkommentarer till dina dokument med 
 weight: 11
 url: /sv/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Lägg till pilkommentar i dokumentet
+
 ## Introduktion
 I den här handledningen guidar vi dig genom processen att lägga till pilkommentarer till dina dokument med GroupDocs.Annotation för .NET. Pilkommentarer är användbara för att indikera riktning eller peka ut specifika element i ett dokument.
 ## Förutsättningar

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 检索文档上的
 weight: 16
 url: /zh/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# 获取文档上的所有版本密钥
+
 ## 介绍
 在当今快节奏的数字世界中，有效的文档管理对于企业和个人都至关重要。无论您是在项目上进行协作、审查合同还是只是组织文件，拥有正确的工具都可以发挥重要作用。 GroupDocs.Annotation for .NET 提供了用于在 .NET 应用程序中注释和操作文档的全面解决方案。在本教程中，我们将探讨如何利用 GroupDocs.Annotation for .NET 检索文档上的所有版本密钥。
 ## 先决条件

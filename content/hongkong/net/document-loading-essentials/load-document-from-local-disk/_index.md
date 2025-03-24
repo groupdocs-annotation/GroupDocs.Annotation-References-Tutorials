@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation for .NET 釋放文件註解的強大功
 weight: 13
 url: /zh-hant/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# 從本機磁碟載入文檔
+
 ## 介紹
 使用 GroupDocs.Annotation for .NET 釋放文件註解的潛力從未如此簡單。這個強大的工具使開發人員能夠將強大的註釋功能無縫整合到他們的 .NET 應用程式中。在這份綜合指南中，我們將引導您逐步完成利用 GroupDocs.Annotation for .NET 來註解文件的流程。無論您是經驗豐富的開發人員還是新手，本教學都將為您提供增強文件協作和簡化工作流程的知識。
 ## 先決條件

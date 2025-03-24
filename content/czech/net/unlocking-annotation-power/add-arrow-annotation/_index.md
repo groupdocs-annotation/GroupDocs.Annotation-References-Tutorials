@@ -6,6 +6,9 @@ description: Naučte se přidávat do dokumentů anotace pomocí šipek pomocí 
 weight: 11
 url: /cs/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Přidejte do dokumentu anotaci se šipkou
+
 ## Úvod
 V tomto tutoriálu vás provedeme procesem přidávání anotací šipek do dokumentů pomocí GroupDocs.Annotation for .NET. Šipkové anotace jsou užitečné pro určování směru nebo ukazování na konkrétní prvky v dokumentu.
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos k
 weight: 16
 url: /de/net/document-loading-essentials/loading-annotated-document-version/
 ---
+
+# Version des kommentierten Dokuments wird geladen
+
 ## Einführung
 Im heutigen digitalen Zeitalter ist die Annotation von Dokumenten in verschiedenen Branchen zu einem unverzichtbaren Werkzeug für die Zusammenarbeit, Überprüfung und Rückmeldung geworden. Ganz gleich, ob Sie als Entwickler Anmerkungsfunktionen in Ihre Anwendung integrieren oder als Benutzer diese Funktionen nutzen möchten: GroupDocs.Annotation für .NET bietet eine leistungsstarke Lösung. In diesem Tutorial befassen wir uns mit dem Prozess des Ladens annotierter Dokumentversionen mithilfe von GroupDocs.Annotation für .NET.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: Naučte se, jak zlepšit kvalitu obrázků v souborech PDF pomocí 
 weight: 10
 url: /cs/net/advanced-usage/change-image-quality/
 ---
+
+# Změňte kvalitu obrazu
+
 ## Úvod
 V dnešní digitální době může kvalita obrázků v dokumentech PDF významně ovlivnit uživatelský dojem a čitelnost dokumentu. S Groupdocs.Annotation for .NET, výkonnou knihovnou navrženou pro vývojáře .NET, se vylepšení kvality obrázků v souborech PDF stává přímočarým úkolem. V tomto tutoriálu se ponoříme do procesu zlepšování kvality obrazu krok za krokem pomocí tohoto všestranného nástroje.
 ## Předpoklady

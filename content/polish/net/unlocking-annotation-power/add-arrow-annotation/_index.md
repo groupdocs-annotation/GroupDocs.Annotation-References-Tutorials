@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje ze strzałkami do dokumentów 
 weight: 11
 url: /pl/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Dodaj adnotację ze strzałką do dokumentu
+
 ## Wstęp
 W tym samouczku przeprowadzimy Cię przez proces dodawania adnotacji strzałkowych do dokumentów za pomocą GroupDocs.Annotation dla .NET. Adnotacje ze strzałkami są przydatne do wskazywania kierunku lub wskazywania określonych elementów w dokumencie.
 ## Warunki wstępne

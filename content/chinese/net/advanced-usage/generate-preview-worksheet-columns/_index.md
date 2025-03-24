@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 对文档进行注
 weight: 15
 url: /zh/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# 生成预览工作表列
+
 ## 介绍
 欢迎来到我们关于利用 GroupDocs.Annotation for .NET 功能的综合教程！在本指南中，我们将引导您完成使用这个强大的工具有效地注释文档的过程。无论您是经验丰富的开发人员还是 .NET 开发领域的新手，本教程都将为您提供将注释功能无缝集成到应用程序中所需的知识和技能。
 ## 先决条件

@@ -6,6 +6,9 @@ description: Bezproblemowo dodawaj adnotacje do dokumentów za pomocą GroupDocs
 weight: 17
 url: /pl/net/advanced-usage/get-document-text-content-information/
 ---
+
+# Uzyskaj informacje o zawartości tekstu dokumentu
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to potężne narzędzie, które umożliwia programistom bezproblemową integrację funkcji adnotacji z aplikacjami .NET. Niezależnie od tego, czy tworzysz system zarządzania dokumentami, platformę współpracy, czy jakąkolwiek inną aplikację wymagającą adnotacji w dokumencie, GroupDocs.Annotation dla .NET upraszcza ten proces dzięki wszechstronnemu zestawowi funkcji i łatwemu w użyciu interfejsowi API.
 ## Warunki wstępne

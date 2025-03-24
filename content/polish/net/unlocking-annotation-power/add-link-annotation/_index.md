@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje do łączy do dokumentów za p
 weight: 16
 url: /pl/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Dodaj adnotację łącza do dokumentu
+
 ## Wstęp
 Groupdocs.Annotation dla .NET to potężna biblioteka, która umożliwia programistom bezproblemową integrację kompleksowych funkcji adnotacji z aplikacjami .NET. Jedną z kluczowych funkcji, jakie oferuje, jest możliwość dodawania adnotacji do linków do dokumentów, co poprawia współpracę i interaktywność.
 ## Warunki wstępne

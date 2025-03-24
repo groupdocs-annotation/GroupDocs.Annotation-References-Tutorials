@@ -6,6 +6,9 @@ url: /vi/net/
 description: Khai phá toàn bộ tiềm năng của GroupDocs.Annotation dành cho .NET bằng các hướng dẫn của chúng tôi. Tích hợp liền mạch, tăng cường cộng tác và hợp lý hóa quy trình công việc.
 is_root: true
 ---
+
+# Hướng dẫn và ví dụ về GroupDocs.Annotation cho .NET
+
 ## Giới thiệu
 
 GroupDocs.Annotation for .NET cung cấp nền tảng mạnh mẽ cho các nhà phát triển để tích hợp khả năng chú thích mạnh mẽ vào các ứng dụng .NET của họ. Cho dù bạn là người mới bắt đầu hay nhà phát triển có kinh nghiệm, hướng dẫn của chúng tôi bao gồm mọi thứ bạn cần biết để tận dụng toàn bộ tiềm năng của GroupDocs.Annotation cho .NET.

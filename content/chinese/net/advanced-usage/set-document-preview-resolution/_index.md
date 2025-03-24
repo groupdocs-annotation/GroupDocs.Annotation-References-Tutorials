@@ -6,6 +6,9 @@ description: 使用 Groupdocs.Annotation for .NET 提升文档协作，无缝简
 weight: 23
 url: /zh/net/advanced-usage/set-document-preview-resolution/
 ---
+
+# 设置文档预览分辨率
+
 ## 介绍
 在当今的数字时代，高效的文档管理和协作对于企业和个人都至关重要。由于每天都有大量文档流通，确保无缝注释和预览功能可以显着提高生产力并简化工作流程。 Groupdocs.Annotation for .NET 是一个强大的工具包，旨在为开发人员提供针对各种文档格式的强大注释功能。
 ## 先决条件

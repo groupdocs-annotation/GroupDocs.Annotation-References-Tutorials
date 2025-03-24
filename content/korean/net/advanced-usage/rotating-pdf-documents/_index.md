@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 PDF 문서를 쉽게 �
 weight: 22
 url: /ko/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# PDF 문서 회전
+
 ## 소개
 PDF 문서 회전은 다르게 보거나 처리해야 하는 파일을 처리할 때 중요한 작업이 될 수 있습니다. 이 튜토리얼에서는 .NET용 Groupdocs.Annotation을 사용하여 PDF 문서를 단계별로 회전하는 방법을 살펴보겠습니다.
 ## 전제 조건

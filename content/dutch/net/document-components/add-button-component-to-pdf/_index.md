@@ -6,6 +6,9 @@ description: Verbeter uw PDF-documenten met interactieve knopcomponenten met Gro
 weight: 10
 url: /nl/net/document-components/add-button-component-to-pdf/
 ---
+
+# Knopcomponent toevoegen aan PDF-document
+
 ## Invoering
 In deze zelfstudie begeleiden we u bij het toevoegen van een knopcomponent aan een PDF-document met behulp van Groupdocs.Annotation voor .NET. Deze stapsgewijze handleiding zorgt ervoor dat u deze functie eenvoudig in uw project kunt integreren.
 ## Vereisten

@@ -6,6 +6,9 @@ description: Leer hoe u meerdere annotaties efficiënt kunt verwijderen in .NET 
 weight: 12
 url: /nl/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Verwijder meerdere annotaties in .NET
+
 ## Invoering
 Annotaties spelen een cruciale rol bij documentbeheer en verbeteren de samenwerking en communicatie. Er zijn echter gevallen waarin u mogelijk meerdere annotaties efficiënt moet verwijderen binnen uw .NET-toepassing. In deze zelfstudie gaan we dieper in op hoe u dit kunt bereiken met GroupDocs.Annotation voor .NET. Laten we beginnen!
 ## Vereisten

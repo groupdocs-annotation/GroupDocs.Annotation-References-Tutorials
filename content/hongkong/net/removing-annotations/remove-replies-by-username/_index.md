@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 無縫註釋文件
 weight: 17
 url: /zh-hant/net/removing-annotations/remove-replies-by-username/
 ---
+
+# 在 .NET 中按使用者名稱刪除回复
+
 ## 介紹
 Groupdocs.Annotation for .NET 是一個強大的工具，用於在 .NET 應用程式中無縫註釋文件。無論您使用 PDF、Word 文件或任何其他受支援的文件格式，該程式庫都可以簡化添加註釋、突出顯示和評論的過程，從而增強協作和文件管理功能。
 ## 先決條件

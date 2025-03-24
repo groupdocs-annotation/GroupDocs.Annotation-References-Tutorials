@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET を使用してドキュメントの�
 weight: 10
 url: /ja/net/unlocking-annotation-power/add-area-annotation/
 ---
+
+# エリア注釈をドキュメントに追加
+
 ## 導入
 このチュートリアルでは、Groupdocs.Annotation for .NET を使用してドキュメントに領域注釈を追加するプロセスを説明します。領域の注釈は、ユーザーが文書の特定の領域を強調表示して、内容を明確にし、コンテキストを提供できる貴重な機能です。
 ## 前提条件

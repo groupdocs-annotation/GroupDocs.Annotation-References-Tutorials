@@ -6,6 +6,9 @@ description: Sfrutta tutto il potenziale dell'annotazione dei documenti in .NET 
 weight: 11
 url: /it/net/applying-licenses/set-license-from-stream/
 ---
+
+# Imposta la licenza dallo streaming
+
 ## introduzione
 Benvenuti nella guida completa sull'utilizzo di GroupDocs.Annotation per .NET per migliorare le funzionalità di annotazione dei documenti. Che tu sia uno sviluppatore esperto o che tu abbia appena iniziato, questo tutorial ti guiderà attraverso ogni passaggio, assicurandoti di sfruttare tutto il potenziale di questo potente strumento.
 ## Prerequisiti

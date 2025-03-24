@@ -6,6 +6,9 @@ description: Dowiedz się, jak dodawać adnotacje graficzne do dokumentów za po
 weight: 14
 url: /pl/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)
+
 ## Wstęp
 GroupDocs.Annotation dla .NET to potężna biblioteka, która umożliwia programistom programowe dodawanie różnych typów adnotacji do dokumentów. W tym samouczku dowiemy się, jak dodawać adnotacje graficzne do dokumentu przy użyciu ścieżki lokalnej.
 ## Warunki wstępne

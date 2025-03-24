@@ -6,6 +6,9 @@ description: Naučte se, jak plynule načítat vlastní písma v GroupDocs.Annot
 weight: 20
 url: /cs/net/advanced-usage/loading-custom-fonts/
 ---
+
+# Načítání vlastních písem
+
 ## Úvod
 GroupDocs.Annotation for .NET je výkonná knihovna, která umožňuje vývojářům snadno přidávat funkce anotací do jejich aplikací .NET. Jednou z klíčových funkcí, které nabízí, je schopnost načítat vlastní písma, což umožňuje lepší přizpůsobení a flexibilitu v anotacích dokumentů.
 ## Předpoklady

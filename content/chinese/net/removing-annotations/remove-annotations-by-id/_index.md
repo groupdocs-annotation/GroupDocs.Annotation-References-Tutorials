@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 按 ID 删除注�
 weight: 11
 url: /zh/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# 按 ID 删除注释
+
 ## 介绍
 在本教程中，我们将引导您完成使用 GroupDocs.Annotation for .NET 按 ID 删除注释的过程。注释可能会使您的文档变得混乱，有选择地删除它们可以简化您的工作流程。我们将逐步指导您，确保您清楚地了解每个阶段。
 ## 先决条件

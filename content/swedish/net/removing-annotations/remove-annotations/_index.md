@@ -6,6 +6,9 @@ description: Lär dig hur du tar bort kommentarer från PDF-dokument med Groupdo
 weight: 10
 url: /sv/net/removing-annotations/remove-annotations/
 ---
+
+# Ta bort anteckningar i .NET
+
 ## Introduktion
 Anteckningar spelar en avgörande roll i digital dokumenthantering, vilket gör att användare kan markera, kommentera och markera viktiga avsnitt i filer. Det kan dock komma en tid då du behöver ta bort kommentarer från ett dokument. I den här handledningen kommer vi att undersöka hur du tar bort kommentarer i .NET med Groupdocs.Annotation, ett kraftfullt verktyg för dokumentkommentarer och manipulering.
 ## Förutsättningar

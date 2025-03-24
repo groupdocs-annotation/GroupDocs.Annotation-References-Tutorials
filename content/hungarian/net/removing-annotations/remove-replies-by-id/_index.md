@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan távolíthat el válaszokat azonosító alapjá
 weight: 16
 url: /hu/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Távolítsa el a válaszokat azonosító alapján a .NET-ben
+
 ## Bevezetés
 .NET fejlesztés területén a dokumentumokon belüli megjegyzések kezelésének képessége alapvető fontosságú számos alkalmazás számára. Függetlenül attól, hogy PDF-ekkel, Word-dokumentumokkal vagy más formátumokkal dolgozik, a megjegyzések programozott kezelésének lehetősége a lehetőségek világát nyitja meg. A .NET-ben található megjegyzések kezelésének egyik hatékony eszköze a GroupDocs.Annotation.
 ## Előfeltételek

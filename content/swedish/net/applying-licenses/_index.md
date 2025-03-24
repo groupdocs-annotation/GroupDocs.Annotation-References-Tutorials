@@ -6,6 +6,9 @@ description: Lås upp den fulla potentialen för dokumentkommentarer i .NET med 
 weight: 26
 url: /sv/net/applying-licenses/
 ---
+
+# Ansöker om licenser
+
 ## Introduktion
 
 Är du en .NET-utvecklare som vill förbättra dina dokumentkommentarer? Kolla inte vidare! GroupDocs.Annotation för .NET tillhandahåller en omfattande uppsättning verktyg för att integrera kraftfulla anteckningsfunktioner sömlöst i dina applikationer. I den här handledningslistan går vi igenom olika metoder för att tillämpa licenser för att låsa upp den fulla potentialen hos GroupDocs.Annotation för .NET.

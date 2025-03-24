@@ -6,6 +6,9 @@ description: Buka potensi penuh anotasi dokumen di .NET dengan GroupDocs.Annotat
 weight: 11
 url: /id/net/applying-licenses/set-license-from-stream/
 ---
+
+# Tetapkan Lisensi dari Stream
+
 ## Perkenalan
 Selamat datang di panduan komprehensif tentang penggunaan GroupDocs.Annotation untuk .NET guna meningkatkan kemampuan anotasi dokumen Anda. Baik Anda seorang pengembang berpengalaman atau baru memulai, tutorial ini akan memandu Anda melalui setiap langkah, memastikan Anda memanfaatkan potensi penuh dari alat canggih ini.
 ## Prasyarat

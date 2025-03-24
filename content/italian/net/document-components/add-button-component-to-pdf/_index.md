@@ -6,6 +6,9 @@ description: Migliora i tuoi documenti PDF con componenti pulsanti interattivi u
 weight: 10
 url: /it/net/document-components/add-button-component-to-pdf/
 ---
+
+# Aggiungi il componente pulsante al documento PDF
+
 ## introduzione
 In questo tutorial ti guideremo attraverso il processo di aggiunta di un componente pulsante a un documento PDF utilizzando Groupdocs.Annotation per .NET. Questa guida passo passo ti garantirà di poter integrare facilmente questa funzionalità nel tuo progetto.
 ## Prerequisiti

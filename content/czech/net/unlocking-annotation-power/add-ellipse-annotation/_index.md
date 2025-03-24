@@ -6,6 +6,9 @@ description: Naučte se přidávat elipsové anotace do dokumentů v .NET pomoc�
 weight: 13
 url: /cs/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Přidejte do dokumentu anotaci elipsy
+
 ## Úvod
 V tomto kurzu se naučíte, jak přidat elipsovou anotaci do dokumentu pomocí GroupDocs.Annotation for .NET. Tento průvodce vás krok za krokem provede celým procesem a zajistí, že každému kroku jasně porozumíte.
 ## Předpoklady

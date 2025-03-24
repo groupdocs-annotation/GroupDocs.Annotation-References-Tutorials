@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat ellipszis jelöléseket a .NET-ben talál
 weight: 13
 url: /hu/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Ellipszis megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebből az oktatóanyagból megtudhatja, hogyan adhat hozzá ellipszis megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Ez a lépésenkénti útmutató végigvezeti a folyamaton, biztosítva, hogy minden lépést egyértelműen megértsen.
 ## Előfeltételek

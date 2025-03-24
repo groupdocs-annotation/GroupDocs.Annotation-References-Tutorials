@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation 釋放 .NET 中文件註解的全部潛
 weight: 26
 url: /zh-hant/net/applying-licenses/
 ---
+
+# 申請許可證
+
 ## 介紹
 
 您是一位希望增強文件註解功能的 .NET 開發人員嗎？別再猶豫了！ GroupDocs.Annotation for .NET 提供了一套全面的工具，可將強大的註釋功能無縫整合到您的應用程式中。在本教學清單中，我們將引導您了解應用程式授權的各種方法，以釋放 GroupDocs.Annotation for .NET 的全部潛力。

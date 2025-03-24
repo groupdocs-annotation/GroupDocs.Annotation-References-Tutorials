@@ -6,6 +6,9 @@ description: Nâng cao tài liệu PDF của bạn bằng các thành phần nú
 weight: 10
 url: /vi/net/document-components/add-button-component-to-pdf/
 ---
+
+# Thêm thành phần nút vào tài liệu PDF
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm Thành phần Nút vào tài liệu PDF bằng Groupdocs.Annotation cho .NET. Hướng dẫn từng bước này sẽ đảm bảo rằng bạn có thể dễ dàng tích hợp tính năng này vào dự án của mình.
 ## Điều kiện tiên quyết

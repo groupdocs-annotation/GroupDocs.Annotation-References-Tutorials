@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit Groupdocs.Annotation für .NET Linkanmerk
 weight: 16
 url: /de/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Linkanmerkung zum Dokument hinzufügen
+
 ## Einführung
 Groupdocs.Annotation für .NET ist eine leistungsstarke Bibliothek, die es Entwicklern ermöglicht, umfassende Annotationsfunktionen mühelos in ihre .NET-Anwendungen zu integrieren. Eine der wichtigsten Funktionen ist die Möglichkeit, Linkanmerkungen zu Dokumenten hinzuzufügen und so die Zusammenarbeit und Interaktivität zu verbessern.
 ## Voraussetzungen

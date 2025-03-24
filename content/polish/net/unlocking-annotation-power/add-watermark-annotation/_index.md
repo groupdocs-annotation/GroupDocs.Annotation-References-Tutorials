@@ -6,6 +6,9 @@ description: Dowiedz się, jak bez wysiłku dodawać adnotacje ze znakami wodnym
 weight: 28
 url: /pl/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Dodaj adnotację znaku wodnego do dokumentu
+
 ## Wstęp
 W tym samouczku omówimy proces dodawania adnotacji znaku wodnego do dokumentu za pomocą GroupDocs.Annotation dla .NET. Adnotacje ze znakiem wodnym są przydatne do wskazania statusu dokumentu, oznaczenia go jako poufnego lub dodania innych istotnych informacji.
 

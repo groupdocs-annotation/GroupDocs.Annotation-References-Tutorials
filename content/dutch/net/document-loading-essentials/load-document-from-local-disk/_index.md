@@ -6,6 +6,9 @@ description: Ontgrendel de kracht van documentannotatie met GroupDocs.Annotation
 weight: 13
 url: /nl/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Document laden vanaf lokale schijf
+
 ## Invoering
 Het benutten van de mogelijkheden van documentannotatie is nog nooit zo eenvoudig geweest met GroupDocs.Annotation voor .NET. Met deze krachtige tool kunnen ontwikkelaars robuuste annotatiefuncties naadloos in hun .NET-applicaties integreren. In deze uitgebreide handleiding leiden we u stap voor stap door het proces van het gebruik van GroupDocs.Annotation voor .NET om documenten te annoteren. Of u nu een doorgewinterde ontwikkelaar bent of net begint, deze tutorial geeft u de kennis om de samenwerking aan documenten te verbeteren en uw workflow te stroomlijnen.
 ## Vereisten

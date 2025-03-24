@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 將折線註解新
 weight: 18
 url: /zh-hant/net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# 將折線註解新增至文檔
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個功能強大的工具，可讓開發人員以程式設計方式對 PDF 和 Microsoft Office 文件進行註解。其功能之一是能夠為文件添加折線註釋，從而增強協作和文件審閱流程。
 ## 先決條件

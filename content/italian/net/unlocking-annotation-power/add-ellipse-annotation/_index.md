@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni ellittiche ai documenti in .NET 
 weight: 13
 url: /it/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Aggiungi annotazione ellisse al documento
+
 ## introduzione
 In questo tutorial imparerai come aggiungere un'annotazione ellittica a un documento utilizzando GroupDocs.Annotation per .NET. Questa guida passo passo ti guiderà attraverso il processo, assicurandoti di comprendere chiaramente ogni passaggio.
 ## Prerequisiti

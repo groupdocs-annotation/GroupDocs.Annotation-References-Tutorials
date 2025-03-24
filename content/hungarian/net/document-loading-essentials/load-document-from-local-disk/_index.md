@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET segítségével felszabadíthatja a d
 weight: 13
 url: /hu/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Töltse be a dokumentumot a helyi lemezről
+
 ## Bevezetés
 A GroupDocs.Annotation for .NET segítségével még soha nem volt ilyen egyszerű a dokumentumok megjegyzéseiben rejlő lehetőségek kiaknázása. Ez a hatékony eszköz lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják a robusztus annotációs funkciókat .NET-alkalmazásaikba. Ebben az átfogó útmutatóban végigvezetjük a GroupDocs.Annotation for .NET-hez való felhasználásának folyamatán lépésről lépésre. Akár tapasztalt fejlesztő, akár most kezdő, ez az oktatóanyag felvértezi a dokumentumokkal való együttműködés javításához és a munkafolyamat egyszerűsítéséhez szükséges ismereteket.
 ## Előfeltételek

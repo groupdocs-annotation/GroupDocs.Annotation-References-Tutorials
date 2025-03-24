@@ -6,6 +6,9 @@ description: Tìm hiểu cách thêm các thành phần thả xuống vào tệp
 weight: 12
 url: /vi/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Thêm thành phần thả xuống vào tài liệu PDF
+
 ## Giới thiệu
 GroupDocs.Annotation for .NET cung cấp một bộ công cụ mạnh mẽ để chú thích các tài liệu PDF theo chương trình. Một tính năng hữu ích là khả năng thêm các thành phần thả xuống vào tài liệu PDF, nâng cao tính tương tác và khả năng sử dụng của chúng.
 ## Điều kiện tiên quyết

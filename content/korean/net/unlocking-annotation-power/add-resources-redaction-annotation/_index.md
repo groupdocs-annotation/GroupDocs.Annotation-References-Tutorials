@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서 관리 작업 �
 weight: 19
 url: /ko/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# 문서에 리소스 편집 주석 추가
+
 ## 소개
 .NET 개발 영역에서 문서 주석을 위한 효율적인 도구를 통합하면 생산성이 크게 향상되고 워크플로가 간소화될 수 있습니다. .NET용 GroupDocs.Annotation은 문서에 원활하게 주석을 달고 조작할 수 있는 다양한 기능을 제공하는 강력한 솔루션으로 등장했습니다. 이 튜토리얼에서는 .NET용 GroupDocs.Annotation의 강력한 기능인 리소스 편집 주석을 통합하고 활용하는 프로세스를 자세히 살펴봅니다.
 ## 전제 조건

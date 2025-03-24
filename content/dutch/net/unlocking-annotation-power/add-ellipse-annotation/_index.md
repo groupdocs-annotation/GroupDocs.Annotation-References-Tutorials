@@ -6,6 +6,9 @@ description: Leer hoe u ellipsannotaties toevoegt aan documenten in .NET met beh
 weight: 13
 url: /nl/net/unlocking-annotation-power/add-ellipse-annotation/
 ---
+
+# Voeg ellipsannotatie toe aan document
+
 ## Invoering
 In deze zelfstudie leert u hoe u een ellipsannotatie aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Deze stapsgewijze handleiding leidt u door het proces en zorgt ervoor dat u elke stap duidelijk begrijpt.
 ## Vereisten

@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 将点注释添加
 weight: 17
 url: /zh/net/unlocking-annotation-power/add-point-annotation/
 ---
+
+# 向文档添加点注释
+
 ## 介绍
 GroupDocs.Annotation for .NET 是一个功能强大的工具，允许开发人员以编程方式向文档添加各种类型的注释。在本教程中，我们将重点介绍如何使用 C# 将点注释添加到文档中。
 ## 先决条件

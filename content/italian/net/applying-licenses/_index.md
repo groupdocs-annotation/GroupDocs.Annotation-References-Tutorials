@@ -6,6 +6,9 @@ description: Sfrutta tutto il potenziale dell'annotazione dei documenti in .NET 
 weight: 26
 url: /it/net/applying-licenses/
 ---
+
+# Applicazione delle licenze
+
 ## introduzione
 
 Sei uno sviluppatore .NET e desideri migliorare le funzionalità di annotazione dei tuoi documenti? Non guardare oltre! GroupDocs.Annotation per .NET fornisce una suite completa di strumenti per integrare perfettamente potenti funzionalità di annotazione nelle tue applicazioni. In questo elenco di tutorial ti guideremo attraverso vari metodi di applicazione delle licenze per sbloccare tutto il potenziale di GroupDocs.Annotation per .NET.

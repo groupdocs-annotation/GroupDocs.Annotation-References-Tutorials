@@ -6,6 +6,9 @@ description: Lär dig hur du tar bort flera anteckningar efter ID i .NET med Gro
 weight: 13
 url: /sv/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# Ta bort flera anteckningar efter ID
+
 ## Introduktion
 en värld av dokumenthantering och samarbete framstår GroupDocs.Annotation för .NET som ett kraftfullt verktyg som gör det möjligt för utvecklare att kommentera och manipulera dokument sömlöst i sina .NET-applikationer. Den här handledningen kommer att fördjupa sig i en av de väsentliga funktionerna som erbjuds av GroupDocs.Annotation för .NET: att ta bort flera anteckningar efter ID:n. Genom att följa den här steg-för-steg-guiden får du en omfattande förståelse för hur du effektivt tar bort anteckningar, vilket ger dig möjlighet att förbättra dina dokumenthanteringsmöjligheter.
 ## Förutsättningar

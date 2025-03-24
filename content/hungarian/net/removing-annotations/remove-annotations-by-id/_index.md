@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan távolíthat el megjegyzéseket azonosító ala
 weight: 11
 url: /hu/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Megjegyzések eltávolítása azonosító alapján
+
 ## Bevezetés
 Ebben az oktatóanyagban végigvezetjük a megjegyzések azonosítóik alapján történő eltávolításának folyamatán a GroupDocs.Annotation for .NET segítségével. A megjegyzések összezavarhatják a dokumentumokat, a szelektív eltávolításuk pedig egyszerűsítheti a munkafolyamatot. Lépésről lépésre végigvezetjük Önt, biztosítva, hogy világosan megértse az egyes szakaszokat.
 ## Előfeltételek

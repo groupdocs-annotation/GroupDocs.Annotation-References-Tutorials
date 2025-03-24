@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan lehet zökkenőmentesen megjegyzéseket fűzni 
 weight: 17
 url: /hu/net/removing-annotations/remove-replies-by-username/
 ---
+
+# Válaszok eltávolítása felhasználónév alapján a .NET-ben
+
 ## Bevezetés
 Groupdocs.Annotation for .NET egy hatékony eszköz a dokumentumok zökkenőmentes annotálásához a .NET-alkalmazásokon belül. Függetlenül attól, hogy PDF-ekkel, Word-dokumentumokkal vagy bármely más támogatott fájlformátummal dolgozik, ez a könyvtár leegyszerűsíti a megjegyzések, kiemelések és megjegyzések hozzáadásának folyamatát, javítva az együttműködést és a dokumentumkezelési képességeket.
 ## Előfeltételek

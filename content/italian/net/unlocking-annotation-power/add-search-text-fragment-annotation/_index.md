@@ -6,6 +6,9 @@ description: Esplora la potenza di GroupDocs.Annotation per .NET e aggiungi faci
 weight: 20
 url: /it/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Aggiungi l'annotazione del frammento di testo di ricerca al documento
+
 ## introduzione
 Nell'ambito dello sviluppo .NET, GroupDocs.Annotation si distingue come un potente strumento per annotare i documenti senza problemi. Che tu sia uno sviluppatore esperto o che tu stia semplicemente entrando nel mondo di .NET, questo tutorial completo ti guiderà attraverso gli elementi essenziali dell'utilizzo di GroupDocs.Annotation per .NET, dall'importazione degli spazi dei nomi alla padronanza delle complessità dell'aggiunta di annotazioni di frammenti di testo di ricerca al tuo documenti.
 ## introduzione

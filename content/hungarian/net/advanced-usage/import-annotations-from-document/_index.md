@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan importálhat megjegyzéseket a .NET-ben lévő 
 weight: 19
 url: /hu/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Megjegyzések importálása a dokumentumból
+
 ## Bevezetés
 .NET-fejlesztés területén a GroupDocs.Annotation sokoldalú eszköz a megjegyzéskészítési képességek alkalmazásaiba való integrálására. Akár megjegyzéseket szeretne fűzni, akár szöveget szeretne kiemelni, akár alakzatokat szeretne rajzolni a dokumentumokra, a GroupDocs.Annotation for .NET átfogó megoldást kínál. Ez az oktatóanyag lépésről lépésre végigvezeti a megjegyzések dokumentumból történő importálásának folyamatán a GroupDocs.Annotation segítségével.
 ## Előfeltételek

@@ -6,6 +6,9 @@ description: GroupDocs.Annotation을 사용하여 .NET에서 ID별로 여러 주
 weight: 13
 url: /ko/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# ID별로 여러 주석 제거
+
 ## 소개
 문서 관리 및 공동 작업 분야에서 .NET용 GroupDocs.Annotation은 개발자가 .NET 응용 프로그램 내에서 원활하게 문서에 주석을 달고 조작할 수 있게 해주는 강력한 도구로 등장합니다. 이 튜토리얼에서는 .NET용 GroupDocs.Annotation이 제공하는 필수 기능 중 하나인 ID별로 여러 주석을 제거하는 방법을 자세히 살펴봅니다. 이 단계별 가이드를 따르면 주석을 효율적으로 제거하는 방법에 대한 포괄적인 이해를 얻고 문서 관리 기능을 향상시킬 수 있습니다.
 ## 전제 조건

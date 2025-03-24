@@ -6,6 +6,9 @@ description: Découvrez comment annoter des documents dans .NET à l'aide de Gro
 weight: 11
 url: /fr/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Charger un document depuis Azure
+
 ## Introduction
 Dans le domaine de la gestion de documents et de la collaboration, GroupDocs.Annotation pour .NET apparaît comme une solution robuste, facilitant des fonctionnalités transparentes d'annotation et de balisage au sein des applications .NET. Ce didacticiel explore les subtilités de l'utilisation de GroupDocs.Annotation pour .NET pour annoter des documents, offrant des conseils étape par étape, depuis les conditions préalables jusqu'à l'utilisation avancée.
 ## Conditions préalables

@@ -6,6 +6,9 @@ description: Naučte se, jak nastavit měřenou licenci pro GroupDocs.Annotation
 weight: 12
 url: /cs/net/applying-licenses/set-metered-license/
 ---
+
+# Nastavte měřenou licenci
+
 ## Úvod
 GroupDocs.Annotation for .NET je výkonná knihovna, která umožňuje vývojářům snadno přidávat možnosti anotací dokumentů do jejich aplikací .NET. Ať už vytváříte systém správy dokumentů, platformu pro spolupráci nebo jakoukoli aplikaci, která zahrnuje kontrolu a označování dokumentů, GroupDocs.Annotation for .NET poskytuje komplexní sadu nástrojů pro zefektivnění procesu.
 V tomto tutoriálu se ponoříme do procesu nastavení měřené licence pro GroupDocs.Annotation .NET. Měřená licence vám umožňuje platit pouze za zdroje, které spotřebováváte, což z ní činí nákladově efektivní řešení pro projekty jakéhokoli rozsahu. Podle níže uvedených kroků budete schopni bezproblémově integrovat GroupDocs.Annotation do vaší aplikace .NET a zároveň optimalizovat využití zdrojů a udržovat kontrolu nad rozpočtem.

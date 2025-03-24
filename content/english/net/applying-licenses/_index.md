@@ -6,6 +6,9 @@ description: Unlock the full potential of document annotation in .NET with Group
 weight: 26
 url: /net/applying-licenses/
 ---
+
+# Applying Licenses
+
 ## Introduction
 
 Are you a .NET developer looking to enhance your document annotation capabilities? Look no further! GroupDocs.Annotation for .NET provides a comprehensive suite of tools to integrate powerful annotation features seamlessly into your applications. In this tutorial listing, we'll walk you through various methods of applying licenses to unlock the full potential of GroupDocs.Annotation for .NET.

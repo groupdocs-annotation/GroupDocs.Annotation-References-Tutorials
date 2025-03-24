@@ -6,6 +6,9 @@ description: Learn how to remove annotations by ID using GroupDocs.Annotation fo
 weight: 11
 url: /net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Remove Annotations by ID
+
 ## Introduction
 In this tutorial, we'll walk you through the process of removing annotations by their IDs using GroupDocs.Annotation for .NET. Annotations can clutter your documents, and removing them selectively can streamline your workflow. We'll guide you step by step, ensuring you understand each stage clearly.
 ## Prerequisites

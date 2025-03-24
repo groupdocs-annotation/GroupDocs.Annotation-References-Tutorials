@@ -6,6 +6,9 @@ description: Leer hoe u aantekeningen uit XML-bestanden kunt exporteren met Grou
 weight: 11
 url: /nl/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# Exporteer annotaties uit een XML-bestand
+
 ## Invoering
 In het huidige digitale tijdperk is efficiënt documentbeheer cruciaal voor zowel bedrijven als particulieren. Dankzij de overvloed aan beschikbare tools onderscheidt GroupDocs.Annotation voor .NET zich als een betrouwbare oplossing voor het annoteren en beheren van PDF-bestanden. In deze zelfstudie verdiepen we ons in het proces van het exporteren van annotaties uit XML-bestanden met behulp van GroupDocs.Annotation voor .NET. Aan het einde van deze handleiding beschikt u over de kennis om annotaties naadloos te exporteren, waardoor uw documentbeheerworkflow wordt verbeterd.
 ## Vereisten

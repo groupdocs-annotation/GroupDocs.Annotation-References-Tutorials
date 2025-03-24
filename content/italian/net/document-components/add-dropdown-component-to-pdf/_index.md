@@ -6,6 +6,9 @@ description: Scopri come aggiungere componenti a discesa ai PDF utilizzando Grou
 weight: 12
 url: /it/net/document-components/add-dropdown-component-to-pdf/
 ---
+
+# Aggiungi il componente a discesa al documento PDF
+
 ## introduzione
 GroupDocs.Annotation per .NET fornisce un potente set di strumenti per annotare i documenti PDF a livello di codice. Una caratteristica utile è la possibilità di aggiungere componenti a discesa ai documenti PDF, migliorandone l'interattività e l'usabilità.
 ## Prerequisiti

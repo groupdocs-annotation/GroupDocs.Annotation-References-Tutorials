@@ -6,6 +6,9 @@ description: Aprenda cómo agregar anotaciones de reemplazo de texto a sus docum
 weight: 24
 url: /es/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Agregar anotación de reemplazo de texto al documento
+
 ## Introducción
 En este tutorial, lo guiaremos a través del proceso de agregar una anotación de reemplazo de texto a sus documentos usando GroupDocs.Annotation para .NET. Esta poderosa biblioteca permite a los desarrolladores manipular y anotar varios tipos de documentos mediante programación. Al final de este tutorial, estará equipado con el conocimiento para integrar sin problemas anotaciones de reemplazo de texto en sus aplicaciones .NET.
 ## Requisitos previos

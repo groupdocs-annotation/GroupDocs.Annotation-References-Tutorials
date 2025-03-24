@@ -6,6 +6,9 @@ description: Tìm hiểu cách xóa chú thích theo ID bằng GroupDocs.Annotat
 weight: 11
 url: /vi/net/removing-annotations/remove-annotations-by-id/
 ---
+
+# Xóa chú thích theo ID
+
 ## Giới thiệu
 Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình xóa chú thích theo ID của chúng bằng GroupDocs.Annotation cho .NET. Chú thích có thể làm tài liệu của bạn lộn xộn và việc xóa chúng một cách có chọn lọc có thể hợp lý hóa quy trình làm việc của bạn. Chúng tôi sẽ hướng dẫn bạn từng bước, đảm bảo bạn hiểu rõ từng giai đoạn.
 ## Điều kiện tiên quyết

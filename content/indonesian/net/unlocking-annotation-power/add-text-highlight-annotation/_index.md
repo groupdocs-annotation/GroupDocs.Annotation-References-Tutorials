@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi sorotan teks ke dokumen menggunak
 weight: 22
 url: /id/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---
+
+# Tambahkan Anotasi Sorotan Teks ke Dokumen
+
 ## Perkenalan
 Di bidang manajemen dokumen dan kolaborasi, GroupDocs.Annotation untuk .NET muncul sebagai solusi tangguh, memberdayakan pengembang untuk mengintegrasikan anotasi sorotan teks ke dalam aplikasi mereka dengan lancar. Tutorial ini berfungsi sebagai panduan komprehensif untuk menambahkan anotasi sorotan teks ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Melalui petunjuk langkah demi langkah dan penjelasan mendetail, Anda akan memperoleh kemahiran dalam memanfaatkan kemampuan perpustakaan canggih ini.
 ## Prasyarat

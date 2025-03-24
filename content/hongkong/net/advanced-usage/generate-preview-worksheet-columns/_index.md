@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 對文件進行註
 weight: 15
 url: /zh-hant/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# 產生預覽工作表列
+
 ## 介紹
 歡迎來到我們利用 GroupDocs.Annotation for .NET 功能的綜合教學！在本指南中，我們將引導您完成使用這個強大的工具有效地註釋文件的過程。無論您是經驗豐富的開發人員還是 .NET 開發領域的新手，本教學都將為您提供將註釋功能無縫整合到應用程式所需的知識和技能。
 ## 先決條件

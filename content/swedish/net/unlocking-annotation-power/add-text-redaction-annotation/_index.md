@@ -6,6 +6,9 @@ description: Lär dig hur du lägger till textredigeringskommentarer till PDF-do
 weight: 23
 url: /sv/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Lägg till textredigeringskommentar till dokument
+
 ## Introduktion
 Att lägga till en textredigeringsanteckning till ett dokument kan vara ett avgörande steg för att säkert hantera känslig information. GroupDocs.Annotation för .NET tillhandahåller en robust lösning för att uppnå detta sömlöst. I den här självstudien guidar vi dig genom processen att lägga till en textredigeringskommentar till ditt dokument steg för steg.
 ## Förutsättningar

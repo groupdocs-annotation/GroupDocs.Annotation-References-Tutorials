@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation 轻松注释 .NET 中的文
 weight: 14
 url: /zh/net/document-loading-essentials/load-document-from-stream/
 ---
+
+# 从流加载文档
+
 ## 介绍
 GroupDocs.Annotation for .NET 是一个功能强大的库，使开发人员能够轻松地将文档注释功能集成到他们的 .NET 应用程序中。无论您是构建文档管理系统、协作平台还是电子学习应用程序，GroupDocs.Annotation 都提供了一组多功能工具来注释 PDF、Word 文档、Excel 工作表等。
 ## 先决条件

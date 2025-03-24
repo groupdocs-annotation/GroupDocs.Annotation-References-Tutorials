@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 輕鬆地將文字
 weight: 25
 url: /zh-hant/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# 在文件中新增文字波浪註釋
+
 ## 介紹
 
 Groupdocs.Annotation for .NET 是一個多功能函式庫，讓開發人員能夠輕鬆地將強大的註解功能整合到他們的 .NET 應用程式中。無論您使用 PDF、Word 文件或其他流行的文件格式，Groupdocs.Annotation 都可以提供用於註釋和增強文件協作的無縫解決方案。

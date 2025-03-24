@@ -6,6 +6,9 @@ description: Pelajari cara menyiapkan lisensi terukur untuk GroupDocs.Annotation
 weight: 12
 url: /id/net/applying-licenses/set-metered-license/
 ---
+
+# Tetapkan Lisensi Terukur
+
 ## Perkenalan
 GroupDocs.Annotation for .NET adalah perpustakaan canggih yang memberdayakan pengembang untuk menambahkan kemampuan anotasi dokumen ke aplikasi .NET mereka dengan mudah. Baik Anda sedang membangun sistem manajemen dokumen, platform kolaborasi, atau aplikasi apa pun yang melibatkan peninjauan dan markup dokumen, GroupDocs.Annotation for .NET menyediakan seperangkat alat komprehensif untuk menyederhanakan proses.
 Dalam tutorial ini, kita akan mempelajari proses menyiapkan lisensi terukur untuk GroupDocs.Annotation .NET. Lisensi terukur memungkinkan Anda membayar hanya untuk sumber daya yang Anda konsumsi, menjadikannya solusi hemat biaya untuk proyek dalam skala apa pun. Dengan mengikuti langkah-langkah yang diuraikan di bawah ini, Anda akan dapat mengintegrasikan GroupDocs.Annotation dengan lancar ke dalam aplikasi .NET Anda sambil mengoptimalkan penggunaan sumber daya dan mempertahankan kontrol anggaran.

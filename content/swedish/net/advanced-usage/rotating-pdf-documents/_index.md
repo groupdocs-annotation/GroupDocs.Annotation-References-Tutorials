@@ -6,6 +6,9 @@ description: Lär dig hur du enkelt roterar PDF-dokument med Groupdocs.Annotatio
 weight: 22
 url: /sv/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# Roterande PDF-dokument
+
 ## Introduktion
 Att rotera PDF-dokument kan vara en avgörande uppgift när man hanterar filer som behöver ses eller bearbetas på annat sätt. I den här handledningen kommer vi att utforska hur man roterar PDF-dokument steg för steg med Groupdocs.Annotation för .NET.
 ## Förutsättningar

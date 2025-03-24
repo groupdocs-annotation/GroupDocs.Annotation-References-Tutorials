@@ -6,6 +6,9 @@ description: Scopri come aggiungere un componente Checkbox ai documenti PDF util
 weight: 11
 url: /it/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Aggiungi il componente Casella di controllo al documento PDF
+
 ## introduzione
 In questo tutorial ti guideremo attraverso il processo di aggiunta di un componente Checkbox a un documento PDF utilizzando Groupdocs.Annotation per .NET.
 ## Prerequisiti

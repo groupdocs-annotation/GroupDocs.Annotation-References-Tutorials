@@ -6,6 +6,9 @@ description: Tìm hiểu cách xóa nhiều chú thích một cách hiệu quả
 weight: 12
 url: /vi/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Xóa nhiều chú thích trong .NET
+
 ## Giới thiệu
 Chú thích đóng một vai trò quan trọng trong việc quản lý tài liệu, tăng cường cộng tác và giao tiếp. Tuy nhiên, có những trường hợp bạn có thể cần xóa nhiều chú thích một cách hiệu quả trong ứng dụng .NET của mình. Trong hướng dẫn này, chúng ta sẽ đi sâu vào cách thực hiện việc này bằng GroupDocs.Annotation cho .NET. Bắt đầu nào!
 ## Điều kiện tiên quyết

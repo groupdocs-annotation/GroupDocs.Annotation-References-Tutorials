@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET の機能を活用し、ドキュメ�
 weight: 20
 url: /ja/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# 検索テキストフラグメントの注釈をドキュメントに追加
+
 ## 導入
 .NET 開発の分野では、GroupDocs.Annotation はドキュメントにシームレスに注釈を付けるための強力なツールとして際立っています。経験豊富な開発者であっても、.NET の世界に足を踏み入れたばかりであっても、この包括的なチュートリアルでは、名前空間のインポートから、検索テキスト フラグメントの注釈を検索テキスト フラグメントに追加する複雑な操作の習得に至るまで、GroupDocs.Annotation for .NET を使用するための基本事項を説明します。書類。
 ## 導入

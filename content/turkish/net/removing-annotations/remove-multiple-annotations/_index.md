@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak .NET'te birden çok ek açıklam
 weight: 12
 url: /tr/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# .NET'te Birden Çok Ek Açıklamayı Kaldırma
+
 ## giriiş
 Ek açıklamalar, belge yönetiminde işbirliğini ve iletişimi geliştirerek önemli bir rol oynar. Ancak .NET uygulamanızda birden çok ek açıklamayı verimli bir şekilde kaldırmanız gerekebilecek durumlar vardır. Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bunu nasıl gerçekleştireceğinizi inceleyeceğiz. Başlayalım!
 ## Önkoşullar

@@ -6,6 +6,9 @@ description: Tìm hiểu cách tích hợp liền mạch các chú thích trư�
 weight: 21
 url: /vi/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Thêm chú thích trường văn bản vào tài liệu
+
 ## Giới thiệu
 Groupdocs.Annotation for .NET là một công cụ mạnh mẽ cho phép các nhà phát triển thêm các tính năng chú thích vào ứng dụng .NET của họ một cách dễ dàng. Cho dù bạn đang làm việc trên hệ thống quản lý tài liệu, nền tảng cộng tác hay bất kỳ ứng dụng nào cần chú thích tài liệu, Groupdocs.Annotation sẽ đơn giản hóa quy trình với bộ tính năng toàn diện và API trực quan.
 Trong hướng dẫn này, chúng ta sẽ đi sâu vào một trong những chức năng cơ bản của Groupdocs.Annotation cho .NET: thêm chú thích trường văn bản vào tài liệu. Bằng cách làm theo hướng dẫn từng bước này, bạn sẽ tìm hiểu cách tích hợp các chú thích trường văn bản một cách liền mạch vào các ứng dụng .NET của mình, nâng cao trải nghiệm người dùng và khả năng cộng tác.

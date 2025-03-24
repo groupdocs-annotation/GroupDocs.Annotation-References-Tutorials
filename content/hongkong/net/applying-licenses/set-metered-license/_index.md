@@ -6,6 +6,9 @@ description: 了解如何為 GroupDocs.Annotation .NET 設定計量許可證，�
 weight: 12
 url: /zh-hant/net/applying-licenses/set-metered-license/
 ---
+
+# 設定計量許可證
+
 ## 介紹
 GroupDocs.Annotation for .NET 是一個功能強大的程式庫，可讓開發人員輕鬆地將文件註解功能新增至其 .NET 應用程式。無論您是建立文件管理系統、協作平台或任何涉及文件審查和標記的應用程序，GroupDocs.Annotation for .NET 都提供了一套全面的工具來簡化流程。
 在本教學中，我們將深入研究為 GroupDocs.Annotation .NET 設定計量授權的過程。計量許可證允許您只需為您消耗的資源付費，使其成為適合任何規模專案的經濟高效的解決方案。透過執行下面概述的步驟，您將能夠將 GroupDocs.Annotation 無縫整合到您的 .NET 應用程式中，同時優化資源使用並保持預算控制。

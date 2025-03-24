@@ -6,6 +6,9 @@ description: Enhance collaboration & document review with GroupDocs.Annotation f
 weight: 17
 url: /net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Load Password Protected Documents
+
 ## Introduction
 In today's fast-paced world, collaboration is key to success. Whether you're working on a project with colleagues, clients, or partners, the ability to annotate and share documents efficiently can significantly improve productivity and streamline workflows. GroupDocs.Annotation for .NET offers a powerful solution for annotating PDF and other document formats directly within your .NET applications, enabling seamless collaboration and document review processes.
 ## Prerequisites

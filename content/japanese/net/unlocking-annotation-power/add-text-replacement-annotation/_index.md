@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して、.NET ドキュメ�
 weight: 24
 url: /ja/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# テキスト置換注釈をドキュメントに追加
+
 ## 導入
 このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにテキスト置換アノテーションを追加するプロセスを説明します。この強力なライブラリを使用すると、開発者はさまざまな種類のドキュメントをプログラムで操作し、注釈を付けることができます。このチュートリアルを終えると、テキスト置換注釈を .NET アプリケーションにシームレスに統合するための知識が身につくでしょう。
 ## 前提条件

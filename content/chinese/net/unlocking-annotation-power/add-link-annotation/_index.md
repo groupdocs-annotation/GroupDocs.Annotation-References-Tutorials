@@ -6,6 +6,9 @@ description: 了解如何使用 Groupdocs.Annotation for .NET 将链接注释添
 weight: 16
 url: /zh/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# 向文档添加链接注释
+
 ## 介绍
 Groupdocs.Annotation for .NET 是一个功能强大的库，使开发人员能够轻松地将全面的注释功能集成到他们的 .NET 应用程序中。它提供的关键功能之一是能够向文档添加链接注释，从而增强协作和交互性。
 ## 先决条件

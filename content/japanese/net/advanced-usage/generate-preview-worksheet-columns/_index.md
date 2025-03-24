@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメントに�
 weight: 15
 url: /ja/net/advanced-usage/generate-preview-worksheet-columns/
 ---
+
+# プレビューワークシート列の生成
+
 ## 導入
 GroupDocs.Annotation for .NET の機能を活用するための包括的なチュートリアルへようこそ。このガイドでは、この強力なツールを利用してドキュメントに効果的に注釈を付けるプロセスを説明します。経験豊富な開発者であっても、.NET 開発の世界への初心者であっても、このチュートリアルでは、注釈機能をアプリケーションにシームレスに統合するために必要な知識とスキルを身につけることができます。
 ## 前提条件

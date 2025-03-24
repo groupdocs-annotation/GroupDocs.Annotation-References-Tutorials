@@ -6,6 +6,9 @@ description: Aprenda a configurar una licencia medida para GroupDocs.Annotation 
 weight: 12
 url: /es/net/applying-licenses/set-metered-license/
 ---
+
+# Establecer licencia medida
+
 ## Introducción
 GroupDocs.Annotation para .NET es una poderosa biblioteca que permite a los desarrolladores agregar capacidades de anotación de documentos a sus aplicaciones .NET sin esfuerzo. Ya sea que esté creando un sistema de gestión de documentos, una plataforma de colaboración o cualquier aplicación que implique revisión y marcado de documentos, GroupDocs.Annotation para .NET proporciona un conjunto completo de herramientas para agilizar el proceso.
 En este tutorial, profundizaremos en el proceso de configuración de una licencia medida para GroupDocs.Annotation .NET. Una licencia medida le permite pagar sólo por los recursos que consume, lo que la convierte en una solución rentable para proyectos de cualquier escala. Si sigue los pasos que se describen a continuación, podrá integrar sin problemas GroupDocs.Annotation en su aplicación .NET mientras optimiza el uso de recursos y mantiene el control presupuestario.

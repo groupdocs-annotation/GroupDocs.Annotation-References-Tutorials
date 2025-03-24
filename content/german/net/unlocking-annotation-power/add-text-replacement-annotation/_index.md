@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos T
 weight: 24
 url: /de/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Fügen Sie dem Dokument eine Textersetzungsanmerkung hinzu
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Hinzufügens einer Textersetzungsanmerkung zu Ihren Dokumenten mithilfe von GroupDocs.Annotation für .NET. Mit dieser leistungsstarken Bibliothek können Entwickler verschiedene Arten von Dokumenten programmgesteuert bearbeiten und mit Anmerkungen versehen. Am Ende dieses Tutorials verfügen Sie über das Wissen, Textersetzungsanmerkungen nahtlos in Ihre .NET-Anwendungen zu integrieren.
 ## Voraussetzungen

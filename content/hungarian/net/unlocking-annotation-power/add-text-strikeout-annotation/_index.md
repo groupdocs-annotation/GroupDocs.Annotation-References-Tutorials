@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat szöveges áthúzott megjegyzéseket a do
 weight: 26
 url: /hu/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 Ebben az oktatóanyagban megvizsgáljuk, hogyan adhatunk áthúzott szöveges megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Ez a könyvtár hatékony eszközöket biztosít a különféle dokumentumtípusok megjegyzéseihez, az együttműködés és a dokumentum-ellenőrzési folyamatok javításához.
 ## Előfeltételek

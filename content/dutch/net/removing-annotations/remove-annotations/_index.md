@@ -6,6 +6,9 @@ description: Leer hoe u annotaties uit PDF-documenten verwijdert met Groupdocs.A
 weight: 10
 url: /nl/net/removing-annotations/remove-annotations/
 ---
+
+# Verwijder annotaties in .NET
+
 ## Invoering
 Annotaties spelen een cruciale rol bij digitaal documentbeheer, waardoor gebruikers belangrijke secties in bestanden kunnen markeren, becommentariëren en markeren. Er kan echter een moment komen waarop u annotaties uit een document moet verwijderen. In deze zelfstudie onderzoeken we hoe u annotaties in .NET kunt verwijderen met Groupdocs.Annotation, een krachtig hulpmiddel voor documentannotatie en -manipulatie.
 ## Vereisten

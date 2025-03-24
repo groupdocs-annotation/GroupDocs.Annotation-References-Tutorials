@@ -6,6 +6,9 @@ description: Groupdocs.Annotation for .NET'i kullanarak metin alanı açıklamal
 weight: 21
 url: /tr/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Belgeye Metin Alanı Açıklaması Ekleme
+
 ## giriiş
 Groupdocs.Annotation for .NET, geliştiricilerin .NET uygulamalarına zahmetsizce açıklama özellikleri eklemelerine olanak tanıyan güçlü bir araçtır. İster bir belge yönetim sistemi, ortak bir platform veya belge açıklamasının gerekli olduğu herhangi bir uygulama üzerinde çalışıyor olun, Groupdocs.Annotation, kapsamlı özellikleri ve sezgisel API'si ile süreci basitleştirir.
 Bu öğreticide, Groupdocs.Annotation for .NET'in temel işlevlerinden birini inceleyeceğiz: bir belgeye metin alanı açıklaması ekleme. Bu adım adım kılavuzu izleyerek, metin alanı açıklamalarını .NET uygulamalarınıza sorunsuz bir şekilde nasıl entegre edeceğinizi, kullanıcı deneyimini ve işbirliği yeteneklerini nasıl geliştireceğinizi öğreneceksiniz.

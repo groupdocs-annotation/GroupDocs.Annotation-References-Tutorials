@@ -6,6 +6,9 @@ description: 透過 GroupDocs.Annotation 教學了解如何在 .NET 中有效管
 weight: 25
 url: /zh-hant/net/removing-annotations/
 ---
+
+# 刪除註釋
+
 ## 介紹
 
 您是否希望簡化 .NET 中的文件管理流程？ GroupDocs.Annotation 提供了一套全面的教學來幫助您無縫刪除註解。註釋在文件協作和審閱過程中發揮著至關重要的作用。但是，在某些情況下，由於修訂、錯誤或更新，有必要刪除註釋。在本系列教程中，我們深入研究了使用 GroupDocs.Annotation for .NET 有效刪除註解的各種方法和技術。

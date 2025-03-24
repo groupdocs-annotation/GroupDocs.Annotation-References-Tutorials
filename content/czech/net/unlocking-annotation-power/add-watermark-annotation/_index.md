@@ -6,6 +6,9 @@ description: Naučte se, jak snadno přidávat anotace vodoznaku do vašich doku
 weight: 28
 url: /cs/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Přidejte do dokumentu anotaci vodoznaku
+
 ## Úvod
 V tomto tutoriálu si projdeme proces přidání anotace vodoznaku do dokumentu pomocí GroupDocs.Annotation for .NET. Anotace vodoznaku jsou užitečné pro označení stavu dokumentu, jeho označení jako důvěrného nebo přidání jakýchkoli dalších relevantních informací.
 

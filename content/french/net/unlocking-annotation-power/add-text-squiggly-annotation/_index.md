@@ -6,6 +6,9 @@ description: Découvrez comment ajouter sans effort des annotations de texte ond
 weight: 25
 url: /fr/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Ajouter une annotation de texte ondulé au document
+
 ## Introduction
 
 Groupdocs.Annotation for .NET est une bibliothèque polyvalente qui permet aux développeurs d'intégrer sans effort des fonctionnalités d'annotation robustes dans leurs applications .NET. Que vous travailliez avec des PDF, des documents Word ou d'autres formats de fichiers populaires, Groupdocs.Annotation fournit une solution transparente pour annoter et améliorer la collaboration documentaire.

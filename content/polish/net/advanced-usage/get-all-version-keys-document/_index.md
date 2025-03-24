@@ -6,6 +6,9 @@ description: Dowiedz się, jak pobrać wszystkie klucze wersji dokumentu za pomo
 weight: 16
 url: /pl/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# Uzyskaj wszystkie klucze wersji w dokumencie
+
 ## Wstęp
 W dzisiejszym szybko zmieniającym się cyfrowym świecie skuteczne zarządzanie dokumentami ma kluczowe znaczenie zarówno dla firm, jak i osób prywatnych. Niezależnie od tego, czy współpracujesz nad projektami, przeglądasz umowy, czy po prostu porządkujesz swoje pliki, posiadanie odpowiednich narzędzi może mieć znaczenie. GroupDocs.Annotation dla .NET oferuje kompleksowe rozwiązanie do dodawania adnotacji i manipulowania dokumentami w aplikacjach .NET. W tym samouczku omówimy, jak wykorzystać GroupDocs.Annotation dla platformy .NET do pobrania wszystkich kluczy wersji dokumentu.
 ## Warunki wstępne

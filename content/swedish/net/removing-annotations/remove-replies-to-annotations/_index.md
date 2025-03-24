@@ -6,6 +6,9 @@ description: Lär dig hur du tar bort svar på kommentarer i .NET med GroupDocs.
 weight: 15
 url: /sv/net/removing-annotations/remove-replies-to-annotations/
 ---
+
+# Ta bort svar på kommentarer i .NET
+
 ## Introduktion
 den här handledningen kommer vi att utforska hur du tar bort svar på kommentarer i .NET med GroupDocs.Annotation. GroupDocs.Annotation är ett kraftfullt .NET-bibliotek som låter utvecklare enkelt kommentera dokument. Oavsett om det gäller att lägga till kommentarer, markera text eller lägga till stämplar, tillhandahåller GroupDocs.Annotation en omfattande uppsättning verktyg för dokumentkommentarer.
 ## Förutsättningar

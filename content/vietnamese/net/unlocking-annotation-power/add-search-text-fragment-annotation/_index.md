@@ -6,6 +6,9 @@ description: Khám phá sức mạnh của GroupDocs.Annotation dành cho .NET v
 weight: 20
 url: /vi/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Thêm chú thích đoạn văn bản tìm kiếm vào tài liệu
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, GroupDocs.Annotation nổi bật như một công cụ mạnh mẽ để chú thích tài liệu một cách liền mạch. Cho dù bạn là nhà phát triển dày dặn kinh nghiệm hay chỉ mới bước chân vào thế giới .NET, hướng dẫn toàn diện này sẽ hướng dẫn bạn những điều cơ bản khi sử dụng GroupDocs.Annotation cho .NET, từ nhập vùng tên đến nắm vững sự phức tạp của việc thêm chú thích đoạn văn bản tìm kiếm vào các tài liệu.
 ## Giới thiệu

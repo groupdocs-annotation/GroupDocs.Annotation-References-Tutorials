@@ -6,6 +6,9 @@ description: Leer hoe u linkannotaties aan documenten kunt toevoegen met Groupdo
 weight: 16
 url: /nl/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Voeg linkannotatie toe aan document
+
 ## Invoering
 Groupdocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos uitgebreide annotatiefunctionaliteiten in hun .NET-applicaties kunnen integreren. Een van de belangrijkste functies die het biedt, is de mogelijkheid om linkannotaties aan documenten toe te voegen, waardoor de samenwerking en interactiviteit worden verbeterd.
 ## Vereisten

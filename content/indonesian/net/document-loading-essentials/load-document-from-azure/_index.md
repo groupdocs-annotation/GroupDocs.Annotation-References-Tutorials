@@ -6,6 +6,9 @@ description: Pelajari cara membuat anotasi dokumen di .NET menggunakan GroupDocs
 weight: 11
 url: /id/net/document-loading-essentials/load-document-from-azure/
 ---
+
+# Muat Dokumen dari Azure
+
 ## Perkenalan
 Di bidang manajemen dokumen dan kolaborasi, GroupDocs.Annotation untuk .NET muncul sebagai solusi tangguh, memfasilitasi fungsi anotasi dan markup yang lancar dalam aplikasi .NET. Tutorial ini mempelajari seluk-beluk memanfaatkan GroupDocs.Annotation untuk .NET untuk membuat anotasi dokumen, menawarkan panduan langkah demi langkah mulai dari prasyarat hingga penggunaan tingkat lanjut.
 ## Prasyarat

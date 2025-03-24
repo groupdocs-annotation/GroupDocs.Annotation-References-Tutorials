@@ -8,6 +8,9 @@ url: /ko/
 is_root: true
 ---
 
+# GroupDocs.Annotation 마스터하기 - 튜토리얼 및 가이드
+
+
 GroupDocs.Annotation 마스터하기 자습서 및 가이드는 GroupDocs.Annotation의 잠재력을 최대한 활용하려는 개인을 위한 포괄적인 리소스를 제공합니다. 초보자부터 고급 사용자까지 이 튜토리얼은 이 강력한 문서 주석 도구를 효과적으로 활용하기 위한 단계별 지침, 통찰력 있는 가이드 및 실용적인 팁을 제공합니다. PDF, Word 문서 또는 이미지에 주석을 달 때 사용자는 강조 표시, 주석 달기, 그리기 등 다양한 기능을 탐색하여 공동 작업을 강화하고 문서 작업 흐름을 간소화할 수 있습니다. 명확한 설명과 실습 데모를 통해 GroupDocs.Annotation을 익히는 것이 쉬워지고 사용자는 정확하고 효율적으로 주석을 달 수 있습니다.
 
 ## .NET 튜토리얼용 GroupDocs.Annotation

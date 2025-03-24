@@ -6,6 +6,9 @@ description: Naučte se, jak efektivně odstranit více anotací v .NET pomocí 
 weight: 12
 url: /cs/net/removing-annotations/remove-multiple-annotations/
 ---
+
+# Odebrat více anotací v .NET
+
 ## Úvod
 Anotace hrají klíčovou roli při správě dokumentů, zlepšují spolupráci a komunikaci. Existují však případy, kdy možná budete muset v rámci své aplikace .NET efektivně odstranit více anotací. V tomto tutoriálu se ponoříme do toho, jak toho dosáhnout pomocí GroupDocs.Annotation pro .NET. Začněme!
 ## Předpoklady

@@ -6,6 +6,9 @@ description: Aprenda como adicionar anotações de texto riscado a documentos us
 weight: 26
 url: /pt/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---
+
+# Adicionar anotação riscada de texto ao documento
+
 ## Introdução
 Neste tutorial, exploraremos como adicionar uma anotação de texto riscado a um documento usando GroupDocs.Annotation for .NET. Esta biblioteca fornece ferramentas poderosas para anotar vários tipos de documentos, melhorando a colaboração e os processos de revisão de documentos.
 ## Pré-requisitos

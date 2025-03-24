@@ -6,6 +6,9 @@ description: Apprenez à faire pivoter des documents PDF sans effort à l'aide d
 weight: 22
 url: /fr/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# Rotation de documents PDF
+
 ## Introduction
 La rotation de documents PDF peut s'avérer une tâche cruciale lorsqu'il s'agit de fichiers qui doivent être visualisés ou traités différemment. Dans ce didacticiel, nous explorerons comment faire pivoter des documents PDF étape par étape à l'aide de Groupdocs.Annotation pour .NET.
 ## Conditions préalables

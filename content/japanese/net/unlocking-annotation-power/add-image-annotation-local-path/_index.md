@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してドキュメントに�
 weight: 14
 url: /ja/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# 画像注釈をドキュメントに追加 (ローカル パス)
+
 ## 導入
 GroupDocs.Annotation for .NET は、開発者がプログラムでドキュメントにさまざまな種類の注釈を追加できる強力なライブラリです。このチュートリアルでは、ローカル パスを使用してドキュメントに画像注釈を追加する方法を学びます。
 ## 前提条件

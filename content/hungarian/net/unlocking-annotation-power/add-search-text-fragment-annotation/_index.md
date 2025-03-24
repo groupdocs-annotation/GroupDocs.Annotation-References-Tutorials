@@ -6,6 +6,9 @@ description: Fedezze fel a GroupDocs.Annotation for .NET erejét, és könnyedé
 weight: 20
 url: /hu/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---
+
+# Keresési szövegtöredék megjegyzés hozzáadása a dokumentumhoz
+
 ## Bevezetés
 A .NET fejlesztés területén a GroupDocs.Annotation hatékony eszköz a dokumentumok zökkenőmentes annotálásához. Akár tapasztalt fejlesztő, akár csak a .NET világába lép be, ez az átfogó oktatóanyag végigvezeti Önt a GroupDocs.Annotation for .NET használatának alapjain, a névterek importálásától egészen a keresési szövegtöredékek megjegyzéseinek hozzáadásának bonyolultságáig. dokumentumokat.
 ## Bevezetés

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan távolíthat el megjegyzéseket PDF-dokumentumo
 weight: 10
 url: /hu/net/removing-annotations/remove-annotations/
 ---
+
+# Távolítsa el a megjegyzéseket a .NET-ből
+
 ## Bevezetés
 A megjegyzések döntő szerepet játszanak a digitális dokumentumkezelésben, lehetővé téve a felhasználók számára, hogy kiemeljék, megjegyzéseket fűzzenek és megjelöljék a fájlok fontos részeit. Előfordulhat azonban, hogy el kell távolítania a megjegyzéseket a dokumentumból. Ebben az oktatóanyagban megvizsgáljuk, hogyan távolíthatunk el megjegyzéseket a .NET-ben a Groupdocs.Annotation segítségével, amely egy hatékony eszköz a dokumentumok megjegyzéseinek készítésére és manipulálására.
 ## Előfeltételek

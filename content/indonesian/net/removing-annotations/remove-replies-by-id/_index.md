@@ -6,6 +6,9 @@ description: Pelajari cara menghapus balasan berdasarkan ID di .NET menggunakan 
 weight: 16
 url: /id/net/removing-annotations/remove-replies-by-id/
 ---
+
+# Hapus Balasan berdasarkan ID di .NET
+
 ## Perkenalan
 Dalam bidang pengembangan .NET, kemampuan mengelola anotasi dalam dokumen sangat penting untuk berbagai aplikasi. Baik Anda bekerja dengan PDF, dokumen Word, atau format lainnya, memiliki kemampuan untuk memanipulasi anotasi secara terprogram akan membuka banyak kemungkinan. Salah satu alat canggih untuk menangani anotasi di .NET adalah GroupDocs.Annotation.
 ## Prasyarat

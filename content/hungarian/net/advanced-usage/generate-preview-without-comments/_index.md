@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan integrálhatja zökkenőmentesen a dokumentumfe
 weight: 14
 url: /hu/net/advanced-usage/generate-preview-without-comments/
 ---
+
+# Előzetes előnézet létrehozása megjegyzések nélkül
+
 ## Bevezetés
 A GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen építsenek be megjegyzéseket .NET-alkalmazásaikba. Függetlenül attól, hogy dokumentumkezelő rendszeren, együttműködési platformon vagy bármely más olyan alkalmazáson dolgozik, amelyhez dokumentumjegyzetelési képességre van szükség, a GroupDocs.Annotation átfogó eszközkészletet biztosít az alkalmazásai funkcionalitásának javításához.
 ## Előfeltételek

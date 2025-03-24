@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak .NET'te kimliklere göre birden 
 weight: 13
 url: /tr/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---
+
+# Kimliklere Göre Birden Çok Ek Açıklamayı Kaldırma
+
 ## giriiş
 Belge yönetimi ve işbirliği dünyasında, GroupDocs.Annotation for .NET, geliştiricilerin .NET uygulamaları içinde belgelere sorunsuz bir şekilde açıklama eklemesine ve bunları yönetmesine olanak tanıyan güçlü bir araç olarak ortaya çıkıyor. Bu eğitimde GroupDocs.Annotation for .NET tarafından sunulan temel işlevlerden biri incelenecektir: kimliklere göre birden fazla ek açıklamanın kaldırılması. Bu adım adım kılavuzu izleyerek, ek açıklamaları etkili bir şekilde nasıl kaldıracağınıza dair kapsamlı bir anlayış kazanacak ve belge yönetimi becerilerinizi geliştirmenize olanak tanıyacaksınız.
 ## Önkoşullar

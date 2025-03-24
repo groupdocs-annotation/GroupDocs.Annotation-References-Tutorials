@@ -6,6 +6,9 @@ description: Leer hoe u afstandsannotaties aan documenten toevoegt met GroupDocs
 weight: 12
 url: /nl/net/unlocking-annotation-power/add-distance-annotation/
 ---
+
+# Voeg afstandannotatie toe aan document
+
 ## Invoering
 In deze zelfstudie leert u hoe u een afstandannotatie aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Volg deze stappen om de taak te volbrengen:
 ## Vereisten

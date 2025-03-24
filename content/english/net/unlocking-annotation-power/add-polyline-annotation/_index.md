@@ -6,6 +6,9 @@ description: Learn how to add polyline annotations to documents using GroupDocs.
 weight: 18
 url: /net/unlocking-annotation-power/add-polyline-annotation/
 ---
+
+# Add Polyline Annotation to Document
+
 ## Introduction
 GroupDocs.Annotation for .NET is a powerful tool that allows developers to annotate PDF and Microsoft Office documents programmatically. Among its features is the ability to add polyline annotations to documents, enhancing collaboration and document review processes.
 ## Prerequisites

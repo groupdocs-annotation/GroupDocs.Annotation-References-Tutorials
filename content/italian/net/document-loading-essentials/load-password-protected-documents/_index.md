@@ -6,6 +6,9 @@ description: Migliora la collaborazione e la revisione dei documenti con GroupDo
 weight: 17
 url: /it/net/document-loading-essentials/load-password-protected-documents/
 ---
+
+# Carica documenti protetti da password
+
 ## introduzione
 Nel mondo frenetico di oggi, la collaborazione è la chiave del successo. Che tu stia lavorando a un progetto con colleghi, clienti o partner, la capacità di annotare e condividere documenti in modo efficiente può migliorare significativamente la produttività e semplificare i flussi di lavoro. GroupDocs.Annotation per .NET offre una potente soluzione per annotare PDF e altri formati di documenti direttamente nelle applicazioni .NET, consentendo processi di collaborazione e revisione dei documenti senza soluzione di continuità.
 ## Prerequisiti

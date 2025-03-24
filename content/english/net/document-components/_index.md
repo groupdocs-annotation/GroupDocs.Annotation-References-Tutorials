@@ -6,6 +6,9 @@ description: Discover comprehensive tutorials on integrating interactive compone
 weight: 24
 url: /net/document-components/
 ---
+
+# Document Components
+
 ## Introduction
 
 GroupDocs.Annotation for .NET provides a robust set of tutorials to help developers seamlessly integrate interactive components into PDF documents. In this article, we'll delve into the details of these tutorials, exploring how they empower you to enhance the functionality and user experience of your PDFs.

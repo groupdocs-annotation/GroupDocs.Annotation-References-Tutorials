@@ -6,6 +6,9 @@ description: Tìm hiểu cách nhập chú thích từ tài liệu trong .NET b�
 weight: 19
 url: /vi/net/advanced-usage/import-annotations-from-document/
 ---
+
+# Nhập chú thích từ tài liệu
+
 ## Giới thiệu
 Trong lĩnh vực phát triển .NET, GroupDocs.Annotation là một công cụ linh hoạt để tích hợp khả năng chú thích vào ứng dụng của bạn. Cho dù bạn đang muốn thêm nhận xét, đánh dấu văn bản hay vẽ hình trên tài liệu, GroupDocs.Annotation dành cho .NET đều cung cấp giải pháp toàn diện. Hướng dẫn này sẽ hướng dẫn bạn từng bước trong quá trình nhập chú thích từ tài liệu bằng GroupDocs.Annotation.
 ## Điều kiện tiên quyết

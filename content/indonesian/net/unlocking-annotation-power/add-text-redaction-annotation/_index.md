@@ -6,6 +6,9 @@ description: Pelajari cara menambahkan anotasi redaksi teks ke dokumen PDF mengg
 weight: 23
 url: /id/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# Tambahkan Anotasi Redaksi Teks ke Dokumen
+
 ## Perkenalan
 Menambahkan anotasi redaksi teks ke dokumen dapat menjadi langkah penting dalam mengelola informasi sensitif dengan aman. GroupDocs.Annotation untuk .NET memberikan solusi yang kuat untuk mencapai hal ini dengan lancar. Dalam tutorial ini, kami akan memandu Anda melalui proses menambahkan anotasi redaksi teks ke dokumen Anda langkah demi langkah.
 ## Prasyarat

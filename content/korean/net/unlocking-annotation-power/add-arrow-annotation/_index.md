@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서에 화살표 �
 weight: 11
 url: /ko/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# 문서에 화살표 주석 추가
+
 ## 소개
 이 자습서에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 화살표 주석을 추가하는 과정을 안내합니다. 화살표 주석은 방향을 나타내거나 문서 내의 특정 요소를 가리키는 데 유용합니다.
 ## 전제 조건

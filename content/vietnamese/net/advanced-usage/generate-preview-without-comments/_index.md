@@ -6,6 +6,9 @@ description: Tìm hiểu cách tích hợp liền mạch các khả năng chú t
 weight: 14
 url: /vi/net/advanced-usage/generate-preview-without-comments/
 ---
+
+# Tạo bản xem trước mà không cần nhận xét
+
 ## Giới thiệu
 GroupDocs.Annotation dành cho .NET là một công cụ mạnh mẽ cho phép các nhà phát triển kết hợp liền mạch các tính năng chú thích vào các ứng dụng .NET của họ. Cho dù bạn đang làm việc trên hệ thống quản lý tài liệu, nền tảng cộng tác hay bất kỳ ứng dụng nào khác yêu cầu khả năng chú thích tài liệu, GroupDocs.Annotation đều cung cấp một bộ công cụ toàn diện để nâng cao chức năng ứng dụng của bạn.
 ## Điều kiện tiên quyết

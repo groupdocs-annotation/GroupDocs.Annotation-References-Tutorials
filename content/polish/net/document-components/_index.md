@@ -6,6 +6,9 @@ description: Odkryj kompleksowe samouczki dotyczące integracji interaktywnych k
 weight: 24
 url: /pl/net/document-components/
 ---
+
+# Składniki dokumentu
+
 ## Wstęp
 
 GroupDocs.Annotation dla .NET udostępnia solidny zestaw samouczków, które pomagają programistom bezproblemowo integrować interaktywne komponenty z dokumentami PDF. W tym artykule zagłębimy się w szczegóły tych samouczków, sprawdzając, w jaki sposób umożliwiają one ulepszenie funkcjonalności i komfortu użytkowania plików PDF.

@@ -6,6 +6,9 @@ description: Naučte se, jak bezproblémově integrovat anotace textových polí
 weight: 21
 url: /cs/net/unlocking-annotation-power/add-text-field-annotation/
 ---
+
+# Přidejte do dokumentu anotaci textového pole
+
 ## Úvod
 Groupdocs.Annotation for .NET je výkonný nástroj, který umožňuje vývojářům snadno přidávat funkce anotací do jejich aplikací .NET. Ať už pracujete na systému správy dokumentů, na platformě pro spolupráci nebo na jakékoli aplikaci, kde je důležitá anotace dokumentů, Groupdocs.Annotation zjednodušuje proces pomocí komplexní sady funkcí a intuitivního rozhraní API.
 V tomto tutoriálu se ponoříme do jedné ze základních funkcí Groupdocs.Annotation pro .NET: přidání anotace textového pole do dokumentu. Podle tohoto podrobného průvodce se naučíte, jak bezproblémově integrovat anotace textových polí do vašich aplikací .NET, a zlepšit tak uživatelskou zkušenost a možnosti spolupráce.

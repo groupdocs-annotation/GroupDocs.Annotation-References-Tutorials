@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan forgathat könnyedén PDF dokumentumokat a Grou
 weight: 22
 url: /hu/net/advanced-usage/rotating-pdf-documents/
 ---
+
+# PDF-dokumentumok forgatása
+
 ## Bevezetés
 PDF-dokumentumok elforgatása kulcsfontosságú feladat lehet, amikor olyan fájlokat kell kezelni, amelyeket másképp kell megtekinteni vagy feldolgozni. Ebben az oktatóanyagban megvizsgáljuk, hogyan lehet lépésről lépésre elforgatni PDF-dokumentumokat a Groupdocs.Annotation for .NET segítségével.
 ## Előfeltételek

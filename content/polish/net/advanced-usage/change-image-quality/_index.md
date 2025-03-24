@@ -6,6 +6,9 @@ description: Dowiedz się, jak poprawić jakość obrazu w plikach PDF za pomoc�
 weight: 10
 url: /pl/net/advanced-usage/change-image-quality/
 ---
+
+# Zmień jakość obrazu
+
 ## Wstęp
 W dzisiejszej erze cyfrowej jakość obrazów w dokumentach PDF może znacząco wpłynąć na wygodę użytkownika i czytelność dokumentów. Dzięki Groupdocs.Annotation dla .NET, potężnej bibliotece przeznaczonej dla programistów .NET, poprawa jakości obrazów w plikach PDF staje się prostym zadaniem. W tym samouczku omówimy krok po kroku proces poprawy jakości obrazu za pomocą tego wszechstronnego narzędzia.
 ## Warunki wstępne

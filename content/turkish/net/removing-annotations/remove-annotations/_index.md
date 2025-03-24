@@ -6,6 +6,9 @@ description: .NET'te Groupdocs.Annotation'ı kullanarak PDF belgelerinden ek aç
 weight: 10
 url: /tr/net/removing-annotations/remove-annotations/
 ---
+
+# .NET'teki Ek Açıklamaları Kaldırma
+
 ## giriiş
 Ek açıklamalar, dijital belge yönetiminde önemli bir rol oynar ve kullanıcıların dosyalar içindeki önemli bölümleri vurgulamasına, yorum yapmasına ve işaretlemesine olanak tanır. Ancak bir belgedeki ek açıklamaları kaldırmanız gerekebileceği bir zaman gelebilir. Bu öğreticide, belge açıklaması ve düzenleme için güçlü bir araç olan Groupdocs.Annotation'ı kullanarak .NET'teki ek açıklamaların nasıl kaldırılacağını inceleyeceğiz.
 ## Önkoşullar

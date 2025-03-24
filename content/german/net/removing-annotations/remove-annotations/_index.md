@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mithilfe von Groupdocs.Annotation in .NET Anm
 weight: 10
 url: /de/net/removing-annotations/remove-annotations/
 ---
+
+# Entfernen Sie Anmerkungen in .NET
+
 ## Einführung
 Anmerkungen spielen eine entscheidende Rolle bei der digitalen Dokumentenverwaltung und ermöglichen es Benutzern, wichtige Abschnitte in Dateien hervorzuheben, zu kommentieren und zu markieren. Es kann jedoch vorkommen, dass Sie Anmerkungen aus einem Dokument entfernen müssen. In diesem Tutorial erfahren Sie, wie Sie Anmerkungen in .NET mithilfe von Groupdocs.Annotation entfernen, einem leistungsstarken Tool zur Dokumentanmerkung und -bearbeitung.
 ## Voraussetzungen

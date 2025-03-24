@@ -6,6 +6,9 @@ description: GroupDocs.Annotation'ı kullanarak PDF'den ve .NET'teki diğer belg
 weight: 14
 url: /tr/net/removing-annotations/remove-annotations-using-save-options/
 ---
+
+# .NET'te Kaydetme Seçeneklerini Kullanarak Ek Açıklamaları Kaldırma
+
 ## giriiş
 
 GroupDocs.Annotation for .NET, geliştiricilerin .NET uygulamalarına kolaylıkla açıklama ekleme işlevselliği eklemelerine olanak tanıyan güçlü bir araçtır. İster bir belge yönetim sistemi, işbirliği platformu veya belge işlemeyi içeren başka bir uygulama üzerinde çalışıyor olun, GroupDocs.Annotation, PDF ve diğer belge formatlarına sorunsuz bir şekilde açıklama eklemek için kapsamlı bir dizi özellik sunar.

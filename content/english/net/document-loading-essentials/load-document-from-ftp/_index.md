@@ -6,6 +6,9 @@ description: Enhance your .NET applications with GroupDocs.Annotation for seamle
 weight: 12
 url: /net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# Load Document from FTP
+
 ## Introduction
 GroupDocs.Annotation for .NET is a versatile library designed to facilitate document annotation capabilities within .NET applications effortlessly. Whether you're dealing with PDFs, Microsoft Office documents, images, or other formats, this library provides a unified solution for adding annotations, such as comments, highlights, and shapes, to enhance collaboration and document management.
 ## Prerequisites

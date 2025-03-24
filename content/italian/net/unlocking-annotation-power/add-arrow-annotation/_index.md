@@ -6,6 +6,9 @@ description: Scopri come aggiungere annotazioni con frecce ai tuoi documenti uti
 weight: 11
 url: /it/net/unlocking-annotation-power/add-arrow-annotation/
 ---
+
+# Aggiungi annotazione freccia al documento
+
 ## introduzione
 In questo tutorial ti guideremo attraverso il processo di aggiunta delle annotazioni delle frecce ai tuoi documenti utilizzando GroupDocs.Annotation per .NET. Le annotazioni con freccia sono utili per indicare la direzione o evidenziare elementi specifici all'interno di un documento.
 ## Prerequisiti

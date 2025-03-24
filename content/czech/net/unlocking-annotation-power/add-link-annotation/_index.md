@@ -6,6 +6,9 @@ description: Zjistěte, jak přidat anotace odkazů do dokumentů pomocí Groupd
 weight: 16
 url: /cs/net/unlocking-annotation-power/add-link-annotation/
 ---
+
+# Přidejte do dokumentu anotaci odkazu
+
 ## Úvod
 Groupdocs.Annotation for .NET je výkonná knihovna, která umožňuje vývojářům bez námahy integrovat komplexní funkce anotací do jejich aplikací .NET. Jednou z klíčových funkcí, které nabízí, je možnost přidávat k dokumentům anotace odkazů, což zlepšuje spolupráci a interaktivitu.
 ## Předpoklady

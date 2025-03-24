@@ -6,6 +6,9 @@ description: Usprawnij przepływ pracy w zakresie zarządzania dokumentami dzię
 weight: 19
 url: /pl/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---
+
+# Dodaj adnotację o redakcji zasobów do dokumentu
+
 ## Wstęp
 obszarze programowania .NET zintegrowanie wydajnych narzędzi do dodawania adnotacji do dokumentów może znacznie zwiększyć produktywność i usprawnić przepływ pracy. GroupDocs.Annotation dla .NET okazuje się solidnym rozwiązaniem oferującym mnóstwo funkcji umożliwiających bezproblemowe dodawanie adnotacji i manipulowanie dokumentami. W tym samouczku szczegółowo opisano proces integracji i wykorzystania adnotacji redakcyjnej zasobów, zaawansowanej funkcji GroupDocs.Annotation dla platformy .NET.
 ## Warunki wstępne

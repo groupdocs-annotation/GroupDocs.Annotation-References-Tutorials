@@ -6,6 +6,9 @@ description: Leer hoe u moeiteloos watermerkannotaties aan uw documenten kunt to
 weight: 28
 url: /nl/net/unlocking-annotation-power/add-watermark-annotation/
 ---
+
+# Voeg watermerkannotatie toe aan document
+
 ## Invoering
 In deze zelfstudie doorlopen we het proces van het toevoegen van een watermerkannotatie aan een document met behulp van GroupDocs.Annotation voor .NET. Watermerkannotaties zijn handig om de status van een document aan te geven, het als vertrouwelijk te markeren of andere relevante informatie toe te voegen.
 

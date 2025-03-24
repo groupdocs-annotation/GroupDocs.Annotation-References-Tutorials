@@ -6,6 +6,9 @@ description: Desbloquee el poder de la anotación de documentos con GroupDocs.An
 weight: 13
 url: /es/net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Cargar documento desde el disco local
+
 ## Introducción
 Liberar el potencial de la anotación de documentos nunca ha sido tan fácil con GroupDocs.Annotation para .NET. Esta potente herramienta permite a los desarrolladores integrar funciones de anotación sólidas sin problemas en sus aplicaciones .NET. En esta guía completa, lo guiaremos a través del proceso de aprovechar GroupDocs.Annotation para .NET para anotar documentos paso a paso. Ya sea que sea un desarrollador experimentado o recién esté comenzando, este tutorial le brindará el conocimiento para mejorar la colaboración en documentos y optimizar su flujo de trabajo.
 ## Requisitos previos

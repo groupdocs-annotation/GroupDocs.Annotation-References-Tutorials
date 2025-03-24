@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用して XML ファイルか�
 weight: 11
 url: /ja/net/advanced-usage/export-annotations-xml-file/
 ---
+
+# XML ファイルから注釈をエクスポート
+
 ## 導入
 今日のデジタル時代では、効率的な文書管理は企業にとっても個人にとっても同様に重要です。 GroupDocs.Annotation for .NET は、利用可能なツールが豊富にあるため、PDF ファイルに注釈を付けて管理するための信頼できるソリューションとして際立っています。このチュートリアルでは、GroupDocs.Annotation for .NET を使用して XML ファイルから注釈をエクスポートするプロセスを詳しく説明します。このガイドを終えるまでに、注釈をシームレスにエクスポートし、ドキュメント管理ワークフローを強化するための知識を身につけることができます。
 ## 前提条件

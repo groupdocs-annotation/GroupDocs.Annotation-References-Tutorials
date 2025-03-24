@@ -6,6 +6,9 @@ description: Unlock the power of document annotation with GroupDocs.Annotation f
 weight: 13
 url: /net/document-loading-essentials/load-document-from-local-disk/
 ---
+
+# Load Document from Local Disk
+
 ## Introduction
 Unlocking the potential of document annotation has never been easier with GroupDocs.Annotation for .NET. This powerful tool empowers developers to integrate robust annotation features seamlessly into their .NET applications. In this comprehensive guide, we will walk you through the process of leveraging GroupDocs.Annotation for .NET to annotate documents step by step. Whether you're a seasoned developer or just starting, this tutorial will equip you with the knowledge to enhance document collaboration and streamline your workflow.
 ## Prerequisites

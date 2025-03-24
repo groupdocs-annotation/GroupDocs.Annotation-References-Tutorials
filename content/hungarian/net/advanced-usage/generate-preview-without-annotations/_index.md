@@ -6,6 +6,9 @@ description: A GroupDocs.Annotation for .NET segítségével javíthatja a dokum
 weight: 13
 url: /hu/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Készítsen előnézetet megjegyzések nélkül
+
 ## Bevezetés
 mai digitális korban a dokumentumokon való hatékony együttműködés kulcsfontosságú a termelékenység és a siker szempontjából. Akár egy projekten dolgozik a csapattagokkal, akik szerte a világon szétszórtan dolgoznak, vagy együttműködik az ügyfelekkel fontos szerződések megkötésén, a dokumentumok zökkenőmentes megjegyzéseinek és áttekintésének képessége kulcsfontosságú. A GroupDocs.Annotation for .NET segítségével a dokumentumokkal való együttműködést a következő szintre emelheti, lehetővé téve az egyszerű megjegyzések készítését, jelölését és áttekintését közvetlenül a .NET-alkalmazásokon belül.
 ## Előfeltételek

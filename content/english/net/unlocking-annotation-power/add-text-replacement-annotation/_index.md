@@ -6,6 +6,9 @@ description: Learn how to add text replacement annotations to your .NET document
 weight: 24
 url: /net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Add Text Replacement Annotation to Document
+
 ## Introduction
 In this tutorial, we will guide you through the process of adding a Text Replacement Annotation to your documents using GroupDocs.Annotation for .NET. This powerful library allows developers to manipulate and annotate various types of documents programmatically. By the end of this tutorial, you'll be equipped with the knowledge to seamlessly integrate text replacement annotations into your .NET applications.
 ## Prerequisites

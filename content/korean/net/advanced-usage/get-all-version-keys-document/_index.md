@@ -6,6 +6,9 @@ description: .NET용 GroupDocs.Annotation을 사용하여 문서의 모든 버�
 weight: 16
 url: /ko/net/advanced-usage/get-all-version-keys-document/
 ---
+
+# 문서의 모든 버전 키 가져오기
+
 ## 소개
 오늘날 빠르게 변화하는 디지털 세계에서 효과적인 문서 관리는 기업과 개인 모두에게 중요합니다. 프로젝트 공동작업, 계약 검토, 단순한 파일 정리 등 어떤 작업을 하든 올바른 도구를 사용하면 큰 변화를 가져올 수 있습니다. .NET용 GroupDocs.Annotation은 .NET 응용 프로그램 내에서 문서에 주석을 달고 조작하기 위한 포괄적인 솔루션을 제공합니다. 이 자습서에서는 .NET용 GroupDocs.Annotation을 활용하여 문서의 모든 버전 키를 검색하는 방법을 살펴보겠습니다.
 ## 전제 조건

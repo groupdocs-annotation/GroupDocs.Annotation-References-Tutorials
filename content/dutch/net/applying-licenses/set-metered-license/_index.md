@@ -6,6 +6,9 @@ description: Leer hoe u een gemeten licentie voor GroupDocs.Annotation .NET inst
 weight: 12
 url: /nl/net/applying-licenses/set-metered-license/
 ---
+
+# Gemeten licentie instellen
+
 ## Invoering
 GroupDocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos documentannotatiemogelijkheden aan hun .NET-applicaties kunnen toevoegen. Of u nu een documentbeheersysteem, een samenwerkingsplatform of een andere toepassing bouwt waarbij documentreview en -markering betrokken is, GroupDocs.Annotation voor .NET biedt een uitgebreide set tools om het proces te stroomlijnen.
 In deze zelfstudie gaan we in op het proces van het instellen van een gemeten licentie voor GroupDocs.Annotation .NET. Met een gemeten licentie kunt u alleen betalen voor de resources die u verbruikt, waardoor het een kosteneffectieve oplossing is voor projecten van elke schaal. Door de onderstaande stappen te volgen, kunt u GroupDocs.Annotation naadloos integreren in uw .NET-toepassing, terwijl u het gebruik van bronnen optimaliseert en de budgetcontrole behoudt.

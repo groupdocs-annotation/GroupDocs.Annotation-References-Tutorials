@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET を使用してプログラムで PDF
 weight: 15
 url: /ja/net/document-loading-essentials/load-document-from-url/
 ---
+
+# URLからドキュメントをロード
+
 ## 導入
 GroupDocs.Annotation for .NET は、開発者が .NET アプリケーションに注釈機能を簡単に追加できる機能豊富なライブラリです。 GroupDocs.Annotation を使用すると、PDF ドキュメントにプログラムで注釈を付けることができ、ユーザーがテキストを強調表示したり、コメントを追加したり、図形を描画したりできるようになります。このチュートリアルでは、GroupDocs.Annotation for .NET を使用して、URL からドキュメントをロードし、注釈を追加し、注釈付きドキュメントを保存する手順を説明します。
 ## 前提条件

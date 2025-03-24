@@ -6,6 +6,9 @@ description: Naučte se přidávat textové podtržené anotace do dokumentů po
 weight: 27
 url: /cs/net/unlocking-annotation-power/add-text-underline-annotation/
 ---
+
+# Přidat textovou podtrženou poznámku do dokumentu
+
 ## Úvod
 V tomto tutoriálu si projdeme proces přidávání textové podtržené anotace do dokumentu pomocí GroupDocs.Annotation for .NET. Textové podtržené anotace mohou být užitečné pro zdůraznění konkrétních částí dokumentu, jako jsou důležité pasáže nebo klíčové body.
 ## Předpoklady

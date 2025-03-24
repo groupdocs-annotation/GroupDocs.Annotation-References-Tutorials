@@ -6,6 +6,9 @@ description: Dowiedz się, jak bez wysiłku dodawać faliste adnotacje tekstowe 
 weight: 25
 url: /pl/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---
+
+# Dodaj falistą adnotację tekstową do dokumentu
+
 ## Wstęp
 
 Groupdocs.Annotation dla .NET to wszechstronna biblioteka, która umożliwia programistom bezproblemową integrację zaawansowanych funkcji adnotacji z aplikacjami .NET. Niezależnie od tego, czy pracujesz z plikami PDF, dokumentami programu Word czy innymi popularnymi formatami plików, Groupdocs.Annotation zapewnia płynne rozwiązanie do dodawania adnotacji i usprawniania współpracy nad dokumentami.

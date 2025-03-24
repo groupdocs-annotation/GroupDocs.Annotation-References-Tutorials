@@ -6,6 +6,9 @@ description: Mejore la colaboración y la anotación de documentos dentro de apl
 weight: 13
 url: /es/net/advanced-usage/generate-preview-without-annotations/
 ---
+
+# Generar vista previa sin anotaciones
+
 ## Introducción
 En la era digital actual, la colaboración eficiente en documentos es clave para la productividad y el éxito. Ya sea que esté trabajando en un proyecto con miembros del equipo repartidos por todo el mundo o colaborando con clientes en contratos importantes, la capacidad de anotar y revisar documentos sin problemas es crucial. Con GroupDocs.Annotation para .NET, puede llevar la colaboración de sus documentos al siguiente nivel, permitiendo realizar anotaciones, marcas y revisiones fácilmente directamente dentro de sus aplicaciones .NET.
 ## Requisitos previos

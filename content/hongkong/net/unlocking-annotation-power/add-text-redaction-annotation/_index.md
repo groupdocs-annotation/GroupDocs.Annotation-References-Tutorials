@@ -6,6 +6,9 @@ description: 了解如何使用 GroupDocs.Annotation for .NET 將文字密文註
 weight: 23
 url: /zh-hant/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---
+
+# 在文件中新增文字密文註釋
+
 ## 介紹
 在文件中添加文字編輯註釋可能是安全管理敏感資訊的關鍵步驟。 GroupDocs.Annotation for .NET 提供了一個強大的解決方案來無縫實現這一目標。在本教程中，我們將引導您逐步完成為文件添加文字密文註釋的過程。
 ## 先決條件

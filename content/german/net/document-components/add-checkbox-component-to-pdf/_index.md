@@ -6,6 +6,9 @@ description: Erfahren Sie, wie Sie mit Groupdocs.Annotation für .NET eine Check
 weight: 11
 url: /de/net/document-components/add-checkbox-component-to-pdf/
 ---
+
+# Kontrollkästchenkomponente zum PDF-Dokument hinzufügen
+
 ## Einführung
 In diesem Tutorial führen wir Sie durch den Prozess des Hinzufügens einer Checkbox-Komponente zu einem PDF-Dokument mithilfe von Groupdocs.Annotation für .NET.
 ## Voraussetzungen

@@ -6,6 +6,9 @@ description: .NET용 Groupdocs.Annotation을 사용하여 대화형 단추 구�
 weight: 10
 url: /ko/net/document-components/add-button-component-to-pdf/
 ---
+
+# PDF 문서에 버튼 구성 요소 추가
+
 ## 소개
 이 튜토리얼에서는 .NET용 Groupdocs.Annotation을 사용하여 PDF 문서에 버튼 구성 요소를 추가하는 과정을 안내합니다. 이 단계별 가이드를 통해 이 기능을 프로젝트에 쉽게 통합할 수 있습니다.
 ## 전제 조건

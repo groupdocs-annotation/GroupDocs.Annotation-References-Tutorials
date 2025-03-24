@@ -6,6 +6,9 @@ description: Leer hoe u efficiënt een voorbeeld van documentpagina's kunt gener
 weight: 12
 url: /nl/net/advanced-usage/generate-document-pages-preview/
 ---
+
+# Genereer een voorbeeld van documentpagina's
+
 ## Invoering
 Op het gebied van documentbeheer en samenwerking onderscheidt GroupDocs.Annotation voor .NET zich als een veelzijdige tool. Of u nu een ontwikkelaar bent die annotatiefuncties in uw toepassing wil integreren of een zakelijke gebruiker die op zoek is naar efficiënte samenwerking aan documenten, GroupDocs.Annotation biedt een uitgebreide oplossing. Deze tutorial leidt u door het proces van het genereren van een voorbeeld van documentpagina's met GroupDocs.Annotation voor .NET, waarbij elke stap wordt opgesplitst in gemakkelijk verteerbare brokken.
 ## Vereisten

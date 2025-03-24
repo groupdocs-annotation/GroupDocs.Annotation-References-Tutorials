@@ -6,6 +6,9 @@ description: Découvrez des didacticiels d'utilisation avancés pour GroupDocs.A
 weight: 22
 url: /fr/net/advanced-usage/
 ---
+
+# Utilisation avancée
+
 ## Introduction
 
 Vous cherchez à faire passer vos compétences GroupDocs.Annotation pour .NET au niveau supérieur ? Vous êtes au bon endroit. Plongez dans nos didacticiels complets conçus pour améliorer vos flux de travail de gestion de documents. De l'optimisation de la qualité de l'image à l'exportation transparente d'annotations, nous avons ce qu'il vous faut.

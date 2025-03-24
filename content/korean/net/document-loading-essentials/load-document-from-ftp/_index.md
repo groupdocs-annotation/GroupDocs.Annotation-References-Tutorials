@@ -6,6 +6,9 @@ description: 원활한 문서 주석을 위해 GroupDocs.Annotation을 사용하
 weight: 12
 url: /ko/net/document-loading-essentials/load-document-from-ftp/
 ---
+
+# FTP에서 문서 로드
+
 ## 소개
 .NET용 GroupDocs.Annotation은 .NET 애플리케이션 내에서 문서 주석 기능을 쉽게 사용할 수 있도록 설계된 다목적 라이브러리입니다. PDF, Microsoft Office 문서, 이미지 또는 기타 형식을 처리하는 경우 이 라이브러리는 주석, 강조 표시, 도형 등의 주석을 추가하여 공동 작업 및 문서 관리를 향상시키는 통합 솔루션을 제공합니다.
 ## 전제 조건

@@ -6,6 +6,9 @@ description: Ismerje meg, hogyan adhat hozzá képes megjegyzéseket a dokumentu
 weight: 14
 url: /hu/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---
+
+# Képannotáció hozzáadása a dokumentumhoz (helyi elérési út)
+
 ## Bevezetés
 A GroupDocs.Annotation for .NET egy hatékony könyvtár, amely lehetővé teszi a fejlesztők számára, hogy különféle típusú megjegyzéseket adhassanak a dokumentumokhoz programozottan. Ebben az oktatóanyagban megtanuljuk, hogyan adhatunk képjegyzeteket egy dokumentumhoz helyi elérési út használatával.
 ## Előfeltételek

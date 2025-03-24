@@ -6,6 +6,9 @@ description: GroupDocs.Annotation for .NET'i kullanarak .NET belgelerinize metin
 weight: 24
 url: /tr/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---
+
+# Belgeye Metin Değiştirme Açıklaması Ekle
+
 ## giriiş
 Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak belgelerinize Metin Değiştirme Ek Açıklaması ekleme sürecinde size rehberlik edeceğiz. Bu güçlü kitaplık, geliştiricilerin çeşitli belge türlerini programlı olarak değiştirmesine ve açıklama eklemesine olanak tanır. Bu eğitimin sonunda, metin değiştirme ek açıklamalarını .NET uygulamalarınıza sorunsuz bir şekilde entegre etme bilgisine sahip olacaksınız.
 ## Önkoşullar

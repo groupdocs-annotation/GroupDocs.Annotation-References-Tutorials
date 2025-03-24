@@ -6,6 +6,9 @@ description: 使用 GroupDocs.Annotation 释放 .NET 中文档注释的全部潜
 weight: 11
 url: /zh/net/applying-licenses/set-license-from-stream/
 ---
+
+# 从 Stream 设置许可证
+
 ## 介绍
 欢迎阅读有关使用 GroupDocs.Annotation for .NET 增强文档注释功能的综合指南。无论您是经验丰富的开发人员还是刚刚起步，本教程都将引导您完成每个步骤，确保您充分利用这个强大工具的潜力。
 ## 先决条件
