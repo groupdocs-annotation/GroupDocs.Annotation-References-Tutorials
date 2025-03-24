@@ -3,7 +3,6 @@ title: Geannoteerde documentversie laden
 linktitle: Geannoteerde documentversie laden
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u moeiteloos geannoteerde documentversies kunt laden met GroupDocs.Annotation voor .NET. Vereenvoudig samenwerkings- en beoordelingsprocessen.
-type: docs
 weight: 16
 url: /nl/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Ja, GroupDocs.Annotation ondersteunt het annoteren van documenten in formaten zo
 ### Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation voor .NET?
  Ja, u kunt toegang krijgen tot de gratis proefversie van[hier](https://releases.groupdocs.com/).
 ### Waar kan ik documentatie vinden voor GroupDocs.Annotation voor .NET?
- U kunt de gedetailleerde documentatie raadplegen[hier](https://reference.groupdocs.com/annotation/net/).
+ U kunt de gedetailleerde documentatie raadplegen[hier](https://tutorials.groupdocs.com/annotation/net/).
 ### Hoe kan ik een tijdelijke licentie verkrijgen voor GroupDocs.Annotation voor .NET?
  U kunt een tijdelijke licentie verkrijgen via[deze link](https://purchase.groupdocs.com/temporary-license/).
 ### Waar kan ik ondersteuning zoeken of vragen stellen over GroupDocs.Annotation voor .NET?

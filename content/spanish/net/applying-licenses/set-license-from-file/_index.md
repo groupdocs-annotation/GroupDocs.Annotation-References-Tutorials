@@ -3,7 +3,6 @@ title: Establecer licencia desde archivo
 linktitle: Establecer licencia desde archivo
 second_title: API GroupDocs.Annotation .NET
 description: Integre potentes capacidades de anotación de documentos en sus aplicaciones .NET sin problemas con GroupDocs.Annotation para .NET.
-type: docs
 weight: 10
 url: /es/net/applying-licenses/set-license-from-file/
 ---

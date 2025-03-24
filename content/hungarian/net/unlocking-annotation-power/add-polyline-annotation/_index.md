@@ -3,7 +3,6 @@ title: Vonallánc megjegyzés hozzáadása a dokumentumhoz
 linktitle: Vonallánc megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá vonallánc megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozza az együttműködést és a dokumentum-ellenőrzési folyamatokat könnyedén.
-type: docs
 weight: 18
 url: /hu/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Igen, testreszabhatja a megjegyzések különféle tulajdonságait, például sz
 ### A GroupDocs.Annotation for .NET ingyenes próbaverziót kínál?
  Igen, igénybe veheti a GroupDocs.Annotation ingyenes próbaverzióját .NET-hez, ha felkeresi[ez a link](https://releases.groupdocs.com/).
 ### Hol találom a GroupDocs.Annotation for .NET dokumentációját?
- A GroupDocs.Annotation for .NET dokumentációja megtalálható[itt](https://reference.groupdocs.com/annotation/net/).
+ A GroupDocs.Annotation for .NET dokumentációja megtalálható[itt](https://tutorials.groupdocs.com/annotation/net/).
 ### Hogyan kaphatok támogatást a GroupDocs.Annotation for .NET-hez kapcsolódó problémákhoz vagy lekérdezésekhez?
  Támogatást kaphat a GroupDocs.Annotation fórumon[itt](https://forum.groupdocs.com/c/annotation/10).

@@ -3,7 +3,6 @@ title: Belgeyi URL'den Yükle
 linktitle: Belgeyi URL'den Yükle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak PDF belgelerine programlı olarak nasıl açıklama ekleyeceğinizi öğrenin. Kod örnekleriyle adım adım eğitim.
-type: docs
 weight: 15
 url: /tr/net/document-loading-essentials/load-document-from-url/
 ---

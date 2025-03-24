@@ -3,7 +3,6 @@ title: Удалить ответы по идентификатору в .NET
 linktitle: Удалить ответы по идентификатору в .NET
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как удалить ответы по идентификатору в .NET с помощью GroupDocs.Annotation. Следуйте нашему пошаговому руководству для эффективного управления аннотациями документов.
-type: docs
 weight: 16
 url: /ru/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /ru/net/removing-annotations/remove-replies-by-id/
 ## Предварительные условия
 Прежде чем приступить к изучению руководства по удалению ответов по идентификатору в .NET с помощью GroupDocs.Annotation, убедитесь, что у вас есть следующие предварительные условия:
 ### 1. Установка GroupDocs.Аннотации
- Во-первых, вам необходимо установить GroupDocs.Annotation для .NET. Вы можете скачать библиотеку с[здесь](https://releases.groupdocs.com/annotation/net/) и следуйте инструкциям по установке, приведенным в документации.[здесь](https://reference.groupdocs.com/annotation/net/).
+ Во-первых, вам необходимо установить GroupDocs.Annotation для .NET. Вы можете скачать библиотеку с[здесь](https://releases.groupdocs.com/annotation/net/) и следуйте инструкциям по установке, приведенным в документации.[здесь](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Базовое понимание C# и .NET.
 Для выполнения примеров в этом руководстве необходимо знание языка программирования C# и платформы .NET.
 ### 3. Аннотированный документ с ответами

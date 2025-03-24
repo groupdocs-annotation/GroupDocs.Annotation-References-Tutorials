@@ -1,7 +1,6 @@
 ---
 title: Εκμάθηση και Παραδείγματα GroupDocs.Annotation για .NET
 linktitle: GroupDocs.Annotation για .NET Tutorials
-type: docs
 weight: 10
 url: /el/net/
 description: Ξεκλειδώστε πλήρως τις δυνατότητες του GroupDocs.Annotation για .NET με τα σεμινάρια μας. Ενσωματώστε απρόσκοπτα, βελτιώστε τη συνεργασία και βελτιστοποιήστε τις ροές εργασίας.

@@ -3,7 +3,6 @@ title: 删除对 .NET 中注释的回复
 linktitle: 删除对 .NET 中注释的回复
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 删除对 .NET 中注释的回复。带有代码示例的分步指南。
-type: docs
 weight: 15
 url: /zh/net/removing-annotations/remove-replies-to-annotations/
 ---

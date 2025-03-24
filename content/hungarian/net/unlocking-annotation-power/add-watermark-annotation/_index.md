@@ -3,7 +3,6 @@ title: Vízjel megjegyzés hozzáadása a dokumentumhoz
 linktitle: Vízjel megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET segítségével megtudhatja, hogyan adhat hozzá könnyedén vízjel megjegyzéseket dokumentumaihoz. Növelje a dokumentumok átláthatóságát és biztonságát.
-type: docs
 weight: 28
 url: /hu/net/unlocking-annotation-power/add-watermark-annotation/
 ---

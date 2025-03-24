@@ -3,7 +3,6 @@ title: Λήψη λίστας σχολιασμών χρησιμοποιώντας
 linktitle: Λήψη λίστας σχολιασμών χρησιμοποιώντας το Κλειδί έκδοσης
 second_title: GroupDocs.Annotation .NET API
 description: Βελτιώστε τις εφαρμογές σας .NET με GroupDocs.Annotation για απρόσκοπτο σχολιασμό εγγράφων. Ακολουθήστε τον βήμα προς βήμα οδηγό μας για αποτελεσματική ενσωμάτωση.
-type: docs
 weight: 18
 url: /el/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ List<AnnotationBase> annotations = annotator.GetVersion("CUSTOM_VERSION");
 ### Μπορώ να αγοράσω μια προσωρινή άδεια χρήσης για το GroupDocs.Annotation για δοκιμαστικούς σκοπούς;
 Ναι, διατίθενται προσωρινές άδειες για αγορά για να διευκολυνθεί η δοκιμή και η αξιολόγηση του προϊόντος.
 ### Πού μπορώ να βρω ολοκληρωμένη τεκμηρίωση για το GroupDocs.Annotation για .NET;
- Μπορείτε να ανατρέξετε στην τεκμηρίωση που είναι διαθέσιμη στον ιστότοπο του GroupDocs για λεπτομερείς οδηγίες σχετικά με τη χρήση του προϊόντος[εδώ]( https://reference.groupdocs.com/annotation/net/).
+ Μπορείτε να ανατρέξετε στην τεκμηρίωση που είναι διαθέσιμη στον ιστότοπο του GroupDocs για λεπτομερείς οδηγίες σχετικά με τη χρήση του προϊόντος[εδώ]( https://tutorials.groupdocs.com/annotation/net/).

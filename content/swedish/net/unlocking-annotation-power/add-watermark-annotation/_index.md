@@ -3,7 +3,6 @@ title: Lägg till vattenstämpelkommentar till dokumentet
 linktitle: Lägg till vattenstämpelkommentar till dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till vattenstämpelkommentarer till dina dokument utan ansträngning med GroupDocs.Annotation för .NET. Förbättra dokumentets tydlighet och säkerhet.
-type: docs
 weight: 28
 url: /sv/net/unlocking-annotation-power/add-watermark-annotation/
 ---

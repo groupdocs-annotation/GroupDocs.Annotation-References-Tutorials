@@ -3,7 +3,6 @@ title: 進階用法
 linktitle: 進階用法
 second_title: GroupDocs.Annotation .NET API
 description: 發現 GroupDocs.Annotation .NET 的進階使用教學。透過有關影像品質、註解匯出等的逐步指南增強文件管理。
-type: docs
 weight: 22
 url: /zh-hant/net/advanced-usage/
 ---

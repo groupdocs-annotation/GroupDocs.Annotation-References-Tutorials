@@ -3,7 +3,6 @@ title: Dodaj adnotację pola tekstowego do dokumentu
 linktitle: Dodaj adnotację pola tekstowego do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bezproblemowo integrować adnotacje pól tekstowych z aplikacjami .NET za pomocą Groupdocs.Annotation for .NET.
-type: docs
 weight: 21
 url: /pl/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ W tym samouczku zagłębimy się w jedną z podstawowych funkcjonalności Groupd
 ## Warunki wstępne
 Przed przystąpieniem do wdrożenia upewnij się, że spełnione są następujące wymagania wstępne:
 ### 1. Instalacja Groupdocs.Adnotacja dla .NET
- Przede wszystkim musisz pobrać i zainstalować Groupdocs.Annotation dla .NET. Możesz znaleźć link do pobrania[Tutaj](https://releases.groupdocs.com/annotation/net/) . Postępuj zgodnie z instrukcjami instalacji zawartymi w dokumentacji[Tutaj](https://reference.groupdocs.com/annotation/net/) aby poprawnie skonfigurować bibliotekę.
+ Przede wszystkim musisz pobrać i zainstalować Groupdocs.Annotation dla .NET. Możesz znaleźć link do pobrania[Tutaj](https://releases.groupdocs.com/annotation/net/) . Postępuj zgodnie z instrukcjami instalacji zawartymi w dokumentacji[Tutaj](https://tutorials.groupdocs.com/annotation/net/) aby poprawnie skonfigurować bibliotekę.
 ### 2. Konfiguracja środowiska programistycznego
 Upewnij się, że masz środowisko programistyczne skonfigurowane do programowania w platformie .NET. Obejmuje to zainstalowanie w systemie kompatybilnego środowiska IDE, takiego jak Visual Studio i .NET Framework.
 ### 3. Podstawowa znajomość programowania w C#

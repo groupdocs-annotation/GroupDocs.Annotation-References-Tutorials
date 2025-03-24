@@ -3,7 +3,6 @@ title: 画像注釈をドキュメントに追加 (ローカル パス)
 linktitle: 画像注釈をドキュメントに追加 (ローカル パス)
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントに画像注釈を追加する方法を学びます。ドキュメント処理機能を簡単に強化します。
-type: docs
 weight: 14
 url: /ja/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

@@ -3,7 +3,6 @@ title: Αφαίρεση σχολιασμών
 linktitle: Αφαίρεση σχολιασμών
 second_title: GroupDocs.Annotation .NET API
 description: Ανακαλύψτε πώς να διαχειρίζεστε αποτελεσματικά τους σχολιασμούς στο .NET με τα μαθήματα GroupDocs.Annotation. Βελτιώστε τη ροή εργασίας των εγγράφων σας και βελτιώστε τη συνεργασία απρόσκοπτα.
-type: docs
 weight: 25
 url: /el/net/removing-annotations/
 ---

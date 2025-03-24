@@ -3,7 +3,6 @@ title: Lägg till bildkommentar till dokument (lokal sökväg)
 linktitle: Lägg till bildkommentar till dokument (lokal sökväg)
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till bildkommentarer till dokument med GroupDocs.Annotation för .NET. Förbättra dokumentbehandlingskapaciteten med lätthet.
-type: docs
 weight: 14
 url: /sv/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

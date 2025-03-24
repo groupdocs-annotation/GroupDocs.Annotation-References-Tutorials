@@ -3,7 +3,6 @@ title: Add Area Annotation to Document
 linktitle: Add Area Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Enhance your document collaboration with Groupdocs.Annotation for .NET. Learn how to add area annotations step-by-step.
-type: docs
 weight: 10
 url: /net/unlocking-annotation-power/add-area-annotation/
 ---
@@ -87,7 +86,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 In this tutorial, we've learned how to add area annotations to documents using Groupdocs.Annotation for .NET. By following the step-by-step guide, you can easily enhance your documents with valuable annotations, improving collaboration and understanding.
 ## FAQ's
 ### Can I customize the appearance of the area annotation?
-Yes, you can customize various aspects such as background color, opacity, pen style, etc., to suit your preferences.
+Yes, you can customize various aspects such as background color, opacity, pen style, etc., to suit your ptutorialss.
 ### Is Groupdocs.Annotation compatible with other document formats?
 Yes, Groupdocs.Annotation supports various document formats including PDF, DOCX, PPTX, and more.
 ### Can I add multiple annotations to the same document?

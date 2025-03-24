@@ -3,7 +3,6 @@ title: Document laden vanuit Amazon S3
 linktitle: Document laden vanuit Amazon S3
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u documenten programmatisch kunt annoteren met Groupdocs.Annotation voor .NET. Stap-voor-stap handleiding voor naadloze integratie.
-type: docs
 weight: 10
 url: /nl/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation voor .NET ondersteunt een breed scala aan documentformaten,
 ### Kan ik Groupdocs.Annotation voor .NET uitproberen voordat ik het aanschaf?
  Ja, u kunt de functies van Groupdocs.Annotation voor .NET verkennen door gebruik te maken van de gratis proefversie die beschikbaar is[hier](https://releases.groupdocs.com/).
 ### Waar kan ik documentatie vinden voor Groupdocs.Annotation voor .NET?
-Uitgebreide documentatie voor Groupdocs.Annotation voor .NET is beschikbaar[hier](https://reference.groupdocs.com/annotation/net/).
+Uitgebreide documentatie voor Groupdocs.Annotation voor .NET is beschikbaar[hier](https://tutorials.groupdocs.com/annotation/net/).
 ### Heb ik een tijdelijke licentie nodig om Groupdocs.Annotation voor .NET te evalueren?
  U kunt een tijdelijke licentie voor evaluatiedoeleinden verkrijgen bij[hier](https://purchase.groupdocs.com/temporary-license/).
 ### Waar kan ik hulp of ondersteuning zoeken voor Groupdocs.Annotation voor .NET?

@@ -3,7 +3,6 @@ title: Dodaj komponent przycisku do dokumentu PDF
 linktitle: Dodaj komponent przycisku do dokumentu PDF
 second_title: GroupDocs.Adnotacja .NET API
 description: Wzbogacaj swoje dokumenty PDF za pomocą interaktywnych komponentów przycisków za pomocą Groupdocs.Annotation dla .NET. Postępuj zgodnie z naszym samouczkiem krok po kroku, aby zapewnić bezproblemową integrację.
-type: docs
 weight: 10
 url: /pl/net/document-components/add-button-component-to-pdf/
 ---

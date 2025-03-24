@@ -3,7 +3,6 @@ title: Establecer resolución de vista previa del documento
 linktitle: Establecer resolución de vista previa del documento
 second_title: API GroupDocs.Annotation .NET
 description: Mejore la colaboración en documentos con Groupdocs. Annotation para .NET agilice las funciones de anotación y vista previa sin problemas.
-type: docs
 weight: 23
 url: /es/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ En la era digital actual, la colaboración y la gestión de documentos eficiente
 Antes de sumergirse en el aprovechamiento de las capacidades de Groupdocs.Annotation para .NET, asegúrese de tener implementados los siguientes requisitos previos:
 1.  Instalación de Groupdocs.Annotation para .NET: comience descargando e instalando la biblioteca Groupdocs.Annotation para .NET. Puede obtener los archivos necesarios en el[enlace de descarga](https://releases.groupdocs.com/annotation/net/).
 2. Entorno de desarrollo: tenga configurado un entorno de desarrollo adecuado, incluido Visual Studio o cualquier otro IDE preferido para el desarrollo .NET.
-3. Acceso a la documentación: familiarícese con la documentación completa proporcionada por Groupdocs.Annotation para .NET. Puedes consultar el[documentación](https://reference.groupdocs.com/annotation/net/) para obtener información detallada sobre las funcionalidades y el uso de la biblioteca.
+3. Acceso a la documentación: familiarícese con la documentación completa proporcionada por Groupdocs.Annotation para .NET. Puedes consultar el[documentación](https://tutorials.groupdocs.com/annotation/net/) para obtener información detallada sobre las funcionalidades y el uso de la biblioteca.
 4. Comprensión básica de .NET Framework: asegúrese de tener un conocimiento fundamental de .NET Framework y el lenguaje de programación C# para utilizar Groupdocs.Annotation de manera efectiva para .NET.
 
 ## Importación de espacios de nombres necesarios

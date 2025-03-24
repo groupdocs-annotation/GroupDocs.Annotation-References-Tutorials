@@ -3,7 +3,6 @@ title: Đặt chú thích hình ảnh lên văn bản
 linktitle: Đặt chú thích hình ảnh lên văn bản
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích hình ảnh trên văn bản trong .NET bằng GroupDocs.Annotation để cộng tác và quản lý tài liệu hiệu quả.
-type: docs
 weight: 21
 url: /vi/net/advanced-usage/put-image-annotation-over-text/
 ---

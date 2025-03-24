@@ -3,7 +3,6 @@ title: Dodaj adnotację obrazu do dokumentu (ścieżka zdalna)
 linktitle: Dodaj adnotację obrazu do dokumentu (ścieżka zdalna)
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje graficzne do dokumentów za pomocą GroupDocs.Annotation dla .NET. Usprawnij zarządzanie dokumentami dzięki zaawansowanym funkcjom dodawania adnotacji.
-type: docs
 weight: 15
 url: /pl/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

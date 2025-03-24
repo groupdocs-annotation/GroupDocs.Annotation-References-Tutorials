@@ -3,7 +3,6 @@ title: Εισαγωγή σχολιασμών από το έγγραφο
 linktitle: Εισαγωγή σχολιασμών από το έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να εισάγετε σχολιασμούς από έγγραφα στο .NET χρησιμοποιώντας το GroupDocs.Annotation. Ακολουθήστε το βήμα προς βήμα σεμινάριο μας για απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 19
 url: /el/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### Πώς μπορώ να αποκτήσω μια προσωρινή άδεια για το GroupDocs.Annotation;
  Μπορείτε να αποκτήσετε μια προσωρινή άδεια χρήσης για το GroupDocs.Annotation από το[σελίδα προσωρινής άδειας](https://purchase.groupdocs.com/temporary-license/).
 ### Πού μπορώ να βρω ολοκληρωμένη τεκμηρίωση για το GroupDocs.Annotation;
- Λεπτομερής τεκμηρίωση για GroupDocs.Annotation είναι διαθέσιμη[εδώ](https://reference.groupdocs.com/annotation/net/).
+ Λεπτομερής τεκμηρίωση για GroupDocs.Annotation είναι διαθέσιμη[εδώ](https://tutorials.groupdocs.com/annotation/net/).
 ### Πού μπορώ να αναζητήσω υποστήριξη για τυχόν ζητήματα ή απορίες σχετικά με το GroupDocs.Annotation;
  Για υποστήριξη, επισκεφτείτε το GroupDocs.Annotation[δικαστήριο](https://forum.groupdocs.com/c/annotation/10) όπου μπορείτε να ζητήσετε βοήθεια από ειδικούς και την κοινότητα.

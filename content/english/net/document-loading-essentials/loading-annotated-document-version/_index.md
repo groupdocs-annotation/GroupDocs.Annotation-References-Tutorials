@@ -3,7 +3,6 @@ title: Loading Annotated Document Version
 linktitle: Loading Annotated Document Version
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to effortlessly load annotated document versions using GroupDocs.Annotation for .NET. Simplify collaboration and review processes.
-type: docs
 weight: 16
 url: /net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Yes, GroupDocs.Annotation supports annotating documents in formats such as PDF, 
 ### Is there a free trial available for GroupDocs.Annotation for .NET?
 Yes, you can access the free trial version from [here](https://releases.groupdocs.com/).
 ### Where can I find documentation for GroupDocs.Annotation for .NET?
-You can refer to the detailed documentation [here](https://reference.groupdocs.com/annotation/net/).
+You can refer to the detailed documentation [here](https://tutorials.groupdocs.com/annotation/net/).
 ### How can I obtain a temporary license for GroupDocs.Annotation for .NET?
 You can acquire a temporary license from [this link](https://purchase.groupdocs.com/temporary-license/).
 ### Where can I seek support or ask questions about GroupDocs.Annotation for .NET?

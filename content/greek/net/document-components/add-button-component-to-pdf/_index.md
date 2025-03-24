@@ -3,7 +3,6 @@ title: Προσθήκη στοιχείου κουμπιού σε έγγραφο 
 linktitle: Προσθήκη στοιχείου κουμπιού σε έγγραφο PDF
 second_title: GroupDocs.Annotation .NET API
 description: Βελτιώστε τα έγγραφά σας PDF με διαδραστικά στοιχεία κουμπιών χρησιμοποιώντας το Groupdocs.Annotation για .NET. Ακολουθήστε το βήμα προς βήμα σεμινάριο μας για απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 10
 url: /el/net/document-components/add-button-component-to-pdf/
 ---

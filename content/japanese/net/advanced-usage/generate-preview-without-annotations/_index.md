@@ -3,7 +3,6 @@ title: 注釈なしでプレビューを生成
 linktitle: 注釈なしでプレビューを生成
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して、.NET アプリケーション内でのドキュメントのコラボレーションと注釈を強化します。この強力なライブラリを使用すると、ドキュメントに簡単に注釈を付け、マークアップし、レビューできます。
-type: docs
 weight: 13
 url: /ja/net/advanced-usage/generate-preview-without-annotations/
 ---

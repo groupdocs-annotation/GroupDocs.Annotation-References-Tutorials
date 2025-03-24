@@ -3,7 +3,6 @@ title: Dodaj komponent pola wyboru do dokumentu PDF
 linktitle: Dodaj komponent pola wyboru do dokumentu PDF
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodać komponent Checkbox do dokumentów PDF za pomocą Groupdocs.Annotation dla .NET. Ulepsz swoje pliki PDF za pomocą elementów interaktywnych.
-type: docs
 weight: 11
 url: /pl/net/document-components/add-checkbox-component-to-pdf/
 ---

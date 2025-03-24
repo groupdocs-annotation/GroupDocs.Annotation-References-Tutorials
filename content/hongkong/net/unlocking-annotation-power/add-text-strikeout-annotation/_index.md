@@ -3,7 +3,6 @@ title: 在文件中新增文字刪除線註釋
 linktitle: 在文件中新增文字刪除線註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 將文字刪除線註解新增至文件。有效增強協作和文件審核流程。
-type: docs
 weight: 26
 url: /zh-hant/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

@@ -3,7 +3,6 @@ title: Wygeneruj kolumny arkusza podglądu
 linktitle: Wygeneruj kolumny arkusza podglądu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje do dokumentów za pomocą GroupDocs.Annotation dla .NET. Samouczek krok po kroku dla programistów .NET. Ulepsz swoje aplikacje.
-type: docs
 weight: 15
 url: /pl/net/advanced-usage/generate-preview-worksheet-columns/
 ---

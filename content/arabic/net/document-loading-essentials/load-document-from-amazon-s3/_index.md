@@ -3,7 +3,6 @@ title: قم بتحميل المستند من Amazon S3
 linktitle: قم بتحميل المستند من Amazon S3
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية إلى المستندات برمجيًا باستخدام Groupdocs.Annotation لـ .NET. البرنامج التعليمي خطوة بخطوة للتكامل السلس.
-type: docs
 weight: 10
 url: /ar/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### هل يمكنني تجربة Groupdocs.Annotation لـ .NET قبل الشراء؟
  نعم، يمكنك استكشاف ميزات Groupdocs.Annotation لـ .NET عن طريق الوصول إلى الإصدار التجريبي المجاني المتاح[هنا](https://releases.groupdocs.com/).
 ### أين يمكنني العثور على وثائق Groupdocs.Annotation لـ .NET؟
-تتوفر وثائق شاملة لـ Groupdocs.Annotation لـ .NET[هنا](https://reference.groupdocs.com/annotation/net/).
+تتوفر وثائق شاملة لـ Groupdocs.Annotation لـ .NET[هنا](https://tutorials.groupdocs.com/annotation/net/).
 ### هل أحتاج إلى ترخيص مؤقت لتقييم Groupdocs.Annotation لـ .NET؟
  يمكنك الحصول على ترخيص مؤقت لأغراض التقييم من[هنا](https://purchase.groupdocs.com/temporary-license/).
 ### أين يمكنني طلب المساعدة أو الدعم بخصوص Groupdocs.Annotation لـ .NET؟

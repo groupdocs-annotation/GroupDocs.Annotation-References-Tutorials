@@ -3,7 +3,6 @@ title: إضافة تعليق توضيحي للارتباط إلى المستند
 linktitle: إضافة تعليق توضيحي للارتباط إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية للارتباط إلى المستندات باستخدام Groupdocs.Annotation لـ .NET. تعزيز التعاون والتفاعل دون عناء.
-type: docs
 weight: 16
 url: /ar/net/unlocking-annotation-power/add-link-annotation/
 ---

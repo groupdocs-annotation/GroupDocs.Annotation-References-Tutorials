@@ -3,7 +3,6 @@ title: Skapa förhandsgranskning utan anteckningar
 linktitle: Skapa förhandsgranskning utan anteckningar
 second_title: GroupDocs.Annotation .NET API
 description: Förbättra dokumentsamarbete och anteckningar inom .NET-applikationer med GroupDocs.Annotation för .NET. Kommentera, markera och granska enkelt dokument med detta kraftfulla bibliotek.
-type: docs
 weight: 13
 url: /sv/net/advanced-usage/generate-preview-without-annotations/
 ---

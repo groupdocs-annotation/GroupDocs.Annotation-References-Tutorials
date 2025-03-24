@@ -3,7 +3,6 @@ title: وضع تعليق توضيحي للصورة فوق النص
 linktitle: وضع تعليق توضيحي للصورة فوق النص
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية للصور فوق النص في .NET باستخدام GroupDocs.Annotation لإدارة المستندات والتعاون بكفاءة.
-type: docs
 weight: 21
 url: /ar/net/advanced-usage/put-image-annotation-over-text/
 ---

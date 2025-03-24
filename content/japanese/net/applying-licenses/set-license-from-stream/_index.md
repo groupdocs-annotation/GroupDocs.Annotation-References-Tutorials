@@ -3,7 +3,6 @@ title: ストリームからライセンスを設定
 linktitle: ストリームからライセンスを設定
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して、.NET でのドキュメント アノテーションの可能性を最大限に引き出します。シームレスな統合については、ステップバイステップのガイドに従ってください。
-type: docs
 weight: 11
 url: /ja/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ GroupDocs.Annotation for .NET を使用してドキュメントの注釈機能�
 チュートリアルに入る前に、次の前提条件が満たされていることを確認してください。
 1.  GroupDocs.Annotation for .NET: GroupDocs.Annotation for .NET を次の場所からダウンロードしてインストールしていることを確認してください。[ダウンロードリンク](https://releases.groupdocs.com/annotation/net/).
 2. ライセンス: GroupDocs.Annotation の有効なライセンスを取得します。以下から購入できます。[ここ](https://purchase.groupdocs.com/buy)または一時ライセンスをリクエストする[ここ](https://purchase.groupdocs.com/temporary-license/).
-3. ドキュメント:[ドキュメンテーション](https://reference.groupdocs.com/annotation/net/) GroupDocs.Annotation の場合。 API 機能に関する詳細な洞察を提供します。
+3. ドキュメント:[ドキュメンテーション](https://tutorials.groupdocs.com/annotation/net/) GroupDocs.Annotation の場合。 API 機能に関する詳細な洞察を提供します。
 
 ## 名前空間のインポート
 まず、.NET プロジェクトで GroupDocs.Annotation の使用を開始するために必要な名前空間をインポートしましょう。
@@ -63,6 +62,6 @@ else
 ### 購入する前に GroupDocs.Annotation for .NET を試すことはできますか?
 はい、無料試用ライセンスをリクエストできます[ここ](https://releases.groupdocs.com/)GroupDocs.Annotation for .NET の機能を探索します。
 ### GroupDocs.Annotation for .NET の最新ドキュメントを入手するにはどうすればよいですか?
-を参照できます。[ドキュメンテーション](https://reference.groupdocs.com/annotation/net/) GroupDocs.Annotation for .NET では、詳細な API リファレンスとチュートリアルにアクセスできます。
+を参照できます。[ドキュメンテーション](https://tutorials.groupdocs.com/annotation/net/) GroupDocs.Annotation for .NET では、詳細な API リファレンスとチュートリアルにアクセスできます。
 ### ライセンスに問題が発生した場合はどうすればよいですか?
 ライセンスに問題が発生した場合は、GroupDocs サポート チームにお問い合わせください。

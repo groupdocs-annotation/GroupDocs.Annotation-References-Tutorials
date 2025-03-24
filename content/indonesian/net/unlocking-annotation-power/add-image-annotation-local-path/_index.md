@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Gambar ke Dokumen (Jalur Lokal)
 linktitle: Tambahkan Anotasi Gambar ke Dokumen (Jalur Lokal)
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi gambar ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kemampuan pemrosesan dokumen dengan mudah.
-type: docs
 weight: 14
 url: /id/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

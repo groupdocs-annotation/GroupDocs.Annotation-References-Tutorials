@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci elipsy
 linktitle: Přidejte do dokumentu anotaci elipsy
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat elipsové anotace do dokumentů v .NET pomocí GroupDocs.Annotation. Vylepšete spolupráci a komunikaci bez námahy.
-type: docs
 weight: 13
 url: /cs/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

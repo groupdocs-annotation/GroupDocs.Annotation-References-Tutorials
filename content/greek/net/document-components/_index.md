@@ -3,7 +3,6 @@ title: Στοιχεία εγγράφου
 linktitle: Στοιχεία εγγράφου
 second_title: GroupDocs.Annotation .NET API
 description: Ανακαλύψτε ολοκληρωμένα σεμινάρια για την ενσωμάτωση διαδραστικών στοιχείων όπως κουμπιά, πλαίσια ελέγχου και αναπτυσσόμενα μενού σε έγγραφα PDF χρησιμοποιώντας το GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /el/net/document-components/
 ---

@@ -3,7 +3,6 @@ title: 문서에 폴리라인 주석 추가
 linktitle: 문서에 폴리라인 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 폴리라인 주석을 추가하는 방법을 알아보세요. 협업 및 문서 검토 프로세스를 손쉽게 향상하세요.
-type: docs
 weight: 18
 url: /ko/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### .NET용 GroupDocs.Annotation은 무료 평가판을 제공합니까?
  예, 다음 사이트를 방문하여 .NET용 GroupDocs.Annotation 무료 평가판을 이용하실 수 있습니다.[이 링크](https://releases.groupdocs.com/).
 ### .NET용 GroupDocs.Annotation에 대한 설명서는 어디서 찾을 수 있나요?
- .NET용 GroupDocs.Annotation에 대한 설명서를 찾을 수 있습니다.[여기](https://reference.groupdocs.com/annotation/net/).
+ .NET용 GroupDocs.Annotation에 대한 설명서를 찾을 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).
 ### .NET용 GroupDocs.Annotation과 관련된 문제나 쿼리에 대한 지원을 받으려면 어떻게 해야 합니까?
  GroupDocs.Annotation 포럼을 방문하면 지원을 받을 수 있습니다.[여기](https://forum.groupdocs.com/c/annotation/10).

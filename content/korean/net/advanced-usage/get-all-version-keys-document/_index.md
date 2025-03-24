@@ -3,7 +3,6 @@ title: 문서의 모든 버전 키 가져오기
 linktitle: 문서의 모든 버전 키 가져오기
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서의 모든 버전 키를 검색하는 방법을 알아보세요. 이 포괄적인 기능을 통해 문서 관리 기능을 강화하세요.
-type: docs
 weight: 16
 url: /ko/net/advanced-usage/get-all-version-keys-document/
 ---

@@ -3,7 +3,6 @@ title: Generovat náhled bez komentářů
 linktitle: Generovat náhled bez komentářů
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak bezproblémově integrovat možnosti anotací dokumentů do vašich aplikací .NET pomocí GroupDocs.Annotation for .NET.
-type: docs
 weight: 14
 url: /cs/net/advanced-usage/generate-preview-without-comments/
 ---

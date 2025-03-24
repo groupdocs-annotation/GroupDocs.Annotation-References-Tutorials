@@ -3,7 +3,6 @@ title: .NET में एनोटेशन हटाएँ
 linktitle: .NET में एनोटेशन हटाएँ
 second_title: GroupDocs.Annotation .NET API
 description: .NET में Groupdocs.Annotation का उपयोग करके PDF दस्तावेज़ों से एनोटेशन हटाने का तरीका जानें। अपनी डिजिटल दस्तावेज़ प्रबंधन प्रक्रिया को सरल बनाएं।
-type: docs
 weight: 10
 url: /hi/net/removing-annotations/remove-annotations/
 ---

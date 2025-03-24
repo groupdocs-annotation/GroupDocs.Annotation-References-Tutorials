@@ -3,7 +3,6 @@ title: Rimuovere le annotazioni utilizzando le opzioni di salvataggio in .NET
 linktitle: Rimuovere le annotazioni utilizzando le opzioni di salvataggio in .NET
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come rimuovere le annotazioni da PDF e altri documenti in .NET utilizzando GroupDocs.Annotation. Guida passo passo con esempi di codice.
-type: docs
 weight: 14
 url: /it/net/removing-annotations/remove-annotations-using-save-options/
 ---

@@ -3,7 +3,6 @@ title: Dokumentum betöltése FTP-ről
 linktitle: Dokumentum betöltése FTP-ről
 second_title: GroupDocs.Annotation .NET API
 description: Bővítse .NET-alkalmazásait a GroupDocs.Annotation segítségével a zökkenőmentes dokumentumannotáció érdekében. Lépésről lépésre bemutató oktatóanyag.
-type: docs
 weight: 12
 url: /hu/net/document-loading-essentials/load-document-from-ftp/
 ---

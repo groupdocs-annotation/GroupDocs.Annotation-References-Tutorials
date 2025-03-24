@@ -3,7 +3,6 @@ title: Tüm Sürüm Anahtarlarını Belgeye Alın
 linktitle: Tüm Sürüm Anahtarlarını Belgeye Alın
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak bir belgedeki tüm sürüm anahtarlarını nasıl alacağınızı öğrenin. Bu kapsamlı yazılımla belge yönetimi yeteneklerinizi geliştirin.
-type: docs
 weight: 16
 url: /tr/net/advanced-usage/get-all-version-keys-document/
 ---

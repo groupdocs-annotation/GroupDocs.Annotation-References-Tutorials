@@ -3,7 +3,6 @@ title: Távolítsa el a megjegyzéseket a .NET-ből
 linktitle: Távolítsa el a megjegyzéseket a .NET-ből
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan távolíthat el megjegyzéseket PDF-dokumentumokból a Groupdocs.Annotation segítségével a .NET-ben. Egyszerűsítse digitális dokumentumkezelési folyamatát.
-type: docs
 weight: 10
 url: /hu/net/removing-annotations/remove-annotations/
 ---

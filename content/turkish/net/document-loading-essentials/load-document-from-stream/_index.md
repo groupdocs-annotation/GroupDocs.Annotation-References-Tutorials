@@ -3,7 +3,6 @@ title: Belgeyi Akıştan Yükle
 linktitle: Belgeyi Akıştan Yükle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation ile .NET'te belgelere zahmetsizce nasıl açıklama ekleyeceğinizi öğrenin. İşbirliğini ve üretkenliği artırın.
-type: docs
 weight: 14
 url: /tr/net/document-loading-essentials/load-document-from-stream/
 ---

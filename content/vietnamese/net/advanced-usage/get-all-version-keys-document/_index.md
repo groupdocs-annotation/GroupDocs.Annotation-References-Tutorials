@@ -3,7 +3,6 @@ title: Nhận tất cả các khóa phiên bản trên tài liệu
 linktitle: Nhận tất cả các khóa phiên bản trên tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách truy xuất tất cả các khóa phiên bản trên tài liệu bằng GroupDocs.Annotation cho .NET. Nâng cao khả năng quản lý tài liệu của bạn với tính năng toàn diện này.
-type: docs
 weight: 16
 url: /vi/net/advanced-usage/get-all-version-keys-document/
 ---

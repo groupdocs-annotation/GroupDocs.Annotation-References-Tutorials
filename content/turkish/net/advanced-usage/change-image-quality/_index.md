@@ -3,7 +3,6 @@ title: Görüntü Kalitesini Değiştir
 linktitle: Görüntü Kalitesini Değiştir
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET'i kullanarak PDF dosyalarındaki görüntü kalitesini nasıl geliştireceğinizi öğrenin. Adım adım kılavuzumuzu takip edin.
-type: docs
 weight: 10
 url: /tr/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ Günümüzün dijital çağında, PDF belgelerindeki görüntülerin kalitesi, k
 ## Önkoşullar
 Eğiticiye dalmadan önce aşağıdaki önkoşulların mevcut olduğundan emin olun:
 ### 1. Groupdocs.Annotation for .NET Kurulumu
- Öncelikle web sitesinden Groupdocs.Annotation for .NET kütüphanesini indirip yükleyin. İndirme linkini bulabilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/) . Belgelerde sağlanan kurulum talimatlarını izleyin[Burada](https://reference.groupdocs.com/annotation/net/) Kütüphaneyi doğru şekilde kurmak için.
+ Öncelikle web sitesinden Groupdocs.Annotation for .NET kütüphanesini indirip yükleyin. İndirme linkini bulabilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/) . Belgelerde sağlanan kurulum talimatlarını izleyin[Burada](https://tutorials.groupdocs.com/annotation/net/) Kütüphaneyi doğru şekilde kurmak için.
 ### 2. C# Programlama Diline aşinalık
 Bu eğitimde sağlanan örneklerin yanı sıra C# programlama dilinin temel bir anlayışının takip edilmesi önemlidir.
 ### 3. Giriş PDF'sine ve Görüntü Dosyalarına Erişim

@@ -3,7 +3,6 @@ title: Tải tài liệu từ Amazon S3
 linktitle: Tải tài liệu từ Amazon S3
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách chú thích tài liệu theo chương trình với Groupdocs.Annotation cho .NET. Hướng dẫn từng bước để tích hợp liền mạch.
-type: docs
 weight: 10
 url: /vi/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation for .NET hỗ trợ nhiều định dạng tài liệu, bao
 ### Tôi có thể dùng thử Groupdocs.Annotation cho .NET trước khi mua không?
  Có, bạn có thể khám phá các tính năng của Groupdocs.Annotation for .NET bằng cách truy cập phiên bản dùng thử miễn phí có sẵn[đây](https://releases.groupdocs.com/).
 ### Tôi có thể tìm tài liệu về Groupdocs.Annotation cho .NET ở đâu?
-Tài liệu toàn diện về Groupdocs.Annotation cho .NET có sẵn[đây](https://reference.groupdocs.com/annotation/net/).
+Tài liệu toàn diện về Groupdocs.Annotation cho .NET có sẵn[đây](https://tutorials.groupdocs.com/annotation/net/).
 ### Tôi có cần giấy phép tạm thời để đánh giá Groupdocs.Annotation cho .NET không?
  Bạn có thể xin giấy phép tạm thời cho mục đích đánh giá từ[đây](https://purchase.groupdocs.com/temporary-license/).
 ### Tôi có thể tìm kiếm sự trợ giúp hoặc hỗ trợ cho Groupdocs.Annotation cho .NET ở đâu?

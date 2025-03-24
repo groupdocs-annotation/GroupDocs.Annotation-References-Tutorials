@@ -3,7 +3,6 @@ title: Gelişmiş Kullanım
 linktitle: Gelişmiş Kullanım
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation .NET için gelişmiş kullanım eğitimlerini keşfedin. Görüntü kalitesi, açıklamaların dışa aktarımı ve daha fazlası hakkında adım adım kılavuzlarla belge yönetimini geliştirin.
-type: docs
 weight: 22
 url: /tr/net/advanced-usage/
 ---

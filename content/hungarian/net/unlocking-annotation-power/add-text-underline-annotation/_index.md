@@ -3,7 +3,6 @@ title: Szöveg aláhúzás megjegyzés hozzáadása a dokumentumhoz
 linktitle: Szöveg aláhúzás megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat szöveges aláhúzás megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozza az együttműködést és a kommunikációt erőfeszítés nélkül.
-type: docs
 weight: 27
 url: /hu/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

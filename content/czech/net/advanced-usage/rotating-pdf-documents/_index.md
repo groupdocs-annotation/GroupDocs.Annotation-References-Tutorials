@@ -3,7 +3,6 @@ title: Otáčení dokumentů PDF
 linktitle: Otáčení dokumentů PDF
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak snadno otáčet dokumenty PDF pomocí Groupdocs.Annotation pro .NET. Zlepšete efektivitu správy dokumentů.
-type: docs
 weight: 22
 url: /cs/net/advanced-usage/rotating-pdf-documents/
 ---

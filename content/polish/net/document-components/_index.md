@@ -3,7 +3,6 @@ title: Składniki dokumentu
 linktitle: Składniki dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Odkryj kompleksowe samouczki dotyczące integracji interaktywnych komponentów, takich jak przyciski, pola wyboru i listy rozwijane, z dokumentami PDF za pomocą GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /pl/net/document-components/
 ---

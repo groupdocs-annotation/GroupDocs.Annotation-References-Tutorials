@@ -3,7 +3,6 @@ title: Usuń wiele adnotacji w .NET
 linktitle: Usuń wiele adnotacji w .NET
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak skutecznie usuwać wiele adnotacji w platformie .NET przy użyciu GroupDocs.Annotation. Postępuj zgodnie z naszym samouczkiem krok po kroku, aby uzyskać bezproblemową integrację z aplikacjami.
-type: docs
 weight: 12
 url: /pl/net/removing-annotations/remove-multiple-annotations/
 ---

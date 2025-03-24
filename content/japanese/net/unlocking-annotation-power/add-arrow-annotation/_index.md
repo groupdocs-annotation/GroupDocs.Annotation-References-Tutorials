@@ -3,7 +3,6 @@ title: ドキュメントに矢印注釈を追加
 linktitle: ドキュメントに矢印注釈を追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントに矢印注釈を追加する方法を学びます。文書の明瞭さと対話性を簡単に強化します。
-type: docs
 weight: 11
 url: /ja/net/unlocking-annotation-power/add-arrow-annotation/
 ---

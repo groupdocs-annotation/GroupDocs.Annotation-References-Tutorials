@@ -1,7 +1,6 @@
 ---
 title: Hướng dẫn và ví dụ về GroupDocs.Annotation cho .NET
 linktitle: GroupDocs.Annotation cho hướng dẫn .NET
-type: docs
 weight: 10
 url: /vi/net/
 description: Khai phá toàn bộ tiềm năng của GroupDocs.Annotation dành cho .NET bằng các hướng dẫn của chúng tôi. Tích hợp liền mạch, tăng cường cộng tác và hợp lý hóa quy trình công việc.

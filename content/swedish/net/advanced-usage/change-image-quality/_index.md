@@ -3,7 +3,6 @@ title: Ändra bildkvalitet
 linktitle: Ändra bildkvalitet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du förbättrar bildkvaliteten i PDF-filer med Groupdocs.Annotation för .NET. Följ vår steg-för-steg-guide.
-type: docs
 weight: 10
 url: /sv/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ I dagens digitala tidsålder kan kvaliteten på bilder i PDF-dokument avsevärt 
 ## Förutsättningar
 Innan vi dyker in i handledningen, se till att du har följande förutsättningar på plats:
 ### 1. Installation av Groupdocs.Annotation för .NET
- Först, ladda ner och installera Groupdocs.Annotation för .NET-biblioteket från webbplatsen. Du hittar nedladdningslänken[här](https://releases.groupdocs.com/annotation/net/) . Följ installationsinstruktionerna i dokumentationen[här](https://reference.groupdocs.com/annotation/net/) för att ställa in biblioteket korrekt.
+ Först, ladda ner och installera Groupdocs.Annotation för .NET-biblioteket från webbplatsen. Du hittar nedladdningslänken[här](https://releases.groupdocs.com/annotation/net/) . Följ installationsinstruktionerna i dokumentationen[här](https://tutorials.groupdocs.com/annotation/net/) för att ställa in biblioteket korrekt.
 ### 2. Bekantskap med programmeringsspråket C#
 En grundläggande förståelse för programmeringsspråket C# är viktigt att följa tillsammans med exemplen i denna handledning.
 ### 3. Åtkomst till PDF- och bildfiler

@@ -3,7 +3,6 @@ title: Ontvang informatie over de inhoud van documentteksten
 linktitle: Ontvang informatie over de inhoud van documentteksten
 second_title: GroupDocs.Annotation .NET API
 description: Annoteer documenten naadloos met GroupDocs.Annotation voor .NET. Integreer annotatiefunctionaliteiten moeiteloos in uw .NET-applicaties.
-type: docs
 weight: 17
 url: /nl/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Ja, GroupDocs.Annotation voor .NET ondersteunt verschillende documentformaten, w
 ### Waar kan ik ondersteuning vinden voor GroupDocs.Annotation voor .NET?
  U kunt ondersteuning zoeken en vragen stellen via de[GroupDocs-forum](https://forum.groupdocs.com/c/annotation/10).
 ### Biedt GroupDocs.Annotation voor .NET enige documentatie?
- Ja, er is uitgebreide documentatie voor GroupDocs.Annotation voor .NET beschikbaar[hier](https://reference.groupdocs.com/annotation/net/).
+ Ja, er is uitgebreide documentatie voor GroupDocs.Annotation voor .NET beschikbaar[hier](https://tutorials.groupdocs.com/annotation/net/).

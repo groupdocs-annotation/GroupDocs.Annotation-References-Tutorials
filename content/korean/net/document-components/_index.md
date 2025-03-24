@@ -3,7 +3,6 @@ title: 문서 구성요소
 linktitle: 문서 구성요소
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET을 사용하여 버튼, 확인란, 드롭다운과 같은 대화형 구성 요소를 PDF 문서에 통합하는 방법에 대한 포괄적인 튜토리얼을 찾아보세요.
-type: docs
 weight: 24
 url: /ko/net/document-components/
 ---

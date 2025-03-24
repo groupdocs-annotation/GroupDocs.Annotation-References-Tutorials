@@ -3,7 +3,6 @@ title: Libérer la puissance des annotations
 linktitle: Libérer la puissance des annotations
 second_title: API GroupDocs.Annotation .NET
 description: Libérez la puissance de l’annotation avec les didacticiels GroupDocs.Annotation pour .NET. Apprenez à ajouter diverses annotations étape par étape et améliorez la collaboration sans effort.
-type: docs
 weight: 23
 url: /fr/net/unlocking-annotation-power/
 ---

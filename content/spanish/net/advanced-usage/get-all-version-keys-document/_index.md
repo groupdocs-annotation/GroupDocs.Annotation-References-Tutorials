@@ -3,7 +3,6 @@ title: Obtenga todas las claves de versión en el documento
 linktitle: Obtenga todas las claves de versión en el documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a recuperar todas las claves de versión de un documento utilizando GroupDocs.Annotation para .NET. Mejore sus capacidades de gestión de documentos con este completo.
-type: docs
 weight: 16
 url: /es/net/advanced-usage/get-all-version-keys-document/
 ---

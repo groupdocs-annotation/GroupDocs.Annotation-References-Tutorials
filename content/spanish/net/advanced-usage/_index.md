@@ -3,7 +3,6 @@ title: Uso avanzado
 linktitle: Uso avanzado
 second_title: API GroupDocs.Annotation .NET
 description: Descubra tutoriales de uso avanzado para GroupDocs.Annotation .NET. Mejore la gestión de documentos con guías paso a paso sobre calidad de imagen, exportación de anotaciones y más.
-type: docs
 weight: 22
 url: /es/net/advanced-usage/
 ---

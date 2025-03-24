@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Redaksi Teks ke Dokumen
 linktitle: Tambahkan Anotasi Redaksi Teks ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi redaksi teks ke dokumen PDF menggunakan GroupDocs.Annotation untuk .NET. Lindungi informasi sensitif dengan mudah.
-type: docs
 weight: 23
 url: /id/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

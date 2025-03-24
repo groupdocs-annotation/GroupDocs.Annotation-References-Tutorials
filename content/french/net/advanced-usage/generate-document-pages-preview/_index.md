@@ -3,7 +3,6 @@ title: Générer un aperçu des pages du document
 linktitle: Générer un aperçu des pages du document
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment générer efficacement un aperçu des pages d'un document à l'aide de GroupDocs.Annotation pour .NET. Améliorez vos flux de travail de gestion de documents avec cette solution complète.
-type: docs
 weight: 12
 url: /fr/net/advanced-usage/generate-document-pages-preview/
 ---

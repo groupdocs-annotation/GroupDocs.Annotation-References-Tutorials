@@ -3,7 +3,6 @@ title: Hapus Beberapa Anotasi di .NET
 linktitle: Hapus Beberapa Anotasi di .NET
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menghapus beberapa anotasi secara efisien di .NET menggunakan GroupDocs.Annotation. Ikuti tutorial langkah demi langkah kami untuk integrasi yang lancar ke dalam aplikasi Anda.
-type: docs
 weight: 12
 url: /id/net/removing-annotations/remove-multiple-annotations/
 ---

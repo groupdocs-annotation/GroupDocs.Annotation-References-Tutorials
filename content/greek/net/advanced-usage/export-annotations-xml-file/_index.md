@@ -3,7 +3,6 @@ title: Εξαγωγή σχολιασμών από αρχείο XML
 linktitle: Εξαγωγή σχολιασμών από αρχείο XML
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να εξάγετε σχολιασμούς από αρχεία XML χρησιμοποιώντας το GroupDocs.Annotation για .NET, απλοποιώντας αποτελεσματικά τη ροή εργασιών διαχείρισης εγγράφων.
-type: docs
 weight: 11
 url: /el/net/advanced-usage/export-annotations-xml-file/
 ---

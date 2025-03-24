@@ -3,7 +3,6 @@ title: .NET の保存オプションを使用して注釈を削除する
 linktitle: .NET の保存オプションを使用して注釈を削除する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET の PDF やその他のドキュメントから注釈を削除する方法を学びます。コード例を含むステップバイステップのガイド。
-type: docs
 weight: 14
 url: /ja/net/removing-annotations/remove-annotations-using-save-options/
 ---

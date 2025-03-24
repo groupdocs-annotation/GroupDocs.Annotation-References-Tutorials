@@ -3,7 +3,6 @@ title: Menguasai GroupDocs.Annotation - Tutorial dan Panduan
 linktitle: GroupDocs.Tutorial Anotasi
 additionalTitle: Referensi API GroupDocs
 description: Buka potensi penuh GroupDocs.Annotation dengan tutorial kami. Tingkatkan kolaborasi dan sederhanakan alur kerja dengan panduan dan tips komprehensif.
-type: docs
 weight: 11
 url: /id/
 is_root: true

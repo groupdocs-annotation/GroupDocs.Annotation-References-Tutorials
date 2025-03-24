@@ -3,7 +3,6 @@ title: 문서에 리소스 편집 주석 추가
 linktitle: 문서에 리소스 편집 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서 관리 작업 흐름을 향상하세요. 효율적으로 리소스 편집 주석을 .NET에 원활하게 통합하세요.
-type: docs
 weight: 19
 url: /ko/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

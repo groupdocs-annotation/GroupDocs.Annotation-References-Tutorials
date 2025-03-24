@@ -3,7 +3,6 @@ title: .NET에서 여러 주석 제거
 linktitle: .NET에서 여러 주석 제거
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET에서 여러 주석을 효율적으로 제거하는 방법을 알아보세요. 귀하의 애플리케이션에 원활하게 통합하려면 단계별 튜토리얼을 따르십시오.
-type: docs
 weight: 12
 url: /ko/net/removing-annotations/remove-multiple-annotations/
 ---

@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού επεξεργασίας κειμέ
 linktitle: Προσθήκη σχολιασμού επεξεργασίας κειμένου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς επεξεργασίας κειμένου σε έγγραφα PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Προστατέψτε τις ευαίσθητες πληροφορίες χωρίς κόπο.
-type: docs
 weight: 23
 url: /el/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

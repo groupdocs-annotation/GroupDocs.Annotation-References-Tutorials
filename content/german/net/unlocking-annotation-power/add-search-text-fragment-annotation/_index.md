@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Suchtextfragment-Anmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Suchtextfragment-Anmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Entdecken Sie die Leistungsfähigkeit von GroupDocs.Annotation für .NET und fügen Sie Ihren Anwendungen mühelos Dokumentanmerkungsfunktionen hinzu.
-type: docs
 weight: 20
 url: /de/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

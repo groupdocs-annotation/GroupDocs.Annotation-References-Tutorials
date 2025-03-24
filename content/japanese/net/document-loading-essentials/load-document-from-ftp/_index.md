@@ -3,7 +3,6 @@ title: FTPからドキュメントをロード
 linktitle: FTPからドキュメントをロード
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET アプリケーションを強化し、シームレスなドキュメント注釈を追加します。ステップバイステップのチュートリアルが含まれています。
-type: docs
 weight: 12
 url: /ja/net/document-loading-essentials/load-document-from-ftp/
 ---

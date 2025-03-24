@@ -3,7 +3,6 @@ title: Načítání vlastních písem
 linktitle: Načítání vlastních písem
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak plynule načítat vlastní písma v GroupDocs.Annotation pro .NET, abyste vylepšili anotace dokumentů. Pro snadnou integraci postupujte podle našich pokynů krok za krokem.
-type: docs
 weight: 20
 url: /cs/net/advanced-usage/loading-custom-fonts/
 ---

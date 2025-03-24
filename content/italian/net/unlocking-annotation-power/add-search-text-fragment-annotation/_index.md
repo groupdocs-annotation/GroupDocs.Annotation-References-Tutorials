@@ -3,7 +3,6 @@ title: Aggiungi l'annotazione del frammento di testo di ricerca al documento
 linktitle: Aggiungi l'annotazione del frammento di testo di ricerca al documento
 second_title: API GroupDocs.Annotation .NET
 description: Esplora la potenza di GroupDocs.Annotation per .NET e aggiungi facilmente funzionalità di annotazione dei documenti alle tue applicazioni.
-type: docs
 weight: 20
 url: /it/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

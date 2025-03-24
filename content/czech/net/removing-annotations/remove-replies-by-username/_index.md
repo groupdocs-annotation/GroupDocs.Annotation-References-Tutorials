@@ -3,7 +3,6 @@ title: Odebrat odpovědi podle uživatelského jména v .NET
 linktitle: Odebrat odpovědi podle uživatelského jména v .NET
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak plynule anotovat dokumenty pomocí Groupdocs.Annotation pro .NET. Vylepšete spolupráci a správu dokumentů pomocí tohoto výkonného nástroje.
-type: docs
 weight: 17
 url: /cs/net/removing-annotations/remove-replies-by-username/
 ---

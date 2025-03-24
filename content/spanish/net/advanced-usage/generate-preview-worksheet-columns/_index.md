@@ -3,7 +3,6 @@ title: Generar columnas de hoja de trabajo de vista previa
 linktitle: Generar columnas de hoja de trabajo de vista previa
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a anotar documentos utilizando GroupDocs.Annotation para .NET. Tutorial paso a paso para desarrolladores .NET. Mejore sus aplicaciones.
-type: docs
 weight: 15
 url: /es/net/advanced-usage/generate-preview-worksheet-columns/
 ---

@@ -3,7 +3,6 @@ title: Добавить компонент флажка в PDF-документ
 linktitle: Добавить компонент флажка в PDF-документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавить компонент флажка в документы PDF с помощью Groupdocs.Annotation для .NET. Улучшите свои PDF-файлы с помощью интерактивных элементов.
-type: docs
 weight: 11
 url: /ru/net/document-components/add-checkbox-component-to-pdf/
 ---

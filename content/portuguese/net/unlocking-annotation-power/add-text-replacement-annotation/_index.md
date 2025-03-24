@@ -3,7 +3,6 @@ title: Adicionar anotação de substituição de texto ao documento
 linktitle: Adicionar anotação de substituição de texto ao documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como adicionar anotações de substituição de texto aos seus documentos .NET sem esforço usando GroupDocs.Annotation for .NET. Aprimore seus recursos de manipulação de documentos.
-type: docs
 weight: 24
 url: /pt/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

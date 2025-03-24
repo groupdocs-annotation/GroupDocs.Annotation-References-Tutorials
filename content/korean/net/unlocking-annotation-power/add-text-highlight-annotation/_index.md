@@ -3,7 +3,6 @@ title: 문서에 텍스트 강조 주석 추가
 linktitle: 문서에 텍스트 강조 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 강조 주석을 추가하는 방법을 알아보세요. 이 포괄적인 기능을 통해 협업과 생산성을 향상하세요.
-type: docs
 weight: 22
 url: /ko/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

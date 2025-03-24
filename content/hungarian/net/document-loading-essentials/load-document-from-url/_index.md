@@ -3,7 +3,6 @@ title: Dokumentum betöltése az URL-ről
 linktitle: Dokumentum betöltése az URL-ről
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan fűzhet programozott megjegyzéseket PDF-dokumentumokhoz a GroupDocs.Annotation for .NET használatával. Lépésről lépésre bemutató oktatóprogram kódpéldákkal.
-type: docs
 weight: 15
 url: /hu/net/document-loading-essentials/load-document-from-url/
 ---

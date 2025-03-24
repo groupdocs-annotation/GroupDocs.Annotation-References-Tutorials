@@ -3,7 +3,6 @@ title: Загрузить документ из Azure
 linktitle: Загрузить документ из Azure
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как аннотировать документы в .NET с помощью GroupDocs.Annotation. Пошаговое руководство по плавной интеграции с хранилищем BLOB-объектов Azure.
-type: docs
 weight: 11
 url: /ru/net/document-loading-essentials/load-document-from-azure/
 ---

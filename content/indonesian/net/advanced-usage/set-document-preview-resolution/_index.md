@@ -3,7 +3,6 @@ title: Tetapkan Resolusi Pratinjau Dokumen
 linktitle: Tetapkan Resolusi Pratinjau Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Tingkatkan kolaborasi dokumen dengan Groupdocs.Annotation untuk .NET menyederhanakan fungsi anotasi dan pratinjau dengan lancar.
-type: docs
 weight: 23
 url: /id/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ Di era digital saat ini, pengelolaan dokumen dan kolaborasi yang efisien adalah 
 Sebelum mendalami pemanfaatan kemampuan Groupdocs.Annotation untuk .NET, pastikan Anda memiliki prasyarat berikut:
 1.  Instalasi Groupdocs.Annotation for .NET: Mulailah dengan mengunduh dan menginstal perpustakaan Groupdocs.Annotation for .NET. Anda dapat memperoleh file yang diperlukan dari[tautan unduhan](https://releases.groupdocs.com/annotation/net/).
 2. Lingkungan Pengembangan: Siapkan lingkungan pengembangan yang sesuai, termasuk Visual Studio atau IDE pilihan lainnya untuk pengembangan .NET.
-3. Akses ke Dokumentasi: Biasakan diri Anda dengan dokumentasi komprehensif yang disediakan oleh Groupdocs.Annotation untuk .NET. Anda dapat merujuk ke[dokumentasi](https://reference.groupdocs.com/annotation/net/) untuk wawasan terperinci tentang fungsi dan penggunaan perpustakaan.
+3. Akses ke Dokumentasi: Biasakan diri Anda dengan dokumentasi komprehensif yang disediakan oleh Groupdocs.Annotation untuk .NET. Anda dapat merujuk ke[dokumentasi](https://tutorials.groupdocs.com/annotation/net/) untuk wawasan terperinci tentang fungsi dan penggunaan perpustakaan.
 4. Pemahaman Dasar .NET Framework: Pastikan Anda memiliki pemahaman mendasar tentang kerangka .NET dan bahasa pemrograman C# untuk memanfaatkan Groupdocs.Annotation untuk .NET secara efektif.
 
 ## Mengimpor Namespace yang Diperlukan

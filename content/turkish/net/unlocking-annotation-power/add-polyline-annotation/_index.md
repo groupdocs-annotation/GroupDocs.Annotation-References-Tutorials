@@ -3,7 +3,6 @@ title: Belgeye Çoklu Çizgi Açıklaması Ekleme
 linktitle: Belgeye Çoklu Çizgi Açıklaması Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelere sürekli çizgi açıklamalarını nasıl ekleyeceğinizi öğrenin. İşbirliğini ve belge inceleme süreçlerini zahmetsizce geliştirin.
-type: docs
 weight: 18
 url: /tr/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Evet, ek açıklamaların renk, opaklık, stil ve genişlik gibi çeşitli özel
 ### GroupDocs.Annotation for .NET ücretsiz deneme olanağı sunuyor mu?
  Evet, GroupDocs.Annotation for .NET'in ücretsiz deneme sürümünden şu adresi ziyaret ederek yararlanabilirsiniz:[bu bağlantı](https://releases.groupdocs.com/).
 ### GroupDocs.Annotation for .NET belgelerini nerede bulabilirim?
- GroupDocs.Annotation for .NET belgelerini bulabilirsiniz.[Burada](https://reference.groupdocs.com/annotation/net/).
+ GroupDocs.Annotation for .NET belgelerini bulabilirsiniz.[Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation for .NET ile ilgili herhangi bir sorun veya sorgu için nasıl destek alabilirim?
  GroupDocs.Annotation forumunu ziyaret ederek destek alabilirsiniz.[Burada](https://forum.groupdocs.com/c/annotation/10).

@@ -3,7 +3,6 @@ title: Licentie instellen vanuit bestand
 linktitle: Licentie instellen vanuit bestand
 second_title: GroupDocs.Annotation .NET API
 description: Integreer krachtige mogelijkheden voor documentannotatie naadloos in uw .NET-toepassingen met GroupDocs.Annotation voor .NET.
-type: docs
 weight: 10
 url: /nl/net/applying-licenses/set-license-from-file/
 ---

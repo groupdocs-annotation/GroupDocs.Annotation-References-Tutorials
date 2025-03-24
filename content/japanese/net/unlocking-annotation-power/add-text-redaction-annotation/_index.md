@@ -3,7 +3,6 @@ title: テキスト墨消し注釈をドキュメントに追加
 linktitle: テキスト墨消し注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して PDF ドキュメントにテキスト編集注釈を追加する方法を学びます。機密情報を簡単に保護します。
-type: docs
 weight: 23
 url: /ja/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

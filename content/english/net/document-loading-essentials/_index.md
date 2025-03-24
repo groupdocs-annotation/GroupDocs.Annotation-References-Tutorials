@@ -3,7 +3,6 @@ title: Document Loading Essentials
 linktitle: Document Loading Essentials
 second_title: GroupDocs.Annotation .NET API
 description: Discover essential tutorials for loading documents using GroupDocs.Annotation .NET. Seamlessly integrate with Amazon S3, Azure, FTP, local disk, streams, & more.
-type: docs
 weight: 20
 url: /net/document-loading-essentials/
 ---

@@ -3,7 +3,6 @@ title: Ladda dokument från Stream
 linktitle: Ladda dokument från Stream
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du enkelt kommenterar dokument i .NET med GroupDocs.Annotation. Förbättra samarbete och produktivitet.
-type: docs
 weight: 14
 url: /sv/net/document-loading-essentials/load-document-from-stream/
 ---

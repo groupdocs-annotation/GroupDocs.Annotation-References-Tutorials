@@ -3,7 +3,6 @@ title: Добавить аннотацию области в документ
 linktitle: Добавить аннотацию области в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Улучшите совместную работу с документами с помощью Groupdocs.Annotation для .NET. Узнайте, как шаг за шагом добавлять аннотации к областям.
-type: docs
 weight: 10
 url: /ru/net/unlocking-annotation-power/add-area-annotation/
 ---

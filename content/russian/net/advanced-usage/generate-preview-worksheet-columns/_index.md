@@ -3,7 +3,6 @@ title: Создать столбцы таблицы предварительно
 linktitle: Создать столбцы таблицы предварительного просмотра
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как аннотировать документы с помощью GroupDocs.Annotation для .NET. Пошаговое руководство для разработчиков .NET. Улучшите свои приложения.
-type: docs
 weight: 15
 url: /ru/net/advanced-usage/generate-preview-worksheet-columns/
 ---

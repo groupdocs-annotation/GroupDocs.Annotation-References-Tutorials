@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Gambar ke Dokumen (Jalur Jarak Jauh)
 linktitle: Tambahkan Anotasi Gambar ke Dokumen (Jalur Jarak Jauh)
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi gambar ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan manajemen dokumen dengan kemampuan anotasi yang canggih.
-type: docs
 weight: 15
 url: /id/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

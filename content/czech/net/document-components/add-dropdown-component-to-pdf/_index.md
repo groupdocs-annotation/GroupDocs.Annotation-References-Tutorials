@@ -3,7 +3,6 @@ title: Přidat rozbalovací komponentu do dokumentu PDF
 linktitle: Přidat rozbalovací komponentu do dokumentu PDF
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat komponenty rozevíracího seznamu do souborů PDF pomocí GroupDocs.Annotation for .NET. Postupujte podle našeho podrobného průvodce pro bezproblémovou integraci.
-type: docs
 weight: 12
 url: /cs/net/document-components/add-dropdown-component-to-pdf/
 ---

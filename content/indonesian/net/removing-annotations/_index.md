@@ -3,7 +3,6 @@ title: Menghapus Anotasi
 linktitle: Menghapus Anotasi
 second_title: GroupDocs.Annotasi .NET API
 description: Temukan cara mengelola anotasi secara efisien di .NET dengan tutorial GroupDocs.Annotation. Sederhanakan alur kerja dokumen Anda dan tingkatkan kolaborasi dengan lancar.
-type: docs
 weight: 25
 url: /id/net/removing-annotations/
 ---

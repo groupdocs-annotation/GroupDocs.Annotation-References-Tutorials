@@ -3,7 +3,6 @@ title: Adicionar anotação de seta ao documento
 linktitle: Adicionar anotação de seta ao documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como adicionar anotações de seta aos seus documentos usando GroupDocs.Annotation for .NET. Melhore a clareza e a interatividade dos documentos sem esforço.
-type: docs
 weight: 11
 url: /pt/net/unlocking-annotation-power/add-arrow-annotation/
 ---

@@ -3,7 +3,6 @@ title: Knopcomponent toevoegen aan PDF-document
 linktitle: Knopcomponent toevoegen aan PDF-document
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter uw PDF-documenten met interactieve knopcomponenten met Groupdocs.Annotation voor .NET. Volg onze stap-voor-stap handleiding voor een naadloze integratie.
-type: docs
 weight: 10
 url: /nl/net/document-components/add-button-component-to-pdf/
 ---

@@ -3,7 +3,6 @@ title: 向文档添加文本波浪注释
 linktitle: 向文档添加文本波浪注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 轻松地将文本波浪线注释添加到文档中。加强协作和文件审查流程。
-type: docs
 weight: 25
 url: /zh/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

@@ -3,7 +3,6 @@ title: 从文档导入注释
 linktitle: 从文档导入注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 从 .NET 中的文档导入注释。请按照我们的分步教程进行无缝集成。
-type: docs
 weight: 19
 url: /zh/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### 如何获得 GroupDocs.Annotation 的临时许可证？
 您可以从 GroupDocs.Annotation 获取临时许可证[临时许可证页面](https://purchase.groupdocs.com/temporary-license/).
 ### 在哪里可以找到 GroupDocs.Annotation 的综合文档？
-提供了 GroupDocs.Annotation 的详细文档[这里](https://reference.groupdocs.com/annotation/net/).
+提供了 GroupDocs.Annotation 的详细文档[这里](https://tutorials.groupdocs.com/annotation/net/).
 ### 对于有关 GroupDocs.Annotation 的任何问题或疑问，我可以在哪里寻求支持？
 如需支持，请访问 GroupDocs.Annotation[论坛](https://forum.groupdocs.com/c/annotation/10)您可以在这里寻求专家和社区的帮助。

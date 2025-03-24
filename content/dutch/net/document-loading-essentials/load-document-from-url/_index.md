@@ -3,7 +3,6 @@ title: Document laden vanaf URL
 linktitle: Document laden vanaf URL
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u PDF-documenten programmatisch kunt annoteren met GroupDocs.Annotation voor .NET. Stapsgewijze zelfstudie met codevoorbeelden.
-type: docs
 weight: 15
 url: /nl/net/document-loading-essentials/load-document-from-url/
 ---

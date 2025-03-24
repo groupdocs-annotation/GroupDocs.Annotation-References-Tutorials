@@ -3,7 +3,6 @@ title: 从 Stream 设置许可证
 linktitle: 从 Stream 设置许可证
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation 释放 .NET 中文档注释的全部潜力。请按照我们的分步指南进行无缝集成。
-type: docs
 weight: 11
 url: /zh/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ url: /zh/net/applying-licenses/set-license-from-stream/
 在深入学习本教程之前，请确保您具备以下先决条件：
 1.  GroupDocs.Annotation for .NET：确保您已从以下位置下载并安装了 GroupDocs.Annotation for .NET[下载链接](https://releases.groupdocs.com/annotation/net/).
 2. 许可证：获取 GroupDocs.Annotation 的有效许可证。您可以从以下位置购买一个[这里](https://purchase.groupdocs.com/buy)或申请临时许可证[这里](https://purchase.groupdocs.com/temporary-license/).
-3. 文档：熟悉[文档](https://reference.groupdocs.com/annotation/net/)对于 GroupDocs.Annotation。它提供了对 API 功能的详细见解。
+3. 文档：熟悉[文档](https://tutorials.groupdocs.com/annotation/net/)对于 GroupDocs.Annotation。它提供了对 API 功能的详细见解。
 
 ## 导入命名空间
 首先，让我们导入必要的命名空间以开始在 .NET 项目中使用 GroupDocs.Annotation：
@@ -63,6 +62,6 @@ else
 ### 我可以在购买前试用 GroupDocs.Annotation for .NET 吗？
 是的，您可以申请免费试用许可证[这里](https://releases.groupdocs.com/)探索 GroupDocs.Annotation for .NET 的功能。
 ### 如何获取 GroupDocs.Annotation for .NET 的最新文档？
-您可以参考[文档](https://reference.groupdocs.com/annotation/net/)用于 GroupDocs.Annotation for .NET 来访问详细的 API 参考和教程。
+您可以参考[文档](https://tutorials.groupdocs.com/annotation/net/)用于 GroupDocs.Annotation for .NET 来访问详细的 API 参考和教程。
 ### 如果我的许可证遇到问题怎么办？
 如果您遇到任何许可证问题，请联系 GroupDocs 支持团队寻求帮助。

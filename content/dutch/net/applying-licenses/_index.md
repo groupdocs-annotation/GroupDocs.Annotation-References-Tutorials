@@ -3,7 +3,6 @@ title: Licenties toepassen
 linktitle: Licenties toepassen
 second_title: GroupDocs.Annotation .NET API
 description: Ontgrendel het volledige potentieel van documentannotatie in .NET met GroupDocs.Annotation. Volg onze stapsgewijze tutorials voor een naadloze integratie.
-type: docs
 weight: 26
 url: /nl/net/applying-licenses/
 ---

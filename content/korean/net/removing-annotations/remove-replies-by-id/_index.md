@@ -3,7 +3,6 @@ title: .NET에서 ID별 답장 제거
 linktitle: .NET에서 ID별 답장 제거
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET에서 ID별 응답을 제거하는 방법을 알아보세요. 효율적인 문서 주석 관리를 위한 단계별 튜토리얼을 따르십시오.
-type: docs
 weight: 16
 url: /ko/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /ko/net/removing-annotations/remove-replies-by-id/
 ## 전제 조건
 GroupDocs.Annotation을 사용하여 .NET에서 ID별 답글을 제거하는 방법에 대한 자습서를 시작하기 전에 다음 전제 조건이 있는지 확인하세요.
 ### 1. GroupDocs.Annotation 설치
- 먼저 .NET용 GroupDocs.Annotation을 설치해야 합니다. 다음에서 라이브러리를 다운로드할 수 있습니다.[여기](https://releases.groupdocs.com/annotation/net/) 설명서에 제공된 설치 지침을 따르십시오.[여기](https://reference.groupdocs.com/annotation/net/).
+ 먼저 .NET용 GroupDocs.Annotation을 설치해야 합니다. 다음에서 라이브러리를 다운로드할 수 있습니다.[여기](https://releases.groupdocs.com/annotation/net/) 설명서에 제공된 설치 지침을 따르십시오.[여기](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. C#과 .NET의 기본 이해
 이 자습서의 예제를 따라 진행하려면 C# 프로그래밍 언어 및 .NET 프레임워크에 대한 지식이 필요합니다.
 ### 3. 답변이 포함된 주석이 달린 문서

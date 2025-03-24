@@ -3,7 +3,6 @@ title: Aggiungi il componente Casella di controllo al documento PDF
 linktitle: Aggiungi il componente Casella di controllo al documento PDF
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere un componente Checkbox ai documenti PDF utilizzando Groupdocs.Annotation per .NET. Migliora i tuoi PDF con elementi interattivi.
-type: docs
 weight: 11
 url: /it/net/document-components/add-checkbox-component-to-pdf/
 ---

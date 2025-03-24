@@ -3,7 +3,6 @@ title: Lägg till avståndsanteckning till dokument
 linktitle: Lägg till avståndsanteckning till dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till distanskommentarer till dokument med GroupDocs.Annotation för .NET. Förbättra samarbete och kommunikation utan ansträngning.
-type: docs
 weight: 12
 url: /sv/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ S: Ja, GroupDocs.Annotation stöder kommentarer i ett brett utbud av dokumentfor
 
 ### F: Var kan jag hitta dokumentationen för GroupDocs.Annotation för .NET?
 
- S: Du kan hänvisa till den detaljerade dokumentationen som finns tillgänglig[här](https://reference.groupdocs.com/annotation/net/).
+ S: Du kan hänvisa till den detaljerade dokumentationen som finns tillgänglig[här](https://tutorials.groupdocs.com/annotation/net/).
 
 ### F: Hur kan jag få support eller hjälp med GroupDocs.Annotation?
 

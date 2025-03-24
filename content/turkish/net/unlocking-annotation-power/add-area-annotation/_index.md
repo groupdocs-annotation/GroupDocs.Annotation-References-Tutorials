@@ -3,7 +3,6 @@ title: Belgeye Alan Açıklaması Ekle
 linktitle: Belgeye Alan Açıklaması Ekle
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET ile belge işbirliğinizi geliştirin. Alan açıklamalarını adım adım nasıl ekleyeceğinizi öğrenin.
-type: docs
 weight: 10
 url: /tr/net/unlocking-annotation-power/add-area-annotation/
 ---

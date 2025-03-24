@@ -3,7 +3,6 @@ title: Genereer een voorbeeld zonder opmerkingen
 linktitle: Genereer een voorbeeld zonder opmerkingen
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u documentannotatiemogelijkheden naadloos kunt integreren in uw .NET-toepassingen met behulp van GroupDocs.Annotation voor .NET.
-type: docs
 weight: 14
 url: /nl/net/advanced-usage/generate-preview-without-comments/
 ---

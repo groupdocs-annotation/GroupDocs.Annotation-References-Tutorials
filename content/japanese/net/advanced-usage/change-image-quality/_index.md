@@ -3,7 +3,6 @@ title: 画質を変更する
 linktitle: 画質を変更する
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用して PDF ファイルの画質を向上させる方法を学びます。ステップバイステップのガイドに従ってください。
-type: docs
 weight: 10
 url: /ja/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ url: /ja/net/advanced-usage/change-image-quality/
 ## 前提条件
 チュートリアルに入る前に、次の前提条件が満たされていることを確認してください。
 ### 1. Groupdocs.Annotation for .NET のインストール
-まず、Web サイトから Groupdocs.Annotation for .NET ライブラリをダウンロードしてインストールします。ダウンロードリンクが見つかります[ここ](https://releases.groupdocs.com/annotation/net/)。ドキュメントに記載されているインストール手順に従ってください[ここ](https://reference.groupdocs.com/annotation/net/)ライブラリを正しくセットアップします。
+まず、Web サイトから Groupdocs.Annotation for .NET ライブラリをダウンロードしてインストールします。ダウンロードリンクが見つかります[ここ](https://releases.groupdocs.com/annotation/net/)。ドキュメントに記載されているインストール手順に従ってください[ここ](https://tutorials.groupdocs.com/annotation/net/)ライブラリを正しくセットアップします。
 ### 2. C# プログラミング言語に精通していること
 このチュートリアルで提供される例に従うには、C# プログラミング言語の基本を理解することが不可欠です。
 ### 3. 入力 PDF および画像ファイルへのアクセス

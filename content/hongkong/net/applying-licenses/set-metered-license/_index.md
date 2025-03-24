@@ -3,7 +3,6 @@ title: 設定計量許可證
 linktitle: 設定計量許可證
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何為 GroupDocs.Annotation .NET 設定計量許可證，以實現 .NET 應用程式中的資源使用和文件註解功能。
-type: docs
 weight: 12
 url: /zh-hant/net/applying-licenses/set-metered-license/
 ---

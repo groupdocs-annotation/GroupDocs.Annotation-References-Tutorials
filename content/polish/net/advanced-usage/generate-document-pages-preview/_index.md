@@ -3,7 +3,6 @@ title: Generuj podgląd stron dokumentu
 linktitle: Generuj podgląd stron dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak efektywnie generować podgląd stron dokumentów za pomocą GroupDocs.Annotation dla .NET. Usprawnij przepływ pracy w zakresie zarządzania dokumentami dzięki temu kompleksowemu rozwiązaniu.
-type: docs
 weight: 12
 url: /pl/net/advanced-usage/generate-document-pages-preview/
 ---

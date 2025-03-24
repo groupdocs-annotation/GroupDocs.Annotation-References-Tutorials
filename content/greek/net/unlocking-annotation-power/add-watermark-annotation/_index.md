@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού υδατογραφήματος στ
 linktitle: Προσθήκη σχολιασμού υδατογραφήματος στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς υδατογραφήματος στα έγγραφά σας χωρίς κόπο χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη σαφήνεια και την ασφάλεια των εγγράφων.
-type: docs
 weight: 28
 url: /el/net/unlocking-annotation-power/add-watermark-annotation/
 ---

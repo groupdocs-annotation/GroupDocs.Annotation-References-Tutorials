@@ -3,7 +3,6 @@ title: Charger le document à partir de l'URL
 linktitle: Charger le document à partir de l'URL
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment annoter des documents PDF par programmation à l'aide de GroupDocs.Annotation pour .NET. Tutoriel étape par étape avec des exemples de code.
-type: docs
 weight: 15
 url: /fr/net/document-loading-essentials/load-document-from-url/
 ---

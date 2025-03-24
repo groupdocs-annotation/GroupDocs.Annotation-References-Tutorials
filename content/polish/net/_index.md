@@ -1,7 +1,6 @@
 ---
 title: Poradniki i przykłady GroupDocs.Adnotation dla .NET
 linktitle: GroupDocs.Adnotacja dla samouczków .NET
-type: docs
 weight: 10
 url: /pl/net/
 description: Odblokuj pełny potencjał GroupDocs.Annotation dla .NET dzięki naszym samouczkom. Bezproblemowo integruj, ulepszaj współpracę i usprawniaj przepływy pracy.

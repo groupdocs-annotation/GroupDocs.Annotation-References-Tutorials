@@ -3,7 +3,6 @@ title: Azure에서 문서 로드
 linktitle: Azure에서 문서 로드
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET에서 문서에 주석을 추가하는 방법을 알아보세요. Azure Blob Storage와의 원활한 통합을 위한 단계별 자습서입니다.
-type: docs
 weight: 11
 url: /ko/net/document-loading-essentials/load-document-from-azure/
 ---

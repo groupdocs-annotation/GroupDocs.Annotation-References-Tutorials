@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού συνδέσμου στο έγγρ�
 linktitle: Προσθήκη σχολιασμού συνδέσμου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς συνδέσμων σε έγγραφα χρησιμοποιώντας το Groupdocs.Annotation για .NET. Βελτιώστε τη συνεργασία και τη διαδραστικότητα χωρίς κόπο.
-type: docs
 weight: 16
 url: /el/net/unlocking-annotation-power/add-link-annotation/
 ---

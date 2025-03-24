@@ -3,7 +3,6 @@ title: 문서에 텍스트 대체 주석 추가
 linktitle: 문서에 텍스트 대체 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 .NET 문서에 텍스트 대체 주석을 손쉽게 추가하는 방법을 알아보세요. 문서 조작 능력을 강화하세요.
-type: docs
 weight: 24
 url: /ko/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

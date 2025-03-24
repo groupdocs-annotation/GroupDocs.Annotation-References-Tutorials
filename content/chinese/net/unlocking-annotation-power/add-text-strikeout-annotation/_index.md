@@ -3,7 +3,6 @@ title: 向文档添加文本删除线注释
 linktitle: 向文档添加文本删除线注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 将文本删除线注释添加到文档中。有效增强协作和文档审核流程。
-type: docs
 weight: 26
 url: /zh/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

@@ -3,7 +3,6 @@ title: Načíst dokument z místního disku
 linktitle: Načíst dokument z místního disku
 second_title: GroupDocs.Annotation .NET API
 description: Odemkněte sílu anotací dokumentů s GroupDocs.Annotation pro .NET. Bezproblémově integrujte funkce anotací do svých aplikací .NET.
-type: docs
 weight: 13
 url: /cs/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Na závěr, GroupDocs.Annotation for .NET poskytuje robustní řešení pro inte
 ### Mohu GroupDocs.Annotation for .NET vyzkoušet před nákupem?
  Ano, můžete si stáhnout bezplatnou zkušební verzi z[tady](https://releases.groupdocs.com/).
 ### Kde najdu dokumentaci k GroupDocs.Annotation pro .NET?
- Máte přístup k dokumentaci[tady](https://reference.groupdocs.com/annotation/net/).
+ Máte přístup k dokumentaci[tady](https://tutorials.groupdocs.com/annotation/net/).
 ### Jak mohu získat dočasnou licenci pro GroupDocs.Annotation pro .NET?
  Dočasnou licenci můžete získat od[tady](https://purchase.groupdocs.com/temporary-license/).
 ### Je k dispozici podpora pro GroupDocs.Annotation pro .NET?

@@ -3,7 +3,6 @@ title: Ek Açıklama Gücünün Kilidini Açma
 linktitle: Ek Açıklama Gücünün Kilidini Açma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET eğitimleriyle ek açıklamaların gücünün kilidini açın. Çeşitli ek açıklamaları adım adım eklemeyi öğrenin ve işbirliğini zahmetsizce geliştirin.
-type: docs
 weight: 23
 url: /tr/net/unlocking-annotation-power/
 ---

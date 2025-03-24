@@ -3,7 +3,6 @@ title: 注釈の削除
 linktitle: 注釈の削除
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation チュートリアルを使用して、.NET で注釈を効率的に管理する方法を発見してください。ドキュメントのワークフローを合理化し、コラボレーションをシームレスに強化します。
-type: docs
 weight: 25
 url: /ja/net/removing-annotations/
 ---

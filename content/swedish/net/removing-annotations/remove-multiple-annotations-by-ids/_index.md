@@ -3,7 +3,6 @@ title: Ta bort flera anteckningar efter ID
 linktitle: Ta bort flera anteckningar efter ID
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du tar bort flera anteckningar efter ID i .NET med GroupDocs.Annotation, vilket förbättrar dina dokumenthanteringsmöjligheter utan ansträngning.
-type: docs
 weight: 13
 url: /sv/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

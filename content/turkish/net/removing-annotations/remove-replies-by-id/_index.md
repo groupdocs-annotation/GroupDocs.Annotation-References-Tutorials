@@ -3,7 +3,6 @@ title: .NET'te Yanıtları Kimliğe Göre Kaldırma
 linktitle: .NET'te Yanıtları Kimliğe Göre Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation'ı kullanarak .NET'te kimliğe göre yanıtları nasıl kaldıracağınızı öğrenin. Verimli belge açıklama yönetimi için adım adım eğitimimizi izleyin.
-type: docs
 weight: 16
 url: /tr/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /tr/net/removing-annotations/remove-replies-by-id/
 ## Önkoşullar
 GroupDocs.Annotation'ı kullanarak .NET'te kimliğe göre yanıtları kaldırma konusundaki eğitime dalmadan önce, aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
 ### 1. GroupDocs.Annotation Kurulumu
- Öncelikle GroupDocs.Annotation for .NET'i kurmanız gerekiyor. Kütüphaneyi adresinden indirebilirsiniz.[Burada](https://releases.groupdocs.com/annotation/net/) ve belgelerde verilen kurulum talimatlarını izleyin[Burada](https://reference.groupdocs.com/annotation/net/).
+ Öncelikle GroupDocs.Annotation for .NET'i kurmanız gerekiyor. Kütüphaneyi adresinden indirebilirsiniz.[Burada](https://releases.groupdocs.com/annotation/net/) ve belgelerde verilen kurulum talimatlarını izleyin[Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. C# ve .NET'in Temel Anlayışı
 Bu eğitimdeki örnekleri takip etmek için C# programlama dili ve .NET çerçevesine aşinalık gereklidir.
 ### 3. Yanıtlı Açıklamalı Belge

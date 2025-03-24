@@ -3,7 +3,6 @@ title: Generieren Sie Vorschau-Arbeitsblattspalten
 linktitle: Generieren Sie Vorschau-Arbeitsblattspalten
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie Dokumente mit GroupDocs.Annotation für .NET mit Anmerkungen versehen. Schritt-für-Schritt-Anleitung für .NET-Entwickler. Verbessern Sie Ihre Anwendungen.
-type: docs
 weight: 15
 url: /de/net/advanced-usage/generate-preview-worksheet-columns/
 ---

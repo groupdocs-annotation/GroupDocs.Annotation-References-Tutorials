@@ -3,7 +3,6 @@ title: Xóa câu trả lời cho chú thích trong .NET
 linktitle: Xóa câu trả lời cho chú thích trong .NET
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách xóa câu trả lời cho chú thích trong .NET bằng GroupDocs.Annotation. Hướng dẫn từng bước với các ví dụ về mã.
-type: docs
 weight: 15
 url: /vi/net/removing-annotations/remove-replies-to-annotations/
 ---

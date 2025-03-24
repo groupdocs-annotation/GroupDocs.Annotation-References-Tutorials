@@ -3,7 +3,6 @@ title: 텍스트 위에 이미지 주석 넣기
 linktitle: 텍스트 위에 이미지 주석 넣기
 second_title: GroupDocs.Annotation .NET API
 description: 효율적인 문서 관리 및 공동 작업을 위해 GroupDocs.Annotation을 사용하여 .NET에서 텍스트 위에 이미지 주석을 추가하는 방법을 알아보세요.
-type: docs
 weight: 21
 url: /ko/net/advanced-usage/put-image-annotation-over-text/
 ---

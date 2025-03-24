@@ -3,7 +3,6 @@ title: 문서에 이미지 주석 추가(원격 경로)
 linktitle: 문서에 이미지 주석 추가(원격 경로)
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 이미지 주석을 추가하는 방법을 알아보세요. 강력한 주석 기능으로 문서 관리를 강화하세요.
-type: docs
 weight: 15
 url: /ko/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

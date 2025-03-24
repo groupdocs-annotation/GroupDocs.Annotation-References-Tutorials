@@ -3,7 +3,6 @@ title: Lizenz aus Datei festlegen
 linktitle: Lizenz aus Datei festlegen
 second_title: GroupDocs.Annotation .NET-API
 description: Integrieren Sie leistungsstarke Dokumentanmerkungsfunktionen nahtlos in Ihre .NET-Anwendungen mit GroupDocs.Annotation für .NET.
-type: docs
 weight: 10
 url: /de/net/applying-licenses/set-license-from-file/
 ---

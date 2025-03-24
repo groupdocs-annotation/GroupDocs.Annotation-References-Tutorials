@@ -3,7 +3,6 @@ title: تطبيق التراخيص
 linktitle: تطبيق التراخيص
 second_title: GroupDocs.Annotation .NET API
 description: أطلق العنان للإمكانات الكاملة للتعليق التوضيحي للمستند في .NET باستخدام GroupDocs.Annotation. اتبع برامجنا التعليمية خطوة بخطوة لتحقيق التكامل السلس.
-type: docs
 weight: 26
 url: /ar/net/applying-licenses/
 ---

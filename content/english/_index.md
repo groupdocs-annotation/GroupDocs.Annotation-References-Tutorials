@@ -3,7 +3,6 @@ title: Mastering GroupDocs.Annotation - Tutorials and Guides
 linktitle: GroupDocs.Annotation Tutorials
 additionalTitle: GroupDocs API References
 description: Unlock the full potential of GroupDocs.Annotation with our tutorials. Enhance collaboration and streamline workflows with comprehensive guides and tips.
-type: docs
 weight: 11
 url: /
 is_root: true

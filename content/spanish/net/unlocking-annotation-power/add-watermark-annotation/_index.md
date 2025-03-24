@@ -3,7 +3,6 @@ title: Agregar anotación de marca de agua al documento
 linktitle: Agregar anotación de marca de agua al documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a agregar anotaciones de marcas de agua a sus documentos sin esfuerzo usando GroupDocs.Annotation para .NET. Mejore la claridad y seguridad de los documentos.
-type: docs
 weight: 28
 url: /es/net/unlocking-annotation-power/add-watermark-annotation/
 ---

@@ -3,7 +3,6 @@ title: Açıklamalı Belge Sürümünün Yüklenmesi
 linktitle: Açıklamalı Belge Sürümünün Yüklenmesi
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak açıklamalı belge sürümlerini zahmetsizce nasıl yükleyeceğinizi öğrenin. İşbirliği ve inceleme süreçlerini basitleştirin.
-type: docs
 weight: 16
 url: /tr/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Evet, GroupDocs.Annotation, PDF, DOCX, PPTX, XLSX ve daha fazlası gibi formatla
 ### GroupDocs.Annotation for .NET'in ücretsiz deneme sürümü var mı?
  Evet, ücretsiz deneme sürümüne şuradan erişebilirsiniz:[Burada](https://releases.groupdocs.com/).
 ### GroupDocs.Annotation for .NET belgelerini nerede bulabilirim?
- Ayrıntılı belgelere başvurabilirsiniz[Burada](https://reference.groupdocs.com/annotation/net/).
+ Ayrıntılı belgelere başvurabilirsiniz[Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation for .NET için nasıl geçici lisans alabilirim?
  adresinden geçici lisans alabilirsiniz.[bu bağlantı](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation for .NET hakkında nereden destek alabilirim veya soru sorabilirim?

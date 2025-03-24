@@ -3,7 +3,6 @@ title: Ta bort svar på kommentarer i .NET
 linktitle: Ta bort svar på kommentarer i .NET
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du tar bort svar på kommentarer i .NET med GroupDocs.Annotation. Steg-för-steg guide med kodexempel.
-type: docs
 weight: 15
 url: /sv/net/removing-annotations/remove-replies-to-annotations/
 ---

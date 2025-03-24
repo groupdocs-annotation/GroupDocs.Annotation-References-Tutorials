@@ -3,7 +3,6 @@ title: 將圖像註釋放在文字上
 linktitle: 將圖像註釋放在文字上
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 在 .NET 中的文字上新增圖像註釋，以實現高效的文件管理和協作。
-type: docs
 weight: 21
 url: /zh-hant/net/advanced-usage/put-image-annotation-over-text/
 ---

@@ -3,7 +3,6 @@ title: Set License from File
 linktitle: Set License from File
 second_title: GroupDocs.Annotation .NET API
 description: Integrate powerful document annotation capabilities into your .NET applications seamlessly with GroupDocs.Annotation for .NET.
-type: docs
 weight: 10
 url: /net/applying-licenses/set-license-from-file/
 ---

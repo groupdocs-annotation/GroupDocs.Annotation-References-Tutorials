@@ -3,7 +3,6 @@ title: Поместите аннотацию изображения поверх
 linktitle: Поместите аннотацию изображения поверх текста
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавлять аннотации к изображениям поверх текста в .NET с помощью GroupDocs.Annotation для эффективного управления документами и совместной работы.
-type: docs
 weight: 21
 url: /ru/net/advanced-usage/put-image-annotation-over-text/
 ---

@@ -3,7 +3,6 @@ title: Schaltflächenkomponente zum PDF-Dokument hinzufügen
 linktitle: Schaltflächenkomponente zum PDF-Dokument hinzufügen
 second_title: GroupDocs.Annotation .NET-API
 description: Erweitern Sie Ihre PDF-Dokumente mit interaktiven Schaltflächenkomponenten mithilfe von Groupdocs.Annotation für .NET. Befolgen Sie unsere Schritt-für-Schritt-Anleitung für eine nahtlose Integration.
-type: docs
 weight: 10
 url: /de/net/document-components/add-button-component-to-pdf/
 ---

@@ -3,7 +3,6 @@ title: ドキュメントから注釈をインポート
 linktitle: ドキュメントから注釈をインポート
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET のドキュメントから注釈をインポートする方法を学びます。シームレスな統合については、段階的なチュートリアルに従ってください。
-type: docs
 weight: 19
 url: /ja/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### GroupDocs.Annotation の一時ライセンスを取得するにはどうすればよいですか?
  GroupDocs.Annotation の一時ライセンスは、[一時ライセンスのページ](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation の包括的なドキュメントはどこで見つけられますか?
- GroupDocs.Annotation の詳細なドキュメントが利用可能です[ここ](https://reference.groupdocs.com/annotation/net/).
+ GroupDocs.Annotation の詳細なドキュメントが利用可能です[ここ](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation に関する問題や質問については、どこにサポートを求めればよいですか?
 サポートが必要な場合は、GroupDocs.Annotation にアクセスしてください。[フォーラム](https://forum.groupdocs.com/c/annotation/10)専門家やコミュニティからの支援を求めることができます。

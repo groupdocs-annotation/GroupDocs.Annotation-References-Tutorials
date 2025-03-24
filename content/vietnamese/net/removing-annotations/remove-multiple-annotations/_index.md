@@ -3,7 +3,6 @@ title: Xóa nhiều chú thích trong .NET
 linktitle: Xóa nhiều chú thích trong .NET
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách xóa nhiều chú thích một cách hiệu quả trong .NET bằng GroupDocs.Annotation. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch vào ứng dụng của bạn.
-type: docs
 weight: 12
 url: /vi/net/removing-annotations/remove-multiple-annotations/
 ---

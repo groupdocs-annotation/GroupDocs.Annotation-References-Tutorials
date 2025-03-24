@@ -3,7 +3,6 @@ title: Hapus Balasan berdasarkan Nama Pengguna di .NET
 linktitle: Hapus Balasan berdasarkan Nama Pengguna di .NET
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara membuat anotasi dokumen dengan lancar menggunakan Groupdocs.Annotation untuk .NET. Tingkatkan kolaborasi dan manajemen dokumen dengan alat canggih ini.
-type: docs
 weight: 17
 url: /id/net/removing-annotations/remove-replies-by-username/
 ---

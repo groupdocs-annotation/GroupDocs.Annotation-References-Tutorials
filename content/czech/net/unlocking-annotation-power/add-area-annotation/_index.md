@@ -3,7 +3,6 @@ title: Přidejte k dokumentu anotaci oblasti
 linktitle: Přidejte k dokumentu anotaci oblasti
 second_title: GroupDocs.Annotation .NET API
 description: Vylepšete spolupráci na dokumentech pomocí Groupdocs.Annotation pro .NET. Naučte se přidávat popisy oblastí krok za krokem.
-type: docs
 weight: 10
 url: /cs/net/unlocking-annotation-power/add-area-annotation/
 ---

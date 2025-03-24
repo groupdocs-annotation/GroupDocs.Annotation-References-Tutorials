@@ -3,7 +3,6 @@ title: Verwijder antwoorden op annotaties in .NET
 linktitle: Verwijder antwoorden op annotaties in .NET
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u antwoorden op annotaties in .NET verwijdert met GroupDocs.Annotation. Stapsgewijze handleiding met codevoorbeelden.
-type: docs
 weight: 15
 url: /nl/net/removing-annotations/remove-replies-to-annotations/
 ---

@@ -3,7 +3,6 @@ title: Holen Sie sich alle Versionsschlüssel für das Dokument
 linktitle: Holen Sie sich alle Versionsschlüssel für das Dokument
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET alle Versionsschlüssel für ein Dokument abrufen. Erweitern Sie Ihre Dokumentenverwaltungsfunktionen mit dieser umfassenden Lösung.
-type: docs
 weight: 16
 url: /de/net/advanced-usage/get-all-version-keys-document/
 ---

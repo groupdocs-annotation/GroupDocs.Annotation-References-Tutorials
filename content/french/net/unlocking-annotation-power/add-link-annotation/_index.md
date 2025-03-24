@@ -3,7 +3,6 @@ title: Ajouter une annotation de lien au document
 linktitle: Ajouter une annotation de lien au document
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment ajouter des annotations de lien aux documents à l'aide de Groupdocs.Annotation pour .NET. Améliorez la collaboration et l’interactivité sans effort.
-type: docs
 weight: 16
 url: /fr/net/unlocking-annotation-power/add-link-annotation/
 ---

@@ -3,7 +3,6 @@ title: Membuka Kekuatan Anotasi
 linktitle: Membuka Kekuatan Anotasi
 second_title: GroupDocs.Annotasi .NET API
 description: Buka kekuatan anotasi dengan GroupDocs.Annotation untuk tutorial .NET. Pelajari cara menambahkan berbagai anotasi selangkah demi selangkah dan tingkatkan kolaborasi dengan mudah.
-type: docs
 weight: 23
 url: /id/net/unlocking-annotation-power/
 ---

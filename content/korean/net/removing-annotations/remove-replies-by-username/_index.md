@@ -3,7 +3,6 @@ title: .NET에서 사용자 이름별 회신 제거
 linktitle: .NET에서 사용자 이름별 회신 제거
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 문서에 원활하게 주석을 추가하는 방법을 알아보세요. 이 강력한 도구를 사용하여 공동작업과 문서 관리를 강화하세요.
-type: docs
 weight: 17
 url: /ko/net/removing-annotations/remove-replies-by-username/
 ---

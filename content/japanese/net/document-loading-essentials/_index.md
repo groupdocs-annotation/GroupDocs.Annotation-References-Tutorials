@@ -3,7 +3,6 @@ title: ドキュメントの読み込みの基本事項
 linktitle: ドキュメントの読み込みの基本事項
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET を使用してドキュメントをロードするための重要なチュートリアルをご覧ください。 Amazon S3、Azure、FTP、ローカル ディスク、ストリームなどとシームレスに統合します。
-type: docs
 weight: 20
 url: /ja/net/document-loading-essentials/
 ---

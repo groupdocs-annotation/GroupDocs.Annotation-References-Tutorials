@@ -3,7 +3,6 @@ title: Tambahkan Komponen Kotak Centang ke Dokumen PDF
 linktitle: Tambahkan Komponen Kotak Centang ke Dokumen PDF
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan Komponen Kotak Centang ke dokumen PDF menggunakan Groupdocs.Annotation untuk .NET. Sempurnakan PDF Anda dengan elemen interaktif.
-type: docs
 weight: 11
 url: /id/net/document-components/add-checkbox-component-to-pdf/
 ---

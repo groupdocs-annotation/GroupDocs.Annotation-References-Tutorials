@@ -3,7 +3,6 @@ title: GroupDocs.Annotation 마스터하기 - 튜토리얼 및 가이드
 linktitle: GroupDocs.Annotation 튜토리얼
 additionalTitle: GroupDocs API 참조
 description: 튜토리얼을 통해 GroupDocs.Annotation의 잠재력을 최대한 활용해 보세요. 포괄적인 가이드와 팁을 통해 협업을 강화하고 워크플로를 간소화하세요.
-type: docs
 weight: 11
 url: /ko/
 is_root: true

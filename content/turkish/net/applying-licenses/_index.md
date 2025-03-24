@@ -3,7 +3,6 @@ title: Lisansların Uygulanması
 linktitle: Lisansların Uygulanması
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation ile .NET'te belge açıklamasının tüm potansiyelini ortaya çıkarın. Sorunsuz entegrasyon için adım adım eğitimlerimizi izleyin.
-type: docs
 weight: 26
 url: /tr/net/applying-licenses/
 ---

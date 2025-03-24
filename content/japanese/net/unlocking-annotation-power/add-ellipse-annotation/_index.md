@@ -3,7 +3,6 @@ title: 楕円注釈をドキュメントに追加
 linktitle: 楕円注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET のドキュメントに楕円注釈を追加する方法を学びます。コラボレーションとコミュニケーションを簡単に強化します。
-type: docs
 weight: 13
 url: /ja/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

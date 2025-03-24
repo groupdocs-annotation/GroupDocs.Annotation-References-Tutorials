@@ -3,7 +3,6 @@ title: احصل على جميع مفاتيح الإصدار في المستند
 linktitle: احصل على جميع مفاتيح الإصدار في المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية استرداد كافة مفاتيح الإصدار في مستند باستخدام GroupDocs.Annotation لـ .NET. قم بتعزيز قدرات إدارة المستندات الخاصة بك مع هذا البرنامج الشامل.
-type: docs
 weight: 16
 url: /ar/net/advanced-usage/get-all-version-keys-document/
 ---

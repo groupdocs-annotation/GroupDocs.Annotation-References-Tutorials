@@ -3,7 +3,6 @@ title: .NET में सेव विकल्पों का उपयोग 
 linktitle: .NET में सेव विकल्पों का उपयोग करके एनोटेशन हटाएँ
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation का उपयोग करके .NET में PDF और अन्य दस्तावेज़ों से एनोटेशन हटाने का तरीका जानें। कोड उदाहरणों के साथ चरण-दर-चरण मार्गदर्शिका।
-type: docs
 weight: 14
 url: /hi/net/removing-annotations/remove-annotations-using-save-options/
 ---

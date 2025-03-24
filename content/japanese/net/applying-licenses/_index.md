@@ -3,7 +3,6 @@ title: ライセンスの適用
 linktitle: ライセンスの適用
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して、.NET でのドキュメント アノテーションの可能性を最大限に引き出します。シームレスな統合については、段階的なチュートリアルに従ってください。
-type: docs
 weight: 26
 url: /ja/net/applying-licenses/
 ---

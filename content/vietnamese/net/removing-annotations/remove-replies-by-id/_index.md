@@ -3,7 +3,6 @@ title: Xóa câu trả lời theo ID trong .NET
 linktitle: Xóa câu trả lời theo ID trong .NET
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách xóa câu trả lời theo ID trong .NET bằng GroupDocs.Annotation. Hãy làm theo hướng dẫn từng bước của chúng tôi để quản lý chú thích tài liệu hiệu quả.
-type: docs
 weight: 16
 url: /vi/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ Trong lĩnh vực phát triển .NET, khả năng quản lý chú thích trong t
 ## Điều kiện tiên quyết
 Trước khi đi sâu vào hướng dẫn về cách xóa câu trả lời bằng ID trong .NET bằng GroupDocs.Annotation, hãy đảm bảo bạn có các điều kiện tiên quyết sau:
 ### 1. Cài đặt GroupDocs.Annotation
- Đầu tiên bạn cần cài đặt GroupDocs.Annotation cho .NET. Bạn có thể tải thư viện từ[đây](https://releases.groupdocs.com/annotation/net/) và làm theo hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://reference.groupdocs.com/annotation/net/).
+ Đầu tiên bạn cần cài đặt GroupDocs.Annotation cho .NET. Bạn có thể tải thư viện từ[đây](https://releases.groupdocs.com/annotation/net/) và làm theo hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Hiểu biết cơ bản về C# và .NET
 Cần phải làm quen với ngôn ngữ lập trình C# và .NET framework để làm theo các ví dụ trong hướng dẫn này.
 ### 3. Tài liệu được chú thích kèm theo câu trả lời

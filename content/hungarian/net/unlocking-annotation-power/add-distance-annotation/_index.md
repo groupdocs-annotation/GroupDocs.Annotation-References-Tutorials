@@ -3,7 +3,6 @@ title: Távolság megjegyzés hozzáadása a dokumentumhoz
 linktitle: Távolság megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá távolságjegyzeteket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozza az együttműködést és a kommunikációt erőfeszítés nélkül.
-type: docs
 weight: 12
 url: /hu/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ V: Igen, a GroupDocs.Annotation támogatja a megjegyzéseket a dokumentumformát
 
 ### K: Hol találom a GroupDocs.Annotation for .NET dokumentációját?
 
- V: Tekintse meg a rendelkezésre álló részletes dokumentációt[itt](https://reference.groupdocs.com/annotation/net/).
+ V: Tekintse meg a rendelkezésre álló részletes dokumentációt[itt](https://tutorials.groupdocs.com/annotation/net/).
 
 ### K: Hogyan kaphatok támogatást vagy segítséget a GroupDocs.Annotation-hoz?
 

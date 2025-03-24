@@ -3,7 +3,6 @@ title: 画像注釈をドキュメントに追加 (リモート パス)
 linktitle: 画像注釈をドキュメントに追加 (リモート パス)
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントに画像注釈を追加する方法を学びます。強力な注釈機能でドキュメント管理を強化します。
-type: docs
 weight: 15
 url: /ja/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

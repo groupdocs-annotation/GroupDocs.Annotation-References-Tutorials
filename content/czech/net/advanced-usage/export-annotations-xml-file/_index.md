@@ -3,7 +3,6 @@ title: Export anotací ze souboru XML
 linktitle: Export anotací ze souboru XML
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se exportovat anotace ze souborů XML pomocí GroupDocs.Annotation for .NET a efektivně zjednodušit pracovní postup správy dokumentů.
-type: docs
 weight: 11
 url: /cs/net/advanced-usage/export-annotations-xml-file/
 ---

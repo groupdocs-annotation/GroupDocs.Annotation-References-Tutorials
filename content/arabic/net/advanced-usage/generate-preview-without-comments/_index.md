@@ -3,7 +3,6 @@ title: إنشاء معاينة بدون تعليقات
 linktitle: إنشاء معاينة بدون تعليقات
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية دمج إمكانات التعليقات التوضيحية للمستندات بسلاسة في تطبيقات .NET الخاصة بك باستخدام GroupDocs.Annotation لـ .NET.
-type: docs
 weight: 14
 url: /ar/net/advanced-usage/generate-preview-without-comments/
 ---

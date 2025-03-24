@@ -3,7 +3,6 @@ title: Δημιουργία προεπισκόπησης χωρίς σχολια
 linktitle: Δημιουργία προεπισκόπησης χωρίς σχολιασμούς
 second_title: GroupDocs.Annotation .NET API
 description: Βελτιώστε τη συνεργασία και τον σχολιασμό εγγράφων σε εφαρμογές .NET χρησιμοποιώντας το GroupDocs.Annotation για .NET. Σημειώστε εύκολα, σημειώστε και ελέγξτε έγγραφα με αυτήν την ισχυρή βιβλιοθήκη.
-type: docs
 weight: 13
 url: /el/net/advanced-usage/generate-preview-without-annotations/
 ---

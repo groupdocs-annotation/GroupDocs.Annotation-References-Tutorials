@@ -3,7 +3,6 @@ title: Přidat textovou podtrženou poznámku do dokumentu
 linktitle: Přidat textovou podtrženou poznámku do dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat textové podtržené anotace do dokumentů pomocí GroupDocs.Annotation for .NET. Vylepšete spolupráci a komunikaci bez námahy.
-type: docs
 weight: 27
 url: /cs/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

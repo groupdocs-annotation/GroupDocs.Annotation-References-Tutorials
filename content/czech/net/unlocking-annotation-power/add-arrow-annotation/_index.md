@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci se šipkou
 linktitle: Přidejte do dokumentu anotaci se šipkou
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat do dokumentů anotace pomocí šipek pomocí GroupDocs.Annotation for .NET. Vylepšete přehlednost dokumentů a interaktivitu bez námahy.
-type: docs
 weight: 11
 url: /cs/net/unlocking-annotation-power/add-arrow-annotation/
 ---

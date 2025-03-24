@@ -3,7 +3,6 @@ title: Đặt giấy phép từ tệp
 linktitle: Đặt giấy phép từ tệp
 second_title: GroupDocs.Annotation .NET API
 description: Tích hợp liền mạch khả năng chú thích tài liệu mạnh mẽ vào các ứng dụng .NET của bạn với GroupDocs.Annotation dành cho .NET.
-type: docs
 weight: 10
 url: /vi/net/applying-licenses/set-license-from-file/
 ---

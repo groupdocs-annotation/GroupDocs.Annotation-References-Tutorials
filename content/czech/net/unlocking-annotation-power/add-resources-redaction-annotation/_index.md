@@ -3,7 +3,6 @@ title: Přidejte do dokumentu Anotaci redakce zdrojů
 linktitle: Přidejte do dokumentu Anotaci redakce zdrojů
 second_title: GroupDocs.Annotation .NET API
 description: Vylepšete pracovní postupy správy dokumentů pomocí GroupDocs.Annotation pro .NET. Bezproblémově integrujte Resources Redaction Annotation do svého .NET pro efektivitu.
-type: docs
 weight: 19
 url: /cs/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

@@ -3,7 +3,6 @@ title: Komponen Dokumen
 linktitle: Komponen Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Temukan tutorial komprehensif tentang mengintegrasikan komponen interaktif seperti tombol, kotak centang, dan dropdown ke dalam dokumen PDF menggunakan GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /id/net/document-components/
 ---

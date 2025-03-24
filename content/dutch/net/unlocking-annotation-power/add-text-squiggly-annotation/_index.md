@@ -3,7 +3,6 @@ title: Voeg tekstkronkelige annotatie toe aan document
 linktitle: Voeg tekstkronkelige annotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u moeiteloos kronkelige annotaties aan documenten kunt toevoegen met Groupdocs.Annotation voor .NET. Verbeter de samenwerking en documentbeoordelingsprocessen.
-type: docs
 weight: 25
 url: /nl/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

@@ -3,7 +3,6 @@ title: إزالة التعليقات التوضيحية
 linktitle: إزالة التعليقات التوضيحية
 second_title: GroupDocs.Annotation .NET API
 description: اكتشف كيفية إدارة التعليقات التوضيحية بكفاءة في .NET باستخدام البرامج التعليمية GroupDocs.Annotation. قم بتبسيط سير عمل المستند الخاص بك وتعزيز التعاون بسلاسة.
-type: docs
 weight: 25
 url: /ar/net/removing-annotations/
 ---

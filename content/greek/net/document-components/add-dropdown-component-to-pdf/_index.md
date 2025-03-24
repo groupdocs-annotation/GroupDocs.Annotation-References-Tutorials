@@ -3,7 +3,6 @@ title: Προσθήκη αναπτυσσόμενου στοιχείου σε έ�
 linktitle: Προσθήκη αναπτυσσόμενου στοιχείου σε έγγραφο PDF
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε αναπτυσσόμενα στοιχεία σε αρχεία PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Ακολουθήστε τον βήμα προς βήμα οδηγό μας για απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 12
 url: /el/net/document-components/add-dropdown-component-to-pdf/
 ---

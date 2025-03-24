@@ -3,7 +3,6 @@ title: Xóa chú thích bằng tùy chọn lưu trong .NET
 linktitle: Xóa chú thích bằng tùy chọn lưu trong .NET
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách xóa chú thích khỏi PDF và các tài liệu khác trong .NET bằng GroupDocs.Annotation. Hướng dẫn từng bước với các ví dụ về mã.
-type: docs
 weight: 14
 url: /vi/net/removing-annotations/remove-annotations-using-save-options/
 ---

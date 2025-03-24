@@ -3,7 +3,6 @@ title: جارٍ تحميل إصدار المستند المشروح
 linktitle: جارٍ تحميل إصدار المستند المشروح
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية تحميل إصدارات المستندات ذات التعليقات التوضيحية بسهولة باستخدام GroupDocs.Annotation لـ .NET. تبسيط عمليات التعاون والمراجعة.
-type: docs
 weight: 16
 url: /ar/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### هل هناك نسخة تجريبية مجانية متاحة لـ GroupDocs.Annotation لـ .NET؟
  نعم، يمكنك الوصول إلى النسخة التجريبية المجانية من[هنا](https://releases.groupdocs.com/).
 ### أين يمكنني العثور على وثائق GroupDocs.Annotation لـ .NET؟
- يمكنك الرجوع إلى الوثائق التفصيلية[هنا](https://reference.groupdocs.com/annotation/net/).
+ يمكنك الرجوع إلى الوثائق التفصيلية[هنا](https://tutorials.groupdocs.com/annotation/net/).
 ### كيف يمكنني الحصول على ترخيص مؤقت لـ GroupDocs.Annotation لـ .NET؟
  يمكنك الحصول على ترخيص مؤقت من[هذا الرابط](https://purchase.groupdocs.com/temporary-license/).
 ### أين يمكنني طلب الدعم أو طرح أسئلة حول GroupDocs.Annotation لـ .NET؟

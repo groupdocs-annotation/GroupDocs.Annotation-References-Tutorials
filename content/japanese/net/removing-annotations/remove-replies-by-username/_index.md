@@ -3,7 +3,6 @@ title: .NET でユーザー名による返信を削除する
 linktitle: .NET でユーザー名による返信を削除する
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用してドキュメントにシームレスに注釈を付ける方法を学びます。この強力なツールを使用してコラボレーションとドキュメント管理を強化します。
-type: docs
 weight: 17
 url: /ja/net/removing-annotations/remove-replies-by-username/
 ---

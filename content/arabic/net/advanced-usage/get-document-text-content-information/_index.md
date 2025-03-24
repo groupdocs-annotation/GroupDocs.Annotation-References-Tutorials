@@ -3,7 +3,6 @@ title: الحصول على معلومات محتوى نص المستند
 linktitle: الحصول على معلومات محتوى نص المستند
 second_title: GroupDocs.Annotation .NET API
 description: قم بإضافة تعليقات توضيحية للمستندات بسلاسة باستخدام GroupDocs.Annotation لـ .NET. قم بدمج وظائف التعليقات التوضيحية في تطبيقات .NET الخاصة بك بسهولة.
-type: docs
 weight: 17
 url: /ar/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ annotator.Save("output.pdf");
 ### أين يمكنني العثور على دعم لـ GroupDocs.Annotation لـ .NET؟
  يمكنك طلب الدعم وطرح الأسئلة على[منتدى مستندات المجموعة](https://forum.groupdocs.com/c/annotation/10).
 ### هل يقدم GroupDocs.Annotation لـ .NET أي وثائق؟
- نعم، تتوفر وثائق شاملة لـ GroupDocs.Annotation لـ .NET[هنا](https://reference.groupdocs.com/annotation/net/).
+ نعم، تتوفر وثائق شاملة لـ GroupDocs.Annotation لـ .NET[هنا](https://tutorials.groupdocs.com/annotation/net/).

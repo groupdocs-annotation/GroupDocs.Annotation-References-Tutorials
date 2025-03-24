@@ -3,7 +3,6 @@ title: تعيين الترخيص المقنن
 linktitle: تعيين الترخيص المقنن
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إعداد ترخيص محدود لـ GroupDocs.Annotation .NET لاستخدام الموارد وإمكانيات التعليقات التوضيحية للمستندات في تطبيقات .NET الخاصة بك.
-type: docs
 weight: 12
 url: /ar/net/applying-licenses/set-metered-license/
 ---

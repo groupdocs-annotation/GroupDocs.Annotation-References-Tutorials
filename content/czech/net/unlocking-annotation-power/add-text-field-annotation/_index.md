@@ -3,7 +3,6 @@ title: Přidejte do dokumentu anotaci textového pole
 linktitle: Přidejte do dokumentu anotaci textového pole
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak bezproblémově integrovat anotace textových polí do vašich aplikací .NET pomocí Groupdocs.Annotation for .NET.
-type: docs
 weight: 21
 url: /cs/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ V tomto tutoriálu se ponoříme do jedné ze základních funkcí Groupdocs.Ann
 ## Předpoklady
 Než se pustíte do implementace, ujistěte se, že máte splněny následující předpoklady:
 ### 1. Instalace Groupdocs.Annotation pro .NET
- V první řadě si musíte stáhnout a nainstalovat Groupdocs.Annotation pro .NET. Odkaz ke stažení najdete[tady](https://releases.groupdocs.com/annotation/net/) . Postupujte podle pokynů k instalaci uvedených v dokumentaci[tady](https://reference.groupdocs.com/annotation/net/) pro správné nastavení knihovny.
+ V první řadě si musíte stáhnout a nainstalovat Groupdocs.Annotation pro .NET. Odkaz ke stažení najdete[tady](https://releases.groupdocs.com/annotation/net/) . Postupujte podle pokynů k instalaci uvedených v dokumentaci[tady](https://tutorials.groupdocs.com/annotation/net/) pro správné nastavení knihovny.
 ### 2. Nastavení vývojového prostředí
 Ujistěte se, že máte nastavené vývojové prostředí pro vývoj .NET. To zahrnuje mít v systému nainstalované kompatibilní IDE, jako je Visual Studio a .NET Framework.
 ### 3. Základní porozumění programování v C#

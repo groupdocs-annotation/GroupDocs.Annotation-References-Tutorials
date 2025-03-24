@@ -3,7 +3,6 @@ title: Thêm chú thích hình ảnh vào tài liệu (Đường dẫn cục b�
 linktitle: Thêm chú thích hình ảnh vào tài liệu (Đường dẫn cục bộ)
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích hình ảnh vào tài liệu bằng GroupDocs.Annotation cho .NET. Nâng cao khả năng xử lý tài liệu một cách dễ dàng.
-type: docs
 weight: 14
 url: /vi/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

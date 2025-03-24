@@ -3,7 +3,6 @@ title: Belgeyi FTP'den Yükle
 linktitle: Belgeyi FTP'den Yükle
 second_title: GroupDocs.Annotation .NET API'si
 description: Sorunsuz belge açıklaması için .NET uygulamalarınızı GroupDocs.Annotation ile geliştirin. Adım adım eğitim dahildir.
-type: docs
 weight: 12
 url: /tr/net/document-loading-essentials/load-document-from-ftp/
 ---

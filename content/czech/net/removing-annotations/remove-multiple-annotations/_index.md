@@ -3,7 +3,6 @@ title: Odebrat více anotací v .NET
 linktitle: Odebrat více anotací v .NET
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak efektivně odstranit více anotací v .NET pomocí GroupDocs.Annotation. Postupujte podle našeho podrobného návodu pro bezproblémovou integraci do vašich aplikací.
-type: docs
 weight: 12
 url: /cs/net/removing-annotations/remove-multiple-annotations/
 ---

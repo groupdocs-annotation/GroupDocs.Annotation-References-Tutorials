@@ -3,7 +3,6 @@ title: Définir la résolution d'aperçu du document
 linktitle: Définir la résolution d'aperçu du document
 second_title: API GroupDocs.Annotation .NET
 description: Améliorez la collaboration documentaire avec Groupdocs.Annotation pour .NET rationalisez les fonctionnalités d’annotation et de prévisualisation de manière transparente.
-type: docs
 weight: 23
 url: /fr/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ url: /fr/net/advanced-usage/set-document-preview-resolution/
 Avant de vous lancer dans l'exploitation des capacités de Groupdocs.Annotation pour .NET, assurez-vous que les conditions préalables suivantes sont en place :
 1.  Installation de Groupdocs.Annotation pour .NET : commencez par télécharger et installer la bibliothèque Groupdocs.Annotation pour .NET. Vous pouvez obtenir les fichiers nécessaires auprès du[lien de téléchargement](https://releases.groupdocs.com/annotation/net/).
 2. Environnement de développement : disposez d'un environnement de développement approprié, y compris Visual Studio ou tout autre IDE préféré pour le développement .NET.
-3. Accès à la Documentation : familiarisez-vous avec la documentation complète fournie par Groupdocs.Annotation pour .NET. Vous pouvez vous référer au[documentation](https://reference.groupdocs.com/annotation/net/) pour des informations détaillées sur les fonctionnalités et l'utilisation de la bibliothèque.
+3. Accès à la Documentation : familiarisez-vous avec la documentation complète fournie par Groupdocs.Annotation pour .NET. Vous pouvez vous référer au[documentation](https://tutorials.groupdocs.com/annotation/net/) pour des informations détaillées sur les fonctionnalités et l'utilisation de la bibliothèque.
 4. Compréhension de base du .NET Framework : assurez-vous d'avoir une compréhension fondamentale du framework .NET et du langage de programmation C# pour utiliser efficacement Groupdocs.Annotation pour .NET.
 
 ## Importation des espaces de noms nécessaires

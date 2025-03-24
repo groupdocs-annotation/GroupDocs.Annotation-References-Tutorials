@@ -3,7 +3,6 @@ title: XML 파일에서 주석 내보내기
 linktitle: XML 파일에서 주석 내보내기
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 XML 파일에서 주석을 내보내 문서 관리 작업 흐름을 효율적으로 단순화하는 방법을 알아보세요.
-type: docs
 weight: 11
 url: /ko/net/advanced-usage/export-annotations-xml-file/
 ---

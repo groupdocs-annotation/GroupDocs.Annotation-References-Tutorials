@@ -3,7 +3,6 @@ title: GroupDocs.Annotation beheersen - Tutorials en handleidingen
 linktitle: GroupDocs.Annotatie-tutorials
 additionalTitle: GroupDocs API-referenties
 description: Ontgrendel het volledige potentieel van GroupDocs.Annotation met onze tutorials. Verbeter de samenwerking en stroomlijn workflows met uitgebreide handleidingen en tips.
-type: docs
 weight: 11
 url: /nl/
 is_root: true

@@ -3,7 +3,6 @@ title: लाइसेंस आवेदन करना
 linktitle: लाइसेंस आवेदन करना
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation के साथ .NET में दस्तावेज़ एनोटेशन की पूरी क्षमता को अनलॉक करें। निर्बाध एकीकरण के लिए हमारे चरण-दर-चरण ट्यूटोरियल का पालन करें।
-type: docs
 weight: 26
 url: /hi/net/applying-licenses/
 ---

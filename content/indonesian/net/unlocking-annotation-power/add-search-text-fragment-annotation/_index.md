@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Fragmen Teks Pencarian ke Dokumen
 linktitle: Tambahkan Anotasi Fragmen Teks Pencarian ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Jelajahi kecanggihan GroupDocs.Annotation untuk .NET dan tambahkan kemampuan anotasi dokumen dengan mudah ke aplikasi Anda.
-type: docs
 weight: 20
 url: /id/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

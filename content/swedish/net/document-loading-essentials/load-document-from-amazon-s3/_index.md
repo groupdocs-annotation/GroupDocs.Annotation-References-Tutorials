@@ -3,7 +3,6 @@ title: Ladda dokument från Amazon S3
 linktitle: Ladda dokument från Amazon S3
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du annoterar dokument programmatiskt med Groupdocs.Annotation for .NET. Steg-för-steg handledning för sömlös integration.
-type: docs
 weight: 10
 url: /sv/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation för .NET stöder ett brett utbud av dokumentformat, inklus
 ### Kan jag prova Groupdocs.Annotation för .NET innan jag köper?
  Ja, du kan utforska funktionerna i Groupdocs.Annotation för .NET genom att få tillgång till den kostnadsfria testversionen som finns tillgänglig[här](https://releases.groupdocs.com/).
 ### Var kan jag hitta dokumentation för Groupdocs.Annotation för .NET?
-Omfattande dokumentation för Groupdocs.Annotation för .NET finns tillgänglig[här](https://reference.groupdocs.com/annotation/net/).
+Omfattande dokumentation för Groupdocs.Annotation för .NET finns tillgänglig[här](https://tutorials.groupdocs.com/annotation/net/).
 ### Behöver jag en tillfällig licens för att utvärdera Groupdocs.Annotation för .NET?
  Du kan få en tillfällig licens för utvärderingsändamål från[här](https://purchase.groupdocs.com/temporary-license/).
 ### Var kan jag söka hjälp eller support för Groupdocs.Annotation för .NET?

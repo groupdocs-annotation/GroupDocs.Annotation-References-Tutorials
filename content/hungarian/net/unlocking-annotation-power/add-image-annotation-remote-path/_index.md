@@ -3,7 +3,6 @@ title: Képannotáció hozzáadása a dokumentumhoz (távoli elérési út)
 linktitle: Képannotáció hozzáadása a dokumentumhoz (távoli elérési út)
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá képes megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Javítsa a dokumentumkezelést hatékony annotációs képességekkel.
-type: docs
 weight: 15
 url: /hu/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

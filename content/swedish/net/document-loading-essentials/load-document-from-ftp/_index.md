@@ -3,7 +3,6 @@ title: Ladda dokument från FTP
 linktitle: Ladda dokument från FTP
 second_title: GroupDocs.Annotation .NET API
 description: Förbättra dina .NET-applikationer med GroupDocs.Annotation för sömlös dokumentkommentar. Steg-för-steg handledning ingår.
-type: docs
 weight: 12
 url: /sv/net/document-loading-essentials/load-document-from-ftp/
 ---

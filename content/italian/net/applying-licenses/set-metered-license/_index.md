@@ -3,7 +3,6 @@ title: Imposta la licenza a consumo
 linktitle: Imposta la licenza a consumo
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come impostare una licenza a consumo per GroupDocs.Annotation .NET per l'utilizzo delle risorse e le funzionalità di annotazione dei documenti nelle tue applicazioni .NET.
-type: docs
 weight: 12
 url: /it/net/applying-licenses/set-metered-license/
 ---

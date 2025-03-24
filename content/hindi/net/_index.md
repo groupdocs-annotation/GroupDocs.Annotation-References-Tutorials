@@ -1,7 +1,6 @@
 ---
 title: .NET के लिए GroupDocs.Annotation के ट्यूटोरियल और उदाहरण
 linktitle: .NET ट्यूटोरियल के लिए GroupDocs.Annotation
-type: docs
 weight: 10
 url: /hi/net/
 description: हमारे ट्यूटोरियल के साथ .NET के लिए GroupDocs.Annotation की पूरी क्षमता को अनलॉक करें। निर्बाध रूप से एकीकृत करें, सहयोग बढ़ाएं और वर्कफ़्लो को सुव्यवस्थित करें।

@@ -3,7 +3,6 @@ title: أضف تعليقًا توضيحيًا لتنقيح النص إلى ال�
 linktitle: أضف تعليقًا توضيحيًا لتنقيح النص إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية لتنقيح النص إلى مستندات PDF باستخدام GroupDocs.Annotation لـ .NET. حماية المعلومات الحساسة دون عناء.
-type: docs
 weight: 23
 url: /ar/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

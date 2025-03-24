@@ -3,7 +3,6 @@ title: .NET'teki Ek Açıklamaları Kaldırma
 linktitle: .NET'teki Ek Açıklamaları Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: .NET'te Groupdocs.Annotation'ı kullanarak PDF belgelerinden ek açıklamaları nasıl kaldıracağınızı öğrenin. Dijital belge yönetimi sürecinizi basitleştirin.
-type: docs
 weight: 10
 url: /tr/net/removing-annotations/remove-annotations/
 ---

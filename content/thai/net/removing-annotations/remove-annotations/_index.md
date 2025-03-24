@@ -3,7 +3,6 @@ title: ลบคำอธิบายประกอบใน .NET
 linktitle: ลบคำอธิบายประกอบใน .NET
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีลบคำอธิบายประกอบออกจากเอกสาร PDF โดยใช้ Groupdocs.Annotation ใน .NET ลดความซับซ้อนของกระบวนการจัดการเอกสารดิจิทัลของคุณ
-type: docs
 weight: 10
 url: /th/net/removing-annotations/remove-annotations/
 ---

@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού Polyline στο έγγραφο
 linktitle: Προσθήκη σχολιασμού Polyline στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς πολυγραμμών σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη συνεργασία και τις διαδικασίες αναθεώρησης εγγράφων χωρίς κόπο.
-type: docs
 weight: 18
 url: /el/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### Το GroupDocs.Annotation για .NET προσφέρει δωρεάν δοκιμή;
  Ναι, μπορείτε να επωφεληθείτε από μια δωρεάν δοκιμή του GroupDocs.Annotation για .NET μεταβαίνοντας στο[αυτός ο σύνδεσμος](https://releases.groupdocs.com/).
 ### Πού μπορώ να βρω τεκμηρίωση για το GroupDocs.Annotation για .NET;
- Μπορείτε να βρείτε την τεκμηρίωση για GroupDocs.Annotation για .NET[εδώ](https://reference.groupdocs.com/annotation/net/).
+ Μπορείτε να βρείτε την τεκμηρίωση για GroupDocs.Annotation για .NET[εδώ](https://tutorials.groupdocs.com/annotation/net/).
 ### Πώς μπορώ να λάβω υποστήριξη για τυχόν ζητήματα ή ερωτήματα που σχετίζονται με το GroupDocs.Annotation για .NET;
  Μπορείτε να λάβετε υποστήριξη μεταβαίνοντας στο φόρουμ GroupDocs.Annotation[εδώ](https://forum.groupdocs.com/c/annotation/10).

@@ -3,7 +3,6 @@ title: Dodaj adnotację wyróżnienia tekstu do dokumentu
 linktitle: Dodaj adnotację wyróżnienia tekstu do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje z wyróżnianiem tekstu do dokumentów za pomocą GroupDocs.Annotation dla .NET. Popraw współpracę i produktywność dzięki temu kompleksowemu rozwiązaniu.
-type: docs
 weight: 22
 url: /pl/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

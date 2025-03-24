@@ -3,7 +3,6 @@ title: Dodaj adnotację znaku wodnego do dokumentu
 linktitle: Dodaj adnotację znaku wodnego do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bez wysiłku dodawać adnotacje ze znakami wodnymi do dokumentów, korzystając z GroupDocs.Annotation dla .NET. Zwiększ przejrzystość i bezpieczeństwo dokumentów.
-type: docs
 weight: 28
 url: /pl/net/unlocking-annotation-power/add-watermark-annotation/
 ---

@@ -3,7 +3,6 @@ title: 載入已註解的文檔版本
 linktitle: 載入已註解的文檔版本
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 輕鬆載入已註解的文件版本。簡化協作和審核流程。
-type: docs
 weight: 16
 url: /zh-hant/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### GroupDocs.Annotation for .NET 是否有免費試用版？
 是的，您可以從以下位置存取免費試用版：[這裡](https://releases.groupdocs.com/).
 ### 在哪裡可以找到 GroupDocs.Annotation for .NET 的文件？
-您可以參考詳細文檔[這裡](https://reference.groupdocs.com/annotation/net/).
+您可以參考詳細文檔[這裡](https://tutorials.groupdocs.com/annotation/net/).
 ### 如何取得 GroupDocs.Annotation for .NET 的臨時授權？
 您可以從以下位置取得臨時許可證[這個連結](https://purchase.groupdocs.com/temporary-license/).
 ### 我可以在哪裡尋求有關 GroupDocs.Annotation for .NET 的支援或提出問題？

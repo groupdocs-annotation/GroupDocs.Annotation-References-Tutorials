@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφου από FTP
 linktitle: Φόρτωση εγγράφου από FTP
 second_title: GroupDocs.Annotation .NET API
 description: Βελτιώστε τις εφαρμογές σας .NET με GroupDocs.Annotation για απρόσκοπτο σχολιασμό εγγράφων. Περιλαμβάνεται σεμινάριο βήμα προς βήμα.
-type: docs
 weight: 12
 url: /el/net/document-loading-essentials/load-document-from-ftp/
 ---

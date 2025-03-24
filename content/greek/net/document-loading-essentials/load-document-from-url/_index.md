@@ -3,7 +3,6 @@ title: Φόρτωση εγγράφου από τη διεύθυνση URL
 linktitle: Φόρτωση εγγράφου από τη διεύθυνση URL
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να σχολιάζετε έγγραφα PDF μέσω προγραμματισμού χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βήμα προς βήμα σεμινάριο με παραδείγματα κώδικα.
-type: docs
 weight: 15
 url: /el/net/document-loading-essentials/load-document-from-url/
 ---

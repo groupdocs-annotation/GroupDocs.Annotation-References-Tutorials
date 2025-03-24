@@ -3,7 +3,6 @@ title: Přidejte do dokumentu klikatou textovou anotaci
 linktitle: Přidejte do dokumentu klikatou textovou anotaci
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak bez námahy přidávat do dokumentů klikaté textové anotace pomocí Groupdocs.Annotation pro .NET. Zlepšete spolupráci a procesy kontroly dokumentů.
-type: docs
 weight: 25
 url: /cs/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

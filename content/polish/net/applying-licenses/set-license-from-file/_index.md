@@ -3,7 +3,6 @@ title: Ustaw licencję z pliku
 linktitle: Ustaw licencję z pliku
 second_title: GroupDocs.Adnotacja .NET API
 description: Bezproblemowo integruj zaawansowane możliwości dodawania adnotacji do dokumentów z aplikacjami .NET dzięki GroupDocs.Annotation dla .NET.
-type: docs
 weight: 10
 url: /pl/net/applying-licenses/set-license-from-file/
 ---

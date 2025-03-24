@@ -3,7 +3,6 @@ title: Lägg till bildkommentar till dokument (fjärrsökväg)
 linktitle: Lägg till bildkommentar till dokument (fjärrsökväg)
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till bildkommentarer till dokument med GroupDocs.Annotation för .NET. Förbättra dokumenthanteringen med kraftfulla anteckningsfunktioner.
-type: docs
 weight: 15
 url: /sv/net/unlocking-annotation-power/add-image-annotation-remote-path/
 ---

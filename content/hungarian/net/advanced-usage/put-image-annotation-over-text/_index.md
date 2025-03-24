@@ -3,7 +3,6 @@ title: Helyezze a kép megjegyzést a szöveg fölé
 linktitle: Helyezze a kép megjegyzést a szöveg fölé
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá képjegyzeteket szöveghez a .NET-ben a GroupDocs.Annotation segítségével a hatékony dokumentumkezelés és együttműködés érdekében.
-type: docs
 weight: 21
 url: /hu/net/advanced-usage/put-image-annotation-over-text/
 ---

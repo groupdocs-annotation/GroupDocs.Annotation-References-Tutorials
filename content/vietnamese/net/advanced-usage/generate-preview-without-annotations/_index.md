@@ -3,7 +3,6 @@ title: Tạo bản xem trước không có chú thích
 linktitle: Tạo bản xem trước không có chú thích
 second_title: GroupDocs.Annotation .NET API
 description: Tăng cường cộng tác và chú thích tài liệu trong các ứng dụng .NET bằng GroupDocs.Annotation for .NET. Dễ dàng chú thích, đánh dấu và xem lại tài liệu với thư viện mạnh mẽ này.
-type: docs
 weight: 13
 url: /vi/net/advanced-usage/generate-preview-without-annotations/
 ---

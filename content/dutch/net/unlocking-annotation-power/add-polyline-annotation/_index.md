@@ -3,7 +3,6 @@ title: Voeg polylijnannotatie toe aan document
 linktitle: Voeg polylijnannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u polylijnannotaties aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter moeiteloos samenwerkings- en documentbeoordelingsprocessen.
-type: docs
 weight: 18
 url: /nl/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Ja, u kunt verschillende eigenschappen van annotaties, zoals kleur, dekking, sti
 ### Biedt GroupDocs.Annotation voor .NET een gratis proefperiode?
  Ja, u kunt profiteren van een gratis proefversie van GroupDocs.Annotation voor .NET door naar te gaan[deze link](https://releases.groupdocs.com/).
 ### Waar kan ik documentatie vinden voor GroupDocs.Annotation voor .NET?
- U kunt de documentatie voor GroupDocs.Annotation voor .NET vinden[hier](https://reference.groupdocs.com/annotation/net/).
+ U kunt de documentatie voor GroupDocs.Annotation voor .NET vinden[hier](https://tutorials.groupdocs.com/annotation/net/).
 ### Hoe kan ik ondersteuning krijgen voor eventuele problemen of vragen met betrekking tot GroupDocs.Annotation voor .NET?
  U kunt ondersteuning krijgen door het GroupDocs.Annotation-forum te bezoeken[hier](https://forum.groupdocs.com/c/annotation/10).

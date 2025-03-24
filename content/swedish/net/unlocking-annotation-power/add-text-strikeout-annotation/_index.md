@@ -3,7 +3,6 @@ title: Lägg till text genomstruken kommentar i dokumentet
 linktitle: Lägg till text genomstruken kommentar i dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till text genomstrukna kommentarer i dokument med GroupDocs.Annotation för .NET. Förbättra samarbets- och dokumentgranskningsprocesser effektivt.
-type: docs
 weight: 26
 url: /sv/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

@@ -3,7 +3,6 @@ title: 문서 미리보기 해상도 설정
 linktitle: 문서 미리보기 해상도 설정
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 통해 문서 공동 작업을 향상하고 주석을 간소화하고 기능을 원활하게 미리 볼 수 있습니다.
-type: docs
 weight: 23
 url: /ko/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ url: /ko/net/advanced-usage/set-document-preview-resolution/
 .NET용 Groupdocs.Annotation의 기능을 활용하기 전에 다음 전제 조건이 충족되었는지 확인하세요.
 1.  .NET용 Groupdocs.Annotation 설치: .NET용 Groupdocs.Annotation 라이브러리를 다운로드하고 설치하는 것으로 시작합니다. 필요한 파일은 다음에서 얻을 수 있습니다.[다운로드 링크](https://releases.groupdocs.com/annotation/net/).
 2. 개발 환경: Visual Studio 또는 .NET 개발을 위해 선호하는 기타 IDE를 포함하여 적합한 개발 환경을 설정합니다.
-3. 문서에 대한 액세스: Groupdocs.Annotation for .NET에서 제공하는 포괄적인 문서를 숙지하십시오. 당신은[선적 서류 비치](https://reference.groupdocs.com/annotation/net/) 라이브러리의 기능과 사용법에 대한 자세한 통찰력을 얻으려면
+3. 문서에 대한 액세스: Groupdocs.Annotation for .NET에서 제공하는 포괄적인 문서를 숙지하십시오. 당신은[선적 서류 비치](https://tutorials.groupdocs.com/annotation/net/) 라이브러리의 기능과 사용법에 대한 자세한 통찰력을 얻으려면
 4. .NET Framework의 기본 이해: .NET용 Groupdocs.Annotation을 효과적으로 활용하려면 .NET 프레임워크 및 C# 프로그래밍 언어에 대한 기본적인 이해가 있어야 합니다.
 
 ## 필요한 네임스페이스 가져오기

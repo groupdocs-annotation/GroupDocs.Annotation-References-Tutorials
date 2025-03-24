@@ -3,7 +3,6 @@ title: 向文档添加水印注释
 linktitle: 向文档添加水印注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 轻松地将水印注释添加到文档中。提高文档的清晰度和安全性。
-type: docs
 weight: 28
 url: /zh/net/unlocking-annotation-power/add-watermark-annotation/
 ---

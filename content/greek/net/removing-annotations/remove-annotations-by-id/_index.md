@@ -3,7 +3,6 @@ title: Κατάργηση σχολιασμών κατά αναγνωριστικ
 linktitle: Κατάργηση σχολιασμών κατά αναγνωριστικό
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να αφαιρείτε σχολιασμούς κατά αναγνωριστικό χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη ροή εργασιών του εγγράφου σας αποτελεσματικά.
-type: docs
 weight: 11
 url: /el/net/removing-annotations/remove-annotations-by-id/
 ---

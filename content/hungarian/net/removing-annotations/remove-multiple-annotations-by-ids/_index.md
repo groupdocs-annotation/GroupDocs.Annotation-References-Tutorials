@@ -3,7 +3,6 @@ title: Több megjegyzés eltávolítása azonosítók alapján
 linktitle: Több megjegyzés eltávolítása azonosítók alapján
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan távolíthat el több megjegyzést azonosítók alapján a .NET-ben a GroupDocs.Annotation segítségével, így könnyedén javíthatja dokumentumkezelési lehetőségeit.
-type: docs
 weight: 13
 url: /hu/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

@@ -3,7 +3,6 @@ title: Προσθήκη Κειμένου Squiggly Annotation στο έγγραφ
 linktitle: Προσθήκη Κειμένου Squiggly Annotation στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε αβίαστα σχολιασμούς κειμένου σε έγγραφα χρησιμοποιώντας το Groupdocs.Annotation για .NET. Βελτιώστε τη συνεργασία και τις διαδικασίες αναθεώρησης εγγράφων.
-type: docs
 weight: 25
 url: /el/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

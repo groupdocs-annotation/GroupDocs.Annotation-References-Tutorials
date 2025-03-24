@@ -3,7 +3,6 @@ title: Remove Replies by User Name in .NET
 linktitle: Remove Replies by User Name in .NET
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to seamlessly annotate documents using Groupdocs.Annotation for .NET. Enhance collaboration and document management with this powerful tool.
-type: docs
 weight: 17
 url: /net/removing-annotations/remove-replies-by-username/
 ---

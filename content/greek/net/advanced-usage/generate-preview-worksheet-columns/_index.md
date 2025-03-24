@@ -3,7 +3,6 @@ title: Δημιουργία στηλών φύλλου εργασίας προε�
 linktitle: Δημιουργία στηλών φύλλου εργασίας προεπισκόπησης
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να σχολιάζετε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βήμα προς βήμα μάθημα για προγραμματιστές .NET. Βελτιώστε τις εφαρμογές σας.
-type: docs
 weight: 15
 url: /el/net/advanced-usage/generate-preview-worksheet-columns/
 ---

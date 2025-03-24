@@ -3,7 +3,6 @@ title: Ladda dokument från Azure
 linktitle: Ladda dokument från Azure
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du kommenterar dokument i .NET med GroupDocs.Annotation. Steg-för-steg handledning för sömlös integration med Azure Blob Storage.
-type: docs
 weight: 11
 url: /sv/net/document-loading-essentials/load-document-from-azure/
 ---

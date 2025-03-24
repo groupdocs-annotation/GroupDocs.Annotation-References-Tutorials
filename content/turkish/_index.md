@@ -3,7 +3,6 @@ title: GroupDocs.Annotation'da Uzmanlaşma - Öğreticiler ve Kılavuzlar
 linktitle: GroupDocs.Ek Açıklama Eğitimleri
 additionalTitle: GroupDocs API Referansları
 description: Eğitimlerimizle GroupDocs.Annotation'ın tüm potansiyelini ortaya çıkarın. Kapsamlı kılavuzlar ve ipuçlarıyla işbirliğini geliştirin ve iş akışlarını kolaylaştırın.
-type: docs
 weight: 11
 url: /tr/
 is_root: true

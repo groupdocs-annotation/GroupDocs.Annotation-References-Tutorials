@@ -3,7 +3,6 @@ title: تحميل الخطوط المخصصة
 linktitle: تحميل الخطوط المخصصة
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية تحميل الخطوط المخصصة بسلاسة في GroupDocs.Annotation لـ .NET لتحسين التعليقات التوضيحية للمستند. اتبع خطوة بخطوة لسهولة التكامل.
-type: docs
 weight: 20
 url: /ar/net/advanced-usage/loading-custom-fonts/
 ---

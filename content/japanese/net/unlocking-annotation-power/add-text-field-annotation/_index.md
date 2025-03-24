@@ -3,7 +3,6 @@ title: テキストフィールドの注釈をドキュメントに追加
 linktitle: テキストフィールドの注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用して、テキスト フィールドの注釈を .NET アプリケーションにシームレスに統合する方法を学びます。
-type: docs
 weight: 21
 url: /ja/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ Groupdocs.Annotation for .NET は、開発者が .NET アプリケーション�
 ## 前提条件
 実装に入る前に、次の前提条件が満たされていることを確認してください。
 ### 1. Groupdocs.Annotation for .NET のインストール
-何よりもまず、Groupdocs.Annotation for .NET をダウンロードしてインストールする必要があります。ダウンロードリンクが見つかります[ここ](https://releases.groupdocs.com/annotation/net/)。ドキュメントに記載されているインストール手順に従ってください[ここ](https://reference.groupdocs.com/annotation/net/)ライブラリを正しくセットアップします。
+何よりもまず、Groupdocs.Annotation for .NET をダウンロードしてインストールする必要があります。ダウンロードリンクが見つかります[ここ](https://releases.groupdocs.com/annotation/net/)。ドキュメントに記載されているインストール手順に従ってください[ここ](https://tutorials.groupdocs.com/annotation/net/)ライブラリを正しくセットアップします。
 ### 2. 開発環境のセットアップ
 .NET 開発用に開発環境がセットアップされていることを確認してください。これには、Visual Studio や .NET Framework などの互換性のある IDE をシステムにインストールすることが含まれます。
 ### 3. C# プログラミングの基本的な理解

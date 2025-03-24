@@ -3,7 +3,6 @@ title: Önizleme Çalışma Sayfası Sütunları Oluştur
 linktitle: Önizleme Çalışma Sayfası Sütunları Oluştur
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelere nasıl açıklama ekleyeceğinizi öğrenin. .NET geliştiricileri için adım adım eğitim. Uygulamalarınızı geliştirin.
-type: docs
 weight: 15
 url: /tr/net/advanced-usage/generate-preview-worksheet-columns/
 ---

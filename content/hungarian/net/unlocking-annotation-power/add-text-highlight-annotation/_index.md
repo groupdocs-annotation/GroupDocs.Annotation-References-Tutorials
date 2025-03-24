@@ -3,7 +3,6 @@ title: Szövegkiemelés megjegyzés hozzáadása a dokumentumhoz
 linktitle: Szövegkiemelés megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat szövegkiemeléseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Növelje az együttműködést és a termelékenységet ezzel az átfogóval.
-type: docs
 weight: 22
 url: /hu/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

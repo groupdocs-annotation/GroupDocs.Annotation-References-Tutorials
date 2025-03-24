@@ -3,7 +3,6 @@ title: Nastavte měřenou licenci
 linktitle: Nastavte měřenou licenci
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak nastavit měřenou licenci pro GroupDocs.Annotation .NET pro využití zdrojů a možnosti anotací dokumentů ve vašich aplikacích .NET.
-type: docs
 weight: 12
 url: /cs/net/applying-licenses/set-metered-license/
 ---

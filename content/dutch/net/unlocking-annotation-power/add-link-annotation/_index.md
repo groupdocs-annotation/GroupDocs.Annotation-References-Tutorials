@@ -3,7 +3,6 @@ title: Voeg linkannotatie toe aan document
 linktitle: Voeg linkannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u linkannotaties aan documenten kunt toevoegen met Groupdocs.Annotation voor .NET. Verbeter moeiteloos de samenwerking en interactiviteit.
-type: docs
 weight: 16
 url: /nl/net/unlocking-annotation-power/add-link-annotation/
 ---

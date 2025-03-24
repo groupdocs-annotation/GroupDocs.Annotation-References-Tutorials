@@ -3,7 +3,6 @@ title: 刪除 .NET 中的多個註釋
 linktitle: 刪除 .NET 中的多個註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 在 .NET 中有效刪除多個註解。按照我們的逐步教學無縫整合到您的應用程式中。
-type: docs
 weight: 12
 url: /zh-hant/net/removing-annotations/remove-multiple-annotations/
 ---

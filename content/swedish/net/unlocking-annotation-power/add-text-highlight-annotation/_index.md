@@ -3,7 +3,6 @@ title: Lägg till textmarkeringskommentar till dokument
 linktitle: Lägg till textmarkeringskommentar till dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till textmarkeringskommentarer i dokument med GroupDocs.Annotation för .NET. Förbättra samarbetet och produktiviteten med detta omfattande.
-type: docs
 weight: 22
 url: /sv/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

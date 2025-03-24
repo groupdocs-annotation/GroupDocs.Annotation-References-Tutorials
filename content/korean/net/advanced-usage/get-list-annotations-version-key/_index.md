@@ -3,7 +3,6 @@ title: 버전 키를 사용하여 주석 목록 가져오기
 linktitle: 버전 키를 사용하여 주석 목록 가져오기
 second_title: GroupDocs.Annotation .NET API
 description: 원활한 문서 주석을 위해 GroupDocs.Annotation을 사용하여 .NET 애플리케이션을 강화하세요. 효과적인 통합을 위해 단계별 가이드를 따르세요.
-type: docs
 weight: 18
 url: /ko/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ GroupDocs.Annotation 포럼을 방문하거나 지원 팀에 직접 문의하여
 ### 테스트 목적으로 GroupDocs.Annotation의 임시 라이센스를 구입할 수 있습니까?
 예, 제품 테스트 및 평가를 용이하게 하기 위해 임시 라이센스를 구매할 수 있습니다.
 ### .NET용 GroupDocs.Annotation에 대한 포괄적인 문서는 어디에서 찾을 수 있습니까?
- 제품 사용에 대한 자세한 지침은 GroupDocs 웹 사이트에서 제공되는 설명서를 참조할 수 있습니다.[여기]( https://reference.groupdocs.com/annotation/net/).
+ 제품 사용에 대한 자세한 지침은 GroupDocs 웹 사이트에서 제공되는 설명서를 참조할 수 있습니다.[여기]( https://tutorials.groupdocs.com/annotation/net/).

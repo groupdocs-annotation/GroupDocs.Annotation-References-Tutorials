@@ -3,7 +3,6 @@ title: Nhận danh sách chú thích bằng khóa phiên bản
 linktitle: Nhận danh sách chú thích bằng khóa phiên bản
 second_title: GroupDocs.Annotation .NET API
 description: Nâng cao các ứng dụng .NET của bạn với GroupDocs.Annotation để chú thích tài liệu liền mạch. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp hiệu quả.
-type: docs
 weight: 18
 url: /vi/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ Bạn có thể tìm kiếm sự hỗ trợ bằng cách truy cập diễn đàn
 ### Tôi có thể mua giấy phép tạm thời cho GroupDocs.Annotation cho mục đích thử nghiệm không?
 Có, giấy phép tạm thời có sẵn để mua nhằm tạo điều kiện thuận lợi cho việc thử nghiệm và đánh giá sản phẩm.
 ### Tôi có thể tìm tài liệu toàn diện về GroupDocs.Annotation cho .NET ở đâu?
- Bạn có thể tham khảo tài liệu có sẵn trên website GroupDocs để được hướng dẫn chi tiết cách sử dụng sản phẩm[đây]( https://reference.groupdocs.com/annotation/net/).
+ Bạn có thể tham khảo tài liệu có sẵn trên website GroupDocs để được hướng dẫn chi tiết cách sử dụng sản phẩm[đây]( https://tutorials.groupdocs.com/annotation/net/).

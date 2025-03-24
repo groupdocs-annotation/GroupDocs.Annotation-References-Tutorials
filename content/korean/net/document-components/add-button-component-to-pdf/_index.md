@@ -3,7 +3,6 @@ title: PDF 문서에 버튼 구성 요소 추가
 linktitle: PDF 문서에 버튼 구성 요소 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 대화형 단추 구성 요소로 PDF 문서를 향상시킵니다. 원활한 통합을 위해 단계별 튜토리얼을 따르세요.
-type: docs
 weight: 10
 url: /ko/net/document-components/add-button-component-to-pdf/
 ---

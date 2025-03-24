@@ -3,7 +3,6 @@ title: Adicionar anotação riscada de texto ao documento
 linktitle: Adicionar anotação riscada de texto ao documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como adicionar anotações de texto riscado a documentos usando GroupDocs.Annotation for .NET. Aprimore os processos de colaboração e revisão de documentos com eficiência.
-type: docs
 weight: 26
 url: /pt/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

@@ -3,7 +3,6 @@ title: Laden Sie passwortgeschützte Dokumente
 linktitle: Laden Sie passwortgeschützte Dokumente
 second_title: GroupDocs.Annotation .NET-API
 description: Verbessern Sie die Zusammenarbeit und Dokumentenprüfung mit GroupDocs.Annotation für .NET. Kommentieren Sie PDFs und mehr nahtlos in Ihren .NET-Apps.
-type: docs
 weight: 17
 url: /de/net/document-loading-essentials/load-password-protected-documents/
 ---

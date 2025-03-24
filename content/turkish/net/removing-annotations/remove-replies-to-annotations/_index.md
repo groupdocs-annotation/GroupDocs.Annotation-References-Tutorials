@@ -3,7 +3,6 @@ title: .NET'te Ek Açıklamalara Verilen Yanıtları Kaldırma
 linktitle: .NET'te Ek Açıklamalara Verilen Yanıtları Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation'ı kullanarak .NET'te ek açıklamalara verilen yanıtları nasıl kaldıracağınızı öğrenin. Kod örnekleri içeren adım adım kılavuz.
-type: docs
 weight: 15
 url: /tr/net/removing-annotations/remove-replies-to-annotations/
 ---

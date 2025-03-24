@@ -3,7 +3,6 @@ title: Компоненты документа
 linktitle: Компоненты документа
 second_title: GroupDocs.Аннотация .NET API
 description: Ознакомьтесь с подробными руководствами по интеграции интерактивных компонентов, таких как кнопки, флажки и раскрывающиеся списки, в PDF-документы с помощью GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /ru/net/document-components/
 ---

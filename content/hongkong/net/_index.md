@@ -1,7 +1,6 @@
 ---
 title: GroupDocs.Annotation for .NET 的教學與範例
 linktitle: .NET 教學的 GroupDocs.Annotation
-type: docs
 weight: 10
 url: /zh-hant/net/
 description: 透過我們的教學釋放 GroupDocs.Annotation for .NET 的全部潛能。無縫整合、增強協作並簡化工作流程。

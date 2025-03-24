@@ -3,7 +3,6 @@ title: टेक्स्ट के ऊपर इमेज एनोटेशन
 linktitle: टेक्स्ट के ऊपर इमेज एनोटेशन रखें
 second_title: GroupDocs.Annotation .NET API
 description: कुशल दस्तावेज़ प्रबंधन और सहयोग के लिए GroupDocs.Annotation का उपयोग करके .NET में टेक्स्ट पर छवि एनोटेशन जोड़ने का तरीका जानें।
-type: docs
 weight: 21
 url: /hi/net/advanced-usage/put-image-annotation-over-text/
 ---

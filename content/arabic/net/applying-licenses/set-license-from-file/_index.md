@@ -3,7 +3,6 @@ title: تعيين الترخيص من الملف
 linktitle: تعيين الترخيص من الملف
 second_title: GroupDocs.Annotation .NET API
 description: قم بدمج إمكانات التعليقات التوضيحية القوية للمستندات في تطبيقات .NET الخاصة بك بسلاسة مع GroupDocs.Annotation لـ .NET.
-type: docs
 weight: 10
 url: /ar/net/applying-licenses/set-license-from-file/
 ---

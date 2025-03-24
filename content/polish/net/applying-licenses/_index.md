@@ -3,7 +3,6 @@ title: Stosowanie licencji
 linktitle: Stosowanie licencji
 second_title: GroupDocs.Adnotacja .NET API
 description: Odblokuj pełny potencjał adnotacji dokumentów w .NET dzięki GroupDocs.Annotation. Postępuj zgodnie z naszymi szczegółowymi samouczkami, aby zapewnić bezproblemową integrację.
-type: docs
 weight: 26
 url: /pl/net/applying-licenses/
 ---

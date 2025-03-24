@@ -3,7 +3,6 @@ title: Добавить аннотацию эллипса в документ
 linktitle: Добавить аннотацию эллипса в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавлять аннотации в виде эллипсов к документам в .NET с помощью GroupDocs.Annotation. Улучшайте сотрудничество и общение без особых усилий.
-type: docs
 weight: 13
 url: /ru/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

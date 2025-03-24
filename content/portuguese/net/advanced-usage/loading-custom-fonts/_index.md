@@ -3,7 +3,6 @@ title: Carregando fontes personalizadas
 linktitle: Carregando fontes personalizadas
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como carregar fontes personalizadas perfeitamente no GroupDocs.Annotation for .NET para aprimorar a anotação de documentos. Siga nosso passo a passo para facilitar a integração.
-type: docs
 weight: 20
 url: /pt/net/advanced-usage/loading-custom-fonts/
 ---

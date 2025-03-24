@@ -3,7 +3,6 @@ title: Dodaj adnotację łącza do dokumentu
 linktitle: Dodaj adnotację łącza do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje do łączy do dokumentów za pomocą Groupdocs.Annotation dla .NET. Bez wysiłku usprawnij współpracę i interaktywność.
-type: docs
 weight: 16
 url: /pl/net/unlocking-annotation-power/add-link-annotation/
 ---

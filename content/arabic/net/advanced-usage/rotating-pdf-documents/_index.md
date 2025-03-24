@@ -3,7 +3,6 @@ title: تدوير وثائق PDF
 linktitle: تدوير وثائق PDF
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية تدوير مستندات PDF بسهولة باستخدام Groupdocs.Annotation لـ .NET. تحسين كفاءة إدارة الوثائق.
-type: docs
 weight: 22
 url: /ar/net/advanced-usage/rotating-pdf-documents/
 ---

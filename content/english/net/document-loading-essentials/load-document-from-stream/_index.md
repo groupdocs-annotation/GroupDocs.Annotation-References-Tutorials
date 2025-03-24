@@ -3,7 +3,6 @@ title: Load Document from Stream
 linktitle: Load Document from Stream
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to annotate documents in .NET effortlessly with GroupDocs.Annotation. Enhance collaboration and productivity.
-type: docs
 weight: 14
 url: /net/document-loading-essentials/load-document-from-stream/
 ---

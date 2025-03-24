@@ -3,7 +3,6 @@ title: Képminőség módosítása
 linktitle: Képminőség módosítása
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan javíthatja a PDF-fájlok képminőségét a Groupdocs.Annotation for .NET segítségével. Kövesse lépésenkénti útmutatónkat.
-type: docs
 weight: 10
 url: /hu/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ A mai digitális korban a PDF-dokumentumokban lévő képek minősége jelentős
 ## Előfeltételek
 Mielőtt belevágnánk az oktatóanyagba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
 ### 1. A Groupdocs.Annotation telepítése .NET-hez
- Először töltse le és telepítse a Groupdocs.Annotation for .NET könyvtárat a webhelyről. A letöltési linket megtalálod[itt](https://releases.groupdocs.com/annotation/net/) . Kövesse a dokumentációban található telepítési utasításokat[itt](https://reference.groupdocs.com/annotation/net/) a könyvtár helyes beállításához.
+ Először töltse le és telepítse a Groupdocs.Annotation for .NET könyvtárat a webhelyről. A letöltési linket megtalálod[itt](https://releases.groupdocs.com/annotation/net/) . Kövesse a dokumentációban található telepítési utasításokat[itt](https://tutorials.groupdocs.com/annotation/net/) a könyvtár helyes beállításához.
 ### 2. C# programozási nyelv ismerete
 A C# programozási nyelv alapvető ismerete elengedhetetlen az oktatóanyagban található példák követéséhez.
 ### 3. Hozzáférés a bemeneti PDF- és képfájlokhoz

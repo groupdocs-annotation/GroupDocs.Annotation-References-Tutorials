@@ -1,8 +1,8 @@
-baseURL = "https://reference2.groupdocs.com/tutorials/annotation"
+baseURL = "https://qa-tutorials.groupdocs.com/annotation"
 
 [[deployment.targets]]
 name = "Stage"
-URL = "s3://reference2.groupdocs.com/?prefix=tutorials/annotation/&region=us-west-2"
+URL = "s3://qa-tutorials.groupdocs.com/?prefix=annotation/&region=us-west-2"
 
 
 

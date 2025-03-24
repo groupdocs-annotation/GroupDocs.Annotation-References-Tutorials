@@ -3,7 +3,6 @@ title: قم بتحميل المستند من URL
 linktitle: قم بتحميل المستند من URL
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية إلى مستندات PDF برمجيًا باستخدام GroupDocs.Annotation لـ .NET. برنامج تعليمي خطوة بخطوة مع أمثلة التعليمات البرمجية.
-type: docs
 weight: 15
 url: /ar/net/document-loading-essentials/load-document-from-url/
 ---

@@ -3,7 +3,6 @@ title: Belgeye Metin Vurgu Açıklaması Ekleme
 linktitle: Belgeye Metin Vurgu Açıklaması Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelere metin vurgulama ek açıklamalarını nasıl ekleyeceğinizi öğrenin. Bu kapsamlı ürünle işbirliğini ve üretkenliği artırın.
-type: docs
 weight: 22
 url: /tr/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

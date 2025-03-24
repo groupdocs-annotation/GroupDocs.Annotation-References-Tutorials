@@ -3,7 +3,6 @@ title: Hapus Anotasi Menggunakan Opsi Simpan di .NET
 linktitle: Hapus Anotasi Menggunakan Opsi Simpan di .NET
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menghapus anotasi dari PDF dan dokumen lain di .NET menggunakan GroupDocs.Annotation. Panduan langkah demi langkah dengan contoh kode.
-type: docs
 weight: 14
 url: /id/net/removing-annotations/remove-annotations-using-save-options/
 ---

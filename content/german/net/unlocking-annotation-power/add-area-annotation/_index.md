@@ -3,7 +3,6 @@ title: Bereichsanmerkung zum Dokument hinzufügen
 linktitle: Bereichsanmerkung zum Dokument hinzufügen
 second_title: GroupDocs.Annotation .NET-API
 description: Verbessern Sie Ihre Zusammenarbeit an Dokumenten mit Groupdocs.Annotation für .NET. Erfahren Sie Schritt für Schritt, wie Sie Bereichsanmerkungen hinzufügen.
-type: docs
 weight: 10
 url: /de/net/unlocking-annotation-power/add-area-annotation/
 ---

@@ -3,7 +3,6 @@ title: Annotaties op ID verwijderen
 linktitle: Annotaties op ID verwijderen
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u annotaties op ID kunt verwijderen met GroupDocs.Annotation voor .NET. Stroomlijn uw documentworkflow efficiënt.
-type: docs
 weight: 11
 url: /nl/net/removing-annotations/remove-annotations-by-id/
 ---

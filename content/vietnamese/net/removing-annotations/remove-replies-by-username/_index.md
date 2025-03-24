@@ -3,7 +3,6 @@ title: Xóa câu trả lời theo tên người dùng trong .NET
 linktitle: Xóa câu trả lời theo tên người dùng trong .NET
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách chú thích liền mạch các tài liệu bằng Groupdocs.Annotation cho .NET. Tăng cường cộng tác và quản lý tài liệu bằng công cụ mạnh mẽ này.
-type: docs
 weight: 17
 url: /vi/net/removing-annotations/remove-replies-by-username/
 ---

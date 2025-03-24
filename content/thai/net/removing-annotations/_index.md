@@ -3,7 +3,6 @@ title: การลบคำอธิบายประกอบ
 linktitle: การลบคำอธิบายประกอบ
 second_title: GroupDocs.Annotation .NET API
 description: ค้นพบวิธีจัดการคำอธิบายประกอบใน .NET อย่างมีประสิทธิภาพด้วยบทช่วยสอน GroupDocs.Annotation ปรับปรุงขั้นตอนการทำงานเอกสารของคุณและปรับปรุงการทำงานร่วมกันได้อย่างราบรื่น
-type: docs
 weight: 25
 url: /th/net/removing-annotations/
 ---

@@ -3,7 +3,6 @@ title: Dokumentum komponensek
 linktitle: Dokumentum komponensek
 second_title: GroupDocs.Annotation .NET API
 description: Fedezze fel az átfogó oktatóanyagokat az interaktív összetevők, például gombok, jelölőnégyzetek és legördülő menük PDF-dokumentumokba való integrálásához a GroupDocs.Annotation .NET segítségével.
-type: docs
 weight: 24
 url: /hu/net/document-components/
 ---

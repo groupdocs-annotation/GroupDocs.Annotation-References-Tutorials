@@ -3,7 +3,6 @@ title: दस्तावेज़ पर सभी संस्करण कु
 linktitle: दस्तावेज़ पर सभी संस्करण कुंजियाँ प्राप्त करें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation का उपयोग करके किसी दस्तावेज़ की सभी संस्करण कुंजियाँ पुनर्प्राप्त करना सीखें। इस व्यापक के साथ अपनी दस्तावेज़ प्रबंधन क्षमताओं को बढ़ाएं।
-type: docs
 weight: 16
 url: /hi/net/advanced-usage/get-all-version-keys-document/
 ---

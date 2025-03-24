@@ -3,7 +3,6 @@ title: Távolítsa el a válaszokat a megjegyzésekre a .NET-ben
 linktitle: Távolítsa el a válaszokat a megjegyzésekre a .NET-ben
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan távolíthatja el a megjegyzésekre adott válaszokat a .NET-ben a GroupDocs.Annotation segítségével. Útmutató lépésről lépésre kódpéldákkal.
-type: docs
 weight: 15
 url: /hu/net/removing-annotations/remove-replies-to-annotations/
 ---

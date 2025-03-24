@@ -3,7 +3,6 @@ title: Załaduj dokument z Amazon S3
 linktitle: Załaduj dokument z Amazon S3
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak programowo dodawać adnotacje do dokumentów za pomocą Groupdocs.Annotation dla platformy .NET. Samouczek krok po kroku dotyczący bezproblemowej integracji.
-type: docs
 weight: 10
 url: /pl/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation dla .NET obsługuje szeroką gamę formatów dokumentów, w
 ### Czy przed zakupem mogę wypróbować Groupdocs.Annotation dla .NET?
  Tak, możesz poznać funkcje Groupdocs.Annotation dla .NET, korzystając z dostępnej bezpłatnej wersji próbnej[Tutaj](https://releases.groupdocs.com/).
 ### Gdzie mogę znaleźć dokumentację Groupdocs.Annotation dla .NET?
-Dostępna jest obszerna dokumentacja Groupdocs.Adnotacja dla .NET[Tutaj](https://reference.groupdocs.com/annotation/net/).
+Dostępna jest obszerna dokumentacja Groupdocs.Adnotacja dla .NET[Tutaj](https://tutorials.groupdocs.com/annotation/net/).
 ### Czy potrzebuję tymczasowej licencji, aby móc korzystać z Groupdocs.Annotation dla .NET?
  Licencję tymczasową do celów testowych można uzyskać od[Tutaj](https://purchase.groupdocs.com/temporary-license/).
 ### Gdzie mogę uzyskać pomoc lub wsparcie dotyczące Groupdocs.Annotation dla .NET?

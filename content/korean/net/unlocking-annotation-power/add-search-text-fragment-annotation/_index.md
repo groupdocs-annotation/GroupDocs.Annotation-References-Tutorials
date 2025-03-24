@@ -3,7 +3,6 @@ title: 문서에 검색 텍스트 조각 주석 추가
 linktitle: 문서에 검색 텍스트 조각 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation의 강력한 기능을 살펴보고 응용 프로그램에 문서 주석 기능을 손쉽게 추가하세요.
-type: docs
 weight: 20
 url: /ko/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

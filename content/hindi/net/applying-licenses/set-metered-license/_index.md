@@ -3,7 +3,6 @@ title: मीटरयुक्त लाइसेंस सेट करें
 linktitle: मीटरयुक्त लाइसेंस सेट करें
 second_title: GroupDocs.Annotation .NET API
 description: जानें कि अपने .NET अनुप्रयोगों में संसाधन उपयोग और दस्तावेज़ एनोटेशन क्षमताओं के लिए GroupDocs.Annotation .NET के लिए मीटर्ड लाइसेंस कैसे सेट करें।
-type: docs
 weight: 12
 url: /hi/net/applying-licenses/set-metered-license/
 ---

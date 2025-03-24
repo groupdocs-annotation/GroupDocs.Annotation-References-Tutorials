@@ -3,7 +3,6 @@ title: Add Arrow Annotation to Document
 linktitle: Add Arrow Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to add arrow annotations to your documents using GroupDocs.Annotation for .NET. Enhance document clarity and interactivity effortlessly.
-type: docs
 weight: 11
 url: /net/unlocking-annotation-power/add-arrow-annotation/
 ---
@@ -81,7 +80,7 @@ Now you've successfully added an arrow annotation to your document using GroupDo
 In this tutorial, we've covered the process of adding arrow annotations to documents using GroupDocs.Annotation for .NET. By following these steps, you can enhance your documents with clear directional indicators, making them more informative and engaging.
 ## FAQ's
 ### Can I customize the appearance of the arrow annotation?
-Yes, you can customize various properties such as color, style, width, and opacity to suit your preferences and document requirements.
+Yes, you can customize various properties such as color, style, width, and opacity to suit your ptutorialss and document requirements.
 ### Is GroupDocs.Annotation compatible with all document formats?
 GroupDocs.Annotation supports a wide range of document formats including PDF, DOCX, PPTX, XLSX, and more.
 ### Can I add annotations programmatically using GroupDocs.Annotation?

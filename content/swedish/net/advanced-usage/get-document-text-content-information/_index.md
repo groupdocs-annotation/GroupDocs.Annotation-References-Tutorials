@@ -3,7 +3,6 @@ title: Få information om innehåll i dokumenttext
 linktitle: Få information om innehåll i dokumenttext
 second_title: GroupDocs.Annotation .NET API
 description: Annotera dokument sömlöst med GroupDocs.Annotation för .NET. Integrera annoteringsfunktioner i dina .NET-applikationer utan ansträngning.
-type: docs
 weight: 17
 url: /sv/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Ja, GroupDocs.Annotation för .NET stöder olika dokumentformat inklusive PDF, W
 ### Var kan jag hitta support för GroupDocs.Annotation för .NET?
  Du kan söka stöd och ställa frågor om[GroupDocs forum](https://forum.groupdocs.com/c/annotation/10).
 ### Erbjuder GroupDocs.Annotation for .NET någon dokumentation?
- Ja, omfattande dokumentation för GroupDocs.Annotation för .NET finns tillgänglig[här](https://reference.groupdocs.com/annotation/net/).
+ Ja, omfattande dokumentation för GroupDocs.Annotation för .NET finns tillgänglig[här](https://tutorials.groupdocs.com/annotation/net/).

@@ -3,7 +3,6 @@ title: Document uit stroom laden
 linktitle: Document uit stroom laden
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u moeiteloos documenten kunt annoteren in .NET met GroupDocs.Annotation. Verbeter de samenwerking en productiviteit.
-type: docs
 weight: 14
 url: /nl/net/document-loading-essentials/load-document-from-stream/
 ---

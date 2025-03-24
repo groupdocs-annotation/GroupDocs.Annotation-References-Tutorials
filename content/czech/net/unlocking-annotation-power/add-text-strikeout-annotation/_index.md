@@ -3,7 +3,6 @@ title: Přidejte do dokumentu poznámku s přeškrtnutím textu
 linktitle: Přidejte do dokumentu poznámku s přeškrtnutím textu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat textové přeškrtnuté anotace do dokumentů pomocí GroupDocs.Annotation pro .NET. Zlepšete spolupráci a procesy kontroly dokumentů efektivně.
-type: docs
 weight: 26
 url: /cs/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

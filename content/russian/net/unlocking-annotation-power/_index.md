@@ -3,7 +3,6 @@ title: Раскрытие возможностей аннотаций
 linktitle: Раскрытие возможностей аннотаций
 second_title: GroupDocs.Аннотация .NET API
 description: Раскройте возможности аннотаций с помощью учебных пособий GroupDocs.Annotation for .NET. Научитесь шаг за шагом добавлять различные аннотации и улучшать совместную работу без особых усилий.
-type: docs
 weight: 23
 url: /ru/net/unlocking-annotation-power/
 ---

@@ -3,7 +3,6 @@ title: Carregar documento do URL
 linktitle: Carregar documento do URL
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como anotar documentos PDF programaticamente usando GroupDocs.Annotation for .NET. Tutorial passo a passo com exemplos de código.
-type: docs
 weight: 15
 url: /pt/net/document-loading-essentials/load-document-from-url/
 ---

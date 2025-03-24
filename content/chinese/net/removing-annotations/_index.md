@@ -3,7 +3,6 @@ title: 删除注释
 linktitle: 删除注释
 second_title: GroupDocs.Annotation .NET API
 description: 通过 GroupDocs.Annotation 教程了解如何在 .NET 中有效管理注释。简化您的文档工作流程并无缝增强协作。
-type: docs
 weight: 25
 url: /zh/net/removing-annotations/
 ---

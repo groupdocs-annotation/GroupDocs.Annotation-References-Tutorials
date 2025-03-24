@@ -3,7 +3,6 @@ title: .NET에서 주석에 대한 응답 제거
 linktitle: .NET에서 주석에 대한 응답 제거
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation을 사용하여 .NET에서 주석에 대한 응답을 제거하는 방법을 알아보세요. 코드 예제가 포함된 단계별 가이드입니다.
-type: docs
 weight: 15
 url: /ko/net/removing-annotations/remove-replies-to-annotations/
 ---

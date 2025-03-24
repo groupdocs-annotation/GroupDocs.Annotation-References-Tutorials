@@ -3,7 +3,6 @@ title: Definir licença do Stream
 linktitle: Definir licença do Stream
 second_title: API GroupDocs.Annotation .NET
 description: Desbloqueie todo o potencial da anotação de documentos em .NET com GroupDocs.Annotation. Siga nosso guia passo a passo para uma integração perfeita.
-type: docs
 weight: 11
 url: /pt/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ Bem-vindo ao guia completo sobre como usar GroupDocs.Annotation for .NET para ap
 Antes de mergulhar no tutorial, certifique-se de ter os seguintes pré-requisitos em vigor:
 1.  GroupDocs.Annotation for .NET: certifique-se de ter baixado e instalado o GroupDocs.Annotation for .NET do[Link para Download](https://releases.groupdocs.com/annotation/net/).
 2.  Licença: Obtenha uma licença válida para GroupDocs.Annotation. Você pode comprar um em[aqui](https://purchase.groupdocs.com/buy) ou solicite uma licença temporária[aqui](https://purchase.groupdocs.com/temporary-license/).
-3.  Documentação: Familiarize-se com o[documentação](https://reference.groupdocs.com/annotation/net/) para GroupDocs.Annotation. Ele fornece insights detalhados sobre as funcionalidades da API.
+3.  Documentação: Familiarize-se com o[documentação](https://tutorials.groupdocs.com/annotation/net/) para GroupDocs.Annotation. Ele fornece insights detalhados sobre as funcionalidades da API.
 
 ## Importar namespaces
 Primeiro, vamos importar os namespaces necessários para começar a usar GroupDocs.Annotation em seu projeto .NET:
@@ -63,6 +62,6 @@ Sim, você precisa de uma licença válida para desbloquear todas as funcionalid
 ### Posso experimentar o GroupDocs.Annotation for .NET antes de comprar?
  Sim, você pode solicitar uma licença de teste gratuita[aqui](https://releases.groupdocs.com/) para explorar os recursos do GroupDocs.Annotation for .NET.
 ### Como posso obter a documentação mais recente do GroupDocs.Annotation for .NET?
- Você pode consultar o[documentação](https://reference.groupdocs.com/annotation/net/) para GroupDocs.Annotation for .NET para acessar referências e tutoriais detalhados da API.
+ Você pode consultar o[documentação](https://tutorials.groupdocs.com/annotation/net/) para GroupDocs.Annotation for .NET para acessar referências e tutoriais detalhados da API.
 ### E se eu encontrar problemas com minha licença?
 Se você encontrar algum problema com sua licença, entre em contato com a equipe de suporte do GroupDocs para obter assistência.

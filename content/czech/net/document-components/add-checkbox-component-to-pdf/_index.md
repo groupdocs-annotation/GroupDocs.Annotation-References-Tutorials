@@ -3,7 +3,6 @@ title: Přidat komponentu zaškrtávacího políčka do dokumentu PDF
 linktitle: Přidat komponentu zaškrtávacího políčka do dokumentu PDF
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak přidat komponentu Checkbox do dokumentů PDF pomocí Groupdocs.Annotation pro .NET. Vylepšete své PDF interaktivními prvky.
-type: docs
 weight: 11
 url: /cs/net/document-components/add-checkbox-component-to-pdf/
 ---

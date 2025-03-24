@@ -3,7 +3,6 @@ title: 在文件中新增文字替換註釋
 linktitle: 在文件中新增文字替換註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 輕鬆地將文字取代註解新增至 .NET 文件。增強您的文件處理能力。
-type: docs
 weight: 24
 url: /zh-hant/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

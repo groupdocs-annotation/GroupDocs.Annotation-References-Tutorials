@@ -3,7 +3,6 @@ title: Φόρτωση προσαρμοσμένων γραμματοσειρών
 linktitle: Φόρτωση προσαρμοσμένων γραμματοσειρών
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να φορτώνετε απρόσκοπτα προσαρμοσμένες γραμματοσειρές στο GroupDocs.Annotation για .NET για να βελτιώσετε τον σχολιασμό εγγράφων. Ακολουθήστε βήμα προς βήμα για εύκολη ενσωμάτωση.
-type: docs
 weight: 20
 url: /el/net/advanced-usage/loading-custom-fonts/
 ---

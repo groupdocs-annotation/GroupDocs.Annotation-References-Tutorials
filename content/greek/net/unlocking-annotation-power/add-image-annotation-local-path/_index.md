@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού εικόνας στο έγγραφ�
 linktitle: Προσθήκη σχολιασμού εικόνας στο έγγραφο (τοπική διαδρομή)
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς εικόνων σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τις δυνατότητες επεξεργασίας εγγράφων με ευκολία.
-type: docs
 weight: 14
 url: /el/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

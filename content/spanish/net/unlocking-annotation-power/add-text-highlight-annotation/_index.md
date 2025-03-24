@@ -3,7 +3,6 @@ title: Agregar anotación de resaltado de texto al documento
 linktitle: Agregar anotación de resaltado de texto al documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a agregar anotaciones de resaltado de texto a documentos usando GroupDocs.Annotation para .NET. Mejore la colaboración y la productividad con este completo.
-type: docs
 weight: 22
 url: /es/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

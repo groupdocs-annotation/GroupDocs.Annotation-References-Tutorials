@@ -3,7 +3,6 @@ title: 주석 기능 잠금 해제
 linktitle: 주석 기능 잠금 해제
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation 튜토리얼을 통해 주석의 강력한 기능을 활용해 보세요. 다양한 주석을 단계별로 추가하고 손쉽게 협업을 강화하는 방법을 알아보세요.
-type: docs
 weight: 23
 url: /ko/net/unlocking-annotation-power/
 ---

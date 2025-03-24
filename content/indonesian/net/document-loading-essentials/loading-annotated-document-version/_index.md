@@ -3,7 +3,6 @@ title: Memuat Versi Dokumen Beranotasi
 linktitle: Memuat Versi Dokumen Beranotasi
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara memuat versi dokumen beranotasi dengan mudah menggunakan GroupDocs.Annotation untuk .NET. Sederhanakan proses kolaborasi dan peninjauan.
-type: docs
 weight: 16
 url: /id/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Ya, GroupDocs.Annotation mendukung pembuatan anotasi dokumen dalam format sepert
 ### Apakah ada uji coba gratis yang tersedia untuk GroupDocs.Annotation untuk .NET?
  Ya, Anda dapat mengakses versi uji coba gratis dari[Di Sini](https://releases.groupdocs.com/).
 ### Di mana saya dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET?
- Anda dapat merujuk ke dokumentasi terperinci[Di Sini](https://reference.groupdocs.com/annotation/net/).
+ Anda dapat merujuk ke dokumentasi terperinci[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 ### Bagaimana saya bisa mendapatkan lisensi sementara untuk GroupDocs.Annotation untuk .NET?
  Anda dapat memperoleh lisensi sementara dari[Link ini](https://purchase.groupdocs.com/temporary-license/).
 ### Di mana saya dapat mencari dukungan atau mengajukan pertanyaan tentang GroupDocs.Annotation untuk .NET?

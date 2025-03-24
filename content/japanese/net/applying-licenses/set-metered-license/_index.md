@@ -3,7 +3,6 @@ title: 従量制ライセンスの設定
 linktitle: 従量制ライセンスの設定
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET の従量制ライセンスを設定して、.NET アプリケーションのリソース使用量とドキュメント注釈機能を設定する方法について説明します。
-type: docs
 weight: 12
 url: /ja/net/applying-licenses/set-metered-license/
 ---

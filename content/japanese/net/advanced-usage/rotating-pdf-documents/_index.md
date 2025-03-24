@@ -3,7 +3,6 @@ title: PDF ドキュメントの回転
 linktitle: PDF ドキュメントの回転
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用して PDF ドキュメントを簡単に回転する方法を学びます。文書管理の効率を向上させます。
-type: docs
 weight: 22
 url: /ja/net/advanced-usage/rotating-pdf-documents/
 ---

@@ -3,7 +3,6 @@ title: Thêm chú thích trường văn bản vào tài liệu
 linktitle: Thêm chú thích trường văn bản vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách tích hợp liền mạch các chú thích trường văn bản vào các ứng dụng .NET của bạn bằng Groupdocs.Annotation for .NET.
-type: docs
 weight: 21
 url: /vi/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ Trong hướng dẫn này, chúng ta sẽ đi sâu vào một trong những ch�
 ## Điều kiện tiên quyết
 Trước khi đi sâu vào triển khai, hãy đảm bảo bạn có sẵn các điều kiện tiên quyết sau:
 ### 1. Cài đặt Groupdocs.Annotation cho .NET
- Đầu tiên và quan trọng nhất, bạn cần tải xuống và cài đặt Groupdocs.Annotation cho .NET. Bạn có thể tìm thấy liên kết tải xuống[đây](https://releases.groupdocs.com/annotation/net/) . Thực hiện theo các hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://reference.groupdocs.com/annotation/net/) để thiết lập thư viện một cách chính xác.
+ Đầu tiên và quan trọng nhất, bạn cần tải xuống và cài đặt Groupdocs.Annotation cho .NET. Bạn có thể tìm thấy liên kết tải xuống[đây](https://releases.groupdocs.com/annotation/net/) . Thực hiện theo các hướng dẫn cài đặt được cung cấp trong tài liệu[đây](https://tutorials.groupdocs.com/annotation/net/) để thiết lập thư viện một cách chính xác.
 ### 2. Thiết lập môi trường phát triển
 Đảm bảo bạn đã thiết lập môi trường phát triển để phát triển .NET. Điều này bao gồm việc cài đặt một IDE tương thích như Visual Studio và .NET Framework trên hệ thống của bạn.
 ### 3. Hiểu biết cơ bản về lập trình C#

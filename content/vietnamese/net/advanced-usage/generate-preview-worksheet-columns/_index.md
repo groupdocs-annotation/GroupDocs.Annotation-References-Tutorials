@@ -3,7 +3,6 @@ title: Tạo cột bảng tính xem trước
 linktitle: Tạo cột bảng tính xem trước
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách chú thích tài liệu bằng GroupDocs.Annotation cho .NET. Hướng dẫn từng bước dành cho nhà phát triển .NET. Tăng cường các ứng dụng của bạn.
-type: docs
 weight: 15
 url: /vi/net/advanced-usage/generate-preview-worksheet-columns/
 ---

@@ -3,7 +3,6 @@ title: 產生預覽工作表列
 linktitle: 產生預覽工作表列
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 對文件進行註解。 .NET 開發人員的逐步教學。增強您的應用程式。
-type: docs
 weight: 15
 url: /zh-hant/net/advanced-usage/generate-preview-worksheet-columns/
 ---

@@ -3,7 +3,6 @@ title: احصل على قائمة التعليقات التوضيحية باست
 linktitle: احصل على قائمة التعليقات التوضيحية باستخدام مفتاح الإصدار
 second_title: GroupDocs.Annotation .NET API
 description: قم بتحسين تطبيقات .NET الخاصة بك باستخدام GroupDocs.Annotation للحصول على تعليقات توضيحية سلسة للمستندات. اتبع دليلنا خطوة بخطوة للتكامل الفعال.
-type: docs
 weight: 18
 url: /ar/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ List<AnnotationBase> annotations = annotator.GetVersion("CUSTOM_VERSION");
 ### هل يمكنني شراء ترخيص مؤقت لـ GroupDocs.Annotation لأغراض الاختبار؟
 نعم، التراخيص المؤقتة متاحة للشراء لتسهيل اختبار المنتج وتقييمه.
 ### أين يمكنني العثور على وثائق شاملة لـ GroupDocs.Annotation لـ .NET؟
- يمكنك الرجوع إلى الوثائق المتوفرة على موقع GroupDocs للحصول على إرشادات مفصلة حول استخدام المنتج[هنا]( https://reference.groupdocs.com/annotation/net/).
+ يمكنك الرجوع إلى الوثائق المتوفرة على موقع GroupDocs للحصول على إرشادات مفصلة حول استخدام المنتج[هنا]( https://tutorials.groupdocs.com/annotation/net/).

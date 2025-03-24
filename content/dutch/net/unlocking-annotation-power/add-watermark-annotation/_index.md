@@ -3,7 +3,6 @@ title: Voeg watermerkannotatie toe aan document
 linktitle: Voeg watermerkannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u moeiteloos watermerkannotaties aan uw documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter de duidelijkheid en beveiliging van documenten.
-type: docs
 weight: 28
 url: /nl/net/unlocking-annotation-power/add-watermark-annotation/
 ---

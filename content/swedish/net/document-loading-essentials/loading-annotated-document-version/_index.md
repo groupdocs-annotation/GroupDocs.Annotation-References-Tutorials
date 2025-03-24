@@ -3,7 +3,6 @@ title: Laddar kommenterad dokumentversion
 linktitle: Laddar kommenterad dokumentversion
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du enkelt laddar kommenterade dokumentversioner med GroupDocs.Annotation för .NET. Förenkla samarbets- och granskningsprocesser.
-type: docs
 weight: 16
 url: /sv/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Ja, GroupDocs.Annotation stöder att kommentera dokument i format som PDF, DOCX,
 ### Finns det en gratis testversion tillgänglig för GroupDocs.Annotation för .NET?
  Ja, du kan komma åt den kostnadsfria testversionen från[här](https://releases.groupdocs.com/).
 ### Var kan jag hitta dokumentation för GroupDocs.Annotation för .NET?
- Du kan hänvisa till den detaljerade dokumentationen[här](https://reference.groupdocs.com/annotation/net/).
+ Du kan hänvisa till den detaljerade dokumentationen[här](https://tutorials.groupdocs.com/annotation/net/).
 ### Hur kan jag få en tillfällig licens för GroupDocs.Annotation för .NET?
  Du kan skaffa en tillfällig licens från[den här länken](https://purchase.groupdocs.com/temporary-license/).
 ### Var kan jag söka support eller ställa frågor om GroupDocs.Annotation för .NET?

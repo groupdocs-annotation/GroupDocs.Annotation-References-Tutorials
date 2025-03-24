@@ -3,7 +3,6 @@ title: Belge Metni İçeriği Bilgisini Al
 linktitle: Belge Metni İçeriği Bilgisini Al
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET ile belgelere sorunsuz bir şekilde açıklama ekleyin. Ek açıklama işlevlerini .NET uygulamalarınıza zahmetsizce entegre edin.
-type: docs
 weight: 17
 url: /tr/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Evet, GroupDocs.Annotation for .NET, PDF, Word, Excel, PowerPoint ve daha fazlas
 ### .NET için GroupDocs.Annotation desteğini nerede bulabilirim?
  Bu konuda destek arayabilir ve soru sorabilirsiniz.[GroupDocs forumu](https://forum.groupdocs.com/c/annotation/10).
 ### GroupDocs.Annotation for .NET herhangi bir belge sunuyor mu?
- Evet, GroupDocs.Annotation for .NET için kapsamlı belgeler mevcuttur[Burada](https://reference.groupdocs.com/annotation/net/).
+ Evet, GroupDocs.Annotation for .NET için kapsamlı belgeler mevcuttur[Burada](https://tutorials.groupdocs.com/annotation/net/).

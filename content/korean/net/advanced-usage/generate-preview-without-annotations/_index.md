@@ -3,7 +3,6 @@ title: 주석 없이 미리보기 생성
 linktitle: 주석 없이 미리보기 생성
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 .NET 응용 프로그램 내에서 문서 공동 작업 및 주석을 강화합니다. 이 강력한 라이브러리를 사용하여 문서에 쉽게 주석을 달고 마크업하고 검토할 수 있습니다.
-type: docs
 weight: 13
 url: /ko/net/advanced-usage/generate-preview-without-annotations/
 ---

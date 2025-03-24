@@ -3,7 +3,6 @@ title: Låser upp anteckningskraft
 linktitle: Låser upp anteckningskraft
 second_title: GroupDocs.Annotation .NET API
 description: Lås upp kraften i annotering med GroupDocs.Annotation för .NET tutorials. Lär dig att lägga till olika anteckningar steg för steg och förbättra samarbetet utan ansträngning.
-type: docs
 weight: 23
 url: /sv/net/unlocking-annotation-power/
 ---

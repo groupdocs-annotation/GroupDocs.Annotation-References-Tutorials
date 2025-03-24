@@ -3,7 +3,6 @@ title: Erweiterte Nutzung
 linktitle: Erweiterte Nutzung
 second_title: GroupDocs.Annotation .NET-API
 description: Entdecken Sie Tutorials zur erweiterten Nutzung von GroupDocs.Annotation .NET. Verbessern Sie die Dokumentenverwaltung mit Schritt-für-Schritt-Anleitungen zu Bildqualität, Anmerkungsexport und mehr.
-type: docs
 weight: 22
 url: /de/net/advanced-usage/
 ---

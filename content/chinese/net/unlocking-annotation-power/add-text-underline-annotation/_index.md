@@ -3,7 +3,6 @@ title: 向文档添加文本下划线注释
 linktitle: 向文档添加文本下划线注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 向文档添加文本下划线注释。轻松增强协作和沟通。
-type: docs
 weight: 27
 url: /zh/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

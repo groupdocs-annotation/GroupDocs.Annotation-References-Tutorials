@@ -3,7 +3,6 @@ title: إضافة مكون القائمة المنسدلة إلى وثيقة PDF
 linktitle: إضافة مكون القائمة المنسدلة إلى وثيقة PDF
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة مكونات القائمة المنسدلة إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET. اتبع دليلنا خطوة بخطوة للتكامل السلس.
-type: docs
 weight: 12
 url: /ar/net/document-components/add-dropdown-component-to-pdf/
 ---

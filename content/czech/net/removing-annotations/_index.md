@@ -3,7 +3,6 @@ title: Odebírání anotací
 linktitle: Odebírání anotací
 second_title: GroupDocs.Annotation .NET API
 description: Objevte, jak efektivně spravovat anotace v .NET pomocí GroupDocs.Annotation tutoriálů. Zjednodušte svůj pracovní tok s dokumenty a plynule vylepšete spolupráci.
-type: docs
 weight: 25
 url: /cs/net/removing-annotations/
 ---

@@ -3,7 +3,6 @@ title: Annotációk eltávolítása
 linktitle: Annotációk eltávolítása
 second_title: GroupDocs.Annotation .NET API
 description: Fedezze fel, hogyan kezelheti hatékonyan a megjegyzéseket a .NET-ben a GroupDocs.Annotation oktatóanyagokkal. Egyszerűsítse a dokumentumok munkafolyamatát, és zökkenőmentesen fokozza az együttműködést.
-type: docs
 weight: 25
 url: /hu/net/removing-annotations/
 ---

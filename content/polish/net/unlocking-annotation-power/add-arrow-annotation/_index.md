@@ -3,7 +3,6 @@ title: Dodaj adnotację ze strzałką do dokumentu
 linktitle: Dodaj adnotację ze strzałką do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje ze strzałkami do dokumentów za pomocą GroupDocs.Annotation dla .NET. Bez wysiłku zwiększ przejrzystość i interaktywność dokumentów.
-type: docs
 weight: 11
 url: /pl/net/unlocking-annotation-power/add-arrow-annotation/
 ---

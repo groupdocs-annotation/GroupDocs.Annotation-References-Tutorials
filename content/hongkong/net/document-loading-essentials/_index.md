@@ -3,7 +3,6 @@ title: 文件載入重點
 linktitle: 文件載入重點
 second_title: GroupDocs.Annotation .NET API
 description: 了解使用 GroupDocs.Annotation .NET 載入文件的基本教學。與 Amazon S3、Azure、FTP、本機磁碟、串流等無縫整合。
-type: docs
 weight: 20
 url: /zh-hant/net/document-loading-essentials/
 ---

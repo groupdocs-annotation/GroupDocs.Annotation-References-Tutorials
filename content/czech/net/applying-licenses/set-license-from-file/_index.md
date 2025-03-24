@@ -3,7 +3,6 @@ title: Nastavit licenci ze souboru
 linktitle: Nastavit licenci ze souboru
 second_title: GroupDocs.Annotation .NET API
 description: Pomocí GroupDocs.Annotation for .NET bezproblémově integrujte výkonné možnosti anotací dokumentů do svých aplikací .NET.
-type: docs
 weight: 10
 url: /cs/net/applying-licenses/set-license-from-file/
 ---

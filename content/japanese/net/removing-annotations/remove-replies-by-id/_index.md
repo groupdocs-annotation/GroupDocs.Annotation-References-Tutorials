@@ -3,7 +3,6 @@ title: .NET で ID による応答を削除する
 linktitle: .NET で ID による応答を削除する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET で ID によって返信を削除する方法を学びます。ドキュメントの注釈を効率的に管理するには、段階的なチュートリアルに従ってください。
-type: docs
 weight: 16
 url: /ja/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /ja/net/removing-annotations/remove-replies-by-id/
 ## 前提条件
 GroupDocs.Annotation を使用して .NET で ID による返信を削除するチュートリアルに進む前に、次の前提条件を満たしていることを確認してください。
 ### 1. GroupDocs.Annotation のインストール
-まず、GroupDocs.Annotation for .NET をインストールする必要があります。ライブラリはからダウンロードできます[ここ](https://releases.groupdocs.com/annotation/net/)ドキュメントに記載されているインストール手順に従ってください。[ここ](https://reference.groupdocs.com/annotation/net/).
+まず、GroupDocs.Annotation for .NET をインストールする必要があります。ライブラリはからダウンロードできます[ここ](https://releases.groupdocs.com/annotation/net/)ドキュメントに記載されているインストール手順に従ってください。[ここ](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. C# と .NET の基本的な理解
 このチュートリアルの例に従うには、C# プログラミング言語と .NET Framework に精通している必要があります。
 ### 3. 返信のある注釈付き文書

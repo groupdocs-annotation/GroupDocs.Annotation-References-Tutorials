@@ -3,7 +3,6 @@ title: 向文档添加文本密文注释
 linktitle: 向文档添加文本密文注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 将文本密文注释添加到 PDF 文档。轻松保护敏感信息。
-type: docs
 weight: 23
 url: /zh/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

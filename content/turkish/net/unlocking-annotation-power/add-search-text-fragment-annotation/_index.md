@@ -3,7 +3,6 @@ title: Belgeye Arama Metni Parçası Ek Açıklaması Ekle
 linktitle: Belgeye Arama Metni Parçası Ek Açıklaması Ekle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'in gücünü keşfedin ve uygulamalarınıza zahmetsizce belge açıklaması özellikleri ekleyin.
-type: docs
 weight: 20
 url: /tr/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

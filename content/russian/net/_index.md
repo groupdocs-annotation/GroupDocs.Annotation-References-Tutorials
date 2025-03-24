@@ -1,7 +1,6 @@
 ---
 title: Учебники и примеры GroupDocs.Annotation для .NET
 linktitle: GroupDocs.Annotation для учебных пособий по .NET
-type: docs
 weight: 10
 url: /ru/net/
 description: Раскройте весь потенциал GroupDocs.Annotation для .NET с помощью наших руководств. Беспрепятственная интеграция, улучшение совместной работы и оптимизация рабочих процессов.

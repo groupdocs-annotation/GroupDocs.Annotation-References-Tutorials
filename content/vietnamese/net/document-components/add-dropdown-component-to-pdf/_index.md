@@ -3,7 +3,6 @@ title: Thêm thành phần thả xuống vào tài liệu PDF
 linktitle: Thêm thành phần thả xuống vào tài liệu PDF
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm các thành phần thả xuống vào tệp PDF bằng GroupDocs.Annotation for .NET. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch.
-type: docs
 weight: 12
 url: /vi/net/document-components/add-dropdown-component-to-pdf/
 ---

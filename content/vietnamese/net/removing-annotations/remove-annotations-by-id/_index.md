@@ -3,7 +3,6 @@ title: Xóa chú thích theo ID
 linktitle: Xóa chú thích theo ID
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách xóa chú thích theo ID bằng GroupDocs.Annotation cho .NET. Hợp lý hóa quy trình làm việc tài liệu của bạn một cách hiệu quả.
-type: docs
 weight: 11
 url: /vi/net/removing-annotations/remove-annotations-by-id/
 ---

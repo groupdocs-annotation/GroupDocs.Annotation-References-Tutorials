@@ -3,7 +3,6 @@ title: プレビューワークシート列の生成
 linktitle: プレビューワークシート列の生成
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントに注釈を付ける方法を学びます。 .NET 開発者向けのステップバイステップのチュートリアル。アプリケーションを強化します。
-type: docs
 weight: 15
 url: /ja/net/advanced-usage/generate-preview-worksheet-columns/
 ---

@@ -3,7 +3,6 @@ title: Agregar anotación de subrayado de texto al documento
 linktitle: Agregar anotación de subrayado de texto al documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a agregar anotaciones de subrayado de texto a documentos usando GroupDocs.Annotation para .NET. Mejore la colaboración y la comunicación sin esfuerzo.
-type: docs
 weight: 27
 url: /es/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

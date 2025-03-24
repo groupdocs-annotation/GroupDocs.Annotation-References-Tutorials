@@ -3,7 +3,6 @@ title: فتح قوة التعليق التوضيحي
 linktitle: فتح قوة التعليق التوضيحي
 second_title: GroupDocs.Annotation .NET API
 description: أطلق العنان لقوة التعليقات التوضيحية باستخدام GroupDocs.Annotation لبرامج .NET التعليمية. تعلم كيفية إضافة التعليقات التوضيحية المتنوعة خطوة بخطوة وتعزيز التعاون دون عناء.
-type: docs
 weight: 23
 url: /ar/net/unlocking-annotation-power/
 ---

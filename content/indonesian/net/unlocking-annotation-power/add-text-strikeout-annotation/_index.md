@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Coretan Teks ke Dokumen
 linktitle: Tambahkan Anotasi Coretan Teks ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi coretan teks ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Meningkatkan kolaborasi dan proses peninjauan dokumen secara efisien.
-type: docs
 weight: 26
 url: /id/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

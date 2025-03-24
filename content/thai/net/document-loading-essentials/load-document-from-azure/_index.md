@@ -3,7 +3,6 @@ title: โหลดเอกสารจาก Azure
 linktitle: โหลดเอกสารจาก Azure
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีใส่คำอธิบายประกอบเอกสารใน .NET โดยใช้ GroupDocs.Annotation บทช่วยสอนทีละขั้นตอนสำหรับการผสานรวมกับ Azure Blob Storage อย่างราบรื่น
-type: docs
 weight: 11
 url: /th/net/document-loading-essentials/load-document-from-azure/
 ---

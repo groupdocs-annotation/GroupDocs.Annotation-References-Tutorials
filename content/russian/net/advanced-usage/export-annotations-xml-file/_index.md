@@ -3,7 +3,6 @@ title: Экспорт аннотаций из XML-файла
 linktitle: Экспорт аннотаций из XML-файла
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как экспортировать аннотации из XML-файлов с помощью GroupDocs.Annotation for .NET, что эффективно упрощает рабочий процесс управления документами.
-type: docs
 weight: 11
 url: /ru/net/advanced-usage/export-annotations-xml-file/
 ---

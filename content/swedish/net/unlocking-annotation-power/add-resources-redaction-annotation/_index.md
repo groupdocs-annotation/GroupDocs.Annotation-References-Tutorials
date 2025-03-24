@@ -3,7 +3,6 @@ title: Lägg till resurser Redaktionskommentar till dokument
 linktitle: Lägg till resurser Redaktionskommentar till dokument
 second_title: GroupDocs.Annotation .NET API
 description: Förbättra arbetsflöden för dokumenthantering med GroupDocs.Annotation för .NET. Integrera sömlöst Resources Redaction Annotation i ditt .NET för effektivare.
-type: docs
 weight: 19
 url: /sv/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

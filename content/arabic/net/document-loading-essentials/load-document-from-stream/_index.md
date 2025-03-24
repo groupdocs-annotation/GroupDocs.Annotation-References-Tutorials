@@ -3,7 +3,6 @@ title: قم بتحميل المستند من الدفق
 linktitle: قم بتحميل المستند من الدفق
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية إلى المستندات في .NET بسهولة باستخدام GroupDocs.Annotation. تعزيز التعاون والإنتاجية.
-type: docs
 weight: 14
 url: /ar/net/document-loading-essentials/load-document-from-stream/
 ---

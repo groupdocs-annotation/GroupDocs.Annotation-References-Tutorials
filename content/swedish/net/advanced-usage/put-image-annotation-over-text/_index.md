@@ -3,7 +3,6 @@ title: Lägg bildkommentar över text
 linktitle: Lägg bildkommentar över text
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till bildkommentarer över text i .NET med GroupDocs.Annotation för effektiv dokumenthantering och samarbete.
-type: docs
 weight: 21
 url: /sv/net/advanced-usage/put-image-annotation-over-text/
 ---

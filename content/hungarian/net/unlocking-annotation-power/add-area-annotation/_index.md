@@ -3,7 +3,6 @@ title: Területi megjegyzés hozzáadása a dokumentumhoz
 linktitle: Területi megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Fokozza a dokumentumok együttműködését a Groupdocs.Annotation for .NET segítségével. Ismerje meg lépésről lépésre, hogyan adhat hozzá megjegyzéseket a területhez.
-type: docs
 weight: 10
 url: /hu/net/unlocking-annotation-power/add-area-annotation/
 ---

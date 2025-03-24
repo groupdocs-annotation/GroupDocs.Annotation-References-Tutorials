@@ -3,7 +3,6 @@ title: Ölçülü Lisansı Ayarla
 linktitle: Ölçülü Lisansı Ayarla
 second_title: GroupDocs.Annotation .NET API'si
 description: .NET uygulamalarınızdaki kaynak kullanımı ve belge ek açıklama yetenekleri için GroupDocs.Annotation .NET için ölçülü bir lisansın nasıl ayarlanacağını öğrenin.
-type: docs
 weight: 12
 url: /tr/net/applying-licenses/set-metered-license/
 ---

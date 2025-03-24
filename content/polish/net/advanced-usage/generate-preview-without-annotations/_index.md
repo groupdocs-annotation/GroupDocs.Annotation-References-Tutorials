@@ -3,7 +3,6 @@ title: Generuj podgląd bez adnotacji
 linktitle: Generuj podgląd bez adnotacji
 second_title: GroupDocs.Adnotacja .NET API
 description: Usprawnij współpracę nad dokumentami i dodawaj adnotacje w aplikacjach .NET, korzystając z GroupDocs.Annotation dla .NET. Z łatwością dodawaj adnotacje, zaznaczaj i przeglądaj dokumenty dzięki tej potężnej bibliotece.
-type: docs
 weight: 13
 url: /pl/net/advanced-usage/generate-preview-without-annotations/
 ---

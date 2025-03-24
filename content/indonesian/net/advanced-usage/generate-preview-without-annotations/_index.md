@@ -3,7 +3,6 @@ title: Hasilkan Pratinjau tanpa Anotasi
 linktitle: Hasilkan Pratinjau tanpa Anotasi
 second_title: GroupDocs.Annotasi .NET API
 description: Tingkatkan kolaborasi dan anotasi dokumen dalam aplikasi .NET menggunakan GroupDocs.Annotation untuk .NET. Membuat anotasi, menandai, dan meninjau dokumen dengan mudah menggunakan perpustakaan canggih ini.
-type: docs
 weight: 13
 url: /id/net/advanced-usage/generate-preview-without-annotations/
 ---

@@ -3,7 +3,6 @@ title: Padroneggiare GroupDocs.Annotation - Tutorial e guide
 linktitle: Esercitazioni su GroupDocs.Annotation
 additionalTitle: Riferimenti API GroupDocs
 description: Sblocca tutto il potenziale di GroupDocs.Annotation con i nostri tutorial. Migliora la collaborazione e semplifica i flussi di lavoro con guide e suggerimenti completi.
-type: docs
 weight: 11
 url: /it/
 is_root: true

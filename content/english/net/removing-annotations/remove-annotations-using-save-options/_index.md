@@ -3,7 +3,6 @@ title: Remove Annotations Using Save Options in .NET
 linktitle: Remove Annotations Using Save Options in .NET
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to remove annotations from PDF and other documents in .NET using GroupDocs.Annotation. Step-by-step guide with code examples.
-type: docs
 weight: 14
 url: /net/removing-annotations/remove-annotations-using-save-options/
 ---

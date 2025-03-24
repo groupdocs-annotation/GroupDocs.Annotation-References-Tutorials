@@ -3,7 +3,6 @@ title: ドキュメントのテキストコンテンツ情報を取得する
 linktitle: ドキュメントのテキストコンテンツ情報を取得する
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントにシームレスに注釈を付けます。注釈機能を .NET アプリケーションに簡単に統合します。
-type: docs
 weight: 17
 url: /ja/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ annotator.Save("output.pdf");
 ### GroupDocs.Annotation for .NET のサポートはどこで見つけられますか?
 サポートを求めたり、質問したりできます。[GroupDocs フォーラム](https://forum.groupdocs.com/c/annotation/10).
 ### GroupDocs.Annotation for .NET にはドキュメントが提供されていますか?
-はい、GroupDocs.Annotation for .NET の包括的なドキュメントが利用可能です[ここ](https://reference.groupdocs.com/annotation/net/).
+はい、GroupDocs.Annotation for .NET の包括的なドキュメントが利用可能です[ここ](https://tutorials.groupdocs.com/annotation/net/).

@@ -3,7 +3,6 @@ title: 載入受密碼保護的文檔
 linktitle: 載入受密碼保護的文檔
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 增強協作和文件審查。在 .NET 應用程式中更無縫地對 PDF 進行註解。
-type: docs
 weight: 17
 url: /zh-hant/net/document-loading-essentials/load-password-protected-documents/
 ---

@@ -3,7 +3,6 @@ title: 문서에 텍스트 교정 주석 추가
 linktitle: 문서에 텍스트 교정 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 PDF 문서에 텍스트 편집 주석을 추가하는 방법을 알아보세요. 민감한 정보를 손쉽게 보호하세요.
-type: docs
 weight: 23
 url: /ko/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

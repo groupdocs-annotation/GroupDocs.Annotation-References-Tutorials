@@ -3,7 +3,6 @@ title: Những điều cơ bản về tải tài liệu
 linktitle: Những điều cơ bản về tải tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Khám phá các hướng dẫn cần thiết để tải tài liệu bằng GroupDocs.Annotation .NET. Tích hợp liền mạch với Amazon S3, Azure, FTP, ổ đĩa cục bộ, luồng, v.v.
-type: docs
 weight: 20
 url: /vi/net/document-loading-essentials/
 ---

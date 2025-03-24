@@ -3,7 +3,6 @@ title: Memuat Font Khusus
 linktitle: Memuat Font Khusus
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara memuat font khusus dengan lancar di GroupDocs.Annotation untuk .NET guna menyempurnakan anotasi dokumen. Ikuti langkah demi langkah kami untuk integrasi yang mudah.
-type: docs
 weight: 20
 url: /id/net/advanced-usage/loading-custom-fonts/
 ---

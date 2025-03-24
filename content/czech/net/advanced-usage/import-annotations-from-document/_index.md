@@ -3,7 +3,6 @@ title: Importovat anotace z dokumentu
 linktitle: Importovat anotace z dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se importovat anotace z dokumentů v .NET pomocí GroupDocs.Annotation. Postupujte podle našeho podrobného návodu pro bezproblémovou integraci.
-type: docs
 weight: 19
 url: /cs/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ Ano, GroupDocs.Annotation podporuje širokou škálu formátů dokumentů, včet
 ### Jak mohu získat dočasnou licenci pro GroupDocs.Annotation?
  Můžete získat dočasnou licenci pro GroupDocs.Annotation z[dočasná licenční stránka](https://purchase.groupdocs.com/temporary-license/).
 ### Kde najdu komplexní dokumentaci k GroupDocs.Annotation?
- K dispozici je podrobná dokumentace pro GroupDocs.Annotation[tady](https://reference.groupdocs.com/annotation/net/).
+ K dispozici je podrobná dokumentace pro GroupDocs.Annotation[tady](https://tutorials.groupdocs.com/annotation/net/).
 ### Kde mohu vyhledat podporu pro jakékoli problémy nebo dotazy týkající se GroupDocs.Annotation?
  Pro podporu navštivte GroupDocs.Annotation[Fórum](https://forum.groupdocs.com/c/annotation/10) kde můžete vyhledat pomoc od odborníků a komunity.

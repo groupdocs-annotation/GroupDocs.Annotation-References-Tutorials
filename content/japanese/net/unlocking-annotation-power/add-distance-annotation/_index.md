@@ -3,7 +3,6 @@ title: 距離の注釈をドキュメントに追加
 linktitle: 距離の注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントに距離の注釈を追加する方法を学びます。コラボレーションとコミュニケーションを簡単に強化します。
-type: docs
 weight: 12
 url: /ja/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ A: はい、GroupDocs.Annotation は、PDF、Word、Excel、PowerPoint などを
 
 ### Q: GroupDocs.Annotation for .NET のドキュメントはどこで見つけられますか?
 
- A: 詳細なドキュメントを参照してください。[ここ](https://reference.groupdocs.com/annotation/net/).
+ A: 詳細なドキュメントを参照してください。[ここ](https://tutorials.groupdocs.com/annotation/net/).
 
 ### Q: GroupDocs.Annotation に関するサポートや支援を受けるにはどうすればよいですか?
 

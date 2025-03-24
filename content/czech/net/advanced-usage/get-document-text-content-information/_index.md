@@ -3,7 +3,6 @@ title: Získejte informace o obsahu textu dokumentu
 linktitle: Získejte informace o obsahu textu dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Bezproblémově anotujte dokumenty pomocí GroupDocs.Annotation pro .NET. Integrujte anotační funkce do svých aplikací .NET bez námahy.
-type: docs
 weight: 17
 url: /cs/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ Ano, GroupDocs.Annotation for .NET podporuje různé formáty dokumentů včetn�
 ### Kde najdu podporu pro GroupDocs.Annotation pro .NET?
  Můžete hledat podporu a klást otázky na[Fórum GroupDocs](https://forum.groupdocs.com/c/annotation/10).
 ### Nabízí GroupDocs.Annotation for .NET nějakou dokumentaci?
- Ano, je k dispozici komplexní dokumentace pro GroupDocs.Annotation pro .NET[tady](https://reference.groupdocs.com/annotation/net/).
+ Ano, je k dispozici komplexní dokumentace pro GroupDocs.Annotation pro .NET[tady](https://tutorials.groupdocs.com/annotation/net/).

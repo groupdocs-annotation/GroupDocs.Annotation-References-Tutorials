@@ -3,7 +3,6 @@ title: إزالة الردود حسب اسم المستخدم في .NET
 linktitle: إزالة الردود حسب اسم المستخدم في .NET
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية للمستندات بسلاسة باستخدام Groupdocs.Annotation لـ .NET. عزز التعاون وإدارة المستندات باستخدام هذه الأداة القوية.
-type: docs
 weight: 17
 url: /ar/net/removing-annotations/remove-replies-by-username/
 ---

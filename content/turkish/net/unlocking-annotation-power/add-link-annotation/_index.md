@@ -3,7 +3,6 @@ title: Belgeye Bağlantı Açıklaması Ekle
 linktitle: Belgeye Bağlantı Açıklaması Ekle
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET'i kullanarak belgelere bağlantı açıklamalarını nasıl ekleyeceğinizi öğrenin. İşbirliğini ve etkileşimi zahmetsizce geliştirin.
-type: docs
 weight: 16
 url: /tr/net/unlocking-annotation-power/add-link-annotation/
 ---

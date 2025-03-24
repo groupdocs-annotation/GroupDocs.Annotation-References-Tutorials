@@ -3,7 +3,6 @@ title: Előzetes munkalap oszlopok létrehozása
 linktitle: Előzetes munkalap oszlopok létrehozása
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan fűzhet megjegyzéseket dokumentumokhoz a GroupDocs.Annotation for .NET használatával. Lépésről lépésre bemutató .NET-fejlesztőknek. Bővítse alkalmazásait.
-type: docs
 weight: 15
 url: /hu/net/advanced-usage/generate-preview-worksheet-columns/
 ---

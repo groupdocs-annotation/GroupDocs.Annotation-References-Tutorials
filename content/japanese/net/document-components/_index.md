@@ -3,7 +3,6 @@ title: ドキュメントのコンポーネント
 linktitle: ドキュメントのコンポーネント
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET を使用して、ボタン、チェックボックス、ドロップダウンなどの対話型コンポーネントを PDF ドキュメントに統合するための包括的なチュートリアルをご覧ください。
-type: docs
 weight: 24
 url: /ja/net/document-components/
 ---

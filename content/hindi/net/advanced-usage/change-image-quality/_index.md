@@ -3,7 +3,6 @@ title: छवि गुणवत्ता बदलें
 linktitle: छवि गुणवत्ता बदलें
 second_title: GroupDocs.Annotation .NET API
 description: जानें कि .NET के लिए Groupdocs.Annotation का उपयोग करके पीडीएफ फाइलों में छवि गुणवत्ता कैसे बढ़ाई जाए। हमारे चरण-दर-चरण मार्गदर्शिका का पालन करें.
-type: docs
 weight: 10
 url: /hi/net/advanced-usage/change-image-quality/
 ---
@@ -12,7 +11,7 @@ url: /hi/net/advanced-usage/change-image-quality/
 ## आवश्यक शर्तें
 इससे पहले कि हम ट्यूटोरियल में उतरें, सुनिश्चित करें कि आपके पास निम्नलिखित आवश्यक शर्तें हैं:
 ### 1. .NET के लिए Groupdocs.Annotation की स्थापना
- सबसे पहले, वेबसाइट से .NET लाइब्रेरी के लिए Groupdocs.Annotation डाउनलोड और इंस्टॉल करें। आप डाउनलोड लिंक पा सकते हैं[यहाँ](https://releases.groupdocs.com/annotation/net/) . दस्तावेज़ में दिए गए इंस्टॉलेशन निर्देशों का पालन करें[यहाँ](https://reference.groupdocs.com/annotation/net/) पुस्तकालय को सही ढंग से स्थापित करने के लिए।
+ सबसे पहले, वेबसाइट से .NET लाइब्रेरी के लिए Groupdocs.Annotation डाउनलोड और इंस्टॉल करें। आप डाउनलोड लिंक पा सकते हैं[यहाँ](https://releases.groupdocs.com/annotation/net/) . दस्तावेज़ में दिए गए इंस्टॉलेशन निर्देशों का पालन करें[यहाँ](https://tutorials.groupdocs.com/annotation/net/) पुस्तकालय को सही ढंग से स्थापित करने के लिए।
 ### 2. C# प्रोग्रामिंग लैंग्वेज से परिचित होना
 इस ट्यूटोरियल में दिए गए उदाहरणों के साथ C# प्रोग्रामिंग भाषा की बुनियादी समझ का पालन करना आवश्यक है।
 ### 3. इनपुट पीडीएफ और छवि फ़ाइलों तक पहुंच

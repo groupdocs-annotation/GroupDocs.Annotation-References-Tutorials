@@ -3,7 +3,6 @@ title: Charger un document depuis Azure
 linktitle: Charger un document depuis Azure
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment annoter des documents dans .NET à l'aide de GroupDocs.Annotation. Tutoriel étape par étape pour une intégration transparente avec Azure Blob Storage.
-type: docs
 weight: 11
 url: /fr/net/document-loading-essentials/load-document-from-azure/
 ---

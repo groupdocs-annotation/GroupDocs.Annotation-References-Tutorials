@@ -3,7 +3,6 @@ title: Установить лимитную лицензию
 linktitle: Установить лимитную лицензию
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как настроить лимитную лицензию для GroupDocs.Annotation .NET для использования ресурсов и возможности документирования аннотаций в ваших приложениях .NET.
-type: docs
 weight: 12
 url: /ru/net/applying-licenses/set-metered-license/
 ---

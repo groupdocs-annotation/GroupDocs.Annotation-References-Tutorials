@@ -3,7 +3,6 @@ title: Amazon S3'ten Belge Yükleme
 linktitle: Amazon S3'ten Belge Yükleme
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET ile belgelere programlı olarak nasıl açıklama ekleyeceğinizi öğrenin. Kusursuz entegrasyon için adım adım eğitim.
-type: docs
 weight: 10
 url: /tr/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Groupdocs.Annotation for .NET, PDF, DOCX, PPTX ve daha fazlasını içeren çok 
 ### Satın almadan önce Groupdocs.Annotation for .NET'i deneyebilir miyim?
  Evet, mevcut ücretsiz deneme sürümüne erişerek Groupdocs.Annotation for .NET'in özelliklerini keşfedebilirsiniz.[Burada](https://releases.groupdocs.com/).
 ### Groupdocs.Annotation for .NET belgelerini nerede bulabilirim?
-Groupdocs.Annotation for .NET için kapsamlı belgeler mevcuttur[Burada](https://reference.groupdocs.com/annotation/net/).
+Groupdocs.Annotation for .NET için kapsamlı belgeler mevcuttur[Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### Groupdocs.Annotation for .NET'i değerlendirmek için geçici bir lisansa ihtiyacım var mı?
  Değerlendirme amacıyla geçici bir lisansı şu adresten alabilirsiniz:[Burada](https://purchase.groupdocs.com/temporary-license/).
 ### Groupdocs.Annotation for .NET için nereden yardım veya destek alabilirim?

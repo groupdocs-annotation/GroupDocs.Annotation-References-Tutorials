@@ -3,7 +3,6 @@ title: 在文件中新增箭頭註釋
 linktitle: 在文件中新增箭頭註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 將箭頭註解新增至文件。輕鬆增強文件清晰度和互動性。
-type: docs
 weight: 11
 url: /zh-hant/net/unlocking-annotation-power/add-arrow-annotation/
 ---

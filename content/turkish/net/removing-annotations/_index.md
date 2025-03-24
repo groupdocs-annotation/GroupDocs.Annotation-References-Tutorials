@@ -3,7 +3,6 @@ title: Ek Açıklamaları Kaldırma
 linktitle: Ek Açıklamaları Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation eğitimleriyle .NET'te ek açıklamaları nasıl verimli bir şekilde yöneteceğinizi keşfedin. Belge iş akışınızı kolaylaştırın ve işbirliğini sorunsuz bir şekilde geliştirin.
-type: docs
 weight: 25
 url: /tr/net/removing-annotations/
 ---

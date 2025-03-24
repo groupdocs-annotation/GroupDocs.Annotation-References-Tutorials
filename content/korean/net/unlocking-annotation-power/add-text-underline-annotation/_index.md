@@ -3,7 +3,6 @@ title: 문서에 텍스트 밑줄 주석 추가
 linktitle: 문서에 텍스트 밑줄 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 텍스트 밑줄 주석을 추가하는 방법을 알아보세요. 손쉽게 협업과 커뮤니케이션을 강화하세요.
-type: docs
 weight: 27
 url: /ko/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

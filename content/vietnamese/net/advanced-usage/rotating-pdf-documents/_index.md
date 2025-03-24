@@ -3,7 +3,6 @@ title: Xoay tài liệu PDF
 linktitle: Xoay tài liệu PDF
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách xoay tài liệu PDF dễ dàng bằng Groupdocs.Annotation for .NET. Nâng cao hiệu quả quản lý tài liệu.
-type: docs
 weight: 22
 url: /vi/net/advanced-usage/rotating-pdf-documents/
 ---

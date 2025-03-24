@@ -3,7 +3,6 @@ title: PDF 문서 회전
 linktitle: PDF 문서 회전
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 PDF 문서를 쉽게 회전하는 방법을 알아보세요. 문서 관리 효율성을 향상시킵니다.
-type: docs
 weight: 22
 url: /ko/net/advanced-usage/rotating-pdf-documents/
 ---

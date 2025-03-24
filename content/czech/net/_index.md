@@ -1,7 +1,6 @@
 ---
 title: Návody a příklady GroupDocs.Annotation pro .NET
 linktitle: GroupDocs.Annotation pro výukové programy .NET
-type: docs
 weight: 10
 url: /cs/net/
 description: Odemkněte plný potenciál GroupDocs.Annotation pro .NET pomocí našich výukových programů. Bezproblémová integrace, vylepšení spolupráce a zjednodušení pracovních postupů.

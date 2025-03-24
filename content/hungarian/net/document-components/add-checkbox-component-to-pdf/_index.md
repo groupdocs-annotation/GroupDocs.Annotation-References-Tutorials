@@ -3,7 +3,6 @@ title: Jelölőnégyzet-összetevő hozzáadása a PDF-dokumentumhoz
 linktitle: Jelölőnégyzet-összetevő hozzáadása a PDF-dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan adhat hozzá jelölőnégyzet-összetevőt PDF-dokumentumokhoz a Groupdocs.Annotation for .NET segítségével. Növelje PDF-fájljait interaktív elemekkel.
-type: docs
 weight: 11
 url: /hu/net/document-components/add-checkbox-component-to-pdf/
 ---

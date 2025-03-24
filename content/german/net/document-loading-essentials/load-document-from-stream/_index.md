@@ -3,7 +3,6 @@ title: Dokument aus Stream laden
 linktitle: Dokument aus Stream laden
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation mühelos Dokumente in .NET mit Anmerkungen versehen. Verbessern Sie die Zusammenarbeit und Produktivität.
-type: docs
 weight: 14
 url: /de/net/document-loading-essentials/load-document-from-stream/
 ---

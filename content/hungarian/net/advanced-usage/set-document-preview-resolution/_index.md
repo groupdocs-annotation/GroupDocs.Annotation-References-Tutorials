@@ -3,7 +3,6 @@ title: Állítsa be a dokumentum előnézeti felbontását
 linktitle: Állítsa be a dokumentum előnézeti felbontását
 second_title: GroupDocs.Annotation .NET API
 description: Növelje a dokumentumok együttműködését a Groupdocs.Annotation for .NET-hez segítségével.
-type: docs
 weight: 23
 url: /hu/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ Napjaink digitális korában a hatékony dokumentumkezelés és együttműködé
 Mielőtt belemerülne a Groupdocs.Annotation for .NET képességeinek kihasználásába, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
 1.  A Groupdocs.Annotation for .NET telepítése: Kezdje a Groupdocs.Annotation for .NET könyvtár letöltésével és telepítésével. A szükséges fájlokat a[letöltési link](https://releases.groupdocs.com/annotation/net/).
 2. Fejlesztői környezet: legyen beállítva egy megfelelő fejlesztői környezet, beleértve a Visual Studio-t vagy bármely más preferált IDE-t a .NET-fejlesztéshez.
-3. Hozzáférés a dokumentációhoz: Ismerkedjen meg a Groupdocs.Annotation for .NET átfogó dokumentációjával. Hivatkozhat a[dokumentáció](https://reference.groupdocs.com/annotation/net/) részletes betekintést nyújt a könyvtár funkcióiba és használatába.
+3. Hozzáférés a dokumentációhoz: Ismerkedjen meg a Groupdocs.Annotation for .NET átfogó dokumentációjával. Hivatkozhat a[dokumentáció](https://tutorials.groupdocs.com/annotation/net/) részletes betekintést nyújt a könyvtár funkcióiba és használatába.
 4. A .NET-keretrendszer alapjai: Győződjön meg arról, hogy alapvető ismeretekkel rendelkezik a .NET-keretrendszerről és a C# programozási nyelvről a Groupdocs.Annotation .NET-hez való hatékony használatához.
 
 ## A szükséges névterek importálása

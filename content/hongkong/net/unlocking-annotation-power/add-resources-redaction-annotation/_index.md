@@ -3,7 +3,6 @@ title: 將資源編輯註釋新增至文檔
 linktitle: 將資源編輯註釋新增至文檔
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 增強文件管理工作流程。將資源編輯註釋無縫整合到您的 .NET 以提高效率。
-type: docs
 weight: 19
 url: /zh-hant/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

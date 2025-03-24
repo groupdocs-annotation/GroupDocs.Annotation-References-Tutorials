@@ -3,7 +3,6 @@ title: 文件組件
 linktitle: 文件組件
 second_title: GroupDocs.Annotation .NET API
 description: 了解有關使用 GroupDocs.Annotation .NET 將按鈕、複選框和下拉清單等互動式元件整合到 PDF 文件中的綜合教學。
-type: docs
 weight: 24
 url: /zh-hant/net/document-components/
 ---

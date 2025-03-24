@@ -3,7 +3,6 @@ title: Penggunaan Tingkat Lanjut
 linktitle: Penggunaan Tingkat Lanjut
 second_title: GroupDocs.Annotasi .NET API
 description: Temukan tutorial penggunaan lanjutan untuk GroupDocs.Annotation .NET. Tingkatkan manajemen dokumen dengan panduan langkah demi langkah tentang kualitas gambar, ekspor anotasi, & lainnya.
-type: docs
 weight: 22
 url: /id/net/advanced-usage/
 ---

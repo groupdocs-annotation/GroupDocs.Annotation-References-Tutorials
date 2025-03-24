@@ -3,7 +3,6 @@ title: .NET'te Kaydetme Seçeneklerini Kullanarak Ek Açıklamaları Kaldırma
 linktitle: .NET'te Kaydetme Seçeneklerini Kullanarak Ek Açıklamaları Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation'ı kullanarak PDF'den ve .NET'teki diğer belgelerden ek açıklamaları nasıl kaldıracağınızı öğrenin. Kod örnekleri içeren adım adım kılavuz.
-type: docs
 weight: 14
 url: /tr/net/removing-annotations/remove-annotations-using-save-options/
 ---

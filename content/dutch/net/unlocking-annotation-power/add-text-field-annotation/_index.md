@@ -3,7 +3,6 @@ title: Voeg tekstveldannotatie toe aan document
 linktitle: Voeg tekstveldannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u tekstveldannotaties naadloos kunt integreren in uw .NET-applicaties met behulp van Groupdocs.Annotation voor .NET.
-type: docs
 weight: 21
 url: /nl/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ In deze tutorial gaan we dieper in op een van de fundamentele functionaliteiten 
 ## Vereisten
 Voordat u in de implementatie duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
 ### 1. Installatie van Groupdocs.Annotation voor .NET
- Eerst en vooral moet u Groupdocs.Annotation voor .NET downloaden en installeren. Je kunt de downloadlink vinden[hier](https://releases.groupdocs.com/annotation/net/) . Volg de installatie-instructies in de documentatie[hier](https://reference.groupdocs.com/annotation/net/) om de bibliotheek correct in te stellen.
+ Eerst en vooral moet u Groupdocs.Annotation voor .NET downloaden en installeren. Je kunt de downloadlink vinden[hier](https://releases.groupdocs.com/annotation/net/) . Volg de installatie-instructies in de documentatie[hier](https://tutorials.groupdocs.com/annotation/net/) om de bibliotheek correct in te stellen.
 ### 2. Installatie van de ontwikkelomgeving
 Zorg ervoor dat u een ontwikkelomgeving hebt ingesteld voor .NET-ontwikkeling. Dit omvat ook het geïnstalleerd hebben van een compatibele IDE zoals Visual Studio en .NET Framework op uw systeem.
 ### 3. Basiskennis van C#-programmering

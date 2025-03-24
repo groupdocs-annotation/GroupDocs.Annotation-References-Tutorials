@@ -3,7 +3,6 @@ title: Belgeye Uzaklık Açıklaması Ekle
 linktitle: Belgeye Uzaklık Açıklaması Ekle
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belgelere mesafe açıklamalarını nasıl ekleyeceğinizi öğrenin. İşbirliğini ve iletişimi zahmetsizce geliştirin.
-type: docs
 weight: 12
 url: /tr/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ C: Evet, GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve daha fazlasını 
 
 ### S: GroupDocs.Annotation for .NET belgelerini nerede bulabilirim?
 
- C: Mevcut ayrıntılı belgelere başvurabilirsiniz[Burada](https://reference.groupdocs.com/annotation/net/).
+ C: Mevcut ayrıntılı belgelere başvurabilirsiniz[Burada](https://tutorials.groupdocs.com/annotation/net/).
 
 ### S: GroupDocs.Annotation ile nasıl destek veya yardım alabilirim?
 

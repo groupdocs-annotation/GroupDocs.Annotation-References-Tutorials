@@ -3,7 +3,6 @@ title: Muat Dokumen dari Aliran
 linktitle: Muat Dokumen dari Aliran
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara membuat anotasi dokumen di .NET dengan mudah menggunakan GroupDocs.Annotation. Meningkatkan kolaborasi dan produktivitas.
-type: docs
 weight: 14
 url: /id/net/document-loading-essentials/load-document-from-stream/
 ---

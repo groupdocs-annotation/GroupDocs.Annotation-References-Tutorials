@@ -3,7 +3,6 @@ title: Cách sử dụng nâng cao
 linktitle: Cách sử dụng nâng cao
 second_title: GroupDocs.Annotation .NET API
 description: Khám phá các hướng dẫn sử dụng nâng cao cho GroupDocs.Annotation .NET. Tăng cường quản lý tài liệu với hướng dẫn từng bước về chất lượng hình ảnh, xuất chú thích, v.v.
-type: docs
 weight: 22
 url: /vi/net/advanced-usage/
 ---

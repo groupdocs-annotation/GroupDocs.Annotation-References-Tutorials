@@ -3,7 +3,6 @@ title: 将区域注释添加到文档
 linktitle: 将区域注释添加到文档
 second_title: GroupDocs.Annotation .NET API
 description: 使用 Groupdocs.Annotation for .NET 增强文档协作。了解如何逐步添加区域注释。
-type: docs
 weight: 10
 url: /zh/net/unlocking-annotation-power/add-area-annotation/
 ---

@@ -3,7 +3,6 @@ title: A jegyzetek teljesítményének feloldása
 linktitle: A jegyzetek teljesítményének feloldása
 second_title: GroupDocs.Annotation .NET API
 description: A GroupDocs.Annotation for .NET oktatóanyagai segítségével felszabadíthatja az annotáció erejét. Ismerje meg, hogyan adhat hozzá különféle megjegyzéseket lépésről lépésre, és fokozza az együttműködést könnyedén.
-type: docs
 weight: 23
 url: /hu/net/unlocking-annotation-power/
 ---

@@ -3,7 +3,6 @@ title: 주석이 달린 문서 버전 로드 중
 linktitle: 주석이 달린 문서 버전 로드 중
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 주석이 달린 문서 버전을 손쉽게 로드하는 방법을 알아보세요. 협업 및 검토 프로세스를 단순화합니다.
-type: docs
 weight: 16
 url: /ko/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### .NET용 GroupDocs.Annotation에 대한 무료 평가판이 있습니까?
  예, 다음에서 무료 평가판에 액세스할 수 있습니다.[여기](https://releases.groupdocs.com/).
 ### .NET용 GroupDocs.Annotation에 대한 설명서는 어디서 찾을 수 있나요?
- 자세한 문서를 참고하시면 됩니다[여기](https://reference.groupdocs.com/annotation/net/).
+ 자세한 문서를 참고하시면 됩니다[여기](https://tutorials.groupdocs.com/annotation/net/).
 ### .NET용 GroupDocs.Annotation의 임시 라이센스를 얻으려면 어떻게 해야 합니까?
  에서 임시 라이센스를 취득할 수 있습니다.[이 링크](https://purchase.groupdocs.com/temporary-license/).
 ### .NET용 GroupDocs.Annotation에 대한 지원을 받거나 질문할 수 있는 곳은 어디입니까?

@@ -3,7 +3,6 @@ title: 在文件中新增連結註釋
 linktitle: 在文件中新增連結註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 Groupdocs.Annotation for .NET 將連結註解新增至文件。輕鬆增強協作和互動。
-type: docs
 weight: 16
 url: /zh-hant/net/unlocking-annotation-power/add-link-annotation/
 ---

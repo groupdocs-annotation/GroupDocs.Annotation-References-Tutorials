@@ -1,7 +1,6 @@
 ---
 title: บทช่วยสอนและตัวอย่าง GroupDocs.Annotation สำหรับ .NET
 linktitle: GroupDocs.Annotation สำหรับบทช่วยสอน .NET
-type: docs
 weight: 10
 url: /th/net/
 description: ปลดล็อกศักยภาพสูงสุดของ GroupDocs.Annotation สำหรับ .NET ด้วยบทช่วยสอนของเรา บูรณาการ ปรับปรุงการทำงานร่วมกัน และปรับปรุงขั้นตอนการทำงานได้อย่างราบรื่น

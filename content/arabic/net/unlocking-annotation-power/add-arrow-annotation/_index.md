@@ -3,7 +3,6 @@ title: أضف تعليقًا توضيحيًا على شكل سهم إلى الم
 linktitle: أضف تعليقًا توضيحيًا على شكل سهم إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية على شكل أسهم إلى مستنداتك باستخدام GroupDocs.Annotation لـ .NET. تعزيز وضوح الوثيقة والتفاعل دون عناء.
-type: docs
 weight: 11
 url: /ar/net/unlocking-annotation-power/add-arrow-annotation/
 ---

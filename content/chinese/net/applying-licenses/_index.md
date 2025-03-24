@@ -3,7 +3,6 @@ title: 申请许可证
 linktitle: 申请许可证
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation 释放 .NET 中文档注释的全部潜力。按照我们的分步教程进行无缝集成。
-type: docs
 weight: 26
 url: /zh/net/applying-licenses/
 ---

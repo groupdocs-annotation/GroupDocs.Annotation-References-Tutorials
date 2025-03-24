@@ -3,7 +3,6 @@ title: 從 XML 文件匯出註釋
 linktitle: 從 XML 文件匯出註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 從 XML 檔案匯出註釋，有效簡化文件管理工作流程。
-type: docs
 weight: 11
 url: /zh-hant/net/advanced-usage/export-annotations-xml-file/
 ---

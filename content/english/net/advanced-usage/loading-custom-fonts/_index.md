@@ -3,7 +3,6 @@ title: Loading Custom Fonts
 linktitle: Loading Custom Fonts
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to seamlessly load custom fonts in GroupDocs.Annotation for .NET to enhance document annotation. Follow our step-by-step for easy integration.
-type: docs
 weight: 20
 url: /net/advanced-usage/loading-custom-fonts/
 ---

@@ -3,7 +3,6 @@ title: दस्तावेज़ में छवि एनोटेशन ज
 linktitle: दस्तावेज़ में छवि एनोटेशन जोड़ें (स्थानीय पथ)
 second_title: GroupDocs.Annotation .NET API
 description: जानें कि .NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों में छवि एनोटेशन कैसे जोड़ें। दस्तावेज़ प्रसंस्करण क्षमताओं को आसानी से बढ़ाएं।
-type: docs
 weight: 14
 url: /hi/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

@@ -3,7 +3,6 @@ title: XML ファイルから注釈をエクスポート
 linktitle: XML ファイルから注釈をエクスポート
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して XML ファイルから注釈をエクスポートし、ドキュメント管理ワークフローを効率的に簡素化する方法を学びます。
-type: docs
 weight: 11
 url: /ja/net/advanced-usage/export-annotations-xml-file/
 ---

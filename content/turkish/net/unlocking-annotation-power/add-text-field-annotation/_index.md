@@ -3,7 +3,6 @@ title: Belgeye Metin Alanı Açıklaması Ekleme
 linktitle: Belgeye Metin Alanı Açıklaması Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET'i kullanarak metin alanı açıklamalarını .NET uygulamalarınıza nasıl sorunsuz bir şekilde entegre edeceğinizi öğrenin.
-type: docs
 weight: 21
 url: /tr/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ Bu öğreticide, Groupdocs.Annotation for .NET'in temel işlevlerinden birini in
 ## Önkoşullar
 Uygulamaya geçmeden önce aşağıdaki önkoşulların mevcut olduğundan emin olun:
 ### 1. Groupdocs.Annotation for .NET Kurulumu
- Öncelikle Groupdocs.Annotation for .NET'i indirip yüklemeniz gerekir. İndirme linkini bulabilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/) . Belgelerde sağlanan kurulum talimatlarını izleyin[Burada](https://reference.groupdocs.com/annotation/net/) Kütüphaneyi doğru şekilde kurmak için.
+ Öncelikle Groupdocs.Annotation for .NET'i indirip yüklemeniz gerekir. İndirme linkini bulabilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/) . Belgelerde sağlanan kurulum talimatlarını izleyin[Burada](https://tutorials.groupdocs.com/annotation/net/) Kütüphaneyi doğru şekilde kurmak için.
 ### 2. Geliştirme Ortamı Kurulumu
 .NET geliştirme için ayarlanmış bir geliştirme ortamınız olduğundan emin olun. Buna, sisteminizde Visual Studio ve .NET Framework gibi uyumlu bir IDE'nin kurulu olması da dahildir.
 ### 3. C# Programlamanın Temel Anlayışı

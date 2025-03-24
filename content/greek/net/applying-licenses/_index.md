@@ -3,7 +3,6 @@ title: Εφαρμογή αδειών
 linktitle: Εφαρμογή αδειών
 second_title: GroupDocs.Annotation .NET API
 description: Ξεκλειδώστε πλήρως τις δυνατότητες του σχολιασμού εγγράφων στο .NET με το GroupDocs.Annotation. Ακολουθήστε τα βήμα προς βήμα σεμινάρια μας για απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 26
 url: /el/net/applying-licenses/
 ---

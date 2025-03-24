@@ -1,7 +1,6 @@
 ---
 title: دروس وأمثلة لـ GroupDocs.Annotation لـ .NET
 linktitle: GroupDocs.Annotation لبرامج .NET التعليمية
-type: docs
 weight: 10
 url: /ar/net/
 description: أطلق العنان للإمكانات الكاملة لـ GroupDocs.Annotation لـ .NET من خلال برامجنا التعليمية. دمج وتعزيز التعاون وتبسيط سير العمل بسلاسة.

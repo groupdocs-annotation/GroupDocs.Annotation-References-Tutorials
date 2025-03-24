@@ -3,7 +3,6 @@ title: XML Dosyasından Ek Açıklamaları Dışa Aktarma
 linktitle: XML Dosyasından Ek Açıklamaları Dışa Aktarma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak XML dosyalarından ek açıklamaları nasıl dışa aktaracağınızı öğrenin ve belge yönetimi iş akışınızı verimli bir şekilde basitleştirin.
-type: docs
 weight: 11
 url: /tr/net/advanced-usage/export-annotations-xml-file/
 ---

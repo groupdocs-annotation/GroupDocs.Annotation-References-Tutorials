@@ -3,7 +3,6 @@ title: 고급 사용법
 linktitle: 고급 사용법
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET에 대한 고급 사용 튜토리얼을 살펴보세요. 이미지 품질, 주석 내보내기 등에 대한 단계별 가이드를 통해 문서 관리를 강화하세요.
-type: docs
 weight: 22
 url: /ko/net/advanced-usage/
 ---

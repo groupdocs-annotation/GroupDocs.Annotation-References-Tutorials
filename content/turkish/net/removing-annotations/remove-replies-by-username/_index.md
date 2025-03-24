@@ -3,7 +3,6 @@ title: .NET'te Kullanıcı Adına Göre Yanıtları Kaldırma
 linktitle: .NET'te Kullanıcı Adına Göre Yanıtları Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET'i kullanarak belgelere nasıl sorunsuz bir şekilde açıklama ekleyeceğinizi öğrenin. Bu güçlü araçla işbirliğini ve belge yönetimini geliştirin.
-type: docs
 weight: 17
 url: /tr/net/removing-annotations/remove-replies-by-username/
 ---

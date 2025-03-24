@@ -3,7 +3,6 @@ title: Přidání bodové anotace do dokumentu
 linktitle: Přidání bodové anotace do dokumentu
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak přidat bodové anotace do PDF pomocí GroupDocs.Annotation pro .NET. Podrobný průvodce pro bezproblémovou integraci.
-type: docs
 weight: 17
 url: /cs/net/unlocking-annotation-power/add-point-annotation/
 ---

@@ -3,7 +3,6 @@ title: Ajouter un composant de case à cocher au document PDF
 linktitle: Ajouter un composant de case à cocher au document PDF
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment ajouter un composant Checkbox aux documents PDF à l’aide de Groupdocs.Annotation pour .NET. Améliorez vos PDF avec des éléments interactifs.
-type: docs
 weight: 11
 url: /fr/net/document-components/add-checkbox-component-to-pdf/
 ---

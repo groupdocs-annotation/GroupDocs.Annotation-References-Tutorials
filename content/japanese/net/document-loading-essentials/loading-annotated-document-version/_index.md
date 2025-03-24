@@ -3,7 +3,6 @@ title: 注釈付きドキュメントのバージョンをロードしていま�
 linktitle: 注釈付きドキュメントのバージョンをロードしています
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して、注釈付きドキュメント バージョンを簡単にロードする方法を学びます。コラボレーションとレビューのプロセスを簡素化します。
-type: docs
 weight: 16
 url: /ja/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### GroupDocs.Annotation for .NET に利用できる無料試用版はありますか?
 はい、無料試用版には次からアクセスできます。[ここ](https://releases.groupdocs.com/).
 ### GroupDocs.Annotation for .NET のドキュメントはどこで見つけられますか?
-詳細なドキュメントを参照できます[ここ](https://reference.groupdocs.com/annotation/net/).
+詳細なドキュメントを参照できます[ここ](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation for .NET の一時ライセンスを取得するにはどうすればよいですか?
 一時ライセンスは以下から取得できます。[このリンク](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation for .NET に関するサポートや質問はどこで受けられますか?

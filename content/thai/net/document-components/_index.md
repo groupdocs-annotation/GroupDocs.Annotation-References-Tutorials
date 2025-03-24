@@ -3,7 +3,6 @@ title: ส่วนประกอบเอกสาร
 linktitle: ส่วนประกอบเอกสาร
 second_title: GroupDocs.Annotation .NET API
 description: ค้นพบบทช่วยสอนที่ครอบคลุมเกี่ยวกับการบูรณาการส่วนประกอบเชิงโต้ตอบ เช่น ปุ่ม ช่องทำเครื่องหมาย และเมนูแบบเลื่อนลงในเอกสาร PDF โดยใช้ GroupDocs.Annotation .NET
-type: docs
 weight: 24
 url: /th/net/document-components/
 ---

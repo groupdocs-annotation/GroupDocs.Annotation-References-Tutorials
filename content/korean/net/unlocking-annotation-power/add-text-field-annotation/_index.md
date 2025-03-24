@@ -3,7 +3,6 @@ title: 문서에 텍스트 필드 주석 추가
 linktitle: 문서에 텍스트 필드 주석 추가
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 텍스트 필드 주석을 .NET 애플리케이션에 원활하게 통합하는 방법을 알아보세요.
-type: docs
 weight: 21
 url: /ko/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ url: /ko/net/unlocking-annotation-power/add-text-field-annotation/
 ## 전제 조건
 구현을 시작하기 전에 다음 전제 조건이 충족되었는지 확인하세요.
 ### 1. .NET용 Groupdocs.Annotation 설치
- 가장 먼저 .NET용 Groupdocs.Annotation을 다운로드하여 설치해야 합니다. 다운로드 링크를 찾을 수 있습니다[여기](https://releases.groupdocs.com/annotation/net/) . 설명서에 제공된 설치 지침을 따르십시오.[여기](https://reference.groupdocs.com/annotation/net/) 라이브러리를 올바르게 설정하려면
+ 가장 먼저 .NET용 Groupdocs.Annotation을 다운로드하여 설치해야 합니다. 다운로드 링크를 찾을 수 있습니다[여기](https://releases.groupdocs.com/annotation/net/) . 설명서에 제공된 설치 지침을 따르십시오.[여기](https://tutorials.groupdocs.com/annotation/net/) 라이브러리를 올바르게 설정하려면
 ### 2. 개발 환경 설정
 .NET 개발을 위한 개발 환경이 설정되어 있는지 확인하세요. 여기에는 Visual Studio 및 .NET Framework와 같은 호환 가능한 IDE가 시스템에 설치되어 있는 것이 포함됩니다.
 ### 3. C# 프로그래밍의 기본 이해

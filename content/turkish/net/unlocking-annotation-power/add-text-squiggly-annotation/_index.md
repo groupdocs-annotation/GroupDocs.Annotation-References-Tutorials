@@ -3,7 +3,6 @@ title: Belgeye Dalgalı Metin Açıklaması Ekleme
 linktitle: Belgeye Dalgalı Metin Açıklaması Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET'i kullanarak belgelere zahmetsizce dalgalı metin açıklamaları eklemeyi öğrenin. İşbirliği ve belge inceleme süreçlerini geliştirin.
-type: docs
 weight: 25
 url: /tr/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

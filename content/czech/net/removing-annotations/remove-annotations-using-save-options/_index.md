@@ -3,7 +3,6 @@ title: Odebrat anotace pomocí možností uložení v .NET
 linktitle: Odebrat anotace pomocí možností uložení v .NET
 second_title: GroupDocs.Annotation .NET API
 description: Přečtěte si, jak odstranit anotace z PDF a dalších dokumentů v .NET pomocí GroupDocs.Annotation. Podrobný průvodce s příklady kódu.
-type: docs
 weight: 14
 url: /cs/net/removing-annotations/remove-annotations-using-save-options/
 ---

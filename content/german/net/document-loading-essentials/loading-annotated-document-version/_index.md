@@ -3,7 +3,6 @@ title: Version des kommentierten Dokuments wird geladen
 linktitle: Version des kommentierten Dokuments wird geladen
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos kommentierte Dokumentversionen laden. Vereinfachen Sie die Zusammenarbeit und Überprüfungsprozesse.
-type: docs
 weight: 16
 url: /de/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Ja, GroupDocs.Annotation unterstützt das Kommentieren von Dokumenten in Formate
 ### Gibt es eine kostenlose Testversion für GroupDocs.Annotation für .NET?
  Ja, Sie können auf die kostenlose Testversion zugreifen[Hier](https://releases.groupdocs.com/).
 ### Wo finde ich Dokumentation für GroupDocs.Annotation für .NET?
- Sie können sich auf die ausführliche Dokumentation beziehen[Hier](https://reference.groupdocs.com/annotation/net/).
+ Sie können sich auf die ausführliche Dokumentation beziehen[Hier](https://tutorials.groupdocs.com/annotation/net/).
 ### Wie kann ich eine temporäre Lizenz für GroupDocs.Annotation für .NET erhalten?
  Sie können eine temporäre Lizenz erwerben bei[dieser Link](https://purchase.groupdocs.com/temporary-license/).
 ### Wo kann ich Unterstützung suchen oder Fragen zu GroupDocs.Annotation für .NET stellen?

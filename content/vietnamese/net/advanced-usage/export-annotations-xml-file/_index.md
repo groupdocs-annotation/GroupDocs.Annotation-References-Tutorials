@@ -3,7 +3,6 @@ title: Xuất chú thích từ tệp XML
 linktitle: Xuất chú thích từ tệp XML
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách xuất chú thích từ tệp XML bằng GroupDocs.Annotation cho .NET, đơn giản hóa quy trình quản lý tài liệu của bạn một cách hiệu quả.
-type: docs
 weight: 11
 url: /vi/net/advanced-usage/export-annotations-xml-file/
 ---

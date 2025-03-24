@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού σημείου στο έγγραφ�
 linktitle: Προσθήκη σχολιασμού σημείου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε Σημειώσεις σε αρχεία PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Οδηγός βήμα προς βήμα για απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 17
 url: /el/net/unlocking-annotation-power/add-point-annotation/
 ---

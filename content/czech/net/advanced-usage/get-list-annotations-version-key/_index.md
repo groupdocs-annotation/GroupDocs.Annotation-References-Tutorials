@@ -3,7 +3,6 @@ title: Získejte seznam anotací pomocí klíče verze
 linktitle: Získejte seznam anotací pomocí klíče verze
 second_title: GroupDocs.Annotation .NET API
 description: Vylepšete své aplikace .NET pomocí GroupDocs.Annotation pro bezproblémové anotování dokumentů. Pro efektivní integraci postupujte podle našeho podrobného průvodce.
-type: docs
 weight: 18
 url: /cs/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ Podporu můžete vyhledat na fóru GroupDocs.Annotation nebo přímo kontaktovat
 ### Mohu si zakoupit dočasnou licenci pro GroupDocs.Annotation pro účely testování?
 Ano, pro usnadnění testování a vyhodnocování produktu je možné zakoupit dočasné licence.
 ### Kde najdu komplexní dokumentaci k GroupDocs.Annotation pro .NET?
- Podrobné pokyny k používání produktu naleznete v dokumentaci dostupné na webu GroupDocs[tady]( https://reference.groupdocs.com/annotation/net/).
+ Podrobné pokyny k používání produktu naleznete v dokumentaci dostupné na webu GroupDocs[tady]( https://tutorials.groupdocs.com/annotation/net/).

@@ -3,7 +3,6 @@ title: Φορτώστε το έγγραφο από το Amazon S3
 linktitle: Φορτώστε το έγγραφο από το Amazon S3
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να σχολιάζετε έγγραφα μέσω προγραμματισμού με το Groupdocs.Annotation για .NET. Βήμα προς βήμα μάθημα για απρόσκοπτη ενσωμάτωση.
-type: docs
 weight: 10
 url: /el/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### Μπορώ να δοκιμάσω το Groupdocs.Annotation για .NET πριν το αγοράσω;
  Ναι, μπορείτε να εξερευνήσετε τις δυνατότητες του Groupdocs.Annotation για .NET αποκτώντας πρόσβαση στη διαθέσιμη δωρεάν δοκιμαστική έκδοση[εδώ](https://releases.groupdocs.com/).
 ### Πού μπορώ να βρω τεκμηρίωση για το Groupdocs.Annotation για .NET;
-Διατίθεται ολοκληρωμένη τεκμηρίωση για Groupdocs.Annotation για .NET[εδώ](https://reference.groupdocs.com/annotation/net/).
+Διατίθεται ολοκληρωμένη τεκμηρίωση για Groupdocs.Annotation για .NET[εδώ](https://tutorials.groupdocs.com/annotation/net/).
 ### Χρειάζομαι μια προσωρινή άδεια για την αξιολόγηση του Groupdocs.Annotation για .NET;
  Μπορείτε να αποκτήσετε μια προσωρινή άδεια για σκοπούς αξιολόγησης από[εδώ](https://purchase.groupdocs.com/temporary-license/).
 ### Πού μπορώ να αναζητήσω βοήθεια ή υποστήριξη για το Groupdocs.Annotation για .NET;

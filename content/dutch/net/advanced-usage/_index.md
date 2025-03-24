@@ -3,7 +3,6 @@ title: Geavanceerd gebruik
 linktitle: Geavanceerd gebruik
 second_title: GroupDocs.Annotation .NET API
 description: Ontdek geavanceerde gebruikershandleidingen voor GroupDocs.Annotation .NET. Verbeter het documentbeheer met stapsgewijze handleidingen over beeldkwaliteit, het exporteren van annotaties en meer.
-type: docs
 weight: 22
 url: /nl/net/advanced-usage/
 ---

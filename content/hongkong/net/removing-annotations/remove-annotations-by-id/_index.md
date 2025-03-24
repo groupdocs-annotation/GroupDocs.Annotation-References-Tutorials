@@ -3,7 +3,6 @@ title: 按 ID 刪除註釋
 linktitle: 按 ID 刪除註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 按 ID 刪除註解。有效率簡化您的文件工作流程。
-type: docs
 weight: 11
 url: /zh-hant/net/removing-annotations/remove-annotations-by-id/
 ---

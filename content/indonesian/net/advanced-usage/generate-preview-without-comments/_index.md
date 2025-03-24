@@ -3,7 +3,6 @@ title: Hasilkan Pratinjau tanpa Komentar
 linktitle: Hasilkan Pratinjau tanpa Komentar
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara mengintegrasikan kemampuan anotasi dokumen dengan lancar ke dalam aplikasi .NET Anda menggunakan GroupDocs.Annotation untuk .NET.
-type: docs
 weight: 14
 url: /id/net/advanced-usage/generate-preview-without-comments/
 ---

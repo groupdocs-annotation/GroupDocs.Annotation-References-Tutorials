@@ -3,7 +3,6 @@ title: Thêm chú thích khu vực vào tài liệu
 linktitle: Thêm chú thích khu vực vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Nâng cao khả năng cộng tác tài liệu của bạn với Groupdocs.Annotation for .NET. Tìm hiểu cách thêm chú thích khu vực theo từng bước.
-type: docs
 weight: 10
 url: /vi/net/unlocking-annotation-power/add-area-annotation/
 ---

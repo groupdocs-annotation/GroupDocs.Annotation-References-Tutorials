@@ -3,7 +3,6 @@ title: Aggiungi annotazione di sottolineatura del testo al documento
 linktitle: Aggiungi annotazione di sottolineatura del testo al documento
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come aggiungere annotazioni di sottolineatura di testo ai documenti utilizzando GroupDocs.Annotation per .NET. Migliora la collaborazione e la comunicazione senza sforzo.
-type: docs
 weight: 27
 url: /it/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

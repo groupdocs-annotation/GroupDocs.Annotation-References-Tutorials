@@ -3,7 +3,6 @@ title: Добавить аннотацию со стрелкой в докуме
 linktitle: Добавить аннотацию со стрелкой в документ
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как добавлять аннотации со стрелками в документы с помощью GroupDocs.Annotation для .NET. Повышайте четкость и интерактивность документа без особых усилий.
-type: docs
 weight: 11
 url: /ru/net/unlocking-annotation-power/add-arrow-annotation/
 ---

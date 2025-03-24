@@ -3,7 +3,6 @@ title: Set Metered License
 linktitle: Set Metered License
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to set up a metered license for GroupDocs.Annotation .NET to resource usage and document annotation capabilities in your .NET applications.
-type: docs
 weight: 12
 url: /net/applying-licenses/set-metered-license/
 ---

@@ -3,7 +3,6 @@ title: 將搜尋文字片段註解新增至文檔
 linktitle: 將搜尋文字片段註解新增至文檔
 second_title: GroupDocs.Annotation .NET API
 description: 探索 GroupDocs.Annotation for .NET 的強大功能，輕鬆地將文件註解功能新增至您的應用程式。
-type: docs
 weight: 20
 url: /zh-hant/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

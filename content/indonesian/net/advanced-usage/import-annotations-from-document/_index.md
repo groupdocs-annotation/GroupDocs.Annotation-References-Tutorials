@@ -3,7 +3,6 @@ title: Impor Anotasi dari Dokumen
 linktitle: Impor Anotasi dari Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara mengimpor anotasi dari dokumen di .NET menggunakan GroupDocs.Annotation. Ikuti tutorial langkah demi langkah kami untuk integrasi yang lancar.
-type: docs
 weight: 19
 url: /id/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ Ya, GroupDocs.Annotation mendukung berbagai format dokumen, termasuk PDF, DOCX, 
 ### Bagaimana saya bisa mendapatkan lisensi sementara untuk GroupDocs.Annotation?
  Anda dapat memperoleh lisensi sementara untuk GroupDocs.Annotation dari[halaman lisensi sementara](https://purchase.groupdocs.com/temporary-license/).
 ### Di mana saya dapat menemukan dokumentasi komprehensif untuk GroupDocs.Annotation?
- Dokumentasi terperinci untuk GroupDocs.Annotation tersedia[Di Sini](https://reference.groupdocs.com/annotation/net/).
+ Dokumentasi terperinci untuk GroupDocs.Annotation tersedia[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 ### Di mana saya dapat mencari dukungan untuk masalah atau pertanyaan apa pun terkait GroupDocs.Annotation?
  Untuk dukungan, kunjungi GroupDocs.Annotation[forum](https://forum.groupdocs.com/c/annotation/10) di mana Anda dapat mencari bantuan dari para ahli dan komunitas.

@@ -3,7 +3,6 @@ title: 在文件中添加浮水印註釋
 linktitle: 在文件中添加浮水印註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 輕鬆地將浮水印註解新增至文件。提高文件的清晰度和安全性。
-type: docs
 weight: 28
 url: /zh-hant/net/unlocking-annotation-power/add-watermark-annotation/
 ---

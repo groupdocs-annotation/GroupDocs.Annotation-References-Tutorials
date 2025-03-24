@@ -3,7 +3,6 @@ title: Voeg een annotatie voor het redigeren van bronnen toe aan het document
 linktitle: Voeg een annotatie voor het redigeren van bronnen toe aan het document
 second_title: GroupDocs.Annotation .NET API
 description: Verbeter documentbeheerworkflows met GroupDocs.Annotation voor .NET. Integreer Resources Redaction Annotation naadloos in uw .NET voor een efficiënte werking.
-type: docs
 weight: 19
 url: /nl/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

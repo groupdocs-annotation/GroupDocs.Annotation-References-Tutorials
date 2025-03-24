@@ -3,7 +3,6 @@ title: โหลดเอกสารจากสตรีม
 linktitle: โหลดเอกสารจากสตรีม
 second_title: GroupDocs.Annotation .NET API
 description: เรียนรู้วิธีใส่คำอธิบายประกอบเอกสารใน .NET ได้อย่างง่ายดายด้วย GroupDocs.Annotation ปรับปรุงการทำงานร่วมกันและประสิทธิภาพการทำงาน
-type: docs
 weight: 14
 url: /th/net/document-loading-essentials/load-document-from-stream/
 ---

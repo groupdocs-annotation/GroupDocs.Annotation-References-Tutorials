@@ -3,7 +3,6 @@ title: Voeg pijlannotatie toe aan document
 linktitle: Voeg pijlannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u pijlannotaties aan uw documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter moeiteloos de duidelijkheid en interactiviteit van documenten.
-type: docs
 weight: 11
 url: /nl/net/unlocking-annotation-power/add-arrow-annotation/
 ---

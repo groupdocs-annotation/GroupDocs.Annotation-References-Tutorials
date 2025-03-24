@@ -3,7 +3,6 @@ title: Ta bort anteckningar med hjälp av sparaalternativ i .NET
 linktitle: Ta bort anteckningar med hjälp av sparaalternativ i .NET
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du tar bort kommentarer från PDF och andra dokument i .NET med GroupDocs.Annotation. Steg-för-steg guide med kodexempel.
-type: docs
 weight: 14
 url: /sv/net/removing-annotations/remove-annotations-using-save-options/
 ---

@@ -3,7 +3,6 @@ title: Generar vista previa sin anotaciones
 linktitle: Generar vista previa sin anotaciones
 second_title: API GroupDocs.Annotation .NET
 description: Mejore la colaboración y la anotación de documentos dentro de aplicaciones .NET utilizando GroupDocs.Annotation para .NET. Anota, marca y revisa documentos fácilmente con esta potente biblioteca.
-type: docs
 weight: 13
 url: /es/net/advanced-usage/generate-preview-without-annotations/
 ---

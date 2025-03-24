@@ -3,7 +3,6 @@ title: Поворот PDF-документов
 linktitle: Поворот PDF-документов
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как легко поворачивать PDF-документы с помощью Groupdocs.Annotation для .NET. Повысьте эффективность управления документами.
-type: docs
 weight: 22
 url: /ru/net/advanced-usage/rotating-pdf-documents/
 ---

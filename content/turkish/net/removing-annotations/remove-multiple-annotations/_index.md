@@ -3,7 +3,6 @@ title: .NET'te Birden Çok Ek Açıklamayı Kaldırma
 linktitle: .NET'te Birden Çok Ek Açıklamayı Kaldırma
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation'ı kullanarak .NET'te birden çok ek açıklamayı verimli bir şekilde nasıl kaldıracağınızı öğrenin. Uygulamalarınıza sorunsuz entegrasyon için adım adım eğitimimizi izleyin.
-type: docs
 weight: 12
 url: /tr/net/removing-annotations/remove-multiple-annotations/
 ---

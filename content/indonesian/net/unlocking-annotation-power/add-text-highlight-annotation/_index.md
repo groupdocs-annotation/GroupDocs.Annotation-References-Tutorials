@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Sorotan Teks ke Dokumen
 linktitle: Tambahkan Anotasi Sorotan Teks ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi sorotan teks ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kolaborasi dan produktivitas dengan komprehensif ini.
-type: docs
 weight: 22
 url: /id/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

@@ -3,7 +3,6 @@ title: ポリライン注釈をドキュメントに追加
 linktitle: ポリライン注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用してドキュメントにポリライン注釈を追加する方法を学びます。コラボレーションと文書レビューのプロセスを簡単に強化します。
-type: docs
 weight: 18
 url: /ja/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ GroupDocs.Annotation for .NET は、PDF や Word、Excel、PowerPoint などの 
 ### GroupDocs.Annotation for .NET には無料試用版がありますか?
 はい、次のサイトにアクセスして、GroupDocs.Annotation for .NET の無料トライアルを利用できます。[このリンク](https://releases.groupdocs.com/).
 ### GroupDocs.Annotation for .NET のドキュメントはどこで見つけられますか?
- GroupDocs.Annotation for .NET のドキュメントを見つけることができます。[ここ](https://reference.groupdocs.com/annotation/net/).
+ GroupDocs.Annotation for .NET のドキュメントを見つけることができます。[ここ](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation for .NET に関連する問題やクエリのサポートを受けるにはどうすればよいですか?
  GroupDocs.Annotation フォーラムにアクセスしてサポートを受けることができます。[ここ](https://forum.groupdocs.com/c/annotation/10).

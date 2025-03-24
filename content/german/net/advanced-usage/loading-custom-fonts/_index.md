@@ -3,7 +3,6 @@ title: Laden benutzerdefinierter Schriftarten
 linktitle: Laden benutzerdefinierter Schriftarten
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie benutzerdefinierte Schriftarten nahtlos in GroupDocs.Annotation für .NET laden, um Dokumentanmerkungen zu verbessern. Befolgen Sie unsere Schritt-für-Schritt-Anleitung für eine einfache Integration.
-type: docs
 weight: 20
 url: /de/net/advanced-usage/loading-custom-fonts/
 ---

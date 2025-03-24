@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Textredaktionsanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Textredaktionsanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Textredaktionsanmerkungen zu PDF-Dokumenten hinzufügen. Schützen Sie vertrauliche Informationen mühelos.
-type: docs
 weight: 23
 url: /de/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

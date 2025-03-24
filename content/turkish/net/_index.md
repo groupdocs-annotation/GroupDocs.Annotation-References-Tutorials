@@ -1,7 +1,6 @@
 ---
 title: .NET için GroupDocs.Annotation Öğreticileri ve Örnekleri
 linktitle: .NET Eğitimleri için GroupDocs.Annotation
-type: docs
 weight: 10
 url: /tr/net/
 description: Eğitimlerimizle GroupDocs.Annotation for .NET'in tüm potansiyelini ortaya çıkarın. Sorunsuz bir şekilde entegre edin, işbirliğini geliştirin ve iş akışlarını kolaylaştırın.

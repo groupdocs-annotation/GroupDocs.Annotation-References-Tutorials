@@ -3,7 +3,6 @@ title: Amazon S3에서 문서 로드
 linktitle: Amazon S3에서 문서 로드
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 Groupdocs.Annotation을 사용하여 프로그래밍 방식으로 문서에 주석을 추가하는 방법을 알아보세요. 원활한 통합을 위한 단계별 튜토리얼입니다.
-type: docs
 weight: 10
 url: /ko/net/document-loading-essentials/load-document-from-amazon-s3/
 ---
@@ -71,7 +70,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### 구매하기 전에 .NET용 Groupdocs.Annotation을 사용해 볼 수 있습니까?
  예, 사용 가능한 무료 평가판에 액세스하여 .NET용 Groupdocs.Annotation의 기능을 탐색할 수 있습니다.[여기](https://releases.groupdocs.com/).
 ### .NET용 Groupdocs.Annotation에 대한 설명서는 어디서 찾을 수 있나요?
-.NET용 Groupdocs.Annotation에 대한 포괄적인 문서를 사용할 수 있습니다.[여기](https://reference.groupdocs.com/annotation/net/).
+.NET용 Groupdocs.Annotation에 대한 포괄적인 문서를 사용할 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).
 ### .NET용 Groupdocs.Annotation을 평가하려면 임시 라이센스가 필요합니까?
  평가 목적으로 임시 라이센스를 얻을 수 있습니다.[여기](https://purchase.groupdocs.com/temporary-license/).
 ### .NET용 Groupdocs.Annotation에 대한 도움을 어디서 구할 수 있나요?

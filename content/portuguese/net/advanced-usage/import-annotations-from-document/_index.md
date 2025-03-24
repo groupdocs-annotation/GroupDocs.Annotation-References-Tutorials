@@ -3,7 +3,6 @@ title: Importar anotações do documento
 linktitle: Importar anotações do documento
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como importar anotações de documentos em .NET usando GroupDocs.Annotation. Siga nosso tutorial passo a passo para uma integração perfeita.
-type: docs
 weight: 19
 url: /pt/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ Sim, GroupDocs.Annotation oferece suporte a uma ampla variedade de formatos de d
 ### Como posso obter uma licença temporária para GroupDocs.Annotation?
  Você pode adquirir uma licença temporária para GroupDocs.Annotation no site[página de licença temporária](https://purchase.groupdocs.com/temporary-license/).
 ### Onde posso encontrar documentação abrangente para GroupDocs.Annotation?
- Documentação detalhada para GroupDocs.Annotation está disponível[aqui](https://reference.groupdocs.com/annotation/net/).
+ Documentação detalhada para GroupDocs.Annotation está disponível[aqui](https://tutorials.groupdocs.com/annotation/net/).
 ### Onde posso buscar suporte para quaisquer problemas ou dúvidas relacionadas ao GroupDocs.Annotation?
  Para suporte, visite GroupDocs.Annotation[fórum](https://forum.groupdocs.com/c/annotation/10) onde você pode buscar assistência de especialistas e da comunidade.

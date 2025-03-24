@@ -3,7 +3,6 @@ title: Установить лицензию из файла
 linktitle: Установить лицензию из файла
 second_title: GroupDocs.Аннотация .NET API
 description: Легко интегрируйте мощные возможности аннотирования документов в свои приложения .NET с помощью GroupDocs.Annotation for .NET.
-type: docs
 weight: 10
 url: /ru/net/applying-licenses/set-license-from-file/
 ---

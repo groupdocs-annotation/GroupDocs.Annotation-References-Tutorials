@@ -3,7 +3,6 @@ title: テキストの波線注釈をドキュメントに追加
 linktitle: テキストの波線注釈をドキュメントに追加
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用して、テキストの波線注釈をドキュメントに簡単に追加する方法を学びます。コラボレーションと文書レビューのプロセスを強化します。
-type: docs
 weight: 25
 url: /ja/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

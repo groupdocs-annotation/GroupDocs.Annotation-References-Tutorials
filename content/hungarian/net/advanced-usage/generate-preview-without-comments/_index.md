@@ -3,7 +3,6 @@ title: Előzetes előnézet létrehozása megjegyzések nélkül
 linktitle: Előzetes előnézet létrehozása megjegyzések nélkül
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan integrálhatja zökkenőmentesen a dokumentumfeljegyzési képességeket .NET-alkalmazásaiba a GroupDocs.Annotation for .NET segítségével.
-type: docs
 weight: 14
 url: /hu/net/advanced-usage/generate-preview-without-comments/
 ---

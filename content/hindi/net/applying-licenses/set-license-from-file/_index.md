@@ -3,7 +3,6 @@ title: फ़ाइल से लाइसेंस सेट करें
 linktitle: फ़ाइल से लाइसेंस सेट करें
 second_title: GroupDocs.Annotation .NET API
 description: .NET के लिए GroupDocs.Annotation के साथ अपने .NET अनुप्रयोगों में शक्तिशाली दस्तावेज़ एनोटेशन क्षमताओं को एकीकृत करें।
-type: docs
 weight: 10
 url: /hi/net/applying-licenses/set-license-from-file/
 ---

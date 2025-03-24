@@ -3,7 +3,6 @@ title: Rotierende PDF-Dokumente
 linktitle: Rotierende PDF-Dokumente
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie PDF-Dokumente mühelos mit Groupdocs.Annotation für .NET drehen. Verbessern Sie die Effizienz des Dokumentenmanagements.
-type: docs
 weight: 22
 url: /de/net/advanced-usage/rotating-pdf-documents/
 ---

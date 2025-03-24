@@ -3,7 +3,6 @@ title: Caricamento di caratteri personalizzati
 linktitle: Caricamento di caratteri personalizzati
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come caricare facilmente caratteri personalizzati in GroupDocs.Annotation per .NET per migliorare l'annotazione dei documenti. Segui la nostra procedura dettagliata per una facile integrazione.
-type: docs
 weight: 20
 url: /it/net/advanced-usage/loading-custom-fonts/
 ---

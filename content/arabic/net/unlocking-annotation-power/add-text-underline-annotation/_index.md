@@ -3,7 +3,6 @@ title: أضف نصًا تحته تعليق توضيحي إلى المستند
 linktitle: أضف نصًا تحته تعليق توضيحي إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية نصية مسطرة إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. تعزيز التعاون والتواصل دون عناء.
-type: docs
 weight: 27
 url: /ar/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

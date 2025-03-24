@@ -3,7 +3,6 @@ title: Állítsa be a licencet a fájlból
 linktitle: Állítsa be a licencet a fájlból
 second_title: GroupDocs.Annotation .NET API
 description: A GroupDocs.Annotation for .NET segítségével zökkenőmentesen integrálhatja a hatékony dokumentumjegyzetelési képességeket .NET-alkalmazásaiba.
-type: docs
 weight: 10
 url: /hu/net/applying-licenses/set-license-from-file/
 ---

@@ -3,7 +3,6 @@ title: Voeg tekstdoorgehaalde annotatie toe aan document
 linktitle: Voeg tekstdoorgehaalde annotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u doorgehaalde annotaties aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter de samenwerking en documentbeoordelingsprocessen efficiënt.
-type: docs
 weight: 26
 url: /nl/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

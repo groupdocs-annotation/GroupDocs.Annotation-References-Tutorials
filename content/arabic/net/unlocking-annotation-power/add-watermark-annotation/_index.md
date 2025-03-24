@@ -3,7 +3,6 @@ title: أضف تعليقًا توضيحيًا للعلامة المائية إل
 linktitle: أضف تعليقًا توضيحيًا للعلامة المائية إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية للعلامة المائية إلى مستنداتك بسهولة باستخدام GroupDocs.Annotation for .NET. تعزيز وضوح الوثيقة والأمن.
-type: docs
 weight: 28
 url: /ar/net/unlocking-annotation-power/add-watermark-annotation/
 ---

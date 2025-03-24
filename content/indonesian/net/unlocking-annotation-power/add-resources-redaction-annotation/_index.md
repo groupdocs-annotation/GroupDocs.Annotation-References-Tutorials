@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Redaksi Sumber Daya ke Dokumen
 linktitle: Tambahkan Anotasi Redaksi Sumber Daya ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Tingkatkan alur kerja manajemen dokumen dengan GroupDocs.Annotation untuk .NET. Integrasikan Anotasi Redaksi Sumber Daya dengan mulus ke dalam .NET Anda agar efisien.
-type: docs
 weight: 19
 url: /id/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

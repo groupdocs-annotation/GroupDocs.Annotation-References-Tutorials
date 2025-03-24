@@ -3,7 +3,6 @@ title: ドキュメントのプレビュー解像度を設定する
 linktitle: ドキュメントのプレビュー解像度を設定する
 second_title: GroupDocs.Annotation .NET API
 description: Groupdocs.Annotation for .NET を使用してドキュメントのコラボレーションを強化し、注釈とプレビュー機能をシームレスに合理化します。
-type: docs
 weight: 23
 url: /ja/net/advanced-usage/set-document-preview-resolution/
 ---
@@ -13,7 +12,7 @@ url: /ja/net/advanced-usage/set-document-preview-resolution/
 Groupdocs.Annotation for .NET の機能の利用に入る前に、次の前提条件が満たされていることを確認してください。
 1.  Groupdocs.Annotation for .NET のインストール: まず、Groupdocs.Annotation for .NET ライブラリをダウンロードしてインストールします。必要なファイルは次の場所から入手できます。[ダウンロードリンク](https://releases.groupdocs.com/annotation/net/).
 2. 開発環境: Visual Studio やその他の .NET 開発用の推奨 IDE など、適切な開発環境をセットアップします。
-3. ドキュメントへのアクセス: Groupdocs.Annotation for .NET によって提供される包括的なドキュメントをよく理解してください。を参照できます。[ドキュメンテーション](https://reference.groupdocs.com/annotation/net/)ライブラリの機能と使用法についての詳細な洞察が得られます。
+3. ドキュメントへのアクセス: Groupdocs.Annotation for .NET によって提供される包括的なドキュメントをよく理解してください。を参照できます。[ドキュメンテーション](https://tutorials.groupdocs.com/annotation/net/)ライブラリの機能と使用法についての詳細な洞察が得られます。
 4. .NET Framework の基本的な理解: Groupdocs.Annotation for .NET を効果的に利用するには、.NET Framework と C# プログラミング言語の基本を理解している必要があります。
 
 ## 必要な名前空間のインポート

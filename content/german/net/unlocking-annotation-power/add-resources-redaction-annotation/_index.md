@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Ressourcen-Schwärzungsanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Ressourcen-Schwärzungsanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Verbessern Sie die Arbeitsabläufe bei der Dokumentenverwaltung mit GroupDocs.Annotation für .NET. Integrieren Sie Resources Redaction Annotation nahtlos in Ihr .NET für eine effiziente.
-type: docs
 weight: 19
 url: /de/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

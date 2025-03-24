@@ -3,7 +3,6 @@ title: Βασικά στοιχεία φόρτωσης εγγράφου
 linktitle: Βασικά στοιχεία φόρτωσης εγγράφου
 second_title: GroupDocs.Annotation .NET API
 description: Ανακαλύψτε βασικά μαθήματα για τη φόρτωση εγγράφων χρησιμοποιώντας το GroupDocs.Annotation .NET. Ενσωματώστε απρόσκοπτα το Amazon S3, το Azure, το FTP, τον τοπικό δίσκο, τις ροές και άλλα.
-type: docs
 weight: 20
 url: /el/net/document-loading-essentials/
 ---

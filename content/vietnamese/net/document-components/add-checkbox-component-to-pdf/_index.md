@@ -3,7 +3,6 @@ title: Thêm thành phần hộp kiểm vào tài liệu PDF
 linktitle: Thêm thành phần hộp kiểm vào tài liệu PDF
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm Thành phần hộp kiểm vào tài liệu PDF bằng Groupdocs.Annotation cho .NET. Nâng cao tệp PDF của bạn bằng các yếu tố tương tác.
-type: docs
 weight: 11
 url: /vi/net/document-components/add-checkbox-component-to-pdf/
 ---

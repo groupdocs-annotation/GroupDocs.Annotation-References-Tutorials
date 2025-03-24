@@ -3,7 +3,6 @@ title: Pokročilé použití
 linktitle: Pokročilé použití
 second_title: GroupDocs.Annotation .NET API
 description: Objevte pokročilé návody k použití pro GroupDocs.Annotation .NET. Vylepšete správu dokumentů pomocí podrobných průvodců pro kvalitu obrazu, export anotací a další.
-type: docs
 weight: 22
 url: /cs/net/advanced-usage/
 ---

@@ -3,7 +3,6 @@ title: .NET での複数の注釈の削除
 linktitle: .NET での複数の注釈の削除
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET で複数の注釈を効率的に削除する方法を学びます。アプリケーションにシームレスに統合するには、段階的なチュートリアルに従ってください。
-type: docs
 weight: 12
 url: /ja/net/removing-annotations/remove-multiple-annotations/
 ---

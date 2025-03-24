@@ -3,7 +3,6 @@ title: Hämta lista över kommentarer med versionsnyckel
 linktitle: Hämta lista över kommentarer med versionsnyckel
 second_title: GroupDocs.Annotation .NET API
 description: Förbättra dina .NET-applikationer med GroupDocs.Annotation för sömlös dokumentkommentar. Följ vår steg-för-steg-guide för effektiv integration.
-type: docs
 weight: 18
 url: /sv/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ Du kan söka support genom att besöka GroupDocs.Annotation-forumet eller kontak
 ### Kan jag köpa en tillfällig licens för GroupDocs.Annotation i testsyfte?
 Ja, temporära licenser finns att köpa för att underlätta testning och utvärdering av produkten.
 ### Var kan jag hitta omfattande dokumentation för GroupDocs.Annotation för .NET?
- Du kan hänvisa till dokumentationen som finns på GroupDocs webbplats för detaljerad vägledning om hur du använder produkten[här]( https://reference.groupdocs.com/annotation/net/).
+ Du kan hänvisa till dokumentationen som finns på GroupDocs webbplats för detaljerad vägledning om hur du använder produkten[här]( https://tutorials.groupdocs.com/annotation/net/).

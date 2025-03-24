@@ -3,7 +3,6 @@ title: Καταργήστε πολλούς σχολιασμούς στο .NET
 linktitle: Καταργήστε πολλούς σχολιασμούς στο .NET
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να αφαιρείτε αποτελεσματικά πολλούς σχολιασμούς στο .NET χρησιμοποιώντας το GroupDocs.Annotation. Ακολουθήστε το βήμα προς βήμα σεμινάριο μας για απρόσκοπτη ενσωμάτωση στις εφαρμογές σας.
-type: docs
 weight: 12
 url: /el/net/removing-annotations/remove-multiple-annotations/
 ---

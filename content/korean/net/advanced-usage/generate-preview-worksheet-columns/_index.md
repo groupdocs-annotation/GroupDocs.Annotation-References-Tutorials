@@ -3,7 +3,6 @@ title: 미리보기 워크시트 열 생성
 linktitle: 미리보기 워크시트 열 생성
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서에 주석을 추가하는 방법을 알아보세요. .NET 개발자를 위한 단계별 튜토리얼입니다. 애플리케이션을 강화하세요.
-type: docs
 weight: 15
 url: /ko/net/advanced-usage/generate-preview-worksheet-columns/
 ---

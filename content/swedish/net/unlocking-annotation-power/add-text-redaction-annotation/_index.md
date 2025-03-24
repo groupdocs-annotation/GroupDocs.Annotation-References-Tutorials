@@ -3,7 +3,6 @@ title: Lägg till textredigeringskommentar till dokument
 linktitle: Lägg till textredigeringskommentar till dokument
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du lägger till textredigeringskommentarer till PDF-dokument med GroupDocs.Annotation för .NET. Skydda känslig information utan ansträngning.
-type: docs
 weight: 23
 url: /sv/net/unlocking-annotation-power/add-text-redaction-annotation/
 ---

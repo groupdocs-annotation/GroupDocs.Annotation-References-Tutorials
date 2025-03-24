@@ -3,7 +3,6 @@ title: Sürüm Anahtarını Kullanarak Ek Açıklamaların Listesini Alma
 linktitle: Sürüm Anahtarını Kullanarak Ek Açıklamaların Listesini Alma
 second_title: GroupDocs.Annotation .NET API'si
 description: Sorunsuz belge açıklaması için .NET uygulamalarınızı GroupDocs.Annotation ile geliştirin. Etkili entegrasyon için adım adım kılavuzumuzu izleyin.
-type: docs
 weight: 18
 url: /tr/net/advanced-usage/get-list-annotations-version-key/
 ---
@@ -58,4 +57,4 @@ GroupDocs.Annotation forumunu ziyaret ederek veya destek ekibiyle doğrudan ilet
 ### Test amacıyla GroupDocs.Annotation için geçici bir lisans satın alabilir miyim?
 Evet, ürünün test edilmesini ve değerlendirilmesini kolaylaştırmak için geçici lisanslar satın alınabilir.
 ### GroupDocs.Annotation for .NET'e ilişkin kapsamlı belgeleri nerede bulabilirim?
- Ürünün kullanımına ilişkin ayrıntılı rehberlik için GroupDocs web sitesinde bulunan belgelere başvurabilirsiniz.[Burada]( https://reference.groupdocs.com/annotation/net/).
+ Ürünün kullanımına ilişkin ayrıntılı rehberlik için GroupDocs web sitesinde bulunan belgelere başvurabilirsiniz.[Burada]( https://tutorials.groupdocs.com/annotation/net/).

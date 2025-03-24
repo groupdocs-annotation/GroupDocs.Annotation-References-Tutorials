@@ -3,7 +3,6 @@ title: 在 .NET 中按 ID 刪除回复
 linktitle: 在 .NET 中按 ID 刪除回复
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 在 .NET 中按 ID 刪除回應。按照我們的逐步教學進行高效率的文件註解管理。
-type: docs
 weight: 16
 url: /zh-hant/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ url: /zh-hant/net/removing-annotations/remove-replies-by-id/
 ## 先決條件
 在深入了解使用 GroupDocs.Annotation 在 .NET 中按 ID 刪除回應的教學課程之前，請確保您具備以下先決條件：
 ### 1.GroupDocs.Annotation安裝
-首先，您需要安裝 GroupDocs.Annotation for .NET。您可以從以下位置下載該程式庫[這裡](https://releases.groupdocs.com/annotation/net/)並按照文件中提供的安裝說明進行操作[這裡](https://reference.groupdocs.com/annotation/net/).
+首先，您需要安裝 GroupDocs.Annotation for .NET。您可以從以下位置下載該程式庫[這裡](https://releases.groupdocs.com/annotation/net/)並按照文件中提供的安裝說明進行操作[這裡](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. 對 C# 和 .NET 的基本了解
 要理解本教程中的範例，需要熟悉 C# 程式語言和 .NET 框架。
 ### 3. 附回覆的註釋文檔

@@ -3,7 +3,6 @@ title: Τοποθετήστε τον σχολιασμό εικόνας πάνω 
 linktitle: Τοποθετήστε τον σχολιασμό εικόνας πάνω από το κείμενο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς εικόνας πάνω από κείμενο στο .NET χρησιμοποιώντας GroupDocs.Annotation για αποτελεσματική διαχείριση εγγράφων και συνεργασία.
-type: docs
 weight: 21
 url: /el/net/advanced-usage/put-image-annotation-over-text/
 ---

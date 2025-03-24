@@ -3,7 +3,6 @@ title: Agregar componente de casilla de verificación al documento PDF
 linktitle: Agregar componente de casilla de verificación al documento PDF
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda a agregar un componente de casilla de verificación a documentos PDF usando Groupdocs.Annotation para .NET. Mejore sus archivos PDF con elementos interactivos.
-type: docs
 weight: 11
 url: /es/net/document-components/add-checkbox-component-to-pdf/
 ---

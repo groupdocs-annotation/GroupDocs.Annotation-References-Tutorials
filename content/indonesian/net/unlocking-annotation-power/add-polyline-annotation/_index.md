@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Polyline ke Dokumen
 linktitle: Tambahkan Anotasi Polyline ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi polyline ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kolaborasi dan proses peninjauan dokumen dengan mudah.
-type: docs
 weight: 18
 url: /id/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Ya, Anda dapat menyesuaikan berbagai properti anotasi seperti warna, opasitas, g
 ### Apakah GroupDocs.Annotation untuk .NET menawarkan uji coba gratis?
  Ya, Anda dapat memanfaatkan uji coba gratis GroupDocs.Annotation untuk .NET dengan mengunjungi[Link ini](https://releases.groupdocs.com/).
 ### Di mana saya dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET?
- Anda dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET[Di Sini](https://reference.groupdocs.com/annotation/net/).
+ Anda dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 ### Bagaimana saya bisa mendapatkan dukungan untuk masalah atau pertanyaan apa pun yang terkait dengan GroupDocs.Annotation untuk .NET?
  Anda bisa mendapatkan dukungan dengan mengunjungi forum GroupDocs.Annotation[Di Sini](https://forum.groupdocs.com/c/annotation/10).

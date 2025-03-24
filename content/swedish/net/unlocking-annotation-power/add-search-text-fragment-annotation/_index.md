@@ -3,7 +3,6 @@ title: Lägg till anteckning om söktextfragment i dokumentet
 linktitle: Lägg till anteckning om söktextfragment i dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Utforska kraften med GroupDocs.Annotation för .NET och lägg enkelt till dokumentkommentarfunktioner till dina applikationer.
-type: docs
 weight: 20
 url: /sv/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

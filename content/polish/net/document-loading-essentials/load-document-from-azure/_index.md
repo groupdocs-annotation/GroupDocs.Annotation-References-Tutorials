@@ -3,7 +3,6 @@ title: Załaduj dokument z platformy Azure
 linktitle: Załaduj dokument z platformy Azure
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje do dokumentów w .NET przy użyciu GroupDocs.Annotation. Samouczek krok po kroku dotyczący bezproblemowej integracji z usługą Azure Blob Storage.
-type: docs
 weight: 11
 url: /pl/net/document-loading-essentials/load-document-from-azure/
 ---

@@ -3,7 +3,6 @@ title: Основы загрузки документов
 linktitle: Основы загрузки документов
 second_title: GroupDocs.Аннотация .NET API
 description: Ознакомьтесь с основными руководствами по загрузке документов с помощью GroupDocs.Annotation .NET. Полная интеграция с Amazon S3, Azure, FTP, локальным диском, потоками и многим другим.
-type: docs
 weight: 20
 url: /ru/net/document-loading-essentials/
 ---

@@ -3,7 +3,6 @@ title: एनोटेशन पावर को अनलॉक करना
 linktitle: एनोटेशन पावर को अनलॉक करना
 second_title: GroupDocs.Annotation .NET API
 description: .NET ट्यूटोरियल के लिए GroupDocs.Annotation के साथ एनोटेशन की शक्ति को अनलॉक करें। चरण-दर-चरण विभिन्न एनोटेशन जोड़ना सीखें और सहजता से सहयोग बढ़ाएं।
-type: docs
 weight: 23
 url: /hi/net/unlocking-annotation-power/
 ---

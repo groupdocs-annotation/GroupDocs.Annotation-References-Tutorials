@@ -3,7 +3,6 @@ title: Genereer voorbeeldwerkbladkolommen
 linktitle: Genereer voorbeeldwerkbladkolommen
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u documenten kunt annoteren met GroupDocs.Annotation voor .NET. Stapsgewijze zelfstudie voor .NET-ontwikkelaars. Verbeter uw toepassingen.
-type: docs
 weight: 15
 url: /nl/net/advanced-usage/generate-preview-worksheet-columns/
 ---

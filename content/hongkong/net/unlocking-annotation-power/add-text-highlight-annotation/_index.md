@@ -3,7 +3,6 @@ title: 在文件中新增文字突出顯示註釋
 linktitle: 在文件中新增文字突出顯示註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 將文字反白顯示註解新增至文件。透過此綜合性增強協作和生產力。
-type: docs
 weight: 22
 url: /zh-hant/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

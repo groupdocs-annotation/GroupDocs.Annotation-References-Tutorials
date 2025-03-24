@@ -3,7 +3,6 @@ title: 從文件導入註釋
 linktitle: 從文件導入註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 從 .NET 中的文件匯入註解。請按照我們的逐步教學進行無縫整合。
-type: docs
 weight: 19
 url: /zh-hant/net/advanced-usage/import-annotations-from-document/
 ---
@@ -50,6 +49,6 @@ using (Annotator annotator = new Annotator("input.pdf-file"))
 ### 如何取得 GroupDocs.Annotation 的臨時授權？
 您可以從 GroupDocs.Annotation 取得臨時許可證[臨時許可證頁面](https://purchase.groupdocs.com/temporary-license/).
 ### 哪裡可以找到 GroupDocs.Annotation 的綜合文件？
-提供了 GroupDocs.Annotation 的詳細文檔[這裡](https://reference.groupdocs.com/annotation/net/).
+提供了 GroupDocs.Annotation 的詳細文檔[這裡](https://tutorials.groupdocs.com/annotation/net/).
 ### 對於有關 GroupDocs.Annotation 的任何問題或疑問，我可以在哪裡尋求支援？
 如需支持，請造訪 GroupDocs.Annotation[論壇](https://forum.groupdocs.com/c/annotation/10)您可以在這裡尋求專家和社群的幫助。

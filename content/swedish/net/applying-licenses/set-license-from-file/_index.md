@@ -3,7 +3,6 @@ title: Ställ in licens från fil
 linktitle: Ställ in licens från fil
 second_title: GroupDocs.Annotation .NET API
 description: Integrera kraftfulla dokumentkommentarer i dina .NET-applikationer sömlöst med GroupDocs.Annotation för .NET.
-type: docs
 weight: 10
 url: /sv/net/applying-licenses/set-license-from-file/
 ---

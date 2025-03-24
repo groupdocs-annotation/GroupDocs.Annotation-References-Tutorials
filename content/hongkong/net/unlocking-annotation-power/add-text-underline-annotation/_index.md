@@ -3,7 +3,6 @@ title: 在文件中新增文字下劃線註釋
 linktitle: 在文件中新增文字下劃線註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 為文件新增文字下劃線註解。輕鬆增強協作和溝通。
-type: docs
 weight: 27
 url: /zh-hant/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

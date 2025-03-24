@@ -3,7 +3,6 @@ title: 파일에서 라이센스 설정
 linktitle: 파일에서 라이센스 설정
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 강력한 문서 주석 기능을 .NET 응용 프로그램에 원활하게 통합하세요.
-type: docs
 weight: 10
 url: /ko/net/applying-licenses/set-license-from-file/
 ---

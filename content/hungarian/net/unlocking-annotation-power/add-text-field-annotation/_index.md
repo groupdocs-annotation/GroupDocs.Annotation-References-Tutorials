@@ -3,7 +3,6 @@ title: Szövegmező megjegyzés hozzáadása a dokumentumhoz
 linktitle: Szövegmező megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan integrálhatja zökkenőmentesen szövegmezős megjegyzéseket .NET-alkalmazásaiba a Groupdocs.Annotation for .NET segítségével.
-type: docs
 weight: 21
 url: /hu/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ Ebben az oktatóanyagban a Groupdocs.Annotation for .NET egyik alapvető funkci�
 ## Előfeltételek
 Mielőtt belemerülne a megvalósításba, győződjön meg arról, hogy a következő előfeltételekkel rendelkezik:
 ### 1. A Groupdocs.Annotation telepítése .NET-hez
- Mindenekelőtt le kell töltenie és telepítenie kell a Groupdocs.Annotation for .NET programot. A letöltési linket megtalálod[itt](https://releases.groupdocs.com/annotation/net/) . Kövesse a dokumentációban található telepítési utasításokat[itt](https://reference.groupdocs.com/annotation/net/) a könyvtár helyes beállításához.
+ Mindenekelőtt le kell töltenie és telepítenie kell a Groupdocs.Annotation for .NET programot. A letöltési linket megtalálod[itt](https://releases.groupdocs.com/annotation/net/) . Kövesse a dokumentációban található telepítési utasításokat[itt](https://tutorials.groupdocs.com/annotation/net/) a könyvtár helyes beállításához.
 ### 2. Fejlesztői környezet beállítása
 Győződjön meg arról, hogy be van állítva egy fejlesztői környezet a .NET fejlesztéshez. Ez magában foglalja a kompatibilis IDE, például a Visual Studio és a .NET-keretrendszer telepítését a rendszeren.
 ### 3. A C# programozás alapjai

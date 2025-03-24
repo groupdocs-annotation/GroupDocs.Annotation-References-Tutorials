@@ -3,7 +3,6 @@ title: ストリームからドキュメントをロード
 linktitle: ストリームからドキュメントをロード
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して、.NET のドキュメントに簡単に注釈を付ける方法を学びます。コラボレーションと生産性を強化します。
-type: docs
 weight: 14
 url: /ja/net/document-loading-essentials/load-document-from-stream/
 ---

@@ -3,7 +3,6 @@ title: Đặt giấy phép từ luồng
 linktitle: Đặt giấy phép từ luồng
 second_title: GroupDocs.Annotation .NET API
 description: Khai phá toàn bộ tiềm năng của chú thích tài liệu trong .NET với GroupDocs.Annotation. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch.
-type: docs
 weight: 11
 url: /vi/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ Chào mừng bạn đến với hướng dẫn toàn diện về cách sử dụ
 Trước khi đi sâu vào hướng dẫn, hãy đảm bảo bạn có sẵn các điều kiện tiên quyết sau:
 1.  GroupDocs.Annotation for .NET: Đảm bảo bạn đã tải xuống và cài đặt GroupDocs.Annotation for .NET từ[Liên kết tải xuống](https://releases.groupdocs.com/annotation/net/).
 2.  Giấy phép: Nhận giấy phép hợp lệ cho GroupDocs.Annotation. Bạn có thể mua một cái từ[đây](https://purchase.groupdocs.com/buy) hoặc yêu cầu giấy phép tạm thời[đây](https://purchase.groupdocs.com/temporary-license/).
-3.  Tài liệu: Làm quen với[tài liệu](https://reference.groupdocs.com/annotation/net/) cho GroupDocs.Annotation. Nó cung cấp thông tin chi tiết về các chức năng API.
+3.  Tài liệu: Làm quen với[tài liệu](https://tutorials.groupdocs.com/annotation/net/) cho GroupDocs.Annotation. Nó cung cấp thông tin chi tiết về các chức năng API.
 
 ## Nhập không gian tên
 Trước tiên, hãy nhập các không gian tên cần thiết để bắt đầu sử dụng GroupDocs.Annotation trong dự án .NET của bạn:
@@ -63,6 +62,6 @@ Có, bạn cần có giấy phép hợp lệ để mở khóa toàn bộ chức 
 ### Tôi có thể dùng thử GroupDocs.Annotation cho .NET trước khi mua không?
  Có, bạn có thể yêu cầu giấy phép dùng thử miễn phí[đây](https://releases.groupdocs.com/) để khám phá các khả năng của GroupDocs.Annotation dành cho .NET.
 ### Làm cách nào tôi có thể nhận được tài liệu mới nhất về GroupDocs.Annotation cho .NET?
- Bạn có thể tham khảo các[tài liệu](https://reference.groupdocs.com/annotation/net/) dành cho GroupDocs.Annotation dành cho .NET để truy cập các tài liệu tham khảo và hướng dẫn API chi tiết.
+ Bạn có thể tham khảo các[tài liệu](https://tutorials.groupdocs.com/annotation/net/) dành cho GroupDocs.Annotation dành cho .NET để truy cập các tài liệu tham khảo và hướng dẫn API chi tiết.
 ### Nếu tôi gặp vấn đề với giấy phép của mình thì sao?
 Nếu bạn gặp bất kỳ vấn đề nào với giấy phép của mình, hãy liên hệ với nhóm hỗ trợ GroupDocs để được hỗ trợ.

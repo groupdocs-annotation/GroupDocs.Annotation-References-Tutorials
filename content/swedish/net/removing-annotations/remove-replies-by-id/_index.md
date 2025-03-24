@@ -3,7 +3,6 @@ title: Ta bort svar efter ID i .NET
 linktitle: Ta bort svar efter ID i .NET
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du tar bort svar med ID i .NET med GroupDocs.Annotation. Följ vår steg-för-steg handledning för effektiv hantering av dokumentkommentarer.
-type: docs
 weight: 16
 url: /sv/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ När det gäller .NET-utveckling är förmågan att hantera anteckningar i dokum
 ## Förutsättningar
 Innan du dyker in i handledningen om att ta bort svar med ID i .NET med GroupDocs.Annotation, se till att du har följande förutsättningar:
 ### 1. GroupDocs.Annotation Installation
- Först måste du installera GroupDocs.Annotation för .NET. Du kan ladda ner biblioteket från[här](https://releases.groupdocs.com/annotation/net/) och följ installationsinstruktionerna i dokumentationen[här](https://reference.groupdocs.com/annotation/net/).
+ Först måste du installera GroupDocs.Annotation för .NET. Du kan ladda ner biblioteket från[här](https://releases.groupdocs.com/annotation/net/) och följ installationsinstruktionerna i dokumentationen[här](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Grundläggande förståelse för C# och .NET
 Bekantskap med programmeringsspråket C# och .NET-ramverket är nödvändigt för att följa med exemplen i denna handledning.
 ### 3. Kommenterat dokument med svar

@@ -3,7 +3,6 @@ title: Dodaj przekreśloną adnotację tekstową do dokumentu
 linktitle: Dodaj przekreśloną adnotację tekstową do dokumentu
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać przekreślone adnotacje tekstowe do dokumentów za pomocą GroupDocs.Annotation dla .NET. Usprawnij efektywnie procesy współpracy i przeglądu dokumentów.
-type: docs
 weight: 26
 url: /pl/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

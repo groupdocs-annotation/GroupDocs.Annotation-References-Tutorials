@@ -3,7 +3,6 @@ title: PDF-dokumentumok forgatása
 linktitle: PDF-dokumentumok forgatása
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan forgathat könnyedén PDF dokumentumokat a Groupdocs.Annotation for .NET segítségével. A dokumentumkezelés hatékonyságának javítása.
-type: docs
 weight: 22
 url: /hu/net/advanced-usage/rotating-pdf-documents/
 ---

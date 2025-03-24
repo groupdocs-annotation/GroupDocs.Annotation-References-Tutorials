@@ -3,7 +3,6 @@ title: कस्टम फ़ॉन्ट लोड हो रहा है
 linktitle: कस्टम फ़ॉन्ट लोड हो रहा है
 second_title: GroupDocs.Annotation .NET API
 description: दस्तावेज़ एनोटेशन को बढ़ाने के लिए .NET के लिए GroupDocs.Annotation में कस्टम फ़ॉन्ट को सहजता से लोड करने का तरीका जानें। आसान एकीकरण के लिए हमारे चरण-दर-चरण का पालन करें।
-type: docs
 weight: 20
 url: /hi/net/advanced-usage/loading-custom-fonts/
 ---

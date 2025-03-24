@@ -3,7 +3,6 @@ title: Belge Sayfaları Önizlemesi Oluştur
 linktitle: Belge Sayfaları Önizlemesi Oluştur
 second_title: GroupDocs.Annotation .NET API'si
 description: GroupDocs.Annotation for .NET'i kullanarak belge sayfalarının önizlemesini verimli bir şekilde nasıl oluşturacağınızı öğrenin. Bu kapsamlı ürünle belge yönetimi iş akışlarınızı geliştirin.
-type: docs
 weight: 12
 url: /tr/net/advanced-usage/generate-document-pages-preview/
 ---

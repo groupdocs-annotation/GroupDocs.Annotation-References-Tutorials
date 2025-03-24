@@ -3,7 +3,6 @@ title: إزالة التعليقات التوضيحية المتعددة في .N
 linktitle: إزالة التعليقات التوضيحية المتعددة في .NET
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إزالة التعليقات التوضيحية المتعددة بكفاءة في .NET باستخدام GroupDocs.Annotation. اتبع برنامجنا التعليمي خطوة بخطوة لتحقيق التكامل السلس في تطبيقاتك.
-type: docs
 weight: 12
 url: /ar/net/removing-annotations/remove-multiple-annotations/
 ---

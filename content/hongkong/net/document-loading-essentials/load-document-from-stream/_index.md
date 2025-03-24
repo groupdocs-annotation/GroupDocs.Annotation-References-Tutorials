@@ -3,7 +3,6 @@ title: 從串流載入文檔
 linktitle: 從串流載入文檔
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation 輕鬆註解 .NET 中的文件。增強協作和生產力。
-type: docs
 weight: 14
 url: /zh-hant/net/document-loading-essentials/load-document-from-stream/
 ---

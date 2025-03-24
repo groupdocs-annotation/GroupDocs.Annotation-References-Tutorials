@@ -3,7 +3,6 @@ title: Lägg till en snirklig textanteckning i dokumentet
 linktitle: Lägg till en snirklig textanteckning i dokumentet
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du enkelt lägger till snirkliga kommentarer till dokument med Groupdocs.Annotation för .NET. Förbättra samarbets- och dokumentgranskningsprocesser.
-type: docs
 weight: 25
 url: /sv/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

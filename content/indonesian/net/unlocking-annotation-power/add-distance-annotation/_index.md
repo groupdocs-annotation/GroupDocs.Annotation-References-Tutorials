@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Jarak ke Dokumen
 linktitle: Tambahkan Anotasi Jarak ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kolaborasi dan komunikasi dengan mudah.
-type: docs
 weight: 12
 url: /id/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ J: Ya, GroupDocs.Annotation mendukung anotasi pada berbagai format dokumen terma
 
 ### T: Di mana saya dapat menemukan dokumentasi GroupDocs.Annotation untuk .NET?
 
- J: Anda dapat merujuk pada dokumentasi rinci yang tersedia[Di Sini](https://reference.groupdocs.com/annotation/net/).
+ J: Anda dapat merujuk pada dokumentasi rinci yang tersedia[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 
 ### T: Bagaimana saya bisa mendapatkan dukungan atau bantuan dengan GroupDocs.Annotation?
 

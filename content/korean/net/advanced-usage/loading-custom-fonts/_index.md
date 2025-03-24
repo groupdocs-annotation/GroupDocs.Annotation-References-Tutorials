@@ -3,7 +3,6 @@ title: 사용자 정의 글꼴 로드
 linktitle: 사용자 정의 글꼴 로드
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation에서 사용자 정의 글꼴을 원활하게 로드하여 문서 주석을 향상시키는 방법을 알아보세요. 간편한 통합을 위해 단계별 설명을 따르세요.
-type: docs
 weight: 20
 url: /ko/net/advanced-usage/loading-custom-fonts/
 ---

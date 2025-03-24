@@ -3,7 +3,6 @@ title: Verwijder antwoorden op gebruikersnaam in .NET
 linktitle: Verwijder antwoorden op gebruikersnaam in .NET
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u naadloos documenten kunt annoteren met Groupdocs.Annotation voor .NET. Verbeter de samenwerking en het documentbeheer met deze krachtige tool.
-type: docs
 weight: 17
 url: /nl/net/removing-annotations/remove-replies-by-username/
 ---

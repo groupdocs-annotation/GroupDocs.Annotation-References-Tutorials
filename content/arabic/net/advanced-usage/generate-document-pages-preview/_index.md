@@ -3,7 +3,6 @@ title: إنشاء معاينة صفحات المستند
 linktitle: إنشاء معاينة صفحات المستند
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إنشاء معاينة صفحات المستندات بكفاءة باستخدام GroupDocs.Annotation لـ .NET. قم بتعزيز سير عمل إدارة المستندات الخاصة بك مع هذا البرنامج الشامل.
-type: docs
 weight: 12
 url: /ar/net/advanced-usage/generate-document-pages-preview/
 ---

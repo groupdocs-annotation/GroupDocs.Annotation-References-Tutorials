@@ -3,7 +3,6 @@ title: Imposta la licenza dal file
 linktitle: Imposta la licenza dal file
 second_title: API GroupDocs.Annotation .NET
 description: Integra potenti funzionalità di annotazione dei documenti nelle tue applicazioni .NET senza soluzione di continuità con GroupDocs.Annotation per .NET.
-type: docs
 weight: 10
 url: /it/net/applying-licenses/set-license-from-file/
 ---

@@ -3,7 +3,6 @@ title: Περιστρεφόμενα έγγραφα PDF
 linktitle: Περιστρεφόμενα έγγραφα PDF
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να περιστρέφετε έγγραφα PDF χωρίς κόπο χρησιμοποιώντας το Groupdocs.Annotation για .NET. Βελτιώστε την αποτελεσματικότητα διαχείρισης εγγράφων.
-type: docs
 weight: 22
 url: /el/net/advanced-usage/rotating-pdf-documents/
 ---

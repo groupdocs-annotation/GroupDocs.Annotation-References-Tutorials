@@ -3,7 +3,6 @@ title: Özel Yazı Tiplerini Yükleme
 linktitle: Özel Yazı Tiplerini Yükleme
 second_title: GroupDocs.Annotation .NET API'si
 description: Belge açıklamalarını geliştirmek için GroupDocs.Annotation for .NET'e özel yazı tiplerini sorunsuz bir şekilde nasıl yükleyeceğinizi öğrenin. Kolay entegrasyon için adım adım talimatlarımızı izleyin.
-type: docs
 weight: 20
 url: /tr/net/advanced-usage/loading-custom-fonts/
 ---

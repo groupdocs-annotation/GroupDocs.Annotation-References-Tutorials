@@ -1,7 +1,6 @@
 ---
 title: Handledningar och exempel på GroupDocs.Annotation för .NET
 linktitle: GroupDocs.Annotation för .NET Tutorials
-type: docs
 weight: 10
 url: /sv/net/
 description: Lås upp den fulla potentialen hos GroupDocs.Annotation för .NET med våra tutorials. Integrera sömlöst, förbättra samarbetet och effektivisera arbetsflöden.

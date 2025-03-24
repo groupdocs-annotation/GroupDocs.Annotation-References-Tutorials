@@ -3,7 +3,6 @@ title: Remove Replies by ID in .NET
 linktitle: Remove Replies by ID in .NET
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to remove replies by ID in .NET using GroupDocs.Annotation. Follow our step-by-step tutorial for efficient document annotation management.
-type: docs
 weight: 16
 url: /net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ In the realm of .NET development, the ability to manage annotations within docum
 ## Prerequisites
 Before diving into the tutorial on removing replies by ID in .NET using GroupDocs.Annotation, ensure you have the following prerequisites:
 ### 1. GroupDocs.Annotation Installation
-Firstly, you need to install GroupDocs.Annotation for .NET. You can download the library from [here](https://releases.groupdocs.com/annotation/net/) and follow the installation instructions provided in the documentation [here](https://reference.groupdocs.com/annotation/net/).
+Firstly, you need to install GroupDocs.Annotation for .NET. You can download the library from [here](https://releases.groupdocs.com/annotation/net/) and follow the installation instructions provided in the documentation [here](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Basic Understanding of C# and .NET
 Familiarity with C# programming language and the .NET framework is necessary to follow along with the examples in this tutorial.
 ### 3. Annotated Document with Replies

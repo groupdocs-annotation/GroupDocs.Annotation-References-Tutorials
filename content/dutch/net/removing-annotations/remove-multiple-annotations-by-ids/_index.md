@@ -3,7 +3,6 @@ title: Verwijder meerdere annotaties op ID's
 linktitle: Verwijder meerdere annotaties op ID's
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u meerdere annotaties op ID's in .NET kunt verwijderen met behulp van GroupDocs.Annotation, waardoor u moeiteloos uw mogelijkheden voor documentbeheer kunt verbeteren.
-type: docs
 weight: 13
 url: /nl/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

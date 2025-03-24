@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού επεξεργασίας πόρων
 linktitle: Προσθήκη σχολιασμού επεξεργασίας πόρων στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Βελτιώστε τις ροές εργασίας διαχείρισης εγγράφων με το GroupDocs.Annotation για .NET. Ενσωματώστε απρόσκοπτα το Resources Redaction Annotation στο .NET σας για αποτελεσματικό.
-type: docs
 weight: 19
 url: /el/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Panah ke Dokumen
 linktitle: Tambahkan Anotasi Panah ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi panah ke dokumen Anda menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kejelasan dan interaktivitas dokumen dengan mudah.
-type: docs
 weight: 11
 url: /id/net/unlocking-annotation-power/add-arrow-annotation/
 ---

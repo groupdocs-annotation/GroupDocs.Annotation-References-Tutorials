@@ -3,7 +3,6 @@ title: إضافة مكون الزر إلى وثيقة PDF
 linktitle: إضافة مكون الزر إلى وثيقة PDF
 second_title: GroupDocs.Annotation .NET API
 description: قم بتحسين مستندات PDF الخاصة بك باستخدام مكونات الأزرار التفاعلية باستخدام Groupdocs.Annotation for .NET. اتبع البرنامج التعليمي خطوة بخطوة لتحقيق التكامل السلس.
-type: docs
 weight: 10
 url: /ar/net/document-components/add-button-component-to-pdf/
 ---

@@ -3,7 +3,6 @@ title: 取得文件上的所有版本金鑰
 linktitle: 取得文件上的所有版本金鑰
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 擷取文件上的所有版本金鑰。透過此綜合功能增強您的文件管理能力。
-type: docs
 weight: 16
 url: /zh-hant/net/advanced-usage/get-all-version-keys-document/
 ---

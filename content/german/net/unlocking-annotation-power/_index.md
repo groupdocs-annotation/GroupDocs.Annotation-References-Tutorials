@@ -3,7 +3,6 @@ title: Annotation Power freischalten
 linktitle: Annotation Power freischalten
 second_title: GroupDocs.Annotation .NET-API
 description: Nutzen Sie die Möglichkeiten der Annotation mit GroupDocs.Annotation für .NET-Tutorials. Erfahren Sie Schritt für Schritt, wie Sie verschiedene Anmerkungen hinzufügen und die Zusammenarbeit mühelos verbessern.
-type: docs
 weight: 23
 url: /de/net/unlocking-annotation-power/
 ---

@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού επισήμανσης κειμέν
 linktitle: Προσθήκη σχολιασμού επισήμανσης κειμένου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς επισήμανσης κειμένου σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη συνεργασία και την παραγωγικότητα με αυτό το ολοκληρωμένο.
-type: docs
 weight: 22
 url: /el/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

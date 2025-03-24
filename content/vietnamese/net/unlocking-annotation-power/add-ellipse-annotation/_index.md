@@ -3,7 +3,6 @@ title: Thêm chú thích hình elip vào tài liệu
 linktitle: Thêm chú thích hình elip vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích hình elip vào tài liệu trong .NET bằng GroupDocs.Annotation. Tăng cường hợp tác và giao tiếp dễ dàng.
-type: docs
 weight: 13
 url: /vi/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

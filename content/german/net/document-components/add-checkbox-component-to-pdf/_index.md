@@ -3,7 +3,6 @@ title: Kontrollkästchenkomponente zum PDF-Dokument hinzufügen
 linktitle: Kontrollkästchenkomponente zum PDF-Dokument hinzufügen
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit Groupdocs.Annotation für .NET eine Checkbox-Komponente zu PDF-Dokumenten hinzufügen. Werten Sie Ihre PDFs mit interaktiven Elementen auf.
-type: docs
 weight: 11
 url: /de/net/document-components/add-checkbox-component-to-pdf/
 ---

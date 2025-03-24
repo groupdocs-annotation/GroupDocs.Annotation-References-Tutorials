@@ -3,7 +3,6 @@ title: Ställ in mätlicens
 linktitle: Ställ in mätlicens
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du ställer in en uppmätt licens för GroupDocs.Annotation .NET för resursanvändning och dokumentera anteckningsfunktioner i dina .NET-applikationer.
-type: docs
 weight: 12
 url: /sv/net/applying-licenses/set-metered-license/
 ---

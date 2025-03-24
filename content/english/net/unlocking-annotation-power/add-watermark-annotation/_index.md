@@ -3,7 +3,6 @@ title: Add Watermark Annotation to Document
 linktitle: Add Watermark Annotation to Document
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to add watermark annotations to your documents effortlessly using GroupDocs.Annotation for .NET. Enhance document clarity and security.
-type: docs
 weight: 28
 url: /net/unlocking-annotation-power/add-watermark-annotation/
 ---

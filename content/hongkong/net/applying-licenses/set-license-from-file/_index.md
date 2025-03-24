@@ -3,7 +3,6 @@ title: 從文件設定許可證
 linktitle: 從文件設定許可證
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 將強大的文件註解功能無縫整合到您的 .NET 應用程式中。
-type: docs
 weight: 10
 url: /zh-hant/net/applying-licenses/set-license-from-file/
 ---

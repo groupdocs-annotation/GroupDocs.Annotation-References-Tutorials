@@ -3,7 +3,6 @@ title: .NET での注釈への応答の削除
 linktitle: .NET での注釈への応答の削除
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation を使用して .NET の注釈への返信を削除する方法を学びます。コード例を含むステップバイステップのガイド。
-type: docs
 weight: 15
 url: /ja/net/removing-annotations/remove-replies-to-annotations/
 ---

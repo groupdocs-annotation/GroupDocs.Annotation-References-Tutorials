@@ -3,7 +3,6 @@ title: قم بتحميل المستند من Azure
 linktitle: قم بتحميل المستند من Azure
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية إلى المستندات في .NET باستخدام GroupDocs.Annotation. برنامج تعليمي خطوة بخطوة للتكامل السلس مع Azure Blob Storage.
-type: docs
 weight: 11
 url: /ar/net/document-loading-essentials/load-document-from-azure/
 ---

@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού πεδίου κειμένου στ�
 linktitle: Προσθήκη σχολιασμού πεδίου κειμένου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να ενσωματώνετε απρόσκοπτα σχολιασμούς πεδίων κειμένου στις εφαρμογές σας .NET χρησιμοποιώντας το Groupdocs.Annotation για .NET.
-type: docs
 weight: 21
 url: /el/net/unlocking-annotation-power/add-text-field-annotation/
 ---
@@ -13,7 +12,7 @@ url: /el/net/unlocking-annotation-power/add-text-field-annotation/
 ## Προαπαιτούμενα
 Πριν ξεκινήσετε την υλοποίηση, βεβαιωθείτε ότι έχετε τις ακόλουθες προϋποθέσεις:
 ### 1. Εγκατάσταση του Groupdocs.Annotation για .NET
- Πρώτα και κύρια, πρέπει να κάνετε λήψη και εγκατάσταση του Groupdocs.Annotation για .NET. Μπορείτε να βρείτε τον σύνδεσμο λήψης[εδώ](https://releases.groupdocs.com/annotation/net/) . Ακολουθήστε τις οδηγίες εγκατάστασης που παρέχονται στην τεκμηρίωση[εδώ](https://reference.groupdocs.com/annotation/net/) για να ρυθμίσετε σωστά τη βιβλιοθήκη.
+ Πρώτα και κύρια, πρέπει να κάνετε λήψη και εγκατάσταση του Groupdocs.Annotation για .NET. Μπορείτε να βρείτε τον σύνδεσμο λήψης[εδώ](https://releases.groupdocs.com/annotation/net/) . Ακολουθήστε τις οδηγίες εγκατάστασης που παρέχονται στην τεκμηρίωση[εδώ](https://tutorials.groupdocs.com/annotation/net/) για να ρυθμίσετε σωστά τη βιβλιοθήκη.
 ### 2. Ρύθμιση περιβάλλοντος ανάπτυξης
 Βεβαιωθείτε ότι έχετε ρυθμίσει ένα περιβάλλον ανάπτυξης για την ανάπτυξη .NET. Αυτό περιλαμβάνει την εγκατάσταση ενός συμβατού IDE όπως το Visual Studio και το .NET Framework στο σύστημά σας.
 ### 3. Βασική Κατανόηση Προγραμματισμού C#

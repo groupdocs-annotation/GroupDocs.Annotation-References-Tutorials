@@ -3,7 +3,6 @@ title: Carica documento dal flusso
 linktitle: Carica documento dal flusso
 second_title: API GroupDocs.Annotation .NET
 description: Scopri come annotare facilmente i documenti in .NET con GroupDocs.Annotation. Migliora la collaborazione e la produttività.
-type: docs
 weight: 14
 url: /it/net/document-loading-essentials/load-document-from-stream/
 ---

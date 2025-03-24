@@ -3,7 +3,6 @@ title: Načíst dokument z adresy URL
 linktitle: Načíst dokument z adresy URL
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se, jak programově anotovat dokumenty PDF pomocí GroupDocs.Annotation pro .NET. Výukový program krok za krokem s příklady kódu.
-type: docs
 weight: 15
 url: /cs/net/document-loading-essentials/load-document-from-url/
 ---

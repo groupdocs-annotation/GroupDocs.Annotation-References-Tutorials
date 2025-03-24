@@ -3,7 +3,6 @@ title: 在文件中新增距離註釋
 linktitle: 在文件中新增距離註釋
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 為文件新增距離註解。輕鬆增強協作和溝通。
-type: docs
 weight: 12
 url: /zh-hant/net/unlocking-annotation-power/add-distance-annotation/
 ---
@@ -118,7 +117,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ### Q：在哪裡可以找到 GroupDocs.Annotation for .NET 的文件？
 
- A：您可以參考詳細的文檔[這裡](https://reference.groupdocs.com/annotation/net/).
+ A：您可以參考詳細的文檔[這裡](https://tutorials.groupdocs.com/annotation/net/).
 
 ### Q：如何獲得 GroupDocs.Annotation 的支援或協助？
 

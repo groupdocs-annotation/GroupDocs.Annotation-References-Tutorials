@@ -3,7 +3,6 @@ title: 从 XML 文件导出注释
 linktitle: 从 XML 文件导出注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 从 XML 文件导出注释，从而有效简化文档管理工作流程。
-type: docs
 weight: 11
 url: /zh/net/advanced-usage/export-annotations-xml-file/
 ---

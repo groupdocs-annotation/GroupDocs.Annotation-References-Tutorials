@@ -3,7 +3,6 @@ title: Hasilkan Pratinjau Halaman Dokumen
 linktitle: Hasilkan Pratinjau Halaman Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara membuat pratinjau halaman dokumen secara efisien menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan alur kerja manajemen dokumen Anda dengan komprehensif ini.
-type: docs
 weight: 12
 url: /id/net/advanced-usage/generate-document-pages-preview/
 ---

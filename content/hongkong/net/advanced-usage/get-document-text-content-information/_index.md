@@ -3,7 +3,6 @@ title: 取得文件文字內容訊息
 linktitle: 取得文件文字內容訊息
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 無縫註解文件。輕鬆地將註解功能整合到您的 .NET 應用程式中。
-type: docs
 weight: 17
 url: /zh-hant/net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ annotator.Save("output.pdf");
 ### 在哪裡可以找到對 GroupDocs.Annotation for .NET 的支援？
 您可以尋求支持並提出問題[集團文檔論壇](https://forum.groupdocs.com/c/annotation/10).
 ### GroupDocs.Annotation for .NET 是否提供任何文件？
-是的，可以使用 GroupDocs.Annotation for .NET 的綜合文檔[這裡](https://reference.groupdocs.com/annotation/net/).
+是的，可以使用 GroupDocs.Annotation for .NET 的綜合文檔[這裡](https://tutorials.groupdocs.com/annotation/net/).

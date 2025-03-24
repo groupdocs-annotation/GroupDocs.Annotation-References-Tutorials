@@ -3,7 +3,6 @@ title: Muat Dokumen dari Azure
 linktitle: Muat Dokumen dari Azure
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara membuat anotasi dokumen di .NET menggunakan GroupDocs.Annotation. Tutorial langkah demi langkah untuk integrasi yang lancar dengan Azure Blob Storage.
-type: docs
 weight: 11
 url: /id/net/document-loading-essentials/load-document-from-azure/
 ---

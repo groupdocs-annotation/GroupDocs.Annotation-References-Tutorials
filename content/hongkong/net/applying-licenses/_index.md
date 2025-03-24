@@ -3,7 +3,6 @@ title: 申請許可證
 linktitle: 申請許可證
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation 釋放 .NET 中文件註解的全部潛力。按照我們的逐步教學進行無縫整合。
-type: docs
 weight: 26
 url: /zh-hant/net/applying-licenses/
 ---

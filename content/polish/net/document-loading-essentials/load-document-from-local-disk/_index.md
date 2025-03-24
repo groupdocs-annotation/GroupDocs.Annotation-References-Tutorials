@@ -3,7 +3,6 @@ title: Załaduj dokument z dysku lokalnego
 linktitle: Załaduj dokument z dysku lokalnego
 second_title: GroupDocs.Adnotacja .NET API
 description: Odblokuj moc adnotacji w dokumentach dzięki GroupDocs.Annotation dla .NET. Bezproblemowo integruj funkcje adnotacji z aplikacjami .NET.
-type: docs
 weight: 13
 url: /pl/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Podsumowując, GroupDocs.Annotation dla .NET zapewnia solidne rozwiązanie umoż
 ### Czy przed zakupem mogę wypróbować GroupDocs.Annotation dla .NET?
  Tak, możesz pobrać bezpłatną wersję próbną ze strony[Tutaj](https://releases.groupdocs.com/).
 ### Gdzie mogę znaleźć dokumentację GroupDocs.Annotation dla .NET?
- Można uzyskać dostęp do dokumentacji[Tutaj](https://reference.groupdocs.com/annotation/net/).
+ Można uzyskać dostęp do dokumentacji[Tutaj](https://tutorials.groupdocs.com/annotation/net/).
 ### Jak mogę uzyskać tymczasową licencję na GroupDocs.Annotation dla .NET?
  Licencję tymczasową można uzyskać od[Tutaj](https://purchase.groupdocs.com/temporary-license/).
 ### Czy dostępna jest obsługa GroupDocs.Annotation dla platformy .NET?

@@ -3,7 +3,6 @@ title: Thành phần tài liệu
 linktitle: Thành phần tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Khám phá các hướng dẫn toàn diện về cách tích hợp các thành phần tương tác như nút, hộp kiểm và danh sách thả xuống vào tài liệu PDF bằng GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /vi/net/document-components/
 ---

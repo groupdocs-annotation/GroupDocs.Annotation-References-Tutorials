@@ -3,7 +3,6 @@ title: Muat Dokumen dari URL
 linktitle: Muat Dokumen dari URL
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara membuat anotasi dokumen PDF secara terprogram menggunakan GroupDocs.Annotation untuk .NET. Tutorial langkah demi langkah dengan contoh kode.
-type: docs
 weight: 15
 url: /id/net/document-loading-essentials/load-document-from-url/
 ---

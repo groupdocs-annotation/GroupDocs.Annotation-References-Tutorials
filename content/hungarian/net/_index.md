@@ -1,7 +1,6 @@
 ---
 title: Oktatóanyagok és példák a GroupDocs.Annotation for .NET-hez
 linktitle: GroupDocs.Annotation for .NET Tutorials
-type: docs
 weight: 10
 url: /hu/net/
 description: Használja ki a GroupDocs.Annotation teljes potenciálját .NET-hez oktatóanyagainkkal. Zökkenőmentesen integrálja, fokozza az együttműködést és egyszerűsítse a munkafolyamatokat.

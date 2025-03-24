@@ -3,7 +3,6 @@ title: Get Document Text Content Information
 linktitle: Get Document Text Content Information
 second_title: GroupDocs.Annotation .NET API
 description: Annotate documents seamlessly with GroupDocs.Annotation for .NET. Integrate annotation functionalities into your .NET applications effortlessly.
-type: docs
 weight: 17
 url: /net/advanced-usage/get-document-text-content-information/
 ---
@@ -78,4 +77,4 @@ You can obtain a temporary license from the [GroupDocs purchase page](https://pu
 ### Where can I find support for GroupDocs.Annotation for .NET?
 You can seek support and ask questions on the [GroupDocs forum](https://forum.groupdocs.com/c/annotation/10).
 ### Does GroupDocs.Annotation for .NET offer any documentation?
-Yes, comprehensive documentation for GroupDocs.Annotation for .NET is available [here](https://reference.groupdocs.com/annotation/net/).
+Yes, comprehensive documentation for GroupDocs.Annotation for .NET is available [here](https://tutorials.groupdocs.com/annotation/net/).

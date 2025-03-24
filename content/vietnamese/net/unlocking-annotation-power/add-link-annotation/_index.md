@@ -3,7 +3,6 @@ title: Thêm chú thích liên kết vào tài liệu
 linktitle: Thêm chú thích liên kết vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích liên kết vào tài liệu bằng Groupdocs.Annotation cho .NET. Tăng cường hợp tác và tương tác dễ dàng.
-type: docs
 weight: 16
 url: /vi/net/unlocking-annotation-power/add-link-annotation/
 ---

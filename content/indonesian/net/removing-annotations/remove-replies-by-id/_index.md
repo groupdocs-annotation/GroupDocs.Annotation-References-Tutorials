@@ -3,7 +3,6 @@ title: Hapus Balasan berdasarkan ID di .NET
 linktitle: Hapus Balasan berdasarkan ID di .NET
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menghapus balasan berdasarkan ID di .NET menggunakan GroupDocs.Annotation. Ikuti tutorial langkah demi langkah kami untuk manajemen anotasi dokumen yang efisien.
-type: docs
 weight: 16
 url: /id/net/removing-annotations/remove-replies-by-id/
 ---
@@ -12,7 +11,7 @@ Dalam bidang pengembangan .NET, kemampuan mengelola anotasi dalam dokumen sangat
 ## Prasyarat
 Sebelum mendalami tutorial tentang menghapus balasan berdasarkan ID di .NET menggunakan GroupDocs.Annotation, pastikan Anda memiliki prasyarat berikut:
 ### 1. Instalasi GroupDocs.Annotation
- Pertama, Anda perlu menginstal GroupDocs.Annotation untuk .NET. Anda dapat mengunduh perpustakaan dari[Di Sini](https://releases.groupdocs.com/annotation/net/) dan ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://reference.groupdocs.com/annotation/net/).
+ Pertama, Anda perlu menginstal GroupDocs.Annotation untuk .NET. Anda dapat mengunduh perpustakaan dari[Di Sini](https://releases.groupdocs.com/annotation/net/) dan ikuti petunjuk instalasi yang disediakan dalam dokumentasi[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Pemahaman Dasar C# dan .NET
 Keakraban dengan bahasa pemrograman C# dan kerangka .NET diperlukan untuk mengikuti contoh dalam tutorial ini.
 ### 3. Dokumen Beranotasi dengan Balasan

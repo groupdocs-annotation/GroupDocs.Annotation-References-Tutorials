@@ -3,7 +3,6 @@ title: Adicionar componente suspenso ao documento PDF
 linktitle: Adicionar componente suspenso ao documento PDF
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como adicionar componentes suspensos a PDFs usando GroupDocs.Annotation for .NET. Siga nosso guia passo a passo para uma integração perfeita.
-type: docs
 weight: 12
 url: /pt/net/document-components/add-dropdown-component-to-pdf/
 ---

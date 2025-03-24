@@ -3,7 +3,6 @@ title: Καταργήστε τις απαντήσεις σε σχολιασμο�
 linktitle: Καταργήστε τις απαντήσεις σε σχολιασμούς στο .NET
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να αφαιρείτε τις απαντήσεις σε σχολιασμούς στο .NET χρησιμοποιώντας το GroupDocs.Annotation. Οδηγός βήμα προς βήμα με παραδείγματα κώδικα.
-type: docs
 weight: 15
 url: /el/net/removing-annotations/remove-replies-to-annotations/
 ---

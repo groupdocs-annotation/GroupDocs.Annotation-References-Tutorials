@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Tautan ke Dokumen
 linktitle: Tambahkan Anotasi Tautan ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi tautan ke dokumen menggunakan Groupdocs.Annotation untuk .NET. Tingkatkan kolaborasi dan interaktivitas dengan mudah.
-type: docs
 weight: 16
 url: /id/net/unlocking-annotation-power/add-link-annotation/
 ---

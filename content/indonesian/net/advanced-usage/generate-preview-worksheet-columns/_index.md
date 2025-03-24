@@ -3,7 +3,6 @@ title: Hasilkan Kolom Lembar Kerja Pratinjau
 linktitle: Hasilkan Kolom Lembar Kerja Pratinjau
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara membuat anotasi dokumen menggunakan GroupDocs.Annotation untuk .NET. Tutorial langkah demi langkah untuk pengembang .NET. Sempurnakan aplikasi Anda.
-type: docs
 weight: 15
 url: /id/net/advanced-usage/generate-preview-worksheet-columns/
 ---

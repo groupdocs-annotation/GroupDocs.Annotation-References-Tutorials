@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού βέλους στο έγγραφο
 linktitle: Προσθήκη σχολιασμού βέλους στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς με βέλη στα έγγραφά σας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη σαφήνεια και τη διαδραστικότητα των εγγράφων χωρίς κόπο.
-type: docs
 weight: 11
 url: /el/net/unlocking-annotation-power/add-arrow-annotation/
 ---

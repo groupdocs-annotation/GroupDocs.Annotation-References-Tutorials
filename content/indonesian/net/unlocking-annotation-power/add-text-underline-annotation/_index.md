@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Garis Bawah Teks ke Dokumen
 linktitle: Tambahkan Anotasi Garis Bawah Teks ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi garis bawah teks ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kolaborasi dan komunikasi dengan mudah.
-type: docs
 weight: 27
 url: /id/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

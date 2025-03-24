@@ -3,7 +3,6 @@ title: Supprimer les annotations à l'aide des options d'enregistrement dans .NE
 linktitle: Supprimer les annotations à l'aide des options d'enregistrement dans .NET
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment supprimer des annotations d'un PDF et d'autres documents dans .NET à l'aide de GroupDocs.Annotation. Guide étape par étape avec des exemples de code.
-type: docs
 weight: 14
 url: /fr/net/removing-annotations/remove-annotations-using-save-options/
 ---

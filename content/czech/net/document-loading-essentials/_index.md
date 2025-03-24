@@ -3,7 +3,6 @@ title: Základy načítání dokumentů
 linktitle: Základy načítání dokumentů
 second_title: GroupDocs.Annotation .NET API
 description: Objevte základní výukové programy pro načítání dokumentů pomocí GroupDocs.Annotation .NET. Bezproblémová integrace s Amazon S3, Azure, FTP, místním diskem, streamy a dalšími.
-type: docs
 weight: 20
 url: /cs/net/document-loading-essentials/
 ---

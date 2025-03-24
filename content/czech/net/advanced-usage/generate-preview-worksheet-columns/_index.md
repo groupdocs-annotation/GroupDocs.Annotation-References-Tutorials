@@ -3,7 +3,6 @@ title: Generovat náhled sloupců listu
 linktitle: Generovat náhled sloupců listu
 second_title: GroupDocs.Annotation .NET API
 description: Přečtěte si, jak anotovat dokumenty pomocí GroupDocs.Annotation for .NET. Výukový program krok za krokem pro vývojáře .NET. Vylepšete své aplikace.
-type: docs
 weight: 15
 url: /cs/net/advanced-usage/generate-preview-worksheet-columns/
 ---

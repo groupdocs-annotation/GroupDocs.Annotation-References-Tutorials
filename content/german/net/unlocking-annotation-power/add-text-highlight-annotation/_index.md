@@ -3,7 +3,6 @@ title: Fügen Sie dem Dokument eine Texthervorhebungsanmerkung hinzu
 linktitle: Fügen Sie dem Dokument eine Texthervorhebungsanmerkung hinzu
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET Texthervorhebungsanmerkungen zu Dokumenten hinzufügen. Verbessern Sie die Zusammenarbeit und Produktivität mit dieser umfassenden Lösung.
-type: docs
 weight: 22
 url: /de/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

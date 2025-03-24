@@ -3,7 +3,6 @@ title: Gerar visualização sem comentários
 linktitle: Gerar visualização sem comentários
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como integrar perfeitamente recursos de anotação de documentos em seus aplicativos .NET usando GroupDocs.Annotation for .NET.
-type: docs
 weight: 14
 url: /pt/net/advanced-usage/generate-preview-without-comments/
 ---

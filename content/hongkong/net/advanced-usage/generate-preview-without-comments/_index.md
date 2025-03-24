@@ -3,7 +3,6 @@ title: 生成不含註釋的預覽
 linktitle: 生成不含註釋的預覽
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 將文件註解功能無縫整合到 .NET 應用程式中。
-type: docs
 weight: 14
 url: /zh-hant/net/advanced-usage/generate-preview-without-comments/
 ---

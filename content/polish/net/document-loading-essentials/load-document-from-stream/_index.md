@@ -3,7 +3,6 @@ title: Załaduj dokument ze strumienia
 linktitle: Załaduj dokument ze strumienia
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bez wysiłku dodawać adnotacje do dokumentów w platformie .NET dzięki GroupDocs.Annotation. Popraw współpracę i produktywność.
-type: docs
 weight: 14
 url: /pl/net/document-loading-essentials/load-document-from-stream/
 ---

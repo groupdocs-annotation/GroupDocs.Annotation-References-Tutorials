@@ -3,7 +3,6 @@ title: إنشاء أعمدة ورقة عمل المعاينة
 linktitle: إنشاء أعمدة ورقة عمل المعاينة
 second_title: GroupDocs.Annotation .NET API
 description: تعرف على كيفية إضافة تعليقات توضيحية إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. برنامج تعليمي خطوة بخطوة لمطوري .NET. تعزيز التطبيقات الخاصة بك.
-type: docs
 weight: 15
 url: /ar/net/advanced-usage/generate-preview-worksheet-columns/
 ---

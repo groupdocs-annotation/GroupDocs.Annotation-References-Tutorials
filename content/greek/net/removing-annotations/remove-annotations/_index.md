@@ -3,7 +3,6 @@ title: Κατάργηση σχολιασμών στο .NET
 linktitle: Κατάργηση σχολιασμών στο .NET
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να αφαιρείτε σχολιασμούς από έγγραφα PDF χρησιμοποιώντας το Groupdocs.Annotation στο .NET. Απλοποιήστε τη διαδικασία διαχείρισης ψηφιακών εγγράφων.
-type: docs
 weight: 10
 url: /el/net/removing-annotations/remove-annotations/
 ---

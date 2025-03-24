@@ -3,7 +3,6 @@ title: Skapa förhandsgranskning utan kommentarer
 linktitle: Skapa förhandsgranskning utan kommentarer
 second_title: GroupDocs.Annotation .NET API
 description: Lär dig hur du sömlöst integrerar funktioner för dokumentkommentarer i dina .NET-applikationer med hjälp av GroupDocs.Annotation for .NET.
-type: docs
 weight: 14
 url: /sv/net/advanced-usage/generate-preview-without-comments/
 ---

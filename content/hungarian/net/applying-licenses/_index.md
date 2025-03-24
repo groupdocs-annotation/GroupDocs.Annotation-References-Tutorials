@@ -3,7 +3,6 @@ title: Licencek alkalmazása
 linktitle: Licencek alkalmazása
 second_title: GroupDocs.Annotation .NET API
 description: A GroupDocs.Annotation segítségével tárja fel a .NET dokumentumannotációjának teljes potenciálját. Kövesse lépésenkénti oktatóanyagainkat a zökkenőmentes integráció érdekében.
-type: docs
 weight: 26
 url: /hu/net/applying-licenses/
 ---

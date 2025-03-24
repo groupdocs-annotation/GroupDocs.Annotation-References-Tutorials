@@ -3,7 +3,6 @@ title: Muat Dokumen yang Dilindungi Kata Sandi
 linktitle: Muat Dokumen yang Dilindungi Kata Sandi
 second_title: GroupDocs.Annotasi .NET API
 description: Tingkatkan kolaborasi & tinjauan dokumen dengan GroupDocs.Annotation untuk .NET. Beri anotasi pada PDF & lebih lancar di aplikasi .NET Anda.
-type: docs
 weight: 17
 url: /id/net/document-loading-essentials/load-password-protected-documents/
 ---

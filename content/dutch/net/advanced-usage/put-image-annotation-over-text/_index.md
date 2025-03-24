@@ -3,7 +3,6 @@ title: Plaats beeldannotatie over tekst
 linktitle: Plaats beeldannotatie over tekst
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u beeldannotaties over tekst in .NET kunt toevoegen met GroupDocs.Annotation voor efficiënt documentbeheer en samenwerking.
-type: docs
 weight: 21
 url: /nl/net/advanced-usage/put-image-annotation-over-text/
 ---

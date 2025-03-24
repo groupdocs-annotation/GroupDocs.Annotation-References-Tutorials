@@ -3,7 +3,6 @@ title: 댓글 없이 미리보기 생성
 linktitle: 댓글 없이 미리보기 생성
 second_title: GroupDocs.Annotation .NET API
 description: .NET용 GroupDocs.Annotation을 사용하여 문서 주석 기능을 .NET 응용 프로그램에 원활하게 통합하는 방법을 알아보세요.
-type: docs
 weight: 14
 url: /ko/net/advanced-usage/generate-preview-without-comments/
 ---

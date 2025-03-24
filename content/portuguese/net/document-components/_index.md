@@ -3,7 +3,6 @@ title: Componentes do documento
 linktitle: Componentes do documento
 second_title: API GroupDocs.Annotation .NET
 description: Descubra tutoriais abrangentes sobre a integração de componentes interativos como botões, caixas de seleção e menus suspensos em documentos PDF usando GroupDocs.Annotation .NET.
-type: docs
 weight: 24
 url: /pt/net/document-components/
 ---

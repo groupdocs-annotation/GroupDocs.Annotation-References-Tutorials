@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού Strikeout κειμένου στο �
 linktitle: Προσθήκη σχολιασμού Strikeout κειμένου στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς διαγραφής κειμένου σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη συνεργασία και τις διαδικασίες ελέγχου εγγράφων αποτελεσματικά.
-type: docs
 weight: 26
 url: /el/net/unlocking-annotation-power/add-text-strikeout-annotation/
 ---

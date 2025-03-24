@@ -3,7 +3,6 @@ title: Voeg tekstonderstrepingsannotatie toe aan document
 linktitle: Voeg tekstonderstrepingsannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u annotaties met tekstonderstrepingen aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter moeiteloos de samenwerking en communicatie.
-type: docs
 weight: 27
 url: /nl/net/unlocking-annotation-power/add-text-underline-annotation/
 ---

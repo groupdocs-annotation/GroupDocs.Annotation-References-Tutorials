@@ -3,7 +3,6 @@ title: ローカルディスクからドキュメントをロード
 linktitle: ローカルディスクからドキュメントをロード
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET を使用して、ドキュメントの注釈の機能を解放します。注釈機能を .NET アプリケーションにシームレスに統合します。
-type: docs
 weight: 13
 url: /ja/net/document-loading-essentials/load-document-from-local-disk/
 ---
@@ -59,7 +58,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### 購入する前に GroupDocs.Annotation for .NET を試すことはできますか?
 はい、以下から無料試用版をダウンロードできます。[ここ](https://releases.groupdocs.com/).
 ### GroupDocs.Annotation for .NET のドキュメントはどこで見つけられますか?
-ドキュメントにアクセスできます[ここ](https://reference.groupdocs.com/annotation/net/).
+ドキュメントにアクセスできます[ここ](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation for .NET の一時ライセンスを取得するにはどうすればよいですか?
 一時ライセンスは次から取得できます。[ここ](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation for .NET のサポートは利用できますか?

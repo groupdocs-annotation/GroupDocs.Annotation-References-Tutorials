@@ -3,7 +3,6 @@ title: Dokumentseitenvorschau erstellen
 linktitle: Dokumentseitenvorschau erstellen
 second_title: GroupDocs.Annotation .NET-API
 description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient eine Vorschau von Dokumentseiten erstellen. Verbessern Sie Ihre Dokumentenmanagement-Workflows mit dieser umfassenden Lösung.
-type: docs
 weight: 12
 url: /de/net/advanced-usage/generate-document-pages-preview/
 ---

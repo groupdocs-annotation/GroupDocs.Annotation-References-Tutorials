@@ -3,7 +3,6 @@ title: PDF Belgesine Düğme Bileşeni Ekleme
 linktitle: PDF Belgesine Düğme Bileşeni Ekleme
 second_title: GroupDocs.Annotation .NET API'si
 description: Groupdocs.Annotation for .NET'i kullanarak PDF belgelerinizi etkileşimli düğme bileşenleriyle geliştirin. Sorunsuz entegrasyon için adım adım eğitimimizi izleyin.
-type: docs
 weight: 10
 url: /tr/net/document-components/add-button-component-to-pdf/
 ---

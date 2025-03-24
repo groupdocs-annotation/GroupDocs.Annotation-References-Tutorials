@@ -3,7 +3,6 @@ title: Wygeneruj podgląd bez komentarzy
 linktitle: Wygeneruj podgląd bez komentarzy
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak bezproblemowo zintegrować możliwości adnotacji w dokumentach z aplikacjami .NET przy użyciu GroupDocs.Annotation dla .NET.
-type: docs
 weight: 14
 url: /pl/net/advanced-usage/generate-preview-without-comments/
 ---

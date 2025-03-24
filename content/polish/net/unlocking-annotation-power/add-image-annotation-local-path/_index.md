@@ -3,7 +3,6 @@ title: Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)
 linktitle: Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)
 second_title: GroupDocs.Adnotacja .NET API
 description: Dowiedz się, jak dodawać adnotacje graficzne do dokumentów za pomocą GroupDocs.Annotation dla .NET. Z łatwością zwiększ możliwości przetwarzania dokumentów.
-type: docs
 weight: 14
 url: /pl/net/unlocking-annotation-power/add-image-annotation-local-path/
 ---

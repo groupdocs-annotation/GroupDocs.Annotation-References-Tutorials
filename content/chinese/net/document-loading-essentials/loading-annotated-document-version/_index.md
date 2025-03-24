@@ -3,7 +3,6 @@ title: 加载带注释的文档版本
 linktitle: 加载带注释的文档版本
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 轻松加载带注释的文档版本。简化协作和审核流程。
-type: docs
 weight: 16
 url: /zh/net/document-loading-essentials/loading-annotated-document-version/
 ---
@@ -64,7 +63,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ### GroupDocs.Annotation for .NET 是否有免费试用版？
 是的，您可以从以下位置访问免费试用版：[这里](https://releases.groupdocs.com/).
 ### 在哪里可以找到 GroupDocs.Annotation for .NET 的文档？
-您可以参考详细文档[这里](https://reference.groupdocs.com/annotation/net/).
+您可以参考详细文档[这里](https://tutorials.groupdocs.com/annotation/net/).
 ### 如何获取 GroupDocs.Annotation for .NET 的临时许可证？
 您可以从以下位置获取临时许可证[这个链接](https://purchase.groupdocs.com/temporary-license/).
 ### 我可以在哪里寻求有关 GroupDocs.Annotation for .NET 的支持或提出问题？

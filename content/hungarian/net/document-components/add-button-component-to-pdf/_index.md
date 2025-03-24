@@ -3,7 +3,6 @@ title: Gombkomponens hozzáadása a PDF-dokumentumhoz
 linktitle: Gombkomponens hozzáadása a PDF-dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Bővítse PDF-dokumentumait interaktív gombelemekkel a Groupdocs.Annotation for .NET segítségével. Kövesse lépésről lépésre bemutató oktatóanyagunkat a zökkenőmentes integráció érdekében.
-type: docs
 weight: 10
 url: /hu/net/document-components/add-button-component-to-pdf/
 ---

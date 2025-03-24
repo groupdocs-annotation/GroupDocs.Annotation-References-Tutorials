@@ -3,7 +3,6 @@ title: Đang tải phông chữ tùy chỉnh
 linktitle: Đang tải phông chữ tùy chỉnh
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách tải liền mạch các phông chữ tùy chỉnh trong GroupDocs.Annotation dành cho .NET để nâng cao tính năng chú thích tài liệu. Hãy làm theo từng bước của chúng tôi để tích hợp dễ dàng.
-type: docs
 weight: 20
 url: /vi/net/advanced-usage/loading-custom-fonts/
 ---

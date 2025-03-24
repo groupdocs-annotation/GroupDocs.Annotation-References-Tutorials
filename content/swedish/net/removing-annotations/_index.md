@@ -3,7 +3,6 @@ title: Ta bort anteckningar
 linktitle: Ta bort anteckningar
 second_title: GroupDocs.Annotation .NET API
 description: Upptäck hur du effektivt hanterar anteckningar i .NET med självstudier för GroupDocs.Annotation. Effektivisera ditt dokumentarbetsflöde och förbättra samarbetet sömlöst.
-type: docs
 weight: 25
 url: /sv/net/removing-annotations/
 ---

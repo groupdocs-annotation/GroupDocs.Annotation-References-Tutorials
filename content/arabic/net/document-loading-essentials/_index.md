@@ -3,7 +3,6 @@ title: أساسيات تحميل المستندات
 linktitle: أساسيات تحميل المستندات
 second_title: GroupDocs.Annotation .NET API
 description: اكتشف البرامج التعليمية الأساسية لتحميل المستندات باستخدام GroupDocs.Annotation .NET. يتكامل بسلاسة مع Amazon S3 وAzure وFTP والقرص المحلي والتدفقات والمزيد.
-type: docs
 weight: 20
 url: /ar/net/document-loading-essentials/
 ---

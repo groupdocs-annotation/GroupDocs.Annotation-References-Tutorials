@@ -3,7 +3,6 @@ title: 从文件设置许可证
 linktitle: 从文件设置许可证
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 将强大的文档注释功能无缝集成到您的 .NET 应用程序中。
-type: docs
 weight: 10
 url: /zh/net/applying-licenses/set-license-from-file/
 ---

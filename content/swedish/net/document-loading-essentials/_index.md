@@ -3,7 +3,6 @@ title: Viktigt att ladda dokument
 linktitle: Viktigt att ladda dokument
 second_title: GroupDocs.Annotation .NET API
 description: Upptäck viktiga självstudier för att ladda dokument med GroupDocs.Annotation .NET. Integrera sömlöst med Amazon S3, Azure, FTP, lokal disk, strömmar och mer.
-type: docs
 weight: 20
 url: /sv/net/document-loading-essentials/
 ---

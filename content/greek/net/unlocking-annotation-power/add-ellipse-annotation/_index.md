@@ -3,7 +3,6 @@ title: Προσθήκη σχολιασμού Ellipse στο έγγραφο
 linktitle: Προσθήκη σχολιασμού Ellipse στο έγγραφο
 second_title: GroupDocs.Annotation .NET API
 description: Μάθετε πώς να προσθέτετε σχολιασμούς ελλείψεων σε έγγραφα στο .NET χρησιμοποιώντας GroupDocs.Annotation. Ενισχύστε τη συνεργασία και την επικοινωνία χωρίς κόπο.
-type: docs
 weight: 13
 url: /el/net/unlocking-annotation-power/add-ellipse-annotation/
 ---

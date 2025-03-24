@@ -3,7 +3,6 @@ title: Charger un document à partir d'un flux
 linktitle: Charger un document à partir d'un flux
 second_title: API GroupDocs.Annotation .NET
 description: Apprenez à annoter des documents dans .NET sans effort avec GroupDocs.Annotation. Améliorez la collaboration et la productivité.
-type: docs
 weight: 14
 url: /fr/net/document-loading-essentials/load-document-from-stream/
 ---

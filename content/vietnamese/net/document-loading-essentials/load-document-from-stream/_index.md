@@ -3,7 +3,6 @@ title: Tải tài liệu từ luồng
 linktitle: Tải tài liệu từ luồng
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách chú thích tài liệu trong .NET một cách dễ dàng với GroupDocs.Annotation. Tăng cường hợp tác và năng suất.
-type: docs
 weight: 14
 url: /vi/net/document-loading-essentials/load-document-from-stream/
 ---

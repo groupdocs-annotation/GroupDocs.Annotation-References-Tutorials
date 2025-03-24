@@ -3,7 +3,6 @@ title: Tambahkan Anotasi Pengganti Teks ke Dokumen
 linktitle: Tambahkan Anotasi Pengganti Teks ke Dokumen
 second_title: GroupDocs.Annotasi .NET API
 description: Pelajari cara menambahkan anotasi pengganti teks ke dokumen .NET Anda dengan mudah menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kemampuan manipulasi dokumen Anda.
-type: docs
 weight: 24
 url: /id/net/unlocking-annotation-power/add-text-replacement-annotation/
 ---

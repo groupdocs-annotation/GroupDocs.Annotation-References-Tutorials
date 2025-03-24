@@ -3,7 +3,6 @@ title: Odebrat více anotací podle ID
 linktitle: Odebrat více anotací podle ID
 second_title: GroupDocs.Annotation .NET API
 description: Zjistěte, jak odstranit více anotací podle ID v .NET pomocí GroupDocs.Annotation, a vylepšit tak své možnosti správy dokumentů bez námahy.
-type: docs
 weight: 13
 url: /cs/net/removing-annotations/remove-multiple-annotations-by-ids/
 ---

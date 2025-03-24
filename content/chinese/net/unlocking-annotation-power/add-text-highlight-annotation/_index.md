@@ -3,7 +3,6 @@ title: 向文档添加文本突出显示注释
 linktitle: 向文档添加文本突出显示注释
 second_title: GroupDocs.Annotation .NET API
 description: 了解如何使用 GroupDocs.Annotation for .NET 将文本突出显示注释添加到文档中。通过此综合性增强协作和生产力。
-type: docs
 weight: 22
 url: /zh/net/unlocking-annotation-power/add-text-highlight-annotation/
 ---

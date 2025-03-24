@@ -3,7 +3,6 @@ title: أضف تعليقًا توضيحيًا لتنقيح الموارد إلى
 linktitle: أضف تعليقًا توضيحيًا لتنقيح الموارد إلى المستند
 second_title: GroupDocs.Annotation .NET API
 description: قم بتحسين سير عمل إدارة المستندات باستخدام GroupDocs.Annotation لـ .NET. قم بدمج التعليقات التوضيحية لتنقيح الموارد بسلاسة في .NET الخاص بك لتحقيق الكفاءة.
-type: docs
 weight: 19
 url: /ar/net/unlocking-annotation-power/add-resources-redaction-annotation/
 ---

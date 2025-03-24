@@ -3,7 +3,6 @@ title: Ajouter une annotation polyligne au document
 linktitle: Ajouter une annotation polyligne au document
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment ajouter des annotations polylignes aux documents à l'aide de GroupDocs.Annotation pour .NET. Améliorez facilement les processus de collaboration et de révision de documents.
-type: docs
 weight: 18
 url: /fr/net/unlocking-annotation-power/add-polyline-annotation/
 ---
@@ -91,6 +90,6 @@ Oui, vous pouvez personnaliser diverses propriétés des annotations telles que 
 ### GroupDocs.Annotation pour .NET propose-t-il un essai gratuit ?
  Oui, vous pouvez bénéficier d'un essai gratuit de GroupDocs.Annotation pour .NET en visitant[ce lien](https://releases.groupdocs.com/).
 ### Où puis-je trouver de la documentation pour GroupDocs.Annotation pour .NET ?
- Vous pouvez trouver la documentation de GroupDocs.Annotation pour .NET[ici](https://reference.groupdocs.com/annotation/net/).
+ Vous pouvez trouver la documentation de GroupDocs.Annotation pour .NET[ici](https://tutorials.groupdocs.com/annotation/net/).
 ### Comment puis-je obtenir de l’aide pour tout problème ou requête lié à GroupDocs.Annotation pour .NET ?
  Vous pouvez obtenir de l'aide en visitant le forum GroupDocs.Annotation[ici](https://forum.groupdocs.com/c/annotation/10).

@@ -3,7 +3,6 @@ title: Удалить аннотации по идентификатору
 linktitle: Удалить аннотации по идентификатору
 second_title: GroupDocs.Аннотация .NET API
 description: Узнайте, как удалить аннотации по идентификатору с помощью GroupDocs.Annotation для .NET. Эффективно оптимизируйте документооборот.
-type: docs
 weight: 11
 url: /ru/net/removing-annotations/remove-annotations-by-id/
 ---

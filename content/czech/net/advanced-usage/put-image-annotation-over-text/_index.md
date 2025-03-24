@@ -3,7 +3,6 @@ title: Umístěte poznámku obrázku přes text
 linktitle: Umístěte poznámku obrázku přes text
 second_title: GroupDocs.Annotation .NET API
 description: Naučte se přidávat obrázkové anotace přes text v .NET pomocí GroupDocs.Annotation pro efektivní správu dokumentů a spolupráci.
-type: docs
 weight: 21
 url: /cs/net/advanced-usage/put-image-annotation-over-text/
 ---

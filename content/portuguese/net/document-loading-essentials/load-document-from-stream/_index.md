@@ -3,7 +3,6 @@ title: Carregar documento do stream
 linktitle: Carregar documento do stream
 second_title: API GroupDocs.Annotation .NET
 description: Aprenda como anotar documentos em .NET sem esforço com GroupDocs.Annotation. Melhore a colaboração e a produtividade.
-type: docs
 weight: 14
 url: /pt/net/document-loading-essentials/load-document-from-stream/
 ---

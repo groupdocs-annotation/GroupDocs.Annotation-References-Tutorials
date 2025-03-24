@@ -3,7 +3,6 @@ title: Thêm chú thích đoạn văn bản tìm kiếm vào tài liệu
 linktitle: Thêm chú thích đoạn văn bản tìm kiếm vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Khám phá sức mạnh của GroupDocs.Annotation dành cho .NET và dễ dàng thêm khả năng chú thích tài liệu vào ứng dụng của bạn.
-type: docs
 weight: 20
 url: /vi/net/unlocking-annotation-power/add-search-text-fragment-annotation/
 ---

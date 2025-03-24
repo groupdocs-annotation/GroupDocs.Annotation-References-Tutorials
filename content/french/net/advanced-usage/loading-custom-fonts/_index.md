@@ -3,7 +3,6 @@ title: Chargement de polices personnalisées
 linktitle: Chargement de polices personnalisées
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez comment charger de manière transparente des polices personnalisées dans GroupDocs.Annotation pour .NET afin d'améliorer l'annotation des documents. Suivez nos étapes étape par étape pour une intégration facile.
-type: docs
 weight: 20
 url: /fr/net/advanced-usage/loading-custom-fonts/
 ---

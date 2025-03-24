@@ -3,7 +3,6 @@ title: Xin giấy phép
 linktitle: Xin giấy phép
 second_title: GroupDocs.Annotation .NET API
 description: Khai phá toàn bộ tiềm năng của chú thích tài liệu trong .NET với GroupDocs.Annotation. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch.
-type: docs
 weight: 26
 url: /vi/net/applying-licenses/
 ---

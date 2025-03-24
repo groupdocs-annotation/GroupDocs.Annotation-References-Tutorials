@@ -3,7 +3,6 @@ title: Szerezze be a dokumentum összes verziókulcsát
 linktitle: Szerezze be a dokumentum összes verziókulcsát
 second_title: GroupDocs.Annotation .NET API
 description: Ismerje meg, hogyan kérheti le egy dokumentum összes verziókulcsát a GroupDocs.Annotation for .NET segítségével. Növelje dokumentumkezelési képességeit ezzel az átfogó programmal.
-type: docs
 weight: 16
 url: /hu/net/advanced-usage/get-all-version-keys-document/
 ---

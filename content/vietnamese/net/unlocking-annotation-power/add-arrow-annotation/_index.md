@@ -3,7 +3,6 @@ title: Thêm chú thích mũi tên vào tài liệu
 linktitle: Thêm chú thích mũi tên vào tài liệu
 second_title: GroupDocs.Annotation .NET API
 description: Tìm hiểu cách thêm chú thích mũi tên vào tài liệu của bạn bằng GroupDocs.Annotation for .NET. Nâng cao tính rõ ràng và tính tương tác của tài liệu một cách dễ dàng.
-type: docs
 weight: 11
 url: /vi/net/unlocking-annotation-power/add-arrow-annotation/
 ---

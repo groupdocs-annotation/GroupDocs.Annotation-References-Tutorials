@@ -3,7 +3,6 @@ title: 高度な使用法
 linktitle: 高度な使用法
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation .NET の高度な使用方法のチュートリアルをご覧ください。画質、注釈のエクスポートなどに関するステップバイステップのガイドでドキュメント管理を強化します。
-type: docs
 weight: 22
 url: /ja/net/advanced-usage/
 ---

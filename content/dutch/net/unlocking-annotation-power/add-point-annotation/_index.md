@@ -3,7 +3,6 @@ title: Voeg puntannotatie toe aan document
 linktitle: Voeg puntannotatie toe aan document
 second_title: GroupDocs.Annotation .NET API
 description: Leer hoe u puntannotatie aan PDF's kunt toevoegen met GroupDocs.Annotation voor .NET. Stapsgewijze handleiding voor naadloze integratie.
-type: docs
 weight: 17
 url: /nl/net/unlocking-annotation-power/add-point-annotation/
 ---

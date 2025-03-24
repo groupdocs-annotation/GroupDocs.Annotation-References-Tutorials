@@ -3,7 +3,6 @@ title: Principes essentiels du chargement de documents
 linktitle: Principes essentiels du chargement de documents
 second_title: API GroupDocs.Annotation .NET
 description: Découvrez les didacticiels essentiels pour charger des documents à l'aide de GroupDocs.Annotation .NET. Intégrez-vous de manière transparente à Amazon S3, Azure, FTP, disque local, flux, etc.
-type: docs
 weight: 20
 url: /fr/net/document-loading-essentials/
 ---

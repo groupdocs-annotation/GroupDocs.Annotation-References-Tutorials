@@ -3,7 +3,6 @@ title: 解锁注释功能
 linktitle: 解锁注释功能
 second_title: GroupDocs.Annotation .NET API
 description: 使用 GroupDocs.Annotation for .NET 教程解锁注释的强大功能。了解逐步添加各种注释并轻松增强协作。
-type: docs
 weight: 23
 url: /zh/net/unlocking-annotation-power/
 ---

@@ -3,7 +3,6 @@ title: Szövegszerű megjegyzés hozzáadása a dokumentumhoz
 linktitle: Szövegszerű megjegyzés hozzáadása a dokumentumhoz
 second_title: GroupDocs.Annotation .NET API
 description: Tanulja meg, hogyan adhat könnyedén szöveges, kacskaringós megjegyzéseket a dokumentumokhoz a Groupdocs.Annotation for .NET segítségével. Fokozza az együttműködést és a dokumentum-ellenőrzési folyamatokat.
-type: docs
 weight: 25
 url: /hu/net/unlocking-annotation-power/add-text-squiggly-annotation/
 ---

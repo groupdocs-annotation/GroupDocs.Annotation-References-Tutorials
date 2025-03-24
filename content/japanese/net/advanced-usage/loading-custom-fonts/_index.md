@@ -3,7 +3,6 @@ title: カスタムフォントのロード
 linktitle: カスタムフォントのロード
 second_title: GroupDocs.Annotation .NET API
 description: GroupDocs.Annotation for .NET にカスタム フォントをシームレスにロードしてドキュメントの注釈を強化する方法を学びます。簡単に統合するには、ステップバイステップに従ってください。
-type: docs
 weight: 20
 url: /ja/net/advanced-usage/loading-custom-fonts/
 ---

@@ -3,7 +3,6 @@ title: Licentie instellen vanuit Stream
 linktitle: Licentie instellen vanuit Stream
 second_title: GroupDocs.Annotation .NET API
 description: Ontgrendel het volledige potentieel van documentannotatie in .NET met GroupDocs.Annotation. Volg onze stapsgewijze handleiding voor een naadloze integratie.
-type: docs
 weight: 11
 url: /nl/net/applying-licenses/set-license-from-stream/
 ---
@@ -13,7 +12,7 @@ Welkom bij de uitgebreide handleiding over het gebruik van GroupDocs.Annotation 
 Voordat u in de zelfstudie duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
 1.  GroupDocs.Annotation voor .NET: Zorg ervoor dat u GroupDocs.Annotation voor .NET hebt gedownload en geïnstalleerd vanaf de[download link](https://releases.groupdocs.com/annotation/net/).
 2.  Licentie: Verkrijg een geldige licentie voor GroupDocs.Annotation. Je kunt er een kopen bij[hier](https://purchase.groupdocs.com/buy) of vraag een tijdelijke licentie aan[hier](https://purchase.groupdocs.com/temporary-license/).
-3.  Documentatie: Maak uzelf vertrouwd met de[documentatie](https://reference.groupdocs.com/annotation/net/) voor GroupDocs.Annotatie. Het biedt gedetailleerd inzicht in de API-functionaliteiten.
+3.  Documentatie: Maak uzelf vertrouwd met de[documentatie](https://tutorials.groupdocs.com/annotation/net/) voor GroupDocs.Annotatie. Het biedt gedetailleerd inzicht in de API-functionaliteiten.
 
 ## Naamruimten importeren
 Laten we eerst de benodigde naamruimten importeren om GroupDocs.Annotation in uw .NET-project te gaan gebruiken:
@@ -63,6 +62,6 @@ Ja, u heeft een geldige licentie nodig om de volledige functionaliteit van Group
 ### Kan ik GroupDocs.Annotation voor .NET uitproberen voordat ik het aanschaf?
  Ja, u kunt een gratis proeflicentie aanvragen[hier](https://releases.groupdocs.com/) om de mogelijkheden van GroupDocs.Annotation voor .NET te verkennen.
 ### Hoe kan ik de nieuwste documentatie voor GroupDocs.Annotation voor .NET verkrijgen?
- U kunt verwijzen naar de[documentatie](https://reference.groupdocs.com/annotation/net/) voor GroupDocs.Annotation voor .NET voor toegang tot gedetailleerde API-referenties en tutorials.
+ U kunt verwijzen naar de[documentatie](https://tutorials.groupdocs.com/annotation/net/) voor GroupDocs.Annotation voor .NET voor toegang tot gedetailleerde API-referenties en tutorials.
 ### Wat moet ik doen als ik problemen ondervind met mijn licentie?
 Als u problemen ondervindt met uw licentie, neem dan contact op met het GroupDocs-ondersteuningsteam voor hulp.
