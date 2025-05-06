@@ -66,7 +66,7 @@ We'll break down the implementation into a step-by-step guide focusing on adding
 **Overview:**
 Adding a squiggly annotation is an effective way to indicate spelling errors or other textual issues. This section explains how to create and apply this type of annotation using GroupDocs.Annotation for .NET.
 
-#### Step 1: Initialize Annotator Object (H3)
+#### Step 1: Initialize Annotator Object 
 Create an instance of the `Annotator` class, passing in your document's file path:
 ```csharp
 using System;
@@ -83,7 +83,7 @@ using (Annotator annotator = new Annotator(inputFilePath))
 }
 ```
 
-#### Step 2: Create and Configure Squiggly Annotation (H3)
+#### Step 2: Create and Configure Squiggly Annotation 
 Define your squiggly annotation, setting properties like color, opacity, and the specific area on the document:
 ```csharp
 using GroupDocs.Annotation.Models;
@@ -114,7 +114,7 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 };
 ```
 
-#### Step 3: Add Annotation to Document (H3)
+#### Step 3: Add Annotation to Document 
 Use the `Annotator` object to add your configured annotation:
 ```csharp
 // Add the squiggly annotation

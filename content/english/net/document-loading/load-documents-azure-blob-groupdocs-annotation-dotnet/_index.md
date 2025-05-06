@@ -69,7 +69,7 @@ We’ll break down the implementation into key features, focusing on loading doc
 ### Loading Document from Azure (H2)
 This feature enables seamless integration of Azure storage with your .NET applications, allowing you to load and annotate documents efficiently.
 
-#### Authentication and Accessing Containers (H3)
+#### Authentication and Accessing Containers 
 Firstly, authenticate and access your Azure Blob container:
 ```csharp
 using System;
@@ -107,7 +107,7 @@ public static CloudBlobContainer GetContainer()
 
 - **CloudBlobContainer:** Represents a specific container in Azure Blob Storage. Creating or referencing it allows you to manage blobs within that container effectively.
 
-#### Loading Document into GroupDocs (H3)
+#### Loading Document into GroupDocs 
 After obtaining the blob, load it as follows:
 ```csharp
 public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string blobName)

@@ -78,7 +78,7 @@ GroupDocs.Annotation provides a robust API to annotate documents in various form
 ### Feature Overview: Adding Arrow Annotations
 Arrow annotations are useful for pointing out sections within a document. This section guides you through creating and customizing these annotations.
 
-#### Step 1: Prepare Replies (H3)
+#### Step 1: Prepare Replies 
 Annotations can have replies to facilitate discussions or provide additional context:
 
 ```java
@@ -95,7 +95,7 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-#### Step 2: Create the Arrow Annotation (H3)
+#### Step 2: Create the Arrow Annotation 
 Configure your arrow annotation with necessary details:
 
 ```java
@@ -111,7 +111,7 @@ arrow.setPenWidth((byte) 3); // Arrow line width
 arrow.setReplies(replies); // Attach replies
 ```
 
-#### Step 3: Add and Save the Annotation (H3)
+#### Step 3: Add and Save the Annotation 
 Add your configured arrow annotation to the document and save it:
 
 ```java
