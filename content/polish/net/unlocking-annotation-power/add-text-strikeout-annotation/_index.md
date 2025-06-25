@@ -1,24 +1,24 @@
 ---
-title: Dodaj przekreśloną adnotację tekstową do dokumentu
-linktitle: Dodaj przekreśloną adnotację tekstową do dokumentu
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak dodawać przekreślone adnotacje tekstowe do dokumentów za pomocą GroupDocs.Annotation dla .NET. Usprawnij efektywnie procesy współpracy i przeglądu dokumentów.
-weight: 26
-url: /pl/net/unlocking-annotation-power/add-text-strikeout-annotation/
+"description": "Dowiedz się, jak dodawać adnotacje tekstowe przekreślone do dokumentów za pomocą GroupDocs.Annotation dla platformy .NET. Usprawnij współpracę i procesy przeglądania dokumentów."
+"linktitle": "Dodaj adnotację przekreślenia tekstu do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dodaj adnotację przekreślenia tekstu do dokumentu"
+"url": "/pl/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+"weight": 26
 ---
 
-# Dodaj przekreśloną adnotację tekstową do dokumentu
+# Dodaj adnotację przekreślenia tekstu do dokumentu
 
 ## Wstęp
-tym samouczku omówimy, jak dodać przekreśloną adnotację tekstową do dokumentu za pomocą programu GroupDocs.Annotation dla platformy .NET. Ta biblioteka zapewnia zaawansowane narzędzia do dodawania adnotacji do różnych typów dokumentów, usprawniające współpracę i procesy przeglądania dokumentów.
-## Warunki wstępne
-Zanim zaczniemy, upewnij się, że masz następujące wymagania wstępne:
-1.  GroupDocs.Adnotacja dla .NET: Zainstaluj bibliotekę. Można go pobrać z[Tutaj](https://releases.groupdocs.com/annotation/net/).
-2. Środowisko programistyczne: Skonfiguruj odpowiednie środowisko programistyczne dla programowania .NET.
-3. Dokument: Przygotuj dokument do dodania adnotacji, na przykład plik PDF.
+tym samouczku pokażemy, jak dodać adnotację przekreślenia tekstu do dokumentu przy użyciu GroupDocs.Annotation dla .NET. Ta biblioteka udostępnia potężne narzędzia do adnotacji różnych typów dokumentów, usprawniając współpracę i procesy przeglądu dokumentów.
+## Wymagania wstępne
+Zanim zaczniemy, upewnij się, że spełniasz następujące wymagania wstępne:
+1. GroupDocs.Annotation dla .NET: Zainstaluj bibliotekę. Możesz ją pobrać z [Tutaj](https://releases.groupdocs.com/annotation/net/).
+2. Środowisko programistyczne: skonfiguruj odpowiednie środowisko programistyczne do tworzenia aplikacji .NET.
+3. Dokument: Przygotuj dokument, który będziesz mógł komentować, np. plik PDF.
 
 ## Importowanie przestrzeni nazw
-Najpierw zaimportuj niezbędne przestrzenie nazw, aby uzyskać dostęp do funkcjonalności GroupDocs.Adnotacja:
+Najpierw zaimportuj niezbędne przestrzenie nazw, aby uzyskać dostęp do funkcjonalności GroupDocs.Annotation:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,13 +28,13 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Podzielmy teraz proces dodawania przekreślonego tekstu na kilka kroków:
+Teraz podzielimy proces dodawania adnotacji przekreślenia tekstu na kilka kroków:
 ## Krok 1: Zdefiniuj ścieżkę wyjściową
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 Tutaj definiujemy ścieżkę wyjściową, w której zostanie zapisany dokument z adnotacjami.
-## Krok 2: Zainicjuj adnotator
+## Krok 2: Zainicjuj Adnotator
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
@@ -68,12 +68,12 @@ StrikeoutAnnotation strikeout = new StrikeoutAnnotation
     }
 };
 ```
-Utwórz obiekt StrikeoutAnnotation z żądanymi właściwościami, takimi jak wiadomość, krycie, numer strony, kolor tła, punkty (współrzędne) i odpowiedzi.
+Utwórz obiekt StrikeoutAnnotation z pożądanymi właściwościami, takimi jak wiadomość, krycie, numer strony, kolor tła, punkty (współrzędne) i odpowiedzi.
 ## Krok 4: Dodaj adnotację
 ```csharp
 annotator.Add(strikeout);
 ```
-Dodaj utworzoną adnotację przekreślenia do dokumentu.
+Dodaj do dokumentu utworzoną adnotację o przekreśleniu.
 ## Krok 5: Zapisz dokument
 ```csharp
 annotator.Save(outputPath);
@@ -81,15 +81,15 @@ annotator.Save(outputPath);
 Zapisz dokument z adnotacjami w określonej ścieżce wyjściowej.
 
 ## Wniosek
-W tym samouczku dowiedzieliśmy się, jak dodać przekreśloną adnotację tekstową do dokumentu za pomocą GroupDocs.Annotation dla .NET. Ta potężna biblioteka umożliwia wydajne dodawanie adnotacji do dokumentów, usprawniając współpracę i procesy przeglądania dokumentów.
-## Często zadawane pytania
+W tym samouczku dowiedzieliśmy się, jak dodać adnotację przekreślenia tekstu do dokumentu przy użyciu GroupDocs.Annotation dla .NET. Ta potężna biblioteka umożliwia wydajną adnotację dokumentu, usprawniając współpracę i procesy przeglądu dokumentów.
+## Najczęściej zadawane pytania
 ### Czy GroupDocs.Annotation jest kompatybilny z różnymi formatami dokumentów?
 Tak, GroupDocs.Annotation obsługuje szeroką gamę formatów dokumentów, w tym PDF, Word, Excel, PowerPoint i inne.
 ### Czy mogę dostosować wygląd adnotacji?
-Oczywiście możesz dostosować właściwości adnotacji, takie jak kolor, przezroczystość, rozmiar czcionki i inne, zgodnie z własnymi wymaganiami.
+Oczywiście, możesz dostosować właściwości adnotacji, takie jak kolor, krycie, rozmiar czcionki i inne, zależnie od swoich wymagań.
 ### Czy GroupDocs.Annotation udostępnia funkcje współpracy?
-Tak, GroupDocs.Annotation ułatwia współpracę, umożliwiając użytkownikom dodawanie komentarzy, odpowiedzi i adnotacji do dokumentów.
-### Czy dostępny jest bezpłatny okres próbny?
- Tak, możesz skorzystać z bezpłatnego okresu próbnego[Tutaj](https://releases.groupdocs.com/).
+Tak, GroupDocs.Annotation ułatwia współpracę, pozwalając użytkownikom dodawać komentarze, odpowiedzi i adnotacje do dokumentów.
+### Czy jest dostępna bezpłatna wersja próbna?
+Tak, możesz skorzystać z bezpłatnej wersji próbnej [Tutaj](https://releases.groupdocs.com/).
 ### Gdzie mogę uzyskać pomoc dotyczącą GroupDocs.Annotation?
- Możesz uzyskać wsparcie od[Forum GroupDocs.Adnotacje](https://forum.groupdocs.com/c/annotation/10).
+Możesz uzyskać wsparcie od [Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).

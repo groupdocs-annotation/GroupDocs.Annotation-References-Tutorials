@@ -1,21 +1,21 @@
 ---
-title: Vonallánc megjegyzés hozzáadása a dokumentumhoz
-linktitle: Vonallánc megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat hozzá vonallánc megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozza az együttműködést és a dokumentum-ellenőrzési folyamatokat könnyedén.
-weight: 18
-url: /hu/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "Tanulja meg, hogyan adhat hozzá vonallánc-megjegyzéseket dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Könnyedén javíthatja az együttműködési és dokumentum-ellenőrzési folyamatokat."
+"linktitle": "Vonallánc-megjegyzés hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Vonallánc-megjegyzés hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# Vonallánc megjegyzés hozzáadása a dokumentumhoz
+# Vonallánc-megjegyzés hozzáadása a dokumentumhoz
 
 ## Bevezetés
-A GroupDocs.Annotation for .NET egy hatékony eszköz, amellyel a fejlesztők programozottan megjegyzéseket fűzhetnek PDF és Microsoft Office dokumentumokhoz. Jellemzői közé tartozik az a képesség, hogy vonalláncos megjegyzéseket adjon a dokumentumokhoz, javítva az együttműködést és a dokumentum-ellenőrzési folyamatokat.
+GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy programozottan lássanak el jegyzeteket PDF és Microsoft Office dokumentumokban. Funkciói között szerepel a vonalláncok hozzáadásának lehetősége a dokumentumokhoz, ami javítja az együttműködést és a dokumentumok áttekintésének folyamatait.
 ## Előfeltételek
 Mielőtt folytatná ezt az oktatóanyagot, győződjön meg arról, hogy rendelkezik a következőkkel:
-- A Visual Studio telepítve van a rendszerére.
+- Visual Studio telepítve a rendszeredre.
 - C# programozási nyelv alapismerete.
--  GroupDocs.Annotation for .NET könyvtár telepítve. Letöltheti innen[itt](https://releases.groupdocs.com/annotation/net/).
+- A GroupDocs.Annotation for .NET könyvtár telepítve van. Letöltheti innen: [itt](https://releases.groupdocs.com/annotation/net/).
 
 ## Névterek importálása
 ```csharp
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 1. lépés: Határozza meg a kimeneti útvonalat
-Először határozza meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentum mentésre kerül.
+## 1. lépés: Kimeneti útvonal meghatározása
+Először is határozza meg a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Inicializálja az Annotátort
+## 2. lépés: Annotátor inicializálása
 Inicializálja az annotátort a bemeneti dokumentum nevének megadásával.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## 3. lépés: Vonallánc megjegyzés objektum létrehozása
-Hozzon létre egy vonallánc megjegyzés objektumot, és állítsa be tulajdonságait, például pozíciót, üzenetet, átlátszatlanságot, tollszínt, tollstílust és tollszélességet.
+## 3. lépés: Vonallánc-feliratozási objektum létrehozása
+Hozzon létre egy vonallánc-feliratozási objektumot, és állítsa be a tulajdonságait, például a pozíciót, az üzenetet, az átlátszóságot, a toll színét, a toll stílusát és a toll szélességét.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -67,32 +67,32 @@ PolylineAnnotation polyline = new PolylineAnnotation
 4460093896,0l0.6986854460093896,0l0.6986854460093896,-0.6986854460093896l0.6986854460093896,0"
 };
 ```
-## 4. lépés: Vonallánc megjegyzés hozzáadása
-Adja hozzá a vonallánc megjegyzést a dokumentumhoz az annotátor objektum segítségével.
+## 4. lépés: Vonallánc-felirat hozzáadása
+Adja hozzá a vonallánc-megjegyzést a dokumentumhoz az annotátor objektum segítségével.
 ```csharp
 annotator.Add(polyline);
 ```
-## 5. lépés: Mentse el a dokumentumot
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+## 5. lépés: Dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 annotator.Save(outputPath);
 ```
-## 6. lépés: Jelenítse meg a sikeres üzenetet
+## 6. lépés: Sikeres üzenet megjelenítése
 Jelenítsen meg egy üzenetet, amely megerősíti a dokumentum sikeres mentését.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan adhatunk vonallánc megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Ez a funkció javítja az együttműködési és a dokumentum-ellenőrzési folyamatokat, megkönnyítve a felhasználók számára a visszajelzések és javaslatok hatékony kommunikációját.
+Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá vonallánc-megjegyzéseket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ez a funkció javítja az együttműködést és a dokumentumok áttekintési folyamatait, megkönnyítve a felhasználók számára a visszajelzések és javaslatok hatékony közlését.
 ## GYIK
 ### A GroupDocs.Annotation for .NET kompatibilis az összes dokumentumformátummal?
-A GroupDocs.Annotation for .NET támogatja az olyan népszerű dokumentumformátumokat, mint a PDF és a Microsoft Office formátumok, köztük a Word, az Excel és a PowerPoint.
-### Testreszabhatom a kommentárok megjelenését?
-Igen, testreszabhatja a megjegyzések különféle tulajdonságait, például színt, átlátszatlanságot, stílust és szélességet az igényeinek megfelelően.
-### A GroupDocs.Annotation for .NET ingyenes próbaverziót kínál?
- Igen, igénybe veheti a GroupDocs.Annotation ingyenes próbaverzióját .NET-hez, ha felkeresi[ez a link](https://releases.groupdocs.com/).
-### Hol találom a GroupDocs.Annotation for .NET dokumentációját?
- A GroupDocs.Annotation for .NET dokumentációja megtalálható[itt](https://tutorials.groupdocs.com/annotation/net/).
-### Hogyan kaphatok támogatást a GroupDocs.Annotation for .NET-hez kapcsolódó problémákhoz vagy lekérdezésekhez?
- Támogatást kaphat a GroupDocs.Annotation fórumon[itt](https://forum.groupdocs.com/c/annotation/10).
+A GroupDocs.Annotation for .NET támogatja a népszerű dokumentumformátumokat, például a PDF-et és a Microsoft Office formátumokat, beleértve a Wordöt, az Excelt és a PowerPointot.
+### Testreszabhatom a megjegyzések megjelenését?
+Igen, testreszabhatja a megjegyzések különböző tulajdonságait, például a színt, az átlátszóságot, a stílust és a szélességet az igényeinek megfelelően.
+### Ingyenes próbaverziót kínál a GroupDocs.Annotation for .NET?
+Igen, igénybe veheti a GroupDocs.Annotation for .NET ingyenes próbaverzióját a következő címen: [ezt a linket](https://releases.groupdocs.com/).
+### Hol találok dokumentációt a GroupDocs.Annotation for .NET fájlhoz?
+A GroupDocs.Annotation for .NET dokumentációját itt találja: [itt](https://tutorials.groupdocs.com/annotation/net/).
+### Hogyan kaphatok támogatást a GroupDocs.Annotation for .NET-tel kapcsolatos problémákkal vagy kérdésekkel kapcsolatban?
+Segítséget a GroupDocs.Annotation fórumon kaphatsz. [itt](https://forum.groupdocs.com/c/annotation/10).

@@ -1,25 +1,25 @@
 ---
-title: Tambahkan Anotasi Jarak ke Dokumen
-linktitle: Tambahkan Anotasi Jarak ke Dokumen
-second_title: GroupDocs.Annotasi .NET API
-description: Pelajari cara menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kolaborasi dan komunikasi dengan mudah.
-weight: 12
-url: /id/net/unlocking-annotation-power/add-distance-annotation/
+"description": "Pelajari cara menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation for .NET. Tingkatkan kolaborasi dan komunikasi dengan mudah."
+"linktitle": "Tambahkan Anotasi Jarak ke Dokumen"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Tambahkan Anotasi Jarak ke Dokumen"
+"url": "/id/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
 # Tambahkan Anotasi Jarak ke Dokumen
 
 ## Perkenalan
-Dalam tutorial ini, Anda akan mempelajari cara menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Ikuti langkah-langkah berikut untuk menyelesaikan tugas:
+Dalam tutorial ini, Anda akan mempelajari cara menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation for .NET. Ikuti langkah-langkah berikut untuk menyelesaikan tugas:
 ## Prasyarat
 
 Pastikan Anda memiliki prasyarat berikut sebelum melanjutkan:
 
--  GroupDocs.Annotation untuk .NET Library: Unduh dan instal pustaka GroupDocs.Annotation untuk .NET dari[Link ini](https://releases.groupdocs.com/annotation/net/).
-- Dokumen yang akan diberi anotasi: Siapkan dokumen (misalnya PDF) yang ingin Anda tambahkan anotasi jaraknya.
+- GroupDocs.Annotation untuk Pustaka .NET: Unduh dan instal pustaka GroupDocs.Annotation untuk .NET dari [tautan ini](https://releases.groupdocs.com/annotation/net/).
+- Dokumen yang Akan Dianotasi: Siapkan dokumen (misalnya, PDF) yang ingin Anda tambahkan anotasi jarak.
 - Lingkungan Pengembangan: Siapkan lingkungan pengembangan Anda dengan Visual Studio atau IDE lain pilihan Anda.
 
-## Impor Namespace
+## Mengimpor Ruang Nama
 
 Sebelum memulai, pastikan untuk menyertakan namespace yang diperlukan dalam kode Anda. Namespace ini penting untuk mengakses kelas dan metode yang diperlukan.
 
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## Langkah 1: Inisialisasi Annotator
+## Langkah 1: Inisialisasi Anotator
 
- Mulailah dengan menginisialisasi`Annotator` objek dengan jalur ke dokumen yang ingin Anda beri anotasi.
+Mulailah dengan menginisialisasi `Annotator` objek dengan jalur ke dokumen yang ingin Anda beri anotasi.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Kode anotasi akan ditempatkan di sini
+    // Kode anotasi akan ada di sini
 }
 ```
 
 ## Langkah 2: Buat Anotasi Jarak
 
- Sekarang, buat a`DistanceAnnotation` objek dan konfigurasikan propertinya seperti dimensi kotak, pesan, opacity, warna pena, dll.
+Sekarang, buatlah `DistanceAnnotation` objek dan konfigurasikan propertinya seperti dimensi kotak, pesan, opasitas, warna pena, dll.
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -77,7 +77,7 @@ DistanceAnnotation distance = new DistanceAnnotation
 
 ## Langkah 3: Tambahkan Anotasi
 
- Tambahkan anotasi jarak yang dibuat ke dokumen menggunakan`Add` metode objek anotator.
+Tambahkan anotasi jarak yang dibuat ke dokumen menggunakan `Add` metode objek anotator.
 
 ```csharp
 annotator.Add(distance);
@@ -85,7 +85,7 @@ annotator.Add(distance);
 
 ## Langkah 4: Simpan Dokumen
 
-Simpan dokumen beranotasi ke lokasi yang diinginkan di sistem Anda.
+Simpan dokumen yang diberi anotasi ke lokasi yang diinginkan pada sistem Anda.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
@@ -94,7 +94,7 @@ annotator.Save(outputPath);
 
 ## Langkah 5: Tampilkan Konfirmasi
 
-Terakhir, tampilkan pesan yang mengonfirmasi keberhasilan penyimpanan dokumen beranotasi.
+Terakhir, tampilkan pesan yang mengonfirmasi keberhasilan penyimpanan dokumen yang diberi anotasi.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -102,26 +102,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Kesimpulan
 
-Menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation untuk .NET adalah proses yang mudah. Dengan mengikuti langkah-langkah yang diuraikan dalam tutorial ini, Anda dapat menyempurnakan dokumen Anda dengan anotasi yang berharga, memfasilitasi kolaborasi dan komunikasi yang lebih baik.
+Menambahkan anotasi jarak ke dokumen menggunakan GroupDocs.Annotation for .NET merupakan proses yang mudah. Dengan mengikuti langkah-langkah yang diuraikan dalam tutorial ini, Anda dapat menyempurnakan dokumen Anda dengan anotasi yang berharga, sehingga memudahkan kolaborasi dan komunikasi yang lebih baik.
 
-## FAQ
+## Pertanyaan yang Sering Diajukan
 
 ### T: Dapatkah saya menyesuaikan tampilan anotasi jarak?
 
-J: Ya, Anda dapat menyesuaikan berbagai properti seperti warna, opasitas, gaya garis, dll., agar sesuai dengan kebutuhan Anda.
+A: Ya, Anda dapat menyesuaikan berbagai properti seperti warna, opasitas, gaya garis, dsb., agar sesuai dengan kebutuhan Anda.
 
 ### T: Apakah GroupDocs.Annotation mendukung anotasi pada berbagai jenis dokumen?
 
-J: Ya, GroupDocs.Annotation mendukung anotasi pada berbagai format dokumen termasuk PDF, Word, Excel, PowerPoint, dan banyak lagi.
+A: Ya, GroupDocs.Annotation mendukung anotasi pada berbagai format dokumen termasuk PDF, Word, Excel, PowerPoint, dan banyak lagi.
 
-### T: Apakah tersedia uji coba gratis untuk GroupDocs.Annotation?
+### T: Apakah ada uji coba gratis yang tersedia untuk GroupDocs.Annotation?
 
- J: Ya, Anda dapat mengakses uji coba gratis GroupDocs.Annotation dari[Link ini](https://releases.groupdocs.com/).
+A: Ya, Anda dapat mengakses uji coba gratis GroupDocs.Annotation dari [tautan ini](https://releases.groupdocs.com/).
 
-### T: Di mana saya dapat menemukan dokumentasi GroupDocs.Annotation untuk .NET?
+### T: Di mana saya dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET?
 
- J: Anda dapat merujuk pada dokumentasi rinci yang tersedia[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
+A: Anda dapat merujuk ke dokumentasi terperinci yang tersedia [Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 
 ### T: Bagaimana saya bisa mendapatkan dukungan atau bantuan dengan GroupDocs.Annotation?
 
- J: Anda dapat mencari dukungan dan bantuan dari forum komunitas GroupDocs.Annotation[Di Sini](https://forum.groupdocs.com/c/annotation/10).
+A: Anda dapat mencari dukungan dan bantuan dari forum komunitas GroupDocs.Annotation [Di Sini](https://forum.groupdocs.com/c/annotation/10).

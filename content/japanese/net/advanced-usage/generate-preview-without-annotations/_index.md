@@ -1,44 +1,44 @@
 ---
-title: 注釈なしでプレビューを生成
-linktitle: 注釈なしでプレビューを生成
-second_title: GroupDocs.Annotation .NET API
-description: GroupDocs.Annotation for .NET を使用して、.NET アプリケーション内でのドキュメントのコラボレーションと注釈を強化します。この強力なライブラリを使用すると、ドキュメントに簡単に注釈を付け、マークアップし、レビューできます。
-weight: 13
-url: /ja/net/advanced-usage/generate-preview-without-annotations/
+"description": "GroupDocs.Annotation for .NET を使用すると、.NET アプリケーション内でのドキュメントの共同作業と注釈付けが強化されます。この強力なライブラリを使えば、ドキュメントへの注釈付け、マークアップ、レビューが簡単に行えます。"
+"linktitle": "注釈なしでプレビューを生成する"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "注釈なしでプレビューを生成する"
+"url": "/ja/net/advanced-usage/generate-preview-without-annotations/"
+"weight": 13
 ---
 
-# 注釈なしでプレビューを生成
+# 注釈なしでプレビューを生成する
 
 ## 導入
-今日のデジタル時代では、ドキュメント上での効率的なコラボレーションが生産性と成功の鍵となります。世界中に散らばるチームメンバーとプロジェクトに取り組んでいる場合でも、重要な契約に関してクライアントと協力している場合でも、ドキュメントにシームレスに注釈を付けてレビューできる機能は非常に重要です。 GroupDocs.Annotation for .NET を使用すると、ドキュメントのコラボレーションを次のレベルに引き上げ、.NET アプリケーション内で直接簡単に注釈、マークアップ、レビューを行うことができます。
+今日のデジタル時代において、ドキュメントを効率的に共同作業することは、生産性と成功の鍵となります。世界中に散らばるチームメンバーとプロジェクトに取り組む場合でも、重要な契約書でクライアントと共同作業する場合でも、ドキュメントにシームレスに注釈を付け、レビューする機能は不可欠です。GroupDocs.Annotation for .NET を使えば、ドキュメントの共同作業をさらに進化させ、.NET アプリケーション内で簡単に注釈、マークアップ、レビューを行うことができます。
 ## 前提条件
-GroupDocs.Annotation for .NET を使用してドキュメント アノテーションの世界に飛び込む前に、いくつかの前提条件を満たしている必要があります。
+GroupDocs.Annotation for .NET を使用してドキュメント注釈の世界に飛び込む前に、いくつかの前提条件を満たす必要があります。
 ### 1. GroupDocs.Annotation for .NET をインストールする
-何よりもまず、GroupDocs.Annotation for .NET をダウンロードしてインストールする必要があります。ダウンロードリンクが見つかります[ここ](https://releases.groupdocs.com/annotation/net/)。提供されるインストール手順に従って、.NET 環境にライブラリをセットアップします。
-### 2. ライセンスの取得 (オプション)
-GroupDocs.Annotation for .NET は無料試用版を提供していますが、その機能に完全にアクセスするにはライセンスの取得を検討することをお勧めします。ライセンスを購入できます[ここ](https://purchase.groupdocs.com/buy)または一時ライセンスをリクエストする[ここ](https://purchase.groupdocs.com/temporary-license/)テスト目的のため。
-### 3. C# および .NET 開発に関する知識
-GroupDocs.Annotation for .NET を最大限に活用するには、C# と .NET 開発の基本を理解しておくと役立ちます。これにより、ライブラリを既存のアプリケーションやワークフローにシームレスに統合できるようになります。
-### 4. PDF ビューアをインストールする
-GroupDocs.Annotation for .NET は PDF ドキュメントで動作するため、注釈付きドキュメントをプレビューするには、システムに PDF ビューアがインストールされている必要があります。 Adobe Acrobat Reader またはその他の PDF ビューアで十分です。
+まず最初に、GroupDocs.Annotation for .NETをダウンロードしてインストールする必要があります。ダウンロードリンクは以下にあります。 [ここ](https://releases.groupdocs.com/annotation/net/)提供されているインストール手順に従って、.NET 環境にライブラリをセットアップします。
+### 2. ライセンスを取得する（オプション）
+GroupDocs.Annotation for .NETは無料トライアルを提供していますが、すべての機能にアクセスするにはライセンスの取得をご検討ください。ライセンスはご購入いただけます。 [ここ](https://purchase.groupdocs.com/buy) または一時ライセンスを申請する [ここ](https://purchase.groupdocs.com/temporary-license/) テスト目的のため。
+### 3. C#および.NET開発に精通していること
+GroupDocs.Annotation for .NETを最大限に活用するには、C#と.NET開発の基礎知識が役立ちます。これにより、ライブラリを既存のアプリケーションやワークフローにシームレスに統合できるようになります。
+### 4. PDFビューアをインストールする
+GroupDocs.Annotation for .NET は PDF ドキュメントを扱うため、注釈付きドキュメントをプレビューするには、システムに PDF ビューアーがインストールされている必要があります。Adobe Acrobat Reader などの PDF ビューアーで十分です。
 
 ## 名前空間のインポート
-ドキュメントへの注釈付けを開始する前に、必要な名前空間を .NET プロジェクトにインポートする必要があります。これにより、GroupDocs.Annotation for .NET によって提供されるクラスとメソッドにアクセスできるようになります。
+ドキュメントに注釈を付けるには、まず必要な名前空間を.NETプロジェクトにインポートする必要があります。これにより、GroupDocs.Annotation for .NETが提供するクラスとメソッドにアクセスできるようになります。
 
 ```csharp
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 
-すべての設定が完了したので、注釈のないドキュメントのプレビューを生成してみましょう。これを行うには、次の手順に従います。
-## ステップ 1: アノテーターを初期化する
-まず、のインスタンスを作成します。`Annotator`クラスに、注釈を付けたいドキュメントへのパスを渡します。
+準備が整ったので、注釈なしのドキュメントのプレビューを生成してみましょう。以下の手順に従ってください。
+## ステップ1: アノテーターを初期化する
+まず、 `Annotator` クラスに、注釈を付けるドキュメントへのパスを渡します。
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
 ```
-## ステップ 2: プレビュー オプションを構成する
-次に、要件に応じてプレビュー オプションを構成します。プレビューに含めるページ番号、プレビュー形式 (PNG など)、および注釈をレンダリングするかどうかを指定できます。
+## ステップ2: プレビューオプションを設定する
+次に、要件に応じてプレビューオプションを設定します。プレビューに含めるページ番号、プレビュー形式（例：PNG）、注釈をレンダリングするかどうかを指定できます。
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -49,24 +49,24 @@ using (Annotator annotator = new Annotator("annotated.pdf"))
     previewOptions.PageNumbers = new int[] {1, 2, 3, 4, 5, 6};
     previewOptions.RenderAnnotations = false;
 ```
-## ステップ 3: プレビューを生成する
-最後に、次のコマンドを使用してプレビューを生成します。`GeneratePreview`の方法`Document`クラスに、構成されたプレビュー オプションを渡します。
+## ステップ3: プレビューを生成する
+最後に、 `GeneratePreview` の方法 `Document` クラスに、設定されたプレビュー オプションを渡します。
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-これらの簡単な手順に従うことで、GroupDocs.Annotation for .NET を使用して、注釈なしのドキュメントのプレビューを生成できます。
+これらの簡単な手順に従うことで、GroupDocs.Annotation for .NET を使用して注釈なしのドキュメントのプレビューを生成できます。
 
 ## 結論
-結論として、GroupDocs.Annotation for .NET は、.NET アプリケーション内でのドキュメントのコラボレーションと注釈のための強力なソリューションを提供します。このチュートリアルで概説されている手順に従うことで、ドキュメントの注釈機能をプロジェクトにシームレスに統合し、コラボレーションと生産性を向上させることができます。
+結論として、GroupDocs.Annotation for .NETは、.NETアプリケーション内でのドキュメントの共同作業と注釈作成のための強力なソリューションを提供します。このチュートリアルで概説した手順に従うことで、ドキュメント注釈機能をプロジェクトにシームレスに統合し、共同作業と生産性を向上させることができます。
 ## よくある質問
 ### Q: GroupDocs.Annotation for .NET を PDF 以外のドキュメント形式で使用できますか?
-はい。GroupDocs.Annotation for .NET は、DOCX、XLSX、PPTX などのさまざまなドキュメント形式をサポートしています。
+はい、GroupDocs.Annotation for .NET は、DOCX、XLSX、PPTX など、さまざまなドキュメント形式をサポートしています。
 ### Q: GroupDocs.Annotation for .NET は .NET Core と互換性がありますか?
-はい。GroupDocs.Annotation for .NET は、.NET Framework 環境と .NET Core 環境の両方と互換性があります。
-### Q: GroupDocs.Annotation for .NET はカスタマイズ可能な注釈ツールを提供しますか?
+はい、GroupDocs.Annotation for .NET は、.NET Framework 環境と .NET Core 環境の両方と互換性があります。
+### Q: GroupDocs.Annotation for .NET ではカスタマイズ可能な注釈ツールが提供されていますか?
 はい、GroupDocs.Annotation for .NET は、特定の要件に合わせてカスタマイズできるさまざまな注釈ツールを提供します。
 ### Q: GroupDocs.Annotation for .NET を Web アプリケーションに統合できますか?
 はい、GroupDocs.Annotation for .NET はデスクトップ アプリケーションと Web アプリケーションの両方に統合でき、シームレスなドキュメント コラボレーション機能を提供します。
-### Q: GroupDocs.Annotation for .NET に関するサポートや支援が受けられるコミュニティ フォーラムはありますか?
-はい、GroupDocs.Annotation フォーラムでサポートと支援を見つけることができます。[ここ](https://forum.groupdocs.com/c/annotation/10).
+### Q: GroupDocs.Annotation for .NET に関するサポートや支援を受けられるコミュニティ フォーラムはありますか?
+はい、GroupDocs.Annotationフォーラムでサポートと支援を受けることができます。 [ここ](https://forum。groupdocs.com/c/annotation/10).

@@ -1,21 +1,21 @@
 ---
-title: 将折线注释添加到文档
-linktitle: 将折线注释添加到文档
-second_title: GroupDocs.Annotation .NET API
-description: 了解如何使用 GroupDocs.Annotation for .NET 将折线注释添加到文档中。轻松增强协作和文档审核流程。
-weight: 18
-url: /zh/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "了解如何使用 GroupDocs.Annotation for .NET 向文档添加折线注释。轻松增强协作和文档审阅流程。"
+"linktitle": "向文档添加折线注释"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "向文档添加折线注释"
+"url": "/zh/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# 将折线注释添加到文档
+# 向文档添加折线注释
 
 ## 介绍
-GroupDocs.Annotation for .NET 是一个功能强大的工具，允许开发人员以编程方式对 PDF 和 Microsoft Office 文档进行注释。其功能之一是能够向文档添加折线注释，从而增强协作和文档审阅流程。
+GroupDocs.Annotation for .NET 是一款功能强大的工具，允许开发人员以编程方式注释 PDF 和 Microsoft Office 文档。其功能之一是能够向文档添加折线注释，从而增强协作和文档审阅流程。
 ## 先决条件
-在继续本教程之前，请确保您具备以下条件：
-- Visual Studio 安装在您的系统上。
-- C# 编程语言的基础知识。
-- 安装了 .NET 库的 GroupDocs.Annotation。您可以从以下位置下载：[这里](https://releases.groupdocs.com/annotation/net/).
+在继续本教程之前，请确保您已具备以下条件：
+- 您的系统上安装了 Visual Studio。
+- C# 编程语言的基本知识。
+- 已安装 GroupDocs.Annotation for .NET 库。您可以从 [这里](https://releases。groupdocs.com/annotation/net/).
 
 ## 导入命名空间
 ```csharp
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 第 1 步：定义输出路径
-首先，定义保存注释文档的输出路径。
+## 步骤 1：定义输出路径
+首先，定义注释文档的保存输出路径。
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 第 2 步：初始化注释器
+## 步骤 2：初始化注释器
 通过提供输入文档名称来初始化注释器。
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## 第 3 步：创建折线注释对象
-创建折线注释对象并设置其属性，例如位置、消息、不透明度、画笔颜色、画笔样式和画笔宽度。
+## 步骤3：创建折线注释对象
+创建折线注释对象并设置其属性，例如位置、消息、不透明度、笔颜色、笔样式和笔宽度。
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -67,32 +67,32 @@ PolylineAnnotation polyline = new PolylineAnnotation
 4460093896,0l0.6986854460093896,0l0.6986854460093896,-0.6986854460093896l0.6986854460093896,0"
 };
 ```
-## 第 4 步：添加折线注释
-使用注释器对象将折线注释添加到文档中。
+## 步骤 4：添加折线注释
+使用注释器对象将折线注释添加到文档。
 ```csharp
 annotator.Add(polyline);
 ```
-## 第5步：保存文档
+## 步骤5：保存文档
 将注释文档保存到指定的输出路径。
 ```csharp
 annotator.Save(outputPath);
 ```
-## 第6步：显示成功消息
-显示一条消息，确认文档保存成功。
+## 步骤6：显示成功消息
+显示一条确认文档成功保存的消息。
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## 结论
-在本教程中，我们学习了如何使用 GroupDocs.Annotation for .NET 将折线注释添加到文档中。此功能增强了协作和文档审阅流程，使用户更容易有效地传达反馈和建议。
+在本教程中，我们学习了如何使用 GroupDocs.Annotation for .NET 向文档添加折线注释。此功能增强了协作和文档审阅流程，使用户能够更轻松地有效地传达反馈和建议。
 ## 常见问题解答
-### GroupDocs.Annotation for .NET 是否与所有文档格式兼容？
-GroupDocs.Annotation for .NET 支持流行的文档格式，例如 PDF 和 Microsoft Office 格式（包括 Word、Excel 和 PowerPoint）。
+### .NET 的 GroupDocs.Annotation 是否与所有文档格式兼容？
+GroupDocs.Annotation for .NET 支持流行的文档格式，例如 PDF 和 Microsoft Office 格式，包括 Word、Excel 和 PowerPoint。
 ### 我可以自定义注释的外观吗？
 是的，您可以自定义注释的各种属性，例如颜色、不透明度、样式和宽度，以满足您的要求。
 ### GroupDocs.Annotation for .NET 是否提供免费试用？
-是的，您可以访问 GroupDocs.Annotation for .NET 免费试用版[这个链接](https://releases.groupdocs.com/).
-### 在哪里可以找到 GroupDocs.Annotation for .NET 的文档？
-您可以找到 GroupDocs.Annotation for .NET 的文档[这里](https://tutorials.groupdocs.com/annotation/net/).
-### 对于与 GroupDocs.Annotation for .NET 相关的任何问题或查询，如何获得支持？
-您可以通过访问 GroupDocs.Annotation 论坛获得支持[这里](https://forum.groupdocs.com/c/annotation/10).
+是的，您可以通过访问以下网址免费试用 GroupDocs.Annotation for .NET [此链接](https://releases。groupdocs.com/).
+### 在哪里可以找到 .NET 的 GroupDocs.Annotation 文档？
+您可以找到 GroupDocs.Annotation for .NET 的文档 [这里](https://tutorials。groupdocs.com/annotation/net/).
+### 如何获得与 GroupDocs.Annotation for .NET 相关的任何问题或疑问的支持？
+您可以通过访问 GroupDocs.Annotation 论坛获得支持 [这里](https://forum。groupdocs.com/c/annotation/10).

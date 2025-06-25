@@ -1,20 +1,20 @@
 ---
-title: 在文件中新增文字刪除線註釋
-linktitle: 在文件中新增文字刪除線註釋
-second_title: GroupDocs.Annotation .NET API
-description: 了解如何使用 GroupDocs.Annotation for .NET 將文字刪除線註解新增至文件。有效增強協作和文件審核流程。
-weight: 26
-url: /zh-hant/net/unlocking-annotation-power/add-text-strikeout-annotation/
+"description": "了解如何使用 GroupDocs.Annotation for .NET 為文件新增文字刪除線註解。高效率增強協作和文件審閱流程。"
+"linktitle": "為文件新增文字刪除線註釋"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "為文件新增文字刪除線註釋"
+"url": "/zh-hant/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+"weight": 26
 ---
 
-# 在文件中新增文字刪除線註釋
+# 為文件新增文字刪除線註釋
 
 ## 介紹
-在本教學中，我們將探討如何使用 GroupDocs.Annotation for .NET 將文字刪除線註解新增至文件。該庫提供了強大的工具來註釋各種文件類型、增強協作和文件審閱流程。
+在本教學中，我們將探索如何使用 GroupDocs.Annotation for .NET 為文件新增文字刪除線註解。該庫提供了強大的工具，可用於註釋各種文件類型，從而增強協作和文件審閱流程。
 ## 先決條件
-在我們開始之前，請確保您符合以下先決條件：
-1.  GroupDocs.Annotation for .NET：安裝程式庫。您可以從以下位置下載：[這裡](https://releases.groupdocs.com/annotation/net/).
-2. 開發環境：為.NET開發建置合適的開發環境。
+在開始之前，請確保您符合以下先決條件：
+1. GroupDocs.Annotation for .NET：安裝該程式庫。您可以從以下位置下載 [這裡](https://releases。groupdocs.com/annotation/net/).
+2. 開發環境：為.NET開發設定合適的開發環境。
 3. 文件：準備好要註釋的文檔，例如 PDF 文件。
 
 ## 導入命名空間
@@ -29,17 +29,17 @@ using GroupDocs.Annotation.Options;
 ```
 
 現在，讓我們將新增文字刪除線註解的過程分解為多個步驟：
-## 第 1 步：定義輸出路徑
+## 步驟 1：定義輸出路徑
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-在這裡，我們定義保存註解文件的輸出路徑。
-## 第 2 步：初始化註釋器
+在這裡，我們定義註解文檔的儲存輸出路徑。
+## 步驟 2：初始化註解器
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-透過提供輸入文件（本例中為 PDF 文件）的路徑來初始化 Annotator 物件。
-## 第 3 步：建立刪除線註釋
+透過提供輸入文件（在本例中為 PDF 文件）的路徑來初始化 Annotator 物件。
+## 步驟 3：建立刪除線註釋
 ```csharp
 StrikeoutAnnotation strikeout = new StrikeoutAnnotation
 {
@@ -69,19 +69,19 @@ StrikeoutAnnotation strikeout = new StrikeoutAnnotation
 };
 ```
 建立具有所需屬性（例如訊息、不透明度、頁碼、背景顏色、點（座標）和回應）的 StrikeoutAnnotation 物件。
-## 第四步：新增註釋
+## 步驟 4：新增註釋
 ```csharp
 annotator.Add(strikeout);
 ```
 將已建立的刪除線註解新增至文件中。
-## 第5步：儲存文檔
+## 步驟5：儲存文檔
 ```csharp
 annotator.Save(outputPath);
 ```
 將註解文件儲存到指定的輸出路徑。
 
 ## 結論
-在本教學中，我們學習如何使用 GroupDocs.Annotation for .NET 在文件中新增文字刪除線註解。這個功能強大的函式庫可實現高效率的文件註釋，增強協作和文件審閱流程。
+在本教學中，我們學習如何使用 GroupDocs.Annotation for .NET 為文件新增文字刪除線註解。這個強大的函式庫可以實現高效率的文件註釋，從而增強協作和文件審閱流程。
 ## 常見問題解答
 ### GroupDocs.Annotation 是否相容於各種文件格式？
 是的，GroupDocs.Annotation 支援多種文件格式，包括 PDF、Word、Excel、PowerPoint 等。
@@ -90,6 +90,6 @@ annotator.Save(outputPath);
 ### GroupDocs.Annotation 是否提供協作功能？
 是的，GroupDocs.Annotation 允許使用者在文件中添加評論、回覆和註釋，從而促進協作。
 ### 有免費試用嗎？
-是的，您可以免費試用[這裡](https://releases.groupdocs.com/).
-### 在哪裡可以獲得 GroupDocs.Annotation 的支援？
-您可以從以下方面獲得支持[GroupDocs.Annotation 論壇](https://forum.groupdocs.com/c/annotation/10).
+是的，您可以免費試用 [這裡](https://releases。groupdocs.com/).
+### 我可以在哪裡獲得 GroupDocs.Annotation 的支援？
+您可以從 [GroupDocs.Annotation 論壇](https://forum。groupdocs.com/c/annotation/10).

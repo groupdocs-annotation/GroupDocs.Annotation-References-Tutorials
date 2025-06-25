@@ -1,28 +1,28 @@
 ---
-title: Lägg till vattenstämpelkommentar till dokumentet
-linktitle: Lägg till vattenstämpelkommentar till dokumentet
-second_title: GroupDocs.Annotation .NET API
-description: Lär dig hur du lägger till vattenstämpelkommentarer till dina dokument utan ansträngning med GroupDocs.Annotation för .NET. Förbättra dokumentets tydlighet och säkerhet.
-weight: 28
-url: /sv/net/unlocking-annotation-power/add-watermark-annotation/
+"description": "Lär dig hur du enkelt lägger till vattenstämpelanteckningar i dina dokument med GroupDocs.Annotation för .NET. Förbättra dokumentens tydlighet och säkerhet."
+"linktitle": "Lägg till vattenstämpelanteckning i dokumentet"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Lägg till vattenstämpelanteckning i dokumentet"
+"url": "/sv/net/unlocking-annotation-power/add-watermark-annotation/"
+"weight": 28
 ---
 
-# Lägg till vattenstämpelkommentar till dokumentet
+# Lägg till vattenstämpelanteckning i dokumentet
 
 ## Introduktion
-I den här handledningen går vi igenom processen att lägga till en vattenstämpelkommentar till ett dokument med GroupDocs.Annotation för .NET. Vattenstämpelkommentarer är användbara för att indikera status för ett dokument, markera det som konfidentiellt eller lägga till annan relevant information.
+den här handledningen går vi igenom processen för att lägga till en vattenstämpelannotering i ett dokument med GroupDocs.Annotation för .NET. Vattenstämpelannoteringar är användbara för att indikera statusen för ett dokument, markera det som konfidentiellt eller lägga till annan relevant information.
 
-## Förutsättningar
+## Förkunskapskrav
 
 Innan vi börjar, se till att du har följande:
 
-1.  GroupDocs.Annotation för .NET: Du kan ladda ner den från[här](https://releases.groupdocs.com/annotation/net/).
+1. GroupDocs.Annotation för .NET: Du kan ladda ner den från [här](https://releases.groupdocs.com/annotation/net/).
 2. Visual Studio: Se till att du har Visual Studio installerat på ditt system.
-3. Grundläggande kunskaper i C#: Förtrogenhet med programmeringsspråket C# är nödvändig för att förstå och implementera kodexemplen.
+3. Grundläggande kunskaper i C#: Bekantskap med programmeringsspråket C# är nödvändig för att förstå och implementera kodexemplen.
 
-## Importera namnområden
+## Importera namnrymder
 
-Innan vi börjar koda, låt oss importera de nödvändiga namnrymden:
+Innan vi börjar koda, låt oss importera de nödvändiga namnrymderna:
 
 ```csharp
 using System;
@@ -32,30 +32,30 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
 
-Låt oss nu dela upp processen att lägga till en vattenstämpelkommentar i flera steg:
+Nu ska vi dela upp processen för att lägga till en vattenstämpelanteckning i flera steg:
 
-## Steg 1: Definiera utdatasökväg
+## Steg 1: Definiera utmatningsväg
 
- Först måste vi definiera utdatavägen där det kommenterade dokumentet ska sparas. Vi kommer att använda`Path` klass från`System.IO` namnutrymme för att kombinera utdatakatalogens sökväg med filnamnet.
+Först måste vi definiera utdatasökvägen där det kommenterade dokumentet ska sparas. Vi använder `Path` klass från `System.IO` namnrymd för att kombinera sökvägen till utdatakatalogen med filnamnet.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Steg 2: Initiera Annotator
+## Steg 2: Initiera annotatorn
 
-Därefter initierar vi annotatorn genom att ange indatadokumentets sökväg. Detta gör att vi kan lägga till kommentarer till dokumentet.
+Nästa steg är att initiera annotatorn genom att ange sökvägen till indatadokumentet. Detta gör att vi kan lägga till anteckningar i dokumentet.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Anteckningskoden kommer hit
+    // Annoteringskoden kommer att placeras här
 }
 ```
 
-## Steg 3: Skapa vattenmärkesanteckning
+## Steg 3: Skapa vattenstämpelannotering
 
-Låt oss nu skapa ett vattenmärkesanteckningsobjekt med önskade egenskaper som vinkel, position, text, teckensnittsfärg, opacitet, etc.
+Nu ska vi skapa ett vattenstämpelannoteringsobjekt med önskade egenskaper som vinkel, position, text, teckenfärg, opacitet etc.
 
 ```csharp
 WatermarkAnnotation watermark = new WatermarkAnnotation
@@ -88,9 +88,9 @@ WatermarkAnnotation watermark = new WatermarkAnnotation
 };
 ```
 
-## Steg 4: Lägg till vattenstämpelkommentar
+## Steg 4: Lägg till vattenstämpelannotering
 
- Nu lägger vi till vattenstämpelkommentaren till dokumentet med hjälp av`Add` metod för anteckningsobjektet.
+Nu ska vi lägga till vattenstämpeln i dokumentet med hjälp av `Add` metod för annotator-objektet.
 
 ```csharp
 annotator.Add(watermark);
@@ -98,7 +98,7 @@ annotator.Add(watermark);
 
 ## Steg 5: Spara dokument
 
-Slutligen kommer vi att spara det kommenterade dokumentet till den angivna utdatasökvägen.
+Slutligen sparar vi det kommenterade dokumentet till den angivna utdatasökvägen.
 
 ```csharp
 annotator.Save(outputPath);
@@ -106,26 +106,26 @@ annotator.Save(outputPath);
 
 ## Slutsats
 
-I den här handledningen lärde vi oss hur man lägger till en vattenstämpelkommentar till ett dokument med GroupDocs.Annotation för .NET. Vattenmärkeskommentarer är ett värdefullt verktyg för att markera dokument med relevant information eller ange deras status.
+I den här handledningen lärde vi oss hur man lägger till en vattenstämpelannotering i ett dokument med GroupDocs.Annotation för .NET. Vattenstämpelannoteringar är ett värdefullt verktyg för att markera dokument med relevant information eller indikera deras status.
 
-## FAQ's
+## Vanliga frågor
 
-### F: Kan jag anpassa utseendet på vattenstämpelkommentaren?
+### F: Kan jag anpassa utseendet på vattenmärkesannoteringen?
 
-S: Ja, du kan anpassa olika egenskaper som text, teckenstorlek, färg, opacitet, position, etc., för att skräddarsy vattenstämpeln efter dina krav.
+A: Ja, du kan anpassa olika egenskaper som text, teckenstorlek, färg, opacitet, position etc. för att skräddarsy vattenstämpeln efter dina behov.
 
 ### F: Är GroupDocs.Annotation för .NET kompatibelt med olika dokumentformat?
 
-S: Ja, GroupDocs.Annotation stöder ett brett utbud av dokumentformat inklusive PDF, Microsoft Word, Excel, PowerPoint och bildformat.
+A: Ja, GroupDocs.Annotation stöder en mängd olika dokumentformat, inklusive PDF, Microsoft Word, Excel, PowerPoint och bildformat.
 
-### F: Kan jag lägga till flera kommentarer till ett enda dokument?
+### F: Kan jag lägga till flera anteckningar i ett enda dokument?
 
-S: Absolut, GroupDocs.Annotation låter dig lägga till flera kommentarer av olika typer till ett enda dokument, vilket möjliggör omfattande dokumentuppmärkning.
+A: Absolut, GroupDocs.Annotation låter dig lägga till flera anteckningar av olika typer i ett enda dokument, vilket möjliggör omfattande dokumentmarkering.
 
-### F: Ger GroupDocs.Annotation stöd för samarbetskommentarer?
+### F: Har GroupDocs.Annotation stöd för gemensam annotering?
 
-S: Ja, GroupDocs.Annotation underlättar samverkanskommentarer genom att tillåta användare att lägga till kommentarer, svar och anteckningar, vilket främjar effektivt samarbete mellan teammedlemmar.
+A: Ja, GroupDocs.Annotation underlättar gemensam annotering genom att låta användare lägga till kommentarer, svar och anteckningar, vilket främjar effektivt samarbete mellan teammedlemmar.
 
 ### F: Finns det en testversion tillgänglig för GroupDocs.Annotation för .NET?
 
- S: Ja, du kan ladda ner en gratis testversion från[här](https://releases.groupdocs.com/).
+A: Ja, du kan ladda ner en gratis testversion från [här](https://releases.groupdocs.com/).

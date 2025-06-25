@@ -1,23 +1,23 @@
 ---
-title: Lägg till textredigeringskommentar till dokument
-linktitle: Lägg till textredigeringskommentar till dokument
-second_title: GroupDocs.Annotation .NET API
-description: Lär dig hur du lägger till textredigeringskommentarer till PDF-dokument med GroupDocs.Annotation för .NET. Skydda känslig information utan ansträngning.
-weight: 23
-url: /sv/net/unlocking-annotation-power/add-text-redaction-annotation/
+"description": "Lär dig hur du lägger till textborttagningsanteckningar i PDF-dokument med GroupDocs.Annotation för .NET. Skydda känslig information utan ansträngning."
+"linktitle": "Lägg till textborttagningsanteckning i dokument"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Lägg till textborttagningsanteckning i dokument"
+"url": "/sv/net/unlocking-annotation-power/add-text-redaction-annotation/"
+"weight": 23
 ---
 
-# Lägg till textredigeringskommentar till dokument
+# Lägg till textborttagningsanteckning i dokument
 
 ## Introduktion
-Att lägga till en textredigeringsanteckning till ett dokument kan vara ett avgörande steg för att säkert hantera känslig information. GroupDocs.Annotation för .NET tillhandahåller en robust lösning för att uppnå detta sömlöst. I den här självstudien guidar vi dig genom processen att lägga till en textredigeringskommentar till ditt dokument steg för steg.
-## Förutsättningar
+Att lägga till en textborttagningsanteckning i ett dokument kan vara ett avgörande steg för att hantera känslig information på ett säkert sätt. GroupDocs.Annotation för .NET erbjuder en robust lösning för att uppnå detta smidigt. I den här handledningen guidar vi dig genom processen att lägga till en textborttagningsanteckning i ditt dokument steg för steg.
+## Förkunskapskrav
 Innan vi börjar, se till att du har följande förutsättningar på plats:
-1.  GroupDocs.Annotation for .NET: Se till att du har installerat GroupDocs.Annotation for .NET-biblioteket. Du kan ladda ner den från[hemsida](https://releases.groupdocs.com/annotation/net/).
-2. Utvecklingsmiljö: Konfigurera en utvecklingsmiljö med en .NET-kompatibel IDE som Visual Studio.
+1. GroupDocs.Annotation för .NET: Se till att du har installerat GroupDocs.Annotation för .NET-biblioteket. Du kan ladda ner det från [webbplats](https://releases.groupdocs.com/annotation/net/).
+2. Utvecklingsmiljö: Konfigurera en utvecklingsmiljö med en .NET-kompatibel IDE, till exempel Visual Studio.
 
-## Importera namnområden
-Låt oss först importera de nödvändiga namnrymden till vårt projekt:
+## Importera namnrymder
+Först, låt oss importera de nödvändiga namnrymderna till vårt projekt:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,21 +26,21 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Steg 1: Definiera utdatasökväg
+## Steg 1: Definiera utmatningsväg
 Definiera utdatasökvägen där du vill spara det kommenterade dokumentet. Se till att den är tillgänglig och skrivbar.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Steg 2: Initiera Annotator
- Initiera annotatorn med sökvägen till inmatningsdokumentet. Byta ut`"input.pdf"` med sökvägen till ditt dokument.
+## Steg 2: Initiera annotatorn
+Initiera annotatorn med sökvägen för inmatningsdokumentet. Ersätt `"input.pdf"` med sökvägen till ditt dokument.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Anteckningskoden kommer hit
+    // Annoteringskoden kommer att placeras här
 }
 ```
-## Steg 3: Skapa textredigeringskommentarer
- Skapa en`TextRedactionAnnotation`objekt med de egenskaper som krävs som t.ex`PageNumber`, `FontColor` , och`Points`. Anpassa anteckningen enligt dina krav.
+## Steg 3: Skapa textborttagningsannotering
+Skapa en `TextRedactionAnnotation` objekt med de nödvändiga egenskaperna, såsom `PageNumber`, `FontColor`och `Points`Anpassa anteckningen efter dina behov.
 ```csharp
 TextRedactionAnnotation textRedaction = new TextRedactionAnnotation
 {
@@ -68,27 +68,27 @@ TextRedactionAnnotation textRedaction = new TextRedactionAnnotation
 };
 ```
 ## Steg 4: Lägg till anteckning och spara
-Lägg till den skapade anteckningen till dokumentet med hjälp av anteckningsskrivaren och spara det annoterade dokumentet i den angivna utmatningsvägen.
+Lägg till den skapade anteckningen i dokumentet med hjälp av annotatorn och spara det annoterade dokumentet till den angivna utdatasökvägen.
 ```csharp
 annotator.Add(textRedaction);
 annotator.Save(outputPath);
 ```
 ## Steg 5: Kontrollera utdata
-Slutligen bekräftar du att dokumentet har sparats på den angivna utmatningsvägen.
+Bekräfta slutligen att dokumentet har sparats till den angivna utdatasökvägen.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Slutsats
-I den här handledningen har vi gått igenom processen att lägga till en textredigeringskommentar till ett dokument med GroupDocs.Annotation för .NET. Med dessa steg kan du nu säkert hantera känslig information i dina dokument.
-## FAQ's
-### Kan jag anpassa utseendet på textredigeringskommentaren?
-Ja, du kan anpassa olika egenskaper som teckensnittsfärg, fyllningsfärg och opacitet för att passa dina krav.
-### Finns det en testversion innan köp?
- Ja, du kan få tillgång till en gratis testversion från[hemsida](https://releases.groupdocs.com/).
+I den här handledningen har vi gått igenom processen att lägga till en textborttagningsanteckning i ett dokument med GroupDocs.Annotation för .NET. Med dessa steg kan du nu säkert hantera känslig information i dina dokument.
+## Vanliga frågor
+### Kan jag anpassa utseendet på textborttagningsanteckningen?
+Ja, du kan anpassa olika egenskaper som teckenfärg, fyllningsfärg och opacitet efter dina behov.
+### Finns det en testversion tillgänglig innan köp?
+Ja, du kan få tillgång till en gratis testversion från [webbplats](https://releases.groupdocs.com/).
 ### Hur kan jag få support om jag stöter på några problem?
- Du kan få support från GroupDocs.Annotation-gemenskapsforumet[här](https://forum.groupdocs.com/c/annotation/10).
+Du kan få support från GroupDocs.Annotation-communityforumet [här](https://forum.groupdocs.com/c/annotation/10).
 ### Behöver jag en tillfällig licens för teständamål?
- Ja, du kan få en tillfällig licens från[köpsidan](https://purchase.groupdocs.com/temporary-license/)för provning.
-### Kan jag lägga till flera kommentarer till ett enda dokument?
-Absolut, GroupDocs.Annotation låter dig lägga till olika typer av kommentarer och flera instanser till ett enda dokument.
+Ja, du kan få ett tillfälligt körkort från [köpsida](https://purchase.groupdocs.com/temporary-license/) för testning.
+### Kan jag lägga till flera anteckningar i ett enda dokument?
+Absolut, GroupDocs.Annotation låter dig lägga till olika typer av anteckningar och flera instanser i ett enda dokument.

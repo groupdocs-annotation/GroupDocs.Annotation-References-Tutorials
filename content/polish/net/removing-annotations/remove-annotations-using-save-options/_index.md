@@ -1,29 +1,29 @@
 ---
-title: Usuń adnotacje za pomocą opcji zapisywania w .NET
-linktitle: Usuń adnotacje za pomocą opcji zapisywania w .NET
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak usuwać adnotacje z plików PDF i innych dokumentów w platformie .NET za pomocą GroupDocs.Annotation. Przewodnik krok po kroku z przykładami kodu.
-weight: 14
-url: /pl/net/removing-annotations/remove-annotations-using-save-options/
+"description": "Dowiedz się, jak usuwać adnotacje z plików PDF i innych dokumentów w .NET za pomocą GroupDocs.Annotation. Przewodnik krok po kroku z przykładami kodu."
+"linktitle": "Usuwanie adnotacji za pomocą opcji zapisu w .NET"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Usuwanie adnotacji za pomocą opcji zapisu w .NET"
+"url": "/pl/net/removing-annotations/remove-annotations-using-save-options/"
+"weight": 14
 ---
 
-# Usuń adnotacje za pomocą opcji zapisywania w .NET
+# Usuwanie adnotacji za pomocą opcji zapisu w .NET
 
 ## Wstęp
 
-GroupDocs.Annotation dla .NET to potężne narzędzie, które umożliwia programistom łatwe dodawanie funkcji adnotacji do aplikacji .NET. Niezależnie od tego, czy pracujesz w systemie zarządzania dokumentami, platformie współpracy, czy innej aplikacji wymagającej przetwarzania dokumentów, GroupDocs.Annotation zapewnia kompleksowy zestaw funkcji umożliwiających bezproblemowe dodawanie adnotacji do plików PDF i innych formatów dokumentów.
+GroupDocs.Annotation for .NET to potężne narzędzie, które pozwala deweloperom z łatwością dodawać funkcjonalność adnotacji do aplikacji .NET. Niezależnie od tego, czy pracujesz w systemie zarządzania dokumentami, platformie współpracy czy innej aplikacji, która obejmuje przetwarzanie dokumentów, GroupDocs.Annotation zapewnia kompleksowy zestaw funkcji do bezproblemowego adnotowania plików PDF i innych formatów dokumentów.
 
-## Warunki wstępne
+## Wymagania wstępne
 
-Zanim zagłębisz się w świat dodawania adnotacji do dokumentów za pomocą GroupDocs.Annotation dla .NET, upewnij się, że spełnione są następujące wymagania wstępne:
+Zanim zaczniesz adnotować dokumenty za pomocą GroupDocs.Annotation dla platformy .NET, upewnij się, że spełnione są następujące wymagania wstępne:
 
 ### 1. Zainstaluj GroupDocs.Annotation dla .NET
 
- Rozpocznij od pobrania i zainstalowania GroupDocs.Annotation dla .NET. Najnowszą wersję można pobrać ze strony[download page](https://releases.groupdocs.com/annotation/net/).
+Zacznij od pobrania i zainstalowania GroupDocs.Annotation dla .NET. Najnowszą wersję możesz pobrać ze strony [strona do pobrania](https://releases.groupdocs.com/annotation/net/).
 
 ## Importowanie przestrzeni nazw
 
-Aby rozpocząć korzystanie z GroupDocs.Annotation w projekcie .NET, musisz zaimportować niezbędne przestrzenie nazw. Oto przestrzenie nazw, których będziesz często używać:
+Aby rozpocząć używanie GroupDocs.Annotation w projekcie .NET, musisz zaimportować niezbędne przestrzenie nazw. Oto przestrzenie nazw, których będziesz powszechnie używać:
 
 ```csharp
 using GroupDocs.Annotation.Options;
@@ -32,30 +32,30 @@ using System.IO;
 ```
 
 
-Przyjrzyjmy się teraz procesowi usuwania adnotacji z dokumentu za pomocą funkcji Zapisz opcje w .NET:
+Teraz przeanalizujemy proces usuwania adnotacji z dokumentu za pomocą funkcji Opcje zapisu w środowisku .NET:
 
 ## Krok 1: Zdefiniuj ścieżkę wyjściową
 
-Najpierw określ ścieżkę wyjściową, w której zostanie zapisany dokument z usuniętymi adnotacjami. Możesz skorzystać z`Path.Combine` metoda połączenia ścieżki katalogu z nazwą pliku wyjściowego.
+Najpierw zdefiniuj ścieżkę wyjściową, w której zostanie zapisany dokument z usuniętymi adnotacjami. Możesz użyć `Path.Combine` metoda łącząca ścieżkę katalogu z nazwą pliku wyjściowego.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Krok 2: Zainicjuj adnotator
+## Krok 2: Zainicjuj Adnotator
 
- Następnie zainicjuj instancję`Annotator` class podając ścieżkę do dokumentu zawierającego adnotacje.
+Następnie zainicjuj instancję `Annotator` klasę, podając ścieżkę do dokumentu zawierającego adnotacje.
 
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
-    // Tutaj zostanie umieszczony kod usuwania adnotacji
+    // Kod usuwania adnotacji będzie tutaj
 }
 ```
 
 ## Krok 3: Zapisz dokument z usunięciem adnotacji
 
- Teraz skorzystaj z`Save` metoda`Annotator` klasa wraz z`SaveOptions` , aby zapisać dokument z usuniętymi adnotacjami. w`SaveOptions` , Ustaw`AnnotationTypes` własność do`AnnotationType.None` , aby usunąć wszystkie adnotacje.
+Teraz użyj `Save` metoda `Annotator` klasa wraz z `SaveOptions` aby zapisać dokument z usuniętymi adnotacjami. W `SaveOptions`, ustaw `AnnotationTypes` nieruchomość do `AnnotationType.None` aby usunąć wszystkie adnotacje.
 
 ```csharp
 annotator.Save(outputPath, new SaveOptions() { AnnotationTypes = AnnotationType.None });
@@ -63,7 +63,7 @@ annotator.Save(outputPath, new SaveOptions() { AnnotationTypes = AnnotationType.
 
 ## Krok 4: Wyświetl komunikat o powodzeniu
 
-Na koniec wyświetl komunikat o powodzeniu wskazujący, że dokument został pomyślnie zapisany z usuniętymi adnotacjami.
+Na koniec wyświetl komunikat informujący o pomyślnym zapisaniu dokumentu z usuniętymi adnotacjami.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -71,26 +71,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Wniosek
 
-Podsumowując, GroupDocs.Annotation dla .NET upraszcza proces usuwania adnotacji z dokumentów. Postępując zgodnie ze szczegółowym przewodnikiem opisanym powyżej, programiści mogą bezproblemowo zintegrować funkcję usuwania adnotacji ze swoimi aplikacjami .NET.
+Podsumowując, GroupDocs.Annotation dla .NET upraszcza proces usuwania adnotacji z dokumentów. Postępując zgodnie z opisanym powyżej przewodnikiem krok po kroku, programiści mogą bezproblemowo zintegrować funkcjonalność usuwania adnotacji ze swoimi aplikacjami .NET.
 
-## Często zadawane pytania
+## Najczęściej zadawane pytania
 
-### P: Czy GroupDocs.Annotation może usuwać adnotacje z dokumentów w innych formatach niż PDF?
+### P: Czy GroupDocs.Annotation może usuwać adnotacje z innych formatów dokumentów niż PDF?
 
-O: GroupDocs.Annotation obsługuje różne formaty dokumentów, w tym PDF, Word, Excel i PowerPoint, umożliwiając usuwanie adnotacji z szerokiej gamy dokumentów.
+A: GroupDocs.Annotation obsługuje różne formaty dokumentów, w tym PDF, Word, Excel i PowerPoint, umożliwiając usuwanie adnotacji z szerokiej gamy dokumentów.
 
-### P: Czy GroupDocs.Annotation można łatwo zintegrować z istniejącymi projektami .NET?
+### P: Czy GroupDocs.Annotation jest łatwy do zintegrowania z istniejącymi projektami .NET?
 
-O: Tak, GroupDocs.Annotation zapewnia prosty interfejs API i obszerną dokumentację, ułatwiając programistom integrację funkcji adnotacji z aplikacjami .NET.
+O: Tak, GroupDocs.Annotation udostępnia proste API i kompleksową dokumentację, dzięki czemu programiści mogą łatwo integrować funkcje adnotacji z aplikacjami .NET.
 
 ### P: Czy GroupDocs.Annotation obsługuje selektywne usuwanie adnotacji?
 
-O: Tak, GroupDocs.Annotation pozwala programistom określić, jakie typy adnotacji mają zostać usunięte, co daje im elastyczność w zarządzaniu adnotacjami w dokumentach.
+O: Tak, GroupDocs.Annotation pozwala programistom określić, które typy adnotacji mają zostać usunięte, co daje im elastyczność w zarządzaniu adnotacjami w dokumentach.
 
-### P: Czy mogę bezpłatnie wypróbować GroupDocs.Annotation przed zakupem?
+### P: Czy mogę wypróbować GroupDocs.Annotation za darmo przed zakupem?
 
- O: Tak, możesz pobrać bezpłatną wersję próbną GroupDocs.Annotation z witryny[strona z wydaniami](https://releases.groupdocs.com/) aby zapoznać się z jego funkcjami przed podjęciem decyzji o zakupie.
+O: Tak, możesz pobrać bezpłatną wersję próbną GroupDocs.Annotation ze strony [strona wydań](https://releases.groupdocs.com/) aby zapoznać się z jego funkcjami przed podjęciem decyzji o zakupie.
 
 ### P: Gdzie mogę uzyskać pomoc dotyczącą GroupDocs.Annotation?
 
- O: Aby uzyskać pomoc techniczną i wsparcie społeczności, możesz odwiedzić stronę[Forum GroupDocs.Adnotacje](https://forum.groupdocs.com/c/annotation/10).
+A: Aby uzyskać pomoc techniczną i wsparcie społeczności, możesz odwiedzić stronę [Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).

@@ -1,27 +1,27 @@
 ---
-title: Előzetes munkalap oszlopok létrehozása
-linktitle: Előzetes munkalap oszlopok létrehozása
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan fűzhet megjegyzéseket dokumentumokhoz a GroupDocs.Annotation for .NET használatával. Lépésről lépésre bemutató .NET-fejlesztőknek. Bővítse alkalmazásait.
-weight: 15
-url: /hu/net/advanced-usage/generate-preview-worksheet-columns/
+"description": "Tanulja meg, hogyan láthat el jegyzetekkel dokumentumokat a GroupDocs.Annotation for .NET segítségével. Lépésről lépésre útmutató .NET fejlesztőknek. Fejlessze alkalmazásait."
+"linktitle": "Előnézeti munkalap oszlopainak generálása"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Előnézeti munkalap oszlopainak generálása"
+"url": "/hu/net/advanced-usage/generate-preview-worksheet-columns/"
+"weight": 15
 ---
 
-# Előzetes munkalap oszlopok létrehozása
+# Előnézeti munkalap oszlopainak generálása
 
 ## Bevezetés
-Üdvözöljük átfogó oktatóanyagunkban a GroupDocs.Annotation for .NET képességeinek kihasználásáról! Ebben az útmutatóban végigvezetjük Önt ennek a hatékony eszköznek a dokumentumok hatékony megjegyzéseinek felhasználásának folyamatán. Akár tapasztalt fejlesztő, akár újonc a .NET-fejlesztés világában, ez az oktatóanyag felvértezi azokat a tudást és készségeket, amelyek szükségesek ahhoz, hogy a megjegyzési funkciókat zökkenőmentesen integrálhassa alkalmazásaiba.
+Üdvözöljük átfogó oktatóanyagunkban, amely bemutatja a GroupDocs.Annotation for .NET képességeinek kiaknázását! Ebben az útmutatóban végigvezetjük Önt azon, hogyan használhatja ezt a hatékony eszközt dokumentumok hatékony annotálására. Akár tapasztalt fejlesztő, akár újonc a .NET fejlesztés világában, ez az oktatóanyag felvértezi Önt a szükséges ismeretekkel és készségekkel ahhoz, hogy zökkenőmentesen integrálhassa az annotációs funkciókat alkalmazásaiba.
 ## Előfeltételek
-Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
+Mielőtt belemerülnél az oktatóanyagba, győződj meg róla, hogy a következő előfeltételek teljesülnek:
 ### 1. .NET fejlesztői környezet beállítása
-Győződjön meg arról, hogy működő .NET fejlesztői környezet van beállítva a gépén. A .NET SDK legújabb verziója letölthető a Microsoft webhelyéről.
-### 2. GroupDocs.Annotation for .NET Library
- Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat a rendelkezésre állóból[letöltési link](https://releases.groupdocs.com/annotation/net/). Kövesse a telepítési utasításokat a könyvtár sikeres integrálásához a projektbe.
-### 3. Beviteli dokumentum
-Készítsen egy mintadokumentumot (pl. "input.xlsx"), amelyet a GroupDocs.Annotation for .NET segítségével megjegyzésekkel kíván ellátni. Győződjön meg arról, hogy a dokumentum elérhető a projektkönyvtárból.
+Győződjön meg róla, hogy működő .NET fejlesztői környezet van beállítva a gépén. A .NET SDK legújabb verzióját letöltheti a Microsoft webhelyéről.
+### 2. GroupDocs.Annotation .NET könyvtárhoz
+Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat a mellékelt [letöltési link](https://releases.groupdocs.com/annotation/net/)Kövesse a telepítési utasításokat a könyvtár projektbe való sikeres integrálásához.
+### 3. Bemeneti dokumentum
+Készítsen egy mintadokumentumot (pl. "input.xlsx"), amelyet a GroupDocs.Annotation for .NET segítségével szeretne annotálni. Győződjön meg arról, hogy a dokumentum elérhető a projektkönyvtárából.
 
 ## Névterek importálása
-Kezdésként importálja a szükséges névtereket a projektbe. Ezek a névterek hozzáférést biztosítanak a dokumentumfeljegyzési feladatok hatékony végrehajtásához szükséges osztályokhoz és metódusokhoz.
+Kezdésként importálja a szükséges névtereket a projektbe. Ezek a névterek hozzáférést biztosítanak azokhoz az osztályokhoz és metódusokhoz, amelyek a dokumentum-annotációs feladatok hatékony végrehajtásához szükségesek.
 
 ```csharp
 using GroupDocs.Annotation;
@@ -30,15 +30,15 @@ using System;
 using System.IO;
 ```
 
-Most, hogy beállítottuk a fejlesztői környezetünket és importáltuk a szükséges névtereket, merüljünk el a dokumentumunkhoz tartozó előnézeti munkalap oszlopok létrehozásában.
-## 1. lépés: Inicializálja az előnézeti beállításokat
+Most, hogy beállítottuk a fejlesztői környezetünket és importáltuk a szükséges névtereket, vágjunk bele a dokumentumunk előnézeti munkalapjának oszlopainak létrehozásába.
+## 1. lépés: Előnézeti beállítások inicializálása
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(
     pageNumber => new FileStream(Path.Combine("Your Document Directory", $"cells_page{pageNumber}.png"), FileMode.Create),
     (number, stream) => stream.Dispose()
 );
 ```
-## 2. lépés: Határozza meg a munkalap oszlopait
+## 2. lépés: Munkalap oszlopainak meghatározása
 ```csharp
 previewOptions.WorksheetColumns.Add(new WorksheetColumnsRange("Sheet1", 2, 3));
 previewOptions.WorksheetColumns.Add(new WorksheetColumnsRange("Sheet1", 1, 1));
@@ -50,21 +50,21 @@ using (Annotator annotator = new Annotator("input.xlsx"))
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-## 4. lépés: Jelenítse meg a sikeres üzenetet
+## 4. lépés: Sikeres üzenet megjelenítése
 ```csharp
 Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {"Your Document Directory"}.");
 ```
 
 ## Következtetés
-Gratulálunk! Sikeresen megtanulta, hogyan hozhat létre előnézeti munkalaposzlopokat a GroupDocs.Annotation for .NET használatával. Ennek a tudásnak a birtokában most már könnyedén beépítheti a fejlett annotációs képességeket .NET-alkalmazásaiba.
+Gratulálunk! Sikeresen megtanulta, hogyan hozhat létre előnézeti munkalap oszlopokat a GroupDocs.Annotation for .NET használatával. Ezzel a tudással most könnyedén beépíthet fejlett annotációs funkciókat .NET alkalmazásaiba.
 ## GYIK
-### GroupDocs.Annotation kompatibilis más .NET-keretrendszerekkel?
-Igen, a GroupDocs.Annotation különféle .NET-keretrendszereket támogat, beleértve a .NET Core-t és a .NET-keretrendszert.
-### Testreszabhatom a GroupDocs.Annotation segítségével létrehozott megjegyzések megjelenését?
-Teljesen! A GroupDocs.Annotation kiterjedt testreszabási lehetőségeket biztosít a megjegyzések megjelenéséhez, beleértve a színt, az átlátszatlanságot és a megjegyzés típusát.
-### A GroupDocs.Annotation támogatja az Exceltől eltérő dokumentumformátumokat?
-Igen, a GroupDocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, Word, PowerPoint és egyebeket.
-### Rendelkezésre áll technikai támogatás a GroupDocs.Annotation felhasználói számára?
- Igen, hozzáférhet a technikai támogatáshoz és a közösségi fórumokhoz a biztosítotton keresztül[támogatási link](https://forum.groupdocs.com/c/annotation/10).
-### Kipróbálhatom a GroupDocs.Annotation szolgáltatást licenc vásárlása előtt?
- Természetesen! Letöltheti a GroupDocs.Annotation ingyenes próbaverzióját a[weboldal](https://releases.groupdocs.com/).
+### Kompatibilis a GroupDocs.Annotation más .NET keretrendszerekkel?
+Igen, a GroupDocs.Annotation számos .NET keretrendszert támogat, beleértve a .NET Core-t és a .NET Frameworköt.
+### Testreszabhatom a GroupDocs.Annotation segítségével létrehozott jegyzetek megjelenését?
+Abszolút! A GroupDocs.Annotation széleskörű testreszabási lehetőségeket kínál a jegyzetek megjelenéséhez, beleértve a színt, az átlátszóságot és a jegyzettípust.
+### A GroupDocs.Annotation támogatja az Excelen kívüli dokumentumformátumokat is?
+Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a PDF, Word, PowerPoint és egyebeket.
+### Elérhető a technikai támogatás a GroupDocs.Annotation felhasználók számára?
+Igen, hozzáférhet a technikai támogatáshoz és a közösségi fórumokhoz a megadott módon. [támogatási link](https://forum.groupdocs.com/c/annotation/10).
+### Kipróbálhatom a GroupDocs.Annotationt a licenc megvásárlása előtt?
+Természetesen! Letöltheti a GroupDocs.Annotation ingyenes próbaverzióját innen: [weboldal](https://releases.groupdocs.com/).

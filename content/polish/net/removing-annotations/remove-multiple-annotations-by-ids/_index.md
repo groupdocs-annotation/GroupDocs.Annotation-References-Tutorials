@@ -1,25 +1,25 @@
 ---
-title: Usuń wiele adnotacji według identyfikatorów
-linktitle: Usuń wiele adnotacji według identyfikatorów
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak usunąć wiele adnotacji według identyfikatorów w .NET za pomocą GroupDocs.Annotation, co bez wysiłku zwiększa możliwości zarządzania dokumentami.
-weight: 13
-url: /pl/net/removing-annotations/remove-multiple-annotations-by-ids/
+"description": "Dowiedz się, jak usuwać wiele adnotacji według identyfikatorów w środowisku .NET za pomocą GroupDocs.Annotation. W ten sposób bez trudu rozszerzysz możliwości zarządzania dokumentami."
+"linktitle": "Usuń wiele adnotacji według identyfikatorów"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Usuń wiele adnotacji według identyfikatorów"
+"url": "/pl/net/removing-annotations/remove-multiple-annotations-by-ids/"
+"weight": 13
 ---
 
 # Usuń wiele adnotacji według identyfikatorów
 
 ## Wstęp
-świecie zarządzania dokumentami i współpracy GroupDocs.Annotation dla .NET okazuje się potężnym narzędziem, umożliwiającym programistom płynne dodawanie adnotacji i manipulowanie dokumentami w aplikacjach .NET. W tym samouczku omówimy jedną z podstawowych funkcji oferowanych przez GroupDocs.Annotation dla .NET: usuwanie wielu adnotacji według identyfikatorów. Postępując zgodnie z tym przewodnikiem krok po kroku, uzyskasz kompleksową wiedzę na temat skutecznego usuwania adnotacji, co umożliwi Ci zwiększenie możliwości zarządzania dokumentami.
-## Warunki wstępne
-Zanim zagłębisz się w ten samouczek, upewnij się, że spełnione są następujące wymagania wstępne:
+W świecie zarządzania dokumentami i współpracy GroupDocs.Annotation for .NET staje się potężnym narzędziem, umożliwiającym deweloperom bezproblemowe adnotowanie i manipulowanie dokumentami w aplikacjach .NET. Ten samouczek zagłębi się w jedną z podstawowych funkcjonalności oferowanych przez GroupDocs.Annotation for .NET: usuwanie wielu adnotacji według identyfikatorów. Postępując zgodnie z tym przewodnikiem krok po kroku, uzyskasz kompleksowe zrozumienie, jak skutecznie usuwać adnotacje, co pozwoli Ci zwiększyć możliwości zarządzania dokumentami.
+## Wymagania wstępne
+Zanim przejdziesz do tego samouczka, upewnij się, że spełnione są następujące wymagania wstępne:
 ### 1. Instalacja GroupDocs.Annotation dla .NET
- Po pierwsze, musisz mieć zainstalowany GroupDocs.Annotation for .NET w swoim środowisku programistycznym. Możesz pobrać wymagany pakiet ze strony[link do pobrania](https://releases.groupdocs.com/annotation/net/) udostępniane przez GroupDocs.
-### 2. Podstawowa znajomość .NET Framework
-Aby zrozumieć przykłady kodu i efektywnie wdrożyć dostarczone rozwiązanie, niezbędna jest podstawowa znajomość .NET Framework.
+Po pierwsze, musisz mieć GroupDocs.Annotation dla .NET zainstalowany w swoim środowisku programistycznym. Wymagany pakiet możesz pobrać ze strony [link do pobrania](https://releases.groupdocs.com/annotation/net/) dostarczone przez GroupDocs.
+### 2. Podstawowe zrozumienie .NET Framework
+Do zrozumienia przykładów kodu i efektywnego wdrożenia dostarczonego rozwiązania konieczna jest podstawowa znajomość platformy .NET Framework.
 
 ## Importuj przestrzenie nazw
-Aby rozpocząć, zaimportuj niezbędne przestrzenie nazw do aplikacji .NET. Te przestrzenie nazw zapewniają dostęp do funkcji wymaganych do manipulowania adnotacjami.
+Na początek zaimportuj niezbędne przestrzenie nazw do swojej aplikacji .NET. Te przestrzenie nazw zapewniają dostęp do funkcjonalności wymaganych do manipulacji adnotacjami.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -33,37 +33,37 @@ using GroupDocs.Annotation.Options;
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 W tym kroku definiujemy ścieżkę, w której zostanie zapisany zmodyfikowany dokument z usuniętymi adnotacjami.
-## Krok 2: Utwórz instancję obiektu adnotatora
+## Krok 2: Utwórz obiekt adnotatora
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 ```
- Tutaj tworzymy instancję`Annotator` class, przekazując jako parametr ścieżkę dokumentu PDF z adnotacjami.
+Tutaj tworzymy instancję `Annotator` klasa, przekazując ścieżkę do dokumentu PDF z adnotacjami jako parametr.
 ## Krok 3: Usuń adnotacje według identyfikatorów
 ```csharp
 annotator.Remove(new List<int>{0,1});
 ```
-W tym kluczowym kroku określamy identyfikatory adnotacji, które mają zostać usunięte. Na liście można przekazać wiele identyfikatorów w celu jednoczesnego usunięcia.
+W tym kluczowym kroku określamy identyfikatory adnotacji, które mają zostać usunięte. Wiele identyfikatorów może zostać przekazanych w ramach listy w celu jednoczesnego usunięcia.
 ## Krok 4: Zapisz zmodyfikowany dokument
 ```csharp
 annotator.Save(outputPath);
 ```
-Po usunięciu określonych adnotacji zmodyfikowany dokument zapisujemy pod wcześniej zdefiniowaną ścieżką wyjściową.
+Po usunięciu wskazanych adnotacji zapisujemy zmodyfikowany dokument w uprzednio zdefiniowanej ścieżce wyjściowej.
 ## Krok 5: Wyświetl komunikat o powodzeniu
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Na koniec powiadamiamy użytkownika o pomyślnym zakończeniu procesu i udostępniamy ścieżkę, w której zapisany jest zmodyfikowany dokument.
+Na koniec powiadamiamy użytkownika o pomyślnym zakończeniu procesu i podajemy ścieżkę, gdzie zapisany został zmodyfikowany dokument.
 
 ## Wniosek
-Podsumowując, w tym samouczku wyjaśniono proces usuwania wielu adnotacji według identyfikatorów przy użyciu GroupDocs.Annotation dla .NET. Wykonując opisane kroki, programiści mogą bezproblemowo zintegrować tę funkcjonalność ze swoimi aplikacjami .NET, zwiększając w ten sposób efektywność zarządzania dokumentami i współpracę.
-## Często zadawane pytania
-### Czy adnotacje różnych typów można usuwać jednocześnie?
-Tak, adnotacje różnych typów można usunąć jednocześnie, podając ich odpowiednie identyfikatory na liście usuwania.
-### Czy GroupDocs.Annotation for .NET jest kompatybilny ze wszystkimi wersjami .NET Framework?
-Tak, GroupDocs.Annotation for .NET jest kompatybilny z różnymi wersjami .NET Framework, zapewniając wszechstronność i łatwość integracji.
-### Czy przed zakupem mogę wypróbować GroupDocs.Annotation dla .NET?
- Absolutnie! Możesz skorzystać z bezpłatnej wersji próbnej GroupDocs.Annotation dla .NET w witrynie[strona wydania](https://releases.groupdocs.com/)aby poznać jego cechy i możliwości.
+Podsumowując, ten samouczek wyjaśnił proces usuwania wielu adnotacji według identyfikatorów przy użyciu GroupDocs.Annotation dla .NET. Postępując zgodnie z opisanymi krokami, deweloperzy mogą bezproblemowo zintegrować tę funkcjonalność ze swoimi aplikacjami .NET, zwiększając w ten sposób wydajność zarządzania dokumentami i współpracę.
+## Najczęściej zadawane pytania
+### Czy można jednocześnie usuwać adnotacje różnych typów?
+Tak, adnotacje różnych typów można usuwać jednocześnie, podając ich odpowiednie identyfikatory na liście usuwania.
+### Czy GroupDocs.Annotation dla platformy .NET jest zgodny ze wszystkimi wersjami platformy .NET Framework?
+Tak, GroupDocs.Annotation dla .NET jest kompatybilny z różnymi wersjami .NET Framework, co zapewnia wszechstronność i łatwość integracji.
+### Czy mogę wypróbować GroupDocs.Annotation dla platformy .NET przed zakupem?
+Oczywiście! Możesz skorzystać z bezpłatnej wersji próbnej GroupDocs.Annotation dla .NET z [strona wydania](https://releases.groupdocs.com/) aby poznać jego funkcje i możliwości.
 ### Czy potrzebuję tymczasowej licencji do celów testowych?
-Chociaż licencja tymczasowa może poprawić jakość testowania, nie jest ona obowiązkowa w przypadku wersji próbnej. Jednak do użytku produkcyjnego wymagana jest ważna licencja.
-### Gdzie mogę zwrócić się o pomoc, jeśli napotkam jakiekolwiek problemy podczas wdrażania?
- Możesz poprosić o pomoc i nawiązać kontakt z tętniącą życiem społecznością GroupDocs za pośrednictwem[forum wsparcia](https://forum.groupdocs.com/c/annotation/10), gdzie eksperci i entuzjaści są łatwo dostępni, aby odpowiedzieć na Twoje pytania i wątpliwości.
+Chociaż tymczasowa licencja może ulepszyć Twoje doświadczenie testowe, nie jest ona obowiązkowa w celach próbnych. Jednak do użytku produkcyjnego wymagana jest ważna licencja.
+### Gdzie mogę szukać pomocy, jeśli napotkam jakiekolwiek problemy w trakcie wdrażania?
+Możesz szukać pomocy i nawiązać kontakt z dynamiczną społecznością GroupDocs za pośrednictwem [forum wsparcia](https://forum.groupdocs.com/c/annotation/10)gdzie eksperci i pasjonaci są gotowi odpowiedzieć na Twoje pytania i wątpliwości.

@@ -1,27 +1,27 @@
 ---
-title: Belgeye Uzaklık Açıklaması Ekle
-linktitle: Belgeye Uzaklık Açıklaması Ekle
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation for .NET'i kullanarak belgelere mesafe açıklamalarını nasıl ekleyeceğinizi öğrenin. İşbirliğini ve iletişimi zahmetsizce geliştirin.
-weight: 12
-url: /tr/net/unlocking-annotation-power/add-distance-annotation/
+"description": "GroupDocs.Annotation for .NET kullanarak belgelere uzaklık açıklamalarının nasıl ekleneceğini öğrenin. İş birliğini ve iletişimi zahmetsizce geliştirin."
+"linktitle": "Belgeye Mesafe Açıklaması Ekle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeye Mesafe Açıklaması Ekle"
+"url": "/tr/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
-# Belgeye Uzaklık Açıklaması Ekle
+# Belgeye Mesafe Açıklaması Ekle
 
 ## giriiş
-Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bir belgeye nasıl uzaklık açıklaması ekleyeceğinizi öğreneceksiniz. Görevi gerçekleştirmek için şu adımları izleyin:
-## Önkoşullar
+Bu eğitimde, .NET için GroupDocs.Annotation kullanarak bir belgeye mesafe açıklaması eklemeyi öğreneceksiniz. Görevi tamamlamak için şu adımları izleyin:
+## Ön koşullar
 
-Devam etmeden önce aşağıdaki önkoşulların mevcut olduğundan emin olun:
+Devam etmeden önce aşağıdaki ön koşulların mevcut olduğundan emin olun:
 
--  GroupDocs.Annotation for .NET Kitaplığı: GroupDocs.Annotation for .NET kitaplığını şuradan indirip yükleyin:[bu bağlantı](https://releases.groupdocs.com/annotation/net/).
-- Açıklama Eklenecek Belge: Mesafe açıklaması eklemek istediğiniz belgeyi (örneğin, PDF) hazırlayın.
-- Geliştirme Ortamı: Geliştirme ortamınızı Visual Studio veya seçtiğiniz herhangi bir IDE ile kurun.
+- GroupDocs.Annotation for .NET Kitaplığı: GroupDocs.Annotation for .NET kitaplığını şu adresten indirin ve yükleyin: [bu bağlantı](https://releases.groupdocs.com/annotation/net/).
+- Açıklama Yapılacak Belge: Mesafe açıklaması eklemek istediğiniz belgeyi (örneğin PDF) hazırlayın.
+- Geliştirme Ortamı: Visual Studio veya tercih ettiğiniz herhangi bir IDE ile geliştirme ortamınızı kurun.
 
 ## Ad Alanlarını İçe Aktar
 
-Başlamadan önce kodunuza gerekli ad alanlarını eklediğinizden emin olun. Bu ad alanları gerekli sınıflara ve yöntemlere erişim için gereklidir.
+Başlamadan önce, kodunuza gerekli ad alanlarını eklediğinizden emin olun. Bu ad alanları, gerekli sınıflara ve yöntemlere erişmek için olmazsa olmazdır.
 
 ```csharp
 using System;
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## 1. Adım: Annotator'ı Başlatın
+## Adım 1: Annotator'ı Başlatın
 
- Başlatarak başlayın`Annotator` Açıklama eklemek istediğiniz belgenin yolunu içeren nesne.
+Başlatma ile başlayın `Annotator` Açıklama eklemek istediğiniz belgenin yolunu içeren nesne.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ek açıklama kodu buraya gelecek
+    // Açıklama kodu buraya gelecek
 }
 ```
 
-## Adım 2: Uzaklık Açıklaması Oluşturun
+## Adım 2: Mesafe Açıklaması Oluşturun
 
- Şimdi bir tane oluşturun`DistanceAnnotation` nesneyi seçin ve kutu boyutları, mesaj, opaklık, kalem rengi vb. gibi özelliklerini yapılandırın.
+Şimdi bir tane yaratın `DistanceAnnotation` nesneyi oluşturun ve kutu boyutları, mesaj, opaklık, kalem rengi vb. gibi özelliklerini yapılandırın.
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -75,26 +75,26 @@ DistanceAnnotation distance = new DistanceAnnotation
 };
 ```
 
-## 3. Adım: Ek Açıklama Ekle
+## Adım 3: Açıklama Ekle
 
- Oluşturulan mesafe açıklamasını belgeye şunu kullanarak ekleyin:`Add` ek açıklama nesnesinin yöntemi.
+Oluşturulan mesafe açıklamasını belgeye şunu kullanarak ekleyin: `Add` açıklayıcı nesnenin yöntemi.
 
 ```csharp
 annotator.Add(distance);
 ```
 
-## Adım 4: Belgeyi Kaydet
+## Adım 4: Belgeyi Kaydedin
 
-Açıklamalı belgeyi sisteminizde istediğiniz konuma kaydedin.
+Açıklamalı belgeyi sisteminizde istediğiniz yere kaydedin.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 annotator.Save(outputPath);
 ```
 
-## Adım 5: Onayı Görüntüle
+## Adım 5: Onay Ekranı
 
-Son olarak, açıklamalı belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntüleyin.
+Son olarak, açıklamalı belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntülenir.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -102,26 +102,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Çözüm
 
-GroupDocs.Annotation for .NET kullanarak belgelere uzaklık açıklamaları eklemek basit bir işlemdir. Bu eğitimde özetlenen adımları izleyerek belgelerinizi değerli ek açıklamalarla geliştirebilir, daha iyi işbirliği ve iletişimi kolaylaştırabilirsiniz.
+GroupDocs.Annotation for .NET kullanarak belgelere mesafe açıklamaları eklemek basit bir işlemdir. Bu eğitimde özetlenen adımları izleyerek belgelerinizi değerli açıklamalarla zenginleştirebilir, daha iyi iş birliği ve iletişim sağlayabilirsiniz.
 
-## SSS'ler
+## SSS
 
 ### S: Mesafe açıklamasının görünümünü özelleştirebilir miyim?
 
-C: Evet, gereksinimlerinize uyacak şekilde renk, opaklık, çizgi stili vb. çeşitli özellikleri özelleştirebilirsiniz.
+C: Evet, ihtiyaçlarınıza uyacak şekilde renk, opaklık, çizgi stili vb. gibi çeşitli özellikleri özelleştirebilirsiniz.
 
-### S: GroupDocs.Annotation, farklı belge türlerindeki açıklamaları destekliyor mu?
+### S: GroupDocs.Annotation farklı türdeki belgelere ek açıklama eklemeyi destekliyor mu?
 
-C: Evet, GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve daha fazlasını içeren çok çeşitli belge formatlarındaki açıklamaları destekler.
+C: Evet, GroupDocs.Annotation PDF, Word, Excel, PowerPoint ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerine ek açıklama eklemeyi destekler.
 
-### S: GroupDocs.Annotation'ın ücretsiz deneme sürümü mevcut mu?
+### S: GroupDocs.Annotation için ücretsiz deneme sürümü mevcut mu?
 
- C: Evet, GroupDocs.Annotation'ın ücretsiz deneme sürümüne şu adresten erişebilirsiniz:[bu bağlantı](https://releases.groupdocs.com/).
+A: Evet, GroupDocs.Annotation'ın ücretsiz deneme sürümüne şu adresten erişebilirsiniz: [bu bağlantı](https://releases.groupdocs.com/).
 
 ### S: GroupDocs.Annotation for .NET belgelerini nerede bulabilirim?
 
- C: Mevcut ayrıntılı belgelere başvurabilirsiniz[Burada](https://tutorials.groupdocs.com/annotation/net/).
+A: Mevcut ayrıntılı belgelere başvurabilirsiniz [Burada](https://tutorials.groupdocs.com/annotation/net/).
 
-### S: GroupDocs.Annotation ile nasıl destek veya yardım alabilirim?
+### S: GroupDocs.Annotation ile ilgili destek veya yardımı nasıl alabilirim?
 
- C: GroupDocs.Annotation topluluk forumundan destek ve yardım alabilirsiniz.[Burada](https://forum.groupdocs.com/c/annotation/10).
+A: GroupDocs.Annotation topluluk forumundan destek ve yardım alabilirsiniz [Burada](https://forum.groupdocs.com/c/annotation/10).

@@ -1,23 +1,23 @@
 ---
-title: Területi megjegyzés hozzáadása a dokumentumhoz
-linktitle: Területi megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Fokozza a dokumentumok együttműködését a Groupdocs.Annotation for .NET segítségével. Ismerje meg lépésről lépésre, hogyan adhat hozzá megjegyzéseket a területhez.
-weight: 10
-url: /hu/net/unlocking-annotation-power/add-area-annotation/
+"description": "Javítsa dokumentumaival való együttműködését a .NET-hez készült Groupdocs.Annotation segítségével. Tanulja meg, hogyan adhat hozzá területi jegyzeteket lépésről lépésre."
+"linktitle": "Területjegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Területjegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-area-annotation/"
+"weight": 10
 ---
 
-# Területi megjegyzés hozzáadása a dokumentumhoz
+# Területjegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Ebben az oktatóanyagban végigvezetjük a Groupdocs.Annotation for .NET használatával területi megjegyzések hozzáadásának folyamatán. A területi megjegyzések értékes funkció, amely lehetővé teszi a felhasználók számára, hogy kiemeljék a dokumentum bizonyos területeit, egyértelművé és kontextusba helyezve a tartalmat.
+Ebben az oktatóanyagban végigvezetjük Önt a Groupdocs.Annotation for .NET használatával a dokumentumokhoz területi annotációk hozzáadásának folyamatán. A területi annotációk értékes funkciók, amelyek lehetővé teszik a felhasználók számára, hogy kiemeljék a dokumentum meghatározott területeit, ezáltal érthetőbbé és kontextust biztosítva a tartalomnak.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következő előfeltételekkel:
-1.  Groupdocs.Annotation for .NET: Győződjön meg arról, hogy a szükséges könyvtárak és függőségek telepítve vannak. Letöltheti őket a[weboldal](https://releases.groupdocs.com/annotation/net/).
-2. Fejlesztői környezet: A .NET fejlesztéshez megfelelő fejlesztői környezetet kell beállítani.
+Mielőtt elkezdenénk, győződjünk meg arról, hogy a következő előfeltételekkel rendelkezünk:
+1. Groupdocs.Annotation .NET-hez: Győződjön meg arról, hogy telepítve vannak a szükséges könyvtárak és függőségek. Letöltheti őket innen: [weboldal](https://releases.groupdocs.com/annotation/net/).
+2. Fejlesztői környezet: Rendelkezzen megfelelő fejlesztői környezettel a .NET fejlesztéshez.
 
 ## Névterek importálása
-Kezdésként importálja a szükséges névtereket a projektbe. Ezek a névterek a megjegyzésekkel való munkavégzéshez szükséges osztályokat és metódusokat tartalmazzák.
+Kezdésként importáld a szükséges névtereket a projektedbe. Ezek a névterek tartalmazzák az annotációkkal való munkához szükséges osztályokat és metódusokat.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,21 +27,21 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-## 1. lépés: Inicializálja a kimeneti útvonalat
-Határozza meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentum mentésre kerül.
+## 1. lépés: Kimeneti útvonal inicializálása
+Adja meg a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Inicializálja az Annotátort
- Hozzon létre egy példányt a`Annotator` osztályba a dokumentum elérési útjának paraméterként való átadásával.
+## 2. lépés: Annotátor inicializálása
+Hozz létre egy példányt a `Annotator` osztályt a dokumentum elérési útjának paraméterként való átadásával.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ide kerül a kommentár kódja
+    // Ide fog kerülni a megjegyzéskód
 }
 ```
 ## 3. lépés: Területi megjegyzés létrehozása
-Határozza meg a terület megjegyzésének tulajdonságait, például a háttér színét, pozícióját, üzenetét, átlátszatlanságát stb.
+Határozza meg a területjelölés tulajdonságait, például a háttérszínt, a pozíciót, az üzenetet, az átlátszóságot stb.
 ```csharp
 AreaAnnotation area = new AreaAnnotation
 {
@@ -69,32 +69,32 @@ AreaAnnotation area = new AreaAnnotation
     }
 };
 ```
-## 4. lépés: Megjegyzés hozzáadása
- Adja hozzá a terület megjegyzését a dokumentumhoz a gombbal`Add` módszere a`Annotator` példa.
+## 4. lépés: Jegyzet hozzáadása
+Adja hozzá a területjegyzetet a dokumentumhoz a `Add` a módszer `Annotator` példány.
 ```csharp
 annotator.Add(area);
 ```
-## 5. lépés: Mentse el a dokumentumot
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+## 5. lépés: Dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 annotator.Save(outputPath);
 ```
-## 6. lépés: Jelenítse meg a sikeres üzenetet
-Tájékoztassa a felhasználót, hogy a dokumentumot sikeresen feljegyezték és elmentették.
+## 6. lépés: Sikeres üzenet megjelenítése
+Tájékoztassa a felhasználót, hogy a dokumentumot sikeresen megjelölte és mentette.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan adhatunk területi megjegyzéseket a dokumentumokhoz a Groupdocs.Annotation for .NET használatával. A lépésenkénti útmutató követésével könnyedén javíthatja dokumentumait értékes megjegyzésekkel, javítva az együttműködést és a megértést.
+Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá területekhez megjegyzéseket a dokumentumokhoz a Groupdocs.Annotation for .NET használatával. A lépésről lépésre haladó útmutató követésével könnyedén gazdagíthatjuk dokumentumainkat értékes megjegyzésekkel, javítva az együttműködést és a megértést.
 ## GYIK
-### Testreszabhatom a terület megjegyzésének megjelenését?
-Igen, testreszabhat különféle szempontokat, például a háttérszínt, az átlátszatlanságot, a toll stílusát stb., hogy megfeleljen az Ön preferenciáinak.
-### A Groupdocs.Annotation kompatibilis más dokumentumformátumokkal?
+### Testreszabhatom a területjelölés megjelenését?
+Igen, testreszabhatsz különböző aspektusokat, például a háttérszínt, az átlátszóságot, a toll stílusát stb., hogy azok megfeleljenek az oktatóanyagaidnak.
+### Kompatibilis a Groupdocs.Annotation más dokumentumformátumokkal?
 Igen, a Groupdocs.Annotation különféle dokumentumformátumokat támogat, beleértve a PDF, DOCX, PPTX és egyebeket.
 ### Hozzáadhatok több megjegyzést ugyanahhoz a dokumentumhoz?
-Természetesen szükség szerint több különböző típusú megjegyzést is hozzáadhat ugyanahhoz a dokumentumhoz.
-### A Groupdocs.Annotation kínál platformok közötti kompatibilitást?
-Igen, a Groupdocs.Annotation kompatibilis a .NET keretrendszerrel, így alkalmas Windows, Linux és macOS fejlesztői környezetekhez.
-### Létezik próbaverzió tesztelési célból?
- Igen, elérheti az ingyenes próbaverziót a[weboldal](https://releases.groupdocs.com/).
+Természetesen több különböző típusú jegyzetet is hozzáadhat ugyanahhoz a dokumentumhoz, szükség szerint.
+### A Groupdocs.Annotation platformfüggetlen kompatibilitást kínál?
+Igen, a Groupdocs.Annotation kompatibilis a .NET keretrendszerrel, így alkalmas Windows, Linux és macOS fejlesztői környezetekben való használatra.
+### Van elérhető próbaverzió tesztelési célokra?
+Igen, hozzáférhet egy ingyenes próbaverzióhoz a következő címen: [weboldal](https://releases.groupdocs.com/).

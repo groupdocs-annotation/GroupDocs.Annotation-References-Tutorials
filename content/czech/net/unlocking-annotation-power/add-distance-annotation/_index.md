@@ -1,27 +1,27 @@
 ---
-title: Přidejte do dokumentu anotaci vzdálenosti
-linktitle: Přidejte do dokumentu anotaci vzdálenosti
-second_title: GroupDocs.Annotation .NET API
-description: Zjistěte, jak přidat poznámky vzdálenosti k dokumentům pomocí GroupDocs.Annotation for .NET. Vylepšete spolupráci a komunikaci bez námahy.
-weight: 12
-url: /cs/net/unlocking-annotation-power/add-distance-annotation/
+"description": "Naučte se, jak přidávat anotace vzdálenosti do dokumentů pomocí GroupDocs.Annotation pro .NET. Vylepšete spolupráci a komunikaci bez námahy."
+"linktitle": "Přidat anotaci vzdálenosti do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidat anotaci vzdálenosti do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
-# Přidejte do dokumentu anotaci vzdálenosti
+# Přidat anotaci vzdálenosti do dokumentu
 
-## Úvod
-V tomto tutoriálu se naučíte, jak přidat anotaci vzdálenosti k dokumentu pomocí GroupDocs.Annotation for .NET. Chcete-li provést úkol, postupujte takto:
+## Zavedení
+V tomto tutoriálu se naučíte, jak přidat anotaci vzdálenosti do dokumentu pomocí nástroje GroupDocs.Annotation pro .NET. Postupujte podle těchto kroků:
 ## Předpoklady
 
 Než budete pokračovat, ujistěte se, že máte splněny následující předpoklady:
 
--  GroupDocs.Annotation for .NET Library: Stáhněte a nainstalujte si knihovnu GroupDocs.Annotation for .NET z[tento odkaz](https://releases.groupdocs.com/annotation/net/).
-- Dokument k anotaci: Připravte dokument (např. PDF), ke kterému chcete přidat anotaci vzdálenosti.
-- Vývojové prostředí: Nastavte své vývojové prostředí pomocí sady Visual Studio nebo jakéhokoli jiného IDE podle vašeho výběru.
+- Knihovna GroupDocs.Annotation pro .NET: Stáhněte a nainstalujte knihovnu GroupDocs.Annotation pro .NET z [tento odkaz](https://releases.groupdocs.com/annotation/net/).
+- Dokument k anotaci: Připravte dokument (např. PDF), do kterého chcete přidat anotaci vzdálenosti.
+- Vývojové prostředí: Nastavte si vývojové prostředí pomocí Visual Studia nebo jiného IDE dle vašeho výběru.
 
-## Import jmenných prostorů
+## Importovat jmenné prostory
 
-Než začnete, nezapomeňte do kódu zahrnout potřebné jmenné prostory. Tyto jmenné prostory jsou nezbytné pro přístup k požadovaným třídám a metodám.
+Než začnete, ujistěte se, že jste do kódu zahrnuli potřebné jmenné prostory. Tyto jmenné prostory jsou nezbytné pro přístup k požadovaným třídám a metodám.
 
 ```csharp
 using System;
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## Krok 1: Inicializujte anotátor
+## Krok 1: Inicializace anotátoru
 
- Začněte inicializací`Annotator` objekt s cestou k dokumentu, který chcete anotovat.
+Začněte inicializací `Annotator` objekt s cestou k dokumentu, který chcete anotovat.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Sem bude umístěn kód anotace
+    // Sem bude vložen kód anotace
 }
 ```
 
 ## Krok 2: Vytvořte anotaci vzdálenosti
 
- Nyní vytvořte a`DistanceAnnotation` objektu a nakonfigurujte jeho vlastnosti, jako jsou rozměry krabice, zpráva, neprůhlednost, barva pera atd.
+Nyní vytvořte `DistanceAnnotation` objekt a nakonfigurovat jeho vlastnosti, jako jsou rozměry rámečku, zpráva, neprůhlednost, barva pera atd.
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -75,17 +75,17 @@ DistanceAnnotation distance = new DistanceAnnotation
 };
 ```
 
-## Krok 3: Přidejte anotaci
+## Krok 3: Přidání anotace
 
- Přidejte vytvořenou anotaci vzdálenosti do dokumentu pomocí`Add` metoda objektu anotátor.
+Přidejte vytvořenou anotaci vzdálenosti do dokumentu pomocí `Add` metoda objektu anotátoru.
 
 ```csharp
 annotator.Add(distance);
 ```
 
-## Krok 4: Uložte dokument
+## Krok 4: Uložení dokumentu
 
-Uložte anotovaný dokument na požadované místo ve vašem systému.
+Uložte anotovaný dokument na požadované místo v systému.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
@@ -102,26 +102,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Závěr
 
-Přidávání distančních anotací k dokumentům pomocí GroupDocs.Annotation for .NET je jednoduchý proces. Dodržováním kroků uvedených v tomto kurzu můžete své dokumenty vylepšit cennými anotacemi, což usnadní spolupráci a komunikaci.
+Přidávání anotací vzdálenosti do dokumentů pomocí GroupDocs.Annotation pro .NET je jednoduchý proces. Dodržováním kroků popsaných v tomto tutoriálu můžete své dokumenty vylepšit cennými anotacemi, což usnadní spolupráci a komunikaci.
 
-## FAQ
+## Často kladené otázky
 
-### Otázka: Mohu upravit vzhled poznámky vzdálenosti?
+### Otázka: Mohu si přizpůsobit vzhled anotace vzdálenosti?
 
-Odpověď: Ano, můžete přizpůsobit různé vlastnosti, jako je barva, neprůhlednost, styl čáry atd., aby vyhovovaly vašim požadavkům.
+A: Ano, můžete si přizpůsobit různé vlastnosti, jako je barva, krytí, styl čáry atd., aby vyhovovaly vašim požadavkům.
 
-### Otázka: Podporuje GroupDocs.Annotation anotace v různých typech dokumentů?
+### Otázka: Podporuje GroupDocs.Annotation anotace u různých typů dokumentů?
 
-Odpověď: Ano, GroupDocs.Annotation podporuje poznámky v široké řadě formátů dokumentů včetně PDF, Word, Excel, PowerPoint a dalších.
+A: Ano, GroupDocs.Annotation podporuje anotace v široké škále formátů dokumentů, včetně PDF, Wordu, Excelu, PowerPointu a dalších.
 
-### Otázka: Je k dispozici bezplatná zkušební verze pro GroupDocs.Annotation?
+### Otázka: Je k dispozici bezplatná zkušební verze GroupDocs.Annotation?
 
- Odpověď: Ano, máte přístup k bezplatné zkušební verzi GroupDocs.Annotation z[tento odkaz](https://releases.groupdocs.com/).
+A: Ano, můžete si zdarma vyzkoušet GroupDocs.Annotation z [tento odkaz](https://releases.groupdocs.com/).
 
-### Otázka: Kde najdu dokumentaci k GroupDocs.Annotation pro .NET?
+### Otázka: Kde najdu dokumentaci k souboru GroupDocs.Annotation pro .NET?
 
- Odpověď: Můžete se podívat na podrobnou dostupnou dokumentaci[tady](https://tutorials.groupdocs.com/annotation/net/).
+A: Můžete se podívat na dostupnou podrobnou dokumentaci [zde](https://tutorials.groupdocs.com/annotation/net/).
 
 ### Otázka: Jak mohu získat podporu nebo pomoc s GroupDocs.Annotation?
 
- Odpověď: Podporu a pomoc můžete vyhledat na fóru komunity GroupDocs.Annotation[tady](https://forum.groupdocs.com/c/annotation/10).
+A: Podporu a pomoc můžete vyhledat na komunitním fóru GroupDocs.Annotation. [zde](https://forum.groupdocs.com/c/annotation/10).

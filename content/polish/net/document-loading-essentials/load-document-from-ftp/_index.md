@@ -1,22 +1,22 @@
 ---
-title: Załaduj dokument z FTP
-linktitle: Załaduj dokument z FTP
-second_title: GroupDocs.Adnotacja .NET API
-description: Ulepsz swoje aplikacje .NET za pomocą GroupDocs.Annotation, aby móc bezproblemowo dodawać adnotacje do dokumentów. W zestawie tutorial krok po kroku.
-weight: 12
-url: /pl/net/document-loading-essentials/load-document-from-ftp/
+"description": "Ulepsz swoje aplikacje .NET dzięki GroupDocs.Annotation, aby zapewnić bezproblemową adnotację dokumentów. Dołączono samouczek krok po kroku."
+"linktitle": "Załaduj dokument z FTP"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Załaduj dokument z FTP"
+"url": "/pl/net/document-loading-essentials/load-document-from-ftp/"
+"weight": 12
 ---
 
 # Załaduj dokument z FTP
 
 ## Wstęp
-GroupDocs.Annotation dla .NET to wszechstronna biblioteka zaprojektowana w celu ułatwienia możliwości dodawania adnotacji do dokumentów w aplikacjach .NET. Niezależnie od tego, czy masz do czynienia z plikami PDF, dokumentami Microsoft Office, obrazami czy innymi formatami, ta biblioteka zapewnia ujednolicone rozwiązanie do dodawania adnotacji, takich jak komentarze, wyróżnienia i kształty, w celu usprawnienia współpracy i zarządzania dokumentami.
-## Warunki wstępne
-Zanim przejdziesz do samouczka, upewnij się, że spełniasz następujące wymagania wstępne:
-1. Znajomość języka C#: Biegłość w języku programowania C# jest niezbędna do zrozumienia i wdrożenia przykładów kodu podanych w tym samouczku.
-2.  GroupDocs.Annotation dla .NET: Pamiętaj, aby pobrać i zainstalować GroupDocs.Annotation dla .NET ze strony[link do pobrania](https://releases.groupdocs.com/annotation/net/). Postępuj zgodnie z instrukcjami instalacji, aby pomyślnie zintegrować bibliotekę z projektem .NET.
+GroupDocs.Annotation for .NET to wszechstronna biblioteka zaprojektowana w celu ułatwienia możliwości adnotacji dokumentów w aplikacjach .NET bez wysiłku. Niezależnie od tego, czy masz do czynienia z plikami PDF, dokumentami Microsoft Office, obrazami czy innymi formatami, ta biblioteka zapewnia ujednolicone rozwiązanie do dodawania adnotacji, takich jak komentarze, wyróżnienia i kształty, w celu usprawnienia współpracy i zarządzania dokumentami.
+## Wymagania wstępne
+Zanim przejdziesz do samouczka, upewnij się, że spełnione są następujące wymagania wstępne:
+1. Znajomość języka C#: Znajomość języka programowania C# jest niezbędna do zrozumienia i implementacji przykładów kodu przedstawionych w tym samouczku.
+2. GroupDocs.Annotation dla .NET: Upewnij się, że pobrano i zainstalowano GroupDocs.Annotation dla .NET z [link do pobrania](https://releases.groupdocs.com/annotation/net/). Postępuj zgodnie z instrukcjami instalacji, aby pomyślnie zintegrować bibliotekę z projektem .NET.
 ## Importuj przestrzenie nazw
-Aby móc korzystać z funkcjonalności GroupDocs.Annotation for .NET, musisz zaimportować wymagane przestrzenie nazw do swojego projektu C#. Wykonaj następujące kroki:
+Aby wykorzystać GroupDocs.Annotation dla funkcjonalności .NET, musisz zaimportować wymagane przestrzenie nazw do swojego projektu C#. Wykonaj następujące kroki:
 
 W projekcie C# umieść niezbędne przestrzenie nazw na początku pliku kodu:
 ```csharp
@@ -27,23 +27,23 @@ using System.IO;
 using System.Net;
 ```
 
-Teraz przyjrzyjmy się procesowi ładowania dokumentu z FTP i dodawania do niego adnotacji za pomocą GroupDocs.Annotation for .NET.
+Teraz przyjrzyjmy się bliżej procesowi ładowania dokumentu z FTP i dodawania do niego adnotacji za pomocą GroupDocs.Annotation dla platformy .NET.
 ## Krok 1: Zdefiniuj ścieżkę wyjściową
 Określ ścieżkę wyjściową, w której zostanie zapisany dokument z adnotacjami.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Krok 2: Załaduj dokument z FTP
-Pobierz dokument z serwera FTP, korzystając z podanej ścieżki pliku.
+Pobierz dokument z serwera FTP korzystając z podanej ścieżki dostępu.
 ```csharp
 string filePath = "sample.pdf";
 using (Annotator annotator = new Annotator(GetFileFromFtp(filePath)))
 {
-    // Kod adnotacji zostanie dodany tutaj
+    // Tutaj zostanie dodany kod adnotacji
 }
 ```
 ## Krok 3: Dodaj adnotację
-Zdefiniuj i dodaj żądaną adnotację, np. adnotację obszaru, do dokumentu.
+Zdefiniuj i dodaj do dokumentu żądaną adnotację, np. adnotację obszaru.
 ```csharp
 AreaAnnotation area = new AreaAnnotation()
 {
@@ -80,7 +80,7 @@ private static FtpWebRequest CreateRequest(Uri uri)
 }
 ```
 ## Krok 7: Pobierz strumień plików
-Pobierz strumień pliku z odpowiedzi FTP.
+Pobierz strumień plików z odpowiedzi FTP.
 ```csharp
 private static Stream GetFileStream(WebResponse response)
 {
@@ -92,15 +92,15 @@ private static Stream GetFileStream(WebResponse response)
 }
 ```
 ## Wniosek
-Podsumowując, GroupDocs.Annotation dla .NET umożliwia programistom bezproblemową integrację funkcji adnotacji w dokumentach z aplikacjami .NET. Postępując zgodnie ze szczegółowym przewodnikiem opisanym w tym samouczku, możesz efektywnie ładować dokumenty z FTP i z łatwością dodawać adnotacje, usprawniając współpracę i zarządzanie dokumentami w swoich aplikacjach.
-## Często zadawane pytania
-### Czy GroupDocs.Annotation for .NET jest kompatybilny ze wszystkimi formatami dokumentów?
-Tak, GroupDocs.Annotation dla .NET obsługuje szeroką gamę formatów dokumentów, w tym PDF, dokumenty Microsoft Office, obrazy i inne.
-### Czy mogę dostosować wygląd adnotacji dodanych przy użyciu GroupDocs.Annotation dla .NET?
-Oczywiście GroupDocs.Annotation dla .NET oferuje szerokie opcje dostosowywania wyglądu adnotacji, w tym kolorów, stylów i kształtów.
-### Czy GroupDocs.Annotation for .NET zapewnia obsługę usług przechowywania w chmurze?
-Tak, GroupDocs.Annotation dla .NET bezproblemowo integruje się z popularnymi usługami przechowywania w chmurze, umożliwiając ładowanie i zapisywanie dokumentów z usług takich jak Dropbox, Google Drive i OneDrive.
-### Czy dostępna jest wersja próbna programu GroupDocs.Annotation dla platformy .NET?
- Tak, możesz poznać funkcje GroupDocs.Annotation dla .NET, pobierając bezpłatną wersję próbną ze strony[strona wydania](https://releases.groupdocs.com/).
-### Jak mogę uzyskać pomoc techniczną lub wsparcie dla GroupDocs.Annotation dla .NET?
- Aby uzyskać pomoc techniczną, rozwiązywanie problemów lub zadać ogólne pytania, możesz odwiedzić GroupDocs.Adnotation for .NET[forum wsparcia](https://forum.groupdocs.com/c/annotation/10).
+Podsumowując, GroupDocs.Annotation dla .NET umożliwia deweloperom bezproblemową integrację funkcji adnotacji dokumentów z aplikacjami .NET. Postępując zgodnie z przewodnikiem krok po kroku opisanym w tym samouczku, możesz sprawnie ładować dokumenty z FTP i łatwo dodawać adnotacje, usprawniając współpracę i zarządzanie dokumentami w swoich aplikacjach.
+## Najczęściej zadawane pytania
+### Czy GroupDocs.Annotation dla platformy .NET jest kompatybilny ze wszystkimi formatami dokumentów?
+Tak, GroupDocs.Annotation dla platformy .NET obsługuje szeroką gamę formatów dokumentów, w tym pliki PDF, dokumenty pakietu Microsoft Office, obrazy i inne.
+### Czy mogę dostosować wygląd adnotacji dodawanych za pomocą GroupDocs.Annotation dla platformy .NET?
+Zdecydowanie, GroupDocs.Annotation dla platformy .NET oferuje rozbudowane opcje dostosowywania wyglądu adnotacji, w tym kolorów, stylów i kształtów.
+### Czy GroupDocs.Annotation dla platformy .NET zapewnia obsługę usług przechowywania danych w chmurze?
+Tak, GroupDocs.Annotation dla platformy .NET płynnie integruje się z popularnymi usługami przechowywania danych w chmurze, umożliwiając ładowanie i zapisywanie dokumentów z usług takich jak Dropbox, Google Drive i OneDrive.
+### Czy jest dostępna wersja próbna GroupDocs.Annotation dla .NET?
+Tak, możesz zapoznać się z funkcjami GroupDocs.Annotation dla platformy .NET, pobierając bezpłatną wersję próbną ze strony [strona wydania](https://releases.groupdocs.com/).
+### W jaki sposób mogę uzyskać pomoc techniczną lub wsparcie dla GroupDocs.Annotation dla platformy .NET?
+Aby uzyskać pomoc techniczną, rozwiązać problemy lub zadać ogólne pytania, odwiedź witrynę GroupDocs.Annotation for .NET [forum wsparcia](https://forum.groupdocs.com/c/annotation/10).

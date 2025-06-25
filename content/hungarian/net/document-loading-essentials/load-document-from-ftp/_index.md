@@ -1,24 +1,24 @@
 ---
-title: Dokumentum betöltése FTP-ről
-linktitle: Dokumentum betöltése FTP-ről
-second_title: GroupDocs.Annotation .NET API
-description: Bővítse .NET-alkalmazásait a GroupDocs.Annotation segítségével a zökkenőmentes dokumentumannotáció érdekében. Lépésről lépésre bemutató oktatóanyag.
-weight: 12
-url: /hu/net/document-loading-essentials/load-document-from-ftp/
+"description": "Fejleszd .NET alkalmazásaidat a GroupDocs.Annotation segítségével a zökkenőmentes dokumentum-annotáció érdekében. Lépésről lépésre bemutató útmutató mellékelve."
+"linktitle": "Dokumentum betöltése FTP-ről"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dokumentum betöltése FTP-ről"
+"url": "/hu/net/document-loading-essentials/load-document-from-ftp/"
+"weight": 12
 ---
 
 # Dokumentum betöltése FTP-ről
 
 ## Bevezetés
-A GroupDocs.Annotation for .NET egy sokoldalú könyvtár, amelyet arra terveztek, hogy könnyedén megkönnyítse a .NET-alkalmazásokon belüli dokumentumjegyzetelési lehetőségeket. Akár PDF-ekkel, Microsoft Office dokumentumokkal, képekkel vagy más formátumokkal foglalkozik, ez a könyvtár egységes megoldást kínál megjegyzések, például megjegyzések, kiemelések és alakzatok hozzáadására az együttműködés és a dokumentumkezelés javítása érdekében.
+GroupDocs.Annotation for .NET egy sokoldalú könyvtár, amelyet a .NET alkalmazásokon belüli dokumentumok egyszerű annotálásának megkönnyítésére terveztek. Akár PDF-ekkel, Microsoft Office dokumentumokkal, képekkel vagy más formátumokkal dolgozik, ez a könyvtár egységes megoldást kínál annotációk, például megjegyzések, kiemelések és alakzatok hozzáadására az együttműködés és a dokumentumkezelés javítása érdekében.
 ## Előfeltételek
-Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
-1. C# ismerete: A C# programozási nyelvben való jártasság elengedhetetlen az oktatóanyagban található kódpéldák megértéséhez és megvalósításához.
-2.  GroupDocs.Annotation for .NET: Mindenképpen töltse le és telepítse a GroupDocs.Annotation for .NET webhelyről[letöltési link](https://releases.groupdocs.com/annotation/net/). Kövesse a telepítési utasításokat a könyvtár sikeres integrálásához a .NET-projektbe.
+Mielőtt belemerülnél az oktatóanyagba, győződj meg róla, hogy a következő előfeltételek teljesülnek:
+1. C# ismerete: A C# programozási nyelv ismerete elengedhetetlen a bemutatóban bemutatott kódpéldák megértéséhez és megvalósításához.
+2. GroupDocs.Annotation for .NET: Töltse le és telepítse a GroupDocs.Annotation for .NET fájlt a következő helyről: [letöltési link](https://releases.groupdocs.com/annotation/net/)Kövesse a telepítési utasításokat a könyvtár .NET-projektbe való sikeres integrálásához.
 ## Névterek importálása
-A GroupDocs.Annotation .NET-funkciókhoz való használatához importálnia kell a szükséges névtereket a C#-projektbe. Kovesd ezeket a lepeseket:
+GroupDocs.Annotation .NET funkciók használatához importálnia kell a szükséges névtereket a C# projektjébe. Kövesse az alábbi lépéseket:
 
-A C# projekten belül adja meg a szükséges névtereket a kódfájl elejére:
+A C# projektedben add meg a szükséges névtereket a kódfájl elejére:
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -27,23 +27,23 @@ using System.IO;
 using System.Net;
 ```
 
-Most pedig nézzük meg a dokumentum FTP-ről történő betöltésének folyamatát, és a GroupDocs.Annotation for .NET segítségével megjegyzések hozzáadását.
-## 1. lépés: Határozza meg a kimeneti útvonalat
-Adja meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentum mentésre kerül.
+Most pedig nézzük meg részletesebben, hogyan tölthetünk be egy dokumentumot FTP-ről, és hogyan adhatunk hozzá jegyzeteket a GroupDocs.Annotation for .NET segítségével.
+## 1. lépés: Kimeneti útvonal meghatározása
+Adja meg a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Töltse be a dokumentumot az FTP-ről
-Töltse le a dokumentumot az FTP-kiszolgálóról a megadott fájl elérési út használatával.
+## 2. lépés: Dokumentum betöltése FTP-ről
+A megadott elérési utat használva kérje le a dokumentumot az FTP-kiszolgálóról.
 ```csharp
 string filePath = "sample.pdf";
 using (Annotator annotator = new Annotator(GetFileFromFtp(filePath)))
 {
-    // A kommentár kódja itt lesz hozzáadva
+    // A megjegyzéskód ide lesz hozzáadva.
 }
 ```
-## 3. lépés: Megjegyzés hozzáadása
-Határozza meg és adja hozzá a kívánt megjegyzést, például egy területi megjegyzést a dokumentumhoz.
+## 3. lépés: Jegyzet hozzáadása
+Definiálja és adja hozzá a kívánt megjegyzést, például egy területi megjegyzést a dokumentumhoz.
 ```csharp
 AreaAnnotation area = new AreaAnnotation()
 {
@@ -52,14 +52,14 @@ AreaAnnotation area = new AreaAnnotation()
 };
 annotator.Add(area);
 ```
-## 4. lépés: Mentse el a megjegyzésekkel ellátott dokumentumot
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+## 4. lépés: Jegyzetekkel ellátott dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 annotator.Save(outputPath);
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-## 5. lépés: Töltse le a fájlt az FTP-ről
-Végezze el a fájl FTP-kiszolgálóról való lekérésének módszerét.
+## 5. lépés: Fájl lekérése FTP-ről
+Implementálja a metódust a fájl FTP-kiszolgálóról való lekéréséhez.
 ```csharp
 private static Stream GetFileFromFtp(string filePath)
 {
@@ -69,8 +69,8 @@ private static Stream GetFileFromFtp(string filePath)
         return GetFileStream(response);
 }
 ```
-## 6. lépés: FTP-kérés létrehozása
-Hozzon létre egy FTP-kérést a fájl letöltéséhez.
+## 6. lépés: FTP-kérelem létrehozása
+Generálj egy FTP kérést a fájl letöltéséhez.
 ```csharp
 private static FtpWebRequest CreateRequest(Uri uri)
 {
@@ -79,8 +79,8 @@ private static FtpWebRequest CreateRequest(Uri uri)
     return request;
 }
 ```
-## 7. lépés: A File Stream letöltése
-Töltse le a fájlfolyamot az FTP-válaszból.
+## 7. lépés: Fájlfolyam beszerzése
+A fájlfolyam lekérése az FTP-válaszból.
 ```csharp
 private static Stream GetFileStream(WebResponse response)
 {
@@ -92,15 +92,15 @@ private static Stream GetFileStream(WebResponse response)
 }
 ```
 ## Következtetés
-Összefoglalva, a GroupDocs.Annotation for .NET lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják a dokumentum megjegyzések funkcióit .NET-alkalmazásaikba. Az ebben az oktatóanyagban felvázolt útmutató lépésenkénti követésével hatékonyan tölthet be dokumentumokat FTP-ről, és könnyedén adhat hozzá megjegyzéseket, javítva az együttműködést és a dokumentumkezelést az alkalmazásokon belül.
+Összefoglalva, a GroupDocs.Annotation for .NET lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják a dokumentumok annotációs funkcióit .NET alkalmazásaikba. Az ebben az oktatóanyagban ismertetett lépésenkénti útmutató követésével hatékonyan tölthet be dokumentumokat FTP-ről, és könnyedén adhat hozzá annotációkat, javítva az együttműködést és a dokumentumkezelést az alkalmazásain belül.
 ## GYIK
 ### A GroupDocs.Annotation for .NET kompatibilis az összes dokumentumformátummal?
-Igen, a GroupDocs.Annotation for .NET a dokumentumformátumok széles skáláját támogatja, beleértve a PDF-et, a Microsoft Office dokumentumokat, a képeket és egyebeket.
-### Testreszabhatom a GroupDocs.Annotation for .NET segítségével hozzáadott megjegyzések megjelenését?
-Természetesen a GroupDocs.Annotation for .NET kiterjedt testreszabási lehetőségeket kínál a megjegyzések megjelenéséhez, beleértve a színeket, stílusokat és formákat.
-### A GroupDocs.Annotation for .NET támogatja a felhőalapú tárolási szolgáltatásokat?
-Igen, a GroupDocs.Annotation for .NET zökkenőmentesen integrálódik a népszerű felhőalapú tárolási szolgáltatásokkal, lehetővé téve a dokumentumok betöltését és mentését olyan szolgáltatásokból, mint a Dropbox, a Google Drive és a OneDrive.
-### Elérhető a GroupDocs.Annotation próbaverziója a .NET-hez?
- Igen, felfedezheti a GroupDocs.Annotation for .NET szolgáltatásait, ha letölti az ingyenes próbaverziót a[kiadási oldal](https://releases.groupdocs.com/).
+Igen, a GroupDocs.Annotation for .NET számos dokumentumformátumot támogat, beleértve a PDF-et, a Microsoft Office dokumentumokat, a képeket és egyebeket.
+### Testreszabhatom a GroupDocs.Annotation for .NET segítségével hozzáadott annotációk megjelenését?
+Természetesen a GroupDocs.Annotation for .NET széleskörű testreszabási lehetőségeket kínál a jegyzetek megjelenéséhez, beleértve a színeket, stílusokat és alakzatokat.
+### GroupDocs.Annotation for .NET támogatja a felhőalapú tárolási szolgáltatásokat?
+Igen, a GroupDocs.Annotation for .NET zökkenőmentesen integrálható a népszerű felhőalapú tárhelyszolgáltatásokkal, lehetővé téve dokumentumok betöltését és mentését olyan szolgáltatásokból, mint a Dropbox, a Google Drive és a OneDrive.
+### Van elérhető próbaverzió a GroupDocs.Annotation for .NET-hez?
+Igen, a GroupDocs.Annotation for .NET funkcióit az ingyenes próbaverzió letöltésével fedezheti fel a következő címről: [kiadási oldal](https://releases.groupdocs.com/).
 ### Hogyan kaphatok technikai segítséget vagy támogatást a GroupDocs.Annotation for .NET-hez?
- Technikai segítségért, hibaelhárításért vagy általános kérdésekért keresse fel a GroupDocs.Annotation for .NET webhelyet.[támogatói fórum](https://forum.groupdocs.com/c/annotation/10).
+Technikai segítségért, hibaelhárításért vagy általános kérdésekért látogassa meg a GroupDocs.Annotation for .NET weboldalt. [támogató fórum](https://forum.groupdocs.com/c/annotation/10).

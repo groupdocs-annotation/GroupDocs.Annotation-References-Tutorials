@@ -1,21 +1,21 @@
 ---
-title: Carica documento da Azure
-linktitle: Carica documento da Azure
-second_title: API GroupDocs.Annotation .NET
-description: Scopri come annotare i documenti in .NET utilizzando GroupDocs.Annotation. Esercitazione dettagliata per un'integrazione perfetta con Archiviazione BLOB di Azure.
-weight: 11
-url: /it/net/document-loading-essentials/load-document-from-azure/
+"description": "Scopri come annotare i documenti in .NET usando GroupDocs.Annotation. Tutorial dettagliato per una perfetta integrazione con Azure Blob Storage."
+"linktitle": "Carica documento da Azure"
+"second_title": "API .NET di GroupDocs.Annotation"
+"title": "Carica documento da Azure"
+"url": "/it/net/document-loading-essentials/load-document-from-azure/"
+"weight": 11
 ---
 
 # Carica documento da Azure
 
-## introduzione
-Nell'ambito della gestione e della collaborazione dei documenti, GroupDocs.Annotation per .NET emerge come una soluzione solida, facilitando funzionalità di annotazione e markup senza soluzione di continuità all'interno delle applicazioni .NET. Questo tutorial approfondisce le complessità dell'utilizzo di GroupDocs.Annotation for .NET per annotare i documenti, offrendo indicazioni dettagliate dai prerequisiti all'utilizzo avanzato.
+## Introduzione
+Nell'ambito della gestione documentale e della collaborazione, GroupDocs.Annotation per .NET si propone come una soluzione affidabile, che semplifica l'annotazione e la marcatura all'interno delle applicazioni .NET. Questo tutorial approfondisce le complessità dell'utilizzo di GroupDocs.Annotation per .NET per l'annotazione dei documenti, offrendo una guida dettagliata dai prerequisiti all'utilizzo avanzato.
 ## Prerequisiti
-Prima di immergerti in GroupDocs.Annotation per .NET, assicurati di disporre dei seguenti prerequisiti:
-1. Installazione di .NET Framework: GroupDocs.Annotation per .NET richiede un ambiente runtime .NET compatibile. Assicurati di avere .NET Framework installato sul tuo sistema.
+Prima di immergerti in GroupDocs.Annotation per .NET, assicurati di avere i seguenti prerequisiti:
+1. Installazione di .NET Framework: GroupDocs.Annotation per .NET richiede un ambiente di runtime .NET compatibile. Assicurarsi che .NET Framework sia installato sul sistema.
 2. Accesso alla libreria GroupDocs.Annotation: ottieni l'accesso alla libreria GroupDocs.Annotation per .NET scaricandola dal sito Web o tramite gestori di pacchetti come NuGet.
-3. Documento da annotare: prepara il documento (ad esempio PDF) che intendi annotare. Assicurarsi che il documento sia accessibile localmente o tramite un servizio di archiviazione cloud come Archiviazione BLOB di Azure.
+3. Documento da annotare: prepara il documento (ad esempio, un PDF) che intendi annotare. Assicurati che il documento sia accessibile in locale o tramite un servizio di archiviazione cloud come Azure Blob Storage.
 
 ## Importa spazi dei nomi
 Per iniziare ad annotare i documenti utilizzando GroupDocs.Annotation per .NET, importa gli spazi dei nomi necessari nel tuo progetto. Questo passaggio garantisce l'accesso alle classi e alle funzionalità richieste.
@@ -30,31 +30,31 @@ using System.IO;
 ```
 
 ## Carica documento da Azure
-Per annotare un documento archiviato nell'archivio BLOB di Azure, attenersi alla seguente procedura:
+Per annotare un documento archiviato in Azure Blob Storage, seguire questa procedura:
 ### Passaggio 1: impostare il percorso di output
 Definire il percorso di output in cui verrà salvato il documento annotato.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-### Passaggio 2: scarica il documento
- Recuperare il documento da Archiviazione BLOB di Azure richiamando il file`DownloadFile` metodo.
+### Passaggio 2: Scarica il documento
+Recupera il documento da Azure Blob Storage richiamando il comando `DownloadFile` metodo.
 ```csharp
 using (Annotator annotator = new Annotator(DownloadFile(blobName)))
 {
-    // Logica dell'annotazione
+    // Logica di annotazione
     annotator.Save(outputPath);
 }
 ```
-## Scaricare il file dall'archivio BLOB di Azure
- Per scaricare il documento da Archiviazione BLOB di Azure, implementare il file`DownloadFile` metodo.
-### Passaggio 1: recuperare il BLOB
-Accedi al contenitore Archiviazione BLOB di Azure e recupera il BLOB desiderato.
+## Scarica file da Azure Blob Storage
+Per scaricare il documento da Azure Blob Storage, implementare `DownloadFile` metodo.
+### Passaggio 1: recupera Blob
+Accedere al contenitore Azure Blob Storage e recuperare il BLOB desiderato.
 ```csharp
 CloudBlobContainer container = GetContainer();
 CloudBlob blob = container.GetBlobReference(blobName);
 ```
-### Passaggio 2: scaricare il contenuto BLOB
-Scaricare il contenuto del BLOB in un flusso di memoria.
+### Passaggio 2: Scarica il contenuto del BLOB
+Scarica il contenuto del blob in un flusso di memoria.
 ```csharp
 MemoryStream memoryStream = new MemoryStream();
 blob.DownloadToStream(memoryStream);
@@ -62,41 +62,41 @@ memoryStream.Position = 0;
 return memoryStream;
 ```
 ## Ottieni il contenitore di archiviazione BLOB di Azure
- Per interagire con Archiviazione BLOB di Azure, implementare il file`GetContainer` metodo.
+Per interagire con Azure Blob Storage, implementare `GetContainer` metodo.
 ### Passaggio 1: inizializzare le credenziali di archiviazione
 Fornire le credenziali dell'account e le informazioni sull'endpoint necessarie.
 ```csharp
 string accountName = "***";
 string accountKey = "***";
-string endpoint = $"https://{accountName}.blob.core.windows.net/";
+string endpoint = $"https://{nomeaccount}.blob.core.windows.net/";
 ```
-### Passaggio 2: creare un client BLOB
-Creare un client per interagire con Archiviazione BLOB di Azure.
+### Passaggio 2: creare il client Blob
+Creare un client per interagire con Azure Blob Storage.
 ```csharp
 CloudStorageAccount cloudStorageAccount = new CloudStorageAccount(storageCredentials, new Uri(endpoint), null, null, null);
 CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
 ```
 ### Passaggio 3: recuperare il riferimento al contenitore
-Ottenere un riferimento al contenitore specificato.
+Ottieni un tutorial per il contenitore specificato.
 ```csharp
 CloudBlobContainer container = cloudBlobClient.GetContainerReference(containerName);
 ```
-### Passaggio 4: crea il contenitore se non esiste
-Assicurati che il contenitore esista e crealo in caso contrario.
+### Passaggio 4: creare il contenitore se non esiste
+Assicurarsi che il contenitore esista e, in caso contrario, crearlo.
 ```csharp
 container.CreateIfNotExists();
 ```
 
 ## Conclusione
-GroupDocs.Annotation per .NET offre agli sviluppatori solide funzionalità di annotazione dei documenti, integrandosi perfettamente nelle applicazioni .NET. Seguendo i passaggi descritti in questa esercitazione, è possibile sfruttare in modo efficace le funzionalità di GroupDocs.Annotation per annotare i documenti archiviati nell'archivio BLOB di Azure.
+GroupDocs.Annotation per .NET offre agli sviluppatori solide funzionalità di annotazione dei documenti, integrandosi perfettamente nelle applicazioni .NET. Seguendo i passaggi descritti in questo tutorial, è possibile sfruttare efficacemente le funzionalità di GroupDocs.Annotation per annotare i documenti archiviati in Azure Blob Storage.
 #### Domande frequenti
-### GroupDocs.Annotation per .NET è compatibile con tutti i formati di documenti?
-GroupDocs.Annotation supporta un'ampia gamma di formati di documenti, inclusi PDF, DOCX, PPTX e altri.
+### GroupDocs.Annotation per .NET è compatibile con tutti i formati di documento?
+GroupDocs.Annotation supporta un'ampia gamma di formati di documenti, tra cui PDF, DOCX, PPTX e altri.
 ### Le annotazioni possono essere personalizzate in base a requisiti specifici?
-Sì, GroupDocs.Annotation offre ampie opzioni di personalizzazione per le annotazioni, consentendo agli utenti di modificare aspetto, comportamento e metadati.
-### GroupDocs.Annotation è adatto per l'annotazione collaborativa dei documenti?
-Assolutamente! GroupDocs.Annotation facilita l'annotazione collaborativa dei documenti consentendo a più utenti di aggiungere, modificare e rivedere le annotazioni contemporaneamente.
+Sì, GroupDocs.Annotation offre ampie opzioni di personalizzazione per le annotazioni, consentendo agli utenti di modificarne l'aspetto, il comportamento e i metadati.
+### GroupDocs.Annotation è adatto all'annotazione collaborativa di documenti?
+Assolutamente sì! GroupDocs.Annotation facilita l'annotazione collaborativa dei documenti consentendo a più utenti di aggiungere, modificare e rivedere le annotazioni contemporaneamente.
 ### GroupDocs.Annotation offre compatibilità multipiattaforma?
-Sì, GroupDocs.Annotation è progettato per funzionare perfettamente su varie piattaforme, tra cui Windows, Linux e macOS.
-### Il supporto tecnico è disponibile per gli utenti di GroupDocs.Annotation?
-Sì, GroupDocs fornisce supporto tecnico completo attraverso i suoi forum e canali di supporto dedicati.
+Sì, GroupDocs.Annotation è progettato per funzionare senza problemi su diverse piattaforme, tra cui Windows, Linux e macOS.
+### È disponibile supporto tecnico per gli utenti di GroupDocs.Annotation?
+Sì, GroupDocs fornisce un supporto tecnico completo tramite i suoi forum e canali di supporto dedicati.

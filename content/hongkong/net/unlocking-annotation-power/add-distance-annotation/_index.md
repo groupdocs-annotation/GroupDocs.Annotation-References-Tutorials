@@ -1,10 +1,10 @@
 ---
-title: 在文件中新增距離註釋
-linktitle: 在文件中新增距離註釋
-second_title: GroupDocs.Annotation .NET API
-description: 了解如何使用 GroupDocs.Annotation for .NET 為文件新增距離註解。輕鬆增強協作和溝通。
-weight: 12
-url: /zh-hant/net/unlocking-annotation-power/add-distance-annotation/
+"description": "了解如何使用 GroupDocs.Annotation for .NET 為文件新增距離註解。輕鬆增強協作和溝通。"
+"linktitle": "在文件中新增距離註釋"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "在文件中新增距離註釋"
+"url": "/zh-hant/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
 # 在文件中新增距離註釋
@@ -13,9 +13,9 @@ url: /zh-hant/net/unlocking-annotation-power/add-distance-annotation/
 在本教學中，您將學習如何使用 GroupDocs.Annotation for .NET 在文件中新增距離註解。請依照以下步驟完成任務：
 ## 先決條件
 
-在繼續之前，請確保您具備以下先決條件：
+在繼續操作之前，請確保已滿足以下先決條件：
 
--  GroupDocs.Annotation for .NET 函式庫：從下列位置下載並安裝 GroupDocs.Annotation for .NET 函式庫[這個連結](https://releases.groupdocs.com/annotation/net/).
+- GroupDocs.Annotation for .NET 函式庫：從下列位置下載並安裝 GroupDocs.Annotation for .NET 函式庫 [此連結](https://releases。groupdocs.com/annotation/net/).
 - 要註釋的文件：準備要新增距離註釋的文件（例如 PDF）。
 - 開發環境：使用 Visual Studio 或您選擇的任何其他 IDE 設定您的開發環境。
 
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## 第 1 步：初始化註釋器
+## 步驟 1：初始化註解器
 
-首先初始化`Annotator`對象，其中包含要註釋的文檔的路徑。
+首先初始化 `Annotator` 物件與您想要註解的文件的路徑。
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    //註解程式碼將會放在這裡
+    // 註解程式碼將會放在這裡
 }
 ```
 
-## 第 2 步：建立距離註釋
+## 步驟 2：建立距離註釋
 
-現在，建立一個`DistanceAnnotation`物件並配置其屬性，例如框尺寸、訊息、不透明度、畫筆顏色等。
+現在，建立一個 `DistanceAnnotation` 物件並配置其屬性，如框尺寸、訊息、不透明度、筆顏色等。
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -75,15 +75,15 @@ DistanceAnnotation distance = new DistanceAnnotation
 };
 ```
 
-## 第三步：新增註釋
+## 步驟 3：新增註釋
 
-使用以下命令將建立的距離註解新增至文件中`Add`註釋器物件的方法。
+使用 `Add` 註釋器物件的方法。
 
 ```csharp
 annotator.Add(distance);
 ```
 
-## 第 4 步：儲存文檔
+## 步驟4：儲存文檔
 
 將已註記的文件儲存到系統上的所需位置。
 
@@ -92,9 +92,9 @@ string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetE
 annotator.Save(outputPath);
 ```
 
-## 第5步：顯示確認
+## 步驟5：顯示確認
 
-最後，顯示一則訊息，確認已成功儲存已包含註釋的文件。
+最後，顯示一則訊息確認註解文件保存成功。
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -102,7 +102,7 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## 結論
 
-使用 GroupDocs.Annotation for .NET 為文件新增距離註解是一個簡單的過程。透過遵循本教程中概述的步驟，您可以使用有價值的註釋來增強文檔，從而促進更好的協作和溝通。
+使用 GroupDocs.Annotation for .NET 在文件中新增距離註解非常簡單。按照本教程中概述的步驟，您可以使用有價值的註釋來增強文檔，從而促進更好的協作和溝通。
 
 ## 常見問題解答
 
@@ -110,18 +110,18 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 答：是的，您可以自訂各種屬性，例如顏色、不透明度、線條樣式等，以滿足您的要求。
 
-### Q：GroupDocs.Annotation 是否支援不同類型文件的註解？
+### Q：GroupDocs.Annotation 是否支援對不同類型的文件進行註解？
 
 答：是的，GroupDocs.Annotation 支援多種文件格式的註釋，包括 PDF、Word、Excel、PowerPoint 等。
 
-### Q：GroupDocs.Annotation 是否有免費試用版？
+### Q：GroupDocs.Annotation 有免費試用版嗎？
 
-答：是的，您可以存取 GroupDocs.Annotation 的免費試用版[這個連結](https://releases.groupdocs.com/).
+答：是的，您可以從以下網址免費試用 GroupDocs.Annotation [此連結](https://releases。groupdocs.com/).
 
-### Q：在哪裡可以找到 GroupDocs.Annotation for .NET 的文件？
+### Q：在哪裡可以找到 .NET 的 GroupDocs.Annotation 文件？
 
- A：您可以參考詳細的文檔[這裡](https://tutorials.groupdocs.com/annotation/net/).
+答：您可以參考詳細的文檔 [這裡](https://tutorials。groupdocs.com/annotation/net/).
 
 ### Q：如何獲得 GroupDocs.Annotation 的支援或協助？
 
-答：您可以向 GroupDocs.Annotation 社群論壇尋求支援和協助[這裡](https://forum.groupdocs.com/c/annotation/10).
+答：您可以向 GroupDocs.Annotation 社群論壇尋求支援和協助 [這裡](https://forum。groupdocs.com/c/annotation/10).

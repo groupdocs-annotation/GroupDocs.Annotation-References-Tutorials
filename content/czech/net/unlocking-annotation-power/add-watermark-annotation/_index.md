@@ -1,28 +1,28 @@
 ---
-title: Přidejte do dokumentu anotaci vodoznaku
-linktitle: Přidejte do dokumentu anotaci vodoznaku
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se, jak snadno přidávat anotace vodoznaku do vašich dokumentů pomocí GroupDocs.Annotation pro .NET. Zvyšte srozumitelnost a bezpečnost dokumentů.
-weight: 28
-url: /cs/net/unlocking-annotation-power/add-watermark-annotation/
+"description": "Naučte se, jak snadno přidávat vodoznaky do dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Zlepšete přehlednost a zabezpečení dokumentů."
+"linktitle": "Přidání anotace vodoznaku do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidání anotace vodoznaku do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-watermark-annotation/"
+"weight": 28
 ---
 
-# Přidejte do dokumentu anotaci vodoznaku
+# Přidání anotace vodoznaku do dokumentu
 
-## Úvod
-V tomto tutoriálu si projdeme proces přidání anotace vodoznaku do dokumentu pomocí GroupDocs.Annotation for .NET. Anotace vodoznaku jsou užitečné pro označení stavu dokumentu, jeho označení jako důvěrného nebo přidání jakýchkoli dalších relevantních informací.
+## Zavedení
+tomto tutoriálu si projdeme procesem přidání anotace vodoznaku do dokumentu pomocí GroupDocs.Annotation pro .NET. Anotace vodoznaku jsou užitečné pro označení stavu dokumentu, jeho označení jako důvěrného nebo přidání dalších relevantních informací.
 
 ## Předpoklady
 
 Než začneme, ujistěte se, že máte následující:
 
-1.  GroupDocs.Annotation for .NET: Můžete si ji stáhnout z[tady](https://releases.groupdocs.com/annotation/net/).
+1. GroupDocs.Annotation pro .NET: Můžete si ji stáhnout z [zde](https://releases.groupdocs.com/annotation/net/).
 2. Visual Studio: Ujistěte se, že máte v systému nainstalované Visual Studio.
-3. Základní znalost C#: Pro pochopení a implementaci příkladů kódu je nezbytná znalost programovacího jazyka C#.
+3. Základní znalost jazyka C#: Znalost programovacího jazyka C# je nezbytná pro pochopení a implementaci příkladů kódu.
 
-## Import jmenných prostorů
+## Importovat jmenné prostory
 
-Než začneme kódovat, importujme potřebné jmenné prostory:
+Než začneme s kódováním, importujme potřebné jmenné prostory:
 
 ```csharp
 using System;
@@ -32,30 +32,30 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
 
-Nyní si rozdělme proces přidávání anotace vodoznaku do několika kroků:
+Nyní si rozdělme proces přidání anotace vodoznaku do několika kroků:
 
-## Krok 1: Definujte výstupní cestu
+## Krok 1: Definování výstupní cesty
 
- Nejprve musíme definovat výstupní cestu, kam se anotovaný dokument uloží. Použijeme`Path` třídy od`System.IO` jmenný prostor pro spojení cesty výstupního adresáře s názvem souboru.
+Nejprve musíme definovat výstupní cestu, kam bude uložen anotovaný dokument. Použijeme `Path` třída z `System.IO` jmenný prostor pro kombinování výstupní cesty k adresáři s názvem souboru.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Krok 2: Inicializujte anotátor
+## Krok 2: Inicializace anotátoru
 
-Dále inicializujeme anotátor poskytnutím cesty ke vstupnímu dokumentu. To nám umožní přidat do dokumentu anotace.
+Dále inicializujeme anotátor zadáním cesty ke vstupnímu dokumentu. To nám umožní do dokumentu přidávat anotace.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Sem bude umístěn kód anotace
+    // Sem bude vložen kód anotace
 }
 ```
 
 ## Krok 3: Vytvořte anotaci vodoznaku
 
-Nyní vytvoříme objekt anotace vodoznaku s požadovanými vlastnostmi, jako je úhel, poloha, text, barva písma, neprůhlednost atd.
+Nyní si vytvořme objekt anotace vodoznaku s požadovanými vlastnostmi, jako je úhel, pozice, text, barva písma, neprůhlednost atd.
 
 ```csharp
 WatermarkAnnotation watermark = new WatermarkAnnotation
@@ -88,17 +88,17 @@ WatermarkAnnotation watermark = new WatermarkAnnotation
 };
 ```
 
-## Krok 4: Přidejte anotaci vodoznaku
+## Krok 4: Přidání anotace vodoznaku
 
- Nyní přidáme anotaci vodoznaku do dokumentu pomocí`Add` metoda objektu anotátor.
+Nyní přidáme do dokumentu anotaci vodoznaku pomocí `Add` metoda objektu anotátoru.
 
 ```csharp
 annotator.Add(watermark);
 ```
 
-## Krok 5: Uložte dokument
+## Krok 5: Uložení dokumentu
 
-Nakonec anotovaný dokument uložíme do zadané výstupní cesty.
+Nakonec uložíme anotovaný dokument do zadané výstupní cesty.
 
 ```csharp
 annotator.Save(outputPath);
@@ -106,26 +106,26 @@ annotator.Save(outputPath);
 
 ## Závěr
 
-V tomto tutoriálu jsme se naučili, jak přidat anotaci vodoznaku do dokumentu pomocí GroupDocs.Annotation for .NET. Anotace vodoznaku jsou cenným nástrojem pro označování dokumentů relevantními informacemi nebo indikace jejich stavu.
+V tomto tutoriálu jsme se naučili, jak přidat anotaci vodoznaku do dokumentu pomocí GroupDocs.Annotation pro .NET. Anotace vodoznaku jsou cenným nástrojem pro označení dokumentů relevantními informacemi nebo pro indikaci jejich stavu.
 
-## FAQ
+## Často kladené otázky
 
-### Otázka: Mohu upravit vzhled anotace vodoznaku?
+### Otázka: Mohu si přizpůsobit vzhled anotace vodoznaku?
 
-Odpověď: Ano, můžete přizpůsobit různé vlastnosti, jako je text, velikost písma, barva, neprůhlednost, poloha atd., abyste přizpůsobili vodoznak podle svých požadavků.
+A: Ano, můžete si upravit různé vlastnosti, jako je text, velikost písma, barva, krytí, umístění atd., abyste vodoznak přizpůsobili svým požadavkům.
 
-### Otázka: Je GroupDocs.Annotation for .NET kompatibilní s různými formáty dokumentů?
+### Otázka: Je GroupDocs.Annotation pro .NET kompatibilní s různými formáty dokumentů?
 
-Odpověď: Ano, GroupDocs.Annotation podporuje širokou škálu formátů dokumentů včetně PDF, Microsoft Word, Excel, PowerPoint a obrazových formátů.
+A: Ano, GroupDocs.Annotation podporuje širokou škálu formátů dokumentů, včetně PDF, Microsoft Word, Excel, PowerPoint a obrazových formátů.
 
-### Otázka: Mohu k jednomu dokumentu přidat více anotací?
+### Otázka: Mohu do jednoho dokumentu přidat více anotací?
 
-Odpověď: Rozhodně, GroupDocs.Annotation umožňuje přidat více anotací různých typů do jednoho dokumentu, což umožňuje komplexní označení dokumentu.
+A: Rozhodně, GroupDocs.Annotation umožňuje přidat do jednoho dokumentu více anotací různých typů, což umožňuje komplexní značkování dokumentů.
 
-### Otázka: Poskytuje GroupDocs.Annotation podporu pro společné anotace?
+### Otázka: Poskytuje GroupDocs.Annotation podporu pro kolaborativní anotace?
 
-Odpověď: Ano, GroupDocs.Annotation usnadňuje společné anotace tím, že umožňuje uživatelům přidávat komentáře, odpovědi a anotace, čímž podporuje efektivní spolupráci mezi členy týmu.
+A: Ano, GroupDocs.Annotation usnadňuje spolupráci při vytváření anotací tím, že umožňuje uživatelům přidávat komentáře, odpovědi a poznámky, což podporuje efektivní spolupráci mezi členy týmu.
 
 ### Otázka: Je k dispozici zkušební verze pro GroupDocs.Annotation pro .NET?
 
- Odpověď: Ano, můžete si stáhnout bezplatnou zkušební verzi z[tady](https://releases.groupdocs.com/).
+A: Ano, můžete si stáhnout bezplatnou zkušební verzi z [zde](https://releases.groupdocs.com/).

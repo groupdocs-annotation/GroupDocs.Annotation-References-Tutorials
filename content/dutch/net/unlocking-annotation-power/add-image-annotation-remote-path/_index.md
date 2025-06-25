@@ -1,22 +1,22 @@
 ---
-title: Afbeeldingannotatie toevoegen aan document (pad op afstand)
-linktitle: Afbeeldingannotatie toevoegen aan document (pad op afstand)
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u afbeeldingannotaties aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter documentbeheer met krachtige annotatiemogelijkheden.
-weight: 15
-url: /nl/net/unlocking-annotation-power/add-image-annotation-remote-path/
+"description": "Leer hoe u afbeeldingen aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter uw documentbeheer met krachtige annotatiemogelijkheden."
+"linktitle": "Afbeeldingannotatie toevoegen aan document (extern pad)"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Afbeeldingannotatie toevoegen aan document (extern pad)"
+"url": "/nl/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+"weight": 15
 ---
 
-# Afbeeldingannotatie toevoegen aan document (pad op afstand)
+# Afbeeldingannotatie toevoegen aan document (extern pad)
 
 ## Invoering
-In deze zelfstudie doorlopen we het proces van het toevoegen van afbeeldingsannotaties aan een document met behulp van GroupDocs.Annotation voor .NET. Deze bibliotheek biedt krachtige tools voor het programmatisch annoteren van verschillende soorten documenten.
+In deze tutorial laten we zien hoe je beeldannotaties aan een document toevoegt met GroupDocs.Annotation voor .NET. Deze bibliotheek biedt krachtige tools voor het programmatisch annoteren van verschillende documenttypen.
 ## Vereisten
-Voordat we beginnen, zorg ervoor dat u over het volgende beschikt:
-1.  GroupDocs.Annotation voor .NET: Download en installeer de bibliotheek van[hier](https://releases.groupdocs.com/annotation/net/).
+Voordat we beginnen, zorg ervoor dat u het volgende heeft:
+1. GroupDocs.Annotation voor .NET: Download en installeer de bibliotheek van [hier](https://releases.groupdocs.com/annotation/net/).
 2. Ontwikkelomgeving: Zorg ervoor dat u een werkende ontwikkelomgeving hebt ingesteld voor .NET-ontwikkeling.
-3.  Document: bereid het document voor dat u wilt annoteren. Voor deze zelfstudie gaan we ervan uit dat u een PDF-document met de naam`input.pdf`.
-4. Afbeelding voor annotatie: Kies de afbeelding die u voor annotatie wilt gebruiken. Zorg ervoor dat u de afbeeldings-URL of het lokale pad bij de hand heeft.
+3. Document: Bereid het document voor dat u wilt annoteren. Voor deze tutorial gaan we ervan uit dat u een PDF-document hebt met de naam `input.pdf`.
+4. Afbeelding voor annotatie: Kies de afbeelding die u wilt gebruiken voor annotatie. Zorg ervoor dat u de URL of het lokale pad van de afbeelding bij de hand hebt.
 
 ## Naamruimten importeren
 Voordat we beginnen met coderen, importeren we de benodigde naamruimten:
@@ -26,20 +26,20 @@ using System.IO;
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
-## Stap 1: Stel het uitvoerpad in
-Definieer eerst het uitvoerpad waar het geannoteerde document zal worden opgeslagen.
+## Stap 1: Uitvoerpad instellen
+Definieer eerst het uitvoerpad waar het geannoteerde document wordt opgeslagen.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Stap 2: Initialiseer Annotator
- Maak een exemplaar van de`Annotator` class en specificeer het invoerdocument.
+## Stap 2: Annotator initialiseren
+Maak een exemplaar van de `Annotator` klasse en specificeer het invoerdocument.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // De annotatiecode komt hier terecht
+    // Annotatiecode komt hier
 }
 ```
-## Stap 3: Voeg afbeeldingannotatie toe
+## Stap 3: Afbeeldingannotatie toevoegen
 Laten we nu de afbeeldingannotatie aan het document toevoegen. We specificeren de eigenschappen van de afbeeldingannotatie, zoals positie, dekking, paginanummer en afbeeldingspad.
 ```csharp
 ImageAnnotation image = new ImageAnnotation
@@ -57,22 +57,22 @@ Sla het geannoteerde document op in het opgegeven uitvoerpad.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Stap 5: Geef het uitvoerpad weer
-Informeer de gebruiker over de succesvolle documentopslagbewerking en geef het uitvoerpad weer.
+## Stap 5: Uitvoerpad weergeven
+Informeer de gebruiker over het succesvol opslaan van het document en geef het uitvoerpad weer.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Conclusie
-In deze zelfstudie hebben we geleerd hoe u afbeeldingsannotaties aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Door deze stappen te volgen, kunt u uw documentbeheertoepassingen uitbreiden met krachtige annotatiemogelijkheden.
+In deze tutorial hebben we geleerd hoe je afbeeldingen aantekeningen aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Door deze stappen te volgen, kunt u uw documentbeheertoepassingen uitbreiden met krachtige annotatiemogelijkheden.
 ## Veelgestelde vragen
-### Kan GroupDocs.Annotation worden gebruikt met andere documentformaten dan PDF?
+### Kan GroupDocs.Annotation gebruikt worden met andere documentformaten dan PDF?
 Ja, GroupDocs.Annotation ondersteunt verschillende documentformaten, waaronder Word, Excel, PowerPoint en meer.
 ### Is GroupDocs.Annotation compatibel met .NET Core?
 Ja, GroupDocs.Annotation is compatibel met zowel .NET Framework als .NET Core.
 ### Kan ik het uiterlijk van annotaties aanpassen?
-Ja, u kunt het uiterlijk van annotaties aanpassen, zoals kleur, dekking en grootte.
-### Ondersteunt GroupDocs.Annotation functies voor collaboratieve annotaties?
-Ja, GroupDocs.Annotation biedt functies voor collaboratieve annotaties voor realtime samenwerking aan documenten.
+Ja, u kunt het uiterlijk van annotaties aanpassen, bijvoorbeeld de kleur, dekking en grootte.
+### Ondersteunt GroupDocs.Annotation functies voor samenwerking bij het maken van aantekeningen?
+Ja, GroupDocs.Annotation biedt functies voor samenwerking bij het maken van aantekeningen, zodat u in realtime kunt samenwerken aan documenten.
 ### Is er een proefversie beschikbaar om te testen?
- Ja, u kunt een gratis proefversie van GroupDocs.Annotation krijgen van[hier](https://releases.groupdocs.com/).
+Ja, u kunt een gratis proefversie van GroupDocs.Annotation krijgen van [hier](https://releases.groupdocs.com/).

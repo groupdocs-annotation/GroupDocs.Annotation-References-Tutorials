@@ -1,25 +1,25 @@
 ---
-title: Odebrat více anotací podle ID
-linktitle: Odebrat více anotací podle ID
-second_title: GroupDocs.Annotation .NET API
-description: Zjistěte, jak odstranit více anotací podle ID v .NET pomocí GroupDocs.Annotation, a vylepšit tak své možnosti správy dokumentů bez námahy.
-weight: 13
-url: /cs/net/removing-annotations/remove-multiple-annotations-by-ids/
+"description": "Naučte se, jak v .NET pomocí GroupDocs.Annotation odstranit více anotací podle ID a bez námahy tak vylepšit své možnosti správy dokumentů."
+"linktitle": "Odebrání více anotací podle ID"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Odebrání více anotací podle ID"
+"url": "/cs/net/removing-annotations/remove-multiple-annotations-by-ids/"
+"weight": 13
 ---
 
-# Odebrat více anotací podle ID
+# Odebrání více anotací podle ID
 
-## Úvod
-Ve světě správy dokumentů a spolupráce se GroupDocs.Annotation for .NET ukazuje jako výkonný nástroj, který umožňuje vývojářům bezproblémově anotovat a manipulovat s dokumenty v rámci jejich aplikací .NET. Tento tutoriál se ponoří do jedné ze základních funkcí, které GroupDocs.Annotation pro .NET nabízí: odstranění více anotací podle ID. Podle tohoto podrobného průvodce získáte komplexní znalosti o tom, jak efektivně odstraňovat anotace, což vám umožní vylepšit možnosti správy dokumentů.
+## Zavedení
+Ve světě správy dokumentů a spolupráce se GroupDocs.Annotation pro .NET jeví jako výkonný nástroj, který umožňuje vývojářům bezproblémově anotovat a manipulovat s dokumenty v rámci jejich .NET aplikací. Tento tutoriál se ponoří do jedné ze základních funkcí, které GroupDocs.Annotation pro .NET nabízí: odstraňování více anotací podle ID. Dodržováním tohoto podrobného návodu získáte komplexní znalosti o tom, jak efektivně odstraňovat anotace, což vám umožní vylepšit vaše možnosti správy dokumentů.
 ## Předpoklady
-Než se ponoříte do tohoto tutoriálu, ujistěte se, že máte splněny následující předpoklady:
+Než se pustíte do tohoto tutoriálu, ujistěte se, že máte splněny následující předpoklady:
 ### 1. Instalace GroupDocs.Annotation pro .NET
- Nejprve musíte mít ve vývojovém prostředí nainstalovanou GroupDocs.Annotation for .NET. Požadovaný balíček si můžete stáhnout z[odkaz ke stažení](https://releases.groupdocs.com/annotation/net/) poskytuje GroupDocs.
-### 2. Základní porozumění .NET Framework
-Základní znalost rozhraní .NET Framework je nezbytná pro pochopení příkladů kódu a efektivní implementaci poskytovaného řešení.
+Nejprve musíte mít ve svém vývojovém prostředí nainstalovaný balíček GroupDocs.Annotation pro .NET. Potřebný balíček si můžete stáhnout z [odkaz ke stažení](https://releases.groupdocs.com/annotation/net/) poskytuje GroupDocs.
+### 2. Základní znalost .NET Frameworku
+Pro pochopení příkladů kódu a efektivní implementaci poskytnutého řešení je nezbytná základní znalost rozhraní .NET Framework.
 
-## Import jmenných prostorů
-Chcete-li začít, importujte potřebné jmenné prostory do vaší aplikace .NET. Tyto jmenné prostory poskytují přístup k funkcím potřebným pro manipulaci s poznámkami.
+## Importovat jmenné prostory
+Nejprve importujte potřebné jmenné prostory do vaší .NET aplikace. Tyto jmenné prostory poskytují přístup k funkcím potřebným pro manipulaci s anotacemi.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,42 +28,42 @@ using System.Text;
 using GroupDocs.Annotation.Options;
 ```
 
-## Krok 1: Definujte výstupní cestu
+## Krok 1: Definování výstupní cesty
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-V tomto kroku definujeme cestu, kam se upravený dokument s odstraněnými anotacemi uloží.
-## Krok 2: Vytvořte instanci objektu anotátoru
+V tomto kroku definujeme cestu, kam bude uložen upravený dokument s odstraněnými anotacemi.
+## Krok 2: Vytvoření instance objektu Annotator
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 ```
- Zde vytvoříme instanci`Annotator` třídy a předá jako parametr cestu anotovaného dokumentu PDF.
-## Krok 3: Odeberte poznámky podle ID
+Zde vytvoříme instanci `Annotator` třída, která jako parametr předá cestu k anotovanému PDF dokumentu.
+## Krok 3: Odebrání anotací podle ID
 ```csharp
 annotator.Remove(new List<int>{0,1});
 ```
-V tomto klíčovém kroku specifikujeme ID anotací, které mají být odstraněny. V rámci seznamu lze předat více ID pro současné odstranění.
-## Krok 4: Uložte upravený dokument
+V tomto klíčovém kroku určíme ID anotací, které mají být odstraněny. V rámci seznamu lze pro současné odstranění předat více ID.
+## Krok 4: Uložení upraveného dokumentu
 ```csharp
 annotator.Save(outputPath);
 ```
-Po odstranění zadaných anotací uložíme upravený dokument na dříve definovanou výstupní cestu.
-## Krok 5: Zobrazte zprávu o úspěchu
+Po odstranění zadaných anotací uložíme upravený dokument do dříve definované výstupní cesty.
+## Krok 5: Zobrazení zprávy o úspěchu
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Nakonec upozorníme uživatele na úspěšné dokončení procesu a poskytneme cestu, kam se upravený dokument uloží.
+Nakonec uživatele upozorníme na úspěšné dokončení procesu a poskytneme cestu, kam je upravený dokument uložen.
 
 ## Závěr
-Na závěr tento tutoriál objasnil proces odstraňování více anotací podle ID pomocí GroupDocs.Annotation pro .NET. Dodržením nastíněných kroků mohou vývojáři tuto funkcionalitu bez problémů integrovat do svých aplikací .NET, a tím zvýšit efektivitu správy dokumentů a spolupráci.
-## FAQ
+Závěrem lze říci, že tento tutoriál objasnil proces odstraňování více anotací podle ID pomocí nástroje GroupDocs.Annotation pro .NET. Dodržením popsaných kroků mohou vývojáři tuto funkci bezproblémově integrovat do svých aplikací .NET, a tím zvýšit efektivitu správy dokumentů a spolupráci.
+## Často kladené otázky
 ### Lze současně odstranit anotace různých typů?
-Ano, anotace různých typů lze odstranit současně zadáním jejich příslušných ID v seznamu odebrání.
-### Je GroupDocs.Annotation for .NET kompatibilní se všemi verzemi .NET Framework?
-Ano, GroupDocs.Annotation for .NET je kompatibilní s různými verzemi rozhraní .NET Framework, což zajišťuje všestrannost a snadnou integraci.
-### Mohu GroupDocs.Annotation for .NET vyzkoušet před nákupem?
- Absolutně! Můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET z webu[stránka vydání](https://releases.groupdocs.com/)prozkoumat jeho vlastnosti a funkce.
-### Potřebuji dočasnou licenci pro testovací účely?
-I když dočasná licence může zlepšit vaše testování, není povinná pro zkušební účely. Pro produkční použití je však vyžadována platná licence.
-### Kde mohu vyhledat pomoc, pokud během implementace narazím na nějaké problémy?
- Můžete vyhledat pomoc a zapojit se do živé komunity GroupDocs prostřednictvím[Fórum podpory](https://forum.groupdocs.com/c/annotation/10), kde jsou odborníci a nadšenci snadno k dispozici pro řešení vašich dotazů a obav.
+Ano, anotace různých typů lze odstranit současně zadáním jejich příslušných ID v seznamu pro odstranění.
+### Je GroupDocs.Annotation pro .NET kompatibilní se všemi verzemi .NET Frameworku?
+Ano, GroupDocs.Annotation pro .NET je kompatibilní s různými verzemi .NET Frameworku, což zajišťuje všestrannost a snadnou integraci.
+### Mohu si před zakoupením vyzkoušet GroupDocs.Annotation pro .NET?
+Rozhodně! Můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET z [stránka s vydáním](https://releases.groupdocs.com/) prozkoumat jeho vlastnosti a funkce.
+### Potřebuji pro účely testování dočasnou licenci?
+I když dočasná licence může vylepšit vaše testovací prostředí, není pro zkušební účely povinná. Pro produkční použití je však platná licence vyžadována.
+### Kam mohu hledat pomoc, pokud se během implementace setkám s nějakými problémy?
+Můžete vyhledat pomoc a zapojit se do dynamické komunity GroupDocs prostřednictvím [fórum podpory](https://forum.groupdocs.com/c/annotation/10), kde jsou vám odborníci a nadšenci k dispozici, aby zodpověděli vaše dotazy a obavy.

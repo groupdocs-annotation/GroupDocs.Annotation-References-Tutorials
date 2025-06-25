@@ -1,58 +1,58 @@
 ---
-title: Annotációk exportálása XML-fájlból
-linktitle: Annotációk exportálása XML-fájlból
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan exportálhat megjegyzéseket XML-fájlokból a GroupDocs.Annotation for .NET segítségével, amely hatékonyan leegyszerűsíti a dokumentumkezelési munkafolyamatot.
-weight: 11
-url: /hu/net/advanced-usage/export-annotations-xml-file/
+"description": "Ismerje meg, hogyan exportálhat megjegyzéseket XML fájlokból a GroupDocs.Annotation for .NET segítségével, amivel hatékonyan leegyszerűsítheti dokumentumkezelési munkafolyamatát."
+"linktitle": "Exportálja a jegyzeteket XML fájlból"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Exportálja a jegyzeteket XML fájlból"
+"url": "/hu/net/advanced-usage/export-annotations-xml-file/"
+"weight": 11
 ---
 
-# Annotációk exportálása XML-fájlból
+# Exportálja a jegyzeteket XML fájlból
 
 ## Bevezetés
-mai digitális korban a hatékony dokumentumkezelés létfontosságú a vállalkozások és a magánszemélyek számára egyaránt. A rendelkezésre álló eszközök sokaságával a GroupDocs.Annotation for .NET megbízható megoldásként tűnik ki a PDF-fájlok megjegyzéseinek készítésére és kezelésére. Ebben az oktatóanyagban a megjegyzések XML-fájlokból történő exportálásának folyamatát mutatjuk be a GroupDocs.Annotation for .NET segítségével. Az útmutató végére birtokában lesz a megjegyzések zökkenőmentes exportálásához szükséges tudásnak, ami javítja a dokumentumkezelési munkafolyamatot.
+mai digitális korban a hatékony dokumentumkezelés kulcsfontosságú mind a vállalkozások, mind a magánszemélyek számára. A rengeteg elérhető eszköznek köszönhetően a GroupDocs.Annotation for .NET megbízható megoldást kínál PDF-fájlok jegyzetelésére és kezelésére. Ebben az oktatóanyagban részletesebben is bemutatjuk, hogyan exportálhatók jegyzetek XML-fájlokból a GroupDocs.Annotation for .NET segítségével. Az útmutató végére rendelkezni fogsz a jegyzetek zökkenőmentes exportálásához szükséges ismeretekkel, ezáltal javítva a dokumentumkezelési munkafolyamatot.
 ## Előfeltételek
-Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
-1.  GroupDocs.Annotation for .NET: Töltse le és telepítse a könyvtárat innen[itt](https://releases.groupdocs.com/annotation/net/).
-2. Hozzáférés a bemeneti fájlokhoz: Készítse elő a megjegyzéseket tartalmazó PDF-fájlt és a megfelelő XML-fájlt.
-3. A C# alapvető ismerete: A C# programozási nyelv ismerete előnyös lesz a megadott kódpéldák megvalósításához.
+Mielőtt belemerülnél az oktatóanyagba, győződj meg róla, hogy a következő előfeltételek teljesülnek:
+1. GroupDocs.Annotation .NET-hez: Töltse le és telepítse a könyvtárat innen: [itt](https://releases.groupdocs.com/annotation/net/).
+2. Hozzáférés a bemeneti fájlokhoz: Készítse elő a megjegyzéseket tartalmazó PDF fájlt és a hozzá tartozó XML fájlt.
+3. C# alapismeretek: A C# programozási nyelv ismerete előnyös lesz a megadott kódpéldák megvalósításához.
 
 ## Névterek importálása
-Először is importáljuk a szükséges névtereket, hogy lehetővé tegyük a GroupDocs.Annotation funkcióival való interakciót.
+Először is importáljuk a szükséges névtereket a GroupDocs.Annotation funkciókkal való interakció engedélyezéséhez.
 ```csharp
 using System;
 using System.IO;
 using GroupDocs.Annotation;
 ```
 
-Most bontsuk le a megjegyzések XML-fájlokból történő exportálásának folyamatát egy sor egyszerűen követhető lépésre:
-## 1. lépés: Inicializálja az Annotátort
-Kezdje az Annotator objektum inicializálásával, és adja meg a bemeneti PDF-fájl elérési útját.
+Most bontsuk le az XML fájlokból származó annotációk exportálásának folyamatát néhány könnyen követhető lépésre:
+## 1. lépés: Annotátor inicializálása
+Kezdje az Annotator objektum inicializálásával, megadva a bemeneti PDF fájl elérési útját.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf-file"))
 {
 ```
-## 2. lépés: Megjegyzések exportálása
- Ezután exportálja a megjegyzéseket az XML-fájlból a`ExportAnnotationsFromXMLFile` módszert, és megadja a bemeneti XML fájl elérési útját.
+## 2. lépés: Jegyzetek exportálása
+Ezután exportálja az annotációkat az XML fájlból a következő meghívásával: `ExportAnnotationsFromXMLFile` metódust, és megadja a bemeneti XML fájl elérési útját.
 ```csharp
 annotator.ExportAnnotationsFromXMLFile("input.XML-file");
 ```
-## 3. lépés: Mentse az exportált megjegyzéseket
- Mentse el az exportált annotációkat a`Save` módszerrel, megadva a kívánt fájlnevet.
+## 3. lépés: Exportált megjegyzések mentése
+Mentse el az exportált megjegyzéseket a `Save` metódust, megadva a kívánt fájlnevet.
 ```csharp
 annotator.Save("result_export");
 ```
 
 ## Következtetés
-Összefoglalva, a megjegyzések exportálása XML-fájlokból a GroupDocs.Annotation for .NET segítségével egy egyszerű folyamat, amely jelentősen javítja a dokumentumkezelési képességeket. Az oktatóanyagban ismertetett lépések követésével könnyedén exportálhat megjegyzéseket, és egyszerűsítheti a dokumentumok munkafolyamatát.
+Összefoglalva, az XML-fájlokból a GroupDocs.Annotation for .NET használatával exportált jegyzetek egy egyszerű folyamat, amely jelentősen javítja a dokumentumkezelési képességeket. Az ebben az oktatóanyagban ismertetett lépéseket követve könnyedén exportálhatja a jegyzeteket, egyszerűsítve a dokumentumkezelési munkafolyamatot.
 ## GYIK
-### Exportálhatok megjegyzéseket több PDF fájlból egyszerre?
-Igen, ismételhet PDF-fájlok gyűjteményén, és ennek megfelelően exportálhatja a megjegyzéseket a GroupDocs.Annotation for .NET segítségével.
-### A GroupDocs.Annotation támogatja a PDF-en kívül más fájlformátumokat is?
+### Exportálhatok egyszerre több PDF-fájlból jegyzeteket?
+Igen, a GroupDocs.Annotation for .NET segítségével végigmehetsz PDF fájlok gyűjteményén, és ennek megfelelően exportálhatod a jegyzeteket.
+### A GroupDocs.Annotation támogat más fájlformátumokat is a PDF-en kívül?
 Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a DOCX, PPTX, XLSX és egyebeket.
-### Elérhető ingyenes próbaverzió a GroupDocs.Annotation for .NET számára?
- Igen, igénybe veheti a GroupDocs.Annotation ingyenes próbaverzióját a .NET-hez innen[itt](https://releases.groupdocs.com/).
-### Testreszabhatom az exportált kommentárok megjelenését?
-Természetesen a GroupDocs.Annotation kiterjedt testreszabási lehetőségeket biztosít a megjegyzések megjelenéséhez.
-### Hol találok támogatást a GroupDocs.Annotation for .NET számára?
- A GroupDocs.Annotation fórumon segítséget kérhet és kapcsolatba léphet a közösséggel[itt](https://forum.groupdocs.com/c/annotation/10).
+### Van ingyenes próbaverzió a GroupDocs.Annotation for .NET-hez?
+Igen, igénybe veheti a GroupDocs.Annotation for .NET ingyenes próbaverzióját a következő címen: [itt](https://releases.groupdocs.com/).
+### Testreszabhatom az exportált megjegyzések megjelenését?
+A GroupDocs.Annotation természetesen széleskörű testreszabási lehetőségeket kínál a jegyzetek megjelenéséhez.
+### Hol találok támogatást a GroupDocs.Annotation for .NET-hez?
+Segítséget kérhetsz és kapcsolatba léphetsz a közösséggel a GroupDocs.Annotation fórumon. [itt](https://forum.groupdocs.com/c/annotation/10).

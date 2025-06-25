@@ -1,25 +1,25 @@
 ---
-title: Thêm chú thích nguệch ngoạc văn bản vào tài liệu
-linktitle: Thêm chú thích nguệch ngoạc văn bản vào tài liệu
-second_title: GroupDocs.Annotation .NET API
-description: Tìm hiểu cách dễ dàng thêm các chú thích nguệch ngoạc văn bản vào tài liệu bằng Groupdocs.Annotation cho .NET. Tăng cường hợp tác và quá trình xem xét tài liệu.
-weight: 25
-url: /vi/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Tìm hiểu cách dễ dàng thêm chú thích dạng văn bản ngoằn ngoèo vào tài liệu bằng Groupdocs.Annotation cho .NET. Nâng cao quy trình cộng tác và xem xét tài liệu."
+"linktitle": "Thêm chú thích ngoằn ngoèo dạng văn bản vào tài liệu"
+"second_title": "GroupDocs.Chú thích API .NET"
+"title": "Thêm chú thích ngoằn ngoèo dạng văn bản vào tài liệu"
+"url": "/vi/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
-# Thêm chú thích nguệch ngoạc văn bản vào tài liệu
+# Thêm chú thích ngoằn ngoèo dạng văn bản vào tài liệu
 
 ## Giới thiệu
 
-Groupdocs.Annotation for .NET là một thư viện linh hoạt cho phép các nhà phát triển tích hợp khả năng chú thích mạnh mẽ vào các ứng dụng .NET của họ một cách dễ dàng. Cho dù bạn đang làm việc với tệp PDF, tài liệu Word hay các định dạng tệp phổ biến khác, Groupdocs.Annotation đều cung cấp giải pháp liền mạch để chú thích và nâng cao khả năng cộng tác trên tài liệu.
+Groupdocs.Annotation for .NET là một thư viện đa năng cho phép các nhà phát triển tích hợp các khả năng chú thích mạnh mẽ vào các ứng dụng .NET của họ một cách dễ dàng. Cho dù bạn đang làm việc với PDF, tài liệu Word hay các định dạng tệp phổ biến khác, Groupdocs.Annotation cung cấp giải pháp liền mạch để chú thích và tăng cường cộng tác tài liệu.
 
 ## Điều kiện tiên quyết
 
-Trước khi đi sâu vào hướng dẫn, hãy đảm bảo rằng bạn có sẵn các điều kiện tiên quyết sau:
+Trước khi bắt đầu hướng dẫn, hãy đảm bảo rằng bạn đã đáp ứng đủ các điều kiện tiên quyết sau:
 
 ## Nhập không gian tên
 
-Đảm bảo nhập các không gian tên cần thiết để truy cập các chức năng do Groupdocs.Annotation cung cấp cho .NET.
+Hãy đảm bảo nhập các không gian tên cần thiết để truy cập các chức năng do Groupdocs.Annotation cung cấp cho .NET.
 
 ```csharp
 using System;
@@ -30,9 +30,9 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Bây giờ chúng ta đã đề cập đến các điều kiện tiên quyết, hãy chia nhỏ quy trình thêm chú thích nguệch ngoạc văn bản thành nhiều bước.
+Bây giờ chúng ta đã nắm được các điều kiện tiên quyết, hãy chia nhỏ quy trình thêm chú thích dạng ngoằn ngoèo cho văn bản thành nhiều bước.
 
-## Bước 1: Xác định đường dẫn đầu ra
+## Bước 1: Xác định Đường dẫn đầu ra
 
 Xác định đường dẫn nơi tài liệu có chú thích sẽ được lưu.
 
@@ -51,9 +51,9 @@ using (Annotator annotator = new Annotator("input.pdf"))
 }
 ```
 
-## Bước 3: Tạo chú thích nguệch ngoạc
+## Bước 3: Tạo chú thích Squiggly
 
-Tạo một đối tượng SquigglyAnnotation và chỉ định các thuộc tính của nó.
+Tạo đối tượng SquigglyAnnotation và chỉ định các thuộc tính của nó.
 
 ```csharp
 SquigglyAnnotation squiggly = new SquigglyAnnotation
@@ -87,7 +87,7 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 
 ## Bước 4: Thêm chú thích
 
-Thêm chú thích nguệch ngoạc đã tạo vào tài liệu.
+Thêm chú thích ngoằn ngoèo đã tạo vào tài liệu.
 
 ```csharp
 annotator.Add(squiggly);
@@ -103,7 +103,7 @@ annotator.Save(outputPath);
 
 ## Bước 6: Hiển thị xác nhận
 
-Hiển thị thông báo xác nhận việc lưu thành công tài liệu được chú thích.
+Hiển thị thông báo xác nhận việc lưu tài liệu có chú thích thành công.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Phần kết luận
 
-Tóm lại, Groupdocs.Annotation for .NET cung cấp cho các nhà phát triển một bộ công cụ mạnh mẽ để tích hợp các chức năng chú thích tài liệu vào các ứng dụng .NET của họ một cách liền mạch. Bằng cách làm theo hướng dẫn từng bước này, bạn có thể dễ dàng thêm các chú thích nguệch ngoạc bằng văn bản vào tài liệu của mình, tăng cường quá trình cộng tác và đánh giá tài liệu.
+Tóm lại, Groupdocs.Annotation for .NET cung cấp cho các nhà phát triển một bộ công cụ mạnh mẽ để tích hợp các chức năng chú thích tài liệu vào các ứng dụng .NET của họ một cách liền mạch. Bằng cách làm theo hướng dẫn từng bước này, bạn có thể dễ dàng thêm các chú thích ngoằn ngoèo dạng văn bản vào tài liệu của mình, nâng cao quá trình cộng tác và xem xét tài liệu.
 
 ## Câu hỏi thường gặp
 
-### Câu hỏi: Groupdocs.Annotation có thể hỗ trợ chú thích trên nhiều định dạng tệp khác nhau không?
+### H: Groupdocs.Annotation có hỗ trợ chú thích trên nhiều định dạng tệp khác nhau không?
 
-Trả lời: Có, Groupdocs.Annotation hỗ trợ chú thích trên nhiều định dạng tệp, bao gồm PDF, tài liệu Word, trang tính Excel, v.v.
+A: Có, Groupdocs.Annotation hỗ trợ chú thích trên nhiều định dạng tệp, bao gồm PDF, tài liệu Word, bảng tính Excel, v.v.
 
-### Câu hỏi: Groupdocs.Annotation có tương thích với cả ứng dụng web và máy tính để bàn không?
+### H: Groupdocs.Annotation có tương thích với cả ứng dụng trên máy tính để bàn và web không?
 
-Đ: Chắc chắn rồi! Groupdocs.Annotation có thể được tích hợp liền mạch vào cả ứng dụng web và máy tính để bàn, mang lại sự linh hoạt và linh hoạt.
+A: Hoàn toàn đúng! Groupdocs.Annotation có thể được tích hợp liền mạch vào cả ứng dụng máy tính để bàn và web, mang lại sự linh hoạt và đa năng.
 
-### Câu hỏi: Có bất kỳ tùy chọn cấp phép nào dành cho Groupdocs.Annotation không?
+### H: Có tùy chọn cấp phép nào dành cho Groupdocs.Annotation không?
 
-Trả lời: Có, Groupdocs.Annotation cung cấp các tùy chọn cấp phép linh hoạt được điều chỉnh để phù hợp với nhu cầu của cá nhân hoặc doanh nghiệp, bao gồm cả giấy phép tạm thời cho mục đích dùng thử.
+A: Có, Groupdocs.Annotation cung cấp các tùy chọn cấp phép linh hoạt phù hợp với nhu cầu của cá nhân hoặc doanh nghiệp, bao gồm cả giấy phép tạm thời cho mục đích dùng thử.
 
-### Câu hỏi: Các chú thích được tạo bằng Groupdocs.Annotation có thể được tùy chỉnh không?
+### H: Có thể tùy chỉnh chú thích được tạo bằng Groupdocs.Annotation không?
 
-Đ: Chắc chắn rồi! Groupdocs.Annotation cung cấp các tùy chọn tùy chỉnh mở rộng cho chú thích, cho phép nhà phát triển điều chỉnh chú thích theo yêu cầu cụ thể của họ.
+A: Chắc chắn rồi! Groupdocs.Annotation cung cấp nhiều tùy chọn tùy chỉnh chú thích, cho phép các nhà phát triển tùy chỉnh chú thích theo yêu cầu cụ thể của họ.
 
-### Câu hỏi: Groupdocs.Annotation có cung cấp hỗ trợ và tài liệu cho nhà phát triển không?
+### H: Groupdocs.Annotation có cung cấp hỗ trợ và tài liệu cho nhà phát triển không?
 
-Đ: Thật vậy! Groupdocs.Annotation cung cấp tài liệu toàn diện và các diễn đàn hỗ trợ chuyên dụng để hỗ trợ các nhà phát triển sử dụng các tính năng của nó một cách hiệu quả.
+A: Thật vậy! Groupdocs.Annotation cung cấp tài liệu toàn diện và diễn đàn hỗ trợ chuyên dụng để hỗ trợ các nhà phát triển sử dụng các tính năng của nó một cách hiệu quả.

@@ -1,24 +1,24 @@
 ---
-title: Hivatkozási megjegyzés hozzáadása a dokumentumhoz
-linktitle: Hivatkozási megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat hozzá hivatkozásokat a dokumentumokhoz a Groupdocs.Annotation for .NET használatával. Fokozza az együttműködést és az interaktivitást könnyedén.
-weight: 16
-url: /hu/net/unlocking-annotation-power/add-link-annotation/
+"description": "Tanulja meg, hogyan adhat hozzá linkannotációkat dokumentumokhoz a Groupdocs.Annotation for .NET segítségével. Könnyedén fokozhatja az együttműködést és az interaktivitást."
+"linktitle": "Hivatkozási megjegyzés hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Hivatkozási megjegyzés hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-link-annotation/"
+"weight": 16
 ---
 
 # Hivatkozási megjegyzés hozzáadása a dokumentumhoz
 
 ## Bevezetés
-A Groupdocs.Annotation for .NET egy nagy teljesítményű könyvtár, amely lehetővé teszi a fejlesztők számára, hogy könnyedén integráljanak átfogó annotációs funkciókat .NET-alkalmazásaikba. Az egyik legfontosabb szolgáltatása az, hogy hivatkozási megjegyzéseket adhat a dokumentumokhoz, javítva az együttműködést és az interaktivitást.
+Groupdocs.Annotation for .NET egy hatékony könyvtár, amely lehetővé teszi a fejlesztők számára, hogy átfogó annotációs funkciókat integráljanak .NET alkalmazásaikba. Az egyik legfontosabb funkciója a linkannotációk dokumentumokhoz való hozzáadásának lehetősége, ami javítja az együttműködést és az interaktivitást.
 ## Előfeltételek
-Mielőtt belevágna a link megjegyzések hozzáadásának folyamatába, győződjön meg arról, hogy a következő előfeltételekkel rendelkezik:
-- A C# programozási nyelv alapvető ismerete.
-- Telepített Groupdocs.Annotation a .NET könyvtárhoz.
-- Hozzáférés a megjegyzésekkel ellátni kívánt dokumentumhoz.
+Mielőtt belemerülne a linkannotációk hozzáadásának folyamatába, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
+- C# programozási nyelv alapismeretek.
+- Telepítettem a Groupdocs.Annotation for .NET könyvtárat.
+- Hozzáférés egy olyan dokumentumhoz, amelyhez megjegyzéseket szeretne fűzni.
 
 ## Névterek importálása
-Először is importálnia kell a szükséges névtereket a Groupdocs.Annotation .NET-funkciók használatához. Ez lehetővé teszi, hogy az alkalmazás hozzáférjen a dokumentumok annotálásához szükséges osztályokhoz és metódusokhoz.
+Először is importálnia kell a szükséges névtereket a Groupdocs.Annotation for .NET funkciók használatához. Ez lehetővé teszi az alkalmazás számára, hogy hozzáférjen a dokumentumok annotálásához szükséges osztályokhoz és metódusokhoz.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,21 +27,21 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 1. lépés: Állítsa be a kimeneti útvonalat
-Határozza meg az útvonalat, ahová a megjegyzésekkel ellátott dokumentumot menteni kívánja.
+## 1. lépés: Kimeneti útvonal beállítása
+Adja meg azt az elérési utat, ahová a jegyzetekkel ellátott dokumentumot menteni szeretné.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Inicializálja az Annotátort
- Hozzon létre egy példányt a`Annotator` osztályba a megjegyzésekkel ellátni kívánt dokumentum elérési útjának megadásával.
+## 2. lépés: Annotátor inicializálása
+Hozz létre egy példányt a `Annotator` osztályt a jegyzetelni kívánt dokumentum elérési útjának megadásával.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ide kerül a kommentár kódja
+    // Ide fog kerülni a megjegyzéskód
 }
 ```
-## 3. lépés: Hozzon létre hivatkozási megjegyzést
- Határozza meg a`LinkAnnotation` objektumot, és adja meg tulajdonságait, például üzenetet, átlátszatlanságot, oldalszámot, háttérszínt, pontokat, válaszokat és URL-t.
+## 3. lépés: Hivatkozáshoz fűzött megjegyzés létrehozása
+Definiáljon egy `LinkAnnotation` objektumot, és adja meg a tulajdonságait, például az üzenetet, az átlátszóságot, az oldalszámot, a háttérszínt, a pontokat, a válaszokat és az URL-t.
 ```csharp
 LinkAnnotation link = new LinkAnnotation
 {
@@ -70,32 +70,32 @@ LinkAnnotation link = new LinkAnnotation
     Url = "https://www.google.com"
 };
 ```
-## 4. lépés: Megjegyzés hozzáadása
- Adja hozzá a létrehozott hivatkozási megjegyzést a dokumentumhoz a`Add` az annotátor példány metódusa.
+## 4. lépés: Jegyzet hozzáadása
+Adja hozzá a létrehozott hivatkozáshoz tartozó megjegyzést a dokumentumhoz a `Add` az annotátorpéldány metódusa.
 ```csharp
 annotator.Add(link);
 ```
-## 5. lépés: Mentse el a dokumentumot
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+## 5. lépés: Dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 annotator.Save(outputPath);
 ```
-## 6. lépés: Jelenítse meg a sikeres üzenetet
-Tájékoztassa a felhasználót a megjegyzésekkel ellátott dokumentum sikeres mentéséről.
+## 6. lépés: Sikeres üzenet megjelenítése
+Tájékoztassa a felhasználót a jegyzetekkel ellátott dokumentum sikeres mentéséről.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Összefoglalva, a fenti lépések követésével a Groupdocs.Annotation for .NET segítségével zökkenőmentesen adhat hozzá hivatkozásokat a dokumentumokhoz. Ez javítja a dokumentumok együttműködését, és interaktív funkciókat biztosít a felhasználók számára.
+Összefoglalva, a fenti lépéseket követve zökkenőmentesen adhatsz hozzá linkannotációkat a dokumentumokhoz a Groupdocs.Annotation for .NET segítségével. Ez javítja a dokumentumokkal való együttműködést, és interaktív funkciókat biztosít a felhasználóknak.
 ## GYIK
-### A Groupdocs.Annotation for .NET kompatibilis minden típusú dokumentummal?
-A Groupdocs.Annotation for .NET a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, Word, Excel és egyebeket.
-### Testreszabhatom a kommentárok megjelenését?
-Igen, testreszabhatja a megjegyzések különféle tulajdonságait, például színt, átlátszatlanságot és méretet az igényeinek megfelelően.
-### A Groupdocs.Annotation for .NET kínál valós idejű együttműködési szolgáltatásokat?
-Igen, a Groupdocs.Annotation for .NET valós idejű együttműködési szolgáltatásokat biztosít, amelyek lehetővé teszik több felhasználó számára, hogy egyidejűleg megjegyzéseket fűzzenek a dokumentumokhoz.
-### Elérhető technikai támogatás a Groupdocs termékekhez?
- Igen, a Groupdocs termékek technikai támogatása elérhető a fórumon és a támogatáson keresztül[itt](https://forum.groupdocs.com/c/annotation/10).
+### A Groupdocs.Annotation for .NET kompatibilis az összes dokumentumtípussal?
+Groupdocs.Annotation for .NET számos dokumentumformátumot támogat, beleértve a PDF, Word, Excel és egyebeket.
+### Testreszabhatom a megjegyzések megjelenését?
+Igen, testreszabhatja a megjegyzések különböző tulajdonságait, például a színt, az átlátszóságot és a méretet az igényeinek megfelelően.
+### A Groupdocs.Annotation for .NET kínál valós idejű együttműködési funkciókat?
+Igen, a Groupdocs.Annotation for .NET valós idejű együttműködési funkciókat biztosít, amelyek lehetővé teszik, hogy több felhasználó egyszerre lásson el jegyzeteket a dokumentumokban.
+### Elérhető a Groupdocs termékekhez technikai támogatás?
+Igen, a Groupdocs termékekhez technikai támogatás érhető el a fórumon és a támogatási oldalon keresztül. [itt](https://forum.groupdocs.com/c/annotation/10).
 ### Kipróbálhatom a Groupdocs.Annotation for .NET-et vásárlás előtt?
-Igen, igénybe veheti a Groupdocs.Annotation for .NET ingyenes próbaverzióját, hogy vásárlás előtt felfedezze a szolgáltatásait[itt](https://purchase.groupdocs.com/temporary-license/).
+Igen, igénybe veheti a Groupdocs.Annotation for .NET ingyenes próbaverzióját, hogy megismerkedhessen a funkcióival a vásárlás előtt.[itt](https://purchase.groupdocs.com/temporary-license/).

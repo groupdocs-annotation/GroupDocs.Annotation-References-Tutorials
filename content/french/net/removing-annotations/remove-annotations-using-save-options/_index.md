@@ -1,25 +1,25 @@
 ---
-title: Supprimer les annotations à l'aide des options d'enregistrement dans .NET
-linktitle: Supprimer les annotations à l'aide des options d'enregistrement dans .NET
-second_title: API GroupDocs.Annotation .NET
-description: Découvrez comment supprimer des annotations d'un PDF et d'autres documents dans .NET à l'aide de GroupDocs.Annotation. Guide étape par étape avec des exemples de code.
-weight: 14
-url: /fr/net/removing-annotations/remove-annotations-using-save-options/
+"description": "Découvrez comment supprimer les annotations d'un PDF et d'autres documents .NET à l'aide de GroupDocs.Annotation. Guide étape par étape avec exemples de code."
+"linktitle": "Supprimer les annotations à l'aide des options d'enregistrement dans .NET"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Supprimer les annotations à l'aide des options d'enregistrement dans .NET"
+"url": "/fr/net/removing-annotations/remove-annotations-using-save-options/"
+"weight": 14
 ---
 
 # Supprimer les annotations à l'aide des options d'enregistrement dans .NET
 
 ## Introduction
 
-GroupDocs.Annotation for .NET est un outil puissant qui permet aux développeurs d'ajouter facilement des fonctionnalités d'annotation à leurs applications .NET. Que vous travailliez sur un système de gestion de documents, une plateforme de collaboration ou toute autre application impliquant le traitement de documents, GroupDocs.Annotation fournit un ensemble complet de fonctionnalités pour annoter des PDF et d'autres formats de documents de manière transparente.
+GroupDocs.Annotation pour .NET est un outil puissant qui permet aux développeurs d'ajouter facilement des fonctionnalités d'annotation à leurs applications .NET. Que vous travailliez sur un système de gestion de documents, une plateforme collaborative ou toute autre application impliquant le traitement de documents, GroupDocs.Annotation offre un ensemble complet de fonctionnalités pour annoter facilement des PDF et d'autres formats de documents.
 
-## Conditions préalables
+## Prérequis
 
-Avant de plonger dans le monde de l'annotation de documents à l'aide de GroupDocs.Annotation pour .NET, assurez-vous d'avoir les conditions préalables suivantes en place :
+Avant de vous lancer dans l'annotation de documents à l'aide de GroupDocs.Annotation pour .NET, assurez-vous de disposer des conditions préalables suivantes :
 
-### 1. Installez GroupDocs.Annotation pour .NET
+### 1. Installer GroupDocs.Annotation pour .NET
 
- Commencez par télécharger et installer GroupDocs.Annotation pour .NET. Vous pouvez télécharger la dernière version à partir du[download page](https://releases.groupdocs.com/annotation/net/).
+Commencez par télécharger et installer GroupDocs.Annotation pour .NET. Vous pouvez télécharger la dernière version depuis le [page de téléchargement](https://releases.groupdocs.com/annotation/net/).
 
 ## Importation d'espaces de noms
 
@@ -32,36 +32,36 @@ using System.IO;
 ```
 
 
-Passons maintenant au processus de suppression des annotations d'un document à l'aide de la fonctionnalité Options d'enregistrement dans .NET :
+Voyons maintenant le processus de suppression des annotations d'un document à l'aide de la fonctionnalité Options d'enregistrement dans .NET :
 
 ## Étape 1 : Définir le chemin de sortie
 
-Tout d’abord, définissez le chemin de sortie où le document avec les annotations supprimées sera enregistré. Vous pouvez utiliser le`Path.Combine` méthode pour combiner le chemin du répertoire avec le nom du fichier de sortie.
+Tout d'abord, définissez le chemin de sortie où le document dont les annotations ont été supprimées sera enregistré. Vous pouvez utiliser l'option `Path.Combine` méthode pour combiner le chemin du répertoire avec le nom du fichier de sortie.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Étape 2 : initialiser l'annotateur
+## Étape 2 : Initialiser l'annotateur
 
- Ensuite, initialisez une instance de`Annotator` classe en fournissant le chemin d’accès au document contenant les annotations.
+Ensuite, initialisez une instance du `Annotator` classe en fournissant le chemin vers le document contenant les annotations.
 
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
-    // Le code de suppression des annotations sera ici
+    // Le code de suppression des annotations sera placé ici
 }
 ```
 
 ## Étape 3 : Enregistrer le document avec suppression des annotations
 
- Maintenant, utilisez le`Save` méthode du`Annotator` classe avec le`SaveOptions` pour enregistrer le document avec les annotations supprimées. Dans le`SaveOptions` , met le`AnnotationTypes` propriété à`AnnotationType.None` pour supprimer toutes les annotations.
+Maintenant, utilisez le `Save` méthode de la `Annotator` classe avec le `SaveOptions` pour enregistrer le document avec les annotations supprimées. Dans le `SaveOptions`, définissez le `AnnotationTypes` propriété à `AnnotationType.None` pour supprimer toutes les annotations.
 
 ```csharp
 annotator.Save(outputPath, new SaveOptions() { AnnotationTypes = AnnotationType.None });
 ```
 
-## Étape 4 : Afficher le message de réussite
+## Étape 4 : afficher le message de réussite
 
 Enfin, affichez un message de réussite indiquant que le document a été enregistré avec succès avec les annotations supprimées.
 
@@ -71,26 +71,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Conclusion
 
-En conclusion, GroupDocs.Annotation pour .NET simplifie le processus de suppression des annotations des documents. En suivant le guide étape par étape décrit ci-dessus, les développeurs peuvent intégrer de manière transparente la fonctionnalité de suppression d'annotations dans leurs applications .NET.
+En conclusion, GroupDocs.Annotation pour .NET simplifie la suppression des annotations des documents. En suivant le guide étape par étape décrit ci-dessus, les développeurs peuvent intégrer facilement la fonctionnalité de suppression des annotations à leurs applications .NET.
 
 ## FAQ
 
-### Q : GroupDocs.Annotation peut-il supprimer les annotations d'autres formats de document que le PDF ?
+### Q : GroupDocs.Annotation peut-il supprimer les annotations d’autres formats de documents en plus du PDF ?
 
-R : GroupDocs.Annotation prend en charge divers formats de documents, notamment PDF, Word, Excel et PowerPoint, vous permettant de supprimer les annotations d'un large éventail de documents.
+R : GroupDocs.Annotation prend en charge divers formats de documents, notamment PDF, Word, Excel et PowerPoint, vous permettant de supprimer les annotations d’une large gamme de documents.
 
 ### Q : GroupDocs.Annotation est-il facile à intégrer dans des projets .NET existants ?
 
-R : Oui, GroupDocs.Annotation fournit une API simple et une documentation complète, permettant aux développeurs d'intégrer facilement des fonctionnalités d'annotation dans leurs applications .NET.
+R : Oui, GroupDocs.Annotation fournit une API simple et une documentation complète, ce qui permet aux développeurs d’intégrer facilement des fonctionnalités d’annotation dans leurs applications .NET.
 
-### Q : GroupDocs.Annotation prend-il en charge la suppression sélective des annotations ?
+### Q : GroupDocs.Annotation prend-il en charge la suppression sélective des annotations ?
 
-R : Oui, GroupDocs.Annotation permet aux développeurs de spécifier les types d'annotations à supprimer, ce qui leur donne une flexibilité dans la gestion des annotations dans leurs documents.
+R : Oui, GroupDocs.Annotation permet aux développeurs de spécifier les types d’annotations à supprimer, leur offrant ainsi une certaine flexibilité dans la gestion des annotations dans leurs documents.
 
-### Q : Puis-je essayer GroupDocs.Annotation gratuitement avant d'acheter ?
+### Q : Puis-je essayer GroupDocs.Annotation gratuitement avant de l'acheter ?
 
- R : Oui, vous pouvez télécharger une version d'essai gratuite de GroupDocs.Annotation à partir du[page des versions](https://releases.groupdocs.com/) pour explorer ses fonctionnalités avant de prendre une décision d’achat.
+R : Oui, vous pouvez télécharger une version d’essai gratuite de GroupDocs.Annotation à partir du [page des communiqués](https://releases.groupdocs.com/) pour explorer ses fonctionnalités avant de prendre une décision d'achat.
 
-### Q : Où puis-je obtenir de l'aide pour GroupDocs.Annotation ?
+### Q : Où puis-je obtenir de l’aide pour GroupDocs.Annotation ?
 
- R : Pour obtenir une assistance technique et un support communautaire, vous pouvez visiter le[Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).
+R : Pour une assistance technique et un soutien communautaire, vous pouvez visiter le [Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).

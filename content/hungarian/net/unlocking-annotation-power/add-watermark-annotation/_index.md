@@ -1,28 +1,28 @@
 ---
-title: Vízjel megjegyzés hozzáadása a dokumentumhoz
-linktitle: Vízjel megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: GroupDocs.Annotation for .NET segítségével megtudhatja, hogyan adhat hozzá könnyedén vízjel megjegyzéseket dokumentumaihoz. Növelje a dokumentumok átláthatóságát és biztonságát.
-weight: 28
-url: /hu/net/unlocking-annotation-power/add-watermark-annotation/
+"description": "Tanulja meg, hogyan adhat könnyedén vízjel-megjegyzéseket dokumentumaihoz a GroupDocs.Annotation for .NET segítségével. Növelje a dokumentumok érthetőségét és biztonságát."
+"linktitle": "Vízjel hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Vízjel hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-watermark-annotation/"
+"weight": 28
 ---
 
-# Vízjel megjegyzés hozzáadása a dokumentumhoz
+# Vízjel hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Ebben az oktatóanyagban a GroupDocs.Annotation for .NET segítségével vízjel megjegyzés hozzáadásának folyamatát mutatjuk be. A vízjel megjegyzések hasznosak egy dokumentum állapotának jelzésére, bizalmasként való megjelölésére vagy bármilyen más releváns információ hozzáadására.
+Ebben az oktatóanyagban bemutatjuk, hogyan adhatunk vízjel-megjegyzéseket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. A vízjel-megjegyzések hasznosak egy dokumentum állapotának jelzésére, bizalmasként való megjelölésére vagy bármilyen más releváns információ hozzáadására.
 
 ## Előfeltételek
 
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következőkkel:
+Mielőtt elkezdenénk, győződjünk meg róla, hogy a következőkkel rendelkezünk:
 
-1.  GroupDocs.Annotation for .NET: Letöltheti innen[itt](https://releases.groupdocs.com/annotation/net/).
-2. Visual Studio: Győződjön meg arról, hogy a Visual Studio telepítve van a rendszeren.
-3. Alapvető C# ismerete: A kódpéldák megértéséhez és megvalósításához a C# programozási nyelv ismerete szükséges.
+1. GroupDocs.Annotation .NET-hez: Letöltheti innen: [itt](https://releases.groupdocs.com/annotation/net/).
+2. Visual Studio: Győződjön meg arról, hogy a Visual Studio telepítve van a rendszerén.
+3. C# alapismeretek: A C# programozási nyelv ismerete szükséges a kódpéldák megértéséhez és megvalósításához.
 
 ## Névterek importálása
 
-A kódolás megkezdése előtt importáljuk a szükséges névtereket:
+Mielőtt elkezdenénk a kódolást, importáljuk a szükséges névtereket:
 
 ```csharp
 using System;
@@ -32,30 +32,30 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
 
-Most bontsuk le a vízjel megjegyzés hozzáadásának folyamatát több lépésre:
+Most bontsuk le a vízjel hozzáadásának folyamatát több lépésre:
 
-## 1. lépés: Határozza meg a kimeneti útvonalat
+## 1. lépés: Kimeneti útvonal meghatározása
 
- Először is meg kell határoznunk a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentumot elmentjük. Használjuk a`Path` osztályból`System.IO` névtér a kimeneti könyvtár elérési útjának a fájlnévvel való kombinálásához.
+Először is meg kell határoznunk a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül. A következőt fogjuk használni: `Path` osztály innen `System.IO` névtér a kimeneti könyvtár elérési útjának és a fájlnévnek a kombinálásához.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## 2. lépés: Inicializálja az Annotátort
+## 2. lépés: Annotátor inicializálása
 
-Ezután inicializáljuk az annotátort a bemeneti dokumentum elérési útjának megadásával. Ez lehetővé teszi számunkra, hogy megjegyzéseket adjunk a dokumentumhoz.
+Ezután inicializáljuk az annotátort a bemeneti dokumentum elérési útjának megadásával. Ez lehetővé teszi számunkra, hogy a dokumentumhoz annotációkat adjunk.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ide kerül a kommentár kódja
+    // Ide fog kerülni a megjegyzéskód
 }
 ```
 
-## 3. lépés: Vízjel-annotáció létrehozása
+## 3. lépés: Vízjel-megjegyzés létrehozása
 
-Most hozzunk létre egy vízjel annotációs objektumot a kívánt tulajdonságokkal, például szöggel, pozícióval, szöveggel, betűszínnel, átlátszatlansággal stb.
+Most hozzunk létre egy vízjel-megjegyzés objektumot a kívánt tulajdonságokkal, mint például szög, pozíció, szöveg, betűszín, átlátszóság stb.
 
 ```csharp
 WatermarkAnnotation watermark = new WatermarkAnnotation
@@ -88,17 +88,17 @@ WatermarkAnnotation watermark = new WatermarkAnnotation
 };
 ```
 
-## 4. lépés: Vízjel megjegyzés hozzáadása
+## 4. lépés: Vízjel-megjegyzés hozzáadása
 
- Most hozzáadjuk a vízjel megjegyzést a dokumentumhoz a segítségével`Add` az annotátor objektum metódusa.
+Most hozzáadjuk a vízjel-megjegyzést a dokumentumhoz a következővel: `Add` az annotátor objektum metódusa.
 
 ```csharp
 annotator.Add(watermark);
 ```
 
-## 5. lépés: Mentse el a dokumentumot
+## 5. lépés: Dokumentum mentése
 
-Végül elmentjük a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+Végül a megjegyzésekkel ellátott dokumentumot a megadott kimeneti elérési útra mentjük.
 
 ```csharp
 annotator.Save(outputPath);
@@ -106,26 +106,26 @@ annotator.Save(outputPath);
 
 ## Következtetés
 
-Ebben az oktatóanyagban megtanultuk, hogyan adhatunk vízjel megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. A vízjel megjegyzések értékes eszközt jelentenek a dokumentumok releváns információkkal való megjelölésére vagy állapotuk jelzésére.
+Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá vízjel-megjegyzéseket egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. A vízjel-megjegyzések értékes eszközök a dokumentumok releváns információkkal való megjelölésére vagy állapotuk jelzésére.
 
 ## GYIK
 
-### K: Testreszabhatom a vízjel megjegyzés megjelenését?
+### K: Testreszabhatom a vízjel-megjegyzés megjelenését?
 
-V: Igen, testreszabhat különféle tulajdonságokat, például szöveget, betűméretet, színt, átlátszatlanságot, pozíciót stb., hogy a vízjelet az Ön igényei szerint szabja.
+V: Igen, testreszabhatja a különböző tulajdonságokat, például a szöveget, a betűméretet, a színt, az átlátszóságot, a pozíciót stb., hogy a vízjelet az igényei szerint szabja testre.
 
 ### K: A GroupDocs.Annotation for .NET kompatibilis a különböző dokumentumformátumokkal?
 
-V: Igen, a GroupDocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, Microsoft Word, Excel, PowerPoint és képformátumokat.
+V: Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a PDF, Microsoft Word, Excel, PowerPoint és képformátumokat.
 
-### K: Hozzáadhatok több megjegyzést egyetlen dokumentumhoz?
+### K: Hozzáadhatok több jegyzetet egyetlen dokumentumhoz?
 
-V: Természetesen a GroupDocs.Annotation lehetővé teszi több különböző típusú megjegyzés hozzáadását egyetlen dokumentumhoz, lehetővé téve az átfogó dokumentumjelölést.
+V: Természetesen, a GroupDocs.Annotation lehetővé teszi több különböző típusú annotáció hozzáadását egyetlen dokumentumhoz, lehetővé téve az átfogó dokumentumjelölést.
 
-### K: A GroupDocs.Annotation támogatja az együttműködésen alapuló annotációt?
+### K: A GroupDocs.Annotation támogatja az együttműködésen alapuló jegyzetelést?
 
-V: Igen, a GroupDocs.Annotation megkönnyíti az együttműködésen alapuló megjegyzések készítését azáltal, hogy lehetővé teszi a felhasználók számára megjegyzések, válaszok és megjegyzések hozzáadását, elősegítve a csapattagok közötti hatékony együttműködést.
+V: Igen, a GroupDocs.Annotation megkönnyíti a közös jegyzetelést azáltal, hogy lehetővé teszi a felhasználók számára megjegyzések, válaszok és jegyzetek hozzáadását, elősegítve a csapattagok közötti hatékony együttműködést.
 
-### K: Elérhető a GroupDocs.Annotation próbaverziója .NET-hez?
+### K: Van elérhető próbaverzió a GroupDocs.Annotation for .NET-hez?
 
- V: Igen, letölthet egy ingyenes próbaverziót a webhelyről[itt](https://releases.groupdocs.com/).
+V: Igen, letölthet egy ingyenes próbaverziót innen: [itt](https://releases.groupdocs.com/).

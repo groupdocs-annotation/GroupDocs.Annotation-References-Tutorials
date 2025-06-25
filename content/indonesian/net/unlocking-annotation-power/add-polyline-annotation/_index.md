@@ -1,23 +1,23 @@
 ---
-title: Tambahkan Anotasi Polyline ke Dokumen
-linktitle: Tambahkan Anotasi Polyline ke Dokumen
-second_title: GroupDocs.Annotasi .NET API
-description: Pelajari cara menambahkan anotasi polyline ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan kolaborasi dan proses peninjauan dokumen dengan mudah.
-weight: 18
-url: /id/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "Pelajari cara menambahkan anotasi polyline ke dokumen menggunakan GroupDocs.Annotation for .NET. Tingkatkan kolaborasi dan proses peninjauan dokumen dengan mudah."
+"linktitle": "Tambahkan Anotasi Polyline ke Dokumen"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Tambahkan Anotasi Polyline ke Dokumen"
+"url": "/id/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
 # Tambahkan Anotasi Polyline ke Dokumen
 
 ## Perkenalan
-GroupDocs.Annotation for .NET adalah alat canggih yang memungkinkan pengembang membuat anotasi dokumen PDF dan Microsoft Office secara terprogram. Di antara fitur-fiturnya adalah kemampuan untuk menambahkan anotasi polyline ke dokumen, meningkatkan kolaborasi dan proses peninjauan dokumen.
+GroupDocs.Annotation untuk .NET adalah alat canggih yang memungkinkan pengembang untuk membuat anotasi dokumen PDF dan Microsoft Office secara terprogram. Di antara fitur-fiturnya adalah kemampuan untuk menambahkan anotasi polyline ke dokumen, yang meningkatkan kolaborasi dan proses peninjauan dokumen.
 ## Prasyarat
 Sebelum melanjutkan tutorial ini, pastikan Anda memiliki hal berikut:
-- Visual Studio diinstal pada sistem Anda.
-- Pengetahuan dasar bahasa pemrograman C#.
--  GroupDocs.Annotation untuk perpustakaan .NET diinstal. Anda dapat mengunduhnya dari[Di Sini](https://releases.groupdocs.com/annotation/net/).
+- Visual Studio terinstal di sistem Anda.
+- Pengetahuan dasar tentang bahasa pemrograman C#.
+- GroupDocs.Annotation untuk pustaka .NET telah terpasang. Anda dapat mengunduhnya dari [Di Sini](https://releases.groupdocs.com/annotation/net/).
 
-## Impor Namespace
+## Mengimpor Ruang Nama
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,12 +26,12 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Langkah 1: Tentukan Jalur Keluaran
-Pertama, tentukan jalur keluaran tempat dokumen beranotasi akan disimpan.
+## Langkah 1: Tentukan Jalur Output
+Pertama, tentukan jalur keluaran tempat dokumen yang diberi anotasi akan disimpan.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Langkah 2: Inisialisasi Annotator
+## Langkah 2: Inisialisasi Anotator
 Inisialisasi anotator dengan memberikan nama dokumen masukan.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
@@ -68,31 +68,31 @@ PolylineAnnotation polyline = new PolylineAnnotation
 };
 ```
 ## Langkah 4: Tambahkan Anotasi Polyline
-Tambahkan anotasi polyline ke dokumen menggunakan objek annotator.
+Tambahkan anotasi polyline ke dokumen menggunakan objek anotator.
 ```csharp
 annotator.Add(polyline);
 ```
 ## Langkah 5: Simpan Dokumen
-Simpan dokumen beranotasi ke jalur keluaran yang ditentukan.
+Simpan dokumen yang diberi anotasi ke jalur keluaran yang ditentukan.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Langkah 6: Tampilkan Pesan Sukses
-Menampilkan pesan konfirmasi keberhasilan penyimpanan dokumen.
+## Langkah 6: Menampilkan Pesan Sukses
+Menampilkan pesan yang mengonfirmasi keberhasilan penyimpanan dokumen.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Kesimpulan
-Dalam tutorial ini, kita telah mempelajari cara menambahkan anotasi polyline ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Fitur ini meningkatkan proses kolaborasi dan peninjauan dokumen, sehingga memudahkan pengguna untuk mengomunikasikan umpan balik dan saran secara efektif.
-## FAQ
+Dalam tutorial ini, kita telah mempelajari cara menambahkan anotasi polyline ke dokumen menggunakan GroupDocs.Annotation for .NET. Fitur ini meningkatkan kolaborasi dan proses peninjauan dokumen, sehingga memudahkan pengguna untuk mengomunikasikan umpan balik dan saran secara efektif.
+## Pertanyaan yang Sering Diajukan
 ### Apakah GroupDocs.Annotation untuk .NET kompatibel dengan semua format dokumen?
-GroupDocs.Annotation untuk .NET mendukung format dokumen populer seperti format PDF dan Microsoft Office termasuk Word, Excel, dan PowerPoint.
+GroupDocs.Annotation untuk .NET mendukung format dokumen populer seperti PDF dan format Microsoft Office termasuk Word, Excel, dan PowerPoint.
 ### Bisakah saya menyesuaikan tampilan anotasi?
 Ya, Anda dapat menyesuaikan berbagai properti anotasi seperti warna, opasitas, gaya, dan lebar agar sesuai dengan kebutuhan Anda.
 ### Apakah GroupDocs.Annotation untuk .NET menawarkan uji coba gratis?
- Ya, Anda dapat memanfaatkan uji coba gratis GroupDocs.Annotation untuk .NET dengan mengunjungi[Link ini](https://releases.groupdocs.com/).
+Ya, Anda dapat memanfaatkan uji coba gratis GroupDocs.Annotation untuk .NET dengan mengunjungi [tautan ini](https://releases.groupdocs.com/).
 ### Di mana saya dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET?
- Anda dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET[Di Sini](https://tutorials.groupdocs.com/annotation/net/).
+Anda dapat menemukan dokumentasi untuk GroupDocs.Annotation untuk .NET [Di Sini](https://tutorials.groupdocs.com/annotation/net/).
 ### Bagaimana saya bisa mendapatkan dukungan untuk masalah atau pertanyaan apa pun yang terkait dengan GroupDocs.Annotation untuk .NET?
- Anda bisa mendapatkan dukungan dengan mengunjungi forum GroupDocs.Annotation[Di Sini](https://forum.groupdocs.com/c/annotation/10).
+Anda bisa mendapatkan dukungan dengan mengunjungi forum GroupDocs.Annotation [Di Sini](https://forum.groupdocs.com/c/annotation/10).

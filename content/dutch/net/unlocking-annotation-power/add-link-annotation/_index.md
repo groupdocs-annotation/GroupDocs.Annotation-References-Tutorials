@@ -1,16 +1,16 @@
 ---
-title: Voeg linkannotatie toe aan document
-linktitle: Voeg linkannotatie toe aan document
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u linkannotaties aan documenten kunt toevoegen met Groupdocs.Annotation voor .NET. Verbeter moeiteloos de samenwerking en interactiviteit.
-weight: 16
-url: /nl/net/unlocking-annotation-power/add-link-annotation/
+"description": "Leer hoe u linkannotaties aan documenten toevoegt met Groupdocs.Annotation voor .NET. Verbeter moeiteloos samenwerking en interactiviteit."
+"linktitle": "Linkannotatie toevoegen aan document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Linkannotatie toevoegen aan document"
+"url": "/nl/net/unlocking-annotation-power/add-link-annotation/"
+"weight": 16
 ---
 
-# Voeg linkannotatie toe aan document
+# Linkannotatie toevoegen aan document
 
 ## Invoering
-Groupdocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos uitgebreide annotatiefunctionaliteiten in hun .NET-applicaties kunnen integreren. Een van de belangrijkste functies die het biedt, is de mogelijkheid om linkannotaties aan documenten toe te voegen, waardoor de samenwerking en interactiviteit worden verbeterd.
+Groupdocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos uitgebreide annotatiefunctionaliteit in hun .NET-applicaties kunnen integreren. Een van de belangrijkste functies is de mogelijkheid om linkannotaties aan documenten toe te voegen, wat de samenwerking en interactiviteit verbetert.
 ## Vereisten
 Voordat u begint met het toevoegen van linkannotaties, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
 - Basiskennis van de programmeertaal C#.
@@ -18,7 +18,7 @@ Voordat u begint met het toevoegen van linkannotaties, moet u ervoor zorgen dat 
 - Toegang tot een document dat u wilt annoteren.
 
 ## Naamruimten importeren
-Ten eerste moet u de benodigde naamruimten importeren om Groupdocs.Annotation voor .NET-functionaliteiten te kunnen gebruiken. Hierdoor heeft uw toepassing toegang tot de klassen en methoden die nodig zijn voor het annoteren van documenten.
+Ten eerste moet u de benodigde naamruimten importeren om Groupdocs.Annotation voor .NET-functionaliteit te gebruiken. Dit geeft uw applicatie toegang tot de klassen en methoden die nodig zijn voor het annoteren van documenten.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,21 +27,21 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Stap 1: Stel het uitvoerpad in
+## Stap 1: Uitvoerpad instellen
 Definieer het pad waar u het geannoteerde document wilt opslaan.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Stap 2: Initialiseer Annotator
- Maak een exemplaar van de`Annotator` klasse door het pad op te geven van het document dat u wilt annoteren.
+## Stap 2: Annotator initialiseren
+Maak een exemplaar van de `Annotator` klasse door het pad op te geven van het document dat u wilt annoteren.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // De annotatiecode komt hier terecht
+    // Annotatiecode komt hier
 }
 ```
-## Stap 3: Maak een linkannotatie
- Definieer een`LinkAnnotation` object en specificeer de eigenschappen ervan, zoals bericht, dekking, paginanummer, achtergrondkleur, punten, antwoorden en URL.
+## Stap 3: Linkannotatie maken
+Definieer een `LinkAnnotation` object en specificeer de eigenschappen ervan, zoals bericht, dekking, paginanummer, achtergrondkleur, punten, antwoorden en URL.
 ```csharp
 LinkAnnotation link = new LinkAnnotation
 {
@@ -71,7 +71,7 @@ LinkAnnotation link = new LinkAnnotation
 };
 ```
 ## Stap 4: Annotatie toevoegen
- Voeg de gemaakte linkannotatie toe aan het document met behulp van de`Add` methode van de annotatorinstantie.
+Voeg de gemaakte linkannotatie toe aan het document met behulp van de `Add` methode van het annotatorexemplaar.
 ```csharp
 annotator.Add(link);
 ```
@@ -81,21 +81,21 @@ Sla het geannoteerde document op in het opgegeven uitvoerpad.
 annotator.Save(outputPath);
 ```
 ## Stap 6: Succesbericht weergeven
-Informeer de gebruiker over het succesvol opslaan van het geannoteerde document.
+Informeer de gebruiker dat het geannoteerde document succesvol is opgeslagen.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Conclusie
-Kortom, door de bovenstaande stappen te volgen, kunt u naadloos linkannotaties toevoegen aan documenten met behulp van Groupdocs.Annotation voor .NET. Dit verbetert de samenwerking tussen documenten en biedt gebruikers interactieve functies.
+Kortom, door de bovenstaande stappen te volgen, kunt u naadloos linkannotaties toevoegen aan documenten met Groupdocs.Annotation voor .NET. Dit verbetert de samenwerking aan documenten en biedt gebruikers interactieve functies.
 ## Veelgestelde vragen
 ### Is Groupdocs.Annotation voor .NET compatibel met alle soorten documenten?
-Groupdocs.Annotation voor .NET ondersteunt een breed scala aan documentformaten, waaronder PDF, Word, Excel en meer.
+Groupdocs.Annotation voor .NET ondersteunt een breed scala aan documentindelingen, waaronder PDF, Word, Excel en meer.
 ### Kan ik het uiterlijk van annotaties aanpassen?
-Ja, u kunt verschillende eigenschappen van annotaties, zoals kleur, dekking en grootte, aanpassen aan uw wensen.
+Ja, u kunt diverse eigenschappen van annotaties, zoals kleur, dekking en grootte, naar wens aanpassen.
 ### Biedt Groupdocs.Annotation voor .NET realtime samenwerkingsfuncties?
 Ja, Groupdocs.Annotation voor .NET biedt realtime samenwerkingsfuncties waarmee meerdere gebruikers tegelijkertijd documenten kunnen annoteren.
 ### Is er technische ondersteuning beschikbaar voor Groupdocs-producten?
- Ja, technische ondersteuning voor Groupdocs-producten is beschikbaar via het forum en de ondersteuning[hier](https://forum.groupdocs.com/c/annotation/10).
-### Kan ik Groupdocs.Annotation voor .NET uitproberen voordat ik het aanschaf?
-Ja, u kunt profiteren van een gratis proefversie van Groupdocs.Annotation voor .NET om de functies ervan te verkennen voordat u een aankoop doet[hier](https://purchase.groupdocs.com/temporary-license/).
+Ja, technische ondersteuning voor Groupdocs-producten is beschikbaar via het forum en de ondersteuningswebsite. [hier](https://forum.groupdocs.com/c/annotation/10).
+### Kan ik Groupdocs.Annotation voor .NET uitproberen voordat ik het koop?
+Ja, u kunt Groupdocs.Annotation voor .NET gratis uitproberen om de functies ervan te verkennen voordat u tot aankoop overgaat.[hier](https://purchase.groupdocs.com/temporary-license/).

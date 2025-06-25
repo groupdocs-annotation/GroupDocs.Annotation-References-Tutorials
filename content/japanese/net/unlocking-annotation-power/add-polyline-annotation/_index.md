@@ -1,21 +1,21 @@
 ---
-title: ポリライン注釈をドキュメントに追加
-linktitle: ポリライン注釈をドキュメントに追加
-second_title: GroupDocs.Annotation .NET API
-description: GroupDocs.Annotation for .NET を使用してドキュメントにポリライン注釈を追加する方法を学びます。コラボレーションと文書レビューのプロセスを簡単に強化します。
-weight: 18
-url: /ja/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "GroupDocs.Annotation for .NET を使用して、ドキュメントにポリライン注釈を追加する方法を学びます。共同作業とドキュメントレビューのプロセスを簡単に強化できます。"
+"linktitle": "ドキュメントにポリライン注釈を追加する"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "ドキュメントにポリライン注釈を追加する"
+"url": "/ja/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# ポリライン注釈をドキュメントに追加
+# ドキュメントにポリライン注釈を追加する
 
 ## 導入
-GroupDocs.Annotation for .NET は、開発者が PDF および Microsoft Office ドキュメントにプログラムで注釈を付けることができる強力なツールです。その機能には、ドキュメントにポリライン注釈を追加する機能があり、コラボレーションとドキュメント レビュー プロセスが強化されます。
+GroupDocs.Annotation for .NETは、開発者がPDFおよびMicrosoft Officeドキュメントにプログラム的に注釈を付けることができる強力なツールです。その機能の一つとして、ドキュメントにポリライン注釈を追加できる機能があり、共同作業やドキュメントレビューのプロセスを強化します。
 ## 前提条件
-このチュートリアルを進める前に、次のものが揃っていることを確認してください。
-- Visual Studio がシステムにインストールされている。
-- C# プログラミング言語の基本的な知識。
--  .NET ライブラリの GroupDocs.Annotation がインストールされています。からダウンロードできます[ここ](https://releases.groupdocs.com/annotation/net/).
+このチュートリアルを進める前に、次のものを用意してください。
+- Visual Studio がシステムにインストールされています。
+- C# プログラミング言語の基礎知識。
+- GroupDocs.Annotation for .NETライブラリがインストールされています。ダウンロードはこちらから。 [ここ](https://releases。groupdocs.com/annotation/net/).
 
 ## 名前空間のインポート
 ```csharp
@@ -26,18 +26,18 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## ステップ 1: 出力パスを定義する
-まず、注釈付きドキュメントが保存される出力パスを定義します。
+## ステップ1: 出力パスを定義する
+まず、注釈付きドキュメントを保存する出力パスを定義します。
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## ステップ 2: アノテーターを初期化する
+## ステップ2: アノテーターを初期化する
 入力ドキュメント名を指定してアノテーターを初期化します。
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## ステップ 3: ポリライン注釈オブジェクトを作成する
+## ステップ3: ポリライン注釈オブジェクトを作成する
 ポリライン注釈オブジェクトを作成し、位置、メッセージ、不透明度、ペンの色、ペンのスタイル、ペンの幅などのプロパティを設定します。
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
@@ -67,32 +67,32 @@ PolylineAnnotation polyline = new PolylineAnnotation
 4460093896,0l0.6986854460093896,0l0.6986854460093896,-0.6986854460093896l0.6986854460093896,0"
 };
 ```
-## ステップ 4: ポリライン注釈を追加する
-アノテーター オブジェクトを使用して、ポリライン アノテーションをドキュメントに追加します。
+## ステップ4: ポリライン注釈を追加する
+アノテーター オブジェクトを使用して、ドキュメントにポリライン注釈を追加します。
 ```csharp
 annotator.Add(polyline);
 ```
-## ステップ 5: ドキュメントを保存する
+## ステップ5: ドキュメントを保存する
 注釈付きドキュメントを指定された出力パスに保存します。
 ```csharp
 annotator.Save(outputPath);
 ```
-## ステップ 6: 成功メッセージを表示する
-ドキュメントが正常に保存されたことを確認するメッセージを表示します。
+## ステップ6: 成功メッセージを表示する
+ドキュメントの保存が正常に完了したことを確認するメッセージを表示します。
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## 結論
-このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにポリライン注釈を追加する方法を学習しました。この機能により、コラボレーションとドキュメント レビューのプロセスが強化され、ユーザーがフィードバックや提案を効果的に伝達しやすくなります。
+このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにポリライン注釈を追加する方法を学習しました。この機能は、共同作業とドキュメントレビューのプロセスを強化し、ユーザーがフィードバックや提案を効果的に伝えやすくします。
 ## よくある質問
 ### GroupDocs.Annotation for .NET はすべてのドキュメント形式と互換性がありますか?
-GroupDocs.Annotation for .NET は、PDF や Word、Excel、PowerPoint などの Microsoft Office 形式などの一般的なドキュメント形式をサポートしています。
+GroupDocs.Annotation for .NET は、PDF や、Word、Excel、PowerPoint などの Microsoft Office 形式などの一般的なドキュメント形式をサポートしています。
 ### 注釈の外観をカスタマイズできますか?
-はい、要件に合わせて、色、不透明度、スタイル、幅などの注釈のさまざまなプロパティをカスタマイズできます。
-### GroupDocs.Annotation for .NET には無料試用版がありますか?
-はい、次のサイトにアクセスして、GroupDocs.Annotation for .NET の無料トライアルを利用できます。[このリンク](https://releases.groupdocs.com/).
-### GroupDocs.Annotation for .NET のドキュメントはどこで見つけられますか?
- GroupDocs.Annotation for .NET のドキュメントを見つけることができます。[ここ](https://tutorials.groupdocs.com/annotation/net/).
-### GroupDocs.Annotation for .NET に関連する問題やクエリのサポートを受けるにはどうすればよいですか?
- GroupDocs.Annotation フォーラムにアクセスしてサポートを受けることができます。[ここ](https://forum.groupdocs.com/c/annotation/10).
+はい、色、不透明度、スタイル、幅など、注釈のさまざまなプロパティを要件に合わせてカスタマイズできます。
+### GroupDocs.Annotation for .NET には無料トライアルがありますか?
+はい、GroupDocs.Annotation for .NETの無料トライアルを以下のサイトからご利用いただけます。 [このリンク](https://releases。groupdocs.com/).
+### GroupDocs.Annotation for .NET のドキュメントはどこで見つかりますか?
+GroupDocs.Annotation for .NETのドキュメントは以下にあります。 [ここ](https://tutorials。groupdocs.com/annotation/net/).
+### GroupDocs.Annotation for .NET に関連する問題や質問についてサポートを受けるにはどうすればよいですか?
+GroupDocs.Annotationフォーラムにアクセスしてサポートを受けることができます。 [ここ](https://forum。groupdocs.com/c/annotation/10).

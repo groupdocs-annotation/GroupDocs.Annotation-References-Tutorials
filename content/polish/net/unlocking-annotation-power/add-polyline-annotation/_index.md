@@ -1,21 +1,21 @@
 ---
-title: Dodaj adnotację o polilinii do dokumentu
-linktitle: Dodaj adnotację o polilinii do dokumentu
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak dodawać adnotacje polilinii do dokumentów za pomocą GroupDocs.Annotation dla .NET. Bez wysiłku usprawnij procesy współpracy i przeglądu dokumentów.
-weight: 18
-url: /pl/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "Dowiedz się, jak dodawać adnotacje wieloliniowe do dokumentów za pomocą GroupDocs.Annotation dla .NET. Ulepsz współpracę i procesy przeglądania dokumentów bez wysiłku."
+"linktitle": "Dodaj adnotację polilinii do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dodaj adnotację polilinii do dokumentu"
+"url": "/pl/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# Dodaj adnotację o polilinii do dokumentu
+# Dodaj adnotację polilinii do dokumentu
 
 ## Wstęp
-GroupDocs.Annotation dla .NET to potężne narzędzie, które umożliwia programistom programowe dodawanie adnotacji do dokumentów PDF i Microsoft Office. Wśród jego funkcji znajduje się możliwość dodawania adnotacji poliliniowych do dokumentów, usprawniających współpracę i procesy przeglądania dokumentów.
-## Warunki wstępne
-Przed kontynuowaniem tego samouczka upewnij się, że posiadasz następujące elementy:
+GroupDocs.Annotation for .NET to potężne narzędzie, które umożliwia programistom programowe adnotowanie dokumentów PDF i Microsoft Office. Wśród jego funkcji znajduje się możliwość dodawania adnotacji poliliniowych do dokumentów, co usprawnia współpracę i procesy przeglądu dokumentów.
+## Wymagania wstępne
+Zanim przejdziesz do tego samouczka, upewnij się, że posiadasz następujące elementy:
 - Program Visual Studio zainstalowany w systemie.
 - Podstawowa znajomość języka programowania C#.
--  Zainstalowana biblioteka GroupDocs.Adnotation dla .NET. Można go pobrać z[Tutaj](https://releases.groupdocs.com/annotation/net/).
+- Zainstalowano bibliotekę GroupDocs.Annotation dla .NET. Można ją pobrać z [Tutaj](https://releases.groupdocs.com/annotation/net/).
 
 ## Importuj przestrzenie nazw
 ```csharp
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 ## Krok 1: Zdefiniuj ścieżkę wyjściową
-Najpierw określ ścieżkę wyjściową, w której zostanie zapisany dokument z adnotacjami.
+Najpierw zdefiniuj ścieżkę wyjściową, w której zostanie zapisany dokument z adnotacjami.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Zainicjuj adnotator
+## Krok 2: Zainicjuj Adnotator
 Zainicjuj adnotator, podając nazwę dokumentu wejściowego.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Krok 3: Utwórz obiekt opisu polilinii
-Utwórz obiekt adnotacji polilinii i ustaw jego właściwości, takie jak położenie, komunikat, krycie, kolor pisaka, styl pisaka i szerokość pisaka.
+## Krok 3: Utwórz obiekt adnotacji polilinii
+Utwórz obiekt adnotacji polilinii i ustaw jego właściwości, takie jak pozycja, komunikat, krycie, kolor pióra, styl pióra i szerokość pióra.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -68,7 +68,7 @@ PolylineAnnotation polyline = new PolylineAnnotation
 };
 ```
 ## Krok 4: Dodaj adnotację polilinii
-Dodaj adnotację polilinii do dokumentu za pomocą obiektu adnotatora.
+Dodaj adnotację wielolinii do dokumentu za pomocą obiektu adnotatora.
 ```csharp
 annotator.Add(polyline);
 ```
@@ -84,15 +84,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Wniosek
-tym samouczku nauczyliśmy się, jak dodać adnotację polilinii do dokumentu za pomocą GroupDocs.Annotation dla .NET. Ta funkcja usprawnia procesy współpracy i przeglądu dokumentów, ułatwiając użytkownikom skuteczne przekazywanie opinii i sugestii.
-## Często zadawane pytania
-### Czy GroupDocs.Annotation for .NET jest kompatybilny ze wszystkimi formatami dokumentów?
-GroupDocs.Annotation dla .NET obsługuje popularne formaty dokumentów, takie jak PDF i formaty Microsoft Office, w tym Word, Excel i PowerPoint.
+W tym samouczku nauczyliśmy się, jak dodać adnotację polilinii do dokumentu za pomocą GroupDocs.Annotation dla .NET. Ta funkcja usprawnia współpracę i procesy przeglądu dokumentów, ułatwiając użytkownikom skuteczną komunikację opinii i sugestii.
+## Najczęściej zadawane pytania
+### Czy GroupDocs.Annotation dla platformy .NET jest kompatybilny ze wszystkimi formatami dokumentów?
+GroupDocs.Annotation dla platformy .NET obsługuje popularne formaty dokumentów, takie jak PDF oraz formaty pakietu Microsoft Office, w tym Word, Excel i PowerPoint.
 ### Czy mogę dostosować wygląd adnotacji?
-Tak, możesz dostosować różne właściwości adnotacji, takie jak kolor, krycie, styl i szerokość, do własnych wymagań.
+Tak, możesz dostosować różne właściwości adnotacji, takie jak kolor, krycie, styl i szerokość, by odpowiadały Twoim potrzebom.
 ### Czy GroupDocs.Annotation dla .NET oferuje bezpłatną wersję próbną?
- Tak, możesz skorzystać z bezpłatnej wersji próbnej GroupDocs.Annotation dla .NET, odwiedzając stronę[ten link](https://releases.groupdocs.com/).
-### Gdzie mogę znaleźć dokumentację GroupDocs.Annotation dla .NET?
- Dokumentację GroupDocs.Annotation for .NET można znaleźć[Tutaj](https://tutorials.groupdocs.com/annotation/net/).
-### Jak mogę uzyskać pomoc w przypadku jakichkolwiek problemów lub zapytań związanych z GroupDocs.Annotation for .NET?
- Możesz uzyskać pomoc, odwiedzając forum GroupDocs.Annotation[Tutaj](https://forum.groupdocs.com/c/annotation/10).
+Tak, możesz skorzystać z bezpłatnej wersji próbnej GroupDocs.Annotation dla .NET, odwiedzając stronę [ten link](https://releases.groupdocs.com/).
+### Gdzie mogę znaleźć dokumentację dotyczącą GroupDocs.Annotation dla platformy .NET?
+Dokumentację dla GroupDocs.Annotation dla .NET można znaleźć [Tutaj](https://tutorials.groupdocs.com/annotation/net/).
+### Gdzie mogę uzyskać pomoc w przypadku jakichkolwiek problemów lub zapytań związanych z GroupDocs.Annotation dla platformy .NET?
+Możesz uzyskać pomoc odwiedzając forum GroupDocs.Annotation [Tutaj](https://forum.groupdocs.com/c/annotation/10).

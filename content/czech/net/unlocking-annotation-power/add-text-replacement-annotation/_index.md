@@ -1,27 +1,27 @@
 ---
-title: Přidejte do dokumentu anotaci nahrazující text
-linktitle: Přidejte do dokumentu anotaci nahrazující text
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se, jak do dokumentů .NET snadno přidávat anotace nahrazující text pomocí GroupDocs.Annotation for .NET. Vylepšete své možnosti manipulace s dokumenty.
-weight: 24
-url: /cs/net/unlocking-annotation-power/add-text-replacement-annotation/
+"description": "Naučte se, jak snadno přidávat anotace nahrazující text do dokumentů .NET pomocí nástroje GroupDocs.Annotation for .NET. Vylepšete si možnosti manipulace s dokumenty."
+"linktitle": "Přidání anotace nahrazující text do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidání anotace nahrazující text do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-text-replacement-annotation/"
+"weight": 24
 ---
 
-# Přidejte do dokumentu anotaci nahrazující text
+# Přidání anotace nahrazující text do dokumentu
 
-## Úvod
-V tomto tutoriálu vás provedeme procesem přidávání anotace nahrazování textu do vašich dokumentů pomocí GroupDocs.Annotation for .NET. Tato výkonná knihovna umožňuje vývojářům programově manipulovat a anotovat různé typy dokumentů. Na konci tohoto kurzu budete vybaveni znalostmi pro bezproblémovou integraci anotací nahrazujících text do vašich aplikací .NET.
+## Zavedení
+V tomto tutoriálu vás provedeme procesem přidání anotace nahrazující text do vašich dokumentů pomocí knihovny GroupDocs.Annotation pro .NET. Tato výkonná knihovna umožňuje vývojářům programově manipulovat a anotovat různé typy dokumentů. Po absolvování tohoto tutoriálu budete vybaveni znalostmi pro bezproblémovou integraci anotací nahrazujících text do vašich .NET aplikací.
 ## Předpoklady
-Než začneme, ujistěte se, že máte nainstalované následující předpoklady:
-### 1. .NET Framework nainstalováno
-Ujistěte se, že máte na vývojovém počítači nainstalováno rozhraní .NET Framework. Můžete si jej stáhnout z webu společnosti Microsoft.
-### 2. GroupDocs.Anotation for .NET Library
- Stáhněte a nainstalujte knihovnu GroupDocs.Annotation for .NET z[webová stránka](https://releases.groupdocs.com/annotation/net/). Tato knihovna poskytuje potřebné nástroje a funkce pro práci s anotacemi v různých formátech dokumentů.
+Než začneme, ujistěte se, že máte nainstalovány následující předpoklady:
+### 1. Nainstalován .NET Framework
+Ujistěte se, že máte na vývojovém počítači nainstalovaný .NET Framework. Můžete si ho stáhnout z webových stránek společnosti Microsoft.
+### 2. GroupDocs.Annotation pro knihovnu .NET
+Stáhněte a nainstalujte knihovnu GroupDocs.Annotation pro .NET z [webové stránky](https://releases.groupdocs.com/annotation/net/)Tato knihovna poskytuje potřebné nástroje a funkce pro práci s anotacemi v různých formátech dokumentů.
 ### 3. Nastavení vývojového prostředí
-Nastavte své preferované vývojové prostředí, jako je Visual Studio, pro vytváření a spouštění aplikací .NET.
+Nastavte si preferované vývojové prostředí, například Visual Studio, pro vytváření a spouštění aplikací .NET.
 
-## Import jmenných prostorů
-Než se ponoříme do kódovací části, importujme potřebné jmenné prostory potřebné pro práci s GroupDocs.Annotation pro .NET:
+## Importovat jmenné prostory
+Než se ponoříme do kódování, importujme si potřebné jmenné prostory pro práci s GroupDocs.Annotation pro .NET:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -32,19 +32,19 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 using Point = GroupDocs.Annotation.Models.Point;
 ```
-## Krok 1: Definujte výstupní cestu
+## Krok 1: Definování výstupní cesty
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Zde definujeme výstupní cestu, kam bude anotovaný dokument uložen.
-## Krok 2: Inicializujte anotátor
+Zde definujeme výstupní cestu, kam bude uložen anotovaný dokument.
+## Krok 2: Inicializace anotátoru
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
     // Zde bude umístěn kód anotace
 }
 ```
-Objekt Annotator inicializujeme zadáním vstupního dokumentu ("vstup.pdf") v bloku use, abychom zajistili správnou likvidaci zdrojů.
+Objekt Annotator inicializujeme zadáním vstupního dokumentu („input.pdf“) v bloku using, abychom zajistili správné využití zdrojů.
 ## Krok 3: Vytvořte náhradní anotaci
 ```csharp
 ReplacementAnnotation replacement = new ReplacementAnnotation
@@ -76,32 +76,32 @@ ReplacementAnnotation replacement = new ReplacementAnnotation
 };
 ```
 Zde vytvoříme objekt ReplacementAnnotation s různými vlastnostmi, jako je datum vytvoření, barva písma, zpráva, neprůhlednost, číslo stránky, barva pozadí, body (souřadnice), odpovědi (komentáře) a text, který se má nahradit.
-## Krok 4: Přidejte anotaci
+## Krok 4: Přidání anotace
 ```csharp
 annotator.Add(replacement);
 ```
 Vytvořenou náhradní anotaci přidáme do anotátoru.
-## Krok 5: Uložte dokument
+## Krok 5: Uložení dokumentu
 ```csharp
 annotator.Save(outputPath);
 ```
-Nakonec anotovaný dokument uložíme do zadané výstupní cesty.
-## Krok 6: Zobrazte zprávu o úspěchu
+Nakonec uložíme anotovaný dokument do zadané výstupní cesty.
+## Krok 6: Zobrazení zprávy o úspěchu
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Zobrazí se zpráva o úspěchu označující, že dokument byl úspěšně uložen.
+Zobrazí se zpráva o úspěšném uložení dokumentu.
 
 ## Závěr
-V tomto tutoriálu jsme se zabývali procesem přidávání anotací nahrazujících text do dokumentů pomocí GroupDocs.Annotation pro .NET. Pokud budete postupovat podle podrobného průvodce a porozumíte předpokladům, můžete tuto funkci snadno integrovat do svých aplikací .NET.
-## FAQ
-### Mohu anotovat dokumenty různých formátů pomocí GroupDocs.Annotation for .NET?
-Ano, GroupDocs.Annotation for .NET podporuje anotování různých formátů dokumentů, jako jsou PDF, DOCX, PPTX, XLSX a další.
-### Je GroupDocs.Annotation for .NET vhodný pro desktopové i webové aplikace?
-Ano, GroupDocs.Annotation for .NET lze použít v desktopových i webových aplikacích, což poskytuje flexibilitu vývojářům.
-### Mohu upravit vzhled anotací přidaných pomocí GroupDocs.Annotation for .NET?
-Vzhled anotací můžete samozřejmě přizpůsobit úpravou vlastností, jako je barva, krytí, písmo atd.
-### Nabízí GroupDocs.Annotation for .NET podporu pro funkce kolaborativní anotace?
-Ano, GroupDocs.Annotation for .NET poskytuje funkce pro kolaborativní anotaci, která umožňuje více uživatelům anotovat dokumenty současně.
+V tomto tutoriálu jsme se zabývali procesem přidávání anotací nahrazujících text do dokumentů pomocí GroupDocs.Annotation pro .NET. Dodržováním podrobných pokynů a pochopením předpokladů můžete tuto funkci snadno integrovat do svých aplikací .NET.
+## Často kladené otázky
+### Mohu anotovat dokumenty různých formátů pomocí GroupDocs.Annotation pro .NET?
+Ano, GroupDocs.Annotation pro .NET podporuje anotaci různých formátů dokumentů, jako jsou PDF, DOCX, PPTX, XLSX a další.
+### Je GroupDocs.Annotation pro .NET vhodný pro desktopové i webové aplikace?
+Ano, GroupDocs.Annotation pro .NET lze použít jak v desktopových, tak i webových aplikacích, což vývojářům poskytuje flexibilitu.
+### Mohu si přizpůsobit vzhled anotací přidaných pomocí GroupDocs.Annotation pro .NET?
+Vzhled anotací si samozřejmě můžete přizpůsobit úpravou vlastností, jako je barva, neprůhlednost, písmo atd.
+### Nabízí GroupDocs.Annotation pro .NET podporu pro funkce kolaborativních anotací?
+Ano, GroupDocs.Annotation pro .NET poskytuje funkce pro spolupráci v oblasti anotací, které umožňují více uživatelům současně anotovat dokumenty.
 ### Je k dispozici bezplatná zkušební verze pro GroupDocs.Annotation pro .NET?
-Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET z webu[webová stránka](https://releases.groupdocs.com/).
+Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET z [webové stránky](https://releases.groupdocs.com/).

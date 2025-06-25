@@ -1,60 +1,60 @@
 ---
-title: PDF Belgelerini Döndürme
-linktitle: PDF Belgelerini Döndürme
-second_title: GroupDocs.Annotation .NET API'si
-description: Groupdocs.Annotation for .NET'i kullanarak PDF belgelerini zahmetsizce nasıl döndüreceğinizi öğrenin. Belge yönetimi verimliliğini artırın.
-weight: 22
-url: /tr/net/advanced-usage/rotating-pdf-documents/
+"description": "Groupdocs.Annotation for .NET kullanarak PDF belgelerini zahmetsizce nasıl döndüreceğinizi öğrenin. Belge yönetimi verimliliğini artırın."
+"linktitle": "PDF Belgelerini Döndürme"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "PDF Belgelerini Döndürme"
+"url": "/tr/net/advanced-usage/rotating-pdf-documents/"
+"weight": 22
 ---
 
 # PDF Belgelerini Döndürme
 
 ## giriiş
-Farklı şekilde görüntülenmesi veya işlenmesi gereken dosyalarla uğraşırken PDF belgelerini döndürmek çok önemli bir görev olabilir. Bu öğreticide, Groupdocs.Annotation for .NET'i kullanarak PDF belgelerinin adım adım nasıl döndürüleceğini keşfedeceğiz.
-## Önkoşullar
-Eğiticiye dalmadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
-1.  Groupdocs.Annotation for .NET Library: Groupdocs.Annotation for .NET kitaplığını indirip yüklediğinizden emin olun. Şuradan indirebilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/).
-2. Temel C# Programlama Bilgisi: Bu eğitimde, C# programlama dili ve .NET kitaplıklarıyla nasıl çalışılacağı konusunda temel bilgiye sahip olduğunuz varsayılmaktadır.
+PDF belgelerini döndürmek, farklı şekilde görüntülenmesi veya işlenmesi gereken dosyalarla uğraşırken önemli bir görev olabilir. Bu eğitimde, .NET için Groupdocs.Annotation kullanarak PDF belgelerinin adım adım nasıl döndürüleceğini inceleyeceğiz.
+## Ön koşullar
+Eğitime başlamadan önce aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
+1. Groupdocs.Annotation for .NET Kütüphanesi: Groupdocs.Annotation for .NET kütüphanesini indirip kurduğunuzdan emin olun. Buradan indirebilirsiniz [Burada](https://releases.groupdocs.com/annotation/net/).
+2. C# Programlamanın Temel Bilgileri: Bu eğitim, C# programlama dili hakkında temel bir anlayışa sahip olduğunuzu ve .NET kütüphaneleriyle nasıl çalışacağınızı bildiğinizi varsayar.
 
 ## Ad Alanlarını İçe Aktar
-Groupdocs.Annotation kitaplığı tarafından sağlanan işlevselliğe erişmek için öncelikle gerekli ad alanlarını C# projenize aktarmanız gerekir.
+Öncelikle Groupdocs.Annotation kütüphanesinin sağladığı işlevselliğe erişebilmek için gerekli ad alanlarını C# projenize aktarmanız gerekiyor.
 ```csharp
 using System;
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
-## 1. Adım: PDF Belgesini Yükleyin
- Döndürmek istediğiniz PDF belgesini kullanarak yükleyin.`Annotator` sınıf.
+## Adım 1: PDF Belgesini Yükleyin
+Döndürmek istediğiniz PDF belgesini yükleyerek başlayın `Annotator` sınıf.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-## Adım 2: Rotasyon ve İşlem Sayfalarını Ayarlayın
-Döndürme açısını ve döndürmek istediğiniz sayfaları belirtin. Bu örnekte ilk sayfayı saat yönünde 90 derece döndüreceğiz.
+## Adım 2: Döndürmeyi Ayarlayın ve Sayfaları İşleyin
+Döndürmek istediğiniz dönüş açısını ve sayfaları belirtin. Bu örnekte, ilk sayfayı saat yönünde 90 derece döndüreceğiz.
 ```csharp
 annotator.ProcessPages = 1;
 annotator.Rotation = RotationDocument.on90;
 ```
-## 3. Adım: Döndürülmüş Belgeyi Kaydetme
+## Adım 3: Döndürülmüş Belgeyi Kaydedin
 Döndürülmüş PDF belgesini belirtilen değişikliklerle kaydedin.
 ```csharp
 annotator.Save("result.pdf");
 ```
-## Adım 4: Onayı Görüntüle
+## Adım 4: Onay Ekranı
 Kullanıcıya belgenin başarıyla döndürüldüğünü bildirin.
 ```csharp
 Console.WriteLine($"\nThe document is rotated 90 degrees");
 ```
 
 ## Çözüm
-PDF belgelerini döndürmek temel bir işlemdir ve Groupdocs.Annotation for .NET ile bu işlem basit ve verimli hale gelir. Bu eğitimde özetlenen adımları izleyerek PDF dosyalarını gereksinimlerinize göre kolayca döndürebilirsiniz.
-## SSS'ler
-### Groupdocs.Annotation for .NET'i kullanarak bir PDF belgesindeki birden fazla sayfayı döndürebilir miyim?
- Evet, döndürmek için birden fazla sayfa belirleyebilirsiniz.`ProcessPages` buna göre mülk.
-### Groupdocs.Annotation for .NET, .NET framework'ün tüm sürümleriyle uyumlu mu?
-Groupdocs.Annotation for .NET, çok çeşitli .NET framework sürümlerini destekleyerek çoğu geliştirme ortamıyla uyumluluk sağlar.
-### Groupdocs.Annotation for .NET, PDF belgelerini farklı yönlere döndürme seçenekleri sunuyor mu?
-Evet, PDF belgelerini gereksinimlerinize göre saat yönünde, saat yönünün tersine veya özel açılarda döndürebilirsiniz.
+PDF belgelerini döndürmek temel bir işlemdir ve Groupdocs.Annotation for .NET ile basit ve etkili hale gelir. Bu eğitimde özetlenen adımları izleyerek PDF dosyalarını gereksinimlerinize göre kolayca döndürebilirsiniz.
+## SSS
+### Groupdocs.Annotation for .NET kullanarak bir PDF belgesindeki birden fazla sayfayı döndürebilir miyim?
+Evet, döndürmek için birden fazla sayfa belirleyebilirsiniz. `ProcessPages` mülkiyet buna göre.
+### Groupdocs.Annotation for .NET, .NET framework'ün tüm sürümleriyle uyumlu mudur?
+Groupdocs.Annotation for .NET, .NET framework sürümlerinin geniş bir yelpazesini destekleyerek çoğu geliştirme ortamıyla uyumluluğu garanti altına alır.
+### Groupdocs.Annotation for .NET, PDF belgelerini farklı yönlere döndürmek için seçenekler sunuyor mu?
+Evet, ihtiyaçlarınıza göre PDF belgelerini saat yönünde, saat yönünün tersine veya özel açılarda döndürebilirsiniz.
 ### Groupdocs.Annotation for .NET'i mevcut belge yönetim sistemime entegre edebilir miyim?
-Kesinlikle, Groupdocs.Annotation for .NET kusursuz entegrasyon seçenekleri sunarak belge yönetimi yeteneklerini zahmetsizce geliştirmenize olanak tanır.
-### Groupdocs.Annotation for .NET'in deneme sürümü mevcut mu?
- Evet, ücretsiz deneme sürümünü şuradan edinebilirsiniz:[Burada](https://releases.groupdocs.com/).
+Kesinlikle, Groupdocs.Annotation for .NET kusursuz entegrasyon seçenekleri sunarak belge yönetimi yeteneklerinizi zahmetsizce geliştirmenize olanak tanır.
+### Groupdocs.Annotation for .NET için deneme sürümü mevcut mu?
+Evet, ücretsiz deneme sürümünü şu adresten alabilirsiniz: [Burada](https://releases.groupdocs.com/).

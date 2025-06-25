@@ -1,23 +1,23 @@
 ---
-title: Belgeye Alan Açıklaması Ekle
-linktitle: Belgeye Alan Açıklaması Ekle
-second_title: GroupDocs.Annotation .NET API'si
-description: Groupdocs.Annotation for .NET ile belge işbirliğinizi geliştirin. Alan açıklamalarını adım adım nasıl ekleyeceğinizi öğrenin.
-weight: 10
-url: /tr/net/unlocking-annotation-power/add-area-annotation/
+"description": "Groupdocs.Annotation for .NET ile belge işbirliğinizi geliştirin. Alan açıklamalarının adım adım nasıl ekleneceğini öğrenin."
+"linktitle": "Belgeye Alan Açıklaması Ekle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeye Alan Açıklaması Ekle"
+"url": "/tr/net/unlocking-annotation-power/add-area-annotation/"
+"weight": 10
 ---
 
 # Belgeye Alan Açıklaması Ekle
 
 ## giriiş
-Bu öğreticide, Groupdocs.Annotation for .NET'i kullanarak belgelere alan açıklamaları ekleme sürecinde size rehberlik edeceğiz. Alan açıklamaları, kullanıcıların bir belgenin belirli alanlarını vurgulamasına olanak tanıyan, içeriğe açıklık ve bağlam kazandıran değerli bir özelliktir.
-## Önkoşullar
-Başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
-1.  Groupdocs.Annotation for .NET: Gerekli kitaplıkların ve bağımlılıkların kurulu olduğundan emin olun. Bunları şuradan indirebilirsiniz:[İnternet sitesi](https://releases.groupdocs.com/annotation/net/).
+Bu eğitimde, .NET için Groupdocs.Annotation kullanarak belgelere alan ek açıklamaları ekleme sürecinde size rehberlik edeceğiz. Alan ek açıklamaları, kullanıcıların bir belgenin belirli alanlarını vurgulamasına, içeriğe açıklık ve bağlam sağlamasına olanak tanıyan değerli bir özelliktir.
+## Ön koşullar
+Başlamadan önce aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
+1. Groupdocs.Annotation for .NET: Gerekli kütüphanelerin ve bağımlılıkların yüklü olduğundan emin olun. Bunları şuradan indirebilirsiniz: [web sitesi](https://releases.groupdocs.com/annotation/net/).
 2. Geliştirme Ortamı: .NET geliştirme için uygun bir geliştirme ortamı kurun.
 
 ## Ad Alanlarını İçe Aktar
-Başlangıç olarak gerekli ad alanlarını projenize aktarın. Bu ad alanları, ek açıklamalarla çalışmak için gerekli sınıfları ve yöntemleri içerir.
+Başlamak için, gerekli ad alanlarını projenize aktarın. Bu ad alanları, açıklamalarla çalışmak için gerekli sınıfları ve yöntemleri içerir.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,20 +28,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 ## Adım 1: Çıkış Yolunu Başlatın
-Açıklamalı belgenin kaydedileceği çıkış yolunu tanımlayın.
+Açıklamalı belgenin kaydedileceği çıktı yolunu tanımlayın.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. Adım: Annotator'ı Başlatın
- Bir örneğini oluşturun`Annotator` belgenin yolunu parametre olarak ileterek sınıf.
+## Adım 2: Annotator'ı Başlatın
+Bir örneğini oluşturun `Annotator` sınıfa, belgenin yolunu parametre olarak geçirerek.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ek açıklama kodu buraya gelecek
+    // Açıklama kodu buraya gelecek
 }
 ```
-## 3. Adım: Alan Açıklaması Oluşturun
-Arka plan rengi, konum, mesaj, opaklık vb. gibi alan açıklamasının özelliklerini tanımlayın.
+## Adım 3: Alan Açıklaması Oluşturun
+Alan açıklamasının arka plan rengi, konumu, mesajı, opaklığı vb. gibi özelliklerini tanımlayın.
 ```csharp
 AreaAnnotation area = new AreaAnnotation
 {
@@ -69,32 +69,32 @@ AreaAnnotation area = new AreaAnnotation
     }
 };
 ```
-## 4. Adım: Ek Açıklama Ekle
- kullanarak alan açıklamasını belgeye ekleyin.`Add` yöntemi`Annotator` misal.
+## Adım 4: Açıklama Ekle
+Alan açıklamasını belgeye eklemek için şunu kullanın: `Add` yöntemi `Annotator` misal.
 ```csharp
 annotator.Add(area);
 ```
-## Adım 5: Belgeyi Kaydet
+## Adım 5: Belgeyi Kaydedin
 Açıklamalı belgeyi belirtilen çıktı yoluna kaydedin.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Adım 6: Başarı Mesajını Görüntüleyin
-Kullanıcıya, belgeye başarıyla açıklama eklendiğini ve kaydedildiğini bildirin.
+## Adım 6: Başarı Mesajını Göster
+Kullanıcıya belgenin başarıyla ek açıklama eklendiğini ve kaydedildiğini bildirin.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Çözüm
-Bu öğreticide, Groupdocs.Annotation for .NET kullanarak belgelere alan açıklamalarının nasıl ekleneceğini öğrendik. Adım adım kılavuzu takip ederek belgelerinizi değerli ek açıklamalarla kolayca geliştirebilir, işbirliğini ve anlayışı geliştirebilirsiniz.
-## SSS'ler
+Bu eğitimde, Groupdocs.Annotation for .NET kullanarak belgelere alan açıklamalarının nasıl ekleneceğini öğrendik. Adım adım kılavuzu izleyerek, belgelerinizi değerli açıklamalarla kolayca geliştirebilir, iş birliğini ve anlayışı geliştirebilirsiniz.
+## SSS
 ### Alan açıklamasının görünümünü özelleştirebilir miyim?
-Evet, arka plan rengi, opaklık, kalem stili vb. gibi çeşitli özellikleri tercihlerinize uyacak şekilde özelleştirebilirsiniz.
-### Groupdocs.Annotation diğer belge formatlarıyla uyumlu mu?
-Evet, Groupdocs.Annotation, PDF, DOCX, PPTX ve daha fazlasını içeren çeşitli belge formatlarını destekler.
+Evet, arka plan rengi, opaklık, kalem stili vb. gibi çeşitli özellikleri kendi çalışmanıza uyacak şekilde özelleştirebilirsiniz.
+### Groupdocs.Annotation diğer belge formatlarıyla uyumlu mudur?
+Evet, Groupdocs.Annotation PDF, DOCX, PPTX ve daha fazlası dahil olmak üzere çeşitli belge biçimlerini destekler.
 ### Aynı belgeye birden fazla açıklama ekleyebilir miyim?
-Kesinlikle, gerektiğinde aynı belgeye farklı türde birden fazla açıklama ekleyebilirsiniz.
+Kesinlikle, ihtiyacınıza göre aynı belgeye farklı türlerde birden fazla açıklama ekleyebilirsiniz.
 ### Groupdocs.Annotation platformlar arası uyumluluk sunuyor mu?
-Evet, Groupdocs.Annotation .NET framework ile uyumludur, bu da onu Windows, Linux ve macOS geliştirme ortamlarına uygun hale getirir.
+Evet, Groupdocs.Annotation .NET framework ile uyumludur ve bu sayede Windows, Linux ve macOS geliştirme ortamlarında kullanılabilir.
 ### Test amaçlı deneme sürümü mevcut mu?
- Evet, ücretsiz deneme sürümüne şuradan erişebilirsiniz:[İnternet sitesi](https://releases.groupdocs.com/).
+Evet, ücretsiz deneme sürümüne şuradan erişebilirsiniz: [web sitesi](https://releases.groupdocs.com/).

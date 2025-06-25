@@ -1,21 +1,21 @@
 ---
-title: 문서에 폴리라인 주석 추가
-linktitle: 문서에 폴리라인 주석 추가
-second_title: GroupDocs.Annotation .NET API
-description: .NET용 GroupDocs.Annotation을 사용하여 문서에 폴리라인 주석을 추가하는 방법을 알아보세요. 협업 및 문서 검토 프로세스를 손쉽게 향상하세요.
-weight: 18
-url: /ko/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "GroupDocs.Annotation for .NET을 사용하여 문서에 폴리라인 주석을 추가하는 방법을 알아보세요. 협업 및 문서 검토 프로세스를 손쉽게 개선하세요."
+"linktitle": "문서에 폴리라인 주석 추가"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "문서에 폴리라인 주석 추가"
+"url": "/ko/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
 # 문서에 폴리라인 주석 추가
 
 ## 소개
-.NET용 GroupDocs.Annotation은 개발자가 프로그래밍 방식으로 PDF 및 Microsoft Office 문서에 주석을 달 수 있는 강력한 도구입니다. 그 기능 중에는 문서에 폴리라인 주석을 추가하여 협업 및 문서 검토 프로세스를 향상시키는 기능이 있습니다.
-## 전제 조건
+GroupDocs.Annotation for .NET은 개발자가 PDF 및 Microsoft Office 문서에 프로그래밍 방식으로 주석을 추가할 수 있는 강력한 도구입니다. 문서에 폴리라인 주석을 추가하여 협업 및 문서 검토 프로세스를 개선하는 기능도 제공합니다.
+## 필수 조건
 이 튜토리얼을 진행하기 전에 다음 사항이 있는지 확인하세요.
-- 시스템에 Visual Studio가 설치되어 있습니다.
+- 시스템에 Visual Studio가 설치되어 있어야 합니다.
 - C# 프로그래밍 언어에 대한 기본 지식.
--  .NET 라이브러리용 GroupDocs.Annotation이 설치되었습니다. 다음에서 다운로드할 수 있습니다.[여기](https://releases.groupdocs.com/annotation/net/).
+- .NET 라이브러리용 GroupDocs.Annotation이 설치되었습니다. 다음에서 다운로드할 수 있습니다. [여기](https://releases.groupdocs.com/annotation/net/).
 
 ## 네임스페이스 가져오기
 ```csharp
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 ## 1단계: 출력 경로 정의
-먼저 주석이 달린 문서가 저장될 출력 경로를 정의합니다.
+먼저, 주석이 달린 문서가 저장될 출력 경로를 정의합니다.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2단계: 주석자 초기화
-입력 문서 이름을 제공하여 어노테이터를 초기화하십시오.
+## 2단계: Annotator 초기화
+입력 문서 이름을 제공하여 주석자를 초기화합니다.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## 3단계: 폴리라인 주석 객체 생성
-폴리라인 주석 객체를 생성하고 위치, 메시지, 불투명도, 펜 색상, 펜 스타일, 펜 너비 등의 속성을 설정합니다.
+## 3단계: 폴리라인 주석 객체 만들기
+폴리라인 주석 객체를 만들고 위치, 메시지, 불투명도, 펜 색상, 펜 스타일, 펜 너비와 같은 속성을 설정합니다.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -68,7 +68,7 @@ PolylineAnnotation polyline = new PolylineAnnotation
 };
 ```
 ## 4단계: 폴리라인 주석 추가
-주석 개체를 사용하여 문서에 폴리라인 주석을 추가합니다.
+annotator 객체를 사용하여 문서에 폴리라인 주석을 추가합니다.
 ```csharp
 annotator.Add(polyline);
 ```
@@ -84,15 +84,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## 결론
-이 튜토리얼에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 폴리라인 주석을 추가하는 방법을 배웠습니다. 이 기능은 공동 작업 및 문서 검토 프로세스를 향상시켜 사용자가 피드백과 제안을 효과적으로 전달할 수 있도록 해줍니다.
-## FAQ
+이 튜토리얼에서는 GroupDocs.Annotation for .NET을 사용하여 문서에 폴리라인 주석을 추가하는 방법을 알아보았습니다. 이 기능은 협업 및 문서 검토 프로세스를 향상시켜 사용자가 피드백과 제안을 효과적으로 전달할 수 있도록 지원합니다.
+## 자주 묻는 질문
 ### .NET용 GroupDocs.Annotation은 모든 문서 형식과 호환됩니까?
-.NET용 GroupDocs.Annotation은 PDF와 같은 널리 사용되는 문서 형식과 Word, Excel, PowerPoint를 포함한 Microsoft Office 형식을 지원합니다.
-### 주석의 모양을 맞춤설정할 수 있나요?
-예, 색상, 불투명도, 스타일, 너비 등 주석의 다양한 속성을 요구 사항에 맞게 사용자 정의할 수 있습니다.
-### .NET용 GroupDocs.Annotation은 무료 평가판을 제공합니까?
- 예, 다음 사이트를 방문하여 .NET용 GroupDocs.Annotation 무료 평가판을 이용하실 수 있습니다.[이 링크](https://releases.groupdocs.com/).
-### .NET용 GroupDocs.Annotation에 대한 설명서는 어디서 찾을 수 있나요?
- .NET용 GroupDocs.Annotation에 대한 설명서를 찾을 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).
-### .NET용 GroupDocs.Annotation과 관련된 문제나 쿼리에 대한 지원을 받으려면 어떻게 해야 합니까?
- GroupDocs.Annotation 포럼을 방문하면 지원을 받을 수 있습니다.[여기](https://forum.groupdocs.com/c/annotation/10).
+.NET용 GroupDocs.Annotation은 PDF와 Word, Excel, PowerPoint 등의 Microsoft Office 형식과 같은 널리 사용되는 문서 형식을 지원합니다.
+### 주석의 모양을 사용자 지정할 수 있나요?
+네, 색상, 불투명도, 스타일, 너비 등 주석의 다양한 속성을 요구 사항에 맞게 사용자 정의할 수 있습니다.
+### GroupDocs.Annotation for .NET은 무료 평가판을 제공합니까?
+예, .NET용 GroupDocs.Annotation의 무료 평가판을 이용하려면 여기를 방문하세요. [이 링크](https://releases.groupdocs.com/).
+### .NET용 GroupDocs.Annotation에 대한 문서는 어디에서 찾을 수 있나요?
+.NET용 GroupDocs.Annotation에 대한 설명서를 찾을 수 있습니다. [여기](https://tutorials.groupdocs.com/annotation/net/).
+### .NET용 GroupDocs.Annotation과 관련된 문제나 문의사항에 대한 지원을 받으려면 어떻게 해야 하나요?
+GroupDocs.Annotation 포럼을 방문하여 지원을 받을 수 있습니다. [여기](https://forum.groupdocs.com/c/annotation/10).

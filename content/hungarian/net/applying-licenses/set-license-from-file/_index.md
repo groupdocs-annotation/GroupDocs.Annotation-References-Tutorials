@@ -1,39 +1,39 @@
 ---
-title: Állítsa be a licencet a fájlból
-linktitle: Állítsa be a licencet a fájlból
-second_title: GroupDocs.Annotation .NET API
-description: A GroupDocs.Annotation for .NET segítségével zökkenőmentesen integrálhatja a hatékony dokumentumjegyzetelési képességeket .NET-alkalmazásaiba.
-weight: 10
-url: /hu/net/applying-licenses/set-license-from-file/
+"description": "Integrálja zökkenőmentesen a hatékony dokumentum-annotációs funkciókat .NET alkalmazásaiba a GroupDocs.Annotation for .NET segítségével."
+"linktitle": "Licenc beállítása fájlból"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Licenc beállítása fájlból"
+"url": "/hu/net/applying-licenses/set-license-from-file/"
+"weight": 10
 ---
 
-# Állítsa be a licencet a fájlból
+# Licenc beállítása fájlból
 
 ## Bevezetés
-Napjaink digitális korában a dokumentum-annotáció az együttműködés, az áttekintés és a visszajelzési folyamatok alapvető eszközévé vált a különböző iparágakban. A GroupDocs.Annotation for .NET hatékony megoldást kínál azoknak a fejlesztőknek, akik zökkenőmentesen szeretnék integrálni az annotációs funkciókat .NET-alkalmazásaikba.
+A mai digitális korban a dokumentumok annotációja alapvető eszközzé vált az együttműködési, felülvizsgálati és visszajelzési folyamatokban a különböző iparágakban. A GroupDocs.Annotation for .NET hatékony megoldást kínál azoknak a fejlesztőknek, akik zökkenőmentesen szeretnék integrálni az annotációs funkciókat .NET alkalmazásaikba.
 ## Előfeltételek
-Mielőtt belemerülne a GroupDocs.Annotation for .NET megvalósításába, győződjön meg arról, hogy a következő előfeltételeket teljesítette:
-### 1. C# és .NET Framework ismerete
+Mielőtt belemerülnénk a GroupDocs.Annotation for .NET implementációjába, győződjünk meg arról, hogy a következő előfeltételek teljesülnek:
+### 1. C# és .NET keretrendszer ismerete
 A GroupDocs.Annotation .NET-hez való hatékony használatához alapvető ismeretekkel kell rendelkeznie a C# programozási nyelvről és a .NET keretrendszerről.
-### 2. A Visual Studio telepítve
-Győződjön meg arról, hogy a Visual Studio telepítve van a fejlesztőgépen. A Visual Studio letölthető a Microsoft webhelyéről.
-### 3. GroupDocs.Annotation for .NET Library
- Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat a rendelkezésre állóból[letöltési link](https://releases.groupdocs.com/annotation/net/).
+### 2. Visual Studio telepítése
+Győződjön meg róla, hogy a Visual Studio telepítve van a fejlesztőgépén. A Visual Studio letölthető a Microsoft webhelyéről.
+### 3. GroupDocs.Annotation .NET könyvtárhoz
+Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat a mellékelt [letöltési link](https://releases.groupdocs.com/annotation/net/).
 ### 4. Licencfájl (opcionális)
-Míg a GroupDocs.Annotation for .NET licenc nélkül is használható, a teljes funkcionalitás és az értékelési korlátozások megszüntetése érdekében szükség lehet egy licencfájlra. Ideiglenes vagy állandó licencet szerezhet be a GroupDocs webhelyéről.
+Bár a GroupDocs.Annotation for .NET licenc nélkül is használható, a teljes funkcionalitás eléréséhez és a tesztelési korlátozások eltávolításához licencfájlra lehet szükség. Ideiglenes vagy állandó licencet a GroupDocs webhelyéről szerezhet be.
 
 ## Névterek importálása
-Mielőtt folytatná a megvalósítást, győződjön meg róla, hogy importálja a szükséges névtereket a C# projektbe. Ezek a névterek hozzáférést biztosítanak a GroupDocs.Annotation for .NET szolgáltatásaihoz.
+A megvalósítás folytatása előtt győződjön meg arról, hogy importálta a szükséges névtereket a C# projektjébe. Ezek a névterek hozzáférést biztosítanak a GroupDocs.Annotation for .NET által kínált funkciókhoz.
 
-Először is importálja a GroupDocs.Annotation névteret a C# fájlba:
+Először importáld a GroupDocs.Annotation névteret a C# fájlodba:
 ```csharp
 using System;
 using System.IO;
 ```
 ## 1. lépés: Ellenőrizze a licencfájl meglétét
-Mielőtt megpróbálná beállítani a licencet, győződjön meg arról, hogy a licencfájl létezik a megadott útvonalon.
-## 2. lépés: Állítsa be a licencet
-Ha a licencfájl létezik, állítsa be a licencet a GroupDocs.Annotation API segítségével.
+A licenc beállításának megkísérlése előtt győződjön meg arról, hogy a licencfájl létezik a megadott elérési úton.
+## 2. lépés: Licenc beállítása
+Ha a licencfájl létezik, állítsa be a licencet a GroupDocs.Annotation API használatával.
 ```csharp
 if (File.Exists(Constants.LicensePath))
 {
@@ -42,28 +42,28 @@ if (File.Exists(Constants.LicensePath))
     Console.WriteLine("License set successfully.");
 }
 ```
-## 3. lépés: A licencfájl kezelése nem található
-Ha a licencfájl nem található, adja meg a megfelelő utasításokat az ideiglenes vagy állandó licenc beszerzéséhez a GroupDocs webhelyről.
+## 3. lépés: A licencfájl nem található kezelése
+Ha a licencfájl nem található, adja meg a megfelelő utasításokat egy ideiglenes vagy állandó licenc beszerzéséhez a GroupDocs webhelyéről.
 ```csharp
 else
 {
     Console.WriteLine("\nWe do not ship any license with this example. " +
                       "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +
-                      "\nLearn more about licensing at https://buy.groupdocs.com/faqs/licensing. "+
-                      "\nLearn how to request a temporary license at https://buy.groupdocs.com/temporary-license.");
+                      "\nLearn more about licensing at https://purchase.groupdocs.com/faqs/licensing. " +
+                      "\nLearn how to request a temporary license at https://purchase.groupdocs.com/ideiglenes-license.");
 }
 ```
 
 ## Következtetés
-A GroupDocs.Annotation for .NET segítségével zökkenőmentesen integrálhatja a dokumentumfeljegyzések funkcióit .NET-alkalmazásaiba. Az ebben az útmutatóban felvázolt lépések követésével hatékonyan beállíthatja a licencet egy fájlból, és felszabadíthatja a dokumentumjegyzetelési képességek teljes potenciálját.
+A GroupDocs.Annotation for .NET segítségével zökkenőmentesen integrálhatja a dokumentum-annotációs funkciókat a .NET-alkalmazásaiba. Az útmutatóban ismertetett lépéseket követve hatékonyan beállíthatja a licencet egy fájlból, és kihasználhatja a dokumentum-annotációs lehetőségek teljes potenciálját.
 ## GYIK
 ### Szükségem van licencre a GroupDocs.Annotation for .NET használatához?
-Bár a licenc nem kötelező, a teljes funkcionalitás és az értékelési korlátozások megszüntetése érdekében ajánlott.
-### Kaphatok ideiglenes engedélyt értékelési célból?
-Igen, kérhet ideiglenes licencet a GroupDocs webhelyről.
-### A GroupDocs.Annotation kompatibilis a Visual Studióval?
-Igen, a GroupDocs.Annotation zökkenőmentesen integrálható a Visual Studio .NET-fejlesztéshez.
-### A GroupDocs.Annotation támogatja a PDF-től eltérő dokumentumformátumokat?
-Igen, a GroupDocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a DOCX, PPTX, XLSX stb.
-### Hol találok támogatást a GroupDocs.Annotation for .NET számára?
-Támogatást és segítséget találhat a megjegyzésekkel foglalkozó GroupDocs fórumon.
+Bár a licenc nem kötelező, a teljes funkcionalitás eléréséhez és a tesztelési korlátok eltörléséhez ajánlott.
+### Szerezhetek ideiglenes engedélyt értékelési célokra?
+Igen, kérhet ideiglenes licencet a GroupDocs weboldalán.
+### A GroupDocs.Annotation kompatibilis a Visual Studio-val?
+Igen, a GroupDocs.Annotation zökkenőmentesen integrálható a Visual Studio .NET fejlesztéshez.
+### A GroupDocs.Annotation támogatja a PDF-en kívüli más dokumentumformátumokat is?
+Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a DOCX, PPTX, XLSX és egyebeket.
+### Hol találok támogatást a GroupDocs.Annotation for .NET-hez?
+Támogatást és segítséget a GroupDocs jegyzeteléssel foglalkozó fórumán találhatsz.

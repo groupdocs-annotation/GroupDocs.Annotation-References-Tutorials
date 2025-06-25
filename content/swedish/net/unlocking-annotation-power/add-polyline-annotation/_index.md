@@ -1,23 +1,23 @@
 ---
-title: Lägg till polylinjeanteckning till dokumentet
-linktitle: Lägg till polylinjeanteckning till dokumentet
-second_title: GroupDocs.Annotation .NET API
-description: Lär dig hur du lägger till polyline-kommentarer till dokument med GroupDocs.Annotation för .NET. Förbättra samarbets- och dokumentgranskningsprocesser utan ansträngning.
-weight: 18
-url: /sv/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "Lär dig hur du lägger till polyline-anteckningar i dokument med GroupDocs.Annotation för .NET. Förbättra samarbete och dokumentgranskningsprocesser utan ansträngning."
+"linktitle": "Lägg till polylinjeannotering i dokument"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Lägg till polylinjeannotering i dokument"
+"url": "/sv/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# Lägg till polylinjeanteckning till dokumentet
+# Lägg till polylinjeannotering i dokument
 
 ## Introduktion
-GroupDocs.Annotation for .NET är ett kraftfullt verktyg som låter utvecklare kommentera PDF- och Microsoft Office-dokument programmatiskt. Bland dess funktioner är möjligheten att lägga till polyline-kommentarer till dokument, vilket förbättrar samarbete och dokumentgranskning.
-## Förutsättningar
+GroupDocs.Annotation för .NET är ett kraftfullt verktyg som låter utvecklare kommentera PDF- och Microsoft Office-dokument programmatiskt. Bland dess funktioner finns möjligheten att lägga till polyline-anteckningar i dokument, vilket förbättrar samarbete och dokumentgranskningsprocesser.
+## Förkunskapskrav
 Innan du fortsätter med den här handledningen, se till att du har följande:
 - Visual Studio installerat på ditt system.
 - Grundläggande kunskaper i programmeringsspråket C#.
--  GroupDocs.Annotation för .NET-biblioteket installerat. Du kan ladda ner den från[här](https://releases.groupdocs.com/annotation/net/).
+- GroupDocs.Annotation för .NET-biblioteket är installerat. Du kan ladda ner det från [här](https://releases.groupdocs.com/annotation/net/).
 
-## Importera namnområden
+## Importera namnrymder
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Steg 1: Definiera utdatasökväg
-Definiera först utmatningsvägen där det kommenterade dokumentet ska sparas.
+## Steg 1: Definiera utmatningsväg
+Definiera först utdatasökvägen där det kommenterade dokumentet ska sparas.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Steg 2: Initiera Annotator
-Initiera annotatorn genom att ange namnet på inmatningsdokumentet.
+## Steg 2: Initiera annotatorn
+Initiera annotatorn genom att ange namnet på indatadokumentet.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Steg 3: Skapa Polyline Annotation Object
-Skapa ett polyline-anteckningsobjekt och ställ in dess egenskaper som position, meddelande, opacitet, pennfärg, pennstil och pennbredd.
+## Steg 3: Skapa ett polylinjeannoteringsobjekt
+Skapa ett polylinjeannoteringsobjekt och ange dess egenskaper som position, meddelande, opacitet, pennfärg, pennstil och pennbredd.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -67,32 +67,32 @@ PolylineAnnotation polyline = new PolylineAnnotation
 4460093896,0l0.6986854460093896,0l0.6986854460093896,-0.6986854460093896l0.6986854460093896,0"
 };
 ```
-## Steg 4: Lägg till polylinjeanteckning
-Lägg till polyline-anteckningen i dokumentet med hjälp av annotatorobjektet.
+## Steg 4: Lägg till polylinjeannotering
+Lägg till polylinjeannoteringen i dokumentet med hjälp av annotator-objektet.
 ```csharp
 annotator.Add(polyline);
 ```
 ## Steg 5: Spara dokument
-Spara det kommenterade dokumentet till den angivna utmatningsvägen.
+Spara det kommenterade dokumentet till den angivna utdatasökvägen.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Steg 6: Visa framgångsmeddelande
+## Steg 6: Visa meddelande om framgång
 Visa ett meddelande som bekräftar att dokumentet har sparats.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Slutsats
-den här handledningen har vi lärt oss hur man lägger till en polylinjekommentar till ett dokument med hjälp av GroupDocs.Annotation för .NET. Den här funktionen förbättrar samarbets- och dokumentgranskningsprocesser, vilket gör det lättare för användare att kommunicera feedback och förslag på ett effektivt sätt.
-## FAQ's
-### Är GroupDocs.Annotation for .NET kompatibelt med alla dokumentformat?
-GroupDocs.Annotation for .NET stöder populära dokumentformat som PDF och Microsoft Office-format inklusive Word, Excel och PowerPoint.
-### Kan jag anpassa utseendet på kommentarer?
-Ja, du kan anpassa olika egenskaper för kommentarer som färg, opacitet, stil och bredd för att passa dina krav.
+I den här handledningen har vi lärt oss hur man lägger till en polylinjeannotering i ett dokument med GroupDocs.Annotation för .NET. Den här funktionen förbättrar samarbete och dokumentgranskningsprocesser, vilket gör det enklare för användare att kommunicera feedback och förslag effektivt.
+## Vanliga frågor
+### Är GroupDocs.Annotation för .NET kompatibel med alla dokumentformat?
+GroupDocs.Annotation för .NET stöder populära dokumentformat som PDF och Microsoft Office-format inklusive Word, Excel och PowerPoint.
+### Kan jag anpassa utseendet på annoteringar?
+Ja, du kan anpassa olika egenskaper för annoteringar, såsom färg, opacitet, stil och bredd, så att de passar dina behov.
 ### Erbjuder GroupDocs.Annotation för .NET en gratis provperiod?
- Ja, du kan använda en gratis provversion av GroupDocs.Annotation för .NET genom att besöka[den här länken](https://releases.groupdocs.com/).
+Ja, du kan få en gratis provversion av GroupDocs.Annotation för .NET genom att besöka [den här länken](https://releases.groupdocs.com/).
 ### Var kan jag hitta dokumentation för GroupDocs.Annotation för .NET?
- Du hittar dokumentationen för GroupDocs.Annotation för .NET[här](https://tutorials.groupdocs.com/annotation/net/).
-### Hur kan jag få support för eventuella problem eller frågor relaterade till GroupDocs.Annotation for .NET?
- Du kan få support genom att besöka forumet GroupDocs.Annotation[här](https://forum.groupdocs.com/c/annotation/10).
+Du hittar dokumentationen för GroupDocs.Annotation för .NET [här](https://tutorials.groupdocs.com/annotation/net/).
+### Hur kan jag få support för problem eller frågor relaterade till GroupDocs.Annotation för .NET?
+Du kan få support genom att besöka GroupDocs.Annotation-forumet. [här](https://forum.groupdocs.com/c/annotation/10).

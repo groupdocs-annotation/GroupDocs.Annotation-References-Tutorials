@@ -1,40 +1,40 @@
 ---
-title: Načítání vlastních písem
-linktitle: Načítání vlastních písem
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se, jak plynule načítat vlastní písma v GroupDocs.Annotation pro .NET, abyste vylepšili anotace dokumentů. Pro snadnou integraci postupujte podle našich pokynů krok za krokem.
-weight: 20
-url: /cs/net/advanced-usage/loading-custom-fonts/
+"description": "Naučte se, jak bezproblémově načíst vlastní písma v GroupDocs.Annotation pro .NET a vylepšit tak anotaci dokumentů. Postupujte podle našich podrobných pokynů pro snadnou integraci."
+"linktitle": "Načítání vlastních písem"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Načítání vlastních písem"
+"url": "/cs/net/advanced-usage/loading-custom-fonts/"
+"weight": 20
 ---
 
 # Načítání vlastních písem
 
-## Úvod
-GroupDocs.Annotation for .NET je výkonná knihovna, která umožňuje vývojářům snadno přidávat funkce anotací do jejich aplikací .NET. Jednou z klíčových funkcí, které nabízí, je schopnost načítat vlastní písma, což umožňuje lepší přizpůsobení a flexibilitu v anotacích dokumentů.
+## Zavedení
+GroupDocs.Annotation pro .NET je výkonná knihovna, která umožňuje vývojářům snadno přidávat funkce anotací do jejich .NET aplikací. Jednou z klíčových funkcí, které nabízí, je možnost načítání vlastních písem, což umožňuje rozšířené přizpůsobení a flexibilitu při anotacích dokumentů.
 ## Předpoklady
-Než budete pokračovat ve výukovém programu, ujistěte se, že máte následující předpoklady:
-1.  GroupDocs.Annotation for .NET Library: Stáhněte a nainstalujte knihovnu z[tady](https://releases.groupdocs.com/annotation/net/).
-2. Vývojové prostředí .NET: Ujistěte se, že máte nastavené pracovní prostředí pro vývoj .NET.
+Než budete pokračovat s tutoriálem, ujistěte se, že máte následující předpoklady:
+1. GroupDocs.Annotation pro knihovnu .NET: Stáhněte a nainstalujte knihovnu z [zde](https://releases.groupdocs.com/annotation/net/).
+2. Vývojové prostředí .NET: Ujistěte se, že máte nastavené pracovní prostředí pro vývoj v .NET.
 3. Přístup k vlastním písmům: Připravte si vlastní písma, která chcete načíst do aplikace.
 
-## Import jmenných prostorů
-Ve svém projektu .NET importujte potřebné jmenné prostory pro využití GroupDocs.Annotation:
+## Importovat jmenné prostory
+Ve vašem projektu .NET importujte potřebné jmenné prostory pro použití GroupDocs.Annotation:
 ```csharp
 using System;
 using System.Collections.Generic;
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
-## Krok 1: Vytvořte instanci objektu anotátoru
- Vytvořte instanci souboru`Annotator` třídy poskytnutím cesty ke vstupnímu dokumentu PDF spolu s vlastními adresáři písem:
+## Krok 1: Vytvoření instance objektu Annotator
+Vytvořte instanci `Annotator` třídu poskytnutím cesty ke vstupnímu PDF dokumentu spolu s vlastními adresáři písem:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf", new LoadOptions { FontDirectories = new List<string> { Constants.GetFontDirectory() } }))
 {
-    // Zde bude váš kód pro další operace
+    // Váš kód pro další operace bude zde
 }
 ```
-## Krok 2: Nakonfigurujte možnosti náhledu
-Definujte možnosti náhledu a určete, jak se budou generovat náhledy dokumentů. Můžete nastavit možnosti, jako je formát náhledu, čísla stránek atd.:
+## Krok 2: Konfigurace možností náhledu
+Definujte možnosti náhledu a určete, jak budou generovány náhledy dokumentů. Můžete nastavit možnosti, jako je formát náhledu, čísla stránek atd.:
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 {
@@ -44,27 +44,27 @@ PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 previewOptions.PreviewFormat = PreviewFormats.PNG;
 previewOptions.PageNumbers = new int[] { 1, 2, 3, 4 };
 ```
-## Krok 3: Vygenerujte náhledy dokumentů
- Využijte`GeneratePreview` metoda`Document` vlastnost pro generování náhledů s vlastními fonty:
+## Krok 3: Generování náhledů dokumentů
+Využijte `GeneratePreview` metoda `Document` vlastnost pro generování náhledů s vlastními fonty:
 ```csharp
 annotator.Document.GeneratePreview(previewOptions);
 ```
-## Krok 4: Zobrazte výstupní cestu
+## Krok 4: Zobrazení výstupní cesty
 Nakonec zobrazte zprávu o úspěšném vygenerování náhledů dokumentů spolu s cestou k výstupnímu adresáři:
 ```csharp
 Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {"Your Document Directory"}.");
 ```
 
 ## Závěr
-Závěrem lze říci, že načítání vlastních písem v GroupDocs.Annotation for .NET poskytuje vývojářům flexibilitu při přizpůsobení anotací dokumentů podle jejich požadavků. Podle kroků uvedených v tomto kurzu můžete bez problémů integrovat vlastní písma do aplikací .NET a vylepšit uživatelům práci s poznámkami.
-## FAQ
+Závěrem lze říci, že načítání vlastních písem v GroupDocs.Annotation pro .NET poskytuje vývojářům flexibilitu přizpůsobit si anotace dokumentů podle jejich požadavků. Dodržením kroků popsaných v tomto tutoriálu můžete bezproblémově integrovat vlastní písma do svých .NET aplikací a vylepšit tak uživatelský zážitek z anotací.
+## Často kladené otázky
 ### Mohu načíst více vlastních písem současně?
- Ano, při vytváření instance můžete zadat více adresářů písem`Annotator` objekt.
+Ano, při vytváření instance můžete zadat více adresářů písem. `Annotator` objekt.
 ### Existují nějaká omezení ohledně podporovaných typů písem?
-GroupDocs.Annotation for .NET podporuje širokou škálu typů písem, včetně písem TrueType (.ttf) a OpenType (.otf).
-### Mohu dynamicky měnit načtená písma za běhu?
-Ano, můžete dynamicky upravovat adresáře písem a podle potřeby znovu načítat anotace dokumentu.
+GroupDocs.Annotation pro .NET podporuje širokou škálu typů písem, včetně písem TrueType (.ttf) a OpenType (.otf).
+### Mohu dynamicky měnit načtené fonty za běhu?
+Ano, adresáře písem můžete dynamicky upravovat a podle potřeby znovu načítat anotace dokumentů.
 ### Podporuje GroupDocs.Annotation vkládání písem do výstupních dokumentů?
 Ano, do výstupních dokumentů můžete vložit vlastní písma, abyste zajistili konzistentní vykreslování na různých platformách.
-### Existuje způsob, jak zvládnout licencování písem v rámci aplikace?
-GroupDocs.Annotation poskytuje možnosti pro správu licencování písem, včetně dočasných licencí pro účely hodnocení.
+### Existuje způsob, jak v aplikaci řešit licencování písem?
+GroupDocs.Annotation nabízí možnosti pro správu licencování písem, včetně dočasných licencí pro účely vyhodnocení.

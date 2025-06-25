@@ -1,21 +1,21 @@
 ---
-title: Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu
-linktitle: Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu
-second_title: GroupDocs.Annotation .NET-API
-description: Erfahren Sie, wie Sie mit Groupdocs.Annotation für .NET mühelos Textanmerkungen zu Dokumenten hinzufügen. Verbessern Sie die Prozesse der Zusammenarbeit und Dokumentenprüfung.
-weight: 25
-url: /de/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Erfahren Sie, wie Sie mit Groupdocs.Annotation für .NET mühelos Textanmerkungen zu Dokumenten hinzufügen. Verbessern Sie die Zusammenarbeit und die Dokumentprüfungsprozesse."
+"linktitle": "Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu"
+"url": "/de/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
 # Fügen Sie dem Dokument eine verschnörkelte Textanmerkung hinzu
 
 ## Einführung
 
-Groupdocs.Annotation für .NET ist eine vielseitige Bibliothek, die es Entwicklern ermöglicht, mühelos robuste Annotationsfunktionen in ihre .NET-Anwendungen zu integrieren. Ganz gleich, ob Sie mit PDFs, Word-Dokumenten oder anderen gängigen Dateiformaten arbeiten, Groupdocs.Annotation bietet eine nahtlose Lösung zum Kommentieren und Verbessern der Zusammenarbeit an Dokumenten.
+Groupdocs.Annotation für .NET ist eine vielseitige Bibliothek, die es Entwicklern ermöglicht, mühelos robuste Annotationsfunktionen in ihre .NET-Anwendungen zu integrieren. Ob Sie mit PDFs, Word-Dokumenten oder anderen gängigen Dateiformaten arbeiten – Groupdocs.Annotation bietet eine nahtlose Lösung zum Kommentieren und Verbessern der Dokumentenzusammenarbeit.
 
 ## Voraussetzungen
 
-Bevor Sie mit dem Tutorial beginnen, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
+Bevor Sie mit dem Lernprogramm beginnen, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
 ## Namespaces importieren
 
@@ -30,7 +30,7 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Nachdem wir nun die Voraussetzungen erfüllt haben, unterteilen wir den Prozess des Hinzufügens von verschnörkelten Textanmerkungen in mehrere Schritte.
+Nachdem wir nun die Voraussetzungen abgedeckt haben, wollen wir den Vorgang des Hinzufügens von verschnörkelten Textanmerkungen in mehrere Schritte unterteilen.
 
 ## Schritt 1: Ausgabepfad definieren
 
@@ -47,7 +47,7 @@ Initialisieren Sie das Annotator-Objekt, indem Sie den Eingabedokumentpfad angeb
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Der Anmerkungscode kommt hierher
+    // Hier kommt der Anmerkungscode hin
 }
 ```
 
@@ -87,7 +87,7 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 
 ## Schritt 4: Anmerkung hinzufügen
 
-Fügen Sie die erstellte verschnörkelte Anmerkung zum Dokument hinzu.
+Fügen Sie die erstellte Schnörkelanmerkung dem Dokument hinzu.
 
 ```csharp
 annotator.Add(squiggly);
@@ -103,7 +103,7 @@ annotator.Save(outputPath);
 
 ## Schritt 6: Bestätigung anzeigen
 
-Zeigt eine Meldung an, die das erfolgreiche Speichern des mit Anmerkungen versehenen Dokuments bestätigt.
+Zeigt eine Meldung an, die das erfolgreiche Speichern des kommentierten Dokuments bestätigt.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Abschluss
 
-Zusammenfassend stellt Groupdocs.Annotation für .NET Entwicklern einen robusten Satz an Tools zur nahtlosen Integration von Dokumentanmerkungsfunktionen in ihre .NET-Anwendungen zur Verfügung. Wenn Sie dieser Schritt-für-Schritt-Anleitung folgen, können Sie Ihren Dokumenten mühelos Textanmerkungen hinzufügen und so die Zusammenarbeit und die Dokumentüberprüfungsprozesse verbessern.
+Zusammenfassend lässt sich sagen, dass Groupdocs.Annotation für .NET Entwicklern ein robustes Toolset zur nahtlosen Integration von Dokumentannotationsfunktionen in ihre .NET-Anwendungen bietet. Mit dieser Schritt-für-Schritt-Anleitung können Sie Ihren Dokumenten mühelos Textanmerkungen hinzufügen und so die Zusammenarbeit und die Dokumentenprüfung verbessern.
 
-## FAQs
+## Häufig gestellte Fragen
 
-### F: Kann Groupdocs.Annotation Annotationen in verschiedenen Dateiformaten unterstützen?
+### F: Kann Groupdocs.Annotation Anmerkungen zu verschiedenen Dateiformaten unterstützen?
 
-A: Ja, Groupdocs.Annotation unterstützt Anmerkungen in einer Vielzahl von Dateiformaten, darunter PDFs, Word-Dokumente, Excel-Tabellen und mehr.
+A: Ja, Groupdocs.Annotation unterstützt Anmerkungen zu einer Vielzahl von Dateiformaten, darunter PDFs, Word-Dokumente, Excel-Tabellen und mehr.
 
 ### F: Ist Groupdocs.Annotation sowohl mit Desktop- als auch mit Webanwendungen kompatibel?
 
-A: Auf jeden Fall! Groupdocs.Annotation lässt sich nahtlos in Desktop- und Webanwendungen integrieren und bietet Flexibilität und Vielseitigkeit.
+A: Absolut! Groupdocs.Annotation lässt sich nahtlos in Desktop- und Webanwendungen integrieren und bietet so Flexibilität und Vielseitigkeit.
 
-### F: Gibt es Lizenzoptionen für Groupdocs.Annotation?
+### F: Gibt es Lizenzierungsoptionen für Groupdocs.Annotation?
 
-A: Ja, Groupdocs.Annotation bietet flexible Lizenzoptionen, die auf die Bedürfnisse von Einzelpersonen oder Unternehmen zugeschnitten sind, einschließlich temporärer Lizenzen für Testzwecke.
+A: Ja, Groupdocs.Annotation bietet flexible Lizenzierungsoptionen, die auf die Bedürfnisse von Einzelpersonen oder Unternehmen zugeschnitten sind, einschließlich temporärer Lizenzen für Testzwecke.
 
 ### F: Können mit Groupdocs.Annotation erstellte Anmerkungen angepasst werden?
 
-A: Auf jeden Fall! Groupdocs.Annotation bietet umfangreiche Anpassungsoptionen für Anmerkungen, sodass Entwickler Anmerkungen an ihre spezifischen Anforderungen anpassen können.
+A: Natürlich! Groupdocs.Annotation bietet umfangreiche Anpassungsmöglichkeiten für Anmerkungen, sodass Entwickler Anmerkungen an ihre spezifischen Anforderungen anpassen können.
 
 ### F: Bietet Groupdocs.Annotation Support und Dokumentation für Entwickler?
 
-A: Tatsächlich! Groupdocs.Annotation bietet umfassende Dokumentation und spezielle Support-Foren, um Entwickler bei der effektiven Nutzung seiner Funktionen zu unterstützen.
+A: In der Tat! Groupdocs.Annotation bietet umfassende Dokumentation und spezielle Support-Foren, um Entwicklern die effektive Nutzung der Funktionen zu ermöglichen.

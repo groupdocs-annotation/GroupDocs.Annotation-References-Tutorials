@@ -1,23 +1,23 @@
 ---
-title: Nyíl megjegyzés hozzáadása a dokumentumhoz
-linktitle: Nyíl megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat hozzá nyilakkal ellátott megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozatmentesen fokozza a dokumentumok tisztaságát és interaktivitását.
-weight: 11
-url: /hu/net/unlocking-annotation-power/add-arrow-annotation/
+"description": "Tanulja meg, hogyan adhat nyíljegyzeteket dokumentumaihoz a GroupDocs.Annotation for .NET segítségével. Könnyedén javíthatja a dokumentumok érthetőségét és interaktivitását."
+"linktitle": "Nyíljegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Nyíljegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-arrow-annotation/"
+"weight": 11
 ---
 
-# Nyíl megjegyzés hozzáadása a dokumentumhoz
+# Nyíljegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Ebben az oktatóanyagban végigvezetjük Önt a nyilas megjegyzések hozzáadásának folyamatán a GroupDocs.Annotation for .NET segítségével. A nyíl megjegyzések hasznosak az irány jelzésére vagy a dokumentumon belüli meghatározott elemek kijelzésére.
+Ebben az oktatóanyagban végigvezetjük Önt a nyíljegyzetek dokumentumaihoz való hozzáadásának folyamatán a GroupDocs.Annotation for .NET használatával. A nyíljegyzetek hasznosak az irány jelzésére vagy a dokumentumon belüli adott elemek kiemelésére.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következőkkel:
-1.  GroupDocs.Annotation for .NET: Telepítse a GroupDocs.Annotation könyvtárat .NET-hez. Letöltheti innen[itt](https://releases.groupdocs.com/annotation/net/).
-2. Fejlesztési környezet: Győződjön meg arról, hogy be van állítva egy fejlesztői környezet a .NET-fejlesztéshez, beleértve a Visual Studio-t vagy bármely más preferált IDE-t.
+Mielőtt elkezdené, győződjön meg arról, hogy a következőkkel rendelkezik:
+1. GroupDocs.Annotation .NET-hez: Telepítse a GroupDocs.Annotation .NET-hez készült könyvtárat. Letöltheti innen: [itt](https://releases.groupdocs.com/annotation/net/).
+2. Fejlesztői környezet: Győződjön meg arról, hogy rendelkezik egy .NET fejlesztéshez beállított fejlesztői környezettel, beleértve a Visual Studio-t vagy bármely más előnyben részesített IDE-t.
 
 ## Névterek importálása
-Először is importálnia kell a szükséges névtereket, hogy hozzáférjen a megjegyzésekhez szükséges osztályokhoz és metódusokhoz.
+Először is importálnia kell a szükséges névtereket az annotációhoz szükséges osztályok és metódusok eléréséhez.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,15 +26,15 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 1. lépés: Inicializálja az Annotátort
+## 1. lépés: Annotátor inicializálása
 Inicializálja az annotátort a bemeneti dokumentumfájl elérési útjának megadásával.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## 2. lépés: Nyíl megjegyzés létrehozása
-Hozzon létre egy példányt az ArrowAnnotation osztályból, és határozza meg tulajdonságait, például pozíciót, üzenetet, átlátszatlanságot, tollszínt, stílust, szélességet stb.
+## 2. lépés: Nyíljelölés létrehozása
+Hozz létre egy példányt az ArrowAnnotation osztályból, és definiáld a tulajdonságait, mint például a pozíció, az üzenet, az átlátszóság, a toll színe, a stílus, a szélesség stb.
 ```csharp
 	ArrowAnnotation arrow = new ArrowAnnotation
 	{
@@ -61,34 +61,34 @@ Hozzon létre egy példányt az ArrowAnnotation osztályból, és határozza meg
 		}
 	};
 ```
-## 3. lépés: Megjegyzés hozzáadása
- Adja hozzá a nyíl megjegyzést a dokumentumhoz a gombbal`Add` az annotátor módszere.
+## 3. lépés: Jegyzet hozzáadása
+Adja hozzá a nyílhoz tartozó megjegyzést a dokumentumhoz a `Add` az annotátor módszere.
 ```csharp
 	annotator.Add(arrow);
 ```
-## 4. lépés: Mentse el a dokumentumot
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+## 4. lépés: Dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 	annotator.Save(outputPath);
 }
 ```
 ## 5. lépés: Megerősítés megjelenítése
-Megerősítő üzenet megjelenítése, amely jelzi a dokumentum sikeres mentését.
+Megjelenít egy megerősítő üzenetet, amely jelzi a dokumentum sikeres mentését.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Sikeresen hozzáadott egy nyíl megjegyzést a dokumentumhoz a GroupDocs.Annotation for .NET segítségével.
+Most sikeresen hozzáadott egy nyíljegyzetet a dokumentumához a GroupDocs.Annotation for .NET használatával.
 
 ## Következtetés
-Ebben az oktatóanyagban bemutattuk azt a folyamatot, amikor a GroupDocs.Annotation for .NET segítségével nyíllal ellátott megjegyzéseket adunk a dokumentumokhoz. Ha követi ezeket a lépéseket, akkor egyértelmű irányjelzőkkel javíthatja dokumentumait, amelyek informatívabbá és vonzóbbá teszik őket.
+Ebben az oktatóanyagban a GroupDocs.Annotation for .NET használatával a dokumentumokhoz nyílaláírások hozzáadásának folyamatát ismertettük. A következő lépéseket követve egyértelmű irányjelzőkkel gazdagíthatja dokumentumait, így informatívabbá és lebilincselőbbé teheti azokat.
 ## GYIK
-### Testreszabhatom a nyíl megjegyzés megjelenését?
-Igen, testreszabhat különféle tulajdonságokat, például színt, stílust, szélességet és átlátszatlanságot, hogy megfeleljenek az Ön preferenciáinak és dokumentumkövetelményeinek.
+### Testreszabhatom a nyíllal jelölt megjegyzések megjelenését?
+Igen, testreszabhatja a különböző tulajdonságokat, például a színt, a stílust, a szélességet és az átlátszóságot, hogy megfeleljenek az oktatóanyagai és a dokumentum követelményeinek.
 ### A GroupDocs.Annotation kompatibilis az összes dokumentumformátummal?
-A GroupDocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
-### Hozzáadhatok megjegyzéseket programozottan a GroupDocs.Annotation használatával?
-Igen, a GroupDocs.Annotation API-kat biztosít, amelyek lehetővé teszik megjegyzések programozott hozzáadását, szerkesztését és eltávolítását a dokumentumokból.
-### A GroupDocs.Annotation ingyenes próbaverziót kínál?
- Igen, ingyenesen kipróbálhatja a GroupDocs.Annotation alkalmazást, ha letölti a webhelyről[itt](https://releases.groupdocs.com/).
-### Hol kaphatok technikai támogatást a GroupDocs.Annotation-hoz?
-Technikai támogatásért és segítségért keresse fel a GroupDocs.Annotation fórumot[itt](https://forum.groupdocs.com/c/annotation/10).
+A GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
+### Hozzáadhatok annotációkat programozottan a GroupDocs.Annotation használatával?
+Igen, a GroupDocs.Annotation API-kat biztosít, amelyek lehetővé teszik a dokumentumokhoz tartozó jegyzetek programozott hozzáadását, szerkesztését és eltávolítását.
+### Ingyenes próbaverziót kínál a GroupDocs.Annotation?
+Igen, ingyenesen kipróbálhatja a GroupDocs.Annotation alkalmazást a következő címről: [itt](https://releases.groupdocs.com/).
+### Hol kaphatok technikai támogatást a GroupDocs.Annotation-höz?
+Technikai támogatásért és segítségért látogassa meg a GroupDocs.Annotation fórumot. [itt](https://forum.groupdocs.com/c/annotation/10).

@@ -1,23 +1,23 @@
 ---
-title: Szöveg aláhúzás megjegyzés hozzáadása a dokumentumhoz
-linktitle: Szöveg aláhúzás megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat szöveges aláhúzás megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozza az együttműködést és a kommunikációt erőfeszítés nélkül.
-weight: 27
-url: /hu/net/unlocking-annotation-power/add-text-underline-annotation/
+"description": "Tanulja meg, hogyan adhat hozzá szöveges aláhúzásos megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Könnyedén javíthatja az együttműködést és a kommunikációt."
+"linktitle": "Szöveg aláhúzott jegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Szöveg aláhúzott jegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-text-underline-annotation/"
+"weight": 27
 ---
 
-# Szöveg aláhúzás megjegyzés hozzáadása a dokumentumhoz
+# Szöveg aláhúzott jegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Ebben az oktatóanyagban a GroupDocs.Annotation for .NET használatával szöveges aláhúzás megjegyzések hozzáadásának folyamatát mutatjuk be. A szöveg aláhúzott megjegyzései hasznosak lehetnek a dokumentum bizonyos részei, például a fontos részek vagy kulcspontok kiemelésére.
+Ebben az oktatóanyagban bemutatjuk, hogyan adhatunk szöveges aláhúzásos megjegyzéseket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. A szöveges aláhúzásos megjegyzések hasznosak lehetnek a dokumentum bizonyos részeinek, például fontos részleteknek vagy kulcsfontosságú pontoknak a kiemelésére.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy a következő előfeltételek telepítve vannak:
-1.  GroupDocs.Annotation for .NET: Töltse le és telepítse a GroupDocs.Annotation for .NET webhelyet[itt](https://releases.groupdocs.com/annotation/net/).
-2. .NET-keretrendszer: Győződjön meg arról, hogy a .NET-keretrendszer telepítve van a rendszeren.
+Mielőtt elkezdenénk, győződjünk meg arról, hogy a következő előfeltételek telepítve vannak:
+1. GroupDocs.Annotation for .NET: Töltse le és telepítse a GroupDocs.Annotation for .NET fájlt innen: [itt](https://releases.groupdocs.com/annotation/net/).
+2. .NET-keretrendszer: Győződjön meg arról, hogy a .NET-keretrendszer telepítve van a rendszerén.
 
 ## Névterek importálása
-Először is importáljuk a szükséges névtereket a projektünkbe:
+Először importáljuk a szükséges névtereket a projektünkbe:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Most bontsuk fel a példát több lépésre:
-## 1. lépés: Határozza meg a kimeneti útvonalat
+Most bontsuk a példát több lépésre:
+## 1. lépés: Kimeneti útvonal meghatározása
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Ebben a lépésben meghatározzuk a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentumot el kell menteni.
-## 2. lépés: Inicializálja az Annotátort
+Ebben a lépésben meghatározzuk a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
+## 2. lépés: Annotátor inicializálása
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Itt inicializáljuk a`Annotator` osztályba a bemeneti dokumentum elérési útjának megadásával.
-## 3. lépés: Aláhúzott megjegyzés létrehozása
+Itt inicializáljuk a következő egy példányát: `Annotator` osztály a bemeneti dokumentum elérési útjának megadásával.
+## 3. lépés: Aláhúzott jegyzet létrehozása
 ```csharp
 UnderlineAnnotation underline = new UnderlineAnnotation
 {
@@ -48,7 +48,7 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     Opacity = 0.7,
     PageNumber = 0,
     BackgroundColor = 16761035,
-    UnderlineColor = 1422623, // csak Word és PDF dokumentumokat támogat
+    UnderlineColor = 1422623, // csak a Word és PDF dokumentumokat támogatja
     Points = new List<Point>
     {
         new Point(80, 730), new Point(240, 730), new Point(80, 650), new Point(240, 650)
@@ -68,28 +68,28 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     }
 };
 ```
- Ez a lépés egy`UnderlineAnnotation`objektum különféle tulajdonságokkal, például betűszín, üzenet, átlátszatlanság, oldalszám, háttérszín, aláhúzás színe, pontok és válaszok.
-## 4. lépés: Megjegyzés hozzáadása a dokumentumhoz
+Ez a lépés magában foglalja egy `UnderlineAnnotation` objektum különféle tulajdonságokkal, például betűszínnel, üzenettel, átlátszósággal, oldalszámmal, háttérszínnel, aláhúzás színével, pontokkal és válaszokkal.
+## 4. lépés: Jegyzet hozzáadása a dokumentumhoz
 ```csharp
 annotator.Add(underline);
 ```
-Itt az aláhúzott megjegyzést adjuk a dokumentumhoz.
-## 5. lépés: Mentse el a megjegyzésekkel ellátott dokumentumot
+Itt adjuk hozzá az aláhúzásos megjegyzést a dokumentumhoz.
+## 5. lépés: Jegyzetekkel ellátott dokumentum mentése
 ```csharp
 annotator.Save(outputPath);
 ```
-Végül elmentjük a jegyzett dokumentumot a megadott kimeneti útvonalra.
+Végül a jegyzetekkel ellátott dokumentumot a megadott kimeneti útvonalra mentjük.
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan adhatunk aláhúzott szöveges megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Ez a nagy teljesítményű könyvtár különféle megjegyzési lehetőségeket kínál a dokumentumokkal való együttműködés és kommunikáció javításához.
+Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá szöveges aláhúzásos megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ez a hatékony könyvtár különféle megjegyzésbeállításokat kínál a dokumentumokkal való együttműködés és kommunikáció javítása érdekében.
 ## GYIK
 ### Testreszabhatom az aláhúzott megjegyzés megjelenését?
-Igen, igényei szerint testreszabhatja az olyan tulajdonságokat, mint a szín, az átlátszatlanság és a pozíció.
-### A GroupDocs.Annotation kompatibilis a különböző dokumentumformátumokkal?
-Igen, a GroupDocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a Word-t és a PDF-t.
+Igen, testreszabhatja az olyan tulajdonságokat, mint a szín, az átlátszóság és a pozíció, az igényei szerint.
+### Kompatibilis a GroupDocs.Annotation különböző dokumentumformátumokkal?
+Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a Wordöt és a PDF-et is.
 ### Hozzáadhatok több megjegyzést egyetlen dokumentumhoz?
-Természetesen a GroupDocs.Annotation lehetővé teszi több különböző típusú megjegyzés hozzáadását egy dokumentumhoz.
-### Van ingyenes próbaverzió a GroupDocs.Annotation számára?
- Igen, elérheti az ingyenes próbaverziót innen[itt](https://releases.groupdocs.com/).
-### Hol kaphatok támogatást a GroupDocs.Annotation-hoz?
- Támogatást a GroupDocs.Annotation közösségi fórumtól kaphat[itt](https://forum.groupdocs.com/c/annotation/10).
+Természetesen a GroupDocs.Annotation lehetővé teszi több különböző típusú annotáció hozzáadását egy dokumentumhoz.
+### Van ingyenes próbaverzió a GroupDocs.Annotation-höz?
+Igen, hozzáférhetsz az ingyenes próbaverzióhoz innen: [itt](https://releases.groupdocs.com/).
+### Hol kaphatok támogatást a GroupDocs.Annotation-höz?
+Támogatást kaphatsz a GroupDocs.Annotation közösségi fórumon. [itt](https://forum.groupdocs.com/c/annotation/10).

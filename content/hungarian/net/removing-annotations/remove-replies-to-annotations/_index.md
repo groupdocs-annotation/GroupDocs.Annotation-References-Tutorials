@@ -1,25 +1,25 @@
 ---
-title: Távolítsa el a válaszokat a megjegyzésekre a .NET-ben
-linktitle: Távolítsa el a válaszokat a megjegyzésekre a .NET-ben
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan távolíthatja el a megjegyzésekre adott válaszokat a .NET-ben a GroupDocs.Annotation segítségével. Útmutató lépésről lépésre kódpéldákkal.
-weight: 15
-url: /hu/net/removing-annotations/remove-replies-to-annotations/
+"description": "Tanulja meg, hogyan távolíthat el válaszokat a .NET-ben található annotációkra a GroupDocs.Annotation segítségével. Lépésről lépésre útmutató kódpéldákkal."
+"linktitle": "Válaszok eltávolítása a .NET-ben található jegyzetekre"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Válaszok eltávolítása a .NET-ben található jegyzetekre"
+"url": "/hu/net/removing-annotations/remove-replies-to-annotations/"
+"weight": 15
 ---
 
-# Távolítsa el a válaszokat a megjegyzésekre a .NET-ben
+# Válaszok eltávolítása a .NET-ben található jegyzetekre
 
 ## Bevezetés
-Ebben az oktatóanyagban megvizsgáljuk, hogyan távolíthatjuk el a megjegyzésekre adott válaszokat a .NET-ben a GroupDocs.Annotation segítségével. A GroupDocs.Annotation egy hatékony .NET-könyvtár, amely lehetővé teszi a fejlesztők számára, hogy könnyedén megjegyzéseket fűzzenek a dokumentumokhoz. Legyen szó megjegyzések hozzáfűzéséről, szöveg kiemeléséről vagy bélyegzésről, a GroupDocs.Annotation átfogó eszköztárat biztosít a dokumentumok kommentálásához.
+Ebben az oktatóanyagban azt vizsgáljuk meg, hogyan távolíthatók el a .NET-ben található megjegyzésekre adott válaszok a GroupDocs.Annotation segítségével. A GroupDocs.Annotation egy hatékony .NET könyvtár, amely lehetővé teszi a fejlesztők számára, hogy könnyedén lássák el a dokumentumokat megjegyzésekkel. Akár megjegyzéseket ad hozzá, akár szövegkiemelést, akár bélyegzőket ad hozzá, a GroupDocs.Annotation átfogó eszközkészletet biztosít a dokumentumok megjegyzésezéséhez.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következő előfeltételekkel:
+Mielőtt elkezdenénk, győződjünk meg arról, hogy a következő előfeltételekkel rendelkezünk:
 - C# és .NET programozási alapismeretek.
-- A Visual Studio telepítve van a rendszerére.
--  GroupDocs.Annotation for .NET telepítve. Letöltheti innen[itt](https://releases.groupdocs.com/annotation/net/).
-- A megjegyzések működésének megértése a GroupDocs-ban.Annotation.
+- Visual Studio telepítve a rendszeredre.
+- GroupDocs.Annotation for .NET telepítve. Letöltheti innen: [itt](https://releases.groupdocs.com/annotation/net/).
+- A GroupDocs.Annotation annotációinak működésének megértése.
 
 ## Névterek importálása
-Először is importálnia kell a szükséges névtereket a GroupDocs.Annotation osztályok és metódusok eléréséhez a C# kódban.
+Először importálnod kell a szükséges névtereket a GroupDocs.Annotation osztályok és metódusok eléréséhez a C# kódodban.
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -28,51 +28,51 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 ```
-## 1. lépés: Töltse be a dokumentumot
- Töltse be a megjegyzéseket tartalmazó dokumentumot a válaszokkal a következő használatával`Annotator` osztály.
+## 1. lépés: A dokumentum betöltése
+Töltse be a válaszokat tartalmazó jegyzeteket tartalmazó dokumentumot a `Annotator` osztály.
 ```csharp
 using (Annotator annotator = new Annotator("annotated_with_replies.pdf"))
 {
     // A kódod ide kerül
 }
 ```
-## 2. lépés: Annotations Collection beszerzése
-A megjegyzésgyűjtemény lekérése a dokumentumból.
+## 2. lépés: Jegyzetgyűjtemény beszerzése
+A dokumentumból lekérheti a jegyzetgyűjteményt.
 ```csharp
 List<AnnotationBase> annotations = annotator.Get();
 ```
-## 3. lépés: Távolítsa el a válaszokat
-Távolítsa el a megjegyzésekre adott válaszokat. Például távolítsuk el az első választ index szerint.
+## 3. lépés: Válaszok eltávolítása
+Távolítsa el a válaszokat a megjegyzésekre. Például távolítsuk el az első választ index szerint.
 ```csharp
 annotations[0].Replies.RemoveAt(0);
 ```
-## 4. lépés: Mentse el a változtatásokat
-Mentse el a megjegyzéseken végzett módosításokat.
+## 4. lépés: Változtatások mentése
+Mentse el a megjegyzéseken végrehajtott módosításokat.
 ```csharp
 annotator.Update(annotations);
 ```
-## 5. lépés: Mentse el a dokumentumot
-Mentse el a dokumentumot a módosított megjegyzésekkel a kívánt helyre.
+## 5. lépés: Dokumentum mentése
+Mentse el a módosított megjegyzésekkel ellátott dokumentumot a kívánt helyre.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 annotator.Save(outputPath);
 ```
 ## 6. lépés: Megerősítés megjelenítése
-Jelenítsen meg egy üzenetet, amely megerősíti a dokumentum sikeres mentését.
+Jelenítsen meg egy üzenetet, amely megerősíti, hogy a dokumentum mentése sikeresen megtörtént.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan távolíthatjuk el a megjegyzésekre adott válaszokat a .NET-ben a GroupDocs.Annotation segítségével. Néhány egyszerű lépéssel hatékonyan kezelheti a dokumentumokban található megjegyzéseket.
+Ebben az oktatóanyagban megtanultuk, hogyan távolíthatunk el válaszokat a .NET-ben található megjegyzésekre a GroupDocs.Annotation segítségével. Néhány egyszerű lépéssel hatékonyan kezelhetjük a dokumentumokban található megjegyzéseket.
 ## GYIK
-### Eltávolíthatok több választ egyszerre?
-Igen, több választ is eltávolíthat, ha végignézi a válaszgyűjteményt, és egyenként eltávolítja őket.
-### A GroupDocs.Annotation támogatja a PDF-en kívül más dokumentumformátumokat is?
-Igen, a GroupDocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a Word, Excel, PowerPoint és egyebeket.
-### Elérhető a GroupDocs.Annotation próbaverziója?
- Igen, letölthet egy ingyenes próbaverziót a webhelyről[itt](https://releases.groupdocs.com/).
-### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Annotation számára?
- Ideiglenes jogosítványt szerezhet be[itt](https://purchase.groupdocs.com/temporary-license/).
-### Hol találok segítséget és támogatást a GroupDocs.Annotation-hoz?
- Látogassa meg a GroupDocs.Annotation fórumot[itt](https://forum.groupdocs.com/c/annotation/10) segítségért és támogatásért.
+### Eltávolíthatok egyszerre több választ is?
+Igen, több választ is eltávolíthatsz úgy, hogy végigmész a válaszok gyűjteményén, és egyenként eltávolítod őket.
+### A GroupDocs.Annotation támogat más dokumentumformátumokat is a PDF-en kívül?
+Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a Wordöt, az Excelt, a PowerPointot és egyebeket.
+### Van elérhető próbaverzió a GroupDocs.Annotation-höz?
+Igen, letölthet egy ingyenes próbaverziót innen [itt](https://releases.groupdocs.com/).
+### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Annotation-hoz?
+Ideiglenes jogosítványt igényelhetsz [itt](https://purchase.groupdocs.com/temporary-license/).
+### Hol találok segítséget és támogatást a GroupDocs.Annotationhoz?
+Látogass el a GroupDocs.Annotation fórumra [itt](https://forum.groupdocs.com/c/annotation/10) segítségért és támogatásért.

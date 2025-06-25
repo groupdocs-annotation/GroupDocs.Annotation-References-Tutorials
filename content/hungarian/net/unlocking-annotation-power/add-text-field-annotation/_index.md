@@ -1,28 +1,28 @@
 ---
-title: Szövegmező megjegyzés hozzáadása a dokumentumhoz
-linktitle: Szövegmező megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan integrálhatja zökkenőmentesen szövegmezős megjegyzéseket .NET-alkalmazásaiba a Groupdocs.Annotation for .NET segítségével.
-weight: 21
-url: /hu/net/unlocking-annotation-power/add-text-field-annotation/
+"description": "Ismerje meg, hogyan integrálhatja zökkenőmentesen a szövegmező-annotációkat .NET-alkalmazásaiba a Groupdocs.Annotation for .NET segítségével."
+"linktitle": "Szövegmező-jegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Szövegmező-jegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-text-field-annotation/"
+"weight": 21
 ---
 
-# Szövegmező megjegyzés hozzáadása a dokumentumhoz
+# Szövegmező-jegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Groupdocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy annotációs funkciókat könnyedén adják hozzá .NET-alkalmazásaikhoz. Függetlenül attól, hogy dokumentumkezelő rendszeren, együttműködési platformon vagy bármely olyan alkalmazáson dolgozik, ahol elengedhetetlen a dokumentumok megjegyzése, a Groupdocs.Annotation leegyszerűsíti a folyamatot átfogó szolgáltatáskészletével és intuitív API-jával.
-Ebben az oktatóanyagban a Groupdocs.Annotation for .NET egyik alapvető funkciójával foglalkozunk: szövegmező-annotáció hozzáadása a dokumentumhoz. Ennek a lépésenkénti útmutatónak a követésével megtanulhatja, hogyan integrálhatja zökkenőmentesen a szövegmezős megjegyzéseket .NET-alkalmazásaiba, javítva a felhasználói élményt és az együttműködési lehetőségeket.
+Groupdocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy könnyedén annotációs funkciókat adjanak hozzá .NET alkalmazásaikhoz. Akár dokumentumkezelő rendszeren, akár együttműködési platformon, akár bármilyen olyan alkalmazáson dolgozik, ahol a dokumentumok annotációja elengedhetetlen, a Groupdocs.Annotation átfogó funkciókészletével és intuitív API-jával leegyszerűsíti a folyamatot.
+Ebben az oktatóanyagban a Groupdocs.Annotation for .NET egyik alapvető funkcióját fogjuk megvizsgálni: szövegmező-annotáció hozzáadását egy dokumentumhoz. A lépésről lépésre haladó útmutató követésével megtanulhatja, hogyan integrálhatja zökkenőmentesen a szövegmező-annotációkat .NET-alkalmazásaiba, javítva ezzel a felhasználói élményt és az együttműködési lehetőségeket.
 ## Előfeltételek
-Mielőtt belemerülne a megvalósításba, győződjön meg arról, hogy a következő előfeltételekkel rendelkezik:
+Mielőtt belevágna a megvalósításba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
 ### 1. A Groupdocs.Annotation telepítése .NET-hez
- Mindenekelőtt le kell töltenie és telepítenie kell a Groupdocs.Annotation for .NET programot. A letöltési linket megtalálod[itt](https://releases.groupdocs.com/annotation/net/) . Kövesse a dokumentációban található telepítési utasításokat[itt](https://tutorials.groupdocs.com/annotation/net/) a könyvtár helyes beállításához.
+Először is, le kell töltened és telepítened kell a Groupdocs.Annotation for .NET programot. A letöltési linket itt találod: [itt](https://releases.groupdocs.com/annotation/net/)Kövesse a dokumentációban található telepítési utasításokat. [itt](https://tutorials.groupdocs.com/annotation/net/) a könyvtár helyes beállításához.
 ### 2. Fejlesztői környezet beállítása
-Győződjön meg arról, hogy be van állítva egy fejlesztői környezet a .NET fejlesztéshez. Ez magában foglalja a kompatibilis IDE, például a Visual Studio és a .NET-keretrendszer telepítését a rendszeren.
+Győződjön meg arról, hogy rendelkezik egy .NET fejlesztéshez beállított fejlesztői környezettel. Ez magában foglalja egy kompatibilis IDE, például a Visual Studio és a .NET Framework telepítését a rendszerére.
 ### 3. A C# programozás alapjai
-Ismerkedjen meg a C# programozási nyelv alapjaival, mivel ebben az oktatóanyagban C# kódot kell írni a szövegmezők megjegyzéseinek integrálásához.
+Ismerkedj meg a C# programozási nyelv alapjaival, mivel ez az oktatóanyag C# kód írását foglalja magában a szövegmező-annotációk integrálásához.
 
 ## Névterek importálása
-A C# projektben kezdje a szükséges névterek importálásával a Groupdocs.Annotation funkciók használatához.
+A C# projektedben kezdd a Groupdocs.Annotation funkciók használatához szükséges névterek importálásával.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -32,17 +32,17 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Most folytassuk egy szövegmezős megjegyzés hozzáadásával egy dokumentumhoz a Groupdocs.Annotation for .NET segítségével.
-## 1. lépés: Határozza meg a kimeneti útvonalat
+Most pedig folytassuk egy szövegmező-jegyzet hozzáadásával egy dokumentumhoz a Groupdocs.Annotation for .NET használatával.
+## 1. lépés: Kimeneti útvonal meghatározása
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Inicializálja az Annotátort
+## 2. lépés: Annotátor inicializálása
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## 3. lépés: Hozzon létre TextFieldAnnotation objektumot
+## 3. lépés: TextFieldAnnotation objektum létrehozása
 ```csharp
 TextFieldAnnotation textField = new TextFieldAnnotation
 {
@@ -72,29 +72,29 @@ TextFieldAnnotation textField = new TextFieldAnnotation
     }
 };
 ```
-## 4. lépés: Megjegyzés hozzáadása a dokumentumhoz
+## 4. lépés: Jegyzet hozzáadása a dokumentumhoz
 ```csharp
 annotator.Add(textField);
 ```
-## 5. lépés: Mentse el a dokumentumot megjegyzéssel
+## 5. lépés: Dokumentum mentése jegyzetekkel
 ```csharp
 annotator.Save(outputPath);
 ```
-## 6. lépés: Jelenítse meg a sikeres üzenetet
+## 6. lépés: Sikeres üzenet megjelenítése
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Összefoglalva, a szövegmezős megjegyzések integrálása a .NET-alkalmazásokba a Groupdocs.Annotation for .NET használatával egyszerű folyamat. Az oktatóanyagban ismertetett lépések követésével zökkenőmentesen javíthatja a dokumentumokkal való együttműködést és a felhasználói interakciót az alkalmazásokon belül.
+Összefoglalva, a szövegmező-annotációk integrálása a .NET-alkalmazásokba a Groupdocs.Annotation for .NET segítségével egy egyszerű folyamat. Az ebben az oktatóanyagban ismertetett lépéseket követve zökkenőmentesen javíthatja a dokumentumokkal való együttműködést és a felhasználói interakciót az alkalmazásain belül.
 ## GYIK
-### Testreszabhatom a szövegmezős megjegyzések megjelenését?
-Igen, igényei szerint testreszabhatja a különféle attribútumokat, például a háttérszínt, a betűméretet, az átlátszatlanságot stb.
-### A Groupdocs.Annotation for .NET kompatibilis a különböző dokumentumformátumokkal?
-Igen, a Groupdocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
+### Testreszabhatom a szövegmező-megjegyzések megjelenését?
+Igen, testreszabhatja a különböző attribútumokat, például a háttérszínt, a betűméretet, az átlátszóságot stb., az igényei szerint.
+### Kompatibilis a Groupdocs.Annotation for .NET különböző dokumentumformátumokkal?
+Igen, a Groupdocs.Annotation számos dokumentumformátumot támogat, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
 ### Hozzáadhatok több megjegyzést ugyanahhoz a dokumentumhoz?
-Természetesen több különböző típusú megjegyzést is hozzáadhat ugyanahhoz a dokumentumhoz, lehetővé téve a dokumentumok gazdag interakcióját.
-### Létezik próbaverzió a Groupdocs.Annotation for .NET számára?
- Igen, felfedezheti a Groupdocs.Annotation szolgáltatásait, ha belép az ingyenes próbaverzióba[itt](https://releases.groupdocs.com/).
-### Hol találok támogatást a Groupdocs.Annotation for .NET számára?
- A Groupdocs.Annotation fórumon segítséget találhat és kapcsolatba léphet a közösséggel[itt](https://forum.groupdocs.com/c/annotation/10).
+Természetesen több különböző típusú jegyzetet is hozzáadhat ugyanahhoz a dokumentumhoz, ami gazdag dokumentum-interakciót tesz lehetővé.
+### Van elérhető próbaverzió a Groupdocs.Annotation for .NET-hez?
+Igen, a Groupdocs.Annotation funkcióit ingyenes próbaverzióval fedezheti fel. [itt](https://releases.groupdocs.com/).
+### Hol találok támogatást a Groupdocs.Annotation for .NET-hez?
+Segítséget találhatsz és kapcsolatba léphetsz a közösséggel a Groupdocs.Annotation fórumon. [itt](https://forum.groupdocs.com/c/annotation/10).

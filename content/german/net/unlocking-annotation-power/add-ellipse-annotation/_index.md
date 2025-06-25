@@ -1,20 +1,20 @@
 ---
-title: Fügen Sie dem Dokument eine Ellipsenanmerkung hinzu
-linktitle: Fügen Sie dem Dokument eine Ellipsenanmerkung hinzu
-second_title: GroupDocs.Annotation .NET-API
-description: Erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation Ellipsenanmerkungen zu Dokumenten in .NET hinzufügen. Verbessern Sie mühelos die Zusammenarbeit und Kommunikation.
-weight: 13
-url: /de/net/unlocking-annotation-power/add-ellipse-annotation/
+"description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Ellipsenanmerkungen zu Dokumenten in .NET hinzufügen. Verbessern Sie mühelos die Zusammenarbeit und Kommunikation."
+"linktitle": "Ellipsenanmerkung zum Dokument hinzufügen"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Ellipsenanmerkung zum Dokument hinzufügen"
+"url": "/de/net/unlocking-annotation-power/add-ellipse-annotation/"
+"weight": 13
 ---
 
-# Fügen Sie dem Dokument eine Ellipsenanmerkung hinzu
+# Ellipsenanmerkung zum Dokument hinzufügen
 
 ## Einführung
-In diesem Tutorial erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET eine Ellipsenanmerkung zu einem Dokument hinzufügen. Diese Schritt-für-Schritt-Anleitung führt Sie durch den Prozess und stellt sicher, dass Sie jeden Schritt klar verstehen.
+In diesem Tutorial erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET einem Dokument eine Ellipsenanmerkung hinzufügen. Diese Schritt-für-Schritt-Anleitung führt Sie durch den Prozess und stellt sicher, dass Sie jeden Schritt klar verstehen.
 ## Voraussetzungen
 Bevor Sie beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
-1.  GroupDocs.Annotation für .NET: Stellen Sie sicher, dass Sie GroupDocs.Annotation für .NET heruntergeladen und installiert haben. Sie können es herunterladen unter[Hier](https://releases.groupdocs.com/annotation/net/).
-2. IDE (Integrated Development Environment): Sie benötigen eine auf Ihrem System installierte IDE, z. B. Visual Studio, um den Code zu schreiben und auszuführen.
+1. GroupDocs.Annotation für .NET: Stellen Sie sicher, dass Sie GroupDocs.Annotation für .NET heruntergeladen und installiert haben. Sie können es herunterladen von [Hier](https://releases.groupdocs.com/annotation/net/).
+2. IDE (Integrated Development Environment): Zum Schreiben und Ausführen des Codes muss auf Ihrem System eine IDE installiert sein, beispielsweise Visual Studio.
 
 ## Namespaces importieren
 Importieren Sie zunächst die erforderlichen Namespaces in Ihr Projekt:
@@ -37,8 +37,8 @@ Initialisieren Sie den Annotator, indem Sie den Pfad des Eingabedokuments angebe
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Schritt 3: Erstellen Sie eine Ellipsenanmerkung
- Erstellen Sie eine Instanz von`EllipseAnnotation` Klasse und legen Sie ihre Eigenschaften fest:
+## Schritt 3: Ellipsenanmerkung erstellen
+Erstellen Sie eine Instanz des `EllipseAnnotation` Klasse und legen Sie ihre Eigenschaften fest:
 ```csharp
 EllipseAnnotation ellipse = new EllipseAnnotation
 {
@@ -78,15 +78,15 @@ annotator.Save(outputPath);
 ```
 
 ## Abschluss
-Glückwunsch! Sie haben mit GroupDocs.Annotation für .NET erfolgreich eine Ellipsenanmerkung zu einem Dokument hinzugefügt. Sie können diese Funktionalität jetzt in Ihre .NET-Anwendungen integrieren, um die Zusammenarbeit und Kommunikation an Dokumenten zu verbessern.
-## FAQs
+Herzlichen Glückwunsch! Sie haben mit GroupDocs.Annotation für .NET erfolgreich eine Ellipsenanmerkung zu einem Dokument hinzugefügt. Sie können diese Funktionalität nun in Ihre .NET-Anwendungen integrieren, um die Zusammenarbeit und Kommunikation an Dokumenten zu verbessern.
+## Häufig gestellte Fragen
 ### Kann ich das Erscheinungsbild der Ellipsenanmerkung anpassen?
 Ja, Sie können verschiedene Eigenschaften wie Hintergrundfarbe, Rahmenfarbe, Deckkraft usw. entsprechend Ihren Anforderungen anpassen.
 ### Ist GroupDocs.Annotation für .NET mit allen Dokumentformaten kompatibel?
 GroupDocs.Annotation für .NET unterstützt eine Vielzahl von Dokumentformaten, darunter PDF, DOCX, PPTX, XLSX und mehr.
 ### Kann ich einem einzelnen Dokument mehrere Anmerkungen hinzufügen?
 Ja, Sie können einem einzelnen Dokument mehrere Anmerkungen hinzufügen, darunter Ellipsen, Rechtecke, Text usw.
-### Gibt es zu Testzwecken eine Testversion?
- Ja, Sie können eine kostenlose Testversion herunterladen von[Hier](https://releases.groupdocs.com/) um seine Eigenschaften zu bewerten.
+### Gibt es eine Testversion zum Testen?
+Ja, Sie können eine kostenlose Testversion herunterladen von [Hier](https://releases.groupdocs.com/) um seine Funktionen zu bewerten.
 ### Wo erhalte ich technischen Support für GroupDocs.Annotation für .NET?
- Technischen Support erhalten Sie im GroupDocs.Annotation-Community-Forum[Hier](https://forum.groupdocs.com/c/annotation/10).
+Technischen Support erhalten Sie im GroupDocs.Annotation-Community-Forum [Hier](https://forum.groupdocs.com/c/annotation/10).

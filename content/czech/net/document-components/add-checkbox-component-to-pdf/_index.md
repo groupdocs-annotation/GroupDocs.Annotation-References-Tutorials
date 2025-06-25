@@ -1,22 +1,22 @@
 ---
-title: Přidat komponentu zaškrtávacího políčka do dokumentu PDF
-linktitle: Přidat komponentu zaškrtávacího políčka do dokumentu PDF
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se, jak přidat komponentu Checkbox do dokumentů PDF pomocí Groupdocs.Annotation pro .NET. Vylepšete své PDF interaktivními prvky.
-weight: 11
-url: /cs/net/document-components/add-checkbox-component-to-pdf/
+"description": "Naučte se, jak přidat komponentu zaškrtávací políčko do dokumentů PDF pomocí Groupdocs.Annotation pro .NET. Vylepšete své PDF soubory interaktivními prvky."
+"linktitle": "Přidat komponentu zaškrtávacího políčka do dokumentu PDF"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidat komponentu zaškrtávacího políčka do dokumentu PDF"
+"url": "/cs/net/document-components/add-checkbox-component-to-pdf/"
+"weight": 11
 ---
 
 # Přidat komponentu zaškrtávacího políčka do dokumentu PDF
 
-## Úvod
+## Zavedení
 V tomto tutoriálu vás provedeme procesem přidání komponenty Checkbox do dokumentu PDF pomocí Groupdocs.Annotation pro .NET.
 ## Předpoklady
 Než začneme, ujistěte se, že máte následující:
-1.  Groupdocs.Annotation pro .NET SDK: Můžete si ji stáhnout z[tady](https://releases.groupdocs.com/annotation/net/).
+1. Groupdocs.Annotation pro .NET SDK: Můžete si ji stáhnout z [zde](https://releases.groupdocs.com/annotation/net/).
 2. Vývojové prostředí: Ujistěte se, že máte nastavené vývojové prostředí .NET.
 
-## Import jmenných prostorů
+## Importovat jmenné prostory
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,18 +26,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Models.FormatSpecificComponents.Pdf;
 using GroupDocs.Annotation.Options;
 ```
-Nyní si příklad rozdělíme do několika kroků:
-## Krok 1: Definujte výstupní cestu
+Nyní si příklad rozdělme do několika kroků:
+## Krok 1: Definování výstupní cesty
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Zde definujeme výstupní cestu, kam se upravený dokument PDF uloží.
-## Krok 2: Inicializujte anotátor
+Zde definujeme výstupní cestu, kam bude upravený PDF dokument uložen.
+## Krok 2: Inicializace anotátoru
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Inicializujte`Annotator` objekt předáním vstupní cesty dokumentu PDF.
-## Krok 3: Vytvořte komponentu Checkbox
+Inicializujte `Annotator` objekt předáním vstupní cesty k PDF dokumentu.
+## Krok 3: Vytvoření komponenty zaškrtávacího políčka
 ```csharp
 CheckBoxComponent checkBox = new CheckBoxComponent
 {
@@ -60,33 +60,33 @@ CheckBoxComponent checkBox = new CheckBoxComponent
     }
 };
 ```
- Vytvořit`CheckBoxComponent` objekt a přizpůsobit jeho vlastnosti jako`Checked`, `Box` rozměry,`PenColor`, `Style`přidejte několik odpovědí.
-## Krok 4: Přidejte komponentu zaškrtávacího políčka
+Vytvořte `CheckBoxComponent` objekt a upravovat jeho vlastnosti, jako například `Checked`, `Box` rozměry, `PenColor`, `Style`a přidejte nějaké odpovědi.
+## Krok 4: Přidání komponenty zaškrtávacího políčka
 ```csharp
 annotator.Add(checkBox);
 ```
 Přidejte vytvořenou komponentu zaškrtávacího políčka do dokumentu PDF.
-## Krok 5: Uložte dokument
+## Krok 5: Uložení dokumentu
 ```csharp
 annotator.Save("result.pdf");
 ```
-Uložte upravený dokument PDF pomocí komponenty zaškrtávacího políčka.
-## Krok 6: Zobrazte výstupní cestu
+Uložte upravený dokument PDF s komponentou zaškrtávacího políčka.
+## Krok 6: Zobrazení výstupní cesty
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Zobrazte cestu, kam je uložen upravený dokument PDF.
+Zobrazit cestu, kam je uložen upravený dokument PDF.
 
 ## Závěr
-V tomto tutoriálu jsme se naučili, jak přidat komponentu Checkbox do dokumentu PDF pomocí Groupdocs.Annotation pro .NET. S těmito znalostmi můžete vylepšit své dokumenty PDF interaktivními prvky.
-## FAQ
-### Mohu upravit vzhled zaškrtávacího políčka?
-Ano, můžete přizpůsobit různé vlastnosti, jako je barva, styl a velikost, podle vašich požadavků.
-### Je Groupdocs.Annotation for .NET vhodný pro komerční použití?
-Ano, Groupdocs.Annotation for .NET nabízí komerční licence pro firmy.
-### Mohu vyzkoušet Groupdocs.Annotation pro .NET před nákupem?
- Ano, můžete využít bezplatnou zkušební verzi od[tady](https://releases.groupdocs.com/).
+V tomto tutoriálu jsme se naučili, jak přidat komponentu zaškrtávací políčko do dokumentu PDF pomocí Groupdocs.Annotation pro .NET. S těmito znalostmi můžete vylepšit své dokumenty PDF interaktivními prvky.
+## Často kladené otázky
+### Mohu si přizpůsobit vzhled zaškrtávacího políčka?
+Ano, můžete si přizpůsobit různé vlastnosti, jako je barva, styl a velikost, podle svých požadavků.
+### Je Groupdocs.Annotation pro .NET vhodný pro komerční použití?
+Ano, Groupdocs.Annotation pro .NET nabízí komerční licence pro firmy.
+### Mohu si před zakoupením vyzkoušet Groupdocs.Annotation pro .NET?
+Ano, můžete využít bezplatnou zkušební verzi od [zde](https://releases.groupdocs.com/).
 ### Kde najdu podporu pro Groupdocs.Annotation pro .NET?
- Podporu a zdroje najdete na[Groupdocs fórum](https://forum.groupdocs.com/c/annotation/10).
-### Potřebuji dočasnou licenci pro testovací účely?
- Můžete získat dočasnou licenci pro testování od[tady](https://purchase.groupdocs.com/temporary-license/).
+Podporu a zdroje naleznete na [Fórum Groupdocs](https://forum.groupdocs.com/c/annotation/10).
+### Potřebuji pro účely testování dočasnou licenci?
+Dočasnou licenci k testování můžete získat od [zde](https://purchase.groupdocs.com/temporary-license/).

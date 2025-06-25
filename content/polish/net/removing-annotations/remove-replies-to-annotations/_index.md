@@ -1,22 +1,22 @@
 ---
-title: Usuń odpowiedzi na adnotacje w .NET
-linktitle: Usuń odpowiedzi na adnotacje w .NET
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak usunąć odpowiedzi na adnotacje w .NET przy użyciu GroupDocs.Annotation. Przewodnik krok po kroku z przykładami kodu.
-weight: 15
-url: /pl/net/removing-annotations/remove-replies-to-annotations/
+"description": "Dowiedz się, jak usuwać odpowiedzi na adnotacje w .NET przy użyciu GroupDocs.Annotation. Przewodnik krok po kroku z przykładami kodu."
+"linktitle": "Usuwanie odpowiedzi na adnotacje w .NET"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Usuwanie odpowiedzi na adnotacje w .NET"
+"url": "/pl/net/removing-annotations/remove-replies-to-annotations/"
+"weight": 15
 ---
 
-# Usuń odpowiedzi na adnotacje w .NET
+# Usuwanie odpowiedzi na adnotacje w .NET
 
 ## Wstęp
-tym samouczku omówimy, jak usunąć odpowiedzi na adnotacje w platformie .NET za pomocą GroupDocs.Annotation. GroupDocs.Annotation to potężna biblioteka .NET, która umożliwia programistom łatwe dodawanie adnotacji do dokumentów. Niezależnie od tego, czy chodzi o dodawanie komentarzy, wyróżnianie tekstu czy dodawanie stempli, GroupDocs.Annotation zapewnia kompleksowy zestaw narzędzi do dodawania adnotacji w dokumentach.
-## Warunki wstępne
-Zanim zaczniemy, upewnij się, że masz następujące wymagania wstępne:
-- Podstawowa znajomość programowania w C# i .NET.
+W tym samouczku pokażemy, jak usuwać odpowiedzi na adnotacje w .NET za pomocą GroupDocs.Annotation. GroupDocs.Annotation to potężna biblioteka .NET, która umożliwia deweloperom łatwe adnotowanie dokumentów. Niezależnie od tego, czy chodzi o dodawanie komentarzy, wyróżnianie tekstu czy dodawanie znaczków, GroupDocs.Annotation zapewnia kompleksowy zestaw narzędzi do adnotacji dokumentów.
+## Wymagania wstępne
+Zanim zaczniemy, upewnij się, że spełniasz następujące wymagania wstępne:
+- Podstawowa znajomość programowania w języku C# i .NET.
 - Program Visual Studio zainstalowany w systemie.
--  Zainstalowano GroupDocs.Adnotation dla .NET. Można go pobrać z[Tutaj](https://releases.groupdocs.com/annotation/net/).
-- Zrozumienie działania adnotacji w GroupDocs.Annotation.
+- GroupDocs.Annotation dla .NET zainstalowany. Możesz go pobrać z [Tutaj](https://releases.groupdocs.com/annotation/net/).
+- Zrozumienie, jak działają adnotacje w GroupDocs.Annotation.
 
 ## Importuj przestrzenie nazw
 Najpierw musisz zaimportować niezbędne przestrzenie nazw, aby uzyskać dostęp do klas i metod GroupDocs.Annotation w kodzie C#.
@@ -29,11 +29,11 @@ using System.Collections.Generic;
 using System.IO;
 ```
 ## Krok 1: Załaduj dokument
- Załaduj dokument zawierający adnotacje z odpowiedziami, korzystając z opcji`Annotator` klasa.
+Załaduj dokument zawierający adnotacje z odpowiedziami za pomocą `Annotator` klasa.
 ```csharp
 using (Annotator annotator = new Annotator("annotated_with_replies.pdf"))
 {
-    // Twój kod trafia tutaj
+    // Twój kod wpisz tutaj
 }
 ```
 ## Krok 2: Uzyskaj kolekcję adnotacji
@@ -52,7 +52,7 @@ Zapisz zmiany wprowadzone w adnotacjach.
 annotator.Update(annotations);
 ```
 ## Krok 5: Zapisz dokument
-Zapisz dokument ze zmodyfikowanymi adnotacjami w wybranej lokalizacji.
+Zapisz dokument ze zmodyfikowanymi adnotacjami w wybranym miejscu.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 annotator.Save(outputPath);
@@ -64,15 +64,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Wniosek
-W tym samouczku dowiedzieliśmy się, jak usuwać odpowiedzi na adnotacje w .NET za pomocą GroupDocs.Annotation. Wystarczy kilka prostych kroków, aby efektywnie manipulować adnotacjami w dokumentach.
-## Często zadawane pytania
-### Czy mogę usunąć wiele odpowiedzi na raz?
-Tak, możesz usunąć wiele odpowiedzi, przeglądając kolekcję odpowiedzi i usuwając je jedna po drugiej.
-### Czy GroupDocs.Annotation obsługuje inne formaty dokumentów oprócz PDF?
+tym samouczku nauczyliśmy się, jak usuwać odpowiedzi na adnotacje w .NET za pomocą GroupDocs.Annotation. Za pomocą kilku prostych kroków możesz sprawnie manipulować adnotacjami w swoich dokumentach.
+## Najczęściej zadawane pytania
+### Czy mogę usunąć wiele odpowiedzi jednocześnie?
+Tak, możesz usunąć wiele odpowiedzi, przeglądając kolekcję odpowiedzi i usuwając je jedną po drugiej.
+### Czy GroupDocs.Annotation obsługuje inne formaty dokumentów poza PDF?
 Tak, GroupDocs.Annotation obsługuje szeroką gamę formatów dokumentów, w tym Word, Excel, PowerPoint i inne.
-### Czy dostępna jest wersja próbna programu GroupDocs.Annotation?
- Tak, możesz pobrać bezpłatną wersję próbną ze strony[Tutaj](https://releases.groupdocs.com/).
+### Czy jest dostępna wersja próbna GroupDocs.Annotation?
+Tak, możesz pobrać bezpłatną wersję próbną ze strony [Tutaj](https://releases.groupdocs.com/).
 ### Jak mogę uzyskać tymczasową licencję na GroupDocs.Annotation?
- Licencję tymczasową można uzyskać od[Tutaj](https://purchase.groupdocs.com/temporary-license/).
-### Gdzie mogę znaleźć pomoc i wsparcie dotyczące GroupDocs.Annotation?
- Możesz odwiedzić forum GroupDocs.Annotation[Tutaj](https://forum.groupdocs.com/c/annotation/10) za pomoc i wsparcie.
+Możesz uzyskać tymczasową licencję od [Tutaj](https://purchase.groupdocs.com/temporary-license/).
+### Gdzie mogę znaleźć pomoc i wsparcie dla GroupDocs.Annotation?
+Możesz odwiedzić forum GroupDocs.Annotation [Tutaj](https://forum.groupdocs.com/c/annotation/10) w celu uzyskania pomocy i wsparcia.

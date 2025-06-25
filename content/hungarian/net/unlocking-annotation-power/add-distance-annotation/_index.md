@@ -1,27 +1,27 @@
 ---
-title: Távolság megjegyzés hozzáadása a dokumentumhoz
-linktitle: Távolság megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat hozzá távolságjegyzeteket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Fokozza az együttműködést és a kommunikációt erőfeszítés nélkül.
-weight: 12
-url: /hu/net/unlocking-annotation-power/add-distance-annotation/
+"description": "Tanulja meg, hogyan adhat hozzá távolságmegjegyzéseket dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Könnyedén javíthatja az együttműködést és a kommunikációt."
+"linktitle": "Távolság megjegyzés hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Távolság megjegyzés hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
 # Távolság megjegyzés hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Ebből az oktatóanyagból megtudhatja, hogyan adhat hozzá távolsági megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. A feladat végrehajtásához kövesse az alábbi lépéseket:
+Ebben az oktatóanyagban megtanulod, hogyan adhatsz hozzá távolságmegjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. A feladat végrehajtásához kövesd az alábbi lépéseket:
 ## Előfeltételek
 
 A folytatás előtt győződjön meg arról, hogy a következő előfeltételek teljesülnek:
 
--  GroupDocs.Annotation for .NET Library: Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat innen:[ez a link](https://releases.groupdocs.com/annotation/net/).
-- Annotálandó dokumentum: Készítse elő azt a dokumentumot (pl. PDF), amelyhez a távolság megjegyzését hozzá kívánja adni.
-- Fejlesztési környezet: Állítsa be fejlesztői környezetét a Visual Studio vagy bármely más választott IDE segítségével.
+- GroupDocs.Annotation for .NET könyvtár: Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat innen: [ezt a linket](https://releases.groupdocs.com/annotation/net/).
+- Jegyzetelendő dokumentum: Készítse elő a dokumentumot (pl. PDF), amelyhez a távolságjegyzetet hozzá szeretné adni.
+- Fejlesztői környezet: Állítsa be fejlesztői környezetét a Visual Studio vagy bármely más, Ön által választott IDE segítségével.
 
 ## Névterek importálása
 
-Mielőtt elkezdené, győződjön meg arról, hogy a szükséges névtereket tartalmazza a kódban. Ezek a névterek elengedhetetlenek a szükséges osztályok és metódusok eléréséhez.
+Mielőtt elkezdenéd, győződj meg róla, hogy a kódodban szerepelnek a szükséges névterek. Ezek a névterek elengedhetetlenek a szükséges osztályok és metódusok eléréséhez.
 
 ```csharp
 using System;
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## 1. lépés: Inicializálja az Annotátort
+## 1. lépés: Annotátor inicializálása
 
- Kezdje a`Annotator` objektumot a megjegyzésekkel ellátni kívánt dokumentum elérési útjával.
+Kezdje az inicializálással `Annotator` objektumot a jegyzettel ellátni kívánt dokumentum elérési útjával.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ide kerül a kommentár kódja
+    // Ide fog kerülni a megjegyzéskód
 }
 ```
 
-## 2. lépés: Hozzon létre távolsági megjegyzést
+## 2. lépés: Távolságjelölés létrehozása
 
- Most hozzon létre a`DistanceAnnotation` objektumot, és konfigurálja tulajdonságait, például a doboz méreteit, üzenetét, átlátszatlanságát, tollszínét stb.
+Most hozz létre egy `DistanceAnnotation` objektumot, és konfigurálja a tulajdonságait, például a doboz méreteit, az üzenetet, az átlátszóságot, a toll színét stb.
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -75,17 +75,17 @@ DistanceAnnotation distance = new DistanceAnnotation
 };
 ```
 
-## 3. lépés: Megjegyzés hozzáadása
+## 3. lépés: Jegyzet hozzáadása
 
- Adja hozzá a létrehozott távolság megjegyzést a dokumentumhoz a`Add` az annotátor objektum metódusa.
+Adja hozzá a létrehozott távolságmegjegyzést a dokumentumhoz a `Add` az annotátor objektum metódusa.
 
 ```csharp
 annotator.Add(distance);
 ```
 
-## 4. lépés: Mentse el a dokumentumot
+## 4. lépés: Dokumentum mentése
 
-Mentse el a megjegyzésekkel ellátott dokumentumot a rendszer kívánt helyére.
+Mentse el a jegyzetekkel ellátott dokumentumot a rendszer kívánt helyére.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
@@ -94,7 +94,7 @@ annotator.Save(outputPath);
 
 ## 5. lépés: Megerősítés megjelenítése
 
-Végül jelenítsen meg egy üzenetet, amely megerősíti a megjegyzésekkel ellátott dokumentum sikeres mentését.
+Végül jelenítsen meg egy üzenetet, amely megerősíti a jegyzetekkel ellátott dokumentum sikeres mentését.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -102,26 +102,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Következtetés
 
-A távolsági megjegyzések hozzáadása a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével egyszerű folyamat. Az ebben az oktatóanyagban vázolt lépések követésével értékes megjegyzésekkel bővítheti dokumentumait, megkönnyítve az együttműködést és a kommunikációt.
+GroupDocs.Annotation for .NET használatával távolságmegjegyzések hozzáadása dokumentumokhoz egyszerű folyamat. Az ebben az oktatóanyagban ismertetett lépéseket követve értékes megjegyzésekkel gazdagíthatja dokumentumait, elősegítve a jobb együttműködést és kommunikációt.
 
 ## GYIK
 
-### K: Testreszabhatom a távolság megjegyzésének megjelenését?
+### K: Testreszabhatom a távolságmegjegyzés megjelenését?
 
-V: Igen, testreszabhat különféle tulajdonságokat, például színt, átlátszatlanságot, vonalstílust stb., hogy megfeleljen az Ön igényeinek.
+V: Igen, testreszabhatja a különböző tulajdonságokat, például a színt, az átlátszóságot, a vonalstílust stb. az igényeinek megfelelően.
 
-### K: A GroupDocs.Annotation támogatja a megjegyzéseket a különböző típusú dokumentumokon?
+### K: A GroupDocs.Annotation támogatja a különböző típusú dokumentumokon lévő jegyzeteket?
 
-V: Igen, a GroupDocs.Annotation támogatja a megjegyzéseket a dokumentumformátumok széles skáláján, beleértve a PDF, Word, Excel, PowerPoint és egyebeket.
+V: Igen, a GroupDocs.Annotation számos dokumentumformátumban támogatja a jegyzetek készítését, beleértve a PDF, Word, Excel, PowerPoint és egyebeket.
 
-### K: Van ingyenes próbaverzió a GroupDocs.Annotation számára?
+### K: Van elérhető ingyenes próbaverzió a GroupDocs.Annotation-höz?
 
- V: Igen, elérheti a GroupDocs.Annotation ingyenes próbaverzióját innen[ez a link](https://releases.groupdocs.com/).
+V: Igen, hozzáférhet a GroupDocs.Annotation ingyenes próbaverziójához innen: [ezt a linket](https://releases.groupdocs.com/).
 
 ### K: Hol találom a GroupDocs.Annotation for .NET dokumentációját?
 
- V: Tekintse meg a rendelkezésre álló részletes dokumentációt[itt](https://tutorials.groupdocs.com/annotation/net/).
+V: A részletes dokumentációt megtekintheti [itt](https://tutorials.groupdocs.com/annotation/net/).
 
-### K: Hogyan kaphatok támogatást vagy segítséget a GroupDocs.Annotation-hoz?
+### K: Hogyan kaphatok támogatást vagy segítséget a GroupDocs.Annotationhoz?
 
- V: Támogatást és segítséget kérhet a GroupDocs.Annotation közösségi fórumtól[itt](https://forum.groupdocs.com/c/annotation/10).
+V: Támogatást és segítséget kérhet a GroupDocs.Annotation közösségi fórumon. [itt](https://forum.groupdocs.com/c/annotation/10).

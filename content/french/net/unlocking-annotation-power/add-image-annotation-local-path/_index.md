@@ -1,24 +1,24 @@
 ---
-title: Ajouter une annotation d'image au document (chemin local)
-linktitle: Ajouter une annotation d'image au document (chemin local)
-second_title: API GroupDocs.Annotation .NET
-description: Découvrez comment ajouter des annotations d'image aux documents à l'aide de GroupDocs.Annotation pour .NET. Améliorez facilement les capacités de traitement des documents.
-weight: 14
-url: /fr/net/unlocking-annotation-power/add-image-annotation-local-path/
+"description": "Apprenez à ajouter des annotations d'image à vos documents avec GroupDocs.Annotation pour .NET. Améliorez facilement vos capacités de traitement de documents."
+"linktitle": "Ajouter une annotation d'image au document (chemin local)"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Ajouter une annotation d'image au document (chemin local)"
+"url": "/fr/net/unlocking-annotation-power/add-image-annotation-local-path/"
+"weight": 14
 ---
 
 # Ajouter une annotation d'image au document (chemin local)
 
 ## Introduction
-GroupDocs.Annotation pour .NET est une bibliothèque puissante qui permet aux développeurs d'ajouter différents types d'annotations aux documents par programme. Dans ce didacticiel, nous apprendrons comment ajouter des annotations d'image à un document à l'aide d'un chemin local.
-## Conditions préalables
-Avant de commencer, assurez-vous d'avoir les prérequis suivants :
-1. Connaissance de base du langage de programmation C#.
+GroupDocs.Annotation pour .NET est une bibliothèque puissante qui permet aux développeurs d'ajouter différents types d'annotations aux documents par programmation. Dans ce tutoriel, nous allons apprendre à ajouter des annotations d'image à un document via un chemin local.
+## Prérequis
+Avant de commencer, assurez-vous de disposer des prérequis suivants :
+1. Connaissances de base du langage de programmation C#.
 2. Visual Studio installé sur votre système.
-3. Bibliothèque GroupDocs.Annotation pour .NET installée ou référencée dans votre projet.
+3. Bibliothèque GroupDocs.Annotation pour .NET installée ou tutorialsd dans votre projet.
 4. Un document d'entrée (par exemple, PDF) et un fichier image pour l'annotation.
 ## Importer des espaces de noms
-Tout d’abord, vous devez importer les espaces de noms nécessaires dans votre fichier C#. Ces espaces de noms donnent accès aux classes et méthodes requises pour travailler avec GroupDocs.Annotation.
+Tout d'abord, vous devez importer les espaces de noms nécessaires dans votre fichier C#. Ces espaces de noms donnent accès aux classes et méthodes nécessaires à l'utilisation de GroupDocs.Annotation.
 ```csharp
 using System;
 using System.IO;
@@ -31,8 +31,8 @@ Définissez le chemin de sortie où le document annoté sera enregistré.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Étape 2 : initialiser l'annotateur
-Initialisez l'annotateur en fournissant le chemin d'accès au document d'entrée.
+## Étape 2 : Initialiser l'annotateur
+Initialisez l'annotateur en fournissant le chemin vers le document d'entrée.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
@@ -40,7 +40,7 @@ using (Annotator annotator = new Annotator("input.pdf"))
 }
 ```
 ## Étape 3 : Créer une annotation d'image
- Créez une instance du`ImageAnnotation`classe et spécifiez ses propriétés telles que la position, l’opacité, le numéro de page et le chemin de l’image.
+Créer une instance de `ImageAnnotation` classe et spécifiez ses propriétés telles que la position, l'opacité, le numéro de page et le chemin de l'image.
 ```csharp
 ImageAnnotation image = new ImageAnnotation
 {
@@ -52,7 +52,7 @@ ImageAnnotation image = new ImageAnnotation
 };
 ```
 ## Étape 4 : Ajouter une annotation
- Ajoutez l'annotation d'image créée au document à l'aide du`Add` méthode de l’annotateur.
+Ajoutez l'annotation d'image créée au document à l'aide de l' `Add` méthode de l'annotateur.
 ```csharp
 annotator.Add(image);
 ```
@@ -62,21 +62,21 @@ Enregistrez le document annoté dans le chemin de sortie.
 annotator.Save(outputPath);
 ```
 ## Étape 6 : Afficher le chemin de sortie
-Afficher un message indiquant la réussite de l'enregistrement du document et l'emplacement du fichier de sortie.
+Affiche un message indiquant la réussite de l'enregistrement du document et l'emplacement du fichier de sortie.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Conclusion
-Dans ce didacticiel, nous avons appris à ajouter des annotations d'image à un document à l'aide de GroupDocs.Annotation pour .NET. En suivant ces étapes simples, vous pouvez améliorer vos capacités de traitement de documents grâce à de puissantes fonctionnalités d'annotation.
+Dans ce tutoriel, nous avons appris à ajouter des annotations d'image à un document avec GroupDocs.Annotation pour .NET. En suivant ces étapes simples, vous pouvez améliorer vos capacités de traitement de documents grâce à de puissantes fonctionnalités d'annotation.
 ## FAQ
-### Puis-je annoter des documents autres que PDF ?
+### Puis-je annoter des documents autres que PDF ?
 Oui, GroupDocs.Annotation prend en charge divers formats de documents, notamment Word, Excel, PowerPoint, etc.
 ### GroupDocs.Annotation est-il compatible avec .NET Core ?
 Oui, GroupDocs.Annotation est compatible avec .NET Framework et .NET Core.
 ### Puis-je personnaliser l’apparence des annotations ?
 Absolument, vous pouvez personnaliser l'apparence, la taille, la couleur et d'autres propriétés des annotations en fonction de vos besoins.
-### GroupDocs.Annotation prend-il en charge les annotations collaboratives ?
-Oui, GroupDocs.Annotation propose des fonctionnalités d'annotation collaborative qui permettent à plusieurs utilisateurs d'annoter des documents simultanément.
-### Où puis-je trouver de l'aide ou du soutien supplémentaire ?
+### GroupDocs.Annotation fournit-il un support pour l'annotation collaborative ?
+Oui, GroupDocs.Annotation propose des fonctionnalités d’annotation collaborative qui permettent à plusieurs utilisateurs d’annoter des documents simultanément.
+### Où puis-je trouver de l’aide ou du soutien supplémentaire ?
 Vous pouvez visiter le forum GroupDocs.Annotation pour obtenir de l'aide et du soutien de la communauté.

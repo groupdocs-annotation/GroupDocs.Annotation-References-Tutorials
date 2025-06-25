@@ -1,21 +1,21 @@
 ---
-title: Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)
-linktitle: Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak dodawać adnotacje graficzne do dokumentów za pomocą GroupDocs.Annotation dla .NET. Z łatwością zwiększ możliwości przetwarzania dokumentów.
-weight: 14
-url: /pl/net/unlocking-annotation-power/add-image-annotation-local-path/
+"description": "Dowiedz się, jak dodawać adnotacje obrazów do dokumentów za pomocą GroupDocs.Annotation dla .NET. Z łatwością rozszerz możliwości przetwarzania dokumentów."
+"linktitle": "Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)"
+"url": "/pl/net/unlocking-annotation-power/add-image-annotation-local-path/"
+"weight": 14
 ---
 
 # Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)
 
 ## Wstęp
-GroupDocs.Annotation dla .NET to potężna biblioteka, która umożliwia programistom programowe dodawanie różnych typów adnotacji do dokumentów. W tym samouczku dowiemy się, jak dodawać adnotacje graficzne do dokumentu przy użyciu ścieżki lokalnej.
-## Warunki wstępne
-Zanim zaczniemy, upewnij się, że masz następujące wymagania wstępne:
+GroupDocs.Annotation for .NET to potężna biblioteka, która umożliwia programistom programowe dodawanie różnych typów adnotacji do dokumentów. W tym samouczku nauczymy się, jak dodawać adnotacje obrazów do dokumentu za pomocą ścieżki lokalnej.
+## Wymagania wstępne
+Zanim zaczniemy, upewnij się, że spełniasz następujące wymagania wstępne:
 1. Podstawowa znajomość języka programowania C#.
 2. Program Visual Studio zainstalowany w systemie.
-3. GroupDocs.Annotation dla biblioteki .NET zainstalowanej lub wymienionej w projekcie.
+3. Biblioteka GroupDocs.Annotation for .NET jest zainstalowana lub ma tutorialsd w projekcie.
 4. Dokument wejściowy (np. PDF) i plik obrazu do adnotacji.
 ## Importuj przestrzenie nazw
 Najpierw musisz zaimportować niezbędne przestrzenie nazw do pliku C#. Te przestrzenie nazw zapewniają dostęp do klas i metod wymaganych do pracy z GroupDocs.Annotation.
@@ -31,16 +31,16 @@ Zdefiniuj ścieżkę wyjściową, w której zostanie zapisany dokument z adnotac
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Zainicjuj adnotator
+## Krok 2: Zainicjuj Adnotator
 Zainicjuj adnotator, podając ścieżkę do dokumentu wejściowego.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Tutaj znajduje się kod adnotacji
+    // Kod adnotacji wpisz tutaj
 }
 ```
 ## Krok 3: Utwórz adnotację obrazu
- Utwórz instancję`ImageAnnotation`class i określ jej właściwości, takie jak położenie, przezroczystość, numer strony i ścieżka obrazu.
+Utwórz instancję `ImageAnnotation` klasę i określ jej właściwości, takie jak pozycja, krycie, numer strony i ścieżka do obrazu.
 ```csharp
 ImageAnnotation image = new ImageAnnotation
 {
@@ -52,7 +52,7 @@ ImageAnnotation image = new ImageAnnotation
 };
 ```
 ## Krok 4: Dodaj adnotację
- Dodaj utworzoną adnotację obrazu do dokumentu za pomocą`Add` metoda adnotatora.
+Dodaj utworzoną adnotację obrazu do dokumentu za pomocą `Add` metoda adnotatora.
 ```csharp
 annotator.Add(image);
 ```
@@ -68,15 +68,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Wniosek
-W tym samouczku nauczyliśmy się, jak dodawać adnotacje graficzne do dokumentu za pomocą GroupDocs.Annotation dla .NET. Wykonując te proste kroki, możesz zwiększyć możliwości przetwarzania dokumentów dzięki zaawansowanym funkcjom dodawania adnotacji.
-## Często zadawane pytania
+tym samouczku nauczyliśmy się, jak dodawać adnotacje obrazów do dokumentu za pomocą GroupDocs.Annotation dla .NET. Postępując zgodnie z tymi prostymi krokami, możesz zwiększyć możliwości przetwarzania dokumentów dzięki zaawansowanym funkcjom adnotacji.
+## Najczęściej zadawane pytania
 ### Czy mogę dodawać adnotacje do dokumentów innych niż PDF?
 Tak, GroupDocs.Annotation obsługuje różne formaty dokumentów, w tym Word, Excel, PowerPoint i inne.
 ### Czy GroupDocs.Annotation jest kompatybilny z .NET Core?
 Tak, GroupDocs.Annotation jest kompatybilny zarówno z .NET Framework, jak i .NET Core.
 ### Czy mogę dostosować wygląd adnotacji?
-Oczywiście możesz dostosować wygląd, rozmiar, kolor i inne właściwości adnotacji zgodnie ze swoimi wymaganiami.
-### Czy GroupDocs.Annotation zapewnia obsługę wspólnych adnotacji?
-Tak, GroupDocs.Annotation oferuje funkcje wspólnych notatek, które umożliwiają wielu użytkownikom jednoczesne dodawanie adnotacji do dokumentów.
-### Gdzie mogę znaleźć dodatkową pomoc lub wsparcie?
-Możesz odwiedzić forum GroupDocs.Annotation, aby uzyskać pomoc i wsparcie społeczności.
+Oczywiście, możesz dostosować wygląd, rozmiar, kolor i inne właściwości adnotacji według swoich wymagań.
+### Czy GroupDocs.Annotation obsługuje wspólne adnotacje?
+Tak, GroupDocs.Annotation oferuje funkcje wspólnego adnotowania, dzięki którym wielu użytkowników może jednocześnie adnotować dokumenty.
+### Gdzie mogę znaleźć dodatkową pomoc i wsparcie?
+Aby uzyskać pomoc i wsparcie społeczności, odwiedź forum GroupDocs.Annotation.

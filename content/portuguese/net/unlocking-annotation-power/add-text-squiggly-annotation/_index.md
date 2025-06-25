@@ -1,25 +1,25 @@
 ---
-title: Adicionar anotação de texto ondulada ao documento
-linktitle: Adicionar anotação de texto ondulada ao documento
-second_title: API GroupDocs.Annotation .NET
-description: Aprenda como adicionar facilmente anotações de texto onduladas a documentos usando Groupdocs.Annotation for .NET. Aprimore os processos de colaboração e revisão de documentos.
-weight: 25
-url: /pt/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Aprenda a adicionar anotações onduladas de texto a documentos sem esforço usando o Groupdocs.Annotation para .NET. Aprimore os processos de colaboração e revisão de documentos."
+"linktitle": "Adicionar anotação de texto ondulado ao documento"
+"second_title": "API .NET do GroupDocs.Annotation"
+"title": "Adicionar anotação de texto ondulado ao documento"
+"url": "/pt/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
-# Adicionar anotação de texto ondulada ao documento
+# Adicionar anotação de texto ondulado ao documento
 
 ## Introdução
 
-Groupdocs.Annotation for .NET é uma biblioteca versátil que permite aos desenvolvedores integrar recursos robustos de anotação em seus aplicativos .NET sem esforço. Esteja você trabalhando com PDFs, documentos do Word ou outros formatos de arquivo populares, Groupdocs.Annotation oferece uma solução perfeita para anotar e aprimorar a colaboração em documentos.
+O Groupdocs.Annotation para .NET é uma biblioteca versátil que permite aos desenvolvedores integrar recursos robustos de anotação em seus aplicativos .NET sem esforço. Seja trabalhando com PDFs, documentos do Word ou outros formatos de arquivo populares, o Groupdocs.Annotation oferece uma solução perfeita para anotar e aprimorar a colaboração em documentos.
 
 ## Pré-requisitos
 
-Antes de mergulhar no tutorial, certifique-se de ter os seguintes pré-requisitos em vigor:
+Antes de começar o tutorial, certifique-se de ter os seguintes pré-requisitos:
 
 ## Importar namespaces
 
-Certifique-se de importar os namespaces necessários para acessar as funcionalidades fornecidas pelo Groupdocs.Annotation for .NET.
+Certifique-se de importar os namespaces necessários para acessar as funcionalidades fornecidas pelo Groupdocs.Annotation para .NET.
 
 ```csharp
 using System;
@@ -32,7 +32,7 @@ using GroupDocs.Annotation.Options;
 
 Agora que cobrimos os pré-requisitos, vamos dividir o processo de adição de anotações onduladas de texto em várias etapas.
 
-## Etapa 1: definir o caminho de saída
+## Etapa 1: Definir o caminho de saída
 
 Defina o caminho onde o documento anotado será salvo.
 
@@ -40,18 +40,18 @@ Defina o caminho onde o documento anotado será salvo.
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Etapa 2: inicializar o anotador
+## Etapa 2: Inicializar o Annotator
 
 Inicialize o objeto Annotator fornecendo o caminho do documento de entrada.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // O código da anotação vai aqui
+    // O código de anotação vai aqui
 }
 ```
 
-## Etapa 3: criar uma anotação ondulada
+## Etapa 3: Criar anotação ondulada
 
 Crie um objeto SquigglyAnnotation e especifique suas propriedades.
 
@@ -85,7 +85,7 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 };
 ```
 
-## Etapa 4: adicionar anotação
+## Etapa 4: Adicionar anotação
 
 Adicione a anotação ondulada criada ao documento.
 
@@ -101,7 +101,7 @@ Salve o documento anotado no caminho de saída especificado.
 annotator.Save(outputPath);
 ```
 
-## Etapa 6: Exibir confirmação
+## Etapa 6: Confirmação de exibição
 
 Exibe uma mensagem confirmando o salvamento bem-sucedido do documento anotado.
 
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Conclusão
 
-Concluindo, Groupdocs.Annotation for .NET fornece aos desenvolvedores um conjunto robusto de ferramentas para integrar perfeitamente funcionalidades de anotação de documentos em seus aplicativos .NET. Seguindo este guia passo a passo, você pode adicionar facilmente anotações de texto onduladas aos seus documentos, aprimorando os processos de colaboração e revisão de documentos.
+Concluindo, o Groupdocs.Annotation para .NET oferece aos desenvolvedores um conjunto robusto de ferramentas para integrar funcionalidades de anotação em documentos em seus aplicativos .NET de forma integrada. Seguindo este guia passo a passo, você pode adicionar anotações onduladas de texto aos seus documentos sem esforço, aprimorando os processos de colaboração e revisão de documentos.
 
 ## Perguntas frequentes
 
-### P: O Groupdocs.Annotation pode oferecer suporte a anotações em vários formatos de arquivo?
+### P: O Groupdocs.Annotation oferece suporte a anotações em vários formatos de arquivo?
 
-R: Sim, Groupdocs.Annotation suporta anotações em uma ampla variedade de formatos de arquivo, incluindo PDFs, documentos do Word, planilhas do Excel e muito mais.
+R: Sim, o Groupdocs.Annotation suporta anotações em uma ampla variedade de formatos de arquivo, incluindo PDFs, documentos do Word, planilhas do Excel e muito mais.
 
 ### P: O Groupdocs.Annotation é compatível com aplicativos de desktop e web?
 
-R: Absolutamente! Groupdocs.Annotation pode ser perfeitamente integrado em aplicativos de desktop e web, oferecendo flexibilidade e versatilidade.
+R: Com certeza! O Groupdocs.Annotation pode ser perfeitamente integrado a aplicativos desktop e web, oferecendo flexibilidade e versatilidade.
 
-### P: Há alguma opção de licenciamento disponível para Groupdocs.Annotation?
+### P: Há alguma opção de licenciamento disponível para o Groupdocs.Annotation?
 
-R: Sim, o Groupdocs.Annotation oferece opções de licenciamento flexíveis adaptadas às necessidades individuais ou empresariais, incluindo licenças temporárias para fins de avaliação.
+R: Sim, o Groupdocs.Annotation oferece opções de licenciamento flexíveis, adaptadas para atender às necessidades individuais ou empresariais, incluindo licenças temporárias para fins de teste.
 
-### P: As anotações criadas usando Groupdocs.Annotation podem ser personalizadas?
+### P: As anotações criadas usando o Groupdocs.Annotation podem ser personalizadas?
 
-R: Certamente! Groupdocs.Annotation oferece amplas opções de personalização para anotações, permitindo que os desenvolvedores adaptem as anotações aos seus requisitos específicos.
+R: Com certeza! O Groupdocs.Annotation oferece amplas opções de personalização para anotações, permitindo que os desenvolvedores as adaptem às suas necessidades específicas.
 
 ### P: O Groupdocs.Annotation oferece suporte e documentação para desenvolvedores?
 
-R: De fato! Groupdocs.Annotation fornece documentação abrangente e fóruns de suporte dedicados para ajudar os desenvolvedores a utilizar seus recursos de maneira eficaz.
+R: De fato! O Groupdocs.Annotation fornece documentação abrangente e fóruns de suporte dedicados para ajudar os desenvolvedores a utilizar seus recursos de forma eficaz.

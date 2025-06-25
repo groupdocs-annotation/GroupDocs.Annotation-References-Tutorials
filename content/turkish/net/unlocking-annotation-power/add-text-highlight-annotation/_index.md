@@ -1,25 +1,25 @@
 ---
-title: Belgeye Metin Vurgu Açıklaması Ekleme
-linktitle: Belgeye Metin Vurgu Açıklaması Ekleme
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation for .NET'i kullanarak belgelere metin vurgulama ek açıklamalarını nasıl ekleyeceğinizi öğrenin. Bu kapsamlı ürünle işbirliğini ve üretkenliği artırın.
-weight: 22
-url: /tr/net/unlocking-annotation-power/add-text-highlight-annotation/
+"description": "GroupDocs.Annotation for .NET kullanarak belgelere metin vurgulama ek açıklamalarının nasıl ekleneceğini öğrenin. Bu kapsamlı eğitimle iş birliğini ve üretkenliği artırın."
+"linktitle": "Belgeye Metin Vurgulama Açıklaması Ekle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeye Metin Vurgulama Açıklaması Ekle"
+"url": "/tr/net/unlocking-annotation-power/add-text-highlight-annotation/"
+"weight": 22
 ---
 
-# Belgeye Metin Vurgu Açıklaması Ekleme
+# Belgeye Metin Vurgulama Açıklaması Ekle
 
 ## giriiş
-Belge yönetimi ve işbirliği alanında GroupDocs.Annotation for .NET, geliştiricilerin metin vurgulama ek açıklamalarını uygulamalarına sorunsuz bir şekilde entegre etmelerine olanak tanıyan güçlü bir çözüm olarak ortaya çıkıyor. Bu öğretici, GroupDocs.Annotation for .NET kullanarak belgelere metin vurgulama ek açıklamaları ekleme konusunda kapsamlı bir kılavuz görevi görür. Adım adım talimatlar ve ayrıntılı açıklamalar sayesinde bu güçlü kütüphanenin yeteneklerinden yararlanma konusunda yeterlilik kazanacaksınız.
-## Önkoşullar
-Metin vurgulama ek açıklamalarının uygulanmasına başlamadan önce aşağıdaki önkoşulların yerine getirildiğinden emin olun:
-1. Ortam Kurulumu: .NET geliştirme için yapılandırılmış uygun bir geliştirme ortamına sahip olun.
-2.  GroupDocs.Annotation for .NET kurulumu: Sağlanan kaynaktan GroupDocs.Annotation for .NET'i indirip yükleyin.[İndirme: {link](https://releases.groupdocs.com/annotation/net/).
-3. C#'a aşinalık: C# programlama dilinin temel anlayışı.
-4. Açıklama Eklenecek Belge: Açıklama eklemeyi düşündüğünüz bir belge (örneğin, PDF) hazırlayın.
+Belge yönetimi ve işbirliği alanında, GroupDocs.Annotation for .NET, geliştiricilerin metin vurgulama açıklamalarını uygulamalarına sorunsuz bir şekilde entegre etmelerini sağlayan sağlam bir çözüm olarak ortaya çıkıyor. Bu eğitim, GroupDocs.Annotation for .NET kullanarak belgelere metin vurgulama açıklamaları eklemek için kapsamlı bir kılavuz görevi görüyor. Adım adım talimatlar ve ayrıntılı açıklamalar aracılığıyla, bu güçlü kütüphanenin yeteneklerini kullanma konusunda yeterlilik kazanacaksınız.
+## Ön koşullar
+Metin vurgulama açıklamalarının uygulanmasına geçmeden önce, aşağıdaki ön koşulların mevcut olduğundan emin olun:
+1. Ortam Kurulumu: .NET geliştirme için uygun bir geliştirme ortamı yapılandırın.
+2. GroupDocs.Annotation for .NET'in Kurulumu: Sağlanan kaynaktan GroupDocs.Annotation for .NET'i indirin ve kurun. [indirme bağlantısı](https://releases.groupdocs.com/annotation/net/).
+3. C# ile aşinalık: C# programlama dilinin temel düzeyde anlaşılması.
+4. Açıklama Yapılacak Belge: Açıklama yapmak istediğiniz bir belge (örneğin PDF) hazırlayın.
 
 ## Ad Alanlarını İçe Aktar
-Başlamak için, GroupDocs.Annotation for .NET işlevlerini kullanmak üzere C# kodunuza gerekli ad alanlarını içe aktarın:
+Başlamak için, .NET için GroupDocs.Annotation'ın işlevselliklerinden yararlanmak için C# kodunuza gerekli ad alanlarını içe aktarın:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,19 +28,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-#Şimdi, metin vurgulama ek açıklamalarını ekleme sürecini birden çok adıma ayıralım:
-## Adım 1: Çıkış Yolunu Tanımlayın
+#Şimdi, metin vurgulama ek açıklamaları ekleme sürecini birden fazla adıma bölelim:
+## Adım 1: Çıktı Yolunu Tanımlayın
 Açıklamalı belgenin kaydedileceği çıktı yolunu belirtin:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. Adım: Annotator'ı Başlatın
- Bir örneğini oluşturun`Annotator` sınıf, belge dosya adını parametre olarak ileterek:
+## Adım 2: Annotator'ı Başlatın
+Bir örneğini oluşturun `Annotator` sınıf, belge dosya adını parametre olarak geçirerek:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-## 3. Adım: Vurgu Ek Açıklaması Oluşturun
- Bir örnek oluştur`HighlightAnnotation` nesne ve özelliklerini yapılandırın:
+## Adım 3: Vurgu Açıklaması Oluşturun
+Bir örnek oluştur `HighlightAnnotation` nesneyi seçin ve özelliklerini yapılandırın:
 ```csharp
 HighlightAnnotation highlight = new HighlightAnnotation
 {
@@ -69,27 +69,27 @@ HighlightAnnotation highlight = new HighlightAnnotation
     }
 };
 ```
-## 4. Adım: Ek Açıklama Ekle
+## Adım 4: Açıklama Ekle
 Oluşturulan vurgulama açıklamasını belgeye ekleyin:
 ```csharp
 annotator.Add(highlight);
 ```
-## Adım 5: Açıklamalı Belgeyi Kaydetme
+## Adım 5: Açıklamalı Belgeyi Kaydet
 Açıklamalı belgeyi belirtilen çıktı yoluna kaydedin:
 ```csharp
 annotator.Save(outputPath);
 ```
 
 ## Çözüm
-Sonuç olarak, GroupDocs.Annotation for .NET, metin vurgulama ek açıklamalarını belgelere dahil etmek için kolaylaştırılmış bir yaklaşım sunar. Geliştiriciler, bu eğitimde özetlenen adımları izleyerek, uygulamalarında belge işbirliğini ve üretkenliği sorunsuz bir şekilde geliştirebilirler.
-## SSS'ler
-### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mu?
-GroupDocs.Annotation for .NET, PDF, Word, Excel ve daha fazlası dahil olmak üzere çeşitli belge formatlarını destekler. Tam liste için belgelere bakın.
-### Ek açıklamalar belirli gereksinimlere göre özelleştirilebilir mi?
-Evet, geliştiriciler ek açıklamaların özellikleri ve görünümü üzerinde tam kontrole sahiptir ve bu da farklı ihtiyaçları karşılayacak şekilde özelleştirme yapılmasına olanak tanır.
-### GroupDocs.Annotation for .NET'in ücretsiz deneme sürümü var mı?
- Evet, sağlanan ücretsiz deneme sürümüne erişerek GroupDocs.Annotation for .NET'in özelliklerini keşfedebilirsiniz.[bağlantı](https://releases.groupdocs.com/).
+Sonuç olarak, GroupDocs.Annotation for .NET, metin vurgulama açıklamalarını belgelere dahil etmek için kolaylaştırılmış bir yaklaşım sunar. Geliştiriciler, bu eğitimde özetlenen adımları izleyerek, uygulamaları içinde belge iş birliğini ve üretkenliği sorunsuz bir şekilde artırabilirler.
+## SSS
+### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mudur?
+GroupDocs.Annotation for .NET, PDF, Word, Excel ve daha fazlası dahil olmak üzere çeşitli belge biçimlerini destekler. Tam liste için belgelere bakın.
+### Açıklamalar özel gereksinimlere göre özelleştirilebilir mi?
+Evet, geliştiriciler açıklamaların özellikleri ve görünümü üzerinde tam kontrole sahiptir ve bu da farklı ihtiyaçları karşılayacak şekilde özelleştirmeye olanak tanır.
+### GroupDocs.Annotation for .NET için ücretsiz deneme sürümü mevcut mu?
+Evet, sağlanan ücretsiz denemeye erişerek GroupDocs.Annotation for .NET'in özelliklerini keşfedebilirsiniz. [bağlantı](https://releases.groupdocs.com/).
 ### GroupDocs.Annotation for .NET ile ilgili herhangi bir sorun veya sorgu için nasıl destek alabilirim?
- Destek ve yardım için GroupDocs.Annotation forumunu ziyaret edebilirsiniz.[Burada](https://forum.groupdocs.com/c/annotation/10).
-### GroupDocs.Annotation for .NET için hangi lisanslama seçenekleri mevcut?
- GroupDocs.Annotation for .NET, test amaçlı geçici lisanslar ve üretim ortamları için ticari lisanslar dahil olmak üzere çeşitli lisanslama seçenekleri sunar. Satın alma sayfasını ziyaret edin[Burada](https://purchase.groupdocs.com/buy) daha fazla ayrıntı için.
+Destek ve yardım için GroupDocs.Annotation forumunu ziyaret edebilirsiniz [Burada](https://forum.groupdocs.com/c/annotation/10).
+### GroupDocs.Annotation for .NET için hangi lisanslama seçenekleri mevcuttur?
+GroupDocs.Annotation for .NET, test amaçlı geçici lisanslar ve üretim ortamları için ticari lisanslar dahil olmak üzere çeşitli lisanslama seçenekleri sunar. Satın alma sayfasını ziyaret edin [Burada](https://purchase.groupdocs.com/buy) Daha detaylı bilgi için.

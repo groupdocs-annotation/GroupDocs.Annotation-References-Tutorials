@@ -1,23 +1,23 @@
 ---
-title: Thêm chú thích khu vực vào tài liệu
-linktitle: Thêm chú thích khu vực vào tài liệu
-second_title: GroupDocs.Annotation .NET API
-description: Nâng cao khả năng cộng tác tài liệu của bạn với Groupdocs.Annotation for .NET. Tìm hiểu cách thêm chú thích khu vực theo từng bước.
-weight: 10
-url: /vi/net/unlocking-annotation-power/add-area-annotation/
+"description": "Nâng cao khả năng cộng tác tài liệu của bạn với Groupdocs.Annotation cho .NET. Tìm hiểu cách thêm chú thích khu vực từng bước."
+"linktitle": "Thêm chú thích khu vực vào tài liệu"
+"second_title": "GroupDocs.Chú thích API .NET"
+"title": "Thêm chú thích khu vực vào tài liệu"
+"url": "/vi/net/unlocking-annotation-power/add-area-annotation/"
+"weight": 10
 ---
 
 # Thêm chú thích khu vực vào tài liệu
 
 ## Giới thiệu
-Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm chú thích vùng vào tài liệu bằng Groupdocs.Annotation cho .NET. Chú thích vùng là một tính năng có giá trị cho phép người dùng làm nổi bật các vùng cụ thể của tài liệu, mang lại sự rõ ràng và ngữ cảnh cho nội dung.
+Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm chú thích vùng vào tài liệu bằng Groupdocs.Annotation cho .NET. Chú thích vùng là một tính năng hữu ích cho phép người dùng làm nổi bật các vùng cụ thể của tài liệu, cung cấp sự rõ ràng và ngữ cảnh cho nội dung.
 ## Điều kiện tiên quyết
-Trước khi chúng tôi bắt đầu, hãy đảm bảo bạn có các điều kiện tiên quyết sau:
-1.  Groupdocs.Annotation for .NET: Đảm bảo bạn đã cài đặt các thư viện và phần phụ thuộc cần thiết. Bạn có thể tải chúng xuống từ[trang mạng](https://releases.groupdocs.com/annotation/net/).
-2. Môi trường phát triển: Có môi trường phát triển phù hợp được thiết lập để phát triển .NET.
+Trước khi bắt đầu, hãy đảm bảo bạn đáp ứng các điều kiện tiên quyết sau:
+1. Groupdocs.Annotation cho .NET: Đảm bảo bạn đã cài đặt các thư viện và phụ thuộc cần thiết. Bạn có thể tải chúng xuống từ [trang web](https://releases.groupdocs.com/annotation/net/).
+2. Môi trường phát triển: Thiết lập môi trường phát triển phù hợp cho phát triển .NET.
 
 ## Nhập không gian tên
-Để bắt đầu, hãy nhập các không gian tên cần thiết vào dự án của bạn. Các không gian tên này chứa các lớp và phương thức cần thiết để làm việc với các chú thích.
+Để bắt đầu, hãy nhập các không gian tên cần thiết vào dự án của bạn. Các không gian tên này chứa các lớp và phương thức cần thiết để làm việc với chú thích.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,17 +27,17 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-## Bước 1: Khởi tạo đường dẫn đầu ra
-Xác định đường dẫn đầu ra nơi tài liệu chú thích sẽ được lưu.
+## Bước 1: Khởi tạo Đường dẫn đầu ra
+Xác định đường dẫn đầu ra nơi tài liệu có chú thích sẽ được lưu.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Bước 2: Khởi tạo Annotator
- Tạo một thể hiện của`Annotator` lớp bằng cách chuyển đường dẫn của tài liệu làm tham số.
+Tạo một phiên bản của `Annotator` lớp bằng cách truyền đường dẫn của tài liệu dưới dạng tham số.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Mã chú thích sẽ ở đây
+    // Mã chú thích sẽ được đặt ở đây
 }
 ```
 ## Bước 3: Tạo chú thích khu vực
@@ -70,7 +70,7 @@ AreaAnnotation area = new AreaAnnotation
 };
 ```
 ## Bước 4: Thêm chú thích
- Thêm chú thích khu vực vào tài liệu bằng cách sử dụng`Add` phương pháp của`Annotator` ví dụ.
+Thêm chú thích khu vực vào tài liệu bằng cách sử dụng `Add` phương pháp của `Annotator` ví dụ.
 ```csharp
 annotator.Add(area);
 ```
@@ -86,15 +86,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Phần kết luận
-Trong hướng dẫn này, chúng ta đã tìm hiểu cách thêm chú thích vùng vào tài liệu bằng Groupdocs.Annotation cho .NET. Bằng cách làm theo hướng dẫn từng bước, bạn có thể dễ dàng nâng cao tài liệu của mình bằng các chú thích có giá trị, cải thiện khả năng cộng tác và hiểu biết.
+Trong hướng dẫn này, chúng ta đã học cách thêm chú thích vùng vào tài liệu bằng Groupdocs.Annotation cho .NET. Bằng cách làm theo hướng dẫn từng bước, bạn có thể dễ dàng cải thiện tài liệu của mình bằng các chú thích có giá trị, cải thiện sự cộng tác và hiểu biết.
 ## Câu hỏi thường gặp
-### Tôi có thể tùy chỉnh giao diện của chú thích khu vực không?
-Có, bạn có thể tùy chỉnh nhiều khía cạnh khác nhau như màu nền, độ mờ, kiểu bút, v.v. để phù hợp với sở thích của bạn.
+### Tôi có thể tùy chỉnh giao diện chú thích khu vực không?
+Có, bạn có thể tùy chỉnh nhiều khía cạnh khác nhau như màu nền, độ mờ, kiểu bút, v.v. để phù hợp với bài hướng dẫn của bạn.
 ### Groupdocs.Annotation có tương thích với các định dạng tài liệu khác không?
 Có, Groupdocs.Annotation hỗ trợ nhiều định dạng tài liệu khác nhau bao gồm PDF, DOCX, PPTX, v.v.
 ### Tôi có thể thêm nhiều chú thích vào cùng một tài liệu không?
-Hoàn toàn có thể, bạn có thể thêm nhiều chú thích thuộc các loại khác nhau vào cùng một tài liệu nếu cần.
-### Groupdocs.Annotation có cung cấp khả năng tương thích đa nền tảng không?
+Hoàn toàn có thể thêm nhiều chú thích thuộc nhiều loại khác nhau vào cùng một tài liệu nếu cần.
+### Groupdocs.Annotation có khả năng tương thích đa nền tảng không?
 Có, Groupdocs.Annotation tương thích với .NET framework, khiến nó phù hợp với môi trường phát triển Windows, Linux và macOS.
-### Có phiên bản dùng thử nào dành cho mục đích thử nghiệm không?
- Có, bạn có thể truy cập phiên bản dùng thử miễn phí từ[trang mạng](https://releases.groupdocs.com/).
+### Có phiên bản dùng thử nào để thử nghiệm không?
+Có, bạn có thể truy cập phiên bản dùng thử miễn phí từ [trang web](https://releases.groupdocs.com/).

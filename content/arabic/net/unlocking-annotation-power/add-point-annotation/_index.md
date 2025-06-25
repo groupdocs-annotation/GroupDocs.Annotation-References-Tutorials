@@ -1,24 +1,24 @@
 ---
-title: إضافة تعليق توضيحي إلى المستند
-linktitle: إضافة تعليق توضيحي إلى المستند
-second_title: GroupDocs.Annotation .NET API
-description: تعرف على كيفية إضافة التعليقات التوضيحية النقطية إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET. دليل خطوة بخطوة للتكامل السلس.
-weight: 17
-url: /ar/net/unlocking-annotation-power/add-point-annotation/
+"description": "تعرّف على كيفية إضافة التعليقات التوضيحية النقطية إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET. دليل خطوة بخطوة لدمج سلس."
+"linktitle": "إضافة تعليق نقطي إلى المستند"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "إضافة تعليق نقطي إلى المستند"
+"url": "/ar/net/unlocking-annotation-power/add-point-annotation/"
+"weight": 17
 ---
 
-# إضافة تعليق توضيحي إلى المستند
+# إضافة تعليق نقطي إلى المستند
 
 ## مقدمة
-تعد GroupDocs.Annotation for .NET أداة قوية تسمح للمطورين بإضافة أنواع مختلفة من التعليقات التوضيحية إلى المستندات برمجيًا. في هذا البرنامج التعليمي، سوف نركز على إضافة تعليق توضيحي إلى مستند باستخدام C#.
+GroupDocs.Annotation for .NET أداة فعّالة تُمكّن المطورين من إضافة أنواع مُختلفة من التعليقات التوضيحية إلى المستندات برمجيًا. في هذا البرنامج التعليمي، سنُركز على إضافة تعليق توضيحي نقطي إلى مستند باستخدام لغة C#.
 ## المتطلبات الأساسية
 قبل أن نبدأ، تأكد من أن لديك ما يلي:
-1. الفهم الأساسي للغة البرمجة C#.
+1. فهم أساسي للغة البرمجة C#.
 2. تم تثبيت Visual Studio على نظامك.
-3.  تم تثبيت GroupDocs.Annotation لمكتبة .NET. يمكنك تنزيله من[هنا](https://releases.groupdocs.com/annotation/net/).
+3. تم تثبيت مكتبة GroupDocs.Annotation لـ .NET. يمكنك تنزيلها من [هنا](https://releases.groupdocs.com/annotation/net/).
 
 ## استيراد مساحات الأسماء الضرورية
-للبدء، تحتاج إلى استيراد مساحات الأسماء المطلوبة إلى مشروع C# الخاص بك:
+للبدء، تحتاج إلى استيراد المساحات المطلوبة إلى مشروع C# الخاص بك:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -31,13 +31,13 @@ using GroupDocs.Annotation.Options;
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-في هذه الخطوة، نحدد مسار الإخراج حيث سيتم حفظ المستند المشروح.
-## الخطوة 2: تهيئة الحواشي
+في هذه الخطوة، نقوم بتحديد مسار الإخراج الذي سيتم حفظ المستند الموضح فيه.
+## الخطوة 2: تهيئة المُعلّق
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- هنا، نقوم بتهيئة`Annotator` كائن مع مستند الإدخال ("input.pdf").
-## الخطوة 3: إنشاء تعليق توضيحي للنقطة
+هنا، نقوم بتهيئة `Annotator` الكائن مع مستند الإدخال ("input.pdf").
+## الخطوة 3: إنشاء تعليق توضيحي للنقاط
 ```csharp
 PointAnnotation point = new PointAnnotation
 {
@@ -60,28 +60,28 @@ PointAnnotation point = new PointAnnotation
     }
 };
 ```
- في هذه الخطوة نقوم بإنشاء`PointAnnotation` الكائن وتحديد خصائصه مثل الموضع والرسالة ورقم الصفحة والردود.
-## الخطوة 4: إضافة تعليق توضيحي
+في هذه الخطوة، نقوم بإنشاء `PointAnnotation` الكائن وتحديد خصائصه مثل الموضع والرسالة ورقم الصفحة والردود.
+## الخطوة 4: إضافة التعليقات التوضيحية
 ```csharp
 annotator.Add(point);
 ```
-هنا، نضيف التعليق التوضيحي النقطي الذي تم إنشاؤه إلى المستند.
+هنا، نضيف ملاحظة النقطة التي تم إنشاؤها إلى المستند.
 ## الخطوة 5: حفظ المستند
 ```csharp
 annotator.Save(outputPath);
 ```
-وأخيرًا، نقوم بحفظ المستند المشروح في مسار الإخراج المحدد.
+وأخيرًا، نقوم بحفظ المستند الموضح في مسار الإخراج المحدد.
 
 ## خاتمة
-في هذا البرنامج التعليمي، تعلمنا كيفية إضافة تعليق توضيحي نقطي إلى مستند باستخدام GroupDocs.Annotation لـ .NET. باستخدام هذه المكتبة القوية، يمكنك تحسين تطبيقات إدارة المستندات الخاصة بك من خلال دمج وظائف التعليقات التوضيحية.
+في هذا البرنامج التعليمي، تعلمنا كيفية إضافة تعليق توضيحي نقطي إلى مستند باستخدام GroupDocs.Annotation لـ .NET. باستخدام هذه المكتبة القوية، يمكنك تحسين تطبيقات إدارة المستندات لديك من خلال دمج وظائف التعليق التوضيحي.
 ## الأسئلة الشائعة
 ### هل GroupDocs.Annotation لـ .NET متوافق مع كافة تنسيقات المستندات؟
-نعم، يدعم GroupDocs.Annotation for .NET نطاقًا واسعًا من تنسيقات المستندات بما في ذلك PDF وMicrosoft Word وExcel وPowerPoint والمزيد.
+نعم، يدعم GroupDocs.Annotation لـ .NET مجموعة واسعة من تنسيقات المستندات بما في ذلك PDF، وMicrosoft Word، وExcel، وPowerPoint، والمزيد.
 ### هل يمكنني تخصيص مظهر التعليقات التوضيحية؟
-قطعاً! يوفر GroupDocs.Annotation for .NET خيارات شاملة لتخصيص مظهر التعليقات التوضيحية بما يتناسب مع احتياجات التطبيق الخاص بك.
+بالتأكيد! يوفر GroupDocs.Annotation لـ .NET خيارات واسعة لتخصيص مظهر التعليقات التوضيحية لتناسب احتياجات تطبيقك.
 ### هل هناك نسخة تجريبية مجانية متاحة لـ GroupDocs.Annotation لـ .NET؟
- نعم، يمكنك الاستفادة من النسخة التجريبية المجانية من[هنا](https://releases.groupdocs.com/).
-### كيف يمكنني الحصول على الدعم لأية مشكلات أو استفسارات تتعلق بـ GroupDocs.Annotation لـ .NET؟
- يمكنك الحصول على الدعم من منتدى GroupDocs.Annotation[هنا](https://forum.groupdocs.com/c/annotation/10).
+نعم، يمكنك الاستفادة من تجربة مجانية من [هنا](https://releases.groupdocs.com/).
+### كيف يمكنني الحصول على الدعم لأي مشاكل أو استفسارات متعلقة بـ GroupDocs.Annotation لـ .NET؟
+يمكنك الحصول على الدعم من منتدى GroupDocs.Annotation [هنا](https://forum.groupdocs.com/c/annotation/10).
 ### هل يمكنني الحصول على ترخيص مؤقت لأغراض الاختبار؟
- نعم يمكنك الحصول على ترخيص مؤقت من[هنا](https://purchase.groupdocs.com/temporary-license/).
+نعم يمكنك الحصول على ترخيص مؤقت من [هنا](https://purchase.groupdocs.com/temporary-license/).

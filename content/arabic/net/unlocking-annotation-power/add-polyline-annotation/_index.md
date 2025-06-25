@@ -1,21 +1,21 @@
 ---
-title: أضف تعليقًا توضيحيًا متعدد الخطوط إلى المستند
-linktitle: أضف تعليقًا توضيحيًا متعدد الخطوط إلى المستند
-second_title: GroupDocs.Annotation .NET API
-description: تعرف على كيفية إضافة تعليقات توضيحية متعددة الخطوط إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. تعزيز عمليات التعاون ومراجعة المستندات دون عناء.
-weight: 18
-url: /ar/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "تعرّف على كيفية إضافة تعليقات توضيحية متعددة الخطوط إلى المستندات باستخدام GroupDocs.Annotation لـ .NET. حسّن التعاون وعمليات مراجعة المستندات بسهولة."
+"linktitle": "إضافة تعليق متعدد الخطوط إلى المستند"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "إضافة تعليق متعدد الخطوط إلى المستند"
+"url": "/ar/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# أضف تعليقًا توضيحيًا متعدد الخطوط إلى المستند
+# إضافة تعليق متعدد الخطوط إلى المستند
 
 ## مقدمة
-تعد GroupDocs.Annotation for .NET أداة قوية تتيح للمطورين إضافة تعليقات توضيحية إلى مستندات PDF وMicrosoft Office برمجيًا. ومن بين ميزاته القدرة على إضافة تعليقات توضيحية متعددة الخطوط إلى المستندات، وتعزيز التعاون وعمليات مراجعة المستندات.
+GroupDocs.Annotation for .NET أداة فعّالة تُمكّن المطورين من إضافة تعليقات توضيحية برمجية على مستندات PDF وMicrosoft Office. من بين ميزاتها إمكانية إضافة تعليقات توضيحية متعددة الخطوط إلى المستندات، مما يُحسّن التعاون وعمليات مراجعة المستندات.
 ## المتطلبات الأساسية
-قبل متابعة هذا البرنامج التعليمي، تأكد من أن لديك ما يلي:
+قبل المتابعة بهذا البرنامج التعليمي، تأكد من أن لديك ما يلي:
 - تم تثبيت Visual Studio على نظامك.
 - المعرفة الأساسية بلغة البرمجة C#.
--  تم تثبيت GroupDocs.Annotation لمكتبة .NET. يمكنك تنزيله من[هنا](https://releases.groupdocs.com/annotation/net/).
+- تم تثبيت مكتبة GroupDocs.Annotation لـ .NET. يمكنك تنزيلها من [هنا](https://releases.groupdocs.com/annotation/net/).
 
 ## استيراد مساحات الأسماء
 ```csharp
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 ## الخطوة 1: تحديد مسار الإخراج
-أولاً، حدد مسار الإخراج حيث سيتم حفظ المستند المشروح.
+أولاً، قم بتحديد مسار الإخراج الذي سيتم حفظ المستند الموضح فيه.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## الخطوة 2: تهيئة الحواشي
-قم بتهيئة التعليق التوضيحي من خلال توفير اسم مستند الإدخال.
+## الخطوة 2: تهيئة المُعلّق
+قم بتهيئة المشرح من خلال توفير اسم مستند الإدخال.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## الخطوة 3: إنشاء كائن تعليق توضيحي متعدد الخطوط
-قم بإنشاء كائن تعليق توضيحي متعدد الخطوط وقم بتعيين خصائصه مثل الموضع والرسالة والتعتيم ولون القلم ونمط القلم وعرض القلم.
+## الخطوة 3: إنشاء كائن تعليق متعدد الخطوط
+قم بإنشاء كائن تعليق متعدد الخطوط وقم بتعيين خصائصه مثل الموضع والرسالة والتعتيم ولون القلم ونمط القلم وعرض القلم.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -68,12 +68,12 @@ PolylineAnnotation polyline = new PolylineAnnotation
 };
 ```
 ## الخطوة 4: إضافة تعليق توضيحي متعدد الخطوط
-قم بإضافة تعليق توضيحي متعدد الخطوط إلى المستند باستخدام كائن التعليق التوضيحي.
+قم بإضافة تعليق الخط المتعدد إلى المستند باستخدام كائن التعليق.
 ```csharp
 annotator.Add(polyline);
 ```
 ## الخطوة 5: حفظ المستند
-احفظ المستند المشروح في مسار الإخراج المحدد.
+احفظ المستند الموضح في مسار الإخراج المحدد.
 ```csharp
 annotator.Save(outputPath);
 ```
@@ -84,15 +84,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## خاتمة
-في هذا البرنامج التعليمي، تعلمنا كيفية إضافة تعليق توضيحي متعدد الخطوط إلى مستند باستخدام GroupDocs.Annotation لـ .NET. تعمل هذه الميزة على تحسين عمليات التعاون ومراجعة المستندات، مما يسهل على المستخدمين توصيل الملاحظات والاقتراحات بشكل فعال.
+في هذا البرنامج التعليمي، تعلمنا كيفية إضافة تعليق متعدد الخطوط إلى مستند باستخدام GroupDocs.Annotation لـ .NET. تُحسّن هذه الميزة التعاون وعمليات مراجعة المستندات، مما يُسهّل على المستخدمين التواصل مع الملاحظات والاقتراحات بفعالية.
 ## الأسئلة الشائعة
 ### هل GroupDocs.Annotation لـ .NET متوافق مع كافة تنسيقات المستندات؟
-يدعم GroupDocs.Annotation for .NET تنسيقات المستندات الشائعة مثل تنسيقات PDF وMicrosoft Office، بما في ذلك Word وExcel وPowerPoint.
+يدعم GroupDocs.Annotation لـ .NET تنسيقات المستندات الشائعة مثل تنسيقات PDF وMicrosoft Office بما في ذلك Word وExcel وPowerPoint.
 ### هل يمكنني تخصيص مظهر التعليقات التوضيحية؟
-نعم، يمكنك تخصيص خصائص مختلفة للتعليقات التوضيحية مثل اللون والعتامة والنمط والعرض لتناسب متطلباتك.
-### هل يقدم GroupDocs.Annotation for .NET نسخة تجريبية مجانية؟
- نعم، يمكنك الاستفادة من النسخة التجريبية المجانية من GroupDocs.Annotation لـ .NET من خلال زيارة الموقع[هذا الرابط](https://releases.groupdocs.com/).
-### أين يمكنني العثور على وثائق GroupDocs.Annotation لـ .NET؟
- يمكنك العثور على وثائق GroupDocs.Annotation لـ .NET[هنا](https://tutorials.groupdocs.com/annotation/net/).
-### كيف يمكنني الحصول على الدعم لأية مشكلات أو استفسارات تتعلق بـ GroupDocs.Annotation لـ .NET؟
- يمكنك الحصول على الدعم من خلال زيارة منتدى GroupDocs.Annotation[هنا](https://forum.groupdocs.com/c/annotation/10).
+نعم، يمكنك تخصيص خصائص مختلفة للتعليقات التوضيحية مثل اللون والتعتيم والأسلوب والعرض لتناسب متطلباتك.
+### هل يقدم GroupDocs.Annotation لـ .NET نسخة تجريبية مجانية؟
+نعم، يمكنك الاستفادة من النسخة التجريبية المجانية لـ GroupDocs.Annotation لـ .NET من خلال زيارة [هذا الرابط](https://releases.groupdocs.com/).
+### أين يمكنني العثور على وثائق لـ GroupDocs.Annotation لـ .NET؟
+يمكنك العثور على الوثائق الخاصة بـ GroupDocs.Annotation لـ .NET [هنا](https://tutorials.groupdocs.com/annotation/net/).
+### كيف يمكنني الحصول على الدعم لأي مشاكل أو استفسارات متعلقة بـ GroupDocs.Annotation لـ .NET؟
+يمكنك الحصول على الدعم من خلال زيارة منتدى GroupDocs.Annotation [هنا](https://forum.groupdocs.com/c/annotation/10).

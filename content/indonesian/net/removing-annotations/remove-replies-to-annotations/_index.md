@@ -1,24 +1,24 @@
 ---
-title: Hapus Balasan Anotasi di .NET
-linktitle: Hapus Balasan Anotasi di .NET
-second_title: GroupDocs.Annotasi .NET API
-description: Pelajari cara menghapus balasan anotasi di .NET menggunakan GroupDocs.Annotation. Panduan langkah demi langkah dengan contoh kode.
-weight: 15
-url: /id/net/removing-annotations/remove-replies-to-annotations/
+"description": "Pelajari cara menghapus balasan pada anotasi di .NET menggunakan GroupDocs.Annotation. Panduan langkah demi langkah dengan contoh kode."
+"linktitle": "Hapus Balasan pada Anotasi di .NET"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Hapus Balasan pada Anotasi di .NET"
+"url": "/id/net/removing-annotations/remove-replies-to-annotations/"
+"weight": 15
 ---
 
-# Hapus Balasan Anotasi di .NET
+# Hapus Balasan pada Anotasi di .NET
 
 ## Perkenalan
-Dalam tutorial ini, kita akan mempelajari cara menghapus balasan anotasi di .NET menggunakan GroupDocs.Annotation. GroupDocs.Annotation adalah perpustakaan .NET yang kuat yang memungkinkan pengembang membuat anotasi dokumen dengan mudah. Baik itu menambahkan komentar, menyorot teks, atau menambahkan stempel, GroupDocs.Annotation menyediakan seperangkat alat lengkap untuk anotasi dokumen.
+Dalam tutorial ini, kita akan menjelajahi cara menghapus balasan pada anotasi di .NET menggunakan GroupDocs.Annotation. GroupDocs.Annotation adalah pustaka .NET yang canggih yang memungkinkan pengembang untuk membuat anotasi dokumen dengan mudah. Baik itu menambahkan komentar, menyorot teks, atau menambahkan stempel, GroupDocs.Annotation menyediakan seperangkat alat yang lengkap untuk anotasi dokumen.
 ## Prasyarat
 Sebelum kita mulai, pastikan Anda memiliki prasyarat berikut:
 - Pengetahuan dasar tentang pemrograman C# dan .NET.
-- Visual Studio diinstal pada sistem Anda.
--  GroupDocs.Annotation untuk .NET diinstal. Anda dapat mengunduhnya dari[Di Sini](https://releases.groupdocs.com/annotation/net/).
+- Visual Studio terinstal di sistem Anda.
+- GroupDocs.Annotation untuk .NET terinstal. Anda dapat mengunduhnya dari [Di Sini](https://releases.groupdocs.com/annotation/net/).
 - Pemahaman tentang cara kerja anotasi di GroupDocs.Annotation.
 
-## Impor Namespace
+## Mengimpor Ruang Nama
 Pertama, Anda perlu mengimpor namespace yang diperlukan untuk mengakses kelas dan metode GroupDocs.Annotation dalam kode C# Anda.
 ```csharp
 using GroupDocs.Annotation.Models;
@@ -29,7 +29,7 @@ using System.Collections.Generic;
 using System.IO;
 ```
 ## Langkah 1: Muat Dokumen
- Muat dokumen yang berisi anotasi dengan balasan menggunakan`Annotator` kelas.
+Muat dokumen yang berisi anotasi dengan balasan menggunakan `Annotator` kelas.
 ```csharp
 using (Annotator annotator = new Annotator("annotated_with_replies.pdf"))
 {
@@ -42,12 +42,12 @@ Ambil koleksi anotasi dari dokumen.
 List<AnnotationBase> annotations = annotator.Get();
 ```
 ## Langkah 3: Hapus Balasan
-Hapus balasan anotasi. Misalnya, mari kita hapus balasan pertama berdasarkan indeks.
+Hapus balasan pada anotasi. Misalnya, mari kita hapus balasan pertama berdasarkan indeks.
 ```csharp
 annotations[0].Replies.RemoveAt(0);
 ```
 ## Langkah 4: Simpan Perubahan
-Simpan perubahan yang dilakukan pada anotasi.
+Simpan perubahan yang dibuat pada anotasi.
 ```csharp
 annotator.Update(annotations);
 ```
@@ -58,21 +58,21 @@ string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetE
 annotator.Save(outputPath);
 ```
 ## Langkah 6: Tampilkan Konfirmasi
-Menampilkan pesan konfirmasi bahwa dokumen telah berhasil disimpan.
+Menampilkan pesan yang mengonfirmasi bahwa dokumen telah berhasil disimpan.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Kesimpulan
-Dalam tutorial ini, kita mempelajari cara menghapus balasan anotasi di .NET menggunakan GroupDocs.Annotation. Hanya dengan beberapa langkah sederhana, Anda dapat memanipulasi anotasi di dokumen Anda secara efisien.
-## FAQ
+Dalam tutorial ini, kita mempelajari cara menghapus balasan pada anotasi di .NET menggunakan GroupDocs.Annotation. Hanya dengan beberapa langkah sederhana, Anda dapat memanipulasi anotasi dalam dokumen Anda secara efisien.
+## Pertanyaan yang Sering Diajukan
 ### Bisakah saya menghapus beberapa balasan sekaligus?
 Ya, Anda dapat menghapus beberapa balasan dengan mengulangi koleksi balasan dan menghapusnya satu per satu.
 ### Apakah GroupDocs.Annotation mendukung format dokumen lain selain PDF?
 Ya, GroupDocs.Annotation mendukung berbagai format dokumen, termasuk Word, Excel, PowerPoint, dan banyak lagi.
 ### Apakah ada versi uji coba yang tersedia untuk GroupDocs.Annotation?
- Ya, Anda dapat mengunduh versi uji coba gratis dari[Di Sini](https://releases.groupdocs.com/).
-### Bagaimana saya bisa mendapatkan lisensi sementara untuk GroupDocs.Annotation?
- Anda dapat memperoleh lisensi sementara dari[Di Sini](https://purchase.groupdocs.com/temporary-license/).
+Ya, Anda dapat mengunduh versi uji coba gratis dari [Di Sini](https://releases.groupdocs.com/).
+### Bagaimana cara mendapatkan lisensi sementara untuk GroupDocs.Annotation?
+Anda dapat memperoleh lisensi sementara dari [Di Sini](https://purchase.groupdocs.com/temporary-license/).
 ### Di mana saya dapat menemukan bantuan dan dukungan untuk GroupDocs.Annotation?
- Anda dapat mengunjungi forum GroupDocs.Annotation[Di Sini](https://forum.groupdocs.com/c/annotation/10) untuk bantuan dan dukungan.
+Anda dapat mengunjungi forum GroupDocs.Annotation [Di Sini](https://forum.groupdocs.com/c/annotation/10) untuk bantuan dan dukungan.

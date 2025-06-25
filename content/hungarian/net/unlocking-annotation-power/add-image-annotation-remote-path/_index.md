@@ -1,78 +1,78 @@
 ---
-title: Képannotáció hozzáadása a dokumentumhoz (távoli elérési út)
-linktitle: Képannotáció hozzáadása a dokumentumhoz (távoli elérési út)
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat hozzá képes megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Javítsa a dokumentumkezelést hatékony annotációs képességekkel.
-weight: 15
-url: /hu/net/unlocking-annotation-power/add-image-annotation-remote-path/
+"description": "Ismerje meg, hogyan adhat hozzá képaláírásokat dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Javítsa a dokumentumkezelést hatékony annotációs képességekkel."
+"linktitle": "Képhozzáfűzés hozzáadása a dokumentumhoz (távoli elérési út)"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Képhozzáfűzés hozzáadása a dokumentumhoz (távoli elérési út)"
+"url": "/hu/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+"weight": 15
 ---
 
-# Képannotáció hozzáadása a dokumentumhoz (távoli elérési út)
+# Képhozzáfűzés hozzáadása a dokumentumhoz (távoli elérési út)
 
 ## Bevezetés
-Ebben az oktatóanyagban a GroupDocs.Annotation for .NET segítségével képjegyzetek dokumentumhoz való hozzáadásának folyamatát mutatjuk be. Ez a könyvtár hatékony eszközöket biztosít a különféle típusú dokumentumok programozott megjegyzéseinek rögzítéséhez.
+Ebben az oktatóanyagban bemutatjuk, hogyan adhatunk képaláírásokat egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ez a függvénytár hatékony eszközöket biztosít különféle típusú dokumentumok programozott annotációjához.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következőkkel:
-1.  GroupDocs.Annotation for .NET: Töltse le és telepítse a könyvtárat innen[itt](https://releases.groupdocs.com/annotation/net/).
-2. Fejlesztési környezet: Győződjön meg arról, hogy működő fejlesztői környezetet állított be a .NET fejlesztéshez.
-3.  Dokumentum: Készítse elő a megjegyzéssel ellátni kívánt dokumentumot. Ebben az oktatóanyagban feltételezzük, hogy van egy elnevezett PDF-dokumentum`input.pdf`.
-4. Kép annotációhoz: Válassza ki a megjegyzéshez használni kívánt képet. Győződjön meg arról, hogy készen áll a kép URL-címe vagy helyi elérési útja.
+Mielőtt elkezdenénk, győződjünk meg róla, hogy a következőkkel rendelkezünk:
+1. GroupDocs.Annotation .NET-hez: Töltse le és telepítse a könyvtárat innen: [itt](https://releases.groupdocs.com/annotation/net/).
+2. Fejlesztői környezet: Győződjön meg arról, hogy rendelkezik egy működő fejlesztői környezettel a .NET fejlesztéshez.
+3. Dokumentum: Készítse elő a jegyzetekkel ellátni kívánt dokumentumot. Ebben az oktatóanyagban feltételezzük, hogy van egy PDF-dokumentuma, amelynek neve `input.pdf`.
+4. Jegyzethez tartozó kép: Válassza ki a jegyzethez használni kívánt képet. Győződjön meg róla, hogy a kép URL-címe vagy helyi elérési útja készen áll.
 
 ## Névterek importálása
-A kódolás megkezdése előtt importáljuk a szükséges névtereket:
+Mielőtt elkezdenénk a kódolást, importáljuk a szükséges névtereket:
 ```csharp
 using System;
 using System.IO;
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
-## 1. lépés: Állítsa be a kimeneti útvonalat
-Először határozza meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentum mentésre kerül.
+## 1. lépés: Kimeneti útvonal beállítása
+Először is határozza meg a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Inicializálja az Annotátort
- Hozzon létre egy példányt a`Annotator` osztályt, és adja meg a bemeneti dokumentumot.
+## 2. lépés: Annotátor inicializálása
+Hozz létre egy példányt a `Annotator` osztályt, és adja meg a bemeneti dokumentumot.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ide kerül a kommentár kódja
+    // Ide fog kerülni a megjegyzéskód
 }
 ```
-## 3. lépés: Képannotáció hozzáadása
-Most adjuk hozzá a kép megjegyzését a dokumentumhoz. Megadjuk a képfeljegyzés tulajdonságait, például pozíciót, átlátszatlanságot, oldalszámot és képútvonalat.
+## 3. lépés: Képhozzáfűzés hozzáadása
+Most adjuk hozzá a képhez tartozó megjegyzést a dokumentumhoz. Megadjuk a képhez tartozó megjegyzés tulajdonságait, például a pozíciót, az átlátszóságot, az oldalszámot és a kép elérési útját.
 ```csharp
 ImageAnnotation image = new ImageAnnotation
 {
     Box = new Rectangle(100, 100, 100, 100), // Adja meg a megjegyzés pozícióját
-    CreatedOn = DateTime.Now, // Állítsa be a létrehozás dátumát
+    CreatedOn = DateTime.Now, // Állítsa be a létrehozási dátumot
     Opacity = 0.7, // Átlátszatlanság beállítása (0-tól 1-ig)
     PageNumber = 0, // Adja meg az oldalszámot
-    ImagePath = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" // Adja meg a kép URL-jét
+    ImagePath = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" // Adja meg a kép URL-címét
 };
-annotator.Add(image); // Adja hozzá a kép megjegyzését
+annotator.Add(image); // Képhez tartozó megjegyzés hozzáadása
 ```
-## 4. lépés: Mentse el a dokumentumot
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+## 4. lépés: Dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 annotator.Save(outputPath);
 ```
 ## 5. lépés: Kimeneti útvonal megjelenítése
-Tájékoztassa a felhasználót a sikeres dokumentummentési műveletről, és jelenítse meg a kimeneti útvonalat.
+Tájékoztassa a felhasználót a sikeres dokumentummentési műveletről, és jelenítse meg a kimeneti elérési utat.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan adhatunk képjegyzeteket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ha követi ezeket a lépéseket, dokumentumkezelő alkalmazásait hatékony jegyzetelési képességekkel bővítheti.
+Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá képaláírásokat egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ezeket a lépéseket követve hatékony annotációs képességekkel bővítheti dokumentumkezelő alkalmazásait.
 ## GYIK
-### A GroupDocs.Annotation használható a PDF-en kívül más dokumentumformátumokkal is?
-Igen, a GroupDocs.Annotation különféle dokumentumformátumokat támogat, beleértve a Word, Excel, PowerPoint és egyebeket.
-### A GroupDocs.Annotation kompatibilis a .NET Core programmal?
-Igen, a GroupDocs.Annotation kompatibilis a .NET-keretrendszerrel és a .NET Core-al is.
-### Testreszabhatom a kommentárok megjelenését?
-Igen, testreszabhatja a megjegyzések megjelenését, például a színt, az átlátszatlanságot és a méretet.
-### Támogatja a GroupDocs.Annotation az együttműködési jegyzetelési funkciókat?
-Igen, a GroupDocs.Annotation együttműködési jegyzetelési szolgáltatásokat kínál a dokumentumokon való valós idejű együttműködéshez.
-### Létezik próbaverzió tesztelésre?
- Igen, ingyenes próbaverziót kaphat a GroupDocs.Annotation webhelyen[itt](https://releases.groupdocs.com/).
+### Használható a GroupDocs.Annotation a PDF-en kívül más dokumentumformátumokkal is?
+Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a Wordöt, az Excelt, a PowerPointot és egyebeket.
+### Kompatibilis a GroupDocs.Annotation a .NET Core-ral?
+Igen, a GroupDocs.Annotation kompatibilis mind a .NET Framework, mind a .NET Core rendszerrel.
+### Testreszabhatom a megjegyzések megjelenését?
+Igen, testreszabhatja a megjegyzések megjelenését, például a színét, az átlátszóságát és a méretét.
+### A GroupDocs.Annotation támogatja az együttműködésen alapuló annotációs funkciókat?
+Igen, a GroupDocs.Annotation közös annotációs funkciókat kínál a dokumentumokon valós idejű együttműködéshez.
+### Van elérhető próbaverzió tesztelésre?
+Igen, ingyenes próbaverziót kaphat a GroupDocs.Annotation szolgáltatásból innen: [itt](https://releases.groupdocs.com/).

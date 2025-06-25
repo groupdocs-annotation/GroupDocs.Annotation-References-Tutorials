@@ -1,23 +1,23 @@
 ---
-title: Dodaj adnotację fragmentu wyszukiwania do dokumentu
-linktitle: Dodaj adnotację fragmentu wyszukiwania do dokumentu
-second_title: GroupDocs.Adnotacja .NET API
-description: Poznaj możliwości GroupDocs.Annotation dla .NET i bez wysiłku dodawaj możliwości adnotacji w dokumentach do swoich aplikacji.
-weight: 20
-url: /pl/net/unlocking-annotation-power/add-search-text-fragment-annotation/
+"description": "Poznaj możliwości narzędzia GroupDocs.Annotation dla platformy .NET i bez trudu dodaj funkcje adnotacji dokumentów do swoich aplikacji."
+"linktitle": "Dodaj adnotację fragmentu tekstu wyszukiwania do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dodaj adnotację fragmentu tekstu wyszukiwania do dokumentu"
+"url": "/pl/net/unlocking-annotation-power/add-search-text-fragment-annotation/"
+"weight": 20
 ---
 
-# Dodaj adnotację fragmentu wyszukiwania do dokumentu
+# Dodaj adnotację fragmentu tekstu wyszukiwania do dokumentu
 
 ## Wstęp
-W dziedzinie programowania .NET GroupDocs.Annotation wyróżnia się jako potężne narzędzie do płynnego dodawania adnotacji do dokumentów. Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero wkraczasz w świat .NET, ten kompleksowy samouczek przeprowadzi Cię przez podstawy korzystania z GroupDocs.Annotation dla .NET, od importowania przestrzeni nazw po opanowanie zawiłości dodawania adnotacji fragmentów wyszukiwanego tekstu do dokumenty.
+W dziedzinie rozwoju .NET GroupDocs.Annotation wyróżnia się jako potężne narzędzie do bezproblemowego adnotowania dokumentów. Niezależnie od tego, czy jesteś doświadczonym programistą, czy dopiero wkraczasz w świat .NET, ten kompleksowy samouczek przeprowadzi Cię przez podstawy korzystania z GroupDocs.Annotation dla .NET, od importowania przestrzeni nazw po opanowanie zawiłości dodawania adnotacji fragmentów tekstu wyszukiwania do dokumentów.
 ## Wstęp
-GroupDocs.Annotation dla .NET umożliwia programistom łatwe włączanie funkcji adnotacji do dokumentów do swoich aplikacji. Dzięki intuicyjnemu interfejsowi API i niezawodnym funkcjom programiści mogą dodawać adnotacje do różnych formatów dokumentów, w tym plików PDF, dokumentów Microsoft Office, obrazów i innych.
-## Warunki wstępne
-Zanim zagłębisz się w GroupDocs.Annotation dla .NET, upewnij się, że spełnione są następujące wymagania wstępne:
+GroupDocs.Annotation for .NET umożliwia programistom łatwe włączanie funkcji adnotacji dokumentów do swoich aplikacji. Dzięki intuicyjnemu interfejsowi API i solidnym funkcjom programiści mogą adnotować różne formaty dokumentów, w tym pliki PDF, dokumenty Microsoft Office, obrazy i inne.
+## Wymagania wstępne
+Zanim przejdziesz do GroupDocs.Annotation dla platformy .NET, upewnij się, że spełnione są następujące wymagania wstępne:
 
 ## Importuj przestrzenie nazw
-Najpierw zaimportuj niezbędne przestrzenie nazw, aby uzyskać dostęp do klas i metod GroupDocs.Annotation w projekcie .NET:
+Najpierw zaimportuj niezbędne przestrzenie nazw, aby uzyskać dostęp do klas i metod GroupDocs.Annotation w swoim projekcie .NET:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 ## Krok 1: Zdefiniuj ścieżkę wyjściową
-Rozpocznij od zdefiniowania ścieżki wyjściowej, w której zostanie zapisany dokument z adnotacjami:
+Zacznij od zdefiniowania ścieżki wyjściowej, w której zostanie zapisany dokument z adnotacjami:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Zainicjuj adnotator
- Następnie zainicjuj instancję`Annotator` class, podając ścieżkę do dokumentu, do którego chcesz dodać adnotację:
+## Krok 2: Zainicjuj Adnotator
+Następnie zainicjuj instancję `Annotator` klasę, podając ścieżkę do dokumentu, który chcesz adnotować:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Krok 3: Utwórz adnotację do fragmentu wyszukiwania
- Stwórz`SearchTextFragment` obiekt o żądanych właściwościach, takich jak wyszukiwany tekst, rozmiar czcionki, rodzina czcionek, kolor czcionki i kolor tła:
+## Krok 3: Utwórz adnotację fragmentu tekstu wyszukiwania
+Utwórz `SearchTextFragment` obiekt o pożądanych właściwościach, takich jak tekst do wyszukania, rozmiar czcionki, rodzina czcionek, kolor czcionki i kolor tła:
 ```csharp
 SearchTextFragment searchText = new SearchTextFragment()
 {
@@ -50,7 +50,7 @@ SearchTextFragment searchText = new SearchTextFragment()
 };
 ```
 ## Krok 4: Dodaj adnotację
- Dodaj adnotację utworzonego fragmentu szukanego tekstu do dokumentu za pomocą`Add` metoda adnotatora:
+Dodaj do dokumentu adnotację utworzonego fragmentu tekstu wyszukiwania za pomocą `Add` metoda adnotatora:
 ```csharp
 annotator.Add(searchText);
 ```
@@ -66,15 +66,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Wniosek
-Podsumowując, GroupDocs.Annotation dla .NET upraszcza proces dodawania adnotacji do dokumentów, usprawniając procesy współpracy i przeglądu dokumentów. Wykonując kroki opisane w tym przewodniku, możesz bezproblemowo zintegrować możliwości dodawania adnotacji w dokumentach z aplikacjami .NET.
-## Często zadawane pytania
+Podsumowując, GroupDocs.Annotation dla .NET upraszcza proces dodawania adnotacji do dokumentów, usprawniając współpracę i procesy przeglądu dokumentów. Postępując zgodnie z krokami opisanymi w tym przewodniku, możesz bezproblemowo zintegrować możliwości adnotacji dokumentów z aplikacjami .NET.
+## Najczęściej zadawane pytania
 ### Czy GroupDocs.Annotation jest kompatybilny ze wszystkimi formatami dokumentów?
-Tak, GroupDocs.Annotation obsługuje szeroką gamę formatów dokumentów, w tym pliki PDF, dokumenty Microsoft Office, obrazy i inne.
+Tak, GroupDocs.Annotation obsługuje szeroką gamę formatów dokumentów, w tym pliki PDF, dokumenty pakietu Microsoft Office, obrazy i inne.
 ### Czy mogę dostosować wygląd adnotacji?
-Absolutnie! GroupDocs.Annotation udostępnia szerokie opcje dostosowywania adnotacji, umożliwiając dostosowanie takich właściwości, jak rozmiar, kolor i styl czcionki.
-### Czy dostępna jest bezpłatna wersja próbna GroupDocs.Annotation?
- Tak, możesz uzyskać dostęp do bezpłatnej wersji próbnej GroupDocs.Annotation, aby zapoznać się z jej funkcjami i możliwościami przed dokonaniem zakupu[Tutaj](https://releases.groupdocs.com/)..
+Oczywiście! GroupDocs.Annotation zapewnia rozbudowane opcje dostosowywania adnotacji, umożliwiając dostosowanie właściwości, takich jak rozmiar czcionki, kolor i styl.
+### Czy jest dostępna bezpłatna wersja próbna GroupDocs.Annotation?
+Tak, możesz uzyskać dostęp do bezpłatnej wersji próbnej GroupDocs.Annotation, aby zapoznać się z jej funkcjami i możliwościami przed dokonaniem zakupu [Tutaj](https://releases.groupdocs.com/)..
 ### Gdzie mogę znaleźć pomoc dotyczącą GroupDocs.Annotation?
- Aby uzyskać wsparcie i pomoc dotyczącą GroupDocs.Annotation, możesz odwiedzić stronę GroupDocs[forum](https://forum.groupdocs.com/c/annotation/10) przeznaczony do zapytań i dyskusji związanych z adnotacjami.
+Aby uzyskać pomoc i wsparcie dotyczące GroupDocs.Annotation, możesz odwiedzić witrynę GroupDocs [forum](https://forum.groupdocs.com/c/annotation/10) poświęcony zapytaniom i dyskusjom związanym z adnotacjami.
 ### Jak uzyskać tymczasową licencję na GroupDocs.Annotation?
- Tymczasową licencję na GroupDocs.Annotation można nabyć za pośrednictwem GroupDocs[strona internetowa](https://purchase.groupdocs.com/temporary-license/)co pozwala na pełną ocenę produktu.
+Możesz nabyć tymczasową licencję na GroupDocs.Annotation za pośrednictwem GroupDocs [strona internetowa](https://purchase.groupdocs.com/temporary-license/), co pozwoli Ci w pełni ocenić produkt.

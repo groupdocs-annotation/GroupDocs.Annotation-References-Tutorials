@@ -1,22 +1,22 @@
 ---
-title: Tambahkan Anotasi Ellipse ke Dokumen
-linktitle: Tambahkan Anotasi Ellipse ke Dokumen
-second_title: GroupDocs.Annotasi .NET API
-description: Pelajari cara menambahkan anotasi elips ke dokumen di .NET menggunakan GroupDocs.Annotation. Tingkatkan kolaborasi dan komunikasi dengan mudah.
-weight: 13
-url: /id/net/unlocking-annotation-power/add-ellipse-annotation/
+"description": "Pelajari cara menambahkan anotasi elips ke dokumen dalam .NET menggunakan GroupDocs.Annotation. Tingkatkan kolaborasi dan komunikasi dengan mudah."
+"linktitle": "Tambahkan Anotasi Elips ke Dokumen"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Tambahkan Anotasi Elips ke Dokumen"
+"url": "/id/net/unlocking-annotation-power/add-ellipse-annotation/"
+"weight": 13
 ---
 
-# Tambahkan Anotasi Ellipse ke Dokumen
+# Tambahkan Anotasi Elips ke Dokumen
 
 ## Perkenalan
-Dalam tutorial ini, Anda akan mempelajari cara menambahkan anotasi elips ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Panduan langkah demi langkah ini akan memandu Anda melalui prosesnya, memastikan bahwa Anda memahami setiap langkah dengan jelas.
+Dalam tutorial ini, Anda akan mempelajari cara menambahkan anotasi elips ke dokumen menggunakan GroupDocs.Annotation for .NET. Panduan langkah demi langkah ini akan memandu Anda melalui prosesnya, memastikan bahwa Anda memahami setiap langkah dengan jelas.
 ## Prasyarat
 Sebelum memulai, pastikan Anda memiliki hal berikut:
-1.  GroupDocs.Annotation untuk .NET: Pastikan Anda telah mengunduh dan menginstal GroupDocs.Annotation untuk .NET. Anda dapat mengunduhnya dari[Di Sini](https://releases.groupdocs.com/annotation/net/).
-2. IDE (Integrated Development Environment): Anda memerlukan IDE yang terinstal di sistem Anda, seperti Visual Studio, untuk menulis dan mengeksekusi kode.
+1. GroupDocs.Annotation untuk .NET: Pastikan Anda telah mengunduh dan menginstal GroupDocs.Annotation untuk .NET. Anda dapat mengunduhnya dari [Di Sini](https://releases.groupdocs.com/annotation/net/).
+2. IDE (Integrated Development Environment): Anda memerlukan IDE yang terpasang di sistem Anda, seperti Visual Studio, untuk menulis dan mengeksekusi kode.
 
-## Impor Namespace
+## Mengimpor Ruang Nama
 Pertama, impor namespace yang diperlukan ke proyek Anda:
 ```csharp
 using System;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Langkah 1: Tetapkan Jalur Keluaran
-Tentukan jalur keluaran tempat dokumen beranotasi akan disimpan:
+## Langkah 1: Tetapkan Jalur Output
+Tentukan jalur keluaran tempat dokumen yang diberi anotasi akan disimpan:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Langkah 2: Inisialisasi Annotator
-Inisialisasi anotator dengan menyediakan jalur dokumen masukan:
+## Langkah 2: Inisialisasi Anotator
+Inisialisasi anotator dengan memberikan jalur dokumen input:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Langkah 3: Buat Anotasi Ellipse
- Buat sebuah instance dari`EllipseAnnotation` kelas dan atur propertinya:
+## Langkah 3: Buat Anotasi Elips
+Buat contoh dari `EllipseAnnotation` kelas dan atur propertinya:
 ```csharp
 EllipseAnnotation ellipse = new EllipseAnnotation
 {
@@ -72,21 +72,21 @@ Tambahkan anotasi elips ke dokumen:
 annotator.Add(ellipse);
 ```
 ## Langkah 5: Simpan Dokumen
-Simpan dokumen beranotasi ke jalur keluaran:
+Simpan dokumen yang diberi anotasi ke jalur keluaran:
 ```csharp
 annotator.Save(outputPath);
 ```
 
 ## Kesimpulan
-Selamat! Anda telah berhasil menambahkan anotasi elips ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Anda sekarang dapat mengintegrasikan fungsi ini ke dalam aplikasi .NET Anda untuk meningkatkan kolaborasi dan komunikasi dokumen.
-## FAQ
+Selamat! Anda telah berhasil menambahkan anotasi elips ke dokumen menggunakan GroupDocs.Annotation for .NET. Kini Anda dapat mengintegrasikan fungsi ini ke dalam aplikasi .NET Anda untuk meningkatkan kolaborasi dan komunikasi dokumen.
+## Pertanyaan yang Sering Diajukan
 ### Bisakah saya menyesuaikan tampilan anotasi elips?
-Ya, Anda dapat menyesuaikan berbagai properti seperti warna latar belakang, warna batas, opacity, dll., sesuai dengan kebutuhan Anda.
+Ya, Anda dapat menyesuaikan berbagai properti seperti warna latar belakang, warna batas, opasitas, dsb., sesuai kebutuhan Anda.
 ### Apakah GroupDocs.Annotation untuk .NET kompatibel dengan semua format dokumen?
 GroupDocs.Annotation untuk .NET mendukung berbagai format dokumen termasuk PDF, DOCX, PPTX, XLSX, dan banyak lagi.
-### Bisakah saya menambahkan banyak anotasi ke satu dokumen?
+### Bisakah saya menambahkan beberapa anotasi ke satu dokumen?
 Ya, Anda dapat menambahkan beberapa anotasi termasuk elips, persegi panjang, teks, dll., ke satu dokumen.
 ### Apakah ada versi uji coba yang tersedia untuk tujuan pengujian?
- Ya, Anda dapat mengunduh versi uji coba gratis dari[Di Sini](https://releases.groupdocs.com/) untuk mengevaluasi fitur-fiturnya.
+Ya, Anda dapat mengunduh versi uji coba gratis dari [Di Sini](https://releases.groupdocs.com/) untuk mengevaluasi fitur-fiturnya.
 ### Di mana saya bisa mendapatkan dukungan teknis untuk GroupDocs.Annotation untuk .NET?
- Anda bisa mendapatkan dukungan teknis dari forum komunitas GroupDocs.Annotation[Di Sini](https://forum.groupdocs.com/c/annotation/10).
+Anda bisa mendapatkan dukungan teknis dari forum komunitas GroupDocs.Annotation [Di Sini](https://forum.groupdocs.com/c/annotation/10).

@@ -1,21 +1,21 @@
 ---
-title: Belgeye Dalgalı Metin Açıklaması Ekleme
-linktitle: Belgeye Dalgalı Metin Açıklaması Ekleme
-second_title: GroupDocs.Annotation .NET API'si
-description: Groupdocs.Annotation for .NET'i kullanarak belgelere zahmetsizce dalgalı metin açıklamaları eklemeyi öğrenin. İşbirliği ve belge inceleme süreçlerini geliştirin.
-weight: 25
-url: /tr/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Groupdocs.Annotation for .NET'i kullanarak belgelere kıvrımlı metin açıklamalarını zahmetsizce nasıl ekleyeceğinizi öğrenin. İş birliğini ve belge inceleme süreçlerini geliştirin."
+"linktitle": "Belgeye Metin Dalgalı Açıklama Ekle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeye Metin Dalgalı Açıklama Ekle"
+"url": "/tr/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
-# Belgeye Dalgalı Metin Açıklaması Ekleme
+# Belgeye Metin Dalgalı Açıklama Ekle
 
 ## giriiş
 
-Groupdocs.Annotation for .NET, geliştiricilerin güçlü açıklama özelliklerini .NET uygulamalarına zahmetsizce entegre etmelerine olanak tanıyan çok yönlü bir kitaplıktır. İster PDF'lerle, ister Word belgeleriyle, ister diğer popüler dosya formatlarıyla çalışıyor olun, Groupdocs.Annotation, belgeye açıklama eklemek ve belge işbirliğini geliştirmek için kusursuz bir çözüm sunar.
+Groupdocs.Annotation for .NET, geliştiricilerin .NET uygulamalarına zahmetsizce güçlü açıklama yeteneklerini entegre etmelerini sağlayan çok yönlü bir kütüphanedir. İster PDF'lerle, ister Word belgeleriyle veya diğer popüler dosya biçimleriyle çalışın, Groupdocs.Annotation belge iş birliğini açıklama ve geliştirme için kusursuz bir çözüm sunar.
 
-## Önkoşullar
+## Ön koşullar
 
-Eğiticiye dalmadan önce aşağıdaki önkoşulların yerine getirildiğinden emin olun:
+Eğitime başlamadan önce aşağıdaki ön koşulların mevcut olduğundan emin olun:
 
 ## Ad Alanlarını İçe Aktar
 
@@ -30,9 +30,9 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Artık önkoşulları ele aldığımıza göre, dalgalı metin açıklamaları ekleme sürecini birden çok adıma ayıralım.
+Artık ön koşulları tamamladığımıza göre, metne kıvrımlı açıklamalar ekleme sürecini birden fazla adıma bölelim.
 
-## Adım 1: Çıkış Yolunu Tanımlayın
+## Adım 1: Çıktı Yolunu Tanımlayın
 
 Açıklamalı belgenin kaydedileceği yolu tanımlayın.
 
@@ -40,18 +40,18 @@ Açıklamalı belgenin kaydedileceği yolu tanımlayın.
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## 2. Adım: Annotator'ı Başlatın
+## Adım 2: Annotator'ı Başlatın
 
 Giriş belgesi yolunu sağlayarak Annotator nesnesini başlatın.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ek açıklama kodu buraya gelecek
+    // Açıklama kodu buraya gelir
 }
 ```
 
-## 3. Adım: Dalgalı Ek Açıklama Oluşturun
+## Adım 3: Dalgalı Açıklama Oluşturun
 
 Bir SquigglyAnnotation nesnesi oluşturun ve özelliklerini belirtin.
 
@@ -85,15 +85,15 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 };
 ```
 
-## 4. Adım: Ek Açıklama Ekle
+## Adım 4: Açıklama Ekle
 
-Oluşturulan dalgalı açıklamayı belgeye ekleyin.
+Oluşturulan kıvrımlı açıklamayı belgeye ekleyin.
 
 ```csharp
 annotator.Add(squiggly);
 ```
 
-## Adım 5: Belgeyi Kaydet
+## Adım 5: Belgeyi Kaydedin
 
 Açıklamalı belgeyi belirtilen çıktı yoluna kaydedin.
 
@@ -101,9 +101,9 @@ Açıklamalı belgeyi belirtilen çıktı yoluna kaydedin.
 annotator.Save(outputPath);
 ```
 
-## Adım 6: Onayı Görüntüle
+## Adım 6: Onay Ekranı
 
-Açıklamalı belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntüler.
+Açıklamalı belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntüle.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Çözüm
 
-Sonuç olarak Groupdocs.Annotation for .NET, geliştiricilere belge açıklama işlevlerini .NET uygulamalarına sorunsuz bir şekilde entegre etmeleri için güçlü bir araç seti sağlar. Bu adım adım kılavuzu izleyerek belgelerinize zahmetsizce metin açıklamaları ekleyebilir, işbirliği ve belge inceleme süreçlerini geliştirebilirsiniz.
+Sonuç olarak, Groupdocs.Annotation for .NET, geliştiricilere belge açıklama işlevlerini .NET uygulamalarına sorunsuz bir şekilde entegre etmeleri için sağlam bir araç seti sağlar. Bu adım adım kılavuzu izleyerek, belgelerinize zahmetsizce kıvrımlı metin açıklamaları ekleyebilir, iş birliğini ve belge inceleme süreçlerini geliştirebilirsiniz.
 
-## SSS'ler
+## SSS
 
-### S: Groupdocs.Annotation çeşitli dosya formatlarında açıklama eklemeyi destekleyebilir mi?
+### S: Groupdocs.Annotation çeşitli dosya biçimlerine açıklama eklemeyi destekleyebilir mi?
 
-C: Evet, Groupdocs.Annotation, PDF'ler, Word belgeleri, Excel sayfaları ve daha fazlası dahil olmak üzere çok çeşitli dosya formatlarında açıklama eklemeyi destekler.
+C: Evet, Groupdocs.Annotation PDF'ler, Word belgeleri, Excel sayfaları ve daha fazlası dahil olmak üzere çok çeşitli dosya biçimlerine açıklama eklemeyi destekler.
 
-### S: Groupdocs.Annotation hem masaüstü hem de web uygulamalarıyla uyumlu mudur?
+### S: Groupdocs.Annotation masaüstü ve web uygulamalarıyla uyumlu mu?
 
-C: Kesinlikle! Groupdocs.Annotation, esneklik ve çok yönlülük sunarak hem masaüstü hem de web uygulamalarına sorunsuz bir şekilde entegre edilebilir.
+C: Kesinlikle! Groupdocs.Annotation, hem masaüstü hem de web uygulamalarına sorunsuz bir şekilde entegre edilebilir, esneklik ve çok yönlülük sunar.
 
 ### S: Groupdocs.Annotation için herhangi bir lisanslama seçeneği mevcut mu?
 
-C: Evet, Groupdocs.Annotation, deneme amaçlı geçici lisanslar da dahil olmak üzere bireysel veya kurumsal ihtiyaçlara uyacak şekilde uyarlanmış esnek lisanslama seçenekleri sunar.
+C: Evet, Groupdocs.Annotation, deneme amaçlı geçici lisanslar da dahil olmak üzere, bireysel veya kurumsal ihtiyaçlara göre uyarlanmış esnek lisanslama seçenekleri sunar.
 
-### S: Groupdocs.Annotation kullanılarak oluşturulan ek açıklamalar özelleştirilebilir mi?
+### S: Groupdocs.Annotation kullanılarak oluşturulan açıklamalar özelleştirilebilir mi?
 
-C: Kesinlikle! Groupdocs.Annotation, ek açıklamalar için kapsamlı özelleştirme seçenekleri sunarak geliştiricilerin ek açıklamaları kendi özel gereksinimlerine göre uyarlamasına olanak tanır.
+A: Elbette! Groupdocs.Annotation, geliştiricilerin açıklamaları kendi özel gereksinimlerine göre uyarlamalarına olanak tanıyan açıklamalar için kapsamlı özelleştirme seçenekleri sunar.
 
-### S: Groupdocs.Annotation geliştiriciler için destek ve dokümantasyon sunuyor mu?
+### S: Groupdocs.Annotation geliştiricilere destek ve dokümantasyon sunuyor mu?
 
-C: Gerçekten! Groupdocs.Annotation, geliştiricilerin özelliklerini etkili bir şekilde kullanmalarına yardımcı olmak için kapsamlı belgeler ve özel destek forumları sağlar.
+A: Kesinlikle! Groupdocs.Annotation, geliştiricilerin özelliklerini etkili bir şekilde kullanmalarına yardımcı olmak için kapsamlı belgeler ve özel destek forumları sağlar.

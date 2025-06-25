@@ -1,27 +1,27 @@
 ---
-title: 문서에 거리 주석 추가
-linktitle: 문서에 거리 주석 추가
-second_title: GroupDocs.Annotation .NET API
-description: .NET용 GroupDocs.Annotation을 사용하여 문서에 거리 주석을 추가하는 방법을 알아보세요. 손쉽게 협업과 커뮤니케이션을 강화하세요.
-weight: 12
-url: /ko/net/unlocking-annotation-power/add-distance-annotation/
+"description": "GroupDocs.Annotation for .NET을 사용하여 문서에 거리 주석을 추가하는 방법을 알아보세요. 협업과 커뮤니케이션을 손쉽게 향상시켜 보세요."
+"linktitle": "문서에 거리 주석 추가"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "문서에 거리 주석 추가"
+"url": "/ko/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
 # 문서에 거리 주석 추가
 
 ## 소개
-이 튜토리얼에서는 .NET용 GroupDocs.Annotation을 사용하여 문서에 거리 주석을 추가하는 방법을 배웁니다. 작업을 완료하려면 다음 단계를 따르세요.
-## 전제 조건
+이 튜토리얼에서는 GroupDocs.Annotation for .NET을 사용하여 문서에 거리 주석을 추가하는 방법을 알아봅니다. 다음 단계에 따라 작업을 완료하세요.
+## 필수 조건
 
-계속하기 전에 다음 전제조건이 충족되었는지 확인하십시오.
+계속 진행하기 전에 다음 전제 조건이 충족되었는지 확인하세요.
 
--  .NET 라이브러리용 GroupDocs.Annotation: 다음 위치에서 .NET 라이브러리용 GroupDocs.Annotation을 다운로드하고 설치합니다.[이 링크](https://releases.groupdocs.com/annotation/net/).
+- .NET 라이브러리용 GroupDocs.Annotation: .NET 라이브러리용 GroupDocs.Annotation을 다운로드하여 설치하세요. [이 링크](https://releases.groupdocs.com/annotation/net/).
 - 주석을 달 문서: 거리 주석을 추가할 문서(예: PDF)를 준비합니다.
-- 개발 환경: Visual Studio 또는 원하는 다른 IDE를 사용하여 개발 환경을 설정합니다.
+- 개발 환경: Visual Studio나 원하는 다른 IDE로 개발 환경을 설정하세요.
 
 ## 네임스페이스 가져오기
 
-시작하기 전에 코드에 필요한 네임스페이스를 포함했는지 확인하세요. 이러한 네임스페이스는 필수 클래스와 메서드에 액세스하는 데 필수적입니다.
+시작하기 전에 코드에 필요한 네임스페이스를 포함해야 합니다. 이러한 네임스페이스는 필요한 클래스와 메서드에 액세스하는 데 필수적입니다.
 
 ```csharp
 using System;
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## 1단계: 주석자 초기화
+## 1단계: Annotator 초기화
 
- 초기화부터 시작하세요.`Annotator` 주석을 달고 싶은 문서의 경로를 개체에 추가하세요.
+초기화로 시작하세요 `Annotator` 주석을 달고 싶은 문서의 경로가 있는 객체입니다.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // 주석 코드가 여기에 표시됩니다.
+    // 주석 코드는 여기에 들어갑니다
 }
 ```
 
-## 2단계: 거리 주석 생성
+## 2단계: 거리 주석 만들기
 
- 이제`DistanceAnnotation` 상자 크기, 메시지, 불투명도, 펜 색상 등과 같은 개체의 속성을 구성합니다.
+이제 생성하세요 `DistanceAnnotation` 객체를 만들고 상자 크기, 메시지, 불투명도, 펜 색상 등의 속성을 구성합니다.
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -77,7 +77,7 @@ DistanceAnnotation distance = new DistanceAnnotation
 
 ## 3단계: 주석 추가
 
- 생성된 거리 주석을 다음을 사용하여 문서에 추가합니다.`Add` 주석자 개체의 메서드입니다.
+생성된 거리 주석을 문서에 추가하려면 다음을 사용합니다. `Add` 주석자 객체의 메서드.
 
 ```csharp
 annotator.Add(distance);
@@ -92,9 +92,9 @@ string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetE
 annotator.Save(outputPath);
 ```
 
-## 5단계: 표시 확인
+## 5단계: 확인 표시
 
-마지막으로 주석이 달린 문서가 성공적으로 저장되었음을 확인하는 메시지를 표시합니다.
+마지막으로, 주석이 달린 문서가 성공적으로 저장되었음을 확인하는 메시지를 표시합니다.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -102,26 +102,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## 결론
 
-.NET용 GroupDocs.Annotation을 사용하여 문서에 거리 주석을 추가하는 과정은 간단합니다. 이 튜토리얼에 설명된 단계를 따르면 귀중한 주석을 추가하여 문서를 개선하고 더 나은 협업과 커뮤니케이션을 촉진할 수 있습니다.
+GroupDocs.Annotation for .NET을 사용하여 문서에 거리 주석을 추가하는 것은 간단한 과정입니다. 이 튜토리얼에 설명된 단계를 따르면 유용한 주석으로 문서를 더욱 풍부하게 만들고, 협업과 소통을 더욱 원활하게 할 수 있습니다.
 
-## FAQ
+## 자주 묻는 질문
 
-### Q: 거리 주석의 모양을 사용자 정의할 수 있습니까?
+### 질문: 거리 주석의 모양을 사용자 지정할 수 있나요?
 
-A: 예, 색상, 불투명도, 선 스타일 등과 같은 다양한 속성을 요구 사항에 맞게 사용자 정의할 수 있습니다.
+답변: 네, 색상, 불투명도, 선 스타일 등 다양한 속성을 요구 사항에 맞게 사용자 정의할 수 있습니다.
 
-### Q: GroupDocs.Annotation은 다양한 유형의 문서에 대한 주석을 지원합니까?
+### 질문: GroupDocs.Annotation은 다양한 유형의 문서에 대한 주석을 지원합니까?
 
-A: 예, GroupDocs.Annotation은 PDF, Word, Excel, PowerPoint 등을 포함한 광범위한 문서 형식에 대한 주석을 지원합니다.
+답변: 네, GroupDocs.Annotation은 PDF, Word, Excel, PowerPoint 등 다양한 문서 형식에 대한 주석을 지원합니다.
 
-### Q: GroupDocs.Annotation에 대한 무료 평가판이 있습니까?
+### 질문: GroupDocs.Annotation에 대한 무료 평가판이 있나요?
 
- A: 예, 다음에서 GroupDocs.Annotation 무료 평가판에 액세스할 수 있습니다.[이 링크](https://releases.groupdocs.com/).
+A: 예, GroupDocs.Annotation의 무료 평가판에 액세스할 수 있습니다. [이 링크](https://releases.groupdocs.com/).
 
-### Q: .NET용 GroupDocs.Annotation 설명서는 어디에서 찾을 수 있습니까?
+### 질문: .NET용 GroupDocs.Annotation에 대한 설명서는 어디에서 찾을 수 있나요?
 
- A: 사용 가능한 자세한 문서를 참조할 수 있습니다.[여기](https://tutorials.groupdocs.com/annotation/net/).
+A: 자세한 내용은 사용 가능한 문서를 참조하시면 됩니다. [여기](https://tutorials.groupdocs.com/annotation/net/).
 
-### 질문: GroupDocs.Annotation에 대한 지원을 받으려면 어떻게 해야 합니까?
+### 질문: GroupDocs.Annotation에 대한 지원이나 도움을 받으려면 어떻게 해야 하나요?
 
- A: GroupDocs.Annotation 커뮤니티 포럼에서 지원을 구할 수 있습니다.[여기](https://forum.groupdocs.com/c/annotation/10).
+A: GroupDocs.Annotation 커뮤니티 포럼에서 지원과 도움을 요청할 수 있습니다. [여기](https://forum.groupdocs.com/c/annotation/10).

@@ -1,25 +1,25 @@
 ---
-title: Dokumentum betöltése az URL-ről
-linktitle: Dokumentum betöltése az URL-ről
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan fűzhet programozott megjegyzéseket PDF-dokumentumokhoz a GroupDocs.Annotation for .NET használatával. Lépésről lépésre bemutató oktatóprogram kódpéldákkal.
-weight: 15
-url: /hu/net/document-loading-essentials/load-document-from-url/
+"description": "Tanulja meg, hogyan láthat el programozottan PDF dokumentumokat jegyzetekkel a GroupDocs.Annotation for .NET használatával. Lépésről lépésre bemutató kódpéldákkal."
+"linktitle": "Dokumentum betöltése URL-címről"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dokumentum betöltése URL-címről"
+"url": "/hu/net/document-loading-essentials/load-document-from-url/"
+"weight": 15
 ---
 
-# Dokumentum betöltése az URL-ről
+# Dokumentum betöltése URL-címről
 
 ## Bevezetés
-GroupDocs.Annotation for .NET egy olyan funkciókban gazdag könyvtár, amely lehetővé teszi a fejlesztők számára, hogy .NET-alkalmazásaikat könnyedén annotációs képességekkel adják hozzá. A GroupDocs.Annotation segítségével programozottan megjegyzéseket fűzhet a PDF-dokumentumokhoz, így a felhasználók szöveget emelhetnek ki, megjegyzéseket fűzhetnek hozzá, alakzatokat rajzolhatnak stb. Ez az oktatóanyag végigvezeti a dokumentum URL-ből való betöltésének, megjegyzések hozzáadásának és a megjegyzésekkel ellátott dokumentum mentésének lépésein a GroupDocs.Annotation for .NET segítségével.
+A GroupDocs.Annotation for .NET egy funkciókban gazdag könyvtár, amely lehetővé teszi a fejlesztők számára, hogy könnyedén adhassanak jegyzetelési lehetőségeket .NET alkalmazásaikhoz. A GroupDocs.Annotation segítségével programozottan láthat el jegyzeteket PDF dokumentumokban, lehetővé téve a felhasználók számára, hogy kiemeljék a szöveget, megjegyzéseket fűzzenek hozzá, alakzatokat rajzoljanak és egyebeket. Ez az oktatóanyag végigvezeti Önt egy dokumentum URL-címről történő betöltésének, jegyzetek hozzáadásának és a jegyzetelt dokumentum GroupDocs.Annotation for .NET segítségével történő mentésének lépésein.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következő előfeltételekkel:
-1. Visual Studio: Győződjön meg arról, hogy a Visual Studio telepítve van a fejlesztőgépen.
-2.  GroupDocs.Annotation for .NET: Töltse le és telepítse a GroupDocs.Annotation for .NET webhelyről[weboldal](https://releases.groupdocs.com/annotation/net/).
+Mielőtt elkezdené, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
+1. Visual Studio: Győződjön meg arról, hogy a Visual Studio telepítve van a fejlesztőgépén.
+2. GroupDocs.Annotation for .NET: Töltse le és telepítse a GroupDocs.Annotation for .NET fájlt a következő helyről: [weboldal](https://releases.groupdocs.com/annotation/net/).
 3. C# alapismeretek: Ismerkedjen meg a C# programozási nyelvvel.
-4. Internetkapcsolat: A külső források eléréséhez és a mintafájlok letöltéséhez internetkapcsolatra lesz szüksége.
+4. Internetkapcsolat: Külső erőforrások eléréséhez és mintafájlok letöltéséhez internetkapcsolatra lesz szüksége.
 
 ## Névterek importálása
-Először is importáljuk a szükséges névtereket a C# projektbe:
+Először importáljuk a szükséges névtereket a C# projektedbe:
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -27,26 +27,26 @@ using System;
 using System.IO;
 using System.Net;
 ```
-## 1. lépés: Töltse be a dokumentumot az URL-ről
-Ha egy URL-címről szeretne megjegyzést fűzni PDF-dokumentumhoz, kövesse az alábbi lépéseket:
-### 1.1. lépés: Határozza meg a kimeneti útvonalat
+## 1. lépés: Dokumentum betöltése URL-ből
+PDF dokumentum URL-címből történő megjegyzésekkel való ellátásához kövesse az alábbi lépéseket:
+### 1.1. lépés: Kimeneti útvonal meghatározása
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-### 1.2. lépés: Adja meg az URL-t
+### 1.2. lépés: URL megadása
 ```csharp
-string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
+string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";    Megjegyzés: Ez a kódrészlet valószínűleg egy fájlnevet és fájlnevet tartalmaz, és a benne szereplő elemek (pl. fájlnevek, elérési utak) valószínűleg egy külső könyvtárból származnak.
 ```
-### 1.3. lépés: Töltse be a dokumentumot
+### 1.3. lépés: Dokumentum betöltése
 ```csharp
 using (Annotator annotator = new Annotator(GetRemoteFile(url)))
 {
-    // Adjon hozzá megjegyzéseket itt
+    // Jegyzetek hozzáadása itt
     annotator.Save(outputPath);
 }
 ```
-## 2. lépés: Adjon hozzá megjegyzéseket
-Most adjunk megjegyzéseket a betöltött dokumentumhoz. Ebben a példában egy terület megjegyzést adunk hozzá:
+## 2. lépés: Megjegyzések hozzáadása
+Most adjunk hozzá megjegyzéseket a betöltött dokumentumhoz. Ebben a példában egy területhez tartozó megjegyzést fogunk hozzáadni:
 ```csharp
 AreaAnnotation area = new AreaAnnotation()
 {
@@ -55,23 +55,23 @@ AreaAnnotation area = new AreaAnnotation()
 };
 annotator.Add(area);
 ```
-## 3. lépés: Mentse el a megjegyzésekkel ellátott dokumentumot
-Végül mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra:
+## 3. lépés: Jegyzetekkel ellátott dokumentum mentése
+Végül mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti útvonalra:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan lehet PDF-dokumentumokat megjegyzésekkel ellátni a GroupDocs.Annotation for .NET használatával. A lépésenkénti útmutató követésével zökkenőmentesen integrálhatja a megjegyzések funkcióit .NET-alkalmazásaiba, lehetővé téve a felhasználók számára a hatékony együttműködést a PDF-fájlokon.
+Ebben az oktatóanyagban megtanultuk, hogyan lehet PDF dokumentumokat jegyzetekkel ellátni a GroupDocs.Annotation for .NET segítségével. A lépésről lépésre haladó útmutató követésével zökkenőmentesen integrálhatja a jegyzetelési funkciókat .NET alkalmazásaiba, lehetővé téve a felhasználók számára a PDF fájlokon való hatékony együttműködést.
 
 ## GYIK
-### A GroupDocs.Annotation for .NET kompatibilis az összes .NET-keretrendszerrel?
-Igen, a GroupDocs.Annotation for .NET kompatibilis a különböző .NET-keretrendszerekkel, beleértve a .NET-keretrendszert, a .NET Core-t és a .NET-szabványt.
-### Testreszabhatom a kommentárok megjelenését?
-Teljesen! A GroupDocs.Annotation for .NET kiterjedt testreszabási lehetőségeket kínál, amelyek lehetővé teszik a megjegyzések megjelenésének és viselkedésének igény szerinti módosítását.
-### Elérhető ingyenes próbaverzió a GroupDocs.Annotation for .NET számára?
- Igen, letöltheti a GroupDocs.Annotation ingyenes próbaverzióját .NET-hez a webhelyről[weboldal](https://releases.groupdocs.com/).
+### A GroupDocs.Annotation for .NET kompatibilis az összes .NET keretrendszerrel?
+Igen, a GroupDocs.Annotation for .NET kompatibilis számos .NET keretrendszerrel, beleértve a .NET Framework, a .NET Core és a .NET Standard rendszereket.
+### Testreszabhatom a megjegyzések megjelenését?
+Abszolút! A GroupDocs.Annotation for .NET széleskörű testreszabási lehetőségeket kínál, lehetővé téve a megjegyzések megjelenésének és viselkedésének módosítását az igényeid szerint.
+### Van ingyenes próbaverzió a GroupDocs.Annotation for .NET-hez?
+Igen, letöltheti a GroupDocs.Annotation for .NET ingyenes próbaverzióját a következő címről: [weboldal](https://releases.groupdocs.com/).
 ### Hogyan kaphatok technikai támogatást a GroupDocs.Annotation for .NET-hez?
- Ha bármilyen technikai problémába ütközik, vagy kérdései vannak a GroupDocs.Annotation for .NET-hez kapcsolódóan, kérjen segítséget a[támogatói fórum](https://forum.groupdocs.com/c/annotation/10).
-### Hol vásárolhatok licencet a GroupDocs.Annotation for .NET számára?
- A GroupDocs.Annotation for .NET-hez licencet vásárolhat a webhelyről[vásárlási oldal](https://purchase.groupdocs.com/buy).
+Ha bármilyen technikai problémába ütközik, vagy kérdése van a GroupDocs.Annotation for .NET programmal kapcsolatban, kérjen segítséget a következőtől: [támogató fórum](https://forum.groupdocs.com/c/annotation/10).
+### Hol vásárolhatok licencet a GroupDocs.Annotation for .NET-hez?
+A GroupDocs.Annotation for .NET licencét a következő címen vásárolhatja meg: [vásárlási oldal](https://purchase.groupdocs.com/buy).

@@ -1,24 +1,24 @@
 ---
-title: Belgeyi Akıştan Yükle
-linktitle: Belgeyi Akıştan Yükle
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation ile .NET'te belgelere zahmetsizce nasıl açıklama ekleyeceğinizi öğrenin. İşbirliğini ve üretkenliği artırın.
-weight: 14
-url: /tr/net/document-loading-essentials/load-document-from-stream/
+"description": "GroupDocs.Annotation ile .NET'te belgeleri zahmetsizce nasıl ek açıklama ekleyeceğinizi öğrenin. İş birliğini ve üretkenliği artırın."
+"linktitle": "Akıştan Belge Yükle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Akıştan Belge Yükle"
+"url": "/tr/net/document-loading-essentials/load-document-from-stream/"
+"weight": 14
 ---
 
-# Belgeyi Akıştan Yükle
+# Akıştan Belge Yükle
 
 ## giriiş
-GroupDocs.Annotation for .NET, geliştiricilerin belge açıklama özelliklerini .NET uygulamalarına zahmetsizce entegre etmelerine olanak tanıyan güçlü bir kitaplıktır. İster bir belge yönetim sistemi, ister bir işbirliği platformu, ister bir e-öğrenme uygulaması oluşturuyor olun, GroupDocs.Annotation, PDF'lere, Word belgelerine, Excel sayfalarına ve daha fazlasına açıklama eklemek için çok yönlü bir araç seti sağlar.
-## Önkoşullar
-Ek açıklama sürecine dalmadan önce aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
-1. GroupDocs.Annotation for .NET kurulumu: GroupDocs.Annotation for .NET'i şu adresten indirip yükleyin:[Burada](https://releases.groupdocs.com/annotation/net/).
-2. C# Programlamanın Temel Anlayışı: C# programlama dili ve .NET çerçevesine aşinalık esastır.
+GroupDocs.Annotation for .NET, geliştiricilerin belge açıklama yeteneklerini .NET uygulamalarına zahmetsizce entegre etmelerini sağlayan güçlü bir kütüphanedir. İster bir belge yönetim sistemi, ister bir işbirliği platformu veya bir e-öğrenme uygulaması oluşturuyor olun, GroupDocs.Annotation PDF'leri, Word belgelerini, Excel sayfalarını ve daha fazlasını açıklamanız için çok yönlü bir araç seti sunar.
+## Ön koşullar
+Açıklama sürecine dalmadan önce aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
+1. GroupDocs.Annotation for .NET'in Kurulumu: GroupDocs.Annotation for .NET'i şu adresten indirin ve kurun: [Burada](https://releases.groupdocs.com/annotation/net/).
+2. C# Programlamanın Temel Anlayışı: C# programlama dili ve .NET framework'üne aşinalık esastır.
 3. Geliştirme Ortamı Kurulumu: .NET framework desteğiyle tercih ettiğiniz geliştirme ortamını kurun.
 
 ## Ad Alanlarını İçe Aktarma
-GroupDocs.Annotation for .NET'i kullanarak belgelere açıklama eklemeye başlamak için gerekli ad alanlarını C# projenize aktarın:
+GroupDocs.Annotation for .NET kullanarak belgeleri açıklamaya başlamak için, gerekli ad alanlarını C# projenize aktarın:
 ```csharp
 using System;
 using System.IO;
@@ -26,16 +26,16 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
 
-Şimdi ek açıklama sürecini birden çok adıma ayıralım:
-## 1. Adım: Belgeyi Akıştan Yükleyin
+Şimdi, açıklama sürecini birden fazla adıma bölelim:
+## Adım 1: Akıştan Belgeyi Yükle
 Öncelikle belgeyi bir akıştan yüklemeniz gerekir. Bunu nasıl başarabileceğiniz aşağıda açıklanmıştır:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 using (Annotator annotator = new Annotator(File.OpenRead("input.pdf")))
 {
 ```
-## 2. Adım: Ek Açıklamalar Ekleyin
-Daha sonra belgeye ek açıklamalar ekleyebilirsiniz. Örnek olarak bir alan açıklaması oluşturalım:
+## Adım 2: Açıklamalar Ekleyin
+Sonra, belgeye açıklamalar ekleyebilirsiniz. Örnek olarak bir alan açıklaması oluşturalım:
 ```csharp
 	AreaAnnotation area = new AreaAnnotation()
 	{
@@ -44,28 +44,28 @@ Daha sonra belgeye ek açıklamalar ekleyebilirsiniz. Örnek olarak bir alan aç
 	};
 	annotator.Add(area);
 ```
-## 3. Adım: Belgeyi Ek Açıklamalarla Kaydetme
-Ek açıklamalar ekledikten sonra açıklamalı belgeyi kaydedin:
+## Adım 3: Belgeyi Açıklamalarla Kaydedin
+Açıklamaları ekledikten sonra açıklamalı belgeyi kaydedin:
 ```csharp
 	annotator.Save(File.Create(outputPath));
 }
 ```
-## Adım 4: Onay Mesajını Görüntüleyin
-Son olarak, açıklamalı belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntüleyin:
+## Adım 4: Onay Mesajını Görüntüle
+Son olarak, açıklamalı belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntülenir:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Çözüm
-Sonuç olarak, GroupDocs.Annotation for .NET, .NET uygulamaları içindeki belge açıklamalarına yönelik kapsamlı bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek, belge açıklaması işlevselliğini projelerinize sorunsuz bir şekilde entegre edebilir, işbirliğini ve üretkenliği artırabilirsiniz.
-## SSS'ler
-### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mu?
-GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
-### Ek açıklamalar belirli gereksinimlere göre özelleştirilebilir mi?
-Evet, GroupDocs.Annotation, ek açıklamalar için renkler, şekiller ve özellikler de dahil olmak üzere kapsamlı özelleştirme seçenekleri sunar.
-### GroupDocs.Annotation ortak açıklama ekleme özelliklerini destekliyor mu?
-Evet, GroupDocs.Annotation ortak açıklama eklemeyi kolaylaştırarak birden fazla kullanıcının aynı anda belgelere açıklama eklemesine olanak tanır.
+Sonuç olarak, GroupDocs.Annotation for .NET, .NET uygulamaları içinde belge açıklaması için kapsamlı bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek, belge açıklaması işlevselliğini projelerinize sorunsuz bir şekilde entegre edebilir, iş birliğini ve üretkenliği artırabilirsiniz.
+## SSS
+### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mudur?
+GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
+### Açıklamalar özel gereksinimlere göre özelleştirilebilir mi?
+Evet, GroupDocs.Annotation, renkler, şekiller ve özellikler de dahil olmak üzere açıklamalar için kapsamlı özelleştirme seçenekleri sunar.
+### GroupDocs.Annotation işbirlikçi açıklama özelliklerini destekliyor mu?
+Evet, GroupDocs.Annotation işbirlikçi açıklama eklemeyi kolaylaştırır ve birden fazla kullanıcının aynı anda belgelere açıklama eklemesine olanak tanır.
 ### GroupDocs.Annotation kullanıcıları için teknik destek mevcut mu?
- Evet, GroupDocs forumu aracılığıyla özel teknik destek sağlamaktadır. Ziyaret etmek[Burada](https://forum.groupdocs.com/c/annotation/10) destek için.
+Evet, GroupDocs forumu aracılığıyla özel teknik destek sağlar. Ziyaret edin [Burada](https://forum.groupdocs.com/c/annotation/10) destek için.
 ### Satın almadan önce GroupDocs.Annotation'ı deneyebilir miyim?
- Evet, GroupDocs.Annotation'ı ücretsiz deneme sürümüyle keşfedebilirsiniz[Burada](https://releases.groupdocs.com/).
+Evet, GroupDocs.Annotation'ı ücretsiz deneme sürümüyle keşfedebilirsiniz [Burada](https://releases.groupdocs.com/).

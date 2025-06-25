@@ -1,21 +1,21 @@
 ---
-title: Voeg een dropdown-component toe aan een PDF-document
-linktitle: Voeg een dropdown-component toe aan een PDF-document
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u vervolgkeuzelijsten aan PDF's kunt toevoegen met GroupDocs.Annotation voor .NET. Volg onze stapsgewijze handleiding voor een naadloze integratie.
-weight: 12
-url: /nl/net/document-components/add-dropdown-component-to-pdf/
+"description": "Leer hoe u dropdown-componenten aan pdf's toevoegt met GroupDocs.Annotation voor .NET. Volg onze stapsgewijze handleiding voor naadloze integratie."
+"linktitle": "Dropdown-component toevoegen aan PDF-document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Dropdown-component toevoegen aan PDF-document"
+"url": "/nl/net/document-components/add-dropdown-component-to-pdf/"
+"weight": 12
 ---
 
-# Voeg een dropdown-component toe aan een PDF-document
+# Dropdown-component toevoegen aan PDF-document
 
 ## Invoering
-GroupDocs.Annotation voor .NET biedt een krachtige set tools voor het programmatisch annoteren van PDF-documenten. Een handige functie is de mogelijkheid om vervolgkeuzelijsten aan PDF-documenten toe te voegen, waardoor de interactiviteit en bruikbaarheid ervan wordt vergroot.
+GroupDocs.Annotation voor .NET biedt een krachtige set tools voor het programmatisch annoteren van PDF-documenten. Een handige functie is de mogelijkheid om dropdown-componenten aan PDF-documenten toe te voegen, wat de interactiviteit en bruikbaarheid ervan verbetert.
 ## Vereisten
-Zorg ervoor dat u over het volgende beschikt voordat u begint:
-1.  GroupDocs.Annotation voor .NET: Download en installeer de bibliotheek van[hier](https://releases.groupdocs.com/annotation/net/).
-2. Ontwikkelomgeving: zorg dat u een .NET-ontwikkelomgeving hebt opgezet.
-3. PDF-document: bereid het PDF-document voor waaraan u de vervolgkeuzelijst wilt toevoegen.
+Voordat u begint, moet u ervoor zorgen dat u over het volgende beschikt:
+1. GroupDocs.Annotation voor .NET: Download en installeer de bibliotheek van [hier](https://releases.groupdocs.com/annotation/net/).
+2. Ontwikkelomgeving: Zorg dat er een .NET-ontwikkelomgeving is ingericht.
+3. PDF-document: bereid het PDF-document voor waaraan u het vervolgkeuzemenu wilt toevoegen.
 
 ## Naamruimten importeren
 Zorg ervoor dat u de benodigde naamruimten in uw project importeert:
@@ -28,18 +28,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Models.FormatSpecificComponents.Pdf;
 using GroupDocs.Annotation.Options;
 ```
-## Stap 1: Stel het uitvoerpad in
-Definieer het uitvoerpad waar het gewijzigde document zal worden opgeslagen:
+## Stap 1: Uitvoerpad instellen
+Definieer het uitvoerpad waar het gewijzigde document wordt opgeslagen:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Stap 2: Initialiseer Annotator
- Maak een exemplaar van de`Annotator` klasse door het pad van het ingevoerde PDF-document door te geven:
+## Stap 2: Annotator initialiseren
+Maak een exemplaar van de `Annotator` klasse door het pad van het invoer-PDF-document door te geven:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-## Stap 3: Maak een dropdown-component
-Definieer de eigenschappen van de vervolgkeuzelijstcomponent:
+## Stap 3: Dropdown-component maken
+Definieer de eigenschappen van het dropdown-component:
 ```csharp
 DropdownComponent dropdown = new DropdownComponent
 {
@@ -68,8 +68,8 @@ DropdownComponent dropdown = new DropdownComponent
     }
 };
 ```
-## Stap 4: Voeg een dropdown-component toe
-Voeg de vervolgkeuzelijstcomponent toe aan het PDF-document:
+## Stap 4: Dropdown-component toevoegen
+Voeg het dropdown-component toe aan het PDF-document:
 ```csharp
 annotator.Add(dropdown);
 ```
@@ -78,22 +78,22 @@ Sla het gewijzigde document op:
 ```csharp
 annotator.Save("result.pdf");
 ```
-## Stap 6: Geef het uitvoerpad weer
-Geef een bericht weer dat aangeeft dat het document succesvol is opgeslagen, samen met het uitvoerpad:
+## Stap 6: Uitvoerpad weergeven
+Geef een bericht weer waarin staat dat het document succesvol is opgeslagen, samen met het uitvoerpad:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Conclusie
-In deze zelfstudie hebben we onderzocht hoe u PDF-documenten kunt verbeteren door vervolgkeuzelijsten toe te voegen met behulp van GroupDocs.Annotation voor .NET. Door de stapsgewijze handleiding te volgen, kunt u deze functionaliteit eenvoudig integreren in uw .NET-toepassingen, waardoor gebruikers interactieve en dynamische documentweergave-ervaringen krijgen.
+In deze tutorial hebben we onderzocht hoe je PDF-documenten kunt verbeteren door dropdown-componenten toe te voegen met GroupDocs.Annotation voor .NET. Door de stapsgewijze handleiding te volgen, kun je deze functionaliteit eenvoudig integreren in je .NET-applicaties en gebruikers interactieve en dynamische documentweergave-ervaringen bieden.
 ## Veelgestelde vragen
-### Kan ik het uiterlijk van de vervolgkeuzelijstcomponent aanpassen?
-Ja, u kunt verschillende eigenschappen, zoals opties, tijdelijke tekst, doosafmetingen, penkleur en stijl, aanpassen aan uw wensen.
+### Kan ik het uiterlijk van het dropdown-component aanpassen?
+Ja, u kunt verschillende eigenschappen, zoals opties, tijdelijke tekst, afmetingen van het vak, penkleur en stijl, naar uw wensen aanpassen.
 ### Is GroupDocs.Annotation voor .NET compatibel met alle versies van .NET?
-Ja, GroupDocs.Annotation voor .NET is compatibel met alle belangrijke versies van het .NET-framework.
-### Kan ik meerdere vervolgkeuzelijsten aan één PDF-document toevoegen?
-Absoluut, u kunt zoveel vervolgkeuzelijsten toevoegen als nodig is aan een PDF-document.
+Ja, GroupDocs.Annotation voor .NET is compatibel met alle belangrijke versies van het .NET Framework.
+### Kan ik meerdere dropdown-componenten aan één PDF-document toevoegen?
+Jazeker, u kunt zoveel vervolgkeuzemenucomponenten aan een PDF-document toevoegen als u wilt.
 ### Ondersteunt GroupDocs.Annotation voor .NET andere annotatietypen?
-Ja, GroupDocs.Annotation voor .NET ondersteunt verschillende annotatietypen, waaronder tekst-, vlak-, punt- en doorgehaalde annotaties.
+Ja, GroupDocs.Annotation voor .NET ondersteunt verschillende annotatietypen, waaronder tekst-, gebieds-, punt- en doorhalingsannotaties.
 ### Is er een proefversie beschikbaar voor testdoeleinden?
- Ja, u heeft toegang tot de proefversie[hier](https://releases.groupdocs.com/).
+Ja, u kunt de proefversie gebruiken [hier](https://releases.groupdocs.com/).

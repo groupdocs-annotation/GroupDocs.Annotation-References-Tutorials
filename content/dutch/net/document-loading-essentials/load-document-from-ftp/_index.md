@@ -1,24 +1,24 @@
 ---
-title: Document laden vanaf FTP
-linktitle: Document laden vanaf FTP
-second_title: GroupDocs.Annotation .NET API
-description: Verbeter uw .NET-toepassingen met GroupDocs.Annotation voor naadloze documentannotatie. Inclusief stap-voor-stap handleiding.
-weight: 12
-url: /nl/net/document-loading-essentials/load-document-from-ftp/
+"description": "Verbeter uw .NET-applicaties met GroupDocs.Annotation voor naadloze documentannotatie. Inclusief stapsgewijze handleiding."
+"linktitle": "Document laden van FTP"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Document laden van FTP"
+"url": "/nl/net/document-loading-essentials/load-document-from-ftp/"
+"weight": 12
 ---
 
-# Document laden vanaf FTP
+# Document laden van FTP
 
 ## Invoering
-GroupDocs.Annotation voor .NET is een veelzijdige bibliotheek die is ontworpen om de annotatiemogelijkheden van documenten binnen .NET-toepassingen moeiteloos te vergemakkelijken. Of u nu te maken heeft met PDF's, Microsoft Office-documenten, afbeeldingen of andere formaten, deze bibliotheek biedt een uniforme oplossing voor het toevoegen van annotaties, zoals opmerkingen, markeringen en vormen, om de samenwerking en het documentbeheer te verbeteren.
+GroupDocs.Annotation voor .NET is een veelzijdige bibliotheek die is ontworpen om documentannotatiemogelijkheden binnen .NET-applicaties moeiteloos te vereenvoudigen. Of u nu werkt met PDF's, Microsoft Office-documenten, afbeeldingen of andere formaten, deze bibliotheek biedt een uniforme oplossing voor het toevoegen van annotaties, zoals opmerkingen, markeringen en vormen, om samenwerking en documentbeheer te verbeteren.
 ## Vereisten
-Voordat u in de zelfstudie duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
-1. Kennis van C#: Vaardigheid in de programmeertaal C# is essentieel om de codevoorbeelden in deze tutorial te begrijpen en te implementeren.
-2.  GroupDocs.Annotation voor .NET: Zorg ervoor dat u GroupDocs.Annotation voor .NET downloadt en installeert vanaf de[download link](https://releases.groupdocs.com/annotation/net/). Volg de installatie-instructies om de bibliotheek succesvol in uw .NET-project te integreren.
+Voordat u met de tutorial begint, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+1. Kennis van C#: Kennis van de programmeertaal C# is essentieel om de codevoorbeelden in deze tutorial te begrijpen en te implementeren.
+2. GroupDocs.Annotation voor .NET: Zorg ervoor dat u GroupDocs.Annotation voor .NET downloadt en installeert vanaf de [downloadlink](https://releases.groupdocs.com/annotation/net/)Volg de installatie-instructies om de bibliotheek succesvol in uw .NET-project te integreren.
 ## Naamruimten importeren
-Om GroupDocs.Annotation voor .NET-functionaliteiten te kunnen gebruiken, moet u de vereiste naamruimten in uw C#-project importeren. Volg deze stappen:
+Om GroupDocs.Annotation voor .NET-functionaliteit te kunnen gebruiken, moet u de vereiste naamruimten importeren in uw C#-project. Volg deze stappen:
 
-Neem binnen uw C#-project de benodigde naamruimten op aan het begin van uw codebestand:
+Neem in uw C#-project de benodigde naamruimten op aan het begin van uw codebestand:
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -27,14 +27,14 @@ using System.IO;
 using System.Net;
 ```
 
-Laten we ons nu verdiepen in het proces van het laden van een document vanaf FTP en het toevoegen van annotaties eraan met behulp van GroupDocs.Annotation voor .NET.
-## Stap 1: Definieer het uitvoerpad
-Geef het uitvoerpad op waar het geannoteerde document zal worden opgeslagen.
+Laten we nu dieper ingaan op het proces van het laden van een document vanaf FTP en het toevoegen van aantekeningen met behulp van GroupDocs.Annotation voor .NET.
+## Stap 1: Uitvoerpad definiëren
+Geef het uitvoerpad op waar het geannoteerde document wordt opgeslagen.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Stap 2: Document laden vanaf FTP
-Haal het document op van de FTP-server via het opgegeven bestandspad.
+## Stap 2: Document laden van FTP
+Haal het document op van de FTP-server met behulp van het opgegeven bestandspad.
 ```csharp
 string filePath = "sample.pdf";
 using (Annotator annotator = new Annotator(GetFileFromFtp(filePath)))
@@ -43,7 +43,7 @@ using (Annotator annotator = new Annotator(GetFileFromFtp(filePath)))
 }
 ```
 ## Stap 3: Annotatie toevoegen
-Definieer en voeg de gewenste annotatie, zoals een gebiedsannotatie, toe aan het document.
+Definieer de gewenste annotatie, bijvoorbeeld een gebiedsannotatie, en voeg deze toe aan het document.
 ```csharp
 AreaAnnotation area = new AreaAnnotation()
 {
@@ -52,7 +52,7 @@ AreaAnnotation area = new AreaAnnotation()
 };
 annotator.Add(area);
 ```
-## Stap 4: geannoteerd document opslaan
+## Stap 4: Geannoteerd document opslaan
 Sla het geannoteerde document op in het opgegeven uitvoerpad.
 ```csharp
 annotator.Save(outputPath);
@@ -69,7 +69,7 @@ private static Stream GetFileFromFtp(string filePath)
         return GetFileStream(response);
 }
 ```
-## Stap 6: Maak een FTP-verzoek aan
+## Stap 6: FTP-aanvraag maken
 Genereer een FTP-verzoek om het bestand te downloaden.
 ```csharp
 private static FtpWebRequest CreateRequest(Uri uri)
@@ -79,8 +79,8 @@ private static FtpWebRequest CreateRequest(Uri uri)
     return request;
 }
 ```
-## Stap 7: Download File Stream
-Haal de bestandsstream op uit het FTP-antwoord.
+## Stap 7: Bestandsstroom ophalen
+Haal de bestandsstroom op uit het FTP-antwoord.
 ```csharp
 private static Stream GetFileStream(WebResponse response)
 {
@@ -92,15 +92,15 @@ private static Stream GetFileStream(WebResponse response)
 }
 ```
 ## Conclusie
-Concluderend stelt GroupDocs.Annotation voor .NET ontwikkelaars in staat om functionaliteiten voor documentannotatie naadloos te integreren in hun .NET-applicaties. Door de stapsgewijze handleiding in deze zelfstudie te volgen, kunt u efficiënt documenten laden vanaf FTP en eenvoudig annotaties toevoegen, waardoor de samenwerking en het documentbeheer binnen uw toepassingen worden verbeterd.
+Kortom, GroupDocs.Annotation voor .NET stelt ontwikkelaars in staat om documentannotatiefunctionaliteit naadloos te integreren in hun .NET-applicaties. Door de stapsgewijze handleiding in deze tutorial te volgen, kunt u efficiënt documenten laden vanaf FTP en eenvoudig annotaties toevoegen, wat de samenwerking en het documentbeheer binnen uw applicaties verbetert.
 ## Veelgestelde vragen
 ### Is GroupDocs.Annotation voor .NET compatibel met alle documentformaten?
 Ja, GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentformaten, waaronder PDF, Microsoft Office-documenten, afbeeldingen en meer.
-### Kan ik de weergave aanpassen van annotaties die zijn toegevoegd met GroupDocs.Annotation voor .NET?
-Absoluut, GroupDocs.Annotation voor .NET biedt uitgebreide aanpassingsopties voor het uiterlijk van annotaties, inclusief kleuren, stijlen en vormen.
+### Kan ik het uiterlijk aanpassen van annotaties die ik heb toegevoegd met GroupDocs.Annotation voor .NET?
+Jazeker, GroupDocs.Annotation voor .NET biedt uitgebreide aanpassingsopties voor het uiterlijk van annotaties, waaronder kleuren, stijlen en vormen.
 ### Biedt GroupDocs.Annotation voor .NET ondersteuning voor cloudopslagservices?
-Ja, GroupDocs.Annotation voor .NET kan naadloos worden geïntegreerd met populaire cloudopslagdiensten, zodat u documenten kunt laden en opslaan van diensten als Dropbox, Google Drive en OneDrive.
+Ja, GroupDocs.Annotation voor .NET integreert naadloos met populaire cloudopslagservices, zodat u documenten kunt laden en opslaan vanaf services zoals Dropbox, Google Drive en OneDrive.
 ### Is er een proefversie beschikbaar voor GroupDocs.Annotation voor .NET?
- Ja, u kunt de functies van GroupDocs.Annotation voor .NET verkennen door de gratis proefversie te downloaden van de[pagina vrijgeven](https://releases.groupdocs.com/).
+Ja, u kunt de functies van GroupDocs.Annotation voor .NET verkennen door de gratis proefversie te downloaden van de [releasepagina](https://releases.groupdocs.com/).
 ### Hoe kan ik technische assistentie of ondersteuning krijgen voor GroupDocs.Annotation voor .NET?
- Voor technische hulp, probleemoplossing of algemene vragen kunt u de GroupDocs.Annotation voor .NET bezoeken[Helpforum](https://forum.groupdocs.com/c/annotation/10).
+Voor technische assistentie, probleemoplossing of algemene vragen kunt u terecht op GroupDocs.Annotation voor .NET [ondersteuningsforum](https://forum.groupdocs.com/c/annotation/10).

@@ -1,23 +1,23 @@
 ---
-title: Belgeye Elips Açıklaması Ekle
-linktitle: Belgeye Elips Açıklaması Ekle
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation'ı kullanarak .NET'teki belgelere elips ek açıklamalarının nasıl ekleneceğini öğrenin. İşbirliğini ve iletişimi zahmetsizce geliştirin.
-weight: 13
-url: /tr/net/unlocking-annotation-power/add-ellipse-annotation/
+"description": "GroupDocs.Annotation'ı kullanarak .NET'te belgelere elips ek açıklamalarının nasıl ekleneceğini öğrenin. İş birliğini ve iletişimi zahmetsizce geliştirin."
+"linktitle": "Belgeye Elips Açıklaması Ekle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeye Elips Açıklaması Ekle"
+"url": "/tr/net/unlocking-annotation-power/add-ellipse-annotation/"
+"weight": 13
 ---
 
 # Belgeye Elips Açıklaması Ekle
 
 ## giriiş
-Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bir belgeye nasıl elips ek açıklaması ekleyeceğinizi öğreneceksiniz. Bu adım adım kılavuz, süreç boyunca size yol gösterecek ve her adımı net bir şekilde anlamanızı sağlayacaktır.
-## Önkoşullar
+Bu eğitimde, .NET için GroupDocs.Annotation kullanarak bir belgeye elips ek açıklamasının nasıl ekleneceğini öğreneceksiniz. Bu adım adım kılavuz, her adımı net bir şekilde anlamanızı sağlayarak sizi süreçte yönlendirecektir.
+## Ön koşullar
 Başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
-1.  GroupDocs.Annotation for .NET: GroupDocs.Annotation for .NET'i indirip yüklediğinizden emin olun. Şuradan indirebilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/).
-2. IDE (Entegre Geliştirme Ortamı): Kodu yazmak ve yürütmek için sisteminizde Visual Studio gibi bir IDE'nin kurulu olması gerekir.
+1. GroupDocs.Annotation for .NET: GroupDocs.Annotation for .NET'i indirip kurduğunuzdan emin olun. Buradan indirebilirsiniz [Burada](https://releases.groupdocs.com/annotation/net/).
+2. IDE (Bütünleşik Geliştirme Ortamı): Kodu yazmak ve çalıştırmak için sisteminizde Visual Studio gibi bir IDE'nin yüklü olması gerekir.
 
 ## Ad Alanlarını İçe Aktar
-Öncelikle gerekli ad alanlarını projenize aktarın:
+Öncelikle projenize gerekli namespace'leri import edin:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -31,14 +31,14 @@ Açıklamalı belgenin kaydedileceği çıktı yolunu tanımlayın:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. Adım: Annotator'ı Başlatın
+## Adım 2: Annotator'ı Başlatın
 Giriş belgesi yolunu sağlayarak açıklayıcıyı başlatın:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## 3. Adım: Elips Ek Açıklaması Oluşturun
- Bir örneğini oluşturun`EllipseAnnotation` sınıfını seçin ve özelliklerini ayarlayın:
+## Adım 3: Elips Açıklaması Oluşturun
+Bir örneğini oluşturun `EllipseAnnotation` sınıfını oluştur ve özelliklerini ayarla:
 ```csharp
 EllipseAnnotation ellipse = new EllipseAnnotation
 {
@@ -66,27 +66,27 @@ EllipseAnnotation ellipse = new EllipseAnnotation
     }
 };
 ```
-## 4. Adım: Ek Açıklama Ekle
-Elips açıklamasını belgeye ekleyin:
+## Adım 4: Açıklama Ekle
+Belgeye elips açıklamasını ekleyin:
 ```csharp
 annotator.Add(ellipse);
 ```
-## Adım 5: Belgeyi Kaydet
+## Adım 5: Belgeyi Kaydedin
 Açıklamalı belgeyi çıktı yoluna kaydedin:
 ```csharp
 annotator.Save(outputPath);
 ```
 
 ## Çözüm
-Tebrikler! GroupDocs.Annotation for .NET'i kullanarak bir belgeye başarıyla elips ek açıklaması eklediniz. Belge işbirliğini ve iletişimi geliştirmek için artık bu işlevselliği .NET uygulamalarınıza entegre edebilirsiniz.
-## SSS'ler
+Tebrikler! GroupDocs.Annotation for .NET kullanarak bir belgeye elips ek açıklamasını başarıyla eklediniz. Artık bu işlevselliği, belge iş birliğini ve iletişimini geliştirmek için .NET uygulamalarınıza entegre edebilirsiniz.
+## SSS
 ### Elips açıklamasının görünümünü özelleştirebilir miyim?
-Evet, arka plan rengi, kenarlık rengi, opaklık vb. çeşitli özellikleri ihtiyaçlarınıza göre özelleştirebilirsiniz.
-### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mu?
-GroupDocs.Annotation for .NET, PDF, DOCX, PPTX, XLSX ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
+Evet, ihtiyaçlarınıza göre arka plan rengi, kenarlık rengi, opaklık vb. gibi çeşitli özellikleri özelleştirebilirsiniz.
+### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mudur?
+GroupDocs.Annotation for .NET, PDF, DOCX, PPTX, XLSX ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
 ### Tek bir belgeye birden fazla açıklama ekleyebilir miyim?
-Evet, tek bir belgeye elipsler, dikdörtgenler, metin vb. dahil olmak üzere birden fazla açıklama ekleyebilirsiniz.
+Evet, tek bir belgeye elips, dikdörtgen, metin vb. gibi birden fazla açıklama ekleyebilirsiniz.
 ### Test amaçlı deneme sürümü mevcut mu?
- Evet, ücretsiz deneme sürümünü şuradan indirebilirsiniz:[Burada](https://releases.groupdocs.com/) Özelliklerini değerlendirmek için.
-### GroupDocs.Annotation for .NET için nereden teknik destek alabilirim?
- GroupDocs.Annotation topluluk forumundan teknik destek alabilirsiniz.[Burada](https://forum.groupdocs.com/c/annotation/10).
+Evet, ücretsiz deneme sürümünü şu adresten indirebilirsiniz: [Burada](https://releases.groupdocs.com/) Özelliklerini değerlendirmek için.
+### GroupDocs.Annotation for .NET için teknik desteği nereden alabilirim?
+GroupDocs.Annotation topluluk forumundan teknik destek alabilirsiniz [Burada](https://forum.groupdocs.com/c/annotation/10).

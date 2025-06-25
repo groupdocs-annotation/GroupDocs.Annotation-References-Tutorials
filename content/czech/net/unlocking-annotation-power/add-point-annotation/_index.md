@@ -1,24 +1,24 @@
 ---
-title: Přidání bodové anotace do dokumentu
-linktitle: Přidání bodové anotace do dokumentu
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se, jak přidat bodové anotace do PDF pomocí GroupDocs.Annotation pro .NET. Podrobný průvodce pro bezproblémovou integraci.
-weight: 17
-url: /cs/net/unlocking-annotation-power/add-point-annotation/
+"description": "Naučte se, jak přidat bodové anotace do PDF souborů pomocí GroupDocs.Annotation pro .NET. Podrobný návod pro bezproblémovou integraci."
+"linktitle": "Přidat bodovou anotaci do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidat bodovou anotaci do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-point-annotation/"
+"weight": 17
 ---
 
-# Přidání bodové anotace do dokumentu
+# Přidat bodovou anotaci do dokumentu
 
-## Úvod
-GroupDocs.Annotation for .NET je výkonný nástroj, který umožňuje vývojářům přidávat různé typy anotací do dokumentů programově. V tomto tutoriálu se zaměříme na přidání bodové anotace do dokumentu pomocí C#.
+## Zavedení
+GroupDocs.Annotation pro .NET je výkonný nástroj, který umožňuje vývojářům programově přidávat do dokumentů různé typy anotací. V tomto tutoriálu se zaměříme na přidání bodové anotace do dokumentu pomocí C#.
 ## Předpoklady
 Než začneme, ujistěte se, že máte následující:
 1. Základní znalost programovacího jazyka C#.
 2. Visual Studio nainstalované ve vašem systému.
-3.  Nainstalovaná knihovna GroupDocs.Annotation pro .NET. Můžete si jej stáhnout z[tady](https://releases.groupdocs.com/annotation/net/).
+3. Je nainstalována knihovna GroupDocs.Annotation pro .NET. Můžete si ji stáhnout z [zde](https://releases.groupdocs.com/annotation/net/).
 
 ## Import nezbytných jmenných prostorů
-Chcete-li začít, musíte do svého projektu C# importovat požadované jmenné prostory:
+Chcete-li začít, musíte importovat požadované jmenné prostory do svého projektu C#:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,16 +27,16 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Krok 1: Definujte výstupní cestu
+## Krok 1: Definování výstupní cesty
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-V tomto kroku definujeme výstupní cestu, kam se anotovaný dokument uloží.
-## Krok 2: Inicializujte anotátor
+V tomto kroku definujeme výstupní cestu, kam bude uložen anotovaný dokument.
+## Krok 2: Inicializace anotátoru
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Zde inicializujeme`Annotator` objekt se vstupním dokumentem ("vstup.pdf").
+Zde inicializujeme `Annotator` objekt se vstupním dokumentem („input.pdf“).
 ## Krok 3: Vytvořte bodovou anotaci
 ```csharp
 PointAnnotation point = new PointAnnotation
@@ -60,28 +60,28 @@ PointAnnotation point = new PointAnnotation
     }
 };
 ```
- V tomto kroku vytvoříme a`PointAnnotation` objekt a zadejte jeho vlastnosti, jako je pozice, zpráva, číslo stránky a odpovědi.
-## Krok 4: Přidejte anotaci
+V tomto kroku vytvoříme `PointAnnotation` objekt a specifikovat jeho vlastnosti, jako je pozice, zpráva, číslo stránky a odpovědi.
+## Krok 4: Přidání anotace
 ```csharp
 annotator.Add(point);
 ```
-Zde do dokumentu přidáme vytvořenou bodovou anotaci.
-## Krok 5: Uložte dokument
+Zde přidáme do dokumentu vytvořenou bodovou anotaci.
+## Krok 5: Uložení dokumentu
 ```csharp
 annotator.Save(outputPath);
 ```
-Nakonec anotovaný dokument uložíme do zadané výstupní cesty.
+Nakonec uložíme anotovaný dokument do zadané výstupní cesty.
 
 ## Závěr
-V tomto tutoriálu jsme se naučili, jak přidat bodovou anotaci do dokumentu pomocí GroupDocs.Annotation pro .NET. Pomocí této výkonné knihovny můžete vylepšit své aplikace pro správu dokumentů začleněním funkcí anotací.
-## FAQ
-### Je GroupDocs.Annotation for .NET kompatibilní se všemi formáty dokumentů?
-Ano, GroupDocs.Annotation for .NET podporuje širokou škálu formátů dokumentů včetně PDF, Microsoft Word, Excel, PowerPoint a dalších.
-### Mohu upravit vzhled anotací?
-Absolutně! GroupDocs.Annotation for .NET poskytuje rozsáhlé možnosti pro přizpůsobení vzhledu anotací tak, aby vyhovovaly potřebám vaší aplikace.
+V tomto tutoriálu jsme se naučili, jak přidat bodovou anotaci do dokumentu pomocí GroupDocs.Annotation pro .NET. S touto výkonnou knihovnou můžete vylepšit své aplikace pro správu dokumentů začleněním funkcí anotací.
+## Často kladené otázky
+### Je GroupDocs.Annotation pro .NET kompatibilní se všemi formáty dokumentů?
+Ano, GroupDocs.Annotation pro .NET podporuje širokou škálu formátů dokumentů, včetně PDF, Microsoft Word, Excel, PowerPoint a dalších.
+### Mohu si přizpůsobit vzhled anotací?
+Rozhodně! GroupDocs.Annotation pro .NET nabízí rozsáhlé možnosti pro přizpůsobení vzhledu anotací potřebám vaší aplikace.
 ### Je k dispozici bezplatná zkušební verze pro GroupDocs.Annotation pro .NET?
- Ano, můžete využít bezplatnou zkušební verzi od[tady](https://releases.groupdocs.com/).
-### Jak mohu získat podporu pro jakékoli problémy nebo dotazy související s GroupDocs.Annotation pro .NET?
- Podporu můžete získat na fóru GroupDocs.Annotation[tady](https://forum.groupdocs.com/c/annotation/10).
-### Mohu získat dočasnou licenci pro testovací účely?
- Ano, můžete získat dočasnou licenci od[tady](https://purchase.groupdocs.com/temporary-license/).
+Ano, můžete využít bezplatnou zkušební verzi od [zde](https://releases.groupdocs.com/).
+### Jak mohu získat podporu pro jakékoli problémy nebo dotazy týkající se GroupDocs.Annotation pro .NET?
+Podporu můžete získat na fóru GroupDocs.Annotation. [zde](https://forum.groupdocs.com/c/annotation/10).
+### Mohu získat dočasnou licenci pro účely testování?
+Ano, můžete získat dočasnou licenci od [zde](https://purchase.groupdocs.com/temporary-license/).

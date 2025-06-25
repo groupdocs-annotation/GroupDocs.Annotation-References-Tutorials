@@ -1,19 +1,19 @@
 ---
-title: Voeg tekstonderstrepingsannotatie toe aan document
-linktitle: Voeg tekstonderstrepingsannotatie toe aan document
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u annotaties met tekstonderstrepingen aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter moeiteloos de samenwerking en communicatie.
-weight: 27
-url: /nl/net/unlocking-annotation-power/add-text-underline-annotation/
+"description": "Leer hoe u tekstonderstreping aan documenten toevoegt met GroupDocs.Annotation voor .NET. Verbeter moeiteloos samenwerking en communicatie."
+"linktitle": "Tekstonderstreping toevoegen aan document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Tekstonderstreping toevoegen aan document"
+"url": "/nl/net/unlocking-annotation-power/add-text-underline-annotation/"
+"weight": 27
 ---
 
-# Voeg tekstonderstrepingsannotatie toe aan document
+# Tekstonderstreping toevoegen aan document
 
 ## Invoering
-In deze zelfstudie doorlopen we het proces van het toevoegen van een tekstonderstrepingsannotatie aan een document met behulp van GroupDocs.Annotation voor .NET. Annotaties met tekstonderstrepingen kunnen handig zijn om specifieke delen van een document te benadrukken, zoals belangrijke passages of belangrijke punten.
+In deze tutorial laten we zien hoe je een tekstonderstreping aan een document toevoegt met behulp van GroupDocs.Annotation voor .NET. Tekstonderstreping kan handig zijn om specifieke delen van een document te benadrukken, zoals belangrijke passages of hoofdpunten.
 ## Vereisten
 Voordat we beginnen, moet u ervoor zorgen dat de volgende vereisten zijn geïnstalleerd:
-1.  GroupDocs.Annotation voor .NET: Download en installeer GroupDocs.Annotation voor .NET vanaf[hier](https://releases.groupdocs.com/annotation/net/).
+1. GroupDocs.Annotation voor .NET: Download en installeer GroupDocs.Annotation voor .NET van [hier](https://releases.groupdocs.com/annotation/net/).
 2. .NET Framework: Zorg ervoor dat .NET Framework op uw systeem is geïnstalleerd.
 
 ## Naamruimten importeren
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Laten we het voorbeeld nu in meerdere stappen opsplitsen:
-## Stap 1: Definieer het uitvoerpad
+Laten we het voorbeeld nu opsplitsen in meerdere stappen:
+## Stap 1: Uitvoerpad definiëren
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-In deze stap definiëren we het uitvoerpad waar het geannoteerde document zal worden opgeslagen.
-## Stap 2: Initialiseer Annotator
+In deze stap definiëren we het uitvoerpad waar het geannoteerde document wordt opgeslagen.
+## Stap 2: Annotator initialiseren
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Hier initialiseren we een exemplaar van de`Annotator` klasse door het pad van het invoerdocument op te geven.
-## Stap 3: Maak een onderstreepte annotatie
+Hier initialiseren we een instantie van de `Annotator` klasse door het pad van het invoerdocument op te geven.
+## Stap 3: Onderstreep-annotatie maken
 ```csharp
 UnderlineAnnotation underline = new UnderlineAnnotation
 {
@@ -48,7 +48,7 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     Opacity = 0.7,
     PageNumber = 0,
     BackgroundColor = 16761035,
-    UnderlineColor = 1422623, // werkt alleen ondersteund Word- en PDF-documenten
+    UnderlineColor = 1422623, // werkt alleen ondersteunde Word- en PDF-documenten
     Points = new List<Point>
     {
         new Point(80, 730), new Point(240, 730), new Point(80, 650), new Point(240, 650)
@@ -68,28 +68,28 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     }
 };
 ```
- Deze stap omvat het maken van een`UnderlineAnnotation`object met verschillende eigenschappen, zoals tekstkleur, bericht, dekking, paginanummer, achtergrondkleur, onderstrepingskleur, punten en antwoorden.
+Deze stap omvat het maken van een `UnderlineAnnotation` object met verschillende eigenschappen, zoals letterkleur, bericht, dekking, paginanummer, achtergrondkleur, onderstrepingskleur, punten en antwoorden.
 ## Stap 4: Annotatie toevoegen aan document
 ```csharp
 annotator.Add(underline);
 ```
-Hier voegen we de onderstreepte annotatie toe aan het document.
-## Stap 5: Bewaar het geannoteerde document
+Hier voegen we de onderstrepingsannotatie toe aan het document.
+## Stap 5: Geannoteerd document opslaan
 ```csharp
 annotator.Save(outputPath);
 ```
 Ten slotte slaan we het geannoteerde document op in het opgegeven uitvoerpad.
 
 ## Conclusie
-In deze zelfstudie hebben we geleerd hoe u een annotatie voor tekstonderstrepingen aan een document kunt toevoegen met behulp van GroupDocs.Annotation voor .NET. Deze krachtige bibliotheek biedt verschillende annotatieopties om de samenwerking en communicatie aan documenten te verbeteren.
+In deze tutorial hebben we geleerd hoe je een tekstonderstreping aan een document toevoegt met GroupDocs.Annotation voor .NET. Deze krachtige bibliotheek biedt diverse annotatieopties om de samenwerking en communicatie binnen documenten te verbeteren.
 ## Veelgestelde vragen
-### Kan ik het uiterlijk van de onderstreepte annotatie aanpassen?
-Ja, u kunt eigenschappen zoals kleur, dekking en positie aanpassen aan uw vereisten.
+### Kan ik het uiterlijk van de onderstrepingsannotatie aanpassen?
+Ja, u kunt eigenschappen zoals kleur, dekking en positie naar uw wensen aanpassen.
 ### Is GroupDocs.Annotation compatibel met verschillende documentformaten?
 Ja, GroupDocs.Annotation ondersteunt een breed scala aan documentformaten, waaronder Word en PDF.
-### Kan ik meerdere annotaties aan één document toevoegen?
-Absoluut, met GroupDocs.Annotation kunt u meerdere annotaties van verschillende typen aan een document toevoegen.
+### Kan ik meerdere aantekeningen aan één document toevoegen?
+Jazeker, met GroupDocs.Annotation kunt u meerdere annotaties van verschillende typen aan een document toevoegen.
 ### Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation?
- Ja, u kunt toegang krijgen tot de gratis proefversie van[hier](https://releases.groupdocs.com/).
+Ja, u kunt de gratis proefversie openen via [hier](https://releases.groupdocs.com/).
 ### Waar kan ik ondersteuning krijgen voor GroupDocs.Annotation?
- U kunt ondersteuning krijgen van het GroupDocs.Annotation-communityforum[hier](https://forum.groupdocs.com/c/annotation/10).
+U kunt ondersteuning krijgen via het GroupDocs.Annotation communityforum [hier](https://forum.groupdocs.com/c/annotation/10).

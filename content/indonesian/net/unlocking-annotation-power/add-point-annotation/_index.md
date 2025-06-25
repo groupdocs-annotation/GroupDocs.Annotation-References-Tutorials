@@ -1,24 +1,24 @@
 ---
-title: Tambahkan Anotasi Poin ke Dokumen
-linktitle: Tambahkan Anotasi Poin ke Dokumen
-second_title: GroupDocs.Annotasi .NET API
-description: Pelajari cara menambahkan Anotasi Titik ke PDF menggunakan GroupDocs.Annotation untuk .NET. Panduan langkah demi langkah untuk integrasi yang lancar.
-weight: 17
-url: /id/net/unlocking-annotation-power/add-point-annotation/
+"description": "Pelajari cara menambahkan Anotasi Titik ke PDF menggunakan GroupDocs.Annotation for .NET. Panduan langkah demi langkah untuk integrasi yang lancar."
+"linktitle": "Tambahkan Anotasi Titik ke Dokumen"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Tambahkan Anotasi Titik ke Dokumen"
+"url": "/id/net/unlocking-annotation-power/add-point-annotation/"
+"weight": 17
 ---
 
-# Tambahkan Anotasi Poin ke Dokumen
+# Tambahkan Anotasi Titik ke Dokumen
 
 ## Perkenalan
-GroupDocs.Annotation for .NET adalah alat canggih yang memungkinkan pengembang menambahkan berbagai jenis anotasi ke dokumen secara terprogram. Dalam tutorial ini, kita akan fokus menambahkan Anotasi Titik ke dokumen menggunakan C#.
+GroupDocs.Annotation untuk .NET adalah alat canggih yang memungkinkan pengembang untuk menambahkan berbagai jenis anotasi ke dokumen secara terprogram. Dalam tutorial ini, kita akan fokus pada penambahan Anotasi Titik ke dokumen menggunakan C#.
 ## Prasyarat
 Sebelum kita mulai, pastikan Anda memiliki hal berikut:
-1. Pemahaman dasar bahasa pemrograman C#.
-2. Visual Studio diinstal pada sistem Anda.
-3.  GroupDocs.Annotation untuk perpustakaan .NET diinstal. Anda dapat mengunduhnya dari[Di Sini](https://releases.groupdocs.com/annotation/net/).
+1. Pemahaman dasar tentang bahasa pemrograman C#.
+2. Visual Studio terinstal di sistem Anda.
+3. GroupDocs.Annotation untuk pustaka .NET telah terpasang. Anda dapat mengunduhnya dari [Di Sini](https://releases.groupdocs.com/annotation/net/).
 
-## Mengimpor Namespace yang Diperlukan
-Untuk memulai, Anda perlu mengimpor namespace yang diperlukan ke proyek C# Anda:
+## Mengimpor Ruang Nama yang Diperlukan
+Untuk memulai, Anda perlu mengimpor namespace yang diperlukan ke dalam proyek C# Anda:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,17 +27,17 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Langkah 1: Tentukan Jalur Keluaran
+## Langkah 1: Tentukan Jalur Output
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Pada langkah ini, kami menentukan jalur keluaran tempat dokumen beranotasi akan disimpan.
-## Langkah 2: Inisialisasi Annotator
+Pada langkah ini, kami menentukan jalur keluaran tempat dokumen yang diberi anotasi akan disimpan.
+## Langkah 2: Inisialisasi Anotator
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Di sini, kami menginisialisasi`Annotator` objek dengan dokumen masukan ("input.pdf").
-## Langkah 3: Buat Anotasi Poin
+Di sini, kita menginisialisasi `Annotator` objek dengan dokumen masukan ("input.pdf").
+## Langkah 3: Buat Anotasi Titik
 ```csharp
 PointAnnotation point = new PointAnnotation
 {
@@ -60,7 +60,7 @@ PointAnnotation point = new PointAnnotation
     }
 };
 ```
- Pada langkah ini, kita membuat a`PointAnnotation` objek dan tentukan propertinya seperti posisi, pesan, nomor halaman, dan balasan.
+Pada langkah ini, kita membuat `PointAnnotation` objek dan tentukan propertinya seperti posisi, pesan, nomor halaman, dan balasan.
 ## Langkah 4: Tambahkan Anotasi
 ```csharp
 annotator.Add(point);
@@ -70,18 +70,18 @@ Di sini, kami menambahkan anotasi titik yang dibuat ke dokumen.
 ```csharp
 annotator.Save(outputPath);
 ```
-Terakhir, kami menyimpan dokumen beranotasi ke jalur keluaran yang ditentukan.
+Terakhir, kami menyimpan dokumen yang diberi anotasi ke jalur keluaran yang ditentukan.
 
 ## Kesimpulan
-Dalam tutorial ini, kita telah mempelajari cara menambahkan Anotasi Titik ke dokumen menggunakan GroupDocs.Annotation untuk .NET. Dengan perpustakaan canggih ini, Anda dapat meningkatkan aplikasi manajemen dokumen Anda dengan menggabungkan fungsi anotasi.
-## FAQ
+Dalam tutorial ini, kita telah mempelajari cara menambahkan Anotasi Titik ke dokumen menggunakan GroupDocs.Annotation for .NET. Dengan pustaka canggih ini, Anda dapat menyempurnakan aplikasi manajemen dokumen dengan menggabungkan fungsi anotasi.
+## Pertanyaan yang Sering Diajukan
 ### Apakah GroupDocs.Annotation untuk .NET kompatibel dengan semua format dokumen?
 Ya, GroupDocs.Annotation untuk .NET mendukung berbagai format dokumen termasuk PDF, Microsoft Word, Excel, PowerPoint, dan banyak lagi.
 ### Bisakah saya menyesuaikan tampilan anotasi?
-Sangat! GroupDocs.Annotation for .NET menyediakan opsi ekstensif untuk menyesuaikan tampilan anotasi agar sesuai dengan kebutuhan aplikasi Anda.
+Tentu saja! GroupDocs.Annotation untuk .NET menyediakan opsi yang luas untuk menyesuaikan tampilan anotasi agar sesuai dengan kebutuhan aplikasi Anda.
 ### Apakah ada uji coba gratis yang tersedia untuk GroupDocs.Annotation untuk .NET?
- Ya, Anda dapat memanfaatkan uji coba gratis dari[Di Sini](https://releases.groupdocs.com/).
+Ya, Anda dapat memanfaatkan uji coba gratis dari [Di Sini](https://releases.groupdocs.com/).
 ### Bagaimana saya bisa mendapatkan dukungan untuk masalah atau pertanyaan apa pun yang terkait dengan GroupDocs.Annotation untuk .NET?
- Anda bisa mendapatkan dukungan dari forum GroupDocs.Annotation[Di Sini](https://forum.groupdocs.com/c/annotation/10).
-### Bisakah saya mendapatkan lisensi sementara untuk tujuan pengujian?
- Ya, Anda bisa mendapatkan lisensi sementara dari[Di Sini](https://purchase.groupdocs.com/temporary-license/).
+Anda bisa mendapatkan dukungan dari forum GroupDocs.Annotation [Di Sini](https://forum.groupdocs.com/c/annotation/10).
+### Bisakah saya memperoleh lisensi sementara untuk tujuan pengujian?
+Ya, Anda bisa mendapatkan lisensi sementara dari [Di Sini](https://purchase.groupdocs.com/temporary-license/).

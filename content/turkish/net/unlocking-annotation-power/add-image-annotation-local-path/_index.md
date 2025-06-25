@@ -1,24 +1,24 @@
 ---
-title: Belgeye Görüntü Açıklaması Ekleme (Yerel Yol)
-linktitle: Belgeye Görüntü Açıklaması Ekleme (Yerel Yol)
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation for .NET'i kullanarak belgelere resim açıklamalarını nasıl ekleyeceğinizi öğrenin. Belge işleme yeteneklerini kolaylıkla geliştirin.
-weight: 14
-url: /tr/net/unlocking-annotation-power/add-image-annotation-local-path/
+"description": "GroupDocs.Annotation for .NET kullanarak belgelere resim açıklamalarının nasıl ekleneceğini öğrenin. Belge işleme yeteneklerini kolaylıkla geliştirin."
+"linktitle": "Belgeye Resim Açıklaması Ekle (Yerel Yol)"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeye Resim Açıklaması Ekle (Yerel Yol)"
+"url": "/tr/net/unlocking-annotation-power/add-image-annotation-local-path/"
+"weight": 14
 ---
 
-# Belgeye Görüntü Açıklaması Ekleme (Yerel Yol)
+# Belgeye Resim Açıklaması Ekle (Yerel Yol)
 
 ## giriiş
-GroupDocs.Annotation for .NET, geliştiricilerin belgelere programlı olarak çeşitli türde ek açıklamalar eklemesine olanak tanıyan güçlü bir kitaplıktır. Bu eğitimde, yerel bir yol kullanarak bir belgeye resim açıklamalarının nasıl ekleneceğini öğreneceğiz.
-## Önkoşullar
-Başlamadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
-1. Temel C# programlama dili bilgisi.
+GroupDocs.Annotation for .NET, geliştiricilerin belgelere programatik olarak çeşitli türde açıklamalar eklemesine olanak tanıyan güçlü bir kütüphanedir. Bu eğitimde, yerel bir yol kullanarak bir belgeye resim açıklamalarının nasıl ekleneceğini öğreneceğiz.
+## Ön koşullar
+Başlamadan önce aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
+1. C# programlama dilinin temel bilgisi.
 2. Sisteminizde Visual Studio yüklü.
-3. Projenizde yüklü veya başvurulan .NET kitaplığı için GroupDocs.Annotation.
-4. Bir giriş belgesi (örneğin, PDF) ve açıklama için bir görüntü dosyası.
+3. Projenizde .NET kütüphanesi için GroupDocs.Annotation veya tutorialsd yüklü olmalıdır.
+4. Bir giriş belgesi (örneğin PDF) ve açıklama için bir resim dosyası.
 ## Ad Alanlarını İçe Aktar
-Öncelikle gerekli ad alanlarını C# dosyanıza aktarmanız gerekir. Bu ad alanları, GroupDocs.Annotation ile çalışmak için gereken sınıflara ve yöntemlere erişim sağlar.
+Öncelikle, gerekli ad alanlarını C# dosyanıza aktarmanız gerekir. Bu ad alanları, GroupDocs.Annotation ile çalışmak için gereken sınıflara ve yöntemlere erişim sağlar.
 ```csharp
 using System;
 using System.IO;
@@ -26,21 +26,21 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
 
-## Adım 1: Çıkış Yolunu Tanımlayın
-Açıklamalı belgenin kaydedileceği çıkış yolunu tanımlayın.
+## Adım 1: Çıktı Yolunu Tanımlayın
+Açıklamalı belgenin kaydedileceği çıktı yolunu tanımlayın.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. Adım: Annotator'ı Başlatın
-Giriş belgesinin yolunu sağlayarak açıklayıcıyı başlatın.
+## Adım 2: Annotator'ı Başlatın
+Giriş belgesine giden yolu sağlayarak açıklayıcıyı başlatın.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ek açıklama kodu buraya gelecek
+    // Açıklama kodu buraya gelir
 }
 ```
-## 3. Adım: Resim Açıklaması Oluşturun
- Bir örneğini oluşturun`ImageAnnotation`sınıfını seçin ve konum, opaklık, sayfa numarası ve görüntü yolu gibi özelliklerini belirtin.
+## Adım 3: Görüntü Açıklaması Oluşturun
+Bir örneğini oluşturun `ImageAnnotation` sınıfını belirleyin ve konum, opaklık, sayfa numarası ve resim yolu gibi özelliklerini belirtin.
 ```csharp
 ImageAnnotation image = new ImageAnnotation
 {
@@ -51,32 +51,32 @@ ImageAnnotation image = new ImageAnnotation
     ImagePath = "image.png"
 };
 ```
-## 4. Adım: Ek Açıklama Ekle
- Oluşturulan görüntü açıklamasını belgeye şunu kullanarak ekleyin:`Add` açıklamacının yöntemi.
+## Adım 4: Açıklama Ekle
+Oluşturulan resim açıklamasını kullanarak belgeye ekleyin `Add` açıklayıcının yöntemi.
 ```csharp
 annotator.Add(image);
 ```
-## Adım 5: Belgeyi Kaydet
+## Adım 5: Belgeyi Kaydedin
 Açıklamalı belgeyi çıktı yoluna kaydedin.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Adım 6: Çıkış Yolunu Görüntüleyin
+## Adım 6: Çıkış Yolunu Görüntüle
 Belgenin başarıyla kaydedildiğini ve çıktı dosyasının konumunu belirten bir mesaj görüntüleyin.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Çözüm
-Bu öğreticide, GroupDocs.Annotation for .NET kullanarak bir belgeye görüntü açıklamalarının nasıl ekleneceğini öğrendik. Bu basit adımları izleyerek, güçlü açıklama özellikleriyle belge işleme yeteneklerinizi geliştirebilirsiniz.
-## SSS'ler
-### PDF dışındaki belgelere açıklama ekleyebilir miyim?
-Evet, GroupDocs.Annotation, Word, Excel, PowerPoint ve daha fazlası dahil olmak üzere çeşitli belge formatlarını destekler.
-### GroupDocs.Annotation .NET Core ile uyumlu mu?
+Bu eğitimde, .NET için GroupDocs.Annotation kullanarak bir belgeye resim açıklamalarının nasıl ekleneceğini öğrendik. Bu basit adımları izleyerek, güçlü açıklama özellikleriyle belge işleme yeteneklerinizi geliştirebilirsiniz.
+## SSS
+### PDF dışındaki belgelere not ekleyebilir miyim?
+Evet, GroupDocs.Annotation Word, Excel, PowerPoint ve daha fazlası dahil olmak üzere çeşitli belge biçimlerini destekler.
+### GroupDocs.Annotation .NET Core ile uyumlu mudur?
 Evet, GroupDocs.Annotation hem .NET Framework hem de .NET Core ile uyumludur.
-### Ek açıklamaların görünümünü özelleştirebilir miyim?
-Ek açıklamaların görünümünü, boyutunu, rengini ve diğer özelliklerini kesinlikle ihtiyaçlarınıza göre özelleştirebilirsiniz.
-### GroupDocs.Annotation işbirliğine dayalı açıklama ekleme desteği sağlıyor mu?
-Evet, GroupDocs.Annotation, birden fazla kullanıcının aynı anda belgelere açıklama eklemesine olanak tanıyan ortak açıklama ekleme özellikleri sunar.
-### Nerede ek yardım veya destek bulabilirim?
+### Açıklamaların görünümünü özelleştirebilir miyim?
+Elbette, gereksinimlerinize göre açıklamaların görünümünü, boyutunu, rengini ve diğer özelliklerini özelleştirebilirsiniz.
+### GroupDocs.Annotation işbirlikçi açıklama desteği sağlıyor mu?
+Evet, GroupDocs.Annotation birden fazla kullanıcının aynı anda belgelere açıklama eklemesine olanak tanıyan işbirlikçi açıklama özellikleri sunar.
+### Ek yardım veya desteği nereden bulabilirim?
 Topluluktan yardım ve destek almak için GroupDocs.Annotation forumunu ziyaret edebilirsiniz.

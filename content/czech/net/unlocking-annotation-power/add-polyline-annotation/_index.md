@@ -1,23 +1,23 @@
 ---
-title: Přidejte do dokumentu anotaci křivky
-linktitle: Přidejte do dokumentu anotaci křivky
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se přidávat anotace křivek do dokumentů pomocí GroupDocs.Annotation for .NET. Vylepšete spolupráci a procesy kontroly dokumentů bez námahy.
-weight: 18
-url: /cs/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "Naučte se, jak přidávat anotace křivek do dokumentů pomocí GroupDocs.Annotation pro .NET. Bez námahy vylepšete spolupráci a procesy kontroly dokumentů."
+"linktitle": "Přidání anotace křivky do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidání anotace křivky do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# Přidejte do dokumentu anotaci křivky
+# Přidání anotace křivky do dokumentu
 
-## Úvod
-GroupDocs.Annotation for .NET je výkonný nástroj, který umožňuje vývojářům programově anotovat dokumenty PDF a Microsoft Office. Mezi jeho funkce patří schopnost přidávat k dokumentům anotace křivek, což zlepšuje spolupráci a procesy kontroly dokumentů.
+## Zavedení
+GroupDocs.Annotation pro .NET je výkonný nástroj, který umožňuje vývojářům programově anotovat dokumenty PDF a Microsoft Office. Mezi jeho funkce patří možnost přidávat do dokumentů anotace křivkami, což vylepšuje spolupráci a procesy kontroly dokumentů.
 ## Předpoklady
 Než budete pokračovat v tomto tutoriálu, ujistěte se, že máte následující:
 - Visual Studio nainstalované ve vašem systému.
 - Základní znalost programovacího jazyka C#.
--  Nainstalovaná knihovna GroupDocs.Annotation pro .NET. Můžete si jej stáhnout z[tady](https://releases.groupdocs.com/annotation/net/).
+- Je nainstalována knihovna GroupDocs.Annotation pro .NET. Můžete si ji stáhnout z [zde](https://releases.groupdocs.com/annotation/net/).
 
-## Import jmenných prostorů
+## Importovat jmenné prostory
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Krok 1: Definujte výstupní cestu
-Nejprve definujte výstupní cestu, kam bude dokument s poznámkami uložen.
+## Krok 1: Definování výstupní cesty
+Nejprve definujte výstupní cestu, kam bude uložen anotovaný dokument.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Inicializujte anotátor
+## Krok 2: Inicializace anotátoru
 Inicializujte anotátor zadáním názvu vstupního dokumentu.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Krok 3: Vytvořte objekt poznámky křivky
-Vytvořte objekt anotace křivky a nastavte jeho vlastnosti, jako je poloha, zpráva, krytí, barva pera, styl pera a šířka pera.
+## Krok 3: Vytvoření objektu anotace křivky
+Vytvořte objekt anotace křivky a nastavte jeho vlastnosti, jako je poloha, zpráva, neprůhlednost, barva pera, styl pera a šířka pera.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -67,32 +67,32 @@ PolylineAnnotation polyline = new PolylineAnnotation
 4460093896,0l0.6986854460093896,0l0.6986854460093896,-0.6986854460093896l0.6986854460093896,0"
 };
 ```
-## Krok 4: Přidejte anotaci křivky
+## Krok 4: Přidání anotace křivky
 Přidejte do dokumentu anotaci křivky pomocí objektu anotátoru.
 ```csharp
 annotator.Add(polyline);
 ```
-## Krok 5: Uložte dokument
-Uložte dokument s poznámkami do zadané výstupní cesty.
+## Krok 5: Uložení dokumentu
+Uložte anotovaný dokument do zadané výstupní cesty.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Krok 6: Zobrazte zprávu o úspěchu
-Zobrazte zprávu potvrzující úspěšné uložení dokumentu.
+## Krok 6: Zobrazení zprávy o úspěchu
+Zobrazit zprávu potvrzující úspěšné uložení dokumentu.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Závěr
-tomto tutoriálu jsme se naučili, jak přidat anotaci křivky do dokumentu pomocí GroupDocs.Annotation for .NET. Tato funkce zlepšuje spolupráci a procesy kontroly dokumentů a usnadňuje uživatelům efektivně sdělovat zpětnou vazbu a návrhy.
-## FAQ
-### Je GroupDocs.Annotation for .NET kompatibilní se všemi formáty dokumentů?
-GroupDocs.Annotation for .NET podporuje oblíbené formáty dokumentů, jako jsou PDF a formáty Microsoft Office včetně Wordu, Excelu a PowerPointu.
-### Mohu upravit vzhled anotací?
-Ano, můžete přizpůsobit různé vlastnosti anotací, jako je barva, neprůhlednost, styl a šířka, aby vyhovovaly vašim požadavkům.
-### Nabízí GroupDocs.Annotation for .NET bezplatnou zkušební verzi?
- Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET návštěvou[tento odkaz](https://releases.groupdocs.com/).
+V tomto tutoriálu jsme se naučili, jak přidat do dokumentu anotaci křivky pomocí GroupDocs.Annotation pro .NET. Tato funkce vylepšuje procesy spolupráce a kontroly dokumentů a usnadňuje uživatelům efektivní sdělování zpětné vazby a návrhů.
+## Často kladené otázky
+### Je GroupDocs.Annotation pro .NET kompatibilní se všemi formáty dokumentů?
+GroupDocs.Annotation pro .NET podporuje oblíbené formáty dokumentů, jako je PDF a formáty Microsoft Office, včetně Wordu, Excelu a PowerPointu.
+### Mohu si přizpůsobit vzhled anotací?
+Ano, můžete si přizpůsobit různé vlastnosti anotací, jako je barva, neprůhlednost, styl a šířka, aby vyhovovaly vašim požadavkům.
+### Nabízí GroupDocs.Annotation pro .NET bezplatnou zkušební verzi?
+Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET na adrese [tento odkaz](https://releases.groupdocs.com/).
 ### Kde najdu dokumentaci k GroupDocs.Annotation pro .NET?
- Můžete najít dokumentaci pro GroupDocs.Annotation pro .NET[tady](https://tutorials.groupdocs.com/annotation/net/).
-### Jak mohu získat podporu pro jakékoli problémy nebo dotazy související s GroupDocs.Annotation pro .NET?
- Podporu můžete získat návštěvou fóra GroupDocs.Annotation[tady](https://forum.groupdocs.com/c/annotation/10).
+Dokumentaci k souboru GroupDocs.Annotation pro .NET naleznete v [zde](https://tutorials.groupdocs.com/annotation/net/).
+### Jak mohu získat podporu pro jakékoli problémy nebo dotazy týkající se GroupDocs.Annotation pro .NET?
+Podporu můžete získat na fóru GroupDocs.Annotation. [zde](https://forum.groupdocs.com/c/annotation/10).

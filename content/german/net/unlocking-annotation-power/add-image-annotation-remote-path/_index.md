@@ -1,22 +1,22 @@
 ---
-title: Bildanmerkung zum Dokument hinzufügen (Remote-Pfad)
-linktitle: Bildanmerkung zum Dokument hinzufügen (Remote-Pfad)
-second_title: GroupDocs.Annotation .NET-API
-description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Bildanmerkungen zu Dokumenten hinzufügen. Verbessern Sie die Dokumentenverwaltung mit leistungsstarken Anmerkungsfunktionen.
-weight: 15
-url: /de/net/unlocking-annotation-power/add-image-annotation-remote-path/
+"description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Bildanmerkungen zu Dokumenten hinzufügen. Verbessern Sie Ihr Dokumentenmanagement mit leistungsstarken Anmerkungsfunktionen."
+"linktitle": "Bildanmerkung zum Dokument hinzufügen (Remote-Pfad)"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Bildanmerkung zum Dokument hinzufügen (Remote-Pfad)"
+"url": "/de/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+"weight": 15
 ---
 
 # Bildanmerkung zum Dokument hinzufügen (Remote-Pfad)
 
 ## Einführung
-In diesem Tutorial führen wir den Prozess des Hinzufügens von Bildanmerkungen zu einem Dokument mithilfe von GroupDocs.Annotation für .NET durch. Diese Bibliothek bietet leistungsstarke Tools zum programmgesteuerten Kommentieren verschiedener Dokumenttypen.
+In diesem Tutorial erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET Bildanmerkungen zu einem Dokument hinzufügen. Diese Bibliothek bietet leistungsstarke Tools zum programmgesteuerten Kommentieren verschiedener Dokumenttypen.
 ## Voraussetzungen
-Bevor wir beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
-1.  GroupDocs.Annotation für .NET: Laden Sie die Bibliothek herunter und installieren Sie sie von[Hier](https://releases.groupdocs.com/annotation/net/).
-2. Entwicklungsumgebung: Stellen Sie sicher, dass Sie über eine funktionierende Entwicklungsumgebung für die .NET-Entwicklung verfügen.
-3.  Dokument: Bereiten Sie das Dokument vor, das Sie mit Anmerkungen versehen möchten. Für dieses Tutorial gehen wir davon aus, dass Sie ein PDF-Dokument mit dem Namen haben`input.pdf`.
-4. Bild für Anmerkung: Wählen Sie das Bild aus, das Sie für die Anmerkung verwenden möchten. Stellen Sie sicher, dass Sie die Bild-URL oder den lokalen Pfad bereit haben.
+Bevor wir beginnen, stellen Sie sicher, dass Sie Folgendes haben:
+1. GroupDocs.Annotation für .NET: Laden Sie die Bibliothek herunter und installieren Sie sie von [Hier](https://releases.groupdocs.com/annotation/net/).
+2. Entwicklungsumgebung: Stellen Sie sicher, dass Sie eine funktionierende Entwicklungsumgebung für die .NET-Entwicklung eingerichtet haben.
+3. Dokument: Bereiten Sie das Dokument vor, das Sie kommentieren möchten. Für dieses Tutorial gehen wir davon aus, dass Sie ein PDF-Dokument mit dem Namen `input.pdf`.
+4. Bild für Anmerkung: Wählen Sie das Bild aus, das Sie für Anmerkungen verwenden möchten. Halten Sie die Bild-URL oder den lokalen Pfad bereit.
 
 ## Namespaces importieren
 Bevor wir mit dem Codieren beginnen, importieren wir die erforderlichen Namespaces:
@@ -27,20 +27,20 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
 ## Schritt 1: Ausgabepfad festlegen
-Definieren Sie zunächst den Ausgabepfad, in dem das mit Anmerkungen versehene Dokument gespeichert wird.
+Definieren Sie zunächst den Ausgabepfad, in dem das kommentierte Dokument gespeichert wird.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Schritt 2: Annotator initialisieren
- Erstellen Sie eine Instanz von`Annotator` Klasse und geben Sie das Eingabedokument an.
+Erstellen Sie eine Instanz des `Annotator` Klasse und geben Sie das Eingabedokument an.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Der Anmerkungscode wird hier angezeigt
+    // Der Anmerkungscode wird hier eingefügt
 }
 ```
-## Schritt 3: Bildanmerkung hinzufügen
-Fügen wir nun die Bildanmerkung zum Dokument hinzu. Wir legen die Eigenschaften der Bildanmerkung wie Position, Deckkraft, Seitenzahl und Bildpfad fest.
+## Schritt 3: Bildanmerkungen hinzufügen
+Fügen wir nun die Bildanmerkung zum Dokument hinzu. Wir legen die Eigenschaften der Bildanmerkung fest, z. B. Position, Deckkraft, Seitenzahl und Bildpfad.
 ```csharp
 ImageAnnotation image = new ImageAnnotation
 {
@@ -50,7 +50,7 @@ ImageAnnotation image = new ImageAnnotation
     PageNumber = 0, // Geben Sie die Seitenzahl an
     ImagePath = "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" // Geben Sie die URL des Bildes an
 };
-annotator.Add(image); // Fügen Sie die Bildanmerkung hinzu
+annotator.Add(image); // Bildanmerkung hinzufügen
 ```
 ## Schritt 4: Dokument speichern
 Speichern Sie das mit Anmerkungen versehene Dokument im angegebenen Ausgabepfad.
@@ -64,15 +64,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Abschluss
-In diesem Tutorial haben wir gelernt, wie man mit GroupDocs.Annotation für .NET Bildanmerkungen zu einem Dokument hinzufügt. Wenn Sie diese Schritte befolgen, können Sie Ihre Dokumentenverwaltungsanwendungen mit leistungsstarken Anmerkungsfunktionen erweitern.
-## FAQs
-### Kann GroupDocs.Annotation neben PDF auch mit anderen Dokumentformaten verwendet werden?
+In diesem Tutorial haben wir gelernt, wie Sie mit GroupDocs.Annotation für .NET Bildanmerkungen zu einem Dokument hinzufügen. Mit diesen Schritten können Sie Ihre Dokumentenverwaltungsanwendungen um leistungsstarke Anmerkungsfunktionen erweitern.
+## Häufig gestellte Fragen
+### Kann GroupDocs.Annotation mit anderen Dokumentformaten außer PDF verwendet werden?
 Ja, GroupDocs.Annotation unterstützt verschiedene Dokumentformate, darunter Word, Excel, PowerPoint und mehr.
 ### Ist GroupDocs.Annotation mit .NET Core kompatibel?
-Ja, GroupDocs.Annotation ist sowohl mit .NET Framework als auch .NET Core kompatibel.
+Ja, GroupDocs.Annotation ist sowohl mit .NET Framework als auch mit .NET Core kompatibel.
 ### Kann ich das Erscheinungsbild von Anmerkungen anpassen?
-Ja, Sie können das Erscheinungsbild von Anmerkungen wie Farbe, Deckkraft und Größe anpassen.
-### Unterstützt GroupDocs.Annotation Funktionen für kollaborative Anmerkungen?
-Ja, GroupDocs.Annotation bietet kollaborative Anmerkungsfunktionen für die Zusammenarbeit an Dokumenten in Echtzeit.
+Ja, Sie können das Erscheinungsbild von Anmerkungen, beispielsweise Farbe, Deckkraft und Größe, anpassen.
+### Unterstützt GroupDocs.Annotation kollaborative Anmerkungsfunktionen?
+Ja, GroupDocs.Annotation bietet kollaborative Anmerkungsfunktionen für die Echtzeit-Zusammenarbeit an Dokumenten.
 ### Gibt es eine Testversion zum Testen?
- Ja, Sie können eine kostenlose Testversion von GroupDocs.Annotation unter erhalten[Hier](https://releases.groupdocs.com/).
+Ja, Sie können eine kostenlose Testversion von GroupDocs.Annotation erhalten von [Hier](https://releases.groupdocs.com/).

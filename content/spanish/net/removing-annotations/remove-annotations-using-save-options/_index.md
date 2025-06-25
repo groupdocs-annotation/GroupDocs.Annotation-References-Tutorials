@@ -1,29 +1,29 @@
 ---
-title: Eliminar anotaciones mediante las opciones de guardar en .NET
-linktitle: Eliminar anotaciones mediante las opciones de guardar en .NET
-second_title: API GroupDocs.Annotation .NET
-description: Aprenda a eliminar anotaciones de PDF y otros documentos en .NET usando GroupDocs.Annotation. Guía paso a paso con ejemplos de código.
-weight: 14
-url: /es/net/removing-annotations/remove-annotations-using-save-options/
+"description": "Aprenda a eliminar anotaciones de PDF y otros documentos .NET con GroupDocs.Annotation. Guía paso a paso con ejemplos de código."
+"linktitle": "Eliminar anotaciones mediante las opciones de guardado en .NET"
+"second_title": "API .NET de GroupDocs.Annotation"
+"title": "Eliminar anotaciones mediante las opciones de guardado en .NET"
+"url": "/es/net/removing-annotations/remove-annotations-using-save-options/"
+"weight": 14
 ---
 
-# Eliminar anotaciones mediante las opciones de guardar en .NET
+# Eliminar anotaciones mediante las opciones de guardado en .NET
 
 ## Introducción
 
-GroupDocs.Annotation para .NET es una poderosa herramienta que permite a los desarrolladores agregar funcionalidad de anotación a sus aplicaciones .NET con facilidad. Ya sea que esté trabajando en un sistema de gestión de documentos, una plataforma de colaboración o cualquier otra aplicación que implique procesamiento de documentos, GroupDocs.Annotation proporciona un conjunto completo de funciones para anotar PDF y otros formatos de documentos sin problemas.
+GroupDocs.Annotation para .NET es una potente herramienta que permite a los desarrolladores añadir funciones de anotación a sus aplicaciones .NET fácilmente. Ya sea que trabaje en un sistema de gestión documental, una plataforma de colaboración o cualquier otra aplicación que implique el procesamiento de documentos, GroupDocs.Annotation ofrece un conjunto completo de funciones para anotar documentos PDF y otros formatos sin problemas.
 
-## Requisitos previos
+## Prerrequisitos
 
-Antes de sumergirse en el mundo de la anotación de documentos utilizando GroupDocs.Annotation para .NET, asegúrese de cumplir con los siguientes requisitos previos:
+Antes de sumergirse en el mundo de la anotación de documentos utilizando GroupDocs.Annotation para .NET, asegúrese de tener los siguientes requisitos previos:
 
-### 1. Instale GroupDocs.Annotation para .NET
+### 1. Instalar GroupDocs.Annotation para .NET
 
- Comience descargando e instalando GroupDocs.Annotation para .NET. Puede descargar la última versión desde[download page](https://releases.groupdocs.com/annotation/net/).
+Comience descargando e instalando GroupDocs.Annotation para .NET. Puede descargar la última versión desde [página de descarga](https://releases.groupdocs.com/annotation/net/).
 
-## Importando espacios de nombres
+## Importación de espacios de nombres
 
-Para comenzar a usar GroupDocs.Annotation en su proyecto .NET, debe importar los espacios de nombres necesarios. Estos son los espacios de nombres que usarás comúnmente:
+Para empezar a usar GroupDocs.Annotation en su proyecto .NET, debe importar los espacios de nombres necesarios. Estos son los espacios de nombres que usará habitualmente:
 
 ```csharp
 using GroupDocs.Annotation.Options;
@@ -34,28 +34,28 @@ using System.IO;
 
 Ahora, veamos el proceso de eliminar anotaciones de un documento usando la función Opciones de guardado en .NET:
 
-## Paso 1: definir la ruta de salida
+## Paso 1: Definir la ruta de salida
 
-Primero, defina la ruta de salida donde se guardará el documento con las anotaciones eliminadas. Puedes usar el`Path.Combine` Método para combinar la ruta del directorio con el nombre del archivo de salida.
+Primero, defina la ruta de salida donde se guardará el documento con las anotaciones eliminadas. Puede usar el `Path.Combine` método para combinar la ruta del directorio con el nombre del archivo de salida.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Paso 2: inicializar el anotador
+## Paso 2: Inicializar el anotador
 
- A continuación, inicialice una instancia del`Annotator` clase proporcionando la ruta al documento que contiene anotaciones.
+A continuación, inicialice una instancia de `Annotator` clase proporcionando la ruta al documento que contiene anotaciones.
 
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
-    // El código de eliminación de anotaciones irá aquí
+    // El código para eliminar anotaciones irá aquí
 }
 ```
 
-## Paso 3: guardar el documento eliminando las anotaciones
+## Paso 3: Guardar el documento con la eliminación de anotaciones
 
- Ahora, usa el`Save` método de la`Annotator` clase junto con el`SaveOptions` para guardar el documento con las anotaciones eliminadas. En el`SaveOptions` , selecciona el`AnnotationTypes` propiedad a`AnnotationType.None` para eliminar todas las anotaciones.
+Ahora, utiliza el `Save` método de la `Annotator` clase junto con el `SaveOptions` para guardar el documento con las anotaciones eliminadas. En el `SaveOptions`, establecer el `AnnotationTypes` propiedad a `AnnotationType.None` para eliminar todas las anotaciones.
 
 ```csharp
 annotator.Save(outputPath, new SaveOptions() { AnnotationTypes = AnnotationType.None });
@@ -63,7 +63,7 @@ annotator.Save(outputPath, new SaveOptions() { AnnotationTypes = AnnotationType.
 
 ## Paso 4: Mostrar mensaje de éxito
 
-Finalmente, muestre un mensaje de éxito que indique que el documento se guardó correctamente y se eliminaron las anotaciones.
+Por último, muestra un mensaje de éxito indicando que el documento se ha guardado exitosamente con las anotaciones eliminadas.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -71,13 +71,13 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Conclusión
 
-En conclusión, GroupDocs.Annotation para .NET simplifica el proceso de eliminar anotaciones de documentos. Siguiendo la guía paso a paso descrita anteriormente, los desarrolladores pueden integrar perfectamente la funcionalidad de eliminación de anotaciones en sus aplicaciones .NET.
+En conclusión, GroupDocs.Annotation para .NET simplifica el proceso de eliminación de anotaciones de los documentos. Siguiendo la guía paso a paso descrita anteriormente, los desarrolladores pueden integrar fácilmente la función de eliminación de anotaciones en sus aplicaciones .NET.
 
 ## Preguntas frecuentes
 
-### P: ¿GroupDocs.Annotation puede eliminar anotaciones de otros formatos de documentos además de PDF?
+### P: ¿Puede GroupDocs.Annotation eliminar anotaciones de otros formatos de documentos además de PDF?
 
-R: GroupDocs.Annotation admite varios formatos de documentos, incluidos PDF, Word, Excel y PowerPoint, lo que le permite eliminar anotaciones de una amplia gama de documentos.
+A: GroupDocs.Annotation admite varios formatos de documentos, incluidos PDF, Word, Excel y PowerPoint, lo que le permite eliminar anotaciones de una amplia gama de documentos.
 
 ### P: ¿Es fácil integrar GroupDocs.Annotation en proyectos .NET existentes?
 
@@ -89,8 +89,8 @@ R: Sí, GroupDocs.Annotation permite a los desarrolladores especificar qué tipo
 
 ### P: ¿Puedo probar GroupDocs.Annotation gratis antes de comprarlo?
 
- R: Sí, puede descargar una versión de prueba gratuita de GroupDocs.Annotation desde[página de lanzamientos](https://releases.groupdocs.com/) para explorar sus características antes de tomar una decisión de compra.
+R: Sí, puede descargar una versión de prueba gratuita de GroupDocs.Annotation desde [página de lanzamientos](https://releases.groupdocs.com/) para explorar sus características antes de tomar una decisión de compra.
 
-### P: ¿Dónde puedo obtener soporte para GroupDocs.Annotation?
+### P: ¿Dónde puedo obtener asistencia para GroupDocs.Annotation?
 
- R: Para obtener asistencia técnica y soporte comunitario, puede visitar el[Foro GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).
+A: Para obtener asistencia técnica y soporte de la comunidad, puede visitar el sitio [Foro de anotaciones de GroupDocs](https://forum.groupdocs.com/c/annotation/10).

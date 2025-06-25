@@ -1,23 +1,23 @@
 ---
-title: Přidejte do dokumentu anotaci elipsy
-linktitle: Přidejte do dokumentu anotaci elipsy
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se přidávat elipsové anotace do dokumentů v .NET pomocí GroupDocs.Annotation. Vylepšete spolupráci a komunikaci bez námahy.
-weight: 13
-url: /cs/net/unlocking-annotation-power/add-ellipse-annotation/
+"description": "Naučte se, jak přidávat elipsové anotace do dokumentů v .NET pomocí GroupDocs.Annotation. Vylepšete spolupráci a komunikaci bez námahy."
+"linktitle": "Přidání elipsovité anotace do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidání elipsovité anotace do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-ellipse-annotation/"
+"weight": 13
 ---
 
-# Přidejte do dokumentu anotaci elipsy
+# Přidání elipsovité anotace do dokumentu
 
-## Úvod
-V tomto kurzu se naučíte, jak přidat elipsovou anotaci do dokumentu pomocí GroupDocs.Annotation for .NET. Tento průvodce vás krok za krokem provede celým procesem a zajistí, že každému kroku jasně porozumíte.
+## Zavedení
+V tomto tutoriálu se naučíte, jak přidat do dokumentu anotaci ve tvaru elipsy pomocí nástroje GroupDocs.Annotation pro .NET. Tento podrobný návod vás provede celým procesem a zajistí, že každému kroku jasně porozumíte.
 ## Předpoklady
 Než začnete, ujistěte se, že máte následující:
-1.  GroupDocs.Annotation pro .NET: Ujistěte se, že jste si stáhli a nainstalovali GroupDocs.Annotation pro .NET. Můžete si jej stáhnout z[tady](https://releases.groupdocs.com/annotation/net/).
-2. IDE (Integrated Development Environment): K zápisu a spuštění kódu budete potřebovat IDE nainstalované ve vašem systému, jako je Visual Studio.
+1. GroupDocs.Annotation pro .NET: Ujistěte se, že jste si stáhli a nainstalovali GroupDocs.Annotation pro .NET. Můžete si ho stáhnout z [zde](https://releases.groupdocs.com/annotation/net/).
+2. IDE (integrované vývojové prostředí): Pro napsání a spuštění kódu budete potřebovat nainstalované IDE, například Visual Studio.
 
-## Import jmenných prostorů
-Nejprve do projektu importujte potřebné jmenné prostory:
+## Importovat jmenné prostory
+Nejprve importujte potřebné jmenné prostory do projektu:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Krok 1: Nastavte výstupní cestu
-Definujte výstupní cestu, kam bude dokument s poznámkami uložen:
+## Krok 1: Nastavení výstupní cesty
+Definujte výstupní cestu, kam bude uložen anotovaný dokument:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Inicializujte anotátor
-Inicializujte anotátor zadáním cesty vstupního dokumentu:
+## Krok 2: Inicializace anotátoru
+Inicializujte anotátor zadáním vstupní cesty k dokumentu:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Krok 3: Vytvořte elipsovou anotaci
- Vytvořte instanci souboru`EllipseAnnotation` třídy a nastavte její vlastnosti:
+## Krok 3: Vytvořte anotaci elipsy
+Vytvořte instanci `EllipseAnnotation` třídu a nastavte její vlastnosti:
 ```csharp
 EllipseAnnotation ellipse = new EllipseAnnotation
 {
@@ -66,27 +66,27 @@ EllipseAnnotation ellipse = new EllipseAnnotation
     }
 };
 ```
-## Krok 4: Přidejte anotaci
+## Krok 4: Přidání anotace
 Přidejte do dokumentu anotaci elipsy:
 ```csharp
 annotator.Add(ellipse);
 ```
-## Krok 5: Uložte dokument
-Uložte dokument s poznámkami do výstupní cesty:
+## Krok 5: Uložení dokumentu
+Uložte anotovaný dokument do výstupní cesty:
 ```csharp
 annotator.Save(outputPath);
 ```
 
 ## Závěr
-Gratulujeme! Úspěšně jste přidali elipsovou anotaci do dokumentu pomocí GroupDocs.Annotation for .NET. Tuto funkci nyní můžete integrovat do svých aplikací .NET a zlepšit tak spolupráci na dokumentech a komunikaci.
-## FAQ
-### Mohu upravit vzhled elipsové anotace?
-Ano, můžete přizpůsobit různé vlastnosti, jako je barva pozadí, barva ohraničení, neprůhlednost atd., podle vašich požadavků.
-### Je GroupDocs.Annotation for .NET kompatibilní se všemi formáty dokumentů?
-GroupDocs.Annotation for .NET podporuje širokou škálu formátů dokumentů včetně PDF, DOCX, PPTX, XLSX a dalších.
-### Mohu k jednomu dokumentu přidat více anotací?
-Ano, do jednoho dokumentu můžete přidat více anotací včetně elips, obdélníků, textu atd.
-### Je k dispozici zkušební verze pro účely testování?
- Ano, můžete si stáhnout bezplatnou zkušební verzi z[tady](https://releases.groupdocs.com/) zhodnotit jeho vlastnosti.
+Gratulujeme! Úspěšně jste přidali elipsovitou anotaci do dokumentu pomocí GroupDocs.Annotation pro .NET. Nyní můžete tuto funkci integrovat do svých .NET aplikací a vylepšit tak spolupráci a komunikaci v oblasti dokumentů.
+## Často kladené otázky
+### Mohu si přizpůsobit vzhled anotace elipsy?
+Ano, můžete si přizpůsobit různé vlastnosti, jako je barva pozadí, barva ohraničení, neprůhlednost atd., podle svých požadavků.
+### Je GroupDocs.Annotation pro .NET kompatibilní se všemi formáty dokumentů?
+GroupDocs.Annotation pro .NET podporuje širokou škálu formátů dokumentů, včetně PDF, DOCX, PPTX, XLSX a dalších.
+### Mohu do jednoho dokumentu přidat více anotací?
+Ano, do jednoho dokumentu můžete přidat více anotací, včetně elips, obdélníků, textu atd.
+### Je k dispozici zkušební verze pro testovací účely?
+Ano, můžete si stáhnout bezplatnou zkušební verzi z [zde](https://releases.groupdocs.com/) aby zhodnotili jeho vlastnosti.
 ### Kde mohu získat technickou podporu pro GroupDocs.Annotation pro .NET?
- Technickou podporu můžete získat na fóru komunity GroupDocs.Annotation[tady](https://forum.groupdocs.com/c/annotation/10).
+Technickou podporu můžete získat na komunitním fóru GroupDocs.Annotation. [zde](https://forum.groupdocs.com/c/annotation/10).

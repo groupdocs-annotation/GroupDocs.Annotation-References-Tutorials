@@ -1,27 +1,27 @@
 ---
-title: Voeg een annotatie voor het redigeren van bronnen toe aan het document
-linktitle: Voeg een annotatie voor het redigeren van bronnen toe aan het document
-second_title: GroupDocs.Annotation .NET API
-description: Verbeter documentbeheerworkflows met GroupDocs.Annotation voor .NET. Integreer Resources Redaction Annotation naadloos in uw .NET voor een efficiënte werking.
-weight: 19
-url: /nl/net/unlocking-annotation-power/add-resources-redaction-annotation/
+"description": "Verbeter documentbeheerworkflows met GroupDocs.Annotation voor .NET. Integreer Resources Redaction Annotation naadloos in uw .NET voor efficiënte workflows."
+"linktitle": "Bronnenredactie-annotatie toevoegen aan document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Bronnenredactie-annotatie toevoegen aan document"
+"url": "/nl/net/unlocking-annotation-power/add-resources-redaction-annotation/"
+"weight": 19
 ---
 
-# Voeg een annotatie voor het redigeren van bronnen toe aan het document
+# Bronnenredactie-annotatie toevoegen aan document
 
 ## Invoering
-Op het gebied van .NET-ontwikkeling kan het integreren van efficiënte tools voor documentannotatie de productiviteit aanzienlijk verbeteren en de workflows stroomlijnen. GroupDocs.Annotation voor .NET komt naar voren als een robuuste oplossing, die een overvloed aan functionaliteiten biedt om documenten naadloos te annoteren en te manipuleren. Deze tutorial gaat in op het proces van het integreren en gebruiken van Resources Redaction Annotation, een krachtige functie binnen GroupDocs.Annotation voor .NET.
+Binnen .NET-ontwikkeling kan de integratie van efficiënte tools voor documentannotatie de productiviteit aanzienlijk verhogen en workflows stroomlijnen. GroupDocs.Annotation voor .NET is een robuuste oplossing met een overvloed aan functionaliteiten voor het naadloos annoteren en bewerken van documenten. Deze tutorial gaat dieper in op het proces van het integreren en gebruiken van Resources Redaction Annotation, een krachtige functie binnen GroupDocs.Annotation voor .NET.
 ## Vereisten
-Voordat u in de implementatie duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+Voordat u met de implementatie begint, moet u ervoor zorgen dat de volgende vereisten aanwezig zijn:
 ### 1. .NET-ontwikkelomgeving
-Zorg ervoor dat u een functionele .NET-ontwikkelomgeving op uw computer hebt geïnstalleerd. Als dit niet het geval is, kunt u de nieuwste versie van de .NET SDK downloaden en installeren vanaf de website van Microsoft.
-### 2. GroupDocs.Annotatie voor .NET
- Download en installeer GroupDocs.Annotation voor .NET-bibliotheek uit de meegeleverde bibliotheek[download link](https://releases.groupdocs.com/annotation/net/). Volg de installatie-instructies in de documentatie voor een naadloze integratie.
+Zorg ervoor dat u een werkende .NET-ontwikkelomgeving op uw computer hebt geïnstalleerd. Zo niet, dan kunt u de nieuwste versie van de .NET SDK downloaden en installeren vanaf de Microsoft-website.
+### 2. GroupDocs.Annotation voor .NET
+Download en installeer GroupDocs.Annotation voor .NET-bibliotheek uit de meegeleverde [downloadlink](https://releases.groupdocs.com/annotation/net/)Volg de installatie-instructies in de documentatie voor naadloze integratie.
 ### 3. Basiskennis van C#
-Maak uzelf vertrouwd met de syntaxis en concepten van de programmeertaal C# om de meegeleverde codefragmenten effectief te implementeren.
+Maak uzelf vertrouwd met de syntaxis en concepten van de programmeertaal C#, zodat u de verstrekte codefragmenten effectief kunt implementeren.
 
 ## Naamruimten importeren
-Neem de benodigde naamruimten op om toegang te krijgen tot de vereiste klassen en methoden voor documentannotatie met behulp van GroupDocs.Annotation voor .NET.
+Integreer de benodigde naamruimten om toegang te krijgen tot de vereiste klassen en methoden voor documentannotatie met GroupDocs.Annotation voor .NET.
 
 ```csharp
 using System;
@@ -34,12 +34,12 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Stap 1: Definieer het uitvoerpad
-Geef het uitvoerpad op waar het geannoteerde document zal worden opgeslagen.
+## Stap 1: Uitvoerpad definiëren
+Geef het uitvoerpad op waar het geannoteerde document wordt opgeslagen.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Stap 2: Initialiseer het annotatorobject
+## Stap 2: Annotatorobject initialiseren
 Instantieer het Annotator-object door het pad naar het invoerdocument op te geven.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
@@ -47,8 +47,8 @@ using (Annotator annotator = new Annotator("input.pdf"))
     // Annotatiecode wordt hier toegevoegd
 }
 ```
-## Stap 3: Maak een annotatie voor het redigeren van bronnen
-Definieer een ResourcesRedactionAnnotation-object met de gewenste eigenschappen, zoals doosafmetingen, bericht, paginanummer en antwoorden.
+## Stap 3: Bronnen redactie-annotatie maken
+Definieer een ResourcesRedactionAnnotation-object met de gewenste eigenschappen, zoals afmetingen van het vak, bericht, paginanummer en antwoorden.
 ```csharp
 ResourcesRedactionAnnotation resourcesRedaction = new ResourcesRedactionAnnotation
 {
@@ -72,31 +72,31 @@ ResourcesRedactionAnnotation resourcesRedaction = new ResourcesRedactionAnnotati
 };
 ```
 ## Stap 4: Annotatie toevoegen
-Voeg de gemaakte bronnenredactieannotatie toe aan het document met behulp van het annotatorobject.
+Voeg de gemaakte Resources Redaction Annotation toe aan het document met behulp van het annotatorobject.
 ```csharp
 annotator.Add(resourcesRedaction);
 ```
-## Stap 5: Bewaar het geannoteerde document
+## Stap 5: Geannoteerd document opslaan
 Sla het geannoteerde document op in het opgegeven uitvoerpad.
 ```csharp
 annotator.Save(outputPath);
 ```
 ## Stap 6: Succesbericht weergeven
-Informeer de gebruiker over de succesvolle voltooiing van het annotatieproces en geef het pad naar het geannoteerde document op.
+Informeer de gebruiker over de succesvolle voltooiing van het annotatieproces en geef het pad naar het geannoteerde document.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Conclusie
-Concluderend biedt GroupDocs.Annotation voor .NET een uitgebreide reeks tools voor documentannotatie, waardoor .NET-ontwikkelaars de documentbeheerworkflows effectief kunnen verbeteren. Door de stapsgewijze handleiding in deze zelfstudie te volgen, kunt u Resources Redaction Annotation naadloos integreren in uw .NET-toepassingen, waardoor de samenwerking en productiviteit worden verbeterd.
+Kortom, GroupDocs.Annotation voor .NET biedt een uitgebreide reeks tools voor documentannotatie, waarmee .NET-ontwikkelaars hun workflows voor documentbeheer effectief kunnen verbeteren. Door de stapsgewijze handleiding in deze tutorial te volgen, kunt u Resources Redaction Annotation naadloos integreren in uw .NET-applicaties, wat de samenwerking en productiviteit verbetert.
 ## Veelgestelde vragen
 ### Is GroupDocs.Annotation voor .NET compatibel met alle documentformaten?
-GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentformaten, waaronder PDF, DOCX, PPTX, XLSX en meer.
-### Kan ik het uiterlijk aanpassen van annotaties die zijn gemaakt met GroupDocs.Annotation voor .NET?
-Ja, u kunt het uiterlijk van annotaties aanpassen door eigenschappen zoals kleur, dekking en lijndikte aan te passen.
+GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentindelingen, waaronder PDF, DOCX, PPTX, XLSX en meer.
+### Kan ik het uiterlijk van annotaties die zijn gemaakt met GroupDocs.Annotation voor .NET aanpassen?
+Ja, u kunt het uiterlijk van aantekeningen aanpassen door eigenschappen zoals kleur, dekking en lijndikte aan te passen.
 ### Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation voor .NET?
- Ja, u kunt gebruikmaken van een gratis proefversie van GroupDocs.Annotation voor .NET via de meegeleverde versie[koppeling](https://releases.groupdocs.com/).
-### Hoe kan ik hulp of ondersteuning zoeken voor GroupDocs.Annotation voor .NET?
- U kunt het GroupDocs.Annotation-forum bezoeken[hier](https://forum.groupdocs.com/c/annotation/10) om hulp te zoeken bij de gemeenschap of om uw vragen voor te leggen.
-### Waar kan ik een tijdelijke licentie verkrijgen voor GroupDocs.Annotation voor .NET?
- kunt een tijdelijke licentie voor GroupDocs.Annotation voor .NET aanschaffen via de meegeleverde licentie[koppeling](https://purchase.groupdocs.com/temporary-license/).
+Ja, u kunt een gratis proefversie van GroupDocs.Annotation voor .NET gebruiken via de meegeleverde [link](https://releases.groupdocs.com/).
+### Hoe kan ik hulp of ondersteuning krijgen voor GroupDocs.Annotation voor .NET?
+U kunt het GroupDocs.Annotation-forum bezoeken [hier](https://forum.groupdocs.com/c/annotation/10) om hulp te vragen aan de community of om uw vragen te stellen.
+### Waar kan ik een tijdelijke licentie voor GroupDocs.Annotation voor .NET verkrijgen?
+U kunt een tijdelijke licentie voor GroupDocs.Annotation voor .NET verkrijgen via de meegeleverde [link](https://purchase.groupdocs.com/temporary-license/).

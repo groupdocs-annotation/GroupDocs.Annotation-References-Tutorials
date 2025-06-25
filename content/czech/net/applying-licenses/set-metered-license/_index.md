@@ -1,35 +1,35 @@
 ---
-title: Nastavte měřenou licenci
-linktitle: Nastavte měřenou licenci
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se, jak nastavit měřenou licenci pro GroupDocs.Annotation .NET pro využití zdrojů a možnosti anotací dokumentů ve vašich aplikacích .NET.
-weight: 12
-url: /cs/net/applying-licenses/set-metered-license/
+"description": "Naučte se, jak nastavit měřenou licenci pro GroupDocs.Annotation .NET pro využití zdrojů a možnosti anotací dokumentů ve vašich aplikacích .NET."
+"linktitle": "Nastavení měřené licence"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Nastavení měřené licence"
+"url": "/cs/net/applying-licenses/set-metered-license/"
+"weight": 12
 ---
 
-# Nastavte měřenou licenci
+# Nastavení měřené licence
 
-## Úvod
-GroupDocs.Annotation for .NET je výkonná knihovna, která umožňuje vývojářům snadno přidávat možnosti anotací dokumentů do jejich aplikací .NET. Ať už vytváříte systém správy dokumentů, platformu pro spolupráci nebo jakoukoli aplikaci, která zahrnuje kontrolu a označování dokumentů, GroupDocs.Annotation for .NET poskytuje komplexní sadu nástrojů pro zefektivnění procesu.
-V tomto tutoriálu se ponoříme do procesu nastavení měřené licence pro GroupDocs.Annotation .NET. Měřená licence vám umožňuje platit pouze za zdroje, které spotřebováváte, což z ní činí nákladově efektivní řešení pro projekty jakéhokoli rozsahu. Podle níže uvedených kroků budete schopni bezproblémově integrovat GroupDocs.Annotation do vaší aplikace .NET a zároveň optimalizovat využití zdrojů a udržovat kontrolu nad rozpočtem.
+## Zavedení
+GroupDocs.Annotation pro .NET je výkonná knihovna, která vývojářům umožňuje bez námahy přidávat do jejich .NET aplikací funkce pro anotaci dokumentů. Ať už vytváříte systém pro správu dokumentů, platformu pro spolupráci nebo jakoukoli aplikaci, která zahrnuje kontrolu a označování dokumentů, GroupDocs.Annotation pro .NET poskytuje komplexní sadu nástrojů pro zefektivnění celého procesu.
+V tomto tutoriálu se ponoříme do procesu nastavení měřené licence pro GroupDocs.Annotation .NET. Měřená licence vám umožňuje platit pouze za zdroje, které spotřebujete, což z ní činí cenově efektivní řešení pro projekty jakéhokoli rozsahu. Dodržením níže uvedených kroků budete moci bezproblémově integrovat GroupDocs.Annotation do vaší aplikace .NET a zároveň optimalizovat využití zdrojů a udržet si kontrolu nad rozpočtem.
 ## Předpoklady
-Než se pustíte do výukového programu, ujistěte se, že máte následující předpoklady:
-1.  GroupDocs.Annotation for .NET Library: Stáhněte si knihovnu z[webová stránka](https://releases.groupdocs.com/annotation/net/).
-2. Přístup k účtu GroupDocs: K získání veřejných a soukromých klíčů potřebných pro nastavení měřené licence budete potřebovat účet GroupDocs. Pokud ještě nemáte účet, můžete se zaregistrovat k bezplatné zkušební verzi[tady](https://releases.groupdocs.com/).
-3. Základní porozumění C# a .NET Framework: Znalost programovacího jazyka C# a .NET Framework bude přínosem pro implementaci kroků uvedených v tomto kurzu.
+Než se pustíte do tutoriálu, ujistěte se, že máte následující předpoklady:
+1. GroupDocs.Annotation pro knihovnu .NET: Stáhněte si knihovnu z [webové stránky](https://releases.groupdocs.com/annotation/net/).
+2. Přístup k účtu GroupDocs: Budete potřebovat účet GroupDocs, abyste získali veřejné a soukromé klíče potřebné k nastavení měřené licence. Pokud ještě nemáte účet, můžete se zaregistrovat k bezplatné zkušební verzi. [zde](https://releases.groupdocs.com/).
+3. Základní znalost jazyka C# a .NET Framework: Znalost programovacího jazyka C# a .NET Frameworku bude přínosem pro implementaci kroků popsaných v tomto tutoriálu.
 
-## Import jmenných prostorů
-Chcete-li začít, nezapomeňte importovat potřebné jmenné prostory do svého projektu C#. Tyto jmenné prostory jsou nezbytné pro interakci s funkcí GroupDocs.Annotation.
+## Importovat jmenné prostory
+Nejprve se ujistěte, že jste do svého projektu v C# importovali potřebné jmenné prostory. Tyto jmenné prostory jsou nezbytné pro interakci s funkcí GroupDocs.Annotation.
 ```csharp
 using System;
 ```
-## Krok 1: Získejte veřejný a soukromý klíč
-Před nastavením měřené licence musíte získat své veřejné a soukromé klíče z řídicího panelu účtu GroupDocs.
+## Krok 1: Získejte veřejné a soukromé klíče
+Před nastavením měřené licence je nutné získat veřejný a soukromý klíč z řídicího panelu účtu GroupDocs.
 1. Přihlaste se ke svému účtu GroupDocs.
 2. Přejděte do sekce správy licencí.
-3. Zkopírujte své veřejné a soukromé klíče poskytnuté GroupDocs.
-## Krok 2: Nastavte měřenou licenci
-Jakmile získáte své veřejné a soukromé klíče, můžete nastavit měřenou licenci ve své aplikaci .NET.
+3. Zkopírujte si veřejné a soukromé klíče poskytnuté službou GroupDocs.
+## Krok 2: Nastavení měřené licence
+Jakmile získáte veřejné a soukromé klíče, můžete ve své aplikaci .NET nastavit měřenou licenci.
 ```csharp
 string publicKey = "*****"; // Nahraďte ***** svým veřejným klíčem
 string privateKey = "*****"; // Nahraďte ***** svým soukromým klíčem
@@ -39,15 +39,15 @@ Console.WriteLine("License set successfully.");
 ```
 
 ## Závěr
-Závěrem lze říci, že nastavení měřené licence pro GroupDocs.Annotation .NET je přímočarý proces, který zajišťuje efektivní využití zdrojů a nákladovou efektivitu pro vaše projekty anotací dokumentů. Podle kroků uvedených v tomto kurzu můžete bez problémů integrovat GroupDocs.Annotation do své aplikace .NET a zlepšit možnosti spolupráce a kontroly dokumentů.
-## FAQ
+Závěrem lze říci, že nastavení měřené licence pro GroupDocs.Annotation .NET je přímočarý proces, který zajišťuje efektivní využití zdrojů a nákladovou efektivitu pro vaše projekty anotací dokumentů. Dodržením kroků popsaných v tomto tutoriálu můžete bezproblémově integrovat GroupDocs.Annotation do vaší aplikace .NET a vylepšit možnosti spolupráce a kontroly dokumentů.
+## Často kladené otázky
 ### Mohu použít GroupDocs.Annotation pro .NET v komerčních projektech?
-Ano, GroupDocs.Annotation for .NET lze použít v komerčních i nekomerčních projektech. Musíte si však pořídit příslušnou licenci na základě požadavků vašeho projektu.
+Ano, GroupDocs.Annotation pro .NET lze použít v komerčních i nekomerčních projektech. Musíte si však zakoupit příslušnou licenci na základě požadavků vašeho projektu.
 ### Je k dispozici zkušební verze pro GroupDocs.Annotation pro .NET?
- Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET návštěvou[tento odkaz](https://releases.groupdocs.com/).
+Ano, můžete využít bezplatnou zkušební verzi GroupDocs.Annotation pro .NET na adrese [tento odkaz](https://releases.groupdocs.com/).
 ### Jak mohu získat technickou podporu pro GroupDocs.Annotation pro .NET?
- Technickou podporu můžete vyhledat na fóru GroupDocs[tady](https://forum.groupdocs.com/c/annotation/10).
-### Jsou k dispozici nějaké dočasné licenční možnosti?
- Ano, můžete získat dočasnou licenci od GroupDocs pro krátkodobé použití nebo pro účely hodnocení. Návštěva[tento odkaz](https://purchase.groupdocs.com/temporary-license/) Pro více informací.
-### Mohu přizpůsobit funkce poznámek podle požadavků mého projektu?
-Ano, GroupDocs.Annotation for .NET nabízí rozsáhlé možnosti přizpůsobení, které vám umožní přizpůsobit funkce anotací tak, aby vyhovovaly vašim specifickým potřebám projektu.
+Technickou podporu můžete vyhledat na fóru GroupDocs. [zde](https://forum.groupdocs.com/c/annotation/10).
+### Existují nějaké možnosti dočasné licence?
+Ano, od GroupDocs můžete získat dočasnou licenci pro krátkodobé použití nebo zkušební účely. Navštivte [tento odkaz](https://purchase.groupdocs.com/temporary-license/) pro více informací.
+### Mohu si přizpůsobit funkce anotací podle požadavků mého projektu?
+Ano, GroupDocs.Annotation pro .NET nabízí rozsáhlé možnosti přizpůsobení, které vám umožňují přizpůsobit funkce anotací specifickým potřebám vašeho projektu.

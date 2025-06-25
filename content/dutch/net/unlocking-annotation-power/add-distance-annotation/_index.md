@@ -1,23 +1,23 @@
 ---
-title: Voeg afstandannotatie toe aan document
-linktitle: Voeg afstandannotatie toe aan document
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u afstandsannotaties aan documenten toevoegt met GroupDocs.Annotation voor .NET. Verbeter moeiteloos de samenwerking en communicatie.
-weight: 12
-url: /nl/net/unlocking-annotation-power/add-distance-annotation/
+"description": "Leer hoe u afstandsannotaties aan documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter moeiteloos samenwerking en communicatie."
+"linktitle": "Afstandsannotatie toevoegen aan document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Afstandsannotatie toevoegen aan document"
+"url": "/nl/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
-# Voeg afstandannotatie toe aan document
+# Afstandsannotatie toevoegen aan document
 
 ## Invoering
-In deze zelfstudie leert u hoe u een afstandannotatie aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Volg deze stappen om de taak te volbrengen:
+In deze tutorial leert u hoe u een afstandsannotatie aan een document toevoegt met GroupDocs.Annotation voor .NET. Volg deze stappen om de taak uit te voeren:
 ## Vereisten
 
-Zorg ervoor dat u aan de volgende vereisten voldoet voordat u doorgaat:
+Zorg ervoor dat u aan de volgende vereisten voldoet voordat u verdergaat:
 
--  GroupDocs.Annotation voor .NET Library: Download en installeer de GroupDocs.Annotation voor .NET-bibliotheek van[deze link](https://releases.groupdocs.com/annotation/net/).
-- Document om te annoteren: Bereid het document voor (bijvoorbeeld PDF) waaraan u de afstandsannotatie wilt toevoegen.
-- Ontwikkelomgeving: Stel uw ontwikkelomgeving in met Visual Studio of een andere IDE naar keuze.
+- GroupDocs.Annotation voor .NET-bibliotheek: download en installeer de GroupDocs.Annotation voor .NET-bibliotheek van [deze link](https://releases.groupdocs.com/annotation/net/).
+- Te annoteren document: bereid het document (bijv. PDF) voor waaraan u de afstandsannotatie wilt toevoegen.
+- Ontwikkelomgeving: stel uw ontwikkelomgeving in met Visual Studio of een andere IDE naar keuze.
 
 ## Naamruimten importeren
 
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## Stap 1: Initialiseer Annotator
+## Stap 1: Annotator initialiseren
 
- Begin met het initialiseren van de`Annotator` object met het pad naar het document dat u wilt annoteren.
+Begin met het initialiseren van de `Annotator` object met het pad naar het document dat u wilt annoteren.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // De annotatiecode komt hier terecht
+    // Annotatiecode komt hier
 }
 ```
 
-## Stap 2: Maak afstandannotatie
+## Stap 2: Afstandsannotatie maken
 
- Maak nu een`DistanceAnnotation` object en configureer de eigenschappen ervan, zoals doosafmetingen, bericht, dekking, penkleur, enz.
+Maak nu een `DistanceAnnotation` object en configureer de eigenschappen ervan, zoals afmetingen van het vak, bericht, dekking, penkleur, enz.
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -77,7 +77,7 @@ DistanceAnnotation distance = new DistanceAnnotation
 
 ## Stap 3: Annotatie toevoegen
 
- Voeg de gemaakte afstandannotatie toe aan het document met behulp van de`Add` methode van het annotatorobject.
+Voeg de gemaakte afstandsannotatie toe aan het document met behulp van de `Add` methode van het annotatorobject.
 
 ```csharp
 annotator.Add(distance);
@@ -102,26 +102,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Conclusie
 
-Het toevoegen van afstandsannotaties aan documenten met GroupDocs.Annotation voor .NET is een eenvoudig proces. Door de stappen in deze zelfstudie te volgen, kunt u uw documenten uitbreiden met waardevolle annotaties, waardoor een betere samenwerking en communicatie mogelijk wordt.
+Het toevoegen van afstandsannotaties aan documenten met GroupDocs.Annotation voor .NET is een eenvoudig proces. Door de stappen in deze tutorial te volgen, kunt u uw documenten verrijken met waardevolle annotaties, wat de samenwerking en communicatie bevordert.
 
 ## Veelgestelde vragen
 
-### Vraag: Kan ik het uiterlijk van de afstandannotatie aanpassen?
+### V: Kan ik het uiterlijk van de afstandsannotatie aanpassen?
 
-A: Ja, u kunt verschillende eigenschappen, zoals kleur, dekking, lijnstijl, enz., aanpassen aan uw wensen.
+A: Ja, u kunt verschillende eigenschappen, zoals kleur, dekking, lijnstijl, etc., aanpassen aan uw wensen.
 
-### Vraag: Ondersteunt GroupDocs.Annotation annotaties op verschillende soorten documenten?
+### V: Ondersteunt GroupDocs.Annotation annotaties in verschillende typen documenten?
 
 A: Ja, GroupDocs.Annotation ondersteunt annotaties in een breed scala aan documentformaten, waaronder PDF, Word, Excel, PowerPoint en meer.
 
-### Vraag: Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation?
+### V: Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation?
 
- A: Ja, u kunt een gratis proefversie van GroupDocs.Annotation downloaden[deze link](https://releases.groupdocs.com/).
+A: Ja, u kunt een gratis proefversie van GroupDocs.Annotation gebruiken vanaf [deze link](https://releases.groupdocs.com/).
 
-### Vraag: Waar kan ik de documentatie voor GroupDocs.Annotation voor .NET vinden?
+### V: Waar kan ik de documentatie voor GroupDocs.Annotation voor .NET vinden?
 
- A: U kunt de beschikbare gedetailleerde documentatie raadplegen[hier](https://tutorials.groupdocs.com/annotation/net/).
+A: U kunt de beschikbare gedetailleerde documentatie raadplegen [hier](https://tutorials.groupdocs.com/annotation/net/).
 
-### Vraag: Hoe kan ik ondersteuning of hulp krijgen bij GroupDocs.Annotation?
+### V: Hoe kan ik ondersteuning of hulp krijgen voor GroupDocs.Annotation?
 
- A: U kunt ondersteuning en hulp zoeken op het GroupDocs.Annotation-communityforum[hier](https://forum.groupdocs.com/c/annotation/10).
+A: U kunt ondersteuning en hulp krijgen via het GroupDocs.Annotation communityforum [hier](https://forum.groupdocs.com/c/annotation/10).

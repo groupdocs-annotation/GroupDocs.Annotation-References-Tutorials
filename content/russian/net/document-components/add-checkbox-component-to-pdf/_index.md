@@ -1,22 +1,22 @@
 ---
-title: Добавить компонент флажка в PDF-документ
-linktitle: Добавить компонент флажка в PDF-документ
-second_title: GroupDocs.Аннотация .NET API
-description: Узнайте, как добавить компонент флажка в документы PDF с помощью Groupdocs.Annotation для .NET. Улучшите свои PDF-файлы с помощью интерактивных элементов.
-weight: 11
-url: /ru/net/document-components/add-checkbox-component-to-pdf/
+"description": "Узнайте, как добавить компонент Checkbox в документы PDF с помощью Groupdocs.Annotation для .NET. Улучшите свои PDF-файлы с помощью интерактивных элементов."
+"linktitle": "Добавить компонент «Флажок» в PDF-документ"
+"second_title": "GroupDocs.Аннотация .NET API"
+"title": "Добавить компонент «Флажок» в PDF-документ"
+"url": "/ru/net/document-components/add-checkbox-component-to-pdf/"
+"weight": 11
 ---
 
-# Добавить компонент флажка в PDF-документ
+# Добавить компонент «Флажок» в PDF-документ
 
 ## Введение
-В этом руководстве мы покажем вам процесс добавления компонента флажка в PDF-документ с помощью Groupdocs.Annotation для .NET.
-## Предварительные условия
-Прежде чем мы начнем, убедитесь, что у вас есть следующее:
-1.  Groupdocs.Annotation для .NET SDK: вы можете скачать его с сайта[здесь](https://releases.groupdocs.com/annotation/net/).
+В этом руководстве мы проведем вас через процесс добавления компонента «Флажок» в PDF-документ с помощью Groupdocs.Annotation для .NET.
+## Предпосылки
+Прежде чем начать, убедитесь, что у вас есть следующее:
+1. Groupdocs.Annotation для .NET SDK: Вы можете загрузить его здесь [здесь](https://releases.groupdocs.com/annotation/net/).
 2. Среда разработки: убедитесь, что у вас настроена среда разработки .NET.
 
-## Импортировать пространства имен
+## Импорт пространств имен
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,18 +26,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Models.FormatSpecificComponents.Pdf;
 using GroupDocs.Annotation.Options;
 ```
-Теперь давайте разобьем пример на несколько этапов:
+Теперь давайте разберем пример на несколько шагов:
 ## Шаг 1: Определите выходной путь
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Здесь мы определяем путь вывода, в котором будет сохранен измененный PDF-документ.
-## Шаг 2. Инициализируйте аннотатор
+Здесь мы определяем выходной путь, по которому будет сохранен измененный PDF-документ.
+## Шаг 2: Инициализация аннотатора
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Инициализируйте`Annotator` объект, передав путь к входному PDF-документу.
-## Шаг 3. Создайте компонент флажка
+Инициализируйте `Annotator` объект, передавая путь к входному PDF-документу.
+## Шаг 3: Создание компонента «Флажок»
 ```csharp
 CheckBoxComponent checkBox = new CheckBoxComponent
 {
@@ -60,33 +60,33 @@ CheckBoxComponent checkBox = new CheckBoxComponent
     }
 };
 ```
- Создать`CheckBoxComponent` объект и настроить его свойства, например`Checked`, `Box` размеры,`PenColor`, `Style`и добавьте несколько ответов.
-## Шаг 4. Добавьте компонент флажка
+Создать `CheckBoxComponent` объект и настройте его свойства, например `Checked`, `Box` размеры, `PenColor`, `Style`и добавьте несколько ответов.
+## Шаг 4: Добавьте компонент «Флажок»
 ```csharp
 annotator.Add(checkBox);
 ```
-Добавьте созданный компонент флажка в документ PDF.
-## Шаг 5: Сохранить документ
+Добавьте созданный компонент флажка в PDF-документ.
+## Шаг 5: Сохраните документ
 ```csharp
 annotator.Save("result.pdf");
 ```
 Сохраните измененный PDF-документ с компонентом флажка.
-## Шаг 6: Отображение пути вывода
+## Шаг 6: Отображение выходного пути
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Отображение пути сохранения измененного PDF-документа.
+Отобразить путь сохранения измененного PDF-документа.
 
 ## Заключение
-В этом уроке мы узнали, как добавить компонент флажка в PDF-документ с помощью Groupdocs.Annotation для .NET. Обладая этими знаниями, вы сможете улучшить свои PDF-документы с помощью интерактивных элементов.
+В этом уроке мы узнали, как добавить компонент Checkbox в документ PDF с помощью Groupdocs.Annotation для .NET. С этими знаниями вы сможете улучшить свои документы PDF с помощью интерактивных элементов.
 ## Часто задаваемые вопросы
 ### Могу ли я настроить внешний вид флажка?
 Да, вы можете настроить различные свойства, такие как цвет, стиль и размер, в соответствии с вашими требованиями.
 ### Подходит ли Groupdocs.Annotation для .NET для коммерческого использования?
 Да, Groupdocs.Annotation для .NET предлагает коммерческие лицензии для предприятий.
 ### Могу ли я попробовать Groupdocs.Annotation для .NET перед покупкой?
- Да, вы можете воспользоваться бесплатной пробной версией на[здесь](https://releases.groupdocs.com/).
+Да, вы можете воспользоваться бесплатной пробной версией [здесь](https://releases.groupdocs.com/).
 ### Где я могу найти поддержку Groupdocs.Annotation для .NET?
- Вы можете найти поддержку и ресурсы на[Форум групповой документации](https://forum.groupdocs.com/c/annotation/10).
-### Нужна ли мне временная лицензия для целей тестирования?
- Вы можете получить временную лицензию на тестирование по адресу[здесь](https://purchase.groupdocs.com/temporary-license/).
+Поддержку и ресурсы вы можете найти на сайте [Форум Groupdocs](https://forum.groupdocs.com/c/annotation/10).
+### Нужна ли мне временная лицензия для проведения тестирования?
+Вы можете получить временную лицензию на тестирование от [здесь](https://purchase.groupdocs.com/temporary-license/).

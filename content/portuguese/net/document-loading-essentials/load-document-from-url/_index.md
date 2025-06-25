@@ -1,25 +1,25 @@
 ---
-title: Carregar documento do URL
-linktitle: Carregar documento do URL
-second_title: API GroupDocs.Annotation .NET
-description: Aprenda como anotar documentos PDF programaticamente usando GroupDocs.Annotation for .NET. Tutorial passo a passo com exemplos de código.
-weight: 15
-url: /pt/net/document-loading-essentials/load-document-from-url/
+"description": "Aprenda a anotar documentos PDF programaticamente usando o GroupDocs.Annotation para .NET. Tutorial passo a passo com exemplos de código."
+"linktitle": "Carregar documento da URL"
+"second_title": "API .NET do GroupDocs.Annotation"
+"title": "Carregar documento da URL"
+"url": "/pt/net/document-loading-essentials/load-document-from-url/"
+"weight": 15
 ---
 
-# Carregar documento do URL
+# Carregar documento da URL
 
 ## Introdução
-GroupDocs.Annotation for .NET é uma biblioteca rica em recursos que permite aos desenvolvedores adicionar recursos de anotação a seus aplicativos .NET sem esforço. Com GroupDocs.Annotation, você pode anotar documentos PDF de forma programática, permitindo aos usuários destacar texto, adicionar comentários, desenhar formas e muito mais. Este tutorial orientará você nas etapas de carregamento de um documento de uma URL, adição de anotações e salvamento do documento anotado usando GroupDocs.Annotation for .NET.
+O GroupDocs.Annotation para .NET é uma biblioteca rica em recursos que permite aos desenvolvedores adicionar recursos de anotação aos seus aplicativos .NET sem esforço. Com o GroupDocs.Annotation, você pode anotar documentos PDF programaticamente, permitindo aos usuários destacar texto, adicionar comentários, desenhar formas e muito mais. Este tutorial o guiará pelas etapas de carregamento de um documento a partir de uma URL, adição de anotações e salvamento do documento anotado usando o GroupDocs.Annotation para .NET.
 ## Pré-requisitos
 Antes de começar, certifique-se de ter os seguintes pré-requisitos:
-1. Visual Studio: certifique-se de ter o Visual Studio instalado em sua máquina de desenvolvimento.
-2.  GroupDocs.Annotation for .NET: Baixe e instale GroupDocs.Annotation for .NET a partir do[local na rede Internet](https://releases.groupdocs.com/annotation/net/).
-3. Conhecimento básico de C#: Familiarize-se com a linguagem de programação C#.
+1. Visual Studio: certifique-se de ter o Visual Studio instalado na sua máquina de desenvolvimento.
+2. GroupDocs.Annotation para .NET: Baixe e instale o GroupDocs.Annotation para .NET do [site](https://releases.groupdocs.com/annotation/net/).
+3. Conhecimento básico de C#: familiarize-se com a linguagem de programação C#.
 4. Conexão com a Internet: você precisará de uma conexão com a Internet para acessar recursos externos e baixar arquivos de amostra.
 
 ## Importar namespaces
-Primeiro, vamos importar os namespaces necessários em seu projeto C#:
+Primeiro, vamos importar os namespaces necessários no seu projeto C#:
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -27,17 +27,17 @@ using System;
 using System.IO;
 using System.Net;
 ```
-## Etapa 1: carregar o documento do URL
+## Etapa 1: Carregar documento da URL
 Para anotar um documento PDF a partir de um URL, siga estas etapas:
-### Etapa 1.1: Definir caminho de saída
+### Etapa 1.1: Definir o caminho de saída
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-### Etapa 1.2: Especifique o URL
+### Etapa 1.2: Especificar URL
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-### Passo 1.3: Carregar Documento
+### Etapa 1.3: Carregar documento
 ```csharp
 using (Annotator annotator = new Annotator(GetRemoteFile(url)))
 {
@@ -45,7 +45,7 @@ using (Annotator annotator = new Annotator(GetRemoteFile(url)))
     annotator.Save(outputPath);
 }
 ```
-## Etapa 2: adicionar anotações
+## Etapa 2: Adicionar anotações
 Agora, vamos adicionar anotações ao documento carregado. Neste exemplo, adicionaremos uma anotação de área:
 ```csharp
 AreaAnnotation area = new AreaAnnotation()
@@ -56,22 +56,22 @@ AreaAnnotation area = new AreaAnnotation()
 annotator.Add(area);
 ```
 ## Etapa 3: Salvar documento anotado
-Finalmente, salve o documento anotado no caminho de saída especificado:
+Por fim, salve o documento anotado no caminho de saída especificado:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Conclusão
-Neste tutorial, aprendemos como fazer anotações em documentos PDF usando GroupDocs.Annotation for .NET. Seguindo o guia passo a passo, você pode integrar perfeitamente a funcionalidade de anotação em seus aplicativos .NET, capacitando os usuários a colaborar de forma eficaz em arquivos PDF.
+Neste tutorial, aprendemos como anotar documentos PDF usando o GroupDocs.Annotation para .NET. Seguindo o guia passo a passo, você pode integrar perfeitamente a funcionalidade de anotação aos seus aplicativos .NET, permitindo que os usuários colaborem efetivamente em arquivos PDF.
 
 ## Perguntas frequentes
-### O GroupDocs.Annotation for .NET é compatível com todas as estruturas .NET?
-Sim, GroupDocs.Annotation for .NET é compatível com várias estruturas .NET, incluindo .NET Framework, .NET Core e .NET Standard.
+### O GroupDocs.Annotation for .NET é compatível com todos os frameworks .NET?
+Sim, o GroupDocs.Annotation para .NET é compatível com vários frameworks .NET, incluindo .NET Framework, .NET Core e .NET Standard.
 ### Posso personalizar a aparência das anotações?
-Absolutamente! GroupDocs.Annotation for .NET oferece amplas opções de personalização, permitindo modificar a aparência e o comportamento das anotações de acordo com seus requisitos.
-### Existe uma avaliação gratuita disponível para GroupDocs.Annotation for .NET?
- Sim, você pode baixar uma versão de avaliação gratuita do GroupDocs.Annotation for .NET no site[local na rede Internet](https://releases.groupdocs.com/).
-### Como posso obter suporte técnico para GroupDocs.Annotation for .NET?
- Se você encontrar algum problema técnico ou tiver dúvidas sobre GroupDocs.Annotation for .NET, você pode procurar assistência do[Fórum de suporte](https://forum.groupdocs.com/c/annotation/10).
-### Onde posso adquirir uma licença do GroupDocs.Annotation for .NET?
- Você pode adquirir uma licença do GroupDocs.Annotation for .NET no site[página de compra](https://purchase.groupdocs.com/buy).
+Com certeza! O GroupDocs.Annotation para .NET oferece amplas opções de personalização, permitindo que você modifique a aparência e o comportamento das anotações de acordo com suas necessidades.
+### Existe uma avaliação gratuita disponível para o GroupDocs.Annotation para .NET?
+Sim, você pode baixar uma versão de avaliação gratuita do GroupDocs.Annotation para .NET no [site](https://releases.groupdocs.com/).
+### Como posso obter suporte técnico para o GroupDocs.Annotation para .NET?
+Se você encontrar algum problema técnico ou tiver dúvidas sobre o GroupDocs.Annotation para .NET, você pode buscar assistência no [fórum de suporte](https://forum.groupdocs.com/c/annotation/10).
+### Onde posso comprar uma licença para o GroupDocs.Annotation para .NET?
+Você pode adquirir uma licença para GroupDocs.Annotation para .NET no [página de compra](https://purchase.groupdocs.com/buy).

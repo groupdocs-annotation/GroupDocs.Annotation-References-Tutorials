@@ -1,23 +1,23 @@
 ---
-title: Ellipszis megjegyzés hozzáadása a dokumentumhoz
-linktitle: Ellipszis megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat ellipszis jelöléseket a .NET-ben található dokumentumokhoz a GroupDocs.Annotation segítségével. Fokozza az együttműködést és a kommunikációt erőfeszítés nélkül.
-weight: 13
-url: /hu/net/unlocking-annotation-power/add-ellipse-annotation/
+"description": "Tanulja meg, hogyan adhat ellipszis alakú jegyzeteket a .NET dokumentumokhoz a GroupDocs.Annotation segítségével. Könnyedén javíthatja az együttműködést és a kommunikációt."
+"linktitle": "Ellipszis jegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Ellipszis jegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-ellipse-annotation/"
+"weight": 13
 ---
 
-# Ellipszis megjegyzés hozzáadása a dokumentumhoz
+# Ellipszis jegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Ebből az oktatóanyagból megtudhatja, hogyan adhat hozzá ellipszis megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Ez a lépésenkénti útmutató végigvezeti a folyamaton, biztosítva, hogy minden lépést egyértelműen megértsen.
+Ebben az oktatóanyagban megtudhatja, hogyan adhat hozzá ellipszis alakú jegyzeteket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ez a lépésenkénti útmutató végigvezeti Önt a folyamaton, biztosítva, hogy minden lépést világosan megértsen.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következőkkel:
-1.  GroupDocs.Annotation for .NET: Győződjön meg arról, hogy letöltötte és telepítette a GroupDocs.Annotation for .NET programot. Letöltheti innen[itt](https://releases.groupdocs.com/annotation/net/).
-2. IDE (Integrated Development Environment): A kód írásához és végrehajtásához telepíteni kell egy IDE-t a rendszeren, például a Visual Studio-t.
+Mielőtt elkezdené, győződjön meg arról, hogy a következőkkel rendelkezik:
+1. GroupDocs.Annotation for .NET: Győződjön meg róla, hogy letöltötte és telepítette a GroupDocs.Annotation for .NET fájlt. Letöltheti innen: [itt](https://releases.groupdocs.com/annotation/net/).
+2. IDE (Integrált fejlesztői környezet): A kód írásához és végrehajtásához telepíteni kell egy IDE-t a rendszeredre, például a Visual Studio-t.
 
 ## Névterek importálása
-Először is importálja a szükséges névtereket a projektbe:
+Először importáld a szükséges névtereket a projektedbe:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 1. lépés: Állítsa be a kimeneti útvonalat
-Határozza meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentumot menti:
+## 1. lépés: Kimeneti útvonal beállítása
+Adja meg a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Inicializálja az Annotátort
+## 2. lépés: Annotátor inicializálása
 Inicializálja az annotátort a bemeneti dokumentum elérési útjának megadásával:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## 3. lépés: Hozzon létre ellipszis megjegyzést
- Hozzon létre egy példányt a`EllipseAnnotation` osztályt, és állítsa be a tulajdonságait:
+## 3. lépés: Ellipszis annotáció létrehozása
+Hozz létre egy példányt a `EllipseAnnotation` osztály és állítsd be a tulajdonságait:
 ```csharp
 EllipseAnnotation ellipse = new EllipseAnnotation
 {
@@ -66,27 +66,27 @@ EllipseAnnotation ellipse = new EllipseAnnotation
     }
 };
 ```
-## 4. lépés: Megjegyzés hozzáadása
-Adja hozzá az ellipszis megjegyzést a dokumentumhoz:
+## 4. lépés: Jegyzet hozzáadása
+Adja hozzá az ellipszis annotációt a dokumentumhoz:
 ```csharp
 annotator.Add(ellipse);
 ```
-## 5. lépés: Mentse el a dokumentumot
-Mentse el a megjegyzésekkel ellátott dokumentumot a kimeneti útvonalra:
+## 5. lépés: Dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a kimeneti útvonalra:
 ```csharp
 annotator.Save(outputPath);
 ```
 
 ## Következtetés
-Gratulálunk! Sikeresen hozzáadott egy ellipszis megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Mostantól ezt a funkciót integrálhatja .NET-alkalmazásaiba a dokumentumokkal való együttműködés és kommunikáció javítása érdekében.
+Gratulálunk! Sikeresen hozzáadott egy ellipszis alakú jegyzetet egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Mostantól integrálhatja ezt a funkciót a .NET alkalmazásaiba a dokumentumokkal való együttműködés és kommunikáció javítása érdekében.
 ## GYIK
 ### Testreszabhatom az ellipszis annotáció megjelenését?
-Igen, igényei szerint testreszabhatja a különféle tulajdonságokat, például a háttérszínt, a szegélyszínt, az átlátszatlanságot stb.
+Igen, testreszabhatja a különböző tulajdonságokat, például a háttérszínt, a szegély színét, az átlátszóságot stb., az igényei szerint.
 ### A GroupDocs.Annotation for .NET kompatibilis az összes dokumentumformátummal?
-A GroupDocs.Annotation for .NET a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
+A GroupDocs.Annotation for .NET számos dokumentumformátumot támogat, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
 ### Hozzáadhatok több megjegyzést egyetlen dokumentumhoz?
-Igen, egyetlen dokumentumhoz több megjegyzést is hozzáadhat, például ellipsziseket, téglalapokat, szöveget stb.
-### Létezik próbaverzió tesztelési célból?
- Igen, letölthet egy ingyenes próbaverziót a webhelyről[itt](https://releases.groupdocs.com/) jellemzőinek értékelésére.
+Igen, több megjegyzést is hozzáadhat egyetlen dokumentumhoz, beleértve a kihagyásokat, téglalapokat, szöveget stb.
+### Van elérhető próbaverzió tesztelési célokra?
+Igen, letölthet egy ingyenes próbaverziót innen [itt](https://releases.groupdocs.com/) hogy értékelje a tulajdonságait.
 ### Hol kaphatok technikai támogatást a GroupDocs.Annotation for .NET-hez?
- Technikai támogatást a GroupDocs.Annotation közösségi fórumon kaphat[itt](https://forum.groupdocs.com/c/annotation/10).
+Technikai támogatást a GroupDocs.Annotation közösségi fórumon kaphat. [itt](https://forum.groupdocs.com/c/annotation/10).

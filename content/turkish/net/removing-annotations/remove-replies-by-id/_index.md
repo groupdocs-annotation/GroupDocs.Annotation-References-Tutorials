@@ -1,24 +1,24 @@
 ---
-title: .NET'te Yanıtları Kimliğe Göre Kaldırma
-linktitle: .NET'te Yanıtları Kimliğe Göre Kaldırma
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation'ı kullanarak .NET'te kimliğe göre yanıtları nasıl kaldıracağınızı öğrenin. Verimli belge açıklama yönetimi için adım adım eğitimimizi izleyin.
-weight: 16
-url: /tr/net/removing-annotations/remove-replies-by-id/
+"description": "GroupDocs.Annotation kullanarak .NET'te ID'ye göre yanıtları nasıl kaldıracağınızı öğrenin. Verimli belge açıklama yönetimi için adım adım öğreticimizi izleyin."
+"linktitle": ".NET'te ID'ye Göre Yanıtları Kaldır"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": ".NET'te ID'ye Göre Yanıtları Kaldır"
+"url": "/tr/net/removing-annotations/remove-replies-by-id/"
+"weight": 16
 ---
 
-# .NET'te Yanıtları Kimliğe Göre Kaldırma
+# .NET'te ID'ye Göre Yanıtları Kaldır
 
 ## giriiş
-.NET geliştirme alanında, belgelerdeki ek açıklamaları yönetme yeteneği çeşitli uygulamalar için çok önemlidir. İster PDF'ler, Word belgeleri veya diğer formatlarla çalışıyor olun, ek açıklamaları programlı olarak değiştirme yeteneğine sahip olmak, bir olasılıklar dünyasının kapılarını açar. .NET'te ek açıklamaları işlemeye yönelik güçlü araçlardan biri GroupDocs.Annotation'dur.
-## Önkoşullar
-GroupDocs.Annotation'ı kullanarak .NET'te kimliğe göre yanıtları kaldırma konusundaki eğitime dalmadan önce, aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
+.NET geliştirme alanında, belgelerdeki açıklamaları yönetme yeteneği çeşitli uygulamalar için çok önemlidir. İster PDF'lerle, ister Word belgeleriyle veya diğer biçimlerle çalışıyor olun, açıklamaları programatik olarak işleme yeteneğine sahip olmak bir olasılıklar dünyasının kapılarını açar. .NET'te açıklamaları işlemek için güçlü bir araç GroupDocs.Annotation'dır.
+## Ön koşullar
+GroupDocs.Annotation kullanarak .NET'te kimliğe göre yanıtları kaldırma eğitimine başlamadan önce, aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
 ### 1. GroupDocs.Annotation Kurulumu
- Öncelikle GroupDocs.Annotation for .NET'i kurmanız gerekiyor. Kütüphaneyi adresinden indirebilirsiniz.[Burada](https://releases.groupdocs.com/annotation/net/) ve belgelerde verilen kurulum talimatlarını izleyin[Burada](https://tutorials.groupdocs.com/annotation/net/).
+Öncelikle, .NET için GroupDocs.Annotation'ı yüklemeniz gerekir. Kütüphaneyi şu adresten indirebilirsiniz: [Burada](https://releases.groupdocs.com/annotation/net/) ve belgelerde verilen kurulum talimatlarını izleyin [Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. C# ve .NET'in Temel Anlayışı
-Bu eğitimdeki örnekleri takip etmek için C# programlama dili ve .NET çerçevesine aşinalık gereklidir.
-### 3. Yanıtlı Açıklamalı Belge
-Yanıtlarla birlikte ek açıklamalar içeren bir belge hazırlayın. Bu belge, kaldırma işlemi için girdi görevi görecektir.
+Bu eğitimdeki örnekleri takip edebilmek için C# programlama dili ve .NET framework'üne aşinalık gerekmektedir.
+### 3. Cevaplarla Açıklamalı Belge
+Cevaplarla birlikte açıklamalar içeren bir belge hazırlayın. Bu belge kaldırma süreci için girdi görevi görecektir.
 
 ## Ad Alanlarını İçe Aktar
 .NET projenizde, GroupDocs.Annotation işlevlerine erişmek için gerekli ad alanlarını içe aktarın.
@@ -30,45 +30,45 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 ```
-## Adım 1: Çıkış Yolunu Tanımlayın
+## Adım 1: Çıktı Yolunu Tanımlayın
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 Yanıtları kaldırdıktan sonra değiştirilen belgeyi kaydetmek istediğiniz yolu belirtin.
-## Adım 2: Belgeyi ve Ek Açıklamaları Yükleyin
+## Adım 2: Belgeyi ve Açıklamaları Yükle
 ```csharp
 using (Annotator annotator = new Annotator("annotated_with_replies.pdf"))
 {
     List<AnnotationBase> annotations = annotator.Get();
 ```
- Ek açıklamaları içeren belgeyi yanıtlarla birlikte yükleyin.`Annotator` sınıfa gidin ve ek açıklama koleksiyonunu alın.
-## 3. Adım: Yanıtları kimliğe göre kaldırın
+Cevaplarla birlikte açıklamalar içeren belgeyi yükleyin `Annotator` sınıf ve açıklama koleksiyonunu alın.
+## Adım 3: Yanıtları Kimliğe Göre Kaldır
 ```csharp
 annotations[0].Replies.RemoveAll(x => x.Id == 4);
 ```
-Kaldırmak istediğiniz yanıtı kimliğine göre tanımlayın ve ilgili ek açıklamanın yanıtlar koleksiyonundan kaldırın.
-## 4. Adım: Değişiklikleri Kaydet
+Kaldırmak istediğiniz yanıtı kimliğine göre belirleyin ve ilgili açıklamanın yanıt koleksiyonundan kaldırın.
+## Adım 4: Değişiklikleri Kaydet
 ```csharp
 annotator.Update(annotations);
 annotator.Save(outputPath);
 ```
-Ek açıklamaları kaldırılan yanıtlarla güncelleyin ve değiştirilen belgeyi belirtilen çıktı yoluna kaydedin.
-## Adım 5: Başarıyı Onaylayın
+Kaldırılan yanıtlarla açıklamaları güncelleyin ve değiştirilen belgeyi belirtilen çıktı yoluna kaydedin.
+## Adım 5: Başarılı Olduğunu Onaylayın
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Yanıtlar kaldırılarak belgenin başarıyla kaydedildiğini belirten bir onay mesajı görüntüleyin.
+Belgenin başarıyla kaydedildiğini ve yanıtların kaldırıldığını belirten bir onay mesajı görüntülenir.
 
 ## Çözüm
-Sonuç olarak GroupDocs.Annotation for .NET, belgelerdeki ek açıklamaları yönetmek için basit bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek yanıtları kimliğe göre kolayca kaldırabilir, böylece belge ek açıklamalarını kolay ve verimli bir şekilde özel gereksinimlerinize göre uyarlamanıza olanak tanıyabilirsiniz.
-## SSS'ler
-### GroupDocs.Annotation, PDF'nin yanı sıra diğer belge formatlarıyla da kullanılabilir mi?
-Evet, GroupDocs.Annotation, Word, Excel, PowerPoint ve daha fazlası dahil olmak üzere çeşitli belge formatlarını destekler.
-### GroupDocs.Annotation'ın ücretsiz deneme sürümü mevcut mu?
- Evet, ücretsiz deneme sürümüne erişebilirsiniz[Burada](https://releases.groupdocs.com/).
-### GroupDocs.Annotation desteğini nerede bulabilirim?
- Destek bulabilir ve toplulukla etkileşime geçebilirsiniz[Burada](https://forum.groupdocs.com/c/annotation/10).
-### GroupDocs.Annotation için nasıl geçici lisans alabilirim?
- Geçici lisans alabilirsiniz[Burada](https://purchase.groupdocs.com/temporary-license/).
+Sonuç olarak, GroupDocs.Annotation for .NET belgelerdeki açıklamaları yönetmek için basit bir çözüm sunar. Bu eğitimde özetlenen adımları izleyerek, yanıtları kimliğe göre kolayca kaldırabilir ve belge açıklamalarını kolayca ve etkili bir şekilde özel gereksinimlerinize göre uyarlayabilirsiniz.
+## SSS
+### GroupDocs.Annotation PDF haricindeki diğer belge formatlarıyla da kullanılabilir mi?
+Evet, GroupDocs.Annotation Word, Excel, PowerPoint ve daha fazlası dahil olmak üzere çeşitli belge biçimlerini destekler.
+### GroupDocs.Annotation için ücretsiz deneme sürümü mevcut mu?
+Evet, ücretsiz denemeye erişebilirsiniz [Burada](https://releases.groupdocs.com/).
+### GroupDocs.Annotation için desteği nerede bulabilirim?
+Topluluktan destek alabilir ve toplulukla etkileşim kurabilirsiniz [Burada](https://forum.groupdocs.com/c/annotation/10).
+### GroupDocs.Annotation için geçici lisansı nasıl alabilirim?
+Geçici bir lisans alabilirsiniz [Burada](https://purchase.groupdocs.com/temporary-license/).
 ### GroupDocs.Annotation for .NET'i nereden satın alabilirim?
- GroupDocs.Annotation'ı satın alabilirsiniz[Burada](https://purchase.groupdocs.com/buy).
+GroupDocs.Annotation'ı satın alabilirsiniz [Burada](https://purchase.groupdocs.com/buy).

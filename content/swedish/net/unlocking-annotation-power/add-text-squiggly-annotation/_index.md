@@ -1,25 +1,25 @@
 ---
-title: Lägg till en snirklig textanteckning i dokumentet
-linktitle: Lägg till en snirklig textanteckning i dokumentet
-second_title: GroupDocs.Annotation .NET API
-description: Lär dig hur du enkelt lägger till snirkliga kommentarer till dokument med Groupdocs.Annotation för .NET. Förbättra samarbets- och dokumentgranskningsprocesser.
-weight: 25
-url: /sv/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Lär dig hur du enkelt lägger till snirkliga textanteckningar i dokument med Groupdocs.Annotation för .NET. Förbättra samarbete och dokumentgranskningsprocesser."
+"linktitle": "Lägg till snirklig textanteckning i dokument"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Lägg till snirklig textanteckning i dokument"
+"url": "/sv/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
-# Lägg till en snirklig textanteckning i dokumentet
+# Lägg till snirklig textanteckning i dokument
 
 ## Introduktion
 
-Groupdocs.Annotation for .NET är ett mångsidigt bibliotek som gör det möjligt för utvecklare att integrera robusta anteckningsfunktioner i sina .NET-applikationer utan ansträngning. Oavsett om du arbetar med PDF-filer, Word-dokument eller andra populära filformat, erbjuder Groupdocs.Annotation en sömlös lösning för att kommentera och förbättra dokumentsamarbetet.
+Groupdocs.Annotation för .NET är ett mångsidigt bibliotek som gör det möjligt för utvecklare att enkelt integrera robusta annoteringsfunktioner i sina .NET-applikationer. Oavsett om du arbetar med PDF-filer, Word-dokument eller andra populära filformat, erbjuder Groupdocs.Annotation en sömlös lösning för att annotera och förbättra dokumentsamarbete.
 
-## Förutsättningar
+## Förkunskapskrav
 
-Innan du dyker in i handledningen, se till att du har följande förutsättningar på plats:
+Innan du börjar med handledningen, se till att du har följande förutsättningar på plats:
 
-## Importera namnområden
+## Importera namnrymder
 
-Se till att importera de nödvändiga namnområdena för att komma åt funktionerna som tillhandahålls av Groupdocs.Annotation för .NET.
+Se till att importera nödvändiga namnrymder för att komma åt funktionerna som tillhandahålls av Groupdocs.Annotation för .NET.
 
 ```csharp
 using System;
@@ -30,9 +30,9 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Nu när vi har täckt förutsättningarna, låt oss dela upp processen med att lägga till snirkliga textanteckningar i flera steg.
+Nu när vi har täckt förutsättningarna, låt oss dela upp processen för att lägga till snirkliga textanteckningar i flera steg.
 
-## Steg 1: Definiera utdatasökväg
+## Steg 1: Definiera utmatningsväg
 
 Definiera sökvägen där det kommenterade dokumentet ska sparas.
 
@@ -40,18 +40,18 @@ Definiera sökvägen där det kommenterade dokumentet ska sparas.
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Steg 2: Initiera Annotator
+## Steg 2: Initiera annotatorn
 
-Initiera Annotator-objektet genom att tillhandahålla indatadokumentets sökväg.
+Initiera Annotator-objektet genom att ange sökvägen för indatadokumentet.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Anteckningskoden går här
+    // Annoteringskoden placeras här
 }
 ```
 
-## Steg 3: Skapa Squiggly Annotation
+## Steg 3: Skapa en snirklig annotering
 
 Skapa ett SquigglyAnnotation-objekt och ange dess egenskaper.
 
@@ -85,9 +85,9 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 };
 ```
 
-## Steg 4: Lägg till anteckning
+## Steg 4: Lägg till annotering
 
-Lägg till den skapade snirkliga anteckningen till dokumentet.
+Lägg till den skapade snirkliga anteckningen i dokumentet.
 
 ```csharp
 annotator.Add(squiggly);
@@ -95,7 +95,7 @@ annotator.Add(squiggly);
 
 ## Steg 5: Spara dokument
 
-Spara det kommenterade dokumentet till den angivna utmatningsvägen.
+Spara det kommenterade dokumentet till den angivna utdatasökvägen.
 
 ```csharp
 annotator.Save(outputPath);
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Slutsats
 
-Sammanfattningsvis ger Groupdocs.Annotation för .NET utvecklare en robust uppsättning verktyg för att sömlöst integrera dokumentkommentarfunktioner i sina .NET-applikationer. Genom att följa den här steg-för-steg-guiden kan du enkelt lägga till snirkliga textkommentarer till dina dokument, vilket förbättrar samarbetet och dokumentgranskningsprocesserna.
+Sammanfattningsvis ger Groupdocs.Annotation för .NET utvecklare en robust uppsättning verktyg för att sömlöst integrera dokumentannoteringsfunktioner i sina .NET-applikationer. Genom att följa den här steg-för-steg-guiden kan du enkelt lägga till snirkliga textannoteringar i dina dokument, vilket förbättrar samarbete och dokumentgranskningsprocesser.
 
-## FAQ's
+## Vanliga frågor
 
-### F: Kan Groupdocs.Annotation stödja anteckningar i olika filformat?
+### F: Kan Groupdocs.Annotation stödja annoteringar i olika filformat?
 
-S: Ja, Groupdocs.Annotation stöder anteckningar i ett brett utbud av filformat, inklusive PDF-filer, Word-dokument, Excel-ark och mer.
+A: Ja, Groupdocs.Annotation stöder annotering i en mängd olika filformat, inklusive PDF-filer, Word-dokument, Excel-ark med mera.
 
-### F: Är Groupdocs.Annotation kompatibel med både skrivbords- och webbapplikationer?
+### F: Är Groupdocs.Annotation kompatibelt med både skrivbords- och webbapplikationer?
 
-A: Absolut! Groupdocs.Annotation kan sömlöst integreras i både skrivbords- och webbapplikationer, vilket erbjuder flexibilitet och mångsidighet.
+A: Absolut! Groupdocs.Annotation kan integreras sömlöst i både skrivbords- och webbapplikationer, vilket erbjuder flexibilitet och mångsidighet.
 
 ### F: Finns det några licensalternativ tillgängliga för Groupdocs.Annotation?
 
-S: Ja, Groupdocs.Annotation erbjuder flexibla licensieringsalternativ som är skräddarsydda för att passa individuella eller företags behov, inklusive tillfälliga licenser för teständamål.
+A: Ja, Groupdocs.Annotation erbjuder flexibla licensalternativ skräddarsydda för att passa individuella eller företagsbehov, inklusive tillfälliga licenser för teständamål.
 
-### F: Kan kommentarer skapade med Groupdocs.Annotation anpassas?
+### F: Kan anteckningar som skapats med Groupdocs.Annotation anpassas?
 
-A: Visst! Groupdocs.Annotation erbjuder omfattande anpassningsalternativ för annoteringar, vilket gör att utvecklare kan skräddarsy annoteringar efter sina specifika krav.
+A: Absolut! Groupdocs.Annotation erbjuder omfattande anpassningsalternativ för annoteringar, vilket gör det möjligt för utvecklare att skräddarsy annoteringar efter sina specifika behov.
 
-### F: Erbjuder Groupdocs.Annotation stöd och dokumentation för utvecklare?
+### F: Erbjuder Groupdocs.Annotation support och dokumentation för utvecklare?
 
-A: Verkligen! Groupdocs.Annotation tillhandahåller omfattande dokumentation och dedikerade supportforum för att hjälpa utvecklare att använda dess funktioner effektivt.
+A: Javisst! Groupdocs.Annotation tillhandahåller omfattande dokumentation och dedikerade supportforum för att hjälpa utvecklare att använda dess funktioner effektivt.

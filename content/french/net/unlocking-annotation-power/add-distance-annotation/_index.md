@@ -1,27 +1,27 @@
 ---
-title: Ajouter une annotation de distance au document
-linktitle: Ajouter une annotation de distance au document
-second_title: API GroupDocs.Annotation .NET
-description: Découvrez comment ajouter des annotations de distance aux documents à l'aide de GroupDocs.Annotation pour .NET. Améliorez la collaboration et la communication sans effort.
-weight: 12
-url: /fr/net/unlocking-annotation-power/add-distance-annotation/
+"description": "Apprenez à ajouter des annotations de distance à vos documents avec GroupDocs.Annotation pour .NET. Améliorez la collaboration et la communication sans effort."
+"linktitle": "Ajouter une annotation de distance au document"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Ajouter une annotation de distance au document"
+"url": "/fr/net/unlocking-annotation-power/add-distance-annotation/"
+"weight": 12
 ---
 
 # Ajouter une annotation de distance au document
 
 ## Introduction
-Dans ce didacticiel, vous apprendrez comment ajouter une annotation à distance à un document à l'aide de GroupDocs.Annotation pour .NET. Suivez ces étapes pour accomplir la tâche :
-## Conditions préalables
+Dans ce tutoriel, vous apprendrez à ajouter une annotation de distance à un document avec GroupDocs.Annotation pour .NET. Suivez ces étapes pour réaliser cette tâche :
+## Prérequis
 
-Assurez-vous que les conditions préalables suivantes sont remplies avant de continuer :
+Assurez-vous que les conditions préalables suivantes sont en place avant de continuer :
 
--  GroupDocs.Annotation pour la bibliothèque .NET : téléchargez et installez la bibliothèque GroupDocs.Annotation pour .NET à partir de[ce lien](https://releases.groupdocs.com/annotation/net/).
-- Document à annoter : préparez le document (par exemple, PDF) auquel vous souhaitez ajouter l'annotation de distance.
-- Environnement de développement : configurez votre environnement de développement avec Visual Studio ou tout autre IDE de votre choix.
+- Bibliothèque GroupDocs.Annotation pour .NET : téléchargez et installez la bibliothèque GroupDocs.Annotation pour .NET à partir de [ce lien](https://releases.groupdocs.com/annotation/net/).
+- Document à annoter : Préparez le document (par exemple, PDF) auquel vous souhaitez ajouter l'annotation de distance.
+- Environnement de développement : configurez votre environnement de développement avec Visual Studio ou tout autre IDE de votre choix.
 
 ## Importer des espaces de noms
 
-Avant de commencer, assurez-vous d'inclure les espaces de noms nécessaires dans votre code. Ces espaces de noms sont essentiels pour accéder aux classes et méthodes requises.
+Avant de commencer, assurez-vous d'inclure les espaces de noms nécessaires dans votre code. Ces espaces sont essentiels pour accéder aux classes et méthodes requises.
 
 ```csharp
 using System;
@@ -33,20 +33,20 @@ using GroupDocs.Annotation.Options;
 ```
 
 
-## Étape 1 : initialiser l'annotateur
+## Étape 1 : Initialiser l'annotateur
 
- Commencez par initialiser le`Annotator` objet avec le chemin d’accès au document que vous souhaitez annoter.
+Commencez par initialiser le `Annotator` objet avec le chemin vers le document que vous souhaitez annoter.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Le code d'annotation ira ici
+    // Le code d'annotation sera placé ici
 }
 ```
 
 ## Étape 2 : Créer une annotation de distance
 
- Maintenant, créez un`DistanceAnnotation` objet et configurez ses propriétés telles que les dimensions de la boîte, le message, l'opacité, la couleur du stylo, etc.
+Maintenant, créez un `DistanceAnnotation` objet et configurer ses propriétés telles que les dimensions de la boîte, le message, l'opacité, la couleur du stylo, etc.
 
 ```csharp
 DistanceAnnotation distance = new DistanceAnnotation
@@ -77,7 +77,7 @@ DistanceAnnotation distance = new DistanceAnnotation
 
 ## Étape 3 : Ajouter une annotation
 
- Ajoutez l'annotation de distance créée au document à l'aide du`Add` méthode de l’objet annotateur.
+Ajoutez l'annotation de distance créée au document à l'aide de l' `Add` méthode de l'objet annotateur.
 
 ```csharp
 annotator.Add(distance);
@@ -85,7 +85,7 @@ annotator.Add(distance);
 
 ## Étape 4 : Enregistrer le document
 
-Enregistrez le document annoté à l'emplacement souhaité sur votre système.
+Enregistrez le document annoté à l’emplacement souhaité sur votre système.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
@@ -102,26 +102,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Conclusion
 
-L'ajout d'annotations de distance aux documents à l'aide de GroupDocs.Annotation pour .NET est un processus simple. En suivant les étapes décrites dans ce didacticiel, vous pouvez améliorer vos documents avec des annotations précieuses, facilitant ainsi une meilleure collaboration et communication.
+L'ajout d'annotations de distance à des documents avec GroupDocs.Annotation pour .NET est simple. En suivant les étapes décrites dans ce tutoriel, vous pouvez enrichir vos documents d'annotations utiles, facilitant ainsi la collaboration et la communication.
 
 ## FAQ
 
-### Q : Puis-je personnaliser l’apparence de l’annotation de distance ?
+### Q : Puis-je personnaliser l’apparence de l’annotation de distance ?
 
 R : Oui, vous pouvez personnaliser diverses propriétés telles que la couleur, l'opacité, le style de ligne, etc., en fonction de vos besoins.
 
-### Q : GroupDocs.Annotation prend-il en charge les annotations sur différents types de documents ?
+### Q : GroupDocs.Annotation prend-il en charge les annotations sur différents types de documents ?
 
-R : Oui, GroupDocs.Annotation prend en charge les annotations sur un large éventail de formats de documents, notamment PDF, Word, Excel, PowerPoint, etc.
+R : Oui, GroupDocs.Annotation prend en charge les annotations sur une large gamme de formats de documents, notamment PDF, Word, Excel, PowerPoint, etc.
 
 ### Q : Existe-t-il un essai gratuit disponible pour GroupDocs.Annotation ?
 
- R : Oui, vous pouvez accéder à un essai gratuit de GroupDocs.Annotation à partir de[ce lien](https://releases.groupdocs.com/).
+R : Oui, vous pouvez accéder à un essai gratuit de GroupDocs.Annotation à partir de [ce lien](https://releases.groupdocs.com/).
 
 ### Q : Où puis-je trouver la documentation de GroupDocs.Annotation pour .NET ?
 
- R : Vous pouvez vous référer à la documentation détaillée disponible[ici](https://tutorials.groupdocs.com/annotation/net/).
+R : Vous pouvez vous référer à la documentation détaillée disponible [ici](https://tutorials.groupdocs.com/annotation/net/).
 
-### Q : Comment puis-je obtenir de l'aide ou de l'assistance concernant GroupDocs.Annotation ?
+### Q : Comment puis-je obtenir de l’aide ou de l’assistance avec GroupDocs.Annotation ?
 
- R : Vous pouvez demander de l'aide et de l'aide auprès du forum de la communauté GroupDocs.Annotation.[ici](https://forum.groupdocs.com/c/annotation/10).
+R : Vous pouvez demander de l'aide et du soutien sur le forum communautaire GroupDocs.Annotation. [ici](https://forum.groupdocs.com/c/annotation/10).

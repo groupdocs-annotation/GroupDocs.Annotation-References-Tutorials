@@ -1,24 +1,24 @@
 ---
-title: Dodaj adnotację łącza do dokumentu
-linktitle: Dodaj adnotację łącza do dokumentu
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak dodawać adnotacje do łączy do dokumentów za pomocą Groupdocs.Annotation dla .NET. Bez wysiłku usprawnij współpracę i interaktywność.
-weight: 16
-url: /pl/net/unlocking-annotation-power/add-link-annotation/
+"description": "Dowiedz się, jak dodawać adnotacje linków do dokumentów za pomocą Groupdocs.Annotation dla .NET. Bezproblemowo usprawniaj współpracę i interaktywność."
+"linktitle": "Dodaj adnotację linku do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dodaj adnotację linku do dokumentu"
+"url": "/pl/net/unlocking-annotation-power/add-link-annotation/"
+"weight": 16
 ---
 
-# Dodaj adnotację łącza do dokumentu
+# Dodaj adnotację linku do dokumentu
 
 ## Wstęp
-Groupdocs.Annotation dla .NET to potężna biblioteka, która umożliwia programistom bezproblemową integrację kompleksowych funkcji adnotacji z aplikacjami .NET. Jedną z kluczowych funkcji, jakie oferuje, jest możliwość dodawania adnotacji do linków do dokumentów, co poprawia współpracę i interaktywność.
-## Warunki wstępne
-Zanim przystąpisz do procesu dodawania adnotacji do linków, upewnij się, że spełniasz następujące wymagania wstępne:
+Groupdocs.Annotation for .NET to potężna biblioteka, która umożliwia deweloperom łatwą integrację kompleksowych funkcjonalności adnotacji z aplikacjami .NET. Jedną z kluczowych funkcji, jakie oferuje, jest możliwość dodawania adnotacji linków do dokumentów, co usprawnia współpracę i interaktywność.
+## Wymagania wstępne
+Zanim rozpoczniesz proces dodawania adnotacji linków, upewnij się, że spełnione są następujące wymagania wstępne:
 - Podstawowa znajomość języka programowania C#.
-- Zainstalowano bibliotekę Groupdocs.Annotation dla .NET.
-- Dostęp do dokumentu, do którego chcesz dodać adnotacje.
+- Zainstalowano bibliotekę Groupdocs.Annotation dla platformy .NET.
+- Uzyskaj dostęp do dokumentu, który chcesz opisać.
 
 ## Importuj przestrzenie nazw
-Po pierwsze, musisz zaimportować niezbędne przestrzenie nazw, aby móc korzystać z funkcjonalności Groupdocs.Annotation for .NET. Dzięki temu aplikacja może uzyskać dostęp do klas i metod wymaganych do dodawania adnotacji do dokumentów.
+Najpierw musisz zaimportować niezbędne przestrzenie nazw, aby wykorzystać Groupdocs.Annotation dla funkcjonalności .NET. Dzięki temu Twoja aplikacja będzie mogła uzyskać dostęp do klas i metod wymaganych do adnotowania dokumentów.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -32,16 +32,16 @@ Zdefiniuj ścieżkę, w której chcesz zapisać dokument z adnotacjami.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Zainicjuj adnotator
- Utwórz instancję`Annotator` class, podając ścieżkę dokumentu, do którego chcesz dodać adnotację.
+## Krok 2: Zainicjuj Adnotator
+Utwórz instancję `Annotator` klasę, podając ścieżkę do dokumentu, który chcesz adnotować.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Tutaj zostanie umieszczony kod adnotacji
+    // Kod adnotacji będzie tutaj
 }
 ```
 ## Krok 3: Utwórz adnotację łącza
- Zdefiniuj`LinkAnnotation` obiekt i określ jego właściwości, takie jak wiadomość, przezroczystość, numer strony, kolor tła, punkty, odpowiedzi i adres URL.
+Zdefiniuj `LinkAnnotation` obiekt i określ jego właściwości, takie jak wiadomość, krycie, numer strony, kolor tła, punkty, odpowiedzi i adres URL.
 ```csharp
 LinkAnnotation link = new LinkAnnotation
 {
@@ -67,11 +67,11 @@ LinkAnnotation link = new LinkAnnotation
             RepliedOn = DateTime.Now
         }
     },
-    Url = "https://www.google.com”
+    Url = "https://www.google.com"
 };
 ```
 ## Krok 4: Dodaj adnotację
- Dodaj utworzoną adnotację łącza do dokumentu za pomocą`Add` metoda instancji adnotatora.
+Dodaj utworzoną adnotację łącza do dokumentu za pomocą `Add` metoda instancji adnotatora.
 ```csharp
 annotator.Add(link);
 ```
@@ -87,15 +87,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Wniosek
-Podsumowując, wykonując powyższe kroki, możesz bezproblemowo dodawać adnotacje do linków do dokumentów za pomocą Groupdocs.Annotation dla .NET. Usprawnia to współpracę nad dokumentami i zapewnia użytkownikom interaktywne funkcje.
-## Często zadawane pytania
-### Czy Groupdocs.Annotation for .NET jest kompatybilny ze wszystkimi typami dokumentów?
-Groupdocs.Annotation dla .NET obsługuje szeroką gamę formatów dokumentów, w tym PDF, Word, Excel i inne.
+Podsumowując, wykonując powyższe kroki, możesz bezproblemowo dodawać adnotacje linków do dokumentów za pomocą Groupdocs.Annotation dla .NET. To usprawnia współpracę nad dokumentami i zapewnia użytkownikom funkcje interaktywne.
+## Najczęściej zadawane pytania
+### Czy Groupdocs.Annotation dla platformy .NET jest kompatybilny ze wszystkimi typami dokumentów?
+Groupdocs.Annotation dla platformy .NET obsługuje szeroką gamę formatów dokumentów, w tym PDF, Word, Excel i inne.
 ### Czy mogę dostosować wygląd adnotacji?
-Tak, możesz dostosować różne właściwości adnotacji, takie jak kolor, przezroczystość i rozmiar, do własnych wymagań.
-### Czy Groupdocs.Annotation dla .NET oferuje funkcje współpracy w czasie rzeczywistym?
-Tak, Groupdocs.Annotation dla .NET udostępnia funkcje współpracy w czasie rzeczywistym, umożliwiające wielu użytkownikom jednoczesne dodawanie adnotacji do dokumentów.
-### Czy dostępna jest pomoc techniczna dla produktów Groupdocs?
- Tak, pomoc techniczna dla produktów Groupdocs jest dostępna za pośrednictwem forum i wsparcia[Tutaj](https://forum.groupdocs.com/c/annotation/10).
-### Czy przed zakupem mogę wypróbować Groupdocs.Annotation dla .NET?
-Tak, możesz skorzystać z bezpłatnej wersji próbnej Groupdocs.Annotation dla .NET, aby zapoznać się z jej funkcjami przed dokonaniem zakupu[Tutaj](https://purchase.groupdocs.com/temporary-license/).
+Tak, możesz dostosować różne właściwości adnotacji, takie jak kolor, krycie i rozmiar, do swoich potrzeb.
+### Czy Groupdocs.Annotation dla platformy .NET oferuje funkcje współpracy w czasie rzeczywistym?
+Tak, Groupdocs.Annotation dla platformy .NET oferuje funkcje współpracy w czasie rzeczywistym, pozwalające wielu użytkownikom na jednoczesne adnotowanie dokumentów.
+### Czy dla produktów Groupdocs dostępna jest pomoc techniczna?
+Tak, pomoc techniczna dla produktów Groupdocs jest dostępna na forum i w dziale pomocy technicznej [Tutaj](https://forum.groupdocs.com/c/annotation/10).
+### Czy mogę wypróbować Groupdocs.Annotation dla platformy .NET przed zakupem?
+Tak, możesz skorzystać z bezpłatnej wersji próbnej Groupdocs.Annotation dla platformy .NET, aby zapoznać się z jej funkcjami przed dokonaniem zakupu[Tutaj](https://purchase.groupdocs.com/temporary-license/).

@@ -1,27 +1,27 @@
 ---
-title: Erőforrás-szerkesztési megjegyzés hozzáadása a dokumentumhoz
-linktitle: Erőforrás-szerkesztési megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Javítsa a dokumentumkezelési munkafolyamatokat a GroupDocs.Annotation for .NET segítségével. A hatékonyság érdekében zökkenőmentesen integrálja a Resources Redaction Annotationt a .NET-be.
-weight: 19
-url: /hu/net/unlocking-annotation-power/add-resources-redaction-annotation/
+"description": "Javítsa a dokumentumkezelési munkafolyamatokat a .NET-hez készült GroupDocs.Annotation segítségével. Integrálja zökkenőmentesen a Resources Redaction Annotation szolgáltatást .NET-jébe a hatékonyság növelése érdekében."
+"linktitle": "Erőforrások kihagyási megjegyzésének hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Erőforrások kihagyási megjegyzésének hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-resources-redaction-annotation/"
+"weight": 19
 ---
 
-# Erőforrás-szerkesztési megjegyzés hozzáadása a dokumentumhoz
+# Erőforrások kihagyási megjegyzésének hozzáadása a dokumentumhoz
 
 ## Bevezetés
-.NET-fejlesztés területén a hatékony dokumentumjegyzetelési eszközök integrálása jelentősen növelheti a termelékenységet és egyszerűsítheti a munkafolyamatokat. A GroupDocs.Annotation for .NET robusztus megoldásként jelenik meg, amely számos funkciót kínál a dokumentumok zökkenőmentes kommentálásához és kezeléséhez. Ez az oktatóanyag a GroupDocs.Annotation for .NET hatékony funkciója, a Resources Redaction Annotation integrálásának és használatának folyamatát mutatja be.
+.NET fejlesztés területén a dokumentumok annotálásához szükséges hatékony eszközök integrálása jelentősen növelheti a termelékenységet és egyszerűsítheti a munkafolyamatokat. A GroupDocs.Annotation for .NET egy robusztus megoldás, amely számos funkciót kínál a dokumentumok zökkenőmentes annotálásához és kezeléséhez. Ez az oktatóanyag a GroupDocs.Annotation for .NET egy hatékony funkciójának, a Resources Redaction Annotationnek az integrálását és használatát mutatja be.
 ## Előfeltételek
-Mielőtt belemerülne a megvalósításba, győződjön meg arról, hogy a következő előfeltételekkel rendelkezik:
+Mielőtt belevágna a megvalósításba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
 ### 1. .NET fejlesztői környezet
-Győződjön meg arról, hogy működőképes .NET fejlesztői környezet van beállítva a gépen. Ha nem, letöltheti és telepítheti a .NET SDK legújabb verzióját a Microsoft webhelyéről.
-### 2. GroupDocs.Annotation for .NET
- Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat a rendelkezésre állóból[letöltési link](https://releases.groupdocs.com/annotation/net/). Kövesse a dokumentációban leírt telepítési utasításokat a zökkenőmentes integráció érdekében.
-### 3. A C# alapjai
-Ismerkedjen meg a C# programozási nyelv szintaxisával és fogalmaival a megadott kódrészletek hatékony megvalósításához.
+Győződjön meg róla, hogy működőképes .NET fejlesztői környezet van beállítva a gépén. Ha nem, letöltheti és telepítheti a .NET SDK legújabb verzióját a Microsoft webhelyéről.
+### 2. GroupDocs.Annotation .NET-hez
+Töltse le és telepítse a GroupDocs.Annotation for .NET könyvtárat a mellékelt csomagból. [letöltési link](https://releases.groupdocs.com/annotation/net/)zökkenőmentes integráció érdekében kövesse a dokumentációban ismertetett telepítési utasításokat.
+### 3. A C# alapvető ismeretei
+Ismerkedj meg a C# programozási nyelv szintaxisával és fogalmaival, hogy hatékonyan implementálhasd a megadott kódrészleteket.
 
 ## Névterek importálása
-Szerelje be a szükséges névtereket, hogy elérje a szükséges osztályokat és metódusokat a dokumentum megjegyzésekhez a GroupDocs.Annotation for .NET használatával.
+A GroupDocs.Annotation for .NET használatával építse be a szükséges névtereket a dokumentumok annotálásához szükséges osztályok és metódusok eléréséhez.
 
 ```csharp
 using System;
@@ -34,21 +34,21 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 1. lépés: Határozza meg a kimeneti útvonalat
-Adja meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentum mentésre kerül.
+## 1. lépés: Kimeneti útvonal meghatározása
+Adja meg a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Annotátor objektum inicializálása
-Példányosítsa az Annotátor objektumot a bemeneti dokumentum elérési útjának megadásával.
+## 2. lépés: Jegyzetelő objektum inicializálása
+Hozza létre az Annotator objektum példányát a bemeneti dokumentum elérési útjának megadásával.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // A kommentár kódja itt lesz hozzáadva
+    // A megjegyzéskód ide lesz hozzáadva.
 }
 ```
-## 3. lépés: Erőforrás-szerkesztési megjegyzés létrehozása
-Határozzon meg egy ResourcesRedactionAnnotation objektumot a kívánt tulajdonságokkal, például dobozméretekkel, üzenettel, oldalszámmal és válaszokkal.
+## 3. lépés: Erőforrások kihagyási megjegyzésének létrehozása
+Definiáljon egy ResourcesRedactionAnnotation objektumot a kívánt tulajdonságokkal, például a mező méreteivel, az üzenettel, az oldalszámmal és a válaszokkal.
 ```csharp
 ResourcesRedactionAnnotation resourcesRedaction = new ResourcesRedactionAnnotation
 {
@@ -71,32 +71,32 @@ ResourcesRedactionAnnotation resourcesRedaction = new ResourcesRedactionAnnotati
     }
 };
 ```
-## 4. lépés: Megjegyzés hozzáadása
-Adja hozzá a létrehozott erőforrás-szerkesztési megjegyzést a dokumentumhoz az annotátor objektum segítségével.
+## 4. lépés: Jegyzet hozzáadása
+Adja hozzá a létrehozott Resources Redaction Annotationt a dokumentumhoz az annotator objektum használatával.
 ```csharp
 annotator.Add(resourcesRedaction);
 ```
-## 5. lépés: Mentse el a megjegyzésekkel ellátott dokumentumot
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+## 5. lépés: Jegyzetekkel ellátott dokumentum mentése
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 annotator.Save(outputPath);
 ```
-## 6. lépés: Jelenítse meg a sikeres üzenetet
-Tájékoztassa a felhasználót az annotációs folyamat sikeres befejezéséről, és adja meg a megjegyzésekkel ellátott dokumentum elérési útját.
+## 6. lépés: Sikeres üzenet megjelenítése
+Tájékoztassa a felhasználót a jegyzetelési folyamat sikeres befejezéséről, és adja meg a jegyzetelt dokumentum elérési útját.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Összefoglalva, a GroupDocs.Annotation for .NET egy átfogó eszköztárat kínál a dokumentum megjegyzésekhez, lehetővé téve a .NET-fejlesztők számára a dokumentumkezelési munkafolyamatok hatékony fejlesztését. Az ebben az oktatóanyagban felvázolt útmutató lépésenkénti követésével zökkenőmentesen integrálhatja a Resources Redaction Annotation-t .NET-alkalmazásaiba, ezáltal javítva az együttműködést és a termelékenységet.
+Összefoglalva, a GroupDocs.Annotation for .NET átfogó eszközkészletet kínál a dokumentumok annotálásához, lehetővé téve a .NET-fejlesztők számára a dokumentumkezelési munkafolyamatok hatékony fejlesztését. Az ebben az oktatóanyagban ismertetett lépésenkénti útmutató követésével zökkenőmentesen integrálhatja a Resources Redaction Annotation szolgáltatást .NET-alkalmazásaiba, ezáltal javítva az együttműködést és a termelékenységet.
 ## GYIK
 ### A GroupDocs.Annotation for .NET kompatibilis az összes dokumentumformátummal?
-A GroupDocs.Annotation for .NET a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
-### Testreszabhatom a GroupDocs.Annotation for .NET segítségével létrehozott megjegyzések megjelenését?
-Igen, testreszabhatja a megjegyzések megjelenését a tulajdonságok, például a szín, az átlátszatlanság és a vonalvastagság beállításával.
-### Elérhető ingyenes próbaverzió a GroupDocs.Annotation for .NET számára?
- Igen, igénybe veheti a GroupDocs.Annotation ingyenes próbaverzióját a .NET-hez a rendelkezésre álló lehetőségek közül[link](https://releases.groupdocs.com/).
+A GroupDocs.Annotation for .NET számos dokumentumformátumot támogat, beleértve a PDF, DOCX, PPTX, XLSX és egyebeket.
+### Testreszabhatom a GroupDocs.Annotation for .NET segítségével létrehozott annotációk megjelenését?
+Igen, testreszabhatja a megjegyzések megjelenését olyan tulajdonságok módosításával, mint a szín, az átlátszóság és a vonalvastagság.
+### Van ingyenes próbaverzió a GroupDocs.Annotation for .NET-hez?
+Igen, igénybe veheti a GroupDocs.Annotation for .NET ingyenes próbaverzióját a mellékelt linken keresztül. [link](https://releases.groupdocs.com/).
 ### Hogyan kérhetek segítséget vagy támogatást a GroupDocs.Annotation for .NET-hez?
- Látogassa meg a GroupDocs.Annotation fórumot[itt](https://forum.groupdocs.com/c/annotation/10) segítséget kérni a közösségtől, vagy elküldeni kérdéseit.
-### Hol szerezhetek ideiglenes licencet a GroupDocs.Annotation for .NET számára?
-Ideiglenes licencet szerezhet be a GroupDocs.Annotation for .NET-hez a rendelkezésre álló helyen[link](https://purchase.groupdocs.com/temporary-license/).
+Látogass el a GroupDocs.Annotation fórumra [itt](https://forum.groupdocs.com/c/annotation/10) hogy segítséget kérjen a közösségtől, vagy beküldje kérdéseit.
+### Hol szerezhetek ideiglenes licencet a GroupDocs.Annotation for .NET-hez?
+A GroupDocs.Annotation for .NET ideiglenes licencét a mellékelt [link](https://purchase.groupdocs.com/temporary-license/).

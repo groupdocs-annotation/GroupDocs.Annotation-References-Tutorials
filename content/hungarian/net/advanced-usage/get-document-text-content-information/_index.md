@@ -1,83 +1,83 @@
 ---
-title: Dokumentumszöveg-tartalmi információk beszerzése
-linktitle: Dokumentumszöveg-tartalmi információk beszerzése
-second_title: GroupDocs.Annotation .NET API
-description: A GroupDocs.Annotation for .NET segítségével zökkenőmentesen jegyzetelhet dokumentumokat. Könnyedén integrálhatja a megjegyzések funkcióit .NET-alkalmazásaiba.
-weight: 17
-url: /hu/net/advanced-usage/get-document-text-content-information/
+"description": "Zökkenőmentesen jegyzetelhet dokumentumokat a GroupDocs.Annotation for .NET segítségével. Integrálhatja a jegyzetelési funkciókat .NET alkalmazásaiba."
+"linktitle": "Dokumentum szöveges tartalmának információinak lekérése"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dokumentum szöveges tartalmának információinak lekérése"
+"url": "/hu/net/advanced-usage/get-document-text-content-information/"
+"weight": 17
 ---
 
-# Dokumentumszöveg-tartalmi információk beszerzése
+# Dokumentum szöveges tartalmának információinak lekérése
 
 ## Bevezetés
-GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják az annotációs funkciókat .NET-alkalmazásaikba. Függetlenül attól, hogy dokumentumkezelő rendszert, együttműködési platformot vagy bármilyen más, dokumentumjegyzeteket igénylő alkalmazást épít, a GroupDocs.Annotation for .NET leegyszerűsíti a folyamatot átfogó szolgáltatáskészletével és könnyen használható API-jával.
+A GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy zökkenőmentesen integrálják az annotációs funkciókat .NET alkalmazásaikba. Akár dokumentumkezelő rendszert, együttműködési platformot vagy bármilyen más, dokumentumok annotációját igénylő alkalmazást épít, a GroupDocs.Annotation for .NET átfogó funkciókészletével és könnyen használható API-jával leegyszerűsíti a folyamatot.
 ## Előfeltételek
-Mielőtt belevágna a GroupDocs.Annotation for .NET használatába, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
+Mielőtt belemerülne a GroupDocs.Annotation for .NET használatába, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
 ### 1. A GroupDocs.Annotation telepítése .NET-hez
- Először töltse le a GroupDocs.Annotation for .NET könyvtárat a[letöltési oldal](https://releases.groupdocs.com/annotation/net/). Kövesse a dokumentációban található telepítési utasításokat a könyvtár beállításához a fejlesztői környezetben.
-### 2. Alapvető ismeretek a .NET-keretrendszerről
-A GroupDocs.Annotation .NET-hez való hatékony használatához a .NET keretrendszer alapvető ismerete szükséges. Győződjön meg arról, hogy ismeri az olyan fogalmakat, mint az osztályok, objektumok, metódusok és névterek.
-### 3. Fejlesztési környezet
-Győződjön meg arról, hogy megfelelő fejlesztői környezetet állított be, mint például a Visual Studio vagy bármely más, választott .NET IDE. Itt írhatja és hajthatja végre a .NET kódot.
-### 4. Hozzáférés a megjegyzésekhez szükséges dokumentum(ok)hoz
-A GroupDocs.Annotation for .NET segítségével készítse elő a megjegyzésekkel ellátni kívánt dokumentumo(ka)t. Ezek lehetnek PDF-ek, Word-dokumentumok, Excel-lapok vagy bármely más támogatott fájlformátum.
+Először töltse le a GroupDocs.Annotation for .NET könyvtárat a következő helyről: [letöltési oldal](https://releases.groupdocs.com/annotation/net/)Kövesse a dokumentációban található telepítési utasításokat a könyvtár fejlesztői környezetében történő beállításához.
+### 2. A .NET keretrendszer alapismerete
+A GroupDocs.Annotation for .NET hatékony használatához elengedhetetlen a .NET keretrendszer alapvető ismerete. Győződjön meg róla, hogy ismeri az olyan fogalmakat, mint az osztályok, objektumok, metódusok és névterek.
+### 3. Fejlesztői környezet
+Győződjön meg arról, hogy megfelelő fejlesztői környezettel rendelkezik, például Visual Studio vagy bármilyen más választott .NET IDE. Itt fogja megírni és végrehajtani a .NET kódját.
+### 4. Hozzáférés a dokumentum(ok)hoz jegyzetek készítése céljából
+Készítse elő a GroupDocs.Annotation for .NET segítségével jegyzetekkel ellátni kívánt dokumentum(oka)t. Ezek lehetnek PDF-ek, Word-dokumentumok, Excel-táblázatok vagy bármilyen más támogatott fájlformátum.
 
 ## Névterek importálása
-A GroupDocs.Annotation for .NET használatának megkezdéséhez importálja a szükséges névtereket a projektbe. Ez lehetővé teszi a könyvtár által biztosított osztályok és metódusok elérését.
+GroupDocs.Annotation for .NET használatának megkezdéséhez importálja a szükséges névtereket a projektjébe. Ez lehetővé teszi a könyvtár által biztosított osztályok és metódusok elérését.
 ```csharp
 using System;
 using GroupDocs.Annotation.Models;
 ```
-## 1. lépés: Töltse be a dokumentumot
+## 1. lépés: A dokumentum betöltése
 ```csharp
 using (Annotator annotator = new Annotator("document.pdf"))
 {
-    // Ide kerül a dokumentumbetöltési kód
+    // A dokumentum betöltésére szolgáló kód ide kerül
 }
 ```
- Ebben a lépésben cserélje ki`"document.pdf"` a dokumentumfájl elérési útjával. Ez a kód inicializálja a`Annotator` osztály, amely a megjegyzéssel ellátandó dokumentumot jelöli.
-## 2. lépés: Hozzáférés a dokumentum információihoz
+Ebben a lépésben cserélje ki `"document.pdf"` a dokumentumfájl elérési útjával. Ez a kód inicializálja a(z) `Annotator` osztály, amely az annotálandó dokumentumot jelöli.
+## 2. lépés: Dokumentuminformációk elérése
 ```csharp
 IDocumentInfo documentInfo = annotator.Document.GetDocumentInfo();
 ```
-Ez a kód információkat kér le a betöltött dokumentumról, például az oldalak számát, méretét stb`documentInfo` Az objektum a dokumentumhoz kapcsolódó metaadatokat tartalmazza.
-## 3. lépés: Ismétlés oldalakon keresztül
+Ez a kód információkat kér le a betöltött dokumentumról, például az oldalak számát, a méreteket stb. A `documentInfo` Az objektum a dokumentumhoz kapcsolódó metaadatokat tartalmaz.
+## 3. lépés: Oldalak ismétlése
 ```csharp
 foreach (PageInfo page in documentInfo.PagesInfo)
 {
-    // Az oldaliteráció kódja ide kerül
+    // Az oldal iterációjához tartozó kód ide kerül
 }
 ```
-Ez a ciklus a dokumentum minden oldalán végighalad, lehetővé téve az egyes oldalakon történő műveletek végrehajtását.
-## 4. lépés: Szöveges tartalom elérése
+Ez a ciklus végigmegy a dokumentum minden oldalán, lehetővé téve a műveletek végrehajtását az egyes oldalakon.
+## 4. lépés: Hozzáférés a szöveges tartalomhoz
 ```csharp
 foreach (TextLineInfo textLine in page.TextLines)
 {
-    // A szövegsor feldolgozásához szükséges kód itt található
+    // A szövegsorok feldolgozásához szükséges kód ide kerül.
 }
 ```
-Az oldalhurkon belül ismételje meg az oldal minden szövegsorát. Ez lehetővé teszi a dokumentum szöveges tartalmának elérését és kezelését.
-## 5. lépés: Végezze el az Annotációt
+Az oldal ciklusán belül iteráljon végig az oldalon található szövegsorokon. Ez lehetővé teszi a dokumentum szöveges tartalmának elérését és kezelését.
+## 5. lépés: Jegyzetelés végrehajtása
 ```csharp
-// A kommentár kódja ide kerül
+// Ide kerül a megjegyzéskódod
 ```
-Valósítsa meg a megjegyzés logikáját a megfelelő cikluson belül. Igényeitől függően különféle típusú megjegyzéseket, például megjegyzéseket, kiemeléseket és alakzatokat adhat hozzá.
-## 6. lépés: Mentse el a változtatásokat
+A megfelelő cikluson belül implementáld a jegyzetelési logikádat. Az igényeidtől függően különféle típusú jegyzeteket adhatsz hozzá, például megjegyzéseket, kiemeléseket és alakzatokat.
+## 6. lépés: Változtatások mentése
 ```csharp
 annotator.Save("output.pdf");
 ```
- Végül mentse el a megjegyzésekkel ellátott dokumentumot a`Save` módszer. Cserélje ki`"output.pdf"` a megjegyzésekkel ellátott dokumentum kívánt fájlútvonalával.
+Végül mentse el a jegyzetekkel ellátott dokumentumot a `Save` metódus. Csere `"output.pdf"` a kívánt fájlelérési úttal a jegyzetekkel ellátott dokumentumhoz.
 
 ## Következtetés
-Összefoglalva, a GroupDocs.Annotation for .NET zökkenőmentes megoldást kínál a dokumentum megjegyzések képességeinek .NET-alkalmazásaiba való integrálására. Az oktatóanyagban ismertetett lépések követésével könnyedén, hatékonyan fűzhet megjegyzéseket a dokumentumokhoz.
+Összefoglalva, a GroupDocs.Annotation for .NET zökkenőmentes megoldást kínál a dokumentumok annotációs képességeinek integrálására a .NET alkalmazásokba. Az ebben az oktatóanyagban ismertetett lépéseket követve hatékonyan és könnyedén láthat el jegyzetekkel dokumentumokat.
 ## GYIK
-### A GroupDocs.Annotation for .NET képes kezelni a különböző dokumentumformátumokat?
-Igen, a GroupDocs.Annotation for .NET különféle dokumentumformátumokat támogat, beleértve a PDF, Word, Excel, PowerPoint és egyebeket.
-### Elérhető ingyenes próbaverzió a GroupDocs.Annotation for .NET számára?
- Igen, elérheti a GroupDocs.Annotation ingyenes próbaverzióját a .NET-hez a webhelyről[weboldal](https://releases.groupdocs.com/).
-### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Annotation for .NET számára?
- Ideiglenes engedélyt szerezhet a[GroupDocs vásárlási oldal](https://purchase.groupdocs.com/temporary-license/).
-### Hol találok támogatást a GroupDocs.Annotation for .NET számára?
- Támogatást kérhet és kérdéseket tehet fel a[GroupDocs fórum](https://forum.groupdocs.com/c/annotation/10).
-### A GroupDocs.Annotation for .NET kínál valamilyen dokumentációt?
- Igen, a GroupDocs.Annotation for .NET átfogó dokumentációja elérhető[itt](https://tutorials.groupdocs.com/annotation/net/).
+### Képes a GroupDocs.Annotation for .NET különböző dokumentumformátumokat kezelni?
+Igen, a GroupDocs.Annotation for .NET számos dokumentumformátumot támogat, beleértve a PDF, Word, Excel, PowerPoint és egyebeket.
+### Van ingyenes próbaverzió a GroupDocs.Annotation for .NET-hez?
+Igen, hozzáférhet a GroupDocs.Annotation for .NET ingyenes próbaverziójához a következő címen: [weboldal](https://releases.groupdocs.com/).
+### Hogyan szerezhetek ideiglenes licencet a GroupDocs.Annotation for .NET-hez?
+Ideiglenes jogosítványt igényelhet a [GroupDocs vásárlási oldal](https://purchase.groupdocs.com/temporary-license/).
+### Hol találok támogatást a GroupDocs.Annotation for .NET-hez?
+Kérhetsz támogatást és tehetsz fel kérdéseket a [GroupDocs fórum](https://forum.groupdocs.com/c/annotation/10).
+### A GroupDocs.Annotation for .NET kínál bármilyen dokumentációt?
+Igen, a GroupDocs.Annotation for .NET átfogó dokumentációja elérhető. [itt](https://tutorials.groupdocs.com/annotation/net/).

@@ -1,31 +1,31 @@
 ---
-title: قم بتعيين الترخيص من الدفق
-linktitle: قم بتعيين الترخيص من الدفق
-second_title: GroupDocs.Annotation .NET API
-description: أطلق العنان للإمكانات الكاملة للتعليق التوضيحي للمستند في .NET باستخدام GroupDocs.Annotation. اتبع دليلنا خطوة بخطوة للتكامل السلس.
-weight: 11
-url: /ar/net/applying-licenses/set-license-from-stream/
+"description": "استغل كامل إمكانات شرح المستندات في .NET مع GroupDocs.Annotation. اتبع دليلنا خطوة بخطوة للتكامل السلس."
+"linktitle": "تعيين الترخيص من البث"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "تعيين الترخيص من البث"
+"url": "/ar/net/applying-licenses/set-license-from-stream/"
+"weight": 11
 ---
 
-# قم بتعيين الترخيص من الدفق
+# تعيين الترخيص من البث
 
 ## مقدمة
-مرحبًا بك في الدليل الشامل حول استخدام GroupDocs.Annotation لـ .NET لتحسين إمكانات التعليقات التوضيحية للمستند. سواء كنت مطورًا متمرسًا أو بدأت للتو، سيرشدك هذا البرنامج التعليمي خلال كل خطوة، مما يضمن لك الاستفادة من الإمكانات الكاملة لهذه الأداة القوية.
+مرحبًا بكم في الدليل الشامل لاستخدام GroupDocs.Annotation لـ .NET لتحسين إمكانياتك في إضافة التعليقات التوضيحية إلى مستنداتك. سواءً كنت مطورًا محترفًا أو مبتدئًا، سيرشدك هذا الدليل خطوة بخطوة، لضمان الاستفادة القصوى من هذه الأداة الفعّالة.
 ## المتطلبات الأساسية
-قبل الغوص في البرنامج التعليمي، تأكد من توفر المتطلبات الأساسية التالية:
-1.  GroupDocs.Annotation لـ .NET: تأكد من تنزيل وتثبيت GroupDocs.Annotation لـ .NET من[رابط التحميل](https://releases.groupdocs.com/annotation/net/).
-2.  الترخيص: احصل على ترخيص صالح لـ GroupDocs.Annotation. يمكنك إما شراء واحدة من[هنا](https://purchase.groupdocs.com/buy) أو طلب ترخيص مؤقت[هنا](https://purchase.groupdocs.com/temporary-license/).
-3.  التوثيق: تعرف على[توثيق](https://tutorials.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation. يوفر رؤى تفصيلية حول وظائف واجهة برمجة التطبيقات (API).
+قبل الغوص في البرنامج التعليمي، تأكد من أن لديك المتطلبات الأساسية التالية:
+1. GroupDocs.Annotation لـ .NET: تأكد من تنزيل GroupDocs.Annotation لـ .NET وتثبيته من [رابط التحميل](https://releases.groupdocs.com/annotation/net/).
+2. الترخيص: احصل على ترخيص صالح لـ GroupDocs.Annotation. يمكنك شراء ترخيص من [هنا](https://purchase.groupdocs.com/buy) أو طلب ترخيص مؤقت [هنا](https://purchase.groupdocs.com/temporary-license/).
+3. التوثيق: تعرف على [التوثيق](https://tutorials.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation. يوفر هذا الدليل معلومات تفصيلية حول وظائف واجهة برمجة التطبيقات (API).
 
 ## استيراد مساحات الأسماء
-أولاً، لنستورد مساحات الأسماء الضرورية لبدء استخدام GroupDocs.Annotation في مشروع .NET الخاص بك:
+أولاً، دعنا نستورد المساحات الأساسية اللازمة لبدء استخدام GroupDocs.Annotation في مشروع .NET الخاص بك:
 ```csharp
 using System;
 using System.IO;
 ```
 
 ## الخطوة 1: التحقق من مسار الترخيص
-تأكد من تعيين مسار ملف الترخيص بشكل صحيح في مشروعك. يجب أن يشير إلى الموقع حيث تم تخزين ملف الترخيص الخاص بك.
+تأكد من ضبط مسار ملف الترخيص بشكل صحيح في مشروعك. يجب أن يشير المسار إلى موقع تخزين ملف الترخيص.
 ## الخطوة 2: تعيين الترخيص
 ```csharp
 if (File.Exists(Constants.LicensePath))
@@ -39,14 +39,14 @@ if (File.Exists(Constants.LicensePath))
         license.SetLicense(stream);
     }
 ```
- إذا كان ملف الترخيص موجودًا، فإنه يقرأ دفق الملف ويحدد الترخيص باستخدام ملف`SetLicense` طريقة.
+إذا كان ملف الترخيص موجودًا، فإنه يقرأ تدفق الملف ويضبط الترخيص باستخدام `SetLicense` طريقة.
 ```csharp
     Console.WriteLine("License set successfully.");
 }
 else
 {
 ```
-في حالة عدم وجود ملف الترخيص، فإنه يطالب المستخدم بالحصول على ترخيص من موقع GroupDocs.
+إذا لم يكن ملف الترخيص موجودًا، فسوف يطالب المستخدم بالحصول على ترخيص من موقع GroupDocs.
 ```csharp
     Console.WriteLine("\nWe do not ship any license with this example. " +
                       "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +
@@ -56,15 +56,15 @@ else
 ```
 
 ## خاتمة
-في الختام، فإن إتقان GroupDocs.Annotation لـ .NET يمكن أن يعزز بشكل كبير قدرات التعليق التوضيحي للمستند. باتباع هذا الدليل التفصيلي خطوة بخطوة، ستكون مجهزًا جيدًا لدمج ميزات التعليقات التوضيحية القوية في تطبيقات .NET الخاصة بك بسلاسة.
+في الختام، يُمكن لإتقان GroupDocs.Annotation لـ .NET أن يُعزز بشكل كبير قدراتك في شرح مستنداتك. باتباع هذا الدليل المُفصّل، ستكون مُجهزًا جيدًا لدمج ميزات شرح فعّالة في تطبيقات .NET الخاصة بك بسلاسة.
 ## الأسئلة الشائعة
 ### هل أحتاج إلى شراء ترخيص لاستخدام GroupDocs.Annotation لـ .NET؟
-نعم، أنت بحاجة إلى ترخيص صالح لإلغاء تأمين الوظائف الكاملة لـ GroupDocs.Annotation. يمكنك إما شراء ترخيص دائم أو طلب ترخيص مؤقت لأغراض التقييم.
-### أين يمكنني العثور على دعم لـ GroupDocs.Annotation لـ .NET؟
- يمكنك العثور على دعم شامل والتفاعل مع المجتمع على[GroupDocs. منتدى التعليقات التوضيحية](https://forum.groupdocs.com/c/annotation/10).
+نعم، تحتاج إلى ترخيص صالح للاستفادة الكاملة من وظائف GroupDocs.Annotation. يمكنك شراء ترخيص دائم أو طلب ترخيص مؤقت لأغراض التقييم.
+### أين يمكنني العثور على الدعم لـ GroupDocs.Annotation لـ .NET؟
+يمكنك العثور على الدعم الشامل والتفاعل مع المجتمع في [منتدى GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).
 ### هل يمكنني تجربة GroupDocs.Annotation لـ .NET قبل الشراء؟
- نعم، يمكنك طلب ترخيص تجريبي مجاني[هنا](https://releases.groupdocs.com/) لاستكشاف إمكانيات GroupDocs.Annotation لـ .NET.
+نعم، يمكنك طلب ترخيص تجريبي مجاني [هنا](https://releases.groupdocs.com/) لاستكشاف إمكانيات GroupDocs.Annotation لـ .NET.
 ### كيف يمكنني الحصول على أحدث الوثائق الخاصة بـ GroupDocs.Annotation لـ .NET؟
- يمكنك الرجوع إلى[توثيق](https://tutorials.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation لـ .NET للوصول إلى مراجع API التفصيلية والبرامج التعليمية.
-### ماذا لو واجهت مشاكل مع الترخيص الخاص بي؟
-إذا واجهت أية مشكلات تتعلق بالترخيص الخاص بك، فاتصل بفريق دعم GroupDocs للحصول على المساعدة.
+يمكنك الرجوع إلى [التوثيق](https://tutorials.groupdocs.com/annotation/net/) لـ GroupDocs.Annotation لـ .NET للوصول إلى دروس API التفصيلية والبرامج التعليمية.
+### ماذا لو واجهت مشاكل مع ترخيصي؟
+إذا واجهت أي مشكلات مع ترخيصك، فتواصل مع فريق دعم GroupDocs للحصول على المساعدة.

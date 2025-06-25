@@ -1,27 +1,27 @@
 ---
-title: Genereer een voorbeeld zonder opmerkingen
-linktitle: Genereer een voorbeeld zonder opmerkingen
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u documentannotatiemogelijkheden naadloos kunt integreren in uw .NET-toepassingen met behulp van GroupDocs.Annotation voor .NET.
-weight: 14
-url: /nl/net/advanced-usage/generate-preview-without-comments/
+"description": "Ontdek hoe u documentannotatiemogelijkheden naadloos kunt integreren in uw .NET-toepassingen met GroupDocs.Annotation voor .NET."
+"linktitle": "Voorbeeld genereren zonder opmerkingen"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Voorbeeld genereren zonder opmerkingen"
+"url": "/nl/net/advanced-usage/generate-preview-without-comments/"
+"weight": 14
 ---
 
-# Genereer een voorbeeld zonder opmerkingen
+# Voorbeeld genereren zonder opmerkingen
 
 ## Invoering
-GroupDocs.Annotation voor .NET is een krachtige tool waarmee ontwikkelaars annotatiefuncties naadloos in hun .NET-applicaties kunnen integreren. Of u nu werkt aan een documentbeheersysteem, samenwerkingsplatform of een andere toepassing die mogelijkheden voor documentannotatie vereist, GroupDocs.Annotation biedt een uitgebreide set hulpmiddelen om de functionaliteit van uw toepassing te verbeteren.
+GroupDocs.Annotation voor .NET is een krachtige tool waarmee ontwikkelaars naadloos annotatiefuncties in hun .NET-applicaties kunnen integreren. Of u nu werkt met een documentbeheersysteem, een samenwerkingsplatform of een andere applicatie die documentannotatiemogelijkheden vereist, GroupDocs.Annotation biedt een uitgebreide set tools om de functionaliteit van uw applicatie te verbeteren.
 ## Vereisten
-Voordat u GroupDocs.Annotation voor .NET gaat gebruiken, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+Voordat u GroupDocs.Annotation voor .NET gaat gebruiken, moet u ervoor zorgen dat de volgende vereisten zijn ingesteld:
 ### 1. Installeer GroupDocs.Annotation voor .NET
- Om te beginnen moet u GroupDocs.Annotation voor .NET downloaden en installeren. Je kunt de downloadlink vinden[hier](https://releases.groupdocs.com/annotation/net/). Volg de installatie-instructies in de documentatie voor een soepel installatieproces.
+Om te beginnen moet u GroupDocs.Annotation voor .NET downloaden en installeren. U vindt de downloadlink [hier](https://releases.groupdocs.com/annotation/net/)Volg de installatie-instructies in de documentatie voor een soepel installatieproces.
 ### 2. Verkrijg een licentie
- Voor GroupDocs.Annotation voor .NET is een licentie vereist voor commercieel gebruik. U kunt een licentie verkrijgen bij[hier](https://purchase.groupdocs.com/buy) of kies voor een tijdelijke licentie[hier](https://purchase.groupdocs.com/temporary-license/) voor testdoeleinden.
-### 3. Bekendheid met .NET Framework
-Basiskennis van .NET Framework en C#-programmeertaal is essentieel om GroupDocs.Annotation voor .NET effectief te kunnen gebruiken.
+GroupDocs.Annotation voor .NET vereist een licentie voor commercieel gebruik. U kunt een licentie verkrijgen bij [hier](https://purchase.groupdocs.com/buy) of kies voor een tijdelijke licentie [hier](https://purchase.groupdocs.com/temporary-license/) voor testdoeleinden.
+### 3. Kennis van .NET Framework
+Basiskennis van .NET Framework en de programmeertaal C# is essentieel om GroupDocs.Annotation voor .NET effectief te kunnen gebruiken.
 
 ## Naamruimten importeren
-Nu u de vereisten hebt ingesteld, gaan we de benodigde naamruimten in uw .NET-toepassing importeren.
+Nu u de vereisten hebt ingesteld, kunt u de benodigde naamruimten importeren in uw .NET-toepassing.
 
 ```csharp
 using System;
@@ -31,13 +31,13 @@ using System.Text;
 using GroupDocs.Annotation.Options;
 ```
 
-Volg deze stapsgewijze instructies om een voorbeeld zonder opmerkingen te genereren met GroupDocs.Annotation voor .NET:
-## Stap 1: Initialiseer Annotator
+Volg deze stapsgewijze instructies om een voorbeeld zonder opmerkingen te genereren met behulp van GroupDocs.Annotation voor .NET:
+## Stap 1: Annotator initialiseren
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 {
 ```
-## Stap 2: Configureer voorbeeldopties
+## Stap 2: Preview-opties configureren
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -50,27 +50,27 @@ using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
     previewOptions.PreviewFormat = PreviewFormats.PNG;
     previewOptions.PageNumbers = new int[] { 1, 2, 3, 4, 5, 6 };
 ```
-## Stap 4: Schakel het weergeven van opmerkingen uit
+## Stap 4: Weergave van opmerkingen uitschakelen
 ```csharp
     previewOptions.RenderComments = false;
 ```
-## Stap 5: Genereer een voorbeeld
+## Stap 5: Voorbeeld genereren
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-Zodra u deze stappen heeft gevolgd, kan uw .NET-toepassing een voorbeeld van de opgegeven pagina's uit het document genereren zonder commentaar weer te geven.
+Wanneer u deze stappen hebt gevolgd, kan uw .NET-toepassing een voorbeeld van de opgegeven pagina's uit het document genereren zonder opmerkingen weer te geven.
 
 ## Conclusie
-Het opnemen van annotatiefuncties in uw .NET-applicaties is nog nooit zo eenvoudig geweest dankzij GroupDocs.Annotation voor .NET. Door de stappen in deze zelfstudie te volgen, kunt u de mogelijkheden voor documentannotatie naadloos in uw toepassingen integreren, waardoor de samenwerking en het documentbeheer worden verbeterd.
+Het integreren van annotatiefuncties in uw .NET-applicaties was nog nooit zo eenvoudig dankzij GroupDocs.Annotation voor .NET. Door de stappen in deze tutorial te volgen, kunt u documentannotatiefuncties naadloos integreren in uw applicaties, wat de samenwerking en het documentbeheer verbetert.
 ## Veelgestelde vragen
 ### Is GroupDocs.Annotation voor .NET compatibel met alle documentformaten?
-GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentformaten, waaronder PDF, DOCX, PPTX, XLSX en meer.
-### Kan ik het uiterlijk aanpassen van annotaties die zijn gegenereerd met GroupDocs.Annotation voor .NET?
-Ja, GroupDocs.Annotation voor .NET biedt uitgebreide aanpassingsopties, waardoor u de weergave van annotaties kunt aanpassen aan de behoeften van uw toepassing.
+GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentindelingen, waaronder PDF, DOCX, PPTX, XLSX en meer.
+### Kan ik het uiterlijk van annotaties die zijn gegenereerd met GroupDocs.Annotation voor .NET aanpassen?
+Ja, GroupDocs.Annotation voor .NET biedt uitgebreide aanpassingsopties, waarmee u het uiterlijk van annotaties kunt afstemmen op de behoeften van uw toepassing.
 ### Ondersteunt GroupDocs.Annotation voor .NET samenwerking tussen meerdere gebruikers?
-Ja, GroupDocs.Annotation voor .NET biedt functies voor collaboratieve annotaties, waardoor meerdere gebruikers tegelijkertijd documenten kunnen annoteren.
+Ja, GroupDocs.Annotation voor .NET biedt functies voor samenwerking bij het maken van aantekeningen, waardoor meerdere gebruikers tegelijkertijd documenten kunnen annoteren.
 ### Is er technische ondersteuning beschikbaar voor GroupDocs.Annotation voor .NET?
- Ja, technische ondersteuning voor GroupDocs.Annotation voor .NET is beschikbaar via de[Helpforum](https://forum.groupdocs.com/c/annotation/10).
-### Kan ik GroupDocs.Annotation voor .NET gratis uitproberen voordat ik het aanschaf?
- Ja, u kunt de functies van GroupDocs.Annotation voor .NET verkennen door de gratis proefversie te downloaden[hier](https://releases.groupdocs.com/).
+Ja, technische ondersteuning voor GroupDocs.Annotation voor .NET is beschikbaar via de [ondersteuningsforum](https://forum.groupdocs.com/c/annotation/10).
+### Kan ik GroupDocs.Annotation voor .NET gratis uitproberen voordat ik het koop?
+Ja, u kunt de functies van GroupDocs.Annotation voor .NET verkennen door de gratis proefversie te downloaden [hier](https://releases.groupdocs.com/).

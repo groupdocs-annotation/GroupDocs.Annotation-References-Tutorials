@@ -1,24 +1,24 @@
 ---
-title: Voeg puntannotatie toe aan document
-linktitle: Voeg puntannotatie toe aan document
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u puntannotatie aan PDF's kunt toevoegen met GroupDocs.Annotation voor .NET. Stapsgewijze handleiding voor naadloze integratie.
-weight: 17
-url: /nl/net/unlocking-annotation-power/add-point-annotation/
+"description": "Leer hoe u puntannotaties aan pdf's toevoegt met GroupDocs.Annotation voor .NET. Stapsgewijze handleiding voor naadloze integratie."
+"linktitle": "Puntannotatie toevoegen aan document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Puntannotatie toevoegen aan document"
+"url": "/nl/net/unlocking-annotation-power/add-point-annotation/"
+"weight": 17
 ---
 
-# Voeg puntannotatie toe aan document
+# Puntannotatie toevoegen aan document
 
 ## Invoering
-GroupDocs.Annotation voor .NET is een krachtige tool waarmee ontwikkelaars programmatisch verschillende soorten annotaties aan documenten kunnen toevoegen. In deze zelfstudie concentreren we ons op het toevoegen van een puntannotatie aan een document met behulp van C#.
+GroupDocs.Annotation voor .NET is een krachtige tool waarmee ontwikkelaars programmatisch verschillende soorten annotaties aan documenten kunnen toevoegen. In deze tutorial concentreren we ons op het toevoegen van een puntannotatie aan een document met behulp van C#.
 ## Vereisten
-Voordat we beginnen, zorg ervoor dat u over het volgende beschikt:
+Voordat we beginnen, zorg ervoor dat u het volgende heeft:
 1. Basiskennis van de programmeertaal C#.
-2. Visual Studio is op uw systeem geïnstalleerd.
-3.  GroupDocs.Annotation voor .NET-bibliotheek geïnstalleerd. Je kunt het downloaden van[hier](https://releases.groupdocs.com/annotation/net/).
+2. Visual Studio op uw systeem geïnstalleerd.
+3. GroupDocs.Annotation voor .NET-bibliotheek geïnstalleerd. U kunt het downloaden van [hier](https://releases.groupdocs.com/annotation/net/).
 
 ## Noodzakelijke naamruimten importeren
-Om aan de slag te gaan, moet u de vereiste naamruimten in uw C#-project importeren:
+Om te beginnen moet u de vereiste naamruimten importeren in uw C#-project:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,17 +27,17 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Stap 1: Definieer het uitvoerpad
+## Stap 1: Uitvoerpad definiëren
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-In deze stap definiëren we het uitvoerpad waar het geannoteerde document zal worden opgeslagen.
-## Stap 2: Initialiseer Annotator
+In deze stap definiëren we het uitvoerpad waar het geannoteerde document wordt opgeslagen.
+## Stap 2: Annotator initialiseren
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Hier initialiseren we de`Annotator` object met het invoerdocument ("input.pdf").
-## Stap 3: Maak puntannotatie
+Hier initialiseren we de `Annotator` object met het invoerdocument ("input.pdf").
+## Stap 3: Puntannotatie maken
 ```csharp
 PointAnnotation point = new PointAnnotation
 {
@@ -60,7 +60,7 @@ PointAnnotation point = new PointAnnotation
     }
 };
 ```
- In deze stap maken we een`PointAnnotation` object en specificeer de eigenschappen ervan, zoals positie, bericht, paginanummer en antwoorden.
+In deze stap maken we een `PointAnnotation` object en specificeer de eigenschappen ervan, zoals positie, bericht, paginanummer en antwoorden.
 ## Stap 4: Annotatie toevoegen
 ```csharp
 annotator.Add(point);
@@ -73,15 +73,15 @@ annotator.Save(outputPath);
 Ten slotte slaan we het geannoteerde document op in het opgegeven uitvoerpad.
 
 ## Conclusie
-In deze zelfstudie hebben we geleerd hoe u een puntannotatie aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Met deze krachtige bibliotheek kunt u uw documentbeheertoepassingen verbeteren door annotatiefunctionaliteiten op te nemen.
+In deze tutorial hebben we geleerd hoe je een puntannotatie aan een document toevoegt met GroupDocs.Annotation voor .NET. Met deze krachtige bibliotheek kun je je documentbeheertoepassingen uitbreiden met annotatiefunctionaliteit.
 ## Veelgestelde vragen
 ### Is GroupDocs.Annotation voor .NET compatibel met alle documentformaten?
 Ja, GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentformaten, waaronder PDF, Microsoft Word, Excel, PowerPoint en meer.
 ### Kan ik het uiterlijk van annotaties aanpassen?
-Absoluut! GroupDocs.Annotation voor .NET biedt uitgebreide mogelijkheden om het uiterlijk van annotaties aan te passen aan de behoeften van uw toepassing.
+Absoluut! GroupDocs.Annotation voor .NET biedt uitgebreide opties voor het aanpassen van de weergave van annotaties aan de behoeften van uw toepassing.
 ### Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation voor .NET?
- Ja, u kunt profiteren van een gratis proefperiode van[hier](https://releases.groupdocs.com/).
-### Hoe kan ik ondersteuning krijgen voor eventuele problemen of vragen met betrekking tot GroupDocs.Annotation voor .NET?
- U kunt ondersteuning krijgen van het GroupDocs.Annotation-forum[hier](https://forum.groupdocs.com/c/annotation/10).
-### Kan ik een tijdelijke licentie verkrijgen voor testdoeleinden?
- Ja, u kunt een tijdelijke licentie verkrijgen via[hier](https://purchase.groupdocs.com/temporary-license/).
+Ja, u kunt gebruik maken van een gratis proefperiode van [hier](https://releases.groupdocs.com/).
+### Hoe kan ik ondersteuning krijgen voor problemen of vragen met betrekking tot GroupDocs.Annotation voor .NET?
+U kunt ondersteuning krijgen via het GroupDocs.Annotation-forum [hier](https://forum.groupdocs.com/c/annotation/10).
+### Kan ik een tijdelijke licentie krijgen voor testdoeleinden?
+Ja, u kunt een tijdelijke licentie verkrijgen bij [hier](https://purchase.groupdocs.com/temporary-license/).

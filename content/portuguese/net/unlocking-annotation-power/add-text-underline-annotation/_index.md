@@ -1,22 +1,22 @@
 ---
-title: Adicionar anotação de sublinhado de texto ao documento
-linktitle: Adicionar anotação de sublinhado de texto ao documento
-second_title: API GroupDocs.Annotation .NET
-description: Aprenda como adicionar anotações de sublinhado de texto a documentos usando GroupDocs.Annotation for .NET. Melhore a colaboração e a comunicação sem esforço.
-weight: 27
-url: /pt/net/unlocking-annotation-power/add-text-underline-annotation/
+"description": "Aprenda a adicionar anotações de sublinhado de texto a documentos usando o GroupDocs.Annotation para .NET. Aprimore a colaboração e a comunicação sem esforço."
+"linktitle": "Adicionar anotação de sublinhado de texto ao documento"
+"second_title": "API .NET do GroupDocs.Annotation"
+"title": "Adicionar anotação de sublinhado de texto ao documento"
+"url": "/pt/net/unlocking-annotation-power/add-text-underline-annotation/"
+"weight": 27
 ---
 
 # Adicionar anotação de sublinhado de texto ao documento
 
 ## Introdução
-Neste tutorial, percorreremos o processo de adição de uma anotação de sublinhado de texto a um documento usando GroupDocs.Annotation for .NET. As anotações de sublinhado de texto podem ser úteis para enfatizar partes específicas de um documento, como passagens importantes ou pontos-chave.
+Neste tutorial, mostraremos o processo de adição de uma anotação de sublinhado de texto a um documento usando o GroupDocs.Annotation para .NET. Anotações de sublinhado de texto podem ser úteis para enfatizar partes específicas de um documento, como passagens importantes ou pontos-chave.
 ## Pré-requisitos
-Antes de começarmos, certifique-se de ter os seguintes pré-requisitos instalados:
-1.  GroupDocs.Annotation for .NET: Baixe e instale GroupDocs.Annotation for .NET em[aqui](https://releases.groupdocs.com/annotation/net/).
-2. .NET Framework: Certifique-se de ter o .NET Framework instalado em seu sistema.
+Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados:
+1. GroupDocs.Annotation para .NET: Baixe e instale o GroupDocs.Annotation para .NET em [aqui](https://releases.groupdocs.com/annotation/net/).
+2. .NET Framework: certifique-se de ter o .NET Framework instalado no seu sistema.
 
-## Importando Namespaces
+## Importando namespaces
 Primeiro, vamos importar os namespaces necessários para o nosso projeto:
 ```csharp
 using System;
@@ -28,17 +28,17 @@ using GroupDocs.Annotation.Options;
 ```
 
 Agora, vamos dividir o exemplo em várias etapas:
-## Etapa 1: definir o caminho de saída
+## Etapa 1: Definir o caminho de saída
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Nesta etapa definimos o caminho de saída onde o documento anotado será salvo.
-## Etapa 2: inicializar o anotador
+Nesta etapa, definimos o caminho de saída onde o documento anotado será salvo.
+## Etapa 2: Inicializar o Annotator
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Aqui, inicializamos uma instância do`Annotator` class fornecendo o caminho do documento de entrada.
-## Etapa 3: criar anotação de sublinhado
+Aqui, inicializamos uma instância do `Annotator` classe fornecendo o caminho do documento de entrada.
+## Etapa 3: Criar anotação sublinhada
 ```csharp
 UnderlineAnnotation underline = new UnderlineAnnotation
 {
@@ -48,7 +48,7 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     Opacity = 0.7,
     PageNumber = 0,
     BackgroundColor = 16761035,
-    UnderlineColor = 1422623, // funciona com suporte apenas para documentos Word e PDF
+    UnderlineColor = 1422623, // funciona apenas com documentos Word e PDF
     Points = new List<Point>
     {
         new Point(80, 730), new Point(240, 730), new Point(80, 650), new Point(240, 650)
@@ -68,28 +68,28 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     }
 };
 ```
- Esta etapa envolve a criação de um`UnderlineAnnotation`objeto com várias propriedades, como cor da fonte, mensagem, opacidade, número da página, cor de fundo, cor do sublinhado, pontos e respostas.
-## Etapa 4: adicionar anotação ao documento
+Esta etapa envolve a criação de um `UnderlineAnnotation` objeto com várias propriedades, como cor da fonte, mensagem, opacidade, número da página, cor de fundo, cor do sublinhado, pontos e respostas.
+## Etapa 4: Adicionar anotação ao documento
 ```csharp
 annotator.Add(underline);
 ```
-Aqui, adicionamos a anotação de sublinhado ao documento.
+Aqui, adicionamos a anotação sublinhada ao documento.
 ## Etapa 5: Salvar documento anotado
 ```csharp
 annotator.Save(outputPath);
 ```
-Finalmente, salvamos o documento anotado no caminho de saída especificado.
+Por fim, salvamos o documento anotado no caminho de saída especificado.
 
 ## Conclusão
-Neste tutorial, aprendemos como adicionar uma anotação de sublinhado de texto a um documento usando GroupDocs.Annotation for .NET. Esta poderosa biblioteca oferece várias opções de anotação para aprimorar a colaboração e comunicação de documentos.
+Neste tutorial, aprendemos como adicionar uma anotação de sublinhado de texto a um documento usando o GroupDocs.Annotation para .NET. Esta poderosa biblioteca oferece diversas opções de anotação para aprimorar a colaboração e a comunicação em documentos.
 ## Perguntas frequentes
-### Posso personalizar a aparência da anotação de sublinhado?
+### Posso personalizar a aparência da anotação sublinhada?
 Sim, você pode personalizar propriedades como cor, opacidade e posição de acordo com suas necessidades.
 ### O GroupDocs.Annotation é compatível com diferentes formatos de documentos?
-Sim, GroupDocs.Annotation oferece suporte a uma ampla variedade de formatos de documentos, incluindo Word e PDF.
+Sim, o GroupDocs.Annotation suporta uma ampla variedade de formatos de documentos, incluindo Word e PDF.
 ### Posso adicionar várias anotações a um único documento?
-Com certeza, GroupDocs.Annotation permite adicionar várias anotações de diferentes tipos a um documento.
-### Existe uma avaliação gratuita disponível para GroupDocs.Annotation?
- Sim, você pode acessar a versão de avaliação gratuita em[aqui](https://releases.groupdocs.com/).
-### Onde posso obter suporte para GroupDocs.Annotation?
- Você pode obter suporte no fórum da comunidade GroupDocs.Annotation[aqui](https://forum.groupdocs.com/c/annotation/10).
+Com certeza, o GroupDocs.Annotation permite que você adicione diversas anotações de diferentes tipos a um documento.
+### Existe um teste gratuito disponível para o GroupDocs.Annotation?
+Sim, você pode acessar a versão de teste gratuita em [aqui](https://releases.groupdocs.com/).
+### Onde posso obter suporte para o GroupDocs.Annotation?
+Você pode obter suporte no fórum da comunidade GroupDocs.Annotation [aqui](https://forum.groupdocs.com/c/annotation/10).

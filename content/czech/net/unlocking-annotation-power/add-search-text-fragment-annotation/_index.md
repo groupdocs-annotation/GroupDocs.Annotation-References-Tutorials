@@ -1,23 +1,23 @@
 ---
-title: Přidejte do dokumentu anotaci fragmentu vyhledávacího textu
-linktitle: Přidejte do dokumentu anotaci fragmentu vyhledávacího textu
-second_title: GroupDocs.Annotation .NET API
-description: Prozkoumejte sílu GroupDocs.Annotation pro .NET a bez námahy přidejte do svých aplikací možnosti anotací dokumentů.
-weight: 20
-url: /cs/net/unlocking-annotation-power/add-search-text-fragment-annotation/
+"description": "Prozkoumejte sílu GroupDocs.Annotation pro .NET a snadno přidejte do svých aplikací funkce pro anotaci dokumentů."
+"linktitle": "Přidat anotaci fragmentu hledaného textu do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidat anotaci fragmentu hledaného textu do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-search-text-fragment-annotation/"
+"weight": 20
 ---
 
-# Přidejte do dokumentu anotaci fragmentu vyhledávacího textu
+# Přidat anotaci fragmentu hledaného textu do dokumentu
 
-## Úvod
-V oblasti vývoje .NET GroupDocs.Annotation vyniká jako výkonný nástroj pro bezproblémové anotování dokumentů. Ať už jste ostřílený vývojář nebo teprve vstupujete do světa .NET, tento obsáhlý tutoriál vás provede základy používání GroupDocs.Annotation pro .NET, od importu jmenných prostorů až po zvládnutí složitostí přidávání anotací fragmentů vyhledávacího textu do vašich dokumenty.
-## Úvod
-GroupDocs.Annotation for .NET umožňuje vývojářům bez námahy začlenit možnosti anotací dokumentů do svých aplikací. Díky intuitivnímu rozhraní API a robustním funkcím mohou vývojáři anotovat různé formáty dokumentů, včetně PDF, dokumentů Microsoft Office, obrázků a dalších.
+## Zavedení
+V oblasti vývoje v .NET vyniká GroupDocs.Annotation jako výkonný nástroj pro bezproblémové anotace dokumentů. Ať už jste zkušený vývojář, nebo teprve vstupujete do světa .NET, tento komplexní tutoriál vás provede základy používání GroupDocs.Annotation pro .NET, od importu jmenných prostorů až po zvládnutí složitostí přidávání anotací fragmentů hledaného textu do vašich dokumentů.
+## Zavedení
+GroupDocs.Annotation pro .NET umožňuje vývojářům snadno začlenit funkce anotace dokumentů do svých aplikací. Díky intuitivnímu API a robustním funkcím mohou vývojáři anotovat různé formáty dokumentů, včetně PDF, dokumentů Microsoft Office, obrázků a dalších.
 ## Předpoklady
 Než se ponoříte do GroupDocs.Annotation pro .NET, ujistěte se, že máte splněny následující předpoklady:
 
-## Import jmenných prostorů
-Nejprve naimportujte potřebné jmenné prostory pro přístup ke třídám a metodám GroupDocs.Annotation ve vašem projektu .NET:
+## Importovat jmenné prostory
+Nejprve importujte potřebné jmenné prostory pro přístup ke třídám a metodám GroupDocs.Annotation ve vašem projektu .NET:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Krok 1: Definujte výstupní cestu
-Začněte definováním výstupní cesty, kam bude dokument s poznámkami uložen:
+## Krok 1: Definování výstupní cesty
+Začněte definováním výstupní cesty, kam bude uložen anotovaný dokument:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Inicializujte anotátor
- Dále inicializujte instanci souboru`Annotator` třídy zadáním cesty k dokumentu, který chcete anotovat:
+## Krok 2: Inicializace anotátoru
+Dále inicializujte instanci `Annotator` třídu zadáním cesty k dokumentu, který chcete anotovat:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
 ## Krok 3: Vytvořte anotaci fragmentu vyhledávacího textu
- Vytvořit`SearchTextFragment` objekt s požadovanými vlastnostmi, jako je text k vyhledávání, velikost písma, rodina písem, barva písma a barva pozadí:
+Vytvořte `SearchTextFragment` objekt s požadovanými vlastnostmi, jako je text k vyhledávání, velikost písma, rodina písma, barva písma a barva pozadí:
 ```csharp
 SearchTextFragment searchText = new SearchTextFragment()
 {
@@ -49,32 +49,32 @@ SearchTextFragment searchText = new SearchTextFragment()
     BackgroundColor = 16761035,
 };
 ```
-## Krok 4: Přidejte anotaci
- Přidejte vytvořenou anotaci fragmentu hledaného textu do dokumentu pomocí`Add` metoda anotátora:
+## Krok 4: Přidání anotace
+Přidejte do dokumentu vytvořenou anotaci fragmentu hledaného textu pomocí `Add` metoda anotátora:
 ```csharp
 annotator.Add(searchText);
 ```
-## Krok 5: Uložte dokument s poznámkami
+## Krok 5: Uložení anotovaného dokumentu
 Uložte anotovaný dokument do zadané výstupní cesty:
 ```csharp
 annotator.Save(outputPath);
 ```
-## Krok 6: Zobrazte zprávu o úspěchu
+## Krok 6: Zobrazení zprávy o úspěchu
 Informujte uživatele, že dokument byl úspěšně uložen:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Závěr
-Na závěr, GroupDocs.Annotation for .NET zjednodušuje proces přidávání anotací k dokumentům, zlepšuje spolupráci a procesy kontroly dokumentů. Podle kroků uvedených v této příručce můžete bez problémů integrovat možnosti anotací dokumentů do aplikací .NET.
-## FAQ
+Závěrem lze říci, že GroupDocs.Annotation pro .NET zjednodušuje proces přidávání anotací do dokumentů, čímž vylepšuje spolupráci a procesy kontroly dokumentů. Dodržováním kroků uvedených v této příručce můžete bezproblémově integrovat funkce anotací dokumentů do svých aplikací .NET.
+## Často kladené otázky
 ### Je GroupDocs.Annotation kompatibilní se všemi formáty dokumentů?
 Ano, GroupDocs.Annotation podporuje širokou škálu formátů dokumentů, včetně PDF, dokumentů Microsoft Office, obrázků a dalších.
-### Mohu upravit vzhled anotací?
-Absolutně! GroupDocs.Annotation poskytuje rozsáhlé možnosti přizpůsobení pro anotace, což vám umožňuje upravit vlastnosti, jako je velikost písma, barva a styl.
-### Je k dispozici bezplatná zkušební verze pro GroupDocs.Annotation?
- Ano, před nákupem máte přístup k bezplatné zkušební verzi GroupDocs.Annotation a prozkoumejte její funkce a možnosti[tady](https://releases.groupdocs.com/)..
+### Mohu si přizpůsobit vzhled anotací?
+Rozhodně! GroupDocs.Annotation nabízí rozsáhlé možnosti přizpůsobení anotací, které vám umožňují upravit vlastnosti, jako je velikost písma, barva a styl.
+### Je k dispozici bezplatná zkušební verze GroupDocs.Annotation?
+Ano, máte přístup k bezplatné zkušební verzi GroupDocs.Annotation, abyste si před nákupem mohli prohlédnout její funkce a možnosti. [zde](https://releases.groupdocs.com/)..
 ### Kde najdu podporu pro GroupDocs.Annotation?
- Pro podporu a pomoc s GroupDocs.Annotation můžete navštívit GroupDocs[Fórum](https://forum.groupdocs.com/c/annotation/10) věnované dotazům a diskusím souvisejícím s anotací.
+Pro podporu a pomoc s GroupDocs.Annotation můžete navštívit GroupDocs [forum](https://forum.groupdocs.com/c/annotation/10) věnované dotazům a diskusím týkajícím se anotací.
 ### Jak získám dočasnou licenci pro GroupDocs.Annotation?
- Prostřednictvím GroupDocs můžete získat dočasnou licenci pro GroupDocs.Annotation[webová stránka](https://purchase.groupdocs.com/temporary-license/), což vám umožní plně ohodnotit produkt.
+Dočasnou licenci pro GroupDocs.Annotation můžete získat prostřednictvím GroupDocs [webové stránky](https://purchase.groupdocs.com/temporary-license/), což vám umožní produkt plně vyhodnotit.

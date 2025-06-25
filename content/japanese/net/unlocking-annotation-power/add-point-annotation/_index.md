@@ -1,21 +1,21 @@
 ---
-title: ドキュメントにポイント注釈を追加
-linktitle: ドキュメントにポイント注釈を追加
-second_title: GroupDocs.Annotation .NET API
-description: GroupDocs.Annotation for .NET を使用して PDF にポイント アノテーションを追加する方法を学びます。シームレスな統合のためのステップバイステップのガイド。
-weight: 17
-url: /ja/net/unlocking-annotation-power/add-point-annotation/
+"description": "GroupDocs.Annotation for .NET を使用して PDF にポイント注釈を追加する方法を学びます。シームレスな統合のためのステップバイステップガイドです。"
+"linktitle": "ドキュメントにポイント注釈を追加する"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "ドキュメントにポイント注釈を追加する"
+"url": "/ja/net/unlocking-annotation-power/add-point-annotation/"
+"weight": 17
 ---
 
-# ドキュメントにポイント注釈を追加
+# ドキュメントにポイント注釈を追加する
 
 ## 導入
-GroupDocs.Annotation for .NET は、開発者がプログラムによってドキュメントにさまざまな種類の注釈を追加できる強力なツールです。このチュートリアルでは、C# を使用してドキュメントにポイント注釈を追加することに焦点を当てます。
+GroupDocs.Annotation for .NETは、開発者がプログラム的にドキュメントに様々な種類の注釈を追加できる強力なツールです。このチュートリアルでは、C#を使用してドキュメントにポイント注釈を追加する方法に焦点を当てます。
 ## 前提条件
-始める前に、以下のものがあることを確認してください。
+始める前に、以下のものを用意してください。
 1. C# プログラミング言語の基本的な理解。
-2. Visual Studio がシステムにインストールされている。
-3.  .NET ライブラリの GroupDocs.Annotation がインストールされています。からダウンロードできます[ここ](https://releases.groupdocs.com/annotation/net/).
+2. Visual Studio がシステムにインストールされています。
+3. GroupDocs.Annotation for .NETライブラリがインストールされています。ダウンロードはこちらから。 [ここ](https://releases。groupdocs.com/annotation/net/).
 
 ## 必要な名前空間のインポート
 まず、必要な名前空間を C# プロジェクトにインポートする必要があります。
@@ -27,17 +27,17 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## ステップ 1: 出力パスを定義する
+## ステップ1: 出力パスを定義する
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-このステップでは、注釈付きドキュメントが保存される出力パスを定義します。
-## ステップ 2: アノテーターを初期化する
+このステップでは、注釈が付けられたドキュメントが保存される出力パスを定義します。
+## ステップ2: アノテーターを初期化する
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-ここでは、`Annotator`オブジェクトと入力ドキュメント (「input.pdf」)。
-## ステップ 3: ポイントの注釈を作成する
+ここで、 `Annotator` 入力ドキュメント ("input.pdf") を含むオブジェクト。
+## ステップ3: ポイント注釈を作成する
 ```csharp
 PointAnnotation point = new PointAnnotation
 {
@@ -60,28 +60,28 @@ PointAnnotation point = new PointAnnotation
     }
 };
 ```
-このステップでは、`PointAnnotation`オブジェクトを作成し、位置、メッセージ、ページ番号、返信などのプロパティを指定します。
-## ステップ 4: 注釈を追加する
+このステップでは、 `PointAnnotation` オブジェクトを作成し、位置、メッセージ、ページ番号、返信などのプロパティを指定します。
+## ステップ4: 注釈を追加する
 ```csharp
 annotator.Add(point);
 ```
-ここでは、作成したポイントアノテーションをドキュメントに追加します。
-## ステップ 5: ドキュメントを保存する
+ここで、作成したポイント注釈をドキュメントに追加します。
+## ステップ5: ドキュメントを保存する
 ```csharp
 annotator.Save(outputPath);
 ```
-最後に、注釈付きドキュメントを指定された出力パスに保存します。
+最後に、注釈付きのドキュメントを指定された出力パスに保存します。
 
 ## 結論
-このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにポイント アノテーションを追加する方法を学習しました。この強力なライブラリを使用すると、注釈機能を組み込んで文書管理アプリケーションを強化できます。
+このチュートリアルでは、GroupDocs.Annotation for .NET を使用してドキュメントにポイント注釈を追加する方法を学習しました。この強力なライブラリを使用すると、注釈機能を組み込むことで、ドキュメント管理アプリケーションを強化できます。
 ## よくある質問
 ### GroupDocs.Annotation for .NET はすべてのドキュメント形式と互換性がありますか?
-はい、GroupDocs.Annotation for .NET は、PDF、Microsoft Word、Excel、PowerPoint などを含む幅広いドキュメント形式をサポートしています。
+はい、GroupDocs.Annotation for .NET は、PDF、Microsoft Word、Excel、PowerPoint など、幅広いドキュメント形式をサポートしています。
 ### 注釈の外観をカスタマイズできますか?
-絶対に！ GroupDocs.Annotation for .NET は、アプリケーションのニーズに合わせて注釈の外観をカスタマイズするための広範なオプションを提供します。
-### GroupDocs.Annotation for .NET に利用できる無料試用版はありますか?
-はい、以下から無料トライアルを利用できます。[ここ](https://releases.groupdocs.com/).
-### GroupDocs.Annotation for .NET に関連する問題やクエリのサポートを受けるにはどうすればよいですか?
- GroupDocs.Annotation フォーラムからサポートを受けることができます。[ここ](https://forum.groupdocs.com/c/annotation/10).
+もちろんです! GroupDocs.Annotation for .NET には、アプリケーションのニーズに合わせて注釈の外観をカスタマイズするための幅広いオプションが用意されています。
+### GroupDocs.Annotation for .NET の無料試用版はありますか?
+はい、無料トライアルをご利用いただけます [ここ](https://releases。groupdocs.com/).
+### GroupDocs.Annotation for .NET に関連する問題や質問についてサポートを受けるにはどうすればよいですか?
+GroupDocs.Annotationフォーラムからサポートを受けることができます [ここ](https://forum。groupdocs.com/c/annotation/10).
 ### テスト目的で一時ライセンスを取得できますか?
-はい、次から一時ライセンスを取得できます。[ここ](https://purchase.groupdocs.com/temporary-license/).
+はい、臨時免許証は以下から取得できます。 [ここ](https://purchase。groupdocs.com/temporary-license/).

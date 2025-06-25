@@ -1,23 +1,23 @@
 ---
-title: Voeg ellipsannotatie toe aan document
-linktitle: Voeg ellipsannotatie toe aan document
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u ellipsannotaties toevoegt aan documenten in .NET met behulp van GroupDocs.Annotation. Verbeter moeiteloos de samenwerking en communicatie.
-weight: 13
-url: /nl/net/unlocking-annotation-power/add-ellipse-annotation/
+"description": "Leer hoe u ellips-annotaties toevoegt aan documenten in .NET met GroupDocs.Annotation. Verbeter moeiteloos samenwerking en communicatie."
+"linktitle": "Ellips-annotatie toevoegen aan document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Ellips-annotatie toevoegen aan document"
+"url": "/nl/net/unlocking-annotation-power/add-ellipse-annotation/"
+"weight": 13
 ---
 
-# Voeg ellipsannotatie toe aan document
+# Ellips-annotatie toevoegen aan document
 
 ## Invoering
-In deze zelfstudie leert u hoe u een ellipsannotatie aan een document kunt toevoegen met GroupDocs.Annotation voor .NET. Deze stapsgewijze handleiding leidt u door het proces en zorgt ervoor dat u elke stap duidelijk begrijpt.
+In deze tutorial leer je hoe je een ellips-annotatie aan een document toevoegt met GroupDocs.Annotation voor .NET. Deze stapsgewijze handleiding leidt je door het proces, zodat je elke stap duidelijk begrijpt.
 ## Vereisten
-Zorg ervoor dat u over het volgende beschikt voordat u begint:
-1.  GroupDocs.Annotation voor .NET: Zorg ervoor dat u GroupDocs.Annotation voor .NET hebt gedownload en geïnstalleerd. Je kunt het downloaden van[hier](https://releases.groupdocs.com/annotation/net/).
-2. IDE (Integrated Development Environment): U hebt een IDE nodig die op uw systeem is geïnstalleerd, zoals Visual Studio, om de code te schrijven en uit te voeren.
+Voordat u begint, moet u ervoor zorgen dat u het volgende heeft:
+1. GroupDocs.Annotation voor .NET: Zorg ervoor dat je GroupDocs.Annotation voor .NET hebt gedownload en geïnstalleerd. Je kunt het downloaden van [hier](https://releases.groupdocs.com/annotation/net/).
+2. IDE (Integrated Development Environment): U hebt een IDE nodig die op uw systeem is geïnstalleerd, bijvoorbeeld Visual Studio, om de code te schrijven en uit te voeren.
 
 ## Naamruimten importeren
-Importeer eerst de benodigde naamruimten in uw project:
+Importeer eerst de benodigde naamruimten naar uw project:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Stap 1: Stel het uitvoerpad in
-Definieer het uitvoerpad waar het geannoteerde document zal worden opgeslagen:
+## Stap 1: Uitvoerpad instellen
+Definieer het uitvoerpad waar het geannoteerde document wordt opgeslagen:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Stap 2: Initialiseer Annotator
-Initialiseer de annotator door het invoerdocumentpad op te geven:
+## Stap 2: Annotator initialiseren
+Initialiseer de annotator door het pad naar het invoerdocument op te geven:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Stap 3: Maak een ellipsannotatie
- Maak een exemplaar van de`EllipseAnnotation` klasse en stel de eigenschappen in:
+## Stap 3: Ellips-annotatie maken
+Maak een exemplaar van de `EllipseAnnotation` klasse en stel de eigenschappen ervan in:
 ```csharp
 EllipseAnnotation ellipse = new EllipseAnnotation
 {
@@ -67,7 +67,7 @@ EllipseAnnotation ellipse = new EllipseAnnotation
 };
 ```
 ## Stap 4: Annotatie toevoegen
-Voeg de ellipsannotatie toe aan het document:
+Voeg de ellips-annotatie toe aan het document:
 ```csharp
 annotator.Add(ellipse);
 ```
@@ -78,15 +78,15 @@ annotator.Save(outputPath);
 ```
 
 ## Conclusie
-Gefeliciteerd! U hebt met succes een ellipsannotatie aan een document toegevoegd met GroupDocs.Annotation voor .NET. U kunt deze functionaliteit nu integreren in uw .NET-applicaties om de samenwerking en communicatie aan documenten te verbeteren.
+Gefeliciteerd! U hebt met succes een ellips-annotatie aan een document toegevoegd met GroupDocs.Annotation voor .NET. U kunt deze functionaliteit nu integreren in uw .NET-applicaties om de samenwerking en communicatie aan documenten te verbeteren.
 ## Veelgestelde vragen
-### Kan ik het uiterlijk van de ellipsannotatie aanpassen?
+### Kan ik het uiterlijk van de ellips-annotatie aanpassen?
 Ja, u kunt verschillende eigenschappen, zoals achtergrondkleur, randkleur, dekking, enz., aanpassen aan uw wensen.
 ### Is GroupDocs.Annotation voor .NET compatibel met alle documentformaten?
-GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentformaten, waaronder PDF, DOCX, PPTX, XLSX en meer.
-### Kan ik meerdere annotaties aan één document toevoegen?
-Ja, u kunt meerdere annotaties, waaronder ellipsen, rechthoeken, tekst, enz., aan één document toevoegen.
+GroupDocs.Annotation voor .NET ondersteunt een breed scala aan documentindelingen, waaronder PDF, DOCX, PPTX, XLSX en meer.
+### Kan ik meerdere aantekeningen aan één document toevoegen?
+Ja, u kunt meerdere aantekeningen, zoals ellipsen, rechthoeken, tekst, enz., aan één document toevoegen.
 ### Is er een proefversie beschikbaar voor testdoeleinden?
- Ja, u kunt een gratis proefversie downloaden van[hier](https://releases.groupdocs.com/) om de kenmerken ervan te evalueren.
+Ja, u kunt een gratis proefversie downloaden van [hier](https://releases.groupdocs.com/) om de kenmerken ervan te evalueren.
 ### Waar kan ik technische ondersteuning krijgen voor GroupDocs.Annotation voor .NET?
- U kunt technische ondersteuning krijgen van het GroupDocs.Annotation-communityforum[hier](https://forum.groupdocs.com/c/annotation/10).
+U kunt technische ondersteuning krijgen via het GroupDocs.Annotation communityforum [hier](https://forum.groupdocs.com/c/annotation/10).

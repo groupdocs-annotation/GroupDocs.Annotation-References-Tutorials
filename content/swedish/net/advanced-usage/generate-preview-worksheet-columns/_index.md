@@ -1,27 +1,27 @@
 ---
-title: Generera kolumner för förhandsgranskning av arbetsblad
-linktitle: Generera kolumner för förhandsgranskning av arbetsblad
-second_title: GroupDocs.Annotation .NET API
-description: Lär dig hur du kommenterar dokument med GroupDocs.Annotation för .NET. Steg-för-steg handledning för .NET-utvecklare. Förbättra dina applikationer.
-weight: 15
-url: /sv/net/advanced-usage/generate-preview-worksheet-columns/
+"description": "Lär dig hur du kommenterar dokument med GroupDocs.Annotation för .NET. Steg-för-steg-handledning för .NET-utvecklare. Förbättra dina applikationer."
+"linktitle": "Generera förhandsgranskningsarkets kolumner"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Generera förhandsgranskningsarkets kolumner"
+"url": "/sv/net/advanced-usage/generate-preview-worksheet-columns/"
+"weight": 15
 ---
 
-# Generera kolumner för förhandsgranskning av arbetsblad
+# Generera förhandsgranskningsarkets kolumner
 
 ## Introduktion
-Välkommen till vår omfattande handledning om att utnyttja funktionerna i GroupDocs.Annotation för .NET! I den här guiden går vi igenom processen med att använda detta kraftfulla verktyg för att effektivt kommentera dokument. Oavsett om du är en erfaren utvecklare eller en nykomling i .NET-utvecklingsvärlden, kommer denna handledning att utrusta dig med de kunskaper och färdigheter som krävs för att sömlöst integrera annoteringsfunktioner i dina applikationer.
-## Förutsättningar
-Innan du dyker in i handledningen, se till att du har följande förutsättningar på plats:
+Välkommen till vår omfattande handledning om hur du utnyttjar GroupDocs.Annotation för .NET! I den här guiden guidar vi dig genom processen att använda detta kraftfulla verktyg för att kommentera dokument effektivt. Oavsett om du är en erfaren utvecklare eller nybörjare i .NET-utvecklingens värld, kommer den här handledningen att utrusta dig med den kunskap och de färdigheter som krävs för att integrera annoteringsfunktioner sömlöst i dina applikationer.
+## Förkunskapskrav
+Innan du börjar med handledningen, se till att du har följande förutsättningar på plats:
 ### 1. Installation av .NET-utvecklingsmiljö
-Se till att du har en fungerande .NET-utvecklingsmiljö inställd på din dator. Du kan ladda ner den senaste versionen av .NET SDK från Microsofts webbplats.
-### 2. GroupDocs.Annotation för .NET Library
- Ladda ner och installera GroupDocs.Annotation for .NET-biblioteket från det medföljande[nedladdningslänk](https://releases.groupdocs.com/annotation/net/). Följ installationsinstruktionerna för att framgångsrikt integrera biblioteket i ditt projekt.
-### 3. Mata in dokument
-Förbered ett exempeldokument (t.ex. "input.xlsx") som du tänker kommentera med hjälp av GroupDocs.Annotation för .NET. Se till att dokumentet är tillgängligt från din projektkatalog.
+Se till att du har en fungerande .NET-utvecklingsmiljö konfigurerad på din dator. Du kan ladda ner den senaste versionen av .NET SDK från Microsofts webbplats.
+### 2. GroupDocs.Annotation för .NET-biblioteket
+Ladda ner och installera GroupDocs.Annotation för .NET-biblioteket från den medföljande filen [nedladdningslänk](https://releases.groupdocs.com/annotation/net/)Följ installationsanvisningarna för att integrera biblioteket i ditt projekt.
+### 3. Inmatningsdokument
+Förbered ett exempeldokument (t.ex. "input.xlsx") som du tänker annotera med GroupDocs.Annotation för .NET. Se till att dokumentet är tillgängligt från din projektkatalog.
 
-## Importera namnområden
-Börja med att importera de nödvändiga namnrymden till ditt projekt. Dessa namnutrymmen ger åtkomst till de klasser och metoder som krävs för att effektivt utföra dokumentkommentarer.
+## Importera namnrymder
+Börja med att importera de nödvändiga namnrymderna till ditt projekt. Dessa namnrymder ger åtkomst till de klasser och metoder som krävs för att effektivt utföra dokumentannoteringsuppgifter.
 
 ```csharp
 using GroupDocs.Annotation;
@@ -30,7 +30,7 @@ using System;
 using System.IO;
 ```
 
-Nu när vi har ställt in vår utvecklingsmiljö och importerat de nödvändiga namnområdena, låt oss dyka ner i att skapa kolumner för förhandsgranskning av kalkylblad för vårt dokument.
+Nu när vi har konfigurerat vår utvecklingsmiljö och importerat de namnrymder som krävs, låt oss börja generera förhandsgranskningskolumner för vårt dokument.
 ## Steg 1: Initiera förhandsgranskningsalternativ
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(
@@ -43,28 +43,28 @@ PreviewOptions previewOptions = new PreviewOptions(
 previewOptions.WorksheetColumns.Add(new WorksheetColumnsRange("Sheet1", 2, 3));
 previewOptions.WorksheetColumns.Add(new WorksheetColumnsRange("Sheet1", 1, 1));
 ```
-## Steg 3: Initiera Annotator med Input Document
+## Steg 3: Initiera annotatorn med inmatningsdokumentet
 ```csharp
 using (Annotator annotator = new Annotator("input.xlsx"))
 {
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-## Steg 4: Visa framgångsmeddelande
+## Steg 4: Visa meddelande om framgång
 ```csharp
 Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {"Your Document Directory"}.");
 ```
 
 ## Slutsats
-Grattis! Du har framgångsrikt lärt dig hur du skapar kolumner för förhandsgranskning av kalkylblad med GroupDocs.Annotation för .NET. Med denna kunskap kan du nu enkelt införliva avancerade anteckningsfunktioner i dina .NET-applikationer.
-## FAQ's
+Grattis! Du har nu lärt dig hur man genererar förhandsgranskningsbladskolumner med GroupDocs.Annotation för .NET. Med denna kunskap kan du nu enkelt integrera avancerade anteckningsfunktioner i dina .NET-applikationer.
+## Vanliga frågor
 ### Är GroupDocs.Annotation kompatibel med andra .NET-ramverk?
 Ja, GroupDocs.Annotation stöder olika .NET-ramverk, inklusive .NET Core och .NET Framework.
-### Kan jag anpassa utseendet på kommentarer skapade med GroupDocs.Annotation?
-Absolut! GroupDocs.Annotation ger omfattande anpassningsalternativ för anteckningsutseende, inklusive färg, opacitet och anteckningstyp.
+### Kan jag anpassa utseendet på anteckningar som skapats med GroupDocs.Annotation?
+Absolut! GroupDocs.Annotation erbjuder omfattande anpassningsalternativ för annoteringars utseende, inklusive färg, opacitet och annoteringstyp.
 ### Stöder GroupDocs.Annotation andra dokumentformat än Excel?
-Ja, GroupDocs.Annotation stöder ett brett utbud av dokumentformat, inklusive PDF, Word, PowerPoint och mer.
+Ja, GroupDocs.Annotation stöder en mängd olika dokumentformat, inklusive PDF, Word, PowerPoint med flera.
 ### Finns teknisk support tillgänglig för GroupDocs.Annotation-användare?
- Ja, du kan få tillgång till teknisk support och communityforum via det medföljande[supportlänk](https://forum.groupdocs.com/c/annotation/10).
+Ja, du kan få tillgång till teknisk support och communityforum via den medföljande [supportlänk](https://forum.groupdocs.com/c/annotation/10).
 ### Kan jag prova GroupDocs.Annotation innan jag köper en licens?
- Självklart! Du kan ladda ner en gratis testversion av GroupDocs.Annotation från[hemsida](https://releases.groupdocs.com/).
+Självklart! Du kan ladda ner en gratis testversion av GroupDocs.Annotation från [webbplats](https://releases.groupdocs.com/).

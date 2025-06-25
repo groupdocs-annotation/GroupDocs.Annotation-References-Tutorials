@@ -1,66 +1,66 @@
 ---
-title: Ek açıklamaları kimliğe göre kaldır
-linktitle: Ek açıklamaları kimliğe göre kaldır
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation for .NET'i kullanarak ek açıklamaları kimliğe göre nasıl kaldıracağınızı öğrenin. Belge iş akışınızı verimli bir şekilde kolaylaştırın.
-weight: 11
-url: /tr/net/removing-annotations/remove-annotations-by-id/
+"description": "GroupDocs.Annotation for .NET kullanarak kimliğe göre açıklamaları nasıl kaldıracağınızı öğrenin. Belge iş akışınızı verimli bir şekilde kolaylaştırın."
+"linktitle": "Kimliğe Göre Açıklamaları Kaldır"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Kimliğe Göre Açıklamaları Kaldır"
+"url": "/tr/net/removing-annotations/remove-annotations-by-id/"
+"weight": 11
 ---
 
-# Ek açıklamaları kimliğe göre kaldır
+# Kimliğe Göre Açıklamaları Kaldır
 
 ## giriiş
-Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak ek açıklamaları kimliklerine göre kaldırma sürecinde size yol göstereceğiz. Ek açıklamalar belgelerinizi karmaşıklaştırabilir ve bunları seçerek kaldırmak iş akışınızı kolaylaştırabilir. Her aşamayı net bir şekilde anlamanızı sağlayarak size adım adım rehberlik edeceğiz.
-## Önkoşullar
-Bu eğitime dalmadan önce aşağıdaki önkoşullara sahip olduğunuzdan emin olun:
-1.  .NET için GroupDocs.Annotation: .NET için GroupDocs.Annotation kitaplığını yüklediğinizden emin olun. Şuradan indirebilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/).
-2. Açıklamalı Belgeye Erişim: GroupDocs.Annotation ile açıklamalı bir belgeye sahip olun. Eğer elinizde yoksa, bir belgeye açıklama eklemek için önceki eğitimlerimizi takip edebilirsiniz.
-3. Temel C# Bilgisi: Kod örneklerini anlamak için C# programlama diline aşinalık gerekir.
+Bu eğitimde, .NET için GroupDocs.Annotation kullanarak kimliklerine göre açıklamaları kaldırma sürecinde size yol göstereceğiz. Açıklamalar belgelerinizi karmaşıklaştırabilir ve bunları seçici bir şekilde kaldırmak iş akışınızı kolaylaştırabilir. Her aşamayı net bir şekilde anlamanızı sağlayarak sizi adım adım yönlendireceğiz.
+## Ön koşullar
+Bu eğitime başlamadan önce aşağıdaki ön koşullara sahip olduğunuzdan emin olun:
+1. GroupDocs.Annotation for .NET: GroupDocs.Annotation kütüphanesini .NET için yüklediğinizden emin olun. Bunu şu adresten indirebilirsiniz: [Burada](https://releases.groupdocs.com/annotation/net/).
+2. Açıklamalı Belgeye Erişim: GroupDocs.Annotation ile açıklamalı bir belgeniz olsun. Eğer yoksa, bir belgeye açıklama eklemek için önceki eğitimlerimizi takip edebilirsiniz.
+3. Temel C# Bilgisi: Kod örneklerini anlayabilmek için C# programlama diline aşinalık gerekmektedir.
 
 ## Ad Alanlarını İçe Aktar
-Kodlamaya başlamadan önce gerekli ad alanlarını içe aktaralım:
+Kodlamaya başlamadan önce gerekli namespace'leri import edelim:
 ```csharp
 using System;
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 
-## Adım 1: Çıkış Yolunu Tanımlayın
+## Adım 1: Çıktı Yolunu Tanımlayın
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Ek açıklamaları kaldırılan belgenin kaydedileceği çıktı yolunu tanımlarız.
-## 2. Adım: Annotator'ı Başlatın
+Açıklamaları kaldırılmış belgenin kaydedileceği çıktı yolunu tanımlıyoruz.
+## Adım 2: Annotator'ı Başlatın
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 ```
- Burada başlatıyoruz`Annotator` Açıklamalı PDF belgesinin yolunu içeren nesne.
-## 3. Adım: Ek Açıklamaları Kaldır
+Burada, şunu başlatıyoruz: `Annotator` Açıklamalı PDF belgesine giden yolu içeren nesne.
+## Adım 3: Açıklamaları Kaldırın
 ```csharp
 annotator.Remove(0);
 ```
- Ek açıklamaları ID'lerini belirterek kaldırıyoruz. Bu örnekte, ID içeren ek açıklamayı kaldırıyoruz`0` . Değiştirebilirsin`0` kaldırmak istediğiniz ek açıklamanın kimliğiyle birlikte.
-## Adım 4: Belgeyi Kaydet
+Açıklamaları kimliklerini belirterek kaldırıyoruz. Bu örnekte, ID'li açıklamayı kaldırıyoruz `0`. Değiştirebilirsiniz `0` kaldırmak istediğiniz açıklamanın ID'si ile.
+## Adım 4: Belgeyi Kaydedin
 ```csharp
 annotator.Save(outputPath);
 ```
-Ek açıklamaları kaldırdıktan sonra değiştirilen belgeyi daha önce belirttiğimiz çıktı yoluna kaydediyoruz.
-## Adım 5: Başarı Mesajını Görüntüleyin
+Açıklamaları kaldırdıktan sonra, değiştirilen belgeyi daha önce belirtilen çıktı yoluna kaydediyoruz.
+## Adım 5: Başarı Mesajını Göster
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Son olarak, değiştirilen belgenin kaydedildiği yol ile birlikte bir başarı mesajı görüntülüyoruz.
+Son olarak, değiştirilen belgenin kaydedildiği yolu da içeren bir başarı mesajı gösteriyoruz.
 
 ## Çözüm
-Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak ek açıklamaları kimliklerine göre nasıl kaldıracağımızı öğrendik. Bu işlevsellik, ek açıklamaları seçerek kaldırarak açıklamalı belgelerin daha verimli yönetilmesine yardımcı olur.
-## SSS'ler
-### Birden fazla ek açıklamayı aynı anda kaldırabilir miyim?
- Evet, kimliklerini belirterek birden çok ek açıklamayı kaldırabilirsiniz.`Remove` yöntem.
+Bu eğitimde, GroupDocs.Annotation for .NET kullanarak açıklamaların kimliklerine göre nasıl kaldırılacağını öğrendik. Bu işlevsellik, açıklamaları seçici olarak kaldırarak açıklamalı belgeleri daha verimli bir şekilde yönetmeye yardımcı olur.
+## SSS
+### Birden fazla açıklamayı aynı anda kaldırabilir miyim?
+Evet, kimliklerini belirterek birden fazla açıklamayı kaldırabilirsiniz. `Remove` yöntem.
 ### Ek açıklamaların kaldırılmasını geri almanın bir yolu var mı?
-Hayır, ek açıklamalar kaldırıldıktan sonra geri alınamaz. Ek açıklamaları kaldırmadan önce belgenizi yedeklediğinizden emin olun.
-### PDF dışındaki belgelerdeki ek açıklamaları kaldırabilir miyim?
-Evet, GroupDocs.Annotation, DOCX, XLSX, PPTX ve daha fazlasını içeren çeşitli belge formatlarını destekler.
+Hayır, açıklamalar kaldırıldıktan sonra geri alınamazlar. Açıklamaları kaldırmadan önce belgenizi yedeklediğinizden emin olun.
+### PDF dışındaki belgelerden açıklamaları kaldırabilir miyim?
+Evet, GroupDocs.Annotation DOCX, XLSX, PPTX ve daha fazlası dahil olmak üzere çeşitli belge biçimlerini destekler.
 ### Kaldırılabilecek ek açıklamaların sayısında herhangi bir sınırlama var mı?
-Hayır, kimliklerini doğru şekilde belirttiğiniz sürece bir belgeden istediğiniz sayıda ek açıklamayı kaldırabilirsiniz.
-### Herhangi bir sorunla karşılaşırsam teknik destek sağlanacak mı?
- Evet, GroupDocs.Annotation forumundan teknik destek alabilirsiniz.[Burada](https://forum.groupdocs.com/c/annotation/10).
+Hayır, kimliklerini doğru bir şekilde belirttiğiniz sürece bir belgeden istediğiniz sayıda ek açıklamayı kaldırabilirsiniz.
+### Herhangi bir sorunla karşılaşırsam teknik destek alabileceğim bir yer var mı?
+Evet, GroupDocs.Annotation forumundan teknik destek alabilirsiniz. [Burada](https://forum.groupdocs.com/c/annotation/10).

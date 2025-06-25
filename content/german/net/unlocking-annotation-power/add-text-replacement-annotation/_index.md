@@ -1,27 +1,27 @@
 ---
-title: Fügen Sie dem Dokument eine Textersetzungsanmerkung hinzu
-linktitle: Fügen Sie dem Dokument eine Textersetzungsanmerkung hinzu
-second_title: GroupDocs.Annotation .NET-API
-description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos Textersetzungsanmerkungen zu Ihren .NET-Dokumenten hinzufügen. Erweitern Sie Ihre Fähigkeiten zur Dokumentenbearbeitung.
-weight: 24
-url: /de/net/unlocking-annotation-power/add-text-replacement-annotation/
+"description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos Textersetzungsanmerkungen zu Ihren .NET-Dokumenten hinzufügen. Erweitern Sie Ihre Möglichkeiten zur Dokumentbearbeitung."
+"linktitle": "Textersetzungsanmerkung zum Dokument hinzufügen"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Textersetzungsanmerkung zum Dokument hinzufügen"
+"url": "/de/net/unlocking-annotation-power/add-text-replacement-annotation/"
+"weight": 24
 ---
 
-# Fügen Sie dem Dokument eine Textersetzungsanmerkung hinzu
+# Textersetzungsanmerkung zum Dokument hinzufügen
 
 ## Einführung
-In diesem Tutorial führen wir Sie durch den Prozess des Hinzufügens einer Textersetzungsanmerkung zu Ihren Dokumenten mithilfe von GroupDocs.Annotation für .NET. Mit dieser leistungsstarken Bibliothek können Entwickler verschiedene Arten von Dokumenten programmgesteuert bearbeiten und mit Anmerkungen versehen. Am Ende dieses Tutorials verfügen Sie über das Wissen, Textersetzungsanmerkungen nahtlos in Ihre .NET-Anwendungen zu integrieren.
+In diesem Tutorial führen wir Sie durch das Hinzufügen einer Textersetzungsanmerkung zu Ihren Dokumenten mithilfe von GroupDocs.Annotation für .NET. Diese leistungsstarke Bibliothek ermöglicht Entwicklern die programmgesteuerte Bearbeitung und Kommentierung verschiedener Dokumenttypen. Am Ende dieses Tutorials verfügen Sie über das Wissen, Textersetzungsanmerkungen nahtlos in Ihre .NET-Anwendungen zu integrieren.
 ## Voraussetzungen
 Bevor wir beginnen, stellen Sie sicher, dass die folgenden Voraussetzungen installiert sind:
 ### 1. .NET Framework installiert
 Stellen Sie sicher, dass das .NET Framework auf Ihrem Entwicklungscomputer installiert ist. Sie können es von der Microsoft-Website herunterladen.
 ### 2. GroupDocs.Annotation für die .NET-Bibliothek
- Laden Sie die GroupDocs.Annotation für .NET-Bibliothek von herunter und installieren Sie sie[Webseite](https://releases.groupdocs.com/annotation/net/). Diese Bibliothek stellt die notwendigen Werkzeuge und Funktionen bereit, um mit Anmerkungen in verschiedenen Dokumentformaten zu arbeiten.
-### 3. Einrichtung der Entwicklungsumgebung
-Richten Sie Ihre bevorzugte Entwicklungsumgebung wie Visual Studio ein, um .NET-Anwendungen zu erstellen und auszuführen.
+Laden Sie die Bibliothek GroupDocs.Annotation für .NET herunter und installieren Sie sie von der [Webseite](https://releases.groupdocs.com/annotation/net/). Diese Bibliothek bietet die notwendigen Tools und Funktionen zum Arbeiten mit Anmerkungen in verschiedenen Dokumentformaten.
+### 3. Einrichten der Entwicklungsumgebung
+Richten Sie Ihre bevorzugte Entwicklungsumgebung, beispielsweise Visual Studio, ein, um .NET-Anwendungen zu erstellen und auszuführen.
 
 ## Namespaces importieren
-Bevor wir in den Codierungsteil eintauchen, importieren wir die notwendigen Namespaces, die für die Arbeit mit GroupDocs.Annotation für .NET erforderlich sind:
+Bevor wir uns in den Codierungsteil stürzen, importieren wir die erforderlichen Namespaces, die für die Arbeit mit GroupDocs.Annotation für .NET erforderlich sind:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -44,7 +44,7 @@ using (Annotator annotator = new Annotator("input.pdf"))
     // Der Anmerkungscode wird hier platziert
 }
 ```
-Wir initialisieren das Annotator-Objekt, indem wir das Eingabedokument („input.pdf“) innerhalb eines using-Blocks angeben, um eine ordnungsgemäße Entsorgung der Ressourcen sicherzustellen.
+Wir initialisieren das Annotator-Objekt, indem wir das Eingabedokument („input.pdf“) innerhalb eines Using-Blocks angeben, um die ordnungsgemäße Bereitstellung der Ressourcen sicherzustellen.
 ## Schritt 3: Ersatzanmerkung erstellen
 ```csharp
 ReplacementAnnotation replacement = new ReplacementAnnotation
@@ -75,17 +75,17 @@ ReplacementAnnotation replacement = new ReplacementAnnotation
     TextToReplace = "replaced text"
 };
 ```
-Hier erstellen wir ein ReplacementAnnotation-Objekt mit verschiedenen Eigenschaften wie Erstellungsdatum, Schriftfarbe, Nachricht, Deckkraft, Seitenzahl, Hintergrundfarbe, Punkten (Koordinaten), Antworten (Kommentaren) und dem zu ersetzenden Text.
+Hier erstellen wir ein ReplacementAnnotation-Objekt mit verschiedenen Eigenschaften wie Erstellungsdatum, Schriftfarbe, Nachricht, Deckkraft, Seitenzahl, Hintergrundfarbe, Punkte (Koordinaten), Antworten (Kommentare) und dem zu ersetzenden Text.
 ## Schritt 4: Anmerkung hinzufügen
 ```csharp
 annotator.Add(replacement);
 ```
-Wir fügen die erstellte Ersatzannotation zum Annotator hinzu.
+Wir fügen die erstellte Ersatzannotation dem Annotator hinzu.
 ## Schritt 5: Dokument speichern
 ```csharp
 annotator.Save(outputPath);
 ```
-Abschließend speichern wir das mit Anmerkungen versehene Dokument im angegebenen Ausgabepfad.
+Abschließend speichern wir das kommentierte Dokument im angegebenen Ausgabepfad.
 ## Schritt 6: Erfolgsmeldung anzeigen
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -93,15 +93,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 Es wird eine Erfolgsmeldung angezeigt, die angibt, dass das Dokument erfolgreich gespeichert wurde.
 
 ## Abschluss
-In diesem Tutorial haben wir den Prozess des Hinzufügens von Textersetzungsanmerkungen zu Dokumenten mithilfe von GroupDocs.Annotation für .NET behandelt. Wenn Sie der Schritt-für-Schritt-Anleitung folgen und die Voraussetzungen verstehen, können Sie diese Funktionalität problemlos in Ihre .NET-Anwendungen integrieren.
-## FAQs
-### Kann ich Dokumente unterschiedlicher Formate mit GroupDocs.Annotation für .NET mit Anmerkungen versehen?
+In diesem Tutorial haben wir das Hinzufügen von Textersetzungsanmerkungen zu Dokumenten mit GroupDocs.Annotation für .NET erläutert. Wenn Sie der Schritt-für-Schritt-Anleitung folgen und die Voraussetzungen verstehen, können Sie diese Funktionalität problemlos in Ihre .NET-Anwendungen integrieren.
+## Häufig gestellte Fragen
+### Kann ich mit GroupDocs.Annotation für .NET Dokumente unterschiedlicher Formate mit Anmerkungen versehen?
 Ja, GroupDocs.Annotation für .NET unterstützt das Kommentieren verschiedener Dokumentformate wie PDF, DOCX, PPTX, XLSX und mehr.
 ### Ist GroupDocs.Annotation für .NET sowohl für Desktop- als auch für Webanwendungen geeignet?
 Ja, GroupDocs.Annotation für .NET kann sowohl in Desktop- als auch in Webanwendungen verwendet werden und bietet Entwicklern Flexibilität.
 ### Kann ich das Erscheinungsbild von Anmerkungen anpassen, die mit GroupDocs.Annotation für .NET hinzugefügt wurden?
-Sie können das Erscheinungsbild von Anmerkungen auf jeden Fall anpassen, indem Sie Eigenschaften wie Farbe, Deckkraft, Schriftart usw. ändern.
+Natürlich können Sie das Erscheinungsbild von Anmerkungen anpassen, indem Sie Eigenschaften wie Farbe, Deckkraft, Schriftart usw. ändern.
 ### Bietet GroupDocs.Annotation für .NET Unterstützung für kollaborative Anmerkungsfunktionen?
-Ja, GroupDocs.Annotation für .NET bietet Funktionen für kollaboratives Annotieren, sodass mehrere Benutzer gleichzeitig Dokumente mit Anmerkungen versehen können.
+Ja, GroupDocs.Annotation für .NET bietet Funktionen für die gemeinsame Kommentierung, sodass mehrere Benutzer Dokumente gleichzeitig kommentieren können.
 ### Gibt es eine kostenlose Testversion für GroupDocs.Annotation für .NET?
-Ja, Sie können eine kostenlose Testversion von GroupDocs.Annotation für .NET unter erhalten[Webseite](https://releases.groupdocs.com/).
+Ja, Sie können eine kostenlose Testversion von GroupDocs.Annotation für .NET nutzen von der [Webseite](https://releases.groupdocs.com/).

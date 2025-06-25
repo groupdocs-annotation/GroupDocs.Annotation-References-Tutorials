@@ -1,21 +1,21 @@
 ---
-title: Belgeye Çoklu Çizgi Açıklaması Ekleme
-linktitle: Belgeye Çoklu Çizgi Açıklaması Ekleme
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation for .NET'i kullanarak belgelere sürekli çizgi açıklamalarını nasıl ekleyeceğinizi öğrenin. İşbirliğini ve belge inceleme süreçlerini zahmetsizce geliştirin.
-weight: 18
-url: /tr/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "GroupDocs.Annotation for .NET kullanarak belgelere polyline ek açıklamalarının nasıl ekleneceğini öğrenin. İş birliğini ve belge inceleme süreçlerini zahmetsizce geliştirin."
+"linktitle": "Belgeye Çoklu Çizgi Açıklaması Ekle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeye Çoklu Çizgi Açıklaması Ekle"
+"url": "/tr/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
-# Belgeye Çoklu Çizgi Açıklaması Ekleme
+# Belgeye Çoklu Çizgi Açıklaması Ekle
 
 ## giriiş
-GroupDocs.Annotation for .NET, geliştiricilerin PDF ve Microsoft Office belgelerine program aracılığıyla açıklama eklemesine olanak tanıyan güçlü bir araçtır. Özellikleri arasında, belgelere çoklu çizgi açıklamaları ekleme, işbirliğini ve belge inceleme süreçlerini geliştirme yeteneği yer almaktadır.
-## Önkoşullar
-Bu eğitime devam etmeden önce aşağıdakilere sahip olduğunuzdan emin olun:
+GroupDocs.Annotation for .NET, geliştiricilerin PDF ve Microsoft Office belgelerini programatik olarak açıklamalarına olanak tanıyan güçlü bir araçtır. Özellikleri arasında belgelere çoklu çizgi açıklamaları ekleme, iş birliğini ve belge inceleme süreçlerini geliştirme yeteneği yer alır.
+## Ön koşullar
+Bu eğitime başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
 - Sisteminizde Visual Studio yüklü.
-- Temel C# programlama dili bilgisi.
--  GroupDocs.Annotation for .NET kitaplığı yüklendi. Şuradan indirebilirsiniz[Burada](https://releases.groupdocs.com/annotation/net/).
+- C# programlama dilinin temel bilgisi.
+- GroupDocs.Annotation for .NET kütüphanesi yüklendi. Buradan indirebilirsiniz [Burada](https://releases.groupdocs.com/annotation/net/).
 
 ## Ad Alanlarını İçe Aktar
 ```csharp
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Adım 1: Çıkış Yolunu Tanımlayın
+## Adım 1: Çıktı Yolunu Tanımlayın
 Öncelikle açıklamalı belgenin kaydedileceği çıktı yolunu tanımlayın.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. Adım: Annotator'ı Başlatın
+## Adım 2: Annotator'ı Başlatın
 Giriş belgesi adını sağlayarak açıklayıcıyı başlatın.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
 ## Adım 3: Çoklu Çizgi Açıklama Nesnesi Oluşturun
-Bir çoklu çizgi açıklama nesnesi oluşturun ve konum, mesaj, opaklık, kalem rengi, kalem stili ve kalem genişliği gibi özelliklerini ayarlayın.
+Bir polyline açıklama nesnesi oluşturun ve konum, mesaj, opaklık, kalem rengi, kalem stili ve kalem genişliği gibi özelliklerini ayarlayın.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -67,32 +67,32 @@ PolylineAnnotation polyline = new PolylineAnnotation
 4460093896,0l0.6986854460093896,0l0.6986854460093896,-0.6986854460093896l0.6986854460093896,0"
 };
 ```
-## Adım 4: Çoklu Çizgi Açıklaması Ekleme
-Ek açıklama nesnesini kullanarak sürekli çizgi açıklamasını belgeye ekleyin.
+## Adım 4: Çoklu Çizgi Açıklaması Ekle
+Annotator nesnesini kullanarak belgeye polyline açıklamasını ekleyin.
 ```csharp
 annotator.Add(polyline);
 ```
-## Adım 5: Belgeyi Kaydet
+## Adım 5: Belgeyi Kaydedin
 Açıklamalı belgeyi belirtilen çıktı yoluna kaydedin.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Adım 6: Başarı Mesajını Görüntüleyin
-Belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntüleyin.
+## Adım 6: Başarı Mesajını Göster
+Belgenin başarıyla kaydedildiğini onaylayan bir mesaj görüntüler.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Çözüm
-Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak bir belgeye sürekli çizgi ek açıklamasının nasıl ekleneceğini öğrendik. Bu özellik, işbirliği ve belge inceleme süreçlerini geliştirerek kullanıcıların geri bildirimlerini ve önerilerini etkili bir şekilde iletmesini kolaylaştırır.
-## SSS'ler
-### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mu?
-GroupDocs.Annotation for .NET, PDF gibi popüler belge formatlarını ve Word, Excel ve PowerPoint dahil Microsoft Office formatlarını destekler.
-### Ek açıklamaların görünümünü özelleştirebilir miyim?
-Evet, ek açıklamaların renk, opaklık, stil ve genişlik gibi çeşitli özelliklerini gereksinimlerinize uyacak şekilde özelleştirebilirsiniz.
-### GroupDocs.Annotation for .NET ücretsiz deneme olanağı sunuyor mu?
- Evet, GroupDocs.Annotation for .NET'in ücretsiz deneme sürümünden şu adresi ziyaret ederek yararlanabilirsiniz:[bu bağlantı](https://releases.groupdocs.com/).
-### GroupDocs.Annotation for .NET belgelerini nerede bulabilirim?
- GroupDocs.Annotation for .NET belgelerini bulabilirsiniz.[Burada](https://tutorials.groupdocs.com/annotation/net/).
+Bu eğitimde, .NET için GroupDocs.Annotation kullanarak bir belgeye polyline ek açıklamasının nasıl ekleneceğini öğrendik. Bu özellik, iş birliğini ve belge inceleme süreçlerini geliştirerek kullanıcıların geri bildirim ve önerileri etkili bir şekilde iletmesini kolaylaştırır.
+## SSS
+### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mudur?
+GroupDocs.Annotation for .NET, Word, Excel ve PowerPoint gibi Microsoft Office formatlarının yanı sıra PDF gibi popüler belge formatlarını da destekler.
+### Açıklamaların görünümünü özelleştirebilir miyim?
+Evet, renk, opaklık, stil ve genişlik gibi açıklamaların çeşitli özelliklerini ihtiyaçlarınıza uyacak şekilde özelleştirebilirsiniz.
+### GroupDocs.Annotation for .NET ücretsiz deneme sunuyor mu?
+Evet, GroupDocs.Annotation for .NET'in ücretsiz deneme sürümünden yararlanmak için şu adresi ziyaret edin: [bu bağlantı](https://releases.groupdocs.com/).
+### GroupDocs.Annotation for .NET dokümanlarını nerede bulabilirim?
+GroupDocs.Annotation for .NET belgelerini bulabilirsiniz [Burada](https://tutorials.groupdocs.com/annotation/net/).
 ### GroupDocs.Annotation for .NET ile ilgili herhangi bir sorun veya sorgu için nasıl destek alabilirim?
- GroupDocs.Annotation forumunu ziyaret ederek destek alabilirsiniz.[Burada](https://forum.groupdocs.com/c/annotation/10).
+GroupDocs.Annotation forumunu ziyaret ederek destek alabilirsiniz [Burada](https://forum.groupdocs.com/c/annotation/10).

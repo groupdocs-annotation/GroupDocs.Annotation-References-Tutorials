@@ -1,23 +1,23 @@
 ---
-title: إضافة مكون الزر إلى وثيقة PDF
-linktitle: إضافة مكون الزر إلى وثيقة PDF
-second_title: GroupDocs.Annotation .NET API
-description: قم بتحسين مستندات PDF الخاصة بك باستخدام مكونات الأزرار التفاعلية باستخدام Groupdocs.Annotation for .NET. اتبع البرنامج التعليمي خطوة بخطوة لتحقيق التكامل السلس.
-weight: 10
-url: /ar/net/document-components/add-button-component-to-pdf/
+"description": "حسّن مستندات PDF لديك باستخدام أزرار تفاعلية باستخدام Groupdocs.Annotation لـ .NET. اتبع دليلنا خطوة بخطوة لدمج سلس."
+"linktitle": "إضافة مكون الزر إلى مستند PDF"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "إضافة مكون الزر إلى مستند PDF"
+"url": "/ar/net/document-components/add-button-component-to-pdf/"
+"weight": 10
 ---
 
-# إضافة مكون الزر إلى وثيقة PDF
+# إضافة مكون الزر إلى مستند PDF
 
 ## مقدمة
-في هذا البرنامج التعليمي، سنرشدك خلال عملية إضافة مكون الزر إلى مستند PDF باستخدام Groupdocs.Annotation for .NET. سيضمن هذا الدليل التفصيلي أنه يمكنك بسهولة دمج هذه الميزة في مشروعك.
+في هذا البرنامج التعليمي، سنرشدك خلال عملية إضافة مكون زر إلى مستند PDF باستخدام Groupdocs.Annotation لـ .NET. سيضمن لك هذا الدليل التفصيلي سهولة دمج هذه الميزة في مشروعك.
 ## المتطلبات الأساسية
-قبل البدء، تأكد من توفر المتطلبات الأساسية التالية:
-1.  Groupdocs.Annotation لـ .NET: تأكد من تثبيت Groupdocs.Annotation لمكتبة .NET. يمكنك تنزيله من[هنا](https://releases.groupdocs.com/annotation/net/).
-2. بيئة التطوير: تمتع ببيئة تطوير مناسبة تم إعدادها مع تثبيت .NET Framework.
+قبل أن تبدأ، تأكد من توفر المتطلبات الأساسية التالية:
+1. Groupdocs.Annotation لـ .NET: تأكد من تثبيت مكتبة Groupdocs.Annotation لـ .NET. يمكنك تنزيلها من [هنا](https://releases.groupdocs.com/annotation/net/).
+2. بيئة التطوير: قم بإعداد بيئة تطوير مناسبة مع تثبيت إطار عمل .NET.
 
 ## استيراد مساحات الأسماء
-قبل المتابعة، قم باستيراد مساحات الأسماء الضرورية إلى مشروعك:
+قبل المتابعة، قم باستيراد المساحات الأساسية اللازمة إلى مشروعك:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -68,18 +68,18 @@ using (Annotator annotator = new Annotator("input.pdf"))
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-تهانينا! لقد نجحت في إضافة مكون الزر إلى مستند PDF باستخدام Groupdocs.Annotation لـ .NET.
+تهانينا! لقد نجحت في إضافة مكون زر إلى مستند PDF باستخدام Groupdocs.Annotation لـ .NET.
 
 ## خاتمة
-في هذا البرنامج التعليمي، أوضحنا كيفية دمج Button Components في مستندات PDF باستخدام Groupdocs.Annotation for .NET. باتباع هذه الخطوات، يمكنك تحسين مستندات PDF الخاصة بك بميزات تفاعلية.
+في هذا البرنامج التعليمي، شرحنا كيفية دمج مكونات الأزرار في مستندات PDF باستخدام Groupdocs.Annotation لـ .NET. باتباع هذه الخطوات، يمكنك تحسين مستندات PDF الخاصة بك بميزات تفاعلية.
 ## الأسئلة الشائعة
 ### هل يمكنني تخصيص مظهر الزر؟
 نعم، يمكنك تخصيص خصائص مختلفة مثل الحجم واللون ونمط مكون الزر وفقًا لمتطلباتك.
-### هل Groupdocs.Annotation for .NET متوافق مع كافة إصدارات PDF؟
-يدعم Groupdocs.Annotation for .NET نطاقًا واسعًا من إصدارات PDF، مما يضمن التوافق مع معظم المستندات.
+### هل Groupdocs.Annotation لـ .NET متوافق مع كافة إصدارات PDF؟
+يدعم Groupdocs.Annotation لـ .NET مجموعة واسعة من إصدارات PDF، مما يضمن التوافق مع معظم المستندات.
 ### هل يمكنني إضافة مكونات أزرار متعددة إلى مستند PDF واحد؟
-بالتأكيد، يمكنك إضافة أي عدد تريده من مكونات الأزرار إلى مستند PDF باستخدام Groupdocs.Annotation for .NET.
-### هل يقدم Groupdocs.Annotation for .NET الدعم لتنسيقات الملفات الأخرى؟
-نعم، بالإضافة إلى PDF، يدعم Groupdocs.Annotation for .NET العديد من تنسيقات المستندات الأخرى بما في ذلك DOCX وPPTX وXLSX.
+بالتأكيد، يمكنك إضافة عدد غير محدود من مكونات الأزرار إلى مستند PDF باستخدام Groupdocs.Annotation لـ .NET.
+### هل يوفر Groupdocs.Annotation لـ .NET الدعم لتنسيقات الملفات الأخرى؟
+نعم، بالإضافة إلى PDF، يدعم Groupdocs.Annotation for .NET تنسيقات المستندات الأخرى المتنوعة بما في ذلك DOCX وPPTX وXLSX.
 ### هل هناك نسخة تجريبية متاحة لأغراض الاختبار؟
- نعم، يمكنك الوصول إلى النسخة التجريبية المجانية من Groupdocs.Annotation لـ .NET من[هنا](https://releases.groupdocs.com/).
+نعم، يمكنك الوصول إلى نسخة تجريبية مجانية من Groupdocs.Annotation لـ .NET من [هنا](https://releases.groupdocs.com/).

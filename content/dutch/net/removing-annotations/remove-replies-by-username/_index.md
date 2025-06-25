@@ -1,22 +1,22 @@
 ---
-title: Verwijder antwoorden op gebruikersnaam in .NET
-linktitle: Verwijder antwoorden op gebruikersnaam in .NET
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u naadloos documenten kunt annoteren met Groupdocs.Annotation voor .NET. Verbeter de samenwerking en het documentbeheer met deze krachtige tool.
-weight: 17
-url: /nl/net/removing-annotations/remove-replies-by-username/
+"description": "Leer hoe u documenten naadloos kunt annoteren met Groupdocs.Annotation voor .NET. Verbeter samenwerking en documentbeheer met deze krachtige tool."
+"linktitle": "Antwoorden verwijderen op gebruikersnaam in .NET"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Antwoorden verwijderen op gebruikersnaam in .NET"
+"url": "/nl/net/removing-annotations/remove-replies-by-username/"
+"weight": 17
 ---
 
-# Verwijder antwoorden op gebruikersnaam in .NET
+# Antwoorden verwijderen op gebruikersnaam in .NET
 
 ## Invoering
-Groupdocs.Annotation voor .NET is een krachtig hulpmiddel voor het naadloos annoteren van documenten binnen uw .NET-applicaties. Of u nu werkt met PDF's, Word-documenten of een ander ondersteund bestandsformaat, deze bibliotheek vereenvoudigt het proces van het toevoegen van annotaties, markeringen en opmerkingen, waardoor de mogelijkheden voor samenwerking en documentbeheer worden verbeterd.
+Groupdocs.Annotation voor .NET is een krachtige tool waarmee u documenten naadloos kunt annoteren in uw .NET-applicaties. Of u nu werkt met PDF's, Word-documenten of een ander ondersteund bestandsformaat, deze bibliotheek vereenvoudigt het toevoegen van annotaties, markeringen en opmerkingen, wat de samenwerking en mogelijkheden voor documentbeheer verbetert.
 ## Vereisten
-Voordat u in de wereld van documentannotatie duikt met Groupdocs.Annotation voor .NET, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
-1.  Installatie van Groupdocs.Annotation voor .NET: Begin met het downloaden en installeren van de Groupdocs.Annotation-bibliotheek voor .NET. U kunt de bibliotheek verkrijgen bij de[download link](https://releases.groupdocs.com/annotation/net/).
-2. Inzicht in .NET Framework: Vaardigheid in .NET-programmering is essentieel om de mogelijkheden van Groupdocs.Annotation effectief te kunnen benutten.
-3. Document om aantekeningen te maken: bereid het document voor dat u wilt annoteren. Dit kan een PDF-, Word-document of een ander ondersteund bestandsformaat zijn.
-4. Basiskennis van C#: Maak uzelf vertrouwd met de programmeertaal C#, aangezien Groupdocs.Annotation voor .NET voornamelijk wordt gebruikt binnen C#-applicaties.
+Voordat u aan de slag gaat met documentannotatie met Groupdocs.Annotation voor .NET, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+1. Installatie van Groupdocs.Annotation voor .NET: Begin met het downloaden en installeren van de Groupdocs.Annotation-bibliotheek voor .NET. U kunt de bibliotheek verkrijgen via de [downloadlink](https://releases.groupdocs.com/annotation/net/).
+2. Kennis van .NET Framework: Kennis van .NET-programmering is essentieel om de mogelijkheden van Groupdocs.Annotation effectief te kunnen benutten.
+3. Te annoteren document: Bereid het document voor dat u wilt annoteren. Dit kan een PDF, Word-document of een ander ondersteund bestandsformaat zijn.
+4. Basiskennis van C#: Maak uzelf vertrouwd met de programmeertaal C#, aangezien Groupdocs.Annotation voor .NET voornamelijk wordt gebruikt in C#-toepassingen.
 
 ## Naamruimten importeren
 Om aan de slag te gaan met het annoteren van documenten met Groupdocs.Annotation voor .NET, importeert u de benodigde naamruimten in uw C#-project:
@@ -28,13 +28,13 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 ```
-## Stap 1: Definieer het uitvoerpad
- Begin met het opgeven van het uitvoerpad waar het geannoteerde document zal worden opgeslagen. U kunt gebruik maken van de`Path.Combine` methode om mappaden te combineren:
+## Stap 1: Uitvoerpad definiëren
+Begin met het specificeren van het uitvoerpad waar het geannoteerde document wordt opgeslagen. U kunt de `Path.Combine` methode om directorypaden te combineren:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Stap 2: Geannoteerd document laden
- Laad het document dat annotaties met antwoorden bevat met behulp van de`Annotator` klas:
+Laad het document dat annotaties met antwoorden bevat met behulp van de `Annotator` klas:
 ```csharp
 using (Annotator annotator = new Annotator("annotated_with_replies.pdf"))
 ```
@@ -43,13 +43,13 @@ Haal de annotatieverzameling op uit het geladen document:
 ```csharp
 List<AnnotationBase> annotations = annotator.Get();
 ```
-## Stap 4: Antwoorden verwijderen
-Verwijder alle antwoorden waarbij de naam van de auteur overeenkomt met de opgegeven gebruikersnaam. In dit voorbeeld worden antwoorden geschreven door "Tom" verwijderd:
+## Stap 4: Reacties verwijderen
+Verwijder alle reacties waarbij de naam van de auteur overeenkomt met de opgegeven gebruikersnaam. In dit voorbeeld worden reacties van "Tom" verwijderd:
 ```csharp
 annotations[0].Replies.RemoveAll(x => x.User.Name == "Tom");
 ```
 ## Stap 5: Wijzigingen opslaan
-Sla de bijgewerkte annotaties weer op in het document en specificeer het uitvoerpad:
+Sla de bijgewerkte annotaties weer op in het document en geef het uitvoerpad op:
 ```csharp
 annotator.Update(annotations);
 annotator.Save(outputPath);
@@ -60,15 +60,15 @@ Informeer de gebruiker ten slotte dat het document succesvol is opgeslagen en ge
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 ## Conclusie
-Groupdocs.Annotation voor .NET biedt een eenvoudige en efficiënte oplossing voor het annoteren van documenten binnen uw .NET-applicaties. Door de stappen in deze zelfstudie te volgen, kunt u de mogelijkheden voor documentannotatie naadloos in uw projecten integreren, waardoor de samenwerking en het documentbeheer worden verbeterd.
+Groupdocs.Annotation voor .NET biedt een eenvoudige en efficiënte oplossing voor het annoteren van documenten in uw .NET-applicaties. Door de stappen in deze tutorial te volgen, kunt u documentannotatiemogelijkheden naadloos integreren in uw projecten, wat de samenwerking en het documentbeheer verbetert.
 ## Veelgestelde vragen
 ### Is Groupdocs.Annotation compatibel met alle documentformaten?
 Groupdocs.Annotation ondersteunt een breed scala aan documentformaten, waaronder PDF, Word, Excel, PowerPoint en meer. Raadpleeg de documentatie voor een volledige lijst met ondersteunde formaten.
 ### Kan ik het uiterlijk van annotaties aanpassen?
-Ja, Groupdocs.Annotation biedt uitgebreide opties voor het aanpassen van het uiterlijk van annotaties, inclusief kleur, grootte, lettertype en stijl.
+Ja, Groupdocs.Annotation biedt uitgebreide opties voor het aanpassen van het uiterlijk van annotaties, waaronder kleur, grootte, lettertype en stijl.
 ### Is Groupdocs.Annotation geschikt voor webapplicaties?
-Absoluut! Groupdocs.Annotation kan naadloos worden geïntegreerd in webapplicaties die zijn ontwikkeld met behulp van ASP.NET of ASP.NET Core.
-### Ondersteunt Groupdocs.Annotation gezamenlijke annotatie?
-Ja, Groupdocs.Annotation maakt gezamenlijke annotatie mogelijk, waardoor meerdere gebruikers tegelijkertijd opmerkingen, markeringen en annotaties aan hetzelfde document kunnen toevoegen.
+Absoluut! Groupdocs.Annotation kan naadloos worden geïntegreerd in webapplicaties die zijn ontwikkeld met ASP.NET of ASP.NET Core.
+### Ondersteunt Groupdocs.Annotation samenwerkende annotatie?
+Ja, met Groupdocs.Annotation kunt u samenwerken aan aantekeningen, waardoor meerdere gebruikers tegelijkertijd opmerkingen, markeringen en annotaties aan hetzelfde document kunnen toevoegen.
 ### Is er een proefversie beschikbaar om te testen?
 Ja, u kunt een gratis proefversie van Groupdocs.Annotation downloaden van de website om de functies en mogelijkheden ervan te verkennen.

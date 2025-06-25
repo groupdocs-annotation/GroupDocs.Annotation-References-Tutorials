@@ -1,37 +1,37 @@
 ---
-title: Imposta la licenza dallo streaming
-linktitle: Imposta la licenza dallo streaming
-second_title: API GroupDocs.Annotation .NET
-description: Sfrutta tutto il potenziale dell'annotazione dei documenti in .NET con GroupDocs.Annotation. Segui la nostra guida passo passo per un'integrazione perfetta.
-weight: 11
-url: /it/net/applying-licenses/set-license-from-stream/
+"description": "Sfrutta appieno il potenziale dell'annotazione dei documenti in .NET con GroupDocs.Annotation. Segui la nostra guida passo passo per un'integrazione perfetta."
+"linktitle": "Imposta licenza da Stream"
+"second_title": "API .NET di GroupDocs.Annotation"
+"title": "Imposta licenza da Stream"
+"url": "/it/net/applying-licenses/set-license-from-stream/"
+"weight": 11
 ---
 
-# Imposta la licenza dallo streaming
+# Imposta licenza da Stream
 
-## introduzione
-Benvenuti nella guida completa sull'utilizzo di GroupDocs.Annotation per .NET per migliorare le funzionalità di annotazione dei documenti. Che tu sia uno sviluppatore esperto o che tu abbia appena iniziato, questo tutorial ti guiderà attraverso ogni passaggio, assicurandoti di sfruttare tutto il potenziale di questo potente strumento.
+## Introduzione
+Benvenuti alla guida completa all'utilizzo di GroupDocs.Annotation per .NET per migliorare le funzionalità di annotazione dei vostri documenti. Che siate sviluppatori esperti o alle prime armi, questo tutorial vi guiderà passo dopo passo, assicurandovi di sfruttare appieno il potenziale di questo potente strumento.
 ## Prerequisiti
-Prima di immergerti nel tutorial, assicurati di disporre dei seguenti prerequisiti:
-1.  GroupDocs.Annotation per .NET: assicurati di aver scaricato e installato GroupDocs.Annotation per .NET dal[Link per scaricare](https://releases.groupdocs.com/annotation/net/).
-2.  Licenza: ottenere una licenza valida per GroupDocs.Annotation. Puoi acquistarne uno da[Qui](https://purchase.groupdocs.com/buy) o richiedere una licenza temporanea[Qui](https://purchase.groupdocs.com/temporary-license/).
-3.  Documentazione: familiarizza con il file[documentazione](https://tutorials.groupdocs.com/annotation/net/) per GroupDocs.Annotation. Fornisce approfondimenti dettagliati sulle funzionalità API.
+Prima di immergerti nel tutorial, assicurati di avere i seguenti prerequisiti:
+1. GroupDocs.Annotation per .NET: assicurati di aver scaricato e installato GroupDocs.Annotation per .NET da [collegamento per il download](https://releases.groupdocs.com/annotation/net/).
+2. Licenza: Ottieni una licenza valida per GroupDocs.Annotation. Puoi acquistarne una da [Qui](https://purchase.groupdocs.com/buy) o richiedere una licenza temporanea [Qui](https://purchase.groupdocs.com/temporary-license/).
+3. Documentazione: Familiarizza con la [documentazione](https://tutorials.groupdocs.com/annotation/net/) per GroupDocs.Annotation. Fornisce informazioni dettagliate sulle funzionalità dell'API.
 
 ## Importa spazi dei nomi
-Innanzitutto, importiamo gli spazi dei nomi necessari per iniziare a utilizzare GroupDocs.Annotation nel tuo progetto .NET:
+Per prima cosa, importiamo gli spazi dei nomi necessari per iniziare a utilizzare GroupDocs.Annotation nel tuo progetto .NET:
 ```csharp
 using System;
 using System.IO;
 ```
 
-## Passaggio 1: controlla il percorso della licenza
+## Passaggio 1: verificare il percorso della licenza
 Assicurati che il percorso del file di licenza sia impostato correttamente nel tuo progetto. Dovrebbe puntare alla posizione in cui è archiviato il file di licenza.
 ## Passaggio 2: imposta la licenza
 ```csharp
 if (File.Exists(Constants.LicensePath))
 {
 ```
-In questo passaggio, il codice controlla se il file di licenza esiste nel percorso specificato.
+In questo passaggio, il codice verifica se il file di licenza esiste nel percorso specificato.
 ```csharp
     using (FileStream stream = File.OpenRead(Constants.LicensePath))
     {
@@ -39,32 +39,32 @@ In questo passaggio, il codice controlla se il file di licenza esiste nel percor
         license.SetLicense(stream);
     }
 ```
- Se il file di licenza esiste, legge il flusso di file e imposta la licenza utilizzando il file`SetLicense` metodo.
+Se il file di licenza esiste, legge il flusso di file e imposta la licenza utilizzando `SetLicense` metodo.
 ```csharp
     Console.WriteLine("License set successfully.");
 }
 else
 {
 ```
-Se il file di licenza non esiste, viene richiesto all'utente di ottenere una licenza dal sito GroupDocs.
+Se il file di licenza non esiste, all'utente verrà chiesto di procurarsene una dal sito GroupDocs.
 ```csharp
     Console.WriteLine("\nWe do not ship any license with this example. " +
                       "\nVisit the GroupDocs site to obtain either a temporary or permanent license. " +
-                      "\nLearn more about licensing at https://Purchase.groupdocs.com/faqs/licensing. " +
-                      "\nLear how to request temporary license at https://Purchase.groupdocs.com/temporary-license.");
+                      "\nLearn more about licensing at https://purchase.groupdocs.com/faqs/licensing." +
+                      "\nLear how to request temporary license at https://purchase.groupdocs.com/licenza-temporanea.");
 }
 ```
 
 ## Conclusione
-In conclusione, padroneggiare GroupDocs.Annotation per .NET può aumentare significativamente le capacità di annotazione dei documenti. Seguendo questa guida passo passo sarai ben attrezzato per integrare perfettamente potenti funzionalità di annotazione nelle tue applicazioni .NET.
+In conclusione, padroneggiare GroupDocs.Annotation per .NET può migliorare significativamente le capacità di annotazione dei documenti. Seguendo questa guida passo passo, sarai pronto a integrare perfettamente potenti funzionalità di annotazione nelle tue applicazioni .NET.
 ## Domande frequenti
-### È necessario acquistare una licenza per utilizzare GroupDocs.Annotation per .NET?
-Sì, è necessaria una licenza valida per sbloccare tutte le funzionalità di GroupDocs.Annotation. È possibile acquistare una licenza permanente o richiedere una licenza temporanea a scopo di valutazione.
+### Devo acquistare una licenza per utilizzare GroupDocs.Annotation per .NET?
+Sì, è necessaria una licenza valida per sbloccare tutte le funzionalità di GroupDocs.Annotation. È possibile acquistare una licenza permanente o richiederne una temporanea a scopo di valutazione.
 ### Dove posso trovare supporto per GroupDocs.Annotation per .NET?
- Puoi trovare supporto completo e interagire con la comunità su[Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).
-### Posso provare GroupDocs.Annotation per .NET prima dell'acquisto?
- Sì, puoi richiedere una licenza di prova gratuita[Qui](https://releases.groupdocs.com/) per esplorare le funzionalità di GroupDocs.Annotation per .NET.
-### Come posso ottenere la documentazione più recente per GroupDocs.Annotation per .NET?
- Puoi fare riferimento a[documentazione](https://tutorials.groupdocs.com/annotation/net/) per GroupDocs.Annotation per .NET per accedere a tutorial e riferimenti API dettagliati.
+Puoi trovare un supporto completo e interagire con la comunità su [Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).
+### Posso provare GroupDocs.Annotation per .NET prima di acquistarlo?
+Sì, puoi richiedere una licenza di prova gratuita [Qui](https://releases.groupdocs.com/) per esplorare le funzionalità di GroupDocs.Annotation per .NET.
+### Come posso ottenere la documentazione più aggiornata per GroupDocs.Annotation per .NET?
+Puoi fare riferimento al [documentazione](https://tutorials.groupdocs.com/annotation/net/) per GroupDocs.Annotation per .NET per accedere a tutorial e tutorial API dettagliati.
 ### Cosa succede se riscontro problemi con la mia licenza?
-Se riscontri problemi con la tua licenza, contatta il team di supporto di GroupDocs per assistenza.
+Se riscontri problemi con la tua licenza, contatta il team di supporto di GroupDocs per ricevere assistenza.

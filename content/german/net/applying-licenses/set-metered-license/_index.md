@@ -1,34 +1,34 @@
 ---
-title: Legen Sie die gemessene Lizenz fest
-linktitle: Legen Sie die gemessene Lizenz fest
-second_title: GroupDocs.Annotation .NET-API
-description: Erfahren Sie, wie Sie eine getaktete Lizenz für GroupDocs.Annotation .NET für die Ressourcennutzung und Dokumentanmerkungsfunktionen in Ihren .NET-Anwendungen einrichten.
-weight: 12
-url: /de/net/applying-licenses/set-metered-license/
+"description": "Erfahren Sie, wie Sie eine mengengeregelte Lizenz für GroupDocs.Annotation .NET einrichten, um die Ressourcennutzung zu steuern und die Annotationsfunktionen in Ihren .NET-Anwendungen zu dokumentieren."
+"linktitle": "Gemessene Lizenz festlegen"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Gemessene Lizenz festlegen"
+"url": "/de/net/applying-licenses/set-metered-license/"
+"weight": 12
 ---
 
-# Legen Sie die gemessene Lizenz fest
+# Gemessene Lizenz festlegen
 
 ## Einführung
-GroupDocs.Annotation für .NET ist eine leistungsstarke Bibliothek, die es Entwicklern ermöglicht, ihren .NET-Anwendungen mühelos Dokumentanmerkungsfunktionen hinzuzufügen. Unabhängig davon, ob Sie ein Dokumentenverwaltungssystem, eine Plattform für die Zusammenarbeit oder eine andere Anwendung erstellen, die die Überprüfung und Markierung von Dokumenten umfasst, bietet GroupDocs.Annotation für .NET einen umfassenden Satz an Tools zur Optimierung des Prozesses.
-In diesem Tutorial befassen wir uns mit dem Prozess der Einrichtung einer getakteten Lizenz für GroupDocs.Annotation .NET. Mit einer gebührenpflichtigen Lizenz zahlen Sie nur für die Ressourcen, die Sie verbrauchen, was sie zu einer kostengünstigen Lösung für Projekte jeder Größenordnung macht. Wenn Sie die unten beschriebenen Schritte befolgen, können Sie GroupDocs.Annotation nahtlos in Ihre .NET-Anwendung integrieren und gleichzeitig die Ressourcennutzung optimieren und die Budgetkontrolle beibehalten.
+GroupDocs.Annotation für .NET ist eine leistungsstarke Bibliothek, mit der Entwickler ihren .NET-Anwendungen mühelos Dokumentannotationsfunktionen hinzufügen können. Egal, ob Sie ein Dokumentenmanagementsystem, eine Kollaborationsplattform oder eine andere Anwendung zur Dokumentprüfung und -markierung entwickeln – GroupDocs.Annotation für .NET bietet umfassende Tools zur Optimierung des Prozesses.
+In diesem Tutorial erfahren Sie, wie Sie eine nutzungsabhängige Lizenz für GroupDocs.Annotation .NET einrichten. Mit einer nutzungsabhängigen Lizenz zahlen Sie nur für die tatsächlich genutzten Ressourcen und sind somit eine kostengünstige Lösung für Projekte jeder Größenordnung. Mit den folgenden Schritten können Sie GroupDocs.Annotation nahtlos in Ihre .NET-Anwendung integrieren und gleichzeitig die Ressourcennutzung optimieren und die Budgetkontrolle behalten.
 ## Voraussetzungen
-Bevor Sie mit dem Tutorial beginnen, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
-1.  GroupDocs.Annotation für .NET-Bibliothek: Laden Sie die Bibliothek von herunter[Webseite](https://releases.groupdocs.com/annotation/net/).
-2. Zugriff auf das GroupDocs-Konto: Sie benötigen ein GroupDocs-Konto, um die öffentlichen und privaten Schlüssel zu erhalten, die zum Einrichten der gemessenen Lizenz erforderlich sind. Wenn Sie noch kein Konto haben, können Sie sich für eine kostenlose Testversion anmelden[Hier](https://releases.groupdocs.com/).
-3. Grundlegende Kenntnisse von C# und .NET Framework: Vertrautheit mit der Programmiersprache C# und dem .NET Framework ist für die Implementierung der in diesem Tutorial beschriebenen Schritte von Vorteil.
+Bevor Sie mit dem Lernprogramm beginnen, stellen Sie sicher, dass Sie die folgenden Voraussetzungen erfüllen:
+1. GroupDocs.Annotation für .NET-Bibliothek: Laden Sie die Bibliothek herunter von der [Webseite](https://releases.groupdocs.com/annotation/net/).
+2. Zugriff auf das GroupDocs-Konto: Sie benötigen ein GroupDocs-Konto, um die öffentlichen und privaten Schlüssel für die Einrichtung der gebührenpflichtigen Lizenz zu erhalten. Falls Sie noch kein Konto haben, können Sie sich für eine kostenlose Testversion anmelden. [Hier](https://releases.groupdocs.com/).
+3. Grundlegende Kenntnisse von C# und .NET Framework: Kenntnisse der Programmiersprache C# und des .NET Frameworks sind für die Implementierung der in diesem Lernprogramm beschriebenen Schritte von Vorteil.
 
 ## Namespaces importieren
-Stellen Sie zunächst sicher, dass Sie die erforderlichen Namespaces in Ihr C#-Projekt importieren. Diese Namespaces sind für die Interaktion mit der GroupDocs.Annotation-Funktionalität unerlässlich.
+Importieren Sie zunächst die erforderlichen Namespaces in Ihr C#-Projekt. Diese Namespaces sind für die Interaktion mit der GroupDocs.Annotation-Funktionalität unerlässlich.
 ```csharp
 using System;
 ```
-## Schritt 1: Erhalten Sie öffentliche und private Schlüssel
-Bevor Sie die gemessene Lizenz einrichten, müssen Sie Ihre öffentlichen und privaten Schlüssel von Ihrem GroupDocs-Konto-Dashboard erhalten.
+## Schritt 1: Öffentliche und private Schlüssel erhalten
+Bevor Sie die gemessene Lizenz einrichten, müssen Sie Ihre öffentlichen und privaten Schlüssel von Ihrem GroupDocs-Konto-Dashboard abrufen.
 1. Melden Sie sich bei Ihrem GroupDocs-Konto an.
 2. Navigieren Sie zum Abschnitt Lizenzverwaltung.
 3. Kopieren Sie Ihre von GroupDocs bereitgestellten öffentlichen und privaten Schlüssel.
-## Schritt 2: Festlegen der gemessenen Lizenz
+## Schritt 2: Gemessene Lizenz festlegen
 Sobald Sie Ihre öffentlichen und privaten Schlüssel erhalten haben, können Sie die gemessene Lizenz in Ihrer .NET-Anwendung einrichten.
 ```csharp
 string publicKey = "*****"; // Ersetzen Sie ***** durch Ihren öffentlichen Schlüssel
@@ -39,15 +39,15 @@ Console.WriteLine("License set successfully.");
 ```
 
 ## Abschluss
-Zusammenfassend lässt sich sagen, dass die Einrichtung einer getakteten Lizenz für GroupDocs.Annotation .NET ein unkomplizierter Prozess ist, der eine effiziente Ressourcennutzung und Kosteneffizienz für Ihre Dokumentanmerkungsprojekte gewährleistet. Wenn Sie die in diesem Tutorial beschriebenen Schritte befolgen, können Sie GroupDocs.Annotation nahtlos in Ihre .NET-Anwendung integrieren und die Funktionen für die Zusammenarbeit und Überprüfung von Dokumenten verbessern.
-## FAQs
+Zusammenfassend lässt sich sagen, dass die Einrichtung einer mengenabhängigen Lizenz für GroupDocs.Annotation .NET ein unkomplizierter Prozess ist, der eine effiziente Ressourcennutzung und Kosteneffizienz für Ihre Dokumentannotationsprojekte gewährleistet. Mit den in diesem Tutorial beschriebenen Schritten können Sie GroupDocs.Annotation nahtlos in Ihre .NET-Anwendung integrieren und die Funktionen für die Zusammenarbeit und Überprüfung von Dokumenten verbessern.
+## Häufig gestellte Fragen
 ### Kann ich GroupDocs.Annotation für .NET in kommerziellen Projekten verwenden?
-Ja, GroupDocs.Annotation für .NET kann sowohl in kommerziellen als auch nichtkommerziellen Projekten verwendet werden. Sie müssen jedoch eine entsprechende Lizenz erwerben, die Ihren Projektanforderungen entspricht.
+Ja, GroupDocs.Annotation für .NET kann sowohl in kommerziellen als auch in nicht-kommerziellen Projekten eingesetzt werden. Sie benötigen jedoch eine entsprechende Lizenz, die Ihren Projektanforderungen entspricht.
 ### Gibt es eine Testversion für GroupDocs.Annotation für .NET?
- Ja, Sie können eine kostenlose Testversion von GroupDocs.Annotation für .NET nutzen, indem Sie hier klicken[dieser Link](https://releases.groupdocs.com/).
+Ja, Sie können eine kostenlose Testversion von GroupDocs.Annotation für .NET nutzen, indem Sie [dieser Link](https://releases.groupdocs.com/).
 ### Wie erhalte ich technischen Support für GroupDocs.Annotation für .NET?
- Sie können technischen Support anfordern, indem Sie das GroupDocs-Forum besuchen[Hier](https://forum.groupdocs.com/c/annotation/10).
-### Gibt es temporäre Lizenzoptionen?
- Ja, Sie können bei GroupDocs eine temporäre Lizenz für kurzfristige Nutzung oder Evaluierungszwecke erwerben. Besuchen[dieser Link](https://purchase.groupdocs.com/temporary-license/) für mehr Informationen.
+Sie können technischen Support erhalten, indem Sie das GroupDocs-Forum besuchen [Hier](https://forum.groupdocs.com/c/annotation/10).
+### Gibt es Optionen für temporäre Lizenzen?
+Ja, Sie können von GroupDocs eine temporäre Lizenz für die kurzfristige Nutzung oder zu Testzwecken erhalten. Besuchen Sie [dieser Link](https://purchase.groupdocs.com/temporary-license/) für weitere Informationen.
 ### Kann ich die Anmerkungsfunktionen entsprechend meinen Projektanforderungen anpassen?
 Ja, GroupDocs.Annotation für .NET bietet umfangreiche Anpassungsoptionen, sodass Sie die Anmerkungsfunktionen an Ihre spezifischen Projektanforderungen anpassen können.

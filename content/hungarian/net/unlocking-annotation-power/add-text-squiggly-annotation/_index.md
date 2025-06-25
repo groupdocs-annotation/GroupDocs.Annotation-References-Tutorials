@@ -1,25 +1,25 @@
 ---
-title: Szövegszerű megjegyzés hozzáadása a dokumentumhoz
-linktitle: Szövegszerű megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Tanulja meg, hogyan adhat könnyedén szöveges, kacskaringós megjegyzéseket a dokumentumokhoz a Groupdocs.Annotation for .NET segítségével. Fokozza az együttműködést és a dokumentum-ellenőrzési folyamatokat.
-weight: 25
-url: /hu/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Tanulja meg, hogyan adhat könnyedén hullámos szöveges jegyzeteket a dokumentumokhoz a Groupdocs.Annotation for .NET segítségével. Javítsa az együttműködési és dokumentum-ellenőrzési folyamatokat."
+"linktitle": "Szöveges hullámos jegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Szöveges hullámos jegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
-# Szövegszerű megjegyzés hozzáadása a dokumentumhoz
+# Szöveges hullámos jegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
 
-Groupdocs.Annotation for .NET egy sokoldalú könyvtár, amely lehetővé teszi a fejlesztők számára, hogy robusztus annotációs képességeket könnyedén integráljanak .NET-alkalmazásaikba. Akár PDF-ekkel, Word-dokumentumokkal vagy más népszerű fájlformátumokkal dolgozik, a Groupdocs.Annotation zökkenőmentes megoldást kínál a megjegyzések készítésére és a dokumentumokkal való együttműködés javítására.
+A Groupdocs.Annotation for .NET egy sokoldalú könyvtár, amely lehetővé teszi a fejlesztők számára, hogy robusztus annotációs képességeket integráljanak .NET alkalmazásaikba. Akár PDF-ekkel, Word-dokumentumokkal vagy más népszerű fájlformátumokkal dolgozik, a Groupdocs.Annotation zökkenőmentes megoldást kínál a dokumentumokkal való együttműködés annotálására és javítására.
 
 ## Előfeltételek
 
-Mielőtt belevágna az oktatóanyagba, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
+Mielőtt belemerülnél az oktatóanyagba, győződj meg róla, hogy a következő előfeltételek teljesülnek:
 
 ## Névterek importálása
 
-Ügyeljen arra, hogy importálja a szükséges névtereket a Groupdocs.Annotation for .NET által biztosított funkciók eléréséhez.
+Győződjön meg róla, hogy importálja a szükséges névtereket a Groupdocs.Annotation for .NET által biztosított funkciók eléréséhez.
 
 ```csharp
 using System;
@@ -30,30 +30,30 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Most, hogy megvannak az előfeltételek, bontsuk fel több lépésre a kacskaringós szöveges megjegyzések hozzáadásának folyamatát.
+Most, hogy az előfeltételekkel tisztában vagyunk, bontsuk le a szöveges hullámos jegyzetek hozzáadásának folyamatát több lépésre.
 
-## 1. lépés: Határozza meg a kimeneti útvonalat
+## 1. lépés: Kimeneti útvonal meghatározása
 
-Határozza meg az útvonalat, ahová a megjegyzésekkel ellátott dokumentum mentésre kerül.
+Adja meg az elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## 2. lépés: Inicializálja az Annotátort
+## 2. lépés: Annotátor inicializálása
 
-Inicializálja az Annotátor objektumot a bemeneti dokumentum elérési útjának megadásával.
+Inicializálja az Annotator objektumot a bemeneti dokumentum elérési útjának megadásával.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Az annotációs kód ide kerül
+    // Ide kerül a megjegyzéskód
 }
 ```
 
-## 3. lépés: Hozzon létre Squiggly annotációt
+## 3. lépés: Hozz létre hullámos jegyzetet
 
-Hozzon létre egy SquigglyAnnotation objektumot, és adja meg a tulajdonságait.
+Hozz létre egy SquigglyAnnotation objektumot, és add meg a tulajdonságait.
 
 ```csharp
 SquigglyAnnotation squiggly = new SquigglyAnnotation
@@ -85,17 +85,17 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 };
 ```
 
-## 4. lépés: Megjegyzés hozzáadása
+## 4. lépés: Jegyzet hozzáadása
 
-Adja hozzá a létrehozott pörgős megjegyzést a dokumentumhoz.
+Adja hozzá a létrehozott hullámos jegyzetet a dokumentumhoz.
 
 ```csharp
 annotator.Add(squiggly);
 ```
 
-## 5. lépés: Mentse el a dokumentumot
+## 5. lépés: Dokumentum mentése
 
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 
 ```csharp
 annotator.Save(outputPath);
@@ -103,7 +103,7 @@ annotator.Save(outputPath);
 
 ## 6. lépés: Megerősítés megjelenítése
 
-Jelenítsen meg egy üzenetet, amely megerősíti a megjegyzésekkel ellátott dokumentum sikeres mentését.
+Jelenítsen meg egy üzenetet, amely megerősíti a jegyzetekkel ellátott dokumentum sikeres mentését.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Következtetés
 
-Összefoglalva, a Groupdocs.Annotation for .NET robusztus eszközkészletet biztosít a fejlesztők számára a dokumentumfeljegyzések funkcióinak zökkenőmentes integrálásához .NET-alkalmazásaikba. Ennek a lépésről-lépésre szóló útmutatónak a követésével könnyedén adhat hozzá szöveges, kacskaringós megjegyzéseket a dokumentumokhoz, javítva az együttműködést és a dokumentum-ellenőrzési folyamatokat.
+Összefoglalva, a Groupdocs.Annotation for .NET robusztus eszközkészletet biztosít a fejlesztőknek a dokumentum-annotációs funkciók zökkenőmentes integrálásához .NET alkalmazásaikba. Ezt a lépésről lépésre szóló útmutatót követve könnyedén hozzáadhat szöveges, hullámos annotációkat a dokumentumaihoz, javítva az együttműködést és a dokumentum-ellenőrzési folyamatokat.
 
 ## GYIK
 
-### K: Támogathatja-e a Groupdocs.Annotation a megjegyzéseket különféle fájlformátumokon?
+### K: A Groupdocs.Annotation támogatja a különféle fájlformátumokon lévő jegyzetek készítését?
 
-V: Igen, a Groupdocs.Annotation támogatja a megjegyzések készítését a fájlformátumok széles skáláján, beleértve a PDF-eket, Word-dokumentumokat, Excel-lapokat és egyebeket.
+V: Igen, a Groupdocs.Annotation számos fájlformátumon támogatja a jegyzetelést, beleértve a PDF-eket, Word-dokumentumokat, Excel-táblázatokat és egyebeket.
 
-### K: A Groupdocs.Annotation kompatibilis mind az asztali, mind a webes alkalmazásokkal?
+### K: A Groupdocs.Annotation kompatibilis mind asztali, mind webes alkalmazásokkal?
 
-V: Abszolút! A Groupdocs.Annotation zökkenőmentesen integrálható asztali és webes alkalmazásokba is, rugalmasságot és sokoldalúságot kínálva.
+V: Teljesen biztos! A Groupdocs.Annotation zökkenőmentesen integrálható mind az asztali, mind a webes alkalmazásokba, rugalmasságot és sokoldalúságot biztosítva.
 
-### K: Rendelkezésre állnak-e licencelési lehetőségek a Groupdocs.Annotation számára?
+### K: Vannak-e elérhető licencelési lehetőségek a Groupdocs.Annotation-höz?
 
-V: Igen, a Groupdocs.Annotation rugalmas licencelési lehetőségeket kínál az egyéni vagy vállalati igényekhez igazodva, beleértve az ideiglenes licenceket próba célból.
+V: Igen, a Groupdocs.Annotation rugalmas licencelési lehetőségeket kínál, amelyek az egyéni vagy vállalati igényekhez igazodnak, beleértve az ideiglenes licenceket próbaverziókhoz.
 
-### K: Testreszabhatók a Groupdocs.Annotation segítségével létrehozott megjegyzések?
+### K: Testreszabhatók a Groupdocs.Annotation segítségével létrehozott annotációk?
 
-V: Természetesen! A Groupdocs.Annotation kiterjedt testreszabási lehetőségeket kínál a megjegyzésekhez, lehetővé téve a fejlesztők számára, hogy a megjegyzéseket saját igényeik szerint szabják.
+V: Természetesen! A Groupdocs.Annotation széleskörű testreszabási lehetőségeket kínál az annotációkhoz, lehetővé téve a fejlesztők számára, hogy a saját igényeikhez igazítsák azokat.
 
-### K: A Groupdocs.Annotation kínál támogatást és dokumentációt a fejlesztők számára?
+### K: A Groupdocs.Annotation kínál-e támogatást és dokumentációt fejlesztők számára?
 
-A: Valóban! A Groupdocs.Annotation átfogó dokumentációt és dedikált támogatási fórumokat biztosít, hogy segítse a fejlesztőket a funkcióinak hatékony kihasználásában.
+V: Valóban! A Groupdocs.Annotation átfogó dokumentációt és dedikált támogatási fórumokat biztosít, hogy segítse a fejlesztőket a funkcióinak hatékony kihasználásában.

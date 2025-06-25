@@ -1,25 +1,25 @@
 ---
-title: Přidejte do dokumentu anotaci se zvýrazněním textu
-linktitle: Přidejte do dokumentu anotaci se zvýrazněním textu
-second_title: GroupDocs.Annotation .NET API
-description: Zjistěte, jak přidat poznámky ke zvýraznění textu do dokumentů pomocí GroupDocs.Annotation for .NET. Vylepšete spolupráci a produktivitu s tímto komplexním řešením.
-weight: 22
-url: /cs/net/unlocking-annotation-power/add-text-highlight-annotation/
+"description": "Naučte se, jak přidávat anotace s zvýrazněním textu do dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete spolupráci a produktivitu s tímto komplexním nástrojem."
+"linktitle": "Přidat anotaci zvýraznění textu do dokumentu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidat anotaci zvýraznění textu do dokumentu"
+"url": "/cs/net/unlocking-annotation-power/add-text-highlight-annotation/"
+"weight": 22
 ---
 
-# Přidejte do dokumentu anotaci se zvýrazněním textu
+# Přidat anotaci zvýraznění textu do dokumentu
 
-## Úvod
-oblasti správy dokumentů a spolupráce se GroupDocs.Annotation for .NET ukazuje jako robustní řešení, které umožňuje vývojářům bezproblémově integrovat poznámky se zvýrazněním textu do svých aplikací. Tento výukový program slouží jako komplexní průvodce přidáváním textových zvýrazněných anotací do dokumentů pomocí GroupDocs.Annotation pro .NET. Prostřednictvím podrobných pokynů a podrobných vysvětlení získáte odbornost ve využívání schopností této výkonné knihovny.
+## Zavedení
+oblasti správy dokumentů a spolupráce se GroupDocs.Annotation pro .NET jeví jako robustní řešení, které vývojářům umožňuje bezproblémově integrovat anotace s zvýrazňováním textu do jejich aplikací. Tento tutoriál slouží jako komplexní průvodce přidáváním anotací s zvýrazňováním textu do dokumentů pomocí GroupDocs.Annotation pro .NET. Prostřednictvím podrobných pokynů a podrobného vysvětlení získáte dovednosti v používání možností této výkonné knihovny.
 ## Předpoklady
-Než se ponoříte do implementace anotací zvýraznění textu, ujistěte se, že máte splněny následující předpoklady:
-1. Nastavení prostředí: Mějte nakonfigurováno vhodné vývojové prostředí pro vývoj .NET.
-2.  Instalace GroupDocs.Annotation pro .NET: Stáhněte a nainstalujte GroupDocs.Annotation pro .NET z poskytnutého[odkaz ke stažení](https://releases.groupdocs.com/annotation/net/).
+Než se ponoříte do implementace anotací s zvýrazňováním textu, ujistěte se, že máte splněny následující předpoklady:
+1. Nastavení prostředí: Mějte nakonfigurované vhodné vývojové prostředí pro vývoj v .NET.
+2. Instalace GroupDocs.Annotation pro .NET: Stáhněte a nainstalujte GroupDocs.Annotation pro .NET z dodaného [odkaz ke stažení](https://releases.groupdocs.com/annotation/net/).
 3. Znalost C#: Základní znalost programovacího jazyka C#.
-4. Dokument k anotaci: Připravte dokument (např. PDF), který chcete anotovat.
+4. Dokument k anotaci: Připravte si dokument (např. PDF), který chcete anotovat.
 
-## Import jmenných prostorů
-Chcete-li začít, importujte potřebné jmenné prostory do kódu C#, abyste mohli využívat funkce GroupDocs.Annotation pro .NET:
+## Importovat jmenné prostory
+Pro začátek importujte potřebné jmenné prostory do kódu C#, abyste mohli využívat funkce GroupDocs.Annotation pro .NET:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,19 +28,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-#Nyní si proces přidávání anotací se zvýrazněním textu rozdělíme do několika kroků:
-## Krok 1: Definujte výstupní cestu
-Zadejte výstupní cestu, kam bude dokument s poznámkami uložen:
+#Nyní si rozdělme proces přidávání anotací se zvýrazněním textu do několika kroků:
+## Krok 1: Definování výstupní cesty
+Zadejte výstupní cestu, kam bude uložen anotovaný dokument:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Inicializujte anotátor
- Vytvořte instanci souboru`Annotator` třídy, předáním názvu souboru dokumentu jako parametru:
+## Krok 2: Inicializace anotátoru
+Vytvořte instanci `Annotator` třída s předáním názvu souboru dokumentu jako parametru:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
 ## Krok 3: Vytvořte anotaci zvýraznění
- Instantovat a`HighlightAnnotation` objekt a nakonfigurujte jeho vlastnosti:
+Vytvořte instanci `HighlightAnnotation` objekt a nakonfigurujte jeho vlastnosti:
 ```csharp
 HighlightAnnotation highlight = new HighlightAnnotation
 {
@@ -69,27 +69,27 @@ HighlightAnnotation highlight = new HighlightAnnotation
     }
 };
 ```
-## Krok 4: Přidejte anotaci
+## Krok 4: Přidání anotace
 Přidejte do dokumentu vytvořenou anotaci zvýraznění:
 ```csharp
 annotator.Add(highlight);
 ```
-## Krok 5: Uložte dokument s poznámkami
+## Krok 5: Uložení anotovaného dokumentu
 Uložte anotovaný dokument do zadané výstupní cesty:
 ```csharp
 annotator.Save(outputPath);
 ```
 
 ## Závěr
-Na závěr, GroupDocs.Annotation for .NET nabízí zjednodušený přístup k začlenění anotací se zvýrazněním textu do dokumentů. Dodržením kroků uvedených v tomto kurzu mohou vývojáři bezproblémově zlepšit spolupráci na dokumentech a produktivitu v rámci svých aplikací.
-## FAQ
-### Je GroupDocs.Annotation for .NET kompatibilní se všemi formáty dokumentů?
-GroupDocs.Annotation for .NET podporuje různé formáty dokumentů, včetně PDF, Wordu, Excelu a dalších. Úplný seznam naleznete v dokumentaci.
-### Lze poznámky upravit podle konkrétních požadavků?
-Ano, vývojáři mají plnou kontrolu nad vlastnostmi a vzhledem anotací, což umožňuje přizpůsobení různým potřebám.
+Závěrem lze říci, že GroupDocs.Annotation pro .NET nabízí efektivní přístup k začlenění anotací s zvýrazněním textu do dokumentů. Dodržováním kroků popsaných v tomto tutoriálu mohou vývojáři bezproblémově vylepšit spolupráci na dokumentech a produktivitu ve svých aplikacích.
+## Často kladené otázky
+### Je GroupDocs.Annotation pro .NET kompatibilní se všemi formáty dokumentů?
+GroupDocs.Annotation pro .NET podporuje různé formáty dokumentů, včetně PDF, Wordu, Excelu a dalších. Úplný seznam naleznete v dokumentaci.
+### Lze anotace přizpůsobit podle specifických požadavků?
+Ano, vývojáři mají plnou kontrolu nad vlastnostmi a vzhledem anotací, což umožňuje přizpůsobení dle rozmanitých potřeb.
 ### Je k dispozici bezplatná zkušební verze pro GroupDocs.Annotation pro .NET?
- Ano, můžete prozkoumat funkce GroupDocs.Annotation pro .NET přístupem k bezplatné zkušební verzi z poskytnutého[odkaz](https://releases.groupdocs.com/).
-### Jak mohu získat podporu pro jakékoli problémy nebo dotazy související s GroupDocs.Annotation pro .NET?
- Pro podporu a pomoc můžete navštívit fórum GroupDocs.Annotation[tady](https://forum.groupdocs.com/c/annotation/10).
+Ano, funkce GroupDocs.Annotation pro .NET si můžete vyzkoušet s bezplatnou zkušební verzí z poskytnuté [odkaz](https://releases.groupdocs.com/).
+### Jak mohu získat podporu pro jakékoli problémy nebo dotazy týkající se GroupDocs.Annotation pro .NET?
+Pro podporu a pomoc můžete navštívit fórum GroupDocs.Annotation [zde](https://forum.groupdocs.com/c/annotation/10).
 ### Jaké možnosti licencování jsou k dispozici pro GroupDocs.Annotation pro .NET?
- GroupDocs.Annotation for .NET nabízí různé možnosti licencování, včetně dočasných licencí pro testovací účely a komerčních licencí pro produkční prostředí. Navštivte stránku nákupu[tady](https://purchase.groupdocs.com/buy) Více podrobností.
+GroupDocs.Annotation pro .NET nabízí různé možnosti licencování, včetně dočasných licencí pro testovací účely a komerčních licencí pro produkční prostředí. Navštivte stránku pro nákup. [zde](https://purchase.groupdocs.com/buy) pro více informací.

@@ -1,24 +1,24 @@
 ---
-title: Přidejte do dokumentu poznámku s přeškrtnutím textu
-linktitle: Přidejte do dokumentu poznámku s přeškrtnutím textu
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se přidávat textové přeškrtnuté anotace do dokumentů pomocí GroupDocs.Annotation pro .NET. Zlepšete spolupráci a procesy kontroly dokumentů efektivně.
-weight: 26
-url: /cs/net/unlocking-annotation-power/add-text-strikeout-annotation/
+"description": "Naučte se, jak přidávat anotace s přeškrtnutím textu do dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Zefektivněte spolupráci a procesy kontroly dokumentů."
+"linktitle": "Přidat do dokumentu anotaci přeškrtnutého textu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidat do dokumentu anotaci přeškrtnutého textu"
+"url": "/cs/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+"weight": 26
 ---
 
-# Přidejte do dokumentu poznámku s přeškrtnutím textu
+# Přidat do dokumentu anotaci přeškrtnutého textu
 
-## Úvod
-tomto tutoriálu prozkoumáme, jak přidat anotaci s přeškrtnutím textu do dokumentu pomocí GroupDocs.Annotation pro .NET. Tato knihovna poskytuje výkonné nástroje pro anotaci různých typů dokumentů, zlepšuje spolupráci a procesy kontroly dokumentů.
+## Zavedení
+tomto tutoriálu se podíváme na to, jak do dokumentu přidat anotaci s přeškrtnutým textem pomocí knihovny GroupDocs.Annotation pro .NET. Tato knihovna poskytuje výkonné nástroje pro anotaci různých typů dokumentů, což vylepšuje spolupráci a procesy kontroly dokumentů.
 ## Předpoklady
 Než začneme, ujistěte se, že máte následující předpoklady:
-1.  GroupDocs.Annotation for .NET: Nainstalujte knihovnu. Můžete si jej stáhnout z[tady](https://releases.groupdocs.com/annotation/net/).
-2. Vývojové prostředí: Nastavte vhodné vývojové prostředí pro vývoj .NET.
-3. Dokument: Připravte si dokument k anotaci, například soubor PDF.
+1. GroupDocs.Annotation pro .NET: Nainstalujte knihovnu. Můžete si ji stáhnout z [zde](https://releases.groupdocs.com/annotation/net/).
+2. Vývojové prostředí: Nastavte vhodné vývojové prostředí pro vývoj v .NET.
+3. Dokument: Mějte připravený dokument k anotaci, například soubor PDF.
 
 ## Import jmenných prostorů
-Nejprve importujte potřebné jmenné prostory pro přístup k funkcím GroupDocs. Anotace:
+Nejprve importujte potřebné jmenné prostory pro přístup k funkcím GroupDocs.Annotation:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,18 +28,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Nyní si proces přidávání anotace přeškrtnutím textu rozdělíme do několika kroků:
-## Krok 1: Definujte výstupní cestu
+Nyní si rozdělme proces přidání anotace s přeškrtnutým textem do několika kroků:
+## Krok 1: Definování výstupní cesty
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Zde definujeme výstupní cestu, kam bude anotovaný dokument uložen.
-## Krok 2: Inicializujte anotátor
+Zde definujeme výstupní cestu, kam bude uložen anotovaný dokument.
+## Krok 2: Inicializace anotátoru
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-Inicializujte objekt Annotator poskytnutím cesty ke vstupnímu dokumentu (v tomto případě soubor PDF).
-## Krok 3: Vytvořte přeškrtnutou anotaci
+Inicializujte objekt Annotator zadáním cesty ke vstupnímu dokumentu (v tomto případě PDF soubor).
+## Krok 3: Vytvořte anotaci přeškrtnutí
 ```csharp
 StrikeoutAnnotation strikeout = new StrikeoutAnnotation
 {
@@ -69,27 +69,27 @@ StrikeoutAnnotation strikeout = new StrikeoutAnnotation
 };
 ```
 Vytvořte objekt StrikeoutAnnotation s požadovanými vlastnostmi, jako je zpráva, neprůhlednost, číslo stránky, barva pozadí, body (souřadnice) a odpovědi.
-## Krok 4: Přidejte anotaci
+## Krok 4: Přidání anotace
 ```csharp
 annotator.Add(strikeout);
 ```
-Přidejte do dokumentu vytvořenou přeškrtnutou anotaci.
-## Krok 5: Uložte dokument
+Přidejte do dokumentu vytvořenou anotaci s přeškrtnutím.
+## Krok 5: Uložení dokumentu
 ```csharp
 annotator.Save(outputPath);
 ```
-Uložte dokument s poznámkami do zadané výstupní cesty.
+Uložte anotovaný dokument do zadané výstupní cesty.
 
 ## Závěr
-V tomto tutoriálu jsme se naučili, jak přidat anotaci s přeškrtnutím textu do dokumentu pomocí GroupDocs.Annotation for .NET. Tato výkonná knihovna umožňuje efektivní anotaci dokumentů, zlepšuje spolupráci a procesy kontroly dokumentů.
-## FAQ
+V tomto tutoriálu jsme se naučili, jak do dokumentu přidat anotaci s přeškrtnutým textem pomocí knihovny GroupDocs.Annotation pro .NET. Tato výkonná knihovna umožňuje efektivní anotaci dokumentů, vylepšuje spolupráci a procesy kontroly dokumentů.
+## Často kladené otázky
 ### Je GroupDocs.Annotation kompatibilní s různými formáty dokumentů?
-Ano, GroupDocs.Annotation podporuje širokou škálu formátů dokumentů včetně PDF, Word, Excel, PowerPoint a dalších.
-### Mohu upravit vzhled anotací?
-Vlastnosti anotace, jako je barva, neprůhlednost, velikost písma a další, si můžete samozřejmě přizpůsobit podle svých požadavků.
+Ano, GroupDocs.Annotation podporuje širokou škálu formátů dokumentů, včetně PDF, Word, Excel, PowerPoint a dalších.
+### Mohu si přizpůsobit vzhled anotací?
+Samozřejmě si můžete přizpůsobit vlastnosti anotací, jako je barva, neprůhlednost, velikost písma a další, podle svých požadavků.
 ### Poskytuje GroupDocs.Annotation funkce pro spolupráci?
-Ano, GroupDocs.Annotation usnadňuje spolupráci tím, že umožňuje uživatelům přidávat komentáře, odpovědi a anotace k dokumentům.
+Ano, GroupDocs.Annotation usnadňuje spolupráci tím, že umožňuje uživatelům přidávat do dokumentů komentáře, odpovědi a anotace.
 ### Je k dispozici bezplatná zkušební verze?
- Ano, můžete využít bezplatnou zkušební verzi od[tady](https://releases.groupdocs.com/).
+Ano, můžete využít bezplatnou zkušební verzi od [zde](https://releases.groupdocs.com/).
 ### Kde mohu získat podporu pro GroupDocs.Annotation?
- Můžete získat podporu od[GroupDocs.Anotační fórum](https://forum.groupdocs.com/c/annotation/10).
+Podporu můžete získat od [Fórum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).

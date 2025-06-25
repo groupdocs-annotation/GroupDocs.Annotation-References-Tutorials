@@ -1,24 +1,24 @@
 ---
-title: Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz
-linktitle: Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat szöveges áthúzott megjegyzéseket a dokumentumokhoz a GroupDocs.Annotation for .NET használatával. Hatékonyan fokozza az együttműködést és a dokumentum-ellenőrzési folyamatokat.
-weight: 26
-url: /hu/net/unlocking-annotation-power/add-text-strikeout-annotation/
+"description": "Tanulja meg, hogyan adhat hozzá szöveges áthúzott megjegyzéseket dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Hatékonyan javítsa az együttműködési és dokumentum-ellenőrzési folyamatokat."
+"linktitle": "Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+"weight": 26
 ---
 
 # Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Ebben az oktatóanyagban megvizsgáljuk, hogyan adhatunk áthúzott szöveges megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Ez a könyvtár hatékony eszközöket biztosít a különféle dokumentumtípusok megjegyzéseihez, az együttműködés és a dokumentum-ellenőrzési folyamatok javításához.
+Ebben az oktatóanyagban azt vizsgáljuk meg, hogyan adhatunk hozzá szöveges áthúzott jegyzeteket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ez a könyvtár hatékony eszközöket biztosít különféle dokumentumtípusok jegyzeteléséhez, az együttműködés és a dokumentumok áttekintésének folyamatainak javításához.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következő előfeltételekkel:
-1.  GroupDocs.Annotation for .NET: Telepítse a könyvtárat. Letöltheti innen[itt](https://releases.groupdocs.com/annotation/net/).
-2. Fejlesztői környezet: Állítson be megfelelő fejlesztői környezetet a .NET fejlesztéshez.
-3. Dokumentum: Készítsen jegyzetekkel ellátott dokumentumot, például PDF-fájlt.
+Mielőtt elkezdenénk, győződjünk meg arról, hogy a következő előfeltételekkel rendelkezünk:
+1. GroupDocs.Annotation .NET-hez: Telepítse a könyvtárat. Letöltheti innen: [itt](https://releases.groupdocs.com/annotation/net/).
+2. Fejlesztői környezet: Hozzon létre egy megfelelő fejlesztői környezetet a .NET fejlesztéséhez.
+3. Dokumentum: Készítsen elő egy jegyzeteléshez előkészített dokumentumot, például egy PDF-fájlt.
 
 ## Névterek importálása
-Először is importálja a szükséges névtereket a GroupDocs funkcióinak eléréséhez.Annotation:
+Először importálja a szükséges névtereket a GroupDocs.Annotation funkcióinak eléréséhez:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,17 +28,17 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Most bontsuk fel több lépésre a szöveges áthúzásos megjegyzés hozzáadásának folyamatát:
-## 1. lépés: Határozza meg a kimeneti útvonalat
+Most bontsuk le a szöveges áthúzott jegyzet hozzáadásának folyamatát több lépésre:
+## 1. lépés: Kimeneti útvonal meghatározása
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Itt határozzuk meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentum mentésre kerül.
-## 2. lépés: Inicializálja az Annotátort
+Itt definiáljuk a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
+## 2. lépés: Annotátor inicializálása
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-Inicializálja az Annotátor objektumot a bemeneti dokumentum elérési útjának megadásával (ebben az esetben PDF fájl).
+Inicializálja az Annotator objektumot a bemeneti dokumentum (jelen esetben PDF fájl) elérési útjának megadásával.
 ## 3. lépés: Áthúzott megjegyzés létrehozása
 ```csharp
 StrikeoutAnnotation strikeout = new StrikeoutAnnotation
@@ -68,28 +68,28 @@ StrikeoutAnnotation strikeout = new StrikeoutAnnotation
     }
 };
 ```
-Hozzon létre egy StrikeoutAnnotation objektumot a kívánt tulajdonságokkal, például üzenet, átlátszatlanság, oldalszám, háttérszín, pontok (koordináták) és válaszok.
-## 4. lépés: Megjegyzés hozzáadása
+Hozz létre egy StrikeoutAnnotation objektumot a kívánt tulajdonságokkal, például üzenettel, átlátszósággal, oldalszámmal, háttérszínnel, pontokkal (koordinátákkal) és válaszokkal.
+## 4. lépés: Jegyzet hozzáadása
 ```csharp
 annotator.Add(strikeout);
 ```
 Adja hozzá a létrehozott áthúzott megjegyzést a dokumentumhoz.
-## 5. lépés: Mentse el a dokumentumot
+## 5. lépés: Dokumentum mentése
 ```csharp
 annotator.Save(outputPath);
 ```
-Mentse a megjegyzésekkel ellátott dokumentumot a megadott kimeneti útvonalra.
+Mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan adhatunk áthúzott szöveges megjegyzést egy dokumentumhoz a GroupDocs.Annotation for .NET segítségével. Ez a hatékony könyvtár lehetővé teszi a hatékony dokumentumjegyzetek készítését, javítva az együttműködést és a dokumentum-ellenőrzési folyamatokat.
+Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá szöveges áthúzott jegyzeteket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ez a hatékony könyvtár lehetővé teszi a hatékony dokumentum-jegyzetelést, javítva az együttműködést és a dokumentum-áttekintési folyamatokat.
 ## GYIK
-### A GroupDocs.Annotation kompatibilis a különböző dokumentumformátumokkal?
-Igen, a GroupDocs.Annotation a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, Word, Excel, PowerPoint és egyebeket.
-### Testreszabhatom a kommentárok megjelenését?
-Természetesen testreszabhatja a megjegyzések tulajdonságait, például a színt, az átlátszatlanságot, a betűméretet és egyebeket az igényei szerint.
-### A GroupDocs.Annotation biztosít együttműködési szolgáltatásokat?
-Igen, a GroupDocs.Annotation megkönnyíti az együttműködést azáltal, hogy a felhasználók megjegyzéseket, válaszokat és megjegyzéseket adhatnak a dokumentumokhoz.
-### Van ingyenes próbaverzió?
- Igen, igénybe veheti az ingyenes próbaverziót innen[itt](https://releases.groupdocs.com/).
-### Hol kaphatok támogatást a GroupDocs.Annotation-hoz?
- Támogatást kaphat a[GroupDocs.Annotation fórum](https://forum.groupdocs.com/c/annotation/10).
+### Kompatibilis a GroupDocs.Annotation különböző dokumentumformátumokkal?
+Igen, a GroupDocs.Annotation számos dokumentumformátumot támogat, beleértve a PDF, Word, Excel, PowerPoint és egyebeket.
+### Testreszabhatom a megjegyzések megjelenését?
+Természetesen testreszabhatja a megjegyzések tulajdonságait, például a színt, az átlátszóságot, a betűméretet és egyebeket az igényei szerint.
+### A GroupDocs.Annotation biztosít együttműködési funkciókat?
+Igen, a GroupDocs.Annotation megkönnyíti az együttműködést azáltal, hogy lehetővé teszi a felhasználók számára, hogy megjegyzéseket, válaszokat és jegyzeteket fűzzenek a dokumentumokhoz.
+### Van elérhető ingyenes próbaverzió?
+Igen, igénybe vehet egy ingyenes próbaverziót a következő címen: [itt](https://releases.groupdocs.com/).
+### Hol kaphatok támogatást a GroupDocs.Annotation-höz?
+Támogatást kaphatsz a [GroupDocs.Annotation fórum](https://forum.groupdocs.com/c/annotation/10).

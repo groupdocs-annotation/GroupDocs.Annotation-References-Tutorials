@@ -1,25 +1,25 @@
 ---
-title: Legen Sie die Auflösung der Dokumentvorschau fest
-linktitle: Legen Sie die Auflösung der Dokumentvorschau fest
-second_title: GroupDocs.Annotation .NET-API
-description: Verbessern Sie die Zusammenarbeit an Dokumenten mit Groupdocs.Annotation für .NET und optimieren Sie die Annotations- und Vorschaufunktionen nahtlos.
-weight: 23
-url: /de/net/advanced-usage/set-document-preview-resolution/
+"description": "Verbessern Sie die Zusammenarbeit an Dokumenten mit Groupdocs.Annotation für .NET und optimieren Sie die Funktionen für Anmerkungen und Vorschauen nahtlos."
+"linktitle": "Festlegen der Auflösung der Dokumentvorschau"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Festlegen der Auflösung der Dokumentvorschau"
+"url": "/de/net/advanced-usage/set-document-preview-resolution/"
+"weight": 23
 ---
 
-# Legen Sie die Auflösung der Dokumentvorschau fest
+# Festlegen der Auflösung der Dokumentvorschau
 
 ## Einführung
-Im heutigen digitalen Zeitalter sind effiziente Dokumentenverwaltung und Zusammenarbeit für Unternehmen und Privatpersonen gleichermaßen von größter Bedeutung. Angesichts der Fülle an Dokumenten, die täglich im Umlauf sind, kann die Gewährleistung nahtloser Anmerkungs- und Vorschaufunktionen die Produktivität erheblich steigern und Arbeitsabläufe optimieren. Hier kommt Groupdocs.Annotation für .NET ins Spiel – ein leistungsstarkes Toolkit, das Entwickler mit robusten Anmerkungsfunktionen für verschiedene Dokumentformate ausstatten soll.
+Im digitalen Zeitalter sind effizientes Dokumentenmanagement und die Zusammenarbeit für Unternehmen und Privatpersonen gleichermaßen unerlässlich. Angesichts der täglich im Umlauf befindlichen Dokumentenflut können nahtlose Annotations- und Vorschaufunktionen die Produktivität deutlich steigern und Arbeitsabläufe optimieren. Groupdocs.Annotation für .NET ist ein leistungsstarkes Toolkit, das Entwicklern robuste Annotationsfunktionen für verschiedene Dokumentformate bietet.
 ## Voraussetzungen
-Bevor Sie sich an die Nutzung der Funktionen von Groupdocs.Annotation für .NET machen, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
-1.  Installation von Groupdocs.Annotation für .NET: Beginnen Sie mit dem Herunterladen und Installieren der Groupdocs.Annotation für .NET-Bibliothek. Die benötigten Dateien erhalten Sie von der[Download-Link](https://releases.groupdocs.com/annotation/net/).
+Bevor Sie die Funktionen von Groupdocs.Annotation für .NET nutzen, stellen Sie sicher, dass die folgenden Voraussetzungen erfüllt sind:
+1. Installation von Groupdocs.Annotation für .NET: Laden Sie zunächst die Bibliothek Groupdocs.Annotation für .NET herunter und installieren Sie sie. Die benötigten Dateien finden Sie im [Download-Link](https://releases.groupdocs.com/annotation/net/).
 2. Entwicklungsumgebung: Richten Sie eine geeignete Entwicklungsumgebung ein, einschließlich Visual Studio oder einer anderen bevorzugten IDE für die .NET-Entwicklung.
-3. Zugriff auf Dokumentation: Machen Sie sich mit der umfassenden Dokumentation von Groupdocs.Annotation für .NET vertraut. Sie können sich auf die beziehen[Dokumentation](https://tutorials.groupdocs.com/annotation/net/) für detaillierte Einblicke in die Funktionalitäten und Nutzung der Bibliothek.
-4. Grundlegendes Verständnis von .NET Framework: Stellen Sie sicher, dass Sie über grundlegende Kenntnisse des .NET Frameworks und der Programmiersprache C# verfügen, um Groupdocs.Annotation für .NET effektiv nutzen zu können.
+3. Zugriff auf die Dokumentation: Machen Sie sich mit der umfassenden Dokumentation von Groupdocs.Annotation für .NET vertraut. Sie finden die [Dokumentation](https://tutorials.groupdocs.com/annotation/net/) für detaillierte Einblicke in die Funktionalitäten und Nutzung der Bibliothek.
+4. Grundlegende Kenntnisse des .NET Frameworks: Stellen Sie sicher, dass Sie über grundlegende Kenntnisse des .NET Frameworks und der Programmiersprache C# verfügen, um Groupdocs.Annotation für .NET effektiv nutzen zu können.
 
-## Notwendige Namespaces importieren
-Um Ihre Reise mit Groupdocs.Annotation für .NET zu starten, importieren Sie die erforderlichen Namespaces in Ihr Projekt. Dieser Schritt gewährleistet eine nahtlose Integration und Zugriff auf die Funktionalitäten der Bibliothek innerhalb Ihrer Codebasis.
+## Importieren der erforderlichen Namespaces
+Um Ihre Arbeit mit Groupdocs.Annotation für .NET zu starten, importieren Sie die benötigten Namespaces in Ihr Projekt. Dieser Schritt gewährleistet die nahtlose Integration und den Zugriff auf die Funktionen der Bibliothek innerhalb Ihrer Codebasis.
 
 ```csharp
 using System;
@@ -27,15 +27,15 @@ using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 
-Die Verbesserung der Auflösung der Dokumentvorschau ist von entscheidender Bedeutung für die Gewährleistung von Klarheit und Lesbarkeit, insbesondere beim Umgang mit detaillierten Dokumenten. Sehen wir uns an, wie Sie dies mit Groupdocs.Annotation für .NET erreichen können:
+Die Verbesserung der Auflösung der Dokumentvorschau ist entscheidend für Klarheit und Lesbarkeit, insbesondere bei detaillierten Dokumenten. Sehen wir uns an, wie dies mit Groupdocs.Annotation für .NET erreicht werden kann:
 ## Schritt 1: Annotator initialisieren
-Beginnen Sie mit der Initialisierung des Annotator-Objekts mit dem Pfad des Eingabedokuments.
+Beginnen Sie mit der Initialisierung des Annotator-Objekts mit dem Eingabedokumentpfad.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
 ## Schritt 2: Vorschauoptionen konfigurieren
-Definieren Sie die Vorschauoptionen, einschließlich der gewünschten Seitenauflösung und des gewünschten Formats. Geben Sie außerdem den Pfad an, in dem die generierten Vorschauen gespeichert werden.
+Definieren Sie die Vorschauoptionen, einschließlich der gewünschten Seitenauflösung und des Seitenformats. Geben Sie außerdem den Pfad an, in dem die generierten Vorschauen gespeichert werden.
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -43,34 +43,34 @@ Definieren Sie die Vorschauoptionen, einschließlich der gewünschten Seitenaufl
         return File.Create(pagePath);
     });
 ```
-## Schritt 3: Passen Sie die Vorschaueinstellungen an
-Passen Sie das Vorschauformat und die Auflösung entsprechend Ihren Anforderungen an. In diesem Beispiel stellen wir die Auflösung für optimale Klarheit auf 144 DPI ein.
+## Schritt 3: Vorschaueinstellungen anpassen
+Passen Sie das Vorschauformat und die Auflösung Ihren Anforderungen an. In diesem Beispiel stellen wir die Auflösung für optimale Klarheit auf 144 DPI ein.
 ```csharp
     previewOptions.PreviewFormat = PreviewFormats.PNG;
     previewOptions.Resolution = 144;
 ```
-## Schritt 4: Dokumentvorschau erstellen
-Verwenden Sie die GeneratePreview-Methode, um Vorschauen für das Dokument basierend auf den konfigurierten Optionen zu generieren.
+## Schritt 4: Dokumentvorschau generieren
+Verwenden Sie die Methode „GeneratePreview“, um basierend auf den konfigurierten Optionen Vorschauen für das Dokument zu generieren.
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 ```
 ## Schritt 5: Erfolgsmeldung anzeigen
-Informieren Sie den Benutzer über die erfolgreiche Erstellung der Dokumentvorschau und geben Sie den Pfad des Ausgabeverzeichnisses als Referenz an.
+Informieren Sie den Benutzer über die erfolgreiche Generierung der Dokumentvorschau und geben Sie den Ausgabeverzeichnispfad für Tutorials an.
 ```csharp
     Console.WriteLine($"\nDocument preview with resolution generated successfully.\nCheck output in {"Your Document Directory"}.");
 }
 ```
 
 ## Abschluss
-Zusammenfassend lässt sich sagen, dass Groupdocs.Annotation für .NET Entwickler in die Lage versetzt, die Dokumentanmerkungs- und Vorschaufunktionen in ihren Anwendungen zu verbessern. Wenn Sie die oben beschriebene Schritt-für-Schritt-Anleitung befolgen, können Sie die Bibliothek nahtlos integrieren und nutzen, um die Anzeige von Dokumenten zu verbessern und so die Zusammenarbeit und Produktivität zu verbessern.
-## FAQs
+Zusammenfassend lässt sich sagen, dass Groupdocs.Annotation für .NET Entwicklern ermöglicht, die Dokumentannotation und -vorschau in ihren Anwendungen zu verbessern. Mit der oben beschriebenen Schritt-für-Schritt-Anleitung können Sie die Bibliothek nahtlos integrieren und nutzen, um die Dokumentanzeige zu verbessern und so die Zusammenarbeit und Produktivität zu steigern.
+## Häufig gestellte Fragen
 ### Ist Groupdocs.Annotation für .NET mit allen Dokumentformaten kompatibel?
 Ja, Groupdocs.Annotation für .NET unterstützt eine Vielzahl von Dokumentformaten, darunter PDF, Microsoft Word, Excel, PowerPoint und mehr.
 ### Kann ich Anmerkungsstile und -eigenschaften mit Groupdocs.Annotation für .NET anpassen?
-Absolut! Groupdocs.Annotation für .NET bietet umfangreiche Anpassungsoptionen für Annotationsstile, Eigenschaften und Verhaltensweisen, um Ihren spezifischen Anforderungen gerecht zu werden.
+Absolut! Groupdocs.Annotation für .NET bietet umfangreiche Anpassungsmöglichkeiten für Anmerkungsstile, Eigenschaften und Verhaltensweisen, um Ihren spezifischen Anforderungen gerecht zu werden.
 ### Gibt es eine kostenlose Testversion für Groupdocs.Annotation für .NET?
-Ja, Sie können die Funktionen von Groupdocs.Annotation für .NET erkunden, indem Sie die verfügbare kostenlose Testversion nutzen[Hier](https://releases.groupdocs.com/).
+Ja, Sie können die Funktionen von Groupdocs.Annotation für .NET erkunden, indem Sie die kostenlose Testversion nutzen. [Hier](https://releases.groupdocs.com/).
 ### Wie erhalte ich technischen Support für Groupdocs.Annotation für .NET?
- Für technische Hilfe und Supportanfragen können Sie die besuchen[Groupdocs-Anmerkungsforum](https://forum.groupdocs.com/c/annotation/10) Hier können Experten und Community-Mitglieder Ratschläge und Lösungen geben.
+Für technische Unterstützung und Supportanfragen besuchen Sie bitte die [Groupdocs-Annotation-Forum](https://forum.groupdocs.com/c/annotation/10) wo Experten und Community-Mitglieder Anleitungen und Lösungen bieten können.
 ### Kann ich eine temporäre Lizenz für Groupdocs.Annotation für .NET erhalten?
- Ja, wenn Sie eine temporäre Lizenz für Evaluierungs- oder Entwicklungszwecke benötigen, können Sie diese bei erhalten[temporäre Lizenzseite](https://purchase.groupdocs.com/temporary-license/).
+Ja, wenn Sie eine temporäre Lizenz für Evaluierungs- oder Entwicklungszwecke benötigen, können Sie diese von der [Seite mit temporärer Lizenz](https://purchase.groupdocs.com/temporary-license/).

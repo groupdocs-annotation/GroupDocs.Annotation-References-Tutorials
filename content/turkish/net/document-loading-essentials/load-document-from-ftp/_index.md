@@ -1,24 +1,24 @@
 ---
-title: Belgeyi FTP'den Yükle
-linktitle: Belgeyi FTP'den Yükle
-second_title: GroupDocs.Annotation .NET API'si
-description: Sorunsuz belge açıklaması için .NET uygulamalarınızı GroupDocs.Annotation ile geliştirin. Adım adım eğitim dahildir.
-weight: 12
-url: /tr/net/document-loading-essentials/load-document-from-ftp/
+"description": "Kusursuz belge açıklamaları için .NET uygulamalarınızı GroupDocs.Annotation ile geliştirin. Adım adım eğitim dahildir."
+"linktitle": "FTP'den Belge Yükle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "FTP'den Belge Yükle"
+"url": "/tr/net/document-loading-essentials/load-document-from-ftp/"
+"weight": 12
 ---
 
-# Belgeyi FTP'den Yükle
+# FTP'den Belge Yükle
 
 ## giriiş
-GroupDocs.Annotation for .NET, .NET uygulamaları içindeki belge açıklama yeteneklerini zahmetsizce kolaylaştırmak için tasarlanmış çok yönlü bir kitaplıktır. İster PDF'ler, Microsoft Office belgeleri, resimler veya diğer formatlarla çalışıyor olun, bu kitaplık, işbirliğini ve belge yönetimini geliştirmek amacıyla yorumlar, vurgular ve şekiller gibi ek açıklamalar eklemek için birleşik bir çözüm sunar.
-## Önkoşullar
-Eğiticiye dalmadan önce aşağıdaki önkoşulların yerine getirildiğinden emin olun:
-1. C# bilgisi: C# programlama dilinde yeterlilik, bu eğitimde sağlanan kod örneklerini anlamak ve uygulamak için çok önemlidir.
-2.  GroupDocs.Annotation for .NET: GroupDocs.Annotation for .NET'i şuradan indirip yüklediğinizden emin olun:[İndirme: {link](https://releases.groupdocs.com/annotation/net/). Kütüphaneyi .NET projenize başarıyla entegre etmek için kurulum talimatlarını izleyin.
+GroupDocs.Annotation for .NET, .NET uygulamaları içinde belge açıklama yeteneklerini zahmetsizce kolaylaştırmak için tasarlanmış çok yönlü bir kütüphanedir. İster PDF'lerle, ister Microsoft Office belgeleriyle, ister resimlerle veya diğer biçimlerle uğraşıyor olun, bu kütüphane iş birliğini ve belge yönetimini geliştirmek için yorumlar, vurgular ve şekiller gibi açıklamalar eklemek için birleşik bir çözüm sunar.
+## Ön koşullar
+Eğitime başlamadan önce aşağıdaki ön koşulların mevcut olduğundan emin olun:
+1. C# Bilgisi: Bu eğitimde sunulan kod örneklerini anlamak ve uygulamak için C# programlama dilinde yeterliliğe sahip olmak şarttır.
+2. GroupDocs.Annotation for .NET: GroupDocs.Annotation for .NET'i indirip kurduğunuzdan emin olun. [indirme bağlantısı](https://releases.groupdocs.com/annotation/net/)Kütüphaneyi .NET projenize başarılı bir şekilde entegre etmek için kurulum talimatlarını izleyin.
 ## Ad Alanlarını İçe Aktar
-GroupDocs.Annotation for .NET işlevlerini kullanmak için gerekli ad alanlarını C# projenize aktarmanız gerekir. Bu adımları takip et:
+GroupDocs.Annotation for .NET işlevselliklerini kullanmak için, gerekli ad alanlarını C# projenize aktarmanız gerekir. Şu adımları izleyin:
 
-C# projenizde kod dosyanızın başına gerekli ad alanlarını ekleyin:
+C# projenizde, kod dosyanızın başına gerekli ad alanlarını ekleyin:
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -27,23 +27,23 @@ using System.IO;
 using System.Net;
 ```
 
-Şimdi, GroupDocs.Annotation for .NET'i kullanarak FTP'den bir belge yükleme ve belgeye ek açıklamalar ekleme sürecini derinlemesine inceleyelim.
-## Adım 1: Çıkış Yolunu Tanımlayın
+Şimdi, .NET için GroupDocs.Annotation'ı kullanarak FTP'den bir belgeyi yükleme ve ona açıklamalar ekleme sürecini inceleyelim.
+## Adım 1: Çıktı Yolunu Tanımlayın
 Açıklamalı belgenin kaydedileceği çıktı yolunu belirtin.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Adım 2: Belgeyi FTP'den Yükleyin
+## Adım 2: Belgeyi FTP'den Yükle
 Sağlanan dosya yolunu kullanarak belgeyi FTP sunucusundan alın.
 ```csharp
 string filePath = "sample.pdf";
 using (Annotator annotator = new Annotator(GetFileFromFtp(filePath)))
 {
-    // Ek açıklama kodu buraya eklenecek
+    // Açıklama kodu buraya eklenecek
 }
 ```
-## 3. Adım: Ek Açıklama Ekle
-Alan açıklaması gibi istediğiniz açıklamayı tanımlayın ve belgeye ekleyin.
+## Adım 3: Açıklama Ekle
+İstenilen açıklamayı (örneğin alan açıklaması) tanımlayın ve belgeye ekleyin.
 ```csharp
 AreaAnnotation area = new AreaAnnotation()
 {
@@ -52,13 +52,13 @@ AreaAnnotation area = new AreaAnnotation()
 };
 annotator.Add(area);
 ```
-## Adım 4: Açıklamalı Belgeyi Kaydetme
+## Adım 4: Açıklamalı Belgeyi Kaydet
 Açıklamalı belgeyi belirtilen çıktı yoluna kaydedin.
 ```csharp
 annotator.Save(outputPath);
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-## Adım 5: FTP'den Dosyayı Alın
+## Adım 5: Dosyayı FTP'den Alın
 Dosyayı FTP sunucusundan alma yöntemini uygulayın.
 ```csharp
 private static Stream GetFileFromFtp(string filePath)
@@ -79,8 +79,8 @@ private static FtpWebRequest CreateRequest(Uri uri)
     return request;
 }
 ```
-## 7. Adım: Dosya Akışını Alın
-Dosya akışını FTP yanıtından alın.
+## Adım 7: Dosya Akışını Alın
+FTP yanıtından dosya akışını alın.
 ```csharp
 private static Stream GetFileStream(WebResponse response)
 {
@@ -92,15 +92,15 @@ private static Stream GetFileStream(WebResponse response)
 }
 ```
 ## Çözüm
-Sonuç olarak GroupDocs.Annotation for .NET, geliştiricilere belge açıklama işlevlerini .NET uygulamalarına sorunsuz bir şekilde entegre etme yetkisi verir. Bu eğitimde özetlenen adım adım kılavuzu izleyerek, uygulamalarınızdaki işbirliğini ve belge yönetimini geliştirerek belgeleri FTP'den verimli bir şekilde yükleyebilir ve kolaylıkla ek açıklamalar ekleyebilirsiniz.
-## SSS'ler
-### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mu?
-Evet, GroupDocs.Annotation for .NET, PDF, Microsoft Office belgeleri, resimler ve daha fazlası dahil olmak üzere çok çeşitli belge formatlarını destekler.
-### GroupDocs.Annotation for .NET kullanılarak eklenen ek açıklamaların görünümünü özelleştirebilir miyim?
-Kesinlikle, GroupDocs.Annotation for .NET, renkler, stiller ve şekiller de dahil olmak üzere ek açıklama görünümü için kapsamlı özelleştirme seçenekleri sunar.
-### GroupDocs.Annotation for .NET, bulut depolama hizmetleri için destek sağlıyor mu?
-Evet, GroupDocs.Annotation for .NET, popüler bulut depolama hizmetleriyle sorunsuz bir şekilde bütünleşerek Dropbox, Google Drive ve OneDrive gibi hizmetlerden belge yüklemenize ve kaydetmenize olanak tanır.
-### GroupDocs.Annotation for .NET'in deneme sürümü mevcut mu?
- Evet, GroupDocs.Annotation for .NET'in özelliklerini şuradan ücretsiz deneme sürümünü indirerek keşfedebilirsiniz.[yayın sayfası](https://releases.groupdocs.com/).
-### GroupDocs.Annotation for .NET için nasıl teknik yardım veya destek alabilirim?
- Teknik yardım, sorun giderme veya genel sorularınız için GroupDocs.Annotation for .NET sayfasını ziyaret edebilirsiniz.[destek Forumu](https://forum.groupdocs.com/c/annotation/10).
+Sonuç olarak, GroupDocs.Annotation for .NET, geliştiricilerin belge açıklama işlevlerini .NET uygulamalarına sorunsuz bir şekilde entegre etmelerini sağlar. Bu eğitimde özetlenen adım adım kılavuzu izleyerek, FTP'den belgeleri verimli bir şekilde yükleyebilir ve kolayca açıklamalar ekleyebilir, böylece uygulamalarınızdaki iş birliğini ve belge yönetimini geliştirebilirsiniz.
+## SSS
+### GroupDocs.Annotation for .NET tüm belge formatlarıyla uyumlu mudur?
+Evet, GroupDocs.Annotation for .NET, PDF, Microsoft Office belgeleri, resimler ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
+### GroupDocs.Annotation for .NET kullanılarak eklenen açıklamaların görünümünü özelleştirebilir miyim?
+Kesinlikle, GroupDocs.Annotation for .NET, renkler, stiller ve şekiller de dahil olmak üzere açıklama görünümü için kapsamlı özelleştirme seçenekleri sunar.
+### GroupDocs.Annotation for .NET bulut depolama servislerini destekliyor mu?
+Evet, GroupDocs.Annotation for .NET, popüler bulut depolama hizmetleriyle sorunsuz bir şekilde bütünleşerek Dropbox, Google Drive ve OneDrive gibi hizmetlerden belgeleri yüklemenize ve kaydetmenize olanak tanır.
+### GroupDocs.Annotation for .NET için deneme sürümü mevcut mu?
+Evet, GroupDocs.Annotation for .NET'in özelliklerini ücretsiz deneme sürümünü indirerek keşfedebilirsiniz. [yayın sayfası](https://releases.groupdocs.com/).
+### GroupDocs.Annotation for .NET için teknik yardım veya desteği nasıl alabilirim?
+Teknik yardım, sorun giderme veya genel sorular için GroupDocs.Annotation for .NET sayfasını ziyaret edebilirsiniz. [destek forumu](https://forum.groupdocs.com/c/annotation/10).

@@ -1,23 +1,23 @@
 ---
-title: Thêm chú thích mũi tên vào tài liệu
-linktitle: Thêm chú thích mũi tên vào tài liệu
-second_title: GroupDocs.Annotation .NET API
-description: Tìm hiểu cách thêm chú thích mũi tên vào tài liệu của bạn bằng GroupDocs.Annotation for .NET. Nâng cao tính rõ ràng và tính tương tác của tài liệu một cách dễ dàng.
-weight: 11
-url: /vi/net/unlocking-annotation-power/add-arrow-annotation/
+"description": "Tìm hiểu cách thêm chú thích mũi tên vào tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Tăng cường tính rõ ràng và tính tương tác của tài liệu một cách dễ dàng."
+"linktitle": "Thêm chú thích mũi tên vào tài liệu"
+"second_title": "GroupDocs.Chú thích API .NET"
+"title": "Thêm chú thích mũi tên vào tài liệu"
+"url": "/vi/net/unlocking-annotation-power/add-arrow-annotation/"
+"weight": 11
 ---
 
 # Thêm chú thích mũi tên vào tài liệu
 
 ## Giới thiệu
-Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm chú thích mũi tên vào tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Chú thích mũi tên rất hữu ích để chỉ hướng hoặc chỉ ra các phần tử cụ thể trong tài liệu.
+Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn quy trình thêm chú thích mũi tên vào tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Chú thích mũi tên hữu ích để chỉ hướng hoặc chỉ ra các thành phần cụ thể trong tài liệu.
 ## Điều kiện tiên quyết
 Trước khi bắt đầu, hãy đảm bảo bạn có những điều sau:
-1.  GroupDocs.Annotation for .NET: Cài đặt thư viện GroupDocs.Annotation cho .NET. Bạn có thể tải nó xuống từ[đây](https://releases.groupdocs.com/annotation/net/).
-2. Môi trường phát triển: Đảm bảo bạn có môi trường phát triển được thiết lập để phát triển .NET, bao gồm Visual Studio hoặc bất kỳ IDE ưa thích nào khác.
+1. GroupDocs.Annotation cho .NET: Cài đặt thư viện GroupDocs.Annotation cho .NET. Bạn có thể tải xuống từ [đây](https://releases.groupdocs.com/annotation/net/).
+2. Môi trường phát triển: Đảm bảo bạn đã thiết lập môi trường phát triển cho phát triển .NET, bao gồm Visual Studio hoặc bất kỳ IDE nào khác.
 
 ## Nhập không gian tên
-Trước tiên, bạn cần nhập các không gian tên cần thiết để truy cập vào các lớp và phương thức cần thiết cho chú thích.
+Đầu tiên, bạn cần nhập các không gian tên cần thiết để truy cập các lớp và phương thức cần thiết cho chú thích.
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -34,7 +34,7 @@ using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
 ## Bước 2: Tạo chú thích mũi tên
-Tạo một thể hiện của lớp ArrowAnnotation và xác định các thuộc tính của nó như vị trí, thông báo, độ mờ, màu bút, kiểu, chiều rộng, v.v.
+Tạo một thể hiện của lớp ArrowAnnotation và xác định các thuộc tính của nó như vị trí, thông điệp, độ mờ, màu bút, kiểu, chiều rộng, v.v.
 ```csharp
 	ArrowAnnotation arrow = new ArrowAnnotation
 	{
@@ -62,7 +62,7 @@ Tạo một thể hiện của lớp ArrowAnnotation và xác định các thu�
 	};
 ```
 ## Bước 3: Thêm chú thích
- Thêm chú thích mũi tên vào tài liệu bằng cách sử dụng`Add` phương pháp của người chú thích.
+Thêm chú thích mũi tên vào tài liệu bằng cách sử dụng `Add` phương pháp của người chú thích.
 ```csharp
 	annotator.Add(arrow);
 ```
@@ -77,18 +77,18 @@ Hiển thị thông báo xác nhận cho biết việc lưu tài liệu thành c
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Bây giờ bạn đã thêm thành công chú thích mũi tên vào tài liệu của mình bằng GroupDocs.Annotation for .NET.
+Bây giờ bạn đã thêm thành công chú thích mũi tên vào tài liệu của mình bằng GroupDocs.Annotation cho .NET.
 
 ## Phần kết luận
-Trong hướng dẫn này, chúng tôi đã đề cập đến quá trình thêm chú thích mũi tên vào tài liệu bằng GroupDocs.Annotation cho .NET. Bằng cách làm theo các bước này, bạn có thể cải thiện tài liệu của mình bằng các chỉ báo định hướng rõ ràng, làm cho chúng có nhiều thông tin và hấp dẫn hơn.
+Trong hướng dẫn này, chúng tôi đã trình bày quy trình thêm chú thích mũi tên vào tài liệu bằng GroupDocs.Annotation cho .NET. Bằng cách làm theo các bước này, bạn có thể cải thiện tài liệu của mình bằng các chỉ báo hướng rõ ràng, giúp chúng mang tính thông tin và hấp dẫn hơn.
 ## Câu hỏi thường gặp
-### Tôi có thể tùy chỉnh hình thức của chú thích mũi tên không?
-Có, bạn có thể tùy chỉnh các thuộc tính khác nhau như màu sắc, kiểu dáng, chiều rộng và độ mờ để phù hợp với sở thích và yêu cầu tài liệu của bạn.
-### GroupDocs.Annotation có tương thích với tất cả các định dạng tài liệu không?
+### Tôi có thể tùy chỉnh giao diện của chú thích mũi tên không?
+Có, bạn có thể tùy chỉnh nhiều thuộc tính khác nhau như màu sắc, kiểu, chiều rộng và độ mờ để phù hợp với yêu cầu của hướng dẫn và tài liệu.
+### GroupDocs.Annotation có tương thích với mọi định dạng tài liệu không?
 GroupDocs.Annotation hỗ trợ nhiều định dạng tài liệu bao gồm PDF, DOCX, PPTX, XLSX, v.v.
 ### Tôi có thể thêm chú thích theo chương trình bằng GroupDocs.Annotation không?
-Có, GroupDocs.Annotation cung cấp các API cho phép bạn thêm, chỉnh sửa và xóa chú thích khỏi tài liệu theo chương trình.
+Có, GroupDocs.Annotation cung cấp API cho phép bạn thêm, chỉnh sửa và xóa chú thích khỏi tài liệu theo chương trình.
 ### GroupDocs.Annotation có cung cấp bản dùng thử miễn phí không?
- Có, bạn có thể dùng thử GroupDocs.Annotation miễn phí bằng cách tải xuống từ[đây](https://releases.groupdocs.com/).
+Có, bạn có thể dùng thử GroupDocs.Annotation miễn phí bằng cách tải xuống từ [đây](https://releases.groupdocs.com/).
 ### Tôi có thể nhận hỗ trợ kỹ thuật cho GroupDocs.Annotation ở đâu?
-Để được hỗ trợ và trợ giúp kỹ thuật, bạn có thể truy cập diễn đàn GroupDocs.Annotation[đây](https://forum.groupdocs.com/c/annotation/10).
+Để được hỗ trợ và trợ giúp kỹ thuật, bạn có thể truy cập diễn đàn GroupDocs.Annotation [đây](https://forum.groupdocs.com/c/annotation/10).

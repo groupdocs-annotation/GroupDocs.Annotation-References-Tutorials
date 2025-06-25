@@ -1,24 +1,24 @@
 ---
-title: Dodaj komponent rozwijany do dokumentu PDF
-linktitle: Dodaj komponent rozwijany do dokumentu PDF
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak dodawać komponenty rozwijane do plików PDF za pomocą GroupDocs.Annotation dla .NET. Postępuj zgodnie z naszym przewodnikiem krok po kroku, aby zapewnić bezproblemową integrację.
-weight: 12
-url: /pl/net/document-components/add-dropdown-component-to-pdf/
+"description": "Dowiedz się, jak dodawać komponenty rozwijane do plików PDF za pomocą GroupDocs.Annotation dla .NET. Postępuj zgodnie z naszym przewodnikiem krok po kroku, aby zapewnić bezproblemową integrację."
+"linktitle": "Dodaj komponent rozwijanego menu do dokumentu PDF"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Dodaj komponent rozwijanego menu do dokumentu PDF"
+"url": "/pl/net/document-components/add-dropdown-component-to-pdf/"
+"weight": 12
 ---
 
-# Dodaj komponent rozwijany do dokumentu PDF
+# Dodaj komponent rozwijanego menu do dokumentu PDF
 
 ## Wstęp
-GroupDocs.Annotation dla .NET zapewnia potężny zestaw narzędzi do programowego dodawania adnotacji do dokumentów PDF. Jedną z przydatnych funkcji jest możliwość dodawania rozwijanych komponentów do dokumentów PDF, zwiększając ich interaktywność i użyteczność.
-## Warunki wstępne
-Zanim zaczniesz, upewnij się, że masz następujące elementy:
-1.  GroupDocs.Adnotacja dla .NET: Pobierz i zainstaluj bibliotekę z[Tutaj](https://releases.groupdocs.com/annotation/net/).
-2. Środowisko programistyczne: skonfiguruj środowisko programistyczne .NET.
-3. Dokument PDF: Przygotuj dokument PDF, do którego chcesz dodać komponent rozwijany.
+GroupDocs.Annotation dla .NET zapewnia potężny zestaw narzędzi do programowego adnotowania dokumentów PDF. Jedną z przydatnych funkcji jest możliwość dodawania komponentów rozwijanych do dokumentów PDF, co zwiększa ich interaktywność i użyteczność.
+## Wymagania wstępne
+Zanim zaczniesz, upewnij się, że masz następujące rzeczy:
+1. GroupDocs.Annotation dla .NET: Pobierz i zainstaluj bibliotekę z [Tutaj](https://releases.groupdocs.com/annotation/net/).
+2. Środowisko programistyczne: Skonfiguruj środowisko programistyczne .NET.
+3. Dokument PDF: Przygotuj dokument PDF, do którego chcesz dodać komponent listy rozwijanej.
 
 ## Importowanie przestrzeni nazw
-Upewnij się, że zaimportowałeś niezbędne przestrzenie nazw do swojego projektu:
+Upewnij się, że importujesz niezbędne przestrzenie nazw do swojego projektu:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -33,8 +33,8 @@ Zdefiniuj ścieżkę wyjściową, w której zostanie zapisany zmodyfikowany doku
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Krok 2: Zainicjuj adnotator
- Utwórz instancję`Annotator` class, przekazując ścieżkę wejściowego dokumentu PDF:
+## Krok 2: Zainicjuj Adnotator
+Utwórz instancję `Annotator` klasę, przekazując ścieżkę do dokumentu PDF wejściowego:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
@@ -68,8 +68,8 @@ DropdownComponent dropdown = new DropdownComponent
     }
 };
 ```
-## Krok 4: Dodaj komponent rozwijany
-Dodaj komponent rozwijany do dokumentu PDF:
+## Krok 4: Dodaj komponent rozwijanego menu
+Dodaj komponent listy rozwijanej do dokumentu PDF:
 ```csharp
 annotator.Add(dropdown);
 ```
@@ -79,21 +79,21 @@ Zapisz zmodyfikowany dokument:
 annotator.Save("result.pdf");
 ```
 ## Krok 6: Wyświetl ścieżkę wyjściową
-Wyświetl komunikat informujący o pomyślnym zapisaniu dokumentu wraz ze ścieżką wyjściową:
+Wyświetl komunikat informujący o pomyślnym zapisaniu dokumentu i ścieżce wyjściowej:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Wniosek
-W tym samouczku omówiliśmy, jak ulepszyć dokumenty PDF, dodając komponenty rozwijane za pomocą GroupDocs.Annotation dla .NET. Postępując zgodnie z przewodnikiem krok po kroku, można łatwo zintegrować tę funkcjonalność z aplikacjami .NET, zapewniając użytkownikom interaktywne i dynamiczne przeglądanie dokumentów.
-## Często zadawane pytania
+W tym samouczku sprawdziliśmy, jak ulepszyć dokumenty PDF, dodając komponenty rozwijane za pomocą GroupDocs.Annotation dla .NET. Postępując zgodnie z przewodnikiem krok po kroku, możesz łatwo zintegrować tę funkcjonalność ze swoimi aplikacjami .NET, zapewniając użytkownikom interaktywne i dynamiczne doświadczenia przeglądania dokumentów.
+## Najczęściej zadawane pytania
 ### Czy mogę dostosować wygląd komponentu rozwijanego?
-Tak, możesz dostosować różne właściwości, takie jak opcje, tekst zastępczy, wymiary pudełka, kolor pióra i styl, zgodnie z własnymi wymaganiami.
-### Czy GroupDocs.Annotation for .NET jest kompatybilny ze wszystkimi wersjami .NET?
-Tak, GroupDocs.Annotation dla .NET jest kompatybilny ze wszystkimi głównymi wersjami platformy .NET.
-### Czy mogę dodać wiele elementów rozwijanych do jednego dokumentu PDF?
-Oczywiście możesz dodać dowolną liczbę rozwijanych komponentów do dokumentu PDF.
-### Czy GroupDocs.Annotation for .NET obsługuje inne typy adnotacji?
-Tak, GroupDocs.Annotation for .NET obsługuje różne typy adnotacji, w tym adnotacje tekstowe, obszarowe, punktowe i przekreślone.
-### Czy dostępna jest wersja próbna do celów testowych?
- Tak, możesz uzyskać dostęp do wersji próbnej[Tutaj](https://releases.groupdocs.com/).
+Tak, możesz dostosować różne właściwości, takie jak opcje, tekst zastępczy, wymiary pola, kolor pióra i styl, zgodnie ze swoimi wymaganiami.
+### Czy GroupDocs.Annotation dla platformy .NET jest kompatybilny ze wszystkimi wersjami platformy .NET?
+Tak, GroupDocs.Annotation dla platformy .NET jest kompatybilny ze wszystkimi głównymi wersjami platformy .NET.
+### Czy mogę dodać wiele komponentów rozwijanych do jednego dokumentu PDF?
+Oczywiście, do dokumentu PDF możesz dodać dowolną liczbę komponentów rozwijanych.
+### Czy GroupDocs.Annotation dla platformy .NET obsługuje inne typy adnotacji?
+Tak, GroupDocs.Annotation dla platformy .NET obsługuje różne typy adnotacji, w tym adnotacje tekstowe, obszarowe, punktowe i przekreślone.
+### Czy jest dostępna wersja próbna do celów testowych?
+Tak, możesz uzyskać dostęp do wersji próbnej [Tutaj](https://releases.groupdocs.com/).

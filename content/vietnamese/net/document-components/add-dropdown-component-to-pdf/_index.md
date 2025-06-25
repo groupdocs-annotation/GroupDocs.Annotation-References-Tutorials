@@ -1,20 +1,20 @@
 ---
-title: Thêm thành phần thả xuống vào tài liệu PDF
-linktitle: Thêm thành phần thả xuống vào tài liệu PDF
-second_title: GroupDocs.Annotation .NET API
-description: Tìm hiểu cách thêm các thành phần thả xuống vào tệp PDF bằng GroupDocs.Annotation for .NET. Hãy làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch.
-weight: 12
-url: /vi/net/document-components/add-dropdown-component-to-pdf/
+"description": "Tìm hiểu cách thêm thành phần thả xuống vào PDF bằng GroupDocs.Annotation cho .NET. Làm theo hướng dẫn từng bước của chúng tôi để tích hợp liền mạch."
+"linktitle": "Thêm thành phần Dropdown vào tài liệu PDF"
+"second_title": "GroupDocs.Chú thích API .NET"
+"title": "Thêm thành phần Dropdown vào tài liệu PDF"
+"url": "/vi/net/document-components/add-dropdown-component-to-pdf/"
+"weight": 12
 ---
 
-# Thêm thành phần thả xuống vào tài liệu PDF
+# Thêm thành phần Dropdown vào tài liệu PDF
 
 ## Giới thiệu
-GroupDocs.Annotation for .NET cung cấp một bộ công cụ mạnh mẽ để chú thích các tài liệu PDF theo chương trình. Một tính năng hữu ích là khả năng thêm các thành phần thả xuống vào tài liệu PDF, nâng cao tính tương tác và khả năng sử dụng của chúng.
+GroupDocs.Annotation for .NET cung cấp một bộ công cụ mạnh mẽ để chú thích tài liệu PDF theo chương trình. Một tính năng hữu ích là khả năng thêm các thành phần thả xuống vào tài liệu PDF, tăng cường tính tương tác và khả năng sử dụng của chúng.
 ## Điều kiện tiên quyết
 Trước khi bắt đầu, hãy đảm bảo bạn có những điều sau:
-1.  GroupDocs.Annotation for .NET: Tải xuống và cài đặt thư viện từ[đây](https://releases.groupdocs.com/annotation/net/).
-2. Môi trường phát triển: Đã thiết lập môi trường phát triển .NET.
+1. GroupDocs.Annotation cho .NET: Tải xuống và cài đặt thư viện từ [đây](https://releases.groupdocs.com/annotation/net/).
+2. Môi trường phát triển: Thiết lập môi trường phát triển .NET.
 3. Tài liệu PDF: Chuẩn bị tài liệu PDF mà bạn muốn thêm thành phần thả xuống.
 
 ## Nhập không gian tên
@@ -28,17 +28,17 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Models.FormatSpecificComponents.Pdf;
 using GroupDocs.Annotation.Options;
 ```
-## Bước 1: Đặt đường dẫn đầu ra
-Xác định đường dẫn đầu ra nơi tài liệu sửa đổi sẽ được lưu:
+## Bước 1: Thiết lập Đường dẫn đầu ra
+Xác định đường dẫn đầu ra nơi tài liệu đã sửa đổi sẽ được lưu:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 ## Bước 2: Khởi tạo Annotator
- Tạo một thể hiện của`Annotator` lớp bằng cách chuyển đường dẫn của tài liệu PDF đầu vào:
+Tạo một phiên bản của `Annotator` lớp bằng cách truyền đường dẫn của tài liệu PDF đầu vào:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-## Bước 3: Tạo thành phần thả xuống
+## Bước 3: Tạo thành phần Dropdown
 Xác định các thuộc tính của thành phần thả xuống:
 ```csharp
 DropdownComponent dropdown = new DropdownComponent
@@ -68,7 +68,7 @@ DropdownComponent dropdown = new DropdownComponent
     }
 };
 ```
-## Bước 4: Thêm thành phần thả xuống
+## Bước 4: Thêm thành phần Dropdown
 Thêm thành phần thả xuống vào tài liệu PDF:
 ```csharp
 annotator.Add(dropdown);
@@ -79,21 +79,21 @@ Lưu tài liệu đã sửa đổi:
 annotator.Save("result.pdf");
 ```
 ## Bước 6: Hiển thị đường dẫn đầu ra
-Hiển thị thông báo cho biết việc lưu tài liệu thành công cùng với đường dẫn đầu ra:
+Hiển thị thông báo cho biết tài liệu đã được lưu thành công cùng với đường dẫn đầu ra:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Phần kết luận
-Trong hướng dẫn này, chúng tôi đã khám phá cách cải thiện tài liệu PDF bằng cách thêm các thành phần thả xuống bằng GroupDocs.Annotation cho .NET. Bằng cách làm theo hướng dẫn từng bước, bạn có thể dễ dàng tích hợp chức năng này vào các ứng dụng .NET của mình, cung cấp cho người dùng trải nghiệm xem tài liệu động và tương tác.
+Trong hướng dẫn này, chúng tôi đã khám phá cách cải thiện tài liệu PDF bằng cách thêm các thành phần thả xuống bằng GroupDocs.Annotation cho .NET. Bằng cách làm theo hướng dẫn từng bước, bạn có thể dễ dàng tích hợp chức năng này vào các ứng dụng .NET của mình, cung cấp cho người dùng trải nghiệm xem tài liệu tương tác và động.
 ## Câu hỏi thường gặp
 ### Tôi có thể tùy chỉnh giao diện của thành phần thả xuống không?
-Có, bạn có thể tùy chỉnh các thuộc tính khác nhau như tùy chọn, văn bản giữ chỗ, kích thước hộp, màu bút và kiểu dáng theo yêu cầu của bạn.
+Có, bạn có thể tùy chỉnh nhiều thuộc tính khác nhau như tùy chọn, văn bản giữ chỗ, kích thước hộp, màu bút và kiểu dáng theo yêu cầu của bạn.
 ### GroupDocs.Annotation cho .NET có tương thích với tất cả các phiên bản .NET không?
-Có, GroupDocs.Annotation for .NET tương thích với tất cả các phiên bản chính của .NET framework.
+Có, GroupDocs.Annotation cho .NET tương thích với tất cả các phiên bản chính của .NET framework.
 ### Tôi có thể thêm nhiều thành phần thả xuống vào một tài liệu PDF không?
-Hoàn toàn có thể, bạn có thể thêm bao nhiêu thành phần thả xuống nếu cần vào tài liệu PDF.
+Hoàn toàn có thể thêm nhiều thành phần thả xuống tùy theo nhu cầu vào tài liệu PDF.
 ### GroupDocs.Annotation cho .NET có hỗ trợ các loại chú thích khác không?
-Có, GroupDocs.Annotation for .NET hỗ trợ nhiều loại chú thích khác nhau bao gồm chú thích văn bản, vùng, điểm và gạch ngang.
-### Có phiên bản dùng thử nào dành cho mục đích thử nghiệm không?
- Có, bạn có thể truy cập phiên bản dùng thử[đây](https://releases.groupdocs.com/).
+Có, GroupDocs.Annotation cho .NET hỗ trợ nhiều loại chú thích khác nhau bao gồm chú thích văn bản, vùng, điểm và gạch ngang.
+### Có phiên bản dùng thử nào để thử nghiệm không?
+Có, bạn có thể truy cập phiên bản dùng thử [đây](https://releases.groupdocs.com/).

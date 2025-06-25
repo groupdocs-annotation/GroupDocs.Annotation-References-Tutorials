@@ -1,20 +1,20 @@
 ---
-title: Aangepaste lettertypen laden
-linktitle: Aangepaste lettertypen laden
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u naadloos aangepaste lettertypen kunt laden in GroupDocs.Annotation voor .NET om documentannotaties te verbeteren. Volg onze stap-voor-stap voor eenvoudige integratie.
-weight: 20
-url: /nl/net/advanced-usage/loading-custom-fonts/
+"description": "Leer hoe je naadloos aangepaste lettertypen kunt laden in GroupDocs.Annotation voor .NET om documentannotaties te verbeteren. Volg onze stapsgewijze instructies voor eenvoudige integratie."
+"linktitle": "Aangepaste lettertypen laden"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Aangepaste lettertypen laden"
+"url": "/nl/net/advanced-usage/loading-custom-fonts/"
+"weight": 20
 ---
 
 # Aangepaste lettertypen laden
 
 ## Invoering
-GroupDocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos annotatiefuncties aan hun .NET-applicaties kunnen toevoegen. Een van de belangrijkste functionaliteiten die het biedt, is de mogelijkheid om aangepaste lettertypen te laden, waardoor verbeterde aanpassingen en flexibiliteit bij documentannotatie mogelijk zijn.
+GroupDocs.Annotation voor .NET is een krachtige bibliotheek waarmee ontwikkelaars moeiteloos annotatiefuncties aan hun .NET-applicaties kunnen toevoegen. Een van de belangrijkste functies is de mogelijkheid om aangepaste lettertypen te laden, wat zorgt voor verbeterde aanpassingsmogelijkheden en flexibiliteit bij het annoteren van documenten.
 ## Vereisten
-Voordat u doorgaat met de zelfstudie, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
-1.  GroupDocs.Annotation voor .NET Library: Download en installeer de bibliotheek van[hier](https://releases.groupdocs.com/annotation/net/).
-2. .NET-ontwikkelomgeving: Zorg ervoor dat u een werkomgeving hebt ingesteld voor .NET-ontwikkeling.
+Voordat u met de tutorial begint, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+1. GroupDocs.Annotation voor .NET-bibliotheek: download en installeer de bibliotheek van [hier](https://releases.groupdocs.com/annotation/net/).
+2. .NET-ontwikkelomgeving: zorg ervoor dat u een werkomgeving hebt ingericht voor .NET-ontwikkeling.
 3. Toegang tot aangepaste lettertypen: bereid de aangepaste lettertypen voor die u in uw toepassing wilt laden.
 
 ## Naamruimten importeren
@@ -26,15 +26,15 @@ using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 ## Stap 1: Annotatorobject instantiëren
- Maak een exemplaar van de`Annotator` klasse door het pad naar het invoer-PDF-document op te geven, samen met de aangepaste lettertypemappen:
+Maak een exemplaar van de `Annotator` klasse door het pad naar het PDF-invoerdocument op te geven, samen met de aangepaste lettertypemappen:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf", new LoadOptions { FontDirectories = new List<string> { Constants.GetFontDirectory() } }))
 {
-    // Uw code voor verdere bewerkingen komt hier terecht
+    // Uw code voor verdere bewerkingen komt hier te staan
 }
 ```
-## Stap 2: Configureer voorbeeldopties
-Definieer de voorbeeldopties om aan te geven hoe de documentvoorbeelden worden gegenereerd. U kunt opties instellen zoals het voorbeeldformaat, paginanummers, enz.:
+## Stap 2: Preview-opties configureren
+Definieer de voorbeeldopties om aan te geven hoe de documentvoorbeelden worden gegenereerd. U kunt opties instellen zoals voorbeeldindeling, paginanummers, enz.:
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 {
@@ -44,27 +44,27 @@ PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 previewOptions.PreviewFormat = PreviewFormats.PNG;
 previewOptions.PageNumbers = new int[] { 1, 2, 3, 4 };
 ```
-## Stap 3: Genereer documentvoorbeelden
- Maak gebruik van de`GeneratePreview` werkwijze van de`Document` eigenschap om voorbeelden te genereren met aangepaste lettertypen:
+## Stap 3: Documentvoorbeelden genereren
+Gebruik de `GeneratePreview` methode van de `Document` Eigenschap om voorbeelden te genereren met aangepaste lettertypen:
 ```csharp
 annotator.Document.GeneratePreview(previewOptions);
 ```
-## Stap 4: Geef het uitvoerpad weer
-Geef ten slotte een bericht weer dat de succesvolle generatie van documentvoorbeelden aangeeft, samen met het pad naar de uitvoermap:
+## Stap 4: Uitvoerpad weergeven
+Geef ten slotte een bericht weer waarin staat dat de documentvoorbeelden succesvol zijn gegenereerd, samen met het pad naar de uitvoermap:
 ```csharp
 Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {"Your Document Directory"}.");
 ```
 
 ## Conclusie
-Concluderend biedt het laden van aangepaste lettertypen in GroupDocs.Annotation voor .NET ontwikkelaars de flexibiliteit om documentannotaties aan te passen aan hun vereisten. Door de stappen in deze zelfstudie te volgen, kunt u aangepaste lettertypen naadloos integreren in uw .NET-toepassingen en de annotatie-ervaring voor gebruikers verbeteren.
+Kortom, het laden van aangepaste lettertypen in GroupDocs.Annotation voor .NET biedt ontwikkelaars de flexibiliteit om documentannotaties naar eigen wens aan te passen. Door de stappen in deze tutorial te volgen, kunt u aangepaste lettertypen naadloos integreren in uw .NET-applicaties en de annotatie-ervaring voor gebruikers verbeteren.
 ## Veelgestelde vragen
-### Kan ik meerdere aangepaste lettertypen tegelijk laden?
- Ja, u kunt meerdere lettertypemappen opgeven bij het instantiëren van het`Annotator` voorwerp.
-### Zijn er beperkingen op de ondersteunde lettertypen?
+### Kan ik meerdere aangepaste lettertypen tegelijkertijd laden?
+Ja, u kunt meerdere lettertypemappen opgeven bij het instantiëren van de `Annotator` voorwerp.
+### Zijn er beperkingen aan de ondersteunde lettertypen?
 GroupDocs.Annotation voor .NET ondersteunt een breed scala aan lettertypen, waaronder TrueType (.ttf) en OpenType (.otf) lettertypen.
-### Kan ik de geladen lettertypen tijdens runtime dynamisch wijzigen?
+### Kan ik de geladen lettertypen dynamisch wijzigen tijdens runtime?
 Ja, u kunt de lettertypemappen dynamisch wijzigen en de documentannotaties indien nodig opnieuw laden.
 ### Ondersteunt GroupDocs.Annotation het insluiten van lettertypen in uitvoerdocumenten?
 Ja, u kunt aangepaste lettertypen in de uitvoerdocumenten insluiten om een consistente weergave op verschillende platforms te garanderen.
-### Is er een manier om lettertypelicenties binnen de toepassing af te handelen?
+### Is er een manier om lettertypelicenties binnen de applicatie te beheren?
 GroupDocs.Annotation biedt opties voor het beheren van lettertypelicenties, inclusief tijdelijke licenties voor evaluatiedoeleinden.

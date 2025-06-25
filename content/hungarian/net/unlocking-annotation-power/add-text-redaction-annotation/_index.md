@@ -1,20 +1,20 @@
 ---
-title: Szövegszerkesztési megjegyzés hozzáadása a dokumentumhoz
-linktitle: Szövegszerkesztési megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat hozzá szövegszerkesztő megjegyzéseket PDF-dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Könnyedén megvédheti az érzékeny információkat.
-weight: 23
-url: /hu/net/unlocking-annotation-power/add-text-redaction-annotation/
+"description": "Tanulja meg, hogyan adhat hozzá szöveges kihagyási megjegyzéseket PDF dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Védje meg bizalmas adatait könnyedén."
+"linktitle": "Szövegkihagyási jegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Szövegkihagyási jegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-text-redaction-annotation/"
+"weight": 23
 ---
 
-# Szövegszerkesztési megjegyzés hozzáadása a dokumentumhoz
+# Szövegkihagyási jegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
-Szövegszerkesztő megjegyzés hozzáadása a dokumentumhoz kulcsfontosságú lépés lehet a bizalmas információk biztonságos kezelésében. A GroupDocs.Annotation for .NET robusztus megoldást kínál ennek zökkenőmentes elérésére. Ebben az oktatóanyagban lépésről lépésre végigvezetjük Önt a szövegszerkesztő megjegyzések dokumentumához való hozzáadásának folyamatán.
+szöveges kivonási megjegyzések hozzáadása egy dokumentumhoz kulcsfontosságú lépés lehet a bizalmas információk biztonságos kezelésében. A GroupDocs.Annotation for .NET robusztus megoldást kínál ennek zökkenőmentes megvalósítására. Ebben az oktatóanyagban lépésről lépésre végigvezetjük Önt a szöveges kivonási megjegyzések dokumentumhoz való hozzáadásának folyamatán.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy a következő előfeltételek teljesülnek:
-1.  GroupDocs.Annotation for .NET: Győződjön meg arról, hogy telepítette a GroupDocs.Annotation for .NET könyvtárat. Letöltheti a[weboldal](https://releases.groupdocs.com/annotation/net/).
-2. Fejlesztési környezet: Hozzon létre egy fejlesztői környezetet .NET-kompatibilis IDE-vel, például a Visual Studio-val.
+Mielőtt elkezdenénk, győződjünk meg arról, hogy a következő előfeltételek teljesülnek:
+1. GroupDocs.Annotation for .NET: Győződjön meg róla, hogy telepítette a GroupDocs.Annotation for .NET könyvtárat. Letöltheti innen: [weboldal](https://releases.groupdocs.com/annotation/net/).
+2. Fejlesztői környezet: Hozz létre egy fejlesztői környezetet egy .NET-kompatibilis IDE-vel, például a Visual Studio-val.
 
 ## Névterek importálása
 Először is importáljuk a szükséges névtereket a projektünkbe:
@@ -26,21 +26,21 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 1. lépés: Határozza meg a kimeneti útvonalat
-Határozza meg a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentumot menteni kívánja. Győződjön meg róla, hogy elérhető és írható.
+## 1. lépés: Kimeneti útvonal meghatározása
+Adja meg a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentumot menteni szeretné. Győződjön meg arról, hogy hozzáférhető és írható.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. lépés: Inicializálja az Annotátort
- Inicializálja az annotátort a bemeneti dokumentum elérési útjával. Cserélje ki`"input.pdf"` a dokumentum elérési útjával.
+## 2. lépés: Annotátor inicializálása
+Inicializálja az annotátort a bemeneti dokumentum elérési útjával. Cserélje ki `"input.pdf"` a dokumentum elérési útjával.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Ide kerül a kommentár kódja
+    // Ide fog kerülni a megjegyzéskód
 }
 ```
-## 3. lépés: Szövegszerkesztési megjegyzés létrehozása
- Hozzon létre egy`TextRedactionAnnotation`objektum a szükséges tulajdonságokkal, mint pl`PageNumber`, `FontColor` , és`Points`. Szabja testre a kommentárt igényei szerint.
+## 3. lépés: Szövegkihagyási jegyzet létrehozása
+Hozz létre egy `TextRedactionAnnotation` objektum a szükséges tulajdonságokkal, mint például `PageNumber`, `FontColor`, és `Points`. Szabja testre a jegyzeteket az igényei szerint.
 ```csharp
 TextRedactionAnnotation textRedaction = new TextRedactionAnnotation
 {
@@ -67,28 +67,28 @@ TextRedactionAnnotation textRedaction = new TextRedactionAnnotation
     }
 };
 ```
-## 4. lépés: Megjegyzés hozzáadása és mentése
-Adja hozzá a létrehozott megjegyzést a dokumentumhoz a jegyző segítségével, és mentse a jegyzett dokumentumot a megadott kimeneti útvonalra.
+## 4. lépés: Jegyzet hozzáadása és mentés
+Adja hozzá a létrehozott jegyzetet a dokumentumhoz a jegyzetelő segítségével, és mentse el a jegyzetekkel ellátott dokumentumot a megadott kimeneti elérési útra.
 ```csharp
 annotator.Add(textRedaction);
 annotator.Save(outputPath);
 ```
 ## 5. lépés: Ellenőrizze a kimenetet
-Végül győződjön meg arról, hogy a dokumentumot sikeresen elmentette a megadott kimeneti útvonalra.
+Végül erősítse meg, hogy a dokumentum sikeresen mentésre került a megadott kimeneti elérési útra.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Következtetés
-Ebben az oktatóanyagban végigvezettük azt a folyamatot, amikor a GroupDocs.Annotation for .NET segítségével szövegszerkesztő megjegyzést adunk egy dokumentumhoz. Ezekkel a lépésekkel mostantól biztonságosan kezelheti a dokumentumokon belüli bizalmas információkat.
+Ebben az oktatóanyagban végigvezettük a szöveges kihagyási jegyzetek dokumentumhoz való hozzáadásának folyamatán a GroupDocs.Annotation for .NET használatával. Ezekkel a lépésekkel mostantól biztonságosan kezelheti a dokumentumokban található bizalmas információkat.
 ## GYIK
-### Testreszabhatom a szövegszerkesztési megjegyzés megjelenését?
-Igen, testreszabhatja a különféle tulajdonságokat, például a betűszínt, a kitöltési színt és az átlátszatlanságot az igényeinek megfelelően.
-### Vásárlás előtt van próbaverzió?
- Igen, elérheti az ingyenes próbaverziót a[weboldal](https://releases.groupdocs.com/).
-### Hogyan kaphatok támogatást, ha bármilyen problémám van?
- Támogatást a GroupDocs.Annotation közösségi fórumtól kaphat[itt](https://forum.groupdocs.com/c/annotation/10).
-### Szükségem van ideiglenes licencre tesztelés céljából?
- Igen, ideiglenes engedélyt kaphat a[vásárlási oldal](https://purchase.groupdocs.com/temporary-license/)tesztelésre.
+### Testreszabhatom a szövegkihagyási megjegyzés megjelenését?
+Igen, testreszabhatja a különböző tulajdonságokat, például a betűszínt, a kitöltőszínt és az átlátszóságot az igényeinek megfelelően.
+### Van próbaverzió elérhető vásárlás előtt?
+Igen, hozzáférhet egy ingyenes próbaverzióhoz a következő címen: [weboldal](https://releases.groupdocs.com/).
+### Hogyan kaphatok támogatást, ha bármilyen problémába ütközöm?
+Támogatást kaphatsz a GroupDocs.Annotation közösségi fórumon. [itt](https://forum.groupdocs.com/c/annotation/10).
+### Szükségem van ideiglenes jogosítványra tesztelési célokra?
+Igen, ideiglenes jogosítványt szerezhet be a [vásárlási oldal](https://purchase.groupdocs.com/temporary-license/) teszteléshez.
 ### Hozzáadhatok több megjegyzést egyetlen dokumentumhoz?
-Természetesen a GroupDocs.Annotation lehetővé teszi különböző típusú megjegyzések és több példány hozzáadását egyetlen dokumentumhoz.
+Természetesen a GroupDocs.Annotation lehetővé teszi különféle típusú annotációk és több példány hozzáadását egyetlen dokumentumhoz.

@@ -1,24 +1,24 @@
 ---
-title: Ajouter une annotation de texte barré au document
-linktitle: Ajouter une annotation de texte barré au document
-second_title: API GroupDocs.Annotation .NET
-description: Découvrez comment ajouter des annotations de texte barré aux documents à l'aide de GroupDocs.Annotation pour .NET. Améliorez efficacement les processus de collaboration et de révision des documents.
-weight: 26
-url: /fr/net/unlocking-annotation-power/add-text-strikeout-annotation/
+"description": "Découvrez comment ajouter des annotations de texte barré à vos documents avec GroupDocs.Annotation pour .NET. Améliorez efficacement la collaboration et la révision de vos documents."
+"linktitle": "Ajouter une annotation de texte barré au document"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Ajouter une annotation de texte barré au document"
+"url": "/fr/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+"weight": 26
 ---
 
 # Ajouter une annotation de texte barré au document
 
 ## Introduction
-Dans ce didacticiel, nous verrons comment ajouter une annotation de texte barré à un document à l'aide de GroupDocs.Annotation pour .NET. Cette bibliothèque fournit des outils puissants pour annoter divers types de documents, améliorant ainsi les processus de collaboration et de révision de documents.
-## Conditions préalables
+Dans ce tutoriel, nous découvrirons comment ajouter une annotation de texte barré à un document à l'aide de GroupDocs.Annotation pour .NET. Cette bibliothèque fournit des outils puissants pour annoter différents types de documents, améliorant ainsi la collaboration et la révision des documents.
+## Prérequis
 Avant de commencer, assurez-vous de disposer des prérequis suivants :
-1.  GroupDocs.Annotation pour .NET : installez la bibliothèque. Vous pouvez le télécharger depuis[ici](https://releases.groupdocs.com/annotation/net/).
-2. Environnement de développement : configurez un environnement de développement approprié pour le développement .NET.
-3. Document : préparez un document à annoter, tel qu'un fichier PDF.
+1. GroupDocs.Annotation pour .NET : installez la bibliothèque. Vous pouvez la télécharger depuis [ici](https://releases.groupdocs.com/annotation/net/).
+2. Environnement de développement : Configurez un environnement de développement adapté au développement .NET.
+3. Document : Préparez un document à annoter, comme un fichier PDF.
 
 ## Importation d'espaces de noms
-Tout d'abord, importez les espaces de noms nécessaires pour accéder aux fonctionnalités de GroupDocs.Annotation :
+Tout d’abord, importez les espaces de noms nécessaires pour accéder aux fonctionnalités de GroupDocs.Annotation :
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -28,13 +28,13 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Maintenant, décomposons le processus d'ajout d'une annotation de texte barré en plusieurs étapes :
+Décomposons maintenant le processus d’ajout d’une annotation de texte barré en plusieurs étapes :
 ## Étape 1 : Définir le chemin de sortie
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 Ici, nous définissons le chemin de sortie où le document annoté sera enregistré.
-## Étape 2 : initialiser l'annotateur
+## Étape 2 : Initialiser l'annotateur
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
@@ -73,7 +73,7 @@ Créez un objet StrikeoutAnnotation avec les propriétés souhaitées telles que
 ```csharp
 annotator.Add(strikeout);
 ```
-Ajoutez l'annotation barrée créée au document.
+Ajoutez l’annotation barrée créée au document.
 ## Étape 5 : Enregistrer le document
 ```csharp
 annotator.Save(outputPath);
@@ -81,15 +81,15 @@ annotator.Save(outputPath);
 Enregistrez le document annoté dans le chemin de sortie spécifié.
 
 ## Conclusion
-Dans ce didacticiel, nous avons appris à ajouter une annotation de texte barré à un document à l'aide de GroupDocs.Annotation pour .NET. Cette puissante bibliothèque permet une annotation efficace des documents, améliorant ainsi les processus de collaboration et de révision des documents.
+Dans ce tutoriel, nous avons appris à ajouter une annotation de texte barré à un document à l'aide de GroupDocs.Annotation pour .NET. Cette puissante bibliothèque permet une annotation efficace des documents, améliorant ainsi la collaboration et la révision des documents.
 ## FAQ
 ### GroupDocs.Annotation est-il compatible avec différents formats de documents ?
-Oui, GroupDocs.Annotation prend en charge un large éventail de formats de documents, notamment PDF, Word, Excel, PowerPoint, etc.
+Oui, GroupDocs.Annotation prend en charge une large gamme de formats de documents, notamment PDF, Word, Excel, PowerPoint, etc.
 ### Puis-je personnaliser l’apparence des annotations ?
 Absolument, vous pouvez personnaliser les propriétés d'annotation telles que la couleur, l'opacité, la taille de la police, etc. en fonction de vos besoins.
 ### GroupDocs.Annotation fournit-il des fonctionnalités de collaboration ?
-Oui, GroupDocs.Annotation facilite la collaboration en permettant aux utilisateurs d'ajouter des commentaires, des réponses et des annotations aux documents.
-### Existe-t-il un essai gratuit disponible ?
- Oui, vous pouvez bénéficier d'un essai gratuit auprès de[ici](https://releases.groupdocs.com/).
-### Où puis-je obtenir de l’aide pour GroupDocs.Annotation ?
- Vous pouvez bénéficier du soutien du[Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).
+Oui, GroupDocs.Annotation facilite la collaboration en permettant aux utilisateurs d’ajouter des commentaires, des réponses et des annotations aux documents.
+### Existe-t-il un essai gratuit disponible ?
+Oui, vous pouvez bénéficier d'un essai gratuit à partir de [ici](https://releases.groupdocs.com/).
+### Où puis-je obtenir de l'aide pour GroupDocs.Annotation ?
+Vous pouvez obtenir du soutien auprès du [Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation/10).

@@ -1,21 +1,21 @@
 ---
-title: PDF Belgesine Açılır Bileşen Ekleme
-linktitle: PDF Belgesine Açılır Bileşen Ekleme
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation for .NET'i kullanarak PDF'lere açılır bileşenleri nasıl ekleyeceğinizi öğrenin. Sorunsuz entegrasyon için adım adım kılavuzumuzu izleyin.
-weight: 12
-url: /tr/net/document-components/add-dropdown-component-to-pdf/
+"description": "GroupDocs.Annotation for .NET kullanarak PDF'lere açılır bileşen eklemeyi öğrenin. Sorunsuz entegrasyon için adım adım kılavuzumuzu izleyin."
+"linktitle": "PDF Belgesine Açılır Bileşen Ekle"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "PDF Belgesine Açılır Bileşen Ekle"
+"url": "/tr/net/document-components/add-dropdown-component-to-pdf/"
+"weight": 12
 ---
 
-# PDF Belgesine Açılır Bileşen Ekleme
+# PDF Belgesine Açılır Bileşen Ekle
 
 ## giriiş
-GroupDocs.Annotation for .NET, PDF belgelerine programlı olarak açıklama eklemek için güçlü bir araç seti sağlar. Yararlı özelliklerden biri, PDF belgelerine açılır bileşenler ekleyerek bunların etkileşimini ve kullanılabilirliğini artırma yeteneğidir.
-## Önkoşullar
+GroupDocs.Annotation for .NET, PDF belgelerini programatik olarak açıklamak için güçlü bir araç seti sunar. Kullanışlı bir özellik, PDF belgelerine açılır bileşenler ekleme yeteneğidir, bu da etkileşimlerini ve kullanılabilirliklerini artırır.
+## Ön koşullar
 Başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
-1.  GroupDocs.Annotation for .NET: Kitaplığı şu adresten indirip yükleyin:[Burada](https://releases.groupdocs.com/annotation/net/).
+1. GroupDocs.Annotation for .NET: Kütüphaneyi şu adresten indirin ve yükleyin: [Burada](https://releases.groupdocs.com/annotation/net/).
 2. Geliştirme Ortamı: Bir .NET geliştirme ortamı kurun.
-3. PDF Belgesi: Açılır bileşeni eklemek istediğiniz PDF belgesini hazırlayın.
+3. PDF Belgesi: Açılır menü bileşenini eklemek istediğiniz PDF belgesini hazırlayın.
 
 ## Ad Alanlarını İçe Aktarma
 Gerekli ad alanlarını projenize aktardığınızdan emin olun:
@@ -33,12 +33,12 @@ Değiştirilen belgenin kaydedileceği çıktı yolunu tanımlayın:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## 2. Adım: Annotator'ı Başlatın
- Bir örneğini oluşturun`Annotator` giriş PDF belgesinin yolunu ileterek sınıf:
+## Adım 2: Annotator'ı Başlatın
+Bir örneğini oluşturun `Annotator` Giriş PDF belgesinin yolunu geçirerek sınıf:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
-## 3. Adım: Açılır Bileşen Oluşturun
+## Adım 3: Açılır Bileşen Oluşturun
 Açılır bileşenin özelliklerini tanımlayın:
 ```csharp
 DropdownComponent dropdown = new DropdownComponent
@@ -69,31 +69,31 @@ DropdownComponent dropdown = new DropdownComponent
 };
 ```
 ## Adım 4: Açılır Bileşen Ekle
-Açılır bileşeni PDF belgesine ekleyin:
+PDF belgesine açılır menü bileşenini ekleyin:
 ```csharp
 annotator.Add(dropdown);
 ```
-## Adım 5: Belgeyi Kaydet
+## Adım 5: Belgeyi Kaydedin
 Değiştirilen belgeyi kaydedin:
 ```csharp
 annotator.Save("result.pdf");
 ```
-## Adım 6: Çıkış Yolunu Görüntüleyin
-Çıkış yolu ile birlikte belgenin başarıyla kaydedildiğini gösteren bir mesaj görüntüleyin:
+## Adım 6: Çıkış Yolunu Görüntüle
+Belgenin başarıyla kaydedildiğini belirten bir mesajı çıktı yoluyla birlikte görüntüle:
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Çözüm
-Bu öğreticide, GroupDocs.Annotation for .NET'i kullanarak açılır bileşenler ekleyerek PDF belgelerinin nasıl geliştirileceğini araştırdık. Adım adım kılavuzu takip ederek bu işlevselliği .NET uygulamalarınıza kolayca entegre edebilir, kullanıcılara etkileşimli ve dinamik belge görüntüleme deneyimleri sunabilirsiniz.
-## SSS'ler
+Bu eğitimde, .NET için GroupDocs.Annotation kullanarak açılır bileşenler ekleyerek PDF belgelerinin nasıl geliştirileceğini inceledik. Adım adım kılavuzu izleyerek, bu işlevselliği .NET uygulamalarınıza kolayca entegre edebilir ve kullanıcılara etkileşimli ve dinamik belge görüntüleme deneyimleri sağlayabilirsiniz.
+## SSS
 ### Açılır bileşenin görünümünü özelleştirebilir miyim?
-Evet, seçenekler, yer tutucu metin, kutu boyutları, kalem rengi ve stil gibi çeşitli özellikleri gereksinimlerinize göre özelleştirebilirsiniz.
-### GroupDocs.Annotation for .NET, .NET'in tüm sürümleriyle uyumlu mu?
-Evet, GroupDocs.Annotation for .NET, .NET çerçevesinin tüm ana sürümleriyle uyumludur.
+Evet, ihtiyaçlarınıza göre seçenekler, yer tutucu metin, kutu boyutları, kalem rengi ve stil gibi çeşitli özellikleri özelleştirebilirsiniz.
+### GroupDocs.Annotation for .NET tüm .NET sürümleriyle uyumlu mudur?
+Evet, GroupDocs.Annotation for .NET, .NET framework'ünün tüm önemli sürümleriyle uyumludur.
 ### Tek bir PDF belgesine birden fazla açılır bileşen ekleyebilir miyim?
-Kesinlikle, bir PDF belgesine gerektiği kadar açılır bileşen ekleyebilirsiniz.
+Kesinlikle, PDF belgesine ihtiyacınız olduğu kadar çok açılır bileşen ekleyebilirsiniz.
 ### GroupDocs.Annotation for .NET diğer açıklama türlerini destekliyor mu?
-Evet, GroupDocs.Annotation for .NET, metin, alan, nokta ve üstü çizili açıklamalar dahil olmak üzere çeşitli açıklama türlerini destekler.
+Evet, GroupDocs.Annotation for .NET metin, alan, nokta ve üstü çizili açıklamalar dahil olmak üzere çeşitli açıklama türlerini destekler.
 ### Test amaçlı deneme sürümü mevcut mu?
- Evet deneme sürümüne erişebilirsiniz[Burada](https://releases.groupdocs.com/).
+Evet, deneme sürümüne erişebilirsiniz [Burada](https://releases.groupdocs.com/).

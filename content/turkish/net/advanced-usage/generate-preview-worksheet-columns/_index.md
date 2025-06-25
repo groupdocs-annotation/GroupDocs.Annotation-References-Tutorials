@@ -1,27 +1,27 @@
 ---
-title: Önizleme Çalışma Sayfası Sütunları Oluştur
-linktitle: Önizleme Çalışma Sayfası Sütunları Oluştur
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation for .NET'i kullanarak belgelere nasıl açıklama ekleyeceğinizi öğrenin. .NET geliştiricileri için adım adım eğitim. Uygulamalarınızı geliştirin.
-weight: 15
-url: /tr/net/advanced-usage/generate-preview-worksheet-columns/
+"description": "GroupDocs.Annotation for .NET kullanarak belgeleri nasıl ek açıklama ekleyeceğinizi öğrenin. .NET geliştiricileri için adım adım eğitim. Uygulamalarınızı geliştirin."
+"linktitle": "Önizleme Çalışma Sayfası Sütunlarını Oluştur"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Önizleme Çalışma Sayfası Sütunlarını Oluştur"
+"url": "/tr/net/advanced-usage/generate-preview-worksheet-columns/"
+"weight": 15
 ---
 
-# Önizleme Çalışma Sayfası Sütunları Oluştur
+# Önizleme Çalışma Sayfası Sütunlarını Oluştur
 
 ## giriiş
-GroupDocs.Annotation for .NET'in yeteneklerinden yararlanmaya ilişkin kapsamlı eğitimimize hoş geldiniz! Bu kılavuzda, belgelere etkili bir şekilde açıklama eklemek için bu güçlü aracı kullanma sürecinde size yol göstereceğiz. İster deneyimli bir geliştirici olun ister .NET geliştirme dünyasına yeni giren biri olun, bu eğitim sizi ek açıklama özelliklerini uygulamalarınıza sorunsuz bir şekilde entegre etmek için gerekli bilgi ve becerilerle donatacaktır.
-## Önkoşullar
-Eğiticiye dalmadan önce aşağıdaki önkoşulların mevcut olduğundan emin olun:
+GroupDocs.Annotation for .NET'in yeteneklerinden yararlanmaya yönelik kapsamlı eğitimimize hoş geldiniz! Bu kılavuzda, bu güçlü aracı belgeleri etkili bir şekilde ek açıklamalarla açıklama yapmak için kullanma sürecinde size yol göstereceğiz. İster deneyimli bir geliştirici olun, ister .NET geliştirme dünyasına yeni adım atmış olun, bu eğitim size ek açıklama özelliklerini uygulamalarınıza sorunsuz bir şekilde entegre etmek için gereken bilgi ve becerileri kazandıracaktır.
+## Ön koşullar
+Eğitime başlamadan önce aşağıdaki ön koşulların mevcut olduğundan emin olun:
 ### 1. .NET Geliştirme Ortamı Kurulumu
 Makinenizde çalışan bir .NET geliştirme ortamının kurulu olduğundan emin olun. .NET SDK'nın en son sürümünü Microsoft web sitesinden indirebilirsiniz.
-### 2. .NET Kitaplığı için GroupDocs.Annotation
- Sağlanan kaynaktan GroupDocs.Annotation for .NET kitaplığını indirip yükleyin.[İndirme: {link](https://releases.groupdocs.com/annotation/net/). Kütüphaneyi projenize başarıyla entegre etmek için kurulum talimatlarını izleyin.
+### 2. .NET Kütüphanesi için GroupDocs.Annotation
+Sağlanan GroupDocs.Annotation for .NET kitaplığını indirin ve yükleyin [indirme bağlantısı](https://releases.groupdocs.com/annotation/net/)Kütüphaneyi projenize başarılı bir şekilde entegre etmek için kurulum talimatlarını izleyin.
 ### 3. Giriş Belgesi
-GroupDocs.Annotation for .NET'i kullanarak açıklama eklemeyi planladığınız örnek bir belge (örneğin, "input.xlsx") hazırlayın. Belgeye proje dizininizden erişilebildiğinden emin olun.
+GroupDocs.Annotation for .NET kullanarak açıklama eklemeyi planladığınız bir örnek belge hazırlayın (örneğin, "input.xlsx"). Belgenin proje dizininizden erişilebilir olduğundan emin olun.
 
 ## Ad Alanlarını İçe Aktar
-Başlamak için gerekli ad alanlarını projenize aktarın. Bu ad alanları, belge açıklama görevlerini etkin bir şekilde gerçekleştirmek için gereken sınıflara ve yöntemlere erişim sağlar.
+Başlamak için, gerekli ad alanlarını projenize aktarın. Bu ad alanları, belge açıklama görevlerini etkili bir şekilde gerçekleştirmek için gereken sınıflara ve yöntemlere erişim sağlar.
 
 ```csharp
 using GroupDocs.Annotation;
@@ -30,8 +30,8 @@ using System;
 using System.IO;
 ```
 
-Artık geliştirme ortamımızı kurduğumuza ve gerekli ad alanlarını içe aktardığımıza göre, belgemiz için önizleme çalışma sayfası sütunları oluşturmaya geçelim.
-## 1. Adım: Önizleme Seçeneklerini Başlatın
+Artık geliştirme ortamımızı kurduğumuza ve gerekli ad alanlarını içe aktardığımıza göre, belgemiz için önizleme çalışma sayfası sütunlarını oluşturmaya geçelim.
+## Adım 1: Önizleme Seçeneklerini Başlatın
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(
     pageNumber => new FileStream(Path.Combine("Your Document Directory", $"cells_page{pageNumber}.png"), FileMode.Create),
@@ -43,28 +43,28 @@ PreviewOptions previewOptions = new PreviewOptions(
 previewOptions.WorksheetColumns.Add(new WorksheetColumnsRange("Sheet1", 2, 3));
 previewOptions.WorksheetColumns.Add(new WorksheetColumnsRange("Sheet1", 1, 1));
 ```
-## 3. Adım: Giriş Belgesiyle Açıklayıcıyı Başlatın
+## Adım 3: Giriş Belgesi ile Annotator'ı Başlatın
 ```csharp
 using (Annotator annotator = new Annotator("input.xlsx"))
 {
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-## Adım 4: Başarı Mesajını Görüntüleyin
+## Adım 4: Başarı Mesajını Göster
 ```csharp
 Console.WriteLine($"\nDocument previews generated successfully.\nCheck output in {"Your Document Directory"}.");
 ```
 
 ## Çözüm
-Tebrikler! GroupDocs.Annotation for .NET'i kullanarak önizleme çalışma sayfası sütunlarının nasıl oluşturulacağını başarıyla öğrendiniz. Bu bilgiyle artık gelişmiş açıklama özelliklerini .NET uygulamalarınıza kolaylıkla dahil edebilirsiniz.
-## SSS'ler
-### GroupDocs.Annotation diğer .NET çerçeveleriyle uyumlu mu?
-Evet, GroupDocs.Annotation, .NET Core ve .NET Framework dahil olmak üzere çeşitli .NET çerçevelerini destekler.
-### GroupDocs.Annotation ile oluşturulan ek açıklamaların görünümünü özelleştirebilir miyim?
+Tebrikler! GroupDocs.Annotation for .NET kullanarak önizleme çalışma sayfası sütunlarını nasıl oluşturacağınızı başarıyla öğrendiniz. Bu bilgiyle artık gelişmiş açıklama yeteneklerini .NET uygulamalarınıza kolayca dahil edebilirsiniz.
+## SSS
+### GroupDocs.Annotation diğer .NET framework'leriyle uyumlu mudur?
+Evet, GroupDocs.Annotation .NET Core ve .NET Framework dahil olmak üzere çeşitli .NET çerçevelerini destekler.
+### GroupDocs.Annotation ile oluşturulan açıklamaların görünümünü özelleştirebilir miyim?
 Kesinlikle! GroupDocs.Annotation, renk, opaklık ve açıklama türü de dahil olmak üzere açıklama görünümü için kapsamlı özelleştirme seçenekleri sunar.
-### GroupDocs.Annotation, Excel dışındaki belge formatlarını destekliyor mu?
-Evet, GroupDocs.Annotation, PDF, Word, PowerPoint ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
+### GroupDocs.Annotation Excel dışındaki belge biçimlerini destekliyor mu?
+Evet, GroupDocs.Annotation PDF, Word, PowerPoint ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
 ### GroupDocs.Annotation kullanıcıları için teknik destek mevcut mu?
- Evet, sağlanan teknik destek ve topluluk forumlarına erişebilirsiniz.[destek bağlantısı](https://forum.groupdocs.com/c/annotation/10).
+Evet, sağlanan teknik destek ve topluluk forumlarına erişebilirsiniz. [destek bağlantısı](https://forum.groupdocs.com/c/annotation/10).
 ### Lisans satın almadan önce GroupDocs.Annotation'ı deneyebilir miyim?
- Elbette! GroupDocs.Annotation'ın ücretsiz deneme sürümünü şu adresten indirebilirsiniz:[İnternet sitesi](https://releases.groupdocs.com/).
+Elbette! GroupDocs.Annotation'ın ücretsiz deneme sürümünü şuradan indirebilirsiniz: [web sitesi](https://releases.groupdocs.com/).

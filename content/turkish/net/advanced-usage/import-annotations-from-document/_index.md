@@ -1,23 +1,23 @@
 ---
-title: Belgeden Ek Açıklamaları İçe Aktar
-linktitle: Belgeden Ek Açıklamaları İçe Aktar
-second_title: GroupDocs.Annotation .NET API'si
-description: GroupDocs.Annotation'ı kullanarak .NET'teki belgelerden ek açıklamaları nasıl içe aktaracağınızı öğrenin. Sorunsuz entegrasyon için adım adım eğitimimizi izleyin.
-weight: 19
-url: /tr/net/advanced-usage/import-annotations-from-document/
+"description": "GroupDocs.Annotation kullanarak .NET'teki belgelerden açıklamaların nasıl içe aktarılacağını öğrenin. Sorunsuz entegrasyon için adım adım öğreticimizi izleyin."
+"linktitle": "Belgeden Açıklamaları İçe Aktar"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Belgeden Açıklamaları İçe Aktar"
+"url": "/tr/net/advanced-usage/import-annotations-from-document/"
+"weight": 19
 ---
 
-# Belgeden Ek Açıklamaları İçe Aktar
+# Belgeden Açıklamaları İçe Aktar
 
 ## giriiş
-.NET geliştirme alanında, GroupDocs.Annotation, açıklama özelliklerini uygulamalarınıza entegre etmek için çok yönlü bir araç olarak duruyor. Belgelere yorum eklemek, metni vurgulamak veya şekil çizmek istiyorsanız GroupDocs.Annotation for .NET kapsamlı bir çözüm sunar. Bu eğitim, GroupDocs.Annotation'ı kullanarak bir belgeden ek açıklamaları içe aktarma sürecinde size adım adım rehberlik edecektir.
-## Önkoşullar
-Eğiticiye dalmadan önce aşağıdaki önkoşulların mevcut olduğundan emin olun:
+.NET geliştirme alanında, GroupDocs.Annotation, açıklama yeteneklerini uygulamalarınıza entegre etmek için çok yönlü bir araç olarak öne çıkar. İster belgelere yorum eklemek, metni vurgulamak veya şekiller çizmek isteyin, .NET için GroupDocs.Annotation kapsamlı bir çözüm sunar. Bu eğitim, GroupDocs.Annotation kullanarak bir belgeden açıklamaları içe aktarma sürecinde adım adım size rehberlik edecektir.
+## Ön koşullar
+Eğitime başlamadan önce aşağıdaki ön koşulların mevcut olduğundan emin olun:
 ### GroupDocs.Annotation'ı yükleme
- Öncelikle GroupDocs.Annotation kütüphanesini şuradan indirin:[İndirme: {link](https://releases.groupdocs.com/annotation/net/) tedarik edilen. .NET projenize entegre etmek için kurulum talimatlarını izleyin.
+Öncelikle GroupDocs.Annotation kütüphanesini indirin [indirme bağlantısı](https://releases.groupdocs.com/annotation/net/) Sağlanan. .NET projenize entegre etmek için kurulum talimatlarını izleyin.
 
 ## Ad Alanlarını İçe Aktar
-Bir belgeden ek açıklamaları içe aktarmaya başlamak için projenize gerekli ad alanlarını eklemeniz gerekir. Bunu nasıl yapabileceğiniz aşağıda açıklanmıştır:
+Bir belgeden açıklamaları içe aktarmaya başlamak için projenize gerekli ad alanlarını eklemeniz gerekir. Bunu şu şekilde yapabilirsiniz:
 
 ```csharp
 using System;
@@ -25,33 +25,33 @@ using System.IO;
 using GroupDocs.Annotation;
 ```
 
-Önkoşulları ayarladıktan ve gerekli ad alanlarını içe aktardıktan sonra, belgeden ek açıklamaları içe aktarma işlemine devam edebilirsiniz.
-## 1. Adım: Ek Açıklama Nesnesini Başlatın
+Ön koşulları ayarlayıp gerekli ad alanlarını içe aktardıktan sonra, belgeden açıklamaları içe aktarma işlemine geçebilirsiniz.
+## Adım 1: Açıklama Nesnesini Başlat
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf-file"))
 {
 
 }
 ```
- Bu adımda, yeni bir örneğini oluşturun.`Annotator`Açıklamaları içe aktarmak istediğiniz belgenin yolunu belirten sınıf.
-## 2. Adım: Ek Açıklamaları İçe Aktarın
+Bu adımda, yeni bir örnek oluşturun `Annotator` sınıf, açıklamaları içe aktarmak istediğiniz belgenin yolunu belirtir.
+## Adım 2: Açıklamaları içe aktarın
 ```csharp
 	annotator.ImportAnnotationsFromDocument("result.XML-file");
 ```
- Burada,`ImportAnnotationsFromDocument` yöntemi`Annotator` Belirtilen belgeden ek açıklamaları içe aktarmak için nesne. Ek açıklamaları içeren XML dosyasının yolunu sağladığınızdan emin olun.
+Burada şunu kullanırsınız: `ImportAnnotationsFromDocument` yöntemi `Annotator` Belirtilen belgeden açıklamaları içe aktarmak için nesne. Açıklamaları içeren XML dosyasının yolunu sağladığınızdan emin olun.
 
- Son olarak, imha ederek uygun kaynak yönetimini sağlayın.`Annotator` kullanarak nesne`using` ifade.
+Son olarak, uygun kaynak yönetimini sağlayarak elden çıkarın. `Annotator` nesneyi kullanarak `using` ifade.
 
 ## Çözüm
-Bu öğreticide, GroupDocs.Annotation for .NET kullanarak bir belgeden ek açıklamaların nasıl içe aktarılacağını araştırdık. Belirtilen adımları izleyerek, açıklama işlevlerini .NET uygulamalarınıza sorunsuz bir şekilde entegre edebilir, belge işbirliğini ve üretkenliği artırabilirsiniz.
-## SSS'ler
-### GroupDocs.Annotation çeşitli belge formatlarındaki ek açıklamaları işleyebilir mi?
-Evet, GroupDocs.Annotation, PDF, DOCX, PPTX, XLSX ve daha fazlasını içeren çok çeşitli belge formatlarını destekler.
-### GroupDocs.Annotation'ın ücretsiz deneme sürümü mevcut mu?
- Evet, GroupDocs.Annotation'ın ücretsiz deneme sürümüne şu adresten erişebilirsiniz:[İnternet sitesi](https://releases.groupdocs.com/).
-### GroupDocs.Annotation için nasıl geçici lisans alabilirim?
- GroupDocs.Annotation için geçici bir lisansı şuradan alabilirsiniz:[geçici lisans sayfası](https://purchase.groupdocs.com/temporary-license/).
-### GroupDocs.Annotation'a ilişkin kapsamlı belgeleri nerede bulabilirim?
- GroupDocs.Annotation için ayrıntılı belgeler mevcuttur[Burada](https://tutorials.groupdocs.com/annotation/net/).
-### GroupDocs.Annotation ile ilgili herhangi bir sorun veya soru için nereden destek alabilirim?
- Destek için GroupDocs.Annotation'ı ziyaret edin.[forum](https://forum.groupdocs.com/c/annotation/10) uzmanlardan ve topluluktan yardım alabileceğiniz yer.
+Bu eğitimde, .NET için GroupDocs.Annotation kullanarak bir belgeden açıklamaların nasıl içe aktarılacağını inceledik. Belirtilen adımları izleyerek, açıklama işlevlerini .NET uygulamalarınıza sorunsuz bir şekilde entegre edebilir, belge iş birliğini ve üretkenliği artırabilirsiniz.
+## SSS
+### GroupDocs.Annotation çeşitli belge biçimlerindeki açıklamaları işleyebilir mi?
+Evet, GroupDocs.Annotation PDF, DOCX, PPTX, XLSX ve daha fazlası dahil olmak üzere çok çeşitli belge biçimlerini destekler.
+### GroupDocs.Annotation için ücretsiz deneme sürümü mevcut mu?
+Evet, GroupDocs.Annotation'ın ücretsiz deneme sürümüne şu adresten erişebilirsiniz: [web sitesi](https://releases.groupdocs.com/).
+### GroupDocs.Annotation için geçici lisansı nasıl alabilirim?
+GroupDocs.Annotation için geçici bir lisansı şuradan edinebilirsiniz: [geçici lisans sayfası](https://purchase.groupdocs.com/temporary-license/).
+### GroupDocs.Annotation için kapsamlı dokümantasyonu nerede bulabilirim?
+GroupDocs.Annotation için ayrıntılı belgeler mevcuttur [Burada](https://tutorials.groupdocs.com/annotation/net/).
+### GroupDocs.Annotation ile ilgili herhangi bir sorun veya sorum için nereden destek alabilirim?
+Destek için GroupDocs'u ziyaret edin.Açıklama [forum](https://forum.groupdocs.com/c/annotation/10) Uzmanlardan ve topluluktan yardım alabileceğiniz yer.

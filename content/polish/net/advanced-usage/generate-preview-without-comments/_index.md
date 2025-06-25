@@ -1,27 +1,27 @@
 ---
-title: Wygeneruj podgląd bez komentarzy
-linktitle: Wygeneruj podgląd bez komentarzy
-second_title: GroupDocs.Adnotacja .NET API
-description: Dowiedz się, jak bezproblemowo zintegrować możliwości adnotacji w dokumentach z aplikacjami .NET przy użyciu GroupDocs.Annotation dla .NET.
-weight: 14
-url: /pl/net/advanced-usage/generate-preview-without-comments/
+"description": "Dowiedz się, jak płynnie zintegrować funkcje adnotacji dokumentów z aplikacjami .NET przy użyciu GroupDocs.Annotation for .NET."
+"linktitle": "Generuj podgląd bez komentarzy"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Generuj podgląd bez komentarzy"
+"url": "/pl/net/advanced-usage/generate-preview-without-comments/"
+"weight": 14
 ---
 
-# Wygeneruj podgląd bez komentarzy
+# Generuj podgląd bez komentarzy
 
 ## Wstęp
-GroupDocs.Annotation dla .NET to potężne narzędzie, które umożliwia programistom bezproblemowe włączanie funkcji adnotacji do aplikacji .NET. Niezależnie od tego, czy pracujesz w systemie zarządzania dokumentami, platformie współpracy, czy innej aplikacji wymagającej możliwości dodawania adnotacji do dokumentów, GroupDocs.Annotation zapewnia kompleksowy zestaw narzędzi zwiększających funkcjonalność aplikacji.
-## Warunki wstępne
-Zanim zaczniesz korzystać z GroupDocs.Annotation dla .NET, upewnij się, że masz skonfigurowane następujące wymagania wstępne:
+GroupDocs.Annotation dla .NET to potężne narzędzie, które umożliwia deweloperom bezproblemowe włączanie funkcji adnotacji do aplikacji .NET. Niezależnie od tego, czy pracujesz w systemie zarządzania dokumentami, platformie współpracy, czy w dowolnej innej aplikacji wymagającej możliwości adnotacji dokumentów, GroupDocs.Annotation zapewnia kompleksowy zestaw narzędzi do zwiększania funkcjonalności aplikacji.
+## Wymagania wstępne
+Zanim zaczniesz korzystać z GroupDocs.Annotation dla platformy .NET, upewnij się, że spełnione są następujące wymagania wstępne:
 ### 1. Zainstaluj GroupDocs.Annotation dla .NET
- Aby rozpocząć, musisz pobrać i zainstalować GroupDocs.Annotation dla .NET. Możesz znaleźć link do pobrania[Tutaj](https://releases.groupdocs.com/annotation/net/). Postępuj zgodnie z instrukcjami instalacji zawartymi w dokumentacji, aby proces instalacji przebiegał bezproblemowo.
+Aby rozpocząć, musisz pobrać i zainstalować GroupDocs.Annotation dla .NET. Link do pobrania znajdziesz tutaj [Tutaj](https://releases.groupdocs.com/annotation/net/). Aby zapewnić płynny proces konfiguracji, postępuj zgodnie z instrukcjami instalacji podanymi w dokumentacji.
 ### 2. Uzyskaj licencję
- GroupDocs.Annotation dla .NET wymaga licencji do użytku komercyjnego. Licencję można nabyć od[Tutaj](https://purchase.groupdocs.com/buy) lub wybierz licencję tymczasową[Tutaj](https://purchase.groupdocs.com/temporary-license/) do celów testowych.
+GroupDocs.Annotation dla .NET wymaga licencji do użytku komercyjnego. Licencję można nabyć od [Tutaj](https://purchase.groupdocs.com/buy) lub wybierz tymczasową licencję [Tutaj](https://purchase.groupdocs.com/temporary-license/) w celach testowych.
 ### 3. Znajomość .NET Framework
-Podstawowa znajomość .NET Framework i języka programowania C# jest niezbędna do efektywnego wykorzystania GroupDocs.Annotation dla .NET.
+Do efektywnego wykorzystania GroupDocs.Annotation w środowisku .NET niezbędna jest podstawowa znajomość środowiska .NET Framework oraz języka programowania C#.
 
 ## Importuj przestrzenie nazw
-Po skonfigurowaniu wymagań wstępnych zaimportujmy niezbędne przestrzenie nazw do aplikacji .NET.
+Teraz, gdy skonfigurowałeś już wymagania wstępne, możesz zaimportować niezbędne przestrzenie nazw do aplikacji .NET.
 
 ```csharp
 using System;
@@ -31,8 +31,8 @@ using System.Text;
 using GroupDocs.Annotation.Options;
 ```
 
-Postępuj zgodnie z poniższymi instrukcjami krok po kroku, aby wygenerować podgląd bez komentarzy przy użyciu GroupDocs.Annotation dla .NET:
-## Krok 1: Zainicjuj adnotator
+Aby wygenerować podgląd bez komentarzy przy użyciu GroupDocs.Annotation dla platformy .NET, wykonaj poniższe czynności krok po kroku:
+## Krok 1: Zainicjuj Adnotator
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 {
@@ -54,23 +54,23 @@ using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 ```csharp
     previewOptions.RenderComments = false;
 ```
-## Krok 5: Wygeneruj podgląd
+## Krok 5: Generowanie podglądu
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-Po wykonaniu tych kroków aplikacja .NET będzie mogła wygenerować podgląd określonych stron z dokumentu bez renderowania komentarzy.
+Po wykonaniu tych kroków aplikacja .NET będzie mogła wygenerować podgląd określonych stron dokumentu bez renderowania komentarzy.
 
 ## Wniosek
-Włączanie funkcji adnotacji do aplikacji .NET nigdy nie było łatwiejsze dzięki GroupDocs.Annotation dla .NET. Wykonując kroki opisane w tym samouczku, możesz bezproblemowo zintegrować funkcje adnotacji w dokumentach ze swoimi aplikacjami, usprawniając współpracę i zarządzanie dokumentami.
-## Często zadawane pytania
-### Czy GroupDocs.Annotation for .NET jest kompatybilny ze wszystkimi formatami dokumentów?
-GroupDocs.Annotation dla .NET obsługuje szeroką gamę formatów dokumentów, w tym PDF, DOCX, PPTX, XLSX i inne.
-### Czy mogę dostosować wygląd adnotacji generowanych przy użyciu GroupDocs.Annotation dla .NET?
-Tak, GroupDocs.Annotation dla .NET zapewnia szerokie możliwości dostosowywania, umożliwiając dostosowanie wyglądu adnotacji do potrzeb aplikacji.
-### Czy GroupDocs.Annotation for .NET obsługuje współpracę wielu użytkowników?
-Tak, GroupDocs.Annotation dla .NET oferuje funkcje wspólnych adnotacji, umożliwiające wielu użytkownikom jednoczesne dodawanie adnotacji do dokumentów.
-### Czy dostępna jest pomoc techniczna dla GroupDocs.Annotation dla .NET?
- Tak, pomoc techniczna dla GroupDocs.Annotation dla .NET jest dostępna za pośrednictwem[forum wsparcia](https://forum.groupdocs.com/c/annotation/10).
-### Czy przed zakupem mogę bezpłatnie wypróbować GroupDocs.Annotation dla .NET?
- Tak, możesz poznać funkcje GroupDocs.Annotation dla .NET, pobierając bezpłatną wersję próbną[Tutaj](https://releases.groupdocs.com/).
+Włączanie funkcji adnotacji do aplikacji .NET nigdy nie było łatwiejsze dzięki GroupDocs.Annotation dla .NET. Postępując zgodnie z krokami opisanymi w tym samouczku, możesz bezproblemowo zintegrować możliwości adnotacji dokumentów ze swoimi aplikacjami, usprawniając współpracę i zarządzanie dokumentami.
+## Najczęściej zadawane pytania
+### Czy GroupDocs.Annotation dla platformy .NET jest kompatybilny ze wszystkimi formatami dokumentów?
+GroupDocs.Annotation dla platformy .NET obsługuje szeroką gamę formatów dokumentów, w tym PDF, DOCX, PPTX, XLSX i inne.
+### Czy mogę dostosować wygląd adnotacji generowanych za pomocą GroupDocs.Annotation dla platformy .NET?
+Tak, GroupDocs.Annotation dla platformy .NET oferuje rozbudowane opcje dostosowywania, pozwalające dostosować wygląd adnotacji do potrzeb danej aplikacji.
+### Czy GroupDocs.Annotation dla platformy .NET obsługuje współpracę wielu użytkowników?
+Tak, GroupDocs.Annotation dla platformy .NET oferuje funkcje wspólnego adnotowania, dzięki którym wielu użytkowników może jednocześnie adnotować dokumenty.
+### Czy dla GroupDocs.Annotation dla platformy .NET dostępna jest pomoc techniczna?
+Tak, pomoc techniczna dla GroupDocs.Annotation dla .NET jest dostępna za pośrednictwem [forum wsparcia](https://forum.groupdocs.com/c/annotation/10).
+### Czy mogę wypróbować GroupDocs.Annotation dla platformy .NET za darmo przed zakupem?
+Tak, możesz zapoznać się z funkcjami GroupDocs.Annotation dla .NET, pobierając bezpłatną wersję próbną [Tutaj](https://releases.groupdocs.com/).

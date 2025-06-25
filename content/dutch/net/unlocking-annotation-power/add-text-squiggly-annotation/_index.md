@@ -1,25 +1,25 @@
 ---
-title: Voeg tekstkronkelige annotatie toe aan document
-linktitle: Voeg tekstkronkelige annotatie toe aan document
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u moeiteloos kronkelige annotaties aan documenten kunt toevoegen met Groupdocs.Annotation voor .NET. Verbeter de samenwerking en documentbeoordelingsprocessen.
-weight: 25
-url: /nl/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Leer hoe u moeiteloos tekstuele annotaties aan documenten toevoegt met Groupdocs.Annotation voor .NET. Verbeter samenwerking en documentbeoordelingsprocessen."
+"linktitle": "Voeg een golvende tekstannotatie toe aan het document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Voeg een golvende tekstannotatie toe aan het document"
+"url": "/nl/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
-# Voeg tekstkronkelige annotatie toe aan document
+# Voeg een golvende tekstannotatie toe aan het document
 
 ## Invoering
 
-Groupdocs.Annotation voor .NET is een veelzijdige bibliotheek waarmee ontwikkelaars moeiteloos robuuste annotatiemogelijkheden in hun .NET-applicaties kunnen integreren. Of u nu werkt met PDF's, Word-documenten of andere populaire bestandsformaten, Groupdocs.Annotation biedt een naadloze oplossing voor het annoteren en verbeteren van de samenwerking aan documenten.
+Groupdocs.Annotation voor .NET is een veelzijdige bibliotheek waarmee ontwikkelaars moeiteloos robuuste annotatiemogelijkheden in hun .NET-applicaties kunnen integreren. Of u nu werkt met PDF's, Word-documenten of andere populaire bestandsformaten, Groupdocs.Annotation biedt een naadloze oplossing voor het maken van annotaties en het verbeteren van de samenwerking aan documenten.
 
 ## Vereisten
 
-Voordat u in de zelfstudie duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+Voordat u met de tutorial begint, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
 
 ## Naamruimten importeren
 
-Zorg ervoor dat u de benodigde naamruimten importeert om toegang te krijgen tot de functionaliteiten van Groupdocs.Annotation voor .NET.
+Zorg ervoor dat u de benodigde naamruimten importeert om toegang te krijgen tot de functionaliteiten die Groupdocs.Annotation voor .NET biedt.
 
 ```csharp
 using System;
@@ -30,17 +30,17 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Nu we aan de vereisten hebben voldaan, gaan we het proces van het toevoegen van kronkelige tekstannotaties in meerdere stappen opsplitsen.
+Nu we de vereisten hebben besproken, kunnen we het proces voor het toevoegen van kronkelige tekstannotaties opsplitsen in meerdere stappen.
 
-## Stap 1: Definieer het uitvoerpad
+## Stap 1: Uitvoerpad definiëren
 
-Definieer het pad waar het geannoteerde document zal worden opgeslagen.
+Definieer het pad waar het geannoteerde document wordt opgeslagen.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Stap 2: Initialiseer Annotator
+## Stap 2: Annotator initialiseren
 
 Initialiseer het Annotator-object door het invoerdocumentpad op te geven.
 
@@ -103,7 +103,7 @@ annotator.Save(outputPath);
 
 ## Stap 6: Bevestiging weergeven
 
-Geef een bericht weer waarin wordt bevestigd dat het geannoteerde document succesvol is opgeslagen.
+Er wordt een bericht weergegeven waarin wordt bevestigd dat het geannoteerde document succesvol is opgeslagen.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Conclusie
 
-Concluderend biedt Groupdocs.Annotation voor .NET ontwikkelaars een robuuste set tools voor het naadloos integreren van documentannotatiefunctionaliteiten in hun .NET-applicaties. Door deze stapsgewijze handleiding te volgen, kunt u moeiteloos kronkelige annotaties aan uw documenten toevoegen, waardoor de samenwerking en documentbeoordelingsprocessen worden verbeterd.
+Kortom, Groupdocs.Annotation voor .NET biedt ontwikkelaars een robuuste set tools om documentannotatiefuncties naadloos te integreren in hun .NET-applicaties. Door deze stapsgewijze handleiding te volgen, kunt u moeiteloos tekstuele annotaties aan uw documenten toevoegen, wat de samenwerking en documentbeoordeling verbetert.
 
 ## Veelgestelde vragen
 
-### Vraag: Kan Groupdocs.Annotation annotatie in verschillende bestandsformaten ondersteunen?
+### V: Ondersteunt Groupdocs.Annotation annotaties in verschillende bestandsformaten?
 
-A: Ja, Groupdocs.Annotation ondersteunt annotaties in een breed scala aan bestandsindelingen, waaronder PDF's, Word-documenten, Excel-werkbladen en meer.
+A: Ja, Groupdocs.Annotation ondersteunt annotaties in een breed scala aan bestandsformaten, waaronder PDF's, Word-documenten, Excel-sheets en meer.
 
-### Vraag: Is Groupdocs.Annotation compatibel met zowel desktop- als webapplicaties?
+### V: Is Groupdocs.Annotation compatibel met zowel desktop- als webapplicaties?
 
-EEN: Absoluut! Groupdocs.Annotation kan naadloos worden geïntegreerd in zowel desktop- als webapplicaties, wat flexibiliteit en veelzijdigheid biedt.
+A: Absoluut! Groupdocs.Annotation kan naadloos worden geïntegreerd in zowel desktop- als webapplicaties en biedt flexibiliteit en veelzijdigheid.
 
-### Vraag: Zijn er licentieopties beschikbaar voor Groupdocs.Annotation?
+### V: Zijn er licentieopties beschikbaar voor Groupdocs.Annotation?
 
-A: Ja, Groupdocs.Annotation biedt flexibele licentieopties die zijn afgestemd op individuele of zakelijke behoeften, inclusief tijdelijke licenties voor proefdoeleinden.
+A: Ja, Groupdocs.Annotation biedt flexibele licentieopties op maat voor individuele of zakelijke behoeften, inclusief tijdelijke licenties voor proefdoeleinden.
 
-### Vraag: Kunnen annotaties die zijn gemaakt met Groupdocs.Annotation worden aangepast?
+### V: Kunnen annotaties die met Groupdocs.Annotation zijn gemaakt, worden aangepast?
 
-EEN: Zeker! Groupdocs.Annotation biedt uitgebreide aanpassingsmogelijkheden voor annotaties, waardoor ontwikkelaars annotaties kunnen afstemmen op hun specifieke vereisten.
+A: Zeker! Groupdocs.Annotation biedt uitgebreide aanpassingsmogelijkheden voor annotaties, waardoor ontwikkelaars deze kunnen afstemmen op hun specifieke behoeften.
 
-### Vraag: Biedt Groupdocs.Annotation ondersteuning en documentatie voor ontwikkelaars?
+### V: Biedt Groupdocs.Annotation ondersteuning en documentatie voor ontwikkelaars?
 
-EEN: Inderdaad! Groupdocs.Annotation biedt uitgebreide documentatie en speciale ondersteuningsforums om ontwikkelaars te helpen de functies ervan effectief te gebruiken.
+A: Zeker! Groupdocs.Annotation biedt uitgebreide documentatie en speciale ondersteuningsforums om ontwikkelaars te helpen de functies effectief te gebruiken.

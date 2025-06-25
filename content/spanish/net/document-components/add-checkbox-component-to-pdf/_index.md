@@ -1,19 +1,19 @@
 ---
-title: Agregar componente de casilla de verificación al documento PDF
-linktitle: Agregar componente de casilla de verificación al documento PDF
-second_title: API GroupDocs.Annotation .NET
-description: Aprenda a agregar un componente de casilla de verificación a documentos PDF usando Groupdocs.Annotation para .NET. Mejore sus archivos PDF con elementos interactivos.
-weight: 11
-url: /es/net/document-components/add-checkbox-component-to-pdf/
+"description": "Aprenda a agregar un componente de casilla de verificación a documentos PDF con Groupdocs.Annotation para .NET. Mejore sus PDF con elementos interactivos."
+"linktitle": "Agregar componente de casilla de verificación al documento PDF"
+"second_title": "API .NET de GroupDocs.Annotation"
+"title": "Agregar componente de casilla de verificación al documento PDF"
+"url": "/es/net/document-components/add-checkbox-component-to-pdf/"
+"weight": 11
 ---
 
 # Agregar componente de casilla de verificación al documento PDF
 
 ## Introducción
 En este tutorial, lo guiaremos a través del proceso de agregar un componente de casilla de verificación a un documento PDF usando Groupdocs.Annotation para .NET.
-## Requisitos previos
+## Prerrequisitos
 Antes de comenzar, asegúrese de tener lo siguiente:
-1.  Groupdocs.Annotation para .NET SDK: puede descargarlo desde[aquí](https://releases.groupdocs.com/annotation/net/).
+1. Groupdocs.Annotation para .NET SDK: puede descargarlo desde [aquí](https://releases.groupdocs.com/annotation/net/).
 2. Entorno de desarrollo: asegúrese de tener configurado un entorno de desarrollo .NET.
 
 ## Importar espacios de nombres
@@ -27,17 +27,17 @@ using GroupDocs.Annotation.Models.FormatSpecificComponents.Pdf;
 using GroupDocs.Annotation.Options;
 ```
 Ahora, dividamos el ejemplo en varios pasos:
-## Paso 1: definir la ruta de salida
+## Paso 1: Definir la ruta de salida
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Aquí, definimos la ruta de salida donde se guardará el documento PDF modificado.
-## Paso 2: inicializar el anotador
+Aquí definimos la ruta de salida donde se guardará el documento PDF modificado.
+## Paso 2: Inicializar el anotador
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Inicializar el`Annotator` objeto pasando la ruta del documento PDF de entrada.
-## Paso 3: Crear componente de casilla de verificación
+Inicializar el `Annotator` objeto pasando la ruta del documento PDF de entrada.
+## Paso 3: Crear el componente de casilla de verificación
 ```csharp
 CheckBoxComponent checkBox = new CheckBoxComponent
 {
@@ -60,33 +60,33 @@ CheckBoxComponent checkBox = new CheckBoxComponent
     }
 };
 ```
- Crear un`CheckBoxComponent` objeto y personalizar sus propiedades como`Checked`, `Box` dimensiones,`PenColor`, `Style`agregue algunas respuestas.
-## Paso 4: agregar el componente de casilla de verificación
+Crear una `CheckBoxComponent` objeto y personalizar sus propiedades como `Checked`, `Box` dimensiones, `PenColor`, `Style`y añade algunas respuestas.
+## Paso 4: Agregar componente de casilla de verificación
 ```csharp
 annotator.Add(checkBox);
 ```
 Agregue el componente de casilla de verificación creado al documento PDF.
-## Paso 5: guardar el documento
+## Paso 5: Guardar el documento
 ```csharp
 annotator.Save("result.pdf");
 ```
 Guarde el documento PDF modificado con el componente de casilla de verificación.
-## Paso 6: Mostrar ruta de salida
+## Paso 6: Mostrar la ruta de salida
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 Muestra la ruta donde se guarda el documento PDF modificado.
 
 ## Conclusión
-En este tutorial, aprendimos cómo agregar un componente de casilla de verificación a un documento PDF usando Groupdocs.Annotation para .NET. Con este conocimiento, puede mejorar sus documentos PDF con elementos interactivos.
+En este tutorial, aprendimos a agregar un componente de casilla de verificación a un documento PDF con Groupdocs.Annotation para .NET. Con este conocimiento, podrá mejorar sus documentos PDF con elementos interactivos.
 ## Preguntas frecuentes
 ### ¿Puedo personalizar la apariencia de la casilla de verificación?
-Sí, puede personalizar varias propiedades, como color, estilo y tamaño, según sus requisitos.
+Sí, puede personalizar varias propiedades como el color, el estilo y el tamaño según sus requisitos.
 ### ¿Groupdocs.Annotation para .NET es adecuado para uso comercial?
 Sí, Groupdocs.Annotation para .NET ofrece licencias comerciales para empresas.
 ### ¿Puedo probar Groupdocs.Annotation para .NET antes de comprarlo?
- Sí, puedes aprovechar una prueba gratuita desde[aquí](https://releases.groupdocs.com/).
+Sí, puedes aprovechar una prueba gratuita desde [aquí](https://releases.groupdocs.com/).
 ### ¿Dónde puedo encontrar soporte para Groupdocs.Annotation para .NET?
- Puede encontrar apoyo y recursos en el[Foro de documentos grupales](https://forum.groupdocs.com/c/annotation/10).
+Puede encontrar apoyo y recursos en [Foro de Groupdocs](https://forum.groupdocs.com/c/annotation/10).
 ### ¿Necesito una licencia temporal para realizar pruebas?
- Puede obtener una licencia temporal para realizar pruebas en[aquí](https://purchase.groupdocs.com/temporary-license/).
+Puede obtener una licencia temporal para realizar pruebas en [aquí](https://purchase.groupdocs.com/temporary-license/).

@@ -1,24 +1,24 @@
 ---
-title: Pontos megjegyzés hozzáadása a dokumentumhoz
-linktitle: Pontos megjegyzés hozzáadása a dokumentumhoz
-second_title: GroupDocs.Annotation .NET API
-description: Ismerje meg, hogyan adhat hozzá pontjegyzeteket PDF-fájlokhoz a GroupDocs.Annotation for .NET segítségével. Lépésről lépésre útmutató a zökkenőmentes integrációhoz.
-weight: 17
-url: /hu/net/unlocking-annotation-power/add-point-annotation/
+"description": "Ismerje meg, hogyan adhat hozzá pontszerű megjegyzéseket PDF-ekhez a GroupDocs.Annotation for .NET segítségével. Lépésről lépésre útmutató a zökkenőmentes integrációhoz."
+"linktitle": "Pontjegyzet hozzáadása a dokumentumhoz"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Pontjegyzet hozzáadása a dokumentumhoz"
+"url": "/hu/net/unlocking-annotation-power/add-point-annotation/"
+"weight": 17
 ---
 
-# Pontos megjegyzés hozzáadása a dokumentumhoz
+# Pontjegyzet hozzáadása a dokumentumhoz
 
 ## Bevezetés
-A GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy különféle típusú megjegyzéseket adhassanak a dokumentumokhoz programozottan. Ebben az oktatóanyagban arra fogunk összpontosítani, hogy pont megjegyzést adjunk egy dokumentumhoz C# használatával.
+A GroupDocs.Annotation for .NET egy hatékony eszköz, amely lehetővé teszi a fejlesztők számára, hogy programozottan adjanak hozzá különféle típusú annotációkat a dokumentumokhoz. Ebben az oktatóanyagban a C# használatával hozzáadott Point annotációkra fogunk összpontosítani.
 ## Előfeltételek
-Mielőtt elkezdené, győződjön meg arról, hogy rendelkezik a következőkkel:
-1. A C# programozási nyelv alapvető ismerete.
-2. A Visual Studio telepítve van a rendszerére.
-3.  GroupDocs.Annotation for .NET könyvtár telepítve. Letöltheti innen[itt](https://releases.groupdocs.com/annotation/net/).
+Mielőtt elkezdenénk, győződjünk meg róla, hogy a következőkkel rendelkezünk:
+1. C# programozási nyelv alapismeretek.
+2. Visual Studio telepítve a rendszeredre.
+3. A GroupDocs.Annotation for .NET könyvtár telepítve van. Letöltheti innen: [itt](https://releases.groupdocs.com/annotation/net/).
 
-## A szükséges névterek importálása
-A kezdéshez importálnia kell a szükséges névtereket a C# projektbe:
+## Szükséges névterek importálása
+A kezdéshez importálnia kell a szükséges névtereket a C# projektjébe:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,17 +27,17 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## 1. lépés: Határozza meg a kimeneti útvonalat
+## 1. lépés: Kimeneti útvonal meghatározása
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Ebben a lépésben meghatározzuk a kimeneti útvonalat, ahová a megjegyzésekkel ellátott dokumentumot el kell menteni.
-## 2. lépés: Inicializálja az Annotátort
+Ebben a lépésben meghatározzuk a kimeneti elérési utat, ahová a jegyzetekkel ellátott dokumentum mentésre kerül.
+## 2. lépés: Annotátor inicializálása
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Itt inicializáljuk a`Annotator` objektumot a bemeneti dokumentummal ("input.pdf").
-## 3. lépés: Pontjegyzet létrehozása
+Itt inicializáljuk a `Annotator` objektum a bemeneti dokumentummal ("input.pdf").
+## 3. lépés: Pontjelölés létrehozása
 ```csharp
 PointAnnotation point = new PointAnnotation
 {
@@ -60,28 +60,28 @@ PointAnnotation point = new PointAnnotation
     }
 };
 ```
- Ebben a lépésben létrehozzuk a`PointAnnotation` objektumot, és adja meg tulajdonságait, például pozíciót, üzenetet, oldalszámot és válaszokat.
-## 4. lépés: Megjegyzés hozzáadása
+Ebben a lépésben létrehozunk egy `PointAnnotation` objektumot, és adja meg a tulajdonságait, például a pozíciót, az üzenetet, az oldalszámot és a válaszokat.
+## 4. lépés: Jegyzet hozzáadása
 ```csharp
 annotator.Add(point);
 ```
-Itt hozzáadjuk a létrehozott pontjegyzetet a dokumentumhoz.
-## 5. lépés: Mentse el a dokumentumot
+Itt adjuk hozzá a létrehozott pontjegyzetet a dokumentumhoz.
+## 5. lépés: Dokumentum mentése
 ```csharp
 annotator.Save(outputPath);
 ```
-Végül elmentjük a jegyzett dokumentumot a megadott kimeneti útvonalra.
+Végül a jegyzetekkel ellátott dokumentumot a megadott kimeneti útvonalra mentjük.
 
 ## Következtetés
-Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá pontjegyzetet egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ezzel a nagy teljesítményű könyvtárral a jegyzetkezelési funkciók beépítésével javíthatja dokumentumkezelő alkalmazásait.
+Ebben az oktatóanyagban megtanultuk, hogyan adhatunk hozzá pontszerű megjegyzéseket egy dokumentumhoz a GroupDocs.Annotation for .NET használatával. Ezzel a hatékony könyvtárral annotációs funkciók beépítésével fejlesztheti dokumentumkezelő alkalmazásait.
 ## GYIK
 ### A GroupDocs.Annotation for .NET kompatibilis az összes dokumentumformátummal?
-Igen, a GroupDocs.Annotation for .NET a dokumentumformátumok széles skáláját támogatja, beleértve a PDF, Microsoft Word, Excel, PowerPoint és egyebeket.
-### Testreszabhatom a kommentárok megjelenését?
-Teljesen! A GroupDocs.Annotation for .NET kiterjedt lehetőségeket kínál a megjegyzések megjelenésének testreszabására az alkalmazás igényei szerint.
-### Elérhető ingyenes próbaverzió a GroupDocs.Annotation for .NET számára?
- Igen, igénybe veheti az ingyenes próbaverziót innen[itt](https://releases.groupdocs.com/).
-### Hogyan kaphatok támogatást a GroupDocs.Annotation for .NET-hez kapcsolódó problémákhoz vagy lekérdezésekhez?
- Támogatást a GroupDocs.Annotation fórumon kaphat[itt](https://forum.groupdocs.com/c/annotation/10).
-### Kaphatok ideiglenes licencet tesztelési célból?
- Igen, ideiglenes engedélyt szerezhetsz innen[itt](https://purchase.groupdocs.com/temporary-license/).
+Igen, a GroupDocs.Annotation for .NET számos dokumentumformátumot támogat, beleértve a PDF, Microsoft Word, Excel, PowerPoint és egyebeket.
+### Testreszabhatom a megjegyzések megjelenését?
+Abszolút! A GroupDocs.Annotation for .NET széleskörű lehetőségeket kínál a megjegyzések megjelenésének testreszabására az alkalmazás igényeinek megfelelően.
+### Van ingyenes próbaverzió a GroupDocs.Annotation for .NET-hez?
+Igen, igénybe vehet egy ingyenes próbaverziót a következő címen: [itt](https://releases.groupdocs.com/).
+### Hogyan kaphatok támogatást a GroupDocs.Annotation for .NET-tel kapcsolatos problémákkal vagy kérdésekkel kapcsolatban?
+Támogatást kaphatsz a GroupDocs.Annotation fórumon. [itt](https://forum.groupdocs.com/c/annotation/10).
+### Szerezhetek ideiglenes jogosítványt tesztelési célokra?
+Igen, ideiglenes jogosítványt szerezhet be. [itt](https://purchase.groupdocs.com/temporary-license/).

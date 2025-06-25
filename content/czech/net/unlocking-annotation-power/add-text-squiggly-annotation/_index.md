@@ -1,25 +1,25 @@
 ---
-title: Přidejte do dokumentu klikatou textovou anotaci
-linktitle: Přidejte do dokumentu klikatou textovou anotaci
-second_title: GroupDocs.Annotation .NET API
-description: Naučte se, jak bez námahy přidávat do dokumentů klikaté textové anotace pomocí Groupdocs.Annotation pro .NET. Zlepšete spolupráci a procesy kontroly dokumentů.
-weight: 25
-url: /cs/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Naučte se, jak snadno přidávat do dokumentů vlnité textové anotace pomocí Groupdocs.Annotation pro .NET. Vylepšete spolupráci a procesy kontroly dokumentů."
+"linktitle": "Přidat do dokumentu vlnovku textu"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Přidat do dokumentu vlnovku textu"
+"url": "/cs/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
-# Přidejte do dokumentu klikatou textovou anotaci
+# Přidat do dokumentu vlnovku textu
 
-## Úvod
+## Zavedení
 
-Groupdocs.Annotation for .NET je všestranná knihovna, která umožňuje vývojářům bez námahy integrovat robustní možnosti anotací do jejich aplikací .NET. Ať už pracujete s PDF, dokumenty Wordu nebo jinými oblíbenými formáty souborů, Groupdocs.Annotation poskytuje bezproblémové řešení pro přidávání poznámek a zlepšování spolupráce na dokumentech.
+Groupdocs.Annotation pro .NET je všestranná knihovna, která umožňuje vývojářům bez námahy integrovat robustní funkce pro anotaci do jejich .NET aplikací. Ať už pracujete s PDF, dokumenty Word nebo jinými oblíbenými formáty souborů, Groupdocs.Annotation poskytuje bezproblémové řešení pro anotaci a vylepšení spolupráce na dokumentech.
 
 ## Předpoklady
 
-Než se ponoříte do výukového programu, ujistěte se, že máte splněny následující předpoklady:
+Než se pustíte do tutoriálu, ujistěte se, že máte splněny následující předpoklady:
 
-## Import jmenných prostorů
+## Importovat jmenné prostory
 
-Ujistěte se, že jste importovali potřebné jmenné prostory pro přístup k funkcím poskytovaným Groupdocs.Annotation pro .NET.
+Pro přístup k funkcím poskytovaným souborem Groupdocs.Annotation pro .NET nezapomeňte importovat potřebné jmenné prostory.
 
 ```csharp
 using System;
@@ -30,28 +30,28 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Nyní, když máme pokryty předpoklady, pojďme si rozdělit proces přidávání klikatých textových anotací do několika kroků.
+Nyní, když máme pokryty předpoklady, pojďme si rozdělit proces přidávání vlnovek textu do několika kroků.
 
-## Krok 1: Definujte výstupní cestu
+## Krok 1: Definování výstupní cesty
 
-Definujte cestu, kam bude dokument s poznámkami uložen.
+Definujte cestu, kam bude uložen anotovaný dokument.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Krok 2: Inicializujte anotátor
+## Krok 2: Inicializace anotátoru
 
-Inicializujte objekt Annotator zadáním cesty vstupního dokumentu.
+Inicializujte objekt Annotator zadáním vstupní cesty k dokumentu.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Zde je kód anotace
+    // Sem se vkládá kód anotace
 }
 ```
 
-## Krok 3: Vytvořte klikatou anotaci
+## Krok 3: Vytvořte vlnovku
 
 Vytvořte objekt SquigglyAnnotation a zadejte jeho vlastnosti.
 
@@ -85,17 +85,17 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 };
 ```
 
-## Krok 4: Přidejte anotaci
+## Krok 4: Přidání anotace
 
-Přidejte do dokumentu vytvořenou klikatou anotaci.
+Přidejte do dokumentu vytvořenou vlnovku.
 
 ```csharp
 annotator.Add(squiggly);
 ```
 
-## Krok 5: Uložte dokument
+## Krok 5: Uložení dokumentu
 
-Uložte dokument s poznámkami do zadané výstupní cesty.
+Uložte anotovaný dokument do zadané výstupní cesty.
 
 ```csharp
 annotator.Save(outputPath);
@@ -103,7 +103,7 @@ annotator.Save(outputPath);
 
 ## Krok 6: Zobrazení potvrzení
 
-Zobrazte zprávu potvrzující úspěšné uložení anotovaného dokumentu.
+Zobrazit zprávu potvrzující úspěšné uložení anotovaného dokumentu.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Závěr
 
-Na závěr, Groupdocs.Annotation for .NET poskytuje vývojářům robustní sadu nástrojů pro bezproblémovou integraci funkcí anotací dokumentů do jejich aplikací .NET. Podle tohoto podrobného průvodce můžete bez námahy přidávat do dokumentů klikaté textové anotace, což zlepšuje spolupráci a procesy kontroly dokumentů.
+Závěrem lze říci, že Groupdocs.Annotation pro .NET poskytuje vývojářům robustní sadu nástrojů pro bezproblémovou integraci funkcí anotací dokumentů do jejich .NET aplikací. Dodržováním tohoto podrobného návodu můžete snadno přidávat textové anotace do svých dokumentů, což vylepší spolupráci a procesy kontroly dokumentů.
 
-## FAQ
+## Často kladené otázky
 
-### Otázka: Může Groupdocs.Annotation podporovat anotaci v různých formátech souborů?
+### Otázka: Může soubor Groupdocs.Annotation podporovat anotace v různých formátech souborů?
 
-Odpověď: Ano, Groupdocs.Annotation podporuje anotaci v široké škále formátů souborů, včetně PDF, dokumentů Word, listů Excelu a dalších.
+A: Ano, Groupdocs.Annotation podporuje anotace v široké škále formátů souborů, včetně PDF, dokumentů Word, tabulek Excel a dalších.
 
 ### Otázka: Je Groupdocs.Annotation kompatibilní s desktopovými i webovými aplikacemi?
 
-A: Rozhodně! Groupdocs.Annotation lze bez problémů integrovat do desktopových i webových aplikací a nabízí flexibilitu a všestrannost.
+A: Rozhodně! Groupdocs.Annotation lze bez problémů integrovat do desktopových i webových aplikací, což nabízí flexibilitu a všestrannost.
 
-### Otázka: Jsou pro Groupdocs.Annotation k dispozici nějaké možnosti licencování?
+### Otázka: Existují nějaké možnosti licencování pro Groupdocs.Annotation?
 
-Odpověď: Ano, Groupdocs.Annotation nabízí flexibilní možnosti licencování přizpůsobené individuálním nebo podnikovým potřebám, včetně dočasných licencí pro zkušební účely.
+A: Ano, Groupdocs.Annotation nabízí flexibilní možnosti licencování přizpůsobené individuálním nebo podnikovým potřebám, včetně dočasných licencí pro zkušební účely.
 
-### Otázka: Lze poznámky vytvořené pomocí Groupdocs.Annotation přizpůsobit?
+### Otázka: Lze přizpůsobit anotace vytvořené pomocí Groupdocs.Annotation?
 
-A: Určitě! Groupdocs.Annotation poskytuje rozsáhlé možnosti přizpůsobení pro anotace, což umožňuje vývojářům přizpůsobit anotace jejich specifickým požadavkům.
+A: Jistě! Groupdocs.Annotation nabízí rozsáhlé možnosti přizpůsobení anotací, což vývojářům umožňuje přizpůsobit anotace jejich specifickým požadavkům.
 
 ### Otázka: Nabízí Groupdocs.Annotation podporu a dokumentaci pro vývojáře?
 
-A: Opravdu! Groupdocs.Annotation poskytuje komplexní dokumentaci a vyhrazená fóra podpory, která vývojářům pomáhají efektivně využívat jeho funkce.
+A: Ano! Groupdocs.Annotation poskytuje komplexní dokumentaci a specializovaná fóra podpory, která pomáhají vývojářům efektivně využívat jeho funkce.

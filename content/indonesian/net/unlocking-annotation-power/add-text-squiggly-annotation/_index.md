@@ -1,23 +1,23 @@
 ---
-title: Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen
-linktitle: Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen
-second_title: GroupDocs.Annotasi .NET API
-description: Pelajari cara menambahkan anotasi teks berlekuk-lekuk ke dokumen dengan mudah menggunakan Groupdocs.Annotation untuk .NET. Meningkatkan kolaborasi dan proses peninjauan dokumen.
-weight: 25
-url: /id/net/unlocking-annotation-power/add-text-squiggly-annotation/
+"description": "Pelajari cara menambahkan anotasi teks bergelombang ke dokumen dengan mudah menggunakan Groupdocs.Annotation for .NET. Tingkatkan kolaborasi dan proses peninjauan dokumen."
+"linktitle": "Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen"
+"second_title": "API .NET GroupDocs.Annotation"
+"title": "Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen"
+"url": "/id/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+"weight": 25
 ---
 
 # Tambahkan Anotasi Teks Berlekuk-lekuk ke Dokumen
 
 ## Perkenalan
 
-Groupdocs.Annotation for .NET adalah perpustakaan serbaguna yang memungkinkan pengembang mengintegrasikan kemampuan anotasi yang kuat ke dalam aplikasi .NET mereka dengan mudah. Baik Anda bekerja dengan PDF, dokumen Word, atau format file populer lainnya, Groupdocs.Annotation memberikan solusi sempurna untuk membuat anotasi dan meningkatkan kolaborasi dokumen.
+Groupdocs.Annotation untuk .NET adalah pustaka serbaguna yang memungkinkan pengembang untuk mengintegrasikan kemampuan anotasi yang kuat ke dalam aplikasi .NET mereka dengan mudah. Baik Anda bekerja dengan PDF, dokumen Word, atau format file populer lainnya, Groupdocs.Annotation menyediakan solusi yang mudah untuk membuat anotasi dan meningkatkan kolaborasi dokumen.
 
 ## Prasyarat
 
-Sebelum masuk ke tutorial, pastikan Anda memiliki prasyarat berikut:
+Sebelum memulai tutorial, pastikan Anda memiliki prasyarat berikut:
 
-## Impor Namespace
+## Mengimpor Ruang Nama
 
 Pastikan untuk mengimpor namespace yang diperlukan untuk mengakses fungsionalitas yang disediakan oleh Groupdocs.Annotation untuk .NET.
 
@@ -30,19 +30,19 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Sekarang kita sudah memenuhi prasyaratnya, mari kita uraikan proses penambahan anotasi teks berlekuk-lekuk menjadi beberapa langkah.
+Sekarang setelah semua prasyarat telah terpenuhi, mari kita uraikan proses penambahan anotasi teks berkelok-kelok ke dalam beberapa langkah.
 
-## Langkah 1: Tentukan Jalur Keluaran
+## Langkah 1: Tentukan Jalur Output
 
-Tentukan jalur di mana dokumen beranotasi akan disimpan.
+Tentukan jalur tempat penyimpanan dokumen yang diberi anotasi.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
 
-## Langkah 2: Inisialisasi Annotator
+## Langkah 2: Inisialisasi Anotator
 
-Inisialisasi objek Annotator dengan menyediakan jalur dokumen masukan.
+Inisialisasi objek Annotator dengan menyediakan jalur dokumen input.
 
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
@@ -87,7 +87,7 @@ SquigglyAnnotation squiggly = new SquigglyAnnotation
 
 ## Langkah 4: Tambahkan Anotasi
 
-Tambahkan anotasi berlekuk-lekuk yang dibuat ke dokumen.
+Tambahkan anotasi berkelok-kelok yang dibuat ke dokumen.
 
 ```csharp
 annotator.Add(squiggly);
@@ -95,7 +95,7 @@ annotator.Add(squiggly);
 
 ## Langkah 5: Simpan Dokumen
 
-Simpan dokumen beranotasi ke jalur keluaran yang ditentukan.
+Simpan dokumen yang diberi anotasi ke jalur keluaran yang ditentukan.
 
 ```csharp
 annotator.Save(outputPath);
@@ -103,7 +103,7 @@ annotator.Save(outputPath);
 
 ## Langkah 6: Tampilkan Konfirmasi
 
-Menampilkan pesan yang mengonfirmasi keberhasilan penyimpanan dokumen beranotasi.
+Menampilkan pesan yang mengonfirmasi keberhasilan penyimpanan dokumen yang diberi anotasi.
 
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
@@ -111,26 +111,26 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 
 ## Kesimpulan
 
-Kesimpulannya, Groupdocs.Annotation for .NET memberi pengembang seperangkat alat yang kuat untuk mengintegrasikan fungsi anotasi dokumen ke dalam aplikasi .NET mereka dengan lancar. Dengan mengikuti panduan langkah demi langkah ini, Anda dapat dengan mudah menambahkan anotasi teks berlekuk-lekuk ke dokumen Anda, sehingga meningkatkan kolaborasi dan proses peninjauan dokumen.
+Sebagai kesimpulan, Groupdocs.Annotation untuk .NET menyediakan serangkaian alat yang tangguh bagi pengembang untuk mengintegrasikan fungsi anotasi dokumen ke dalam aplikasi .NET mereka dengan lancar. Dengan mengikuti panduan langkah demi langkah ini, Anda dapat dengan mudah menambahkan anotasi teks bergelombang ke dokumen Anda, meningkatkan kolaborasi dan proses peninjauan dokumen.
 
-## FAQ
+## Pertanyaan yang Sering Diajukan
 
 ### T: Dapatkah Groupdocs.Annotation mendukung anotasi pada berbagai format file?
 
-J: Ya, Groupdocs.Annotation mendukung anotasi pada berbagai format file, termasuk PDF, dokumen Word, lembar Excel, dan banyak lagi.
+A: Ya, Groupdocs.Annotation mendukung anotasi pada berbagai format file, termasuk PDF, dokumen Word, lembar Excel, dan banyak lagi.
 
 ### T: Apakah Groupdocs.Annotation kompatibel dengan aplikasi desktop dan web?
 
-J: Tentu saja! Groupdocs.Annotation dapat diintegrasikan dengan mulus ke dalam aplikasi desktop dan web, menawarkan fleksibilitas dan keserbagunaan.
+A: Tentu saja! Groupdocs.Annotation dapat diintegrasikan dengan mudah ke dalam aplikasi desktop dan web, menawarkan fleksibilitas dan keserbagunaan.
 
 ### T: Apakah ada opsi lisensi yang tersedia untuk Groupdocs.Annotation?
 
-J: Ya, Groupdocs.Annotation menawarkan opsi lisensi fleksibel yang disesuaikan dengan kebutuhan individu atau perusahaan, termasuk lisensi sementara untuk tujuan uji coba.
+A: Ya, Groupdocs.Annotation menawarkan opsi lisensi fleksibel yang disesuaikan dengan kebutuhan individu atau perusahaan, termasuk lisensi sementara untuk tujuan uji coba.
 
-### T: Apakah anotasi yang dibuat menggunakan Groupdocs.Annotation dapat dikustomisasi?
+### T: Bisakah anotasi yang dibuat menggunakan Groupdocs.Annotation disesuaikan?
 
-J: Tentu saja! Groupdocs.Annotation menyediakan opsi penyesuaian ekstensif untuk anotasi, memungkinkan pengembang menyesuaikan anotasi dengan kebutuhan spesifik mereka.
+A: Tentu saja! Groupdocs.Annotation menyediakan opsi penyesuaian yang luas untuk anotasi, yang memungkinkan pengembang untuk menyesuaikan anotasi dengan kebutuhan spesifik mereka.
 
 ### T: Apakah Groupdocs.Annotation menawarkan dukungan dan dokumentasi untuk pengembang?
 
-J: Memang! Groupdocs.Annotation menyediakan dokumentasi komprehensif dan forum dukungan khusus untuk membantu pengembang dalam memanfaatkan fitur-fiturnya secara efektif.
+A: Benar! Groupdocs.Annotation menyediakan dokumentasi yang komprehensif dan forum dukungan khusus untuk membantu pengembang dalam memanfaatkan fitur-fiturnya secara efektif.

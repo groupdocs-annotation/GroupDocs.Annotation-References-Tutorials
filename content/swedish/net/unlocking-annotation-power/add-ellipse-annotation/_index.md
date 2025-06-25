@@ -1,23 +1,23 @@
 ---
-title: Lägg till Ellipsannotering i dokumentet
-linktitle: Lägg till Ellipsannotering i dokumentet
-second_title: GroupDocs.Annotation .NET API
-description: Lär dig hur du lägger till ellipskommentarer till dokument i .NET med GroupDocs.Annotation. Förbättra samarbete och kommunikation utan ansträngning.
-weight: 13
-url: /sv/net/unlocking-annotation-power/add-ellipse-annotation/
+"description": "Lär dig hur du lägger till ellipsannoteringar i dokument i .NET med GroupDocs.Annotation. Förbättra samarbete och kommunikation utan ansträngning."
+"linktitle": "Lägg till ellipsannotering i dokument"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Lägg till ellipsannotering i dokument"
+"url": "/sv/net/unlocking-annotation-power/add-ellipse-annotation/"
+"weight": 13
 ---
 
-# Lägg till Ellipsannotering i dokumentet
+# Lägg till ellipsannotering i dokument
 
 ## Introduktion
-I den här handledningen får du lära dig hur du lägger till en ellipskommentar till ett dokument med GroupDocs.Annotation för .NET. Den här steg-för-steg-guiden leder dig genom processen och säkerställer att du förstår varje steg tydligt.
-## Förutsättningar
+I den här handledningen lär du dig hur du lägger till en ellipsannotering i ett dokument med GroupDocs.Annotation för .NET. Den här steg-för-steg-guiden guidar dig genom processen och säkerställer att du förstår varje steg tydligt.
+## Förkunskapskrav
 Innan du börjar, se till att du har följande:
-1.  GroupDocs.Annotation for .NET: Se till att du har laddat ner och installerat GroupDocs.Annotation for .NET. Du kan ladda ner den från[här](https://releases.groupdocs.com/annotation/net/).
-2. IDE (Integrated Development Environment): Du behöver en IDE installerad på ditt system, såsom Visual Studio, för att skriva och köra koden.
+1. GroupDocs.Annotation för .NET: Se till att du har laddat ner och installerat GroupDocs.Annotation för .NET. Du kan ladda ner det från [här](https://releases.groupdocs.com/annotation/net/).
+2. IDE (Integrated Development Environment): Du behöver en IDE installerad på ditt system, till exempel Visual Studio, för att skriva och köra koden.
 
-## Importera namnområden
-Importera först de nödvändiga namnrymden till ditt projekt:
+## Importera namnrymder
+Importera först de nödvändiga namnrymderna till ditt projekt:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Steg 1: Ställ in utdatasökväg
+## Steg 1: Ställ in utmatningsväg
 Definiera utdatasökvägen där det kommenterade dokumentet ska sparas:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Steg 2: Initiera Annotator
-Initiera annotatorn genom att tillhandahålla indatadokumentets sökväg:
+## Steg 2: Initiera annotatorn
+Initiera annotatorn genom att ange sökvägen för indatadokumentet:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Steg 3: Skapa Ellipse-anteckning
- Skapa en instans av`EllipseAnnotation` klass och ställ in dess egenskaper:
+## Steg 3: Skapa ellipsannotering
+Skapa en instans av `EllipseAnnotation` klass och ange dess egenskaper:
 ```csharp
 EllipseAnnotation ellipse = new EllipseAnnotation
 {
@@ -66,27 +66,27 @@ EllipseAnnotation ellipse = new EllipseAnnotation
     }
 };
 ```
-## Steg 4: Lägg till anteckning
-Lägg till ellipsanteckningen i dokumentet:
+## Steg 4: Lägg till annotering
+Lägg till ellipsannoteringen i dokumentet:
 ```csharp
 annotator.Add(ellipse);
 ```
 ## Steg 5: Spara dokument
-Spara det kommenterade dokumentet i utmatningsvägen:
+Spara det kommenterade dokumentet till utdatasökvägen:
 ```csharp
 annotator.Save(outputPath);
 ```
 
 ## Slutsats
-Grattis! Du har framgångsrikt lagt till en ellipskommentar till ett dokument med GroupDocs.Annotation för .NET. Du kan nu integrera den här funktionen i dina .NET-applikationer för att förbättra dokumentsamarbete och kommunikation.
-## FAQ's
-### Kan jag anpassa utseendet på ellipsanteckningen?
-Ja, du kan anpassa olika egenskaper som bakgrundsfärg, kantfärg, opacitet, etc., enligt dina krav.
-### Är GroupDocs.Annotation for .NET kompatibelt med alla dokumentformat?
-GroupDocs.Annotation för .NET stöder ett brett utbud av dokumentformat inklusive PDF, DOCX, PPTX, XLSX och mer.
-### Kan jag lägga till flera kommentarer till ett enda dokument?
-Ja, du kan lägga till flera kommentarer inklusive ellipser, rektanglar, text, etc., till ett enda dokument.
+Grattis! Du har lagt till en ellipsannotering i ett dokument med GroupDocs.Annotation för .NET. Du kan nu integrera den här funktionen i dina .NET-applikationer för att förbättra samarbete och kommunikation i dokument.
+## Vanliga frågor
+### Kan jag anpassa utseendet på ellipsannoteringen?
+Ja, du kan anpassa olika egenskaper som bakgrundsfärg, kantfärg, opacitet etc., enligt dina behov.
+### Är GroupDocs.Annotation för .NET kompatibel med alla dokumentformat?
+GroupDocs.Annotation för .NET stöder ett brett utbud av dokumentformat, inklusive PDF, DOCX, PPTX, XLSX med flera.
+### Kan jag lägga till flera anteckningar i ett enda dokument?
+Ja, du kan lägga till flera anteckningar, inklusive ellipser, rektanglar, text etc., i ett enda dokument.
 ### Finns det en testversion tillgänglig för teständamål?
- Ja, du kan ladda ner en gratis testversion från[här](https://releases.groupdocs.com/) för att utvärdera dess egenskaper.
+Ja, du kan ladda ner en gratis testversion från [här](https://releases.groupdocs.com/) att utvärdera dess egenskaper.
 ### Var kan jag få teknisk support för GroupDocs.Annotation för .NET?
- Du kan få teknisk support från GroupDocs.Annotation-gemenskapsforumet[här](https://forum.groupdocs.com/c/annotation/10).
+Du kan få teknisk support från GroupDocs.Annotation-communityforumet. [här](https://forum.groupdocs.com/c/annotation/10).

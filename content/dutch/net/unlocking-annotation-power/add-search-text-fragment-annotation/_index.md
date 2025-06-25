@@ -1,23 +1,23 @@
 ---
-title: Voeg zoektekstfragmentannotatie toe aan document
-linktitle: Voeg zoektekstfragmentannotatie toe aan document
-second_title: GroupDocs.Annotation .NET API
-description: Ontdek de kracht van GroupDocs.Annotation voor .NET en voeg moeiteloos documentannotatiemogelijkheden toe aan uw toepassingen.
-weight: 20
-url: /nl/net/unlocking-annotation-power/add-search-text-fragment-annotation/
+"description": "Ontdek de kracht van GroupDocs.Annotation voor .NET en voeg moeiteloos documentannotatiemogelijkheden toe aan uw toepassingen."
+"linktitle": "Zoektekstfragmentannotatie toevoegen aan document"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Zoektekstfragmentannotatie toevoegen aan document"
+"url": "/nl/net/unlocking-annotation-power/add-search-text-fragment-annotation/"
+"weight": 20
 ---
 
-# Voeg zoektekstfragmentannotatie toe aan document
+# Zoektekstfragmentannotatie toevoegen aan document
 
 ## Invoering
-Op het gebied van .NET-ontwikkeling onderscheidt GroupDocs.Annotation zich als een krachtig hulpmiddel voor het naadloos annoteren van documenten. Of u nu een doorgewinterde ontwikkelaar bent of net de wereld van .NET betreedt, deze uitgebreide tutorial leidt u door de essentie van het gebruik van GroupDocs.Annotation voor .NET, van het importeren van naamruimten tot het beheersen van de fijne kneepjes van het toevoegen van zoektekstfragmentannotaties aan uw documenten.
+In de wereld van .NET-ontwikkeling onderscheidt GroupDocs.Annotation zich als een krachtige tool voor het naadloos annoteren van documenten. Of je nu een ervaren ontwikkelaar bent of net begint met .NET, deze uitgebreide tutorial leidt je door de basisprincipes van het gebruik van GroupDocs.Annotation voor .NET, van het importeren van naamruimten tot het onder de knie krijgen van de complexiteit van het toevoegen van zoektekstfragmentannotaties aan je documenten.
 ## Invoering
-GroupDocs.Annotation voor .NET stelt ontwikkelaars in staat om moeiteloos documentannotatiemogelijkheden in hun applicaties op te nemen. Met de intuïtieve API en robuuste functies kunnen ontwikkelaars aantekeningen maken in verschillende documentformaten, waaronder PDF's, Microsoft Office-documenten, afbeeldingen en meer.
+Met GroupDocs.Annotation voor .NET kunnen ontwikkelaars moeiteloos documentannotatiemogelijkheden in hun applicaties integreren. Dankzij de intuïtieve API en robuuste functies kunnen ontwikkelaars verschillende documentformaten annoteren, waaronder pdf's, Microsoft Office-documenten, afbeeldingen en meer.
 ## Vereisten
-Voordat u in GroupDocs.Annotation voor .NET duikt, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+Voordat u aan de slag gaat met GroupDocs.Annotation voor .NET, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
 
 ## Naamruimten importeren
-Importeer eerst de benodigde naamruimten om toegang te krijgen tot de GroupDocs.Annotation-klassen en -methoden in uw .NET-project:
+Importeer eerst de benodigde naamruimten om toegang te krijgen tot GroupDocs.Annotation-klassen en -methoden in uw .NET-project:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -26,19 +26,19 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Stap 1: Definieer het uitvoerpad
-Begin met het definiëren van het uitvoerpad waar het geannoteerde document zal worden opgeslagen:
+## Stap 1: Uitvoerpad definiëren
+Begin met het definiëren van het uitvoerpad waar het geannoteerde document wordt opgeslagen:
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Stap 2: Initialiseer Annotator
- Initialiseer vervolgens een exemplaar van het`Annotator` klasse door het pad op te geven naar het document dat u wilt annoteren:
+## Stap 2: Annotator initialiseren
+Initialiseer vervolgens een exemplaar van de `Annotator` klasse door het pad naar het document dat u wilt annoteren op te geven:
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
-## Stap 3: Maak een zoektekstfragmentannotatie
- Maak een`SearchTextFragment` object met de gewenste eigenschappen, zoals tekst waarnaar moet worden gezocht, lettergrootte, letterfamilie, letterkleur en achtergrondkleur:
+## Stap 3: Zoektekstfragmentannotatie maken
+Maak een `SearchTextFragment` object met de gewenste eigenschappen, zoals de te zoeken tekst, lettergrootte, lettertype, letterkleur en achtergrondkleur:
 ```csharp
 SearchTextFragment searchText = new SearchTextFragment()
 {
@@ -50,11 +50,11 @@ SearchTextFragment searchText = new SearchTextFragment()
 };
 ```
 ## Stap 4: Annotatie toevoegen
- Voeg de gemaakte zoektekstfragmentannotatie toe aan het document met behulp van de`Add` methode van de annotator:
+Voeg de aangemaakte zoektekstfragmentannotatie toe aan het document met behulp van de `Add` methode van de annotator:
 ```csharp
 annotator.Add(searchText);
 ```
-## Stap 5: Bewaar het geannoteerde document
+## Stap 5: Geannoteerd document opslaan
 Sla het geannoteerde document op in het opgegeven uitvoerpad:
 ```csharp
 annotator.Save(outputPath);
@@ -66,15 +66,15 @@ Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}
 ```
 
 ## Conclusie
-Concluderend vereenvoudigt GroupDocs.Annotation voor .NET het proces van het toevoegen van annotaties aan documenten, waardoor de samenwerking en documentbeoordelingsprocessen worden verbeterd. Door de stappen in deze handleiding te volgen, kunt u de mogelijkheden voor documentannotatie naadloos integreren in uw .NET-toepassingen.
+Kortom, GroupDocs.Annotation voor .NET vereenvoudigt het toevoegen van annotaties aan documenten en verbetert zo de samenwerking en de beoordeling van documenten. Door de stappen in deze handleiding te volgen, kunt u documentannotatie naadloos integreren in uw .NET-applicaties.
 ## Veelgestelde vragen
 ### Is GroupDocs.Annotation compatibel met alle documentformaten?
 Ja, GroupDocs.Annotation ondersteunt een breed scala aan documentformaten, waaronder PDF's, Microsoft Office-documenten, afbeeldingen en meer.
 ### Kan ik het uiterlijk van annotaties aanpassen?
-Absoluut! GroupDocs.Annotation biedt uitgebreide aanpassingsopties voor annotaties, waardoor u eigenschappen zoals lettergrootte, kleur en stijl kunt aanpassen.
+Absoluut! GroupDocs.Annotation biedt uitgebreide aanpassingsopties voor annotaties, waarmee u eigenschappen zoals lettergrootte, kleur en stijl kunt aanpassen.
 ### Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation?
- Ja, u krijgt toegang tot een gratis proefversie van GroupDocs.Annotation om de functies en mogelijkheden ervan te verkennen voordat u een aankoop doet[hier](https://releases.groupdocs.com/)..
+Ja, u kunt een gratis proefversie van GroupDocs.Annotation gebruiken om de functies en mogelijkheden ervan te verkennen voordat u een aankoop doet. [hier](https://releases.groupdocs.com/)..
 ### Waar kan ik ondersteuning vinden voor GroupDocs.Annotation?
- Voor ondersteuning en hulp bij GroupDocs.Annotation kunt u de GroupDocs bezoeken[forum](https://forum.groupdocs.com/c/annotation/10) gewijd aan annotatiegerelateerde vragen en discussies.
+Voor ondersteuning en hulp met GroupDocs.Annotation kunt u terecht op de GroupDocs [forum](https://forum.groupdocs.com/c/annotation/10) gewijd aan vragen en discussies met betrekking tot annotaties.
 ### Hoe verkrijg ik een tijdelijke licentie voor GroupDocs.Annotation?
- U kunt een tijdelijke licentie voor GroupDocs.Annotation verkrijgen via GroupDocs[website](https://purchase.groupdocs.com/temporary-license/), zodat u het product volledig kunt beoordelen.
+U kunt een tijdelijke licentie voor GroupDocs.Annotation verkrijgen via de GroupDocs-website. [website](https://purchase.groupdocs.com/temporary-license/), zodat u het product volledig kunt evalueren.

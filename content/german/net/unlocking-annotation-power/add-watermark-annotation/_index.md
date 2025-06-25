@@ -1,22 +1,22 @@
 ---
-title: Fügen Sie dem Dokument eine Wasserzeichenanmerkung hinzu
-linktitle: Fügen Sie dem Dokument eine Wasserzeichenanmerkung hinzu
-second_title: GroupDocs.Annotation .NET-API
-description: Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos Wasserzeichenanmerkungen zu Ihren Dokumenten hinzufügen. Verbessern Sie die Klarheit und Sicherheit von Dokumenten.
-weight: 28
-url: /de/net/unlocking-annotation-power/add-watermark-annotation/
+"description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET mühelos Wasserzeichen zu Ihren Dokumenten hinzufügen. Verbessern Sie die Übersichtlichkeit und Sicherheit Ihrer Dokumente."
+"linktitle": "Wasserzeichenanmerkung zum Dokument hinzufügen"
+"second_title": "GroupDocs.Annotation .NET API"
+"title": "Wasserzeichenanmerkung zum Dokument hinzufügen"
+"url": "/de/net/unlocking-annotation-power/add-watermark-annotation/"
+"weight": 28
 ---
 
-# Fügen Sie dem Dokument eine Wasserzeichenanmerkung hinzu
+# Wasserzeichenanmerkung zum Dokument hinzufügen
 
 ## Einführung
-In diesem Tutorial führen wir den Prozess des Hinzufügens einer Wasserzeichenanmerkung zu einem Dokument mithilfe von GroupDocs.Annotation für .NET durch. Wasserzeichenanmerkungen sind nützlich, um den Status eines Dokuments anzuzeigen, es als vertraulich zu kennzeichnen oder andere relevante Informationen hinzuzufügen.
+In diesem Tutorial erfahren Sie, wie Sie mithilfe von GroupDocs.Annotation für .NET ein Wasserzeichen zu einem Dokument hinzufügen. Wasserzeichen sind nützlich, um den Status eines Dokuments anzuzeigen, es als vertraulich zu kennzeichnen oder andere relevante Informationen hinzuzufügen.
 
 ## Voraussetzungen
 
-Bevor wir beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
+Bevor wir beginnen, stellen Sie sicher, dass Sie Folgendes haben:
 
-1.  GroupDocs.Annotation für .NET: Sie können es herunterladen unter[Hier](https://releases.groupdocs.com/annotation/net/).
+1. GroupDocs.Annotation für .NET: Sie können es herunterladen von [Hier](https://releases.groupdocs.com/annotation/net/).
 2. Visual Studio: Stellen Sie sicher, dass Visual Studio auf Ihrem System installiert ist.
 3. Grundkenntnisse in C#: Um die Codebeispiele zu verstehen und umzusetzen, sind Kenntnisse der Programmiersprache C# erforderlich.
 
@@ -32,11 +32,11 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 ```
 
-Lassen Sie uns nun den Prozess des Hinzufügens einer Wasserzeichenanmerkung in mehrere Schritte unterteilen:
+Lassen Sie uns nun den Vorgang des Hinzufügens einer Wasserzeichenanmerkung in mehrere Schritte unterteilen:
 
 ## Schritt 1: Ausgabepfad definieren
 
- Zuerst müssen wir den Ausgabepfad definieren, in dem das mit Anmerkungen versehene Dokument gespeichert wird. Wir werden das verwenden`Path` Klasse von`System.IO` Namespace, um den Ausgabeverzeichnispfad mit dem Dateinamen zu kombinieren.
+Zuerst müssen wir den Ausgabepfad definieren, in dem das kommentierte Dokument gespeichert wird. Wir verwenden den `Path` Klasse von `System.IO` Namespace, um den Ausgabeverzeichnispfad mit dem Dateinamen zu kombinieren.
 
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
@@ -49,11 +49,11 @@ Als Nächstes initialisieren wir den Annotator, indem wir den Pfad des Eingabedo
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
-    // Der Anmerkungscode wird hier angezeigt
+    // Der Anmerkungscode wird hier eingefügt
 }
 ```
 
-## Schritt 3: Erstellen Sie eine Wasserzeichenanmerkung
+## Schritt 3: Wasserzeichenanmerkung erstellen
 
 Erstellen wir nun ein Wasserzeichen-Anmerkungsobjekt mit den gewünschten Eigenschaften wie Winkel, Position, Text, Schriftfarbe, Deckkraft usw.
 
@@ -90,7 +90,7 @@ WatermarkAnnotation watermark = new WatermarkAnnotation
 
 ## Schritt 4: Wasserzeichenanmerkung hinzufügen
 
- Jetzt fügen wir die Wasserzeichenanmerkung mithilfe von zum Dokument hinzu`Add` Methode des Annotatorobjekts.
+Nun fügen wir dem Dokument die Wasserzeichenanmerkung hinzu, indem wir `Add` Methode des Annotatorobjekts.
 
 ```csharp
 annotator.Add(watermark);
@@ -98,7 +98,7 @@ annotator.Add(watermark);
 
 ## Schritt 5: Dokument speichern
 
-Abschließend speichern wir das mit Anmerkungen versehene Dokument im angegebenen Ausgabepfad.
+Abschließend speichern wir das kommentierte Dokument im angegebenen Ausgabepfad.
 
 ```csharp
 annotator.Save(outputPath);
@@ -106,26 +106,26 @@ annotator.Save(outputPath);
 
 ## Abschluss
 
-In diesem Tutorial haben wir gelernt, wie man mit GroupDocs.Annotation für .NET einem Dokument eine Wasserzeichenanmerkung hinzufügt. Wasserzeichenanmerkungen sind ein wertvolles Werkzeug, um Dokumente mit relevanten Informationen zu kennzeichnen oder ihren Status anzuzeigen.
+In diesem Tutorial haben wir gelernt, wie man mit GroupDocs.Annotation für .NET ein Wasserzeichen zu einem Dokument hinzufügt. Wasserzeichen sind ein wertvolles Werkzeug, um Dokumente mit relevanten Informationen zu kennzeichnen oder ihren Status anzuzeigen.
 
-## FAQs
+## Häufig gestellte Fragen
 
 ### F: Kann ich das Erscheinungsbild der Wasserzeichenanmerkung anpassen?
 
-A: Ja, Sie können verschiedene Eigenschaften wie Text, Schriftgröße, Farbe, Deckkraft, Position usw. anpassen, um das Wasserzeichen an Ihre Anforderungen anzupassen.
+A: Ja, Sie können verschiedene Eigenschaften wie Text, Schriftgröße, Farbe, Deckkraft, Position usw. anpassen, um das Wasserzeichen Ihren Anforderungen entsprechend anzupassen.
 
 ### F: Ist GroupDocs.Annotation für .NET mit verschiedenen Dokumentformaten kompatibel?
 
-A: Ja, GroupDocs.Annotation unterstützt eine Vielzahl von Dokumentformaten, darunter PDF, Microsoft Word, Excel, PowerPoint und Bildformate.
+A: Ja, GroupDocs.Annotation unterstützt eine breite Palette von Dokumentformaten, darunter PDF, Microsoft Word, Excel, PowerPoint und Bildformate.
 
 ### F: Kann ich einem einzelnen Dokument mehrere Anmerkungen hinzufügen?
 
-A: Absolut, GroupDocs.Annotation ermöglicht es Ihnen, mehrere Anmerkungen unterschiedlicher Art zu einem einzelnen Dokument hinzuzufügen und so ein umfassendes Dokument-Markup zu ermöglichen.
+A: Auf jeden Fall. Mit GroupDocs.Annotation können Sie einem einzelnen Dokument mehrere Anmerkungen unterschiedlichen Typs hinzufügen und so eine umfassende Dokumentmarkierung ermöglichen.
 
-### F: Bietet GroupDocs.Annotation Unterstützung für kollaborative Anmerkungen?
+### F: Bietet GroupDocs.Annotation Unterstützung für die gemeinsame Kommentierung?
 
-A: Ja, GroupDocs.Annotation erleichtert das gemeinsame Annotieren, indem es Benutzern das Hinzufügen von Kommentaren, Antworten und Anmerkungen ermöglicht und so eine effektive Zusammenarbeit zwischen Teammitgliedern fördert.
+A: Ja, GroupDocs.Annotation erleichtert die gemeinsame Kommentierung, indem es Benutzern ermöglicht, Kommentare, Antworten und Anmerkungen hinzuzufügen und so die effektive Zusammenarbeit zwischen den Teammitgliedern zu fördern.
 
-### F: Gibt es eine Testversion für GroupDocs.Annotation für .NET?
+### F: Gibt es eine Testversion von GroupDocs.Annotation für .NET?
 
- A: Ja, Sie können eine kostenlose Testversion herunterladen von[Hier](https://releases.groupdocs.com/).
+A: Ja, Sie können eine kostenlose Testversion herunterladen von [Hier](https://releases.groupdocs.com/).

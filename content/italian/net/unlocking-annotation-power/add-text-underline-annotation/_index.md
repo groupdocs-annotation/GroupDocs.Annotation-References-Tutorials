@@ -1,23 +1,23 @@
 ---
-title: Aggiungi annotazione di sottolineatura del testo al documento
-linktitle: Aggiungi annotazione di sottolineatura del testo al documento
-second_title: API GroupDocs.Annotation .NET
-description: Scopri come aggiungere annotazioni di sottolineatura di testo ai documenti utilizzando GroupDocs.Annotation per .NET. Migliora la collaborazione e la comunicazione senza sforzo.
-weight: 27
-url: /it/net/unlocking-annotation-power/add-text-underline-annotation/
+"description": "Scopri come aggiungere annotazioni di testo sottolineate ai documenti utilizzando GroupDocs.Annotation per .NET. Migliora la collaborazione e la comunicazione senza sforzo."
+"linktitle": "Aggiungi annotazione di sottolineatura del testo al documento"
+"second_title": "API .NET di GroupDocs.Annotation"
+"title": "Aggiungi annotazione di sottolineatura del testo al documento"
+"url": "/it/net/unlocking-annotation-power/add-text-underline-annotation/"
+"weight": 27
 ---
 
 # Aggiungi annotazione di sottolineatura del testo al documento
 
-## introduzione
-In questo tutorial, esamineremo il processo di aggiunta di un'annotazione di sottolineatura di testo a un documento utilizzando GroupDocs.Annotation per .NET. Le annotazioni di sottolineatura del testo possono essere utili per enfatizzare parti specifiche di un documento, come passaggi importanti o punti chiave.
+## Introduzione
+In questo tutorial, illustreremo come aggiungere un'annotazione di testo sottolineato a un documento utilizzando GroupDocs.Annotation per .NET. Le annotazioni di testo sottolineato possono essere utili per enfatizzare parti specifiche di un documento, come passaggi importanti o punti chiave.
 ## Prerequisiti
-Prima di iniziare, assicurati di avere installati i seguenti prerequisiti:
-1.  GroupDocs.Annotation per .NET: scarica e installa GroupDocs.Annotation per .NET da[Qui](https://releases.groupdocs.com/annotation/net/).
-2. .NET Framework: assicurati di avere .NET Framework installato sul tuo sistema.
+Prima di iniziare, assicurati di aver installato i seguenti prerequisiti:
+1. GroupDocs.Annotation per .NET: Scarica e installa GroupDocs.Annotation per .NET da [Qui](https://releases.groupdocs.com/annotation/net/).
+2. .NET Framework: assicurati che .NET Framework sia installato sul tuo sistema.
 
 ## Importazione di spazi dei nomi
-Innanzitutto, importiamo gli spazi dei nomi necessari nel nostro progetto:
+Per prima cosa, importiamo gli spazi dei nomi necessari nel nostro progetto:
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 
-Ora suddividiamo l'esempio in più passaggi:
+Ora scomponiamo l'esempio in più passaggi:
 ## Passaggio 1: definire il percorso di output
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-In questo passaggio, definiamo il percorso di output in cui verrà salvato il documento annotato.
-## Passaggio 2: inizializza Annotatore
+In questo passaggio definiamo il percorso di output in cui verrà salvato il documento annotato.
+## Passaggio 2: inizializzare l'annotatore
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Qui inizializziamo un'istanza di`Annotator` class fornendo il percorso del documento di input.
-## Passaggio 3: crea l'annotazione sottolineata
+Qui, inizializziamo un'istanza di `Annotator` classe fornendo il percorso del documento di input.
+## Passaggio 3: creare un'annotazione sottolineata
 ```csharp
 UnderlineAnnotation underline = new UnderlineAnnotation
 {
@@ -48,7 +48,7 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     Opacity = 0.7,
     PageNumber = 0,
     BackgroundColor = 16761035,
-    UnderlineColor = 1422623, // funziona supportato solo documenti Word e PDF
+    UnderlineColor = 1422623, // funziona supportando solo documenti Word e PDF
     Points = new List<Point>
     {
         new Point(80, 730), new Point(240, 730), new Point(80, 650), new Point(240, 650)
@@ -68,28 +68,28 @@ UnderlineAnnotation underline = new UnderlineAnnotation
     }
 };
 ```
- Questo passaggio prevede la creazione di un file`UnderlineAnnotation`oggetto con varie proprietà come colore del carattere, messaggio, opacità, numero di pagina, colore di sfondo, colore di sottolineatura, punti e risposte.
-## Passaggio 4: aggiungi annotazione al documento
+Questo passaggio prevede la creazione di un `UnderlineAnnotation` oggetto con varie proprietà quali colore del carattere, messaggio, opacità, numero di pagina, colore di sfondo, colore di sottolineatura, punti e risposte.
+## Passaggio 4: aggiungere annotazioni al documento
 ```csharp
 annotator.Add(underline);
 ```
-Qui aggiungiamo l'annotazione di sottolineatura al documento.
-## Passaggio 5: salva il documento con annotazioni
+Qui aggiungiamo l'annotazione sottolineata al documento.
+## Passaggio 5: Salva il documento annotato
 ```csharp
 annotator.Save(outputPath);
 ```
 Infine, salviamo il documento annotato nel percorso di output specificato.
 
 ## Conclusione
-In questo tutorial, abbiamo imparato come aggiungere un'annotazione di sottolineatura di testo a un documento utilizzando GroupDocs.Annotation per .NET. Questa potente libreria fornisce varie opzioni di annotazione per migliorare la collaborazione e la comunicazione dei documenti.
+In questo tutorial, abbiamo imparato come aggiungere un'annotazione di testo sottolineato a un documento utilizzando GroupDocs.Annotation per .NET. Questa potente libreria offre diverse opzioni di annotazione per migliorare la collaborazione e la comunicazione sui documenti.
 ## Domande frequenti
 ### Posso personalizzare l'aspetto dell'annotazione sottolineata?
-Sì, puoi personalizzare proprietà come colore, opacità e posizione in base alle tue esigenze.
+Sì, puoi personalizzare proprietà quali colore, opacità e posizione in base alle tue esigenze.
 ### GroupDocs.Annotation è compatibile con diversi formati di documenti?
-Sì, GroupDocs.Annotation supporta un'ampia gamma di formati di documenti tra cui Word e PDF.
+Sì, GroupDocs.Annotation supporta un'ampia gamma di formati di documenti, tra cui Word e PDF.
 ### Posso aggiungere più annotazioni a un singolo documento?
-Assolutamente sì, GroupDocs.Annotation ti consente di aggiungere più annotazioni di diverso tipo a un documento.
+Certamente, GroupDocs.Annotation consente di aggiungere più annotazioni di diverso tipo a un documento.
 ### È disponibile una prova gratuita per GroupDocs.Annotation?
- Sì, puoi accedere alla versione di prova gratuita da[Qui](https://releases.groupdocs.com/).
+Sì, puoi accedere alla versione di prova gratuita da [Qui](https://releases.groupdocs.com/).
 ### Dove posso ottenere supporto per GroupDocs.Annotation?
- Puoi ottenere supporto dal forum della community GroupDocs.Annotation[Qui](https://forum.groupdocs.com/c/annotation/10).
+Puoi ottenere supporto dal forum della community GroupDocs.Annotation [Qui](https://forum.groupdocs.com/c/annotation/10).

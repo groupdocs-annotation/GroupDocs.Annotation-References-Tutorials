@@ -1,23 +1,23 @@
 ---
-title: Adicionar anotação de ponto ao documento
-linktitle: Adicionar anotação de ponto ao documento
-second_title: API GroupDocs.Annotation .NET
-description: Aprenda como adicionar anotação de ponto a PDFs usando GroupDocs.Annotation for .NET. Guia passo a passo para integração perfeita.
-weight: 17
-url: /pt/net/unlocking-annotation-power/add-point-annotation/
+"description": "Aprenda a adicionar Anotações de Ponto a PDFs usando o GroupDocs.Annotation para .NET. Guia passo a passo para uma integração perfeita."
+"linktitle": "Adicionar anotação de ponto ao documento"
+"second_title": "API .NET do GroupDocs.Annotation"
+"title": "Adicionar anotação de ponto ao documento"
+"url": "/pt/net/unlocking-annotation-power/add-point-annotation/"
+"weight": 17
 ---
 
 # Adicionar anotação de ponto ao documento
 
 ## Introdução
-GroupDocs.Annotation for .NET é uma ferramenta poderosa que permite aos desenvolvedores adicionar vários tipos de anotações a documentos de forma programática. Neste tutorial, vamos nos concentrar em adicionar uma anotação de ponto a um documento usando C#.
+O GroupDocs.Annotation para .NET é uma ferramenta poderosa que permite aos desenvolvedores adicionar vários tipos de anotações a documentos programaticamente. Neste tutorial, vamos nos concentrar em adicionar uma Anotação de Ponto a um documento usando C#.
 ## Pré-requisitos
-Antes de começarmos, certifique-se de ter o seguinte:
-1. Compreensão básica da linguagem de programação C#.
-2. Visual Studio instalado em seu sistema.
-3.  Biblioteca GroupDocs.Annotation para .NET instalada. Você pode baixá-lo em[aqui](https://releases.groupdocs.com/annotation/net/).
+Antes de começar, certifique-se de ter o seguinte:
+1. Noções básicas de linguagem de programação C#.
+2. Visual Studio instalado no seu sistema.
+3. Biblioteca GroupDocs.Annotation para .NET instalada. Você pode baixá-la em [aqui](https://releases.groupdocs.com/annotation/net/).
 
-## Importando Namespaces Necessários
+## Importando namespaces necessários
 Para começar, você precisa importar os namespaces necessários para o seu projeto C#:
 ```csharp
 using System;
@@ -27,16 +27,16 @@ using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
-## Etapa 1: definir o caminho de saída
+## Etapa 1: Definir o caminho de saída
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-Nesta etapa definimos o caminho de saída onde o documento anotado será salvo.
-## Etapa 2: inicializar o anotador
+Nesta etapa, definimos o caminho de saída onde o documento anotado será salvo.
+## Etapa 2: Inicializar o Annotator
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 ```
- Aqui inicializamos o`Annotator` objeto com o documento de entrada ("input.pdf").
+Aqui, inicializamos o `Annotator` objeto com o documento de entrada ("input.pdf").
 ## Etapa 3: Criar anotação de ponto
 ```csharp
 PointAnnotation point = new PointAnnotation
@@ -60,28 +60,28 @@ PointAnnotation point = new PointAnnotation
     }
 };
 ```
- Nesta etapa, criamos um`PointAnnotation` objeto e especifique suas propriedades, como posição, mensagem, número da página e respostas.
-## Etapa 4: adicionar anotação
+Nesta etapa, criamos uma `PointAnnotation` objeto e especifique suas propriedades, como posição, mensagem, número de página e respostas.
+## Etapa 4: Adicionar anotação
 ```csharp
 annotator.Add(point);
 ```
-Aqui, adicionamos a anotação do ponto criado ao documento.
+Aqui, adicionamos a anotação de ponto criada ao documento.
 ## Etapa 5: Salvar documento
 ```csharp
 annotator.Save(outputPath);
 ```
-Finalmente, salvamos o documento anotado no caminho de saída especificado.
+Por fim, salvamos o documento anotado no caminho de saída especificado.
 
 ## Conclusão
-Neste tutorial, aprendemos como adicionar uma anotação de ponto a um documento usando GroupDocs.Annotation for .NET. Com esta poderosa biblioteca, você pode aprimorar seus aplicativos de gerenciamento de documentos incorporando funcionalidades de anotação.
+Neste tutorial, aprendemos como adicionar uma Anotação de Ponto a um documento usando o GroupDocs.Annotation para .NET. Com esta poderosa biblioteca, você pode aprimorar seus aplicativos de gerenciamento de documentos incorporando funcionalidades de anotação.
 ## Perguntas frequentes
-### O GroupDocs.Annotation for .NET é compatível com todos os formatos de documentos?
-Sim, GroupDocs.Annotation for .NET oferece suporte a uma ampla variedade de formatos de documentos, incluindo PDF, Microsoft Word, Excel, PowerPoint e muito mais.
+### O GroupDocs.Annotation for .NET é compatível com todos os formatos de documento?
+Sim, o GroupDocs.Annotation para .NET suporta uma ampla variedade de formatos de documentos, incluindo PDF, Microsoft Word, Excel, PowerPoint e muito mais.
 ### Posso personalizar a aparência das anotações?
-Absolutamente! GroupDocs.Annotation for .NET oferece diversas opções para personalizar a aparência das anotações para atender às necessidades do seu aplicativo.
-### Existe uma avaliação gratuita disponível para GroupDocs.Annotation for .NET?
- Sim, você pode aproveitar um teste gratuito em[aqui](https://releases.groupdocs.com/).
-### Como posso obter suporte para quaisquer problemas ou dúvidas relacionadas ao GroupDocs.Annotation for .NET?
- Você pode obter suporte no fórum GroupDocs.Annotation[aqui](https://forum.groupdocs.com/c/annotation/10).
-### Posso obter uma licença temporária para fins de teste?
- Sim, você pode obter uma licença temporária de[aqui](https://purchase.groupdocs.com/temporary-license/).
+Com certeza! O GroupDocs.Annotation para .NET oferece diversas opções para personalizar a aparência das anotações de acordo com as necessidades do seu aplicativo.
+### Existe uma avaliação gratuita disponível para o GroupDocs.Annotation para .NET?
+Sim, você pode aproveitar um teste gratuito em [aqui](https://releases.groupdocs.com/).
+### Como posso obter suporte para quaisquer problemas ou dúvidas relacionadas ao GroupDocs.Annotation para .NET?
+Você pode obter suporte no fórum GroupDocs.Annotation [aqui](https://forum.groupdocs.com/c/annotation/10).
+### Posso obter uma licença temporária para fins de testes?
+Sim, você pode obter uma licença temporária em [aqui](https://purchase.groupdocs.com/temporary-license/).

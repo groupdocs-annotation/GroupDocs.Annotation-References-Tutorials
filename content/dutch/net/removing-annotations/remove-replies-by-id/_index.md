@@ -1,27 +1,27 @@
 ---
-title: Verwijder antwoorden op ID in .NET
-linktitle: Verwijder antwoorden op ID in .NET
-second_title: GroupDocs.Annotation .NET API
-description: Leer hoe u antwoorden op ID kunt verwijderen in .NET met behulp van GroupDocs.Annotation. Volg onze stapsgewijze zelfstudie voor efficiënt beheer van documentannotaties.
-weight: 16
-url: /nl/net/removing-annotations/remove-replies-by-id/
+"description": "Leer hoe u antwoorden op ID verwijdert in .NET met behulp van GroupDocs.Annotation. Volg onze stapsgewijze handleiding voor efficiënt beheer van documentannotaties."
+"linktitle": "Antwoorden op ID verwijderen in .NET"
+"second_title": "GroupDocs.Annotatie .NET API"
+"title": "Antwoorden op ID verwijderen in .NET"
+"url": "/nl/net/removing-annotations/remove-replies-by-id/"
+"weight": 16
 ---
 
-# Verwijder antwoorden op ID in .NET
+# Antwoorden op ID verwijderen in .NET
 
 ## Invoering
-Op het gebied van .NET-ontwikkeling is de mogelijkheid om annotaties in documenten te beheren van cruciaal belang voor een verscheidenheid aan toepassingen. Of u nu met PDF's, Word-documenten of andere formaten werkt, de mogelijkheid om annotaties programmatisch te manipuleren opent een wereld aan mogelijkheden. Een krachtig hulpmiddel voor het verwerken van annotaties in .NET is GroupDocs.Annotation.
+In de wereld van .NET-ontwikkeling is de mogelijkheid om annotaties binnen documenten te beheren cruciaal voor diverse toepassingen. Of u nu met PDF's, Word-documenten of andere formaten werkt, de mogelijkheid om annotaties programmatisch te bewerken opent een wereld aan mogelijkheden. Een krachtige tool voor het verwerken van annotaties in .NET is GroupDocs.Annotation.
 ## Vereisten
-Voordat u ingaat op de tutorial over het verwijderen van antwoorden op ID in .NET met behulp van GroupDocs.Annotation, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
-### 1. Installatie van GroupDocs.Annotation
- Eerst moet u GroupDocs.Annotation voor .NET installeren. U kunt de bibliotheek downloaden van[hier](https://releases.groupdocs.com/annotation/net/) en volg de installatie-instructies in de documentatie[hier](https://tutorials.groupdocs.com/annotation/net/).
+Voordat u begint met de tutorial over het verwijderen van antwoorden op ID in .NET met behulp van GroupDocs.Annotation, moet u ervoor zorgen dat u aan de volgende vereisten voldoet:
+### 1. GroupDocs.Annotation-installatie
+Allereerst moet u GroupDocs.Annotation voor .NET installeren. U kunt de bibliotheek downloaden van [hier](https://releases.groupdocs.com/annotation/net/) en volg de installatie-instructies in de documentatie [hier](https://tutorials.groupdocs.com/annotation/net/).
 ### 2. Basiskennis van C# en .NET
-Bekendheid met de programmeertaal C# en het .NET-framework is noodzakelijk om de voorbeelden in deze tutorial te volgen.
+Om de voorbeelden in deze tutorial te kunnen volgen, is kennis van de programmeertaal C# en het .NET Framework noodzakelijk.
 ### 3. Geannoteerd document met antwoorden
-Bereid een document voor dat annotaties met antwoorden bevat. Dit document zal dienen als input voor het verwijderingsproces.
+Maak een document met annotaties en reacties. Dit document dient als input voor het verwijderingsproces.
 
 ## Naamruimten importeren
-Importeer in uw .NET-project de benodigde naamruimten om toegang te krijgen tot de GroupDocs.Annotation-functionaliteiten.
+Importeer in uw .NET-project de benodigde naamruimten om toegang te krijgen tot de GroupDocs.Annotation-functies.
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -30,7 +30,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 ```
-## Stap 1: Definieer het uitvoerpad
+## Stap 1: Uitvoerpad definiëren
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
@@ -41,12 +41,12 @@ using (Annotator annotator = new Annotator("annotated_with_replies.pdf"))
 {
     List<AnnotationBase> annotations = annotator.Get();
 ```
- Laad het document met annotaties en antwoorden met behulp van de`Annotator` class en haal de annotatiecollectie op.
-## Stap 3: Antwoorden op ID verwijderen
+Laad het document met annotaties met antwoorden met behulp van de `Annotator` klasse en haal de annotatiecollectie op.
+## Stap 3: Verwijder antwoorden op ID
 ```csharp
 annotations[0].Replies.RemoveAll(x => x.Id == 4);
 ```
-Identificeer het antwoord dat u wilt verwijderen op basis van de ID ervan en verwijder het uit de antwoordenverzameling van de bijbehorende annotatie.
+Bepaal op basis van de ID welk antwoord u wilt verwijderen en verwijder het uit de verzameling antwoorden van de bijbehorende annotatie.
 ## Stap 4: Wijzigingen opslaan
 ```csharp
 annotator.Update(annotations);
@@ -57,18 +57,18 @@ Werk de annotaties bij met de verwijderde antwoorden en sla het gewijzigde docum
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-Geef een bevestigingsbericht weer dat aangeeft dat het document succesvol is opgeslagen en dat de antwoorden zijn verwijderd.
+Geef een bevestigingsbericht weer waarin staat dat het document succesvol is opgeslagen en dat de reacties zijn verwijderd.
 
 ## Conclusie
-Concluderend biedt GroupDocs.Annotation voor .NET een eenvoudige oplossing voor het beheren van annotaties in documenten. Door de stappen in deze zelfstudie te volgen, kunt u eenvoudig antwoorden per ID verwijderen, zodat u documentannotaties eenvoudig en efficiënt kunt afstemmen op uw specifieke vereisten.
+Kortom, GroupDocs.Annotation voor .NET biedt een eenvoudige oplossing voor het beheren van annotaties in documenten. Door de stappen in deze tutorial te volgen, kunt u eenvoudig reacties op basis van ID verwijderen, zodat u documentannotaties eenvoudig en efficiënt kunt aanpassen aan uw specifieke behoeften.
 ## Veelgestelde vragen
-### Kan GroupDocs.Annotation worden gebruikt met andere documentformaten dan PDF?
+### Kan GroupDocs.Annotation gebruikt worden met andere documentformaten dan PDF?
 Ja, GroupDocs.Annotation ondersteunt verschillende documentformaten, waaronder Word, Excel, PowerPoint en meer.
 ### Is er een gratis proefversie beschikbaar voor GroupDocs.Annotation?
- Ja, u heeft toegang tot de gratis proefperiode[hier](https://releases.groupdocs.com/).
+Ja, u kunt deelnemen aan de gratis proefperiode [hier](https://releases.groupdocs.com/).
 ### Waar kan ik ondersteuning vinden voor GroupDocs.Annotation?
- U kunt steun vinden en betrokken raken bij de gemeenschap[hier](https://forum.groupdocs.com/c/annotation/10).
+Je kunt steun vinden en je bij de community aansluiten [hier](https://forum.groupdocs.com/c/annotation/10).
 ### Hoe kan ik een tijdelijke licentie voor GroupDocs.Annotation verkrijgen?
- U kunt een tijdelijke licentie aanschaffen[hier](https://purchase.groupdocs.com/temporary-license/).
+U kunt een tijdelijke licentie verkrijgen [hier](https://purchase.groupdocs.com/temporary-license/).
 ### Waar kan ik GroupDocs.Annotation voor .NET kopen?
- U kunt GroupDocs.Annotation aanschaffen[hier](https://purchase.groupdocs.com/buy).
+kunt GroupDocs.Annotation kopen [hier](https://purchase.groupdocs.com/buy).

@@ -1,21 +1,21 @@
 ---
-title: Aggiungi annotazione polilinea al documento
-linktitle: Aggiungi annotazione polilinea al documento
-second_title: API GroupDocs.Annotation .NET
-description: Scopri come aggiungere annotazioni di polilinee ai documenti utilizzando GroupDocs.Annotation per .NET. Migliora facilmente la collaborazione e i processi di revisione dei documenti.
-weight: 18
-url: /it/net/unlocking-annotation-power/add-polyline-annotation/
+"description": "Scopri come aggiungere annotazioni polilineari ai documenti utilizzando GroupDocs.Annotation per .NET. Migliora la collaborazione e i processi di revisione dei documenti senza sforzo."
+"linktitle": "Aggiungi annotazione polilinea al documento"
+"second_title": "API .NET di GroupDocs.Annotation"
+"title": "Aggiungi annotazione polilinea al documento"
+"url": "/it/net/unlocking-annotation-power/add-polyline-annotation/"
+"weight": 18
 ---
 
 # Aggiungi annotazione polilinea al documento
 
-## introduzione
-GroupDocs.Annotation per .NET è un potente strumento che consente agli sviluppatori di annotare a livello di codice documenti PDF e Microsoft Office. Tra le sue funzionalità c'è la possibilità di aggiungere annotazioni di polilinee ai documenti, migliorando la collaborazione e i processi di revisione dei documenti.
+## Introduzione
+GroupDocs.Annotation per .NET è un potente strumento che consente agli sviluppatori di annotare i documenti PDF e Microsoft Office a livello di codice. Tra le sue funzionalità, la possibilità di aggiungere annotazioni polilineari ai documenti, migliorando la collaborazione e i processi di revisione dei documenti.
 ## Prerequisiti
 Prima di procedere con questo tutorial, assicurati di avere quanto segue:
-- Visual Studio installato nel sistema.
-- Conoscenza base del linguaggio di programmazione C#.
--  GroupDocs.Annotation per la libreria .NET installata. Puoi scaricarlo da[Qui](https://releases.groupdocs.com/annotation/net/).
+- Visual Studio installato sul tuo sistema.
+- Conoscenza di base del linguaggio di programmazione C#.
+- Libreria GroupDocs.Annotation per .NET installata. Puoi scaricarla da [Qui](https://releases.groupdocs.com/annotation/net/).
 
 ## Importa spazi dei nomi
 ```csharp
@@ -27,18 +27,18 @@ using GroupDocs.Annotation.Models.AnnotationModels;
 using GroupDocs.Annotation.Options;
 ```
 ## Passaggio 1: definire il percorso di output
-Innanzitutto, definisci il percorso di output in cui verrà salvato il documento annotato.
+Per prima cosa, definisci il percorso di output in cui verrà salvato il documento annotato.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Passaggio 2: inizializza Annotatore
-Inizializza l'annotatore fornendo il nome del documento di input.
+## Passaggio 2: inizializzare l'annotatore
+Inizializzare l'annotatore specificando il nome del documento di input.
 ```csharp
 using (Annotator annotator = new Annotator("input.pdf"))
 {
 ```
 ## Passaggio 3: creare un oggetto di annotazione polilinea
-Crea un oggetto di annotazione polilinea e imposta le sue proprietà come posizione, messaggio, opacità, colore penna, stile penna e larghezza penna.
+Crea un oggetto di annotazione polilinea e impostane le proprietà, quali posizione, messaggio, opacità, colore della penna, stile della penna e larghezza della penna.
 ```csharp
 PolylineAnnotation polyline = new PolylineAnnotation
 {
@@ -67,32 +67,32 @@ PolylineAnnotation polyline = new PolylineAnnotation
 4460093896,0l0.6986854460093896,0l0.6986854460093896,-0.6986854460093896l0.6986854460093896,0"
 };
 ```
-## Passaggio 4: aggiungi annotazione polilinea
-Aggiungi l'annotazione della polilinea al documento utilizzando l'oggetto annotatore.
+## Passaggio 4: aggiungere annotazioni polilinea
+Aggiungere l'annotazione polilinea al documento utilizzando l'oggetto annotatore.
 ```csharp
 annotator.Add(polyline);
 ```
-## Passaggio 5: salva il documento
+## Passaggio 5: Salva il documento
 Salva il documento annotato nel percorso di output specificato.
 ```csharp
 annotator.Save(outputPath);
 ```
-## Passaggio 6: Visualizza il messaggio di successo
-Visualizza un messaggio che conferma il corretto salvataggio del documento.
+## Passaggio 6: visualizzare il messaggio di successo
+Visualizza un messaggio di conferma dell'avvenuto salvataggio del documento.
 ```csharp
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
 
 ## Conclusione
-In questo tutorial, abbiamo imparato come aggiungere un'annotazione di polilinea a un documento utilizzando GroupDocs.Annotation per .NET. Questa funzionalità migliora i processi di collaborazione e revisione dei documenti, rendendo più semplice per gli utenti comunicare feedback e suggerimenti in modo efficace.
+In questo tutorial abbiamo imparato come aggiungere un'annotazione polilinea a un documento utilizzando GroupDocs.Annotation per .NET. Questa funzionalità migliora i processi di collaborazione e revisione dei documenti, semplificando la comunicazione di feedback e suggerimenti da parte degli utenti.
 ## Domande frequenti
-### GroupDocs.Annotation per .NET è compatibile con tutti i formati di documenti?
-GroupDocs.Annotation per .NET supporta i formati di documenti più diffusi come PDF e formati Microsoft Office, inclusi Word, Excel e PowerPoint.
+### GroupDocs.Annotation per .NET è compatibile con tutti i formati di documento?
+GroupDocs.Annotation per .NET supporta i formati di documenti più diffusi, come PDF e i formati Microsoft Office, tra cui Word, Excel e PowerPoint.
 ### Posso personalizzare l'aspetto delle annotazioni?
-Sì, puoi personalizzare varie proprietà delle annotazioni come colore, opacità, stile e larghezza in base alle tue esigenze.
+Sì, puoi personalizzare varie proprietà delle annotazioni, come colore, opacità, stile e larghezza, in base alle tue esigenze.
 ### GroupDocs.Annotation per .NET offre una prova gratuita?
- Sì, puoi usufruire di una prova gratuita di GroupDocs.Annotation per .NET visitando[questo link](https://releases.groupdocs.com/).
+Sì, puoi usufruire di una prova gratuita di GroupDocs.Annotation per .NET visitando [questo collegamento](https://releases.groupdocs.com/).
 ### Dove posso trovare la documentazione per GroupDocs.Annotation per .NET?
- È possibile trovare la documentazione per GroupDocs.Annotation per .NET[Qui](https://tutorials.groupdocs.com/annotation/net/).
-### Come posso ottenere supporto per eventuali problemi o domande relative a GroupDocs.Annotation per .NET?
- Puoi ottenere supporto visitando il forum GroupDocs.Annotation[Qui](https://forum.groupdocs.com/c/annotation/10).
+Puoi trovare la documentazione per GroupDocs.Annotation per .NET [Qui](https://tutorials.groupdocs.com/annotation/net/).
+### Come posso ottenere supporto per eventuali problemi o domande relativi a GroupDocs.Annotation per .NET?
+Puoi ottenere supporto visitando il forum GroupDocs.Annotation [Qui](https://forum.groupdocs.com/c/annotation/10).
