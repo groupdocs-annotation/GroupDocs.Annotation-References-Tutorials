@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Annotation για Java για να παραθέτετε αποτελεσματικά τις υποστηριζόμενες μορφές αρχείων με τον αναλυτικό μας οδηγό. Ιδανικό για τη βελτίωση των εφαρμογών σχολιασμού εγγράφων σας."
 "title": "Πώς να ανακτήσετε υποστηριζόμενες μορφές αρχείων στο GroupDocs.Annotation for Java&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

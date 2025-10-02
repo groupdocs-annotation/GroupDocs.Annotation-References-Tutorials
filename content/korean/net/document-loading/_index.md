@@ -2,6 +2,7 @@
 "description": ".NET용 GroupDocs.Annotation을 사용하여 다양한 소스에서 문서를 로드하는 방법에 대한 단계별 자습서입니다."
 "title": "GroupDocs.Annotation .NET을 위한 문서 로딩 튜토리얼"
 "url": "/ko/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

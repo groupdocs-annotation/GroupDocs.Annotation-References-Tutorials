@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Parola Korumalı Belgeleri Yükle"
 "url": "/tr/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

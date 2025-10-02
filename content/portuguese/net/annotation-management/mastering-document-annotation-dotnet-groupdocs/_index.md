@@ -3,6 +3,7 @@
 "description": "Aprenda a gerenciar anotações em documentos .NET com eficiência usando o GroupDocs.Annotation. Este guia aborda configuração, personalização e práticas recomendadas para salvar documentos anotados."
 "title": "Anotação de Documento Mestre em .NET com GroupDocs.Annotation - Um Guia Completo"
 "url": "/pt/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

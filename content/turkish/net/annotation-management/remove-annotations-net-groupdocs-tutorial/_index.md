@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET ile belgelerden açıklamaları kaldırma konusunda uzmanlaşın. Adım adım süreçleri öğrenin, dosya işlemeyi optimize edin ve belge netliğini artırın."
 "title": "GroupDocs.Annotation&#58;ı Kullanarak .NET'te Açıklamaları Etkin Şekilde Kaldırın Kapsamlı Bir Kılavuz"
 "url": "/tr/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε αποτελεσματικά τις σχολιασμοί και τις απαντήσεις σε PDF χρησιμοποιώντας το GroupDocs.Annotation στις εφαρμογές Java σας. Βελτιστοποιήστε τη συνεργασία σε έγγραφα με τον ολοκληρωμένο οδηγό μας."
 "title": "Σχόλια PDF Java - Δημιουργία και διαχείριση σχολίων και απαντήσεων με το GroupDocs.Annotation για Java"
 "url": "/el/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

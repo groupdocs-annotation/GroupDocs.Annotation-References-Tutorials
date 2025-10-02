@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 從 Amazon S3 有效地下載 PDF 並進行註解。透過無縫整合增強您的文件工作流程。"
 "title": "使用 GroupDocs.Annotation for .NET 從 Amazon S3 高效下載和註解 PDF"
 "url": "/zh-hant/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

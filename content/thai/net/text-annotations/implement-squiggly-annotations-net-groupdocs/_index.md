@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายข้อความหยัก ๆ ในแอปพลิเคชัน .NET ของคุณด้วย GroupDocs.Annotation เพื่อปรับปรุงการอ่านเอกสารและการรับข้อเสนอแนะ"
 "title": "การนำคำอธิบายประกอบแบบข้อความหยัก ๆ มาใช้งานใน .NET โดยใช้ GroupDocs.Annotation"
 "url": "/th/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

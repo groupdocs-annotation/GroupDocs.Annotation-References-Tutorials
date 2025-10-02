@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ใส่คำอธิบายภาพทับข้อความ"
 "url": "/th/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

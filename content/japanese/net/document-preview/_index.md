@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントのプレビュー、サムネイル、ビジュアル表現を生成するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation .NET のドキュメントプレビューチュートリアル"
 "url": "/ja/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

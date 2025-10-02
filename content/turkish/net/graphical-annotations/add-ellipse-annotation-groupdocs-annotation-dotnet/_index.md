@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET API'sini kullanarak etkileşimli elips açıklamaları ekleyerek PDF belgelerinizi nasıl geliştireceğinizi öğrenin. Bu kılavuz, geliştiriciler için adım adım talimatlar sağlar."
 "title": "GroupDocs.Annotation .NET API'sini Kullanarak PDF'lere Elips Açıklamaları Nasıl Eklenir"
 "url": "/tr/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

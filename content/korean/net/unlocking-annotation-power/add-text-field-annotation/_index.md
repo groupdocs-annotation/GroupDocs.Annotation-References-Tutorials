@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서에 텍스트 필드 주석 추가"
 "url": "/ko/net/unlocking-annotation-power/add-text-field-annotation/"
+type: docs
 "weight": 21
 ---
 

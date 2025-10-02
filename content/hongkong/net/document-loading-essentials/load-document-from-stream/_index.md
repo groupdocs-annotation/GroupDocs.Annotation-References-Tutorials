@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "從串流載入文檔"
 "url": "/zh-hant/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

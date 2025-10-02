@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus documentos PDF com anotações interativas de pontos usando o GroupDocs.Annotation para .NET. Este guia passo a passo aborda configuração, implementação e solução de problemas."
 "title": "Como adicionar anotações de pontos a PDFs usando GroupDocs.Annotation para .NET"
 "url": "/pt/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

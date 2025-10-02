@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لتنفيذ الارتباطات التشعبية والتعليقات التوضيحية المرتبطة في المستندات باستخدام GroupDocs.Annotation for Java."
 "title": "دروس شرح الروابط لـ GroupDocs.Annotation Java"
 "url": "/ar/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

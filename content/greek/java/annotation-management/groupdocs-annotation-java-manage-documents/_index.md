@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε αποτελεσματικά τις σχολιασμούς σε Java χρησιμοποιώντας το GroupDocs.Annotation. Αυτός ο οδηγός καλύπτει τη φόρτωση, την αφαίρεση και τη βελτιστοποίηση των ροών εργασίας εγγράφων."
 "title": "Πλήρης οδηγός για τη διαχείριση σχολίων Master σε Java με το GroupDocs.Annotation"
 "url": "/el/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

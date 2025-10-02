@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Εξαγωγή σχολίων από αρχείο XML"
 "url": "/el/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

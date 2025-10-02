@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengunduh dan memberi anotasi pada PDF dari Amazon S3 secara efisien menggunakan GroupDocs.Annotation for .NET. Tingkatkan alur kerja dokumen Anda dengan integrasi yang lancar."
 "title": "Unduhan PDF Efisien & Anotasi dari Amazon S3 Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

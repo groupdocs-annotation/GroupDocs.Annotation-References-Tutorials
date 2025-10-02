@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation を使って .NET PDF 注釈をマスターする方法を学びましょう。このガイドでは、初期化、ページ処理、変換、そして注釈付きドキュメントの効率的な保存について説明します。"
 "title": "GroupDocs.Annotation を使用した .NET PDF 注釈の総合ガイド - 強化されたドキュメント管理"
 "url": "/ja/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

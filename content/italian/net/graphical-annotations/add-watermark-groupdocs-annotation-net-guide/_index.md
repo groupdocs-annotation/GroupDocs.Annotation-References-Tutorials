@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere filigrane utilizzando GroupDocs.Annotation per .NET. Questa guida illustra la configurazione, l'implementazione dettagliata e le best practice per la protezione e il branding dei documenti."
 "title": "Implementare Aggiungi filigrana con GroupDocs.Annotation in .NET - Una guida completa per la sicurezza e il branding dei documenti"
 "url": "/it/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

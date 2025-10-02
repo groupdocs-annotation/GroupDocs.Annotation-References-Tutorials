@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tải và chú thích hiệu quả các tài liệu được lưu trữ trên Amazon S3 bằng GroupDocs.Annotation trong Java. Hướng dẫn này bao gồm tích hợp, sử dụng AWS SDK và tối ưu hóa hiệu suất."
 "title": "Tải và chú thích tài liệu từ Amazon S3 bằng Java&#58; Hướng dẫn tích hợp GroupDocs.Annotation"
 "url": "/vi/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

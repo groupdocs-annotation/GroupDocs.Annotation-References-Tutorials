@@ -3,6 +3,7 @@
 "description": "Naučte se, jak nastavit a spravovat měřenou licenci pomocí nástroje GroupDocs.Annotation pro .NET a jak zajistit dodržování předpisů a optimální funkčnost."
 "title": "Implementace měřené licence v GroupDocs.Annotation pro .NET – Komplexní průvodce"
 "url": "/cs/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

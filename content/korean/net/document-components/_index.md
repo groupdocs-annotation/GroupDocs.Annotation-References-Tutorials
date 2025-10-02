@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서 구성 요소"
 "url": "/ko/net/document-components/"
+type: docs
 "weight": 24
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u interactieve knoppen in uw PDF-documenten kunt integreren met de krachtige GroupDocs.Annotation voor .NET. Vergroot de betrokkenheid van gebruikers met stapsgewijze instructies."
 "title": "Interactieve knoppen integreren in PDF's met GroupDocs.Annotation .NET SDK"
 "url": "/nl/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

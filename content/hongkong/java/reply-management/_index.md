@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 實作評論主題、回覆和協作討論的逐步教學。"
 "title": "GroupDocs.Annotation Java 的回覆管理教學課程"
 "url": "/zh-hant/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

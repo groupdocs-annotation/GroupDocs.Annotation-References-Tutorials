@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς εικόνας από απομακρυσμένες διευθύνσεις URL σε έγγραφα PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τις ροές εργασίας των εγγράφων σας με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Υλοποίηση σχολιασμού εικόνας σε PDF χρησιμοποιώντας το GroupDocs.Annotation .NET και απομακρυσμένες διευθύνσεις URL"
 "url": "/el/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

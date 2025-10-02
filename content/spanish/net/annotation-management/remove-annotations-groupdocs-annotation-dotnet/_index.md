@@ -3,6 +3,7 @@
 "description": "Aprenda a eliminar de manera eficiente anotaciones de sus documentos utilizando la poderosa API GroupDocs.Annotation con este detallado tutorial de C#."
 "title": "Cómo eliminar anotaciones de documentos con GroupDocs.Annotation para .NET"
 "url": "/es/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

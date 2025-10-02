@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation for .NET 教學課程"
 "title": "GroupDocs.Annotation for .NET 的教學與範例"
 "url": "/zh-hant/net/"
+type: docs
 "weight": 10
 ---
 

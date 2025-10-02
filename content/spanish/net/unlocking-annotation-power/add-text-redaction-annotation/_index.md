@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Agregar anotación de redacción de texto al documento"
 "url": "/es/net/unlocking-annotation-power/add-text-redaction-annotation/"
+type: docs
 "weight": 23
 ---
 

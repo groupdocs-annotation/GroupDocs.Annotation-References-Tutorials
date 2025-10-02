@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak ulepszyć swoje aplikacje Java, dodając adnotacje wieloliniowe za pomocą biblioteki GroupDocs.Annotation. Idealne do poprawy przejrzystości i interaktywności dokumentu."
 "title": "Implementacja adnotacji polilinii w Javie przy użyciu biblioteki GroupDocs.Annotation"
 "url": "/pl/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

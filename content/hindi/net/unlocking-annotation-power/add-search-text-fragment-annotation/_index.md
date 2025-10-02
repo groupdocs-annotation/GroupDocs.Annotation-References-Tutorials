@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ में खोज टेक्स्ट फ़्रैगमेंट एनोटेशन जोड़ें"
 "url": "/hi/net/unlocking-annotation-power/add-search-text-fragment-annotation/"
+type: docs
 "weight": 20
 ---
 

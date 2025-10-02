@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Aggiungi annotazione di evidenziazione del testo al documento"
 "url": "/it/net/unlocking-annotation-power/add-text-highlight-annotation/"
+type: docs
 "weight": 22
 ---
 

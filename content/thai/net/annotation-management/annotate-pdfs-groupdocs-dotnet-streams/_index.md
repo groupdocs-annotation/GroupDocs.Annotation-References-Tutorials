@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบเอกสาร PDF ในสภาพแวดล้อม .NET อย่างมีประสิทธิภาพโดยใช้สตรีมด้วย GroupDocs.Annotation เพิ่มประสิทธิภาพเวิร์กโฟลว์การจัดการเอกสารของคุณ"
 "title": "การใส่คำอธิบายประกอบใน PDF โดยใช้ GroupDocs.Annotation .NET ผ่าน Streams&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

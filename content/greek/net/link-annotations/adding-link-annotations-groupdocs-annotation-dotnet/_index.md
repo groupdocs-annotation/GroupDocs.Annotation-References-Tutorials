@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τις εφαρμογές .NET προσθέτοντας διαδραστικές σχολιασμούς συνδέσμων χρησιμοποιώντας την ισχυρή βιβλιοθήκη GroupDocs.Annotation. Ακολουθήστε τον αναλυτικό οδηγό μας και βελτιώστε την διαδραστικότητα των εγγράφων σήμερα."
 "title": "Πώς να προσθέσετε σχολιασμούς συνδέσμων σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET | Οδηγός προγραμματιστών"
 "url": "/el/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

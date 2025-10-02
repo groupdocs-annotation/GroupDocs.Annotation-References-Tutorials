@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "XML 파일에서 주석 내보내기"
 "url": "/ko/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

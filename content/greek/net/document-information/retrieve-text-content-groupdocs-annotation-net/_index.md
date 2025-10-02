@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ανακτάτε αποτελεσματικά περιεχόμενο κειμένου από έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Ακολουθήστε αυτόν τον αναλυτικό οδηγό για να βελτιώσετε τις δυνατότητες επεξεργασίας εγγράφων σας."
 "title": "Ανάκτηση περιεχομένου κειμένου εγγράφου με το GroupDocs.Annotation για .NET® - Οδηγός βήμα προς βήμα"
 "url": "/el/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

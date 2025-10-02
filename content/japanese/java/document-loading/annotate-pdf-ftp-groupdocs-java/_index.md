@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、FTPサーバーから直接PDFドキュメントに注釈を付ける方法を学びましょう。このステップバイステップガイドで、ドキュメント処理ワークフローを効率化しましょう。"
 "title": "GroupDocs.Annotation for Java を使用して FTP から PDF に注釈を付ける - 完全ガイド"
 "url": "/ja/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Découvrez comment créer des aperçus de documents PDF de haute qualité avec des résolutions d'image spécifiques grâce à la puissante bibliothèque GroupDocs.Annotation dans .NET. Optimisez votre flux de gestion documentaire dès aujourd'hui."
 "title": "Générez des aperçus PDF de haute qualité avec des résolutions personnalisées à l'aide de GroupDocs.Annotation pour .NET"
 "url": "/fr/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

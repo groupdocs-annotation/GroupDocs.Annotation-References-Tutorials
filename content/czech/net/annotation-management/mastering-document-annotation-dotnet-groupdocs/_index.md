@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně spravovat anotace dokumentů v .NET pomocí GroupDocs.Annotation. Tato příručka se zabývá nastavením, přizpůsobením a osvědčenými postupy pro ukládání anotovaných dokumentů."
 "title": "Anotace hlavního dokumentu v .NET s GroupDocs.Annotation – kompletní průvodce"
 "url": "/cs/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

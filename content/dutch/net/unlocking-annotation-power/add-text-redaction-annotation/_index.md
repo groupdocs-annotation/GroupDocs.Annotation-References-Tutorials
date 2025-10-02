@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Tekstredactie-annotatie toevoegen aan document"
 "url": "/nl/net/unlocking-annotation-power/add-text-redaction-annotation/"
+type: docs
 "weight": 23
 ---
 

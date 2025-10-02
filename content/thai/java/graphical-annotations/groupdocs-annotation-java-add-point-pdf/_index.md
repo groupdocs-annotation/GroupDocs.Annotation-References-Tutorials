@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณโดยเพิ่มคำอธิบายประกอบจุดด้วยโปรแกรมด้วย GroupDocs.Annotation สำหรับ Java คู่มือนี้ครอบคลุมถึงการตั้งค่า การใช้งาน และแอปพลิเคชันในทางปฏิบัติ"
 "title": "วิธีการเพิ่มคำอธิบายจุดลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

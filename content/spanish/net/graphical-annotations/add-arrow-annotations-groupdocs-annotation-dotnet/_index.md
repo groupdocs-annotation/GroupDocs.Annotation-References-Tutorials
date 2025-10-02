@@ -3,6 +3,7 @@
 "description": "Aprenda a agregar anotaciones de flecha a sus documentos con GroupDocs.Annotation para .NET. Esta guía proporciona instrucciones paso a paso con ejemplos de código."
 "title": "Cómo agregar anotaciones de flecha en archivos PDF con GroupDocs.Annotation para .NET"
 "url": "/es/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

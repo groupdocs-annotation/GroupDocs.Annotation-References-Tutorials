@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt annotaties uit pdf's en andere documenten verwijdert met GroupDocs.Annotation voor .NET. Ontdek stapsgewijze handleidingen, best practices en praktische toepassingen."
 "title": "PDF-annotaties verwijderen op basis van ID met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/annotation-management/manage-pdf-annotations-groupdocs-dotnet-remove-id/"
+type: docs
 "weight": 1
 ---
 

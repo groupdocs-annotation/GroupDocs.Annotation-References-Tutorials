@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belgeye Metin Değiştirme Açıklaması Ekle"
 "url": "/tr/net/unlocking-annotation-power/add-text-replacement-annotation/"
+type: docs
 "weight": 24
 ---
 

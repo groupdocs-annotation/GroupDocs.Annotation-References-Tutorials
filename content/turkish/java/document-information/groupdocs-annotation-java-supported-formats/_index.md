@@ -3,6 +3,7 @@
 "description": "Adım adım kılavuzumuzla desteklenen dosya biçimlerini etkili bir şekilde listelemek için GroupDocs.Annotation for Java'yı nasıl kullanacağınızı öğrenin. Belge açıklama uygulamalarınızı geliştirmek için mükemmeldir."
 "title": "GroupDocs'ta Desteklenen Dosya Biçimleri Nasıl Alınır? Java için Açıklama Kapsamlı Bir Kılavuz"
 "url": "/tr/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

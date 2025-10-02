@@ -3,6 +3,7 @@
 "description": "Lär dig hur du sömlöst laddar ner filer från Azure Blob Storage och kommenterar dem med GroupDocs.Annotation för Java. Förbättra ditt arbetsflöde för dokumenthantering med den här omfattande guiden."
 "title": "Hur man laddar ner och kommenterar Azure Blob-filer med GroupDocs.Annotation Java"
 "url": "/sv/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

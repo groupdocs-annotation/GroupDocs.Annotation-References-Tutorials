@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายจุดลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

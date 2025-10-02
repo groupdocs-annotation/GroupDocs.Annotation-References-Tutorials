@@ -3,6 +3,7 @@
 "description": "Leer hoe u PDF-documenten efficiënt kunt annoteren in een .NET-omgeving met behulp van streams met GroupDocs.Annotation. Verbeter uw workflow voor documentbeheer."
 "title": "PDF's annoteren met GroupDocs.Annotation .NET via Streams&#58; een uitgebreide handleiding"
 "url": "/nl/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

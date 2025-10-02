@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายวงรีลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-ellipse-annotation/"
+type: docs
 "weight": 13
 ---
 

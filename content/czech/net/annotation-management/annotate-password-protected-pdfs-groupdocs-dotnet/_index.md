@@ -3,6 +3,7 @@
 "description": "Naučte se, jak bezpečně anotovat heslem chráněné PDF soubory pomocí nástroje GroupDocs.Annotation pro .NET. Tato podrobná příručka popisuje načítání, anotaci a ukládání dokumentů."
 "title": "Jak anotovat PDF soubory chráněné heslem pomocí GroupDocs.Annotation pro .NET | Podrobný návod"
 "url": "/cs/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

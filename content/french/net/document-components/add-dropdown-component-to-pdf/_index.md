@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Ajouter un composant déroulant au document PDF"
 "url": "/fr/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

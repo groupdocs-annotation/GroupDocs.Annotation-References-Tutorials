@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att generera dokumentförhandsvisningar, miniatyrbilder och visuella representationer med GroupDocs.Annotation för Java."
 "title": "Handledningar för dokumentförhandsgranskning för GroupDocs.Annotation Java"
 "url": "/sv/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

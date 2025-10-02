@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Hinzufügen einer Suchtextfragmentanmerkung zum Dokument"
 "url": "/de/net/unlocking-annotation-power/add-search-text-fragment-annotation/"
+type: docs
 "weight": 20
 ---
 

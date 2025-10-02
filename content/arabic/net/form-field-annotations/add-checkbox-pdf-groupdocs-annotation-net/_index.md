@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك بإضافة مربعات اختيار تفاعلية باستخدام GroupDocs.Annotation لـ .NET. اتبع هذا الدليل خطوة بخطوة لتبسيط شرح حقول النماذج في مستنداتك الرقمية."
 "title": "كيفية إضافة مربع اختيار إلى ملف PDF باستخدام GroupDocs.Annotation لـ .NET - دليل خطوة بخطوة"
 "url": "/ar/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

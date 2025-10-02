@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效检索支持的文件格式。本指南涵盖集成、实施和实际应用。"
 "title": "如何使用 GroupDocs.Annotation for .NET 检索支持的文件格式——综合指南"
 "url": "/zh/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

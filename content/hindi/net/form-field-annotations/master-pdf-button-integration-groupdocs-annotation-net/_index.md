@@ -3,6 +3,7 @@
 "description": ".NET के लिए शक्तिशाली GroupDocs.Annotation का उपयोग करके अपने PDF दस्तावेज़ों में इंटरैक्टिव बटन एकीकृत करना सीखें। चरण-दर-चरण निर्देशों के साथ उपयोगकर्ता सहभागिता बढ़ाएँ।"
 "title": "GroupDocs.Annotation .NET SDK का उपयोग करके PDF में इंटरैक्टिव बटन एकीकृत करें"
 "url": "/hi/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

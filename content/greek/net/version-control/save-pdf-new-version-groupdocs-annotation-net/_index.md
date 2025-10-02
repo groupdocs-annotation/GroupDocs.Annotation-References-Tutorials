@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε αποτελεσματικά τις εκδόσεις εγγράφων χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός καλύπτει την εγκατάσταση, την υλοποίηση και τις πρακτικές εφαρμογές."
 "title": "Πώς να αποθηκεύσετε ένα PDF ως νέα έκδοση χρησιμοποιώντας το GroupDocs.Annotation για .NET - Οδηγός βήμα προς βήμα"
 "url": "/el/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

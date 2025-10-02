@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt skapar, hanterar och sparar anteckningar i dokument med GroupDocs.Annotation för Java. Den här steg-för-steg-guiden behandlar initialisering, anteckningstyper och integrationstips."
 "title": "Komplett guide till hur man använder GroupDocs.Annotation för Java för att skapa och hantera anteckningar"
 "url": "/sv/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

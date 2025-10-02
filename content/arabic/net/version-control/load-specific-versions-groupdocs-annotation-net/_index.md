@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية إدارة وتحميل إصدارات محددة من المستندات المُعلّقة بكفاءة باستخدام GroupDocs.Annotation لـ .NET. حسّن نظام إدارة مستنداتك اليوم!"
 "title": "تحميل إصدارات محددة من المستندات باستخدام GroupDocs.Annotation لـ .NET - دليل شامل"
 "url": "/ar/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

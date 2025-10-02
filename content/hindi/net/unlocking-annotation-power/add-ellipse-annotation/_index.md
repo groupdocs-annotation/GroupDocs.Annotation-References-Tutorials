@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ में दीर्घवृत्त एनोटेशन जोड़ें"
 "url": "/hi/net/unlocking-annotation-power/add-ellipse-annotation/"
+type: docs
 "weight": 13
 ---
 

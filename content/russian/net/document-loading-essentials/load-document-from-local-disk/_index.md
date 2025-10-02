@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Загрузить документ с локального диска"
 "url": "/ru/net/document-loading-essentials/load-document-from-local-disk/"
+type: docs
 "weight": 13
 ---
 

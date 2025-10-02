@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Keresési szövegrészlet megjegyzésének hozzáadása a dokumentumhoz"
 "url": "/hu/net/unlocking-annotation-power/add-search-text-fragment-annotation/"
+type: docs
 "weight": 20
 ---
 

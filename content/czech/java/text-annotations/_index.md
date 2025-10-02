@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro přidávání, úpravu a správu textových anotací v dokumentech pomocí nástroje GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro textové anotace v GroupDocs.Annotation v Javě"
 "url": "/cs/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

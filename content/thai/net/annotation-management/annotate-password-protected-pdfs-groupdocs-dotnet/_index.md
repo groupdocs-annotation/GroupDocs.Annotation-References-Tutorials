@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบใน PDF ที่ได้รับการป้องกันด้วยรหัสผ่านอย่างปลอดภัยโดยใช้ GroupDocs.Annotation สำหรับ .NET คำแนะนำทีละขั้นตอนนี้ครอบคลุมถึงการโหลด การใส่คำอธิบายประกอบ และการบันทึกเอกสาร"
 "title": "วิธีการใส่คำอธิบายประกอบใน PDF ที่ต้องป้องกันด้วยรหัสผ่านโดยใช้ GroupDocs.Annotation สำหรับ .NET | คำแนะนำทีละขั้นตอน"
 "url": "/th/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

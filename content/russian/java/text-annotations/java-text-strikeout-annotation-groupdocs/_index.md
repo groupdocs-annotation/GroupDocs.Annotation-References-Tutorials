@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять текстовые зачеркнутые аннотации в Java с помощью GroupDocs.Annotation. Следуйте этому пошаговому руководству для бесшовного аннотирования документов."
 "title": "Руководство по аннотациям Java Text Strikeout с использованием GroupDocs.Annotation"
 "url": "/ru/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

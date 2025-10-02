@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dodaj adnotację znaku wodnego do dokumentu"
 "url": "/pl/net/unlocking-annotation-power/add-watermark-annotation/"
+type: docs
 "weight": 28
 ---
 

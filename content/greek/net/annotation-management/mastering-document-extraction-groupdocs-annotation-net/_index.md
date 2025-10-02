@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εξάγετε αποτελεσματικά πληροφορίες εγγράφων χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός καλύπτει την εγκατάσταση, τη χρήση και πρακτικές εφαρμογές για τη βελτίωση των ροών εργασίας επεξεργασίας εγγράφων."
 "title": "Εξοικείωση με την εξαγωγή εγγράφων με το GroupDocs.Annotation .NET™ Ένας ολοκληρωμένος οδηγός για προγραμματιστές"
 "url": "/el/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

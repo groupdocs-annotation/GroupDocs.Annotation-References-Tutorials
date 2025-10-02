@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere annotazioni di redazione delle risorse ai PDF utilizzando GroupDocs.Annotation per .NET. Proteggi le informazioni sensibili e migliora la sicurezza dei documenti con questa guida dettagliata."
 "title": "Come aggiungere annotazioni di redazione delle risorse in .NET utilizzando GroupDocs.Annotation&#58; una guida completa"
 "url": "/it/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Apprenez à enregistrer efficacement des plages de pages de documents annotés avec GroupDocs.Annotation pour Java. Ce tutoriel couvre la configuration, la mise en œuvre et les applications pratiques."
 "title": "Enregistrer une plage de pages spécifique avec GroupDocs.Annotation pour Java - Un guide complet"
 "url": "/fr/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

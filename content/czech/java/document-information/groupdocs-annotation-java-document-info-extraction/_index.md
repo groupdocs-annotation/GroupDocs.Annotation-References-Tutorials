@@ -3,6 +3,7 @@
 "description": "Naučte se, jak extrahovat metadata dokumentů, jako je typ souboru, počet stránek a velikost, pomocí nástroje GroupDocs.Annotation pro Javu. Vylepšete správu dokumentů pomocí efektivní extrakce informací."
 "title": "Efektivní extrakce metadat dokumentů pomocí GroupDocs.Annotation v Javě"
 "url": "/cs/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Ihre PDF-Dokumente mit interaktiven Ellipsenanmerkungen mithilfe der GroupDocs.Annotation .NET API optimieren. Diese Anleitung bietet Entwicklern Schritt-für-Schritt-Anleitungen."
 "title": "So fügen Sie mithilfe der GroupDocs.Annotation .NET-API Ellipsenanmerkungen zu PDFs hinzu"
 "url": "/de/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

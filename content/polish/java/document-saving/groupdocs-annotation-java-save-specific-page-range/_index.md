@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie zapisywać adnotowane zakresy stron dokumentu za pomocą GroupDocs.Annotation dla Java. Ten samouczek obejmuje konfigurację, implementację i praktyczne zastosowania."
 "title": "Zapisywanie określonego zakresu stron za pomocą GroupDocs.Annotation dla Java&#58; Kompletny przewodnik"
 "url": "/pl/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

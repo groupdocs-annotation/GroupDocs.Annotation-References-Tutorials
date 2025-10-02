@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Αφαίρεση πολλαπλών σχολίων ανά αναγνωριστικό"
 "url": "/el/net/removing-annotations/remove-multiple-annotations-by-ids/"
+type: docs
 "weight": 13
 ---
 

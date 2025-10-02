@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Licentie instellen vanuit bestand"
 "url": "/nl/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

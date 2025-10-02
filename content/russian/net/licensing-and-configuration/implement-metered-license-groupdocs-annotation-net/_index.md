@@ -3,6 +3,7 @@
 "description": "Узнайте, как настроить и управлять лимитированной лицензией с помощью GroupDocs.Annotation для .NET, гарантируя соответствие требованиям и оптимальную функциональность."
 "title": "Реализация измеренной лицензии в GroupDocs.Annotation для .NET&#58; Подробное руководство"
 "url": "/ru/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

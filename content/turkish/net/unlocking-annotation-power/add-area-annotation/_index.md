@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belgeye Alan Açıklaması Ekle"
 "url": "/tr/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

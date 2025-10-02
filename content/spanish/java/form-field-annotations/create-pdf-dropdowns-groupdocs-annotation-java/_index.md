@@ -3,6 +3,7 @@
 "description": "Aprenda a mejorar sus documentos PDF con campos desplegables interactivos utilizando la poderosa biblioteca GroupDocs.Annotation en Java."
 "title": "Crear menús desplegables interactivos de PDF con GroupDocs.Annotation para Java"
 "url": "/es/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

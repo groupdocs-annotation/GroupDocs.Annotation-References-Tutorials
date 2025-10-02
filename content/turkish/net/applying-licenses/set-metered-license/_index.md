@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ölçülü Lisans Ayarla"
 "url": "/tr/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "正在加载带注释的文档版本"
 "url": "/zh/net/document-loading-essentials/loading-annotated-document-version/"
+type: docs
 "weight": 16
 ---
 

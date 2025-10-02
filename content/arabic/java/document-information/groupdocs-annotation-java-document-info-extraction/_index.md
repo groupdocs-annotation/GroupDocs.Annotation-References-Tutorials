@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية استخراج بيانات تعريفية للمستندات، مثل نوع الملف وعدد الصفحات وحجمها، باستخدام GroupDocs.Annotation لجافا. عزّز إدارة مستنداتك باستخراج معلومات فعّال."
 "title": "استخراج بيانات تعريف المستندات بكفاءة باستخدام GroupDocs.Annotation في Java"
 "url": "/ar/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

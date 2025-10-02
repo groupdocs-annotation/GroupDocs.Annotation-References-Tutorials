@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak filigran ek açıklamaları ekleyerek belgelerinizi nasıl koruyacağınızı öğrenin. Bu kılavuz kurulum, özelleştirme ve iyileştirme ipuçlarını kapsar."
 "title": "GroupDocs.Annotation Java ile PDF'lere Filigran Açıklamaları Uygulama Kapsamlı Bir Kılavuz"
 "url": "/tr/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

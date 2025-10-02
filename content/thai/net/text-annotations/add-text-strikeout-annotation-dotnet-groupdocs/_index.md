@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายการขีดฆ่าข้อความในเอกสารของคุณโดยใช้ไลบรารี GroupDocs.Annotation สำหรับ .NET เพื่อเพิ่มประสิทธิภาพในการตรวจสอบเอกสารและการทำงานร่วมกัน"
 "title": "เพิ่มคำอธิบายการขีดฆ่าข้อความใน .NET โดยใช้ GroupDocs.Annotation"
 "url": "/th/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

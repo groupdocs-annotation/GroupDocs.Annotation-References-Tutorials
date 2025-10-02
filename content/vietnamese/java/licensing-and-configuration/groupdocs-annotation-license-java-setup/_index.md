@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thiết lập và cấu hình giấy phép GroupDocs.Annotation cho các ứng dụng Java của bạn, mở khóa đầy đủ các tính năng một cách dễ dàng."
 "title": "Thiết lập giấy phép GroupDocs.Annotation trong Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

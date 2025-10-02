@@ -3,6 +3,7 @@
 "description": "Lär dig hur du bemästrar .NET PDF-annotering med GroupDocs.Annotation. Den här guiden behandlar initialisering, sidbearbetning, transformationer och hur du effektivt sparar annoterade dokument."
 "title": "Omfattande guide till .NET PDF-annotering med GroupDocs.Annotation för förbättrad dokumenthantering"
 "url": "/sv/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

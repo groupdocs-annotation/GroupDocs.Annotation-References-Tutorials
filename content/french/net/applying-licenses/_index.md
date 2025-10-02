@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Demande de licences"
 "url": "/fr/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

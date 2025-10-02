@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tệp PDF của bạn bằng cách thêm hình ảnh ở mức chất lượng được chỉ định bằng GroupDocs.Annotation cho .NET. Cải thiện tính hấp dẫn trực quan của tài liệu và trình bày dữ liệu."
 "title": "Cách thêm hình ảnh vào tài liệu PDF với chất lượng được chỉ định bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/graphical-annotations/add-image-pdf-quality-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

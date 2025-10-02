@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีเพิ่มคำอธิบายประกอบภาพลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java ปรับปรุงเวิร์กโฟลว์เอกสารของคุณและปรับปรุงการทำงานร่วมกัน"
 "title": "เพิ่มคำอธิบายภาพลงใน PDF ด้วย GroupDocs.Annotation Java - บทช่วยสอนแบบสมบูรณ์"
 "url": "/th/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

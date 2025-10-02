@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لإعداد الترخيص وتكوين الخيارات وإدارة GroupDocs.Annotation في تطبيقات .NET."
 "title": "دروس تعليمية حول ترخيص وتكوين GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie dodawać adnotacje i zapisywać określone adnotacje w plikach PDF za pomocą GroupDocs.Annotation dla platformy .NET. Udoskonal swój obieg pracy związany z zarządzaniem dokumentami dzięki szczegółowym przykładom."
 "title": "Jak adnotować pliki PDF za pomocą GroupDocs.Annotation dla .NET&#58; Przewodnik krok po kroku"
 "url": "/pl/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

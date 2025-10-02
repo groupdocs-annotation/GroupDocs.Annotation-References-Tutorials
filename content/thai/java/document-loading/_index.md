@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนในการโหลดเอกสารจากแหล่งต่าง ๆ โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนการโหลดเอกสารสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

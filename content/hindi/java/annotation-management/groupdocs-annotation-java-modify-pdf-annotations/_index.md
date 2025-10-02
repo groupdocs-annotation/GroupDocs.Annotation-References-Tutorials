@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java का उपयोग करके PDF में एनोटेशन लोड करना, संशोधित करना और प्रबंधित करना सीखें। हमारी विस्तृत मार्गदर्शिका के साथ अपने दस्तावेज़ प्रबंधन को सरल बनाएँ।"
 "title": "मास्टर ग्रुपडॉक्स.जावा के लिए एनोटेशन&#58; पीडीएफ एनोटेशन को कुशलतापूर्वक संपादित करें"
 "url": "/hi/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إزالة ردود مستخدمين محددين بكفاءة من مستندات PDF المُعلّق عليها باستخدام GroupDocs.Annotation لـ .NET. بسّط إدارة تعليقاتك التوضيحية مع هذا الدليل الشامل."
 "title": "كيفية إزالة ردود المستخدمين من ملفات PDF باستخدام GroupDocs.Annotation .NET - دليل خطوة بخطوة"
 "url": "/ar/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

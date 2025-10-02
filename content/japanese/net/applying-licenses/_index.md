@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ライセンスの適用"
 "url": "/ja/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

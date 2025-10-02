@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro import a export anotací mezi dokumenty a soubory XML pomocí nástroje GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro import a export anotací v GroupDocs.Annotation .NET"
 "url": "/cs/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

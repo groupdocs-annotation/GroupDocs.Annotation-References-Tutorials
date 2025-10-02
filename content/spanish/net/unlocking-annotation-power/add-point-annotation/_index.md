@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Agregar anotación de puntos al documento"
 "url": "/es/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

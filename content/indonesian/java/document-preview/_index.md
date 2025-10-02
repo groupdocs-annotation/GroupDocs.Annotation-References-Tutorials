@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk membuat pratinjau dokumen, gambar mini, dan representasi visual dengan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Pratinjau Dokumen untuk GroupDocs.Annotation Java"
 "url": "/id/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

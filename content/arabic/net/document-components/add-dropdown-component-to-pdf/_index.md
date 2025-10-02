@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة مكون القائمة المنسدلة إلى مستند PDF"
 "url": "/ar/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

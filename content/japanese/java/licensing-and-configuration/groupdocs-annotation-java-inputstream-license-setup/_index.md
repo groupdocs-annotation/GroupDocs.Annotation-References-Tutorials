@@ -3,6 +3,7 @@
 "description": "InputStreamを使用してJavaでGroupDocs.Annotationのライセンスを効率的に設定する方法を学びましょう。この包括的なガイドでワークフローを効率化し、アプリケーションのパフォーマンスを向上させましょう。"
 "title": "GroupDocs.Annotation Javaライセンスの合理化&#58; ライセンス設定にInputStreamを使用する方法"
 "url": "/ja/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

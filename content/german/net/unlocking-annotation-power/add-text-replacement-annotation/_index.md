@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Textersetzungsanmerkung zum Dokument hinzufügen"
 "url": "/de/net/unlocking-annotation-power/add-text-replacement-annotation/"
+type: docs
 "weight": 24
 ---
 

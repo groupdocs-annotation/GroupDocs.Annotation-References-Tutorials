@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效管理頁面範圍。本指南涵蓋安裝、設定以及保存特定頁面的最佳實務。"
 "title": "使用 GroupDocs.Annotation 及其高效率的註解技術，掌握 .NET 中的頁面範圍管理"
 "url": "/zh-hant/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

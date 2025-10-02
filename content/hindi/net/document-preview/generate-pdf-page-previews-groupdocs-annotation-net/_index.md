@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ कुशल PDF पृष्ठ पूर्वावलोकन बनाने का तरीका जानें। दस्तावेज़ इंटरैक्शन को बेहतर बनाएँ और अपने वर्कफ़्लो को कारगर बनाएँ।"
 "title": "GroupDocs.Annotation .NET का उपयोग करके PDF पृष्ठ पूर्वावलोकन उत्पन्न करें एक व्यापक गाइड"
 "url": "/hi/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

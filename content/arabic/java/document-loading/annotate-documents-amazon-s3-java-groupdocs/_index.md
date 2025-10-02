@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحميل المستندات المخزنة على Amazon S3 وشرحها بكفاءة باستخدام GroupDocs.Annotation في Java. يغطي هذا الدليل التكامل، واستخدام AWS SDK، وتحسين الأداء."
 "title": "تحميل وشرح المستندات من Amazon S3 باستخدام Java - دليل لتكامل GroupDocs.Annotation"
 "url": "/ar/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

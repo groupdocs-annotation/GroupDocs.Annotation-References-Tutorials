@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 Java PDF에서 텍스트 대체 주석을 구현하는 방법을 알아보세요. 문서 편집 및 협업 기능을 향상시켜 보세요."
 "title": "GroupDocs.Annotation을 사용한 Java PDF 텍스트 교체 가이드"
 "url": "/ko/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 新增浮水印。本指南涵蓋設定、逐步實施以及文件安全保護和品牌打造的最佳實踐。"
 "title": "使用 .NET 中的 GroupDocs.Annotation 實現添加浮水印－文件安全和品牌推廣綜合指南"
 "url": "/zh-hant/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

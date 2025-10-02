@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية تفاعلية لحقول النصوص إلى مستندات PDF باستخدام GroupDocs.Annotation لـ .NET. اتبع هذا الدليل خطوة بخطوة لتحسين تفاعلية المستندات."
 "title": "كيفية إضافة تعليقات توضيحية لحقول النص في ملفات PDF باستخدام GroupDocs.Annotation لـ .NET (برنامج تعليمي)"
 "url": "/ar/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

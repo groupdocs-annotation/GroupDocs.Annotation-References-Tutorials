@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Nhập chú thích từ tài liệu"
 "url": "/vi/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

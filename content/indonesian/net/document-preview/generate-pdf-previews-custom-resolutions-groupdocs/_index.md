@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat pratinjau dokumen PDF berkualitas tinggi dengan resolusi gambar tertentu menggunakan pustaka GroupDocs.Annotation yang canggih dalam .NET. Optimalkan alur kerja manajemen dokumen Anda hari ini."
 "title": "Hasilkan Pratinjau PDF Berkualitas Tinggi pada Resolusi Kustom Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

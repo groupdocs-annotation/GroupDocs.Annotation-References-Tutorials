@@ -2,6 +2,7 @@
 "description": "Tutorial completi per salvare documenti annotati con varie opzioni utilizzando GroupDocs.Annotation per Java."
 "title": "Tutorial sul salvataggio dei documenti per GroupDocs.Annotation Java"
 "url": "/it/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

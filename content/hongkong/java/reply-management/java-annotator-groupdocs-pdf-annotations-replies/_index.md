@@ -3,6 +3,7 @@
 "description": "了解如何在 Java 應用程式中使用 GroupDocs.Annotation 高效管理 PDF 註解和回覆。使用我們全面的指南，簡化文件協作。"
 "title": "Java PDF Annotation &#58; 使用 GroupDocs.Annotation for Java 建立和管理註解和回复"
 "url": "/zh-hant/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

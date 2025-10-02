@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας προσθέτοντας διαδραστικές ελλειπτικές σχολιασμούς χρησιμοποιώντας το GroupDocs.Annotation .NET API. Αυτός ο οδηγός παρέχει αναλυτικές οδηγίες για προγραμματιστές."
 "title": "Πώς να προσθέσετε σχολιασμούς σε PDF χρησιμοποιώντας το GroupDocs.Annotation .NET API"
 "url": "/el/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

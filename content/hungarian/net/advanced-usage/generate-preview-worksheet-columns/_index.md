@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Előnézeti munkalap oszlopainak generálása"
 "url": "/hu/net/advanced-usage/generate-preview-worksheet-columns/"
+type: docs
 "weight": 15
 ---
 

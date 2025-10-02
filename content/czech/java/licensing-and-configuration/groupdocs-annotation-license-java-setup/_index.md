@@ -3,6 +3,7 @@
 "description": "Naučte se, jak nastavit a nakonfigurovat licenci GroupDocs.Annotation pro vaše Java aplikace a bez námahy odemknout všechny funkce."
 "title": "Nastavení licence GroupDocs.Annotation v Javě – Komplexní průvodce"
 "url": "/cs/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

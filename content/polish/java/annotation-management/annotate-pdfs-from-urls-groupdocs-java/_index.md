@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak adnotować dokumenty PDF bezpośrednio z adresów URL za pomocą GroupDocs.Annotation dla Java. Ten samouczek obejmuje ładowanie, adnotowanie i zapisywanie plików PDF w sposób wydajny."
 "title": "Jak adnotować pliki PDF z adresów URL za pomocą GroupDocs.Annotation dla języka Java | Samouczek dotyczący zarządzania adnotacjami dokumentów"
 "url": "/pl/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

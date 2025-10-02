@@ -3,6 +3,7 @@
 "description": "Lär dig hur du kommenterar PDF-dokument direkt från en FTP-server med GroupDocs.Annotation för Java. Effektivisera dina dokumentbehandlingsarbetsflöden med den här steg-för-steg-guiden."
 "title": "Kommentera PDF-filer från FTP med GroupDocs.Annotation för Java – en komplett guide"
 "url": "/sv/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Đặt độ phân giải xem trước tài liệu"
 "url": "/vi/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

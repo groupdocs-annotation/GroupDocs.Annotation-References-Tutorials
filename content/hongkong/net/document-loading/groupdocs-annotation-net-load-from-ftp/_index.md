@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 從 FTP 伺服器無縫載入文件。本指南將協助您最佳化文件管理工作流程。"
 "title": "使用 GroupDocs.Annotation for .NET 從 FTP 伺服器載入和註解文件－綜合指南"
 "url": "/zh-hant/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

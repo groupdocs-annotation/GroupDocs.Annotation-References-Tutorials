@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Wasserzeichen hinzufügen. Diese Anleitung behandelt die Einrichtung, die schrittweise Implementierung und bewährte Methoden zum Sichern und Branding von Dokumenten."
 "title": "Implementieren Sie „Wasserzeichen hinzufügen“ mit GroupDocs.Annotation in .NET – Ein umfassender Leitfaden für Dokumentensicherheit und Branding"
 "url": "/de/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro přidávání tvarů, šipek, obrázků a grafických prvků do dokumentů pomocí GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro grafické anotace v souboru GroupDocs.Annotation v Javě"
 "url": "/cs/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

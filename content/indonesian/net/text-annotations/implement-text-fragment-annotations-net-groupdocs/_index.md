@@ -3,6 +3,7 @@
 "description": "Pelajari cara menerapkan anotasi fragmen teks di .NET menggunakan GroupDocs.Annotation. Panduan ini mencakup pengaturan, penerapan, dan aplikasi praktis untuk manajemen dokumen yang efisien."
 "title": "Menerapkan Anotasi Fragmen Teks di .NET dengan Panduan Lengkap GroupDocs"
 "url": "/id/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

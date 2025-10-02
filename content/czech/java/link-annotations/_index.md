@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro implementaci hypertextových odkazů a propojených anotací v dokumentech pomocí GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro anotace odkazů v souboru GroupDocs.Annotation v Javě"
 "url": "/cs/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

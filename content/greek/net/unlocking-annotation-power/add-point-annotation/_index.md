@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου σημείου στο έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

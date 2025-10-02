@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan gazdagíthatja PDF-dokumentumait interaktív legördülő mezőkkel a hatékony GroupDocs.Annotation Java könyvtár segítségével."
 "title": "Interaktív PDF legördülő menük létrehozása a GroupDocs.Annotation for Java használatával"
 "url": "/hu/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

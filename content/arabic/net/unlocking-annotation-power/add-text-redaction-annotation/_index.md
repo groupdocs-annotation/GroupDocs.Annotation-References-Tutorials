@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة تعليق تحرير النص إلى المستند"
 "url": "/ar/net/unlocking-annotation-power/add-text-redaction-annotation/"
+type: docs
 "weight": 23
 ---
 

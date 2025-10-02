@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Aggiungi annotazione di barratura del testo al documento"
 "url": "/it/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+type: docs
 "weight": 26
 ---
 

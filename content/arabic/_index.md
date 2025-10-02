@@ -4,6 +4,7 @@
 "linktitle": "أدلة مطوري GroupDocs.Annotation"
 "title": "واجهة برمجة تطبيقات التعليقات التوضيحية للمستندات | دروس GroupDocs.Annotation وأمثلة SDK"
 "url": "/ar/"
+type: docs
 "weight": 11
 ---
 

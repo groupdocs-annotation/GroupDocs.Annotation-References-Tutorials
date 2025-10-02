@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 Amazon S3에서 PDF를 효율적으로 다운로드하고 주석을 추가하는 방법을 알아보세요. 원활한 통합을 통해 문서 워크플로를 개선하세요."
 "title": "GroupDocs.Annotation for .NET을 사용하여 Amazon S3에서 효율적인 PDF 다운로드 및 주석 달기"
 "url": "/ko/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

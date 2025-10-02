@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة تعليق متعدد الخطوط إلى المستند"
 "url": "/ar/net/unlocking-annotation-power/add-polyline-annotation/"
+type: docs
 "weight": 18
 ---
 

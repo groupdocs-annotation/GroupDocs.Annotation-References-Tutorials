@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για την εφαρμογή προηγμένων δυνατοτήτων σχολιασμού, προσαρμογών και εξειδικευμένων λειτουργιών με το GroupDocs.Annotation για Java."
 "title": "Προηγμένες δυνατότητες GroupDocs.Annotation - Εκπαιδευτικά σεμινάρια για Java"
 "url": "/el/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

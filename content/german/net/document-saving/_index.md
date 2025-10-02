@@ -2,6 +2,7 @@
 "description": "Vollständige Tutorials zum Speichern kommentierter Dokumente mit verschiedenen Optionen mithilfe von GroupDocs.Annotation für .NET."
 "title": "Tutorials zum Speichern von Dokumenten für GroupDocs.Annotation .NET"
 "url": "/de/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

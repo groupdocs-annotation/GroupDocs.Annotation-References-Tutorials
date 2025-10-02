@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belgeye Resim Açıklaması Ekle (Uzak Yol)"
 "url": "/tr/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+type: docs
 "weight": 15
 ---
 

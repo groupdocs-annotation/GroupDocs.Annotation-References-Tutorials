@@ -3,6 +3,7 @@
 "description": "Aprenda a configurar eficientemente las licencias de GroupDocs.Annotation en Java con InputStream. Optimice su flujo de trabajo y mejore el rendimiento de sus aplicaciones con esta guía completa."
 "title": "Licencias de Java simplificadas de GroupDocs.Annotation&#58; Cómo usar InputStream para la configuración de licencias"
 "url": "/es/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

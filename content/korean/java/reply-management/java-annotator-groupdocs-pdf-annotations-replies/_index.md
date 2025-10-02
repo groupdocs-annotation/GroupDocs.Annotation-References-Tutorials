@@ -3,6 +3,7 @@
 "description": "Java 애플리케이션에서 GroupDocs.Annotation을 사용하여 PDF 주석과 답글을 효율적으로 관리하는 방법을 알아보세요. 포괄적인 가이드를 통해 문서 협업을 간소화하세요."
 "title": "Java PDF 주석&#58; GroupDocs.Annotation for Java를 사용하여 주석 및 답글을 만들고 관리하세요"
 "url": "/ko/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

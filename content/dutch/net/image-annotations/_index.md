@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het toevoegen en beheren van afbeeldingannotaties in documenten met behulp van GroupDocs.Annotation voor .NET."
 "title": "Tutorials voor het annoteren van afbeeldingen voor GroupDocs.Annotation .NET"
 "url": "/nl/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

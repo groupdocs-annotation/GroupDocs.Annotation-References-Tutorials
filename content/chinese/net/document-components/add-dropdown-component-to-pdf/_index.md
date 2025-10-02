@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "将下拉组件添加到 PDF 文档"
 "url": "/zh/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng chú thích polyline bằng GroupDocs.Annotation cho .NET. Hướng dẫn này cung cấp hướng dẫn từng bước và mẹo để triển khai hiệu quả."
 "title": "Cách Thêm Chú Thích Polyline Vào PDF Sử Dụng GroupDocs.Annotation Cho .NET&#58; Hướng Dẫn Từng Bước"
 "url": "/vi/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

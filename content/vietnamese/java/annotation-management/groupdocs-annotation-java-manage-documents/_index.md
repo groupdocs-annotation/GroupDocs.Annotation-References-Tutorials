@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý chú thích hiệu quả trong Java bằng GroupDocs.Annotation. Hướng dẫn này bao gồm tải, xóa và tối ưu hóa quy trình làm việc của tài liệu."
 "title": "Quản lý chú thích chuyên sâu trong Java&#58; Hướng dẫn toàn diện với GroupDocs.Annotation"
 "url": "/vi/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

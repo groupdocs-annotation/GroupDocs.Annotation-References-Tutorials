@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके PDF और अन्य दस्तावेज़ों से एनोटेशन को कुशलतापूर्वक हटाने का तरीका जानें। चरण-दर-चरण मार्गदर्शिकाएँ, सर्वोत्तम अभ्यास और वास्तविक दुनिया के अनुप्रयोग खोजें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके ID द्वारा PDF एनोटेशन कैसे निकालें"
 "url": "/hi/net/annotation-management/manage-pdf-annotations-groupdocs-dotnet-remove-id/"
+type: docs
 "weight": 1
 ---
 

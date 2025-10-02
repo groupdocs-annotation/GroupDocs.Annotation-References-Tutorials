@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att importera och exportera anteckningar mellan dokument och XML-filer med GroupDocs.Annotation för .NET."
 "title": "Handledningar för import och export av annoteringar för GroupDocs.Annotation .NET"
 "url": "/sv/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vytvářet přehledné náhledy dokumentů bez komentářů pomocí nástroje GroupDocs.Annotation pro .NET. Postupujte podle tohoto průvodce a vylepšete si procesy prezentace a kontroly dokumentů."
 "title": "Jak generovat náhledy dokumentů bez komentářů pomocí GroupDocs.Annotation .NET"
 "url": "/cs/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 在文件中新增和管理影像註解的逐步教學。"
 "title": "GroupDocs.Annotation Java 圖像註解教程"
 "url": "/zh-hant/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

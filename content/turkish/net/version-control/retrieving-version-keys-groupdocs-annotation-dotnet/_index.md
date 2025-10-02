@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgelerden sürüm anahtarlarını etkili bir şekilde nasıl alacağınızı öğrenin. Bu adım adım kılavuzla belge yönetimini ve iş birliğini geliştirin."
 "title": "GroupDocs.Annotation Kullanarak .NET'te Sürüm Anahtarlarını Nasıl Alırsınız? Eksiksiz Bir Kılavuz"
 "url": "/tr/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

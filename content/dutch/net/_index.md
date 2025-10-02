@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation voor .NET-zelfstudies"
 "title": "Tutorials en voorbeelden van GroupDocs.Annotation voor .NET"
 "url": "/nl/net/"
+type: docs
 "weight": 10
 ---
 

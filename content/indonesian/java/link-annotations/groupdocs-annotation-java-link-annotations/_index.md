@@ -3,6 +3,7 @@
 "description": "Kuasai anotasi tautan di Java dengan GroupDocs. Pelajari pengaturan, inisialisasi, dan penyesuaian untuk meningkatkan interaktivitas dokumen."
 "title": "Menerapkan Anotasi Tautan di Java Menggunakan GroupDocs&#58; Panduan Lengkap"
 "url": "/id/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

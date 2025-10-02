@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية آمنة إلى ملفات PDF المحمية بكلمة مرور باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل خطوة بخطوة تحميل المستندات وإضافة تعليقات توضيحية إليها وحفظها."
 "title": "كيفية إضافة تعليقات توضيحية إلى ملفات PDF المحمية بكلمة مرور باستخدام GroupDocs.Annotation لـ .NET | دليل خطوة بخطوة"
 "url": "/ar/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

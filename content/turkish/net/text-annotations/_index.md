@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgelere metin açıklamaları ekleme, düzenleme ve yönetmeye ilişkin adım adım eğitimler."
 "title": "GroupDocs.Annotation .NET için Metin Açıklama Eğitimleri"
 "url": "/tr/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

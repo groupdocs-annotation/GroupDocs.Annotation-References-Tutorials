@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีสร้างตัวอย่างเอกสารที่ชัดเจนโดยไม่ต้องแสดงความคิดเห็นโดยใช้ GroupDocs.Annotation สำหรับ .NET ปฏิบัติตามคำแนะนำนี้เพื่อปรับปรุงการนำเสนอเอกสารและกระบวนการตรวจสอบของคุณ"
 "title": "วิธีการสร้างตัวอย่างเอกสารโดยไม่มีความคิดเห็นโดยใช้ GroupDocs.Annotation .NET"
 "url": "/th/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

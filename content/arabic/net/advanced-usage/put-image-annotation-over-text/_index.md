@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "وضع تعليق توضيحي للصورة فوق النص"
 "url": "/ar/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

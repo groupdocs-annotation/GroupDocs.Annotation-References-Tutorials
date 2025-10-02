@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET interaktive Schaltflächen in Ihre PDF-Dokumente integrieren. Steigern Sie die Benutzerinteraktion mit Schritt-für-Schritt-Anleitungen."
 "title": "Integrieren Sie interaktive Schaltflächen in PDFs mit GroupDocs.Annotation .NET SDK"
 "url": "/de/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

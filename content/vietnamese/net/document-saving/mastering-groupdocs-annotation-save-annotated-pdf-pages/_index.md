@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách lưu hiệu quả chỉ các trang có chú thích của PDF bằng GroupDocs.Annotation cho .NET. Nâng cao khả năng quản lý tài liệu và cộng tác với hướng dẫn chi tiết này."
 "title": "Cách lưu các trang có chú thích trong PDF bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

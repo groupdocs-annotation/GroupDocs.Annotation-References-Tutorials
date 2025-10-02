@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إضافة أدوار المستخدم إلى التعليقات التوضيحية في تطبيقات Java الخاصة بك باستخدام GroupDocs.Annotation لتحسين إدارة المستندات والتعاون."
 "title": "تنفيذ GroupDocs.Annotation Java - إضافة أدوار المستخدم إلى التعليقات التوضيحية"
 "url": "/ar/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

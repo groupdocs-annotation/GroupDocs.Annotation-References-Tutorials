@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके Java दस्तावेज़ों में दूरी एनोटेशन को लागू करने का तरीका जानें। यह चरण-दर-चरण मार्गदर्शिका सेटअप, कॉन्फ़िगरेशन और व्यावहारिक अनुप्रयोगों को कवर करती है।"
 "title": "GroupDocs.Annotation के साथ जावा में दूरी एनोटेशन कैसे जोड़ें एक चरण-दर-चरण गाइड"
 "url": "/hi/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

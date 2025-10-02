@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου επισήμανσης κειμένου σε έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-text-highlight-annotation/"
+type: docs
 "weight": 22
 ---
 

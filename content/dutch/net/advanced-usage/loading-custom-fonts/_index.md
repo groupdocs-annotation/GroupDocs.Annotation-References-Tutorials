@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Aangepaste lettertypen laden"
 "url": "/nl/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

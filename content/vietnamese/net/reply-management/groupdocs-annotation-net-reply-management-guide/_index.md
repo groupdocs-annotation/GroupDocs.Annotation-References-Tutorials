@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý phản hồi chú thích hiệu quả bằng GroupDocs.Annotation cho .NET. Hướng dẫn này bao gồm tích hợp, thêm phản hồi và các trường hợp sử dụng thực tế."
 "title": "Hướng dẫn triển khai Quản lý trả lời chú thích trong .NET với GroupDocs.Annotation"
 "url": "/vi/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

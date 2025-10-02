@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyunting teks dalam PDF secara efisien menggunakan pustaka Java GroupDocs.Annotation yang canggih. Panduan ini mencakup proses penyiapan, pembuatan anotasi, dan penyimpanan."
 "title": "Redaksi Teks Master dalam PDF Menggunakan GroupDocs.Annotation Java API—Panduan Lengkap"
 "url": "/id/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

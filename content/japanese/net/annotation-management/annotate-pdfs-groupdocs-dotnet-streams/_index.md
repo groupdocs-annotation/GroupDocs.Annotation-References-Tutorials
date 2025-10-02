@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation のストリームを使用して、.NET 環境で PDF ドキュメントに効率的に注釈を付ける方法を学びます。ドキュメント管理ワークフローを強化します。"
 "title": "GroupDocs.Annotation .NET の Streams 経由で PDF に注釈を付ける方法 - 総合ガイド"
 "url": "/ja/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

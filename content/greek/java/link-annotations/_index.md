@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για την εφαρμογή υπερσυνδέσμων και συνδεδεμένων σχολίων σε έγγραφα με το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά σεμινάρια σχολιασμού συνδέσμων για το GroupDocs.Annotation Java"
 "url": "/el/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

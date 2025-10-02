@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、カスタムフォントをドキュメント処理ワークフローに統合する方法を学びます。正確なフォントスタイルで注釈を強化します。"
 "title": "GroupDocs.Annotation for .NET でカスタムフォントを読み込む方法 包括的なガイド"
 "url": "/ja/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

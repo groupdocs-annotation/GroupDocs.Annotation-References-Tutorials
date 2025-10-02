@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till pilannoteringar i dina dokument med GroupDocs.Annotation för .NET. Den här guiden ger steg-för-steg-instruktioner med kodexempel."
 "title": "Så här lägger du till pilannoteringar i PDF-filer med GroupDocs.Annotation för .NET"
 "url": "/sv/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

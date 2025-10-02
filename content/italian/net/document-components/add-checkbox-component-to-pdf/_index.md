@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Aggiungi il componente Casella di controllo al documento PDF"
 "url": "/it/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "为文档添加水印注释"
 "url": "/zh/net/unlocking-annotation-power/add-watermark-annotation/"
+type: docs
 "weight": 28
 ---
 

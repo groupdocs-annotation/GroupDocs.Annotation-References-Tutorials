@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके दस्तावेज़ों में एनोटेशन जोड़ने, हटाने, अद्यतन करने और प्रबंधित करने के लिए पूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए एनोटेशन प्रबंधन ट्यूटोरियल"
 "url": "/hi/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

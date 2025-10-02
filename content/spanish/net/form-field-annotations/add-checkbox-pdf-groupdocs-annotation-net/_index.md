@@ -3,6 +3,7 @@
 "description": "Aprenda a mejorar sus documentos PDF añadiendo casillas de verificación interactivas con GroupDocs.Annotation para .NET. Siga esta guía paso a paso para optimizar las anotaciones en los campos de formulario de sus documentos digitales."
 "title": "Cómo agregar una casilla de verificación a un PDF con GroupDocs.Annotation para .NET&#58; guía paso a paso"
 "url": "/es/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

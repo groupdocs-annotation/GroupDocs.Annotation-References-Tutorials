@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für Java Flächen- und Ellipsenanmerkungen zu Ihren PDFs hinzufügen. Optimieren Sie die Zusammenarbeit mit unserer Schritt-für-Schritt-Anleitung."
 "title": "Vollständiger Leitfaden zur Java-PDF-Annotation mit GroupDocs – Verbessern Sie die Zusammenarbeit und das Dokumentenmanagement"
 "url": "/de/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

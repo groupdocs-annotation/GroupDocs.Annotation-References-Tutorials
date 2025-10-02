@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak Java PDF'lerinde metin üstü çizili ek açıklamaların nasıl oluşturulacağını öğrenin. Belge düzenleme yeteneklerinizi geliştirmek için bu adım adım öğreticiyi izleyin."
 "title": "GroupDocs ile Java PDF Üstü Çizili Açıklamalar&#58; Kapsamlı Bir Kılavuz"
 "url": "/tr/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

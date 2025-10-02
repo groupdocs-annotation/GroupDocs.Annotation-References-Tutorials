@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "PDF 문서 회전"
 "url": "/ko/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

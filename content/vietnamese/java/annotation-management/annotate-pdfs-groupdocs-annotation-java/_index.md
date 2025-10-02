@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm và cập nhật chú thích trong tệp PDF một cách liền mạch bằng GroupDocs.Annotation for Java. Nâng cao khả năng quản lý tài liệu của bạn với hướng dẫn thực tế này."
 "title": "Cách chú thích PDF bằng GroupDocs.Annotation cho Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

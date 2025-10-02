@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące konfigurowania licencji, konfiguracji opcji i zarządzania GroupDocs.Annotation w aplikacjach .NET."
 "title": "Samouczki dotyczące licencjonowania i konfiguracji GroupDocs.Annotation dla platformy .NET"
 "url": "/pl/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

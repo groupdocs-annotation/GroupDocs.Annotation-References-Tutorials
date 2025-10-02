@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إطلاق العنان لقوة التعليقات التوضيحية"
 "url": "/ar/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

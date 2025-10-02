@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatott útmutatók dokumentumok különböző forrásokból történő betöltéséhez a GroupDocs.Annotation for Java használatával."
 "title": "Dokumentumbetöltési oktatóanyagok a GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

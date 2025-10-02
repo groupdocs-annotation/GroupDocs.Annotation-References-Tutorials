@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thêm chú thích khoảng cách vào tài liệu"
 "url": "/vi/net/unlocking-annotation-power/add-distance-annotation/"
+type: docs
 "weight": 12
 ---
 

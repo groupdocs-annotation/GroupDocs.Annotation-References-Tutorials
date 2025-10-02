@@ -3,6 +3,7 @@
 "description": "了解如何使用强大的 GroupDocs.Annotation Java 库高效地屏蔽 PDF 中的文本。本指南涵盖设置、注释创建和保存流程。"
 "title": "使用 GroupDocs.Annotation Java API 掌握 PDF 中的文本编辑——综合指南"
 "url": "/zh/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

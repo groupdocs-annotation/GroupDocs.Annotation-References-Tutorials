@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية حفظ تعليقات PDF بكفاءة باستخدام GroupDocs.Annotation لـ .NET. بسّط عملية إدارة مستنداتك مع دليلنا المفصل."
 "title": "حفظ تعليقات PDF بكفاءة باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

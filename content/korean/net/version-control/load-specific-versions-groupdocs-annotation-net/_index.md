@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 주석이 달린 문서의 특정 버전을 효율적으로 관리하고 로드하는 방법을 알아보세요. 지금 바로 문서 관리 시스템을 강화하세요!"
 "title": ".NET용 GroupDocs.Annotation을 사용하여 특정 문서 버전 로드하기&#58; 포괄적인 가이드"
 "url": "/ko/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

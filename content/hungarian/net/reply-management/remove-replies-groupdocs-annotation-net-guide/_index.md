@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan távolíthatja el hatékonyan a válaszokat a jegyzetekből a GroupDocs.Annotation for .NET segítségével. Egyszerűsítse dokumentumkezelését ezzel az átfogó útmutatóval."
 "title": "Válaszok eltávolítása jegyzetekből a GroupDocs.Annotation .NET használatával – lépésről lépésre útmutató"
 "url": "/hu/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

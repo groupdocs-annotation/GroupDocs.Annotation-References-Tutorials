@@ -3,6 +3,7 @@
 "description": "Naučte se, jak implementovat anotace s redigováním textu v aplikacích .NET pomocí GroupDocs.Annotation. Snadno zabezpečte citlivé informace."
 "title": "Implementace redakce textu v .NET pomocí GroupDocs.Annotation – kompletní průvodce"
 "url": "/cs/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

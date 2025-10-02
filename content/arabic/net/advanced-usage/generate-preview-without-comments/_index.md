@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إنشاء معاينة بدون تعليقات"
 "url": "/ar/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

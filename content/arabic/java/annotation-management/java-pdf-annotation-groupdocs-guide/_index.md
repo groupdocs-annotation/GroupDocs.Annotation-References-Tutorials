@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استخدام GroupDocs.Annotation لجافا لإضافة تعليقات توضيحية على شكل مساحات ونقاط إلى ملفات PDF. عزز التعاون مع دليلنا المفصل."
 "title": "دليل شامل لإضافة تعليقات توضيحية إلى ملفات PDF باستخدام GroupDocs - تعزيز التعاون وإدارة المستندات"
 "url": "/ar/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

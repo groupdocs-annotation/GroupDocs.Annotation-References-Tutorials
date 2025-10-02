@@ -3,6 +3,7 @@
 "description": "Azure Blob Storage'dan dosyaları sorunsuz bir şekilde nasıl indireceğinizi ve GroupDocs.Annotation for Java ile bunlara nasıl açıklama ekleyeceğinizi öğrenin. Bu kapsamlı kılavuzla belge yönetimi iş akışınızı geliştirin."
 "title": "GroupDocs.Annotation Java'yı Kullanarak Azure Blob Dosyalarını İndirme ve Açıklama Ekleme"
 "url": "/tr/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

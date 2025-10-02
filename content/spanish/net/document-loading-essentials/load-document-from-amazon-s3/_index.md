@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Cargar documento desde Amazon S3"
 "url": "/es/net/document-loading-essentials/load-document-from-amazon-s3/"
+type: docs
 "weight": 10
 ---
 

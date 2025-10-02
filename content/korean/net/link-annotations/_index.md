@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서에 하이퍼링크와 링크된 주석을 구현하는 방법에 대한 전체 튜토리얼입니다."
 "title": "GroupDocs.Annotation .NET을 위한 링크 주석 튜토리얼"
 "url": "/ko/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

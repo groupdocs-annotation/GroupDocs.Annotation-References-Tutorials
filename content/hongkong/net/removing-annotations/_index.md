@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "刪除註釋"
 "url": "/zh-hant/net/removing-annotations/"
+type: docs
 "weight": 25
 ---
 

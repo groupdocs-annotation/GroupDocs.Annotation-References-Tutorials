@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية تحسين تطبيقات .NET الخاصة بك بإضافة تعليقات تفاعلية على الروابط باستخدام مكتبة GroupDocs.Annotation الفعّالة. اتبع دليلنا خطوة بخطوة وحسّن تفاعلية مستنداتك اليوم."
 "title": "كيفية إضافة تعليقات توضيحية للروابط في المستندات باستخدام GroupDocs.Annotation لـ .NET | دليل المطور"
 "url": "/ar/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

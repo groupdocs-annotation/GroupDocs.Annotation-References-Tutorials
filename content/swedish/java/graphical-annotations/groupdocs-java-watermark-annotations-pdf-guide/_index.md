@@ -3,6 +3,7 @@
 "description": "Lär dig hur du skyddar dina dokument genom att lägga till vattenstämpelanteckningar med GroupDocs.Annotation för Java. Den här guiden behandlar tips för installation, anpassning och optimering."
 "title": "Implementera vattenstämpelannoteringar i PDF-filer med GroupDocs.Annotation Java – en omfattande guide"
 "url": "/sv/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

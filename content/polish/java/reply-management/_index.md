@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące wdrażania wątków komentarzy, odpowiedzi i dyskusji grupowych za pomocą GroupDocs.Annotation dla języka Java."
 "title": "Samouczki dotyczące zarządzania odpowiedziami dla GroupDocs.Annotation Java"
 "url": "/pl/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

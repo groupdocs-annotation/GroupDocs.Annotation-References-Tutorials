@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 在文档和 XML 文件之间导入和导出注释的分步教程。"
 "title": "GroupDocs.Annotation .NET 的注释导入和导出教程"
 "url": "/zh/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

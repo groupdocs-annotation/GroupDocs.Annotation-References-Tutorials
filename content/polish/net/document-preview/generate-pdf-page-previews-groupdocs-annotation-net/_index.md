@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak tworzyć wydajne podglądy stron PDF za pomocą GroupDocs.Annotation dla platformy .NET. Ulepsz interakcję z dokumentami i usprawnij przepływ pracy."
 "title": "Generuj podglądy stron PDF za pomocą GroupDocs.Annotation .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

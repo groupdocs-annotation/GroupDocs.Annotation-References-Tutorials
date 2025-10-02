@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für Java interaktive PDF-Schaltflächen mit Antworten erstellen. Folgen Sie dieser Schritt-für-Schritt-Anleitung, um die Dokumentinteraktivität zu verbessern."
 "title": "Erstellen Sie interaktive PDF-Schaltflächen in Java mit GroupDocs.Annotation – Eine vollständige Anleitung"
 "url": "/de/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية تعزيز مستندات PDF الخاصة بك باستخدام الحقول المنسدلة التفاعلية باستخدام مكتبة GroupDocs.Annotation القوية في Java."
 "title": "إنشاء قوائم منسدلة تفاعلية لملفات PDF باستخدام GroupDocs.Annotation لـ Java"
 "url": "/ar/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

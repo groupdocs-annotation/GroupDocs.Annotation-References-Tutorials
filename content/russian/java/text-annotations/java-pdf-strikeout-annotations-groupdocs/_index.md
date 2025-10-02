@@ -3,6 +3,7 @@
 "description": "Узнайте, как создавать зачеркнутые текстовые аннотации в Java PDF-файлах с помощью GroupDocs.Annotation для Java. Следуйте этому пошаговому руководству, чтобы расширить возможности редактирования документов."
 "title": "Зачеркнутые аннотации Java PDF с GroupDocs&#58; Полное руководство"
 "url": "/ru/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีบันทึกเอกสารที่มีคำอธิบายประกอบโดยใช้เส้นทางดั้งเดิมใน GroupDocs.Annotation สำหรับ .NET เพื่อให้แน่ใจว่าการจัดการไฟล์และเวิร์กโฟลว์มีประสิทธิภาพมากยิ่งขึ้น"
 "title": "วิธีการบันทึกเอกสารที่เส้นทางเดิมโดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

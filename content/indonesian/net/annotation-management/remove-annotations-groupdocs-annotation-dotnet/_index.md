@@ -3,6 +3,7 @@
 "description": "Pelajari cara menghapus anotasi secara efisien dari dokumen Anda menggunakan GroupDocs.Annotation API yang canggih dengan tutorial C# terperinci ini."
 "title": "Cara Menghapus Anotasi dari Dokumen Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

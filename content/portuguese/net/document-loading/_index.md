@@ -2,6 +2,7 @@
 "description": "Tutoriais passo a passo para carregar documentos de várias fontes usando o GroupDocs.Annotation para .NET."
 "title": "Tutoriais de carregamento de documentos para GroupDocs.Annotation .NET"
 "url": "/pt/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

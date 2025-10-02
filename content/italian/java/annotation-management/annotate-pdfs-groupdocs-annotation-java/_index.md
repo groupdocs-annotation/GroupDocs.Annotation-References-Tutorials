@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere e aggiornare annotazioni nei file PDF in modo semplice utilizzando GroupDocs.Annotation per Java. Migliora la gestione dei tuoi documenti con questa guida pratica."
 "title": "Come annotare i PDF utilizzando GroupDocs.Annotation per Java&#58; una guida completa"
 "url": "/it/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

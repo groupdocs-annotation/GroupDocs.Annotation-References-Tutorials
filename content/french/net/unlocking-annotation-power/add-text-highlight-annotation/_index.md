@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Ajouter une annotation de surbrillance de texte au document"
 "url": "/fr/net/unlocking-annotation-power/add-text-highlight-annotation/"
+type: docs
 "weight": 22
 ---
 

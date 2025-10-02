@@ -3,6 +3,7 @@
 "description": ".NETの強力なGroupDocs.Annotationライブラリを使用して、特定の画像解像度で高品質のPDFドキュメントプレビューを作成する方法を学びましょう。今すぐドキュメント管理ワークフローを最適化しましょう。"
 "title": "GroupDocs.Annotation for .NET を使用してカスタム解像度で高品質の PDF プレビューを生成する"
 "url": "/ja/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

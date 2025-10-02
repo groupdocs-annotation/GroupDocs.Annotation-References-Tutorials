@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายโพลีไลน์ลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-polyline-annotation/"
+type: docs
 "weight": 18
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menyiapkan lisensi, mengonfigurasi opsi, dan mengelola GroupDocs.Annotation dalam aplikasi Java."
 "title": "GroupDocs.Annotation Tutorial Lisensi dan Konfigurasi untuk Java"
 "url": "/id/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

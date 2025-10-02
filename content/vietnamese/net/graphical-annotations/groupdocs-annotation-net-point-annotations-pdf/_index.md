@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng chú thích điểm tương tác bằng GroupDocs.Annotation cho .NET. Hướng dẫn từng bước này bao gồm thiết lập, triển khai và khắc phục sự cố."
 "title": "Cách thêm chú thích điểm vào PDF bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

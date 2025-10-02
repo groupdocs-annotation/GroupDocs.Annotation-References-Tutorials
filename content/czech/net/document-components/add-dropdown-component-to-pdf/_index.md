@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Přidání komponenty rozbalovací nabídky do dokumentu PDF"
 "url": "/cs/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

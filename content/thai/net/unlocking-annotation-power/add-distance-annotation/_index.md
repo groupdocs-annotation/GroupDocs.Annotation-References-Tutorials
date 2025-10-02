@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายระยะทางลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-distance-annotation/"
+type: docs
 "weight": 12
 ---
 

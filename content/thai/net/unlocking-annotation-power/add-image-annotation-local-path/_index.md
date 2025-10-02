@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายภาพลงในเอกสาร (เส้นทางภายในเครื่อง)"
 "url": "/th/net/unlocking-annotation-power/add-image-annotation-local-path/"
+type: docs
 "weight": 14
 ---
 

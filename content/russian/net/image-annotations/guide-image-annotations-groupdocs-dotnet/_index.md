@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять аннотации изображений с помощью GroupDocs.Annotation для .NET. Улучшайте документы в сфере образования, права и здравоохранения."
 "title": "Подробное руководство по добавлению аннотаций изображений в .NET с помощью GroupDocs.Annotation"
 "url": "/ru/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

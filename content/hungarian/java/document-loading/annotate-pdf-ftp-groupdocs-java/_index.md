@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el jegyzetekkel PDF dokumentumokat közvetlenül egy FTP-kiszolgálóról a GroupDocs.Annotation for Java segítségével. Egyszerűsítse dokumentumfeldolgozási munkafolyamatait ezzel a lépésről lépésre szóló útmutatóval."
 "title": "PDF-ek megjegyzésekkel való ellátása FTP-ről a GroupDocs használatával. Annotation for Java – Teljes körű útmutató"
 "url": "/hu/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

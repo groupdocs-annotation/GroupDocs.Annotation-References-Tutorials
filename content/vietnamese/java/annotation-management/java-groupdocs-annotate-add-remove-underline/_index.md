@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm và xóa chú thích gạch chân trong tài liệu Java bằng GroupDocs.Annotation. Nâng cao khả năng quản lý tài liệu của bạn với hướng dẫn chi tiết này."
 "title": "Thêm và xóa chú thích gạch chân trong Java bằng GroupDocs&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

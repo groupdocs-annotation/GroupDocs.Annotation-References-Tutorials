@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Přidat do dokumentu podtržený text"
 "url": "/cs/net/unlocking-annotation-power/add-text-underline-annotation/"
+type: docs
 "weight": 27
 ---
 

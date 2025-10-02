@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET을 사용하여 문서에 주석을 효율적으로 추가하고 업데이트하는 방법을 알아보세요. 이 단계별 가이드를 통해 협업 및 문서 관리를 강화하세요."
 "title": "GroupDocs.Annotation .NET을 사용하여 문서에 주석을 달는 방법&#58; 종합 가이드"
 "url": "/ko/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

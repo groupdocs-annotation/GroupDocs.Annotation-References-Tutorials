@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณด้วยคำอธิบายประกอบกล่องกาเครื่องหมายแบบโต้ตอบโดยใช้ GroupDocs.Annotation สำหรับ Java ทำตามคำแนะนำทีละขั้นตอนนี้"
 "title": "วิธีการเพิ่มคำอธิบายกล่องกาเครื่องหมายลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서 페이지 미리보기 생성"
 "url": "/ko/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

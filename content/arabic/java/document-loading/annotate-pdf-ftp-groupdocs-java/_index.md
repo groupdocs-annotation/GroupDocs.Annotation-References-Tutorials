@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية إلى مستندات PDF مباشرةً من خادم FTP باستخدام GroupDocs.Annotation لجافا. بسّط سير عمل معالجة مستنداتك مع هذا الدليل المفصل."
 "title": "إضافة تعليقات توضيحية إلى ملفات PDF من FTP باستخدام GroupDocs.Annotation for Java - دليل شامل"
 "url": "/ar/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

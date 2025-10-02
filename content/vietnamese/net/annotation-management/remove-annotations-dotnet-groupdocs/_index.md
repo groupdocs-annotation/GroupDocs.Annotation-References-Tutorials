@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách xóa chú thích khỏi tài liệu hiệu quả bằng GroupDocs.Annotation cho .NET. Hợp lý hóa quy trình làm việc tài liệu của bạn và tăng cường độ rõ ràng với hướng dẫn toàn diện này."
 "title": "Xóa chú thích khỏi tài liệu trong .NET bằng GroupDocs.Annotation"
 "url": "/vi/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el jegyzetekkel és menthet el PDF-fájlokat egyéni verziókulcsokkal a hatékony GroupDocs.Annotation for .NET könyvtár segítségével, biztosítva, hogy minden dokumentumiteráció egyedileg azonosítható legyen."
 "title": "Egyéni verziókulcsokkal ellátott, jegyzetekkel ellátott PDF-ek mentése .NET-ben a GroupDocs.Annotation használatával"
 "url": "/hu/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

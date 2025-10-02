@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบเอกสาร PDF โดยตรงจาก URL โดยใช้ GroupDocs.Annotation สำหรับ Java บทช่วยสอนนี้จะครอบคลุมการโหลด การใส่คำอธิบายประกอบ และการบันทึก PDF อย่างมีประสิทธิภาพ"
 "title": "วิธีการใส่คำอธิบายประกอบใน PDF จาก URL โดยใช้ GroupDocs.Annotation สำหรับ Java | บทช่วยสอนเกี่ยวกับการจัดการคำอธิบายประกอบเอกสาร"
 "url": "/th/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

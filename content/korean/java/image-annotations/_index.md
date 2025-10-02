@@ -2,6 +2,7 @@
 "description": "Java용 GroupDocs.Annotation을 사용하여 문서에 이미지 주석을 추가하고 관리하는 방법에 대한 단계별 자습서입니다."
 "title": "GroupDocs.Annotation Java를 위한 이미지 주석 튜토리얼"
 "url": "/ko/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять текстовые аннотации волнистой линией в приложения .NET с помощью GroupDocs.Annotation для улучшения читаемости документов и обратной связи."
 "title": "Реализация текстовых аннотаций Squiggly в .NET с помощью GroupDocs.Annotation"
 "url": "/ru/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

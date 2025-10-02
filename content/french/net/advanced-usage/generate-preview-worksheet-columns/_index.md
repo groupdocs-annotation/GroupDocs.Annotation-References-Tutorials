@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Générer des colonnes de feuille de calcul d'aperçu"
 "url": "/fr/net/advanced-usage/generate-preview-worksheet-columns/"
+type: docs
 "weight": 15
 ---
 

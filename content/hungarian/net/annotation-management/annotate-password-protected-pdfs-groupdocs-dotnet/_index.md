@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el biztonságosan megjegyzésekkel jelszóval védett PDF-fájlokat a GroupDocs.Annotation for .NET segítségével. Ez a lépésről lépésre szóló útmutató a dokumentumok betöltését, megjegyzésekkel való ellátását és mentését ismerteti."
 "title": "Jelszóval védett PDF-ek megjegyzésekkel való ellátása a GroupDocs.Annotation for .NET használatával | Lépésről lépésre útmutató"
 "url": "/hu/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

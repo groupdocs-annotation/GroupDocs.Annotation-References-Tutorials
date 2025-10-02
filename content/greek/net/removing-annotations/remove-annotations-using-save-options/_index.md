@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Αφαίρεση σχολίων χρησιμοποιώντας τις επιλογές αποθήκευσης στο .NET"
 "url": "/el/net/removing-annotations/remove-annotations-using-save-options/"
+type: docs
 "weight": 14
 ---
 

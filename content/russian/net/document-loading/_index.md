@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по загрузке документов из различных источников с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по загрузке документов для GroupDocs.Annotation .NET"
 "url": "/ru/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

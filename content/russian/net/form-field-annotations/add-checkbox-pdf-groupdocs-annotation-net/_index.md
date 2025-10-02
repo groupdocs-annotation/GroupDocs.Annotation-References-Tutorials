@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы, добавив интерактивные флажки с помощью GroupDocs.Annotation для .NET. Следуйте этому пошаговому руководству, чтобы оптимизировать аннотации полей форм в ваших цифровых документах."
 "title": "Как добавить флажок в PDF с помощью GroupDocs.Annotation для .NET&#58; Пошаговое руководство"
 "url": "/ru/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

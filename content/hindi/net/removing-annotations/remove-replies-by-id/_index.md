@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": ".NET में आईडी द्वारा उत्तर हटाएं"
 "url": "/hi/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

@@ -3,6 +3,7 @@
 "description": "Zvládněte odstraňování anotací z dokumentů s GroupDocs.Annotation pro .NET. Naučte se krok za krokem postupy, optimalizujte práci se soubory a zvyšte přehlednost dokumentů."
 "title": "Efektivní odstranění anotací v .NET pomocí GroupDocs.Annotation – Komplexní průvodce"
 "url": "/cs/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

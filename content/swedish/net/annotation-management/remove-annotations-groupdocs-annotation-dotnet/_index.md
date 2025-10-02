@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt tar bort anteckningar från dina dokument med hjälp av det kraftfulla GroupDocs.Annotation API&#58;et med den här detaljerade C#-handledningen."
 "title": "Så här tar du bort anteckningar från dokument med GroupDocs.Annotation för .NET"
 "url": "/sv/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

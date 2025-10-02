@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat elipsovité anotace do PDF dokumentů pomocí výkonné knihovny GroupDocs.Annotation v Javě. Postupujte podle tohoto podrobného návodu a vylepšete spolupráci na dokumentech."
 "title": "Přidání elipsovitých anotací do PDF v Javě pomocí GroupDocs.Annotation pro Javu"
 "url": "/cs/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Caricamento della versione del documento annotato"
 "url": "/it/net/document-loading-essentials/loading-annotated-document-version/"
+type: docs
 "weight": 16
 ---
 

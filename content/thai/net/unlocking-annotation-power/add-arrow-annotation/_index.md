@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายลูกศรลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-arrow-annotation/"
+type: docs
 "weight": 11
 ---
 

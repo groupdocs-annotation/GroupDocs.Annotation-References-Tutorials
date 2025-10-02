@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak ładować, modyfikować i zarządzać adnotacjami w plikach PDF za pomocą GroupDocs.Annotation dla Java. Usprawnij zarządzanie dokumentami dzięki naszemu kompleksowemu przewodnikowi."
 "title": "Master GroupDocs.Annotation dla Java&#58; Edytuj adnotacje PDF efektywnie"
 "url": "/pl/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

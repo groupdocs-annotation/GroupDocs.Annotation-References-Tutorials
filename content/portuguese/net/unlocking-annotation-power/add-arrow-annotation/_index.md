@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Adicionar anotação de seta ao documento"
 "url": "/pt/net/unlocking-annotation-power/add-arrow-annotation/"
+type: docs
 "weight": 11
 ---
 

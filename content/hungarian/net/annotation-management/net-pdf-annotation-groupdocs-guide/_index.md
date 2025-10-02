@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan sajátíthatja el a .NET PDF annotációkat a GroupDocs.Annotation segítségével. Ez az útmutató az inicializálást, az oldalfeldolgozást, az átalakításokat és a jegyzetekkel ellátott dokumentumok hatékony mentését ismerteti."
 "title": "Átfogó útmutató a .NET PDF jegyzetek készítéséhez a GroupDocs.Annotation használatával a továbbfejlesztett dokumentumkezelés érdekében"
 "url": "/hu/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

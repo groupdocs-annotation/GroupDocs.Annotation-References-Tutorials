@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου πολυγραμμής σε έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-polyline-annotation/"
+type: docs
 "weight": 18
 ---
 

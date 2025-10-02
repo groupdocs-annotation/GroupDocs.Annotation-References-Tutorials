@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk mengakses metadata dokumen, informasi halaman, dan properti dokumen dengan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Informasi Dokumen untuk GroupDocs.Annotation .NET"
 "url": "/id/net/document-information/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET için dosya akışlarını kullanarak bir lisansı nasıl kuracağınızı ve uygulayacağınızı öğrenin. Bu kapsamlı kılavuzla tüm özelliklerin kilidini açın."
 "title": "Master GroupDocs.Annotation .NET&#58; C#'ta Dosya Akışını Kullanarak Lisans Ayarlama"
 "url": "/tr/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

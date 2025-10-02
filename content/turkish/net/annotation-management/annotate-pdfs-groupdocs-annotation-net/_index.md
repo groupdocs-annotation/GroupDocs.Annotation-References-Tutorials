@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF dosyalarındaki belirli açıklamaları etkili bir şekilde nasıl ek açıklama olarak ekleyeceğinizi ve kaydedeceğinizi öğrenin. Ayrıntılı örneklerle belge yönetimi iş akışınızı geliştirin."
 "title": "GroupDocs.Annotation for .NET Kullanarak PDF'lere Açıklama Ekleme Adım Adım Kılavuzu"
 "url": "/tr/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

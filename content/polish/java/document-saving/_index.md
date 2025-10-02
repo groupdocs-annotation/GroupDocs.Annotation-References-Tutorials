@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące zapisywania adnotowanych dokumentów z różnymi opcjami przy użyciu GroupDocs.Annotation dla Java."
 "title": "Samouczki zapisywania dokumentów dla GroupDocs.Annotation Java"
 "url": "/pl/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

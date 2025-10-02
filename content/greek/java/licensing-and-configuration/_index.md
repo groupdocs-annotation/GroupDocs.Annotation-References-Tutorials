@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για τη ρύθμιση αδειών χρήσης, τη διαμόρφωση επιλογών και τη διαχείριση του GroupDocs.Annotation σε εφαρμογές Java."
 "title": "Εκπαιδευτικά σεμινάρια αδειοδότησης και διαμόρφωσης για το GroupDocs.Annotation για Java"
 "url": "/el/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

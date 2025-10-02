@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してさまざまなソースからドキュメントを読み込むためのステップバイステップのチュートリアル。"
 "title": "GroupDocs.Annotation Java のドキュメント読み込みチュートリアル"
 "url": "/ja/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

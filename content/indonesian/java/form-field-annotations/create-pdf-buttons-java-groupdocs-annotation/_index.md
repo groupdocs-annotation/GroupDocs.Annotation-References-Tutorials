@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat tombol PDF interaktif dengan balasan menggunakan GroupDocs.Annotation untuk Java. Ikuti panduan langkah demi langkah ini untuk meningkatkan interaktivitas dokumen."
 "title": "Membuat Tombol PDF Interaktif di Java Menggunakan GroupDocs.Annotation&#58; Panduan Lengkap"
 "url": "/id/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

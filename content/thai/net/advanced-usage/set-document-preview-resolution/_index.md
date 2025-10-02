@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ตั้งค่าความละเอียดการแสดงตัวอย่างเอกสาร"
 "url": "/th/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

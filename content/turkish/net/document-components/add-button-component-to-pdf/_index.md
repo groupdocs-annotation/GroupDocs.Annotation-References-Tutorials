@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "PDF Belgesine Düğme Bileşeni Ekle"
 "url": "/tr/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till och tar bort understrykningar i Java-dokument med GroupDocs.Annotation. Förbättra din dokumenthantering med den här detaljerade guiden."
 "title": "Lägga till och ta bort understrykningsannoteringar i Java med GroupDocs – en omfattande guide"
 "url": "/sv/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

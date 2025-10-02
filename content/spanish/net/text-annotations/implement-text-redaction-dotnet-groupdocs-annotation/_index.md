@@ -3,6 +3,7 @@
 "description": "Aprenda a implementar anotaciones de redacción de texto en aplicaciones .NET con GroupDocs.Annotation. Proteja fácilmente la información confidencial."
 "title": "Implementar la redacción de texto en .NET con GroupDocs.Annotation&#58; una guía completa"
 "url": "/es/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

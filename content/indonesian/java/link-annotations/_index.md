@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menerapkan hyperlink dan anotasi tertaut dalam dokumen dengan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Anotasi Tautan untuk GroupDocs.Annotation Java"
 "url": "/id/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

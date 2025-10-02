@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně ukládat pouze anotované stránky PDF pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete správu dokumentů a spolupráci s tímto podrobným průvodcem."
 "title": "Jak uložit anotované stránky do PDF pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

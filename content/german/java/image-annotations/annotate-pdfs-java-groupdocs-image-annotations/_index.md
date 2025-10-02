@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für Java Bildanmerkungen zu PDFs hinzufügen. Optimieren Sie Ihre Dokumenten-Workflows und verbessern Sie die Zusammenarbeit."
 "title": "Bildanmerkungen zu PDFs hinzufügen mit GroupDocs.Annotation Java – Ein vollständiges Tutorial"
 "url": "/de/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

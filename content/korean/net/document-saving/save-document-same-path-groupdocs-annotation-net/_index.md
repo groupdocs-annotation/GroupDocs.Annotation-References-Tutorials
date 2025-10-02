@@ -3,6 +3,7 @@
 "description": ".NET용 GroupDocs.Annotation의 원래 경로를 사용하여 주석이 달린 문서를 저장하는 방법을 알아보고, 간소화된 파일 관리와 워크플로 효율성을 확보하세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 원래 경로에 문서를 저장하는 방법"
 "url": "/ko/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

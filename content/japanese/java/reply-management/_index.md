@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してコメント スレッド、返信、共同ディスカッションを実装するためのステップバイステップのチュートリアル。"
 "title": "GroupDocs.Annotation Java の返信管理チュートリアル"
 "url": "/ja/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

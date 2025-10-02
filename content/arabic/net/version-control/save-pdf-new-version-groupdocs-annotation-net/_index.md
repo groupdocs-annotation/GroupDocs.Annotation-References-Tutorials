@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إدارة إصدارات المستندات بكفاءة باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل الإعداد والتنفيذ والتطبيقات العملية."
 "title": "كيفية حفظ ملف PDF كإصدار جديد باستخدام GroupDocs.Annotation لـ .NET - دليل خطوة بخطوة"
 "url": "/ar/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

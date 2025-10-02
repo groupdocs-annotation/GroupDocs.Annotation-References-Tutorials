@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนในการเพิ่มรูปร่าง ลูกศร รูปภาพ และองค์ประกอบกราฟิกลงในเอกสารด้วย GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนเกี่ยวกับคำอธิบายประกอบแบบกราฟิกสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ में छवि एनोटेशन जोड़ें (दूरस्थ पथ)"
 "url": "/hi/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+type: docs
 "weight": 15
 ---
 

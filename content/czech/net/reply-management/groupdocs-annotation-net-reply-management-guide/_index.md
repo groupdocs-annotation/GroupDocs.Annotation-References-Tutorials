@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně spravovat odpovědi s anotacemi pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka se zabývá integrací, přidáváním odpovědí a praktickými případy použití."
 "title": "Průvodce implementací správy odpovědí na anotace v .NET pomocí GroupDocs.Annotation"
 "url": "/cs/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

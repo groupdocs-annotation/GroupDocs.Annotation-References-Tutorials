@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "在文件中新增箭頭註釋"
 "url": "/zh-hant/net/unlocking-annotation-power/add-arrow-annotation/"
+type: docs
 "weight": 11
 ---
 

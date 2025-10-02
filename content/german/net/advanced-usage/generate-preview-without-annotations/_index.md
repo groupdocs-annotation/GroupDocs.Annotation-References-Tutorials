@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Vorschau ohne Anmerkungen generieren"
 "url": "/de/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

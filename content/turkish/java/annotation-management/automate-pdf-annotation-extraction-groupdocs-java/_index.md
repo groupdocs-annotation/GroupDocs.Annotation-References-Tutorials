@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java'yı kullanarak PDF'lerden otomatik açıklama çıkarmayı öğrenin, zamandan tasarruf edin ve hataları azaltın."
 "title": "Java için GroupDocs ile PDF Açıklama Çıkarımını Otomatikleştirin - Kapsamlı Bir Kılavuz"
 "url": "/tr/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

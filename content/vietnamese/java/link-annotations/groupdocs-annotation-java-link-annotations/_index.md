@@ -3,6 +3,7 @@
 "description": "Làm chủ chú thích liên kết trong Java với GroupDocs. Tìm hiểu cách thiết lập, khởi tạo và tùy chỉnh để tăng cường tính tương tác của tài liệu."
 "title": "Triển khai chú thích liên kết trong Java bằng GroupDocs&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

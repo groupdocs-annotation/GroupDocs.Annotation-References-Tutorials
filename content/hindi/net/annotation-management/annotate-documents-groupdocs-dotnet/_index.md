@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET का उपयोग करके दस्तावेज़ों में एनोटेशन को कुशलतापूर्वक जोड़ने और अपडेट करने का तरीका जानें। इस चरण-दर-चरण मार्गदर्शिका के साथ सहयोग और दस्तावेज़ प्रबंधन को बेहतर बनाएँ।"
 "title": "GroupDocs.Annotation .NET का उपयोग करके दस्तावेज़ों को कैसे एनोटेट करें एक व्यापक गाइड"
 "url": "/hi/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

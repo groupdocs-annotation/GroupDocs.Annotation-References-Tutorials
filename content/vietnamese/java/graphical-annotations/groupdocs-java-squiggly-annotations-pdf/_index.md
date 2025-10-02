@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích ngoằn ngoèo vào tài liệu PDF của bạn bằng GroupDocs.Annotation for Java, nâng cao khả năng xem xét và cộng tác tài liệu."
 "title": "Cách thêm chú thích Squiggly vào PDF bằng GroupDocs.Annotation cho Java"
 "url": "/vi/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

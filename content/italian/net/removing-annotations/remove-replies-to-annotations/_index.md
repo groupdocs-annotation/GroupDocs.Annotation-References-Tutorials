@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Rimuovere le risposte alle annotazioni in .NET"
 "url": "/it/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

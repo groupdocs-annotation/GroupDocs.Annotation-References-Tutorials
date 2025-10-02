@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách thêm hình dạng, mũi tên, hình ảnh và thành phần đồ họa vào tài liệu bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn chú thích đồ họa cho GroupDocs.Annotation Java"
 "url": "/vi/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

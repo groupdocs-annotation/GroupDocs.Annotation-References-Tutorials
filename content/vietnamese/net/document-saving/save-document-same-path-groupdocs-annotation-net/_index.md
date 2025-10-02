@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách lưu tài liệu có chú thích bằng đường dẫn gốc trong GroupDocs.Annotation cho .NET, đảm bảo quản lý tệp hợp lý và hiệu quả quy trình làm việc."
 "title": "Cách lưu tài liệu ở đường dẫn gốc bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

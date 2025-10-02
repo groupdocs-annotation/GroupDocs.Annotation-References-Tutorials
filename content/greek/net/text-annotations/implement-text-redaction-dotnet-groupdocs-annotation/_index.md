@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εφαρμόζετε σχολιασμούς επεξεργασίας κειμένου σε εφαρμογές .NET χρησιμοποιώντας το GroupDocs.Annotation. Ασφαλίστε ευαίσθητες πληροφορίες με ευκολία."
 "title": "Υλοποίηση επεξεργασίας κειμένου σε .NET χρησιμοποιώντας το GroupDocs.Annotation&#58; Ένας πλήρης οδηγός"
 "url": "/el/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Läs in dokument från lokal disk"
 "url": "/sv/net/document-loading-essentials/load-document-from-local-disk/"
+type: docs
 "weight": 13
 ---
 

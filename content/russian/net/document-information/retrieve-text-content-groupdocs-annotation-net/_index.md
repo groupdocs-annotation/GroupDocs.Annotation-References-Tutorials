@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно извлекать текстовое содержимое из документов с помощью GroupDocs.Annotation для .NET. Следуйте этому пошаговому руководству, чтобы улучшить свои возможности обработки документов."
 "title": "Извлечение текстового содержимого документа с помощью GroupDocs.Annotation для .NET&#58; Пошаговое руководство"
 "url": "/ru/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

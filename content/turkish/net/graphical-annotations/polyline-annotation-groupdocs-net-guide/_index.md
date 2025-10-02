@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF belgelerinizi polyline açıklamalarıyla nasıl geliştireceğinizi öğrenin. Bu kılavuz, etkili uygulama için adım adım talimatlar ve ipuçları sağlar."
 "title": "GroupDocs.Annotation for .NET Kullanarak PDF'lere Çoklu Çizgi Açıklamaları Nasıl Eklenir&#58; Adım Adım Kılavuz"
 "url": "/tr/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

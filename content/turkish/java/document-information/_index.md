@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java ile belge meta verilerine, sayfa bilgilerine ve belge özelliklerine erişim için eksiksiz eğitimler."
 "title": "GroupDocs.Annotation Java için Belge Bilgi Eğitimleri"
 "url": "/tr/java/document-information/"
+type: docs
 "weight": 12
 ---
 

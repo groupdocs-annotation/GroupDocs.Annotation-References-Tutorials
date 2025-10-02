@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "注釈なしでプレビューを生成する"
 "url": "/ja/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

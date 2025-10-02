@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET で注釈への返信を削除する"
 "url": "/ja/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

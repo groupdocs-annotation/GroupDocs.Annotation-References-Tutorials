@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan mentheti hatékonyan a PDF-fájlok csak annotált oldalait a .NET-hez készült GroupDocs.Annotation segítségével. Fejlessze a dokumentumkezelést és az együttműködést ezzel a részletes útmutatóval."
 "title": "Jegyzetekkel ellátott oldalak mentése PDF-ben a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

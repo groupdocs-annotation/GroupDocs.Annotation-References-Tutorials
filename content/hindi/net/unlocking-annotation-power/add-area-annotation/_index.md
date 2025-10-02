@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ में क्षेत्र एनोटेशन जोड़ें"
 "url": "/hi/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

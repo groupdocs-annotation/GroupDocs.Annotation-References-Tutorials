@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kezelheti hatékonyan a dokumentumverziókat a GroupDocs.Annotation for .NET segítségével. Ez az útmutató a beállítást, a megvalósítást és a gyakorlati alkalmazásokat ismerteti."
 "title": "PDF mentése új verzióként a GroupDocs.Annotation for .NET használatával – lépésről lépésre útmutató"
 "url": "/hu/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

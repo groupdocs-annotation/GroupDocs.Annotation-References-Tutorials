@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att implementera hyperlänkar och länkade annoteringar i dokument med GroupDocs.Annotation för Java."
 "title": "Handledningar för länkannotering i GroupDocs.Annotation Java"
 "url": "/sv/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

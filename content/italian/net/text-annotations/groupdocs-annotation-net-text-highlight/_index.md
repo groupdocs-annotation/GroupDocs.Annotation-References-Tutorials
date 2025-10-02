@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere annotazioni di evidenziazione del testo utilizzando GroupDocs.Annotation per .NET. Semplifica la collaborazione sui documenti e aumenta la produttività con questa guida completa."
 "title": "Come aggiungere annotazioni di evidenziazione del testo con GroupDocs.Annotation per .NET"
 "url": "/it/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kérhet le hatékonyan támogatott fájlformátumokat a GroupDocs.Annotation for .NET használatával. Ez az útmutató az integrációt, a megvalósítást és a gyakorlati alkalmazásokat ismerteti."
 "title": "Hogyan lehet lekérni a támogatott fájlformátumokat a GroupDocs.Annotation for .NET segítségével? Átfogó útmutató"
 "url": "/hu/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

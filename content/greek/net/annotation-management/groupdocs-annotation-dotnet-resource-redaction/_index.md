@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς επεξεργασίας πόρων σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Προστατέψτε ευαίσθητες πληροφορίες και βελτιώστε την ασφάλεια των εγγράφων με αυτόν τον λεπτομερή οδηγό."
 "title": "Πώς να προσθέσετε σχολιασμούς επεξεργασίας πόρων στο .NET χρησιμοποιώντας το GroupDocs.Annotation&#58; Ένας ολοκληρωμένος οδηγός"
 "url": "/el/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

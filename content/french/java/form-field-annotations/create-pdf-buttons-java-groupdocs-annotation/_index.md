@@ -3,6 +3,7 @@
 "description": "Apprenez à créer des boutons PDF interactifs avec réponses grâce à GroupDocs.Annotation pour Java. Suivez ce guide étape par étape pour améliorer l'interactivité de vos documents."
 "title": "Créer des boutons PDF interactifs en Java à l'aide de GroupDocs.Annotation - Guide complet"
 "url": "/fr/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

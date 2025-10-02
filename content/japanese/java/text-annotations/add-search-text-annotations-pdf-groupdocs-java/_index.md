@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、検索可能なテキスト注釈を追加することでPDFドキュメントを強化する方法を学びましょう。このガイドでは、ステップバイステップの説明と実用的なヒントを紹介します。"
 "title": "GroupDocs.Annotation for Java を使用して PDF に検索テキスト注釈を追加する方法"
 "url": "/ja/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

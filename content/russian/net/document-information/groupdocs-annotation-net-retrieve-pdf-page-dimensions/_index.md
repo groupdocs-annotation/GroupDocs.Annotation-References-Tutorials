@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно извлекать размеры страницы PDF с помощью GroupDocs.Annotation для .NET. Следуйте этому руководству, чтобы улучшить свои приложения для управления документами."
 "title": "Как получить размеры страницы PDF с помощью GroupDocs.Annotation для .NET"
 "url": "/ru/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

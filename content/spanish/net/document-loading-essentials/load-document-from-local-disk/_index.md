@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Cargar documento desde el disco local"
 "url": "/es/net/document-loading-essentials/load-document-from-local-disk/"
+type: docs
 "weight": 13
 ---
 

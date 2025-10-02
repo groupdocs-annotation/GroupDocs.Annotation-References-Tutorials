@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi teks dicoret dalam dokumen Anda menggunakan pustaka GroupDocs.Annotation untuk .NET, yang akan meningkatkan peninjauan dan kolaborasi dokumen."
 "title": "Menambahkan Anotasi Coretan Teks di .NET Menggunakan GroupDocs.Annotation"
 "url": "/id/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการโหลด ใส่คำอธิบายประกอบ และบันทึกเอกสารที่ป้องกันด้วยรหัสผ่านอย่างปลอดภัยโดยใช้ GroupDocs.Annotation สำหรับ Java เพิ่มความปลอดภัยให้กับเอกสารในแอปพลิเคชัน Java ของคุณ"
 "title": "การจัดการเอกสารที่ปลอดภัยด้วย GroupDocs.Annotation Java&#58; โหลดและใส่คำอธิบายประกอบเอกสารที่ป้องกันด้วยรหัสผ่าน"
 "url": "/th/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

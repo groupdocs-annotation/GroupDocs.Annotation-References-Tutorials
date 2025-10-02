@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att spara kommenterade dokument med olika alternativ med GroupDocs.Annotation för .NET."
 "title": "Handledningar för dokumentsparning för GroupDocs.Annotation .NET"
 "url": "/sv/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

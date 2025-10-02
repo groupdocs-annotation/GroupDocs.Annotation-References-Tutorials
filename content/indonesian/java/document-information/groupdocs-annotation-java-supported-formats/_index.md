@@ -3,6 +3,7 @@
 "description": "Pelajari cara menggunakan GroupDocs.Annotation untuk Java untuk mencantumkan format file yang didukung secara efisien dengan panduan langkah demi langkah kami. Sempurna untuk menyempurnakan aplikasi anotasi dokumen Anda."
 "title": "Cara Mendapatkan Format File yang Didukung di GroupDocs.Annotation untuk Java&#58; Panduan Lengkap"
 "url": "/id/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutoriais passo a passo para implementar tópicos de comentários, respostas e discussões colaborativas com o GroupDocs.Annotation para .NET."
 "title": "Tutoriais de gerenciamento de respostas para GroupDocs.Annotation .NET"
 "url": "/pt/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

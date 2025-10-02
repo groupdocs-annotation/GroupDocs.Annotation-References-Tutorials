@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Azure'dan Belge Yükle"
 "url": "/tr/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

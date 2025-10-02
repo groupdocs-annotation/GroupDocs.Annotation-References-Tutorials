@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan használhatja a GroupDocs.Annotation for Java-t a támogatott fájlformátumok hatékony listázásához lépésről lépésre szóló útmutatónkkal. Tökéletes a dokumentum-annotációs alkalmazások fejlesztéséhez."
 "title": "Hogyan lehet lekérni a támogatott fájlformátumokat a GroupDocs.Annotation for Java alkalmazásban? Átfogó útmutató"
 "url": "/hu/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

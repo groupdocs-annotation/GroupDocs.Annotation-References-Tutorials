@@ -3,6 +3,7 @@
 "description": "了解如何使用 Java 中的 GroupDocs.Annotation API 无缝移除 PDF 文档中的注释。按照我们的分步指南，高效管理文档。"
 "title": "如何使用 GroupDocs.Annotation Java API 从 PDF 中删除注释"
 "url": "/zh/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

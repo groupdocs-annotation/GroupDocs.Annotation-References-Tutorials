@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、PDF ファイルに効率的に注釈を付け、特定の注釈を保存する方法を学びます。詳細な例を使って、ドキュメント管理ワークフローを強化します。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF に注釈を付ける方法 - ステップバイステップガイド"
 "url": "/ja/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a administrar eficientemente los rangos de páginas con GroupDocs.Annotation para .NET. Esta guía abarca la instalación, la configuración y las prácticas recomendadas para guardar páginas específicas."
 "title": "Domine la gestión de rangos de páginas en .NET con GroupDocs.Annotation&#58; técnicas de anotación eficientes"
 "url": "/es/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

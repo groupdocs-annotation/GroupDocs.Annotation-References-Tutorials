@@ -2,6 +2,7 @@
 "description": ".NET용 GroupDocs.Annotation을 사용하여 문서에 양식 필드와 대화형 구성 요소를 추가하는 방법에 대한 단계별 자습서입니다."
 "title": "GroupDocs.Annotation .NET을 위한 폼 필드 주석 튜토리얼"
 "url": "/ko/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

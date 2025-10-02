@@ -3,6 +3,7 @@
 "description": "Gelişmiş belge yönetimi ve işbirliği için GroupDocs.Annotation'ı kullanarak Java uygulamalarınızdaki açıklamalara kullanıcı rollerinin nasıl ekleneceğini öğrenin."
 "title": "GroupDocs.Annotation Java&#58;yı Uygulama Açıklamalara Kullanıcı Rolleri Ekleme"
 "url": "/tr/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

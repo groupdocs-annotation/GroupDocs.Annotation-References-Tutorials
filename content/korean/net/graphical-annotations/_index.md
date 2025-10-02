@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서에 도형, 화살표, 이미지 및 그래픽 요소를 추가하는 방법에 대한 전체 튜토리얼입니다."
 "title": "GroupDocs.Annotation .NET을 위한 그래픽 주석 튜토리얼"
 "url": "/ko/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

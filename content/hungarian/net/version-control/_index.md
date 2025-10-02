@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatott oktatóanyagok a dokumentumverziók megvalósításához, a változások követéséhez és a jegyzetelőzmények kezeléséhez a GroupDocs.Annotation for .NET segítségével."
 "title": "Verziókövetési oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/version-control/"
+type: docs
 "weight": 13
 ---
 

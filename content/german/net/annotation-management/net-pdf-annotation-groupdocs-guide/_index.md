@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie .NET-PDF-Annotationen mit GroupDocs.Annotation meistern. Diese Anleitung behandelt Initialisierung, Seitenverarbeitung, Transformationen und das effiziente Speichern kommentierter Dokumente."
 "title": "Umfassender Leitfaden zur .NET-PDF-Annotation mit GroupDocs.Annotation für verbessertes Dokumentenmanagement"
 "url": "/de/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

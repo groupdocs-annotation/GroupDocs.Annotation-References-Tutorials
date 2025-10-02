@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Szöveg áthúzott megjegyzés hozzáadása a dokumentumhoz"
 "url": "/hu/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+type: docs
 "weight": 26
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как реализовать аннотации замены текста в ваших приложениях .NET с помощью GroupDocs.Annotation. Улучшите читаемость и функциональность документов без усилий."
 "title": "Как реализовать замену текста в .NET с помощью GroupDocs.Annotation для эффективного аннотирования документов"
 "url": "/ru/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ustaw rozdzielczość podglądu dokumentu"
 "url": "/pl/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

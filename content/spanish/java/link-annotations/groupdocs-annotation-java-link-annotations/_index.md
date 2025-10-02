@@ -3,6 +3,7 @@
 "description": "Anotaciones de enlaces maestros en Java con GroupDocs. Aprenda la configuración, inicialización y personalización para mejorar la interactividad de los documentos."
 "title": "Implementación de anotaciones de enlaces en Java mediante GroupDocs&#58; una guía completa"
 "url": "/es/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

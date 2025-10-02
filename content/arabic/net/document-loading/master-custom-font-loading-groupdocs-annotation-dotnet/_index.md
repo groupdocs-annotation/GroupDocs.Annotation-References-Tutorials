@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية دمج الخطوط المخصصة في سير عمل معالجة مستنداتك باستخدام GroupDocs.Annotation لـ .NET. حسّن تعليقاتك التوضيحية بتنسيق دقيق للخطوط."
 "title": "كيفية تحميل الخطوط المخصصة في GroupDocs.Annotation لـ .NET - دليل شامل"
 "url": "/ar/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

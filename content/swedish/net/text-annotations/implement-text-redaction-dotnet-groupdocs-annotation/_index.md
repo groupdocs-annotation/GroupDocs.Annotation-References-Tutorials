@@ -3,6 +3,7 @@
 "description": "Lär dig hur du implementerar textborttagningsannoteringar i .NET-applikationer med GroupDocs.Annotation. Skydda känslig information enkelt."
 "title": "Implementera textborttagning i .NET med hjälp av GroupDocs.Annotation – en komplett guide"
 "url": "/sv/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

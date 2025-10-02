@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إعداد ترخيص مقنن وإدارته باستخدام GroupDocs.Annotation لـ .NET، مما يضمن التوافق والأداء الأمثل."
 "title": "تنفيذ ترخيص مُقاس في GroupDocs.Annotation لـ .NET - دليل شامل"
 "url": "/ar/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

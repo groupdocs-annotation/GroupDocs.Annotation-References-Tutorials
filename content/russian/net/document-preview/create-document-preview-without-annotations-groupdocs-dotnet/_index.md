@@ -3,6 +3,7 @@
 "description": "Узнайте, как создавать предварительные просмотры документов без аннотаций с помощью GroupDocs.Annotation для .NET, обеспечивая конфиденциальность и ясность в совместных проектах."
 "title": "Как создать чистый предварительный просмотр документа без аннотаций с помощью GroupDocs.Annotation .NET"
 "url": "/ru/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

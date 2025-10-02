@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Polylijnannotatie toevoegen aan document"
 "url": "/nl/net/unlocking-annotation-power/add-polyline-annotation/"
+type: docs
 "weight": 18
 ---
 

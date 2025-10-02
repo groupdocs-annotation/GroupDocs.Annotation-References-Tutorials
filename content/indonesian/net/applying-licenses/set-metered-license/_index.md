@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tetapkan Lisensi Terukur"
 "url": "/id/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

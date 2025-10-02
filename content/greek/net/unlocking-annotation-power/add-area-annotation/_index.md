@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου περιοχής στο έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

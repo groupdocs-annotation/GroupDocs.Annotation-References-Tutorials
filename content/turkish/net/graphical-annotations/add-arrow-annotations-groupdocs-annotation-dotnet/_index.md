@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgelerinize ok açıklamaları eklemeyi öğrenin. Bu kılavuz, kod örnekleriyle adım adım talimatlar sağlar."
 "title": ".NET için GroupDocs.Annotation Kullanarak PDF'lere Ok Açıklamaları Nasıl Eklenir"
 "url": "/tr/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

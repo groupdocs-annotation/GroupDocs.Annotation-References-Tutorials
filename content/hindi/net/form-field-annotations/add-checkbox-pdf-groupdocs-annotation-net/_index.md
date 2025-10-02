@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके इंटरैक्टिव चेकबॉक्स जोड़कर अपने PDF दस्तावेज़ों को बेहतर बनाने का तरीका जानें। अपने डिजिटल दस्तावेज़ों में फ़ॉर्म फ़ील्ड एनोटेशन को कारगर बनाने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": ".NET के लिए GroupDocs.Annotation के साथ PDF में चेकबॉक्स कैसे जोड़ें एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

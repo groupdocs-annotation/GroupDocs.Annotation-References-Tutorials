@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการตั้งค่าและจัดการใบอนุญาตแบบคิดค่าบริการด้วย GroupDocs.Annotation สำหรับ .NET เพื่อให้มั่นใจถึงความสอดคล้องและมีฟังก์ชันการทำงานที่เหมาะสมที่สุด"
 "title": "การใช้งาน Metered License ใน GroupDocs.Annotation สำหรับ .NET&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

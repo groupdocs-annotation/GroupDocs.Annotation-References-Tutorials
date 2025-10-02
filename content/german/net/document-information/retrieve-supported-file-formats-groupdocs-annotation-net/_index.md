@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie unterstützte Dateiformate mit GroupDocs.Annotation für .NET effizient abrufen. Dieser Leitfaden behandelt Integration, Implementierung und praktische Anwendungen."
 "title": "So rufen Sie unterstützte Dateiformate mit GroupDocs.Annotation für .NET ab – Ein umfassender Leitfaden"
 "url": "/de/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

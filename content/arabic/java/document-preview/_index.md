@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لإنشاء معاينات المستندات والصور المصغرة والتمثيلات المرئية باستخدام GroupDocs.Annotation لـ Java."
 "title": "دروس معاينة المستندات لـ GroupDocs.Annotation Java"
 "url": "/ar/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

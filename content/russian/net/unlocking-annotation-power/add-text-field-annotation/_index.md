@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Добавить аннотацию текстового поля в документ"
 "url": "/ru/net/unlocking-annotation-power/add-text-field-annotation/"
+type: docs
 "weight": 21
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan távolíthat el zökkenőmentesen megjegyzéseket PDF dokumentumokból a GroupDocs.Annotation API használatával Java nyelven. Kövesse lépésről lépésre szóló útmutatónkat a hatékony dokumentumkezeléshez."
 "title": "Hogyan távolíthatunk el jegyzeteket PDF-ekből a GroupDocs.Annotation Java API használatával"
 "url": "/hu/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

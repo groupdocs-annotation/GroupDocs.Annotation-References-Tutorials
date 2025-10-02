@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hämtar textinnehåll från dokument med GroupDocs.Annotation för .NET. Följ den här steg-för-steg-guiden för att förbättra dina dokumentbehandlingsfunktioner."
 "title": "Hämta dokumenttextinnehåll med GroupDocs.Annotation för .NET - En steg-för-steg-guide"
 "url": "/sv/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

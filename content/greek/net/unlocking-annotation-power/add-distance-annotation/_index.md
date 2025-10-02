@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου απόστασης στο έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-distance-annotation/"
+type: docs
 "weight": 12
 ---
 

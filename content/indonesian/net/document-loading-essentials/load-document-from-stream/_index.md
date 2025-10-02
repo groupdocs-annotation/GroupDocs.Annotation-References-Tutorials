@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Muat Dokumen dari Aliran"
 "url": "/id/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Agregar componente desplegable al documento PDF"
 "url": "/es/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

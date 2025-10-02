@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ställ in upplösning för förhandsgranskning av dokument"
 "url": "/sv/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

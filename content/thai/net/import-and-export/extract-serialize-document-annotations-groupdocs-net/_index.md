@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดึงคำอธิบายประกอบจากเอกสารและแปลงเป็น XML ด้วย GroupDocs.Annotation สำหรับ .NET ปรับปรุงเวิร์กโฟลว์การจัดการเอกสารของคุณวันนี้!"
 "title": "วิธีการแยกและจัดรูปแบบคำอธิบายประกอบแบบอนุกรมใน .NET โดยใช้ GroupDocs.Annotation"
 "url": "/th/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

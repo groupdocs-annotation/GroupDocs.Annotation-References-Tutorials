@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation'ı kullanarak Azure Blob Storage'ı .NET uygulamalarınızla sorunsuz bir şekilde nasıl entegre edeceğinizi öğrenin. Belge yönetimi ve açıklama yeteneklerini geliştirin."
 "title": "Belge Yönetimi için GroupDocs.Annotation .NET'i Kullanarak Azure Blob Depolamasından Belgeleri Verimli Şekilde Yükleyin"
 "url": "/tr/net/document-loading/load-documents-azure-blob-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

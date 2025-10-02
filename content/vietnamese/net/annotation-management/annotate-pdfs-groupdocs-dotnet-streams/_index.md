@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích hiệu quả các tài liệu PDF trong môi trường .NET bằng cách sử dụng luồng với GroupDocs.Annotation. Tăng cường quy trình quản lý tài liệu của bạn."
 "title": "Chú thích PDF bằng GroupDocs.Annotation .NET qua Streams&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

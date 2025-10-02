@@ -2,6 +2,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ दस्तावेज़ मेटाडेटा, पृष्ठ जानकारी और दस्तावेज़ गुणों तक पहुँचने के लिए पूर्ण ट्यूटोरियल।"
 "title": "दस्तावेज़ जानकारी GroupDocs.Annotation .NET के लिए ट्यूटोरियल"
 "url": "/hi/net/document-information/"
+type: docs
 "weight": 12
 ---
 

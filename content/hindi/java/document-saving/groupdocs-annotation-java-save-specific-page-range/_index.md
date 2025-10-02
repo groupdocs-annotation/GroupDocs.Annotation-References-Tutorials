@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके एनोटेटेड दस्तावेज़ पृष्ठ श्रेणियों को कुशलतापूर्वक सहेजना सीखें। यह ट्यूटोरियल सेटअप, कार्यान्वयन और व्यावहारिक अनुप्रयोगों को कवर करता है।"
 "title": "GroupDocs के साथ विशिष्ट पृष्ठ श्रेणी सहेजें.Java के लिए एनोटेशन एक संपूर्ण गाइड"
 "url": "/hi/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

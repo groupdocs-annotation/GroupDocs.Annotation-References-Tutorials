@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς επισήμανσης κειμένου χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιστοποιήστε τη συνεργασία σε έγγραφα και βελτιώστε την παραγωγικότητα με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Πώς να προσθέσετε σχολιασμούς επισήμανσης κειμένου με το GroupDocs.Annotation για .NET"
 "url": "/el/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Εισαγωγή σχολίων από έγγραφο"
 "url": "/el/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

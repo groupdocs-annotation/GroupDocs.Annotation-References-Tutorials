@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "स्थानीय डिस्क से दस्तावेज़ लोड करें"
 "url": "/hi/net/document-loading-essentials/load-document-from-local-disk/"
+type: docs
 "weight": 13
 ---
 

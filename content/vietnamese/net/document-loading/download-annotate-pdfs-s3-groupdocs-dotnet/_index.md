@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tải xuống và chú thích PDF hiệu quả từ Amazon S3 bằng GroupDocs.Annotation cho .NET. Nâng cao quy trình làm việc tài liệu của bạn với tích hợp liền mạch."
 "title": "Tải xuống PDF hiệu quả và chú thích từ Amazon S3 bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

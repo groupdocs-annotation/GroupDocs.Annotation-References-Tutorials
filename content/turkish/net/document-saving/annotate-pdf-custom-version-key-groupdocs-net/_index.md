@@ -3,6 +3,7 @@
 "description": "Güçlü GroupDocs.Annotation for .NET kütüphanesini kullanarak PDF'lere özel sürüm anahtarlarıyla nasıl açıklama ekleyeceğinizi ve kaydedeceğinizi öğrenin; böylece her belge yinelemesinin benzersiz şekilde tanımlanabilir olmasını sağlayın."
 "title": "GroupDocs.Annotation'ı Kullanarak .NET'te Özel Sürüm Anahtarlarıyla Açıklamalı PDF'leri Kaydedin"
 "url": "/tr/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

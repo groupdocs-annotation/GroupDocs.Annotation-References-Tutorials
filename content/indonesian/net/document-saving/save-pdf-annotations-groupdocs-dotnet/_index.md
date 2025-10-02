@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyimpan anotasi PDF secara efisien menggunakan GroupDocs.Annotation for .NET. Sederhanakan proses pengelolaan dokumen Anda dengan panduan terperinci kami."
 "title": "Simpan Anotasi PDF Secara Efisien dengan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

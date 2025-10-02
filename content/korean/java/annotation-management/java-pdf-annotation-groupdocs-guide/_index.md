@@ -3,6 +3,7 @@
 "description": "Java용 GroupDocs.Annotation을 사용하여 PDF에 면적 및 타원 주석을 추가하는 방법을 알아보세요. 단계별 가이드를 통해 협업을 강화하세요."
 "title": "GroupDocs를 사용한 Java PDF 주석에 대한 완벽한 가이드&#58; 협업 및 문서 관리 향상"
 "url": "/ko/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

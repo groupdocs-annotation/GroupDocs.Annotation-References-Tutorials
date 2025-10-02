@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายเน้นข้อความลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-text-highlight-annotation/"
+type: docs
 "weight": 22
 ---
 

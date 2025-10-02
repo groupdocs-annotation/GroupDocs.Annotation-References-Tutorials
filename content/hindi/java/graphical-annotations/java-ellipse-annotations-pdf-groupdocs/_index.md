@@ -3,6 +3,7 @@
 "description": "Java में शक्तिशाली GroupDocs.Annotation लाइब्रेरी का उपयोग करके PDF दस्तावेज़ों में दीर्घवृत्त एनोटेशन जोड़ने का तरीका जानें। दस्तावेज़ सहयोग को बेहतर बनाने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": "Java&#58; GroupDocs.Annotation for Java का उपयोग करके PDF में दीर्घवृत्त एनोटेशन जोड़ें"
 "url": "/hi/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

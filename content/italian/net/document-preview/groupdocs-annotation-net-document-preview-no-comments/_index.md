@@ -3,6 +3,7 @@
 "description": "Scopri come creare anteprime di documenti pulite e senza commenti utilizzando GroupDocs.Annotation per .NET. Segui questa guida per migliorare i processi di presentazione e revisione dei tuoi documenti."
 "title": "Come generare anteprime di documenti senza commenti utilizzando GroupDocs.Annotation .NET"
 "url": "/it/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

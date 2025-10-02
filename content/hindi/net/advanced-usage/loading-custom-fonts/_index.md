@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "कस्टम फ़ॉन्ट लोड हो रहा है"
 "url": "/hi/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

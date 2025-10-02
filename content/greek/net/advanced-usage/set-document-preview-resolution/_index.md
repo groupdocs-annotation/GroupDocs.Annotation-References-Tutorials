@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Ορισμός ανάλυσης προεπισκόπησης εγγράφου"
 "url": "/el/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

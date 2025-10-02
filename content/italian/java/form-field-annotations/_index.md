@@ -2,6 +2,7 @@
 "description": "Tutorial passo passo per aggiungere campi modulo e componenti interattivi ai documenti utilizzando GroupDocs.Annotation per Java."
 "title": "Tutorial sull'annotazione dei campi del modulo per GroupDocs.Annotation Java"
 "url": "/it/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "एनोटेटेड दस्तावेज़ संस्करण लोड हो रहा है"
 "url": "/hi/net/document-loading-essentials/loading-annotated-document-version/"
+type: docs
 "weight": 16
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีจัดการคำอธิบายประกอบเอกสารอย่างมีประสิทธิภาพใน .NET โดยใช้ GroupDocs.Annotation คู่มือนี้ครอบคลุมถึงการตั้งค่า การปรับแต่ง และแนวทางปฏิบัติที่ดีที่สุดในการบันทึกเอกสารที่มีคำอธิบายประกอบ"
 "title": "การอธิบายเอกสารหลักใน .NET ด้วย GroupDocs.Annotation คำแนะนำฉบับสมบูรณ์"
 "url": "/th/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

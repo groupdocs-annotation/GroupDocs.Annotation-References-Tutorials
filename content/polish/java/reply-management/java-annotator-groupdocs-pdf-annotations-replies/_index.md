@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie zarządzać adnotacjami i odpowiedziami PDF za pomocą GroupDocs.Annotation w aplikacjach Java. Usprawnij współpracę nad dokumentami dzięki naszemu kompleksowemu przewodnikowi."
 "title": "Adnotacje PDF w Javie — Twórz i zarządzaj adnotacjami i odpowiedziami za pomocą GroupDocs.Annotation dla Javy"
 "url": "/pl/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

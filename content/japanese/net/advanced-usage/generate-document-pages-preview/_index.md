@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントページのプレビューを生成する"
 "url": "/ja/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

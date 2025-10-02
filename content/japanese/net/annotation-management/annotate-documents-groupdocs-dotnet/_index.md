@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NETを使用して、ドキュメントに注釈を効率的に追加および更新する方法を学びましょう。このステップバイステップガイドで、コラボレーションとドキュメント管理を強化しましょう。"
 "title": "GroupDocs.Annotation .NET を使用してドキュメントに注釈を付ける方法 包括的なガイド"
 "url": "/ja/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

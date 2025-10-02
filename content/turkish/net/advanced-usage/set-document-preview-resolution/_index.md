@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belge Önizleme Çözünürlüğünü Ayarla"
 "url": "/tr/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

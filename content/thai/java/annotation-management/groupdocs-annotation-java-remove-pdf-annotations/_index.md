@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีลบคำอธิบายประกอบออกจากเอกสาร PDF ได้อย่างราบรื่นโดยใช้ GroupDocs.Annotation API ใน Java ปฏิบัติตามคำแนะนำทีละขั้นตอนของเราเพื่อการจัดการเอกสารอย่างมีประสิทธิภาพ"
 "title": "วิธีการลบคำอธิบายประกอบออกจาก PDF โดยใช้ GroupDocs.Annotation Java API"
 "url": "/th/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

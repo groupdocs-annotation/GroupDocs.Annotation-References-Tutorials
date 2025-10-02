@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Aggiungi annotazione di redazione delle risorse al documento"
 "url": "/it/net/unlocking-annotation-power/add-resources-redaction-annotation/"
+type: docs
 "weight": 19
 ---
 

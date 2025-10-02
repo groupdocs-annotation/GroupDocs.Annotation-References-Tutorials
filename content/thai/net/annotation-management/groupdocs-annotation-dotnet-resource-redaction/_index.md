@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีเพิ่มคำอธิบายประกอบการแก้ไขทรัพยากรลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET ปกป้องข้อมูลที่ละเอียดอ่อนและเพิ่มความปลอดภัยให้กับเอกสารด้วยคู่มือโดยละเอียดนี้"
 "title": "วิธีการเพิ่มคำอธิบายประกอบการเขียนทรัพยากรใน .NET โดยใช้ GroupDocs.Annotation คำแนะนำที่ครอบคลุม"
 "url": "/th/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

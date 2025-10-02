@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบไฟล์ PDF ออนไลน์โดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงกระบวนการตรวจสอบเอกสารของคุณด้วยเทคนิคการใส่คำอธิบายประกอบที่มีประสิทธิภาพ"
 "title": "วิธีการใส่คำอธิบายประกอบ PDF จาก URL โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

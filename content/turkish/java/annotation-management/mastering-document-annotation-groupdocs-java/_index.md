@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak belgeleri etkili bir şekilde nasıl ek açıklama ekleyeceğinizi öğrenin. Bu kılavuz, PDF'leri yüklemeyi, ek açıklama eklemeyi ve Java ortamınızı Maven ile optimize etmeyi kapsar."
 "title": "Java'da Belge Açıklamalarına Hakim Olmak - GroupDocs.Annotation'ı Kullanan Kapsamlı Bir Kılavuz"
 "url": "/tr/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

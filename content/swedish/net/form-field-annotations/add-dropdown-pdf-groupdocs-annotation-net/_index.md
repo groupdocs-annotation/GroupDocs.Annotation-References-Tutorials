@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument genom att lägga till interaktiva rullgardinsmenyer med GroupDocs.Annotation för .NET. Följ den här steg-för-steg-guiden för att effektivisera användarinmatning och förbättra dokumentfunktionaliteten."
 "title": "Lägg till rullgardinsmeny till PDF-filer med GroupDocs.Annotation för .NET – en omfattande guide"
 "url": "/sv/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

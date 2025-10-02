@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để triển khai các phiên bản tài liệu, theo dõi các thay đổi và quản lý lịch sử chú thích bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn kiểm soát phiên bản cho GroupDocs.Annotation .NET"
 "url": "/vi/net/version-control/"
+type: docs
 "weight": 13
 ---
 

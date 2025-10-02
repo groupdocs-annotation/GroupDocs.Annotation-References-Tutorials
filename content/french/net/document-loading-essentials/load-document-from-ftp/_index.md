@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Charger un document depuis FTP"
 "url": "/fr/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

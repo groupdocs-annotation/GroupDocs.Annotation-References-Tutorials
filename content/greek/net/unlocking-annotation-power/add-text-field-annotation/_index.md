@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου πεδίου κειμένου σε έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-text-field-annotation/"
+type: docs
 "weight": 21
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące uzyskiwania dostępu do metadanych dokumentu, informacji o stronie i właściwości dokumentu za pomocą GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki dotyczące informacji o dokumencie dla GroupDocs.Annotation .NET"
 "url": "/pl/net/document-information/"
+type: docs
 "weight": 12
 ---
 

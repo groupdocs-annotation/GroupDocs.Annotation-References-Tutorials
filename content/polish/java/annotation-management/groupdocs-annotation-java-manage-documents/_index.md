@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie zarządzać adnotacjami w Javie za pomocą GroupDocs.Annotation. Ten przewodnik obejmuje ładowanie, usuwanie i optymalizację przepływów pracy dokumentów."
 "title": "Przewodnik Master Annotation Management in Java z GroupDocs.Annotation"
 "url": "/pl/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

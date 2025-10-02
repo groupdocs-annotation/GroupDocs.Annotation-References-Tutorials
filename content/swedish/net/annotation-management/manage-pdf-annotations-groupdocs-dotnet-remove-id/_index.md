@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt tar bort anteckningar från PDF-filer och andra dokument med GroupDocs.Annotation för .NET. Upptäck steg-för-steg-guider, bästa praxis och verkliga tillämpningar."
 "title": "Så här tar du bort PDF-annoteringar efter ID med GroupDocs.Annotation för .NET"
 "url": "/sv/net/annotation-management/manage-pdf-annotations-groupdocs-dotnet-remove-id/"
+type: docs
 "weight": 1
 ---
 

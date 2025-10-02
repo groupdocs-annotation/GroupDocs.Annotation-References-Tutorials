@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 安全地為受密碼保護的 PDF 新增註解。本逐步指南涵蓋了文件的載入、註釋和保存。"
 "title": "如何使用 GroupDocs.Annotation for .NET 為受密碼保護的 PDF 進行註解 | 逐步指南"
 "url": "/zh-hant/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

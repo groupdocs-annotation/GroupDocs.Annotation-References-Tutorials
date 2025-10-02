@@ -3,6 +3,7 @@
 "description": "Leer hoe u aangepaste lettertypen kunt integreren in uw documentverwerkingsworkflow met GroupDocs.Annotation voor .NET. Verbeter uw annotaties met nauwkeurige lettertypestyling."
 "title": "Aangepaste lettertypen laden in GroupDocs.Annotation voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

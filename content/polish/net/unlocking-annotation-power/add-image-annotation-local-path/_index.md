@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dodaj adnotację obrazu do dokumentu (ścieżka lokalna)"
 "url": "/pl/net/unlocking-annotation-power/add-image-annotation-local-path/"
+type: docs
 "weight": 14
 ---
 

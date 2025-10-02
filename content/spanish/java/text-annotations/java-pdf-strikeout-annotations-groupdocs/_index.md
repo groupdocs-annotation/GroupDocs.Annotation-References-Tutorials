@@ -3,6 +3,7 @@
 "description": "Aprenda a crear anotaciones de texto tachado en PDF de Java con GroupDocs.Annotation para Java. Siga este tutorial paso a paso para mejorar sus capacidades de edición de documentos."
 "title": "Anotaciones tachadas en PDF de Java con GroupDocs&#58; una guía completa"
 "url": "/es/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

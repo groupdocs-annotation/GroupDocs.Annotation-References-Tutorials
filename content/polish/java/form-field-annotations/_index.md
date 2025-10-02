@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące dodawania pól formularzy i interaktywnych komponentów do dokumentów przy użyciu GroupDocs.Annotation dla Java."
 "title": "Samouczki adnotacji pól formularza dla GroupDocs.Annotation Java"
 "url": "/pl/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

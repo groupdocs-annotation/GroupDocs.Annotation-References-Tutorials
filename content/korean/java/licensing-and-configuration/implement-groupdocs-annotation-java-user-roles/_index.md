@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 Java 애플리케이션의 주석에 사용자 역할을 추가하는 방법을 알아보고, 이를 통해 문서 관리와 협업을 개선하세요."
 "title": "GroupDocs.Annotation Java 구현 및 주석에 사용자 역할 추가"
 "url": "/ko/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

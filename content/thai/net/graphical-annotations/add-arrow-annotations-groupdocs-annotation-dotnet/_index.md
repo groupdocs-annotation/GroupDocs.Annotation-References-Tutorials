@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายลูกศรในเอกสารของคุณโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ให้คำแนะนำทีละขั้นตอนพร้อมตัวอย่างโค้ด"
 "title": "วิธีการเพิ่มคำอธิบายลูกศรในไฟล์ PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

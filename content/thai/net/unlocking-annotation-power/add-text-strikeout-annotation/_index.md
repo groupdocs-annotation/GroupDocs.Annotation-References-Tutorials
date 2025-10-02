@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายการขีดฆ่าข้อความลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+type: docs
 "weight": 26
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Přidat do dokumentu vlnovku textu"
 "url": "/cs/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+type: docs
 "weight": 25
 ---
 

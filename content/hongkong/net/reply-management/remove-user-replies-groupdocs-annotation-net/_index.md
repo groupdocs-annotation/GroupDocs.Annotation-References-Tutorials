@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 從已註解的 PDF 文件中有效移除特定使用者回覆。這份全面的指南將幫助您簡化註釋管理。"
 "title": "如何使用 GroupDocs.Annotation .NET 從 PDF 中刪除使用者回覆－逐步指南"
 "url": "/zh-hant/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

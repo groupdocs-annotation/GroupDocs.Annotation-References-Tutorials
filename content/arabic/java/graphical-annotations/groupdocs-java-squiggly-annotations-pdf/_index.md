@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إضافة تعليقات متعرجة إلى مستندات PDF الخاصة بك باستخدام GroupDocs.Annotation for Java، مما يعزز مراجعة المستندات والتعاون فيها."
 "title": "كيفية إضافة تعليقات توضيحية متعرجة إلى ملفات PDF باستخدام GroupDocs.Annotation لـ Java"
 "url": "/ar/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a añadir anotaciones de flecha a documentos PDF con GroupDocs.Annotation para Java. Mejore la colaboración y la claridad de los documentos con pasos detallados."
 "title": "Cómo anotar archivos PDF con flechas usando GroupDocs.Annotation para Java"
 "url": "/es/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

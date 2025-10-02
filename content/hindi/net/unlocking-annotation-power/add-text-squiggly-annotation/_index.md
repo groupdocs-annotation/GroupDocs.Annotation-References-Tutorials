@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ में टेक्स्ट स्क्विग्ली एनोटेशन जोड़ें"
 "url": "/hi/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+type: docs
 "weight": 25
 ---
 

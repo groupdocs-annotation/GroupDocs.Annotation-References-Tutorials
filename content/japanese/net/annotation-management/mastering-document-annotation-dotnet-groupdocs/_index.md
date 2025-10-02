@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation を使用して .NET でドキュメントの注釈を効率的に管理する方法を学びます。このガイドでは、注釈付きドキュメントを保存するための設定、カスタマイズ、ベストプラクティスについて説明します。"
 "title": "GroupDocs.Annotation を使用した .NET でのマスタードキュメント注釈の完全ガイド"
 "url": "/ja/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

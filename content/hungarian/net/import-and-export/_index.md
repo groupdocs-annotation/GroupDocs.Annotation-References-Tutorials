@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatott útmutatók a dokumentumok és XML-fájlok közötti jegyzetek importálásához és exportálásához a GroupDocs.Annotation for .NET használatával."
 "title": "Jegyzetek importálása és exportálása – oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

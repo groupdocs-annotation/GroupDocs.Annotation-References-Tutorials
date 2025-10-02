@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ में पॉलीलाइन एनोटेशन जोड़ें"
 "url": "/hi/net/unlocking-annotation-power/add-polyline-annotation/"
+type: docs
 "weight": 18
 ---
 

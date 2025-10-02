@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 實作進階註解功能、自訂和專門功能的完整教學。"
 "title": "Java 進階 GroupDocs.Annotation 功能教學"
 "url": "/zh-hant/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

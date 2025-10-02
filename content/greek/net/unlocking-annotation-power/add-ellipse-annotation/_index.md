@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου έλλειψης σε έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-ellipse-annotation/"
+type: docs
 "weight": 13
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk mengimplementasikan rangkaian komentar, balasan, dan diskusi kolaboratif dengan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Manajemen Balasan untuk GroupDocs.Annotation Java"
 "url": "/id/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

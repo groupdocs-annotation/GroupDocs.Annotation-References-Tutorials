@@ -3,6 +3,7 @@
 "description": "Aprenda a anotar e salvar PDFs com chaves de versão personalizadas usando a poderosa biblioteca GroupDocs.Annotation for .NET, garantindo que cada iteração do documento seja exclusivamente identificável."
 "title": "Salvar PDFs anotados com chaves de versão personalizadas no .NET usando GroupDocs.Annotation"
 "url": "/pt/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

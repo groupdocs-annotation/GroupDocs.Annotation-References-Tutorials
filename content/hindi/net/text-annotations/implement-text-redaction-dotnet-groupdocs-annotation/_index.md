@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके .NET अनुप्रयोगों में टेक्स्ट रिडक्शन एनोटेशन को लागू करना सीखें। आसानी से संवेदनशील जानकारी सुरक्षित करें।"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में टेक्स्ट रिडक्शन लागू करें एक संपूर्ण गाइड"
 "url": "/hi/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してドキュメントのメタデータ、ページ情報、ドキュメントのプロパティにアクセスするための完全なチュートリアル。"
 "title": "GroupDocs.Annotation Java のドキュメント情報チュートリアル"
 "url": "/ja/java/document-information/"
+type: docs
 "weight": 12
 ---
 

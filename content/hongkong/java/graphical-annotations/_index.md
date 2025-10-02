@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 在文件中新增形狀、箭頭、圖像和圖形元素的完整教學。"
 "title": "GroupDocs.Annotation Java 圖形註解教學"
 "url": "/zh-hant/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 中的原始路径保存带注释的文档，确保简化的文件管理和工作流程效率。"
 "title": "如何使用 GroupDocs.Annotation for .NET 将文档保存在原始路径"
 "url": "/zh/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

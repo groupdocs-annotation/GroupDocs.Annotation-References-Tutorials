@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat felhasználói szerepköröket a Java-alkalmazásokban található annotációkhoz a GroupDocs.Annotation használatával a dokumentumkezelés és az együttműködés fejlesztése érdekében."
 "title": "GroupDocs.Annotation Java implementálása&#58; Felhasználói szerepkörök hozzáadása annotációkhoz"
 "url": "/hu/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

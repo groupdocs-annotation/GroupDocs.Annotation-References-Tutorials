@@ -3,6 +3,7 @@
 "description": "Leer hoe je GroupDocs.Annotation voor Java gebruikt om vlak- en ellipsannotaties aan je pdf's toe te voegen. Verbeter de samenwerking met onze stapsgewijze handleiding."
 "title": "Complete handleiding voor Java PDF-annotatie met GroupDocs&#58; verbeterde samenwerking en documentbeheer"
 "url": "/nl/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

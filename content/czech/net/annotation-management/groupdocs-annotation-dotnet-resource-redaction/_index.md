@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat anotace redigování zdrojů do PDF pomocí nástroje GroupDocs.Annotation pro .NET. Chraňte citlivé informace a zvyšte zabezpečení dokumentů pomocí tohoto podrobného průvodce."
 "title": "Jak přidat anotace redigování zdrojů v .NET pomocí GroupDocs.Annotation – Komplexní průvodce"
 "url": "/cs/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

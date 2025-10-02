@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi dan menyimpan PDF dengan kunci versi khusus menggunakan pustaka GroupDocs.Annotation for .NET yang canggih, yang memastikan setiap iterasi dokumen dapat diidentifikasi secara unik."
 "title": "Menyimpan PDF Beranotasi dengan Kunci Versi Kustom di .NET Menggunakan GroupDocs.Annotation"
 "url": "/id/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

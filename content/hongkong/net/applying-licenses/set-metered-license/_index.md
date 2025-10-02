@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "設定計量許可證"
 "url": "/zh-hant/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

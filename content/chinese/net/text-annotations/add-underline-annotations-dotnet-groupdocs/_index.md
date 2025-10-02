@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效地为文档添加下划线注释。轻松提升文档清晰度和沟通能力。"
 "title": "如何使用 GroupDocs.Annotation 在 .NET 中添加下划线注释"
 "url": "/zh/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

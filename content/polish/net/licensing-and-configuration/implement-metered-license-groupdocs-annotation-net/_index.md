@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skonfigurować i zarządzać licencją licznikową przy użyciu GroupDocs.Annotation dla platformy .NET, zapewniając zgodność z przepisami i optymalną funkcjonalność."
 "title": "Wdrażanie licencji licznikowej w GroupDocs.Annotation dla .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

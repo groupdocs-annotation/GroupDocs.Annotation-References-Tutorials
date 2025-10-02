@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการผสานรวม GroupDocs.Annotation เข้ากับโปรเจ็กต์ .NET ของคุณเพื่อปรับปรุงเอกสารด้วยคำอธิบายประกอบภาพ ปรับปรุงการมีส่วนร่วมของผู้ใช้และปรับปรุงการทำงานร่วมกันให้มีประสิทธิภาพ"
 "title": "เพิ่มคำอธิบายภาพลงในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

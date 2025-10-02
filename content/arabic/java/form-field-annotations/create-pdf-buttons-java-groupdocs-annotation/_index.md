@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إنشاء أزرار PDF تفاعلية مع ردود باستخدام GroupDocs.Annotation لجافا. اتبع هذا الدليل خطوة بخطوة لتحسين تفاعلية المستندات."
 "title": "إنشاء أزرار PDF تفاعلية في Java باستخدام GroupDocs.Annotation - دليل كامل"
 "url": "/ar/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tạo bản xem trước tài liệu mà không cần chú thích bằng GroupDocs.Annotation cho .NET, đảm bảo tính riêng tư và rõ ràng trong các dự án cộng tác."
 "title": "Cách tạo bản xem trước tài liệu sạch mà không cần chú thích bằng GroupDocs.Annotation .NET"
 "url": "/vi/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

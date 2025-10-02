@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "XMLファイルから注釈をエクスポートする"
 "url": "/ja/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

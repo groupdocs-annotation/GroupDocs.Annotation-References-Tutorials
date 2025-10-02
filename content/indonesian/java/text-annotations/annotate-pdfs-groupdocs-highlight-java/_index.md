@@ -3,6 +3,7 @@
 "description": "Pelajari cara memberi anotasi pada PDF dengan teks yang disorot dan balasan menggunakan GroupDocs.Annotation untuk Java. Panduan ini mencakup pengaturan, contoh kode, dan aplikasi praktis."
 "title": "Membuat anotasi pada PDF di Java menggunakan GroupDocs.Highlight&#58; Panduan Lengkap"
 "url": "/id/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

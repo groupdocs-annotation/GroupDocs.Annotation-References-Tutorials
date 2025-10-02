@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Установить лицензию из потока"
 "url": "/ru/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

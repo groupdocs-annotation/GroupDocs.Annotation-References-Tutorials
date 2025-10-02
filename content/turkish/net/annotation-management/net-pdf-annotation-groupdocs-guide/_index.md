@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation ile .NET PDF ek açıklamalarında ustalaşmayı öğrenin. Bu kılavuz, başlatma, sayfa işleme, dönüşümler ve ek açıklamalı belgeleri etkili bir şekilde kaydetmeyi kapsar."
 "title": "Gelişmiş Belge Yönetimi için GroupDocs.Annotation'ı Kullanarak .NET PDF Açıklamalarına İlişkin Kapsamlı Kılavuz"
 "url": "/tr/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

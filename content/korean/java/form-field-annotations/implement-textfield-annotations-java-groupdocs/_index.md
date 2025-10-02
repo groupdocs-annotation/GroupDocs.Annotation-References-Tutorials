@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 Java에서 텍스트 필드 주석을 구현하고 문서 상호 작용성을 향상시키는 방법을 알아보세요. 단계별 지침과 실용적인 응용 프로그램을 제공하는 이 종합 가이드를 따라해 보세요."
 "title": "GroupDocs.Annotation을 사용하여 Java에서 TextField 주석 구현하기 - 포괄적인 가이드"
 "url": "/ko/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

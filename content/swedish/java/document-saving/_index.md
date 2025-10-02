@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att spara kommenterade dokument med olika alternativ med GroupDocs.Annotation för Java."
 "title": "Handledningar för dokumentsparning i GroupDocs.Annotation Java"
 "url": "/sv/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

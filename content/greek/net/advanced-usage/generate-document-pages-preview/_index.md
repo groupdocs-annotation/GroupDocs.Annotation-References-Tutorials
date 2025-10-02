@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Δημιουργία προεπισκόπησης σελίδων εγγράφων"
 "url": "/el/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

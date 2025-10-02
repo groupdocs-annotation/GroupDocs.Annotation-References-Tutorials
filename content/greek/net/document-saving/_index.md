@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά βίντεο για την αποθήκευση σχολιασμένων εγγράφων με διάφορες επιλογές χρησιμοποιώντας το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο για την αποθήκευση εγγράφων στο GroupDocs.Annotation .NET"
 "url": "/el/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

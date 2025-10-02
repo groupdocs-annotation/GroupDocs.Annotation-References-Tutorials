@@ -3,6 +3,7 @@
 "description": "Узнайте, как легко загружать документы с FTP-серверов с помощью GroupDocs.Annotation для .NET. Улучшите свой рабочий процесс управления документами с помощью этого подробного руководства."
 "title": "Загрузка и аннотирование документов с FTP-серверов с помощью GroupDocs.Annotation для .NET&#58; Подробное руководство"
 "url": "/ru/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

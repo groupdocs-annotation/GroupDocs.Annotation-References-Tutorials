@@ -3,6 +3,7 @@
 "description": "Scopri come integrare pulsanti interattivi nei tuoi documenti PDF utilizzando il potente GroupDocs.Annotation per .NET. Migliora il coinvolgimento degli utenti con istruzioni dettagliate."
 "title": "Integrare pulsanti interattivi nei PDF utilizzando GroupDocs.Annotation .NET SDK"
 "url": "/it/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

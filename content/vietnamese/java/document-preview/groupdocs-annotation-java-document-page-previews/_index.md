@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách sử dụng GroupDocs.Annotation for Java để tạo bản xem trước PNG chất lượng cao của các trang tài liệu. Nâng cao phần mềm của bạn bằng tính năng mạnh mẽ này."
 "title": "Tạo bản xem trước trang tài liệu trong Java bằng GroupDocs.Annotation"
 "url": "/vi/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Java の強力な GroupDocs.Annotation ライブラリを使用して、インタラクティブなドロップダウン フィールドで PDF ドキュメントを強化する方法を学習します。"
 "title": "GroupDocs.Annotation for Java を使用してインタラクティブな PDF ドロップダウンを作成する"
 "url": "/ja/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

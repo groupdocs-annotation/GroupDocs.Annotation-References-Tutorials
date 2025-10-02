@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "स्ट्रीम से लाइसेंस सेट करें"
 "url": "/hi/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดึงเนื้อหาข้อความจากเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปฏิบัติตามคำแนะนำทีละขั้นตอนนี้เพื่อปรับปรุงความสามารถในการประมวลผลเอกสารของคุณ"
 "title": "ดึงเนื้อหาข้อความเอกสารด้วย GroupDocs.Annotation สำหรับ .NET คำแนะนำทีละขั้นตอน"
 "url": "/th/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

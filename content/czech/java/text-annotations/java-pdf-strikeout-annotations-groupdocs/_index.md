@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vytvářet anotace s přeškrtnutím textu v PDF souborech v Javě pomocí nástroje GroupDocs.Annotation pro Javu. Postupujte podle tohoto podrobného návodu a vylepšete si možnosti úpravy dokumentů."
 "title": "Přeškrtávací anotace v PDF v Javě s GroupDocs – Komplexní průvodce"
 "url": "/cs/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

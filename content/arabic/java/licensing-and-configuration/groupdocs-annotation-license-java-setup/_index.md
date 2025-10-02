@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إعداد وتكوين ترخيص GroupDocs.Annotation لتطبيقات Java الخاصة بك، وفتح الميزات الكاملة بسهولة."
 "title": "إعداد ترخيص GroupDocs.Annotation في Java - دليل شامل"
 "url": "/ar/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Odebrání odpovědí podle uživatelského jména v .NET"
 "url": "/cs/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

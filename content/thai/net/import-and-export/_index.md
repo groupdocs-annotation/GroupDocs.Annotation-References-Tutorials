@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนสำหรับการนำเข้าและส่งออกคำอธิบายประกอบระหว่างเอกสารและไฟล์ XML โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการนำเข้าและส่งออกคำอธิบายประกอบสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u GroupDocs.Annotation voor Java gebruikt om efficiënt ondersteunde bestandsformaten te tonen met onze stapsgewijze handleiding. Perfect voor het verbeteren van uw documentannotatietoepassingen."
 "title": "Hoe u ondersteunde bestandsindelingen in GroupDocs.Annotation voor Java kunt ophalen&#58; een uitgebreide handleiding"
 "url": "/nl/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

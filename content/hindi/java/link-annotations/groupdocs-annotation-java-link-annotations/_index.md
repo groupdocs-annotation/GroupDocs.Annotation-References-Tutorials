@@ -3,6 +3,7 @@
 "description": "GroupDocs के साथ जावा में लिंक एनोटेशन में महारत हासिल करें। दस्तावेज़ की अन्तरक्रियाशीलता को बढ़ाने के लिए सेटअप, आरंभीकरण और अनुकूलन सीखें।"
 "title": "ग्रुपडॉक्स का उपयोग करके जावा में लिंक एनोटेशन को लागू करना एक व्यापक गाइड"
 "url": "/hi/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

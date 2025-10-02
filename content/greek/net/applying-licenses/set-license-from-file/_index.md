@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Ορισμός άδειας χρήσης από αρχείο"
 "url": "/el/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

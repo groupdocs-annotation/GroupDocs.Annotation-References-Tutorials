@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "向文档添加搜索文本片段注释"
 "url": "/zh/net/unlocking-annotation-power/add-search-text-fragment-annotation/"
+type: docs
 "weight": 20
 ---
 

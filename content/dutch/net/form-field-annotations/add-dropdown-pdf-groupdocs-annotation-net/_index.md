@@ -3,6 +3,7 @@
 "description": "Leer hoe u uw PDF-documenten kunt verbeteren door interactieve dropdown-componenten toe te voegen met GroupDocs.Annotation voor .NET. Volg deze stapsgewijze handleiding om gebruikersinvoer te stroomlijnen en de functionaliteit van uw documenten te verbeteren."
 "title": "Dropdown-menu toevoegen aan PDF's met GroupDocs.Annotation voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

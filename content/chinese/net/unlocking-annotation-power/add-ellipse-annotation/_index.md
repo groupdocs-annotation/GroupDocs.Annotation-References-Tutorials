@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "向文档添加椭圆注释"
 "url": "/zh/net/unlocking-annotation-power/add-ellipse-annotation/"
+type: docs
 "weight": 13
 ---
 

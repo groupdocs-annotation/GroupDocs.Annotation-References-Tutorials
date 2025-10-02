@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة تعليق نقطي إلى المستند"
 "url": "/ar/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

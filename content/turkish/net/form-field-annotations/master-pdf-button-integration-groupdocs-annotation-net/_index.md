@@ -3,6 +3,7 @@
 "description": ".NET için güçlü GroupDocs.Annotation'ı kullanarak PDF belgelerinize etkileşimli düğmeleri nasıl entegre edeceğinizi öğrenin. Adım adım talimatlarla kullanıcı etkileşimini artırın."
 "title": "GroupDocs.Annotation .NET SDK'sını Kullanarak PDF'lere Etkileşimli Düğmeler Entegre Edin"
 "url": "/tr/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

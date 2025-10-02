@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Hasilkan Kolom Lembar Kerja Pratinjau"
 "url": "/id/net/advanced-usage/generate-preview-worksheet-columns/"
+type: docs
 "weight": 15
 ---
 

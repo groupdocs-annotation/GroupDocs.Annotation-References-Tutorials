@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Supprimer plusieurs annotations par identifiant"
 "url": "/fr/net/removing-annotations/remove-multiple-annotations-by-ids/"
+type: docs
 "weight": 13
 ---
 

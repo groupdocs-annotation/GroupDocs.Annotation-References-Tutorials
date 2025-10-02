@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentum betöltése a streamből"
 "url": "/hu/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

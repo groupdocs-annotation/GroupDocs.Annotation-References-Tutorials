@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET'i kullanarak belgelerinize alt çizgi ek açıklamalarını nasıl etkili bir şekilde ekleyeceğinizi öğrenin. Belge netliğini ve iletişimi kolaylıkla geliştirin."
 "title": "GroupDocs.Annotation ile .NET'te Alt Çizgili Açıklamalar Nasıl Eklenir"
 "url": "/tr/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

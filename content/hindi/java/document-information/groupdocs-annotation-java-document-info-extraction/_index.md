@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके फ़ाइल प्रकार, पृष्ठ संख्या और आकार जैसे दस्तावेज़ मेटाडेटा को निकालना सीखें। कुशल जानकारी निष्कर्षण के साथ अपने दस्तावेज़ प्रबंधन को बेहतर बनाएँ।"
 "title": "जावा में GroupDocs.Annotation का उपयोग करके कुशल दस्तावेज़ मेटाडेटा निष्कर्षण"
 "url": "/hi/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Apprenez à ajouter efficacement des annotations fléchées à vos PDF grâce à la bibliothèque GroupDocs.Annotation pour Java. Améliorez la clarté de vos documents et la collaboration."
 "title": "Comment ajouter des annotations fléchées en Java avec l'API GroupDocs.Annotation"
 "url": "/fr/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

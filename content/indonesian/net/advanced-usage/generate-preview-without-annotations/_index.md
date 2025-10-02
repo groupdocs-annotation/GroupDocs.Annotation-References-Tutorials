@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Hasilkan Pratinjau tanpa Anotasi"
 "url": "/id/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

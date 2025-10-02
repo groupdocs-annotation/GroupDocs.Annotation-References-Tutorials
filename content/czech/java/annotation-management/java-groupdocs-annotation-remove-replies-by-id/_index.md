@@ -3,6 +3,7 @@
 "description": "Naučte se, jak odstranit odpovědi z anotací v dokumentech pomocí rozhraní GroupDocs.Annotation pro Java API. Vylepšete si správu dokumentů pomocí tohoto podrobného návodu."
 "title": "Jak odstranit odpovědi podle ID v Javě pomocí GroupDocs.Annotation API"
 "url": "/cs/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

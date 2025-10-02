@@ -3,6 +3,7 @@
 "description": "Java uygulamalarınızda GroupDocs.Annotation'ı kullanarak PDF açıklamalarını ve yanıtlarını nasıl etkili bir şekilde yöneteceğinizi öğrenin. Kapsamlı kılavuzumuzla belge iş birliğini kolaylaştırın."
 "title": "Java PDF Açıklaması&#58; GroupDocs ile Açıklamalar ve Yanıtlar Oluşturun ve Yönetin. Java için Açıklama"
 "url": "/tr/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

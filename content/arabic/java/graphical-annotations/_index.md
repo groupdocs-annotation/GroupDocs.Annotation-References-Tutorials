@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة حول كيفية إضافة الأشكال والأسهم والصور والعناصر الرسومية في المستندات باستخدام GroupDocs.Annotation for Java."
 "title": "دروس توضيحية رسومية لـ GroupDocs.Annotation Java"
 "url": "/ar/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

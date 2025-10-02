@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt documentinformatie kunt extraheren met GroupDocs.Annotation voor .NET. Deze handleiding behandelt de installatie, het gebruik en praktische toepassingen om uw documentverwerkingsworkflows te verbeteren."
 "title": "Document extractie onder de knie krijgen met GroupDocs.Annotation .NET&#58; een uitgebreide handleiding voor ontwikkelaars"
 "url": "/nl/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

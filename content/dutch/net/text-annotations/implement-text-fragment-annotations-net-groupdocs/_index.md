@@ -3,6 +3,7 @@
 "description": "Leer hoe u tekstfragmentannotaties implementeert in .NET met behulp van GroupDocs.Annotation. Deze handleiding behandelt de installatie, implementatie en praktische toepassingen voor efficiënt documentbeheer."
 "title": "Implementatie van tekstfragmentannotaties in .NET met GroupDocs&#58; een uitgebreide handleiding"
 "url": "/nl/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

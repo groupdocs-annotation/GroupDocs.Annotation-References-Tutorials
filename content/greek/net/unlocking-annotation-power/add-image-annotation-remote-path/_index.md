@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου εικόνας σε έγγραφο (Απομακρυσμένη διαδρομή)"
 "url": "/el/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+type: docs
 "weight": 15
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyiapkan dan menerapkan lisensi untuk GroupDocs.Annotation .NET menggunakan aliran file. Dapatkan fitur lengkap dengan panduan lengkap ini."
 "title": "Master GroupDocs.Annotation .NET&#58; Mengatur Lisensi Menggunakan File Stream di C#"
 "url": "/id/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

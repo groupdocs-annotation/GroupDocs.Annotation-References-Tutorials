@@ -3,6 +3,7 @@
 "description": "Leer hoe u documentversies efficiënt kunt beheren met GroupDocs.Annotation voor .NET. Deze handleiding behandelt de installatie, implementatie en praktische toepassingen."
 "title": "Een PDF opslaan als een nieuwe versie met GroupDocs.Annotation voor .NET - een stapsgewijze handleiding"
 "url": "/nl/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

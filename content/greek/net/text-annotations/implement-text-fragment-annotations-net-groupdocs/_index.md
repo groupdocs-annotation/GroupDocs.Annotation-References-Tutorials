@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να υλοποιείτε σχολιασμούς τμημάτων κειμένου στο .NET χρησιμοποιώντας το GroupDocs.Annotation. Αυτός ο οδηγός καλύπτει την εγκατάσταση, την υλοποίηση και πρακτικές εφαρμογές για αποτελεσματική διαχείριση εγγράφων."
 "title": "Υλοποίηση σχολίων τμημάτων κειμένου σε .NET με το GroupDocs® Ένας ολοκληρωμένος οδηγός"
 "url": "/el/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงแอปพลิเคชัน .NET ของคุณโดยเพิ่มคำอธิบายประกอบลิงก์แบบโต้ตอบโดยใช้ไลบรารี GroupDocs.Annotation ที่มีประสิทธิภาพ ปฏิบัติตามคำแนะนำทีละขั้นตอนของเราและปรับปรุงการโต้ตอบของเอกสารในวันนี้"
 "title": "วิธีการเพิ่มคำอธิบายลิงก์ในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET | คู่มือสำหรับนักพัฒนา"
 "url": "/th/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient nur kommentierte Seiten einer PDF-Datei speichern. Optimieren Sie Dokumentenmanagement und Zusammenarbeit mit dieser ausführlichen Anleitung."
 "title": "So speichern Sie kommentierte Seiten in PDF mit GroupDocs.Annotation für .NET"
 "url": "/de/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

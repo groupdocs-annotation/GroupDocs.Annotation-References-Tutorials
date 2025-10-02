@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε διαδραστικές σχολιασμούς πεδίων κειμένου στα έγγραφα PDF σας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Ακολουθήστε αυτόν τον οδηγό βήμα προς βήμα για να βελτιώσετε την διαδραστικότητα των εγγράφων."
 "title": "Πώς να προσθέσετε σχολιασμούς πεδίων κειμένου σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET (Εκμάθηση)"
 "url": "/el/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

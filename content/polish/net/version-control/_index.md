@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące wdrażania wersji dokumentu, śledzenia zmian i zarządzania historią adnotacji za pomocą GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki kontroli wersji dla GroupDocs.Annotation .NET"
 "url": "/pl/net/version-control/"
+type: docs
 "weight": 13
 ---
 

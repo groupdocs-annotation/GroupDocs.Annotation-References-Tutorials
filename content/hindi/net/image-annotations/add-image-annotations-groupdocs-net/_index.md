@@ -3,6 +3,7 @@
 "description": "छवि एनोटेशन वाले दस्तावेज़ों को बेहतर बनाने के लिए अपने .NET प्रोजेक्ट में GroupDocs.Annotation को एकीकृत करना सीखें। उपयोगकर्ता सहभागिता में सुधार करें और सहयोग को कारगर बनाएँ।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों में छवि एनोटेशन जोड़ें"
 "url": "/hi/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

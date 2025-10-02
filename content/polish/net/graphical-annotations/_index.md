@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące dodawania kształtów, strzałek, obrazów i elementów graficznych do dokumentów za pomocą GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki graficznej adnotacji dla GroupDocs.Annotation .NET"
 "url": "/pl/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

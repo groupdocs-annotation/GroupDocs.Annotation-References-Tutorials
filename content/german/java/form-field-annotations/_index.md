@@ -2,6 +2,7 @@
 "description": "Schritt-für-Schritt-Tutorials zum Hinzufügen von Formularfeldern und interaktiven Komponenten zu Dokumenten mit GroupDocs.Annotation für Java."
 "title": "Tutorials zur Formularfeldannotation für GroupDocs.Annotation Java"
 "url": "/de/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

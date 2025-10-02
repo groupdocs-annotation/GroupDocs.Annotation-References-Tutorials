@@ -3,6 +3,7 @@
 "description": "Leer hoe u uw PDF-documenten kunt verbeteren door programmatisch puntannotaties toe te voegen met GroupDocs.Annotation voor Java. Deze handleiding behandelt de installatie, implementatie en praktische toepassingen."
 "title": "Puntannotaties toevoegen aan PDF's met GroupDocs.Annotation voor Java"
 "url": "/nl/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

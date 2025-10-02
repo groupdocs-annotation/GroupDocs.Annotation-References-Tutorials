@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro nastavení licencování, konfiguraci možností a správu GroupDocs.Annotation v aplikacích Java."
 "title": "Výukové programy pro licencování a konfiguraci GroupDocs.Annotation pro Javu"
 "url": "/cs/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

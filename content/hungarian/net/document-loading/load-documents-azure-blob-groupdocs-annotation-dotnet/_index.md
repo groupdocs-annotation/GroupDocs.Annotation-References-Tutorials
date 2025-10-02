@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan integrálhatja zökkenőmentesen az Azure Blob Storage-ot .NET alkalmazásaival a GroupDocs.Annotation segítségével. Fejlessze a dokumentumkezelési és annotációs képességeket."
 "title": "Dokumentumok hatékony betöltése az Azure Blob Storage-ból a GroupDocs.Annotation .NET használatával dokumentumkezeléshez"
 "url": "/hu/net/document-loading/load-documents-azure-blob-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

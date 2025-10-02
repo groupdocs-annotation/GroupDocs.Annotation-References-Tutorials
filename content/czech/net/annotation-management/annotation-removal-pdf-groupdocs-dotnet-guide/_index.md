@@ -3,6 +3,7 @@
 "description": "Naučte se, jak pomocí nástroje GroupDocs.Annotation pro .NET odstraňovat anotace podle ID a optimalizovat tak proces správy dokumentů pomocí tohoto komplexního průvodce."
 "title": "Jak efektivně odstranit anotace z PDF souborů pomocí GroupDocs.Annotation .NET"
 "url": "/cs/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

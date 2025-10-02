@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Получить список аннотаций, используя ключ версии"
 "url": "/ru/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

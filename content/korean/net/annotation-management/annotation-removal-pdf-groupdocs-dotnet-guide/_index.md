@@ -3,6 +3,7 @@
 "description": "이 포괄적인 가이드를 통해 .NET용 GroupDocs.Annotation을 사용하여 ID로 주석을 제거하고 문서 관리 프로세스를 최적화하는 방법을 알아보세요."
 "title": "GroupDocs.Annotation .NET을 사용하여 PDF에서 주석을 효율적으로 제거하는 방법"
 "url": "/ko/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

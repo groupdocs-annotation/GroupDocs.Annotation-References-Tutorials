@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyiapkan dan mengonfigurasi lisensi GroupDocs.Annotation untuk aplikasi Java Anda, membuka fitur lengkap dengan mudah."
 "title": "Mengatur Lisensi GroupDocs.Annotation di Java&#58; Panduan Lengkap"
 "url": "/id/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

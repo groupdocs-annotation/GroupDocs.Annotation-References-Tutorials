@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してドキュメントにハイパーリンクとリンクされた注釈を実装するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation Java のリンク注釈チュートリアル"
 "url": "/ja/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

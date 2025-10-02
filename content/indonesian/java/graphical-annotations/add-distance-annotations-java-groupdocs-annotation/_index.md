@@ -3,6 +3,7 @@
 "description": "Pelajari cara menerapkan anotasi jarak dalam dokumen Java menggunakan GroupDocs.Annotation. Panduan langkah demi langkah ini mencakup penyiapan, konfigurasi, dan aplikasi praktis."
 "title": "Cara Menambahkan Anotasi Jarak di Java dengan GroupDocs.Annotation&#58; Panduan Langkah demi Langkah"
 "url": "/id/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

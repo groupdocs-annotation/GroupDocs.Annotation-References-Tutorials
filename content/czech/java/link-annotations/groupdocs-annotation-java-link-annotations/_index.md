@@ -3,6 +3,7 @@
 "description": "Zvládněte anotace odkazů v Javě pomocí GroupDocs. Naučte se nastavení, inicializaci a přizpůsobení pro zlepšení interaktivity dokumentů."
 "title": "Implementace anotací odkazů v Javě pomocí GroupDocs – Komplexní průvodce"
 "url": "/cs/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

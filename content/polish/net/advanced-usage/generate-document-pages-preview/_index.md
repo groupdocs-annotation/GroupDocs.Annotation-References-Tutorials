@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Generuj podgląd stron dokumentu"
 "url": "/pl/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

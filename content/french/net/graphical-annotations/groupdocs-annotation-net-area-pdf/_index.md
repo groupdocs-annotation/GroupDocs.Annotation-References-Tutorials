@@ -3,6 +3,7 @@
 "description": "Automatisez les annotations PDF avec GroupDocs.Annotation pour .NET. Découvrez comment ajouter des annotations de zone en C# grâce à ce guide détaillé, étape par étape."
 "title": "Comment ajouter des annotations de zone aux fichiers PDF à l'aide de GroupDocs.Annotation pour .NET – Guide étape par étape"
 "url": "/fr/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

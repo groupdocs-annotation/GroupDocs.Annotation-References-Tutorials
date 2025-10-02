@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a dokumentumok metaadatainak, oldalinformációinak és dokumentumtulajdonságainak eléréséhez a GroupDocs.Annotation for Java segítségével."
 "title": "Dokumentuminformációk – Oktatóanyagok a GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/document-information/"
+type: docs
 "weight": 12
 ---
 

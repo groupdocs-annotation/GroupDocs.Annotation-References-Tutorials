@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till pilanteckningar i PDF-dokument med GroupDocs.Annotation för Java. Förbättra samarbete och tydlighet i dokument med detaljerade steg."
 "title": "Hur man kommenterar PDF-filer med pilannoteringar med GroupDocs.Annotation för Java"
 "url": "/sv/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

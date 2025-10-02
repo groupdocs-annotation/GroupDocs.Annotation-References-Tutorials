@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Hasilkan Pratinjau Halaman Dokumen"
 "url": "/id/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

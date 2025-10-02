@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات تحرير الموارد إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET. احمِ معلوماتك الحساسة وعزز أمان مستنداتك بهذا الدليل المفصل."
 "title": "كيفية إضافة تعليقات تحرير الموارد في .NET باستخدام GroupDocs.Annotation - دليل شامل"
 "url": "/ar/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

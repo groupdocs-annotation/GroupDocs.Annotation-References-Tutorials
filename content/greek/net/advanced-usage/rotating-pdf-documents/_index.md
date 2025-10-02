@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Εναλλαγή εγγράφων PDF"
 "url": "/el/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

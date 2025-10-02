@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς διακριτής διαγραφής κειμένου στα έγγραφά σας χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Annotation για .NET, βελτιώνοντας την αναθεώρηση και τη συνεργασία εγγράφων."
 "title": "Προσθήκη σχολίου διαγραφής κειμένου στο .NET χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Полные руководства по внедрению гиперссылок и связанных аннотаций в документы с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по аннотациям ссылок для GroupDocs.Annotation Java"
 "url": "/ru/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

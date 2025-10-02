@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να κατεβάζετε και να προσθέτετε σχόλια αποτελεσματικά σε αρχεία PDF από το Amazon S3 χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη ροή εργασίας των εγγράφων σας με απρόσκοπτη ενσωμάτωση."
 "title": "Αποτελεσματική λήψη PDF και σχολιασμός από το Amazon S3 χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

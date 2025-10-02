@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Licentie instellen vanuit stream"
 "url": "/nl/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

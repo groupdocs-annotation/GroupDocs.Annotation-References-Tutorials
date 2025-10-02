@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы с помощью интерактивных раскрывающихся полей, используя мощную библиотеку GroupDocs.Annotation на Java."
 "title": "Создание интерактивных раскрывающихся списков PDF с помощью GroupDocs.Annotation для Java"
 "url": "/ru/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

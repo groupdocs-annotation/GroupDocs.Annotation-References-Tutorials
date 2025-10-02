@@ -4,6 +4,7 @@
 "linktitle": ".NET 튜토리얼을 위한 GroupDocs.Annotation"
 "title": ".NET용 GroupDocs.Annotation 튜토리얼 및 예제"
 "url": "/ko/net/"
+type: docs
 "weight": 10
 ---
 

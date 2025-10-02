@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan javíthatja PDF-dokumentumait kereshető szöveges megjegyzések hozzáadásával a GroupDocs.Annotation for Java segítségével. Ez az útmutató lépésről lépésre bemutatja az útmutatást és a gyakorlati tippeket."
 "title": "Hogyan adhatunk hozzá keresési szöveges megjegyzéseket PDF-ekhez a GroupDocs.Annotation for Java használatával?"
 "url": "/hu/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

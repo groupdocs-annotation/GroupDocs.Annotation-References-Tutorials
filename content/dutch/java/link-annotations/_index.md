@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het implementeren van hyperlinks en gekoppelde annotaties in documenten met GroupDocs.Annotation voor Java."
 "title": "Tutorials voor het koppelen van annotaties voor GroupDocs.Annotation Java"
 "url": "/nl/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

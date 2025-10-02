@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Přidání anotace textového pole do dokumentu"
 "url": "/cs/net/unlocking-annotation-power/add-text-field-annotation/"
+type: docs
 "weight": 21
 ---
 

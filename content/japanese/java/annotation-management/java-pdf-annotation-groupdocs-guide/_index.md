@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使ってPDFに領域注釈と楕円注釈を追加する方法を学びましょう。ステップバイステップガイドで共同作業を強化しましょう。"
 "title": "GroupDocsを使用したJava PDF注釈の完全ガイド：コラボレーションとドキュメント管理の強化"
 "url": "/ja/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

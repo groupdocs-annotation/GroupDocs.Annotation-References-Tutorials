@@ -3,6 +3,7 @@
 "description": "Apprenez à créer des aperçus de pages PDF efficaces avec GroupDocs.Annotation pour .NET. Améliorez l'interaction avec vos documents et rationalisez votre flux de travail."
 "title": "Générer des aperçus de pages PDF à l'aide de GroupDocs.Annotation .NET - Un guide complet"
 "url": "/fr/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

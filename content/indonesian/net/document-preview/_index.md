@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk membuat pratinjau dokumen, gambar mini, dan representasi visual dengan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Pratinjau Dokumen untuk GroupDocs.Annotation .NET"
 "url": "/id/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thêm chú thích hình mờ vào tài liệu"
 "url": "/vi/net/unlocking-annotation-power/add-watermark-annotation/"
+type: docs
 "weight": 28
 ---
 

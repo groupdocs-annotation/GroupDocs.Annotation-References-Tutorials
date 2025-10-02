@@ -3,6 +3,7 @@
 "description": "बेहतर दस्तावेज़ पठनीयता और प्रतिक्रिया के लिए GroupDocs.Annotation के साथ अपने .NET अनुप्रयोगों में टेक्स्ट स्क्विग्ली एनोटेशन जोड़ने का तरीका जानें।"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में टेक्स्ट स्क्विग्ली एनोटेशन लागू करें"
 "url": "/hi/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

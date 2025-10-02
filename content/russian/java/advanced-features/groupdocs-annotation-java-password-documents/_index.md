@@ -3,6 +3,7 @@
 "description": "Узнайте, как безопасно загружать, комментировать и сохранять защищенные паролем документы с помощью GroupDocs.Annotation для Java. Повысьте безопасность документов в своих приложениях Java."
 "title": "Безопасная обработка документов с помощью GroupDocs.Annotation Java&#58; Загрузка и аннотирование документов, защищенных паролем"
 "url": "/ru/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

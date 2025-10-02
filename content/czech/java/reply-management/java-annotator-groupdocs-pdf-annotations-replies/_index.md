@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně spravovat anotace a odpovědi v PDF pomocí GroupDocs.Annotation ve vašich aplikacích Java. Zjednodušte spolupráci na dokumentech s naším komplexním průvodcem."
 "title": "Anotace PDF v Javě – Vytvářejte a spravujte anotace a odpovědi pomocí GroupDocs.Annotation pro Javu"
 "url": "/cs/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutorial completi per accedere ai metadati dei documenti, alle informazioni sulle pagine e alle proprietà dei documenti con GroupDocs.Annotation per .NET."
 "title": "Tutorial sulle informazioni sui documenti per GroupDocs.Annotation .NET"
 "url": "/it/net/document-information/"
+type: docs
 "weight": 12
 ---
 

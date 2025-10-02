@@ -3,6 +3,7 @@
 "description": "Automatizálja a PDF-hez készült jegyzeteket a GroupDocs.Annotation for .NET segítségével. Ebben a részletes, lépésről lépésre szóló útmutatóban megtudhatja, hogyan adhat hozzá területekhez tartozó jegyzeteket C# használatával."
 "title": "Hogyan adhatunk hozzá területi megjegyzéseket PDF-ekhez a GroupDocs.Annotation for .NET használatával? Lépésről lépésre útmutató"
 "url": "/hu/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

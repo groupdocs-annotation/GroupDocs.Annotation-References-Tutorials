@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ellipsenanmerkung zum Dokument hinzufügen"
 "url": "/de/net/unlocking-annotation-power/add-ellipse-annotation/"
+type: docs
 "weight": 13
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak integrovat GroupDocs.Annotation do vašich .NET projektů a vylepšit dokumenty pomocí obrázkových anotací. Zlepšete zapojení uživatelů a zefektivnite spolupráci."
 "title": "Přidání anotací obrázků do dokumentů pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

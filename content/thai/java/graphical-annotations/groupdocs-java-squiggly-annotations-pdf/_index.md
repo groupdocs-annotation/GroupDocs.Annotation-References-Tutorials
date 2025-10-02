@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายประกอบแบบหยัก ๆ ลงในเอกสาร PDF ของคุณโดยใช้ GroupDocs.Annotation สำหรับ Java เพื่อเพิ่มประสิทธิภาพในการตรวจสอบเอกสารและการทำงานร่วมกัน"
 "title": "วิธีการเพิ่มคำอธิบายประกอบแบบหยัก ๆ ลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

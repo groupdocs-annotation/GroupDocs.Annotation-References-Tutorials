@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบทีละขั้นตอนในการใช้งานเธรดความคิดเห็น การตอบกลับ และการสนทนาแบบร่วมมือกันด้วย GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนการจัดการการตอบกลับสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

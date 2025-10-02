@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Açıklamalı Belge Sürümü Yükleniyor"
 "url": "/tr/net/document-loading-essentials/loading-annotated-document-version/"
+type: docs
 "weight": 16
 ---
 

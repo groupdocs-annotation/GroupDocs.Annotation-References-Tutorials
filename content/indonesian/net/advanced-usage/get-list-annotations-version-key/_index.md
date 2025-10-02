@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Dapatkan Daftar Anotasi menggunakan Kunci Versi"
 "url": "/id/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

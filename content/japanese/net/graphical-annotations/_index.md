@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントに図形、矢印、画像、グラフィカル要素を追加するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation .NET のグラフィカル注釈チュートリアル"
 "url": "/ja/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

@@ -2,6 +2,7 @@
 "description": ".NET için GroupDocs.Annotation ile belge meta verilerine, sayfa bilgilerine ve belge özelliklerine erişim için eksiksiz eğitimler."
 "title": "GroupDocs.Annotation .NET için Belge Bilgi Eğitimleri"
 "url": "/tr/net/document-information/"
+type: docs
 "weight": 12
 ---
 

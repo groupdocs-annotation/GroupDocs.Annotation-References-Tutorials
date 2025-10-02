@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε αποτελεσματικά υπογραμμισμένες σχολιασμούς στα έγγραφά σας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη σαφήνεια και την επικοινωνία των εγγράφων με ευκολία."
 "title": "Πώς να προσθέσετε υπογραμμισμένες σχολιάσεις στο .NET με το GroupDocs.Annotation"
 "url": "/el/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

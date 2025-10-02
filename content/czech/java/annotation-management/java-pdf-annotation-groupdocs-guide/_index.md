@@ -3,6 +3,7 @@
 "description": "Naučte se, jak pomocí nástroje GroupDocs.Annotation pro Javu přidávat do PDF anotace s plošnými anotacemi a elipsami. Podpořte spolupráci s naším podrobným návodem."
 "title": "Kompletní průvodce anotací PDF v Javě pomocí GroupDocs – Vylepšete spolupráci a správu dokumentů"
 "url": "/cs/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

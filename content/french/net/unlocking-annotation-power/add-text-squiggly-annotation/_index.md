@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Ajouter une annotation textuelle ondulée au document"
 "url": "/fr/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+type: docs
 "weight": 25
 ---
 

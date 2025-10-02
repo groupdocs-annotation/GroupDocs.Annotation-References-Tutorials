@@ -3,6 +3,7 @@
 "description": "Découvrez comment charger facilement des documents depuis des serveurs FTP grâce à GroupDocs.Annotation pour .NET. Améliorez votre flux de travail de gestion documentaire grâce à ce guide détaillé."
 "title": "Chargement et annotation de documents à partir de serveurs FTP avec GroupDocs.Annotation pour .NET - Un guide complet"
 "url": "/fr/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

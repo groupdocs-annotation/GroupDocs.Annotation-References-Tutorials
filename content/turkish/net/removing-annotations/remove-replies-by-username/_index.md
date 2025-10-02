@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET'te Kullanıcı Adına Göre Yanıtları Kaldır"
 "url": "/tr/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

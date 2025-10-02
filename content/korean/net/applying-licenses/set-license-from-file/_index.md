@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "파일에서 라이센스 설정"
 "url": "/ko/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

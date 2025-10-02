@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายระยะทางที่แม่นยำลงในเอกสาร PDF ของคุณโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ครอบคลุมถึงการตั้งค่า การกำหนดค่า และการใช้งานจริง"
 "title": "การนำคำอธิบายระยะทางไปใช้ใน PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

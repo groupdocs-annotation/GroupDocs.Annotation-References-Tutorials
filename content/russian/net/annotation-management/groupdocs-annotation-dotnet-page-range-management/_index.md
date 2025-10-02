@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно управлять диапазонами страниц с помощью GroupDocs.Annotation для .NET. В этом руководстве рассматриваются установка, настройка и передовые методы сохранения определенных страниц."
 "title": "Освоение управления диапазоном страниц в .NET с помощью GroupDocs.Annotation&#58; Эффективные методы аннотирования"
 "url": "/ru/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

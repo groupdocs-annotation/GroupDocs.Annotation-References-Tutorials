@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς διακριτής διαγραφής κειμένου σε Java χρησιμοποιώντας το GroupDocs.Annotation. Ακολουθήστε αυτόν τον οδηγό βήμα προς βήμα για απρόσκοπτη σχολιασμό εγγράφων."
 "title": "Οδηγός σχολιασμού διαγραφής κειμένου Java χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

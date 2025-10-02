@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 添加可搜索的文本注释，从而增强您的 PDF 文档。本指南提供分步说明和实用技巧。"
 "title": "如何使用 GroupDocs.Annotation for Java 向 PDF 添加搜索文本注释"
 "url": "/zh/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

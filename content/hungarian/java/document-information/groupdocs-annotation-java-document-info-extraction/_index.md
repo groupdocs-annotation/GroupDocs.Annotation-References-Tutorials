@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kinyerheti a dokumentumok metaadatait, például a fájltípust, az oldalszámot és a méretet a GroupDocs.Annotation for Java segítségével. Fejlessze dokumentumkezelését hatékony információkinyeréssel."
 "title": "Hatékony dokumentum metaadatok kinyerése GroupDocs.Annotation használatával Java-ban"
 "url": "/hu/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

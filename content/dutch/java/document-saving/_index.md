@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het opslaan van geannoteerde documenten met verschillende opties via GroupDocs.Annotation voor Java."
 "title": "Handleidingen voor het opslaan van documenten voor GroupDocs.Annotation Java"
 "url": "/nl/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

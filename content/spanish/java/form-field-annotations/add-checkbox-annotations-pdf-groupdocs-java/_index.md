@@ -3,6 +3,7 @@
 "description": "Aprenda a mejorar sus documentos PDF con anotaciones interactivas en casillas de verificación usando GroupDocs.Annotation para Java. Siga esta guía paso a paso."
 "title": "Cómo agregar anotaciones de casillas de verificación a archivos PDF con GroupDocs.Annotation para Java"
 "url": "/es/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

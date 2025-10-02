@@ -3,6 +3,7 @@
 "description": "Scopri come rimuovere in modo efficiente le risposte dalle annotazioni utilizzando GroupDocs.Annotation per .NET. Semplifica la gestione dei documenti con questa guida completa."
 "title": "Come rimuovere le risposte dalle annotazioni utilizzando GroupDocs.Annotation .NET - Guida passo passo"
 "url": "/it/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

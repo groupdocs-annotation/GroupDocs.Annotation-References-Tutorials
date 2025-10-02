@@ -3,6 +3,7 @@
 "description": "強力なGroupDocs.Annotation for .NETを使用して、PDFドキュメントにインタラクティブなボタンを統合する方法を学びましょう。ステップバイステップの説明でユーザーエンゲージメントを高めましょう。"
 "title": "GroupDocs.Annotation .NET SDK を使用して PDF にインタラクティブ ボタンを統合する"
 "url": "/ja/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

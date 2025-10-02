@@ -3,6 +3,7 @@
 "description": "Maîtrisez les annotations de liens en Java avec GroupDocs. Apprenez la configuration, l'initialisation et la personnalisation pour améliorer l'interactivité des documents."
 "title": "Implémentation des annotations de liens en Java à l'aide de GroupDocs &#58; un guide complet"
 "url": "/fr/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

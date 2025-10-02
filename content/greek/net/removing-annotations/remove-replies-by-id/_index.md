@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Κατάργηση απαντήσεων κατά αναγνωριστικό στο .NET"
 "url": "/el/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

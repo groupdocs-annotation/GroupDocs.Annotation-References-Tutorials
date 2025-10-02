@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนสำหรับการบันทึกเอกสารที่มีคำอธิบายประกอบด้วยตัวเลือกต่างๆ โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนการบันทึกเอกสารสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

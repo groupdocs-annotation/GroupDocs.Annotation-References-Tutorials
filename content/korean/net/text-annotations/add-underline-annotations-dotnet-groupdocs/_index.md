@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서에 밑줄 주석을 효율적으로 추가하는 방법을 알아보세요. 문서의 명확성을 높이고 소통을 더욱 쉽게 만들어 보세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에 밑줄 주석을 추가하는 방법"
 "url": "/ko/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

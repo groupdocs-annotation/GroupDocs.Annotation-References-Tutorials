@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt annotaties aan documenten kunt toevoegen en bijwerken met GroupDocs.Annotation .NET. Verbeter samenwerking en documentbeheer met deze stapsgewijze handleiding."
 "title": "Documenten annoteren met GroupDocs.Annotation .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

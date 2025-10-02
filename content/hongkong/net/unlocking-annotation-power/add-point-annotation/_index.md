@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "在文件中新增點註釋"
 "url": "/zh-hant/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java API를 사용하여 문서의 주석에서 답글을 제거하는 방법을 알아보세요. 이 단계별 가이드를 통해 문서 관리를 더욱 효율적으로 개선하세요."
 "title": "GroupDocs.Annotation API를 사용하여 Java에서 ID로 답글을 제거하는 방법"
 "url": "/ko/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

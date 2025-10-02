@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích tài liệu PDF trực tiếp từ máy chủ FTP bằng GroupDocs.Annotation for Java. Đơn giản hóa quy trình xử lý tài liệu của bạn với hướng dẫn từng bước này."
 "title": "Chú thích PDF từ FTP bằng GroupDocs.Annotation cho Java&#58; Hướng dẫn đầy đủ"
 "url": "/vi/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

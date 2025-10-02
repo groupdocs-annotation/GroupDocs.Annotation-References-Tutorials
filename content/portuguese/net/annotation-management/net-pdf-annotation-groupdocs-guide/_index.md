@@ -3,6 +3,7 @@
 "description": "Aprenda a dominar as anotações em PDF .NET com o GroupDocs.Annotation. Este guia aborda inicialização, processamento de páginas, transformações e salvamento eficiente de documentos anotados."
 "title": "Guia completo para anotação em PDF .NET usando GroupDocs.Annotation para gerenciamento avançado de documentos"
 "url": "/pt/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

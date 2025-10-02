@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "การส่งออกคำอธิบายจากไฟล์ XML"
 "url": "/th/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

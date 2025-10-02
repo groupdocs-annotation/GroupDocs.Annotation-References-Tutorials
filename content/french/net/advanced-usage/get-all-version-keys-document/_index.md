@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Obtenir toutes les clés de version du document"
 "url": "/fr/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

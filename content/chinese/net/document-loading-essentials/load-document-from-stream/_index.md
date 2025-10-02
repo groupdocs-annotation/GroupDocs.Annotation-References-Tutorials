@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "从流加载文档"
 "url": "/zh/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

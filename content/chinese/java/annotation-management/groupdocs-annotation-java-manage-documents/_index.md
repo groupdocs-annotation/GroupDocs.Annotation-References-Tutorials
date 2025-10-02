@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 Java 中高效管理注释。本指南涵盖加载、移除和优化文档工作流程。"
 "title": "掌握 Java 中的注释管理——GroupDocs.Annotation 综合指南"
 "url": "/zh/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

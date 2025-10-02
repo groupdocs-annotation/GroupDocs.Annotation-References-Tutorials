@@ -3,6 +3,7 @@
 "description": "JavaアプリケーションでGroupDocs.Annotationを使用してPDFの注釈と返信を効率的に管理する方法を学びましょう。包括的なガイドでドキュメントの共同作業を効率化しましょう。"
 "title": "Java PDF Annotation&#58; GroupDocs.Annotation for Java で注釈と返信を作成、管理します"
 "url": "/ja/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

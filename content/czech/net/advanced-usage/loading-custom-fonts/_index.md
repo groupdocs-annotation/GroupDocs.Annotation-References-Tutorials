@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Načítání vlastních písem"
 "url": "/cs/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

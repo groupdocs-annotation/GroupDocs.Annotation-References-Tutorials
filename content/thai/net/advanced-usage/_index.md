@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "การใช้งานขั้นสูง"
 "url": "/th/net/advanced-usage/"
+type: docs
 "weight": 22
 ---
 

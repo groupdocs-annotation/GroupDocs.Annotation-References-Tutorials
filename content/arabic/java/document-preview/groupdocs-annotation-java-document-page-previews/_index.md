@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استخدام GroupDocs.Annotation لجافا لإنشاء معاينات PNG عالية الجودة لصفحات المستندات. حسّن برنامجك بهذه الميزة الفعّالة."
 "title": "إنشاء معاينات لصفحات المستندات في Java باستخدام GroupDocs.Annotation"
 "url": "/ar/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

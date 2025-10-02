@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Βασικά στοιχεία φόρτωσης εγγράφων"
 "url": "/el/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

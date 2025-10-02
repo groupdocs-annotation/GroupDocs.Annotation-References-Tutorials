@@ -3,6 +3,7 @@
 "description": "Leer hoe u tekstredactieannotaties implementeert in .NET-applicaties met GroupDocs.Annotation. Beveilig gevoelige informatie eenvoudig."
 "title": "Tekstredactie implementeren in .NET met behulp van GroupDocs.Annotation&#58; een complete handleiding"
 "url": "/nl/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

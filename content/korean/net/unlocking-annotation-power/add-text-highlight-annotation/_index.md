@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서에 텍스트 강조 주석 추가"
 "url": "/ko/net/unlocking-annotation-power/add-text-highlight-annotation/"
+type: docs
 "weight": 22
 ---
 

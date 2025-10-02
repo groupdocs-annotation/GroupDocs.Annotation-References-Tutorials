@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك بإضافة تعليقات توضيحية برمجيًا باستخدام GroupDocs.Annotation لـ Java. يغطي هذا الدليل الإعداد والتنفيذ والتطبيقات العملية."
 "title": "كيفية إضافة تعليقات نقطية إلى ملفات PDF باستخدام GroupDocs.Annotation لـ Java"
 "url": "/ar/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

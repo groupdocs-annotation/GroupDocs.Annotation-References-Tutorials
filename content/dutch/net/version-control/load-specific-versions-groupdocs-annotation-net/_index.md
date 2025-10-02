@@ -3,6 +3,7 @@
 "description": "Leer hoe u specifieke versies van geannoteerde documenten efficiënt kunt beheren en laden met GroupDocs.Annotation voor .NET. Verbeter uw documentbeheersysteem vandaag nog!"
 "title": "Specifieke documentversies laden met GroupDocs.Annotation voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

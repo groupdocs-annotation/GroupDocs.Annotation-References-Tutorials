@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tambahkan Anotasi Jarak ke Dokumen"
 "url": "/id/net/unlocking-annotation-power/add-distance-annotation/"
+type: docs
 "weight": 12
 ---
 

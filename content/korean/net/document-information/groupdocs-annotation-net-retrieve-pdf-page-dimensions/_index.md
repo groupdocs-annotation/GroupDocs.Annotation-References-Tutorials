@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 PDF 페이지 크기를 효율적으로 가져오는 방법을 알아보세요. 이 가이드를 따라 문서 관리 애플리케이션을 개선해 보세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 PDF 페이지 크기를 검색하는 방법"
 "url": "/ko/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

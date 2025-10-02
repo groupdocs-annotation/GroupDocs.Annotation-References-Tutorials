@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية إلى ملفات PDF باستخدام GroupDocs.Annotation لجافا. يغطي هذا الدليل الإعداد، وأمثلة التعليمات البرمجية، والتطبيقات العملية."
 "title": "شرح ملفات PDF في Java باستخدام GroupDocs.Highlight&#58; دليل شامل"
 "url": "/ar/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

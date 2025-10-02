@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用して、さまざまなオプションで注釈付きドキュメントを保存するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation Java のドキュメント保存チュートリアル"
 "url": "/ja/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

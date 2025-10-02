@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、注釈付きドキュメントのページ範囲を効率的に保存する方法を学びます。このチュートリアルでは、セットアップ、実装、そして実践的な応用例を解説します。"
 "title": "GroupDocs.Annotation for Javaで特定のページ範囲を保存する方法 - 完全ガイド"
 "url": "/ja/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

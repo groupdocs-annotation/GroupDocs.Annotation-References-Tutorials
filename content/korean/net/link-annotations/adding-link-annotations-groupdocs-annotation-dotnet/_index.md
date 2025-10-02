@@ -3,6 +3,7 @@
 "description": "강력한 GroupDocs.Annotation 라이브러리를 사용하여 대화형 링크 주석을 추가하여 .NET 애플리케이션을 개선하는 방법을 알아보세요. 단계별 가이드를 따라 오늘 바로 문서 상호 작용 기능을 개선해 보세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 문서에 링크 주석을 추가하는 방법 | 개발자 가이드"
 "url": "/ko/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

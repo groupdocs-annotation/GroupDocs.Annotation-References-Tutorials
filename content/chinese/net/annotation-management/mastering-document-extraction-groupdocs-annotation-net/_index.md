@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效提取文档信息。本指南涵盖设置、使用方法和实际应用，以增强您的文档处理工作流程。"
 "title": "掌握使用 GroupDocs.Annotation .NET 进行文档提取——面向开发人员的综合指南"
 "url": "/zh/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

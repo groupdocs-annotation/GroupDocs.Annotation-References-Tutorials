@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 PDF 문서에 정확한 거리 주석을 추가하는 방법을 알아보세요. 이 가이드에서는 설정, 구성 및 실제 적용 사례를 다룹니다."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 PDF에 거리 주석 구현"
 "url": "/ko/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

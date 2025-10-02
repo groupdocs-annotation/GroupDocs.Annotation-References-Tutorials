@@ -2,6 +2,7 @@
 "description": "ライセンスの設定、オプションの構成、および .NET アプリケーションでの GroupDocs.Annotation の管理に関する完全なチュートリアル。"
 "title": "GroupDocs.Annotation のライセンスと構成に関するチュートリアル (.NET 用)"
 "url": "/ja/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

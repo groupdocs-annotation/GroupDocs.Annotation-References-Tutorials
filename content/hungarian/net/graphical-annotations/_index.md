@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok alakzatok, nyilak, képek és grafikus elemek dokumentumokhoz való hozzáadásához a GroupDocs.Annotation for .NET segítségével."
 "title": "Grafikus annotációs oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

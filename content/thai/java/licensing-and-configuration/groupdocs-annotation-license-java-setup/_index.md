@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการตั้งค่าและกำหนดค่าใบอนุญาต GroupDocs.Annotation สำหรับแอปพลิเคชัน Java ของคุณ พร้อมปลดล็อกคุณสมบัติเต็มรูปแบบได้อย่างง่ายดาย"
 "title": "การตั้งค่าใบอนุญาต GroupDocs.Annotation ใน Java คำแนะนำที่ครอบคลุม"
 "url": "/th/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

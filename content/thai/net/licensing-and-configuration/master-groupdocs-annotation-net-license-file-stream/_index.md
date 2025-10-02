@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการตั้งค่าและสมัครใบอนุญาตสำหรับ GroupDocs.Annotation .NET โดยใช้สตรีมไฟล์ ปลดล็อกคุณสมบัติทั้งหมดด้วยคู่มือฉบับสมบูรณ์นี้"
 "title": "Master GroupDocs.Annotation .NET&#58; ตั้งค่าใบอนุญาตโดยใช้ File Stream ใน C#"
 "url": "/th/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

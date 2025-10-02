@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java ile belge önizlemeleri, küçük resimler ve görsel sunumlar oluşturmaya yönelik kapsamlı eğitimler."
 "title": "GroupDocs.Annotation Java için Belge Önizleme Eğitimleri"
 "url": "/tr/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

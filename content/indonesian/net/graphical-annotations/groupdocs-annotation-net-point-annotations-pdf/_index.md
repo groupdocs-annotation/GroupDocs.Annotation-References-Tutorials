@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan anotasi titik interaktif menggunakan GroupDocs.Annotation untuk .NET. Panduan langkah demi langkah ini mencakup penyiapan, penerapan, dan pemecahan masalah."
 "title": "Cara Menambahkan Anotasi Titik ke PDF Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по добавлению, редактированию и управлению текстовыми аннотациями в документах с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по текстовым аннотациям для GroupDocs.Annotation Java"
 "url": "/ru/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

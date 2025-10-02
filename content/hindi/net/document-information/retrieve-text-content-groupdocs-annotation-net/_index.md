@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों से टेक्स्ट सामग्री को कुशलतापूर्वक पुनर्प्राप्त करना सीखें। अपने दस्तावेज़ प्रसंस्करण क्षमताओं को बढ़ाने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": ".NET के लिए GroupDocs.Annotation के साथ दस्तावेज़ पाठ सामग्री पुनर्प्राप्त करें एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

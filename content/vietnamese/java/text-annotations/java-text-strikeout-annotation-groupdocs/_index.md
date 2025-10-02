@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích gạch bỏ văn bản trong Java bằng GroupDocs.Annotation. Làm theo hướng dẫn từng bước này để chú thích tài liệu liền mạch."
 "title": "Hướng dẫn chú thích gạch bỏ văn bản Java bằng GroupDocs.Annotation"
 "url": "/vi/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

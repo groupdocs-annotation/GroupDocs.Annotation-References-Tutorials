@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation'ı kullanarak Java belgelerinde alt çizgi açıklamalarının nasıl ekleneceğini ve kaldırılacağını öğrenin. Bu ayrıntılı kılavuzla belge yönetiminizi geliştirin."
 "title": "GroupDocs'u Kullanarak Java'da Alt Çizgili Açıklamaları Ekleme ve Kaldırma&#58; Kapsamlı Bir Kılavuz"
 "url": "/tr/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

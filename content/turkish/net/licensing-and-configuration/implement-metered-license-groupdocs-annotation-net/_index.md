@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET ile ölçülü bir lisansın nasıl kurulacağını ve yönetileceğini öğrenerek uyumluluğu ve optimum işlevselliği garantileyin."
 "title": "GroupDocs.Annotation for .NET'te Ölçülü Lisans Uygulama Kapsamlı Bir Kılavuz"
 "url": "/tr/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

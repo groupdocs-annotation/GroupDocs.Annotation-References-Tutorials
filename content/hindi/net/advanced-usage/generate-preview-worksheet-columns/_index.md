@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "पूर्वावलोकन वर्कशीट कॉलम उत्पन्न करें"
 "url": "/hi/net/advanced-usage/generate-preview-worksheet-columns/"
+type: docs
 "weight": 15
 ---
 

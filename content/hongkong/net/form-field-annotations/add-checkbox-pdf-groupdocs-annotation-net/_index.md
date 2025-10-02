@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 新增互動式複選框來增強 PDF 文件。請依照本逐步指南，簡化數位文件中的表單欄位註解。"
 "title": "如何使用 GroupDocs.Annotation for .NET 為 PDF 新增複選框—逐步指南"
 "url": "/zh-hant/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "在 .NET 中透過 ID 刪除回复"
 "url": "/zh-hant/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "รับคีย์เวอร์ชันทั้งหมดบนเอกสาร"
 "url": "/th/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

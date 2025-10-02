@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την προσθήκη πεδίων φόρμας και διαδραστικών στοιχείων σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά σεμινάρια σχολιασμού πεδίων φόρμας για το GroupDocs.Annotation Java"
 "url": "/el/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan használható a GroupDocs.Annotation for Java kiváló minőségű PNG előnézetek létrehozásához dokumentumoldalakról. Fejlessze szoftverét ezzel a hatékony funkcióval."
 "title": "Dokumentumoldal-előnézetek generálása Java-ban a GroupDocs.Annotation használatával"
 "url": "/hu/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

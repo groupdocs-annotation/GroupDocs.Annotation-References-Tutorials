@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit der leistungsstarken GroupDocs.Annotation-Bibliothek in .NET hochwertige PDF-Dokumentvorschauen mit spezifischen Bildauflösungen erstellen. Optimieren Sie noch heute Ihren Dokumentenmanagement-Workflow."
 "title": "Generieren Sie hochwertige PDF-Vorschauen in benutzerdefinierten Auflösungen mit GroupDocs.Annotation für .NET"
 "url": "/de/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tambahkan Anotasi Titik ke Dokumen"
 "url": "/id/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie kommentierte Dokumentseitenbereiche mit GroupDocs.Annotation für Java effizient speichern. Dieses Tutorial behandelt Einrichtung, Implementierung und praktische Anwendungen."
 "title": "Speichern Sie einen bestimmten Seitenbereich mit GroupDocs.Annotation für Java – Eine vollständige Anleitung"
 "url": "/de/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

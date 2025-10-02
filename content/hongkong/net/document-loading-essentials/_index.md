@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "文件載入重點"
 "url": "/zh-hant/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

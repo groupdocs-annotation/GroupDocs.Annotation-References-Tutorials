@@ -2,6 +2,7 @@
 "description": "Tutoriels complets pour implémenter des hyperliens et des annotations liées dans des documents avec GroupDocs.Annotation pour Java."
 "title": "Tutoriels d'annotation de liens pour GroupDocs.Annotation Java"
 "url": "/fr/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

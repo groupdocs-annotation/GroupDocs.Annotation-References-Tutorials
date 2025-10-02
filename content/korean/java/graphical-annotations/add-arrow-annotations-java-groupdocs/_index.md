@@ -3,6 +3,7 @@
 "description": "Java용 GroupDocs.Annotation 라이브러리를 사용하여 PDF에 화살표 주석을 효율적으로 추가하는 방법을 알아보세요. 문서의 명확성과 협업을 향상시켜 보세요."
 "title": "GroupDocs.Annotation API를 사용하여 Java에 화살표 주석을 추가하는 방법"
 "url": "/ko/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

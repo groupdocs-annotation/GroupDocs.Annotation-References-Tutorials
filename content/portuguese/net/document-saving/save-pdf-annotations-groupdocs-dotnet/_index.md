@@ -3,6 +3,7 @@
 "description": "Aprenda a salvar anotações em PDF com eficiência usando o GroupDocs.Annotation para .NET. Simplifique seu processo de gerenciamento de documentos com nosso guia detalhado."
 "title": "Salve anotações em PDF com eficiência com o GroupDocs.Annotation para .NET"
 "url": "/pt/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

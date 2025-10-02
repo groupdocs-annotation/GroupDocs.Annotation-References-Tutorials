@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 在文件中新增、編輯和管理文字註解的逐步教學。"
 "title": "GroupDocs.Annotation .NET 文字註解教學"
 "url": "/zh-hant/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a recuperar chaves de versão de documentos com eficiência usando o GroupDocs.Annotation para .NET. Aprimore o gerenciamento e a colaboração de documentos com este guia passo a passo."
 "title": "Como recuperar chaves de versão no .NET usando GroupDocs.Annotation - Um guia completo"
 "url": "/pt/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

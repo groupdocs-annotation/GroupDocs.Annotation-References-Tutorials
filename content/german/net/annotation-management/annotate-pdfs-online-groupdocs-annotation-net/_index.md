@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie PDF-Dateien online mit GroupDocs.Annotation für .NET kommentieren. Optimieren Sie Ihre Dokumentprüfungsprozesse mit effizienten Kommentartechniken."
 "title": "So kommentieren Sie PDFs von einer URL mit GroupDocs.Annotation für .NET"
 "url": "/de/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

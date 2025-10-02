@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan állíthatja be hatékonyan a GroupDocs.Annotation licencelést Java nyelven az InputStream használatával. Egyszerűsítse munkafolyamatait és növelje az alkalmazások teljesítményét ezzel az átfogó útmutatóval."
 "title": "Egyszerűsített GroupDocs.Annotation Java licencelés - InputStream használata licencbeállításhoz"
 "url": "/hu/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

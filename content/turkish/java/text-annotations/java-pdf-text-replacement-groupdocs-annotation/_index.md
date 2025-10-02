@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation'ı kullanarak Java PDF'lerinde metin değiştirme açıklamalarının nasıl uygulanacağını öğrenin. Belge düzenleme ve işbirliği yeteneklerini geliştirin."
 "title": "GroupDocs.Annotation ile Java PDF Metin Değiştirme Kılavuzu"
 "url": "/tr/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการลบคำอธิบายประกอบออกจาก PDF และเอกสารอื่นๆ อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ค้นพบคำแนะนำทีละขั้นตอน แนวทางปฏิบัติที่ดีที่สุด และการใช้งานจริง"
 "title": "วิธีการลบคำอธิบายประกอบ PDF ตาม ID โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/annotation-management/manage-pdf-annotations-groupdocs-dotnet-remove-id/"
+type: docs
 "weight": 1
 ---
 

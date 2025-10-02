@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Φόρτωση εγγράφων που προστατεύονται με κωδικό πρόσβασης"
 "url": "/el/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

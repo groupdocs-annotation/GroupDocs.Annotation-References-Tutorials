@@ -2,6 +2,7 @@
 "description": "Vollständige Tutorials zur Implementierung erweiterter Annotationsfunktionen, Anpassungen und spezieller Funktionen mit GroupDocs.Annotation für Java."
 "title": "Erweiterte Tutorials zu GroupDocs.Annotation-Funktionen für Java"
 "url": "/de/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

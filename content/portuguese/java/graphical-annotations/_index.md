@@ -2,6 +2,7 @@
 "description": "Tutoriais completos para adicionar formas, setas, imagens e elementos gráficos em documentos com o GroupDocs.Annotation para Java."
 "title": "Tutoriais de Anotação Gráfica para GroupDocs.Annotation Java"
 "url": "/pt/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

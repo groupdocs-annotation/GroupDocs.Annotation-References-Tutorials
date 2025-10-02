@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحرير النصوص بكفاءة في ملفات PDF باستخدام مكتبة GroupDocs.Annotation Java الفعّالة. يغطي هذا الدليل عمليات الإعداد، وإنشاء التعليقات التوضيحية، وحفظها."
 "title": "تحرير النصوص الرئيسية في ملفات PDF باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation Java - دليل شامل"
 "url": "/ar/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u watermerken toevoegt met GroupDocs.Annotation voor .NET. Deze handleiding behandelt de installatie, stapsgewijze implementatie en aanbevolen procedures voor het beveiligen en brandmerken van documenten."
 "title": "Implementeer watermerk toevoegen met GroupDocs.Annotation in .NET&#58; een uitgebreide handleiding voor documentbeveiliging en branding"
 "url": "/nl/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

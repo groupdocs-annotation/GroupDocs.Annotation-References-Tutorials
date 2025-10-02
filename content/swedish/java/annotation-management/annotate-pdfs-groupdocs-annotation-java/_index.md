@@ -3,6 +3,7 @@
 "description": "Lär dig hur du smidigt lägger till och uppdaterar anteckningar i PDF-filer med GroupDocs.Annotation för Java. Förbättra din dokumenthantering med den här praktiska guiden."
 "title": "Hur man kommenterar PDF-filer med GroupDocs.Annotation för Java – en omfattande guide"
 "url": "/sv/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a anotar archivos PDF en línea con GroupDocs.Annotation para .NET. Optimice sus procesos de revisión de documentos con técnicas de anotación eficientes."
 "title": "Cómo anotar archivos PDF desde una URL con GroupDocs.Annotation para .NET"
 "url": "/es/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

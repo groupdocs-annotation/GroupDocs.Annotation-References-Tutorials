@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы, добавляя точечные аннотации программным способом с помощью GroupDocs.Annotation для Java. Это руководство охватывает настройку, реализацию и практическое применение."
 "title": "Как добавлять точечные аннотации в PDF-файлы с помощью GroupDocs.Annotation для Java"
 "url": "/ru/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

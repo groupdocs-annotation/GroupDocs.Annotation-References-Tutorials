@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách tạo bản xem trước tài liệu, hình thu nhỏ và biểu diễn trực quan bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn xem trước tài liệu cho GroupDocs.Annotation Java"
 "url": "/vi/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

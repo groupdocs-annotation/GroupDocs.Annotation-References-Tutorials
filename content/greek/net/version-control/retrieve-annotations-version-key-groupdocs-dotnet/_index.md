@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε αποτελεσματικά τις σχολιασμοί εγγράφων χρησιμοποιώντας κλειδιά έκδοσης με το GroupDocs.Annotation .NET. Βελτιστοποιήστε τη ροή εργασίας σας και βελτιώστε τη συνεργασία."
 "title": "Πώς να ανακτήσετε σχολιασμούς ανά κλειδί έκδοσης στο GroupDocs.Annotation .NET για βελτιωμένη διαχείριση εγγράφων"
 "url": "/el/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

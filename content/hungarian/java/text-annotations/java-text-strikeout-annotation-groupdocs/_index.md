@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan adhat hozzá szöveges áthúzott megjegyzéseket Java nyelven a GroupDocs.Annotation használatával. Kövesse ezt a lépésenkénti útmutatót a zökkenőmentes dokumentum-megjegyzésekhez."
 "title": "Java szöveg áthúzott jegyzetekhez való útmutató a GroupDocs.Annotation használatával"
 "url": "/hu/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

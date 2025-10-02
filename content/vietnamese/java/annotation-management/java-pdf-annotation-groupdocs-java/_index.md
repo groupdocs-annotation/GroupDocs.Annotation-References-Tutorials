@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích hiệu quả vào tài liệu PDF bằng cách tô sáng vùng bằng API GroupDocs.Annotation mạnh mẽ dành cho Java, giúp tăng cường khả năng cộng tác và năng suất."
 "title": "Cách chú thích PDF trong Java bằng GroupDocs.Annotation"
 "url": "/vi/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

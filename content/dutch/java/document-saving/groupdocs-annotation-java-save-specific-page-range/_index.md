@@ -3,6 +3,7 @@
 "description": "Leer hoe u geannoteerde documentpaginabereiken efficiënt kunt opslaan met GroupDocs.Annotation voor Java. Deze tutorial behandelt de installatie, implementatie en praktische toepassingen."
 "title": "Specifieke paginabereiken opslaan met GroupDocs.Annotation voor Java&#58; een complete gids"
 "url": "/nl/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

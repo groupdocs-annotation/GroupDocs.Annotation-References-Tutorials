@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách truy cập siêu dữ liệu tài liệu, thông tin trang và thuộc tính tài liệu bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn thông tin tài liệu cho GroupDocs.Annotation .NET"
 "url": "/vi/net/document-information/"
+type: docs
 "weight": 12
 ---
 

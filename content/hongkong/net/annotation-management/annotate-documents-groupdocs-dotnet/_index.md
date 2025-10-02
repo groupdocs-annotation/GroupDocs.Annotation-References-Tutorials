@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation .NET 有效率地在文件中新增和更新註解。本逐步指南將幫助您增強協作和文件管理。"
 "title": "如何使用 GroupDocs.Annotation .NET 註解文件－綜合指南"
 "url": "/zh-hant/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

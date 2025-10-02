@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan javíthatja PDF-dokumentumait interaktív jelölőnégyzetek hozzáadásával a GroupDocs.Annotation for .NET segítségével. Kövesse ezt a lépésről lépésre szóló útmutatót a digitális dokumentumok űrlapmező-jegyzeteinek egyszerűsítéséhez."
 "title": "Hogyan adhatunk hozzá jelölőnégyzetet PDF-hez a GroupDocs.Annotation for .NET segítségével – lépésről lépésre útmutató"
 "url": "/hu/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

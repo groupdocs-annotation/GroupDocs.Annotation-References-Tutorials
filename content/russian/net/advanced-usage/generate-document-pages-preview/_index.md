@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Создание страниц документа Предварительный просмотр"
 "url": "/ru/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

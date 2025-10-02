@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie PDF-Dokumente in einer .NET-Umgebung mithilfe von Streams mit GroupDocs.Annotation effizient kommentieren. Optimieren Sie Ihren Dokumentenmanagement-Workflow."
 "title": "PDFs mit GroupDocs.Annotation .NET über Streams kommentieren – Ein umfassender Leitfaden"
 "url": "/de/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

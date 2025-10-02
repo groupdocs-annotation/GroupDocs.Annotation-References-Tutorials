@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá képaláírásokat távoli URL-címekről PDF-dokumentumokhoz a GroupDocs.Annotation for .NET segítségével. Javítsa dokumentum-munkafolyamatait ezzel az átfogó útmutatóval."
 "title": "Képannotációk implementálása PDF-ekben GroupDocs.Annotation .NET és távoli URL-ek használatával"
 "url": "/hu/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

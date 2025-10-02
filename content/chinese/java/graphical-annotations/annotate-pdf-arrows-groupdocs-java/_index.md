@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 向 PDF 文档添加箭头注释。通过详细步骤增强文档协作能力并提升清晰度。"
 "title": "如何使用 GroupDocs.Annotation for Java 为 PDF 添加箭头注释"
 "url": "/zh/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

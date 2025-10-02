@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan menthet hatékonyan PDF-jegyzeteket a GroupDocs.Annotation for .NET segítségével. Egyszerűsítse dokumentumkezelési folyamatát részletes útmutatónkkal."
 "title": "PDF-jegyzetek hatékony mentése a GroupDocs.Annotation for .NET segítségével"
 "url": "/hu/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

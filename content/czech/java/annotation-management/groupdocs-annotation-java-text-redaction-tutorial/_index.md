@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně redigovat text v PDF pomocí výkonné knihovny GroupDocs.Annotation v jazyce Java. Tato příručka se zabývá nastavením, vytvářením anotací a procesy ukládání."
 "title": "Redigování hlavního textu v PDF pomocí GroupDocs.Annotation Java API – Komplexní průvodce"
 "url": "/cs/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

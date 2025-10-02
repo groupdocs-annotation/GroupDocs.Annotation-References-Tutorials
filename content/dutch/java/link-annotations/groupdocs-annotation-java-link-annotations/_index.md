@@ -3,6 +3,7 @@
 "description": "Maak masterlink-annotaties in Java met GroupDocs. Leer hoe u ze kunt instellen, initialiseren en aanpassen om de interactie met uw documenten te verbeteren."
 "title": "Implementatie van linkannotaties in Java met behulp van GroupDocs&#58; een uitgebreide handleiding"
 "url": "/nl/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

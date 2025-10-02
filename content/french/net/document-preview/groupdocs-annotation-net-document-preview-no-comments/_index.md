@@ -3,6 +3,7 @@
 "description": "Apprenez à créer des aperçus de documents clairs et sans commentaires avec GroupDocs.Annotation pour .NET. Suivez ce guide pour améliorer la présentation et la révision de vos documents."
 "title": "Comment générer des aperçus de documents sans commentaires avec GroupDocs.Annotation .NET"
 "url": "/fr/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

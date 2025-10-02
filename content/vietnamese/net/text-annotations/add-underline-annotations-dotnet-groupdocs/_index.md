@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích gạch chân hiệu quả vào tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Tăng cường tính rõ ràng và giao tiếp của tài liệu một cách dễ dàng."
 "title": "Cách Thêm Chú Thích Gạch Chân Trong .NET Với GroupDocs.Annotation"
 "url": "/vi/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

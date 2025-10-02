@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "在文件中新增文字波浪註釋"
 "url": "/zh-hant/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+type: docs
 "weight": 25
 ---
 

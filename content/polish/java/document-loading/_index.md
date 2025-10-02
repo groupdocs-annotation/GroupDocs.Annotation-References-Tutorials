@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące ładowania dokumentów z różnych źródeł przy użyciu GroupDocs.Annotation dla Java."
 "title": "Samouczki dotyczące ładowania dokumentów dla GroupDocs.Annotation Java"
 "url": "/pl/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belgedeki Tüm Sürüm Anahtarlarını Alın"
 "url": "/tr/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

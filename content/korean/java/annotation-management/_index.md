@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 문서에 주석을 추가, 제거, 업데이트 및 관리하는 방법에 대한 전체 튜토리얼입니다."
 "title": "GroupDocs.Annotation Java를 위한 주석 관리 튜토리얼"
 "url": "/ko/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

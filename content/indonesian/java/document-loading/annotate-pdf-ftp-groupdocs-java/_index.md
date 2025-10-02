@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi pada dokumen PDF langsung dari server FTP menggunakan GroupDocs.Annotation untuk Java. Sederhanakan alur kerja pemrosesan dokumen Anda dengan panduan langkah demi langkah ini."
 "title": "Membuat Anotasi PDF dari FTP Menggunakan GroupDocs.Annotation untuk Java&#58; Panduan Lengkap"
 "url": "/id/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích mũi tên vào tài liệu PDF bằng GroupDocs.Annotation cho Java. Tăng cường sự cộng tác và tính rõ ràng của tài liệu với các bước chi tiết."
 "title": "Cách chú thích PDF bằng chú thích mũi tên bằng GroupDocs.Annotation cho Java"
 "url": "/vi/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

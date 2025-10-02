@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके टेक्स्ट हाइलाइट एनोटेशन जोड़ने का तरीका जानें। इस व्यापक गाइड के साथ दस्तावेज़ सहयोग को सरल बनाएँ और उत्पादकता बढ़ाएँ।"
 "title": ".NET के लिए GroupDocs.Annotation के साथ टेक्स्ट हाइलाइट एनोटेशन कैसे जोड़ें"
 "url": "/hi/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ टिप्पणी थ्रेड, उत्तर और सहयोगात्मक चर्चाओं को क्रियान्वित करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए उत्तर प्रबंधन ट्यूटोरियल"
 "url": "/hi/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

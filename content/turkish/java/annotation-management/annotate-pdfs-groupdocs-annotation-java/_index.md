@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java'yı kullanarak PDF dosyalarına sorunsuz bir şekilde açıklama eklemeyi ve güncellemeyi öğrenin. Bu pratik kılavuzla belge yönetiminizi geliştirin."
 "title": "GroupDocs.Annotation for Java Kullanarak PDF'lere Açıklama Ekleme - Kapsamlı Bir Kılavuz"
 "url": "/tr/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

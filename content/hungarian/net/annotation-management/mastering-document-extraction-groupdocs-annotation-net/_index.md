@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kinyerheti hatékonyan a dokumentuminformációkat a GroupDocs.Annotation for .NET segítségével. Ez az útmutató a beállítást, a használatot és a gyakorlati alkalmazásokat ismerteti a dokumentumfeldolgozási munkafolyamatok fejlesztése érdekében."
 "title": "Dokumentumkinyerés elsajátítása a GroupDocs.Annotation .NET segítségével – Átfogó útmutató fejlesztőknek"
 "url": "/hu/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

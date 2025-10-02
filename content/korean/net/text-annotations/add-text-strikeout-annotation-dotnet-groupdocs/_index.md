@@ -3,6 +3,7 @@
 "description": ".NET용 GroupDocs.Annotation 라이브러리를 사용하여 문서에 텍스트 취소선 주석을 추가하는 방법을 알아보고, 문서 검토 및 협업을 개선하세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에 텍스트 취소선 주석 추가"
 "url": "/ko/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

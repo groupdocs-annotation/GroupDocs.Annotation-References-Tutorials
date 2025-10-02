@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς εικόνας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε έγγραφα στους κλάδους της εκπαίδευσης, της νομικής και της υγειονομικής περίθαλψης."
 "title": "Πλήρης οδηγός για την προσθήκη σχολίων εικόνας στο .NET με το GroupDocs.Annotation"
 "url": "/el/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

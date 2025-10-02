@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Establecer la resolución de la vista previa del documento"
 "url": "/es/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

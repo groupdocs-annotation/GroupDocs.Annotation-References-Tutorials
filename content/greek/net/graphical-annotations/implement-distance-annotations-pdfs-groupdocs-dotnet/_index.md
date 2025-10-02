@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε ακριβείς σχολιασμούς απόστασης στα έγγραφα PDF σας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός καλύπτει την εγκατάσταση, τη διαμόρφωση και τις πρακτικές εφαρμογές."
 "title": "Υλοποίηση σχολίων απόστασης σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

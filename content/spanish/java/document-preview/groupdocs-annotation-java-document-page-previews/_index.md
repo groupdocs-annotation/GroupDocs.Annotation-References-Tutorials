@@ -3,6 +3,7 @@
 "description": "Aprenda a usar GroupDocs.Annotation para Java para crear vistas previas PNG de alta calidad de páginas de documentos. Mejore su software con esta potente función."
 "title": "Generar vistas previas de páginas de documentos en Java mediante GroupDocs.Annotation"
 "url": "/es/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách thêm, xóa, cập nhật và quản lý chú thích trong tài liệu bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn quản lý chú thích cho GroupDocs.Annotation Java"
 "url": "/vi/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

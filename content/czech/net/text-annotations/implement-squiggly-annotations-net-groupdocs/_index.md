@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat textové vlnité anotace do vašich .NET aplikací pomocí GroupDocs.Annotation pro lepší čitelnost dokumentů a zpětnou vazbu."
 "title": "Implementace vlnovek textu v .NET pomocí GroupDocs.Annotation"
 "url": "/cs/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

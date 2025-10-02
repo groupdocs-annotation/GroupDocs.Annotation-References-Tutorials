@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan hozhat létre letisztult, megjegyzések nélküli dokumentum-előnézeteket a .NET-hez készült GroupDocs.Annotation segítségével. Kövesse ezt az útmutatót a dokumentumok bemutatásának és áttekintésének folyamatainak fejlesztéséhez."
 "title": "Dokumentum előnézetek létrehozása megjegyzések nélkül a GroupDocs.Annotation .NET használatával"
 "url": "/hu/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

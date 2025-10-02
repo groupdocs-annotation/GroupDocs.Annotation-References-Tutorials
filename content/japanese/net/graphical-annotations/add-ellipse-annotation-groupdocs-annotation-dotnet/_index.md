@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET APIを使用してインタラクティブな楕円注釈を追加し、PDFドキュメントを強化する方法を学びましょう。このガイドでは、開発者向けにステップバイステップの手順を説明します。"
 "title": "GroupDocs.Annotation .NET API を使用して PDF に楕円注釈を追加する方法"
 "url": "/ja/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά βίντεο για την προσθήκη, αφαίρεση, ενημέρωση και διαχείριση σχολιασμών σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά σεμινάρια διαχείρισης σχολίων για το GroupDocs.Annotation .NET"
 "url": "/el/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何在 .NET 环境中使用 GroupDocs.Annotation 流高效地注释 PDF 文档。提升您的文档管理工作流程。"
 "title": "使用 GroupDocs.Annotation .NET 通过 Streams 注释 PDF 的综合指南"
 "url": "/zh/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

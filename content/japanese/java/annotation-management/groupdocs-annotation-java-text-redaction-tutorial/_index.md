@@ -3,6 +3,7 @@
 "description": "強力なGroupDocs.Annotation Javaライブラリを使用して、PDF内のテキストを効率的に墨消しする方法を学びましょう。このガイドでは、セットアップ、注釈の作成、保存の手順について説明します。"
 "title": "GroupDocs.Annotation Java APIを使用したPDFのテキスト編集のマスターガイド"
 "url": "/ja/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

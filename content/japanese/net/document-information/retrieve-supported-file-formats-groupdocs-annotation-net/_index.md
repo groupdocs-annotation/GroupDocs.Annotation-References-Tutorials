@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、サポートされているファイル形式を効率的に取得する方法を学びます。このガイドでは、統合、実装、そして実践的な応用について説明します。"
 "title": "GroupDocs.Annotation for .NET でサポートされているファイル形式を取得する方法 - 包括的なガイド"
 "url": "/ja/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إزالة التعليقات التوضيحية المتعددة في .NET"
 "url": "/ar/net/removing-annotations/remove-multiple-annotations/"
+type: docs
 "weight": 12
 ---
 

@@ -2,6 +2,7 @@
 "description": "Полные руководства по добавлению фигур, стрелок, изображений и графических элементов в документы с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по графическим аннотациям для GroupDocs.Annotation .NET"
 "url": "/ru/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

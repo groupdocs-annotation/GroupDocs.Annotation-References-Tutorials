@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation Geliştirici Kılavuzları"
 "title": "Belge Açıklama API'si | GroupDocs.Annotation Eğitimleri ve SDK Örnekleri"
 "url": "/tr/"
+type: docs
 "weight": 11
 ---
 

@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την προσθήκη και διαχείριση σχολίων εικόνας σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά βίντεο για σχολιασμό εικόνας στο GroupDocs.Annotation Java"
 "url": "/el/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

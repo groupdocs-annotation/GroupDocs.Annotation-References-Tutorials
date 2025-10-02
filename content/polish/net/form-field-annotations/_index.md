@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące dodawania pól formularzy i interaktywnych komponentów do dokumentów przy użyciu GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki adnotacji pól formularza dla GroupDocs.Annotation .NET"
 "url": "/pl/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

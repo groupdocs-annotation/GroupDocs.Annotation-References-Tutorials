@@ -3,6 +3,7 @@
 "description": "Leer hoe je tekstdoorhalingsannotaties toevoegt in Java met GroupDocs.Annotation. Volg deze stapsgewijze handleiding voor naadloze documentannotaties."
 "title": "Handleiding voor Java-tekstdoorhalingsannotatie met behulp van GroupDocs.Annotation"
 "url": "/nl/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

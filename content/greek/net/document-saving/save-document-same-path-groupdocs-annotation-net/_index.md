@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αποθηκεύετε σχολιασμένα έγγραφα χρησιμοποιώντας την αρχική διαδρομή στο GroupDocs.Annotation για .NET, εξασφαλίζοντας βελτιστοποιημένη διαχείριση αρχείων και αποτελεσματικότητα στη ροή εργασίας."
 "title": "Πώς να αποθηκεύσετε έγγραφα στην αρχική διαδρομή χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

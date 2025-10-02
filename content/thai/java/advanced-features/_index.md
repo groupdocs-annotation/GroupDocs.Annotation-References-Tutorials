@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนสำหรับการนำความสามารถคำอธิบายขั้นสูง การปรับแต่ง และคุณลักษณะเฉพาะไปใช้งานกับ GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนคุณลักษณะขั้นสูงของ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

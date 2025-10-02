@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET'te ID'ye Göre Yanıtları Kaldır"
 "url": "/tr/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

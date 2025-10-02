@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 存取文件元資料、頁面資訊和文件屬性的完整教學。"
 "title": "GroupDocs.Annotation Java 文件資訊教學課程"
 "url": "/zh-hant/java/document-information/"
+type: docs
 "weight": 12
 ---
 

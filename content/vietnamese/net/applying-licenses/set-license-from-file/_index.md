@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thiết lập Giấy phép từ File"
 "url": "/vi/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

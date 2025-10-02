@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 특정 워크시트 열에서 간결하고 관련성 높은 문서 미리보기를 만드는 방법을 알아보세요. 데이터 분석 및 IT 관리 워크플로우를 간소화하는 데 적합합니다."
 "title": "GroupDocs.Annotation .NET을 사용하여 대상 Excel 시트 미리보기 생성"
 "url": "/ko/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat pratinjau dokumen yang ringkas dan relevan dari kolom lembar kerja tertentu menggunakan GroupDocs.Annotation untuk .NET. Sempurna untuk menyederhanakan alur kerja dalam analisis data dan manajemen TI."
 "title": "Hasilkan Pratinjau Lembar Excel yang Ditargetkan Menggunakan GroupDocs.Annotation .NET"
 "url": "/id/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

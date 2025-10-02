@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 将自定义字体集成到您的文档处理工作流程中。使用精确的字体样式增强您的注释效果。"
 "title": "如何在 GroupDocs.Annotation for .NET 中加载自定义字体——综合指南"
 "url": "/zh/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak integrovat interaktivní tlačítka do PDF dokumentů pomocí výkonného nástroje GroupDocs.Annotation pro .NET. Zvyšte zapojení uživatelů pomocí podrobných pokynů."
 "title": "Integrace interaktivních tlačítek do PDF pomocí sady GroupDocs.Annotation .NET SDK"
 "url": "/cs/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

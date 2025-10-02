@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích hiệu quả và lưu các chú thích cụ thể trong tệp PDF bằng GroupDocs.Annotation cho .NET. Nâng cao quy trình quản lý tài liệu của bạn bằng các ví dụ chi tiết."
 "title": "Hướng dẫn từng bước về cách chú thích PDF bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro implementaci vláken komentářů, odpovědí a společných diskusí s GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro správu odpovědí v GroupDocs.Annotation v Javě"
 "url": "/cs/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

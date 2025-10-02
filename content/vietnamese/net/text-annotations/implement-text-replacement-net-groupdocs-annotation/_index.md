@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách triển khai chú thích thay thế văn bản trong ứng dụng .NET của bạn bằng GroupDocs.Annotation. Nâng cao khả năng đọc và chức năng của tài liệu một cách dễ dàng."
 "title": "Cách triển khai thay thế văn bản trong .NET bằng GroupDocs.Annotation để chú thích tài liệu hiệu quả"
 "url": "/vi/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

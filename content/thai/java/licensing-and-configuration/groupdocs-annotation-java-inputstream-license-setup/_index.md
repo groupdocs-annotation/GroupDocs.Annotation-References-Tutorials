@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีตั้งค่าสิทธิ์การใช้งาน GroupDocs.Annotation ใน Java อย่างมีประสิทธิภาพโดยใช้ InputStream ปรับปรุงเวิร์กโฟลว์ของคุณและเพิ่มประสิทธิภาพการทำงานของแอปพลิเคชันด้วยคู่มือที่ครอบคลุมนี้"
 "title": "การอนุญาตสิทธิ์การใช้งาน Java ของ GroupDocs.Annotation ที่ได้รับการปรับปรุงใหม่ วิธีใช้ InputStream สำหรับการตั้งค่าใบอนุญาตสิทธิ์การใช้งาน"
 "url": "/th/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

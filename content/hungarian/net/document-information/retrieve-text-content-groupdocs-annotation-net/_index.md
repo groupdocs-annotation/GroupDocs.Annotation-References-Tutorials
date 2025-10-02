@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan lehet hatékonyan szöveges tartalmat kinyerni dokumentumokból a GroupDocs.Annotation for .NET segítségével. Kövesse ezt a lépésről lépésre szóló útmutatót a dokumentumfeldolgozási képességek fejlesztéséhez."
 "title": "Dokumentum szöveges tartalmának lekérése a GroupDocs.Annotation for .NET segítségével – lépésről lépésre útmutató"
 "url": "/hu/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

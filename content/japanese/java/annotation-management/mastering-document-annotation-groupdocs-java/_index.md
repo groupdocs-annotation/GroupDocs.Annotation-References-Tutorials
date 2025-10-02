@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、ドキュメントに効率的に注釈を付ける方法を学びましょう。このガイドでは、PDFの読み込み、注釈付け、そしてMavenを使用したJava環境の最適化について説明します。"
 "title": "Javaでドキュメント注釈をマスターする - GroupDocs.Annotationを使用した包括的なガイド"
 "url": "/ja/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

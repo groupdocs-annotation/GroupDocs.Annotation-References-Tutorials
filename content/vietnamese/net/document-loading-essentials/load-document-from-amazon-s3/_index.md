@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tải tài liệu từ Amazon S3"
 "url": "/vi/net/document-loading-essentials/load-document-from-amazon-s3/"
+type: docs
 "weight": 10
 ---
 

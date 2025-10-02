@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Válaszok eltávolítása a .NET-ben található jegyzetekre"
 "url": "/hu/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

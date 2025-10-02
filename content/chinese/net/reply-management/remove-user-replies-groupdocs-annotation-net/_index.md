@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 从带注释的 PDF 文档中高效移除特定用户回复。这份全面的指南将帮助您简化注释管理。"
 "title": "如何使用 GroupDocs.Annotation .NET 从 PDF 中删除用户回复——分步指南"
 "url": "/zh/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

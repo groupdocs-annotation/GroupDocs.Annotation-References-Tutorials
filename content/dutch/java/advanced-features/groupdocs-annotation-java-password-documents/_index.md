@@ -3,6 +3,7 @@
 "description": "Leer hoe u wachtwoordbeveiligde documenten veilig kunt laden, annoteren en opslaan met GroupDocs.Annotation voor Java. Verbeter de documentbeveiliging in uw Java-applicaties."
 "title": "Veilige documentverwerking met GroupDocs.Annotation Java&#58; wachtwoordbeveiligde documenten laden en annoteren"
 "url": "/nl/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

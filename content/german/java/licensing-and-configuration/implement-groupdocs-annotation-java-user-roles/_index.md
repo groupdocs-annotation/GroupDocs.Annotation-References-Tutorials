@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Benutzerrollen zu Anmerkungen in Ihren Java-Anwendungen hinzufügen, um die Dokumentenverwaltung und Zusammenarbeit zu verbessern."
 "title": "Implementieren Sie GroupDocs.Annotation Java – Hinzufügen von Benutzerrollen zu Anmerkungen"
 "url": "/de/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

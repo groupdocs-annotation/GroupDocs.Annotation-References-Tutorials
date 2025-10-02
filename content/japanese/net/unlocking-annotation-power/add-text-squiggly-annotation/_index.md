@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントにテキストの波線注釈を追加する"
 "url": "/ja/net/unlocking-annotation-power/add-text-squiggly-annotation/"
+type: docs
 "weight": 25
 ---
 

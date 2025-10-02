@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας με διαδραστικές σημειώσεις χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός βήμα προς βήμα καλύπτει την εγκατάσταση, την υλοποίηση και την αντιμετώπιση προβλημάτων."
 "title": "Πώς να προσθέσετε σχολιασμούς σημείων σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

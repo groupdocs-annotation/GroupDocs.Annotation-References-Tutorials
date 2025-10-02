@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het implementeren van hyperlinks en gekoppelde annotaties in documenten met GroupDocs.Annotation voor .NET."
 "title": "Tutorials voor het koppelen van annotaties voor GroupDocs.Annotation .NET"
 "url": "/nl/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

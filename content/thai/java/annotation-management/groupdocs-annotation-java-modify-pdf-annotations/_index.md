@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการโหลด แก้ไข และจัดการคำอธิบายประกอบใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java ปรับปรุงการจัดการเอกสารของคุณด้วยคู่มือที่ครอบคลุมของเรา"
 "title": "Master GroupDocs.Annotation สำหรับ Java&#58; แก้ไขคำอธิบายประกอบ PDF อย่างมีประสิทธิภาพ"
 "url": "/th/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

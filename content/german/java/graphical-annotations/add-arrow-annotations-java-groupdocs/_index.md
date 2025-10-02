@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit der GroupDocs.Annotation-Bibliothek für Java effizient Pfeilanmerkungen zu PDFs hinzufügen. Verbessern Sie die Übersichtlichkeit Ihrer Dokumente und die Zusammenarbeit."
 "title": "So fügen Sie Pfeilanmerkungen in Java mit der GroupDocs.Annotation-API hinzu"
 "url": "/de/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

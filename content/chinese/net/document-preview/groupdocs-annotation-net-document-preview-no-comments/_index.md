@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 创建简洁无注释的文档预览。遵循本指南，提升您的文档呈现和审阅流程。"
 "title": "如何使用 GroupDocs.Annotation .NET 生成不带注释的文档预览"
 "url": "/zh/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

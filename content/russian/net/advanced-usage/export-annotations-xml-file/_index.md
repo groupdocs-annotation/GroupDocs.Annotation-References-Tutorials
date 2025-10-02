@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Экспорт аннотаций из XML-файла"
 "url": "/ru/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

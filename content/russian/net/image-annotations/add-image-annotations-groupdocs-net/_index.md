@@ -3,6 +3,7 @@
 "description": "Узнайте, как интегрировать GroupDocs.Annotation в ваши проекты .NET, чтобы улучшить документы с помощью аннотаций изображений. Улучшите взаимодействие пользователей и оптимизируйте совместную работу."
 "title": "Добавляйте аннотации изображений в документы с помощью GroupDocs.Annotation для .NET"
 "url": "/ru/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية إتقان شرح ملفات PDF بتنسيق .NET باستخدام GroupDocs.Annotation. يغطي هذا الدليل التهيئة، ومعالجة الصفحات، والتحويلات، وحفظ المستندات المُعلّق عليها بكفاءة."
 "title": "دليل شامل لإضافة تعليقات توضيحية إلى ملفات PDF باستخدام GroupDocs لتحسين إدارة المستندات"
 "url": "/ar/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

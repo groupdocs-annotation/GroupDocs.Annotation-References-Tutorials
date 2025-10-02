@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatott útmutatók dokumentumok különböző forrásokból történő betöltéséhez a GroupDocs.Annotation for .NET használatával."
 "title": "Dokumentumbetöltési oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

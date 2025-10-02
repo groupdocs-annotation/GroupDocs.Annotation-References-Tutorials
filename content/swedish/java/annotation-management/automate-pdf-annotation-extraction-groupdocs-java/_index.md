@@ -3,6 +3,7 @@
 "description": "Lär dig automatisera extrahering av annoteringar från PDF-filer med GroupDocs.Annotation för Java, vilket sparar tid och minskar fel."
 "title": "Automatisera extraktion av PDF-annoteringar med GroupDocs för Java – en omfattande guide"
 "url": "/sv/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

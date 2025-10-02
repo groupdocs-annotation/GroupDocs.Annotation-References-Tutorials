@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "FTP से दस्तावेज़ लोड करें"
 "url": "/hi/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

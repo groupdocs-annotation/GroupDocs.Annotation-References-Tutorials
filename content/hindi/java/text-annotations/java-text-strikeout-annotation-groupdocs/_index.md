@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके Java में टेक्स्ट स्ट्राइकआउट एनोटेशन जोड़ने का तरीका जानें। दस्तावेज़ एनोटेशन को सहज बनाने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": "GroupDocs.Annotation का उपयोग करके जावा टेक्स्ट स्ट्राइकआउट एनोटेशन गाइड"
 "url": "/hi/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีจัดการคำอธิบายประกอบเอกสารอย่างมีประสิทธิภาพโดยใช้คีย์เวอร์ชันด้วย GroupDocs.Annotation .NET ปรับปรุงเวิร์กโฟลว์ของคุณและปรับปรุงการทำงานร่วมกัน"
 "title": "วิธีการดึงข้อมูลคำอธิบายประกอบโดยใช้คีย์เวอร์ชันใน GroupDocs.Annotation .NET เพื่อการจัดการเอกสารขั้นสูง"
 "url": "/th/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

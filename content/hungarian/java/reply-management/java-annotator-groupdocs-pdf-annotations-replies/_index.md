@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kezelheti hatékonyan PDF-jegyzeteket és -válaszokat a GroupDocs.Annotation segítségével Java-alkalmazásaiban. Egyszerűsítse a dokumentumokkal való együttműködést átfogó útmutatónkkal."
 "title": "Java PDF jegyzetek&#5; Jegyzetek és válaszok létrehozása és kezelése a GroupDocs.Annotation for Java segítségével"
 "url": "/hu/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 实现评论线程、回复和协作讨论的分步教程。"
 "title": "GroupDocs.Annotation Java 的回复管理教程"
 "url": "/zh/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk menambahkan, mengedit, dan mengelola anotasi teks dalam dokumen menggunakan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Anotasi Teks untuk GroupDocs.Annotation Java"
 "url": "/id/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

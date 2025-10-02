@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εξοικειωθείτε με τη χρήση σχολίων PDF .NET με το GroupDocs.Annotation. Αυτός ο οδηγός καλύπτει την αρχικοποίηση, την επεξεργασία σελίδων, τους μετασχηματισμούς και την αποτελεσματική αποθήκευση σχολιασμένων εγγράφων."
 "title": "Πλήρης οδηγός για σχολιασμό PDF .NET χρησιμοποιώντας το GroupDocs.Annotation για βελτιωμένη διαχείριση εγγράφων"
 "url": "/el/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

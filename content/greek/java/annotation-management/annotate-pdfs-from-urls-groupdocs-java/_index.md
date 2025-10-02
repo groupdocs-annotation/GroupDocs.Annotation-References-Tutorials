@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχόλια σε έγγραφα PDF απευθείας από διευθύνσεις URL χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτό το σεμινάριο καλύπτει την αποτελεσματική φόρτωση, προσθήκη σχολίων και αποθήκευση PDF."
 "title": "Πώς να προσθέσετε σχόλια σε PDF από URL χρησιμοποιώντας το GroupDocs.Annotation για Java | Εκμάθηση για τη διαχείριση σχολίων εγγράφων"
 "url": "/el/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

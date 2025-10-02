@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε αποτελεσματικά τις σχολιασμένες επισημειώσεις εγγράφων στο .NET χρησιμοποιώντας το GroupDocs.Annotation. Αυτός ο οδηγός καλύπτει τη ρύθμιση, την προσαρμογή και τις βέλτιστες πρακτικές για την αποθήκευση σχολιασμένων εγγράφων."
 "title": "Σχολιασμός κύριου εγγράφου σε .NET με το GroupDocs.Annotation&#58; Ένας πλήρης οδηγός"
 "url": "/el/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

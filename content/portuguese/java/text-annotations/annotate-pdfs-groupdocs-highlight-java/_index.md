@@ -3,6 +3,7 @@
 "description": "Aprenda a anotar PDFs com destaques de texto e respostas usando o GroupDocs.Annotation para Java. Este guia aborda configuração, exemplos de código e aplicações práticas."
 "title": "Anotar PDFs em Java usando GroupDocs.Highlight - Um guia completo"
 "url": "/pt/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

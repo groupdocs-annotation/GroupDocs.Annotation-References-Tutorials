@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotationを.NETプロジェクトに統合し、画像注釈でドキュメントを強化する方法を学びましょう。ユーザーエンゲージメントを向上させ、コラボレーションを効率化します。"
 "title": "GroupDocs.Annotation for .NET を使用してドキュメントに画像注釈を追加する"
 "url": "/ja/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

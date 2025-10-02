@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Licencek alkalmazása"
 "url": "/hu/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

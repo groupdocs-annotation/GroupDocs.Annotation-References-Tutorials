@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントにテキスト置換注釈を追加する"
 "url": "/ja/net/unlocking-annotation-power/add-text-replacement-annotation/"
+type: docs
 "weight": 24
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة وتحديث التعليقات التوضيحية في المستندات بكفاءة باستخدام GroupDocs.Annotation .NET. حسّن التعاون وإدارة المستندات من خلال هذا الدليل المفصل."
 "title": "كيفية إضافة تعليقات توضيحية إلى المستندات باستخدام GroupDocs.Annotation .NET - دليل شامل"
 "url": "/ar/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

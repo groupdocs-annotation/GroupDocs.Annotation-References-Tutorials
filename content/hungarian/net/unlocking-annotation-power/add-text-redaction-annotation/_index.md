@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Szövegkihagyási jegyzet hozzáadása a dokumentumhoz"
 "url": "/hu/net/unlocking-annotation-power/add-text-redaction-annotation/"
+type: docs
 "weight": 23
 ---
 

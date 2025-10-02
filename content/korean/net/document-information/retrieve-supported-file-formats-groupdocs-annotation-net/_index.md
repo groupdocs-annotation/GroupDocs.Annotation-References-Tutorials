@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 지원되는 파일 형식을 효율적으로 검색하는 방법을 알아보세요. 이 가이드에서는 통합, 구현 및 실제 적용 사례를 다룹니다."
 "title": "GroupDocs.Annotation for .NET을 사용하여 지원되는 파일 형식을 검색하는 방법&#58; 포괄적인 가이드"
 "url": "/ko/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

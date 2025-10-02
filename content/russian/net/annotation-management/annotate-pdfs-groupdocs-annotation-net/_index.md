@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно комментировать и сохранять определенные аннотации в файлах PDF с помощью GroupDocs.Annotation для .NET. Улучшите свой рабочий процесс управления документами с помощью подробных примеров."
 "title": "Как аннотировать PDF-файлы с помощью GroupDocs.Annotation для .NET&#58; пошаговое руководство"
 "url": "/ru/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

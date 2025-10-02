@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java'yı kullanarak PDF'lere resim açıklamaları eklemeyi öğrenin. Belge iş akışlarınızı kolaylaştırın ve iş birliğini geliştirin."
 "title": "GroupDocs.Annotation Java ile PDF'lere Resim Açıklamaları Ekleyin - Eksiksiz Bir Eğitim"
 "url": "/tr/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

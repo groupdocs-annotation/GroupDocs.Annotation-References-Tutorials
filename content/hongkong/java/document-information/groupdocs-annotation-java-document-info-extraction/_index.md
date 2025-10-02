@@ -3,6 +3,7 @@
 "description": "學習如何使用 GroupDocs.Annotation for Java 提取文件元數據，例如文件類型、頁數和大小。透過高效率的資訊提取增強您的文件管理。"
 "title": "使用 Java 中的 GroupDocs.Annotation 高效提取文件元數據"
 "url": "/zh-hant/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

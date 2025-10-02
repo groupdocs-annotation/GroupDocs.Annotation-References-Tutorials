@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Amazon S3からドキュメントをロードする"
 "url": "/ja/net/document-loading-essentials/load-document-from-amazon-s3/"
+type: docs
 "weight": 10
 ---
 

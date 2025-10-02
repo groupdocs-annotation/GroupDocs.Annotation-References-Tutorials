@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إزالة التعليقات التوضيحية بسلاسة من مستندات PDF باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation في جافا. اتبع دليلنا خطوة بخطوة لإدارة مستنداتك بكفاءة."
 "title": "كيفية إزالة التعليقات التوضيحية من ملفات PDF باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation Java"
 "url": "/ar/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

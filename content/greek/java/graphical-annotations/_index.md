@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά βίντεο για την προσθήκη σχημάτων, βελών, εικόνων και γραφικών στοιχείων σε έγγραφα με το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά βίντεο για γραφικές σχολιασμούς στο GroupDocs.Annotation Java"
 "url": "/el/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

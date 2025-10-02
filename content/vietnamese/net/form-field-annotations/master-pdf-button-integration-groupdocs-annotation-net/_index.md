@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tích hợp các nút tương tác vào tài liệu PDF của bạn bằng GroupDocs.Annotation mạnh mẽ cho .NET. Tăng cường sự tương tác của người dùng với hướng dẫn từng bước."
 "title": "Tích hợp các nút tương tác trong PDF bằng GroupDocs.Annotation .NET SDK"
 "url": "/vi/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

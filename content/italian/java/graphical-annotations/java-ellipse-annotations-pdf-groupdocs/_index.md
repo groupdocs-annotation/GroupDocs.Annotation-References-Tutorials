@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere annotazioni ellittiche ai documenti PDF utilizzando la potente libreria GroupDocs.Annotation in Java. Segui questa guida passo passo per migliorare la collaborazione sui documenti."
 "title": "Java - Aggiungere annotazioni ellittiche ai PDF utilizzando GroupDocs.Annotation per Java"
 "url": "/it/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

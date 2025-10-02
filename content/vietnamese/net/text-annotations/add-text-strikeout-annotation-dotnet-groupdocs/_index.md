@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích gạch bỏ văn bản vào tài liệu của bạn bằng thư viện GroupDocs.Annotation dành cho .NET, giúp nâng cao khả năng cộng tác và xem xét tài liệu."
 "title": "Thêm chú thích gạch bỏ văn bản trong .NET bằng GroupDocs.Annotation"
 "url": "/vi/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

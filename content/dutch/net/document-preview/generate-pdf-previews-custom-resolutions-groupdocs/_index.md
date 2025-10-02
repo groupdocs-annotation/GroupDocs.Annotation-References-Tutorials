@@ -3,6 +3,7 @@
 "description": "Leer hoe u hoogwaardige PDF-documentvoorbeelden met specifieke afbeeldingsresoluties kunt maken met behulp van de krachtige GroupDocs.Annotation-bibliotheek in .NET. Optimaliseer uw documentbeheerworkflow vandaag nog."
 "title": "Genereer PDF-voorbeelden van hoge kwaliteit met aangepaste resoluties met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du skapar högkvalitativa förhandsvisningar av PDF-dokument med specifika bildupplösningar med hjälp av det kraftfulla GroupDocs.Annotation-biblioteket i .NET. Optimera ditt dokumenthanteringsarbetsflöde idag."
 "title": "Generera högkvalitativa PDF-förhandsvisningar med anpassade upplösningar med GroupDocs.Annotation för .NET"
 "url": "/sv/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

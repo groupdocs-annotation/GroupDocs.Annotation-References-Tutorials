@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 .NET 애플리케이션에 텍스트 물결 모양 주석을 추가하는 방법을 알아봅니다. 이를 통해 문서의 가독성과 피드백을 개선할 수 있습니다."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 텍스트 물결 모양 주석 구현"
 "url": "/ko/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

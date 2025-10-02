@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 원격 URL의 이미지 주석을 PDF 문서에 추가하는 방법을 알아보세요. 이 포괄적인 가이드를 통해 문서 워크플로우를 개선하세요."
 "title": "GroupDocs.Annotation .NET 및 원격 URL을 사용하여 PDF에 이미지 주석 구현"
 "url": "/ko/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

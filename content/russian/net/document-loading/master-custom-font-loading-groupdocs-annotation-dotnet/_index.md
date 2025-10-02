@@ -3,6 +3,7 @@
 "description": "Узнайте, как интегрировать пользовательские шрифты в рабочий процесс обработки документов с помощью GroupDocs.Annotation для .NET. Улучшите свои аннотации с помощью точного стиля шрифтов."
 "title": "Как загрузить пользовательские шрифты в GroupDocs.Annotation для .NET&#58; Подробное руководство"
 "url": "/ru/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

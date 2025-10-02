@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java के साथ दस्तावेज़ों में आकृतियाँ, तीर, चित्र और ग्राफ़िकल तत्व जोड़ने के लिए संपूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए ग्राफिकल एनोटेशन ट्यूटोरियल"
 "url": "/hi/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

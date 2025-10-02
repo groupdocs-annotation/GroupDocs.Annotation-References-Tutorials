@@ -3,6 +3,7 @@
 "description": "Scopri come salvare i documenti annotati utilizzando il percorso originale in GroupDocs.Annotation per .NET, garantendo una gestione semplificata dei file e un flusso di lavoro efficiente."
 "title": "Come salvare i documenti nel percorso originale utilizzando GroupDocs.Annotation per .NET"
 "url": "/it/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

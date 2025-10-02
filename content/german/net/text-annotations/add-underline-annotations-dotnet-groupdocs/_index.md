@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient Unterstreichungen zu Ihren Dokumenten hinzufügen. Verbessern Sie mühelos die Übersichtlichkeit und Kommunikation Ihrer Dokumente."
 "title": "So fügen Sie mit GroupDocs.Annotation Unterstreichungsanmerkungen in .NET hinzu"
 "url": "/de/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

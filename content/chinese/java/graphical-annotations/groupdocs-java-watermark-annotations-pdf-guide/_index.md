@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 添加水印注释来保护您的文档。本指南涵盖设置、自定义和优化技巧。"
 "title": "使用 GroupDocs.Annotation Java 在 PDF 中实现水印注释的综合指南"
 "url": "/zh/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

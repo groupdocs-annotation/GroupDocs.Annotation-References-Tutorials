@@ -3,6 +3,7 @@
 "description": "Lär dig hur du kommenterar PDF-dokument direkt från URL&#58;er med GroupDocs.Annotation för Java. Den här handledningen beskriver hur du laddar, kommenterar och sparar PDF-filer effektivt."
 "title": "Hur man kommenterar PDF-filer från URL&#58;er med GroupDocs.Annotation för Java | Handledning om hantering av dokumentkommentarer"
 "url": "/sv/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

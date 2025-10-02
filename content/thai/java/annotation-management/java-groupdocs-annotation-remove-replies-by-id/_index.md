@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีลบคำตอบจากคำอธิบายประกอบในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ Java API ปรับปรุงการจัดการเอกสารของคุณด้วยคู่มือทีละขั้นตอนนี้"
 "title": "วิธีการลบคำตอบตาม ID ใน Java โดยใช้ GroupDocs.Annotation API"
 "url": "/th/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

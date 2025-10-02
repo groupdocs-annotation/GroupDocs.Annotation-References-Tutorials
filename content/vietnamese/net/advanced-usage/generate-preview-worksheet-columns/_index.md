@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tạo các cột bảng tính xem trước"
 "url": "/vi/net/advanced-usage/generate-preview-worksheet-columns/"
+type: docs
 "weight": 15
 ---
 

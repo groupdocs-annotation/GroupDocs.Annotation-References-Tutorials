@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vytvářet efektivní náhledy stránek PDF pomocí GroupDocs.Annotation pro .NET. Vylepšete interakci s dokumenty a zefektivnite svůj pracovní postup."
 "title": "Generování náhledů stránek PDF pomocí GroupDocs.Annotation .NET – Komplexní průvodce"
 "url": "/cs/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لحفظ المستندات الموضحة مع خيارات مختلفة باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس تعليمية لحفظ المستندات في GroupDocs.Annotation .NET"
 "url": "/ar/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

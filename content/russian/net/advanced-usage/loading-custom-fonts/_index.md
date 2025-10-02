@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Загрузка пользовательских шрифтов"
 "url": "/ru/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

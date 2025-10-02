@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tải, chú thích và lưu tài liệu được bảo vệ bằng mật khẩu một cách an toàn bằng GroupDocs.Annotation for Java. Tăng cường bảo mật tài liệu trong các ứng dụng Java của bạn."
 "title": "Xử lý tài liệu an toàn với GroupDocs.Annotation Java&#58; Tải và chú thích các tài liệu được bảo vệ bằng mật khẩu"
 "url": "/vi/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

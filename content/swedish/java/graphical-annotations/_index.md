@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att lägga till former, pilar, bilder och grafiska element i dokument med GroupDocs.Annotation för Java."
 "title": "Handledningar för grafisk annotering för GroupDocs.Annotation Java"
 "url": "/sv/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

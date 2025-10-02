@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument genom att lägga till interaktiva ellipsanteckningar med hjälp av GroupDocs.Annotation .NET API. Den här guiden ger steg-för-steg-instruktioner för utvecklare."
 "title": "Så här lägger du till ellipsannoteringar i PDF-filer med GroupDocs.Annotation .NET API"
 "url": "/sv/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

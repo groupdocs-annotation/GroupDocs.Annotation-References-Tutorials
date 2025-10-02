@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 페이지 범위를 효율적으로 관리하는 방법을 알아보세요. 이 가이드에서는 특정 페이지를 저장하는 방법, 설정 및 모범 사례를 다룹니다."
 "title": "GroupDocs.Annotation의 효율적인 주석 기술을 활용한 .NET에서의 페이지 범위 관리 마스터하기"
 "url": "/ko/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

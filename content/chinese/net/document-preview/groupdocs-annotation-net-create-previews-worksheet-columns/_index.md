@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 从特定工作表列创建简洁且相关的文档预览。非常适合简化数据分析和 IT 管理中的工作流程。"
 "title": "使用 GroupDocs.Annotation .NET 生成有针对性的 Excel 工作表预览"
 "url": "/zh/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

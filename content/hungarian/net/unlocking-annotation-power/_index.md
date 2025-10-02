@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "A jegyzetelési képesség felszabadítása"
 "url": "/hu/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

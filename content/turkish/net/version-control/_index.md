@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET ile belge sürümlerini uygulama, değişiklikleri izleme ve açıklama geçmişini yönetmeye yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation .NET için Sürüm Kontrol Eğitimleri"
 "url": "/tr/net/version-control/"
+type: docs
 "weight": 13
 ---
 

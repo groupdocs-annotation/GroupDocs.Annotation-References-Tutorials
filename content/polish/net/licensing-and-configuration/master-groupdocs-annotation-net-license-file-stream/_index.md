@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skonfigurować i zastosować licencję dla GroupDocs.Annotation .NET przy użyciu strumieni plików. Odblokuj pełne funkcje dzięki temu kompleksowemu przewodnikowi."
 "title": "Master GroupDocs.Annotation .NET&#58; Ustaw licencję za pomocą strumienia pliku w C#"
 "url": "/pl/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

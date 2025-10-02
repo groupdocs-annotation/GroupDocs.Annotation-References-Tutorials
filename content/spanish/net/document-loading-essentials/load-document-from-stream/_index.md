@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Cargar documento desde la secuencia"
 "url": "/es/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

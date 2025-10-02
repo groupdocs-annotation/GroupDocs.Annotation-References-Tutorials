@@ -2,6 +2,7 @@
 "description": "Tutorial completi per generare anteprime di documenti, miniature e rappresentazioni visive con GroupDocs.Annotation per Java."
 "title": "Tutorial di anteprima del documento per GroupDocs.Annotation Java"
 "url": "/it/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

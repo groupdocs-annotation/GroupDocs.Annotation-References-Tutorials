@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนสำหรับการเข้าถึงข้อมูลเมตาของเอกสาร ข้อมูลหน้า และคุณสมบัติของเอกสารด้วย GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนเกี่ยวกับข้อมูลเอกสารสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/document-information/"
+type: docs
 "weight": 12
 ---
 

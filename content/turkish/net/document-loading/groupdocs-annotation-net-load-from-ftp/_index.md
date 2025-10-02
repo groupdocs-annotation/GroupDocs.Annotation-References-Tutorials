@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak FTP sunucularından belgeleri sorunsuz bir şekilde nasıl yükleyeceğinizi öğrenin. Bu ayrıntılı kılavuzla belge yönetimi iş akışınızı geliştirin."
 "title": "GroupDocs.Annotation for .NET ile FTP Sunucularından Belgeleri Yükleme ve Açıklama Ekleme Kapsamlı Bir Kılavuz"
 "url": "/tr/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thêm chú thích chỉnh sửa văn bản vào tài liệu"
 "url": "/vi/net/unlocking-annotation-power/add-text-redaction-annotation/"
+type: docs
 "weight": 23
 ---
 

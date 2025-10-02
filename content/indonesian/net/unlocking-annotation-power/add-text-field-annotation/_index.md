@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tambahkan Anotasi Bidang Teks ke Dokumen"
 "url": "/id/net/unlocking-annotation-power/add-text-field-annotation/"
+type: docs
 "weight": 21
 ---
 

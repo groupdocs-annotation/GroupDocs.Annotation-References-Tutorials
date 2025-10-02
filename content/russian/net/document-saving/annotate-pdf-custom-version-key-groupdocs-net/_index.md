@@ -3,6 +3,7 @@
 "description": "Узнайте, как комментировать и сохранять PDF-файлы с пользовательскими ключами версий, используя мощную библиотеку GroupDocs.Annotation для .NET, гарантируя уникальную идентификацию каждой версии документа."
 "title": "Сохранение аннотированных PDF-файлов с пользовательскими ключами версий в .NET с помощью GroupDocs.Annotation"
 "url": "/ru/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

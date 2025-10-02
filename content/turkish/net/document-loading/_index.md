@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak çeşitli kaynaklardan belge yüklemeye yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation .NET için Belge Yükleme Eğitimleri"
 "url": "/tr/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

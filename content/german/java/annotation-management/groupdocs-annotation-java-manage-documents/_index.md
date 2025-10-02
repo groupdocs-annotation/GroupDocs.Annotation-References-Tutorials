@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Anmerkungen in Java mit GroupDocs.Annotation effektiv verwalten. Diese Anleitung behandelt das Laden, Entfernen und Optimieren von Dokument-Workflows."
 "title": "Master Annotation Management in Java – Umfassender Leitfaden mit GroupDocs.Annotation"
 "url": "/de/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك باستخدام التعليقات التوضيحية التفاعلية باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل خطوة بخطوة عملية الإعداد والتنفيذ واستكشاف الأخطاء وإصلاحها."
 "title": "كيفية إضافة تعليقات النقاط إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

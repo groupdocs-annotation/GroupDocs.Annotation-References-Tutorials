@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη στοιχείου κουμπιού σε έγγραφο PDF"
 "url": "/el/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

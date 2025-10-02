@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan integrálhat interaktív gombokat PDF-dokumentumaiba a hatékony GroupDocs.Annotation for .NET segítségével. Növelje a felhasználói elköteleződést lépésről lépésre haladó utasításokkal."
 "title": "Interaktív gombok integrálása PDF-ekbe a GroupDocs.Annotation .NET SDK használatával"
 "url": "/hu/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

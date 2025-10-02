@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Xoay tài liệu PDF"
 "url": "/vi/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

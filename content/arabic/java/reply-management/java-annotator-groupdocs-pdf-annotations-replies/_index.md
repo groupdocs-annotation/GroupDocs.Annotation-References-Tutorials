@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إدارة التعليقات التوضيحية والردود على ملفات PDF بكفاءة باستخدام GroupDocs.Annotation في تطبيقات Java. ساهم في تبسيط عملية التعاون في المستندات من خلال دليلنا الشامل."
 "title": "تعليقات PDF Java - إنشاء وإدارة التعليقات والردود باستخدام GroupDocs.Annotation for Java"
 "url": "/ar/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

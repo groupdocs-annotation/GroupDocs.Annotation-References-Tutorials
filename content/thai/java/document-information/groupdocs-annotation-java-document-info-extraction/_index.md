@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีแยกข้อมูลเมตาของเอกสาร เช่น ประเภทไฟล์ จำนวนหน้า และขนาดโดยใช้ GroupDocs.Annotation สำหรับ Java ปรับปรุงการจัดการเอกสารของคุณด้วยการแยกข้อมูลที่มีประสิทธิภาพ"
 "title": "การดึงข้อมูลเมตาของเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation ใน Java"
 "url": "/th/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att implementera hyperlänkar och länkade annoteringar i dokument med GroupDocs.Annotation för .NET."
 "title": "Handledningar för länkannotering för GroupDocs.Annotation .NET"
 "url": "/sv/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

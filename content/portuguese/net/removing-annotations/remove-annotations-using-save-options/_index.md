@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Remover anotações usando opções de salvamento no .NET"
 "url": "/pt/net/removing-annotations/remove-annotations-using-save-options/"
+type: docs
 "weight": 14
 ---
 

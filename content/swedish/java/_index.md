@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation för Java-handledningar"
 "title": "Java-dokumentannoterings-API | GroupDocs.Annotation för Java-handledningar och exempel"
 "url": "/sv/java/"
+type: docs
 "weight": 10
 ---
 

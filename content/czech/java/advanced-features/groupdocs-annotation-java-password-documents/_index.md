@@ -3,6 +3,7 @@
 "description": "Naučte se, jak bezpečně načítat, anotovat a ukládat dokumenty chráněné heslem pomocí nástroje GroupDocs.Annotation pro Javu. Zvyšte zabezpečení dokumentů ve vašich aplikacích Java."
 "title": "Bezpečná manipulace s dokumenty pomocí GroupDocs.Annotation v Javě&#58; Načítání a anotace dokumentů chráněných heslem"
 "url": "/cs/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

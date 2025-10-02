@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके इंटरैक्टिव ड्रॉपडाउन घटकों को जोड़कर अपने PDF दस्तावेज़ों को बेहतर बनाने का तरीका जानें। उपयोगकर्ता इनपुट को सुव्यवस्थित करने और दस्तावेज़ की कार्यक्षमता में सुधार करने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": "GroupDocs के साथ PDF में ड्रॉपडाउन जोड़ें. .NET के लिए एनोटेशन एक व्यापक गाइड"
 "url": "/hi/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

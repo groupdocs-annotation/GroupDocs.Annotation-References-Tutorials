@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để triển khai chuỗi bình luận, trả lời và thảo luận hợp tác với GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn quản lý trả lời cho GroupDocs.Annotation .NET"
 "url": "/vi/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

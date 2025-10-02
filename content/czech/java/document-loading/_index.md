@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro načítání dokumentů z různých zdrojů pomocí GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro načítání dokumentů v GroupDocs.Annotation v Javě"
 "url": "/cs/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi garis bawah ke dokumen Anda secara efisien menggunakan GroupDocs.Annotation for .NET. Tingkatkan kejelasan dan komunikasi dokumen dengan mudah."
 "title": "Cara Menambahkan Anotasi Garis Bawah di .NET dengan GroupDocs.Annotation"
 "url": "/id/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

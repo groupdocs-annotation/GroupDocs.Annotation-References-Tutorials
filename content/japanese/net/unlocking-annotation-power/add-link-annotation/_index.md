@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントにリンク注釈を追加する"
 "url": "/ja/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

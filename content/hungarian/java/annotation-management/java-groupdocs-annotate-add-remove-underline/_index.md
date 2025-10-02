@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá és távolíthat el aláhúzott megjegyzéseket Java dokumentumokban a GroupDocs.Annotation segítségével. Fejlessze dokumentumkezelését ezzel a részletes útmutatóval."
 "title": "Aláhúzott jegyzetek hozzáadása és eltávolítása Java nyelven a GroupDocs használatával – Átfogó útmutató"
 "url": "/hu/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

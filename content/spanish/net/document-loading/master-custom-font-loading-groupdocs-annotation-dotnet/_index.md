@@ -3,6 +3,7 @@
 "description": "Aprenda a integrar fuentes personalizadas en su flujo de trabajo de procesamiento de documentos con GroupDocs.Annotation para .NET. Mejore sus anotaciones con un estilo de fuente preciso."
 "title": "Cómo cargar fuentes personalizadas en GroupDocs.Annotation para .NET&#58; una guía completa"
 "url": "/es/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 自動執行 PDF 註解。本指南詳細逐步介紹如何使用 C# 新增區域註解。"
 "title": "如何使用 GroupDocs.Annotation for .NET 為 PDF 新增區域註解－逐步指南"
 "url": "/zh-hant/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

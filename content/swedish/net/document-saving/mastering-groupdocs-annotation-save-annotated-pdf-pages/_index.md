@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt sparar endast kommenterade sidor i en PDF med GroupDocs.Annotation för .NET. Förbättra dokumenthantering och samarbete med den här detaljerade guiden."
 "title": "Hur man sparar kommenterade sidor i PDF med GroupDocs.Annotation för .NET"
 "url": "/sv/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

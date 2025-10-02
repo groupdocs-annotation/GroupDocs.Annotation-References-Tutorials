@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서 처리 워크플로에 사용자 지정 글꼴을 통합하는 방법을 알아보세요. 정밀한 글꼴 스타일로 주석을 더욱 돋보이게 하세요."
 "title": ".NET용 GroupDocs.Annotation에서 사용자 지정 글꼴을 로드하는 방법&#58; 포괄적인 가이드"
 "url": "/ko/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

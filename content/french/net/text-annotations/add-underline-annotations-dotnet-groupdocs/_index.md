@@ -3,6 +3,7 @@
 "description": "Apprenez à ajouter efficacement des annotations soulignées à vos documents avec GroupDocs.Annotation pour .NET. Améliorez la clarté et la communication de vos documents en toute simplicité."
 "title": "Comment ajouter des annotations soulignées dans .NET avec GroupDocs.Annotation"
 "url": "/fr/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

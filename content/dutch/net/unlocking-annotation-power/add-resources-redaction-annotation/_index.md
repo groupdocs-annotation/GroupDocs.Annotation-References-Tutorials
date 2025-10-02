@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Bronnenredactie-annotatie toevoegen aan document"
 "url": "/nl/net/unlocking-annotation-power/add-resources-redaction-annotation/"
+type: docs
 "weight": 19
 ---
 

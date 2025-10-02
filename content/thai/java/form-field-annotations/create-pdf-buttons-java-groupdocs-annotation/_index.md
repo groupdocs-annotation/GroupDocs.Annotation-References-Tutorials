@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีสร้างปุ่ม PDF แบบโต้ตอบพร้อมคำตอบโดยใช้ GroupDocs.Annotation สำหรับ Java ปฏิบัติตามคำแนะนำทีละขั้นตอนนี้เพื่อปรับปรุงการโต้ตอบของเอกสาร"
 "title": "สร้างปุ่ม PDF แบบโต้ตอบใน Java โดยใช้ GroupDocs.Annotation&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

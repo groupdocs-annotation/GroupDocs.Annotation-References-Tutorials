@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro přidávání, úpravu a správu textových anotací v dokumentech pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro textové anotace v GroupDocs.Annotation .NET"
 "url": "/cs/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

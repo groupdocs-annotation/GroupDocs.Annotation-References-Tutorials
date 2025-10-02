@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效地从带注释的文档中移除回复。本指南涵盖设置、操作和实际应用。"
 "title": "使用 GroupDocs.Annotation for .NET 从带注释的文档中删除回复——分步指南"
 "url": "/zh/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

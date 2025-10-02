@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt annotaties in documenten kunt maken, beheren en opslaan met GroupDocs.Annotation voor Java. Deze stapsgewijze handleiding behandelt initialisatie, annotatietypen en integratietips."
 "title": "Complete handleiding&#58; GroupDocs.Annotation voor Java gebruiken om annotaties te maken en te beheren"
 "url": "/nl/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

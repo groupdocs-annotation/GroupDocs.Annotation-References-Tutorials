@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการบันทึกเฉพาะหน้าที่มีคำอธิบายประกอบของ PDF อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงการจัดการเอกสารและการทำงานร่วมกันด้วยคู่มือโดยละเอียดนี้"
 "title": "วิธีการบันทึกหน้าที่มีคำอธิบายประกอบใน PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

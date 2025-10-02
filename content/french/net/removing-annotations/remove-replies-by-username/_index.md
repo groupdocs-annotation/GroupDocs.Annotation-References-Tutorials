@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Supprimer les réponses par nom d'utilisateur dans .NET"
 "url": "/fr/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

@@ -3,6 +3,7 @@
 "description": ".NET için GroupDocs.Annotation ile PDF ek açıklamalarını otomatikleştirin. Bu ayrıntılı, adım adım kılavuzda C# kullanarak alan ek açıklamalarının nasıl ekleneceğini öğrenin."
 "title": "GroupDocs.Annotation for .NET Kullanarak PDF'lere Alan Açıklamaları Nasıl Eklenir&#58; Adım Adım Kılavuz"
 "url": "/tr/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

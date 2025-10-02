@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "使用 .NET 中的保存选项删除注释"
 "url": "/zh/net/removing-annotations/remove-annotations-using-save-options/"
+type: docs
 "weight": 14
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk mengimplementasikan rangkaian komentar, balasan, dan diskusi kolaboratif dengan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Manajemen Balasan untuk GroupDocs.Annotation .NET"
 "url": "/id/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

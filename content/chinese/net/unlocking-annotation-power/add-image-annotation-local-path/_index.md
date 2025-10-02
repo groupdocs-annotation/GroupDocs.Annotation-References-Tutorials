@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "为文档添加图像注释（本地路径）"
 "url": "/zh/net/unlocking-annotation-power/add-image-annotation-local-path/"
+type: docs
 "weight": 14
 ---
 

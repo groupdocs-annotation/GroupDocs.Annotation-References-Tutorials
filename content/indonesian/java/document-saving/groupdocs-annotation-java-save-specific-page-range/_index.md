@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyimpan rentang halaman dokumen beranotasi secara efisien menggunakan GroupDocs.Annotation untuk Java. Tutorial ini mencakup pengaturan, implementasi, dan aplikasi praktis."
 "title": "Menyimpan Rentang Halaman Tertentu dengan GroupDocs.Annotation untuk Java&#58; Panduan Lengkap"
 "url": "/id/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

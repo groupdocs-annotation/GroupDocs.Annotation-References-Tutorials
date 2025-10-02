@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation'ı kullanarak .NET uygulamalarınızda metin değiştirme açıklamalarını nasıl uygulayacağınızı öğrenin. Belgenin okunabilirliğini ve işlevselliğini zahmetsizce geliştirin."
 "title": "Verimli Belge Açıklaması için GroupDocs.Annotation Kullanılarak .NET'te Metin Değiştirme Nasıl Uygulanır"
 "url": "/tr/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt tar bort specifika användarsvar från kommenterade PDF-dokument med GroupDocs.Annotation för .NET. Effektivisera din annoteringshantering med den här omfattande guiden."
 "title": "Så här tar du bort användarsvar från PDF-filer med GroupDocs.Annotation .NET - En steg-för-steg-guide"
 "url": "/sv/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

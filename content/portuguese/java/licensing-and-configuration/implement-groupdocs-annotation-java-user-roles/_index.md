@@ -3,6 +3,7 @@
 "description": "Aprenda como adicionar funções de usuário às anotações em seus aplicativos Java usando o GroupDocs.Annotation para aprimorar o gerenciamento de documentos e a colaboração."
 "title": "Implementar GroupDocs.Annotation Java - Adicionar funções de usuário às anotações"
 "url": "/pt/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

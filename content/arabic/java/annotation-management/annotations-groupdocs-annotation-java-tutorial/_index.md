@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إنشاء التعليقات التوضيحية وإدارتها وحفظها بكفاءة في المستندات باستخدام GroupDocs.Annotation لجافا. يغطي هذا الدليل التفصيلي التهيئة وأنواع التعليقات التوضيحية ونصائح التكامل."
 "title": "دليل شامل لاستخدام GroupDocs.Annotation في Java لإنشاء التعليقات التوضيحية وإدارتها"
 "url": "/ar/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

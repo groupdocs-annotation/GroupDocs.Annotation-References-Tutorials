@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat anotace k obrázkům pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete dokumenty ve vzdělávání, právu a zdravotnictví."
 "title": "Komplexní průvodce přidáváním anotací obrázků v .NET pomocí GroupDocs.Annotation"
 "url": "/cs/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Java için GroupDocs.Annotation kitaplığını kullanarak PDF'lere ok açıklamalarını etkili bir şekilde nasıl ekleyeceğinizi öğrenin. Belge netliğini ve iş birliğini geliştirin."
 "title": "GroupDocs.Annotation API ile Java'da Ok Açıklamaları Nasıl Eklenir"
 "url": "/tr/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

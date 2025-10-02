@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Στοιχεία Εγγράφου"
 "url": "/el/net/document-components/"
+type: docs
 "weight": 24
 ---
 

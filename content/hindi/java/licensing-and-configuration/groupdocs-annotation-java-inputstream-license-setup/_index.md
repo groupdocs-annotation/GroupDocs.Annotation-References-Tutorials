@@ -3,6 +3,7 @@
 "description": "InputStream का उपयोग करके Java में GroupDocs.Annotation लाइसेंसिंग को कुशलतापूर्वक सेट अप करने का तरीका जानें। इस व्यापक गाइड के साथ अपने वर्कफ़्लो को सुव्यवस्थित करें और एप्लिकेशन प्रदर्शन को बेहतर बनाएँ।"
 "title": "सुव्यवस्थित GroupDocs.Annotation जावा लाइसेंसिंग&#58; लाइसेंस सेटअप के लिए InputStream का उपयोग कैसे करें"
 "url": "/hi/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

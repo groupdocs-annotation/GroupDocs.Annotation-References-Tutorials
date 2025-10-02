@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 在 PDF 文件中高效地添加注释并保存特定注释。通过详细的示例增强您的文档管理工作流程。"
 "title": "如何使用 GroupDocs.Annotation for .NET 为 PDF 文档添加注释——分步指南"
 "url": "/zh/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

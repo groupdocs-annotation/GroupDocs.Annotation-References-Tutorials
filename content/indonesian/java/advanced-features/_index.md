@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menerapkan kemampuan anotasi tingkat lanjut, penyesuaian, dan fitur khusus dengan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Fitur GroupDocs.Annotation Lanjutan untuk Java"
 "url": "/id/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

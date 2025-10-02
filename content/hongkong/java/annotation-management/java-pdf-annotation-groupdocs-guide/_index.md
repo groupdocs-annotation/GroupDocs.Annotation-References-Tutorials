@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 為 PDF 新增區域和橢圓形註解。遵循我們的逐步指南，提升協作效率。"
 "title": "使用 GroupDocs 進行 Java PDF 註解的完整指南 — 增強協作和文件管理"
 "url": "/zh-hant/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

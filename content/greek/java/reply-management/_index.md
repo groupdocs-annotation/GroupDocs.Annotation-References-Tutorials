@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την υλοποίηση νημάτων σχολίων, απαντήσεων και συνεργατικών συζητήσεων με το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά σεμινάρια διαχείρισης απαντήσεων για το GroupDocs.Annotation Java"
 "url": "/el/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

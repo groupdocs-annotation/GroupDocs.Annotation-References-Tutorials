@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak wyodrębnić metadane dokumentu, takie jak typ pliku, liczba stron i rozmiar, za pomocą GroupDocs.Annotation dla Java. Ulepsz zarządzanie dokumentami dzięki wydajnej ekstrakcji informacji."
 "title": "Efektywne wyodrębnianie metadanych dokumentu przy użyciu GroupDocs.Annotation w Javie"
 "url": "/pl/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

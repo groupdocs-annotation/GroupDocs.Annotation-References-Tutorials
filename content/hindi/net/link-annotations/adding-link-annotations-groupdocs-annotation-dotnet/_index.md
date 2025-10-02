@@ -3,6 +3,7 @@
 "description": "शक्तिशाली GroupDocs.Annotation लाइब्रेरी का उपयोग करके इंटरैक्टिव लिंक एनोटेशन जोड़कर अपने .NET अनुप्रयोगों को बेहतर बनाने का तरीका जानें। हमारे चरण-दर-चरण मार्गदर्शिका का पालन करें और आज दस्तावेज़ अन्तरक्रियाशीलता में सुधार करें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों में लिंक एनोटेशन कैसे जोड़ें | डेवलपर गाइड"
 "url": "/hi/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng cách thêm chú thích hình elip tương tác bằng API GroupDocs.Annotation .NET. Hướng dẫn này cung cấp hướng dẫn từng bước cho các nhà phát triển."
 "title": "Cách thêm chú thích hình elip vào PDF bằng GroupDocs.Annotation .NET API"
 "url": "/vi/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

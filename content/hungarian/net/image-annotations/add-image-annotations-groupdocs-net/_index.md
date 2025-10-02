@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan integrálhatja a GroupDocs.Annotationt .NET-projektjeibe, hogy képaláírásokkal gazdagítsa dokumentumait. Javítsa a felhasználói elköteleződést és egyszerűsítse az együttműködést."
 "title": "Képannotációk hozzáadása dokumentumokhoz a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

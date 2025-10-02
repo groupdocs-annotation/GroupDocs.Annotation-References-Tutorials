@@ -3,6 +3,7 @@
 "description": "Aprenda a adicionar anotações de seta a documentos PDF usando o GroupDocs.Annotation para Java. Aprimore a colaboração e a clareza dos documentos com etapas detalhadas."
 "title": "Como Anotar PDFs com Anotações de Seta Usando GroupDocs.Annotation para Java"
 "url": "/pt/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

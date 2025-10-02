@@ -3,6 +3,7 @@
 "description": "Gelişmiş belge etkileşimi için GroupDocs.Annotation'ı kullanarak Java'da metin alanı açıklamalarının nasıl uygulanacağını öğrenin. Adım adım talimatlar ve pratik uygulamalar içeren bu kapsamlı kılavuzu izleyin."
 "title": "GroupDocs.Annotation&#58;ı Kullanarak Java'da TextField Açıklamalarını Uygulama Kapsamlı Bir Kılavuz"
 "url": "/tr/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

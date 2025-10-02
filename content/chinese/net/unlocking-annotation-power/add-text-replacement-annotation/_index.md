@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "向文档添加文本替换注释"
 "url": "/zh/net/unlocking-annotation-power/add-text-replacement-annotation/"
+type: docs
 "weight": 24
 ---
 

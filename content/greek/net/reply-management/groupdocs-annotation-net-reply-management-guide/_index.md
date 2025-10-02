@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε αποτελεσματικά τις απαντήσεις σχολίων χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός καλύπτει την ενσωμάτωση, την προσθήκη απαντήσεων και πρακτικές περιπτώσεις χρήσης."
 "title": "Οδηγός για την Υλοποίηση της Διαχείρισης Απάντησης σε Σχολιασμό στο .NET με το GroupDocs.Annotation"
 "url": "/el/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

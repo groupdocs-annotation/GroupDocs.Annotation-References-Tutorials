@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat vlnité anotace do dokumentů PDF pomocí nástroje GroupDocs.Annotation pro Javu, což vylepšuje kontrolu dokumentů a spolupráci."
 "title": "Jak přidat vlnité anotace do PDF pomocí GroupDocs.Annotation pro Javu"
 "url": "/cs/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

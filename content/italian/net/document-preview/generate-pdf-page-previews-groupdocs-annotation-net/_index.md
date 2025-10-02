@@ -3,6 +3,7 @@
 "description": "Scopri come creare anteprime PDF efficienti con GroupDocs.Annotation per .NET. Migliora l'interazione con i documenti e semplifica il flusso di lavoro."
 "title": "Generare anteprime di pagine PDF utilizzando GroupDocs.Annotation .NET - Una guida completa"
 "url": "/it/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

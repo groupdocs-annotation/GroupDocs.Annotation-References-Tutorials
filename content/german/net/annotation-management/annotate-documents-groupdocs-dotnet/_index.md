@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation .NET effizient Anmerkungen in Dokumenten hinzufügen und aktualisieren. Optimieren Sie die Zusammenarbeit und das Dokumentenmanagement mit dieser Schritt-für-Schritt-Anleitung."
 "title": "So kommentieren Sie Dokumente mit GroupDocs.Annotation .NET – Ein umfassender Leitfaden"
 "url": "/de/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

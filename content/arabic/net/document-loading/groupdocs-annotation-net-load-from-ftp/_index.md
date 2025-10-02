@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحميل المستندات بسلاسة من خوادم FTP باستخدام GroupDocs.Annotation لـ .NET. حسّن سير عمل إدارة مستنداتك مع هذا الدليل المفصل."
 "title": "تحميل المستندات وشرحها من خوادم FTP باستخدام GroupDocs.Annotation لـ .NET - دليل شامل"
 "url": "/ar/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

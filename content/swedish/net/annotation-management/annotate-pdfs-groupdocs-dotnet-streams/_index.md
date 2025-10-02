@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt kommenterar PDF-dokument i en .NET-miljö med hjälp av strömmar med GroupDocs.Annotation. Förbättra ditt arbetsflöde för dokumenthantering."
 "title": "Kommentera PDF-filer med GroupDocs.Annotation .NET via Streams – en omfattande guide"
 "url": "/sv/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

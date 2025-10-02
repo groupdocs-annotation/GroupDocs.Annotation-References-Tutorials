@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola anotasi dokumen secara efisien menggunakan kunci versi dengan GroupDocs.Annotation .NET. Sederhanakan alur kerja Anda dan tingkatkan kolaborasi."
 "title": "Cara Mengambil Anotasi Berdasarkan Kunci Versi di GroupDocs.Annotation .NET untuk Manajemen Dokumen yang Lebih Baik"
 "url": "/id/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

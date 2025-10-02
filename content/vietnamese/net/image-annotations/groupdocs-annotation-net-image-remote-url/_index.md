@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích hình ảnh từ URL từ xa vào tài liệu PDF bằng GroupDocs.Annotation cho .NET. Nâng cao quy trình làm việc tài liệu của bạn với hướng dẫn toàn diện này."
 "title": "Triển khai chú thích hình ảnh trong PDF bằng GroupDocs.Annotation .NET và URL từ xa"
 "url": "/vi/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het openen van documentmetagegevens, pagina-informatie en documenteigenschappen met GroupDocs.Annotation voor Java."
 "title": "Documentinformatiehandleidingen voor GroupDocs.Annotation Java"
 "url": "/nl/java/document-information/"
+type: docs
 "weight": 12
 ---
 

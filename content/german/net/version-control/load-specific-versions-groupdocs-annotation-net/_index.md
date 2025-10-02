@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET bestimmte Versionen kommentierter Dokumente effizient verwalten und laden. Optimieren Sie Ihr Dokumentenmanagement noch heute!"
 "title": "Laden Sie bestimmte Dokumentversionen mit GroupDocs.Annotation für .NET – Ein umfassender Leitfaden"
 "url": "/de/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

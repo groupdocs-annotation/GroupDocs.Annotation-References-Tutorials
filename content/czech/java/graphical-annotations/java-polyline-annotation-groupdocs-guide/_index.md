@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své Java aplikace přidáním anotací křivek pomocí knihovny GroupDocs.Annotation. Ideální pro zlepšení přehlednosti a interaktivity dokumentů."
 "title": "Implementace anotací křivek v Javě pomocí knihovny GroupDocs.Annotation"
 "url": "/cs/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

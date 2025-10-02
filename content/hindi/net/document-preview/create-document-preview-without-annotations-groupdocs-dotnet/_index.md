@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके एनोटेशन के बिना दस्तावेज़ पूर्वावलोकन उत्पन्न करना सीखें, सहयोगी परियोजनाओं में गोपनीयता और स्पष्टता सुनिश्चित करें।"
 "title": "GroupDocs.Annotation .NET का उपयोग करके एनोटेशन के बिना एक साफ दस्तावेज़ पूर्वावलोकन कैसे बनाएं"
 "url": "/hi/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบใน PDF ด้วยการเน้นข้อความและการตอบกลับโดยใช้ GroupDocs.Annotation สำหรับ Java คู่มือนี้ครอบคลุมถึงการตั้งค่า ตัวอย่างโค้ด และการใช้งานจริง"
 "title": "ใส่คำอธิบายประกอบ PDF ใน Java โดยใช้ GroupDocs เน้นย้ำคำแนะนำที่ครอบคลุม"
 "url": "/th/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

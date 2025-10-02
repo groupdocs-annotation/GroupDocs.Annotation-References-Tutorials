@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Đặt chú thích hình ảnh lên trên văn bản"
 "url": "/vi/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

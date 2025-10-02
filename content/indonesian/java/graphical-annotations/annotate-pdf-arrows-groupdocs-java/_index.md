@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi panah ke dokumen PDF menggunakan GroupDocs.Annotation for Java. Tingkatkan kolaborasi dan kejelasan dokumen dengan langkah-langkah terperinci."
 "title": "Cara Membuat Anotasi pada PDF dengan Anotasi Panah Menggunakan GroupDocs.Annotation untuk Java"
 "url": "/id/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

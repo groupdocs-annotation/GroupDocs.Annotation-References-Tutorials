@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Lägg till bildannotering i dokument (fjärrsökväg)"
 "url": "/sv/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+type: docs
 "weight": 15
 ---
 

@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het genereren van documentvoorbeelden, miniaturen en visuele weergaven met GroupDocs.Annotation voor .NET."
 "title": "Documentvoorbeeldhandleidingen voor GroupDocs.Annotation .NET"
 "url": "/nl/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

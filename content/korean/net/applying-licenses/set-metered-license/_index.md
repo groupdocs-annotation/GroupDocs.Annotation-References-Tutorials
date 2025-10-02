@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "미터링 라이센스 설정"
 "url": "/ko/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إدارة نطاقات الصفحات بكفاءة باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل التثبيت والإعداد وأفضل الممارسات لحفظ صفحات محددة."
 "title": "إتقان إدارة نطاق الصفحات في .NET باستخدام GroupDocs.Annotation - تقنيات الشرح الفعّالة"
 "url": "/ar/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

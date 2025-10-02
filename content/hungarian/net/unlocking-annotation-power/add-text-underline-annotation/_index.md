@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Szöveg aláhúzott jegyzet hozzáadása a dokumentumhoz"
 "url": "/hu/net/unlocking-annotation-power/add-text-underline-annotation/"
+type: docs
 "weight": 27
 ---
 

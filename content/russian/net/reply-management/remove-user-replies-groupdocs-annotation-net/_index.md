@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно удалять определенные ответы пользователей из аннотированных PDF-документов с помощью GroupDocs.Annotation для .NET. Оптимизируйте управление аннотациями с помощью этого всеобъемлющего руководства."
 "title": "Как удалить ответы пользователей из PDF-файлов с помощью GroupDocs.Annotation .NET&#58; Пошаговое руководство"
 "url": "/ru/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

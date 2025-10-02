@@ -3,6 +3,7 @@
 "description": ".NET용 GroupDocs.Annotation을 사용하여 주석 없이 문서 미리보기를 생성하는 방법을 알아보고 협업 프로젝트에서 개인 정보 보호와 명확성을 확보하세요."
 "title": "GroupDocs.Annotation .NET을 사용하여 주석 없이 깔끔한 문서 미리 보기를 만드는 방법"
 "url": "/ko/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

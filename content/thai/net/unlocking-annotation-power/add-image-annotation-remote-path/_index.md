@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายภาพลงในเอกสาร (เส้นทางระยะไกล)"
 "url": "/th/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+type: docs
 "weight": 15
 ---
 

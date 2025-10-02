@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إزالة التعليقات التوضيحية باستخدام خيارات الحفظ في .NET"
 "url": "/ar/net/removing-annotations/remove-annotations-using-save-options/"
+type: docs
 "weight": 14
 ---
 

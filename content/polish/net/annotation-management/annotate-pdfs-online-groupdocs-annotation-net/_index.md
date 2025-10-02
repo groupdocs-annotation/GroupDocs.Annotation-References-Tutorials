@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak adnotować pliki PDF online, korzystając z narzędzia GroupDocs.Annotation dla platformy .NET. Usprawnij proces recenzowania dokumentów, stosując efektywne techniki adnotacji."
 "title": "Jak adnotować pliki PDF z adresu URL za pomocą GroupDocs.Annotation dla platformy .NET"
 "url": "/pl/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

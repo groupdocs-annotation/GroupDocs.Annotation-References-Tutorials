@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie zarządzać i ładować określone wersje adnotowanych dokumentów przy użyciu GroupDocs.Annotation dla .NET. Udoskonal swój system zarządzania dokumentami już dziś!"
 "title": "Ładowanie określonych wersji dokumentów za pomocą GroupDocs.Annotation dla .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

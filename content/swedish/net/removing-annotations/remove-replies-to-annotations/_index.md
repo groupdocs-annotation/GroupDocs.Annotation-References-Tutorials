@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ta bort svar på anteckningar i .NET"
 "url": "/sv/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

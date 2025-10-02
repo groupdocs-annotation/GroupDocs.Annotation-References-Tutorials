@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentum betöltése FTP-ről"
 "url": "/hu/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

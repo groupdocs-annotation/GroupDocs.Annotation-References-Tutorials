@@ -3,6 +3,7 @@
 "description": "Naučte se, jak chránit dokumenty přidáním vodoznakových anotací pomocí nástroje GroupDocs.Annotation pro Javu. Tato příručka obsahuje tipy pro nastavení, přizpůsobení a optimalizaci."
 "title": "Implementace anotací vodoznaků v PDF pomocí GroupDocs.Annotation v Javě – Komplexní průvodce"
 "url": "/cs/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

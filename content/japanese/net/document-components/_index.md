@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントコンポーネント"
 "url": "/ja/net/document-components/"
+type: docs
 "weight": 24
 ---
 

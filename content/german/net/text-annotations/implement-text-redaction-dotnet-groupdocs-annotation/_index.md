@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Textredaktionsanmerkungen in .NET-Anwendungen implementieren. Schützen Sie vertrauliche Informationen mühelos."
 "title": "Implementieren Sie die Textredaktion in .NET mit GroupDocs.Annotation – Eine vollständige Anleitung"
 "url": "/de/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके एनोटेट किए गए दस्तावेज़ों से उत्तरों को कुशलतापूर्वक हटाने का तरीका जानें। यह मार्गदर्शिका सेटअप, हेरफेर और व्यावहारिक अनुप्रयोगों को कवर करती है।"
 "title": "GroupDocs का उपयोग करके एनोटेट किए गए दस्तावेज़ों से उत्तर निकालें.NET के लिए एनोटेशन एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

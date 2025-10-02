@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá és frissíthet hatékonyan jegyzeteket a dokumentumokban a GroupDocs.Annotation .NET használatával. Javítsa az együttműködést és a dokumentumkezelést ezzel a lépésről lépésre haladó útmutatóval."
 "title": "Dokumentumok megjegyzésekkel való ellátása a GroupDocs.Annotation .NET használatával – Átfogó útmutató"
 "url": "/hu/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

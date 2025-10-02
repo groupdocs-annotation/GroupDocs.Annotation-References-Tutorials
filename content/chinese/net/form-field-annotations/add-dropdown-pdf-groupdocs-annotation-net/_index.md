@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 添加交互式下拉列表组件来增强您的 PDF 文档。按照本分步指南，简化用户输入并改进文档功能。"
 "title": "使用 GroupDocs.Annotation for .NET 向 PDF 添加下拉菜单——综合指南"
 "url": "/zh/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

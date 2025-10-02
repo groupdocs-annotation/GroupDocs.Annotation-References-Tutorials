@@ -3,6 +3,7 @@
 "description": "Java के लिए शक्तिशाली GroupDocs.Annotation API का उपयोग करके क्षेत्र हाइलाइट्स के साथ पीडीएफ दस्तावेजों को कुशलतापूर्वक एनोटेट करना सीखें, सहयोग और उत्पादकता बढ़ाएं।"
 "title": "GroupDocs.Annotation का उपयोग करके जावा में PDF को कैसे एनोटेट करें"
 "url": "/hi/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

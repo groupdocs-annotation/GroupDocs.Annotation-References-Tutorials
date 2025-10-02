@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt tekstinhoud uit documenten kunt halen met GroupDocs.Annotation voor .NET. Volg deze stapsgewijze handleiding om uw documentverwerkingsmogelijkheden te verbeteren."
 "title": "Documenttekstinhoud ophalen met GroupDocs.Annotation voor .NET&#58; een stapsgewijze handleiding"
 "url": "/nl/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

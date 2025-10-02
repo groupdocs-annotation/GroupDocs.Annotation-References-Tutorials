@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Antworten aus Anmerkungen effizient entfernen. Optimieren Sie Ihr Dokumentenmanagement mit diesem umfassenden Leitfaden."
 "title": "So entfernen Sie Antworten aus Anmerkungen mit GroupDocs.Annotation .NET – Schritt-für-Schritt-Anleitung"
 "url": "/de/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

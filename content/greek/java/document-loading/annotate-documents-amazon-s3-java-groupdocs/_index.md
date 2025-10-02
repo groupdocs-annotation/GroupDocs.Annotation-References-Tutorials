@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να φορτώνετε και να προσθέτετε σχόλια σε έγγραφα που είναι αποθηκευμένα στο Amazon S3 με το GroupDocs.Annotation σε Java. Αυτός ο οδηγός καλύπτει την ενσωμάτωση, τη χρήση του AWS SDK και τη βελτιστοποίηση της απόδοσης."
 "title": "Φόρτωση και σχολιασμός εγγράφων από το Amazon S3 χρησιμοποιώντας Java&#58; Ένας οδηγός για την ενσωμάτωση GroupDocs.Annotation"
 "url": "/el/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

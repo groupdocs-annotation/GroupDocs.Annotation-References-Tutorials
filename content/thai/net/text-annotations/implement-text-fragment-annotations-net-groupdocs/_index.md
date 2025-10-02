@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีนำคำอธิบายประกอบแบบแยกส่วนข้อความไปใช้ใน .NET โดยใช้ GroupDocs.Annotation คู่มือนี้ครอบคลุมถึงการตั้งค่า การนำไปใช้งาน และแอปพลิเคชันจริงเพื่อการจัดการเอกสารที่มีประสิทธิภาพ"
 "title": "การนำคำอธิบายประกอบแบบแยกส่วนข้อความไปใช้ใน .NET ด้วย GroupDocs&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

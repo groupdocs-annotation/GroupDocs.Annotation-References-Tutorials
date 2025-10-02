@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina .NET-applikationer genom att lägga till interaktiva länkannoteringar med hjälp av det kraftfulla GroupDocs.Annotation-biblioteket. Följ vår steg-för-steg-guide och förbättra dokumentinteraktiviteten idag."
 "title": "Så här lägger du till länkannoteringar i dokument med GroupDocs.Annotation för .NET | Utvecklarguide"
 "url": "/sv/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

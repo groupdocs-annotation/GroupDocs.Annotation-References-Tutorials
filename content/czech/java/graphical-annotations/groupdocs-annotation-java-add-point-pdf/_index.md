@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty programově přidáním bodových anotací pomocí nástroje GroupDocs.Annotation pro Javu. Tato příručka se zabývá nastavením, implementací a praktickými aplikacemi."
 "title": "Jak přidat bodové anotace do PDF pomocí GroupDocs.Annotation pro Javu"
 "url": "/cs/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

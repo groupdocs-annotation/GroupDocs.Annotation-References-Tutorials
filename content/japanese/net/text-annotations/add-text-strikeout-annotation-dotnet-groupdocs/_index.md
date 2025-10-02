@@ -3,6 +3,7 @@
 "description": ".NET 用の GroupDocs.Annotation ライブラリを使用してドキュメントにテキスト取り消し線注釈を追加し、ドキュメントのレビューとコラボレーションを強化する方法を学習します。"
 "title": "GroupDocs.Annotation を使用して .NET でテキスト取り消し線注釈を追加する"
 "url": "/ja/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

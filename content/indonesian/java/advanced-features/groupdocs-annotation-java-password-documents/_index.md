@@ -3,6 +3,7 @@
 "description": "Pelajari cara memuat, memberi anotasi, dan menyimpan dokumen yang dilindungi kata sandi dengan aman menggunakan GroupDocs.Annotation untuk Java. Tingkatkan keamanan dokumen dalam aplikasi Java Anda."
 "title": "Penanganan Dokumen Aman dengan GroupDocs.Annotation Java&#58; Memuat dan Membuat Anotasi Dokumen yang Dilindungi Kata Sandi"
 "url": "/id/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

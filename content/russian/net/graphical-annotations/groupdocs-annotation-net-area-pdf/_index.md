@@ -3,6 +3,7 @@
 "description": "Автоматизируйте аннотации PDF с помощью GroupDocs.Annotation для .NET. Узнайте, как добавлять аннотации областей с помощью C# в этом подробном пошаговом руководстве."
 "title": "Как добавлять аннотации областей в PDF-файлы с помощью GroupDocs.Annotation для .NET&#58; Пошаговое руководство"
 "url": "/ru/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak implementovat anotace vzdálenosti v dokumentech Java pomocí GroupDocs.Annotation. Tato podrobná příručka zahrnuje nastavení, konfiguraci a praktické aplikace."
 "title": "Jak přidat anotace vzdálenosti v Javě pomocí GroupDocs.Annotation – Podrobný návod"
 "url": "/cs/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

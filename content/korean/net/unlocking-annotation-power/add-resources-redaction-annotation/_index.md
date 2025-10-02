@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서에 리소스 편집 주석 추가"
 "url": "/ko/net/unlocking-annotation-power/add-resources-redaction-annotation/"
+type: docs
 "weight": 19
 ---
 

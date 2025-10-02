@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 .NET 应用程序中添加文本波浪注释，以提高文档的可读性和反馈。"
 "title": "使用 GroupDocs.Annotation 在 .NET 中实现文本波浪注释"
 "url": "/zh/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

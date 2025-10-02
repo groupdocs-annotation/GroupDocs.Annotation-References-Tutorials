@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere annotazioni alle immagini ai PDF utilizzando GroupDocs.Annotation per Java. Semplifica i flussi di lavoro dei tuoi documenti e migliora la collaborazione."
 "title": "Aggiungere annotazioni alle immagini nei PDF con GroupDocs.Annotation Java - Un tutorial completo"
 "url": "/it/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

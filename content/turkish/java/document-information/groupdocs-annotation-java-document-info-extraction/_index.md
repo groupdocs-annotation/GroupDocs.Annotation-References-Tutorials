@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak dosya türü, sayfa sayısı ve boyut gibi belge meta verilerinin nasıl çıkarılacağını öğrenin. Verimli bilgi çıkarma ile belge yönetiminizi geliştirin."
 "title": "Java'da GroupDocs.Annotation Kullanarak Verimli Belge Meta Verisi Çıkarımı"
 "url": "/tr/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

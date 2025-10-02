@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "FTP'den Belge Yükle"
 "url": "/tr/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

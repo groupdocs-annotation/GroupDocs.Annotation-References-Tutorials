@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentumbetöltési alapismeretek"
 "url": "/hu/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

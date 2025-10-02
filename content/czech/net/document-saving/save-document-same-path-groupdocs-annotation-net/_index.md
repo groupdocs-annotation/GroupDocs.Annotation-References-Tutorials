@@ -3,6 +3,7 @@
 "description": "Naučte se, jak ukládat anotované dokumenty pomocí původní cesty v nástroji GroupDocs.Annotation pro .NET, a zajistit tak efektivnější správu souborů a efektivitu pracovních postupů."
 "title": "Jak ukládat dokumenty na původní cestu pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

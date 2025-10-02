@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Selectievakjecomponent toevoegen aan PDF-document"
 "url": "/nl/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

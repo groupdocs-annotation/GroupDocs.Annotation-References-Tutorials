@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Добавить стрелку-аннотацию к документу"
 "url": "/ru/net/unlocking-annotation-power/add-arrow-annotation/"
+type: docs
 "weight": 11
 ---
 

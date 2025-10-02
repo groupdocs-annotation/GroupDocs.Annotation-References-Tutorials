@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Annotation για Java για να δημιουργείτε προεπισκοπήσεις PNG υψηλής ποιότητας σελίδων εγγράφων. Βελτιώστε το λογισμικό σας με αυτήν την ισχυρή λειτουργία."
 "title": "Δημιουργία προεπισκοπήσεων σελίδας εγγράφου σε Java χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

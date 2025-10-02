@@ -3,6 +3,7 @@
 "description": "Lär dig hur du hanterar annoteringssvar effektivt med GroupDocs.Annotation för .NET. Den här guiden behandlar integration, hur man lägger till svar och praktiska användningsområden."
 "title": "Guide till implementering av hantering av annoteringssvar i .NET med GroupDocs.Annotation"
 "url": "/sv/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

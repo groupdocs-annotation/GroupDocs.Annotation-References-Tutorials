@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για τη δημιουργία προεπισκοπήσεων εγγράφων, μικρογραφιών και οπτικών αναπαραστάσεων με το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά σεμινάρια προεπισκόπησης εγγράφων για το GroupDocs.Annotation Java"
 "url": "/el/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET API का उपयोग करके इंटरैक्टिव दीर्घवृत्त एनोटेशन जोड़कर अपने PDF दस्तावेज़ों को बेहतर बनाने का तरीका जानें। यह मार्गदर्शिका डेवलपर्स के लिए चरण-दर-चरण निर्देश प्रदान करती है।"
 "title": "GroupDocs.Annotation .NET API का उपयोग करके PDF में दीर्घवृत्त एनोटेशन कैसे जोड़ें"
 "url": "/hi/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

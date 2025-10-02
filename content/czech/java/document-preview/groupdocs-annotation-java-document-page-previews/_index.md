@@ -3,6 +3,7 @@
 "description": "Naučte se, jak používat GroupDocs.Annotation pro Javu k vytváření vysoce kvalitních náhledů stránek dokumentů ve formátu PNG. Vylepšete svůj software touto výkonnou funkcí."
 "title": "Generování náhledů stránek dokumentu v Javě pomocí GroupDocs.Annotation"
 "url": "/cs/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

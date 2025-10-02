@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "버전 키를 사용하여 주석 목록 가져오기"
 "url": "/ko/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

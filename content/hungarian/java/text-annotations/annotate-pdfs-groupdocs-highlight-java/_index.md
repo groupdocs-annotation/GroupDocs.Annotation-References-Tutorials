@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el PDF-fájlokat szöveges kiemelésekkel és válaszokkal a GroupDocs.Annotation for Java segítségével. Ez az útmutató a beállítást, a kódpéldákat és a gyakorlati alkalmazásokat ismerteti."
 "title": "PDF-ek jegyzetelése Java nyelven a GroupDocs.Highlight használatával – Átfogó útmutató"
 "url": "/hu/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

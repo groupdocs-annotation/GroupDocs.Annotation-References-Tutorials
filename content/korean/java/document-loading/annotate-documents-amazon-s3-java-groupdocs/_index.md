@@ -3,6 +3,7 @@
 "description": "Java에서 GroupDocs.Annotation을 사용하여 Amazon S3에 저장된 문서를 효율적으로 로드하고 주석을 추가하는 방법을 알아보세요. 이 가이드에서는 통합, AWS SDK 사용 및 성능 최적화에 대해 다룹니다."
 "title": "Java를 사용하여 Amazon S3에서 문서 로드 및 주석 달기 - GroupDocs.Annotation 통합 가이드"
 "url": "/ko/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

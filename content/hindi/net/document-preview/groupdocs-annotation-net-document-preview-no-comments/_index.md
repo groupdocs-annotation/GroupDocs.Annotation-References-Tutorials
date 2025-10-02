@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके बिना टिप्पणियों के स्वच्छ दस्तावेज़ पूर्वावलोकन बनाने का तरीका जानें। अपने दस्तावेज़ प्रस्तुतिकरण और समीक्षा प्रक्रियाओं को बेहतर बनाने के लिए इस मार्गदर्शिका का पालन करें।"
 "title": "GroupDocs.Annotation .NET का उपयोग करके टिप्पणियों के बिना दस्तावेज़ पूर्वावलोकन कैसे उत्पन्न करें"
 "url": "/hi/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

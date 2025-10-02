@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tạo bản xem trước trang PDF hiệu quả với GroupDocs.Annotation cho .NET. Tăng cường tương tác tài liệu và hợp lý hóa quy trình làm việc của bạn."
 "title": "Tạo bản xem trước trang PDF bằng GroupDocs.Annotation .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

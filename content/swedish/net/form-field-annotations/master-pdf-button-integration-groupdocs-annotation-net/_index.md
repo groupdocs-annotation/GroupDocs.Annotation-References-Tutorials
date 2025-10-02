@@ -3,6 +3,7 @@
 "description": "Lär dig hur du integrerar interaktiva knappar i dina PDF-dokument med hjälp av det kraftfulla GroupDocs.Annotation för .NET. Förbättra användarengagemang med steg-för-steg-instruktioner."
 "title": "Integrera interaktiva knappar i PDF-filer med GroupDocs.Annotation .NET SDK"
 "url": "/sv/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

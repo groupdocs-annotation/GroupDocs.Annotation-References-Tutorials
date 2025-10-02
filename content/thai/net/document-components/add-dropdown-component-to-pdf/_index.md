@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มส่วนประกอบดรอปดาวน์ลงในเอกสาร PDF"
 "url": "/th/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

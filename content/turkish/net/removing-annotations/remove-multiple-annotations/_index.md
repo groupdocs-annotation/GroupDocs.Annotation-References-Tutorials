@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET'te Birden Fazla Açıklamayı Kaldırma"
 "url": "/tr/net/removing-annotations/remove-multiple-annotations/"
+type: docs
 "weight": 12
 ---
 

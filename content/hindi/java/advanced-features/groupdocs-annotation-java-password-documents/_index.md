@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके सुरक्षित रूप से लोड, एनोटेट और पासवर्ड-संरक्षित दस्तावेज़ों को सहेजना सीखें। अपने Java अनुप्रयोगों में दस्तावेज़ सुरक्षा बढ़ाएँ।"
 "title": "GroupDocs.Annotation Java&#58; के साथ सुरक्षित दस्तावेज़ प्रबंधन पासवर्ड-संरक्षित दस्तावेज़ लोड और एनोटेट करें"
 "url": "/hi/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 워터마크를 추가하는 방법을 알아보세요. 이 가이드에서는 문서 보안 및 브랜딩을 위한 설정, 단계별 구현 방법, 그리고 모범 사례를 다룹니다."
 "title": ".NET에서 GroupDocs.Annotation을 사용하여 워터마크 추가 구현&#58; 문서 보안 및 브랜딩을 위한 포괄적인 가이드"
 "url": "/ko/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

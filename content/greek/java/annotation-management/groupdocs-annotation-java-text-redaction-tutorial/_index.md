@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να επεξεργάζεστε αποτελεσματικά κείμενο σε PDF χρησιμοποιώντας την ισχυρή βιβλιοθήκη GroupDocs.Annotation Java. Αυτός ο οδηγός καλύπτει τις διαδικασίες εγκατάστασης, δημιουργίας σχολίων και αποθήκευσης."
 "title": "Επεξεργασία κύριου κειμένου σε PDF χρησιμοποιώντας το GroupDocs.Annotation Java API&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

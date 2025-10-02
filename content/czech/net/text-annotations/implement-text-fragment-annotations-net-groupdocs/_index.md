@@ -3,6 +3,7 @@
 "description": "Naučte se, jak implementovat anotace textových fragmentů v .NET pomocí GroupDocs.Annotation. Tato příručka se zabývá nastavením, implementací a praktickými aplikacemi pro efektivní správu dokumentů."
 "title": "Implementace anotací textových fragmentů v .NET s GroupDocs – komplexní průvodce"
 "url": "/cs/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

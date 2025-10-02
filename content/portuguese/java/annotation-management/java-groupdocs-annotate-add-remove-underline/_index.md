@@ -3,6 +3,7 @@
 "description": "Aprenda a adicionar e remover anotações sublinhadas em documentos Java usando GroupDocs.Annotation. Aprimore seu gerenciamento de documentos com este guia detalhado."
 "title": "Adicionar e remover anotações sublinhadas em Java usando GroupDocs - Um guia completo"
 "url": "/pt/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

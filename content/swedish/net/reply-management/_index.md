@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att implementera kommentartrådar, svar och gemensamma diskussioner med GroupDocs.Annotation för .NET."
 "title": "Handledningar för svarshantering för GroupDocs.Annotation .NET"
 "url": "/sv/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

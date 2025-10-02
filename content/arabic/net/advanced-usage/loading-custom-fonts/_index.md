@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تحميل الخطوط المخصصة"
 "url": "/ar/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

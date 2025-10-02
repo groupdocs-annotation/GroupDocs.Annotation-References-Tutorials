@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hatékonyan aláhúzott jegyzeteket dokumentumaihoz a GroupDocs.Annotation for .NET segítségével. Könnyedén javíthatja a dokumentumok érthetőségét és a kommunikációt."
 "title": "Aláhúzott jegyzetek hozzáadása .NET-ben a GroupDocs.Annotation segítségével"
 "url": "/hu/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Découvrez comment ajouter des annotations de texte barré dans vos documents à l’aide de la bibliothèque GroupDocs.Annotation pour .NET, améliorant ainsi la révision et la collaboration des documents."
 "title": "Ajouter une annotation de texte barré dans .NET à l'aide de GroupDocs.Annotation"
 "url": "/fr/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

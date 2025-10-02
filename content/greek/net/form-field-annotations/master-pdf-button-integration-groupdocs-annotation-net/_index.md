@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ενσωματώνετε διαδραστικά κουμπιά στα έγγραφα PDF σας χρησιμοποιώντας το ισχυρό GroupDocs.Annotation για .NET. Βελτιώστε την αλληλεπίδραση των χρηστών με οδηγίες βήμα προς βήμα."
 "title": "Ενσωμάτωση διαδραστικών κουμπιών σε PDF χρησιμοποιώντας το GroupDocs.Annotation .NET SDK"
 "url": "/el/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm vai trò người dùng vào chú thích trong ứng dụng Java của bạn bằng GroupDocs.Annotation để nâng cao khả năng quản lý tài liệu và cộng tác."
 "title": "Triển khai GroupDocs.Annotation Java&#58; Thêm vai trò người dùng vào chú thích"
 "url": "/vi/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

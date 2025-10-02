@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Загрузить защищенные паролем документы"
 "url": "/ru/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

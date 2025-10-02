@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके ऑनलाइन PDF फ़ाइलों को एनोटेट करना सीखें। कुशल एनोटेशन तकनीकों के साथ अपने दस्तावेज़ समीक्षा प्रक्रियाओं को सुव्यवस्थित करें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके URL से PDF को कैसे एनोटेट करें"
 "url": "/hi/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

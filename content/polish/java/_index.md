@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation dla samouczków Java"
 "title": "API adnotacji dokumentów Java | GroupDocs.Annotation dla samouczków i przykładów języka Java"
 "url": "/pl/java/"
+type: docs
 "weight": 10
 ---
 

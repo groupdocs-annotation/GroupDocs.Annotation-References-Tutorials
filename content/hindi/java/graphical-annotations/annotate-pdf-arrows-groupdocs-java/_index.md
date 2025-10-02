@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF दस्तावेज़ों में तीर एनोटेशन जोड़ने का तरीका जानें। विस्तृत चरणों के साथ दस्तावेज़ सहयोग और स्पष्टता बढ़ाएँ।"
 "title": "Java के लिए GroupDocs.Annotation का उपयोग करके तीर एनोटेशन के साथ PDF को एनोटेट कैसे करें"
 "url": "/hi/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

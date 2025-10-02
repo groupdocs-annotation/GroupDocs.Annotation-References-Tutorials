@@ -2,6 +2,7 @@
 "description": "Tutoriales completos para guardar documentos anotados con varias opciones usando GroupDocs.Annotation para .NET."
 "title": "Tutoriales para guardar documentos en GroupDocs.Annotation .NET"
 "url": "/es/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

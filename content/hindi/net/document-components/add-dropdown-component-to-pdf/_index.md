@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "पीडीएफ दस्तावेज़ में ड्रॉपडाउन घटक जोड़ें"
 "url": "/hi/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

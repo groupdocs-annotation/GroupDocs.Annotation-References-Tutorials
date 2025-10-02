@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Adicionar anotação de sublinhado de texto ao documento"
 "url": "/pt/net/unlocking-annotation-power/add-text-underline-annotation/"
+type: docs
 "weight": 27
 ---
 

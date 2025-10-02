@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 实现高级注释功能、自定义和专门功能的完整教程。"
 "title": "Java 高级 GroupDocs.Annotation 功能教程"
 "url": "/zh/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

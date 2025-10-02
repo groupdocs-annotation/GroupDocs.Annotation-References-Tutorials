@@ -3,6 +3,7 @@
 "description": "Java में शक्तिशाली GroupDocs.Annotation लाइब्रेरी का उपयोग करके इंटरैक्टिव ड्रॉपडाउन फ़ील्ड के साथ अपने PDF दस्तावेज़ों को बढ़ाने का तरीका जानें।"
 "title": "Java के लिए GroupDocs.Annotation का उपयोग करके इंटरैक्टिव PDF ड्रॉपडाउन बनाएं"
 "url": "/hi/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

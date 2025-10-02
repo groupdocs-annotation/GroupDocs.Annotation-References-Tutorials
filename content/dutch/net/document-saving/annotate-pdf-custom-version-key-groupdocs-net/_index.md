@@ -3,6 +3,7 @@
 "description": "Leer hoe u PDF's kunt annoteren en opslaan met aangepaste versiecodes met behulp van de krachtige GroupDocs.Annotation voor .NET-bibliotheek. Zo zorgt u ervoor dat elke documentiteratie eenduidig identificeerbaar is."
 "title": "Geannoteerde PDF's opslaan met aangepaste versiesleutels in .NET met behulp van GroupDocs.Annotation"
 "url": "/nl/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、注釈付きPDFドキュメントから特定のユーザーコメントを効率的に削除する方法を学びましょう。この包括的なガイドで、注釈管理を効率化しましょう。"
 "title": "GroupDocs.Annotation .NET を使用して PDF からユーザーの返信を削除する方法 - ステップバイステップガイド"
 "url": "/ja/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

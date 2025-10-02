@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ पूर्वावलोकन रिज़ॉल्यूशन सेट करें"
 "url": "/hi/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

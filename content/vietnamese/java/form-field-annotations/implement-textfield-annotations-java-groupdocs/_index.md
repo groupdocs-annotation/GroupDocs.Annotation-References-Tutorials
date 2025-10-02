@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách triển khai chú thích trường văn bản trong Java bằng GroupDocs.Annotation để tăng cường tính tương tác của tài liệu. Thực hiện theo hướng dẫn toàn diện này với hướng dẫn từng bước và các ứng dụng thực tế."
 "title": "Triển khai chú thích TextField trong Java bằng GroupDocs.Annotation&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

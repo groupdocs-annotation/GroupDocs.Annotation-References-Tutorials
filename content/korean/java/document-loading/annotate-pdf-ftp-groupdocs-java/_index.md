@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 FTP 서버에서 PDF 문서에 직접 주석을 추가하는 방법을 알아보세요. 이 단계별 가이드를 통해 문서 처리 워크플로를 간소화하세요."
 "title": "GroupDocs.Annotation for Java를 사용하여 FTP에서 PDF에 주석 달기&#58; 완벽한 가이드"
 "url": "/ko/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как создавать интерактивные кнопки PDF с ответами с помощью GroupDocs.Annotation для Java. Следуйте этому пошаговому руководству, чтобы улучшить интерактивность документа."
 "title": "Создание интерактивных кнопок PDF в Java с помощью GroupDocs.Annotation&#58; Полное руководство"
 "url": "/ru/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

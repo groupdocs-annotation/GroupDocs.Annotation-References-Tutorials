@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotationを使用してJavaドキュメントに下線注釈を追加および削除する方法を学びましょう。この詳細なガイドでドキュメント管理を強化しましょう。"
 "title": "GroupDocs を使用して Java で下線注釈を追加および削除する包括的なガイド"
 "url": "/ja/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

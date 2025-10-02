@@ -3,6 +3,7 @@
 "description": "जानें कि .NET के लिए GroupDocs.Annotation का उपयोग करके एनोटेट किए गए PDF दस्तावेज़ों से विशिष्ट उपयोगकर्ता उत्तरों को कुशलतापूर्वक कैसे हटाया जाए। इस व्यापक गाइड के साथ अपने एनोटेशन प्रबंधन को सुव्यवस्थित करें।"
 "title": "GroupDocs.Annotation .NET का उपयोग करके PDF से उपयोगकर्ता उत्तर कैसे निकालें - एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

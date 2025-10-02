@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメント内のテキスト注釈を追加、編集、管理するためのステップバイステップのチュートリアル。"
 "title": "GroupDocs.Annotation .NET のテキスト注釈チュートリアル"
 "url": "/ja/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

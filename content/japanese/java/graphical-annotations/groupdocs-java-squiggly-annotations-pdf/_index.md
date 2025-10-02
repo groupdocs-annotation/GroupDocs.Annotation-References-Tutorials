@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java を使用して PDF ドキュメントに波線注釈を追加し、ドキュメントのレビューとコラボレーションを強化する方法を学習します。"
 "title": "GroupDocs.Annotation for Java を使用して PDF に曲線注釈を追加する方法"
 "url": "/ja/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

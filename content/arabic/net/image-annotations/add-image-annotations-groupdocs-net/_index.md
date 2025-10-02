@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية دمج GroupDocs.Annotation في مشاريع .NET الخاصة بك لتحسين المستندات بإضافة تعليقات توضيحية على الصور. حسّن تفاعل المستخدمين وسهّل التعاون."
 "title": "إضافة تعليقات توضيحية للصور إلى المستندات باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

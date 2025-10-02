@@ -3,6 +3,7 @@
 "description": "Aprenda a recuperar eficientemente los formatos de archivo compatibles con GroupDocs.Annotation para .NET. Esta guía abarca la integración, la implementación y las aplicaciones prácticas."
 "title": "Cómo recuperar formatos de archivo compatibles con GroupDocs.Annotation para .NET&#58; una guía completa"
 "url": "/es/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

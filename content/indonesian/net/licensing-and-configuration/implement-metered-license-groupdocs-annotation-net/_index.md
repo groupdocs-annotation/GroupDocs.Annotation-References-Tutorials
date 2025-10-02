@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyiapkan dan mengelola lisensi terukur dengan GroupDocs.Annotation untuk .NET, memastikan kepatuhan dan fungsionalitas yang optimal."
 "title": "Menerapkan Lisensi Terukur di GroupDocs.Annotation untuk .NET&#58; Panduan Lengkap"
 "url": "/id/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

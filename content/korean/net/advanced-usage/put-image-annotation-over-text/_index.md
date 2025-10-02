@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "텍스트 위에 이미지 주석 넣기"
 "url": "/ko/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

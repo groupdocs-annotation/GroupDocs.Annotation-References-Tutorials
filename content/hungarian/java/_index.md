@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation Java oktatóanyagokhoz"
 "title": "Java dokumentum-annotációs API | GroupDocs.Annotation Java-hoz – oktatóanyagok és példák"
 "url": "/hu/java/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně spravovat anotace v Javě pomocí GroupDocs.Annotation. Tato příručka se zabývá načítáním, odebíráním a optimalizací pracovních postupů s dokumenty."
 "title": "Komplexní průvodce správou anotací v Javě s GroupDocs.Annotation"
 "url": "/cs/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

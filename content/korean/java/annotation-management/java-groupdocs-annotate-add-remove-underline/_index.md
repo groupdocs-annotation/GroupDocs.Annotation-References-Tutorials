@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 Java 문서에 밑줄 주석을 추가하고 제거하는 방법을 알아보세요. 이 자세한 가이드를 통해 문서 관리를 더욱 효율적으로 개선하세요."
 "title": "GroupDocs를 사용하여 Java에서 밑줄 주석 추가 및 제거&#58; 종합 가이드"
 "url": "/ko/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

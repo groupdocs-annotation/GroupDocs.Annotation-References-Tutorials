@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola versi dokumen secara efisien menggunakan GroupDocs.Annotation untuk .NET. Panduan ini mencakup pengaturan, implementasi, dan aplikasi praktis."
 "title": "Cara Menyimpan PDF sebagai Versi Baru Menggunakan GroupDocs.Annotation untuk .NET - Panduan Langkah demi Langkah"
 "url": "/id/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

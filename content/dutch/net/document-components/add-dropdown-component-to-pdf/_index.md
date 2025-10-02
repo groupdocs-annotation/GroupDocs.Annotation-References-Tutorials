@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Dropdown-component toevoegen aan PDF-document"
 "url": "/nl/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

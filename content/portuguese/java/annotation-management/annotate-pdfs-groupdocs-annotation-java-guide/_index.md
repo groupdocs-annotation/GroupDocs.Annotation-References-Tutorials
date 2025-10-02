@@ -3,6 +3,7 @@
 "description": "Aprenda a anotar documentos PDF com eficiência usando o GroupDocs.Annotation para Java. Este guia aborda a configuração, a adição de anotações e o salvamento de arquivos."
 "title": "Anotar PDFs com GroupDocs.Annotation para Java - Um guia completo"
 "url": "/pt/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/"
+type: docs
 "weight": 1
 ---
 

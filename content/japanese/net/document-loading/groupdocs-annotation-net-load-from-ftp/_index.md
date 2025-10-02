@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、FTP サーバーからドキュメントをシームレスに読み込む方法を学びましょう。この詳細なガイドで、ドキュメント管理ワークフローを強化しましょう。"
 "title": "GroupDocs.Annotation for .NET を使用した FTP サーバーからのドキュメントの読み込みと注釈付けの総合ガイド"
 "url": "/ja/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

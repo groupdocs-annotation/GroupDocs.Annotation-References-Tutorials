@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ρυθμίσετε αποτελεσματικά την αδειοδότηση GroupDocs.Annotation σε Java χρησιμοποιώντας το InputStream. Βελτιστοποιήστε τη ροή εργασίας σας και βελτιώστε την απόδοση των εφαρμογών με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Βελτιστοποιημένο GroupDocs.Annotation Αδειοδότηση Java&#58; Πώς να χρησιμοποιήσετε το InputStream για τη ρύθμιση άδειας χρήσης"
 "url": "/el/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

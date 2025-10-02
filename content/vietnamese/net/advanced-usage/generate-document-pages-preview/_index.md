@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tạo trang tài liệu Xem trước"
 "url": "/vi/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

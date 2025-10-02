@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके अपने PDF दस्तावेज़ों में इंटरैक्टिव टेक्स्ट फ़ील्ड एनोटेशन जोड़ने का तरीका जानें। दस्तावेज़ की अन्तरक्रियाशीलता बढ़ाने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF में टेक्स्ट फ़ील्ड एनोटेशन कैसे जोड़ें (ट्यूटोरियल)"
 "url": "/hi/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

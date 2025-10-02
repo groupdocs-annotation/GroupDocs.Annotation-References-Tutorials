@@ -3,6 +3,7 @@
 "description": "Ontdek hoe u uw PDF-documenten kunt verbeteren met interactieve vervolgkeuzemenu's met behulp van de krachtige GroupDocs.Annotation-bibliotheek in Java."
 "title": "Interactieve PDF-dropdowns maken met GroupDocs.Annotation voor Java"
 "url": "/nl/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

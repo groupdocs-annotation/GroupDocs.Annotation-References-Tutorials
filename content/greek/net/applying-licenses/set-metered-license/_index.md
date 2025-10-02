@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Ορισμός άδειας χρήσης με ογκοχρέωση"
 "url": "/el/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

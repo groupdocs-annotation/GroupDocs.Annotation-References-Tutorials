@@ -3,6 +3,7 @@
 "description": "Lär dig hur du genererar dokumentförhandsgranskningar utan anteckningar med GroupDocs.Annotation för .NET, vilket säkerställer integritet och tydlighet i samarbetsprojekt."
 "title": "Hur man skapar en ren dokumentförhandsvisning utan anteckningar med GroupDocs.Annotation .NET"
 "url": "/sv/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

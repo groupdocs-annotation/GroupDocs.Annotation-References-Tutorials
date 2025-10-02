@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять аннотации изображений в PDF-файлы с помощью GroupDocs.Annotation для Java. Оптимизируйте рабочие процессы с документами и улучшите совместную работу."
 "title": "Добавляйте аннотации изображений в PDF-файлы с помощью GroupDocs.Annotation Java — полное руководство"
 "url": "/ru/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

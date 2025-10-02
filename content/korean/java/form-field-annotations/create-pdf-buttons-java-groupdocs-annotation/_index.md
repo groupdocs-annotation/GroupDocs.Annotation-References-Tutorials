@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 답글이 포함된 대화형 PDF 버튼을 만드는 방법을 알아보세요. 이 단계별 가이드를 따라 문서의 상호 작용성을 향상시키세요."
 "title": "GroupDocs.Annotation&#58;을 사용하여 Java로 대화형 PDF 버튼 만들기 - 완벽한 가이드"
 "url": "/ko/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

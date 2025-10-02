@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 為 PDF 文件新增精確距離註解。本指南涵蓋設定、配置和實際應用。"
 "title": "使用 GroupDocs.Annotation for .NET 在 PDF 中實作距離註釋"
 "url": "/zh-hant/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách triển khai chú thích khoảng cách trong tài liệu Java bằng GroupDocs.Annotation. Hướng dẫn từng bước này bao gồm thiết lập, cấu hình và ứng dụng thực tế."
 "title": "Cách thêm chú thích khoảng cách trong Java với GroupDocs.Annotation&#58; Hướng dẫn từng bước"
 "url": "/vi/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 URL에서 PDF 문서에 직접 주석을 추가하는 방법을 알아보세요. 이 튜토리얼에서는 PDF를 효율적으로 로드하고, 주석을 추가하고, 저장하는 방법을 다룹니다."
 "title": "Java용 GroupDocs.Annotation을 사용하여 URL에서 PDF에 주석을 추가하는 방법 | 문서 주석 관리 튜토리얼"
 "url": "/ko/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

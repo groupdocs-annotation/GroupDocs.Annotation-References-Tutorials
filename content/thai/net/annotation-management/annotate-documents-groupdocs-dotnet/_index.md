@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มและอัปเดตคำอธิบายประกอบในเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation .NET ปรับปรุงการทำงานร่วมกันและการจัดการเอกสารด้วยคู่มือทีละขั้นตอนนี้"
 "title": "วิธีการใส่คำอธิบายประกอบเอกสารโดยใช้ GroupDocs.Annotation .NET คำแนะนำที่ครอบคลุม"
 "url": "/th/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

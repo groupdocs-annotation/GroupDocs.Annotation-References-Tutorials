@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αφαιρείτε αποτελεσματικά σχόλια από έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιστοποιήστε τις ροές εργασίας των εγγράφων σας και βελτιώστε τη σαφήνεια με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Αφαίρεση σχολίων από έγγραφα στο .NET χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

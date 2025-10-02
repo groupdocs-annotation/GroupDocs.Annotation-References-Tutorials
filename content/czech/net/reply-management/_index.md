@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro implementaci vláken komentářů, odpovědí a společných diskusí s GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro správu odpovědí v GroupDocs.Annotation .NET"
 "url": "/cs/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

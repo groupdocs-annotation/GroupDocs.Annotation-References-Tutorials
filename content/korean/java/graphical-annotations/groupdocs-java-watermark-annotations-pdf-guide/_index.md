@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 워터마크 주석을 추가하여 문서를 보호하는 방법을 알아보세요. 이 가이드에서는 설정, 사용자 지정 및 최적화 팁을 다룹니다."
 "title": "GroupDocs.Annotation Java를 사용하여 PDF에 워터마크 주석 구현하기 - 종합 가이드"
 "url": "/ko/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

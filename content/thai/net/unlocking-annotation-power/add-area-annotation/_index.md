@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายพื้นที่ลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

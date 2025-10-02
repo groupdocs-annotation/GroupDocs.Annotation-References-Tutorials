@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε αποτελεσματικά τις περιοχές σελίδων χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός καλύπτει την εγκατάσταση, τη ρύθμιση και τις βέλτιστες πρακτικές για την αποθήκευση συγκεκριμένων σελίδων."
 "title": "Κατακτήστε τη Διαχείριση Εύρους Σελίδας στο .NET με τις Αποδοτικές Τεχνικές Σχολιασμού του GroupDocs.Annotation"
 "url": "/el/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

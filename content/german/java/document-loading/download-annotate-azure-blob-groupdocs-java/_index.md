@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Dateien nahtlos aus Azure Blob Storage herunterladen und mit GroupDocs.Annotation für Java kommentieren. Optimieren Sie Ihren Dokumentenmanagement-Workflow mit diesem umfassenden Leitfaden."
 "title": "Herunterladen und Kommentieren von Azure Blob-Dateien mit GroupDocs.Annotation Java"
 "url": "/de/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

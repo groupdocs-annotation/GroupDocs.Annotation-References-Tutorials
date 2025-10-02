@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak yanıtlarla etkileşimli PDF düğmeleri oluşturmayı öğrenin. Belge etkileşimini geliştirmek için bu adım adım kılavuzu izleyin."
 "title": "GroupDocs.Annotation&#58; Kullanarak Java'da Etkileşimli PDF Düğmeleri Oluşturun&#58; Eksiksiz Bir Kılavuz"
 "url": "/tr/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

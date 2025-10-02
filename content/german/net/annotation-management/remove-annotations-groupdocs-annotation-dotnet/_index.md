@@ -3,6 +3,7 @@
 "description": "Erfahren Sie in diesem ausführlichen C#-Tutorial, wie Sie mithilfe der leistungsstarken GroupDocs.Annotation-API effizient Anmerkungen aus Ihren Dokumenten entfernen."
 "title": "So entfernen Sie Anmerkungen aus Dokumenten mit GroupDocs.Annotation für .NET"
 "url": "/de/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

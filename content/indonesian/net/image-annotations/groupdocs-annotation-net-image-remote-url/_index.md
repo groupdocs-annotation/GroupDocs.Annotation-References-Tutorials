@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi gambar dari URL jarak jauh ke dalam dokumen PDF menggunakan GroupDocs.Annotation for .NET. Sempurnakan alur kerja dokumen Anda dengan panduan lengkap ini."
 "title": "Menerapkan Anotasi Gambar dalam PDF Menggunakan GroupDocs.Annotation .NET dan URL Jarak Jauh"
 "url": "/id/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

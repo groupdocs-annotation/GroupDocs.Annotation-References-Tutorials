@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el hatékonyan PDF dokumentumokat területkiemelésekkel a hatékony GroupDocs.Annotation API for Java segítségével, amivel fokozhatja az együttműködést és a termelékenységet."
 "title": "PDF-ek megjegyzésekkel való ellátása Java-ban a GroupDocs.Annotation használatával"
 "url": "/hu/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

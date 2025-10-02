@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok dokumentum-előnézetek, bélyegképek és vizuális ábrázolások létrehozásához a GroupDocs.Annotation for Java segítségével."
 "title": "Dokumentum előnézeti oktatóanyagok a GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

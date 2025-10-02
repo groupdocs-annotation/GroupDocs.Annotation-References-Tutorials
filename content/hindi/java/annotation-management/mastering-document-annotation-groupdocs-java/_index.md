@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java का उपयोग करके दस्तावेज़ों को कुशलतापूर्वक एनोटेट करना सीखें। यह मार्गदर्शिका PDF को लोड करना, एनोटेट करना और Maven के साथ अपने Java वातावरण को अनुकूलित करना शामिल करती है।"
 "title": "जावा में दस्तावेज़ एनोटेशन में महारत हासिल करना&#58; GroupDocs.Annotation का उपयोग करके एक व्यापक गाइड"
 "url": "/hi/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณโดยเพิ่มส่วนประกอบแบบดรอปดาวน์แบบโต้ตอบโดยใช้ GroupDocs.Annotation สำหรับ .NET ปฏิบัติตามคำแนะนำทีละขั้นตอนนี้เพื่อปรับปรุงการป้อนข้อมูลของผู้ใช้และปรับปรุงฟังก์ชันการทำงานของเอกสาร"
 "title": "เพิ่มเมนูแบบดรอปดาวน์ลงในไฟล์ PDF ด้วย GroupDocs.Annotation สำหรับ .NET คำแนะนำที่ครอบคลุม"
 "url": "/th/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

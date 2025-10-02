@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して透かし注釈を追加し、ドキュメントを保護する方法を学びましょう。このガイドでは、設定、カスタマイズ、最適化のヒントを解説します。"
 "title": "GroupDocs.Annotation Java を使用した PDF への透かし注釈の実装 - 総合ガイド"
 "url": "/ja/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

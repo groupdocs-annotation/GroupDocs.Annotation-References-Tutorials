@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tải xuống tệp dễ dàng từ Azure Blob Storage và chú thích chúng bằng GroupDocs.Annotation for Java. Nâng cao quy trình quản lý tài liệu của bạn với hướng dẫn toàn diện này."
 "title": "Cách tải xuống và chú thích các tệp Azure Blob bằng GroupDocs.Annotation Java"
 "url": "/vi/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

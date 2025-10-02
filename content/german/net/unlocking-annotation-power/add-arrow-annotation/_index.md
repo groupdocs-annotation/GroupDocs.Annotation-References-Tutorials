@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Pfeilanmerkung zum Dokument hinzufügen"
 "url": "/de/net/unlocking-annotation-power/add-arrow-annotation/"
+type: docs
 "weight": 11
 ---
 

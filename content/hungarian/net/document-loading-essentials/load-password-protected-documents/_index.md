@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Jelszóval védett dokumentumok betöltése"
 "url": "/hu/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

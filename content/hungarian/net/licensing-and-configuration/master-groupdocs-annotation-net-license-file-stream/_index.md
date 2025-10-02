@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan állíthat be és alkalmazhat licencet a GroupDocs.Annotation .NET-hez fájlfolyamok használatával. Használja ki az összes funkciót ezzel az átfogó útmutatóval."
 "title": "Master GroupDocs.Annotation .NET&#58; Licenc beállítása File Stream használatával C#-ban"
 "url": "/hu/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách triển khai siêu liên kết và chú thích được liên kết trong tài liệu bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn chú thích liên kết cho GroupDocs.Annotation Java"
 "url": "/vi/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

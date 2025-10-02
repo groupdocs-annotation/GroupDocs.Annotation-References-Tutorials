@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 .NET 프로젝트에 통합하여 이미지 주석으로 문서를 더욱 풍부하게 만드는 방법을 알아보세요. 사용자 참여도를 높이고 협업을 간소화하세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 문서에 이미지 주석 추가"
 "url": "/ko/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

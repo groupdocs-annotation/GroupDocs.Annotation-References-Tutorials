@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thay đổi chất lượng hình ảnh"
 "url": "/vi/net/advanced-usage/change-image-quality/"
+type: docs
 "weight": 10
 ---
 

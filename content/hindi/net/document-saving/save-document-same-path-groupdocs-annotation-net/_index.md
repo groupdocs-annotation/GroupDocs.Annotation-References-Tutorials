@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET में मूल पथ का उपयोग करके एनोटेट किए गए दस्तावेज़ों को सहेजना सीखें, जिससे सुव्यवस्थित फ़ाइल प्रबंधन और वर्कफ़्लो दक्षता सुनिश्चित हो सके।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके मूल पथ पर दस्तावेज़ों को कैसे सहेजें"
 "url": "/hi/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

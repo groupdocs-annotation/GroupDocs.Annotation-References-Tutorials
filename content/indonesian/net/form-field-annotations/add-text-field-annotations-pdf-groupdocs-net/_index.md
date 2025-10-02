@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi bidang teks interaktif ke dokumen PDF Anda menggunakan GroupDocs.Annotation for .NET. Ikuti panduan langkah demi langkah ini untuk meningkatkan interaktivitas dokumen."
 "title": "Cara Menambahkan Anotasi Kolom Teks dalam PDF Menggunakan GroupDocs.Annotation untuk .NET (Tutorial)"
 "url": "/id/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

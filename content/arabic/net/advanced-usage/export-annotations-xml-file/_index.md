@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تصدير التعليقات التوضيحية من ملف XML"
 "url": "/ar/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

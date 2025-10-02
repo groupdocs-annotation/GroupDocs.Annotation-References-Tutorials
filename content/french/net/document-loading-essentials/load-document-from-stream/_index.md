@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Charger un document à partir du flux"
 "url": "/fr/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

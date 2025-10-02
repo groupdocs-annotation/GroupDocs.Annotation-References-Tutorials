@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan dan memperbarui anotasi dalam file PDF dengan mudah menggunakan GroupDocs.Annotation for Java. Tingkatkan pengelolaan dokumen Anda dengan panduan praktis ini."
 "title": "Cara Membuat Anotasi pada PDF Menggunakan GroupDocs.Annotation untuk Java&#58; Panduan Lengkap"
 "url": "/id/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

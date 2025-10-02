@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 从 FTP 服务器无缝加载文档。本指南将帮助您优化文档管理工作流程。"
 "title": "使用 GroupDocs.Annotation for .NET 从 FTP 服务器加载和注释文档——综合指南"
 "url": "/zh/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a usar GroupDocs.Annotation para Java para añadir anotaciones de área y elipse a sus PDF. Impulse la colaboración con nuestra guía paso a paso."
 "title": "Guía completa para la anotación de PDF en Java con GroupDocs&#58; mejore la colaboración y la gestión de documentos"
 "url": "/es/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

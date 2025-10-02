@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tambahkan Anotasi Tautan ke Dokumen"
 "url": "/id/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

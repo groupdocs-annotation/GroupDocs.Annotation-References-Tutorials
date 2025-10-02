@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά βίντεο για την πρόσβαση σε μεταδεδομένα εγγράφων, πληροφορίες σελίδας και ιδιότητες εγγράφων με το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά βίντεο πληροφοριών εγγράφου για το GroupDocs.Annotation Java"
 "url": "/el/java/document-information/"
+type: docs
 "weight": 12
 ---
 

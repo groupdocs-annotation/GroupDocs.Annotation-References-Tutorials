@@ -2,6 +2,7 @@
 "description": "Tutoriais passo a passo para adicionar, editar e gerenciar anotações de texto em documentos usando o GroupDocs.Annotation for .NET."
 "title": "Tutoriais de anotação de texto para GroupDocs.Annotation .NET"
 "url": "/pt/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

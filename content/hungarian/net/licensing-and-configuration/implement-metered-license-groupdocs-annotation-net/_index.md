@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan állíthat be és kezelhet mért licenceket a GroupDocs.Annotation for .NET segítségével, biztosítva a megfelelőséget és az optimális funkcionalitást."
 "title": "Mért licenc implementálása a GroupDocs.Annotation for .NET-ben – Átfogó útmutató"
 "url": "/hu/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

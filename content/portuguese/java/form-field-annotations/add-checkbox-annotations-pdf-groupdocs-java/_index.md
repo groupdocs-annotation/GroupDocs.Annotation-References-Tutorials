@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus documentos PDF com anotações interativas de caixas de seleção usando o GroupDocs.Annotation para Java. Siga este guia passo a passo."
 "title": "Como adicionar anotações de caixa de seleção a PDFs usando GroupDocs.Annotation para Java"
 "url": "/pt/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách truy xuất hiệu quả các định dạng tệp được hỗ trợ bằng GroupDocs.Annotation cho .NET. Hướng dẫn này bao gồm tích hợp, triển khai và ứng dụng thực tế."
 "title": "Cách lấy các định dạng tệp được hỗ trợ với GroupDocs.Annotation cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

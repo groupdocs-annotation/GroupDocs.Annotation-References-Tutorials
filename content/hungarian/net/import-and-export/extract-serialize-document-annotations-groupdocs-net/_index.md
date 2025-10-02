@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan kinyerhet megjegyzéseket dokumentumokból, és hogyan szerializálhatja azokat XML-be a GroupDocs.Annotation for .NET segítségével. Turbózza fel dokumentumkezelési munkafolyamatát még ma!"
 "title": "Hogyan lehet kinyerni és szerializálni annotációkat .NET-ben a GroupDocs.Annotation használatával"
 "url": "/hu/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

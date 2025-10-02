@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Lägg till understrykningsanteckning för text i dokument"
 "url": "/sv/net/unlocking-annotation-power/add-text-underline-annotation/"
+type: docs
 "weight": 27
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استرجاع محتوى نصي من المستندات بكفاءة باستخدام GroupDocs.Annotation لـ .NET. اتبع هذا الدليل خطوة بخطوة لتحسين قدراتك في معالجة المستندات."
 "title": "استرداد محتوى نص المستند باستخدام GroupDocs.Annotation لـ .NET - دليل خطوة بخطوة"
 "url": "/ar/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

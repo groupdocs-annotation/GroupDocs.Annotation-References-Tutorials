@@ -3,6 +3,7 @@
 "description": "Tự động hóa chú thích PDF với GroupDocs.Annotation cho .NET. Tìm hiểu cách thêm chú thích khu vực bằng C# trong hướng dẫn chi tiết từng bước này."
 "title": "Cách Thêm Chú Thích Khu Vực Vào PDF Sử Dụng GroupDocs.Annotation Cho .NET&#58; Hướng Dẫn Từng Bước"
 "url": "/vi/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

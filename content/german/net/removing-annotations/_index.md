@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Entfernen von Anmerkungen"
 "url": "/de/net/removing-annotations/"
+type: docs
 "weight": 25
 ---
 

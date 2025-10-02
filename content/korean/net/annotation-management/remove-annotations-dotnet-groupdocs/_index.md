@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서에서 주석을 효율적으로 제거하는 방법을 알아보세요. 이 포괄적인 가이드를 통해 문서 워크플로를 간소화하고 명확성을 향상시키세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 문서의 주석 제거"
 "url": "/ko/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

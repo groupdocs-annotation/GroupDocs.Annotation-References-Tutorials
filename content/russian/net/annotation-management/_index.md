@@ -2,6 +2,7 @@
 "description": "Полные руководства по добавлению, удалению, обновлению и управлению аннотациями в документах с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по управлению аннотациями для GroupDocs.Annotation .NET"
 "url": "/ru/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

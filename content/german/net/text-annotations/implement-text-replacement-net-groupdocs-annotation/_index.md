@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Textersetzungsanmerkungen in Ihren .NET-Anwendungen implementieren. Verbessern Sie mühelos die Lesbarkeit und Funktionalität Ihrer Dokumente."
 "title": "So implementieren Sie Textersetzung in .NET mit GroupDocs.Annotation für effiziente Dokumentannotation"
 "url": "/de/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

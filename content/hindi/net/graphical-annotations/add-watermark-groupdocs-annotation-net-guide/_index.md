@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके वॉटरमार्क जोड़ना सीखें। यह मार्गदर्शिका सेटअप, चरण-दर-चरण कार्यान्वयन और दस्तावेज़ों को सुरक्षित और ब्रांडिंग करने के सर्वोत्तम तरीकों को कवर करती है।"
 "title": ".NET में GroupDocs.Annotation के साथ वॉटरमार्क जोड़ें लागू करें दस्तावेज़ सुरक्षा और ब्रांडिंग के लिए एक व्यापक गाइड"
 "url": "/hi/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

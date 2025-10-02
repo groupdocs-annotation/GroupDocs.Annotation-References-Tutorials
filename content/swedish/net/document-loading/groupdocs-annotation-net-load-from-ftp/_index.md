@@ -3,6 +3,7 @@
 "description": "Lär dig hur du sömlöst laddar dokument från FTP-servrar med GroupDocs.Annotation för .NET. Förbättra ditt dokumenthanteringsarbetsflöde med den här detaljerade guiden."
 "title": "Ladda och kommentera dokument från FTP-servrar med GroupDocs.Annotation för .NET – en omfattande guide"
 "url": "/sv/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

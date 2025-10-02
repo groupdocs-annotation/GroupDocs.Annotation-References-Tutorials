@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het instellen van licenties, configureren van opties en beheren van GroupDocs.Annotation in .NET-toepassingen."
 "title": "GroupDocs.Annotation licentie- en configuratiehandleidingen voor .NET"
 "url": "/nl/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

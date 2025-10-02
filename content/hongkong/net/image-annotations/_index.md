@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 在文件中新增和管理影像註解的逐步教學。"
 "title": "GroupDocs.Annotation .NET 影像註解教學"
 "url": "/zh-hant/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

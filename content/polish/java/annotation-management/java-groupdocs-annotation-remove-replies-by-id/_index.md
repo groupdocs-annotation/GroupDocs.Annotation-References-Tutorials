@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak usuwać odpowiedzi z adnotacji w dokumentach za pomocą GroupDocs.Annotation for Java API. Ulepsz zarządzanie dokumentami dzięki temu przewodnikowi krok po kroku."
 "title": "Jak usunąć odpowiedzi według ID w Javie za pomocą API GroupDocs.Annotation"
 "url": "/pl/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

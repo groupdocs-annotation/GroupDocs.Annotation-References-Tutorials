@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menerapkan hyperlink dan anotasi tertaut dalam dokumen dengan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Anotasi Tautan untuk GroupDocs.Annotation .NET"
 "url": "/id/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

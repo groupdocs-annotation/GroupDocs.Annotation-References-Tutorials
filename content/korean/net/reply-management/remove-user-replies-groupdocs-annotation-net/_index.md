@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 주석이 달린 PDF 문서에서 특정 사용자 답변을 효율적으로 제거하는 방법을 알아보세요. 이 포괄적인 가이드를 통해 주석 관리를 간소화하세요."
 "title": "GroupDocs.Annotation .NET을 사용하여 PDF에서 사용자 응답을 제거하는 방법 - 단계별 가이드"
 "url": "/ko/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

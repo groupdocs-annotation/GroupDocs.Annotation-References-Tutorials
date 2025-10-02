@@ -3,6 +3,7 @@
 "description": "Behärska länkannoteringar i Java med GroupDocs. Lär dig konfiguration, initialisering och anpassning för att förbättra dokumentinteraktivitet."
 "title": "Implementera länkannoteringar i Java med GroupDocs – en omfattande guide"
 "url": "/sv/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

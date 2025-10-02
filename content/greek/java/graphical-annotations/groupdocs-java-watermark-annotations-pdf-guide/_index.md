@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προστατεύετε τα έγγραφά σας προσθέτοντας σχολιασμούς υδατογραφήματος χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτός ο οδηγός καλύπτει συμβουλές ρύθμισης, προσαρμογής και βελτιστοποίησης."
 "title": "Υλοποίηση σχολίων υδατογραφήματος σε PDF με το GroupDocs.Annotation Java, ένας ολοκληρωμένος οδηγός"
 "url": "/el/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

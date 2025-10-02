@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation for Java का उपयोग करके वॉटरमार्क एनोटेशन जोड़कर अपने दस्तावेज़ों को कैसे सुरक्षित रखें। यह मार्गदर्शिका सेटअप, अनुकूलन और अनुकूलन युक्तियों को कवर करती है।"
 "title": "GroupDocs.Annotation Java&#58; के साथ PDF में वॉटरमार्क एनोटेशन लागू करना एक व्यापक गाइड"
 "url": "/hi/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

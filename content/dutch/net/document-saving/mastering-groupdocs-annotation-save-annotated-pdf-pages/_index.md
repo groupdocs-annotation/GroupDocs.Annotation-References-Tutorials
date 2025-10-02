@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt alleen geannoteerde pagina's van een PDF kunt opslaan met GroupDocs.Annotation voor .NET. Verbeter documentbeheer en samenwerking met deze gedetailleerde handleiding."
 "title": "Geannoteerde pagina's in PDF opslaan met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

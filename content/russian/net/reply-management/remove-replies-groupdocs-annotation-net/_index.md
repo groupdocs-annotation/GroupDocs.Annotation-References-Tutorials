@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно удалять ответы из аннотированных документов с помощью GroupDocs.Annotation для .NET. Это руководство охватывает настройку, манипуляцию и практическое применение."
 "title": "Удаление ответов из аннотированных документов с помощью GroupDocs.Annotation для .NET&#58; Пошаговое руководство"
 "url": "/ru/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

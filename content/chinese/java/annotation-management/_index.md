@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 在文档中添加、删除、更新和管理注释的完整教程。"
 "title": "GroupDocs.Annotation Java 注释管理教程"
 "url": "/zh/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

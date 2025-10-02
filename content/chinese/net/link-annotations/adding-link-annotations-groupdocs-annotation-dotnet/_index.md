@@ -3,6 +3,7 @@
 "description": "了解如何使用强大的 GroupDocs.Annotation 库添加交互式链接注释，从而增强您的 .NET 应用程序。按照我们的分步指南，立即提升文档交互性。"
 "title": "如何使用 GroupDocs.Annotation for .NET 在文档中添加链接注释 | 开发人员指南"
 "url": "/zh/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a jegyzetekkel ellátott dokumentumok mentéséhez, különféle lehetőségekkel a GroupDocs.Annotation for .NET használatával."
 "title": "Dokumentummentési oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

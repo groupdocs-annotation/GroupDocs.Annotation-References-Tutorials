@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a dokumentumokban található jegyzetek hozzáadásáról, eltávolításáról, frissítéséről és kezeléséről a GroupDocs.Annotation for .NET használatával."
 "title": "Jegyzetkezelési oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

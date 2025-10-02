@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、注釈の返信を効率的に管理する方法を学びましょう。このガイドでは、統合、返信の追加、そして実用的なユースケースについて説明します。"
 "title": "GroupDocs.Annotation を使用して .NET で注釈返信管理を実装するためのガイド"
 "url": "/ja/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

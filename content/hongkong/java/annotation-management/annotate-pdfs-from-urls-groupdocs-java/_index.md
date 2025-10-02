@@ -3,6 +3,7 @@
 "description": "學習如何使用 GroupDocs.Annotation for Java 直接從 URL 為 PDF 文件新增註解。本教學將講解如何有效率地載入、註解和保存 PDF。"
 "title": "如何使用 GroupDocs.Annotation for Java 透過 URL 註解 PDF | 文件註解管理教學課程"
 "url": "/zh-hant/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

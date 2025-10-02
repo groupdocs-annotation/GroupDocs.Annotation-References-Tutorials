@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "स्ट्रीम से दस्तावेज़ लोड करें"
 "url": "/hi/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

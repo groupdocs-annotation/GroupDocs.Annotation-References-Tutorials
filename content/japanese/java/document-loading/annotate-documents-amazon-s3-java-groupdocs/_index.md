@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation を使用して、Amazon S3 に保存されているドキュメントを Java で効率的に読み込み、注釈を付ける方法を学びます。このガイドでは、統合、AWS SDK の使用方法、パフォーマンスの最適化について説明します。"
 "title": "Java を使用して Amazon S3 からドキュメントを読み込み、注釈を付ける - GroupDocs.Annotation 統合ガイド"
 "url": "/ja/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

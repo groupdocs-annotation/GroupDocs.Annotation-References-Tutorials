@@ -3,6 +3,7 @@
 "description": "अपने Java अनुप्रयोगों के लिए GroupDocs.Annotation लाइसेंस को सेट अप और कॉन्फ़िगर करना सीखें, जिससे आसानी से पूर्ण सुविधाएँ प्राप्त हों।"
 "title": "Java में GroupDocs.Annotation लाइसेंस सेट करना एक व्यापक गाइड"
 "url": "/hi/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 從各種來源載入文件的逐步教學。"
 "title": "GroupDocs.Annotation .NET 文件載入教學課程"
 "url": "/zh-hant/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

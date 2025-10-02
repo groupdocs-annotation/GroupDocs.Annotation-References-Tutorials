@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы, добавив интерактивные аннотации с многоточием, используя API GroupDocs.Annotation .NET. Это руководство содержит пошаговые инструкции для разработчиков."
 "title": "Как добавлять аннотации в виде эллипса в PDF-файлы с помощью API GroupDocs.Annotation .NET"
 "url": "/ru/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

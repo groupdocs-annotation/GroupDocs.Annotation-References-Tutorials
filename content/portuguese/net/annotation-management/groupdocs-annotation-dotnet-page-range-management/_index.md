@@ -3,6 +3,7 @@
 "description": "Aprenda a gerenciar intervalos de páginas com eficiência usando o GroupDocs.Annotation para .NET. Este guia aborda a instalação, a configuração e as práticas recomendadas para salvar páginas específicas."
 "title": "Dominando o gerenciamento de intervalos de páginas em .NET com GroupDocs.Annotation - Técnicas de anotação eficientes"
 "url": "/pt/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

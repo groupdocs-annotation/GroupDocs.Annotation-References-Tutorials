@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": ".NET में एनोटेशन हटाएँ"
 "url": "/hi/net/removing-annotations/remove-annotations/"
+type: docs
 "weight": 10
 ---
 

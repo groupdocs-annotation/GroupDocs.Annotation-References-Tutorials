@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně odstraňovat odpovědi konkrétních uživatelů z anotovaných PDF dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Zjednodušte si správu anotací s tímto komplexním průvodcem."
 "title": "Jak odstranit uživatelské odpovědi z PDF souborů pomocí GroupDocs.Annotation .NET – Podrobný návod"
 "url": "/cs/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

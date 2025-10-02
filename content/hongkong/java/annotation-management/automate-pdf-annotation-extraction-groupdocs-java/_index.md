@@ -3,6 +3,7 @@
 "description": "學習使用 GroupDocs.Annotation for Java 自動從 PDF 中提取註釋，節省時間並減少錯誤。"
 "title": "使用 GroupDocs for Java 自動擷取 PDF 註解－綜合指南"
 "url": "/zh-hant/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

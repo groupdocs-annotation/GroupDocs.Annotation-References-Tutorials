@@ -3,6 +3,7 @@
 "description": "Leer hoe u specifieke gebruikersreacties efficiënt uit geannoteerde PDF-documenten verwijdert met GroupDocs.Annotation voor .NET. Stroomlijn uw annotatiebeheer met deze uitgebreide handleiding."
 "title": "Gebruikersreacties uit PDF's verwijderen met GroupDocs.Annotation.NET&#58; een stapsgewijze handleiding"
 "url": "/nl/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET'i kullanarak belge işleme iş akışınıza özel yazı tiplerini nasıl entegre edeceğinizi öğrenin. Hassas yazı tipi stiliyle açıklamalarınızı geliştirin."
 "title": "GroupDocs.Annotation for .NET'te Özel Yazı Tipleri Nasıl Yüklenir? Kapsamlı Bir Kılavuz"
 "url": "/tr/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att komma åt dokumentmetadata, sidinformation och dokumentegenskaper med GroupDocs.Annotation för Java."
 "title": "Handledningar om dokumentinformation för GroupDocs.Annotation Java"
 "url": "/sv/java/document-information/"
+type: docs
 "weight": 12
 ---
 

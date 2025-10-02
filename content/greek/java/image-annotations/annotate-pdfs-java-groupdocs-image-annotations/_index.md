@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς εικόνας σε PDF χρησιμοποιώντας το GroupDocs.Annotation για Java. Βελτιστοποιήστε τις ροές εργασίας των εγγράφων σας και βελτιώστε τη συνεργασία."
 "title": "Προσθήκη σχολίων εικόνας σε PDF με το GroupDocs.Annotation Java - Ένα πλήρες σεμινάριο"
 "url": "/el/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

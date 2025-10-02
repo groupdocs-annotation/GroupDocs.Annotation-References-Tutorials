@@ -3,6 +3,7 @@
 "description": "この包括的なガイドでは、GroupDocs.Annotation for .NET を使用して ID 別に注釈を削除し、ドキュメント管理プロセスを最適化する方法を学習します。"
 "title": "GroupDocs.Annotation .NET を使用して PDF から注釈を効率的に削除する方法"
 "url": "/ja/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

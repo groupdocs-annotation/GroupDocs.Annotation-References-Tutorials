@@ -3,6 +3,7 @@
 "description": "शक्तिशाली GroupDocs.Annotation for .NET लाइब्रेरी का उपयोग करके कस्टम संस्करण कुंजियों के साथ PDF को एनोटेट और सेव करना सीखें, यह सुनिश्चित करते हुए कि प्रत्येक दस्तावेज़ पुनरावृत्ति विशिष्ट रूप से पहचान योग्य है।"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में कस्टम संस्करण कुंजियों के साथ एनोटेटेड PDF सहेजें"
 "url": "/hi/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

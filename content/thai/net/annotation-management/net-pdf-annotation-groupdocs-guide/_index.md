@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการสร้างคำอธิบายประกอบ PDF ของ .NET ด้วย GroupDocs.Annotation คู่มือนี้ครอบคลุมถึงการเริ่มต้น การประมวลผลหน้า การแปลง และการบันทึกเอกสารที่มีคำอธิบายประกอบอย่างมีประสิทธิภาพ"
 "title": "คู่มือครอบคลุมสำหรับการสร้างคำอธิบายประกอบ PDF ของ .NET โดยใช้ GroupDocs.Annotation เพื่อการจัดการเอกสารที่มีประสิทธิภาพยิ่งขึ้น"
 "url": "/th/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

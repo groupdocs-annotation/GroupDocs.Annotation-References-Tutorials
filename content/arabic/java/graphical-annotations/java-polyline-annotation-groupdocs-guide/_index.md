@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين تطبيقات جافا لديك بإضافة تعليقات توضيحية متعددة الخطوط باستخدام مكتبة GroupDocs.Annotation. مثالية لتحسين وضوح المستندات وتفاعليتها."
 "title": "تنفيذ التعليقات التوضيحية متعددة الخطوط في Java باستخدام مكتبة GroupDocs.Annotation"
 "url": "/ar/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

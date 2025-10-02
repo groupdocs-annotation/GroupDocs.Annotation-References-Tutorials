@@ -3,6 +3,7 @@
 "description": "Java 애플리케이션에 대한 GroupDocs.Annotation 라이선스를 설정하고 구성하는 방법을 알아보고, 손쉽게 모든 기능을 활용하세요."
 "title": "Java에서 GroupDocs.Annotation 라이선스 설정하기&#58; 종합 가이드"
 "url": "/ko/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

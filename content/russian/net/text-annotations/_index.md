@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по добавлению, редактированию и управлению текстовыми аннотациями в документах с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по текстовым аннотациям для GroupDocs.Annotation .NET"
 "url": "/ru/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

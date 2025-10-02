@@ -3,6 +3,7 @@
 "description": "Automatizujte anotace PDF pomocí GroupDocs.Annotation pro .NET. V tomto podrobném návodu se naučte, jak přidávat anotace oblastí pomocí C#."
 "title": "Jak přidat anotace oblastí do PDF pomocí GroupDocs.Annotation pro .NET – Podrobný návod"
 "url": "/cs/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

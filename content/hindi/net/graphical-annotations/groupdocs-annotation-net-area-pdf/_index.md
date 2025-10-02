@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ PDF एनोटेशन को स्वचालित करें। इस विस्तृत, चरण-दर-चरण मार्गदर्शिका में C# का उपयोग करके क्षेत्र एनोटेशन जोड़ने का तरीका जानें।"
 "title": "GroupDocs का उपयोग करके PDF में एरिया एनोटेशन कैसे जोड़ें. .NET के लिए एनोटेशन एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

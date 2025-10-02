@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation for Java का उपयोग करके खोज योग्य टेक्स्ट एनोटेशन जोड़कर अपने PDF दस्तावेज़ों को कैसे बेहतर बनाया जाए। यह मार्गदर्शिका चरण-दर-चरण निर्देश और व्यावहारिक सुझाव प्रदान करती है।"
 "title": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF में खोज टेक्स्ट एनोटेशन कैसे जोड़ें"
 "url": "/hi/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

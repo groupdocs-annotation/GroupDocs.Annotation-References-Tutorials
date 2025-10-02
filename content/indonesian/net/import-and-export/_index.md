@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk mengimpor dan mengekspor anotasi antara dokumen dan file XML menggunakan GroupDocs.Annotation for .NET."
 "title": "Tutorial Impor dan Ekspor Anotasi untuk GroupDocs.Annotation .NET"
 "url": "/id/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tải, sửa đổi và quản lý chú thích trong PDF bằng GroupDocs.Annotation for Java. Tối ưu hóa việc quản lý tài liệu của bạn với hướng dẫn toàn diện của chúng tôi."
 "title": "Master GroupDocs.Annotation cho Java&#58; Chỉnh sửa chú thích PDF hiệu quả"
 "url": "/vi/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

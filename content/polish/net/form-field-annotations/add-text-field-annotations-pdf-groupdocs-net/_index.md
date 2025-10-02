@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać interaktywne adnotacje pól tekstowych do dokumentów PDF za pomocą GroupDocs.Annotation dla .NET. Postępuj zgodnie z tym przewodnikiem krok po kroku, aby zwiększyć interaktywność dokumentu."
 "title": "Jak dodawać adnotacje pól tekstowych w plikach PDF za pomocą GroupDocs.Annotation dla .NET (samouczek)"
 "url": "/pl/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

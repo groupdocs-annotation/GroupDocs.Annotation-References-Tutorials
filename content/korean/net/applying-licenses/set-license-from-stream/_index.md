@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "스트림에서 라이센스 설정"
 "url": "/ko/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

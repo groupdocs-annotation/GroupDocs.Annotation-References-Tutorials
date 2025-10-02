@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java API का उपयोग करके दस्तावेज़ों में एनोटेशन से उत्तरों को हटाने का तरीका जानें। इस चरण-दर-चरण मार्गदर्शिका के साथ अपने दस्तावेज़ प्रबंधन को बेहतर बनाएँ।"
 "title": "GroupDocs.Annotation API का उपयोग करके Java में ID द्वारा उत्तर कैसे निकालें"
 "url": "/hi/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

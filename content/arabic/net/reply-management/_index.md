@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لتنفيذ سلاسل التعليقات والردود والمناقشات التعاونية باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس تعليمية حول إدارة الردود لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

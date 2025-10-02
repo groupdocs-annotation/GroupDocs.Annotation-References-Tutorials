@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "URL에서 문서 로드"
 "url": "/ko/net/document-loading-essentials/load-document-from-url/"
+type: docs
 "weight": 15
 ---
 

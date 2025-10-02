@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してPDF注釈を効率的に保存する方法を学びましょう。詳細なガイドでドキュメント管理プロセスを効率化しましょう。"
 "title": "GroupDocs.Annotation for .NET で PDF 注釈を効率的に保存"
 "url": "/ja/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

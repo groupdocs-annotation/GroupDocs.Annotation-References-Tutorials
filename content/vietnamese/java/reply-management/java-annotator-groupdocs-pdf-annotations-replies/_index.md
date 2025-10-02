@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý hiệu quả các chú thích và trả lời PDF bằng GroupDocs.Annotation trong các ứng dụng Java của bạn. Hợp lý hóa việc cộng tác tài liệu với hướng dẫn toàn diện của chúng tôi."
 "title": "Chú thích PDF Java&#58; Tạo và quản lý chú thích & trả lời với GroupDocs.Annotation cho Java"
 "url": "/vi/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

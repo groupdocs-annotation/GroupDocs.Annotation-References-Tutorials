@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hämtar PDF-siddimensioner med GroupDocs.Annotation för .NET. Följ den här guiden för att förbättra dina dokumenthanteringsprogram."
 "title": "Så här hämtar du PDF-siddimensioner med GroupDocs.Annotation för .NET"
 "url": "/sv/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

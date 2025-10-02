@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 PDF 파일에 온라인으로 주석을 추가하는 방법을 알아보세요. 효율적인 주석 기술을 통해 문서 검토 프로세스를 간소화하세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 URL에서 PDF에 주석을 추가하는 방법"
 "url": "/ko/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

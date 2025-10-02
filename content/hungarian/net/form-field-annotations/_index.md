@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatjuk, hogyan adhatunk hozzá űrlapmezőket és interaktív komponenseket dokumentumokhoz a GroupDocs.Annotation for .NET használatával."
 "title": "Űrlapmező-jegyzetkészítési oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "從串流設定許可證"
 "url": "/zh-hant/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

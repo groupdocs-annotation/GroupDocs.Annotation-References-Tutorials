@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Alle versiesleutels op het document ophalen"
 "url": "/nl/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

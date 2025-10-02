@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att läsa in dokument från olika källor med GroupDocs.Annotation för Java."
 "title": "Handledningar för dokumentinläsning för GroupDocs.Annotation Java"
 "url": "/sv/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

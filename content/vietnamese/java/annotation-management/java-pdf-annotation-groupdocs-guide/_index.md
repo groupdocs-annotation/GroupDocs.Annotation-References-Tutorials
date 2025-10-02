@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách sử dụng GroupDocs.Annotation for Java để thêm chú thích diện tích và hình elip vào tệp PDF của bạn. Tăng cường cộng tác với hướng dẫn từng bước của chúng tôi."
 "title": "Hướng dẫn đầy đủ về chú thích PDF Java bằng GroupDocs&#58; Nâng cao sự cộng tác và quản lý tài liệu"
 "url": "/vi/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

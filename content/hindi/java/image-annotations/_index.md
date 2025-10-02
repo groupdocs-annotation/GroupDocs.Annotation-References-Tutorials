@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java का उपयोग करके दस्तावेज़ों में छवि एनोटेशन जोड़ने और प्रबंधित करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए छवि एनोटेशन ट्यूटोरियल"
 "url": "/hi/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

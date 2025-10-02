@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tạo bản xem trước tài liệu ngắn gọn và có liên quan từ các cột bảng tính cụ thể bằng GroupDocs.Annotation cho .NET. Hoàn hảo để hợp lý hóa quy trình làm việc trong phân tích dữ liệu và quản lý CNTT."
 "title": "Tạo bản xem trước trang tính Excel có mục tiêu bằng GroupDocs.Annotation .NET"
 "url": "/vi/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

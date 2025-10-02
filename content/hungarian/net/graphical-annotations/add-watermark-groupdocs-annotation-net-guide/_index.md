@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá vízjeleket a GroupDocs.Annotation for .NET segítségével. Ez az útmutató a dokumentumok biztonságossá tételének és arculatának beállítását, lépésről lépésre történő megvalósítását és a bevált gyakorlatokat ismerteti."
 "title": "Vízjel hozzáadása a GroupDocs.Annotation segítségével .NET-ben – Átfogó útmutató a dokumentumbiztonsághoz és a márkaépítéshez"
 "url": "/hu/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

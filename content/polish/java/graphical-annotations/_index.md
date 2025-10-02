@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące dodawania kształtów, strzałek, obrazów i elementów graficznych do dokumentów za pomocą GroupDocs.Annotation dla Java."
 "title": "Samouczki graficznej adnotacji dla GroupDocs.Annotation Java"
 "url": "/pl/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

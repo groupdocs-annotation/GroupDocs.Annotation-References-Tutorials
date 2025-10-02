@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη στοιχείου αναπτυσσόμενης λίστας σε έγγραφο PDF"
 "url": "/el/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

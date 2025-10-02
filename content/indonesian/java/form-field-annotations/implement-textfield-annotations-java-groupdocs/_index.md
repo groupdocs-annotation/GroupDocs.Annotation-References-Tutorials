@@ -3,6 +3,7 @@
 "description": "Pelajari cara menerapkan anotasi bidang teks di Java menggunakan GroupDocs.Annotation untuk interaktivitas dokumen yang lebih baik. Ikuti panduan lengkap ini dengan petunjuk langkah demi langkah dan aplikasi praktis."
 "title": "Menerapkan Anotasi TextField di Java Menggunakan GroupDocs.Annotation&#58; Panduan Lengkap"
 "url": "/id/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

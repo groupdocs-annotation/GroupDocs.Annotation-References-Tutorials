@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 PDF에 주석을 로드, 수정 및 관리하는 방법을 알아보세요. 포괄적인 가이드를 통해 문서 관리를 간소화하세요."
 "title": "Java용 GroupDocs.Annotation 마스터하기&#58; PDF 주석을 효율적으로 편집하세요"
 "url": "/ko/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

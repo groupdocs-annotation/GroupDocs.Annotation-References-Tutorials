@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak zintegrować niestandardowe czcionki z procesem przetwarzania dokumentów za pomocą GroupDocs.Annotation dla platformy .NET. Ulepsz swoje adnotacje dzięki precyzyjnemu stylowi czcionek."
 "title": "Jak załadować niestandardowe czcionki w GroupDocs.Annotation dla .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة حول كيفية إضافة التعليقات التوضيحية وإزالتها وتحديثها وإدارتها في المستندات باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس تعليمية حول إدارة التعليقات التوضيحية لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

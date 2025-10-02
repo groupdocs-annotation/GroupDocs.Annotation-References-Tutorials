@@ -3,6 +3,7 @@
 "description": "Leer hoe u tekstmarkeringen kunt toevoegen met GroupDocs.Annotation voor .NET. Stroomlijn de samenwerking aan documenten en verbeter de productiviteit met deze uitgebreide handleiding."
 "title": "Tekstmarkeringsannotaties toevoegen met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

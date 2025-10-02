@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تعيين دقة معاينة المستند"
 "url": "/ar/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

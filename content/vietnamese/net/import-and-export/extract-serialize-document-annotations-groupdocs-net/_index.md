@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách trích xuất chú thích từ tài liệu và tuần tự hóa chúng thành XML với GroupDocs.Annotation cho .NET. Nâng cao quy trình quản lý tài liệu của bạn ngay hôm nay!"
 "title": "Cách trích xuất và tuần tự hóa chú thích trong .NET bằng GroupDocs.Annotation"
 "url": "/vi/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

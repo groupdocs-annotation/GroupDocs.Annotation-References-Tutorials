@@ -3,6 +3,7 @@
 "description": "Узнайте, как создавать краткие и релевантные предварительные просмотры документов из определенных столбцов листа с помощью GroupDocs.Annotation для .NET. Идеально подходит для оптимизации рабочих процессов в анализе данных и управлении ИТ."
 "title": "Создание целевых предварительных просмотров листов Excel с помощью GroupDocs.Annotation .NET"
 "url": "/ru/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Java'daki GroupDocs.Annotation API'sini kullanarak PDF belgelerinden açıklamaları sorunsuz bir şekilde nasıl kaldıracağınızı öğrenin. Verimli belge yönetimi için adım adım kılavuzumuzu izleyin."
 "title": "GroupDocs.Annotation Java API'sini Kullanarak PDF'lerden Açıklamalar Nasıl Kaldırılır"
 "url": "/tr/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation kullanarak .NET'te belge açıklamalarını etkili bir şekilde nasıl yöneteceğinizi öğrenin. Bu kılavuz, açıklamalı belgeleri kaydetmek için kurulumu, özelleştirmeyi ve en iyi uygulamaları kapsar."
 "title": "GroupDocs.Annotation ile .NET'te Ana Belge Açıklaması&#58; Eksiksiz Bir Kılavuz"
 "url": "/tr/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Xóa chú thích"
 "url": "/vi/net/removing-annotations/"
+type: docs
 "weight": 25
 ---
 

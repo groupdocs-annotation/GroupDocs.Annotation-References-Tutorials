@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện ứng dụng Java của bạn bằng cách thêm chú thích polyline với thư viện GroupDocs.Annotation. Hoàn hảo để cải thiện tính rõ ràng và tính tương tác của tài liệu."
 "title": "Triển khai chú thích Polyline trong Java bằng cách sử dụng thư viện GroupDocs.Annotation"
 "url": "/vi/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro přidávání tvarů, šipek, obrázků a grafických prvků do dokumentů pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro grafické anotace v GroupDocs.Annotation .NET"
 "url": "/cs/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

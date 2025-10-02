@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 대화형 체크박스 주석으로 PDF 문서를 더욱 풍부하게 만드는 방법을 알아보세요. 이 단계별 가이드를 따라 해 보세요."
 "title": "Java용 GroupDocs.Annotation을 사용하여 PDF에 체크박스 주석을 추가하는 방법"
 "url": "/ko/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

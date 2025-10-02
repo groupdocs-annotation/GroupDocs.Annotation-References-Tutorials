@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "مكونات المستند"
 "url": "/ar/net/document-components/"
+type: docs
 "weight": 24
 ---
 

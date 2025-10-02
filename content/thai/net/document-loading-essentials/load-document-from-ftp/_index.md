@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "โหลดเอกสารจาก FTP"
 "url": "/th/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

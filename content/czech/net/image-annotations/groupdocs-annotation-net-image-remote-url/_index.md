@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat anotace obrázků ze vzdálených URL adres do dokumentů PDF pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete své pracovní postupy s dokumenty pomocí tohoto komplexního průvodce."
 "title": "Implementace anotací obrázků v PDF pomocí GroupDocs.Annotation .NET a vzdálených URL adres"
 "url": "/cs/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

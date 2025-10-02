@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αφαιρείτε αποτελεσματικά τις σχολιασμοί από τα έγγραφά σας χρησιμοποιώντας το ισχυρό API GroupDocs.Annotation με αυτό το λεπτομερές σεμινάριο C#."
 "title": "Πώς να αφαιρέσετε σχολιασμούς από έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

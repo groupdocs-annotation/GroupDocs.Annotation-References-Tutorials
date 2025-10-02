@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนในการสร้างตัวอย่างเอกสาร ภาพขนาดย่อ และการแสดงภาพด้วย GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการดูตัวอย่างเอกสารสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

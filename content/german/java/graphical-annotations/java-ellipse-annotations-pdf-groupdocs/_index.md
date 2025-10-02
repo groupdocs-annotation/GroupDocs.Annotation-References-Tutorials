@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit der leistungsstarken Java-Bibliothek GroupDocs.Annotation Ellipsenanmerkungen zu PDF-Dokumenten hinzufügen. Folgen Sie dieser Schritt-für-Schritt-Anleitung, um die Zusammenarbeit an Dokumenten zu verbessern."
 "title": "Java&#58; Hinzufügen von Ellipsenanmerkungen zu PDFs mithilfe von GroupDocs.Annotation für Java"
 "url": "/de/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

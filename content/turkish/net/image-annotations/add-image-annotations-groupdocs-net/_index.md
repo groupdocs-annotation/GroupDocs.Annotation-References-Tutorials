@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation'ı .NET projelerinize entegre ederek belgelerinizi resim açıklamalarıyla geliştirmeyi öğrenin. Kullanıcı etkileşimini geliştirin ve iş birliğini kolaylaştırın."
 "title": ".NET için GroupDocs.Annotation'ı Kullanarak Belgelere Resim Açıklamaları Ekleyin"
 "url": "/tr/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

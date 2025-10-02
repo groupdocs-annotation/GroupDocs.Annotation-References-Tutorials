@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belge bilgilerinin nasıl verimli bir şekilde çıkarılacağını öğrenin. Bu kılavuz, belge işleme iş akışlarınızı geliştirmek için kurulum, kullanım ve pratik uygulamaları kapsar."
 "title": "GroupDocs.Annotation .NET ile Belge Çıkarmada Ustalaşma Geliştiriciler İçin Kapsamlı Bir Kılavuz"
 "url": "/tr/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

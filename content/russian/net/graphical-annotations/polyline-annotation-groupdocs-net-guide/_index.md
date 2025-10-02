@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы с помощью аннотаций полилиний с помощью GroupDocs.Annotation для .NET. Это руководство содержит пошаговые инструкции и советы по эффективной реализации."
 "title": "Как добавлять аннотации полилиний в PDF-файлы с помощью GroupDocs.Annotation для .NET&#58; Пошаговое руководство"
 "url": "/ru/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

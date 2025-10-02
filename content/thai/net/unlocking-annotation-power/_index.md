@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ปลดล็อคพลังของคำอธิบายประกอบ"
 "url": "/th/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

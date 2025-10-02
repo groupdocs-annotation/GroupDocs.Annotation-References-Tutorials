@@ -2,6 +2,7 @@
 "description": "Tutoriais passo a passo para implementar versões de documentos, rastrear alterações e gerenciar o histórico de anotações com o GroupDocs.Annotation para .NET."
 "title": "Tutoriais de controle de versão para GroupDocs.Annotation .NET"
 "url": "/pt/net/version-control/"
+type: docs
 "weight": 13
 ---
 

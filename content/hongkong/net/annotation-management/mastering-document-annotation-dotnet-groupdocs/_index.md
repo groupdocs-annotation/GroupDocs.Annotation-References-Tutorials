@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 .NET 中有效管理文件註解。本指南涵蓋了註釋文件的設定、自訂以及保存的最佳實務。"
 "title": "使用 GroupDocs.Annotation 掌握 .NET 中的文件註解－完整指南"
 "url": "/zh-hant/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

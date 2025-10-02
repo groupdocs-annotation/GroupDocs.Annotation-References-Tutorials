@@ -3,6 +3,7 @@
 "description": "Apprenez à extraire les métadonnées de vos documents, comme le type de fichier, le nombre de pages et la taille, grâce à GroupDocs.Annotation pour Java. Améliorez la gestion de vos documents grâce à une extraction d'informations efficace."
 "title": "Extraction efficace des métadonnées de documents à l'aide de GroupDocs.Annotation en Java"
 "url": "/fr/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

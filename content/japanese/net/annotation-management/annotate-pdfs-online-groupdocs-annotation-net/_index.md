@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、PDF ファイルにオンラインで注釈を付ける方法を学びましょう。効率的な注釈付け技術で、ドキュメントレビュープロセスを効率化します。"
 "title": "GroupDocs.Annotation for .NET を使用して URL から PDF に注釈を付ける方法"
 "url": "/ja/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

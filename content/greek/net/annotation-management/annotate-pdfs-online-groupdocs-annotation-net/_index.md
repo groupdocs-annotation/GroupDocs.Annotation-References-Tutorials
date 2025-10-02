@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχόλια σε αρχεία PDF online χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιστοποιήστε τις διαδικασίες αναθεώρησης εγγράφων σας με αποτελεσματικές τεχνικές σχολιασμού."
 "title": "Πώς να προσθέσετε σχόλια σε PDF από μια διεύθυνση URL χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

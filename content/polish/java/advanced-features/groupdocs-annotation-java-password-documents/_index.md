@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak bezpiecznie ładować, adnotować i zapisywać dokumenty chronione hasłem za pomocą GroupDocs.Annotation dla Java. Zwiększ bezpieczeństwo dokumentów w swoich aplikacjach Java."
 "title": "Bezpieczne przetwarzanie dokumentów za pomocą GroupDocs.Annotation Java&#58; Ładowanie i adnotowanie dokumentów chronionych hasłem"
 "url": "/pl/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

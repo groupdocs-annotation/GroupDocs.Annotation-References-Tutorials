@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vytvářet interaktivní tlačítka PDF s odpověďmi pomocí GroupDocs.Annotation pro Javu. Postupujte podle tohoto podrobného návodu a vylepšete interaktivitu dokumentu."
 "title": "Vytváření interaktivních tlačítek PDF v Javě pomocí GroupDocs.Annotation – kompletní průvodce"
 "url": "/cs/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

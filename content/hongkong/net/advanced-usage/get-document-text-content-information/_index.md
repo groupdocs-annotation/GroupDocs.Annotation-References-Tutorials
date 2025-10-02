@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "取得文件文字內容訊息"
 "url": "/zh-hant/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

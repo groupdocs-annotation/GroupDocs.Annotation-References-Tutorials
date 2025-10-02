@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 有效率地從已註解的文件中移除回應。本指南涵蓋設定、操作和實際應用。"
 "title": "使用 GroupDocs.Annotation for .NET 從附註解的文件中刪除回應－逐步指南"
 "url": "/zh-hant/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

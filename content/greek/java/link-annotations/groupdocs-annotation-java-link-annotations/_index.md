@@ -3,6 +3,7 @@
 "description": "Εξασκηθείτε στις σχολιασμούς συνδέσμων σε Java με το GroupDocs. Μάθετε ρύθμιση, αρχικοποίηση και προσαρμογή για την ενίσχυση της διαδραστικότητας των εγγράφων."
 "title": "Υλοποίηση σχολίων συνδέσμων σε Java χρησιμοποιώντας το GroupDocs® Ένας ολοκληρωμένος οδηγός"
 "url": "/el/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Полные руководства по настройке лицензирования, настройке параметров и управлению GroupDocs.Annotation в приложениях Java."
 "title": "GroupDocs.Annotation Учебники по лицензированию и настройке для Java"
 "url": "/ru/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

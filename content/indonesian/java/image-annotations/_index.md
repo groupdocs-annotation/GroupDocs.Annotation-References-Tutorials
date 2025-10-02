@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk menambahkan dan mengelola anotasi gambar dalam dokumen menggunakan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Anotasi Gambar untuk GroupDocs.Annotation Java"
 "url": "/id/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

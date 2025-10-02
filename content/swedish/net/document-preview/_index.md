@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att generera dokumentförhandsvisningar, miniatyrbilder och visuella representationer med GroupDocs.Annotation för .NET."
 "title": "Handledningar för dokumentförhandsgranskning för GroupDocs.Annotation .NET"
 "url": "/sv/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

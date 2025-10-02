@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak wydajnie tworzyć, zarządzać i zapisywać adnotacje w dokumentach przy użyciu GroupDocs.Annotation dla Java. Ten przewodnik krok po kroku obejmuje inicjalizację, typy adnotacji i wskazówki dotyczące integracji."
 "title": "Kompletny przewodnik&#58; Korzystanie z GroupDocs.Annotation dla Java do tworzenia i zarządzania adnotacjami"
 "url": "/pl/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

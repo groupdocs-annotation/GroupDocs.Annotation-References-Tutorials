@@ -3,6 +3,7 @@
 "description": "Aprenda a guardar eficientemente rangos de páginas de documentos anotados con GroupDocs.Annotation para Java. Este tutorial abarca la configuración, la implementación y las aplicaciones prácticas."
 "title": "Guardar un rango de páginas específico con GroupDocs.Annotation para Java&#58; una guía completa"
 "url": "/es/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

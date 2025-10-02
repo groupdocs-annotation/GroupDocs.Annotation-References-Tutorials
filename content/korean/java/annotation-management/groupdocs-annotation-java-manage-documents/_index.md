@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 Java에서 주석을 효과적으로 관리하는 방법을 알아보세요. 이 가이드에서는 문서 워크플로우의 로드, 제거 및 최적화 방법을 다룹니다."
 "title": "GroupDocs.Annotation을 통한 Java 주석 관리 마스터 가이드"
 "url": "/ko/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

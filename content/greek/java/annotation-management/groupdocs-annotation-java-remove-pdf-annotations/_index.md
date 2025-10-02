@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αφαιρείτε απρόσκοπτα σχόλια από έγγραφα PDF χρησιμοποιώντας το GroupDocs.Annotation API σε Java. Ακολουθήστε τον αναλυτικό οδηγό μας για αποτελεσματική διαχείριση εγγράφων."
 "title": "Πώς να αφαιρέσετε σχολιασμούς από PDF χρησιμοποιώντας το GroupDocs.Annotation Java API"
 "url": "/el/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

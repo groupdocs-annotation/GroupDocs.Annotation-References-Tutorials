@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro přístup k metadatům dokumentů, informacím o stránkách a vlastnostem dokumentů pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy k informacím o dokumentech pro GroupDocs.Annotation .NET"
 "url": "/cs/net/document-information/"
+type: docs
 "weight": 12
 ---
 

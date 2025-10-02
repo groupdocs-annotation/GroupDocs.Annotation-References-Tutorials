@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET'i kullanarak Amazon S3'ten PDF'leri nasıl etkili bir şekilde indireceğinizi ve ek açıklamalar ekleyeceğinizi öğrenin. Sorunsuz entegrasyonla belge iş akışınızı geliştirin."
 "title": "GroupDocs.Annotation for .NET Kullanarak Amazon S3'ten Verimli PDF İndirme ve Açıklama"
 "url": "/tr/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

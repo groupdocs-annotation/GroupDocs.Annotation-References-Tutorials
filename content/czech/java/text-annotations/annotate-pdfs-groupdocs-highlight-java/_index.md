@@ -3,6 +3,7 @@
 "description": "Naučte se, jak anotovat PDF soubory zvýrazněním textu a odpověďmi pomocí nástroje GroupDocs.Annotation pro Javu. Tato příručka se zabývá nastavením, příklady kódu a praktickými aplikacemi."
 "title": "Anotace PDF souborů v Javě pomocí GroupDocs.Highlight – Komplexní průvodce"
 "url": "/cs/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

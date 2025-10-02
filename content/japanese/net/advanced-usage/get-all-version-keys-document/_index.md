@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントのすべてのバージョンキーを取得する"
 "url": "/ja/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

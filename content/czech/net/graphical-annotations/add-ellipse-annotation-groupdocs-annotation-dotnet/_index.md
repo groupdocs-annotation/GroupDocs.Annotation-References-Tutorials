@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty přidáním interaktivních elipsovitých anotací pomocí rozhraní GroupDocs.Annotation .NET API. Tato příručka poskytuje podrobné pokyny pro vývojáře."
 "title": "Jak přidat elipsovité anotace do PDF pomocí rozhraní GroupDocs.Annotation .NET API"
 "url": "/cs/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по реализации веток комментариев, ответов и совместных обсуждений с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по управлению ответами для GroupDocs.Annotation Java"
 "url": "/ru/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して従量制ライセンスを設定および管理し、コンプライアンスと最適な機能を確保する方法を学習します。"
 "title": "GroupDocs.Annotation for .NET における従量制ライセンスの実装 総合ガイド"
 "url": "/ja/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

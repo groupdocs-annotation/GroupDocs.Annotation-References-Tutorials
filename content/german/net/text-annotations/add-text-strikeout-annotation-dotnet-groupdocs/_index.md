@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mithilfe der Bibliothek GroupDocs.Annotation für .NET Textdurchstreichungen in Ihre Dokumente einfügen und so die Dokumentprüfung und Zusammenarbeit verbessern."
 "title": "Hinzufügen einer durchgestrichenen Textanmerkung in .NET mithilfe von GroupDocs.Annotation"
 "url": "/de/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

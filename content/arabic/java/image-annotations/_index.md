@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة حول كيفية إضافة تعليقات الصور وإدارتها في المستندات باستخدام GroupDocs.Annotation for Java."
 "title": "دروس توضيحية للصور في GroupDocs.Annotation Java"
 "url": "/ar/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

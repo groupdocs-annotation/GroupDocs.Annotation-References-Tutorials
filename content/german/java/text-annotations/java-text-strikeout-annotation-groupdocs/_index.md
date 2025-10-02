@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Text in Java durchstreichen. Folgen Sie dieser Schritt-für-Schritt-Anleitung für nahtlose Dokumentanmerkungen."
 "title": "Java-Text-Strikeout-Annotation-Handbuch mit GroupDocs.Annotation"
 "url": "/de/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

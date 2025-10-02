@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、PDFファイルに注釈をシームレスに追加および更新する方法を学びましょう。この実践的なガイドで、ドキュメント管理を強化しましょう。"
 "title": "GroupDocs.Annotation for Java を使用して PDF に注釈を付ける方法 - 総合ガイド"
 "url": "/ja/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

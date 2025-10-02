@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola anotasi secara efektif di Java menggunakan GroupDocs.Annotation. Panduan ini mencakup pemuatan, penghapusan, dan pengoptimalan alur kerja dokumen."
 "title": "Panduan Lengkap Manajemen Anotasi Master di Java dengan GroupDocs.Annotation"
 "url": "/id/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

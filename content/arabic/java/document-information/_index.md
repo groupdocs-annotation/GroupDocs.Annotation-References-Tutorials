@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة للوصول إلى بيانات تعريف المستند ومعلومات الصفحة وخصائص المستند باستخدام GroupDocs.Annotation لـ Java."
 "title": "دروس معلومات المستندات لـ GroupDocs.Annotation Java"
 "url": "/ar/java/document-information/"
+type: docs
 "weight": 12
 ---
 

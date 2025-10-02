@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak ulepszyć dokumenty PDF, dodając interaktywne adnotacje elipsy za pomocą GroupDocs.Annotation .NET API. Ten przewodnik zawiera instrukcje krok po kroku dla deweloperów."
 "title": "Jak dodawać adnotacje elipsy do plików PDF za pomocą GroupDocs.Annotation .NET API"
 "url": "/pl/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

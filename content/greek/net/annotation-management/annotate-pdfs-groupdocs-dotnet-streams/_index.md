@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε αποτελεσματικά σχόλια σε έγγραφα PDF σε περιβάλλον .NET χρησιμοποιώντας ροές με το GroupDocs.Annotation. Ενισχύστε τη ροή εργασίας διαχείρισης εγγράφων."
 "title": "Σχολιάστε PDF χρησιμοποιώντας το GroupDocs.Annotation .NET μέσω Streams&#58; Ένας ολοκληρωμένος οδηγός"
 "url": "/el/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

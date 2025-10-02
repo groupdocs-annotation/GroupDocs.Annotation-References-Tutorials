@@ -3,6 +3,7 @@
 "description": "了解如何使用強大的 GroupDocs.Annotation for .NET 將互動式按鈕整合到您的 PDF 文件中。透過逐步說明增強用戶參與度。"
 "title": "使用 GroupDocs.Annotation .NET SDK 在 PDF 中整合互動式按鈕"
 "url": "/zh-hant/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

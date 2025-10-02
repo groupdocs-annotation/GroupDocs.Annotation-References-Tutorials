@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по импорту и экспорту аннотаций между документами и XML-файлами с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по импорту и экспорту аннотаций для GroupDocs.Annotation .NET"
 "url": "/ru/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

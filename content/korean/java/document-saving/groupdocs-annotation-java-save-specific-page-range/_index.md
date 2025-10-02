@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 주석이 달린 문서 페이지 범위를 효율적으로 저장하는 방법을 알아보세요. 이 튜토리얼에서는 설정, 구현 및 실제 적용 사례를 다룹니다."
 "title": "GroupDocs.Annotation for Java를 사용하여 특정 페이지 범위 저장하기&#58; 완벽한 가이드"
 "url": "/ko/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

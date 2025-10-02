@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας με σχολιασμούς polyline χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός παρέχει οδηγίες βήμα προς βήμα και συμβουλές για αποτελεσματική εφαρμογή."
 "title": "Πώς να προσθέσετε σχολιασμούς πολυγραμμών σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET® - Ένας οδηγός βήμα προς βήμα"
 "url": "/el/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके पृष्ठ श्रेणियों को कुशलतापूर्वक प्रबंधित करना सीखें। यह मार्गदर्शिका विशिष्ट पृष्ठों को सहेजने के लिए स्थापना, सेटअप और सर्वोत्तम प्रथाओं को कवर करती है।"
 "title": "GroupDocs.Annotation की कुशल एनोटेशन तकनीकों के साथ .NET में पेज रेंज प्रबंधन में महारत हासिल करना"
 "url": "/hi/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

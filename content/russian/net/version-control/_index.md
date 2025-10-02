@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по внедрению версий документов, отслеживанию изменений и управлению историей аннотаций с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по контролю версий для GroupDocs.Annotation .NET"
 "url": "/ru/net/version-control/"
+type: docs
 "weight": 13
 ---
 

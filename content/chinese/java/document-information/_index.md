@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 访问文档元数据、页面信息和文档属性的完整教程。"
 "title": "GroupDocs.Annotation Java 文档信息教程"
 "url": "/zh/java/document-information/"
+type: docs
 "weight": 12
 ---
 

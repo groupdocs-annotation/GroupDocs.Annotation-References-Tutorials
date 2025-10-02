@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη στοιχείου πλαισίου ελέγχου σε έγγραφο PDF"
 "url": "/el/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

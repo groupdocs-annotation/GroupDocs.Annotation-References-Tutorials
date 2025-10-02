@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích hình ảnh bằng GroupDocs.Annotation cho .NET. Cải thiện tài liệu trong ngành giáo dục, pháp lý và chăm sóc sức khỏe."
 "title": "Hướng dẫn toàn diện về cách thêm chú thích hình ảnh trong .NET với GroupDocs.Annotation"
 "url": "/vi/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

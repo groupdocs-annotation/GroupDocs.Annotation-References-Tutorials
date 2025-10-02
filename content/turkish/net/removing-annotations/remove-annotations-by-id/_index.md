@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Kimliğe Göre Açıklamaları Kaldır"
 "url": "/tr/net/removing-annotations/remove-annotations-by-id/"
+type: docs
 "weight": 11
 ---
 

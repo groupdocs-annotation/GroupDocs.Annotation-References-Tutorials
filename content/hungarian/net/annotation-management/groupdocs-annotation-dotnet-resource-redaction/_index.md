@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá erőforrás-kihagyási megjegyzéseket PDF-ekhez a GroupDocs.Annotation for .NET használatával. Védje meg az érzékeny információkat és fokozza a dokumentumok biztonságát ezzel a részletes útmutatóval."
 "title": "Erőforrás-kivonási megjegyzések hozzáadása .NET-ben a GroupDocs.Annotation használatával – Átfogó útmutató"
 "url": "/hu/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

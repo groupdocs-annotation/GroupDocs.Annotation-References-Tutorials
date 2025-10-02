@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hanterar och laddar specifika versioner av kommenterade dokument med GroupDocs.Annotation för .NET. Förbättra ditt dokumenthanteringssystem idag!"
 "title": "Läs in specifika dokumentversioner med GroupDocs.Annotation för .NET – en omfattande guide"
 "url": "/sv/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

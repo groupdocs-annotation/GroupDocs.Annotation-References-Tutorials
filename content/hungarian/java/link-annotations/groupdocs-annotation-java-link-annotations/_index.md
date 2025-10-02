@@ -3,6 +3,7 @@
 "description": "Sajátítsa el a linkannotációkat Java nyelven a GroupDocs segítségével. Ismerje meg a beállítást, az inicializálást és a testreszabást a dokumentumok interaktivitásának javítása érdekében."
 "title": "Linkannotációk implementálása Java nyelven GroupDocs használatával – Átfogó útmutató"
 "url": "/hu/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

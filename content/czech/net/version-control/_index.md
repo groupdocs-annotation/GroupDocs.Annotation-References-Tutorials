@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro implementaci verzí dokumentů, sledování změn a správu historie anotací pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro správu verzí v GroupDocs.Annotation .NET"
 "url": "/cs/net/version-control/"
+type: docs
 "weight": 13
 ---
 

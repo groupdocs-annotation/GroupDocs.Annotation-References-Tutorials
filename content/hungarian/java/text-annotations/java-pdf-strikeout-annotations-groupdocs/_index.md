@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan hozhat létre szöveges áthúzott megjegyzéseket Java PDF-ekben a GroupDocs.Annotation for Java segítségével. Kövesse ezt a lépésről lépésre szóló útmutatót a dokumentumszerkesztési képességei fejlesztéséhez."
 "title": "Java PDF áthúzott jegyzetek a GroupDocs segítségével – Átfogó útmutató"
 "url": "/hu/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

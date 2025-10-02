@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation .NET oktatóanyagokhoz"
 "title": "GroupDocs.Annotation .NET-hez készült oktatóanyagok és példák"
 "url": "/hu/net/"
+type: docs
 "weight": 10
 ---
 

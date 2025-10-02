@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng cách thêm các thành phần thả xuống tương tác bằng GroupDocs.Annotation cho .NET. Thực hiện theo hướng dẫn từng bước này để hợp lý hóa đầu vào của người dùng và cải thiện chức năng của tài liệu."
 "title": "Thêm Dropdown vào PDF với GroupDocs.Annotation cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Добавить точечную аннотацию к документу"
 "url": "/ru/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

@@ -3,6 +3,7 @@
 "description": "파일 스트림을 사용하여 GroupDocs.Annotation .NET 라이선스를 설정하고 적용하는 방법을 알아보세요. 이 포괄적인 가이드를 통해 모든 기능을 활용하세요."
 "title": "C#에서 파일 스트림을 사용하여 GroupDocs.Annotation .NET 라이선스 설정 마스터하기"
 "url": "/ko/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation .NET API 新增互動式橢圓註釋，從而增強 PDF 文件的體驗。本指南為開發人員提供逐步說明。"
 "title": "如何使用 GroupDocs.Annotation .NET API 為 PDF 新增橢圓註釋"
 "url": "/zh-hant/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

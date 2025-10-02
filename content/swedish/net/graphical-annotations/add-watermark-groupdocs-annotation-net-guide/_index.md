@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till vattenstämplar med GroupDocs.Annotation för .NET. Den här guiden beskriver installation, steg-för-steg-implementering och bästa praxis för att säkra och varumärkesskydda dokument."
 "title": "Implementera Lägg till vattenstämpel med GroupDocs.Annotation i .NET &#5; En omfattande guide för dokumentsäkerhet och varumärkesbyggande"
 "url": "/sv/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a recuperar texto de documentos de forma eficiente con GroupDocs.Annotation para .NET. Siga esta guía paso a paso para optimizar su capacidad de procesamiento de documentos."
 "title": "Recuperar el contenido de texto de un documento con GroupDocs.Annotation para .NET&#58; una guía paso a paso"
 "url": "/es/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

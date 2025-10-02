@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ जानकारी को कुशलतापूर्वक निकालने का तरीका जानें। यह मार्गदर्शिका आपके दस्तावेज़ प्रसंस्करण वर्कफ़्लो को बढ़ाने के लिए सेटअप, उपयोग और व्यावहारिक अनुप्रयोगों को शामिल करती है।"
 "title": "GroupDocs.Annotation .NET के साथ दस्तावेज़ निष्कर्षण में महारत हासिल करना डेवलपर्स के लिए एक व्यापक गाइड"
 "url": "/hi/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

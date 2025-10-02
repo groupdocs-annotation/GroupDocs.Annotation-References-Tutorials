@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Akıştan Lisans Ayarla"
 "url": "/tr/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

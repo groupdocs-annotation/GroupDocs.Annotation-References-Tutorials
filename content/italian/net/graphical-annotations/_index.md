@@ -2,6 +2,7 @@
 "description": "Tutorial completi per aggiungere forme, frecce, immagini ed elementi grafici nei documenti con GroupDocs.Annotation per .NET."
 "title": "Tutorial di annotazione grafica per GroupDocs.Annotation .NET"
 "url": "/it/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

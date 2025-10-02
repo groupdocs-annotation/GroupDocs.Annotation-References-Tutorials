@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengambil format file yang didukung secara efisien menggunakan GroupDocs.Annotation untuk .NET. Panduan ini mencakup integrasi, implementasi, dan aplikasi praktis."
 "title": "Cara Mendapatkan Format File yang Didukung dengan GroupDocs.Annotation untuk .NET&#58; Panduan Lengkap"
 "url": "/id/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

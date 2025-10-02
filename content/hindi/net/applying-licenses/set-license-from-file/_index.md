@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "फ़ाइल से लाइसेंस सेट करें"
 "url": "/hi/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het opslaan van geannoteerde documenten met verschillende opties via GroupDocs.Annotation voor .NET."
 "title": "Zelfstudies voor het opslaan van documenten voor GroupDocs.Annotation .NET"
 "url": "/nl/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

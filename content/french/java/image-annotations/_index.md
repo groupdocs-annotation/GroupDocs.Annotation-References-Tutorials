@@ -2,6 +2,7 @@
 "description": "Tutoriels étape par étape pour ajouter et gérer des annotations d'image dans des documents à l'aide de GroupDocs.Annotation pour Java."
 "title": "Tutoriels d'annotation d'images pour GroupDocs.Annotation Java"
 "url": "/fr/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

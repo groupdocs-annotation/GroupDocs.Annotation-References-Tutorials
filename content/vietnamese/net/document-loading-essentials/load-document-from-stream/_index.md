@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tải tài liệu từ luồng"
 "url": "/vi/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

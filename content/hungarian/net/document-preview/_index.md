@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok dokumentum-előnézetek, bélyegképek és vizuális ábrázolások létrehozásához a GroupDocs.Annotation for .NET segítségével."
 "title": "Dokumentum-előnézeti oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

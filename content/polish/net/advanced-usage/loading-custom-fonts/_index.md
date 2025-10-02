@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ładowanie niestandardowych czcionek"
 "url": "/pl/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

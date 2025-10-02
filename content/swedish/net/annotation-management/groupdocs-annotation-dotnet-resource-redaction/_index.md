@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till annoteringar för resursborttagning i PDF-filer med GroupDocs.Annotation för .NET. Skydda känslig information och förbättra dokumentsäkerheten med den här detaljerade guiden."
 "title": "Så här lägger du till resursborttagningsannoteringar i .NET med hjälp av GroupDocs.Annotation - En omfattande guide"
 "url": "/sv/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Scopri come gestire e caricare in modo efficiente versioni specifiche di documenti annotati utilizzando GroupDocs.Annotation per .NET. Migliora il tuo sistema di gestione documentale oggi stesso!"
 "title": "Carica versioni specifiche del documento con GroupDocs.Annotation per .NET - Una guida completa"
 "url": "/it/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

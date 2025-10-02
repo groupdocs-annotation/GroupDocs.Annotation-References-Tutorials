@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att implementera kommentartrådar, svar och gemensamma diskussioner med GroupDocs.Annotation för Java."
 "title": "Handledningar för svarshantering för GroupDocs.Annotation Java"
 "url": "/sv/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

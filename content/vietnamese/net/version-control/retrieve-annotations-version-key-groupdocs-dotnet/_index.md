@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý hiệu quả chú thích tài liệu bằng khóa phiên bản với GroupDocs.Annotation .NET. Hợp lý hóa quy trình làm việc của bạn và tăng cường cộng tác."
 "title": "Cách lấy chú thích theo khóa phiên bản trong GroupDocs.Annotation .NET để quản lý tài liệu nâng cao"
 "url": "/vi/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

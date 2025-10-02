@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation を使用して、.NET アプリケーションにテキスト置換注釈を実装する方法を学びます。ドキュメントの読みやすさと機能性を簡単に向上できます。"
 "title": "GroupDocs.Annotation を使用して .NET でテキスト置換を実装し、効率的なドキュメント注釈を作成する方法"
 "url": "/ja/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

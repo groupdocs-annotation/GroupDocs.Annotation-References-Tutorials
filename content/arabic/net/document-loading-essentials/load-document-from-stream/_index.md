@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تحميل المستند من الدفق"
 "url": "/ar/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

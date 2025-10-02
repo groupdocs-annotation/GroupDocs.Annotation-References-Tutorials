@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidat anotace se šipkami do dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka poskytuje podrobné pokyny s příklady kódu."
 "title": "Jak přidat anotace se šipkami do PDF pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

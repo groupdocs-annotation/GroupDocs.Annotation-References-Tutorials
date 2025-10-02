@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java APIを使用して、ドキュメント内の注釈から返信を削除する方法を学びましょう。このステップバイステップガイドで、ドキュメント管理を強化しましょう。"
 "title": "GroupDocs.Annotation API を使用して Java で ID による返信を削除する方法"
 "url": "/ja/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

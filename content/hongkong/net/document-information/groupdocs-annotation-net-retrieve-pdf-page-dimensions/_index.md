@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 有效地擷取 PDF 頁面尺寸。遵循本指南，增強您的文件管理應用程式。"
 "title": "如何使用 GroupDocs.Annotation for .NET 擷取 PDF 頁面尺寸"
 "url": "/zh-hant/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

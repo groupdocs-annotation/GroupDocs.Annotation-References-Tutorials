@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation ile akışları kullanarak .NET ortamında PDF belgelerine nasıl etkili bir şekilde açıklama ekleyeceğinizi öğrenin. Belge yönetimi iş akışınızı artırın."
 "title": "GroupDocs.Annotation .NET'i kullanarak PDF'leri Streams aracılığıyla Açıklama&#58; Kapsamlı Bir Kılavuz"
 "url": "/tr/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

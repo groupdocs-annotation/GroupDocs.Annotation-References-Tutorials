@@ -3,6 +3,7 @@
 "description": "Lär dig hur du integrerar anpassade teckensnitt i ditt dokumentbehandlingsarbetsflöde med GroupDocs.Annotation för .NET. Förbättra dina anteckningar med exakt teckensnittsstil."
 "title": "Så här laddar du anpassade teckensnitt i GroupDocs.Annotation för .NET - En omfattande guide"
 "url": "/sv/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

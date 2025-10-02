@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące dodawania, edytowania i zarządzania adnotacjami tekstowymi w dokumentach przy użyciu GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki adnotacji tekstu dla GroupDocs.Annotation .NET"
 "url": "/pl/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

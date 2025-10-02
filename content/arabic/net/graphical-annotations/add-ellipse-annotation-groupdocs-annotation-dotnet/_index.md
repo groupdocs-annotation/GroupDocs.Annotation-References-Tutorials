@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك بإضافة تعليقات توضيحية تفاعلية باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation .NET. يوفر هذا الدليل إرشادات خطوة بخطوة للمطورين."
 "title": "كيفية إضافة تعليقات توضيحية على شكل نقاط إلى ملفات PDF باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation .NET"
 "url": "/ar/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

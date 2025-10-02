@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Lijst met annotaties ophalen met behulp van versiesleutel"
 "url": "/nl/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

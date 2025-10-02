@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 Java 文件中新增和移除底線註解。這份詳細的指南將幫助您提昇文件管理能力。"
 "title": "使用 GroupDocs 在 Java 中新增和刪除下劃線註解的綜合指南"
 "url": "/zh-hant/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Annotation για Java για να προσθέσετε σχολιασμούς περιοχής και έλλειψης στα PDF σας. Ενισχύστε τη συνεργασία με τον αναλυτικό μας οδηγό."
 "title": "Πλήρης οδηγός για σχολιασμό PDF σε Java χρησιμοποιώντας το GroupDocs™ Βελτιώστε τη συνεργασία και τη διαχείριση εγγράφων"
 "url": "/el/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

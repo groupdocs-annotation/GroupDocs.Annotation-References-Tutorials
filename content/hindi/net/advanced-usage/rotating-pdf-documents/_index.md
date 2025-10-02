@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "पीडीएफ दस्तावेज़ों को घुमाना"
 "url": "/hi/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

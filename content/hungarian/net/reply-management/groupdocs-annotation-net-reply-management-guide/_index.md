@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kezelheti hatékonyan a megjegyzésválaszokat a GroupDocs.Annotation for .NET segítségével. Ez az útmutató az integrációt, a válaszok hozzáadását és a gyakorlati használati eseteket tárgyalja."
 "title": "Útmutató a .NET-ben a GroupDocs.Annotation segítségével történő annotációs válaszkezelés megvalósításához"
 "url": "/hu/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

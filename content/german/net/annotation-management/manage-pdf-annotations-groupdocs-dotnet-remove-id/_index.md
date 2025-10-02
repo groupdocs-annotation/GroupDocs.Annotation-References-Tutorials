@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient Anmerkungen aus PDFs und anderen Dokumenten entfernen. Entdecken Sie Schritt-für-Schritt-Anleitungen, Best Practices und praktische Anwendungen."
 "title": "So entfernen Sie PDF-Anmerkungen nach ID mit GroupDocs.Annotation für .NET"
 "url": "/de/net/annotation-management/manage-pdf-annotations-groupdocs-dotnet-remove-id/"
+type: docs
 "weight": 1
 ---
 

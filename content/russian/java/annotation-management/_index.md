@@ -2,6 +2,7 @@
 "description": "Полные руководства по добавлению, удалению, обновлению и управлению аннотациями в документах с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по управлению аннотациями для GroupDocs.Annotation Java"
 "url": "/ru/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

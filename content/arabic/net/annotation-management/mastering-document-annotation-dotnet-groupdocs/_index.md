@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إدارة تعليقات المستندات بكفاءة في .NET باستخدام GroupDocs.Annotation. يغطي هذا الدليل الإعداد والتخصيص وأفضل الممارسات لحفظ المستندات المُعلّقة."
 "title": "شرح المستندات الرئيسية في .NET باستخدام GroupDocs.Annotation&#58; دليل كامل"
 "url": "/ar/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

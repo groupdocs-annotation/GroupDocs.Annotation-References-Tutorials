@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng cách thêm chú thích điểm theo chương trình với GroupDocs.Annotation for Java. Hướng dẫn này bao gồm thiết lập, triển khai và ứng dụng thực tế."
 "title": "Cách thêm chú thích điểm vào PDF bằng GroupDocs.Annotation cho Java"
 "url": "/vi/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

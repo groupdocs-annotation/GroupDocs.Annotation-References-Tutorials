@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het toevoegen, verwijderen, bijwerken en beheren van annotaties in documenten met GroupDocs.Annotation voor .NET."
 "title": "Handleidingen voor annotatiebeheer voor GroupDocs.Annotation .NET"
 "url": "/nl/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

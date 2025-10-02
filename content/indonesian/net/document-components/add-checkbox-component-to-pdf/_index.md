@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tambahkan Komponen Kotak Centang ke Dokumen PDF"
 "url": "/id/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

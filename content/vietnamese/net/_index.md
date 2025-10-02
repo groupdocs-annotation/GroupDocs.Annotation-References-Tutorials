@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation cho Hướng dẫn .NET"
 "title": "Hướng dẫn và ví dụ về GroupDocs.Annotation cho .NET"
 "url": "/vi/net/"
+type: docs
 "weight": 10
 ---
 

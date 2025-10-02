@@ -3,6 +3,7 @@
 "description": "JavaのGroupDocs.Annotation APIを使用して、PDFドキュメントから注釈をシームレスに削除する方法を学びましょう。効率的なドキュメント管理のためのステップバイステップガイドをご覧ください。"
 "title": "GroupDocs.Annotation Java API を使用して PDF から注釈を削除する方法"
 "url": "/ja/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

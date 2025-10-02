@@ -3,6 +3,7 @@
 "description": "Aprenda a implementar anotações de fragmentos de texto em .NET usando GroupDocs.Annotation. Este guia aborda configuração, implementação e aplicações práticas para um gerenciamento eficiente de documentos."
 "title": "Implementar Anotações de Fragmentos de Texto em .NET com GroupDocs - Um Guia Completo"
 "url": "/pt/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

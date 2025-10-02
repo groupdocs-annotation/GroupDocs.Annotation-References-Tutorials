@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan javíthatja PDF-dokumentumait interaktív ellipszis alakú jegyzetek hozzáadásával a GroupDocs.Annotation .NET API használatával. Ez az útmutató lépésről lépésre bemutatja a fejlesztők számára."
 "title": "Ellipszis alakú jegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation .NET API használatával"
 "url": "/hu/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

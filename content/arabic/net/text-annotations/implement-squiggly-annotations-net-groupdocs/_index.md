@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إضافة تعليقات نصية متعرجة في تطبيقات .NET الخاصة بك باستخدام GroupDocs.Annotation لتحسين قابلية قراءة المستندات والحصول على تعليقات عليها."
 "title": "تنفيذ التعليقات التوضيحية النصية المتعرجة في .NET باستخدام GroupDocs.Annotation"
 "url": "/ar/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

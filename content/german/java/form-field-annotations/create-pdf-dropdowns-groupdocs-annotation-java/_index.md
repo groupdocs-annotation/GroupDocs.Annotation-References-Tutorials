@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Ihre PDF-Dokumente mithilfe der leistungsstarken GroupDocs.Annotation-Bibliothek in Java mit interaktiven Dropdown-Feldern verbessern können."
 "title": "Erstellen Sie interaktive PDF-Dropdowns mit GroupDocs.Annotation für Java"
 "url": "/de/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

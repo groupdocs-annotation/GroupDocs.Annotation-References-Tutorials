@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके छवि एनोटेशन जोड़ना सीखें। शिक्षा, कानूनी और स्वास्थ्य सेवा उद्योगों में दस्तावेज़ों को बढ़ाएँ।"
 "title": "GroupDocs.Annotation के साथ .NET में छवि एनोटेशन जोड़ने के लिए व्यापक गाइड"
 "url": "/hi/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

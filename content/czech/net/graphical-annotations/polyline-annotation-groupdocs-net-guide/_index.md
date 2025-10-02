@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty pomocí anotací křivek pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka poskytuje podrobné pokyny a tipy pro efektivní implementaci."
 "title": "Jak přidat anotace křivek do PDF pomocí GroupDocs.Annotation pro .NET – Podrobný návod"
 "url": "/cs/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "PDF 문서에 드롭다운 구성 요소 추가"
 "url": "/ko/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

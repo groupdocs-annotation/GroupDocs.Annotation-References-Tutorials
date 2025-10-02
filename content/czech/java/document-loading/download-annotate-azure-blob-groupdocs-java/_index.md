@@ -3,6 +3,7 @@
 "description": "Naučte se, jak bez problémů stahovat soubory z úložiště Azure Blob Storage a anotovat je pomocí GroupDocs.Annotation pro Javu. Vylepšete si pracovní postup správy dokumentů pomocí tohoto komplexního průvodce."
 "title": "Jak stahovat a anotovat soubory Azure Blob pomocí GroupDocs.Annotation v Javě"
 "url": "/cs/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

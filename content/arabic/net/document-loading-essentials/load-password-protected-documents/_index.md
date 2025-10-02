@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تحميل المستندات المحمية بكلمة مرور"
 "url": "/ar/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

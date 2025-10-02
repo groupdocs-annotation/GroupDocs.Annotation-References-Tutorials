@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Açıklama Gücünün Kilidini Açma"
 "url": "/tr/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 .NET 應用程式中實作文字替換註解。輕鬆增強文件的可讀性和功能性。"
 "title": "如何使用 GroupDocs.Annotation 在 .NET 中實現文字替換以實現高效的文檔註釋"
 "url": "/zh-hant/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

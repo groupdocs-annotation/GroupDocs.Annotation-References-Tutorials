@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF açıklamalarını nasıl verimli bir şekilde kaydedeceğinizi öğrenin. Ayrıntılı kılavuzumuzla belge yönetimi sürecinizi kolaylaştırın."
 "title": "GroupDocs.Annotation for .NET ile PDF Açıklamalarını Verimli Şekilde Kaydedin"
 "url": "/tr/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

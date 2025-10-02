@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere annotazioni ondulate ai tuoi documenti PDF utilizzando GroupDocs.Annotation per Java, migliorando la revisione dei documenti e la collaborazione."
 "title": "Come aggiungere annotazioni ondulate ai PDF utilizzando GroupDocs.Annotation per Java"
 "url": "/it/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

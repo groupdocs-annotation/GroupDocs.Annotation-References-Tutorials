@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по добавлению и управлению аннотациями изображений в документах с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по аннотациям изображений для GroupDocs.Annotation .NET"
 "url": "/ru/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

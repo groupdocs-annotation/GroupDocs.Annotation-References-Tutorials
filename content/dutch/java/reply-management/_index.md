@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het implementeren van commentaarthreads, antwoorden en gezamenlijke discussies met GroupDocs.Annotation voor Java."
 "title": "Tutorials voor antwoordbeheer voor GroupDocs.Annotation Java"
 "url": "/nl/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

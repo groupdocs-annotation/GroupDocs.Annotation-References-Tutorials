@@ -3,6 +3,7 @@
 "description": "Aprenda a eliminar eficazmente respuestas de usuarios específicos de documentos PDF anotados con GroupDocs.Annotation para .NET. Optimice la gestión de anotaciones con esta guía completa."
 "title": "Cómo eliminar respuestas de usuarios de archivos PDF con GroupDocs.Annotation .NET&#58; guía paso a paso"
 "url": "/es/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

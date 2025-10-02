@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách hiệu quả để biên tập văn bản trong PDF bằng thư viện Java GroupDocs.Annotation mạnh mẽ. Hướng dẫn này bao gồm các quy trình thiết lập, tạo chú thích và lưu."
 "title": "Làm chủ việc biên tập văn bản trong PDF bằng GroupDocs.Annotation Java API&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

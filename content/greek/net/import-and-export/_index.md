@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την εισαγωγή και εξαγωγή σχολιασμών μεταξύ εγγράφων και αρχείων XML χρησιμοποιώντας το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο εισαγωγής και εξαγωγής σχολίων για το GroupDocs.Annotation .NET"
 "url": "/el/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 添加交互式复选框来增强 PDF 文档。请按照本分步指南，简化数字文档中的表单字段注释。"
 "title": "如何使用 GroupDocs.Annotation for .NET 向 PDF 添加复选框——分步指南"
 "url": "/zh/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menggunakan GroupDocs.Annotation untuk Java guna menambahkan anotasi area dan elips ke PDF Anda. Tingkatkan kolaborasi dengan panduan langkah demi langkah kami."
 "title": "Panduan Lengkap untuk Anotasi PDF Java Menggunakan GroupDocs untuk Meningkatkan Kolaborasi dan Manajemen Dokumen"
 "url": "/id/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

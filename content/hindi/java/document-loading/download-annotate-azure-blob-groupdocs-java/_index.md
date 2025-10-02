@@ -3,6 +3,7 @@
 "description": "Azure Blob Storage से फ़ाइलों को सहजता से डाउनलोड करने और उन्हें GroupDocs.Annotation for Java के साथ एनोटेट करने का तरीका जानें। इस व्यापक गाइड के साथ अपने दस्तावेज़ प्रबंधन वर्कफ़्लो को बेहतर बनाएँ।"
 "title": "GroupDocs.Annotation Java का उपयोग करके Azure Blob फ़ाइलों को कैसे डाउनलोड और एनोटेट करें"
 "url": "/hi/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

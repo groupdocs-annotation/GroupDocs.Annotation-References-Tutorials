@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "สร้างตัวอย่างหน้าเอกสาร"
 "url": "/th/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

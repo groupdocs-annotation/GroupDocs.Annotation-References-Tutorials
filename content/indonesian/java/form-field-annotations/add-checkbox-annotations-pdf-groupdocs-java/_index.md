@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan anotasi kotak centang interaktif menggunakan GroupDocs.Annotation untuk Java. Ikuti panduan langkah demi langkah ini."
 "title": "Cara Menambahkan Anotasi Kotak Centang ke PDF Menggunakan GroupDocs.Annotation untuk Java"
 "url": "/id/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

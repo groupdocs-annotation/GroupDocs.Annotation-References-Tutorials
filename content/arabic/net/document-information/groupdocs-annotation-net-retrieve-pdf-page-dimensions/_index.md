@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استرجاع أبعاد صفحات PDF بكفاءة باستخدام GroupDocs.Annotation لـ .NET. اتبع هذا الدليل لتحسين تطبيقات إدارة المستندات لديك."
 "title": "كيفية استرداد أبعاد صفحة PDF باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

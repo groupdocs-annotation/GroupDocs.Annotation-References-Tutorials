@@ -3,6 +3,7 @@
 "description": "जावा में GroupDocs.Annotation के साथ Amazon S3 पर संग्रहीत दस्तावेज़ों को कुशलतापूर्वक लोड और एनोटेट करना सीखें। यह मार्गदर्शिका एकीकरण, AWS SDK उपयोग और प्रदर्शन अनुकूलन को कवर करती है।"
 "title": "जावा का उपयोग करके अमेज़ॅन एस 3 से दस्तावेज़ लोड और एनोटेट करें ग्रुपडॉक्स.एनोटेशन एकीकरण के लिए एक गाइड"
 "url": "/hi/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

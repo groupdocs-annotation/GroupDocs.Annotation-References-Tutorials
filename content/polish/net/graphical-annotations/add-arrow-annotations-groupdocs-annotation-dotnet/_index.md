@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać adnotacje strzałek w dokumentach za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik zawiera instrukcje krok po kroku z przykładami kodu."
 "title": "Jak dodawać adnotacje strzałkowe w plikach PDF za pomocą GroupDocs.Annotation dla .NET"
 "url": "/pl/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

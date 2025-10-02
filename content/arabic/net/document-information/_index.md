@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة للوصول إلى بيانات تعريف المستند ومعلومات الصفحة وخصائص المستند باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس معلومات المستندات لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/document-information/"
+type: docs
 "weight": 12
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서 미리보기 해상도 설정"
 "url": "/ko/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

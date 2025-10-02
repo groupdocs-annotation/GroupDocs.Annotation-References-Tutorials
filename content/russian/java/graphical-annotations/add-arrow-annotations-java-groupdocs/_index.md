@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно добавлять стрелочные аннотации в PDF-файлы с помощью библиотеки GroupDocs.Annotation для Java. Улучшите ясность документа и совместную работу."
 "title": "Как добавлять стрелочные аннотации в Java с помощью API GroupDocs.Annotation"
 "url": "/ru/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

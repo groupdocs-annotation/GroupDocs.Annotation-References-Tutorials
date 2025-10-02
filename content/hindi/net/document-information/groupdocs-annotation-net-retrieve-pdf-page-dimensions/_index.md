@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ PDF पृष्ठ आयामों को कुशलतापूर्वक प्राप्त करने का तरीका जानें। अपने दस्तावेज़ प्रबंधन अनुप्रयोगों को बेहतर बनाने के लिए इस गाइड का पालन करें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF पृष्ठ आयाम कैसे प्राप्त करें"
 "url": "/hi/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

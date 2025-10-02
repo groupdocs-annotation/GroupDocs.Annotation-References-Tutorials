@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "向文档添加链接注释"
 "url": "/zh/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

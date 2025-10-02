@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบและบันทึกไฟล์ PDF ด้วยคีย์เวอร์ชันที่กำหนดเองโดยใช้ไลบรารี GroupDocs.Annotation สำหรับ .NET ที่ทรงพลัง ช่วยให้มั่นใจได้ว่าการทำซ้ำเอกสารแต่ละครั้งสามารถระบุได้เฉพาะ"
 "title": "บันทึกไฟล์ PDF พร้อมคำอธิบายประกอบโดยใช้คีย์เวอร์ชันที่กำหนดเองใน .NET โดยใช้ GroupDocs.Annotation"
 "url": "/th/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

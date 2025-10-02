@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "バージョンキーを使用して注釈のリストを取得する"
 "url": "/ja/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、パスワードで保護されたPDFに安全に注釈を付ける方法を学びましょう。このステップバイステップガイドでは、ドキュメントの読み込み、注釈の付け方、保存方法について解説します。"
 "title": "GroupDocs.Annotation for .NET を使用してパスワード保護された PDF に注釈を付ける方法 | ステップバイステップガイド"
 "url": "/ja/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

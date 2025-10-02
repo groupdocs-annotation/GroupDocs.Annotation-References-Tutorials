@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة تعليق توضيحي لشطب النص إلى المستند"
 "url": "/ar/net/unlocking-annotation-power/add-text-strikeout-annotation/"
+type: docs
 "weight": 26
 ---
 

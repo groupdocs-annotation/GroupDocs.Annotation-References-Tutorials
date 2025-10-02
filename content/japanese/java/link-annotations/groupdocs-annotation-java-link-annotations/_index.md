@@ -3,6 +3,7 @@
 "description": "GroupDocsを使ってJavaでリンクアノテーションをマスターしましょう。ドキュメントのインタラクティブ性を高めるための設定、初期化、カスタマイズを学びます。"
 "title": "GroupDocsを使用したJavaでのリンクアノテーションの実装 - 総合ガイド"
 "url": "/ja/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

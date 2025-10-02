@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak desteklenen dosya biçimlerini nasıl etkili bir şekilde alacağınızı öğrenin. Bu kılavuz, entegrasyon, uygulama ve pratik uygulamaları kapsar."
 "title": "GroupDocs.Annotation for .NET ile Desteklenen Dosya Biçimlerini Nasıl Alırsınız? Kapsamlı Bir Kılavuz"
 "url": "/tr/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 安全地載入、註解和儲存受密碼保護的文件。增強 Java 應用程式中的文件安全性。"
 "title": "使用 GroupDocs.Annotation Java 進行安全文件處理&#58;載入和註解受密碼保護的文檔"
 "url": "/zh-hant/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

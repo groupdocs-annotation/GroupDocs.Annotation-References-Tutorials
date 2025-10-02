@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak zainstalować i skonfigurować licencję GroupDocs.Annotation dla swoich aplikacji Java, aby bez problemu odblokować pełen zakres funkcji."
 "title": "Ustawianie licencji GroupDocs.Annotation w Javie – kompleksowy przewodnik"
 "url": "/pl/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

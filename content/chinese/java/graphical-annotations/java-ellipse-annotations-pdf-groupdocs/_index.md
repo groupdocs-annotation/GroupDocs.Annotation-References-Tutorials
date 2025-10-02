@@ -3,6 +3,7 @@
 "description": "学习如何使用强大的 Java GroupDocs.Annotation 库向 PDF 文档添加椭圆注释。按照本分步指南操作，增强文档协作。"
 "title": "Java&#58; 使用 GroupDocs.Annotation for Java 向 PDF 添加椭圆注释"
 "url": "/zh/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

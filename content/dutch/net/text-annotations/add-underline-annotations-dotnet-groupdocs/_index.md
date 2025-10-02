@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt onderstreepte aantekeningen aan uw documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter de helderheid van uw documenten en vereenvoudig de communicatie."
 "title": "Hoe u onderstrepingsannotaties toevoegt in .NET met GroupDocs.Annotation"
 "url": "/nl/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Agregar componente de casilla de verificación al documento PDF"
 "url": "/es/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java का उपयोग करके दस्तावेज़ों में एनोटेशन को कुशलतापूर्वक बनाने, प्रबंधित करने और सहेजने का तरीका जानें। यह चरण-दर-चरण मार्गदर्शिका आरंभीकरण, एनोटेशन प्रकार और एकीकरण युक्तियों को कवर करती है।"
 "title": "संपूर्ण गाइड&#58; एनोटेशन बनाने और प्रबंधित करने के लिए Java के लिए GroupDocs.Annotation का उपयोग करना"
 "url": "/hi/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

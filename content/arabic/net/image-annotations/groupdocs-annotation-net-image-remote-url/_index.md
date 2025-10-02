@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية للصور من عناوين URL البعيدة إلى مستندات PDF باستخدام GroupDocs.Annotation لـ .NET. حسّن سير عمل مستنداتك مع هذا الدليل الشامل."
 "title": "تنفيذ التعليقات التوضيحية للصور في ملفات PDF باستخدام GroupDocs.Annotation .NET وعناوين URL البعيدة"
 "url": "/ar/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

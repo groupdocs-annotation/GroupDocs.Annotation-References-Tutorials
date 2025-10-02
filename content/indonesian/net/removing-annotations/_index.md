@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Menghapus Anotasi"
 "url": "/id/net/removing-annotations/"
+type: docs
 "weight": 25
 ---
 

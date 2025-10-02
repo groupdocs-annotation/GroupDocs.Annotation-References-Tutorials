@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till bildannoteringar från fjärr-URL&#58;er i PDF-dokument med GroupDocs.Annotation för .NET. Förbättra dina dokumentarbetsflöden med den här omfattande guiden."
 "title": "Implementera bildannotering i PDF-filer med GroupDocs.Annotation .NET och fjärr-URL&#58;er"
 "url": "/sv/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

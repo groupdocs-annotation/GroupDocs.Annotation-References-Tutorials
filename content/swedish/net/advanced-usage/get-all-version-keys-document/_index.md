@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Hämta alla versionsnycklar i dokumentet"
 "url": "/sv/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

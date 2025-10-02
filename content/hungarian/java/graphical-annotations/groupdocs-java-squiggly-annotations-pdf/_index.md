@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá hullámos jegyzeteket PDF-dokumentumaihoz a GroupDocs.Annotation for Java segítségével, amivel javíthatja a dokumentumok áttekintését és az együttműködést."
 "title": "Hogyan adhatunk hullámos jegyzeteket PDF-ekhez a GroupDocs.Annotation for Java használatával"
 "url": "/hu/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

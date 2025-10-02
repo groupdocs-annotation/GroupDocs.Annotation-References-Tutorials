@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تنفيذ تعليقات شظايا النصوص في .NET باستخدام GroupDocs.Annotation. يغطي هذا الدليل الإعداد والتنفيذ والتطبيقات العملية لإدارة المستندات بكفاءة."
 "title": "تنفيذ تعليقات شظايا النص في .NET باستخدام GroupDocs - دليل شامل"
 "url": "/ar/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

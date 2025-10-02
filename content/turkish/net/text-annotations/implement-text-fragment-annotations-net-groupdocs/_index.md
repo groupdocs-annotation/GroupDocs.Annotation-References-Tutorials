@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation kullanarak .NET'te metin parçası açıklamalarının nasıl uygulanacağını öğrenin. Bu kılavuz, verimli belge yönetimi için kurulum, uygulama ve pratik uygulamaları kapsar."
 "title": "GroupDocs ile .NET'te Metin Parçası Açıklamalarını Uygulayın - Kapsamlı Bir Kılavuz"
 "url": "/tr/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

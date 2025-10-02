@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menambah, menghapus, memperbarui, dan mengelola anotasi dalam dokumen menggunakan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Manajemen Anotasi untuk GroupDocs.Annotation Java"
 "url": "/id/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

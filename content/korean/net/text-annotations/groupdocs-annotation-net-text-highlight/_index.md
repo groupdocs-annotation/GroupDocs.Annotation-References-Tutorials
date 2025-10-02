@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 텍스트 강조 주석을 추가하는 방법을 알아보세요. 이 포괄적인 가이드를 통해 문서 공동 작업을 간소화하고 생산성을 향상시키세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 텍스트 강조 주석을 추가하는 방법"
 "url": "/ko/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u interactieve tekstveldannotaties aan uw PDF-documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Volg deze stapsgewijze handleiding om de interactie in uw document te verbeteren."
 "title": "Tekstveldannotaties toevoegen aan PDF's met GroupDocs.Annotation voor .NET (zelfstudie)"
 "url": "/nl/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

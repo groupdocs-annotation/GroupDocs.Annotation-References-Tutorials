@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用して高度な注釈機能、カスタマイズ、特殊な機能を実装するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation の高度な機能に関する Java チュートリアル"
 "url": "/ja/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

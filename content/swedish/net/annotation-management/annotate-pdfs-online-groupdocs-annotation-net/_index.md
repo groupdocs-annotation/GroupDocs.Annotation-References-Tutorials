@@ -3,6 +3,7 @@
 "description": "Lär dig hur du antecknar PDF-filer online med GroupDocs.Annotation för .NET. Effektivisera dina dokumentgranskningsprocesser med effektiva anteckningstekniker."
 "title": "Så här kommenterar du PDF-filer från en URL med GroupDocs.Annotation för .NET"
 "url": "/sv/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

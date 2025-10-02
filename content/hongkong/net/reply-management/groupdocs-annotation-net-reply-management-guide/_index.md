@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效管理註解回覆。本指南涵蓋整合、添加回應以及實際用例。"
 "title": "使用 GroupDocs.Annotation 在 .NET 中實作註解回覆管理的指南"
 "url": "/zh-hant/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

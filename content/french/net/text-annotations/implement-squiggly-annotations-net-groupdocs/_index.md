@@ -3,6 +3,7 @@
 "description": "Découvrez comment ajouter des annotations textuelles ondulées dans vos applications .NET avec GroupDocs.Annotation pour une meilleure lisibilité et un meilleur retour d'information sur les documents."
 "title": "Implémenter des annotations textuelles ondulées dans .NET à l'aide de GroupDocs.Annotation"
 "url": "/fr/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du konfigurerar och hanterar en uppmätt licens med GroupDocs.Annotation för .NET, vilket säkerställer efterlevnad och optimal funktionalitet."
 "title": "Implementera en mätlicens i GroupDocs.Annotation för .NET – en omfattande guide"
 "url": "/sv/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation의 스트림을 사용하여 .NET 환경에서 PDF 문서에 효율적으로 주석을 추가하는 방법을 알아보세요. 문서 관리 워크플로를 개선해 보세요."
 "title": "Streams를 통해 GroupDocs.Annotation .NET을 사용하여 PDF에 주석 달기 - 포괄적인 가이드"
 "url": "/ko/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

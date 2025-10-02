@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan tölthet le zökkenőmentesen fájlokat az Azure Blob Storage-ból, és hogyan láthatja el őket jegyzetekkel a GroupDocs.Annotation for Java segítségével. Fejlessze dokumentumkezelési munkafolyamatát ezzel az átfogó útmutatóval."
 "title": "Azure Blob-fájlok letöltése és megjegyzésekkel való ellátása GroupDocs.Annotation Java használatával"
 "url": "/hu/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

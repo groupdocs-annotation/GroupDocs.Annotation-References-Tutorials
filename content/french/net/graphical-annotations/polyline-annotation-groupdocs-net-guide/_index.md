@@ -3,6 +3,7 @@
 "description": "Découvrez comment enrichir vos documents PDF avec des annotations polylignes grâce à GroupDocs.Annotation pour .NET. Ce guide fournit des instructions et des conseils étape par étape pour une mise en œuvre efficace."
 "title": "Comment ajouter des annotations polylignes aux fichiers PDF à l'aide de GroupDocs.Annotation pour .NET – Guide étape par étape"
 "url": "/fr/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

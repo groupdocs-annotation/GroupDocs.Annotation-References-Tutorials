@@ -2,6 +2,7 @@
 "description": "Полные руководства по доступу к метаданным документа, информации о странице и свойствам документа с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по информации о документе для GroupDocs.Annotation .NET"
 "url": "/ru/net/document-information/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du skapar koncisa och relevanta dokumentförhandsvisningar från specifika kalkylbladskolumner med GroupDocs.Annotation för .NET. Perfekt för att effektivisera arbetsflöden inom dataanalys och IT-hantering."
 "title": "Generera riktade förhandsvisningar av Excel-ark med GroupDocs.Annotation .NET"
 "url": "/sv/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

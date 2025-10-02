@@ -4,6 +4,7 @@
 "linktitle": "دروس GroupDocs.Annotation لـ Java"
 "title": "واجهة برمجة تطبيقات التعليقات التوضيحية لمستندات جافا | دروس وأمثلة GroupDocs.Annotation لجافا"
 "url": "/ar/java/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 建立高品質的文件頁面 PNG 預覽。利用這項強大的功能增強您的軟體。"
 "title": "使用 GroupDocs.Annotation 在 Java 中產生文件頁面預覽"
 "url": "/zh-hant/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

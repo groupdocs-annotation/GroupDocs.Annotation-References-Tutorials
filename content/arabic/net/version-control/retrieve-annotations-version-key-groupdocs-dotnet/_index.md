@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إدارة تعليقات المستندات بكفاءة باستخدام مفاتيح الإصدارات مع GroupDocs.Annotation .NET. بسّط سير عملك وعزّز التعاون."
 "title": "كيفية استرداد التعليقات التوضيحية حسب مفتاح الإصدار في GroupDocs.Annotation .NET لتحسين إدارة المستندات"
 "url": "/ar/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно управлять аннотациями и ответами PDF с помощью GroupDocs.Annotation в ваших приложениях Java. Оптимизируйте совместную работу с документами с помощью нашего всеобъемлющего руководства."
 "title": "Java PDF Annotation&#58; Создавайте и управляйте аннотациями и ответами с помощью GroupDocs.Annotation для Java"
 "url": "/ru/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

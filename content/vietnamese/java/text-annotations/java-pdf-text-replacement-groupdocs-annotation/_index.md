@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách triển khai chú thích thay thế văn bản trong Java PDF bằng GroupDocs.Annotation. Nâng cao khả năng chỉnh sửa tài liệu và cộng tác."
 "title": "Hướng dẫn thay thế văn bản PDF Java bằng GroupDocs.Annotation"
 "url": "/vi/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak zvládnout anotaci PDF v .NET pomocí GroupDocs.Annotation. Tato příručka se zabývá inicializací, zpracováním stránek, transformacemi a efektivním ukládáním anotovaných dokumentů."
 "title": "Komplexní průvodce anotacemi PDF v .NET pomocí GroupDocs.Annotation pro vylepšenou správu dokumentů"
 "url": "/cs/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

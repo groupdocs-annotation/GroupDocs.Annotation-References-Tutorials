@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ में बिंदु एनोटेशन जोड़ें"
 "url": "/hi/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

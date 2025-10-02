@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ställ in uppmätt licens"
 "url": "/sv/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

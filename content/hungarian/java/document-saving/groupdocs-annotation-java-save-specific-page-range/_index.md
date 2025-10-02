@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan mentheti hatékonyan annotált dokumentumoldal-tartományokat a GroupDocs.Annotation for Java használatával. Ez az oktatóanyag a beállítást, a megvalósítást és a gyakorlati alkalmazásokat ismerteti."
 "title": "Oldaltartomány mentése a GroupDocs.Annotation for Java segítségével – Teljes körű útmutató"
 "url": "/hu/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

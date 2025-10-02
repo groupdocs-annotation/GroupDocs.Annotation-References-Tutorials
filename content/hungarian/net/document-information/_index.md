@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a dokumentumok metaadatainak, oldalinformációinak és dokumentumtulajdonságainak eléréséhez a GroupDocs.Annotation for .NET segítségével."
 "title": "Dokumentuminformációs oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/document-information/"
+type: docs
 "weight": 12
 ---
 

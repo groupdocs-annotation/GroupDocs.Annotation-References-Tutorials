@@ -2,6 +2,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों में फ़ॉर्म फ़ील्ड और इंटरैक्टिव घटक जोड़ने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए फॉर्म फ़ील्ड एनोटेशन ट्यूटोरियल"
 "url": "/hi/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

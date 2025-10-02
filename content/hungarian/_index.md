@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation fejlesztői útmutatók"
 "title": "Dokumentum-annotációs API | GroupDocs.Annotation Oktatóanyagok és SDK-példák"
 "url": "/hu/"
+type: docs
 "weight": 11
 ---
 

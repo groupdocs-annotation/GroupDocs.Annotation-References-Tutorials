@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně odstraňovat odpovědi z anotací pomocí nástroje GroupDocs.Annotation pro .NET. Zjednodušte si správu dokumentů s tímto komplexním průvodcem."
 "title": "Jak odstranit odpovědi z anotací pomocí GroupDocs.Annotation .NET – Podrobný návod"
 "url": "/cs/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

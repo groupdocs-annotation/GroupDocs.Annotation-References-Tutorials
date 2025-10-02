@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、特定のワークシート列から簡潔で関連性の高いドキュメントプレビューを作成する方法を学びます。データ分析とIT管理のワークフローを効率化するのに最適です。"
 "title": "GroupDocs.Annotation .NET を使用してターゲットを絞った Excel シートのプレビューを生成する"
 "url": "/ja/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java के साथ उन्नत एनोटेशन क्षमताओं, अनुकूलनों और विशेष सुविधाओं को लागू करने के लिए पूर्ण ट्यूटोरियल।"
 "title": "उन्नत GroupDocs.Annotation सुविधाएँ Java के लिए ट्यूटोरियल"
 "url": "/hi/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

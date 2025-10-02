@@ -3,6 +3,7 @@
 "description": "इस विस्तृत C# ट्यूटोरियल के साथ शक्तिशाली GroupDocs.Annotation API का उपयोग करके अपने दस्तावेज़ों से एनोटेशन को कुशलतापूर्वक हटाने का तरीका जानें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों से एनोटेशन कैसे निकालें"
 "url": "/hi/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

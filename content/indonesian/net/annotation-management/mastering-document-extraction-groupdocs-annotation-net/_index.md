@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengekstrak informasi dokumen secara efisien menggunakan GroupDocs.Annotation untuk .NET. Panduan ini mencakup pengaturan, penggunaan, dan aplikasi praktis untuk meningkatkan alur kerja pemrosesan dokumen Anda."
 "title": "Menguasai Ekstraksi Dokumen dengan GroupDocs.Annotation .NET&#58; Panduan Lengkap untuk Pengembang"
 "url": "/id/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

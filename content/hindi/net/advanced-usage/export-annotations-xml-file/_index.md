@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "XML फ़ाइल से एनोटेशन निर्यात करें"
 "url": "/hi/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

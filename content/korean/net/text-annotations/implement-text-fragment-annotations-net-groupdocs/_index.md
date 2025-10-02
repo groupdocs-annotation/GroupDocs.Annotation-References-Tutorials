@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 .NET에서 텍스트 조각 주석을 구현하는 방법을 알아보세요. 이 가이드에서는 효율적인 문서 관리를 위한 설정, 구현 및 실제 적용 방법을 다룹니다."
 "title": "GroupDocs를 사용하여 .NET에서 텍스트 조각 주석 구현하기&#58; 종합 가이드"
 "url": "/ko/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

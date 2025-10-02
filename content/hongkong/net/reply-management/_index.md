@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 實作評論主題、回覆和協作討論的逐步教學。"
 "title": "GroupDocs.Annotation .NET 回覆管理教學課程"
 "url": "/zh-hant/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 효율적인 PDF 페이지 미리보기를 만드는 방법을 알아보세요. 문서 상호 작용을 향상하고 워크플로를 간소화하세요."
 "title": "GroupDocs.Annotation .NET을 사용하여 PDF 페이지 미리보기 생성하기 - 포괄적인 가이드"
 "url": "/ko/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

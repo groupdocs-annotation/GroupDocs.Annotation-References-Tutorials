@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan láthat el jegyzetekkel PDF dokumentumokat közvetlenül URL-címekből a GroupDocs.Annotation for Java segítségével. Ez az oktatóanyag a PDF fájlok hatékony betöltését, jegyzetekkel való ellátását és mentését ismerteti."
 "title": "PDF-ek megjegyzésekkel való ellátása URL-ekből a GroupDocs.Annotation for Java használatával | Oktatóanyag a dokumentum-megjegyzések kezeléséről"
 "url": "/hu/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

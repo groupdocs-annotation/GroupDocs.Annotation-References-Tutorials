@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "กำลังโหลดเวอร์ชันเอกสารพร้อมคำอธิบาย"
 "url": "/th/net/document-loading-essentials/loading-annotated-document-version/"
+type: docs
 "weight": 16
 ---
 

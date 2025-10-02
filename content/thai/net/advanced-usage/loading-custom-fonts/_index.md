@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "กำลังโหลดแบบอักษรที่กำหนดเอง"
 "url": "/th/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

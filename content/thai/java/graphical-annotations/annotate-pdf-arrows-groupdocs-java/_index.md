@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายลูกศรลงในเอกสาร PDF โดยใช้ GroupDocs.Annotation สำหรับ Java ปรับปรุงการทำงานร่วมกันและความชัดเจนในเอกสารด้วยขั้นตอนโดยละเอียด"
 "title": "วิธีการใส่คำอธิบายประกอบใน PDF ด้วย Arrow Annotation โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 新增指定品質等級的影像來增強 PDF 效果。提昇文件的視覺吸引力和資料呈現效果。"
 "title": "如何使用 GroupDocs.Annotation for .NET 將影像新增至具有指定品質的 PDF 文檔"
 "url": "/zh-hant/net/graphical-annotations/add-image-pdf-quality-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

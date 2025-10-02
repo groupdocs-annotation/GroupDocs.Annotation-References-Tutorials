@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Đang tải Phông chữ Tùy chỉnh"
 "url": "/vi/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

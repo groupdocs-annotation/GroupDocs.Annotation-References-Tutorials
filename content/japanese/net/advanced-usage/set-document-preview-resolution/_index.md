@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントプレビューの解像度を設定する"
 "url": "/ja/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

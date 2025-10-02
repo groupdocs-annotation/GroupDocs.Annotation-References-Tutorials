@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách trích xuất siêu dữ liệu tài liệu như loại tệp, số trang và kích thước bằng GroupDocs.Annotation cho Java. Nâng cao khả năng quản lý tài liệu của bạn bằng cách trích xuất thông tin hiệu quả."
 "title": "Trích xuất siêu dữ liệu tài liệu hiệu quả bằng GroupDocs.Annotation trong Java"
 "url": "/vi/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

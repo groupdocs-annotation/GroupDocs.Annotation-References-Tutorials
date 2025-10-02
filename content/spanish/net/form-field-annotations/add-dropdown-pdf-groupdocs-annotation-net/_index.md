@@ -3,6 +3,7 @@
 "description": "Aprenda a mejorar sus documentos PDF añadiendo componentes desplegables interactivos con GroupDocs.Annotation para .NET. Siga esta guía paso a paso para optimizar la entrada de datos del usuario y mejorar la funcionalidad del documento."
 "title": "Agregar menú desplegable a archivos PDF con GroupDocs.Annotation para .NET&#58; una guía completa"
 "url": "/es/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

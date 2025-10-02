@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tải tài liệu từ Azure"
 "url": "/vi/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

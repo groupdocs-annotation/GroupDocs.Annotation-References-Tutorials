@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Áp dụng Giấy phép"
 "url": "/vi/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

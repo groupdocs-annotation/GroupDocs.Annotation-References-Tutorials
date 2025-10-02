@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belge Yükleme Esasları"
 "url": "/tr/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

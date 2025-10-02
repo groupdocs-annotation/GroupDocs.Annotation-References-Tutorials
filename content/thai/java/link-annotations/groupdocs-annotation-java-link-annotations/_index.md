@@ -3,6 +3,7 @@
 "description": "คำอธิบายลิงก์หลักใน Java ด้วย GroupDocs เรียนรู้การตั้งค่า การเริ่มต้น และการปรับแต่งเพื่อปรับปรุงการโต้ตอบของเอกสาร"
 "title": "การนำ Link Annotations ไปใช้ใน Java โดยใช้ GroupDocs คู่มือฉบับสมบูรณ์"
 "url": "/th/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

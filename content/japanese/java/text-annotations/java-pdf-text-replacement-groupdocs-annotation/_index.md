@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation を使用して、Java PDF にテキスト置換注釈を実装する方法を学びます。ドキュメント編集と共同作業の機能を強化します。"
 "title": "GroupDocs.Annotation を使用した Java PDF テキスト置換ガイド"
 "url": "/ja/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation in Java Dokumente, die in Amazon S3 gespeichert sind, effizient laden und kommentieren. Dieser Leitfaden behandelt Integration, AWS SDK-Nutzung und Leistungsoptimierung."
 "title": "Laden und Kommentieren von Dokumenten aus Amazon S3 mit Java – Ein Leitfaden zur GroupDocs.Annotation-Integration"
 "url": "/de/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

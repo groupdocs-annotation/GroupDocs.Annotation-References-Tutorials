@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบเอกสาร PDF โดยตรงจากเซิร์ฟเวอร์ FTP โดยใช้ GroupDocs.Annotation สำหรับ Java ปรับปรุงเวิร์กโฟลว์การประมวลผลเอกสารของคุณด้วยคู่มือทีละขั้นตอนนี้"
 "title": "การใส่คำอธิบายประกอบ PDF จาก FTP โดยใช้ GroupDocs คำแนะนำฉบับสมบูรณ์สำหรับ Java"
 "url": "/th/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

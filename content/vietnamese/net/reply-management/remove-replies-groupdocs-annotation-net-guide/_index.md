@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách xóa hiệu quả các phản hồi khỏi chú thích bằng GroupDocs.Annotation cho .NET. Tối ưu hóa việc quản lý tài liệu của bạn với hướng dẫn toàn diện này."
 "title": "Cách xóa trả lời khỏi chú thích bằng GroupDocs.Annotation .NET - Hướng dẫn từng bước"
 "url": "/vi/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

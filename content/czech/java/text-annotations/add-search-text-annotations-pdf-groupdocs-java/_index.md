@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty přidáním prohledávatelných textových anotací pomocí nástroje GroupDocs.Annotation pro Javu. Tato příručka nabízí podrobné pokyny a praktické tipy."
 "title": "Jak přidat anotace hledaného textu do PDF pomocí GroupDocs.Annotation pro Javu"
 "url": "/cs/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

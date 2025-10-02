@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Generar vista previa de páginas de documentos"
 "url": "/es/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

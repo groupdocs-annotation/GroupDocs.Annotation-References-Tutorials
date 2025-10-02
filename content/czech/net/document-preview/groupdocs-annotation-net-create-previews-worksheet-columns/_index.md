@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vytvářet stručné a relevantní náhledy dokumentů z konkrétních sloupců listu pomocí GroupDocs.Annotation pro .NET. Ideální pro zefektivnění pracovních postupů v analýze dat a správě IT."
 "title": "Generování cílených náhledů excelových listů pomocí GroupDocs.Annotation .NET"
 "url": "/cs/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

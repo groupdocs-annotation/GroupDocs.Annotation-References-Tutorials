@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Aggiungi componente a discesa al documento PDF"
 "url": "/it/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

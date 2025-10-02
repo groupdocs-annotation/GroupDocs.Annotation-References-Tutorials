@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تعيين الترخيص من البث"
 "url": "/ar/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Установить разрешение предварительного просмотра документа"
 "url": "/ru/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation kullanarak Java'da açıklamaları etkili bir şekilde nasıl yöneteceğinizi öğrenin. Bu kılavuz, belge iş akışlarını yüklemeyi, kaldırmayı ve optimize etmeyi kapsar."
 "title": "Java'da Ana Açıklama Yönetimi - GroupDocs.Annotation ile Kapsamlı Kılavuz"
 "url": "/tr/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

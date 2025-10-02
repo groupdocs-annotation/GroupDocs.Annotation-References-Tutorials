@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat do dokumentů poznámky s přeškrtnutím textu pomocí knihovny GroupDocs.Annotation pro .NET, což vylepšuje kontrolu dokumentů a spolupráci."
 "title": "Přidání anotace přeškrtnutí textu v .NET pomocí GroupDocs.Annotation"
 "url": "/cs/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

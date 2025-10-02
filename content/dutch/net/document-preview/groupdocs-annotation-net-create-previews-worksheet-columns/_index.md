@@ -3,6 +3,7 @@
 "description": "Leer hoe u beknopte en relevante documentvoorbeelden maakt van specifieke werkbladkolommen met GroupDocs.Annotation voor .NET. Ideaal voor het stroomlijnen van workflows in data-analyse en IT-beheer."
 "title": "Genereer gerichte Excel-bladvoorbeelden met GroupDocs.Annotation .NET"
 "url": "/nl/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

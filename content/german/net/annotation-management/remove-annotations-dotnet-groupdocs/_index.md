@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient Anmerkungen aus Dokumenten entfernen. Optimieren Sie Ihre Dokumenten-Workflows und sorgen Sie für mehr Übersichtlichkeit mit diesem umfassenden Leitfaden."
 "title": "Entfernen Sie Anmerkungen aus Dokumenten in .NET mit GroupDocs.Annotation"
 "url": "/de/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

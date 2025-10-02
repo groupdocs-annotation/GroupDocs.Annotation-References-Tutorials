@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan aplikasi .NET Anda dengan menambahkan anotasi tautan interaktif menggunakan pustaka GroupDocs.Annotation yang canggih. Ikuti panduan langkah demi langkah kami dan tingkatkan interaktivitas dokumen hari ini."
 "title": "Cara Menambahkan Anotasi Tautan dalam Dokumen Menggunakan GroupDocs.Annotation untuk .NET | Panduan Pengembang"
 "url": "/id/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du antecknar och sparar PDF-filer med anpassade versionsnycklar med hjälp av det kraftfulla GroupDocs.Annotation för .NET-biblioteket, vilket säkerställer att varje dokumentiteration är unikt identifierbar."
 "title": "Spara kommenterade PDF-filer med anpassade versionsnycklar i .NET med GroupDocs.Annotation"
 "url": "/sv/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

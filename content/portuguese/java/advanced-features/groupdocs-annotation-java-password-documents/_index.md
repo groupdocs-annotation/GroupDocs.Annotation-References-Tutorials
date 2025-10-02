@@ -3,6 +3,7 @@
 "description": "Aprenda a carregar, anotar e salvar documentos protegidos por senha com segurança usando o GroupDocs.Annotation para Java. Aumente a segurança dos documentos em seus aplicativos Java."
 "title": "Manuseio seguro de documentos com GroupDocs.Annotation Java - Carregar e anotar documentos protegidos por senha"
 "url": "/pt/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

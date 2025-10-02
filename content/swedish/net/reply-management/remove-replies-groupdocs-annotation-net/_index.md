@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt tar bort svar från kommenterade dokument med GroupDocs.Annotation för .NET. Den här guiden behandlar installation, manipulation och praktiska tillämpningar."
 "title": "Ta bort svar från kommenterade dokument med GroupDocs.Annotation för .NET – en steg-för-steg-guide"
 "url": "/sv/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "أتمتة تعليقات PDF باستخدام GroupDocs.Annotation لـ .NET. تعلّم كيفية إضافة تعليقات توضيحية للمناطق باستخدام C# في هذا الدليل المفصل خطوة بخطوة."
 "title": "كيفية إضافة تعليقات توضيحية للمناطق إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET - دليل خطوة بخطوة"
 "url": "/ar/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

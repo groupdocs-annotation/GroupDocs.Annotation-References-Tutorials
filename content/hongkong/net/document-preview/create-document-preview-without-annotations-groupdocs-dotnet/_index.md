@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 產生沒有註解的文件預覽，確保協作專案中的隱私和清晰度。"
 "title": "如何使用 GroupDocs.Annotation .NET 建立沒有註解的乾淨文件預覽"
 "url": "/zh-hant/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

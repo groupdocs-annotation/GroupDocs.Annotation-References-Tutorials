@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan mentheti a jegyzetekkel ellátott dokumentumokat az eredeti elérési úttal a GroupDocs.Annotation for .NET-ben, biztosítva a gördülékeny fájlkezelést és a munkafolyamatok hatékonyságát."
 "title": "Dokumentumok mentése az eredeti elérési úton a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

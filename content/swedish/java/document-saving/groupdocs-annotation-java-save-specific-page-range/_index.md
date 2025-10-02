@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt sparar kommenterade dokumentsidintervall med GroupDocs.Annotation för Java. Den här handledningen täcker installation, implementering och praktiska tillämpningar."
 "title": "Spara specifikt sidintervall med GroupDocs.Annotation för Java – en komplett guide"
 "url": "/sv/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

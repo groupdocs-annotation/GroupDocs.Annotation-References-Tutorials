@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "將複選框元件新增至 PDF 文檔"
 "url": "/zh-hant/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

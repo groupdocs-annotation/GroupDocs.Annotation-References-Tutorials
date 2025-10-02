@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan láthat el jegyzetekkel PDF fájlokat online a GroupDocs.Annotation for .NET segítségével. Egyszerűsítse dokumentum-ellenőrzési folyamatait hatékony jegyzetelési technikákkal."
 "title": "PDF-ek megjegyzésekkel való ellátása URL-címről a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

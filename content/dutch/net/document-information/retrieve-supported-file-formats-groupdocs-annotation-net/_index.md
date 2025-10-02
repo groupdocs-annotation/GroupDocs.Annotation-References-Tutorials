@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt ondersteunde bestandsindelingen kunt ophalen met GroupDocs.Annotation voor .NET. Deze handleiding behandelt integratie, implementatie en praktische toepassingen."
 "title": "Hoe u ondersteunde bestandsindelingen kunt ophalen met GroupDocs.Annotation voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

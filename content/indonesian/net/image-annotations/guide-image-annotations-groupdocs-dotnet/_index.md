@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi gambar menggunakan GroupDocs.Annotation for .NET. Sempurnakan dokumen dalam industri pendidikan, hukum, dan perawatan kesehatan."
 "title": "Panduan Lengkap untuk Menambahkan Anotasi Gambar di .NET dengan GroupDocs.Annotation"
 "url": "/id/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

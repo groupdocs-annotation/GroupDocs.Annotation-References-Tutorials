@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hämtar stödda filformat med GroupDocs.Annotation för .NET. Den här guiden behandlar integration, implementering och praktiska tillämpningar."
 "title": "Så här hämtar du stödda filformat med GroupDocs.Annotation för .NET - En omfattande guide"
 "url": "/sv/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

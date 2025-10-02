@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation για εκπαιδευτικά σεμινάρια Java"
 "title": "API σχολιασμού εγγράφων Java | GroupDocs.Annotation για εκπαιδευτικά σεμινάρια και παραδείγματα Java"
 "url": "/el/java/"
+type: docs
 "weight": 10
 ---
 

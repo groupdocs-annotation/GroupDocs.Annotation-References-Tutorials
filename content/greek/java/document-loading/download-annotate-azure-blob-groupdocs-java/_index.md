@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να κατεβάζετε απρόσκοπτα αρχεία από το Azure Blob Storage και να τα σχολιάζετε με το GroupDocs.Annotation για Java. Βελτιώστε τη ροή εργασίας διαχείρισης εγγράφων με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Πώς να κατεβάσετε και να προσθέσετε σχόλια σε αρχεία Azure Blob χρησιμοποιώντας το GroupDocs.Annotation Java"
 "url": "/el/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

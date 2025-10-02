@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดึงข้อมูลรูปแบบไฟล์ที่รองรับอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ครอบคลุมถึงการบูรณาการ การนำไปใช้งาน และแอปพลิเคชันในทางปฏิบัติ"
 "title": "วิธีการดึงข้อมูลรูปแบบไฟล์ที่รองรับด้วย GroupDocs.Annotation สำหรับ .NET&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

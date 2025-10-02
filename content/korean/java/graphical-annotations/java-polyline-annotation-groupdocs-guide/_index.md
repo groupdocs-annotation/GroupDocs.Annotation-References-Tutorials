@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation 라이브러리를 사용하여 폴리라인 주석을 추가하여 Java 애플리케이션을 개선하는 방법을 알아보세요. 문서의 명확성과 상호 작용성을 향상시키는 데 적합합니다."
 "title": "GroupDocs.Annotation 라이브러리를 사용하여 Java에서 폴리라인 주석 구현"
 "url": "/ko/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

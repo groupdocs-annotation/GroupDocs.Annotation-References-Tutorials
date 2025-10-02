@@ -3,6 +3,7 @@
 "description": "Azure Blob Storage에서 파일을 원활하게 다운로드하고 Java용 GroupDocs.Annotation을 사용하여 주석을 추가하는 방법을 알아보세요. 이 포괄적인 가이드를 통해 문서 관리 워크플로를 개선하세요."
 "title": "GroupDocs.Annotation Java를 사용하여 Azure Blob 파일을 다운로드하고 주석을 추가하는 방법"
 "url": "/ko/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

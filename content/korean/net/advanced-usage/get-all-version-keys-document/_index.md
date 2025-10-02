@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서의 모든 버전 키 가져오기"
 "url": "/ko/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

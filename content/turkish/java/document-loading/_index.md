@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak çeşitli kaynaklardan belge yüklemeye yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation Java için Belge Yükleme Eğitimleri"
 "url": "/tr/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

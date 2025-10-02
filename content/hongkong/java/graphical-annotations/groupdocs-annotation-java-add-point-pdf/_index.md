@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 以程式設計方式新增點註釋，從而增強您的 PDF 文件。本指南涵蓋設定、實作和實際應用。"
 "title": "如何使用 GroupDocs.Annotation for Java 為 PDF 新增點註釋"
 "url": "/zh-hant/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

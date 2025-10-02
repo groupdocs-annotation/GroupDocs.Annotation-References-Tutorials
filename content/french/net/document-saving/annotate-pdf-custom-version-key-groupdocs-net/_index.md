@@ -3,6 +3,7 @@
 "description": "Découvrez comment annoter et enregistrer des fichiers PDF avec des clés de version personnalisées à l'aide de la puissante bibliothèque GroupDocs.Annotation pour .NET, garantissant que chaque itération du document est identifiable de manière unique."
 "title": "Enregistrer des PDF annotés avec des clés de version personnalisées dans .NET à l'aide de GroupDocs.Annotation"
 "url": "/fr/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

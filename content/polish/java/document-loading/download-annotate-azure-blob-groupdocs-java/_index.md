@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak bezproblemowo pobierać pliki z usługi Azure Blob Storage i dodawać do nich adnotacje za pomocą GroupDocs.Annotation for Java. Ulepsz swój przepływ pracy w zakresie zarządzania dokumentami dzięki temu kompleksowemu przewodnikowi."
 "title": "Jak pobierać i adnotować pliki obiektów blob platformy Azure przy użyciu GroupDocs.Annotation Java"
 "url": "/pl/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

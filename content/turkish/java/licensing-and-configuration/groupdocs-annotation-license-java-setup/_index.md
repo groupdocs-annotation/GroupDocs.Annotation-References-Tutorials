@@ -3,6 +3,7 @@
 "description": "Java uygulamalarınız için GroupDocs.Annotation lisansını nasıl kuracağınızı ve yapılandıracağınızı öğrenin, tüm özellikleri zahmetsizce açın."
 "title": "Java'da GroupDocs.Annotation Lisansını Ayarlama&#58; Kapsamlı Bir Kılavuz"
 "url": "/tr/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

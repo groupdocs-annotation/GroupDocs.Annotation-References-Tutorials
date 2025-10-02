@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi pada PDF yang dilindungi kata sandi dengan aman menggunakan GroupDocs.Annotation for .NET. Panduan langkah demi langkah ini mencakup cara memuat, membuat anotasi, dan menyimpan dokumen."
 "title": "Cara Membuat Anotasi pada PDF yang Dilindungi Kata Sandi Menggunakan GroupDocs.Annotation untuk .NET | Panduan Langkah demi Langkah"
 "url": "/id/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

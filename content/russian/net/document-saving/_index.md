@@ -2,6 +2,7 @@
 "description": "Полные руководства по сохранению аннотированных документов с различными параметрами с использованием GroupDocs.Annotation для .NET."
 "title": "Учебники по сохранению документов для GroupDocs.Annotation .NET"
 "url": "/ru/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

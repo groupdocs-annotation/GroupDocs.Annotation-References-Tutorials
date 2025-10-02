@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "在 .NET 中刪除對註釋的回复"
 "url": "/zh-hant/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

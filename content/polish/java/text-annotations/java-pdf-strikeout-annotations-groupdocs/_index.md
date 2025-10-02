@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak tworzyć adnotacje tekstowe przekreślone w plikach PDF Java przy użyciu GroupDocs.Annotation dla Java. Postępuj zgodnie z tym samouczkiem krok po kroku, aby zwiększyć możliwości edycji dokumentów."
 "title": "Java PDF Strikeout Annotations with GroupDocs&#58; Kompleksowy przewodnik"
 "url": "/pl/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как освоить аннотацию PDF .NET с GroupDocs.Annotation. Это руководство охватывает инициализацию, обработку страниц, преобразования и эффективное сохранение аннотированных документов."
 "title": "Полное руководство по аннотациям PDF .NET с использованием GroupDocs.Annotation для улучшенного управления документами"
 "url": "/ru/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

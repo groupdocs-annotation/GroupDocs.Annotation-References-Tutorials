@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας προσθέτοντας διαδραστικά πλαίσια ελέγχου χρησιμοποιώντας το GroupDocs.Annotation για .NET. Ακολουθήστε αυτόν τον αναλυτικό οδηγό για να βελτιστοποιήσετε τις σχολιασμούς πεδίων φόρμας στα ψηφιακά σας έγγραφα."
 "title": "Πώς να προσθέσετε ένα πλαίσιο ελέγχου σε PDF με το GroupDocs.Annotation για .NET™ - Οδηγός βήμα προς βήμα"
 "url": "/el/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

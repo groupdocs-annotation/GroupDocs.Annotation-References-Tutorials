@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 在文档中实现超链接和链接注释的完整教程。"
 "title": "GroupDocs.Annotation Java 的链接注释教程"
 "url": "/zh/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

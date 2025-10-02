@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά βίντεο για την πρόσβαση σε μεταδεδομένα εγγράφων, πληροφορίες σελίδας και ιδιότητες εγγράφων με το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο για πληροφορίες εγγράφων για το GroupDocs.Annotation .NET"
 "url": "/el/net/document-information/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi teks berkelok-kelok di aplikasi .NET Anda dengan GroupDocs.Annotation untuk meningkatkan keterbacaan dokumen dan umpan balik."
 "title": "Menerapkan Anotasi Teks Berlekuk-lekuk di .NET Menggunakan GroupDocs.Annotation"
 "url": "/id/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

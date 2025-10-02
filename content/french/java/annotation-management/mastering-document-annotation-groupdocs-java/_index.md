@@ -3,6 +3,7 @@
 "description": "Apprenez à annoter efficacement des documents avec GroupDocs.Annotation pour Java. Ce guide couvre le chargement, l'annotation de PDF et l'optimisation de votre environnement Java avec Maven."
 "title": "Maîtriser l'annotation de documents en Java &#58; un guide complet sur GroupDocs.Annotation"
 "url": "/fr/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

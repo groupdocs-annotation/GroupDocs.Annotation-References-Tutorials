@@ -3,6 +3,7 @@
 "description": "Scopri come creare anteprime di documenti PDF di alta qualità con risoluzioni di immagine specifiche utilizzando la potente libreria GroupDocs.Annotation in .NET. Ottimizza il tuo flusso di lavoro di gestione dei documenti oggi stesso."
 "title": "Genera anteprime PDF di alta qualità con risoluzioni personalizzate utilizzando GroupDocs.Annotation per .NET"
 "url": "/it/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

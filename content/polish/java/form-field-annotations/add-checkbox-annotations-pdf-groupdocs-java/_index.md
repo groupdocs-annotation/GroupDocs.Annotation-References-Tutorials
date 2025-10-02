@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak ulepszyć swoje dokumenty PDF za pomocą interaktywnych adnotacji pól wyboru przy użyciu GroupDocs.Annotation dla Java. Postępuj zgodnie z tym przewodnikiem krok po kroku."
 "title": "Jak dodać adnotacje CheckBox do plików PDF za pomocą GroupDocs.Annotation dla Java"
 "url": "/pl/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

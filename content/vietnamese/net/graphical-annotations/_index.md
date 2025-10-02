@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách thêm hình dạng, mũi tên, hình ảnh và thành phần đồ họa vào tài liệu bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn chú thích đồ họa cho GroupDocs.Annotation .NET"
 "url": "/vi/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

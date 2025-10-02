@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحميل المستندات المحمية بكلمة مرور، وإضافة التعليقات التوضيحية إليها، وحفظها بأمان باستخدام GroupDocs.Annotation لجافا. عزّز أمان مستنداتك في تطبيقات جافا."
 "title": "التعامل الآمن مع المستندات باستخدام GroupDocs.Annotation Java - تحميل وتعليق المستندات المحمية بكلمة مرور"
 "url": "/ar/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

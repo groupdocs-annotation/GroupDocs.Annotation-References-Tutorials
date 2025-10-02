@@ -3,6 +3,7 @@
 "description": "InputStream kullanarak Java'da GroupDocs.Annotation lisanslamasının nasıl verimli bir şekilde kurulacağını öğrenin. Bu kapsamlı kılavuzla iş akışınızı kolaylaştırın ve uygulama performansını artırın."
 "title": "Düzgünleştirilmiş GroupDocs.Annotation Java Lisanslaması&#58; Lisans Kurulumu için InputStream Nasıl Kullanılır"
 "url": "/tr/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro načítání dokumentů z různých zdrojů pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro načítání dokumentů pro GroupDocs.Annotation .NET"
 "url": "/cs/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

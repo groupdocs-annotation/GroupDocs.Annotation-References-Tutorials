@@ -3,6 +3,7 @@
 "description": "Leer hoe u een licentie voor GroupDocs.Annotation .NET instelt en toepast met behulp van bestandsstreams. Ontgrendel alle functies met deze uitgebreide handleiding."
 "title": "Master GroupDocs.Annotation .NET — Licentie instellen met behulp van File Stream in C#"
 "url": "/nl/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

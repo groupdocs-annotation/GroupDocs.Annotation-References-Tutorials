@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk memuat dokumen dari berbagai sumber menggunakan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Pemuatan Dokumen untuk GroupDocs.Annotation .NET"
 "url": "/id/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java ile belgelerde hiper bağlantıların ve bağlantılı açıklamaların uygulanmasına ilişkin kapsamlı eğitimler."
 "title": "GroupDocs.Annotation Java için Bağlantı Açıklama Eğitimleri"
 "url": "/tr/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

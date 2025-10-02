@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java ile belgelere şekil, ok, resim ve grafik öğeleri eklemeye yönelik kapsamlı eğitimler."
 "title": "GroupDocs için Grafiksel Açıklama Eğitimleri.Annotation Java"
 "url": "/tr/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

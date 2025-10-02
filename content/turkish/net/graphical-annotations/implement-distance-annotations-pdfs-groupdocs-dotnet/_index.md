@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF belgelerinize hassas mesafe açıklamalarının nasıl ekleneceğini öğrenin. Bu kılavuz kurulum, yapılandırma ve pratik uygulamaları kapsar."
 "title": ".NET için GroupDocs.Annotation'ı Kullanarak PDF'lerde Mesafe Açıklamalarını Uygulama"
 "url": "/tr/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

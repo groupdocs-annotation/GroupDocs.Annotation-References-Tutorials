@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące wdrażania zaawansowanych możliwości adnotacji, dostosowań i specjalistycznych funkcji przy użyciu GroupDocs.Annotation dla Java."
 "title": "Zaawansowane funkcje GroupDocs.Annotation Tutoriale dla języka Java"
 "url": "/pl/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "นำเข้าคำอธิบายจากเอกสาร"
 "url": "/th/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

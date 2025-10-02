@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan kezelheti és töltheti be hatékonyan a jegyzetekkel ellátott dokumentumok adott verzióit a GroupDocs.Annotation for .NET segítségével. Fejlessze dokumentumkezelő rendszerét még ma!"
 "title": "Dokumentumverziók betöltése a GroupDocs.Annotation for .NET segítségével – Átfogó útmutató"
 "url": "/hu/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

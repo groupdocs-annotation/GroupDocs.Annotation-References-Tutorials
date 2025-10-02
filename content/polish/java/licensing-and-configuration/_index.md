@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące konfigurowania licencji, konfiguracji opcji i zarządzania GroupDocs.Annotation w aplikacjach Java."
 "title": "GroupDocs.Annotation — samouczki dotyczące licencjonowania i konfiguracji dla języka Java"
 "url": "/pl/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

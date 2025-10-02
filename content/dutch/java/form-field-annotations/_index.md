@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het toevoegen van formuliervelden en interactieve componenten aan documenten met behulp van GroupDocs.Annotation voor Java."
 "title": "Tutorials voor het annoteren van formuliervelden voor GroupDocs.Annotation Java"
 "url": "/nl/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

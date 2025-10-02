@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan tölthet be, láthat el jegyzetekkel és menthet el jelszóval védett dokumentumokat biztonságosan a GroupDocs.Annotation for Java segítségével. Növelje a dokumentumok biztonságát Java alkalmazásaiban."
 "title": "Biztonságos dokumentumkezelés a GroupDocs.Annotation segítségével. Java&#58; Jelszóval védett dokumentumok betöltése és megjegyzésekkel való ellátása"
 "url": "/hu/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 在文件中新增箭頭註解。本指南提供逐步說明和程式碼範例。"
 "title": "如何使用 GroupDocs.Annotation for .NET 在 PDF 中新增箭頭註釋"
 "url": "/zh-hant/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

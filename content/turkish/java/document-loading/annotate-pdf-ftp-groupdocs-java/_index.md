@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak PDF belgelerine doğrudan bir FTP sunucusundan nasıl açıklama ekleyeceğinizi öğrenin. Bu adım adım kılavuzla belge işleme iş akışlarınızı kolaylaştırın."
 "title": "GroupDocs.Annotation for Java'yı Kullanarak FTP'den PDF'lere Açıklama Ekleyin&#58; Eksiksiz Bir Kılavuz"
 "url": "/tr/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

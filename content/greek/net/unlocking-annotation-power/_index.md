@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Ξεκλειδώνοντας τη Δύναμη των Σχολιασμών"
 "url": "/el/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как легко загружать файлы из Azure Blob Storage и аннотировать их с помощью GroupDocs.Annotation для Java. Улучшите свой рабочий процесс управления документами с помощью этого всеобъемлющего руководства."
 "title": "Как загрузить и аннотировать файлы Azure Blob с помощью GroupDocs.Annotation Java"
 "url": "/ru/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

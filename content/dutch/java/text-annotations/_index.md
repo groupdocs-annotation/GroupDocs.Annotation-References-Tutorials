@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het toevoegen, bewerken en beheren van tekstaantekeningen in documenten met behulp van GroupDocs.Annotation voor Java."
 "title": "Zelfstudies voor tekstannotatie voor GroupDocs.Annotation Java"
 "url": "/nl/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

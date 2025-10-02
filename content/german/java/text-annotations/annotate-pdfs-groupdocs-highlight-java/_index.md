@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie PDFs mit GroupDocs.Annotation für Java mit Texthervorhebungen und Antworten versehen. Diese Anleitung umfasst die Einrichtung, Codebeispiele und praktische Anwendungen."
 "title": "PDFs in Java mit GroupDocs.Highlight kommentieren – Ein umfassender Leitfaden"
 "url": "/de/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus aplicativos .NET adicionando anotações de links interativas usando a poderosa biblioteca GroupDocs.Annotation. Siga nosso guia passo a passo e melhore a interatividade dos seus documentos hoje mesmo."
 "title": "Como adicionar anotações de link em documentos usando GroupDocs.Annotation para .NET | Guia do desenvolvedor"
 "url": "/pt/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

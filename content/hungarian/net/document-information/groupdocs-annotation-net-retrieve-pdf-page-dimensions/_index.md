@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kérheti le hatékonyan a PDF-oldalak méretét a GroupDocs.Annotation for .NET segítségével. Kövesse ezt az útmutatót dokumentumkezelő alkalmazásai fejlesztéséhez."
 "title": "PDF oldalméretek lekérése a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

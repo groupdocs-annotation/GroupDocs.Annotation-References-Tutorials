@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Λήψη λίστας σχολίων χρησιμοποιώντας το Κλειδί έκδοσης"
 "url": "/el/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Yorumlar Olmadan Önizleme Oluştur"
 "url": "/tr/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

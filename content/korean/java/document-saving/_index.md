@@ -2,6 +2,7 @@
 "description": "Java용 GroupDocs.Annotation을 사용하여 다양한 옵션으로 주석이 달린 문서를 저장하는 방법에 대한 전체 튜토리얼입니다."
 "title": "GroupDocs.Annotation Java를 위한 문서 저장 튜토리얼"
 "url": "/ko/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan távolíthat el válaszokat a dokumentumokban található jegyzetekből a GroupDocs.Annotation for Java API használatával. Fejlessze dokumentumkezelését ezzel a lépésről lépésre szóló útmutatóval."
 "title": "Hogyan távolítsuk el a válaszokat azonosító alapján Java-ban a GroupDocs.Annotation API használatával"
 "url": "/hu/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

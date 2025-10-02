@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till exakta avståndsanteckningar i dina PDF-dokument med GroupDocs.Annotation för .NET. Den här guiden behandlar installation, konfiguration och praktiska tillämpningar."
 "title": "Implementera avståndsannoteringar i PDF-filer med GroupDocs.Annotation för .NET"
 "url": "/sv/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

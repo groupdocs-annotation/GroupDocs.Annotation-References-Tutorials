@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มส่วนประกอบกล่องกาเครื่องหมายลงในเอกสาร PDF"
 "url": "/th/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

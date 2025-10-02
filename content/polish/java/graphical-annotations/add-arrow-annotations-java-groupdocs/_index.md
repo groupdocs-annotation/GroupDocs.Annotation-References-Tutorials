@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie dodawać adnotacje strzałek do plików PDF za pomocą biblioteki GroupDocs.Annotation dla języka Java. Zwiększ przejrzystość dokumentu i współpracę."
 "title": "Jak dodać adnotacje strzałek w Javie za pomocą API GroupDocs.Annotation"
 "url": "/pl/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

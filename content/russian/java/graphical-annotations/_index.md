@@ -2,6 +2,7 @@
 "description": "Полные руководства по добавлению фигур, стрелок, изображений и графических элементов в документы с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по графическим аннотациям для GroupDocs.Annotation Java"
 "url": "/ru/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

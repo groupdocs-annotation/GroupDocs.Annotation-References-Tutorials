@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 向 PDF 文档添加交互式文本字段注释。请按照本分步指南操作，以增强文档的交互性。"
 "title": "如何使用 GroupDocs.Annotation for .NET 在 PDF 中添加文本字段注释（教程）"
 "url": "/zh/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

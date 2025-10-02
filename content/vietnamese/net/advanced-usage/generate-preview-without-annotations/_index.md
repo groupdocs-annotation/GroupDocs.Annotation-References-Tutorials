@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tạo bản xem trước không có chú thích"
 "url": "/vi/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

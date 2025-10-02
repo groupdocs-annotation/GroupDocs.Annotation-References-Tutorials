@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية استخراج التعليقات التوضيحية من المستندات وتحويلها إلى XML باستخدام GroupDocs.Annotation لـ .NET. حسّن سير عمل إدارة مستنداتك اليوم!"
 "title": "كيفية استخراج التعليقات التوضيحية وتسلسلها في .NET باستخدام GroupDocs.Annotation"
 "url": "/ar/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

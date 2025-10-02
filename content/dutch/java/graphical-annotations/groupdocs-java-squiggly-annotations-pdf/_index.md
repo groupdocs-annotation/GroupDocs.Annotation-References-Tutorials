@@ -3,6 +3,7 @@
 "description": "Leer hoe u met GroupDocs.Annotation voor Java kronkelende aantekeningen aan uw PDF-documenten kunt toevoegen. Hiermee verbetert u de controle van documenten en de samenwerking daaraan."
 "title": "Hoe u kronkelige annotaties aan pdf's toevoegt met GroupDocs.Annotation voor Java"
 "url": "/nl/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

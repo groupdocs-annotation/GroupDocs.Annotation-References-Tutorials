@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně spravovat a načítat konkrétní verze anotovaných dokumentů pomocí GroupDocs.Annotation pro .NET. Vylepšete svůj systém správy dokumentů ještě dnes!"
 "title": "Načítání konkrétních verzí dokumentů pomocí GroupDocs.Annotation pro .NET – Komplexní průvodce"
 "url": "/cs/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

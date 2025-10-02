@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation verschnörkelte Textanmerkungen in Ihre .NET-Anwendungen einfügen, um die Lesbarkeit und das Feedback der Dokumente zu verbessern."
 "title": "Implementieren Sie verschnörkelte Textanmerkungen in .NET mit GroupDocs.Annotation"
 "url": "/de/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

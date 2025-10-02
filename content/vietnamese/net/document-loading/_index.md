@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để tải tài liệu từ nhiều nguồn khác nhau bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn tải tài liệu cho GroupDocs.Annotation .NET"
 "url": "/vi/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

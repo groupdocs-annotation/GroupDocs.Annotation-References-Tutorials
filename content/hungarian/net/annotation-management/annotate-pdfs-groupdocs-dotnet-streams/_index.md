@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan láthat el hatékonyan jegyzetekkel PDF dokumentumokat .NET környezetben a GroupDocs.Annotation segítségével. Turbózza fel dokumentumkezelési munkafolyamatát."
 "title": "PDF-ek jegyzetelése GroupDocs.Annotation .NET használatával Streams-en keresztül – Átfogó útmutató"
 "url": "/hu/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

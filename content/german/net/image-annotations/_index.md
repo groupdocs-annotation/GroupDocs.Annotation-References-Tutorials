@@ -2,6 +2,7 @@
 "description": "Schritt-für-Schritt-Tutorials zum Hinzufügen und Verwalten von Bildanmerkungen in Dokumenten mit GroupDocs.Annotation für .NET."
 "title": "Tutorials zur Bildanmerkung für GroupDocs.Annotation .NET"
 "url": "/de/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

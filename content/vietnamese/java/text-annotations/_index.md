@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước về cách thêm, chỉnh sửa và quản lý chú thích văn bản trong tài liệu bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn chú thích văn bản cho GroupDocs.Annotation Java"
 "url": "/vi/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

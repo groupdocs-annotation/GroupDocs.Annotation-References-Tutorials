@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีนำคำอธิบายประกอบการแทนที่ข้อความไปใช้ในแอปพลิเคชัน .NET โดยใช้ GroupDocs.Annotation ปรับปรุงการอ่านและการทำงานของเอกสารได้อย่างง่ายดาย"
 "title": "วิธีการใช้การแทนที่ข้อความใน .NET โดยใช้ GroupDocs.Annotation เพื่อการใส่คำอธิบายประกอบเอกสารอย่างมีประสิทธิภาพ"
 "url": "/th/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

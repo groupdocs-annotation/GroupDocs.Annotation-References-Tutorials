@@ -3,6 +3,7 @@
 "description": "Leer hoe u overzichtelijke documentvoorbeelden zonder opmerkingen kunt maken met GroupDocs.Annotation voor .NET. Volg deze handleiding om uw documentpresentatie- en revisieprocessen te verbeteren."
 "title": "Documentvoorbeelden genereren zonder opmerkingen met GroupDocs.Annotation .NET"
 "url": "/nl/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

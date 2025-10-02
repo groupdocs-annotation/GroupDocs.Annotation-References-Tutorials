@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 为 PDF 添加图像注释。简化您的文档工作流程并增强协作。"
 "title": "使用 GroupDocs.Annotation Java 向 PDF 添加图像注释 - 完整教程"
 "url": "/zh/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

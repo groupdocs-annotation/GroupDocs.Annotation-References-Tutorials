@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 Java PDF에 텍스트 취소선 주석을 만드는 방법을 알아보세요. 이 단계별 튜토리얼을 따라 문서 편집 기능을 향상시켜 보세요."
 "title": "GroupDocs를 사용한 Java PDF 취소선 주석 삽입&#58; 종합 가이드"
 "url": "/ko/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

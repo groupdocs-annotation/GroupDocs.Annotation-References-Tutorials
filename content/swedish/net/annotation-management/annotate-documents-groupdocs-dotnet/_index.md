@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt lägger till och uppdaterar anteckningar i dokument med GroupDocs.Annotation .NET. Förbättra samarbete och dokumenthantering med den här steg-för-steg-guiden."
 "title": "Hur man kommenterar dokument med GroupDocs.Annotation .NET – en omfattande guide"
 "url": "/sv/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách lưu tài liệu có chú thích với nhiều tùy chọn khác nhau bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn lưu tài liệu cho GroupDocs.Annotation Java"
 "url": "/vi/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Установить измеренную лицензию"
 "url": "/ru/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

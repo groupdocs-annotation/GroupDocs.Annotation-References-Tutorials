@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการบันทึกคำอธิบายประกอบ PDF อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงกระบวนการจัดการเอกสารของคุณด้วยคู่มือโดยละเอียดของเรา"
 "title": "บันทึกคำอธิบาย PDF อย่างมีประสิทธิภาพด้วย GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีเพิ่มคำอธิบายประกอบรูปวงรีในเอกสาร PDF โดยใช้ไลบรารี GroupDocs.Annotation อันทรงพลังใน Java ปฏิบัติตามคำแนะนำทีละขั้นตอนนี้เพื่อปรับปรุงการทำงานร่วมกันในเอกสาร"
 "title": "Java เพิ่มคำอธิบาย Ellipse ลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

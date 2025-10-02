@@ -3,6 +3,7 @@
 "description": "Scopri come proteggere i tuoi documenti aggiungendo filigrane utilizzando GroupDocs.Annotation per Java. Questa guida include suggerimenti per la configurazione, la personalizzazione e l'ottimizzazione."
 "title": "Implementazione di annotazioni di filigrana nei PDF con GroupDocs.Annotation Java - Una guida completa"
 "url": "/it/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

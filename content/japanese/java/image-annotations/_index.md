@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してドキュメントに画像注釈を追加および管理するためのステップバイステップのチュートリアル。"
 "title": "GroupDocs.Annotation Java 用画像注釈チュートリアル"
 "url": "/ja/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

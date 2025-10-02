@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak açıklama yanıtlarını etkili bir şekilde nasıl yöneteceğinizi öğrenin. Bu kılavuz, entegrasyonu, yanıt eklemeyi ve pratik kullanım durumlarını kapsar."
 "title": "GroupDocs.Annotation ile .NET'te Açıklama Yanıt Yönetimini Uygulama Kılavuzu"
 "url": "/tr/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

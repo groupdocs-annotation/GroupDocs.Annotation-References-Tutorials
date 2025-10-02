@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、インタラクティブなポイント注釈でPDFドキュメントを強化する方法を学びましょう。このステップバイステップガイドでは、セットアップ、実装、トラブルシューティングについて説明します。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF にポイント注釈を追加する方法"
 "url": "/ja/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

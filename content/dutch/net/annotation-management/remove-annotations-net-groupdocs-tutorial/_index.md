@@ -3,6 +3,7 @@
 "description": "Leer annotaties uit documenten verwijderen met GroupDocs.Annotation voor .NET. Leer stapsgewijze processen, optimaliseer bestandsverwerking en verbeter de helderheid van documenten."
 "title": "Verwijder annotaties efficiënt in .NET met GroupDocs.Annotation&#58; een uitgebreide handleiding"
 "url": "/nl/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

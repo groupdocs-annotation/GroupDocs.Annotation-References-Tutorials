@@ -3,6 +3,7 @@
 "description": "了解如何為您的 Java 應用程式設定和配置 GroupDocs.Annotation 許可證，輕鬆解鎖全部功能。"
 "title": "在 Java 中設定 GroupDocs.Annotation 授權—綜合指南"
 "url": "/zh-hant/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

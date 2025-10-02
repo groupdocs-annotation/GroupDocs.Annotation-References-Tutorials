@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Pobierz listę adnotacji za pomocą klucza wersji"
 "url": "/pl/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

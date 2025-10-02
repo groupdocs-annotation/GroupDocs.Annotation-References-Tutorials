@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Lấy danh sách chú thích bằng cách sử dụng khóa phiên bản"
 "url": "/vi/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

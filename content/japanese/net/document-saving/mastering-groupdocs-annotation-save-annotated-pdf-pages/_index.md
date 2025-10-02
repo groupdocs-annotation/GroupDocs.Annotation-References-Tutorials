@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、PDF の注釈付きページのみを効率的に保存する方法を学びましょう。この詳細なガイドで、ドキュメント管理とコラボレーションを強化しましょう。"
 "title": "GroupDocs.Annotation for .NET を使用して注釈付きページを PDF に保存する方法"
 "url": "/ja/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

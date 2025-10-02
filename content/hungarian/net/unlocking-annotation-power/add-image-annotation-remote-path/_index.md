@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Képhozzáfűzés hozzáadása a dokumentumhoz (távoli elérési út)"
 "url": "/hu/net/unlocking-annotation-power/add-image-annotation-remote-path/"
+type: docs
 "weight": 15
 ---
 

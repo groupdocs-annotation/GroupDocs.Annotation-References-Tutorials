@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة مكون مربع الاختيار إلى مستند PDF"
 "url": "/ar/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

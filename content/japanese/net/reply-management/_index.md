@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してコメント スレッド、返信、共同ディスカッションを実装するためのステップ バイ ステップのチュートリアル。"
 "title": "GroupDocs.Annotation .NET の返信管理チュートリアル"
 "url": "/ja/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

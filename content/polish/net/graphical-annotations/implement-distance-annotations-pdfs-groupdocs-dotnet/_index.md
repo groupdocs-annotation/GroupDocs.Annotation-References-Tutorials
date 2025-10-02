@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać precyzyjne adnotacje odległości do dokumentów PDF za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik obejmuje konfigurację, ustawienia i praktyczne zastosowania."
 "title": "Implementacja adnotacji odległości w plikach PDF przy użyciu GroupDocs.Annotation dla .NET"
 "url": "/pl/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

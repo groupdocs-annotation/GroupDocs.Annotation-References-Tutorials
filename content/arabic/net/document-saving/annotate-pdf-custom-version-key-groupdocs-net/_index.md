@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية التعليق على ملفات PDF وحفظها باستخدام مفاتيح الإصدار المخصصة باستخدام مكتبة GroupDocs.Annotation القوية لـ .NET، مما يضمن إمكانية التعرف على كل تكرار للمستند بشكل فريد."
 "title": "حفظ ملفات PDF الموضحة باستخدام مفاتيح الإصدار المخصصة في .NET باستخدام GroupDocs.Annotation"
 "url": "/ar/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

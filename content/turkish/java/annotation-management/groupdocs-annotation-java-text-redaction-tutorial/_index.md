@@ -3,6 +3,7 @@
 "description": "Güçlü GroupDocs.Annotation Java kütüphanesini kullanarak PDF'lerdeki metni etkili bir şekilde nasıl sansürleyeceğinizi öğrenin. Bu kılavuz kurulum, açıklama oluşturma ve kaydetme süreçlerini kapsar."
 "title": "GroupDocs.Annotation Java API'sini Kullanarak PDF'lerde Ana Metin Düzenlemesi&#58; Kapsamlı Bir Kılavuz"
 "url": "/tr/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

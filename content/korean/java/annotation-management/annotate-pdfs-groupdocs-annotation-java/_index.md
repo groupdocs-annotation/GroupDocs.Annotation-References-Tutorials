@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 PDF 파일에 주석을 원활하게 추가하고 업데이트하는 방법을 알아보세요. 이 실용적인 가이드로 문서 관리를 더욱 효율적으로 개선하세요."
 "title": "GroupDocs.Annotation for Java를 사용하여 PDF에 주석을 달는 방법 - 포괄적인 가이드"
 "url": "/ko/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

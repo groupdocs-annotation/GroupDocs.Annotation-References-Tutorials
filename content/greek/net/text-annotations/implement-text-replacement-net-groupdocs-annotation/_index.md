@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εφαρμόζετε σχολιασμούς αντικατάστασης κειμένου στις εφαρμογές .NET χρησιμοποιώντας το GroupDocs.Annotation. Βελτιώστε την αναγνωσιμότητα και τη λειτουργικότητα των εγγράφων χωρίς κόπο."
 "title": "Πώς να εφαρμόσετε την αντικατάσταση κειμένου στο .NET χρησιμοποιώντας το GroupDocs.Annotation για αποτελεσματική σχολιασμό εγγράφων"
 "url": "/el/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Scopri come configurare e applicare una licenza per GroupDocs.Annotation .NET utilizzando i flussi di file. Sblocca tutte le funzionalità con questa guida completa."
 "title": "Master GroupDocs.Annotation .NET - Imposta la licenza utilizzando il flusso di file in C#"
 "url": "/it/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

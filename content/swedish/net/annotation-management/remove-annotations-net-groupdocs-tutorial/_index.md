@@ -3,6 +3,7 @@
 "description": "Bemästra borttagning av anteckningar från dokument med GroupDocs.Annotation för .NET. Lär dig steg-för-steg-processer, optimera filhantering och förbättra dokumentens tydlighet."
 "title": "Ta bort annoteringar effektivt i .NET med GroupDocs.Annotation – en omfattande guide"
 "url": "/sv/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

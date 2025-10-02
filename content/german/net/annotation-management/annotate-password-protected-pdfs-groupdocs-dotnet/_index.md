@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie passwortgeschützte PDF-Dateien mit GroupDocs.Annotation für .NET sicher kommentieren. Diese Schritt-für-Schritt-Anleitung behandelt das Laden, Kommentieren und Speichern von Dokumenten."
 "title": "So kommentieren Sie passwortgeschützte PDFs mit GroupDocs.Annotation für .NET | Schritt-für-Schritt-Anleitung"
 "url": "/de/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

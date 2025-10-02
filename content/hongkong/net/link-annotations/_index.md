@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 在文件中實作超連結和連結註解的完整教學。"
 "title": "GroupDocs.Annotation .NET 的連結註解教學"
 "url": "/zh-hant/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

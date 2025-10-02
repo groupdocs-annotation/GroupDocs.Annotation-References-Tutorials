@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để nhập và xuất chú thích giữa các tài liệu và tệp XML bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn nhập và xuất chú thích cho GroupDocs.Annotation .NET"
 "url": "/vi/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

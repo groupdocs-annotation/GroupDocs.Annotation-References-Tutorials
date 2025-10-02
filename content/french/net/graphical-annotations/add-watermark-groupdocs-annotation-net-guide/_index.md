@@ -3,6 +3,7 @@
 "description": "Découvrez comment ajouter des filigranes avec GroupDocs.Annotation pour .NET. Ce guide couvre la configuration, la mise en œuvre étape par étape et les bonnes pratiques pour sécuriser et personnaliser vos documents."
 "title": "Implémenter l'ajout de filigrane avec GroupDocs.Annotation dans .NET – Guide complet pour la sécurité et l'image de marque des documents"
 "url": "/fr/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

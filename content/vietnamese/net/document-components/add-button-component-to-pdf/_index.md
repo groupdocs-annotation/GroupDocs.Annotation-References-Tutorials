@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thêm thành phần nút vào tài liệu PDF"
 "url": "/vi/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

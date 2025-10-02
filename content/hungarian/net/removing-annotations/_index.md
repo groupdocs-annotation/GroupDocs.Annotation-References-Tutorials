@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Jegyzetek eltávolítása"
 "url": "/hu/net/removing-annotations/"
+type: docs
 "weight": 25
 ---
 

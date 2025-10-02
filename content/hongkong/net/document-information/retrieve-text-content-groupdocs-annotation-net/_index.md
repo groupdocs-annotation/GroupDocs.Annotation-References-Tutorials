@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 有效率地從文件中擷取文字內容。遵循本逐步指南，提升您的文件處理能力。"
 "title": "使用 GroupDocs.Annotation for .NET 擷取文件文字內容－逐步指南"
 "url": "/zh-hant/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

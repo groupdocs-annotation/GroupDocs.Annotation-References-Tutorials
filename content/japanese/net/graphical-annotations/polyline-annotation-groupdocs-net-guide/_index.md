@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、PDF ドキュメントにポリライン注釈を追加する方法を学びましょう。このガイドでは、効果的な実装のための手順とヒントを段階的に説明します。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF にポリライン注釈を追加する方法 - ステップバイステップガイド"
 "url": "/ja/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

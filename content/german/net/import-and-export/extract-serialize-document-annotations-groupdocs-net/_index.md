@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Anmerkungen aus Dokumenten extrahieren und in XML serialisieren. Optimieren Sie noch heute Ihren Dokumentenmanagement-Workflow!"
 "title": "So extrahieren und serialisieren Sie Anmerkungen in .NET mit GroupDocs.Annotation"
 "url": "/de/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

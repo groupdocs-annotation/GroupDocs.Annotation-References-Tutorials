@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak tworzyć czyste podglądy dokumentów bez komentarzy za pomocą GroupDocs.Annotation dla .NET. Postępuj zgodnie z tym przewodnikiem, aby ulepszyć prezentację dokumentów i procesy przeglądu."
 "title": "Jak generować podglądy dokumentów bez komentarzy za pomocą GroupDocs.Annotation .NET"
 "url": "/pl/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

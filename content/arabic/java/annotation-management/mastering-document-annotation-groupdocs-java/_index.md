@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية إلى المستندات بكفاءة باستخدام GroupDocs.Annotation لجافا. يغطي هذا الدليل تحميل ملفات PDF وإضافة تعليقات توضيحية إليها، وتحسين بيئة جافا باستخدام Maven."
 "title": "إتقان شرح المستندات في جافا - دليل شامل باستخدام GroupDocs.Annotation"
 "url": "/ar/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

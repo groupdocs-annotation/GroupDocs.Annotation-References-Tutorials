@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att lägga till och hantera bildannoteringar i dokument med GroupDocs.Annotation för Java."
 "title": "Handledningar för bildannotering för GroupDocs.Annotation Java"
 "url": "/sv/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

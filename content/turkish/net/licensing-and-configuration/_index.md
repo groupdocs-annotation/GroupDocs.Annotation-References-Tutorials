@@ -2,6 +2,7 @@
 "description": ".NET uygulamalarında lisanslama kurulumu, seçenekleri yapılandırma ve GroupDocs.Annotation'ı yönetmeye ilişkin kapsamlı eğitimler."
 "title": "GroupDocs.Annotation Lisanslama ve .NET İçin Yapılandırma Eğitimleri"
 "url": "/tr/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

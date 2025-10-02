@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF एनोटेशन को कुशलतापूर्वक सहेजना सीखें। हमारे विस्तृत गाइड के साथ अपने दस्तावेज़ प्रबंधन प्रक्रिया को सुव्यवस्थित करें।"
 "title": ".NET के लिए GroupDocs.Annotation के साथ PDF एनोटेशन को कुशलतापूर्वक सहेजें"
 "url": "/hi/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

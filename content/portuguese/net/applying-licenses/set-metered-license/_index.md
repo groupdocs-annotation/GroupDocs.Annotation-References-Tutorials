@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Definir licença medida"
 "url": "/pt/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

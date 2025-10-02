@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 대화형 드롭다운 구성 요소를 추가하여 PDF 문서를 개선하는 방법을 알아보세요. 이 단계별 가이드를 따라 사용자 입력을 간소화하고 문서 기능을 개선해 보세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 PDF에 드롭다운 추가하기&#58; 종합 가이드"
 "url": "/ko/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

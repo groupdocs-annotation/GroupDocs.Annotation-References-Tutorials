@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "從 XML 文件匯出註釋"
 "url": "/zh-hant/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

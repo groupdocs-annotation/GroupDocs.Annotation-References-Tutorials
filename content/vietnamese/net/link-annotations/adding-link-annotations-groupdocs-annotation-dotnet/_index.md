@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách nâng cao ứng dụng .NET của bạn bằng cách thêm chú thích liên kết tương tác bằng thư viện GroupDocs.Annotation mạnh mẽ. Làm theo hướng dẫn từng bước của chúng tôi và cải thiện tính tương tác của tài liệu ngay hôm nay."
 "title": "Cách thêm chú thích liên kết vào tài liệu bằng GroupDocs.Annotation cho .NET | Hướng dẫn dành cho nhà phát triển"
 "url": "/vi/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

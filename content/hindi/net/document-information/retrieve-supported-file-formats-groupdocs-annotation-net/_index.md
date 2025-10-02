@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके समर्थित फ़ाइल स्वरूपों को कुशलतापूर्वक प्राप्त करना सीखें। यह मार्गदर्शिका एकीकरण, कार्यान्वयन और व्यावहारिक अनुप्रयोगों को कवर करती है।"
 "title": ".NET के लिए GroupDocs.Annotation के साथ समर्थित फ़ाइल स्वरूपों को कैसे प्राप्त करें एक व्यापक गाइड"
 "url": "/hi/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

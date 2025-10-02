@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة مكون الزر إلى مستند PDF"
 "url": "/ar/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

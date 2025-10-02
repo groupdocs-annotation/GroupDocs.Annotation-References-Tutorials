@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณโดยเพิ่มคำอธิบายประกอบแบบวงรีโต้ตอบโดยใช้ GroupDocs.Annotation .NET API คู่มือนี้ให้คำแนะนำทีละขั้นตอนสำหรับนักพัฒนา"
 "title": "วิธีการเพิ่มคำอธิบาย Ellipse ลงใน PDF โดยใช้ GroupDocs.Annotation .NET API"
 "url": "/th/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

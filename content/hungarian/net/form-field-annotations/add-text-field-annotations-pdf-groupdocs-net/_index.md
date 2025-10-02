@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat interaktív szövegmező-megjegyzéseket PDF-dokumentumaihoz a GroupDocs.Annotation for .NET segítségével. Kövesse ezt a lépésenkénti útmutatót a dokumentumok interaktivitásának fokozásához."
 "title": "Szövegmező-jegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation for .NET használatával (oktatóanyag)"
 "url": "/hu/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、注釈付きドキュメントの特定のバージョンを効率的に管理および読み込む方法を学びましょう。今すぐドキュメント管理システムを強化しましょう！"
 "title": "GroupDocs.Annotation for .NET で特定のドキュメント バージョンを読み込む方法 - 総合ガイド"
 "url": "/ja/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

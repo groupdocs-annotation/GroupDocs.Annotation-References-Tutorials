@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εξάγετε μεταδεδομένα εγγράφων όπως τύπο αρχείου, αριθμό σελίδων και μέγεθος χρησιμοποιώντας το GroupDocs.Annotation για Java. Βελτιώστε τη διαχείριση εγγράφων σας με αποτελεσματική εξαγωγή πληροφοριών."
 "title": "Αποτελεσματική εξαγωγή μεταδεδομένων εγγράφων χρησιμοποιώντας το GroupDocs.Annotation σε Java"
 "url": "/el/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

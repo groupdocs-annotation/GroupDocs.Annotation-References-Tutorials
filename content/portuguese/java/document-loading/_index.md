@@ -2,6 +2,7 @@
 "description": "Tutoriais passo a passo para carregar documentos de várias fontes usando o GroupDocs.Annotation para Java."
 "title": "Tutoriais de carregamento de documentos para GroupDocs.Annotation Java"
 "url": "/pt/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

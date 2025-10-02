@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące wdrażania wątków komentarzy, odpowiedzi i dyskusji grupowych za pomocą GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki dotyczące zarządzania odpowiedziami dla GroupDocs.Annotation .NET"
 "url": "/pl/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

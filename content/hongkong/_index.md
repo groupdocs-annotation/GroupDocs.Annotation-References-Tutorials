@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation 開發人員指南"
 "title": "文件註解 API | GroupDocs.Annotation 教學與 SDK 範例"
 "url": "/zh-hant/"
+type: docs
 "weight": 11
 ---
 

@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok hiperhivatkozások és csatolt annotációk dokumentumokban való megvalósításához a GroupDocs.Annotation for Java segítségével."
 "title": "Linkannotációs oktatóanyagok GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

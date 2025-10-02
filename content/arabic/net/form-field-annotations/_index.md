@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لإضافة حقول النماذج والمكونات التفاعلية إلى المستندات باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس تعليمية حول شرح حقول النموذج لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

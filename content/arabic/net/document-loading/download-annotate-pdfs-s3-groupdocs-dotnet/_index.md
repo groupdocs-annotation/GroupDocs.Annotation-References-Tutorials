@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تنزيل ملفات PDF وشرحها بكفاءة من Amazon S3 باستخدام GroupDocs.Annotation لـ .NET. حسّن سير عمل مستنداتك من خلال التكامل السلس."
 "title": "تنزيل ملفات PDF بكفاءة وإضافة التعليقات التوضيحية إليها من Amazon S3 باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

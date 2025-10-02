@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 在 Java PDF 中建立文字刪除線註解。遵循本逐步教程，提升您的文件編輯能力。"
 "title": "GroupDocs 的 Java PDF 刪除線註解綜合指南"
 "url": "/zh-hant/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

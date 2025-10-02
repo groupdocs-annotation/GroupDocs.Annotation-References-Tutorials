@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Удалить ответы по имени пользователя в .NET"
 "url": "/ru/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

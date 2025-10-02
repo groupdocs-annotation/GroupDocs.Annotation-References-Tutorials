@@ -3,6 +3,7 @@
 "description": "Lär dig hur du implementerar textfältsannoteringar i Java med GroupDocs.Annotation för förbättrad dokumentinteraktivitet. Följ den här omfattande guiden med steg-för-steg-instruktioner och praktiska tillämpningar."
 "title": "Implementera TextField-annoteringar i Java med GroupDocs.Annotation – en omfattande guide"
 "url": "/sv/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

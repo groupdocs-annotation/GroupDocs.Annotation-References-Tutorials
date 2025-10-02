@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके अपने दस्तावेज़ों में तीर एनोटेशन जोड़ने का तरीका जानें। यह मार्गदर्शिका कोड उदाहरणों के साथ चरण-दर-चरण निर्देश प्रदान करती है।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF में तीर एनोटेशन कैसे जोड़ें"
 "url": "/hi/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

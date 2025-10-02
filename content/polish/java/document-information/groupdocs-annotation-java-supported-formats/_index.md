@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak używać GroupDocs.Annotation dla Java, aby skutecznie wymieniać obsługiwane formaty plików dzięki naszemu przewodnikowi krok po kroku. Idealne do ulepszania aplikacji adnotacji dokumentów."
 "title": "Jak odzyskać obsługiwane formaty plików w GroupDocs.Annotation dla Java&#58; Kompleksowy przewodnik"
 "url": "/pl/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

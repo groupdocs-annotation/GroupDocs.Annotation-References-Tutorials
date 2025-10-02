@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan töltheti be és láthatja el hatékonyan az Amazon S3-on tárolt dokumentumokat a GroupDocs.Annotation segítségével Java nyelven. Ez az útmutató az integrációt, az AWS SDK használatát és a teljesítményoptimalizálást tárgyalja."
 "title": "Dokumentumok betöltése és megjegyzésekkel való ellátása az Amazon S3-ból Java használatával – Útmutató a GroupDocs.Annotation integrációhoz"
 "url": "/hu/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

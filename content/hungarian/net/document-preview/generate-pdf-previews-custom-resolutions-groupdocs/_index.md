@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan hozhat létre kiváló minőségű PDF-dokumentum előnézeteket meghatározott képfelbontásokkal a .NET hatékony GroupDocs.Annotation könyvtárának segítségével. Optimalizálja dokumentumkezelési munkafolyamatát még ma!"
 "title": "Kiváló minőségű PDF-előnézetek létrehozása egyéni felbontásokban a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

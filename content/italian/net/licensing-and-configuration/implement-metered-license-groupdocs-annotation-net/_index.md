@@ -3,6 +3,7 @@
 "description": "Scopri come configurare e gestire una licenza a consumo con GroupDocs.Annotation per .NET, garantendo conformità e funzionalità ottimali."
 "title": "Implementazione di una licenza a consumo in GroupDocs.Annotation per .NET&#58; una guida completa"
 "url": "/it/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

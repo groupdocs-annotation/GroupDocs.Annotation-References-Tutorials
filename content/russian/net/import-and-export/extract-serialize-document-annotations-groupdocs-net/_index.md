@@ -3,6 +3,7 @@
 "description": "Узнайте, как извлекать аннотации из документов и сериализовать их в XML с помощью GroupDocs.Annotation для .NET. Улучшите свой рабочий процесс управления документами сегодня!"
 "title": "Как извлекать и сериализовать аннотации в .NET с помощью GroupDocs.Annotation"
 "url": "/ru/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

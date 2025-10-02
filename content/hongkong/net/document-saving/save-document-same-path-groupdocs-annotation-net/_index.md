@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 中的原始路徑儲存已註解的文檔，確保簡化的文件管理和工作流程效率。"
 "title": "如何使用 GroupDocs.Annotation for .NET 將文件儲存在原始路徑"
 "url": "/zh-hant/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

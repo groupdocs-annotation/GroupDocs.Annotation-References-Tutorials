@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt reacties uit annotaties verwijdert met GroupDocs.Annotation voor .NET. Stroomlijn uw documentbeheer met deze uitgebreide handleiding."
 "title": "Hoe u antwoorden uit annotaties verwijdert met behulp van GroupDocs.Annotation .NET - Stapsgewijze handleiding"
 "url": "/nl/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

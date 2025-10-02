@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt antecknar PDF-dokument med GroupDocs.Annotation för .NET. Den här guiden beskriver hur du konfigurerar, lägger till anteckningar och sparar ditt arbete."
 "title": "Så här kommenterar du PDF-filer med GroupDocs.Annotation för .NET - En omfattande guide"
 "url": "/sv/net/annotation-management/annotate-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

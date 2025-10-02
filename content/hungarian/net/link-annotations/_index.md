@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok hiperhivatkozások és csatolt annotációk dokumentumokban való megvalósításához a GroupDocs.Annotation for .NET segítségével."
 "title": "Linkannotációs oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

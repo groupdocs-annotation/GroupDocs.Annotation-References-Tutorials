@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Legördülő komponens hozzáadása PDF dokumentumhoz"
 "url": "/hu/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "載入自訂字體"
 "url": "/zh-hant/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

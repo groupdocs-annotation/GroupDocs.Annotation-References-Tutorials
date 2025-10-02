@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使って、ドキュメントから注釈を抽出し、XML にシリアル化する方法を学びましょう。今すぐドキュメント管理ワークフローを強化しましょう。"
 "title": "GroupDocs.Annotation を使用して .NET で注釈を抽出およびシリアル化する方法"
 "url": "/ja/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

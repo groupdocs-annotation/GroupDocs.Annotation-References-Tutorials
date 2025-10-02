@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 Java 中添加文本删除线注释。按照此分步指南操作，即可实现无缝文档注释。"
 "title": "使用 GroupDocs.Annotation 的 Java 文本删除线注释指南"
 "url": "/zh/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

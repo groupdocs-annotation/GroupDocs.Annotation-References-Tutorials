@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 向 PDF 添加资源屏蔽注释。本详细指南将帮助您保护敏感信息并增强文档安全性。"
 "title": "如何使用 GroupDocs.Annotation 在 .NET 中添加资源修订注释——综合指南"
 "url": "/zh/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

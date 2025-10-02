@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola rentang halaman secara efisien menggunakan GroupDocs.Annotation untuk .NET. Panduan ini mencakup instalasi, pengaturan, dan praktik terbaik untuk menyimpan halaman tertentu."
 "title": "Menguasai Manajemen Rentang Halaman di .NET dengan GroupDocs.Annotation&#58; Teknik Anotasi yang Efisien"
 "url": "/id/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

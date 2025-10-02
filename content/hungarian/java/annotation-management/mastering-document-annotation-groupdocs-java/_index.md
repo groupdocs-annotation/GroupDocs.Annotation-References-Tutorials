@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el hatékonyan dokumentumokat jegyzetekkel a GroupDocs.Annotation for Java segítségével. Ez az útmutató a PDF-ek betöltését, jegyzetekkel való ellátását és a Java környezet Maven segítségével történő optimalizálását ismerteti."
 "title": "Dokumentum-annotációk elsajátítása Java nyelven – Átfogó útmutató a GroupDocs.Annotation használatához"
 "url": "/hu/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan bidang dropdown interaktif menggunakan pustaka GroupDocs.Annotation yang canggih di Java."
 "title": "Buat Dropdown PDF Interaktif Menggunakan GroupDocs.Annotation untuk Java"
 "url": "/id/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

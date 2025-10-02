@@ -3,6 +3,7 @@
 "description": "GroupDocs를 사용하여 Java로 링크 주석을 마스터하세요. 문서 상호작용을 향상시키기 위한 설정, 초기화 및 사용자 정의를 배우세요."
 "title": "GroupDocs를 사용하여 Java에서 링크 주석 구현하기&#58; 종합 가이드"
 "url": "/ko/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

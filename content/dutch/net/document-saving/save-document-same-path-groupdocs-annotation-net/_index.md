@@ -3,6 +3,7 @@
 "description": "Leer hoe u geannoteerde documenten kunt opslaan met behulp van het oorspronkelijke pad in GroupDocs.Annotation voor .NET. Zo zorgt u voor gestroomlijnd bestandsbeheer en een efficiëntere workflow."
 "title": "Documenten opslaan op het oorspronkelijke pad met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

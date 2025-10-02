@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně načítat rozměry stránek PDF pomocí nástroje GroupDocs.Annotation pro .NET. Postupujte podle tohoto průvodce a vylepšete své aplikace pro správu dokumentů."
 "title": "Jak načíst rozměry stránek PDF pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

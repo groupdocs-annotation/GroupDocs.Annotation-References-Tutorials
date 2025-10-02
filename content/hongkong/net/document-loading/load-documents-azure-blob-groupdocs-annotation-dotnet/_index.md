@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 將 Azure Blob 儲存體與 .NET 應用程式無縫整合。增強文件管理和註解功能。"
 "title": "使用 GroupDocs.Annotation .NET 進行文件管理，有效地從 Azure Blob 儲存體載入文件"
 "url": "/zh-hant/net/document-loading/load-documents-azure-blob-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

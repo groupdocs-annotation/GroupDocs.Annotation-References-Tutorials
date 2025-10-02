@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak etkileşimli açılır bileşenler ekleyerek PDF belgelerinizi nasıl geliştireceğinizi öğrenin. Kullanıcı girdisini kolaylaştırmak ve belge işlevselliğini geliştirmek için bu adım adım kılavuzu izleyin."
 "title": ".NET için GroupDocs.Annotation ile PDF'lere Açılır Liste Ekleme Kapsamlı Bir Kılavuz"
 "url": "/tr/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

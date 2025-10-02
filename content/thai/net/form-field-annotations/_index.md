@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนในการเพิ่มฟิลด์ฟอร์มและส่วนประกอบแบบโต้ตอบลงในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนเกี่ยวกับคำอธิบายฟิลด์ฟอร์มสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

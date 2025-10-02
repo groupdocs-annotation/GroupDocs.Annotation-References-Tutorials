@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt lägger till understrykningsanteckningar i dina dokument med GroupDocs.Annotation för .NET. Förbättra dokumentens tydlighet och kommunikation med lätthet."
 "title": "Hur man lägger till understrykningsannoteringar i .NET med GroupDocs.Annotation"
 "url": "/sv/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u doorhalingen van tekst kunt toevoegen aan uw documenten met behulp van de GroupDocs.Annotation-bibliotheek voor .NET. Zo verbetert u de controle van documenten en de samenwerking daaraan."
 "title": "Tekstdoorhalingsannotatie toevoegen in .NET met behulp van GroupDocs.Annotation"
 "url": "/nl/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

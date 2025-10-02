@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 在 PDF 文件中新增波浪註釋，以增強文件審查和協作。"
 "title": "如何使用 GroupDocs.Annotation for Java 為 PDF 新增波浪註釋"
 "url": "/zh-hant/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何從 Azure Blob 儲存體無縫下載檔案並使用 GroupDocs.Annotation for Java 對其進行註解。這份全面的指南將幫助您增強文件管理工作流程。"
 "title": "如何使用 GroupDocs.Annotation Java 下載和註解 Azure Blob 文件"
 "url": "/zh-hant/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

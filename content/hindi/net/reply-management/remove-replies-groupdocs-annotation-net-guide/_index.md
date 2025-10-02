@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके एनोटेशन से उत्तरों को कुशलतापूर्वक निकालने का तरीका जानें। इस व्यापक गाइड के साथ अपने दस्तावेज़ प्रबंधन को कारगर बनाएँ।"
 "title": "GroupDocs.Annotation .NET का उपयोग करके एनोटेशन से उत्तर कैसे निकालें - चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

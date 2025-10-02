@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation を使用して、.NET アプリケーションにテキスト編集注釈を実装する方法を学びます。機密情報を簡単に保護します。"
 "title": "GroupDocs.Annotation を使用して .NET でテキスト編集を実装する完全ガイド"
 "url": "/ja/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

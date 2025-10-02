@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng cách thêm chú thích văn bản có thể tìm kiếm bằng GroupDocs.Annotation for Java. Hướng dẫn này cung cấp hướng dẫn từng bước và mẹo thực tế."
 "title": "Cách thêm chú thích văn bản tìm kiếm vào PDF bằng GroupDocs.Annotation cho Java"
 "url": "/vi/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

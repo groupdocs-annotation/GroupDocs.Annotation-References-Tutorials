@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके अपने PDF दस्तावेज़ों में सटीक दूरी एनोटेशन जोड़ना सीखें। यह गाइड सेटअप, कॉन्फ़िगरेशन और व्यावहारिक अनुप्रयोगों को कवर करता है।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF में दूरी एनोटेशन को लागू करना"
 "url": "/hi/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

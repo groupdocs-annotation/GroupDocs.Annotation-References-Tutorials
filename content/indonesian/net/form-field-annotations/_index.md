@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk menambahkan kolom formulir dan komponen interaktif ke dokumen menggunakan GroupDocs.Annotation for .NET."
 "title": "Tutorial Anotasi Bidang Formulir untuk GroupDocs.Annotation .NET"
 "url": "/id/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

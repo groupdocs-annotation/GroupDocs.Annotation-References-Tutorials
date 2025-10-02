@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belgeye Bağlantı Açıklaması Ekle"
 "url": "/tr/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

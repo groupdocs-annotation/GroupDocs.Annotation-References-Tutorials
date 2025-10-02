@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere annotazioni alle immagini da URL remoti nei documenti PDF utilizzando GroupDocs.Annotation per .NET. Migliora i flussi di lavoro dei tuoi documenti con questa guida completa."
 "title": "Implementare l'annotazione delle immagini nei PDF utilizzando GroupDocs.Annotation .NET e URL remoti"
 "url": "/it/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

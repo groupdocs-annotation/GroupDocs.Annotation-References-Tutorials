@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie PDF-Dokumente mit GroupDocs.Annotation für Java effizient kommentieren. Diese Anleitung behandelt die Einrichtung, das Hinzufügen von Anmerkungen und das Speichern von Dateien."
 "title": "Kommentieren Sie PDFs mit GroupDocs.Annotation für Java – Eine vollständige Anleitung"
 "url": "/de/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/"
+type: docs
 "weight": 1
 ---
 

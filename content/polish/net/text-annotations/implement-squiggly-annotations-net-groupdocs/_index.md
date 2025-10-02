@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać faliste adnotacje tekstowe w aplikacjach .NET za pomocą GroupDocs.Annotation, aby poprawić czytelność dokumentu i uzyskać lepsze opinie."
 "title": "Implementacja tekstu falującego w .NET przy użyciu GroupDocs.Annotation"
 "url": "/pl/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

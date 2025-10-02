@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgelere form alanları ve etkileşimli bileşenler eklemeye yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation .NET için Form Alanı Açıklama Eğitimleri"
 "url": "/tr/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

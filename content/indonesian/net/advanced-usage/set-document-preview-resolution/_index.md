@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Atur Resolusi Pratinjau Dokumen"
 "url": "/id/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

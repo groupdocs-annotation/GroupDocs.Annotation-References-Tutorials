@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 PDF에 리소스 편집 주석을 추가하는 방법을 알아보세요. 이 자세한 가이드를 통해 민감한 정보를 보호하고 문서 보안을 강화하세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 리소스 편집 주석을 추가하는 방법 - 포괄적인 가이드"
 "url": "/ko/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

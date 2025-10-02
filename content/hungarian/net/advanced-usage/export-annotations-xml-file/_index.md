@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Exportálja a jegyzeteket XML fájlból"
 "url": "/hu/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

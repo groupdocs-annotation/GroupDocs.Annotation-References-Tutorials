@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Générer un aperçu sans commentaires"
 "url": "/fr/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

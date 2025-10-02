@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 Java에서 텍스트에 취소선 주석을 추가하는 방법을 알아보세요. 문서에 주석을 원활하게 추가하는 단계별 가이드를 따라해 보세요."
 "title": "GroupDocs.Annotation을 사용한 Java 텍스트 취소선 주석 가이드"
 "url": "/ko/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

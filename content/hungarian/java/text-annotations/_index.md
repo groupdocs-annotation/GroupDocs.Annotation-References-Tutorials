@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatjuk a szöveges jegyzetek hozzáadását, szerkesztését és kezelését dokumentumokban a GroupDocs.Annotation for Java használatával."
 "title": "Szöveges jegyzetkészítési oktatóanyagok a GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

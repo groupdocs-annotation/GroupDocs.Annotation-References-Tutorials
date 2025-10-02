@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके दस्तावेज़ों और XML फ़ाइलों के बीच एनोटेशन आयात और निर्यात करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए एनोटेशन आयात और निर्यात ट्यूटोरियल"
 "url": "/hi/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutoriais completos para configurar licenciamento, configurar opções e gerenciar GroupDocs.Annotation em aplicativos Java."
 "title": "Tutoriais de licenciamento e configuração do GroupDocs.Annotation para Java"
 "url": "/pt/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

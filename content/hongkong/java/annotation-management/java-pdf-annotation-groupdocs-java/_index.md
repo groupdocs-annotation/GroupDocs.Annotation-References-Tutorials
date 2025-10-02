@@ -3,6 +3,7 @@
 "description": "了解如何使用強大的 GroupDocs.Annotation API for Java 有效地使用區域高亮註釋 PDF 文檔，從而增強協作和生產力。"
 "title": "如何使用 GroupDocs.Annotation 在 Java 中註解 PDF"
 "url": "/zh-hant/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

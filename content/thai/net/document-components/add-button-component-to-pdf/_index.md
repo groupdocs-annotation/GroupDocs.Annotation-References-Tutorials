@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มส่วนประกอบปุ่มลงในเอกสาร PDF"
 "url": "/th/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

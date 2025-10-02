@@ -3,6 +3,7 @@
 "description": "Découvrez comment améliorer vos documents PDF en ajoutant des composants déroulants interactifs avec GroupDocs.Annotation pour .NET. Suivez ce guide étape par étape pour simplifier la saisie utilisateur et améliorer les fonctionnalités de vos documents."
 "title": "Ajoutez une liste déroulante aux PDF avec GroupDocs.Annotation pour .NET - Un guide complet"
 "url": "/fr/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att lägga till formulärfält och interaktiva komponenter i dokument med GroupDocs.Annotation för .NET."
 "title": "Handledningar för formulärfältsannoteringar för GroupDocs.Annotation .NET"
 "url": "/sv/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 从各种来源加载文档的分步教程。"
 "title": "GroupDocs.Annotation .NET 文档加载教程"
 "url": "/zh/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

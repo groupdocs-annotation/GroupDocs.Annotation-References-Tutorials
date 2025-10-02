@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно управлять аннотациями в Java с помощью GroupDocs.Annotation. В этом руководстве рассматриваются загрузка, удаление и оптимизация рабочих процессов документов."
 "title": "Мастер управления аннотациями в Java – полное руководство с GroupDocs.Annotation"
 "url": "/ru/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

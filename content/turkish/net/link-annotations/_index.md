@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET ile belgelerde köprü metinleri ve bağlantılı ek açıklamaların uygulanmasına ilişkin kapsamlı eğitimler."
 "title": "GroupDocs.Annotation .NET için Bağlantı Açıklama Eğitimleri"
 "url": "/tr/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

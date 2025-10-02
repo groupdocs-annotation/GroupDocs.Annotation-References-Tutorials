@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ दस्तावेज़ों से एनोटेशन निकालना और उन्हें XML में क्रमबद्ध करना सीखें। आज ही अपने दस्तावेज़ प्रबंधन वर्कफ़्लो को बेहतर बनाएँ!"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में एनोटेशन कैसे निकालें और क्रमबद्ध करें"
 "url": "/hi/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

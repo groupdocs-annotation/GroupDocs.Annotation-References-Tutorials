@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tạo bản xem trước tài liệu PDF chất lượng cao với độ phân giải hình ảnh cụ thể bằng thư viện GroupDocs.Annotation mạnh mẽ trong .NET. Tối ưu hóa quy trình quản lý tài liệu của bạn ngay hôm nay."
 "title": "Tạo bản xem trước PDF chất lượng cao ở độ phân giải tùy chỉnh bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

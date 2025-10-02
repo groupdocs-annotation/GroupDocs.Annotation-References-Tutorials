@@ -2,6 +2,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों में फ़ॉर्म फ़ील्ड और इंटरैक्टिव घटकों को जोड़ने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए फॉर्म फ़ील्ड एनोटेशन ट्यूटोरियल"
 "url": "/hi/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

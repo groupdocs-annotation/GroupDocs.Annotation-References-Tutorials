@@ -2,6 +2,7 @@
 "description": ".NET 애플리케이션에서 라이선스 설정, 옵션 구성 및 GroupDocs.Annotation 관리에 대한 전체 튜토리얼입니다."
 "title": ".NET용 GroupDocs.Annotation 라이선싱 및 구성 튜토리얼"
 "url": "/ko/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

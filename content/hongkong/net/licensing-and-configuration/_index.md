@@ -2,6 +2,7 @@
 "description": "完成有關設定許可、配置選項以及在 .NET 應用程式中管理 GroupDocs.Annotation 的教學。"
 "title": "GroupDocs.Annotation .NET 授權與設定教學課程"
 "url": "/zh-hant/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

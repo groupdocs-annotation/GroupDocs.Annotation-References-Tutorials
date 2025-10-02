@@ -4,6 +4,7 @@
 "linktitle": "Руководства для разработчиков GroupDocs.Annotation"
 "title": "API аннотаций документов | Учебники GroupDocs.Annotation и примеры SDK"
 "url": "/ru/"
+type: docs
 "weight": 11
 ---
 

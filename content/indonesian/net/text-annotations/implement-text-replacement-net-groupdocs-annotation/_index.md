@@ -3,6 +3,7 @@
 "description": "Pelajari cara menerapkan anotasi penggantian teks di aplikasi .NET Anda menggunakan GroupDocs.Annotation. Tingkatkan keterbacaan dan fungsionalitas dokumen dengan mudah."
 "title": "Cara Menerapkan Penggantian Teks di .NET Menggunakan GroupDocs.Annotation untuk Anotasi Dokumen yang Efisien"
 "url": "/id/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

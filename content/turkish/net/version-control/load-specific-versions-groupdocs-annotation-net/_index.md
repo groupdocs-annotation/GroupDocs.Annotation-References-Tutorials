@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak açıklamalı belgelerin belirli sürümlerini nasıl verimli bir şekilde yöneteceğinizi ve yükleyeceğinizi öğrenin. Belge yönetim sisteminizi bugün geliştirin!"
 "title": "GroupDocs.Annotation ile .NET&#58; için Belirli Belge Sürümlerini Yükleme Kapsamlı Bir Kılavuz"
 "url": "/tr/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het openen van documentmetagegevens, pagina-informatie en documenteigenschappen met GroupDocs.Annotation voor .NET."
 "title": "Documentinformatiehandleidingen voor GroupDocs.Annotation .NET"
 "url": "/nl/net/document-information/"
+type: docs
 "weight": 12
 ---
 

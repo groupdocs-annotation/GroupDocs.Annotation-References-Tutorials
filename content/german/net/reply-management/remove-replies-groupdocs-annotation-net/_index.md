@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient Antworten aus kommentierten Dokumenten entfernen. Diese Anleitung behandelt Einrichtung, Bearbeitung und praktische Anwendungen."
 "title": "Entfernen Sie Antworten aus kommentierten Dokumenten mit GroupDocs.Annotation für .NET – Eine Schritt-für-Schritt-Anleitung"
 "url": "/de/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

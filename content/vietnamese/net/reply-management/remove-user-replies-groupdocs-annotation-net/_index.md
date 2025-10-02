@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách xóa hiệu quả các phản hồi cụ thể của người dùng khỏi các tài liệu PDF có chú thích bằng GroupDocs.Annotation cho .NET. Đơn giản hóa việc quản lý chú thích của bạn với hướng dẫn toàn diện này."
 "title": "Cách xóa trả lời của người dùng khỏi tệp PDF bằng GroupDocs.Annotation .NET&#58; Hướng dẫn từng bước"
 "url": "/vi/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

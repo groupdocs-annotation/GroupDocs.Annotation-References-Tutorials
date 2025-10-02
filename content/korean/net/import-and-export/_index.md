@@ -2,6 +2,7 @@
 "description": ".NET용 GroupDocs.Annotation을 사용하여 문서와 XML 파일 간에 주석을 가져오고 내보내는 방법에 대한 단계별 자습서입니다."
 "title": "GroupDocs.Annotation .NET을 위한 주석 가져오기 및 내보내기 튜토리얼"
 "url": "/ko/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

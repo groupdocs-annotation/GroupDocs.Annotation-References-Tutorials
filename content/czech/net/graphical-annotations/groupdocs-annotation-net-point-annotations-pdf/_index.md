@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty pomocí interaktivních bodových anotací pomocí nástroje GroupDocs.Annotation pro .NET. Tato podrobná příručka zahrnuje nastavení, implementaci a řešení problémů."
 "title": "Jak přidat bodové anotace do PDF souborů pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

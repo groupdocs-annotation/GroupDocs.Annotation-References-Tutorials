@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "从文件设置许可证"
 "url": "/zh/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

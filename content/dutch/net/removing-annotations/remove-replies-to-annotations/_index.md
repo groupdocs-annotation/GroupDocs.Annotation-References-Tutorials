@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Reacties op annotaties verwijderen in .NET"
 "url": "/nl/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

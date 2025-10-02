@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące importowania i eksportowania adnotacji pomiędzy dokumentami i plikami XML przy użyciu GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki dotyczące importu i eksportu adnotacji dla GroupDocs.Annotation .NET"
 "url": "/pl/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

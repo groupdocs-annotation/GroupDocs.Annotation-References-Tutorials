@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Αλλαγή ποιότητας εικόνας"
 "url": "/el/net/advanced-usage/change-image-quality/"
+type: docs
 "weight": 10
 ---
 

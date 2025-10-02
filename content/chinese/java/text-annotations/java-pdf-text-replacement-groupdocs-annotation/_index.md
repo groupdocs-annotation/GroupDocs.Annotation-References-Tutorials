@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 Java PDF 中实现文本替换注释。增强文档编辑和协作功能。"
 "title": "使用 GroupDocs.Annotation 的 Java PDF 文本替换指南"
 "url": "/zh/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

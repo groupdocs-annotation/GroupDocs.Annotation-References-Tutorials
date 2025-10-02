@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus documentos PDF adicionando anotações de texto pesquisáveis usando o GroupDocs.Annotation para Java. Este guia oferece instruções passo a passo e dicas práticas."
 "title": "Como adicionar anotações de texto de pesquisa a PDFs usando GroupDocs.Annotation para Java"
 "url": "/pt/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

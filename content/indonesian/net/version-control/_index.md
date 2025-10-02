@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk mengimplementasikan versi dokumen, melacak perubahan, dan mengelola riwayat anotasi dengan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Kontrol Versi untuk GroupDocs.Annotation .NET"
 "url": "/id/net/version-control/"
+type: docs
 "weight": 13
 ---
 

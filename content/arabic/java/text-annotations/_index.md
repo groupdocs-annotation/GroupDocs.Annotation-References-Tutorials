@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة حول كيفية إضافة تعليقات نصية وتحريرها وإدارتها في المستندات باستخدام GroupDocs.Annotation for Java."
 "title": "دروس شرح النصوص لـ GroupDocs.Annotation Java"
 "url": "/ar/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

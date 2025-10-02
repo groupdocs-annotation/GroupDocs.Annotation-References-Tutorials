@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tambahkan Komponen Dropdown ke Dokumen PDF"
 "url": "/id/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效地仅保存 PDF 中带注释的页面。本指南详尽，助您增强文档管理和协作。"
 "title": "如何使用 GroupDocs.Annotation for .NET 将带注释的页面保存为 PDF"
 "url": "/zh/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

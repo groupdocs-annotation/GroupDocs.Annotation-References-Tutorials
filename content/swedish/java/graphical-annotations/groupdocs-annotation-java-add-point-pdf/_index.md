@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument genom att lägga till punktannoteringar programmatiskt med GroupDocs.Annotation för Java. Den här guiden behandlar installation, implementering och praktiska tillämpningar."
 "title": "Hur man lägger till punktannoteringar i PDF-filer med GroupDocs.Annotation för Java"
 "url": "/sv/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

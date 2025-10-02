@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Zaawansowane użycie"
 "url": "/pl/net/advanced-usage/"
+type: docs
 "weight": 22
 ---
 

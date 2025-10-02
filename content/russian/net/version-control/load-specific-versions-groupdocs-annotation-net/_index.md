@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно управлять и загружать определенные версии аннотированных документов с помощью GroupDocs.Annotation для .NET. Улучшите свою систему управления документами сегодня!"
 "title": "Загрузка определенных версий документов с помощью GroupDocs.Annotation для .NET&#58; Подробное руководство"
 "url": "/ru/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

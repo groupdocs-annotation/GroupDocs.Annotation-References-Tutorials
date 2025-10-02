@@ -3,6 +3,7 @@
 "description": "Apprenez à implémenter des annotations de distance dans des documents Java avec GroupDocs.Annotation. Ce guide étape par étape couvre l'installation, la configuration et les applications pratiques."
 "title": "Comment ajouter des annotations de distance en Java avec GroupDocs.Annotation – Guide étape par étape"
 "url": "/fr/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

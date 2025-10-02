@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java'yı kullanarak belgelere metin açıklamaları ekleme, düzenleme ve yönetmeye ilişkin adım adım eğitimler."
 "title": "GroupDocs.Annotation Java için Metin Açıklama Eğitimleri"
 "url": "/tr/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

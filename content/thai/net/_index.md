@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation สำหรับบทช่วยสอน .NET"
 "title": "บทช่วยสอนและตัวอย่างของ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/"
+type: docs
 "weight": 10
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "通过 ID 删除注释"
 "url": "/zh/net/removing-annotations/remove-annotations-by-id/"
+type: docs
 "weight": 11
 ---
 

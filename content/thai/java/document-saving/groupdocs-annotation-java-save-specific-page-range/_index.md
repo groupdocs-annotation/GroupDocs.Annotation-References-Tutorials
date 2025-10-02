@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการบันทึกช่วงหน้าเอกสารที่มีคำอธิบายประกอบอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ Java บทช่วยสอนนี้ครอบคลุมถึงการตั้งค่า การใช้งาน และแอปพลิเคชันจริง"
 "title": "บันทึกช่วงหน้าเฉพาะด้วย GroupDocs.Annotation สำหรับ Java - คู่มือฉบับสมบูรณ์"
 "url": "/th/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ανακτάτε αποτελεσματικά τις διαστάσεις σελίδας PDF με το GroupDocs.Annotation για .NET. Ακολουθήστε αυτόν τον οδηγό για να βελτιώσετε τις εφαρμογές διαχείρισης εγγράφων σας."
 "title": "Πώς να ανακτήσετε διαστάσεις σελίδας PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

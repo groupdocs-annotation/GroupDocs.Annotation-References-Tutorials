@@ -3,6 +3,7 @@
 "description": "Научитесь автоматизировать извлечение аннотаций из PDF-файлов с помощью GroupDocs.Annotation для Java, экономя время и сокращая количество ошибок."
 "title": "Автоматизируйте извлечение аннотаций PDF с помощью GroupDocs для Java&#58; Подробное руководство"
 "url": "/ru/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

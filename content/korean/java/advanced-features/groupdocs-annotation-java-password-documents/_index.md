@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 암호로 보호된 문서를 안전하게 로드하고, 주석을 달고, 저장하는 방법을 알아보세요. Java 애플리케이션의 문서 보안을 강화하세요."
 "title": "GroupDocs.Annotation Java를 사용한 안전한 문서 처리&#58; 암호로 보호된 문서 로드 및 주석 달기"
 "url": "/ko/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

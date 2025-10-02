@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 有效率地為文件新增註解。本指南涵蓋如何載入和註解 PDF，以及如何使用 Maven 最佳化 Java 環境。"
 "title": "掌握 Java 中的文件註解－使用 GroupDocs.Annotation 的綜合指南"
 "url": "/zh-hant/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

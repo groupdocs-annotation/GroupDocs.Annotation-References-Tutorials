@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Meerdere annotaties verwijderen in .NET"
 "url": "/nl/net/removing-annotations/remove-multiple-annotations/"
+type: docs
 "weight": 12
 ---
 

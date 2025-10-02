@@ -3,6 +3,7 @@
 "description": "Leer hoe u documentmetadata zoals bestandstype, paginaaantal en bestandsgrootte kunt extraheren met GroupDocs.Annotation voor Java. Verbeter uw documentbeheer met efficiënte informatie-extractie."
 "title": "Efficiënte documentmetadata-extractie met GroupDocs.Annotation in Java"
 "url": "/nl/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

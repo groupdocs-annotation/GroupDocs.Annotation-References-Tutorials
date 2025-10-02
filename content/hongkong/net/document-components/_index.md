@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "文件組件"
 "url": "/zh-hant/net/document-components/"
+type: docs
 "weight": 24
 ---
 

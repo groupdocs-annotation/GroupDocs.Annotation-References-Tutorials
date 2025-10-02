@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare i tuoi documenti PDF aggiungendo annotazioni ellittiche interattive utilizzando l'API .NET GroupDocs.Annotation. Questa guida fornisce istruzioni dettagliate per gli sviluppatori."
 "title": "Come aggiungere annotazioni ellittiche ai PDF utilizzando l'API .NET GroupDocs.Annotation"
 "url": "/it/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για τη δημιουργία προεπισκοπήσεων εγγράφων, μικρογραφιών και οπτικών αναπαραστάσεων με το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά σεμινάρια προεπισκόπησης εγγράφων για το GroupDocs.Annotation .NET"
 "url": "/el/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

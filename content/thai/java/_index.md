@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation สำหรับบทช่วยสอน Java"
 "title": "Java Document Annotation API | บทช่วยสอนและตัวอย่าง GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/"
+type: docs
 "weight": 10
 ---
 

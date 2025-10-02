@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước về cách thêm, chỉnh sửa và quản lý chú thích văn bản trong tài liệu bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn chú thích văn bản cho GroupDocs.Annotation .NET"
 "url": "/vi/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

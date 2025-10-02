@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation for Java का उपयोग करके PDF को टेक्स्ट हाइलाइट और उत्तरों के साथ कैसे एनोटेट किया जाता है। यह गाइड सेटअप, कोड उदाहरण और व्यावहारिक अनुप्रयोगों को कवर करती है।"
 "title": "GroupDocs.Highlight का उपयोग करके जावा में PDF को एनोटेट करें एक व्यापक गाइड"
 "url": "/hi/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

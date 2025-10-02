@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서 버전을 구현하고, 변경 사항을 추적하고, 주석 기록을 관리하는 방법에 대한 단계별 자습서입니다."
 "title": "GroupDocs.Annotation .NET 버전 제어 튜토리얼"
 "url": "/ko/net/version-control/"
+type: docs
 "weight": 13
 ---
 

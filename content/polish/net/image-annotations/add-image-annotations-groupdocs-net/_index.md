@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak zintegrować GroupDocs.Annotation z projektami .NET, aby ulepszyć dokumenty za pomocą adnotacji obrazów. Popraw zaangażowanie użytkowników i usprawnij współpracę."
 "title": "Dodawanie adnotacji obrazów do dokumentów przy użyciu GroupDocs.Annotation dla .NET"
 "url": "/pl/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

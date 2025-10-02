@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 向文档添加表单字段和交互式组件的分步教程。"
 "title": "GroupDocs.Annotation .NET 的表单字段注释教程"
 "url": "/zh/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

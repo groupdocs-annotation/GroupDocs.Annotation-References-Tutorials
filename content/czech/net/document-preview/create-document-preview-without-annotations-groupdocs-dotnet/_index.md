@@ -3,6 +3,7 @@
 "description": "Naučte se, jak generovat náhledy dokumentů bez anotací pomocí nástroje GroupDocs.Annotation pro .NET a jak zajistit soukromí a přehlednost v projektech spolupráce."
 "title": "Jak vytvořit čistý náhled dokumentu bez anotací pomocí GroupDocs.Annotation .NET"
 "url": "/cs/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

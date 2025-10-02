@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan menambahkan komponen dropdown interaktif menggunakan GroupDocs.Annotation untuk .NET. Ikuti panduan langkah demi langkah ini untuk menyederhanakan masukan pengguna dan meningkatkan fungsionalitas dokumen."
 "title": "Tambahkan Dropdown ke PDF dengan GroupDocs.Annotation untuk .NET&#58; Panduan Lengkap"
 "url": "/id/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

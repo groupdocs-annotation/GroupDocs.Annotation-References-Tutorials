@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Pontjegyzet hozzáadása a dokumentumhoz"
 "url": "/hu/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

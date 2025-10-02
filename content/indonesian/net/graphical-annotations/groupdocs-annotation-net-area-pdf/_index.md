@@ -3,6 +3,7 @@
 "description": "Otomatiskan anotasi PDF dengan GroupDocs.Annotation untuk .NET. Pelajari cara menambahkan anotasi area menggunakan C# dalam panduan terperinci dan langkah demi langkah ini."
 "title": "Cara Menambahkan Anotasi Area ke PDF Menggunakan GroupDocs.Annotation untuk .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

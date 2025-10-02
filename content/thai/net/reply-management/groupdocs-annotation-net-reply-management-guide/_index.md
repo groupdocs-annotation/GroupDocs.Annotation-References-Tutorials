@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีจัดการคำตอบคำอธิบายประกอบอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ครอบคลุมถึงการบูรณาการ การเพิ่มคำตอบ และกรณีการใช้งานจริง"
 "title": "คำแนะนำในการนำการจัดการตอบกลับคำอธิบายประกอบไปใช้ใน .NET ด้วย GroupDocs.Annotation"
 "url": "/th/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

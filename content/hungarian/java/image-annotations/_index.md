@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatott oktatóanyagok a képekhez tartozó jegyzetek hozzáadásához és kezeléséhez dokumentumokban a GroupDocs.Annotation for Java használatával."
 "title": "Képannotációs oktatóanyagok GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

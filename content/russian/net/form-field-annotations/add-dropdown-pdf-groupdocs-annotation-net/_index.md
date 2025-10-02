@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы, добавив интерактивные раскрывающиеся компоненты с помощью GroupDocs.Annotation для .NET. Следуйте этому пошаговому руководству, чтобы оптимизировать пользовательский ввод и улучшить функциональность документа."
 "title": "Добавление раскрывающегося списка в PDF-файлы с помощью GroupDocs.Annotation для .NET&#58; Подробное руководство"
 "url": "/ru/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

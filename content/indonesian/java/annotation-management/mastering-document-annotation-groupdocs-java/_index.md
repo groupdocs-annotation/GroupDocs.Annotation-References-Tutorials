@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi dokumen secara efisien menggunakan GroupDocs.Annotation untuk Java. Panduan ini mencakup pemuatan, pembuatan anotasi PDF, dan pengoptimalan lingkungan Java Anda dengan Maven."
 "title": "Menguasai Anotasi Dokumen di Java; Panduan Lengkap Menggunakan GroupDocs.Annotation"
 "url": "/id/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

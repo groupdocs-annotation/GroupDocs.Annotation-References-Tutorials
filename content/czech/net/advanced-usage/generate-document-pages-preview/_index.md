@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Generování náhledu stránek dokumentu"
 "url": "/cs/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Memutar Dokumen PDF"
 "url": "/id/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

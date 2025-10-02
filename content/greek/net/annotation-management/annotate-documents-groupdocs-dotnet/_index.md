@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε και να ενημερώνετε αποτελεσματικά σχολιασμούς σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation .NET. Βελτιώστε τη συνεργασία και τη διαχείριση εγγράφων με αυτόν τον οδηγό βήμα προς βήμα."
 "title": "Πώς να προσθέσετε σχόλια σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation .NET™ - Ένας πλήρης οδηγός"
 "url": "/el/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

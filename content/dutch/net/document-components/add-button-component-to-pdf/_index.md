@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Knopcomponent toevoegen aan PDF-document"
 "url": "/nl/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно извлекать ключи версий из документов с помощью GroupDocs.Annotation для .NET. Улучшите управление документами и совместную работу с помощью этого пошагового руководства."
 "title": "Как получить ключи версий в .NET с помощью GroupDocs.Annotation&#58; Полное руководство"
 "url": "/ru/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

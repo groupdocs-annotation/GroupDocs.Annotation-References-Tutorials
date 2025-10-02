@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "การลบคำอธิบายประกอบ"
 "url": "/th/net/removing-annotations/"
+type: docs
 "weight": 25
 ---
 

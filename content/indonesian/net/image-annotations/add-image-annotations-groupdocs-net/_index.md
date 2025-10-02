@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengintegrasikan GroupDocs.Annotation ke dalam proyek .NET Anda untuk menyempurnakan dokumen dengan anotasi gambar. Meningkatkan keterlibatan pengguna dan menyederhanakan kolaborasi."
 "title": "Menambahkan Anotasi Gambar ke Dokumen Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

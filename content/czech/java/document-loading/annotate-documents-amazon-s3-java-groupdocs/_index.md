@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně načítat a anotovat dokumenty uložené na Amazon S3 pomocí GroupDocs.Annotation v Javě. Tato příručka se zabývá integrací, používáním AWS SDK a optimalizací výkonu."
 "title": "Načítání a anotace dokumentů z Amazonu S3 pomocí Javy&#58; Průvodce integrací GroupDocs.Annotation"
 "url": "/cs/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

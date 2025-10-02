@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak zintegrować interaktywne przyciski z dokumentami PDF, korzystając z potężnego narzędzia GroupDocs.Annotation dla platformy .NET. Zwiększ zaangażowanie użytkowników dzięki instrukcjom krok po kroku."
 "title": "Zintegruj interaktywne przyciski w plikach PDF za pomocą GroupDocs.Annotation .NET SDK"
 "url": "/pl/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

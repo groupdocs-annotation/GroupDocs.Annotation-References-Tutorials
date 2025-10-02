@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belge sürümlerini verimli bir şekilde nasıl yöneteceğinizi öğrenin. Bu kılavuz kurulum, uygulama ve pratik uygulamaları kapsar."
 "title": "GroupDocs.Annotation for .NET Kullanılarak PDF Yeni Sürüm Olarak Nasıl Kaydedilir - Adım Adım Kılavuz"
 "url": "/tr/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

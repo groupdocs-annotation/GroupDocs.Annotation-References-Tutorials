@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengambil konten teks dari dokumen secara efisien menggunakan GroupDocs.Annotation for .NET. Ikuti panduan langkah demi langkah ini untuk meningkatkan kemampuan pemrosesan dokumen Anda."
 "title": "Mengambil Konten Teks Dokumen dengan GroupDocs.Annotation untuk .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

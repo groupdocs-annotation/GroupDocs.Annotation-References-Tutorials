@@ -3,6 +3,7 @@
 "description": "学习如何使用 GroupDocs.Annotation for Java 高效保存带注释的文档页面范围。本教程涵盖设置、实现和实际应用。"
 "title": "使用 GroupDocs.Annotation for Java 保存特定页面范围的完整指南"
 "url": "/zh/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

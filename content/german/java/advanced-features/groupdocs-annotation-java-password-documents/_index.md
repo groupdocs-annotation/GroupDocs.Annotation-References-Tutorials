@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie passwortgeschützte Dokumente mit GroupDocs.Annotation für Java sicher laden, kommentieren und speichern. Verbessern Sie die Dokumentsicherheit in Ihren Java-Anwendungen."
 "title": "Sichere Dokumentenverwaltung mit GroupDocs.Annotation Java – Laden und Kommentieren passwortgeschützter Dokumente"
 "url": "/de/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

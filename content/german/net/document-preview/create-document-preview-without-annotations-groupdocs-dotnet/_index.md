@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Dokumentvorschauen ohne Anmerkungen generieren und so Datenschutz und Übersichtlichkeit in Gemeinschaftsprojekten gewährleisten."
 "title": "So erstellen Sie eine saubere Dokumentvorschau ohne Anmerkungen mit GroupDocs.Annotation .NET"
 "url": "/de/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně spravovat rozsahy stránek pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka popisuje instalaci, nastavení a osvědčené postupy pro ukládání konkrétních stránek."
 "title": "Zvládnutí správy rozsahů stránek v .NET pomocí efektivních technik anotace v GroupDocs.Annotation"
 "url": "/cs/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

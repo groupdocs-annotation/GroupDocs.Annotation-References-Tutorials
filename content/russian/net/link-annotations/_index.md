@@ -2,6 +2,7 @@
 "description": "Полные руководства по внедрению гиперссылок и связанных аннотаций в документы с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по аннотациям ссылок для GroupDocs.Annotation .NET"
 "url": "/ru/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

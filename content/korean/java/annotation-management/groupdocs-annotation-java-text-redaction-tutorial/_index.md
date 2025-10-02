@@ -3,6 +3,7 @@
 "description": "강력한 GroupDocs.Annotation Java 라이브러리를 사용하여 PDF의 텍스트를 효율적으로 편집하는 방법을 알아보세요. 이 가이드에서는 설정, 주석 생성 및 저장 과정을 다룹니다."
 "title": "GroupDocs.Annotation Java API를 사용한 PDF의 마스터 텍스트 편집 - 포괄적인 가이드"
 "url": "/ko/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

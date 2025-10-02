@@ -3,6 +3,7 @@
 "description": "Μάθετε να αυτοματοποιείτε την εξαγωγή σχολίων από PDF χρησιμοποιώντας το GroupDocs.Annotation για Java, εξοικονομώντας χρόνο και μειώνοντας τα σφάλματα."
 "title": "Αυτοματοποιήστε την εξαγωγή σχολίων PDF με το GroupDocs για Java & Ένας πλήρης οδηγός"
 "url": "/el/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

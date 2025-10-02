@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายประกอบภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงเอกสารในอุตสาหกรรมการศึกษา กฎหมาย และการดูแลสุขภาพ"
 "title": "คู่มือครอบคลุมในการเพิ่มคำอธิบายภาพใน .NET ด้วย GroupDocs.Annotation"
 "url": "/th/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

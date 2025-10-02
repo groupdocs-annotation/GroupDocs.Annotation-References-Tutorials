@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Φόρτωση εγγράφου από ροή"
 "url": "/el/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

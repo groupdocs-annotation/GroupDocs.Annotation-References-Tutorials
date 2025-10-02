@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm hình mờ bằng GroupDocs.Annotation cho .NET. Hướng dẫn này bao gồm thiết lập, triển khai từng bước và các biện pháp tốt nhất để bảo mật và gắn nhãn hiệu cho tài liệu."
 "title": "Triển khai Thêm Hình mờ với GroupDocs.Annotation trong .NET&#58; Hướng dẫn toàn diện về Bảo mật và Xây dựng thương hiệu Tài liệu"
 "url": "/vi/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

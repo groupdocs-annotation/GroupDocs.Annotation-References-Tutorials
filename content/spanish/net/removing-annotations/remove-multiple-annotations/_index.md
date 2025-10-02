@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Eliminar múltiples anotaciones en .NET"
 "url": "/es/net/removing-annotations/remove-multiple-annotations/"
+type: docs
 "weight": 12
 ---
 

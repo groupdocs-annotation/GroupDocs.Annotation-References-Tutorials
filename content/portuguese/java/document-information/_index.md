@@ -2,6 +2,7 @@
 "description": "Tutoriais completos para acessar metadados de documentos, informações de páginas e propriedades de documentos com o GroupDocs.Annotation para Java."
 "title": "Tutoriais de informações de documentos para GroupDocs.Annotation Java"
 "url": "/pt/java/document-information/"
+type: docs
 "weight": 12
 ---
 

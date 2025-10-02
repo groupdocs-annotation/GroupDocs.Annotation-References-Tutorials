@@ -3,6 +3,7 @@
 "description": "Apprenez à ajouter des annotations de surlignage de texte avec GroupDocs.Annotation pour .NET. Simplifiez la collaboration documentaire et améliorez votre productivité grâce à ce guide complet."
 "title": "Comment ajouter des annotations de surbrillance de texte avec GroupDocs.Annotation pour .NET"
 "url": "/fr/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

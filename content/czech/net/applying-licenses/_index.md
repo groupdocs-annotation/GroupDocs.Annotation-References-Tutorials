@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Uplatňování licencí"
 "url": "/cs/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

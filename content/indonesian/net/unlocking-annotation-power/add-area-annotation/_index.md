@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Tambahkan Anotasi Area ke Dokumen"
 "url": "/id/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดาวน์โหลดและใส่คำอธิบายประกอบ PDF จาก Amazon S3 อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงเวิร์กโฟลว์เอกสารของคุณด้วยการผสานรวมที่ราบรื่น"
 "title": "การดาวน์โหลด PDF และคำอธิบายประกอบที่มีประสิทธิภาพจาก Amazon S3 โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

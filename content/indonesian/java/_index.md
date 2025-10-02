@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation untuk Tutorial Java"
 "title": "API Anotasi Dokumen Java | GroupDocs.Annotation untuk Tutorial & Contoh Java"
 "url": "/id/java/"
+type: docs
 "weight": 10
 ---
 

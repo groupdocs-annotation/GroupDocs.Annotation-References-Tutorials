@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ubieganie się o licencje"
 "url": "/pl/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

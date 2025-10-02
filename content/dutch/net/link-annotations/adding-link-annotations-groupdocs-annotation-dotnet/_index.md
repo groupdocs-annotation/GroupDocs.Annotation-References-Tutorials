@@ -3,6 +3,7 @@
 "description": "Ontdek hoe u uw .NET-applicaties kunt verbeteren door interactieve linkannotaties toe te voegen met de krachtige GroupDocs.Annotation-bibliotheek. Volg onze stapsgewijze handleiding en verbeter vandaag nog de interactie met uw documenten."
 "title": "Linkannotaties toevoegen aan documenten met GroupDocs.Annotation voor .NET | Handleiding voor ontwikkelaars"
 "url": "/nl/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

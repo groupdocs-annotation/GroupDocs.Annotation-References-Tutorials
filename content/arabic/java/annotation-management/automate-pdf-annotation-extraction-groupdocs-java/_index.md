@@ -3,6 +3,7 @@
 "description": "تعلم كيفية أتمتة استخراج التعليقات التوضيحية من ملفات PDF باستخدام GroupDocs.Annotation for Java، مما يوفر الوقت ويقلل الأخطاء."
 "title": "أتمتة استخراج التعليقات التوضيحية في ملفات PDF باستخدام GroupDocs لـ Java - دليل شامل"
 "url": "/ar/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

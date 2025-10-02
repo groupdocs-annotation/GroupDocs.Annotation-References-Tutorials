@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro přidávání a správu anotací obrázků v dokumentech pomocí nástroje GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro anotaci obrázků v GroupDocs.Annotation v Javě"
 "url": "/cs/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

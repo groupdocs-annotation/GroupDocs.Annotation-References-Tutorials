@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan valósíthat meg szövegcsere-megjegyzéseket Java PDF-ekben a GroupDocs.Annotation használatával. Bővítse a dokumentumszerkesztési és együttműködési képességeit."
 "title": "Java PDF szövegcsere útmutató GroupDocs.Annotation segítségével"
 "url": "/hu/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

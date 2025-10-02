@@ -3,6 +3,7 @@
 "description": "Aprenda a adicionar marcas d'água usando o GroupDocs.Annotation para .NET. Este guia aborda a configuração, a implementação passo a passo e as práticas recomendadas para proteger e aplicar a marca em documentos."
 "title": "Implementar Adicionar Marca D'água com GroupDocs.Annotation no .NET - Um Guia Completo para Segurança e Identidade Visual de Documentos"
 "url": "/pt/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

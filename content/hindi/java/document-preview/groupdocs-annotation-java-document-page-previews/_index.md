@@ -3,6 +3,7 @@
 "description": "दस्तावेज़ पृष्ठों के उच्च-गुणवत्ता वाले PNG पूर्वावलोकन बनाने के लिए Java के लिए GroupDocs.Annotation का उपयोग करना सीखें। इस शक्तिशाली सुविधा के साथ अपने सॉफ़्टवेयर को बेहतर बनाएँ।"
 "title": "GroupDocs.Annotation का उपयोग करके Java में दस्तावेज़ पृष्ठ पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

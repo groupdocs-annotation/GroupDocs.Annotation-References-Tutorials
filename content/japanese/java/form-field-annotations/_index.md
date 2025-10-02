@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してドキュメントにフォーム フィールドとインタラクティブ コンポーネントを追加するためのステップ バイ ステップのチュートリアル。"
 "title": "GroupDocs.Annotation Java のフォームフィールド注釈チュートリアル"
 "url": "/ja/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

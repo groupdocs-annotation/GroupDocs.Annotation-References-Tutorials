@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgelere resim açıklamaları ekleme ve yönetmeye ilişkin adım adım eğitimler."
 "title": "GroupDocs.Annotation .NET için Görüntü Açıklama Eğitimleri"
 "url": "/tr/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

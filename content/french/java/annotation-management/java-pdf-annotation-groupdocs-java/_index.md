@@ -3,6 +3,7 @@
 "description": "Apprenez à annoter efficacement des documents PDF avec des zones en surbrillance à l'aide de la puissante API GroupDocs.Annotation pour Java, améliorant ainsi la collaboration et la productivité."
 "title": "Comment annoter des PDF en Java avec GroupDocs.Annotation"
 "url": "/fr/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

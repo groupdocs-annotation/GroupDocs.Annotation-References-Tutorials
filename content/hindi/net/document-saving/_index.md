@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके विभिन्न विकल्पों के साथ एनोटेट दस्तावेजों को सहेजने के लिए पूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए दस्तावेज़ सहेजा जा रहा है ट्यूटोरियल"
 "url": "/hi/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

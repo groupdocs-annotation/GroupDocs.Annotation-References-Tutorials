@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να φορτώνετε, να προσθέτετε σχόλια και να αποθηκεύετε με ασφάλεια έγγραφα που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Annotation για Java. Βελτιώστε την ασφάλεια των εγγράφων στις εφαρμογές Java που διαθέτετε."
 "title": "Ασφαλής διαχείριση εγγράφων με το GroupDocs.Annotation Java Φόρτωση και σχολιασμός εγγράφων που προστατεύονται με κωδικό πρόσβασης"
 "url": "/el/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

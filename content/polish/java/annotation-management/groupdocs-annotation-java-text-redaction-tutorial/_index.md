@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie redagować tekst w plikach PDF, korzystając z potężnej biblioteki Java GroupDocs.Annotation. Ten przewodnik obejmuje konfigurację, tworzenie adnotacji i zapisywanie procesów."
 "title": "Główny tekst redakcyjny w plikach PDF przy użyciu GroupDocs.Annotation Java API&#58; Kompleksowy przewodnik"
 "url": "/pl/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące dodawania, usuwania, aktualizowania i zarządzania adnotacjami w dokumentach przy użyciu GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki dotyczące zarządzania adnotacjami dla GroupDocs.Annotation .NET"
 "url": "/pl/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

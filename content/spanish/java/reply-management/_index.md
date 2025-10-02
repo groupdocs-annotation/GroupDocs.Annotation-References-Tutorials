@@ -2,6 +2,7 @@
 "description": "Tutoriales paso a paso para implementar hilos de comentarios, respuestas y discusiones colaborativas con GroupDocs.Annotation para Java."
 "title": "Tutoriales de gestión de respuestas para GroupDocs.Annotation Java"
 "url": "/es/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

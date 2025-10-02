@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Ajouter un composant de bouton au document PDF"
 "url": "/fr/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

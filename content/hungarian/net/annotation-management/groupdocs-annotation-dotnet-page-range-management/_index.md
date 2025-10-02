@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kezelheti hatékonyan az oldaltartományokat a GroupDocs.Annotation for .NET segítségével. Ez az útmutató bemutatja a telepítést, a beállítást és az egyes oldalak mentésére vonatkozó ajánlott eljárásokat."
 "title": "Oldaltartomány-kezelés elsajátítása .NET-ben a GroupDocs.Annotation segítségével – Hatékony annotációs technikák"
 "url": "/hu/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

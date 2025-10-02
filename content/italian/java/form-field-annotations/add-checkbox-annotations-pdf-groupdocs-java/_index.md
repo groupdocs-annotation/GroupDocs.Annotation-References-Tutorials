@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare i tuoi documenti PDF con annotazioni interattive tramite caselle di controllo utilizzando GroupDocs.Annotation per Java. Segui questa guida passo passo."
 "title": "Come aggiungere annotazioni CheckBox ai PDF utilizzando GroupDocs.Annotation per Java"
 "url": "/it/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belge Metin İçerik Bilgilerini Al"
 "url": "/tr/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

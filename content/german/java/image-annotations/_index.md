@@ -2,6 +2,7 @@
 "description": "Schritt-für-Schritt-Tutorials zum Hinzufügen und Verwalten von Bildanmerkungen in Dokumenten mit GroupDocs.Annotation für Java."
 "title": "Tutorials zur Bildannotation für GroupDocs.Annotation Java"
 "url": "/de/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

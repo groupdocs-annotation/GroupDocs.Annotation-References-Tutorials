@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για τη ρύθμιση αδειών χρήσης, τη διαμόρφωση επιλογών και τη διαχείριση του GroupDocs.Annotation σε εφαρμογές .NET."
 "title": "Εκπαιδευτικά σεμινάρια για την αδειοδότηση και τη διαμόρφωση του GroupDocs.Annotation για το .NET"
 "url": "/el/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

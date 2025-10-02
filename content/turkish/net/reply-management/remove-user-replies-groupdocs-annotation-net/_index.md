@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET'i kullanarak açıklamalı PDF belgelerinden belirli kullanıcı yanıtlarını etkili bir şekilde nasıl kaldıracağınızı öğrenin. Bu kapsamlı kılavuzla açıklama yönetiminizi kolaylaştırın."
 "title": "GroupDocs.Annotation .NET&#58;i Kullanarak PDF'lerden Kullanıcı Yanıtlarını Nasıl Kaldırırsınız Adım Adım Kılavuz"
 "url": "/tr/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

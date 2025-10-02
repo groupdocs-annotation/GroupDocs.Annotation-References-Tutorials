@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích PDF bằng cách tô sáng văn bản và trả lời bằng GroupDocs.Annotation for Java. Hướng dẫn này bao gồm thiết lập, ví dụ mã và ứng dụng thực tế."
 "title": "Chú thích PDF trong Java bằng GroupDocs.Highlight&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

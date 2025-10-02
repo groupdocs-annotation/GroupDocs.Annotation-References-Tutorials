@@ -3,6 +3,7 @@
 "description": "Leer hoe u afstandsannotaties in Java-documenten implementeert met GroupDocs.Annotation. Deze stapsgewijze handleiding behandelt de installatie, configuratie en praktische toepassingen."
 "title": "Hoe u afstandsannotaties toevoegt in Java met GroupDocs.Annotation&#58; een stapsgewijze handleiding"
 "url": "/nl/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

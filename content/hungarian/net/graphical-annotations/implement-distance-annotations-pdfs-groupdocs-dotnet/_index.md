@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat pontos távolságmegjegyzéseket PDF-dokumentumaihoz a GroupDocs.Annotation for .NET segítségével. Ez az útmutató a beállítást, a konfigurációt és a gyakorlati alkalmazásokat ismerteti."
 "title": "Távolságjelölések megvalósítása PDF-ekben a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

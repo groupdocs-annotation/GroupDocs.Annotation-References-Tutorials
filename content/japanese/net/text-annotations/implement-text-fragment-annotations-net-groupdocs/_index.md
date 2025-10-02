@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotationを使用して.NETでテキストフラグメント注釈を実装する方法を学びます。このガイドでは、効率的なドキュメント管理のための設定、実装、そして実践的な応用例を解説します。"
 "title": "GroupDocs による .NET でのテキストフラグメント注釈の実装 - 総合ガイド"
 "url": "/ja/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

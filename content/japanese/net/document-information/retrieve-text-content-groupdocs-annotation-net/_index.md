@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、ドキュメントからテキストコンテンツを効率的に取得する方法を学びましょう。このステップバイステップガイドに従って、ドキュメント処理機能を強化しましょう。"
 "title": "GroupDocs.Annotation for .NET でドキュメントのテキストコンテンツを取得する - ステップバイステップガイド"
 "url": "/ja/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

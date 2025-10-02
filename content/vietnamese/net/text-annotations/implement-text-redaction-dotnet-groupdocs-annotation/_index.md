@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách triển khai chú thích biên tập văn bản trong các ứng dụng .NET bằng GroupDocs.Annotation. Bảo mật thông tin nhạy cảm một cách dễ dàng."
 "title": "Triển khai Biên tập Văn bản trong .NET Sử dụng GroupDocs.Annotation&#58; Hướng dẫn đầy đủ"
 "url": "/vi/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

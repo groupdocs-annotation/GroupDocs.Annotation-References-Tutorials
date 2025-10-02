@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 문서에서 주석을 효율적으로 생성, 관리 및 저장하는 방법을 알아보세요. 이 단계별 가이드에서는 초기화, 주석 유형 및 통합 팁을 다룹니다."
 "title": "Java용 GroupDocs.Annotation을 사용하여 주석을 생성하고 관리하는 방법에 대한 완벽한 가이드"
 "url": "/ko/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

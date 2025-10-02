@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách xóa chú thích khỏi tài liệu PDF một cách liền mạch bằng API GroupDocs.Annotation trong Java. Làm theo hướng dẫn từng bước của chúng tôi để quản lý tài liệu hiệu quả."
 "title": "Cách xóa chú thích khỏi tệp PDF bằng GroupDocs.Annotation Java API"
 "url": "/vi/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

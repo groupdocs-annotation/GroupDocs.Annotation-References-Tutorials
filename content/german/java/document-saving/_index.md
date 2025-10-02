@@ -2,6 +2,7 @@
 "description": "Vollständige Tutorials zum Speichern kommentierter Dokumente mit verschiedenen Optionen mithilfe von GroupDocs.Annotation für Java."
 "title": "Tutorials zum Speichern von Dokumenten für GroupDocs.Annotation Java"
 "url": "/de/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

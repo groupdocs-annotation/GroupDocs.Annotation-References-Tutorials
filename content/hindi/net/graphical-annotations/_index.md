@@ -2,6 +2,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ दस्तावेज़ों में आकार, तीर, चित्र और ग्राफ़िकल तत्व जोड़ने के लिए पूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए ग्राफिकल एनोटेशन ट्यूटोरियल"
 "url": "/hi/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

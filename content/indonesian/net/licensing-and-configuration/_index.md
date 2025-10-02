@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menyiapkan lisensi, mengonfigurasi opsi, dan mengelola GroupDocs.Annotation dalam aplikasi .NET."
 "title": "GroupDocs.Annotation Tutorial Lisensi dan Konfigurasi untuk .NET"
 "url": "/id/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

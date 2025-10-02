@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 為 PDF 新增文字高亮和回覆註解。本指南涵蓋設定、程式碼範例和實際應用。"
 "title": "使用 GroupDocs.Highlight 在 Java 中註解 PDF——綜合指南"
 "url": "/zh-hant/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

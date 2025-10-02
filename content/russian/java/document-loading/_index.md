@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по загрузке документов из различных источников с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по загрузке документов для GroupDocs.Annotation Java"
 "url": "/ru/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

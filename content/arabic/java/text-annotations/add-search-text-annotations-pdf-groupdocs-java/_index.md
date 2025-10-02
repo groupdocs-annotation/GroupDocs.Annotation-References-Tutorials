@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك بإضافة تعليقات نصية قابلة للبحث باستخدام GroupDocs.Annotation لجافا. يقدم هذا الدليل تعليمات خطوة بخطوة ونصائح عملية."
 "title": "كيفية إضافة تعليقات نصية للبحث إلى ملفات PDF باستخدام GroupDocs.Annotation لـ Java"
 "url": "/ar/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

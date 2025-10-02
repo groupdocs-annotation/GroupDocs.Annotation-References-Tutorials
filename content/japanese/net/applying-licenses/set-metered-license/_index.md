@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "従量制ライセンスの設定"
 "url": "/ja/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

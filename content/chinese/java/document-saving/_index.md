@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 使用各种选项保存带注释文档的完整教程。"
 "title": "GroupDocs.Annotation Java 文档保存教程"
 "url": "/zh/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

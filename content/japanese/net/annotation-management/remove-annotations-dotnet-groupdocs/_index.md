@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、ドキュメントから注釈を効率的に削除する方法を学びましょう。この包括的なガイドで、ドキュメントワークフローを効率化し、明瞭性を高めましょう。"
 "title": "GroupDocs.Annotation を使用して .NET のドキュメントから注釈を削除する"
 "url": "/ja/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

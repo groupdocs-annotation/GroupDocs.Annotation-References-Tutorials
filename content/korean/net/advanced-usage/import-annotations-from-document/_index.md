@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서에서 주석 가져오기"
 "url": "/ko/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

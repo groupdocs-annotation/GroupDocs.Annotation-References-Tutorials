@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إزالة الردود من التعليقات التوضيحية بكفاءة باستخدام GroupDocs.Annotation لـ .NET. بسّط إدارة مستنداتك مع هذا الدليل الشامل."
 "title": "كيفية إزالة الردود من التعليقات التوضيحية باستخدام GroupDocs.Annotation .NET - دليل خطوة بخطوة"
 "url": "/ar/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

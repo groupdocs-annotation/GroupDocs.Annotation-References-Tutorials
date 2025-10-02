@@ -3,6 +3,7 @@
 "description": "了解如何将 GroupDocs.Annotation 集成到您的 .NET 项目中，以使用图像注释增强文档。提高用户参与度并简化协作。"
 "title": "使用 GroupDocs.Annotation for .NET 向文档添加图像注释"
 "url": "/zh/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

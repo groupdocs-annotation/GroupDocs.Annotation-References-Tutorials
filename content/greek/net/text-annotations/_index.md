@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την προσθήκη, επεξεργασία και διαχείριση σχολίων κειμένου σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο για σχολιασμό κειμένου στο GroupDocs.Annotation .NET"
 "url": "/el/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

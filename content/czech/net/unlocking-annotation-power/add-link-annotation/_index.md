@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Přidat anotaci odkazu do dokumentu"
 "url": "/cs/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

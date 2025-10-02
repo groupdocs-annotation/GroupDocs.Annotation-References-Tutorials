@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لتنفيذ سلاسل التعليقات والردود والمناقشات التعاونية باستخدام GroupDocs.Annotation لـ Java."
 "title": "دروس تعليمية لإدارة الردود على GroupDocs.Annotation Java"
 "url": "/ar/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Nhận tất cả các khóa phiên bản trên tài liệu"
 "url": "/vi/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích biên tập tài nguyên vào PDF bằng GroupDocs.Annotation cho .NET. Bảo vệ thông tin nhạy cảm và tăng cường bảo mật tài liệu bằng hướng dẫn chi tiết này."
 "title": "Cách thêm chú thích biên tập tài nguyên trong .NET bằng GroupDocs.Annotation&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

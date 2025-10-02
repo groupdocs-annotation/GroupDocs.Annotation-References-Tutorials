@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效管理文档版本。本指南涵盖设置、实施和实际应用。"
 "title": "如何使用 GroupDocs.Annotation for .NET 将 PDF 保存为新版本 - 分步指南"
 "url": "/zh/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

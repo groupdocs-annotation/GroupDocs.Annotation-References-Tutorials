@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 生成文档预览、缩略图和视觉表示的完整教程。"
 "title": "GroupDocs.Annotation Java 文档预览教程"
 "url": "/zh/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

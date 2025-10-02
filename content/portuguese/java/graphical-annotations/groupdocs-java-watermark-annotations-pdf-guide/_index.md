@@ -3,6 +3,7 @@
 "description": "Aprenda a proteger seus documentos adicionando anotações de marca d'água usando o GroupDocs.Annotation para Java. Este guia aborda dicas de configuração, personalização e otimização."
 "title": "Implementando Anotações de Marca D'água em PDFs com GroupDocs.Annotation Java - Um Guia Completo"
 "url": "/pt/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как аннотировать PDF-документы напрямую из URL-адресов с помощью GroupDocs.Annotation для Java. В этом руководстве рассматривается эффективная загрузка, аннотирование и сохранение PDF-файлов."
 "title": "Как аннотировать PDF-файлы из URL-адресов с помощью GroupDocs.Annotation для Java | Учебник по управлению аннотациями документов"
 "url": "/ru/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

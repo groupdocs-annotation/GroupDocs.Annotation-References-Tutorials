@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak ulepszyć swoje dokumenty PDF, dodając interaktywne pola wyboru za pomocą GroupDocs.Annotation dla .NET. Postępuj zgodnie z tym przewodnikiem krok po kroku, aby usprawnić adnotacje pól formularza w swoich dokumentach cyfrowych."
 "title": "Jak dodać pole wyboru do pliku PDF za pomocą GroupDocs.Annotation dla platformy .NET? Przewodnik krok po kroku"
 "url": "/pl/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

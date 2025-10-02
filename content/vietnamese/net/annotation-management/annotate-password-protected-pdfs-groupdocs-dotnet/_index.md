@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích an toàn cho các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET. Hướng dẫn từng bước này bao gồm việc tải, chú thích và lưu tài liệu."
 "title": "Cách chú thích các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET | Hướng dẫn từng bước"
 "url": "/vi/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

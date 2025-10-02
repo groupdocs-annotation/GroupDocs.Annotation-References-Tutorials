@@ -2,6 +2,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके विभिन्न विकल्पों के साथ एनोटेट किए गए दस्तावेज़ों को सहेजने के लिए पूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए दस्तावेज़ सहेजने के ट्यूटोरियल"
 "url": "/hi/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

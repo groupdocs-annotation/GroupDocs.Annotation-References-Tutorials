@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε κυματιστές σχολιασμούς στα έγγραφα PDF σας χρησιμοποιώντας το GroupDocs.Annotation για Java, βελτιώνοντας την ανασκόπηση και τη συνεργασία εγγράφων."
 "title": "Πώς να προσθέσετε σχολιασμούς Squiggly σε PDF χρησιμοποιώντας το GroupDocs.Annotation για Java"
 "url": "/el/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

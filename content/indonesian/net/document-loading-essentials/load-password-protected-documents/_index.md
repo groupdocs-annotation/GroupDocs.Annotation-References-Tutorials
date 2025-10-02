@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Muat Dokumen yang Dilindungi Kata Sandi"
 "url": "/id/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

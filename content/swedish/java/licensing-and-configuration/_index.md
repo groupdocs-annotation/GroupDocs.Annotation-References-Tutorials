@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att konfigurera licensiering, alternativ och hantera GroupDocs.Annotation i Java-applikationer."
 "title": "GroupDocs.Annotation Licensiering och konfigurationshandledningar för Java"
 "url": "/sv/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

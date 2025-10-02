@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Kép megjegyzésének elhelyezése szöveg felett"
 "url": "/hu/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

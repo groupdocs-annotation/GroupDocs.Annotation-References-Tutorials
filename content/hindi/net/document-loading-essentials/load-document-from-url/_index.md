@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "URL से दस्तावेज़ लोड करें"
 "url": "/hi/net/document-loading-essentials/load-document-from-url/"
+type: docs
 "weight": 15
 ---
 

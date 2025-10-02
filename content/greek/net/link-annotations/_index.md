@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για την εφαρμογή υπερσυνδέσμων και συνδεδεμένων σχολιασμών σε έγγραφα με το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο για σχολιασμούς συνδέσμων για το GroupDocs.Annotation .NET"
 "url": "/el/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

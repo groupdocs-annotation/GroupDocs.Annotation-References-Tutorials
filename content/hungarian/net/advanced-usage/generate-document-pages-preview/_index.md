@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentumoldalak előnézetének generálása"
 "url": "/hu/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

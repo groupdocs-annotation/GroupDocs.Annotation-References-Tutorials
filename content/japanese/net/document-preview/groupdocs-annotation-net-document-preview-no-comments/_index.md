@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、コメントのないクリーンなドキュメントプレビューを作成する方法を学びましょう。このガイドに従って、ドキュメントのプレゼンテーションとレビュープロセスを強化しましょう。"
 "title": "GroupDocs.Annotation .NET を使用してコメントなしのドキュメントプレビューを生成する方法"
 "url": "/ja/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

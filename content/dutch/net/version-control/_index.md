@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het implementeren van documentversies, het bijhouden van wijzigingen en het beheren van de annotatiegeschiedenis met GroupDocs.Annotation voor .NET."
 "title": "Versiebeheerhandleidingen voor GroupDocs.Annotation .NET"
 "url": "/nl/net/version-control/"
+type: docs
 "weight": 13
 ---
 

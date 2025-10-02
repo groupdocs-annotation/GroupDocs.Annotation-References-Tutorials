@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、返信機能付きのインタラクティブなPDFボタンを作成する方法を学びましょう。このステップバイステップガイドに従って、ドキュメントのインタラクティブ性を高めましょう。"
 "title": "GroupDocs.Annotation を使用して Java でインタラクティブな PDF ボタンを作成する完全ガイド"
 "url": "/ja/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

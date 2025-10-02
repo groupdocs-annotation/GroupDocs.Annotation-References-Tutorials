@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgeler ve XML dosyaları arasında açıklamaları içe ve dışa aktarmaya yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation .NET için Açıklama İçe ve Dışa Aktarma Eğitimleri"
 "url": "/tr/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Nhận thông tin nội dung văn bản tài liệu"
 "url": "/vi/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

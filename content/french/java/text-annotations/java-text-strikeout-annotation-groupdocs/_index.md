@@ -3,6 +3,7 @@
 "description": "Apprenez à ajouter des annotations barrées en Java avec GroupDocs.Annotation. Suivez ce guide étape par étape pour annoter vos documents en toute simplicité."
 "title": "Guide d'annotation de texte barré Java avec GroupDocs.Annotation"
 "url": "/fr/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

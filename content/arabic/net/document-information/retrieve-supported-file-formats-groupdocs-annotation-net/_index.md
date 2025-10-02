@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استرجاع تنسيقات الملفات المدعومة بكفاءة باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل التكامل والتنفيذ والتطبيقات العملية."
 "title": "كيفية استرداد تنسيقات الملفات المدعومة باستخدام GroupDocs.Annotation لـ .NET - دليل شامل"
 "url": "/ar/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

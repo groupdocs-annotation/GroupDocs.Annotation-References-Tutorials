@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation pro tutoriály v Javě"
 "title": "API pro anotaci dokumentů v Javě | GroupDocs.Annotation pro tutoriály a příklady v Javě"
 "url": "/cs/java/"
+type: docs
 "weight": 10
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "生成不帶評論的預覽"
 "url": "/zh-hant/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

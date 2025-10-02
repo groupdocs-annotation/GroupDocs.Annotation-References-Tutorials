@@ -2,6 +2,7 @@
 "description": "Schritt-für-Schritt-Tutorials zum Importieren und Exportieren von Anmerkungen zwischen Dokumenten und XML-Dateien mit GroupDocs.Annotation für .NET."
 "title": "Tutorials zum Importieren und Exportieren von Anmerkungen für GroupDocs.Annotation .NET"
 "url": "/de/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

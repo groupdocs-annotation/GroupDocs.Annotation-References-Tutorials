@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dodaj komponent pola wyboru do dokumentu PDF"
 "url": "/pl/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

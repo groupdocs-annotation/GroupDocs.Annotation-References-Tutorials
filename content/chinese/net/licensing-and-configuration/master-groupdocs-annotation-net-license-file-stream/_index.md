@@ -3,6 +3,7 @@
 "description": "了解如何使用文件流设置和应用 GroupDocs.Annotation .NET 的许可证。本指南内容全面，助您解锁所有功能。"
 "title": "掌握 GroupDocs.Annotation .NET&#58; 在 C# 中使用文件流设置许可证"
 "url": "/zh/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

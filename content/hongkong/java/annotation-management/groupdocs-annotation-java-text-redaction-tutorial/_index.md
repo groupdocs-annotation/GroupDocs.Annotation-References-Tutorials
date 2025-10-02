@@ -3,6 +3,7 @@
 "description": "了解如何使用強大的 GroupDocs.Annotation Java 程式庫有效遮蓋 PDF 中的文字。本指南涵蓋設定、註釋建立和儲存流程。"
 "title": "使用 GroupDocs.Annotation Java API 掌握 PDF 中的文字編輯—綜合指南"
 "url": "/zh-hant/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

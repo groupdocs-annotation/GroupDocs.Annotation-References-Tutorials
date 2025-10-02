@@ -3,6 +3,7 @@
 "description": "Découvrez comment annoter en toute sécurité des PDF protégés par mot de passe avec GroupDocs.Annotation pour .NET. Ce guide étape par étape explique le chargement, l'annotation et l'enregistrement de documents."
 "title": "Comment annoter des PDF protégés par mot de passe avec GroupDocs.Annotation pour .NET | Guide étape par étape"
 "url": "/fr/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

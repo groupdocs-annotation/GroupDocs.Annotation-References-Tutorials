@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να δημιουργείτε προεπισκοπήσεις εγγράφων χωρίς σχολιασμούς χρησιμοποιώντας το GroupDocs.Annotation για .NET, διασφαλίζοντας το απόρρητο και τη σαφήνεια σε συνεργατικά έργα."
 "title": "Πώς να δημιουργήσετε μια καθαρή προεπισκόπηση εγγράφου χωρίς σχολιασμούς χρησιμοποιώντας το GroupDocs.Annotation .NET"
 "url": "/el/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

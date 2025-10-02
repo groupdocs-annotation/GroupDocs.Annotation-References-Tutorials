@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "โหลดเอกสารจาก Azure"
 "url": "/th/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

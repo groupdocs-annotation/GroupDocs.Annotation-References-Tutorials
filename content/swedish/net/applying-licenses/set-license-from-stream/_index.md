@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ange licens från ström"
 "url": "/sv/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

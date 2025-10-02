@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "PDF dokumentumok forgatása"
 "url": "/hu/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

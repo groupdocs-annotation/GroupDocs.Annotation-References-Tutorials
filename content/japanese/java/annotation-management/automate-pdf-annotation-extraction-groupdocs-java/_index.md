@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java を使用して PDF からの注釈抽出を自動化し、時間を節約してエラーを削減する方法を学びます。"
 "title": "GroupDocs for JavaでPDF注釈抽出を自動化する包括的なガイド"
 "url": "/ja/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تطبيق تعليقات استبدال النصوص في ملفات PDF بلغة Java باستخدام GroupDocs.Annotation. حسّن إمكانيات تحرير المستندات والتعاون فيها."
 "title": "دليل استبدال نص PDF في Java باستخدام GroupDocs.Annotation"
 "url": "/ar/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

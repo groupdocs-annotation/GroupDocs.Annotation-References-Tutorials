@@ -3,6 +3,7 @@
 "description": "掌握如何使用 GroupDocs.Annotation for .NET 從文件中刪除註解。學習逐步流程，優化文件處理，並提昇文件清晰度。"
 "title": "使用 GroupDocs.Annotation 有效刪除 .NET 中的註解——綜合指南"
 "url": "/zh-hant/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

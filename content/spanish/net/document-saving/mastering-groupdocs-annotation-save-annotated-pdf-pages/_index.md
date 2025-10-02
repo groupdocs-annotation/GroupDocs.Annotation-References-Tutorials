@@ -3,6 +3,7 @@
 "description": "Aprenda a guardar eficientemente solo las páginas anotadas de un PDF con GroupDocs.Annotation para .NET. Mejore la gestión de documentos y la colaboración con esta guía detallada."
 "title": "Cómo guardar páginas anotadas en PDF con GroupDocs.Annotation para .NET"
 "url": "/es/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

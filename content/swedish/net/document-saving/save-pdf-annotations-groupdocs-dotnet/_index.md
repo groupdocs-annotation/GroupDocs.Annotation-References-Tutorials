@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt sparar PDF-anteckningar med GroupDocs.Annotation för .NET. Effektivisera din dokumenthanteringsprocess med vår detaljerade guide."
 "title": "Spara PDF-anteckningar effektivt med GroupDocs.Annotation för .NET"
 "url": "/sv/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

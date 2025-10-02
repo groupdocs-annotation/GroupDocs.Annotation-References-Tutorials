@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 設定和管理計量許可證，確保合規性和最佳功能。"
 "title": "在 GroupDocs.Annotation for .NET 中實作計量授權－綜合指南"
 "url": "/zh-hant/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

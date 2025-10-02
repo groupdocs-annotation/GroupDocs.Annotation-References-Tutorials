@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إنشاء معاينات عالية الجودة لمستندات PDF بدقة صور محددة باستخدام مكتبة GroupDocs.Annotation القوية في .NET. حسّن سير عمل إدارة مستنداتك اليوم."
 "title": "إنشاء معاينات PDF عالية الجودة بدقة مخصصة باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

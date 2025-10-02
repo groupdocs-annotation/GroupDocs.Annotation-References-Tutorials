@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية على شكل نقاط إلى مستندات PDF باستخدام مكتبة GroupDocs.Annotation القوية في جافا. اتبع هذا الدليل خطوة بخطوة لتحسين التعاون في المستندات."
 "title": "إضافة تعليقات توضيحية على شكل نقاط بيضاوية إلى ملفات PDF باستخدام GroupDocs.Annotation لـ Java"
 "url": "/ar/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro přidávání, odebírání, aktualizaci a správu anotací v dokumentech pomocí nástroje GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro správu anotací v GroupDocs.Annotation .NET"
 "url": "/cs/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

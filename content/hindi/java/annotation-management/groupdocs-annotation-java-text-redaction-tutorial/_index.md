@@ -3,6 +3,7 @@
 "description": "शक्तिशाली GroupDocs.Annotation Java लाइब्रेरी का उपयोग करके PDF में टेक्स्ट को कुशलतापूर्वक संपादित करना सीखें। यह गाइड सेटअप, एनोटेशन निर्माण और सेविंग प्रक्रियाओं को कवर करता है।"
 "title": "GroupDocs.Annotation Java API का उपयोग करके PDF में टेक्स्ट रिडक्शन में महारत हासिल करें&#58; एक व्यापक गाइड"
 "url": "/hi/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

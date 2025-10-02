@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استرداد مفاتيح الإصدارات بكفاءة من المستندات باستخدام GroupDocs.Annotation لـ .NET. حسّن إدارة المستندات والتعاون مع الآخرين من خلال هذا الدليل المفصل."
 "title": "كيفية استرداد مفاتيح الإصدار في .NET باستخدام GroupDocs.Annotation - دليل كامل"
 "url": "/ar/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

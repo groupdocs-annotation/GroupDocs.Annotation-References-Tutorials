@@ -3,6 +3,7 @@
 "description": "Aprenda a añadir anotaciones de subrayado a sus documentos de forma eficiente con GroupDocs.Annotation para .NET. Mejore la claridad y la comunicación de sus documentos con facilidad."
 "title": "Cómo agregar anotaciones subrayadas en .NET con GroupDocs.Annotation"
 "url": "/es/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

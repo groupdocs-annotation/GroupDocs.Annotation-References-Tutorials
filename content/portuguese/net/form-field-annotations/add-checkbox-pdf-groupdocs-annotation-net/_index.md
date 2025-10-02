@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus documentos PDF adicionando caixas de seleção interativas usando o GroupDocs.Annotation para .NET. Siga este guia passo a passo para otimizar as anotações em campos de formulário em seus documentos digitais."
 "title": "Como adicionar uma caixa de seleção a um PDF com GroupDocs.Annotation para .NET - Um guia passo a passo"
 "url": "/pt/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

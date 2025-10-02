@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích tài liệu PDF trực tiếp từ URL bằng GroupDocs.Annotation for Java. Hướng dẫn này bao gồm cách tải, chú thích và lưu PDF hiệu quả."
 "title": "Cách chú thích PDF từ URL bằng GroupDocs.Annotation cho Java | Hướng dẫn về quản lý chú thích tài liệu"
 "url": "/vi/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

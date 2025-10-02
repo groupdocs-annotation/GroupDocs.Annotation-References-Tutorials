@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχόλια και να αποθηκεύετε PDF με κλειδιά προσαρμοσμένης έκδοσης χρησιμοποιώντας την ισχυρή βιβλιοθήκη GroupDocs.Annotation για .NET, διασφαλίζοντας ότι κάθε επανάληψη εγγράφου είναι μοναδικά αναγνωρίσιμη."
 "title": "Αποθήκευση σχολιασμένων PDF με κλειδιά προσαρμοσμένης έκδοσης στο .NET χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

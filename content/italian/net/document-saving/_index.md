@@ -2,6 +2,7 @@
 "description": "Tutorial completi per salvare documenti annotati con varie opzioni utilizzando GroupDocs.Annotation per .NET."
 "title": "Tutorial sul salvataggio dei documenti per GroupDocs.Annotation .NET"
 "url": "/it/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

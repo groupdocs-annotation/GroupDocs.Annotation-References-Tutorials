@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách triển khai chú thích đoạn văn bản trong .NET bằng GroupDocs.Annotation. Hướng dẫn này bao gồm thiết lập, triển khai và ứng dụng thực tế để quản lý tài liệu hiệu quả."
 "title": "Triển khai chú thích đoạn văn bản trong .NET với GroupDocs&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan hozhat létre interaktív PDF gombokat válaszokkal a GroupDocs.Annotation for Java használatával. Kövesse ezt a lépésről lépésre szóló útmutatót a dokumentumok interaktivitásának fokozásához."
 "title": "Interaktív PDF gombok létrehozása Java nyelven a GroupDocs.Annotation használatával – Teljes körű útmutató"
 "url": "/hu/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

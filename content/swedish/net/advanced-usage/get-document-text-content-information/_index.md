@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Hämta information om dokumenttextinnehåll"
 "url": "/sv/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

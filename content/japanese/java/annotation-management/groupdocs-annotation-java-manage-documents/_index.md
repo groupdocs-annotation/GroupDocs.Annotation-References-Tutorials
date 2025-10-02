@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotationを使用してJavaでアノテーションを効果的に管理する方法を学びましょう。このガイドでは、ドキュメントワークフローの読み込み、削除、最適化について説明します。"
 "title": "Javaでアノテーション管理をマスターする - GroupDocs.Annotationによる包括的ガイド"
 "url": "/ja/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

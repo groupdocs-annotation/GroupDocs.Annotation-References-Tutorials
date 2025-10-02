@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนเกี่ยวกับการใช้งานไฮเปอร์ลิงก์และคำอธิบายแบบเชื่อมโยงในเอกสารด้วย GroupDocs.Annotation สำหรับ .NET"
 "title": "ลิงก์บทช่วยสอนเกี่ยวกับคำอธิบายประกอบสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดึงข้อมูลเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ครอบคลุมถึงการตั้งค่า การใช้งาน และแอปพลิเคชันจริงเพื่อปรับปรุงเวิร์กโฟลว์การประมวลผลเอกสารของคุณ"
 "title": "เรียนรู้การแยกเอกสารด้วย GroupDocs.Annotation .NET คู่มือฉบับสมบูรณ์สำหรับนักพัฒนา"
 "url": "/th/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

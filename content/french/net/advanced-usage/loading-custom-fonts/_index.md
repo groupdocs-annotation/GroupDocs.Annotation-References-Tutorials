@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Chargement de polices personnalisées"
 "url": "/fr/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

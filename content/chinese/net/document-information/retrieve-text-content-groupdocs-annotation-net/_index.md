@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效地从文档中检索文本内容。遵循本分步指南，提升您的文档处理能力。"
 "title": "使用 GroupDocs.Annotation for .NET 检索文档文本内容——分步指南"
 "url": "/zh/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

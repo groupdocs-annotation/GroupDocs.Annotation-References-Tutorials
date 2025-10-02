@@ -3,6 +3,7 @@
 "description": "Apprenez à gérer efficacement les versions de vos documents avec GroupDocs.Annotation pour .NET. Ce guide couvre la configuration, la mise en œuvre et les applications pratiques."
 "title": "Comment enregistrer un PDF comme nouvelle version avec GroupDocs.Annotation pour .NET – Guide étape par étape"
 "url": "/fr/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

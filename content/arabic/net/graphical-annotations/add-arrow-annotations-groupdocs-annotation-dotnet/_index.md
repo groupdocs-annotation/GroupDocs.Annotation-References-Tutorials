@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات الأسهم إلى مستنداتك باستخدام GroupDocs.Annotation لـ .NET. يقدم هذا الدليل تعليمات خطوة بخطوة مع أمثلة برمجية."
 "title": "كيفية إضافة تعليقات الأسهم في ملفات PDF باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

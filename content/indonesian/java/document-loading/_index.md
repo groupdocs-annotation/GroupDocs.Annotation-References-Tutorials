@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk memuat dokumen dari berbagai sumber menggunakan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Pemuatan Dokumen untuk GroupDocs.Annotation Java"
 "url": "/id/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

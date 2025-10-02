@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att lägga till, redigera och hantera textanteckningar i dokument med GroupDocs.Annotation för .NET."
 "title": "Handledningar för textannotering för GroupDocs.Annotation .NET"
 "url": "/sv/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

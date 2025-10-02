@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Azure에서 문서 로드"
 "url": "/ko/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

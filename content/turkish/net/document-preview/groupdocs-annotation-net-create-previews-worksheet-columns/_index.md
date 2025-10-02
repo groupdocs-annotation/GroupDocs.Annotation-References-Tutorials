@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belirli çalışma sayfası sütunlarından özlü ve ilgili belge önizlemelerinin nasıl oluşturulacağını öğrenin. Veri analizi ve BT yönetiminde iş akışlarını kolaylaştırmak için mükemmeldir."
 "title": "GroupDocs.Annotation .NET Kullanarak Hedeflenen Excel Sayfası Önizlemeleri Oluşturun"
 "url": "/tr/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

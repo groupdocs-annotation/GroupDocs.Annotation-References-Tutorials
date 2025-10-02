@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके दस्तावेज़ों में पाठ एनोटेशन जोड़ने, संपादित करने और प्रबंधित करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए पाठ एनोटेशन ट्यूटोरियल"
 "url": "/hi/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

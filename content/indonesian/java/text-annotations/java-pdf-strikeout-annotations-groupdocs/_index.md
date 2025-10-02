@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi teks di PDF Java menggunakan GroupDocs.Annotation for Java. Ikuti tutorial langkah demi langkah ini untuk meningkatkan kemampuan mengedit dokumen Anda."
 "title": "Anotasi Coretan PDF Java dengan GroupDocs&#58; Panduan Lengkap"
 "url": "/id/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

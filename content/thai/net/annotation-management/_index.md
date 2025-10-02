@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนเกี่ยวกับการเพิ่ม ลบ อัปเดต และจัดการคำอธิบายประกอบในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการจัดการคำอธิบายประกอบสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

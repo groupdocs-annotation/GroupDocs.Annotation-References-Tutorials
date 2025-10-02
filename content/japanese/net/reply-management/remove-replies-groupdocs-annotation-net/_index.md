@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、注釈付きドキュメントから返信を効率的に削除する方法を学びます。このガイドでは、設定、操作、そして実践的な応用例について説明します。"
 "title": "GroupDocs.Annotation for .NET を使用して注釈付きドキュメントから返信を削除する手順ガイド"
 "url": "/ja/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument med interaktiva rullgardinsmenyer med hjälp av det kraftfulla GroupDocs.Annotation-biblioteket i Java."
 "title": "Skapa interaktiva PDF-rullgardinsmenyer med GroupDocs.Annotation för Java"
 "url": "/sv/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إزالة الردود بفعالية من المستندات المُعلّقة باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل الإعداد والمعالجة والتطبيقات العملية."
 "title": "إزالة الردود من المستندات المُعلّقة باستخدام GroupDocs.Annotation لـ .NET - دليل خطوة بخطوة"
 "url": "/ar/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

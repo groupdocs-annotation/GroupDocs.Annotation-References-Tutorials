@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять и удалять подчеркивания в документах Java с помощью GroupDocs.Annotation. Улучшите управление документами с помощью этого подробного руководства."
 "title": "Добавление и удаление подчеркивания аннотаций в Java с помощью GroupDocs&#58; Подробное руководство"
 "url": "/ru/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

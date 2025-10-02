@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 문서에 도형, 화살표, 이미지 및 그래픽 요소를 추가하는 방법에 대한 전체 튜토리얼입니다."
 "title": "GroupDocs.Annotation Java를 위한 그래픽 주석 튜토리얼"
 "url": "/ko/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके FTP सर्वर से दस्तावेज़ों को सहजता से लोड करने का तरीका जानें। इस विस्तृत गाइड के साथ अपने दस्तावेज़ प्रबंधन वर्कफ़्लो को बेहतर बनाएँ।"
 "title": "GroupDocs के साथ FTP सर्वर से दस्तावेज़ लोड करना और एनोटेट करना. .NET के लिए एनोटेशन एक व्यापक गाइड"
 "url": "/hi/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

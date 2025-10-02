@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro implementaci pokročilých anotačních funkcí, úprav a specializovaných funkcí s GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro pokročilé funkce GroupDocs.Annotation v Javě"
 "url": "/cs/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

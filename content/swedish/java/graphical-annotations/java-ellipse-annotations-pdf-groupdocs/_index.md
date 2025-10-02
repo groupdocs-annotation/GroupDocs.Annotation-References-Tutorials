@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till ellipsanteckningar i PDF-dokument med hjälp av det kraftfulla GroupDocs.Annotation-biblioteket i Java. Följ den här steg-för-steg-guiden för att förbättra dokumentsamarbetet."
 "title": "Lägg till ellipsannoteringar i PDF-filer i Java med GroupDocs.Annotation för Java"
 "url": "/sv/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

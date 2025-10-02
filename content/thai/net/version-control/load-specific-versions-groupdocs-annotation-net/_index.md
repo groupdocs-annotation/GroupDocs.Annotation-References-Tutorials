@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการจัดการและโหลดเอกสารที่มีคำอธิบายประกอบเฉพาะเวอร์ชันต่างๆ อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงระบบการจัดการเอกสารของคุณวันนี้!"
 "title": "โหลดเวอร์ชันเอกสารเฉพาะด้วย GroupDocs.Annotation สำหรับ .NET&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

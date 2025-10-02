@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 대화형 포인트 주석으로 PDF 문서를 개선하는 방법을 알아보세요. 이 단계별 가이드에서는 설정, 구현 및 문제 해결 방법을 다룹니다."
 "title": "GroupDocs.Annotation for .NET을 사용하여 PDF에 포인트 주석을 추가하는 방법"
 "url": "/ko/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

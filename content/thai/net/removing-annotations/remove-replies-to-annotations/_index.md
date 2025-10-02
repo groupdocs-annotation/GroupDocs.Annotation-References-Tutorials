@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ลบการตอบกลับคำอธิบายประกอบใน .NET"
 "url": "/th/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

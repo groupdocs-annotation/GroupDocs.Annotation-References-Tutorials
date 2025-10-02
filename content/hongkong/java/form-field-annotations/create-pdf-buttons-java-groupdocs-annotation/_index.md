@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 建立帶有回應的互動式 PDF 按鈕。請依照本逐步指南操作，以增強文件的互動性。"
 "title": "使用 GroupDocs.Annotation 在 Java 中建立互動式 PDF 按鈕－完整指南"
 "url": "/zh-hant/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

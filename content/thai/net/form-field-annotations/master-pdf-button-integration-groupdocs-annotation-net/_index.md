@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการผสานรวมปุ่มโต้ตอบเข้ากับเอกสาร PDF ของคุณโดยใช้ GroupDocs.Annotation สำหรับ .NET ที่มีประสิทธิภาพ เพิ่มการมีส่วนร่วมของผู้ใช้ด้วยคำแนะนำทีละขั้นตอน"
 "title": "รวมปุ่มโต้ตอบใน PDF โดยใช้ GroupDocs.Annotation .NET SDK"
 "url": "/th/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

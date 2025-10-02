@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá és frissíthet zökkenőmentesen jegyzeteket PDF fájlokban a GroupDocs.Annotation for Java segítségével. Fejlessze dokumentumkezelését ezzel a gyakorlati útmutatóval."
 "title": "PDF-ek megjegyzésekkel való ellátása GroupDocs.Annotation for Java használatával – Átfogó útmutató"
 "url": "/hu/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

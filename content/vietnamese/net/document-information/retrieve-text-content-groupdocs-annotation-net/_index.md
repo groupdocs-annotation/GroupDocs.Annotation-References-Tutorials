@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách lấy nội dung văn bản hiệu quả từ tài liệu bằng GroupDocs.Annotation cho .NET. Thực hiện theo hướng dẫn từng bước này để nâng cao khả năng xử lý tài liệu của bạn."
 "title": "Truy xuất nội dung văn bản tài liệu với GroupDocs.Annotation cho .NET&#58; Hướng dẫn từng bước"
 "url": "/vi/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

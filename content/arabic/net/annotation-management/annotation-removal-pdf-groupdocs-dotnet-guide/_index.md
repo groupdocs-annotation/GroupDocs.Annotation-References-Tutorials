@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية استخدام GroupDocs.Annotation لـ .NET لإزالة التعليقات التوضيحية بواسطة المعرف، وتحسين عملية إدارة المستندات لديك باستخدام هذا الدليل الشامل."
 "title": "كيفية إزالة التعليقات التوضيحية من ملفات PDF بكفاءة باستخدام GroupDocs.Annotation .NET"
 "url": "/ar/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

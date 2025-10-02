@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý hiệu quả các phạm vi trang bằng GroupDocs.Annotation cho .NET. Hướng dẫn này bao gồm cài đặt, thiết lập và các biện pháp thực hành tốt nhất để lưu các trang cụ thể."
 "title": "Làm chủ Quản lý Phạm vi Trang trong .NET với GroupDocs.Annotation&#58; Kỹ thuật chú thích hiệu quả"
 "url": "/vi/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

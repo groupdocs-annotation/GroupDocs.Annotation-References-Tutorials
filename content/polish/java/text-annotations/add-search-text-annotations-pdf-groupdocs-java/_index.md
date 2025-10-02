@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak ulepszyć swoje dokumenty PDF, dodając przeszukiwalne adnotacje tekstowe za pomocą GroupDocs.Annotation for Java. Ten przewodnik oferuje instrukcje krok po kroku i praktyczne wskazówki."
 "title": "Jak dodawać adnotacje tekstowe wyszukiwania do plików PDF za pomocą GroupDocs.Annotation dla języka Java"
 "url": "/pl/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient Anmerkungen in PDF-Dateien einfügen und speichern. Optimieren Sie Ihren Dokumentenmanagement-Workflow mit detaillierten Beispielen."
 "title": "So kommentieren Sie PDFs mit GroupDocs.Annotation für .NET – Schritt-für-Schritt-Anleitung"
 "url": "/de/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

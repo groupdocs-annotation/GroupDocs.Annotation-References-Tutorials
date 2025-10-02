@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してドキュメントに図形、矢印、画像、グラフィック要素を追加するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation Java のグラフィカル注釈チュートリアル"
 "url": "/ja/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

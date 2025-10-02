@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het toevoegen, bewerken en beheren van tekstaantekeningen in documenten met GroupDocs.Annotation voor .NET."
 "title": "Zelfstudies over tekstannotatie voor GroupDocs.Annotation .NET"
 "url": "/nl/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

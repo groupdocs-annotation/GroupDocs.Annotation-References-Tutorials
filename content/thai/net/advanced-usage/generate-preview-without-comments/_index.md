@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "สร้างการแสดงตัวอย่างโดยไม่ต้องแสดงความคิดเห็น"
 "url": "/th/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

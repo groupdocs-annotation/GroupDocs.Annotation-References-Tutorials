@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно извлекать поддерживаемые форматы файлов с помощью GroupDocs.Annotation для .NET. Это руководство охватывает интеграцию, реализацию и практические приложения."
 "title": "Как получить поддерживаемые форматы файлов с помощью GroupDocs.Annotation для .NET&#58; Подробное руководство"
 "url": "/ru/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

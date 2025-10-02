@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 주석에서 답글을 효율적으로 제거하는 방법을 알아보세요. 이 포괄적인 가이드를 통해 문서 관리를 간소화하세요."
 "title": "GroupDocs.Annotation .NET을 사용하여 주석에서 답변을 제거하는 방법 - 단계별 가이드"
 "url": "/ko/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

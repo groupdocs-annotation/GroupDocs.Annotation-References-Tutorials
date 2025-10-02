@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Megjegyzések eltávolítása azonosító szerint"
 "url": "/hu/net/removing-annotations/remove-annotations-by-id/"
+type: docs
 "weight": 11
 ---
 

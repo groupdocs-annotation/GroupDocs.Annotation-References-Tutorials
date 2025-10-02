@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีเพิ่มคำอธิบายประกอบแบบขีดฆ่าข้อความใน Java โดยใช้ GroupDocs.Annotation ปฏิบัติตามคำแนะนำทีละขั้นตอนนี้เพื่อคำอธิบายประกอบเอกสารอย่างราบรื่น"
 "title": "คู่มือการขีดฆ่าข้อความ Java โดยใช้ GroupDocs.Annotation"
 "url": "/th/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

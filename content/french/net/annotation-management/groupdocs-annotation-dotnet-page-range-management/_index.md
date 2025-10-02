@@ -3,6 +3,7 @@
 "description": "Apprenez à gérer efficacement les plages de pages avec GroupDocs.Annotation pour .NET. Ce guide couvre l'installation, la configuration et les bonnes pratiques pour enregistrer des pages spécifiques."
 "title": "Maîtriser la gestion des plages de pages dans .NET avec GroupDocs.Annotation &#58; techniques d'annotation efficaces"
 "url": "/fr/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

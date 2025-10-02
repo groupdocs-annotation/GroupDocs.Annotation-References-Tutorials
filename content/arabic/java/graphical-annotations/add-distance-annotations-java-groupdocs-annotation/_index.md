@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تطبيق التعليقات التوضيحية عن بُعد في مستندات جافا باستخدام GroupDocs.Annotation. يغطي هذا الدليل خطوة بخطوة الإعداد والتكوين والتطبيقات العملية."
 "title": "كيفية إضافة تعليقات المسافة في جافا باستخدام GroupDocs.Annotation - دليل خطوة بخطوة"
 "url": "/ar/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

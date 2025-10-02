@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "使用版本键获取注释列表"
 "url": "/zh/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

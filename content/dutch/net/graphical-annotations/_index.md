@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het toevoegen van vormen, pijlen, afbeeldingen en grafische elementen in documenten met GroupDocs.Annotation voor .NET."
 "title": "Grafische annotatiehandleidingen voor GroupDocs.Annotation .NET"
 "url": "/nl/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

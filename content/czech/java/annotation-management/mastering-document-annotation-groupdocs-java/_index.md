@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně anotovat dokumenty pomocí nástroje GroupDocs.Annotation pro Javu. Tato příručka se zabývá načítáním, anotací PDF souborů a optimalizací prostředí Java pomocí nástroje Maven."
 "title": "Zvládnutí anotací dokumentů v Javě – Komplexní průvodce používáním GroupDocs.Annotation"
 "url": "/cs/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

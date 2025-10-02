@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ส่วนประกอบของเอกสาร"
 "url": "/th/net/document-components/"
+type: docs
 "weight": 24
 ---
 

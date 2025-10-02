@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لتحميل المستندات من مصادر مختلفة باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس تعليمية حول تحميل المستندات لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนในการเพิ่มและจัดการคำอธิบายภาพในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนการใส่คำอธิบายภาพสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

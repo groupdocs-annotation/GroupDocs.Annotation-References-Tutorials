@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat interaktivní anotace textových polí do dokumentů PDF pomocí nástroje GroupDocs.Annotation pro .NET. Postupujte podle tohoto podrobného návodu a vylepšete interaktivitu dokumentu."
 "title": "Jak přidat anotace textových polí v PDF pomocí GroupDocs.Annotation pro .NET (Výukový program)"
 "url": "/cs/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

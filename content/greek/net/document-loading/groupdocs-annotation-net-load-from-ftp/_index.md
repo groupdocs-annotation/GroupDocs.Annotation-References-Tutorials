@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να φορτώνετε απρόσκοπτα έγγραφα από διακομιστές FTP χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη ροή εργασίας διαχείρισης εγγράφων με αυτόν τον λεπτομερή οδηγό."
 "title": "Φόρτωση και σχολιασμός εγγράφων από διακομιστές FTP με το GroupDocs.Annotation για .NET™ - Ένας πλήρης οδηγός"
 "url": "/el/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

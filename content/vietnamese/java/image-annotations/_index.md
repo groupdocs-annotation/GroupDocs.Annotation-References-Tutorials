@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước về cách thêm và quản lý chú thích hình ảnh trong tài liệu bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn chú thích hình ảnh cho GroupDocs.Annotation Java"
 "url": "/vi/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

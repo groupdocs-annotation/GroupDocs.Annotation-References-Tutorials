@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere in modo efficiente annotazioni a freccia ai PDF utilizzando la libreria GroupDocs.Annotation per Java. Migliora la chiarezza dei documenti e la collaborazione."
 "title": "Come aggiungere annotazioni a freccia in Java con l'API GroupDocs.Annotation"
 "url": "/it/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

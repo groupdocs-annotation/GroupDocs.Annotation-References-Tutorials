@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके पासवर्ड से सुरक्षित PDF को सुरक्षित रूप से एनोटेट करना सीखें। यह चरण-दर-चरण मार्गदर्शिका दस्तावेज़ों को लोड करना, एनोटेट करना और सहेजना शामिल करती है।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके पासवर्ड-संरक्षित PDF को कैसे एनोटेट करें | चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

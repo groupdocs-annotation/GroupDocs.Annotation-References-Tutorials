@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation ile .NET uygulamalarınıza kıvrımlı metin açıklamaları eklemeyi öğrenin; böylece belge okunabilirliğini ve geri bildirimi iyileştirin."
 "title": "GroupDocs.Annotation'ı Kullanarak .NET'te Metin Dalgalı Açıklamaları Uygulama"
 "url": "/tr/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

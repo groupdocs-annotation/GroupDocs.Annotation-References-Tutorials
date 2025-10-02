@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách xóa trả lời khỏi chú thích trong tài liệu bằng GroupDocs.Annotation cho Java API. Nâng cao khả năng quản lý tài liệu của bạn với hướng dẫn từng bước này."
 "title": "Cách xóa trả lời theo ID trong Java bằng API GroupDocs.Annotation"
 "url": "/vi/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Découvrez comment intégrer des polices personnalisées à votre flux de traitement de documents grâce à GroupDocs.Annotation pour .NET. Améliorez vos annotations grâce à un style de police précis."
 "title": "Comment charger des polices personnalisées dans GroupDocs.Annotation pour .NET ? Un guide complet"
 "url": "/fr/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

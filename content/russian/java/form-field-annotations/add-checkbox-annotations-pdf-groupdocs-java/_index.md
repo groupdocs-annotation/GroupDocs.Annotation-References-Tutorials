@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы с помощью интерактивных аннотаций флажков с помощью GroupDocs.Annotation для Java. Следуйте этому пошаговому руководству."
 "title": "Как добавлять аннотации CheckBox в PDF-файлы с помощью GroupDocs.Annotation для Java"
 "url": "/ru/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

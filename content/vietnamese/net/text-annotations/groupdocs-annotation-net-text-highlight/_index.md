@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích tô sáng văn bản bằng GroupDocs.Annotation cho .NET. Hợp lý hóa việc cộng tác tài liệu và nâng cao năng suất với hướng dẫn toàn diện này."
 "title": "Cách Thêm Chú Thích Tô Sáng Văn Bản Với GroupDocs.Annotation Cho .NET"
 "url": "/vi/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

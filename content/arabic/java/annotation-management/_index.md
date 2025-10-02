@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة حول كيفية إضافة التعليقات التوضيحية وإزالتها وتحديثها وإدارتها في المستندات باستخدام GroupDocs.Annotation for Java."
 "title": "دروس تعليمية لإدارة التعليقات التوضيحية في GroupDocs.Annotation Java"
 "url": "/ar/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

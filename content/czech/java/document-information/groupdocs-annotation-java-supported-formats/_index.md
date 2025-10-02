@@ -3,6 +3,7 @@
 "description": "Naučte se, jak pomocí našeho podrobného návodu používat GroupDocs.Annotation pro Javu k efektivnímu zobrazení podporovaných formátů souborů. Ideální pro vylepšení vašich aplikací pro anotaci dokumentů."
 "title": "Jak načíst podporované formáty souborů v GroupDocs.Annotation pro Javu – Komplexní průvodce"
 "url": "/cs/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

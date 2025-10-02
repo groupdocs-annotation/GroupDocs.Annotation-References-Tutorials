@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "从文档导入注释"
 "url": "/zh/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

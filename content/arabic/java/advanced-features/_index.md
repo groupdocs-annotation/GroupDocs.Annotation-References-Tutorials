@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لتطبيق إمكانيات التعليق التوضيحي المتقدمة والتخصيصات والميزات المتخصصة مع GroupDocs.Annotation لـ Java."
 "title": "دروس تعليمية حول ميزات GroupDocs.Annotation المتقدمة في Java"
 "url": "/ar/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

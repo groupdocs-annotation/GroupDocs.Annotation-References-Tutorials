@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αφαιρείτε αποτελεσματικά συγκεκριμένες απαντήσεις χρηστών από σχολιασμένα έγγραφα PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιστοποιήστε τη διαχείριση σχολιασμών με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Πώς να αφαιρέσετε απαντήσεις χρηστών από PDF χρησιμοποιώντας το GroupDocs.Annotation .NET® - Οδηγός βήμα προς βήμα"
 "url": "/el/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

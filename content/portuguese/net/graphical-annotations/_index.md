@@ -2,6 +2,7 @@
 "description": "Tutoriais completos para adicionar formas, setas, imagens e elementos gráficos em documentos com o GroupDocs.Annotation para .NET."
 "title": "Tutoriais de Anotação Gráfica para GroupDocs.Annotation .NET"
 "url": "/pt/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как извлекать метаданные документа, такие как тип файла, количество страниц и размер, используя GroupDocs.Annotation для Java. Улучшите управление документами с помощью эффективного извлечения информации."
 "title": "Эффективное извлечение метаданных документа с помощью GroupDocs.Annotation в Java"
 "url": "/ru/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

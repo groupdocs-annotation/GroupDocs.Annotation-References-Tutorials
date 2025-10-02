@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके Java में एनोटेशन को प्रभावी ढंग से प्रबंधित करने का तरीका जानें। यह मार्गदर्शिका दस्तावेज़ वर्कफ़्लो को लोड करने, हटाने और अनुकूलित करने को कवर करती है।"
 "title": "जावा में मास्टर एनोटेशन प्रबंधन&#58; GroupDocs.Annotation के साथ व्यापक गाइड"
 "url": "/hi/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

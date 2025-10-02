@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak adnotować i zapisywać pliki PDF przy użyciu niestandardowych kluczy wersji, korzystając z zaawansowanej biblioteki GroupDocs.Annotation for .NET. Dzięki temu każda iteracja dokumentu będzie jednoznacznie identyfikowalna."
 "title": "Zapisywanie adnotowanych plików PDF z niestandardowymi kluczami wersji w środowisku .NET przy użyciu GroupDocs.Annotation"
 "url": "/pl/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

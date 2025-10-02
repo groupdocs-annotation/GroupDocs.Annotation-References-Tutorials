@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Entfernen von Antworten auf Anmerkungen in .NET"
 "url": "/de/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

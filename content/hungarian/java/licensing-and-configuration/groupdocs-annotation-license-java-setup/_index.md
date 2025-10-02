@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan állíthatja be és konfigurálhatja a GroupDocs.Annotation licencet Java-alkalmazásaihoz, és hogyan oldhatja fel könnyedén a teljes funkciókészletet."
 "title": "GroupDocs.Annotation licenc beállítása Java nyelven&#58; Átfogó útmutató"
 "url": "/hu/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

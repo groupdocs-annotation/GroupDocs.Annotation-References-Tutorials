@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、PDF ドキュメントに正確な距離注釈を追加する方法を学びます。このガイドでは、セットアップ、構成、そして実践的な応用例について説明します。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF に距離注釈を実装する"
 "url": "/ja/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

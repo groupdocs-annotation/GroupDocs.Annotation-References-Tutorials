@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية حفظ نطاقات صفحات المستندات المُعلّقة بكفاءة باستخدام GroupDocs.Annotation لجافا. يغطي هذا البرنامج التعليمي الإعداد والتنفيذ والتطبيقات العملية."
 "title": "حفظ نطاق صفحات محدد باستخدام GroupDocs.Annotation لـ Java - دليل كامل"
 "url": "/ar/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

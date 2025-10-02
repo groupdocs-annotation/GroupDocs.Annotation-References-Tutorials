@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "從文件設定許可證"
 "url": "/zh-hant/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi penyuntingan sumber daya ke PDF menggunakan GroupDocs.Annotation for .NET. Lindungi informasi sensitif dan tingkatkan keamanan dokumen dengan panduan terperinci ini."
 "title": "Cara Menambahkan Anotasi Redaksi Sumber Daya di .NET Menggunakan GroupDocs.Annotation&#58; Panduan Lengkap"
 "url": "/id/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

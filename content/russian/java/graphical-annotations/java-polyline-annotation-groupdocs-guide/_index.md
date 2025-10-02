@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши приложения Java, добавив аннотации полилиний с помощью библиотеки GroupDocs.Annotation. Идеально подходит для улучшения ясности и интерактивности документа."
 "title": "Реализация аннотаций полилиний в Java с использованием библиотеки GroupDocs.Annotation"
 "url": "/ru/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF belgelerinizi etkileşimli nokta açıklamalarıyla nasıl geliştireceğinizi öğrenin. Bu adım adım kılavuz kurulum, uygulama ve sorun gidermeyi kapsar."
 "title": ".NET için GroupDocs.Annotation Kullanarak PDF'lere Nokta Açıklamaları Nasıl Eklenir"
 "url": "/tr/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

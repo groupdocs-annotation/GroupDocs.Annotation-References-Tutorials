@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีใช้ GroupDocs.Annotation สำหรับ Java เพื่อสร้างภาพตัวอย่าง PNG ที่มีคุณภาพสูงของหน้าเอกสาร ปรับปรุงซอฟต์แวร์ของคุณด้วยฟีเจอร์อันทรงพลังนี้"
 "title": "สร้างตัวอย่างหน้าเอกสารใน Java โดยใช้ GroupDocs.Annotation"
 "url": "/th/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

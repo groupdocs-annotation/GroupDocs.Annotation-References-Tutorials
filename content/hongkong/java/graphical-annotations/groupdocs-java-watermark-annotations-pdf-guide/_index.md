@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 新增浮水印註解來保護您的文件。本指南涵蓋設定、自訂和優化技巧。"
 "title": "使用 GroupDocs.Annotation Java 在 PDF 中實作浮水印註解的綜合指南"
 "url": "/zh-hant/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

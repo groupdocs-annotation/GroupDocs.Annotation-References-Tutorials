@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Generera förhandsgranskning utan kommentarer"
 "url": "/sv/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

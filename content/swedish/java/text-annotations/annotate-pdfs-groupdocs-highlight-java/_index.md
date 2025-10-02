@@ -3,6 +3,7 @@
 "description": "Lär dig hur du kommenterar PDF-filer med textmarkeringar och svar med GroupDocs.Annotation för Java. Den här guiden behandlar installation, kodexempel och praktiska tillämpningar."
 "title": "Kommentera PDF-filer i Java med GroupDocs.Highlight&#58; En omfattande guide"
 "url": "/sv/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak yorumsuz temiz belge önizlemeleri oluşturmayı öğrenin. Belge sunumunuzu ve inceleme süreçlerinizi geliştirmek için bu kılavuzu izleyin."
 "title": "GroupDocs.Annotation .NET Kullanarak Yorumlar Olmadan Belge Önizlemeleri Nasıl Oluşturulur"
 "url": "/tr/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

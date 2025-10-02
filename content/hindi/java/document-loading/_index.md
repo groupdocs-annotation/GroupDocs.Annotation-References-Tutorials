@@ -2,6 +2,7 @@
 "description": "जावा के लिए GroupDocs.Annotation का उपयोग करके विभिन्न स्रोतों से दस्तावेज़ लोड करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए दस्तावेज़ लोडिंग ट्यूटोरियल"
 "url": "/hi/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

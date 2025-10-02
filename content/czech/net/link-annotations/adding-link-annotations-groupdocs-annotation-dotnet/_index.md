@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své .NET aplikace přidáním interaktivních anotací odkazů pomocí výkonné knihovny GroupDocs.Annotation. Postupujte podle našeho podrobného návodu a vylepšete interaktivitu dokumentů ještě dnes."
 "title": "Jak přidat anotace odkazů do dokumentů pomocí GroupDocs.Annotation pro .NET | Průvodce pro vývojáře"
 "url": "/cs/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

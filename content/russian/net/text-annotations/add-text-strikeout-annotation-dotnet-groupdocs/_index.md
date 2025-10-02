@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять зачеркнутые текстовые аннотации в документы с помощью библиотеки GroupDocs.Annotation для .NET, что улучшает просмотр документов и совместную работу."
 "title": "Добавить зачеркнутый текст в .NET с помощью GroupDocs.Annotation"
 "url": "/ru/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

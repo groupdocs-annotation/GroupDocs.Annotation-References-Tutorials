@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "將圖像註釋置於文字之上"
 "url": "/zh-hant/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

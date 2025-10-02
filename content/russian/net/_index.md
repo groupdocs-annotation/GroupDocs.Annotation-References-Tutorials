@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Аннотации для учебников .NET"
 "title": "Учебники и примеры GroupDocs.Annotation для .NET"
 "url": "/ru/net/"
+type: docs
 "weight": 10
 ---
 

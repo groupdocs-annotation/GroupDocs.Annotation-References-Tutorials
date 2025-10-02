@@ -3,6 +3,7 @@
 "description": "Aprenda a adicionar anotações de texto riscado em Java usando GroupDocs.Annotation. Siga este guia passo a passo para anotações perfeitas em documentos."
 "title": "Guia de Anotação de Texto em Java com o GroupDocs.Annotation"
 "url": "/pt/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

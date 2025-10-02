@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Загрузить документ с FTP"
 "url": "/ru/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

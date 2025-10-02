@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서 텍스트 콘텐츠 정보 가져오기"
 "url": "/ko/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

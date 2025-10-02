@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách sử dụng GroupDocs.Annotation for Java để liệt kê hiệu quả các định dạng tệp được hỗ trợ với hướng dẫn từng bước của chúng tôi. Hoàn hảo để nâng cao ứng dụng chú thích tài liệu của bạn."
 "title": "Cách lấy các định dạng tệp được hỗ trợ trong GroupDocs.Annotation cho Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Aprenda a extraer metadatos de documentos, como tipo de archivo, número de páginas y tamaño, con GroupDocs.Annotation para Java. Mejore la gestión de sus documentos con una extracción de información eficiente."
 "title": "Extracción eficiente de metadatos de documentos mediante GroupDocs.Annotation en Java"
 "url": "/es/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

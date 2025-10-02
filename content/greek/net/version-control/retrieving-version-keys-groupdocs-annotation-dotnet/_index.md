@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ανακτάτε αποτελεσματικά τα κλειδιά έκδοσης από έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη διαχείριση εγγράφων και τη συνεργασία με αυτόν τον οδηγό βήμα προς βήμα."
 "title": "Πώς να ανακτήσετε κλειδιά έκδοσης στο .NET χρησιμοποιώντας το GroupDocs.Annotation&#58; Ένας πλήρης οδηγός"
 "url": "/el/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

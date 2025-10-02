@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αφαιρείτε αποτελεσματικά απαντήσεις από σχολιασμούς χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιστοποιήστε τη διαχείριση εγγράφων σας με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Πώς να αφαιρέσετε απαντήσεις από σχολιασμούς χρησιμοποιώντας το GroupDocs.Annotation .NET - Οδηγός βήμα προς βήμα"
 "url": "/el/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

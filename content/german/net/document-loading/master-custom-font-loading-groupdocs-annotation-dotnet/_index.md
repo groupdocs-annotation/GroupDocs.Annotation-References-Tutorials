@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET benutzerdefinierte Schriftarten in Ihren Dokumentverarbeitungs-Workflow integrieren. Optimieren Sie Ihre Anmerkungen mit präziser Schriftgestaltung."
 "title": "So laden Sie benutzerdefinierte Schriftarten in GroupDocs.Annotation für .NET – Eine umfassende Anleitung"
 "url": "/de/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

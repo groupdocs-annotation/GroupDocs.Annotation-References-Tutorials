@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan tölthet be, módosíthat és kezelhet PDF-fájlokban lévő jegyzeteket a GroupDocs.Annotation for Java segítségével. Egyszerűsítse dokumentumkezelését átfogó útmutatónkkal."
 "title": "Master GroupDocs.Annotation Java-hoz – PDF jegyzetek hatékony szerkesztése"
 "url": "/hu/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять роли пользователей в аннотации в приложениях Java с помощью GroupDocs.Annotation для улучшенного управления документами и совместной работы."
 "title": "Реализация GroupDocs.Annotation Java&#58; Добавление ролей пользователей в аннотации"
 "url": "/ru/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

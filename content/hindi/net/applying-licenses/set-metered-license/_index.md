@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "मीटर्ड लाइसेंस सेट करें"
 "url": "/hi/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

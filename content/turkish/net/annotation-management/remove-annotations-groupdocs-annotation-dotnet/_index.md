@@ -3,6 +3,7 @@
 "description": "Bu ayrıntılı C# eğitimiyle, güçlü GroupDocs.Annotation API'sini kullanarak belgelerinizden ek açıklamaları etkili bir şekilde nasıl kaldıracağınızı öğrenin."
 "title": "GroupDocs.Annotation for .NET Kullanılarak Belgelerden Açıklamalar Nasıl Kaldırılır"
 "url": "/tr/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

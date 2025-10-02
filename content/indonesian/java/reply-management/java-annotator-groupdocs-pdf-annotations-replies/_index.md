@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola anotasi dan balasan PDF secara efisien menggunakan GroupDocs.Annotation di aplikasi Java Anda. Sederhanakan kolaborasi dokumen dengan panduan lengkap kami."
 "title": "Anotasi PDF Java&#58; Buat dan Kelola Anotasi & Balasan dengan GroupDocs.Annotation untuk Java"
 "url": "/id/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

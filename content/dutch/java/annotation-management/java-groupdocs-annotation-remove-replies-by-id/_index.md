@@ -3,6 +3,7 @@
 "description": "Leer hoe u reacties uit annotaties in documenten verwijdert met behulp van de GroupDocs.Annotation voor Java API. Verbeter uw documentbeheer met deze stapsgewijze handleiding."
 "title": "Hoe u antwoorden op ID in Java verwijdert met behulp van de GroupDocs.Annotation API"
 "url": "/nl/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

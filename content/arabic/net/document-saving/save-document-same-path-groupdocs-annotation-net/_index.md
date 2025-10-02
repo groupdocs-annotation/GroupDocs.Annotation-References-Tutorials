@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية حفظ المستندات الموضحة باستخدام المسار الأصلي في GroupDocs.Annotation لـ .NET، مما يضمن إدارة الملفات بشكل مبسط وكفاءة سير العمل."
 "title": "كيفية حفظ المستندات في المسار الأصلي باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

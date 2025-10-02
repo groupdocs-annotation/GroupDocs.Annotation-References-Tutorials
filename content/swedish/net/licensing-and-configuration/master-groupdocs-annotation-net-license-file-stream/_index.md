@@ -3,6 +3,7 @@
 "description": "Lär dig hur du konfigurerar och tillämpar en licens för GroupDocs.Annotation .NET med hjälp av filströmmar. Lås upp alla funktioner med den här omfattande guiden."
 "title": "Master GroupDocs.Annotation .NET&#58; Ange licens med hjälp av File Stream i C#"
 "url": "/sv/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

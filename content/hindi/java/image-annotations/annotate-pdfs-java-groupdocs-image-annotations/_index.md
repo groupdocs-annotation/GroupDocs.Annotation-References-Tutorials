@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF में छवि एनोटेशन जोड़ने का तरीका जानें। अपने दस्तावेज़ वर्कफ़्लो को सुव्यवस्थित करें और सहयोग बढ़ाएँ।"
 "title": "GroupDocs.Annotation Java के साथ PDF में छवि एनोटेशन जोड़ें - एक संपूर्ण ट्यूटोरियल"
 "url": "/hi/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

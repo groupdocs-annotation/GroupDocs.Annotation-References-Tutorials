@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、PDF ドキュメントにインタラクティブなテキストフィールド注釈を追加する方法を学びます。このステップバイステップガイドに従って、ドキュメントのインタラクティブ性を高めましょう。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF にテキスト フィールド注釈を追加する方法 (チュートリアル)"
 "url": "/ja/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

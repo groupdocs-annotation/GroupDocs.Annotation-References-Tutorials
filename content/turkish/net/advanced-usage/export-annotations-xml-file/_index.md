@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "XML Dosyasından Açıklamaları Dışa Aktar"
 "url": "/tr/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、さまざまなオプションで注釈付きドキュメントを保存するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation .NET のドキュメント保存チュートリアル"
 "url": "/ja/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

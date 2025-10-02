@@ -3,6 +3,7 @@
 "description": "Bu kapsamlı kılavuzla, .NET için GroupDocs.Annotation'ı kullanarak kimliğe göre açıklamaları nasıl kaldıracağınızı ve belge yönetimi sürecinizi nasıl iyileştireceğinizi öğrenin."
 "title": "GroupDocs.Annotation .NET Kullanarak PDF'lerden Açıklamaları Etkili Şekilde Nasıl Kaldırabilirsiniz"
 "url": "/tr/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

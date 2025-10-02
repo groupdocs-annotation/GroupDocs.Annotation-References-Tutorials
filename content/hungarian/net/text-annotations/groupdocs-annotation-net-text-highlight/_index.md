@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá szövegkiemelési megjegyzéseket a GroupDocs.Annotation for .NET segítségével. Ezzel az átfogó útmutatóval egyszerűsítheti a dokumentumokkal való együttműködést és növelheti a termelékenységet."
 "title": "Szövegkiemelési jegyzetek hozzáadása a GroupDocs.Annotation for .NET segítségével"
 "url": "/hu/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

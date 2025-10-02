@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Lägg till kryssrutekomponent i PDF-dokument"
 "url": "/sv/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

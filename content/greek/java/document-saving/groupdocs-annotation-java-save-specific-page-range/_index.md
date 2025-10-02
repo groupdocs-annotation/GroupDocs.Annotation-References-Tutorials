@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αποθηκεύετε αποτελεσματικά σχολιασμένες περιοχές σελίδων εγγράφων χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτό το σεμινάριο καλύπτει την εγκατάσταση, την υλοποίηση και τις πρακτικές εφαρμογές."
 "title": "Αποθήκευση συγκεκριμένου εύρους σελίδων με το GroupDocs.Annotation για Java&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

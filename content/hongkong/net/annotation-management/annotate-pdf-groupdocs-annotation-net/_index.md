@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 有效率地為 PDF 文件新增註解。本指南涵蓋設定、新增註釋以及保存工作內容。"
 "title": "如何使用 GroupDocs.Annotation for .NET 註解 PDF——綜合指南"
 "url": "/zh-hant/net/annotation-management/annotate-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

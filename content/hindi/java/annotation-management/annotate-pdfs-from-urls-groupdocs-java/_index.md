@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके सीधे URL से PDF दस्तावेज़ों को एनोटेट करना सीखें। यह ट्यूटोरियल PDF को कुशलतापूर्वक लोड करना, एनोटेट करना और सहेजना सिखाता है।"
 "title": "जावा के लिए GroupDocs.Annotation का उपयोग करके URL से PDF को कैसे एनोटेट करें | दस्तावेज़ एनोटेशन प्रबंधन पर ट्यूटोरियल"
 "url": "/hi/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

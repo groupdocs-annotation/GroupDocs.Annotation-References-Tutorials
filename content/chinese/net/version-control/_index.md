@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 实现文档版本、跟踪更改和管理注释历史记录的分步教程。"
 "title": "GroupDocs.Annotation .NET 版本控制教程"
 "url": "/zh/net/version-control/"
+type: docs
 "weight": 13
 ---
 

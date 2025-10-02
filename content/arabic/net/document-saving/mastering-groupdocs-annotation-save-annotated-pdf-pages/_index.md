@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية حفظ الصفحات المُعلّقة فقط من ملف PDF بكفاءة باستخدام GroupDocs.Annotation لـ .NET. حسّن إدارة المستندات والتعاون مع الآخرين من خلال هذا الدليل المُفصّل."
 "title": "كيفية حفظ الصفحات المُعلّقة في ملف PDF باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

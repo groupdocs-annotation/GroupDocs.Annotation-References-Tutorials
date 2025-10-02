@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนในการโหลดเอกสารจากแหล่งต่าง ๆ โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการโหลดเอกสารสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

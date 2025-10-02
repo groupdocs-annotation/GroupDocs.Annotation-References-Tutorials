@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt tar bort svar från annoteringar med GroupDocs.Annotation för .NET. Effektivisera din dokumenthantering med den här omfattande guiden."
 "title": "Så här tar du bort svar från annoteringar med GroupDocs.Annotation .NET - Steg-för-steg-guide"
 "url": "/sv/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

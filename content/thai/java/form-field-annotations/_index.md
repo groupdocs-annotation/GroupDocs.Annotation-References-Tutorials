@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนในการเพิ่มฟิลด์ฟอร์มและส่วนประกอบแบบโต้ตอบลงในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนเกี่ยวกับคำอธิบายช่องฟอร์มสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

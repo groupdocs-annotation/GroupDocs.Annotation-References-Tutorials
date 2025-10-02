@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Hämta lista över anteckningar med hjälp av versionsnyckel"
 "url": "/sv/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 PDF에 이미지 주석을 추가하는 방법을 알아보세요. 문서 워크플로를 간소화하고 협업을 강화하세요."
 "title": "GroupDocs.Annotation Java를 사용하여 PDF에 이미지 주석 추가 - 완전한 튜토리얼"
 "url": "/ko/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

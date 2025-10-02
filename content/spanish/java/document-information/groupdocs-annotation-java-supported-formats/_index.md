@@ -3,6 +3,7 @@
 "description": "Aprenda a usar GroupDocs.Annotation para Java para listar eficientemente los formatos de archivo compatibles con nuestra guía paso a paso. Ideal para optimizar sus aplicaciones de anotación de documentos."
 "title": "Cómo recuperar formatos de archivo compatibles en GroupDocs.Annotation para Java&#58; una guía completa"
 "url": "/es/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

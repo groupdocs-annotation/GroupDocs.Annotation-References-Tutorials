@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके अपने PDF दस्तावेज़ों में स्क्विग्ली एनोटेशन जोड़ने का तरीका जानें, दस्तावेज़ समीक्षा और सहयोग को बेहतर बनाएँ।"
 "title": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF में स्क्विग्ली एनोटेशन कैसे जोड़ें"
 "url": "/hi/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

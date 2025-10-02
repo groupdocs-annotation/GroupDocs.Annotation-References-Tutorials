@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation for Java Eğitimleri"
 "title": "Java Belge Açıklama API'si | GroupDocs.Annotation for Java Eğitimleri ve Örnekleri"
 "url": "/tr/java/"
+type: docs
 "weight": 10
 ---
 

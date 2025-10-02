@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotationを使用してJavaでテキストフィールド注釈を実装し、ドキュメントのインタラクティブ性を高める方法を学びましょう。ステップバイステップの説明と実践的な応用例を網羅したこの包括的なガイドをご覧ください。"
 "title": "GroupDocs.Annotation を使用して Java で TextField アノテーションを実装する包括的なガイド"
 "url": "/ja/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

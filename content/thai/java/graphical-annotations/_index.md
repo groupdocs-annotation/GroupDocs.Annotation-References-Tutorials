@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนในการเพิ่มรูปร่าง ลูกศร รูปภาพ และองค์ประกอบกราฟิกในเอกสารด้วย GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนเกี่ยวกับคำอธิบายประกอบแบบกราฟิกสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

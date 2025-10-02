@@ -3,6 +3,7 @@
 "description": "Leer hoe u afbeeldingen van externe URL's aan PDF-documenten kunt toevoegen met GroupDocs.Annotation voor .NET. Verbeter uw documentworkflows met deze uitgebreide handleiding."
 "title": "Implementeer beeldannotatie in PDF's met behulp van GroupDocs.Annotation .NET en externe URL's"
 "url": "/nl/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "दस्तावेज़ संस्करणों को लागू करने, परिवर्तनों को ट्रैक करने और GroupDocs.Annotation for .NET के साथ एनोटेशन इतिहास प्रबंधित करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए संस्करण नियंत्रण ट्यूटोरियल"
 "url": "/hi/net/version-control/"
+type: docs
 "weight": 13
 ---
 

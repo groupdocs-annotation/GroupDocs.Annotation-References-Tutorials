@@ -2,6 +2,7 @@
 "description": "Полные руководства по настройке лицензирования, настройке параметров и управлению GroupDocs.Annotation в приложениях .NET."
 "title": "GroupDocs.Annotation Учебники по лицензированию и настройке для .NET"
 "url": "/ru/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

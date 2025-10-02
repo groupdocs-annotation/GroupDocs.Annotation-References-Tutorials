@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Применение лицензий"
 "url": "/ru/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

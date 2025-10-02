@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Εφαρμογή αδειών χρήσης"
 "url": "/el/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

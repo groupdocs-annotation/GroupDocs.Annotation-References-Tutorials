@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนสำหรับการเข้าถึงข้อมูลเมตาของเอกสาร ข้อมูลหน้า และคุณสมบัติของเอกสารด้วย GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนเกี่ยวกับข้อมูลเอกสารสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/document-information/"
+type: docs
 "weight": 12
 ---
 

@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET ile yorum dizileri, yanıtlar ve işbirlikli tartışmaları uygulamaya yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation .NET için Yanıt Yönetimi Eğitimleri"
 "url": "/tr/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

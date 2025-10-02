@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять аннотации выделения текста с помощью GroupDocs.Annotation для .NET. Оптимизируйте совместную работу с документами и повысьте производительность с помощью этого всеобъемлющего руководства."
 "title": "Как добавить аннотации выделения текста с помощью GroupDocs.Annotation для .NET"
 "url": "/ru/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

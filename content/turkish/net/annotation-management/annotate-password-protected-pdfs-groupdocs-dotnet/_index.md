@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak parola korumalı PDF'lere güvenli bir şekilde ek açıklama eklemeyi öğrenin. Bu adım adım kılavuz, belgeleri yüklemeyi, ek açıklama eklemeyi ve kaydetmeyi kapsar."
 "title": "GroupDocs.Annotation for .NET Kullanılarak Parola Korumalı PDF'lere Nasıl Açıklama Eklenir | Adım Adım Kılavuz"
 "url": "/tr/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

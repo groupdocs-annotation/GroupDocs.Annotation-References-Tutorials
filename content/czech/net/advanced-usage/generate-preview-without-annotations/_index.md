@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Generovat náhled bez anotací"
 "url": "/cs/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

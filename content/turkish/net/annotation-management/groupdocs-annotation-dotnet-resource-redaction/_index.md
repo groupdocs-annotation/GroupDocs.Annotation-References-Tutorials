@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF'lere kaynak düzenleme ek açıklamalarının nasıl ekleneceğini öğrenin. Bu ayrıntılı kılavuzla hassas bilgileri koruyun ve belge güvenliğini artırın."
 "title": "GroupDocs.Annotation Kullanarak .NET'te Kaynak Düzenleme Açıklamaları Nasıl Eklenir? Kapsamlı Bir Kılavuz"
 "url": "/tr/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

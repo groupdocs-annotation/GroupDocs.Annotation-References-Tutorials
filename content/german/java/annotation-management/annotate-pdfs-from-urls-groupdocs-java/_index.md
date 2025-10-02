@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie PDF-Dokumente mit GroupDocs.Annotation für Java direkt über URLs kommentieren. Dieses Tutorial behandelt das effiziente Laden, Kommentieren und Speichern von PDFs."
 "title": "So kommentieren Sie PDFs aus URLs mit GroupDocs.Annotation für Java | Tutorial zur Verwaltung von Dokumentanmerkungen"
 "url": "/de/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

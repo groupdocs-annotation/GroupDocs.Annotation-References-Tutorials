@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java を使用して、URL から直接 PDF ドキュメントに注釈を付ける方法を学びます。このチュートリアルでは、PDF の読み込み、注釈付け、保存を効率的に行う方法について説明します。"
 "title": "GroupDocs.Annotation for Java を使用して URL から PDF に注釈を付ける方法 | ドキュメント注釈管理のチュートリアル"
 "url": "/ja/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

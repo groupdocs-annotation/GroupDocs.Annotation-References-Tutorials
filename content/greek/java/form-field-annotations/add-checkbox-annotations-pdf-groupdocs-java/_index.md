@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας με διαδραστικές σχολιασμούς πλαισίων ελέγχου χρησιμοποιώντας το GroupDocs.Annotation για Java. Ακολουθήστε αυτόν τον οδηγό βήμα προς βήμα."
 "title": "Πώς να προσθέσετε σχολιασμούς πλαισίου ελέγχου σε PDF χρησιμοποιώντας το GroupDocs.Annotation για Java"
 "url": "/el/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

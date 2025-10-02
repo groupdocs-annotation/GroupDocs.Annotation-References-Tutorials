@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Ihre PDF-Dokumente mit GroupDocs.Annotation für .NET durch interaktive Kontrollkästchen optimieren. Folgen Sie dieser Schritt-für-Schritt-Anleitung, um Formularfeldanmerkungen in Ihren digitalen Dokumenten zu optimieren."
 "title": "So fügen Sie mit GroupDocs.Annotation für .NET ein Kontrollkästchen zu PDF hinzu – Eine Schritt-für-Schritt-Anleitung"
 "url": "/de/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

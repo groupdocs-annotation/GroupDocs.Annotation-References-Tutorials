@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënte PDF-paginavoorbeelden maakt met GroupDocs.Annotation voor .NET. Verbeter de documentinteractie en stroomlijn uw workflow."
 "title": "Genereer PDF-paginavoorbeelden met GroupDocs.Annotation.NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

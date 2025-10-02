@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare i tuoi documenti PDF con campi a discesa interattivi utilizzando la potente libreria GroupDocs.Annotation in Java."
 "title": "Crea menu a discesa PDF interattivi utilizzando GroupDocs.Annotation per Java"
 "url": "/it/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

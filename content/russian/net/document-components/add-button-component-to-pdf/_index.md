@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Добавить компонент кнопки в PDF-документ"
 "url": "/ru/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

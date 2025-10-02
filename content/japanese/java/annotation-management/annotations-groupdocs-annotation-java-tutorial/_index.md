@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、ドキュメント内の注釈を効率的に作成、管理、保存する方法を学びましょう。このステップバイステップガイドでは、初期化、注釈の種類、統合のヒントなどについて説明します。"
 "title": "GroupDocs.Annotation for Java を使用して注釈を作成および管理する完全ガイド"
 "url": "/ja/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

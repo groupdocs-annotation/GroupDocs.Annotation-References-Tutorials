@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation for .NET का उपयोग करके अपने PDF दस्तावेज़ों को इंटरैक्टिव पॉइंट एनोटेशन के साथ कैसे बेहतर बनाया जाए। यह चरण-दर-चरण मार्गदर्शिका सेटअप, कार्यान्वयन और समस्या निवारण को कवर करती है।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF में पॉइंट एनोटेशन कैसे जोड़ें"
 "url": "/hi/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

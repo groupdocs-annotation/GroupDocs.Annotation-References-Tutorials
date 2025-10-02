@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till snirkliga anteckningar i dina PDF-dokument med GroupDocs.Annotation för Java, vilket förbättrar dokumentgranskning och samarbete."
 "title": "Hur man lägger till snirkliga annoteringar till PDF-filer med GroupDocs.Annotation för Java"
 "url": "/sv/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

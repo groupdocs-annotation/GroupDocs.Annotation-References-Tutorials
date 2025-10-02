@@ -3,6 +3,7 @@
 "description": "Leer hoe u wachtwoordbeveiligde PDF's veilig kunt annoteren met GroupDocs.Annotation voor .NET. Deze stapsgewijze handleiding behandelt het laden, annoteren en opslaan van documenten."
 "title": "Wachtwoordbeveiligde PDF's annoteren met GroupDocs.Annotation voor .NET | Stapsgewijze handleiding"
 "url": "/nl/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

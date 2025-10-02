@@ -3,6 +3,7 @@
 "description": "Leer hoe u uw PDF-documenten kunt verbeteren door interactieve selectievakjes toe te voegen met GroupDocs.Annotation voor .NET. Volg deze stapsgewijze handleiding om annotaties in formuliervelden in uw digitale documenten te stroomlijnen."
 "title": "Een selectievakje toevoegen aan een PDF met GroupDocs.Annotation voor .NET&#58; een stapsgewijze handleiding"
 "url": "/nl/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

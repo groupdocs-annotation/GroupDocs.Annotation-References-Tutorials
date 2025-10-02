@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation लाइब्रेरी का उपयोग करके PDF में तीर एनोटेशन को कुशलतापूर्वक जोड़ने का तरीका जानें। दस्तावेज़ स्पष्टता और सहयोग बढ़ाएँ।"
 "title": "GroupDocs.Annotation API के साथ जावा में एरो एनोटेशन कैसे जोड़ें"
 "url": "/hi/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

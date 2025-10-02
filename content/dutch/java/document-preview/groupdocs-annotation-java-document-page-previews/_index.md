@@ -3,6 +3,7 @@
 "description": "Leer hoe u GroupDocs.Annotation voor Java kunt gebruiken om hoogwaardige PNG-voorbeelden van documentpagina's te maken. Verbeter uw software met deze krachtige functie."
 "title": "Genereer documentpaginavoorbeelden in Java met GroupDocs.Annotation"
 "url": "/nl/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

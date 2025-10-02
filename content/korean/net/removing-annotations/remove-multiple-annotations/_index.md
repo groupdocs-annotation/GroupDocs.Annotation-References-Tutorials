@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET에서 여러 주석 제거"
 "url": "/ko/net/removing-annotations/remove-multiple-annotations/"
+type: docs
 "weight": 12
 ---
 

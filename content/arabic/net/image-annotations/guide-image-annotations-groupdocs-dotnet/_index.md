@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية على الصور باستخدام GroupDocs.Annotation لـ .NET. حسّن المستندات في قطاعات التعليم والقانون والرعاية الصحية."
 "title": "دليل شامل لإضافة تعليقات توضيحية للصور في .NET باستخدام GroupDocs.Annotation"
 "url": "/ar/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

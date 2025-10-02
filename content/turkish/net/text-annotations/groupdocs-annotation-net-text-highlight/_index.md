@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak metin vurgulama açıklamalarının nasıl ekleneceğini öğrenin. Bu kapsamlı kılavuzla belge iş birliğini kolaylaştırın ve üretkenliği artırın."
 "title": "GroupDocs.Annotation for .NET ile Metin Vurgulama Açıklamaları Nasıl Eklenir"
 "url": "/tr/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Java 기반의 강력한 GroupDocs.Annotation 라이브러리를 사용하여 PDF 문서에 줄임표 주석을 추가하는 방법을 알아보세요. 이 단계별 가이드를 따라 문서 협업을 강화해 보세요."
 "title": "Java&#58; GroupDocs.Annotation for Java를 사용하여 PDF에 타원 주석 추가"
 "url": "/ko/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

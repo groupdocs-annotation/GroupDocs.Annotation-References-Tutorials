@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 新增文字高亮註解。這份全面的指南將幫助您簡化文件協作並提高工作效率。"
 "title": "如何使用 GroupDocs.Annotation for .NET 新增文字高亮註釋"
 "url": "/zh-hant/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

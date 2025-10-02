@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการลบคำตอบของผู้ใช้เฉพาะออกจากเอกสาร PDF ที่มีคำอธิบายประกอบอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงการจัดการคำอธิบายประกอบของคุณด้วยคู่มือที่ครอบคลุมนี้"
 "title": "วิธีลบการตอบกลับของผู้ใช้จากไฟล์ PDF โดยใช้ GroupDocs.Annotation .NET คำแนะนำทีละขั้นตอน"
 "url": "/th/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

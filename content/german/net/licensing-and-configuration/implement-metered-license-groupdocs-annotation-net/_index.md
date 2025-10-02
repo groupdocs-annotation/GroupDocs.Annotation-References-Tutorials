@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET eine gemessene Lizenz einrichten und verwalten und so Compliance und optimale Funktionalität sicherstellen."
 "title": "Implementieren einer gebührenpflichtigen Lizenz in GroupDocs.Annotation für .NET – Ein umfassender Leitfaden"
 "url": "/de/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

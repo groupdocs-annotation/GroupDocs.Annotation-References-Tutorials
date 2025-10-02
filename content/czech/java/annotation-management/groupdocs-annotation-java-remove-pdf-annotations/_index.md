@@ -3,6 +3,7 @@
 "description": "Naučte se, jak bez problémů odstranit anotace z PDF dokumentů pomocí rozhraní GroupDocs.Annotation API v Javě. Postupujte podle našeho podrobného návodu pro efektivní správu dokumentů."
 "title": "Jak odstranit anotace z PDF pomocí rozhraní GroupDocs.Annotation Java API"
 "url": "/cs/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

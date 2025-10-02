@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro nastavení licencování, konfiguraci možností a správu GroupDocs.Annotation v aplikacích .NET."
 "title": "Výukové programy pro licencování a konfiguraci GroupDocs.Annotation pro .NET"
 "url": "/cs/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

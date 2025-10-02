@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích hình ảnh vào PDF bằng GroupDocs.Annotation for Java. Hợp lý hóa quy trình làm việc tài liệu của bạn và tăng cường cộng tác."
 "title": "Thêm chú thích hình ảnh vào PDF bằng GroupDocs.Annotation Java - Hướng dẫn đầy đủ"
 "url": "/vi/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

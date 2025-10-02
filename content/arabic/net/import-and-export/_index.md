@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لاستيراد وتصدير التعليقات التوضيحية بين المستندات وملفات XML باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس تعليمية حول استيراد وتصدير التعليقات التوضيحية لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

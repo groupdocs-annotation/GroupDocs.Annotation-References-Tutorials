@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan menambahkan anotasi titik secara terprogram dengan GroupDocs.Annotation untuk Java. Panduan ini mencakup penyiapan, implementasi, dan aplikasi praktis."
 "title": "Cara Menambahkan Anotasi Titik ke PDF Menggunakan GroupDocs.Annotation untuk Java"
 "url": "/id/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

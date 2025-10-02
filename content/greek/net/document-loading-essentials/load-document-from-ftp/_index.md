@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Φόρτωση εγγράφου από FTP"
 "url": "/el/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

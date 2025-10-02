@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดึงคำอธิบายประกอบจากไฟล์ PDF แบบอัตโนมัติโดยใช้ GroupDocs.Annotation สำหรับ Java ซึ่งจะช่วยประหยัดเวลาและลดข้อผิดพลาด"
 "title": "สร้างระบบอัตโนมัติในการแยกคำอธิบายประกอบ PDF ด้วย GroupDocs สำหรับ Java และคู่มือฉบับสมบูรณ์"
 "url": "/th/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

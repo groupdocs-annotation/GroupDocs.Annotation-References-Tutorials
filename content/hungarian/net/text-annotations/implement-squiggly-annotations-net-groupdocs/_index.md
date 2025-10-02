@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá szöveges hullámos jegyzeteket .NET alkalmazásaihoz a GroupDocs.Annotation segítségével a dokumentumok olvashatóságának és visszajelzésének javítása érdekében."
 "title": "Text Squiggly Annotations implementálása .NET-ben a GroupDocs.Annotation használatával"
 "url": "/hu/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Мастер ссылок на аннотации в Java с GroupDocs. Изучите настройку, инициализацию и настройку для улучшения интерактивности документа."
 "title": "Реализация аннотаций ссылок в Java с использованием GroupDocs&#58; Подробное руководство"
 "url": "/ru/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

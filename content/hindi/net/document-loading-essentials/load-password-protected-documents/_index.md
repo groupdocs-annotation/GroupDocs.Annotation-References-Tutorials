@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "पासवर्ड संरक्षित दस्तावेज़ लोड करें"
 "url": "/hi/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

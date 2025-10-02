@@ -3,6 +3,7 @@
 "description": "Aprenda a criar, gerenciar e salvar anotações em documentos com eficiência usando o GroupDocs.Annotation para Java. Este guia passo a passo aborda inicialização, tipos de anotação e dicas de integração."
 "title": "Guia completo&#58; usando GroupDocs.Annotation para Java para criar e gerenciar anotações"
 "url": "/pt/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

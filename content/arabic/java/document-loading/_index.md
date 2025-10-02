@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لتحميل المستندات من مصادر مختلفة باستخدام GroupDocs.Annotation لـ Java."
 "title": "دروس تحميل المستندات لـ GroupDocs.Annotation Java"
 "url": "/ar/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

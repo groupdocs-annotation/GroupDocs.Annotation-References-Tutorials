@@ -3,6 +3,7 @@
 "description": ".NET में GroupDocs.Annotation का उपयोग करके दस्तावेज़ एनोटेशन को कुशलतापूर्वक प्रबंधित करना सीखें। यह मार्गदर्शिका एनोटेट किए गए दस्तावेज़ों को सहेजने के लिए सेटअप, अनुकूलन और सर्वोत्तम प्रथाओं को कवर करती है।"
 "title": ".NET में GroupDocs.Annotation&#58; के साथ मास्टर दस्तावेज़ एनोटेशन एक संपूर्ण गाइड"
 "url": "/hi/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

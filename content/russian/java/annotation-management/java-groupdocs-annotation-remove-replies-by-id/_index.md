@@ -3,6 +3,7 @@
 "description": "Узнайте, как удалить ответы из аннотаций в документах с помощью API GroupDocs.Annotation для Java. Улучшите управление документами с помощью этого пошагового руководства."
 "title": "Как удалить ответы по идентификатору в Java с помощью API GroupDocs.Annotation"
 "url": "/ru/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách lấy khóa phiên bản hiệu quả từ tài liệu bằng GroupDocs.Annotation cho .NET. Nâng cao khả năng quản lý tài liệu và cộng tác với hướng dẫn từng bước này."
 "title": "Cách lấy khóa phiên bản trong .NET bằng GroupDocs.Annotation&#58; Hướng dẫn đầy đủ"
 "url": "/vi/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

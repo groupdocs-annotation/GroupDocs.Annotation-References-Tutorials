@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak implementować adnotacje pól tekstowych w Javie, używając GroupDocs.Annotation, aby zwiększyć interaktywność dokumentu. Postępuj zgodnie z tym kompleksowym przewodnikiem z instrukcjami krok po kroku i praktycznymi zastosowaniami."
 "title": "Implementacja adnotacji pól tekstowych w Javie przy użyciu GroupDocs.Annotation&#58; Kompleksowy przewodnik"
 "url": "/pl/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Laad wachtwoordbeveiligde documenten"
 "url": "/nl/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

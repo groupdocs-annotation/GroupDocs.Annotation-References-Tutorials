@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách trích xuất thông tin tài liệu hiệu quả bằng GroupDocs.Annotation cho .NET. Hướng dẫn này bao gồm thiết lập, sử dụng và các ứng dụng thực tế để nâng cao quy trình xử lý tài liệu của bạn."
 "title": "Làm chủ việc trích xuất tài liệu với GroupDocs.Annotation .NET&#58; Hướng dẫn toàn diện cho các nhà phát triển"
 "url": "/vi/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

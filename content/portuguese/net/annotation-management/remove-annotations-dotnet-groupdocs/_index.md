@@ -3,6 +3,7 @@
 "description": "Aprenda a remover anotações de documentos com eficiência usando o GroupDocs.Annotation para .NET. Simplifique seus fluxos de trabalho de documentos e aumente a clareza com este guia completo."
 "title": "Remover anotações de documentos no .NET usando GroupDocs.Annotation"
 "url": "/pt/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

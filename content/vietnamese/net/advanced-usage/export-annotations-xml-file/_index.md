@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Xuất chú thích từ tệp XML"
 "url": "/vi/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

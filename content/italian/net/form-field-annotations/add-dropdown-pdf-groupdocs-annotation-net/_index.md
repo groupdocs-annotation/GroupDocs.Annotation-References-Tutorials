@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare i tuoi documenti PDF aggiungendo componenti interattivi a discesa utilizzando GroupDocs.Annotation per .NET. Segui questa guida passo passo per semplificare l'input degli utenti e migliorare la funzionalità dei documenti."
 "title": "Aggiungi menu a discesa ai PDF con GroupDocs.Annotation per .NET&#58; una guida completa"
 "url": "/it/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

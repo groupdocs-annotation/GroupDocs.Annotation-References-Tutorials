@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi pada file PDF secara online menggunakan GroupDocs.Annotation for .NET. Sederhanakan proses peninjauan dokumen Anda dengan teknik anotasi yang efisien."
 "title": "Cara Membuat Anotasi pada PDF dari URL Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

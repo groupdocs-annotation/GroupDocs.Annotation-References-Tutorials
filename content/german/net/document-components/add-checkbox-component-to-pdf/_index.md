@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Kontrollkästchenkomponente zum PDF-Dokument hinzufügen"
 "url": "/de/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

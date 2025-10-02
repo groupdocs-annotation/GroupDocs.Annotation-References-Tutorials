@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Добавить компонент «Флажок» в PDF-документ"
 "url": "/ru/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

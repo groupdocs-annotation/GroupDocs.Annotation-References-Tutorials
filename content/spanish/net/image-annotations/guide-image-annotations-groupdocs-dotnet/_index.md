@@ -3,6 +3,7 @@
 "description": "Aprenda a agregar anotaciones de imágenes con GroupDocs.Annotation para .NET. Mejore sus documentos en los sectores educativo, legal y sanitario."
 "title": "Guía completa para agregar anotaciones de imágenes en .NET con GroupDocs.Annotation"
 "url": "/es/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

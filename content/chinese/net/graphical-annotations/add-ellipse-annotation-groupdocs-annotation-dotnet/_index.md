@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation .NET API 添加交互式椭圆注释，从而增强 PDF 文档的体验。本指南为开发人员提供分步说明。"
 "title": "如何使用 GroupDocs.Annotation .NET API 向 PDF 添加椭圆注释"
 "url": "/zh/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

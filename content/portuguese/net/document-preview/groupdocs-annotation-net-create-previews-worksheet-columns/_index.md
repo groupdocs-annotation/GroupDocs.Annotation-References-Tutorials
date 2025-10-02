@@ -3,6 +3,7 @@
 "description": "Aprenda a criar visualizações de documentos concisas e relevantes a partir de colunas específicas da planilha usando o GroupDocs.Annotation para .NET. Perfeito para otimizar fluxos de trabalho em análise de dados e gestão de TI."
 "title": "Gere visualizações de planilhas do Excel direcionadas usando GroupDocs.Annotation .NET"
 "url": "/pt/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

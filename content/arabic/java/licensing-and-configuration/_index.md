@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لإعداد الترخيص وتكوين الخيارات وإدارة GroupDocs.Annotation في تطبيقات Java."
 "title": "دروس تعليمية حول ترخيص وتكوين GroupDocs.Annotation لـ Java"
 "url": "/ar/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để triển khai chuỗi bình luận, trả lời và thảo luận hợp tác với GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn quản lý trả lời cho GroupDocs.Annotation Java"
 "url": "/vi/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

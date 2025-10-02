@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントにポイント注釈を追加する"
 "url": "/ja/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

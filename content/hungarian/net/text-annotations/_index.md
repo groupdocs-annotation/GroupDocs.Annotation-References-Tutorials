@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatjuk a szöveges jegyzetek hozzáadását, szerkesztését és kezelését dokumentumokban a GroupDocs.Annotation for .NET használatával."
 "title": "Szöveges jegyzetkészítési oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

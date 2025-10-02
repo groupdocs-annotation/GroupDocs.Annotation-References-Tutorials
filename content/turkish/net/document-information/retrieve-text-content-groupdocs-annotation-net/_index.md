@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgelerden metin içeriğini etkili bir şekilde nasıl alacağınızı öğrenin. Belge işleme yeteneklerinizi geliştirmek için bu adım adım kılavuzu izleyin."
 "title": ".NET için GroupDocs.Annotation ile Belge Metin İçeriğini Alın&#58; Adım Adım Kılavuz"
 "url": "/tr/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

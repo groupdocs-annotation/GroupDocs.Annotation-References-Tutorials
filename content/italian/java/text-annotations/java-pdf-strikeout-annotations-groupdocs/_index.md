@@ -3,6 +3,7 @@
 "description": "Scopri come creare annotazioni barrate nei PDF Java utilizzando GroupDocs.Annotation per Java. Segui questo tutorial passo passo per migliorare le tue capacità di modifica dei documenti."
 "title": "Annotazioni barrate in Java PDF con GroupDocs&#58; una guida completa"
 "url": "/it/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

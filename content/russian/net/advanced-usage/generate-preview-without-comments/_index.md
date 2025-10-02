@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Создать предварительный просмотр без комментариев"
 "url": "/ru/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

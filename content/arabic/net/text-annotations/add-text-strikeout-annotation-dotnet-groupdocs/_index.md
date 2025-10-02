@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إضافة تعليقات توضيحية لنصوص مشطوبة في مستنداتك باستخدام مكتبة GroupDocs.Annotation لـ .NET، مما يعزز مراجعة المستندات والتعاون فيها."
 "title": "إضافة تعليق توضيحي لشطب النص في .NET باستخدام GroupDocs.Annotation"
 "url": "/ar/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

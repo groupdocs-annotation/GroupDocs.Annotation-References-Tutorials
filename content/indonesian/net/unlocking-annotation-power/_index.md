@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Membuka Kekuatan Anotasi"
 "url": "/id/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

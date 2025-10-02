@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Texthervorhebungen hinzufügen. Optimieren Sie die Zusammenarbeit an Dokumenten und steigern Sie die Produktivität mit diesem umfassenden Leitfaden."
 "title": "So fügen Sie Texthervorhebungsanmerkungen mit GroupDocs.Annotation für .NET hinzu"
 "url": "/de/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

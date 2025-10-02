@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно управлять аннотациями документов в .NET с помощью GroupDocs.Annotation. В этом руководстве рассматриваются настройка, настройка и лучшие практики сохранения аннотированных документов."
 "title": "Аннотация главного документа в .NET с GroupDocs.Annotation&#58; Полное руководство"
 "url": "/ru/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

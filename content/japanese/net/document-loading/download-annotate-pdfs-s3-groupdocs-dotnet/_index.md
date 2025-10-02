@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、Amazon S3 から PDF を効率的にダウンロードし、注釈を付ける方法を学びましょう。シームレスな統合により、ドキュメントワークフローを強化します。"
 "title": "GroupDocs.Annotation for .NET を使用して Amazon S3 から効率的に PDF をダウンロードして注釈を付ける"
 "url": "/ja/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

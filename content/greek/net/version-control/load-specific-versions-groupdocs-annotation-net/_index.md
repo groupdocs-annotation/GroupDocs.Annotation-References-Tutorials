@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να διαχειρίζεστε και να φορτώνετε αποτελεσματικά συγκεκριμένες εκδόσεις σχολιασμένων εγγράφων χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε το σύστημα διαχείρισης εγγράφων σας σήμερα!"
 "title": "Φόρτωση συγκεκριμένων εκδόσεων εγγράφων με το GroupDocs.Annotation για .NET™ Ένας πλήρης οδηγός"
 "url": "/el/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

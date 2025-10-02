@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีนำคำอธิบายระยะทางไปใช้ในเอกสาร Java โดยใช้ GroupDocs.Annotation คำแนะนำทีละขั้นตอนนี้ครอบคลุมถึงการตั้งค่า การกำหนดค่า และการใช้งานจริง"
 "title": "วิธีการเพิ่มคำอธิบายระยะทางใน Java ด้วย GroupDocs.Annotation คำแนะนำทีละขั้นตอน"
 "url": "/th/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서 로딩 필수 사항"
 "url": "/ko/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

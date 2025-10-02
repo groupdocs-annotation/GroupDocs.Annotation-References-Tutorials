@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat anotace obrázků do PDF pomocí nástroje GroupDocs.Annotation pro Javu. Zjednodušte si pracovní postupy s dokumenty a vylepšete spolupráci."
 "title": "Přidání anotací obrázků do PDF pomocí GroupDocs.Annotation v Javě – kompletní tutoriál"
 "url": "/cs/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメント情報を効率的に抽出する方法を学びましょう。このガイドでは、ドキュメント処理ワークフローを強化するための設定、使用方法、そして実用的なアプリケーションについて説明します。"
 "title": "GroupDocs.Annotation .NET によるドキュメント抽出のマスター&#58; 開発者向け総合ガイド"
 "url": "/ja/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تطبيق تعليقات حقول النص في جافا باستخدام GroupDocs.Annotation لتحسين تفاعلية المستندات. اتبع هذا الدليل الشامل الذي يتضمن تعليمات خطوة بخطوة وتطبيقات عملية."
 "title": "تنفيذ تعليقات TextField في Java باستخدام GroupDocs.Annotation - دليل شامل"
 "url": "/ar/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

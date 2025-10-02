@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak aranabilir metin ek açıklamaları ekleyerek PDF belgelerinizi nasıl geliştireceğinizi öğrenin. Bu kılavuz adım adım talimatlar ve pratik ipuçları sunar."
 "title": "GroupDocs.Annotation for Java Kullanılarak PDF'lere Arama Metni Açıklamaları Nasıl Eklenir"
 "url": "/tr/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

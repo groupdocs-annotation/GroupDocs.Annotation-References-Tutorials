@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके Java दस्तावेज़ों में अंडरलाइन एनोटेशन जोड़ने और हटाने का तरीका जानें। इस विस्तृत गाइड के साथ अपने दस्तावेज़ प्रबंधन को बेहतर बनाएँ।"
 "title": "ग्रुपडॉक्स का उपयोग करके जावा में अंडरलाइन एनोटेशन जोड़ें और निकालें एक व्यापक गाइड"
 "url": "/hi/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

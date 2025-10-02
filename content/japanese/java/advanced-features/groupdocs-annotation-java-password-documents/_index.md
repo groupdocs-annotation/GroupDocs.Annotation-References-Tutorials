@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、パスワードで保護されたドキュメントを安全に読み込み、注釈を付け、保存する方法を学びます。Javaアプリケーションのドキュメントセキュリティを強化します。"
 "title": "GroupDocs.Annotation Java による安全なドキュメント処理&#58; パスワード保護されたドキュメントの読み込みと注釈付け"
 "url": "/ja/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

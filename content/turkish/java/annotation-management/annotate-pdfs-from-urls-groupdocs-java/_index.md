@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak PDF belgelerine doğrudan URL'lerden nasıl açıklama ekleyeceğinizi öğrenin. Bu eğitim, PDF'leri verimli bir şekilde yüklemeyi, açıklama eklemeyi ve kaydetmeyi kapsar."
 "title": "Java için GroupDocs.Annotation Kullanarak URL'lerden PDF'lere Açıklama Ekleme | Belge Açıklama Yönetimi Eğitimi"
 "url": "/tr/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

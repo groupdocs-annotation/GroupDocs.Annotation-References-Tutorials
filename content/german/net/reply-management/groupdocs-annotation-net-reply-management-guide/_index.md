@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Annotationsantworten mit GroupDocs.Annotation für .NET effizient verwalten. Dieser Leitfaden behandelt die Integration, das Hinzufügen von Antworten und praktische Anwendungsfälle."
 "title": "Leitfaden zur Implementierung der Annotation-Antwortverwaltung in .NET mit GroupDocs.Annotation"
 "url": "/de/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

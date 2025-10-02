@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "URL'den Belge Yükle"
 "url": "/tr/net/document-loading-essentials/load-document-from-url/"
+type: docs
 "weight": 15
 ---
 

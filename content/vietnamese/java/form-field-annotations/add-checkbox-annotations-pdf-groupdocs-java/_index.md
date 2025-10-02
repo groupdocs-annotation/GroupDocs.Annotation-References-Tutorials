@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng chú thích hộp kiểm tương tác bằng GroupDocs.Annotation for Java. Làm theo hướng dẫn từng bước này."
 "title": "Cách thêm chú thích CheckBox vào PDF bằng GroupDocs.Annotation cho Java"
 "url": "/vi/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

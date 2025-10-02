@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την προσθήκη πεδίων φόρμας και διαδραστικών στοιχείων σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο για σχολιασμό πεδίων φόρμας για το GroupDocs.Annotation .NET"
 "url": "/el/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

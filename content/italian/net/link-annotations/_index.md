@@ -2,6 +2,7 @@
 "description": "Tutorial completi per l'implementazione di collegamenti ipertestuali e annotazioni collegate nei documenti con GroupDocs.Annotation per .NET."
 "title": "Tutorial di annotazione dei collegamenti per GroupDocs.Annotation .NET"
 "url": "/it/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

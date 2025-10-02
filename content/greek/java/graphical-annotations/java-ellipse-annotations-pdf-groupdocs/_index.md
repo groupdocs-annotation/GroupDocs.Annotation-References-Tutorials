@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς σε έγγραφα PDF χρησιμοποιώντας την ισχυρή βιβλιοθήκη GroupDocs.Annotation σε Java. Ακολουθήστε αυτόν τον οδηγό βήμα προς βήμα για να βελτιώσετε τη συνεργασία σε έγγραφα."
 "title": "Προσθήκη σχολίων ελλειπτικών σε PDF σε Java χρησιμοποιώντας το GroupDocs.Annotation για Java"
 "url": "/el/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε κενά κειμένου στις εφαρμογές .NET με το GroupDocs.Annotation για βελτιωμένη αναγνωσιμότητα και σχόλια των εγγράφων."
 "title": "Υλοποίηση σχολίων Squiggly κειμένου σε .NET χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

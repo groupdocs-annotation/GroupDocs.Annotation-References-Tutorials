@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 .NET 애플리케이션에서 텍스트 대체 주석을 구현하는 방법을 알아보세요. 문서의 가독성과 기능성을 손쉽게 향상하세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 텍스트 바꾸기를 구현하여 효율적인 문서 주석을 구현하는 방법"
 "url": "/ko/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

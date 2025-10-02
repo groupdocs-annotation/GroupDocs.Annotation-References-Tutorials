@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak wydajnie pobierać wymiary stron PDF za pomocą GroupDocs.Annotation dla .NET. Postępuj zgodnie z tym przewodnikiem, aby ulepszyć swoje aplikacje do zarządzania dokumentami."
 "title": "Jak pobrać wymiary strony PDF za pomocą GroupDocs.Annotation dla .NET"
 "url": "/pl/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

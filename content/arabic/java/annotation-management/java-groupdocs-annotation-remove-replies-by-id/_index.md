@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إزالة الردود من التعليقات التوضيحية في المستندات باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation لجافا. حسّن إدارة مستنداتك بهذا الدليل المفصل."
 "title": "كيفية إزالة الردود حسب المعرف في Java باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation"
 "url": "/ar/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

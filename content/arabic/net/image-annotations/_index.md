@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة حول كيفية إضافة تعليقات الصور وإدارتها في المستندات باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس توضيحية للصور لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

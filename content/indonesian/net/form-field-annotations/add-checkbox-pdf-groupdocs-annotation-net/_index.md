@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan menambahkan kotak centang interaktif menggunakan GroupDocs.Annotation untuk .NET. Ikuti panduan langkah demi langkah ini untuk menyederhanakan anotasi kolom formulir dalam dokumen digital Anda."
 "title": "Cara Menambahkan Kotak Centang ke PDF dengan GroupDocs.Annotation untuk .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

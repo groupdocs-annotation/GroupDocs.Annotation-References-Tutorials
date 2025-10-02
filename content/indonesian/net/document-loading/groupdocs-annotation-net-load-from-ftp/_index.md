@@ -3,6 +3,7 @@
 "description": "Pelajari cara memuat dokumen dari server FTP dengan mudah menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan alur kerja pengelolaan dokumen Anda dengan panduan terperinci ini."
 "title": "Memuat dan Membuat Anotasi Dokumen dari Server FTP dengan GroupDocs.Annotation untuk .NET&#58; Panduan Lengkap"
 "url": "/id/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

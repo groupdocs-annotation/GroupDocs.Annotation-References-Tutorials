@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效提取文件資訊。本指南涵蓋設定、使用方法和實際應用，以增強您的文件處理工作流程。"
 "title": "掌握使用 GroupDocs.Annotation .NET 進行文件擷取－開發人員的綜合指南"
 "url": "/zh-hant/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

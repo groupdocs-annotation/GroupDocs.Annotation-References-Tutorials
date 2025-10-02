@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Resolutie van documentvoorbeeld instellen"
 "url": "/nl/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

@@ -3,6 +3,7 @@
 "description": "Освойте удаление аннотаций из документов с помощью GroupDocs.Annotation для .NET. Изучите пошаговые процессы, оптимизируйте обработку файлов и повысьте ясность документов."
 "title": "Эффективное удаление аннотаций в .NET с помощью GroupDocs.Annotation&#58; Подробное руководство"
 "url": "/ru/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

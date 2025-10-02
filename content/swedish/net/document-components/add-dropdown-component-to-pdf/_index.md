@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Lägg till rullgardinsmenykomponent till PDF-dokument"
 "url": "/sv/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

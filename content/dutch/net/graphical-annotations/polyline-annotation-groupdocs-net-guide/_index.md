@@ -3,6 +3,7 @@
 "description": "Leer hoe u uw PDF-documenten kunt verbeteren met polylijnannotaties met GroupDocs.Annotation voor .NET. Deze handleiding biedt stapsgewijze instructies en tips voor een effectieve implementatie."
 "title": "Polylijnannotaties toevoegen aan PDF's met GroupDocs.Annotation voor .NET&#58; een stapsgewijze handleiding"
 "url": "/nl/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

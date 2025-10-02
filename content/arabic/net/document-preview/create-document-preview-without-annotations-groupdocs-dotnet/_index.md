@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إنشاء معاينات المستندات دون تعليقات توضيحية باستخدام GroupDocs.Annotation لـ .NET، مما يضمن الخصوصية والوضوح في المشاريع التعاونية."
 "title": "كيفية إنشاء معاينة مستند نظيفة بدون تعليقات توضيحية باستخدام GroupDocs.Annotation .NET"
 "url": "/ar/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

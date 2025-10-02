@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące dodawania i zarządzania adnotacjami obrazów w dokumentach przy użyciu GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki adnotacji obrazów dla GroupDocs.Annotation .NET"
 "url": "/pl/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

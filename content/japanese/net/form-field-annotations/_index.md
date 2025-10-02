@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントにフォーム フィールドとインタラクティブ コンポーネントを追加するためのステップ バイ ステップのチュートリアル。"
 "title": "GroupDocs.Annotation .NET のフォーム フィールド注釈チュートリアル"
 "url": "/ja/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

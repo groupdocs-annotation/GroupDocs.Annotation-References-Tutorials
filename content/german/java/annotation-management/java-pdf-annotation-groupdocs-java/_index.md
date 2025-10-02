@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mithilfe der leistungsstarken GroupDocs.Annotation-API für Java PDF-Dokumente effizient mit Bereichshervorhebungen versehen und so die Zusammenarbeit und Produktivität verbessern."
 "title": "So kommentieren Sie PDFs in Java mit GroupDocs.Annotation"
 "url": "/de/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

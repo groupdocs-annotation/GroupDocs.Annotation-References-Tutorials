@@ -3,6 +3,7 @@
 "description": "Aprenda a generar vistas previas de documentos sin anotaciones utilizando GroupDocs.Annotation para .NET, garantizando la privacidad y la claridad en proyectos colaborativos."
 "title": "Cómo crear una vista previa de documento limpia sin anotaciones usando GroupDocs.Annotation .NET"
 "url": "/es/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

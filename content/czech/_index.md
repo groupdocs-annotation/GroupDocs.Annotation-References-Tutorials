@@ -4,6 +4,7 @@
 "linktitle": "Příručky pro vývojáře GroupDocs.Annotation"
 "title": "API pro anotaci dokumentů | Výukové programy a příklady SDK pro GroupDocs.Annotation"
 "url": "/cs/"
+type: docs
 "weight": 11
 ---
 

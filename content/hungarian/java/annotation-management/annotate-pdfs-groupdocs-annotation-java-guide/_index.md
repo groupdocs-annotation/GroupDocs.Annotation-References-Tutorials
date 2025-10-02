@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el hatékonyan jegyzetekkel PDF dokumentumokat a GroupDocs.Annotation for Java segítségével. Ez az útmutató a beállítást, a jegyzetek hozzáadását és a fájlok mentését ismerteti."
 "title": "PDF-ek jegyzetelése a GroupDocs segítségével. Annotation for Java – Teljes körű útmutató"
 "url": "/hu/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/"
+type: docs
 "weight": 1
 ---
 

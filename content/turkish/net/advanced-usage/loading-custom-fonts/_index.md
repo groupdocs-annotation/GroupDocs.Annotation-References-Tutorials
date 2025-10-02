@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Özel Yazı Tiplerini Yükleme"
 "url": "/tr/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

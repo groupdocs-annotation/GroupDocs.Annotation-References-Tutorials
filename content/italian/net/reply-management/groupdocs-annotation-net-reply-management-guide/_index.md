@@ -3,6 +3,7 @@
 "description": "Scopri come gestire in modo efficiente le risposte alle annotazioni utilizzando GroupDocs.Annotation per .NET. Questa guida illustra l'integrazione, l'aggiunta di risposte e casi d'uso pratici."
 "title": "Guida all'implementazione della gestione delle risposte di annotazione in .NET con GroupDocs.Annotation"
 "url": "/it/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

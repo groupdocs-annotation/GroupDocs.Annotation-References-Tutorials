@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak wydajnie wyodrębniać informacje o dokumencie za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik obejmuje konfigurację, użytkowanie i praktyczne zastosowania w celu usprawnienia przepływów pracy przetwarzania dokumentów."
 "title": "Opanowanie ekstrakcji dokumentów za pomocą GroupDocs.Annotation .NET&#58; Kompleksowy przewodnik dla programistów"
 "url": "/pl/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

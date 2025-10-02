@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบเอกสาร PDF อย่างมีประสิทธิภาพด้วยการเน้นพื้นที่โดยใช้ GroupDocs.Annotation API สำหรับ Java อันทรงพลัง เพื่อเพิ่มประสิทธิภาพการทำงานร่วมกันและประสิทธิผลการทำงาน"
 "title": "วิธีการใส่คำอธิบายประกอบ PDF ใน Java โดยใช้ GroupDocs.Annotation"
 "url": "/th/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

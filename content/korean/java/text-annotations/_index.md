@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 문서에 텍스트 주석을 추가, 편집 및 관리하는 방법에 대한 단계별 자습서입니다."
 "title": "GroupDocs.Annotation Java를 위한 텍스트 주석 튜토리얼"
 "url": "/ko/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

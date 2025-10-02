@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς με βέλη σε έγγραφα PDF χρησιμοποιώντας το GroupDocs.Annotation για Java. Βελτιώστε τη συνεργασία και τη σαφήνεια των εγγράφων με λεπτομερή βήματα."
 "title": "Πώς να προσθέσετε σχόλια σε PDF με σχολιασμούς βέλους χρησιμοποιώντας το GroupDocs.Annotation για Java"
 "url": "/el/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

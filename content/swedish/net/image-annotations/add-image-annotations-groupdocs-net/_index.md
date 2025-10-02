@@ -3,6 +3,7 @@
 "description": "Lär dig hur du integrerar GroupDocs.Annotation i dina .NET-projekt för att förbättra dokument med bildannoteringar. Förbättra användarengagemang och effektivisera samarbetet."
 "title": "Lägg till bildannoteringar i dokument med GroupDocs.Annotation för .NET"
 "url": "/sv/net/image-annotations/add-image-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

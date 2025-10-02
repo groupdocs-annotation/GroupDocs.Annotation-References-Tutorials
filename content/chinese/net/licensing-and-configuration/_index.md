@@ -2,6 +2,7 @@
 "description": "完成有关设置许可、配置选项以及在 .NET 应用程序中管理 GroupDocs.Annotation 的教程。"
 "title": "GroupDocs.Annotation .NET 许可和配置教程"
 "url": "/zh/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

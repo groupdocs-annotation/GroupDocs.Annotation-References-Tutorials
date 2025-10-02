@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation kullanarak .NET uygulamalarında metin düzenleme açıklamalarının nasıl uygulanacağını öğrenin. Hassas bilgileri kolayca güvence altına alın."
 "title": "GroupDocs.Annotation Kullanarak .NET'te Metin Düzenlemeyi Uygulayın&#58; Eksiksiz Bir Kılavuz"
 "url": "/tr/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

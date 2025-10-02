@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Generuj podgląd bez adnotacji"
 "url": "/pl/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

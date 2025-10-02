@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Voorbeeld genereren zonder annotaties"
 "url": "/nl/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

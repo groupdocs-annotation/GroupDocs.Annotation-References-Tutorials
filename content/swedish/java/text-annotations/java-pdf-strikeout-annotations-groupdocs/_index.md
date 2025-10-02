@@ -3,6 +3,7 @@
 "description": "Lär dig hur du skapar textöverstrukna anteckningar i Java PDF-filer med GroupDocs.Annotation för Java. Följ den här steg-för-steg-handledningen för att förbättra dina dokumentredigeringsmöjligheter."
 "title": "Java PDF-överstrukna anteckningar med GroupDocs - En omfattande guide"
 "url": "/sv/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

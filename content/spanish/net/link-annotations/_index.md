@@ -2,6 +2,7 @@
 "description": "Tutoriales completos para implementar hipervínculos y anotaciones vinculadas en documentos con GroupDocs.Annotation para .NET."
 "title": "Tutoriales de anotación de enlaces para GroupDocs.Annotation .NET"
 "url": "/es/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

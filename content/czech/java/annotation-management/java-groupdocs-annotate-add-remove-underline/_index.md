@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat a odebírat podtržené anotace v dokumentech Java pomocí GroupDocs.Annotation. Vylepšete si správu dokumentů s tímto podrobným průvodcem."
 "title": "Přidání a odebrání podtržených anotací v Javě pomocí GroupDocs – Komplexní průvodce"
 "url": "/cs/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "カスタムフォントの読み込み"
 "url": "/ja/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

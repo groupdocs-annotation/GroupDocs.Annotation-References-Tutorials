@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 FTP 서버에서 문서를 원활하게 로드하는 방법을 알아보세요. 이 자세한 가이드를 통해 문서 관리 워크플로를 개선하세요."
 "title": "GroupDocs.Annotation for .NET을 사용하여 FTP 서버에서 문서 로드 및 주석 달기&#58; 종합 가이드"
 "url": "/ko/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

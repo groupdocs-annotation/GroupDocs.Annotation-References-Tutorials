@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 PDF 주석을 자동화하세요. 이 자세한 단계별 가이드에서 C#을 사용하여 영역 주석을 추가하는 방법을 알아보세요."
 "title": "GroupDocs.Annotation for .NET을 사용하여 PDF에 영역 주석을 추가하는 방법 - 단계별 가이드"
 "url": "/ko/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

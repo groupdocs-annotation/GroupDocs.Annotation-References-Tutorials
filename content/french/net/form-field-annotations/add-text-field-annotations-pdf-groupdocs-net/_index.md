@@ -3,6 +3,7 @@
 "description": "Découvrez comment ajouter des annotations de champs de texte interactifs à vos documents PDF avec GroupDocs.Annotation pour .NET. Suivez ce guide étape par étape pour améliorer l'interactivité de vos documents."
 "title": "Comment ajouter des annotations de champ de texte dans un PDF avec GroupDocs.Annotation pour .NET (tutoriel)"
 "url": "/fr/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

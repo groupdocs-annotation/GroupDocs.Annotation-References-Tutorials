@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET bestimmte Benutzerantworten effizient aus kommentierten PDF-Dokumenten entfernen. Optimieren Sie Ihr Anmerkungsmanagement mit diesem umfassenden Leitfaden."
 "title": "So entfernen Sie Benutzerantworten aus PDFs mit GroupDocs.Annotation .NET – Eine Schritt-für-Schritt-Anleitung"
 "url": "/de/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

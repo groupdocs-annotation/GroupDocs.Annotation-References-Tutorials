@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für Java Text in Java-PDFs durchstreichen. Folgen Sie dieser Schritt-für-Schritt-Anleitung, um Ihre Dokumentbearbeitungsfunktionen zu verbessern."
 "title": "Java PDF Strikeout-Anmerkungen mit GroupDocs – Ein umfassender Leitfaden"
 "url": "/de/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มลายน้ำโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ครอบคลุมถึงการตั้งค่า การใช้งานทีละขั้นตอน และแนวทางปฏิบัติที่ดีที่สุดสำหรับการรักษาความปลอดภัยและการสร้างแบรนด์เอกสาร"
 "title": "ใช้งาน Add Watermark กับ GroupDocs.Annotation ใน .NET คำแนะนำที่ครอบคลุมสำหรับการรักษาความปลอดภัยเอกสารและการสร้างแบรนด์"
 "url": "/th/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

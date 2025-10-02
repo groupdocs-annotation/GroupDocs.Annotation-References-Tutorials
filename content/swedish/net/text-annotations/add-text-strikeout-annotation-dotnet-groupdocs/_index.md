@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till textanteckningar med överstrukna texter i dina dokument med hjälp av GroupDocs.Annotation-biblioteket för .NET, vilket förbättrar dokumentgranskning och samarbete."
 "title": "Lägg till textöverstruken annotering i .NET med hjälp av GroupDocs.Annotation"
 "url": "/sv/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument genom att lägga till sökbara textanteckningar med GroupDocs.Annotation för Java. Den här guiden erbjuder steg-för-steg-instruktioner och praktiska tips."
 "title": "Så här lägger du till söktextannoteringar i PDF-filer med GroupDocs.Annotation för Java"
 "url": "/sv/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

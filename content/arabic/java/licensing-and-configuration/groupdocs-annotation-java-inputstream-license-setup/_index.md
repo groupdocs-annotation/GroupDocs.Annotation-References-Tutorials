@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إعداد ترخيص GroupDocs.Annotation بكفاءة في Java باستخدام InputStream. بسّط سير عملك وحسّن أداء تطبيقك مع هذا الدليل الشامل."
 "title": "ترخيص Java المُبسّط لـ GroupDocs.Annotation - كيفية استخدام InputStream لإعداد الترخيص"
 "url": "/ar/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

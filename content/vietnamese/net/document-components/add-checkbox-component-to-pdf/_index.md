@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thêm thành phần hộp kiểm vào tài liệu PDF"
 "url": "/vi/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

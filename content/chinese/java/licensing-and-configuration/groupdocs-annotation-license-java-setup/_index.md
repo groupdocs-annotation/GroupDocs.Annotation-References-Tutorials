@@ -3,6 +3,7 @@
 "description": "了解如何为您的 Java 应用程序设置和配置 GroupDocs.Annotation 许可证，轻松解锁全部功能。"
 "title": "在 Java 中设置 GroupDocs.Annotation 许可证——综合指南"
 "url": "/zh/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

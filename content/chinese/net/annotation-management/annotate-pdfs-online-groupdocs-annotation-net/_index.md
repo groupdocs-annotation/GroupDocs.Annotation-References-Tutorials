@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 在线注释 PDF 文件。使用高效的注释技术简化文档审阅流程。"
 "title": "如何使用 GroupDocs.Annotation for .NET 从 URL 注释 PDF"
 "url": "/zh/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

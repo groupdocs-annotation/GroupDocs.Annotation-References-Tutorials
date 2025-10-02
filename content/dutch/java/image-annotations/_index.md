@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het toevoegen en beheren van afbeeldingannotaties in documenten met behulp van GroupDocs.Annotation voor Java."
 "title": "Tutorials voor afbeeldingannotatie voor GroupDocs.Annotation Java"
 "url": "/nl/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

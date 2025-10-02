@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thiết lập và áp dụng giấy phép cho GroupDocs.Annotation .NET bằng luồng tệp. Mở khóa đầy đủ tính năng với hướng dẫn toàn diện này."
 "title": "Master GroupDocs.Annotation .NET&#58; Thiết lập giấy phép bằng cách sử dụng File Stream trong C#"
 "url": "/vi/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

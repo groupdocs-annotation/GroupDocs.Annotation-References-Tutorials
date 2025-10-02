@@ -3,6 +3,7 @@
 "description": "Узнайте, как использовать GroupDocs.Annotation для .NET для удаления аннотаций по идентификатору, оптимизируя процесс управления документами с помощью этого подробного руководства."
 "title": "Как эффективно удалять аннотации из PDF-файлов с помощью GroupDocs.Annotation .NET"
 "url": "/ru/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

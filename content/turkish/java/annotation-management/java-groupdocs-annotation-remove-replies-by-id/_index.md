@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java API'sini kullanarak belgelerdeki açıklamalardan yanıtları nasıl kaldıracağınızı öğrenin. Bu adım adım kılavuzla belge yönetiminizi geliştirin."
 "title": "GroupDocs.Annotation API'sini Kullanarak Java'da Kimliğe Göre Yanıtlar Nasıl Kaldırılır"
 "url": "/tr/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

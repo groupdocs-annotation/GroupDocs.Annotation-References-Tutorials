@@ -3,6 +3,7 @@
 "description": "Güçlü GroupDocs.Annotation kütüphanesini kullanarak etkileşimli bağlantı açıklamaları ekleyerek .NET uygulamalarınızı nasıl geliştireceğinizi öğrenin. Adım adım kılavuzumuzu izleyin ve bugün belge etkileşimini iyileştirin."
 "title": "GroupDocs.Annotation for .NET Kullanılarak Belgelere Bağlantı Açıklamaları Nasıl Eklenir | Geliştirici Kılavuzu"
 "url": "/tr/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

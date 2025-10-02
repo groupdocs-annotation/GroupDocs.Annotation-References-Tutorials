@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak tworzyć wysokiej jakości podglądy dokumentów PDF z określonymi rozdzielczościami obrazów, korzystając z zaawansowanej biblioteki GroupDocs.Annotation w środowisku .NET. Zoptymalizuj swój przepływ pracy w zakresie zarządzania dokumentami już dziś."
 "title": "Generuj wysokiej jakości podglądy plików PDF w niestandardowych rozdzielczościach za pomocą GroupDocs.Annotation dla .NET"
 "url": "/pl/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

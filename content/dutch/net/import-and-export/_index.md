@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het importeren en exporteren van annotaties tussen documenten en XML-bestanden met behulp van GroupDocs.Annotation voor .NET."
 "title": "Handleidingen voor het importeren en exporteren van annotaties voor GroupDocs.Annotation .NET"
 "url": "/nl/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak çeşitli seçeneklerle açıklamalı belgeleri kaydetmeye yönelik kapsamlı eğitimler."
 "title": "GroupDocs.Annotation Java için Belge Kaydetme Eğitimleri"
 "url": "/tr/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

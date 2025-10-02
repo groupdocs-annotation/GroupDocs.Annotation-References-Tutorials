@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi jarak yang tepat ke dokumen PDF Anda menggunakan GroupDocs.Annotation for .NET. Panduan ini mencakup pengaturan, konfigurasi, dan aplikasi praktis."
 "title": "Menerapkan Anotasi Jarak dalam PDF Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

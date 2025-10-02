@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για τη φόρτωση εγγράφων από διάφορες πηγές χρησιμοποιώντας το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά βίντεο φόρτωσης εγγράφων για το GroupDocs.Annotation Java"
 "url": "/el/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

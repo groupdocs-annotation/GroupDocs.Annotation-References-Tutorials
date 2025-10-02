@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách triển khai siêu liên kết và chú thích liên kết trong tài liệu với GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn chú thích liên kết cho GroupDocs.Annotation .NET"
 "url": "/vi/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

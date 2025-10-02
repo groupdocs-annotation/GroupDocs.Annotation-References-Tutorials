@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá nyílszerű megjegyzéseket PDF dokumentumokhoz a GroupDocs.Annotation for Java használatával. Javítsa a dokumentumokkal való együttműködést és az érthetőséget részletes lépésekkel."
 "title": "PDF-fájlok nyíljegyzetekkel való ellátása GroupDocs.Annotation for Java használatával"
 "url": "/hu/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

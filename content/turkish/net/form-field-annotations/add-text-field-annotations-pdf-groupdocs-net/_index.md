@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF belgelerinize etkileşimli metin alanı açıklamaları eklemeyi öğrenin. Belge etkileşimini geliştirmek için bu adım adım kılavuzu izleyin."
 "title": "GroupDocs.Annotation for .NET Kullanılarak PDF'lere Metin Alanı Açıklamaları Nasıl Eklenir (Eğitim)"
 "url": "/tr/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

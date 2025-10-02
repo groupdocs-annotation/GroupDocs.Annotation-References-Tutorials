@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thêm chú thích liên kết vào tài liệu"
 "url": "/vi/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

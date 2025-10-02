@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการโหลดและใส่คำอธิบายประกอบเอกสารที่จัดเก็บบน Amazon S3 อย่างมีประสิทธิภาพด้วย GroupDocs.Annotation ใน Java คู่มือนี้ครอบคลุมถึงการบูรณาการ การใช้งาน AWS SDK และการเพิ่มประสิทธิภาพการทำงาน"
 "title": "โหลดและใส่คำอธิบายประกอบเอกสารจาก Amazon S3 โดยใช้ Java คำแนะนำสำหรับการรวม GroupDocs.Annotation"
 "url": "/th/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

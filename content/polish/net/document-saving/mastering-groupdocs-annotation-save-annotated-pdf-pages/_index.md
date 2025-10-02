@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak efektywnie zapisywać tylko adnotowane strony pliku PDF za pomocą narzędzia GroupDocs.Annotation dla platformy .NET. Ulepsz zarządzanie dokumentami i współpracę dzięki temu szczegółowemu przewodnikowi."
 "title": "Jak zapisać adnotowane strony w formacie PDF za pomocą GroupDocs.Annotation dla platformy .NET"
 "url": "/pl/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

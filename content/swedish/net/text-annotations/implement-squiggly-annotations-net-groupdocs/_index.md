@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till snirkliga textanteckningar i dina .NET-applikationer med GroupDocs.Annotation för förbättrad dokumentläsbarhet och feedback."
 "title": "Implementera textannoteringar i .NET med GroupDocs.Annotation"
 "url": "/sv/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

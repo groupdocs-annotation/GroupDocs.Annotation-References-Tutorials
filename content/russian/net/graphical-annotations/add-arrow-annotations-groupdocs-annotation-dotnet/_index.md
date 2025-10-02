@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять стрелочные аннотации в ваши документы с помощью GroupDocs.Annotation для .NET. Это руководство содержит пошаговые инструкции с примерами кода."
 "title": "Как добавлять стрелочные аннотации в PDF-файлы с помощью GroupDocs.Annotation для .NET"
 "url": "/ru/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

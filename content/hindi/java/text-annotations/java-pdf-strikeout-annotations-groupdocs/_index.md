@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java का उपयोग करके Java PDF में टेक्स्ट स्ट्राइकआउट एनोटेशन बनाने का तरीका जानें। अपने दस्तावेज़ संपादन क्षमताओं को बढ़ाने के लिए इस चरण-दर-चरण ट्यूटोरियल का पालन करें।"
 "title": "ग्रुपडॉक्स के साथ जावा पीडीएफ स्ट्राइकआउट एनोटेशन एक व्यापक गाइड"
 "url": "/hi/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

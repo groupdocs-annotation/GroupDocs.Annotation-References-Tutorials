@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات مسافة دقيقة إلى مستندات PDF باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل الإعداد والتكوين والتطبيقات العملية."
 "title": "تنفيذ التعليقات التوضيحية عن بعد في ملفات PDF باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

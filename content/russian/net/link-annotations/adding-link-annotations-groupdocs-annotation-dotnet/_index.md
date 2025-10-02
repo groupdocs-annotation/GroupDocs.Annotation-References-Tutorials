@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши приложения .NET, добавив интерактивные аннотации ссылок с помощью мощной библиотеки GroupDocs.Annotation. Следуйте нашему пошаговому руководству и улучшите интерактивность документов уже сегодня."
 "title": "Как добавлять аннотации ссылок в документы с помощью GroupDocs.Annotation для .NET | Руководство разработчика"
 "url": "/ru/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

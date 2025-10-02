@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk menambahkan kolom formulir dan komponen interaktif ke dokumen menggunakan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Anotasi Bidang Formulir untuk GroupDocs.Annotation Java"
 "url": "/id/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

@@ -3,6 +3,7 @@
 "description": "Adnotacje głównego łącza w Javie z GroupDocs. Poznaj konfigurację, inicjalizację i dostosowywanie w celu zwiększenia interaktywności dokumentu."
 "title": "Implementacja adnotacji linków w Javie przy użyciu GroupDocs&#58; Kompleksowy przewodnik"
 "url": "/pl/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

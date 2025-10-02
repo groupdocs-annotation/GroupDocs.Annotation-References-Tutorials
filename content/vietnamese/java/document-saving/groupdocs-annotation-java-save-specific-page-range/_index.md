@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách lưu hiệu quả các phạm vi trang tài liệu có chú thích bằng GroupDocs.Annotation cho Java. Hướng dẫn này bao gồm thiết lập, triển khai và ứng dụng thực tế."
 "title": "Lưu Phạm vi Trang Cụ thể với GroupDocs.Annotation cho Java&#58; Hướng dẫn Đầy đủ"
 "url": "/vi/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

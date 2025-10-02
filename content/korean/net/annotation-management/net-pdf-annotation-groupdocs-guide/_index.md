@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 .NET PDF 주석을 완벽하게 처리하는 방법을 알아보세요. 이 가이드에서는 초기화, 페이지 처리, 변환 및 주석이 추가된 문서의 효율적인 저장 방법을 다룹니다."
 "title": "GroupDocs.Annotation을 사용한 .NET PDF 주석에 대한 포괄적인 가이드 - 향상된 문서 관리"
 "url": "/ko/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

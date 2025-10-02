@@ -3,6 +3,7 @@
 "description": "अपने PDF में एरिया और एलिप्स एनोटेशन जोड़ने के लिए GroupDocs.Annotation for Java का उपयोग करना सीखें। हमारे चरण-दर-चरण गाइड के साथ सहयोग बढ़ाएँ।"
 "title": "ग्रुपडॉक्स का उपयोग करके जावा पीडीएफ एनोटेशन के लिए संपूर्ण गाइड सहयोग और दस्तावेज़ प्रबंधन को बढ़ाएं"
 "url": "/hi/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

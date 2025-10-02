@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie dodawać i aktualizować adnotacje w dokumentach przy użyciu GroupDocs.Annotation .NET. Ulepsz współpracę i zarządzanie dokumentami dzięki temu przewodnikowi krok po kroku."
 "title": "Jak adnotować dokumenty za pomocą GroupDocs.Annotation .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

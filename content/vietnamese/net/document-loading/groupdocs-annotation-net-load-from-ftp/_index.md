@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tải tài liệu liền mạch từ máy chủ FTP bằng GroupDocs.Annotation cho .NET. Nâng cao quy trình quản lý tài liệu của bạn với hướng dẫn chi tiết này."
 "title": "Tải và chú thích tài liệu từ máy chủ FTP với GroupDocs.Annotation cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

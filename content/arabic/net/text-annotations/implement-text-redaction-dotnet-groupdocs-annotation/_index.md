@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تطبيق تعليقات تحرير النصوص في تطبيقات .NET باستخدام GroupDocs.Annotation. وفّر الحماية للمعلومات الحساسة بسهولة."
 "title": "تنفيذ تحرير النص في .NET باستخدام GroupDocs.Annotation - دليل كامل"
 "url": "/ar/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

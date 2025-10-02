@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan javíthatja PDF-fájljait megadott minőségi szintű képek hozzáadásával a GroupDocs.Annotation for .NET segítségével. Javítsa a dokumentumok vizuális megjelenését és az adatok megjelenítését."
 "title": "Hogyan adhatunk hozzá képet egy PDF dokumentumhoz megadott minőségben a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/graphical-annotations/add-image-pdf-quality-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

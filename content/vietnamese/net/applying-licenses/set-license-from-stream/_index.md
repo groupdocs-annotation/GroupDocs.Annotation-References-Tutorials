@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thiết lập giấy phép từ Stream"
 "url": "/vi/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

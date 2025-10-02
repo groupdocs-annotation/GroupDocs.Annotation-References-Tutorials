@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Dapatkan Semua Kunci Versi pada Dokumen"
 "url": "/id/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

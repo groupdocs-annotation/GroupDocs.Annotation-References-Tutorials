@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat uživatelské role k anotacím ve vašich aplikacích Java pomocí GroupDocs.Annotation pro vylepšenou správu dokumentů a spolupráci."
 "title": "Implementace GroupDocs.Annotation v Javě – přidání uživatelských rolí do anotací"
 "url": "/cs/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

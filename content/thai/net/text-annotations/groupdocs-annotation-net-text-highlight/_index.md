@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีเพิ่มคำอธิบายเน้นข้อความโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงการทำงานร่วมกันในเอกสารและเพิ่มประสิทธิภาพการทำงานด้วยคู่มือที่ครอบคลุมนี้"
 "title": "วิธีการเพิ่มข้อความเน้นคำอธิบายด้วย GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

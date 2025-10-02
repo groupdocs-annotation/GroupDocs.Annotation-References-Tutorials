@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengunduh file dari Azure Blob Storage dengan mudah dan memberi anotasi pada file tersebut dengan GroupDocs.Annotation for Java. Tingkatkan alur kerja manajemen dokumen Anda dengan panduan lengkap ini."
 "title": "Cara Mengunduh dan Membuat Anotasi pada File Azure Blob Menggunakan GroupDocs.Annotation Java"
 "url": "/id/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

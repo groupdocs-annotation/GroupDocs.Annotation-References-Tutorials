@@ -3,6 +3,7 @@
 "description": "Java용 GroupDocs.Annotation을 사용하여 지원되는 파일 형식을 효율적으로 나열하는 방법을 단계별 가이드를 통해 알아보세요. 문서 주석 애플리케이션을 향상시키는 데 적합합니다."
 "title": "GroupDocs.Annotation for Java에서 지원되는 파일 형식을 검색하는 방법 - 포괄적인 가이드"
 "url": "/ko/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

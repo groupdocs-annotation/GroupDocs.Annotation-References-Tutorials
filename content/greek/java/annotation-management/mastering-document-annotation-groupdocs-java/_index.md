@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε αποτελεσματικά σχόλια σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτός ο οδηγός καλύπτει τη φόρτωση, την προσθήκη σχολίων σε PDF και τη βελτιστοποίηση του περιβάλλοντος Java με το Maven."
 "title": "Mastering Document Annotation σε Java&#58; Ένας πλήρης οδηγός χρήσης του GroupDocs.Annotation"
 "url": "/el/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

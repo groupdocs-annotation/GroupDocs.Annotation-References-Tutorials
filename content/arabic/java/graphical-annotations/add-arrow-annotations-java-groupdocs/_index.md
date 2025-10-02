@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات الأسهم بكفاءة إلى ملفات PDF باستخدام مكتبة GroupDocs.Annotation للغة Java. حسّن وضوح المستندات وعزز التعاون."
 "title": "كيفية إضافة تعليقات الأسهم في Java باستخدام واجهة برمجة تطبيقات GroupDocs.Annotation"
 "url": "/ar/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية إلى مستندات PDF مباشرةً من عناوين URL باستخدام GroupDocs.Annotation لجافا. يتناول هذا البرنامج التعليمي تحميل ملفات PDF وإضافة تعليقات توضيحية إليها وحفظها بكفاءة."
 "title": "كيفية إضافة تعليقات توضيحية إلى ملفات PDF من عناوين URL باستخدام GroupDocs.Annotation في Java | برنامج تعليمي حول إدارة التعليقات التوضيحية على المستندات"
 "url": "/ar/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

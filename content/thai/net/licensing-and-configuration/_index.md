@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนเกี่ยวกับการตั้งค่าใบอนุญาต การกำหนดค่าตัวเลือก และการจัดการ GroupDocs.Annotation ในแอปพลิเคชัน .NET"
 "title": "บทช่วยสอนเกี่ยวกับการอนุญาตสิทธิ์และการกำหนดค่า GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

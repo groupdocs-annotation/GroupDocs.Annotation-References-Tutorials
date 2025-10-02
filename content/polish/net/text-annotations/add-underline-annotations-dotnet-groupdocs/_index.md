@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie dodawać podkreślenia do dokumentów za pomocą GroupDocs.Annotation dla .NET. Zwiększ przejrzystość dokumentu i komunikację z łatwością."
 "title": "Jak dodać podkreślone adnotacje w .NET za pomocą GroupDocs.Annotation"
 "url": "/pl/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation for Java チュートリアル"
 "title": "Java ドキュメント注釈 API | GroupDocs.Annotation for Java チュートリアルと例"
 "url": "/ja/java/"
+type: docs
 "weight": 10
 ---
 

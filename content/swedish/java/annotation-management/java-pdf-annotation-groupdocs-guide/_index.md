@@ -3,6 +3,7 @@
 "description": "Lär dig hur du använder GroupDocs.Annotation för Java för att lägga till områdes- och ellipsannoteringar i dina PDF-filer. Förbättra samarbetet med vår steg-för-steg-guide."
 "title": "Komplett guide till Java PDF-annoteringar med GroupDocs - Förbättra samarbete och dokumenthantering"
 "url": "/sv/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

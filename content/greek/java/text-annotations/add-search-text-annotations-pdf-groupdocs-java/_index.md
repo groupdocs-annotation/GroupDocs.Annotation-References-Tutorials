@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας προσθέτοντας σχόλια κειμένου με δυνατότητα αναζήτησης χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτός ο οδηγός προσφέρει οδηγίες βήμα προς βήμα και πρακτικές συμβουλές."
 "title": "Πώς να προσθέσετε σχολιασμούς κειμένου αναζήτησης σε PDF χρησιμοποιώντας το GroupDocs.Annotation για Java"
 "url": "/el/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

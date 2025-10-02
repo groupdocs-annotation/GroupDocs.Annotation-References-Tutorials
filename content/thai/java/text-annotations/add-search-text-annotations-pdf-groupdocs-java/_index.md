@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณโดยเพิ่มคำอธิบายข้อความที่ค้นหาได้โดยใช้ GroupDocs.Annotation สำหรับ Java คู่มือนี้ประกอบด้วยคำแนะนำทีละขั้นตอนและเคล็ดลับที่เป็นประโยชน์"
 "title": "วิธีการเพิ่มคำอธิบายข้อความค้นหาลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

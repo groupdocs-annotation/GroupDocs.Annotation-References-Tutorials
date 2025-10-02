@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Những điều cần thiết khi tải tài liệu"
 "url": "/vi/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการผสานรวมแบบอักษรที่กำหนดเองเข้ากับเวิร์กโฟลว์การประมวลผลเอกสารของคุณโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงคำอธิบายประกอบของคุณด้วยรูปแบบแบบอักษรที่แม่นยำ"
 "title": "วิธีการโหลดแบบอักษรที่กำหนดเองใน GroupDocs.Annotation สำหรับ .NET&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

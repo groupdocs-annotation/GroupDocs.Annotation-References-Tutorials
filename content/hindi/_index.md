@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation डेवलपर गाइड"
 "title": "दस्तावेज़ एनोटेशन API | GroupDocs.Annotation ट्यूटोरियल और SDK उदाहरण"
 "url": "/hi/"
+type: docs
 "weight": 11
 ---
 

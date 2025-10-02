@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation Utvecklarguider"
 "title": "Dokumentannoterings-API | GroupDocs.Annotation Handledningar och SDK-exempel"
 "url": "/sv/"
+type: docs
 "weight": 11
 ---
 

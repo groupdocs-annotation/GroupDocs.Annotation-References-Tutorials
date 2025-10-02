@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε αποτελεσματικά σχόλια σε έγγραφα PDF χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτός ο οδηγός καλύπτει την εγκατάσταση, την προσθήκη σχολίων και την αποθήκευση αρχείων."
 "title": "Σχολιάστε PDF με το GroupDocs.Annotation for Java &#58; Ένας πλήρης οδηγός"
 "url": "/el/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/"
+type: docs
 "weight": 1
 ---
 

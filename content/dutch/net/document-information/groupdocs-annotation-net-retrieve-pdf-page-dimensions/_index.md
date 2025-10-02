@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt PDF-pagina-afmetingen kunt ophalen met GroupDocs.Annotation voor .NET. Volg deze handleiding om uw documentbeheertoepassingen te verbeteren."
 "title": "PDF-paginaafmetingen ophalen met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

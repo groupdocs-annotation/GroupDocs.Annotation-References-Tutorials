@@ -3,6 +3,7 @@
 "description": "Amazon S3'te depolanan belgeleri Java'da GroupDocs.Annotation ile nasıl verimli bir şekilde yükleyeceğinizi ve ek açıklamalar ekleyeceğinizi öğrenin. Bu kılavuz, entegrasyonu, AWS SDK kullanımını ve performans optimizasyonunu kapsar."
 "title": "Java'yı kullanarak Amazon S3'ten Belgeleri Yükleme ve Açıklama Ekleme&#58; GroupDocs için Bir Kılavuz. Açıklama Entegrasyonu"
 "url": "/tr/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ลบการตอบกลับตามชื่อผู้ใช้ใน .NET"
 "url": "/th/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

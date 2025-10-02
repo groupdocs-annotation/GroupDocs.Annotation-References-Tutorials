@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してドキュメント内の注釈を追加、削除、更新、管理するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation Java の注釈管理チュートリアル"
 "url": "/ja/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

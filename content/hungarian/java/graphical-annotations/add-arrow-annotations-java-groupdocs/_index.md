@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hatékonyan nyíljegyzeteket PDF-ekhez a Java-hoz készült GroupDocs.Annotation könyvtár segítségével. Növelje a dokumentumok érthetőségét és az együttműködést."
 "title": "Nyíl-annotációk hozzáadása Java-ban a GroupDocs.Annotation API segítségével"
 "url": "/hu/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

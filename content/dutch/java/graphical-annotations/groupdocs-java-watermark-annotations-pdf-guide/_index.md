@@ -3,6 +3,7 @@
 "description": "Leer hoe u uw documenten kunt beschermen door watermerkannotaties toe te voegen met GroupDocs.Annotation voor Java. Deze handleiding behandelt tips voor installatie, aanpassing en optimalisatie."
 "title": "Watermerkannotaties implementeren in PDF's met GroupDocs.Annotation Java&#58; een uitgebreide handleiding"
 "url": "/nl/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

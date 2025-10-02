@@ -3,6 +3,7 @@
 "description": "Leer hoe je PDF's kunt annoteren met tekstmarkeringen en antwoorden met GroupDocs.Annotation voor Java. Deze handleiding behandelt de installatie, codevoorbeelden en praktische toepassingen."
 "title": "PDF's annoteren in Java met GroupDocs.Highlight&#58; een uitgebreide handleiding"
 "url": "/nl/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

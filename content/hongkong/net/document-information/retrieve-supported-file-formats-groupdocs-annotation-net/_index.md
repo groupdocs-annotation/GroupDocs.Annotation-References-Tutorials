@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效擷取支援的檔案格式。本指南涵蓋整合、實施和實際應用。"
 "title": "如何使用 GroupDocs.Annotation for .NET 擷取支援的檔案格式—綜合指南"
 "url": "/zh-hant/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

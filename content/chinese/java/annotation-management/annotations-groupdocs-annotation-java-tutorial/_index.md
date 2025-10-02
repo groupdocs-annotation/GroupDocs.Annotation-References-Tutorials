@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 高效地在文档中创建、管理和保存注释。本分步指南涵盖初始化、注释类型和集成技巧。"
 "title": "完整指南&#58;使用 GroupDocs.Annotation for Java 创建和管理注释"
 "url": "/zh/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีจัดการคำอธิบายประกอบและการตอบกลับ PDF อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation ในแอปพลิเคชัน Java ของคุณ เพิ่มประสิทธิภาพการทำงานร่วมกันในเอกสารด้วยคู่มือที่ครอบคลุมของเรา"
 "title": "Java PDF Annotation&#58; สร้างและจัดการคำอธิบายประกอบและการตอบกลับด้วย GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

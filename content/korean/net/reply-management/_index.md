@@ -2,6 +2,7 @@
 "description": ".NET용 GroupDocs.Annotation을 사용하여 댓글 스레드, 답변 및 협업 토론을 구현하기 위한 단계별 자습서입니다."
 "title": "GroupDocs.Annotation .NET을 위한 회신 관리 튜토리얼"
 "url": "/ko/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

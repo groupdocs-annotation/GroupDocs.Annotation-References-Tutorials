@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 PDF 문서에 대화형 텍스트 필드 주석을 추가하는 방법을 알아보세요. 이 단계별 가이드를 따라 문서의 상호 작용성을 향상시키세요."
 "title": "GroupDocs.Annotation for .NET을 사용하여 PDF에 텍스트 필드 주석을 추가하는 방법(튜토리얼)"
 "url": "/ko/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

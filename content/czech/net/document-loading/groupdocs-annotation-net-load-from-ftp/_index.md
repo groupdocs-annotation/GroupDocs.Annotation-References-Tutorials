@@ -3,6 +3,7 @@
 "description": "Naučte se, jak bezproblémově načítat dokumenty z FTP serverů pomocí GroupDocs.Annotation pro .NET. Vylepšete si pracovní postup správy dokumentů pomocí tohoto podrobného průvodce."
 "title": "Načítání a anotace dokumentů z FTP serverů pomocí GroupDocs.Annotation pro .NET – Komplexní průvodce"
 "url": "/cs/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

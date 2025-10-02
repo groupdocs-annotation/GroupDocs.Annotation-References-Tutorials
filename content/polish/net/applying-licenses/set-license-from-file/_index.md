@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ustaw licencję z pliku"
 "url": "/pl/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menggunakan GroupDocs.Annotation untuk .NET untuk menghapus anotasi berdasarkan ID, mengoptimalkan proses manajemen dokumen Anda dengan panduan komprehensif ini."
 "title": "Cara Efisien Menghapus Anotasi dari PDF Menggunakan GroupDocs.Annotation .NET"
 "url": "/id/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 PDF 문서에 구불구불한 주석을 추가하는 방법을 알아보고, 문서 검토 및 협업을 개선해 보세요."
 "title": "Java용 GroupDocs.Annotation을 사용하여 PDF에 구불구불한 주석을 추가하는 방법"
 "url": "/ko/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

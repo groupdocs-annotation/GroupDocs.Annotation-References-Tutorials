@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서 미리보기, 썸네일, 시각적 표현을 생성하는 방법에 대한 전체 튜토리얼입니다."
 "title": "GroupDocs.Annotation .NET을 위한 문서 미리보기 튜토리얼"
 "url": "/ko/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

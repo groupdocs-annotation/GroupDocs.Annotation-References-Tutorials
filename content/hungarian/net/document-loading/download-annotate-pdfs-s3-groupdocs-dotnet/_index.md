@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan tölthet le és láthat el hatékonyan megjegyzésekkel PDF-eket az Amazon S3-ból a GroupDocs.Annotation for .NET segítségével. Javítsa dokumentumkezelési munkafolyamatát zökkenőmentes integrációval."
 "title": "Hatékony PDF letöltés és jegyzetelés az Amazon S3-ból a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

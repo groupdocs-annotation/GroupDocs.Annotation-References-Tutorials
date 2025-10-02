@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "छवि गुणवत्ता बदलें"
 "url": "/hi/net/advanced-usage/change-image-quality/"
+type: docs
 "weight": 10
 ---
 

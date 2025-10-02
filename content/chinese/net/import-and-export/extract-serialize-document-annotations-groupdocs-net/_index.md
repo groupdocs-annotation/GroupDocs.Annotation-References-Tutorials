@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 从文档中提取注释并将其序列化为 XML。立即增强您的文档管理工作流程！"
 "title": "如何使用 GroupDocs.Annotation 在 .NET 中提取和序列化注释"
 "url": "/zh/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

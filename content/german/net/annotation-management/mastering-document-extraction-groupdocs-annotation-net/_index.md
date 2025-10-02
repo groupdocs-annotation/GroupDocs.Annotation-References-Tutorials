@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET effizient Dokumentinformationen extrahieren. Dieser Leitfaden behandelt Einrichtung, Nutzung und praktische Anwendungen zur Verbesserung Ihrer Dokumentverarbeitungs-Workflows."
 "title": "Dokumentextraktion mit GroupDocs.Annotation .NET meistern – Ein umfassender Leitfaden für Entwickler"
 "url": "/de/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

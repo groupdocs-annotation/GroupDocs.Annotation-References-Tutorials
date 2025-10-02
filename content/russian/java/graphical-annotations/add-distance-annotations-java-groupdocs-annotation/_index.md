@@ -3,6 +3,7 @@
 "description": "Узнайте, как реализовать аннотации расстояний в документах Java с помощью GroupDocs.Annotation. Это пошаговое руководство охватывает настройку, конфигурацию и практические приложения."
 "title": "Как добавлять аннотации расстояний в Java с помощью GroupDocs.Annotation&#58; Пошаговое руководство"
 "url": "/ru/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola dan memuat versi tertentu dari dokumen beranotasi secara efisien menggunakan GroupDocs.Annotation for .NET. Tingkatkan sistem manajemen dokumen Anda hari ini!"
 "title": "Memuat Versi Dokumen Tertentu dengan GroupDocs.Annotation untuk .NET&#58; Panduan Lengkap"
 "url": "/id/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

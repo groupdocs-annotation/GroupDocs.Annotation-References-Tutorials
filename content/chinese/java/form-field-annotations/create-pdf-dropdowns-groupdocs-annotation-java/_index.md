@@ -3,6 +3,7 @@
 "description": "了解如何使用 Java 中强大的 GroupDocs.Annotation 库通过交互式下拉字段增强您的 PDF 文档。"
 "title": "使用 GroupDocs.Annotation for Java 创建交互式 PDF 下拉菜单"
 "url": "/zh/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

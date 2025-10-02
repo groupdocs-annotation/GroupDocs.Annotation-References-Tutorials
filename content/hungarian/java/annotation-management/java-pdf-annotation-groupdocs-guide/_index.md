@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan használhatja a GroupDocs.Annotation for Java-t terület- és ellipszis-jegyzetek hozzáadásához PDF-fájljaihoz. Növelje az együttműködést lépésről lépésre szóló útmutatónkkal."
 "title": "Teljes körű útmutató a Java PDF jegyzetek készítéséhez a GroupDocs használatával – az együttműködés és a dokumentumkezelés javítása"
 "url": "/hu/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

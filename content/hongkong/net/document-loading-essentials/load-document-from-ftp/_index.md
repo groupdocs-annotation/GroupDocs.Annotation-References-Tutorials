@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "從 FTP 載入文檔"
 "url": "/zh-hant/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengekstrak metadata dokumen seperti jenis file, jumlah halaman, dan ukuran menggunakan GroupDocs.Annotation untuk Java. Tingkatkan pengelolaan dokumen Anda dengan ekstraksi info yang efisien."
 "title": "Ekstraksi Metadata Dokumen yang Efisien Menggunakan GroupDocs.Annotation di Java"
 "url": "/id/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

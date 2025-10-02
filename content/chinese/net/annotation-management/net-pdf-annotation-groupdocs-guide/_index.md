@@ -3,6 +3,7 @@
 "description": "学习如何使用 GroupDocs.Annotation 掌握 .NET PDF 注释。本指南涵盖初始化、页面处理、转换以及高效保存带注释的文档。"
 "title": "使用 GroupDocs.Annotation 进行 .NET PDF 注释的综合指南，以增强文档管理"
 "url": "/zh/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

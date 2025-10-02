@@ -3,6 +3,7 @@
 "description": "हमारे चरण-दर-चरण मार्गदर्शिका के साथ समर्थित फ़ाइल स्वरूपों को कुशलतापूर्वक सूचीबद्ध करने के लिए GroupDocs.Annotation for Java का उपयोग करना सीखें। आपके दस्तावेज़ एनोटेशन अनुप्रयोगों को बेहतर बनाने के लिए बिल्कुल सही।"
 "title": "GroupDocs में समर्थित फ़ाइल स्वरूपों को कैसे प्राप्त करें.Java के लिए एनोटेशन एक व्यापक गाइड"
 "url": "/hi/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

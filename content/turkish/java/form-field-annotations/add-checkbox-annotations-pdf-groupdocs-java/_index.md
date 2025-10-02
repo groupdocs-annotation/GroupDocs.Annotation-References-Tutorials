@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak PDF belgelerinizi etkileşimli onay kutusu açıklamalarıyla nasıl geliştireceğinizi öğrenin. Bu adım adım kılavuzu izleyin."
 "title": "GroupDocs.Annotation for Java Kullanılarak PDF'lere Onay Kutusu Açıklamaları Nasıl Eklenir"
 "url": "/tr/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

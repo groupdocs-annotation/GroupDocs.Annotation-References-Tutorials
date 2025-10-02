@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "解锁注释功能"
 "url": "/zh/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

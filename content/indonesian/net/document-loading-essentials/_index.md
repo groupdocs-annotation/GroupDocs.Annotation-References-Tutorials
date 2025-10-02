@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Dasar-dasar Pemuatan Dokumen"
 "url": "/id/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

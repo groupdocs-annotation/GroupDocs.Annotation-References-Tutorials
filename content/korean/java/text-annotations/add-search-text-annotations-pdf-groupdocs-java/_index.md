@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 검색 가능한 텍스트 주석을 추가하여 PDF 문서를 개선하는 방법을 알아보세요. 이 가이드에서는 단계별 지침과 유용한 팁을 제공합니다."
 "title": "Java용 GroupDocs.Annotation을 사용하여 PDF에 검색 텍스트 주석을 추가하는 방법"
 "url": "/ko/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

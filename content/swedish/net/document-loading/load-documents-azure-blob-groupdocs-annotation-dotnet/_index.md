@@ -3,6 +3,7 @@
 "description": "Lär dig hur du sömlöst integrerar Azure Blob Storage med dina .NET-applikationer med GroupDocs.Annotation. Förbättra dokumenthantering och annoteringsfunktioner."
 "title": "Läs effektivt in dokument från Azure Blob Storage med GroupDocs.Annotation .NET för dokumenthantering"
 "url": "/sv/net/document-loading/load-documents-azure-blob-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

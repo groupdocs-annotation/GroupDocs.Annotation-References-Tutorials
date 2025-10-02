@@ -3,6 +3,7 @@
 "description": "Naučte se, jak anotovat dokumenty PDF přímo z URL adres pomocí GroupDocs.Annotation pro Javu. Tento tutoriál se zabývá efektivním načítáním, anotací a ukládáním souborů PDF."
 "title": "Jak anotovat PDF soubory z URL adres pomocí GroupDocs.Annotation pro Javu | Výukový program pro správu anotací dokumentů"
 "url": "/cs/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

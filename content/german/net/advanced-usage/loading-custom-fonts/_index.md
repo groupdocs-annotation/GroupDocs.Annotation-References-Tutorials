@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Benutzerdefinierte Schriftarten laden"
 "url": "/de/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

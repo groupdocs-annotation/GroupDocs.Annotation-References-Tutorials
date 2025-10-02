@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentum szöveges tartalmának információinak lekérése"
 "url": "/hu/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

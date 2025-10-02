@@ -3,6 +3,7 @@
 "description": "Aprenda a carregar e anotar documentos armazenados no Amazon S3 com eficiência usando o GroupDocs.Annotation em Java. Este guia aborda integração, uso do AWS SDK e otimização de desempenho."
 "title": "Carregar e anotar documentos do Amazon S3 usando Java - Um guia para integração do GroupDocs.Annotation"
 "url": "/pt/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

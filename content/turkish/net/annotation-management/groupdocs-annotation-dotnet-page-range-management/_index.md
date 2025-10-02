@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak sayfa aralıklarını verimli bir şekilde nasıl yöneteceğinizi öğrenin. Bu kılavuz, belirli sayfaları kaydetmek için kurulum, ayarlama ve en iyi uygulamaları kapsar."
 "title": "GroupDocs.Annotation&#58; ile .NET'te Sayfa Aralığı Yönetiminde Ustalaşma&#58; Verimli Açıklama Teknikleri"
 "url": "/tr/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

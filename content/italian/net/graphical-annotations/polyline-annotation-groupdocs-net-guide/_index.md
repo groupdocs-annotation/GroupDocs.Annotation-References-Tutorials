@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare i tuoi documenti PDF con annotazioni polilineari utilizzando GroupDocs.Annotation per .NET. Questa guida fornisce istruzioni dettagliate e suggerimenti per un'implementazione efficace."
 "title": "Come aggiungere annotazioni polilineari ai PDF utilizzando GroupDocs.Annotation per .NET&#58; una guida passo passo"
 "url": "/it/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

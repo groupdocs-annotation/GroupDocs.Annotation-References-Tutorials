@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để thêm trường biểu mẫu và thành phần tương tác vào tài liệu bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn chú thích trường biểu mẫu cho GroupDocs.Annotation Java"
 "url": "/vi/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

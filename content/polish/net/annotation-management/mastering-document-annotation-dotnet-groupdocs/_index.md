@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie zarządzać adnotacjami dokumentów w .NET przy użyciu GroupDocs.Annotation. Ten przewodnik obejmuje konfigurację, dostosowywanie i najlepsze praktyki zapisywania adnotowanych dokumentów."
 "title": "Adnotacja głównego dokumentu w .NET z GroupDocs.Annotation&#58; Kompletny przewodnik"
 "url": "/pl/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να φορτώνετε, να τροποποιείτε και να διαχειρίζεστε σχολιασμούς σε PDF χρησιμοποιώντας το GroupDocs.Annotation για Java. Βελτιστοποιήστε τη διαχείριση των εγγράφων σας με τον ολοκληρωμένο οδηγό μας."
 "title": "Master GroupDocs.Annotation για Java&#58; Επεξεργαστείτε αποτελεσματικά σχολιασμούς PDF"
 "url": "/el/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

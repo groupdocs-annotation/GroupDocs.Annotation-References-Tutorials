@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF दस्तावेज़ों को कुशलतापूर्वक एनोटेट करना सीखें। यह गाइड सेटअप, एनोटेशन जोड़ना और फ़ाइलों को सहेजना शामिल करता है।"
 "title": "GroupDocs के साथ PDF को एनोटेट करें.Java के लिए एनोटेशन एक संपूर्ण गाइड"
 "url": "/hi/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/"
+type: docs
 "weight": 1
 ---
 

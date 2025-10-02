@@ -2,6 +2,7 @@
 "description": "Java アプリケーションでライセンスを設定し、オプションを構成し、GroupDocs.Annotation を管理するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation のライセンスと設定に関するチュートリアル（Java 用）"
 "url": "/ja/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

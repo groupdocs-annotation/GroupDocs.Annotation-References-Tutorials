@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Előnézet létrehozása megjegyzések nélkül"
 "url": "/hu/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

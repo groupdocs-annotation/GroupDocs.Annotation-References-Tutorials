@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Erőforrások kihagyási megjegyzésének hozzáadása a dokumentumhoz"
 "url": "/hu/net/unlocking-annotation-power/add-resources-redaction-annotation/"
+type: docs
 "weight": 19
 ---
 

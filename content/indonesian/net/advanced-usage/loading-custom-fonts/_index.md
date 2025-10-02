@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Memuat Font Kustom"
 "url": "/id/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

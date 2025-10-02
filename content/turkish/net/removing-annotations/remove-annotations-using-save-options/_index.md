@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET'te Kaydetme Seçeneklerini Kullanarak Açıklamaları Kaldırma"
 "url": "/tr/net/removing-annotations/remove-annotations-using-save-options/"
+type: docs
 "weight": 14
 ---
 

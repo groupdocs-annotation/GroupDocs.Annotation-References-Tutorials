@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة التعليقات التوضيحية المسطرة وإزالتها في مستندات جافا باستخدام GroupDocs.Annotation. حسّن إدارة مستنداتك مع هذا الدليل المفصل."
 "title": "إضافة وإزالة التعليقات التوضيحية المسطرة في Java باستخدام GroupDocs - دليل شامل"
 "url": "/ar/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

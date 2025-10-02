@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích khoảng cách chính xác vào tài liệu PDF của bạn bằng GroupDocs.Annotation cho .NET. Hướng dẫn này bao gồm thiết lập, cấu hình và ứng dụng thực tế."
 "title": "Triển khai chú thích khoảng cách trong PDF bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

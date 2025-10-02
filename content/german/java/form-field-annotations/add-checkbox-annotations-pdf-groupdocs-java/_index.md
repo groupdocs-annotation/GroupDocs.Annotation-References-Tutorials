@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Ihre PDF-Dokumente mit interaktiven Kontrollkästchen-Anmerkungen mithilfe von GroupDocs.Annotation für Java verbessern. Folgen Sie dieser Schritt-für-Schritt-Anleitung."
 "title": "So fügen Sie mit GroupDocs.Annotation für Java Kontrollkästchenanmerkungen zu PDFs hinzu"
 "url": "/de/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

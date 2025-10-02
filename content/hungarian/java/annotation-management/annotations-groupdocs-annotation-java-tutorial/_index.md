@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan hozhat létre, kezelhet és menthet hatékonyan jegyzeteket dokumentumokban a GroupDocs.Annotation for Java használatával. Ez a lépésenkénti útmutató az inicializálást, a jegyzettípusokat és az integrációs tippeket ismerteti."
 "title": "Teljes útmutató a GroupDocs.Annotation használatához Java rendszerben jegyzetek létrehozásához és kezeléséhez"
 "url": "/hu/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

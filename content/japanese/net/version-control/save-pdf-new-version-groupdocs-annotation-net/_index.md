@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントのバージョンを効率的に管理する方法を学びましょう。このガイドでは、セットアップ、実装、そして実践的な応用例について説明します。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF を新しいバージョンとして保存する方法 - ステップバイステップガイド"
 "url": "/ja/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

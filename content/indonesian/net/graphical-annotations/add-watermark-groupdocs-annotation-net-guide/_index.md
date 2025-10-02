@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan tanda air menggunakan GroupDocs.Annotation untuk .NET. Panduan ini mencakup penyiapan, penerapan langkah demi langkah, dan praktik terbaik untuk mengamankan dan memberi merek pada dokumen."
 "title": "Menerapkan Penambahan Tanda Air dengan GroupDocs.Annotation di .NET&#58; Panduan Lengkap untuk Keamanan dan Pencitraan Merek Dokumen"
 "url": "/id/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

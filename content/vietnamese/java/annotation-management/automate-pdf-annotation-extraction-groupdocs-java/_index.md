@@ -3,6 +3,7 @@
 "description": "Học cách tự động trích xuất chú thích từ tệp PDF bằng GroupDocs.Annotation cho Java, tiết kiệm thời gian và giảm lỗi."
 "title": "Tự động trích xuất chú thích PDF với GroupDocs cho Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

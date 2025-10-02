@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Carregar documentos protegidos por senha"
 "url": "/pt/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

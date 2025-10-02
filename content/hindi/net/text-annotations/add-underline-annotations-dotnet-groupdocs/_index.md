@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके अपने दस्तावेज़ों में कुशलतापूर्वक अंडरलाइन एनोटेशन जोड़ना सीखें। दस्तावेज़ स्पष्टता और संचार को आसानी से बढ़ाएँ।"
 "title": "GroupDocs.Annotation के साथ .NET में अंडरलाइन एनोटेशन कैसे जोड़ें"
 "url": "/hi/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

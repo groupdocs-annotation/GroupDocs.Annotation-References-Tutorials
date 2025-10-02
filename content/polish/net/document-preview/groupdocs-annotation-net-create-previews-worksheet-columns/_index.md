@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak tworzyć zwięzłe i trafne podglądy dokumentów z określonych kolumn arkusza kalkulacyjnego przy użyciu GroupDocs.Annotation dla .NET. Idealne do usprawniania przepływów pracy w analizie danych i zarządzaniu IT."
 "title": "Generuj docelowe podglądy arkuszy programu Excel za pomocą GroupDocs.Annotation .NET"
 "url": "/pl/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

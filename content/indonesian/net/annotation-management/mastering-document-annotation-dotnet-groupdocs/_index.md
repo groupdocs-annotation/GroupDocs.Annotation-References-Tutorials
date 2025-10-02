@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola anotasi dokumen secara efisien di .NET menggunakan GroupDocs.Annotation. Panduan ini mencakup pengaturan, penyesuaian, dan praktik terbaik untuk menyimpan dokumen yang diberi anotasi."
 "title": "Anotasi Dokumen Utama di .NET dengan GroupDocs.Annotation&#58; Panduan Lengkap"
 "url": "/id/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

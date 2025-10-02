@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan gazdagíthatja PDF-dokumentumait vonallánc-annotációkkal a GroupDocs.Annotation for .NET segítségével. Ez az útmutató lépésről lépésre bemutatja a hatékony megvalósítást."
 "title": "Hogyan adhatunk vonallánc-jegyzeteket PDF-ekhez a GroupDocs.Annotation for .NET használatával? Lépésről lépésre útmutató"
 "url": "/hu/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

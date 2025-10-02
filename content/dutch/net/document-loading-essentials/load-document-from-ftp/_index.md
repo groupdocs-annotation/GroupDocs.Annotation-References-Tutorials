@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Document laden van FTP"
 "url": "/nl/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

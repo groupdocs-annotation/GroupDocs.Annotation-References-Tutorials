@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके .NET में टेक्स्ट फ़्रैगमेंट एनोटेशन को लागू करने का तरीका जानें। यह मार्गदर्शिका कुशल दस्तावेज़ प्रबंधन के लिए सेटअप, कार्यान्वयन और व्यावहारिक अनुप्रयोगों को कवर करती है।"
 "title": "GroupDocs के साथ .NET में टेक्स्ट फ़्रैगमेंट एनोटेशन लागू करें&#58; एक व्यापक गाइड"
 "url": "/hi/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

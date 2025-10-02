@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके उत्तरों के साथ इंटरैक्टिव PDF बटन बनाने का तरीका जानें। दस्तावेज़ की इंटरैक्टिविटी बढ़ाने के लिए इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": "GroupDocs.Annotation का उपयोग करके जावा में इंटरैक्टिव पीडीएफ बटन बनाएं एक संपूर्ण गाइड"
 "url": "/hi/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

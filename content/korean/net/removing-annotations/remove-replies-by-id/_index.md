@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET에서 ID로 답변 제거"
 "url": "/ko/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutoriales completos para agregar formas, flechas, imágenes y elementos gráficos en documentos con GroupDocs.Annotation para Java."
 "title": "Tutoriales de anotación gráfica para GroupDocs.Annotation Java"
 "url": "/es/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

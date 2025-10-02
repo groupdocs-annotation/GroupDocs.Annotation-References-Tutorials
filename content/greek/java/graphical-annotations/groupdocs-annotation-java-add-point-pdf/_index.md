@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας προσθέτοντας σημειώσεις μέσω προγραμματισμού με το GroupDocs.Annotation για Java. Αυτός ο οδηγός καλύπτει την εγκατάσταση, την υλοποίηση και τις πρακτικές εφαρμογές."
 "title": "Πώς να προσθέσετε σχολιασμούς σημείων σε PDF χρησιμοποιώντας το GroupDocs.Annotation για Java"
 "url": "/el/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

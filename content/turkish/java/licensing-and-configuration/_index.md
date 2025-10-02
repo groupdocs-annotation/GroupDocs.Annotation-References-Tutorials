@@ -2,6 +2,7 @@
 "description": "Java uygulamalarında lisanslama kurulumu, seçenekleri yapılandırma ve GroupDocs.Annotation'ı yönetmeye ilişkin kapsamlı eğitimler."
 "title": "GroupDocs.Annotation Lisanslama ve Yapılandırma Eğitimleri Java için"
 "url": "/tr/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

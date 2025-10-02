@@ -2,6 +2,7 @@
 "description": "Java के लिए GroupDocs.Annotation के साथ दस्तावेज़ मेटाडेटा, पृष्ठ जानकारी और दस्तावेज़ गुणों तक पहुँचने के लिए पूर्ण ट्यूटोरियल।"
 "title": "दस्तावेज़ जानकारी ट्यूटोरियल GroupDocs.Annotation जावा के लिए"
 "url": "/hi/java/document-information/"
+type: docs
 "weight": 12
 ---
 

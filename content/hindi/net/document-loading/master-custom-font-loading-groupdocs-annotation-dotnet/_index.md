@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके अपने दस्तावेज़ प्रसंस्करण वर्कफ़्लो में कस्टम फ़ॉन्ट एकीकृत करने का तरीका जानें। सटीक फ़ॉन्ट स्टाइलिंग के साथ अपने एनोटेशन को बेहतर बनाएँ।"
 "title": ".NET के लिए GroupDocs.Annotation में कस्टम फ़ॉन्ट कैसे लोड करें? एक व्यापक गाइड"
 "url": "/hi/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

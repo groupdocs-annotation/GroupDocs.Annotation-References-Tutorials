@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation kütüphanesi ile polyline ek açıklamaları ekleyerek Java uygulamalarınızı nasıl geliştireceğinizi öğrenin. Belge netliğini ve etkileşimini iyileştirmek için mükemmeldir."
 "title": "GroupDocs.Annotation Kütüphanesini Kullanarak Java'da Polyline Açıklamalarını Uygulama"
 "url": "/tr/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

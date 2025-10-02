@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по реализации веток комментариев, ответов и совместных обсуждений с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по управлению ответами для GroupDocs.Annotation .NET"
 "url": "/ru/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

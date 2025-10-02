@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Аннотация для учебников Java"
 "title": "API аннотаций документов Java | GroupDocs.Annotation для учебных пособий и примеров Java"
 "url": "/ru/java/"
+type: docs
 "weight": 10
 ---
 

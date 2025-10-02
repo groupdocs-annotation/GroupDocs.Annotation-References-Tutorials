@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET ile belge önizlemeleri, küçük resimler ve görsel sunumlar oluşturmaya yönelik kapsamlı eğitimler."
 "title": "GroupDocs.Annotation .NET için Belge Önizleme Eğitimleri"
 "url": "/tr/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

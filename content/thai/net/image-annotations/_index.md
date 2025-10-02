@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนในการเพิ่มและจัดการคำอธิบายภาพในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการใส่คำอธิบายภาพสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

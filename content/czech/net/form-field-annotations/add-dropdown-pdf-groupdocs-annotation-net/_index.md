@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty přidáním interaktivních rozbalovacích komponent pomocí GroupDocs.Annotation pro .NET. Postupujte podle tohoto podrobného návodu, který vám pomůže zefektivnit vstup uživatelů a vylepšit funkčnost dokumentů."
 "title": "Přidání rozbalovací nabídky do PDF pomocí GroupDocs.Annotation pro .NET – Komplexní průvodce"
 "url": "/cs/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

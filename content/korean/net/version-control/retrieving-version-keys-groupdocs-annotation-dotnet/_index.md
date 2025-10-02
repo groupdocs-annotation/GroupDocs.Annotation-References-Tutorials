@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서에서 버전 키를 효율적으로 가져오는 방법을 알아보세요. 이 단계별 가이드를 통해 문서 관리 및 협업을 향상시키세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 버전 키를 검색하는 방법&#58; 완전한 가이드"
 "url": "/ko/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

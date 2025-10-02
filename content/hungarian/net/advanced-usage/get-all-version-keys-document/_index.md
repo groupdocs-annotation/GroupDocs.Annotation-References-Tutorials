@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Az összes verziókulcs beszerzése a dokumentumban"
 "url": "/hu/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

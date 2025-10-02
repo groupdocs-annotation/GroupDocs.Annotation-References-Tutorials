@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać adnotacje tekstowe w postaci przekreśleń w dokumentach, korzystając z biblioteki GroupDocs.Annotation dla platformy .NET. Dzięki temu usprawnisz przeglądanie dokumentów i współpracę."
 "title": "Dodawanie adnotacji przekreślonego tekstu w .NET przy użyciu GroupDocs.Annotation"
 "url": "/pl/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

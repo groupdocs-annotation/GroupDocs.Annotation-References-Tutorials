@@ -3,6 +3,7 @@
 "description": "Découvrez comment améliorer vos documents PDF avec des champs déroulants interactifs à l’aide de la puissante bibliothèque GroupDocs.Annotation en Java."
 "title": "Créer des menus déroulants PDF interactifs avec GroupDocs.Annotation pour Java"
 "url": "/fr/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

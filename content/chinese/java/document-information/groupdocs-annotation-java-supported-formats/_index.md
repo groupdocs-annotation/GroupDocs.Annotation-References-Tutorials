@@ -3,6 +3,7 @@
 "description": "通过我们的分步指南，学习如何使用 GroupDocs.Annotation for Java 高效列出支持的文件格式。非常适合增强您的文档注释应用程序。"
 "title": "如何在 GroupDocs.Annotation for Java 中检索支持的文件格式——综合指南"
 "url": "/zh/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

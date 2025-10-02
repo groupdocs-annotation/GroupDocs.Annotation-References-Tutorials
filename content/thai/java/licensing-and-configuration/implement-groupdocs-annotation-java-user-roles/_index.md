@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มบทบาทผู้ใช้ในคำอธิบายประกอบในแอปพลิเคชัน Java ของคุณโดยใช้ GroupDocs.Annotation เพื่อการจัดการเอกสารและการทำงานร่วมกันที่ได้รับการปรับปรุง"
 "title": "การใช้งาน GroupDocs.Annotation ใน Java และการเพิ่มบทบาทผู้ใช้ลงในคำอธิบายประกอบ"
 "url": "/th/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

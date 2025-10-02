@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ตั้งค่าใบอนุญาตจากสตรีม"
 "url": "/th/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

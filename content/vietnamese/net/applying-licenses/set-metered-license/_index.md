@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thiết lập giấy phép đo lường"
 "url": "/vi/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

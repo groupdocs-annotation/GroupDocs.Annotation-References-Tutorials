@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Δημιουργία προεπισκόπησης χωρίς σχολιασμούς"
 "url": "/el/net/advanced-usage/generate-preview-without-annotations/"
+type: docs
 "weight": 13
 ---
 

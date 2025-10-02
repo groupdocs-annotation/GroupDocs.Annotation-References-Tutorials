@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Αφαίρεση σχολίων"
 "url": "/el/net/removing-annotations/"
+type: docs
 "weight": 25
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントにエリア注釈を追加する"
 "url": "/ja/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

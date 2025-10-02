@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 為文件新增表單欄位和互動式元件的逐步教學。"
 "title": "GroupDocs.Annotation .NET 的表單欄位註解教學"
 "url": "/zh-hant/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

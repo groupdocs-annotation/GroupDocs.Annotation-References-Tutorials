@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het laden van documenten uit verschillende bronnen met behulp van GroupDocs.Annotation voor .NET."
 "title": "Zelfstudies voor het laden van documenten voor GroupDocs.Annotation .NET"
 "url": "/nl/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

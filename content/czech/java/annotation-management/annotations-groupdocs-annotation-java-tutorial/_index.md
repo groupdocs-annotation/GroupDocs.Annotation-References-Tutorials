@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně vytvářet, spravovat a ukládat anotace v dokumentech pomocí nástroje GroupDocs.Annotation pro Javu. Tato podrobná příručka zahrnuje inicializaci, typy anotací a tipy pro integraci."
 "title": "Kompletní průvodce&#58; Použití GroupDocs.Annotation pro Javu k vytváření a správě anotací"
 "url": "/cs/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

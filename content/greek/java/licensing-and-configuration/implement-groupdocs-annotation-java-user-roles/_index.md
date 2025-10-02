@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε ρόλους χρηστών σε σχολιασμούς στις εφαρμογές Java σας χρησιμοποιώντας το GroupDocs.Annotation για βελτιωμένη διαχείριση εγγράφων και συνεργασία."
 "title": "Υλοποίηση του GroupDocs.Annotation Java&#58; Προσθήκη ρόλων χρηστών σε σχολιασμούς"
 "url": "/el/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "암호로 보호된 문서 로드"
 "url": "/ko/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

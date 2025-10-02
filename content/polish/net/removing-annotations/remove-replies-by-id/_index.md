@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Usuń odpowiedzi według ID w .NET"
 "url": "/pl/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

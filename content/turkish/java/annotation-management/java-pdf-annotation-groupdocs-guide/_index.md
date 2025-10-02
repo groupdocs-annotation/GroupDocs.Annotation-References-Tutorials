@@ -3,6 +3,7 @@
 "description": "PDF'lerinize alan ve elips ek açıklamaları eklemek için GroupDocs.Annotation for Java'yı nasıl kullanacağınızı öğrenin. Adım adım kılavuzumuzla iş birliğini artırın."
 "title": "GroupDocs Kullanarak Java PDF Açıklamalarına İlişkin Tam Kılavuz&#58; İşbirliğini ve Belge Yönetimini Geliştirin"
 "url": "/tr/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att lägga till formulärfält och interaktiva komponenter i dokument med GroupDocs.Annotation för Java."
 "title": "Handledningar för formulärfältsannoteringar för GroupDocs.Annotation Java"
 "url": "/sv/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

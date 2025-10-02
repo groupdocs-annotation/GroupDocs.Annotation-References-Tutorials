@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt annotaties kunt maken en specifieke annotaties in PDF-bestanden kunt opslaan met GroupDocs.Annotation voor .NET. Verbeter uw documentbeheerworkflow met gedetailleerde voorbeelden."
 "title": "PDF's annoteren met GroupDocs.Annotation voor .NET&#58; stapsgewijze handleiding"
 "url": "/nl/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

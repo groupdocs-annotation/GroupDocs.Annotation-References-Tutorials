@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة علامات مائية باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل عملية الإعداد، والتنفيذ خطوة بخطوة، وأفضل الممارسات لتأمين المستندات ووضع علامتها التجارية عليها."
 "title": "تنفيذ إضافة علامة مائية باستخدام GroupDocs.Annotation في .NET - دليل شامل لأمان المستندات والعلامة التجارية"
 "url": "/ar/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

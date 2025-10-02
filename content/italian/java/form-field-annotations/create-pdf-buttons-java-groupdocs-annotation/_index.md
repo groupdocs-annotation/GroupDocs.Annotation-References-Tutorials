@@ -3,6 +3,7 @@
 "description": "Scopri come creare pulsanti PDF interattivi con risposte utilizzando GroupDocs.Annotation per Java. Segui questa guida passo passo per migliorare l'interattività dei documenti."
 "title": "Creare pulsanti PDF interattivi in Java utilizzando GroupDocs.Annotation&#58; una guida completa"
 "url": "/it/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

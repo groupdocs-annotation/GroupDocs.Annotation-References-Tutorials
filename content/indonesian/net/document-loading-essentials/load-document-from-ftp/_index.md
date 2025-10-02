@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Muat Dokumen dari FTP"
 "url": "/id/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

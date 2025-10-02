@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích và lưu tệp PDF bằng khóa phiên bản tùy chỉnh bằng cách sử dụng thư viện GroupDocs.Annotation mạnh mẽ cho .NET, đảm bảo mỗi lần lặp lại tài liệu đều có thể được nhận dạng duy nhất."
 "title": "Lưu PDF có chú thích với Khóa phiên bản tùy chỉnh trong .NET bằng GroupDocs.Annotation"
 "url": "/vi/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

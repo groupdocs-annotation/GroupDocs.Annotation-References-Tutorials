@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý phiên bản tài liệu hiệu quả bằng GroupDocs.Annotation cho .NET. Hướng dẫn này bao gồm thiết lập, triển khai và ứng dụng thực tế."
 "title": "Cách lưu PDF dưới dạng phiên bản mới bằng GroupDocs.Annotation cho .NET - Hướng dẫn từng bước"
 "url": "/vi/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

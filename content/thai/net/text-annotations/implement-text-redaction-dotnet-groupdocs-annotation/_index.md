@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการนำคำอธิบายประกอบการแก้ไขข้อความไปใช้ในแอปพลิเคชัน .NET โดยใช้ GroupDocs.Annotation ปกป้องข้อมูลสำคัญได้อย่างง่ายดาย"
 "title": "การนำ Text Redaction ไปใช้ใน .NET โดยใช้ GroupDocs.Annotation&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

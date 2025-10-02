@@ -2,6 +2,7 @@
 "description": "Tutorial completi per generare anteprime di documenti, miniature e rappresentazioni visive con GroupDocs.Annotation per .NET."
 "title": "Tutorial di anteprima dei documenti per GroupDocs.Annotation .NET"
 "url": "/it/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

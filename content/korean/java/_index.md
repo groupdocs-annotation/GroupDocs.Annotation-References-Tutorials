@@ -4,6 +4,7 @@
 "linktitle": "Java 튜토리얼을 위한 GroupDocs.Annotation"
 "title": "Java 문서 주석 API | Java 튜토리얼 및 예제를 위한 GroupDocs.Annotation"
 "url": "/ko/java/"
+type: docs
 "weight": 10
 ---
 

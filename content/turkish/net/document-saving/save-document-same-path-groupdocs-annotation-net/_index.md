@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET'te orijinal yolu kullanarak açıklamalı belgeleri nasıl kaydedeceğinizi öğrenin; böylece dosya yönetimi ve iş akışı verimliliği artar."
 "title": ".NET için GroupDocs.Annotation Kullanarak Belgeleri Orijinal Yola Nasıl Kaydedebilirsiniz"
 "url": "/tr/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

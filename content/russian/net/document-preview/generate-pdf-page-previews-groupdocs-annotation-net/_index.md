@@ -3,6 +3,7 @@
 "description": "Узнайте, как создавать эффективные предварительные просмотры страниц PDF с помощью GroupDocs.Annotation для .NET. Улучшите взаимодействие с документами и оптимизируйте свой рабочий процесс."
 "title": "Создание предпросмотров страниц PDF с помощью GroupDocs.Annotation .NET&#58; Подробное руководство"
 "url": "/ru/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

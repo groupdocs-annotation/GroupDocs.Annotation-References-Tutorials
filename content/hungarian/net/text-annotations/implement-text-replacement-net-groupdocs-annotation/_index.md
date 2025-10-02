@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan valósíthat meg szöveghelyettesítő megjegyzéseket .NET alkalmazásaiban a GroupDocs.Annotation segítségével. Könnyedén javíthatja a dokumentumok olvashatóságát és funkcionalitását."
 "title": "Hogyan valósítsunk meg szövegcserét .NET-ben a GroupDocs.Annotation használatával a hatékony dokumentum-annotáció érdekében?"
 "url": "/hu/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

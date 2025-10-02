@@ -3,6 +3,7 @@
 "description": "Pelajari cara menghapus balasan dari dokumen beranotasi secara efisien menggunakan GroupDocs.Annotation untuk .NET. Panduan ini mencakup pengaturan, manipulasi, dan aplikasi praktis."
 "title": "Hapus Balasan dari Dokumen Beranotasi Menggunakan GroupDocs.Annotation untuk .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/reply-management/remove-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

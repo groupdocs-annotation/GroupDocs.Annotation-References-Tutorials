@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية إضافة تعليقات توضيحية إلى ملفات PDF عبر الإنترنت باستخدام GroupDocs.Annotation لـ .NET. بسّط عملية مراجعة مستنداتك باستخدام تقنيات تعليق توضيحية فعّالة."
 "title": "كيفية إضافة تعليقات توضيحية إلى ملفات PDF من عنوان URL باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

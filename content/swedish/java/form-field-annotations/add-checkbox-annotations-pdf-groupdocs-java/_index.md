@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument med interaktiva kryssrutekommentarer med GroupDocs.Annotation för Java. Följ den här steg-för-steg-guiden."
 "title": "Så här lägger du till kryssrute-annoteringar i PDF-filer med GroupDocs.Annotation för Java"
 "url": "/sv/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

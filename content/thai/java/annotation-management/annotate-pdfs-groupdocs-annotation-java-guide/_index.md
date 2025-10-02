@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบเอกสาร PDF อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ Java คู่มือนี้ครอบคลุมถึงการตั้งค่า การเพิ่มคำอธิบายประกอบ และการบันทึกไฟล์"
 "title": "เพิ่มคำอธิบายประกอบใน PDF ด้วย GroupDocs คำแนะนำฉบับสมบูรณ์สำหรับ Java"
 "url": "/th/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/"
+type: docs
 "weight": 1
 ---
 

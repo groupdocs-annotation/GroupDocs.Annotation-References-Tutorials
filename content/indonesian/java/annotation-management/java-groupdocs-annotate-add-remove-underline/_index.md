@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan dan menghapus anotasi garis bawah dalam dokumen Java menggunakan GroupDocs.Annotation. Tingkatkan pengelolaan dokumen Anda dengan panduan terperinci ini."
 "title": "Menambahkan dan Menghapus Anotasi Garis Bawah di Java menggunakan GroupDocs&#58; Panduan Lengkap"
 "url": "/id/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

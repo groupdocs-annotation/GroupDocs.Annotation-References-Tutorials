@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Добавить раскрывающийся компонент в PDF-документ"
 "url": "/ru/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

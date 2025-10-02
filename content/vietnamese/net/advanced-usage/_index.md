@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Sử dụng nâng cao"
 "url": "/vi/net/advanced-usage/"
+type: docs
 "weight": 22
 ---
 

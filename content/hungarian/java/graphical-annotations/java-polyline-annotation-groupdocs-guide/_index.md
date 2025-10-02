@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan fejlesztheti Java-alkalmazásait vonallánc-annotációk hozzáadásával a GroupDocs.Annotation könyvtár segítségével. Tökéletes a dokumentumok érthetőségének és interaktivitásának javítására."
 "title": "Vonallánc-annotációk implementálása Java-ban a GroupDocs.Annotation könyvtár használatával"
 "url": "/hu/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

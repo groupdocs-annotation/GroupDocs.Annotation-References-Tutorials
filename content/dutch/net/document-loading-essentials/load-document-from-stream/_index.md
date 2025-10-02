@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Document laden uit stream"
 "url": "/nl/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

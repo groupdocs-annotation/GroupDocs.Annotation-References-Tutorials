@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan fejlesztheti .NET alkalmazásait interaktív linkannotációk hozzáadásával a hatékony GroupDocs.Annotation könyvtár segítségével. Kövesse lépésről lépésre szóló útmutatónkat, és javítsa a dokumentumok interaktivitását még ma."
 "title": "Hivatkozásokhoz fűzött megjegyzések hozzáadása dokumentumokhoz a GroupDocs.Annotation for .NET használatával | Fejlesztői útmutató"
 "url": "/hu/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

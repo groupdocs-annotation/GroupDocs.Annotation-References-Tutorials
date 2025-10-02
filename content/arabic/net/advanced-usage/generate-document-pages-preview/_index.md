@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إنشاء معاينة صفحات المستندات"
 "url": "/ar/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

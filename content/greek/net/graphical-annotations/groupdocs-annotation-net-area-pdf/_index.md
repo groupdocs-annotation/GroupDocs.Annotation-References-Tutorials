@@ -3,6 +3,7 @@
 "description": "Αυτοματοποιήστε τις σχολιασμούς PDF με το GroupDocs.Annotation για .NET. Μάθετε πώς να προσθέτετε σχολιασμούς περιοχής χρησιμοποιώντας C# σε αυτόν τον λεπτομερή οδηγό βήμα προς βήμα."
 "title": "Πώς να προσθέσετε σχολιασμούς περιοχής σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET™ - Οδηγός βήμα προς βήμα"
 "url": "/el/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

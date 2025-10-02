@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนทีละขั้นตอนสำหรับการเพิ่ม แก้ไข และจัดการคำอธิบายข้อความในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนเกี่ยวกับคำอธิบายข้อความสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

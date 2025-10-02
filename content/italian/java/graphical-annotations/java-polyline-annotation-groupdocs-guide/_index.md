@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare le tue applicazioni Java aggiungendo annotazioni polilineari con la libreria GroupDocs.Annotation. Perfette per migliorare la chiarezza e l'interattività dei documenti."
 "title": "Implementazione di annotazioni polilineari in Java utilizzando la libreria GroupDocs.Annotation"
 "url": "/it/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Hapus Balasan pada Anotasi di .NET"
 "url": "/id/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

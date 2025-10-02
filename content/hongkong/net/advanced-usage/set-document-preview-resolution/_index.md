@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "設定文件預覽分辨率"
 "url": "/zh-hant/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

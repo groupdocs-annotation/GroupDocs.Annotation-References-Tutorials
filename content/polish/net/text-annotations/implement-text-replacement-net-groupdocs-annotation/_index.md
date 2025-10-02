@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak wdrożyć adnotacje zastępujące tekst w aplikacjach .NET przy użyciu GroupDocs.Annotation. Zwiększ czytelność i funkcjonalność dokumentu bez wysiłku."
 "title": "Jak wdrożyć zamianę tekstu w .NET przy użyciu GroupDocs.Annotation w celu wydajnej adnotacji dokumentu"
 "url": "/pl/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

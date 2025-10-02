@@ -3,6 +3,7 @@
 "description": "Leer hoe u uw PDF-documenten kunt verbeteren door doorzoekbare tekstannotaties toe te voegen met GroupDocs.Annotation voor Java. Deze handleiding biedt stapsgewijze instructies en praktische tips."
 "title": "Hoe u zoektekstannotaties aan pdf's toevoegt met GroupDocs.Annotation voor Java"
 "url": "/nl/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

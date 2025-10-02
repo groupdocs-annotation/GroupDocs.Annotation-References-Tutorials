@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak chronić swoje dokumenty, dodając adnotacje znaku wodnego za pomocą GroupDocs.Annotation dla Java. Ten przewodnik obejmuje wskazówki dotyczące konfiguracji, dostosowywania i optymalizacji."
 "title": "Wdrażanie adnotacji znaku wodnego w plikach PDF za pomocą GroupDocs.Annotation Java&#58; Kompleksowy przewodnik"
 "url": "/pl/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

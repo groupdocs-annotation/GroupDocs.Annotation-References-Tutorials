@@ -3,6 +3,7 @@
 "description": "Java'daki güçlü GroupDocs.Annotation kütüphanesini kullanarak PDF belgelerine elips ek açıklamalarının nasıl ekleneceğini öğrenin. Belge iş birliğini geliştirmek için bu adım adım kılavuzu izleyin."
 "title": "Java&#58; GroupDocs.Annotation for Java'yı Kullanarak PDF'lere Elips Açıklamaları Ekleyin"
 "url": "/tr/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

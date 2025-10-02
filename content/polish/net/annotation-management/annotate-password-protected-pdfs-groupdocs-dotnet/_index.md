@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak bezpiecznie adnotować pliki PDF chronione hasłem za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik krok po kroku obejmuje ładowanie, adnotowanie i zapisywanie dokumentów."
 "title": "Jak adnotować pliki PDF chronione hasłem za pomocą GroupDocs.Annotation dla .NET | Przewodnik krok po kroku"
 "url": "/pl/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

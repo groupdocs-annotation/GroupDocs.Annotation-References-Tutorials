@@ -3,6 +3,7 @@
 "description": "了解如何使用 .NET 中強大的 GroupDocs.Annotation 庫建立具有特定影像解析度的高品質 PDF 文件預覽。立即優化您的文件管理工作流程。"
 "title": "使用 GroupDocs.Annotation for .NET 以自訂解析度產生高品質 PDF 預覽"
 "url": "/zh-hant/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

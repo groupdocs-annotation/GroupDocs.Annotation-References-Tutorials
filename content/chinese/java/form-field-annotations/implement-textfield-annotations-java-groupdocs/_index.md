@@ -3,6 +3,7 @@
 "description": "学习如何使用 GroupDocs.Annotation 在 Java 中实现文本字段注释，以增强文档交互性。本指南提供全面的分步说明和实际应用，敬请关注。"
 "title": "使用 GroupDocs.Annotation 在 Java 中实现 TextField 注释——综合指南"
 "url": "/zh/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

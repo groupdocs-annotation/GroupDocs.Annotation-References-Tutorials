@@ -3,6 +3,7 @@
 "description": "ドキュメント管理とコラボレーションを強化するために、GroupDocs.Annotation を使用して Java アプリケーションの注釈にユーザー ロールを追加する方法を学習します。"
 "title": "GroupDocs.Annotation Java の実装&#58; アノテーションへのユーザーロールの追加"
 "url": "/ja/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

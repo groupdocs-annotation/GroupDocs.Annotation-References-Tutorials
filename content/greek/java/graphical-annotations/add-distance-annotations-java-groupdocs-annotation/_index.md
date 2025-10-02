@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εφαρμόζετε σχολιασμούς απόστασης σε έγγραφα Java χρησιμοποιώντας το GroupDocs.Annotation. Αυτός ο οδηγός βήμα προς βήμα καλύπτει την εγκατάσταση, τη διαμόρφωση και τις πρακτικές εφαρμογές."
 "title": "Πώς να προσθέσετε σχολιασμούς απόστασης σε Java με το GroupDocs.Annotation&#58; Οδηγός βήμα προς βήμα"
 "url": "/el/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

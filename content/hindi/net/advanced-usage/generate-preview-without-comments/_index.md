@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "बिना टिप्पणी के पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

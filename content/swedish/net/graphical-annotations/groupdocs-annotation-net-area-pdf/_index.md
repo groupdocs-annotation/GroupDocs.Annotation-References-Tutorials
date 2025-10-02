@@ -3,6 +3,7 @@
 "description": "Automatisera PDF-annoteringar med GroupDocs.Annotation för .NET. Lär dig hur du lägger till områdesannoteringar med hjälp av C# i den här detaljerade steg-för-steg-guiden."
 "title": "Så här lägger du till områdesannoteringar i PDF-filer med GroupDocs.Annotation för .NET - en steg-för-steg-guide"
 "url": "/sv/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

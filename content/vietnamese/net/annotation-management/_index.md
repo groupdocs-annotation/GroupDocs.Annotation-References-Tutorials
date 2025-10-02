@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách thêm, xóa, cập nhật và quản lý chú thích trong tài liệu bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn quản lý chú thích cho GroupDocs.Annotation .NET"
 "url": "/vi/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

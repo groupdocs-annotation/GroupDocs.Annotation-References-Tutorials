@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně načítat klíče verzí z dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete správu dokumentů a spolupráci s tímto podrobným návodem."
 "title": "Jak načíst klíče verzí v .NET pomocí GroupDocs.Annotation – kompletní průvodce"
 "url": "/cs/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

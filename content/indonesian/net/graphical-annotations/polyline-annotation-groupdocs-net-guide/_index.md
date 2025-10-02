@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan anotasi polyline menggunakan GroupDocs.Annotation for .NET. Panduan ini menyediakan petunjuk langkah demi langkah dan kiat untuk penerapan yang efektif."
 "title": "Cara Menambahkan Anotasi Polyline ke PDF Menggunakan GroupDocs.Annotation untuk .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

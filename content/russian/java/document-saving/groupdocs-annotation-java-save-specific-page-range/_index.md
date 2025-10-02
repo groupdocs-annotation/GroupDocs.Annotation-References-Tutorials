@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно сохранять аннотированные диапазоны страниц документа с помощью GroupDocs.Annotation для Java. В этом руководстве рассматриваются настройка, реализация и практическое применение."
 "title": "Сохранение определенного диапазона страниц с помощью GroupDocs.Annotation для Java&#58; Полное руководство"
 "url": "/ru/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

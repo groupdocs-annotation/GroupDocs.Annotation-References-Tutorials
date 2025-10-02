@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET을 사용하여 버전 키를 사용하여 문서 주석을 효율적으로 관리하는 방법을 알아보세요. 워크플로를 간소화하고 협업을 강화하세요."
 "title": "GroupDocs.Annotation .NET에서 버전 키로 주석을 검색하여 문서 관리 개선"
 "url": "/ko/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีจัดการช่วงหน้าอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ครอบคลุมถึงการติดตั้ง การตั้งค่า และแนวทางปฏิบัติที่ดีที่สุดในการบันทึกหน้าเฉพาะ"
 "title": "เรียนรู้การจัดการช่วงหน้าใน .NET ด้วย GroupDocs.Annotation เทคนิคการสร้างคำอธิบายประกอบที่มีประสิทธิภาพ"
 "url": "/th/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

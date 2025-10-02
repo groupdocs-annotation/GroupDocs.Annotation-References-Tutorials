@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用してPDFの注釈を読み込み、変更、管理する方法を学びましょう。包括的なガイドでドキュメント管理を効率化しましょう。"
 "title": "GroupDocs.Annotation for Java をマスターして PDF 注釈を効率的に編集する"
 "url": "/ja/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

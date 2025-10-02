@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java का उपयोग करके दस्तावेज़ों में पाठ एनोटेशन जोड़ने, संपादित करने और प्रबंधित करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए टेक्स्ट एनोटेशन ट्यूटोरियल"
 "url": "/hi/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

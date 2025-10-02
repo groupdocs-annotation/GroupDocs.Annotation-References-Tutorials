@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τις εφαρμογές Java προσθέτοντας σχολιασμούς πολυγραμμών με τη βιβλιοθήκη GroupDocs.Annotation. Ιδανικό για τη βελτίωση της σαφήνειας και της διαδραστικότητας των εγγράφων."
 "title": "Υλοποίηση σχολίων πολυγραμμών σε Java χρησιμοποιώντας τη βιβλιοθήκη GroupDocs.Annotation"
 "url": "/el/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Λήψη πληροφοριών περιεχομένου κειμένου εγγράφου"
 "url": "/el/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

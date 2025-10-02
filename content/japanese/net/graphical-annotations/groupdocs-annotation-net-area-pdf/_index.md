@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET で PDF の注釈を自動化しましょう。この詳細なステップバイステップガイドでは、C# を使用して領域注釈を追加する方法を学びます。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF にエリア注釈を追加する方法 - ステップバイステップガイド"
 "url": "/ja/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

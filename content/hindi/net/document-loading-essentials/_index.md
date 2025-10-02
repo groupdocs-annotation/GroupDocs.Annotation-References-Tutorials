@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ लोड करने की अनिवार्यताएँ"
 "url": "/hi/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

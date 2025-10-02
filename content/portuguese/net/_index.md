@@ -4,6 +4,7 @@
 "linktitle": "Tutoriais do GroupDocs.Annotation para .NET"
 "title": "Tutoriais e exemplos de GroupDocs.Annotation para .NET"
 "url": "/pt/net/"
+type: docs
 "weight": 10
 ---
 

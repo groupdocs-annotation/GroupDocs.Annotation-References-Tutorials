@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、PDF にリソース編集注釈を追加する方法を学びましょう。この詳細なガイドで、機密情報を保護し、ドキュメントのセキュリティを強化しましょう。"
 "title": "GroupDocs.Annotation を使用して .NET でリソース編集注釈を追加する方法 包括的なガイド"
 "url": "/ja/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

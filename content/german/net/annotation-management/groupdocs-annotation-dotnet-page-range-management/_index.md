@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Seitenbereiche mit GroupDocs.Annotation für .NET effizient verwalten. Diese Anleitung behandelt Installation, Einrichtung und bewährte Methoden zum Speichern bestimmter Seiten."
 "title": "Beherrschen der Seitenbereichsverwaltung in .NET mit GroupDocs.Annotation – Effiziente Annotationstechniken"
 "url": "/de/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

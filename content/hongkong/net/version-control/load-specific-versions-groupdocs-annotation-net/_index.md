@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效管理和載入特定版本的註解文件。立即增強您的文件管理系統！"
 "title": "使用 GroupDocs.Annotation for .NET 載入特定文件版本－綜合指南"
 "url": "/zh-hant/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

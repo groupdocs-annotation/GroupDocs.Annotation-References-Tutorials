@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Dokumente mit GroupDocs.Annotation für Java effizient kommentieren. Diese Anleitung behandelt das Laden und Kommentieren von PDFs sowie die Optimierung Ihrer Java-Umgebung mit Maven."
 "title": "Dokumentannotation in Java meistern – Ein umfassender Leitfaden mit GroupDocs.Annotation"
 "url": "/de/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

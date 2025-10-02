@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、ドキュメントに下線付きの注釈を効率的に追加する方法を学びましょう。ドキュメントの明瞭性とコミュニケーションを簡単に向上させることができます。"
 "title": "GroupDocs.Annotation を使用して .NET で下線注釈を追加する方法"
 "url": "/ja/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να καταργείτε απαντήσεις από σχόλια σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για Java API. Βελτιώστε τη διαχείριση εγγράφων σας με αυτόν τον οδηγό βήμα προς βήμα."
 "title": "Πώς να καταργήσετε απαντήσεις κατά αναγνωριστικό σε Java χρησιμοποιώντας το GroupDocs.Annotation API"
 "url": "/el/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

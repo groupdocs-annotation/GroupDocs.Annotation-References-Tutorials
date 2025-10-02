@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro generování náhledů dokumentů, miniatur a vizuálních reprezentací pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro náhled dokumentů v GroupDocs.Annotation .NET"
 "url": "/cs/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

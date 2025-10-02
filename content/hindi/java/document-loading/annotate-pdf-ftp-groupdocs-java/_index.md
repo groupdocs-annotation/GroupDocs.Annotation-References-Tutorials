@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके सीधे FTP सर्वर से PDF दस्तावेज़ों को एनोटेट करना सीखें। इस चरण-दर-चरण मार्गदर्शिका के साथ अपने दस्तावेज़ प्रसंस्करण वर्कफ़्लो को सुव्यवस्थित करें।"
 "title": "GroupDocs का उपयोग करके FTP से PDF को एनोटेट करें.Java के लिए एनोटेशन एक संपूर्ण गाइड"
 "url": "/hi/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

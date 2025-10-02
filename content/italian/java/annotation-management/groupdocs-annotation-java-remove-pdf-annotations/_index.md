@@ -3,6 +3,7 @@
 "description": "Scopri come rimuovere facilmente le annotazioni dai documenti PDF utilizzando l'API GroupDocs.Annotation in Java. Segui la nostra guida passo passo per una gestione efficiente dei documenti."
 "title": "Come rimuovere le annotazioni dai PDF utilizzando l'API Java GroupDocs.Annotation"
 "url": "/it/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

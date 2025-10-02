@@ -3,6 +3,7 @@
 "description": "Узнайте, как создавать чистые предварительные просмотры документов без комментариев с помощью GroupDocs.Annotation для .NET. Следуйте этому руководству, чтобы улучшить процесс представления и рецензирования документов."
 "title": "Как создать предварительный просмотр документов без комментариев с помощью GroupDocs.Annotation .NET"
 "url": "/ru/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

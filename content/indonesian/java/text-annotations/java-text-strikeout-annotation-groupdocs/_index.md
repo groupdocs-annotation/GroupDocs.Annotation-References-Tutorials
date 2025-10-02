@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi teks dicoret di Java menggunakan GroupDocs.Annotation. Ikuti panduan langkah demi langkah ini untuk anotasi dokumen yang lancar."
 "title": "Panduan Anotasi Teks Java Menggunakan GroupDocs.Annotation"
 "url": "/id/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

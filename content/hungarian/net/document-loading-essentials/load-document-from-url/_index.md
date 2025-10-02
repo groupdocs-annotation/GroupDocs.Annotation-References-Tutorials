@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentum betöltése URL-címről"
 "url": "/hu/net/document-loading-essentials/load-document-from-url/"
+type: docs
 "weight": 15
 ---
 

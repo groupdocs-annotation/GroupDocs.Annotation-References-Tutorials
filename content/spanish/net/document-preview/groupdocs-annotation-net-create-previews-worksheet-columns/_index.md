@@ -3,6 +3,7 @@
 "description": "Aprenda a crear vistas previas de documentos concisas y relevantes a partir de columnas específicas de la hoja de cálculo con GroupDocs.Annotation para .NET. Ideal para optimizar los flujos de trabajo en el análisis de datos y la gestión de TI."
 "title": "Generar vistas previas de hojas de Excel específicas mediante GroupDocs.Annotation .NET"
 "url": "/es/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

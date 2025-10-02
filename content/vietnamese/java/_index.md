@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation cho hướng dẫn Java"
 "title": "API chú thích tài liệu Java | GroupDocs.Annotation cho Java Hướng dẫn & Ví dụ"
 "url": "/vi/java/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ontdek hoe u PDF-documenten efficiënt kunt annoteren met gebiedsmarkeringen met behulp van de krachtige GroupDocs.Annotation API voor Java, waarmee u de samenwerking en productiviteit verbetert."
 "title": "PDF's annoteren in Java met GroupDocs.Annotation"
 "url": "/nl/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

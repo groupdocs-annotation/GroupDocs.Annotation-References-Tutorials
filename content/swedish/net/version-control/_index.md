@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att implementera dokumentversioner, spåra ändringar och hantera annoteringshistorik med GroupDocs.Annotation för .NET."
 "title": "Versionskontrollhandledningar för GroupDocs.Annotation .NET"
 "url": "/sv/net/version-control/"
+type: docs
 "weight": 13
 ---
 

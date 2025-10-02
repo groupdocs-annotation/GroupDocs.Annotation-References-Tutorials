@@ -3,6 +3,7 @@
 "description": "Java'daki güçlü GroupDocs.Annotation kütüphanesini kullanarak PDF belgelerinizi etkileşimli açılır alanlarla nasıl geliştirebileceğinizi öğrenin."
 "title": "GroupDocs.Annotation for Java'yı Kullanarak Etkileşimli PDF Açılır Listeleri Oluşturun"
 "url": "/tr/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

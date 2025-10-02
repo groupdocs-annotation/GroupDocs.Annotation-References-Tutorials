@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro implementaci hypertextových odkazů a propojených anotací v dokumentech pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro anotace odkazů v GroupDocs.Annotation .NET"
 "url": "/cs/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

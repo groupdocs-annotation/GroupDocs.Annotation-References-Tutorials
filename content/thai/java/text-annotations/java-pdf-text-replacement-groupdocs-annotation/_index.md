@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีนำคำอธิบายประกอบการแทนที่ข้อความไปใช้ใน PDF ของ Java โดยใช้ GroupDocs.Annotation ปรับปรุงความสามารถในการแก้ไขเอกสารและการทำงานร่วมกัน"
 "title": "คู่มือการแทนที่ข้อความ PDF ของ Java ด้วย GroupDocs.Annotation"
 "url": "/th/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

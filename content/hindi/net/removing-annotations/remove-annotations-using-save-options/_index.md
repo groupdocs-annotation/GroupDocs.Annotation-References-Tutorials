@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": ".NET में सेव विकल्प का उपयोग करके एनोटेशन हटाएं"
 "url": "/hi/net/removing-annotations/remove-annotations-using-save-options/"
+type: docs
 "weight": 14
 ---
 

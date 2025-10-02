@@ -3,6 +3,7 @@
 "description": "Apprenez à rédiger efficacement du texte dans vos PDF grâce à la puissante bibliothèque Java GroupDocs.Annotation. Ce guide couvre la configuration, la création d'annotations et l'enregistrement."
 "title": "Maîtriser la rédaction de texte dans les PDF à l'aide de l'API Java GroupDocs.Annotation - Un guide complet"
 "url": "/fr/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Vollständige Tutorials zum Generieren von Dokumentvorschauen, Miniaturansichten und visuellen Darstellungen mit GroupDocs.Annotation für Java."
 "title": "Dokumentvorschau-Tutorials für GroupDocs.Annotation Java"
 "url": "/de/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

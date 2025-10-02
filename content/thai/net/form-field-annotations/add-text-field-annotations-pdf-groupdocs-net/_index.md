@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีเพิ่มคำอธิบายประกอบในช่องข้อความแบบโต้ตอบในเอกสาร PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET ปฏิบัติตามคำแนะนำทีละขั้นตอนนี้เพื่อปรับปรุงการโต้ตอบของเอกสาร"
 "title": "วิธีการเพิ่มคำอธิบายช่องข้อความใน PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET (บทช่วยสอน)"
 "url": "/th/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

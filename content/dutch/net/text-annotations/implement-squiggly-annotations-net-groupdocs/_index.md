@@ -3,6 +3,7 @@
 "description": "Leer hoe u golvende tekstannotaties kunt toevoegen aan uw .NET-toepassingen met GroupDocs.Annotation voor verbeterde leesbaarheid van documenten en verbeterde feedback."
 "title": "Implementeer kronkelige tekstannotaties in .NET met behulp van GroupDocs.Annotation"
 "url": "/nl/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

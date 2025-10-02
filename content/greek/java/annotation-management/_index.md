@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά σεμινάρια για την προσθήκη, αφαίρεση, ενημέρωση και διαχείριση σχολιασμών σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά σεμινάρια διαχείρισης σχολίων για το GroupDocs.Annotation Java"
 "url": "/el/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

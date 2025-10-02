@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して透かしを追加する方法を学びましょう。このガイドでは、セットアップ、ステップバイステップの実装、そしてドキュメントのセキュリティ保護とブランディングに関するベストプラクティスについて説明します。"
 "title": ".NETでGroupDocs.Annotationを使用して透かしを追加する実装&#58; ドキュメントのセキュリティとブランディングのための包括的なガイド"
 "url": "/ja/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

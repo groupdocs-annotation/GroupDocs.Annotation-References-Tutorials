@@ -3,6 +3,7 @@
 "description": "強力なGroupDocs.Annotationライブラリを使用してインタラクティブなリンク注釈を追加することで、.NETアプリケーションを強化する方法を学びましょう。ステップバイステップガイドに従って、今すぐドキュメントのインタラクティブ性を向上させましょう。"
 "title": "GroupDocs.Annotation for .NET を使用してドキュメントにリンク注釈を追加する方法 | 開発者ガイド"
 "url": "/ja/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

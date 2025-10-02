@@ -3,6 +3,7 @@
 "description": ".NET için GroupDocs.Annotation'ı kullanarak açıklamalar olmadan belge önizlemelerinin nasıl oluşturulacağını öğrenin; böylece işbirlikli projelerde gizlilik ve netlik sağlanır."
 "title": "GroupDocs.Annotation .NET Kullanarak Açıklamalar Olmadan Temiz Bir Belge Önizlemesi Nasıl Oluşturulur"
 "url": "/tr/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

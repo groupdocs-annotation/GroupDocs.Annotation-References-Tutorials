@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng cách thêm hộp kiểm tương tác bằng GroupDocs.Annotation cho .NET. Thực hiện theo hướng dẫn từng bước này để sắp xếp hợp lý các chú thích trường biểu mẫu trong tài liệu kỹ thuật số của bạn."
 "title": "Cách Thêm Hộp Kiểm Vào PDF Với GroupDocs.Annotation Cho .NET&#58; Hướng Dẫn Từng Bước"
 "url": "/vi/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie adnotować dokumenty PDF w środowisku .NET za pomocą strumieni z GroupDocs.Annotation. Ulepsz swój przepływ pracy w zakresie zarządzania dokumentami."
 "title": "Adnotacje do plików PDF za pomocą GroupDocs.Annotation .NET via Streams&#58; Kompleksowy przewodnik"
 "url": "/pl/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan hozhat létre hatékony PDF-oldalelőnézeteket a GroupDocs.Annotation for .NET segítségével. Fokozza a dokumentumokkal való interakciót és egyszerűsíti a munkafolyamatot."
 "title": "PDF oldal előnézetek generálása a GroupDocs.Annotation .NET használatával – Átfogó útmutató"
 "url": "/hu/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

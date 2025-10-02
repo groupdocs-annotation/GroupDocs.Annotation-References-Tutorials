@@ -4,6 +4,7 @@
 "linktitle": "Οδηγοί προγραμματιστών για το GroupDocs.Annotation"
 "title": "API σχολιασμού εγγράφων | Εκπαιδευτικά σεμινάρια και παραδείγματα SDK για το GroupDocs.Annotation"
 "url": "/el/"
+type: docs
 "weight": 11
 ---
 

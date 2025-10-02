@@ -3,6 +3,7 @@
 "description": "Scopri come scaricare e annotare in modo efficiente i PDF da Amazon S3 utilizzando GroupDocs.Annotation per .NET. Migliora il flusso di lavoro dei tuoi documenti con un'integrazione perfetta."
 "title": "Download e annotazione PDF efficienti da Amazon S3 utilizzando GroupDocs.Annotation per .NET"
 "url": "/it/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

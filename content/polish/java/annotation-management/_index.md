@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące dodawania, usuwania, aktualizowania i zarządzania adnotacjami w dokumentach przy użyciu GroupDocs.Annotation dla Java."
 "title": "Samouczki zarządzania adnotacjami dla GroupDocs.Annotation Java"
 "url": "/pl/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

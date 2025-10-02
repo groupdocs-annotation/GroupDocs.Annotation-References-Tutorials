@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "ตั้งค่าใบอนุญาตแบบมิเตอร์"
 "url": "/th/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

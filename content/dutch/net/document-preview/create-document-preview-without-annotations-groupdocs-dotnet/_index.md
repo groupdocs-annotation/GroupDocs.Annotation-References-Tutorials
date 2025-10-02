@@ -3,6 +3,7 @@
 "description": "Leer hoe u met GroupDocs.Annotation voor .NET documentvoorbeelden kunt genereren zonder annotaties. Zo geniet u van privacy en duidelijkheid bij samenwerkingsprojecten."
 "title": "Een overzichtelijk documentvoorbeeld maken zonder annotaties met GroupDocs.Annotation .NET"
 "url": "/nl/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

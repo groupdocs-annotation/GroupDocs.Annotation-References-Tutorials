@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、テキストのハイライトと返信機能でPDFに注釈を付ける方法を学びましょう。このガイドでは、設定、コード例、そして実践的な応用例を解説します。"
 "title": "GroupDocs.Highlight を使用して Java で PDF に注釈を付ける方法 - 総合ガイド"
 "url": "/ja/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

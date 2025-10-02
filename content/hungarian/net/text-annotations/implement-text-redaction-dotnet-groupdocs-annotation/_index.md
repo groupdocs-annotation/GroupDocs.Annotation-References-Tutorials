@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan valósíthat meg szöveges kihagyási megjegyzéseket .NET alkalmazásokban a GroupDocs.Annotation segítségével. Védje bizalmas adatait könnyedén."
 "title": "Szövegkivonás implementálása .NET-ben a GroupDocs.Annotation használatával – Teljes körű útmutató"
 "url": "/hu/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

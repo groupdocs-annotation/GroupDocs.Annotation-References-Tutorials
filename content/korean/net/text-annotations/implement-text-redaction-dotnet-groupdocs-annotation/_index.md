@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 .NET 애플리케이션에서 텍스트 편집 주석을 구현하는 방법을 알아보세요. 민감한 정보를 간편하게 보호하세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 텍스트 편집 구현하기&#58; 완전한 가이드"
 "url": "/ko/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

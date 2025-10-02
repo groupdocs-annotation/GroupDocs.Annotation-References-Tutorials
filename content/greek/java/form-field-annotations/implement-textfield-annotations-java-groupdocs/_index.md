@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εφαρμόζετε σχολιασμούς πεδίων κειμένου σε Java χρησιμοποιώντας το GroupDocs.Annotation για βελτιωμένη διαδραστικότητα εγγράφων. Ακολουθήστε αυτόν τον ολοκληρωμένο οδηγό με οδηγίες βήμα προς βήμα και πρακτικές εφαρμογές."
 "title": "Υλοποίηση σχολίων πεδίων κειμένου σε Java χρησιμοποιώντας το GroupDocs.Annotation&#58; Ένας ολοκληρωμένος οδηγός"
 "url": "/el/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

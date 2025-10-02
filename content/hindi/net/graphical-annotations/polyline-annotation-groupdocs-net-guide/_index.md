@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation for .NET का उपयोग करके पॉलीलाइन एनोटेशन के साथ अपने PDF दस्तावेज़ों को कैसे बेहतर बनाया जाए। यह मार्गदर्शिका प्रभावी कार्यान्वयन के लिए चरण-दर-चरण निर्देश और सुझाव प्रदान करती है।"
 "title": "GroupDocs का उपयोग करके PDF में पॉलीलाइन एनोटेशन कैसे जोड़ें. .NET के लिए एनोटेशन एक चरण-दर-चरण मार्गदर्शिका"
 "url": "/hi/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

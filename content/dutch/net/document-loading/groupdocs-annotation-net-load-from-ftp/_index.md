@@ -3,6 +3,7 @@
 "description": "Leer hoe u naadloos documenten van FTP-servers laadt met GroupDocs.Annotation voor .NET. Verbeter uw documentbeheerworkflow met deze gedetailleerde handleiding."
 "title": "Documenten laden en annoteren vanaf FTP-servers met GroupDocs.Annotation voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

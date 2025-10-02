@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kezelheti hatékonyan a dokumentumok jegyzeteit .NET-ben a GroupDocs.Annotation használatával. Ez az útmutató a jegyzetekkel ellátott dokumentumok mentésének beállítását, testreszabását és ajánlott eljárásait ismerteti."
 "title": "Fődokumentum-annotáció .NET-ben a GroupDocs.Annotation segítségével – Teljes körű útmutató"
 "url": "/hu/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF dosyalarına çevrimiçi olarak nasıl açıklama ekleyeceğinizi öğrenin. Verimli açıklama teknikleriyle belge inceleme süreçlerinizi kolaylaştırın."
 "title": "GroupDocs.Annotation for .NET Kullanılarak URL'den PDF'lere Açıklama Ekleme"
 "url": "/tr/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

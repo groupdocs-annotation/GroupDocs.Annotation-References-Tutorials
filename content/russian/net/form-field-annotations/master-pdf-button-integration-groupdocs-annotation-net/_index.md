@@ -3,6 +3,7 @@
 "description": "Узнайте, как интегрировать интерактивные кнопки в ваши PDF-документы с помощью мощного GroupDocs.Annotation для .NET. Повысьте вовлеченность пользователей с помощью пошаговых инструкций."
 "title": "Интеграция интерактивных кнопок в PDF-файлы с помощью GroupDocs.Annotation .NET SDK"
 "url": "/ru/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إنشاء معاينات موجزة ووثيقة الصلة بالمستندات من أعمدة محددة في ورقة العمل باستخدام GroupDocs.Annotation لـ .NET. مثالي لتبسيط سير العمل في تحليل البيانات وإدارة تكنولوجيا المعلومات."
 "title": "إنشاء معاينات جداول بيانات Excel المستهدفة باستخدام GroupDocs.Annotation .NET"
 "url": "/ar/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

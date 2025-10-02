@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για τη φόρτωση εγγράφων από διάφορες πηγές χρησιμοποιώντας το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο φόρτωσης εγγράφων για το GroupDocs.Annotation .NET"
 "url": "/el/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kezelheti hatékonyan annotációkat Java nyelven a GroupDocs.Annotation segítségével. Ez az útmutató a dokumentumok munkafolyamatainak betöltését, eltávolítását és optimalizálását ismerteti."
 "title": "Mesterszintű annotációkezelés Java nyelven – Átfogó útmutató a GroupDocs.Annotation segítségével"
 "url": "/hu/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

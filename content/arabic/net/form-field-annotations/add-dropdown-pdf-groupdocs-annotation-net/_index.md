@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك بإضافة عناصر قائمة منسدلة تفاعلية باستخدام GroupDocs.Annotation لـ .NET. اتبع هذا الدليل خطوة بخطوة لتبسيط إدخال المستخدم وتحسين وظائف المستند."
 "title": "إضافة قائمة منسدلة إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET - دليل شامل"
 "url": "/ar/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

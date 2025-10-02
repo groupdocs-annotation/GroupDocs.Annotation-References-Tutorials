@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NETを使用してインタラクティブなドロップダウンコンポーネントを追加し、PDFドキュメントを強化する方法を学びましょう。このステップバイステップガイドに従って、ユーザー入力を効率化し、ドキュメントの機能を向上させましょう。"
 "title": "GroupDocs.Annotation for .NET で PDF にドロップダウンを追加する方法 - 総合ガイド"
 "url": "/ja/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

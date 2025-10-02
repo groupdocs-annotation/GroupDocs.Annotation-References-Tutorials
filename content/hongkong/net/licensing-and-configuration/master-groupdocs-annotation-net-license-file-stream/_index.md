@@ -3,6 +3,7 @@
 "description": "了解如何使用檔案流設定和套用 GroupDocs.Annotation .NET 的授權。本指南內容全面，幫助您解鎖所有功能。"
 "title": "掌握 GroupDocs.Annotation .NET&#58; 在 C# 中使用檔案流設定許可證"
 "url": "/zh-hant/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

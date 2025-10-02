@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengintegrasikan font khusus ke dalam alur kerja pemrosesan dokumen Anda menggunakan GroupDocs.Annotation untuk .NET. Sempurnakan anotasi Anda dengan gaya font yang tepat."
 "title": "Cara Memuat Font Kustom di GroupDocs.Annotation untuk .NET&#58; Panduan Lengkap"
 "url": "/id/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

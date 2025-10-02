@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tải tài liệu được bảo vệ bằng mật khẩu"
 "url": "/vi/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

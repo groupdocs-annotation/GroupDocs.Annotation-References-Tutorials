@@ -3,6 +3,7 @@
 "description": "สร้างคำอธิบายประกอบ PDF อัตโนมัติด้วย GroupDocs.Annotation สำหรับ .NET เรียนรู้วิธีการเพิ่มคำอธิบายประกอบพื้นที่โดยใช้ C# ในคู่มือทีละขั้นตอนโดยละเอียดนี้"
 "title": "วิธีการเพิ่มคำอธิบายพื้นที่ลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET คำแนะนำทีละขั้นตอน"
 "url": "/th/net/graphical-annotations/groupdocs-annotation-net-area-pdf/"
+type: docs
 "weight": 1
 ---
 

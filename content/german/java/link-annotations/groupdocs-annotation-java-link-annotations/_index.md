@@ -3,6 +3,7 @@
 "description": "Erstellen Sie Link-Annotationen in Java mit GroupDocs. Erfahren Sie mehr über Einrichtung, Initialisierung und Anpassung zur Verbesserung der Dokumentinteraktivität."
 "title": "Implementieren von Link-Annotationen in Java mit GroupDocs – Ein umfassender Leitfaden"
 "url": "/de/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงแอปพลิเคชัน Java ของคุณโดยเพิ่มคำอธิบายโพลีไลน์ด้วยไลบรารี GroupDocs.Annotation เหมาะอย่างยิ่งสำหรับการปรับปรุงความชัดเจนและการโต้ตอบของเอกสาร"
 "title": "การนำ Polyline Annotation ไปใช้งานใน Java โดยใช้ไลบรารี GroupDocs.Annotation"
 "url": "/th/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

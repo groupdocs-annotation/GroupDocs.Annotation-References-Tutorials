@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Tải tài liệu từ FTP"
 "url": "/vi/net/document-loading-essentials/load-document-from-ftp/"
+type: docs
 "weight": 12
 ---
 

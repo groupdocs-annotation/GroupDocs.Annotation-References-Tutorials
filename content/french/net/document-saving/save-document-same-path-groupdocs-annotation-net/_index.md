@@ -3,6 +3,7 @@
 "description": "Découvrez comment enregistrer des documents annotés à l’aide du chemin d’origine dans GroupDocs.Annotation pour .NET, garantissant ainsi une gestion simplifiée des fichiers et une efficacité du flux de travail."
 "title": "Comment enregistrer des documents à leur emplacement d'origine avec GroupDocs.Annotation pour .NET"
 "url": "/fr/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

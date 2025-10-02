@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menambahkan bentuk, panah, gambar, dan elemen grafis dalam dokumen dengan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Anotasi Grafis untuk GroupDocs.Annotation .NET"
 "url": "/id/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

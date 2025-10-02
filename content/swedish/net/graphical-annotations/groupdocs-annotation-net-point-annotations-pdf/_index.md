@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument med interaktiva punktanteckningar med GroupDocs.Annotation för .NET. Den här steg-för-steg-guiden täcker installation, implementering och felsökning."
 "title": "Så här lägger du till punktannoteringar i PDF-filer med GroupDocs.Annotation för .NET"
 "url": "/sv/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

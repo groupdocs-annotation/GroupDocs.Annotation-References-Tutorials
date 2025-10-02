@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan valósíthat meg szövegmező-annotációkat Java nyelven a GroupDocs.Annotation használatával a dokumentumok interaktivitásának javítása érdekében. Kövesse ezt az átfogó útmutatót, amely lépésről lépésre bemutatja a gyakorlati alkalmazásokat."
 "title": "TextField annotációk implementálása Java nyelven a GroupDocs.Annotation használatával – Átfogó útmutató"
 "url": "/hu/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

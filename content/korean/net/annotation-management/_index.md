@@ -2,6 +2,7 @@
 "description": ".NET용 GroupDocs.Annotation을 사용하여 문서에 주석을 추가, 제거, 업데이트 및 관리하는 방법에 대한 전체 자습서입니다."
 "title": "GroupDocs.Annotation .NET을 위한 주석 관리 튜토리얼"
 "url": "/ko/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

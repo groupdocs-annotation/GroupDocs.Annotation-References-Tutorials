@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการแก้ไขข้อความใน PDF อย่างมีประสิทธิภาพโดยใช้ไลบรารี GroupDocs.Annotation Java อันทรงพลัง คู่มือนี้ครอบคลุมถึงขั้นตอนการตั้งค่า การสร้างคำอธิบายประกอบ และการบันทึก"
 "title": "การแก้ไขข้อความหลักใน PDF โดยใช้ GroupDocs.Annotation Java API คำแนะนำที่ครอบคลุม"
 "url": "/th/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

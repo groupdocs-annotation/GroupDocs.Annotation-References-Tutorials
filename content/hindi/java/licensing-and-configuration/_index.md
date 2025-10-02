@@ -2,6 +2,7 @@
 "description": "जावा अनुप्रयोगों में लाइसेंसिंग स्थापित करने, विकल्पों को कॉन्फ़िगर करने और GroupDocs.Annotation को प्रबंधित करने के लिए संपूर्ण ट्यूटोरियल।"
 "title": "जावा के लिए GroupDocs.Annotation लाइसेंसिंग और कॉन्फ़िगरेशन ट्यूटोरियल"
 "url": "/hi/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

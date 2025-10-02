@@ -2,6 +2,7 @@
 "description": "Schritt-für-Schritt-Tutorials zum Hinzufügen von Formularfeldern und interaktiven Komponenten zu Dokumenten mit GroupDocs.Annotation für .NET."
 "title": "Tutorials zur Formularfeldannotation für GroupDocs.Annotation .NET"
 "url": "/de/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

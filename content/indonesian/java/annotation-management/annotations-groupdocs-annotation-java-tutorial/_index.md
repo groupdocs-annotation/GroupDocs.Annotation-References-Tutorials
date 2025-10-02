@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat, mengelola, dan menyimpan anotasi dalam dokumen secara efisien menggunakan GroupDocs.Annotation untuk Java. Panduan langkah demi langkah ini mencakup inisialisasi, jenis anotasi, dan kiat integrasi."
 "title": "Panduan Lengkap Menggunakan GroupDocs.Annotation untuk Java untuk Membuat dan Mengelola Anotasi"
 "url": "/id/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

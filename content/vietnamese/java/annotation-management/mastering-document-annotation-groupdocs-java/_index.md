@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích tài liệu hiệu quả bằng GroupDocs.Annotation for Java. Hướng dẫn này bao gồm tải, chú thích PDF và tối ưu hóa môi trường Java của bạn bằng Maven."
 "title": "Làm chủ chú thích tài liệu trong Java&#58; Hướng dẫn toàn diện sử dụng GroupDocs.Annotation"
 "url": "/vi/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

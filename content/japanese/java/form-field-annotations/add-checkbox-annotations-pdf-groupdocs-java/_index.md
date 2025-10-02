@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、インタラクティブなチェックボックス注釈でPDFドキュメントを強化する方法を学びましょう。このステップバイステップガイドに従ってください。"
 "title": "GroupDocs.Annotation for Java を使用して PDF にチェックボックス注釈を追加する方法"
 "url": "/ja/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

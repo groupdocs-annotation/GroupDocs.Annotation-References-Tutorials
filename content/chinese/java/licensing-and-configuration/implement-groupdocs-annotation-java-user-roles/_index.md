@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 向 Java 应用程序中的注释添加用户角色，以增强文档管理和协作。"
 "title": "实现 GroupDocs.Annotation Java&#58; 将用户角色添加到注释"
 "url": "/zh/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

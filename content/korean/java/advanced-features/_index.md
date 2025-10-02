@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 고급 주석 기능, 사용자 정의 및 특수 기능을 구현하는 방법에 대한 전체 튜토리얼입니다."
 "title": "Java를 위한 고급 GroupDocs.Annotation 기능 튜토리얼"
 "url": "/ko/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

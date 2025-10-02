@@ -2,6 +2,7 @@
 "description": "Tutoriales completos para agregar, eliminar, actualizar y administrar anotaciones en documentos usando GroupDocs.Annotation para Java."
 "title": "Tutoriales de gestión de anotaciones para GroupDocs.Annotation Java"
 "url": "/es/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

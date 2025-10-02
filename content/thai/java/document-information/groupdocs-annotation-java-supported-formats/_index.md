@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีใช้ GroupDocs.Annotation สำหรับ Java เพื่อแสดงรายการรูปแบบไฟล์ที่รองรับอย่างมีประสิทธิภาพด้วยคู่มือทีละขั้นตอนของเรา เหมาะอย่างยิ่งสำหรับการปรับปรุงแอปพลิเคชันคำอธิบายประกอบเอกสารของคุณ"
 "title": "วิธีการดึงข้อมูลรูปแบบไฟล์ที่รองรับใน GroupDocs.Annotation สำหรับ Java - คู่มือฉบับสมบูรณ์"
 "url": "/th/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

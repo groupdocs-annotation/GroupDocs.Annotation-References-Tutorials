@@ -3,6 +3,7 @@
 "description": "Apprenez à extraire les annotations de vos documents et à les sérialiser en XML avec GroupDocs.Annotation pour .NET. Améliorez votre flux de travail de gestion documentaire dès aujourd'hui !"
 "title": "Comment extraire et sérialiser des annotations dans .NET à l'aide de GroupDocs.Annotation"
 "url": "/fr/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

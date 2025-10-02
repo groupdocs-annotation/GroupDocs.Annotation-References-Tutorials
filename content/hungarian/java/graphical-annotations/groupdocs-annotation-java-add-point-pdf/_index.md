@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan javíthatja PDF-dokumentumait pontszerű megjegyzések hozzáadásával programozott módon a GroupDocs.Annotation for Java segítségével. Ez az útmutató a beállítást, a megvalósítást és a gyakorlati alkalmazásokat ismerteti."
 "title": "Pontjegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation for Java használatával"
 "url": "/hu/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ansöka om licenser"
 "url": "/sv/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs ile Java'da bağlantı açıklamalarında ustalaşın. Belge etkileşimini geliştirmek için kurulum, başlatma ve özelleştirmeyi öğrenin."
 "title": "GroupDocs Kullanarak Java'da Bağlantı Açıklamalarını Uygulamak - Kapsamlı Bir Kılavuz"
 "url": "/tr/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

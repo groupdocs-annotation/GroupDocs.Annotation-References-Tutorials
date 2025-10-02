@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET'te Açıklamalara Verilen Yanıtları Kaldırın"
 "url": "/tr/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

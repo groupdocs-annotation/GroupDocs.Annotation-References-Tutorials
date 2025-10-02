@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET ile belgelerden açıklamaları nasıl çıkaracağınızı ve bunları XML'e nasıl dönüştüreceğinizi öğrenin. Belge yönetimi iş akışınızı bugün geliştirin!"
 "title": "GroupDocs.Annotation'ı kullanarak .NET'te Açıklamaları Nasıl Çıkarır ve Serileştirirsiniz"
 "url": "/tr/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

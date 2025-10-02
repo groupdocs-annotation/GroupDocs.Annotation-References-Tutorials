@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายขีดเส้นใต้ในเอกสารของคุณอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงความชัดเจนและการสื่อสารของเอกสารได้อย่างง่ายดาย"
 "title": "วิธีการเพิ่มคำอธิบายแบบขีดเส้นใต้ใน .NET ด้วย GroupDocs.Annotation"
 "url": "/th/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

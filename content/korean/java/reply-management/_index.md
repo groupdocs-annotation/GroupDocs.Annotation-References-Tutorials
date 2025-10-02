@@ -2,6 +2,7 @@
 "description": "Java용 GroupDocs.Annotation을 사용하여 댓글 스레드, 답변 및 협업 토론을 구현하기 위한 단계별 튜토리얼입니다."
 "title": "GroupDocs.Annotation Java를 위한 회신 관리 튜토리얼"
 "url": "/ko/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

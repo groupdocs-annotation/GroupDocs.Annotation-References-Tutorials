@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "संस्करण कुंजी का उपयोग करके एनोटेशन की सूची प्राप्त करें"
 "url": "/hi/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

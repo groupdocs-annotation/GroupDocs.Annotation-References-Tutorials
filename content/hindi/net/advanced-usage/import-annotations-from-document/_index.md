@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ से एनोटेशन आयात करें"
 "url": "/hi/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

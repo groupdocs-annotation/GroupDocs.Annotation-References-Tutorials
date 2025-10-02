@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengelola balasan anotasi secara efisien menggunakan GroupDocs.Annotation for .NET. Panduan ini mencakup integrasi, penambahan balasan, dan kasus penggunaan praktis."
 "title": "Panduan untuk Menerapkan Manajemen Balasan Anotasi di .NET dengan GroupDocs.Annotation"
 "url": "/id/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

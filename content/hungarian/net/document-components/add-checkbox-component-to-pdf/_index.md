@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Jelölőnégyzet-összetevő hozzáadása PDF dokumentumhoz"
 "url": "/hu/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

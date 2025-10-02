@@ -3,6 +3,7 @@
 "description": ".NET में शक्तिशाली GroupDocs.Annotation लाइब्रेरी का उपयोग करके विशिष्ट छवि रिज़ॉल्यूशन के साथ उच्च-गुणवत्ता वाले PDF दस्तावेज़ पूर्वावलोकन बनाना सीखें। आज ही अपने दस्तावेज़ प्रबंधन वर्कफ़्लो को अनुकूलित करें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके कस्टम रिज़ॉल्यूशन पर उच्च-गुणवत्ता वाले PDF पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

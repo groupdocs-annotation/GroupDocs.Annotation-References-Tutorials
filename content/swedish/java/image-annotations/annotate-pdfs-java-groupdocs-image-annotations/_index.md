@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till bildannoteringar i PDF-filer med GroupDocs.Annotation för Java. Effektivisera dina dokumentarbetsflöden och förbättra samarbetet."
 "title": "Lägg till bildannoteringar till PDF-filer med GroupDocs.Annotation Java - En komplett handledning"
 "url": "/sv/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

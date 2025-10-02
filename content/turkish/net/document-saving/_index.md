@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak çeşitli seçeneklerle açıklamalı belgeleri kaydetmeye yönelik kapsamlı eğitimler."
 "title": "GroupDocs.Annotation .NET için Belge Kaydetme Eğitimleri"
 "url": "/tr/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

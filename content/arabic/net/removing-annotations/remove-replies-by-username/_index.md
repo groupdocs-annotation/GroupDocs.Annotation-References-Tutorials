@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إزالة الردود حسب اسم المستخدم في .NET"
 "url": "/ar/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

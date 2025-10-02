@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation 개발자 가이드"
 "title": "문서 주석 API | GroupDocs.Annotation 튜토리얼 및 SDK 예제"
 "url": "/ko/"
+type: docs
 "weight": 11
 ---
 

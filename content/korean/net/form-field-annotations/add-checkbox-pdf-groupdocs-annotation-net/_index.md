@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 대화형 체크박스를 추가하여 PDF 문서를 개선하는 방법을 알아보세요. 이 단계별 가이드를 따라 디지털 문서에서 양식 필드 주석을 간소화하세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 PDF에 체크박스를 추가하는 방법 - 단계별 가이드"
 "url": "/ko/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

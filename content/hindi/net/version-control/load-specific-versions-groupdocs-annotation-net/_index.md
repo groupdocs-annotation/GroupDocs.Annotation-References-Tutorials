@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके एनोटेट किए गए दस्तावेज़ों के विशिष्ट संस्करणों को कुशलतापूर्वक प्रबंधित और लोड करना सीखें। आज ही अपने दस्तावेज़ प्रबंधन सिस्टम को बेहतर बनाएँ!"
 "title": ".NET के लिए GroupDocs.Annotation के साथ विशिष्ट दस्तावेज़ संस्करण लोड करें एक व्यापक गाइड"
 "url": "/hi/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

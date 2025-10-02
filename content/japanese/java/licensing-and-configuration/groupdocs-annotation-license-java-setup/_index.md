@@ -3,6 +3,7 @@
 "description": "Java アプリケーションに GroupDocs.Annotation ライセンスを設定および構成し、簡単に全機能のロックを解除する方法を学びます。"
 "title": "JavaでGroupDocs.Annotationライセンスを設定する方法 ― 包括的なガイド"
 "url": "/ja/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

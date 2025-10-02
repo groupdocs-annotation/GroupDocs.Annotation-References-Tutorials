@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java API 从文档注释中移除回复。本分步指南将帮助您提升文档管理能力。"
 "title": "如何使用 GroupDocs.Annotation API 在 Java 中按 ID 删除回复"
 "url": "/zh/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

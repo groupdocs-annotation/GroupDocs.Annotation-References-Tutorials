@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "احصل على جميع مفاتيح الإصدار على المستند"
 "url": "/ar/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

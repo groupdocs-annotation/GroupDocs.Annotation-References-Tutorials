@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية لتمييز النصوص باستخدام GroupDocs.Annotation لـ .NET. حسّن تعاونك في المستندات وحسّن إنتاجيتك مع هذا الدليل الشامل."
 "title": "كيفية إضافة تعليقات توضيحية لتمييز النص باستخدام GroupDocs.Annotation لـ .NET"
 "url": "/ar/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

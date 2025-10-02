@@ -3,6 +3,7 @@
 "description": "Lär dig hur du tar bort svar från anteckningar i dokument med GroupDocs.Annotation för Java API. Förbättra din dokumenthantering med den här steg-för-steg-guiden."
 "title": "Hur man tar bort svar efter ID i Java med hjälp av GroupDocs.Annotation API"
 "url": "/sv/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

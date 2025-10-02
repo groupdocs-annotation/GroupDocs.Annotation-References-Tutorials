@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "스트림에서 문서 로드"
 "url": "/ko/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

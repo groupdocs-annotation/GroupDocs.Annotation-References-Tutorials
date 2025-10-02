@@ -3,6 +3,7 @@
 "description": "Apprenez à créer des aperçus de documents concis et pertinents à partir de colonnes spécifiques de feuilles de calcul grâce à GroupDocs.Annotation pour .NET. Idéal pour optimiser les flux de travail d'analyse de données et de gestion informatique."
 "title": "Générer des aperçus ciblés de feuilles Excel à l'aide de GroupDocs.Annotation .NET"
 "url": "/fr/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

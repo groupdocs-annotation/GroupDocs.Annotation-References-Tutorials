@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ανακτάτε αποτελεσματικά υποστηριζόμενες μορφές αρχείων χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός καλύπτει την ενσωμάτωση, την υλοποίηση και τις πρακτικές εφαρμογές."
 "title": "Πώς να ανακτήσετε υποστηριζόμενες μορφές αρχείων με το GroupDocs.Annotation για .NET™; Ένας πλήρης οδηγός"
 "url": "/el/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

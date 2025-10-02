@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java'yı kullanarak parola korumalı belgeleri güvenli bir şekilde yüklemeyi, açıklama eklemeyi ve kaydetmeyi öğrenin. Java uygulamalarınızdaki belge güvenliğini artırın."
 "title": "GroupDocs.Annotation ile Güvenli Belge İşleme Java&#58; Parola Korumalı Belgeleri Yükleyin ve Ekleyin"
 "url": "/tr/java/advanced-features/groupdocs-annotation-java-password-documents/"
+type: docs
 "weight": 1
 ---
 

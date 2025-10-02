@@ -3,6 +3,7 @@
 "description": ".NET için GroupDocs.Annotation kitaplığını kullanarak belgelerinize metin üstü çizili ek açıklamalar eklemeyi öğrenin, belge inceleme ve işbirliğini geliştirin."
 "title": "GroupDocs.Annotation Kullanarak .NET'te Metin Üstü Çizili Açıklama Ekleme"
 "url": "/tr/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

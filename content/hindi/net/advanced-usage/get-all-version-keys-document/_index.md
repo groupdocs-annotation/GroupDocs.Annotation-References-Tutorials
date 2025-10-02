@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ पर सभी संस्करण कुंजियाँ प्राप्त करें"
 "url": "/hi/net/advanced-usage/get-all-version-keys-document/"
+type: docs
 "weight": 16
 ---
 

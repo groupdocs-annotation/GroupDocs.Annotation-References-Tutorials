@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Viktiga saker att göra för dokumentinläsning"
 "url": "/sv/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

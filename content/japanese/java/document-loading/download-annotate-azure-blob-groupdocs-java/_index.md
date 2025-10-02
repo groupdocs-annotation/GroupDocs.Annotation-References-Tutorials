@@ -3,6 +3,7 @@
 "description": "Azure Blob Storageからファイルをシームレスにダウンロードし、GroupDocs.Annotation for Javaを使用して注釈を付ける方法を学びましょう。この包括的なガイドで、ドキュメント管理ワークフローを強化しましょう。"
 "title": "GroupDocs.Annotation Java を使用して Azure BLOB ファイルをダウンロードして注釈を付ける方法"
 "url": "/ja/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

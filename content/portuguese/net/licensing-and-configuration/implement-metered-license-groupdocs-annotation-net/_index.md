@@ -3,6 +3,7 @@
 "description": "Aprenda a configurar e gerenciar uma licença medida com o GroupDocs.Annotation para .NET, garantindo conformidade e funcionalidade ideal."
 "title": "Implementando uma Licença Medida no GroupDocs.Annotation para .NET - Um Guia Abrangente"
 "url": "/pt/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

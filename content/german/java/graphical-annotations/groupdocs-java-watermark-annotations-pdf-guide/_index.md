@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Ihre Dokumente mit Wasserzeichenanmerkungen mithilfe von GroupDocs.Annotation für Java schützen. Diese Anleitung enthält Tipps zur Einrichtung, Anpassung und Optimierung."
 "title": "Implementieren von Wasserzeichenanmerkungen in PDFs mit GroupDocs.Annotation Java – Ein umfassender Leitfaden"
 "url": "/de/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

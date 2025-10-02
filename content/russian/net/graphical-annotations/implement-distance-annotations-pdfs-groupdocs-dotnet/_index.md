@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять точные аннотации расстояния в ваши PDF-документы с помощью GroupDocs.Annotation для .NET. Это руководство охватывает настройку, конфигурацию и практические приложения."
 "title": "Реализация аннотаций расстояний в PDF-файлах с использованием GroupDocs.Annotation для .NET"
 "url": "/ru/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

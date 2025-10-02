@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá szöveges áthúzott jegyzeteket a dokumentumaihoz a .NET-hez készült GroupDocs.Annotation könyvtár segítségével, amivel javíthatja a dokumentumok áttekintését és az együttműködést."
 "title": "Szöveges áthúzott jegyzet hozzáadása .NET-ben a GroupDocs.Annotation használatával"
 "url": "/hu/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat vodoznaky pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka popisuje nastavení, podrobnou implementaci a osvědčené postupy pro zabezpečení a branding dokumentů."
 "title": "Implementace funkce Přidat vodoznak pomocí GroupDocs.Annotation v .NET – Komplexní průvodce zabezpečením a brandingem dokumentů"
 "url": "/cs/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

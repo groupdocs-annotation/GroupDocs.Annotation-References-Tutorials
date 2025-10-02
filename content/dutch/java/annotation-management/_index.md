@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het toevoegen, verwijderen, bijwerken en beheren van annotaties in documenten met GroupDocs.Annotation voor Java."
 "title": "Handleidingen voor annotatiebeheer voor GroupDocs.Annotation Java"
 "url": "/nl/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

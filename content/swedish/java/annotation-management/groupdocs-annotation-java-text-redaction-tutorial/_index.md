@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt redigerar text i PDF-filer med hjälp av det kraftfulla Java-biblioteket GroupDocs.Annotation. Den här guiden behandlar inställningar, skapande av annoteringar och sparprocesser."
 "title": "Behärska textborttagning i PDF-filer med GroupDocs.Annotation Java API – en omfattande guide"
 "url": "/sv/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

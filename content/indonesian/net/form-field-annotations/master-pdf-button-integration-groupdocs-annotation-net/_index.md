@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengintegrasikan tombol interaktif ke dalam dokumen PDF Anda menggunakan GroupDocs.Annotation for .NET yang canggih. Tingkatkan keterlibatan pengguna dengan petunjuk langkah demi langkah."
 "title": "Integrasikan Tombol Interaktif dalam PDF Menggunakan GroupDocs.Annotation .NET SDK"
 "url": "/id/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

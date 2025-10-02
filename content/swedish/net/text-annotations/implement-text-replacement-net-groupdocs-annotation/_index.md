@@ -3,6 +3,7 @@
 "description": "Lär dig hur du implementerar textersättningsannoteringar i dina .NET-applikationer med GroupDocs.Annotation. Förbättra dokumentläsbarhet och funktionalitet utan ansträngning."
 "title": "Hur man implementerar textersättning i .NET med GroupDocs.Annotation för effektiv dokumentannotering"
 "url": "/sv/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

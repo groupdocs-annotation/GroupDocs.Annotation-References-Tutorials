@@ -3,6 +3,7 @@
 "description": "Pelajari cara menerapkan anotasi penyuntingan teks dalam aplikasi .NET menggunakan GroupDocs.Annotation. Amankan informasi sensitif dengan mudah."
 "title": "Menerapkan Redaksi Teks di .NET Menggunakan GroupDocs.Annotation&#58; Panduan Lengkap"
 "url": "/id/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

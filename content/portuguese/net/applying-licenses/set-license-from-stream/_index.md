@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Definir licença do fluxo"
 "url": "/pt/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

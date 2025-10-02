@@ -3,6 +3,7 @@
 "description": "Узнайте, как безопасно комментировать защищенные паролем PDF-файлы с помощью GroupDocs.Annotation для .NET. Это пошаговое руководство охватывает загрузку, аннотирование и сохранение документов."
 "title": "Как аннотировать защищенные паролем PDF-файлы с помощью GroupDocs.Annotation для .NET | Пошаговое руководство"
 "url": "/ru/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

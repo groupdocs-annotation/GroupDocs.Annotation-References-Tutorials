@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة حول كيفية إضافة التعليقات النصية وتحريرها وإدارتها في المستندات باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس شرح النصوص لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

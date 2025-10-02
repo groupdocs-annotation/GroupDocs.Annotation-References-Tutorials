@@ -3,6 +3,7 @@
 "description": "Aprenda a gerenciar anotações em Java com eficiência usando o GroupDocs.Annotation. Este guia aborda como carregar, remover e otimizar fluxos de trabalho de documentos."
 "title": "Gerenciamento de Anotações Mestre em Java - Guia Completo com GroupDocs.Annotation"
 "url": "/pt/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

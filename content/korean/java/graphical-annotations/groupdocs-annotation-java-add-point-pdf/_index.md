@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 프로그래밍 방식으로 포인트 주석을 추가하여 PDF 문서를 개선하는 방법을 알아보세요. 이 가이드에서는 설정, 구현 및 실제 적용 사례를 다룹니다."
 "title": "Java용 GroupDocs.Annotation을 사용하여 PDF에 포인트 주석을 추가하는 방법"
 "url": "/ko/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

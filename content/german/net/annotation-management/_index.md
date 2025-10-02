@@ -2,6 +2,7 @@
 "description": "Vollständige Tutorials zum Hinzufügen, Entfernen, Aktualisieren und Verwalten von Anmerkungen in Dokumenten mit GroupDocs.Annotation für .NET."
 "title": "Tutorials zur Annotationsverwaltung für GroupDocs.Annotation .NET"
 "url": "/de/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

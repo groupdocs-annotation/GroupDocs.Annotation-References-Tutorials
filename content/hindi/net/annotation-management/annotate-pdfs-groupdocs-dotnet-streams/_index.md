@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation के साथ स्ट्रीम का उपयोग करके .NET वातावरण में PDF दस्तावेज़ों को कुशलतापूर्वक एनोटेट करना सीखें। अपने दस्तावेज़ प्रबंधन वर्कफ़्लो को बढ़ाएँ।"
 "title": "GroupDocs.Annotation .NET via Streams&#58; का उपयोग करके PDF को एनोटेट करें एक व्यापक गाइड"
 "url": "/hi/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

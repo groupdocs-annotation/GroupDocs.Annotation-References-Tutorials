@@ -2,6 +2,7 @@
 "description": "Java 애플리케이션에서 라이센싱 설정, 옵션 구성 및 GroupDocs.Annotation 관리에 대한 전체 튜토리얼입니다."
 "title": "Java용 GroupDocs.Annotation 라이선싱 및 구성 튜토리얼"
 "url": "/ko/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

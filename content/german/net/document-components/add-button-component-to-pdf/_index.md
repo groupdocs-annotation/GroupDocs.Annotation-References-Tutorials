@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Schaltflächenkomponente zum PDF-Dokument hinzufügen"
 "url": "/de/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

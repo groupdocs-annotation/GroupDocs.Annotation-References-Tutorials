@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "โหลดเอกสารที่ป้องกันด้วยรหัสผ่าน"
 "url": "/th/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

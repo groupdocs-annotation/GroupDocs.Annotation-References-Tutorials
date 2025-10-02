@@ -3,6 +3,7 @@
 "description": "Découvrez comment ajouter des annotations fléchées à vos documents avec GroupDocs.Annotation pour .NET. Ce guide fournit des instructions étape par étape avec des exemples de code."
 "title": "Comment ajouter des annotations fléchées dans les fichiers PDF à l'aide de GroupDocs.Annotation pour .NET"
 "url": "/fr/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

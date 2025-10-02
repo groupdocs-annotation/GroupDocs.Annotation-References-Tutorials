@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách thiết lập cấp phép, cấu hình tùy chọn và quản lý GroupDocs.Annotation trong các ứng dụng Java."
 "title": "GroupDocs.Annotation Hướng dẫn cấp phép và cấu hình cho Java"
 "url": "/vi/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

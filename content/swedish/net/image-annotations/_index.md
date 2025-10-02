@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att lägga till och hantera bildannoteringar i dokument med GroupDocs.Annotation för .NET."
 "title": "Handledningar för bildannotering för GroupDocs.Annotation .NET"
 "url": "/sv/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

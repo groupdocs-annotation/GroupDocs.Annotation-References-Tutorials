@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "旋转 PDF 文档"
 "url": "/zh/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Metnin Üzerine Resim Açıklaması Yerleştirin"
 "url": "/tr/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

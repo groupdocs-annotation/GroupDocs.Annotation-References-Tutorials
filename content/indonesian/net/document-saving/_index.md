@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menyimpan dokumen beranotasi dengan berbagai opsi menggunakan GroupDocs.Annotation untuk .NET."
 "title": "Tutorial Penyimpanan Dokumen untuk GroupDocs.Annotation .NET"
 "url": "/id/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

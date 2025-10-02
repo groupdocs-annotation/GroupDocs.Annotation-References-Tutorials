@@ -37,13 +37,14 @@ jobs:
         with:
           repository: groupdocs/tutorials-theme
           token: ${{ secrets.REPO_TOKEN }}
+          ref: beta
           fetch-depth: 0
           path: themes/tutorials-theme      
       # Step 2 - Sets up the latest version of Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-            hugo-version: '0.97.3'
+            hugo-version: 'latest'
             extended: true
       - name: Install Dependicies1
         run:  npm install -D --save autoprefixer

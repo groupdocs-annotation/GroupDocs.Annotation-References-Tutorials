@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak belgelerde açıklamaları etkili bir şekilde nasıl oluşturacağınızı, yöneteceğinizi ve kaydedeceğinizi öğrenin. Bu adım adım kılavuz, başlatma, açıklama türleri ve bütünleştirme ipuçlarını kapsar."
 "title": "Tam Kılavuz&#58; Java'da Açıklamaları Oluşturmak ve Yönetmek için GroupDocs.Annotation'ı Kullanma"
 "url": "/tr/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

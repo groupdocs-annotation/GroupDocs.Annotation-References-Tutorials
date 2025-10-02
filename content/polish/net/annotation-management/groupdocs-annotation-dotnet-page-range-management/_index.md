@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie zarządzać zakresami stron za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik obejmuje instalację, konfigurację i najlepsze praktyki zapisywania określonych stron."
 "title": "Opanowanie zarządzania zakresem stron w .NET z GroupDocs.Annotation – skuteczne techniki adnotacji"
 "url": "/pl/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

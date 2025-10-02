@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 在文件和 XML 檔案之間匯入和匯出註解的逐步教學。"
 "title": "GroupDocs.Annotation .NET 的註解匯入與匯出教學課程"
 "url": "/zh-hant/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

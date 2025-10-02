@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إعداد وتطبيق ترخيص GroupDocs.Annotation .NET باستخدام تدفقات الملفات. تعرّف على جميع الميزات مع هذا الدليل الشامل."
 "title": "مجموعة Master GroupDocs.Annotation .NET&#58; تعيين الترخيص باستخدام تدفق الملفات في C#"
 "url": "/ar/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

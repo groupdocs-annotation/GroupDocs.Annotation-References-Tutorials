@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية فعّالة إلى مستندات PDF في بيئة .NET باستخدام التدفقات مع GroupDocs.Annotation. عزّز سير عمل إدارة مستنداتك."
 "title": "شرح ملفات PDF باستخدام GroupDocs.Annotation .NET عبر Streams - دليل شامل"
 "url": "/ar/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

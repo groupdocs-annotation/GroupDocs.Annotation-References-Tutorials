@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Carica documento da Azure"
 "url": "/it/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

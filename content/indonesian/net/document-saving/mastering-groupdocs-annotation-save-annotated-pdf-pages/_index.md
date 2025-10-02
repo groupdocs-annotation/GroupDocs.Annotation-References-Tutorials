@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyimpan halaman PDF yang diberi anotasi secara efisien menggunakan GroupDocs.Annotation for .NET. Tingkatkan pengelolaan dan kolaborasi dokumen dengan panduan terperinci ini."
 "title": "Cara Menyimpan Halaman Beranotasi dalam PDF Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

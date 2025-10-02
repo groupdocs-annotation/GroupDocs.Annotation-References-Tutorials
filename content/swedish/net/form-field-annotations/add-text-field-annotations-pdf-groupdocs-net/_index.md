@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till interaktiva textfältsannoteringar i dina PDF-dokument med GroupDocs.Annotation för .NET. Följ den här steg-för-steg-guiden för att förbättra dokumentinteraktiviteten."
 "title": "Så här lägger du till textfältsannoteringar i PDF-filer med GroupDocs.Annotation för .NET (handledning)"
 "url": "/sv/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

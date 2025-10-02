@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية إضافة تعليقات توضيحية مسطرة إلى مستنداتك بكفاءة باستخدام GroupDocs.Annotation لـ .NET. حسّن وضوح المستند وتواصله بسهولة."
 "title": "كيفية إضافة تعليقات توضيحية مسطرة في .NET باستخدام GroupDocs.Annotation"
 "url": "/ar/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

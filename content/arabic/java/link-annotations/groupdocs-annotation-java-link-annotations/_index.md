@@ -3,6 +3,7 @@
 "description": "أتقن شرح الروابط في جافا باستخدام GroupDocs. تعلّم كيفية الإعداد والتهيئة والتخصيص لتحسين تفاعل المستندات."
 "title": "تنفيذ تعليقات الروابط في Java باستخدام GroupDocs - دليل شامل"
 "url": "/ar/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

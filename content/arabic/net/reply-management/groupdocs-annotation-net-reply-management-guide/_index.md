@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إدارة ردود التعليقات التوضيحية بكفاءة باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل التكامل، وإضافة الردود، وحالات الاستخدام العملية."
 "title": "دليل لتنفيذ إدارة ردود التعليقات التوضيحية في .NET باستخدام GroupDocs.Annotation"
 "url": "/ar/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

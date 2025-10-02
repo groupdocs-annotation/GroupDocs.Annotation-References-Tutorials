@@ -3,6 +3,7 @@
 "description": "了解如何使用 InputStream 在 Java 中有效設定 GroupDocs.Annotation 授權。這份全面的指南將幫助您簡化工作流程並提升應用程式效能。"
 "title": "精簡的 GroupDocs.Annotation Java 授權－如何使用 InputStream 進行授權設定"
 "url": "/zh-hant/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

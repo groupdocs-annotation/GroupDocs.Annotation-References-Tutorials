@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 實作文件版本、追蹤變更和管理註解歷史記錄的逐步教學。"
 "title": "GroupDocs.Annotation .NET 版本控制教學課程"
 "url": "/zh-hant/net/version-control/"
+type: docs
 "weight": 13
 ---
 

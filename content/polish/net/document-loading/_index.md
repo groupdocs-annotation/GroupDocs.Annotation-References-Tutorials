@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące ładowania dokumentów z różnych źródeł przy użyciu GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki dotyczące ładowania dokumentów dla GroupDocs.Annotation .NET"
 "url": "/pl/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

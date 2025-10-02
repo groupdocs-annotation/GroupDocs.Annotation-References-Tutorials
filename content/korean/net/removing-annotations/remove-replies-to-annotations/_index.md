@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET에서 주석에 대한 답변 제거"
 "url": "/ko/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

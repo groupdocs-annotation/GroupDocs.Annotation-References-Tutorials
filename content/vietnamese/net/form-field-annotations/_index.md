@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để thêm trường biểu mẫu và thành phần tương tác vào tài liệu bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn chú thích trường biểu mẫu cho GroupDocs.Annotation .NET"
 "url": "/vi/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

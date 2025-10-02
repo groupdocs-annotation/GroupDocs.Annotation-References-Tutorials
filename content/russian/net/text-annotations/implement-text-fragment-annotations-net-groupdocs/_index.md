@@ -3,6 +3,7 @@
 "description": "Узнайте, как реализовать аннотации фрагментов текста в .NET с помощью GroupDocs.Annotation. Это руководство охватывает настройку, реализацию и практические приложения для эффективного управления документами."
 "title": "Реализация аннотаций фрагментов текста в .NET с помощью GroupDocs&#58; Подробное руководство"
 "url": "/ru/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat přesné anotace vzdálenosti do dokumentů PDF pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka se zabývá nastavením, konfigurací a praktickými aplikacemi."
 "title": "Implementace anotací vzdálenosti v PDF pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/graphical-annotations/implement-distance-annotations-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

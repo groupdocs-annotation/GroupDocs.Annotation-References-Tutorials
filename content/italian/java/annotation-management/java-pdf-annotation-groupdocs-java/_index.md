@@ -3,6 +3,7 @@
 "description": "Scopri come annotare in modo efficiente i documenti PDF evidenziando le aree utilizzando la potente API GroupDocs.Annotation per Java, migliorando la collaborazione e la produttività."
 "title": "Come annotare i PDF in Java utilizzando GroupDocs.Annotation"
 "url": "/it/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

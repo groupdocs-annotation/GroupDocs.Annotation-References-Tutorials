@@ -2,6 +2,7 @@
 "description": "Полные руководства по созданию предпросмотров документов, миниатюр и визуальных представлений с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по предварительному просмотру документов для GroupDocs.Annotation Java"
 "url": "/ru/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan hozhat létre tömör és releváns dokumentum-előnézeteket adott munkalap oszlopokból a GroupDocs.Annotation for .NET segítségével. Tökéletes az adatelemzési és IT-menedzsment munkafolyamatainak egyszerűsítéséhez."
 "title": "Célzott Excel-táblázat-előnézetek létrehozása a GroupDocs.Annotation .NET használatával"
 "url": "/hu/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

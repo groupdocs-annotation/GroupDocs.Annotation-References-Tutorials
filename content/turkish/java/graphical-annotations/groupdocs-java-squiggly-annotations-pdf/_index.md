@@ -3,6 +3,7 @@
 "description": "Java için GroupDocs.Annotation'ı kullanarak PDF belgelerinize kıvrımlı ek açıklamalar eklemeyi öğrenin, belge incelemesini ve işbirliğini geliştirin."
 "title": "GroupDocs.Annotation for Java Kullanılarak PDF'lere Dalgalı Açıklamalar Nasıl Eklenir"
 "url": "/tr/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

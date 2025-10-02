@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لإضافة حقول النماذج والمكونات التفاعلية إلى المستندات باستخدام GroupDocs.Annotation for Java."
 "title": "دروس توضيحية لحقول النموذج في GroupDocs.Annotation Java"
 "url": "/ar/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro ukládání anotovaných dokumentů s různými možnostmi pomocí GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro ukládání dokumentů v GroupDocs.Annotation v Javě"
 "url": "/cs/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके एनोटेशन उत्तरों को कुशलतापूर्वक प्रबंधित करना सीखें। यह मार्गदर्शिका एकीकरण, उत्तर जोड़ना और व्यावहारिक उपयोग के मामलों को कवर करती है।"
 "title": "GroupDocs.Annotation के साथ .NET में एनोटेशन उत्तर प्रबंधन को क्रियान्वित करने के लिए मार्गदर्शिका"
 "url": "/hi/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

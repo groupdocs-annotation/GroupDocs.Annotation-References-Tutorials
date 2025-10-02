@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan távolíthat el hatékonyan megjegyzéseket a dokumentumokból a GroupDocs.Annotation for .NET segítségével. Egyszerűsítse dokumentum-munkafolyamatait és növelje az áttekinthetőséget ezzel az átfogó útmutatóval."
 "title": "Jegyzetek eltávolítása a .NET dokumentumokból a GroupDocs.Annotation használatával"
 "url": "/hu/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

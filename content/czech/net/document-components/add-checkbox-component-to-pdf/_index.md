@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Přidat komponentu zaškrtávacího políčka do dokumentu PDF"
 "url": "/cs/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

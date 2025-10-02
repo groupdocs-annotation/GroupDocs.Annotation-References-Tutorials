@@ -3,6 +3,7 @@
 "description": "Naučte se, jak anotovat soubory PDF online pomocí GroupDocs.Annotation pro .NET. Zjednodušte procesy kontroly dokumentů pomocí efektivních technik anotace."
 "title": "Jak anotovat PDF soubory z URL adresy pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

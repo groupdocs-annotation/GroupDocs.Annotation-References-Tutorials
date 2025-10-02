@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "사용자 정의 글꼴 로딩"
 "url": "/ko/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

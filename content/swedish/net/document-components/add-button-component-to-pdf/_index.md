@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Lägg till knappkomponent i PDF-dokument"
 "url": "/sv/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

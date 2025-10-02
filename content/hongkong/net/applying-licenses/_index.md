@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "應用許可證"
 "url": "/zh-hant/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

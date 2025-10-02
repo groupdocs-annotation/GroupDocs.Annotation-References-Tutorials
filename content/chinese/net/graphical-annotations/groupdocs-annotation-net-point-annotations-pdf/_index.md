@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET，通过交互式点注释增强 PDF 文档。本分步指南涵盖设置、实施和故障排除。"
 "title": "如何使用 GroupDocs.Annotation for .NET 向 PDF 添加点注释"
 "url": "/zh/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

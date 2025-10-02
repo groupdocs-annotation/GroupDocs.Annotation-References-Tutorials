@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać falowane adnotacje do dokumentów PDF za pomocą GroupDocs.Annotation dla Java, co usprawnia przeglądanie dokumentów i współpracę."
 "title": "Jak dodawać falujące adnotacje do plików PDF za pomocą GroupDocs.Annotation dla języka Java"
 "url": "/pl/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

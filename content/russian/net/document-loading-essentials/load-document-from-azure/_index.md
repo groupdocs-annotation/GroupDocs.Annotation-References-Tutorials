@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Загрузить документ из Azure"
 "url": "/ru/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

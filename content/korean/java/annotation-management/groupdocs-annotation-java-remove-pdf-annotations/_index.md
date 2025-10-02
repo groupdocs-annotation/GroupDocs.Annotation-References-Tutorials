@@ -3,6 +3,7 @@
 "description": "Java에서 GroupDocs.Annotation API를 사용하여 PDF 문서에서 주석을 완벽하게 제거하는 방법을 알아보세요. 효율적인 문서 관리를 위한 단계별 가이드를 따라해 보세요."
 "title": "GroupDocs.Annotation Java API를 사용하여 PDF에서 주석을 제거하는 방법"
 "url": "/ko/java/annotation-management/groupdocs-annotation-java-remove-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

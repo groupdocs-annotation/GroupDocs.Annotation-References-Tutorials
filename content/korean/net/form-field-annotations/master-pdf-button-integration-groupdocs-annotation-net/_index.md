@@ -3,6 +3,7 @@
 "description": "강력한 GroupDocs.Annotation for .NET을 사용하여 PDF 문서에 대화형 버튼을 통합하는 방법을 알아보세요. 단계별 안내를 통해 사용자 참여를 향상시키세요."
 "title": "GroupDocs.Annotation .NET SDK를 사용하여 PDF에 대화형 버튼 통합"
 "url": "/ko/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

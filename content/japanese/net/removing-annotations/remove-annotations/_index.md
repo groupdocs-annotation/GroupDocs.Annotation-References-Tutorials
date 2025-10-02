@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET で注釈を削除する"
 "url": "/ja/net/removing-annotations/remove-annotations/"
+type: docs
 "weight": 10
 ---
 

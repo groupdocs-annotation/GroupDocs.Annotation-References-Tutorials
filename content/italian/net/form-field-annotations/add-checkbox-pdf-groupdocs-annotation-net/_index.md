@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare i tuoi documenti PDF aggiungendo caselle di controllo interattive utilizzando GroupDocs.Annotation per .NET. Segui questa guida passo passo per semplificare le annotazioni nei campi modulo nei tuoi documenti digitali."
 "title": "Come aggiungere una casella di controllo a un PDF con GroupDocs.Annotation per .NET&#58; una guida passo passo"
 "url": "/it/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

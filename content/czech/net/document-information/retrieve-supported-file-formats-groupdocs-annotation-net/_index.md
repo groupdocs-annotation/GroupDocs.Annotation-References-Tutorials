@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně načítat podporované formáty souborů pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka se zabývá integrací, implementací a praktickými aplikacemi."
 "title": "Jak načíst podporované formáty souborů pomocí GroupDocs.Annotation pro .NET – Komplexní průvodce"
 "url": "/cs/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

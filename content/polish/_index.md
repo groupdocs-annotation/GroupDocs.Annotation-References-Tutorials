@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation Podręczniki programistyczne"
 "title": "API adnotacji dokumentów | Samouczki GroupDocs.Annotation i przykłady SDK"
 "url": "/pl/"
+type: docs
 "weight": 11
 ---
 

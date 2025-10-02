@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إنشاء معاينات فعّالة لصفحات PDF باستخدام GroupDocs.Annotation لـ .NET. حسّن تفاعل المستندات وسهّل سير عملك."
 "title": "إنشاء معاينات لصفحات PDF باستخدام GroupDocs.Annotation .NET - دليل شامل"
 "url": "/ar/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

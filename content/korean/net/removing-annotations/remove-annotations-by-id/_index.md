@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ID로 주석 제거"
 "url": "/ko/net/removing-annotations/remove-annotations-by-id/"
+type: docs
 "weight": 11
 ---
 

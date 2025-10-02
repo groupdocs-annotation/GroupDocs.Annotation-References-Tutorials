@@ -3,6 +3,7 @@
 "description": "Aprenda a integrar botões interativos aos seus documentos PDF usando o poderoso GroupDocs.Annotation para .NET. Aumente o engajamento do usuário com instruções passo a passo."
 "title": "Integrar botões interativos em PDFs usando GroupDocs.Annotation .NET SDK"
 "url": "/pt/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

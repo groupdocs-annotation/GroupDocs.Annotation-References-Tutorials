@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tạo chú thích gạch bỏ văn bản trong Java PDF bằng GroupDocs.Annotation for Java. Thực hiện theo hướng dẫn từng bước này để nâng cao khả năng chỉnh sửa tài liệu của bạn."
 "title": "Chú thích gạch ngang PDF Java với GroupDocs&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

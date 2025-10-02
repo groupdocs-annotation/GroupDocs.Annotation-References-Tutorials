@@ -3,6 +3,7 @@
 "description": "उन्नत दस्तावेज़ प्रबंधन और सहयोग के लिए GroupDocs.Annotation का उपयोग करके अपने Java अनुप्रयोगों में एनोटेशन में उपयोगकर्ता भूमिकाएँ जोड़ने का तरीका जानें।"
 "title": "GroupDocs.Annotation Java को कार्यान्वित करें और एनोटेशन में उपयोगकर्ता भूमिकाएँ जोड़ें"
 "url": "/hi/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

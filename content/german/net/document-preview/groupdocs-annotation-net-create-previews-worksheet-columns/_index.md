@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET prägnante und relevante Dokumentvorschauen aus bestimmten Arbeitsblattspalten erstellen. Ideal für optimierte Arbeitsabläufe in der Datenanalyse und im IT-Management."
 "title": "Generieren Sie gezielte Excel-Tabellenvorschauen mit GroupDocs.Annotation .NET"
 "url": "/de/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

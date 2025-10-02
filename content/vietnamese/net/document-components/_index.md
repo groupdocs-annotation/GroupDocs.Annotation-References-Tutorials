@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Thành phần tài liệu"
 "url": "/vi/net/document-components/"
+type: docs
 "weight": 24
 ---
 

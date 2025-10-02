@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用して、Java PDFにテキスト取り消し線注釈を作成する方法を学びましょう。このステップバイステップのチュートリアルに従って、ドキュメント編集機能を強化しましょう。"
 "title": "GroupDocs を使用した Java PDF の取り消し線注釈の包括的なガイド"
 "url": "/ja/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

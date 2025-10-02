@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Azureからドキュメントを読み込む"
 "url": "/ja/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

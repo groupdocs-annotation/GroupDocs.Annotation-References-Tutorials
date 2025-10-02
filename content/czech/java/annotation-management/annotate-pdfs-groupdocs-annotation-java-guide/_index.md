@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně anotovat dokumenty PDF pomocí nástroje GroupDocs.Annotation pro Javu. Tato příručka se zabývá nastavením, přidáváním anotací a ukládáním souborů."
 "title": "Anotace PDF souborů pomocí GroupDocs.Annotation pro Javu – kompletní průvodce"
 "url": "/cs/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Mở khóa sức mạnh chú thích"
 "url": "/vi/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

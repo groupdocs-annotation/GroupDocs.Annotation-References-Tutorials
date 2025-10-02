@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt pijlannotaties aan pdf's kunt toevoegen met de GroupDocs.Annotation-bibliotheek voor Java. Verbeter de helderheid van uw documenten en verbeter de samenwerking."
 "title": "Pijlannotaties toevoegen in Java met GroupDocs.Annotation API"
 "url": "/nl/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

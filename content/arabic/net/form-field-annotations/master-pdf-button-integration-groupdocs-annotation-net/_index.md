@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية دمج الأزرار التفاعلية في مستندات PDF باستخدام أداة GroupDocs.Annotation القوية لـ .NET. عزّز تفاعل المستخدم من خلال التعليمات خطوة بخطوة."
 "title": "دمج الأزرار التفاعلية في ملفات PDF باستخدام GroupDocs.Annotation .NET SDK"
 "url": "/ar/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

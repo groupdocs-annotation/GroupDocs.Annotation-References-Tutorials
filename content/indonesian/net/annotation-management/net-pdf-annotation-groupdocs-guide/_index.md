@@ -3,6 +3,7 @@
 "description": "Pelajari cara menguasai anotasi PDF .NET dengan GroupDocs.Annotation. Panduan ini mencakup inisialisasi, pemrosesan halaman, transformasi, dan penyimpanan dokumen beranotasi secara efisien."
 "title": "Panduan Lengkap Anotasi PDF .NET Menggunakan GroupDocs.Annotation untuk Manajemen Dokumen yang Lebih Baik"
 "url": "/id/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

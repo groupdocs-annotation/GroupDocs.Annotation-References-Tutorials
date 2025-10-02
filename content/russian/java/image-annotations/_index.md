@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по добавлению и управлению аннотациями изображений в документах с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по аннотациям изображений для GroupDocs.Annotation Java"
 "url": "/ru/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

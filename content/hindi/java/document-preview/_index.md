@@ -2,6 +2,7 @@
 "description": "Java के लिए GroupDocs.Annotation के साथ दस्तावेज़ पूर्वावलोकन, थंबनेल और दृश्य प्रतिनिधित्व उत्पन्न करने के लिए पूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए दस्तावेज़ पूर्वावलोकन ट्यूटोरियल"
 "url": "/hi/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

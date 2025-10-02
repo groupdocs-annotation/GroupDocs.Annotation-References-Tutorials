@@ -3,6 +3,7 @@
 "description": "Lär dig hur du säkert antecknar lösenordsskyddade PDF-filer med GroupDocs.Annotation för .NET. Den här steg-för-steg-guiden beskriver hur du laddar, antecknar och sparar dokument."
 "title": "Så här kommenterar du lösenordsskyddade PDF-filer med GroupDocs.Annotation för .NET | Steg-för-steg-guide"
 "url": "/sv/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące zapisywania adnotowanych dokumentów z różnymi opcjami przy użyciu GroupDocs.Annotation dla .NET."
 "title": "Samouczki zapisywania dokumentów dla GroupDocs.Annotation .NET"
 "url": "/pl/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

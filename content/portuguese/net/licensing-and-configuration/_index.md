@@ -2,6 +2,7 @@
 "description": "Tutoriais completos para configurar licenciamento, configurar opções e gerenciar GroupDocs.Annotation em aplicativos .NET."
 "title": "Tutoriais de licenciamento e configuração do GroupDocs.Annotation para .NET"
 "url": "/pt/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

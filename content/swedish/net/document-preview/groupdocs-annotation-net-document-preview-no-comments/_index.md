@@ -3,6 +3,7 @@
 "description": "Lär dig hur du skapar rena dokumentförhandsvisningar utan kommentarer med GroupDocs.Annotation för .NET. Följ den här guiden för att förbättra dina dokumentpresentations- och granskningsprocesser."
 "title": "Hur man genererar dokumentförhandsvisningar utan kommentarer med GroupDocs.Annotation .NET"
 "url": "/sv/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

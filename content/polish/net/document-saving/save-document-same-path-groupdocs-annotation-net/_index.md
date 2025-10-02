@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak zapisywać adnotowane dokumenty, korzystając ze ścieżki oryginalnej w GroupDocs.Annotation dla platformy .NET, co pozwala usprawnić zarządzanie plikami i zwiększyć wydajność przepływu pracy."
 "title": "Jak zapisać dokumenty w oryginalnej ścieżce za pomocą GroupDocs.Annotation dla .NET"
 "url": "/pl/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

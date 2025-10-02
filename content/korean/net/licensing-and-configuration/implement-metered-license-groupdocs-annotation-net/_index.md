@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 미터링된 라이선스를 설정하고 관리하는 방법을 알아보고, 규정 준수와 최적의 기능을 확보하세요."
 "title": ".NET용 GroupDocs.Annotation에서 계량형 라이선스 구현하기&#58; 종합 가이드"
 "url": "/ko/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

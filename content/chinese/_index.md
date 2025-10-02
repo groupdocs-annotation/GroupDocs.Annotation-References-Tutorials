@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation 开发人员指南"
 "title": "文档注释 API | GroupDocs.Annotation 教程和 SDK 示例"
 "url": "/zh/"
+type: docs
 "weight": 11
 ---
 

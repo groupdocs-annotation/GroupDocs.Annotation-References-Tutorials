@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "生成文档页面预览"
 "url": "/zh/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích dạng văn bản ngoằn ngoèo vào ứng dụng .NET của bạn bằng GroupDocs.Annotation để cải thiện khả năng đọc tài liệu và phản hồi."
 "title": "Triển khai chú thích Text Squiggly trong .NET bằng GroupDocs.Annotation"
 "url": "/vi/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

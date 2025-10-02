@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích mũi tên vào tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Hướng dẫn này cung cấp hướng dẫn từng bước với các ví dụ về mã."
 "title": "Cách thêm chú thích mũi tên vào PDF bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

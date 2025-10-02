@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý và tải hiệu quả các phiên bản cụ thể của tài liệu có chú thích bằng GroupDocs.Annotation cho .NET. Nâng cao hệ thống quản lý tài liệu của bạn ngay hôm nay!"
 "title": "Tải các phiên bản tài liệu cụ thể với GroupDocs.Annotation cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/version-control/load-specific-versions-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

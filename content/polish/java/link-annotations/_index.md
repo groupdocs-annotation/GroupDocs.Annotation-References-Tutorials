@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące implementacji hiperłączy i adnotacji linkowanych w dokumentach za pomocą GroupDocs.Annotation dla języka Java."
 "title": "Samouczki dotyczące adnotacji linków dla GroupDocs.Annotation Java"
 "url": "/pl/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

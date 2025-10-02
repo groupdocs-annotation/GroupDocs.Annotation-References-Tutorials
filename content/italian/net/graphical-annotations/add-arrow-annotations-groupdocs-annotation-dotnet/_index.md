@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere annotazioni a freccia nei tuoi documenti utilizzando GroupDocs.Annotation per .NET. Questa guida fornisce istruzioni dettagliate con esempi di codice."
 "title": "Come aggiungere annotazioni a freccia nei PDF utilizzando GroupDocs.Annotation per .NET"
 "url": "/it/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "學習如何使用強大的 Java GroupDocs.Annotation 程式庫為 PDF 文件添加橢圓註釋。請依照本逐步指南操作，增強文件協作。"
 "title": "Java&#58; 使用 GroupDocs.Annotation for Java 為 PDF 新增橢圓註釋"
 "url": "/zh-hant/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

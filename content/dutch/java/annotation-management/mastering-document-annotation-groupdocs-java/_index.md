@@ -3,6 +3,7 @@
 "description": "Leer hoe u documenten efficiënt kunt annoteren met GroupDocs.Annotation voor Java. Deze handleiding behandelt het laden en annoteren van PDF's en het optimaliseren van uw Java-omgeving met Maven."
 "title": "Het onder de knie krijgen van documentannotatie in Java&#58; een uitgebreide handleiding met GroupDocs.Annotation"
 "url": "/nl/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

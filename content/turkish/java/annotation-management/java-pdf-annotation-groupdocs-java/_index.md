@@ -3,6 +3,7 @@
 "description": "Java için güçlü GroupDocs.Annotation API'sini kullanarak PDF belgelerine alan vurgulamalarıyla etkili bir şekilde ek açıklama eklemeyi öğrenin, böylece iş birliğini ve üretkenliği artırın."
 "title": "GroupDocs.Annotation Kullanarak Java'da PDF'lere Nasıl Açıklama Eklenir"
 "url": "/tr/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

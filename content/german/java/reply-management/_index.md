@@ -2,6 +2,7 @@
 "description": "Schritt-für-Schritt-Tutorials zum Implementieren von Kommentar-Threads, Antworten und gemeinsamen Diskussionen mit GroupDocs.Annotation für Java."
 "title": "Antwortverwaltungs-Tutorials für GroupDocs.Annotation Java"
 "url": "/de/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

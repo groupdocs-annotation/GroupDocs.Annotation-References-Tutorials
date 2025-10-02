@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการสร้างตัวอย่างเอกสารที่กระชับและเกี่ยวข้องจากคอลัมน์เวิร์กชีตเฉพาะโดยใช้ GroupDocs.Annotation สำหรับ .NET เหมาะอย่างยิ่งสำหรับการปรับปรุงเวิร์กโฟลว์ในการวิเคราะห์ข้อมูลและการจัดการไอที"
 "title": "สร้างตัวอย่างแผ่นงาน Excel ที่ต้องการโดยใช้ GroupDocs.Annotation .NET"
 "url": "/th/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

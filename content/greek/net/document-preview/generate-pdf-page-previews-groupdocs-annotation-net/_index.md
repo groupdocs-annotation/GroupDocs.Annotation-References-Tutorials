@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να δημιουργείτε αποτελεσματικές προεπισκοπήσεις σελίδων PDF με το GroupDocs.Annotation για .NET. Βελτιώστε την αλληλεπίδραση με τα έγγραφα και βελτιστοποιήστε τη ροή εργασίας σας."
 "title": "Δημιουργήστε προεπισκοπήσεις σελίδων PDF χρησιμοποιώντας το GroupDocs.Annotation .NET™ Ένας πλήρης οδηγός"
 "url": "/el/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

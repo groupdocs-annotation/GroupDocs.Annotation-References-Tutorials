@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إنشاء معاينات مستندات واضحة بدون تعليقات باستخدام GroupDocs.Annotation لـ .NET. اتبع هذا الدليل لتحسين عرض مستنداتك وعمليات مراجعتها."
 "title": "كيفية إنشاء معاينات للمستندات بدون تعليقات باستخدام GroupDocs.Annotation .NET"
 "url": "/ar/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

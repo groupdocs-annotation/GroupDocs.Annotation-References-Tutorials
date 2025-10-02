@@ -3,6 +3,7 @@
 "description": "Naučte se, jak integrovat vlastní písma do pracovního postupu zpracování dokumentů pomocí GroupDocs.Annotation pro .NET. Vylepšete své anotace pomocí přesného stylování písma."
 "title": "Jak načíst vlastní písma v GroupDocs.Annotation pro .NET – Komplexní průvodce"
 "url": "/cs/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

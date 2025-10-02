@@ -3,6 +3,7 @@
 "description": "Apprenez à créer des annotations barrées dans les PDF Java avec GroupDocs.Annotation pour Java. Suivez ce tutoriel étape par étape pour améliorer vos capacités d'édition de documents."
 "title": "Annotations PDF barrées Java avec GroupDocs &#58; un guide complet"
 "url": "/fr/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

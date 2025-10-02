@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Ορισμός άδειας χρήσης από τη ροή"
 "url": "/el/net/applying-licenses/set-license-from-stream/"
+type: docs
 "weight": 11
 ---
 

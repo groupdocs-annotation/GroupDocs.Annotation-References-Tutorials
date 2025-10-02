@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีเพิ่มและลบคำอธิบายขีดเส้นใต้ในเอกสาร Java โดยใช้ GroupDocs.Annotation ปรับปรุงการจัดการเอกสารของคุณด้วยคู่มือโดยละเอียดนี้"
 "title": "เพิ่มและลบคำอธิบายขีดเส้นใต้ใน Java โดยใช้ GroupDocs คู่มือฉบับสมบูรณ์"
 "url": "/th/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

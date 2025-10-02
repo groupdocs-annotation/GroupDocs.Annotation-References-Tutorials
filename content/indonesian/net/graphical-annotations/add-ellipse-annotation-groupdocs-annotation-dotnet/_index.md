@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan menambahkan anotasi elips interaktif menggunakan GroupDocs.Annotation .NET API. Panduan ini menyediakan petunjuk langkah demi langkah untuk pengembang."
 "title": "Cara Menambahkan Anotasi Elips ke PDF Menggunakan GroupDocs.Annotation .NET API"
 "url": "/id/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước về cách thêm và quản lý chú thích hình ảnh trong tài liệu bằng GroupDocs.Annotation cho .NET."
 "title": "Hướng dẫn chú thích hình ảnh cho GroupDocs.Annotation .NET"
 "url": "/vi/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

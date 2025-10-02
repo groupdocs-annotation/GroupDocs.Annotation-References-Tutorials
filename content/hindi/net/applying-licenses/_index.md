@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "लाइसेंस के लिए आवेदन करना"
 "url": "/hi/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

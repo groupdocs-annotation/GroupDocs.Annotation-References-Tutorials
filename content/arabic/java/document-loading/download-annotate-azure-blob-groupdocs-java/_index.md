@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تنزيل الملفات بسلاسة من Azure Blob Storage وإضافة التعليقات التوضيحية عليها باستخدام GroupDocs.Annotation for Java. حسّن سير عمل إدارة مستنداتك مع هذا الدليل الشامل."
 "title": "كيفية تنزيل ملفات Azure Blob وإضافة التعليقات التوضيحية إليها باستخدام GroupDocs.Annotation Java"
 "url": "/ar/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

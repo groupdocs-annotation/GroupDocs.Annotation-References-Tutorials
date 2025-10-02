@@ -3,6 +3,7 @@
 "description": "ファイルストリームを使用してGroupDocs.Annotation .NETのライセンスを設定および適用する方法を学びましょう。この包括的なガイドで、すべての機能を利用できます。"
 "title": "Master GroupDocs.Annotation .NET &#58; C# でファイル ストリームを使用してライセンスを設定する"
 "url": "/ja/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

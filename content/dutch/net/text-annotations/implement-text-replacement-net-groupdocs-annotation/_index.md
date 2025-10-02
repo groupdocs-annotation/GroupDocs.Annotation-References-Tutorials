@@ -3,6 +3,7 @@
 "description": "Leer hoe u tekstvervangende annotaties implementeert in uw .NET-applicaties met GroupDocs.Annotation. Verbeter moeiteloos de leesbaarheid en functionaliteit van uw document."
 "title": "Hoe u tekstvervanging in .NET implementeert met GroupDocs.Annotation voor efficiënte documentannotatie"
 "url": "/nl/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

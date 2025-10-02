@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt laddar ner och kommenterar PDF-filer från Amazon S3 med GroupDocs.Annotation för .NET. Förbättra ditt dokumentarbetsflöde med sömlös integration."
 "title": "Effektiv PDF-nedladdning och annotering från Amazon S3 med GroupDocs.Annotation för .NET"
 "url": "/sv/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

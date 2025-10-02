@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Κατάργηση απαντήσεων σε σχολιασμούς στο .NET"
 "url": "/el/net/removing-annotations/remove-replies-to-annotations/"
+type: docs
 "weight": 15
 ---
 

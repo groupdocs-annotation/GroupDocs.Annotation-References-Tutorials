@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till användarroller i anteckningar i dina Java-applikationer med GroupDocs.Annotation för förbättrad dokumenthantering och samarbete."
 "title": "Implementera GroupDocs.Annotation Java &#58; Lägga till användarroller i annoteringar"
 "url": "/sv/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك باستخدام التعليقات التوضيحية التفاعلية لمربعات الاختيار باستخدام GroupDocs.Annotation لجافا. اتبع هذا الدليل خطوة بخطوة."
 "title": "كيفية إضافة تعليقات مربع الاختيار إلى ملفات PDF باستخدام GroupDocs.Annotation لـ Java"
 "url": "/ar/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

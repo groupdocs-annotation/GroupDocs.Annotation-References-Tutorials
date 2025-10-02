@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Egyéni betűtípusok betöltése"
 "url": "/hu/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

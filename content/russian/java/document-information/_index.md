@@ -2,6 +2,7 @@
 "description": "Полные руководства по доступу к метаданным документа, информации о странице и свойствам документа с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по информации о документе для GroupDocs.Annotation Java"
 "url": "/ru/java/document-information/"
+type: docs
 "weight": 12
 ---
 

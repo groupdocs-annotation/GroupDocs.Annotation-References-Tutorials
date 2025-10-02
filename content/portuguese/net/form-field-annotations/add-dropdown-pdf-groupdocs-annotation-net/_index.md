@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus documentos PDF adicionando componentes suspensos interativos usando o GroupDocs.Annotation para .NET. Siga este guia passo a passo para otimizar a entrada de dados do usuário e aprimorar a funcionalidade do documento."
 "title": "Adicionar lista suspensa a PDFs com GroupDocs.Annotation para .NET - Um guia completo"
 "url": "/pt/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

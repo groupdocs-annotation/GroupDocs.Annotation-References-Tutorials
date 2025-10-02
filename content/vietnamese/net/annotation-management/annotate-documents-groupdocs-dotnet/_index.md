@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm và cập nhật chú thích hiệu quả trong tài liệu bằng GroupDocs.Annotation .NET. Nâng cao khả năng cộng tác và quản lý tài liệu với hướng dẫn từng bước này."
 "title": "Cách chú thích tài liệu bằng GroupDocs.Annotation .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

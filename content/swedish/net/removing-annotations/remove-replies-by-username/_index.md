@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Ta bort svar efter användarnamn i .NET"
 "url": "/sv/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

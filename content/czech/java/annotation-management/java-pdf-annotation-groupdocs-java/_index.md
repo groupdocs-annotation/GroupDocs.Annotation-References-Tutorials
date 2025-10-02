@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně anotovat dokumenty PDF s zvýrazněním oblastí pomocí výkonného rozhraní GroupDocs.Annotation API pro Javu, což vylepší spolupráci a produktivitu."
 "title": "Jak anotovat PDF soubory v Javě pomocí GroupDocs.Annotation"
 "url": "/cs/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

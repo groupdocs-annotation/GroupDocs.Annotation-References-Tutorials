@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie kommentierte Dokumente unter Verwendung des Originalpfads in GroupDocs.Annotation für .NET speichern und so eine optimierte Dateiverwaltung und effizientere Arbeitsabläufe gewährleisten."
 "title": "So speichern Sie Dokumente im ursprünglichen Pfad mit GroupDocs.Annotation für .NET"
 "url": "/de/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

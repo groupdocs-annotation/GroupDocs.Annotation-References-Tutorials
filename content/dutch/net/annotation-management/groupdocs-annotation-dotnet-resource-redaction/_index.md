@@ -3,6 +3,7 @@
 "description": "Leer hoe u annotaties voor het redigeren van bronnen aan pdf's toevoegt met GroupDocs.Annotation voor .NET. Bescherm gevoelige informatie en verbeter de beveiliging van uw documenten met deze gedetailleerde handleiding."
 "title": "Hoe u annotaties voor bronredactie toevoegt in .NET met behulp van GroupDocs.Annotation&#58; een uitgebreide handleiding"
 "url": "/nl/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u onderstreepte aantekeningen kunt toevoegen en verwijderen in Java-documenten met GroupDocs.Annotation. Verbeter uw documentbeheer met deze gedetailleerde handleiding."
 "title": "Onderstrepingsannotaties toevoegen en verwijderen in Java met behulp van GroupDocs&#58; een uitgebreide handleiding"
 "url": "/nl/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

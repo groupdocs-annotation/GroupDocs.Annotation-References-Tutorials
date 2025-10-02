@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak wyodrębniać adnotacje z dokumentów i serializować je do formatu XML za pomocą GroupDocs.Annotation dla platformy .NET. Udoskonal swój obieg pracy związany z zarządzaniem dokumentami już dziś!"
 "title": "Jak wyodrębnić i serializować adnotacje w .NET przy użyciu GroupDocs.Annotation"
 "url": "/pl/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi pada dokumen PDF langsung dari URL menggunakan GroupDocs.Annotation untuk Java. Tutorial ini mencakup pemuatan, pembuatan anotasi, dan penyimpanan PDF secara efisien."
 "title": "Cara Membuat Anotasi PDF dari URL Menggunakan GroupDocs.Annotation untuk Java | Tutorial Manajemen Anotasi Dokumen"
 "url": "/id/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة حول كيفية إضافة الأشكال والأسهم والصور والعناصر الرسومية في المستندات باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس توضيحية رسومية لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

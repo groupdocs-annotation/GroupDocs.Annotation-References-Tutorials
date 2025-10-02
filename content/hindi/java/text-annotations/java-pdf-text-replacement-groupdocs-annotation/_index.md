@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके Java PDF में टेक्स्ट प्रतिस्थापन एनोटेशन को लागू करने का तरीका जानें। दस्तावेज़ संपादन और सहयोग क्षमताओं को बढ़ाएँ।"
 "title": "GroupDocs.Annotation के साथ जावा पीडीएफ पाठ प्रतिस्थापन गाइड"
 "url": "/hi/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích hình elip vào tài liệu PDF bằng thư viện GroupDocs.Annotation mạnh mẽ trong Java. Thực hiện theo hướng dẫn từng bước này để nâng cao khả năng cộng tác tài liệu."
 "title": "Java&#58; Thêm chú thích hình elip vào PDF bằng GroupDocs.Annotation cho Java"
 "url": "/vi/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

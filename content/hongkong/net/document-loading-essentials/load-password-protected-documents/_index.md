@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "載入受密碼保護的文檔"
 "url": "/zh-hant/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

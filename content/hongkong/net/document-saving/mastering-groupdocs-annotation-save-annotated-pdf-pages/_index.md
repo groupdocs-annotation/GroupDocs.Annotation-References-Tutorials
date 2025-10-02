@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 有效率地僅儲存 PDF 中註解的頁面。本指南詳盡，助您增強文件管理與協作。"
 "title": "如何使用 GroupDocs.Annotation for .NET 將已註解的頁面儲存為 PDF"
 "url": "/zh-hant/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "linktitle": "Hướng dẫn dành cho nhà phát triển GroupDocs.Annotation"
 "title": "API chú thích tài liệu | Hướng dẫn & ví dụ về SDK của GroupDocs.Annotation"
 "url": "/vi/"
+type: docs
 "weight": 11
 ---
 

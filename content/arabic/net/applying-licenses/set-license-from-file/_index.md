@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تعيين الترخيص من الملف"
 "url": "/ar/net/applying-licenses/set-license-from-file/"
+type: docs
 "weight": 10
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan tölthet be zökkenőmentesen dokumentumokat FTP-kiszolgálókról a GroupDocs.Annotation for .NET használatával. Fejlessze dokumentumkezelési munkafolyamatát ezzel a részletes útmutatóval."
 "title": "Dokumentumok betöltése és megjegyzésekkel való ellátása FTP-kiszolgálókról a GroupDocs.Annotation for .NET segítségével – Átfogó útmutató"
 "url": "/hu/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

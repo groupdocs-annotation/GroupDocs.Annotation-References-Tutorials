@@ -2,6 +2,7 @@
 "description": "Пошаговые руководства по добавлению полей форм и интерактивных компонентов в документы с помощью GroupDocs.Annotation для .NET."
 "title": "Учебники по аннотациям полей форм для GroupDocs.Annotation .NET"
 "url": "/ru/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

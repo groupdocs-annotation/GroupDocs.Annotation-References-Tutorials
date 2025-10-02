@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatott oktatóanyagok a hozzászólásláncok, válaszok és közös megbeszélések megvalósításához a GroupDocs.Annotation for .NET segítségével."
 "title": "Válaszkezelési oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

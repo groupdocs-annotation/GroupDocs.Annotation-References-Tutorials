@@ -4,6 +4,7 @@
 "linktitle": "Guides du développeur GroupDocs.Annotation"
 "title": "API d'annotation de documents | Tutoriels et exemples de SDK GroupDocs.Annotation"
 "url": "/fr/"
+type: docs
 "weight": 11
 ---
 

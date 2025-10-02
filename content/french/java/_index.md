@@ -4,6 +4,7 @@
 "linktitle": "Tutoriels GroupDocs.Annotation pour Java"
 "title": "API d'annotation de documents Java | Tutoriels et exemples GroupDocs.Annotation pour Java"
 "url": "/fr/java/"
+type: docs
 "weight": 10
 ---
 

@@ -2,6 +2,7 @@
 "description": "Πλήρη εκπαιδευτικά βίντεο για την αποθήκευση σχολιασμένων εγγράφων με διάφορες επιλογές χρησιμοποιώντας το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά βίντεο αποθήκευσης εγγράφων για το GroupDocs.Annotation Java"
 "url": "/el/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att implementera avancerade annoteringsfunktioner, anpassningar och specialfunktioner med GroupDocs.Annotation för Java."
 "title": "Handledningar för avancerade GroupDocs.Annotation-funktioner i Java"
 "url": "/sv/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

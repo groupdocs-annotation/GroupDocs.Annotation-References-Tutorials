@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Hivatkozási megjegyzés hozzáadása a dokumentumhoz"
 "url": "/hu/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

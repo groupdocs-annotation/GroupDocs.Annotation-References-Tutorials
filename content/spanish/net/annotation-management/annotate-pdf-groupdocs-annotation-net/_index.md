@@ -3,6 +3,7 @@
 "description": "Aprenda a anotar documentos PDF de forma eficiente con GroupDocs.Annotation para .NET. Esta guía explica cómo configurar, añadir anotaciones y guardar su trabajo."
 "title": "Cómo anotar archivos PDF con GroupDocs.Annotation para .NET&#58; una guía completa"
 "url": "/es/net/annotation-management/annotate-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

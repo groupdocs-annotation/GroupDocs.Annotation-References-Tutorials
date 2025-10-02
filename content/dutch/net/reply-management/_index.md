@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het implementeren van opmerkingen, antwoorden en gezamenlijke discussies met GroupDocs.Annotation voor .NET."
 "title": "Zelfstudies voor antwoordbeheer voor GroupDocs.Annotation .NET"
 "url": "/nl/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

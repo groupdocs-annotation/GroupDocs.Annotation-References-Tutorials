@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントのバージョンを実装し、変更を追跡し、注釈履歴を管理するためのステップバイステップのチュートリアル。"
 "title": "GroupDocs.Annotation .NET のバージョン管理チュートリアル"
 "url": "/ja/net/version-control/"
+type: docs
 "weight": 13
 ---
 

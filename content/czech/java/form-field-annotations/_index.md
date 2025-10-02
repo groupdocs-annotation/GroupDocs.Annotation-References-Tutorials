@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro přidávání polí formuláře a interaktivních komponent do dokumentů pomocí GroupDocs.Annotation pro Javu."
 "title": "Výukové programy pro anotace polí formuláře v GroupDocs.Annotation v Javě"
 "url": "/cs/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

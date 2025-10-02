@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách làm chủ chú thích PDF .NET với GroupDocs.Annotation. Hướng dẫn này bao gồm khởi tạo, xử lý trang, chuyển đổi và lưu tài liệu có chú thích một cách hiệu quả."
 "title": "Hướng dẫn toàn diện về chú thích PDF .NET bằng GroupDocs.Annotation để quản lý tài liệu nâng cao"
 "url": "/vi/net/annotation-management/net-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

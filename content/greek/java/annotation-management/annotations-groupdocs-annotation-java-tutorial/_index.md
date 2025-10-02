@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να δημιουργείτε, να διαχειρίζεστε και να αποθηκεύετε αποτελεσματικά σχόλια σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτός ο οδηγός βήμα προς βήμα καλύπτει την αρχικοποίηση, τους τύπους σχολίων και συμβουλές ενσωμάτωσης."
 "title": "Πλήρης οδηγός χρήσης του GroupDocs.Annotation για Java για τη δημιουργία και διαχείριση σχολίων"
 "url": "/el/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

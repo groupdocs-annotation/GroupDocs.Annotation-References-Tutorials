@@ -2,6 +2,7 @@
 "description": "Java için GroupDocs.Annotation kullanarak belgelere form alanları ve etkileşimli bileşenler eklemeye yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation Java için Form Alanı Açıklama Eğitimleri"
 "url": "/tr/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kezelheti hatékonyan a dokumentumokhoz tartozó megjegyzéseket verziókulcsok segítségével a GroupDocs.Annotation .NET segítségével. Egyszerűsítse munkafolyamatait és fokozza az együttműködést."
 "title": "Hogyan lehet lekérni a jegyzeteket verziókulcs alapján a GroupDocs.Annotation .NET-ben a továbbfejlesztett dokumentumkezeléshez"
 "url": "/hu/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

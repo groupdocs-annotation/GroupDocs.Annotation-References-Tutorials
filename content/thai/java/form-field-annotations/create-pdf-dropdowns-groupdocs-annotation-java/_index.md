@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณด้วยฟิลด์ดรอปดาวน์แบบโต้ตอบโดยใช้ไลบรารี GroupDocs.Annotation อันทรงพลังใน Java"
 "title": "สร้างดรอปดาวน์ PDF แบบโต้ตอบโดยใช้ GroupDocs.Annotation สำหรับ Java"
 "url": "/th/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

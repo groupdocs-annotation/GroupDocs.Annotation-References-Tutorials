@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation για εκπαιδευτικά σεμινάρια .NET"
 "title": "Εκπαιδευτικά βίντεο και παραδείγματα του GroupDocs.Annotation για .NET"
 "url": "/el/net/"
+type: docs
 "weight": 10
 ---
 

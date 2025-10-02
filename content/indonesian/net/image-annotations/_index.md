@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk menambahkan dan mengelola anotasi gambar dalam dokumen menggunakan GroupDocs.Annotation for .NET."
 "title": "Tutorial Anotasi Gambar untuk GroupDocs.Annotation .NET"
 "url": "/id/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

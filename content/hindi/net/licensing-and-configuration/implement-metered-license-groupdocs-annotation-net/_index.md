@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ मीटर्ड लाइसेंस स्थापित करने और प्रबंधित करने का तरीका जानें, अनुपालन और इष्टतम कार्यक्षमता सुनिश्चित करना।"
 "title": "GroupDocs में मीटर्ड लाइसेंस का क्रियान्वयन. .NET के लिए एनोटेशन एक व्यापक गाइड"
 "url": "/hi/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

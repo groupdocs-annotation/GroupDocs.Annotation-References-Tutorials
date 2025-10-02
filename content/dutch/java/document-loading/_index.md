@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het laden van documenten uit verschillende bronnen met behulp van GroupDocs.Annotation voor Java."
 "title": "Handleidingen voor het laden van documenten voor GroupDocs.Annotation Java"
 "url": "/nl/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

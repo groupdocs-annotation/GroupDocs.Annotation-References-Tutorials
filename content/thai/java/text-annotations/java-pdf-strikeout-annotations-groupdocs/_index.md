@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีสร้างคำอธิบายประกอบการขีดฆ่าข้อความใน PDF ของ Java โดยใช้ GroupDocs.Annotation สำหรับ Java ทำตามบทช่วยสอนทีละขั้นตอนนี้เพื่อปรับปรุงความสามารถในการแก้ไขเอกสารของคุณ"
 "title": "Java PDF Strikeout Annotations พร้อม GroupDocs คู่มือฉบับสมบูรณ์"
 "url": "/th/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara melindungi dokumen Anda dengan menambahkan anotasi tanda air menggunakan GroupDocs.Annotation untuk Java. Panduan ini mencakup kiat penyiapan, penyesuaian, dan pengoptimalan."
 "title": "Menerapkan Anotasi Watermark dalam PDF dengan GroupDocs.Annotation Java; Panduan Lengkap"
 "url": "/id/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

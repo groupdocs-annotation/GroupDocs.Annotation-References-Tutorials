@@ -3,6 +3,7 @@
 "description": "Découvrez comment enrichir vos documents PDF avec des annotations interactives à l'aide de GroupDocs.Annotation pour Java. Suivez ce guide étape par étape."
 "title": "Comment ajouter des annotations de case à cocher aux fichiers PDF à l'aide de GroupDocs.Annotation pour Java"
 "url": "/fr/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

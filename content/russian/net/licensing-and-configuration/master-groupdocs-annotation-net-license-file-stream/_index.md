@@ -3,6 +3,7 @@
 "description": "Узнайте, как настроить и применить лицензию для GroupDocs.Annotation .NET с использованием потоков файлов. Разблокируйте все функции с помощью этого всеобъемлющего руководства."
 "title": "Master GroupDocs.Annotation .NET&#58; Установка лицензии с использованием потока файлов в C#"
 "url": "/ru/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

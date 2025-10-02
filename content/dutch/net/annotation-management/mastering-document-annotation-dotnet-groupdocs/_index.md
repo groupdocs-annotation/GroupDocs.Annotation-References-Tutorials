@@ -3,6 +3,7 @@
 "description": "Leer hoe u documentannotaties in .NET efficiënt kunt beheren met GroupDocs.Annotation. Deze handleiding behandelt de installatie, aanpassing en aanbevolen procedures voor het opslaan van geannoteerde documenten."
 "title": "Hoofddocumentannotatie in .NET met GroupDocs.Annotation&#58; een complete gids"
 "url": "/nl/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

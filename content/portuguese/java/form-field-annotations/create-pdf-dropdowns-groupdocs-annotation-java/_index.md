@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus documentos PDF com campos suspensos interativos usando a poderosa biblioteca GroupDocs.Annotation em Java."
 "title": "Crie menus suspensos em PDF interativos usando GroupDocs.Annotation para Java"
 "url": "/pt/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

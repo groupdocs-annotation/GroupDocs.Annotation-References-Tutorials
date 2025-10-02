@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tích hợp phông chữ tùy chỉnh vào quy trình xử lý tài liệu của bạn bằng GroupDocs.Annotation cho .NET. Nâng cao chú thích của bạn bằng kiểu phông chữ chính xác."
 "title": "Cách tải phông chữ tùy chỉnh trong GroupDocs.Annotation cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Obter lista de anotações usando a chave de versão"
 "url": "/pt/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

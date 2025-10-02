@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan integrálhat egyéni betűtípusokat a dokumentumfeldolgozási munkafolyamatába a GroupDocs.Annotation for .NET segítségével. Javítsa a jegyzeteit precíz betűtípus-stílusokkal."
 "title": "Egyéni betűtípusok betöltése a GroupDocs.Annotation for .NET fájlban – Átfogó útmutató"
 "url": "/hu/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

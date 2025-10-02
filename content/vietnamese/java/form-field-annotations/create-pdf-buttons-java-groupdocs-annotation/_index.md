@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tạo các nút PDF tương tác với các phản hồi bằng GroupDocs.Annotation cho Java. Thực hiện theo hướng dẫn từng bước này để tăng cường tính tương tác của tài liệu."
 "title": "Tạo nút PDF tương tác trong Java bằng GroupDocs.Annotation&#58; Hướng dẫn đầy đủ"
 "url": "/vi/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

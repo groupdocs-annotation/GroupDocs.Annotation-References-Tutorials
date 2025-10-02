@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχόλια σε έγγραφα PDF απευθείας από έναν διακομιστή FTP χρησιμοποιώντας το GroupDocs.Annotation για Java. Βελτιστοποιήστε τις ροές εργασίας επεξεργασίας εγγράφων με αυτόν τον οδηγό βήμα προς βήμα."
 "title": "Σχολιάστε PDF από FTP χρησιμοποιώντας το GroupDocs.Annotation for Java - Ένας πλήρης οδηγός"
 "url": "/el/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να χρησιμοποιείτε το GroupDocs.Annotation για .NET για να καταργείτε σχολιασμούς ανά ID, βελτιστοποιώντας τη διαδικασία διαχείρισης εγγράφων σας με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Πώς να αφαιρέσετε αποτελεσματικά σχολιασμούς από PDF χρησιμοποιώντας το GroupDocs.Annotation .NET"
 "url": "/el/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

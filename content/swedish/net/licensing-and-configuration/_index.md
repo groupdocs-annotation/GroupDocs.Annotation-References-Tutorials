@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att konfigurera licensiering, alternativ och hantera GroupDocs.Annotation i .NET-applikationer."
 "title": "GroupDocs.Annotation Licensiering och konfigurationshandledningar för .NET"
 "url": "/sv/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

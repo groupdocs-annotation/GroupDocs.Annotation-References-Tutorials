@@ -3,6 +3,7 @@
 "description": "Aprenda como adicionar anotações de texto riscado em seus documentos usando a biblioteca GroupDocs.Annotation para .NET, aprimorando a revisão e a colaboração de documentos."
 "title": "Adicionar anotação de texto tachado no .NET usando GroupDocs.Annotation"
 "url": "/pt/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "在 .NET 中刪除多個註釋"
 "url": "/zh-hant/net/removing-annotations/remove-multiple-annotations/"
+type: docs
 "weight": 12
 ---
 

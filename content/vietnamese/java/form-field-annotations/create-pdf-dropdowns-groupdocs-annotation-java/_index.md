@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách cải thiện tài liệu PDF của bạn bằng các trường thả xuống tương tác bằng cách sử dụng thư viện GroupDocs.Annotation mạnh mẽ trong Java."
 "title": "Tạo danh sách thả xuống PDF tương tác bằng GroupDocs.Annotation cho Java"
 "url": "/vi/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Tanulja meg, hogyan automatizálhatja a megjegyzések kinyerését PDF-ekből a GroupDocs.Annotation for Java segítségével, amivel időt takaríthat meg és csökkentheti a hibákat."
 "title": "PDF-jegyzetek kinyerésének automatizálása a GroupDocs for Java segítségével – Átfogó útmutató"
 "url": "/hu/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till bildannoteringar med GroupDocs.Annotation för .NET. Förbättra dokument inom utbildning, juridik och hälsovård."
 "title": "Omfattande guide till att lägga till bildannoteringar i .NET med GroupDocs.Annotation"
 "url": "/sv/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

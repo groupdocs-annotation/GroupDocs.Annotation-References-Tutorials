@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการโหลดเอกสารจากเซิร์ฟเวอร์ FTP ได้อย่างราบรื่นโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงเวิร์กโฟลว์การจัดการเอกสารของคุณด้วยคู่มือโดยละเอียดนี้"
 "title": "การโหลดและใส่คำอธิบายประกอบเอกสารจากเซิร์ฟเวอร์ FTP ด้วย GroupDocs.Annotation สำหรับ .NET&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
+type: docs
 "weight": 1
 ---
 

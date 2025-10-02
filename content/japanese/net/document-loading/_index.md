@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してさまざまなソースからドキュメントを読み込むためのステップバイステップのチュートリアル。"
 "title": "GroupDocs.Annotation .NET のドキュメント読み込みチュートリアル"
 "url": "/ja/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

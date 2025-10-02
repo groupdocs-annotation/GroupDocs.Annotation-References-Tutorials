@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengambil dimensi halaman PDF secara efisien dengan GroupDocs.Annotation untuk .NET. Ikuti panduan ini untuk menyempurnakan aplikasi manajemen dokumen Anda."
 "title": "Cara Mengambil Dimensi Halaman PDF Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

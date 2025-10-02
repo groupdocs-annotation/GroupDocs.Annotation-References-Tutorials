@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak skutecznie adnotować dokumenty PDF, wyróżniając obszary, korzystając z zaawansowanego interfejsu API GroupDocs.Annotation dla języka Java. Dzięki temu usprawnisz współpracę i zwiększysz produktywność."
 "title": "Jak adnotować pliki PDF w Javie za pomocą GroupDocs.Annotation"
 "url": "/pl/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

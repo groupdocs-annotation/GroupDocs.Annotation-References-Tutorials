@@ -3,6 +3,7 @@
 "description": "फ़ाइल स्ट्रीम का उपयोग करके GroupDocs.Annotation .NET के लिए लाइसेंस सेट अप और लागू करना सीखें। इस व्यापक गाइड के साथ पूर्ण सुविधाएँ अनलॉक करें।"
 "title": "मास्टर ग्रुपडॉक्स.एनोटेशन .NET का C# में फ़ाइल स्ट्रीम का उपयोग करके लाइसेंस सेट करें"
 "url": "/hi/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

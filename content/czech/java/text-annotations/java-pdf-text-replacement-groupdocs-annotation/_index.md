@@ -3,6 +3,7 @@
 "description": "Naučte se, jak implementovat anotace s nahrazováním textu v PDF souborech v jazyce Java pomocí GroupDocs.Annotation. Vylepšete možnosti úpravy dokumentů a spolupráce."
 "title": "Průvodce nahrazováním textu v PDF v Javě pomocí GroupDocs.Annotation"
 "url": "/cs/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

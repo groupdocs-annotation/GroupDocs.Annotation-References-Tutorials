@@ -3,6 +3,7 @@
 "description": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF से एनोटेशन निष्कर्षण को स्वचालित करना सीखें, समय की बचत करें और त्रुटियों को कम करें।"
 "title": "जावा के लिए ग्रुपडॉक्स के साथ पीडीएफ एनोटेशन निष्कर्षण को स्वचालित करें&#58; एक व्यापक गाइड"
 "url": "/hi/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

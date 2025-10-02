@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi pada dokumen PDF secara efisien dengan penyorotan area menggunakan GroupDocs.Annotation API untuk Java yang canggih, meningkatkan kolaborasi dan produktivitas."
 "title": "Cara Membuat Anotasi pada PDF di Java Menggunakan GroupDocs.Annotation"
 "url": "/id/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

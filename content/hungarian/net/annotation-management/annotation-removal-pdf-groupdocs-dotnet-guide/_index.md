@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan használhatja a GroupDocs.Annotation for .NET-et az azonosító szerinti megjegyzések eltávolításához, optimalizálva ezzel a dokumentumkezelési folyamatot ezzel az átfogó útmutatóval."
 "title": "Hogyan távolíthatunk hatékonyan jegyzeteket PDF-ekből a GroupDocs.Annotation .NET használatával"
 "url": "/hu/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

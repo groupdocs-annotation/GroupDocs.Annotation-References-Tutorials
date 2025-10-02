@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie PDFs mit benutzerdefinierten Versionsschlüsseln kommentieren und speichern, indem Sie die leistungsstarke Bibliothek GroupDocs.Annotation für .NET verwenden und so sicherstellen, dass jede Dokumentiteration eindeutig identifizierbar ist."
 "title": "Speichern Sie kommentierte PDFs mit benutzerdefinierten Versionsschlüsseln in .NET mithilfe von GroupDocs.Annotation"
 "url": "/de/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

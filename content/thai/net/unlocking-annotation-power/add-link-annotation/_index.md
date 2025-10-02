@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "เพิ่มคำอธิบายลิงก์ลงในเอกสาร"
 "url": "/th/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

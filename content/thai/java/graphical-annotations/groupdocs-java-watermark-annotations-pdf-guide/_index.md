@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปกป้องเอกสารของคุณโดยเพิ่มคำอธิบายลายน้ำโดยใช้ GroupDocs.Annotation สำหรับ Java คู่มือนี้ครอบคลุมคำแนะนำเกี่ยวกับการตั้งค่า การปรับแต่ง และการปรับให้เหมาะสม"
 "title": "การนำ Watermark Annotation ไปใช้กับ PDF ด้วย GroupDocs.Annotation Java&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Pfeilanmerkungen in Ihre Dokumente einfügen. Diese Anleitung enthält Schritt-für-Schritt-Anleitungen mit Codebeispielen."
 "title": "So fügen Sie mit GroupDocs.Annotation für .NET Pfeilanmerkungen in PDFs hinzu"
 "url": "/de/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

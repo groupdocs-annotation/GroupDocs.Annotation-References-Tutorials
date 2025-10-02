@@ -3,6 +3,7 @@
 "description": "強力な GroupDocs.Annotation for .NET ライブラリを使用して、カスタム バージョン キーで PDF に注釈を付けて保存し、各ドキュメントの反復が一意に識別できるようにする方法を学習します。"
 "title": "GroupDocs.Annotation を使用して .NET でカスタム バージョン キーを使用して注釈付き PDF を保存する"
 "url": "/ja/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

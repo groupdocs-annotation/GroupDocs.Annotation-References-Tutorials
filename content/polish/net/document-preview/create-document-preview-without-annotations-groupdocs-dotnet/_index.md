@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak generować podglądy dokumentów bez adnotacji za pomocą GroupDocs.Annotation dla platformy .NET, zapewniając prywatność i przejrzystość w projektach współpracy."
 "title": "Jak utworzyć czysty podgląd dokumentu bez adnotacji za pomocą GroupDocs.Annotation .NET"
 "url": "/pl/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

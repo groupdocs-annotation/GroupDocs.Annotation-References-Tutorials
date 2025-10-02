@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 폴리라인 주석으로 PDF 문서를 개선하는 방법을 알아보세요. 이 가이드에서는 효과적인 구현을 위한 단계별 지침과 팁을 제공합니다."
 "title": "GroupDocs.Annotation for .NET을 사용하여 PDF에 폴리라인 주석을 추가하는 방법 - 단계별 가이드"
 "url": "/ko/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

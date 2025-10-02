@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके दूरस्थ URL से PDF दस्तावेज़ों में छवि एनोटेशन जोड़ने का तरीका जानें। इस व्यापक गाइड के साथ अपने दस्तावेज़ वर्कफ़्लो को बेहतर बनाएँ।"
 "title": "GroupDocs.Annotation .NET और रिमोट URL का उपयोग करके PDF में छवि एनोटेशन लागू करें"
 "url": "/hi/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

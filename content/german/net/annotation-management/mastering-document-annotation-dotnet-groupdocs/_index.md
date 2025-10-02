@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Dokumentanmerkungen in .NET mit GroupDocs.Annotation effizient verwalten. Diese Anleitung behandelt Einrichtung, Anpassung und bewährte Methoden zum Speichern kommentierter Dokumente."
 "title": "Master-Dokumentannotation in .NET mit GroupDocs.Annotation – Ein vollständiger Leitfaden"
 "url": "/de/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

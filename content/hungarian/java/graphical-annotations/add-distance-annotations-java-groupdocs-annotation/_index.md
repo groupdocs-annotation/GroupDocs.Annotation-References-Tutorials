@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan valósíthat meg távolság-annotációkat Java dokumentumokban a GroupDocs.Annotation használatával. Ez a lépésenkénti útmutató a beállítást, a konfigurációt és a gyakorlati alkalmazásokat ismerteti."
 "title": "Távolság-annotációk hozzáadása Java-ban a GroupDocs.Annotation segítségével – lépésről lépésre útmutató"
 "url": "/hu/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

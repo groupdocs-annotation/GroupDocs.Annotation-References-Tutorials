@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyimpan dokumen beranotasi menggunakan jalur asli di GroupDocs.Annotation untuk .NET, memastikan manajemen file yang efisien dan efisiensi alur kerja."
 "title": "Cara Menyimpan Dokumen di Jalur Asli Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

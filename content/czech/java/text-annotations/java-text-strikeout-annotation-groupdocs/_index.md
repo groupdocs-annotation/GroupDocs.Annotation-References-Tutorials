@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidat anotace s přeškrtnutím textu v Javě pomocí GroupDocs.Annotation. Postupujte podle tohoto podrobného návodu pro bezproblémové anotace dokumentů."
 "title": "Průvodce anotací přeškrtnutého textu v Javě pomocí GroupDocs.Annotation"
 "url": "/cs/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

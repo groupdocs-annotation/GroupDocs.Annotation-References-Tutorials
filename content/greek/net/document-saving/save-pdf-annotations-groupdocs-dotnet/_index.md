@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αποθηκεύετε αποτελεσματικά σχόλια PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιστοποιήστε τη διαδικασία διαχείρισης εγγράφων σας με τον λεπτομερή οδηγό μας."
 "title": "Αποτελεσματική αποθήκευση σχολίων PDF με το GroupDocs.Annotation για .NET"
 "url": "/el/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

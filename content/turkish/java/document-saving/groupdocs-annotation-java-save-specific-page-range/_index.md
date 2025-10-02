@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak açıklamalı belge sayfa aralıklarını nasıl etkili bir şekilde kaydedeceğinizi öğrenin. Bu eğitim kurulum, uygulama ve pratik uygulamaları kapsar."
 "title": "GroupDocs.Annotation ile Belirli Sayfa Aralığını Java İçin Kaydedin&#58; Eksiksiz Bir Kılavuz"
 "url": "/tr/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

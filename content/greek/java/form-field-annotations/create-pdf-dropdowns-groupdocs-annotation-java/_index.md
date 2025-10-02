@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να βελτιώσετε τα έγγραφα PDF σας με διαδραστικά αναπτυσσόμενα πεδία χρησιμοποιώντας την ισχυρή βιβλιοθήκη GroupDocs.Annotation σε Java."
 "title": "Δημιουργήστε διαδραστικά αναπτυσσόμενα μενού PDF χρησιμοποιώντας το GroupDocs.Annotation για Java"
 "url": "/el/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "產生文件頁面預覽"
 "url": "/zh-hant/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

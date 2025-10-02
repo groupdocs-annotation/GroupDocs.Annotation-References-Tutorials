@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "주석 기능의 잠재력을 활용하세요"
 "url": "/ko/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

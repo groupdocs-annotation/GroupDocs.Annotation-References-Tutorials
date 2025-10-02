@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ενσωματώνετε απρόσκοπτα το Azure Blob Storage με τις εφαρμογές .NET σας χρησιμοποιώντας το GroupDocs.Annotation. Βελτιώστε τις δυνατότητες διαχείρισης εγγράφων και σχολιασμού."
 "title": "Αποτελεσματική φόρτωση εγγράφων από την αποθήκευση Azure Blob χρησιμοποιώντας το GroupDocs.Annotation .NET για διαχείριση εγγράφων"
 "url": "/el/net/document-loading/load-documents-azure-blob-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

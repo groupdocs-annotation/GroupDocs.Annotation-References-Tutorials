@@ -2,6 +2,7 @@
 "description": ".NET के लिए GroupDocs.Annotation के साथ दस्तावेज़ों में हाइपरलिंक और लिंक किए गए एनोटेशन को लागू करने के लिए पूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation .NET के लिए लिंक एनोटेशन ट्यूटोरियल"
 "url": "/hi/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

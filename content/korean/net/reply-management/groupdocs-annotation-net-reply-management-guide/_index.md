@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 주석 답변을 효율적으로 관리하는 방법을 알아보세요. 이 가이드에서는 통합, 답변 추가 및 실제 사용 사례를 다룹니다."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 주석 응답 관리 구현 가이드"
 "url": "/ko/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

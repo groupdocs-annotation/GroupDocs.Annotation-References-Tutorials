@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Anmerkungen aus Dokument importieren"
 "url": "/de/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

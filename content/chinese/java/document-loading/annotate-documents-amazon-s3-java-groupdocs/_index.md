@@ -3,6 +3,7 @@
 "description": "了解如何使用 Java 中的 GroupDocs.Annotation 高效加载和注释存储在 Amazon S3 上的文档。本指南涵盖集成、AWS 开发工具包的使用以及性能优化。"
 "title": "使用 Java 从 Amazon S3 加载和注释文档 — GroupDocs.Annotation 集成指南"
 "url": "/zh/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

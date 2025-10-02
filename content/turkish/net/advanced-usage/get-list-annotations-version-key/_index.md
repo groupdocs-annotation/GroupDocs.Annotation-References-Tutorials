@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Sürüm Anahtarını kullanarak Açıklamaların Listesini Alın"
 "url": "/tr/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

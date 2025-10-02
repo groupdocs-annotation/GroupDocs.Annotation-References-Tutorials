@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 有效率地為文件新增底線註解。輕鬆提昇文件清晰度和溝通能力。"
 "title": "如何使用 GroupDocs.Annotation 在 .NET 中新增底線註釋"
 "url": "/zh-hant/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

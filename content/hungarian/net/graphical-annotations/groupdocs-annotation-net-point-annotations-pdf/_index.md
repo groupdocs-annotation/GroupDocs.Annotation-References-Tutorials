@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan gazdagíthatja PDF-dokumentumait interaktív pontjegyzetekkel a GroupDocs.Annotation for .NET segítségével. Ez a lépésenkénti útmutató a beállítást, a megvalósítást és a hibaelhárítást ismerteti."
 "title": "Pontjegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

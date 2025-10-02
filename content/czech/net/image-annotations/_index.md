@@ -2,6 +2,7 @@
 "description": "Podrobné návody pro přidávání a správu anotací obrázků v dokumentech pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro anotaci obrázků v GroupDocs.Annotation .NET"
 "url": "/cs/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

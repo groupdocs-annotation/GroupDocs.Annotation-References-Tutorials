@@ -3,6 +3,7 @@
 "description": "Aprenda a criar anotações de texto riscado em PDFs Java usando o GroupDocs.Annotation para Java. Siga este tutorial passo a passo para aprimorar suas capacidades de edição de documentos."
 "title": "Anotações de PDF em Java com GroupDocs - Um guia completo"
 "url": "/pt/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

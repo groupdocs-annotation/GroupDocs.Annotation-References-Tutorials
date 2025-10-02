@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET で元のパスを使用して注釈付きドキュメントを保存し、合理化されたファイル管理とワークフローの効率を確保する方法を学習します。"
 "title": "GroupDocs.Annotation for .NET を使用してドキュメントを元のパスに保存する方法"
 "url": "/ja/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

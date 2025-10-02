@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi gambar ke PDF menggunakan GroupDocs.Annotation untuk Java. Sederhanakan alur kerja dokumen Anda dan tingkatkan kolaborasi."
 "title": "Menambahkan Anotasi Gambar ke PDF dengan GroupDocs.Annotation Java - Tutorial Lengkap"
 "url": "/id/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

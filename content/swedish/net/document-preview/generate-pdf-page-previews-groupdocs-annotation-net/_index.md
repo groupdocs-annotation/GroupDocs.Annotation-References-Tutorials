@@ -3,6 +3,7 @@
 "description": "Lär dig hur du skapar effektiva förhandsvisningar av PDF-sidor med GroupDocs.Annotation för .NET. Förbättra dokumentinteraktion och effektivisera ditt arbetsflöde."
 "title": "Generera PDF-sidförhandsvisningar med GroupDocs.Annotation .NET&#58; En omfattande guide"
 "url": "/sv/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat anotasi dokumen PDF secara efisien di lingkungan .NET menggunakan aliran dengan GroupDocs.Annotation. Tingkatkan alur kerja manajemen dokumen Anda."
 "title": "Membuat Anotasi pada PDF Menggunakan GroupDocs.Annotation .NET melalui Streams' Panduan Lengkap"
 "url": "/id/net/annotation-management/annotate-pdfs-groupdocs-dotnet-streams/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan láthat el hatékonyan jegyzeteket és menthet el adott jegyzeteket PDF-fájlokban a GroupDocs.Annotation for .NET segítségével. Javítsa dokumentumkezelési munkafolyamatát részletes példákkal."
 "title": "PDF-ek megjegyzésekkel való ellátása a GroupDocs.Annotation for .NET használatával – lépésről lépésre útmutató"
 "url": "/hu/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Textersetzungsanmerkungen in Java-PDFs implementieren. Verbessern Sie die Dokumentbearbeitung und die Zusammenarbeit."
 "title": "Java PDF-Textersetzungshandbuch mit GroupDocs.Annotation"
 "url": "/de/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan aplikasi Java Anda dengan menambahkan anotasi polyline dengan pustaka GroupDocs.Annotation. Sempurna untuk meningkatkan kejelasan dan interaktivitas dokumen."
 "title": "Menerapkan Anotasi Polyline di Java Menggunakan Pustaka GroupDocs.Annotation"
 "url": "/id/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

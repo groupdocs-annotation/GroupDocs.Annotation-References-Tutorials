@@ -2,6 +2,7 @@
 "description": "Stapsgewijze handleidingen voor het toevoegen van formuliervelden en interactieve componenten aan documenten met behulp van GroupDocs.Annotation voor .NET."
 "title": "Tutorials voor formulierveldannotatie voor GroupDocs.Annotation .NET"
 "url": "/nl/net/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

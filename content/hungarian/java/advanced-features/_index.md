@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a GroupDocs.Annotation for Java segítségével elérhető fejlett annotációs lehetőségek, testreszabások és speciális funkciók megvalósításához."
 "title": "Haladó GroupDocs.Annotation funkciók – Oktatóanyagok Java nyelven"
 "url": "/hu/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

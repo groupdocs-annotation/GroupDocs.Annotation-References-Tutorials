@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Основы загрузки документов"
 "url": "/ru/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

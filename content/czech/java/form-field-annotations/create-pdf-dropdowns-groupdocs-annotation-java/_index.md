@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty interaktivními rozbalovacími poli pomocí výkonné knihovny GroupDocs.Annotation v Javě."
 "title": "Vytvořte interaktivní rozbalovací nabídky PDF pomocí GroupDocs.Annotation pro Javu"
 "url": "/cs/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

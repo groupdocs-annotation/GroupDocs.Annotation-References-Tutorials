@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχολιασμούς με βέλη στα έγγραφά σας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός παρέχει οδηγίες βήμα προς βήμα με παραδείγματα κώδικα."
 "title": "Πώς να προσθέσετε σχολιασμούς με βέλη σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

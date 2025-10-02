@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して注釈なしのドキュメント プレビューを生成し、共同プロジェクトにおけるプライバシーと明確性を確保する方法を学習します。"
 "title": "GroupDocs.Annotation .NET を使用して注釈なしのクリーンなドキュメントプレビューを作成する方法"
 "url": "/ja/net/document-preview/create-document-preview-without-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

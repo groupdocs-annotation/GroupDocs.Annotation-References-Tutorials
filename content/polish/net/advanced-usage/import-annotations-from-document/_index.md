@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Importuj adnotacje z dokumentu"
 "url": "/pl/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

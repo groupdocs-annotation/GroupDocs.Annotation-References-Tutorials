@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Gombkomponens hozzáadása PDF dokumentumhoz"
 "url": "/hu/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

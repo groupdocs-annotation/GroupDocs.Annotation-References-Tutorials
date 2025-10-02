@@ -3,6 +3,7 @@
 "description": "Java에서 강력한 GroupDocs.Annotation 라이브러리를 사용하여 대화형 드롭다운 필드로 PDF 문서를 개선하는 방법을 알아보세요."
 "title": "Java용 GroupDocs.Annotation을 사용하여 대화형 PDF 드롭다운 만들기"
 "url": "/ko/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "पीडीएफ दस्तावेज़ में बटन घटक जोड़ें"
 "url": "/hi/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

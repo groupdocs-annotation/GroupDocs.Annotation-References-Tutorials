@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hämtar versionsnycklar från dokument med GroupDocs.Annotation för .NET. Förbättra dokumenthantering och samarbete med den här steg-för-steg-guiden."
 "title": "Så här hämtar du versionsnycklar i .NET med GroupDocs.Annotation – en komplett guide"
 "url": "/sv/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

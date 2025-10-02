@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 Java 文件中實作距離註解。本逐步指南涵蓋設定、配置和實際應用。"
 "title": "如何使用 GroupDocs.Annotation 在 Java 中加入距離註解——逐步指南"
 "url": "/zh-hant/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

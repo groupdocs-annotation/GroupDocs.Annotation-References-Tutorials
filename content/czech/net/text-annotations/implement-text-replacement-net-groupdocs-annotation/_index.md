@@ -3,6 +3,7 @@
 "description": "Naučte se, jak implementovat anotace s nahrazováním textu ve vašich .NET aplikacích pomocí GroupDocs.Annotation. Bez námahy vylepšete čitelnost a funkčnost dokumentů."
 "title": "Jak implementovat nahrazování textu v .NET pomocí GroupDocs.Annotation pro efektivní anotaci dokumentů"
 "url": "/cs/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

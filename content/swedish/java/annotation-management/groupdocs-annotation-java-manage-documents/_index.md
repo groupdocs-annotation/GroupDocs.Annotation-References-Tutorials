@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hanterar annoteringar i Java med GroupDocs.Annotation. Den här guiden behandlar hur man laddar, tar bort och optimerar dokumentarbetsflöden."
 "title": "Bemästra annoteringshantering i Java – omfattande guide med GroupDocs.Annotation"
 "url": "/sv/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

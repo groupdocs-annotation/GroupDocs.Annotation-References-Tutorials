@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": ".NET में उपयोगकर्ता नाम द्वारा उत्तर हटाएं"
 "url": "/hi/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

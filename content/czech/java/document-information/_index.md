@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro přístup k metadatům dokumentů, informacím o stránkách a vlastnostem dokumentů pomocí GroupDocs.Annotation pro Javu."
 "title": "Výukové programy k informacím o dokumentech pro GroupDocs.Annotation v Javě"
 "url": "/cs/java/document-information/"
+type: docs
 "weight": 12
 ---
 

@@ -3,6 +3,7 @@
 "description": "Découvrez comment utiliser GroupDocs.Annotation pour .NET pour supprimer les annotations par ID, optimisant ainsi votre processus de gestion de documents avec ce guide complet."
 "title": "Comment supprimer efficacement les annotations des PDF à l'aide de GroupDocs.Annotation .NET"
 "url": "/fr/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

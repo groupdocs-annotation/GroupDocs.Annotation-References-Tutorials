@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 高效保存 PDF 注释。使用我们的详细指南简化您的文档管理流程。"
 "title": "使用 GroupDocs.Annotation for .NET 高效保存 PDF 注释"
 "url": "/zh/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

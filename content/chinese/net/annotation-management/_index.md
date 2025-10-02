@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 在文档中添加、删除、更新和管理注释的完整教程。"
 "title": "GroupDocs.Annotation .NET 注释管理教程"
 "url": "/zh/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

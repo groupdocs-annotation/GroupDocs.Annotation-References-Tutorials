@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके निर्दिष्ट गुणवत्ता स्तरों पर चित्र जोड़कर अपने PDF को बेहतर बनाने का तरीका जानें। दस्तावेज़ की दृश्य अपील और डेटा प्रस्तुति में सुधार करें।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके निर्दिष्ट गुणवत्ता वाले PDF दस्तावेज़ में छवि कैसे जोड़ें"
 "url": "/hi/net/graphical-annotations/add-image-pdf-quality-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้การลบคำอธิบายประกอบออกจากเอกสารด้วย GroupDocs.Annotation สำหรับ .NET เรียนรู้ขั้นตอนทีละขั้นตอน เพิ่มประสิทธิภาพการจัดการไฟล์ และปรับปรุงความชัดเจนของเอกสาร"
 "title": "ลบคำอธิบายประกอบอย่างมีประสิทธิภาพใน .NET โดยใช้ GroupDocs.Annotation&#58; คำแนะนำที่ครอบคลุม"
 "url": "/th/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

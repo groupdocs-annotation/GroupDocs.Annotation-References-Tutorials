@@ -2,6 +2,7 @@
 "description": "Tutoriales paso a paso para agregar, editar y administrar anotaciones de texto en documentos usando GroupDocs.Annotation para Java."
 "title": "Tutoriales de anotación de texto para GroupDocs.Annotation Java"
 "url": "/es/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

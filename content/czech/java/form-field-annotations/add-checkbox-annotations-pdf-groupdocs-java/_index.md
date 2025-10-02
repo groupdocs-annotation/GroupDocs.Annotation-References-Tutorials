@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty interaktivními anotacemi zaškrtávacích políček pomocí nástroje GroupDocs.Annotation pro Javu. Postupujte podle tohoto podrobného návodu."
 "title": "Jak přidat anotace zaškrtávacích políček do PDF pomocí GroupDocs.Annotation pro Javu"
 "url": "/cs/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

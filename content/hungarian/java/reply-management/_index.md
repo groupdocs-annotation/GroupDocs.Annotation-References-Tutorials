@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatott oktatóanyagok a hozzászólásláncok, válaszok és közös megbeszélések megvalósításához a GroupDocs.Annotation for Java segítségével."
 "title": "Válaszkezelési oktatóanyagok a GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

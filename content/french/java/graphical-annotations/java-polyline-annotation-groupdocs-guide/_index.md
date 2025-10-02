@@ -3,6 +3,7 @@
 "description": "Découvrez comment améliorer vos applications Java en ajoutant des annotations polylignes avec la bibliothèque GroupDocs.Annotation. Idéal pour améliorer la clarté et l'interactivité des documents."
 "title": "Implémentation d'annotations de polylignes en Java à l'aide de la bibliothèque GroupDocs.Annotation"
 "url": "/fr/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

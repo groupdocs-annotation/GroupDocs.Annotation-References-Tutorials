@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดึงคีย์เวอร์ชันจากเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงการจัดการเอกสารและการทำงานร่วมกันด้วยคู่มือทีละขั้นตอนนี้"
 "title": "วิธีการดึงคีย์เวอร์ชันใน .NET โดยใช้ GroupDocs.Annotation&#58; คู่มือฉบับสมบูรณ์"
 "url": "/th/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belgeden Açıklamaları İçe Aktar"
 "url": "/tr/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

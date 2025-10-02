@@ -3,6 +3,7 @@
 "description": "Pelajari cara menghapus balasan pengguna tertentu secara efisien dari dokumen PDF yang diberi anotasi menggunakan GroupDocs.Annotation for .NET. Sederhanakan pengelolaan anotasi Anda dengan panduan lengkap ini."
 "title": "Cara Menghapus Balasan Pengguna dari PDF Menggunakan GroupDocs.Annotation .NET&#58; Panduan Langkah demi Langkah"
 "url": "/id/net/reply-management/remove-user-replies-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

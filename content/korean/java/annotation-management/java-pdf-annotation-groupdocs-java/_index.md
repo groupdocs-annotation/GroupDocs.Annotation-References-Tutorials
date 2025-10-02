@@ -3,6 +3,7 @@
 "description": "Java용 강력한 GroupDocs.Annotation API를 사용하여 PDF 문서에 영역 강조 표시를 효율적으로 주석 처리하는 방법을 알아보고 협업과 생산성을 향상시키세요."
 "title": "GroupDocs.Annotation을 사용하여 Java에서 PDF에 주석을 달는 방법"
 "url": "/ko/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

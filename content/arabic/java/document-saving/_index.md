@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لحفظ المستندات الموضحة مع خيارات مختلفة باستخدام GroupDocs.Annotation for Java."
 "title": "دروس تعليمية حول حفظ المستندات في GroupDocs.Annotation Java"
 "url": "/ar/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

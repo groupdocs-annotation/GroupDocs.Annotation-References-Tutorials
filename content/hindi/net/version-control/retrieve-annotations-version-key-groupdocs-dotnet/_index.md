@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET के साथ संस्करण कुंजियों का उपयोग करके दस्तावेज़ एनोटेशन को कुशलतापूर्वक प्रबंधित करना सीखें। अपने वर्कफ़्लो को सुव्यवस्थित करें और सहयोग बढ़ाएँ।"
 "title": "उन्नत दस्तावेज़ प्रबंधन के लिए GroupDocs.Annotation .NET में संस्करण कुंजी द्वारा एनोटेशन कैसे प्राप्त करें"
 "url": "/hi/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

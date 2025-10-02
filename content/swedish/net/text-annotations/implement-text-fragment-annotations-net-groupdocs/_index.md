@@ -3,6 +3,7 @@
 "description": "Lär dig hur du implementerar textfragmentannoteringar i .NET med GroupDocs.Annotation. Den här guiden behandlar installation, implementering och praktiska tillämpningar för effektiv dokumenthantering."
 "title": "Implementera textfragmentannoteringar i .NET med GroupDocs – en omfattande guide"
 "url": "/sv/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

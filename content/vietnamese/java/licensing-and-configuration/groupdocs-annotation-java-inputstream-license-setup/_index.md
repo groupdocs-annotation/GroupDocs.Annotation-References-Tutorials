@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thiết lập cấp phép GroupDocs.Annotation hiệu quả trong Java bằng InputStream. Hợp lý hóa quy trình làm việc của bạn và nâng cao hiệu suất ứng dụng với hướng dẫn toàn diện này."
 "title": "GroupDocs.Annotation Java Licensing được sắp xếp hợp lý & Cách sử dụng InputStream để thiết lập giấy phép"
 "url": "/vi/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/"
+type: docs
 "weight": 1
 ---
 

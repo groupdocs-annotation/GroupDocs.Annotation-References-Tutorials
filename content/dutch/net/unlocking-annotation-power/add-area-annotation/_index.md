@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Gebiedsannotatie toevoegen aan document"
 "url": "/nl/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

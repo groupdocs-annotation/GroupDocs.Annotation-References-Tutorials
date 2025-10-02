@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके विशिष्ट वर्कशीट कॉलम से संक्षिप्त और प्रासंगिक दस्तावेज़ पूर्वावलोकन बनाना सीखें। डेटा विश्लेषण और आईटी प्रबंधन में वर्कफ़्लो को सुव्यवस्थित करने के लिए बिल्कुल सही।"
 "title": "GroupDocs.Annotation .NET का उपयोग करके लक्षित Excel शीट पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

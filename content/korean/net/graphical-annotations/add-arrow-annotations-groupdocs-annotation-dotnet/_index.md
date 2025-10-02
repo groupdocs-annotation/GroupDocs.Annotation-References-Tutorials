@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서에 화살표 주석을 추가하는 방법을 알아보세요. 이 가이드에서는 코드 예제와 함께 단계별 지침을 제공합니다."
 "title": "GroupDocs.Annotation for .NET을 사용하여 PDF에 화살표 주석을 추가하는 방법"
 "url": "/ko/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

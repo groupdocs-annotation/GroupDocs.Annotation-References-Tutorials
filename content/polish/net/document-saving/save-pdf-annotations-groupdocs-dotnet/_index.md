@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak efektywnie zapisywać adnotacje PDF za pomocą GroupDocs.Annotation dla platformy .NET. Usprawnij proces zarządzania dokumentami dzięki naszemu szczegółowemu przewodnikowi."
 "title": "Efektywne zapisywanie adnotacji PDF za pomocą GroupDocs.Annotation dla .NET"
 "url": "/pl/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

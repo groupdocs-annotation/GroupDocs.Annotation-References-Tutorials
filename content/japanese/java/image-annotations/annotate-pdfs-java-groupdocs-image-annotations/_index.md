@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用してPDFに画像注釈を追加する方法を学びましょう。ドキュメントワークフローを効率化し、共同作業を強化します。"
 "title": "GroupDocs.Annotation Java を使用して PDF に画像注釈を追加する - 完全チュートリアル"
 "url": "/ja/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

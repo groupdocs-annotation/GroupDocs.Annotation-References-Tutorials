@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać adnotacje przekreślenia tekstu w Javie za pomocą GroupDocs.Annotation. Postępuj zgodnie z tym przewodnikiem krok po kroku, aby bezproblemowo adnotować dokumenty."
 "title": "Przewodnik po adnotacjach przekreślonych tekstu w języku Java przy użyciu GroupDocs.Annotation"
 "url": "/pl/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

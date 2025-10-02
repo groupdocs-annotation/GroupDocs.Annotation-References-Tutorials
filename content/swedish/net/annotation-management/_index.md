@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att lägga till, ta bort, uppdatera och hantera anteckningar i dokument med GroupDocs.Annotation för .NET."
 "title": "Handledningar för annoteringshantering för GroupDocs.Annotation .NET"
 "url": "/sv/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

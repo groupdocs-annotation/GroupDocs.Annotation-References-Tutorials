@@ -2,6 +2,7 @@
 "description": "دروس تعليمية خطوة بخطوة لتنفيذ إصدارات المستندات وتتبع التغييرات وإدارة سجل التعليقات التوضيحية باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس التحكم في الإصدارات لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/version-control/"
+type: docs
 "weight": 13
 ---
 

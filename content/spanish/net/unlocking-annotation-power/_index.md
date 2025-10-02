@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Desbloqueo del poder de la anotación"
 "url": "/es/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan valósíthat meg szövegrész-annotációkat .NET-ben a GroupDocs.Annotation használatával. Ez az útmutató a hatékony dokumentumkezelés beállítását, megvalósítását és gyakorlati alkalmazásait ismerteti."
 "title": "Szövegtöredék-annotációk megvalósítása .NET-ben a GroupDocs segítségével – Átfogó útmutató"
 "url": "/hu/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

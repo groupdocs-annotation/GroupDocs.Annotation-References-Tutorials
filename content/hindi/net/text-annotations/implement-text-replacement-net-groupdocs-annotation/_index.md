@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation का उपयोग करके अपने .NET अनुप्रयोगों में टेक्स्ट प्रतिस्थापन एनोटेशन लागू करने का तरीका जानें। दस्तावेज़ की पठनीयता और कार्यक्षमता को आसानी से बढ़ाएँ।"
 "title": "कुशल दस्तावेज़ एनोटेशन के लिए GroupDocs.Annotation का उपयोग करके .NET में टेक्स्ट प्रतिस्थापन कैसे लागू करें"
 "url": "/hi/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

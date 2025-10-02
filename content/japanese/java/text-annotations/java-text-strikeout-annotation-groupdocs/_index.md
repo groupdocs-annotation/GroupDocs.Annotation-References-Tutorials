@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotationを使用して、Javaでテキストに取り消し線注釈を追加する方法を学びましょう。このステップバイステップガイドに従って、シームレスなドキュメント注釈を作成しましょう。"
 "title": "GroupDocs.Annotation を使用した Java テキスト取り消し線注釈ガイド"
 "url": "/ja/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

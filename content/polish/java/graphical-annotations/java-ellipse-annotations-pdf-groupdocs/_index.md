@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać adnotacje elipsy do dokumentów PDF za pomocą potężnej biblioteki GroupDocs.Annotation w Javie. Postępuj zgodnie z tym przewodnikiem krok po kroku, aby usprawnić współpracę nad dokumentami."
 "title": "Java&#58; Dodawanie adnotacji elipsy do plików PDF przy użyciu GroupDocs.Annotation dla Java"
 "url": "/pl/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation .NET 的版本密钥高效管理文档注释。简化您的工作流程并增强协作。"
 "title": "如何在 GroupDocs.Annotation .NET 中按版本键检索注释以增强文档管理"
 "url": "/zh/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

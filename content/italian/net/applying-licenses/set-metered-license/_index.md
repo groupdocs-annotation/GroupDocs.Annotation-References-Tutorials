@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Imposta licenza a consumo"
 "url": "/it/net/applying-licenses/set-metered-license/"
+type: docs
 "weight": 12
 ---
 

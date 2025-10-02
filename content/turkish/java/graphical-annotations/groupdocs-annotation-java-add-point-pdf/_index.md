@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java ile PDF belgelerinizi programatik olarak nokta açıklamaları ekleyerek nasıl geliştireceğinizi öğrenin. Bu kılavuz kurulum, uygulama ve pratik uygulamaları kapsar."
 "title": "GroupDocs.Annotation for Java Kullanılarak PDF'lere Nokta Açıklamaları Nasıl Eklenir"
 "url": "/tr/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

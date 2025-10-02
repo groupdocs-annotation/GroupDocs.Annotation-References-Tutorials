@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak filigran eklemeyi öğrenin. Bu kılavuz, kurulum, adım adım uygulama ve belgeleri güvence altına alma ve markalama için en iyi uygulamaları kapsar."
 "title": ".NET'te GroupDocs.Annotation ile Filigran Eklemeyi Uygulayın&#58; Belge Güvenliği ve Markalama İçin Kapsamlı Bir Kılavuz"
 "url": "/tr/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

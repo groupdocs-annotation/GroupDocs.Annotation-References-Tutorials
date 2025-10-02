@@ -3,6 +3,7 @@
 "description": "Apprenez à annoter des documents PDF directement depuis des URL avec GroupDocs.Annotation pour Java. Ce tutoriel explique comment charger, annoter et enregistrer efficacement des PDF."
 "title": "Comment annoter des PDF à partir d'URL avec GroupDocs.Annotation pour Java | Tutoriel sur la gestion des annotations de documents"
 "url": "/fr/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 문서에서 주석을 추출하고 XML로 직렬화하는 방법을 알아보세요. 지금 바로 문서 관리 워크플로를 개선하세요!"
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 주석을 추출하고 직렬화하는 방법"
 "url": "/ko/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

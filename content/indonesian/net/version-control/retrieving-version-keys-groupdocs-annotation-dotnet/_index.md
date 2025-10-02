@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengambil kunci versi dari dokumen secara efisien menggunakan GroupDocs.Annotation untuk .NET. Tingkatkan pengelolaan dan kolaborasi dokumen dengan panduan langkah demi langkah ini."
 "title": "Cara Mendapatkan Kunci Versi di .NET menggunakan GroupDocs.Annotation&#58; Panduan Lengkap"
 "url": "/id/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

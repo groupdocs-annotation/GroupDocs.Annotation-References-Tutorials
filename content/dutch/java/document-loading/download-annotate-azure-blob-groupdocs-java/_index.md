@@ -3,6 +3,7 @@
 "description": "Leer hoe u naadloos bestanden downloadt uit Azure Blob Storage en ze van aantekeningen voorziet met GroupDocs.Annotation voor Java. Verbeter uw workflow voor documentbeheer met deze uitgebreide handleiding."
 "title": "Azure Blob-bestanden downloaden en annoteren met GroupDocs.Annotation Java"
 "url": "/nl/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

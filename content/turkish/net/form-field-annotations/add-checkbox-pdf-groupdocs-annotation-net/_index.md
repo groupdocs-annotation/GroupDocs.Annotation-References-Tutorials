@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak etkileşimli onay kutuları ekleyerek PDF belgelerinizi nasıl geliştireceğinizi öğrenin. Dijital belgelerinizdeki form alanı açıklamalarını kolaylaştırmak için bu adım adım kılavuzu izleyin."
 "title": ".NET için GroupDocs.Annotation ile PDF'ye Onay Kutusu Nasıl Eklenir&#58; Adım Adım Kılavuz"
 "url": "/tr/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Pelajari cara menggunakan GroupDocs.Annotation untuk Java guna membuat pratinjau PNG berkualitas tinggi dari halaman dokumen. Sempurnakan perangkat lunak Anda dengan fitur canggih ini."
 "title": "Hasilkan Pratinjau Halaman Dokumen di Java Menggunakan GroupDocs.Annotation"
 "url": "/id/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

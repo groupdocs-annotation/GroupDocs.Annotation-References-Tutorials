@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบทีละขั้นตอนสำหรับการใช้งานเวอร์ชันเอกสาร การติดตามการเปลี่ยนแปลง และการจัดการประวัติคำอธิบายประกอบด้วย GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการควบคุมเวอร์ชันสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/version-control/"
+type: docs
 "weight": 13
 ---
 

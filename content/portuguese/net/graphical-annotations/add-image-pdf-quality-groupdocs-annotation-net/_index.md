@@ -3,6 +3,7 @@
 "description": "Aprenda a aprimorar seus PDFs adicionando imagens com níveis de qualidade específicos usando o GroupDocs.Annotation para .NET. Melhore o apelo visual dos documentos e a apresentação dos dados."
 "title": "Como adicionar uma imagem a um documento PDF com qualidade especificada usando GroupDocs.Annotation para .NET"
 "url": "/pt/net/graphical-annotations/add-image-pdf-quality-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

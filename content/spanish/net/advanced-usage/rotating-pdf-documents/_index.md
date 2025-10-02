@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Rotación de documentos PDF"
 "url": "/es/net/advanced-usage/rotating-pdf-documents/"
+type: docs
 "weight": 22
 ---
 

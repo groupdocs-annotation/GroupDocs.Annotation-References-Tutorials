@@ -4,6 +4,7 @@
 "linktitle": "Java 教學的 GroupDocs.Annotation"
 "title": "Java 文件註解 API | GroupDocs.Annotation Java 教學與範例"
 "url": "/zh-hant/java/"
+type: docs
 "weight": 10
 ---
 

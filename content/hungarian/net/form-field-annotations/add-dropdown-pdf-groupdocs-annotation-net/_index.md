@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan javíthatja PDF-dokumentumait interaktív legördülő komponensek hozzáadásával a GroupDocs.Annotation for .NET segítségével. Kövesse ezt a lépésről lépésre szóló útmutatót a felhasználói bevitel egyszerűsítéséhez és a dokumentum funkcionalitásának javításához."
 "title": "Legördülő menü hozzáadása PDF-ekhez a GroupDocs.Annotation for .NET segítségével – Átfogó útmutató"
 "url": "/hu/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนเกี่ยวกับการใช้งานไฮเปอร์ลิงก์และคำอธิบายแบบเชื่อมโยงในเอกสารด้วย GroupDocs.Annotation สำหรับ Java"
 "title": "ลิงก์บทช่วยสอนเกี่ยวกับคำอธิบายประกอบสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

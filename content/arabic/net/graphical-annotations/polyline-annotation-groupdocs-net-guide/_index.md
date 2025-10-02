@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحسين مستندات PDF الخاصة بك باستخدام التعليقات التوضيحية متعددة الخطوط باستخدام GroupDocs.Annotation لـ .NET. يقدم هذا الدليل تعليمات ونصائح خطوة بخطوة لتطبيق فعال."
 "title": "كيفية إضافة تعليقات توضيحية متعددة الأسطر إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET - دليل خطوة بخطوة"
 "url": "/ar/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutorial langkah demi langkah untuk menambahkan, mengedit, dan mengelola anotasi teks dalam dokumen menggunakan GroupDocs.Annotation for .NET."
 "title": "Tutorial Anotasi Teks untuk GroupDocs.Annotation .NET"
 "url": "/id/net/text-annotations/"
+type: docs
 "weight": 5
 ---
 

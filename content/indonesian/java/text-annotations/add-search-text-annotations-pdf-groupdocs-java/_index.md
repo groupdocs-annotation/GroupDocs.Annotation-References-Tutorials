@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan dokumen PDF Anda dengan menambahkan anotasi teks yang dapat dicari menggunakan GroupDocs.Annotation untuk Java. Panduan ini menawarkan petunjuk langkah demi langkah dan kiat praktis."
 "title": "Cara Menambahkan Anotasi Teks Pencarian ke PDF Menggunakan GroupDocs.Annotation untuk Java"
 "url": "/id/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

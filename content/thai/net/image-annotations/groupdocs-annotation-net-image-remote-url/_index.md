@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการเพิ่มคำอธิบายภาพจาก URL ระยะไกลลงในเอกสาร PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงเวิร์กโฟลว์เอกสารของคุณด้วยคู่มือที่ครอบคลุมนี้"
 "title": "นำคำอธิบายภาพไปใช้ใน PDF โดยใช้ GroupDocs.Annotation .NET และ URL ระยะไกล"
 "url": "/th/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

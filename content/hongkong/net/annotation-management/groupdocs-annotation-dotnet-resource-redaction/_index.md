@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 為 PDF 新增資源屏蔽註解。本詳細指南將幫助您保護敏感資訊並增強文件安全性。"
 "title": "如何使用 GroupDocs.Annotation 在 .NET 中新增資源修訂註解－綜合指南"
 "url": "/zh-hant/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u paginabereiken efficiënt kunt beheren met GroupDocs.Annotation voor .NET. Deze handleiding behandelt de installatie, configuratie en aanbevolen procedures voor het opslaan van specifieke pagina's."
 "title": "Beheersing van paginabereiken in .NET met GroupDocs.Annotation&#58; efficiënte annotatietechnieken"
 "url": "/nl/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

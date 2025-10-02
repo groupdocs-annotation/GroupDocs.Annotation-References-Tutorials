@@ -2,6 +2,7 @@
 "description": "Kompletní návody pro ukládání anotovaných dokumentů s různými možnostmi pomocí GroupDocs.Annotation pro .NET."
 "title": "Výukové programy pro ukládání dokumentů pro GroupDocs.Annotation .NET"
 "url": "/cs/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

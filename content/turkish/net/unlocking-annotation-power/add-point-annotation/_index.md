@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belgeye Nokta Açıklaması Ekle"
 "url": "/tr/net/unlocking-annotation-power/add-point-annotation/"
+type: docs
 "weight": 17
 ---
 

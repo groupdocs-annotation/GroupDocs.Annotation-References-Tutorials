@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να αποθηκεύετε αποτελεσματικά μόνο σελίδες με σχόλια σε ένα PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τη διαχείριση εγγράφων και τη συνεργασία με αυτόν τον λεπτομερή οδηγό."
 "title": "Πώς να αποθηκεύσετε σχολιασμένες σελίδες σε PDF χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

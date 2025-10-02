@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 PDF에서 주석이 달린 페이지만 효율적으로 저장하는 방법을 알아보세요. 이 자세한 가이드를 통해 문서 관리 및 협업을 향상시켜 보세요."
 "title": "GroupDocs.Annotation for .NET을 사용하여 주석이 달린 페이지를 PDF로 저장하는 방법"
 "url": "/ko/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

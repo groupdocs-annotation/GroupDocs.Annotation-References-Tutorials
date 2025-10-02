@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation を使用して .NET アプリケーションにテキストの波線注釈を追加し、ドキュメントの読みやすさとフィードバックを向上させる方法を学習します。"
 "title": "GroupDocs.Annotation を使用して .NET でテキストの波線注釈を実装する"
 "url": "/ja/net/text-annotations/implement-squiggly-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

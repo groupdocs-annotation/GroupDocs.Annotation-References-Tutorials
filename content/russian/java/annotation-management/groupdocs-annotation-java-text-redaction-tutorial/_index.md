@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно редактировать текст в PDF-файлах с помощью мощной библиотеки GroupDocs.Annotation Java. В этом руководстве рассматриваются процессы настройки, создания и сохранения аннотаций."
 "title": "Мастер редактирования текста в PDF-файлах с использованием GroupDocs.Annotation Java API&#58; Полное руководство"
 "url": "/ru/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

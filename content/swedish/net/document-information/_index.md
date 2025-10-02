@@ -2,6 +2,7 @@
 "description": "Kompletta handledningar för att komma åt dokumentmetadata, sidinformation och dokumentegenskaper med GroupDocs.Annotation för .NET."
 "title": "Handledningar om dokumentinformation för GroupDocs.Annotation .NET"
 "url": "/sv/net/document-information/"
+type: docs
 "weight": 12
 ---
 

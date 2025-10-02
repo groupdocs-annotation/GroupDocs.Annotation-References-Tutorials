@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menambahkan bentuk, panah, gambar, dan elemen grafis dalam dokumen dengan GroupDocs.Annotation untuk Java."
 "title": "Tutorial Anotasi Grafis untuk GroupDocs.Annotation Java"
 "url": "/id/java/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

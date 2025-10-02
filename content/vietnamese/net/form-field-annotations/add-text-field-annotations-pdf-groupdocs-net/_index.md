@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thêm chú thích trường văn bản tương tác vào tài liệu PDF của bạn bằng GroupDocs.Annotation cho .NET. Thực hiện theo hướng dẫn từng bước này để tăng cường tính tương tác của tài liệu."
 "title": "Cách thêm chú thích trường văn bản vào PDF bằng GroupDocs.Annotation cho .NET (Hướng dẫn)"
 "url": "/vi/net/form-field-annotations/add-text-field-annotations-pdf-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

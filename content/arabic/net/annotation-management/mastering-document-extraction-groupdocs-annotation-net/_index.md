@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استخراج معلومات المستندات بكفاءة باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل الإعداد والاستخدام والتطبيقات العملية لتحسين سير عمل معالجة المستندات."
 "title": "إتقان استخراج المستندات باستخدام GroupDocs.Annotation .NET - دليل شامل للمطورين"
 "url": "/ar/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการใส่คำอธิบายประกอบเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ Java คู่มือนี้ครอบคลุมถึงการโหลด การใส่คำอธิบายประกอบ PDF และการเพิ่มประสิทธิภาพสภาพแวดล้อม Java ของคุณด้วย Maven"
 "title": "เรียนรู้การอธิบายเอกสารอย่างเชี่ยวชาญด้วย Java คำแนะนำที่ครอบคลุมโดยใช้ GroupDocs.Annotation"
 "url": "/th/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

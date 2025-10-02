@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την προσθήκη, επεξεργασία και διαχείριση σχολίων κειμένου σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για Java."
 "title": "Εκπαιδευτικά σεμινάρια σχολιασμού κειμένου για το GroupDocs.Annotation Java"
 "url": "/el/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

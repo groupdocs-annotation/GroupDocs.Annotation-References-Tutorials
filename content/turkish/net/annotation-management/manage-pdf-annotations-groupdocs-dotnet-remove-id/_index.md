@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak PDF'lerden ve diğer belgelerden açıklamaları etkili bir şekilde nasıl kaldıracağınızı öğrenin. Adım adım kılavuzları, en iyi uygulamaları ve gerçek dünya uygulamalarını keşfedin."
 "title": ".NET için GroupDocs.Annotation'ı kullanarak ID'ye Göre PDF Açıklamaları Nasıl Kaldırılır"
 "url": "/tr/net/annotation-management/manage-pdf-annotations-groupdocs-dotnet-remove-id/"
+type: docs
 "weight": 1
 ---
 

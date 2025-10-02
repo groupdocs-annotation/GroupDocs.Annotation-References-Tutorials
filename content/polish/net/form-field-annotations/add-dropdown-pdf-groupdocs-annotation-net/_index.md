@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak ulepszyć dokumenty PDF, dodając interaktywne komponenty rozwijane za pomocą GroupDocs.Annotation dla .NET. Postępuj zgodnie z tym przewodnikiem krok po kroku, aby usprawnić wprowadzanie danych przez użytkownika i poprawić funkcjonalność dokumentu."
 "title": "Dodawanie listy rozwijanej do plików PDF za pomocą GroupDocs.Annotation dla .NET&#58; Kompleksowy przewodnik"
 "url": "/pl/net/form-field-annotations/add-dropdown-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

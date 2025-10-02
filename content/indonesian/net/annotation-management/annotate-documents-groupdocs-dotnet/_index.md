@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan dan memperbarui anotasi dalam dokumen secara efisien menggunakan GroupDocs.Annotation .NET. Tingkatkan kolaborasi dan manajemen dokumen dengan panduan langkah demi langkah ini."
 "title": "Cara Membuat Anotasi Dokumen Menggunakan GroupDocs.Annotation .NET&#58; Panduan Lengkap"
 "url": "/id/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

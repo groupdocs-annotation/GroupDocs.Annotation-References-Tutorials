@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat pratinjau dokumen yang bersih tanpa komentar menggunakan GroupDocs.Annotation untuk .NET. Ikuti panduan ini untuk menyempurnakan presentasi dokumen dan proses peninjauan."
 "title": "Cara Membuat Pratinjau Dokumen Tanpa Komentar Menggunakan GroupDocs.Annotation .NET"
 "url": "/id/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

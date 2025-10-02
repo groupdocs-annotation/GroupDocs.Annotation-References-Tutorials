@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi panah di dokumen Anda menggunakan GroupDocs.Annotation for .NET. Panduan ini menyediakan petunjuk langkah demi langkah dengan contoh kode."
 "title": "Cara Menambahkan Anotasi Panah dalam PDF Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

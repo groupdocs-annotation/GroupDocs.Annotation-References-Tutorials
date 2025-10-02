@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Ihren PDF-Dokumenten mit GroupDocs.Annotation für Java verschnörkelte Anmerkungen hinzufügen und so die Dokumentprüfung und Zusammenarbeit verbessern."
 "title": "So fügen Sie mit GroupDocs.Annotation für Java verschnörkelte Anmerkungen zu PDFs hinzu"
 "url": "/de/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

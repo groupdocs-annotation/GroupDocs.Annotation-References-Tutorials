@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية على الصور إلى ملفات PDF باستخدام GroupDocs.Annotation لجافا. بسّط سير عمل مستنداتك وحسّن التعاون."
 "title": "إضافة تعليقات توضيحية للصور إلى ملفات PDF باستخدام GroupDocs.Annotation Java - برنامج تعليمي كامل"
 "url": "/ar/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

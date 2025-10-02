@@ -3,6 +3,7 @@
 "description": "Leer hoe u annotatiereacties efficiënt kunt beheren met GroupDocs.Annotation voor .NET. Deze handleiding behandelt integratie, het toevoegen van reacties en praktische use cases."
 "title": "Handleiding voor het implementeren van annotatieantwoordbeheer in .NET met GroupDocs.Annotation"
 "url": "/nl/net/reply-management/groupdocs-annotation-net-reply-management-guide/"
+type: docs
 "weight": 1
 ---
 

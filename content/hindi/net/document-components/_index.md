@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ घटक"
 "url": "/hi/net/document-components/"
+type: docs
 "weight": 24
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Chú thích API .NET"
 "title": "Xóa Trả lời theo ID trong .NET"
 "url": "/vi/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

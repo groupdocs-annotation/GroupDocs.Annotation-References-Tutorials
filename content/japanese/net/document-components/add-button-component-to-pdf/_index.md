@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "PDFドキュメントにボタンコンポーネントを追加する"
 "url": "/ja/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

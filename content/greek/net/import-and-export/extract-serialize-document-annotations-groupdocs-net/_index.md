@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εξάγετε σχολιασμούς από έγγραφα και να τις σειριοποιείτε σε XML με το GroupDocs.Annotation για .NET. Βελτιώστε τη ροή εργασίας διαχείρισης εγγράφων σας σήμερα!"
 "title": "Πώς να εξαγάγετε και να σειριοποιήσετε σχολιασμούς σε .NET χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation 開発者ガイド"
 "title": "ドキュメント注釈 API | GroupDocs.Annotation チュートリアルと SDK の例"
 "url": "/ja/"
+type: docs
 "weight": 11
 ---
 

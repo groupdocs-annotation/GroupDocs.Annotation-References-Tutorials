@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนในการสร้างตัวอย่างเอกสาร ภาพขนาดย่อ และการแสดงภาพด้วย GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนการดูตัวอย่างเอกสารสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

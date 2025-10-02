@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "إضافة تعليق الرابط إلى المستند"
 "url": "/ar/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

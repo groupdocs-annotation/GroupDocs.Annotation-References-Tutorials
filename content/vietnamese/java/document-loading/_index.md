@@ -2,6 +2,7 @@
 "description": "Hướng dẫn từng bước để tải tài liệu từ nhiều nguồn khác nhau bằng GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn tải tài liệu cho GroupDocs.Annotation Java"
 "url": "/vi/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

@@ -2,6 +2,7 @@
 "description": "Tutoriels étape par étape pour ajouter des champs de formulaire et des composants interactifs aux documents à l'aide de GroupDocs.Annotation pour Java."
 "title": "Tutoriels d'annotation de champs de formulaire pour GroupDocs.Annotation Java"
 "url": "/fr/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

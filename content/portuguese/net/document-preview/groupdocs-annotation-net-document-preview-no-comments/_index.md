@@ -3,6 +3,7 @@
 "description": "Aprenda a criar pré-visualizações de documentos limpas e sem comentários usando o GroupDocs.Annotation para .NET. Siga este guia para aprimorar seus processos de apresentação e revisão de documentos."
 "title": "Como gerar visualizações de documentos sem comentários usando GroupDocs.Annotation .NET"
 "url": "/pt/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
+type: docs
 "weight": 1
 ---
 

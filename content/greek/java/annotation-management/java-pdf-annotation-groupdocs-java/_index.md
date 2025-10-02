@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε αποτελεσματικά σχόλια σε έγγραφα PDF με επισημάνσεις περιοχών χρησιμοποιώντας το ισχυρό GroupDocs.Annotation API για Java, ενισχύοντας τη συνεργασία και την παραγωγικότητα."
 "title": "Πώς να προσθέσετε σχόλια σε PDF σε Java χρησιμοποιώντας το GroupDocs.Annotation"
 "url": "/el/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

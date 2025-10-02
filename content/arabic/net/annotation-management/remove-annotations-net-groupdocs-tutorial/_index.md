@@ -3,6 +3,7 @@
 "description": "أتقن إزالة التعليقات التوضيحية من المستندات باستخدام GroupDocs.Annotation لـ .NET. تعلّم العمليات خطوة بخطوة، وحسّن معالجة الملفات، وحسّن وضوح المستندات."
 "title": "إزالة التعليقات التوضيحية في .NET بكفاءة باستخدام GroupDocs.Annotation&#58; دليل شامل"
 "url": "/ar/net/annotation-management/remove-annotations-net-groupdocs-tutorial/"
+type: docs
 "weight": 1
 ---
 

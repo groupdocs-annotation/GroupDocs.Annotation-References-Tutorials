@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách chú thích tệp PDF trực tuyến bằng GroupDocs.Annotation cho .NET. Đơn giản hóa quy trình xem xét tài liệu của bạn bằng các kỹ thuật chú thích hiệu quả."
 "title": "Cách chú thích PDF từ URL bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

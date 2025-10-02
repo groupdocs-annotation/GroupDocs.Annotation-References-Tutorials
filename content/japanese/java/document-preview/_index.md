@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java を使用してドキュメントのプレビュー、サムネイル、視覚的表現を生成するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation Java のドキュメントプレビューチュートリアル"
 "url": "/ja/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java'yı kullanarak belgelerdeki açıklamaları ekleme, kaldırma, güncelleme ve yönetmeye ilişkin kapsamlı eğitimler."
 "title": "GroupDocs için Açıklama Yönetimi Eğitimleri.Açıklama Java"
 "url": "/tr/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

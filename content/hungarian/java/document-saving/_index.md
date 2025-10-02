@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a jegyzetekkel ellátott dokumentumok mentéséhez, különféle lehetőségekkel a GroupDocs.Annotation for Java használatával."
 "title": "Dokumentummentési oktatóanyagok GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

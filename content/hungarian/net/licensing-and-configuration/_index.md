@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a licencelés beállításához, a beállítások konfigurálásához és a GroupDocs.Annotation kezeléséhez .NET alkalmazásokban."
 "title": "GroupDocs.Annotation licencelési és konfigurációs oktatóanyagok .NET-hez"
 "url": "/hu/net/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

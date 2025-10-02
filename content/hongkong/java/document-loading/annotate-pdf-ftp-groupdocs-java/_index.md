@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java 直接從 FTP 伺服器為 PDF 文件新增註解。本逐步指南將協助您簡化文件處理工作流程。"
 "title": "使用 GroupDocs.Annotation for Java 從 FTP 註解 PDF —— 完整指南"
 "url": "/zh-hant/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące generowania podglądów dokumentów, miniatur i reprezentacji wizualnych za pomocą GroupDocs.Annotation dla Java."
 "title": "Samouczki podglądu dokumentów dla GroupDocs.Annotation Java"
 "url": "/pl/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

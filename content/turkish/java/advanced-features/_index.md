@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java ile gelişmiş açıklama yeteneklerini, özelleştirmeleri ve özel özellikleri uygulamaya yönelik eksiksiz eğitimler."
 "title": "Java için Gelişmiş GroupDocs.Annotation Özellikleri Eğitimleri"
 "url": "/tr/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

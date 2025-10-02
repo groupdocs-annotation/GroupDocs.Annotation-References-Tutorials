@@ -3,6 +3,7 @@
 "description": "Pelajari cara menghapus balasan dari anotasi dalam dokumen menggunakan GroupDocs.Annotation for Java API. Tingkatkan pengelolaan dokumen Anda dengan panduan langkah demi langkah ini."
 "title": "Cara Menghapus Balasan Berdasarkan ID di Java Menggunakan API GroupDocs.Annotation"
 "url": "/id/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/"
+type: docs
 "weight": 1
 ---
 

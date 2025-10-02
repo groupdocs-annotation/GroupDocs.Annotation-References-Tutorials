@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation .NET API를 사용하여 대화형 타원 주석을 추가하여 PDF 문서를 개선하는 방법을 알아보세요. 이 가이드는 개발자를 위한 단계별 지침을 제공합니다."
 "title": "GroupDocs.Annotation .NET API를 사용하여 PDF에 타원 주석을 추가하는 방법"
 "url": "/ko/net/graphical-annotations/add-ellipse-annotation-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

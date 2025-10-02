@@ -3,6 +3,7 @@
 "description": "Pelajari cara menyempurnakan PDF Anda dengan menambahkan gambar pada tingkat kualitas tertentu menggunakan GroupDocs.Annotation for .NET. Tingkatkan tampilan visual dokumen dan penyajian data."
 "title": "Cara Menambahkan Gambar ke Dokumen PDF dengan Kualitas Tertentu Menggunakan GroupDocs.Annotation untuk .NET"
 "url": "/id/net/graphical-annotations/add-image-pdf-quality-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

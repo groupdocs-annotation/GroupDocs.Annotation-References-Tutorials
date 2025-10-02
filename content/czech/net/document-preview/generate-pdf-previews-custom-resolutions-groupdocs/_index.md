@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vytvářet vysoce kvalitní náhledy dokumentů PDF s konkrétním rozlišením obrázků pomocí výkonné knihovny GroupDocs.Annotation v .NET. Optimalizujte svůj pracovní postup správy dokumentů ještě dnes."
 "title": "Generování vysoce kvalitních náhledů PDF s vlastním rozlišením pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

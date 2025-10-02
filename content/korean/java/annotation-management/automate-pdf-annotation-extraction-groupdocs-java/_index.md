@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 PDF에서 주석을 자동으로 추출하는 방법을 배우고, 시간을 절약하고 오류를 줄이세요."
 "title": "GroupDocs for Java를 사용하여 PDF 주석 추출 자동화&#58; 종합 가이드"
 "url": "/ko/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

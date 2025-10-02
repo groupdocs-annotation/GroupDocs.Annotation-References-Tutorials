@@ -4,6 +4,7 @@
 "second_title": "API .NET de GroupDocs.Annotation"
 "title": "Fundamentos de la carga de documentos"
 "url": "/es/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

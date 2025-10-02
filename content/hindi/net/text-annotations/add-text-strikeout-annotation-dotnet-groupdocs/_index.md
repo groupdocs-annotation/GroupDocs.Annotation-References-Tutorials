@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation लाइब्रेरी का उपयोग करके अपने दस्तावेज़ों में टेक्स्ट स्ट्राइकआउट एनोटेशन जोड़ने का तरीका जानें, दस्तावेज़ समीक्षा और सहयोग को बेहतर बनाएँ।"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में टेक्स्ट स्ट्राइकआउट एनोटेशन जोड़ें"
 "url": "/hi/net/text-annotations/add-text-strikeout-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

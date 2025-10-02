@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách lấy kích thước trang PDF hiệu quả với GroupDocs.Annotation cho .NET. Thực hiện theo hướng dẫn này để nâng cao ứng dụng quản lý tài liệu của bạn."
 "title": "Cách lấy kích thước trang PDF bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

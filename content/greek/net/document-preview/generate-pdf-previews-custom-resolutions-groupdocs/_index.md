@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να δημιουργείτε προεπισκοπήσεις εγγράφων PDF υψηλής ποιότητας με συγκεκριμένες αναλύσεις εικόνας χρησιμοποιώντας την ισχυρή βιβλιοθήκη GroupDocs.Annotation στο .NET. Βελτιστοποιήστε τη ροή εργασίας διαχείρισης εγγράφων σας σήμερα."
 "title": "Δημιουργήστε προεπισκοπήσεις PDF υψηλής ποιότητας σε προσαρμοσμένες αναλύσεις χρησιμοποιώντας το GroupDocs.Annotation για .NET"
 "url": "/el/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

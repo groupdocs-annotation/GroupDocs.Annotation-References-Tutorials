@@ -2,6 +2,7 @@
 "description": "Полные руководства по реализации расширенных возможностей аннотирования, настроек и специализированных функций с помощью GroupDocs.Annotation для Java."
 "title": "Расширенные возможности GroupDocs.Annotation Учебники для Java"
 "url": "/ru/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

@@ -4,6 +4,7 @@
 "linktitle": "Panduan Pengembang GroupDocs.Annotation"
 "title": "API Anotasi Dokumen | Tutorial & Contoh SDK GroupDocs.Annotation"
 "url": "/id/"
+type: docs
 "weight": 11
 ---
 

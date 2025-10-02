@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Belge Bileşenleri"
 "url": "/tr/net/document-components/"
+type: docs
 "weight": 24
 ---
 

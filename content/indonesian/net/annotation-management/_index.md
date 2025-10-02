@@ -2,6 +2,7 @@
 "description": "Tutorial lengkap untuk menambahkan, menghapus, memperbarui, dan mengelola anotasi dalam dokumen menggunakan GroupDocs.Annotation for .NET."
 "title": "Tutorial Manajemen Anotasi untuk GroupDocs.Annotation .NET"
 "url": "/id/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

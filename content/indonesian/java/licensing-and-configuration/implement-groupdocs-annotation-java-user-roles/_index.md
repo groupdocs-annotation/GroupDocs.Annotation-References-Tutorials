@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan peran pengguna ke anotasi di aplikasi Java Anda menggunakan GroupDocs.Annotation untuk meningkatkan manajemen dokumen dan kolaborasi."
 "title": "Implementasikan GroupDocs.Annotation Java&#58; Menambahkan Peran Pengguna ke Anotasi"
 "url": "/id/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

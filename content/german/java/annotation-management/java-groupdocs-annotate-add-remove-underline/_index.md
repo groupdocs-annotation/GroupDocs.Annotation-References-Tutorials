@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Unterstreichungen in Java-Dokumenten hinzufügen und entfernen. Optimieren Sie Ihr Dokumentenmanagement mit dieser ausführlichen Anleitung."
 "title": "Hinzufügen und Entfernen von Unterstreichungsanmerkungen in Java mithilfe von GroupDocs – Ein umfassender Leitfaden"
 "url": "/de/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

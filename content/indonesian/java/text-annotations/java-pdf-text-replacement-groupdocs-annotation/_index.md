@@ -3,6 +3,7 @@
 "description": "Pelajari cara menerapkan anotasi penggantian teks dalam Java PDF menggunakan GroupDocs.Annotation. Tingkatkan kemampuan penyuntingan dokumen dan kolaborasi."
 "title": "Panduan Penggantian Teks PDF Java dengan GroupDocs.Annotation"
 "url": "/id/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

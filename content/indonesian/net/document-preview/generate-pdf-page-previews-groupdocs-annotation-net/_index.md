@@ -3,6 +3,7 @@
 "description": "Pelajari cara membuat pratinjau halaman PDF yang efisien dengan GroupDocs.Annotation untuk .NET. Tingkatkan interaksi dokumen dan sederhanakan alur kerja Anda."
 "title": "Hasilkan Pratinjau Halaman PDF Menggunakan GroupDocs.Annotation .NET&#58; Panduan Lengkap"
 "url": "/id/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET ile verimli PDF sayfa önizlemelerinin nasıl oluşturulacağını öğrenin. Belge etkileşimini geliştirin ve iş akışınızı kolaylaştırın."
 "title": "GroupDocs.Annotation .NET Kullanarak PDF Sayfa Önizlemeleri Oluşturun Kapsamlı Bir Kılavuz"
 "url": "/tr/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

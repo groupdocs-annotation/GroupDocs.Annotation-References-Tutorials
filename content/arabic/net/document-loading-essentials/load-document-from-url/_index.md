@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تحميل المستند من عنوان URL"
 "url": "/ar/net/document-loading-essentials/load-document-from-url/"
+type: docs
 "weight": 15
 ---
 

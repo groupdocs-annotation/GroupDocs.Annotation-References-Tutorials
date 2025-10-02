@@ -3,6 +3,7 @@
 "description": "강력한 GroupDocs.Annotation for .NET 라이브러리를 사용하여 PDF에 주석을 달고 사용자 지정 버전 키를 저장하는 방법을 알아보고, 각 문서 반복을 고유하게 식별할 수 있도록 하세요."
 "title": "GroupDocs.Annotation을 사용하여 .NET에서 사용자 지정 버전 키로 주석이 달린 PDF 저장"
 "url": "/ko/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

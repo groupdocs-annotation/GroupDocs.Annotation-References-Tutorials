@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak belgelere resim açıklamaları ekleme ve yönetmeye ilişkin adım adım eğitimler."
 "title": "GroupDocs.Annotation Java için Görüntü Açıklama Eğitimleri"
 "url": "/tr/java/image-annotations/"
+type: docs
 "weight": 7
 ---
 

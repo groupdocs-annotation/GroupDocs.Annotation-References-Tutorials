@@ -3,6 +3,7 @@
 "description": "Naučte se, jak přidávat anotace s zvýrazněním textu pomocí nástroje GroupDocs.Annotation pro .NET. Zjednodušte spolupráci na dokumentech a zvyšte produktivitu s tímto komplexním průvodcem."
 "title": "Jak přidat anotace zvýraznění textu pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

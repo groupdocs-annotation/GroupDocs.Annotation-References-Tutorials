@@ -3,6 +3,7 @@
 "description": "Naučte se, jak anotovat a ukládat PDF soubory s vlastními klíči verzí pomocí výkonné knihovny GroupDocs.Annotation pro .NET a jak zajistit, aby každá iterace dokumentu byla jedinečně identifikovatelná."
 "title": "Ukládání anotovaných PDF souborů s vlastními klíči verzí v .NET pomocí GroupDocs.Annotation"
 "url": "/cs/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

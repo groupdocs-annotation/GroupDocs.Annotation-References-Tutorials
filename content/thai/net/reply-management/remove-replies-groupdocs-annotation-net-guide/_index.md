@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการลบคำตอบจากคำอธิบายประกอบอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET ปรับปรุงการจัดการเอกสารของคุณด้วยคู่มือที่ครอบคลุมนี้"
 "title": "วิธีการลบคำตอบจากคำอธิบายประกอบโดยใช้ GroupDocs.Annotation .NET - คำแนะนำทีละขั้นตอน"
 "url": "/th/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

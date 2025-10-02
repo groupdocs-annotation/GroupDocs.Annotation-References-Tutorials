@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "PDF Belgesine Onay Kutusu Bileşeni Ekle"
 "url": "/tr/net/document-components/add-checkbox-component-to-pdf/"
+type: docs
 "weight": 11
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีนำคำอธิบายประกอบฟิลด์ข้อความไปใช้ใน Java โดยใช้ GroupDocs.Annotation เพื่อเพิ่มการโต้ตอบของเอกสาร ปฏิบัติตามคู่มือฉบับสมบูรณ์นี้ซึ่งประกอบด้วยคำแนะนำทีละขั้นตอนและการใช้งานจริง"
 "title": "การนำ TextField Annotation ไปใช้งานใน Java โดยใช้ GroupDocs.Annotation คู่มือฉบับสมบูรณ์"
 "url": "/th/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

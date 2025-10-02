@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak adnotować pliki PDF za pomocą wyróżnień tekstu i odpowiedzi, używając GroupDocs.Annotation dla Java. Ten przewodnik obejmuje konfigurację, przykłady kodu i praktyczne zastosowania."
 "title": "Adnotacje do plików PDF w Javie przy użyciu GroupDocs.Highlight&#58; Kompleksowy przewodnik"
 "url": "/pl/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

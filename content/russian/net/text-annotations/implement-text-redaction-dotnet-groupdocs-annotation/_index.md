@@ -3,6 +3,7 @@
 "description": "Узнайте, как реализовать аннотации редактирования текста в приложениях .NET с помощью GroupDocs.Annotation. Защитите конфиденциальную информацию с легкостью."
 "title": "Реализация редактирования текста в .NET с помощью GroupDocs.Annotation&#58; Полное руководство"
 "url": "/ru/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

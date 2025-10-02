@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してインタラクティブなチェックボックスを追加し、PDF ドキュメントを強化する方法を学びましょう。このステップバイステップガイドに従って、デジタルドキュメントのフォームフィールドへの注釈付けを効率化しましょう。"
 "title": "GroupDocs.Annotation for .NET を使って PDF にチェックボックスを追加する方法 - ステップバイステップガイド"
 "url": "/ja/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak tworzyć interaktywne przyciski PDF z odpowiedziami za pomocą GroupDocs.Annotation dla Java. Postępuj zgodnie z tym przewodnikiem krok po kroku, aby zwiększyć interaktywność dokumentu."
 "title": "Tworzenie interaktywnych przycisków PDF w Javie przy użyciu GroupDocs.Annotation&#58; Kompletny przewodnik"
 "url": "/pl/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "学习如何使用 GroupDocs.Annotation for Java 在 PDF 文件中无缝添加和更新注释。本实用指南将帮助您提升文档管理能力。"
 "title": "如何使用 GroupDocs.Annotation for Java 注释 PDF —— 综合指南"
 "url": "/zh/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการสร้างตัวอย่างเอกสาร PDF คุณภาพสูงด้วยความละเอียดของภาพเฉพาะโดยใช้ไลบรารี GroupDocs.Annotation ที่ทรงพลังใน .NET เพิ่มประสิทธิภาพเวิร์กโฟลว์การจัดการเอกสารของคุณวันนี้"
 "title": "สร้างตัวอย่าง PDF คุณภาพสูงตามความละเอียดที่กำหนดเองโดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

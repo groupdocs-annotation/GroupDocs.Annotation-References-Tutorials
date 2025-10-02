@@ -3,6 +3,7 @@
 "description": "Scopri come aggiungere ruoli utente alle annotazioni nelle tue applicazioni Java utilizzando GroupDocs.Annotation per una migliore gestione dei documenti e una migliore collaborazione."
 "title": "Implementare GroupDocs.Annotation Java - Aggiunta di ruoli utente alle annotazioni"
 "url": "/it/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

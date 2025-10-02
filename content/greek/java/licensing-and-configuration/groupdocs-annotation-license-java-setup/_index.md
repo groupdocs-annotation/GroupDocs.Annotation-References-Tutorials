@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ρυθμίσετε και να διαμορφώσετε την άδεια χρήσης GroupDocs.Annotation για τις εφαρμογές Java σας, ξεκλειδώνοντας όλες τις δυνατότητες χωρίς κόπο."
 "title": "Ρύθμιση άδειας GroupDocs.Annotation σε Java&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+type: docs
 "weight": 1
 ---
 

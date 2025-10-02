@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "ドキュメントから注釈をインポート"
 "url": "/ja/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

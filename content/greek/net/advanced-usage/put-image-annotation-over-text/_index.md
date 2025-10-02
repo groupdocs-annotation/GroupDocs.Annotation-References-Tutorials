@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Τοποθέτηση σχολίου εικόνας πάνω από κείμενο"
 "url": "/el/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

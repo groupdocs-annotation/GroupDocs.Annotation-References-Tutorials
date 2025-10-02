@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "استيراد التعليقات التوضيحية من المستند"
 "url": "/ar/net/advanced-usage/import-annotations-from-document/"
+type: docs
 "weight": 19
 ---
 

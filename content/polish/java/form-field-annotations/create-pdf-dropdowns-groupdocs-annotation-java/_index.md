@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak wzbogacić dokumenty PDF o interaktywne pola rozwijane przy użyciu zaawansowanej biblioteki GroupDocs.Annotation w języku Java."
 "title": "Tworzenie interaktywnych rozwijanych list PDF przy użyciu GroupDocs.Annotation dla języka Java"
 "url": "/pl/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

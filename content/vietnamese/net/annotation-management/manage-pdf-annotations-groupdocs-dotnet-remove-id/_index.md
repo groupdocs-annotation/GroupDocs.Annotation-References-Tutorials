@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách xóa chú thích khỏi PDF và các tài liệu khác một cách hiệu quả bằng GroupDocs.Annotation cho .NET. Khám phá hướng dẫn từng bước, các biện pháp thực hành tốt nhất và các ứng dụng thực tế."
 "title": "Cách xóa chú thích PDF theo ID bằng GroupDocs.Annotation cho .NET"
 "url": "/vi/net/annotation-management/manage-pdf-annotations-groupdocs-dotnet-remove-id/"
+type: docs
 "weight": 1
 ---
 

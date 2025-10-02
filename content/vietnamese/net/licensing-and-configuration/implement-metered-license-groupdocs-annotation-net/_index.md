@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách thiết lập và quản lý giấy phép tính phí với GroupDocs.Annotation cho .NET, đảm bảo tuân thủ và chức năng tối ưu."
 "title": "Triển khai Giấy phép theo mét trong GroupDocs.Annotation cho .NET&#58; Hướng dẫn toàn diện"
 "url": "/vi/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

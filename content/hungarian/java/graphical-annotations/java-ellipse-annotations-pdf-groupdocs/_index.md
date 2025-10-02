@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat ellipszis alakú jegyzeteket PDF dokumentumokhoz a hatékony GroupDocs.Annotation Java könyvtár segítségével. Kövesse ezt a lépésről lépésre szóló útmutatót a dokumentumokkal való együttműködés fejlesztéséhez."
 "title": "Java&#5; Ellipszis alakú jegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation for Java használatával"
 "url": "/hu/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

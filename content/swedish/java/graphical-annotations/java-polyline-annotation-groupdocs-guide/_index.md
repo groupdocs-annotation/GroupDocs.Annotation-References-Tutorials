@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina Java-applikationer genom att lägga till polylinjeannoteringar med GroupDocs.Annotation-biblioteket. Perfekt för att förbättra dokumentens tydlighet och interaktivitet."
 "title": "Implementera polylinjeannoteringar i Java med hjälp av GroupDocs.Annotation-biblioteket"
 "url": "/sv/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

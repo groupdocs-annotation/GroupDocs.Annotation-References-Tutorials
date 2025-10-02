@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for Java，透過互動式複選框註解增強 PDF 文件。請遵循此逐步指南。"
 "title": "如何使用 GroupDocs.Annotation for Java 為 PDF 新增複選框註釋"
 "url": "/zh-hant/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

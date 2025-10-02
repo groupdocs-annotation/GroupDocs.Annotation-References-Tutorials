@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak adnotować dokumenty PDF bezpośrednio z serwera FTP za pomocą GroupDocs.Annotation dla Java. Usprawnij swoje przepływy pracy przetwarzania dokumentów dzięki temu przewodnikowi krok po kroku."
 "title": "Adnotacje do plików PDF z FTP przy użyciu GroupDocs.Annotation dla Java&#58; Kompletny przewodnik"
 "url": "/pl/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

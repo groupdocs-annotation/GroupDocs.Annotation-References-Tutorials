@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách bảo vệ tài liệu của bạn bằng cách thêm chú thích hình mờ bằng GroupDocs.Annotation cho Java. Hướng dẫn này bao gồm các mẹo thiết lập, tùy chỉnh và tối ưu hóa."
 "title": "Triển khai chú thích Watermark trong PDF với GroupDocs.Annotation Java&#58; Hướng dẫn toàn diện"
 "url": "/vi/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Načíst dokumenty chráněné heslem"
 "url": "/cs/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

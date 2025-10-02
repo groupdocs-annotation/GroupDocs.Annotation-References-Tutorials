@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak belgelere ek açıklamalar ekleme, kaldırma, güncelleme ve yönetmeye ilişkin kapsamlı eğitimler."
 "title": "GroupDocs.Annotation .NET için Açıklama Yönetimi Eğitimleri"
 "url": "/tr/net/annotation-management/"
+type: docs
 "weight": 10
 ---
 

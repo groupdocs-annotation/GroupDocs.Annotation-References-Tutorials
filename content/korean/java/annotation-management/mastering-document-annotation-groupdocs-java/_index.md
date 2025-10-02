@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 문서에 효율적으로 주석을 추가하는 방법을 알아보세요. 이 가이드에서는 Maven을 사용하여 PDF를 로드하고, 주석을 추가하고, Java 환경을 최적화하는 방법을 다룹니다."
 "title": "Java에서 문서 주석 마스터하기&#58; GroupDocs.Annotation을 사용한 포괄적인 가이드"
 "url": "/ko/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να δημιουργείτε διαδραστικά κουμπιά PDF με απαντήσεις χρησιμοποιώντας το GroupDocs.Annotation για Java. Ακολουθήστε αυτόν τον οδηγό βήμα προς βήμα για να βελτιώσετε την διαδραστικότητα των εγγράφων."
 "title": "Δημιουργήστε διαδραστικά κουμπιά PDF σε Java χρησιμοποιώντας το GroupDocs.Annotation&#58; Ένας πλήρης οδηγός"
 "url": "/el/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

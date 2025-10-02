@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات الأسهم إلى مستندات PDF باستخدام GroupDocs.Annotation لجافا. حسّن التعاون في المستندات ووضوحها بخطوات مفصلة."
 "title": "كيفية إضافة تعليقات توضيحية إلى ملفات PDF باستخدام التعليقات التوضيحية السهمية باستخدام GroupDocs.Annotation لـ Java"
 "url": "/ar/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

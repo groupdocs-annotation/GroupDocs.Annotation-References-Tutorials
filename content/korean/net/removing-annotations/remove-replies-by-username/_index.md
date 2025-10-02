@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": ".NET에서 사용자 이름으로 답글 제거"
 "url": "/ko/net/removing-annotations/remove-replies-by-username/"
+type: docs
 "weight": 17
 ---
 

@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá nyíljegyzeteket a dokumentumaihoz a GroupDocs.Annotation for .NET segítségével. Ez az útmutató lépésről lépésre bemutatja a kódpéldákkal ellátott utasításokat."
 "title": "Nyíljegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation for .NET használatával"
 "url": "/hu/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как улучшить ваши PDF-документы с помощью интерактивных точечных аннотаций с помощью GroupDocs.Annotation для .NET. Это пошаговое руководство охватывает настройку, реализацию и устранение неполадок."
 "title": "Как добавлять точечные аннотации в PDF-файлы с помощью GroupDocs.Annotation для .NET"
 "url": "/ru/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

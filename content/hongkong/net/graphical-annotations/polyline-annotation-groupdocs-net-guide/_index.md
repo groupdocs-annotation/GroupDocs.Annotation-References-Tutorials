@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 為 PDF 文件新增折線註解。本指南提供逐步說明和有效實施技巧。"
 "title": "如何使用 GroupDocs.Annotation for .NET 為 PDF 新增折線註解－逐步指南"
 "url": "/zh-hant/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

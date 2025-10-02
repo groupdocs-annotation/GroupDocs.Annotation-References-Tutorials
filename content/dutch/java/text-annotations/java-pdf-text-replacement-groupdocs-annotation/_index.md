@@ -3,6 +3,7 @@
 "description": "Leer hoe u tekstvervangende annotaties in Java PDF's implementeert met GroupDocs.Annotation. Verbeter de mogelijkheden voor documentbewerking en samenwerking."
 "title": "Handleiding voor het vervangen van Java PDF-tekst met GroupDocs.Annotation"
 "url": "/nl/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

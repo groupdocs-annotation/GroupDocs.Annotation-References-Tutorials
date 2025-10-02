@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "टेक्स्ट पर छवि एनोटेशन डालें"
 "url": "/hi/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

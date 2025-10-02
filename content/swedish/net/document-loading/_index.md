@@ -2,6 +2,7 @@
 "description": "Steg-för-steg-handledningar för att läsa in dokument från olika källor med GroupDocs.Annotation för .NET."
 "title": "Handledningar för dokumentinläsning för GroupDocs.Annotation .NET"
 "url": "/sv/net/document-loading/"
+type: docs
 "weight": 3
 ---
 

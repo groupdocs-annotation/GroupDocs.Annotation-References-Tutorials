@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a licencelés beállításához, a beállítások konfigurálásához és a GroupDocs.Annotation kezeléséhez Java alkalmazásokban."
 "title": "GroupDocs.Annotation licencelési és konfigurációs oktatóanyagok Java nyelvhez"
 "url": "/hu/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

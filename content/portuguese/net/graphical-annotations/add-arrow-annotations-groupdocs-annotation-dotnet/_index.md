@@ -3,6 +3,7 @@
 "description": "Aprenda a adicionar anotações de seta aos seus documentos usando o GroupDocs.Annotation para .NET. Este guia fornece instruções passo a passo com exemplos de código."
 "title": "Como adicionar anotações de seta em PDFs usando GroupDocs.Annotation para .NET"
 "url": "/pt/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

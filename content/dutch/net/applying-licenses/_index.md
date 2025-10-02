@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Licenties aanvragen"
 "url": "/nl/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u PDF-bestanden online kunt annoteren met GroupDocs.Annotation voor .NET. Stroomlijn uw documentbeoordelingsprocessen met efficiënte annotatietechnieken."
 "title": "PDF's annoteren vanaf een URL met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

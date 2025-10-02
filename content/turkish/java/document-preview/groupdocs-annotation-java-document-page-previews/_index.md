@@ -3,6 +3,7 @@
 "description": "Belge sayfalarının yüksek kaliteli PNG önizlemelerini oluşturmak için GroupDocs.Annotation for Java'yı nasıl kullanacağınızı öğrenin. Yazılımınızı bu güçlü özellik ile geliştirin."
 "title": "GroupDocs.Annotation Kullanarak Java'da Belge Sayfası Önizlemeleri Oluşturun"
 "url": "/tr/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

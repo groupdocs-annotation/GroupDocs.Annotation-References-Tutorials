@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit PDF soubory přidáním obrázků v určených úrovních kvality pomocí nástroje GroupDocs.Annotation pro .NET. Zlepšete vizuální atraktivitu dokumentů a prezentaci dat."
 "title": "Jak přidat obrázek do PDF dokumentu se zadanou kvalitou pomocí GroupDocs.Annotation pro .NET"
 "url": "/cs/net/graphical-annotations/add-image-pdf-quality-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

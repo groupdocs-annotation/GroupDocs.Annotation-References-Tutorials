@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять аннотации с эллипсом в документы PDF с помощью мощной библиотеки GroupDocs.Annotation в Java. Следуйте этому пошаговому руководству, чтобы улучшить совместную работу с документами."
 "title": "Java&#58; Добавление аннотаций Ellipse в PDF-файлы с помощью GroupDocs.Annotation для Java"
 "url": "/ru/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

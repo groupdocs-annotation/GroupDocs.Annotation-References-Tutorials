@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Voorbeeld van documentpagina's genereren"
 "url": "/nl/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

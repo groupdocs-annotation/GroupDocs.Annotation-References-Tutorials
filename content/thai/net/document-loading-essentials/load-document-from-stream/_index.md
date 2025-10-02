@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "โหลดเอกสารจากสตรีม"
 "url": "/th/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u tekstdoorhalingsannotaties maakt in Java PDF's met GroupDocs.Annotation voor Java. Volg deze stapsgewijze tutorial om uw documentbewerkingsmogelijkheden te verbeteren."
 "title": "Java PDF-doorhalingsannotaties met GroupDocs&#58; een uitgebreide handleiding"
 "url": "/nl/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

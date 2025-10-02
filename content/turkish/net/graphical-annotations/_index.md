@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET ile belgelere şekil, ok, resim ve grafik öğeleri eklemeye yönelik kapsamlı eğitimler."
 "title": "GroupDocs.Annotation .NET için Grafiksel Açıklama Eğitimleri"
 "url": "/tr/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

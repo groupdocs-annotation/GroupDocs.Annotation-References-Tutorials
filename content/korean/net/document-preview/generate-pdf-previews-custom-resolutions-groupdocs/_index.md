@@ -3,6 +3,7 @@
 "description": ".NET의 강력한 GroupDocs.Annotation 라이브러리를 사용하여 특정 이미지 해상도의 고품질 PDF 문서 미리보기를 만드는 방법을 알아보세요. 지금 바로 문서 관리 워크플로를 최적화하세요."
 "title": ".NET용 GroupDocs.Annotation을 사용하여 사용자 정의 해상도에서 고품질 PDF 미리보기 생성"
 "url": "/ko/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

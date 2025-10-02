@@ -3,6 +3,7 @@
 "description": "Scopri come migliorare i tuoi documenti PDF aggiungendo annotazioni puntuali a livello di codice con GroupDocs.Annotation per Java. Questa guida illustra configurazione, implementazione e applicazioni pratiche."
 "title": "Come aggiungere annotazioni puntuali ai PDF utilizzando GroupDocs.Annotation per Java"
 "url": "/it/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

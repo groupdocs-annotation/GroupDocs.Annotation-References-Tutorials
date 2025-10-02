@@ -2,6 +2,7 @@
 "description": "Schritt-für-Schritt-Tutorials zum Laden von Dokumenten aus verschiedenen Quellen mit GroupDocs.Annotation für Java."
 "title": "Tutorials zum Laden von Dokumenten für GroupDocs.Annotation Java"
 "url": "/de/java/document-loading/"
+type: docs
 "weight": 3
 ---
 

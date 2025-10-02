@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně přidávat anotace se šipkami do PDF pomocí knihovny GroupDocs.Annotation pro Javu. Zlepšete přehlednost dokumentů a spolupráci."
 "title": "Jak přidat anotace šipek v Javě pomocí GroupDocs.Annotation API"
 "url": "/cs/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument genom att lägga till interaktiva kryssrutor med GroupDocs.Annotation för .NET. Följ den här steg-för-steg-guiden för att effektivisera anteckningar i formulärfält i dina digitala dokument."
 "title": "Så här lägger du till en kryssruta i en PDF med GroupDocs.Annotation för .NET - en steg-för-steg-guide"
 "url": "/sv/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

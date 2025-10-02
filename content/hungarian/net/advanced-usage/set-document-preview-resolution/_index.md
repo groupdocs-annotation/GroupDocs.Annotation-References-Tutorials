@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentum előnézeti felbontásának beállítása"
 "url": "/hu/net/advanced-usage/set-document-preview-resolution/"
+type: docs
 "weight": 23
 ---
 

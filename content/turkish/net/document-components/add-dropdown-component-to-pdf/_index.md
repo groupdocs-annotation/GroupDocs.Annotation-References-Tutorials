@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "PDF Belgesine Açılır Bileşen Ekle"
 "url": "/tr/net/document-components/add-dropdown-component-to-pdf/"
+type: docs
 "weight": 12
 ---
 

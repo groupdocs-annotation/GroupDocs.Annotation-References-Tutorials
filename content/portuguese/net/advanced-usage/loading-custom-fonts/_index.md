@@ -4,6 +4,7 @@
 "second_title": "API .NET do GroupDocs.Annotation"
 "title": "Carregando fontes personalizadas"
 "url": "/pt/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

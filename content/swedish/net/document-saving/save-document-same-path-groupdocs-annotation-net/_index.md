@@ -3,6 +3,7 @@
 "description": "Lär dig hur du sparar kommenterade dokument med hjälp av den ursprungliga sökvägen i GroupDocs.Annotation för .NET, vilket säkerställer effektiv filhantering och arbetsflöde."
 "title": "Hur man sparar dokument vid den ursprungliga sökvägen med GroupDocs.Annotation för .NET"
 "url": "/sv/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

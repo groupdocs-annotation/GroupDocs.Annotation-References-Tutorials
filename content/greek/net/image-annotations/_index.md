@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την προσθήκη και διαχείριση σχολίων εικόνας σε έγγραφα χρησιμοποιώντας το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά βίντεο για σχολιασμό εικόνας στο GroupDocs.Annotation .NET"
 "url": "/el/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

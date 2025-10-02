@@ -3,6 +3,7 @@
 "description": "Leer hoe u PDF-documenten rechtstreeks vanaf een FTP-server kunt annoteren met GroupDocs.Annotation voor Java. Stroomlijn uw documentverwerkingsworkflows met deze stapsgewijze handleiding."
 "title": "PDF's annoteren vanaf FTP met GroupDocs.Annotation voor Java&#58; een complete handleiding"
 "url": "/nl/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

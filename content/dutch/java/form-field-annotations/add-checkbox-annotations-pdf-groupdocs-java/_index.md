@@ -3,6 +3,7 @@
 "description": "Leer hoe u uw PDF-documenten kunt verbeteren met interactieve selectievakjesannotaties met behulp van GroupDocs.Annotation voor Java. Volg deze stapsgewijze handleiding."
 "title": "Hoe u selectievakjes aantekeningen aan PDF's toevoegt met GroupDocs.Annotation voor Java"
 "url": "/nl/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

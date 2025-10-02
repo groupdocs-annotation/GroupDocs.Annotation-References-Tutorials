@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java के साथ टिप्पणी थ्रेड, उत्तर और सहयोगात्मक चर्चाओं को क्रियान्वित करने के लिए चरण-दर-चरण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए उत्तर प्रबंधन ट्यूटोरियल"
 "url": "/hi/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

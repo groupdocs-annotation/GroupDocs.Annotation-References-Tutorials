@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إدارة التعليقات التوضيحية بفعالية في جافا باستخدام GroupDocs.Annotation. يغطي هذا الدليل تحميل المستندات وإزالتها وتحسين سير عملها."
 "title": "إدارة التعليقات التوضيحية الرئيسية في Java - دليل شامل مع GroupDocs.Annotation"
 "url": "/ar/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

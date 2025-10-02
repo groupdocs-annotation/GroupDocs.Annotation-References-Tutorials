@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "एनोटेशन शक्ति को अनलॉक करना"
 "url": "/hi/net/unlocking-annotation-power/"
+type: docs
 "weight": 23
 ---
 

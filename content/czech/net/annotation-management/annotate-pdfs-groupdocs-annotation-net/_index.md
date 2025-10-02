@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně anotovat a ukládat konkrétní anotace v souborech PDF pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete si pracovní postup správy dokumentů pomocí podrobných příkladů."
 "title": "Jak anotovat PDF soubory pomocí GroupDocs.Annotation pro .NET – podrobný návod"
 "url": "/cs/net/annotation-management/annotate-pdfs-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

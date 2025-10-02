@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation लाइब्रेरी के साथ पॉलीलाइन एनोटेशन जोड़कर अपने जावा एप्लिकेशन को कैसे बेहतर बनाया जाए। दस्तावेज़ स्पष्टता और अन्तरक्रियाशीलता में सुधार के लिए बिल्कुल सही।"
 "title": "GroupDocs.Annotation लाइब्रेरी का उपयोग करके जावा में पॉलीलाइन एनोटेशन को लागू करना"
 "url": "/hi/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

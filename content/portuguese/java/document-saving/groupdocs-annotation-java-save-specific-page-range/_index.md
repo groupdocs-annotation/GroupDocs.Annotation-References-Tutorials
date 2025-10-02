@@ -3,6 +3,7 @@
 "description": "Aprenda a salvar com eficiência intervalos de páginas de documentos anotados usando o GroupDocs.Annotation para Java. Este tutorial aborda configuração, implementação e aplicações práticas."
 "title": "Salvar intervalo de páginas específico com GroupDocs.Annotation para Java - Um guia completo"
 "url": "/pt/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

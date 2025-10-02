@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Lisansların Uygulanması"
 "url": "/tr/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 PDF에 텍스트 강조 표시 및 답글 주석을 추가하는 방법을 알아보세요. 이 가이드에서는 설정, 코드 예제 및 실제 활용 사례를 다룹니다."
 "title": "GroupDocs.Highlight&#58;를 사용하여 Java로 PDF에 주석 달기 - 포괄적인 가이드"
 "url": "/ko/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

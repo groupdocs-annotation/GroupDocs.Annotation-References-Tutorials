@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントにハイパーリンクとリンクされた注釈を実装するための完全なチュートリアル。"
 "title": "GroupDocs.Annotation .NET のリンク注釈チュートリアル"
 "url": "/ja/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

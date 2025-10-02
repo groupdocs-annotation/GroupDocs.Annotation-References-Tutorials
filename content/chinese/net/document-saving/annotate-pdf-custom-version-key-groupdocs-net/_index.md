@@ -3,6 +3,7 @@
 "description": "了解如何使用强大的 GroupDocs.Annotation for .NET 库通过自定义版本密钥注释和保存 PDF，确保每个文档迭代都是唯一可识别的。"
 "title": "使用 GroupDocs.Annotation 在 .NET 中保存带有自定义版本密钥的带注释的 PDF"
 "url": "/zh/net/document-saving/annotate-pdf-custom-version-key-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

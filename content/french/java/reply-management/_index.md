@@ -2,6 +2,7 @@
 "description": "Tutoriels étape par étape pour implémenter des fils de commentaires, des réponses et des discussions collaboratives avec GroupDocs.Annotation pour Java."
 "title": "Tutoriels de gestion des réponses pour GroupDocs.Annotation Java"
 "url": "/fr/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

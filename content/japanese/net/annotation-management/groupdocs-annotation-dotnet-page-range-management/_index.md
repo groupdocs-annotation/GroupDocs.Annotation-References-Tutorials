@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してページ範囲を効率的に管理する方法を学びましょう。このガイドでは、インストール、セットアップ、そして特定のページを保存するためのベストプラクティスについて説明します。"
 "title": "GroupDocs.Annotation による .NET でのページ範囲管理の習得&#58; 効率的な注釈テクニック"
 "url": "/ja/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

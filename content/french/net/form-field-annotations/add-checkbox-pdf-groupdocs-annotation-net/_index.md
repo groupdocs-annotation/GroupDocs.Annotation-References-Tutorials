@@ -3,6 +3,7 @@
 "description": "Découvrez comment améliorer vos documents PDF en ajoutant des cases à cocher interactives avec GroupDocs.Annotation pour .NET. Suivez ce guide étape par étape pour simplifier les annotations des champs de formulaire dans vos documents numériques."
 "title": "Comment ajouter une case à cocher à un PDF avec GroupDocs.Annotation pour .NET ? Guide étape par étape"
 "url": "/fr/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

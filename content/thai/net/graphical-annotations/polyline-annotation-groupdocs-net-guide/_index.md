@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณด้วยคำอธิบายประกอบแบบโพลีไลน์โดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ให้คำแนะนำและเคล็ดลับทีละขั้นตอนสำหรับการใช้งานอย่างมีประสิทธิภาพ"
 "title": "วิธีการเพิ่มคำอธิบายแบบโพลีไลน์ใน PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET คำแนะนำทีละขั้นตอน"
 "url": "/th/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

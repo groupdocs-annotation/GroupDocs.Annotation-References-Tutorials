@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لتنفيذ الارتباطات التشعبية والتعليقات التوضيحية المرتبطة في المستندات باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس شرح الروابط لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

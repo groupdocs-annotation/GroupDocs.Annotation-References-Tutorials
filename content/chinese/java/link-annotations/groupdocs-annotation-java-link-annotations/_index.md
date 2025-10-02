@@ -3,6 +3,7 @@
 "description": "使用 GroupDocs 掌握 Java 中的链接注释。学习如何设置、初始化和自定义，以增强文档交互性。"
 "title": "使用 GroupDocs 在 Java 中实现链接注释的综合指南"
 "url": "/zh/java/link-annotations/groupdocs-annotation-java-link-annotations/"
+type: docs
 "weight": 1
 ---
 

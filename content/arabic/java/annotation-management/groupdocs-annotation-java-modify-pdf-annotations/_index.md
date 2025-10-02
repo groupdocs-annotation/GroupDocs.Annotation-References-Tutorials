@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تحميل وتعديل وإدارة التعليقات التوضيحية في ملفات PDF باستخدام GroupDocs.Annotation لجافا. بسّط إدارة مستنداتك مع دليلنا الشامل."
 "title": "Master GroupDocs.Annotation for Java - تحرير تعليقات PDF بكفاءة"
 "url": "/ar/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

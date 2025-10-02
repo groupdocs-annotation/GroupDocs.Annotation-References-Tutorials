@@ -4,6 +4,7 @@
 "second_title": "API .NET di GroupDocs.Annotation"
 "title": "Esporta annotazioni da file XML"
 "url": "/it/net/advanced-usage/export-annotations-xml-file/"
+type: docs
 "weight": 11
 ---
 

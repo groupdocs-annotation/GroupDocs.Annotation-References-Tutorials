@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ενσωματώνετε προσαρμοσμένες γραμματοσειρές στη ροή εργασίας επεξεργασίας εγγράφων σας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Βελτιώστε τις σχολιασμοί σας με ακριβές στυλ γραμματοσειράς."
 "title": "Πώς να φορτώσετε προσαρμοσμένες γραμματοσειρές στο GroupDocs.Annotation για .NET™; Ένας πλήρης οδηγός"
 "url": "/el/net/document-loading/master-custom-font-loading-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

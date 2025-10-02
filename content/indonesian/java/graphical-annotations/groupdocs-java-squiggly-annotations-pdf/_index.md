@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi berkelok-kelok ke dokumen PDF Anda menggunakan GroupDocs.Annotation untuk Java, yang meningkatkan peninjauan dan kolaborasi dokumen."
 "title": "Cara Menambahkan Anotasi Berlekuk-lekuk ke PDF Menggunakan GroupDocs.Annotation untuk Java"
 "url": "/id/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

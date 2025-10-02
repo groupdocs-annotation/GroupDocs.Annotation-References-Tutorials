@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณด้วยคำอธิบายประกอบแบบโต้ตอบโดยใช้ GroupDocs.Annotation สำหรับ .NET คำแนะนำทีละขั้นตอนนี้ครอบคลุมถึงการตั้งค่า การใช้งาน และการแก้ไขปัญหา"
 "title": "วิธีการเพิ่มคำอธิบายจุดลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/graphical-annotations/groupdocs-annotation-net-point-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية تطبيق تعليقات استبدال النصوص في تطبيقات .NET باستخدام GroupDocs.Annotation. حسّن قابلية قراءة المستندات ووظائفها بسهولة."
 "title": "كيفية تنفيذ استبدال النص في .NET باستخدام GroupDocs.Annotation لإضافة تعليقات توضيحية فعّالة إلى المستندات"
 "url": "/ar/net/text-annotations/implement-text-replacement-net-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

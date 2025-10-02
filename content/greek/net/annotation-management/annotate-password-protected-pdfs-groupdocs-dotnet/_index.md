@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε σχόλια με ασφάλεια σε PDF που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Annotation για .NET. Αυτός ο οδηγός βήμα προς βήμα καλύπτει τη φόρτωση, την προσθήκη σχολίων και την αποθήκευση εγγράφων."
 "title": "Πώς να προσθέσετε σχόλια σε PDF που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Annotation για .NET | Οδηγός βήμα προς βήμα"
 "url": "/el/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

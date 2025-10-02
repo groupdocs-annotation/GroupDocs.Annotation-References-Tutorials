@@ -3,6 +3,7 @@
 "description": "Узнайте, как эффективно комментировать PDF-документы с помощью выделения областей с помощью мощного API GroupDocs.Annotation для Java, улучшая совместную работу и производительность."
 "title": "Как аннотировать PDF-файлы в Java с помощью GroupDocs.Annotation"
 "url": "/ru/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

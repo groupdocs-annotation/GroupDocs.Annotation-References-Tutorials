@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके दस्तावेज़ों से संस्करण कुंजियाँ कुशलतापूर्वक प्राप्त करने का तरीका जानें। इस चरण-दर-चरण मार्गदर्शिका के साथ दस्तावेज़ प्रबंधन और सहयोग को बेहतर बनाएँ।"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में संस्करण कुंजियाँ कैसे प्राप्त करें&#58; एक संपूर्ण गाइड"
 "url": "/hi/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

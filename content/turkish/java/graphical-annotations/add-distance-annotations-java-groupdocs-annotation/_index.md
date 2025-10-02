@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation kullanarak Java belgelerinde mesafe açıklamalarının nasıl uygulanacağını öğrenin. Bu adım adım kılavuz, kurulumu, yapılandırmayı ve pratik uygulamaları kapsar."
 "title": "GroupDocs.Annotation ile Java'da Mesafe Açıklamaları Nasıl Eklenir&#58; Adım Adım Kılavuz"
 "url": "/tr/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

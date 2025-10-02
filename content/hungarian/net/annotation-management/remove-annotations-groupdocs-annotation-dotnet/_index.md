@@ -3,6 +3,7 @@
 "description": "Tanuld meg, hogyan távolíthatsz el hatékonyan megjegyzéseket a dokumentumaidból a hatékony GroupDocs.Annotation API segítségével ebből a részletes C# oktatóanyagból."
 "title": "Hogyan távolíthatunk el jegyzeteket dokumentumokból a GroupDocs.Annotation for .NET használatával?"
 "url": "/hu/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

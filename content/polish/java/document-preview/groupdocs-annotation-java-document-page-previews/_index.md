@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak używać GroupDocs.Annotation dla Java, aby tworzyć wysokiej jakości podglądy PNG stron dokumentu. Ulepsz swoje oprogramowanie dzięki tej potężnej funkcji."
 "title": "Generowanie podglądów stron dokumentu w języku Java przy użyciu GroupDocs.Annotation"
 "url": "/pl/java/document-preview/groupdocs-annotation-java-document-page-previews/"
+type: docs
 "weight": 1
 ---
 

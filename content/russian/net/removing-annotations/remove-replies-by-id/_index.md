@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Удалить ответы по идентификатору в .NET"
 "url": "/ru/net/removing-annotations/remove-replies-by-id/"
+type: docs
 "weight": 16
 ---
 

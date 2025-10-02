@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Lägg bildannotering över text"
 "url": "/sv/net/advanced-usage/put-image-annotation-over-text/"
+type: docs
 "weight": 21
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να δημιουργείτε συνοπτικές και σχετικές προεπισκοπήσεις εγγράφων από συγκεκριμένες στήλες φύλλων εργασίας χρησιμοποιώντας το GroupDocs.Annotation για .NET. Ιδανικό για τη βελτιστοποίηση των ροών εργασίας στην ανάλυση δεδομένων και τη διαχείριση IT."
 "title": "Δημιουργήστε στοχευμένες προεπισκοπήσεις φύλλων Excel χρησιμοποιώντας το GroupDocs.Annotation .NET"
 "url": "/el/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

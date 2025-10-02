@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Usuń adnotacje według ID"
 "url": "/pl/net/removing-annotations/remove-annotations-by-id/"
+type: docs
 "weight": 11
 ---
 

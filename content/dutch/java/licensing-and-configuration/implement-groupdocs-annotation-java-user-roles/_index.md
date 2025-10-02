@@ -3,6 +3,7 @@
 "description": "Leer hoe u gebruikersrollen toevoegt aan annotaties in uw Java-toepassingen met behulp van GroupDocs.Annotation voor verbeterd documentbeheer en samenwerking."
 "title": "Implementeer GroupDocs.Annotation Java&#58; gebruikersrollen toevoegen aan annotaties"
 "url": "/nl/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
+type: docs
 "weight": 1
 ---
 

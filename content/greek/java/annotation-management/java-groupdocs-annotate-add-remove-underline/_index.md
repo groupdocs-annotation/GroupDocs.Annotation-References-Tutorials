@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να προσθέτετε και να αφαιρείτε υπογραμμισμένες σημειώσεις σε έγγραφα Java χρησιμοποιώντας το GroupDocs.Annotation. Βελτιώστε τη διαχείριση εγγράφων σας με αυτόν τον λεπτομερή οδηγό."
 "title": "Προσθήκη και αφαίρεση υπογραμμισμένων σχολίων σε Java χρησιμοποιώντας το GroupDocs - Ένας ολοκληρωμένος οδηγός"
 "url": "/el/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+type: docs
 "weight": 1
 ---
 

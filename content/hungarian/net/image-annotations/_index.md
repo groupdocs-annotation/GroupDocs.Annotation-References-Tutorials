@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatjuk a képaláírások hozzáadását és kezelését dokumentumokban a GroupDocs.Annotation for .NET használatával."
 "title": "Képannotációs oktatóanyagok a GroupDocs.Annotation .NET-hez"
 "url": "/hu/net/image-annotations/"
+type: docs
 "weight": 7
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการสร้าง จัดการ และบันทึกคำอธิบายประกอบในเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ Java คำแนะนำทีละขั้นตอนนี้ครอบคลุมถึงการเริ่มต้น ประเภทของคำอธิบายประกอบ และเคล็ดลับในการผสานรวม"
 "title": "คู่มือฉบับสมบูรณ์เกี่ยวกับการใช้ GroupDocs.Annotation สำหรับ Java เพื่อสร้างและจัดการคำอธิบายประกอบ"
 "url": "/th/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

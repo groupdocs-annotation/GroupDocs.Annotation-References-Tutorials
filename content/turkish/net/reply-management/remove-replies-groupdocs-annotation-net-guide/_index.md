@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET'i kullanarak açıklamalardan yanıtları etkili bir şekilde nasıl kaldıracağınızı öğrenin. Bu kapsamlı kılavuzla belge yönetiminizi kolaylaştırın."
 "title": "GroupDocs.Annotation .NET Kullanarak Açıklamalardan Yanıtlar Nasıl Kaldırılır - Adım Adım Kılavuz"
 "url": "/tr/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

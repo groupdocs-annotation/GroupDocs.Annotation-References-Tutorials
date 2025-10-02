@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET kullanarak uzak URL'lerden PDF belgelerine resim açıklamalarının nasıl ekleneceğini öğrenin. Bu kapsamlı kılavuzla belge iş akışlarınızı geliştirin."
 "title": "GroupDocs.Annotation .NET ve Uzak URL'leri Kullanarak PDF'lerde Görüntü Açıklamasını Uygulama"
 "url": "/tr/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Leer hoe u annotaties in Java effectief kunt beheren met GroupDocs.Annotation. Deze handleiding behandelt het laden, verwijderen en optimaliseren van documentworkflows."
 "title": "Master Annotation Management in Java - Uitgebreide handleiding met GroupDocs.Annotation"
 "url": "/nl/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

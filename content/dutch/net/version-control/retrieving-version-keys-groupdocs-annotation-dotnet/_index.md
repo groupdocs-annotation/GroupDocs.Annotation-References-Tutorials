@@ -3,6 +3,7 @@
 "description": "Leer hoe u efficiënt versiesleutels uit documenten kunt ophalen met GroupDocs.Annotation voor .NET. Verbeter documentbeheer en samenwerking met deze stapsgewijze handleiding."
 "title": "Versiesleutels ophalen in .NET met behulp van GroupDocs.Annotation&#58; een complete handleiding"
 "url": "/nl/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

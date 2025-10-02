@@ -2,6 +2,7 @@
 "description": "Tutoriais completos para implementar recursos avançados de anotação, personalizações e recursos especializados com o GroupDocs.Annotation para Java."
 "title": "Tutoriais de recursos avançados do GroupDocs.Annotation para Java"
 "url": "/pt/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

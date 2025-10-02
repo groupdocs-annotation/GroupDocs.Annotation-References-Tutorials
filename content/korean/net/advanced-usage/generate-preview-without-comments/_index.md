@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "주석 없이 미리보기 생성"
 "url": "/ko/net/advanced-usage/generate-preview-without-comments/"
+type: docs
 "weight": 14
 ---
 

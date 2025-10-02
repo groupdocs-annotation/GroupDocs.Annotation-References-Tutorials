@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách quản lý hiệu quả chú thích tài liệu trong .NET bằng GroupDocs.Annotation. Hướng dẫn này bao gồm thiết lập, tùy chỉnh và các biện pháp thực hành tốt nhất để lưu tài liệu có chú thích."
 "title": "Làm chủ chú thích tài liệu trong .NET với GroupDocs.Annotation&#58; Hướng dẫn đầy đủ"
 "url": "/vi/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

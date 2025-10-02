@@ -3,6 +3,7 @@
 "description": "Leer hoe u pijlannotaties aan uw documenten toevoegt met GroupDocs.Annotation voor .NET. Deze handleiding biedt stapsgewijze instructies met codevoorbeelden."
 "title": "Pijlannotaties toevoegen aan PDF's met GroupDocs.Annotation voor .NET"
 "url": "/nl/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

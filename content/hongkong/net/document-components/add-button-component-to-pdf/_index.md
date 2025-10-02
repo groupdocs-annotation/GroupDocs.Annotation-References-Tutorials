@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "將按鈕組件新增至 PDF 文檔"
 "url": "/zh-hant/net/document-components/add-button-component-to-pdf/"
+type: docs
 "weight": 10
 ---
 

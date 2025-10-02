@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Informatie over documenttekstinhoud ophalen"
 "url": "/nl/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

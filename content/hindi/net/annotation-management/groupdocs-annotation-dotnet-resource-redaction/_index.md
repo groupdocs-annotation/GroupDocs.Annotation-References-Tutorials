@@ -3,6 +3,7 @@
 "description": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF में संसाधन रेडक्शन एनोटेशन जोड़ने का तरीका जानें। इस विस्तृत गाइड के साथ संवेदनशील जानकारी की सुरक्षा करें और दस्तावेज़ सुरक्षा बढ़ाएँ।"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में संसाधन रेडक्शन एनोटेशन कैसे जोड़ें एक व्यापक गाइड"
 "url": "/hi/net/annotation-management/groupdocs-annotation-dotnet-resource-redaction/"
+type: docs
 "weight": 1
 ---
 

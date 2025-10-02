@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Laddar anpassade teckensnitt"
 "url": "/sv/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

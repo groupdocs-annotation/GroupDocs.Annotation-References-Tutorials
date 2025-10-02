@@ -3,6 +3,7 @@
 "description": "Aprenda a guardar documentos anotados utilizando la ruta original en GroupDocs.Annotation para .NET, lo que garantiza una administración optimizada de archivos y una eficiencia del flujo de trabajo."
 "title": "Cómo guardar documentos en la ruta original usando GroupDocs.Annotation para .NET"
 "url": "/es/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

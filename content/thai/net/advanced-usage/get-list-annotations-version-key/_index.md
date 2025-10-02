@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "รับรายการคำอธิบายประกอบโดยใช้คีย์เวอร์ชัน"
 "url": "/th/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

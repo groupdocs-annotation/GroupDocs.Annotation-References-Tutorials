@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ρυθμίσετε και να εφαρμόσετε μια άδεια χρήσης για το GroupDocs.Annotation .NET χρησιμοποιώντας ροές αρχείων. Ξεκλειδώστε όλες τις δυνατότητες με αυτόν τον ολοκληρωμένο οδηγό."
 "title": "Κύριο GroupDocs.Annotation .NET' Ορισμός Άδειας Χρήσης File Stream σε C#"
 "url": "/el/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
+type: docs
 "weight": 1
 ---
 

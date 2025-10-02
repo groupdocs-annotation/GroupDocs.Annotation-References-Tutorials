@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak dodawać znaki wodne za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik obejmuje konfigurację, implementację krok po kroku i najlepsze praktyki zabezpieczania i brandingu dokumentów."
 "title": "Wdrażanie funkcji Dodaj znak wodny za pomocą adnotacji GroupDocs.Annotation w środowisku .NET&#58; Kompleksowy przewodnik po zabezpieczeniach i budowaniu marki dokumentów"
 "url": "/pl/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

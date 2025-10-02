@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Menerapkan Lisensi"
 "url": "/id/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "تطبيق التراخيص"
 "url": "/ar/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

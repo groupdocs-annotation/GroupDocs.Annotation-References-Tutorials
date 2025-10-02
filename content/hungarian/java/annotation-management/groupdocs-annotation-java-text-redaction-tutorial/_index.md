@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan lehet hatékonyan szerkeszteni a szöveget a PDF-ekben a hatékony GroupDocs.Annotation Java könyvtár segítségével. Ez az útmutató a beállítást, a jegyzetek létrehozását és a mentési folyamatokat ismerteti."
 "title": "Szövegkivonás mesterszintű kezelése PDF-ekben GroupDocs.Annotation Java API használatával – Átfogó útmutató"
 "url": "/hu/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

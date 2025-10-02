@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية إلى مستندات PDF بكفاءة باستخدام GroupDocs.Annotation لـ .NET. يغطي هذا الدليل الإعداد، وإضافة التعليقات التوضيحية، وحفظ عملك."
 "title": "كيفية إضافة تعليقات توضيحية إلى ملفات PDF باستخدام GroupDocs.Annotation لـ .NET - دليل شامل"
 "url": "/ar/net/annotation-management/annotate-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

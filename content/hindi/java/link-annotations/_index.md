@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java के साथ दस्तावेज़ों में हाइपरलिंक और लिंक किए गए एनोटेशन को लागू करने के लिए पूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए लिंक एनोटेशन ट्यूटोरियल"
 "url": "/hi/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

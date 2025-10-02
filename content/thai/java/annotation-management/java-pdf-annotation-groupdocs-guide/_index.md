@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีใช้ GroupDocs.Annotation สำหรับ Java เพื่อเพิ่มคำอธิบายพื้นที่และวงรีใน PDF ของคุณ เพิ่มประสิทธิภาพการทำงานร่วมกันด้วยคู่มือทีละขั้นตอนของเรา"
 "title": "คู่มือฉบับสมบูรณ์สำหรับการสร้างคำอธิบาย PDF ของ Java โดยใช้ GroupDocs เพื่อปรับปรุงการทำงานร่วมกันและการจัดการเอกสาร"
 "url": "/th/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

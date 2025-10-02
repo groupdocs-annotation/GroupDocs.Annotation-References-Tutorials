@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να ρυθμίζετε και να διαχειρίζεστε μια άδεια χρήσης με ογκοχρέωση με το GroupDocs.Annotation για .NET, διασφαλίζοντας τη συμμόρφωση και τη βέλτιστη λειτουργικότητα."
 "title": "Υλοποίηση μιας Άδειας Χρήσης με Όριο στο GroupDocs.Annotation για .NET™ Ένας Πλήρης Οδηγός"
 "url": "/el/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Javaの強力なGroupDocs.Annotationライブラリを使用して、PDFドキュメントに楕円注釈を追加する方法を学びましょう。このステップバイステップガイドに従って、ドキュメントの共同作業を強化しましょう。"
 "title": "Java の GroupDocs.Annotation を使用して PDF に楕円注釈を追加する"
 "url": "/ja/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

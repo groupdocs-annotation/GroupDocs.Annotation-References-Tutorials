@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Аннотация .NET API"
 "title": "Загрузить документ из потока"
 "url": "/ru/net/document-loading-essentials/load-document-from-stream/"
+type: docs
 "weight": 14
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "आईडी के आधार पर एनोटेशन हटाएं"
 "url": "/hi/net/removing-annotations/remove-annotations-by-id/"
+type: docs
 "weight": 11
 ---
 

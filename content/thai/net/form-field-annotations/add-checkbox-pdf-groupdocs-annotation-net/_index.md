@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณโดยเพิ่มช่องกาเครื่องหมายแบบโต้ตอบโดยใช้ GroupDocs.Annotation สำหรับ .NET ปฏิบัติตามคำแนะนำทีละขั้นตอนนี้เพื่อปรับปรุงการใส่คำอธิบายประกอบในฟิลด์แบบฟอร์มในเอกสารดิจิทัลของคุณ"
 "title": "วิธีการเพิ่มช่องกาเครื่องหมายใน PDF ด้วย GroupDocs.Annotation สำหรับ .NET พร้อมคำแนะนำทีละขั้นตอน"
 "url": "/th/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

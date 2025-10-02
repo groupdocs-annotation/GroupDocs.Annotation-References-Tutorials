@@ -3,6 +3,7 @@
 "description": "تعلّم كيفية إنشاء تعليقات توضيحية مشطوبة في ملفات PDF بلغة جافا باستخدام GroupDocs.Annotation لجافا. اتبع هذا البرنامج التعليمي خطوة بخطوة لتحسين إمكانيات تحرير مستنداتك."
 "title": "شرح شطب ملفات PDF باستخدام GroupDocs - دليل شامل"
 "url": "/ar/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

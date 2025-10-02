@@ -3,6 +3,7 @@
 "description": "Scopri come gestire in modo efficiente le annotazioni dei documenti utilizzando le chiavi di versione con GroupDocs.Annotation .NET. Semplifica il tuo flusso di lavoro e migliora la collaborazione."
 "title": "Come recuperare annotazioni in base alla chiave di versione in GroupDocs.Annotation .NET per una gestione avanzata dei documenti"
 "url": "/it/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

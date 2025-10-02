@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně načítat textový obsah z dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Postupujte podle tohoto podrobného návodu a vylepšete si své možnosti zpracování dokumentů."
 "title": "Načtení textového obsahu dokumentu pomocí GroupDocs.Annotation pro .NET – Podrobný návod"
 "url": "/cs/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

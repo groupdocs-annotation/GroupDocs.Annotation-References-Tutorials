@@ -3,6 +3,7 @@
 "description": "強力な Java 用 GroupDocs.Annotation API を使用して、PDF ドキュメントに領域のハイライトを効率的に注釈付けし、コラボレーションと生産性を向上させる方法を学習します。"
 "title": "GroupDocs.Annotation を使用して Java で PDF に注釈を付ける方法"
 "url": "/ja/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

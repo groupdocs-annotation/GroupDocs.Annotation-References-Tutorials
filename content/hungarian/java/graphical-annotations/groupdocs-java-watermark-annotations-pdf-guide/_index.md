@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan védheti dokumentumait vízjel-megjegyzések hozzáadásával a GroupDocs.Annotation for Java segítségével. Ez az útmutató a beállítással, a testreszabással és az optimalizálással kapcsolatos tippeket tartalmazza."
 "title": "Vízjel-annotációk megvalósítása PDF-ekben a GroupDocs segítségével. Annotation Java – Átfogó útmutató"
 "url": "/hu/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

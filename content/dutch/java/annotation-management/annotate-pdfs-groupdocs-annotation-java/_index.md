@@ -3,6 +3,7 @@
 "description": "Leer hoe u naadloos annotaties kunt toevoegen en bijwerken in PDF-bestanden met GroupDocs.Annotation voor Java. Verbeter uw documentbeheer met deze praktische gids."
 "title": "PDF's annoteren met GroupDocs.Annotation voor Java&#58; een uitgebreide handleiding"
 "url": "/nl/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/"
+type: docs
 "weight": 1
 ---
 

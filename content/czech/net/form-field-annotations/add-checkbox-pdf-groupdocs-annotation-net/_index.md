@@ -3,6 +3,7 @@
 "description": "Naučte se, jak vylepšit své PDF dokumenty přidáním interaktivních zaškrtávacích políček pomocí GroupDocs.Annotation pro .NET. Postupujte podle tohoto podrobného návodu a zefektivníte anotace polí formuláře ve svých digitálních dokumentech."
 "title": "Jak přidat zaškrtávací políčko do PDF pomocí GroupDocs.Annotation pro .NET – podrobný návod"
 "url": "/cs/net/form-field-annotations/add-checkbox-pdf-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

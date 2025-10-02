@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "احصل على قائمة التعليقات التوضيحية باستخدام مفتاح الإصدار"
 "url": "/ar/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

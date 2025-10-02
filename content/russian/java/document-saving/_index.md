@@ -2,6 +2,7 @@
 "description": "Полные руководства по сохранению аннотированных документов с различными параметрами с помощью GroupDocs.Annotation для Java."
 "title": "Учебники по сохранению документов для GroupDocs.Annotation Java"
 "url": "/ru/java/document-saving/"
+type: docs
 "weight": 4
 ---
 

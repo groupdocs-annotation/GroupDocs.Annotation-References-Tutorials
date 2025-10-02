@@ -3,6 +3,7 @@
 "description": "अपने Java अनुप्रयोगों में GroupDocs.Annotation का उपयोग करके PDF एनोटेशन और उत्तरों को कुशलतापूर्वक प्रबंधित करना सीखें। हमारे व्यापक गाइड के साथ दस्तावेज़ सहयोग को सरल बनाएँ।"
 "title": "जावा पीडीएफ एनोटेशन&#58; ग्रुपडॉक्स के साथ एनोटेशन और उत्तर बनाएं और प्रबंधित करें.जावा के लिए एनोटेशन"
 "url": "/hi/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+type: docs
 "weight": 1
 ---
 

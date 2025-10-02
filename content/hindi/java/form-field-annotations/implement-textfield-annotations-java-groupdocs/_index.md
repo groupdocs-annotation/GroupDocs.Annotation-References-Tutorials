@@ -3,6 +3,7 @@
 "description": "जानें कि बेहतर दस्तावेज़ अन्तरक्रियाशीलता के लिए GroupDocs.Annotation का उपयोग करके जावा में टेक्स्ट फ़ील्ड एनोटेशन को कैसे लागू किया जाए। चरण-दर-चरण निर्देशों और व्यावहारिक अनुप्रयोगों के साथ इस व्यापक गाइड का पालन करें।"
 "title": "GroupDocs.Annotation का उपयोग करके जावा में टेक्स्टफील्ड एनोटेशन को लागू करना एक व्यापक गाइड"
 "url": "/hi/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية حماية مستنداتك بإضافة تعليقات توضيحية للعلامات المائية باستخدام GroupDocs.Annotation لجافا. يغطي هذا الدليل نصائح للإعداد والتخصيص والتحسين."
 "title": "تنفيذ تعليقات العلامات المائية في ملفات PDF باستخدام GroupDocs.Annotation Java - دليل شامل"
 "url": "/ar/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 创建高效的 PDF 页面预览。增强文档交互并简化您的工作流程。"
 "title": "使用 GroupDocs.Annotation .NET 生成 PDF 页面预览——综合指南"
 "url": "/zh/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

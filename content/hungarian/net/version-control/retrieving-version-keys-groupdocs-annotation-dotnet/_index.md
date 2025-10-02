@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan kérhet le hatékonyan verziókulcsokat dokumentumokból a GroupDocs.Annotation for .NET segítségével. Fejlessze a dokumentumkezelést és az együttműködést ezzel a lépésről lépésre haladó útmutatóval."
 "title": "Verziókulcsok lekérése .NET-ben a GroupDocs.Annotation használatával – Teljes körű útmutató"
 "url": "/hu/net/version-control/retrieving-version-keys-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

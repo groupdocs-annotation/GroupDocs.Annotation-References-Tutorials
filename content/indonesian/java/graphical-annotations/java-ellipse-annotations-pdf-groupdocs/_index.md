@@ -3,6 +3,7 @@
 "description": "Pelajari cara menambahkan anotasi elips ke dokumen PDF menggunakan pustaka GroupDocs.Annotation yang canggih di Java. Ikuti panduan langkah demi langkah ini untuk meningkatkan kolaborasi dokumen."
 "title": "Java&#58; Menambahkan Anotasi Elips ke PDF Menggunakan GroupDocs.Annotation untuk Java"
 "url": "/id/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+type: docs
 "weight": 1
 ---
 

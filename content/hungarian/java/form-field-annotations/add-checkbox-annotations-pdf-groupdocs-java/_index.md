@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan javíthatja PDF-dokumentumait interaktív jelölőnégyzet-jegyzetekkel a GroupDocs.Annotation for Java használatával. Kövesse ezt a lépésről lépésre szóló útmutatót."
 "title": "Jelölőnégyzet-jegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation for Java használatával"
 "url": "/hu/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

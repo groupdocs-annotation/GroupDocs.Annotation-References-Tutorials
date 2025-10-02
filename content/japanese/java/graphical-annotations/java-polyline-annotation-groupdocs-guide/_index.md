@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotationライブラリを使ってポリライン注釈を追加し、Javaアプリケーションを強化する方法を学びましょう。ドキュメントの明瞭性とインタラクティブ性を向上させるのに最適です。"
 "title": "GroupDocs.Annotation ライブラリを使用して Java でポリライン注釈を実装する"
 "url": "/ja/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

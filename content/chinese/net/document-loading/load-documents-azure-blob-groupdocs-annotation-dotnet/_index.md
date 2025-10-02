@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 将 Azure Blob 存储与 .NET 应用程序无缝集成。增强文档管理和注释功能。"
 "title": "使用 GroupDocs.Annotation .NET 进行文档管理，高效地从 Azure Blob 存储加载文档"
 "url": "/zh/net/document-loading/load-documents-azure-blob-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

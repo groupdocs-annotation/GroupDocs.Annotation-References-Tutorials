@@ -4,6 +4,7 @@
 "linktitle": "คู่มือสำหรับนักพัฒนา GroupDocs.Annotation"
 "title": "API การอธิบายประกอบเอกสาร | บทช่วยสอนและตัวอย่าง SDK ของ GroupDocs.Annotation"
 "url": "/th/"
+type: docs
 "weight": 11
 ---
 

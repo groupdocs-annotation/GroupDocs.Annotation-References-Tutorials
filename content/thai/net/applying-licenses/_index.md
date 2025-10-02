@@ -4,6 +4,7 @@
 "second_title": "API ของ GroupDocs.Annotation .NET"
 "title": "การยื่นขอใบอนุญาต"
 "url": "/th/net/applying-licenses/"
+type: docs
 "weight": 26
 ---
 

@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Javaを使用してPDFドキュメントに矢印注釈を追加する方法を学びましょう。詳細な手順で、ドキュメントの共同作業と明瞭性を向上させます。"
 "title": "GroupDocs.Annotation for Java を使用して PDF に矢印注釈を付ける方法"
 "url": "/ja/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

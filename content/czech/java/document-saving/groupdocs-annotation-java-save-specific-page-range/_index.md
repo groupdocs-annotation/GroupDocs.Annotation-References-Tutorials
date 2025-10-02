@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně ukládat rozsahy stránek dokumentů s anotacemi pomocí nástroje GroupDocs.Annotation pro Javu. Tento tutoriál se zabývá nastavením, implementací a praktickými aplikacemi."
 "title": "Uložení určitého rozsahu stránek pomocí GroupDocs.Annotation pro Javu – kompletní průvodce"
 "url": "/cs/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+type: docs
 "weight": 1
 ---
 

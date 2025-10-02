@@ -3,6 +3,7 @@
 "description": "Pelajari cara mengekstrak anotasi dari dokumen dan membuat serialnya menjadi XML dengan GroupDocs.Annotation untuk .NET. Tingkatkan alur kerja manajemen dokumen Anda hari ini!"
 "title": "Cara Mengekstrak dan Membuat Serial Anotasi di .NET menggunakan GroupDocs.Annotation"
 "url": "/id/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Узнайте, как добавлять волнистые аннотации в документы PDF с помощью GroupDocs.Annotation для Java, что улучшает просмотр документов и совместную работу."
 "title": "Как добавлять волнистые аннотации в PDF-файлы с помощью GroupDocs.Annotation для Java"
 "url": "/ru/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+type: docs
 "weight": 1
 ---
 

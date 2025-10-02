@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "Azure से दस्तावेज़ लोड करें"
 "url": "/hi/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

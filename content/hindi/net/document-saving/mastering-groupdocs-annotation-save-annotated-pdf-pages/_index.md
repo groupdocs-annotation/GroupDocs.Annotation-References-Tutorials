@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके PDF के केवल एनोटेट किए गए पृष्ठों को कुशलतापूर्वक सहेजना सीखें। इस विस्तृत गाइड के साथ दस्तावेज़ प्रबंधन और सहयोग को बेहतर बनाएँ।"
 "title": ".NET के लिए GroupDocs.Annotation का उपयोग करके PDF में एनोटेट पृष्ठों को कैसे सहेजें"
 "url": "/hi/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

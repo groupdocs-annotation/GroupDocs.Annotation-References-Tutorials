@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "パスワードで保護されたドキュメントを読み込む"
 "url": "/ja/net/document-loading-essentials/load-password-protected-documents/"
+type: docs
 "weight": 17
 ---
 

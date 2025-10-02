@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 通过 ID 删除注释，并通过本综合指南优化您的文档管理流程。"
 "title": "如何使用 GroupDocs.Annotation .NET 有效地从 PDF 中删除注释"
 "url": "/zh/net/annotation-management/annotation-removal-pdf-groupdocs-dotnet-guide/"
+type: docs
 "weight": 1
 ---
 

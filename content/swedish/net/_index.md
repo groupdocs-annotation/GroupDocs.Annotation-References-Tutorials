@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation för .NET-handledningar"
 "title": "Handledningar och exempel på GroupDocs.Annotation för .NET"
 "url": "/sv/net/"
+type: docs
 "weight": 10
 ---
 

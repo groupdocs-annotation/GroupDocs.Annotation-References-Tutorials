@@ -3,6 +3,7 @@
 "description": "Aprenda a añadir anotaciones de texto tachado en Java con GroupDocs.Annotation. Siga esta guía paso a paso para una anotación fluida en documentos."
 "title": "Guía de anotaciones de tachado de texto en Java con GroupDocs.Annotation"
 "url": "/es/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

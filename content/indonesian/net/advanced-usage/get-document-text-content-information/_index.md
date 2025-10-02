@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Dapatkan Informasi Konten Teks Dokumen"
 "url": "/id/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

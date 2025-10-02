@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá képaláírásokat PDF-ekhez a GroupDocs.Annotation for Java segítségével. Egyszerűsítse dokumentum-munkafolyamatait és fokozza az együttműködést."
 "title": "Képannotációk hozzáadása PDF-ekhez a GroupDocs.Annotation Java segítségével - Teljes körű útmutató"
 "url": "/hu/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

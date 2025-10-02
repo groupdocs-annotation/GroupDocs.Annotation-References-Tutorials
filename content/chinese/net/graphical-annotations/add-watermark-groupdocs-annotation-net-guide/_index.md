@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation for .NET 添加水印。本指南涵盖设置、分步实施以及文档安全保护和品牌打造的最佳实践。"
 "title": "使用 .NET 中的 GroupDocs.Annotation 实现添加水印——文档安全和品牌推广综合指南"
 "url": "/zh/net/graphical-annotations/add-watermark-groupdocs-annotation-net-guide/"
+type: docs
 "weight": 1
 ---
 

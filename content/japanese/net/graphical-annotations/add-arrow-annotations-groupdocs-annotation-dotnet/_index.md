@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントに矢印注釈を追加する方法を学びます。このガイドでは、コード例とともに手順を詳しく説明します。"
 "title": "GroupDocs.Annotation for .NET を使用して PDF に矢印注釈を追加する方法"
 "url": "/ja/net/graphical-annotations/add-arrow-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

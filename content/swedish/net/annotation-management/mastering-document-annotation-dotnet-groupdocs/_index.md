@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hanterar dokumentannoteringar i .NET med GroupDocs.Annotation. Den här guiden behandlar installation, anpassning och bästa praxis för att spara annoterade dokument."
 "title": "Huvuddokumentannotering i .NET med GroupDocs.Annotation – en komplett guide"
 "url": "/sv/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

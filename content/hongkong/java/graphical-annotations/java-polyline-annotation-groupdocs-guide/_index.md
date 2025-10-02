@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 程式庫新增折線註解來增強您的 Java 應用程式。這對於提昇文件清晰度和互動性非常有用。"
 "title": "使用 GroupDocs.Annotation 函式庫在 Java 中實作折線註釋"
 "url": "/zh-hant/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

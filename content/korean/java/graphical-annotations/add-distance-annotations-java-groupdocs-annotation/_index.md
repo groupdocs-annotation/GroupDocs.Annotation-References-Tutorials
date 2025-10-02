@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation을 사용하여 Java 문서에 거리 주석을 구현하는 방법을 알아보세요. 이 단계별 가이드에서는 설정, 구성 및 실제 적용 방법을 다룹니다."
 "title": "GroupDocs.Annotation을 사용하여 Java에서 거리 주석을 추가하는 방법 - 단계별 가이드"
 "url": "/ko/java/graphical-annotations/add-distance-annotations-java-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

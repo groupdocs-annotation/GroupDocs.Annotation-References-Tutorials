@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET का उपयोग करके दस्तावेज़ों से एनोटेशन को कुशलतापूर्वक हटाने का तरीका जानें। इस व्यापक गाइड के साथ अपने दस्तावेज़ वर्कफ़्लो को सुव्यवस्थित करें और स्पष्टता बढ़ाएँ।"
 "title": "GroupDocs.Annotation का उपयोग करके .NET में दस्तावेज़ों से एनोटेशन निकालें"
 "url": "/hi/net/annotation-management/remove-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

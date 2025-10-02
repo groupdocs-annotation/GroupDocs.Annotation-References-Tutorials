@@ -2,6 +2,7 @@
 "description": "Teljes körű oktatóanyagok a GroupDocs.Annotation for Java használatával készült dokumentumokban található jegyzetek hozzáadásáról, eltávolításáról, frissítéséről és kezeléséről."
 "title": "Jegyzetkezelési oktatóanyagok GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het instellen van licenties, configureren van opties en beheren van GroupDocs.Annotation in Java-toepassingen."
 "title": "GroupDocs.Annotation Licentie- en configuratiehandleidingen voor Java"
 "url": "/nl/java/licensing-and-configuration/"
+type: docs
 "weight": 2
 ---
 

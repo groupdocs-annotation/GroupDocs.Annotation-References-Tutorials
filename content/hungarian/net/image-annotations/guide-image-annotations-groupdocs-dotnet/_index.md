@@ -3,6 +3,7 @@
 "description": "Ismerje meg, hogyan adhat hozzá képaláírásokat a GroupDocs.Annotation for .NET használatával. Javítsa dokumentumai minőségét az oktatási, jogi és egészségügyi szektorban."
 "title": "Átfogó útmutató a képannotációk hozzáadásához .NET-ben a GroupDocs.Annotation segítségével"
 "url": "/hu/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

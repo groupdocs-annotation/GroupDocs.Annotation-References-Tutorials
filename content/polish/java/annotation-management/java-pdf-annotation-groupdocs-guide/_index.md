@@ -3,6 +3,7 @@
 "description": "Dowiedz się, jak używać GroupDocs.Annotation dla Java, aby dodawać adnotacje obszarów i elips do plików PDF. Zwiększ współpracę dzięki naszemu przewodnikowi krok po kroku."
 "title": "Kompletny przewodnik po adnotacjach do plików PDF w języku Java przy użyciu GroupDocs&#58; Ulepsz współpracę i zarządzanie dokumentami"
 "url": "/pl/java/annotation-management/java-pdf-annotation-groupdocs-guide/"
+type: docs
 "weight": 1
 ---
 

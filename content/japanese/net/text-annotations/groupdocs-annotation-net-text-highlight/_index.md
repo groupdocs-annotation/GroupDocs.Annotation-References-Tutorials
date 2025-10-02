@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してテキストハイライト注釈を追加する方法を学びましょう。この包括的なガイドで、ドキュメントの共同作業を効率化し、生産性を向上させましょう。"
 "title": "GroupDocs.Annotation for .NET を使用してテキストハイライト注釈を追加する方法"
 "url": "/ja/net/text-annotations/groupdocs-annotation-net-text-highlight/"
+type: docs
 "weight": 1
 ---
 

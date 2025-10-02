@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET을 사용하여 암호로 보호된 PDF에 안전하게 주석을 추가하는 방법을 알아보세요. 이 단계별 가이드에서는 문서 불러오기, 주석 달기 및 저장 방법을 다룹니다."
 "title": "GroupDocs.Annotation for .NET을 사용하여 암호로 보호된 PDF에 주석을 추가하는 방법 | 단계별 가이드"
 "url": "/ko/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

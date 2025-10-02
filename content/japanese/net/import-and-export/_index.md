@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントと XML ファイル間で注釈をインポートおよびエクスポートするためのステップバイステップのチュートリアル。"
 "title": "GroupDocs.Annotation .NET の注釈のインポートとエクスポートのチュートリアル"
 "url": "/ja/net/import-and-export/"
+type: docs
 "weight": 15
 ---
 

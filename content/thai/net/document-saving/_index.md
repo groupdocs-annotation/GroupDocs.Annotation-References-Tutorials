@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนสำหรับการบันทึกเอกสารที่มีคำอธิบายประกอบด้วยตัวเลือกต่างๆ โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการบันทึกเอกสารสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/document-saving/"
+type: docs
 "weight": 4
 ---
 

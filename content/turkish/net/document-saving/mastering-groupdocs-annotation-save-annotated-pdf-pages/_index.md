@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET'i kullanarak bir PDF'in yalnızca açıklamalı sayfalarını nasıl etkili bir şekilde kaydedeceğinizi öğrenin. Bu ayrıntılı kılavuzla belge yönetimini ve iş birliğini geliştirin."
 "title": "GroupDocs.Annotation for .NET Kullanılarak Açıklamalı Sayfalar PDF Olarak Nasıl Kaydedilir"
 "url": "/tr/net/document-saving/mastering-groupdocs-annotation-save-annotated-pdf-pages/"
+type: docs
 "weight": 1
 ---
 

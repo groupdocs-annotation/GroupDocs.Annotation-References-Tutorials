@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for Java 在文档中添加、编辑和管理文本注释的分步教程。"
 "title": "GroupDocs.Annotation Java 文本注释教程"
 "url": "/zh/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

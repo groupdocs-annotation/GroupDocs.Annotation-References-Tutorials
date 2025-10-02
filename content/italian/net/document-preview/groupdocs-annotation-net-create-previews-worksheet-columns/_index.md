@@ -3,6 +3,7 @@
 "description": "Scopri come creare anteprime di documenti concise e pertinenti da colonne specifiche del foglio di lavoro utilizzando GroupDocs.Annotation per .NET. Perfetto per semplificare i flussi di lavoro nell'analisi dei dati e nella gestione IT."
 "title": "Genera anteprime di fogli Excel mirate utilizzando GroupDocs.Annotation .NET"
 "url": "/it/net/document-preview/groupdocs-annotation-net-create-previews-worksheet-columns/"
+type: docs
 "weight": 1
 ---
 

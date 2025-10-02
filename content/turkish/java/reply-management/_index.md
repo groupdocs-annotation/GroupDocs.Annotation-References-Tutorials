@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java ile yorum dizileri, yanıtlar ve işbirlikli tartışmaları uygulamaya yönelik adım adım eğitimler."
 "title": "GroupDocs.Annotation Java için Yanıt Yönetimi Eğitimleri"
 "url": "/tr/java/reply-management/"
+type: docs
 "weight": 11
 ---
 

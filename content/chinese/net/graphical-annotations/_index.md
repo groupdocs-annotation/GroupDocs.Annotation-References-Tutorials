@@ -2,6 +2,7 @@
 "description": "使用 GroupDocs.Annotation for .NET 在文档中添加形状、箭头、图像和图形元素的完整教程。"
 "title": "GroupDocs.Annotation .NET 图形注释教程"
 "url": "/zh/net/graphical-annotations/"
+type: docs
 "weight": 6
 ---
 

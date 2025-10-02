@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Odebrání anotací v .NET"
 "url": "/cs/net/removing-annotations/remove-annotations/"
+type: docs
 "weight": 10
 ---
 

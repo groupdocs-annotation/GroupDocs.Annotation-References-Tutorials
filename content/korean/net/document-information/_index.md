@@ -2,6 +2,7 @@
 "description": ".NET용 GroupDocs.Annotation을 사용하여 문서 메타데이터, 페이지 정보 및 문서 속성에 액세스하는 방법에 대한 전체 자습서입니다."
 "title": "GroupDocs.Annotation .NET을 위한 문서 정보 튜토리얼"
 "url": "/ko/net/document-information/"
+type: docs
 "weight": 12
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dokumentum betöltése az Azure-ból"
 "url": "/hu/net/document-loading-essentials/load-document-from-azure/"
+type: docs
 "weight": 11
 ---
 

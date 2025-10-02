@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for .NET を使用してドキュメントのメタデータ、ページ情報、ドキュメントのプロパティにアクセスするための完全なチュートリアル。"
 "title": "GroupDocs.Annotation .NET のドキュメント情報チュートリアル"
 "url": "/ja/net/document-information/"
+type: docs
 "weight": 12
 ---
 

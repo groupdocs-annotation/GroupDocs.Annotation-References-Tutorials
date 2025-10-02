@@ -3,6 +3,7 @@
 "description": "Leer hoe u een gemeten licentie instelt en beheert met GroupDocs.Annotation voor .NET, zodat u voldoet aan de vereisten en optimale functionaliteit kunt garanderen."
 "title": "Implementatie van een gemeten licentie in GroupDocs.Annotation voor .NET&#58; een uitgebreide handleiding"
 "url": "/nl/net/licensing-and-configuration/implement-metered-license-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

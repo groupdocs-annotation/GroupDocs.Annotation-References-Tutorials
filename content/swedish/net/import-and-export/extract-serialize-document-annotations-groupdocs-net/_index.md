@@ -3,6 +3,7 @@
 "description": "Lär dig hur du extraherar anteckningar från dokument och serialiserar dem till XML med GroupDocs.Annotation för .NET. Förbättra ditt dokumenthanteringsarbetsflöde idag!"
 "title": "Hur man extraherar och serialiserar annoteringar i .NET med GroupDocs.Annotation"
 "url": "/sv/net/import-and-export/extract-serialize-document-annotations-groupdocs-net/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation for Java के साथ प्रोग्रामेटिक रूप से पॉइंट एनोटेशन जोड़कर अपने PDF दस्तावेज़ों को कैसे बेहतर बनाया जाए। यह गाइड सेटअप, कार्यान्वयन और व्यावहारिक अनुप्रयोगों को कवर करती है।"
 "title": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF में पॉइंट एनोटेशन कैसे जोड़ें"
 "url": "/hi/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+type: docs
 "weight": 1
 ---
 

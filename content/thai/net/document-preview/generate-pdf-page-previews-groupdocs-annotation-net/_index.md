@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการสร้างตัวอย่างหน้า PDF ที่มีประสิทธิภาพด้วย GroupDocs.Annotation สำหรับ .NET ปรับปรุงการโต้ตอบเอกสารและปรับปรุงเวิร์กโฟลว์ของคุณ"
 "title": "สร้างตัวอย่างหน้า PDF โดยใช้ GroupDocs.Annotation .NET คู่มือที่ครอบคลุม"
 "url": "/th/net/document-preview/generate-pdf-page-previews-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

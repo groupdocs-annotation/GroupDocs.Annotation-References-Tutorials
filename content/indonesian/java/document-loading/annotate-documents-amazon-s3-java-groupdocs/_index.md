@@ -3,6 +3,7 @@
 "description": "Pelajari cara memuat dan memberi anotasi pada dokumen yang disimpan di Amazon S3 dengan GroupDocs.Annotation di Java secara efisien. Panduan ini mencakup integrasi, penggunaan AWS SDK, dan pengoptimalan kinerja."
 "title": "Memuat dan Membuat Anotasi Dokumen dari Amazon S3 menggunakan Java; Panduan untuk Integrasi GroupDocs.Annotation"
 "url": "/id/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

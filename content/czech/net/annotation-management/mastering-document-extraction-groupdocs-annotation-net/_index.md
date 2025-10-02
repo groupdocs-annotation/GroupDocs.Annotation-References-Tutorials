@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně extrahovat informace o dokumentech pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka se zabývá nastavením, používáním a praktickými aplikacemi pro vylepšení vašich pracovních postupů zpracování dokumentů."
 "title": "Zvládnutí extrakce dokumentů pomocí GroupDocs.Annotation .NET&#58; Komplexní průvodce pro vývojáře"
 "url": "/cs/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Kompletne samouczki dotyczące wdrażania hiperłączy i powiązanych adnotacji w dokumentach za pomocą GroupDocs.Annotation dla platformy .NET."
 "title": "Samouczki dotyczące adnotacji linków dla GroupDocs.Annotation .NET"
 "url": "/pl/net/link-annotations/"
+type: docs
 "weight": 8
 ---
 

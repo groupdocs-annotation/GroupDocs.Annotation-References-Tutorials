@@ -3,6 +3,7 @@
 "description": "Lär dig hur du förbättrar dina PDF-dokument med polyline-annoteringar med GroupDocs.Annotation för .NET. Den här guiden ger steg-för-steg-instruktioner och tips för effektiv implementering."
 "title": "Så här lägger du till polylinjeannoteringar i PDF-filer med GroupDocs.Annotation för .NET - En steg-för-steg-guide"
 "url": "/sv/net/graphical-annotations/polyline-annotation-groupdocs-net-guide/"
+type: docs
 "weight": 1
 ---
 

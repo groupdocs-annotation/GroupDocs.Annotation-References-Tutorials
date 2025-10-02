@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية إضافة تعليقات توضيحية مشطوبة للنصوص في جافا باستخدام GroupDocs.Annotation. اتبع هذا الدليل خطوة بخطوة لإضافة تعليقات توضيحية سلسة للمستندات."
 "title": "دليل إضافة شطب نص جافا باستخدام GroupDocs.Annotation"
 "url": "/ar/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

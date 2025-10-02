@@ -3,6 +3,7 @@
 "description": "Lär dig hur du extraherar dokumentmetadata som filtyp, sidantal och storlek med GroupDocs.Annotation för Java. Förbättra din dokumenthantering med effektiv informationsutvinning."
 "title": "Effektiv extraktion av dokumentmetadata med GroupDocs.Annotation i Java"
 "url": "/sv/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

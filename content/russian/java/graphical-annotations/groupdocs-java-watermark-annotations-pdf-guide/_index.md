@@ -3,6 +3,7 @@
 "description": "Узнайте, как защитить ваши документы, добавив водяные знаки с помощью GroupDocs.Annotation для Java. В этом руководстве рассматриваются советы по настройке, настройке и оптимизации."
 "title": "Реализация аннотаций водяных знаков в PDF-файлах с помощью GroupDocs.Annotation Java&#58; Подробное руководство"
 "url": "/ru/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+type: docs
 "weight": 1
 ---
 

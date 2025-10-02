@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "उन्नत उपयोग"
 "url": "/hi/net/advanced-usage/"
+type: docs
 "weight": 22
 ---
 

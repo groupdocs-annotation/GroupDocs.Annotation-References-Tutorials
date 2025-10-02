@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně spravovat verze dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Tato příručka se zabývá nastavením, implementací a praktickými aplikacemi."
 "title": "Jak uložit PDF jako novou verzi pomocí GroupDocs.Annotation pro .NET – Podrobný návod"
 "url": "/cs/net/version-control/save-pdf-new-version-groupdocs-annotation-net/"
+type: docs
 "weight": 1
 ---
 

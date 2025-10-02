@@ -2,6 +2,7 @@
 "description": "Lépésről lépésre bemutatjuk, hogyan adhatunk hozzá űrlapmezőket és interaktív komponenseket dokumentumokhoz a GroupDocs.Annotation for Java használatával."
 "title": "Űrlapmező-jegyzetelési oktatóanyagok GroupDocs.Annotation Java-hoz"
 "url": "/hu/java/form-field-annotations/"
+type: docs
 "weight": 9
 ---
 

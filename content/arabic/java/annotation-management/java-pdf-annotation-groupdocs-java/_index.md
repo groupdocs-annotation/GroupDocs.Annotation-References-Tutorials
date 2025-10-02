@@ -3,6 +3,7 @@
 "description": "تعرف على كيفية إضافة تعليقات توضيحية إلى مستندات PDF بكفاءة من خلال تمييز المناطق باستخدام واجهة برمجة التطبيقات القوية GroupDocs.Annotation الخاصة بـ Java، مما يعزز التعاون والإنتاجية."
 "title": "كيفية إضافة تعليقات توضيحية إلى ملفات PDF في Java باستخدام GroupDocs.Annotation"
 "url": "/ar/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

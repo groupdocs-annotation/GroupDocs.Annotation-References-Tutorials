@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ पाठ सामग्री जानकारी प्राप्त करें"
 "url": "/hi/net/advanced-usage/get-document-text-content-information/"
+type: docs
 "weight": 17
 ---
 

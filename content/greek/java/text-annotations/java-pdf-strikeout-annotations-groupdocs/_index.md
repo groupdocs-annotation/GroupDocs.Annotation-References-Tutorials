@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να δημιουργείτε σχολιασμούς διακριτής διαγραφής κειμένου σε PDF Java χρησιμοποιώντας το GroupDocs.Annotation για Java. Ακολουθήστε αυτό το βήμα προς βήμα σεμινάριο για να βελτιώσετε τις δυνατότητες επεξεργασίας εγγράφων σας."
 "title": "Σχολιασμοί διαγραφής PDF σε Java με το GroupDocs - Ένας πλήρης οδηγός"
 "url": "/el/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+type: docs
 "weight": 1
 ---
 

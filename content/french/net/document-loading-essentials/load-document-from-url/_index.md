@@ -4,6 +4,7 @@
 "second_title": "API .NET GroupDocs.Annotation"
 "title": "Charger le document à partir de l'URL"
 "url": "/fr/net/document-loading-essentials/load-document-from-url/"
+type: docs
 "weight": 15
 ---
 

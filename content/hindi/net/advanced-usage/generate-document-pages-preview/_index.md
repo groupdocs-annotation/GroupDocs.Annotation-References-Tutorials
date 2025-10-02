@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET एपीआई"
 "title": "दस्तावेज़ पृष्ठ पूर्वावलोकन उत्पन्न करें"
 "url": "/hi/net/advanced-usage/generate-document-pages-preview/"
+type: docs
 "weight": 12
 ---
 

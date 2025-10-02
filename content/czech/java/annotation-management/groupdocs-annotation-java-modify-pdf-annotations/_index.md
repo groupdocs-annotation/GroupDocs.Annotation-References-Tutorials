@@ -3,6 +3,7 @@
 "description": "Naučte se, jak načítat, upravovat a spravovat anotace v PDF pomocí nástroje GroupDocs.Annotation pro Javu. Zjednodušte si správu dokumentů s naším komplexním průvodcem."
 "title": "Zvládněte GroupDocs.Annotation pro Javu a efektivně upravujte anotace PDF"
 "url": "/cs/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบครบถ้วนเกี่ยวกับการเพิ่ม ลบ อัปเดต และจัดการคำอธิบายประกอบในเอกสารโดยใช้ GroupDocs.Annotation สำหรับ Java"
 "title": "บทช่วยสอนการจัดการคำอธิบายประกอบสำหรับ GroupDocs.Annotation Java"
 "url": "/th/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

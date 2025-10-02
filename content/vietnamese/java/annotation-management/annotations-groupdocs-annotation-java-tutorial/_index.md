@@ -3,6 +3,7 @@
 "description": "Tìm hiểu cách tạo, quản lý và lưu chú thích hiệu quả trong tài liệu bằng GroupDocs.Annotation for Java. Hướng dẫn từng bước này bao gồm khởi tạo, loại chú thích và mẹo tích hợp."
 "title": "Hướng dẫn đầy đủ&#58; Sử dụng GroupDocs.Annotation cho Java để tạo và quản lý chú thích"
 "url": "/vi/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+type: docs
 "weight": 1
 ---
 

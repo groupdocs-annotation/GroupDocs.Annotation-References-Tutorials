@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für Java Dokumentmetadaten wie Dateityp, Seitenanzahl und Größe extrahieren. Verbessern Sie Ihr Dokumentenmanagement durch effiziente Informationsextraktion."
 "title": "Effiziente Extraktion von Dokumentmetadaten mit GroupDocs.Annotation in Java"
 "url": "/de/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "문서에 링크 주석 추가"
 "url": "/ko/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

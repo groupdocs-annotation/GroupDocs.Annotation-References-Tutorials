@@ -3,6 +3,7 @@
 "description": "了解如何使用強大的 GroupDocs.Annotation 庫添加互動式連結註釋，從而增強您的 .NET 應用程式。按照我們的分步指南，立即提昇文件互動性。"
 "title": "如何使用 GroupDocs.Annotation for .NET 在文件中新增連結註解 | 開發人員指南"
 "url": "/zh-hant/net/link-annotations/adding-link-annotations-groupdocs-annotation-dotnet/"
+type: docs
 "weight": 1
 ---
 

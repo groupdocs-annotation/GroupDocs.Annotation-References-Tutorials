@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java kullanarak PDF'lere metin vurgulamaları ve yanıtlar eklemeyi öğrenin. Bu kılavuz kurulumu, kod örneklerini ve pratik uygulamaları kapsar."
 "title": "GroupDocs.Highlight&#58;ı kullanarak Java'da PDF'leri açıklama ekleyin Kapsamlı Bir Kılavuz"
 "url": "/tr/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/"
+type: docs
 "weight": 1
 ---
 

@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Προσθήκη σχολίου συνδέσμου σε έγγραφο"
 "url": "/el/net/unlocking-annotation-power/add-link-annotation/"
+type: docs
 "weight": 16
 ---
 

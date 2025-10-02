@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotatie .NET API"
 "title": "Essentiële zaken voor het laden van documenten"
 "url": "/nl/net/document-loading-essentials/"
+type: docs
 "weight": 20
 ---
 

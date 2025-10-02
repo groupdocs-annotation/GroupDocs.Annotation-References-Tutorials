@@ -4,6 +4,7 @@
 "second_title": "API .NET του GroupDocs.Annotation"
 "title": "Φόρτωση προσαρμοσμένων γραμματοσειρών"
 "url": "/el/net/advanced-usage/loading-custom-fonts/"
+type: docs
 "weight": 20
 ---
 

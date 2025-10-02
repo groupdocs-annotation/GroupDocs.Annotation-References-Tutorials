@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation pro .NET tutoriály"
 "title": "Výukové programy a příklady GroupDocs.Annotation pro .NET"
 "url": "/cs/net/"
+type: docs
 "weight": 10
 ---
 

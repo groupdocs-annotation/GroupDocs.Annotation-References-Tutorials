@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie Dokumentanmerkungen mithilfe von Versionsschlüsseln mit GroupDocs.Annotation .NET effizient verwalten. Optimieren Sie Ihren Workflow und verbessern Sie die Zusammenarbeit."
 "title": "So rufen Sie Anmerkungen nach Versionsschlüssel in GroupDocs.Annotation .NET für verbessertes Dokumentenmanagement ab"
 "url": "/de/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
+type: docs
 "weight": 1
 ---
 

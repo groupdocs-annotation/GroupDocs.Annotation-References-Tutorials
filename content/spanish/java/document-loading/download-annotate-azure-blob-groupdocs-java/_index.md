@@ -3,6 +3,7 @@
 "description": "Aprenda a descargar archivos de Azure Blob Storage sin problemas y a anotarlos con GroupDocs.Annotation para Java. Mejore su flujo de trabajo de gestión de documentos con esta guía completa."
 "title": "Cómo descargar y anotar archivos blob de Azure mediante GroupDocs.Annotation Java"
 "url": "/es/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

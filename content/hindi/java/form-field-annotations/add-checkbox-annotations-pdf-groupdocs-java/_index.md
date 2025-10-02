@@ -3,6 +3,7 @@
 "description": "जानें कि GroupDocs.Annotation for Java का उपयोग करके अपने PDF दस्तावेज़ों को इंटरैक्टिव चेक बॉक्स एनोटेशन के साथ कैसे बेहतर बनाया जाए। इस चरण-दर-चरण मार्गदर्शिका का पालन करें।"
 "title": "Java के लिए GroupDocs.Annotation का उपयोग करके PDF में चेकबॉक्स एनोटेशन कैसे जोड़ें"
 "url": "/hi/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีจัดการคำอธิบายประกอบใน Java อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation คู่มือนี้ครอบคลุมถึงการโหลด การลบ และการเพิ่มประสิทธิภาพเวิร์กโฟลว์เอกสาร"
 "title": "คู่มือฉบับสมบูรณ์เกี่ยวกับการจัดการคำอธิบายประกอบระดับปรมาจารย์ใน Java พร้อมด้วย GroupDocs.Annotation"
 "url": "/th/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+type: docs
 "weight": 1
 ---
 

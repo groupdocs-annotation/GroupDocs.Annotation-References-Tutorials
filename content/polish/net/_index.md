@@ -4,6 +4,7 @@
 "linktitle": "GroupDocs.Annotation dla samouczków .NET"
 "title": "Samouczki i przykłady GroupDocs.Annotation dla .NET"
 "url": "/pl/net/"
+type: docs
 "weight": 10
 ---
 

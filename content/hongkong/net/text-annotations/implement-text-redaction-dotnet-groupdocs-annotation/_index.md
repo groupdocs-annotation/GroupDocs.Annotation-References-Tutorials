@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 .NET 應用程式中實作文字編輯註解。輕鬆保護敏感資訊。"
 "title": "使用 GroupDocs.Annotation 在 .NET 中實作文字編輯－完整指南"
 "url": "/zh-hant/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

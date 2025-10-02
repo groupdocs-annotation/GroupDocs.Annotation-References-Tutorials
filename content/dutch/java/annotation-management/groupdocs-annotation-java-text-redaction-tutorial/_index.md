@@ -3,6 +3,7 @@
 "description": "Leer hoe u tekst in PDF's efficiënt kunt redigeren met de krachtige Java-bibliotheek GroupDocs.Annotation. Deze handleiding behandelt de installatie, het maken van annotaties en het opslaan van bestanden."
 "title": "Beheers tekstredactie in PDF's met GroupDocs.Annotation Java API&#58; een uitgebreide handleiding"
 "url": "/nl/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+type: docs
 "weight": 1
 ---
 

@@ -3,6 +3,7 @@
 "description": "Μάθετε πώς να εφαρμόζετε σχολιασμούς αντικατάστασης κειμένου σε PDF Java χρησιμοποιώντας το GroupDocs.Annotation. Βελτιώστε τις δυνατότητες επεξεργασίας εγγράφων και συνεργασίας."
 "title": "Οδηγός αντικατάστασης κειμένου PDF σε Java με το GroupDocs.Annotation"
 "url": "/el/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
+type: docs
 "weight": 1
 ---
 

@@ -2,6 +2,7 @@
 "description": "Samouczki krok po kroku dotyczące dodawania, edytowania i zarządzania adnotacjami tekstowymi w dokumentach przy użyciu GroupDocs.Annotation dla Java."
 "title": "Samouczki adnotacji tekstu dla GroupDocs.Annotation Java"
 "url": "/pl/java/text-annotations/"
+type: docs
 "weight": 5
 ---
 

@@ -3,6 +3,7 @@
 "description": ".NET'teki güçlü GroupDocs.Annotation kütüphanesini kullanarak belirli görüntü çözünürlükleriyle yüksek kaliteli PDF belge önizlemelerinin nasıl oluşturulacağını öğrenin. Belge yönetimi iş akışınızı bugün optimize edin."
 "title": "GroupDocs.Annotation for .NET Kullanarak Özel Çözünürlüklerde Yüksek Kaliteli PDF Önizlemeleri Oluşturun"
 "url": "/tr/net/document-preview/generate-pdf-previews-custom-resolutions-groupdocs/"
+type: docs
 "weight": 1
 ---
 

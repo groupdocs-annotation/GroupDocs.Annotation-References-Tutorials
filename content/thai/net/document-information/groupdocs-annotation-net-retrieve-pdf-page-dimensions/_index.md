@@ -3,6 +3,7 @@
 "description": "เรียนรู้วิธีการดึงข้อมูลขนาดหน้า PDF อย่างมีประสิทธิภาพด้วย GroupDocs.Annotation สำหรับ .NET ปฏิบัติตามคู่มือนี้เพื่อปรับปรุงแอปพลิเคชันการจัดการเอกสารของคุณ"
 "title": "วิธีการดึงข้อมูลขนาดหน้า PDF โดยใช้ GroupDocs.Annotation สำหรับ .NET"
 "url": "/th/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+type: docs
 "weight": 1
 ---
 

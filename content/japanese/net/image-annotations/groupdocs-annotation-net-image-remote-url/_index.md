@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for .NET を使用して、リモート URL から PDF ドキュメントに画像注釈を追加する方法を学びましょう。この包括的なガイドで、ドキュメントワークフローを強化しましょう。"
 "title": "GroupDocs.Annotation .NET とリモート URL を使用して PDF に画像注釈を実装する"
 "url": "/ja/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

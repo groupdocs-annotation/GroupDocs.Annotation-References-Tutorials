@@ -2,6 +2,7 @@
 "description": "GroupDocs.Annotation for Java का उपयोग करके दस्तावेज़ों में एनोटेशन जोड़ने, हटाने, अद्यतन करने और प्रबंधित करने के लिए संपूर्ण ट्यूटोरियल।"
 "title": "GroupDocs.Annotation Java के लिए एनोटेशन प्रबंधन ट्यूटोरियल"
 "url": "/hi/java/annotation-management/"
+type: docs
 "weight": 10
 ---
 

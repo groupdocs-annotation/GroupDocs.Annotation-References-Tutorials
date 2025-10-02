@@ -2,6 +2,7 @@
 "description": "Tutorial completi per l'implementazione di collegamenti ipertestuali e annotazioni collegate nei documenti con GroupDocs.Annotation per Java."
 "title": "Tutorial di annotazione dei collegamenti per GroupDocs.Annotation Java"
 "url": "/it/java/link-annotations/"
+type: docs
 "weight": 8
 ---
 

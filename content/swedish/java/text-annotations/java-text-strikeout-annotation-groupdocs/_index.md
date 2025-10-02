@@ -3,6 +3,7 @@
 "description": "Lär dig hur du lägger till textannoteringar i Java med GroupDocs.Annotation. Följ den här steg-för-steg-guiden för sömlös dokumentannotering."
 "title": "Guide för annotering av överstrukna texter i Java med GroupDocs.Annotation"
 "url": "/sv/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

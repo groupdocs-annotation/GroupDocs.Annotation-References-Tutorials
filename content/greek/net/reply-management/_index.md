@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την υλοποίηση νημάτων σχολίων, απαντήσεων και συνεργατικών συζητήσεων με το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά σεμινάρια διαχείρισης απαντήσεων για το GroupDocs.Annotation .NET"
 "url": "/el/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

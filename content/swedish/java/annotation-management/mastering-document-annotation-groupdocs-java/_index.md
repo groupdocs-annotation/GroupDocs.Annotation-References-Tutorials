@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt kommenterar dokument med GroupDocs.Annotation för Java. Den här guiden behandlar hur du laddar, kommenterar PDF-filer och optimerar din Java-miljö med Maven."
 "title": "Bemästra dokumentannotering i Java – en omfattande guide med GroupDocs.Annotation"
 "url": "/sv/java/annotation-management/mastering-document-annotation-groupdocs-java/"
+type: docs
 "weight": 1
 ---
 

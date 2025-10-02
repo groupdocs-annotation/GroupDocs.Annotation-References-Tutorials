@@ -4,6 +4,7 @@
 "linktitle": ".NET ट्यूटोरियल के लिए GroupDocs.Annotation"
 "title": ".NET के लिए GroupDocs.Annotation के ट्यूटोरियल और उदाहरण"
 "url": "/hi/net/"
+type: docs
 "weight": 10
 ---
 

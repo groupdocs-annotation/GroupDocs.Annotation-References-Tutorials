@@ -3,6 +3,7 @@
 "description": "تعرّف على كيفية استخدام GroupDocs.Annotation لجافا لعرض تنسيقات الملفات المدعومة بكفاءة من خلال دليلنا المفصل. مثالي لتحسين تطبيقات شرح المستندات لديك."
 "title": "كيفية استرداد تنسيقات الملفات المدعومة في GroupDocs.Annotation لـ Java - دليل شامل"
 "url": "/ar/java/document-information/groupdocs-annotation-java-supported-formats/"
+type: docs
 "weight": 1
 ---
 

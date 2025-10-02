@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Jegyzetek listájának lekérése verziókulcs használatával"
 "url": "/hu/net/advanced-usage/get-list-annotations-version-key/"
+type: docs
 "weight": 18
 ---
 

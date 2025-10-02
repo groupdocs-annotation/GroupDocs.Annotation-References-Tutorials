@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation for Java를 사용하여 파일 유형, 페이지 수, 크기 등의 문서 메타데이터를 추출하는 방법을 알아보세요. 효율적인 정보 추출을 통해 문서 관리를 강화하세요."
 "title": "Java에서 GroupDocs.Annotation을 사용한 효율적인 문서 메타데이터 추출"
 "url": "/ko/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+type: docs
 "weight": 1
 ---
 

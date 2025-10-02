@@ -2,6 +2,7 @@
 "description": "บทช่วยสอนแบบทีละขั้นตอนสำหรับการนำเธรดความคิดเห็น การตอบกลับ และการสนทนาแบบร่วมมือกันไปใช้ด้วย GroupDocs.Annotation สำหรับ .NET"
 "title": "บทช่วยสอนการจัดการการตอบกลับสำหรับ GroupDocs.Annotation .NET"
 "url": "/th/net/reply-management/"
+type: docs
 "weight": 11
 ---
 

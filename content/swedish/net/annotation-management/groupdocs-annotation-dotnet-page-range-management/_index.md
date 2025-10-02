@@ -3,6 +3,7 @@
 "description": "Lär dig hur du effektivt hanterar sidintervall med GroupDocs.Annotation för .NET. Den här guiden beskriver installation, konfiguration och bästa praxis för att spara specifika sidor."
 "title": "Bemästra sidintervallhantering i .NET med GroupDocs.Annotation's effektiva annoteringstekniker"
 "url": "/sv/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+type: docs
 "weight": 1
 ---
 

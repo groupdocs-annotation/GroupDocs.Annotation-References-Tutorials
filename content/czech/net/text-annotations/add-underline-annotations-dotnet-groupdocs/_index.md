@@ -3,6 +3,7 @@
 "description": "Naučte se, jak efektivně přidávat podtržené poznámky do dokumentů pomocí GroupDocs.Annotation pro .NET. Snadno vylepšete přehlednost dokumentů a komunikaci."
 "title": "Jak přidat podtržené anotace v .NET pomocí GroupDocs.Annotation"
 "url": "/cs/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
+type: docs
 "weight": 1
 ---
 

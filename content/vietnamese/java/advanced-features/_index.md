@@ -2,6 +2,7 @@
 "description": "Hướng dẫn đầy đủ về cách triển khai các chức năng chú thích nâng cao, tùy chỉnh và các tính năng chuyên biệt với GroupDocs.Annotation cho Java."
 "title": "Hướng dẫn tính năng nâng cao của GroupDocs.Annotation dành cho Java"
 "url": "/vi/java/advanced-features/"
+type: docs
 "weight": 16
 ---
 

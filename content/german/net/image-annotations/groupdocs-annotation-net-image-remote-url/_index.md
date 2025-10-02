@@ -3,6 +3,7 @@
 "description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation für .NET Bildanmerkungen von Remote-URLs in PDF-Dokumente einfügen. Optimieren Sie Ihre Dokumenten-Workflows mit diesem umfassenden Leitfaden."
 "title": "Implementieren Sie Bildanmerkungen in PDFs mit GroupDocs.Annotation .NET und Remote-URLs"
 "url": "/de/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
+type: docs
 "weight": 1
 ---
 

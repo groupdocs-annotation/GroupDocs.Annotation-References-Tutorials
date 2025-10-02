@@ -4,6 +4,7 @@
 "second_title": "GroupDocs.Annotation .NET API"
 "title": "Dodaj adnotację obszaru do dokumentu"
 "url": "/pl/net/unlocking-annotation-power/add-area-annotation/"
+type: docs
 "weight": 10
 ---
 

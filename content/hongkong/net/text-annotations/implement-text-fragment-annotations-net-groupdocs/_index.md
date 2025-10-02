@@ -3,6 +3,7 @@
 "description": "了解如何使用 GroupDocs.Annotation 在 .NET 中實作文字片段註解。本指南涵蓋高效文件管理的設定、實作和實際應用。"
 "title": "使用 GroupDocs 在 .NET 中實作文字片段註解的綜合指南"
 "url": "/zh-hant/net/text-annotations/implement-text-fragment-annotations-net-groupdocs/"
+type: docs
 "weight": 1
 ---
 

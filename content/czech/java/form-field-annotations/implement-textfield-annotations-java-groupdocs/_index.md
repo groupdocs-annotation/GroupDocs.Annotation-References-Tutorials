@@ -3,6 +3,7 @@
 "description": "Naučte se, jak implementovat anotace textových polí v Javě pomocí GroupDocs.Annotation pro vylepšenou interaktivitu dokumentů. Řiďte se tímto komplexním průvodcem s podrobnými pokyny a praktickými aplikacemi."
 "title": "Implementace anotací textových polí v Javě pomocí GroupDocs.Annotation – Komplexní průvodce"
 "url": "/cs/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
+type: docs
 "weight": 1
 ---
 

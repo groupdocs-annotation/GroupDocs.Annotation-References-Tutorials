@@ -2,6 +2,7 @@
 "description": "دروس تعليمية كاملة لإنشاء معاينات المستندات والصور المصغرة والتمثيلات المرئية باستخدام GroupDocs.Annotation لـ .NET."
 "title": "دروس معاينة المستندات لـ GroupDocs.Annotation .NET"
 "url": "/ar/net/document-preview/"
+type: docs
 "weight": 14
 ---
 

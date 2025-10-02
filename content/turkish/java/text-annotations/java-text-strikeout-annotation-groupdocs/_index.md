@@ -3,6 +3,7 @@
 "description": "GroupDocs.Annotation kullanarak Java'da metin üstü çizili açıklamaların nasıl ekleneceğini öğrenin. Sorunsuz belge açıklaması için bu adım adım kılavuzu izleyin."
 "title": "GroupDocs.Annotation Kullanarak Java Metin Üstü Çizili Açıklama Kılavuzu"
 "url": "/tr/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+type: docs
 "weight": 1
 ---
 

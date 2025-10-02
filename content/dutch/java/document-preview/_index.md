@@ -2,6 +2,7 @@
 "description": "Volledige tutorials voor het genereren van documentvoorbeelden, miniaturen en visuele weergaven met GroupDocs.Annotation voor Java."
 "title": "Documentvoorbeeldhandleidingen voor GroupDocs.Annotation Java"
 "url": "/nl/java/document-preview/"
+type: docs
 "weight": 14
 ---
 

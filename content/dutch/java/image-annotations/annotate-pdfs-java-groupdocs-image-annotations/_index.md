@@ -3,6 +3,7 @@
 "description": "Leer hoe u afbeeldingen aan PDF's kunt toevoegen met GroupDocs.Annotation voor Java. Stroomlijn uw documentworkflows en verbeter de samenwerking."
 "title": "Voeg afbeeldingen toe aan PDF's met GroupDocs.Annotation Java - Een complete tutorial"
 "url": "/nl/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+type: docs
 "weight": 1
 ---
 

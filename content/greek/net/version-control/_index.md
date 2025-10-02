@@ -2,6 +2,7 @@
 "description": "Βήμα προς βήμα οδηγίες για την εφαρμογή εκδόσεων εγγράφων, την παρακολούθηση αλλαγών και τη διαχείριση του ιστορικού σχολιασμών με το GroupDocs.Annotation για .NET."
 "title": "Εκπαιδευτικά σεμινάρια ελέγχου έκδοσης για το GroupDocs.Annotation .NET"
 "url": "/el/net/version-control/"
+type: docs
 "weight": 13
 ---
 
