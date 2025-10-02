@@ -58,12 +58,19 @@ jobs:
       # Also specifies the theme we want to use
       - name: Build
         run: hugo --configDir config/annotation --environment production --minify
-        
-      - name: Deploy apiqa-tutorials.groupdocs.com(tutorials-annotation)(family)(Production) to S3
-        run: hugo --configDir config/annotation --environment production deploy --target "Production" --maxDeletes 0
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS }}
+      # Configure AWS credentials
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.SECRET_ACCESS }}
+          aws-region: us-west-2
+      - name: Deploy to S3 using AWS CLI
+        run: |
+          aws s3 sync public/ s3://${{ secrets.S3_BUCKET }}/annotation/ \
+            --delete \
+            --exclude "*.map" \
+            --cache-control "public, max-age=3600"
       # Invalidate Cloudfront
       - name: invalidate
         uses: chetan/invalidate-cloudfront-action@v2
