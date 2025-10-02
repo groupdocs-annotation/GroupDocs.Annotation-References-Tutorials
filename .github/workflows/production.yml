@@ -42,9 +42,9 @@ jobs:
           path: themes/tutorials-theme      
       # Step 2 - Sets up the latest version of Hugo
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-            hugo-version: ' 0.150.0'
+            hugo-version: 'latest'
             extended: true
       - name: Install Dependicies1
         run:  npm install -D --save autoprefixer
