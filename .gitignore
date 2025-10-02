@@ -1,0 +1,45 @@
+# Hugo build output
+/public/
+/resources/_gen/
+
+# Themes (if using submodules or external themes)
+/themes/
+
+# Node modules and npm
+node_modules/
+package-lock.json
+yarn.lock
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Hugo cache
+/.hugo_build.lock
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
