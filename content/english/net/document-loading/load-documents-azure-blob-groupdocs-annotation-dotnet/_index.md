@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["GroupDocs.Annotation", "Azure", "NET", "Cloud Storage", "Document Loading"]
+type: docs
 ---
-
 # GroupDocs.Annotation Azure Integration - Complete .NET Tutorial
 
 ## Why This Integration Matters (And How It Solves Your Problems)

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["PDF", "annotation", "GroupDocs", "Java", "document-processing"]
+type: docs
 ---
-
 # Java PDF Image Annotation - Complete GroupDocs Tutorial
 
 Ever found yourself staring at a PDF thinking, "I wish I could just drop an image right here to explain this better"? You're not alone. Whether you're building a document review system, creating educational materials, or just need to add visual context to your PDFs, image annotations are a game-changer.

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["GroupDocs.Annotation", "PDF Forms", "C# Tutorial", "Interactive PDFs"]
+type: docs
 ---
-
 # Add Checkbox to PDF .NET
 
 ## Introduction

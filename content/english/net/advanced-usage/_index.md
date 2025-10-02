@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Advanced Tutorials"]
 tags: ["GroupDocs.Annotation", "NET-API", "Document-Management", "PDF-Annotation"]
+type: docs
 ---
-
 # GroupDocs.Annotation .NET Tutorial: Advanced Features Guide
 
 ## Master Document Annotation in Your .NET Applications

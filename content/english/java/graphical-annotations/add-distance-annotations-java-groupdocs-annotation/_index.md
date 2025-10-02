@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "document-annotation", "Java-tutorial", "PDF-processing"]
+type: docs
 ---
-
 # Java Distance Annotation Tutorial: How to Add Document Measurements with GroupDocs
 
 Ever needed to measure distances or mark precise measurements in your Java application's documents? You're not alone. Whether you're building CAD software, working with architectural plans, or creating technical documentation tools, distance annotations are absolutely essential for providing clear, interactive measurements that users can see and understand at a glance.

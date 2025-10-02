@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["redaction", "annotation", "security", "pdf", "groupdocs"]
+type: docs
 ---
-
 # Add Text Redaction Annotation to Document with GroupDocs.Annotation .NET
 
 ## Why Text Redaction Matters in Document Processing

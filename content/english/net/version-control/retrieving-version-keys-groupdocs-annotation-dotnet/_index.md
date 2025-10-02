@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["groupdocs-annotation", "version-control", "dotnet", "csharp", "document-management"]
+type: docs
 ---
-
 # GroupDocs.Annotation Version Keys .NET
 
 ## Introduction

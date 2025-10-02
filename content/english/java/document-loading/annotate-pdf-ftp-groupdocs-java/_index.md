@@ -9,8 +9,8 @@ url: "/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
 keywords: "annotate PDF FTP Java, GroupDocs annotation tutorial, PDF annotation from FTP server, Java document processing FTP, load PDF from FTP server Java"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "ftp-integration", "groupdocs", "java-tutorial"]
+type: docs
 ---
-
 # How to Annotate PDF FTP Java Files: Complete GroupDocs Tutorial
 
 ## Introduction

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "java-tutorial", "document-processing", "groupdocs"]
+type: docs
 ---
-
 # Java PDF Annotation Tutorial: Complete Guide with GroupDocs Examples
 
 If you're building Java applications that handle PDF documents, you've probably wondered how to add, modify, and manage annotations programmatically. Whether you're creating a document review system, building collaborative tools, or simply need to highlight important content automatically, mastering PDF annotation in Java is a valuable skill that can significantly enhance your applications.

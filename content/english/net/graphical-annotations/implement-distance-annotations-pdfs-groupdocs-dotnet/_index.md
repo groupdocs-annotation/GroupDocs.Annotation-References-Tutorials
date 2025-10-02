@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["dotnet", "pdf-annotations", "groupdocs", "csharp", "developer-tools"]
+type: docs
 ---
-
 # PDF Distance Annotations .NET - Complete Developer Guide
 
 ## Introduction

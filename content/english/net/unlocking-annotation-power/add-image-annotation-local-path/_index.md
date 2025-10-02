@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotations", "image-processing", "csharp", "pdf"]
+type: docs
 ---
-
 # How to Add Image Annotation to Documents in .NET
 
 ## Introduction

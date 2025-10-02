@@ -9,8 +9,8 @@ weight: 1
 url: "/java/advanced-features/groupdocs-annotation-java-password-documents/"
 categories: ["Java Development"]
 tags: ["document-processing", "pdf-annotation", "java-library", "security"]
+type: docs
 ---
-
 # The Complete Java Document Annotation Library Guide: Secure Password-Protected Document Handling
 
 ## What You're Getting Into (And Why It Matters)

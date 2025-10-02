@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["image-annotation", "groupdocs", "dotnet", "pdf", "csharp"]
+type: docs
 ---
-
 # Image Annotation .NET Tutorial - Complete GroupDocs Guide
 
 Working with document annotations in .NET? You're probably familiar with the challenge of making documents more visual and engaging. Whether you're building an educational platform, legal document system, or collaborative workspace, image annotations can transform how users interact with your content.

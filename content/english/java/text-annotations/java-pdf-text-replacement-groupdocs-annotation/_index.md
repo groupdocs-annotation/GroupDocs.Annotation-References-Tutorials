@@ -9,8 +9,8 @@ weight: 1
 url: "/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/"
 categories: ["Java Development"]
 tags: ["java", "pdf", "groupdocs", "annotations", "text-replacement"]
+type: docs
 ---
-
 # Java PDF Text Replacement Tutorial
 
 ## Why You Need PDF Text Replacement in Your Java Apps

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["annotations", "document-processing", "pdf-handling", "java-tutorials"]
+type: docs
 ---
-
 # How to Save Annotated Documents in Java: Complete Developer Guide
 
 Saving annotated documents properly is crucial for any annotation workflow – but it's not as straightforward as you might think. Whether you're building a document review system, collaborative editing platform, or compliance management tool, understanding how to save annotated documents with GroupDocs.Annotation for Java can make or break your application's performance and user experience.

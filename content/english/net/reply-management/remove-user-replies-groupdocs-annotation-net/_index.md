@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Management"]
 tags: ["groupdocs", "pdf-annotations", "csharp", "document-management"]
+type: docs
 ---
-
 # Remove PDF Annotations .NET: Delete User Comments & Replies with GroupDocs (2025 Guide)
 
 ## Introduction

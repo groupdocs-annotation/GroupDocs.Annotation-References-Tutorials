@@ -9,8 +9,8 @@ weight: 1
 url: "/net/image-annotations/guide-image-annotations-groupdocs-dotnet/"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Image-Annotations", "PDF-Processing", "CSharp"]
+type: docs
 ---
-
 # .NET Image Annotation Tutorial - Add Images to Documents Programmatically
 
 ## Introduction

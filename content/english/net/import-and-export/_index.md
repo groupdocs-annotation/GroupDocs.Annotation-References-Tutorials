@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Annotation"]
 tags: ["import-export", "serialization", "xml", "migration"]
+type: docs
 ---
-
 # Annotation Import Export .NET
 
 Working with annotation import export .NET functionality? You're in the right place. Whether you need to migrate annotations between documents, backup annotation data to XML, or synchronize annotations across different systems, mastering these workflows is crucial for robust document management applications.

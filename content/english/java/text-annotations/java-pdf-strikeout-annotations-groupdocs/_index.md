@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java PDF Processing"]
 tags: ["java-pdf", "annotations", "groupdocs", "document-processing"]
+type: docs
 ---
-
 # How to Add Text Strikeout Annotations to PDFs in Java
 
 Ever needed to cross out text in a PDF programmatically? Whether you're building a document review system, creating an editing workflow, or just need to mark text for deletion, Java PDF text strikeout functionality is incredibly useful. In this comprehensive guide, you'll learn exactly how to implement strikeout annotations using GroupDocs.Annotation for Java.

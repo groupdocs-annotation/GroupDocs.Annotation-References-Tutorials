@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Annotation", "document-annotations", "dotnet-development"]
+type: docs
 ---
-
 # Remove Annotation Replies .NET
 
 ## Introduction

@@ -9,8 +9,8 @@ weight: 1
 url: "/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/"
 categories: ["Java PDF Processing"]
 tags: ["pdf-annotation", "groupdocs", "java-tutorial", "document-processing"]
+type: docs
 ---
-
 # How to Add Arrows to PDF in Java: Complete GroupDocs Tutorial
 
 ## Introduction

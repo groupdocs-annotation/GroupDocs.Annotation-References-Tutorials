@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-annotations", "java-libraries", "document-processing", "groupdocs"]
+type: docs
 ---
-
 # Java PDF Annotation Library: Complete Guide with GroupDocs.Annotation
 
 ## Why Java Developers Need PDF Annotation Libraries

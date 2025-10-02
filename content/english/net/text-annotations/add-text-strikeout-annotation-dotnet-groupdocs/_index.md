@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Annotations", "C#", "PDF", "Document Markup"]
+type: docs
 ---
-
 # How to Add Strikeout Annotations in .NET: Complete Developer Guide
 
 ## Introduction

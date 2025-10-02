@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java PDF Development"]
 tags: ["pdf-annotations", "groupdocs", "java-pdf", "interactive-forms"]
+type: docs
 ---
-
 # PDF Checkbox Java: Add Interactive Checkboxes to PDFs
 
 ## Why Your PDFs Need Interactive Checkboxes

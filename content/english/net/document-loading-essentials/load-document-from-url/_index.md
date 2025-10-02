@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["PDF", "URL Loading", "Annotations", "Remote Files"]
+type: docs
 ---
-
 # Load PDF from URL .NET
 
 ## Introduction

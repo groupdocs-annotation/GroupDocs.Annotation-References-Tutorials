@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["pdf-highlighting", "document-annotation", "dotnet-library", "programmatic-markup"]
+type: docs
 ---
-
 # Highlight Text in PDF Programmatically Using .NET
 
 ## Why You Need Programmatic Text Highlighting

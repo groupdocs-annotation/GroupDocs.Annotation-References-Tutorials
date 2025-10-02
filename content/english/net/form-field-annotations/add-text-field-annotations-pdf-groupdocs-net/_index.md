@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["GroupDocs", "PDF annotations", ".NET", "C#", "interactive forms"]
+type: docs
 ---
-
 # PDF Text Field Annotations .NET - Complete Tutorial with GroupDocs
 
 ## Why PDF Text Field Annotations Matter (And How to Add Them Easily)

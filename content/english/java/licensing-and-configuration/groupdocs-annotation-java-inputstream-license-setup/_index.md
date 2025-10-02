@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "Java", "Licensing", "InputStream", "Configuration"]
+type: docs
 ---
-
 # GroupDocs Annotation Java InputStream License Setup
 
 ## Introduction

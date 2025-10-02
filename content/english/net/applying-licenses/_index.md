@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["License Management"]
 tags: ["licensing", "setup", "configuration", "dotnet"]
+type: docs
 ---
-
 # GroupDocs.Annotation .NET License Setup - Complete Guide
 
 ## Introduction

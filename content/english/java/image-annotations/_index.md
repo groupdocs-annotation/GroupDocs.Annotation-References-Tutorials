@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["pdf-annotation", "java-development", "groupdocs", "document-processing"]
+type: docs
 ---
-
 # Java PDF Image Annotation Tutorial - Add Images to Documents
 
 Adding image annotations to PDF documents isn't just about inserting pictures—it's about creating richer, more communicative documents that bridge the gap between static text and dynamic visual content. Whether you're building a document review system, creating annotated reports, or developing collaborative platforms, mastering image annotations in Java can transform how your users interact with documents.

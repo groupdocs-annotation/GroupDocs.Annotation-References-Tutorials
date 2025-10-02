@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java PDF Development"]
 tags: ["java", "pdf", "groupdocs", "forms", "annotations"]
+type: docs
 ---
-
 # Java PDF Dropdown Tutorial - Create Interactive Forms with GroupDocs
 
 ## Introduction

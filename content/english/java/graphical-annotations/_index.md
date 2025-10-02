@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "groupdocs", "java-tutorial", "document-processing"]
+type: docs
 ---
-
 # Java PDF Annotation Tutorial - Complete Guide to Document Markup
 
 Ever struggled with manual document reviews that take forever? You're not alone. Whether you're building a document management system, creating an e-learning platform, or developing collaborative review tools, adding annotations programmatically can transform how users interact with your PDFs and documents.

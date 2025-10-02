@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "groupdocs", "java-tutorial", "document-collaboration"]
+type: docs
 ---
-
 # Java PDF Annotation Tutorial: Complete Guide to GroupDocs Implementation
 
 ## Introduction

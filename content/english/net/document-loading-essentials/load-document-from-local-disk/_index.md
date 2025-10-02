@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Loading"]
 tags: ["groupdocs", "annotation", "local-disk", "csharp", "tutorial"]
+type: docs
 ---
-
 # How to Load Document from Local Disk in .NET (Complete Guide)
 
 ## Introduction

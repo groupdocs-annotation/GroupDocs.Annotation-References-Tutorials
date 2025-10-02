@@ -9,8 +9,8 @@ weight: 1
 url: "/net/text-annotations/add-underline-annotations-dotnet-groupdocs/"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "annotations", "underline", "dotnet", "csharp"]
+type: docs
 ---
-
 # How to Add Underline Annotations in .NET
 
 ## Why Document Annotation Matters (And Why You're Here)

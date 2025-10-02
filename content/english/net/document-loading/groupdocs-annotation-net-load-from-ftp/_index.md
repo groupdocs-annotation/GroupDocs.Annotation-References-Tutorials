@@ -9,8 +9,8 @@ url: "/net/document-loading/groupdocs-annotation-net-load-from-ftp/"
 keywords: "load documents from FTP .NET, FTP document annotation, GroupDocs FTP integration, C# FTP document loading, annotate documents from FTP server"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Annotation", "FTP", ".NET", "C#", "Document Loading"]
+type: docs
 ---
-
 # How to Load Documents from FTP .NET: The Complete Developer's Guide
 
 ## Why Loading Documents from FTP Matters (And Why It's Trickier Than You Think)

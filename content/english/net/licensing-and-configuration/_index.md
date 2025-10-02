@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["licensing", "configuration", "setup", "dotnet"]
+type: docs
 ---
-
 # GroupDocs.Annotation Licensing .NET - Complete Setup & Configuration
 
 Setting up GroupDocs.Annotation licensing in your .NET application doesn't have to be complicated. Whether you're dealing with file-based licenses, stream implementations, or metered licensing models, this comprehensive guide walks you through every step to get your document annotation features up and running smoothly.

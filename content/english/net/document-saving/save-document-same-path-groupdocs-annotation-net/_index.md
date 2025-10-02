@@ -9,8 +9,8 @@ weight: 1
 url: "/net/document-saving/save-document-same-path-groupdocs-annotation-net/"
 categories: ["GroupDocs.Annotation"]
 tags: ["dotnet", "document-annotation", "file-management", "groupdocs"]
+type: docs
 ---
-
 # GroupDocs.Annotation Save Document Same Path
 
 ## Introduction

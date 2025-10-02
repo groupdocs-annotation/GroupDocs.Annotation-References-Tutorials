@@ -9,8 +9,8 @@ weight: 1
 url: "/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
 categories: ["Java Development"]
 tags: ["java-annotations", "groupdocs", "document-processing", "pdf-manipulation"]
+type: docs
 ---
-
 # Java Strikeout Annotation Tutorial - Complete GroupDocs Guide 
 
 Ever found yourself staring at a document thinking, "I need to cross out this text, but I can't just grab a red pen"? You're not alone. Whether you're building a document review system, creating an editing workflow, or just need to mark text for deletion in your Java application, strikeout annotations are incredibly useful.

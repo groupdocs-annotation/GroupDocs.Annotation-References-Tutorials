@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["GroupDocs", "text-annotation", "dotnet", "csharp", "document-processing"]
+type: docs
 ---
-
 # Text Fragment Annotation .NET: Complete Implementation Guide
 
 Ever found yourself wishing you could programmatically highlight and annotate text in documents just like you do with a physical highlighter? Well, you're in luck! Text fragment annotation .NET capabilities through GroupDocs.Annotation make this not just possible, but surprisingly straightforward.

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["groupdocs", "pdf-annotation", "version-control", "dotnet", "document-management"]
+type: docs
 ---
-
 # GroupDocs Annotation Save PDF New Version
 
 ## Why Version Control Matters for Your PDF Annotations

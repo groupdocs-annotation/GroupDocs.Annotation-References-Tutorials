@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["licensing", "configuration", "setup", "java-annotations"]
+type: docs
 ---
-
 # GroupDocs Annotation Java Licensing Guide - Complete Setup Tutorial
 
 Setting up GroupDocs.Annotation licensing in your Java application doesn't have to be complicated. Whether you're building a document management system, collaborative platform, or adding annotation features to existing software, proper licensing and configuration are crucial for unlocking the full potential of this powerful library.

@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotations", "underline", "document-collaboration", "pdf-processing"]
+type: docs
 ---
-
 # Add Text Underline Annotation to Document Using .NET
 
 ## Introduction

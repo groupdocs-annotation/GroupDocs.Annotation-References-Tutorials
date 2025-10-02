@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Annotation"]
 tags: ["document-preview", "pdf-generation", "net-tutorials", "document-visualization"]
+type: docs
 ---
-
 # Document Preview .NET Tutorials - Complete GroupDocs.Annotation Guide
 
 Creating document previews is one of the most powerful features you can add to your .NET applications. Whether you're building a document management system, collaboration platform, or content review tool, the ability to generate visual previews dramatically improves user experience and workflow efficiency.

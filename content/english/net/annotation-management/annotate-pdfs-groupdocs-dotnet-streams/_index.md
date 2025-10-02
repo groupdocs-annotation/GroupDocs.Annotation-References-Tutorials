@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["pdf-annotation", "dotnet-streams", "groupdocs", "document-management"]
+type: docs
 ---
-
 # PDF Annotation .NET Streams
 
 ## Introduction

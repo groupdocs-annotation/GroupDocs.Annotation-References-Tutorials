@@ -8,8 +8,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["version-control", "groupdocs-annotation", "document-versioning", "dotnet"]
+type: docs
 ---
-
 # GroupDocs Annotation Version Control for .NET - Complete Developer Guide
 
 Managing document versions becomes critical when you're dealing with collaborative workflows and evolving annotations. Whether you're building a document review system, legal case management platform, or content approval workflow, tracking how your annotated documents change over time isn't just helpful—it's essential.

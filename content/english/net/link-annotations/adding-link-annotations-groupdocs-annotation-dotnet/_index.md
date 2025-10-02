@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["C#", "PDF", "GroupDocs", "Annotations", "Links"]
+type: docs
 ---
-
 # How to Add Clickable Links to PDF Documents in C#
 
 ## Introduction

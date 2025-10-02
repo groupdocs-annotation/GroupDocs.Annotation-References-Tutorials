@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["groupdocs", "pdf-annotation", "dotnet-tutorial", "csharp-guide"]
+type: docs
 ---
-
 # PDF Annotation .NET Tutorial: Complete GroupDocs Guide
 
 ## Introduction

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "Document Annotation", "Advanced Features", "Java Tutorial"]
+type: docs
 ---
-
 # GroupDocs.Annotation Java Advanced Features - Complete Tutorial
 
 Ready to unlock the full potential of document annotation in your Java applications? You've mastered the basics, but now it's time to dive deep into the advanced features that'll set your document processing capabilities apart from the competition.

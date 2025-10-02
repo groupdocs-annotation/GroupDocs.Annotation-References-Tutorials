@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "annotation", "dotnet", "reply-management", "document-collaboration"]
+type: docs
 ---
-
 # How to Remove Replies from Annotated Documents Using GroupDocs.Annotation for .NET
 
 ## Introduction

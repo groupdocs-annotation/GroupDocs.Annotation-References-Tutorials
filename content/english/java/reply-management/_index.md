@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["PDF-annotation", "document-collaboration", "java-tutorial", "groupdocs"]
+type: docs
 ---
-
 # Java PDF Annotation Reply Management - Complete Implementation Guide
 
 Building collaborative document review systems in Java? You're probably dealing with the challenge of managing complex annotation workflows where multiple team members need to discuss, respond to, and track feedback on PDF documents. That's exactly where proper reply management becomes crucial for your application's success.

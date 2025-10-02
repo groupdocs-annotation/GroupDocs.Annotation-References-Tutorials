@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Advanced Usage"]
 tags: ["xml-export", "annotations", "document-management", "pdf-processing"]
+type: docs
 ---
-
 # Export Annotations from XML .NET - Complete Guide
 
 ## Introduction

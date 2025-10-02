@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: [".NET Development"]
 tags: ["GroupDocs", "annotations", "document-processing", "csharp"]
+type: docs
 ---
-
 # How to Add Text Squiggly Annotations in .NET Using GroupDocs.Annotation
 
 ## Introduction

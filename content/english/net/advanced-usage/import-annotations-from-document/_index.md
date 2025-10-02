@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Advanced Usage"]
 tags: ["annotations", "import", "documents", "GroupDocs"]
+type: docs
 ---
-
 # Import Annotations from Document in .NET
 
 ## Introduction

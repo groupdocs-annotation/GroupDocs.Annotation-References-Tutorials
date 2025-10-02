@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["document-loading", "groupdocs-annotation", "dotnet", "csharp"]
+type: docs
 ---
-
 # How to Load Documents in .NET Applications: Complete Developer Guide
 
 If you're building .NET applications that need to handle documents from various sources, you've probably faced the challenge of implementing reliable document loading. Whether you're dealing with files stored locally, in the cloud, or behind authentication barriers, getting documents into your application efficiently can be tricky.

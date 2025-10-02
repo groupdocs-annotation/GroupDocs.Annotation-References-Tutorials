@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs-annotation", "text-replacement", "dotnet-tutorial", "document-annotation"]
+type: docs
 ---
-
 # Add Text Replacement Annotation to Document
 
 ## Introduction

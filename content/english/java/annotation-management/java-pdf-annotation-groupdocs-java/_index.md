@@ -9,8 +9,8 @@ weight: 1
 url: "/java/annotation-management/java-pdf-annotation-groupdocs-java/"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "groupdocs", "java-tutorial", "document-processing"]
+type: docs
 ---
-
 # PDF Annotation Java Tutorial - Complete GroupDocs Guide
 
 ## Introduction

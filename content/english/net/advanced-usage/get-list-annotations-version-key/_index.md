@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Advanced Usage"]
 tags: ["groupdocs-annotation", "version-control", "document-annotations", "dotnet-api"]
+type: docs
 ---
-
 # How to Get List of Annotations Using Version Key in GroupDocs.Annotation .NET
 
 ## Introduction

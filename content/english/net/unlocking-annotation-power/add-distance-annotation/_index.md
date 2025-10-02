@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Annotations", "Distance", "PDF", "CSharp"]
+type: docs
 ---
-
 # How to Add Distance Annotation to Documents in .NET
 
 ## Introduction

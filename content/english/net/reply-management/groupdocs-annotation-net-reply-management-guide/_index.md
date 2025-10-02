@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["groupdocs", "annotations", "dotnet", "collaboration", "pdf-management"]
+type: docs
 ---
-
 # Annotation Reply System .NET
 
 ## Why Your Documents Need Smart Reply Management

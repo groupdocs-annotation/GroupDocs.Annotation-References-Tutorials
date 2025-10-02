@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "PDF", "Annotations", "NET", "Document Management"]
+type: docs
 ---
-
 # Save Annotated PDF Pages in .NET
 
 ## Introduction

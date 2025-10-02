@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["csharp", "pdf-manipulation", "groupdocs", "image-processing", "dotnet"]
+type: docs
 ---
-
 # Add Image to PDF .NET - Complete Guide with Quality Control
 
 ## Introduction

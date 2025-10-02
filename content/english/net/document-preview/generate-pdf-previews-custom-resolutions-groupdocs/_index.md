@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["PDF", "thumbnails", "GroupDocs", "image-conversion", "document-preview"]
+type: docs
 ---
-
 # PDF Preview Generator .NET - Create Custom Resolution Thumbnails (2025 Guide)
 
 ## Introduction

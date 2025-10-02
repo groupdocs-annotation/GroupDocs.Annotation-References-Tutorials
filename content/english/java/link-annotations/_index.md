@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["link-annotations", "java-programming", "document-processing", "groupdocs"]
+type: docs
 ---
-
 # Java Link Annotations Tutorial - Complete Guide to Document Interactivity
 
 Ever wondered how to transform static documents into interactive experiences that users actually want to engage with? You're in the right place. This comprehensive java link annotations tutorial will show you exactly how to add clickable links, interactive elements, and enhanced navigation to your documents using GroupDocs.Annotation for Java.

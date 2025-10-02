@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-processing", "groupdocs", "annotation-management", "java-api"]
+type: docs
 ---
-
 # How to Remove PDF Annotations in Java - Complete Developer Guide
 
 ## Why Removing PDF Annotations Matters (And How to Do It Right)

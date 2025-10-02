@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-preview", "java-api", "pdf-thumbnails", "groupdocs"]
+type: docs
 ---
-
 # Java Document Preview Generator - Create Thumbnails & Visual Previews
 
 Working with documents in Java applications often requires generating visual previews or thumbnails for better user experience. Whether you're building a document management system, a file browser, or a collaborative platform, being able to show users what's inside their documents before they open them is crucial.

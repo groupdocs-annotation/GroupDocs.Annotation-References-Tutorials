@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "pdf", "metadata", "document-processing", "api"]
+type: docs
 ---
-
 # Java Document Metadata Extraction
 
 Ever found yourself needing to quickly grab basic info from hundreds of documents? You're not alone. Whether you're building a document management system, processing legal files, or just trying to organize that chaotic shared drive, extracting metadata programmatically can save you hours of manual work.

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Annotation"]
 tags: ["hyperlinks", "pdf-annotation", "dotnet", "csharp"]
+type: docs
 ---
-
 # Add Hyperlinks to PDF C# - Complete Tutorial
 
 Ever wondered how to make your PDF documents more interactive and engaging? You're in the right place! This comprehensive guide shows you exactly how to add hyperlinks to PDF documents and other file formats using GroupDocs.Annotation for .NET.

@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["pdf-forms", "dropdown-components", "interactive-pdf", "net-development"]
+type: docs
 ---
-
 # Add Dropdown to PDF .NET - Complete Interactive Forms Guide
 
 ## Introduction

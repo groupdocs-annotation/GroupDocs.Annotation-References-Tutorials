@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-processing", "metadata-extraction", "java-api", "file-analysis"]
+type: docs
 ---
-
 # Java Document Metadata Extraction - Complete Developer Guide
 
 Ever needed to know a document's page count before processing it? Or check if a file format is supported by your application? You're in the right place. This comprehensive guide shows you how to extract document metadata and information using GroupDocs.Annotation for Java – making your document processing workflows smarter and more efficient.

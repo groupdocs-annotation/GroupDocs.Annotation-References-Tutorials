@@ -9,8 +9,8 @@ url: "/net/image-annotations/groupdocs-annotation-net-image-remote-url/"
 keywords: "PDF image annotation C#, add images to PDF programmatically, remote URL PDF annotation .NET, GroupDocs annotation tutorial, how to add image from URL to PDF C#"
 categories: ["PDF Processing", ".NET Development"]
 tags: ["csharp", "pdf-annotation", "groupdocs", "remote-images", "dotnet"]
+type: docs
 ---
-
 # PDF Image Annotation C# - Add Images from Remote URLs to Your Documents
 
 ## Why PDF Image Annotation Matters (And How Remote URLs Change Everything)

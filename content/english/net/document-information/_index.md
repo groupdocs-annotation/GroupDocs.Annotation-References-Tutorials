@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["metadata-extraction", "pdf-processing", "document-analysis", "groupdocs-annotation"]
+type: docs
 ---
-
 # Document Metadata Extraction .NET - Complete Developer Guide
 
 When you're building document processing applications, extracting accurate document information isn't just helpful—it's essential. Whether you need to validate file types before processing, adjust UI layouts based on page dimensions, or analyze content for smart routing, GroupDocs.Annotation for .NET provides the robust document metadata extraction capabilities your applications need.

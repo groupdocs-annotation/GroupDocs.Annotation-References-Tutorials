@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Annotation"]
 tags: ["annotation-removal", "dotnet-api", "document-processing"]
+type: docs
 ---
-
 # How to Remove Annotations by ID in .NET
 
 ## Introduction

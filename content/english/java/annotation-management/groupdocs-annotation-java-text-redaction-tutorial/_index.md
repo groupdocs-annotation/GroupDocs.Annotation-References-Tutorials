@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-processing", "document-annotation", "data-privacy", "java-libraries"]
+type: docs
 ---
-
 # PDF Text Redaction Java - Complete GroupDocs Tutorial
 
 Got sensitive information in your PDFs that needs to disappear? Whether you're dealing with legal documents, medical records, or confidential business data, **PDF text redaction in Java** doesn't have to be complicated. 

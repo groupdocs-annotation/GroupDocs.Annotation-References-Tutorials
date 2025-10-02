@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["groupdocs-annotation", "document-loading", "java-pdf", "cloud-storage"]
+type: docs
 ---
-
 # GroupDocs Annotation Java Document Loading - Complete 2025 Tutorial Guide
 
 If you're working with GroupDocs.Annotation for Java, you've probably wondered: "How do I efficiently load documents from different sources for annotation?" Whether you're dealing with files stored on FTP servers, cloud platforms like Azure Blob or Amazon S3, or even password-protected documents, this comprehensive guide has you covered.

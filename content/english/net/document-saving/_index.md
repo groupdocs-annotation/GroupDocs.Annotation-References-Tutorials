@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["document-saving", "pdf-annotations", "groupdocs-annotation", "dotnet"]
+type: docs
 ---
-
 # Save PDF Annotations .NET - Complete Document Saving Guide
 
 When you're working with PDF annotations in .NET applications, one of the biggest challenges developers face is properly saving and preserving those annotations. Whether you're building a document review system, collaboration platform, or compliance tool, getting document saving right is crucial for maintaining data integrity and user trust.

@@ -9,8 +9,8 @@ weight: 1
 url: "/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "java-library", "document-management", "groupdocs"]
+type: docs
 ---
-
 # Java PDF Annotation Editor: Complete GroupDocs Tutorial
 
 Looking to add powerful PDF annotation capabilities to your Java application? You're in the right place. Whether you're building a document review system, educational platform, or collaborative workspace, GroupDocs.Annotation for Java makes it surprisingly easy to load, modify, and manage PDF annotations programmatically.

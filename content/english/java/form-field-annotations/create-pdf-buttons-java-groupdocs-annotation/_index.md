@@ -9,8 +9,8 @@ weight: 1
 url: "/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
 categories: ["Java PDF Development"]
 tags: ["interactive-pdf", "groupdocs-annotation", "java-tutorial", "pdf-buttons"]
+type: docs
 ---
-
 # How to Create Interactive PDF Buttons in Java Using GroupDocs.Annotation
 
 Ever stared at a static PDF and wished you could make it more engaging? You're not alone. Whether you're building document management systems, creating interactive forms, or just trying to make your PDFs less... well, boring, interactive PDF buttons can transform your documents from passive reading material into dynamic, user-friendly experiences.

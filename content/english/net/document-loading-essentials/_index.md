@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Annotation", "document-loading", "dotnet", "tutorials"]
+type: docs
 ---
-
 # GroupDocs.Annotation .NET Document Loading
 
 ## Introduction

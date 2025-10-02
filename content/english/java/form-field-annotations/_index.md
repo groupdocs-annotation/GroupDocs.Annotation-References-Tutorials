@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java PDF Development"]
 tags: ["pdf-forms", "java-tutorial", "groupdocs-annotation", "interactive-pdf"]
+type: docs
 ---
-
 # PDF Form Fields Java - Create Interactive Documents with GroupDocs.Annotation
 
 Ever wondered how to transform static PDF documents into engaging, interactive experiences? You're in the right place. Creating PDF form fields in Java doesn't have to be complicated, and with GroupDocs.Annotation, you can add professional-grade interactive elements to your documents in just a few lines of code.

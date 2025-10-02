@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["text-annotation", "groupdocs", "pdf-editing", "java-development"]
+type: docs
 ---
-
 # Java Text Annotation Tutorial - Complete Guide for Document Editing
 
 Ever wondered how popular PDF editors like Adobe Acrobat handle text markup? You're about to learn how to build those same powerful annotation features into your Java applications. This comprehensive tutorial collection will walk you through creating professional-grade text annotations using GroupDocs.Annotation for Java.

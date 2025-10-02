@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "s3", "document-annotation", "groupdocs", "aws"]
+type: docs
 ---
-
 # Java S3 Document Annotation: The Complete Developer's Guide
 
 ## Why This Integration Matters (And Why You're Here)

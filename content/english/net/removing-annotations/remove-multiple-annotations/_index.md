@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotations", "groupdocs", "document-management", "pdf-processing"]
+type: docs
 ---
-
 # How to Remove Multiple Annotations in .NET
 
 ## Introduction

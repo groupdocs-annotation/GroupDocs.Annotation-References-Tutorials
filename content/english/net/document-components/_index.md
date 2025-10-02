@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["interactive-pdf", "document-components", "groupdocs-annotation", "pdf-forms"]
+type: docs
 ---
-
 # PDF Interactive Components .NET
 
 ## Introduction

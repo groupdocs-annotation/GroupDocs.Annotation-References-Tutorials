@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "annotations", "groupdocs", "pdf-processing", "document-automation"]
+type: docs
 ---
-
 # Java Link Annotation Tutorial: Complete GroupDocs Implementation Guide
 
 ## Introduction

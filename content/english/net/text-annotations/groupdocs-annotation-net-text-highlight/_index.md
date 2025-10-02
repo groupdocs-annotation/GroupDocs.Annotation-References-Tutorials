@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "annotation", "highlight", "dotnet", "csharp"]
+type: docs
 ---
-
 # Text Highlight Annotation .NET
 
 ## Introduction

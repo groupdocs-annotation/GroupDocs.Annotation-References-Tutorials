@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java PDF Processing"]
 tags: ["java", "pdf", "watermark", "groupdocs", "document-security"]
+type: docs
 ---
-
 # Java PDF Watermark: Add Professional Watermarks to PDFs (2025 Complete Guide)
 
 ## Why You Need PDF Watermarks (And How Java Makes It Easy)

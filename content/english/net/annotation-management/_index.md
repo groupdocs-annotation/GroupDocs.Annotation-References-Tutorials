@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Annotation", "NET", "PDF", "Tutorial"]
+type: docs
 ---
-
 # Master Document Annotation in .NET: Complete GroupDocs.Annotation Tutorial Collection
 
 If you're building document-heavy applications in .NET, you've probably faced the challenge of adding robust annotation capabilities. Whether you're working with PDFs, Word documents, or other formats, managing annotations efficiently can make or break your user experience. That's where GroupDocs.Annotation for .NET becomes your secret weapon.

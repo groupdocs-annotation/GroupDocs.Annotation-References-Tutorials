@@ -9,8 +9,8 @@ weight: 1
 url: "/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Annotation", "document-preview", "dotnet", "clean-documents"]
+type: docs
 ---
-
 # Generate Document Previews Without Comments in .NET
 
 ## Why Clean Document Previews Matter (And How to Get Them)

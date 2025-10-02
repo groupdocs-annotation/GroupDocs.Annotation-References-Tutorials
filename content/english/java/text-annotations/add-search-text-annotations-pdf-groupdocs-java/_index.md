@@ -9,8 +9,8 @@ weight: 1
 url: "/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
 categories: ["Java Development"]
 tags: ["pdf-processing", "java-libraries", "document-annotation", "groupdocs"]
+type: docs
 ---
-
 # Java PDF Text Annotation: Add Searchable Highlights with GroupDocs
 
 Ever found yourself drowning in lengthy PDF documents, wishing you could quickly jump to important sections? You're not alone. Whether you're dealing with legal contracts, technical manuals, or research papers, the ability to add searchable text annotations can be a game-changer for document navigation and collaboration.

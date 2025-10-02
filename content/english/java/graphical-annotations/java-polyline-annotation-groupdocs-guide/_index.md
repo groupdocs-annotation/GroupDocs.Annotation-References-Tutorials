@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "pdf-annotation", "groupdocs", "document-processing"]
+type: docs
 ---
-
 # Java Polyline Annotation Tutorial - Complete GroupDocs Guide
 
 ## Introduction

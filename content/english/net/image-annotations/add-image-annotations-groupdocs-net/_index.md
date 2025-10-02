@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "annotations", "image-overlay", "dotnet", "pdf-processing"]
+type: docs
 ---
-
 # Add Image Annotations .NET
 
 ## Introduction

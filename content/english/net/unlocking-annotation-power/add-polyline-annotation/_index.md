@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Annotation"]
 tags: ["polyline-annotation", "pdf-markup", "csharp-tutorial", "document-collaboration"]
+type: docs
 ---
-
 # How to Add Polyline Annotation to PDF in C#
 
 ## Introduction

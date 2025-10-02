@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing", ".NET Development"]
 tags: ["pdf-annotations", "csharp", "groupdocs", "document-processing", "visual-annotations"]
+type: docs
 ---
-
 # PDF Annotation Tutorial .NET: Master Graphical Annotations in Your Applications
 
 Ever struggled with adding professional visual annotations to PDF documents programmatically? You're not alone. Many developers find themselves wrestling with complex annotation libraries that either lack functionality or come with steep learning curves. That's where GroupDocs.Annotation for .NET shines – offering a powerful yet intuitive solution for adding graphical elements to your documents.

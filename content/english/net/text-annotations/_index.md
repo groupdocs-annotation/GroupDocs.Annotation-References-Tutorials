@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["text-annotation", "dotnet", "csharp", "groupdocs", "document-collaboration"]
+type: docs
 ---
-
 # Text Annotation .NET Tutorial - Complete C# Implementation Guide
 
 Working with document annotations in .NET applications? You're not alone. Whether you're building a document review system, implementing collaborative editing features, or creating compliance tools that need text redaction, getting text annotations right can make or break your user experience.

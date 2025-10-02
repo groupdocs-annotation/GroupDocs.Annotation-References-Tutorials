@@ -9,8 +9,8 @@ weight: 1
 url: "/net/form-field-annotations/master-pdf-button-integration-groupdocs-annotation-net/"
 categories: ["PDF Development"]
 tags: ["GroupDocs", "PDF Integration", "Interactive Forms", "C# Tutorial"]
+type: docs
 ---
-
 # PDF Button Integration .NET - Complete GroupDocs Tutorial
 
 ## Introduction

@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs-annotation", "document-loading", "annotations", "dotnet"]
+type: docs
 ---
-
 # How to Load Annotated Document Versions in .NET
 
 ## Introduction

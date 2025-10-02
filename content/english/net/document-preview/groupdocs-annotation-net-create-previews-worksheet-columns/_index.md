@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["excel", "dotnet", "groupdocs", "data-extraction", "worksheet-preview"]
+type: docs
 ---
-
 # Excel Column Preview .NET - Extract Specific Worksheet Data
 
 Ever found yourself needing to preview just specific columns from a massive Excel spreadsheet without loading the entire file? You're not alone. When dealing with large datasets or creating data analysis tools, extracting and previewing only the columns you need can save significant processing time and memory.

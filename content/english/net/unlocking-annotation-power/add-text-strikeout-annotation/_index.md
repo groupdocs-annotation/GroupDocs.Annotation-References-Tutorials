@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Annotation"]
 tags: ["strikeout-annotation", "groupdocs", "dotnet", "pdf-markup"]
+type: docs
 ---
-
 # Text Strikeout Annotation .NET - Complete Implementation Guide
 
 ## Introduction

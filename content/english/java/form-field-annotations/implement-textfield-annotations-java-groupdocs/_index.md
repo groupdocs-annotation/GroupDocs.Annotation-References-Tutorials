@@ -9,8 +9,8 @@ weight: 1
 url: "/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/"
 categories: ["Java Development"]
 tags: ["PDF-forms", "document-annotation", "GroupDocs", "Java-API"]
+type: docs
 ---
-
 # Java PDF Form Annotations: Create Interactive PDFs That Users Actually Want to Fill Out
 
 ## Why Your PDFs Need Interactive Form Fields (And How to Add Them)

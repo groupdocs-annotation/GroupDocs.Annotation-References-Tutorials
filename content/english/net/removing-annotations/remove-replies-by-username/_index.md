@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["annotations", "collaboration", "document-processing"]
+type: docs
 ---
-
 # Remove Annotation Replies by Username in .NET
 
 ## Introduction

@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["groupdocs", "pdf-annotation", "dotnet", "csharp"]
+type: docs
 ---
-
 # PDF Ellipse Annotation .NET
 
 Ever struggled with making your PDF documents more interactive and visually appealing? You're not alone. Whether you're building document management systems, educational platforms, or review workflows, adding visual annotations like ellipses can transform static PDFs into engaging, collaborative documents.

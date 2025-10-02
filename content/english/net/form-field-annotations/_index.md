@@ -8,8 +8,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["form-fields", "pdf-annotations", "interactive-documents", "csharp", "groupdocs"]
+type: docs
 ---
-
 # How to Add Form Fields to PDF .NET: Complete GroupDocs.Annotation Guide
 
 Creating interactive PDF documents with fillable form fields doesn't have to be complicated. Whether you're building document management systems, creating digital forms for data collection, or enhancing user engagement with interactive content, GroupDocs.Annotation for .NET provides the tools you need to add professional form fields programmatically.

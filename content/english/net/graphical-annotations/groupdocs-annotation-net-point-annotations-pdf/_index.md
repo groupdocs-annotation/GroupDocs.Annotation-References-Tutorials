@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["GroupDocs", "annotations", "PDF", "dotnet", "interactive-documents"]
+type: docs
 ---
-
 # PDF Point Annotations .NET - Add Interactive Markers to Documents
 
 ## Why Point Annotations Matter for Your PDFs

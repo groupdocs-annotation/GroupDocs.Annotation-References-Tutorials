@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["text-extraction", "groupdocs-annotation", "dotnet", "document-analysis"]
+type: docs
 ---
-
 # Extract Document Text Content .NET
 
 ## Introduction

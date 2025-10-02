@@ -9,8 +9,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["text-replacement", "document-automation", "groupdocs", "net-tutorial"]
+type: docs
 ---
-
 # Text Replacement .NET Tutorial - Complete Guide to Document Automation
 
 ## Why Manual Text Editing is Holding You Back

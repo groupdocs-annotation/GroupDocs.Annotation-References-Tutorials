@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Security"]
 tags: ["password-protection", "document-annotation", "security", "authentication"]
+type: docs
 ---
-
 # Password Protected Document Annotation .NET
 
 ## Introduction

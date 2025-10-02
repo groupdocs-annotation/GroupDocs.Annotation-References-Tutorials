@@ -10,8 +10,8 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotations", "groupdocs", "dotnet", "pdf", "tutorial"]
+type: docs
 ---
-
 # Add Arrow Annotation to Document Using GroupDocs.Annotation for .NET
 
 ## Introduction
