@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "pdf", "metadata", "document-processing", "api"]
-
+type: docs
 ---
 # Java Document Metadata Extraction
 

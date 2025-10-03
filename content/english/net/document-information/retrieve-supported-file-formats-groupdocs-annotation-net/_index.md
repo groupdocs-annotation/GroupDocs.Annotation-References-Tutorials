@@ -9,7 +9,7 @@ weight: 1
 url: "/net/document-information/retrieve-supported-file-formats-groupdocs-annotation-net/"
 categories: [".NET Development"]
 tags: ["GroupDocs.Annotation", "file-formats", "document-processing", "dotnet-tutorial"]
-
+type: docs
 ---
 # How to Retrieve Supported File Formats in .NET Using GroupDocs.Annotation
 

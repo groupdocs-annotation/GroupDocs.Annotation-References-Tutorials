@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["groupdocs-annotation", "pdf-annotations", "csharp-tutorial", "net-development"]
-
+type: docs
 ---
 # PDF Polyline Annotation .NET
 

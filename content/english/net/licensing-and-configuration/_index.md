@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["licensing", "configuration", "setup", "dotnet"]
-
+type: docs
 ---
 # GroupDocs.Annotation Licensing .NET - Complete Setup & Configuration
 

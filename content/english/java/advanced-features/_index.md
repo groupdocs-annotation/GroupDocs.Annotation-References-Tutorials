@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "Document Annotation", "Advanced Features", "Java Tutorial"]
-
+type: docs
 ---
 # GroupDocs.Annotation Java Advanced Features - Complete Tutorial
 

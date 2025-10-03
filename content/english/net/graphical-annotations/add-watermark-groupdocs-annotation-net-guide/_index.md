@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs-annotation", "watermark", "dotnet", "csharp", "pdf"]
-
+type: docs
 ---
 # GroupDocs.Annotation .NET Watermark Guide: Add Document Watermarks in C#
 

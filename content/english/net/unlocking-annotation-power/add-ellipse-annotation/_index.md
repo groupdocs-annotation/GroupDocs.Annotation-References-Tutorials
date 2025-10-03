@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Annotation"]
 tags: ["ellipse-annotation", "groupdocs", "dotnet", "pdf-annotation"]
-
+type: docs
 ---
 # How to Add Ellipse Annotation to Documents in .NET
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "document-preview", "annotations", "dotnet", "csharp"]
-
+type: docs
 ---
 # Generate Document Preview Without Annotations - Complete C# Guide
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "document-annotation", "Java-tutorial", "PDF-processing"]
-
+type: docs
 ---
 # Java Distance Annotation Tutorial: How to Add Document Measurements with GroupDocs
 

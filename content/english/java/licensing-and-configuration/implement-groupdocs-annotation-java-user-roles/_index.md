@@ -9,7 +9,7 @@ weight: 1
 url: "/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/"
 categories: ["Java Development"]
 tags: ["groupdocs", "annotations", "user-roles", "pdf", "document-management"]
-
+type: docs
 ---
 # Java Annotation User Roles: Complete Implementation Guide
 

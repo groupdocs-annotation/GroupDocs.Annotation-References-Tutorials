@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotations", "collaboration", "pdf", "dotnet", "groupdocs"]
-
+type: docs
 ---
 # Master Document Annotation .NET with GroupDocs.Annotation
 

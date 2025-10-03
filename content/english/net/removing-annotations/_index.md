@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotations", "pdf-processing", "document-management", "groupdocs"]
-
+type: docs
 ---
 # How to Remove Annotations in .NET
 

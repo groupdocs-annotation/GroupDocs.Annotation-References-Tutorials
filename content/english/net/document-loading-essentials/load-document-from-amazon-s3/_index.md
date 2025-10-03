@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["groupdocs", "s3-integration", "document-annotation", "cloud-storage"]
-
+type: docs
 ---
 # GroupDocs Annotation S3 Integration - Complete Guide
 

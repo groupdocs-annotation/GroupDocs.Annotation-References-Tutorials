@@ -8,7 +8,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Annotation"]
 tags: ["GroupDocs", "Annotation", "Reply Management", ".NET", "Collaboration"]
-
+type: docs
 ---
 # GroupDocs Annotation Reply Management: Complete .NET Implementation
 

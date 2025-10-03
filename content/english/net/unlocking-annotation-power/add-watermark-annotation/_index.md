@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["watermark", "pdf-annotation", "csharp", "groupdocs", "document-security"]
-
+type: docs
 ---
 # Add Watermark to PDF C# - Complete Developer Guide
 

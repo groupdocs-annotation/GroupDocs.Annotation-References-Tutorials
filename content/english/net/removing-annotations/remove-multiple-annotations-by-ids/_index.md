@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["groupdocs-annotation", "net-development", "pdf-annotations", "bulk-operations"]
-
+type: docs
 ---
 # How to Remove Multiple Annotations by IDs in .NET
 

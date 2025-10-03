@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["pdf-annotation", "groupdocs", "dotnet", "csharp", "document-processing"]
-
+type: docs
 ---
 # PDF Annotation .NET: Complete Developer Guide to GroupDocs Implementation
 

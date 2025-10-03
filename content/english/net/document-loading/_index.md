@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["document-loading", "groupdocs-annotation", "dotnet", "csharp"]
-
+type: docs
 ---
 # How to Load Documents in .NET Applications: Complete Developer Guide
 

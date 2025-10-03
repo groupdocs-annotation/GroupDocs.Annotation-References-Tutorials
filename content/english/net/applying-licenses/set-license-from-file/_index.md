@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Licensing"]
 tags: ["groupdocs", "annotation", "license", "dotnet", "setup"]
-
+type: docs
 ---
 # GroupDocs Annotation .NET License Setup - Complete Implementation Guide
 

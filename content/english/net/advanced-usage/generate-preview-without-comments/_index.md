@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-preview", "pdf-thumbnails", "groupdocs", "dotnet"]
-
+type: docs
 ---
 # Document Preview Generation .NET - Create Clean Thumbnails Without Comments
 

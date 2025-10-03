@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Annotation", "C#", "PDF", "Text Markup"]
-
+type: docs
 ---
 # How to Add Squiggly Annotation .NET Documents: The Complete Developer Guide
 

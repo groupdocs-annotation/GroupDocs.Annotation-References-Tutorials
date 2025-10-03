@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing", ".NET Development"]
 tags: ["pdf-annotations", "csharp", "groupdocs", "document-processing", "visual-annotations"]
-
+type: docs
 ---
 # PDF Annotation Tutorial .NET: Master Graphical Annotations in Your Applications
 

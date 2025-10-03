@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["azure", "blob-storage", "document-annotation", "dotnet", "groupdocs"]
-
+type: docs
 ---
 # Load Document from Azure Blob Storage .NET - Complete Guide
 

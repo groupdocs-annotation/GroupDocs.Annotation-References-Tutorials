@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-preview", "java-api", "pdf-thumbnails", "groupdocs"]
-
+type: docs
 ---
 # Java Document Preview Generator - Create Thumbnails & Visual Previews
 

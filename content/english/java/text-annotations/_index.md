@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["text-annotation", "groupdocs", "pdf-editing", "java-development"]
-
+type: docs
 ---
 # Java Text Annotation Tutorial - Complete Guide for Document Editing
 

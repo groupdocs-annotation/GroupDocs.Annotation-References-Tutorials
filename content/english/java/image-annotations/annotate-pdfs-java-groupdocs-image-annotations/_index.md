@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["PDF", "annotation", "GroupDocs", "Java", "document-processing"]
-
+type: docs
 ---
 # Java PDF Image Annotation - Complete GroupDocs Tutorial
 

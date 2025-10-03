@@ -9,7 +9,7 @@ weight: 1
 url: "/net/text-annotations/implement-text-redaction-dotnet-groupdocs-annotation/"
 categories: [".NET Development"]
 tags: ["text-redaction", "document-security", "groupdocs", "csharp", "dotnet"]
-
+type: docs
 ---
 # Text Redaction .NET: Complete Guide to Secure Document Processing
 

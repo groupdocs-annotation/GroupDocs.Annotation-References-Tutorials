@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["checkbox", "pdf-annotation", "interactive-forms", "dotnet"]
-
+type: docs
 ---
 # Add Checkbox to PDF .NET - Complete Developer Guide
 

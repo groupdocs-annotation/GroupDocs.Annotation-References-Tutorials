@@ -9,7 +9,7 @@ weight: 1
 url: "/net/annotation-management/remove-annotations-dotnet-groupdocs/"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "PDF", "Annotations", "C#", ".NET"]
-
+type: docs
 ---
 # How to Remove Annotations from PDF and Documents in C# (.NET)
 

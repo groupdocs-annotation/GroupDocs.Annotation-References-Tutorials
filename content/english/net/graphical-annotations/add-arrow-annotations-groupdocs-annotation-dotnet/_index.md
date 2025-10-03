@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Annotation"]
 tags: ["groupdocs", "pdf-annotation", "csharp", "dotnet"]
-
+type: docs
 ---
 # PDF Arrow Annotation C# - Complete Guide with GroupDocs.Annotation
 

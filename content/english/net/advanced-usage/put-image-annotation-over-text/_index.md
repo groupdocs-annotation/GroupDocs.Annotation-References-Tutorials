@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["annotations", "image-overlay", "document-collaboration", "csharp"]
-
+type: docs
 ---
 # Image Annotation .NET: How to Add Images Over Text
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["GroupDocs", "text-annotation", "dotnet", "csharp", "document-processing"]
-
+type: docs
 ---
 # Text Fragment Annotation .NET: Complete Implementation Guide
 

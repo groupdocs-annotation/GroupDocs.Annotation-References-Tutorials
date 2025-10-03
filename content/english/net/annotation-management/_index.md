@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Annotation", "NET", "PDF", "Tutorial"]
-
+type: docs
 ---
 # Master Document Annotation in .NET: Complete GroupDocs.Annotation Tutorial Collection
 

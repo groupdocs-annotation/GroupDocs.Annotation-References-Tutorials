@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Annotation"]
 tags: ["import-export", "serialization", "xml", "migration"]
-
+type: docs
 ---
 # Annotation Import Export .NET
 

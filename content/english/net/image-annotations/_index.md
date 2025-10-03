@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["image-annotation", "groupdocs", "dotnet", "pdf", "csharp"]
-
+type: docs
 ---
 # Image Annotation .NET Tutorial - Complete GroupDocs Guide
 

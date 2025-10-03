@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["GroupDocs.Annotation", "PDF", "C#", "Automation", "Document Processing"]
-
+type: docs
 ---
 # PDF Area Annotation C# - Complete Guide to Automated PDF Markup
 

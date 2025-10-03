@@ -8,7 +8,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["form-fields", "pdf-annotations", "interactive-documents", "csharp", "groupdocs"]
-
+type: docs
 ---
 # How to Add Form Fields to PDF .NET: Complete GroupDocs.Annotation Guide
 

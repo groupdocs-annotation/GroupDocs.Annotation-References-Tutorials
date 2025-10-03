@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Advanced Usage"]
 tags: ["worksheet-preview", "excel-annotation", "groupdocs-annotation"]
-
+type: docs
 ---
 # Generate Preview Worksheet Columns in .NET
 

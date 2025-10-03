@@ -9,7 +9,7 @@ weight: 1
 url: "/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/"
 categories: ["Document Processing"]
 tags: ["groupdocs", "pdf-annotation", "csharp", "dotnet"]
-
+type: docs
 ---
 # Annotate PDF from URL C# - GroupDocs.Annotation Tutorial (2025)
 

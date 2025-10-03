@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "groupdocs", "document-collaboration", "java-tutorial"]
-
+type: docs
 ---
 # Java PDF Annotation Library Tutorial
 

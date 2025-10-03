@@ -9,7 +9,7 @@ weight: 1
 url: "/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "java-library", "document-management", "groupdocs"]
-
+type: docs
 ---
 # Java PDF Annotation Editor: Complete GroupDocs Tutorial
 

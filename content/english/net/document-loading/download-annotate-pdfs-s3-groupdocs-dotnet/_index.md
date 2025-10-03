@@ -9,7 +9,7 @@ weight: 1
 url: "/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Annotation", "AWS S3", ".NET", "PDF Processing", "Cloud Integration"]
-
+type: docs
 ---
 # How to Annotate PDFs from AWS S3 with GroupDocs.Annotation .NET
 

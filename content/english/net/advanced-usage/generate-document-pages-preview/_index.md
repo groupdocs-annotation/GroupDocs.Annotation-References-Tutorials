@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs.Annotation", "document-preview", "NET-API", "PDF-processing"]
-
+type: docs
 ---
 # Generate Document Preview .NET - Complete Implementation Guide
 

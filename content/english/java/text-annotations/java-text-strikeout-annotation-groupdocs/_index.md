@@ -9,7 +9,7 @@ weight: 1
 url: "/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
 categories: ["Java Development"]
 tags: ["java-annotations", "groupdocs", "document-processing", "pdf-manipulation"]
-
+type: docs
 ---
 # Java Strikeout Annotation Tutorial - Complete GroupDocs Guide 
 

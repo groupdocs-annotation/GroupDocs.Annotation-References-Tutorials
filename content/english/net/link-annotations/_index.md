@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Annotation"]
 tags: ["hyperlinks", "pdf-annotation", "dotnet", "csharp"]
-
+type: docs
 ---
 # Add Hyperlinks to PDF C# - Complete Tutorial
 

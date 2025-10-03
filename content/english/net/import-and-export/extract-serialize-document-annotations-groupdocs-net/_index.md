@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "PDF", "Annotations", "XML", "C#"]
-
+type: docs
 ---
 # Extract PDF Annotations in .NET - Complete Developer Guide (2025)
 

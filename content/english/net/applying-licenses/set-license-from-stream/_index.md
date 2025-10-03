@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["License Management"]
 tags: ["licensing", "stream", "groupdocs", "dotnet", "configuration"]
-
+type: docs
 ---
 # How to Set License from Stream in .NET with GroupDocs.Annotation
 

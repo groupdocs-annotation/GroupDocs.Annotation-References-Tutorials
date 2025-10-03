@@ -10,7 +10,7 @@ url: "/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
 keywords: "java document annotation library, groupdocs annotation tutorial, add underline annotation java, java pdf annotation, how to annotate pdf documents in java"
 categories: ["Java Development"]
 tags: ["groupdocs", "document-annotation", "java-tutorial", "pdf-manipulation"]
-
+type: docs
 ---
 # Java Document Annotation Library: Complete Guide to Adding and Removing Underline Annotations
 

@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["version-control", "document-tracking", "GroupDocs", "NET-API"]
-
+type: docs
 ---
 # Complete Guide to Document Version Management in .NET Applications
 

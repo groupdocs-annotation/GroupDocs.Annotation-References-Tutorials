@@ -9,7 +9,7 @@ weight: 1
 url: "/net/licensing-and-configuration/master-groupdocs-annotation-net-license-file-stream/"
 categories: ["Documentation", "Licensing"]
 tags: ["groupdocs", "annotation", "license", "file-stream", "csharp"]
-
+type: docs
 ---
 # GroupDocs.Annotation License Setup: Your Complete C# File Stream
 

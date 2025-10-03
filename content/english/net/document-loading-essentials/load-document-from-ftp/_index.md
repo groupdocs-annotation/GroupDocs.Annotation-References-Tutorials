@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Loading"]
 tags: ["FTP", "document-loading", "csharp", "annotation"]
-
+type: docs
 ---
 # FTP Document Loading .NET - Complete Tutorial
 

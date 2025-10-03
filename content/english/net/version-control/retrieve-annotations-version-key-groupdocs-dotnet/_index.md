@@ -9,7 +9,7 @@ weight: 1
 url: "/net/version-control/retrieve-annotations-version-key-groupdocs-dotnet/"
 categories: ["Document Management"]
 tags: ["GroupDocs", "Annotation", "Version Control", "NET", "Document Management"]
-
+type: docs
 ---
 # GroupDocs.Annotation Version Control - Complete .NET Implementation
 

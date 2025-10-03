@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["GroupDocs.Annotation", "version-control", "document-management", "dotnet"]
-
+type: docs
 ---
 # Document Version Control .NET: Your Complete Guide to Managing Annotated Documents
 

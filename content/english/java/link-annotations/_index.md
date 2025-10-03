@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["link-annotations", "java-programming", "document-processing", "groupdocs"]
-
+type: docs
 ---
 # Java Link Annotations Tutorial - Complete Guide to Document Interactivity
 

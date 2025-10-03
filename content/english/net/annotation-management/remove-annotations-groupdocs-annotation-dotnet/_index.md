@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["groupdocs-annotation", "pdf-manipulation", "csharp-tutorial", "annotation-removal"]
-
+type: docs
 ---
 # How to Remove Annotations from PDF Using C#
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["text-annotation", "dotnet", "csharp", "groupdocs", "document-collaboration"]
-
+type: docs
 ---
 # Text Annotation .NET Tutorial - Complete C# Implementation Guide
 

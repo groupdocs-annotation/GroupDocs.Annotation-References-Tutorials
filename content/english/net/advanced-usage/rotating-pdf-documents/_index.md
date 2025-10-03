@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Manipulation"]
 tags: ["pdf-rotation", "csharp", "dotnet", "document-processing"]
-
+type: docs
 ---
 # How to Rotate PDF Programmatically in C# - Complete Guide
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["java", "annotations", "document-processing", "groupdocs", "pdf-management"]
-
+type: docs
 ---
 # Java Annotation Management Made Easy: Complete GroupDocs Guide
 

@@ -9,7 +9,7 @@ weight: 1
 url: "/net/document-information/retrieve-text-content-groupdocs-annotation-net/"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "text-extraction", "NET", "C#", "document-processing"]
-
+type: docs
 ---
 # Extract Text from Documents in .NET: Complete GroupDocs.Annotation Guide
 

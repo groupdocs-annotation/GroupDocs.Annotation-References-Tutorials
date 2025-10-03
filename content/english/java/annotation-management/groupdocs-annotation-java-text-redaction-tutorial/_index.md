@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-processing", "document-annotation", "data-privacy", "java-libraries"]
-
+type: docs
 ---
 # PDF Text Redaction Java - Complete GroupDocs Tutorial
 
