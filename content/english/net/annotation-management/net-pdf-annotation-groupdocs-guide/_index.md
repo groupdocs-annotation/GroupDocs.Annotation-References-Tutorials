@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["csharp", "pdf-annotation", "groupdocs", "document-automation"]
-type: docs
+
 ---
 # How to Annotate PDF Programmatically in C# Using GroupDocs.Annotation
 

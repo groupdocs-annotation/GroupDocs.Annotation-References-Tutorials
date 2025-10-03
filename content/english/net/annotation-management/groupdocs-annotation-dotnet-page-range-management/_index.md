@@ -8,7 +8,7 @@ url: "/net/annotation-management/groupdocs-annotation-dotnet-page-range-manageme
 keywords: "GroupDocs.Annotation .NET tutorial, C# PDF page extraction, .NET document annotation guide, GroupDocs page range tutorial, how to extract specific pages from PDF C#"
 categories: ["Document Processing"]
 tags: ["groupdocs", "annotation", "dotnet", "pdf-processing", "csharp"]
-type: docs
+
 ---
 # GroupDocs.Annotation .NET Tutorial: Extract & Save Specific PDF Pages
 

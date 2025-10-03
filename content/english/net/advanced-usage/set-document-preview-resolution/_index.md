@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["groupdocs", "document-preview", "resolution", "dotnet", "pdf-processing"]
-type: docs
+
 ---
 # How to Set Document Preview Resolution in .NET 
 

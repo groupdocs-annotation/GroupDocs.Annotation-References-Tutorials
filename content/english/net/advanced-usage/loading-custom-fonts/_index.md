@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Advanced Usage"]
 tags: ["custom-fonts", "groupdocs-annotation", "net-development", "document-annotation"]
-type: docs
+
 ---
 # How to Load Custom Fonts in GroupDocs.Annotation for .NET
 

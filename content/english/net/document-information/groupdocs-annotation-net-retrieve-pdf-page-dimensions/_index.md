@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["pdf-processing", "dotnet", "groupdocs", "document-metadata"]
-type: docs
+
 ---
 # PDF Page Dimensions .NET - Extract Width & Height with C#
 

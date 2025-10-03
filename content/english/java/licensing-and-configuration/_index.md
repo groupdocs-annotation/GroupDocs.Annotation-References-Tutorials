@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["licensing", "configuration", "setup", "java-annotations"]
-type: docs
+
 ---
 # GroupDocs Annotation Java Licensing Guide - Complete Setup Tutorial
 

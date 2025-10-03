@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotation", "text-field", "groupdocs", "net-api", "pdf-processing"]
-type: docs
+
 ---
 # Add Text Field Annotation to Document Using .NET
 

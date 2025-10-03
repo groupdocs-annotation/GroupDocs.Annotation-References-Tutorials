@@ -9,7 +9,7 @@ weight: 1
 url: "/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/"
 categories: ["Java PDF Development"]
 tags: ["interactive-pdf", "groupdocs-annotation", "java-tutorial", "pdf-buttons"]
-type: docs
+
 ---
 # How to Create Interactive PDF Buttons in Java Using GroupDocs.Annotation
 

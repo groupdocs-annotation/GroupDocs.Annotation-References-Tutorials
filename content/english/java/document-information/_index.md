@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["document-processing", "metadata-extraction", "java-api", "file-analysis"]
-type: docs
+
 ---
 # Java Document Metadata Extraction - Complete Developer Guide
 

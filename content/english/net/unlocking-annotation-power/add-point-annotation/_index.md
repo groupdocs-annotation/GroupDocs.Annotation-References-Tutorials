@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["annotations", "pdf", "csharp", "groupdocs", "document-processing"]
-type: docs
+
 ---
 # Add Point Annotation to PDF C#
 

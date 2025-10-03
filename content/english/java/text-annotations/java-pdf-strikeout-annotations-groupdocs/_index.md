@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java PDF Processing"]
 tags: ["java-pdf", "annotations", "groupdocs", "document-processing"]
-type: docs
+
 ---
 # How to Add Text Strikeout Annotations to PDFs in Java
 

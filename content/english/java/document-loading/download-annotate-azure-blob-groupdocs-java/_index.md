@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["groupdocs", "azure-blob", "document-annotation", "java-tutorial", "cloud-integration"]
-type: docs
+
 ---
 # GroupDocs Annotation Java Tutorial - Complete Azure Blob Integration
 

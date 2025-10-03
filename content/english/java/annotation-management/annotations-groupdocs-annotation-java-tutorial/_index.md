@@ -8,7 +8,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-type: docs
+
 ---
 # Complete Guide: Using GroupDocs.Annotation for Java to Create and Manage Annotations
 

@@ -9,7 +9,7 @@ url: "/java/document-preview/groupdocs-annotation-java-document-page-previews/"
 keywords: "Java document page preview generator, GroupDocs.Annotation Java tutorial, generate PNG document previews Java, Java document thumbnail creation, how to create document page previews in Java"
 categories: ["Java Development"]
 tags: ["document-processing", "java-libraries", "pdf-preview", "groupdocs"]
-type: docs
+
 ---
 # Java Document Page Preview Generator - Create PNG Thumbnails (2025 Guide)
 

@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Loading"]
 tags: ["stream-processing", "memory-management", "document-annotation"]
-type: docs
+
 ---
 # Load Document from Stream in .NET
 

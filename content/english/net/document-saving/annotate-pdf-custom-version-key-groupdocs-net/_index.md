@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["pdf-annotation", "groupdocs", "dotnet", "version-control", "document-management"]
-type: docs
+
 ---
 # PDF Annotation .NET Custom Version - Complete GroupDocs Tutorial
 

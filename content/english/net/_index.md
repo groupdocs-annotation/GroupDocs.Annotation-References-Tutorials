@@ -10,7 +10,7 @@ lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["annotations", "pdf", "collaboration", "tutorials"]
 is_root: true
-type: docs
+
 ---
 # Complete Guide to Document Annotation .NET Library - GroupDocs.Annotation Tutorials
 

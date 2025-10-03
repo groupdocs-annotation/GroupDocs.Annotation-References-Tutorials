@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["pdf-annotation", "java-development", "groupdocs", "document-processing"]
-type: docs
+
 ---
 # Java PDF Image Annotation Tutorial - Add Images to Documents
 

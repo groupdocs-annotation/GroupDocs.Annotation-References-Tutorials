@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["PDF processing", "GroupDocs", "document automation", "annotation extraction"]
-type: docs
+
 ---
 # PDF Annotation Extraction Java: Complete GroupDocs Tutorial
 

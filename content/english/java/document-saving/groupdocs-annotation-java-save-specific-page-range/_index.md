@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["groupdocs", "java-annotation", "document-processing", "pdf-manipulation"]
-type: docs
+
 ---
 # How to Save Specific Pages from Annotated Documents in Java
 

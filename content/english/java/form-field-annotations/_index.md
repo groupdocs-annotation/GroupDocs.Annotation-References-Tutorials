@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java PDF Development"]
 tags: ["pdf-forms", "java-tutorial", "groupdocs-annotation", "interactive-pdf"]
-type: docs
+
 ---
 # PDF Form Fields Java - Create Interactive Documents with GroupDocs.Annotation
 

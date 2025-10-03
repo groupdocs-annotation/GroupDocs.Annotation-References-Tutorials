@@ -9,7 +9,7 @@ weight: 1
 url: "/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
 categories: ["PDF Processing"]
 tags: ["groupdocs", "pdf-annotation", "dotnet", "password-protected", "document-processing"]
-type: docs
+
 ---
 # How to Annotate Password Protected PDF .NET: The Complete Developer Guide
 

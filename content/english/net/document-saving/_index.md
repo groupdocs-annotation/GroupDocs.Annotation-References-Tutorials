@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Documentation"]
 tags: ["document-saving", "pdf-annotations", "groupdocs-annotation", "dotnet"]
-type: docs
+
 ---
 # Save PDF Annotations .NET - Complete Document Saving Guide
 

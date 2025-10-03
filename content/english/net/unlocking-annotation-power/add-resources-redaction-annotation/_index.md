@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["document-redaction", "dotnet-tutorial", "groupdocs-annotation", "document-privacy", "pdf-redaction"]
-type: docs
+
 ---
 # Document Redaction .NET - Complete C# Tutorial
 

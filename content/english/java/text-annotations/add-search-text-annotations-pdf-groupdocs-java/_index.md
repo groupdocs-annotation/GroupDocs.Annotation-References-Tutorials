@@ -9,7 +9,7 @@ weight: 1
 url: "/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/"
 categories: ["Java Development"]
 tags: ["pdf-processing", "java-libraries", "document-annotation", "groupdocs"]
-type: docs
+
 ---
 # Java PDF Text Annotation: Add Searchable Highlights with GroupDocs
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "java-tutorial", "groupdocs", "document-processing"]
-type: docs
+
 ---
 # How to Add Annotations to PDF in Java - Complete GroupDocs Tutorial
 

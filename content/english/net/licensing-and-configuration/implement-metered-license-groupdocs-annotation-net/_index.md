@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Licensing"]
 tags: ["groupdocs-annotation", "metered-license", "dotnet", "licensing-setup"]
-type: docs
+
 ---
 # GroupDocs Annotation Metered License Tutorial - Complete .NET Setup Guide
 

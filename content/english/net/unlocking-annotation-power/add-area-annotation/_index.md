@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotation", "pdf-processing", "document-collaboration", "net-api"]
-type: docs
+
 ---
 # Add Area Annotation to Document with .NET
 

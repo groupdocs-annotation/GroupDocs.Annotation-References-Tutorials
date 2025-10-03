@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["metadata-extraction", "pdf-processing", "document-analysis", "groupdocs-annotation"]
-type: docs
+
 ---
 # Document Metadata Extraction .NET - Complete Developer Guide
 

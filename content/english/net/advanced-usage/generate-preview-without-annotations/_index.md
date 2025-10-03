@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["pdf-preview", "document-collaboration", "annotations", "net-development"]
-type: docs
+
 ---
 # Generate PDF Preview .NET - Create Clean Document Thumbnails
 

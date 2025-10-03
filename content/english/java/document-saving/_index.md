@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["annotations", "document-processing", "pdf-handling", "java-tutorials"]
-type: docs
+
 ---
 # How to Save Annotated Documents in Java: Complete Developer Guide
 

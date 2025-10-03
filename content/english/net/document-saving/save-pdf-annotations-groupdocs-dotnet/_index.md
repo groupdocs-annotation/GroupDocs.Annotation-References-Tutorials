@@ -9,7 +9,7 @@ weight: 1
 url: "/net/document-saving/save-pdf-annotations-groupdocs-dotnet/"
 categories: ["Document Processing"]
 tags: ["pdf-annotations", "groupdocs", "dotnet", "csharp", "document-management"]
-type: docs
+
 ---
 # Save PDF Annotations .NET
 

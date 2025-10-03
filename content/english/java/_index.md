@@ -6,7 +6,7 @@ url: /java/
 description: Learn how to add annotations to PDF, Word, Excel & PowerPoint documents with GroupDocs.Annotation for Java API. Step-by-step integration tutorials and code examples.
 keywords: [java document annotation, pdf annotation java, add comments to documents java, document markup api, java annotation library, collaborative document review]
 is_root: true
-type: docs
+
 ---
 # GroupDocs.Annotation for Java - Document Annotation API Tutorials
 

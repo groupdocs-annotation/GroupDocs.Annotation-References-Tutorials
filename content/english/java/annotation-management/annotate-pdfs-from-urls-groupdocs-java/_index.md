@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["pdf-processing", "document-annotation", "java-api", "groupdocs"]
-type: docs
+
 ---
 # PDF Annotation Java Tutorial - Complete Guide to Document Markup
 

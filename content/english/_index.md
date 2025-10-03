@@ -6,7 +6,7 @@ description: Learn to implement PDF, Word, Excel & PowerPoint document annotatio
 keywords: [document annotation API, PDF annotation, document markup, collaborative review, .NET annotation, Java annotation library, document comments, text highlighting]
 weight: 11
 url: /
-type: docs
+
 ---
 
 # GroupDocs.Annotation Developer Guide - Document Annotation API

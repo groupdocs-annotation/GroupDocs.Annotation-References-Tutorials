@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotation", "text-processing", "pdf", "csharp"]
-type: docs
+
 ---
 # Text Annotation .NET - Complete Guide to Document Annotations
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["groupdocs-annotation", "document-loading", "java-pdf", "cloud-storage"]
-type: docs
+
 ---
 # GroupDocs Annotation Java Document Loading - Complete 2025 Tutorial Guide
 

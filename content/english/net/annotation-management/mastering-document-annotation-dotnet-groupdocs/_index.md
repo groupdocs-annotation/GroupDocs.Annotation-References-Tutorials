@@ -9,7 +9,7 @@ weight: 1
 url: "/net/annotation-management/mastering-document-annotation-dotnet-groupdocs/"
 categories: ["Documentation", ".NET Development"]
 tags: ["groupdocs-annotation", "document-processing", "dotnet", "pdf-annotation", "filestream"]
-type: docs
+
 ---
 # How to Save Annotated Documents in .NET - Complete GroupDocs.Annotation Guide
 

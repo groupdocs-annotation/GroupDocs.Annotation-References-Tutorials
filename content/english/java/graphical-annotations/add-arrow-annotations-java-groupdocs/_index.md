@@ -9,7 +9,7 @@ weight: 1
 url: "/java/graphical-annotations/add-arrow-annotations-java-groupdocs/"
 categories: ["Java Development"]
 tags: ["pdf-annotations", "java-tutorial", "document-processing", "groupdocs"]
-type: docs
+
 ---
 # Java PDF Arrow Annotations - Complete Tutorial & Best Practices (2025)
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["GroupDocs", "Annotation", "C#", "PDF", "Document Management"]
-type: docs
+
 ---
 # GroupDocs Annotation .NET Tutorial: Your Complete Guide to Document Annotation in C#
 

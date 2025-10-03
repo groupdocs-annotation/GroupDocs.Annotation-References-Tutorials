@@ -8,7 +8,7 @@ url: "/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 keywords: "PDF annotation Java tutorial, GroupDocs annotation Java setup, Java PDF markup library, add annotations PDF programmatically, GroupDocs annotation tutorial for beginners"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "groupdocs", "java-libraries", "document-processing"]
-type: docs
+
 ---
 # PDF Annotation Java Tutorial
 

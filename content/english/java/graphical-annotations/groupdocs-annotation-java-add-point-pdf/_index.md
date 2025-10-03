@@ -9,7 +9,7 @@ weight: 1
 url: "/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
 categories: ["Java Development"]
 tags: ["pdf-annotation", "groupdocs", "java-tutorial", "document-processing"]
-type: docs
+
 ---
 # PDF Point Annotation Java Tutorial - GroupDocs.Annotation Guide
 

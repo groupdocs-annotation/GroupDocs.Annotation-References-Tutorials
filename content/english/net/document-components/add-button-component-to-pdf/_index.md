@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["pdf-buttons", "interactive-pdf", "groupdocs", "csharp"]
-type: docs
+
 ---
 # Add Interactive Buttons to PDF Documents Using .NET
 

@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["annotations", "pdf-manipulation", "csharp", "groupdocs"]
-type: docs
+
 ---
 # Add Link Annotation to PDF C#
 

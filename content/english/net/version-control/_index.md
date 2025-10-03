@@ -8,7 +8,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Management"]
 tags: ["version-control", "groupdocs-annotation", "document-versioning", "dotnet"]
-type: docs
+
 ---
 # GroupDocs Annotation Version Control for .NET - Complete Developer Guide
 

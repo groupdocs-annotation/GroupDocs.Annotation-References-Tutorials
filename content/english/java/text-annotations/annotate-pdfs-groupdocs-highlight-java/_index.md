@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Tutorials"]
 tags: ["pdf-annotation", "groupdocs", "java-library", "document-processing"]
-type: docs
+
 ---
 # Java PDF Annotation Tutorial - Complete Guide to Highlighting PDFs
 

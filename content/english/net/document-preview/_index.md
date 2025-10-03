@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["GroupDocs.Annotation"]
 tags: ["document-preview", "pdf-generation", "net-tutorials", "document-visualization"]
-type: docs
+
 ---
 # Document Preview .NET Tutorials - Complete GroupDocs.Annotation Guide
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["PDF-annotation", "document-collaboration", "java-tutorial", "groupdocs"]
-type: docs
+
 ---
 # Java PDF Annotation Reply Management - Complete Implementation Guide
 

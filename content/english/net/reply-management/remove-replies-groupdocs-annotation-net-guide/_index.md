@@ -9,7 +9,7 @@ weight: 1
 url: "/net/reply-management/remove-replies-groupdocs-annotation-net-guide/"
 categories: ["Document Management"]
 tags: ["groupdocs-annotation", "net-development", "document-processing", "annotation-management"]
-type: docs
+
 ---
 # Remove Annotation Replies .NET - Complete GroupDocs Tutorial
 

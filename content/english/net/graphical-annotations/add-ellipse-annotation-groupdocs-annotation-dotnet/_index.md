@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["groupdocs", "pdf-annotation", "dotnet", "csharp"]
-type: docs
+
 ---
 # PDF Ellipse Annotation .NET
 

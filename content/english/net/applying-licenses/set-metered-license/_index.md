@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Licensing"]
 tags: ["metered-license", "groupdocs-annotation", "cost-optimization", "net-api"]
-type: docs
+
 ---
 # GroupDocs.Annotation .NET Metered License Setup - Pay Only for What You Use
 

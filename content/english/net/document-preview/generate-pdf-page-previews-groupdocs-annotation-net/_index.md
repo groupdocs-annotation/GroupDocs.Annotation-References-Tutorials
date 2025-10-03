@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["pdf-preview", "groupdocs", "csharp", "document-conversion"]
-type: docs
+
 ---
 # PDF Page Preview Generator .NET - Convert PDF Pages to Images
 

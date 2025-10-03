@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["GroupDocs", "annotations", "document-processing", "java-api"]
-type: docs
+
 ---
 # Java Annotation Management: How to Remove Replies by ID Using GroupDocs.Annotation
 

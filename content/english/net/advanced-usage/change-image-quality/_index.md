@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["pdf-optimization", "image-quality", "csharp", "groupdocs"]
-type: docs
+
 ---
 # How to Improve PDF Image Quality in C# Using GroupDocs.Annotation
 

@@ -10,7 +10,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Document Processing"]
 tags: ["annotation", "image-processing", "remote-images", "csharp"]
-type: docs
+
 ---
 # Add Image Annotation .NET - Complete Guide with Remote Paths
 

@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["PDF Processing"]
 tags: ["GroupDocs.Annotation", ".NET", "PDF Forms", "Interactive PDFs"]
-type: docs
+
 ---
 # How to Add Dropdown to PDF .NET Documents: The Complete Developer's Guide
 

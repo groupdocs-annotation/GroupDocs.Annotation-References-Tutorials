@@ -9,7 +9,7 @@ weight: 1
 url: "/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
 categories: ["Document Processing"]
 tags: ["csharp", "document-extraction", "groupdocs", "dotnet"]
-type: docs
+
 ---
 # How to Extract Document Information in C# Using GroupDocs.Annotation
 

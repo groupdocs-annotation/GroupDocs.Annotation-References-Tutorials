@@ -9,7 +9,7 @@ date: "2025-01-02"
 lastmod: "2025-01-02"
 categories: ["Java Development"]
 tags: ["groupdocs-annotation", "java-development", "document-annotation", "file-formats"]
-type: docs
+
 ---
 # GroupDocs.Annotation Java Supported Formats - Complete Detection Guide
 
