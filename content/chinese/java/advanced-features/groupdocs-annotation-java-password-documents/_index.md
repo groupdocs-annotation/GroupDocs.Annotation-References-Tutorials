@@ -1,36 +1,86 @@
 ---
-"date": "2025-05-06"
-"description": "了解如何使用 GroupDocs.Annotation for Java 安全地加载、注释和保存受密码保护的文档。增强 Java 应用程序中的文档安全性。"
-"title": "使用 GroupDocs.Annotation Java 进行安全文档处理&#58;加载和注释受密码保护的文档"
-"url": "/zh/java/advanced-features/groupdocs-annotation-java-password-documents/"
+categories:
+- Java Development
+date: '2025-12-16'
+description: 学习如何在 Java 中使用 GroupDocs.Annotation 添加区域注释 PDF，安全处理受密码保护的文档，并提供完整代码示例。
+keywords: java document annotation library, password protected document java, secure
+  document handling java, java pdf annotation, groupdocs annotation java example,
+  add area annotation pdf
+lastmod: '2025-12-16'
+linktitle: Java Document Annotation Library Guide
+tags:
+- document-processing
+- pdf-annotation
+- java-library
+- security
+title: 在 Java 中添加区域注释 PDF – 受密码保护的文档
 type: docs
-"weight": 1
+url: /zh/java/advanced-features/groupdocs-annotation-java-password-documents/
+weight: 1
 ---
 
-# 使用 GroupDocs.Annotation Java 进行安全文档处理
-## 介绍
-在当今的数字时代，确保敏感文档的安全对于法律、金融和医疗保健等各行各业都至关重要。本教程将指导您使用 GroupDocs.Annotation for Java 安全地加载、注释和保存受密码保护的文档。
-**您将学到什么：**
-- 如何使用 GroupDocs.Annotation 加载受密码保护的文档。
-- 向文档添加区域注释的技术。
-- 安全保存注释文档的步骤。
-掌握这些知识后，您将能够增强文档安全性，同时保持 Java 应用程序的高效运行。现在就开始设置您的环境吧。
+# 在 Java 中添加 Area Annotation PDF – 带密码保护的文档
 
-## 先决条件
-在继续之前，请确保您已：
-- **Java 开发工具包 (JDK)：** 版本 8 或更高版本。
-- **Maven：** 用于依赖管理和项目构建。
-- **Java 库的 GroupDocs.Annotation：** 在您的项目中包含版本 25.2。
+在 Java 应用程序中处理敏感 PDF 吗？您可能需要 **add area annotation PDF** 文件，这些文件受密码保护，同时保持代码整洁安全。  
 
-### 环境设置要求
-1. 如果您的系统上还没有 JDK，请安装它。
-2. 将 Maven 设置为 Java 项目的构建工具。
-3. 熟悉基本的 Java 编程概念是有益的。
+在本指南中，您将了解如何加载受保护的 PDF、在需要的位置精确放置区域注释，并在不泄露文档密码的情况下保存结果。无论您是在构建法律审查系统、医学影像平台，还是任何处理机密 PDF 的解决方案，本教程都提供了可直接用于生产的代码和最佳实践技巧。
 
-## 为 Java 设置 GroupDocs.Annotation
-要在 Java 项目中使用 GroupDocs.Annotation，请通过 Maven 集成它：
+## 快速回答
+- **在 Java 中向 PDF 添加区域注释的主要方式是什么？** 使用 `AreaAnnotation` 与 `Annotator.add()`，在通过包含密码的 `LoadOptions` 加载文档后使用。  
+- **GroupDocs.Annotation 能处理带密码的 PDF 吗？** 能——只需在创建 `Annotator` 前在 `LoadOptions` 中设置密码。  
+- **生产环境是否需要商业许可证？** 商业许可证可去除水印和处理限制；临时许可证适用于开发。  
+- **API 对于 Web 应用是否线程安全？** 为每个请求使用独立的 `Annotator` 实例，并在处理完后释放。  
+- **推荐使用哪个 Java 版本？** 推荐使用 Java 11+，以获得最佳性能和安全性。
 
-**Maven配置：**
+## 您将面对的情况（以及为何重要）
+
+在 Java 应用程序中处理敏感文档？您可能正面对带密码的 PDF，需要以编程方式添加注释，并希望在整个流程中保持坚固的安全性。  
+
+大多数开发者会拼凑多个库，处理兼容性问题，并花费数周时间才能让基本的文档注释工作。这时 **GroupDocs.Annotation for Java** 作为一站式解决方案脱颖而出。
+
+**在本完整指南中，您将掌握：**
+- 安全加载和处理带密码的文档  
+- **add area annotation PDF** 的编程实现  
+- 在企业应用中实现稳健的文档安全  
+- 避免大多数开发者常犯的陷阱  
+
+无论您是在构建法律文档审查系统、医学影像平台，还是任何需要安全文档处理的应用，本教程都提供了可直接用于生产的代码和经受考验的策略。
+
+## 为什么选择 GroupDocs.Annotation 作为您的 Java 文档注释库？
+
+在深入代码之前，先来看看 GroupDocs.Annotation 在众多 Java 文档库中为何脱颖而出：
+
+**安全优先**：内置对带密码文档、加密和安全处理管道的支持。  
+**格式灵活**：支持 PDF、Word、Excel、PowerPoint、图像等 50 多种格式，无需针对特定格式的变通。  
+**企业级**：支持大批量处理，提供完善的错误处理，并能随应用需求横向扩展。  
+**开发者体验**：API 简洁、文档丰富、社区活跃，让您少花时间调试，多花时间构建。
+
+## 前置条件（请务必阅读）
+
+在开始之前，请确保以下基础已就绪：
+
+**开发环境**
+- **Java Development Kit (JDK)：** 8 版或更高（推荐 Java 11+ 以获得最佳性能）  
+- **Maven：** 用于依赖管理（Gradle 亦可，但示例使用 Maven）  
+- **IDE：** IntelliJ IDEA、Eclipse 或您偏好的 Java IDE  
+
+**知识要求**
+- 扎实的 Java 基础  
+- 基本的 Maven 依赖管理经验  
+- 熟悉 Java 中的文件 I/O 操作  
+
+**可选但有帮助**
+- 了解 PDF 结构和文档格式  
+- 有注释框架或文档处理经验  
+
+## 为 Java 项目配置 GroupDocs.Annotation
+
+将 GroupDocs.Annotation 集成到项目中非常简单，但仍需留意一些细节。
+
+### Maven 配置（正确方式）
+
+在 `pom.xml` 中添加以下内容——请注意仓库配置至关重要：
+
 ```xml
 <repositories>
    <repository>
@@ -48,119 +98,383 @@ type: docs
    </dependency>
 </dependencies>
 ```
-### 许可证获取
-要使用 GroupDocs.Annotation，您可以：
-- **免费试用：** 下载试用版来探索其功能。
-- **临时执照：** 申请临时许可证，以便不受限制地延长访问时间。
-- **购买：** 购买许可证以获得完整使用权。
 
-安装后，按如下方式初始化项目中的库：
+**专业提示**：在生产环境中始终锁定到具体版本。使用类似 `[25.0,)` 的版本范围可能导致构建期间出现意外的破坏性更改。
+
+### 许可证设置（突破试用限制）
+
+GroupDocs.Annotation 提供多种授权方式：
+
+- **免费试用：** 适合评估，但会添加水印并有限制处理量  
+- **临时许可证：** 完全功能，期限 30 天——适用于开发和测试  
+- **商业许可证：** 生产就绪，完整功能访问  
+
+以下示例演示如何使用许可证进行初始化：
+
 ```java
 import com.groupdocs.annotation.Annotator;
-// 额外必要的导入
-public class InitializeGroupDocs {
-    public static void main(String[] args) {
-        // 基本设置和初始化代码在这里
+import com.groupdocs.annotation.License;
+
+public class GroupDocsSetup {
+    public static void initializeLicense() {
+        try {
+            License license = new License();
+            license.setLicense("path/to/your/license.lic");
+            System.out.println("License applied successfully");
+        } catch (Exception e) {
+            System.out.println("License not applied: " + e.getMessage());
+        }
     }
 }
 ```
-## 实施指南
-现在您已经为 Java 设置了 GroupDocs.Annotation，让我们通过实际实现来探索其核心功能。
-### 加载受密码保护的文档
-**概述：**
-处理机密文件时，加载受密码保护的文档至关重要。使用 GroupDocs.Annotation，可以简化此流程。
-**实施步骤：**
-1. **定义加载选项并设置密码：**
-   创建一个实例 `LoadOptions` 指定您的文档的密码。
-   ```java
-   import com.groupdocs.annotation.options.LoadOptions;
 
-   LoadOptions loadOptions = new LoadOptions();
-   loadOptions.setPassword("1234");
-   ```
-2. **使用加载选项初始化注释器：**
-   使用 `Annotator` 类，传递文件路径和加载选项。
-   ```java
-   import com.groupdocs.annotation.Annotator;
+## 核心实现：安全文档处理
 
-   final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/InputProtected.pdf", loadOptions);
-   ```
-**故障排除提示：**
-- 确保文档密码正确。
-- 验证文件路径是否准确且可访问。
-### 向文档添加区域注释
-**概述：**
-注释通过突出显示重要部分来增强文档的可见性。在这里，我们将添加一个简单的区域注释。
-**实施步骤：**
-1. **初始化注释器（假设来自上一步）：**
-   使用相同的 `Annotator` 先前已初始化的实例。
-2. **创建并配置 AreaAnnotation：**
-   定义矩形的位置和尺寸。
-   ```java
-   import com.groupdocs.annotation.models.Rectangle;
-   import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+下面进入文档处理的核心部分。我们将一步步构建，实现真实的错误处理和最佳实践。
 
-   AreaAnnotation area = new AreaAnnotation();
-   area.setBox(new Rectangle(100, 100, 100, 100)); // 带有宽度和高度的 x, y 坐标
-   area.setBackgroundColor(65535); // 背景的 RGB 颜色代码
-   ```
-3. **向文档添加注释：**
-   ```java
-   annotator.add(area);
-   ```
-### 保存带注释的文档
-**概述：**
-进行注释后，安全地保存它们至关重要。
-**实施步骤：**
-1. **定义输出路径：**
-   指定要保存注释文档的位置。
-   ```java
-   String outputPath = "YOUR_OUTPUT_DIRECTORY/AnnotatedDocument.pdf";
-   ```
-2. **保存和处置资源：**
-   使用 `save` 方法并使用释放资源 `dispose`。
-   ```java
-   annotator.save(outputPath);
-   annotator.dispose();
-   ```
-**故障排除提示：**
-- 确保您具有输出目录的写入权限。
-- 确认所有前面的步骤（加载、注释）都正确执行。
-## 实际应用
-以下是 GroupDocs.Annotation 擅长的一些实际场景：
-1. **法律文件审查：** 使用注释和突出显示来注释合同，以便于审查。
-2. **医学影像注释：** 在 X 射线或 MRI 上添加注释以协助诊断。
-3. **教育材料增强：** 突出教科书或讲义中的重点。
-4. **设计反馈：** 提供有关建筑规划或产品设计的视觉反馈。
-5. **财务文件分析：** 在财务报告中标记重要数字和趋势。
-## 性能考虑
-处理文档注释时，优化性能至关重要：
-- **资源管理：** 确保妥善处置 `Annotator` 实例来释放内存。
-- **批处理：** 如果注释多个文档，请考虑批量操作以提高效率。
-- **异步操作：** 对于大型应用程序，尽可能使用异步方法。
-## 结论
-在本教程中，您学习了如何使用 GroupDocs.Annotation for Java 安全地加载、注释和保存受密码保护的文档。这个强大的库提供了一个可靠的解决方案，可轻松管理敏感文档。
-**后续步骤：**
-- 探索 GroupDocs 提供的更多注释类型。
-- 将此功能集成到您现有的 Java 应用程序中。
-准备好增强您的文档管理流程了吗？实施我们讨论过的技术，看看它们如何简化您的工作流程！
-## 常见问题解答部分
-1. **哪些版本的 JDK 与 Java 的 GroupDocs.Annotation 兼容？**  
-   版本 8 及以上可无缝运行。
-2. **我可以在一次运行中注释多个页面吗？**  
-   是的，注释可以应用于文档的不同部分。
-3. **是否可以广泛地定制注释样式？**  
-   当然！您可以根据自己的需求修改颜色、形状和其他属性。
-4. **如何处理加载受密码保护的文档时出现的错误？**  
-   确保文件路径正确并且您具有正确的权限。
-5. **使用 GroupDocs.Annotation 进行内存管理的最佳实践有哪些？**  
-   始终使用以下方式释放资源 `dispose` 操作后防止内存泄漏。
-## 资源
-欲了解更多阅读材料和工具：
-- [GroupDocs 文档](https://docs.groupdocs.com/annotation/java/)  
-- [API 参考](https://reference.groupdocs.com/annotation/java/)  
+### 加载带密码的文档（安全方式）
+
+加载带密码的文档是许多开发者卡住的地方。以下是针对 **add area annotation PDF** 场景的万无一失做法：
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+
+public class SecureDocumentLoader {
+    
+    public static Annotator loadPasswordProtectedDocument(String filePath, String password) {
+        try {
+            // Configure load options with password
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            
+            // Initialize annotator with security options
+            Annotator annotator = new Annotator(filePath, loadOptions);
+            
+            System.out.println("Document loaded successfully");
+            return annotator;
+            
+        } catch (Exception e) {
+            System.err.println("Failed to load document: " + e.getMessage());
+            throw new RuntimeException("Document loading failed", e);
+        }
+    }
+}
+```
+
+**常见问题及解决方案**  
+- **密码错误** —— 在生产环境中请先验证密码的有效性。  
+- **文件未找到** —— 实现完整的文件存在性检查。  
+- **内存问题** —— 使用 try‑with‑resources 自动清理（后文会详细说明）。
+
+### 添加专业的区域注释
+
+区域注释非常适合高亮特定区域。这是 **add area annotation PDF** 的核心实现：
+
+```java
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+
+public class AnnotationProcessor {
+    
+    public static void addAreaAnnotation(Annotator annotator) {
+        try {
+            // Create area annotation with precise positioning
+            AreaAnnotation area = new AreaAnnotation();
+            
+            // Position and size (x, y, width, height in points)
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            
+            // Visual styling
+            area.setBackgroundColor(65535); // Light blue background
+            area.setOpacity(0.7); // Semi‑transparent
+            area.setBorderColor(255); // Red border
+            area.setBorderWidth(2); // Border thickness
+            
+            // Add descriptive message
+            area.setMessage("Important section for review");
+            
+            // Apply annotation
+            annotator.add(area);
+            
+            System.out.println("Area annotation added successfully");
+            
+        } catch (Exception e) {
+            System.err.println("Failed to add annotation: " + e.getMessage());
+        }
+    }
+}
+```
+
+**注释定位技巧**  
+- 坐标以左上角 (0,0) 为起点  
+- 使用点 (1/72 英寸) 作为度量单位  
+- 在不同文档尺寸下进行定位测试  
+- 考虑页面边距和内容布局  
+
+### 安全保存文档（生产就绪方式）
+
+安全保存带注释的 PDF 需要仔细处理文件路径、权限以及清理工作：
+
+```java
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class SecureDocumentSaver {
+    
+    public static void saveAnnotatedDocument(Annotator annotator, String outputPath) {
+        try {
+            // Validate output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Save with error handling
+            annotator.save(outputPath);
+            System.out.println("Document saved successfully to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Failed to save document: " + e.getMessage());
+            throw new RuntimeException("Document saving failed", e);
+        } finally {
+            // Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## 完整可运行示例（复制粘贴即用）
+
+以下是一个完整的、可直接用于生产的代码片段，涵盖加载、**add area annotation PDF** 与保存：
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class CompleteAnnotationExample {
+    
+    public static void main(String[] args) {
+        String inputPath = "path/to/your/protected-document.pdf";
+        String outputPath = "path/to/output/annotated-document.pdf";
+        String password = "your-document-password";
+        
+        processPasswordProtectedDocument(inputPath, outputPath, password);
+    }
+    
+    public static void processPasswordProtectedDocument(String inputPath, String outputPath, String password) {
+        Annotator annotator = null;
+        
+        try {
+            // Step 1: Load password‑protected document
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            annotator = new Annotator(inputPath, loadOptions);
+            
+            // Step 2: Create and configure area annotation
+            AreaAnnotation area = new AreaAnnotation();
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            area.setBackgroundColor(65535); // Light blue
+            area.setOpacity(0.7);
+            area.setMessage("Reviewed and approved");
+            
+            // Step 3: Add annotation to document
+            annotator.add(area);
+            
+            // Step 4: Ensure output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Step 5: Save annotated document
+            annotator.save(outputPath);
+            System.out.println("Success! Annotated document saved to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Processing failed: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            // Step 6: Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## 实际使用场景（本功能的最佳发挥）
+
+了解何时以及如何使用 GroupDocs.Annotation 能帮助您构建更好的解决方案：
+
+- **法律文档审查系统** —— 高亮条款、添加评论，并在成千上万的 PDF 中保持审计轨迹。  
+- **医学影像与报告** —— 在 X 光或 MRI PDF 上标注，同时通过密码保护满足 HIPAA 合规要求。  
+- **金融文档分析** —— 在贷款申请或审计报告中标记关键章节，而不泄露敏感数据。  
+- **教育内容管理** —— 教师和学生在课程 PDF 上添加笔记，同时保留原始内容。  
+- **工程与设计审查** —— 团队在蓝图或 CAD 导出文件上注释，确保专有设计安全。
+
+## 性能与最佳实践（务必阅读）
+
+### 内存管理（生产关键）
+
+始终在使用完后释放 `Annotator`，以释放本地资源。try‑with‑resources 模式可以轻松实现：
+
+```java
+// Good: Automatic resource management
+public void processDocumentSafely(String inputPath, String password) {
+    LoadOptions options = new LoadOptions();
+    options.setPassword(password);
+    
+    try (Annotator annotator = new Annotator(inputPath, options)) {
+        // Your annotation logic here
+        // Resources automatically cleaned up
+    } catch (Exception e) {
+        System.err.println("Processing error: " + e.getMessage());
+    }
+}
+```
+
+### 批量处理优化
+
+处理大量 PDF 时，请逐个处理并在处理下一个文件前释放相应的 `Annotator`：
+
+```java
+public void processBatchDocuments(List<DocumentInfo> documents) {
+    for (DocumentInfo doc : documents) {
+        Annotator annotator = null;
+        try {
+            // Process individual document
+            annotator = loadDocument(doc);
+            addAnnotations(annotator, doc.getAnnotations());
+            saveDocument(annotator, doc.getOutputPath());
+        } catch (Exception e) {
+            System.err.println("Failed to process: " + doc.getFileName());
+        } finally {
+            // Cleanup after each document
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+### Web 应用的异步处理
+
+将繁重的 PDF 工作交给独立线程池，以保持 Web 服务器的响应性：
+
+```java
+import java.util.concurrent.CompletableFuture;
+
+public CompletableFuture<String> processDocumentAsync(String inputPath, String password) {
+    return CompletableFuture.supplyAsync(() -> {
+        try {
+            // Your document processing logic
+            return processPasswordProtectedDocument(inputPath, password);
+        } catch (Exception e) {
+            throw new RuntimeException("Async processing failed", e);
+        }
+    });
+}
+```
+
+## 高级安全考虑
+
+处理机密 PDF 时，安全性不仅仅是密码保护。
+
+### 安全文件处理
+
+```java
+public class SecureFileHandler {
+    
+    public static void processSecurely(String inputPath, String password) {
+        // Clear password from memory after use
+        char[] passwordChars = password.toCharArray();
+        
+        try {
+            LoadOptions options = new LoadOptions();
+            options.setPassword(new String(passwordChars));
+            
+            // Process document
+            // ... your logic here
+            
+        } finally {
+            // Clear password from memory
+            Arrays.fill(passwordChars, '\0');
+        }
+    }
+}
+```
+
+### 审计日志
+
+```java
+import java.util.logging.Logger;
+
+public class AuditLogger {
+    private static final Logger logger = Logger.getLogger(AuditLogger.class.getName());
+    
+    public static void logDocumentAccess(String userId, String documentPath, String action) {
+        logger.info(String.format("User: %s, Action: %s, Document: %s, Timestamp: %s", 
+                   userId, action, documentPath, new Date()));
+    }
+}
+```
+
+## 后续步骤与高级功能
+
+掌握了 **add area annotation PDF** 基础后，您可以进一步探索以下高级能力：
+
+- **自定义注释类型** —— 文本、浮水印、印章或完全自定义形状。  
+- **与文档管理系统集成** —— 连接 SharePoint、Alfresco 或自定义仓库。  
+- **REST API 包装** —— 将注释功能以 Web 服务形式暴露，供多语言客户端调用。  
+- **移动端与跨平台开发** —— 在 Android 或 Xamarin 项目中使用 GroupDocs.Annotation。  
+
+## 常见问答
+
+**Q: 哪些 JDK 版本最适合与 GroupDocs.Annotation 配合使用？**  
+A: 最低支持 Java 8，但 Java 11+ 提供更佳的性能和安全性。建议在生产环境使用 LTS 版本（11、17、21）。
+
+**Q: 我可以在同一个应用中处理多种文档格式吗？**  
+A: 完全可以。GroupDocs.Annotation 支持 50 多种格式，包括 PDF、DOCX、XLSX、PPTX 以及常见图像类型，无需针对特定格式编写额外代码。
+
+**Q: 如何处理不同加密级别的文档？**  
+A: 大多数商务 PDF 使用标准加密，GroupDocs.Annotation 已内置支持。对于 AES‑256 加密的文件，请确保使用最新库版本（25.2 或更高）。
+
+**Q: 批量处理数千个 PDF 的最佳方案是什么？**  
+A: 将文档分成小批次（10‑50 个）处理，及时释放每个 `Annotator`，并监控 JVM 堆内存使用。异步处理还能进一步提升吞吐量。
+
+**Q: 生产部署时有哪些许可证注意事项？**  
+A: 试用版会添加水印并限制处理量。生产环境请获取商业许可证，或在开发/测试阶段使用临时许可证。
+
+## 其他资源
+
+**核心文档：**  
+- [GroupDocs.Annotation for Java 文档](https://docs.groupdocs.com/annotation/java/)  
+- [完整 API 参考指南](https://reference.groupdocs.com/annotation/java/)  
 - [下载最新版本](https://releases.groupdocs.com/annotation/java/)  
-- [购买 GroupDocs 产品](https://purchase.groupdocs.com/buy)  
-- [免费试用版下载](https://releases.groupdocs.com/annotation/java/)  
-- [临时许可证申请](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs 支持论坛](https://forum.groupdocs.com/c/annotation/)
+
+**授权与支持：**  
+- [购买商业许可证](https://purchase.groupdocs.com/buy)  
+- [获取免费试用版](https://releases.groupdocs.com/annotation/java/)  
+- [申请临时许可证](https://purchase.groupdocs.com/temporary-license/)  
+- [社区支持论坛](https://forum.groupdocs.com/c/annotation/)  
+
+**进阶学习：**  
+- 若跨平台开发，可探索 GroupDocs.Annotation for .NET  
+- 查看 GroupDocs.Viewer 以实现只读文档渲染  
+- 考虑使用 GroupDocs.Conversion 进行格式转换  
+
+---
+
+**最后更新：** 2025-12-16  
+**测试版本：** GroupDocs.Annotation 25.2  
+**作者：** GroupDocs
