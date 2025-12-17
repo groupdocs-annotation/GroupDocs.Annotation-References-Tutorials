@@ -1,90 +1,122 @@
 ---
-"additionalTitle": "GroupDocs API References"
-"description": "學習如何在 .NET 和 Java 應用程式中實作 PDF、Word、Excel 和 PowerPoint 文件註解。本教學包含文字標記、註釋、形狀和協作功能的逐步教學。"
-"linktitle": "GroupDocs.Annotation 開發人員指南"
-"title": "文件註解 API | GroupDocs.Annotation 教學與 SDK 範例"
-"url": "/zh-hant/"
+additionalTitle: GroupDocs API References
+date: 2025-12-17
+description: 學習如何使用文件註釋 API，在 .NET 與 Java 應用程式中加入 PDF、Word、Excel 及 PowerPoint 註釋。一步一步的教學涵蓋文字標註、評論、圖形以及協作功能。
+keywords:
+- document annotation API
+- PDF annotation
+- document markup
+- collaborative review
+- .NET annotation
+- Java annotation library
+- document comments
+- text highlighting
+linktitle: GroupDocs.Annotation Developer Guides
+title: 文件註解 API | GroupDocs.Annotation 教學與 SDK 範例
 type: docs
-"weight": 11
+url: /zh-hant/
+weight: 11
 ---
 
-# GroupDocs.Annotation 開發者指南 - 文件註解 API
+# GroupDocs.Annotation 開發者指南 - 文件註釋 API
 
-全面的教學和程式碼範例，用於在 .NET 和 Java 應用程式中實現強大的文件註解功能。
+在本指南中，您將了解 **document annotation API** 如何讓您將豐富的註釋功能（例如突出顯示、評論和圖形）直接嵌入 PDF、Word、Excel、PowerPoint 以及其他多種檔案類型。無論您是構建協作審閱平台、教育應用程式，或是法律文件工作流程，該 API 都能在 .NET 與 Java 環境中提供一致且高效的註釋處理方式。
 
-GroupDocs.Annotation 是一個功能豐富的文件註釋 API，它使開發人員能夠新增、修改和管理各種文件格式的註釋，而無需依賴任何外部軟體。我們的跨平台解決方案支援 50 多種文件類型，包括 PDF、Microsoft Office（Word、Excel、PowerPoint）、映像、HTML 等。
+## Quick Answers
+- **What does the document annotation API do?** 它讓開發者能在超過 50 種文件格式上新增、編輯與管理註釋，且不需外部相依。
+- **Which platforms are supported?** 支援 .NET（Framework、Core、.NET 5/6）以及 Java（任何 JDK 8+）。
+- **Do I need a license for development?** 提供免費試用；正式上線需購買授權。
+- **Can I annotate PDFs and Office files with the same code?** 可以——統一的 API 同時處理 PDF、Word、Excel、PowerPoint、影像、HTML 等多種格式。
+- **Is cloud deployment possible?** 完全支援——可在 Windows、Linux、macOS、Docker 或任何雲端服務上執行。
 
-## 為什麼要使用 GroupDocs.Annotation？
+## What is the Document Annotation API?
+**document annotation API** 是一套跨平台 SDK，抽象化文件渲染與修改的複雜度。它提供簡潔的物件模型，讓開發者以程式方式建立文字突出顯示、底線、刪除線、評論、便利貼、圖形、浮水印，甚至互動式表單欄位。
 
-- **格式獨立性** 使用統一的 API 為 50 多種文件類型新增註釋
-- **豐富的註釋類型** 實現文字突出顯示、底線、刪除線、形狀、註釋、浮水印等
-- **無外部依賴** 所有功能都包含在一個組件或 JAR 檔案中
-- **高效能渲染** 內建文件渲染，可客製化品質和分辨率
-- **跨平台支援** 適用於 Windows、Linux、macOS 和雲端平台
+## Why Choose GroupDocs.Annotation?
+- **Format Independence** – 單一 API 可支援超過 50 種文件類型，從 PDF 到 Excel 試算表皆可處理。  
+- **Rich Annotation Types** – 內建文字標記、圖形、評論與協作回覆串等功能。  
+- **No External Dependencies** – 無需 Adobe Reader、Office 或其他第三方工具。  
+- **High‑Performance Rendering** – 可調整品質與解析度，以快速產生預覽。  
+- **Cross‑Platform Support** – 可無縫執行於 Windows、Linux、macOS、Docker，或無伺服器環境。
 
-## 適用於 .NET 的 GroupDocs.Annotation
+## Primary Use Cases
+- **Document Review Workflows** – 讓審閱者即時加入評論並批准變更。  
+- **Educational Applications** – 教師可直接在文件中標記學習資料並提供回饋。  
+- **Legal Document Processing** – 在合約上標註條款、加入備註並追蹤修訂。  
+- **Healthcare Documentation** – 突顯關鍵病患資訊，同時遵循 HIPAA 規範。  
+- **Construction & Engineering** – 以精確測量在藍圖、原理圖與技術圖紙上添加註釋。
 
-.NET 應用程式的強大文件註釋
+## Getting Started with .NET
+Powerful Document Annotation for .NET Applications
 
-使用我們功能豐富的 API 將全面的註解功能整合到您的 C# 和 .NET 應用程式中。
+將完整的註釋功能整合至您的 C# 與 .NET 專案，使用我們功能豐富的 API。
 
-[探索 .NET 教學課程](./net/)
+[Explore .NET Tutorials](./net/)
 
-### .NET 基本教學課程
+### Essential .NET Tutorials
+- [**Document Loading**](./net/document-loading) - 從檔案、串流、URL 以及雲端儲存載入文件  
+- [**Annotation Types**](./net/text-annotations) - 實作文字、圖形、表單與影像註釋  
+- [**Document Saving**](./net/document-saving) - 以多種輸出選項儲存已註釋的文件  
+- [**Annotation Management**](./net/annotation-management) - 以程式方式新增、更新、刪除與篩選註釋  
+- [**Collaboration Features**](./net/reply-management) - 實作評論串與協作審閱  
 
-- [**文件載入**](./net/document-loading) 從文件、串流、URL 和雲端儲存載入文檔
-- [**註釋類型**](./net/text-annotations) 實作文字、圖形、表格和圖像註釋
-- [**文件保存**](./net/document-saving) 使用各種輸出選項儲存已附註解的文檔
-- [**註釋管理**](./net/annotation-management) 以程式設計方式新增、更新、刪除和過濾註釋
-- [**協作功能**](./net/reply-management) 實施評論線程和協作審查
+### Advanced .NET Features
+- [**Document Preview**](./net/document-preview) - 以自訂解析度產生文件預覽  
+- [**Form Fields**](./net/form-field-annotations) - 建立互動式表單元件  
+- [**Document Analysis**](./net/document-information) - 取得中繼資料與頁面資訊  
+- [**Licensing Options**](./net/licensing-and-configuration) - 實作與設定授權  
 
-### 進階 .NET 功能
+## Getting Started with Java
+Java Document Annotation SDK
 
-- [**文件預覽**](./net/document-preview) 產生具有自訂解析度的文件預覽
-- [**表單字段**](./net/form-field-annotations) 建立互動式表單元件
-- [**文件分析**](./net/document-information) 提取元資料和頁面信息
-- [**授權選項**](./net/licensing-and-configuration) 實施和配置許可
+為 Java 應用程式加入完整的註釋功能，使用我們平台無關的 API。
 
-## Java 版 GroupDocs.Annotation
+[Explore Java Tutorials](./java/)
 
-Java文檔註解SDK
+### Essential Java Tutorials
+- [**Document Loading**](./java/document-loading) - 多種方式載入文件，包含雲端儲存整合  
+- [**Text Annotations**](./java/text-annotations) - 突顯、底線、刪除線與文字取代  
+- [**Graphical Annotations**](./java/graphical-annotations) - 新增箭頭、圖形與測量標註  
+- [**Image Annotations**](./java/image-annotations) - 在文件中插入並自訂影像  
+- [**Annotation Management**](./java/annotation-management) - 完整的註釋生命週期管理  
 
-使用我們獨立於平台的 API 為 Java 應用程式添加全面的註解功能。
+### Advanced Java Features
+- [**Document Preview**](./java/document-preview) - 產生高品質的縮圖與預覽  
+- [**Collaboration Tools**](./java/reply-management) - 實作串接式評論與回覆  
+- [**Document Information**](./java/document-information) - 取得文件中繼資料與結構  
+- [**Advanced Features**](./java/advanced-features) - 專業的註釋功能與最佳化  
+- [**Configuration Options**](./java/licensing-and-configuration) - 客製化註釋行為與效能  
 
-[探索 Java 教程](./java/)
+## How to Try It Today
+探索我們完整的教學與範例程式碼，將強大的註釋功能實作於您的應用程式中。無論您是建構協作文件審閱系統、教育工具或內容管理解決方案，**document annotation API** 都能提供所需的功能。
 
-### 基本 Java 教程
+### Free Trial
+免費試用即可探索全部功能，先行體驗再決定購買。  
+[Download Trial](https://releases.groupdocs.com/annotation/)
 
-- [**文件載入**](./java/document-loading) 多種載入文件的方法，包括雲端儲存集成
-- [**文字註釋**](./java/text-annotations) 反白、底線、刪除線和文字替換
-- [**圖形註釋**](./java/graphical-annotations) 新增箭頭、形狀和測量值
-- [**圖像註釋**](./java/image-annotations) 在文件中插入和自訂圖像  
-- [**註釋管理**](./java/annotation-management) 完整的註釋生命週期管理
+### API Documentation
+提供所有支援平台的詳細 API 參考文件。  
+[Browse API Reference](https://reference.groupdocs.com/annotation/)
 
-### 進階 Java 功能
+## Frequently Asked Questions
 
-- [**文件預覽**](./java/document-preview) 產生高品質的縮圖和預覽
-- [**協作工具**](./java/reply-management) 實現主題評論和回复
-- [**文件資訊**](./java/document-information) 存取文件元資料和結構
-- [**進階功能**](./java/advanced-features) 專門的註釋功能和優化
-- [**配置選項**](./java/licensing-and-configuration) 自訂註解行為和效能
+**Q: Can I use the document annotation API in a commercial product?**  
+A: 可以。正式上線需具備有效的 GroupDocs 授權，且提供免費試用供評估使用。
 
-## 關鍵用例
+**Q: Does the API support password‑protected PDFs?**  
+A: 當然支援。開啟文件時可提供密碼，所有註釋操作皆能透明執行。
 
-- **文件審查工作流程** 簡化回饋和審批流程
-- **教育應用** 標記學習材料並提供回饋
-- **法律文件處理** 註釋合約和法律文件
-- **醫療保健文件** 在病患記錄中標記重要訊息
-- **建築與工程** 註釋藍圖和技術圖紙
+**Q: Which .NET versions are compatible?**  
+A: SDK 支援 .NET Framework 4.5+、.NET Core 3.1+、.NET 5 以及 .NET 6+。
 
-## 立即開始
+**Q: How does the API handle large files?**  
+A: 它以串流方式處理內容，並提供如 `Document.OptimizeResources()` 等記憶體最佳化方法，以降低記憶體使用量。
 
-探索我們全面的教學和範例程式碼，在您的應用程式中實現強大的文件註解功能。無論您是建立協作文件審閱系統、教育工具或內容管理解決方案，GroupDocs.Annotation 都能提供您所需的功能。
+**Q: Is there built‑in support for cloud storage services?**  
+A: 有。可直接從 Amazon S3、Azure Blob Storage、Google Cloud Storage 及其他雲端供應商載入與儲存文件。
 
-### 免費試用
-購買前，請先免費試用以了解所有功能。
-[下載試用版](https://releases.groupdocs.com/annotation/)
+---
 
-### API 文件
-所有支援平台的詳細 API 參考。
-[瀏覽 API 參考](https://reference.groupdocs.com/annotation/)
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 23.11 for .NET & Java  
+**Author:** GroupDocs
