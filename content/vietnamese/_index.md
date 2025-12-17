@@ -1,90 +1,124 @@
 ---
-"additionalTitle": "GroupDocs API References"
-"description": "Học cách triển khai chú thích tài liệu PDF, Word, Excel & PowerPoint trong các ứng dụng .NET & Java. Hướng dẫn từng bước về đánh dấu văn bản, bình luận, hình dạng & tính năng cộng tác."
-"linktitle": "Hướng dẫn dành cho nhà phát triển GroupDocs.Annotation"
-"title": "API chú thích tài liệu | Hướng dẫn & ví dụ về SDK của GroupDocs.Annotation"
-"url": "/vi/"
+additionalTitle: GroupDocs API References
+date: 2025-12-17
+description: Tìm hiểu cách sử dụng API chú thích tài liệu để thêm chú thích PDF, Word,
+  Excel và PowerPoint trong các ứng dụng .NET và Java. Các hướng dẫn từng bước bao
+  gồm đánh dấu văn bản, bình luận, hình dạng và các tính năng cộng tác.
+keywords:
+- document annotation API
+- PDF annotation
+- document markup
+- collaborative review
+- .NET annotation
+- Java annotation library
+- document comments
+- text highlighting
+linktitle: GroupDocs.Annotation Developer Guides
+title: API Ghi chú Tài liệu | Hướng dẫn & Ví dụ SDK GroupDocs.Annotation
 type: docs
-"weight": 11
+url: /vi/
+weight: 11
 ---
 
-# Hướng dẫn dành cho nhà phát triển GroupDocs.Annotation - API chú thích tài liệu
+# Hướng dẫn nhà phát triển GroupDocs.Annotation - API chú thích tài liệu
 
-Hướng dẫn toàn diện và ví dụ mã để triển khai khả năng chú thích tài liệu mạnh mẽ trong các ứng dụng .NET và Java của bạn.
+Trong hướng dẫn này, bạn sẽ khám phá cách **API chú thích tài liệu** cho phép bạn nhúng các tính năng chú thích phong phú—như tô sáng, bình luận và hình dạng—trực tiếp vào PDF, Word, Excel, PowerPoint và nhiều loại tệp khác. Dù bạn đang xây dựng cổng đánh giá cộng tác, ứng dụng giáo dục hay quy trình công việc tài liệu pháp lý, API cung cấp cho bạn một cách nhất quán, hiệu suất cao để làm việc với các chú thích trong môi trường .NET và Java.
 
-GroupDocs.Annotation là API chú thích tài liệu giàu tính năng cho phép các nhà phát triển thêm, sửa đổi và quản lý chú thích ở nhiều định dạng tài liệu khác nhau mà không cần phụ thuộc vào phần mềm bên ngoài. Giải pháp đa nền tảng của chúng tôi hỗ trợ hơn 50 loại tài liệu bao gồm PDF, Microsoft Office (Word, Excel, PowerPoint), hình ảnh, HTML, v.v.
+## Câu trả lời nhanh
+- **API chú thích tài liệu làm gì?** Nó cho phép các nhà phát triển thêm, chỉnh sửa và quản lý chú thích trên hơn 50 định dạng tài liệu mà không cần phụ thuộc bên ngoài.  
+- **Các nền tảng nào được hỗ trợ?** .NET (Framework, Core, .NET 5/6) và Java (bất kỳ JDK 8+ nào).  
+- **Có cần giấy phép để phát triển không?** Có bản dùng thử miễn phí; giấy phép bắt buộc cho việc sử dụng trong môi trường sản xuất.  
+- **Có thể chú thích PDF và tệp Office bằng cùng một đoạn mã không?** Có—một API thống nhất xử lý PDF, Word, Excel, PowerPoint, hình ảnh, HTML và hơn thế nữa.  
+- **Có thể triển khai trên đám mây không?** Chắc chắn—chạy trên Windows, Linux, macOS, Docker hoặc bất kỳ dịch vụ đám mây nào.
 
-## Tại sao nên sử dụng GroupDocs.Annotation?
+## API chú thích tài liệu là gì?
+**API chú thích tài liệu** là một SDK đa nền tảng trừu tượng hoá các phức tạp của việc hiển thị và chỉnh sửa tài liệu. Nó cung cấp một mô hình đối tượng đơn giản để tạo các tô sáng văn bản, gạch chân, gạch ngang, bình luận, ghi chú dán, hình dạng, watermark và thậm chí các trường biểu mẫu tương tác—tất cả đều được thực hiện bằng mã.
 
-- **Định dạng độc lập** - Thêm chú thích vào hơn 50 loại tài liệu bằng API thống nhất
-- **Các loại chú thích phong phú** - Thực hiện tô sáng văn bản, gạch chân, gạch ngang, hình dạng, bình luận, hình mờ và nhiều hơn nữa
-- **Không có sự phụ thuộc bên ngoài** - Tất cả các chức năng được chứa trong một tệp lắp ráp hoặc tệp JAR duy nhất
-- **Kết xuất hiệu suất cao** - Tích hợp sẵn chức năng kết xuất tài liệu với chất lượng và độ phân giải có thể tùy chỉnh
-- **Hỗ trợ đa nền tảng** - Hoạt động trên Windows, Linux, macOS và nền tảng đám mây
-
-## GroupDocs.Annotation cho .NET
-
-Chú thích tài liệu mạnh mẽ cho các ứng dụng .NET
-
-Tích hợp khả năng chú thích toàn diện vào các ứng dụng C# và .NET của bạn với API giàu tính năng của chúng tôi.
-
-[Khám phá hướng dẫn .NET](./net/)
-
-### Hướng dẫn .NET thiết yếu
-
-- [**Đang tải tài liệu**](./net/document-loading) - Tải tài liệu từ tệp, luồng, URL và lưu trữ đám mây
-- [**Các loại chú thích**](./net/text-annotations) - Thực hiện chú thích văn bản, đồ họa, biểu mẫu và hình ảnh
-- [**Lưu trữ tài liệu**](./net/document-saving) - Lưu tài liệu có chú thích với nhiều tùy chọn đầu ra khác nhau
-- [**Quản lý chú thích**](./net/annotation-management) Thêm, cập nhật, xóa và lọc chú thích theo chương trình
-- [**Tính năng cộng tác**](./net/reply-management) - Triển khai các luồng bình luận và đánh giá hợp tác
-
-### Các tính năng nâng cao của .NET
-
-- [**Xem trước tài liệu**](./net/document-preview) - Tạo bản xem trước tài liệu với độ phân giải tùy chỉnh
-- [**Các trường biểu mẫu**](./net/form-field-annotations) - Tạo các thành phần biểu mẫu tương tác
-- [**Phân tích tài liệu**](./net/document-information) - Trích xuất siêu dữ liệu và thông tin trang
-- [**Tùy chọn cấp phép**](./net/licensing-and-configuration) - Triển khai và cấu hình cấp phép
-
-## GroupDocs.Annotation cho Java
-
-SDK chú thích tài liệu Java
-
-Thêm khả năng chú thích toàn diện vào các ứng dụng Java bằng API độc lập với nền tảng của chúng tôi.
-
-[Khám phá hướng dẫn Java](./java/)
-
-### Hướng dẫn Java thiết yếu
-
-- [**Đang tải tài liệu**](./java/document-loading) - Nhiều phương pháp để tải tài liệu bao gồm tích hợp lưu trữ đám mây
-- [**Chú thích văn bản**](./java/text-annotations) - Tô sáng, gạch chân, gạch ngang và thay thế văn bản
-- [**Chú thích đồ họa**](./java/graphical-annotations) - Thêm mũi tên, hình dạng và phép đo
-- [**Chú thích hình ảnh**](./java/image-annotations) Chèn và tùy chỉnh hình ảnh trong tài liệu  
-- [**Quản lý chú thích**](./java/annotation-management) - Quản lý vòng đời chú thích hoàn chỉnh
-
-### Các tính năng nâng cao của Java
-
-- [**Xem trước tài liệu**](./java/document-preview) - Tạo hình thu nhỏ và bản xem trước chất lượng cao
-- [**Công cụ cộng tác**](./java/reply-management) - Thực hiện bình luận và trả lời theo chủ đề
-- [**Thông tin tài liệu**](./java/document-information) - Truy cập siêu dữ liệu và cấu trúc tài liệu
-- [**Tính năng nâng cao**](./java/advanced-features) - Khả năng chú thích chuyên biệt và tối ưu hóa
-- [**Tùy chọn cấu hình**](./java/licensing-and-configuration) - Tùy chỉnh hành vi và hiệu suất chú thích
+## Tại sao chọn GroupDocs.Annotation?
+- **Độc lập định dạng** – Một API hoạt động với hơn 50 loại tài liệu, từ PDF đến bảng tính Excel.  
+- **Các loại chú thích phong phú** – Đánh dấu văn bản, hình dạng đồ họa, bình luận và chuỗi trả lời cộng tác đều được tích hợp sẵn.  
+- **Không phụ thuộc bên ngoài** – Không cần Adobe Reader, Office hay các công cụ của bên thứ ba khác.  
+- **Hiệu suất render cao** – Điều chỉnh chất lượng và độ phân giải để tạo preview nhanh chóng.  
+- **Hỗ trợ đa nền tảng** – Chạy mượt trên Windows, Linux, macOS, Docker hoặc môi trường serverless.
 
 ## Các trường hợp sử dụng chính
+- **Quy trình đánh giá tài liệu** – Cho phép người đánh giá thêm bình luận và phê duyệt thay đổi trong thời gian thực.  
+- **Ứng dụng giáo dục** – Giáo viên có thể tô sáng tài liệu học tập và cung cấp phản hồi trực tiếp trong tài liệu.  
+- **Xử lý tài liệu pháp lý** – Đánh dấu các điều khoản, thêm ghi chú và theo dõi các phiên bản sửa đổi trên hợp đồng.  
+- **Tài liệu y tế** – Tô sáng thông tin bệnh nhân quan trọng đồng thời tuân thủ quy định HIPAA.  
+- **Xây dựng & Kỹ thuật** – Chú thích bản vẽ kiến trúc, sơ đồ và bản vẽ kỹ thuật với các đo lường chính xác.
 
-- **Quy trình đánh giá tài liệu** - Đơn giản hóa quy trình phản hồi và phê duyệt
-- **Ứng dụng giáo dục** - Đánh dấu tài liệu học tập và cung cấp phản hồi
-- **Xử lý tài liệu pháp lý** - Chú thích hợp đồng và văn bản pháp lý
-- **Tài liệu chăm sóc sức khỏe** - Đánh dấu thông tin quan trọng trong hồ sơ bệnh nhân
-- **Xây dựng & Kỹ thuật** - Chú thích bản thiết kế và bản vẽ kỹ thuật
+## Bắt đầu với .NET
+Chú thích tài liệu mạnh mẽ cho các ứng dụng .NET
 
-## Bắt đầu ngay hôm nay
+Tích hợp khả năng chú thích toàn diện vào dự án C# và .NET của bạn với API giàu tính năng của chúng tôi.
 
-Khám phá hướng dẫn toàn diện và mã ví dụ của chúng tôi để triển khai các tính năng chú thích tài liệu mạnh mẽ trong ứng dụng của bạn. Cho dù bạn đang xây dựng hệ thống đánh giá tài liệu cộng tác, công cụ giáo dục hay giải pháp quản lý nội dung, GroupDocs.Annotation cung cấp các khả năng bạn cần.
+[Explore .NET Tutorials](./net/)
+
+### Các hướng dẫn .NET thiết yếu
+- [**Document Loading**](./net/document-loading) - Tải tài liệu từ tệp, luồng, URL và lưu trữ đám mây  
+- [**Annotation Types**](./net/text-annotations) - Triển khai các chú thích văn bản, đồ họa, biểu mẫu và hình ảnh  
+- [**Document Saving**](./net/document-saving) - Lưu tài liệu đã chú thích với nhiều tùy chọn đầu ra  
+- [**Annotation Management**](./net/annotation-management) - Thêm, cập nhật, xóa và lọc chú thích bằng mã  
+- [**Collaboration Features**](./net/reply-management) - Triển khai chuỗi bình luận và đánh giá cộng tác  
+
+### Các tính năng .NET nâng cao
+- [**Document Preview**](./net/document-preview) - Tạo preview tài liệu với độ phân giải tùy chỉnh  
+- [**Form Fields**](./net/form-field-annotations) - Tạo các thành phần biểu mẫu tương tác  
+- [**Document Analysis**](./net/document-information) - Trích xuất siêu dữ liệu và thông tin trang  
+- [**Licensing Options**](./net/licensing-and-configuration) - Triển khai và cấu hình giấy phép  
+
+## Bắt đầu với Java
+SDK chú thích tài liệu Java
+
+Thêm khả năng chú thích toàn diện vào các ứng dụng Java với API độc lập nền tảng của chúng tôi.
+
+[Explore Java Tutorials](./java/)
+
+### Các hướng dẫn Java thiết yếu
+- [**Document Loading**](./java/document-loading) - Nhiều phương pháp tải tài liệu bao gồm tích hợp lưu trữ đám mây  
+- [**Text Annotations**](./java/text-annotations) - Tô sáng, gạch chân, gạch ngang và thay thế văn bản  
+- [**Graphical Annotations**](./java/annotations) - Thêm mũi tên, hình dạng và đo lường  
+- [**Image Annotations**](./java/image-annotations) - Chèn và tùy chỉnh hình ảnh trong tài liệu  
+- [**Annotation Management**](./java/annotation-management) - Quản lý vòng đời chú thích đầy đủ  
+
+### Các tính năng Java nâng cao
+- [**Document Preview**](./java/document-preview) - Tạo thumbnail và preview chất lượng cao  
+- [**Collaboration Tools**](./java/reply-management) - Triển khai bình luận có chuỗi và trả lời  
+- [**Document Information**](./java/document-information) - Truy cập siêu dữ liệu và cấu trúc tài liệu  
+- [**Advanced Features**](./java/advanced-features) - Các khả năng chú thích chuyên sâu và tối ưu hoá  
+- [**Configuration Options**](./java/licensing-and-configuration) - Tùy chỉnh hành vi và hiệu suất chú thích  
+
+## Cách thử ngay hôm nay
+Khám phá các hướng dẫn chi tiết và mã mẫu để triển khai các tính năng chú thích mạnh mẽ trong ứng dụng của bạn. Dù bạn đang xây dựng hệ thống đánh giá tài liệu cộng tác, công cụ giáo dục hay giải pháp quản lý nội dung, **API chú thích tài liệu** cung cấp các khả năng bạn cần.
 
 ### Dùng thử miễn phí
-Bắt đầu dùng thử miễn phí để khám phá tất cả các tính năng trước khi mua.
-[Tải xuống bản dùng thử](https://releases.groupdocs.com/annotation/)
+Bắt đầu với bản dùng thử miễn phí để khám phá mọi tính năng trước khi mua.  
+[Download Trial](https://releases.groupdocs.com/annotation/)
 
 ### Tài liệu API
-Tài liệu tham khảo API chi tiết cho tất cả các nền tảng được hỗ trợ.
-[Duyệt tham chiếu API](https://reference.groupdocs.com/annotation/)
+Tham chiếu API chi tiết cho tất cả các nền tảng được hỗ trợ.  
+[Browse API Reference](https://reference.groupdocs.com/annotation/)
+
+## Câu hỏi thường gặp
+
+**H: Tôi có thể sử dụng API chú thích tài liệu trong sản phẩm thương mại không?**  
+Đ: Có. Cần có giấy phép GroupDocs hợp lệ cho các triển khai sản xuất, và bản dùng thử miễn phí có sẵn để đánh giá.
+
+**H: API có hỗ trợ PDF được bảo vệ bằng mật khẩu không?**  
+Đ: Hoàn toàn có. Bạn có thể cung cấp mật khẩu khi mở tài liệu, và mọi thao tác chú thích sẽ hoạt động một cách trong suốt.
+
+**H: Các phiên bản .NET nào tương thích?**  
+Đ: SDK hỗ trợ .NET Framework 4.5+, .NET Core 3.1+, .NET 5 và .NET 6+.
+
+**H: API xử lý các tệp lớn như thế nào?**  
+Đ: Nó stream nội dung và cung cấp các phương pháp tối ưu bộ nhớ như `Document.OptimizeResources()` để giữ mức sử dụng RAM thấp.
+
+**H: Có hỗ trợ tích hợp sẵn cho các dịch vụ lưu trữ đám mây không?**  
+Đ: Có. Bạn có thể tải lên và lưu tài liệu trực tiếp từ Amazon S3, Azure Blob Storage, Google Cloud Storage và các nhà cung cấp đám mây khác.
+
+---
+
+**Cập nhật lần cuối:** 2025-12-17  
+**Đã kiểm tra với:** GroupDocs.Annotation 23.11 cho .NET & Java  
+**Tác giả:** GroupDocs

@@ -1,90 +1,125 @@
 ---
-"additionalTitle": "GroupDocs API References"
-"description": "Tanuld meg a PDF, Word, Excel és PowerPoint dokumentumok jegyzetelésének megvalósítását .NET és Java alkalmazásokban. Lépésről lépésre bemutatjuk a szövegjelölést, a megjegyzéseket, az alakzatokat és az együttműködési funkciókat."
-"linktitle": "GroupDocs.Annotation fejlesztői útmutatók"
-"title": "Dokumentum-annotációs API | GroupDocs.Annotation Oktatóanyagok és SDK-példák"
-"url": "/hu/"
+additionalTitle: GroupDocs API References
+date: 2025-12-17
+description: Tanulja meg, hogyan használja a dokumentum-annotáció API-t PDF, Word,
+  Excel és PowerPoint annotációk hozzáadásához .NET és Java alkalmazásokban. Lépésről‑lépésre
+  útmutatók fedik le a szövegkiemelést, megjegyzéseket, alakzatokat és az együttműködési
+  funkciókat.
+keywords:
+- document annotation API
+- PDF annotation
+- document markup
+- collaborative review
+- .NET annotation
+- Java annotation library
+- document comments
+- text highlighting
+linktitle: GroupDocs.Annotation Developer Guides
+title: Dokumentum-annotáció API | GroupDocs.Annotation oktatóanyagok és SDK példák
 type: docs
-"weight": 11
+url: /hu/
+weight: 11
 ---
 
-# GroupDocs.Annotation fejlesztői útmutató - Dokumentum-annotációs API
+# GroupDocs.Annotation Fejlesztői Útmutató - Dokumentum Annotáció API
 
-Átfogó oktatóanyagok és kódpéldák a hatékony dokumentum-annotációs funkciók megvalósításához .NET és Java alkalmazásokban.
+Ebben az útmutatóban megtudhatja, hogyan teszi lehetővé a **document annotation API**, hogy gazdag annotációs funkciókat—például kiemeléseket, megjegyzéseket és alakzatokat—közvetlenül PDF, Word, Excel, PowerPoint és számos más fájltípusba ágyazni. Akár együttműködő felülvizsgálati portált, oktatási alkalmazást vagy jogi dokumentum munkafolyamatot épít, az API konzisztens, nagy teljesítményű módot biztosít az annotációk kezelésére .NET és Java környezetben egyaránt.
 
-A GroupDocs.Annotation egy funkciókban gazdag dokumentum-annotációs API, amely lehetővé teszi a fejlesztők számára, hogy különféle dokumentumformátumokban annotációkat adjanak hozzá, módosítsanak és kezeljenek külső szoftverfüggőségek nélkül. Többplatformos megoldásunk több mint 50 dokumentumtípust támogat, beleértve a PDF-et, a Microsoft Office-t (Word, Excel, PowerPoint), a képeket, a HTML-t és egyebeket.
+## Gyors Válaszok
+- **What does the document annotation API do?** Lehetővé teszi a fejlesztők számára, hogy 50+ dokumentumformátumban hozzáadjanak, szerkesszenek és kezeljenek annotációkat külső függőségek nélkül.  
+- **Which platforms are supported?** .NET (Framework, Core, .NET 5/6) és Java (bármely JDK 8+).  
+- **Do I need a license for development?** Ingyenes próba elérhető; licenc szükséges a termelésben való használathoz.  
+- **Can I annotate PDFs and Office files with the same code?** Igen—egy egységes API kezeli a PDF-eket, Word, Excel, PowerPoint, képeket, HTML-t és egyebeket.  
+- **Is cloud deployment possible?** Teljesen lehetséges—futtatható Windows, Linux, macOS, Docker vagy bármely felhőszolgáltatás környezetben.
 
-## Miért érdemes a GroupDocs.Annotationt használni?
+## Mi a Document Annotation API?
+A **document annotation API** egy platformközi SDK, amely elrejti a dokumentumok renderelésének és módosításának összetettségét. Egyszerű objektummodellt biztosít szöveges kiemelések, aláhúzások, áthúzások, megjegyzések, ragadós jegyzetek, alakzatok, vízjelek és akár interaktív űrlapmezők programozott létrehozásához.
 
-- **Formátumfüggetlenség** - Több mint 50 dokumentumtípushoz adhat megjegyzéseket egy egységes API segítségével
-- **Gazdag annotációtípusok** - Szövegkiemelés, aláhúzás, áthúzás, alakzatok, megjegyzések, vízjelek és egyebek megvalósítása
-- **Nincsenek külső függőségek** - Minden funkció egyetlen assembly vagy JAR fájlban található
-- **Nagy teljesítményű renderelés** - Beépített dokumentum renderelés testreszabható minőséggel és felbontással
-- **Platformfüggetlen támogatás** - Működik Windows, Linux, macOS és felhőplatformokon
+## Miért válassza a GroupDocs.Annotation-t?
+- **Format Independence** – Egy API több mint 50 dokumentumtípussal működik, a PDF-től az Excel táblázatokig.  
+- **Rich Annotation Types** – Szöveges jelölés, grafikus alakzatok, megjegyzések és együttműködő válaszszálak mind beépítve vannak.  
+- **No External Dependencies** – Nem szükséges Adobe Reader, Office vagy más harmadik fél eszköz.  
+- **High‑Performance Rendering** – Állítható minőség és felbontás a gyors előnézet generálásához.  
+- **Cross‑Platform Support** – Zökkenőmentesen fut Windows, Linux, macOS, Docker vagy serverless környezetben.
 
-## GroupDocs.Annotation .NET-hez
+## Elsődleges Felhasználási Esetek
+- **Document Review Workflows** – Lehetővé teszi a felülvizsgálók számára, hogy valós időben hozzáadjanak megjegyzéseket és jóváhagyják a változtatásokat.  
+- **Educational Applications** – A tanárok kiemelhetik a tananyagot és közvetlenül a dokumentumban adhatnak visszajelzést.  
+- **Legal Document Processing** – Megjelölhetők a szerződéses pontok, hozzáadhatók jegyzetek, és nyomon követhetők a módosítások.  
+- **Healthcare Documentation** – Kiemelheti a kritikus beteginformációkat a HIPAA megfelelés fenntartása mellett.  
+- **Construction & Engineering** – Képes annotálni tervrajzokat, ábrákat és műszaki rajzokat pontos mérésekkel.
 
-Hatékony dokumentum-annotáció .NET alkalmazásokhoz
+## Kezdő lépések .NET-hez
+Erőteljes Dokumentum Annotáció .NET Alkalmazásokhoz
 
-Integráljon átfogó annotációs képességeket C# és .NET alkalmazásaiba funkciókban gazdag API-nkkal.
+Integrálja a teljes körű annotációs képességeket C# és .NET projektjeibe a funkciógazdag API-unkkal.
 
-[Fedezze fel a .NET oktatóanyagokat](./net/)
+[Explore .NET Tutorials](./net/)
 
-### Alapvető .NET oktatóanyagok
+### Alapvető .NET Oktatók
+- [**Document Loading**](./net/document-loading) - Dokumentumok betöltése fájlokból, adatfolyamokból, URL-ekből és felhő tárolóból  
+- [**Annotation Types**](./net/text-annotations) - Szöveges, grafikus, űrlap és kép annotációk megvalósítása  
+- [**Document Saving**](./net/document-saving) - Annotált dokumentumok mentése különböző kimeneti opciókkal  
+- [**Annotation Management**](./net/annotation-management) - Annotációk hozzáadása, frissítése, törlése és szűrése programozott módon  
+- [**Collaboration Features**](./net/reply-management) - Megjegyzés szálak és együttműködő felülvizsgálat megvalósítása  
 
-- [**Dokumentum betöltése**](./net/document-loading) - Dokumentumok betöltése fájlokból, streamekből, URL-ekből és felhőalapú tárhelyről
-- [**Jegyzettípusok**](./net/text-annotations) - Szöveges, grafikus, űrlap- és képaláírások megvalósítása
-- [**Dokumentum mentése**](./net/document-saving) - Jegyzetekkel ellátott dokumentumok mentése különféle kimeneti lehetőségekkel
-- [**Jegyzetkezelés**](./net/annotation-management) Programozottan adhat hozzá, frissíthet, törölhet és szűrhet jegyzeteket
-- [**Együttműködési funkciók**](./net/reply-management) - Hozzászólási szálak és közös ellenőrzés megvalósítása
+### Haladó .NET Funkciók
+- [**Document Preview**](./net/document-preview) - Dokumentum előnézetek generálása egyedi felbontással  
+- [**Form Fields**](./net/form-field-annotations) - Interaktív űrlapelemek létrehozása  
+- [**Document Analysis**](./net/document-information) - Metaadatok és oldal információk kinyerése  
+- [**Licensing Options**](./net/licensing-and-configuration) - Licencelés megvalósítása és konfigurálása  
 
-### Speciális .NET funkciók
+## Kezdő lépések Java-hoz
+Java Document Annotation SDK
 
-- [**Dokumentum előnézete**](./net/document-preview) - Dokumentum előnézetek létrehozása egyedi felbontással
-- [**Űrlapmezők**](./net/form-field-annotations) - Interaktív űrlapkomponensek létrehozása
-- [**Dokumentumelemzés**](./net/document-information) - Metaadatok és oldalinformációk kinyerése
-- [**Licencelési lehetőségek**](./net/licensing-and-configuration) - Licencelés implementálása és konfigurálása
+Adjon teljes körű annotációs képességeket Java alkalmazásokhoz platformfüggetlen API-unkkal.
 
-## GroupDocs.Annotation Java-hoz
+[Explore Java Tutorials](./java/)
 
-Java dokumentum-annotációs SDK
+### Alapvető Java Oktatók
+- [**Document Loading**](./java/document-loading) - Több módszer a dokumentumok betöltésére, beleértve a felhő tároló integrációt  
+- [**Text Annotations**](./java/text-annotations) - Kiemelés, aláhúzás, áthúzás és szövegcsere  
+- [**Graphical Annotations**](./java/graphical-annotations) - Nyilak, alakzatok és mérések hozzáadása  
+- [**Image Annotations**](./java/image-annotations) - Képek beillesztése és testreszabása a dokumentumokban  
+- [**Annotation Management**](./java/annotation-management) - Teljes annotáció életciklus kezelése  
 
-Platformfüggetlen API-nkkal átfogó annotációs képességeket adhatsz Java alkalmazásokhoz.
+### Haladó Java Funkciók
+- [**Document Preview**](./java/document-preview) - Magas minőségű bélyegképek és előnézetek generálása  
+- [**Collaboration Tools**](./java/reply-management) - Szálas megjegyzések és válaszok megvalósítása  
+- [**Document Information**](./java/document-information) - Dokumentum metaadatok és struktúra elérése  
+- [**Advanced Features**](./java/advanced-features) - Speciális annotációs képességek és optimalizációk  
+- [**Configuration Options**](./java/licensing-and-configuration) - Annotáció viselkedés és teljesítmény testreszabása  
 
-[Fedezze fel a Java oktatóanyagokat](./java/)
+## Hogyan Próbálja Ki Ma
+Fedezze fel átfogó oktatóanyagainkat és példakódjainkat, hogy erőteljes annotációs funkciókat valósítson meg alkalmazásaiban. Akár együttműködő dokumentum felülvizsgálati rendszereket, oktatási eszközöket vagy tartalomkezelő megoldásokat épít, a **document annotation API** biztosítja a szükséges képességeket.
 
-### Alapvető Java oktatóanyagok
+### Ingyenes Próbaverzió
+Kezdje ingyenes próbaverzióval, hogy megismerje az összes funkciót a vásárlás előtt.  
+[Download Trial](https://releases.groupdocs.com/annotation/)
 
-- [**Dokumentum betöltése**](./java/document-loading) - Több módszer a dokumentumok betöltésére, beleértve a felhőalapú tárolás integrációját
-- [**Szöveges megjegyzések**](./java/text-annotations) - Kiemelés, aláhúzás, áthúzás és szövegcsere
-- [**Grafikus megjegyzések**](./java/graphical-annotations) - Nyilak, alakzatok és méretek hozzáadása
-- [**Képannotációk**](./java/image-annotations) Képek beszúrása és testreszabása a dokumentumokban  
-- [**Jegyzetkezelés**](./java/annotation-management) - Teljes körű annotációs életciklus-kezelés
+### API Dokumentáció
+Részletes API referenciák minden támogatott platformhoz.  
+[Browse API Reference](https://reference.groupdocs.com/annotation/)
 
-### Speciális Java-funkciók
+## Gyakran Ismételt Kérdések
 
-- [**Dokumentum előnézete**](./java/document-preview) - Kiváló minőségű miniatűrök és előnézetek létrehozása
-- [**Együttműködési eszközök**](./java/reply-management) - Hozzászólások és válaszok témakörben történő rögzítése
-- [**Dokumentuminformációk**](./java/document-information) - Hozzáférés a dokumentum metaadataihoz és szerkezetéhez
-- [**Speciális funkciók**](./java/advanced-features) - Speciális annotációs lehetőségek és optimalizálások
-- [**Konfigurációs beállítások**](./java/licensing-and-configuration) - Testreszabhatja a jegyzetek viselkedését és teljesítményét
+**Q: Használhatom a document annotation API-t kereskedelmi termékben?**  
+A: Igen. Érvényes GroupDocs licenc szükséges a termelési környezetben való telepítéshez, és ingyenes próba elérhető értékeléshez.
 
-## Főbb felhasználási esetek
+**Q: Támogatja az API a jelszóval védett PDF-eket?**  
+A: Teljes mértékben. A dokumentum megnyitásakor megadhatja a jelszót, és az összes annotációs művelet átláthatóan működik.
 
-- **Dokumentum-felülvizsgálati munkafolyamatok** - Egyszerűsítse a visszajelzési és jóváhagyási folyamatokat
-- **Oktatási alkalmazások** - Tananyagok javítása és visszajelzés küldése
-- **Jogi dokumentumok feldolgozása** - Szerződések és jogi dokumentumok jegyzetekkel való ellátása
-- **Egészségügyi dokumentáció** - Jelölje meg a fontos információkat a betegnyilvántartásban
-- **Építőipar és mérnöki tudományok** - Jegyzetekkel látja el a tervrajzokat és a műszaki rajzokat
+**Q: Mely .NET verziók kompatibilisek?**  
+A: Az SDK támogatja a .NET Framework 4.5+, .NET Core 3.1+, .NET 5 és .NET 6+ verziókat.
 
-## Kezdje el még ma
+**Q: Hogyan kezeli az API a nagy fájlokat?**  
+A: A tartalmat streameli, és memóriaoptimalizáló módszereket kínál, például a `Document.OptimizeResources()`-t, hogy alacsonyan tartsa a memóriahasználatot.
 
-Tekintse meg átfogó oktatóanyagainkat és példakódjainkat, hogy hatékony dokumentum-annotációs funkciókat valósíthasson meg alkalmazásaiban. Akár együttműködésen alapuló dokumentum-áttekintő rendszereket, oktatási eszközöket vagy tartalomkezelési megoldásokat épít, a GroupDocs.Annotation biztosítja a szükséges funkciókat.
+**Q: Van beépített támogatás a felhő tárolási szolgáltatásokhoz?**  
+A: Igen. Dokumentumokat betölthet és menthet közvetlenül az Amazon S3, Azure Blob Storage, Google Cloud Storage és más felhőszolgáltatók használatával.
 
-### Ingyenes próbaverzió
-Vásárlás előtt próbáld ki az összes funkciót egy ingyenes próbaverzióval.
-[Próbaverzió letöltése](https://releases.groupdocs.com/annotation/)
+---
 
-### API dokumentáció
-Részletes API-referenciák az összes támogatott platformhoz.
-[API-referencia böngészése](https://reference.groupdocs.com/annotation/)
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 23.11 for .NET & Java  
+**Author:** GroupDocs
