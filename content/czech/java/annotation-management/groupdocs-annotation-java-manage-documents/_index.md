@@ -1,36 +1,56 @@
 ---
-"date": "2025-05-06"
-"description": "Naučte se, jak efektivně spravovat anotace v Javě pomocí GroupDocs.Annotation. Tato příručka se zabývá načítáním, odebíráním a optimalizací pracovních postupů s dokumenty."
-"title": "Komplexní průvodce správou anotací v Javě s GroupDocs.Annotation"
-"url": "/cs/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+categories:
+- Java Development
+date: '2025-12-19'
+description: Ovládněte, jak načíst anotace PDF v Javě pomocí GroupDocs.Annotation.
+  Naučte se načítat, odstraňovat a optimalizovat anotace dokumentů pomocí Javy v reálných
+  scénářích.
+keywords: Java annotation management, document annotation Java, PDF annotation management
+  Java, GroupDocs annotation tutorial, manage annotations Java documents
+lastmod: '2025-12-19'
+linktitle: Load PDF Annotations Java
+tags:
+- java
+- annotations
+- document-processing
+- groupdocs
+- pdf-management
+title: 'Načtení PDF anotací v Javě: Kompletní průvodce správou anotací GroupDocs'
 type: docs
-"weight": 1
+url: /cs/java/annotation-management/groupdocs-annotation-java-manage-documents/
+weight: 1
 ---
 
-# Zvládnutí správy anotací v Javě pomocí GroupDocs.Annotation
+# Načítání PDF anotací v Javě: Kompletní průvodce správou GroupDocs Annotation
 
-dnešním digitálním prostředí je efektivní správa dokumentů klíčová pro firmy napříč odvětvími, jako je právo, vzdělávání a další. Tento tutoriál vás provede načítáním a odebíráním anotací z dokumentů pomocí výkonné knihovny GroupDocs.Annotation v jazyce Java. Zjistěte, jak tyto funkce zefektivňují pracovní postupy a zvyšují produktivitu.
+Už jste někdy měli potíže se správou anotací dokumentů ve svých Java aplikacích? Nejste v tom sami. Ať už budujete systém pro revizi dokumentů, vzdělávací platformu nebo nástroj pro společnou editaci, **loading pdf annotations java** efektivně může rozhodnout o uživatelské zkušenosti. V tomto průvodci projdeme vše, co potřebujete vědět – od načítání anotací po čištění nechtěných odpovědí – abyste mohli dnes dodat rychlé a spolehlivé funkce anotací.
 
-## Co se naučíte:
-- Jak načíst anotace z PDF dokumentu pomocí GroupDocs.Annotation.
-- Kroky k odstranění konkrétních odpovědí z anotací v Javě.
-- Praktické aplikace těchto funkcí v reálných situacích.
-- Aspekty výkonu pro optimální využití knihovny.
+## Rychlé odpovědi
+- **Jaká knihovna mi umožní načíst pdf annotations java?** GroupDocs.Annotation for Java.  
+- **Potřebuji licenci pro vyzkoušení?** Je k dispozici bezplatná zkušební verze; pro komerční použití je vyžadována produkční licence.  
+- **Která verze Javy je podporována?** JDK 8 nebo novější.  
+- **Mohu zpracovávat velké PDF bez chyb OOM?** Ano – použijte možnosti streamování a správné uvolňování prostředků.  
+- **Jak odebrat pouze konkrétní odpovědi?** Projděte seznam odpovědí, filtrujte podle uživatele nebo obsahu a aktualizujte dokument.
 
-Začněme s předpoklady, než se pustíme do implementace.
+## Co je load pdf annotations java?
+Načítání PDF anotací v Javě znamená otevření PDF souboru, načtení jeho vložených objektů komentářů (zvýraznění, poznámky, razítka, odpovědi atd.) a jejich zpřístupnění jako Java objektů, které můžete prohlížet, upravovat nebo exportovat. Tento krok je základem pro jakýkoli workflow řízený anotacemi, jako jsou auditní stopy, společné revize nebo extrakce dat.
 
-### Předpoklady
+## Proč používat GroupDocs.Annotation pro Javu?
+GroupDocs.Annotation poskytuje jednotné API, které funguje napříč PDF, Word, Excel, PowerPoint a dalšími formáty. Zpracovává složité struktury anotací, nabízí jemnou kontrolu nad využitím paměti a zahrnuje vestavěnou podporu bezpečnostních funkcí, jako jsou soubory chráněné heslem.
 
-Než začnete, ujistěte se, že máte následující nastavení:
+## Předpoklady a nastavení prostředí
 
-- **Knihovna anotací GroupDocs**Zahrňte tuto knihovnu do svého projektu Java. Pro snadnou správu závislostí doporučujeme použít Maven.
-- **Vývojové prostředí v Javě**Ujistěte se, že je nainstalována kompatibilní verze JDK a nakonfigurováno IDE, jako je IntelliJ IDEA nebo Eclipse.
-- **Základní znalost Javy**Znalost konceptů programování v Javě bude užitečná.
+### Co budete potřebovat
+- **GroupDocs.Annotation Library** – hlavní závislost pro práci s anotacemi  
+- **Java Development Environment** – JDK 8+ a IDE (IntelliJ IDEA nebo Eclipse)  
+- **Maven nebo Gradle** – pro správu závislostí  
+- **Ukázkové PDF dokumenty** s existujícími anotacemi pro testování  
 
 ### Nastavení GroupDocs.Annotation pro Javu
 
-#### Nastavení Mavenu
-Chcete-li integrovat GroupDocs.Annotation do svého projektu, přidejte do souboru následující konfiguraci `pom.xml` soubor:
+#### Maven konfigurace (doporučeno)
+
+Přidejte tuto konfiguraci do souboru `pom.xml` pro bezproblémovou správu závislostí:
 
 ```xml
 <repositories>
@@ -49,33 +69,33 @@ Chcete-li integrovat GroupDocs.Annotation do svého projektu, přidejte do soubo
 </dependencies>
 ```
 
-#### Získání licence
-GroupDocs nabízí bezplatnou zkušební verzi pro otestování funkcí knihovny. Můžete si pořídit dočasnou licenci pro delší testování nebo si zakoupit plnou licenci, pokud se rozhodnete knihovnu integrovat do produkčního prostředí.
+**Tip**: Vždy používejte nejnovější stabilní verzi pro bezpečnostní aktualizace a zlepšení výkonu.
 
-### Průvodce implementací
+#### Strategie získání licence
+- **Free Trial** – ideální pro hodnocení a malé projekty  
+- **Temporary License** – ideální pro vývojové a testovací fáze  
+- **Production License** – vyžadována pro komerční aplikace  
 
-V této části si rozdělíme funkce do zvládnutelných kroků.
+Začněte s bezplatnou zkušební verzí, abyste ověřili, že knihovna splňuje vaše požadavky na **load pdf annotations java**.
 
-#### Funkce 1: Načtení anotací z dokumentu
+## Jak načíst pdf annotations java pomocí GroupDocs.Annotation
 
-Tato funkce umožňuje přístup k anotacím a jejich zobrazení v dokumentu PDF, což poskytuje přehled o společné práci na dokumentu.
+### Porozumění procesu načítání anotací
+Když načítáte anotace z dokumentu, přistupujete k metadatům, která popisují spolupracující prvky – komentáře, zvýraznění, razítka a odpovědi. Tento proces je klíčový pro:
+- **Auditní stopy** – sledovat, kdo provedl jaké změny a kdy  
+- **Přehledy o spolupráci** – pochopit vzorce revizí  
+- **Extrahování dat** – získat data anotací pro reportování nebo analytiku  
 
-##### Postup krok za krokem:
+### Implementace krok za krokem
 
-**1. Importujte nezbytné třídy**
-
-Začněte importem požadovaných tříd pro práci s anotacemi:
-
+#### 1. Import požadovaných tříd
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.LoadOptions;
 import java.util.List;
 ```
 
-**2. Definování cesty k dokumentu a načtení anotací**
-
-Nastavte cestu k dokumentu a inicializujte jej `LoadOptions` načtení anotací:
-
+#### 2. Načtení anotací z vašeho dokumentu
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 LoadOptions loadOptions = new LoadOptions();
@@ -84,27 +104,31 @@ List<AnnotationBase> annotations = annotator.get();
 annotator.dispose();
 ```
 
-- **Proč** tento přístup? Použití `Annotator` poskytuje bezproblémový způsob interakce s metadaty a anotacemi dokumentu.
+**Co se děje?**  
+- `LoadOptions` vám umožňuje konfigurovat chování načítání (např. hesla).  
+- `Annotator` otevírá vrstvu anotací PDF.  
+- `annotator.get()` vrací každou anotaci jako `List<AnnotationBase>`.  
+- `annotator.dispose()` uvolňuje nativní zdroje – nezbytné pro velké soubory.  
 
-#### Funkce 2: Odebrání konkrétních odpovědí z anotací
+#### Kdy použít tuto funkci
+- Vytvoření **dashboardu pro revizi dokumentů**, který vypisuje každý komentář.  
+- Export dat anotací pro **reportování souladu**.  
+- Migrace anotací mezi formáty (PDF → DOCX atd.).
 
-Tato funkce umožňuje odebrat konkrétní odpovědi podle uživatelského jména, což pomáhá zachovat přehlednost ve spolupracujících dokumentech.
+## Pokročilá funkce: Odstraňování konkrétních odpovědí na anotace
 
-##### Postup krok za krokem:
+### Obchodní případ pro správu odpovědí
+V kolaborativních prostředích mohou vlákna anotací být hlučná. Selektivní odstraňování odpovědí udržuje diskuse zaměřené a zachovává původní komentář.
 
-**1. Nastavení cest k dokumentům**
+### Průvodce implementací
 
-Definujte cesty pro vstupní i výstupní soubory:
-
+#### 1. Nastavení cest k dokumentům
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/RemovedRepliesOutput.pdf";
 ```
 
-**2. Načíst anotace a filtrovat odpovědi**
-
-Projděte si anotace a vyhledejte a odeberte odpovědi od konkrétního uživatele:
-
+#### 2. Filtrování a odstraňování odpovědí
 ```java
 LoadOptions loadOptions = new LoadOptions();
 final Annotator annotator = new Annotator(inputFilePath, loadOptions);
@@ -121,42 +145,284 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-- **Proč** tuto metodu? Odstranění zbytečných odpovědí může pomoci zefektivnit komunikaci a zaměřit se na relevantní zpětnou vazbu.
+**Vysvětlení**  
+- Smyčka prochází odpovědi první anotace.  
+- Když autor odpovědi odpovídá `"Tom"`, je odstraněna.  
+- `annotator.update()` zapíše upravenou kolekci zpět do dokumentu.  
+- `annotator.save()` uloží vyčištěné PDF.  
 
-### Praktické aplikace
+### Pokročilé techniky filtrování odpovědí
+```java
+// Remove replies older than 30 days
+Date cutoffDate = new Date(System.currentTimeMillis() - (30L * 24 * 60 * 60 * 1000));
 
-1. **Revize právních dokumentů**: Rychlé načtení anotací pro kontrolu komentářů od více recenzentů.
-2. **Vzdělávací materiály**Efektivně spravujte zpětnou vazbu studentů ke sdíleným dokumentům.
-3. **Kolaborativní editace**: Zajistěte zobrazení pouze relevantních odpovědí, což zlepšuje přehlednost při společné úpravě.
+// Remove replies based on content patterns
+if (reply.getText().toLowerCase().contains("draft") || reply.getText().toLowerCase().contains("test")) {
+    // Remove test/draft replies
+}
 
-### Úvahy o výkonu
+// Remove replies from specific user roles
+if (reply.getUser().getRole().equals("temporary_reviewer")) {
+    // Clean up temporary reviewer comments
+}
+```
 
-- **Optimalizace načítání**Používejte efektivní datové struktury a minimalizujte zbytečné operace při načítání anotací.
-- **Správa paměti**: Zlikvidujte `Annotator` instance okamžitě k uvolnění zdrojů.
-- **Dávkové zpracování**U velkých dokumentů zvažte dávkové zpracování anotací, abyste snížili využití paměti.
+## Reálné scénáře aplikace
 
-### Závěr
+### Scénář 1: Platforma pro revizi právních dokumentů
+**Výzva** – Právnické firmy potřebují odstranit předběžné komentáře recenzentů před doručením finálního souboru.  
+**Řešení** – Hromadně zpracovat dokumenty a odstranit odpovědi od uživatelů “temporary_reviewer”:
+```java
+// Process multiple documents
+String[] documentPaths = getDocumentBatch();
+for (String docPath : documentPaths) {
+    cleanupPreliminaryReviews(docPath);
+}
+```
 
-Zvládnutím knihovny GroupDocs.Annotation můžete výrazně vylepšit své možnosti správy dokumentů. Tento tutoriál vás vybavil znalostmi pro efektivní načítání a správu anotací. V dalších krocích prozkoumejte další možnosti přizpůsobení dostupné v knihovně, abyste ji přizpůsobili svým specifickým potřebám.
+### Scénář 2: Správa vzdělávacího obsahu
+**Výzva** – Anotace studentů zaplňují pohled instruktora po skončení semestru.  
+**Řešení** – Uchovat zpětnou vazbu instruktora, archivovat poznámky studentů a generovat zprávy o zapojení.
 
-### Sekce Často kladených otázek
+### Scénář 3: Systémy firemní shody
+**Výzva** – Citlivé interní diskuse musí být odstraněny z PDF určených klientům.  
+**Řešení** – Použít role‑based filtry a auditovat každou akci odstranění.
 
-1. **Jak mám zpracovat více dokumentů?**
-   - Projděte každou cestu k dokumentu a použijte stejnou logiku pro zpracování anotací.
-2. **Mohu použít GroupDocs.Annotation s jinými formáty souborů?**
-   - Ano, GroupDocs podporuje řadu dalších formátů dokumentů než PDF.
-3. **Co když se při načítání anotací setkám s chybami?**
-   - Ujistěte se, že cesty k dokumentům jsou správné a že máte potřebná oprávnění pro přístup k souborům.
-4. **Existuje podpora pro mobilní zařízení?**
-   - Ačkoli je GroupDocs.Annotation primárně navržen pro desktopové aplikace, lze jej integrovat do webových služeb dostupných na mobilních zařízeních.
-5. **Jak aktualizuji anotace v prostředí pro spolupráci?**
-   - Používejte strategie správy verzí a zajistěte, aby všichni spolupracovníci měli synchronizované verze dokumentů.
+## Nejlepší praktiky výkonu
 
-### Zdroje
-- **Dokumentace**: [Dokumentace k anotacím GroupDocs v Javě](https://docs.groupdocs.com/annotation/java/)
-- **Referenční informace k API**: [Referenční příručka k rozhraní GroupDocs API](https://reference.groupdocs.com/annotation/java/)
-- **Stáhnout**: [Verze GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **Nákup a licencování**: [Koupit GroupDocs](https://purchase.groupdocs.com/buy)
-- **Bezplatná zkušební verze**: [Bezplatná zkušební verze GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **Dočasná licence**: [Získat dočasnou licenci](https://purchase.groupdocs.com/temporary-license/)
-- **Fórum podpory**: [Podpora GroupDocs](https://forum.groupdocs.com/c/annotation/)
+### Strategie správy paměti
+```java
+// Always Dispose Resources
+try (Annotator annotator = new Annotator(inputFilePath)) {
+    // Your annotation processing logic
+} // Automatic resource cleanup
+```
+```java
+// Process Annotations in Batches
+int batchSize = 100;
+for (int i = 0; i < annotations.size(); i += batchSize) {
+    List<AnnotationBase> batch = annotations.subList(i, Math.min(i + batchSize, annotations.size()));
+    processBatch(batch);
+}
+```
+```java
+// Use Streaming for Large Files
+LoadOptions options = new LoadOptions();
+options.setPreloadPageCount(1); // Load one page at a time
+```
+
+### Monitorování výkonu
+Sledujte tyto metriky v produkci:
+- **Využití paměti** – spotřeba haldy během zpracování anotací  
+- **Čas zpracování** – doba načítání a filtrování  
+- **Vliv velikosti dokumentu** – jak velikost souboru ovlivňuje latenci  
+- **Současné operace** – odezva při simultánních požadavcích  
+
+## Časté problémy a řešení
+
+### Problém 1: Chyby „Document Cannot Be Loaded“
+```java
+try {
+    Annotator annotator = new Annotator(inputFilePath);
+    // Success
+} catch (Exception e) {
+    if (e.getMessage().contains("path")) {
+        System.err.println("Check file path: " + inputFilePath);
+    } else if (e.getMessage().contains("permission")) {
+        System.err.println("Verify file permissions");
+    }
+}
+```
+
+### Problém 2: Úniky paměti v dlouhodobě běžících aplikacích
+```java
+// Use try-with-resources
+try (Annotator annotator = new Annotator(inputFilePath)) {
+    // Process annotations
+} // Automatic cleanup
+```
+
+### Problém 3: Pomalý výkon u velkých dokumentů
+```java
+// Limit annotation loading scope
+LoadOptions options = new LoadOptions();
+options.setLoadOnlyAnnotatedPages(true);
+```
+```java
+// Pagination for large annotation sets
+int pageSize = 50;
+for (int page = 0; page < totalPages; page++) {
+    processAnnotationPage(annotations, page, pageSize);
+}
+```
+
+### Problém 4: Nekonzistentní ID anotací po odstranění
+```java
+// Refresh annotation collections after modifications
+annotator.update(annotations);
+annotations = annotator.get(); // Refresh the collection
+```
+
+## Bezpečnostní úvahy
+
+### Validace vstupu
+```java
+// Validate file paths and user inputs
+if (!isValidFilePath(inputFilePath)) {
+    throw new IllegalArgumentException("Invalid file path");
+}
+
+if (!hasPermissionToModify(userId, documentId)) {
+    throw new SecurityException("Insufficient permissions");
+}
+```
+
+### Auditní logování
+```java
+// Log annotation operations for compliance
+auditLogger.info("User {} removed {} replies from document {}", 
+    userId, removedCount, documentId);
+```
+
+### Řízení přístupu
+Implementujte oprávnění založená na rolích:
+- **Read‑only** – pouze prohlížet anotace  
+- **Contributor** – přidávat/upravovat vlastní anotace  
+- **Moderator** – mazat jakoukoli anotaci nebo odpověď  
+- **Administrator** – plná kontrola  
+
+## Pokročilé tipy pro produkční systémy
+
+### 1. Implementace strategií cachování
+```java
+// Simple annotation cache
+Map<String, List<AnnotationBase>> annotationCache = new ConcurrentHashMap<>();
+
+public List<AnnotationBase> getCachedAnnotations(String documentPath) {
+    return annotationCache.computeIfAbsent(documentPath, path -> {
+        try (Annotator annotator = new Annotator(path)) {
+            return annotator.get();
+        }
+    });
+}
+```
+
+### 2. Asynchronní zpracování
+```java
+CompletableFuture<Void> processDocumentAsync(String documentPath) {
+    return CompletableFuture.runAsync(() -> {
+        processAnnotations(documentPath);
+    });
+}
+```
+
+### 3. Mechanismy obnovy po chybě
+```java
+public boolean processWithRetry(String documentPath, int maxRetries) {
+    for (int attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            processAnnotations(documentPath);
+            return true;
+        } catch (Exception e) {
+            if (attempt == maxRetries) {
+                logger.error("Failed to process after {} attempts", maxRetries, e);
+                return false;
+            }
+            try {
+                Thread.sleep(1000 * attempt); // Exponential backoff
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+                return false;
+            }
+        }
+    }
+    return false;
+}
+```
+
+## Testování vašeho systému správy anotací
+
+### Rámec pro jednotkové testování
+```java
+@Test
+public void testAnnotationLoading() {
+    String testDocument = "test-documents/sample-with-annotations.pdf";
+    
+    try (Annotator annotator = new Annotator(testDocument)) {
+        List<AnnotationBase> annotations = annotator.get();
+        
+        assertNotNull(annotations);
+        assertTrue(annotations.size() > 0);
+        
+        // Verify annotation properties
+        AnnotationBase firstAnnotation = annotations.get(0);
+        assertNotNull(firstAnnotation.getAuthor());
+        assertNotNull(firstAnnotation.getCreatedOn());
+    }
+}
+```
+
+### Integrační testování
+1. Načtěte testovací dokumenty se známým počtem anotací.  
+2. Ověřte, že logika odstraňování odpovědí funguje podle očekávání.  
+3. Změřte spotřebu paměti pod zátěží.  
+4. Ověřte, že výstupní PDF zachovává vizuální integritu.
+
+## Často kladené otázky
+
+**Q: Jak mohu pracovat se soubory PDF chráněnými heslem?**  
+A: Použijte `LoadOptions` k zadání hesla dokumentu:  
+```java
+LoadOptions options = new LoadOptions();
+options.setPassword("your-document-password");
+Annotator annotator = new Annotator(filePath, options);
+```
+
+**Q: Mohu zpracovávat více formátů dokumentů než PDF?**  
+A: Ano! GroupDocs.Annotation podporuje Word, Excel, PowerPoint a mnoho dalších formátů. API zůstává konzistentní napříč formáty.
+
+**Q: Jaká je maximální velikost dokumentu, kterou knihovna zvládne?**  
+A: Neexistuje pevný limit, ale výkon závisí na dostupné paměti. Pro dokumenty nad 100 MB zvažte streamovací přístupy a hromadné zpracování.
+
+**Q: Jak zachovat formátování anotací při odstraňování odpovědí?**  
+A: Knihovna automaticky zachovává formátování. Po odstranění odpovědí zavolejte `annotator.update()` pro aktualizaci formátování a `annotator.save()` pro uložení změn.
+
+**Q: Můžu vrátit operace odstraňování anotací?**  
+A: Přímé vrácení neexistuje. Vždy pracujte s kopií nebo implementujte verzování ve své aplikaci pro podporu rollbacku.
+
+**Q: Jak řešit souběžný přístup ke stejnému dokumentu?**  
+A: Implementujte mechanismy zamykání souborů na úrovni aplikace. GroupDocs.Annotation neposkytuje vestavěnou kontrolu souběžnosti.
+
+**Q: Jaký je rozdíl mezi odstraňováním odpovědí a odstraňováním celých anotací?**  
+A: Odstranění odpovědí zachová hlavní anotaci (např. poznámku) a vymaže její diskusní vlákno. Odstranění anotace smaže celý objekt, včetně všech odpovědí.
+
+**Q: Jak extrahovat statistiky anotací (počet, autoři, data)?**  
+A: Projděte kolekci anotací a agregujte vlastnosti, například:  
+```java
+Map<String, Integer> authorCounts = annotations.stream()
+    .collect(Collectors.groupingBy(
+        a -> a.getAuthor(), 
+        Collectors.summingInt(a -> 1)
+    ));
+```
+
+**Q: Existuje způsob, jak exportovat anotace do externích formátů (JSON, XML)?**  
+A: I když není vestavěná, můžete si sami serializovat objekty `AnnotationBase` nebo použít funkce knihovny pro extrakci metadat k vytvoření vlastních exportérů.
+
+**Q: Jak zacházet s poškozenými nebo částečně poškozenými dokumenty?**  
+A: Implementujte obranné programování s komplexním zacházením s výjimkami. Knihovna vyhazuje specifické výjimky pro různé typy poškození – zachyťte je a poskytněte uživatelsky přívětivou odezvu.
+
+## Další zdroje
+- **Dokumentace**: [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- **Reference API**: [Complete Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- **Středisko ke stažení**: [Latest Library Releases](https://releases.groupdocs.com/annotation/java/)
+- **Komerní licence**: [Purchase Options](https://purchase.groupdocs.com/buy)
+- **Bezplatná zkušební verze**: [Start Your Evaluation](https://releases.groupdocs.com/annotation/java/)
+- **Vývojová licence**: [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- **Komunitní podpora**: [Developer Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Poslední aktualizace:** 2025-12-19  
+**Testováno s:** GroupDocs.Annotation 25.2 (Java)  
+**Autor:** GroupDocs
