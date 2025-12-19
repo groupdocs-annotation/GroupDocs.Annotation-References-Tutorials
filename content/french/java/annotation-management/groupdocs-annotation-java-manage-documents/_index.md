@@ -1,36 +1,57 @@
 ---
-"date": "2025-05-06"
-"description": "Apprenez à gérer efficacement les annotations en Java avec GroupDocs.Annotation. Ce guide couvre le chargement, la suppression et l'optimisation des flux de travail documentaires."
-"title": "Guide complet de la gestion des annotations en Java avec GroupDocs.Annotation"
-"url": "/fr/java/annotation-management/groupdocs-annotation-java-manage-documents/"
+categories:
+- Java Development
+date: '2025-12-19'
+description: Maîtrisez le chargement des annotations PDF en Java avec GroupDocs.Annotation.
+  Apprenez à charger, supprimer et optimiser les annotations de documents en Java
+  dans des scénarios réels.
+keywords: Java annotation management, document annotation Java, PDF annotation management
+  Java, GroupDocs annotation tutorial, manage annotations Java documents
+lastmod: '2025-12-19'
+linktitle: Load PDF Annotations Java
+tags:
+- java
+- annotations
+- document-processing
+- groupdocs
+- pdf-management
+title: 'Charger les annotations PDF Java : Guide complet de gestion des annotations
+  GroupDocs'
 type: docs
-"weight": 1
+url: /fr/java/annotation-management/groupdocs-annotation-java-manage-documents/
+weight: 1
 ---
 
-# Maîtriser la gestion des annotations en Java avec GroupDocs.Annotation
+# Charger les annotations PDF Java : Guide complet de gestion des annotations GroupDocs
 
-Dans l'environnement numérique actuel, une gestion efficace des documents est essentielle pour les entreprises de secteurs tels que le droit, l'éducation, etc. Ce tutoriel vous guidera dans le chargement et la suppression d'annotations de documents grâce à la puissante bibliothèque Java GroupDocs.Annotation. Découvrez comment ces fonctionnalités optimisent les flux de travail et améliorent la productivité.
+Vous avez déjà eu du mal à gérer les annotations de documents dans vos applications Java ? Vous n'êtes pas seul. Que vous construisiez un système de révision de documents, une plateforme éducative ou un outil d'édition collaborative, **loading pdf annotations java** efficacement peut faire ou défaire l'expérience utilisateur. Dans ce guide, nous passerons en revue tout ce que vous devez savoir — du chargement des annotations au nettoyage des réponses indésirables — afin que vous puissiez offrir dès aujourd'hui des fonctionnalités d'annotation rapides et fiables.
 
-## Ce que vous apprendrez :
-- Comment charger des annotations à partir d'un document PDF à l'aide de GroupDocs.Annotation.
-- Étapes pour supprimer des réponses spécifiques des annotations en Java.
-- Applications pratiques de ces fonctionnalités dans des scénarios réels.
-- Considérations de performance pour une utilisation optimale de la bibliothèque.
+## Réponses rapides
+- **Quelle bibliothèque me permet de charger les annotations pdf java ?** GroupDocs.Annotation for Java.  
+- **Ai-je besoin d'une licence pour l'essayer ?** Un essai gratuit est disponible ; une licence de production est requise pour une utilisation commerciale.  
+- **Quelle version de Java est prise en charge ?** JDK 8 ou plus récent.  
+- **Puis-je traiter de gros PDF sans erreurs OOM ?** Oui — utilisez les options de streaming et une libération appropriée des ressources.  
+- **Comment supprimer uniquement des réponses spécifiques ?** Itérez la liste des réponses, filtrez par utilisateur ou contenu, et mettez à jour le document.
 
-Commençons par les prérequis avant de plonger dans la mise en œuvre.
+## Qu'est-ce que le chargement d'annotations pdf java ?
+Charger les annotations PDF en Java signifie ouvrir un fichier PDF, lire ses objets de commentaire intégrés (surlignages, notes, tampons, réponses, etc.), et les exposer sous forme d'objets Java que vous pouvez inspecter, modifier ou exporter. Cette étape constitue la base de tout flux de travail axé sur les annotations, tel que les pistes d'audit, les revues collaboratives ou l'extraction de données.
 
-### Prérequis
+## Pourquoi utiliser GroupDocs.Annotation pour Java ?
+GroupDocs.Annotation fournit une API unifiée qui fonctionne avec les PDF, Word, Excel, PowerPoint, et plus encore. Elle gère les structures d'annotation complexes, offre un contrôle fin de l'utilisation de la mémoire, et inclut un support intégré pour les fonctionnalités de sécurité telles que les fichiers protégés par mot de passe.
 
-Avant de commencer, assurez-vous d’avoir la configuration suivante :
+## Prérequis et configuration de l'environnement
 
-- **Bibliothèque d'annotations GroupDocs**: Incluez cette bibliothèque dans votre projet Java. Nous recommandons l'utilisation de Maven pour une gestion simplifiée des dépendances.
-- **Environnement de développement Java**Assurez-vous qu'une version JDK compatible est installée et qu'un IDE comme IntelliJ IDEA ou Eclipse est configuré.
-- **Connaissances de base en Java**:Une connaissance des concepts de programmation Java sera utile.
+### Ce dont vous avez besoin
+- **Bibliothèque GroupDocs.Annotation** – la dépendance principale pour la gestion des annotations  
+- **Environnement de développement Java** – JDK 8+ et un IDE (IntelliJ IDEA ou Eclipse)  
+- **Maven ou Gradle** – pour la gestion des dépendances  
+- **Documents PDF d'exemple** contenant des annotations existantes pour les tests  
 
 ### Configuration de GroupDocs.Annotation pour Java
 
-#### Configuration de Maven
-Pour intégrer GroupDocs.Annotation dans votre projet, ajoutez la configuration suivante à votre `pom.xml` déposer:
+#### Maven Configuration (Recommended)
+
+Ajoutez cette configuration à votre fichier `pom.xml` pour une gestion transparente des dépendances :
 
 ```xml
 <repositories>
@@ -49,33 +70,33 @@ Pour intégrer GroupDocs.Annotation dans votre projet, ajoutez la configuration 
 </dependencies>
 ```
 
-#### Acquisition de licence
-GroupDocs propose un essai gratuit pour tester les fonctionnalités de la bibliothèque. Vous pouvez acquérir une licence temporaire pour des tests plus approfondis ou acheter une licence complète si vous décidez de l'intégrer à votre environnement de production.
+**Astuce** : Utilisez toujours la dernière version stable pour les mises à jour de sécurité et les améliorations de performance.
 
-### Guide de mise en œuvre
+#### License Acquisition Strategy
+- **Essai gratuit** – parfait pour l'évaluation et les petits projets  
+- **Licence temporaire** – idéale pour les phases de développement et de test  
+- **Licence de production** – requise pour les applications commerciales  
 
-Dans cette section, nous allons décomposer les fonctionnalités en étapes gérables.
+Commencez avec l'essai gratuit pour valider que la bibliothèque répond à vos exigences **load pdf annotations java**.
 
-#### Fonctionnalité 1 : Charger des annotations à partir d'un document
+## Comment charger les annotations pdf java avec GroupDocs.Annotation
 
-Cette fonctionnalité vous permet d'accéder et d'afficher les annotations dans un document PDF, fournissant ainsi un aperçu des efforts de collaboration sur le document.
+### Comprendre le processus de chargement des annotations
+Lorsque vous chargez les annotations d'un document, vous accédez aux métadonnées qui décrivent les éléments collaboratifs — commentaires, surlignages, tampons et réponses. Ce processus est crucial pour :
+- **Pistes d'audit** – suivre qui a effectué quels changements et quand  
+- **Insights de collaboration** – comprendre les schémas de révision  
+- **Extraction de données** – extraire les données d'annotation pour les rapports ou l'analyse  
 
-##### Processus étape par étape :
+### Implémentation étape par étape
 
-**1. Importer les classes nécessaires**
-
-Commencez par importer les classes requises pour la gestion des annotations :
-
+#### 1. Import Required Classes
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.LoadOptions;
 import java.util.List;
 ```
 
-**2. Définir le chemin du document et charger les annotations**
-
-Configurez le chemin de votre document et initialisez le `LoadOptions` pour charger les annotations :
-
+#### 2. Load Annotations from Your Document
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 LoadOptions loadOptions = new LoadOptions();
@@ -84,27 +105,31 @@ List<AnnotationBase> annotations = annotator.get();
 annotator.dispose();
 ```
 
-- **Pourquoi** cette approche ? En utilisant `Annotator` offre un moyen transparent d'interagir avec les métadonnées et les annotations du document.
+**Que se passe-t-il ?**  
+- `LoadOptions` vous permet de configurer le comportement du chargement (par ex., les mots de passe).  
+- `Annotator` ouvre la couche d'annotation du PDF.  
+- `annotator.get()` renvoie chaque annotation sous forme d'une `List<AnnotationBase>`.  
+- `annotator.dispose()` libère les ressources natives — essentiel pour les gros fichiers.
 
-#### Fonctionnalité 2 : Supprimer des réponses spécifiques des annotations
+#### When to Use This Feature
+- Construire un **tableau de bord de révision de documents** qui répertorie chaque commentaire.  
+- Exporter les données d'annotation pour les **rapports de conformité**.  
+- Migrer les annotations entre formats (PDF → DOCX, etc.).
 
-Cette fonctionnalité vous permet de supprimer des réponses spécifiques par nom d'utilisateur, contribuant ainsi à maintenir la clarté dans les documents collaboratifs.
+## Fonctionnalité avancée : Suppression de réponses d'annotation spécifiques
 
-##### Processus étape par étape :
+### Le cas d'usage pour la gestion des réponses
+Dans les environnements collaboratifs, les fils d'annotation peuvent devenir bruyants. La suppression sélective des réponses maintient les discussions ciblées tout en préservant le commentaire original.
 
-**1. Configurer les chemins d'accès aux documents**
+### Guide d'implémentation
 
-Définissez les chemins pour les fichiers d’entrée et de sortie :
-
+#### 1. Setup Document Paths
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/RemovedRepliesOutput.pdf";
 ```
 
-**2. Charger les annotations et filtrer les réponses**
-
-Parcourez les annotations pour rechercher et supprimer les réponses d'un utilisateur spécifique :
-
+#### 2. Filter and Remove Replies
 ```java
 LoadOptions loadOptions = new LoadOptions();
 final Annotator annotator = new Annotator(inputFilePath, loadOptions);
@@ -121,42 +146,289 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-- **Pourquoi** Cette méthode ? Supprimer les réponses inutiles peut contribuer à rationaliser la communication et à se concentrer sur les commentaires pertinents.
+**Explication**  
+- La boucle parcourt les réponses de la première annotation.  
+- Lorsque l'auteur de la réponse correspond à `"Tom"`, elle est supprimée.  
+- `annotator.update()` écrit la collection modifiée dans le document.  
+- `annotator.save()` persiste le PDF nettoyé.
 
-### Applications pratiques
+### Advanced Reply Filtering Techniques
+```java
+// Remove replies older than 30 days
+Date cutoffDate = new Date(System.currentTimeMillis() - (30L * 24 * 60 * 60 * 1000));
 
-1. **Révision de documents juridiques**: Chargez rapidement des annotations pour examiner les commentaires de plusieurs réviseurs.
-2. **Matériel pédagogique**:Gérez efficacement les commentaires des étudiants sur les documents partagés.
-3. **Édition collaborative**: Assurez-vous que seules les réponses pertinentes sont affichées, améliorant ainsi la clarté des sessions d'édition collaborative.
+// Remove replies based on content patterns
+if (reply.getText().toLowerCase().contains("draft") || reply.getText().toLowerCase().contains("test")) {
+    // Remove test/draft replies
+}
 
-### Considérations relatives aux performances
+// Remove replies from specific user roles
+if (reply.getUser().getRole().equals("temporary_reviewer")) {
+    // Clean up temporary reviewer comments
+}
+```
 
-- **Optimiser le chargement**:Utilisez des structures de données efficaces et minimisez les opérations inutiles lors du chargement des annotations.
-- **Gestion de la mémoire**: Jeter `Annotator` instances rapidement pour libérer des ressources.
-- **Traitement par lots**:Pour les documents volumineux, envisagez de traiter les annotations par lots pour réduire l'utilisation de la mémoire.
+## Scénarios d'application réels
 
-### Conclusion
+### Scénario 1 : Plateforme de révision de documents juridiques
+**Défi** – Les cabinets d'avocats doivent purger les commentaires préliminaires des examinateurs avant de livrer le fichier final.  
+**Solution** – Traiter les documents par lots et supprimer les réponses des utilisateurs « temporary_reviewer » :
 
-En maîtrisant la bibliothèque GroupDocs.Annotation, vous pouvez améliorer considérablement vos capacités de gestion documentaire. Ce tutoriel vous a permis d'acquérir les connaissances nécessaires pour charger et gérer efficacement les annotations. Vous découvrirez ensuite les options de personnalisation disponibles dans la bibliothèque pour l'adapter à vos besoins spécifiques.
+```java
+// Process multiple documents
+String[] documentPaths = getDocumentBatch();
+for (String docPath : documentPaths) {
+    cleanupPreliminaryReviews(docPath);
+}
+```
 
-### Section FAQ
+### Scénario 2 : Gestion de contenu éducatif
+**Défi** – Les annotations des étudiants encombrent la vue de l'instructeur à la fin du semestre.  
+**Solution** – Conserver les retours de l'instructeur, archiver les notes des étudiants et générer des rapports d'engagement.
 
-1. **Comment gérer plusieurs documents ?**
-   - Parcourez chaque chemin de document et appliquez la même logique de gestion des annotations.
-2. **Puis-je utiliser GroupDocs.Annotation avec d’autres formats de fichiers ?**
-   - Oui, GroupDocs prend en charge une variété de formats de documents au-delà des PDF.
-3. **Que faire si je rencontre des erreurs lors du chargement des annotations ?**
-   - Assurez-vous que les chemins d’accès à vos documents sont corrects et que vous disposez des autorisations nécessaires pour accéder aux fichiers.
-4. **Existe-t-il un support pour les appareils mobiles ?**
-   - Bien que principalement conçu pour les applications de bureau, GroupDocs.Annotation peut être intégré dans des services Web accessibles sur des appareils mobiles.
-5. **Comment mettre à jour les annotations dans un environnement collaboratif ?**
-   - Utilisez des stratégies de contrôle de version et assurez-vous que tous les collaborateurs disposent de versions de documents synchronisées.
+### Scénario 3 : Systèmes de conformité d'entreprise
+**Défi** – Les discussions internes sensibles doivent être supprimées des PDF destinés aux clients.  
+**Solution** – Appliquer des filtres basés sur les rôles et journaliser chaque action de suppression.
 
-### Ressources
-- **Documentation**: [Documentation Java d'annotation GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- **Référence de l'API**: [Référence de l'API GroupDocs](https://reference.groupdocs.com/annotation/java/)
-- **Télécharger**: [Versions de GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **Achat et licence**: [Acheter GroupDocs](https://purchase.groupdocs.com/buy)
-- **Essai gratuit**: [Essai gratuit de GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **Licence temporaire**: [Obtenir un permis temporaire](https://purchase.groupdocs.com/temporary-license/)
-- **Forum d'assistance**: [Assistance GroupDocs](https://forum.groupdocs.com/c/annotation/)
+## Meilleures pratiques de performance
+
+### Stratégies de gestion de la mémoire
+```java
+// Always Dispose Resources
+try (Annotator annotator = new Annotator(inputFilePath)) {
+    // Your annotation processing logic
+} // Automatic resource cleanup
+```
+
+```java
+// Process Annotations in Batches
+int batchSize = 100;
+for (int i = 0; i < annotations.size(); i += batchSize) {
+    List<AnnotationBase> batch = annotations.subList(i, Math.min(i + batchSize, annotations.size()));
+    processBatch(batch);
+}
+```
+
+```java
+// Use Streaming for Large Files
+LoadOptions options = new LoadOptions();
+options.setPreloadPageCount(1); // Load one page at a time
+```
+
+### Performance Monitoring
+Suivez ces métriques en production :
+- **Utilisation de la mémoire** – consommation du tas pendant le traitement des annotations  
+- **Temps de traitement** – durée des étapes de chargement et de filtrage  
+- **Impact de la taille du document** – comment la taille du fichier influence la latence  
+- **Opérations concurrentes** – réponse sous des requêtes simultanées  
+
+## Problèmes courants et dépannage
+
+### Problème 1 : Erreurs « Document Cannot Be Loaded »
+```java
+try {
+    Annotator annotator = new Annotator(inputFilePath);
+    // Success
+} catch (Exception e) {
+    if (e.getMessage().contains("path")) {
+        System.err.println("Check file path: " + inputFilePath);
+    } else if (e.getMessage().contains("permission")) {
+        System.err.println("Verify file permissions");
+    }
+}
+```
+
+### Problème 2 : Fuites de mémoire dans les applications à long terme
+```java
+// Use try-with-resources
+try (Annotator annotator = new Annotator(inputFilePath)) {
+    // Process annotations
+} // Automatic cleanup
+```
+
+### Problème 3 : Performances lentes sur de gros documents
+```java
+// Limit annotation loading scope
+LoadOptions options = new LoadOptions();
+options.setLoadOnlyAnnotatedPages(true);
+```
+
+```java
+// Pagination for large annotation sets
+int pageSize = 50;
+for (int page = 0; page < totalPages; page++) {
+    processAnnotationPage(annotations, page, pageSize);
+}
+```
+
+### Problème 4 : IDs d'annotation incohérents après suppression
+```java
+// Refresh annotation collections after modifications
+annotator.update(annotations);
+annotations = annotator.get(); // Refresh the collection
+```
+
+## Considérations de sécurité
+
+### Input Validation
+```java
+// Validate file paths and user inputs
+if (!isValidFilePath(inputFilePath)) {
+    throw new IllegalArgumentException("Invalid file path");
+}
+
+if (!hasPermissionToModify(userId, documentId)) {
+    throw new SecurityException("Insufficient permissions");
+}
+```
+
+### Audit Logging
+```java
+// Log annotation operations for compliance
+auditLogger.info("User {} removed {} replies from document {}", 
+    userId, removedCount, documentId);
+```
+
+### Access Control
+Implémentez des permissions basées sur les rôles :
+- **Lecture seule** – voir uniquement les annotations  
+- **Contributeur** – ajouter/modifier ses propres annotations  
+- **Modérateur** – supprimer toute annotation ou réponse  
+- **Administrateur** – contrôle total  
+
+## Conseils avancés pour les systèmes de production
+
+### 1. Mettre en œuvre des stratégies de mise en cache
+```java
+// Simple annotation cache
+Map<String, List<AnnotationBase>> annotationCache = new ConcurrentHashMap<>();
+
+public List<AnnotationBase> getCachedAnnotations(String documentPath) {
+    return annotationCache.computeIfAbsent(documentPath, path -> {
+        try (Annotator annotator = new Annotator(path)) {
+            return annotator.get();
+        }
+    });
+}
+```
+
+### 2. Traitement asynchrone
+```java
+CompletableFuture<Void> processDocumentAsync(String documentPath) {
+    return CompletableFuture.runAsync(() -> {
+        processAnnotations(documentPath);
+    });
+}
+```
+
+### 3. Mécanismes de récupération d'erreurs
+```java
+public boolean processWithRetry(String documentPath, int maxRetries) {
+    for (int attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            processAnnotations(documentPath);
+            return true;
+        } catch (Exception e) {
+            if (attempt == maxRetries) {
+                logger.error("Failed to process after {} attempts", maxRetries, e);
+                return false;
+            }
+            try {
+                Thread.sleep(1000 * attempt); // Exponential backoff
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+                return false;
+            }
+        }
+    }
+    return false;
+}
+```
+
+## Tester votre système de gestion d'annotations
+
+### Unit Testing Framework
+```java
+@Test
+public void testAnnotationLoading() {
+    String testDocument = "test-documents/sample-with-annotations.pdf";
+    
+    try (Annotator annotator = new Annotator(testDocument)) {
+        List<AnnotationBase> annotations = annotator.get();
+        
+        assertNotNull(annotations);
+        assertTrue(annotations.size() > 0);
+        
+        // Verify annotation properties
+        AnnotationBase firstAnnotation = annotations.get(0);
+        assertNotNull(firstAnnotation.getAuthor());
+        assertNotNull(firstAnnotation.getCreatedOn());
+    }
+}
+```
+
+### Integration Testing
+1. Charger des documents de test avec un nombre d'annotations connu.  
+2. Vérifier que la logique de suppression des réponses fonctionne comme prévu.  
+3. Mesurer la consommation de mémoire sous charge.  
+4. Valider que les PDF de sortie conservent l'intégrité visuelle.
+
+## FAQ
+
+**Q : Comment gérer les fichiers PDF protégés par mot de passe ?**  
+R : Utilisez `LoadOptions` pour spécifier le mot de passe du document :  
+```java
+LoadOptions options = new LoadOptions();
+options.setPassword("your-document-password");
+Annotator annotator = new Annotator(filePath, options);
+```
+
+**Q : Puis-je traiter plusieurs formats de documents au-delà du PDF ?**  
+R : Oui ! GroupDocs.Annotation prend en charge Word, Excel, PowerPoint, et de nombreux autres formats. L'API reste cohérente entre les formats.
+
+**Q : Quelle est la taille maximale de document que la bibliothèque peut gérer ?**  
+R : Il n'y a pas de limite stricte, mais les performances dépendent de la mémoire disponible. Pour les documents de plus de 100 Mo, envisagez des approches de streaming et le traitement par lots.
+
+**Q : Comment préserver le formatage des annotations lors de la suppression des réponses ?**  
+R : La bibliothèque maintient automatiquement le formatage. Après la suppression des réponses, appelez `annotator.update()` pour rafraîchir le formatage et `annotator.save()` pour persister les modifications.
+
+**Q : Puis-je annuler les opérations de suppression d'annotation ?**  
+R : Aucun annulation directe n'existe. Travaillez toujours sur une copie ou implémentez la versionnage dans votre application pour prendre en charge les retours en arrière.
+
+**Q : Comment gérer l'accès concurrent au même document ?**  
+R : Mettez en œuvre des mécanismes de verrouillage de fichiers au niveau de l'application. GroupDocs.Annotation ne fournit pas de contrôle de concurrence intégré.
+
+**Q : Quelle est la différence entre la suppression des réponses et la suppression d'annotations entières ?**  
+R : Supprimer les réponses conserve l'annotation principale (par ex., une note) tout en effaçant son fil de discussion. Supprimer l'annotation supprime l'objet complet, y compris toutes les réponses.
+
+**Q : Comment extraire les statistiques d'annotation (nombre, auteurs, dates) ?**  
+R : Parcourez la collection d'annotations et agrégerez les propriétés, par exemple :  
+```java
+Map<String, Integer> authorCounts = annotations.stream()
+    .collect(Collectors.groupingBy(
+        a -> a.getAuthor(), 
+        Collectors.summingInt(a -> 1)
+    ));
+```
+
+**Q : Existe-t-il un moyen d'exporter les annotations vers des formats externes (JSON, XML) ?**  
+R : Bien que ce ne soit pas intégré, vous pouvez sérialiser vous‑même les objets `AnnotationBase` ou utiliser les fonctionnalités d'extraction de métadonnées de la bibliothèque pour créer des exportateurs personnalisés.
+
+**Q : Comment gérer les documents corrompus ou partiellement endommagés ?**  
+R : Mettez en œuvre une programmation défensive avec une gestion complète des exceptions. La bibliothèque lève des exceptions spécifiques selon le type de corruption — capturez‑les et fournissez un retour utilisateur convivial.
+
+## Ressources supplémentaires
+
+- **Documentation** : [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- **API Reference** : [Complete Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- **Download Center** : [Latest Library Releases](https://releases.groupdocs.com/annotation/java/)
+- **Commercial Licensing** : [Purchase Options](https://purchase.groupdocs.com/buy)
+- **Free Trial** : [Start Your Evaluation](https://releases.groupdocs.com/annotation/java/)
+- **Development License** : [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- **Community Support** : [Developer Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-19  
+**Tested With:** GroupDocs.Annotation 25.2 (Java)  
+**Author:** GroupDocs
