@@ -1,49 +1,88 @@
 ---
-"date": "2025-05-06"
-"description": "تعلم كيفية أتمتة استخراج التعليقات التوضيحية من ملفات PDF باستخدام GroupDocs.Annotation for Java، مما يوفر الوقت ويقلل الأخطاء."
-"title": "أتمتة استخراج التعليقات التوضيحية في ملفات PDF باستخدام GroupDocs لـ Java - دليل شامل"
-"url": "/ar/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/"
+categories:
+- Java Development
+date: '2025-12-21'
+description: تعلم كيفية استخراج تعليقات PDF باستخدام Java عبر GroupDocs Java API.
+  يتضمن إرشادات تعليقات PDF في Spring Boot، كود خطوة بخطوة، استكشاف الأخطاء وإصلاحها،
+  ونصائح الأداء.
+keywords: PDF annotation extraction Java, GroupDocs Java tutorial, automate PDF processing,
+  Java document annotation, extract PDF comments Java
+lastmod: '2025-12-21'
+linktitle: PDF Annotation Extraction Java Guide
+tags:
+- PDF processing
+- GroupDocs
+- document automation
+- annotation extraction
+title: استخراج تعليقات PDF في Java - دليل GroupDocs الكامل
 type: docs
-"weight": 1
+url: /ar/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/
+weight: 1
 ---
 
-# أتمتة استخراج التعليقات التوضيحية لملفات PDF باستخدام GroupDocs لـ Java
+# استخراج تعليقات PDF في Java: دليل GroupDocs الكامل
 
-## مقدمة
+## المقدمة
 
-هل تواجه صعوبة في إدارة وتحليل التعليقات التوضيحية في مستندات PDF بكفاءة؟ سواءً كان استخراج التعليقات أو التمييزات أو أنواع أخرى من العلامات، فإن القيام بذلك يدويًا قد يكون مرهقًا وعرضةً للأخطاء. بفضل قوة GroupDocs.Annotation لجافا، يمكنك أتمتة استخراج التعليقات التوضيحية، مما يوفر الوقت ويقلل من الأخطاء البشرية. سيرشدك هذا الدليل الشامل إلى كيفية استخدام GroupDocs.Annotation لاستخراج التعليقات التوضيحية من مستنداتك بسلاسة.
+هل تواجه صعوبة في استخراج تعليقات PDF يدويًا؟ لست وحدك. سواء كنت تتعامل مع تعليقات المراجعين، النص المميز، أو علامات توضيحية معقدة في تطبيقات Java الخاصة بك، فإن معالجة التعليقات يدويًا تستغرق وقتًا طويلاً وعرضة للأخطاء.
 
-**ما سوف تتعلمه:**
-- كيفية إعداد GroupDocs.Annotation لـJava.
-- عملية خطوة بخطوة لاستخراج التعليقات التوضيحية من مستندات PDF.
-- أفضل الممارسات لإدارة البيانات المستخرجة.
-- دمج هذه الميزة في مشاريع أكبر.
+**GroupDocs.Annotation for Java** يحول هذه العملية المرهقة إلى بضع أسطر من الشيفرة، مما يتيح لك **استخراج تعليقات PDF في Java** بسرعة وموثوقية. في هذا الدليل الشامل، ستتعلم كيفية إعداد المكتبة، سحب التعليقات من ملفات PDF، التعامل مع الحالات الخاصة، وتحسين الأداء لأحمال الإنتاج.
 
-هل أنت مستعد لتحسين قدراتك في التعامل مع المستندات؟ لنستعرض المتطلبات الأساسية قبل البدء بتطبيق الحل!
+**ما ستتمكن من إتقانه بنهاية الدليل:**
+- إعداد كامل لـ GroupDocs.Annotation لمشاريع Java  
+- تنفيذ خطوة‑بخطوة لـ **استخراج تعليقات PDF في Java**  
+- استكشاف الأخطاء الشائعة (وحلولها)  
+- تقنيات تحسين الأداء للمستندات الكبيرة  
+- أنماط دمج واقعية، بما في ذلك **spring boot pdf annotations**  
 
-## المتطلبات الأساسية
+هل أنت مستعد لتبسيط سير عمل معالجة المستندات؟ لنبدأ بالمتطلبات الأساسية.
 
-قبل المتابعة، تأكد من أن لديك ما يلي:
+## إجابات سريعة
+- **ماذا يعني “استخراج تعليقات PDF في Java”؟** هو عملية قراءة التعليقات، التظليل، وغيرها من العلامات من ملف PDF برمجيًا باستخدام Java.  
+- **هل أحتاج إلى ترخيص؟** النسخة التجريبية المجانية تكفي للتطوير؛ الترخيص التجاري مطلوب للإنتاج.  
+- **هل يمكنني استخدامه مع Spring Boot؟** نعم – راجع قسم “تكامل Spring Boot مع تعليقات PDF”.  
+- **ما نسخة Java المطلوبة؟** الحد الأدنى JDK 8؛ يُنصح بـ JDK 11+ لأداء أفضل.  
+- **هل هو سريع للمستندات الكبيرة؟** مع المعالجة المتدفقة والدُفعات، يمكنك التعامل مع ملفات تتجاوز 100 صفحة بكفاءة.
 
-1. **المكتبات والتبعيات المطلوبة:**
-   - مجموعة تطوير Java (JDK) الإصدار 8 أو أعلى.
-   - Maven لإدارة التبعيات.
+## ما هو استخراج تعليقات PDF في Java؟
+استخراج تعليقات PDF في Java يعني استخدام API لمسح ملف PDF، تحديد كل كائن تعليقي (تعليقات، تظليل، طوابع، إلخ)، واسترجاع خصائصه—مثل النوع، المحتوى، رقم الصفحة، والمؤلف. يتيح ذلك أتمتة سير عمل المراجعة، التحليلات، أو نقل العلامات إلى أنظمة أخرى.
 
-2. **متطلبات إعداد البيئة:**
-   - بيئة تطوير متكاملة (IDE) مناسبة، مثل IntelliJ IDEA أو Eclipse.
-   - الوصول إلى بيئة الخادم حيث يمكنك نشر تطبيقك، إذا لزم الأمر.
+## لماذا نستخدم GroupDocs.Annotation for Java؟
+- **دعم غني لجميع أنواع التعليقات** في ملفات PDF.  
+- **API ثابت** يعمل بنفس الطريقة مع Word وExcel وPowerPoint وPDF.  
+- **أداء على مستوى المؤسسات** مع معالجة متدفقة مدمجة للحفاظ على استهلاك الذاكرة منخفضًا.  
+- **توثيق شامل** ودعم تجاري.
 
-3. **المتطلبات المعرفية:**
-   - فهم أساسي لمفاهيم برمجة جافا.
-   - المعرفة بأداة بناء Maven وإدارة التبعيات.
+## المتطلبات المسبقة وإعداد البيئة
 
-## إعداد GroupDocs.Annotation لـ Java
+قبل الغوص في استخراج تعليقات PDF، تأكد من أن بيئة التطوير تلبي هذه المتطلبات:
 
-للبدء في استخراج التعليقات التوضيحية باستخدام GroupDocs.Annotation لـ Java، اتبع خطوات الإعداد التالية:
+### المتطلبات الأساسية
 
-### التثبيت عبر Maven
+**بيئة التطوير:**
+- مجموعة تطوير جافا (JDK) 8 أو أعلى (يوصى بـ JDK 11+ لأداء أفضل)  
+- Maven 3.6+ لإدارة الاعتمادات  
+- بيئة تطوير متكاملة من اختيارك (IntelliJ IDEA، Eclipse، أو VS Code)
 
-أضف التكوين التالي إلى ملفك `pom.xml` ملف لتضمين مكتبة GroupDocs.Annotation في مشروعك:
+**المتطلبات المعرفية:**
+- مفاهيم برمجة Java الأساسية  
+- فهم بنية مشروع Maven  
+- الإلمام بنمط `try‑with‑resources` (سنستخدمه على نطاق واسع)
+
+**متطلبات النظام:**
+- الحد الأدنى 2 GB RAM (يوصى بـ 4 GB+ لمعالجة ملفات PDF الكبيرة)  
+- مساحة كافية على القرص للمعالجة المؤقتة للملفات
+
+### لماذا هذه المتطلبات مهمة
+إصدار JDK يؤثر لأن GroupDocs.Annotation يستفيد من ميزات Java الحديثة لإدارة الذاكرة بشكل أفضل. Maven يبسط إدارة الاعتمادات، خاصةً عند التعامل مع مستودعات GroupDocs.
+
+## إعداد GroupDocs.Annotation for Java
+
+إعداد GroupDocs.Annotation في مشروعك أمر بسيط، لكن هناك بعض التفاصيل التي تستحق الانتباه.
+
+### تكوين Maven
+
+أضف هذا التكوين إلى ملف `pom.xml` — لاحظ عنوان المستودع المحدد الذي يغفل عنه كثير من المطورين:
 
 ```xml
 <repositories>
@@ -62,139 +101,313 @@ type: docs
 </dependencies>
 ```
 
-### خطوات الحصول على الترخيص
+**نصيحة احترافية:** تحقق دائمًا من أحدث نسخة على صفحة إصدارات GroupDocs. النسخة 25.2 تتضمن تحسينات أداء مخصصة لمعالجة التعليقات.
 
-1. **نسخة تجريبية مجانية:** قم بالوصول إلى ترخيص مؤقت لتقييم الإمكانات الكاملة لـ GroupDocs.Annotation.
-2. **رخصة مؤقتة:** احصل على هذا لأغراض التقييم الموسع.
-3. **شراء:** للاستخدام الإنتاجي، قم بشراء ترخيص تجاري.
+### خيارات إعداد الترخيص
 
-### التهيئة والإعداد الأساسي
+**للتطوير والاختبار:**
+1. **نسخة تجريبية مجانية:** مثالية للتقييم — توفر جميع الوظائف.  
+2. **ترخيص مؤقت:** يطيل فترة التقييم لاختبار شامل.  
+3. **ترخيص تجاري:** مطلوب للنشر في بيئة الإنتاج.
 
-بعد إعداد مشروع Maven الخاص بك، قم بتهيئة `Annotator` كائن لبدء معالجة التعليقات التوضيحية في تطبيق Java الخاص بك:
+**إعداد الترخيص بسرعة:**
+
+```java
+// For temporary or commercial licenses
+License license = new License();
+license.setLicense("path/to/your/license.lic");
+```
+
+### تهيئة المشروع
+
+إليك الإعداد الأساسي الذي ستبني عليه باقي الشيفرة:
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
     final Annotator annotator = new Annotator(inputStream);
-    // متابعة استخراج التعليقات التوضيحية...
+    // Your annotation extraction logic goes here
 } catch (IOException e) {
     e.printStackTrace();
 }
 ```
 
-## دليل التنفيذ
+**لماذا هذا النمط؟** يضمن `try‑with‑resources` تنظيفًا صحيحًا، مما يمنع تسرب الذاكرة الشائع عند معالجة مستندات متعددة.
 
-الآن، دعنا نستعرض عملية استخراج التعليقات التوضيحية من مستند PDF باستخدام GroupDocs.Annotation for Java.
+## دليل التنفيذ خطوة‑بخطوة
 
-### فتح وقراءة المستندات
+الآن ننتقل إلى الجزء الرئيسي — استخراج التعليقات من مستندات PDF. سنقسم العملية إلى خطوات قابلة للهضم.
 
-**ملخص:**
-ابدأ بتحميل مستندك إلى `Annotator` الكائن للوصول إلى تعليقاته التوضيحية. هذا ضروري لأي عمليات لاحقة على بيانات تعريف المستند أو محتواه.
+### الخطوة 1: تحميل المستند والتحقق منه
 
-#### الخطوة 1: افتح المستند
+**فتح مستند PDF الخاص بك:**
+
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
-    // تهيئة المُعلق باستخدام مجرى إدخال
     final Annotator annotator = new Annotator(inputStream);
+    
+    // Optional: Validate document before processing
+    if (annotator.get().isEmpty()) {
+        System.out.println("No annotations found in document");
+        return;
+    }
 } catch (IOException e) {
-    e.printStackTrace();
+    System.err.println("Error opening document: " + e.getMessage());
 }
 ```
-**توضيح:**  
-تتضمن هذه الخطوة فتح ملف كملف `InputStream`. وهذا أمر بالغ الأهمية لأن `Annotator` تعمل الكائنات على معالجة البيانات من التدفقات، مما يضمن استخدام الذاكرة بكفاءة.
 
-### استرجاع التعليقات التوضيحية
+**ما الذي يحدث هنا؟** ننشئ `InputStream` من ملف PDF ونُهيئ كائن `Annotator`. خطوة التحقق الاختيارية توفر وقت المعالجة إذا كان المستند لا يحتوي على تعليقات.
 
-**ملخص:**
-بمجرد فتح المستند، يمكنك استرداد جميع التعليقات التوضيحية للمعالجة أو التحليل.
+### الخطوة 2: استرجاع التعليقات
 
-#### الخطوة 2: استرداد جميع التعليقات التوضيحية
+**استخراج جميع التعليقات:**
+
 ```java
 List<AnnotationBase> annotations = annotator.get();
 ```
 
-**توضيح:**
-تعيد هذه الطريقة قائمة من `AnnotationBase` الكائنات التي تمثل كل تعليق توضيحي في المستند. `get()` تستخرج الوظيفة هذه التفاصيل بكفاءة، مما يسمح بمزيد من التلاعب.
+هذه السطر الواحد يقوم بالعمل الشاق — يمسح PDF بالكامل ويعيد جميع التعليقات كقائمة. كل تعليق يحتوي على بيانات وصفية مثل النوع، الموقع، المحتوى، ومعلومات المؤلف.
 
-### معالجة التعليقات التوضيحية
+### الخطوة 3: المعالجة والتحليل
 
-**ملخص:**
-بعد استرجاع التعليقات التوضيحية، قم بتكرارها لإجراء أي عمليات ضرورية مثل التسجيل أو استخراج البيانات.
+**التكرار عبر التعليقات:**
 
-#### الخطوة 3: معالجة كل تعليق
 ```java
 Iterator<AnnotationBase> items = annotations.iterator();
 while (items.hasNext()) {
     AnnotationBase annotation = items.next();
-    // مثال: طباعة تفاصيل كل تعليق
-    System.out.println(annotation.toString());
+    
+    // Extract key information
+    System.out.println("Annotation Type: " + annotation.getType());
+    System.out.println("Content: " + annotation.getMessage());
+    System.out.println("Page Number: " + annotation.getPageNumber());
+    System.out.println("Created By: " + annotation.getCreatedBy());
+    System.out.println("---");
 }
 ```
 
-**توضيح:**
-تتيح لك هذه التكرارات عبر قائمة التعليقات التوضيحية الوصول إلى خصائص التعليقات التوضيحية الفردية ومعالجتها، مثل نوعها أو رسالتها.
+**نصيحة من الواقع:** لكل نوع من التعليقات (تظليل، تعليقات، طوابع) خصائص محددة. قد تحتاج إلى تصفية حسب النوع وفقًا لحالتك.
 
-### إغلاق الموارد
+### الخطوة 4: إدارة الموارد
 
-**ملخص:**
-تأكد من إغلاق كافة الموارد بشكل صحيح لمنع تسرب الذاكرة.
-
-#### الخطوة 4: إدارة الموارد التلقائية
-من خلال استخدام عبارة try-with-resources، يقوم Java بإغلاق `InputStream` بمجرد اكتمال العمليات:
+**تنظيف صحيح:**
 
 ```java
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
-    // عمليات التعليق هنا...
+    // All your annotation processing here
+} // Stream automatically closed here
+```
+
+نمط `try‑with‑resources` يتولى التنظيف تلقائيًا. هذا أمر حاسم عند معالجة مستندات متعددة أو في تطبيقات طويلة التشغيل.
+
+## المشكلات الشائعة وحلولها
+
+استنادًا إلى تجارب الواقع، إليك أكثر التحديات التي يواجهها المطورون:
+
+### المشكلة 1: “لم يتم العثور على تعليقات” (مع علمك بوجودها)
+
+**السبب:** قد يحدث ذلك مع ملفات PDF مملوءة بنماذج أو تعليقات أنشأتها برامج معينة.
+
+```java
+// Try different annotation types
+for (AnnotationType type : AnnotationType.values()) {
+    List<AnnotationBase> specificAnnotations = annotator.get(type);
+    if (!specificAnnotations.isEmpty()) {
+        System.out.println("Found " + specificAnnotations.size() + " " + type + " annotations");
+    }
 }
 ```
 
-**توضيح:**
-نمط المحاولة باستخدام الموارد هو أفضل ممارسة لإدارة موارد الإدخال/الإخراج في Java، مما يضمن إغلاق جميع التدفقات بشكل صحيح حتى في حالة حدوث استثناءات.
+### المشكلة 2: مشاكل الذاكرة مع ملفات PDF الكبيرة
 
-## التطبيقات العملية
+**السبب:** `OutOfMemoryError` عند معالجة مستندات ضخمة.
 
-فيما يلي بعض حالات الاستخدام في العالم الحقيقي حيث يمكن أن يكون استخراج التعليقات التوضيحية مفيدًا:
+**الحل:** عالج التعليقات على دفعات وحسّن إعدادات JVM:
 
-1. **أتمتة مراجعة المستندات:** استخراج تعليقات المراجعين تلقائيًا ودمجها في التقارير.
-2. **الأدوات التعليمية:** استخدم بيانات التعليقات التوضيحية لتوفير رؤى أو ملاحظات في الكتب المدرسية الرقمية.
-3. **منصات التعاون:** دمج التعليقات التوضيحية المستخرجة في أدوات إدارة المشروع لتحسين التعاون بين أعضاء الفريق.
+```java
+// Set JVM options: -Xmx4g -XX:+UseG1GC
+// Process in smaller chunks
+List<AnnotationBase> annotations = annotator.get();
+int batchSize = 100;
+for (int i = 0; i < annotations.size(); i += batchSize) {
+    int end = Math.min(i + batchSize, annotations.size());
+    List<AnnotationBase> batch = annotations.subList(i, end);
+    processBatch(batch);
+}
+```
 
-## اعتبارات الأداء
+### المشكلة 3: مشاكل الترميز مع الأحرف الخاصة
 
-لضمان تشغيل تطبيقك بسلاسة، ضع في اعتبارك ما يلي:
-- **تحسين استخدام الموارد:** تأكد من إدارة التدفقات بكفاءة وإغلاقها على الفور.
-- **إدارة ذاكرة جافا:** استخدم مجموعة البيانات المهملة الخاصة بـ Java بشكل فعال من خلال تقليل حجم الذاكرة أثناء معالجة التعليقات التوضيحية.
-- **أفضل الممارسات:** قم بعمل ملف تعريف لتطبيقك بشكل منتظم لتحديد نقاط الضعف في الأداء ومعالجتها.
+**السبب:** يظهر نص التعليق مشوهًا أو مع علامات استفهام.
 
-## خاتمة
+**الحل:** تأكد من معالجة الترميز بشكل صحيح:
 
-في هذا البرنامج التعليمي، استكشفنا كيفية استخراج التعليقات التوضيحية من مستندات PDF باستخدام GroupDocs.Annotation لجافا. باتباع الخطوات الموضحة، يمكنك دمج إمكانيات معالجة فعّالة للمستندات في تطبيقاتك، مما يُحسّن الإنتاجية والتعاون.
+```java
+// When reading file paths or annotation content
+String content = new String(annotation.getMessage().getBytes(), StandardCharsets.UTF_8);
+```
 
-**الخطوات التالية:**
-- تجربة أنواع مختلفة من التعليقات التوضيحية.
-- استكشف الميزات الإضافية لـ GroupDocs.Annotation مثل إضافة التعليقات التوضيحية أو تعديلها.
+## نصائح تحسين الأداء
 
-هل أنت مستعد لتحسين مهاراتك في معالجة المستندات؟ جرّب تطبيق هذا الحل في مشروعك القادم!
+### أفضل ممارسات إدارة الذاكرة
 
-## قسم الأسئلة الشائعة
+**1. المعالجة المتدفقة للملفات الكبيرة:**
 
-1. **ما هو الحد الأدنى لإصدار Java المطلوب لـ GroupDocs.Annotation؟**
-   - JDK 8 أو أعلى.
-2. **هل يمكنني استخراج التعليقات التوضيحية من تنسيقات أخرى غير PDF؟**
-   - نعم، يدعم GroupDocs أنواعًا متعددة من المستندات بما في ذلك Word وExcel.
-3. **كيف أتعامل مع المستندات الكبيرة بكفاءة؟**
-   - استخدم التدفقات لإدارة استخدام الذاكرة بشكل فعال.
-4. **أين يمكنني العثور على الإصدار الأحدث من GroupDocs.Annotation لـ Java؟**
-   - تحقق من مستودع Maven أو صفحة التنزيل الرسمية.
-5. **ما هي المشكلات الشائعة عند استخراج التعليقات التوضيحية، وكيف يمكن حلها؟**
-   - تأكد من صحة مسارات الملفات والتعامل مع الاستثناءات بشكل صحيح لتجنب أخطاء وقت التشغيل.
+```java
+// Instead of loading entire document into memory
+try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
+    Annotator annotator = new Annotator(stream);
+    // Process immediately, don't store all annotations
+    processAnnotationsImmediately(annotator.get());
+}
+```
 
-## موارد
-- [التوثيق](https://docs.groupdocs.com/annotation/java/)
-- [مرجع واجهة برمجة التطبيقات](https://reference.groupdocs.com/annotation/java/)
-- [تحميل](https://releases.groupdocs.com/annotation/java/)
-- [شراء](https://purchase.groupdocs.com/buy)
-- [نسخة تجريبية مجانية](https://releases.groupdocs.com/annotation/java/)
-- [رخصة مؤقتة](https://purchase.groupdocs.com/temporary-license/)
-- [منتدى الدعم](https://forum.groupdocs.com/c/annotation-java)
+**2. ضبط JVM لمعالجة المستندات:**
+
+```
+-Xmx4g                    # Increase heap size
+-XX:+UseG1GC              # Better garbage collection for large objects
+-XX:MaxGCPauseMillis=200  # Minimize GC pauses
+```
+
+### تحسين سرعة المعالجة
+
+**المعالجة المتوازية لعدة مستندات:**
+
+```java
+List<Path> pdfFiles = Files.list(Paths.get("documents/"))
+    .filter(path -> path.toString().endsWith(".pdf"))
+    .collect(Collectors.toList());
+
+pdfFiles.parallelStream().forEach(this::extractAnnotations);
+```
+
+**استراتيجية المعالجة على دفعات:**  
+عالج عدة مستندات في جلسة واحدة لتقليل تكلفة التهيئة.
+
+## تطبيقات واقعية وحالات استخدام
+
+### 1. أتمتة مراجعة المستندات القانونية
+
+**سيناريو:** مكاتب المحاماة تعالج مراجعات العقود مع مراجعين متعددين.
+
+```java
+// Extract and categorize reviewer feedback
+Map<String, List<AnnotationBase>> reviewerComments = annotations.stream()
+    .collect(Collectors.groupingBy(AnnotationBase::getCreatedBy));
+
+reviewerComments.forEach((reviewer, comments) -> {
+    System.out.println("Reviewer: " + reviewer + " (" + comments.size() + " comments)");
+});
+```
+
+### 2. دمج منصة تعليمية
+
+**سيناريو:** استخراج تعليقات الطلاب من الكتب الرقمية للتحليلات.
+
+```java
+// Analyze annotation patterns
+long highlightCount = annotations.stream()
+    .filter(a -> a.getType() == AnnotationType.Highlight)
+    .count();
+    
+System.out.println("Student made " + highlightCount + " highlights");
+```
+
+### 3. سير عمل ضمان الجودة
+
+**سيناريو:** أتمتة جمع ملاحظات QA من تقارير PDF.
+
+```java
+// Filter critical issues marked with specific annotation types
+List<AnnotationBase> criticalIssues = annotations.stream()
+    .filter(a -> a.getMessage().toLowerCase().contains("critical"))
+    .collect(Collectors.toList());
+```
+
+## تكامل Spring Boot مع تعليقات PDF
+
+إذا كنت تبني خدمة مصغرة باستخدام Spring Boot، يمكنك تغليف منطق الاستخراج في Bean خدمة:
+
+```java
+@Service
+public class AnnotationExtractionService {
+    
+    public List<AnnotationData> extractAnnotations(MultipartFile file) {
+        try (InputStream inputStream = file.getInputStream()) {
+            Annotator annotator = new Annotator(inputStream);
+            return annotator.get().stream()
+                .map(this::convertToAnnotationData)
+                .collect(Collectors.toList());
+        } catch (IOException e) {
+            throw new DocumentProcessingException("Failed to extract annotations", e);
+        }
+    }
+}
+```
+
+انشر هذا كواجهة نقطة نهاية مخصصة وقم بالتوسع أفقيًا للتعامل مع أحمال عالية.
+
+## بدائل ومتى يجب استخدامها
+
+على الرغم من قوة GroupDocs.Annotation، قد تحتاج إلى بدائل في سيناريوهات معينة:
+
+- **Apache PDFBox:** أفضل لاستخراج نص بسيط دون بيانات تعليقات معقدة.  
+- **iText:** ممتاز لإنشاء PDF مع تعليقات (الاتجاه العكسي).  
+
+**متى تظل مع GroupDocs:** عندما تحتاج إلى أنواع تعليقات معقدة، دعم على مستوى المؤسسة، أو API موحد عبر صيغ المستندات.
+
+## أنماط الدمج لتطبيقات المؤسسات
+
+### بنية الميكروسيرفيس
+
+انشر استخراج التعليقات كميكروسيرفيس مخصص لتحسين القابلية للتوسع وإدارة الموارد. تواصل عبر REST أو gRPC، واحرص على أن تكون الخدمة غير حالة لتتمكن من التوسع بسهولة.
+
+## الأسئلة المتكررة
+
+**س: ما أقل نسخة Java مطلوبة لـ GroupDocs.Annotation؟**  
+ج: الحد الأدنى JDK 8، لكن يُنصح بـ JDK 11+ لأداء وأمان أفضل.
+
+**س: هل يمكن استخراج التعليقات من صيغ مستندات غير PDF؟**  
+ج: نعم، يدعم GroupDocs Word (.docx)، Excel (.xlsx)، PowerPoint (.pptx) وغيرها.
+
+**س: كيف أتعامل مع ملفات PDF محمية بكلمة مرور؟**  
+ج: استخدم مُنشئ `Annotator` الذي يقبل `LoadOptions` مع كلمة المرور:
+
+```java
+LoadOptions loadOptions = new LoadOptions();
+loadOptions.setPassword("your-password");
+Annotator annotator = new Annotator(inputStream, loadOptions);
+```
+
+**س: كيف أعالج مستندات كبيرة (100+ صفحة) بكفاءة؟**  
+ج: استخدم أساليب المعالجة المتدفقة، عالج على دفعات، وزد حجم heap في JVM. يمكن أيضًا معالجة التعليقات صفحةً بصفحة إذا سمحت بنية المستند.
+
+**س: لماذا أحصل على قوائم تعليقات فارغة رغم ظهور التعليقات في PDF؟**  
+ج: بعض ملفات PDF تستخدم حقول نماذج أو أنواع تعليقات غير معيارية. جرّب التكرار عبر قيم `AnnotationType` المختلفة أو تحقق إذا كان PDF يستخدم حقول نماذج بدلاً من التعليقات.
+
+**س: كيف أتعامل مع أحرف خاصة أو نص غير إنجليزي في التعليقات؟**  
+ج: تأكد من معالجة الترميز UTF‑8 عند معالجة محتوى التعليقات. استخدم `StandardCharsets.UTF_8` عند تحويل المصفوفات البايتية إلى سلاسل.
+
+**س: هل يمكنني استخدام GroupDocs.Annotation في الإنتاج بدون ترخيص؟**  
+ج: لا، يلزم ترخيص تجاري للاستخدام في بيئة الإنتاج. النسخ التجريبية والترخيصات المؤقتة متاحة للتطوير والاختبار.
+
+**س: أين يمكنني العثور على أحدث نسخة وتحديثات؟**  
+ج: راجع [مستودع Maven](https://releases.groupdocs.com/annotation/java/) أو موقع GroupDocs للحصول على أحدث الإصدارات وملاحظات النسخة.
+
+## موارد ومزيد من القراءة
+
+- [Documentation](https://docs.groupdocs.com/annotation/java/)
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)
+- [Commercial Licensing](https://purchase.groupdocs.com/buy)
+- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)
+- [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation-java)
+
+---
+
+**آخر تحديث:** 2025-12-21  
+**تم الاختبار مع:** GroupDocs.Annotation 25.2  
+**المؤلف:** GroupDocs
