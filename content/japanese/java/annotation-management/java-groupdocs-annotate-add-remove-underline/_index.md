@@ -1,45 +1,74 @@
 ---
-"date": "2025-05-06"
-"description": "GroupDocs.Annotationを使用してJavaドキュメントに下線注釈を追加および削除する方法を学びましょう。この詳細なガイドでドキュメント管理を強化しましょう。"
-"title": "GroupDocs を使用して Java で下線注釈を追加および削除する包括的なガイド"
-"url": "/ja/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+categories:
+- Java Development
+date: '2025-12-21'
+description: GroupDocs.Annotation を使用して、クリーンな PDF Java ファイルの作成方法と Java で PDF に注釈を付ける方法を、完全なコード例とトラブルシューティングのヒントとともに学びましょう。
+keywords: java document annotation library, groupdocs annotation tutorial, add underline
+  annotation java, java pdf annotation, how to annotate pdf documents in java
+lastmod: '2025-12-21'
+linktitle: Java Document Annotation with GroupDocs
+tags:
+- groupdocs
+- document-annotation
+- java-tutorial
+- pdf-manipulation
+title: 'クリーンなPDFをJavaで作成: GroupDocsで下線アノテーション'
 type: docs
-"weight": 1
+url: /ja/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
+weight: 1
 ---
 
-# Javaの実装方法: GroupDocsで下線注釈を追加および削除する
+# Clean PDF Java を作成する: GroupDocs で下線アノテーション
 
-## 導入
+## Introduction
 
-プログラムで注釈を追加または削除して、ドキュメント管理システムを強化したいですか? このチュートリアルでは、Java の強力な GroupDocs.Annotation ライブラリを使用して、PDF などのドキュメントに下線注釈を追加したり削除したりする方法について説明します。
+Java アプリケーションでのドキュメント管理やコラボレーションに苦労していますか？ あなたは一人ではありません。多くの開発者が、さまざまなファイル形式で確実に動作する堅牢なドキュメントアノテーション機能の実装に課題を抱えています。
 
-**学習内容:**
-- Annotator クラスを初期化します。
-- GroupDocs.Annotation for Java を使用して、コメント付きの下線注釈を追加します。
-- ドキュメントからすべての注釈を削除します。
-- GroupDocs.Annotation を効率的に使用できるように環境を構成します。
+このガイドでは **clean PDF Java** ファイルを作成し、GroupDocs.Annotation を使用して **annotate PDF in Java** する方法を学びます。チュートリアルの最後までに、コメント付きの下線アノテーションの追加方法、既存のアノテーションの削除方法、そしてこれらの機能をプロジェクトにシームレスに統合する方法が正確に分かります。
 
-これらの機能をプロジェクトでどのように活用できるか見ていきましょう。始める前に、必要な前提条件を満たしていることを確認してください。
+**このガイドで習得できること:**
+- Java プロジェクトに GroupDocs.Annotation を正しく設定する方法  
+- カスタムコメントとスタイリングを持つ下線アノテーションの追加  
+- すべてのアノテーションを削除してクリーンなドキュメントバージョンを作成する方法  
+- 開発者が直面しやすい一般的な問題のトラブルシューティング  
+- 本番環境向けのパフォーマンス最適化  
 
-## 前提条件
+ドキュメントレビューシステム、教育プラットフォーム、共同編集ツールのいずれを構築していても、実践的で検証済みのコード例がこのチュートリアルで網羅されています。
 
-### 必要なライブラリと依存関係
-このチュートリアルを効果的に実行するには、次のものを用意してください。
-- **GroupDocs.Annotation for Java**: バージョン25.2以降を推奨します。
-- **Java開発キット（JDK）**: バージョン 8 以上が必要です。
+## Quick Answers
+- **How do I add an underline annotation?** Use `UnderlineAnnotation` and `annotator.add()` then save the document.  
+- **How can I create a clean PDF Java file?** Load the annotated file, set `AnnotationType.NONE` in `SaveOptions`, and save a new copy.  
+- **What libraries are required?** GroupDocs.Annotation v25.2 (or newer) and its Maven repository.  
+- **Do I need a license for production?** Yes—apply a valid GroupDocs license to avoid watermarks.  
+- **Can I process multiple documents efficiently?** Wrap each `Annotator` in a try‑with‑resources block and dispose after each file.
 
-### 環境設定要件
-開発環境に IntelliJ IDEA や Eclipse などの IDE と Maven などのビルド ツールが含まれていることを確認します。
+## How to create clean PDF Java files
+Creating a clean PDF Java file means generating a version of the document **without any annotations** while preserving the original content. This is useful for final distribution, archival, or when you need to share a “clean” copy after a review cycle.
 
-### 知識の前提条件
-Java プログラミングの基本的な理解、特に Maven 経由のライブラリの操作が役に立ちます。
+GroupDocs.Annotation makes this straightforward: load the annotated file, configure `SaveOptions` to exclude all annotation types, and save the result. The steps are illustrated later in the **Removing Annotations** section.
 
-## Java 用の GroupDocs.Annotation の設定
+## How to annotate PDF in Java using GroupDocs
+GroupDocs.Annotation provides a rich API for **annotate PDF in Java**. It supports a wide range of annotation types, including highlights, stamps, and underlines. In this tutorial we focus on underline annotations because they are commonly used for emphasizing text while allowing threaded comments.
 
-Java プロジェクトで GroupDocs.Annotation の使用を開始するには、次の設定手順に従います。
+## Prerequisites and Environment Setup
 
-**Maven 構成:**
-次の設定を `pom.xml` GroupDocs.Annotation をダウンロードして統合するためのファイル。
+### What You'll Need Before Starting
+
+**Development Environment Requirements:**
+- Java Development Kit (JDK) 8 or higher (JDK 11+ recommended)  
+- Maven 3.6+ or Gradle 6.0+ for dependency management  
+- IDE such as IntelliJ IDEA, Eclipse, or VS Code with Java extensions  
+- At least 2 GB of available RAM (document processing can be memory‑intensive)
+
+**Knowledge Prerequisites:**
+You should be comfortable with basic Java concepts—object initialization, method calls, and Maven dependencies. Prior experience with third‑party libraries will speed up adoption.
+
+**Testing Documents:**
+Have a few sample PDFs ready. Text‑based PDFs work best; scanned images may require OCR before annotation.
+
+### Maven Setup: Getting GroupDocs Into Your Project
+
+Here's how to properly configure your Maven project (this trips up many developers on their first attempt):
 
 ```xml
 <repositories>
@@ -58,32 +87,41 @@ Java プロジェクトで GroupDocs.Annotation の使用を開始するには�
 </dependencies>
 ```
 
-**ライセンス取得:**
-まずはGroupDocsから無料トライアルをダウンロードするか、一時ライセンスを取得して、ライブラリの全機能をお試しください。本番環境での使用には、ライセンスのご購入が必要です。
+**Important:** Version 25.2 is the latest stable release at the time of writing. Check the GroupDocs repository regularly for newer versions that include bug fixes and performance improvements.
 
-## 実装ガイド
+### Licensing Setup (Don't Skip This)
 
-### 機能1: アノテーターを初期化し、下線注釈を追加する
+**For Development/Testing:**  
+Download the free trial from the GroupDocs website. The trial includes all features but adds a watermark to processed documents.
 
-このセクションでは、 `Annotator` クラスを作成し、ドキュメントに下線注釈を追加します。
+**For Production:**  
+Purchase a license and apply it during application startup. Without a valid license, production builds will be limited.
 
-#### 概要
-注釈を追加すると、ドキュメントの特定の部分を強調表示するのに役立ちます。ここでは、説明やフィードバックのためにコメント付きのテキストに下線を引くことに焦点を当てます。
+## Implementation Guide: Adding Underline Annotations
 
-#### ステップバイステップの実装
+### Understanding the Annotation Workflow
 
-**1. アノテーターを初期化する**
-作成する `Annotator` オブジェクトを選択して PDF ファイルを読み込みます。
+Before we dive into code, let’s walk through the four‑step workflow that occurs when you **annotate PDF in Java**:
+
+1. **Document Loading** – `Annotator` reads the file into memory.  
+2. **Annotation Creation** – Define properties such as position, style, and comments.  
+3. **Annotation Application** – The library injects the annotation into the PDF’s structure.  
+4. **Document Saving** – Persist the modified file, optionally preserving the original.
+
+The process is non‑destructive; the source file remains untouched unless you overwrite it.
+
+### Step 1: Initialize the Annotator and Load Your Document
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
-// 注釈を付けたい文書を読み込みます
+// Load the document you want to annotate
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**2. 返信付きのコメントを作成する**
-下線注釈に関連付けられたコメントを定義します。
+**Pro Tip:** Use absolute paths while developing to avoid “file not found” errors. In production, consider loading resources from the classpath or a cloud storage bucket.
+
+### Step 2: Creating Comments and Replies (The Collaborative Part)
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -104,8 +142,9 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**3. 下線注釈のポイントを定義する**
-下線が表示される場所を決定する座標を設定します。
+**Real‑World Use:** Reviewers can discuss a specific clause by adding threaded replies, keeping the conversation tied to the exact annotation.
+
+### Step 3: Defining Annotation Coordinates (Getting the Position Right)
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -122,15 +161,19 @@ points.add(point3);
 points.add(point4);
 ```
 
-**4. 下線注釈の作成と設定**
-下線注釈を作成し、色、不透明度、コメントなどのプロパティを設定します。
+**Coordinate System:**  
+- Points 1 & 2 define the top edge of the underline.  
+- Points 3 & 4 define the bottom edge.  
+- The Y‑difference (730 vs 650) controls thickness.
+
+### Step 4: Creating and Configuring the Underline Annotation
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.UnderlineAnnotation;
 
 UnderlineAnnotation underline = new UnderlineAnnotation();
 underline.setCreatedOn(Calendar.getInstance().getTime());
-underline.setFontColor(65535); // ARGB形式の黄色
+underline.setFontColor(65535); // Yellow in ARGB format
 underline.setMessage("This is an underline annotation");
 underline.setOpacity(0.7f);
 underline.setPageNumber(0);
@@ -140,8 +183,12 @@ underline.setReplies(replies);
 annotator.add(underline);
 ```
 
-**5. 注釈を付けた文書を保存する**
-変更を新しいファイルに保存します。
+**Color & Opacity Tips:**  
+- `FontColor` uses ARGB; `65535` (0x00FFFF) yields bright yellow.  
+- For red, use `16711680` (0xFF0000); for blue, `255` (0x0000FF).  
+- Opacity values between 0.5 and 0.8 provide good readability without obscuring the text.
+
+### Step 5: Saving Your Annotated Document
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/output.pdf";
@@ -149,28 +196,28 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-#### トラブルシューティングのヒント
-- すべてのポイントの座標がドキュメントの境界内にあることを確認します。
-- 確認するには `outputPath` ディレクトリが存在し、書き込み可能です。
+**Memory Management:** The `dispose()` call releases native resources and prevents memory leaks—critical when processing many files in a batch.
 
-### 機能2: 注釈なしでドキュメントを保存する
+## Removing Annotations: Creating Clean Document Versions
 
-このセクションでは、以前に注釈を付けたドキュメントからすべての注釈を削除する方法について説明します。
+Sometimes you need a version of the PDF **without any annotations**—for example, when delivering the final approved contract. GroupDocs makes this easy.
 
-#### 概要
-共有やアーカイブのために、注釈のないドキュメントのクリーンなバージョンを保存する必要がある場合があります。
+### Understanding Annotation Removal Options
 
-#### ステップバイステップの実装
+You can:
+- Remove **all** annotations (most common)  
+- Remove specific types (e.g., only highlights)  
+- Remove annotations by author or page  
 
-**1. 注釈付きドキュメントで Annotator を初期化する**
-既存の注釈があるドキュメントを読み込みます。
+### Step‑by‑Step Annotation Removal
+
+**Step 1: Load the Previously Annotated Document**
 
 ```java
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**2. 保存オプションを設定して注釈を削除する**
-出力ファイルに注釈を保存しないことを指定します。
+**Step 2: Configure Save Options for a Clean Output**
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -180,8 +227,7 @@ SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationTypes(AnnotationType.NONE);
 ```
 
-**3. 注釈なしでドキュメントを保存する**
-クリーンアップされたドキュメントのパスを定義して保存します。
+**Step 3: Save the Clean Version**
 
 ```java
 String noneAnnotationPath = Paths.get(outputPath).resolveSibling("none-annotation.pdf").toString();
@@ -189,30 +235,212 @@ annotator.save(noneAnnotationPath, saveOptions);
 annotator.dispose();
 ```
 
-## 実用的な応用
+This produces a **clean PDF Java** file that contains no annotation objects, perfect for final distribution.
 
-これらの機能が役立つ実際のシナリオをいくつか紹介します。
-1. **文書レビュー**レビューのために契約書またはレポートのセクションを強調表示してコメントを追加します。
-2. **教育ツール**生徒のために教科書にメモや訂正を書き加えます。
-3. **共同編集**フィードバックを得るために、注釈付きのドラフトをチームメンバー間で共有します。
-4. **法的文書**議論中に法律文書の重要な条項に下線を引く。
-5. **マーケティング資料**配布前にパンフレットで重要な情報を強調表示します。
+## Common Issues and Solutions
 
-## パフォーマンスに関する考慮事項
-GroupDocs.Annotation を使用する場合は、パフォーマンスを最適化するために次のヒントを考慮してください。
-- **メモリ管理**：適切に処分する `Annotator` リソースを解放するためのオブジェクト。
-- **バッチ処理**複数のドキュメントに注釈を付ける場合は、システム負荷を効率的に管理するために、それらをバッチで処理します。
-- **リソースの割り当て**大きなファイルを処理するために十分なメモリと処理能力が環境にあることを確認してください。
+### Problem 1: “Document not found” Errors
 
-## 結論
-GroupDocs.Annotation for Javaを使用して下線付きの注釈を追加および削除する方法を学びました。このチュートリアルでは、Annotatorクラスの初期化、コメント付きの注釈の設定、注釈なしのドキュメントの保存について説明しました。 
+```java
+File inputFile = new File("path/to/your/document.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Document not found: " + inputFile.getAbsolutePath());
+}
+if (!inputFile.canRead()) {
+    throw new IllegalArgumentException("Cannot read document: " + inputFile.getAbsolutePath());
+}
 
-さらに詳しく調べるには、これらの機能を既存のドキュメント管理システムに統合するか、GroupDocs が提供する他の注釈タイプを試してみることを検討してください。
+Annotator annotator = new Annotator(inputFile.getAbsolutePath());
+```
 
-## FAQセクション
-1. **回の実行で複数の下線注釈を構成するにはどうすればよいですか?**
-   - 複数の `UnderlineAnnotation` オブジェクトを順番に追加し、 `annotator.add()` 方法。
-2. **このライブラリを使用して PDF 内の画像に注釈を付けることはできますか?**
-   - はい、GroupDocs.Annotation は PDF などのドキュメント内の画像への注釈付けをサポートしています。
-3. **GroupDocs.Annotation はどのようなファイル形式をサポートしていますか?**
-   - PDF、Word、Excel など、さまざまなドキュメント形式をサポートしています。
+### Problem 2: Annotations Appearing in Wrong Locations
+
+```java
+// Test with a simple rectangle in the top‑left corner
+Point point1 = new Point(10, 10);   // Top‑left
+Point point2 = new Point(100, 10);  // Top‑right  
+Point point3 = new Point(10, 30);   // Bottom‑left
+Point point4 = new Point(100, 30);  // Bottom‑right
+```
+
+### Problem 3: Memory Issues with Large Documents
+
+```java
+// Increase JVM heap size when launching the app, e.g., -Xmx2g
+try (Annotator annotator = new Annotator("document.pdf")) {
+    // Annotation logic here
+    annotator.save("output.pdf");
+}
+```
+
+### Problem 4: Licensing Issues in Production
+
+```java
+try {
+    License license = new License();
+    license.setLicense("path/to/your/license.lic");
+    System.out.println("License loaded successfully");
+} catch (Exception e) {
+    System.err.println("License loading failed: " + e.getMessage());
+    // Handle the error appropriately
+}
+```
+
+## Performance Best Practices for Production Applications
+
+### Memory Management Strategies
+
+```java
+try (Annotator annotator = new Annotator("input.pdf")) {
+    // Your annotation logic
+    annotator.save("output.pdf");
+} // Annotator is automatically disposed here
+```
+
+```java
+List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
+
+for (String docPath : documentPaths) {
+    try (Annotator annotator = new Annotator(docPath)) {
+        // Process one document at a time
+        annotator.add(createAnnotation());
+        annotator.save(getOutputPath(docPath));
+    }
+    // Memory is freed after each iteration
+}
+```
+
+### Threading Considerations
+
+GroupDocs.Annotation is **not thread‑safe** by default. If your application processes documents concurrently:
+
+- **Never share** an `Annotator` instance across threads.  
+- **Synchronize** file access or use a lock mechanism.  
+- Consider a **pool** of `Annotator` objects if you need high throughput.
+
+### Caching Strategies
+
+- Cache frequently used annotation templates.  
+- Reuse `Point` collections for common coordinate sets.  
+- Keep a **template PDF** in memory if you repeatedly annotate the same base document.
+
+## Real‑World Applications and Use Cases
+
+### Document Review Systems
+
+- **Legal Review:** Underline contract clauses and add comments about risk.  
+- **Compliance Audits:** Highlight problematic sections in financial statements.  
+- **Academic Peer Review:** Professors underline passages needing clarification.
+
+### Educational Platforms
+
+- **Student Annotation Tools:** Let learners underline key concepts in e‑books.  
+- **Teacher Feedback:** Provide inline comments directly on submitted assignments.
+
+### Quality Assurance Workflows
+
+- **Technical Documentation Review:** Engineers underline sections that need updates.  
+- **Standard Operating Procedures:** Safety officers highlight critical steps.
+
+### Content Management Systems
+
+- **Editorial Workflow:** Editors underline text that requires fact‑checking.  
+- **Version Control:** Track annotation history across document revisions.
+
+## Advanced Tips for Professional Implementation
+
+### Custom Annotation Styles
+
+```java
+UnderlineAnnotation underline = new UnderlineAnnotation();
+underline.setFontColor(16711680);      // Red for urgent items
+underline.setOpacity(0.5f);            // Subtle highlighting
+underline.setFontSize(12);             // Consistent sizing
+underline.setMessage("URGENT REVIEW REQUIRED");
+```
+
+### Annotation Metadata for Tracking
+
+```java
+underline.setCreatedBy("john.doe@company.com");
+underline.setCreatedOn(Calendar.getInstance().getTime());
+underline.setMessage("Legal review required - Contract clause 4.2");
+```
+
+### Integration with User Management Systems
+
+```java
+// Assume you have a method that returns the current authenticated user
+String currentUser = getCurrentUser();
+String userRole = getUserRole(currentUser);
+
+// Apply role‑based styling
+UnderlineAnnotation underline = new UnderlineAnnotation();
+underline.setCreatedBy(currentUser);
+underline.setFontColor(getRoleColor(userRole));
+underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentText));
+```
+
+## Troubleshooting Production Issues
+
+### Performance Monitoring
+
+Watch these metrics in production:
+- **Heap usage** – ensure `dispose()` is called.  
+- **Processing time per document** – log timestamps before/after `annotator.save()`.  
+- **Error rate** – capture exceptions and categorize them.
+
+### Common Production Gotchas
+
+- **File locking** – ensure uploaded files are closed before annotation.  
+- **Concurrent edits** – implement optimistic locking or version checks.  
+- **Large files (> 50 MB)** – increase JVM timeout and consider streaming APIs.
+
+### Error Handling Best Practices
+
+```java
+try (Annotator annotator = new Annotator(documentPath)) {
+    UnderlineAnnotation annotation = createAnnotation();
+    annotator.add(annotation);
+    annotator.save(outputPath);
+    
+} catch (Exception e) {
+    logger.error("Annotation failed for document: " + documentPath, e);
+    // Implement appropriate error recovery
+    throw new DocumentProcessingException("Failed to annotate document", e);
+}
+```
+
+## Conclusion
+
+You now have everything needed to **create clean PDF Java** files and **annotate PDF in Java** with underline annotations using GroupDocs.Annotation. Remember to:
+
+- Manage resources with try‑with‑resources or explicit `dispose()`.  
+- Validate coordinates early to avoid misplaced underlines.  
+- Implement robust error handling for production stability.  
+- Leverage role‑based styling and metadata to fit your workflow.
+
+Next steps? Try adding other annotation types—highlights, stamps, or text replacements—to build a full‑featured document review solution.
+
+## Frequently Asked Questions
+
+**Q: How do I annotate multiple areas of text in a single operation?**  
+A: Create several `UnderlineAnnotation` objects with different coordinates and add them sequentially using `annotator.add()`.
+
+**Q: Can I annotate images within PDF documents?**  
+A: Yes. Use the same coordinate system, ensuring the points lie inside the image bounds.
+
+**Q: What file formats besides PDF does GroupDocs.Annotation support?**  
+A: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX), and image formats such as JPEG, PNG, TIFF.
+
+**Q: How do I handle very large documents without running out of memory?**  
+A: Process documents one at a time, increase the JVM heap (`-Xmx`), and always dispose of `Annotator` instances promptly.
+
+**Q: Is it possible to extract existing annotations from a document?**  
+A: Yes. Use `annotator.get()` to retrieve all annotations, then filter by type, author, or page as needed.
+
+---
+
+**Last Updated:** 2025-12-21  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs

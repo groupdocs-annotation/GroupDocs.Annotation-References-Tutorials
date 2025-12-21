@@ -1,45 +1,75 @@
 ---
-"date": "2025-05-06"
-"description": "Leer hoe u onderstreepte aantekeningen kunt toevoegen en verwijderen in Java-documenten met GroupDocs.Annotation. Verbeter uw documentbeheer met deze gedetailleerde handleiding."
-"title": "Onderstrepingsannotaties toevoegen en verwijderen in Java met behulp van GroupDocs&#58; een uitgebreide handleiding"
-"url": "/nl/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
+categories:
+- Java Development
+date: '2025-12-21'
+description: Leer hoe je schone PDF‑Java‑bestanden maakt en PDF’s annoteert in Java
+  met GroupDocs.Annotation, met volledige codevoorbeelden en tips voor probleemoplossing.
+keywords: java document annotation library, groupdocs annotation tutorial, add underline
+  annotation java, java pdf annotation, how to annotate pdf documents in java
+lastmod: '2025-12-21'
+linktitle: Java Document Annotation with GroupDocs
+tags:
+- groupdocs
+- document-annotation
+- java-tutorial
+- pdf-manipulation
+title: 'Maak een schone PDF in Java: Onderstreep annotaties met GroupDocs'
 type: docs
-"weight": 1
+url: /nl/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
+weight: 1
 ---
 
-# Java implementeren: onderstrepingsannotaties toevoegen en verwijderen met GroupDocs
+# Maak schone PDF Java: Onderstrepingsannotaties met GroupDocs
 
-## Invoering
+## Introductie
 
-Wilt u uw documentbeheersysteem verbeteren door programmatisch annotaties toe te voegen of te verwijderen? Deze tutorial begeleidt u bij het gebruik van de krachtige GroupDocs.Annotation-bibliotheek in Java om onderstreepte annotaties toe te voegen en te verwijderen uit documenten zoals pdf's.
+Worstelt u met documentbeheer en samenwerking in uw Java‑toepassingen? U bent niet de enige. Veel ontwikkelaars staan voor de uitdaging om robuuste documentannotatiefuncties te implementeren die betrouwbaar werken over verschillende bestandsformaten.
 
-**Wat je leert:**
-- Initialiseer de Annotator-klasse.
-- Voeg een onderstreepte aantekening met opmerkingen toe met behulp van GroupDocs.Annotation voor Java.
-- Verwijder alle aantekeningen uit een document.
-- Configureer uw omgeving om GroupDocs.Annotation efficiënt te gebruiken.
+In deze gids **maakt u schone PDF Java**‑bestanden en leert u hoe u **PDF in Java kunt annoteren** met GroupDocs.Annotation. Aan het einde van deze tutorial weet u precies hoe u onderstrepingsannotaties met opmerkingen kunt toevoegen, bestaande annotaties kunt verwijderen en deze functies naadloos in uw projecten kunt integreren.
 
-Laten we eens kijken hoe deze functionaliteiten in uw projecten kunnen worden benut. Zorg ervoor dat u aan de nodige vereisten voldoet voordat u begint.
+**Wat u in deze gids onder de knie krijgt:**
+- GroupDocs.Annotation in uw Java‑project instellen (op de juiste manier)  
+- Onderstrepingsannotaties toevoegen met aangepaste opmerkingen en styling  
+- Alle annotaties verwijderen om schone documentversies te maken  
+- Veelvoorkomende problemen die ontwikkelaars tegenkomen oplossen  
+- Prestaties optimaliseren voor productie‑applicaties  
 
-## Vereisten
+Of u nu een document‑review‑systeem, een educatief platform of een tool voor collaboratieve bewerking bouwt, deze tutorial biedt u praktische, geteste code‑voorbeelden.
 
-### Vereiste bibliotheken en afhankelijkheden
-Om deze tutorial effectief te kunnen volgen, moet u het volgende doen:
-- **GroupDocs.Annotatie voor Java**: Versie 25.2 of hoger wordt aanbevolen.
-- **Java-ontwikkelingskit (JDK)**: Versie 8 of hoger is vereist.
+## Snelle antwoorden
+- **Hoe voeg ik een onderstrepingsannotatie toe?** Gebruik `UnderlineAnnotation` en `annotator.add()` en sla vervolgens het document op.  
+- **Hoe maak ik een schone PDF Java‑file?** Laad het geannoteerde bestand, stel `AnnotationType.NONE` in `SaveOptions` in, en sla een nieuwe kopie op.  
+- **Welke bibliotheken zijn vereist?** GroupDocs.Annotation v25.2 (of nieuwer) en de bijbehorende Maven‑repository.  
+- **Heb ik een licentie nodig voor productie?** Ja—pas een geldige GroupDocs‑licentie toe om watermerken te vermijden.  
+- **Kan ik meerdere documenten efficiënt verwerken?** Plaats elke `Annotator` in een try‑with‑resources‑blok en maak deze na elk bestand vrij.
 
-### Vereisten voor omgevingsinstellingen
-Zorg ervoor dat uw ontwikkelomgeving een IDE zoals IntelliJ IDEA of Eclipse en een buildtool zoals Maven bevat.
+## Hoe u schone PDF Java‑bestanden maakt
+Een schone PDF Java‑file maken betekent een versie van het document **zonder enige annotaties** genereren, terwijl de oorspronkelijke inhoud behouden blijft. Dit is nuttig voor definitieve distributie, archivering, of wanneer u een “schone” kopie wilt delen na een review‑cyclus.
 
-### Kennisvereisten
-Een basiskennis van Java-programmering, met name het werken met bibliotheken via Maven, is nuttig.
+GroupDocs.Annotation maakt dit eenvoudig: laad het geannoteerde bestand, configureer `SaveOptions` om alle annotatietypen uit te sluiten, en sla het resultaat op. De stappen worden later geïllustreerd in de sectie **Annotaties verwijderen**.
 
-## GroupDocs.Annotation instellen voor Java
+## Hoe u PDF in Java kunt annoteren met GroupDocs
+GroupDocs.Annotation biedt een rijke API voor **PDF in Java annoteren**. Het ondersteunt een breed scala aan annotatietypen, waaronder markeringen, stempels en onderstrepingen. In deze tutorial richten we ons op onderstrepingsannotaties omdat ze vaak worden gebruikt om tekst te benadrukken terwijl ze threaded comments mogelijk maken.
 
-Om GroupDocs.Annotation in uw Java-projecten te gebruiken, volgt u deze installatiestappen:
+## Voorvereisten en omgeving configuratie
 
-**Maven-configuratie:**
-Voeg de volgende configuratie toe aan uw `pom.xml` bestand om GroupDocs.Annotation te downloaden en te integreren.
+### Wat u nodig heeft voordat u begint
+
+**Vereisten voor de ontwikkelomgeving:**
+- Java Development Kit (JDK) 8 of hoger (JDK 11+ aanbevolen)  
+- Maven 3.6+ of Gradle 6.0+ voor dependency‑beheer  
+- IDE zoals IntelliJ IDEA, Eclipse, of VS Code met Java‑extensies  
+- Minimaal 2 GB beschikbaar RAM (documentverwerking kan veel geheugen vragen)
+
+**Kennisvoorvereisten:**
+U moet vertrouwd zijn met basisconcepten van Java—objectinitialisatie, methoden aanroepen en Maven‑dependencies. Ervaring met externe bibliotheken versnelt de adoptie.
+
+**Testdocumenten:**
+Zorg voor een paar voorbeeld‑PDF’s. Tekst‑gebaseerde PDF’s werken het beste; gescande afbeeldingen kunnen OCR vereisen vóór annotatie.
+
+### Maven‑configuratie: GroupDocs in uw project opnemen
+
+Zo configureert u uw Maven‑project correct (dit struikelt veel ontwikkelaars bij hun eerste poging):
 
 ```xml
 <repositories>
@@ -58,32 +88,41 @@ Voeg de volgende configuratie toe aan uw `pom.xml` bestand om GroupDocs.Annotati
 </dependencies>
 ```
 
-**Licentieverwerving:**
-Begin met het downloaden van een gratis proefversie of neem een tijdelijke licentie van GroupDocs om alle mogelijkheden van hun bibliotheek te ontdekken. Voor productiegebruik is de aanschaf van een licentie vereist.
+**Belangrijk:** Versie 25.2 is de nieuwste stabiele release op het moment van schrijven. Controleer regelmatig de GroupDocs‑repository voor nieuwere versies met bug‑fixes en prestatie‑verbeteringen.
 
-## Implementatiegids
+### Licentie‑configuratie (niet overslaan)
 
-### Functie 1: Annotator initialiseren en onderstrepingsannotatie toevoegen
+**Voor ontwikkeling/testing:**  
+Download de gratis proefversie van de GroupDocs‑website. De proefversie bevat alle functies maar voegt een watermerk toe aan verwerkte documenten.
 
-In deze sectie wordt u begeleid bij het initialiseren van de `Annotator` klasse en het toevoegen van een onderstreepte aantekening aan uw document.
+**Voor productie:**  
+Koop een licentie en pas deze toe tijdens het opstarten van de applicatie. Zonder geldige licentie zijn productiebouws beperkt.
 
-#### Overzicht
-Het toevoegen van annotaties helpt om specifieke delen van een document te markeren. Hier richten we ons op het onderstrepen van tekst met opmerkingen ter verduidelijking of feedback.
+## Implementatie‑gids: Onderstrepingsannotaties toevoegen
 
-#### Stapsgewijze implementatie
+### Het annotatie‑werkproces begrijpen
 
-**1. Initialiseer Annotator**
-Maak een `Annotator` object en laad uw PDF-bestand.
+Voordat we in de code duiken, bekijken we de vier‑stappen‑workflow die plaatsvindt wanneer u **PDF in Java annoteren**:
+
+1. **Document laden** – `Annotator` leest het bestand in het geheugen.  
+2. **Annotatie maken** – Definieer eigenschappen zoals positie, stijl en opmerkingen.  
+3. **Annotatie toepassen** – De bibliotheek injecteert de annotatie in de PDF‑structuur.  
+4. **Document opslaan** – Sla het gewijzigde bestand op, eventueel met behoud van het origineel.
+
+Het proces is niet‑destructief; het bronbestand blijft onaangeroerd tenzij u het overschrijft.
+
+### Stap 1: De Annotator initialiseren en uw document laden
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
-// Laad het document dat u wilt annoteren
+// Load the document you want to annotate
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**2. Maak opmerkingen met antwoorden**
-Definieer opmerkingen die bij de onderstreepte aantekening horen.
+**Pro‑tip:** Gebruik absolute paden tijdens ontwikkeling om “bestand niet gevonden”‑fouten te vermijden. In productie kunt u overwegen resources te laden vanaf het classpath of een cloud‑storage‑bucket.
+
+### Stap 2: Opmerkingen en antwoorden maken (het collaboratieve deel)
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -104,8 +143,9 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**3. Definieer punten voor onderstrepingsannotatie**
-Stel coördinaten in om te bepalen waar de onderstreping moet verschijnen.
+**Praktijkvoorbeeld:** Reviewers kunnen een specifieke clausule bespreken door threaded replies toe te voegen, waardoor het gesprek gekoppeld blijft aan de exacte annotatie.
+
+### Stap 3: Annotatie‑coördinaten definiëren (de juiste positie bepalen)
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -122,15 +162,19 @@ points.add(point3);
 points.add(point4);
 ```
 
-**4. Onderstrepingsannotatie maken en configureren**
-Maak de onderstrepingsannotatie en stel de eigenschappen in, zoals kleur, dekking en opmerkingen.
+**Coördinatensysteem:**  
+- Punten 1 & 2 definiëren de bovenrand van de onderstreping.  
+- Punten 3 & 4 definiëren de onderrand.  
+- Het Y‑verschil (730 vs 650) bepaalt de dikte.
+
+### Stap 4: De onderstrepingsannotatie maken en configureren
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.UnderlineAnnotation;
 
 UnderlineAnnotation underline = new UnderlineAnnotation();
 underline.setCreatedOn(Calendar.getInstance().getTime());
-underline.setFontColor(65535); // Geel in ARGB-formaat
+underline.setFontColor(65535); // Yellow in ARGB format
 underline.setMessage("This is an underline annotation");
 underline.setOpacity(0.7f);
 underline.setPageNumber(0);
@@ -140,8 +184,12 @@ underline.setReplies(replies);
 annotator.add(underline);
 ```
 
-**5. Sla het geannoteerde document op**
-Sla uw wijzigingen op in een nieuw bestand.
+**Kleur‑ en doorzichtigheidstips:**  
+- `FontColor` gebruikt ARGB; `65535` (0x00FFFF) levert fel geel op.  
+- Voor rood gebruikt u `16711680` (0xFF0000); voor blauw `255` (0x0000FF).  
+- Doorzichtigheidswaarden tussen 0.5 en 0.8 geven goede leesbaarheid zonder de tekst te verbergen.
+
+### Stap 5: Uw geannoteerde document opslaan
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/output.pdf";
@@ -149,28 +197,28 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-#### Tips voor probleemoplossing
-- Zorg ervoor dat alle coördinaten voor punten binnen de documentgrenzen vallen.
-- Controleer of de `outputPath` map bestaat en schrijfbaar is.
+**Geheugenbeheer:** De `dispose()`‑aanroep vrijgeeft native resources en voorkomt geheugenlekken—cruciaal bij het batch‑verwerken van veel bestanden.
 
-### Functie 2: Document opslaan zonder aantekeningen
+## Annotaties verwijderen: schone documentversies maken
 
-In dit gedeelte wordt beschreven hoe u alle aantekeningen uit een eerder geannoteerd document verwijdert.
+Soms heeft u een versie van de PDF **zonder enige annotaties** nodig—bijvoorbeeld bij het leveren van het definitieve goedgekeurde contract. GroupDocs maakt dit eenvoudig.
 
-#### Overzicht
-Mogelijk moet u een schone versie van uw document opslaan zonder aantekeningen, zodat u het kunt delen of archiveren.
+### Annotatie‑verwijderopties begrijpen
 
-#### Stapsgewijze implementatie
+U kunt:
+- **Alle** annotaties verwijderen (meest gebruikelijk)  
+- Specifieke typen verwijderen (bijv. alleen markeringen)  
+- Annotaties verwijderen op basis van auteur of pagina  
 
-**1. Initialiseer Annotator met het geannoteerde document**
-Laad het document met bestaande annotaties.
+### Stapsgewijze annotatie‑verwijdering
+
+**Stap 1: Het eerder geannoteerde document laden**
 
 ```java
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**2. Configureer opslagopties om aantekeningen te verwijderen**
-Geef aan dat er geen annotaties in het uitvoerbestand moeten worden opgeslagen.
+**Stap 2: Save‑options configureren voor een schone output**
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -180,8 +228,7 @@ SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationTypes(AnnotationType.NONE);
 ```
 
-**3. Sla het document op zonder aantekeningen**
-Definieer het pad voor het opgeschoonde document en sla het op.
+**Stap 3: De schone versie opslaan**
 
 ```java
 String noneAnnotationPath = Paths.get(outputPath).resolveSibling("none-annotation.pdf").toString();
@@ -189,30 +236,214 @@ annotator.save(noneAnnotationPath, saveOptions);
 annotator.dispose();
 ```
 
-## Praktische toepassingen
+Dit levert een **schone PDF Java**‑file op die geen annotatie‑objecten bevat, perfect voor definitieve distributie.
 
-Hier zijn enkele praktijkscenario's waarin deze functies nuttig kunnen zijn:
-1. **Documentbeoordeling**: Het markeren en becommentariëren van delen van een contract of rapport ter beoordeling.
-2. **Educatieve hulpmiddelen**: Aantekeningen of correcties in leerboeken aanbrengen voor studenten.
-3. **Samenwerkend bewerken**: Geannoteerde concepten delen met teamleden voor feedback.
-4. **Juridische documentatie**: Het onderstrepen van belangrijke clausules in juridische documenten tijdens discussies.
-5. **Marketingmaterialen**: Belangrijke informatie benadrukken in brochures voordat deze worden verspreid.
+## Veelvoorkomende problemen en oplossingen
 
-## Prestatieoverwegingen
-Houd bij het werken met GroupDocs.Annotation rekening met de volgende tips om de prestaties te optimaliseren:
-- **Geheugenbeheer**: Op de juiste manier weggooien `Annotator` objecten om bronnen vrij te maken.
-- **Batchverwerking**:Als u meerdere documenten van aantekeningen voorziet, kunt u deze in batches verwerken om de systeembelasting effectief te beheren.
-- **Toewijzing van middelen**: Zorg ervoor dat uw omgeving voldoende geheugen en verwerkingskracht heeft om grote bestanden te verwerken.
+### Probleem 1: “Document not found”‑fouten
+
+```java
+File inputFile = new File("path/to/your/document.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Document not found: " + inputFile.getAbsolutePath());
+}
+if (!inputFile.canRead()) {
+    throw new IllegalArgumentException("Cannot read document: " + inputFile.getAbsolutePath());
+}
+
+Annotator annotator = new Annotator(inputFile.getAbsolutePath());
+```
+
+### Probleem 2: Annotaties verschijnen op verkeerde locaties
+
+```java
+// Test with a simple rectangle in the top‑left corner
+Point point1 = new Point(10, 10);   // Top‑left
+Point point2 = new Point(100, 10);  // Top‑right  
+Point point3 = new Point(10, 30);   // Bottom‑left
+Point point4 = new Point(100, 30);  // Bottom‑right
+```
+
+### Probleem 3: Geheugenproblemen bij grote documenten
+
+```java
+// Increase JVM heap size when launching the app, e.g., -Xmx2g
+try (Annotator annotator = new Annotator("document.pdf")) {
+    // Annotation logic here
+    annotator.save("output.pdf");
+}
+```
+
+### Probleem 4: Licentieproblemen in productie
+
+```java
+try {
+    License license = new License();
+    license.setLicense("path/to/your/license.lic");
+    System.out.println("License loaded successfully");
+} catch (Exception e) {
+    System.err.println("License loading failed: " + e.getMessage());
+    // Handle the error appropriately
+}
+```
+
+## Prestatietips voor productie‑applicaties
+
+### Strategieën voor geheugenbeheer
+
+```java
+try (Annotator annotator = new Annotator("input.pdf")) {
+    // Your annotation logic
+    annotator.save("output.pdf");
+} // Annotator is automatically disposed here
+```
+
+```java
+List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
+
+for (String docPath : documentPaths) {
+    try (Annotator annotator = new Annotator(docPath)) {
+        // Process one document at a time
+        annotator.add(createAnnotation());
+        annotator.save(getOutputPath(docPath));
+    }
+    // Memory is freed after each iteration
+}
+```
+
+### Overwegingen voor threading
+
+GroupDocs.Annotation is **standaard niet thread‑safe**. Als uw applicatie documenten gelijktijdig verwerkt:
+
+- **Deel geen** `Annotator`‑instantie tussen threads.  
+- **Synchroniseer** bestands‑toegang of gebruik een lock‑mechanisme.  
+- Overweeg een **pool** van `Annotator`‑objecten als u een hoge doorvoer nodig heeft.
+
+### Caching‑strategieën
+
+- Cache vaak gebruikte annotatiesjablonen.  
+- Hergebruik `Point`‑collecties voor gemeenschappelijke coördinaten.  
+- Houd een **sjabloon‑PDF** in het geheugen als u steeds hetzelfde basisedocument annoteert.
+
+## Praktische toepassingen en use‑cases
+
+### Document‑review‑systemen
+
+- **Juridische review:** Onderstreep contractclausules en voeg opmerkingen over risico’s toe.  
+- **Compliance‑audits:** Markeer problematische secties in financiële verslagen.  
+- **Academische peer‑review:** Docenten onderstrepen passages die verduidelijking behoeven.
+
+### Educatieve platforms
+
+- **Studenten‑annotatietools:** Laat leerlingen sleutelconcepten onderstrepen in e‑books.  
+- **Docentfeedback:** Geef inline‑commentaren direct op ingediende opdrachten.
+
+### Kwaliteits‑garantie‑workflows
+
+- **Technische documentatie‑review:** Ingenieurs onderstrepen secties die bijgewerkt moeten worden.  
+- **Standaard operationele procedures:** Veiligheidsfunctionarissen markeren kritieke stappen.
+
+### Content‑management‑systemen
+
+- **Redactionele workflow:** Editors onderstrepen tekst die fact‑checking vereist.  
+- **Versiebeheer:** Volg annotatie‑geschiedenis over documentrevisies heen.
+
+## Geavanceerde tips voor professionele implementatie
+
+### Aangepaste annotatiestijlen
+
+```java
+UnderlineAnnotation underline = new UnderlineAnnotation();
+underline.setFontColor(16711680);      // Red for urgent items
+underline.setOpacity(0.5f);            // Subtle highlighting
+underline.setFontSize(12);             // Consistent sizing
+underline.setMessage("URGENT REVIEW REQUIRED");
+```
+
+### Annotatiemetadata voor tracking
+
+```java
+underline.setCreatedBy("john.doe@company.com");
+underline.setCreatedOn(Calendar.getInstance().getTime());
+underline.setMessage("Legal review required - Contract clause 4.2");
+```
+
+### Integratie met gebruikers‑beheersystemen
+
+```java
+// Assume you have a method that returns the current authenticated user
+String currentUser = getCurrentUser();
+String userRole = getUserRole(currentUser);
+
+// Apply role‑based styling
+UnderlineAnnotation underline = new UnderlineAnnotation();
+underline.setCreatedBy(currentUser);
+underline.setFontColor(getRoleColor(userRole));
+underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentText));
+```
+
+## Problemen oplossen in productie
+
+### Prestatiemonitoring
+
+Houd de volgende metrics in de gaten in productie:
+- **Heap‑gebruik** – zorg dat `dispose()` wordt aangeroepen.  
+- **Verwerkingstijd per document** – log tijdstempels vóór/na `annotator.save()`.  
+- **Foutpercentage** – vang uitzonderingen op en categoriseer ze.
+
+### Veelvoorkomende productie‑valkuilen
+
+- **Bestandsvergrendeling** – zorg dat geüploade bestanden gesloten zijn vóór annotatie.  
+- **Gelijktijdige bewerkingen** – implementeer optimistic locking of versie‑controles.  
+- **Grote bestanden (> 50 MB)** – verhoog de JVM‑timeout en overweeg streaming‑API’s.
+
+### Best practices voor foutafhandeling
+
+```java
+try (Annotator annotator = new Annotator(documentPath)) {
+    UnderlineAnnotation annotation = createAnnotation();
+    annotator.add(annotation);
+    annotator.save(outputPath);
+    
+} catch (Exception e) {
+    logger.error("Annotation failed for document: " + documentPath, e);
+    // Implement appropriate error recovery
+    throw new DocumentProcessingException("Failed to annotate document", e);
+}
+```
 
 ## Conclusie
-Je hebt geleerd hoe je onderstreepte annotaties kunt toevoegen en verwijderen met GroupDocs.Annotation voor Java. Deze tutorial behandelde het initialiseren van de Annotator-klasse, het configureren van annotaties met opmerkingen en het opslaan van documenten zonder annotaties. 
 
-Als u de mogelijkheden verder wilt verkennen, kunt u overwegen deze functies te integreren in uw bestaande documentbeheersystemen of te experimenteren met andere annotatietypen die GroupDocs biedt.
+U beschikt nu over alles wat nodig is om **schone PDF Java**‑bestanden te **maken** en **PDF in Java te annoteren** met onderstrepingsannotaties via GroupDocs.Annotation. Vergeet niet om:
 
-## FAQ-sectie
-1. **Hoe configureer ik meerdere onderstrepingsannotaties in één keer?**
-   - Meerdere maken `UnderlineAnnotation` objecten en voeg ze sequentieel toe met behulp van de `annotator.add()` methode.
-2. **Kan ik afbeeldingen in PDF's annoteren met deze bibliotheek?**
-   - Ja, GroupDocs.Annotation ondersteunt het annoteren van afbeeldingen in documenten zoals PDF's.
-3. **Welke bestandsformaten ondersteunt GroupDocs.Annotation?**
-   - Het ondersteunt verschillende documentformaten, waaronder PDF, Word, Excel en meer.
+- Resources te beheren met try‑with‑resources of expliciete `dispose()`.  
+- Coördinaten vroegtijdig te valideren om verkeerd geplaatste onderstrepingen te voorkomen.  
+- Robuuste foutafhandeling te implementeren voor productie‑stabiliteit.  
+- Rollen‑gebaseerde styling en metadata te benutten om in uw workflow te passen.
+
+Volgende stap? Voeg andere annotatietypen toe—highlights, stempels of tekstvervangingen—om een volledige document‑review‑oplossing te bouwen.
+
+## Veelgestelde vragen
+
+**Q: Hoe annoteer ik meerdere tekstgebieden in één bewerking?**  
+A: Maak meerdere `UnderlineAnnotation`‑objecten met verschillende coördinaten en voeg ze achtereenvolgens toe met `annotator.add()`.
+
+**Q: Kan ik afbeeldingen binnen PDF‑documenten annoteren?**  
+A: Ja. Gebruik hetzelfde coördinatensysteem, zorg ervoor dat de punten binnen de afbeeldingsgrenzen liggen.
+
+**Q: Welke bestandsformaten ondersteunt GroupDocs.Annotation naast PDF?**  
+A: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX) en beeldformaten zoals JPEG, PNG, TIFF.
+
+**Q: Hoe ga ik om met zeer grote documenten zonder geheugen‑tekorten?**  
+A: Verwerk documenten één voor één, vergroot de JVM‑heap (`-Xmx`) en maak `Annotator`‑instanties altijd direct vrij.
+
+**Q: Is het mogelijk bestaande annotaties uit een document te extraheren?**  
+A: Ja. Gebruik `annotator.get()` om alle annotaties op te halen en filter vervolgens op type, auteur of pagina.
+
+---
+
+**Laatst bijgewerkt:** 2025-12-21  
+**Getest met:** GroupDocs.Annotation 25.2  
+**Auteur:** GroupDocs  
+
+---
