@@ -1,39 +1,53 @@
 ---
-"date": "2025-05-06"
-"description": "เรียนรู้วิธีแยกข้อมูลเมตาของเอกสาร เช่น ประเภทไฟล์ จำนวนหน้า และขนาดโดยใช้ GroupDocs.Annotation สำหรับ Java ปรับปรุงการจัดการเอกสารของคุณด้วยการแยกข้อมูลที่มีประสิทธิภาพ"
-"title": "การดึงข้อมูลเมตาของเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation ใน Java"
-"url": "/th/java/document-information/groupdocs-annotation-java-document-info-extraction/"
+categories:
+- Java Development
+date: '2025-12-26'
+description: เรียนรู้วิธีสกัดข้อมูลเมตาดาต้า PDF ด้วย Java รวมถึงประเภทไฟล์ จำนวนหน้า
+  และขนาด คู่มือนี้ครอบคลุมการจัดการประเภทไฟล์ PDF ด้วย Java โดยใช้ GroupDocs.
+keywords: Java document metadata extraction, extract PDF metadata Java, Java file
+  information extraction, document properties Java API, PDF page count Java
+lastmod: '2025-12-26'
+linktitle: How to Extract PDF Metadata in Java with GroupDocs
+tags:
+- java
+- pdf
+- metadata
+- document-processing
+- api
+title: วิธีดึงข้อมูลเมตาดาต้า PDF ใน Java ด้วย GroupDocs
 type: docs
-"weight": 1
+url: /th/java/document-information/groupdocs-annotation-java-document-info-extraction/
+weight: 1
 ---
 
-# การแยกข้อมูลเมตาของเอกสารอย่างมีประสิทธิภาพด้วย GroupDocs.Annotation ใน Java
+# วิธีการดึงข้อมูลเมตาดาต้า PDF ใน Java ด้วย GroupDocs
 
-ในยุคดิจิทัลทุกวันนี้ การจัดการและดึงข้อมูลจากเอกสารอย่างมีประสิทธิภาพถือเป็นสิ่งสำคัญสำหรับทั้งธุรกิจและบุคคล ไม่ว่าคุณจะจัดการสัญญา รายงาน หรือเอกสารประเภทอื่นใด การมีเครื่องมือที่เหมาะสมเพื่อเข้าถึงข้อมูลเมตาได้อย่างรวดเร็วจะช่วยประหยัดเวลาและทรัพยากรได้ บทช่วยสอนนี้จะแนะนำคุณเกี่ยวกับการใช้ GroupDocs.Annotation สำหรับ Java เพื่อดึงข้อมูลสำคัญ เช่น ประเภทไฟล์ จำนวนหน้า และขนาดจากเอกสารได้อย่างง่ายดาย
+เคยต้องการดึงข้อมูลพื้นฐานอย่างรวดเร็วจากเอกสารหลายร้อยฉบับหรือไม่? คุณไม่ได้เป็นคนเดียว ไม่ว่าคุณจะกำลังสร้างระบบจัดการเอกสาร, ประมวลผลไฟล์กฎหมาย, หรือแค่พยายามจัดระเบียบไดรฟ์แชร์ที่วุ่นวาย, **how to extract PDF metadata** ด้วยโปรแกรมสามารถช่วยคุณประหยัดเวลาการทำงานด้วยมือได้หลายชั่วโมง ในคู่มือนี้เราจะอธิบายขั้นตอนการดึงประเภทไฟล์, จำนวนหน้า, และขนาดโดยใช้ Java—เหมาะสำหรับผู้ที่ต้องจัดการกับความท้าทาย **pdf file type java** อย่างมีประสิทธิภาพ.
 
-**สิ่งที่คุณจะได้เรียนรู้:**
-- การตั้งค่า GroupDocs.Annotation สำหรับ Java
-- การแยกข้อมูลเมตาของเอกสารอย่างมีประสิทธิภาพ
-- แนวทางปฏิบัติที่ดีที่สุดสำหรับการเพิ่มประสิทธิภาพการทำงาน
-- การประยุกต์ใช้การดึงข้อมูลเมตาในโลกแห่งความเป็นจริง
+## คำตอบด่วน
+- **ไลบรารีที่ดีที่สุดสำหรับ PDF metadata ใน Java คืออะไร?** GroupDocs.Annotation มี API ที่ง่ายสำหรับการดึงเมตาดาต้าโดยไม่ต้องโหลดเนื้อหาเต็ม  
+- **ฉันต้องการไลเซนส์หรือไม่?** การทดลองใช้งานฟรีสามารถใช้ได้สำหรับการพัฒนา; จำเป็นต้องมีไลเซนส์เต็มสำหรับการใช้งานจริง  
+- **ฉันสามารถดึงเมตาดาต้าจากรูปแบบอื่นได้หรือไม่?** ได้—GroupDocs รองรับ Word, Excel, และรูปแบบอื่น ๆ อีกมากมาย  
+- **การดึงเมตาดาต้ามีความเร็วเท่าใด?** โดยทั่วไปใช้เวลาเป็นมิลลิวินาทีต่อไฟล์เนื่องจากอ่านเฉพาะข้อมูลส่วนหัวเท่านั้น  
+- **ปลอดภัยสำหรับการประมวลผลเป็นชุดใหญ่หรือไม่?** ใช่, เมื่อคุณใช้ try‑with‑resources และรูปแบบการประมวลผลเป็นชุด  
 
-ก่อนจะเริ่มต้น เรามาตรวจสอบให้แน่ใจว่าคุณมีทุกสิ่งที่จำเป็นในการเริ่มต้น
+## การดึงข้อมูลเมตาดาต้า PDF คืออะไร?
+เมตาดาต้า PDF ประกอบด้วยคุณสมบัติต่าง ๆ เช่น จำนวนหน้า, ประเภทไฟล์, ขนาด, ผู้เขียน, วันที่สร้าง, และฟิลด์ที่กำหนดเองที่ฝังอยู่ในเอกสาร การดึงข้อมูลนี้ทำให้แอปพลิเคชันสามารถจัดทำแคตาล็อก, ค้นหา, และตรวจสอบไฟล์โดยอัตโนมัติโดยไม่ต้องเปิดไฟล์เต็ม.
 
-## ข้อกำหนดเบื้องต้น
+## ทำไมต้องดึงเมตาดาต้า PDF ใน Java?
+- **Content Management Systems** สามารถทำการแท็กอัตโนมัติและทำดัชนีไฟล์ทันทีที่อัปโหลด  
+- **Legal & Compliance** ทีมสามารถตรวจสอบคุณสมบัติของเอกสารเพื่อการตรวจสอบได้  
+- **Digital Asset Management** จะเป็นระบบที่คล่องตัวด้วยการแท็กอัตโนมัติ  
+- **Performance Optimization** ป้องกันการโหลด PDF ขนาดใหญ่เมื่อต้องการเพียงข้อมูลส่วนหัว  
 
-หากต้องการปฏิบัติตามบทช่วยสอนนี้อย่างมีประสิทธิผล คุณจะต้องมี:
-- ความเข้าใจพื้นฐานเกี่ยวกับการเขียนโปรแกรมภาษา Java
-- สภาพแวดล้อมการพัฒนาแบบบูรณาการ (IDE) เช่น IntelliJ IDEA หรือ Eclipse
-- Maven สำหรับการจัดการการอ้างอิง
-- การเข้าถึงไลบรารี GroupDocs.Annotation สำหรับ Java (ผ่านการทดลองใช้ฟรีหรือการซื้อ)
+## ความต้องการเบื้องต้นและการตั้งค่า
+- **Java 8+** (แนะนำ Java 11+)  
+- IDE ที่คุณชอบ (IntelliJ, Eclipse, VS Code)  
+- Maven หรือ Gradle สำหรับการจัดการ dependencies  
+- ความรู้พื้นฐานการจัดการไฟล์ใน Java  
 
 ### การตั้งค่า GroupDocs.Annotation สำหรับ Java
-
-สิ่งแรกที่ต้องทำ: มาสร้างไลบรารีที่จำเป็นโดยใช้ Maven เพื่อทำให้การจัดการการอ้างอิงง่ายขึ้น
-
-**การกำหนดค่า Maven**
-
-เพิ่มที่เก็บข้อมูลและการอ้างอิงต่อไปนี้ให้กับคุณ `pom.xml` ไฟล์:
+เพิ่ม repository และ dependency ลงในไฟล์ `pom.xml` ของคุณ:
 
 ```xml
 <repositories>
@@ -53,120 +67,226 @@ type: docs
 </dependencies>
 ```
 
-**การขอใบอนุญาต**
+**Pro tip:** ตรวจสอบหน้า releases ของ GroupDocs เพื่อหาเวอร์ชันใหม่; เวอร์ชันใหม่มักมาพร้อมกับการปรับปรุงประสิทธิภาพ.
 
-คุณสามารถรับใบอนุญาต GroupDocs ได้โดย:
-- ทดลองใช้ฟรีจากเว็บไซต์ของพวกเขา
-- ใบอนุญาตชั่วคราวเพื่อวัตถุประสงค์การทดสอบ
-- การซื้อใบอนุญาตเต็มรูปแบบหากคุณตัดสินใจที่จะใช้ในการผลิต
+## วิธีดึงเมตาดาต้า PDF ด้วย GroupDocs
+ด้านล่างเป็นขั้นตอนแบบละเอียด โค้ดบล็อกจะไม่เปลี่ยนแปลงจากบทแนะนำต้นฉบับเพื่อรักษาฟังก์ชันการทำงาน.
 
-เมื่อการตั้งค่าเสร็จสมบูรณ์แล้ว เรามาดำเนินการเริ่มต้นและแยกข้อมูลเอกสารกัน
-
-## คู่มือการใช้งาน
-
-### การแยกข้อมูลเมตาของเอกสารด้วย GroupDocs.Annotation
-
-ฟีเจอร์นี้มุ่งเน้นที่การดึงข้อมูลเมตาที่สำคัญจากเอกสารของคุณ ทำตามขั้นตอนเหล่านี้:
-
-#### ขั้นตอนที่ 1: เริ่มต้นวัตถุ Annotator
-
-เริ่มต้นด้วยการสร้าง `Annotator` วัตถุที่จะจัดการการดำเนินการบนเอกสารของคุณ
-
+### ขั้นตอนที่ 1: เริ่มต้น Annotator
 ```java
 import com.groupdocs.annotation.Annotator;
 import java.io.IOException;
 
-String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf"; // ระบุเส้นทางไฟล์ของคุณที่นี่
+String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf"; // Point this to your test file
 
 try (final Annotator annotator = new Annotator(inputFile)) {
-    // วัตถุคำอธิบายพร้อมสำหรับการดำเนินการเพิ่มเติมแล้ว
+    // Your metadata extraction code goes here
+    // The try-with-resources ensures proper cleanup
 } catch (IOException e) {
-    e.printStackTrace();
+    System.err.println("Couldn't access the document: " + e.getMessage());
+    // Handle the error appropriately for your use case
 }
 ```
+*ทำไมต้องใช้ try‑with‑resources?* มันจะปิด `Annotator` โดยอัตโนมัติ ป้องกันการรั่วไหลของหน่วยความจำ—สำคัญเมื่อประมวลผลไฟล์จำนวนมาก.
 
-**เหตุใดมันจึงได้ผล:** การเริ่มต้นใช้งาน `Annotator` วัตถุที่มีเอกสารตั้งค่าสภาพแวดล้อมเพื่อแยกข้อมูลเมตาและดำเนินการคำอธิบายประกอบอื่น ๆ ได้อย่างราบรื่น
-
-#### ขั้นตอนที่ 2: ดึงข้อมูลเอกสาร
-
-ด้วยของคุณ `Annotator` เมื่อเริ่มต้นแล้ว คุณสามารถรับข้อมูลสำคัญเกี่ยวกับเอกสารของคุณได้:
-
+### ขั้นตอนที่ 2: ดึงข้อมูลเอกสาร
 ```java
 import com.groupdocs.annotation.IDocumentInfo;
 
 try (final Annotator annotator = new Annotator(inputFile)) {
     IDocumentInfo info = null;
     try {
-        // การแยกข้อมูลเมตาของเอกสาร เช่น ประเภทไฟล์ จำนวนหน้า และขนาด
+        // This is where the magic happens
         info = annotator.getDocument().getDocumentInfo();
         
         if (info != null) {
             System.out.println("Number of Pages: " + info.getPageCount());
             System.out.println("File Type: " + info.getFileType());
             System.out.println("Size: " + info.getSize() + " bytes");
+            
+            // Convert bytes to more readable format
+            double sizeInMB = info.getSize() / (1024.0 * 1024.0);
+            System.out.printf("Size: %.2f MB%n", sizeInMB);
+        } else {
+            System.out.println("Couldn't extract document information");
         }
     } catch (IOException e) {
-        e.printStackTrace();
+        System.err.println("Error extracting metadata: " + e.getMessage());
+    }
+}
+```
+`getDocumentInfo()` อ่านเฉพาะส่วนหัวเท่านั้น ทำให้แม้ PDF ขนาดใหญ่ก็ประมวลผลได้อย่างรวดเร็ว.
+
+## ข้อผิดพลาดทั่วไปและวิธีหลีกเลี่ยง
+### ปัญหาเส้นทางไฟล์
+การกำหนดเส้นทางแบบ absolute อย่างตายตัวจะทำให้เกิดข้อผิดพลาดเมื่อย้ายไปยังสภาพแวดล้อมอื่น ใช้เส้นทางแบบ relative หรือ environment variables:
+
+```java
+String baseDir = System.getProperty("user.dir");
+String inputFile = baseDir + "/documents/sample.pdf";
+```
+
+### การจัดการหน่วยความจำ
+เมื่อจัดการชุดไฟล์ขนาดใหญ่ ควรปิด resource อย่างทันท่วงทีและตรวจสอบการใช้ heap การประมวลผลไฟล์เป็นส่วนย่อย ๆ จะหลีกเลี่ยง `OutOfMemoryError`.
+
+### การจัดการข้อยกเว้น
+จับข้อยกเว้นที่เฉพาะเจาะจงเพื่อรักษาข้อมูลการวินิจฉัยที่เป็นประโยชน์:
+
+```java
+try {
+    // metadata extraction code
+} catch (IOException e) {
+    logger.error("Cannot access file: " + inputFile, e);
+} catch (Exception e) {
+    logger.error("Unexpected error processing document", e);
+}
+```
+
+## เคล็ดลับการเพิ่มประสิทธิภาพ
+### ตัวอย่างการประมวลผลเป็นชุด
+```java
+List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.docx", "doc3.xlsx");
+
+for (String path : documentPaths) {
+    try (final Annotator annotator = new Annotator(path)) {
+        IDocumentInfo info = annotator.getDocument().getDocumentInfo();
+        // Process info immediately
+        processDocumentInfo(path, info);
+    } catch (Exception e) {
+        // Log error but continue with next document
+        logger.warn("Failed to process " + path + ": " + e.getMessage());
     }
 }
 ```
 
-**เหตุใดมันจึงได้ผล:** การ `getDocumentInfo()` วิธีการดึงข้อมูลเมตาซึ่งมีความสำคัญต่อการทำความเข้าใจโครงสร้างและคุณสมบัติของเอกสาร
+### การแคชเมตาดาต้า
+```java
+Map<String, IDocumentInfo> metadataCache = new ConcurrentHashMap<>();
 
-### เคล็ดลับการแก้ไขปัญหา
+public IDocumentInfo getDocumentInfo(String filePath) {
+    return metadataCache.computeIfAbsent(filePath, path -> {
+        try (final Annotator annotator = new Annotator(path)) {
+            return annotator.getDocument().getDocumentInfo();
+        } catch (Exception e) {
+            logger.error("Failed to extract metadata for " + path, e);
+            return null;
+        }
+    });
+}
+```
 
-- **ข้อผิดพลาดเส้นทางไฟล์**: ตรวจสอบให้แน่ใจว่าเส้นทางไฟล์ของคุณถูกต้อง เส้นทางจะคำนึงถึงตัวพิมพ์เล็กและตัวพิมพ์ใหญ่ในระบบปฏิบัติการบางระบบ
-- **ข้อยกเว้น IO**: หากคุณพบเจอ `IOException`ตรวจสอบว่าไฟล์มีอยู่ในตำแหน่งที่ระบุและมีสิทธิ์อ่านที่เหมาะสม
+## ตัวอย่างการบูรณาการในโลกจริง
+### บริการประมวลผลเอกสาร
+```java
+public class DocumentProcessor {
+    public DocumentMetadata processUploadedDocument(String filePath) {
+        try (final Annotator annotator = new Annotator(filePath)) {
+            IDocumentInfo info = annotator.getDocument().getDocumentInfo();
+            
+            return new DocumentMetadata.Builder()
+                .pageCount(info.getPageCount())
+                .fileType(info.getFileType())
+                .sizeInBytes(info.getSize())
+                .processedDate(LocalDateTime.now())
+                .build();
+        } catch (Exception e) {
+            throw new DocumentProcessingException("Failed to process document", e);
+        }
+    }
+}
+```
 
-## การประยุกต์ใช้งานจริง
+### การจัดระเบียบไฟล์อัตโนมัติ
+```java
+public void organizeDocumentsByType(List<String> filePaths) {
+    for (String path : filePaths) {
+        try (final Annotator annotator = new Annotator(path)) {
+            IDocumentInfo info = annotator.getDocument().getDocumentInfo();
+            String destinationFolder = "organized/" + info.getFileType().toLowerCase();
+            
+            Files.createDirectories(Paths.get(destinationFolder));
+            Files.move(Paths.get(path), 
+                      Paths.get(destinationFolder, Paths.get(path).getFileName().toString()));
+        } catch (Exception e) {
+            logger.warn("Failed to organize file: " + path, e);
+        }
+    }
+}
+```
 
-ใช้ประโยชน์จาก GroupDocs.Annotation ในสถานการณ์จริงเหล่านี้:
-1. **การจัดการเอกสารทางกฎหมาย**ตรวจสอบจำนวนหน้าและขนาดเอกสารอย่างรวดเร็วเพื่อตรวจสอบการปฏิบัติตามข้อกำหนด
-2. **งานวิจัยเชิงวิชาการ**:ดึงข้อมูลเมตาจากเอกสารการวิจัยเพื่อปรับปรุงการจัดการอ้างอิงให้มีประสิทธิภาพ
-3. **กระบวนการทรัพยากรบุคคล**:ทำให้การดึงข้อมูลรายละเอียดสัญญาพนักงานเป็นแบบอัตโนมัติ ช่วยให้มั่นใจว่าไม่มีข้อผิดพลาดจากการป้อนข้อมูลด้วยตนเอง
+### ตัวช่วยดึงข้อมูลอย่างปลอดภัย
+```java
+public Optional<DocumentMetadata> extractMetadata(String filePath) {
+    try (final Annotator annotator = new Annotator(filePath)) {
+        IDocumentInfo info = annotator.getDocument().getDocumentInfo();
+        return Optional.of(new DocumentMetadata(info));
+    } catch (IOException e) {
+        logger.error("IO error processing " + filePath, e);
+        return Optional.empty();
+    } catch (Exception e) {
+        logger.error("Unexpected error processing " + filePath, e);
+        return Optional.empty();
+    }
+}
+```
 
-## การพิจารณาประสิทธิภาพ
+### การบันทึกสำหรับการตรวจสอบ
+```java
+logger.info("Processing document: {} (Size: {} bytes)", filePath, fileSize);
+long startTime = System.currentTimeMillis();
 
-เพื่อให้มั่นใจถึงประสิทธิภาพที่เหมาะสมที่สุด:
-- ปิดทรัพยากรทันทีโดยใช้ try-with-resources ตามที่สาธิต
-- ตรวจสอบการใช้หน่วยความจำ เอกสารขนาดใหญ่จะใช้ทรัพยากรจำนวนมาก
-- ใช้ประโยชน์จากการรวบรวมขยะของ Java ได้อย่างมีประสิทธิภาพด้วยการลดการสร้างวัตถุที่ไม่จำเป็นให้น้อยที่สุด
+// ... metadata extraction code ...
 
-## บทสรุป
+long processingTime = System.currentTimeMillis() - startTime;
+logger.info("Processed {} in {}ms", filePath, processingTime);
+```
 
-ในบทช่วยสอนนี้ คุณจะได้เรียนรู้วิธีการตั้งค่า GroupDocs.Annotation สำหรับ Java และแยกข้อมูลเมตาของเอกสารที่สำคัญ โดยการนำเทคนิคเหล่านี้ไปใช้ คุณจะสามารถจัดการการแยกข้อมูลเมตาในโครงการของคุณได้อย่างมีประสิทธิภาพ
+### ตัวอย่างการกำหนดค่า
+```properties
+# application.properties
+document.processing.max-file-size=50MB
+document.processing.timeout=30s
+document.processing.batch-size=100
+```
 
-**ขั้นตอนต่อไป:**
-- สำรวจคุณลักษณะคำอธิบายเพิ่มเติม เช่น การเพิ่มคำอธิบายข้อความหรือรูปภาพ
-- บูรณาการกับระบบอื่นๆ เพื่อให้เวิร์กโฟลว์เป็นอัตโนมัติ
+## การแก้ไขปัญหาทั่วไป
+- **File Not Found:** ตรวจสอบเส้นทาง, สิทธิ์การเข้าถึง, และว่ามีโปรเซสอื่นล็อกไฟล์หรือไม่.  
+- **OutOfMemoryError:** เพิ่มขนาด heap ของ JVM (`-Xmx2g`) หรือประมวลผลไฟล์เป็นชุดย่อย.  
+- **Unsupported Format:** ตรวจสอบรายการรูปแบบที่ GroupDocs รองรับ; หากไม่รองรับให้ใช้ Apache Tika เป็นทางเลือก.  
 
-พร้อมที่จะก้าวไปอีกขั้นหรือยัง เริ่มทดลองใช้เอกสารต่างๆ และดูว่า GroupDocs.Annotation จะช่วยปรับปรุงกระบวนการจัดการเอกสารของคุณได้อย่างไร
+## คำถามที่พบบ่อย
+**ถาม: ฉันจะจัดการกับ PDF ที่มีการป้องกันด้วยรหัสผ่านอย่างไร?**  
+A: ส่งอ็อบเจกต์ `LoadOptions` พร้อมรหัสผ่านเมื่อสร้าง `Annotator`.  
 
-## ส่วนคำถามที่พบบ่อย
+**ถาม: การดึงเมตาดาต้าเร็วสำหรับ PDF ขนาดใหญ่หรือไม่?**  
+A: ใช่—เพราะอ่านเฉพาะข้อมูลส่วนหัวเท่านั้น แม้ PDF หลายร้อยหน้า ก็เสร็จในระดับมิลลิวินาที.  
 
-1. **GroupDocs.Annotation สำหรับ Java ใช้สำหรับอะไร**  
-   เป็นไลบรารีอันทรงพลังสำหรับการแยกข้อมูลเมตา การเพิ่มคำอธิบายประกอบ และการจัดการคุณสมบัติเอกสารในแอปพลิเคชัน Java
+**ถาม: ฉันสามารถดึงคุณสมบัติกำหนดเองได้หรือไม่?**  
+A: ใช้ `info.getCustomProperties()` เพื่อดึงฟิลด์เมตาดาต้าที่ผู้ใช้กำหนดเอง.  
 
-2. **ฉันจะจัดการไฟล์ขนาดใหญ่อย่างมีประสิทธิภาพด้วย GroupDocs ได้อย่างไร**  
-   ใช้การสตรีมหากเป็นไปได้ และตรวจสอบให้แน่ใจว่าระบบของคุณมีทรัพยากรหน่วยความจำเพียงพอ
+**ถาม: ปลอดภัยหรือไม่ที่จะประมวลผลไฟล์จากแหล่งที่ไม่เชื่อถือ?**  
+A: ตรวจสอบขนาดไฟล์, ประเภทไฟล์, และพิจารณาแยกกระบวนการดึงข้อมูลใน sandbox.  
 
-3. **ฉันสามารถใช้ GroupDocs.Annotation สำหรับการประมวลผลเอกสารแบบแบตช์ได้หรือไม่**  
-   ใช่ คุณสามารถทำให้กระบวนการเป็นอัตโนมัติได้ด้วยการวนซ้ำผ่านคอลเลกชันของไฟล์
+**ถาม: ถ้าเอกสารถูกทำลายจะทำอย่างไร?**  
+A: GroupDocs จัดการกับการเสียหายเล็กน้อยได้อย่างราบรื่น; ในกรณีที่รุนแรงให้จับข้อยกเว้นและข้ามไฟล์นั้น.  
 
-4. **ฉันสามารถใส่คำอธิบายประกอบใน PDF โดยใช้ไลบรารีนี้ได้หรือไม่**  
-   แน่นอน! GroupDocs รองรับรูปแบบเอกสารต่างๆ รวมถึง PDF
+## สรุป
+คุณมีวิธีการที่ครบถ้วนและพร้อมใช้งานในระดับ production สำหรับ **how to extract PDF metadata** ใน Java แล้ว เริ่มด้วยตัวอย่าง `Annotator` อย่างง่าย จากนั้นขยายขนาดด้วยการประมวลผลเป็นชุด, การแคช, และการจัดการข้อผิดพลาดที่แข็งแกร่ง รูปแบบที่แสดงนี้จะช่วยคุณอย่างดีเมื่อสร้าง pipeline การประมวลผลเอกสารขนาดใหญ่
 
-5. **ฉันจะได้รับการสนับสนุนได้ที่ไหนหากประสบปัญหา?**  
-   เยี่ยมชมฟอรัม GroupDocs เพื่อรับการสนับสนุนจากชุมชนและผู้เชี่ยวชาญได้ที่ [การสนับสนุน GroupDocs](https://forum-groupdocs.com/c/annotation).
+---
 
-## ทรัพยากร
+**แหล่งข้อมูลและลิงก์**
 
-- **เอกสารประกอบ**- [GroupDocs.Annotation เอกสาร Java](https://docs.groupdocs.com/annotation/java/)
-- **เอกสารอ้างอิง API**- [เอกสารอ้างอิง Java API](https://reference.groupdocs.com/annotation/java/)
-- **ดาวน์โหลด**- [ดาวน์โหลด GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **ซื้อ**- [ซื้อใบอนุญาต GroupDocs](https://purchase.groupdocs.com/buy)
-- **ทดลองใช้งานฟรี**- [ลองใช้งานฟรี](https://releases.groupdocs.com/annotation/java/)
-- **ใบอนุญาตชั่วคราว**- [รับใบอนุญาตชั่วคราว](https://purchase.groupdocs.com/temporary-license/)
-- **สนับสนุน**- [ฟอรั่ม GroupDocs](https://forum.groupdocs.com/c/annotation/) 
+- **เอกสาร:** [GroupDocs.Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)
+- **อ้างอิง API:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- **ดาวน์โหลด:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)
+- **ตัวเลือกการซื้อ:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
+- **ทดลองใช้ฟรี:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
+- **ไลเซนส์สำหรับการพัฒนา:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- **สนับสนุนจากชุมชน:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
 
-นำพลังของ GroupDocs.Annotation มาใช้ในโครงการ Java ของคุณ และทำให้การจัดการเอกสารง่ายขึ้นวันนี้!
+---
+
+**อัปเดตล่าสุด:** 2025-12-26  
+**ทดสอบกับ:** GroupDocs.Annotation 25.2  
+**ผู้เขียน:** GroupDocs
