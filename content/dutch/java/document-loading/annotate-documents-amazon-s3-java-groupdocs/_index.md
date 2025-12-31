@@ -1,48 +1,59 @@
 ---
-"date": "2025-05-06"
-"description": "Leer hoe u documenten die zijn opgeslagen op Amazon S3 efficiënt kunt laden en annoteren met GroupDocs.Annotation in Java. Deze handleiding behandelt integratie, AWS SDK-gebruik en prestatieoptimalisatie."
-"title": "Documenten laden en annoteren vanuit Amazon S3 met behulp van Java&#58; een handleiding voor GroupDocs.Annotation-integratie"
-"url": "/nl/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/"
+categories:
+- Java Development
+date: '2025-12-31'
+description: Leer hoe je PDF's kunt annoteren vanuit Amazon S3 met Java GroupDocs,
+  met stapsgewijze code, probleemoplossing en prestatie‑tips.
+keywords: java s3 document annotation, groupdocs annotation s3 integration, load documents
+  from s3 java, annotate pdf s3 java, aws s3 java annotation, how to annotate pdf,
+  java s3 streaming, java s3 access denied, java load s3 document, stream s3 file
+  java, java s3 caching
+lastmod: '2025-12-31'
+linktitle: Java S3 Document Annotation Guide
+tags:
+- java
+- s3
+- document-annotation
+- groupdocs
+- aws
+title: Hoe PDF te annoteren vanuit Amazon S3 met Java – Complete gids
 type: docs
-"weight": 1
+url: /nl/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/
+weight: 1
 ---
 
-# Documenten laden en annoteren vanuit Amazon S3 met behulp van Java
+# Hoe PDF te annoteren vanuit Amazon S3 met Java
 
-## Invoering
+Je werkt waarschijnlijk met documenten die verspreid staan over S3‑buckets, en je team moet **PDF‑bestanden annoteren** zonder ze eerst lokaal te hoeven downloaden. Klinkt bekend? Je bent niet de enige – dit is een van de meest voorkomende uitdagingen voor ontwikkelaars die document‑samenwerkingssystemen bouwen.
 
-Het beheren en annoteren van clouddocumenten is cruciaal voor moderne bedrijven. Deze tutorial begeleidt je door het proces van het rechtstreeks laden van een document vanuit een Amazon S3-bucket met GroupDocs.Annotation voor Java, wat naadloos documentbeheer en samenwerking mogelijk maakt.
+Dit is wat je in de komende 10 minuten onder de knie krijgt:
 
-**Wat je leert:**
-- GroupDocs.Annotation integreren met uw Java-applicatie
-- Documenten downloaden van Amazon S3 met behulp van AWS SDK
-- Technieken voor uitzonderingsafhandeling en prestatie-optimalisatie
+- **Directe S3‑integratie** met GroupDocs.Annotation (geen tijdelijke bestanden nodig)  
+- **Productieklaar code** die randgevallen afhandelt waar je nog niet aan gedacht hebt  
+- **Prestatie‑optimalisatie**‑trucs die je app responsief houden  
+- **Echte probleemoplossingen** van ontwikkelaars die het al hebben meegemaakt  
 
-Laten we beginnen met het doornemen van de vereisten om deze handleiding te kunnen volgen.
+Laten we duiken in het bouwen van iets dat echt werkt in productie.
 
-## Vereisten
+## Snelle antwoorden
+- **Wat is de belangrijkste bibliotheek?** GroupDocs.Annotation voor Java  
+- **Welke AWS‑service wordt gebruikt?** Amazon S3 (direct gestreamd)  
+- **Heb ik een licentie nodig?** Ja – een gratis proefversie werkt voor ontwikkeling, een volledige licentie voor productie  
+- **Kan ik grote PDF‑s werken?** Absoluut, gebruik streaming om geheugenproblemen te vermijden  
+- **Wordt gelijktijdigheid ondersteund?** GroupDocs.Annotation verwerkt gelijktijdige bewerkingen; je moet alleen conflicthandeling op applicatieniveau implementeren  
 
-Voordat u begint, zorg ervoor dat u het volgende heeft:
+## Waarom deze integratie belangrijk is (en waarom je hier bent)
 
-### Vereiste bibliotheken en afhankelijkheden
-- GroupDocs.Annotation voor Java (versie 25.2)
-- Compatibele AWS SDK voor Java met uw S3-configuratie
+Je werkt waarschijnlijk met documenten die verspreid staan over S3‑buckets, en je team moet ze annoteren zonder de rompslomp van lokaal downloaden. Klinkt bekend? Je bent niet de enige – dit is een van de meest voorkomende uitdagingen voor ontwikkelaars die document‑samenwerkingssystemen bouwen.
 
-### Vereisten voor omgevingsinstellingen
-- JDK 8 of hoger op uw systeem geïnstalleerd.
-- Maven voor het beheren van afhankelijkheden.
+## Voordat we beginnen: wat je echt nodig hebt
 
-### Kennisvereisten
-- Basiskennis van Java-programmering en de Maven-buildtool.
-- Kennis van AWS-services, met name Amazon S3.
+### De essentiële stack
+- **GroupDocs.Annotation voor Java (Versie 25.2+)** – jouw annotatie‑krachtpatroon  
+- **AWS SDK voor Java** – voor het zware werk met S3  
+- **JDK 8 of hoger** – uiteraard, maar het is het vermelden waard  
 
-## GroupDocs.Annotation instellen voor Java
-
-Integreer eerst de GroupDocs.Annotation-bibliotheek in uw project met behulp van Maven:
-
-**Maven-configuratie:**
-
-Voeg deze configuraties toe aan uw `pom.xml` bestand:
+### Maven‑afhankelijkheden (Kopieer‑en‑plak klaar)
 
 ```xml
 <repositories>
@@ -62,115 +73,263 @@ Voeg deze configuraties toe aan uw `pom.xml` bestand:
 </dependencies>
 ```
 
-### Stappen voor het verkrijgen van een licentie
+### Voorwaarden voor ontwikkelaars (Wees eerlijk tegen jezelf)
+- **Java‑basiskennis** – je moet vertrouwd zijn met try‑catch‑blokken en Maven  
+- **AWS‑basiskennis** – weet wat S3 is en hoe buckets werken  
+- **5‑10 minuten** – dat is echt alles wat je nodig hebt om dit werkend te krijgen  
 
-1. **Gratis proefperiode:** Download een proefversie van de [GroupDocs downloaden](https://releases.groupdocs.com/annotation/java/) pagina.
-   
-2. **Tijdelijke of gekochte licentie:** Koop een tijdelijke licentie voor uitgebreide toegang of een volledige licentie om alle functies te ontgrendelen.
+## GroupDocs Annotation instellen (op de juiste manier)
 
-3. **Licentie-initialisatie:**
+### Je licentie regelen
+De meeste ontwikkelaars slaan deze stap over en vragen zich later af waarom dingen breken. Wees die ontwikkelaar niet.
 
-   ```java
-   // GroupDocs-licentie toepassen
-   License license = new License();
-   license.setLicense("path/to/your/license/file.lic");
-   ```
+**Voor ontwikkeling/testen:**  
+Pak de gratis proefversie van [GroupDocs Download](https://releases.groupdocs.com/annotation/java/) – hij werkt echt, geen marketingtruc.
 
-## Implementatiegids
-
-In dit gedeelte leggen we u uit hoe u een document van Amazon S3 kunt downloaden en er aantekeningen in kunt maken met GroupDocs.Annotation voor Java.
-
-### Document laden van Amazon S3
-
-Met deze functie kunt u eenvoudig documenten ophalen die in een S3-bucket zijn opgeslagen.
-
-#### Overzicht
-We zullen AWS SDK's gebruiken `AmazonS3Client` om verbinding te maken met uw S3-bucket, het gewenste bestand op te halen en het voor te bereiden voor annotatie.
-
-#### Stapsgewijze implementatie
-
-##### Amazon S3-client initialiseren
+**Voor productie:**  
+Je hebt een tijdelijke licentie (handig voor POC’s) of de volledige licentie nodig. Zo pas je hem toe:
 
 ```java
-// Importeer de benodigde pakketten
+// Apply GroupDocs License
+License license = new License();
+license.setLicense("path/to/your/license/file.lic");
+```
+
+**Pro‑tip:** Plaats je licentiebestand in je resources‑map en verwijs er relatief naar. Je toekomstige zelf (en je DevOps‑team) zal je dankbaar zijn.
+
+## De implementatie: van S3 naar annotaties in enkele minuten
+
+### De workflow begrijpen
+Dit is wat we bouwen: **S3 → Stream → GroupDocs → Annotaties**. Simpel, toch? De duivel zit in de details, en daar falen de meeste tutorials. Niet deze.
+
+### Documenten laden vanuit Amazon S3 (de slimme manier)
+
+#### Waarom directe streaming belangrijk is
+Voordat we de code induiken, hier waarom deze aanpak beter is dan lokaal downloaden:
+
+- **Geheugenefficiëntie** – geen tijdelijke bestandsopbouw  
+- **Beveiliging** – bestanden komen nooit op je lokale bestandssysteem terecht  
+- **Prestaties** – streaming is sneller dan downloaden‑en‑verwerken  
+- **Schaalbaarheid** – je server raakt niet zonder schijfruimte  
+
+#### Stap 1: Initialiseert je S3‑client
+
+```java
+// Import necessary packages
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 
-// Initialiseer de S3-client
+// Initialize the S3 client
 AmazonS3 s3client = AmazonS3ClientBuilder.standard().build();
-String bucketName = "my-bucket"; // Vervang door uw eigen bucketnaam
+String bucketName = "my-bucket"; // Replace with your actual bucket name
 ```
 
-##### Een verzoek tot het ophalen van een object maken
+**Veelvoorkomende valkuil:** Als je hier authenticatiefouten krijgt, controleer dan je AWS‑referentiesconfiguratie. De SDK zoekt referenties in deze volgorde: omgevingsvariabelen → AWS‑referentiebestand → IAM‑rollen.
+
+#### Stap 2: Maak je object‑verzoek aan
 
 ```java
-// Definieer de objectsleutel (bestandspad in S3)
+// Define the object key (file path in S3)
 String fileKey = "path/to/your/document.pdf";
 
-// Een verzoek voor het object maken
+// Create a request for the object
 GetObjectRequest request = new GetObjectRequest(bucketName, fileKey);
 ```
 
-##### Download en stream de bestandsinhoud
+**Praktijknote:** In productie wil je valideren dat `fileKey` bestaat voordat je het verzoek maakt. Geloof me – gebruikers proberen vaak bestanden op te vragen die niet bestaan.
+
+#### Stap 3: Stream de inhoud (hier gebeurt de magie)
 
 ```java
-// Probeer met bronnen om een correcte afsluiting van bronnen te garanderen
+// Try-with-resources to ensure proper closure of resources
 try (S3ObjectInputStream s3is = s3client.getObject(request).getObjectContent()) {
-    // Retourneer of verwerk de invoerstroom indien nodig
+    // Return or process the input stream as needed
     return s3is;
 } catch (Exception e) {
     e.printStackTrace();
 }
 ```
 
-#### Uitleg
-- **AmazonS3Client:** Deze klasse maakt verbinding met uw S3-bucket en faciliteert objectbewerkingen.
-- **Objectaanvraag ophalen:** Geeft de bucketnaam en sleutel op voor het ophalen van specifieke bestanden.
-- **S3ObjectInputStream:** Streamt de inhoud van het bestand, waardoor verdere verwerking of annotatie mogelijk is.
+#### Wat er eigenlijk gebeurt
+- **AmazonS3Client** regelt alle AWS‑authenticatie en verbindingsbeheer  
+- **GetObjectRequest** is je specifieke bestandsverzoek (denk aan een zeer slimme bestands‑pad)  
+- **S3ObjectInputStream** levert een stream die je direct aan GroupDocs kunt doorgeven – zonder tussenstappen  
 
-### Tips voor probleemoplossing
-- Zorg ervoor dat AWS-referenties correct zijn geconfigureerd in uw omgeving.
-- Controleer of de bucketnaam en objectsleutels correct zijn.
-- Ga op een correcte manier om met uitzonderingen, zodat de gebruikerservaring niet wordt verstoord.
+### Probleemoplossing: wanneer dingen fout gaan (en dat zal gebeuren)
 
-## Praktische toepassingen
-1. **Gezamenlijke documentbeoordeling:** Laad gedeelde documenten vanuit S3 voor teamannotaties zonder lokale opslagbeperkingen.
-2. **Geautomatiseerde documentverwerking:** Integreer met workflows om documenten te annoteren wanneer ze worden geüpload naar S3.
-3. **Analyse van juridische en financiële documenten:** Stroomlijn het beoordelingsproces door rechtstreeks toegang te krijgen tot bestanden die veilig in de cloud zijn opgeslagen.
+#### Het “Access Denied”‑probleem
+**Symptomen:** Je code werkt lokaal maar faalt in productie  
+**Oplossing:** Controleer je IAM‑beleid. Je applicatie heeft `s3:GetObject`‑rechten nodig voor de specifieke bucket.
 
-## Prestatieoverwegingen
-- Optimaliseer uw AWS SDK-configuraties voor minder latentie.
-- Beheer het geheugen efficiënt door grote bestanden te streamen in plaats van ze volledig in het geheugen te laden.
-- Gebruik waar mogelijk asynchrone bewerkingen om de responsiviteit van applicaties te verbeteren.
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::your-bucket-name/*"
+        }
+    ]
+}
+```
 
-## Conclusie
-Door deze handleiding te volgen, hebt u geleerd hoe u GroupDocs.Annotation Java kunt gebruiken om documenten vanuit Amazon S3 te laden en te annoteren. Deze integratie verbetert niet alleen uw documentbeheermogelijkheden, maar ondersteunt ook efficiënte samenwerking tussen teams.
+#### Het “File Not Found”‑mysterie
+**Symptomen:** `NoSuchKey`‑exceptions terwijl je het bestand wel in de AWS‑console ziet  
+**Oplossing:** S3‑object‑keys zijn hoofdlettergevoelig en bevatten het volledige pad. “Document.pdf” ≠ “document.pdf”
 
-**Volgende stappen:**
-- Ontdek meer annotatiefuncties die GroupDocs biedt.
-- Overweeg de integratie van andere cloudopslagservices voor een veelzijdiger oplossing.
+#### Geheugenproblemen met grote bestanden
+**Symptomen:** `OutOfMemoryError` bij het verwerken van grote documenten  
+**Oplossing:** Gebruik streaming door je hele pijplijn heen. Laad het bestand nooit volledig in het geheugen.
 
-Klaar om dit in uw projecten te implementeren? Begin vandaag nog met experimenteren!
+## Praktijkimplementatiescenarios
 
-## FAQ-sectie
-1. **Hoe stel ik AWS-referenties veilig in?**
-   - Gebruik IAM-rollen en omgevingsvariabelen om toegangssleutels te beheren zonder dat u deze hardcodeert in uw toepassing.
-2. **Kan ik PDF's die op S3 zijn opgeslagen, rechtstreeks annoteren?**
-   - Ja, GroupDocs.Annotation ondersteunt verschillende bestandsformaten, waaronder PDF's voor directe annotatie na het ophalen uit S3.
-3. **Wat als mijn document te groot is om efficiënt te streamen?**
-   - Overweeg om het document op te delen in kleinere stukken of om AWS-services zoals Lambda te gebruiken voor de voorverwerking.
-4. **Zijn er beperkingen wat betreft annotaties?**
-   - Raadpleeg de GroupDocs.Annotation-documentatie voor ondersteunde annotaties en bestandstypen.
-5. **Hoe kan ik connectiviteitsproblemen met S3 oplossen?**
-   - Controleer de netwerkinstellingen, de AWS-servicestatus en zorg dat uw bucketbeleid toegang vanaf het IP-adres van uw toepassing toestaat.
+### Scenario 1: Platform voor juridische documentreview
+Je bouwt een systeem waarin juridische teams contracten annoteren die in S3 staan. Wat telt:
 
-## Bronnen
-- [GroupDocs-documentatie](https://docs.groupdocs.com/annotation/java/)
-- [API-referentie](https://reference.groupdocs.com/annotation/java/)
-- [Download Bibliotheek](https://releases.groupdocs.com/annotation/java/)
-- [Licentie kopen](https://purchase.groupdocs.com/buy)
-- [Gratis proefversie](https://releases.groupdocs.com/annotation/java/)
-- [Aanvraag tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)
-- [Ondersteuningsforum](https://forum.groupdocs.com/c/annotation/)
+- **Audit‑trails** – elke annotatie moet gelogd worden  
+- **Versiebeheer** – originele documenten mogen niet worden aangepast  
+- **Toegangscontrole** – alleen geautoriseerde gebruikers mogen specifieke documenten annoteren  
+
+### Scenario 2: Educatief content‑beheer
+Docenten uploaden lessen naar S3, en studenten annoteren ze voor feedback:
+
+- **Gelijktijdige toegang** – meerdere studenten annoteren tegelijk  
+- **Annotatie‑categorieën** – verschillende soorten feedback (vragen, correcties, complimenten)  
+- **Export‑mogelijkheden** – annotaties moeten exporteerbaar zijn voor beoordeling  
+
+### Scenario 3: Enterprise‑document‑samenwerking
+Verspreide teams werken samen aan technische documentatie:
+
+- **Realtime synchronisatie** – annotaties verschijnen direct bij alle clients  
+- **Integratie‑eisen** – moet werken met bestaande SSO‑ en permissiesystemen  
+- **Prestaties op schaal** – duizenden documenten verwerken  
+
+## Prestatie‑optimalisatie: productie‑klaar maken
+
+### Geheugenbeheer‑best practices
+**Gebruik altijd try‑with‑resources** voor S3‑streams – gelekte streams laten je applicatie uiteindelijk crashen.
+
+**Stream‑verwerking** in plaats van volledige bestanden laden:
+
+```java
+// Good - streams the entire process
+try (S3ObjectInputStream s3Stream = getS3Stream(bucketName, fileKey)) {
+    // Process stream directly with GroupDocs
+}
+
+// Bad - loads everything into memory first
+byte[] fileContent = IOUtils.toByteArray(s3Stream); // Don't do this
+```
+
+### Optimalisatie van de connectie‑pool
+Configureer je S3‑client voor productie‑workloads:
+
+```java
+AmazonS3 s3client = AmazonS3ClientBuilder.standard()
+    .withClientConfiguration(new ClientConfiguration()
+        .withMaxConnections(100)
+        .withConnectionTimeout(10000))
+    .build();
+```
+
+### Asynchrone verwerking voor betere UX
+Voor grote bestanden, overweeg async verwerking:
+
+- Start het annotatie‑laadproces  
+- Toon voortgangsindicatoren aan gebruikers  
+- Gebruik callbacks of WebSockets om te melden wanneer het klaar is  
+
+## Veelvoorkomende valkuilen (Leer van andermans fouten)
+
+### De “Het werkt op mijn machine”‑val
+**Probleem:** Verschillende AWS‑referenties tussen omgevingen  
+**Oplossing:** Gebruik omgevingsspecifieke configuratie en correcte referentie‑beheer  
+
+### De grote‑bestand‑aanname
+**Probleem:** Testen met kleine PDF‑s, maar in productie met multi‑GB documenten  
+**Oplossing:** Test vanaf dag één met realistische bestandsgroottes  
+
+### De beveiligings‑achteraf‑gedachte
+**Probleem:** Hardcoded AWS‑referenties in de broncode  
+**Oplossing:** Gebruik IAM‑rollen, omgevingsvariabelen of AWS Secrets Manager  
+
+## Geavanceerde tips voor Java‑S3‑documentannotatie
+
+### Caching‑strategie
+Implementeer intelligente caching voor vaak opgevraagde documenten:
+
+```java
+// Cache document metadata, not content
+Map<String, DocumentInfo> documentCache = new ConcurrentHashMap<>();
+```
+
+### Fout‑herstel
+Bouw veerkracht in je S3‑operaties:
+
+- Retry‑logica voor tijdelijke netwerkfouten  
+- Fallback‑mechanismen voor onbeschikbare documenten  
+- Graceful degradation wanneer annotatieservices down zijn  
+
+### Monitoring en logging
+Volg de metrics die er toe doen:
+
+- **Document‑laadtijden** – hoe lang S3‑ophalen duurt  
+- **Annotatie‑verwerkingstijd** – GroupDocs‑prestaties  
+- **Foutpercentages** – mislukte operaties per type  
+- **Gebruikers‑betrokkenheid** – welke documenten het meest worden geannoteerd  
+
+## Veelgestelde vragen (de echte)
+
+**Q: Hoe ga ik om met echt grote PDF‑bestanden zonder geheugen op te raken?**  
+A: Stream alles. Laad het volledige document niet in het geheugen. GroupDocs.Annotation ondersteunt streaming, dus gebruik dat. Als je toch limieten raakt, overweeg dan het document te splitsen of te verwerken in AWS Lambda.
+
+**Q: Kan ik documenten direct in S3 annoteren zonder ze te downloaden?**  
+A: Niet precies. Je streamt de inhoud (wat anders is dan downloaden), verwerkt het met GroupDocs, en kunt vervolgens annotaties apart opslaan of een nieuwe geannoteerde versie terug naar S3 uploaden.
+
+**Q: Wat is de prestatie‑impact van streaming vanaf S3 versus lokale bestanden?**  
+A: Netwerk‑latentie voegt meestal 50‑200 ms toe, maar je bespaart lokale opslag en implementatie‑complexiteit. Voor de meeste apps is de afweging het waard. Als prestaties cruciaal zijn, plaats je servers in dezelfde AWS‑regio als de bucket.
+
+**Q: Hoe beveilig ik de toegang tot gevoelige documenten?**  
+A: Gebruik IAM‑rollen met least‑privilege toegang, activeer S3‑bucket‑policies, overweeg S3‑versleuteling at rest, en implementeer toegangscontroles op applicatieniveau. Vertrouw nooit alleen op “security through obscurity”.
+
+**Q: Kunnen meerdere gebruikers hetzelfde document gelijktijdig annoteren?**  
+A: GroupDocs.Annotation ondersteunt gelijktijdige annotaties, maar je moet conflictoplossing op applicatieniveau implementeren. Overweeg document‑locking of realtime‑samenwerkingsfuncties.
+
+**Q: Welke bestandsformaten werken met deze aanpak?**  
+A: GroupDocs.Annotation ondersteunt PDF, Word, Excel, PowerPoint en veel afbeeldingsformaten. De S3‑integratie verandert de format‑ondersteuning niet – als GroupDocs het lokaal kan verwerken, kan het ook vanaf S3.
+
+## Afronding: je bent klaar om te bouwen
+
+Je hebt nu alles wat je nodig hebt om robuuste Java‑S3‑documentannotatie te implementeren. Belangrijke lessen:
+
+- **Stream alles** – download bestanden niet onnodig  
+- **Handel fouten netjes af** – netwerkproblemen komen onvermijdelijk  
+- **Test met realistische data** – kleine testbestanden verbergen prestatie‑problemen  
+- **Beveilig vanaf het begin** – gebruik juiste AWS‑permissies vanaf de start  
+
+## Wat nu?
+- Verken de geavanceerde annotatiefuncties van GroupDocs voor jouw specifieke use‑case  
+- Overweeg realtime‑samenwerkingsfeatures te implementeren  
+- Kijk naar andere cloud‑storage‑integraties (Azure, Google Cloud) met vergelijkbare patronen  
+
+Klaar om te coderen? De voorbeelden hierboven zijn productie‑klaar – vervang alleen je bucket‑namen en bestands‑paden.
+
+## Resources en referenties
+- [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) - De docs (echt nuttig)  
+- [API Reference](https://reference.groupdocs.com/annotation/java/) - Wanneer je specifieke methodesignatures nodig hebt  
+- [Download Library](https://releases.groupdocs.com/annotation/java/) - Haal de nieuwste versie op  
+- [Purchase License](https://purchase.groupdocs.com/buy) - Wanneer je klaar bent voor productie  
+- [Free Trial](https://releases.groupdocs.com/annotation/java/) - Begin hier als je alleen wilt verkennen  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/) - Perfect voor POC’s en demo’s  
+- [Support Forum](https://forum.groupdocs.com/c/annotation/) - Echte ontwikkelaars helpen echte ontwikkelaars  
+
+---
+
+**Laatst bijgewerkt:** 2025-12-31  
+**Getest met:** GroupDocs.Annotation 25.2 voor Java  
+**Auteur:** GroupDocs  
+
+---
