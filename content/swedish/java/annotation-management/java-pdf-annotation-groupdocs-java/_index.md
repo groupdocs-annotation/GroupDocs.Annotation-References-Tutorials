@@ -1,35 +1,58 @@
 ---
-"date": "2025-05-06"
-"description": "Lär dig hur du effektivt kommenterar PDF-dokument med markeringar av områden med hjälp av det kraftfulla GroupDocs.Annotation API för Java, vilket förbättrar samarbete och produktivitet."
-"title": "Hur man kommenterar PDF-filer i Java med GroupDocs.Annotation"
-"url": "/sv/java/annotation-management/java-pdf-annotation-groupdocs-java/"
+categories:
+- Java Development
+date: '2025-12-31'
+description: Lär dig hur du lägger till PDF-annotation i Java med GroupDocs.Annotation
+  API – steg‑för‑steg‑guide med kodexempel, felsökningstips och praktiska tillämpningar.
+keywords: PDF annotation Java tutorial, GroupDocs annotation Java guide, annotate
+  PDF programmatically Java, Java PDF markup API, how to add annotations to PDF using
+  Java
+lastmod: '2025-12-31'
+linktitle: PDF Annotation Java Tutorial
+tags:
+- pdf-annotation
+- groupdocs
+- java-tutorial
+- document-processing
+title: Lägg till PDF-annotering Java – Komplett GroupDocs-guide
 type: docs
-"weight": 1
+url: /sv/java/annotation-management/java-pdf-annotation-groupdocs-java/
+weight: 1
 ---
 
-# Hur man kommenterar PDF-filer i Java med GroupDocs.Annotation
+# Lägg till PDF-annotation Java – Komplett GroupDocs-guide
 
 ## Introduktion
 
-I dagens digitala era är det avgörande för samarbete och produktivitetsförbättring att effektivt kommentera dokument. GroupDocs.Annotation för Java erbjuder en robust lösning genom att låta dig lägga till anteckningar som områdesmarkeringar i dina PDF-filer. Den här handledningen guidar dig genom hur du använder GroupDocs.Annotation API för att kommentera PDF-dokument med områdesannoteringar i Java.
+Om du behöver **add pdf annotation java** programatiskt, är du på rätt plats. Har du någonsin funderat på hur man lägger till professionella annotationer i PDF‑dokument programatiskt? Du är inte ensam. Oavsett om du bygger ett dokumentgranskningssystem, skapar en utbildningsplattform eller utvecklar samarbetsverktyg, är PDF‑annotation en spelväxlare för användarengagemang.
 
-### Vad du kommer att lära dig:
-- Konfigurera GroupDocs.Annotation för Java.
-- Lägga till en områdesannotering i ett PDF-dokument.
-- Konfigurera nyckelalternativ för att anpassa anteckningar.
-- Verkliga tillämpningar och integrationsmöjligheter.
-- Tips för prestandaoptimering när du använder API:et.
+Här är grejen: att manuellt granska och markera PDF‑filer är tidskrävande och skalar inte. Det är här GroupDocs.Annotation för Java kommer in – det är som att ha en digital markeringspenna, en post‑it‑dispenser och ett kommentarsystem sammanslaget till ett kraftfullt API.
 
-Låt oss först granska de förutsättningar som krävs innan vi implementerar den här funktionen.
+## Snabba svar
+- **Vilket bibliotek låter mig lägga till pdf annotation java?** GroupDocs.Annotation for Java.  
+- **Behöver jag en licens för produktion?** Ja, en giltig GroupDocs‑licens krävs för live‑distributioner.  
+- **Vilken Java‑version rekommenderas?** Java 11 eller högre för optimal prestanda.  
+- **Kan jag lägga till flera annotationstyper i en PDF?** Absolut – area, text, highlight, stamp och mer.  
+- **Stöds batch‑behandling?** Ja, API‑et erbjuder batch‑annotationsmöjligheter för stora dokumentuppsättningar.
 
-## Förkunskapskrav
+## Vad är add pdf annotation java?
 
-Se till att du har följande på plats:
+Att lägga till PDF‑annotation i Java betyder att programatiskt infoga kommentarer, markeringar, post‑it‑anteckningar och annan markup i PDF‑filer med ett Java‑bibliotek. GroupDocs.Annotation levererar ett rent, objektorienterat API som hanterar alla PDF‑standarder, säkerhet och renderingsaspekter åt dig.
 
-### Obligatoriska bibliotek och beroenden
-Inkludera GroupDocs.Annotation som ett beroende. För Maven-användare, lägg till dessa konfigurationer i din `pom.xml` fil:
+## Varför använda GroupDocs.Annotation för add pdf annotation java?
 
-**Maven**
+- **Enterprise‑grade reliability** – beprövad i storskaliga dokumentarbetsflöden.  
+- **Zero‑configuration setup** – lägg bara till Maven‑beroendet och börja koda.  
+- **Rich annotation types** – area, text, highlight, stamp, link och mer.  
+- **Cross‑platform** – fungerar på Windows, Linux och macOS‑JVM:er.  
+- **Extensible** – anpassa utseende, bifoga svar och integrera med vilket Java‑ramverk som helst.
+
+## Förutsättningar och miljöinställning
+
+### Nödvändiga bibliotek och beroenden
+
+Först och främst – du måste lägga till GroupDocs.Annotation i ditt projekt. Om du använder Maven (vilket de flesta Java‑utvecklare föredrar) är det här som ska finnas i din `pom.xml`:
+
 ```xml
 <repositories>
    <repository>
@@ -47,33 +70,66 @@ Inkludera GroupDocs.Annotation som ett beroende. För Maven-användare, lägg ti
 </dependencies>
 ```
 
-### Miljöinställningar
-Se till att Java är installerat och konfigurerat i din utvecklingsmiljö. Använd en IDE eller textredigerare för att skriva och köra din Java-kod.
+**Pro Tip**: Kontrollera alltid den senaste versionen på GroupDocs releases‑sidan. Version 25.2 innehåller betydande prestandaförbättringar och buggfixar som du vill utnyttja.
 
-### Kunskapsförkunskaper
-Grundläggande förståelse för Java-programmering, inklusive hantering av filer och användning av externa bibliotek, förutsätts.
+### Grundläggande utvecklingsmiljö
 
-## Konfigurera GroupDocs.Annotation för Java
+- **Java 8 eller högre** (Java 11+ rekommenderas för bättre prestanda)  
+- **IDE efter eget val** (IntelliJ IDEA, Eclipse eller VS Code fungerar bra)  
+- **Maven eller Gradle** för beroendehantering  
+- **Exempelfiler i PDF** för testning (vi visar hur du hanterar olika PDF‑typer)
 
-För att börja med GroupDocs.Annotation:
-1. **Maven-installation**Lägg till nödvändigt Maven-arkiv och beroende som visas ovan.
-2. **Licensförvärv**:
-   - Skaffa en gratis provperiod eller köp en licens från [Gruppdokument](https://purchase.groupdocs.com/buy).
-   - Begär en tillfällig licens för utvärdering på [Sida för tillfällig licens](https://purchase.groupdocs.com/temporary-license/).
-3. **Grundläggande initialisering**Initiera GroupDocs.Annotation i ditt Java-projekt efter att du har konfigurerat biblioteket och förvärvat din licens, om det behövs.
+### Vanliga installationsfallgropar att undvika
 
-## Implementeringsguide
+1. **Repository not added** – GroupDocs‑repositoryn måste explicit läggas till i din Maven‑konfiguration.  
+2. **Version conflicts** – se till att du inte blandar olika versioner av GroupDocs‑bibliotek.  
+3. **License confusion** – utveckling fungerar utan licens, men produktion kräver korrekt licensiering.
 
-### Lägga till en områdesannotering i ett PDF-dokument
+## Komma igång med GroupDocs.Annotation
 
-Den här handledningen fokuserar på att lägga till områdesannoteringar med hjälp av GroupDocs.Annotation API:
+### Initial installationsprocess
 
-#### Översikt
-Områdesanteckningar markerar specifika delar av ett dokument för granskning eller feedback.
+Att sätta upp GroupDocs.Annotation är enkelt, men det finns några bästa praxis som sparar dig huvudvärk senare:
 
-#### Steg-för-steg-implementering
-**1. Importera obligatoriska klasser**
-Börja med att importera nödvändiga klasser från GroupDocs.Annotation-biblioteket:
+**1. Maven Installation**  
+Lägg till repositoryn och beroendet som visas ovan. Maven hanterar nedladdning av alla nödvändiga JAR‑filer automatiskt.
+
+**2. License Management**  
+Här blir det intressant. Du har flera alternativ:  
+- **Free Trial** – perfekt för utvärdering och inlärning (skaffa din på [GroupDocs](https://purchase.groupdocs.com/buy))  
+- **Temporary License** – idealisk för utvecklings- och testfaser ([begär här](https://purchase.groupdocs.com/temporary-license/))  
+- **Production License** – krävs för live‑applikationer  
+
+**3. Project Initialization**  
+När dina beroenden är på plats kan du börja använda API‑et omedelbart. Inga komplexa konfigurationsfiler eller XML‑inställningar behövs – det är det som gör GroupDocs.Annotation så smidigt.
+
+### Förstå API‑arkitekturen
+
+GroupDocs.Annotation‑API följer ett rent, intuitivt designmönster:  
+- **Annotator** – din huvudingång för att arbeta med dokument  
+- **Annotation Models** – olika typer av annotationer (area, text, highlight osv.)  
+- **Configuration Options** – anpassa utseende, beteende och utskriftsinställningar  
+
+Denna arkitektur betyder att du kan börja enkelt och gradvis lägga till komplexitet i takt med att dina behov växer.
+
+## Steg‑för‑steg‑implementeringsguide
+
+### Lägga till area‑annotationer i PDF‑dokument
+
+Nu till den spännande delen – låt oss lägga till några annotationer! Area‑annotationer är perfekta för att markera specifika områden i ett dokument och de är förvånansvärt mångsidiga.
+
+#### Förstå area‑annotationer
+
+Tänk på area‑annotationer som digitala post‑it‑lappar som du kan placera var som helst på en PDF‑sida. De är idealiska för:
+- Att markera sektioner som behöver granskas  
+- Att framhäva viktiga diagram eller grafer  
+- Att skapa visuella utskott för specifika innehållsområden  
+- Att lägga till kontextuella kommentarer till dokumentregioner
+
+#### Fullständig implementationsgenomgång
+
+**Step 1: Import the Essential Classes**
+
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Rectangle;
@@ -81,8 +137,9 @@ import com.groupdocs.annotation.models.Reply;
 import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 import com.groupdocs.annotation.models.PenStyle;
 ```
-**2. Definiera svar för annotering**
-Skapa svar att bifoga till anteckningen:
+
+**Step 2: Create Interactive Replies**
+
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -96,78 +153,193 @@ java.util.List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-**3. Ange in- och utmatningsvägar**
-Definiera sökvägar för ditt PDF-indatadokument och den kommenterade utdatafilen:
+
+**Step 3: Configure File Paths**
+
 ```java
 String outputPath = YOUR_OUTPUT_DIRECTORY + "/AnnotatedOutput.pdf";
 ```
-**4. Skapa och konfigurera områdesannoteringen**
-Instansiera en `Annotator` objekt, skapa en områdesannotering, ange dess egenskaper och lägg till den i ditt dokument:
+
+**Step 4: Create and Configure the Annotation**
+
 ```java
 try (final Annotator annotator = new Annotator(YOUR_DOCUMENT_DIRECTORY + "/InputDocument.pdf")) {
     AreaAnnotation area = new AreaAnnotation();
-    area.setBackgroundColor(65535); // Gul bakgrundsfärg
-    area.setBox(new Rectangle(100, 100, 100, 100)); // Position och storlek
-    area.setCreatedOn(Calendar.getInstance().getTime()); // Skapandetid
-    area.setMessage("This is an area annotation"); // Annoteringsmeddelande
-    area.setOpacity(0.7); // Opacitet för synlighet
-    area.setPageNumber(0); // Sidnummer (från 0)
-    area.setPenColor(65535); // Gul pennfärg
-    area.setPenStyle(PenStyle.DOT); // Pennstil som DOTS
-    area.setPenWidth((byte) 3); // Kantbredd
-    area.setReplies(replies); // Bifoga svar till anteckningen
+    area.setBackgroundColor(65535); // Yellow background color
+    area.setBox(new Rectangle(100, 100, 100, 100)); // Position and size
+    area.setCreatedOn(Calendar.getInstance().getTime()); // Creation time
+    area.setMessage("This is an area annotation"); // Annotation message
+    area.setOpacity(0.7); // Opacity for visibility
+    area.setPageNumber(0); // Page number (starting from 0)
+    area.setPenColor(65535); // Yellow pen color
+    area.setPenStyle(PenStyle.DOT); // Pen style as DOTS
+    area.setPenWidth((byte) 3); // Border width
+    area.setReplies(replies); // Attach replies to the annotation
 
     annotator.add(area);
     
     annotator.save(outputPath);
 }
 ```
-**5. Spara det kommenterade dokumentet**
-Det kommenterade dokumentet sparas med hjälp av `save()` metod för `Annotator` objekt.
 
-#### Felsökningstips
-- Se till att alla nödvändiga bibliotek är korrekt tillagda.
-- Verifiera sökvägen till inmatningsfilen och dess existens.
-- Kontrollera om det finns några licensproblem om du stöter på API-användningsbegränsningar.
+**Step 5: Save and Verify**
 
-## Praktiska tillämpningar
+`save()`‑metoden skapar din annoterade PDF. `try‑with‑resources`‑blocket säkerställer korrekt resursrensning, vilket är avgörande för minneshantering i produktionsapplikationer.
 
-Områdesannoteringar kan vara användbara i olika scenarier:
-1. **Dokumentgranskning**Markera avsnitt i juridiska dokument eller kontrakt under granskningar.
-2. **Utbildningsinnehåll**Markera viktiga punkter i läroböckerna som referens för eleverna.
-3. **Feedbackinsamling**Kommentera marknadsföringsmaterial för att samla in teamfeedback om design och innehåll.
-4. **Projektledning**Använd anteckningar för att markera uppgifter eller deadlines i projektdokumentationen.
+## Vanliga implementeringsutmaningar och lösningar
 
-## Prestandaöverväganden
-För optimal prestanda med GroupDocs.Annotation:
-- Optimera minnesanvändningen i ditt Java-program genom att hantera resurser effektivt.
-- Konfigurera annoteringar på lämpligt sätt för att undvika onödig bearbetningsoverhead.
-- Testa anteckningsfunktioner med stora dokument för att identifiera potentiella flaskhalsar.
+### Felsökningsguide
+
+- **Problem 1: "Cannot find symbol"‑fel**  
+  **Lösning**: Dubbelkolla dina Maven‑beroenden och se till att GroupDocs‑repositoryn är korrekt konfigurerad.  
+
+- **Problem 2: Annotationer visas inte i utdata‑PDF**  
+  **Lösning**: Verifiera att sidnumret är korrekt (kom ihåg: 0‑baserad indexering) och kontrollera att rektangelkoordinaterna ligger inom sidans gränser.  
+
+- **Problem 3: Minnesproblem med stora PDF‑filer**  
+  **Lösning**: Processa dokument i batchar och säkerställ korrekt resurshantering med `try‑with‑resources`‑block.  
+
+- **Problem 4: Licensfel i produktion**  
+  **Lösning**: Se till att din licensfil är korrekt placerad och åtkomlig för din applikation.  
+
+### Prestandaoptimeringstips
+
+**Bästa praxis för minneshantering**  
+1. Använd alltid `try‑with‑resources` för Annotator‑objekt.  
+2. Processa stora dokument i mindre batchar.  
+3. Rensa annoteringssamlingar när du bearbetar flera filer.  
+4. Övervaka heap‑användning under massoperationer.  
+
+**Tekniker för hastighetsoptimering**  
+1. Cacha ofta använda konfigurationsobjekt.  
+2. Använd lämpliga sidintervall när du hanterar stora dokument.  
+3. Överväg asynkron bearbetning för massannotationer.  
+4. Optimera beräkningar för annoteringspositionering.  
+
+## Verkliga tillämpningar och användningsfall
+
+### Dokumentgranskningssystem
+
+- **Legal Document Review** – markera klausuler, lägg till kommentarer, spåra ändringar.  
+- **Technical Documentation** – markera specifikationer, lägg till implementationsanteckningar.  
+- **Financial Reports** – revisorer annoterar fynd och upprätthåller revisionsspår.  
+
+**Implementeringstips**: Implementera versionshantering av annotationer för att spåra förändringar över tid.
+
+### Utbildningsplattformar
+
+- **Interactive Textbooks** – studenter markerar begrepp och skapar studieguides.  
+- **Assignment Feedback** – lärare ger detaljerad återkoppling direkt på inlämningar.  
+- **Collaborative Learning** – studiegrupper delar annoterat material.  
+
+**Bästa praxis**: Använd användarspecifika annoteringslager så varje elev kan behålla personliga anteckningar.
+
+### Affärsprocessautomatisering
+
+- **Contract Management** – automatiskt markera nyckelvillkor och datum.  
+- **Compliance Documentation** – markera regulatoriska krav och kontrollpunkter.  
+- **Project Documentation** – visuellt spåra milstolpar och åtgärdspunkter.  
+
+### Integrationsstrategier
+
+- **Web Applications** – bädda in GroupDocs.Annotation i Spring Boot‑tjänster.  
+- **Desktop Applications** – integrera med JavaFX eller Swing för offline‑annotation.  
+- **Microservices** – exponera annoteringsfunktionalitet via REST‑API:er för andra system.  
+
+## Avancerade konfigurationsalternativ
+
+### Anpassa annoteringsutseende
+
+- **Color Schemes** – matcha ditt varumärkes färgpalett.  
+- **Typography** – kontrollera typsnittsstil, storlek och formatering.  
+- **Visual Effects** – lägg till gradienter, skuggor eller andra förbättringar.  
+
+### Annotationstyper utöver Area
+
+GroupDocs.Annotation stödjer också:
+
+- **Text Annotations** – inline‑kommentarer och förslag.  
+- **Highlight Annotations** – klassisk textmarkering.  
+- **Stamp Annotations** – godkännandeflöden och statusspårning.  
+- **Link Annotations** – interaktiva referenser och navigering.  
+
+### Batch‑behandlingsmöjligheter
+
+- Processa hela dokumentbibliotek.  
+- Applicera konsekventa annoteringsmallar.  
+- Generera rapporter med annoterade dokument.  
+- Underhåll sökbara annoteringsdatabaser.  
+
+## Produktionsimplementeringsöverväganden
+
+### Skalbarhetsplanering
+
+- **Load Testing** – simulera realistiska dokumentstorlekar och samtidiga användare.  
+- **Resource Monitoring** – spåra minne och CPU under hög belastning.  
+- **Caching Strategies** – cacha ofta åtkomna PDF‑filer.  
+- **Database Integration** – lagra annoteringsmetadata för sökning och rapportering.  
+
+### Säkerhetsbästa praxis
+
+- **Input Validation** – sanera användargenererat annoteringsinnehåll.  
+- **Access Controls** – upprätthåll autentisering och auktorisation.  
+- **Audit Logging** – logga alla annoteringsaktiviteter.  
+- **Data Encryption** – skydda annoteringsdata i transit och i vila.  
+
+## Vanliga frågor
+
+**Q: Kan jag lägga till flera typer av annotationer i samma PDF?**  
+A: Absolut! Du kan kombinera area‑annotationer med textmarkeringar, stämplar och andra annotationstyper i ett enda dokument. Skapa bara flera annoteringsobjekt och lägg till dem alla innan du sparar.
+
+**Q: Hur hanterar jag PDF‑filer med olika sidorienteringar?**  
+A: API‑et hanterar automatiskt porträtt‑ och landskapsorienteringar. Justera dina `Rectangle`‑koordinater baserat på de faktiska sidmåtten, som du kan hämta via API:ets sidinformationsmetoder.
+
+**Q: Finns det någon gräns för antalet annotationer per dokument?**  
+A: Det finns ingen hård gräns som API‑et pålägger, men praktiska faktorer som filstorlek och prestanda påverkar dina designbeslut. För dokument med hundratals annotationer, överväg paginering eller lazy loading.
+
+**Q: Kan användare redigera eller ta bort befintliga annotationer?**  
+A: Ja! API‑et erbjuder metoder för att hämta, modifiera och ta bort befintliga annotationer, vilket möjliggör fullständig hantering av annoteringslivscykeln.
+
+**Q: Hur hanterar GroupDocs.Annotation PDF‑säkerhetsfunktioner?**  
+A: API‑et respekterar PDF‑säkerhetsinställningar. Om ett dokument är lösenordsskyddat eller har redigeringsrestriktioner måste du ange rätt autentiseringsuppgifter eller ta bort restriktionerna innan du lägger till annotationer.
+
+**Q: Kan jag exportera annotationer till andra format?**  
+A: GroupDocs.Annotation kan exportera annoterade dokument till format som DOCX, PPTX och bildtyper, vilket underlättar integration med olika arbetsflöden.
+
+## Nästa steg och avancerade ämnen
+
+### Utöka ditt annoteringsverktyg
+
+- **Interactive Forms** – skapa ifyllbara PDF‑formulär med annoteringsbaserade inmatningsfält.  
+- **Workflow Integration** – anslut annotationer till BPM‑ eller ärendehanteringssystem.  
+- **Mobile Optimization** – anpassa annoteringsgränssnitt för surfplattor och smartphones.  
+- **AI Integration** – använd maskininlärning för att föreslå annoteringsplaceringar och innehåll.  
+
+### Community‑resurser och support
+
+- **Documentation Deep Dives**: Utforska den omfattande [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/) för avancerade funktioner och exempel.  
+- **API Reference**: Bokmärk den detaljerade [GroupDocs API Reference](https://reference.groupdocs.com/annotation/java/) för snabba uppslag av metoder och parametrar.  
+- **Latest Updates**: Håll dig uppdaterad med nya funktioner genom att regelbundet besöka [Download GroupDocs.Annotation for Java](https://downloads.groupdocs.com/annotation/java/).  
+
+### Bygg din annoteringskompetens
+
+1. **Master All Annotation Types** – experimentera med text, highlight, stamp och link‑annotationer.  
+2. **Performance Optimization** – lär dig avancerade tekniker för att hantera storskaliga annoteringssystem.  
+3. **Custom Annotation Types** – skapa specialiserade annotationer anpassade för din bransch.  
+4. **Integration Patterns** – studera hur man bäddar in annotationer i populära Java‑ramverk.  
 
 ## Slutsats
 
-Grattis! Du har lärt dig hur du kommenterar PDF-filer med GroupDocs.Annotation för Java. Det här verktyget förbättrar dokumenthantering och samarbetsmöjligheter.
+Grattis! Du har just byggt en solid grund för **add pdf annotation java** med GroupDocs.Annotation. Detta kraftfulla API öppnar upp otaliga möjligheter att förbättra dokument‑samarbete, granskningsprocesser och användarengagemang i dina applikationer.
 
-### Nästa steg
-Utforska andra annoteringstyper som stöds av GroupDocs, till exempel text- eller markeringsannoteringar, och överväg att integrera dessa funktioner i dina applikationer för heltäckande lösningar.
+**Viktiga slutsatser**  
+- GroupDocs.Annotation levererar enterprise‑grade annoteringsfunktioner med minimal installation.  
+- Area‑annotationer är bara början; API‑et stödjer en komplett svit av annoteringstyper.  
+- Korrekt resurshantering och felhantering är avgörande för produktionsklara lösningar.  
+- API‑ets flexibilitet låter dig integrera annotationer i praktiskt taget alla Java‑baserade system.
 
-## FAQ-sektion
-**1. Vad är syftet med områdesannoteringar?**
-Områdesannoteringar används för att markera specifika delar av ett dokument för granskning eller feedback.
+Börja med grunderna som täcks här, och utöka sedan baserat på dina användares feedback och behov. Lycka till med annoteringen!
 
-**2. Kan jag lägga till flera anteckningar i en PDF-fil?**
-Ja, du kan lägga till olika typer av anteckningar, inklusive flera områdesanteckningar, inom en enda session.
-
-**3. Hur anpassar jag utseendet på en annotering?**
-Anpassa egenskaper som bakgrundsfärg, opacitet och pennstil med hjälp av API-metoderna.
-
-**4. Är GroupDocs.Annotation gratis att använda?**
-Du kan hämta en testlicens eller köpa en fullständig version från GroupDocs.
-
-**5. Vilka plattformar stöder GroupDocs.Annotation för Java?**
-GroupDocs stöder plattformar där Java-applikationer distribueras, inklusive skrivbords- och servermiljöer.
-
-## Resurser
-- **Dokumentation**: [Dokumentation för GroupDocs-annoteringar](https://docs.groupdocs.com/annotation/java/)
-- **API-referens**: [GroupDocs API-referens](https://reference.groupdocs.com/annotation/java/)
-- **Ladda ner biblioteket**: [Ladda ner GroupDocs.Annotation för Java](https://downloads.groupdocs.com/annotation/java/)
+**Senast uppdaterad:** 2025-12-31  
+**Testad med:** GroupDocs.Annotation 25.2 for Java  
+**Författare:** GroupDocs
