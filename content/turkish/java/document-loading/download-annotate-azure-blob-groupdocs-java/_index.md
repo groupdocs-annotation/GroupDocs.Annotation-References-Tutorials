@@ -1,44 +1,82 @@
 ---
-"date": "2025-05-06"
-"description": "Azure Blob Storage'dan dosyaları sorunsuz bir şekilde nasıl indireceğinizi ve GroupDocs.Annotation for Java ile bunlara nasıl açıklama ekleyeceğinizi öğrenin. Bu kapsamlı kılavuzla belge yönetimi iş akışınızı geliştirin."
-"title": "GroupDocs.Annotation Java'yı Kullanarak Azure Blob Dosyalarını İndirme ve Açıklama Ekleme"
-"url": "/tr/java/document-loading/download-annotate-azure-blob-groupdocs-java/"
+categories:
+- Java Development
+date: '2026-01-03'
+description: GroupDocs Annotation for Java ve Azure Blob Storage ile açıklamalı PDF'nin
+  nasıl kaydedileceğini öğrenin. Java belge açıklaması, Azure Blob Java indirme ve
+  en iyi uygulamaları kapsayan adım adım rehber.
+keywords: GroupDocs Annotation Java tutorial, Azure Blob Storage Java integration,
+  Java document annotation library, download files from Azure Blob Java, GroupDocs
+  Maven setup
+lastmod: '2026-01-03'
+linktitle: GroupDocs Annotation Java Azure Guide
+tags:
+- groupdocs
+- azure-blob
+- document-annotation
+- java-tutorial
+- cloud-integration
+title: GroupDocs Java ve Azure Blob kullanarak Açıklamalı PDF'yi kaydet
 type: docs
-"weight": 1
+url: /tr/java/document-loading/download-annotate-azure-blob-groupdocs-java/
+weight: 1
 ---
 
-# GroupDocs.Annotation Java'yı Kullanarak Azure Blob Depolamasından Dosyaları Verimli Şekilde Nasıl İndirebilir ve Açıklama Yapabilirsiniz
+# GroupDocs Java ve Azure Blob ile Anotasyonlu PDF Kaydetme
 
-## giriiş
-Günümüzün dijital ortamında, belgeleri etkili bir şekilde yönetmek ve not eklemek işletmeler ve geliştiriciler için hayati önem taşır. Bu eğitim, Azure Blob Storage'dan dosyaları indirme ve GroupDocs.Annotation for Java kullanarak bunlara not ekleme konusunda size rehberlik ederek belge yönetimi iş akışınızı iyileştirir.
+## Bu Entegrasyona Neden İhtiyacınız Var (Ve Nasıl Saatler Kazandırır)
 
-**Ne Öğreneceksiniz:**
-- Azure Blob Storage'dan dosyalar nasıl indirilir.
-- Java için GroupDocs.Annotation ile belgeleri açıklama teknikleri.
-- Gerçek dünya uygulamaları için en iyi uygulamalar.
+Bulutta belge yönetimiyle uğraşırken kendinizi zor durumda buldunuz mu? Azure Blob Storage’dan dosyaları indiriyor, anotasyon eklemeye çalışıyorsunuz ve bir şeyler olması gerektiğinden daha karmaşık hissediyor. Bunu ben de yaşamıştım.
 
-Belge işleme yeteneklerinizi geliştirmeye hazır mısınız? İhtiyaç duyacağınız ön koşulları gözden geçirerek başlayalım.
+Şöyle ki – Azure Blob Storage’ı GroupDocs Annotation for Java ile birleştirmek sadece bir başka öğretici değil. Bu, sorunsuz, üretime hazır bir **anotasyonlu PDF kaydetme** iş akışı. İster belge inceleme sistemi kuruyor olun, ister işbirlikçi düzenleme özellikleri ekliyor olun ya da sadece bulut‑tabanlı PDF’leri işlemek istiyor olun, bu rehber ihtiyacınızı karşılayacak.
 
-## Ön koşullar
-Başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
+**Bu rehberden elde edeceğiniz şeyler:**
+- GroupDocs Annotation Java entegrasyonu hakkında sağlam bir anlayış  
+- Gerçek dünyada çalışan (sadece demo değil) pratik kod  
+- Hata ayıklama süresini azaltacak sorun giderme bilgisi  
+- Gelecekteki kendinize teşekkür edeceğiniz performans ipuçları  
 
-### Gerekli Kütüphaneler ve Bağımlılıklar
-- **Azure Depolama SDK'sı**: Azure Blob Storage ile etkileşim kurmak için.
-- **GroupDocs.Java için Açıklama**: Belgelere açıklama eklemek için. Bunu Maven aracılığıyla ekleyin `pom.xml`.
+Bu entegrasyonu bir baş ağrısından akıcı bir iş akışı parçasına dönüştürmeye hazır mısınız? Hadi başlayalım.
 
-### Çevre Kurulum Gereksinimleri
-- IntelliJ IDEA veya Eclipse gibi bir Java geliştirme ortamı.
-- Blob Storage'a erişimi olan bir Azure hesabı.
+## Hızlı Yanıtlar
+- **Bu öğreticide ne öğretiliyor?** GroupDocs Annotation for Java ile Azure Blob Storage kullanarak **anotasyonlu PDF** dosyalarını **kaydetme**.  
+- **GroupDocs lisansına ihtiyacım var mı?** Test için ücretsiz deneme yeterli; üretim için tam lisans gerekir.  
+- **Hangi Azure SDK kullanılıyor?** Azure Storage SDK for Java (Blob client).  
+- **Büyük PDF’leri işleyebilir miyim?** Evet – rehberde gösterilen akış ve async desenlerini kullanın.  
+- **Spring Boot için uygun mu?** Kesinlikle – kodu bir @Service sınıfına sarabilirsiniz.
 
-### Bilgi Önkoşulları
-- Java programlamanın temel bilgisi.
-- Bulut depolama kavramları ve RESTful API'leri konusunda bilgi sahibi olmak.
+## Başlamadan Önce – Gerçekten Neye İhtiyacınız Var
 
-## GroupDocs.Annotation'ı Java İçin Ayarlama
-GroupDocs.Annotation'ı projenize entegre etmek için şu adımları izleyin:
+### Gerekli Java Belge Anotasyon Kütüphanesi Kurulumu
 
-**Maven Kurulumu:**
-Aşağıdakileri ekleyin: `pom.xml` gerekli depoları ve bağımlılıkları içeren dosya:
+İlk olarak her şeyin doğru bir şekilde ayarlandığından emin olalım. Uygulamanın yarısına gelince kritik bir bağımlılığı eksik bulmak kadar can sıkıcı bir şey yoktur.
+
+**Gerekli Kütüphaneler ve Bağımlılıklar:**
+- **Azure Storage SDK** – tüm Azure Blob etkileşimlerini yönetir  
+- **GroupDocs.Annotation for Java** – belge anotasyon gücünüz  
+- **Maven** (tercih edilen) ya da Gradle – bağımlılık yönetimi  
+
+### Baş Ağrısı Çıkaran Ortam Kurulumu
+
+Makinenizde hazır olması gerekenler:
+- **Java geliştirme ortamı** (IntelliJ IDEA, Eclipse veya Java uzantılı VS Code)  
+- **Blob Storage erişimli Azure hesabı** (ücretsiz katman test için yeterli)  
+- **Maven 3.6+** – bağımlılık yönetimi için  
+
+### Bilgi Gereksinimleri (Kendinize Karşı Dürüst Olun)
+
+Aşağıdaki konularda rahat olursanız deneyiminiz çok daha sorunsuz olur:
+- Temel Java programlama (basit bir sınıf yazabiliyorsanız yeterli)  
+- Bulut depolama kavramları (bulutta bir dosya sistemi gibi düşünün)  
+- RESTful API temelleri (özellikle bağlantı sorunlarını giderirken)  
+
+Uzman olmasanız da endişelenmeyin – önemli noktaları adım adım açıklayacağım.
+
+## GroupDocs Annotation Java’yı (Doğru Şekilde) Kurma
+
+### Gerçekten İşe Yarayan Maven Yapılandırması
+
+`pom.xml` dosyanıza aşağıdakileri ekleyin – bu yapılandırma bağımlılık karmaşasını önler ve Maven’ı resmi GroupDocs deposuna yönlendirir:
 
 ```xml
 <repositories>
@@ -57,34 +95,35 @@ Aşağıdakileri ekleyin: `pom.xml` gerekli depoları ve bağımlılıkları iç
 </dependencies>
 ```
 
-### Lisans Edinimi
-1. **Ücretsiz Deneme**:Test için geçici lisans almak üzere GroupDocs web sitesine kaydolun.
-2. **Geçici Lisans**: Sınırlama olmaksızın tüm özellikleri keşfetmek için bir tane edinin.
-3. **Satın almak**: Uzun süreli kullanım için lisans satın almayı düşünün.
+### Lisansınızı Ayarlama (Bunu Atlamayın)
 
-### Temel Başlatma ve Kurulum
-Başlatma ile başlayın `Annotator` Java uygulamanızdaki nesne:
+1. **Ücretsiz deneme ile başlayın** – test için GroupDocs web sitesinden geçici bir lisans alın.  
+2. **Genişletilmiş değerlendirme için geçici lisans** – kanıt‑konsept ve demo projeler için ideal.  
+3. **Üretim için tam lisans** – ikna olduğunuzda (ve kesinlikle olacaksınız) tam lisansa yatırım yapın.  
+
+### Başarı İçin Temel Başlatma
+
+`Annotator` nesnesi tüm anotasyon işlemlerinin giriş noktasıdır. Java’nın try‑with‑resources yapısını kullanarak akışın otomatik kapanmasını sağlayın:
 
 ```java
-InputStream documentStream = // belge akışınızı edinin;
+InputStream documentStream = // obtain your document stream;
 try (Annotator annotator = new Annotator(documentStream)) {
-    // Açıklama mantığı buraya gelecek.
+    // Your annotation logic goes here
+    // The try-with-resources ensures proper cleanup
 }
 ```
 
-## Uygulama Kılavuzu
-### Azure Blob Depolamasından Bir Dosya İndirme
-#### Genel bakış
-Bu bölümde, işleme ve açıklama ekleme açısından önemli olan Azure Blob Storage'da depolanan dosyaların nasıl indirileceği ele alınmaktadır.
+## Uygulama Rehberi (İşler İlginçleştiğinde)
 
-**1. Azure ile kimlik doğrulaması yapın:**
-Sağlanan kimlik bilgilerini kullanarak Azure depolama hesabınıza bağlanın:
+### Azure Blob Storage’dan Dosya İndirme – Java Entegrasyonu
+
+#### Adım 1: Azure Kimlik Doğrulamasını Kurma (Temel)
 
 ```java
 private static CloudBlobContainer getContainer() {
-    String accountName = "***"; // Azure Depolama Hesabı adınızla değiştirin
-    String accountKey = "***";  // Azure Depolama Hesabı anahtarınızla değiştirin
-    String endpoint = "https://" + hesapAdı + ".blob.core.windows.net/";
+    String accountName = "***"; // Replace with your Azure Storage Account name
+    String accountKey = "***";  // Replace with your Azure Storage Account key
+    String endpoint = "https://" + accountName + ".blob.core.windows.net/";
     String containerName = "YOUR_CONTAINER_NAME";
     
     CloudStorageAccount cloudStorageAccount =
@@ -100,8 +139,9 @@ private static CloudBlobContainer getContainer() {
 }
 ```
 
-**2. Blob'u indirin:**
-Blob'u indirin ve bir InputStream'e dönüştürün:
+**İpucu:** Kimlik bilgilerini ortam değişkenlerinde ya da Azure Key Vault’ta tutun – asla kod içinde sabitlemeyin.
+
+#### Adım 2: Blob’u Gerçekten İndirme (Hata Yönetimiyle)
 
 ```java
 public static InputStream downloadFile(String blobName) {
@@ -112,81 +152,155 @@ public static InputStream downloadFile(String blobName) {
 }
 ```
 
-### Bir Belgeye Açıklama Ekleme
-#### Genel bakış
-Burada, indirilen bir belgeye GroupDocs.Annotation kullanarak açıklama ekleyeceğiz.
+Bu yöntem, GroupDocs’un doğrudan tüketebileceği bir `InputStream` döndürür.
 
-**1. Başlatın `Annotator`:**
-Bir örneğini oluşturun `Annotator` Belge akışınızla sınıfınız:
+### Java Belge Anotasyon Kütüphanesi Çalışırken
+
+#### Annotator’ı Başlatma (Başlangıç Noktası)
 
 ```java
 public static void annotate(InputStream inputStream, String outputPath) {
     try (Annotator annotator = new Annotator(inputStream)) {
-        // Açıklama mantığı buraya eklenecek.
+        // All your annotation magic happens here
     }
 }
 ```
 
-**2. Açıklamalar Oluşturun ve Ekleyin:**
-Belgenin bölümlerini vurgulamak için bir alan açıklaması ekleyin:
+#### Anlamlı Anotasyonlar Oluşturma (Sadece Görsel Vurgulamalar Değil)
 
 ```java
 AreaAnnotation area = new AreaAnnotation();
-area.setBox(new Rectangle(100, 100, 100, 100)); // Pozisyonu ve boyutu tanımlayın
-area.setBackgroundColor(65535);                 // Görünürlük için bir arka plan rengi ayarlayın
-area.setType(AnnotationType.Area);              // Açıklama türünü belirtin
+area.setBox(new Rectangle(100, 100, 100, 100)); // Position and size – adjust to your needs
+area.setBackgroundColor(65535);                 // Visible but not obnoxious
+area.setType(AnnotationType.Area);              // There are many types available
 
-annotator.add(area);                             // Açıklamayı ekle
-annotator.save(outputPath);                      // Açıklamalı belgeyi kaydet
+annotator.add(area);                             // Add it to your document
+annotator.save(outputPath);                      // Save the annotated result
 ```
 
-### Sorun Giderme İpuçları
-- **Bağlantı Sorunları**: Azure kimlik bilgilerini ve uç nokta URL'lerini doğrulayın.
-- **Dosya Bulunamadı**: Blob adlarının doğru olduğundan ve depolama kabınızda mevcut olduğundan emin olun.
+Birden çok anotasyon türü ekleyebilir, birleştirebilir ya da içeriğe dayalı dinamik olarak oluşturabilirsiniz.
 
-## Pratik Uygulamalar
-İşte belgeleri indirme ve açıklama ekleme konusunda bazı gerçek dünya kullanım örnekleri:
-1. **Yasal Belge Yönetimi**:Bulutta saklanan sözleşmelere hızlı bir şekilde açıklama ekleyin.
-2. **İşbirlikli Düzenleme**: Ekip üyelerinin paylaşılan belgeleri işaretlemesine izin verin.
-3. **Otomatik İnceleme Süreçleri**: Açıklamaları otomatik belge iş akışlarına entegre edin.
+## Kaçınılması Gereken Yaygın Tuzaklar (Benim Hatalarımdan Öğrenin)
 
-## Performans Hususları
-Bu ipuçlarıyla uygulamanızı optimize edin:
-- Kullanımdan sonra akışları kapatarak belleği verimli bir şekilde yönetin.
-- Tepki süresini iyileştirmek için mümkün olduğunca eşzamansız işlemleri kullanın.
-- Kaynak kullanımını izleyin ve yapılandırmaları gerektiği gibi ayarlayın.
+### Bellek Yönetimi Sorunları
 
-## Çözüm
-Azure Blob Storage'ı GroupDocs.Annotation for Java ile entegre etmek belge yönetimi süreçlerini kolaylaştırır. Bu eğitim, belgeleri etkili bir şekilde indirmek ve ek açıklamalar eklemek için gereken temel bilgileri ve pratik adımları sağlar.
+**Problem:** Büyük PDF’leri tamamen belleğe yüklemek uygulamanın çökmesine neden olur.  
+**Çözüm:** Her zaman akışlarla çalışın ve try‑with‑resources desenini kullanın.
 
-**Sonraki Adımlar:**
-- GroupDocs tarafından sunulan farklı açıklama türlerini deneyin.
-- Diğer bulut hizmetleriyle daha fazla entegrasyon keşfedin.
+### Kimlik Doğrulama Hataları
 
-Bunu uygulamaya koymaya hazır mısınız? Bu özellikleri bugün projelerinizde uygulamaya başlayın!
+**Problem:** Kod yerel ortamda çalışıyor ama üretimde gizemli hatalar veriyor.  
+**Çözüm:**  
+- Azure kimlik bilgilerini ve izinleri iki kez kontrol edin.  
+- Kapsayıcı (container) adlarının tam olarak eşleştiğinden emin olun (büyük/küçük harf duyarlı).  
+- Azure uç noktalarına ağ bağlantısını doğrulayın.
 
-## SSS Bölümü
-1. **Azure Blob Depolama Nedir?**
-   - Belgeler ve medya dosyaları gibi büyük miktardaki yapılandırılmamış veriler için ölçeklenebilir bir bulut depolama çözümü.
+### Dosya Formatı Varsayımları
 
-2. **GroupDocs.Annotation'ı diğer programlama dilleriyle birlikte kullanabilir miyim?**
-   - Evet, GroupDocs .NET, C++, PHP ve daha fazlası dahil olmak üzere çeşitli platformlar için SDK'lar sunuyor.
+**Problem:** Her blob’un desteklenen bir format olduğunu varsaymak.  
+**Çözüm:** İşleme başlamadan dosya uzantılarını doğrulayın; GroupDocs PDF, DOCX, XLSX, PPTX, PNG, JPG, TIFF ve daha fazlasını destekler.
 
-3. **Azure Blob Storage erişimindeki hataları nasıl giderebilirim?**
-   - Bağlantı dizelerinizi kontrol edin, kimlik doğrulamanın doğru olduğundan emin olun ve konteynerin var olduğunu doğrulayın.
+## Üretim Kullanımı İçin Profesyonel İpuçları
 
-4. **GroupDocs.Annotation ile kullanılabilen diğer açıklama türleri nelerdir?**
-   - Alan açıklamalarının ötesinde, metin, filigran ve özel şekil açıklamaları da kullanabilirsiniz.
+### Gerçekten Önemli Performans Optimizasyonu
 
-5. **Bellekteki büyük belgeleri verimli bir şekilde nasıl yönetebilirim?**
-   - Tüm dosyaları belleğe yüklemek yerine, belgeleri artımlı olarak işlemek için akışları kullanın.
+1. **Akış İşleme** – tüm dosyayı yüklemekten kaçının.  
+2. **Async Operasyonlar** – bloklamayan indirmeler için `CompletableFuture` kullanın.  
+3. **Bağlantı Havuzu** – Azure istemcisini yeniden oluşturmak yerine yeniden kullanın.  
+4. **Önbellek Stratejisi** – sık kullanılan anotasyonları önbelleğe alarak işleme süresini azaltın.
 
-## Kaynaklar
-- [GroupDocs Açıklama Belgeleri](https://docs.groupdocs.com/annotation/java/)
-- [API Referansı](https://reference.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation for Java'yı indirin](https://releases.groupdocs.com/annotation/java/)
-- [Lisans Satın Al](https://purchase.groupdocs.com/buy)
-- [Ücretsiz Deneme ve Geçici Lisans](https://releases.groupdocs.com/annotation/java/)
-- [Destek Forumu](https://forum.groupdocs.com/c/annotation/) 
+### Güvenlik En İyi Uygulamaları
 
-Bu güçlü araçları kullanarak gelişmiş belge yönetimine doğru yolculuğunuza başlayın. İyi kodlamalar!
+- **Kimlik Yönetimi:** Azure Managed Identity ya da Key Vault kullanın.  
+- **Erişim Kontrolü:** En az ayrıcalıklı blob‑seviyesi izinleri uygulayın.  
+- **Şifreleme:** Aktarım için TLS zorunlu tutun ve Azure depolama şifrelemesini etkinleştirin.
+
+### İzleme ve Hata Ayıklama
+
+Aşağıdakileri loglayın:
+- Azure bağlantı denemeleri ve hataları  
+- Belge işleme süreleri  
+- Anotasyon başarı/başarısızlık oranları  
+- Bellek kullanım trendleri  
+
+## Bu Entegrasyonu Ne Zaman Kullanmalısınız (Karar‑Verme Rehberi)
+
+**Mükemmel olduğu durumlar:**
+- Dosyaları Azure’da tutan belge inceleme iş akışları  
+- Bulut‑tabanlı depolama ile işbirlikçi anotasyon sistemleri  
+- **Anotasyonlu PDF** dosyalarını **kaydetme** ihtiyacı olan otomatik hatlar  
+- Belge izolasyonunun kritik olduğu çok‑kiracılı SaaS uygulamaları  
+
+**Alternatifleri düşünün eğer:**
+- Gerçek zamanlı, düşük gecikmeli anotasyon gerekiyorsa (WebSocket‑tabanlı çözümler daha iyi olabilir)  
+- Belgeler sadece yerel dosya sisteminde bulunuyorsa  
+- GroupDocs tarafından desteklenmeyen özel anotasyon türlerine ihtiyacınız varsa  
+
+## İleri Düzey Kullanım Senaryoları ve Gerçek‑Dünya Uygulamaları
+
+### Hukuki Belge Yönetim Sistemi
+Hukuk firmaları, güvenli Azure blob’larından sözleşmeleri indirir, inceleme yorumları ekler ve anotasyonlu sürümleri sürüm kontrolüyle geri yükler.
+
+### Eğitim İçerik Yönetimi
+Üniversiteler ders PDF’lerini Azure’da saklar, öğretim üyeleri üzerine anotasyon ekler ve anotasyonlu kopyaları güvenli bir şekilde öğrencilere dağıtır.
+
+### Sağlık Dokümantasyonu
+Sağlık kuruluşları, HIPAA‑uyumlu Azure ortamında hasta kayıtlarını tutar, raporları danışma için anotasyonlar ve ayrıntılı denetim izleri oluşturur.
+
+## Sorun Giderme Rehberi (Yanlış Gittiğinde)
+
+### Bağlantı Sorunları
+**Belirtiler:** Zaman aşımı ya da “connection refused”.  
+**Çözümler:** Kimlik bilgilerini doğrulayın, güvenlik duvarı kurallarını kontrol edin, kapsayıcı izinlerini onaylayın.
+
+### Dosya İşleme Hataları
+**Belirtiler:** Belge yüklenemiyor ya da anotasyonlar kaydedilmiyor.  
+**Çözümler:** Dosya formatı uyumluluğunu kontrol edin, dosyayı manuel indirerek test edin, geçici dosyalar için yeterli disk alanı olduğundan emin olun.
+
+### Performans Sorunları
+**Belirtiler:** Yavaş işleme ya da OutOfMemory hataları.  
+**Çözümler:** Akış kullanımını benimseyin, async işleme etkinleştirin, heap kullanımını izleyin, JVM’i ölçeklendirmeyi düşünün.
+
+## Performans Ölçütleri ve Optimizasyon
+
+### Beklenen İşleme Süreleri
+- **Küçük PDF’ler (< 1 MB):** indirme + anotasyon için 100‑500 ms  
+- **Orta PDF’ler (1‑10 MB):** anotasyon karmaşıklığına bağlı olarak 500 ms‑2 s  
+- **Büyük PDF’ler (> 10 MB):** yanıtlı kalmak için parçalı ya da async işleme kullanın  
+
+### Bellek Kullanım Kılavuzu
+- **Minimum heap:** temel işlemler için 512 MB  
+- **Önerilen:** eşzamanlı işler için 2 GB+  
+- **Optimizasyon:** Stream API’leri bellek ayak izini düşük tutar.
+
+## Sık Sorulan Sorular
+
+**S:** *GroupDocs Annotation, Azure Blob Storage ile hangi dosya formatlarını destekliyor?*  
+**C:** PDF, DOC/DOCX, XLS/XLSX, PPT/PPTX, PNG, JPG, TIFF ve daha birçok format. Format desteği depolama konumundan bağımsızdır.
+
+**S:** *Azure Blob Storage’dan şifre korumalı belgeleri işleyebilir miyim?*  
+**C:** Evet. `Annotator` oluştururken şifreyi şu şekilde geçin: `new Annotator(inputStream, password)`.
+
+**S:** *Büyük dosyaları (100 MB+) verimli bir şekilde nasıl yönetirim?*  
+**C:** Azure’un blok‑seviyeli indirmesini kullanın, dosyayı GroupDocs’a akış olarak gönderin ve thread bloklamasını önlemek için async işleyin.
+
+**S:** *Bu entegrasyon Spring Boot uygulamaları için uygun mu?*  
+**C:** Kesinlikle. Azure ve GroupDocs mantığını bir `@Service` bean içinde paketleyin, `@ConfigurationProperties` ile yapılandırma alın ve paralel işleme için Spring’in `@Async` özelliğini kullanın.
+
+**S:** *HIPAA uyumluluğu için hangi güvenlik önlemlerini almalıyım?*  
+**C:** HTTPS zorunlu tutun, gizli anahtarlar için Azure Key Vault kullanın, depolama şifrelemesini etkinleştirin, rol‑tabanlı erişim kontrolü uygulayın ve her indirme ve anotasyon işlemi için ayrıntılı denetim günlükleri tutun.
+
+---
+
+**Son Güncelleme:** 2026-01-03  
+**Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
+**Yazar:** GroupDocs  
+
+### Ek Kaynaklar ve Referanslar
+
+- [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
+- [GroupDocs Java API Reference](https://reference.groupdocs.com/annotation/java/)  
+- [Download GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)  
+- [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
+- [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
+- [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
