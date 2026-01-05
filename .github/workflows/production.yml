@@ -1,7 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-
 name: tutorials.groupdocs.com(tutorials-annotation)(family)(Production)
-
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
@@ -13,18 +11,15 @@ on:
     branches: [ master ]
     paths:
       - 'content/**'    
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of annotation that will be executed as part of the job
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
@@ -49,11 +44,11 @@ jobs:
       - name: Install Theme Dependencies
         run: npm install
         working-directory: ./themes/tutorials-theme
-      - name: Install Dependicies1
+      - name: Install Dependencies1
         run:  npm install --save-dev autoprefixer
-      - name: Install Dependicies2
+      - name: Install Dependencies2
         run:  npm install --save-dev postcss-cli
-      - name: Install Dependicies3
+      - name: Install Dependencies3
         run:  npm install -D postcss
       # Also specifies the theme we want to use
       - name: Build
@@ -72,11 +67,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CEPH_S3_LIVE_SECRET_KEY }}
           AWS_DEFAULT_REGION: us-east-1
           AWS_ENDPOINT_URL: https://s3-admin.dynabic.com
-
       - name: Purge BunnyCDN Cache
         run: |
-           curl -siG \
+          curl -siG \
             -H "X-Api-Key: ${{ secrets.BUNNY_API_KEY }}" \
             --data-urlencode "url=https://tutorials.groupdocs.com/annotation" \
             "https://api.dynabic.com/bn/purge?async=true"
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS }}
