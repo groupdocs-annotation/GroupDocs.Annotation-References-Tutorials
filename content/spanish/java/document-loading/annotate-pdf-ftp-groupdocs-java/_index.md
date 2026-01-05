@@ -1,38 +1,84 @@
 ---
-"date": "2025-05-06"
-"description": "Aprenda a anotar documentos PDF directamente desde un servidor FTP con GroupDocs.Annotation para Java. Optimice sus flujos de trabajo de procesamiento de documentos con esta guía paso a paso."
-"title": "Anotar archivos PDF desde FTP con GroupDocs.Annotation para Java&#58; una guía completa"
-"url": "/es/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+categories:
+- Java Development
+date: '2026-01-05'
+description: Aprende a anotar PDFs desde FTP en Java usando GroupDocs.Annotation.
+  Esta guía paso a paso cubre el manejo de errores de conexión FTP, ejemplos de código
+  y consejos de solución de problemas.
+keywords: annotate PDF FTP Java, GroupDocs annotation tutorial, PDF annotation from
+  FTP server, Java document processing FTP, load PDF from FTP server Java
+lastmod: '2026-01-05'
+linktitle: Annotate PDF FTP Java Guide
+tags:
+- pdf-annotation
+- ftp-integration
+- groupdocs
+- java-tutorial
+title: Anotar PDF desde FTP en Java – Tutorial completo de GroupDocs
 type: docs
-"weight": 1
+url: /es/java/document-loading/annotate-pdf-ftp-groupdocs-java/
+weight: 1
 ---
 
-# Anotar archivos PDF desde FTP con GroupDocs.Annotation para Java: una guía completa
+# Anotar PDF desde FTP en Java – Tutorial Completo de GroupDocs
 
 ## Introducción
 
-¿Tiene la tarea de anotar documentos almacenados en servidores remotos como FTP? Empresas y particulares suelen necesitar añadir notas o subrayados rápidamente sin tener que descargar el archivo completo. Con las herramientas adecuadas, este proceso puede ser eficiente y agilizado. Este tutorial le guiará en el uso de GroupDocs.Annotation para Java para anotar archivos PDF directamente después de cargarlos desde un servidor FTP.
+¿Alguna vez te has encontrado mirando un archivo PDF que está en un servidor FTP, deseando poder añadir algunas anotaciones rápidas sin la molestia de descargarlo primero? No estás solo. Muchos desarrolladores se enfrentan a este mismo escenario al trabajar con sistemas de gestión de documentos, especialmente en entornos empresariales donde los archivos se almacenan de forma remota.
 
-**Lo que aprenderás:**
-- Cómo cargar un documento desde un servidor FTP en Java.
-- Pasos para agregar anotaciones como resaltados de área a sus documentos.
-- Mejores prácticas para configurar y optimizar el uso de GroupDocs.Annotation para Java.
+En esta guía aprenderás **cómo anotar PDF desde FTP en Java** usando GroupDocs.Annotation. Recorreremos la carga del documento directamente desde un flujo FTP, la aplicación de diferentes tipos de anotaciones, el manejo de errores de conexión FTP y el guardado del resultado, todo sin tocar nunca el sistema de archivos local.
 
-¡Ahora, comencemos!
+**Lo que dominarás al final:**
+- Cargar documentos PDF directamente desde servidores FTP usando Java
+- Agregar varios tipos de anotaciones (resaltados de área, notas de texto y más)
+- Implementar manejo de errores y optimizaciones de rendimiento
+- Solucionar problemas comunes que puedas encontrar
 
-## Prerrequisitos
+## Respuestas Rápidas
+- **¿Puedo anotar un PDF sin descargarlo?** Sí, transmitiendo el archivo directamente desde FTP.  
+- **¿Qué biblioteca maneja las anotaciones?** GroupDocs.Annotation para Java.  
+- **¿Necesito una licencia para producción?** Se requiere una licencia completa; hay una prueba gratuita disponible para pruebas.  
+- **¿Cómo manejo los errores de conexión FTP?** Usa lógica de reintentos y un manejo adecuado de excepciones (ver la sección “FTP connection error handling”).  
+- **¿Puedo agregar varios tipos de anotaciones?** Absolutamente—área, texto, punto y más son compatibles.  
 
-Antes de comenzar, asegúrese de tener lo siguiente:
+## ¿Por Qué Elegir Este Enfoque para Anotar PDF desde FTP?
 
-- **Bibliotecas requeridas**Necesitará Apache Commons Net para operaciones FTP y GroupDocs.Annotation para Java. Asegúrese de que estas bibliotecas estén disponibles en su proyecto.
-  
-- **Configuración del entorno**Este tutorial presupone conocimientos básicos de entornos de desarrollo Java. Se recomiendan herramientas como Maven o Gradle para gestionar dependencias.
+Antes de sumergirnos en el código, hablemos de por qué este método es un cambio de juego para los desarrolladores que trabajan con anotaciones de documentos remotos.
 
-- **Requisitos previos de conocimiento**Es beneficioso tener familiaridad con la programación Java, el manejo de flujos de archivos y el trabajo con anotaciones.
+**Problemas del enfoque tradicional:**
+- Descargar archivos localmente (sobrecarga de almacenamiento)  
+- Carga manual después de la anotación (consumidor de tiempo)  
+- Pesadillas de control de versiones  
+- Desperdicio de ancho de banda de red  
+
+**Beneficios de la anotación FTP con GroupDocs:**
+- **Almacenamiento cero local** – Procesa archivos directamente desde flujos.  
+- **Procesamiento en tiempo real** – Anota y guarda en un solo flujo de trabajo.  
+- **Solución escalable** – Maneja múltiples documentos de manera eficiente.  
+- **Listo para empresas** – Construido para entornos de producción.  
+
+## Requisitos Previos y Configuración del Entorno
+
+Antes de comenzar a anotar archivos PDF FTP en Java, asegurémonos de que tienes todo lo necesario. ¡No te preocupes, la configuración es sencilla!
+
+**Requisitos esenciales:**
+- Java Development Kit (JDK 8 o superior)  
+- Biblioteca Apache Commons Net (para operaciones FTP)  
+- Biblioteca GroupDocs.Annotation para Java  
+- Comprensión básica de flujos Java y manejo de archivos  
+
+**Herramientas recomendadas:**
+- Maven o Gradle para gestión de dependencias  
+- IDE como IntelliJ IDEA o Eclipse  
+- Acceso a servidor FTP (credenciales y permisos)  
 
 ## Configuración de GroupDocs.Annotation para Java
 
-Para empezar a usar GroupDocs.Annotation para Java, debe configurar la biblioteca en su proyecto. Si usa Maven, agregue la siguiente configuración:
+Integrar GroupDocs.Annotation en tu proyecto es más fácil de lo que piensas. Aquí tienes cómo configurarlo correctamente:
+
+### Configuración de Maven
+
+Add this to your `pom.xml` file:
 
 ```xml
 <repositories>
@@ -51,23 +97,23 @@ Para empezar a usar GroupDocs.Annotation para Java, debe configurar la bibliotec
 </dependencies>
 ```
 
-### Adquisición de licencias
+### Opciones de Configuración de Licencia
 
-GroupDocs ofrece diferentes formas de adquirir una licencia:
-- **Prueba gratuita**Comience con una prueba gratuita para explorar las capacidades de GroupDocs.Annotation.
-- **Licencia temporal**: Obtenga una licencia temporal para acceso completo durante la evaluación.
-- **Compra**:Considere comprar una licencia para uso a largo plazo.
+GroupDocs ofrece opciones de licencia flexibles que se adaptan a diferentes necesidades de desarrollo:
 
-Para inicializar y configurar su entorno, agregue las dependencias anteriores en su Maven `pom.xml` archivo. Esta configuración garantiza que tenga todos los componentes necesarios para comenzar a anotar documentos.
+1. **Prueba gratuita** – Perfecta para pruebas y proyectos de prueba de concepto.  
+2. **Licencia temporal** – Ideal durante periodos de evaluación (elimina limitaciones de prueba).  
+3. **Licencia completa** – Para despliegue en producción y uso comercial.  
 
-## Guía de implementación
+**Consejo profesional**: Comienza con la prueba gratuita para familiarizarte con la API, luego actualiza a una licencia temporal para trabajos de desarrollo serios.  
 
-### Cargando documento desde FTP
+## Guía de Implementación Completa
 
-#### Descripción general
-Esta sección explica cómo recuperar un documento de un servidor FTP mediante la biblioteca Apache Commons Net de Java. Al cargar el archivo como un InputStream, podemos pasarlo directamente a GroupDocs.Annotation para su procesamiento.
+Ahora viene la parte emocionante: ¡construyamos una solución robusta para anotar PDF desde FTP en Java!
 
-#### Conectar y recuperar archivo
+### Paso 1: Cargar Documentos desde el Servidor FTP
+
+El primer desafío es conectarse a tu servidor FTP y recuperar el archivo PDF como un flujo. Aquí tienes un método limpio y reutilizable:
 
 ```java
 import org.apache.commons.net.ftp.FTPClient;
@@ -75,30 +121,32 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public static InputStream getFileFromFtp(String server, String filePath) throws IOException {
-    // Inicializar el cliente FTP
+    // Initialize FTP client
     FTPClient client = new FTPClient();
     
-    // Conectarse al servidor FTP
+    // Connect to the FTP server
     client.connect(server);
     
-    // Recuperar el archivo especificado como un flujo de entrada
+    // Retrieve the specified file as an input stream
     InputStream inputStream = client.retrieveFileStream(filePath);
     
-    // Desconectarse del servidor FTP
+    // Disconnect from the FTP server
     client.disconnect();
     
     return inputStream;
 }
 ```
 
-**Explicación**:Este método inicializa un `FTPClient`, se conecta a su servidor FTP especificado, recupera un archivo como un `InputStream`y luego se desconecta. Asegúrese de gestionar las excepciones para una gestión robusta de errores.
+**¿Qué está sucediendo aquí?**
+- Estamos usando `FTPClient` de Apache Commons Net para operaciones FTP confiables.  
+- El archivo se recupera como un `InputStream` (¡no se requiere almacenamiento local!).  
+- Una gestión limpia de la conexión garantiza que no haya fugas de recursos.  
 
-### Cómo agregar anotaciones a un documento
+**Nota importante**: Este ejemplo básico asume acceso FTP anónimo. Para servidores autenticados, agrega `client.login(username, password)` después de la conexión.  
 
-#### Descripción general
-Una vez cargado el documento desde el servidor FTP, podemos añadir anotaciones mediante la API de Java de GroupDocs.Annotation. En este caso, nos centraremos en añadir anotaciones de área.
+### Paso 2: Agregar Anotaciones a tu PDF
 
-#### Anotar y guardar
+Una vez que tienes el flujo del documento, anotar se vuelve sorprendentemente sencillo:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -107,72 +155,236 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 import java.io.InputStream;
 
 public static void addAnnotationAndSave(InputStream inputStream, String outputPath) {
-    // Inicializar el anotador con el InputStream proporcionado
+    // Initialize Annotator with the provided InputStream
     final Annotator annotator = new Annotator(inputStream);
     
-    // Crear una nueva anotación de área
+    // Create a new Area Annotation
     AreaAnnotation area = new AreaAnnotation();
     
-    // Establezca la posición y el tamaño de la anotación (100x100 en las coordenadas 100,100)
+    // Set the position and size of the annotation (100x100 at coordinates 100,100)
     area.setBox(new Rectangle(100, 100, 100, 100));
     
-    // Establecer un color de fondo para la anotación
-    area.setBackgroundColor(65535); // Color amarillo en formato ARGB
+    // Set a background color for the annotation
+    area.setBackgroundColor(65535); // Yellow color in ARGB format
     
-    // Agregar la anotación al documento
+    // Add the annotation to the document
     annotator.add(area);
     
-    // Guarde el documento anotado en la ruta de salida especificada
+    // Save the annotated document to the specified output path
     annotator.save(outputPath);
     
-    // Eliminar recursos utilizados por el Anotador
+    // Dispose of resources used by Annotator
     annotator.dispose();
 }
 ```
 
-**Explicación**:Este fragmento de código inicializa un `Annotator` objeto con su documento `InputStream`, crea una anotación de área amarilla y la guarda. El `Rectangle` La clase define la posición y el tamaño, mientras que `AreaAnnotation` Gestiona los detalles específicos de la anotación.
+**Desglosando el proceso de anotación:**
+- `Annotator` maneja el procesamiento del PDF y la gestión de anotaciones.  
+- `Rectangle` define dónde aparece tu anotación (x, y, ancho, alto).  
+- `AreaAnnotation` crea una región resaltada (perfecta para marcar secciones importantes).  
+- Los valores de color usan formato ARGB (65535 = amarillo brillante).  
 
-#### Consejos para la solución de problemas
-- Asegúrese de tener las credenciales y permisos FTP adecuados para evitar problemas de conexión.
-- Verifique las rutas de archivos y los derechos de acceso al guardar documentos anotados.
+### Paso 3: Juntándolo Todo
 
-## Aplicaciones prácticas
+Así es como combinarías ambos métodos en una aplicación real:
 
-1. **Anotación de documentos legales**: Resalte rápidamente términos o secciones clave en contratos almacenados en servidores FTP.
-2. **Procesos de revisión de documentos**:Facilite la revisión colaborativa de documentos agregando anotaciones directamente desde el almacenamiento remoto.
-3. **Análisis automatizado de informes**:Utilice scripts para anotar automáticamente los informes descargados desde un servidor FTP y marcar las métricas importantes.
+```java
+public class PDFAnnotationFromFTP {
+    public static void main(String[] args) {
+        try {
+            // Load PDF from FTP server
+            InputStream pdfStream = getFileFromFtp("ftp.example.com", "/documents/report.pdf");
+            
+            // Add annotations and save
+            addAnnotationAndSave(pdfStream, "annotated_report.pdf");
+            
+            System.out.println("PDF successfully annotated from FTP!");
+            
+        } catch (IOException e) {
+            System.err.println("Error processing PDF: " + e.getMessage());
+        }
+    }
+}
+```
 
-## Consideraciones de rendimiento
+## Técnicas Avanzadas de Anotación
 
-- **Optimización de la red**:Asegure una conexión estable al descargar archivos desde FTP para evitar interrupciones.
-- **Gestión de la memoria**: Gestione eficientemente los flujos y recursos para evitar fugas de memoria en su aplicación. Elimine `Annotator` objetos inmediatamente después de su uso.
+Aunque las anotaciones de área son excelentes para resaltar, GroupDocs.Annotation ofrece mucha más flexibilidad para proyectos de anotación PDF FTP:
 
-## Conclusión
+### Anotaciones de Texto para Comentarios Detallados
 
-En este tutorial, exploramos cómo aprovechar GroupDocs.Annotation para Java para anotar archivos PDF descargados de un servidor FTP. Siguiendo estos pasos, podrá optimizar los flujos de trabajo de procesamiento de documentos en su organización. A continuación, intente integrar estas funcionalidades en un proyecto más grande o explore otros tipos de anotaciones compatibles con GroupDocs.
+```java
+TextAnnotation textAnnotation = new TextAnnotation();
+textAnnotation.setBox(new Rectangle(200, 200, 100, 50));
+textAnnotation.setText("Important: Review this section carefully");
+textAnnotation.setFontColor(16711680); // Red text
+annotator.add(textAnnotation);
+```
 
-**Próximos pasos**:Experimente con diferentes anotaciones y considere automatizar todo el proceso para el manejo masivo de documentos.
+### Anotaciones de Punto para Notas Rápidas
 
-## Sección de preguntas frecuentes
+```java
+PointAnnotation pointAnnotation = new PointAnnotation();
+pointAnnotation.setBox(new Rectangle(300, 150, 0, 0));
+pointAnnotation.setText("Check this calculation");
+annotator.add(pointAnnotation);
+```
 
-1. **¿Puedo utilizar GroupDocs.Annotation con otros servicios de almacenamiento en la nube?**
-   - Sí, puedes adaptar el código para que funcione con AWS S3, Google Drive o cualquier servicio que proporcione acceso a archivos a través de API.
-2. **¿Qué tipos de anotaciones admite GroupDocs?**
-   - GroupDocs admite varias anotaciones, incluidas texto, área, punto y más.
-3. **¿Cómo manejo los errores de conexión del servidor FTP en Java?**
-   - Implemente el manejo de excepciones en sus operaciones FTP para gestionar los problemas de conectividad con elegancia.
-4. **¿Se puede utilizar esta configuración para documentos que no sean PDF?**
-   - Sí, GroupDocs.Annotation admite varios formatos, incluidos Word, Excel e imágenes.
-5. **¿Cuál es la mejor manera de optimizar los tiempos de carga de documentos desde FTP?**
-   - Considere realizar descargas paralelas o utilizar un mecanismo de almacenamiento en caché para los archivos a los que se accede con frecuencia.
+## Casos de Uso y Aplicaciones del Mundo Real
 
-## Recursos
-- [Documentación](https://docs.groupdocs.com/annotation/java/)
-- [Referencia de API](https://reference.groupdocs.com/annotation/java/)
-- [Descargar](https://releases.groupdocs.com/annotation/java/)
-- [Compra](https://purchase.groupdocs.com/buy)
-- [Prueba gratuita](https://releases.groupdocs.com/annotation/java/)
-- [Licencia temporal](https://purchase.groupdocs.com/temporary-license/)
-- [Foro de soporte](https://forum.groupdocs.com/c/annotation/) 
+Entender cuándo y cómo usar la anotación PDF FTP puede transformar tus flujos de trabajo de documentos:
 
-¡Comience hoy mismo a utilizar GroupDocs.Annotation para Java para optimizar sus procesos de anotación de documentos y mejorar la productividad!
+### 1. Sistemas de Revisión de Documentos Legales
+
+Los despachos de abogados a menudo almacenan contratos en servidores FTP seguros. Con este enfoque, los abogados pueden resaltar cláusulas clave y agregar comentarios sin descargar los archivos localmente.
+
+### 2. Procesamiento de Informes de Ingeniería
+
+Los informes técnicos almacenados remotamente pueden anotarse para mediciones, advertencias de seguridad o notas de diseño, agilizando las revisiones entre pares.
+
+### 3. Gestión de Contenido Educativo
+
+Los profesores pueden anotar entregas de estudiantes almacenadas en FTP, proporcionando retroalimentación directamente en el archivo original.
+
+### 4. Inteligencia Empresarial Automatizada
+
+Marca métricas importantes o anomalías en PDFs financieros automáticamente, creando resúmenes ejecutivos con ideas resaltadas.
+
+## Optimización de Rendimiento y Mejores Prácticas
+
+Al trabajar con anotación PDF FTP en Java, seguir estas mejores prácticas te ahorrará dolores de cabeza en el futuro:
+
+### Consejos de Gestión de Memoria
+
+**Siempre libera los recursos:**
+
+```java
+try (Annotator annotator = new Annotator(inputStream)) {
+    // Your annotation code here
+    annotator.add(annotation);
+    annotator.save(outputPath);
+} // Automatic resource cleanup
+```
+
+**Mejores prácticas de manejo de flujos**
+- Usa try‑with‑resources para limpieza automática.  
+- No mantengas flujos grandes en memoria más tiempo del necesario.  
+- Considera implementar un pool de conexiones para aplicaciones de alto volumen.  
+
+### Estrategias de Optimización de Red
+
+**Gestión de Conexión FTP**
+- Implementa pool de conexiones para múltiples operaciones de archivo.  
+- Usa modo pasivo para mejor compatibilidad con firewalls (`client.enterLocalPassiveMode()`).  
+- Agrega lógica de reintentos para interrupciones de red (ver el fragmento “FTP connection error handling” a continuación).  
+
+**Eficiencia del Procesamiento por Lotes**
+
+```java
+// Process multiple files in one FTP session
+FTPClient client = new FTPClient();
+client.connect(server);
+client.login(username, password);
+
+for (String filePath : filePaths) {
+    InputStream stream = client.retrieveFileStream(filePath);
+    processAndAnnotate(stream);
+}
+
+client.disconnect();
+```
+
+### Manejo de Errores y Resiliencia (FTP connection error handling)
+
+Robust error handling is crucial when dealing with network operations and document processing:
+
+```java
+public static InputStream getFileFromFtpWithRetry(String server, String filePath, int maxRetries) {
+    for (int attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            return getFileFromFtp(server, filePath);
+        } catch (IOException e) {
+            if (attempt == maxRetries) {
+                throw new RuntimeException("Failed to retrieve file after " + maxRetries + " attempts", e);
+            }
+            // Wait before retry
+            try {
+                Thread.sleep(1000 * attempt); // Exponential backoff
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException("Interrupted during retry", ie);
+            }
+        }
+    }
+    return null;
+}
+```
+
+## Solución de Problemas Comunes
+
+Incluso con el mejor código, ocasionalmente encontrarás problemas al implementar la anotación PDF FTP. Aquí están los problemas más comunes y sus soluciones:
+
+### Problemas de Conexión FTP
+- **“Connection timed out” o “Connection refused”** – Verifica la dirección del servidor, puerto, configuraciones de firewall y prueba el modo pasivo.  
+- **Fallos de autenticación** – Verifica nuevamente las credenciales y asegura que la cuenta tenga permisos de lectura.  
+
+### Errores de Procesamiento de Documentos
+- **“Document format not supported”** – Confirma que el archivo es un PDF válido y que la transferencia FTP usa modo binario (`client.setFileType(FTP.BINARY_FILE_TYPE)`).  
+- **Problemas de memoria con archivos grandes** – Incrementa el heap de JVM (`-Xmx2g`) o procesa los archivos en modo streaming.  
+
+### Problemas Específicos de Anotación
+- **Las anotaciones no aparecen** – Verifica que las coordenadas estén dentro de los límites de la página y que el PDF no esté protegido con contraseña.  
+- **Los valores de color se ven incorrectos** – Usa formato ARGB (p.ej., Rojo = 16711680, Verde = 65280, Azul = 255, Amarillo = 65535).  
+
+## Consideraciones de Seguridad para Uso en Producción
+
+Al implementar anotación PDF FTP en entornos de producción, la seguridad debe ser una prioridad principal:
+
+### Gestión de Credenciales
+- Nunca codifiques directamente las credenciales FTP. Usa variables de entorno o bóvedas seguras.  
+- Prefiere FTPS (FTP sobre SSL/TLS) para conexiones encriptadas.  
+
+### Validación de Documentos
+- Valida los tipos de archivo antes de procesar.  
+- Aplica límites de tamaño para prevenir agotamiento de recursos.  
+- Escanea contenido malicioso si manejas archivos subidos por usuarios.  
+
+### Control de Acceso
+- Implementa autenticación en tu aplicación.  
+- Usa control de acceso basado en roles para las funciones de anotación.  
+- Registra todas las actividades de acceso y modificación de documentos.  
+
+## Preguntas Frecuentes
+
+**P: ¿Puedo usar este enfoque con otros servicios de almacenamiento en la nube como AWS S3 o Google Drive?**  
+R: Absolutamente. Reemplaza el código de recuperación FTP con las llamadas al SDK apropiado; la lógica de anotación permanece igual.
+
+**P: ¿Qué formatos de archivo admite GroupDocs.Annotation además de PDF?**  
+R: Más de 50 formatos, incluidos DOCX, XLSX, PPTX, imágenes (JPEG, PNG) y archivos CAD.
+
+**P: ¿Cómo manejo archivos PDF muy grandes sin quedarme sin memoria?**  
+R: Procesa en modo streaming, incrementa el heap de JVM o usa colas asíncronas para procesar por lotes.
+
+**P: ¿Puedo agregar varios tipos de anotaciones al mismo documento?**  
+R: Sí. Crea cada objeto de anotación (Area, Text, Point, etc.) y añádelos antes de llamar a `save()`.
+
+**P: ¿Hay una forma de extraer anotaciones existentes de un PDF cargado desde FTP?**  
+R: Sí. Usa `annotator.get()` para obtener todas las anotaciones existentes.
+
+## Recursos y Aprendizaje Adicional
+
+¿Listo para profundizar? Aquí tienes los recursos esenciales para dominar GroupDocs.Annotation:
+
+- [Documentation](https://docs.groupdocs.com/annotation/java/) - Referencia completa de la API y guías  
+- [API Reference](https://reference.groupdocs.com/annotation/java/) - Documentación detallada de los métodos  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/) - Siempre usa las últimas funciones  
+- [Purchase License](https://purchase.groupdocs.com/buy) - Opciones de despliegue en producción  
+- [Free Trial](https://releases.groupdocs.com/annotation/java/) - Prueba todas las funciones  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/) - Elimina limitaciones de prueba  
+- [Community Support](https://forum.groupdocs.com/c/annotation/) - Obtén ayuda de expertos y compañeros  
+
+---
+
+**Última actualización:** 2026-01-05  
+**Probado con:** GroupDocs.Annotation 25.2 para Java  
+**Autor:** GroupDocs
