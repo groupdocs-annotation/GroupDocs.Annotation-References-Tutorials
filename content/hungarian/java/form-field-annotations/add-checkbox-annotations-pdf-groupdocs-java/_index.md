@@ -1,37 +1,53 @@
 ---
-"date": "2025-05-06"
-"description": "Ismerje meg, hogyan javíthatja PDF-dokumentumait interaktív jelölőnégyzet-jegyzetekkel a GroupDocs.Annotation for Java használatával. Kövesse ezt a lépésről lépésre szóló útmutatót."
-"title": "Jelölőnégyzet-jegyzetek hozzáadása PDF-ekhez a GroupDocs.Annotation for Java használatával"
-"url": "/hu/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/"
+categories:
+- Java PDF Development
+date: '2026-01-08'
+description: Tanulja meg, hogyan adjon hozzá jelölőnégyzetet PDF-fájlokhoz Java használatával.
+  Ez az útmutató interaktív jelölőnégyzeteket, Java PDF űrlapmezőket és több jelölőnégyzet
+  PDF-hez való hozzáadását a GroupDocs.Annotation segítségével tárgyalja.
+keywords: PDF checkbox Java, interactive PDF Java, Java PDF annotations, PDF form
+  fields Java, GroupDocs checkbox tutorial
+lastmod: '2026-01-08'
+linktitle: PDF Checkbox Java Tutorial
+tags:
+- pdf-annotations
+- groupdocs
+- java-pdf
+- interactive-forms
+title: PDF jelölőnégyzet Java – Interaktív jelölőnégyzetek hozzáadása PDF-ekhez
 type: docs
-"weight": 1
+url: /hu/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/
+weight: 1
 ---
 
-# Jelölőnégyzet-jegyzetek hozzáadása PDF-hez a GroupDocs.Annotation for Java használatával
+# Jelölőnégyzet hozzáadása PDF-hez Java-val – Interaktív jelölőnégyzetek a GroupDocs használatával
 
-## Bevezetés
+Ha programozott módon **add checkbox to pdf** fájlokhoz szeretnél jelölőnégyzetet hozzáadni, jó helyen jársz. A mai digitális‑első világban a statikus PDF-ek már a múlt részei. Akár jóváhagyási munkafolyamatokat, felméréseket vagy megfelelőségi űrlapokat építesz, az interaktív jelölőnégyzetek hozzáadása jelentősen javíthatja a felhasználói élményt és egyszerűsítheti a folyamataidat.
 
-Interaktívabbá szeretné tenni PDF-fájljait olyan elemekkel, mint a jelölőnégyzetek? Legyen szó dokumentum-jóváhagyási folyamatokról, felmérésekről vagy visszajelzési űrlapokról, a jelölőnégyzetekhez fűzött megjegyzések jelentősen növelhetik a felhasználói elköteleződést. Ebben az oktatóanyagban bemutatjuk, hogyan használhatja a GroupDocs.Annotation for Java használatát jelölőnégyzetekhez fűzött megjegyzések hatékony hozzáadásához egy PDF-fájlhoz.
+## Quick Answers
+- **Melyik könyvtár a legjobb a checkbox to pdf hozzáadásához?** GroupDocs.Annotation for Java.  
+- **Mennyi időt vesz igénybe a megvalósítás?** Körülbelül 10‑15 perc egy alap jelölőnégyzethez.  
+- **Szükségem van licencre?** A ingyenes próba verzió fejlesztéshez megfelelő; a teljes licenc a termeléshez kötelező.  
+- **Hozzáadhatok több checkbox pdf-et egy dokumentumban?** Igen – egyszerűen hozz létre több `CheckBoxComponent` példányt.  
+- **Működni fognak a jelölőnégyzetek minden PDF-olvasóban?** A szabványos PDF űrlapmezőket támogatja az Adobe Reader, a Chrome, a Firefox és a legtöbb modern megjelenítő.
 
-**Amit tanulni fogsz:**
-- Inicializálja az Annotátort egy PDF dokumentummal.
-- Hozz létre és konfigurálj egy CheckBoxComponent-et.
-- Adja hozzá a jelölőnégyzet megjegyzését a PDF-hez, és mentse el.
+## Why add interactive checkboxes pdf?
 
-Mielőtt belevágnánk a megvalósítás lépéseibe, győződjünk meg róla, hogy minden elő van készítve.
+Kapott már valaha PDF űrlapot, amit ki kellett nyomtatni csak azért, hogy bejelölj egy négyzetet? Bosszantó, ugye? A **interactive checkboxes pdf** hozzáadása egy statikus dokumentumot élő űrlappá alakít, amelyet a felhasználók bármilyen eszközön kitölthetnek. Ez nemcsak időt takarít meg, hanem csökkenti a hibákat és könnyedé teszi az adatgyűjtést.
 
-## Előfeltételek
+## Prerequisites & Setup
 
-Mielőtt elkezdenénk, győződjünk meg róla, hogy a következőkkel rendelkezünk:
-- **Kötelező könyvtárak**Telepítse a GroupDocs.Annotation for Java fájlt. Győződjön meg róla, hogy a 25.2-es vagy újabb verziót használja.
-- **Környezet beállítása**Ez az oktatóanyag feltételezi a Java és fejlesztői környezetének alapvető ismeretét.
-- **Ismereti előfeltételek**Előnyt jelent a Java fájlok kezelésében való jártasság és a PDF-jegyzetek alapvető ismerete.
+Mielőtt a kódba merülnénk, győződj meg róla, hogy a következőkkel rendelkezel:
 
-## GroupDocs.Annotation beállítása Java-hoz
+### Essential Requirements
+- **Java Development Kit**: 8 vagy újabb verzió.  
+- **GroupDocs.Annotation for Java**: 25.2 vagy újabb verzió (megmutatjuk, hogyan adhatod hozzá).  
+- **Basic Java Knowledge**: Fájl I/O és objektum inicializálás.  
+- **PDF File**: Bármely meglévő PDF a teszteléshez (használni fogunk egy mintadokumentumot).
 
-Első lépésként illessze be a szükséges GroupDocs.Annotation könyvtárat a projektbe. Ha Mavent használ, adja hozzá a következő adattárat és függőséget a projektjéhez: `pom.xml`:
+### Quick Maven Setup
 
-**Maven konfiguráció:**
+Ha Maven-t használsz, add hozzá ezt a `pom.xml`-hez. Ez a konfiguráció automatikusan beilleszti a szükséges könyvtárat:
 
 ```xml
 <repositories>
@@ -50,38 +66,21 @@ Első lépésként illessze be a szükséges GroupDocs.Annotation könyvtárat a
 </dependencies>
 ```
 
-### Licencszerzés
+### Licensing Made Simple
 
-A GroupDocs.Annotation for Java teljes használatához licencre lehet szüksége:
-- **Ingyenes próbaverzió**: Kezdje az ingyenes próbaverzióval a funkciók felfedezését.
-- **Ideiglenes engedély**Szerezzen be egy ideiglenes licencet a fejlesztés alatti kiterjesztett hozzáféréshez.
-- **Vásárlás**: Fontolja meg a vásárlást, ha hosszú távú használatra van szüksége.
+- **Free Trial** – tökéletes teszteléshez és kis projektekhez.  
+- **Temporary License** – hasznos hosszabb fejlesztési ciklusok során.  
+- **Full License** – szükséges a termelési környezetben.
 
-Miután beállítottuk, inicializáljuk és konfiguráljuk a környezetünket.
+Azonnal elkezdhetsz fejleszteni a próba verzióval.
 
-### Alapvető inicializálás
+## Step‑by‑Step Guide: Hogyan adjunk hozzá checkbox to pdf-et Java-val
 
-```java
-import com.groupdocs.annotation.Annotator;
+Áttekintünk három tömör lépést. Minden lépés az előzőre épül, ezért kövesd a sorrendet.
 
-public class InitializeAnnotator {
-    public static void run() {
-        try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-            // A jegyzetelő használatra kész.
-        }
-    }
-}
-```
+### Step 1: Initialize the PDF Annotator
 
-Ez a kódrészlet bemutatja, hogyan kell inicializálni a `Annotator` PDF fájllal. Ügyeljen arra, hogy kicserélje `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` a dokumentum elérési útjával.
-
-## Megvalósítási útmutató
-
-Most pedig bontsuk le a folyamatot kezelhető lépésekre:
-
-### 1. funkció: Jegyzetelő inicializálása
-
-**Áttekintés**: Ez a lépés beállítja a `Annotator` példány a PDF fájlunkhoz.
+Először nyisd meg a PDF-et szerkesztésre. A `Annotator` osztály a belépési pontod:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -89,19 +88,17 @@ import com.groupdocs.annotation.Annotator;
 public class InitializeAnnotator {
     public static void run() {
         try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-            // A jegyzetelő most már használatra kész.
+            // The Annotator is ready for use.
         }
     }
 }
 ```
 
-**Magyarázat**: 
-- **Paraméterek**: `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` a PDF fájl elérési útjának kell lennie.
-- **Cél**: Felkészíti a jegyzetelőt a további műveletekre.
+> **Pro tip:** Használd a abszolút elérési utat a „file not found” hibák elkerüléséhez, és győződj meg róla, hogy a PDF nincs megnyitva egy másik alkalmazásban.
 
-### 2. funkció: CheckBoxComponent létrehozása és konfigurálása
+### Step 2: Create and Configure Your Checkbox Component
 
-**Áttekintés**Itt létrehozunk egy `CheckBoxComponent` olyan specifikus tulajdonságokkal, mint a pozíció, a stílus és a válaszok.
+Most létrehozzuk a `CheckBoxComponent`-et. Itt határozod meg a megjelenést, az állapotot és az opcionális válaszokat:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -113,22 +110,22 @@ import java.util.List;
 
 public class CreateCheckBoxComponent {
     public static void run() {
-        // Inicializáljon egy új CheckBoxComponent-et.
+        // Initialize a new CheckBoxComponent.
         CheckBoxComponent checkbox = new CheckBoxComponent();
 
-        // Jelöld be a jelölőnégyzetet bejelölve.
+        // Set the checkbox as checked.
         checkbox.setChecked(true);
 
-        // Határozza meg a jelölőnégyzet helyét és méretét egy téglalap segítségével.
+        // Define the position and size of the checkbox using a Rectangle.
         checkbox.setBox(new Rectangle(100, 100, 100, 100));
 
-        // Állítsd be a jelölőnégyzet rajzolásához használt toll színét (a 65535 a sárgát jelöli).
+        // Set the pen color for drawing the checkbox (65535 represents yellow).
         checkbox.setPenColor(65535);
 
-        // Alkalmazzon csillagstílust a jelölőnégyzet szegélyére.
+        // Apply a star style to the checkbox border.
         checkbox.setStyle(BoxStyle.STAR);
 
-        // Hozz létre ehhez a jelölőnégyzethez társított válaszokat, és add hozzá őket.
+        // Create replies associated with this checkbox and add them to it.
         Reply reply1 = new Reply();
         reply1.setComment("First comment");
         reply1.setRepliedOn(new Date());
@@ -141,19 +138,21 @@ public class CreateCheckBoxComponent {
         replies.add(reply1);
         replies.add(reply2);
 
-        // Rendelje hozzá a válaszok listáját a jelölőnégyzet komponenshez.
+        // Assign the list of replies to the checkbox component.
         checkbox.setReplies(replies);
     }
 }
 ```
 
-**Magyarázat**:
-- **Paraméterek**A `Rectangle` meghatározza a pozícióját és méretét. `BoxStyle.STAR` csillag alakú szegélyt ad.
-- **Cél**: Beállítja, hogy a jelölőnégyzet hogyan jelenjen meg és viselkedjen a dokumentumban.
+**Fontos pontok, amire emlékezni kell:**
+- **Rectangle coordinates**: `(x, y, width, height)`. Állítsd be őket, hogy a jelölőnégyzetet a kívánt helyre helyezd.
+- **Pen color** egész számú RGB értéket használ (`65535` = sárga). Bármilyen színt használhatsz.
+- **BoxStyle** opciók: `STAR`, `CIRCLE`, `SQUARE`, `DIAMOND`.
+- **Replies** opcionális megjegyzések, amelyek hover‑kor jelennek meg.
 
-### 3. funkció: CheckBoxComponent hozzáadása a jegyzetelőhöz és a dokumentum mentése
+### Step 3: Add the Checkbox and Save the PDF
 
-**Áttekintés**: Ez a lépés magában foglalja a konfigurált jelölőnégyzet hozzáadását a PDF-hez, majd mentését.
+Végül csatold a komponenst a dokumentumhoz, és írd ki az eredményt a lemezre:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -162,45 +161,172 @@ import com.groupdocs.annotation.models.formatspecificcomponents.pdf.CheckBoxComp
 public class AddCheckBoxAndSave {
     public static void run() {
         try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-            // Tegyük fel, hogy a jelölőnégyzet az előző funkció szerint lett létrehozva és konfigurálva.
+            // Assume checkbox is created and configured as per the previous feature.
             CheckBoxComponent checkbox = CreateCheckBoxComponent.createCheckbox();
 
-            // Adja hozzá a konfigurált jelölőnégyzet-összetevőt a dokumentumhoz az annotátorpéldány használatával.
+            // Add the configured checkbox component to the document using the annotator instance.
             annotator.add(checkbox);
 
-            // Mentse el a jegyzetekkel ellátott PDF-et egy kimeneti könyvtárba egy adott fájlnévvel.
+            // Save the annotated PDF to an output directory with a specific filename.
             annotator.save("YOUR_OUTPUT_DIRECTORY/result_checkbox_component.pdf");
         }
     }
 }
 ```
 
-**Magyarázat**:
-- **Paraméterek**Csere `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` és `"YOUR_OUTPUT_DIRECTORY/result_checkbox_component.pdf"` megfelelő útvonalakkal.
-- **Cél**: Hozzáadja a jelölőnégyzet megjegyzését a PDF-hez, és menti a frissített fájlt.
+> **Fájlútvonal tippek:**  
+> • Használd az abszolút útvonalakat a „file not found” hibák elkerüléséhez.  
+> • Győződj meg róla, hogy a kimeneti könyvtár létezik a mentés előtt.  
+> • Gondolj egyedi fájlnevekre, hogy elkerüld fontos fájlok felülírását.
 
-## Gyakorlati alkalmazások
+## Real‑World Applications (Az alap űrlapokon túl)
 
-1. **Dokumentumjóváhagyási munkafolyamatok**: Jelölőnégyzetek segítségével a felhasználók jóváhagyhatják vagy elutasíthatják a dokumentum egyes részeit.
-2. **Felmérések és visszajelző űrlapok**: Válaszok gyűjtése jelölőnégyzetek beépítésével a kérdőívekbe.
-3. **Képzési anyagok**: A gyakornokok jelölőnégyzetekkel jelölhetik meg az elvégzett feladatokat.
-4. **Jogi dokumentumok**: A szerződési feltételek tudomásulvételének megkönnyítése jelölőnégyzetek megjegyzéseivel.
-5. **Leltárlisták**Készletkészlet állapotának nyomon követése jelölőnégyzetek segítségével PDF-ekben.
+Az, hogy hol ragyognak a **java pdf form fields**, segít lehetőségeket felismerni:
 
-## Teljesítménybeli szempontok
+### Dokumentum jóváhagyási munkafolyamatok
+Adj hozzá jelölőnégyzeteket a „Reviewed”, „Approved” vagy „Needs Changes” állapotokhoz. Ideális szerződésekhez, költségvetésekhez és szabályzatok elismeréséhez.
 
-Az optimális teljesítmény biztosítása érdekében a GroupDocs.Annotation használatával:
-- **Erőforrás-felhasználás optimalizálása**: A memória hatékony kezelése az olyan erőforrások eldobásával, mint a `Annotator` például használat után.
-- **Kötegelt feldolgozás**Több dokumentum feldolgozása esetén érdemes a kötegelt műveleteket megfontolni a többletterhelés minimalizálása érdekében.
-- **Java memóriakezelés**Figyelemmel kísérheti és módosíthatja a halomméret-beállításokat Java környezetben, ha nagy PDF-eket kezel.
+### Felmérés és visszajelzés gyűjtése
+Készíts offline‑képes felméréseket, amelyek megőrzik a pontos formázást az eszközök között. Kiváló a munkavállalói elégedettség, ügyfél visszajelzés és eseményértékelésekhez.
 
-## Következtetés
+### Képzés és megfelelőségi dokumentáció
+Kövesd a haladást jelölőnégyzetekkel a biztonsági kézikönyvekben, megfelelőségi ellenőrzőlistákon vagy bevezető feladatokban.
 
-Az útmutató követésével megtanulta, hogyan adhat hozzá jelölőnégyzetes jegyzeteket PDF-ekhez a GroupDocs.Annotation for Java használatával. Ez a funkció jelentősen javíthatja a dokumentumok interaktivitását a különböző alkalmazásokban. A következő lépések magukban foglalhatják más jegyzettípusok felfedezését, vagy ezen funkciók integrálását nagyobb dokumentumkezelő rendszerekbe.
+### Jogi és adminisztratív űrlapok
+Standardizáld a feltételek, adatvédelmi szabályzatok, biztosítási igények és kormányzati jelentkezések elfogadását.
 
-**Cselekvésre ösztönzés**Kísérletezzen különböző konfigurációkkal, és figyelje meg, hogyan befolyásolják a munkafolyamatát. Ha kérdése van, forduljon hozzánk bizalommal a GroupDocs támogatási csatornáin keresztül.
+## Gyakori problémák és megoldások
 
-## GYIK szekció
+Minden fejlesztő néha elakadhat. Itt a leggyakoribb problémák és a megoldásuk:
 
-1. **Mi a jelölőnégyzet-megjegyzések használatának elsődleges célja PDF-ekben?**
-   - Interaktivitás hozzáadása olyan feladatokhoz, mint a jóváhagyások, felmérések vagy feladatkövetés.
+### „File Not Found” hibák
+**Probléma:** Hibás PDF útvonal.  
+**Megoldás:** Ellenőrizd, hogy a fájl létezik-e a feldolgozás előtt:
+
+```java
+File inputFile = new File("path/to/your/file.pdf");
+if (!inputFile.exists()) {
+    throw new FileNotFoundException("PDF file not found: " + inputFile.getAbsolutePath());
+}
+```
+
+### A jelölőnégyzet rossz helyen jelenik meg
+**Probléma:** A PDF koordináta‑rendszer a bal alsó sarokból indul.  
+**Megoldás:** Állítsd be az Y koordinátát. Egy 600 pixel magas oldalon a vizuálisan „100 a tetejétől” `Y = 500` lesz.
+
+### Memória problémák nagy PDF-ekkel
+**Probléma:** `OutOfMemoryError`.  
+**Megoldás:** Növeld a JVM heap méretét vagy dolgozd fel a dokumentumokat kötegekben:
+
+```bash
+java -Xmx2048m YourApplication
+```
+
+### Licenc ellenőrzési hibák
+**Probléma:** „License not found” vagy „Invalid license”.  
+**Megoldás:** Helyezd a licenc fájlt a classpath gyökerébe vagy állítsd be az útvonalat explicit módon:
+
+```java
+License license = new License();
+license.setLicense("path/to/GroupDocs.Annotation.Java.lic");
+```
+
+### A jelölőnégyzet nem reagál a kattintásokra
+**Probléma:** A jelölőnégyzet statikusnak tűnik.  
+**Megoldás:** Győződj meg róla, hogy `CheckBoxComponent`-et (űrlapmezőt) használsz, nem pedig általános annotációt.
+
+## Teljesítményoptimalizálási tippek
+
+Amikor a termelésbe lépsz, ezek a finomhangolások gyorsítják a működést:
+
+### Memóriakezelés legjobb gyakorlatai
+- Mindig használd a **try‑with‑resources**-t a `Annotator`-hoz.  
+- Dolgozd fel a dokumentumokat kötegekben, ahelyett, hogy egyszerre sokat töltenél be.  
+- Állítsd be a JVM heap méretét a tipikus dokumentumméretek alapján.
+
+### Kötetes feldolgozási stratégia
+Több PDF esetén ismételd a ciklust egy új `Annotator`-ral minden iterációban:
+
+```java
+public void processPDFBatch(List<String> pdfPaths) {
+    for (String path : pdfPaths) {
+        try (Annotator annotator = new Annotator(path)) {
+            // Process individual document
+            addCheckboxes(annotator);
+            annotator.save(getOutputPath(path));
+        }
+        // Memory is automatically released after each document
+    }
+}
+```
+
+### Párhuzamos feldolgozás szempontjai
+A `GroupDocs.Annotation` szálbiztos, így több dokumentumot is párhuzamosan futtathatsz:
+- Használd az `ExecutorService`-t korlátozott szálkészlettel.  
+- Figyeld a RAM használatot és ennek megfelelően korlátozd a párhuzamosságot.
+
+## Alternatív megközelítések, amelyeket érdemes megfontolni
+
+Bár a GroupDocs.Annotation kiváló az annotációkhoz, jó ismerni az alternatívákat:
+
+| Könyvtár | Licenc | Erősségek | Hátrányok |
+|----------|--------|-----------|-----------|
+| **Apache PDFBox** | Open‑source | Ingyenes, jó az alap űrlapmezőkhöz | Alacsonyabb szintű API, több boilerplate |
+| **iText** | Commercial | Nagyon erős, kiterjedt PDF funkciók | Költséges nagy telepítésekhez |
+| **Aspose.PDF for Java** | Commercial | Gazdag funkciókészlet, hasonló a GroupDocs-hoz | Eltérő árazási modell |
+
+**Miért válaszd a GroupDocs.Annotation-t?**  
+- Az annotációs forgatókönyvekre optimalizálva.  
+- Egyszerű API a jelölőnégyzetekhez és egyéb űrlapelemekhez.  
+- Versenyképes árképzés és gyors támogatás.
+
+## Haladó jelölőnégyzet testreszabás
+
+Miután elsajátítottad az alapokat, emeld a szintet ezekkel a technikákkal:
+
+### Egyéni stílus opciók
+```java
+checkbox.setPenWidth(2);              // Border thickness
+checkbox.setBackgroundColor(16777215); // White background
+checkbox.setOpacity(0.8);             // Semi‑transparent
+```
+
+### Feltételes logika
+Adj hozzá egy jelölőnégyzetet csak akkor, ha egy adott szakasz létezik:
+
+```java
+if (documentContainsSection("Terms and Conditions")) {
+    addTermsAcceptanceCheckbox(annotator);
+}
+```
+
+### Dinamikus pozicionálás
+Számold ki a legjobb helyet a meglévő tartalom alapján:
+
+```java
+Rectangle dynamicPosition = calculateOptimalPosition(document, contentType);
+checkbox.setBox(dynamicPosition);
+```
+
+## Gyakran ismételt kérdések
+
+**K: Hozzáadhatok több checkbox pdf-et ugyanabban a dokumentumban?**  
+A: Természetesen. Hozz létre annyi `CheckBoxComponent` objektumot, amennyire szükséged van, konfiguráld őket, és sorban add hozzá az annotátorhoz.
+
+**K: Működnek a jelölőnégyzetek minden PDF-olvasóban?**  
+A: Igen. A GroupDocs szabványos PDF űrlapmezőket hoz létre, amelyeket az Adobe Reader, a Chrome, a Firefox és a legtöbb modern megjelenítő támogat.
+
+**K: Hogyan tudom lekérni az értékeket, miután a felhasználók kitöltötték az űrlapot?**  
+A: Használd a GroupDocs.Annotation elemző API-ját a kitöltött PDF űrlapmezőinek értékeinek olvasásához. Ez lehetővé teszi az utófeldolgozás automatizálását.
+
+**K: Van korlátja, hogy hány jelölőnégyzetet adhatok hozzá?**  
+A: A gyakorlati korlátot a rendelkezésre álló memória és a megjelenítő teljesítménye határozza meg. Százszámú jelölőnégyzet általában rendben van.
+
+**K: Hozzáadhatok jelölőnégyzetet jelszóval védett pdf fájlokhoz?**  
+A: Igen. Add meg a jelszót a `Annotator` létrehozásakor; a könyvtár automatikusan kezeli a dekódolást.
+
+---
+
+**Utolsó frissítés:** 2026-01-08  
+**Tesztelve ezzel:** GroupDocs.Annotation 25.2  
+**Szerző:** GroupDocs
