@@ -1,41 +1,75 @@
 ---
-"date": "2025-05-06"
-"description": "Naučte se, jak efektivně ukládat rozsahy stránek dokumentů s anotacemi pomocí nástroje GroupDocs.Annotation pro Javu. Tento tutoriál se zabývá nastavením, implementací a praktickými aplikacemi."
-"title": "Uložení určitého rozsahu stránek pomocí GroupDocs.Annotation pro Javu – kompletní průvodce"
-"url": "/cs/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+categories:
+- Java Development
+date: '2026-01-10'
+description: Naučte se, jak v Javě použít try‑with‑resources k uložení konkrétních
+  stránek z anotovaných dokumentů pomocí GroupDocs.Annotation. Obsahuje příklad služby
+  dokumentů ve Spring Boot.
+keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
+  document annotation tutorial, selective PDF page saving Java, extract annotated
+  pages
+lastmod: '2026-01-10'
+linktitle: Save Specific Pages Java Annotation
+tags:
+- groupdocs
+- java-annotation
+- document-processing
+- pdf-manipulation
+title: Vyzkoušejte try‑with‑resources v Javě – Uložte konkrétní stránky z anotovaných
+  dokumentů
 type: docs
-"weight": 1
+url: /cs/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
+weight: 1
 ---
 
-# Uložit konkrétní rozsah stránek pomocí GroupDocs.Annotation pro Javu
+# Jak uložit konkrétní stránky z anotovaných dokumentů v Javě
 
-## Zavedení
+## Úvod
 
-Máte potíže s ukládáním pouze konkrétních stránek dokumentu po anotaci? Zjednodušte si pracovní postup využitím... **GroupDocs.Annotation pro Javu** ukládat anotované dokumenty na základě zadaných rozsahů stránek. Tato komplexní příručka vás provede celým procesem a zajistí efektivní správu dokumentů.
+Už jste se někdy topili v obrovských anotovaných dokumentech, když potřebujete jen několik konkrétních stránek? S **try with resources java** můžete efektivně extrahovat právě ty stránky, které potřebujete, pomocí GroupDocs.Annotation. Ať už pracujete s právními smlouvami, technickými manuály nebo výzkumnými pracemi, vytažení jen relevantních stránek šetří úložiště, zrychluje zpracování a udržuje váš pracovní postup přehledný.
 
-**Co se naučíte:**
-- Efektivní konfigurace cest k souborům.
-- Implementace ukládání specifických rozsahů stránek v aplikacích Java.
-- Principy konfiguračních možností GroupDocs.Annotation.
-- Prozkoumání reálných případů užití a možností integrace.
+V tomto průvodci projdeme vše, co potřebujete vědět – od nastavení knihovny až po pokročilé tipy na výkon, které udrží vaši Java aplikaci běžící hladce.
 
-Nejprve si probereme předpoklady potřebné k zahájení.
+**Co na konci zvládnete:**
+- Nastavení GroupDocs.Annotation ve vašem Java projektu (správným způsobem)
+- Implementace selektivního ukládání stránek s čistým, udržovatelným kódem
+- Vyhýbání se běžným úskalím, která zaskočí většinu vývojářů
+- Optimalizace výkonu při zpracování velkých dokumentů
+- Řešení problémů dříve, než se stanou bolestí hlavy
 
-## Předpoklady
+## Rychlé odpovědi
+- **Co dělá “try with resources java”?** Automaticky uzavře Annotator, čímž zabraňuje zamykání souborů a únikům paměti.  
+- **Která knihovna zajišťuje ukládání rozsahu stránek?** `GroupDocs.Annotation` poskytuje `SaveOptions` s metodami `setFirstPage`/`setLastPage`.  
+- **Mohu to použít ve Spring Boot službě?** Ano – viz sekce “Spring Boot Document Service Integration”.  
+- **Potřebuji licenci?** Bezplatná zkušební verze funguje pro vývoj; pro produkci je vyžadována plná licence.  
+- **Je to bezpečné pro velké PDF (1000+ stránek)?** Použijte načítání pouze anotovaných stránek a dávkové zpracování, aby byl paměťový odběr nízký.
 
-Před zahájením se ujistěte, že máte následující:
+## Proč ukládat konkrétní stránky? (Reálný kontext)
 
-- **Požadované knihovny**Do závislostí projektu zahrňte GroupDocs.Annotation pro Javu verze 25.2 nebo novější.
-- **Nastavení prostředí**Je nutné kompatibilní prostředí Java Development Kit (JDK).
-- **Předpoklady znalostí**Znalost programování v Javě a nastavení projektů v Mavenu bude výhodou.
+Než se pustíme do technických detailů, pojďme si říct, proč je tato funkce průlomová:
 
-## Nastavení GroupDocs.Annotation pro Javu
+**Úspora úložiště**: Manuál o 500 stránkách s anotacemi jen na 20 stránkách? Proč ukládat všech 500, když můžete extrahovat relevantních 20 a snížit velikost souboru o 96 %?
 
-Pro integraci GroupDocs.Annotation postupujte takto:
+**Rychlejší zpracování**: Menší soubory znamenají rychlejší nahrávání, stahování a zpracování. Vaši uživatelé (a servery) vám poděkují.
 
-### Nastavení Mavenu
+**Lepší uživatelská zkušenost**: Nikdo nechce procházet stovky stránek, aby našel anotované sekce. Dejte jim přesně to, co potřebují.
 
-Přidejte následující konfiguraci do svého `pom.xml` Chcete-li do projektu zahrnout GroupDocs.Annotation:
+**Soulad a bezpečnost**: V regulovaných odvětvích můžete mít povoleno sdílet jen konkrétní části dokumentů. Selektivní ukládání usnadňuje dodržování předpisů.
+
+## Požadavky a nastavení
+
+### Co budete potřebovat
+
+- **Java Development Kit (JDK)**: Verze 8 nebo vyšší (doporučeno JDK 11+)
+- **Maven nebo Gradle**: Pro správu závislostí
+- **GroupDocs.Annotation pro Java**: Verze 25.2 nebo novější
+- **Základní znalost Javy**: Porozumění souborovému I/O a OOP  
+
+### Nastavení GroupDocs.Annotation pro Java
+
+#### Maven Configuration
+
+Přidejte toto do vašeho `pom.xml` (věřte mi, kopírování a vložení je zde vaším přítelem):
 
 ```xml
 <repositories>
@@ -54,31 +88,39 @@ Přidejte následující konfiguraci do svého `pom.xml` Chcete-li do projektu z
 </dependencies>
 ```
 
+#### Gradle Setup (pokud jste tým Gradle)
+
+```gradle
+repositories {
+    maven {
+        url "https://releases.groupdocs.com/annotation/java/"
+    }
+}
+
+dependencies {
+    implementation 'com.groupdocs:groupdocs-annotation:25.2'
+}
+```
+
 ### Získání licence
 
-Použití GroupDocs.Annotation:
-- **Bezplatná zkušební verze**Stáhněte si zkušební verzi z [Webové stránky GroupDocs](https://releases.groupdocs.com/annotation/java/) otestovat funkce.
-- **Dočasná licence**Získejte dočasnou licenci prostřednictvím [tento odkaz](https://purchase.groupdocs.com/temporary-license/).
-- **Nákup**Pro plný přístup si zakupte licenci prostřednictvím [Nákup GroupDocs](https://purchase.groupdocs.com/buy).
+Zde je to, co většina tutoriálů neřekne: **začněte s bezplatnou zkušební verzí**. Opravdu. Není třeba to komplikovat.
 
-### Základní inicializace
+- **Bezplatná zkušební verze**: Ideální pro testování a vývoj – stáhněte ji z [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Dočasná licence**: Potřebujete více času na vyhodnocení? Získejte [dočasnou licenci](https://purchase.groupdocs.com/temporary-license/)  
+- **Plná licence**: Připraveno do produkce? [Koupit zde](https://purchase.groupdocs.com/buy)
 
-Inicializujte `Annotator` třídu a připravte prostředí vaší aplikace pro efektivní správu cest k souborům a konfiguraci možností ukládání.
+Tip: Zkušební verze má některá omezení, ale stačí k tomu, aby byl tento tutoriál proveditelný a můžete vytvořit proof of concept.
 
-## Průvodce implementací
+## Hlavní implementace: Ukládání konkrétních rozsahů stránek
 
-Zaměříme se na ukládání konkrétních rozsahů stránek a konfiguraci cest k souborům.
+### Základní přístup (Začněte zde)
 
-### Uložení konkrétního rozsahu stránek
+Začněme s nejjednodušší možnou implementací. To je to, co potřebuje 90 % případů použití:
 
-#### Přehled
-Ukládejte dokumenty pouze s anotovaným obsahem stránek, čímž snižujete velikost souboru a zvyšujete efektivitu. 
+#### Krok 1: Nastavení správy souborových cest
 
-#### Kroky k implementaci
-
-**1. Určení cesty k výstupnímu souboru**
-
-Dynamicky nastavte výstupní adresář pomocí zástupných symbolů:
+Nejprve vytvořte pomocnou třídu pro správu souborových cest (budete mi později vděční, když budete potřebovat změnit adresáře):
 
 ```java
 import org.apache.commons.io.FilenameUtils;
@@ -90,9 +132,11 @@ public class FilePathConfiguration {
 }
 ```
 
-**2. Anotace a uložení konkrétních stránek**
+**Proč tento přístup?** Udržuje logiku souborových cest centralizovanou a usnadňuje testování. Použití `FilenameUtils` automaticky zachová původní příponu souboru.
 
-Nakonfigurujte možnosti ukládání a určete rozsah stránek:
+#### Krok 2: Implementace ukládání rozsahu stránek
+
+Zde se děje kouzlo:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -104,8 +148,8 @@ public class SaveSpecificPageRange {
         
         try (final Annotator annotator = new Annotator(inputFile)) {
             SaveOptions saveOptions = new SaveOptions();
-            saveOptions.setFirstPage(2);  // Začněte od strany 2
-            saveOptions.setLastPage(4);   // Konec na straně 4
+            saveOptions.setFirstPage(2);  // Start from page 2
+            saveOptions.setLastPage(4);   // End at page 4
             
             annotator.save(outputPath, saveOptions);
         }
@@ -113,78 +157,355 @@ public class SaveSpecificPageRange {
 }
 ```
 
-- **Parametry**: `inputFile` je cesta k vašemu dokumentu. Rozsah je definován pomocí `setFirstPage()` a `setLastPage()`.
-- **Účel metody**Umožňuje selektivní ukládání anotovaného obsahu a optimalizuje tak úložiště.
+**Co se zde děje:**
+- Používáme blok **try‑with‑resources java** (`try ( … )`), takže `Annotator` je automaticky uzavřen, čímž se eliminuje problém se zamčením souboru.  
+- `setFirstPage(2)` a `setLastPage(4)` definují náš inkluzivní rozsah (stránky 2‑4).  
+- Rozsah je **inkluzivní** na obou koncích – detail, který mnohé vývojáře zmátne.
 
-**Tipy pro řešení problémů**
-- Ujistěte se, že jsou uvedeny správné cesty k souborům.
-- Zkontrolujte problémy s oprávněními v zadaných adresářích.
+### Pokročilá konfigurace souborových cest
 
-### Konfigurace cesty k souboru
-
-#### Přehled
-Správná konfigurace vstupních a výstupních cest je nezbytná pro zajištění bezproblémového zpracování dokumentů.
-
-#### Kroky k implementaci
-
-**1. Konfigurace cesty k vstupnímu souboru**
-
-Nastavte cestu ke vstupnímu adresáři pomocí utility:
+Pro produkční aplikace budete chtít flexibilnější správu cest:
 
 ```java
 public class FilePathConfiguration {
+    private final String baseOutputDirectory;
+    
+    public FilePathConfiguration(String baseOutputDirectory) {
+        this.baseOutputDirectory = baseOutputDirectory;
+    }
+    
     public String getInputFilePath(String filename) {
         return "YOUR_DOCUMENT_DIRECTORY/" + filename;
+    }
+    
+    public String getOutputFilePath(String inputFile, String suffix) {
+        String baseName = FilenameUtils.getBaseName(inputFile);
+        String extension = FilenameUtils.getExtension(inputFile);
+        return String.format("%s/%s_%s.%s", baseOutputDirectory, baseName, suffix, extension);
     }
 }
 ```
 
-**2. Konstrukce cesty k výstupnímu souboru**
+Nyní můžete automaticky generovat názvy jako `contract_pages_2-4.pdf`.
 
-Použijte podobnou logiku k dynamickému nastavení cesty k výstupnímu souboru, jak je znázorněno dříve.
+## Běžná úskalí a jak se jim vyhnout
 
-## Praktické aplikace
+### Úskalí #1: Záměna indexu stránky
 
-1. **Právní dokumenty**Právníci si mohou ukládat anotované právní podání pouze s relevantními stránkami.
-2. **Vzdělávací materiály**Učitelé mohou extrahovat a sdílet klíčové části učebnic.
-3. **Recenze projektů**Uložte si konkrétní zpětnou vazbu k projektovým dokumentům pro účely cílených revizí.
+**Problém**: Předpoklad, že čísla stránek začínají od 0 (v GroupDocs.Annotation ne).
 
-Tyto případy použití ukazují, jak může selektivní ukládání stránek zefektivnit pracovní postupy a omezit zbytečnou manipulaci s daty.
+**Řešení**: Číslování stránek začíná od 1, stejně jako v reálných dokumentech. Stránka 1 je první stránka, ne stránka 0.
 
-## Úvahy o výkonu
+```java
+// Wrong - this tries to start from page 0 (doesn't exist)
+saveOptions.setFirstPage(0);
 
-- **Optimalizace využití paměti**Využijte efektivní správu cest k souborům pro minimalizaci paměťové náročnosti.
-- **Nejlepší postupy**Pravidelně aktualizujte GroupDocs.Annotation, abyste mohli využívat vylepšení výkonu a opravy chyb.
+// Right - this starts from the actual first page
+saveOptions.setFirstPage(1);
+```
 
-## Závěr
+### Úskalí #2: Úniky zdrojů
 
-V této příručce jsme prozkoumali, jak implementovat specifickou funkci ukládání rozsahu stránek pomocí GroupDocs.Annotation pro Javu. Tato funkce zvyšuje efektivitu práce s dokumenty tím, že se zaměřuje pouze na nezbytný obsah. 
+**Problém**: Zapomenutí správně uzavřít Annotator, což vede k zamykání souborů a únikům paměti.
 
-**Další kroky:**
-- Experimentujte s různými možnostmi ukládání.
-- Prozkoumejte další možnosti integrace ve vašich systémech.
+**Řešení**: Vždy používejte **try‑with‑resources java** nebo explicitní uzavření:
 
-Jste připraveni to vyzkoušet? Implementujte toto řešení ve svém projektu a zažijte efektivnější správu dokumentů!
+```java
+// Good - automatic resource management
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // your code here
+} // automatically closes
 
-## Sekce Často kladených otázek
+// Also acceptable - manual closing
+Annotator annotator = null;
+try {
+    annotator = new Annotator(inputFile);
+    // your code here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
 
-1. **Co je GroupDocs.Annotation pro Javu?**
-   - Výkonná knihovna, která umožňuje programově anotovat a manipulovat s dokumenty.
-2. **Jak nainstaluji GroupDocs.Annotation pomocí Mavenu?**
-   - Přidejte konfigurace repozitáře a závislostí do svého `pom.xml`.
-3. **Mohu pomocí této funkce anotovat PDF soubory?**
-   - Ano, GroupDocs podporuje více formátů souborů včetně PDF.
-4. **Co když potřebuji dočasný řidičský průkaz?**
-   - Požádejte o dočasnou licenci prostřednictvím [Webové stránky GroupDocs](https://purchase.groupdocs.com/temporary-license/).
-5. **Kde najdu podrobnější reference API?**
-   - Navštivte [Referenční informace k API](https://reference.groupdocs.com/annotation/java/) pro komplexní dokumentaci.
+### Úskalí #3: Neplatné rozsahy stránek
+
+**Problém**: Zadání rozsahů stránek, které v dokumentu neexistují.
+
+**Řešení**: Nejprve ověřte své rozsahy:
+
+```java
+public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
+    try (final Annotator annotator = new Annotator(inputFile)) {
+        // Get document info to check page count
+        DocumentInfo documentInfo = annotator.getDocument().getDocumentInfo();
+        int totalPages = documentInfo.getPageCount();
+        
+        // Validate range
+        if (firstPage < 1 || firstPage > totalPages) {
+            throw new IllegalArgumentException("First page out of range: " + firstPage);
+        }
+        if (lastPage < firstPage || lastPage > totalPages) {
+            throw new IllegalArgumentException("Last page out of range: " + lastPage);
+        }
+        
+        SaveOptions saveOptions = new SaveOptions();
+        saveOptions.setFirstPage(firstPage);
+        saveOptions.setLastPage(lastPage);
+        
+        String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
+        annotator.save(outputPath, saveOptions);
+    }
+}
+```
+
+## Tipy na optimalizaci výkonu
+
+### Správa paměti pro velké dokumenty
+
+Při práci s velkými dokumenty (100 + stránek) je důležitá spotřeba paměti:
+
+```java
+public class OptimizedPageRangeSaver {
+    public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
+        // Configure for lower memory usage
+        LoadOptions loadOptions = new LoadOptions();
+        loadOptions.setLoadOnlyAnnotatedPages(true); // Only load pages with annotations
+        
+        try (final Annotator annotator = new Annotator(inputFile, loadOptions)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(firstPage);
+            saveOptions.setLastPage(lastPage);
+            
+            // Optional: Enable compression for smaller output files
+            saveOptions.setAnnotationsOnly(false); // Set to true if you only want annotations
+            
+            String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
+            annotator.save(outputPath, saveOptions);
+        }
+    }
+}
+```
+
+**Klíčové optimalizační strategie**
+- `setLoadOnlyAnnotatedPages(true)` snižuje paměťovou stopu.  
+- `setAnnotationsOnly(true)` vytvoří lehký soubor, který obsahuje jen vrstvu anotací.  
+- Zpracovávejte dokumenty po dávkách, pokud máte mnoho souborů.
+
+### Dávkové zpracování více dokumentů
+
+Pro produkční scénáře, kde zpracováváte mnoho dokumentů:
+
+```java
+public class BatchPageRangeSaver {
+    public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
+        for (String inputFile : inputFiles) {
+            try {
+                savePageRangeWithValidation(inputFile, firstPage, lastPage);
+                System.out.println("Successfully processed: " + inputFile);
+            } catch (Exception e) {
+                System.err.println("Failed to process " + inputFile + ": " + e.getMessage());
+                // Log the error and continue with next file
+            }
+        }
+    }
+}
+```
+
+## Integrace s populárními frameworky
+
+### Spring Boot Document Service Integration
+
+Zde je jednoduchá Spring Boot služba pro ukládání rozsahu stránek (všimněte si formulace **spring boot document service**):
+
+```java
+@Service
+public class DocumentPageRangeService {
+    
+    @Value("${app.document.output-directory}")
+    private String outputDirectory;
+    
+    public String savePageRange(String inputFile, int firstPage, int lastPage) {
+        try (final Annotator annotator = new Annotator(inputFile)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(firstPage);
+            saveOptions.setLastPage(lastPage);
+            
+            String outputPath = generateOutputPath(inputFile, firstPage, lastPage);
+            annotator.save(outputPath, saveOptions);
+            
+            return outputPath;
+        } catch (Exception e) {
+            throw new DocumentProcessingException("Failed to save page range", e);
+        }
+    }
+    
+    private String generateOutputPath(String inputFile, int firstPage, int lastPage) {
+        String baseName = FilenameUtils.getBaseName(inputFile);
+        String extension = FilenameUtils.getExtension(inputFile);
+        return String.format("%s/%s_pages_%d-%d.%s", 
+                            outputDirectory, baseName, firstPage, lastPage, extension);
+    }
+}
+```
+
+## Praktické aplikace a příklady použití
+
+### Právnické zpracování dokumentů
+
+Právnické firmy často potřebují extrahovat konkrétní sekce smluv nebo soudních dokumentů:
+
+```java
+public class LegalDocumentProcessor {
+    public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
+        // Group consecutive pages for efficient processing
+        List<PageRange> ranges = groupConsecutivePages(evidencePages);
+        
+        for (PageRange range : ranges) {
+            String outputFile = String.format("evidence_%d_%d-to-%d.pdf", 
+                                            getCaseNumber(caseFile), range.start, range.end);
+            savePageRange(caseFile, range.start, range.end, outputFile);
+        }
+    }
+}
+```
+
+### Správa vzdělávacího obsahu
+
+Učitelé extrahují konkrétní kapitoly z učebnic pro úkoly studentů:
+
+```java
+public class EducationalContentExtractor {
+    public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
+        try (final Annotator annotator = new Annotator(textbook)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(chapterStart);
+            saveOptions.setLastPage(chapterEnd);
+            
+            String assignmentFile = generateAssignmentFileName(textbook, chapterStart, chapterEnd);
+            annotator.save(assignmentFile, saveOptions);
+        }
+    }
+}
+```
+
+### Revize kvality
+
+Extrahování jen stránek s komentáři revize pro cílenou úpravu:
+
+```java
+public class QAReviewExtractor {
+    public void extractReviewedPages(String document) {
+        try (final Annotator annotator = new Annotator(document)) {
+            // Get pages with annotations
+            List<Integer> annotatedPages = getAnnotatedPageNumbers(annotator);
+            
+            if (!annotatedPages.isEmpty()) {
+                int firstPage = Collections.min(annotatedPages);
+                int lastPage = Collections.max(annotatedPages);
+                
+                SaveOptions saveOptions = new SaveOptions();
+                saveOptions.setFirstPage(firstPage);
+                saveOptions.setLastPage(lastPage);
+                
+                String reviewFile = document.replace(".pdf", "_review_comments.pdf");
+                annotator.save(reviewFile, saveOptions);
+            }
+        }
+    }
+}
+```
+
+## Shrnutí nejlepších postupů
+
+1. **Vždy ověřujte vstupní parametry** – zkontrolujte rozsahy stránek před zpracováním.  
+2. **Používejte try‑with‑resources java** – zabraňuje únikům zdrojů a problémům se zamykáním souborů.  
+3. **Implementujte správnou manipulaci s chybami** – nenechte jeden špatný soubor zhroucení celé dávky.  
+4. **Zvažte využití paměti** – použijte `setLoadOnlyAnnotatedPages(true)` pro velké dokumenty.  
+5. **Testujte s různými typy souborů** – PDF, Word, PowerPoint se mohou chovat odlišně.  
+6. **Sledujte výkon** – mějte přehled o časech zpracování a paměti v produkci.
+
+## Řešení běžných problémů
+
+### Problém: Chyba „File is locked“
+
+**Příznaky**: Výjimka při pokusu o uložení, která zmiňuje zamčení souboru.  
+
+**Příčiny**:  
+- Annotator nebyl řádně uzavřen z předchozí operace.  
+- Soubor je stále otevřen v jiné aplikaci.  
+- Nedostatečná oprávnění.  
+
+**Řešení**:
+
+```java
+// Ensure proper cleanup
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // ... your code ...
+} // Automatically releases file handles
+
+// Verify file accessibility before processing
+File file = new File(inputFile);
+if (!file.canRead()) {
+    throw new IllegalArgumentException("Cannot read input file: " + inputFile);
+}
+if (!file.getParentFile().canWrite()) {
+    throw new IllegalArgumentException("Cannot write to output directory");
+}
+```
+
+### Problém: Nedostatek paměti (Out of Memory)
+
+**Příznaky**: `OutOfMemoryError` při zpracování velkých dokumentů.  
+
+**Řešení**:  
+1. Zvyšte velikost haldy JVM, např. `-Xmx2g`.  
+2. Použijte optimalizované načítací možnosti uvedené výše.  
+3. Zpracovávejte dokumenty v menších dávkách.
+
+### Problém: Anotace nejsou zachovány
+
+**Příznaky**: Výstupní soubor neobsahuje původní anotace.  
+
+**Řešení**: Ujistěte se, že anotace neodstraňujete:
+
+```java
+SaveOptions saveOptions = new SaveOptions();
+saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
+saveOptions.setFirstPage(firstPage);
+saveOptions.setLastPage(lastPage);
+```
+
+## Často kladené otázky
+
+**Q: Mohu uložit nesouvislé stránky (např. 1, 3, 7)?**  
+A: Ne přímo jednou operací. Musíte spustit samostatné ukládání pro každý rozsah nebo výsledky po dokončení sloučit.
+
+**Q: Funguje to s dokumenty chráněnými heslem?**  
+A: Ano, ale musíte při vytváření `Annotator` zadat heslo: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+
+**Q: Jaké formáty souborů jsou podporovány?**  
+A: PDF, Microsoft Word, Excel, PowerPoint a mnoho dalších. Podívejte se na [oficiální dokumentaci](https://docs.groupdocs.com/annotation/java/) pro kompletní seznam.
+
+**Q: Můžu uložit jen anotace bez původního obsahu?**  
+A: Rozhodně – nastavte `saveOptions.setAnnotationsOnly(true)` a vytvoříte soubor jen s anotacemi.
+
+**Q: Jak zacházet s velmi velkými dokumenty (1000+ stránek)?**  
+A: Použijte `setLoadOnlyAnnotatedPages(true)`, zpracovávejte po částech a zvažte zvýšení haldy JVM.
+
+**Q: Existuje způsob, jak si před uložením prohlédnout stránky?**  
+A: GroupDocs.Annotation se zaměřuje na zpracování, ne na prohlížení, ale můžete získat informace o dokumentu (počet stránek, umístění anotací), které vám pomohou rozhodnout, které rozsahy extrahovat.
 
 ## Zdroje
 
-- **Dokumentace**Prozkoumejte podrobné průvodce na [Dokumentace GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- **Referenční informace k API**: Podrobné technické zdroje naleznete na adrese [Referenční informace k API](https://reference.groupdocs.com/annotation/java/)
-- **Stáhnout**Získejte nejnovější vydání od [zde](https://releases.groupdocs.com/annotation/java/)
-- **Nákup**Kupte si licenci prostřednictvím [Nákup GroupDocs](https://purchase.groupdocs.com/buy)
-- **Bezplatná zkušební verze**: Vyzkoušejte funkce prostřednictvím [odkaz na bezplatnou zkušební verzi](https://releases.groupdocs.com/annotation/java/)
-- **Dočasná licence**Požádejte o dočasnou licenci na adrese [tato stránka](https://purchase.groupdocs.com/temporary-license/)
-- **Podpora**Zapojte se do diskusí a získejte pomoc [Fórum GroupDocs](https://forum.groupdocs.com/c/annotation/)
+- **Documentation**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- **Download**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- **Purchase**: [License Options](https://purchase.groupdocs.com/buy)  
+- **Free Trial**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary License**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- **Support**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+
+**Poslední aktualizace:** 2026-01-10  
+**Testováno s:** GroupDocs.Annotation 25.2 (Java)  
+**Autor:** GroupDocs
