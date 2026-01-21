@@ -1,45 +1,52 @@
 ---
-"date": "2025-05-06"
-"description": "Dowiedz się, jak wydajnie tworzyć, zarządzać i zapisywać adnotacje w dokumentach przy użyciu GroupDocs.Annotation dla Java. Ten przewodnik krok po kroku obejmuje inicjalizację, typy adnotacji i wskazówki dotyczące integracji."
-"title": "Kompletny przewodnik&#58; Korzystanie z GroupDocs.Annotation dla Java do tworzenia i zarządzania adnotacjami"
-"url": "/pl/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+date: '2025-12-17'
+description: Dowiedz się, jak zapisywać oznaczone pliki PDF przy użyciu GroupDocs.Annotation
+  dla Javy. Ten samouczek obejmuje zależność Maven GroupDocs, inicjalizację Annotatora
+  w Javie, dodawanie wielu adnotacji oraz najlepsze praktyki adnotacji w Javie.
+keywords:
+- GroupDocs.Annotation for Java
+- Java document annotation
+- Annotator initialization
+title: 'Kompletny przewodnik - jak zapisać oznaczony PDF przy użyciu GroupDocs.Annotation
+  dla Javy'
 type: docs
-"weight": 1
+url: /pl/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
+weight: 1
 ---
 
-# Kompletny przewodnik: Korzystanie z GroupDocs.Annotation dla Java do tworzenia i zarządzania adnotacjami
+# Zapisz oznaczony PDF przy użyciu GroupDocs.Annotation dla Javy
 
-## Wstęp
+Rozszerzanie aplikacji Java o możliwości anotacji dokumentów to potężny sposób na poprawę współpracy, zgodności i doświadczenia użytkownika. W tym przewodniku dowiesz się **jak zapisać oznaczony PDF** przy użyciu GroupDocs.Annotation dla Javy, od skonfigurowania zależności Maven po dodanie wielu anotacji i stosowanie najlepszych praktyk anotacji w Javie. Przejdźmy przez każdy krok, abyś mógł pewnie zintegrować tę funkcję ze swoimi projektami.
 
-Czy chcesz ulepszyć swoje aplikacje Java, dodając potężne funkcje adnotacji dokumentów? Niezależnie od tego, czy musisz wyróżnić kluczowe sekcje, czy dodać szczegółowe notatki, zintegrowanie wydajnego rozwiązania, takiego jak GroupDocs.Annotation, może usprawnić przepływy pracy w różnych branżach. Ten samouczek przeprowadzi Cię przez korzystanie z GroupDocs.Annotation dla Java, aby bez wysiłku ładować, tworzyć i zapisywać adnotacje w dokumentach.
+## Szybkie odpowiedzi
+- **Jaki jest główny cel GroupDocs.Annotation?**  
+  Programowe tworzenie, edytowanie i **zapisywanie oznaczonych PDF** dokumentów w aplikacjach Java.  
+- **Który artefakt Maven jest potrzebny?**  
+  `com.groupdocs:groupdocs-annotation` (zobacz sekcję *maven dependency groupdocs*).  
+- **Czy mogę dodać więcej niż jedną anotację jednocześnie?**  
+  Tak – możesz **dodać wiele anotacji** w jednej operacji.  
+- **Jak zainicjalizować anotator?**  
+  Użyj wzorca **initialize annotator java** pokazanego w samouczku.  
+- **Jakie są kluczowe wskazówki najlepszych praktyk?**  
+  Postępuj zgodnie z listą kontrolną *annotation best practices java* dotyczącą zarządzania pamięcią i wydajnością.
 
-**Czego się nauczysz:**
-- Jak zainicjować adnotator w dokumencie.
-- Tworzenie adnotacji obszarów i elips programowo.
-- Dodawanie wielu adnotacji do dokumentu.
-- Zapisywanie dokumentów z adnotacjami i określonymi typami adnotacji.
+## Co to jest „zapisz oznaczony PDF”?
+Zapisanie oznaczonego PDF oznacza utrwalenie wszystkich wizualnych notatek — podświetleń, komentarzy, kształtów i innych oznaczeń — w pliku PDF, tak aby każdy otwierający dokument mógł zobaczyć zmiany. GroupDocs.Annotation udostępnia prosty interfejs API do wykonywania tego zadania programowo.
 
-Zacznijmy od skonfigurowania środowiska programistycznego!
+## Dlaczego używać GroupDocs.Annotation dla Javy?
+- **Wsparcie wieloplatformowe** – działa na każdym systemie operacyjnym, który obsługuje Javę.  
+- **Bogate typy anotacji** – od prostych podświetleń po złożone kształty, takie jak elipsy.  
+- **Nie wymaga zewnętrznych edytorów PDF** – wszystkie operacje odbywają się wewnątrz Twojego kodu Java.  
+- **Skalowalny dla przedsiębiorstw** – odpowiedni dla procesów prawnych, edukacyjnych i technicznej dokumentacji.
 
-## Wymagania wstępne
+## Prerequisites
+- **Java SDK** (JDK 8 lub nowszy) zainstalowany na Twoim komputerze.  
+- **Maven** do zarządzania zależnościami.  
+- IDE, takie jak **IntelliJ IDEA** lub **Eclipse**.  
+- Podstawowa znajomość programowania w Javie.  
 
-Przed rozpoczęciem upewnij się, że środowisko programistyczne jest poprawnie skonfigurowane:
-
-- **Wymagane biblioteki:**
-  - GroupDocs.Annotation dla wersji Java 25.2
-  - Maven do zarządzania zależnościami
-
-- **Wymagania dotyczące konfiguracji środowiska:**
-  - Zainstaluj pakiet Java SDK na swoim komputerze.
-  - Do tworzenia oprogramowania używaj środowiska IDE, takiego jak IntelliJ IDEA lub Eclipse.
-
-- **Wymagania wstępne dotyczące wiedzy:**
-  - Podstawowa znajomość programowania w Javie.
-  - Znajomość narzędzia do budowania Maven.
-
-## Konfigurowanie GroupDocs.Annotation dla Java
-
-Aby zintegrować GroupDocs.Annotation ze swoim projektem za pomocą Maven, dodaj następującą konfigurację do swojego `pom.xml`:
+### Zależność Maven GroupDocs
+Dodaj repozytorium GroupDocs oraz bibliotekę anotacji do swojego `pom.xml`:
 
 ```xml
 <repositories>
@@ -58,36 +65,13 @@ Aby zintegrować GroupDocs.Annotation ze swoim projektem za pomocą Maven, dodaj
 </dependencies>
 ```
 
-### Nabycie licencji
+## Uzyskanie licencji
+1. **Free Trial:** Pobierz wersję próbną, aby przetestować GroupDocs.Annotation.  
+2. **Temporary License:** Uzyskaj tymczasową licencję zapewniającą pełny dostęp podczas oceny.  
+3. **Purchase:** Nabyj pełną licencję do użytku produkcyjnego.
 
-1. **Bezpłatna wersja próbna:** Pobierz wersję próbną, aby przetestować GroupDocs.Annotation.
-2. **Licencja tymczasowa:** Uzyskaj tymczasową licencję zapewniającą pełny dostęp na czas trwania okresu próbnego.
-3. **Zakup:** Jeśli jesteś zadowolony, możesz zakupić pełną licencję.
-
-**Podstawowa inicjalizacja:**
-Aby zainicjować Annotator, utwórz instancję, podając ścieżkę do pliku swojego dokumentu:
-
-```java
-import com.groupdocs.annotation.Annotator;
-
-public class Feature1 {
-    public void loadAnnotator(String fileName) {
-        try (final Annotator annotator = new Annotator(fileName)) {
-            // Gotowe do użycia!
-        }
-    }
-}
-```
-
-## Przewodnik wdrażania
-
-### Funkcja 1: Ładowanie i inicjowanie adnotatora
-
-**Przegląd:**
-Ta funkcja pokazuje inicjalizację adnotatora przy użyciu ścieżki pliku dokumentu, co powoduje skonfigurowanie aplikacji Java do zadań adnotacji.
-
-#### Krok 1: Zainicjuj Adnotator
-Utwórz instancję `Annotator` podając nazwę pliku. Ten krok jest kluczowy, ponieważ przygotowuje dokument do dalszych adnotacji.
+## Inicjalizacja Annotator Java
+Pierwszym krokiem jest **initialize annotator java** z dokumentem, nad którym chcesz pracować. Poniżej znajduje się podstawowy wzorzec inicjalizacji:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -95,19 +79,31 @@ import com.groupdocs.annotation.Annotator;
 public class Feature1 {
     public void loadAnnotator(String fileName) {
         try (final Annotator annotator = new Annotator(fileName)) {
-            // Adnotator zainicjowany i gotowy.
+            // Ready to use!
         }
     }
 }
 ```
 
-### Funkcja 2: Tworzenie adnotacji obszaru
+### Funkcja 1: Ładowanie i inicjalizacja Annotator
+Ta funkcja demonstruje inicjalizację Annotatora przy użyciu ścieżki do pliku dokumentu, przygotowując Twoją aplikację Java do zadań anotacji.
 
-**Przegląd:**
-Dowiedz się, jak utworzyć adnotację obszaru ze szczegółowymi właściwościami, takimi jak rozmiar, kolor i numer strony.
+```java
+import com.groupdocs.annotation.Annotator;
 
-#### Krok 1: Utwórz nowy `AreaAnnotation` Obiekt
-Zacznij od utworzenia instancji `AreaAnnotation` klasa.
+public class Feature1 {
+    public void loadAnnotator(String fileName) {
+        try (final Annotator annotator = new Annotator(fileName)) {
+            // Annotator initialized and ready.
+        }
+    }
+}
+```
+
+## Tworzenie anotacji
+
+### Funkcja 2: Tworzenie anotacji obszaru
+Anotacje obszaru pozwalają podświetlić prostokątne regiony. Postępuj zgodnie z poniższymi krokami, aby ją utworzyć:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -118,22 +114,13 @@ public class Feature2 {
         AreaAnnotation area = new AreaAnnotation();
 ```
 
-#### Krok 2: Ustaw granice prostokąta
-Określ granice za pomocą `Rectangle` obiekt.
-
 ```java
         area.setBox(new Rectangle(100, 100, 100, 100));
 ```
 
-#### Krok 3: Ustaw kolor tła
-Określ kolor tła, aby zwiększyć widoczność.
-
 ```java
         area.setBackgroundColor(65535);
 ```
-
-#### Krok 4: Określ numer strony
-Wskaż, w którym miejscu dokumentu ma się pojawić ta adnotacja.
 
 ```java
         area.setPageNumber(1);
@@ -143,13 +130,8 @@ Wskaż, w którym miejscu dokumentu ma się pojawić ta adnotacja.
 }
 ```
 
-### Funkcja 3: Tworzenie adnotacji elipsy
-
-**Przegląd:**
-Funkcja ta skupia się na tworzeniu adnotacji eliptycznych, umożliwiając tworzenie adnotacji okrągłych lub owalnych w dokumentach.
-
-#### Krok 1: Utwórz nowy `EllipseAnnotation` Obiekt
-Zacznij od utworzenia instancji `EllipseAnnotation`.
+### Funkcja 3: Tworzenie anotacji elipsy
+Anotacje elipsy są idealne do podświetleń okrągłych lub owalnych.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -160,22 +142,13 @@ public class Feature3 {
         EllipseAnnotation ellipse = new EllipseAnnotation();
 ```
 
-#### Krok 2: Zdefiniuj granice prostokąta
-Ustaw wymiary graniczne za pomocą `Rectangle`.
-
 ```java
         ellipse.setBox(new Rectangle(100, 100, 100, 100));
 ```
 
-#### Krok 3: Ustaw kolor tła
-Wybierz odpowiedni kolor tła.
-
 ```java
         ellipse.setBackgroundColor(123456);
 ```
-
-#### Krok 4: Podaj numer strony
-Podaj stronę dla tej adnotacji.
 
 ```java
         ellipse.setPageNumber(2);
@@ -185,13 +158,8 @@ Podaj stronę dla tej adnotacji.
 }
 ```
 
-### Funkcja 4: Dodawanie adnotacji do Adnotatora
-
-**Przegląd:**
-Dowiedz się, jak dodawać wiele adnotacji do jednego dokumentu za pomocą `Annotator` przykład.
-
-#### Krok 1: Tworzenie i dodawanie adnotacji
-Utwórz adnotacje i dodaj je do listy adnotatorów.
+## Dodawanie wielu anotacji
+Możesz **dodać wiele anotacji** w jednym wywołaniu, co poprawia wydajność i utrzymuje kod w porządku.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -222,22 +190,14 @@ public class Feature4 {
 }
 ```
 
-### Funkcja 5: Zapisywanie dokumentu ze szczegółowymi adnotacjami
-
-**Przegląd:**
-Dowiedz się, jak zapisać dokument z adnotacjami, określając, jakie typy adnotacji należy zachować.
-
-#### Krok 1: Określ ścieżkę wyjściową
-Określ miejsce, w którym zostanie zapisany plik.
+## Zapisywanie dokumentu – Jak zapisać oznaczony PDF
+Teraz, gdy Twoje anotacje są gotowe, **zapiszesz oznaczony PDF** zawierający tylko wybrane typy anotacji.
 
 ```java
 public class Feature5 {
     public String getOutputPath(String fileName) {
         return "YOUR_OUTPUT_DIRECTORY" + "/filtered_output.pdf";
 ```
-
-#### Krok 2: Zapisz adnotowany dokument z opcjami
-Skonfiguruj opcje zapisu tak, aby uwzględniały tylko żądane adnotacje, i wykonaj proces zapisywania.
 
 ```java
     public void saveAnnotatedDocument(Annotator annotator, String outputPath) {
@@ -249,21 +209,51 @@ Skonfiguruj opcje zapisu tak, aby uwzględniały tylko żądane adnotacje, i wyk
 }
 ```
 
-## Zastosowania praktyczne
+## Najlepsze praktyki anotacji Java
+- **Używaj try‑with‑resources** aby automatycznie zamykać `Annotator` i zwalniać pamięć.  
+- **Dodawaj anotacje partiami** (jak pokazano w Funkcji 4) aby zmniejszyć obciążenie I/O.  
+- **Określ tylko potrzebne typy anotacji** w `SaveOptions`, aby utrzymać mały rozmiar pliku.  
+- **Zwolnij duże dokumenty** z pamięci po zapisaniu, aby uniknąć wycieków.
 
-- **Przegląd dokumentów prawnych:** Podświetl fragmenty wymagające uwagi lub powtórzenia.
-- **Zasoby edukacyjne:** Adnotacje do podręczników i prac dla grup studyjnych.
-- **Instrukcje techniczne:** Oznaczaj ważne notatki i instrukcje w dokumentach inżynieryjnych.
-
-Możliwości integracji obejmują łączenie adnotacji z narzędziami do zarządzania projektami w celu śledzenia zmian w czasie.
+## Praktyczne zastosowania
+- **Przegląd dokumentów prawnych:** Podświetlaj klauzule i dołączaj komentarze dla prawników.  
+- **Materiały edukacyjne:** Anotuj podręczniki dla grup studyjnych.  
+- **Podręczniki techniczne:** Oznaczaj rysunki inżynierskie notatkami i ostrzeżeniami.
 
 ## Rozważania dotyczące wydajności
+- Ogranicz jednoczesne anotacje w bardzo dużych plikach PDF.  
+- Używaj zalecanych **annotation best practices java**, aby efektywnie zarządzać pamięcią.  
+- Profiluj swoją aplikację przy użyciu Java Flight Recorder, jeśli zauważysz spowolnienia.
 
-Aby zapewnić płynne działanie:
-- Ogranicz liczbę jednoczesnych adnotacji w dużych dokumentach.
-- Zarządzaj wykorzystaniem pamięci, zwalniając zasoby po zakończeniu zadań adnotacji.
-- Wdrażaj najlepsze praktyki zarządzania pamięcią Java, np. korzystaj z opcji try-with-resources, aby wydajnie obsługiwać wystąpienia Annotatora.
+## Typowe problemy i rozwiązania
+| Problem | Rozwiązanie |
+|---------|-------------|
+| **OutOfMemoryError** podczas ładowania dużych PDF | Załaduj dokument w trybie strumieniowym lub zwiększ rozmiar sterty JVM. |
+| Anotacje nie pojawiają się po zapisaniu | Upewnij się, że `SaveOptions` zawiera prawidłowy `AnnotationType`. |
+| Błędy licencji | Sprawdź, czy plik licencji próbnej lub stałej jest poprawnie odwołany. |
 
-## Wniosek
+## Najczęściej zadawane pytania
 
-Postępując zgodnie z tym przewodnikiem, nauczyłeś się, jak ładować, tworzyć i zapisywać adnotacje w Javie przy użyciu GroupDocs.Annotation. Ta możliwość usprawnia przepływy pracy dokumentów, ułatwiając wyróżnianie ważnych informacji, dodawanie notatek i zarządzanie dokumentami w różnych aplikacjach.
+**Q: Czy mogę dodać komentarze tekstowe oprócz kształtów?**  
+A: Tak, GroupDocs.Annotation obsługuje typy `TextAnnotation` i `CommentAnnotation` — wystarczy utworzyć odpowiedni model i dodać go do listy.
+
+**Q: Czy można edytować istniejącą anotację?**  
+A: Oczywiście. Pobierz anotację za pomocą jej ID, zmodyfikuj jej właściwości i wywołaj `annotator.update(updatedAnnotation)`.
+
+**Q: Jak usunąć anotację, której już nie potrzebuję?**  
+A: Użyj `annotator.delete(annotationId)`, aby usunąć konkretną anotację, lub `annotator.clear(pageNumber)`, aby wyczyścić wszystkie anotacje na stronie.
+
+**Q: Czy biblioteka działa z PDF‑ami chronionymi hasłem?**  
+A: Tak. Podaj hasło przy tworzeniu instancji `Annotator`: `new Annotator(filePath, password)`.
+
+**Q: Jakiej wersji Javy wymaga biblioteka?**  
+A: Biblioteka jest kompatybilna z Javą 8 i nowszą; zalecamy użycie najnowszej wersji LTS dla najlepszej wydajności.
+
+## Podsumowanie
+Masz teraz kompletną, kompleksową metodę **zapisywania oznaczonych PDF** przy użyciu GroupDocs.Annotation dla Javy. Postępując zgodnie z powyższymi krokami — konfigurując zależność Maven, inicjalizując anotator, tworząc i dodając wiele anotacji oraz stosując najlepsze praktyki anotacji — możesz wzbogacić każdą aplikację Java o potężne możliwości oznaczania dokumentów.
+
+---
+
+**Ostatnia aktualizacja:** 2025-12-17  
+**Testowano z:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs

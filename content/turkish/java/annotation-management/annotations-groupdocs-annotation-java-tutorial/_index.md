@@ -1,45 +1,52 @@
 ---
-"date": "2025-05-06"
-"description": "GroupDocs.Annotation for Java kullanarak belgelerde açıklamaları etkili bir şekilde nasıl oluşturacağınızı, yöneteceğinizi ve kaydedeceğinizi öğrenin. Bu adım adım kılavuz, başlatma, açıklama türleri ve bütünleştirme ipuçlarını kapsar."
-"title": "Tam Kılavuz&#58; Java'da Açıklamaları Oluşturmak ve Yönetmek için GroupDocs.Annotation'ı Kullanma"
-"url": "/tr/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+date: '2025-12-17'
+description: GroupDocs.Annotation for Java kullanarak anotasyonlu PDF dosyalarını
+  nasıl kaydedeceğinizi öğrenin. Bu öğreticide Maven bağımlılığı GroupDocs, Annotator
+  Java’nın başlatılması, birden fazla anotasyon eklenmesi ve Java anotasyon en iyi
+  uygulamaları ele alınmaktadır.
+keywords:
+- GroupDocs.Annotation for Java
+- Java document annotation
+- Annotator initialization
+title: 'Tam Kılavuz - GroupDocs.Annotation for Java ile Açıklamalı PDF Nasıl Kaydedilir'
 type: docs
-"weight": 1
+url: /tr/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
+weight: 1
 ---
 
-# Tam Kılavuz: Java için GroupDocs.Annotation'ı Açıklamaları Oluşturmak ve Yönetmek İçin Kullanma
+# Java için GroupDocs.Annotation ile Anotasyonlu PDF Kaydetme
 
-## giriiş
+Java uygulamalarını belge anotasyonu yetenekleriyle geliştirmek, iş birliğini, uyumluluğu ve kullanıcı deneyimini artırmanın güçlü bir yoludur. Bu rehberde GroupDocs.Annotation for Java kullanarak **anotasyonlu PDF** dosyalarını nasıl kaydedeceğinizi öğreneceksiniz; Maven bağımlılığını kurmaktan birden fazla anotasyon eklemeye ve Java için anotasyon en iyi uygulamalarını takip etmeye kadar. Her adımı birlikte inceleyelim, böylece bu özelliği projelerinize güvenle entegre edebilirsiniz.
 
-Güçlü belge açıklama özellikleri ekleyerek Java uygulamalarınızı geliştirmek mi istiyorsunuz? İster önemli bölümleri vurgulamanız, ister ayrıntılı notlar eklemeniz gereksin, GroupDocs.Annotation gibi verimli bir çözümü entegre etmek çeşitli sektörlerdeki iş akışlarını kolaylaştırabilir. Bu eğitim, GroupDocs.Annotation for Java'yı kullanarak belgelerdeki açıklamaları zahmetsizce yüklemenize, oluşturmanıza ve kaydetmenize rehberlik edecektir.
+## Hızlı Yanıtlar
+- **GroupDocs.Annotation'ın temel amacı nedir?**  
+  Java uygulamalarında programlı olarak oluşturmak, düzenlemek ve **anotasyonlu PDF** belgelerini kaydetmek.  
+- **Hangi Maven artefaktına ihtiyacım var?**  
+  `com.groupdocs:groupdocs-annotation` (*maven dependency groupdocs* bölümüne bakın).  
+- **Aynı anda birden fazla anotasyon ekleyebilir miyim?**  
+  Evet – tek bir işlemde **birden fazla anotasyon ekleyebilirsiniz**.  
+- **Annotator'ı nasıl başlatırım?**  
+  Dersde gösterilen **initialize annotator java** desenini kullanın.  
+- **Ana en‑iyi‑uygulama ipuçları nelerdir?**  
+  Bellek yönetimi ve performans için *annotation best practices java* kontrol listesini izleyin.
 
-**Ne Öğreneceksiniz:**
-- Annotator'ı bir belgeyle nasıl başlatabilirim.
-- Alan ve elips açıklamalarını programatik olarak oluşturma.
-- Bir belgeye birden fazla açıklama ekleme.
-- Belirli açıklama türleriyle açıklamalı belgeleri kaydetme.
+## “Anotasyonlu PDF kaydetme” nedir?
+Anotasyonlu bir PDF'yi kaydetmek, tüm görsel notların—vurgular, yorumlar, şekiller ve diğer işaretlemelerin—bir PDF dosyasına kalıcı olarak kaydedilmesi anlamına gelir, böylece belgeyi açan herkes değişiklikleri görebilir. GroupDocs.Annotation, bu görevi programlı olarak gerçekleştirmek için basit bir API sunar.
 
-Geliştirme ortamınızı kurarak başlayalım!
+## Java için GroupDocs.Annotation neden kullanılmalı?
+- **Cross‑platform desteği** – Java çalıştıran herhangi bir işletim sisteminde çalışır.  
+- **Zengin anotasyon tipleri** – basit vurgulardan elips gibi karmaşık şekillere.  
+- **Harici PDF editörleri gerekmez** – tüm işlemler Java kodunuz içinde gerçekleşir.  
+- **Kurumsal ölçeklenebilirlik** – hukuk, eğitim ve teknik dokümantasyon iş akışları için uygundur.
 
-## Ön koşullar
+## Önkoşullar
+- **Java SDK** (JDK 8 veya daha yeni) makinenize kurulu.  
+- **Maven** bağımlılık yönetimi için.  
+- **IntelliJ IDEA** veya **Eclipse** gibi bir IDE.  
+- Temel Java programlama bilgisi.  
 
-Başlamadan önce geliştirme ortamınızın doğru şekilde yapılandırıldığından emin olun:
-
-- **Gerekli Kütüphaneler:**
-  - GroupDocs.Annotation for Java sürüm 25.2
-  - Bağımlılık yönetimi için Maven
-
-- **Çevre Kurulum Gereksinimleri:**
-  - Java SDK’yı makinenize yükleyin.
-  - Geliştirme için IntelliJ IDEA veya Eclipse gibi bir IDE kullanın.
-
-- **Bilgi Ön Koşulları:**
-  - Java programlamanın temel bilgisi.
-  - Maven derleme aracına aşinalık.
-
-## GroupDocs.Annotation'ı Java İçin Ayarlama
-
-GroupDocs.Annotation'ı Maven kullanarak projenize entegre etmek için aşağıdaki yapılandırmayı ekleyin: `pom.xml`:
+### Maven bağımlılığı GroupDocs
+Add the GroupDocs repository and the annotation library to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -58,14 +65,13 @@ GroupDocs.Annotation'ı Maven kullanarak projenize entegre etmek için aşağıd
 </dependencies>
 ```
 
-### Lisans Edinimi
+## Lisans Edinme
+1. **Free Trial:** GroupDocs.Annotation'ı test etmek için deneme sürümünü indirin.  
+2. **Temporary License:** Değerlendirme sırasında tam erişim için geçici bir lisans edinin.  
+3. **Purchase:** Üretim kullanımı için tam lisans edinin.
 
-1. **Ücretsiz Deneme:** GroupDocs.Annotation'ı test etmek için deneme sürümünü indirin.
-2. **Geçici Lisans:** Değerlendirme süreniz boyunca tam erişim için geçici bir lisans edinin.
-3. **Satın almak:** Memnun kalırsanız tam lisansı satın alabilirsiniz.
-
-**Temel Başlatma:**
-Annotator'ı başlatmak için belgenizin dosya yolunu sağlayarak bir örnek oluşturun:
+## Annotator Java'ı Başlatma
+The first step is to **initialize annotator java** with the document you want to work on. Below is the basic initialization pattern:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -73,21 +79,14 @@ import com.groupdocs.annotation.Annotator;
 public class Feature1 {
     public void loadAnnotator(String fileName) {
         try (final Annotator annotator = new Annotator(fileName)) {
-            // Kullanıma hazır!
+            // Ready to use!
         }
     }
 }
 ```
-
-## Uygulama Kılavuzu
 
 ### Özellik 1: Annotator'ı Yükleme ve Başlatma
-
-**Genel Bakış:**
-Bu özellik, Annotator'ı bir belge dosya yolu ile başlatmayı ve Java uygulamanızı açıklama görevleri için ayarlamayı gösterir.
-
-#### Adım 1: Annotator'ı Başlatın
-Bir örnek oluşturun `Annotator` dosya adını vererek. Bu adım, belgenizi daha fazla ek açıklama için hazırladığı için önemlidir.
+This feature demonstrates initializing the Annotator with a document file path, setting up your Java application for annotation tasks.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -95,19 +94,16 @@ import com.groupdocs.annotation.Annotator;
 public class Feature1 {
     public void loadAnnotator(String fileName) {
         try (final Annotator annotator = new Annotator(fileName)) {
-            // Açıklayıcı başlatıldı ve hazır.
+            // Annotator initialized and ready.
         }
     }
 }
 ```
 
-### Özellik 2: Alan Açıklaması Oluşturma
+## Anotasyon Oluşturma
 
-**Genel Bakış:**
-Boyut, renk ve sayfa numarası gibi belirli özelliklere sahip bir alan açıklamasının nasıl oluşturulacağını öğrenin.
-
-#### Adım 1: Yeni Bir Oluşturun `AreaAnnotation` Nesne
-Örnekleme yaparak başlayın `AreaAnnotation` sınıf.
+### Özellik 2: Alan Anotasyonu Oluşturma
+Area annotations let you highlight rectangular regions. Follow these steps to create one:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -118,22 +114,13 @@ public class Feature2 {
         AreaAnnotation area = new AreaAnnotation();
 ```
 
-#### Adım 2: Dikdörtgen Sınırlarını Belirleyin
-Sınırları kullanarak tanımlayın `Rectangle` nesne.
-
 ```java
         area.setBox(new Rectangle(100, 100, 100, 100));
 ```
 
-#### Adım 3: Arka Plan Rengini Ayarlayın
-Görünürlük için arka plan rengini belirtin.
-
 ```java
         area.setBackgroundColor(65535);
 ```
-
-#### Adım 4: Sayfa Numarasını Belirleyin
-Bu açıklamanın belgenin neresinde görüneceğini belirtin.
 
 ```java
         area.setPageNumber(1);
@@ -143,13 +130,8 @@ Bu açıklamanın belgenin neresinde görüneceğini belirtin.
 }
 ```
 
-### Özellik 3: Elips Açıklaması Oluşturma
-
-**Genel Bakış:**
-Bu özellik, belgelerinizde dairesel veya oval açıklamalara olanak tanıyan elips açıklaması oluşturmaya odaklanır.
-
-#### Adım 1: Yeni Bir Oluşturun `EllipseAnnotation` Nesne
-Örnekleme yaparak başlayın `EllipseAnnotation`.
+### Özellik 3: Elips Anotasyonu Oluşturma
+Ellipse annotations are perfect for circular or oval highlights.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -160,22 +142,13 @@ public class Feature3 {
         EllipseAnnotation ellipse = new EllipseAnnotation();
 ```
 
-#### Adım 2: Dikdörtgen Sınırlarını Tanımlayın
-Sınır boyutlarını bir kullanarak ayarlayın `Rectangle`.
-
 ```java
         ellipse.setBox(new Rectangle(100, 100, 100, 100));
 ```
 
-#### Adım 3: Arka Plan Rengini Ayarlayın
-Uygun bir arka plan rengi seçin.
-
 ```java
         ellipse.setBackgroundColor(123456);
 ```
-
-#### Adım 4: Sayfa Numarasını Belirtin
-Bu açıklama için sayfayı belirtin.
 
 ```java
         ellipse.setPageNumber(2);
@@ -185,13 +158,8 @@ Bu açıklama için sayfayı belirtin.
 }
 ```
 
-### Özellik 4: Annotator'a Açıklamalar Ekleme
-
-**Genel Bakış:**
-Tek bir belgeye birden fazla açıklama eklemeyi öğrenin `Annotator` misal.
-
-#### Adım 1: Açıklamalar Oluşturun ve Ekleyin
-Açıklamalar oluşturun ve bunları açıklama listesine ekleyin.
+## Birden Fazla Anotasyon Ekleme
+You can **add multiple annotations** in a single call, which improves performance and keeps your code tidy.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -222,22 +190,14 @@ public class Feature4 {
 }
 ```
 
-### Özellik 5: Belirli Açıklamalarla Belgeyi Kaydetme
-
-**Genel Bakış:**
-Açıklamalı belgenizi nasıl kaydedeceğinizi ve hangi açıklama türlerinin saklanacağını belirtin.
-
-#### Adım 1: Çıktı Yolunu Belirleyin
-Kaydedilen dosyanın nerede bulunacağını belirleyin.
+## Belgeyi Kaydetme – Anotasyonlu PDF Nasıl Kaydedilir
+Now that your annotations are in place, you’ll **save annotated PDF** with only the desired annotation types.
 
 ```java
 public class Feature5 {
     public String getOutputPath(String fileName) {
         return "YOUR_OUTPUT_DIRECTORY" + "/filtered_output.pdf";
 ```
-
-#### Adım 2: Seçeneklerle Açıklamalı Belgeyi Kaydet
-Kaydetme seçeneklerini yalnızca istediğiniz açıklamaları içerecek şekilde yapılandırın ve kaydetme işlemini gerçekleştirin.
 
 ```java
     public void saveAnnotatedDocument(Annotator annotator, String outputPath) {
@@ -249,21 +209,51 @@ Kaydetme seçeneklerini yalnızca istediğiniz açıklamaları içerecek şekild
 }
 ```
 
+## Anotasyon En İyi Uygulamaları Java
+- **try‑with‑resources** kullanarak `Annotator`'ı otomatik olarak kapatın ve belleği serbest bırakın.  
+- **Batch add annotations** (Feature 4'te gösterildiği gibi) I/O yükünü azaltmak için toplu ekleyin.  
+- `SaveOptions` içinde yalnızca gerekli anotasyon tiplerini belirterek dosya boyutunu küçük tutun.  
+- Kaydettikten sonra büyük belgeleri bellekten serbest bırakarak sızıntıları önleyin.
+
 ## Pratik Uygulamalar
+- **Legal Document Review:** Maddeleri vurgulayın ve avukatlar için yorum ekleyin.  
+- **Educational Resources:** Ders kitaplarını çalışma grupları için anotasyonlayın.  
+- **Technical Manuals:** Mühendislik çizimlerini notlar ve uyarılarla işaretleyin.
 
-- **Hukuki Belge İncelemesi:** Dikkat veya revizyon gerektiren bölümleri vurgulayın.
-- **Eğitim Kaynakları:** Çalışma grupları için ders kitaplarına ve makalelere notlar ekleyin.
-- **Teknik Kılavuzlar:** Mühendislik dokümanları içerisinde önemli notları veya talimatları işaretleyin.
+## Performans Düşünceleri
+- Çok büyük PDF'lerde eşzamanlı anotasyon sayısını sınırlayın.  
+- Belleği verimli yönetmek için önerilen **annotation best practices java**'yu kullanın.  
+- Yavaşlama fark ederseniz uygulamanızı Java Flight Recorder ile profilleyin.
 
-Entegrasyon olanakları arasında, zaman içinde değişiklikleri izlemek için açıklamaları proje yönetim araçlarıyla ilişkilendirmek de yer alır.
+## Yaygın Sorunlar ve Çözümler
+| Sorun | Çözüm |
+|-------|----------|
+| **OutOfMemoryError** büyük PDF'ler yüklenirken | Belgeyi akış modunda yükleyin veya JVM yığın boyutunu artırın. |
+| Kaydetme sonrası anotasyonlar görünmüyor | `SaveOptions`'ın doğru `AnnotationType`'ı içerdiğinden emin olun. |
+| Lisans hataları | Deneme veya kalıcı lisans dosyasının doğru referans verildiğini doğrulayın. |
 
-## Performans Hususları
+## Sıkça Sorulan Sorular
 
-Sorunsuz bir performans sağlamak için:
-- Büyük belgelerdeki eş zamanlı açıklama sayısını sınırlayın.
-- Açıklama görevleri tamamlandıktan sonra kaynakları serbest bırakarak bellek kullanımını yönetin.
-- Annotator örneklerini verimli bir şekilde işlemek için try-with-resources'ı kullanmak gibi Java bellek yönetimi için en iyi uygulamaları uygulayın.
+**S: Şekillere ek olarak metin yorumları ekleyebilir miyim?**  
+A: Evet, GroupDocs.Annotation `TextAnnotation` ve `CommentAnnotation` tiplerini destekler—sadece uygun modeli örnekleyin ve listeye ekleyin.
 
-## Çözüm
+**S: Mevcut bir anotasyonu düzenlemek mümkün mü?**  
+A: Kesinlikle. Anotasyonu ID'siyle alın, özelliklerini değiştirin ve `annotator.update(updatedAnnotation)` metodunu çağırın.
 
-Bu kılavuzu takip ederek, GroupDocs.Annotation kullanarak Java'da açıklamaları nasıl yükleyeceğinizi, oluşturacağınızı ve kaydedeceğinizi öğrendiniz. Bu yetenek, belge iş akışlarını iyileştirerek önemli bilgileri vurgulamayı, notlar eklemeyi ve belgeleri çeşitli uygulamalar arasında yönetmeyi kolaylaştırır.
+**S: Artık ihtiyacım olmayan bir anotasyonu nasıl kaldırırım?**  
+A: `annotator.delete(annotationId)` ile belirli bir anotasyonu silin veya `annotator.clear(pageNumber)` ile bir sayfadaki tüm anotasyonları temizleyin.
+
+**S: Kütüphane şifre korumalı PDF'lerle çalışıyor mu?**  
+A: Evet. `Annotator` örneğini oluştururken şifreyi sağlayın: `new Annotator(filePath, password)`.
+
+**S: Hangi Java sürümü gereklidir?**  
+A: Kütüphane Java 8 ve üzeriyle uyumludur; en iyi performans için en son LTS sürümünü kullanmanızı öneririz.
+
+## Sonuç
+Artık GroupDocs.Annotation for Java ile **anotasyonlu PDF** dosyalarını **kaydetme** için eksiksiz, uçtan uca bir çözümünüz var. Yukarıdaki adımları—Maven bağımlılığını kurmak, annotator'ı başlatmak, birden fazla anotasyon oluşturup eklemek ve anotasyon en iyi uygulamalarını uygulamak—takip ederek, herhangi bir Java uygulamasını güçlü belge işaretleme yetenekleriyle zenginleştirebilirsiniz.
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs

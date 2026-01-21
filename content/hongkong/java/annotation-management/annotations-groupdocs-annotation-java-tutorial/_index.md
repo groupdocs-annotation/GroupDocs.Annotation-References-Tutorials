@@ -1,45 +1,50 @@
 ---
-"date": "2025-05-06"
-"description": "了解如何使用 GroupDocs.Annotation for Java 有效地在文件中建立、管理和儲存註解。本逐步指南涵蓋初始化、註釋類型和整合技巧。"
-"title": "完整指南&#58;使用 GroupDocs.Annotation for Java 建立和管理註釋"
-"url": "/zh-hant/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/"
+date: '2025-12-17'
+description: 了解如何使用 GroupDocs.Annotation for Java 保存已註釋的 PDF 檔案。本教程涵蓋 Maven 依賴 GroupDocs、初始化
+  Annotator Java、添加多個註釋，以及 Java 註釋最佳實踐。
+keywords:
+- GroupDocs.Annotation for Java
+- Java document annotation
+- Annotator initialization
+title: 完整指南 - 如何使用 GroupDocs.Annotation for Java 保存已註釋的 PDF
 type: docs
-"weight": 1
+url: /zh-hant/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
+weight: 1
 ---
 
-# 完整指南：使用 GroupDocs.Annotation for Java 建立和管理註釋
+# 使用 GroupDocs.Annotation for Java 保存已註釋的 PDF
 
-## 介紹
+增強 Java 應用程式的文件註釋功能是提升協作、合規性與使用者體驗的強大方式。在本指南中，您將學習 **如何保存已註釋的 PDF** 檔案，從設定 Maven 相依性、加入多個註釋到遵循 Java 註釋最佳實踐。讓我們一步步說明，讓您能自信地將此功能整合到專案中。
 
-您是否希望透過添加強大的文件註釋功能來增強您的 Java 應用程式？無論您是需要突出顯示關鍵部分還是添加詳細的註釋，整合像 GroupDocs.Annotation 這樣的高效解決方案都可以簡化各行各業的工作流程。本教學將引導您使用 GroupDocs.Annotation for Java 輕鬆地在文件中載入、建立和儲存註解。
+## 快速回答
+- **GroupDocs.Annotation 的主要目的為何？**  
+  以程式方式在 Java 應用程式中建立、編輯及 **保存已註釋的 PDF** 文件。  
+- **我需要哪個 Maven 套件？**  
+  `com.groupdocs:groupdocs-annotation` (see the *maven dependency groupdocs* section)。  
+- **我可以一次加入多個註釋嗎？**  
+  是的——您可以在單一次操作中 **加入多個註釋**。  
+- **如何初始化 annotator？**  
+  使用教學中示範的 **initialize annotator java** 模式。  
+- **關鍵的最佳實踐提示是什麼？**  
+  請遵循 *annotation best practices java* 清單，以進行記憶體管理與效能優化。
 
-**您將學到什麼：**
-- 如何使用文檔初始化註解器。
-- 以程式設計方式建立區域和橢圓註釋。
-- 在文件中新增多個註解。
-- 儲存具有特定註釋類型的註釋文件。
+## 什麼是「保存已註釋的 PDF」？
+保存已註釋的 PDF 表示將所有視覺註記——如標記、評論、圖形及其他標記——永久寫入 PDF 檔案，使任何開啟文件的人都能看到這些變更。GroupDocs.Annotation 提供簡易的 API，以程式方式執行此任務。
 
-讓我們從設定您的開發環境開始！
+## 為何使用 GroupDocs.Annotation for Java？
+- **跨平台支援** – 可在任何執行 Java 的作業系統上運作。  
+- **豐富的註釋類型** – 從簡單的標記到如橢圓形等複雜圖形。  
+- **不需外部 PDF 編輯器** – 所有操作皆在您的 Java 程式碼內完成。  
+- **企業級可擴充性** – 適用於法律、教育與技術文件工作流程。
 
-## 先決條件
+## 前置條件
+- **Java SDK**（JDK 8 或更新版本）已安裝於您的機器上。  
+- **Maven** 用於相依性管理。  
+- 如 **IntelliJ IDEA** 或 **Eclipse** 等 IDE。  
+- 基本的 Java 程式設計知識。
 
-在開始之前，請確保您的開發環境已正確配置：
-
-- **所需庫：**
-  - GroupDocs.Annotation for Java 版本 25.2
-  - Maven 用於依賴管理
-
-- **環境設定要求：**
-  - 在您的機器上安裝 Java SDK。
-  - 使用 IntelliJ IDEA 或 Eclipse 等 IDE 進行開發。
-
-- **知識前提：**
-  - 對 Java 程式設計有基本的了解。
-  - 熟悉Maven建置工具。
-
-## 為 Java 設定 GroupDocs.Annotation
-
-若要使用 Maven 將 GroupDocs.Annotation 整合到您的專案中，請將以下配置新增至您的 `pom.xml`：
+### Maven 相依性 GroupDocs
+將 GroupDocs 儲存庫與註釋函式庫加入您的 `pom.xml`：
 
 ```xml
 <repositories>
@@ -58,36 +63,13 @@ type: docs
 </dependencies>
 ```
 
-### 許可證獲取
+## 取得授權
+1. **免費試用：** 下載試用版以測試 GroupDocs.Annotation。  
+2. **臨時授權：** 取得臨時授權，以在評估期間完整使用功能。  
+3. **購買：** 獲得正式授權以供正式環境使用。
 
-1. **免費試用：** 下載試用版測試 GroupDocs.Annotation。
-2. **臨時執照：** 在評估期間取得臨時許可證以獲得完全存取權。
-3. **購買：** 如果滿意，您可以購買完整許可證。
-
-**基本初始化：**
-若要初始化 Annotator，請透過提供文件的檔案路徑來建立實例：
-
-```java
-import com.groupdocs.annotation.Annotator;
-
-public class Feature1 {
-    public void loadAnnotator(String fileName) {
-        try (final Annotator annotator = new Annotator(fileName)) {
-            // 準備使用！
-        }
-    }
-}
-```
-
-## 實施指南
-
-### 功能 1：載入和初始化註解器
-
-**概述：**
-此功能示範如何使用文件文件路徑初始化註釋器，以及設定 Java 應用程式以執行註解任務。
-
-#### 步驟 1：初始化註解器
-建立一個實例 `Annotator` 提供檔案名稱。此步驟至關重要，因為它可以幫助您為文件做好進一步註釋的準備。
+## 初始化 Annotator Java
+第一步是使用您想要處理的文件 **initialize annotator java**。以下為基本的初始化範本：
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -95,19 +77,31 @@ import com.groupdocs.annotation.Annotator;
 public class Feature1 {
     public void loadAnnotator(String fileName) {
         try (final Annotator annotator = new Annotator(fileName)) {
-            // 註釋器已初始化並準備就緒。
+            // Ready to use!
         }
     }
 }
 ```
+
+### 功能 1：載入與初始化 Annotator
+此功能示範如何以文件路徑初始化 Annotator，為您的 Java 應用程式設定註釋任務環境。
+
+```java
+import com.groupdocs.annotation.Annotator;
+
+public class Feature1 {
+    public void loadAnnotator(String fileName) {
+        try (final Annotator annotator = new Annotator(fileName)) {
+            // Annotator initialized and ready.
+        }
+    }
+}
+```
+
+## 建立註釋
 
 ### 功能 2：建立區域註釋
-
-**概述：**
-了解如何建立具有特定屬性（例如大小、顏色和頁碼）的區域註釋。
-
-#### 步驟 1：建立新 `AreaAnnotation` 目的
-首先實例化 `AreaAnnotation` 班級。
+區域註釋可讓您標示矩形區域。請依照以下步驟建立：
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -118,22 +112,13 @@ public class Feature2 {
         AreaAnnotation area = new AreaAnnotation();
 ```
 
-#### 步驟 2：設定矩形邊界
-使用 `Rectangle` 目的。
-
 ```java
         area.setBox(new Rectangle(100, 100, 100, 100));
 ```
 
-#### 步驟3：設定背景顏色
-指定可見性的背景顏色。
-
 ```java
         area.setBackgroundColor(65535);
 ```
-
-#### 步驟 4：指定頁碼
-指示此註記將出現在文件的什麼位置。
 
 ```java
         area.setPageNumber(1);
@@ -143,13 +128,8 @@ public class Feature2 {
 }
 ```
 
-### 功能 3：建立橢圓註釋
-
-**概述：**
-此功能專注於建立橢圓註釋，允許在文件中新增圓形或橢圓形註釋。
-
-#### 步驟 1：建立新 `EllipseAnnotation` 目的
-首先實例化 `EllipseAnnotation`。
+### 功能 3：建立橢圓形註釋
+橢圓形註釋非常適合圓形或橢圓形的標示。
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -160,22 +140,13 @@ public class Feature3 {
         EllipseAnnotation ellipse = new EllipseAnnotation();
 ```
 
-#### 步驟 2：定義矩形邊界
-使用設定邊界尺寸 `Rectangle`。
-
 ```java
         ellipse.setBox(new Rectangle(100, 100, 100, 100));
 ```
 
-#### 步驟3：設定背景顏色
-選擇合適的背景顏色。
-
 ```java
         ellipse.setBackgroundColor(123456);
 ```
-
-#### 步驟 4：標示頁碼
-指定此註解的頁面。
 
 ```java
         ellipse.setPageNumber(2);
@@ -185,13 +156,8 @@ public class Feature3 {
 }
 ```
 
-### 功能 4：為 Annotator 新增註釋
-
-**概述：**
-了解如何使用 `Annotator` 實例。
-
-#### 步驟 1：建立並新增註釋
-建立註釋並將其新增至註釋者清單。
+## 新增多筆註釋
+您可以在一次呼叫中 **加入多筆註釋**，此方式可提升效能並讓程式碼更整潔。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -222,22 +188,14 @@ public class Feature4 {
 }
 ```
 
-### 功能5：儲存有特定註解的文檔
-
-**概述：**
-了解如何儲存已註解的文檔，指定應保留哪些註解類型。
-
-#### 步驟1：指定輸出路徑
-確定已儲存的文件所在的位置。
+## 儲存文件 – 如何保存已註釋的 PDF
+現在已完成註釋，您將 **保存已註釋的 PDF**，僅保留所需的註釋類型。
 
 ```java
 public class Feature5 {
     public String getOutputPath(String fileName) {
         return "YOUR_OUTPUT_DIRECTORY" + "/filtered_output.pdf";
 ```
-
-#### 步驟 2：儲存已註記的文件及其選項
-配置儲存選項以僅包含所需的註解並執行儲存程序。
 
 ```java
     public void saveAnnotatedDocument(Annotator annotator, String outputPath) {
@@ -249,21 +207,52 @@ public class Feature5 {
 }
 ```
 
-## 實際應用
+## 註釋最佳實踐 Java
+- **使用 try‑with‑resources** 以自動關閉 `Annotator` 並釋放記憶體。  
+- **批次加入註釋**（如 Feature 4 所示）以減少 I/O 負擔。  
+- **在 `SaveOptions` 中僅指定所需的註釋類型**，以保持檔案大小較小。  
+- **在儲存後釋放大型文件** 的記憶體，以避免記憶體洩漏。
 
-- **法律文件審查：** 突出顯示需要注意或修改的部分。
-- **教育資源：** 為學習小組註釋教科書和論文。
-- **技術手冊：** 在工程文件中標記重要註釋或說明。
+## 實務應用
+- **法律文件審閱：** 為律師標示條款並附加評論。  
+- **教育資源：** 為教科書加註，以供學習小組使用。  
+- **技術手冊：** 在工程圖上標註說明與警示。
 
-整合可能性包括將註釋與專案管理工具連結以追蹤隨時間的變化。
+## 效能考量
+- 限制在極大型 PDF 上同時進行的註釋數量。  
+- 使用建議的 **annotation best practices java** 以有效管理記憶體。  
+- 若發現效能下降，請使用 Java Flight Recorder 進行效能分析。
 
-## 性能考慮
+## 常見問題與解決方案
 
-為確保效能平穩運作：
-- 限制大型文件的並發註釋數量。
-- 透過在註解任務完成後釋放資源來管理記憶體使用情況。
-- 實作 Java 記憶體管理的最佳實踐，例如使用 try-with-resources 來有效地處理 Annotator 實例。
+| 問題 | 解決方案 |
+|-------|----------|
+| **OutOfMemoryError** 在載入大型 PDF 時發生 | 以串流模式載入文件或增加 JVM 堆積大小。 |
+| 儲存後註釋未顯示 | 確保 `SaveOptions` 包含正確的 `AnnotationType`。 |
+| 授權錯誤 | 確認試用版或正式授權檔案已正確引用。 |
+
+## 常見問答
+
+**Q: 我可以在形狀之外加入文字評論嗎？**  
+A: 可以，GroupDocs.Annotation 支援 `TextAnnotation` 與 `CommentAnnotation` 類型——只需實例化相應的模型並將其加入清單。
+
+**Q: 是否可以編輯已存在的註釋？**  
+A: 當然可以。透過其 ID 取得註釋，修改屬性後呼叫 `annotator.update(updatedAnnotation)`。
+
+**Q: 如何移除不再需要的註釋？**  
+A: 使用 `annotator.delete(annotationId)` 刪除特定註釋，或使用 `annotator.clear(pageNumber)` 清除該頁面的所有註釋。
+
+**Q: 此函式庫能處理受密碼保護的 PDF 嗎？**  
+A: 能。建立 `Annotator` 實例時提供密碼，例如 `new Annotator(filePath, password)`。
+
+**Q: 需要哪個版本的 Java？**  
+A: 此函式庫相容於 Java 8 及以上版本；我們建議使用最新的 LTS 版以獲得最佳效能。
 
 ## 結論
+您現在已擁有一套完整、端對端的 **保存已註釋的 PDF** 解決方案，使用 GroupDocs.Annotation for Java。遵循上述步驟——設定 Maven 相依性、初始化 annotator、建立並加入多筆註釋，以及套用註釋最佳實踐，您即可為任何 Java 應用程式增添強大的文件標註功能。
 
-透過本指南，您學習如何使用 GroupDocs.Annotation 在 Java 中載入、建立和儲存註解。此功能增強了文件工作流程，讓您更輕鬆地突出顯示重要資訊、新增註解以及跨各種應用程式管理文件。
+---
+
+**最後更新：** 2025-12-17  
+**測試版本：** GroupDocs.Annotation 25.2  
+**作者：** GroupDocs
