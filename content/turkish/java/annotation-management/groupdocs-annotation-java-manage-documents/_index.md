@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'PDF Açıklamaları Yükleme Java: Tam GroupDocs Açıklama Yönetimi Kılavuzu'
+title: 'PDF Açıklamaları Yükleme Java - Tam GroupDocs Açıklama Yönetimi Kılavuzu'
 type: docs
 url: /tr/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

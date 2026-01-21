@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Ładowanie adnotacji PDF w Javie: Kompletny przewodnik po zarządzaniu adnotacjami
+title: 'Ładowanie adnotacji PDF w Javie - Kompletny przewodnik po zarządzaniu adnotacjami
   GroupDocs'
 type: docs
 url: /pl/java/annotation-management/groupdocs-annotation-java-manage-documents/

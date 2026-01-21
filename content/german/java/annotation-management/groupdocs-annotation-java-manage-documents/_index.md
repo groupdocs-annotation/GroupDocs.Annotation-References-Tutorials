@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'PDF-Anmerkungen laden Java: Vollständiger Leitfaden zur GroupDocs-Anmerkungsverwaltung'
+title: 'PDF-Anmerkungen laden Java - Vollständiger Leitfaden zur GroupDocs-Anmerkungsverwaltung'
 type: docs
 url: /de/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

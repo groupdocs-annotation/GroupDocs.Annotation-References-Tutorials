@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Carica annotazioni PDF Java: Guida completa alla gestione delle annotazioni
+title: 'Carica annotazioni PDF Java - Guida completa alla gestione delle annotazioni
   GroupDocs'
 type: docs
 url: /it/java/annotation-management/groupdocs-annotation-java-manage-documents/

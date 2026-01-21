@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Načtení PDF anotací v Javě: Kompletní průvodce správou anotací GroupDocs'
+title: 'Načtení PDF anotací v Javě - Kompletní průvodce správou anotací GroupDocs'
 type: docs
 url: /cs/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

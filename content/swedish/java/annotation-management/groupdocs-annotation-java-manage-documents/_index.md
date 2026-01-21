@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Ladda PDF-anteckningar Java: Komplett guide för GroupDocs annoteringshantering'
+title: 'Ladda PDF-anteckningar Java - Komplett guide för GroupDocs annoteringshantering'
 type: docs
 url: /sv/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

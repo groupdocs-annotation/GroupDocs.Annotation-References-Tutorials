@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Φόρτωση Σχολίων PDF Java: Πλήρης Οδηγός Διαχείρισης Σχολίων GroupDocs'
+title: 'Φόρτωση Σχολίων PDF Java - Πλήρης Οδηγός Διαχείρισης Σχολίων GroupDocs'
 type: docs
 url: /el/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

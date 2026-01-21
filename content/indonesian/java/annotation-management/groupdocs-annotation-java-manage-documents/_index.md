@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Muat Anotasi PDF Java: Panduan Lengkap Manajemen Anotasi GroupDocs'
+title: 'Muat Anotasi PDF Java - Panduan Lengkap Manajemen Anotasi GroupDocs'
 type: docs
 url: /id/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

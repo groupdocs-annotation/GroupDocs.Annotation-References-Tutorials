@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Tải chú thích PDF bằng Java: Hướng dẫn quản lý chú thích GroupDocs toàn diện'
+title: 'Tải chú thích PDF bằng Java - Hướng dẫn quản lý chú thích GroupDocs toàn diện'
 type: docs
 url: /vi/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

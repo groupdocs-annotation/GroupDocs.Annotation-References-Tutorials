@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'Загрузка PDF‑аннотаций Java: Полное руководство по управлению аннотациями
+title: 'Загрузка PDF‑аннотаций Java - Полное руководство по управлению аннотациями
   GroupDocs'
 type: docs
 url: /ru/java/annotation-management/groupdocs-annotation-java-manage-documents/

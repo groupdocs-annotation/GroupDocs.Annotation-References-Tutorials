@@ -14,7 +14,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'تحميل تعليقات PDF في Java: دليل شامل لإدارة تعليقات GroupDocs'
+title: 'تحميل تعليقات PDF في Java - دليل شامل لإدارة تعليقات GroupDocs'
 type: docs
 url: /ar/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

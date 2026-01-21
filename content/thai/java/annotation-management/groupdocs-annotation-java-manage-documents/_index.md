@@ -14,7 +14,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'โหลดคำอธิบาย PDF ด้วย Java: คู่มือการจัดการคำอธิบายของ GroupDocs อย่างสมบูรณ์'
+title: 'โหลดคำอธิบาย PDF ด้วย Java - คู่มือการจัดการคำอธิบายของ GroupDocs อย่างสมบูรณ์'
 type: docs
 url: /th/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

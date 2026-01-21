@@ -1,5 +1,5 @@
 ---
-title: "Load PDF Annotations Java: Complete GroupDocs Annotation Management Guide"
+title: "Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide"
 linktitle: "Load PDF Annotations Java"
 description: "Master how to load pdf annotations java with GroupDocs.Annotation. Learn to load, remove, and optimize document annotations using Java in real‑world scenarios."
 keywords: "Java annotation management, document annotation Java, PDF annotation management Java, GroupDocs annotation tutorial, manage annotations Java documents"

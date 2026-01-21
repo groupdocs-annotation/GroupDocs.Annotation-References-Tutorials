@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'PDF-annotaties laden in Java: Complete gids voor GroupDocs-annotatiebeheer'
+title: 'PDF-annotaties laden in Java - Complete gids voor GroupDocs-annotatiebeheer'
 type: docs
 url: /nl/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

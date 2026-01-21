@@ -15,7 +15,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'PDF-annotációk betöltése Java-ban: Teljes GroupDocs annotációkezelési útmutató'
+title: 'PDF-annotációk betöltése Java-ban - Teljes GroupDocs annotációkezelési útmutató'
 type: docs
 url: /hu/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1

@@ -13,7 +13,7 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 載入 PDF 註解（Java）：完整的 GroupDocs 註解管理指南
+title: 載入 PDF 註解（Java） - 完整的 GroupDocs 註解管理指南
 type: docs
 url: /zh-hant/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1
