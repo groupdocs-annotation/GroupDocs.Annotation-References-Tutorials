@@ -13,7 +13,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'تحرير تعليقات PDF في Java: دليل GroupDocs الكامل'
+title: 'تحرير تعليقات PDF في Java - دليل GroupDocs الكامل'
 type: docs
 url: /ar/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

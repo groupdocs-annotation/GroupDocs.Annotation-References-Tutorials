@@ -13,7 +13,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'Úprava anotací PDF v Javě: Kompletní návod GroupDocs'
+title: 'Úprava anotací PDF v Javě - Kompletní návod GroupDocs'
 type: docs
 url: /cs/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

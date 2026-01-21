@@ -12,7 +12,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 編輯 PDF 註釋（Java）：完整的 GroupDocs 教程
+title: 編輯 PDF 註釋（Java） - 完整的 GroupDocs 教程
 type: docs
 url: /zh-hant/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

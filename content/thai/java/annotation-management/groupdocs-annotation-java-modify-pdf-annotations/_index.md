@@ -13,7 +13,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'แก้ไขคำอธิบาย PDF ด้วย Java: คำแนะนำเต็มรูปแบบของ GroupDocs'
+title: 'แก้ไขคำอธิบาย PDF ด้วย Java - คำแนะนำเต็มรูปแบบของ GroupDocs'
 type: docs
 url: /th/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

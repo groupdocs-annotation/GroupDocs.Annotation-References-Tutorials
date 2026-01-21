@@ -13,7 +13,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'PDF 주석 편집 Java: 완전한 GroupDocs 튜토리얼'
+title: 'PDF 주석 편집 Java - 완전한 GroupDocs 튜토리얼'
 type: docs
 url: /ko/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

@@ -14,7 +14,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'Editar Anotações PDF em Java: Tutorial Completo do GroupDocs'
+title: 'Editar Anotações PDF em Java - Tutorial Completo do GroupDocs'
 type: docs
 url: /pt/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

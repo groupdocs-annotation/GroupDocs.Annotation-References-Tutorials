@@ -13,7 +13,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'PDF-Anmerkungen in Java bearbeiten: Vollständiges GroupDocs‑Tutorial'
+title: 'PDF-Anmerkungen in Java bearbeiten - Vollständiges GroupDocs‑Tutorial'
 type: docs
 url: /de/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

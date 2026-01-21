@@ -14,7 +14,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'Edycja adnotacji PDF w Javie: Kompletny samouczek GroupDocs'
+title: 'Edycja adnotacji PDF w Javie - Kompletny samouczek GroupDocs'
 type: docs
 url: /pl/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

@@ -13,7 +13,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'PDF-annotaties bewerken Java: Complete GroupDocs-handleiding'
+title: 'PDF-annotaties bewerken Java - Complete GroupDocs-handleiding'
 type: docs
 url: /nl/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

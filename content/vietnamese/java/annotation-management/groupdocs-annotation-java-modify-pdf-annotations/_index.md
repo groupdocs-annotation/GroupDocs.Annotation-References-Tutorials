@@ -13,7 +13,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'Chỉnh sửa chú thích PDF bằng Java: Hướng dẫn toàn diện GroupDocs'
+title: 'Chỉnh sửa chú thích PDF bằng Java - Hướng dẫn toàn diện GroupDocs'
 type: docs
 url: /vi/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

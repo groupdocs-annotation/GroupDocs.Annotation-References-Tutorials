@@ -14,7 +14,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'Редактирование аннотаций PDF на Java: Полный учебник GroupDocs'
+title: 'Редактирование аннотаций PDF на Java - Полный учебник GroupDocs'
 type: docs
 url: /ru/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

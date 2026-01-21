@@ -1,5 +1,5 @@
 ---
-title: "Edit PDF Annotations Java: Complete GroupDocs Tutorial"
+title: "Edit PDF Annotations Java - Complete GroupDocs Tutorial"
 linktitle: "Edit PDF Annotations Java Guide"
 description: "Learn how to edit PDF annotations Java using GroupDocs. Master loading, modifying, and managing PDF annotations with step‑by‑step code examples."
 keywords: "edit pdf annotations java, modify PDF annotations Java, GroupDocs annotation tutorial, Java document annotation library, PDF collaboration Java"

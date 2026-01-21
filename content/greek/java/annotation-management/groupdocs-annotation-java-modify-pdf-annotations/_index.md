@@ -14,7 +14,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'Επεξεργασία Σχολίων PDF Java: Πλήρες Μάθημα GroupDocs'
+title: 'Επεξεργασία Σχολίων PDF Java - Πλήρες Μάθημα GroupDocs'
 type: docs
 url: /el/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

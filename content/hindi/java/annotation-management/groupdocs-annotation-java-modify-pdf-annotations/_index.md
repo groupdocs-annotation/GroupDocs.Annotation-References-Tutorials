@@ -14,7 +14,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'जावा में PDF एनोटेशन संपादित करें: पूर्ण GroupDocs ट्यूटोरियल'
+title: 'जावा में PDF एनोटेशन संपादित करें - पूर्ण GroupDocs ट्यूटोरियल'
 type: docs
 url: /hi/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

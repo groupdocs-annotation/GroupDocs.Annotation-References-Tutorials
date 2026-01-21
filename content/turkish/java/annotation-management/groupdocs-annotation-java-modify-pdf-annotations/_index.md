@@ -14,7 +14,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'PDF Açıklamaları Düzenleme Java: Tam GroupDocs Öğreticisi'
+title: 'PDF Açıklamaları Düzenleme Java - Tam GroupDocs Öğreticisi'
 type: docs
 url: /tr/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1

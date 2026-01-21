@@ -14,7 +14,7 @@ tags:
 - java-library
 - document-management
 - groupdocs
-title: 'PDF-annotációk szerkesztése Java: Teljes GroupDocs útmutató'
+title: 'PDF-annotációk szerkesztése Java - Teljes GroupDocs útmutató'
 type: docs
 url: /hu/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1
