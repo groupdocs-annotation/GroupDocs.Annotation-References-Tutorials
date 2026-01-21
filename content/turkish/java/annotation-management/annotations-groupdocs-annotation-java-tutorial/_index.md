@@ -8,7 +8,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Tam Kılavuz: GroupDocs.Annotation for Java ile Açıklamalı PDF Nasıl Kaydedilir'
+title: 'Tam Kılavuz - GroupDocs.Annotation for Java ile Açıklamalı PDF Nasıl Kaydedilir'
 type: docs
 url: /tr/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1

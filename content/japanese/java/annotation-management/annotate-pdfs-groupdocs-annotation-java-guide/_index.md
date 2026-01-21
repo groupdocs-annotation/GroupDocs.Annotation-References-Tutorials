@@ -565,13 +565,7 @@ A: `WatermarkAnnotation` の `setOpacity`、`setRotation`、`setBackgroundColor`
 A: もちろん可能です。任意のデータソースからコメントデータを取得し、`AreaAnnotation`（または `TextAnnotation`）にテキストを設定して文書に追加します。
 
 **Q: バッチ処理中にメモリリークが発生した場合の対処法は？**  
-A: すべての `Annotator` を `try‑with‑resources` で確実に閉じ、JVM ヒープを監視し、文書を小さなバッチに分割して処理します。
-
----
-
-**最終更新日**：2025-12-17  
-**テスト環境**：GroupDocs.Annotation 25.2 for Java  
-**作者**：GroupDocs  
+A: すべての `Annotator` を `try‑with‑resources` で確実に閉じ、JVM ヒープを監視し、文書を小さなバッチに分割して処理します。  
 
 **追加リソース**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -581,3 +575,9 @@ A: すべての `Annotator` を `try‑with‑resources` で確実に閉じ、JV
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最終更新日**：2025-12-17  
+**テスト環境**：GroupDocs.Annotation 25.2 for Java  
+**作者**：GroupDocs

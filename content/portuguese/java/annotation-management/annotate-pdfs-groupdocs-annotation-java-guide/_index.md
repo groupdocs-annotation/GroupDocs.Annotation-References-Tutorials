@@ -569,12 +569,6 @@ R: Absolutamente. Você pode ler dados de comentário de qualquer fonte, preench
 **P: O que fazer se encontrar vazamento de memória durante o processamento em lote?**  
 R: Garanta que cada `Annotator` seja fechado (try‑with‑resources), monitore o heap da JVM e considere processar documentos em lotes menores.
 
----
-
-**Última Atualização:** 2025-12-17  
-**Testado com:** GroupDocs.Annotation 25.2 para Java  
-**Autor:** GroupDocs  
-
 **Recursos Adicionais**  
 - [Documentação do GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Guia de Referência da API](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ R: Garanta que cada `Annotator` seja fechado (try‑with‑resources), monitore 
 - [Acesso ao Teste Gratuito](https://releases.groupdocs.com/annotation/java/)  
 - [Licença Temporária](https://purchase.groupdocs.com/temporary-license/)  
 - [Fórum de Suporte](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Última Atualização:** 2025-12-17  
+**Testado com:** GroupDocs.Annotation 25.2 para Java  
+**Autor:** GroupDocs  

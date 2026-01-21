@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: '전체 가이드: Java용 GroupDocs.Annotation으로 주석이 달린 PDF 저장하기'
+title: '전체 가이드 - Java용 GroupDocs.Annotation으로 주석이 달린 PDF 저장하기'
 type: docs
 url: /ko/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1

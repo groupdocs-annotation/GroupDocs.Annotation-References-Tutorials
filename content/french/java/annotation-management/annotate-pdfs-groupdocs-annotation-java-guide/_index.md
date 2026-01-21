@@ -569,12 +569,6 @@ R : Absolument. Vous pouvez lire les données de commentaire depuis n’import
 **Q : Que faire si je rencontre une fuite de mémoire lors du traitement par lots ?**  
 R : Assurez‑vous que chaque `Annotator` soit fermé (try‑with‑resources), surveillez le tas JVM, et envisagez de traiter les documents par lots plus petits.
 
----
-
-**Dernière mise à jour :** 2025-12-17  
-**Testé avec :** GroupDocs.Annotation 25.2 pour Java  
-**Auteur :** GroupDocs  
-
 **Ressources supplémentaires**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ R : Assurez‑vous que chaque `Annotator` soit fermé (try‑with‑resources)
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Dernière mise à jour :** 2025-12-17  
+**Testé avec :** GroupDocs.Annotation 25.2 pour Java  
+**Auteur :** GroupDocs  

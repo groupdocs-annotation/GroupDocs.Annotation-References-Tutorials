@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 完整指南：如何使用 GroupDocs.Annotation for Java 保存带注释的 PDF
+title: 完整指南 - 如何使用 GroupDocs.Annotation for Java 保存带注释的 PDF
 type: docs
 url: /zh/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1

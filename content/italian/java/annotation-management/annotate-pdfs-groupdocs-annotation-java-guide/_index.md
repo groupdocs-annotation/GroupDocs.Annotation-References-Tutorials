@@ -567,13 +567,7 @@ R: Imposta proprietà come `setOpacity`, `setRotation` e `setBackgroundColor` su
 R: Assolutamente. Puoi leggere i dati dei commenti da qualsiasi fonte, popolare un `AreaAnnotation` (o `TextAnnotation`) con il testo del commento e aggiungerlo al documento.
 
 **D: Cosa fare se si verifica una perdita di memoria durante l'elaborazione batch?**  
-R: Assicurati che ogni `Annotator` sia chiuso (try‑with‑resources), monitora l'heap JVM e considera di elaborare i documenti in batch più piccoli.
-
----
-
-**Ultimo Aggiornamento:** 2025-12-17  
-**Testato Con:** GroupDocs.Annotation 25.2 per Java  
-**Autore:** GroupDocs  
+R: Assicurati che ogni `Annotator` sia chiuso (try‑with‑resources), monitora l'heap JVM e considera di elaborare i documenti in batch più piccoli.  
 
 **Risorse Aggiuntive**  
 - [Documentazione GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ R: Assicurati che ogni `Annotator` sia chiuso (try‑with‑resources), monitora
 - [Accesso Prova Gratuita](https://releases.groupdocs.com/annotation/java/)  
 - [Licenza Temporanea](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum di Supporto](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Ultimo Aggiornamento:** 2025-12-17  
+**Testato Con:** GroupDocs.Annotation 25.2 per Java  
+**Autore:** GroupDocs

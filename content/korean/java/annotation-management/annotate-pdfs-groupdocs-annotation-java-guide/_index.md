@@ -568,11 +568,6 @@ A: 물론입니다. 어떤 소스에서든 댓글 데이터를 읽어 `AreaAnnot
 **Q: 배치 처리 중 메모리 누수가 발생하면 어떻게 해야 하나요?**  
 A: 모든 `Annotator`를 닫고(try‑with‑resources 사용), JVM 힙을 모니터링하며, 문서를 더 작은 배치로 처리하는 것을 고려하세요.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs  
 
 **추가 리소스**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -582,3 +577,9 @@ A: 모든 `Annotator`를 닫고(try‑with‑resources 사용), JVM 힙을 모�
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  

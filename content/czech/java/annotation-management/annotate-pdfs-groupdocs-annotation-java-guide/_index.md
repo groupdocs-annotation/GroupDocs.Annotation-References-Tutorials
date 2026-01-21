@@ -569,12 +569,6 @@ A: Rozhodně. Můžete načíst data komentářů z libovolného zdroje, naplnit
 **Q: Co dělat, když během dávkového zpracování narazím na únik paměti?**  
 A: Ujistěte se, že každý `Annotator` je uzavřen (try‑with‑resources), monitorujte heap JVM a zvažte zpracování dokumentů v menších dávkách.
 
----
-
-**Poslední aktualizace:** 2025-12-17  
-**Testováno s:** GroupDocs.Annotation 25.2 for Java  
-**Autor:** GroupDocs  
-
 **Další zdroje**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ A: Ujistěte se, že každý `Annotator` je uzavřen (try‑with‑resources), m
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Poslední aktualizace:** 2025-12-17  
+**Testováno s:** GroupDocs.Annotation 25.2 for Java  
+**Autor:** GroupDocs  

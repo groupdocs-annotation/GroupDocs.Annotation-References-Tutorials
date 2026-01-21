@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Kompletní průvodce: Jak uložit anotovaný PDF pomocí GroupDocs.Annotation pro
+title: 'Kompletní průvodce - Jak uložit anotovaný PDF pomocí GroupDocs.Annotation pro
   Javu'
 type: docs
 url: /cs/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/

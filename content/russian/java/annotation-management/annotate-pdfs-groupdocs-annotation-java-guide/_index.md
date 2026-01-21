@@ -569,10 +569,6 @@ public class DocumentAnnotationService {
 **В: Что делать, если возникла утечка памяти при пакетной обработке?**  
 О: Убедитесь, что каждый `Annotator` закрыт (try‑with‑resources), мониторьте кучу JVM и рассмотрите обработку документов небольшими партиями.
 
-**Последнее обновление:** 2025-12-17  
-**Тестировано с:** GroupDocs.Annotation 25.2 for Java  
-**Автор:** GroupDocs  
-
 **Дополнительные ресурсы**  
 - [Документация GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Руководство по API](https://reference.groupdocs.com/annotation/java/)  
@@ -581,3 +577,7 @@ public class DocumentAnnotationService {
 - [Доступ к бесплатной пробной версии](https://releases.groupdocs.com/annotation/java/)  
 - [Временная лицензия](https://purchase.groupdocs.com/temporary-license/)  
 - [Форум поддержки](https://forum.groupdocs.com/c/annotation/)
+
+**Последнее обновление:** 2025-12-17  
+**Тестировано с:** GroupDocs.Annotation 25.2 for Java  
+**Автор:** GroupDocs  

@@ -569,12 +569,6 @@ C: Kesinlikle. Herhangi bir kaynaktan yorum verisini okuyup bir `AreaAnnotation`
 **S: Toplu işleme sırasında bellek sızıntısı alırsam ne yapmalıyım?**  
 C: Her `Annotator`ı try‑with‑resources ile kapatın, JVM heap’i izleyin ve belgeleri daha küçük partiler halinde işleyin.
 
----
-
-**Son Güncelleme:** 2025-12-17  
-**Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
-**Yazar:** GroupDocs  
-
 **Ek Kaynaklar**  
 - [GroupDocs.Annotation Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)  
 - [API Referans Kılavuzu](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ C: Her `Annotator`ı try‑with‑resources ile kapatın, JVM heap’i izleyin v
 - [Ücretsiz Deneme Erişimi](https://releases.groupdocs.com/annotation/java/)  
 - [Geçici Lisans](https://purchase.groupdocs.com/temporary-license/)  
 - [Destek Forumları](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Son Güncelleme:** 2025-12-17  
+**Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
+**Yazar:** GroupDocs  

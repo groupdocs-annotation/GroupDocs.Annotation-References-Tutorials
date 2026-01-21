@@ -1,5 +1,5 @@
 ---
-title: "Complete Guide: How to Save Annotated PDF with GroupDocs.Annotation for Java"
+title: "Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java"
 description: "Learn how to save annotated PDF files using GroupDocs.Annotation for Java. This tutorial covers Maven dependency GroupDocs, initialize Annotator Java, add multiple annotations, and annotation best practices Java."
 date: "2025-12-17"
 weight: 1

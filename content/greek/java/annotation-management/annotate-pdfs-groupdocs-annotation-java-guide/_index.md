@@ -573,10 +573,6 @@ public class DocumentAnnotationService {
 **Μ: Τι πρέπει να κάνω αν αντιμετωπίσω διαρροή μνήμης κατά την επεξεργασία σε παρτίδες;**  
 **Α:** Βεβαιωθείτε ότι κάθε `Annotator` κλείνει (try‑with‑resources), παρακολουθήστε το heap της JVM και εξετάστε την επεξεργασία εγγράφων σε μικρότερες παρτίδες.
 
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - [Τεκμηρίωση GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Οδηγός Αναφοράς API](https://reference.groupdocs.com/annotation/java/)  
@@ -585,3 +581,7 @@ public class DocumentAnnotationService {
 - [Πρόσβαση Δωρεάν Δοκιμής](https://releases.groupdocs.com/annotation/java/)  
 - [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license/)  
 - [Φόρουμ Υποστήριξης](https://forum.groupdocs.com/c/annotation/)
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  

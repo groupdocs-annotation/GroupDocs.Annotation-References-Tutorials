@@ -567,12 +567,6 @@ A: बिल्कुल। आप किसी भी स्रोत से �
 **Q: बैच प्रोसेसिंग के दौरान मेमोरी लीक्स का सामना करने पर क्या करें?**  
 A: प्रत्येक `Annotator` को `try‑with‑resources` से बंद करें, JVM हीप मॉनिटर करें, और डॉक्यूमेंट्स को छोटे बैच में प्रोसेस करने पर विचार करें।
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
@@ -581,3 +575,9 @@ A: प्रत्येक `Annotator` को `try‑with‑resources` से �
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  

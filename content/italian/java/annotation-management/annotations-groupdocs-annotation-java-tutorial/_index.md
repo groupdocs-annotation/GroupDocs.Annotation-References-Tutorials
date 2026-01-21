@@ -8,7 +8,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Guida completa: come salvare PDF annotato con GroupDocs.Annotation per Java'
+title: 'Guida completa - come salvare PDF annotato con GroupDocs.Annotation per Java'
 type: docs
 url: /it/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1

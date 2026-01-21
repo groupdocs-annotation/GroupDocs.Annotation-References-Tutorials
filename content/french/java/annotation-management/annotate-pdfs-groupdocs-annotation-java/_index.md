@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-management
-title: 'Tutoriel Java : Ajouter une annotation PDF'
+title: 'Tutoriel Java - Ajouter une annotation PDF'
 type: docs
 url: /fr/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1

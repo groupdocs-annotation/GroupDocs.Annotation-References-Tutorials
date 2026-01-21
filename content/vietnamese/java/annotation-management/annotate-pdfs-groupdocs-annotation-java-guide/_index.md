@@ -567,13 +567,7 @@ public class DocumentAnnotationService {
 Đáp: Chắc chắn. Bạn có thể đọc dữ liệu bình luận từ bất kỳ nguồn nào, gán vào `AreaAnnotation` (hoặc `TextAnnotation`) và thêm vào tài liệu.
 
 **Hỏi: Nếu gặp rò rỉ bộ nhớ trong quá trình batch processing, nên làm gì?**  
-Đáp: Đảm bảo mọi `Annotator` đều được đóng (try‑with‑resources), giám sát heap JVM, và cân nhắc xử lý tài liệu theo các batch nhỏ hơn.
-
----
-
-**Cập Nhật Cuối Cùng:** 2025-12-17  
-**Đã Kiểm Tra Với:** GroupDocs.Annotation 25.2 cho Java  
-**Tác Giả:** GroupDocs  
+Đáp: Đảm bảo mọi `Annotator` đều được đóng (try‑with‑resources), giám sát heap JVM, và cân nhắc xử lý tài liệu theo các batch nhỏ hơn.  
 
 **Tài Nguyên Bổ Sung**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ public class DocumentAnnotationService {
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Cập Nhật Cuối Cùng:** 2025-12-17  
+**Đã Kiểm Tra Với:** GroupDocs.Annotation 25.2 cho Java  
+**Tác Giả:** GroupDocs

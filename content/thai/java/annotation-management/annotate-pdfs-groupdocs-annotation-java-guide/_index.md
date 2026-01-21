@@ -568,12 +568,6 @@ A: แน่นอน คุณสามารถอ่านข้อมูล�
 **Q: ควรทำอย่างไรหากพบการรั่วหน่วยความจำระหว่างการประมวลผลเป็นชุด?**  
 A: ตรวจสอบให้ทุก `Annotator` ถูกปิด (try‑with‑resources), ตรวจสอบ heap ของ JVM, และพิจารณาประมวลผลเป็นชุดย่อย ๆ
 
----
-
-**อัปเดตล่าสุด:** 2025-12-17  
-**ทดสอบกับ:** GroupDocs.Annotation 25.2 for Java  
-**ผู้เขียน:** GroupDocs  
-
 **แหล่งข้อมูลเพิ่มเติม**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
@@ -582,3 +576,9 @@ A: ตรวจสอบให้ทุก `Annotator` ถูกปิด (try�
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**อัปเดตล่าสุด:** 2025-12-17  
+**ทดสอบกับ:** GroupDocs.Annotation 25.2 for Java  
+**ผู้เขียน:** GroupDocs  

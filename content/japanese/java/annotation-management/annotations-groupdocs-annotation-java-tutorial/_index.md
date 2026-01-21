@@ -6,7 +6,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 完全ガイド：GroupDocs.Annotation for Javaで注釈付きPDFを保存する方法
+title: 完全ガイド - GroupDocs.Annotation for Javaで注釈付きPDFを保存する方法
 type: docs
 url: /ja/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1

@@ -559,12 +559,6 @@ A: Absolutely. You can read comment data from any source, populate an `AreaAnnot
 **Q: What should I do if I encounter a memory leak during batch processing?**  
 A: Ensure every `Annotator` is closed (try‑with‑resources), monitor JVM heap, and consider processing documents in smaller batches.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
@@ -573,5 +567,11 @@ A: Ensure every `Annotator` is closed (try‑with‑resources), monitor JVM heap
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)  
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  
 
 ---

@@ -8,7 +8,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Πλήρης Οδηγός: Πώς να Αποθηκεύσετε ένα Σχολιασμένο PDF με το GroupDocs.Annotation
+title: 'Πλήρης Οδηγός - Πώς να Αποθηκεύσετε ένα Σχολιασμένο PDF με το GroupDocs.Annotation
   για Java'
 type: docs
 url: /el/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/

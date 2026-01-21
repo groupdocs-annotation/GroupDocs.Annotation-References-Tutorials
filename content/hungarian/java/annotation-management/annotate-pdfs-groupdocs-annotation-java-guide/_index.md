@@ -567,12 +567,6 @@ A: Teljesen.
 **Q: Mit tegyek, ha memória szivárgást észlelek kötegelt feldolgozás során?**  
 A: Győződj meg róla, hogy minden `Annotator` le van zárva (try‑with‑resources), figyeld a JVM heap‑et, és fontold meg a dokumentumok kisebb kötegekben történő feldolgozását.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs  
-
 **További források**  
 - [GroupDocs.Annotation dokumentáció](https://docs.groupdocs.com/annotation/java/)  
 - [API referencia útmutató](https://reference.groupdocs.com/annotation/java/)  
@@ -581,3 +575,9 @@ A: Győződj meg róla, hogy minden `Annotator` le van zárva (try‑with‑reso
 - [Ingyenes próba hozzáférés](https://releases.groupdocs.com/annotation/java/)  
 - [Ideiglenes licenc](https://purchase.groupdocs.com/temporary-license/)  
 - [Támogatási fórum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  

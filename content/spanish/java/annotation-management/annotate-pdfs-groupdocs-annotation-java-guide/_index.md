@@ -569,12 +569,6 @@ R: Absolutamente. Puedes leer datos de comentarios de cualquier origen, poblar u
 **P: ¿Qué debo hacer si encuentro una fuga de memoria durante el procesamiento por lotes?**  
 R: Asegúrate de cerrar cada `Annotator` (try‑with‑resources), monitorea el heap de la JVM y considera procesar los documentos en lotes más pequeños.
 
----
-
-**Última actualización:** 2025-12-17  
-**Probado con:** GroupDocs.Annotation 25.2 para Java  
-**Autor:** GroupDocs  
-
 **Recursos adicionales**  
 - [Documentación de GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Guía de referencia API](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ R: Asegúrate de cerrar cada `Annotator` (try‑with‑resources), monitorea el 
 - [Acceso a prueba gratuita](https://releases.groupdocs.com/annotation/java/)  
 - [Licencia temporal](https://purchase.groupdocs.com/temporary-license/)  
 - [Foro de soporte](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Última actualización:** 2025-12-17  
+**Probado con:** GroupDocs.Annotation 25.2 para Java  
+**Autor:** GroupDocs  

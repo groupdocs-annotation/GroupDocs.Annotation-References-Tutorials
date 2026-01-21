@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-management
-title: 'Hướng dẫn Java: Thêm chú thích PDF'
+title: 'Hướng dẫn Java - Thêm chú thích PDF'
 type: docs
 url: /vi/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1

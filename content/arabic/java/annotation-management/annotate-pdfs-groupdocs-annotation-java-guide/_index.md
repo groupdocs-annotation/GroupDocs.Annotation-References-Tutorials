@@ -568,12 +568,6 @@ public class DocumentAnnotationService {
 **س: ماذا أفعل إذا واجهت تسرب ذاكرة أثناء المعالجة الدفعية؟**  
 ج: تأكد من إغلاق كل `Annotator` (باستخدام `try‑with‑resources`)، راقب كومة JVM، وفكّر في معالجة المستندات على دفعات أصغر.
 
----
-
-**آخر تحديث:** 2025-12-17  
-**تم الاختبار مع:** GroupDocs.Annotation 25.2 للـ Java  
-**المؤلف:** GroupDocs  
-
 **موارد إضافية**  
 - [توثيق GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [دليل مرجع API](https://reference.groupdocs.com/annotation/java/)  
@@ -582,3 +576,9 @@ public class DocumentAnnotationService {
 - [الوصول إلى النسخة التجريبية المجانية](https://releases.groupdocs.com/annotation/java/)  
 - [ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/)  
 - [منتدى الدعم](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**آخر تحديث:** 2025-12-17  
+**تم الاختبار مع:** GroupDocs.Annotation 25.2 للـ Java  
+**المؤلف:** GroupDocs  

@@ -567,13 +567,7 @@ A: Ställ in egenskaper som `setOpacity`, `setRotation` och `setBackgroundColor`
 A: Absolut. Du kan läsa kommentarsdata från vilken källa som helst, fylla en `AreaAnnotation` (eller `TextAnnotation`) med kommentartexten och sedan lägga till den i dokumentet.
 
 **Q: Vad ska jag göra om jag stöter på ett minnesläckage under batch‑bearbetning?**  
-A: Säkerställ att varje `Annotator` stängs (try‑with‑resources), övervaka JVM‑heapen och överväg att bearbeta dokument i mindre batcher.
-
----
-
-**Senast uppdaterad:** 2025-12-17  
-**Testad med:** GroupDocs.Annotation 25.2 för Java  
-**Författare:** GroupDocs  
+A: Säkerställ att varje `Annotator` stängs (try‑with‑resources), övervaka JVM‑heapen och överväg att bearbeta dokument i mindre batcher.  
 
 **Ytterligare resurser**  
 - [GroupDocs.Annotation‑dokumentation](https://docs.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ A: Säkerställ att varje `Annotator` stängs (try‑with‑resources), övervak
 - [Gratis provåtkomst](https://releases.groupdocs.com/annotation/java/)  
 - [Tillfällig licens](https://purchase.groupdocs.com/temporary-license/)  
 - [Supportforum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Senast uppdaterad:** 2025-12-17  
+**Testad med:** GroupDocs.Annotation 25.2 för Java  
+**Författare:** GroupDocs

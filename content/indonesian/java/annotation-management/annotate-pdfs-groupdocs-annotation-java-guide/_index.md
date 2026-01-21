@@ -569,12 +569,6 @@ J: Tentu. Anda dapat membaca data komentar dari sumber apa pun, mengisi `AreaAnn
 **T: Apa yang harus saya lakukan jika menemukan kebocoran memori selama pemrosesan batch?**  
 J: Pastikan setiap `Annotator` ditutup (try‑with‑resources), pantau heap JVM, dan pertimbangkan memproses dokumen dalam batch yang lebih kecil.
 
----
-
-**Terakhir Diperbarui:** 2025-12-17  
-**Diuji Dengan:** GroupDocs.Annotation 25.2 untuk Java  
-**Penulis:** GroupDocs  
-
 **Sumber Daya Tambahan**  
 - [Dokumentasi GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Panduan Referensi API](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ J: Pastikan setiap `Annotator` ditutup (try‑with‑resources), pantau heap JVM
 - [Akses Percobaan Gratis](https://releases.groupdocs.com/annotation/java/)  
 - [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum Dukungan](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Terakhir Diperbarui:** 2025-12-17  
+**Diuji Dengan:** GroupDocs.Annotation 25.2 untuk Java  
+**Penulis:** GroupDocs  

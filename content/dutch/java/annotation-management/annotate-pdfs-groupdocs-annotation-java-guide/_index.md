@@ -569,12 +569,6 @@ A: Absoluut. Je kunt commentaar‑data uit elke bron lezen, een `AreaAnnotation`
 **Q: Wat moet ik doen als ik een geheugen‑lek tegenkom tijdens batchverwerking?**  
 A: Zorg dat elke `Annotator` wordt gesloten (try‑with‑resources), monitor de JVM‑heap en overweeg documenten in kleinere batches te verwerken.
 
----
-
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs  
-
 **Aanvullende bronnen**  
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ A: Zorg dat elke `Annotator` wordt gesloten (try‑with‑resources), monitor de
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-17  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  

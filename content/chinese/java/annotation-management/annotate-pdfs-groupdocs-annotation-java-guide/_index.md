@@ -567,12 +567,6 @@ A: 完全支持。你可以从任意数据源读取评论数据，填充 `AreaAn
 **Q: 批量处理时出现内存泄漏该怎么办？**  
 A: 确保每个 `Annotator` 都已关闭（使用 try‑with‑resources），监控 JVM 堆内存，并考虑将文档分成更小的批次处理。
 
----
-
-**最后更新：** 2025-12-17  
-**测试环境：** GroupDocs.Annotation 25.2 for Java  
-**作者：** GroupDocs  
-
 **附加资源**  
 - [GroupDocs.Annotation 文档](https://docs.groupdocs.com/annotation/java/)  
 - [API 参考指南](https://reference.groupdocs.com/annotation/java/)  
@@ -581,3 +575,9 @@ A: 确保每个 `Annotator` 都已关闭（使用 try‑with‑resources），�
 - [免费试用入口](https://releases.groupdocs.com/annotation/java/)  
 - [临时许可证获取](https://purchase.groupdocs.com/temporary-license/)  
 - [支持论坛](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最后更新：** 2025-12-17  
+**测试环境：** GroupDocs.Annotation 25.2 for Java  
+**作者：** GroupDocs  

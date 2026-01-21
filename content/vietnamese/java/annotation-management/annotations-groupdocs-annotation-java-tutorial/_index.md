@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Hướng Dẫn Toàn Diện: Cách Lưu PDF Được Ghi Chú với GroupDocs.Annotation cho
+title: 'Hướng Dẫn Toàn Diện - Cách Lưu PDF Được Ghi Chú với GroupDocs.Annotation cho
   Java'
 type: docs
 url: /vi/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/

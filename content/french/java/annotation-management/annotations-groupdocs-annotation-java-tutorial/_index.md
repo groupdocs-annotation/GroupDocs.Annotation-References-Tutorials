@@ -8,7 +8,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Guide complet : comment enregistrer un PDF annoté avec GroupDocs.Annotation
+title: 'Guide complet - comment enregistrer un PDF annoté avec GroupDocs.Annotation
   pour Java'
 type: docs
 url: /fr/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/

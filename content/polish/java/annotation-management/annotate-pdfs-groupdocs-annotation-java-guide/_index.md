@@ -569,12 +569,6 @@ O: Oczywiście. Możesz odczytać dane komentarzy z dowolnego źródła, wypełn
 **P: Co zrobić, gdy napotkam wyciek pamięci podczas przetwarzania wsadowego?**  
 O: Upewnij się, że każdy `Annotator` jest zamykany (try‑with‑resources), monitoruj stertę JVM i rozważ przetwarzanie dokumentów w mniejszych partiach.
 
----
-
-**Ostatnia aktualizacja:** 2025-12-17  
-**Testowane z:** GroupDocs.Annotation 25.2 for Java  
-**Autor:** GroupDocs  
-
 **Dodatkowe zasoby**  
 - [Dokumentacja GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Przewodnik po API](https://reference.groupdocs.com/annotation/java/)  
@@ -583,3 +577,9 @@ O: Upewnij się, że każdy `Annotator` jest zamykany (try‑with‑resources), 
 - [Dostęp do wersji próbnej](https://releases.groupdocs.com/annotation/java/)  
 - [Licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum wsparcia](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Ostatnia aktualizacja:** 2025-12-17  
+**Testowane z:** GroupDocs.Annotation 25.2 for Java  
+**Autor:** GroupDocs  

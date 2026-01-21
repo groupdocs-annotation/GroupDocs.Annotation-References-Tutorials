@@ -567,12 +567,6 @@ A: 完全可以。從任意來源讀取評論資料，填入 `AreaAnnotation`（
 **Q: 若在批次處理時遇到記憶體泄漏該怎麼辦？**  
 A: 確保每個 `Annotator` 都在 `try‑with‑resources` 中關閉，監控 JVM 堆積使用情況，並將批次切分為較小的單位。
 
----
-
-**最後更新日期：** 2025-12-17  
-**測試環境：** GroupDocs.Annotation 25.2 for Java  
-**作者：** GroupDocs  
-
 **其他資源**  
 - [GroupDocs.Annotation 文件說明](https://docs.groupdocs.com/annotation/java/)  
 - [API 參考指南](https://reference.groupdocs.com/annotation/java/)  
@@ -581,3 +575,9 @@ A: 確保每個 `Annotator` 都在 `try‑with‑resources` 中關閉，監控 J
 - [免費試用入口](https://releases.groupdocs.com/annotation/java/)  
 - [臨時授權取得](https://purchase.groupdocs.com/temporary-license/)  
 - [支援論壇](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最後更新日期：** 2025-12-17  
+**測試環境：** GroupDocs.Annotation 25.2 for Java  
+**作者：** GroupDocs  

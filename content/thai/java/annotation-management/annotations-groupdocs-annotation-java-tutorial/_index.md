@@ -8,7 +8,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'คู่มือฉบับสมบูรณ์: วิธีบันทึก PDF ที่มีการทำหมายเหตุด้วย GroupDocs.Annotation
+title: 'คู่มือฉบับสมบูรณ์ - วิธีบันทึก PDF ที่มีการทำหมายเหตุด้วย GroupDocs.Annotation
   สำหรับ Java'
 type: docs
 url: /th/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/

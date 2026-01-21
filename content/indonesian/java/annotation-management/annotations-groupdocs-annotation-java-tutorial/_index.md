@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Panduan Lengkap: Cara Menyimpan PDF yang Diberi Anotasi dengan GroupDocs.Annotation
+title: 'Panduan Lengkap - Cara Menyimpan PDF yang Diberi Anotasi dengan GroupDocs.Annotation
   untuk Java'
 type: docs
 url: /id/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/

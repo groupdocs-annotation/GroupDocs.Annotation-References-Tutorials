@@ -7,7 +7,7 @@ keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Kompletny przewodnik: jak zapisać oznaczony PDF przy użyciu GroupDocs.Annotation
+title: 'Kompletny przewodnik - jak zapisać oznaczony PDF przy użyciu GroupDocs.Annotation
   dla Javy'
 type: docs
 url: /pl/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
