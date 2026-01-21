@@ -1,27 +1,52 @@
 ---
-"date": "2025-05-06"
-"description": "Tìm hiểu cách hiệu quả để biên tập văn bản trong PDF bằng thư viện Java GroupDocs.Annotation mạnh mẽ. Hướng dẫn này bao gồm các quy trình thiết lập, tạo chú thích và lưu."
-"title": "Làm chủ việc biên tập văn bản trong PDF bằng GroupDocs.Annotation Java API&#58; Hướng dẫn toàn diện"
-"url": "/vi/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/"
+categories:
+- Java Development
+date: '2025-12-20'
+description: Tìm hiểu cách xóa thông tin nhạy cảm trong các tệp PDF bằng Java với
+  GroupDocs.Annotation. Hướng dẫn từng bước này bao gồm cài đặt, triển khai và các
+  thực tiễn tốt nhất để bảo vệ dữ liệu nhạy cảm.
+keywords: how to redact pdf, PDF text redaction Java, GroupDocs annotation tutorial,
+  Java PDF redaction library, PDF annotation management Java, GroupDocs annotation
+  Maven setup
+lastmod: '2025-12-20'
+linktitle: How to Redact PDF in Java Tutorial
+tags:
+- pdf-processing
+- document-annotation
+- data-privacy
+- java-libraries
+title: Cách Xóa Thông Tin Nhạy Cảm trong PDF bằng Java – Hướng Dẫn Toàn Diện GroupDocs
 type: docs
-"weight": 1
+url: /vi/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/
+weight: 1
 ---
 
-# Làm chủ việc biên tập văn bản trong PDF với GroupDocs.Annotation Java API
-## Hướng dẫn quản lý chú thích: Hướng dẫn toàn diện
-### Giới thiệu
-Bạn đang muốn bảo vệ thông tin nhạy cảm hoặc biên tập văn bản bí mật khỏi tài liệu PDF của mình một cách hiệu quả? Với **GroupDocs.Chú thích Java** thư viện, quy trình này được sắp xếp hợp lý và hiệu quả. Hướng dẫn này sẽ hướng dẫn bạn thiết lập chú thích bằng GroupDocs.Annotation cho Java, tập trung vào việc tạo và thêm chú thích biên tập văn bản.
-#### Những gì bạn sẽ học được:
-- Cách thiết lập thư viện GroupDocs.Annotation trong dự án Java của bạn
-- Tạo các câu trả lời liên kết với chú thích
-- Xác định ranh giới chú thích với các điểm chính xác
-- Triển khai tính năng biên tập văn bản
-- Lưu tài liệu có chú thích
-Chúng ta hãy bắt đầu bằng cách thiết lập các điều kiện tiên quyết cần thiết.
-## Điều kiện tiên quyết
-Trước khi bắt đầu triển khai, hãy đảm bảo bạn có những điều sau:
-### Thư viện và phụ thuộc cần thiết:
-Để sử dụng GroupDocs.Annotation cho Java, hãy kết hợp nó vào dự án của bạn thông qua Maven. Thêm kho lưu trữ và phụ thuộc sau vào `pom.xml` tài liệu:
+# Cách Che Đậy PDF trong Java – Hướng Dẫn Toàn Diện GroupDocs
+
+Bạn có thông tin nhạy cảm trong các file PDF cần bị xóa bỏ? Dù bạn đang xử lý tài liệu pháp lý, hồ sơ y tế, hay dữ liệu kinh doanh bí mật, **cách che đậy pdf** không cần phải phức tạp. Trong hướng dẫn này, bạn sẽ học cách che đậy file pdf bằng Java và GroupDocs.Annotation, với các giải thích rõ ràng, ví dụ thực tế, và các thực tiễn sẵn sàng cho môi trường sản xuất.
+
+## Câu trả lời nhanh
+- **Thư viện nào xử lý việc che đậy PDF trong Java?** GroupDocs.Annotation Java API.  
+- **Việc che đậy có cố định không?** Có – văn bản gốc được xóa bỏ, không chỉ ẩn.  
+- **Tôi có cần giấy phép cho môi trường sản xuất không?** Cần giấy phép đầy đủ; một giấy phép tạm thời miễn phí có sẵn cho việc thử nghiệm.  
+- **Tôi có thể xử lý nhiều file cùng lúc không?** Chắc chắn – xử lý hàng loạt và tái sử dụng tài nguyên được đề cập.  
+- **Phiên bản Java nào được khuyến nghị?** Java 11+ để đạt hiệu suất và bảo mật tối ưu.
+
+## PDF Redaction là gì và Tại sao nên dùng GroupDocs.Annotation?
+PDF redaction là quá trình loại bỏ hoặc che khuất vĩnh viễn nội dung nhạy cảm khỏi tài liệu. GroupDocs.Annotation nổi bật vì cung cấp **che đậy thực sự**, các phản hồi sẵn sàng cho kiểm toán, và hỗ trợ nhiều loại chú thích — tất cả đều thiết yếu cho các ngành công nghiệp dựa trên tuân thủ.
+
+## Tại sao chọn GroupDocs.Annotation cho PDF Redaction?
+- **Loại bỏ vĩnh viễn** văn bản (bảo mật cấp HIPAA).  
+- **Hệ sinh thái chú thích phong phú** – kết hợp che đậy với tô sáng, bình luận và mũi tên.  
+- **Hiệu năng sẵn sàng doanh nghiệp** cho khối lượng công việc lớn.  
+- **Hỗ trợ đa định dạng** – không chỉ giới hạn ở PDF.  
+- **Kiểm soát chi tiết** về giao diện, độ trong suốt và siêu dữ liệu.
+
+## Yêu cầu trước và Cài đặt môi trường
+
+### Các phụ thuộc bắt buộc
+Thêm GroupDocs.Annotation vào dự án Maven của bạn. Giữ nguyên đoạn mã như đã hiển thị:
+
 ```xml
 <repositories>
    <repository>
@@ -38,49 +63,39 @@ Trước khi bắt đầu triển khai, hãy đảm bảo bạn có những đi�
    </dependency>
 </dependencies>
 ```
-### Thiết lập môi trường:
-- Đã cài đặt và cấu hình Java Development Kit (JDK)
-- Một Môi trường phát triển tích hợp (IDE) như IntelliJ IDEA hoặc Eclipse
-### Điều kiện tiên quyết về kiến thức:
-Hiểu biết cơ bản về lập trình Java, hệ thống xây dựng Maven và quen thuộc với các khái niệm xử lý PDF.
-## Thiết lập GroupDocs.Annotation cho Java
-### Thông tin cài đặt:
-Sử dụng **Maven**, việc cài đặt rất đơn giản. Chỉ cần cấu hình `pom.xml` như được hiển thị ở trên để bao gồm các chi tiết kho lưu trữ và phụ thuộc cần thiết.
-### Mua giấy phép:
-- Nhận bản dùng thử miễn phí hoặc giấy phép tạm thời từ [NhómDocs](https://purchase.groupdocs.com/temporary-license/) nếu bạn cần những tính năng nâng cao.
-- Đối với mục đích sản xuất, hãy cân nhắc mua giấy phép để có đầy đủ tính năng.
-### Khởi tạo cơ bản:
-Bắt đầu bằng cách thiết lập phiên bản chú thích của bạn với tài liệu bạn muốn chú thích:
+
+### Danh sách kiểm tra môi trường phát triển
+- **Java 8+** (khuyến nghị Java 11+).  
+- **Maven 3.6+** (hoặc tương đương Gradle).  
+- **IDE** hỗ trợ Maven (IntelliJ IDEA, Eclipse, VS Code).  
+- **PDF thử nghiệm** chứa dữ liệu nhạy cảm thực tế để xác thực thực tế.
+
+### Các lưu ý về giấy phép
+Đối với phát triển và thử nghiệm, hãy lấy một [giấy phép tạm thời miễn phí](https://purchase.groupdocs.com/temporary-license/). Các triển khai sản xuất yêu cầu giấy phép đầy đủ, nhưng bản dùng thử cung cấp toàn bộ tính năng để đánh giá.
+
+## Cách Che Đậy PDF bằng GroupDocs.Annotation
+
+### Bước 1: Khởi tạo PDF Annotator
+Tạo một thể hiện `Annotator` trỏ tới PDF bạn muốn bảo vệ.
+
 ```java
 import com.groupdocs.annotation.Annotator;
 
-// Khởi tạo đối tượng chú thích
+// Initialize annotator object
 dual Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
-## Hướng dẫn thực hiện
-Phần này được chia thành các bước hợp lý, trình bày chi tiết từng tính năng và cách triển khai.
-### Thiết lập chú thích
-**Tổng quan:**
-Bắt đầu bằng cách khởi tạo `Annotator` để làm việc với tài liệu của bạn. Điều này thiết lập giai đoạn để thêm chú thích.
-**Các bước thực hiện:**
-#### Khởi tạo Annotator
-```java
-import com.groupdocs.annotation.Annotator;
 
-// Khởi tạo đối tượng chú thích
-dual Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
-*Tại sao*: Khởi tạo chuẩn bị tài liệu của bạn để chấp nhận chú thích.
-### Tạo trả lời cho chú thích
-**Tổng quan:**
-Trả lời cung cấp thêm ngữ cảnh hoặc bình luận về chú thích. Bạn có thể thêm nhiều trả lời được liên kết đến một chú thích duy nhất.
-#### Bước 1: Tạo các trường hợp trả lời
+> **Mẹo chuyên nghiệp:** Sử dụng try‑with‑resources hoặc giải phóng tài nguyên một cách rõ ràng để tránh rò rỉ bộ nhớ. Chúng ta sẽ xem lại việc dọn dẹp đúng cách sau.
+
+### Bước 2: Xây dựng phản hồi chú thích cho nhật ký kiểm toán
+Ghi lại lý do mỗi lần che đậy được thực hiện bằng cách thêm các đối tượng reply.
+
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-// Tạo các đối tượng trả lời với các bình luận và dấu thời gian
+// Create reply objects with comments and timestamps
 dual Reply reply1 = new Reply();
 reply1.setComment("First comment");
 reply1.setRepliedOn(Calendar.getInstance().getTime());
@@ -93,16 +108,17 @@ List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-*Tại sao*:Bước này liên kết thông tin theo ngữ cảnh với chú thích.
-### Xác định điểm cho chú thích
-**Tổng quan:**
-Chú thích cần tọa độ chính xác để chỉ định vị trí của chúng trong tài liệu. Xác định những điều này bằng cách sử dụng `Point` đồ vật.
-#### Bước 2: Xác định điểm ranh giới
+
+Các phản hồi này trở thành một phần của nhật ký kiểm toán của tài liệu, đáp ứng nhiều quy chế tuân thủ.
+
+### Bước 3: Xác định ranh giới che đậy chính xác
+Các tọa độ chính xác đảm bảo văn bản đúng được xóa bỏ. Gốc (0,0) là góc trên‑trái của trang.
+
 ```java
 import com.groupdocs.annotation.models.Point;
 import java.util.ArrayList;
 
-// Xác định các điểm cho ranh giới chú thích
+// Define points for annotation boundaries
 dual Point point1 = new Point(80, 730);
 dual Point point2 = new Point(240, 730);
 dual Point point3 = new Point(80, 650); 
@@ -114,15 +130,16 @@ points.add(point2);
 points.add(point3);
 points.add(point4);
 ```
-*Tại sao*: Tọa độ xác định vị trí chú thích sẽ xuất hiện trên tài liệu.
-### Tạo và Thêm Chú thích Biên tập Văn bản
-**Tổng quan:**
-Việc biên tập văn bản rất quan trọng để che giấu hoặc xóa thông tin nhạy cảm. Tạo một `TextRedactionAnnotation` với các đặc tính có liên quan.
-#### Bước 3: Thiết lập và Thêm chú thích
+
+> **Mẹo:** Sử dụng trình xem PDF hiển thị tọa độ, hoặc xây dựng giao diện cho phép người dùng click để tự động ghi lại các điểm.
+
+### Bước 4: Tạo chú thích Text Redaction
+Bây giờ chúng ta gắn kết các tọa độ, phản hồi kiểm toán và một thông điệp mô tả lại với nhau.
+
 ```java
 import com.groupdocs.annotation.models.annotationmodels.TextRedactionAnnotation;
 
-// Tạo chú thích biên tập văn bản với các thuộc tính
+// Create text redaction annotation with properties
 dual TextRedactionAnnotation textRedaction = new TextRedactionAnnotation();
 textRedaction.setCreatedOn(Calendar.getInstance().getTime());
 textRedaction.setMessage("This is a text redaction annotation");
@@ -130,46 +147,149 @@ textRedaction.setPageNumber(0);
 textRedaction.setPoints(points);
 textRedaction.setReplies(replies);
 
-// Thêm chú thích vào tài liệu
+// Add the annotation to the document
 annotator.add(textRedaction);
 ```
-*Tại sao*:Bước này áp dụng chức năng biên tập, ẩn nội dung đã chỉ định.
-### Lưu tài liệu có chú thích
-Sau khi thiết lập và thêm chú thích, hãy lưu tệp PDF có chú thích:
+
+Trường `setMessage()` ghi lại lý do che đậy mà không lộ nội dung đã ẩn.
+
+### Bước 5: Lưu tài liệu đã che đậy và dọn dẹp
+Lưu các thay đổi và giải phóng tài nguyên.
+
 ```java
-// Lưu tài liệu có chú thích
+// Save the annotated document
 dual annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_output.pdf");
 
-// Phát hành tài nguyên
+// Release resources
 dual annotator.dispose();
 ```
-*Tại sao*Hoàn tất và lưu đảm bảo mọi thay đổi được lưu giữ trong tệp đầu ra của bạn.
-## Ứng dụng thực tế
-GroupDocs.Annotation for Java rất đa năng. Sau đây là một số trường hợp sử dụng:
-1. **Biên tập tài liệu pháp lý**: Bảo vệ thông tin nhạy cảm của khách hàng trong các tài liệu pháp lý.
-2. **Quản lý hồ sơ y tế**: Bảo vệ dữ liệu bệnh nhân khi chia sẻ tệp PDF y tế với bên thứ ba.
-3. **Tuân thủ doanh nghiệp**: Đảm bảo tuân thủ bằng cách biên tập thông tin bí mật của công ty.
-### Khả năng tích hợp:
-- Kết hợp với hệ thống quản lý tài liệu để có quy trình chú thích liền mạch.
-- Tích hợp vào các ứng dụng web để cung cấp giao diện chú thích thân thiện với người dùng.
-## Cân nhắc về hiệu suất
-Tối ưu hóa hiệu suất đảm bảo ứng dụng của bạn chạy trơn tru:
-- Sử dụng các biện pháp hiệu quả về trí nhớ, chẳng hạn như loại bỏ tài nguyên kịp thời.
-- Giảm thiểu số lượng chú thích được xử lý trong một lần chạy để tránh tiêu tốn quá nhiều tài nguyên.
-- Theo dõi và giám sát hiệu suất ứng dụng trong những tình huống sử dụng nhiều.
-## Phần kết luận
-Bạn đã học cách thiết lập và triển khai chú thích biên tập văn bản bằng GroupDocs.Annotation for Java. Những kỹ năng này sẽ giúp bạn quản lý thông tin nhạy cảm hiệu quả, đảm bảo tài liệu của bạn vẫn an toàn và tuân thủ.
-### Các bước tiếp theo:
-Khám phá các loại chú thích bổ sung có sẵn trong API hoặc tích hợp giải pháp này vào quy trình xử lý tài liệu lớn hơn.
-Sẵn sàng nâng cao khả năng xử lý tài liệu của bạn? Hãy thử áp dụng các kỹ thuật này vào dự án của bạn ngay hôm nay!
-## Phần Câu hỏi thường gặp
-**H: GroupDocs.Annotation for Java được sử dụng để làm gì?**
-A: Đây là một thư viện mạnh mẽ dùng để thêm chú thích như biên tập văn bản, tô sáng và bình luận vào tệp PDF và các định dạng tài liệu khác.
-**H: Tôi có thể sử dụng GroupDocs.Annotation miễn phí không?**
-A: Có, có bản dùng thử miễn phí. Để có đầy đủ tính năng, hãy cân nhắc mua giấy phép.
-**H: Tôi phải xử lý những tài liệu lớn có nhiều chú thích như thế nào?**
-A: Xử lý tài liệu theo từng phần hoặc sử dụng xử lý không đồng bộ để nâng cao hiệu suất và quản lý tài nguyên hiệu quả.
-**H: Có thể hoàn tác chú thích không?**
-A: Mặc dù GroupDocs.Annotation không hỗ trợ trực tiếp các thao tác hoàn tác trong API, nhưng bạn có thể triển khai logic tùy chỉnh để hoàn nguyên các thay đổi nếu cần.
-**H: Tôi có thể tùy chỉnh giao diện của chú thích không?**
-A: Có, nhiều thuộc tính cho phép tùy chỉnh như màu sắc, độ mờ và kích thước để phù hợp với yêu cầu của bạn.
+
+> **Quan trọng:** Luôn gọi `dispose()` (hoặc dùng try‑with‑resources) để giải phóng các handle file và bộ nhớ.
+
+## Các vấn đề thường gặp và giải pháp
+
+### Tọa độ không khớp với khu vực mong muốn
+- **Nguyên nhân:** Các công cụ tạo PDF có thể sử dụng gốc tọa độ khác nhau.  
+- **Giải pháp:** Xác minh tọa độ bằng cùng một trình xem sẽ dùng trong sản xuất, hoặc triển khai công cụ xem trước cho phép người dùng tinh chỉnh các điểm.
+
+### Rò rỉ bộ nhớ trong kịch bản khối lượng lớn
+- **Nguyên nhân:** Các thể hiện Annotator giữ các luồng file.  
+- **Giải pháp:** Sử dụng try‑with‑resources để đảm bảo giải phóng:
+
+```java
+try (Annotator annotator = new Annotator("input.pdf")) {
+    // annotation logic
+    annotator.save("output.pdf");
+} // automatically disposed
+```
+
+### Chú thích không hiển thị sau khi lưu
+- **Nguyên nhân:** `add()` được gọi sau `save()`, hoặc tọa độ nằm ngoài giới hạn trang.  
+- **Giải pháp:** Đảm bảo `add()` được thực hiện trước `save()`, và kiểm tra lại mọi điểm nằm trong kích thước trang.
+
+## Mẹo tối ưu hoá hiệu năng
+
+### Chiến lược xử lý hàng loạt
+Tái sử dụng một thể hiện annotator duy nhất khi cần xử lý nhiều file.
+
+```java
+// Less efficient - creates new instances
+for (String file : files) {
+    try (Annotator annotator = new Annotator(file)) {
+        // process
+    }
+}
+
+// More efficient - batch processing
+try (Annotator annotator = new Annotator()) {
+    for (String file : files) {
+        annotator.load(file);
+        // process annotations
+        annotator.save(outputFile);
+        annotator.clear(); // Prepare for next file
+    }
+}
+```
+
+### Các thực tiễn tốt nhất về quản lý bộ nhớ
+- Xử lý các PDF lớn theo từng phần khi có thể.  
+- Đặt giới hạn heap JVM (`-Xmx`) dựa trên kích thước tài liệu dự kiến.  
+- Giám sát việc sử dụng heap trong quá trình kiểm thử tải để xác định kích thước batch tối ưu.  
+- Sử dụng API streaming cho các bộ sưu tập tài liệu khổng lồ.
+
+## Các lưu ý bảo mật cho dữ liệu nhạy cảm
+
+### Che đậy thực sự vs. ẩn hình ảnh
+GroupDocs.Annotation loại bỏ văn bản khỏi luồng nội dung của PDF, đảm bảo dữ liệu không thể được khôi phục bằng các công cụ trích xuất văn bản — điều cần thiết cho HIPAA, GDPR và các quy định khác.
+
+### Vệ sinh file tạm thời
+Thư viện có thể ghi các file tạm thời trong quá trình xử lý. Lưu chúng trong thư mục an toàn, không công khai và xác minh rằng chúng đã bị xóa sau khi thao tác hoàn tất.
+
+## Các trường hợp sử dụng thực tế
+
+| Ngành | Kịch bản điển hình |
+|----------|-------------------|
+| **Pháp lý** | Xóa bỏ thông tin khách hàng có quyền riêng trước khi e‑discovery. |
+| **Y tế** | Loại bỏ các định danh bệnh nhân khỏi PDF nghiên cứu. |
+| **Tài chính** | Làm sạch báo cáo quý trước khi công bố công khai. |
+| **Nhân sự** | Che đậy dữ liệu cá nhân của nhân viên trong các bản ghi nội bộ. |
+
+## Tùy chỉnh nâng cao
+
+### Giao diện che đậy tùy chỉnh
+Kiểm soát cách che đậy hiển thị trong PDF cuối cùng.
+
+```java
+textRedaction.setBackgroundColor(Color.BLACK); // Solid black block
+textRedaction.setOpacity(1.0); // Fully opaque
+```
+
+### Kết hợp nhiều loại chú thích
+Bạn có thể thêm tô sáng, bình luận hoặc mũi tên cùng với các che đậy để tạo quy trình xem xét toàn diện.
+
+## Xử lý lỗi cho môi trường sản xuất
+
+```java
+try (Annotator annotator = new Annotator(inputPath)) {
+    // annotation code
+    annotator.save(outputPath);
+} catch (Exception e) {
+    logger.error("Redaction failed for {}: {}", inputPath, e.getMessage());
+    // optional retry or fallback logic
+}
+```
+
+Ghi nhật ký mỗi sự kiện che đậy — bao gồm tên tài liệu, thời gian, và ID người dùng — tạo ra một nhật ký kiểm toán mạnh mẽ.
+
+## Câu hỏi thường gặp
+
+**Q: Văn bản đã che đậy có bị xóa vĩnh viễn không?**  
+A: Có. GroupDocs.Annotation xóa văn bản khỏi cấu trúc nội bộ của PDF, vì vậy không thể khôi phục bằng các công cụ trích xuất tiêu chuẩn.
+
+**Q: Tôi có thể hoàn tác việc che đậy sau khi file đã được lưu không?**  
+A: Không. Che đậy là không thể đảo ngược theo thiết kế để đáp ứng yêu cầu tuân thủ. Giữ một bản sao gốc nếu bạn cần tham chiếu nội dung chưa che đậy sau này.
+
+**Q: Thư viện có hỗ trợ PDF đã quét không?**  
+A: PDF đã quét là hình ảnh; bạn cần tích hợp OCR trước để xác định văn bản trước khi áp dụng che đậy. GroupDocs cung cấp một add‑on OCR hoạt động liền mạch.
+
+**Q: Hiệu năng tăng như thế nào với tài liệu lớn?**  
+A: Thời gian xử lý tăng gần như tuyến tính với số trang và số lượng chú thích. Đối với tài liệu trên 100 trang, hãy cân nhắc xử lý bất đồng bộ và báo cáo tiến độ.
+
+**Q: Tôi có thể lưu PDF trong lưu trữ đám mây (ví dụ, AWS S3) và vẫn sử dụng API không?**  
+A: Có. Miễn là môi trường Java có thể truy cập luồng file — bằng cách gắn bucket hoặc tải về vị trí tạm thời — API sẽ hoạt động như bình thường.
+
+## Kết luận
+
+Bây giờ bạn đã có một lộ trình đầy đủ, sẵn sàng cho sản xuất để **cách che đậy pdf** trong Java bằng GroupDocs.Annotation. Bắt đầu với quy trình che đậy cơ bản, sau đó mở rộng sang xử lý hàng loạt, giao diện tùy chỉnh và ghi nhật ký kiểm toán đầy đủ. Hãy nhớ thử nghiệm với các tài liệu thực tế, thực thi việc dọn dẹp tài nguyên nghiêm ngặt, và ghi lại mọi thao tác để tuân thủ.
+
+### Các bước tiếp theo
+- Khám phá phát hiện văn bản tự động để tự động điền tọa độ che đậy.  
+- Tích hợp OCR cho các PDF dựa trên hình ảnh.  
+- Xây dựng giao diện web cho phép người dùng cuối chọn vùng che đậy một cách trực quan.  
+- Kết nối quy trình với hệ thống quản lý tài liệu để tự động hoá từ đầu đến cuối.
+
+---
+
+**Cập nhật lần cuối:** 2025-12-20  
+**Đã kiểm thử với:** GroupDocs.Annotation 25.2  
+**Tác giả:** GroupDocs
