@@ -13,7 +13,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Tạo PDF sạch bằng Java: Gạch chân chú thích với GroupDocs'
+title: 'Tạo PDF sạch bằng Java - Gạch chân chú thích với GroupDocs'
 type: docs
 url: /vi/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

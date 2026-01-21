@@ -14,7 +14,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Tiszta PDF létrehozása Java-val: Aláhúzott annotációk a GroupDocs-szel'
+title: 'Tiszta PDF létrehozása Java-val - Aláhúzott annotációk a GroupDocs-szel'
 type: docs
 url: /hu/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

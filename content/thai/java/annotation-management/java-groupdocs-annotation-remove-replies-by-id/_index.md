@@ -13,7 +13,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'ลบการตอบกลับของคำอธิบายใน Java: จัดการการตอบกลับตาม ID ด้วย GroupDocs.Annotation'
+title: 'ลบการตอบกลับของคำอธิบายใน Java - จัดการการตอบกลับตาม ID ด้วย GroupDocs.Annotation'
 type: docs
 url: /th/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

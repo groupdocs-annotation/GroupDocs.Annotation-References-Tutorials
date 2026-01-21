@@ -14,7 +14,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'إزالة ردود التعليقات في جافا: إدارة الردود حسب المعرف باستخدام GroupDocs.Annotation'
+title: 'إزالة ردود التعليقات في جافا - إدارة الردود حسب المعرف باستخدام GroupDocs.Annotation'
 type: docs
 url: /ar/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

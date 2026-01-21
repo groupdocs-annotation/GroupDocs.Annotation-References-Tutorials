@@ -13,7 +13,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: '注釈の返信を削除する Java: GroupDocs.AnnotationでIDによる返信管理'
+title: '注釈の返信を削除する Java - GroupDocs.AnnotationでIDによる返信管理'
 type: docs
 url: /ja/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

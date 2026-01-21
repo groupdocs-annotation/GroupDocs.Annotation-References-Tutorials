@@ -1,5 +1,5 @@
 ---
-title: "Create Clean PDF Java: Underline Annotations with GroupDocs"
+title: "Create Clean PDF Java - Underline Annotations with GroupDocs"
 linktitle: "Java Document Annotation with GroupDocs"
 description: "Learn how to create clean PDF Java files and annotate PDF in Java using GroupDocs.Annotation, with full code examples and troubleshooting tips."
 date: "2025-12-21"

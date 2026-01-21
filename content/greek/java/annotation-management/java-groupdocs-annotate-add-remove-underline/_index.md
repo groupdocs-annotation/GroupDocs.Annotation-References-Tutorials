@@ -14,7 +14,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Δημιουργία καθαρού PDF Java: Υπογράμμιση σχολίων με GroupDocs'
+title: 'Δημιουργία καθαρού PDF Java - Υπογράμμιση σχολίων με GroupDocs'
 type: docs
 url: /el/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

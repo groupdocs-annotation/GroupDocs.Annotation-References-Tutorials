@@ -14,7 +14,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Utwórz czysty PDF w Javie: podkreślenie adnotacji przy użyciu GroupDocs'
+title: 'Utwórz czysty PDF w Javie - podkreślenie adnotacji przy użyciu GroupDocs'
 type: docs
 url: /pl/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

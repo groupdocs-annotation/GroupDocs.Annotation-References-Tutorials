@@ -14,7 +14,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'Odstranit odpovědi na anotace v Javě: Spravovat odpovědi podle ID pomocí GroupDocs.Annotation'
+title: 'Odstranit odpovědi na anotace v Javě - Spravovat odpovědi podle ID pomocí GroupDocs.Annotation'
 type: docs
 url: /cs/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

@@ -14,7 +14,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Buat PDF Bersih Java: Garis Bawah Anotasi dengan GroupDocs'
+title: 'Buat PDF Bersih Java - Garis Bawah Anotasi dengan GroupDocs'
 type: docs
 url: /id/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

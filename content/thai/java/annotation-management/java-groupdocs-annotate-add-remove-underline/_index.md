@@ -13,7 +13,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'สร้าง PDF ที่สะอาดด้วย Java: ขีดเส้นใต้คำอธิบายด้วย GroupDocs'
+title: 'สร้าง PDF ที่สะอาดด้วย Java - ขีดเส้นใต้คำอธิบายด้วย GroupDocs'
 type: docs
 url: /th/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

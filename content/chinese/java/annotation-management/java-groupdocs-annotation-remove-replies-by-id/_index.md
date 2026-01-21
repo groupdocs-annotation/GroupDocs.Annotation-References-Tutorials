@@ -12,7 +12,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 在 Java 中删除注释回复：使用 GroupDocs.Annotation 按 ID 管理回复
+title: 在 Java 中删除注释回复 - 使用 GroupDocs.Annotation 按 ID 管理回复
 type: docs
 url: /zh/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

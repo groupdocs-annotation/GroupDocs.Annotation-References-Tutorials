@@ -12,7 +12,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 移除標註回覆 Java：使用 GroupDocs.Annotation 依 ID 管理回覆
+title: 移除標註回覆 Java - 使用 GroupDocs.Annotation 依 ID 管理回覆
 type: docs
 url: /zh-hant/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

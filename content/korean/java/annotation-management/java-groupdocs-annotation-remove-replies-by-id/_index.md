@@ -13,7 +13,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: '주석 답글 제거 Java: GroupDocs.Annotation을 사용하여 ID별 답글 관리'
+title: '주석 답글 제거 Java - GroupDocs.Annotation을 사용하여 ID별 답글 관리'
 type: docs
 url: /ko/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

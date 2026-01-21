@@ -13,7 +13,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'إنشاء PDF نظيف بجافا: تعليقات توضيحية بخط تحت باستخدام GroupDocs'
+title: 'إنشاء PDF نظيف بجافا - تعليقات توضيحية بخط تحت باستخدام GroupDocs'
 type: docs
 url: /ar/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

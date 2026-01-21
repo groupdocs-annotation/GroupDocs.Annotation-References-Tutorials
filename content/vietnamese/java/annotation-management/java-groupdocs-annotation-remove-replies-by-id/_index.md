@@ -14,7 +14,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'Xóa các phản hồi chú thích Java: Quản lý phản hồi theo ID với GroupDocs.Annotation'
+title: 'Xóa các phản hồi chú thích Java - Quản lý phản hồi theo ID với GroupDocs.Annotation'
 type: docs
 url: /vi/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

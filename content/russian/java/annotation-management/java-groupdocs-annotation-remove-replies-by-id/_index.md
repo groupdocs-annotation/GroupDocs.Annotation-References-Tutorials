@@ -14,7 +14,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'Удалить ответы на аннотации Java: Управление ответами по ID с помощью GroupDocs.Annotation'
+title: 'Удалить ответы на аннотации Java - Управление ответами по ID с помощью GroupDocs.Annotation'
 type: docs
 url: /ru/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1

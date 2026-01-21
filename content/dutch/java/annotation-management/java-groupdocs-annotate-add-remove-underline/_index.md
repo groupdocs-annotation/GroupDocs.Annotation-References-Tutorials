@@ -13,7 +13,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Maak een schone PDF in Java: Onderstreep annotaties met GroupDocs'
+title: 'Maak een schone PDF in Java - Onderstreep annotaties met GroupDocs'
 type: docs
 url: /nl/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

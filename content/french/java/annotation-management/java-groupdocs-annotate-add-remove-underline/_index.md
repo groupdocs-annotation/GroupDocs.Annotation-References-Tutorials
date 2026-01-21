@@ -14,7 +14,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Créer un PDF propre en Java : annotations soulignées avec GroupDocs'
+title: 'Créer un PDF propre en Java - annotations soulignées avec GroupDocs'
 type: docs
 url: /fr/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

@@ -14,7 +14,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Erstelle ein sauberes PDF in Java: Unterstreichungs‑Anmerkungen mit GroupDocs'
+title: 'Erstelle ein sauberes PDF in Java - Unterstreichungs‑Anmerkungen mit GroupDocs'
 type: docs
 url: /de/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

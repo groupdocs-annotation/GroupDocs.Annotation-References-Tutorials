@@ -14,7 +14,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'Supprimer les réponses d''annotation Java : gérer les réponses par ID avec
+title: 'Supprimer les réponses d''annotation Java - gérer les réponses par ID avec
   GroupDocs.Annotation'
 type: docs
 url: /fr/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/

@@ -14,7 +14,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Crear PDF limpio en Java: Subrayar anotaciones con GroupDocs'
+title: 'Crear PDF limpio en Java - Subrayar anotaciones con GroupDocs'
 type: docs
 url: /es/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

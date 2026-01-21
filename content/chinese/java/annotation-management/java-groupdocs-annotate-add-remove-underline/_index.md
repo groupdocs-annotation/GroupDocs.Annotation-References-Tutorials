@@ -12,7 +12,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 使用 GroupDocs 在 Java 中创建干净的 PDF：下划线批注
+title: 使用 GroupDocs 在 Java 中创建干净的 PDF - 下划线批注
 type: docs
 url: /zh/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

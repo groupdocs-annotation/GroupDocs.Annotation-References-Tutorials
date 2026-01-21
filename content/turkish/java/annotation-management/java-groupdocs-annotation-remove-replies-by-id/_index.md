@@ -14,7 +14,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'Java''da Açıklama Yanıtlarını Kaldırma: GroupDocs.Annotation ile ID''ye Göre
+title: 'Java''da Açıklama Yanıtlarını Kaldırma - GroupDocs.Annotation ile ID''ye Göre
   Yanıtları Yönetme'
 type: docs
 url: /tr/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/

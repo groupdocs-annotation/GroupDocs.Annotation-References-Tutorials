@@ -13,7 +13,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Vytvořte čistý PDF v Javě: podtržené anotace pomocí GroupDocs'
+title: 'Vytvořte čistý PDF v Javě - podtržené anotace pomocí GroupDocs'
 type: docs
 url: /cs/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

@@ -13,7 +13,7 @@ tags:
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Skapa ren PDF Java: Understrykningsanteckningar med GroupDocs'
+title: 'Skapa ren PDF Java - Understrykningsanteckningar med GroupDocs'
 type: docs
 url: /sv/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1

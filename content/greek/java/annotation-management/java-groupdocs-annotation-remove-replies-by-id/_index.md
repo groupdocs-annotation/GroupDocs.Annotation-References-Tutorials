@@ -14,7 +14,7 @@ tags:
 - annotations
 - document-processing
 - java-api
-title: 'Κατάργηση Απαντήσεων Σχόλιου Java: Διαχείριση Απαντήσεων κατά ID με το GroupDocs.Annotation'
+title: 'Κατάργηση Απαντήσεων Σχόλιου Java - Διαχείριση Απαντήσεων κατά ID με το GroupDocs.Annotation'
 type: docs
 url: /el/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/
 weight: 1
