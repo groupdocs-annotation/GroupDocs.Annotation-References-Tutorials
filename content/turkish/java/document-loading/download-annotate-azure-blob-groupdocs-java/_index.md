@@ -290,12 +290,6 @@ Sağlık kuruluşları, HIPAA‑uyumlu Azure ortamında hasta kayıtlarını tut
 **S:** *HIPAA uyumluluğu için hangi güvenlik önlemlerini almalıyım?*  
 **C:** HTTPS zorunlu tutun, gizli anahtarlar için Azure Key Vault kullanın, depolama şifrelemesini etkinleştirin, rol‑tabanlı erişim kontrolü uygulayın ve her indirme ve anotasyon işlemi için ayrıntılı denetim günlükleri tutun.
 
----
-
-**Son Güncelleme:** 2026-01-03  
-**Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
-**Yazar:** GroupDocs  
-
 ### Ek Kaynaklar ve Referanslar
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Sağlık kuruluşları, HIPAA‑uyumlu Azure ortamında hasta kayıtlarını tut
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Son Güncelleme:** 2026-01-03  
+**Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
+**Yazar:** GroupDocs  

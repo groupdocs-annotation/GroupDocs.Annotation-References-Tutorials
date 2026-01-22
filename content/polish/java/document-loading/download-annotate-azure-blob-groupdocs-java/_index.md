@@ -290,12 +290,6 @@ Placówki medyczne przechowują rekordy pacjentów w środowisku Azure spełniaj
 **Q:** *Jakie środki bezpieczeństwa wdrożyć dla zgodności z HIPAA?*  
 **A:** Wymuszaj HTTPS, używaj Azure Key Vault do przechowywania sekretów, włącz szyfrowanie storage, stosuj role‑based access control oraz utrzymuj szczegółowe logi audytu dla każdego pobrania i operacji adnotacji.
 
----
-
-**Ostatnia aktualizacja:** 2026-01-03  
-**Testowano z:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 ### Dodatkowe zasoby i odniesienia
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Placówki medyczne przechowują rekordy pacjentów w środowisku Azure spełniaj
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Ostatnia aktualizacja:** 2026-01-03  
+**Testowano z:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

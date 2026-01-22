@@ -290,12 +290,6 @@ Las prácticas médicas mantienen registros de pacientes en un entorno Azure com
 **P:** *¿Qué medidas de seguridad debo implementar para cumplimiento HIPAA?*  
 **R:** Obliga HTTPS, usa Azure Key Vault para secretos, habilita cifrado de almacenamiento, aplica control de acceso basado en roles y mantén registros de auditoría detallados para cada descarga y operación de anotación.
 
----
-
-**Última actualización:** 2026-01-03  
-**Probado con:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 ### Recursos y referencias adicionales
 
 - [Documentación de GroupDocs Annotation para Java](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Las prácticas médicas mantienen registros de pacientes en un entorno Azure com
 - [Comprar licencia de GroupDocs](https://purchase.groupdocs.com/buy)  
 - [Prueba gratuita y licencia temporal](https://releases.groupdocs.com/annotation/java/)  
 - [Foro de soporte de GroupDocs](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Última actualización:** 2026-01-03  
+**Probado con:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

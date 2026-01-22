@@ -296,12 +296,6 @@ annotator.save(outputPath);                      // Save the annotated result
 **س:** *ما هي إجراءات الأمان التي يجب تنفيذها للامتثال لـ HIPAA؟*  
 **ج:** فرض HTTPS، استخدم Azure Key Vault للأسرار، فعّل تشفير التخزين، طبق التحكم في الوصول القائم على الأدوار، وحافظ على سجلات تدقيق مفصلة لكل عملية تنزيل وتعليق.
 
----
-
-**Last Updated:** 2026-01-03  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
-
 ### موارد وإشارات إضافية
 
 - [توثيق GroupDocs Annotation for Java](https://docs.groupdocs.com/annotation/java/)  
@@ -310,5 +304,11 @@ annotator.save(outputPath);                      // Save the annotated result
 - [شراء ترخيص GroupDocs](https://purchase.groupdocs.com/buy)  
 - [نسخة تجريبية وترخيص مؤقت](https://releases.groupdocs.com/annotation/java/)  
 - [منتدى دعم GroupDocs](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2026-01-03  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs  
 
 ---

@@ -290,12 +290,6 @@ Medische praktijken bewaren patiëntendossiers in een HIPAA‑compliant Azure‑
 **Q:** *Welke beveiligingsmaatregelen moet ik nemen voor HIPAA‑naleving?*  
 **A:** Handhaaf HTTPS, gebruik Azure Key Vault voor geheimen, schakel opslag‑encryptie in, pas role‑based access control toe en onderhoud gedetailleerde audit‑logs voor elke download‑ en annotatie‑operatie.
 
----
-
-**Laatst bijgewerkt:** 2026-01-03  
-**Getest met:** GroupDocs.Annotation 25.2  
-**Auteur:** GroupDocs  
-
 ### Aanvullende bronnen en referenties
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Medische praktijken bewaren patiëntendossiers in een HIPAA‑compliant Azure‑
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Laatst bijgewerkt:** 2026-01-03  
+**Getest met:** GroupDocs.Annotation 25.2  
+**Auteur:** GroupDocs  

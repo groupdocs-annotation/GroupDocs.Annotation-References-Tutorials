@@ -279,12 +279,6 @@ Medical practices keep patient records in a HIPAA‑compliant Azure environment,
 **Q:** *What security measures should I implement for HIPAA compliance?*  
 **A:** Enforce HTTPS, use Azure Key Vault for secrets, enable storage encryption, apply role‑based access control, and maintain detailed audit logs for every download and annotation operation.
 
----
-
-**Last Updated:** 2026-01-03  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
-
 ### Additional Resources and References
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -293,5 +287,11 @@ Medical practices keep patient records in a HIPAA‑compliant Azure environment,
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2026-01-03  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs  
 
 ---

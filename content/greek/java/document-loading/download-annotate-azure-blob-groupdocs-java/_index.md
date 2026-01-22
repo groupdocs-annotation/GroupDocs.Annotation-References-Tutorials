@@ -290,12 +290,6 @@ annotator.save(outputPath);                      // Save the annotated result
 **Ε:** *Ποια μέτρα ασφαλείας πρέπει να εφαρμόσω για συμμόρφωση HIPAA;*  
 **Α:** Εξασφαλίστε HTTPS, χρησιμοποιήστε Azure Key Vault για μυστικά, ενεργοποιήστε κρυπτογράφηση αποθήκευσης, εφαρμόστε RBAC, και διατηρήστε λεπτομερή audit logs για κάθε λήψη και λειτουργία σχολιασμού.
 
----
-
-**Τελευταία Ενημέρωση:** 2026-01-03  
-**Δοκιμασμένο Με:** GroupDocs.Annotation 25.2  
-**Συγγραφέας:** GroupDocs  
-
 ### Πρόσθετοι Πόροι και Αναφορές
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ annotator.save(outputPath);                      // Save the annotated result
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2026-01-03  
+**Δοκιμασμένο Με:** GroupDocs.Annotation 25.2  
+**Συγγραφέας:** GroupDocs  

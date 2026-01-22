@@ -289,12 +289,6 @@ annotator.save(outputPath);                      // Save the annotated result
 **Q:** *HIPAA 準拠のために実装すべきセキュリティ対策は？*  
 **A:** HTTPS を強制、シークレットは Azure Key Vault に保管、ストレージ暗号化を有効化、ロールベースのアクセス制御を適用、ダウンロード・注釈操作ごとに詳細な監査ログを残す。
 
----
-
-**最終更新日:** 2026-01-03  
-**テスト環境:** GroupDocs.Annotation 25.2  
-**作成者:** GroupDocs  
-
 ### 追加リソースと参考情報
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -303,3 +297,9 @@ annotator.save(outputPath);                      // Save the annotated result
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最終更新日:** 2026-01-03  
+**テスト環境:** GroupDocs.Annotation 25.2  
+**作成者:** GroupDocs  

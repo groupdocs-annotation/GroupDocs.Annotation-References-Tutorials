@@ -290,12 +290,6 @@ Consultas médicas mantêm registros de pacientes em um ambiente Azure compatív
 **Q:** *Quais medidas de segurança devo implementar para conformidade HIPAA?*  
 **A:** Exija HTTPS, use Azure Key Vault para segredos, habilite criptografia de armazenamento, aplique controle de acesso baseado em funções e mantenha logs de auditoria detalhados para cada download e operação de anotação.
 
----
-
-**Última atualização:** 2026-01-03  
-**Testado com:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 ### Recursos e Referências Adicionais
 
 - [Documentação do GroupDocs Annotation para Java](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Consultas médicas mantêm registros de pacientes em um ambiente Azure compatív
 - [Comprar Licença GroupDocs](https://purchase.groupdocs.com/buy)  
 - [Teste Gratuito e Licença Temporária](https://releases.groupdocs.com/annotation/java/)  
 - [Fórum de Suporte GroupDocs](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Última atualização:** 2026-01-03  
+**Testado com:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

@@ -289,12 +289,6 @@ annotator.save(outputPath);                      // Save the annotated result
 **Q:** *为实现 HIPAA 合规应采取哪些安全措施？*  
 **A:** 强制使用 HTTPS，凭证存放在 Azure Key Vault，启用存储加密，实施基于角色的访问控制，并为每次下载和注释操作记录详细审计日志。
 
----
-
-**最近更新：** 2026-01-03  
-**测试版本：** GroupDocs.Annotation 25.2  
-**作者：** GroupDocs  
-
 ### 其他资源与参考
 
 - [GroupDocs Annotation for Java 文档](https://docs.groupdocs.com/annotation/java/)  
@@ -303,3 +297,9 @@ annotator.save(outputPath);                      // Save the annotated result
 - [购买 GroupDocs 许可证](https://purchase.groupdocs.com/buy)  
 - [免费试用与临时许可证](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs 支持论坛](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最近更新：** 2026-01-03  
+**测试版本：** GroupDocs.Annotation 25.2  
+**作者：** GroupDocs  

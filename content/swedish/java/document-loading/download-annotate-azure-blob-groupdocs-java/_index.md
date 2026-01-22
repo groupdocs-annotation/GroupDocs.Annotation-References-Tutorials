@@ -290,12 +290,6 @@ Vårdinrättningar behåller patientjournaler i en HIPAA‑kompatibel Azure‑mi
 **Q:** *Vilka säkerhetsåtgärder bör jag implementera för HIPAA‑efterlevnad?*  
 **A:** Tvinga HTTPS, använd Azure Key Vault för hemligheter, aktivera lagringskryptering, tillämpa roll‑baserad åtkomstkontroll och upprätthåll detaljerade audit‑loggar för varje nedladdning och annotering.
 
----
-
-**Senast uppdaterad:** 2026-01-03  
-**Testad med:** GroupDocs.Annotation 25.2  
-**Författare:** GroupDocs  
-
 ### Ytterligare resurser och referenser
 
 - [GroupDocs Annotation för Java‑dokumentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Vårdinrättningar behåller patientjournaler i en HIPAA‑kompatibel Azure‑mi
 - [Köp GroupDocs‑licens](https://purchase.groupdocs.com/buy)  
 - [Gratis provperiod och tillfällig licens](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support‑forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Senast uppdaterad:** 2026-01-03  
+**Testad med:** GroupDocs.Annotation 25.2  
+**Författare:** GroupDocs  

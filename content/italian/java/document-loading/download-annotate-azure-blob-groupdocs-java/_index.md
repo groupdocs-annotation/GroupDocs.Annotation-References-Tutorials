@@ -290,12 +290,6 @@ Le strutture mediche mantengono le cartelle paziente in un ambiente Azure confor
 **D:** *Quali misure di sicurezza devo implementare per la conformità HIPAA?*  
 **R:** Forza HTTPS, usa Azure Key Vault per i segreti, abilita la crittografia di storage, applica il controllo degli accessi basato sui ruoli e mantieni log di audit dettagliati per ogni download e operazione di annotazione.
 
----
-
-**Ultimo aggiornamento:** 2026-01-03  
-**Testato con:** GroupDocs.Annotation 25.2  
-**Autore:** GroupDocs  
-
 ### Risorse aggiuntive e riferimenti
 
 - [Documentazione GroupDocs Annotation per Java](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Le strutture mediche mantengono le cartelle paziente in un ambiente Azure confor
 - [Acquista licenza GroupDocs](https://purchase.groupdocs.com/buy)  
 - [Prova gratuita e licenza temporanea](https://releases.groupdocs.com/annotation/java/)  
 - [Forum di supporto GroupDocs](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Ultimo aggiornamento:** 2026-01-03  
+**Testato con:** GroupDocs.Annotation 25.2  
+**Autore:** GroupDocs  

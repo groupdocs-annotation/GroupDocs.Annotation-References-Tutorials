@@ -290,12 +290,6 @@ Medizinische Praxen bewahren Patientenakten in einer HIPAA‑konformen Azure‑U
 **F:** *Welche Sicherheitsmaßnahmen sind für HIPAA‑Konformität nötig?*  
 **A:** HTTPS erzwingen, Azure Key Vault für Secrets verwenden, Storage‑Verschlüsselung aktivieren, rollenbasierte Zugriffskontrolle anwenden und detaillierte Audit‑Logs für jeden Download und jede Annotation führen.
 
----
-
-**Zuletzt aktualisiert:** 2026-01-03  
-**Getestet mit:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 ### Weitere Ressourcen und Referenzen
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Medizinische Praxen bewahren Patientenakten in einer HIPAA‑konformen Azure‑U
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Zuletzt aktualisiert:** 2026-01-03  
+**Getestet mit:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

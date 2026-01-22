@@ -290,12 +290,6 @@ annotator.save(outputPath);                      // Save the annotated result
 **प्र:** *HIPAA कंप्लायंस के लिए कौन‑से सुरक्षा उपाय अपनाने चाहिए?*  
 **उ:** HTTPS फोर्स करें, सीक्रेट्स के लिए Azure Key Vault उपयोग करें, स्टोरेज एन्क्रिप्शन एनेबल रखें, रोल‑बेस्ड एक्सेस कंट्रोल लागू करें, और हर डाउनलोड एवं एनोटेशन ऑपरेशन के लिए विस्तृत ऑडिट लॉग रखें।
 
----
-
-**अंतिम अपडेट:** 2026-01-03  
-**टेस्टेड विथ:** GroupDocs.Annotation 25.2  
-**लेखक:** GroupDocs  
-
 ### अतिरिक्त संसाधन और रेफ़रेंसेज़
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ annotator.save(outputPath);                      // Save the annotated result
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**अंतिम अपडेट:** 2026-01-03  
+**टेस्टेड विथ:** GroupDocs.Annotation 25.2  
+**लेखक:** GroupDocs  

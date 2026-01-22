@@ -290,12 +290,6 @@ Praktik medis menyimpan rekam medis pasien di lingkungan Azure yang mematuhi HIP
 **T:** *Langkah keamanan apa yang harus saya terapkan untuk kepatuhan HIPAA?*  
 **J:** Paksa HTTPS, gunakan Azure Key Vault untuk rahasia, aktifkan enkripsi penyimpanan, terapkan kontrol akses berbasis peran, dan simpan audit log detail untuk setiap unduhan dan operasi anotasi.
 
----
-
-**Terakhir Diperbarui:** 2026-01-03  
-**Diuji Dengan:** GroupDocs.Annotation 25.2  
-**Penulis:** GroupDocs  
-
 ### Sumber Daya Tambahan dan Referensi
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Praktik medis menyimpan rekam medis pasien di lingkungan Azure yang mematuhi HIP
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Terakhir Diperbarui:** 2026-01-03  
+**Diuji Dengan:** GroupDocs.Annotation 25.2  
+**Penulis:** GroupDocs  

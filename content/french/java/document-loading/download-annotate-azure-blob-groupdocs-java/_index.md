@@ -290,12 +290,6 @@ Les cabinets médicaux conservent les dossiers patients dans un environnement Az
 **Q :** *Quelles mesures de sécurité devrais‑je mettre en place pour la conformité HIPAA ?*  
 **R :** Imposer HTTPS, utiliser Azure Key Vault pour les secrets, activer le chiffrement du stockage, appliquer le contrôle d’accès basé sur les rôles, et conserver des journaux d’audit détaillés pour chaque téléchargement et opération d’annotation.
 
----
-
-**Dernière mise à jour :** 2026-01-03  
-**Testé avec :** GroupDocs.Annotation 25.2  
-**Auteur :** GroupDocs  
-
 ### Ressources supplémentaires et références
 
 - [Documentation GroupDocs Annotation for Java](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Les cabinets médicaux conservent les dossiers patients dans un environnement Az
 - [Acheter une licence GroupDocs](https://purchase.groupdocs.com/buy)  
 - [Essai gratuit et licence temporaire](https://releases.groupdocs.com/annotation/java/)  
 - [Forum de support GroupDocs](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Dernière mise à jour :** 2026-01-03  
+**Testé avec :** GroupDocs.Annotation 25.2  
+**Auteur :** GroupDocs  

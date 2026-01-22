@@ -290,12 +290,6 @@ Các phòng khám giữ hồ sơ bệnh nhân trong môi trường Azure đáp �
 **Hỏi:** *Cần thực hiện những biện pháp bảo mật nào để đáp ứng yêu cầu HIPAA?*  
 **Đáp:** Bắt buộc HTTPS, dùng Azure Key Vault cho bí mật, bật mã hoá lưu trữ, áp dụng RBAC, và duy trì audit log chi tiết cho mọi lần tải và chú thích.
 
----
-
-**Cập nhật lần cuối:** 2026-01-03  
-**Kiểm thử với:** GroupDocs.Annotation 25.2  
-**Tác giả:** GroupDocs  
-
 ### Tài nguyên và Tham khảo bổ sung
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Các phòng khám giữ hồ sơ bệnh nhân trong môi trường Azure đáp �
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Cập nhật lần cuối:** 2026-01-03  
+**Kiểm thử với:** GroupDocs.Annotation 25.2  
+**Tác giả:** GroupDocs  

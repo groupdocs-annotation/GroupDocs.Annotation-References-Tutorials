@@ -290,12 +290,6 @@ Zdravotnická zařízení uchovávají záznamy pacientů v HIPAA‑kompatibiln�
 **Q:** *Jaká bezpečnostní opatření implementovat pro soulad s HIPAA?*  
 **A:** Vynutíte HTTPS, použijete Azure Key Vault pro tajemství, povolíte šifrování úložiště, aplikujete role‑based access control a udržujete podrobné auditní logy pro každé stažení a operaci anotace.
 
----
-
-**Poslední aktualizace:** 2026-01-03  
-**Testováno s:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 ### Další zdroje a reference
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Zdravotnická zařízení uchovávají záznamy pacientů v HIPAA‑kompatibiln�
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Poslední aktualizace:** 2026-01-03  
+**Testováno s:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

@@ -290,12 +290,6 @@ Orvosi praxisok HIPAA‑kompatibilis Azure környezetben tartják a betegnyilvá
 **K:** *Milyen biztonsági intézkedéseket kell bevezetni HIPAA megfelelőséghez?*  
 **V:** Kényszerítsd a HTTPS‑t, használd az Azure Key Vault‑ot a titkokhoz, engedélyezd a tárolási titkosítást, alkalmazz szerepalapú hozzáférés‑vezérlést, és vezess részletes audit‑logokat minden letöltés és annotáció műveletről.
 
----
-
-**Utolsó frissítés:** 2026-01-03  
-**Tesztelve:** GroupDocs.Annotation 25.2  
-**Szerző:** GroupDocs  
-
 ### További források és hivatkozások
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -304,3 +298,9 @@ Orvosi praxisok HIPAA‑kompatibilis Azure környezetben tartják a betegnyilvá
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Utolsó frissítés:** 2026-01-03  
+**Tesztelve:** GroupDocs.Annotation 25.2  
+**Szerző:** GroupDocs  

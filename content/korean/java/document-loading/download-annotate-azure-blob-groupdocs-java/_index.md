@@ -289,12 +289,6 @@ annotator.save(outputPath);                      // Save the annotated result
 **Q:** *HIPAA 준수를 위해 어떤 보안 조치를 해야 하나요?*  
 **A:** HTTPS 강제, Azure Key Vault를 통한 비밀 관리, 스토리지 암호화 활성화, 역할 기반 접근 제어 적용, 다운로드 및 주석 작업마다 상세 감사 로그 유지가 필요합니다.
 
----
-
-**마지막 업데이트:** 2026-01-03  
-**테스트 환경:** GroupDocs.Annotation 25.2  
-**작성자:** GroupDocs  
-
 ### 추가 자료 및 참고 링크
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -303,3 +297,9 @@ annotator.save(outputPath);                      // Save the annotated result
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**마지막 업데이트:** 2026-01-03  
+**테스트 환경:** GroupDocs.Annotation 25.2  
+**작성자:** GroupDocs  
