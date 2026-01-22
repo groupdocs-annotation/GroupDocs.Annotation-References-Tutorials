@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: Java指南：使用GroupDocs对PDF进行编程标注
+title: Java指南 - 使用GroupDocs对PDF进行编程标注
 type: docs
 url: /zh/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -509,12 +509,6 @@ A: 能！使用 ARGB 颜色值即可精确控制外观。例如，`setBackground
 **Q: 生产环境的授权要求是什么？**  
 A: 生产部署必须使用有效的 GroupDocs.Annotation 许可证。开发与测试阶段可使用免费试用，但商业应用需要购买正式许可证。
 
----
-
-**最后更新：** 2025-12-29  
-**测试环境：** GroupDocs.Annotation 25.2  
-**作者：** GroupDocs  
-
 **更多资源**  
 - [GroupDocs Annotation 文档](https://docs.groupdocs.com/annotation/java/)  
 - [API 参考](https://reference.groupdocs.com/annotation/java/)  
@@ -523,3 +517,9 @@ A: 生产部署必须使用有效的 GroupDocs.Annotation 许可证。开发与�
 - [免费试用](https://releases.groupdocs.com/annotation/java/)  
 - [临时许可证](https://purchase.groupdocs.com/temporary-license/)  
 - [支持论坛](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最后更新：** 2025-12-29  
+**测试环境：** GroupDocs.Annotation 25.2  
+**作者：** GroupDocs  

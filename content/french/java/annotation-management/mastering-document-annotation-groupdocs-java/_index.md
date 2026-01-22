@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Guide Java : annoter un PDF de façon programmatique avec GroupDocs'
+title: 'Guide Java - annoter un PDF de façon programmatique avec GroupDocs'
 type: docs
 url: /fr/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -510,12 +510,6 @@ R : Oui ! Utilisez les valeurs ARGB pour un contrôle précis. Par exemple, 
 **Q : Quelles sont les exigences de licence pour une utilisation en production ?**  
 R : Vous avez besoin d’une licence valide GroupDocs.Annotation pour le déploiement en production. Le développement et les tests peuvent se faire avec l’essai gratuit, mais les applications commerciales nécessitent une licence achetée.
 
----
-
-**Dernière mise à jour :** 2025-12-29  
-**Testé avec :** GroupDocs.Annotation 25.2  
-**Auteur :** GroupDocs  
-
 **Ressources supplémentaires**  
 - [Documentation GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Référence API](https://reference.groupdocs.com/annotation/java/)  
@@ -524,3 +518,9 @@ R : Vous avez besoin d’une licence valide GroupDocs.Annotation pour le dépl
 - [Essai gratuit](https://releases.groupdocs.com/annotation/java/)  
 - [Licence temporaire](https://purchase.groupdocs.com/temporary-license/)  
 - [Forum d’assistance](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Dernière mise à jour :** 2025-12-29  
+**Testé avec :** GroupDocs.Annotation 25.2  
+**Auteur :** GroupDocs  

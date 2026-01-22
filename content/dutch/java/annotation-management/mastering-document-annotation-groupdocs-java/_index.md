@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Java-gids: PDF programmatically annoteren met GroupDocs'
+title: 'Java-gids - PDF programmatically annoteren met GroupDocs'
 type: docs
 url: /nl/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -508,13 +508,7 @@ A: Ja! Gebruik ARGB‑kleurwaarden voor precieze controle. Bijvoorbeeld, `setBac
 
 **Q: Wat zijn de licentie‑vereisten voor productiegebruik?**  
 A: U heeft een geldige GroupDocs.Annotation‑licentie nodig voor productie‑implementatie. Ontwikkeling en testen kunnen de free trial gebruiken, maar commerciële applicaties vereisen een aangeschafte licentie.
-
----
-
-**Last Updated:** 2025-12-29  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
-
+  
 **Additional Resources**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -523,3 +517,9 @@ A: U heeft een geldige GroupDocs.Annotation‑licentie nodig voor productie‑im
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-29  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs

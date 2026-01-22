@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'دليل جافا: التعليق على ملفات PDF برمجياً باستخدام GroupDocs'
+title: 'دليل جافا - التعليق على ملفات PDF برمجياً باستخدام GroupDocs'
 type: docs
 url: /ar/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -508,12 +508,6 @@ public class DocumentAnnotationService {
 **س: ما هي متطلبات الترخيص للاستخدام في الإنتاج؟**  
 **ج:** تحتاج إلى ترخيص GroupDocs.Annotation صالح للنشر في بيئة الإنتاج. يمكن استخدام النسخة التجريبية للتطوير والاختبار، لكن التطبيقات التجارية تتطلب ترخيصًا مُشتراًا.
 
----
-
-**آخر تحديث:** 2025-12-29  
-**تم الاختبار مع:** GroupDocs.Annotation 25.2  
-**المؤلف:** GroupDocs  
-
 **موارد إضافية**
 - [توثيق GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [مرجع API](https://reference.groupdocs.com/annotation/java/)  
@@ -522,3 +516,9 @@ public class DocumentAnnotationService {
 - [نسخة تجريبية مجانية](https://releases.groupdocs.com/annotation/java/)  
 - [ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/)  
 - [منتدى الدعم](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**آخر تحديث:** 2025-12-29  
+**تم الاختبار مع:** GroupDocs.Annotation 25.2  
+**المؤلف:** GroupDocs  

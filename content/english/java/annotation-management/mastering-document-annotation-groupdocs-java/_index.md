@@ -1,5 +1,5 @@
 ---
-title: "Java Guide: annotate pdf programmatically using GroupDocs"
+title: "Java Guide - annotate pdf programmatically using GroupDocs"
 linktitle: "Java PDF Annotation Tutorial"
 description: "Learn how to annotate pdf programmatically in Java with GroupDocs.Annotation. Complete tutorial with Maven setup, code examples, and troubleshooting tips."
 keywords: "Java PDF annotation tutorial, GroupDocs annotation Java example, document annotation library Java, PDF annotation programmatically Java, how to add annotations to PDF in Java, Java stream document annotation"
@@ -501,12 +501,6 @@ A: Yes! Use ARGB color values for precise control. For example, `setBackgroundCo
 **Q: What are the licensing requirements for production use?**  
 A: You need a valid GroupDocs.Annotation license for production deployment. Development and testing can use the free trial, but commercial applications require a purchased license.
 
----
-
-**Last Updated:** 2025-12-29  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -515,5 +509,11 @@ A: You need a valid GroupDocs.Annotation license for production deployment. Deve
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-29  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs  
 
 ---

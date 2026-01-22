@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Java 가이드: GroupDocs를 사용하여 PDF에 프로그래밍 방식으로 주석 달기'
+title: 'Java 가이드 - GroupDocs를 사용하여 PDF에 프로그래밍 방식으로 주석 달기'
 type: docs
 url: /ko/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -511,12 +511,6 @@ A: 가능합니다! ARGB 색상 값을 사용하면 정밀하게 제어할 수 �
 **Q: 프로덕션 사용을 위한 라이선스 요구 사항은?**  
 A: 프로덕션 배포를 위해서는 유효한 GroupDocs.Annotation 라이선스가 필요합니다. 개발 및 테스트는 무료 체험을 사용할 수 있지만, 상용 애플리케이션은 구매한 라이선스가 필요합니다.
 
----
-
-**마지막 업데이트:** 2025-12-29  
-**테스트 환경:** GroupDocs.Annotation 25.2  
-**작성자:** GroupDocs  
-
 ### 추가 리소스
 - [GroupDocs Annotation 문서](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +519,9 @@ A: 프로덕션 배포를 위해서는 유효한 GroupDocs.Annotation 라이선�
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**마지막 업데이트:** 2025-12-29  
+**테스트 환경:** GroupDocs.Annotation 25.2  
+**작성자:** GroupDocs  

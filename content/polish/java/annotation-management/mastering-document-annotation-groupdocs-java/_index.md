@@ -15,7 +15,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Przewodnik Java: programowe adnotowanie PDF przy użyciu GroupDocs'
+title: 'Przewodnik Java - programowe adnotowanie PDF przy użyciu GroupDocs'
 type: docs
 url: /pl/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -511,12 +511,6 @@ O: Tak! Używaj wartości ARGB dla precyzyjnej kontroli. Na przykład `setBackgr
 **P: Jakie są wymagania licencyjne dla użycia w produkcji?**  
 O: Do wdrożeń produkcyjnych potrzebna jest ważna licencja GroupDocs.Annotation. Development i testy mogą korzystać z wersji próbnej, ale aplikacje komercyjne wymagają zakupionej licencji.
 
----
-
-**Ostatnia aktualizacja:** 2025-12-29  
-**Testowano z:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 **Dodatkowe zasoby**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +519,9 @@ O: Do wdrożeń produkcyjnych potrzebna jest ważna licencja GroupDocs.Annotatio
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Ostatnia aktualizacja:** 2025-12-29  
+**Testowano z:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

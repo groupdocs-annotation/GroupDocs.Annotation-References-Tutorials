@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Руководство по Java: программно аннотировать PDF с помощью GroupDocs'
+title: 'Руководство по Java - программно аннотировать PDF с помощью GroupDocs'
 type: docs
 url: /ru/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -510,12 +510,6 @@ public class DocumentAnnotationService {
 **В: Какие требования к лицензированию для продакшена?**  
 О: Для продакшен‑развёртывания необходима действующая лицензия GroupDocs.Annotation. Разработка и тестирование могут проходить на бесплатном пробном периоде, но коммерческие приложения требуют приобретённой лицензии.
 
----
-
-**Последнее обновление:** 2025-12-29  
-**Тестировано с:** GroupDocs.Annotation 25.2  
-**Автор:** GroupDocs  
-
 **Дополнительные ресурсы**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -524,3 +518,9 @@ public class DocumentAnnotationService {
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Последнее обновление:** 2025-12-29  
+**Тестировано с:** GroupDocs.Annotation 25.2  
+**Автор:** GroupDocs  

@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: Javaガイド：GroupDocsを使ってプログラム的にPDFに注釈を付ける
+title: Javaガイド - GroupDocsを使ってプログラム的にPDFに注釈を付ける
 type: docs
 url: /ja/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -509,12 +509,6 @@ A: はい！ARGB カラー値を使用すれば正確に制御できます。例
 **Q: 本番環境でのライセンス要件は？**  
 A: 本番デプロイには有効な GroupDocs.Annotation ライセンスが必要です。開発・テストは無料トライアルで可能ですが、商用アプリケーションには購入したライセンスが必要です。
 
----
-
-**最終更新日:** 2025-12-29  
-**テスト環境:** GroupDocs.Annotation 25.2  
-**作者:** GroupDocs  
-
 **追加リソース**
 - [GroupDocs Annotation ドキュメント](https://docs.groupdocs.com/annotation/java/)  
 - [API リファレンス](https://reference.groupdocs.com/annotation/java/)  
@@ -523,3 +517,9 @@ A: 本番デプロイには有効な GroupDocs.Annotation ライセンスが必�
 - [無料トライアル](https://releases.groupdocs.com/annotation/java/)  
 - [一時ライセンス](https://purchase.groupdocs.com/temporary-license/)  
 - [サポートフォーラム](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最終更新日:** 2025-12-29  
+**テスト環境:** GroupDocs.Annotation 25.2  
+**作者:** GroupDocs  

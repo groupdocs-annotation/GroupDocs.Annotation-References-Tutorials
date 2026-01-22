@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Java průvodce: anotovat PDF programově pomocí GroupDocs'
+title: 'Java průvodce - anotovat PDF programově pomocí GroupDocs'
 type: docs
 url: /cs/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -510,12 +510,6 @@ A: Ano! Použijte ARGB hodnoty pro přesnou kontrolu. Například `setBackground
 **Q: Jaké jsou licenční požadavky pro produkční použití?**  
 A: Pro produkční nasazení potřebujete platnou licenci GroupDocs.Annotation. Vývoj a testování lze provádět s bezplatnou zkušební verzí, ale komerční aplikace vyžadují zakoupenou licenci.
 
----
-
-**Poslední aktualizace:** 2025-12-29  
-**Testováno s:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 **Další zdroje**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -524,3 +518,9 @@ A: Pro produkční nasazení potřebujete platnou licenci GroupDocs.Annotation. 
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Poslední aktualizace:** 2025-12-29  
+**Testováno s:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

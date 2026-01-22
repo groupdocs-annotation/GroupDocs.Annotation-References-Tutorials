@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'คู่มือ Java: ทำเครื่องหมาย PDF โดยอัตโนมัติด้วย GroupDocs'
+title: 'คู่มือ Java - ทำเครื่องหมาย PDF โดยอัตโนมัติด้วย GroupDocs'
 type: docs
 url: /th/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -510,12 +510,6 @@ A: ทำได้! ใช้ค่า ARGB เพื่อควบคุมส
 **Q: ข้อกำหนดด้านลิขสิทธิ์สำหรับการใช้งานใน production คืออะไร?**  
 A: คุณต้องมีลิขสิทธิ์ GroupDocs.Annotation ที่ถูกต้องสำหรับการใช้งานใน production การพัฒนาและการทดสอบสามารถใช้เวอร์ชันทดลองได้ แต่แอปเชิงพาณิชย์ต้องซื้อไลเซนส์  
 
----  
-
-**อัปเดตล่าสุด:** 2025-12-29  
-**ทดสอบด้วย:** GroupDocs.Annotation 25.2  
-**ผู้เขียน:** GroupDocs  
-
 **แหล่งข้อมูลเพิ่มเติม**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -524,3 +518,9 @@ A: คุณต้องมีลิขสิทธิ์ GroupDocs.Annotation �
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---  
+
+**อัปเดตล่าสุด:** 2025-12-29  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.2  
+**ผู้เขียน:** GroupDocs  

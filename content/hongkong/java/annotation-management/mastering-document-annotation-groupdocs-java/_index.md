@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: Java 指南：使用 GroupDocs 以程式方式註解 PDF
+title: Java 指南 - 使用 GroupDocs 以程式方式註解 PDF
 type: docs
 url: /zh-hant/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -513,10 +513,6 @@ A: 可以！使用 ARGB 顏色值即可精確控制。例如，`setBackgroundCol
 **Q: 生產環境的授權需求為何？**  
 A: 生產部署必須擁有有效的 GroupDocs.Annotation 授權。開發與測試可使用免費試用版，但商業應用需購買授權。
 
-**最後更新：** 2025-12-29  
-**測試版本：** GroupDocs.Annotation 25.2  
-**作者：** GroupDocs  
-
 **其他資源**  
 - [GroupDocs Annotation 文件說明](https://docs.groupdocs.com/annotation/java/)  
 - [API 參考文件](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +521,7 @@ A: 生產部署必須擁有有效的 GroupDocs.Annotation 授權。開發與測�
 - [免費試用](https://releases.groupdocs.com/annotation/java/)  
 - [臨時授權](https://purchase.groupdocs.com/temporary-license/)  
 - [支援論壇](https://forum.groupdocs.com/c/annotation/)
+
+**最後更新：** 2025-12-29  
+**測試版本：** GroupDocs.Annotation 25.2  
+**作者：** GroupDocs  

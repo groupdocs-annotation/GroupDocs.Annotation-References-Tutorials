@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Hướng dẫn Java: chú thích PDF bằng lập trình sử dụng GroupDocs'
+title: 'Hướng dẫn Java - chú thích PDF bằng lập trình sử dụng GroupDocs'
 type: docs
 url: /vi/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -510,12 +510,6 @@ A: Có! Sử dụng giá trị màu ARGB để kiểm soát chính xác. Ví d�
 **Q: Yêu cầu giấy phép cho việc sử dụng trong môi trường sản xuất là gì?**  
 A: Bạn cần một giấy phép GroupDocs.Annotation hợp lệ cho triển khai sản xuất. Phát triển và kiểm thử có thể dùng bản dùng thử miễn phí, nhưng các ứng dụng thương mại yêu cầu mua giấy phép.
 
----
-
-**Last Updated:** 2025-12-29  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
-
 **Additional Resources**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -524,3 +518,9 @@ A: Bạn cần một giấy phép GroupDocs.Annotation hợp lệ cho triển kh
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2025-12-29  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs  

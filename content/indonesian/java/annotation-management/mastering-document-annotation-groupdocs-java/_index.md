@@ -15,7 +15,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Panduan Java: memberi anotasi PDF secara programatis menggunakan GroupDocs'
+title: 'Panduan Java - memberi anotasi PDF secara programatis menggunakan GroupDocs'
 type: docs
 url: /id/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -511,12 +511,6 @@ A: Ya! Gunakan nilai warna ARGB untuk kontrol presisi. Misalnya, `setBackgroundC
 **Q: Apa persyaratan lisensi untuk penggunaan produksi?**  
 A: Anda memerlukan lisensi GroupDocs.Annotation yang valid untuk penyebaran produksi. Pengembangan dan pengujian dapat menggunakan percobaan gratis, namun aplikasi komersial memerlukan lisensi yang dibeli.
 
----
-
-**Terakhir Diperbarui:** 2025-12-29  
-**Diuji Dengan:** GroupDocs.Annotation 25.2  
-**Penulis:** GroupDocs  
-
 **Sumber Daya Tambahan**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +519,9 @@ A: Anda memerlukan lisensi GroupDocs.Annotation yang valid untuk penyebaran prod
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Terakhir Diperbarui:** 2025-12-29  
+**Diuji Dengan:** GroupDocs.Annotation 25.2  
+**Penulis:** GroupDocs  

@@ -15,7 +15,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Java Rehberi: GroupDocs ile PDF''i programlı olarak açıklama ekleme'
+title: 'Java Rehberi - GroupDocs ile PDF''i programlı olarak açıklama ekleme'
 type: docs
 url: /tr/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -511,12 +511,6 @@ C: Evet! Görünümü tam kontrol etmek için ARGB renk değerlerini kullanın. 
 **S: Üretim kullanımı için lisans gereksinimleri nelerdir?**  
 C: Üretim dağıtımları için geçerli bir GroupDocs.Annotation lisansı gerekir. Geliştirme ve test ücretsiz deneme ile yapılabilir, ancak ticari uygulamalar için satın alınmış bir lisans zorunludur.
 
----
-
-**Son Güncelleme:** 2025-12-29  
-**Test Edilen Sürüm:** GroupDocs.Annotation 25.2  
-**Yazar:** GroupDocs  
-
 **Ek Kaynaklar**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +519,9 @@ C: Üretim dağıtımları için geçerli bir GroupDocs.Annotation lisansı gere
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Son Güncelleme:** 2025-12-29  
+**Test Edilen Sürüm:** GroupDocs.Annotation 25.2  
+**Yazar:** GroupDocs  

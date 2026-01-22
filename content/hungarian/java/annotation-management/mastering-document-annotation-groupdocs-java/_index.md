@@ -15,7 +15,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Java útmutató: PDF programozott annotálása a GroupDocs segítségével'
+title: 'Java útmutató - PDF programozott annotálása a GroupDocs segítségével'
 type: docs
 url: /hu/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -511,12 +511,6 @@ A: Igen! Használj ARGB színértékeket a pontos vezérléshez. Például a `se
 **Q: Mik a licencelési követelmények termelésben?**  
 A: A termelési telepítéshez érvényes GroupDocs.Annotation licenc szükséges. Fejlesztéshez és teszteléshez használható az ingyenes próba, de a kereskedelmi alkalmazásokhoz megvásárolt licenc szükséges.
 
----
-
-**Utoljára frissítve:** 2025-12-29  
-**Tesztelve a következővel:** GroupDocs.Annotation 25.2  
-**Szerző:** GroupDocs  
-
 **További források**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +519,9 @@ A: A termelési telepítéshez érvényes GroupDocs.Annotation licenc szüksége
 - [Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - [Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Utoljára frissítve:** 2025-12-29  
+**Tesztelve a következővel:** GroupDocs.Annotation 25.2  
+**Szerző:** GroupDocs  

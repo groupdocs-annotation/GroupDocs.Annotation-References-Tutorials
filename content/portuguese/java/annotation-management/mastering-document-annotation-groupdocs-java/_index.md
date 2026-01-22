@@ -15,7 +15,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Guia Java: anotar PDF programaticamente usando o GroupDocs'
+title: 'Guia Java - anotar PDF programaticamente usando o GroupDocs'
 type: docs
 url: /pt/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -511,12 +511,6 @@ R: Sim! Use valores de cor ARGB para controle preciso. Por exemplo, `setBackgrou
 **P: Quais são os requisitos de licenciamento para uso em produção?**  
 R: Você precisa de uma licença válida do GroupDocs.Annotation para implantação em produção. Desenvolvimento e testes podem usar o teste gratuito, mas aplicações comerciais exigem licença adquirida.
 
----
-
-**Última atualização:** 2025-12-29  
-**Testado com:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
 **Recursos adicionais**  
 - [Documentação do GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Referência da API](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +519,9 @@ R: Você precisa de uma licença válida do GroupDocs.Annotation para implantaç
 - [Teste gratuito](https://releases.groupdocs.com/annotation/java/)  
 - [Licença temporária](https://purchase.groupdocs.com/temporary-license/)  
 - [Fórum de suporte](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Última atualização:** 2025-12-29  
+**Testado com:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  

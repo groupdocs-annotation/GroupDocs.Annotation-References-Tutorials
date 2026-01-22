@@ -15,7 +15,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Οδηγός Java: σχολιασμός PDF προγραμματιστικά χρησιμοποιώντας το GroupDocs'
+title: 'Οδηγός Java - σχολιασμός PDF προγραμματιστικά χρησιμοποιώντας το GroupDocs'
 type: docs
 url: /el/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
@@ -511,12 +511,6 @@ public class DocumentAnnotationService {
 **Ε: Ποιες είναι οι απαιτήσεις αδειοδότησης για παραγωγική χρήση;**  
 Α: Χρειάζεστε έγκυρη άδεια GroupDocs.Annotation για παραγωγική ανάπτυξη. Η ανάπτυξη και οι δοκιμές μπορούν να γίνουν με τη δωρεάν δοκιμή, αλλά οι εμπορικές εφαρμογές απαιτούν αγορά άδειας.
 
----
-
-**Τελευταία Ενημέρωση:** 2025-12-29  
-**Δοκιμασμένο Με:** GroupDocs.Annotation 25.2  
-**Συγγραφέας:** GroupDocs  
-
 **Πρόσθετοι Πόροι**  
 - [Τεκμηρίωση GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)  
 - [Αναφορά API](https://reference.groupdocs.com/annotation/java/)  
@@ -525,3 +519,9 @@ public class DocumentAnnotationService {
 - [Δωρεάν Δοκιμή](https://releases.groupdocs.com/annotation/java/)  
 - [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license/)  
 - [Φόρουμ Υποστήριξης](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2025-12-29  
+**Δοκιμασμένο Με:** GroupDocs.Annotation 25.2  
+**Συγγραφέας:** GroupDocs  
