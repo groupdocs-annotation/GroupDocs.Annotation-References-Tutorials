@@ -35,25 +35,25 @@ weight: 1
 
 มาดำดิ่งสู่การสร้างสิ่งที่ทำงานได้จริงใน production กันเถอะ
 
-## Quick Answers
-- **What is the main library?** GroupDocs.Annotation for Java  
-- **Which AWS service is used?** Amazon S3 (streamed directly)  
-- **Do I need a license?** Yes – a free trial works for development, a full license for production  
-- **Can I handle large PDFs?** Absolutely, use streaming to avoid memory issues  
-- **Is concurrency supported?** GroupDocs.Annotation handles concurrent edits; you just need application‑level conflict handling  
+## คำตอบด่วน
+- **ไลบรารีหลักคืออะไร** GroupDocs.Annotation สำหรับ Java
+- **ใช้บริการ AWS ใดบ้าง** Amazon S3 (สตรีมโดยตรง)
+- **ฉันต้องมีใบอนุญาตหรือไม่** ใช่ – ทดลองใช้งานฟรีเพื่อการพัฒนา และเป็นใบอนุญาตเต็มรูปแบบสำหรับการผลิต
+- **ฉันสามารถจัดการ PDF ขนาดใหญ่ได้หรือไม่** ใช้การสตรีมเพื่อหลีกเลี่ยงปัญหาหน่วยความจำอย่างแน่นอน
+- **รองรับการทำงานพร้อมกันหรือไม่** GroupDocs.Annotation รองรับการแก้ไขพร้อมกัน คุณเพียงแค่ต้องมีการจัดการข้อขัดแย้งในระดับแอปพลิเคชัน
 
-## Why This Integration Matters (And Why You're Here)
+## เหตุใดการบูรณาการนี้จึงมีความสำคัญ (และเหตุใดคุณจึงมาที่นี่)
 
-คุณอาจกำลังจัดการกับเอกสารที่กระจายอยู่ทั่วบัคเก็ต S3, และทีมของคุณต้องการ annotate พวกมันโดยไม่ต้องดาวน์โหลดไฟล์ลงเครื่องท้องถิ่น เสียงคุ้นเคยไหม? คุณไม่ได้อยู่คนเดียว – นี่เป็นหนึ่งในความท้าทายที่พัฒนา​เดอร์หลายคนเผชิญเมื่อต้องสร้างระบบการทำงานร่วมกันของเอกสาร
+เพื่อเป็นแนวทางในการเผยแพร่เอกสารที่กระจายอยู่ทั่วพื้นที่เก็ต S3, และทีมของที่ต้องการคำอธิบายประกอบไม่จำเป็นต้องมีการลงเครื่องในพื้นที่ท้องถิ่นในไหม? คุณไม่ได้ทำ – นี่เป็นครั้งแรกสำหรับการพัฒนา​เดอร์ที่หลายคนประสบเมื่อต้องสร้างระบบการตรวจสอบของเอกสาร
 
-## Before We Start: What You Actually Need
+## ก่อนที่เราจะเริ่ม: สิ่งที่คุณต้องการจริงๆ
 
-### The Essential Stack
-- **GroupDocs.Annotation for Java (Version 25.2+)** – พลังงานหลักสำหรับการทำ annotation  
-- **AWS SDK for Java** – เพื่อจัดการกับงานหนักของ S3  
-- **JDK 8 or higher** – แน่นอน, แต่ก็อยากให้คุณรู้  
+### กองสำคัญ
+- **GroupDocs.Annotation for Java (Version 25.2+)** – สมุนไพรหลักสำหรับการทำ annotation
+- **AWS SDK for Java** – เพื่อดูงานหนักของ S3
+- **JDK8 หรือสูงกว่า** – เราจะอยากให้คุณ
 
-### Maven Dependencies (Copy‑Paste Ready)
+### การพึ่งพา Maven (คัดลอกและวางพร้อม)
 
 ```xml
 <repositories>
@@ -73,21 +73,21 @@ weight: 1
 </dependencies>
 ```
 
-### Developer Prerequisites (Be Honest With Yourself)
-- **Java basics** – คุณควรคุ้นเคยกับบล็อก `try‑catch` และ Maven  
-- **AWS fundamentals** – รู้ว่า S3 คืออะไรและบัคเก็ตทำงานอย่างไร  
-- **5‑10 minutes** – นั่นแหละที่คุณต้องการเพื่อให้ทุกอย่างทำงาน  
+### ข้อกำหนดเบื้องต้นของนักพัฒนา (ซื่อสัตย์กับตัวเอง)
+- **Java basics** – นี่เป็นบล็อก `try‑catch` และ Maven
+- **พื้นฐานของ AWS** – รู้ว่า S3 คืออะไรและรถบัสทำงานอย่างไร
+- **5-10 นาที** – เพื่อให้ทุกอย่างทำงาน
 
-## Setting Up GroupDocs Annotation (The Right Way)
+## การตั้งค่าคำอธิบายประกอบ GroupDocs (วิธีที่ถูกต้อง)
 
-### Getting Your License Sorted
-นักพัฒนาส่วนใหญ่ข้ามขั้นตอนนี้และสงสัยว่าทำไมถึงมีปัญหาในภายหลัง อย่าเป็นนักพัฒนาคนนั้น
+### การจัดเรียงใบอนุญาตของคุณ
+ไม่ต้องข้ามขั้นตอนนี้และใช้เวลานานว่าทำไมถึงมีปัญหาอีกครั้งไม่จำเป็นต้องเป็นการควบคุมตัวเอง
 
-**For Development/Testing:**  
-Grab the free trial from [GroupDocs Download](https://releases.groupdocs.com/annotation/java/) – it's actually functional, not a marketing gimmick.
+**สำหรับการพัฒนา/การทดสอบ:**
+ทดลองใช้ฟรีจาก [ดาวน์โหลด GroupDocs](https://releases.groupdocs.com/annotation/java/) ซึ่งใช้งานได้จริง ไม่ใช่กลไกทางการตลาด
 
-**For Production:**  
-You'll need either a temporary license (great for POCs) or the full license. Here's how to apply it:
+**สำหรับการผลิต:**
+คุณจะต้องมีใบอนุญาตชั่วคราว (เหมาะสำหรับ POC) หรือใบอนุญาตแบบเต็ม ต่อไปนี้เป็นวิธีการใช้งาน:
 
 ```java
 // Apply GroupDocs License
@@ -95,24 +95,24 @@ License license = new License();
 license.setLicense("path/to/your/license/file.lic");
 ```
 
-**Pro Tip:** Store your license file in your resources folder and reference it relatively. Your future self (and your DevOps team) will thank you.
+**เคล็ดลับสำหรับมือโปร:** เก็บไฟล์ลิขสิทธิ์ไว้ในโฟลเดอร์ทรัพยากรและอ้างอิงตามความเหมาะสม ตัวตนในอนาคตของคุณ (และทีม DevOps ของคุณ) จะขอบคุณ
 
-## The Implementation: From S3 to Annotations in Minutes
+## การใช้งาน: จาก S3 ไปจนถึงคำอธิบายประกอบในไม่กี่นาที
 
-### Understanding the Flow
-นี่คือสิ่งที่เรากำลังสร้าง: **S3 → Stream → GroupDocs → Annotations**. ง่ายใช่ไหม? รายละเอียดลึก ๆ คือจุดที่บทเรียนส่วนใหญ่ล้มเหลว ไม่ใช่บทเรียนนี้
+### ทำความเข้าใจกับกระแส
+สิ่งที่กำลังสร้าง: **S3 → สตรีม → GroupDocs → คำอธิบายประกอบ** ง่ายแค่ไหน? รายละเอียดลึกลงไปถึงความสามารถของสิ่งมีชีวิตนี้มากที่สุด
 
-### Loading Documents from Amazon S3 (The Smart Way)
+### การโหลดเอกสารจาก Amazon S3 (วิธีที่ชาญฉลาด)
 
-#### Why Direct Streaming Matters
-ก่อนที่เราจะกระโดดเข้าสู่โค้ด, นี่คือเหตุผลที่วิธีนี้ดีกว่าการดาวน์โหลดไฟล์ลงเครื่อง:
+#### เหตุใดการสตรีมโดยตรงจึงมีความสำคัญ
+เราจะกระโดดไปที่โค้ด, โดยเหตุผลที่ว่าทำไมดีกว่าการลงเครื่อง:
 
-- **Memory efficiency** – ไม่ต้องสร้างไฟล์ชั่วคราวที่บวมขึ้น  
-- **Security** – ไฟล์ไม่เคยไปถึงไฟล์ระบบของคุณ  
-- **Performance** – streaming เร็วกว่า download‑then‑process  
-- **Scalability** – เซิร์ฟเวอร์ของคุณจะไม่เต็มพื้นที่ดิสก์  
+- **ประสิทธิภาพหน่วยความจำ** – ไม่เคยสร้างไฟล์ชั่วคราวที่บวมขึ้น
+- **ความปลอดภัย** – ไม่เคยเข้าถึงไฟล์ระบบของคุณเลย
+- **ประสิทธิภาพ** – สตรีมมิ่ง ดาวน์โหลดและดำเนินการ
+- **Scalability** – ผู้เข้าชมของคุณจะไม่เต็มพื้นที่ไม่อนุญาตให้
 
-#### Step 1: Initialize Your S3 Client
+#### ขั้นตอนที่ 1: เริ่มต้นไคลเอนต์ S3 ของคุณ
 
 ```java
 // Import necessary packages
@@ -126,9 +126,9 @@ AmazonS3 s3client = AmazonS3ClientBuilder.standard().build();
 String bucketName = "my-bucket"; // Replace with your actual bucket name
 ```
 
-**Common Gotcha:** หากคุณได้รับข้อผิดพลาดการยืนยันตัวตนที่นี่, ตรวจสอบการตั้งค่า AWS credentials ของคุณอีกครั้ง. SDK จะค้นหา credentials ตามลำดับนี้: environment variables → AWS credentials file → IAM roles.
+**Common Gotcha:** จะมีการกล่าวถึงตัวตนที่นี่, ตรวจสอบข้อมูลรับรอง AWS ของคุณอีกครั้ง SDK จะค้นหาข้อมูลรับรองตามลำดับนี้: ตัวแปรสภาพแวดล้อม → ไฟล์ข้อมูลรับรอง AWS → บทบาท IAM
 
-#### Step 2: Create Your Object Request
+#### ขั้นตอนที่ 2: สร้างคำขอวัตถุของคุณ
 
 ```java
 // Define the object key (file path in S3)
@@ -138,9 +138,9 @@ String fileKey = "path/to/your/document.pdf";
 GetObjectRequest request = new GetObjectRequest(bucketName, fileKey);
 ```
 
-**Real‑World Note:** ใน production, คุณควรตรวจสอบว่า `fileKey` มีอยู่จริงก่อนสร้าง request. เชื่อผมเถอะ – ผู้ใช้จะพยายามเข้าถึงไฟล์ที่ไม่มีอยู่บ่อย ๆ
+**หมายเหตุโลกแห่งความเป็นจริง:** ในการผลิต, ระบบควบคุม `fileKey` ที่มีอยู่จริงก่อนสร้างคำขอ เชื่อผมเถอะ – ผู้ใช้จะเข้าถึงไฟล์ไม่ได้อยู่บ่อย ๆ
 
-#### Step 3: Stream the Content (This is Where Magic Happens)
+#### ขั้นตอนที่ 3: สตรีมเนื้อหา (นี่คือจุดที่เวทมนตร์เกิดขึ้น)
 
 ```java
 // Try-with-resources to ensure proper closure of resources
@@ -152,16 +152,16 @@ try (S3ObjectInputStream s3is = s3client.getObject(request).getObjectContent()) 
 }
 ```
 
-#### What's Actually Happening Here
-- **AmazonS3Client** จัดการการยืนยันตัวตนและการเชื่อมต่อกับ AWS ทั้งหมด  
-- **GetObjectRequest** คือ request ไฟล์ของคุณ (คิดว่าเป็นเส้นทางไฟล์อัจฉริยะ)  
-- **S3ObjectInputStream** ให้สตรีมที่คุณส่งต่อให้ GroupDocs ได้โดยตรง – ไม่ต้องมีขั้นตอนกลาง  
+#### สิ่งที่เกิดขึ้นจริงที่นี่
+- **AmazonS3Client** จัดการกับข้อมูลส่วนบุคคลและข้อมูล AWS ทั้งหมด
+- **GetObjectRequest** คือคำขอของคุณ (ร้านอาหารเป็นเส้นทางไฟล์อัจฉริยะ)
+- **S3ObjectInputStream** ส่งสตรีมที่คุณส่งต่อให้ GroupDocs ได้โดยตรง – ไม่เคยมีขั้นตอนกลาง
 
-### Troubleshooting: When Things Go Wrong (And They Will)
+### การแก้ไขปัญหา: เมื่อมีสิ่งผิดปกติเกิดขึ้น (และจะเกิดขึ้น)
 
-#### The “Access Denied” Problem
-**Symptoms:** โค้ดทำงานบนเครื่องท้องถิ่นแต่ล้มเหลวใน production  
-**Solution:** ตรวจสอบ IAM policies ของคุณ. แอปต้องมีสิทธิ `s3:GetObject` สำหรับบัคเก็ตที่ระบุ
+#### ปัญหา “การเข้าถึงถูกปฏิเสธ”
+**อาการ:** โค้ดทำงานบนเครื่องท้องถิ่นแต่เป็นหลักในการผลิต
+**วิธีแก้ปัญหา:** นโยบาย IAM ของการถ่ายภาพของคุณ มีสิทธิมีสิทธิได้รับ `s3:GetObject` สำหรับเก็บข้อมูลเพื่อรองรับ
 
 ```json
 {
@@ -176,43 +176,43 @@ try (S3ObjectInputStream s3is = s3client.getObject(request).getObjectContent()) 
 }
 ```
 
-#### The “File Not Found” Mystery
-**Symptoms:** เกิดข้อยกเว้น `NoSuchKey` แม้ว่าคุณจะเห็นไฟล์ใน AWS console  
-**Solution:** คีย์ของวัตถุ S3 แยกแยะตัวพิมพ์ใหญ่‑เล็กและรวมเส้นทางเต็ม. “Document.pdf” ≠ “document.pdf”
+#### ความลึกลับ “ไม่พบไฟล์”
+**อาการ:** ในกรณีที่ต้องการ `NoSuchKey` เพื่อดูไฟล์ในคอนโซล AWS
+**วิธีแก้ไข:** คีย์ของวัตถุ S3 กินตัวพิมพ์ใหญ่‑เล็กและรวมเส้นทางเต็ม “เอกสาร.pdf” ≠ “เอกสาร.pdf”
 
-#### Memory Issues with Large Files
-**Symptoms:** `OutOfMemoryError` ขณะประมวลผลเอกสารขนาดใหญ่  
-**Solution:** ใช้ streaming ตลอดทั้ง pipeline. อย่าโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ
+#### ปัญหาหน่วยความจำกับไฟล์ขนาดใหญ่
+**อาการ:** `OutOfMemoryError` ในขณะที่ส่วนที่เหลือเอกสารขนาดใหญ่
+**วิธีแก้ไข:** ใช้การสตรีมตลอดทั้งไปป์ไลน์ อย่าโหลดไฟล์ทั้งหมดเลย
 
-## Real‑World Implementation Scenarios
+## สถานการณ์การใช้งานจริงในโลกแห่งความเป็นจริง
 
-### Scenario 1: Legal Document Review Platform
-คุณกำลังสร้างระบบที่ทีมกฎหมาย annotate สัญญาที่เก็บใน S3. สิ่งที่สำคัญ:
+### สถานการณ์ที่ 1: แพลตฟอร์มการตรวจสอบเอกสารทางกฎหมาย
+การสร้างระบบที่ทีมกฎหมายทำคำอธิบายประกอบคำบรรยายใน S3 สิ่งที่สำคัญ:
 
-- **Audit trails** – ทุก annotation ต้องบันทึกไว้  
-- **Version control** – เอกสารต้นฉบับต้องไม่ถูกแก้ไข  
-- **Access control** – เฉพาะผู้ใช้ที่ได้รับอนุญาตเท่านั้นที่สามารถ annotate เอกสารเฉพาะได้  
+- **เส้นทางการตรวจสอบ** – ทุกคำอธิบายประกอบทุกรายการ
+- **Version control** – เอกสารต้นฉบับต้องไม่ถูกแก้ไข
+- **Access control** – ในกรณีที่ผู้ใช้เท่านั้นที่มีคำอธิบายประกอบเอกสารเฉพาะได้
 
-### Scenario 2: Educational Content Management
-ครูอัปโหลดบทเรียนไปยัง S3, และนักเรียน annotate เพื่อให้ข้อเสนอแนะ:
+### สถานการณ์ที่ 2: การจัดการเนื้อหาทางการศึกษา
+ครูผู้สอนบทเรียนไปยัง S3 และนักเรียนใส่คำอธิบายประกอบเพื่อใช้:
 
-- **Concurrent access** – นักเรียนหลายคนอาจ annotate พร้อมกัน  
-- **Annotation categories** – ประเภทข้อเสนอแนะต่าง ๆ (คำถาม, การแก้ไข, การชื่นชม)  
-- **Export capabilities** – ต้องสามารถส่งออก annotation เพื่อการให้คะแนน  
+- **เข้าถึงพร้อมกัน** – นักเรียนหลายคนอาจใส่คำอธิบายประกอบพร้อมกัน
+- **หมวดหมู่คำอธิบายประกอบ** – ประเภทต่างๆ ที่แตกต่างกัน (คำถาม, จริงๆ, การจัดเก็บข้อมูล)
+- **ความสามารถในการส่งออก** – ร้านอาหารสามารถส่งออกคำอธิบายประกอบได้
 
-### Scenario 3: Enterprise Document Collaboration
-ทีมกระจายทั่วโลกทำงานร่วมกันบนเอกสารเทคนิค:
+### สถานการณ์ที่ 3: การทำงานร่วมกันในเอกสารระดับองค์กร
+เอกสารเผยแพร่ทั่วโลกบนเอกสารเทคนิค:
 
-- **Real‑time sync** – annotation ปรากฏทันทีบนทุกไคลเอนต์  
-- **Integration requirements** – ต้องทำงานร่วมกับ SSO และระบบสิทธิ์ที่มีอยู่  
-- **Performance at scale** – รองรับเอกสารหลายพันไฟล์  
+- **การซิงค์แบบเรียลไทม์** – คำอธิบายประกอบปรากฏขึ้นทันทีบนทุก ๆ วัน
+- **ข้อกำหนดในการบูรณาการ** – โต๊ะอาหารค่ำ SSO มีสิทธิ์ได้รับสิทธิ์
+- **ประสิทธิภาพตามขนาด** – เอกสารแนบของไฟล์
 
-## Performance Optimization: Making It Production‑Ready
+## การเพิ่มประสิทธิภาพประสิทธิภาพ: การสร้างมันขึ้นมา การผลิต-พร้อม
 
-### Memory Management Best Practices
-**Always use try‑with‑resources** สำหรับสตรีม S3 – สตรีมที่รั่วไหลจะทำให้แอปของคุณล่มในที่สุด
+### แนวทางปฏิบัติที่ดีที่สุดในการจัดการหน่วยความจำ
+**ใช้ try-with-resources เสมอ** สำหรับสตรีม S3 – สตรีมที่รั่วไหลปล่อยให้แอปของคุณล่ม
 
-**Stream processing** แทนการโหลดไฟล์ทั้งหมด:
+**การประมวลผลสตรีม** แทนไฟล์ทั้งหมด:
 
 ```java
 // Good - streams the entire process
@@ -224,7 +224,7 @@ try (S3ObjectInputStream s3Stream = getS3Stream(bucketName, fileKey)) {
 byte[] fileContent = IOUtils.toByteArray(s3Stream); // Don't do this
 ```
 
-### Connection Pool Optimization
+### การเพิ่มประสิทธิภาพพูลการเชื่อมต่อ
 กำหนดค่า S3 client ให้เหมาะกับงาน production:
 
 ```java
@@ -235,99 +235,101 @@ AmazonS3 s3client = AmazonS3ClientBuilder.standard()
     .build();
 ```
 
-### Async Processing for Better UX
-สำหรับไฟล์ขนาดใหญ่, พิจารณาใช้การประมวลผลแบบ async:
+### การประมวลผลแบบอะซิงก์เพื่อ UX ที่ดีขึ้น
+สำหรับไฟล์ขนาดใหญ่ ให้พิจารณาว่าจะใช้แบบ async:
 
-- เริ่มกระบวนการโหลด annotation  
-- แสดงตัวบ่งชี้ความคืบหน้าให้ผู้ใช้เห็น  
-- ใช้ callbacks หรือ WebSockets เพื่อแจ้งเมื่อพร้อม  
+- เริ่มโหลดคำอธิบายประกอบ
+- แสดงว่ายังคงให้ผู้ใช้เห็น
+- ใช้ callbacks หรือ WebSockets เพื่อแจ้งเมื่อพร้อม
 
-## Common Pitfalls (Learn from Others' Mistakes)
+## ข้อผิดพลาดทั่วไป (เรียนรู้จากข้อผิดพลาดของผู้อื่น)
 
-### The “It Works on My Machine” Trap
-**Problem:** Credential ของ AWS แตกต่างระหว่าง environment  
-**Solution:** ใช้การตั้งค่าแยกตาม environment และจัดการ credential อย่างถูกต้อง  
+### กับดัก “มันใช้งานได้กับเครื่องของฉัน”
+**ปัญหา:** ข้อมูลรับรองของ AWS แตกต่างระหว่างสภาพแวดล้อม
+**วิธีแก้ไข:** ใช้งานแยกตามสภาพแวดล้อม และจัดการข้อมูลประจำตัวของคุณเอง
 
-### The Large File Assumption
-**Problem:** ทดสอบด้วย PDF เล็ก ๆ แล้วนำไปใช้กับเอกสารหลาย GB  
-**Solution:** ทดสอบด้วยไฟล์ขนาดจริงตั้งแต่วันแรก  
+### สมมติฐานไฟล์ขนาดใหญ่
+**ปัญหา:** ทดสอบด้วย PDF เพียงเล็กน้อยแล้วไม่อ่านเอกสารหลาย GB
+**วิธีแก้ปัญหา:** ทดสอบด้วยไฟล์ขนาดจริงตั้งแต่วันแรก
 
-### The Security Afterthought
-**Problem:** ใส่ AWS credentials ไว้ในโค้ดโดยตรง  
-**Solution:** ใช้ IAM roles, environment variables, หรือ AWS Secrets Manager  
+### แนวคิดด้านความปลอดภัยภายหลัง
+**ปัญหา:** ใส่ข้อมูลรับรอง AWS อย่างเป็นทางการโค้ดโดยตรง
+**โซลูชัน:** ใช้บทบาท IAM, ตัวแปรสภาพแวดล้อม หรือ AWS Secrets Manager
 
-## Advanced Tips for Java S3 Document Annotation
+## เคล็ดลับขั้นสูงสำหรับคำอธิบายประกอบเอกสาร Java S3
 
-### Caching Strategy
-Implement intelligent caching for frequently accessed documents:
+### แคช กลยุทธ์
+นำระบบแคชอัจฉริยะมาใช้กับเอกสารที่เข้าถึงบ่อย:
 
 ```java
 // Cache document metadata, not content
 Map<String, DocumentInfo> documentCache = new ConcurrentHashMap<>();
 ```
 
-### Error Recovery
-Build resilience into your S3 operations:
+### การกู้คืนข้อผิดพลาด
+สร้างความยืดหยุ่นให้กับการดำเนินงาน S3 ของคุณ:
 
-- Retry logic for transient network failures  
-- Fallback mechanisms for unavailable documents  
-- Graceful degradation when annotation services are down  
+- ลองตรรกะอีกครั้งสำหรับความล้มเหลวของเครือข่ายชั่วคราว
+- กลไกทางเลือกสำหรับเอกสารที่ไม่พร้อมใช้งาน
+- ความเสื่อมโทรมลงอย่างมากเมื่อบริการคำอธิบายประกอบหยุดทำงาน
 
-### Monitoring and Logging
-Track the metrics that matter:
+### การตรวจสอบและการบันทึก
+ติดตามตัวชี้วัดที่สำคัญ:
 
-- **Document load times** – ระยะเวลาที่ S3 ดึงข้อมูลใช้เท่าไหร่  
-- **Annotation processing duration** – ประสิทธิภาพของ GroupDocs  
-- **Error rates** – จำนวนการทำงานที่ล้มเหลือตามประเภท  
-- **User engagement** – เอกสารใดได้รับการ annotate มากที่สุด  
+- **เวลาในการโหลดเอกสาร** – ที่ S3 ดึงข้อมูลใช้เท่าไหร่
+- **ระยะเวลาการประมวลผลคำอธิบายประกอบ** – สำหรับ GroupDocs
+- **อัตราข้อผิดพลาด** – จำนวนการทำงานที่เหลือตามประเภท
+- **การมีส่วนร่วมของผู้ใช้** – เอกสารใด ๆ ที่แสดงคำอธิบายประกอบมากที่สุด
 
-## Frequently Asked Questions (The Real Ones)
+## คำถามที่พบบ่อย (ของจริง)
 
-**Q: How do I handle really large PDF files without running out of memory?**  
-A: Stream everything. Don't load the entire document into memory. GroupDocs.Annotation supports streaming, so use it. If you still hit limits, consider splitting the document or processing it in AWS Lambda.
+**ถาม: ฉันจะจัดการไฟล์ PDF ขนาดใหญ่จริงๆ โดยที่หน่วยความจำไม่เพียงพอได้อย่างไร**
+ตอบ: สตรีมทุกอย่าง อย่าโหลดเอกสารทั้งหมดลงในหน่วยความจำ GroupDocs.Annotation รองรับการสตรีม ดังนั้นจงใช้มัน หากคุณยังคงถึงขีดจำกัด ให้พิจารณาแยกเอกสารหรือประมวลผลใน AWS Lambda
 
-**Q: Can I annotate documents directly in S3 without downloading them?**  
-A: Not exactly. You stream the content (which is different from downloading), process it with GroupDocs, then you can either save annotations separately or upload a new annotated version back to S3.
+**ถาม: ฉันสามารถใส่คำอธิบายประกอบในเอกสารโดยตรงใน S3 โดยไม่ต้องดาวน์โหลดได้หรือไม่?**
+ตอบ: ไม่ได้เสียทีเดียว คุณต้องสตรีมเนื้อหา (ซึ่งแตกต่างจากการดาวน์โหลด) ประมวลผลด้วย GroupDocs จากนั้นคุณสามารถบันทึกคำอธิบายประกอบแยกต่างหาก หรืออัปโหลดเวอร์ชันที่มีคำอธิบายประกอบใหม่กลับไปยัง S3 ได้
 
-**Q: What's the performance impact of streaming from S3 vs local files?**  
-A: Network latency adds 50‑200 ms typically, but you save on local storage and deployment complexity. For most apps the trade‑off is worth it. If performance is critical, place your servers in the same AWS region as the bucket.
+**ถาม: ผลกระทบต่อประสิทธิภาพของการสตรีมจาก S3 เทียบกับไฟล์ในเครื่องเป็นอย่างไร?**
+ตอบ: ความหน่วงของเครือข่ายโดยทั่วไปจะเพิ่มเวลา 50-200 มิลลิวินาที แต่คุณจะประหยัดพื้นที่จัดเก็บข้อมูลในเครื่องและความซับซ้อนในการปรับใช้ สำหรับแอปส่วนใหญ่ การแลกเปลี่ยนนี้คุ้มค่า หากประสิทธิภาพเป็นสิ่งสำคัญ ให้วางเซิร์ฟเวอร์ของคุณในภูมิภาค AWS เดียวกันกับบัคเก็ต
 
-**Q: How do I secure access to sensitive documents?**  
-A: Use IAM roles with least‑privilege access, enable S3 bucket policies, consider S3 encryption at rest, and implement application‑level access controls. Never rely solely on “security through obscurity.”
+**ถาม: ฉันจะรักษาความปลอดภัยในการเข้าถึงเอกสารที่ละเอียดอ่อนได้อย่างไร?**
+ตอบ: ใช้บทบาท IAM ที่มีสิทธิ์การเข้าถึงขั้นต่ำ เปิดใช้งานนโยบายบัคเก็ต S3 พิจารณาการเข้ารหัส S3 ในขณะที่จัดเก็บ และใช้การควบคุมการเข้าถึงระดับแอปพลิเคชัน อย่าพึ่งพา "ความปลอดภัยผ่านการปกปิด" เพียงอย่างเดียว
 
-**Q: Can multiple users annotate the same document simultaneously?**  
-A: GroupDocs.Annotation supports concurrent annotations, but you’ll need to implement conflict resolution at the application level. Consider document locking or real‑time collaboration features.
 
-**Q: What file formats work with this approach?**  
-A: GroupDocs.Annotation supports PDF, Word, Excel, PowerPoint, and many image formats. The S3 integration doesn’t change format support – if GroupDocs can process it locally, it can process it from S3.
+**ถาม: ผู้ใช้หลายคนสามารถใส่คำอธิบายประกอบในเอกสารเดียวกันพร้อมกันได้หรือไม่?**
+ตอบ: GroupDocs.Annotation รองรับการใส่คำอธิบายประกอบพร้อมกัน แต่คุณจะต้องใช้การแก้ไขข้อขัดแย้งในระดับแอปพลิเคชัน พิจารณาใช้การล็อกเอกสารหรือคุณสมบัติการทำงานร่วมกันแบบเรียลไทม์
 
-## Wrapping Up: You're Ready to Build
+**ถาม: รูปแบบไฟล์ใดบ้างที่ใช้งานได้กับวิธีการนี้?**
+ตอบ: GroupDocs.Annotation รองรับ PDF, Word, Excel, PowerPoint และรูปแบบภาพหลายรูปแบบ การผสานรวม S3 ไม่ได้เปลี่ยนแปลงการรองรับรูปแบบไฟล์ หาก GroupDocs สามารถประมวลผลได้ในเครื่อง ก็สามารถประมวลผลจาก S3 ได้เช่นกัน
 
-You now have everything you need to build robust Java S3 document annotation functionality. The key takeaways:
+## สรุป: คุณพร้อมที่จะสร้างแล้ว
 
-- **Stream everything** – don’t download files unnecessarily  
-- **Handle errors gracefully** – network issues will happen  
-- **Test with realistic data** – small test files hide performance problems  
-- **Secure by design** – use proper AWS permissions from the start  
+ตอนนี้คุณมีทุกสิ่งที่คุณต้องการเพื่อสร้างฟังก์ชันการใส่คำอธิบายประกอบเอกสาร Java S3 ที่แข็งแกร่งแล้ว ประเด็นสำคัญ:
 
-## What's Next?
-- Explore GroupDocs' advanced annotation features for your specific use case  
-- Consider implementing real‑time collaboration features  
-- Look into other cloud storage integrations (Azure, Google Cloud) using similar patterns  
+- **สตรีมทุกอย่าง** – อย่าดาวน์โหลดไฟล์โดยไม่จำเป็น
+- **จัดการข้อผิดพลาดอย่างชาญฉลาด** – ปัญหาเครือข่ายเกิดขึ้นได้เสมอ
+- **ทดสอบด้วยข้อมูลที่สมจริง** – ไฟล์ทดสอบขนาดเล็กซ่อนปัญหาด้านประสิทธิภาพ
+- **ปลอดภัยตั้งแต่เริ่มต้น** – ใช้สิทธิ์ AWS ที่ถูกต้องตั้งแต่แรก
 
-Ready to start coding? The examples above are production‑ready – just swap in your bucket names and file paths.
+## ขั้นต่อไปคืออะไร?
 
-## Resources and References
-- [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) - The docs (actually useful)  
-- [API Reference](https://reference.groupdocs.com/annotation/java/) - When you need specific method signatures  
-- [Download Library](https://releases.groupdocs.com/annotation/java/) - Get the latest version  
-- [Purchase License](https://purchase.groupdocs.com/buy) - When you're ready for production  
-- [Free Trial](https://releases.groupdocs.com/annotation/java/) - Start here if you're just exploring  
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/) - Perfect for POCs and demos  
-- [Support Forum](https://forum.groupdocs.com/c/annotation/) - Real developers helping real developers  
+- สำรวจคุณสมบัติการใส่คำอธิบายประกอบขั้นสูงของ GroupDocs สำหรับกรณีการใช้งานเฉพาะของคุณ
+- พิจารณาการใช้งานคุณสมบัติการทำงานร่วมกันแบบเรียลไทม์
+- ศึกษาการผสานรวมพื้นที่จัดเก็บข้อมูลบนคลาวด์อื่นๆ (Azure, Google Cloud) ที่ใช้รูปแบบคล้ายกัน
+
+พร้อมเริ่มเขียนโค้ดแล้วหรือยัง? ตัวอย่างข้างต้นพร้อมใช้งานจริงแล้ว – เพียงแค่เปลี่ยนชื่อบัคเก็ตและเส้นทางไฟล์ของคุณ
+
+## แหล่งข้อมูลและเอกสารอ้างอิง
+- [เอกสารประกอบ GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/) - เอกสาร (ที่ใช้งานได้จริง)
+- [เอกสารอ้างอิง API](https://reference.groupdocs.com/annotation/java/) - เมื่อคุณต้องการลายเซ็นเมธอดเฉพาะ
+- [ดาวน์โหลดไลบรารี](https://releases.groupdocs.com/annotation/java/) - รับเวอร์ชันล่าสุด
+- [ซื้อใบอนุญาต](https://purchase.groupdocs.com/buy) - เมื่อคุณพร้อมสำหรับการใช้งานจริง
+- [ทดลองใช้ฟรี](https://releases.groupdocs.com/annotation/java/) - เริ่มต้นที่นี่หากคุณกำลังสำรวจ
+- [ใบอนุญาตชั่วคราว](https://purchase.groupdocs.com/temporary-license/) - เหมาะสำหรับ POC และการสาธิต
+- [การสนับสนุน] ฟอรัม (https://forum.groupdocs.com/c/annotation/) - นักพัฒนาตัวจริงช่วยเหลือนักพัฒนาตัวจริง
 
 ---
 
-**Last Updated:** 2025-12-31  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs
+**อัปเดตล่าสุด:** 31 ธันวาคม 2025
+**ทดสอบกับ:** GroupDocs.Annotation 25.2 สำหรับ Java
+**ผู้เขียน:** GroupDocs

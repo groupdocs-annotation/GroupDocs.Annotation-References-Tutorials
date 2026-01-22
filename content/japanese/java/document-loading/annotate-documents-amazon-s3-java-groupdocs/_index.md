@@ -34,25 +34,26 @@ weight: 1
 
 さあ、本番環境で実際に動くものを作りましょう。
 
-## Quick Answers
+## クイックアンサー
 - **メインライブラリは？** GroupDocs.Annotation for Java  
 - **使用する AWS サービスは？** Amazon S3（直接ストリーミング）  
 - **ライセンスは必要？** はい – 開発には無料トライアル、 本番にはフルライセンスが必要です  
 - **大容量 PDF に対応できる？** もちろん、ストリーミングでメモリ問題を回避します  
 - **同時実行はサポートされている？** GroupDocs.Annotation は同時編集を処理します。アプリ側で競合処理を実装するだけです  
 
-## Why This Integration Matters (And Why You're Here)
+## この統合が重要な理由（そして、あなたがここにいる理由）
 
 おそらく S3 バケットに散在するドキュメントを扱っており、チームはローカルにダウンロードせずに注釈を付ける必要があるでしょう。心当たりはありませんか？同じ悩みを抱える開発者は多く、これはドキュメント共同作業システムを構築する際に最も一般的な課題のひとつです。
 
-## Before We Start: What You Actually Need
+## 始める前に: 実際に必要なもの
 
-### The Essential Stack
+### 必須スタック
+
 - **GroupDocs.Annotation for Java (Version 25.2+)** – 注釈機能の中核  
 - **AWS SDK for Java** – S3 の重い処理を担当  
 - **JDK 8 以上** – もちろん、言うまでもありません  
 
-### Maven Dependencies (Copy‑Paste Ready)
+### Maven の依存関係 (コピー＆ペースト対応)
 
 ```xml
 <repositories>
@@ -72,14 +73,14 @@ weight: 1
 </dependencies>
 ```
 
-### Developer Prerequisites (Be Honest With Yourself)
+### 開発者の前提条件 (自分に正直に)
 - **Java 基礎** – try‑catch ブロックと Maven に慣れていること  
 - **AWS 基礎** – S3 とバケットの概念を理解していること  
 - **5‑10 分** – これだけあれば本機能は動作します  
 
-## Setting Up GroupDocs Annotation (The Right Way)
+## GroupDocs アノテーションの設定 (正しい方法)
 
-### Getting Your License Sorted
+### ライセンスの整理
 多くの開発者がこのステップを飛ばし、後で問題になることがあります。そんな開発者にならないでください。
 
 **開発/テスト用:**  
@@ -96,14 +97,14 @@ license.setLicense("path/to/your/license/file.lic");
 
 **Pro Tip:** ライセンスファイルは `resources` フォルダーに置き、相対パスで参照しましょう。将来の自分（と DevOps チーム）に感謝されます。
 
-## The Implementation: From S3 to Annotations in Minutes
+## 実装：S3 からアノテーションまでわずか数分
 
-### Understanding the Flow
+### フローを理解する
 構築するフローは **S3 → Stream → GroupDocs → Annotations** です。シンプルですよね？細部に落とし穴があり、そこが多くのチュートリアルが失敗するポイントです。このチュートリアルは例外です。
 
-### Loading Documents from Amazon S3 (The Smart Way)
+### Amazon S3 からのドキュメントのロード（スマートな方法）
 
-#### Why Direct Streaming Matters
+#### ダイレクトストリーミングが重要な理由
 コードに入る前に、このアプローチがローカルダウンロードより優れている理由を示します：
 
 - **メモリ効率** – 一時ファイルが増えません  
@@ -111,7 +112,7 @@ license.setLicense("path/to/your/license/file.lic");
 - **パフォーマンス** – ダウンロード → 処理よりもストリーミングの方が高速です  
 - **スケーラビリティ** – サーバーのディスク容量が枯渇しません  
 
-#### Step 1: Initialize Your S3 Client
+#### ステップ 1: S3 クライアントを初期化する
 
 ```java
 // Import necessary packages
@@ -127,7 +128,7 @@ String bucketName = "my-bucket"; // Replace with your actual bucket name
 
 **よくある落とし穴:** ここで認証エラーが出たら、AWS 資格情報の設定を再確認してください。SDK は次の順序で資格情報を探します：環境変数 → AWS 資格情報ファイル → IAM ロール。
 
-#### Step 2: Create Your Object Request
+#### ステップ 2: オブジェクトリクエストを作成する
 
 ```java
 // Define the object key (file path in S3)
@@ -139,7 +140,7 @@ GetObjectRequest request = new GetObjectRequest(bucketName, fileKey);
 
 **実務メモ:** 本番環境では `fileKey` が存在するか事前に検証してください。ユーザーは存在しないファイルにアクセスしようとします。
 
-#### Step 3: Stream the Content (This is Where Magic Happens)
+#### ステップ 3: コンテンツをストリーミングする (ここで魔法が起こります)
 
 ```java
 // Try-with-resources to ensure proper closure of resources
@@ -151,14 +152,14 @@ try (S3ObjectInputStream s3is = s3client.getObject(request).getObjectContent()) 
 }
 ```
 
-#### What's Actually Happening Here
+#### ここで実際に何が起こっているのか
 - **AmazonS3Client** が AWS 認証と接続管理をすべて処理  
 - **GetObjectRequest** が対象ファイルへのリクエスト（非常にスマートなファイルパス）  
 - **S3ObjectInputStream** が直接 GroupDocs に渡せるストリームを提供 – 中間ステップは不要  
 
-### Troubleshooting: When Things Go Wrong (And They Will)
+### トラブルシューティング: 問題が発生した場合 (必ず発生します)
 
-#### The “Access Denied” Problem
+#### 「アクセス拒否」の問題
 **症状:** ローカルでは動くが本番で失敗する  
 **解決策:** IAM ポリシーを確認。アプリケーションには対象バケットに対する `s3:GetObject` 権限が必要です。
 
@@ -175,40 +176,41 @@ try (S3ObjectInputStream s3is = s3client.getObject(request).getObjectContent()) 
 }
 ```
 
-#### The “File Not Found” Mystery
+#### 「ファイルが見つかりません」の謎
+
 **症状:** AWS コンソールではファイルが見えるのに `NoSuchKey` 例外が発生  
 **解決策:** S3 オブジェクトキーは大文字小文字を区別し、フルパスが含まれます。`Document.pdf` ≠ `document.pdf`
 
-#### Memory Issues with Large Files
+#### 大容量ファイルでのメモリ問題
 **症状:** 大容量ドキュメント処理時に `OutOfMemoryError` が発生  
 **解決策:** パイプライン全体でストリーミングを使用し、ファイル全体をメモリに読み込まないこと  
 
-## Real‑World Implementation Scenarios
+## 実際の導入シナリオ
 
-### Scenario 1: Legal Document Review Platform
+### シナリオ 1: 法務文書レビュープラットフォーム
 法務チームが S3 に保存された契約書に注釈を付けるシステムです。重要ポイント：
 
 - **監査トレイル** – すべての注釈を記録  
 - **バージョン管理** – 元文書は変更不可  
 - **アクセス制御** – 認可されたユーザーのみが特定文書に注釈可能  
 
-### Scenario 2: Educational Content Management
+### シナリオ 2: 教育コンテンツ管理
 教師が S3 に教材をアップロードし、学生がフィードバック用に注釈を付けます：
 
 - **同時アクセス** – 複数の学生が同時に注釈  
 - **注釈カテゴリ** – 質問、修正、称賛などのフィードバック種別  
 - **エクスポート機能** – 採点用に注釈をエクスポート  
 
-### Scenario 3: Enterprise Document Collaboration
+### シナリオ 3: エンタープライズドキュメントコラボレーション
 分散チームが技術文書で共同作業：
 
 - **リアルタイム同期** – 注釈がすべてのクライアントに即時反映  
 - **統合要件** – 既存の SSO と権限管理と連携必須  
 - **スケール時のパフォーマンス** – 数千件の文書を処理  
 
-## Performance Optimization: Making It Production‑Ready
+## パフォーマンス最適化: 本番環境への導入準備
 
-### Memory Management Best Practices
+### メモリ管理のベストプラクティス
 **必ず** S3 ストリームは `try‑with‑resources` で閉じましょう – ストリーム漏れは最終的にアプリをクラッシュさせます。
 
 **ファイル全体をロードせずにストリーム処理**:
@@ -223,7 +225,7 @@ try (S3ObjectInputStream s3Stream = getS3Stream(bucketName, fileKey)) {
 byte[] fileContent = IOUtils.toByteArray(s3Stream); // Don't do this
 ```
 
-### Connection Pool Optimization
+### コネクションプールの最適化
 本番ワークロード向けに S3 クライアントを設定:
 
 ```java
@@ -234,30 +236,30 @@ AmazonS3 s3client = AmazonS3ClientBuilder.standard()
     .build();
 ```
 
-### Async Processing for Better UX
+### UX向上のための非同期処理
 大容量ファイルの場合は非同期処理を検討:
 
 - 注釈ロードプロセスを開始  
 - ユーザーにプログレスインジケータを表示  
 - コールバックまたは WebSocket で完了を通知  
 
-## Common Pitfalls (Learn from Others' Mistakes)
+## よくある落とし穴（他者の失敗から学ぶ）
 
-### The “It Works on My Machine” Trap
+### 「自分のマシンでは動作する」という罠
 **問題:** 環境間で AWS 資格情報が異なる  
 **解決策:** 環境別設定と適切な資格情報管理を使用  
 
-### The Large File Assumption
+### 大容量ファイルへの依存
 **問題:** 小さな PDF でテストし、マルチ GB 文書でデプロイ  
 **解決策:** 初めから実際サイズのファイルでテスト  
 
-### The Security Afterthought
+### セキュリティに関する後付けの考察
 **問題:** ソースコードにハードコーディングされた AWS 資格情報  
 **解決策:** IAM ロール、環境変数、または AWS Secrets Manager を使用  
 
-## Advanced Tips for Java S3 Document Annotation
+## Java S3ドキュメントアノテーションに関する高度なヒント
 
-### Caching Strategy
+### キャッシュ戦略
 頻繁にアクセスされる文書のインテリジェントキャッシュを実装:
 
 ```java
@@ -265,14 +267,14 @@ AmazonS3 s3client = AmazonS3ClientBuilder.standard()
 Map<String, DocumentInfo> documentCache = new ConcurrentHashMap<>();
 ```
 
-### Error Recovery
+### エラー回復
 S3 操作に回復力を持たせる:
 
 - 瞬間的なネットワーク障害に対するリトライロジック  
 - 利用不可文書のフォールバックメカニズム  
 - 注釈サービスがダウンした際の段階的劣化  
 
-### Monitoring and Logging
+### 監視とログ記録
 重要指標を追跡:
 
 - **Document load times** – S3 取得に要した時間  
@@ -280,7 +282,7 @@ S3 操作に回復力を持たせる:
 - **Error rates** – エラー種別別の失敗率  
 - **User engagement** – どの文書が最も注釈されているか  
 
-## Frequently Asked Questions (The Real Ones)
+## よくある質問（実際にあったもの）
 
 **Q: 本当に大きな PDF ファイルをメモリ不足なく処理するには？**  
 A: すべてをストリーミングしてください。ドキュメント全体をメモリにロードしないでください。GroupDocs.Annotation はストリーミングをサポートしているので、活用しましょう。限界がある場合は文書を分割するか、AWS Lambda で処理を検討してください。
@@ -300,7 +302,7 @@ A: GroupDocs.Annotation は同時注釈をサポートしますが、競合解�
 **Q: このアプローチで対応できるファイル形式は？**  
 A: GroupDocs.Annotation は PDF、Word、Excel、PowerPoint、各種画像形式をサポートします。S3 統合自体は形式サポートに影響しません – GroupDocs がローカルで処理できるものはすべて S3 からも処理可能です。
 
-## Wrapping Up: You're Ready to Build
+## まとめ: ビルドの準備完了
 
 これで Java と S3 を組み合わせた堅牢な文書注釈機能を構築するために必要なすべてが揃いました。重要なポイントは：
 
@@ -309,14 +311,14 @@ A: GroupDocs.Annotation は PDF、Word、Excel、PowerPoint、各種画像形式
 - **実データでテスト** – 小さなテストファイルだけではパフォーマンス問題が見えません  
 - **設計段階からセキュリティ** – 最初から正しい AWS 権限を設定  
 
-## What's Next?
+## 次は何をする？
 - 特定ユースケース向けに GroupDocs の高度な注釈機能を探求  
 - リアルタイム共同編集機能の実装を検討  
 - 同様のパターンで Azure、Google Cloud など他のクラウドストレージ統合も調査  
 
 コードを書き始める準備はできましたか？上記サンプルは本番環境でもそのまま使えます – バケット名とファイルパスを差し替えるだけです。
 
-## Resources and References
+## リソースと参考資料
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) - 実際に役立つドキュメント  
 - [API Reference](https://reference.groupdocs.com/annotation/java/) - メソッドシグネチャが必要なときに  
 - [Download Library](https://releases.groupdocs.com/annotation/java/) - 最新バージョン取得  
