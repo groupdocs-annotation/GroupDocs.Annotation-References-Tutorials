@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF-annotatie: Exporteer geannoteerde pagina''s met GroupDocs'
+title: 'Java PDF-annotatie - Exporteer geannoteerde pagina''s met GroupDocs'
 type: docs
 url: /nl/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -414,10 +414,10 @@ A: Verwerk documenten in delen, vergroot de JVM‑heap (`-Xmx4g`), gebruik strea
 **V: Is er een manier om het uiterlijk van annotaties verder aan te passen dan alleen kleuren?**  
 A: Zeker. Je kunt de opacity, randstijlen, teksteigenschappen en zelfs aangepaste iconen aanpassen. Elke annotatietype biedt uitgebreide styling‑setters.
 
+**Gerelateerde bronnen:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Laatst bijgewerkt:** 2026-01-08  
 **Getest met:** GroupDocs.Annotation 25.2  
 **Auteur:** GroupDocs  
-
-**Gerelateerde bronnen:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

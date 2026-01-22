@@ -1,5 +1,5 @@
 ---
-title: "Java PDF Annotation: Export Annotated Pages with GroupDocs"
+title: "Java PDF Annotation - Export Annotated Pages with GroupDocs"
 linktitle: "Java PDF Annotation Tutorial"
 description: "Master Java PDF annotation with GroupDocs and learn how to export annotated pages, add area & ellipse annotations, and optimize performance."
 keywords: "Java PDF annotation tutorial, GroupDocs annotation Java examples, PDF annotation library Java, Java add annotations to PDF, how to annotate PDF documents in Java"
@@ -405,10 +405,10 @@ A: Process documents in chunks, increase JVM heap (`-Xmx4g`), use streaming wher
 **Q: Is there a way to customize annotation appearance beyond basic colors?**  
 A: Absolutely. You can customize opacity, border styles, text properties, and even add custom icons. Each annotation type exposes extensive styling setters.
 
+**Related Resources:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Last Updated:** 2026-01-08  
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs  
-
-**Related Resources:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

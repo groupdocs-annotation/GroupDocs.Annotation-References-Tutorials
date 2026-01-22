@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF Σχόλιο: Εξαγωγή σελίδων με επισημειώσεις με το GroupDocs'
+title: 'Java PDF Σχόλιο - Εξαγωγή σελίδων με επισημειώσεις με το GroupDocs'
 type: docs
 url: /el/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -414,10 +414,10 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 **Ε: Μπορώ να προσαρμόσω την εμφάνιση των σχολίων πέρα από τα βασικά χρώματα;**  
 Α: Απόλυτα. Μπορείτε να προσαρμόσετε διαφάνεια, στυλ περιγράμματος, ιδιότητες κειμένου και ακόμη να προσθέσετε προσαρμοσμένα εικονίδια. Κάθε τύπος σχολίου εκθέτει εκτενείς μεθόδους στυλ.
 
+**Σχετικοί πόροι:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Τελευταία ενημέρωση:** 2026-01-08  
 **Δοκιμασμένο με:** GroupDocs.Annotation 25.2  
 **Συγγραφέας:** GroupDocs  
-
-**Σχετικοί πόροι:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'जावा पीडीएफ एनोटेशन: ग्रुपडॉक्स के साथ एनोटेटेड पेज निर्यात करें'
+title: 'जावा पीडीएफ एनोटेशन - ग्रुपडॉक्स के साथ एनोटेटेड पेज निर्यात करें'
 type: docs
 url: /hi/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -414,10 +414,11 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 **प्रश्न: क्या बेसिक कलर से आगे एनोटेशन की अपीयरेंस कस्टमाइज़ की जा सकती है?**  
 उत्तर: बिल्कुल। आप अपारदर्शिता, बॉर्डर स्टाइल, टेक्स्ट प्रॉपर्टीज़ और कस्टम आइकन सेट कर सकते हैं। प्रत्येक एनोटेशन टाइप विस्तृत स्टाइलिंग सेटर्स प्रदान करता है।
 
+
+**संबंधित रिसोर्सेज़:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **अंतिम अपडेट:** 2026-01-08  
 **टेस्टेड विथ:** GroupDocs.Annotation 25.2  
 **लेखक:** GroupDocs  
-
-**संबंधित रिसोर्सेज़:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

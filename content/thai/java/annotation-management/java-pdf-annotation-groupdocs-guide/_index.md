@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'การทำ Annotation PDF ด้วย Java: ส่งออกหน้าที่มีการทำ Annotation ด้วย GroupDocs'
+title: 'การทำ Annotation PDF ด้วย Java - ส่งออกหน้าที่มีการทำ Annotation ด้วย GroupDocs'
 type: docs
 url: /th/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -413,10 +413,10 @@ A: ประมวลผลเป็นชิ้นส่วน, เพิ่ม
 **Q: สามารถปรับแต่งลักษณะของคำอธิบายได้เกินกว่าสีพื้นฐานหรือไม่?**  
 A: แน่นอน. คุณสามารถปรับความโปร่งใส, สไตล์เส้นขอบ, คุณสมบัติข้อความ, และแม้กระทั่งเพิ่มไอคอนแบบกำหนดเอง. แต่ละประเภทคำอธิบายมีเมธอด setter สำหรับการสไตล์อย่างละเอียด  
 
+**แหล่งข้อมูลที่เกี่ยวข้อง:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **อัปเดตล่าสุด:** 2026-01-08  
 **ทดสอบกับ:** GroupDocs.Annotation 25.2  
 **ผู้เขียน:** GroupDocs  
-
-**แหล่งข้อมูลที่เกี่ยวข้อง:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF anotace: Export anotovaných stránek pomocí GroupDocs'
+title: 'Java PDF anotace - Export anotovaných stránek pomocí GroupDocs'
 type: docs
 url: /cs/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -413,10 +413,10 @@ A: Zpracovávejte dokumenty po částech, zvyšte JVM heap (`-Xmx4g`), používe
 **Q: Lze přizpůsobit vzhled anotací nad rámec základních barev?**  
 A: Rozhodně. Můžete měnit průhlednost, styly okrajů, textové vlastnosti a dokonce přidávat vlastní ikony. Každý typ anotace poskytuje rozsáhlé nastavení stylování.
 
+**Související zdroje:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Poslední aktualizace:** 2026-01-08  
 **Testováno s:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs  
-
-**Související zdroje:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

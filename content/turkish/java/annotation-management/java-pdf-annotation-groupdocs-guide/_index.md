@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF Açıklama: GroupDocs ile Açıklamalı Sayfaları Dışa Aktar'
+title: 'Java PDF Açıklama - GroupDocs ile Açıklamalı Sayfaları Dışa Aktar'
 type: docs
 url: /tr/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -421,10 +421,10 @@ C: Belgeleri parçalar halinde işleyin, JVM yığınını artırın (`-Xmx4g`),
 **S: Temel renklerin ötesinde açıklama görünümünü özelleştirmenin bir yolu var mı?**  
 C: Kesinlikle. Opaklığı, kenar stillerini, metin özelliklerini özelleştirebilir ve hatta özel simgeler ekleyebilirsiniz. Her açıklama türü kapsamlı stil ayarları sunar.
 
+**İlgili Kaynaklar:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Son Güncelleme:** 2026-01-08  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs  
-
-**İlgili Kaynaklar:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

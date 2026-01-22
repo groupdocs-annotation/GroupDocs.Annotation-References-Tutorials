@@ -12,7 +12,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF アノテーション: GroupDocsで注釈付きページをエクスポート'
+title: 'Java PDF アノテーション - GroupDocsで注釈付きページをエクスポート'
 type: docs
 url: /ja/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -425,8 +425,8 @@ A: 文書をチャンクに分割して処理し、JVM ヒープを増やす（�
 **Q: 基本色以外にアノテーションの外観をカスタマイズできますか？**  
 A: もちろんです。不透明度、枠線スタイル、テキスト属性、カスタムアイコンの追加などが可能です。各アノテーションタイプは豊富なスタイリングセッターを提供しています。
 
+**関連リソース:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 **最終更新日:** 2026-01-08  
 **テスト環境:** GroupDocs.Annotation 25.2  
 **作者:** GroupDocs  
-
-**関連リソース:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

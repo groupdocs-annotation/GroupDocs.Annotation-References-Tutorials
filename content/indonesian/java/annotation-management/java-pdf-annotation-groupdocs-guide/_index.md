@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Anotasi PDF Java: Ekspor Halaman yang Dianotasi dengan GroupDocs'
+title: 'Anotasi PDF Java - Ekspor Halaman yang Dianotasi dengan GroupDocs'
 type: docs
 url: /id/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -413,10 +413,10 @@ J: Proses dokumen secara chunk, tingkatkan heap JVM (`-Xmx4g`), gunakan streamin
 **T: Apakah ada cara menyesuaikan tampilan anotasi selain warna dasar?**  
 J: Tentu. Anda dapat menyesuaikan opacity, gaya border, properti teks, bahkan menambahkan ikon khusus. Setiap tipe anotasi menyediakan setter styling yang ekstensif.
 
+**Sumber Daya Terkait:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Terakhir Diperbarui:** 2026-01-08  
 **Diuji Dengan:** GroupDocs.Annotation 25.2  
 **Penulis:** GroupDocs  
-
-**Sumber Daya Terkait:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF-annotering: Exportera annoterade sidor med GroupDocs'
+title: 'Java PDF-annotering - Exportera annoterade sidor med GroupDocs'
 type: docs
 url: /sv/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -413,10 +413,10 @@ A: Bearbeta dokument i delar, öka JVM‑heapen (`-Xmx4g`), använd streaming d�
 **Q: Finns det möjlighet att anpassa annotationernas utseende utöver grundläggande färger?**  
 A: Absolut. Du kan anpassa opacitet, kantstilar, textegenskaper och till och med lägga till egna ikoner. Varje annotationstyp exponerar omfattande stil‑setters.
 
+**Relaterade resurser:** [GroupDocs.Annotation Documentation](httpshttps://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Senast uppdaterad:** 2026‑01‑08  
 **Testad med:** GroupDocs.Annotation 25.2  
 **Författare:** GroupDocs  
-
-**Relaterade resurser:** [GroupDocs.Annotation Documentation](httpshttps://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

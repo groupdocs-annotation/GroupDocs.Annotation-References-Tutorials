@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF Annotation: Xuất các trang đã chú thích bằng GroupDocs'
+title: 'Java PDF Annotation - Xuất các trang đã chú thích bằng GroupDocs'
 type: docs
 url: /vi/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -422,10 +422,10 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 **Hỏi: Có cách nào tùy chỉnh giao diện chú thích vượt quá màu cơ bản không?**  
 Đáp: Chắc chắn. Bạn có thể tùy chỉnh độ trong suốt, kiểu viền, thuộc tính văn bản, và thậm chí thêm biểu tượng tùy chỉnh. Mỗi loại chú thích cung cấp các setter định dạng phong phú.
 
+**Related Resources:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Last Updated:** 2026-01-08  
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs  
-
-**Related Resources:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

@@ -24,28 +24,28 @@ weight: 1
 
 Ha programozott módon **add checkbox to pdf** fájlokhoz szeretnél jelölőnégyzetet hozzáadni, jó helyen jársz. A mai digitális‑első világban a statikus PDF-ek már a múlt részei. Akár jóváhagyási munkafolyamatokat, felméréseket vagy megfelelőségi űrlapokat építesz, az interaktív jelölőnégyzetek hozzáadása jelentősen javíthatja a felhasználói élményt és egyszerűsítheti a folyamataidat.
 
-## Quick Answers
-- **Melyik könyvtár a legjobb a checkbox to pdf hozzáadásához?** GroupDocs.Annotation for Java.  
-- **Mennyi időt vesz igénybe a megvalósítás?** Körülbelül 10‑15 perc egy alap jelölőnégyzethez.  
-- **Szükségem van licencre?** A ingyenes próba verzió fejlesztéshez megfelelő; a teljes licenc a termeléshez kötelező.  
-- **Hozzáadhatok több checkbox pdf-et egy dokumentumban?** Igen – egyszerűen hozz létre több `CheckBoxComponent` példányt.  
-- **Működni fognak a jelölőnégyzetek minden PDF-olvasóban?** A szabványos PDF űrlapmezőket támogatja az Adobe Reader, a Chrome, a Firefox és a legtöbb modern megjelenítő.
+## Gyors válaszok
+- **Melyik könyvtár a legjobb a checkbox to pdf hozzáadásához?**GroupDocs.Annotation for Java.
+- **Mennyi időt vesz igénybe a megvalósítás?**Körülbelül 10-15perc egy alap jelölőnégyzethez.
+- **Szükségem van licencre?**A ingyenes próba verzió fejlesztéshez megfelelő; a teljes licenc a termeléshez kötelező.
+- **Hozzáadhatok több checkbox pdf-et egy dokumentumban?**Igen – egyszerűen hozz létre több `CheckBoxComponent` példányt.
+- **Működni fognak a jelölőnégyzetek minden PDF-olvasóban?**A szabványos PDF űrlapmezőket támogatja az Adobe Reader, a Chrome, a Firefox és a legtöbb modern megjelenítés.
 
-## Why add interactive checkboxes pdf?
+## Miért kell interaktív jelölőnégyzeteket hozzáadni a PDF-hez?
 
-Kapott már valaha PDF űrlapot, amit ki kellett nyomtatni csak azért, hogy bejelölj egy négyzetet? Bosszantó, ugye? A **interactive checkboxes pdf** hozzáadása egy statikus dokumentumot élő űrlappá alakít, amelyet a felhasználók bármilyen eszközön kitölthetnek. Ez nemcsak időt takarít meg, hanem csökkenti a hibákat és könnyedé teszi az adatgyűjtést.
+Kapott már valaha PDF űrlapot, amit ki kellett nyomtatni csak azért, hogy bejelölj egy négyzetet? Bosszantó, ugye? A **interaktív jelölőnégyzetek pdf** elhelyezése egy statikus dokumentumot előíró űrlappá alakítható ki, amely mindenféle eszközön kitölthető. Ez nemcsak időt takarít meg, hanem csökkenti a hibákat és könnyed teszi az adatgyűjtést.
 
-## Prerequisites & Setup
+## Előfeltételek és beállítás
 
 Mielőtt a kódba merülnénk, győződj meg róla, hogy a következőkkel rendelkezel:
 
-### Essential Requirements
-- **Java Development Kit**: 8 vagy újabb verzió.  
-- **GroupDocs.Annotation for Java**: 25.2 vagy újabb verzió (megmutatjuk, hogyan adhatod hozzá).  
-- **Basic Java Knowledge**: Fájl I/O és objektum inicializálás.  
-- **PDF File**: Bármely meglévő PDF a teszteléshez (használni fogunk egy mintadokumentumot).
+### Alapvető követelmények
+- **Java Development Kit**: 8 vagy újabb verzió.
+- **GroupDocs.Annotation for Java**: 25.2 vagy újabb verzió (megmutatjuk, hogyan adhatod hozzá).
+- **Alapszintű Java tudás**: Fájl I/O és objektum inicializálása.
+- **PDF File**: Bármely PDF a teszteléshez (használni fogunk egy mintadokumentumot).
 
-### Quick Maven Setup
+### Gyors Maven beállítás
 
 Ha Maven-t használsz, add hozzá ezt a `pom.xml`-hez. Ez a konfiguráció automatikusan beilleszti a szükséges könyvtárat:
 
@@ -66,19 +66,19 @@ Ha Maven-t használsz, add hozzá ezt a `pom.xml`-hez. Ez a konfiguráció autom
 </dependencies>
 ```
 
-### Licensing Made Simple
+### Az engedélyezés egyszerű
 
-- **Free Trial** – tökéletes teszteléshez és kis projektekhez.  
-- **Temporary License** – hasznos hosszabb fejlesztési ciklusok során.  
+- **Free Trial** – tökéletesítéshez és kis projektekhez.
+- **Temporary License** – hasznos hosszabbi fejlesztési ciklusok során.
 - **Full License** – szükséges a termelési környezetben.
 
 Azonnal elkezdhetsz fejleszteni a próba verzióval.
 
-## Step‑by‑Step Guide: Hogyan adjunk hozzá checkbox to pdf-et Java-val
+## Lépésről lépésre útmutató: Hogyan adjunk hozzá checkbox to pdf-et Java-val
 
 Áttekintünk három tömör lépést. Minden lépés az előzőre épül, ezért kövesd a sorrendet.
 
-### Step 1: Initialize the PDF Annotator
+### 1. lépés: Inicializálja a PDF Annotátort
 
 Először nyisd meg a PDF-et szerkesztésre. A `Annotator` osztály a belépési pontod:
 
@@ -94,9 +94,9 @@ public class InitializeAnnotator {
 }
 ```
 
-> **Pro tip:** Használd a abszolút elérési utat a „file not found” hibák elkerüléséhez, és győződj meg róla, hogy a PDF nincs megnyitva egy másik alkalmazásban.
+> **Pro tip:** Használd az abszolút elérési utat a „file not found” hibák elkerüléséhez, és győződj meg róla, hogy a PDF nincs megnyitva egy másik alkalmazásban.
 
-### Step 2: Create and Configure Your Checkbox Component
+### 2. lépés: A jelölőnégyzet-összetevő létrehozása és konfigurálása
 
 Most létrehozzuk a `CheckBoxComponent`-et. Itt határozod meg a megjelenést, az állapotot és az opcionális válaszokat:
 
@@ -145,12 +145,12 @@ public class CreateCheckBoxComponent {
 ```
 
 **Fontos pontok, amire emlékezni kell:**
-- **Rectangle coordinates**: `(x, y, width, height)`. Állítsd be őket, hogy a jelölőnégyzetet a kívánt helyre helyezd.
+- **Téglalap koordináták**: "(x, y, szélesség, magasság)". Állítsd be őket, hogy a jelölőnégyzetet a kívánt helyre helyezd.
 - **Pen color** egész számú RGB értéket használ (`65535` = sárga). Bármilyen színt használhatsz.
-- **BoxStyle** opciók: `STAR`, `CIRCLE`, `SQUARE`, `DIAMOND`.
-- **Replies** opcionális megjegyzések, amelyek hover‑kor jelennek meg.
+- **BoxStyle** opciók: "CSILLAG", "KÖR", "NÉGY", "GYÉMÁNT".
+- ** Válaszok** opcionális megjegyzések, amelyek hover-kor jelennek meg.
 
-### Step 3: Add the Checkbox and Save the PDF
+### 3. lépés: Adja hozzá a jelölőnégyzetet, és mentse a PDF-fájlt
 
 Végül csatold a komponenst a dokumentumhoz, és írd ki az eredményt a lemezre:
 
@@ -179,7 +179,7 @@ public class AddCheckBoxAndSave {
 > • Győződj meg róla, hogy a kimeneti könyvtár létezik a mentés előtt.  
 > • Gondolj egyedi fájlnevekre, hogy elkerüld fontos fájlok felülírását.
 
-## Real‑World Applications (Az alap űrlapokon túl)
+## Real-World Applications (Az alap űrlapokon túl)
 
 Az, hogy hol ragyognak a **java pdf form fields**, segít lehetőségeket felismerni:
 
@@ -187,19 +187,19 @@ Az, hogy hol ragyognak a **java pdf form fields**, segít lehetőségeket felism
 Adj hozzá jelölőnégyzeteket a „Reviewed”, „Approved” vagy „Needs Changes” állapotokhoz. Ideális szerződésekhez, költségvetésekhez és szabályzatok elismeréséhez.
 
 ### Felmérés és visszajelzés gyűjtése
-Készíts offline‑képes felméréseket, amelyek megőrzik a pontos formázást az eszközök között. Kiváló a munkavállalói elégedettség, ügyfél visszajelzés és eseményértékelésekhez.
+Készíts offline-képes felméréseket, melyek megőrzik a pontos formázást az eszközök között. Kiváló a munkavállalói elégedettség, ügyfél visszajelzés és eseményértékelésekhez.
 
 ### Képzés és megfelelőségi dokumentáció
 Kövesd a haladást jelölőnégyzetekkel a biztonsági kézikönyvekben, megfelelőségi ellenőrzőlistákon vagy bevezető feladatokban.
 
 ### Jogi és adminisztratív űrlapok
-Standardizáld a feltételek, adatvédelmi szabályzatok, biztosítási igények és kormányzati jelentkezések elfogadását.
+Standardizáld a feltételek, adatvédelmi szabályzatok, biztosítási igények és kormányzati regisztrációk elfogadását.
 
 ## Gyakori problémák és megoldások
 
-Minden fejlesztő néha elakadhat. Itt a leggyakoribb problémák és a megoldásuk:
+Minden fejlesztő néha elakadhat. Itt a gyakori problémák és a megoldásuk:
 
-### „File Not Found” hibák
+### „A fájl nem található” hibák
 **Probléma:** Hibás PDF útvonal.  
 **Megoldás:** Ellenőrizd, hogy a fájl létezik-e a feldolgozás előtt:
 

@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF Annotation: Экспорт аннотированных страниц с GroupDocs'
+title: 'Java PDF Annotation - Экспорт аннотированных страниц с GroupDocs'
 type: docs
 url: /ru/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -423,8 +423,8 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 **В:** Можно ли настроить внешний вид аннотации, помимо базовых цветов?  
 **О:** Конечно. Вы можете настроить непрозрачность, стили границ, свойства текста и даже добавить пользовательские иконки. Каждый тип аннотации предоставляет обширные методы настройки стилей.
 
+**Связанные ресурсы:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 **Последнее обновление:** 2026-01-08  
 **Тестировано с:** GroupDocs.Annotation 25.2  
 **Автор:** GroupDocs  
-
-**Связанные ресурсы:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

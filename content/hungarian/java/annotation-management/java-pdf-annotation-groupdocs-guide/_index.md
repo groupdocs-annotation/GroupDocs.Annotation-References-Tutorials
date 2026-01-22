@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF annotáció: Megjegyzett oldalak exportálása a GroupDocs segítségével'
+title: 'Java PDF annotáció - Megjegyzett oldalak exportálása a GroupDocs segítségével'
 type: docs
 url: /hu/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -420,8 +420,8 @@ V: Process documents in chunks, increase JVM heap (`-Xmx4g`), use streaming wher
 **K: Van mód az annotáció megjelenés testreszabására az alap színeken túl?**  
 V: Absolutely. You can customize opacity, border styles, text properties, and even add custom icons. Each annotation type exposes extensive styling setters.
 
+**Kapcsolódó források:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 **Utolsó frissítés:** 2026-01-08  
 **Tesztelve:** GroupDocs.Annotation 25.2  
 **Szerző:** GroupDocs  
-
-**Kapcsolódó források:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

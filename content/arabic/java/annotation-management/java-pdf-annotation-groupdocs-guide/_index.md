@@ -13,7 +13,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'تعليقات PDF في جافا: تصدير الصفحات المشروحة باستخدام GroupDocs'
+title: 'تعليقات PDF في جافا - تصدير الصفحات المشروحة باستخدام GroupDocs'
 type: docs
 url: /ar/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -413,10 +413,11 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 **س: هل يمكن تخصيص مظهر التعليقات بخلاف الألوان الأساسية؟**  
 ج: بالتأكيد. يمكنك تعديل الشفافية، أنماط الحدود، خصائص النص، وحتى إضافة أيقونات مخصصة. كل نوع من التعليقات يوفر مجموعة واسعة من إعدادات التنسيق.
 
+
+**الموارد ذات الصلة:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **آخر تحديث:** 2026-01-08  
 **تم الاختبار مع:** GroupDocs.Annotation 25.2  
 **المؤلف:** GroupDocs  
-
-**الموارد ذات الصلة:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

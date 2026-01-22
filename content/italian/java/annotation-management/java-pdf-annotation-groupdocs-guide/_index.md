@@ -14,7 +14,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Annotazione PDF in Java: Esporta pagine annotate con GroupDocs'
+title: 'Annotazione PDF in Java - Esporta pagine annotate con GroupDocs'
 type: docs
 url: /it/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -421,10 +421,10 @@ R: Processa i documenti a blocchi, aumenta l'heap JVM (`-Xmx4g`), usa lo streami
 **D: Esiste un modo per personalizzare l'aspetto delle annotazioni oltre ai colori base?**  
 R: Assolutamente. Puoi personalizzare opacità, stili del bordo, proprietà del testo e persino aggiungere icone personalizzate. Ogni tipo di annotazione espone numerosi setter di stile.
 
+**Risorse correlate:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **Ultimo aggiornamento:** 2026-01-08  
 **Testato con:** GroupDocs.Annotation 25.2  
 **Autore:** GroupDocs  
-
-**Risorse correlate:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)

@@ -13,43 +13,43 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF 주석: GroupDocs로 주석이 달린 페이지 내보내기'
+title: 'Java PDF 주석 - GroupDocs로 주석이 달린 페이지 내보내기'
 type: docs
 url: /ko/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
 ---
 
-# Java PDF Annotation: Export Annotated Pages with GroupDocs
+# Java PDF 주석: GroupDocs를 사용하여 주석이 달린 페이지 내보내기
 
-## Introduction
+## 소개
 
-PDF 문서에 대한 의미 있는 피드백을 팀에게 받는 것이 어려우셨나요? 당신만 그런 것이 아닙니다. 기존 문서 검토 프로세스는 너무 느립니다—끝없는 이메일 체인, 다양한 형식으로 흩어진 댓글, 그리고 “언급한 섹션을 강조 표시해 주세요”라는 불가피한 요청까지.  
+PDF 문서에 대한 의미가 있는 피드백을 팀에게 받는 것이 어려우셨나요? 당신만은 그런 것이 아닙니다. 기존 문서 검토 프로세스는 너무 느립니다—끝없는 이메일 체인, 다양한 형식으로 흩어져 있는 댓글, 그리고 “언급한 섹션을 강조 표시해 주세요”라는 이름으로 요청까지 되었습니다.
 
-이 가이드에서는 GroupDocs.Annotation for Java를 사용하여 **주석이 달린 페이지를 내보내는** 방법을 배우게 됩니다. 정적인 PDF를 팀원이 실시간으로 강조 표시, 댓글 달기, 마크업할 수 있는 협업 작업 공간으로 전환합니다.
+이 가이드에서는 GroupDocs.Annotation for Java를 사용하여 **주석이 걸릴 페이지를 지켜야** 방법을 배우게됩니다. 정적인 PDF를 분리하는 행위로 강조 표시, 댓글 달기, 마크업할 수 있는 작업 공간으로 전환합니다.
 
-**이 가이드를 마치면 습득하게 될 내용:**
-- Maven 프로젝트에 GroupDocs.Annotation을 올바르게 설정하기
-- 픽셀 단위 정밀도로 영역 및 타원 주석 추가하기
-- 간결한 PDF를 만들기 위한 **export annotated pages** 옵션 구성하기
-- 개발자가 흔히 마주하는 문제 해결하기
-- 프로덕션 환경을 위한 성능 최적화
+**이 가이드 내용을 마치면 작동하게 될 것입니다:**
+- Maven 프로젝트에 GroupDocs.Annotation을 배치하기
+-베이스 기본적으로 다른 지역에 추가 설명하기
+- 간결한 PDF를 생성합니다 **주석이 있는 페이지 내보내기** 옵션 구성하기
+- 개발자가 자주 만나서 문제를 해결하기
+- 성능을 향상시키는 성능 최적화
 
-## Quick Answers
-- **주석이 달린 페이지를 내보내는 주요 이점은 무엇인가요?** 관련 피드백만 포함한 가벼운 PDF를 생성해 리뷰와 요약에 최적화됩니다.  
-- **필요한 Maven 버전은?** Maven 3.6+을 권장합니다.  
-- **GroupDocs.Annotation에 라이선스가 필요합니까?** 네, 프로덕션 사용을 위해서는 체험판이든 상용 라이선스든 필요합니다.  
-- **PDF 외에 다른 형식도 주석을 달 수 있나요?** 물론입니다—GroupDocs는 50가지 이상의 문서 유형을 지원합니다.  
-- **대용량 PDF에서 메모리 문제를 피하려면?** 페이지를 배치로 처리하고, JVM 힙을 늘리며, `Annotator`를 try‑with‑resources로 항상 닫으세요.
+## 빠른 답변
+- **주석이 편지를 작성하는 것은 주요 이점이 무엇인지?** 관련 내용만 포함된 가벼운 PDF를 생성해 검토하고 요약에 최적화합니다.
+- **Maven 버전이 필요합니까?** Maven3.6+를 추천합니다.
+- **GroupDocs.Annotation에 권한이 필요한가요?** 네, 관리자를 사용해 보세요.
+- **PDF 형식을 다른 형식으로 변환해도 달 수 있습니까?** 물론입니다—GroupDocs는 문서 형식을 지원하는 50가지를 지원합니다.
+- **대용량 PDF에서 메모리 문제를 피하려면?** 페이지를 배치로 처리하고, JVM 힙을 덜며, `Annotator`를 try-with-resources로 항상 따르세요.
 
-## Prerequisites: Getting Your Environment Ready
+## 전제 조건: 환경 준비
 
-코딩을 시작하기 전에 모든 설정이 올바른지 확인하세요. 여기서 5분만 투자하면 나중에 디버깅에 들어가는 시간을 크게 절약할 수 있습니다.
+코딩을 시작하기 전에 모든 설정이 올바른지 확인하세요. 여기서 5분만 투자하면 나중에 시간에 맞춰 시간을 크게 절약할 수 있습니다.
 
-### Required Libraries and Dependencies
+### 필수 라이브러리 및 종속성
 
-프로젝트에 GroupDocs.Annotation for Java가 필요합니다. 실제로 동작하는 Maven 설정은 다음과 같습니다(구식 레포지토리 URL을 사용하는 튜토리얼이 너무 많았습니다).
+프로젝트에 GroupDocs.Java용 주석이 필요합니다. 실제로 동작하는 Maven 설정은 다음과 같습니다(구식 레포지토리 URL을 사용하는 튜토리얼이 너무 풍부합니다).
 
-**Maven Setup**
+**메이븐 설정**
 
 ```xml
 <repositories>
@@ -68,48 +68,48 @@ PDF 문서에 대한 의미 있는 피드백을 팀에게 받는 것이 어려�
 </dependencies>
 ```
 
-### System Requirements
+### 시스템 요구 사항
 
-- **Java Development Kit (JDK)**: 버전 8 이상 (성능을 위해 JDK 11+ 권장)  
-- **Maven**: 의존성 관리를 위한 버전 3.6+  
-- **Memory**: 애플리케이션에 최소 2 GB RAM 확보 (대용량 PDF일수록 더 필요)
+- **JDK(Java Development Kit)**: 버전8 이상( 보완을 위해 JDK11+ 권장)
+- **Maven**: 의존성을 관리하는 버전 3.6+
+- **메모리**: 인력에 최소한 2GB RAM 정도(대용량 PDF일수록 더)
 
-### Knowledge Prerequisites
+### 지식 전제조건
 
-다음에 익숙해야 합니다:
-- 기본 Java 프로그래밍 개념  
-- Maven 의존성 관리  
-- 파일 I/O 작업  
+다음에는 대기해야 합니다:
+- 기본 Java 프로그래밍 개념
+- Maven 의존성 관리
+- 파일 I/O 작업
 
-전문가가 아니어도 괜찮습니다—진행하면서 모든 것을 설명해 드릴게요.
+전문가가 아니어도 괜찮습니다.
 
-## Setting Up GroupDocs.Annotation for Java
+## Java용 GroupDocs.Annotation 설정
 
-이제 프로젝트에 GroupDocs.Annotation을 올바르게 구성합니다. 많은 개발자가 첫 번째 장애물에 부딪히는 부분이니 세심히 살펴보세요.
+이제 프로젝트에 GroupDocs.Annotation을 구성합니다. 많은 개발자의 첫 번째 부분에 블록이 있는 부분을 살펴봅니다.
 
-### Step 1: Add the Dependency
+### 1단계: 종속성 추가
 
-위의 Maven 설정을 사용해 GroupDocs.Annotation을 프로젝트에 포함합니다. `pom.xml`에 추가한 뒤 다음을 실행하세요:
+위의 Maven 설정을 실행하는 GroupDocs.Annotation을 프로젝트에 포함합니다. `pom.xml`에 추가로 다음을 실행하세요:
 
 ```bash
 mvn clean install
 ```
 
-다운로드 오류가 발생하면 레포지토리 URL이 정확히 위와 일치하는지 다시 확인하세요.
+다운로드 오류가 발생하면 레포지토리 URL이 정확하게 일치하는지 다시 확인하세요.
 
-### Step 2: Handle Licensing (Important!)
+### 2단계: 라이선스 처리(중요!)
 
-대부분의 튜토리얼이 빠뜨리는 부분입니다: GroupDocs.Annotation은 상업적 사용에 무료가 아닙니다. 선택 가능한 옵션은 다음과 같습니다:
+대부분의 튜토리얼이 틀리는 부분입니다: GroupDocs.Annotation은 원래 사용에는 무료가 아닙니다. 선택 옵션은 다음과 같습니다:
 
-- **Free trial**: 개발 및 테스트에 적합  
-- **Temporary license**: 장기 평가에 최적  
-- **Full license**: 프로덕션 배포에 필수  
+- **무료 체험**: 개발 및 테스트에 적합
+- **임시 라이선스**: 장기 평가에
+- **정규 라이선스**: 포함하여 사용해야 합니다.
 
-평가용 라이선스를 시작하려면 [GroupDocs Purchase](https://purchase.groupdocs.com/buy) 페이지에서 옵션을 확인하세요.
+평가용 클러스터를 시작하려면 [GroupDocs 구매](https://purchase.groupdocs.com/buy) 페이지에서 옵션을 확인하세요.
 
-### Step 3: Basic Initialization
+### 3단계: 기본 초기화
 
-`Annotator` 클래스를 초기화하는 방법은 다음과 같습니다(주 진입점):
+`Annotator` 클래스를 호출하는 방법은 다음과 같습니다(주 채우기 점):
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -120,17 +120,17 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/document
 }
 ```
 
-**Pro tip**: 위와 같이 항상 try‑with‑resources를 사용해 파일 핸들을 적절히 정리하세요. 이 단계를 놓쳐 메모리 누수가 발생하는 경우를 많이 보았습니다.
+**프로 팁**: 같이 자유롭게 try-with-resources를 활용하여 파일 핸들을 추출하세요. 이 단계에서는 메모리가 많이 발생하는 경우가 많았습니다.
 
-## Implementation Guide: Adding Annotations Step by Step
+## 구현 가이드: 단계별 주석 추가
 
-이제 재미있는 부분—PDF에 실제 주석을 추가해 보겠습니다. 대부분의 사용 사례를 포괄하는 두 가지 인기 주석 유형에 집중합니다.
+이제 재미있는 부분—PDF에 실제로 추가해 보았습니다. 대부분의 사용자 멤버를 포괄하는 두 가지 인기 형식으로 집중됩니다.
 
-### Adding Area Annotations (Perfect for Highlighting Sections)
+### 영역 주석 추가(섹션 강조에 적합)
 
-영역 주석은 전체 단락, 섹션 또는 PDF의 사각형 영역을 강조 표시해야 할 때 훌륭합니다. 디지털 형광펜이라고 생각하면 됩니다.
+영역은 전체 단락, 섹션 또는 PDF의 영역을 강조 표시해야 할 때 이해할 수 있습니다. 디지털 형광펜이라고 생각하면 됩니다.
 
-#### Step 1: Create an Area Annotation
+#### 1단계: 영역 주석 생성
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -148,17 +148,17 @@ area.setPageNumber(1); // First page (1-indexed)
 - `65535`: ARGB 형식의 노란색. 일반 색상값: Red = 16711680, Blue = 255, Green = 65280  
 - `setPageNumber(1)`: PDF 페이지 번호는 1부터 시작합니다(0부터가 아님, 흔히 하는 실수!)
 
-#### When to Use Area Annotations
-- 법률 문서에서 중요한 단락 강조  
-- 프로젝트 사양서에서 검토가 필요한 섹션 표시  
-- 보고서에서 특정 데이터 범위에 주목  
-- 콘텐츠 블록 주위에 시각적 경계 만들기  
+#### 영역 주석을 사용해야 하는 경우
+- 부품의 중요한 단락화
+- 프로젝트 설계에서 검토가 필요한 섹션 표시
+- 의견에서 특정 데이터 범위에 주목
+- 콘텐츠 블록 주변을 가리키는 경계 형성
 
-### Adding Ellipse Annotations (Great for Callouts)
+### 타원 주석 추가(콜아웃에 적합)
 
-타원 주석은 사각형보다 부드러운 경계로 특정 요소에 주목하고 싶을 때 적합합니다. 원형 차트, 로고 강조 또는 부드러운 포커스 영역을 만들 때 특히 유용합니다.
+타원은 경계선보다 편안한 경계로 특정 요소에 주목하고 싶을 때 적합합니다. 형식 차트, 로고 강조 또는 편안한 포커스를 만들 때 특히 유용합니다.
 
-#### Step 2: Create an Ellipse Annotation
+#### 2단계: 타원 주석 만들기
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.EllipseAnnotation;
@@ -176,9 +176,9 @@ ellipse.setPageNumber(1); // Same page as area annotation
 - 콘텐츠를 완전히 가리지 않으면서 주목을 끌 수 있음  
 - 유기적이고 손으로 그린 듯한 느낌을 연출 가능  
 
-#### Step 3: Add Annotations to Your Document
+#### 3단계: 문서에 주석 추가
 
-이제 두 주석을 결합해 PDF에 추가합니다:
+이제 두 번의 연결을 통해 PDF를 추가합니다:
 
 ```java
 import java.util.ArrayList;
@@ -195,13 +195,13 @@ annotator.add(annotations);
 System.out.println("Added " + annotations.size() + " annotations successfully!");
 ```
 
-**Performance tip**: 위와 같이 배치로 주석을 추가하면, 특히 대용량 문서에서 `annotator.add()`를 여러 번 호출하는 것보다 훨씬 빠릅니다.
+**성능 팁**: 독특하게 배치로 특별한 것을 추가하면, 특히 상자에서 `annotator.add()`를 여러 번 호출하는 것보다 훨씬 많습니다.
 
-## How to Export Annotated Pages with GroupDocs
+## GroupDocs로 주석이 달린 페이지를 내보내는 방법
 
-많은 개발자가 간과하는 강력한 기능입니다: **주석이 포함된 페이지만 내보내도록** GroupDocs를 구성할 수 있습니다. 요약 문서를 만들거나 파일 크기를 줄이는 데 매우 유용합니다.
+많은 개발자들이 간과하는 강력한 기능입니다: **주석이 포함되어 있는 페이지만 감시하도록** GroupDocs를 구성할 수 있습니다. 요약 문서를 만들거나 파일 크기를 줄이는 데 매우 유용합니다.
 
-#### Setting Up Selective Page Export
+#### 선택적 페이지 내보내기 설정
 
 ```java
 import com.groupdocs.annotation.options.export.SaveOptions;
@@ -220,15 +220,15 @@ annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_summary.pdf", saveOptions);
 - **프로젝트 관리**: 업데이트된 섹션만 보여주는 상태 보고서 생성  
 - **품질 보증**: 식별된 문제 페이지만 추출  
 
-## Common Issues and Solutions
+## 일반적인 문제 및 해결 방법
 
-가장 흔히 마주치는 문제와 해결책을 정리했습니다(디버깅 시간을 절약하세요).
+가장 자주 만나는 문제와 해결책을 정리했습니다(디버깅 시간을 절약하세요).
 
-### Issue 1: "File is being used by another process"
+### 문제 1: "파일이 다른 프로세스에서 사용 중입니다."
 
-**Symptoms**: 주석이 달린 문서를 저장하려 할 때 `IOException` 발생  
-**Cause**: `Annotator` 인스턴스를 제대로 닫지 않음  
-**Solution**: 항상 try‑with‑resources 사용:
+**증상**: 구문이 특정 문서를 저장할 때 `IOException`이 발생했습니다.
+**원인**: `Annotator`가 제대로 닫히지 않았습니다.
+**해결책**: 항상 try‑with‑resources 사용:
 
 ```java
 // Wrong way - can cause file locks
@@ -242,20 +242,20 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 } // Automatically closed here
 ```
 
-### Issue 2: Annotations Appearing in Wrong Positions
+### 문제 2: 잘못된 위치에 나타나는 주석
 
-**Symptoms**: 주석이 예상치 못한 위치에 표시됨  
-**Cause**: 좌표계 오해 또는 DPI 스케일링 문제  
-**Solution**:  
-- PDF 좌표는 **좌하단**이 원점(대부분 UI 프레임워크는 좌상단)  
-- 먼저 알려진 좌표값으로 테스트  
-- 위치 계산 시 PDF 페이지 크기를 고려  
+**증상**: 인식이 안되서 위치에 표시됨
+**원인**: 고고학계 오해 또는 DPI 규모링 문제
+**해결책**:
+- PDF 탐구는 **좌하단**이 원점(대부분 UI 프레임워크는 좌상단)
+- 먼저 헬리콥터 검증으로 테스트해 보세요.
+- 위치추적 시 PDF 페이지 크기를 고려
 
-### Issue 3: OutOfMemoryError with Large PDFs
+### 문제 3: 대용량 PDF의 OutOfMemoryError
 
-**Symptoms**: 대용량 문서 처리 중 애플리케이션 충돌  
-**Cause**: 전체 PDF를 메모리에 로드함  
-**Solution**:
+**증상**: 주최측 문서 처리 중 문제가 발생함
+**원인**: 전체 PDF를 메모리에 로드함
+**해결책**:
 
 ```java
 // Increase JVM heap size
@@ -267,21 +267,21 @@ for (int page = 1; page <= totalPages; page++) {
 }
 ```
 
-### Issue 4: Colors Not Displaying Correctly
+### 문제 4: 색상이 올바르게 표시되지 않음
 
-**Symptoms**: 주석 색상이 기대와 다르게 표시됨  
-**Cause**: 색상 포맷 혼동(RGB vs ARGB)  
-**Solution**: ARGB 포맷을 일관되게 사용:  
-- Red: `0xFFFF0000` 또는 `16711680`  
-- Green: `0xFF00FF00` 또는 `65280`  
-- Blue: `0xFF0000FF` 또는 `255`  
-- 반투명 빨강: `0x80FF0000`
+**증상**: 색깔이 기대됨과 다르게 표시됨
+**원인**: 색상 형식 참조(RGB vs ARGB)
+**해결책**: ARGB포맷을 일관되게 사용:
+- 빨간색: `0xFFFF0000` 또는 `16711680`
+- 녹색: `0xFF00FF00` 또는 `65280`
+- 파란색: `0xFF0000FF` 또는 `255`
+- 반투명 위원회: `0x80FF0000`
 
-## Best Practices for Production Use
+## 프로덕션 사용을 위한 모범 사례
 
-주석 기능을 배포할 준비가 되었나요? 아마추어 구현과 프로페셔널 솔루션을 구분하는 실천법을 소개합니다.
+배포할 준비가 되었나요? 특정 특성과 프로페셔널 솔루션을 구분하는 법률을 소개합니다.
 
-### Memory Management
+### 메모리 관리
 
 ```java
 // Configure JVM for optimal performance
@@ -307,7 +307,7 @@ private void processLargeDocument(String filePath) {
 }
 ```
 
-### Error Handling Strategy
+### 오류 처리 전략
 
 ```java
 public boolean addAnnotationSafely(String inputPath, String outputPath) {
@@ -331,60 +331,60 @@ public boolean addAnnotationSafely(String inputPath, String outputPath) {
 }
 ```
 
-### Performance Optimization Tips
+### 성능 최적화 팁
 
-1. **Batch operations** – 항상 여러 주석을 한 번에 추가  
-2. **Lazy loading** – 실제로 주석을 다는 페이지만 로드  
-3. **Connection pooling** – 가능한 경우 `Annotator` 인스턴스를 재사용(주의 필요)  
-4. **File streaming** – 매우 큰 문서는 스트리밍 사용  
+1. **일괄 작업** – 우주의 경험을 한 번에 추가
+2. **지연 로딩** – 실제로는 페이지만 로드됩니다.
+3. **연결 풀링** – `Annotator`를 제거하는 경우(주의 필요)
+4. **파일 스트리밍** – 매우 큰 스트리밍 스트리밍 사용
 
-## When to Choose GroupDocs vs Alternatives
+## GroupDoc과 대안을 선택해야 하는 경우
 
 GroupDocs.Annotation이 유일한 선택은 아닙니다. 다음 상황에서 선택을 고려하세요:
 
-**GroupDocs를 선택해야 할 경우:**
-- 20가지 이상의 다양한 주석 유형 필요(다양한 형식 지원)  
-- PDF 외 다수 문서 형식 작업  
-- 엔터프라이즈 수준 지원 및 문서 필요  
-- 상용 애플리케이션 구축(라이선스 관리가 간편)
+**GroupDocs를 선택해야 하는 경우:**
+- 20가지 다른 형태의 형식 지원(다양한 형식 지원)
+- PDF 외측 형식 문서 작업
+- 다양한 지원 및 문서 요구
+- 설비 구축 구축(라이선스 관리가 간편)
 
-**대안을 고려할 경우:**
-- 기본 PDF 주석만 필요(Apache PDFBox가 충분할 수 있음)  
-- 예산 제약(오픈소스 솔루션 존재)  
-- 간단한 사용 사례(기본 강조만으로 충분)  
+**대안을 원하는 경우:**
+- 기본 PDF는 찾을 수 없습니다(Apache PDFBox만 있으면 가능합니다)
+- 쥐라(오픈 소스 솔루션 존재)
+- 간단하게 활용 가능한 캠페인(기본에만 집중)
 
-## Practical Applications in the Real World
+## 실제 세계에서의 실제 응용
 
-실제 팀이 Java PDF 주석을 어떻게 활용하고 있는지 살펴봅시다.
+실제 팀이 Java PDF 형식을 어떻게 활용하고 있는지 살펴보겠습니다.
 
-### Legal Document Review
-법무법인에서는 계약 조항을 강조하기 위해 영역 주석을, 논쟁이 되는 부분을 표시하기 위해 타원 주석을 사용합니다. 선택적 내보내기 기능으로 클라이언트에게 깔끔한 요약 문서를 제공합니다.
+### 법률 문서 검토
+법무법인에서는 계약 조항을 강조하기 위해 설명을, 논쟁이 되는 부분을 표시하기 위해 타원 설명을 사용합니다. 설득력 있는 기능으로 클라이언트에게 구성된 요약 문서를 제공합니다.
 
-### Academic Paper Feedback  
-대학에서는 교수들이 학생 제출물에 색상별 주석(문법‑빨강, 내용‑파랑, 구조‑초록)을 달아 피드백을 제공합니다.
+### 학술 논문 피드백
+대학에서는 교수들이 학생 제출물에 색상별 설명(문법-빨강, 내용-파랑, 구조-초록)을 응답을 제공합니다.
 
-### Software Documentation Review
-개발팀은 API 문서를 검토하면서 업데이트가 필요한 섹션이나 설명이 부족한 부분을 주석으로 표시합니다.
+### 소프트웨어 문서 검토
+개발팀은 API 문서를 검토하면서 업데이트가 필요한 섹션이나 설명이 부분을 설명으로 표시합니다.
 
-### Quality Assurance Processes
-제조업체는 검사 보고서에 주석을 달아 규정 위반 사항을 강조하고, 교정 조치를 다양한 주석 유형으로 표시합니다.
+### 품질 보증 프로세스
+모듈은 심사에 대한 내용을 제외하고 제한 사항을 처리하고, 조치 사항에 대해 별도의 설명을 합니다.
 
-## Performance Considerations for Large‑Scale Deployment
+## 대규모 배포를 위한 성능 고려 사항
 
-대규모 워크로드를 처리하려면 다음 요소를 기억하세요.
+커패시터 워크로드를 처리하려면 다음 요소를 기억하세요.
 
-### Memory Usage Optimization
-- **Document size**: 10 MB PDF ≈ 처리 중 50 MB 메모리 사용  
-- **Annotation count**: 주석당 약 1‑2 KB 메모리 오버헤드  
-- **Concurrent users**: 동시 세션당 100 MB 이상 메모리 계획  
+### 메모리 사용량 최적화
+- **문서 크기**: 10MB PDF ≒ 처리 중 50MB 메모리 사용
+- **주석 수**: 문법당 약 1‑2KB 메모리 헤드
+- **동시 사용자**: 세션 세션당 100MB 이상 메모리 계획
 
-### Processing Speed Benchmarks
-실제 테스트 기준:  
-- 소형 PDF(1‑10 페이지): 주석당 ~100‑500 ms  
-- 중형 PDF(10‑50 페이지): 주석당 ~500 ms‑2 s  
-- 대형 PDF(100+ 페이지): 주석당 ~2‑10 s  
+### 처리 속도 벤치마크
+실제 테스트 기준:
+- 소형 PDF(1‑10 페이지): 구문당 ~100‑500ms
+- 중형 PDF(10‑50 페이지): 설명당 ~500ms‑2s
+- 대형 PDF(100+ 페이지): 설명당 ~2‑10s
 
-### Scaling Strategies
+### 확장 전략
 
 ```java
 // Use thread pools for concurrent processing
@@ -396,27 +396,27 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 }, executor);
 ```
 
-## Frequently Asked Questions
+## 자주 묻는 질문
 
-**Q: How do I install GroupDocs.Annotation in my Java project?**  
-A: 위의 전제 조건 섹션에 있는 Maven 의존성을 `pom.xml`에 추가하고 `mvn clean install`을 실행하세요. 레포지토리 URL이 정확히 일치하는지 확인하십시오.
+**Q: Java 프로젝트에 GroupDocs.Annotation을 어떻게 설치합니까?**
+A: 위의 조건 섹션에 있는 Maven 의존 `pom.xml`에 추가하고 `mvn clean install`을 실행하세요. 레포지토리 URL을 정확하게 일치하는지 확인하시기 바랍니다.
 
-**Q: Can I annotate document formats other than PDF?**  
-A: Yes! GroupDocs.Annotation은 Word, Excel, PowerPoint, 이미지 파일 등 50가지 이상을 지원합니다. API 사용 방식은 대부분 동일합니다.
+**Q: PDF 이외의 문서 형식에 주석을 달 수 있나요?**
+답: 그렇습니다! GroupDocs.Annotation은 Word, Excel, PowerPoint, 이미지 파일 등 50가지 이상을 지원합니다. API 사용 방식은 대부분 동일합니다.
 
-**Q: What annotation types are available besides area and ellipse?**  
-A: GroupDocs는 텍스트 하이라이트, 밑줄, 취소선, 화살표, 워터마크, 텍스트 교체, 포인트 주석 등 15가지 이상의 유형을 제공합니다. 각 유형마다 세부 스타일 옵션이 있습니다.
+**Q: 영역 및 타원 외에 어떤 주석 유형을 사용할 수 있나요?**
+A: GroupDocs는 텍스트 하이라이트, 밑줄, 취소선, 화살표, 워터마크, 텍스트 교체, 포인트 설명 등 15가지 유형을 제공합니다. 각 유형마다 세부적인 스타일 옵션이 있습니다.
 
-**Q: How do I handle large PDF files without running out of memory?**  
-A: 문서를 청크 단위로 처리하고, JVM 힙을 (`-Xmx4g`) 늘리며, 가능하면 스트리밍을 사용하고, `Annotator` 인스턴스를 항상 닫으세요. 100 MB 이상 파일은 페이지별로 개별 처리하는 것이 좋습니다.
+**Q: 메모리 부족 없이 대용량 PDF 파일을 처리하려면 어떻게 해야 합니까?**
+A: 문서를 주요 주요 처리하고, JVM 힙을 (`-Xmx4g`) 청산하고, 가능하면 스트리밍을 사용하고, `Annotator`에 남아 있도록 하세요. 100MB 이상의 파일은 페이지마다 개별적으로 처리하는 것이 좋습니다.
 
-**Q: Is there a way to customize annotation appearance beyond basic colors?**  
-A: Absolutely. 투명도, 테두리 스타일, 텍스트 속성, 사용자 정의 아이콘 등을 커스터마이즈할 수 있습니다. 각 주석 유형마다 풍부한 스타일 설정 메서드를 제공합니다.
+**Q: 기본 색상 외에 주석 모양을 맞춤설정할 수 있는 방법이 있나요?**
+답: 물론이죠. 투명도, 림프 스타일, 텍스트 속성, 사용자 정의 아이콘 등을 커스터마이즈할 수 있습니다. 각 종류마다 스타일 설정 방법을 제공합니다.
+
+**관련 리소스:** [GroupDocs.Annotation 문서](https://docs.groupdocs.com/annotation/java/) | [전체 API 참조](https://apireference.groupdocs.com/annotation/java) | [GroupDocs 커뮤니티 포럼](https://forum.groupdocs.com/c/annotation)
 
 ---
 
-**Last Updated:** 2026-01-08  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
-
-**Related Resources:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+**최종 업데이트:** 2026년 1월 8일
+**테스트 환경:** GroupDocs.Annotation 25.2
+**제작자:** GroupDocs 

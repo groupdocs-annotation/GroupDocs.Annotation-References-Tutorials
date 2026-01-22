@@ -12,7 +12,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: Java PDF 注释：使用 GroupDocs 导出已注释的页面
+title: Java PDF 注释 - 用 GroupDocs 导出已注释的页面
 type: docs
 url: /zh/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -412,10 +412,10 @@ A: 将文档分块处理，增大 JVM 堆 (`-Xmx4g`)，尽可能使用流式处�
 **Q: 是否可以自定义注释外观，超出基本颜色？**  
 A: 当然可以。你可以自定义不透明度、边框样式、文字属性，甚至添加自定义图标。每种注释类型都提供丰富的样式设置方法。
 
+**相关资源：** [GroupDocs.Annotation 文档](https://docs.groupdocs.com/annotation/java/) | [完整 API 参考](https://apireference.groupdocs.com/annotation/java) | [GroupDocs 社区论坛](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **最后更新：** 2026-01-08  
 **测试版本：** GroupDocs.Annotation 25.2  
 **作者：** GroupDocs  
-
-**相关资源：** [GroupDocs.Annotation 文档](https://docs.groupdocs.com/annotation/java/) | [完整 API 参考](https://apireference.groupdocs.com/annotation/java) | [GroupDocs 社区论坛](https://forum.groupdocs.com/c/annotation)

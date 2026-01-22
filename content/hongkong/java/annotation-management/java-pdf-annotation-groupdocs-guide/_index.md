@@ -12,7 +12,7 @@ tags:
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: Java PDF 註解：使用 GroupDocs 匯出已註解的頁面
+title: Java PDF 註解 - 使用 GroupDocs 匯出已註解的頁面
 type: docs
 url: /zh-hant/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
@@ -404,10 +404,10 @@ A: 將文件分塊處理、增加 JVM 堆積 (`-Xmx4g`)、盡可能使用串流�
 **Q: 有沒有辦法自訂註解外觀，超出基本顏色的範圍？**  
 A: 當然可以。你可以自訂不透明度、邊框樣式、文字屬性，甚至加入自訂圖示。每種註解類型皆提供豐富的樣式設定方法。
 
+**相關資源：** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
+
 ---
 
 **最後更新：** 2026-01-08  
 **測試版本：** GroupDocs.Annotation 25.2  
 **作者：** GroupDocs  
-
-**相關資源：** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
