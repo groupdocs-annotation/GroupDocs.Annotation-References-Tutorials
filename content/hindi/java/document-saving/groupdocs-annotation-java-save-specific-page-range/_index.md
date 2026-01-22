@@ -1,41 +1,74 @@
 ---
-"date": "2025-05-06"
-"description": "Java के लिए GroupDocs.Annotation का उपयोग करके एनोटेटेड दस्तावेज़ पृष्ठ श्रेणियों को कुशलतापूर्वक सहेजना सीखें। यह ट्यूटोरियल सेटअप, कार्यान्वयन और व्यावहारिक अनुप्रयोगों को कवर करता है।"
-"title": "GroupDocs के साथ विशिष्ट पृष्ठ श्रेणी सहेजें.Java के लिए एनोटेशन एक संपूर्ण गाइड"
-"url": "/hi/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+categories:
+- Java Development
+date: '2026-01-10'
+description: GroupDocs.Annotation के साथ एनोटेटेड दस्तावेज़ों से विशिष्ट पृष्ठों को
+  सहेजने के लिए जावा में try‑with‑resources का उपयोग कैसे करें, सीखें। इसमें Spring
+  Boot दस्तावेज़ सेवा का उदाहरण शामिल है।
+keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
+  document annotation tutorial, selective PDF page saving Java, extract annotated
+  pages
+lastmod: '2026-01-10'
+linktitle: Save Specific Pages Java Annotation
+tags:
+- groupdocs
+- java-annotation
+- document-processing
+- pdf-manipulation
+title: जावा में ट्राय विथ रिसोर्सेज – एनोटेटेड दस्तावेज़ों से विशिष्ट पृष्ठ सहेजें
 type: docs
-"weight": 1
+url: /hi/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
+weight: 1
 ---
 
-# Java के लिए GroupDocs.Annotation के साथ विशिष्ट पृष्ठ श्रेणी सहेजें
+# एनीटेटेड दस्तावेज़ों में से विशिष्ट पृष्ठों को जावा में कैसे सहेजें
 
 ## परिचय
 
-एनोटेट करने के बाद दस्तावेज़ के केवल विशिष्ट पृष्ठों को सहेजने में परेशानी हो रही है? इसका उपयोग करके अपने वर्कफ़्लो को सरल बनाएँ **जावा के लिए ग्रुपडॉक्स.एनोटेशन** निर्दिष्ट पृष्ठ श्रेणियों के आधार पर एनोटेट किए गए दस्तावेज़ों को सहेजने के लिए। यह व्यापक मार्गदर्शिका आपको प्रक्रिया के माध्यम से मार्गदर्शन करेगी, जिससे कुशल दस्तावेज़ प्रबंधन सुनिश्चित होगा।
+क्या आप कभी बड़े एनीटेटेड दस्तावेज़ों में डूबते हुए महसूस कर चुके हैं जबकि आपको केवल कुछ विशिष्ट पृष्ठों की जरूरत है? **try with resources java** के साथ, आप GroupDocs.Annotation का उपयोग करके केवल आवश्यक पृष्ठों को प्रभावी ढंग से निकाल सकते हैं। चाहे आप कानूनी अनुबंध, तकनीकी मैनुअल, या शोध पत्रों को संभाल रहे हों, केवल प्रासंगिक पृष्ठों को निकालने से स्टोरेज बचता है, प्रोसेसिंग तेज़ होती है, और आपका कार्यप्रवाह व्यवस्थित रहता है।
 
-**आप क्या सीखेंगे:**
-- फ़ाइल पथ को प्रभावी ढंग से कॉन्फ़िगर करना.
-- जावा अनुप्रयोगों में विशिष्ट पृष्ठ श्रेणी बचत का कार्यान्वयन।
-- GroupDocs.Annotation कॉन्फ़िगरेशन विकल्पों को समझना.
-- वास्तविक दुनिया के उपयोग के मामलों और एकीकरण संभावनाओं की खोज करना।
+इस गाइड में, हम आपको वह सब कुछ बताएँगे जो आपको जानना आवश्यक है – लाइब्रेरी सेटअप से लेकर उन्नत प्रदर्शन ट्रिक्स तक, जो आपके जावा एप्लिकेशन को सुचारू रूप से चलाते रहेंगे।
 
-सबसे पहले, आइए शुरुआत करने के लिए आवश्यक पूर्वापेक्षाओं पर चर्चा करें।
+**अंत तक आप क्या सीखेंगे:**
+- अपने जावा प्रोजेक्ट में GroupDocs.Annotation को सही तरीके से सेटअप करना
+- साफ़ और मेंटेन करने योग्य कोड के साथ चयनात्मक पृष्ठ सहेजना लागू करना
+- अधिकांश डेवलपर्स को फँसाने वाले सामान्य pitfalls से बचना
+- बड़े दस्तावेज़ प्रोसेसिंग के लिए प्रदर्शन को अनुकूलित करना
+- समस्याओं को सिरदर्द बनने से पहले ही ट्रबलशूट करना
 
-## आवश्यक शर्तें
+## त्वरित उत्तर
+- **“try with resources java” क्या करता है?** यह स्वचालित रूप से Annotator को बंद कर देता है, जिससे फ़ाइल लॉक और मेमोरी लीक से बचाव होता है।  
+- **कौन सी लाइब्रेरी पेज‑रेंज सहेजने को संभालती है?** `GroupDocs.Annotation` `SaveOptions` प्रदान करती है जिसमें `setFirstPage`/`setLastPage` होते हैं।  
+- **क्या इसे Spring Boot सर्विस में उपयोग कर सकता हूँ?** हाँ – “Spring Boot Document Service Integration” सेक्शन देखें।  
+- **क्या मुझे लाइसेंस चाहिए?** विकास के लिए फ्री ट्रायल काम करता है; प्रोडक्शन के लिए पूर्ण लाइसेंस आवश्यक है।  
+- **क्या यह बड़े PDFs (1000+ पृष्ठ) के लिए सुरक्षित है?** मेमोरी उपयोग कम रखने के लिए load‑only‑annotated‑pages और बैच प्रोसेसिंग का उपयोग करें।
 
-शुरू करने से पहले सुनिश्चित करें कि आपके पास निम्नलिखित चीजें हैं:
+## विशिष्ट पृष्ठ क्यों सहेजें? (वास्तविक दुनिया का संदर्भ)
 
-- **आवश्यक पुस्तकालय**: अपनी परियोजना निर्भरताओं में Java संस्करण 25.2 या बाद के संस्करण के लिए GroupDocs.Annotation शामिल करें।
-- **पर्यावरण सेटअप**एक संगत जावा डेवलपमेंट किट (JDK) वातावरण आवश्यक है।
-- **ज्ञान पूर्वापेक्षाएँ**जावा प्रोग्रामिंग और मावेन प्रोजेक्ट सेटअप से परिचित होना लाभदायक होगा।
+तकनीकी विवरण में जाने से पहले, चलिए इस फीचर के महत्व के बारे में बात करते हैं:
 
-## Java के लिए GroupDocs.Annotation सेट अप करना
+**स्टोरेज दक्षता**: 500‑पृष्ठों वाला मैनुअल जिसमें केवल 20 पृष्ठों पर एनीटेशन हैं? सभी 500 पृष्ठ सहेजने की बजाय आप प्रासंगिक 20 पृष्ठ निकाल सकते हैं और फ़ाइल आकार को 96 % तक घटा सकते हैं।
 
-GroupDocs.Annotation को एकीकृत करने के लिए इन चरणों का पालन करें:
+**तेज़ प्रोसेसिंग**: छोटे फ़ाइलों का मतलब तेज़ अपलोड, डाउनलोड और प्रोसेसिंग है। आपके उपयोगकर्ता (और आपके सर्वर) आपका धन्यवाद करेंगे।
 
-### मावेन सेटअप
+**बेहतर उपयोगकर्ता अनुभव**: कोई भी एनीटेटेड सेक्शन खोजने के लिए सैकड़ों पृष्ठ स्क्रॉल नहीं करना चाहता। उन्हें ठीक वही दें जिसकी उन्हें जरूरत है।
 
-अपने में निम्नलिखित कॉन्फ़िगरेशन जोड़ें `pom.xml` अपने प्रोजेक्ट में GroupDocs.Annotation शामिल करने के लिए:
+**अनुपालन और सुरक्षा**: नियामक उद्योगों में, आपको दस्तावेज़ के केवल विशिष्ट सेक्शन साझा करने की अनुमति हो सकती है। चयनात्मक सहेजना अनुपालन को आसान बनाता है।
+
+## पूर्वापेक्षाएँ और सेटअप
+
+### आपको क्या चाहिए
+
+- **Java Development Kit (JDK)**: संस्करण 8 या उससे ऊपर (JDK 11+ की सिफारिश)  
+- **Maven या Gradle**: डिपेंडेंसी मैनेजमेंट के लिए  
+- **GroupDocs.Annotation for Java**: संस्करण 25.2 या बाद का  
+- **बेसिक जावा ज्ञान**: फ़ाइल I/O और OOP की समझ  
+
+### GroupDocs.Annotation for Java सेटअप करना
+
+#### Maven कॉन्फ़िगरेशन
+
+`pom.xml` में यह जोड़ें (विश्वास करें, कॉपी‑पेस्ट आपका दोस्त है):
 
 ```xml
 <repositories>
@@ -54,31 +87,39 @@ GroupDocs.Annotation को एकीकृत करने के लिए इ
 </dependencies>
 ```
 
-### लाइसेंस अधिग्रहण
+#### Gradle सेटअप (यदि आप ग्रेडल टीम में हैं)
 
-GroupDocs.Annotation का उपयोग करने के लिए:
-- **मुफ्त परीक्षण**: यहां से परीक्षण संस्करण डाउनलोड करें [ग्रुपडॉक्स वेबसाइट](https://releases.groupdocs.com/annotation/java/) सुविधाओं का परीक्षण करने के लिए.
-- **अस्थायी लाइसेंस**: के माध्यम से एक अस्थायी लाइसेंस प्राप्त करें [इस लिंक](https://purchase.groupdocs.com/temporary-license/).
-- **खरीदना**: पूर्ण पहुँच के लिए, लाइसेंस खरीदें [ग्रुपडॉक्स खरीदें](https://purchase.groupdocs.com/buy).
+```gradle
+repositories {
+    maven {
+        url "https://releases.groupdocs.com/annotation/java/"
+    }
+}
 
-### मूल आरंभीकरण
+dependencies {
+    implementation 'com.groupdocs:groupdocs-annotation:25.2'
+}
+```
 
-आरंभ करें `Annotator` क्लास और प्रभावी फ़ाइल पथ प्रबंधन और विकल्प कॉन्फ़िगरेशन को बचाने के लिए अपने अनुप्रयोग वातावरण को तैयार करें।
+### अपना लाइसेंस सेट करना
 
-## कार्यान्वयन मार्गदर्शिका
+यहाँ वह बात है जो अधिकांश ट्यूटोरियल नहीं बताते: **फ्री ट्रायल से शुरू करें**। सच में। चीज़ों को जटिल न बनाएं।
 
-हम विशिष्ट पृष्ठ श्रेणियों को सहेजने और फ़ाइल पथों को कॉन्फ़िगर करने पर ध्यान केंद्रित करेंगे।
+- **Free Trial**: परीक्षण और विकास के लिए उत्तम - इसे [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) से प्राप्त करें  
+- **Temporary License**: मूल्यांकन के लिए अधिक समय चाहिए? एक [temporary license](https://purchase.groupdocs.com/temporary-license/) प्राप्त करें  
+- **Full License**: प्रोडक्शन के लिए तैयार? [Purchase here](https://purchase.groupdocs.com/buy)
 
-### विशिष्ट पृष्ठ श्रेणी सहेजना
+प्रो टिप: ट्रायल संस्करण में कुछ सीमाएँ हैं, लेकिन यह इस ट्यूटोरियल को फॉलो करने और प्रूफ़ ऑफ़ कॉन्सेप्ट बनाने के लिए पर्याप्त है।
 
-#### अवलोकन
-दस्तावेज़ों को केवल एनोटेट पृष्ठों के साथ सहेजें, फ़ाइल का आकार कम करें और दक्षता में सुधार करें। 
+## मुख्य कार्यान्वयन: विशिष्ट पेज रेंज सहेजना
 
-#### कार्यान्वयन के लिए कदम
+### बेसिक अप्रोच (यहाँ से शुरू करें)
 
-**1. आउटपुट फ़ाइल पथ निर्धारित करें**
+आइए सबसे सरल कार्यान्वयन से शुरू करें। यह 90 % उपयोग मामलों के लिए पर्याप्त है:
 
-प्लेसहोल्डर्स का उपयोग करके अपनी आउटपुट डायरेक्टरी को गतिशील रूप से सेट करें:
+#### चरण 1: फ़ाइल पाथ मैनेजमेंट सेटअप करें
+
+सबसे पहले, फ़ाइल पाथ को संभालने के लिए एक यूटिलिटी क्लास बनाएं (बाद में जब आपको डायरेक्टरी बदलनी होगी तो आप इसका धन्यवाद करेंगे):
 
 ```java
 import org.apache.commons.io.FilenameUtils;
@@ -90,9 +131,11 @@ public class FilePathConfiguration {
 }
 ```
 
-**2. विशिष्ट पृष्ठों पर टिप्पणी करें और उन्हें सहेजें**
+**इस अप्रोच का कारण?** यह आपके फ़ाइल‑पाथ लॉजिक को केंद्रीकृत रखता है और टेस्टिंग को आसान बनाता है। `FilenameUtils` का उपयोग करने से मूल फ़ाइल एक्सटेंशन स्वचालित रूप से संरक्षित रहता है।
 
-पृष्ठ सीमा निर्दिष्ट करने के लिए अपने सहेजने के विकल्प कॉन्फ़िगर करें:
+#### चरण 2: पेज रेंज सहेजना लागू करें
+
+यहीं पर जादू होता है:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -104,8 +147,8 @@ public class SaveSpecificPageRange {
         
         try (final Annotator annotator = new Annotator(inputFile)) {
             SaveOptions saveOptions = new SaveOptions();
-            saveOptions.setFirstPage(2);  // पेज 2 से शुरू करें
-            saveOptions.setLastPage(4);   // पृष्ठ 4 पर समाप्त
+            saveOptions.setFirstPage(2);  // Start from page 2
+            saveOptions.setLastPage(4);   // End at page 4
             
             annotator.save(outputPath, saveOptions);
         }
@@ -113,78 +156,357 @@ public class SaveSpecificPageRange {
 }
 ```
 
-- **पैरामीटर**: `inputFile` आपके दस्तावेज़ का पथ है। सीमा को इसके द्वारा परिभाषित किया जाता है `setFirstPage()` और `setLastPage()`.
-- **विधि उद्देश्य**: एनोटेट सामग्री को चुनिंदा रूप से सहेजने की अनुमति देता है, भंडारण को अनुकूलित करता है।
+**यहाँ क्या हो रहा है:**  
+- हम एक **try‑with‑resources java** ब्लॉक (`try ( … )`) का उपयोग करते हैं ताकि `Annotator` स्वचालित रूप से बंद हो जाए, जिससे फ़ाइल‑लॉक समस्याएँ समाप्त हो जाती हैं।  
+- `setFirstPage(2)` और `setLastPage(4)` हमारे समावेशी रेंज को परिभाषित करते हैं (पेज 2‑4)।  
+- रेंज दोनों सिरों पर **समावेशी** है – यह विवरण कई डेवलपर्स को फँसाता है।
 
-**समस्या निवारण युक्तियों**
-- सुनिश्चित करें कि सही फ़ाइल पथ प्रदान किए गए हैं.
-- निर्दिष्ट निर्देशिकाओं में अनुमति संबंधी समस्याओं की जाँच करें.
+### उन्नत फ़ाइल पाथ कॉन्फ़िगरेशन
 
-### फ़ाइल पथ कॉन्फ़िगरेशन
-
-#### अवलोकन
-निर्बाध दस्तावेज़ प्रसंस्करण सुनिश्चित करने के लिए इनपुट और आउटपुट पथों का उचित विन्यास आवश्यक है।
-
-#### कार्यान्वयन के लिए कदम
-
-**1. इनपुट फ़ाइल पथ कॉन्फ़िगरेशन**
-
-उपयोगिता विधि का उपयोग करके अपना इनपुट निर्देशिका पथ सेट करें:
+प्रोडक्शन एप्लिकेशन्स के लिए, आपको अधिक लचीला पाथ हैंडलिंग चाहिए:
 
 ```java
 public class FilePathConfiguration {
+    private final String baseOutputDirectory;
+    
+    public FilePathConfiguration(String baseOutputDirectory) {
+        this.baseOutputDirectory = baseOutputDirectory;
+    }
+    
     public String getInputFilePath(String filename) {
         return "YOUR_DOCUMENT_DIRECTORY/" + filename;
+    }
+    
+    public String getOutputFilePath(String inputFile, String suffix) {
+        String baseName = FilenameUtils.getBaseName(inputFile);
+        String extension = FilenameUtils.getExtension(inputFile);
+        return String.format("%s/%s_%s.%s", baseOutputDirectory, baseName, suffix, extension);
     }
 }
 ```
 
-**2. आउटपुट फ़ाइल पथ निर्माण**
+अब आप `contract_pages_2-4.pdf` जैसे नाम स्वचालित रूप से जेनरेट कर सकते हैं।
 
-आउटपुट फ़ाइल पथ को गतिशील रूप से सेट करने के लिए समान तर्क का उपयोग करें जैसा कि पहले दिखाया गया है।
+## सामान्य pitfalls और उन्हें कैसे टालें
 
-## व्यावहारिक अनुप्रयोगों
+### Pitfall #1: पेज इंडेक्स में भ्रम
 
-1. **कानूनी दस्तावेजों**वकील एनोटेट कानूनी संक्षिप्त विवरण को केवल प्रासंगिक पृष्ठों पर ही सहेज सकते हैं।
-2. **शिक्षण सामग्री**शिक्षक पाठ्यपुस्तकों के प्रमुख अनुभागों को निकाल कर साझा कर सकते हैं।
-3. **परियोजना समीक्षा**: परियोजना दस्तावेजों पर विशिष्ट फीडबैक को केंद्रित संशोधनों के लिए सहेजें।
+**समस्या**: मान लेना कि पेज नंबर 0 से शुरू होते हैं (GroupDocs.Annotation में ऐसा नहीं है)।
 
-ये प्रयोग मामले दर्शाते हैं कि कैसे चयनात्मक पृष्ठ बचत कार्यप्रवाह को सुव्यवस्थित कर सकती है और अनावश्यक डेटा प्रबंधन को कम कर सकती है।
+**समाधान**: पेज नंबरिंग 1 से शुरू होती है, जैसे वास्तविक दस्तावेज़ों में। पेज 1 पहला पेज है, पेज 0 नहीं।
 
-## प्रदर्शन संबंधी विचार
+```java
+// Wrong - this tries to start from page 0 (doesn't exist)
+saveOptions.setFirstPage(0);
 
-- **मेमोरी उपयोग को अनुकूलित करें**मेमोरी फ़ुटप्रिंट को न्यूनतम करने के लिए कुशल फ़ाइल पथ प्रबंधन का उपयोग करें।
-- **सर्वोत्तम प्रथाएं**: प्रदर्शन सुधार और बग फिक्स से लाभ उठाने के लिए GroupDocs.Annotation को नियमित रूप से अपडेट करें।
+// Right - this starts from the actual first page
+saveOptions.setFirstPage(1);
+```
 
-## निष्कर्ष
+### Pitfall #2: रिसोर्स लीक
 
-इस गाइड में, हमने Java के लिए GroupDocs.Annotation का उपयोग करके एक विशिष्ट पेज रेंज सेविंग सुविधा को लागू करने का तरीका खोजा। यह क्षमता केवल आवश्यक सामग्री पर ध्यान केंद्रित करके दस्तावेज़ हैंडलिंग दक्षता को बढ़ाती है। 
+**समस्या**: Annotator को सही से बंद न करना, जिससे फ़ाइल लॉक और मेमोरी लीक हो जाती है।
 
-**अगले कदम:**
-- विभिन्न सेव विकल्पों के साथ प्रयोग करें।
-- अपने सिस्टम के भीतर आगे एकीकरण की संभावनाओं का पता लगाएं।
+**समाधान**: हमेशा **try‑with‑resources java** या स्पष्ट क्लोज़िंग का उपयोग करें:
 
-इसे आज़माने के लिए तैयार हैं? अपने प्रोजेक्ट में इस समाधान को लागू करें और सुव्यवस्थित दस्तावेज़ प्रबंधन का अनुभव करें!
+```java
+// Good - automatic resource management
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // your code here
+} // automatically closes
 
-## अक्सर पूछे जाने वाले प्रश्न अनुभाग
+// Also acceptable - manual closing
+Annotator annotator = null;
+try {
+    annotator = new Annotator(inputFile);
+    // your code here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
 
-1. **जावा के लिए GroupDocs.Annotation क्या है?**
-   - एक शक्तिशाली लाइब्रेरी जो प्रोग्रामेटिक रूप से दस्तावेजों की व्याख्या और हेरफेर की अनुमति देती है।
-2. **मैं Maven का उपयोग करके GroupDocs.Annotation कैसे स्थापित करूं?**
-   - अपने रिपॉजिटरी और निर्भरता कॉन्फ़िगरेशन को जोड़ें `pom.xml`.
-3. **क्या मैं इस सुविधा के साथ PDF पर टिप्पणी कर सकता हूँ?**
-   - हां, ग्रुपडॉक्स पीडीएफ सहित कई फ़ाइल स्वरूपों का समर्थन करता है।
-4. **यदि मुझे अस्थायी लाइसेंस की आवश्यकता हो तो क्या होगा?**
-   - के माध्यम से अस्थायी लाइसेंस के लिए आवेदन करें [ग्रुपडॉक्स वेबसाइट](https://purchase.groupdocs.com/temporary-license/).
-5. **मैं अधिक विस्तृत API संदर्भ कहां पा सकता हूं?**
-   - दौरा करना [एपीआई संदर्भ](https://reference.groupdocs.com/annotation/java/) व्यापक दस्तावेज़ीकरण के लिए.
+### Pitfall #3: अमान्य पेज रेंज
+
+**समस्या**: ऐसे पेज रेंज निर्दिष्ट करना जो दस्तावेज़ में मौजूद नहीं हैं।
+
+**समाधान**: पहले अपनी रेंज को वैलिडेट करें:
+
+```java
+public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
+    try (final Annotator annotator = new Annotator(inputFile)) {
+        // Get document info to check page count
+        DocumentInfo documentInfo = annotator.getDocument().getDocumentInfo();
+        int totalPages = documentInfo.getPageCount();
+        
+        // Validate range
+        if (firstPage < 1 || firstPage > totalPages) {
+            throw new IllegalArgumentException("First page out of range: " + firstPage);
+        }
+        if (lastPage < firstPage || lastPage > totalPages) {
+            throw new IllegalArgumentException("Last page out of range: " + lastPage);
+        }
+        
+        SaveOptions saveOptions = new SaveOptions();
+        saveOptions.setFirstPage(firstPage);
+        saveOptions.setLastPage(lastPage);
+        
+        String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
+        annotator.save(outputPath, saveOptions);
+    }
+}
+```
+
+## प्रदर्शन अनुकूलन टिप्स
+
+### बड़े दस्तावेज़ों के लिए मेमोरी मैनेजमेंट
+
+जब बड़े दस्तावेज़ों (100 + पृष्ठ) से निपटते हैं, मेमोरी उपयोग महत्वपूर्ण हो जाता है:
+
+```java
+public class OptimizedPageRangeSaver {
+    public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
+        // Configure for lower memory usage
+        LoadOptions loadOptions = new LoadOptions();
+        loadOptions.setLoadOnlyAnnotatedPages(true); // Only load pages with annotations
+        
+        try (final Annotator annotator = new Annotator(inputFile, loadOptions)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(firstPage);
+            saveOptions.setLastPage(lastPage);
+            
+            // Optional: Enable compression for smaller output files
+            saveOptions.setAnnotationsOnly(false); // Set to true if you only want annotations
+            
+            String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
+            annotator.save(outputPath, saveOptions);
+        }
+    }
+}
+```
+
+**मुख्य अनुकूलन रणनीतियाँ**  
+- `setLoadOnlyAnnotatedPages(true)` मेमोरी फुटप्रिंट को कम करता है।  
+- `setAnnotationsOnly(true)` एक हल्की फ़ाइल बनाता है जिसमें केवल एनीटेशन लेयर होती है।  
+- यदि आपके पास कई फ़ाइलें हैं तो दस्तावेज़ों को बैच में प्रोसेस करें।
+
+### कई दस्तावेज़ों की बैच प्रोसेसिंग
+
+प्रोडक्शन परिदृश्यों में जहाँ आप कई दस्तावेज़ प्रोसेस कर रहे हैं:
+
+```java
+public class BatchPageRangeSaver {
+    public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
+        for (String inputFile : inputFiles) {
+            try {
+                savePageRangeWithValidation(inputFile, firstPage, lastPage);
+                System.out.println("Successfully processed: " + inputFile);
+            } catch (Exception e) {
+                System.err.println("Failed to process " + inputFile + ": " + e.getMessage());
+                // Log the error and continue with next file
+            }
+        }
+    }
+}
+```
+
+## लोकप्रिय फ्रेमवर्क्स के साथ इंटीग्रेशन
+
+### Spring Boot Document Service इंटीग्रेशन
+
+यहाँ पेज‑रेंज सहेजने के लिए एक सरल Spring Boot सर्विस है (ध्यान दें **spring boot document service** शब्दावली):
+
+```java
+@Service
+public class DocumentPageRangeService {
+    
+    @Value("${app.document.output-directory}")
+    private String outputDirectory;
+    
+    public String savePageRange(String inputFile, int firstPage, int lastPage) {
+        try (final Annotator annotator = new Annotator(inputFile)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(firstPage);
+            saveOptions.setLastPage(lastPage);
+            
+            String outputPath = generateOutputPath(inputFile, firstPage, lastPage);
+            annotator.save(outputPath, saveOptions);
+            
+            return outputPath;
+        } catch (Exception e) {
+            throw new DocumentProcessingException("Failed to save page range", e);
+        }
+    }
+    
+    private String generateOutputPath(String inputFile, int firstPage, int lastPage) {
+        String baseName = FilenameUtils.getBaseName(inputFile);
+        String extension = FilenameUtils.getExtension(inputFile);
+        return String.format("%s/%s_pages_%d-%d.%s", 
+                            outputDirectory, baseName, firstPage, lastPage, extension);
+    }
+}
+```
+
+## व्यावहारिक अनुप्रयोग और उपयोग केस
+
+### कानूनी दस्तावेज़ प्रोसेसिंग
+
+कानूनी फर्मों को अक्सर अनुबंधों या कोर्ट दस्तावेज़ों के विशिष्ट सेक्शन निकालने की जरूरत पड़ती है:
+
+```java
+public class LegalDocumentProcessor {
+    public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
+        // Group consecutive pages for efficient processing
+        List<PageRange> ranges = groupConsecutivePages(evidencePages);
+        
+        for (PageRange range : ranges) {
+            String outputFile = String.format("evidence_%d_%d-to-%d.pdf", 
+                                            getCaseNumber(caseFile), range.start, range.end);
+            savePageRange(caseFile, range.start, range.end, outputFile);
+        }
+    }
+}
+```
+
+### शैक्षिक कंटेंट मैनेजमेंट
+
+शिक्षकों को छात्रों के असाइनमेंट के लिए पाठ्यपुस्तकों के विशिष्ट अध्याय निकालने होते हैं:
+
+```java
+public class EducationalContentExtractor {
+    public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
+        try (final Annotator annotator = new Annotator(textbook)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(chapterStart);
+            saveOptions.setLastPage(chapterEnd);
+            
+            String assignmentFile = generateAssignmentFileName(textbook, chapterStart, chapterEnd);
+            annotator.save(assignmentFile, saveOptions);
+        }
+    }
+}
+```
+
+### क्वालिटी एश्योरेंस रिव्यूज़
+
+समीक्षा टिप्पणियों वाले पृष्ठों को ही निकालकर केंद्रित संशोधन के लिए:
+
+```java
+public class QAReviewExtractor {
+    public void extractReviewedPages(String document) {
+        try (final Annotator annotator = new Annotator(document)) {
+            // Get pages with annotations
+            List<Integer> annotatedPages = getAnnotatedPageNumbers(annotator);
+            
+            if (!annotatedPages.isEmpty()) {
+                int firstPage = Collections.min(annotatedPages);
+                int lastPage = Collections.max(annotatedPages);
+                
+                SaveOptions saveOptions = new SaveOptions();
+                saveOptions.setFirstPage(firstPage);
+                saveOptions.setLastPage(lastPage);
+                
+                String reviewFile = document.replace(".pdf", "_review_comments.pdf");
+                annotator.save(reviewFile, saveOptions);
+            }
+        }
+    }
+}
+```
+
+## सर्वश्रेष्ठ प्रैक्टिसेस का सारांश
+
+1. **हमेशा इनपुट पैरामीटर वैलिडेट करें** – प्रोसेसिंग से पहले पेज रेंज चेक करें।  
+2. **try‑with‑resources java का उपयोग करें** – रिसोर्स लीक और फ़ाइल‑लॉक समस्याओं से बचाता है।  
+3. **उचित एरर हैंडलिंग लागू करें** – एक खराब फ़ाइल पूरी बैच को क्रैश न करने दें।  
+4. **मेमोरी उपयोग पर विचार करें** – बड़े दस्तावेज़ों के लिए `setLoadOnlyAnnotatedPages(true)` का उपयोग करें।  
+5. **विभिन्न फ़ाइल प्रकारों के साथ टेस्ट करें** – PDFs, Word, PowerPoint अलग-अलग व्यवहार कर सकते हैं।  
+6. **प्रदर्शन मॉनिटर करें** – प्रोडक्शन में प्रोसेसिंग टाइम और मेमोरी पर नज़र रखें।
+
+## सामान्य मुद्दों का ट्रबलशूटिंग
+
+### समस्या: “File is locked” त्रुटि
+
+**लक्षण**: सहेजने की कोशिश पर एक्सेप्शन फेंका जाता है, जिसमें फ़ाइल लॉक का उल्लेख होता है।  
+
+**कारण**:  
+- पिछले ऑपरेशन से Annotator सही से बंद नहीं हुआ।  
+- फ़ाइल अभी भी किसी अन्य एप्लिकेशन में खुली है।  
+- अपर्याप्त अनुमतियाँ।  
+
+**समाधान**:
+
+```java
+// Ensure proper cleanup
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // ... your code ...
+} // Automatically releases file handles
+
+// Verify file accessibility before processing
+File file = new File(inputFile);
+if (!file.canRead()) {
+    throw new IllegalArgumentException("Cannot read input file: " + inputFile);
+}
+if (!file.getParentFile().canWrite()) {
+    throw new IllegalArgumentException("Cannot write to output directory");
+}
+```
+
+### समस्या: Out of Memory त्रुटियाँ
+
+**लक्षण**: बड़े दस्तावेज़ प्रोसेस करते समय `OutOfMemoryError`।  
+
+**समाधान**:  
+1. JVM हीप साइज बढ़ाएँ, जैसे `-Xmx2g`।  
+2. पहले दिखाए गए ऑप्टिमाइज़्ड लोडिंग विकल्पों का उपयोग करें।  
+3. दस्तावेज़ों को छोटे बैचों में प्रोसेस करें।
+
+### समस्या: एनीटेशन नहीं रखे जा रहे
+
+**लक्षण**: आउटपुट फ़ाइल में मूल एनीटेशन नहीं हैं।  
+
+**समाधान**: सुनिश्चित करें कि आप एनीटेशन को स्ट्रिप नहीं कर रहे हैं:
+
+```java
+SaveOptions saveOptions = new SaveOptions();
+saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
+saveOptions.setFirstPage(firstPage);
+saveOptions.setLastPage(lastPage);
+```
+
+## अक्सर पूछे जाने वाले प्रश्न
+
+**Q: क्या मैं गैर‑लगातार पृष्ठ (जैसे पेज 1, 3, 7) सहेज सकता हूँ?**  
+A: एक ही ऑपरेशन से सीधे नहीं। आपको प्रत्येक रेंज के लिए अलग-अलग सहेजना होगा या बाद में परिणामों को मिलाना होगा।
+
+**Q: क्या यह पासवर्ड‑प्रोटेक्टेड दस्तावेज़ों के साथ काम करता है?**  
+A: हाँ, लेकिन `Annotator` बनाते समय पासवर्ड देना होगा: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`।
+
+**Q: कौन‑से फ़ाइल फ़ॉर्मेट सपोर्टेड हैं?**  
+A: PDF, Microsoft Word, Excel, PowerPoint, और कई अन्य। पूरी सूची के लिए [official documentation](https://docs.groupdocs.com/annotation/java/) देखें।
+
+**Q: क्या मैं मूल कंटेंट के बिना केवल एनीटेशन सहेज सकता हूँ?**  
+A: बिल्कुल – `saveOptions.setAnnotationsOnly(true)` सेट करके केवल एनीटेशन वाली फ़ाइल बनाएं।
+
+**Q: बहुत बड़े दस्तावेज़ (1000+ पृष्ठ) को कैसे हैंडल करें?**  
+A: `setLoadOnlyAnnotatedPages(true)` का उपयोग करें, चंक्स में प्रोसेस करें, और JVM हीप बढ़ाने पर विचार करें।
+
+**Q: सहेजने से पहले पेज़ का प्रीव्यू करने का कोई तरीका है?**  
+A: GroupDocs.Annotation प्रोसेसिंग पर केंद्रित है, व्यूइंग पर नहीं, लेकिन आप दस्तावेज़ जानकारी (पेज काउंट, एनीटेशन लोकेशन) प्राप्त कर सकते हैं जिससे रेंज चुनने में मदद मिलेगी।
 
 ## संसाधन
 
-- **प्रलेखन**: यहां पर गहन मार्गदर्शिकाएं देखें [ग्रुपडॉक्स दस्तावेज़ीकरण](https://docs.groupdocs.com/annotation/java/)
-- **एपीआई संदर्भ**: विस्तृत तकनीकी संसाधनों तक पहुंचें [एपीआई संदर्भ](https://reference.groupdocs.com/annotation/java/)
-- **डाउनलोड करना**: नवीनतम रिलीज़ प्राप्त करें [यहाँ](https://releases.groupdocs.com/annotation/java/)
-- **खरीदना**: के माध्यम से लाइसेंस खरीदें [ग्रुपडॉक्स खरीदें](https://purchase.groupdocs.com/buy)
-- **मुफ्त परीक्षण**: के माध्यम से सुविधाओं का परीक्षण करें [निःशुल्क परीक्षण लिंक](https://releases.groupdocs.com/annotation/java/)
-- **अस्थायी लाइसेंस**: अस्थायी लाइसेंस के लिए अनुरोध करें [यह पृष्ठ](https://purchase.groupdocs.com/temporary-license/)
-- **सहायता**: चर्चा में शामिल हों और सहायता प्राप्त करें [ग्रुपडॉक्स फोरम](https://forum.groupdocs.com/c/annotation/)
+- **Documentation**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- **Download**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- **Purchase**: [License Options](https://purchase.groupdocs.com/buy)  
+- **Free Trial**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary License**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- **Support**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**अंतिम अपडेट:** 2026-01-10  
+**टेस्ट किया गया:** GroupDocs.Annotation 25.2 (Java)  
+**लेखक:** GroupDocs

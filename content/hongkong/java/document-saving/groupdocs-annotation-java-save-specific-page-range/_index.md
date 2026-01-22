@@ -1,41 +1,73 @@
 ---
-"date": "2025-05-06"
-"description": "學習如何使用 GroupDocs.Annotation for Java 有效地保存已註解的文件頁面範圍。本教程涵蓋設定、實作和實際應用。"
-"title": "使用 GroupDocs.Annotation for Java 儲存特定頁面範圍的完整指南"
-"url": "/zh-hant/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
+categories:
+- Java Development
+date: '2026-01-10'
+description: 學習如何使用 Java 的 try‑with‑resources 來儲存帶有 GroupDocs.Annotation 註釋的文件中特定頁面。包括
+  Spring Boot 文件服務範例。
+keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
+  document annotation tutorial, selective PDF page saving Java, extract annotated
+  pages
+lastmod: '2026-01-10'
+linktitle: Save Specific Pages Java Annotation
+tags:
+- groupdocs
+- java-annotation
+- document-processing
+- pdf-manipulation
+title: 使用 try-with-resources（Java） – 從已註釋的文件中保存特定頁面
 type: docs
-"weight": 1
+url: /zh-hant/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
+weight: 1
 ---
 
-# 使用 GroupDocs.Annotation for Java 儲存特定頁面範圍
+# 如何在 Java 中從帶註釋的文件保存特定頁面
 
-## 介紹
+## 簡介
 
-註記後，還在糾結只儲存文件的特定頁面嗎？使用以下工具簡化您的工作流程： **Java 版 GroupDocs.Annotation** 根據指定的頁面範圍保存已註釋的文件。本指南將引導您完成整個流程，確保有效率的文件管理。
+是否曾在大量帶註釋的文件中苦苦尋找，只想要幾頁特定內容？使用 **try with resources java**，您可以透過 GroupDocs.Annotation 高效地抽取所需頁面。無論是法律合約、技術手冊或研究論文，只取出相關頁面即可節省儲存空間、加快處理速度，並讓工作流程更整潔。
 
-**您將學到什麼：**
-- 有效地設定檔路徑。
-- 在Java應用程式中實現特定頁面範圍的保存。
-- 了解 GroupDocs.Annotation 配置選項。
-- 探索現實世界的用例和整合可能性。
+在本指南中，我們將一步步說明從設定函式庫到進階效能技巧，確保您的 Java 應用程式順暢運行。
 
-首先，讓我們介紹一下開始所需的先決條件。
+**學完本章您將掌握：**
+- 正確在 Java 專案中設定 GroupDocs.Annotation
+- 使用乾淨、可維護的程式碼實作選擇性頁面保存
+- 避免大多數開發者常犯的陷阱
+- 為大文件處理優化效能
+- 在問題發生前先行排除故障
 
-## 先決條件
+## 快速回答
+- **「try with resources java」的作用是什麼？** 它會自動關閉 Annotator，避免檔案鎖定與記憶體洩漏。  
+- **哪個函式庫負責頁面範圍保存？** `GroupDocs.Annotation` 提供 `SaveOptions`，可使用 `setFirstPage` / `setLastPage`。  
+- **可以在 Spring Boot 服務中使用嗎？** 可以——請參考「Spring Boot 文件服務整合」章節。  
+- **需要授權嗎？** 開發階段可使用免費試用版；正式上線需購買正式授權。  
+- **對於大型 PDF（1000+ 頁）安全嗎？** 使用僅載入註釋頁面與批次處理，可保持低記憶體使用量。
 
-開始之前請確保您已具備以下條件：
+## 為什麼要保存特定頁面？（實務情境）
 
-- **所需庫**：在專案依賴項中包含適用於 Java 版本 25.2 或更高版本的 GroupDocs.Annotation。
-- **環境設定**：需要相容的 Java 開發工具包 (JDK) 環境。
-- **知識前提**：熟悉 Java 程式設計和 Maven 專案設定將會很有幫助。
+在談技術細節之前，先說明此功能為何是改變遊戲規則的關鍵：
 
-## 為 Java 設定 GroupDocs.Annotation
+**儲存效能**：一份 500 頁的手冊，只在 20 頁上有註釋？與其保存全部 500 頁，不如抽出相關 20 頁，檔案大小可減少 96 %。  
 
-請依照下列步驟整合 GroupDocs.Annotation：
+**更快的處理**：檔案變小即代表上傳、下載與處理速度提升。您的使用者（以及伺服器）都會感受到好處。  
 
-### Maven 設定
+**更佳的使用者體驗**：沒有人願意捲動上百頁才找到註釋區段。直接提供所需內容即可。  
 
-將以下配置新增至您的 `pom.xml` 在您的專案中包含 GroupDocs.Annotation：
+**合規與安全**：在受規範限制的產業，可能只能分享文件的特定章節。選擇性保存讓合規更簡單。
+
+## 前置條件與設定
+
+### 您需要的環境
+
+- **Java Development Kit (JDK)**：8 版或以上（建議使用 JDK 11+）  
+- **Maven 或 Gradle**：用於相依管理  
+- **GroupDocs.Annotation for Java**：版本 25.2 或更新  
+- **基本的 Java 知識**：了解檔案 I/O 與 OOP  
+
+### 設定 GroupDocs.Annotation for Java
+
+#### Maven 設定
+
+將以下內容加入 `pom.xml`（直接複製貼上即可）：
 
 ```xml
 <repositories>
@@ -54,31 +86,39 @@ type: docs
 </dependencies>
 ```
 
-### 許可證獲取
+#### Gradle 設定（如果您是 Gradle 團隊）
 
-要使用 GroupDocs.Annotation：
-- **免費試用**：從下載試用版 [GroupDocs 網站](https://releases.groupdocs.com/annotation/java/) 測試功能。
-- **臨時執照**：透過以下方式取得臨時許可證 [此連結](https://purchase。groupdocs.com/temporary-license/).
-- **購買**：如需完全存取權限，請透過以下方式購買許可證 [GroupDocs 購買](https://purchase。groupdocs.com/buy).
+```gradle
+repositories {
+    maven {
+        url "https://releases.groupdocs.com/annotation/java/"
+    }
+}
 
-### 基本初始化
+dependencies {
+    implementation 'com.groupdocs:groupdocs-annotation:25.2'
+}
+```
 
-初始化 `Annotator` 類別並準備您的應用程式環境以進行有效的檔案路徑管理和保存選項配置。
+### 取得授權
 
-## 實施指南
+以下是大多數教學不會提到的重點：**先使用免費試用版**。真的很簡單，別把事情想得太複雜。
 
-我們將專注於保存特定的頁面範圍和設定檔路徑。
+- **免費試用**：適合測試與開發，從 [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) 取得  
+- **臨時授權**：需要更長時間評估？可取得 [temporary license](https://purchase.groupdocs.com/temporary-license/)  
+- **正式授權**：要上線生產環境？請前往 [Purchase here](https://purchase.groupdocs.com/buy)
 
-### 儲存特定頁面範圍
+小技巧：試用版雖有些限制，但足以完成本教學並建立概念驗證。
 
-#### 概述
-僅保存帶有註釋頁面的文檔，減少文件大小並提高效率。 
+## 核心實作：保存特定頁面範圍
 
-#### 實施步驟
+### 基本做法（從這裡開始）
 
-**1.確定輸出檔路徑**
+先從最簡單的實作入手，這能滿足 90 % 的使用情境：
 
-使用佔位符動態設定輸出目錄：
+#### 步驟 1：設定檔案路徑管理
+
+先建立一個工具類別，負責處理檔案路徑（日後變更目錄時會感謝您）：
 
 ```java
 import org.apache.commons.io.FilenameUtils;
@@ -90,9 +130,11 @@ public class FilePathConfiguration {
 }
 ```
 
-**2.註釋並儲存特定頁面**
+**為什麼這樣寫？** 可將路徑邏輯集中管理，便於測試。使用 `FilenameUtils` 可自動保留原始副檔名。
 
-配置您的儲存選項以指定頁面範圍：
+#### 步驟 2：實作頁面範圍保存
+
+以下是核心程式碼：
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -104,8 +146,8 @@ public class SaveSpecificPageRange {
         
         try (final Annotator annotator = new Annotator(inputFile)) {
             SaveOptions saveOptions = new SaveOptions();
-            saveOptions.setFirstPage(2);  // 從第 2 頁開始
-            saveOptions.setLastPage(4);   // 結束於第 4 頁
+            saveOptions.setFirstPage(2);  // Start from page 2
+            saveOptions.setLastPage(4);   // End at page 4
             
             annotator.save(outputPath, saveOptions);
         }
@@ -113,78 +155,357 @@ public class SaveSpecificPageRange {
 }
 ```
 
-- **參數**： `inputFile` 是文檔的路徑。範圍定義為 `setFirstPage()` 和 `setLastPage()`。
-- **方法目的**：允許選擇性保存註釋內容，優化儲存。
+**程式說明：**
+- 使用 **try‑with‑resources java** 區塊 (`try ( … )`)，讓 `Annotator` 自動關閉，避免檔案鎖定問題。  
+- `setFirstPage(2)` 與 `setLastPage(4)` 定義包含式範圍（第 2‑4 頁）。  
+- 此範圍在兩端皆為 **包含**，是許多開發者常忽略的細節。
 
-**故障排除提示**
-- 確保提供正確的檔案路徑。
-- 檢查指定目錄中的權限問題。
+### 進階檔案路徑設定
 
-### 文件路徑配置
-
-#### 概述
-正確配置輸入和輸出路徑對於確保無縫文件處理至關重要。
-
-#### 實施步驟
-
-**1.輸入檔路徑配置**
-
-使用實用方法設定輸入目錄路徑：
+在正式環境中，您可能需要更彈性的路徑處理：
 
 ```java
 public class FilePathConfiguration {
+    private final String baseOutputDirectory;
+    
+    public FilePathConfiguration(String baseOutputDirectory) {
+        this.baseOutputDirectory = baseOutputDirectory;
+    }
+    
     public String getInputFilePath(String filename) {
         return "YOUR_DOCUMENT_DIRECTORY/" + filename;
+    }
+    
+    public String getOutputFilePath(String inputFile, String suffix) {
+        String baseName = FilenameUtils.getBaseName(inputFile);
+        String extension = FilenameUtils.getExtension(inputFile);
+        return String.format("%s/%s_%s.%s", baseOutputDirectory, baseName, suffix, extension);
     }
 }
 ```
 
-**2. 輸出檔案路徑構建**
+現在可以自動產生 `contract_pages_2-4.pdf` 等檔名。
 
-使用類似的邏輯來動態設定輸出檔案路徑，如前所示。
+## 常見陷阱與避免方法
 
-## 實際應用
+### 陷阱 #1：頁碼索引混淆
 
-1. **法律文件**：律師可以只儲存帶有相關頁面的帶註釋的法律摘要。
-2. **教育材料**：教育工作者可以提取和分享教科書的關鍵部分。
-3. **項目評審**：保存有關專案文件的具體回饋，以便進行有重點的修訂。
+**問題**：誤以為頁碼從 0 開始（實際不是）。  
 
-這些用例展示了選擇性頁面保存如何簡化工作流程並減少不必要的資料處理。
+**解決方案**：頁碼從 1 起算，與實際文件相同。第 1 頁即為第一頁，而非第 0 頁。
 
-## 性能考慮
+```java
+// Wrong - this tries to start from page 0 (doesn't exist)
+saveOptions.setFirstPage(0);
 
-- **優化記憶體使用**：利用高效的檔案路徑管理來最大限度地減少記憶體佔用。
-- **最佳實踐**：定期更新 GroupDocs.Annotation 以獲得效能改進和錯誤修復。
+// Right - this starts from the actual first page
+saveOptions.setFirstPage(1);
+```
 
-## 結論
+### 陷阱 #2：資源洩漏
 
-在本指南中，我們探討如何使用 GroupDocs.Annotation for Java 實現特定頁面範圍的儲存功能。此功能透過僅關注必要內容來提高文件處理效率。 
+**問題**：未正確關閉 Annotator，導致檔案鎖定與記憶體洩漏。  
 
-**後續步驟：**
-- 嘗試不同的儲存選項。
-- 探索系統內進一步整合的可能性。
+**解決方案**：始終使用 **try‑with‑resources java** 或手動關閉：
 
-準備好嘗試了嗎？在您的專案中實施此解決方案，體驗精簡的文件管理！
+```java
+// Good - automatic resource management
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // your code here
+} // automatically closes
 
-## 常見問題部分
+// Also acceptable - manual closing
+Annotator annotator = null;
+try {
+    annotator = new Annotator(inputFile);
+    // your code here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
 
-1. **Java 的 GroupDocs.Annotation 是什麼？**
-   - 一個強大的庫，允許以編程方式註釋和操作文件。
-2. **如何使用 Maven 安裝 GroupDocs.Annotation？**
-   - 將儲存庫和依賴項配置新增至您的 `pom。xml`.
-3. **我可以使用此功能註釋 PDF 嗎？**
-   - 是的，GroupDocs 支援多種文件格式，包括 PDF。
-4. **如果我需要臨時執照怎麼辦？**
-   - 透過申請臨時執照 [GroupDocs 網站](https://purchase。groupdocs.com/temporary-license/).
-5. **在哪裡可以找到更詳細的 API 參考？**
-   - 訪問 [API 參考](https://reference.groupdocs.com/annotation/java/) 以獲得全面的文件。
+### 陷阱 #3：無效的頁面範圍
+
+**問題**：指定的頁面範圍超出文件實際頁數。  
+
+**解決方案**：先驗證範圍是否合法：
+
+```java
+public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
+    try (final Annotator annotator = new Annotator(inputFile)) {
+        // Get document info to check page count
+        DocumentInfo documentInfo = annotator.getDocument().getDocumentInfo();
+        int totalPages = documentInfo.getPageCount();
+        
+        // Validate range
+        if (firstPage < 1 || firstPage > totalPages) {
+            throw new IllegalArgumentException("First page out of range: " + firstPage);
+        }
+        if (lastPage < firstPage || lastPage > totalPages) {
+            throw new IllegalArgumentException("Last page out of range: " + lastPage);
+        }
+        
+        SaveOptions saveOptions = new SaveOptions();
+        saveOptions.setFirstPage(firstPage);
+        saveOptions.setLastPage(lastPage);
+        
+        String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
+        annotator.save(outputPath, saveOptions);
+    }
+}
+```
+
+## 效能優化技巧
+
+### 大文件的記憶體管理
+
+處理 100 + 頁的大文件時，記憶體使用尤為重要：
+
+```java
+public class OptimizedPageRangeSaver {
+    public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
+        // Configure for lower memory usage
+        LoadOptions loadOptions = new LoadOptions();
+        loadOptions.setLoadOnlyAnnotatedPages(true); // Only load pages with annotations
+        
+        try (final Annotator annotator = new Annotator(inputFile, loadOptions)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(firstPage);
+            saveOptions.setLastPage(lastPage);
+            
+            // Optional: Enable compression for smaller output files
+            saveOptions.setAnnotationsOnly(false); // Set to true if you only want annotations
+            
+            String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
+            annotator.save(outputPath, saveOptions);
+        }
+    }
+}
+```
+
+**關鍵優化策略**
+- `setLoadOnlyAnnotatedPages(true)` 可減少記憶體佔用。  
+- `setAnnotationsOnly(true)` 產生僅包含註釋層的輕量檔案。  
+- 若需處理多個檔案，請分批執行。
+
+### 批次處理多個文件
+
+在需要一次處理大量文件的生產環境中：
+
+```java
+public class BatchPageRangeSaver {
+    public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
+        for (String inputFile : inputFiles) {
+            try {
+                savePageRangeWithValidation(inputFile, firstPage, lastPage);
+                System.out.println("Successfully processed: " + inputFile);
+            } catch (Exception e) {
+                System.err.println("Failed to process " + inputFile + ": " + e.getMessage());
+                // Log the error and continue with next file
+            }
+        }
+    }
+}
+```
+
+## 與常見框架的整合
+
+### Spring Boot 文件服務整合
+
+以下是一個簡易的 Spring Boot 服務，用於頁面範圍保存（請注意 **spring boot document service** 的說明）：
+
+```java
+@Service
+public class DocumentPageRangeService {
+    
+    @Value("${app.document.output-directory}")
+    private String outputDirectory;
+    
+    public String savePageRange(String inputFile, int firstPage, int lastPage) {
+        try (final Annotator annotator = new Annotator(inputFile)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(firstPage);
+            saveOptions.setLastPage(lastPage);
+            
+            String outputPath = generateOutputPath(inputFile, firstPage, lastPage);
+            annotator.save(outputPath, saveOptions);
+            
+            return outputPath;
+        } catch (Exception e) {
+            throw new DocumentProcessingException("Failed to save page range", e);
+        }
+    }
+    
+    private String generateOutputPath(String inputFile, int firstPage, int lastPage) {
+        String baseName = FilenameUtils.getBaseName(inputFile);
+        String extension = FilenameUtils.getExtension(inputFile);
+        return String.format("%s/%s_pages_%d-%d.%s", 
+                            outputDirectory, baseName, firstPage, lastPage, extension);
+    }
+}
+```
+
+## 實務應用與案例
+
+### 法律文件處理
+
+律師事務所常需抽取合約或法院文件的特定段落：
+
+```java
+public class LegalDocumentProcessor {
+    public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
+        // Group consecutive pages for efficient processing
+        List<PageRange> ranges = groupConsecutivePages(evidencePages);
+        
+        for (PageRange range : ranges) {
+            String outputFile = String.format("evidence_%d_%d-to-%d.pdf", 
+                                            getCaseNumber(caseFile), range.start, range.end);
+            savePageRange(caseFile, range.start, range.end, outputFile);
+        }
+    }
+}
+```
+
+### 教育內容管理
+
+教師為學生作業抽取教科書特定章節：
+
+```java
+public class EducationalContentExtractor {
+    public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
+        try (final Annotator annotator = new Annotator(textbook)) {
+            SaveOptions saveOptions = new SaveOptions();
+            saveOptions.setFirstPage(chapterStart);
+            saveOptions.setLastPage(chapterEnd);
+            
+            String assignmentFile = generateAssignmentFileName(textbook, chapterStart, chapterEnd);
+            annotator.save(assignmentFile, saveOptions);
+        }
+    }
+}
+```
+
+### 品質保證審查
+
+僅抽取含有審查意見的頁面，以便集中修訂：
+
+```java
+public class QAReviewExtractor {
+    public void extractReviewedPages(String document) {
+        try (final Annotator annotator = new Annotator(document)) {
+            // Get pages with annotations
+            List<Integer> annotatedPages = getAnnotatedPageNumbers(annotator);
+            
+            if (!annotatedPages.isEmpty()) {
+                int firstPage = Collections.min(annotatedPages);
+                int lastPage = Collections.max(annotatedPages);
+                
+                SaveOptions saveOptions = new SaveOptions();
+                saveOptions.setFirstPage(firstPage);
+                saveOptions.setLastPage(lastPage);
+                
+                String reviewFile = document.replace(".pdf", "_review_comments.pdf");
+                annotator.save(reviewFile, saveOptions);
+            }
+        }
+    }
+}
+```
+
+## 最佳實踐摘要
+
+1. **務必驗證輸入參數**——在處理前檢查頁面範圍。  
+2. **使用 try‑with‑resources java**——防止資源洩漏與檔案鎖定。  
+3. **實作完善的錯誤處理**——避免單一壞檔案導致整批失敗。  
+4. **考量記憶體使用**——大型文件請使用 `setLoadOnlyAnnotatedPages(true)`。  
+5. **測試多種檔案類型**——PDF、Word、PowerPoint 可能行為不同。  
+6. **監控效能**——留意處理時間與記憶體使用情況。
+
+## 常見問題排除
+
+### 問題：「File is locked」錯誤
+
+**症狀**：保存時拋出檔案鎖定例外。  
+
+**原因**：  
+- 前一次操作未正確關閉 Annotator。  
+- 檔案仍被其他程式開啟。  
+- 權限不足。  
+
+**解決方式**：
+
+```java
+// Ensure proper cleanup
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // ... your code ...
+} // Automatically releases file handles
+
+// Verify file accessibility before processing
+File file = new File(inputFile);
+if (!file.canRead()) {
+    throw new IllegalArgumentException("Cannot read input file: " + inputFile);
+}
+if (!file.getParentFile().canWrite()) {
+    throw new IllegalArgumentException("Cannot write to output directory");
+}
+```
+
+### 問題：記憶體不足錯誤
+
+**症狀**：處理大型文件時出現 `OutOfMemoryError`。  
+
+**解決方式**：  
+1. 增加 JVM 堆積大小，例如 `-Xmx2g`。  
+2. 使用前述的最佳化載入選項。  
+3. 將文件分批處理。
+
+### 問題：註釋未保留
+
+**症狀**：輸出檔案不包含原始註釋。  
+
+**解決方式**：確保未在保存過程中剝除註釋：
+
+```java
+SaveOptions saveOptions = new SaveOptions();
+saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
+saveOptions.setFirstPage(firstPage);
+saveOptions.setLastPage(lastPage);
+```
+
+## 常見問答
+
+**Q: 能否一次保存非連續頁面（例如第 1、3、7 頁）？**  
+A: 單次操作無法直接完成。需要分別保存每個範圍，或在之後合併結果。  
+
+**Q: 這能處理受密碼保護的文件嗎？**  
+A: 能，只要在建立 `Annotator` 時提供密碼，例如 `new Annotator(inputFile, loadOptions.setPassword("your_password"))`。  
+
+**Q: 支援哪些檔案格式？**  
+A: PDF、Microsoft Word、Excel、PowerPoint 等多種格式。完整列表請參考 [official documentation](https://docs.groupdocs.com/annotation/java/)。  
+
+**Q: 能否只保存註釋而不包含原始內容？**  
+A: 完全可以——設定 `saveOptions.setAnnotationsOnly(true)` 即可產生僅含註釋的檔案。  
+
+**Q: 如何處理極大型文件（1000+ 頁）？**  
+A: 使用 `setLoadOnlyAnnotatedPages(true)`，分塊處理，必要時增大 JVM 堆積。  
+
+**Q: 有沒有辦法在保存前預覽頁面？**  
+A: GroupDocs.Annotation 主要聚焦於處理而非檢視，但您可以取得文件資訊（頁數、註釋位置）來協助決定要抽取的範圍。
 
 ## 資源
 
-- **文件**：探索深入指南 [GroupDocs 文檔](https://docs.groupdocs.com/annotation/java/)
-- **API 參考**：訪問詳細的技術資源 [API 參考](https://reference.groupdocs.com/annotation/java/)
-- **下載**：取得最新版本 [這裡](https://releases.groupdocs.com/annotation/java/)
-- **購買**：透過購買許可證 [GroupDocs 購買](https://purchase.groupdocs.com/buy)
-- **免費試用**：透過測試功能 [免費試用連結](https://releases.groupdocs.com/annotation/java/)
-- **臨時執照**：申請臨時駕照 [本頁](https://purchase.groupdocs.com/temporary-license/)
-- **支援**：參與討論並獲得協助 [GroupDocs 論壇](https://forum.groupdocs.com/c/annotation/)
+- **文件說明**： [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **API 參考**： [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- **下載**： [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- **購買**： [License Options](https://purchase.groupdocs.com/buy)  
+- **免費試用**： [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- **臨時授權**： [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- **支援**： [Community Forum](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**最後更新：** 2026-01-10  
+**測試環境：** GroupDocs.Annotation 25.2 (Java)  
+**作者：** GroupDocs
