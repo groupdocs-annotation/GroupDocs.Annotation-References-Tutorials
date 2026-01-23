@@ -1,36 +1,63 @@
 ---
-"date": "2025-05-06"
-"description": "Dowiedz się, jak bezpiecznie ładować, adnotować i zapisywać dokumenty chronione hasłem za pomocą GroupDocs.Annotation dla Java. Zwiększ bezpieczeństwo dokumentów w swoich aplikacjach Java."
-"title": "Bezpieczne przetwarzanie dokumentów za pomocą GroupDocs.Annotation Java&#58; Ładowanie i adnotowanie dokumentów chronionych hasłem"
-"url": "/pl/java/advanced-features/groupdocs-annotation-java-password-documents/"
+categories:
+- Java Development
+date: '2026-01-23'
+description: Kompletny przewodnik po anotowaniu chronionych plików PDF w Javie przy
+  użyciu GroupDocs Annotation. Dowiedz się, jak obsługiwać pliki PDF zabezpieczone
+  hasłem, dodawać adnotacje i zapewniać bezpieczne przetwarzanie dokumentów w aplikacjach
+  Java.
+keywords: java document annotation library, password protected document java, secure
+  document handling java, java pdf annotation, groupdocs annotation java example
+lastmod: '2026-01-23'
+linktitle: Java Document Annotation Library Guide
+tags:
+- document-processing
+- pdf-annotation
+- java-library
+- security
+title: Adnotuj zabezpieczony PDF w Javie – Kompletny przewodnik z GroupDocs
 type: docs
-"weight": 1
+url: /pl/java/advanced-features/groupdocs-annotation-java-password-documents/
+weight: 1
 ---
 
-# Bezpieczne przetwarzanie dokumentów za pomocą GroupDocs.Annotation Java
-## Wstęp
-W dzisiejszej erze cyfrowej zapewnienie bezpieczeństwa poufnych dokumentów jest kluczowe w różnych branżach, takich jak prawo, finanse i opieka zdrowotna. Ten samouczek przeprowadzi Cię przez proces korzystania z GroupDocs.Annotation dla Java w celu bezpiecznego ładowania, adnotowania i zapisywania dokumentów chronionych hasłem.
-**Czego się nauczysz:**
-- Jak załadować dokumenty chronione hasłem za pomocą GroupDocs.Annotation.
-- Techniki dodawania adnotacji obszarowych do dokumentów.
-- Kroki umożliwiające bezpieczne zapisanie dokumentu z adnotacjami.
-Dzięki tej wiedzy zwiększysz bezpieczeństwo dokumentów, utrzymując jednocześnie produktywność w aplikacjach Java. Zacznijmy od skonfigurowania środowiska.
+# annotate protected pdf java – Kompletny przewodnik z GroupDocs
 
-## Wymagania wstępne
-Przed kontynuowaniem upewnij się, że masz:
-- **Zestaw narzędzi programistycznych Java (JDK):** Wersja 8 lub nowsza.
-- **Maven:** Do zarządzania zależnościami i budowania projektów.
-- **GroupDocs.Annotation dla biblioteki Java:** Dodaj wersję 25.2 do swojego projektu.
+Pracujesz z wrażliwymi plikami PDF w aplikacjach Java? Jeśli potrzebujesz **annotate protected pdf java** plików, zachowując bezpieczeństwo danych, trafiłeś we właściwe miejsce. W tym przewodniku przeprowadzimy Cię przez ładowanie PDF‑ów zabezpieczonych hasłem, dodawanie profesjonalnych adnotacji oraz bezpieczne zapisywanie wyniku — wszystko przy użyciu GroupDocs.Annotation dla Javy.
 
-### Wymagania dotyczące konfiguracji środowiska
-1. Zainstaluj JDK, jeśli jeszcze nie jest zainstalowany w Twoim systemie.
-2. Skonfiguruj Maven jako narzędzie do kompilacji projektów Java.
-3. Znajomość podstawowych koncepcji programowania w języku Java będzie pomocna.
+## Szybkie odpowiedzi
+- **Jaka biblioteka pozwala mi adnotować zabezpieczone PDF‑y w Javie?** GroupDocs.Annotation for Java  
+- **Czy potrzebuję licencji do produkcji?** Tak – licencja komercyjna usuwa znaki wodne i ograniczenia  
+- **Która wersja JDK jest zalecana?** Java 11+ (Java 8 działa, ale 11+ zapewnia lepszą wydajność)  
+- **Czy mogę przetwarzać wiele plików jednocześnie?** Tak, użyj wzorców wsadowych lub asynchronicznych pokazanych później  
+- **Czy kod jest bezpieczny wątkowo?** Instancje Annotator nie są współdzielone; twórz nową dla każdego żądania  
 
-## Konfigurowanie GroupDocs.Annotation dla Java
-Aby użyć GroupDocs.Annotation w projekcie Java, zintegruj go za pomocą Maven:
+## Co to jest „annotate protected pdf java”?
+„annotate protected pdf java” odnosi się do procesu otwierania PDF‑a zaszyfrowanego hasłem w środowisku Java, programowego dodawania notatek, podświetleń lub kształtów, a następnie zapisywania pliku przy zachowaniu lub aktualizacji jego zabezpieczeń. GroupDocs.Annotation udostępnia przejrzyste API, które obsługuje warstwę hasła za Ciebie.
 
-**Konfiguracja Maven:**
+## Dlaczego wybrać GroupDocs.Annotation jako bibliotekę do adnotacji dokumentów Java?
+Zanim przejdziemy do kodu, podsumujmy, dlaczego GroupDocs.Annotation wyróżnia się:
+
+- **Security First** – Wbudowane wsparcie dla PDF‑ów zabezpieczonych hasłem i szyfrowania.  
+- **Format Flexibility** – Działa z PDF, Word, Excel, PowerPoint, obrazami i ponad 50 innymi formatami.  
+- **Enterprise Ready** – Obsługuje przetwarzanie dużych wolumenów, solidną obsługę błędów i skalowalną wydajność.  
+- **Developer Experience** – Przejrzyste API, obszerna dokumentacja i aktywna społeczność.  
+
+## Wymagania wstępne (nie pomijaj tej części)
+
+- **JDK:** 8 lub wyższy (zalecany Java 11+)  
+- **Narzędzie budowania:** Maven (Gradle również działa)  
+- **IDE:** IntelliJ IDEA, Eclipse lub dowolne IDE Java, które preferujesz  
+- **Wiedza:** podstawy Javy, Maven, operacje I/O na plikach  
+
+*Opcjonalne, ale przydatne:* znajomość wewnętrznej struktury PDF oraz wcześniejsze doświadczenie z frameworkami adnotacji.
+
+## Setting Up GroupDocs.Annotation for Java
+
+### Maven Configuration (The Right Way)
+
+Dodaj repozytorium i zależność do swojego `pom.xml`. Ten dokładny blok musi pozostać niezmieniony:
+
 ```xml
 <repositories>
    <repository>
@@ -48,119 +75,347 @@ Aby użyć GroupDocs.Annotation w projekcie Java, zintegruj go za pomocą Maven:
    </dependency>
 </dependencies>
 ```
-### Nabycie licencji
-Aby użyć GroupDocs.Annotation, możesz:
-- **Bezpłatna wersja próbna:** Pobierz wersję próbną i poznaj jej możliwości.
-- **Licencja tymczasowa:** Poproś o tymczasową licencję zapewniającą rozszerzony dostęp bez ograniczeń.
-- **Zakup:** Kup licencję zapewniającą pełne prawa użytkowania.
 
-Po zainstalowaniu zainicjuj bibliotekę w swoim projekcie w następujący sposób:
+**Pro Tip:** Zablokuj konkretną wersję w produkcji; unikaj zakresów wersji, które mogą wprowadzać niekompatybilne zmiany.
+
+### Konfiguracja licencji (Omijanie ograniczeń wersji próbnej)
+
 ```java
 import com.groupdocs.annotation.Annotator;
-// Dodatkowe niezbędne importy
-public class InitializeGroupDocs {
-    public static void main(String[] args) {
-        // Podstawowy kod konfiguracji i inicjalizacji tutaj
+import com.groupdocs.annotation.License;
+
+public class GroupDocsSetup {
+    public static void initializeLicense() {
+        try {
+            License license = new License();
+            license.setLicense("path/to/your/license.lic");
+            System.out.println("License applied successfully");
+        } catch (Exception e) {
+            System.out.println("License not applied: " + e.getMessage());
+        }
     }
 }
 ```
-## Przewodnik wdrażania
-Teraz, gdy skonfigurowałeś GroupDocs.Annotation dla języka Java, przyjrzyjmy się bliżej jego podstawowym funkcjom poprzez praktyczną implementację.
-### Ładowanie dokumentów chronionych hasłem
-**Przegląd:**
-Ładowanie dokumentów zabezpieczonych hasłem jest kluczowe podczas obsługi poufnych plików. Dzięki GroupDocs.Annotation proces ten jest usprawniony.
-**Etapy wdrażania:**
-1. **Zdefiniuj opcje ładowania i ustaw hasło:**
-   Utwórz instancję `LoadOptions` aby określić hasło dokumentu.
-   ```java
-   import com.groupdocs.annotation.options.LoadOptions;
 
-   LoadOptions loadOptions = new LoadOptions();
-   loadOptions.setPassword("1234");
-   ```
-2. **Zainicjuj adnotator z opcjami ładowania:**
-   Użyj `Annotator` klasa, przekazując ścieżkę do pliku i opcje ładowania.
-   ```java
-   import com.groupdocs.annotation.Annotator;
+## Główna implementacja: Bezpieczne przetwarzanie dokumentów
 
-   final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/InputProtected.pdf", loadOptions);
-   ```
-**Wskazówki dotyczące rozwiązywania problemów:**
-- Sprawdź, czy hasło dokumentu jest poprawne.
-- Sprawdź, czy ścieżka do pliku jest prawidłowa i dostępna.
-### Dodawanie adnotacji obszaru do dokumentu
-**Przegląd:**
-Adnotacje zwiększają widoczność dokumentu, wyróżniając ważne sekcje. Tutaj dodamy prostą adnotację obszaru.
-**Etapy wdrażania:**
-1. **Zainicjuj adnotator (przyjmując założenia z poprzedniego kroku):**
-   Użyj tego samego `Annotator` wystąpienie zainicjowane wcześniej.
-2. **Utwórz i skonfiguruj adnotację obszaru:**
-   Określ położenie i wymiary prostokąta.
-   ```java
-   import com.groupdocs.annotation.models.Rectangle;
-   import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+### How to annotate protected pdf java – Ładowanie dokumentów zabezpieczonych hasłem
 
-   AreaAnnotation area = new AreaAnnotation();
-   area.setBox(new Rectangle(100, 100, 100, 100)); // współrzędne x, y z szerokością i wysokością
-   area.setBackgroundColor(65535); // Kod koloru RGB dla tła
-   ```
-3. **Dodaj adnotację do dokumentu:**
-   ```java
-   annotator.add(area);
-   ```
-### Zapisywanie dokumentów z adnotacjami
-**Przegląd:**
-Po dokonaniu adnotacji bardzo ważne jest ich bezpieczne zapisanie.
-**Etapy wdrażania:**
-1. **Zdefiniuj ścieżkę wyjściową:**
-   Określ, gdzie chcesz zapisać dokument z adnotacjami.
-   ```java
-   String outputPath = "YOUR_OUTPUT_DIRECTORY/AnnotatedDocument.pdf";
-   ```
-2. **Oszczędzaj i pozbywaj się zasobów:**
-   Używać `save` metoda i uwolnienie zasobów przy użyciu `dispose`.
-   ```java
-   annotator.save(outputPath);
-   annotator.dispose();
-   ```
-**Wskazówki dotyczące rozwiązywania problemów:**
-- Upewnij się, że masz uprawnienia do zapisu w katalogu wyjściowym.
-- Sprawdź, czy wszystkie poprzednie kroki (ładowanie, adnotacja) zostały wykonane prawidłowo.
-## Zastosowania praktyczne
-Oto kilka scenariuszy z życia wziętych, w których GroupDocs.Annotation sprawdza się znakomicie:
-1. **Przegląd dokumentów prawnych:** Dodawaj do umów uwagi i wyróżnienia, aby ułatwić ich przeglądanie.
-2. **Adnotacje dotyczące obrazowania medycznego:** Dodawaj notatki do zdjęć rentgenowskich lub wyników rezonansu magnetycznego, aby ułatwić diagnozę.
-3. **Ulepszenie materiałów edukacyjnych:** Podkreśl najważniejsze punkty w podręcznikach lub notatkach z wykładów.
-4. **Opinie na temat projektu:** Przekaż wizualne informacje zwrotne na temat planów architektonicznych lub projektów produktów.
-5. **Analiza dokumentów finansowych:** Zaznacz ważne liczby i trendy w raportach finansowych.
-## Rozważania dotyczące wydajności
-Podczas pracy z adnotacjami dokumentów optymalizacja wydajności jest kluczowa:
-- **Zarządzanie zasobami:** Zapewnij właściwą utylizację `Annotator` wystąpień w celu zwolnienia pamięci.
-- **Przetwarzanie wsadowe:** Jeśli dodajesz adnotacje do wielu dokumentów, rozważ wykonanie operacji wsadowych w celu zwiększenia wydajności.
-- **Operacje asynchroniczne:** W przypadku zastosowań na dużą skalę należy w miarę możliwości stosować metody asynchroniczne.
-## Wniosek
-W tym samouczku nauczyłeś się, jak bezpiecznie ładować, adnotować i zapisywać dokumenty chronione hasłem za pomocą GroupDocs.Annotation dla Java. Ta potężna biblioteka oferuje solidne rozwiązanie do łatwego zarządzania poufnymi dokumentami.
-**Następne kroki:**
-- Poznaj więcej typów adnotacji oferowanych przez GroupDocs.
-- Zintegruj tę funkcjonalność ze swoimi istniejącymi aplikacjami Java.
-Gotowy na udoskonalenie procesów zarządzania dokumentami? Wdróż omówione techniki i zobacz, jak mogą usprawnić Twój przepływ pracy!
-## Sekcja FAQ
-1. **Które wersje JDK są zgodne z GroupDocs.Annotation dla Java?**  
-   Wersje 8 i nowsze działają bezproblemowo.
-2. **Czy mogę dokonać adnotacji na wielu stronach za jednym razem?**  
-   Tak, adnotacje można stosować w różnych sekcjach dokumentu.
-3. **Czy można w szerokim zakresie dostosowywać style adnotacji?**  
-   Oczywiście! Możesz modyfikować kolory, kształty i inne właściwości, aby dopasować je do swoich potrzeb.
-4. **Jak poradzić sobie z błędami występującymi podczas ładowania dokumentów chronionych hasłem?**  
-   Sprawdź, czy ścieżka do pliku jest prawidłowa i czy masz odpowiednie uprawnienia.
-5. **Jakie są najlepsze praktyki zarządzania pamięcią w przypadku GroupDocs.Annotation?**  
-   Zawsze zwalniaj zasoby za pomocą `dispose` po operacjach mających na celu zapobieganie wyciekom pamięci.
-## Zasoby
-Dalsze informacje i narzędzia:
-- [Dokumentacja GroupDocs](https://docs.groupdocs.com/annotation/java/)  
-- [Odniesienie do API](https://reference.groupdocs.com/annotation/java/)  
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+
+public class SecureDocumentLoader {
+    
+    public static Annotator loadPasswordProtectedDocument(String filePath, String password) {
+        try {
+            // Configure load options with password
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            
+            // Initialize annotator with security options
+            Annotator annotator = new Annotator(filePath, loadOptions);
+            
+            System.out.println("Document loaded successfully");
+            return annotator;
+            
+        } catch (Exception e) {
+            System.err.println("Failed to load document: " + e.getMessage());
+            throw new RuntimeException("Document loading failed", e);
+        }
+    }
+}
+```
+
+**Typowe problemy i rozwiązania**  
+- *Złe hasło*: zweryfikuj przed przetwarzaniem.  
+- *Plik nie znaleziony*: sprawdź istnienie i uprawnienia.  
+- *Nacisk na pamięć*: użyj try‑with‑resources (zobacz dalej).  
+
+### Dodawanie profesjonalnych adnotacji obszarowych
+
+```java
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+
+public class AnnotationProcessor {
+    
+    public static void addAreaAnnotation(Annotator annotator) {
+        try {
+            // Create area annotation with precise positioning
+            AreaAnnotation area = new AreaAnnotation();
+            
+            // Position and size (x, y, width, height in points)
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            
+            // Visual styling
+            area.setBackgroundColor(65535); // Light blue background
+            area.setOpacity(0.7); // Semi‑transparent
+            area.setBorderColor(255); // Red border
+            area.setBorderWidth(2); // Border thickness
+            
+            // Add descriptive message
+            area.setMessage("Important section for review");
+            
+            // Apply annotation
+            annotator.add(area);
+            
+            System.out.println("Area annotation added successfully");
+            
+        } catch (Exception e) {
+            System.err.println("Failed to add annotation: " + e.getMessage());
+        }
+    }
+}
+```
+
+**Wskazówki dotyczące pozycjonowania**  
+- Współrzędne zaczynają się od lewego górnego rogu (0,0).  
+- Pomiar w punktach (1 pt = 1/72 cala).  
+- Testuj na różnych rozmiarach stron, aby zapewnić spójne rozmieszczenie.
+
+### Bezpieczne zapisywanie dokumentu (gotowe do produkcji)
+
+```java
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class SecureDocumentSaver {
+    
+    public static void saveAnnotatedDocument(Annotator annotator, String outputPath) {
+        try {
+            // Validate output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Save with error handling
+            annotator.save(outputPath);
+            System.out.println("Document saved successfully to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Failed to save document: " + e.getMessage());
+            throw new RuntimeException("Document saving failed", e);
+        } finally {
+            // Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## Kompletny działający przykład (gotowy do kopiowania i wklejania)
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class CompleteAnnotationExample {
+    
+    public static void main(String[] args) {
+        String inputPath = "path/to/your/protected-document.pdf";
+        String outputPath = "path/to/output/annotated-document.pdf";
+        String password = "your-document-password";
+        
+        processPasswordProtectedDocument(inputPath, outputPath, password);
+    }
+    
+    public static void processPasswordProtectedDocument(String inputPath, String outputPath, String password) {
+        Annotator annotator = null;
+        
+        try {
+            // Step 1: Load password‑protected document
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            annotator = new Annotator(inputPath, loadOptions);
+            
+            // Step 2: Create and configure area annotation
+            AreaAnnotation area = new AreaAnnotation();
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            area.setBackgroundColor(65535); // Light blue
+            area.setOpacity(0.7);
+            area.setMessage("Reviewed and approved");
+            
+            // Step 3: Add annotation to document
+            annotator.add(area);
+            
+            // Step 4: Ensure output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Step 5: Save annotated document
+            annotator.save(outputPath);
+            System.out.println("Success! Annotated document saved to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Processing failed: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            // Step 6: Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## Przykłady zastosowań w rzeczywistym świecie (gdzie to naprawdę błyszczy)
+
+- **Legal Review Systems** – Podświetlaj klauzule, dodawaj komentarze i zachowuj ścieżkę audytu.  
+- **Medical Imaging** – Adnotuj zdjęcia rentgenowskie lub raporty, zachowując zgodność z HIPAA.  
+- **Financial Document Analysis** – Oznaczaj kluczowe sekcje w wnioskach kredytowych lub raportach audytowych.  
+- **Educational Content** – Nauczyciele i studenci dodają notatki do PDF‑ów bez zmiany oryginału.  
+- **Engineering Design Review** – Zespoły bezpiecznie adnotują plany i eksporty CAD.  
+
+## Wydajność i najlepsze praktyki (nie pomijaj tego)
+
+### Zarządzanie pamięcią (kluczowe w produkcji)
+
+```java
+// Good: Automatic resource management
+public void processDocumentSafely(String inputPath, String password) {
+    LoadOptions options = new LoadOptions();
+    options.setPassword(password);
+    
+    try (Annotator annotator = new Annotator(inputPath, options)) {
+        // Your annotation logic here
+        // Resources automatically cleaned up
+    } catch (Exception e) {
+        System.err.println("Processing error: " + e.getMessage());
+    }
+}
+```
+
+### Optymalizacja przetwarzania wsadowego
+
+```java
+public void processBatchDocuments(List<DocumentInfo> documents) {
+    for (DocumentInfo doc : documents) {
+        Annotator annotator = null;
+        try {
+            // Process individual document
+            annotator = loadDocument(doc);
+            addAnnotations(annotator, doc.getAnnotations());
+            saveDocument(annotator, doc.getOutputPath());
+        } catch (Exception e) {
+            System.err.println("Failed to process: " + doc.getFileName());
+        } finally {
+            // Cleanup after each document
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+### Asynchroniczne przetwarzanie dla aplikacji webowych
+
+```java
+import java.util.concurrent.CompletableFuture;
+
+public CompletableFuture<String> processDocumentAsync(String inputPath, String password) {
+    return CompletableFuture.supplyAsync(() -> {
+        try {
+            // Your document processing logic
+            return processPasswordProtectedDocument(inputPath, password);
+        } catch (Exception e) {
+            throw new RuntimeException("Async processing failed", e);
+        }
+    });
+}
+```
+
+## Zaawansowane kwestie bezpieczeństwa
+
+### Bezpieczne obsługiwanie plików (czyszczenie haseł z pamięci)
+
+```java
+public class SecureFileHandler {
+    
+    public static void processSecurely(String inputPath, String password) {
+        // Clear password from memory after use
+        char[] passwordChars = password.toCharArray();
+        
+        try {
+            LoadOptions options = new LoadOptions();
+            options.setPassword(new String(passwordChars));
+            
+            // Process document
+            // ... your logic here
+            
+        } finally {
+            // Clear password from memory
+            Arrays.fill(passwordChars, '\0');
+        }
+    }
+}
+```
+
+### Logowanie audytu (gotowe do zgodności)
+
+```java
+import java.util.logging.Logger;
+
+public class AuditLogger {
+    private static final Logger logger = Logger.getLogger(AuditLogger.class.getName());
+    
+    public static void logDocumentAccess(String userId, String documentPath, String action) {
+        logger.info(String.format("User: %s, Action: %s, Document: %s, Timestamp: %s", 
+                   userId, action, documentPath, new Date()));
+    }
+}
+```
+
+## Przewodnik rozwiązywania problemów (gdy coś idzie nie tak)
+
+| Problem | Typowa przyczyna | Szybka naprawa |
+|-------|---------------|-----------|
+| **Nieprawidłowe hasło** | Złe hasło lub nieprawidłowe kodowanie | Usuń białe znaki, zapewnij kodowanie UTF‑8 |
+| **Plik nie znaleziony** | Nieprawidłowa ścieżka lub brak uprawnień | Użyj ścieżek bezwzględnych, sprawdź prawa odczytu |
+| **Wycieki pamięci** | Nie wywołano `dispose()` | Zawsze wywołuj `annotator.dispose()` w bloku `finally` |
+| **Nieprawidłowe położenie adnotacji** | Mieszanie punktów i pikseli | Pamiętaj, że 1 pt = 1/72 cala; testuj na przykładowych stronach |
+| **Wolne ładowanie** | Duże pliki lub złożone PDF‑y | Wstępne przetwarzanie, zwiększ pamięć JVM, użyj API strumieniowych |
+
+## Najczęściej zadawane pytania
+
+**Q:** *Czy mogę adnotować PDF‑y używające szyfrowania AES‑256?*  
+**A:** Tak. GroupDocs.Annotation obsługuje standardowe szyfrowanie PDF, w tym AES‑256, pod warunkiem podania prawidłowego hasła.
+
+**Q:** *Czy potrzebuję komercyjnej licencji do produkcji?*  
+**A:** Zdecydowanie tak. Wersja próbna dodaje znaki wodne i ogranicza przetwarzanie. Licencja komercyjna usuwa te limity.
+
+**Q:** *Czy bezpieczne jest przechowywanie haseł w postaci czystego tekstu?*  
+**A:** Nigdy. Używaj bezpiecznych skarbców lub zmiennych środowiskowych i wyczyść tablice znaków z hasłami po użyciu (zobacz przykład Bezpiecznego obsługiwania plików).
+
+**Q:** *Ile dokumentów mogę przetwarzać jednocześnie?*  
+**A:** To zależy od zasobów serwera. Typowy wzorzec to ograniczenie współbieżności do liczby rdzeni CPU i monitorowanie użycia pamięci heap.
+
+**Q:** *Czy mogę zintegrować to z systemem zarządzania dokumentami, takim jak SharePoint?*  
+**A:** Tak. Możesz strumieniować pliki z SharePoint do Annotatora i zapisać wynik z powrotem, zachowując ten sam model bezpieczeństwa.
+
+## Dodatkowe zasoby
+
+- [Dokumentacja GroupDocs.Annotation dla Java](https://docs.groupdocs.com/annotation/java/)  
+- [Pełny przewodnik referencyjny API](https://reference.groupdocs.com/annotation/java/)  
 - [Pobierz najnowszą wersję](https://releases.groupdocs.com/annotation/java/)  
-- [Kup produkty GroupDocs](https://purchase.groupdocs.com/buy)  
-- [Bezpłatna wersja próbna do pobrania](https://releases.groupdocs.com/annotation/java/)  
-- [Wniosek o licencję tymczasową](https://purchase.groupdocs.com/temporary-license/)  
-- [Forum wsparcia GroupDocs](https://forum.groupdocs.com/c/annotation/)
+- [Kup licencję komercyjną](https://purchase.groupdocs.com/buy)  
+- [Uzyskaj wersję próbną](https://releases.groupdocs.com/annotation/java/)  
+- [Poproś o tymczasową licencję](https://purchase.groupdocs.com/temporary-license/)  
+- [Forum wsparcia społeczności](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Last Updated:** 2026-01-23  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
