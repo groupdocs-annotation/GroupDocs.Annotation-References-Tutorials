@@ -1,39 +1,82 @@
 ---
-"date": "2025-05-06"
-"description": "GroupDocs.Annotation for Java를 사용하여 PDF 문서에 구불구불한 주석을 추가하는 방법을 알아보고, 문서 검토 및 협업을 개선해 보세요."
-"title": "Java용 GroupDocs.Annotation을 사용하여 PDF에 구불구불한 주석을 추가하는 방법"
-"url": "/ko/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+categories:
+- Java Development
+date: '2026-01-31'
+description: GroupDocs.Annotation을 사용하여 Java에서 주석 회신을 만드는 방법을 배우세요. 실용적인 예제와 모범 사례를
+  통해 Java에서 PDF 주석을 마스터하세요.
+keywords: Java PDF annotation library, PDF annotation Java tutorial, GroupDocs annotation
+  examples, Java document markup tools, how to annotate PDF files in Java, create
+  annotation replies java
+lastmod: '2026-01-31'
+linktitle: Java PDF Annotation Tutorial
+tags:
+- pdf-annotations
+- java-libraries
+- document-processing
+- groupdocs
+title: 'Java PDF 주석 라이브러리: 주석 답글 만들기 (Java)'
 type: docs
-"weight": 1
+url: /ko/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/
+weight: 1
 ---
 
-# Java용 GroupDocs.Annotation을 사용하여 PDF에 구불구불한 주석을 추가하는 방법
-## 소개
+# Java PDF 주석 라이브러리: create annotation replies java
 
-오늘날의 디지털 시대에 문서에 주석을 추가하는 것은 콘텐츠를 효율적으로 관리하고 검토하는 데 매우 중요합니다. 초안을 교정하거나 법률 문서의 중요 부분을 강조할 때 주석은 파일에 직접 생각을 전달하는 데 도움이 됩니다. 이 튜토리얼에서는 GroupDocs.Annotation for Java를 사용하여 오류나 변경 사항을 나타내는 일반적인 주석 유형인 구불구불한 선을 추가하는 방법을 안내합니다.
+프로그래밍으로 PDF 문서에 유용한 물결선, 하이라이트, 그리고 댓글을 추가하고 **and create annotation replies java** 하는 방법이 궁금하셨나요? 문서 관리 시스템, 검토 플랫폼, 혹은 교육 있다면 강력한 Java PDF 주석 라이브으로 검토하는 것은 비효율적입니다, 특히 수백 개의 파일을 다룰 때는 더욱 그렇죠. 바로 여기서 GroupDocs.Annotation for Java가 등장합니다. 문서 주석을 위한 스위스 군용 나이프와 같아, 간단한 하이라이트부터 복잡한 인터랙티브 요소까지 모든 것을 추가할 수 있습니다.
 
-**배울 내용:**
-- Java용 GroupDocs.Annotation 설치 및 설정
-- PDF 문서에 구불구불한 주석 만들기
-- 주석의 모양과 속성 구성
-- 주석이 달린 문서를 쉽게 저장
+**이 가이드에서 마스터하게 될 내용:**
+- Java 프로젝트에 GroupDocs.Annotation 설정하기 (생각보다 쉽습니다)
+- 오류 표시를 위한 전문가 수준의 물결선 주석 만들기
+- 색상, 불투명도, 위치를 전문가처럼 구성하기
+- 대부분의 개발자를 곤란하게 하는 일반적인 함정 처리하기
+- 대규모 문서 처리 성 플랫폼이든, 이 튜토리얼을 통해 숙련된 개발자처럼 빠르게 PDF에 주석을 달 수 있습니다.
 
-이러한 주석을 원활하게 추가하여 문서 검토 프로세스를 개선해 보세요.
+## 빠른 답변
+- **GroupDocs.Annotation의 주요 목적은 무엇인가요?** Java에서 PDF 주석을 프로그래밍 방식석은 어떻게 추가하나요?** `SquigglyAnnotation`을 사용하고, 속성을 설정한 뒤 `annotator.add(...)`를 호출합니다.
+- **주석에 답글을 첨부할 수 있나요?** 네—`Reply` 객체를 생성하고 주석에 연결하면 됩니다.
+- **프로덕션에 라이선스가 필요하나요?** 반드시 필요합니다; 그렇지 않으면 출력에 워터마크가 표시됩니다.
+- **배치 처리에 적합한가요?** 네—`try‑with‑resources`를 사용해 문서를을 낮.
 
-## 필수 조건
+## 왜 Java 개발자에게 PDF 주석 라이브러리가 필요한가
 
-시작하기 전에 다음 사항을 확인하세요.
-- **자바 개발 키트(JDK)**: JDK 8 이상을 권장합니다.
-- **메이븐**: 종속성을 관리하고 프로젝트를 쉽게 빌드합니다.
-- Java 프로그래밍 개념에 대한 기본적인 이해.
+프로그래밍으로 PDF 문서에 유용한 물결선, 하이라이트, 그리고 댓글을 추가하는 방법이 궁금하셨나요? 문서 관리 시스템, 검토 플랫폼, 혹은 교육 도구를 구축하고 있다면 강력한 Java PDF 주석 라이브러리가 필요합니다.
 
-Java용 GroupDocs.Annotation을 사용하겠습니다. 개발 환경이 다음 요구 사항을 충족하는지 확인하세요.
+문서를 수동으로 검토하는 것은 비효율적입니다, 특히 수백 개의 파일을 다룰 때는 더욱 그렇죠. 바로 여기서 GroupDocs.Annotation for Java가 등장합니다. 문서 주석을 위한 스위스 군용 나이프와 같아까지 모든 것을 추가할 수 있습니다.
 
-## Java용 GroupDocs.Annotation 설정
+**이 가이드에서 마스터하게 될 내용:**
+- Java 프로젝트에 GroupDocs.Annotation 설정하기 (생각보다 쉽습니다)
+- 오류 표시를 위한 전문가 수준의 물결선 주석 만들기
+- 색상, 불투명도, 위치를 전문가처럼 구성하기
+- 대부분의 개발자를 곤란하게 하는 일반적인 함정 처리하기
+- 대규모 문서 처리 성능 최적화
 
-Maven을 사용하여 프로젝트에 GroupDocs.Annotation을 포함합니다.
+## create annotation replies java란 무엇인가요?
 
-### Maven 종속성
+`create annotation replies java`는 Java를 사용해 PDF 문서의 기존 주석에 스레드형 댓글(답글으로 추가하는 과정을 의미합니다. 이러한 답글은 주석이 달린 영역에서 직접 협업 토론을 가능하게 하여 문서 검토를 보다 효율적으로 만듭니다.
+
+## 사전 요구 사항: 환경 준비하기
+
+지 확인합시다. 여기서 몇 분만 더 투자하면 나중에 디버깅에 소요되는 시간을 크게 절약할 수 있습니다.
+
+**Essential Requirements:**
+- **Java Development Kit (JDK)**: 버전 8 이상 (성능 향상을 위해 JDK 11 이상 권장)
+- **Maven 또는 Gradle**: 의존성 관리를 위해 (예제에서는 Maven 사용)
+- **기본 Java 지식**: 객체, 메서드, 그리고 `try‑with‑resources` 이해
+
+**Recommended Setup:**
+- Maven 통합이 잘 된 IDE (IntelliJ IDEA 등)
+- IDE와 테스트- 테스트용 샘플 PDF 파일 (테스트 문서 생성 방법을 보여드림)
+
+GroupDocs.Annotation의 장점은 외부 PDF 리더나 복잡한 설치가 필요 없으며, 모든 것이 Java 애플리케이션 내에서 실행된다는 점입니다.
+
+## GroupDocs.Annotation for Java 설정하기
+
+프로젝트에 GroupDocs.Annotation을 통합하는 것은 간단하지만, 몇 가지 주의할 점이 있습니다.
+
+### Maven 의존성 설정
+
+`pom.xml`에 다음을 추가하세요—리포지토리 설정을 dependencies 섹션 앞에 배치해야 합니다:
+
 ```xml
 <repositories>
    <repository>
@@ -52,28 +95,38 @@ Maven을 사용하여 프로젝트에 GroupDocs.Annotation을 포함합니다.
 </dependencies>
 ```
 
-### 라이센스 취득
-GroupDocs.Annotation을 최대한 활용하려면:
-- **무료 체험**: 제한 없는 기능을 탐색하세요.
-- **임시 면허**평가 기간 동안 제한 없는 사용을 요청합니다.
-- **구입**: 체험판에 만족하고 생산에 들어갈 준비가 되었다면 정식 라이선스를 구매하세요.
+**Docs 릴리스 페이지에서 최신 버전을 확인하세요. 오래된 버전을 사용하면 최신 PDF 형식과 호환성 문제가 발생할 수 있습니다.
 
-설정이 완료되면 GroupDocs.Annotation을 초기화합니다.
+### 라이선스 설정 (절대 생략하지 마세요!)
+
+많은 개발자가 여기서 막히곤 합니다. GroupDocs.Annotation은 프로덕션 사용을 위해 적절한 라이선스가 필요합니다:
+
+- **Free Trial**: 평가에 적합—30일 동안 전체 기능 제공
+- **Temporary License**: 개발 및 테스트 단계에 이상적
+- **Full License**: 프로덕션 배포에 필요
+
 ```java
 import com.groupdocs.annotation.Annotator;
-// Annotator 객체를 초기화합니다.
+
+// Initialize your annotator - this is your entry point to all annotation features
 try (Annotator annotator = new Annotator("path/to/your/document.pdf")) {
-    // 주석 논리는 여기에 표시됩니다.
+    // All your annotation magic happens here
+    System.out.println("Annotator initialized successfully!");
 }
 ```
 
-## 구현 가이드
+**자주 발생하는 실수**: 라이선스를 올바르게 설정하지 않으면 워터마크가 있는 출력이 생성됩니다. 배포 전에 반드시 실제 라이선스로 테스트하세요.
 
-### 구불구불한 주석 만들기
-구불구불한 주석은 오류를 강조하거나 변경 사항을 제안합니다. 다음 단계를 따르세요.
+## 완전 구현 가이드: 물결선 주석 추가하기
 
-#### 1단계: 필요한 클래스 가져오기
-주석에 필요한 클래스를 가져옵니다.
+이제 핵심 내용입니다—프로덕션에서도 실제로 사용할 수 있는 견고한 물결선 주석 시스템을 구축해 보겠습니다. 물결선 주석은 오류 표시, 수정 제안, 혹은 주의가 필요한 영역 강조에 최적입니다.
+
+### How to create annotation replies java
+
+아래에서는 각 단계를 차례대로 살펴보며, 물결선 주석을 만들면서 **create annotation replies java
+
+이 import 문들을 단순히 복사‑붙여넣기 하지 마세요—각각이 하는 역할을 이해하면 나중에 문제 해결에 도움이 됩니다:
+
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Point;
@@ -84,39 +137,56 @@ import java.util.Date;
 import java.util.List;
 ```
 
-#### 2단계: Squiggly 주석 초기화
-생성 및 구성 `SquigglyAnnotation` 사례:
+**What each import does:**
+- `Annotator`: 문서 조작을 위한 주요 인터페이스
+- `Point`: 문서상의 좌표 정의
+- `Reply`: 주석에 스레드형 대화 활성화
+- `SquigglyAnnotation`: 우리가 만들고자 하는 특정 주석 유형
+
+### 단계 2: 물결선 주석 생성 및 구성
+
+실제 커스터마이징이 이루어지는 부분입니다. 이 코드는 전문가 수준의 물결선 주석을 생성합니다:
+
 ```java
-// 새로운 SquigglyAnnotation 인스턴스를 만듭니다.
+// Create a new SquigglyAnnotation instance
 SquigglyAnnotation squigglyAnnotation = new SquigglyAnnotation();
 
-// 주석 생성 날짜를 설정합니다.
+// Set the creation date of the annotation
 squigglyAnnotation.setCreatedOn(new Date());
 
-// RGB 값을 사용하여 글꼴 및 배경색 정의
-tsquigglyAnnotation.setFontColor(65535); // ARGB 형식의 노란색
-tsquigglyAnnotation.setBackgroundColor(16761035); // ARGB 포맷의 밝은 파란색
+// Define font and background colors using RGB values
+squigglyAnnotation.setFontColor(65535); // Yellow color in ARGB format
+squigglyAnnotation.setBackgroundColor(16761035); // Light blue color in ARGB format
 
-// squigglyAnnotation.setMessage("This is squiggly annotation")을 사용하여 표시할 메시지를 설정합니다.
+// Set a message to display with the annotation
+squigglyAnnotation.setMessage("This is squiggly annotation");
 
-// 불투명도(범위 0.0~1.0)를 정의합니다. squigglyAnnotation.setOpacity(0.7);
+// Define opacity (range 0.0 - 1.0)
+squigglyAnnotation.setOpacity(0.7);
 
-// 주석에 대한 페이지 번호를 지정합니다(0부터 시작하는 인덱스) squigglyAnnotation.setPageNumber(0);
+// Specify the page number for the annotation (zero-based index)
+squigglyAnnotation.setPageNumber(0);
 
-// Word 및 PDF 문서에 특정한 구불구불한 선 색상 설정 squigglyAnnotation.setSquigglyColor(1422623); // 구불구불한 선의 색상 코드
+// Set squiggly line color specific to Word and PDF documents
+squigglyAnnotation.setSquigglyColor(1422623); // Color code for squiggly lines
 
-// 페이지에서 주석의 시작과 끝을 표시하는 지점을 정의합니다.
+// Define points marking the start and end of the annotation on the page
 List<Point> points = new ArrayList<>();
 points.add(new Point(80, 730));
 points.add(new Point(240, 730));
 points.add(new Point(80, 650));
-points.add(new Point(240, 650));	squigglyAnnotation.setPoints(points);
+points.add(new Point(240, 650));
+squigglyAnnotation.setPoints(points);
 ```
 
-#### 3단계: 주석에 답변 추가
-선택적으로 답변을 추가하세요.
+**좌표 시스템 이해**: 포인트는 페이지의 왼쪽 위 모서리에서 측정됩니다. 처음 두 포인트는 주석 영역의 시작과 끝을 정의하고, 추가 포인트를 사용하면 더 복잡한 형태를 만들 수 있습니다.
+
+### 단계  (선택 사항이지만 강력함)
+
+이 단계에서 주석이 진정으로 협업 가능해집니다—문서 검토 워크플로에 최적입니다:
+
 ```java
-// 주석에 대한 답변 작성(선택 사항)
+// Create replies to the annotation (optional)
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
 reply1.setRepliedOn(new Date());
@@ -129,54 +199,216 @@ List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 
-// 응답을 주석 squigglyAnnotation.setReplies(응답)과 연결합니다.
+// Associate replies with the annotation
+squigglyAnnotation.setReplies(replies);
 ```
 
-#### 4단계: 문서에 주석 추가
-구불구불한 주석을 추가하고 저장합니다.
+**실제 사용 사례**: 법률 문서 검토 시, 여러 변호사가 동일한 주석에 답글을 달아 문서 내에서 스레드형 토론을 만들 수 있습니다.
+
+### 단계 4: 주석 적용 및 문서 저장:
+
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-    // 준비된 구불구불한 주석을 문서에 추가합니다. nannotator.add(squigglyAnnotation);
+    // Add the prepared squiggly annotation to the document
+    annotator.add(squigglyAnnotation);
     
-    // 주석이 달린 문서를 저장합니다. nannotator.save("YOUR_OUTPUT_DIRECTORY/result_squiggly_annotation.pdf");
+    // Save the annotated document
+    annotator.save("YOUR_OUTPUT_DIRECTORY/result_squiggly_annotation.pdf");
 }
 ```
 
-## 실제 응용 프로그램
-구불구불한 주석은 다음과 같은 경우에 유용합니다.
-- **교정**: 오타나 문법 오류를 강조합니다.
-- **법률 검토**계약서에서 검토할 섹션을 표시합니다.
-- **교육 도구**: 과제에서 틀린 답을 표시합니다.
+**메모리 관리 주의**: `try‑with‑resources` 구문은 자동으로 정리를 수행해 장기 실행 애플리케이션에서 메모리 누수를 방지합니다.
 
-GroupDocs.Annotation을 통합하면 문서에 대한 직접적인 커뮤니케이션이 가능해져 협업이 강화되고 작업 흐름이 간소화됩니다.
+## 고급 구성 스타일에 머무를 필요가 없습니다. 브랜드나 애플리케이션 테마에 맞는 주석을 만드는 방법은 다음과 같습니다:
 
-## 성능 고려 사항
-주석을 작업할 때 다음 사항을 고려하세요.
-- **파일 크기 최적화**: 주석을 달기 전에 PDF를 압축합니다.
-- **메모리 관리**: 효율적인 메모리 처리를 위해 try-with-resources를 사용하세요.
-- **일괄 처리**: 여러 문서를 일괄 처리하여 성능을 최적화합니다.
+```java
+// Custom color configurations
+squigglyAnnotation.setFontColor(0xFF0000); // Red text
+squigglyAnnotation.setBackgroundColor(0x00FF00); // Green background
+squigglyAnnotation.setSquigglyColor(0x0000FF); // Blue squiggly line
+
+// Transparency effects
+squigglyAnnotation.setOpacity(0.3); // Very subtle
+// or
+squigglyAnnotation.setOpacity(0.9); // Almost opaque
+```
+
+### 주석 정확히 배치하기
+
+좌표를 정확히 맞추는 것은 까다로울 수 있습니다. 체계적인 접근 방법은 다음과 같습니다:
+
+1. **대략적인 추정부터 시작**: PDF 뷰어를 사용해 대략적인 좌표 파악
+2. **점진적으로 테스트**: 작은 조정을 하고 테스트
+3. **다양한 페이지 크기 고려**: A4, Letter, 맞춤 크기는 좌표 시스템이 다릅니다
+
+## 일반적인 문제와 해결책
+
+### 문제: 주석이 표시되지 않음
+
+**Most likely causes:**
+- 좌표가 잘못됨 (페이지 경계 밖)
+- 라이선스 설정 누락
+- 잘못된 페이지 번호 지정
+
+**Solution checklist:**
+```java
+// Verify your points are within page boundaries
+System.out.println("Page dimensions: " + annotator.getPageInfo(0));
+
+// Check if your points make sense
+List<Point> points = squigglyAnnotation.getPoints();
+for (Point point : points) {
+    System.out.println("Point: (" + point.getX() + ", " + point.getY() + ")");
+}
+```
+
+### 문제: 대용량 파일에서 성능 저하
+
+**현상**: 대용량 PDF를 메모리에드하는 대신 페이지별로 처리
+- 가능한 경우 스트리밍 사용
+- 자주 접근하는 작동하지 않음
+
+**문제**: RGB와 ARGB 색상 포맷 혼동.
+
+**해결책**: GroupDocs는 ARGB 포맷(Alpha, Red, Green, Blue)을 사용합니다:
+
+```java
+// Wrong: RGB format
+int wrongColor = 0xFF0000; // This might not work as expected
+
+// Right: ARGB format
+int rightColor = 0xFFFF0000; // Full opacity red
+```
+
+## 성능 최적화 모범 사례
+
+러 문서를 처리할 때 메모리 사용량이 급격히 증가할 수 있습니다:
+
+```java
+// Good practice: Use try-with-resources
+try (Annotator annotator = new Annotator(inputPath)) {
+    // Process annotations
+    annotator.add(annotation);
+    annotator.save(outputPath);
+} // Automatic cleanup happens here
+
+// Avoid: Manual resource management
+Annotator annotator = new Annotator(inputPath); // Resources might leak
+```
+
+### 배치 처리 최적화
+
+수백 개의 문서에 주석을 달고 있다면 다음 접근 방식을 고려하세요:
+
+```java
+public void processBatch(List<String> documentPaths) {
+    for (String path : documentPaths) {
+        try (Annotator annotator = new Annotator(path)) {
+            // Process each document independently
+            addAnnotations(annotator);
+            annotator.save(getOutputPath(path));
+        } catch (Exception e) {
+            // Handle individual document failures without stopping the batch
+            System.err.println("Failed to process: " + path + " - " + e.getMessage());
+        }
+    }
+}
+```
+
+### 파일 크 줄 수 있습니다. 다음 전략을 참고하세요:
+
+- **PDF 사전 압축**: 주석 달기 전에 PDF 최적화 도구 사용
+- **선택적 페이지 처리**: 필요한 페이지만 로드하고 주석 달기
+- ** 문서 검토 시스템
+
+물결선 주석은 협업 환경에서 빛을 발합니다:
+
+- **법률 사무소**: 계약 조항 검토 표시
+- **출판**: 편집 변경 표시 오류 강조
+
+### 기존 시스템과 통합
+
+Group 통합
+- **JSF 애플리케이션**: 컴포넌트 기반 UI와 원활히 동작
+- **마이크로서비스**: 컨테이너 배포에 충분히 가벼움
+
+### 워크플로 자동화
+
+복잡한 주석 워크플로를 구축할 수 있습니다:
+
+```java
+public class DocumentWorkflow {
+    public void reviewDocument(String documentPath, ReviewLevel level) {
+        try (Annotator annotator = new Annotator(documentPath)) {
+            switch (level) {
+                case GRAMMAR_CHECK:
+                    addGrammarAnnotations(annotator);
+                    break;
+                case LEGAL_REVIEW:
+                    addLegalAnnotations(annotator);
+                    break;
+                case FINAL_PROOF:
+                    addProofreadingAnnotations(annotator);
+                    break;
+            }
+            annotator.save(getReviewedPath(documentPath));
+        }
+    }
+}
+```
+
+## 물결선 주석을 언제 사용하고 대안은 언제 사용할까
+
+**물결선 주석을 언제 사용하고:**
+- 오류 또는 교정 표시 (맞춤법 검사와 유사)
+- 불확실하거나 의심스러운 내용 표시
+- 워드 프로세서와 같은 물결선 밑줄 효과 만들기
+
+**대안은 언제 사용할지:**
+- **하이라이트**: 오류 의미 없이 강조하려면 하이라이트 주석 사용
+- **댓글**: 상세 피드백을 위해 텍스트 주석 사용
+- **스탬프**: 승인 워크플로에 스탬프 주석 사용
 
 ## 결론
-GroupDocs.Annotation for Java를 사용하여 PDF 문서에 구불구불한 주석을 추가하는 방법을 알아보았습니다. 이 기능은 오류를 강조 표시하고 문서에서 직접 변경 사항을 제안하는 데 매우 유용합니다. GroupDocs.Annotation의 기능을 더 자세히 살펴보면서 문서 관리 프로세스를 개선하기 위해 추가 주석 유형을 통합하는 것을 고려해 보세요.
 
-**다음 단계:**
-- GroupDocs에서 제공하는 다른 주석 유형을 실험해 보세요.
-- 기존 시스템과의 통합 가능성을 탐색합니다.
+이제 Java를 사용해 전문적인 PDF 주석을 추가하는 기술을 마스터했습니다. GroupDocs.Annotation for Java는 복잡한 문서 조작 작업을 간단한 코드 구현으로 변환합니다.
 
-여러분의 프로젝트에 이러한 솔루션을 구현하고 그 효과를 직접 확인해 보시기 바랍니다!
+**Key takeaways from this guide:**
+- GroupDocs.Annotation을 올바르게 설정하면 대부분의 일반적인 문제를 예방할 수 있습니다
+- 좌표 시스템을 이해하는 것이 정확한 주석 배치에 필수적입니다
+- 대용량 문서나 배치를 처리할 때 메모리 관리가 중요해집니다
+- 커스터마이징 옵션을 통해 애플리케이션 요구에 완벽히 맞는 주석을 만들 수 있습니다
 
-## FAQ 섹션
-1. **GroupDocs.Annotation이란 무엇인가요?**
-   - 다양한 언어(Java 포함)를 지원하며, 개발자가 프로그래밍 방식으로 문서에 주석을 추가할 수 있는 강력한 라이브러리입니다.
-2. **PDF 외에 다른 문서 유형에도 주석을 달 수 있나요?**
-   - 네, Word, Excel, 이미지 등 다양한 형식을 지원합니다.
-3. **대용량 PDF 파일을 효율적으로 처리하려면 어떻게 해야 하나요?**
-   - 처리하기 전에 파일 크기를 최적화하고 효율적인 처리를 위해 메모리 관리 기술을 사용합니다.
-4. **주석 색상을 추가로 사용자 정의할 수 있나요?**
-   - 물론입니다! 글꼴과 배경색에 사용자 지정 RGB 값을 지정하여 더욱 폭넓은 사용자 정의가 가능합니다.
-5. **예상대로 주석이 나타나지 않으면 어떻게 해야 하나요?**
-   - 각 지점의 좌표를 확인하고 의도한 영역을 정확하게 정의하는지 확인하세요. 프로젝트 설정에 필요한 모든 종속성이 포함되어 있는지 확인하세요.
+**Your next steps:**
+1. 다른 주석 유형(하이라이트, 텍스트, 스탬프) 실험
+2. 간단한 주석 관리 시스템 구축
+3. 주석 추출 및 수정 등 고급 기능을 위해 GroupDocs.Annotation API 탐색
 
-## 자원
-- [GroupDocs.Annotation 문서](https://docs.groupdocs.com/annotation/java/)
-- [API 참조](https://reference.groupdocs.com/annotation/java/)
+프로그래밍 방식 PDF 주석 수동으로 해야 했던 문서 워크플로를 자동화할 수 있다는 점입니다. 다음 세대 문서 협업 플랫폼을 구축하든 기존 애플리케이션에 마크업 기능을 추가하든, 이제 이를 구현할 도구와 지식을 갖추었습니다.
+
+## 자주 묻는 질문
+
+**Q: GroupDocs.Annotation이 다른 Java PDF 라이브러리보다 뛰어난 점은 무엇인가요?**  
+A: GroupDocs.Annotation은 주석에 특화되어 있으면서 여러 문서 형식과 호환성을 유지합니다. 주석 워크플로를 위해 설계되어 스레드형 답글 및 광범위한 커스터마이징 옵션과 같은 기능을 제공하며, 일반 PDF 라이브러리에서는 흔히 부족한 부분입니다.
+
+**Q: 이 라이브러리를 Spring Boot 애플리**  
+A: 물론입니다! GroupDocs.Annotation은 Spring Boot와 원활히 통합됩니다. 문서 업로드를 받아 주석이 달린 PDF를 반환하는 REST 엔드포인트를 만들 수 있습니다. 파일 업로드를 올바르게 처리하고 대용량 문서에 대해 비동기 처리를 구현하는 것을 고려하세요.
+
+**Q: 페이지 크기가 다른 문서를 어떻게 처리하나요?**  
+A: 항상 `annotator.getPageInfo(pageIndex)`를 사용해 페이지 크기를 먼저 조회하세요. 이 메서드는 페이지 너비, 높이 및 기타 메타데이터를 반환합니다. 좌표 사용해 상대적인 위치를 계산하세요.
+
+**Q: 기존 PDF에서 주석을 추출할 방법이 있나요?**  
+A: 있습니다! GroupDocs.Annotation은 이미 주석이 포함된 PDF에서 주석을 추출할 수 있습니다. `annotator.get()`을 사용해 모든 주석을 가져온 뒤, 반복하면서 속성과 내용을 확인하세요.
+
+**Q: 다중 사용자 시스템선의 방법은 무엇인가요?**  
+A: GroupDocs 메서드를 호출하기 전에 수준에서 사용자 인증을 구현하세요. 주석 답글에 사용자 정보를 저장하고, 누가 수정하거나 삭제할 수 있는지 제어하는 맞춤 로직을 구현할 수 있습니다.
+
+**Q: 수백 개의 PDF를 처리할 때 메모리 사용량을 최적화하려면 어떻게 해야 하나요?**  
+A: `try‑with‑resources` 블록을 사용해 문서를 하나씩 처리하고, 문서 큐잉을 구현하며, CPU 집약적인 작업에는 Java의 병렬 스트림을 고려하세요. 또한 힙 사용량을 모니터링하고 일반적인 문서 크:** 2026-01-31  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  
+
+**추가 리소스**
+
+- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- [Complete API Reference](https://reference.groupdocs.com/annotation/java/)

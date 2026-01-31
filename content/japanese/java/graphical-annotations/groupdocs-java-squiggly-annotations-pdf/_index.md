@@ -1,39 +1,88 @@
 ---
-"date": "2025-05-06"
-"description": "GroupDocs.Annotation for Java を使用して PDF ドキュメントに波線注釈を追加し、ドキュメントのレビューとコラボレーションを強化する方法を学習します。"
-"title": "GroupDocs.Annotation for Java を使用して PDF に曲線注釈を追加する方法"
-"url": "/ja/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/"
+categories:
+- Java Development
+date: '2026-01-31'
+description: GroupDocs.Annotation を使用して Java で注釈の返信を作成する方法を学びましょう。実践的な例とベストプラクティスで、Java
+  における PDF 注釈をマスターしてください。
+keywords: Java PDF annotation library, PDF annotation Java tutorial, GroupDocs annotation
+  examples, Java document markup tools, how to annotate PDF files in Java, create
+  annotation replies java
+lastmod: '2026-01-31'
+linktitle: Java PDF Annotation Tutorial
+tags:
+- pdf-annotations
+- java-libraries
+- document-processing
+- groupdocs
+title: Java PDF アノテーションライブラリ：アノテーション返信の作成 (Java)
 type: docs
-"weight": 1
+url: /ja/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/
+weight: 1
 ---
 
-# GroupDocs.Annotation for Java を使用して PDF に曲線注釈を追加する方法
-## 導入
+# Java PDF アノテーションライブラリ: create annotation replies java
 
-今日のデジタル時代において、ドキュメントへの注釈付けは、コンテンツを効率的に管理・レビューするために不可欠です。草稿の校正や法務文書の重要な箇所の強調表示など、注釈はファイル上で直接考えを伝えるのに役立ちます。このチュートリアルでは、GroupDocs.Annotation for Javaを使用して、エラーや変更を示す一般的な注釈である波線を追加する方法を説明します。
+PDF ドキュメントに役立つ波線、ハイライト、コメントをプログラムで追加し、**and create annotationがありますか？ドキュメント管理システム、レビュー プラットフォーム、教育ツールを構築している場合、堅牢な Java PDF アノテーションライブラリが必要です。
 
-**学習内容:**
-- GroupDocs.Annotation for Javaのインストールと設定
-- PDF文書に波線注釈を作成する
-- 注釈の外観とプロパティの設定
-- 注釈付き文書を簡単に保存
+実は、手動でドキュメントをレビューするのは非効率的です。特に数百ファイルを扱う場合はなおさらです。そこで登場するのが **GroupDocs.Annotation for Java** です。これは、シンプルなハイライトから複雑なインタラクティブ要素まで、あらゆるドキュメントアノテな存在です。
 
-これらの注釈をシームレスに追加して、ドキュメントのレビュー プロセスを強化しましょう。
+**このガイドで習得できること:**
+- Java プロジェクトに GroupDocs.Annotation を設定する方法（思ったより簡単です）
+- エラー表示用のプロフェッショナルな波線アノテ、位置をプロのように設定
+- 多くの開発者が陥りがちな一般的な落とし穴の対処法
+- 大規模ドキュメント処理のパフォーマンス最適化
 
-## 前提条件
+法務文書レビューシ、このチュートリアルを通じてすぐに熟練開発者のように PDF にアノテーションを付けられるようになります。
 
-始める前に、次のものを用意してください。
-- **Java開発キット（JDK）**: JDK 8 以上を推奨します。
-- **メイヴン**依存関係を管理し、プロジェクトを簡単にビルドします。
-- Java プログラミング概念の基本的な理解。
+## Quick Answers
+- **GroupDocs.Annotation の主な目的は何ですか？**ノテことです。  
+- **波線アノテーションはどうやって追加しますか？** `SquigglyAnnotation` を使用し、プロパティを設定して `annotator.add(...)` を呼び出します。  
+- **アノテーションに返信を添付できますか？** はい。`Reply` オブジェクトを作成し、アノテーションに関連付けます。  
+- **本番環境でライセンスは必要ですか？** 必要です。ライセンスがないと出力に透かしが入ります。  
+- **バッチ処理に適していますか？** はい。`try‑with‑resources` を使ってドキュメントを 1 件ずつ処理すればメモリ使用量を抑えられます。
 
-JavaではGroupDocs.Annotationを使用します。開発環境がこれらの要件を満たしていることを確認してください。
+## Why Java Developers Need PDF Annotation Libraries
 
-## Java 用の GroupDocs.Annotation の設定
+PDF ドキュメントに役立つ波線、ハイライト、コメントをプログラムで追加する方法を考えたことがありますか？ドキュメント管理システム、レビュー プラットフォーム、教育ツールを構築している場合、堅牢な Java PDF アノテーションライブラリが必要です。
 
-Maven を使用して、GroupDocs.Annotation をプロジェクトに含めます。
+実は、手動でドキュメントをレビューするのは非効率的です。特に数百ファイルを扱う場合はなおさらです。そこで登場するのが **GroupDocs.Annotation for Java** です。これは、シンプルなハイライトから複雑なインタラクティブ要素まで、あらゆるドキュメントアノテーションを追加できるスイスアーミーナイフのような存在です。
 
-### Maven依存関係
+**このガイドで習得できること:**
+- Java プロジェクトに GroupDocs思ったより簡単です）
+- エラー表示用のプロ作成
+- 色、透明度、位置をプロのように設定
+- 多くの開発者が陥りがちな一般的な落とし穴の対処ーマンス最適化
+
+法務文書レビューシステムや教育プラットフォームを構築する場合でも、このチュートリアルを通じてすぐに熟練開発者のように PDF にアノテーションを付けられるようになります。
+
+## What is create annotation replies java?
+
+`create annotation replies java` は、Java を使用して PDF ドキュメント内の既存アノテーションにスレッド化されたコメント（返信）をプログラム的に追加するプロセスを指します。これらの返信により、アノテーションされた領域上で共同ディスカッションが可能になり、文書レビューがより効率的になります。
+
+## Prerequisites: Getting Your Environment Ready
+
+コードに入る前に、環境が正しく整っていることを確認しましょう。ここで数分投資すれば、後々のデバッグ時間を大幅に削減できます。
+
+**必須要件:**
+- **Java Development Kit (JDK)**: バージョン 8 以上（パフォーマンス向上のため JDK 11+ 推奨）
+- **Maven または Gradle**: 依存関係管理用（例では Maven を使用）
+- **基本的な Java 知識**: オブジェクト、メソッド、`try‑with‑resources` の理解
+
+**推奨セットアップ:**
+- Maven 連携が優れた IDE（IntelliJ IDEA、Eclipse、VS Code など）
+- IDE とテスト用に最低 2GB の空き RAM
+- テスト用サンプル PDF（テストドキュメントの作成方法も後述）
+
+GroupDocs.Annotation の優れた点は、外部 PDF リーダーや複雑なインストールが不要で、すべて Java アプリケーション内で完結することです。
+
+## Setting Up GroupDocs.Annotation for Java
+
+プロジェクトへの GroupDocs.Annotation の統合はシンプルですが、いくつか注意点があります。
+
+### Maven Dependency Configuration
+
+`pom.xml` に以下を追加してください。リポジトリ設定は `dependencies` セクションの前に置く必要があります。
+
 ```xml
 <repositories>
    <repository>
@@ -52,28 +101,36 @@ Maven を使用して、GroupDocs.Annotation をプロジェクトに含めま�
 </dependencies>
 ```
 
-### ライセンス取得
-GroupDocs.Annotation を最大限に活用するには:
-- **無料トライアル**制限なく機能を探索します。
-- **一時ライセンス**評価期間中の無制限使用を要求します。
-- **購入**試用版に満足し、本番環境の準備が整ったら、フルライセンスを購入してください。
+**プロのコツ**: 常に GroupDocs のリリースページで最新バージョンを確認しましょう。古いバージョンを使用すると、新しい PDF フォーマットとの互換性問題が発生することがあります。
 
-セットアップが完了したら、GroupDocs.Annotation を初期化します。
+### License Setup (Don't Skip This!)
+
+多くの開発者がここでつまずきます。GroupDocs.Annotation は本番利用の際に正しいライアル**: 評価に最適—30 日間フル機能が利用可能
+- **一時ライセンス**: 開発・テストフェーズ向け
+- **フルライセンス**: 本番デプロイ時に必須
+
 ```java
 import com.groupdocs.annotation.Annotator;
-// Annotator オブジェクトを初期化する
+
+// Initialize your annotator - this is your entry point to all annotation features
 try (Annotator annotator = new Annotator("path/to/your/document.pdf")) {
-    // 注釈ロジックはここに記述します
+    // All your annotation magic happens here
+    System.out.println("Annotator initialized successfully!");
 }
 ```
 
-## 実装ガイド
+**よくある落とし穴**: ライセンス設定を忘れると透かし入りの出力が生成されます。デプロイ前に必ず実際のライセンスでテストしてください。
 
-### 波線注釈の作成
-波線注釈はエラーを強調表示したり、変更を提案したりします。次の手順で操作してください。
+## Complete Implementation Guide: Adding Squiggly実際に本番でを構築しましょう。波線アノテーションはエラー表示、変更提案、注意喚起に最適です。
 
-#### ステップ1: 必要なクラスをインポートする
-アノテーションに必要なクラスをインポートします。
+### How to create annotation replies java
+
+以下では、**createを作成する手順を順番に解説します。
+
+### Step 1: Import All Required Classes
+
+単にトしないでください。各インポートの役割を理解しておくと、トラブルシューティングが楽になります。
+
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Point;
@@ -84,39 +141,54 @@ import java.util.Date;
 import java.util.List;
 ```
 
-#### ステップ2: Squiggly Annotationを初期化する
-作成して設定する `SquigglyAnnotation` 実例：
+**各インポートキュメント操作のメインインタ座標を定義
+- `Reply`: アノテーションに対するスレッド化された会話を実現
+- `SquigglyAnnotation`: 作成する具体的なアノテーションタイプ
+
+### Step 2: Create Annotation
+
+ここで本格的なカスタマイズを行います。以下のコードは、プロフェッショナルな外観の波線アノテーションを生成します。
+
 ```java
-// 新しいSquigglyAnnotationインスタンスを作成する
+// Create a new SquigglyAnnotation instance
 SquigglyAnnotation squigglyAnnotation = new SquigglyAnnotation();
 
-// 注釈の作成日を設定する
+// Set the creation date of the annotation
 squigglyAnnotation.setCreatedOn(new Date());
 
-// RGB値を使用してフォントと背景色を定義する
-tsquigglyAnnotation.setFontColor(65535); // ARGB形式の黄色
-tsquigglyAnnotation.setBackgroundColor(16761035); // ARGB形式のライトブルー
+// Define font and background colors using RGB values
+squigglyAnnotation.setFontColor(65535); // Yellow color in ARGB format
+squigglyAnnotation.setBackgroundColor(16761035); // Light blue color in ARGB format
 
-// 注釈とともに表示するメッセージを設定します squigglyAnnotation.setMessage("This is squiggly annotation");
+// Set a message to display with the annotation
+squigglyAnnotation.setMessage("This is squiggly annotation");
 
-// 不透明度を定義します（範囲 0.0 - 1.0）squigglyAnnotation.setOpacity(0.7);
+// Define opacity (range 0.0 - 1.0)
+squigglyAnnotation.setOpacity(0.7);
 
-// 注釈のページ番号を指定します (ゼロベースのインデックス) squigglyAnnotation.setPageNumber(0);
+// Specify the page number for the annotation (zero-based index)
+squigglyAnnotation.setPageNumber(0);
 
-// Word および PDF 文書に固有の波線の色を設定する squigglyAnnotation.setSquigglyColor(1422623); // 波線の色コード
+// Set squiggly line color specific to Word and PDF documents
+squigglyAnnotation.setSquigglyColor(1422623); // Color code for squiggly lines
 
-// ページ上の注釈の開始と終了を示すポイントを定義します
+// Define points marking the start and end of the annotation on the page
 List<Point> points = new ArrayList<>();
 points.add(new Point(80, 730));
 points.add(new Point(240, 730));
 points.add(new Point(80, 650));
-points.add(new Point(240, 650));	squigglyAnnotation.setPoints(points);
+points.add(new Point(240, 650));
+squigglyAnnotation.setPoints(points);
 ```
 
-#### ステップ3: 注釈に返信を追加する
-必要に応じて、返信を追加します。
+**座標系の理解**: `Point` はページ左上を基準に測定されます。最初の 2 点でアノテーション領域の開始と終了を定義し、追加の点で複雑な形状を作れます。
+
+### Step 3: Add Interactive Replies (Optional but Powerful)
+
+この段階でアノテーションが本格的に共同作業向けになります。文書レビューのワークフローに最適です。
+
 ```java
-// 注釈への返信を作成する（オプション）
+// Create replies to the annotation (optional)
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
 reply1.setRepliedOn(new Date());
@@ -129,54 +201,229 @@ List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 
-// 返信を注釈 squigglyAnnotation.setReplies(replies); に関連付けます。
+// Associate replies with the annotation
+squigglyAnnotation.setReplies(replies);
 ```
 
-#### ステップ4: ドキュメントに注釈を追加する
-波線注釈を追加して保存します。
+**実務例**: 法務文書レビューでは、複数の弁護士が同一アノテーションに返信を付け、文書上でスレッド化された議論を行えます。
+
+### Step 4: Apply Annotation and Save Document
+
+最後にアノテーションをドキュメントに適用し、保存します。
+
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-    // 準備した波線注釈をドキュメントに追加します nannotator.add(squigglyAnnotation);
+    // Add the prepared squiggly annotation to the document
+    annotator.add(squigglyAnnotation);
     
-    // 注釈付きドキュメントを保存します。nannotator.save("YOUR_OUTPUT_DIRECTORY/result_squiggly_annotation.pdf");
+    // Save the annotated document
+    annotator.save("YOUR_OUTPUT_DIRECTORY/result_squiggly_annotation.pdf");
 }
 ```
 
-## 実用的な応用
-波線注釈は次のような場合に役立ちます。
-- **校正**タイプミスや文法上の誤りを強調表示します。
-- **法務レビュー**契約書内のレビュー対象セクションをマークします。
-- **教育ツール**課題における誤った回答を示す。
+**メモリ管理のポイント**: `try‑with‑resources` 文は自動的にクリーンアップを行い、長時間稼働するアプリケーションでのメモリリークを防止します。
 
-GroupDocs.Annotation を統合すると、ドキュメント上で直接コミュニケーションできるため、コラボレーションが強化され、ワークフローが合理化されます。
+## Advanced Configuration Options
 
-## パフォーマンスに関する考慮事項
-注釈を使用する場合は、次の点に注意してください。
-- **ファイルサイズを最適化する**注釈を付ける前に PDF を圧縮します。
-- **メモリ管理**効率的なメモリ処理には try-with-resources を使用します。
-- **バッチ処理**複数のドキュメントをバッチ処理してパフォーマンスを最適化します。
+### Customizing Annotation Appearance
 
-## 結論
-GroupDocs.Annotation for Javaを使用して、PDFドキュメントに波線注釈を追加する方法を学びました。この機能は、ドキュメント上で直接エラーをハイライトしたり、変更を提案したりするのに非常に役立ちます。GroupDocs.Annotationの機能をさらに活用していく中で、ドキュメント管理プロセスを強化するために、他の注釈タイプとの連携も検討してみてください。
+デフォルトの縛られる必要はテーマに合わせたアノテーションを作成する方法は以下の通りです。
+
+```java
+// Custom color configurations
+squigglyAnnotation.setFontColor(0xFF0000); // Red text
+squigglyAnnotation.setBackgroundColor(0x00FF00); // Green background
+squigglyAnnotation.setSquigglyColor(0x0000FF); // Blue squiggly line
+
+// Transparency effects
+squigglyAnnotation.setOpacity(0.3); // Very subtle
+// or
+squigglyAnnotation.setOpacity(0.9); // Almost opaque
+```
+
+### Positioning Annotations Precisely
+
+座標調整は難しいことがあります。体系的なアプローチをご紹介します。
+
+1. **大まかな見積もりから開始**: PDF ビューアで概算座標を取得  
+2. **少しずつテスト**: 微調整しながら確認  
+3. **ページサイズの違いに留意**: A4、Letter、カスタムサイズは座標系が異なることがあります  
+
+## Common Issues and Solutions
+
+### Problem: Annotations Don't Appearがページ境界外になっている ページ番号指定が間違っている
+
+**解決チェックリスト:**
+```java
+// Verify your points are within page boundaries
+System.out.println("Page dimensions: " + annotator.getPageInfo(0));
+
+// Check if your points make sense
+List<Point> points = squigglyAnnotation.getPoints();
+for (Point point : points) {
+    System.out.println("Point: (" + point.getX() + ", " + point.getY() + ")");
+}
+```
+
+### Problem: Poor Performance with Large Files
+
+**現象**: 巨大な PDF をメモリに読み込むとアプリケーションが遅くなる。
+
+**パフォーマンス最メント全体を読み込- 可能ならストリーミングを利用
+- 頻繁にアクセスするドキュメントはキャッシュする  
+
+### Problem: Color Values Not Working
+
+**問題点**:混同。
+
+**解決策**: GroupDocs は ARGB 形式（Alpha, Red, Green, Blue）を使用します。
+```java
+// Wrong: RGB format
+int wrongColor = 0xFF0000; // This might not work as expected
+
+// Right: ARGB format
+int rightColor = 0xFFFF0000; // Full opacity red
+```
+
+## Performance Best Practices
+
+### Memory Management
+
+複数ドキュメントを処理する際、メモリ使用量が急増しがちです。
+
+```java
+// Good practice: Use try-with-resources
+try (Annotator annotator = new Annotator(inputPath)) {
+    // Process annotations
+    annotator.add(annotation);
+    annotator.save(outputPath);
+} // Automatic cleanup happens here
+
+// Avoid: Manual resource management
+Annotator annotator = new Annotator(inputPath); // Resources might leak
+```
+
+### Batch Processing Optimization
+
+数百件のドキュメントにアノテーションを付ける場合は、次のアプローチ```java
+public void processBatch(List<String> documentPaths) {
+    for (String path : documentPaths) {
+        try (Annotator annotator = new Annotator(path)) {
+            // Process each document independently
+            addAnnotations(annotator);
+            annotator.save(getOutputPath(path));
+        } catch (Exception e) {
+            // Handle individual document failures without stopping the batch
+            System.err.println("Failed to process: " + path + " - " + e.getMessage());
+        }
+    }
+}
+```
+
+### File Size Considerations
+
+大容量 PDF はパフォーマンスに影響します。以下の戦略を活用しましょう。
+
+**: アノテーション前に最適化ツで処理**: 必要なページだけを読み込み・アノテーション  
+- **ドキュメント分割**: 大きなファイルを小さなチャンクに分割  
+
+## Real-World Applications
+
+### Document Review Systems
+
+波線アノテーションは共同環境で特に有効です。
+
+- **法律事務所**: 契約条項のレビューに使用  
+- **出版**: 編集上の変更指示に活用  
+- **教育**: 学生の誤りをハイライト  
+
+### Integration with Existing Systems
+
+GroupDocs.Annotation は主流フレームワークと相性が良いです。
+
+- **Spring Boot**: REST API と簡単に統合可能  
+- **JSF アプリケーション**: コンポーネントベース UI とスムーズに連携  
+- **マイクロサービス**: コンテナ化デプロイでも軽量に動作  
+
+### Workflow Automation
+
+高度なアノテーションワークフローを構築できます。
+
+```java
+public class DocumentWorkflow {
+    public void reviewDocument(String documentPath, ReviewLevel level) {
+        try (Annotator annotator = new Annotator(documentPath)) {
+            switch (level) {
+                case GRAMMAR_CHECK:
+                    addGrammarAnnotations(annotator);
+                    break;
+                case LEGAL_REVIEW:
+                    addLegalAnnotations(annotator);
+                    break;
+                case FINAL_PROOF:
+                    addProofreadingAnnotations(annotator);
+                    break;
+            }
+            annotator.save(getReviewedPath(documentPath));
+        }
+    }
+}
+```
+
+## When to Use Squiggly Annotations vs. Alternatives
+
+**波線アノテーションを選ぶべきケース:**
+- エラーや修正箇所を示す（スペルチェックのような）場合  
+- 内容が不確か、または疑わしいと示したいとき  
+- ワードプロセッサの「波線下線」効果を再現したいとき  
+
+**代替手段を検討すべきケース:**
+- **ハイライト**: 強調したいがエラー意味合いは不要なとき  
+- **コメント**: 詳細なフィードバックを提供したいときはテキストアノテーション  
+- **スタンプ**: 承認フローなどで使用するスタンプアノテーション  
+
+## Conclusion
+
+これで Java を使ったプロフェッショナルな PDF アノテーションの技術を習得しました。GroupDocs.Annotation for Java は、複雑なドキュメント操作をシンプルなコード実装に変換してくれます。
+
+**本ガイドの重要ポイント:**
+- GroupDocs.Annotation の正しい設定で多くの問題を未然に防げる  
+- 座標系の理解が正確なアノテーション配置の鍵  
+- 大規模ドキュメントやバッチ処理ではメモリ管理が重要  
+- カスタマイズオプションでアプリケーションに最適なアノテーションを実装可能  
 
 **次のステップ:**
-- GroupDocs が提供する他の注釈タイプを試してみてください。
-- 既存のシステムとの統合の可能性を検討します。
+1. 他のアノテーションタイプ（ハイライト、テキスト、スタンプ）を試す  
+2. シンプルなアノテーション管理システムを構築する  
+3. アノテーション抽出や変更など、GroupDocs.Annotation API の高度機能を探求する  
 
-これらのソリューションをプロジェクトに実装し、その影響を観察することをお勧めします。
+プログラムによる PDF アノテーションの魅力は、一度基本をマスターすれば、手作業で行っていた文書ワークフローを自動化できる点にあります。次世代の文書コラボレーションプラットフォームを構築するにせよ、既存アプリにマークアップ機能を追加するにせよ、今や必要なツールと知識は手に入っています。
 
-## FAQセクション
-1. **GroupDocs.Annotation とは何ですか?**
-   - Java を含むさまざまな言語をサポートし、開発者がプログラムでドキュメントに注釈を追加できるようにする強力なライブラリです。
-2. **PDF 以外のドキュメント タイプに注釈を付けることはできますか?**
-   - はい、Word、Excel、画像など複数の形式をサポートしています。
-3. **大きな PDF ファイルを効率的に処理するにはどうすればよいですか?**
-   - 処理前にファイル サイズを最適化し、効率的な処理のためにメモリ管理技術を使用します。
-4. **注釈の色をさらにカスタマイズすることは可能ですか?**
-   - もちろんです！フォントと背景色のカスタム RGB 値を指定できるので、幅広いカスタマイズが可能です。
-5. **注釈が期待どおりに表示されない場合はどうすればいいですか?**
-   - ポイントの座標を確認し、目的のエリアを正確に定義していることを確認してください。プロジェクト設定に必要な依存関係がすべて含まれていることを確認してください。
+## Frequently?**  
+A: GroupDocs.Annotation はアノテーションに特化しており、複数のドキュメント形式に対応しています。スレッド化された返信や豊富なカスタマイズオプションなど、一般的な PDF ライブラリにはない機能が多数搭載されています。
 
-## リソース
-- [GroupDocs.Annotation ドキュメント](https://docs.groupdocs.com/annotation/java/)
-- [APIリファレンス](https://reference.groupdocs.com/annotation/java/)
+**Q: Can I use this library with Spring Boot applications?**  
+A: Absolutely! GroupDocs.Annotation は Spring Boot とシームレスに統合できます。ドキュメントアップロードを受け取り、アノテーション済み PDF を返す REST エンドポイントを作成できます。大容量ドキュメントの場合は非同期処理の導入も検討してください。
+
+**Q: How do I handle documents with different page sizes?**  
+A: `annotator.getPageInfo(pageIndex)` でページ寸法（幅・高さ・その他メタデータ）を取得し、座標計算に相対値を使用してください。ハードコーディングした座標は避けるべきです。
+
+**Q: Is there a way to extract existing annotations from PDFs?**  
+A: Yes! `annotator.get()` を呼び出すと、PDF に既にべてのアノテーションを取得できます。その後、各アノテーションのプロパティや内容にアクセスできます。
+
+**Q?**  
+A: アプリケーションレベルでユーザー認証を実装し、GroupDocs のメソッド呼び出し前に権限チェックを行います。返信にはユーザー情報を保存し、独自ロジックで「誰が編集・削除できるか」を制御してください。
+
+**Q: How do I optimize memory usage when processing hundreds of PDFs?**  
+A: `try‑with‑resources` でドキュメントを 1 件ずつ処理し、キューイングで順次実行します量をモニタリングして JVM のメモリ設定を調整してください。
+
+---
+
+**Last Updated:** 2026-01-31  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  
+
+**Additional Resources**
+
+- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- [Complete API Reference](https://reference.groupdocs.com/annotation/java/)
