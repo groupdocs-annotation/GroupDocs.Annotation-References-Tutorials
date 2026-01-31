@@ -1,68 +1,120 @@
 ---
-"description": "GroupDocs.Annotation for Java APIを使って、PDF、Word、Excel、PowerPointドキュメントに注釈を追加する方法を学びましょう。ステップバイステップの統合チュートリアルとコード例をご覧ください。"
-"is_root": true
-"linktitle": "GroupDocs.Annotation for Java チュートリアル"
-"title": "Java ドキュメント注釈 API | GroupDocs.Annotation for Java チュートリアルと例"
-"url": "/ja/java/"
+date: 2026-01-31
+description: GroupDocs.Annotation for Java API を使用して PDF Java ドキュメントに注釈を付ける方法を学びましょう。画像注釈
+  Java、ステップバイステップのチュートリアル、コード例が含まれています。
+is_root: true
+keywords:
+- java document annotation
+- pdf annotation java
+- add comments to documents java
+- document markup api
+- java annotation library
+- collaborative document review
+linktitle: GroupDocs.Annotation for Java Tutorials
+title: PDFに注釈を付ける Java – ドキュメント注釈 API | GroupDocs.Annotation for Java チュートリアルとサンプル
 type: docs
-"weight": 10
+url: /ja/java/
+weight: 10
 ---
 
 # GroupDocs.Annotation for Java - ドキュメント注釈 API チュートリアル
 
-## Javaアプリケーションにドキュメント注釈機能を追加する
+GroupDocs.Annotation for Java は、**annotate PDF Java** ドキュメントに加えて Word、Excel、PowerPoint、画像、その他多数の形式に対して注釈を付けることができる強力なドキュメント注釈 API です。注釈機能を Java アプリケーションに直接組み込むことで、共同レビュー ツール、法的マーキング ソリューション、またはリッチなドキュメント操作が必要なあらゆるワークフローを、外部ソフトウェアに依存せずに構築できます。
 
-GroupDocs.Annotation for Javaは、強力なドキュメントアノテーションAPIです。開発者は、外部ソフトウェアを必要とせずに、Javaアプリケーションに包括的なアノテーション機能を統合できます。このライブラリは、PDF、Microsoft Word、Excel、PowerPoint、画像など、一般的なドキュメント形式へのアノテーションをサポートしています。
+## クイック回答
+- **何に注釈を付けられますか？** PDFs, DOCX, XLSX, PPTX, HTML, images, and more.  
+- **外部ツールは必要ですか？** No—everything runs from a single JAR.  
+- **どの注釈タイプがサポートされていますか？** Text highlights, underlines, strike‑outs, shapes, arrows, watermarks, image annotations, links, and form fields.  
+- **クロスプラットフォームですか？** Yes—works on any OS with Java support.  
+- **トライアルはどこで入手できますか？** From the official GroupDocs download page (link below).
 
-## GroupDocs.Annotation for Java を選択する理由
+## GroupDocs.Annotation for Java を使用して **annotate PDF Java** ファイルに注釈を付ける理由
+- **Zero dependencies** – 単一の JAR でデプロイが簡素化されます。  
+- **High performance** – 高速化と低メモリ使用を最適化しており、大きな PDF でも対応可能です。  
+- **Rich feature set** – シンプルなコメントから高度なグラフィカルマークアップまで幅広く提供します。  
+- **Enterprise‑ready licensing** – 商用プロジェクト向けに柔軟なライセンスオプションを提供します。  
 
-- **クロスプラットフォームの互換性** Javaがサポートされているあらゆるオペレーティングシステムで動作します
-- **外部依存関係なし** すべての機能は単一のJARファイルに含まれています
-- **包括的なフォーマットサポート** PDF、DOCX、XLSX、PPTX、HTML、画像ファイルに注釈を付ける
-- **豊富な注釈タイプ** テキストのハイライト、下線、取り消し線、矢印、図形、透かしなど
-- **高性能処理** 速度とメモリ効率を最適化
+## コア機能概要
+
+### GroupDocs.Annotation を使用して **annotate PDF Java** ドキュメントに注釈を付ける方法
+API はシンプルなワークフローを提供します：ドキュメントをロードし、注釈オブジェクトを作成し、外観を設定し、結果を保存します。以下は各ステップの概要説明です（コード例はリンクされたチュートリアルにあります）。
+
+### Image annotation Java – ドキュメントにグラフィックを追加する
+ラスタ画像またはベクター画像を注釈として埋め込むことができ、正確に配置し、外部リソースへリンクさせることも可能です。ブランドロゴ、透かし、ビジュアルコメントに最適です。
+
+### Add annotations Java – コアテキストおよびグラフィカルマークアップ
+シンプルなハイライトから複雑なシェイプまで、ライブラリはすべての注釈タイプに対して統一されたモデルを提供し、同一ドキュメント内でテキストとグラフィカルマークアップを簡単に切り替えることができます。
+
+### Load documents Java – 効率的なドキュメント取り込み
+GroupDocs.Annotation はローカルファイル、ストリーム、クラウドストレージ（Amazon S3、Azure Blob）、URL、FTP サーバーからのロードをサポートします。この柔軟性により、アプリケーションが使用する任意のソースから **load documents java** をロードできます。
+
+### Annotation management Java – 注釈ライフサイクルの管理
+プログラムから注釈の作成、更新、削除、フィルタリングが可能です。また、カスタムメタデータの付与、作成者情報の設定、セキュリティポリシーの適用も行えます。
 
 ## GroupDocs.Annotation for Java チュートリアル
 
 ### [ライセンスと構成](./licensing-and-configuration)
-完全なコード例を使用して、ライセンスを設定し、GroupDocs.Annotation オプションを構成し、ライブラリを Java プロジェクトに統合する方法を学習します。
+Learn how to set up licenses, configure GroupDocs.Annotation options, and integrate the library into your Java projects with complete code examples.
 
-### [ドキュメントの読み込み](./document-loading)
-ローカル ストレージ、ストリーム、クラウド プラットフォーム (Amazon S3、Azure)、URL、FTP サーバーなどのさまざまなソースから GroupDocs.Annotation にドキュメントをロードするための複数の方法について説明します。
+### [ドキュメントロード](./document-loading)
+Discover multiple methods for loading documents into GroupDocs.Annotation from various sources including local storage, streams, cloud platforms (Amazon S3, Azure), URLs, and FTP servers.
 
-### [ドキュメントの保存](./document-saving)
-Java アプリケーションのさまざまな出力オプション、形式、最適化設定を使用して注釈付きドキュメントを保存するテクニックを習得します。
+### [ドキュメント保存](./document-saving)
+Master techniques for saving annotated documents with various output options, formats, and optimization settings for your Java applications.
 
 ### [テキスト注釈](./text-annotations)
-完全な Java コード例とカスタマイズ オプションを使用して、テキストの強調表示、下線、取り消し線、置換、編集の注釈を実装します。
+Implement text highlighting, underline, strikeout, replacement, and redaction annotations with complete Java code examples and customization options.
 
 ### [グラフィカル注釈](./graphical-annotations)
-外観と位置を正確に制御しながら、プロフェッショナルな図形、矢印、多角形、距離測定、その他のグラフィック要素をドキュメントに追加します。
+Add professional shapes, arrows, polygons, distance measurements and other graphical elements to documents with precise control over appearance and positioning.
 
 ### [画像注釈](./image-annotations)
-さまざまなドキュメント形式のローカル ソースとリモート ソースの両方から、プログラムで画像注釈を挿入、配置、カスタマイズする方法を学習します。
+Learn how to programmatically insert, position, and customize image annotations from both local and remote sources in different document formats.
 
 ### [リンク注釈](./link-annotations)
-GroupDocs.Annotation の包括的なリンク注釈機能を使用して、ドキュメント内にインタラクティブなハイパーリンクとリンクされたコンテンツを作成します。
+Create interactive hyperlinks and linked content within your documents using GroupDocs.Annotation's comprehensive link annotation capabilities.
 
-### [フォームフィールドの注釈](./form-field-annotations)
-チェックボックス、ボタン、ドロップダウン、テキスト入力などのインタラクティブなフォーム フィールドを実装して、入力可能なドキュメントやフォームを作成します。
+### [フォームフィールド注釈](./form-field-annotations)
+Implement interactive form fields including checkboxes, buttons, dropdowns, and text inputs to create fillable documents and forms.
 
 ### [注釈管理](./annotation-management)
-Java アプリケーションでプログラム的に注釈を追加、削除、更新、フィルタリングするチュートリアルで、注釈のライフサイクル全体を習得します。
+Master the full annotation lifecycle with tutorials on adding, removing, updating, and filtering annotations programmatically in your Java applications.
 
 ### [返信管理](./reply-management)
-ドキュメント ワークフローで、スレッド化されたコメント、返信、ユーザー ベースのディスカッション機能を使用して共同ドキュメント レビューを実装します。
+Implement collaborative document review with threaded comments, replies, and user‑based discussion capabilities in your document workflows.
 
-### [文書情報](./document-information)
-ドキュメントのメタデータ、ページ メトリック、コンテンツ情報、および形式の詳細にアクセスして活用し、ドキュメント処理アプリケーションを強化します。
+### [ドキュメント情報](./document-information)
+Access and utilize document metadata, page metrics, content information, and format details to enhance your document processing applications.
 
 ### [ドキュメントプレビュー](./document-preview)
-注釈付きまたは注釈なしの高品質なドキュメント プレビューを生成し、プレビューの解像度を制御し、カスタムのドキュメント表示エクスペリエンスを作成します。
+Generate high‑quality document previews with and without annotations, control preview resolution, and create custom document viewing experiences.
 
 ### [高度な機能](./advanced-features)
-GroupDocs.Annotation for Java を使用して高度な注釈機能、カスタマイズ、特殊な機能を実装するための完全なチュートリアル。
+Complete tutorials for implementing advanced annotation capabilities, customizations, and specialized features with GroupDocs.Annotation for Java.
 
-## GroupDocs.Annotation for Java を使い始める
+## GroupDocs.Annotation for Java の開始方法
 
-ダウンロード [最新バージョン](https://releases.groupdocs.com/annotation/java/) または、 [無料トライアル](https://releases.groupdocs.com/annotation/java/) GroupDocs.Annotation for Java の全機能を探索します。
+最新バージョンを [ダウンロード](https://releases.groupdocs.com/annotation/java/) するか、[無料トライアル](https://releases.groupdocs.com/annotation/java/) で始めて、GroupDocs.Annotation for Java のすべての機能を体験してください。
+
+## よくある質問
+
+**Q: 商用 Java アプリケーションで GroupDocs.Annotation を使用できますか？**  
+A: はい。商用利用には商用ライセンスが必要で、評価用の無料トライアルが利用可能です。
+
+**Q: ライブラリはパスワード保護された PDF をサポートしていますか？**  
+A: もちろんです。ドキュメントをロードする際にパスワードを指定すれば、すべての注釈機能が利用可能です。
+
+**Q: サポートされている Java バージョンはどれですか？**  
+A: API は Java 8 以降、Java 11、17、その他の LTS リリースで動作します。
+
+**Q: 大きな PDF ファイルを効率的に処理するには？**  
+A: ストリーミングロードオプションを使用し、保存時にドキュメント最適化を有効にしてメモリ使用量を削減します。
+
+**Q: プログラムから注釈の外観をカスタマイズできますか？**  
+A: はい。すべての注釈タイプは色、透明度、線の太さ、フォントスタイルなどのプロパティを提供しています。
+
+---
+
+**最終更新日:** 2026-01-31  
+**テスト環境:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
+**作者:** GroupDocs
