@@ -1,53 +1,71 @@
 ---
 categories:
 - Java Development
-date: '2025-12-26'
-description: Java'da PDF meta verilerini, dosya türü, sayfa sayısı ve boyut dahil
-  olmak üzere nasıl çıkaracağınızı öğrenin. Bu rehber, GroupDocs ile PDF dosya türü
-  Java işleme konusunu kapsar.
+date: '2026-02-26'
+description: GroupDocs kullanarak Java ile PDF sayfa sayısını nasıl alacağınızı ve
+  PDF meta verilerini nasıl çıkaracağınızı öğrenin. Bu kılavuz dosya türü, sayfa sayısı
+  ve boyut çıkarımını gösterir.
 keywords: Java document metadata extraction, extract PDF metadata Java, Java file
   information extraction, document properties Java API, PDF page count Java
-lastmod: '2025-12-26'
-linktitle: How to Extract PDF Metadata in Java with GroupDocs
+lastmod: '2026-02-26'
+linktitle: java get pdf page count and extract metadata with GroupDocs
 tags:
 - java
 - pdf
 - metadata
 - document-processing
 - api
-title: Java'da GroupDocs ile PDF Meta Verilerini Nasıl Çıkarılır
+title: java ile pdf sayfa sayısını al ve GroupDocs ile meta verileri çıkar
 type: docs
 url: /tr/java/document-information/groupdocs-annotation-java-document-info-extraction/
 weight: 1
 ---
 
-# Java ile GroupDocs kullanarak PDF Metaverisini Çıkarmak
+2  
+**Author:** GroupDocs
 
-Yüzlerce belgeden hızlıca temel bilgileri almanız gerektiğini hiç hissettiniz mi? Yalnız değilsiniz. İster bir belge yönetim sistemi oluşturuyor olun, yasal dosyaları işliyor olun, ister o kaotik paylaşılan sürücüyü düzenlemeye çalışıyor olun, **how to extract PDF metadata** programlı olarak saatlerce manuel işi kurtarabilir. Bu rehberde dosya türünü, sayfa sayısını ve boyutu Java kullanarak nasıl çıkaracağınızı adım adım göstereceğiz—**pdf file type java** sorununu verimli bir şekilde ele alması gereken herkes için mükemmel.
+Translate labels:
+
+- "**Last Updated:**" -> "**Son Güncelleme:**"
+- "**Tested With:**" -> "**Test Edilen Versiyon:**"
+- "**Author:**" -> "**Yazar:**"
+
+Now produce final markdown with translations.
+
+Make sure to keep placeholders unchanged.
+
+Let's assemble.
+
+# Java ile PDF sayfa sayısını alma ve PDF meta verilerini GroupDocs ile çıkarma
+
+Ever found yourself needing to quickly grab basic info from hundreds of documents? You're not alone. Whether you're building a document management system, processing legal files, or just trying to organize that chaotic shared drive, **how to java get pdf page count** programmatically can save you hours of manual work. In this guide we’ll walk through extracting the file type, page count, and size using Java—perfect for anyone who needs to handle the **pdf file type java** challenge efficiently and also **extract pdf metadata java**.
 
 ## Hızlı Yanıtlar
-- **Java'da PDF metaverisi için en iyi kütüphane hangisidir?** GroupDocs.Annotation provides a simple API for extracting metadata without loading full content.  
-- **Bir lisansa ihtiyacım var mı?** A free trial works for development; a full license is required for production.  
-- **Diğer formatlardan metaveri çıkarabilir miyim?** Yes—GroupDocs supports Word, Excel, and many more.  
-- **Metaveri çıkarma ne kadar hızlı?** Typically milliseconds per file because it reads only the header information.  
-- **Büyük toplu işlemler için güvenli mi?** Yes, when you use try‑with‑resources and batch processing patterns.
+- **What library is best for PDF metadata in Java?** GroupDocs.Annotation provides a simple API for extracting metadata without loading full content.  
+- **Do I need a license?** A free trial works for development; a full license is required for production.  
+- **Can I extract metadata from other formats?** Yes—GroupDocs supports Word, Excel, and many more.  
+- **How fast is metadata extraction?** Typically milliseconds per file because it reads only the header information.  
+- **Is it safe for large batches?** Yes, when you use try‑with‑resources and batch processing patterns.
 
-## PDF Metaverisi Çıkarma Nedir?
-PDF metaverisi, sayfa sayısı, dosya türü, boyut, yazar, oluşturulma tarihi ve belgede gömülü herhangi bir özel alan gibi özellikleri içerir. Bu verileri çıkarmak, uygulamaların dosyaları tamamen açmadan otomatik olarak kataloglamasını, aramasını ve doğrulamasını sağlar.
+## GroupDocs ile java pdf sayfa sayısını nasıl alırız
+Sayfa sayısını almak, PDF’leri düzenlemeniz veya doğrulamanız gerektiğinde genellikle ilk adımdır. Aşağıdaki bölümler, **java get pdf page count** nasıl yapılacağını ve aynı zamanda diğer faydalı meta verileri nasıl çekeceğinizi tam olarak gösterir.
 
-## Java'da PDF Metaverisi Neden Çıkarılır?
-- **Content Management Systems** dosyalar yüklendiği anda otomatik etiketleyebilir ve indeksleyebilir.  
-- **Legal & Compliance** ekipleri denetimler için belge özelliklerini doğrulayabilir.  
-- **Digital Asset Management** otomatik etiketleme ile daha verimli hale gelir.  
-- **Performance Optimization** yalnızca başlık bilgisi gerektiğinde büyük PDF'lerin yüklenmesini önler.
+## PDF Meta Veri Çıkarma Nedir?
+PDF meta verileri, sayfa sayısı, dosya türü, boyut, yazar, oluşturulma tarihi ve belgede gömülü herhangi bir özel alan gibi özellikleri içerir. Bu verileri çıkarmak, uygulamaların dosyaları tamamen açmadan otomatik olarak kataloglamasını, aramasını ve doğrulamasını sağlar.
+
+## Java’da PDF Meta Verileri Neden Çıkarılır?
+- **Content Management Systems** (İçerik Yönetim Sistemleri), dosyalar yüklendiği anda otomatik etiketleme ve indeksleme yapabilir.  
+- **Legal & Compliance** (Hukuk ve Uyumluluk) ekipleri, denetimler için belge özelliklerini doğrulayabilir.  
+- **Digital Asset Management** (Dijital Varlık Yönetimi), otomatik etiketleme sayesinde daha verimli hale gelir.  
+- **Performance Optimization** (Performans Optimizasyonu), yalnızca başlık bilgisi gerektiğinde büyük PDF’lerin yüklenmesini önler.
 
 ## Önkoşullar ve Kurulum
 - **Java 8+** (Java 11+ önerilir)  
-- Seçtiğiniz IDE (IntelliJ, Eclipse, VS Code)  
+- Tercih ettiğiniz IDE (IntelliJ, Eclipse, VS Code)  
 - Bağımlılıklar için Maven veya Gradle  
 - Temel Java dosya işleme bilgisi  
 
-### GroupDocs.Annotation'ı Java için Kurma
+### Java için GroupDocs.Annotation Kurulumu
 Depoyu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 
 ```xml
@@ -68,12 +86,12 @@ Depoyu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 </dependencies>
 ```
 
-**Pro tip:** Daha yeni sürümler için GroupDocs sürüm sayfasını kontrol edin; yeni sürümler genellikle performans iyileştirmeleri getirir.
+**Pro ipucu:** Daha yeni sürümler için GroupDocs sürüm sayfasını kontrol edin; yeni sürümler genellikle performans iyileştirmeleri getirir.
 
-## GroupDocs ile PDF Metaverisi Nasıl Çıkarılır
+## GroupDocs ile PDF Meta Verilerini Nasıl Çıkarılır
 Aşağıda adım adım bir rehber bulunmaktadır. Kod blokları, işlevselliği korumak için orijinal öğreticiden değiştirilmemiştir.
 
-### Adım 1: Annotator'ı Başlatma
+### Adım 1: Annotator’ı Başlatma
 ```java
 import com.groupdocs.annotation.Annotator;
 import java.io.IOException;
@@ -88,7 +106,7 @@ try (final Annotator annotator = new Annotator(inputFile)) {
     // Handle the error appropriately for your use case
 }
 ```
-*Neden try‑with‑resources kullanılır?* `Annotator`'ı otomatik olarak kapatır, bellek sızıntılarını önler—çok sayıda dosya işlenirken kritik öneme sahiptir.
+*Neden try‑with‑resources kullanılır?* `Annotator`ı otomatik olarak kapatır, bellek sızıntılarını önler—çok sayıda dosya işlenirken kritik öneme sahiptir.
 
 ### Adım 2: Belge Bilgilerini Çekme
 ```java
@@ -116,11 +134,11 @@ try (final Annotator annotator = new Annotator(inputFile)) {
     }
 }
 ```
-`getDocumentInfo()` sadece başlığı okur, bu yüzden büyük PDF'ler bile hızlı bir şekilde işlenir.
+`getDocumentInfo()` yalnızca başlığı okur, bu yüzden büyük PDF’ler bile hızlı bir şekilde işlenir. Bu, **java get pdf page count** işlemini verimli bir şekilde yaparken diğer özellikleri de çıkarmayı gösterir.
 
 ## Yaygın Tuzaklar ve Nasıl Kaçınılır
 ### Dosya Yolu Sorunları
-Sabit kodlanmış mutlak yollar başka bir ortama geçtiğinizde kırılır. Göreli yollar veya ortam değişkenleri kullanın:
+Sabit kodlanmış mutlak yollar, başka bir ortama geçildiğinde kırılır. Göreli yollar veya ortam değişkenleri kullanın:
 
 ```java
 String baseDir = System.getProperty("user.dir");
@@ -128,10 +146,10 @@ String inputFile = baseDir + "/documents/sample.pdf";
 ```
 
 ### Bellek Yönetimi
-Büyük toplu işlemlerle çalışırken, kaynakları her zaman hızlıca kapatın ve yığın kullanımını izleyin. Dosyaları daha küçük parçalar halinde işlemek `OutOfMemoryError` hatasından kaçınır.
+Büyük partilerle çalışırken, kaynakları her zaman hızlı bir şekilde kapatın ve yığın kullanımını izleyin. Dosyaları daha küçük parçalar halinde işlemek `OutOfMemoryError` hatasından kaçınır.
 
 ### İstisna Yönetimi
-Kullanışlı tanı bilgilerini korumak için belirli istisnaları yakalayın:
+Kullanışlı tanılamaları korumak için belirli istisnaları yakalayın:
 
 ```java
 try {
@@ -143,7 +161,7 @@ try {
 }
 ```
 
-## Performans Optimizasyon İpuçları
+## Performans Optimizasyonu İpuçları
 ### Toplu İşleme Örneği
 ```java
 List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.docx", "doc3.xlsx");
@@ -160,7 +178,7 @@ for (String path : documentPaths) {
 }
 ```
 
-### Metaveri Önbellekleme
+### Meta Verileri Önbellekleme
 ```java
 Map<String, IDocumentInfo> metadataCache = new ConcurrentHashMap<>();
 
@@ -250,44 +268,44 @@ document.processing.timeout=30s
 document.processing.batch-size=100
 ```
 
-## Yaygın Sorunların Giderilmesi
-- **File Not Found:** Yolu, izinleri ve başka bir sürecin dosyayı kilitlemediğini doğrulayın.  
-- **OutOfMemoryError:** JVM yığınını (`-Xmx2g`) artırın veya dosyaları daha küçük toplularda işleyin.  
-- **Unsupported Format:** GroupDocs'ın desteklenen listesine bakın; bilinmeyen tipler için Apache Tika'ya geçin.  
+## Yaygın Sorunların Çözümü
+- **File Not Found:** Yolu, izinleri ve dosyanın başka bir işlem tarafından kilitlenmediğini doğrulayın.  
+- **OutOfMemoryError:** JVM yığınını (`-Xmx2g`) artırın veya dosyaları daha küçük partilerde işleyin.  
+- **Unsupported Format:** GroupDocs’ın desteklenen listesine bakın; bilinmeyen tipler için Apache Tika’ya geri dönün.  
 
 ## Sıkça Sorulan Sorular
-**Q: Şifre korumalı PDF'leri nasıl yönetirim?**  
+**Q: Şifre korumalı PDF’leri nasıl yönetirim?**  
 A: `Annotator` oluştururken şifreyi içeren bir `LoadOptions` nesnesi geçirin.  
 
-**Q: Büyük PDF'lerde metaveri çıkarma hızlı mı?**  
-A: Evet—çünkü sadece başlık bilgisi okunur, çok sayfalı PDF'ler bile milisaniyeler içinde tamamlanır.  
+**Q: Büyük PDF’lerde meta veri çıkarma hızlı mı?**  
+A: Evet—çünkü yalnızca başlık bilgisi okunur, yüzlerce sayfalı PDF’ler bile milisaniyeler içinde tamamlanır.  
 
 **Q: Özel özellikleri çıkarabilir miyim?**  
-A: Kullanıcı tanımlı metaveri alanlarını almak için `info.getCustomProperties()` kullanın.  
+A: Kullanıcı tanımlı meta veri alanlarını almak için `info.getCustomProperties()` kullanın.  
 
 **Q: Güvenilmeyen kaynaklardan gelen dosyaları işlemek güvenli mi?**  
-A: Dosya boyutunu, tipini doğrulayın ve çıkarma sürecini sandbox içinde çalıştırmayı düşünün.  
+A: Dosya boyutunu, tipini doğrulayın ve çıkarma sürecini bir sandbox içinde çalıştırmayı düşünün.  
 
 **Q: Bir belge bozuksa ne olur?**  
-A: GroupDocs küçük bozulmaları sorunsuz yönetir; ciddi durumlarda istisnaları yakalayın ve dosyayı atlayın.  
+A: GroupDocs, küçük bozulmaları sorunsuz bir şekilde yönetir; ciddi durumlarda istisnaları yakalayın ve dosyayı atlayın.  
 
 ## Sonuç
-Artık Java'da **how to extract PDF metadata** için eksiksiz, üretim‑hazır bir yaklaşıma sahipsiniz. Basit `Annotator` örneğiyle başlayın, ardından toplu işleme, önbellekleme ve sağlam hata yönetimi ile ölçeklendirin. Burada gösterilen kalıplar, daha büyük belge‑işleme hatları oluştururken size iyi hizmet edecektir.
+Artık **java get pdf page count** ve Java’da PDF meta verilerini çıkarmak için eksiksiz, üretim‑hazır bir yaklaşımınız var. Basit `Annotator` örneğiyle başlayın, ardından toplu işleme, önbellekleme ve sağlam hata yönetimi kullanarak ölçeklendirin. Burada gösterilen desenler, daha büyük belge‑işleme hatları oluştururken size iyi hizmet edecektir.
 
 ---
 
 **Kaynaklar ve Bağlantılar**
 
-- **Dokümantasyon:** [GroupDocs.Annotation Java Belgeleri](https://docs.groupdocs.com/annotation/java/)
-- **API Referansı:** [Java API Referansı](https://reference.groupdocs.com/annotation/java/)
-- **İndirilenler:** [GroupDocs Sürümleri](https://releases.groupdocs.com/annotation/java/)
-- **Satın Alma Seçenekleri:** [GroupDocs Lisansı Satın Al](https://purchase.groupdocs.com/buy)
-- **Ücretsiz Deneme:** [GroupDocs Ücretsiz Deneyin](https://releases.groupdocs.com/annotation/java/)
-- **Geliştirme Lisansı:** [Geçici Lisans Al](https://purchase.groupdocs.com/temporary-license/)
+- **Dokümantasyon:** [GroupDocs.Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)
+- **API Referansı:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- **İndirilenler:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)
+- **Satın Alma Seçenekleri:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
+- **Ücretsiz Deneme:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
+- **Geliştirme Lisansı:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - **Topluluk Desteği:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Son Güncelleme:** 2025-12-26  
+**Son Güncelleme:** 2026-02-26  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs
