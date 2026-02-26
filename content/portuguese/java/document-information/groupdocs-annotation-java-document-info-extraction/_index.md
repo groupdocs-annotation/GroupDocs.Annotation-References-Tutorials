@@ -1,51 +1,68 @@
 ---
 categories:
 - Java Development
-date: '2025-12-26'
-description: Aprenda como extrair metadados de PDF em Java, incluindo tipo de arquivo,
-  contagem de páginas e tamanho. Este guia aborda o tratamento de tipo de arquivo
-  PDF em Java com o GroupDocs.
+date: '2026-02-26'
+description: Aprenda como obter a contagem de páginas de PDF e extrair metadados de
+  PDF em Java usando o GroupDocs. Este guia mostra a extração do tipo de arquivo,
+  da contagem de páginas e do tamanho.
 keywords: Java document metadata extraction, extract PDF metadata Java, Java file
   information extraction, document properties Java API, PDF page count Java
-lastmod: '2025-12-26'
-linktitle: How to Extract PDF Metadata in Java with GroupDocs
+lastmod: '2026-02-26'
+linktitle: java get pdf page count and extract metadata with GroupDocs
 tags:
 - java
 - pdf
 - metadata
 - document-processing
 - api
-title: Como extrair metadados de PDF em Java com GroupDocs
+title: java obter contagem de páginas PDF e extrair metadados com GroupDocs
 type: docs
 url: /pt/java/document-information/groupdocs-annotation-java-document-info-extraction/
 weight: 1
 ---
 
-# Como Extrair Metadados de PDF em Java com GroupDocs
+ part of text. Translate: "**Última atualização:** 2026-02-26". Let's translate.
 
-Já se encontrou precisando capturar rapidamente informações básicas de centenas de documentos? Você não está sozinho. Seja construindo um sistema de gerenciamento de documentos, processando arquivos legais ou apenas tentando organizar aquela unidade compartilhada caótica, **como extrair metadados de PDF** programaticamente pode economizar horas de trabalho manual. Neste guia, vamos percorrer a extração do tipo de arquivo, contagem de páginas e tamanho usando Java — perfeito para quem precisa lidar com o desafio **pdf file type java** de forma eficiente.
+**Tested With:** GroupDocs.Annotation 25.2  
+
+Translate: "**Testado com:** GroupDocs.Annotation 25.2"
+
+**Author:** GroupDocs
+
+Translate: "**Autor:** GroupDocs"
+
+Now ensure all markdown formatting preserved.
+
+Check for any missing placeholders: CODE_BLOCK_0 to CODE_BLOCK_11 are present.
+
+Now produce final output.# Como usar java get pdf page count e extrair metadados PDF em Java com GroupDocs
+
+Já se pegou precisando capturar rapidamente informações básicas de centenas de documentos? Você não está sozinho. Seja construindo um sistema de gerenciamento de documentos, processando arquivos legais ou apenas tentando organizar aquela unidade compartilhada caótica, **how to java get pdf page count** programaticamente pode economizar horas de trabalho manual. Neste guia, vamos percorrer a extração do tipo de arquivo, contagem de páginas e tamanho usando Java — perfeito para quem precisa lidar com o desafio **pdf file type java** de forma eficiente e também **extract pdf metadata java**.
 
 ## Respostas Rápidas
-- **Qual biblioteca é a melhor para metadados de PDF em Java?** GroupDocs.Annotation fornece uma API simples para extrair metadados sem carregar o conteúdo completo.  
+- **Qual biblioteca é a melhor para PDF metadata em Java?** GroupDocs.Annotation fornece uma API simples para extrair metadados sem carregar o conteúdo completo.  
 - **Preciso de uma licença?** Um teste gratuito funciona para desenvolvimento; uma licença completa é necessária para produção.  
-- **Posso extrair metadados de outros formatos?** Sim — o GroupDocs suporta Word, Excel e muitos outros.  
-- **Quão rápida é a extração de metadados?** Normalmente milissegundos por arquivo, pois lê apenas as informações do cabeçalho.  
+- **Posso extrair metadados de outros formatos?** Sim — GroupDocs suporta Word, Excel e muitos outros.  
+- **Quão rápida é a extração de metadados?** Tipicamente milissegundos por arquivo, pois lê apenas as informações do cabeçalho.  
 - **É seguro para lotes grandes?** Sim, quando você usa try‑with‑resources e padrões de processamento em lote.
 
-## O que é Extração de Metadados de PDF?
-Os metadados de PDF incluem propriedades como número de páginas, tipo de arquivo, tamanho, autor, data de criação e quaisquer campos personalizados incorporados ao documento. Extrair esses dados permite que aplicações cataloguem, pesquisem e validem arquivos automaticamente sem abri‑los completamente.
+## Como java get pdf page count com GroupDocs
+Obter a contagem de páginas costuma ser o primeiro passo quando você precisa organizar ou validar PDFs. As seções a seguir mostram exatamente como **java get pdf page count** enquanto também obtém outros metadados úteis.
 
-## Por que Extrair Metadados de PDF em Java?
-- **Sistemas de Gerenciamento de Conteúdo** podem auto‑taggear e indexar arquivos assim que são enviados.  
-- **Equipes Jurídicas & de Conformidade** podem verificar propriedades de documentos para auditorias.  
-- **Gerenciamento de Ativos Digitais** torna‑se simplificado com marcação automática.  
-- **Otimização de Desempenho** evita carregar PDFs grandes quando apenas as informações do cabeçalho são necessárias.
+## O que é Extração de Metadados PDF?
+Os metadados PDF incluem propriedades como número de páginas, tipo de arquivo, tamanho, autor, data de criação e quaisquer campos personalizados incorporados ao documento. Extrair esses dados permite que aplicativos cataloguem, pesquisem e validem arquivos automaticamente sem abri‑los completamente.
+
+## Por que Extrair Metadados PDF em Java?
+- **Content Management Systems** podem auto‑tag e indexar arquivos assim que são enviados.  
+- **Legal & Compliance** podem verificar propriedades de documentos para auditorias.  
+- **Digital Asset Management** torna‑se simplificado com marcação automática.  
+- **Performance Optimization** evita carregar PDFs grandes quando apenas as informações do cabeçalho são necessárias.
 
 ## Pré‑requisitos e Configuração
 - **Java 8+** (Java 11+ recomendado)  
 - IDE de sua escolha (IntelliJ, Eclipse, VS Code)  
 - Maven ou Gradle para dependências  
-- Conhecimento básico de manipulação de arquivos em Java  
+- Conhecimento básico de manipulação de arquivos Java  
 
 ### Configurando GroupDocs.Annotation para Java
 Adicione o repositório e a dependência ao seu `pom.xml`:
@@ -70,8 +87,8 @@ Adicione o repositório e a dependência ao seu `pom.xml`:
 
 **Dica profissional:** Verifique a página de releases do GroupDocs para versões mais recentes; lançamentos mais novos costumam trazer melhorias de desempenho.
 
-## Como Extrair Metadados de PDF com GroupDocs
-A seguir, um passo a passo. Os blocos de código permanecem inalterados em relação ao tutorial original para preservar a funcionalidade.
+## Como Extrair Metadados PDF com GroupDocs
+A seguir, um passo a passo. Os blocos de código permanecem inalterados do tutorial original para preservar a funcionalidade.
 
 ### Etapa 1: Inicializar o Annotator
 ```java
@@ -88,7 +105,7 @@ try (final Annotator annotator = new Annotator(inputFile)) {
     // Handle the error appropriately for your use case
 }
 ```
-*Por que usar try‑with‑resources?* Ele fecha automaticamente o `Annotator`, evitando vazamentos de memória — crucial ao processar muitos arquivos.
+*Por que usar try‑with‑resources?* Ele fecha automaticamente o `Annotator`, prevenindo vazamentos de memória — crucial ao processar muitos arquivos.
 
 ### Etapa 2: Obter as Informações do Documento
 ```java
@@ -116,11 +133,11 @@ try (final Annotator annotator = new Annotator(inputFile)) {
     }
 }
 ```
-`getDocumentInfo()` lê apenas o cabeçalho, portanto até PDFs grandes são processados rapidamente.
+`getDocumentInfo()` lê apenas o cabeçalho, então até PDFs grandes são processados rapidamente. Isso demonstra como **java get pdf page count** de forma eficiente enquanto também extrai outras propriedades.
 
 ## Armadilhas Comuns & Como Evitá‑las
 ### Problemas com Caminhos de Arquivo
-Caminhos absolutos codificados quebram quando você muda de ambiente. Use caminhos relativos ou variáveis de ambiente:
+Caminhos absolutos codificados rígidos quebram ao mudar para outro ambiente. Use caminhos relativos ou variáveis de ambiente:
 
 ```java
 String baseDir = System.getProperty("user.dir");
@@ -128,7 +145,7 @@ String inputFile = baseDir + "/documents/sample.pdf";
 ```
 
 ### Gerenciamento de Memória
-Ao lidar com lotes grandes, sempre feche os recursos prontamente e monitore o uso do heap. Processar arquivos em blocos menores evita `OutOfMemoryError`.
+Ao lidar com lotes grandes, sempre feche recursos prontamente e monitore o uso do heap. Processar arquivos em blocos menores evita `OutOfMemoryError`.
 
 ### Tratamento de Exceções
 Capture exceções específicas para manter diagnósticos úteis:
@@ -143,7 +160,7 @@ try {
 }
 ```
 
-## Dicas de Otimização de Desempenho
+## Dicas de Otimização de Performance
 ### Exemplo de Processamento em Lote
 ```java
 List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.docx", "doc3.xlsx");
@@ -250,44 +267,44 @@ document.processing.timeout=30s
 document.processing.batch-size=100
 ```
 
-## Solução de Problemas Comuns
-- **Arquivo Não Encontrado:** Verifique o caminho, permissões e se nenhum outro processo está bloqueando o arquivo.  
+## Solucionando Problemas Comuns
+- **File Not Found:** Verifique o caminho, permissões e se nenhum outro processo está bloqueando o arquivo.  
 - **OutOfMemoryError:** Aumente o heap da JVM (`-Xmx2g`) ou processe arquivos em lotes menores.  
-- **Formato Não Suportado:** Consulte a lista de formatos suportados pelo GroupDocs; recorra ao Apache Tika para tipos desconhecidos.  
+- **Unsupported Format:** Verifique a lista de formatos suportados pelo GroupDocs; recorra ao Apache Tika para tipos desconhecidos.  
 
 ## Perguntas Frequentes
 **Q: Como lidar com PDFs protegidos por senha?**  
 A: Passe um objeto `LoadOptions` com a senha ao construir o `Annotator`.  
 
 **Q: A extração de metadados é rápida para PDFs grandes?**  
-A: Sim — porque apenas as informações do cabeçalho são lidas, mesmo PDFs com centenas de páginas terminam em milissegundos.  
+A: Sim — porque apenas as informações do cabeçalho são lidas, até PDFs com centenas de páginas terminam em milissegundos.  
 
 **Q: Posso extrair propriedades personalizadas?**  
 A: Use `info.getCustomProperties()` para recuperar campos de metadados definidos pelo usuário.  
 
 **Q: É seguro processar arquivos de fontes não confiáveis?**  
-A: Valide o tamanho e tipo do arquivo e considere isolar o processo de extração em um sandbox.  
+A: Valide o tamanho e tipo do arquivo e considere isolar o processo de extração em sandbox.  
 
 **Q: E se um documento estiver corrompido?**  
-A: O GroupDocs lida graciosamente com pequenas corrupções; em casos graves, capture exceções e ignore o arquivo.  
+A: O GroupDocs lida graciosamente com pequenas corrupções; para casos graves, capture exceções e pule o arquivo.  
 
 ## Conclusão
-Agora você tem uma abordagem completa e pronta para produção de **como extrair metadados de PDF** em Java. Comece com o exemplo simples do `Annotator`, depois escale usando processamento em lote, cache e tratamento robusto de erros. Os padrões mostrados aqui serão úteis ao construir pipelines maiores de processamento de documentos.
+Agora você tem uma abordagem completa e pronta para produção para **java get pdf page count** e extrair metadados PDF em Java. Comece com o exemplo simples do `Annotator`, depois escale usando processamento em lote, cache e tratamento robusto de erros. Os padrões mostrados aqui serão úteis ao construir pipelines de processamento de documentos maiores.
 
 ---
 
 **Recursos e Links**
 
-- **Documentação:** [GroupDocs.Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Referência de API:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
-- **Downloads:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Opções de Compra:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Teste Gratuito:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
-- **Licença de Desenvolvimento:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Suporte da Comunidade:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+- **Documentation:** [GroupDocs.Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)
+- **API Reference:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- **Downloads:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)
+- **Purchase Options:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
+- **Free Trial:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
+- **Development License:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- **Community Support:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Last Updated:** 2025-12-26  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**Última atualização:** 2026-02-26  
+**Testado com:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs
