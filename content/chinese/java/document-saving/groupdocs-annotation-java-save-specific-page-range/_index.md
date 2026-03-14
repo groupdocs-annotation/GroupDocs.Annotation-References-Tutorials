@@ -1,69 +1,69 @@
 ---
 categories:
 - Java Development
-date: '2026-01-10'
-description: 学习如何使用 Java 的 try‑with‑resources 保存带注释文档的特定页面，使用 GroupDocs.Annotation。包括
+date: '2026-03-14'
+description: 学习如何使用 Java 的 try‑with‑resources 将带注释的文档的特定页面保存下来，使用 GroupDocs.Annotation。包括
   Spring Boot 文档服务示例。
 keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
   document annotation tutorial, selective PDF page saving Java, extract annotated
   pages
-lastmod: '2026-01-10'
+lastmod: '2026-03-14'
 linktitle: Save Specific Pages Java Annotation
 tags:
 - groupdocs
 - java-annotation
 - document-processing
 - pdf-manipulation
-title: Java try-with-resources – 从带注释的文档中保存特定页面
+title: 使用 Java 的 try‑with‑resources – 从带注释的文档中保存特定页面
 type: docs
 url: /zh/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# 如何在 Java 中从带注释的文档中保存特定页面
+.# 如何在 Java 中从带注释的文档中保存特定页面
 
 ## 介绍
 
-是否曾经在海量带注释的文档中苦苦挣扎，而你只需要几页特定的页面？使用 **try with resources java**，你可以利用 GroupDocs.Annotation 高效地提取所需的页面。无论是处理法律合同、技术手册还是研究论文，提取仅相关的页面都能节省存储空间、加快处理速度，并保持工作流整洁。
+有没有遇到过在海量带注释的文档中苦苦挣扎，却只需要几页特定页面的情况？使用 **try with resources java**，你可以借助 GroupDocs.Annotation 高效提取所需的页面。无论是处理法律合同、技术手册还是研究论文，提取仅相关的页面都能节省存储空间、加快处理速度，并保持工作流整洁。
 
 在本指南中，我们将逐步讲解你需要了解的所有内容——从库的设置到保持 Java 应用平稳运行的高级性能技巧。
 
-**通过本教程你将掌握的内容：**
+**你将在结束时掌握的内容：**
 - 在 Java 项目中正确设置 GroupDocs.Annotation
 - 使用简洁、可维护的代码实现选择性页面保存
 - 避免大多数开发者常犯的陷阱
 - 优化大文档处理的性能
-- 在问题变成麻烦之前进行故障排除
+- 在问题演变成麻烦之前进行故障排除
 
-## 快速答疑
-- **What does “try with resources java” do?** It automatically closes the Annotator, preventing file locks and memory leaks.  
-- **Which library handles page‑range saving?** `GroupDocs.Annotation` provides `SaveOptions` with `setFirstPage`/`setLastPage`.  
-- **Can I use this in a Spring Boot service?** Yes – see the “Spring Boot Document Service Integration” section.  
-- **Do I need a license?** A free trial works for development; a full license is required for production.  
-- **Is it safe for large PDFs (1000+ pages)?** Use load‑only‑annotated‑pages and batch processing to keep memory usage low.
+## 快速答案
+- **“try with resources java” 是做什么的？** 它会自动关闭 Annotator，防止文件锁定和内存泄漏。  
+- **哪个库处理页面范围保存？** `GroupDocs.Annotation` 提供带有 `setFirstPage`/`setLastPage` 的 `SaveOptions`。  
+- **我可以在 Spring Boot 服务中使用吗？** 可以——请参阅 “Spring Boot Document Service Integration” 部分。  
+- **我需要许可证吗？** 免费试用可用于开发；生产环境需要完整许可证。  
+- **对大型 PDF（1000+ 页）安全么？** 使用 load‑only‑annotated‑pages 并进行批处理以保持低内存使用。
 
-## 为什么要保存特定页面？（实际场景）
+## 为什么要保存特定页面？（真实场景）
 
-在深入技术细节之前，让我们先谈谈为何此功能是游戏规则的改变者：
+在深入技术细节之前，让我们先谈谈为何此功能是改变游戏规则的关键：
 
-**Storage Efficiency**：一本 500 页的手册只在 20 页上有注释？为什么要保存全部 500 页，而不是提取相关的 20 页，将文件大小缩小 96 %？
+**存储效率**：一份 500 页的手册，仅在 20 页上有注释？为何要保存全部 500 页，而不是提取相关的 20 页，将文件大小减少 96 %？
 
-**Faster Processing**：文件更小意味着上传、下载和处理更快。你的用户（以及你的服务器）会感谢你。
+**更快的处理**：更小的文件意味着更快的上传、下载和处理。你的用户（以及服务器）都会感激你。
 
-**Better User Experience**：没人想滚动数百页去寻找带注释的章节。直接提供他们需要的内容即可。
+**更好的用户体验**：没有人愿意滚动数百页去寻找带注释的部分。给他们恰好需要的内容。
 
-**Compliance and Security**：在受监管的行业中，你可能只能共享文档的特定章节。选择性保存让合规更容易。
+**合规与安全**：在受监管行业，你可能只能共享文档的特定章节。选择性保存让合规更容易。
 
 ## 前置条件和设置
 
 ### 你需要的东西
 
-- **Java Development Kit (JDK)**：版本 8 或更高（推荐 JDK 11+）  
-- **Maven or Gradle**：用于依赖管理  
-- **GroupDocs.Annotation for Java**：版本 25.2 或更高  
-- **Basic Java knowledge**：了解文件 I/O 和面向对象编程  
+- **Java Development Kit (JDK)**：版本 8 或更高（推荐 JDK 11+）
+- **Maven 或 Gradle**：用于依赖管理
+- **GroupDocs.Annotation for Java**：版本 25.2 或更高
+- **基本的 Java 知识**：了解文件 I/O 和面向对象编程  
 
-### 设置 GroupDocs.Annotation for Java
+### 为 Java 设置 GroupDocs.Annotation
 
 #### Maven 配置
 
@@ -86,7 +86,7 @@ weight: 1
 </dependencies>
 ```
 
-#### Gradle 设置（如果你是 Gradle 队伍）
+#### Gradle 设置（如果你是 Gradle 团队）
 
 ```gradle
 repositories {
@@ -102,13 +102,17 @@ dependencies {
 
 ### 获取许可证
 
-下面的内容是大多数教程不会告诉你的：**先使用免费试用**。真的。不要把事情弄得过于复杂。
+以下是大多数教程不会告诉你的：**先使用免费试用**。真的。不要把事情弄得过于复杂。
 
-- **Free Trial**：完美用于测试和开发——从 [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) 获取  
-- **Temporary License**：需要更多时间评估？获取 [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Full License**：准备投产？[Purchase here](https://purchase.groupdocs.com/buy)
+- **免费试用**：非常适合测试和开发——从 [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) 获取
+- **临时许可证**：需要更多评估时间？获取 [temporary license](https://purchase.groupdocs.com/temporary-license/)
+- **完整许可证**：准备投入生产？[在此购买](https://purchase.groupdocs.com/buy)
 
 专业提示：试用版有一些限制，但足以完成本教程并构建概念验证。
+
+## 使用 try with resources java 进行选择性页面保存
+
+环境准备就绪后，让我们看看 **try with resources java** 如何让页面范围操作既安全又简洁。该模式确保 `Annotator` 实例自动释放，从而消除文件锁定问题并保持内存使用整洁。
 
 ## 核心实现：保存特定页面范围
 
@@ -118,7 +122,7 @@ dependencies {
 
 #### 步骤 1：设置文件路径管理
 
-首先，创建一个用于处理文件路径的工具类（以后需要更改目录时你会感谢我的）：
+首先，创建一个用于处理文件路径的工具类（当你需要更改目录时会感谢我的）。
 
 ```java
 import org.apache.commons.io.FilenameUtils;
@@ -130,11 +134,11 @@ public class FilePathConfiguration {
 }
 ```
 
-**Why this approach?** It keeps your file‑path logic centralized and makes testing easier. Using `FilenameUtils` ensures you preserve the original file extension automatically.
+**为什么采用这种方法？** 它将文件路径逻辑集中管理，便于测试。使用 `FilenameUtils` 可自动保留原始文件扩展名。
 
 #### 步骤 2：实现页面范围保存
 
-下面是关键实现：
+魔法就在这里发生：
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -156,13 +160,13 @@ public class SaveSpecificPageRange {
 ```
 
 **这里发生了什么：**
-- 使用 **try‑with‑resources java** 块 (`try ( … )`) 自动关闭 `Annotator`，消除文件锁定问题。  
-- `setFirstPage(2)` 和 `setLastPage(4)` 定义了包含范围（第 2‑4 页）。  
-- 范围在两端都是 **inclusive**（包含），这是很多开发者容易忽视的细节。
+- 我们使用 **try‑with‑resources java** 块（`try ( … )`），自动关闭 `Annotator`，消除文件锁定问题。  
+- `setFirstPage(2)` 和 `setLastPage(4)` 定义了包含的范围（第 2‑4 页）。  
+- 该范围在两端都是 **包含** 的——这是很多开发者容易出错的细节。
 
 ### 高级文件路径配置
 
-对于生产环境的应用，你会需要更灵活的路径处理：
+对于生产应用，你会需要更灵活的路径处理：
 
 ```java
 public class FilePathConfiguration {
@@ -186,13 +190,13 @@ public class FilePathConfiguration {
 
 现在可以自动生成类似 `contract_pages_2-4.pdf` 的文件名。
 
-## 常见陷阱及如何避免
+## 常见陷阱及规避方法
 
 ### 陷阱 #1：页面索引混淆
 
-**The Problem**：假设页面编号从 0 开始（在 GroupDocs.Annotation 中并非如此）。
+**问题**：假设页面编号从 0 开始（在 GroupDocs.Annotation 中并非如此）。
 
-**The Solution**：页面编号从 1 开始，就像真实文档一样。第 1 页就是第一页，而不是第 0 页。
+**解决方案**：页面编号从 1 开始，就像真实文档一样。第 1 页是第一页，而不是第 0 页。
 
 ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
@@ -204,9 +208,9 @@ saveOptions.setFirstPage(1);
 
 ### 陷阱 #2：资源泄漏
 
-**The Problem**：未正确关闭 Annotator，导致文件锁定和内存泄漏。
+**问题**：未正确关闭 Annotator，导致文件锁定和内存泄漏。
 
-**The Solution**：始终使用 **try‑with‑resources java** 或显式关闭：
+**解决方案**：始终使用 **try‑with‑resources java** 或显式关闭：
 
 ```java
 // Good - automatic resource management
@@ -228,9 +232,9 @@ try {
 
 ### 陷阱 #3：无效的页面范围
 
-**The Problem**：指定的页面范围在文档中不存在。
+**问题**：指定的页面范围在文档中不存在。
 
-**The Solution**：先验证范围是否合法：
+**解决方案**：先验证你的范围：
 
 ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
@@ -261,7 +265,7 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
 
 ### 大文档的内存管理
 
-处理大文档（100 + 页）时，内存使用尤为重要：
+处理大型文档（100 页以上）时，内存使用尤为重要：
 
 ```java
 public class OptimizedPageRangeSaver {
@@ -287,8 +291,8 @@ public class OptimizedPageRangeSaver {
 
 **关键优化策略**
 - `setLoadOnlyAnnotatedPages(true)` 减少内存占用。  
-- `setAnnotationsOnly(true)` 生成仅包含注释层的轻量文件。  
-- 如果文件数量众多，采用批处理方式。
+- `setAnnotationsOnly(true)` 创建仅包含注释层的轻量文件。  
+- 如果有大量文件，请批量处理文档。
 
 ### 批量处理多个文档
 
@@ -314,7 +318,7 @@ public class BatchPageRangeSaver {
 
 ### Spring Boot 文档服务集成
 
-下面是一个用于页面范围保存的简易 Spring Boot 服务（注意 **spring boot document service** 的措辞）：
+下面是一个用于页面范围保存的简单 Spring Boot 服务（请注意 **spring boot document service** 的措辞）：
 
 ```java
 @Service
@@ -370,7 +374,7 @@ public class LegalDocumentProcessor {
 
 ### 教育内容管理
 
-教师为学生作业提取教材中的特定章节：
+教师为学生作业提取教材的特定章节：
 
 ```java
 public class EducationalContentExtractor {
@@ -416,25 +420,25 @@ public class QAReviewExtractor {
 
 ## 最佳实践总结
 
-1. 始终验证输入参数——在处理前检查页面范围。  
-2. 使用 try‑with‑resources java ——防止资源泄漏和文件锁定问题。  
-3. 实现适当的错误处理——不要让单个错误文件导致整个批次崩溃。  
-4. 考虑内存使用——对大文档使用 `setLoadOnlyAnnotatedPages(true)`。  
-5. 使用各种文件类型进行测试——PDF、Word、PowerPoint 可能表现不同。  
-6. 监控性能——在生产环境中关注处理时间和内存使用。
+1. **始终验证输入参数**——在处理前检查页面范围。  
+2. **使用 try‑with‑resources java**——防止资源泄漏和文件锁定问题。  
+3. **实现适当的错误处理**——不要让单个错误文件导致整个批次崩溃。  
+4. **考虑内存使用**——对大文档使用 `setLoadOnlyAnnotatedPages(true)`。  
+5. **使用各种文件类型进行测试**——PDF、Word、PowerPoint 可能表现不同。  
+6. **监控性能**——在生产环境中关注处理时间和内存使用。
 
 ## 常见问题排查
 
 ### 问题：“文件被锁定”错误
 
-**Symptoms**：尝试保存时抛出异常，提示文件锁定。  
+**症状**：尝试保存时抛出异常，提示文件锁定。  
 
-**Causes**：  
-- 前一次操作未正确关闭 Annotator。  
-- 文件仍被其他应用打开。  
+**原因**：  
+- 先前操作中未正确关闭 Annotator。  
+- 文件仍在其他应用中打开。  
 - 权限不足。  
 
-**Solutions**：
+**解决方案**：
 
 ```java
 // Ensure proper cleanup
@@ -454,18 +458,18 @@ if (!file.getParentFile().canWrite()) {
 
 ### 问题：内存不足错误
 
-**Symptoms**：处理大文档时出现 `OutOfMemoryError`。  
+**症状**：处理大型文档时出现 `OutOfMemoryError`。  
 
-**Solutions**：  
+**解决方案**：  
 1. 增加 JVM 堆大小，例如 `-Xmx2g`。  
-2. 使用前文展示的优化加载选项。  
-3. 将文档分批处理。
+2. 使用前面展示的优化加载选项。  
+3. 将文档分成更小的批次处理。
 
 ### 问题：注释未保留
 
-**Symptoms**：输出文件不包含原始注释。  
+**症状**：输出文件不包含原始注释。  
 
-**Solution**：确保未在保存时剥离注释：
+**解决方案**：确保未剥离注释：
 
 ```java
 SaveOptions saveOptions = new SaveOptions();
@@ -474,38 +478,38 @@ saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
 
-## 常见问答
+## 常见问题
 
-**Q: 能否保存非连续的页面（如第 1、3、7 页）？**  
-A: 单次操作无法直接实现。需要对每个范围单独保存，或在后期合并结果。
+**问：我能保存非连续页面（如第 1、3、7 页）吗？**  
+**答**：单次操作无法直接实现。需要对每个范围分别保存，或随后合并结果。
 
-**Q: 该方法能处理受密码保护的文档吗？**  
-A: 能，但在创建 `Annotator` 时必须提供密码，例如 `new Annotator(inputFile, loadOptions.setPassword("your_password"))`。
+**问：这对受密码保护的文档有效吗？**  
+**答**：可以，但在创建 `Annotator` 时必须提供密码：`new Annotator(inputFile, loadOptions.setPassword("your_password"))`。
 
-**Q: 支持哪些文件格式？**  
-A: PDF、Microsoft Word、Excel、PowerPoint 等多种格式。完整列表请查阅 [official documentation](https://docs.groupdocs.com/annotation/java/)。
+**问：支持哪些文件格式？**  
+**答**：PDF、Microsoft Word、Excel、PowerPoint 等多种格式。请查看[官方文档](https://docs.groupdocs.com/annotation/java/)获取完整列表。
 
-**Q: 能只保存注释而不保存原始内容吗？**  
-A: 完全可以——设置 `saveOptions.setAnnotationsOnly(true)` 即可生成仅包含注释的文件。
+**问：我能只保存注释而不包括原始内容吗？**  
+**答**：完全可以——设置 `saveOptions.setAnnotationsOnly(true)` 可创建仅含注释的文件。
 
-**Q: 如何处理非常大的文档（1000+ 页）？**  
-A: 使用 `setLoadOnlyAnnotatedPages(true)`，分块处理，并考虑增大 JVM 堆。
+**问：如何处理非常大的文档（1000+ 页）？**  
+**答**：使用 `setLoadOnlyAnnotatedPages(true)`，分块处理，并考虑增加 JVM 堆。
 
-**Q: 是否可以在保存前预览页面？**  
-A: GroupDocs.Annotation 侧重于处理而非查看，但可以获取文档信息（页数、注释位置），帮助决定要提取的范围。
+**问：是否有办法在保存前预览页面？**  
+**答**：GroupDocs.Annotation 侧重于处理而非查看，但你可以获取文档信息（页数、注释位置），帮助决定提取哪些范围。
 
 ## 资源
 
-- **Documentation**：[GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API Reference**：[Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **Download**：[Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Purchase**：[License Options](https://purchase.groupdocs.com/buy)  
-- **Free Trial**：[Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**：[Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Support**：[Community Forum](https://forum.groupdocs.com/c/annotation/)
+- **文档**： [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **API 参考**： [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- **下载**： [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- **购买**： [License Options](https://purchase.groupdocs.com/buy)  
+- **免费试用**： [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- **临时许可证**： [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- **支持**： [Community Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Last Updated:** 2026-01-10  
-**Tested With:** GroupDocs.Annotation 25.2 (Java)  
-**Author:** GroupDocs
+**最后更新：** 2026-03-14  
+**测试环境：** GroupDocs.Annotation 25.2 (Java)  
+**作者：** GroupDocs
