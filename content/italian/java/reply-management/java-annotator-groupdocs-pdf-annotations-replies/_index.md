@@ -1,45 +1,88 @@
 ---
-"date": "2025-05-06"
-"description": "Scopri come gestire in modo efficiente annotazioni e risposte PDF utilizzando GroupDocs.Annotation nelle tue applicazioni Java. Semplifica la collaborazione sui documenti con la nostra guida completa."
-"title": "Annotazione PDF Java&#58; crea e gestisci annotazioni e risposte con GroupDocs.Annotation per Java"
-"url": "/it/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/"
+categories:
+- Java Development
+date: '2026-03-17'
+description: Diventa esperto nella collaborazione PDF in tempo reale in Java usando
+  GroupDocs.Annotation. Impara a creare flussi di lavoro collaborativi, gestire le
+  risposte degli utenti e costruire sistemi di annotazione professionali.
+keywords: real time pdf collaboration, Java PDF annotation library, GroupDocs annotation
+  tutorial, PDF annotation management Java, Java document collaboration, how to add
+  annotations to PDF in Java
+lastmod: '2026-03-17'
+linktitle: Java PDF Annotations with GroupDocs
+tags:
+- pdf-annotation
+- groupdocs
+- document-collaboration
+- java-tutorial
+title: Collaborazione PDF in tempo reale con la libreria Java per annotazioni PDF
 type: docs
-"weight": 1
+url: /it/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/
+weight: 1
 ---
 
-# Annotazione PDF Java: crea e gestisci annotazioni e risposte con GroupDocs.Annotation per Java
+# Collaborazione PDF in tempo reale con la libreria Java PDF Annotation
 
 ## Introduzione
 
-Gestire le annotazioni nei documenti PDF può essere complicato, soprattutto con la crescente diffusione della documentazione digitale. Questo tutorial vi guiderà nell'utilizzo di Java Annotator con GroupDocs.Annotation per semplificare il processo di aggiunta e gestione di commenti o feedback nei vostri documenti.
+Ti è mai capitato di affogare in catene di email cercando di raccogliere feedback su documenti PDF? Non sei solo. Gestire annotazioni e feedback collaborativi sui PDF può rapidamente diventare un incubo, soprattutto quando si hanno più revisori e flussi di lavoro documentali complessi. **Real time pdf collaboration** risolve esattamente questo problema consentendo ai revisori di discutere e annotare direttamente all'interno del documento, eliminando le infinite email di andata e ritorno.
 
-**Cosa imparerai:**
-- Inizializza la libreria GroupDocs.Annotation nel tuo progetto Java.
-- Creare profili utente per la gestione delle annotazioni.
-- Configura e applica annotazioni di area sui documenti PDF.
-- Allega le risposte alle annotazioni per un feedback collaborativo.
-- Salva in modo efficiente i PDF annotati utilizzando le funzionalità di GroupDocs.Annotation.
+In questo tutorial completo, scoprirai come trasformare il tuo processo di collaborazione sui documenti usando GroupDocs.Annotation per Java – trasformando cicli di feedback caotici in sistemi di annotazione snelli e organizzati.
 
-Prima di iniziare, vediamo alcuni prerequisiti per garantire un processo di configurazione senza intoppi.
+**Cosa imparerai entro la fine di questa guida:**
+- Configurare GroupDocs.Annotation nel tuo progetto Java (è più facile di quanto pensi)
+- Creare sistemi di gestione utenti sofisticati per le annotazioni
+- Costruire annotazioni di area che aiutano realmente gli utenti a collaborare
+- Gestire conversazioni a thread tramite risposte alle annotazioni
+- Salvare ed esportare PDF annotati come un professionista
 
-## Prerequisiti
+Che tu stia costruendo un sistema di gestione documenti, creando flussi di lavoro di revisione collaborativa, o abbia semplicemente bisogno di aggiungere capacità di annotazione alla tua applicazione Java esistente, questo tutorial ti copre.
 
-### Librerie e dipendenze richieste
-Assicurati di avere Java installato sul tuo sistema, insieme a un IDE come IntelliJ IDEA o Eclipse per facilitare lo sviluppo. Avrai anche bisogno di Maven come strumento di build per gestire le dipendenze.
+## Risposte rapide
+- **Cosa consente la real time pdf collaboration?** Consente a più utenti di aggiungere, visualizzare e discutere le annotazioni all'interno dello stesso PDF istantaneamente.
+- **Quale libreria supporta questo in Java?** GroupDocs.Annotation per Java fornisce un'API completa per l'annotazione PDF collaborativa.
+- **Ho bisogno di una licenza per provarla?** Sì, è disponibile una prova gratuita o una licenza temporanea per sviluppo e test.
+- **Posso esportare il PDF annotato?** Assolutamente – la libreria ti permette di salvare il documento finale con tutte le annotazioni e le risposte.
+- **È adatta a PDF di grandi dimensioni?** Con impostazioni di memoria appropriate e lazy loading, funziona bene anche con file superiori a 50 MB.
 
-### Requisiti di configurazione dell'ambiente
-- Installare Java Development Kit (JDK) 8 o versione successiva.
-- Imposta un progetto Maven nel tuo IDE preferito.
+## Cos'è la collaborazione PDF in tempo reale?
+La real time pdf collaboration si riferisce alla capacità di più utenti di visualizzare, aggiungere e discutere simultaneamente le annotazioni su un documento PDF, con le modifiche riflesse istantaneamente per tutti i partecipanti. Questo approccio mantiene il feedback contestuale, riduce il sovraccarico di email e accelera i cicli di revisione.
 
-### Prerequisiti di conoscenza
-Una conoscenza di base della programmazione Java e delle annotazioni PDF è utile, ma non strettamente necessaria. Ti forniremo tutto ciò che ti serve per iniziare.
+## Perché scegliere GroupDocs.Annotation per progetti PDF Java?
 
-## Impostazione di GroupDocs.Annotation per Java
+Prima di immergersi nell'implementazione, parliamo del motivo per cui GroupDocs.Annotation si distingue nel campo affollato delle librerie PDF Java. A differenza degli strumenti di manipolazione PDF di base, GroupDocs.Annotation è stato progettato specificamente per scenari di collaborazione.
 
-Per utilizzare GroupDocs.Annotation per Java, configurare Maven in modo da includere le dipendenze richieste:
+**Applicazioni reali dove questo brilla:**
+- **Revisione di documenti legali**: Studi legali che gestiscono annotazioni di contratti da più partner
+- **Piattaforme educative**: Insegnanti che forniscono feedback dettagliati sulle consegne degli studenti
+- **Documentazione software**: Team di sviluppo che collaborano su specifiche tecniche
+- **Assicurazione qualità**: Team QA che marcano mockup di design e documenti di requisiti
 
-### Configurazione Maven
-Aggiungi il seguente repository e la configurazione delle dipendenze nel tuo `pom.xml` file:
+La bellezza di questa libreria risiede nella sua capacità di gestire flussi di lavoro di annotazione complessi mantenendo un codice pulito e leggibile. Non stai solo aggiungendo semplici note di testo – stai costruendo sistemi di collaborazione completi.
+
+## Prerequisiti e configurazione dell'ambiente
+
+### Cosa ti servirà prima di iniziare
+
+Assicuriamoci di avere tutto pronto per un'esperienza di sviluppo fluida. Non preoccuparti se ti manca qualcosa – ti guiderò attraverso ogni requisito.
+
+**Strumenti e conoscenze richiesti:**
+- Java Development Kit (JDK) 8 o superiore (JDK 11+ consigliato per migliori prestazioni)
+- Maven per la gestione delle dipendenze (Gradle funziona anche, ma ci concentreremo su Maven)
+- Il tuo IDE preferito (IntelliJ IDEA, Eclipse o VS Code con estensioni Java)
+- Conoscenza di base della programmazione Java (dovresti sentirti a tuo agio con classi e oggetti)
+- Una certa familiarità con i concetti PDF (utile ma non essenziale)
+
+**Configurazione dell'ambiente di sviluppo:**
+La buona notizia è che se sai eseguire una semplice applicazione Java, sei già al 90 % pronto. La libreria GroupDocs.Annotation gestisce tutto il lavoro pesante per la manipolazione dei PDF, quindi non devi preoccuparti degli internals complessi dei PDF.
+
+### Configurare GroupDocs.Annotation per Java
+
+È qui che molti sviluppatori si bloccano, ma lo renderò il più indolore possibile. La chiave è ottenere la configurazione Maven corretta fin dall'inizio.
+
+#### Configurazione Maven che funziona davvero
+
+Add this to your `pom.xml` file (make sure you place it in the right sections):
 
 ```xml
 <repositories>
@@ -59,14 +102,21 @@ Aggiungi il seguente repository e la configurazione delle dipendenze nel tuo `po
 </dependencies>
 ```
 
-### Fasi di acquisizione della licenza
-GroupDocs offre una prova gratuita per esplorare le sue funzionalità. Per un utilizzo prolungato, si consiglia di richiedere una licenza temporanea o di acquistarne una se il progetto richiede un impegno a lungo termine.
-1. **Prova gratuita:** Scarica la libreria da [Pagina di rilascio di GroupDocs](https://releases.groupdocs.com/annotation/java/) e inizia a sperimentare.
-2. **Licenza temporanea:** Richiedi una licenza temporanea tramite [Pagina di acquisto di GroupDocs](https://purchase.groupdocs.com/temporary-license/).
-3. **Acquistare:** Per l'accesso completo, acquista una licenza tramite [Pagina di acquisto di GroupDocs](https://purchase.groupdocs.com/buy).
+**Suggerimento**: Se ricevi errori di risoluzione delle dipendenze, prova a ricaricare il tuo progetto Maven. In IntelliJ, è `Ctrl+Shift+O` (Windows/Linux) o `Cmd+Shift+I` (Mac). In Eclipse, fai clic destro sul progetto → Maven → Reload Project.
 
-### Inizializzazione e configurazione di base
-Per inizializzare GroupDocs.Annotation nella tua applicazione Java, crea un'istanza di `Annotator` con il tuo file PDF di input:
+#### Licenze: Il tuo percorso verso app pronte per la produzione
+
+GroupDocs offers several licensing options, and choosing the right one can save you headaches down the road:
+
+1. **Free Trial** (perfetto per iniziare): Scarica da [GroupDocs Release Page](https://releases.groupdocs.com/annotation/java/) e inizia a sperimentare subito
+2. **Temporary License** (ideale per sviluppo e test): Richiedi tramite [GroupDocs Purchase Page](https://purchase.groupdocs.com/temporary-license/) – solitamente elaborata entro 24 ore
+3. **Full License** (per il deployment in produzione): Acquista tramite [GroupDocs Buy Page](https://purchase.groupdocs.com/buy)
+
+**Quando aggiornare**: La prova gratuita è ottima per apprendere e prototipare, ma avrai bisogno di una licenza temporanea una volta che inizi a costruire funzionalità serie. Le app in produzione richiedono sicuramente una licenza completa.
+
+#### Inizializzazione di base (Il tuo primo successo)
+
+Let's get something working right away. This simple initialization will confirm everything's set up correctly:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -79,32 +129,42 @@ public class InitializeAnnotation {
 }
 ```
 
-## Guida all'implementazione
+Se questo compila ed esegue senza errori, congratulazioni! Sei pronto per iniziare a costruire le funzionalità di annotazione.
 
-Analizziamo nel dettaglio il processo di implementazione nelle sue caratteristiche distintive.
+## Guida completa all'implementazione
 
-### Funzionalità 1: Inizializza l'annotatore
-**Panoramica:** Questa funzionalità imposta l'applicazione Java per funzionare con GroupDocs.Annotation inizializzando un `Annotator` oggetto.
+Ora la parte divertente – costruire un vero sistema di annotazione. Dividerò il tutto in funzionalità logiche che puoi implementare passo passo o scegliere in base alle tue esigenze.
 
-#### Implementazione passo dopo passo
+### Funzionalità 1: Inizializzare il tuo sistema di annotazione
+
+**Cosa fa**: Configura la tua applicazione Java per lavorare con documenti PDF, caricandoli in memoria per l'elaborazione delle annotazioni.
+
+**Quando usarla**: Questo è il punto di partenza per qualsiasi flusso di lavoro di annotazione. Ogni sistema di annotazione inizia qui.
+
+#### Implementazione passo‑passo
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
 public class Feature1 {
     public static void main(String[] args) {
-        String inputFile = "YOUR_DOCUMENT_DIRECTORY/input.pdf"; // Definisci il percorso PDF di input
-        final Annotator annotator = new Annotator(inputFile); // Inizializza Annotator con il file di input
+        String inputFile = "YOUR_DOCUMENT_DIRECTORY/input.pdf"; // Define the input PDF path
+        final Annotator annotator = new Annotator(inputFile); // Initialize Annotator with the input file
     }
 }
 ```
 
-**Spiegazione:** Questo passaggio è fondamentale perché imposta l'applicazione in modo che interagisca con GroupDocs.Annotation, caricando nella memoria il documento PDF specificato.
+**Cosa succede dietro le quinte**: La classe `Annotator` è il tuo gateway a tutte le funzionalità di GroupDocs. Quando crei un'istanza, carica il PDF in memoria e lo prepara per le operazioni di annotazione. La libreria gestisce tutto il parsing complesso del PDF – tu fornisci solo il percorso del file.
 
-### Funzionalità 2: creare utenti
-**Panoramica:** La creazione di profili utente consente di gestire annotazioni e risposte in modo efficiente. A ogni utente possono essere assegnati commenti o risposte all'interno del documento.
+**Problema comune**: Assicurati che il percorso del file sia corretto e che il PDF non sia protetto da password. GroupDocs lancerà un'eccezione chiara se ci sono problemi, ma è più facile evitarli fin dall'inizio.
 
-#### Implementazione passo dopo passo
+### Funzionalità 2: Creare il sistema di gestione utenti
+
+**Cosa fa**: Stabilisce profili utente per gestire chi ha creato quali annotazioni e risposte. Questo è cruciale per i flussi di lavoro collaborativi dove è necessario tracciare i contributori.
+
+**Scenario reale**: Immagina di costruire un sistema di revisione contratti dove avvocati, clienti e paralegali devono tutti lasciare feedback. Ogni utente ha bisogno della propria identità all'interno del sistema di annotazione.
+
+#### Implementazione passo‑passo
 
 ```java
 import com.groupdocs.annotation.models.User;
@@ -130,12 +190,17 @@ public class Feature2 {
 }
 ```
 
-**Spiegazione:** Questa funzione imposta i profili utente necessari per la gestione delle annotazioni. Ogni `User` l'oggetto viene inizializzato con un ID, un nome e un indirizzo email.
+**Considerazioni di design**: Nota come ogni utente ottenga un ID unico? Questo è essenziale per tracciare le annotazioni tra le sessioni. In un'applicazione reale, probabilmente otterrai questi dati dal tuo sistema di gestione utenti esistente o dal database.
 
-### Funzionalità 3: creare e configurare l'annotazione dell'area
-**Panoramica:** Questo passaggio prevede la creazione di un'annotazione di area sul documento PDF per evidenziare efficacemente le sezioni.
+**Best practice**: Considera la creazione di una classe `UserFactory` o di un servizio per gestire la creazione degli utenti in modo coerente in tutta l'applicazione. Questo rende più semplice l'integrazione con i sistemi di autenticazione in seguito.
 
-#### Implementazione passo dopo passo
+### Funzionalità 3: Creare e configurare le annotazioni di area
+
+**Cosa fa**: Crea annotazioni visive su aree specifiche del tuo PDF. Pensale come note adesive sofisticate che possono essere posizionate e stilizzate con precisione.
+
+**Perfetto per**: Evidenziare sezioni di testo, segnare aree che necessitano di revisione o creare callout visivi per informazioni importanti.
+
+#### Implementazione passo‑passo
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -147,10 +212,10 @@ public class Feature3 {
     public static void main(String[] args) {
         AreaAnnotation area = new AreaAnnotation();
         area.setBackgroundColor(65535);
-        area.setBox(new Rectangle(100, 100, 100, 100)); // Specificare la posizione e la dimensione dell'annotazione
+        area.setBox(new Rectangle(100, 100, 100, 100)); // Specify the annotation's position and size
         area.setCreatedOn(Calendar.getInstance().getTime());
         area.setMessage("This is an area annotation");
-        area.setOpacity(0.7); // Imposta il livello di opacità
+        area.setOpacity(0.7); // Set opacity level
         area.setPageNumber(0);
         area.setPenColor(65535);
         area.setPenStyle(PenStyle.DOT);
@@ -159,12 +224,20 @@ public class Feature3 {
 }
 ```
 
-**Spiegazione:** Qui definisci un `AreaAnnotation` oggetto e configurarne le proprietà come il colore di sfondo, la dimensione (`Rectangle`), opacità, stile penna, ecc., per personalizzare l'aspetto dell'annotazione.
+**Comprendere il posizionamento**: I parametri `Rectangle(100, 100, 100, 100)` rappresentano *(x, y, larghezza, altezza)* nelle unità di coordinate PDF. L'origine *(0,0)* è tipicamente nell'angolo in basso a sinistra della pagina, ma GroupDocs gestisce questa complessità per te.
 
-### Funzionalità 4: creare risposte per le annotazioni
-**Panoramica:** Allega le risposte alle annotazioni in modo che gli utenti possano aggiungere commenti o feedback direttamente nelle aree annotate.
+**Suggerimenti di stile**:
+- Un'opacità di 0.7 fornisce buona visibilità senza oscurare completamente il contenuto sottostante.
+- Lo stile penna `DOT` è meno distraente rispetto a linee solide per le annotazioni di revisione.
+- I valori di colore usano il formato RGB – `65535` rappresenta un ciano brillante che risalta bene.
 
-#### Implementazione passo dopo passo
+### Funzionalità 4: Costruire sistemi di conversazione a thread
+
+**Cosa fa**: Crea thread di risposta per le annotazioni, consentendo discussioni collaborative ricche direttamente nei tuoi PDF.
+
+**Scenario rivoluzionario**: Invece di thread email separati sul feedback del documento, tutto avviene all'interno del documento stesso. I revisori possono avere conversazioni, porre domande di chiarimento e risolvere problemi senza perdere il contesto.
+
+#### Implementazione passo‑passo
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -200,12 +273,17 @@ public class Feature4 {
 }
 ```
 
-**Spiegazione:** Questa funzionalità collega `Reply` oggetti alle annotazioni, consentendo agli utenti di lasciare commenti. Ogni `Reply` è associato a un utente e munito di timestamp.
+**Best practice per il threading**: Ogni risposta ottiene un ID unico e un timestamp, rendendo facile ordinare le conversazioni cronologicamente o costruire sistemi di risposta nidificati. Potresti estendere questo per supportare la funzionalità risposta‑a‑risposta aggiungendo un campo parent‑reply ID.
 
-### Funzionalità 5: allega risposte e salva documento annotato
-**Panoramica:** Una volta pronte le annotazioni, puoi salvarle insieme alle relative risposte per creare un documento annotato in collaborazione.
+**Considerazione di performance**: Per documenti con molte risposte, considera il lazy loading dei thread di risposta per mantenere rapidi i tempi di caricamento iniziali.
 
-#### Implementazione passo dopo passo
+### Funzionalità 5: Salvare ed esportare i documenti annotati
+
+**Cosa fa**: Unisce tutto collegando le risposte alle annotazioni e salvando il PDF annotato collaborativamente completato.
+
+**Il risultato**: È qui che il tuo sistema di annotazione diventa tangibile – gli utenti possono scaricare i loro documenti annotati e continuare a lavorarci in altri visualizzatori PDF.
+
+#### Implementazione passo‑passo
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -214,7 +292,7 @@ import java.util.Arrays;
 
 public class Feature5 {
     public static void main(String[] args) {
-        Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf"); // Inizializza con il tuo file PDF
+        Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf"); // Initialize with your PDF file
         
         AreaAnnotation area = new AreaAnnotation();
         area.setBackgroundColor(65535);
@@ -242,9 +320,75 @@ public class Feature5 {
         area.setReplies(replies);
         annotator.add(area);
         
-        annotator.save("YOUR_DOCUMENT_DIRECTORY/output.pdf"); // Salvare il documento annotato
+        annotator.save("YOUR_DOCUMENT_DIRECTORY/output.pdf"); // Save the annotated document
     }
 }
 ```
 
-**Spiegazione:** Questo passaggio finale illustra come allegare le risposte alle annotazioni e salvare il PDF annotato. Assicurarsi che i percorsi dei file di input e output siano impostati correttamente.
+**Suggerimento di gestione file**: Usa sempre percorsi assoluti o percorsi relativi configurati correttamente per i file di input e output. Considera la creazione di una classe di configurazione per gestire le posizioni dei file in modo coerente.
+
+**Gestione degli errori**: Nel codice di produzione, avvolgi l'operazione di salvataggio in blocchi `try‑catch` per gestire elegantemente eventuali problemi del file system.
+
+## Problemi comuni e risoluzione
+
+Anche con la migliore pianificazione, probabilmente incontrerai qualche intoppo lungo il percorso. Ecco i problemi più comuni che ho visto affrontare gli sviluppatori e come risolverli rapidamente.
+
+### Gestione della memoria per PDF di grandi dimensioni
+
+**Problem**: Your application crashes or runs slowly with large PDF files.  
+**Solution**: GroupDocs.Annotation loads the entire PDF into memory. For large documents (50 MB+), consider:
+- Aumentare la dimensione dell'heap JVM, ad esempio `-Xmx2g` per un heap da 2 GB.
+- Elaborare i documenti in blocchi più piccoli se possibile.
+- Utilizzare approcci di streaming per operazioni batch.
+
+### Confusione sul sistema di coordinate
+
+**Problem**: Annotations appear in the wrong locations.  
+**Solution**: PDF coordinate systems can be tricky. GroupDocs handles most of the conversion, but you should:
+- Usare un sistema di coordinate coerente in tutta l'interfaccia utente.
+- Testare il posizionamento delle annotazioni con documenti di diverse dimensioni di pagina.
+- Creare metodi di supporto per tradurre le coordinate UI in coordinate PDF.
+
+### Problemi di concorrenza in ambienti multi‑utente
+
+**Problem**: Annotations get lost or corrupted when multiple users work simultaneously.  
+**Solution**: Implement proper concurrency control:
+- Utilizzare transazioni di database per la persistenza delle annotazioni.
+- Considerare strategie di locking ottimistico.
+- Implementare la risoluzione dei conflitti per modifiche simultanee.
+
+### Suggerimenti per l'ottimizzazione delle prestazioni
+
+- **Operazioni batch**: Quando aggiungi più annotazioni, raccoglile prima e chiama `annotator.addAll(list)` (se disponibile) invece di salvare dopo ciascuna.
+- **Memory Cleanup**: Always dispose of `Annotator` instances when done:
+
+```java
+try (Annotator annotator = new Annotator(inputFile)) {
+    // Your annotation operations
+} // Annotator automatically disposed here
+```
+
+- **Strategia di caching**: Per documenti frequentemente accessi, considera il caching delle istanze `Annotator`, ma monitora attentamente l'uso della memoria.
+
+## Domande frequenti
+
+**D: Posso usare la real time pdf collaboration in un'applicazione web?**  
+R: Sì. Esporre le funzionalità di GroupDocs.Annotation tramite API REST e far comunicare il front‑end via WebSockets per aggiornamenti istantanei.
+
+**D: La libreria supporta PDF protetti da password?**  
+R: Assolutamente. Puoi passare la password quando crei l'istanza `Annotator`.
+
+**D: Come gestisco migliaia di risposte alle annotazioni?**  
+R: Memorizza le risposte in un database e caricale in modo lazy. Usa paginazione o scroll infinito nell'interfaccia per mantenere fluida la performance.
+
+**D: Esiste un modo per esportare solo le annotazioni senza il PDF originale?**  
+R: GroupDocs.Annotation può esportare le annotazioni in formati XFDF o JSON, consentendoti di importarle in seguito o condividerle separatamente.
+
+**D: Quale modello di licenza dovrei scegliere per un prodotto SaaS?**  
+R: Per SaaS, è consigliata la **Full License** con distribuzioni illimitate. Puoi iniziare con una **Temporary License** durante sviluppo e test.
+
+---
+
+**Ultimo aggiornamento:** 2026-03-17  
+**Testato con:** GroupDocs.Annotation 25.2  
+**Autore:** GroupDocs
