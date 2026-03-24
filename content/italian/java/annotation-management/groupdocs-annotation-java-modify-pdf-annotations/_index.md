@@ -1,89 +1,93 @@
 ---
 categories:
 - Java Development
-date: '2025-12-20'
+date: '2026-03-24'
 description: Scopri come modificare le annotazioni PDF in Java usando GroupDocs. Padroneggia
   il caricamento, la modifica e la gestione delle annotazioni PDF con esempi di codice
   passo‑passo.
 keywords: edit pdf annotations java, modify PDF annotations Java, GroupDocs annotation
   tutorial, Java document annotation library, PDF collaboration Java
-lastmod: '2025-12-20'
+lastmod: '2026-03-24'
 linktitle: Edit PDF Annotations Java Guide
 tags:
 - pdf-annotation
 - java-library
 - document-management
 - groupdocs
-title: 'Modifica le annotazioni PDF in Java - tutorial completo di GroupDocs'
+title: Modifica annotazioni PDF in Java - Tutorial completo di GroupDocs
 type: docs
 url: /it/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1
 ---
 
-# Modifica annotazioni PDF Java: Tutorial completo di GroupDocs
+# Modifica annotazioni PDF Java: Guida completa a GroupDocs
 
-Vuoi **modificare annotazioni PDF Java** nel tuo applicazione? Che tu stia costruendo un sistema di revisione documenti, una piattaforma educativa o uno spazio di lavoro collaborativo, GroupDocs.Annotation per Java rende sorprendentemente facile caricare, modificare e gestire le annotazioni PDF programmaticamente.
+Stai cercando di **modificare annotazioni PDF Java** nella tua applicazione? Che tu stia costruendo un sistema di revisione documenti, una piattaforma educativa o uno spazio di lavoro collaborativo, GroupDocs.Annotation per Java rende sorprendentemente semplice caricare, modificare e gestire le annotazioni PDF in modo programmatico.
 
-In questa guida completa, imparerai tutto ciò che devi sapere per implementare un editor di annotazioni PDF Java robusto. Esamineremo esempi reali, errori comuni da evitare e le migliori pratiche che ti faranno risparmiare ore di debug.
+In questa guida completa imparerai tutto ciò che serve per implementare un editor robusto di annotazioni PDF in Java. Esamineremo esempi reali, le insidie più comuni da evitare e le migliori pratiche che ti faranno risparmiare ore di debug.
 
 ## Risposte rapide
-- **Quale libreria mi permette di modificare annotazioni PDF Java?** GroupDocs.Annotation per Java.  
-- **Ho bisogno di una licenza?** Una prova gratuita funziona per lo sviluppo; è necessaria una licenza commerciale per la produzione.  
+- **Quale libreria mi consente di modificare annotazioni PDF Java?** GroupDocs.Annotation per Java.  
+- **È necessaria una licenza?** Una prova gratuita è sufficiente per lo sviluppo; per la produzione è richiesta una licenza commerciale.  
 - **Quale versione di Java è richiesta?** Java 8 minimo, Java 11+ consigliato.  
 - **Posso elaborare PDF di grandi dimensioni in modo efficiente?** Sì—usa le opzioni di streaming e una corretta gestione delle risorse.  
 - **È thread‑safe?** No, crea un'istanza `Annotator` separata per ogni thread.
 
+## Che cosa è edit pdf annotations java?
+
+Modificare le annotazioni PDF in Java significa accedere, cambiare, aggiungere o rimuovere programmaticamente gli oggetti di commento presenti all'interno di un file PDF. Con GroupDocs.Annotation puoi trattare le annotazioni come qualsiasi altra struttura dati—leggere le loro proprietà, aggiornare il testo, gestire le risposte e poi salvare il documento aggiornato nello storage.
+
 ## Perché scegliere GroupDocs.Annotation per Java?
 
-Prima di immergerti nel codice, copriamo rapidamente perché GroupDocs.Annotation si distingue nel campo affollato delle librerie PDF per Java. A differenza dei lettori PDF di base che mostrano solo le annotazioni, questa libreria ti offre il pieno controllo programmatico—puoi creare, modificare, eliminare e gestire le annotazioni con poche righe di codice.
+Prima di immergersi nel codice, vediamo rapidamente perché GroupDocs.Annotation si distingue nel panorama affollato delle librerie PDF per Java. A differenza dei semplici lettori PDF che si limitano a visualizzare le annotazioni, questa libreria ti offre un controllo programmatico completo—puoi creare, modificare, eliminare e gestire le annotazioni con poche righe di codice.
 
 **Vantaggi chiave che apprezzerai:**
 - **Zero dipendenze problematiche** – Funziona subito con Maven  
 - **Flessibilità di formato** – Gestisce PDF, Word, Excel e oltre 50 altri formati  
-- **Pronto per l'Enterprise** – Progettato per l'elaborazione di documenti ad alto volume  
+- **Pronta per l'enterprise** – Progettata per l'elaborazione ad alto volume di documenti  
 - **Sviluppo attivo** – Aggiornamenti regolari e supporto eccellente  
 
 ## Cosa imparerai in questo tutorial
 
-Alla fine di questa guida, sarai in grado di:
+Al termine di questa guida sarai in grado di:
 
 - Configurare GroupDocs.Annotation in qualsiasi progetto Java (Maven o Gradle)  
 - Caricare PDF con annotazioni esistenti e ispezionarne il contenuto  
-- **Modificare annotazioni PDF Java** modificando proprietà, testo e risposte programmaticamente  
+- **Modificare annotazioni PDF Java** modificando proprietà, testo e risposte in modo programmatico  
 - Gestire casi limite e errori comuni in modo elegante  
-- Ottimizzare le prestazioni per documenti di grandi dimensioni e elaborazione ad alto volume  
-- Implementare le migliori pratiche per ambienti di produzione  
+- Ottimizzare le prestazioni per documenti di grandi dimensioni e elaborazioni ad alto volume  
+- Applicare le migliori pratiche per ambienti di produzione  
 
 ## Prerequisiti e configurazione dell'ambiente
 
-Prepariamo il tuo ambiente di sviluppo. Non preoccuparti – è più semplice rispetto alla maggior parte delle configurazioni di librerie Java.
+Prepariamo il tuo ambiente di sviluppo. Non preoccuparti—è più semplice della maggior parte delle configurazioni di librerie Java.
 
 ### Cosa ti serve
 
 **Requisiti essenziali:**
 - **Java 8 o superiore** (Java 11+ consigliato per migliori prestazioni)  
 - **Maven 3.6+** o Gradle 6+ per la gestione delle dipendenze  
-- **Conoscenza di base di Java** – familiarità con I/O di file e collezioni  
-- **IDE a scelta** – IntelliJ IDEA, Eclipse o VS Code funzionano perfettamente  
+- **Conoscenze di base di Java** – familiarità con I/O di file e collezioni  
+- **IDE a tua scelta** – IntelliJ IDEA, Eclipse o VS Code funzionano perfettamente  
 
 **Opzionale ma utile:**
 - File PDF di esempio con annotazioni esistenti per i test  
-- Comprensione di base della struttura PDF (utile ma non obbligatoria)  
+- Conoscenza di base della struttura PDF (utile ma non obbligatoria)  
 
 ### Controllo rapido dell'ambiente
 
-Prima di iniziare a codificare, esegui questo controllo rapido per assicurarti che tutto sia pronto:
+Prima di iniziare a scrivere codice, esegui questo rapido controllo per assicurarti che tutto sia pronto:
 
 ```bash
 java -version  # Should show Java 8+
 mvn -version   # Should show Maven 3.6+
 ```
 
-## Configurazione di GroupDocs.Annotation per Java
+## Configurare GroupDocs.Annotation per Java
 
 ### Configurazione Maven semplificata
 
-Aggiungere GroupDocs.Annotation al tuo progetto è semplice. Aggiungi questi snippet al tuo `pom.xml`:
+Aggiungere GroupDocs.Annotation al tuo progetto è semplice. Inserisci questi snippet nel tuo `pom.xml`:
 
 ```xml
 <repositories>
@@ -102,15 +106,15 @@ Aggiungere GroupDocs.Annotation al tuo progetto è semplice. Aggiungi questi sni
 </dependencies>
 ```
 
-**Consiglio:** Usa sempre l'ultima versione disponibile nel loro repository. La versione 25.2 è attuale al momento della scrittura, ma potrebbero esserci versioni più recenti.
+**Consiglio:** Usa sempre il numero di versione più recente disponibile nel loro repository. La versione 25.2 è corrente al momento della stesura, ma potrebbero esserci versioni più nuove.
 
 ### Configurazione della licenza (non saltare questo!)
 
 GroupDocs.Annotation richiede una licenza per la piena funzionalità. Ecco come gestirla correttamente:
 
-**Fase di sviluppo:** Inizia con la loro prova gratuita – è perfetta per apprendere e piccoli progetti.  
+**Fase di sviluppo:** Inizia con la prova gratuita—è perfetta per apprendere e per piccoli progetti.  
 
-**Pronta per la produzione:** Avrai bisogno di una licenza temporanea (ottima per valutazioni estese) o di una licenza commerciale completa.  
+**Pronta per la produzione:** Ti servirà una licenza temporanea (ottima per valutazioni prolungate) o una licenza commerciale completa.  
 
 **Implementazione della licenza:**
 
@@ -129,19 +133,19 @@ public class InitializeGroupDocs {
 ```
 
 **Problemi comuni di licenza:**
-- **Errori di file non trovato:** Controlla nuovamente il percorso del file di licenza  
-- **Licenza non valida:** Assicurati che la licenza corrisponda alla versione di GroupDocs.Annotation  
-- **Licenza scaduta:** Le licenze temporanee hanno limiti di tempo – rinnova se necessario  
+- **Errori “file non trovato”:** Verifica il percorso del file di licenza  
+- **Licenza non valida:** Assicurati che la licenza corrisponda alla versione di GroupDocs.Annotation in uso  
+- **Licenza scaduta:** Le licenze temporanee hanno limiti di tempo—rinnova se necessario  
 
-## Implementazione principale: Il tuo editor di annotazioni PDF Java
+## Implementazione principale: il tuo editor di annotazioni PDF Java
 
-Ora la parte più entusiasmante – costruiamo la funzionalità principale che fa funzionare il tuo editor di annotazioni PDF come per magia.
+Ora la parte più entusiasmante—costruiamo la funzionalità centrale che fa funzionare il tuo editor di annotazioni PDF come per magia.
 
-### Caricamento di documenti con annotazioni esistenti
+### Caricamento dei documenti con annotazioni esistenti
 
-Questo è il punto di partenza per la maggior parte dei flussi di lavoro di annotazione. Che tu stia costruendo un sistema di revisione documenti o aggiungendo funzionalità di collaborazione, avrai spesso bisogno di lavorare con PDF che già contengono annotazioni.
+Questo è il punto di partenza per la maggior parte dei flussi di lavoro di annotazione. Che tu stia creando un sistema di revisione documenti o aggiungendo funzionalità collaborative, dovrai spesso lavorare con PDF che contengono già annotazioni.
 
-**Perché è importante:** Nelle applicazioni reali, raramente si parte da PDF vuoti. Gli utenti aggiungono commenti, evidenziazioni e note nel tempo, e la tua applicazione deve rispettare e gestire le annotazioni esistenti.
+**Perché è importante:** Nelle applicazioni reali raramente si parte da PDF vuoti. Gli utenti aggiungono commenti, evidenziazioni e note nel tempo, e la tua applicazione deve rispettare e gestire le annotazioni esistenti.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -162,16 +166,16 @@ public class LoadDocumentWithAnnotations {
 }
 ```
 
-**Cosa succede qui:** L'oggetto `LoadOptions` ti offre un controllo granulare su come i documenti vengono caricati. Sebbene qui usiamo i valori predefiniti, puoi configurare l'uso della memoria, le opzioni di parsing e altro per requisiti specifici.
+**Cosa succede:** L'oggetto `LoadOptions` ti offre un controllo granulare su come i documenti vengono caricati. Qui usiamo le impostazioni predefinite, ma puoi configurare l'uso della memoria, le opzioni di parsing e altro per requisiti specifici.
 
 **Considerazioni pratiche:**
-- **Percorsi dei file:** Usa percorsi assoluti in produzione per evitare problemi di distribuzione  
-- **Gestione degli errori:** Avvolgi sempre le operazioni sui file in blocchi `try‑catch`  
+- **Percorsi file:** Usa percorsi assoluti in produzione per evitare problemi di distribuzione  
+- **Gestione degli errori:** Avvolgi sempre le operazioni di file in blocchi `try‑catch`  
 - **Gestione della memoria:** Per PDF di grandi dimensioni, considera le opzioni di streaming  
 
 ### Recupero e ispezione delle annotazioni
 
-Una volta caricato un documento, spesso dovrai esaminare le annotazioni esistenti prima di apportare modifiche. Questo è cruciale per le applicazioni che devono convalidare, generare report o modificare selettivamente le annotazioni.
+Una volta caricato il documento, spesso è necessario esaminare le annotazioni esistenti prima di apportare modifiche. Questo è cruciale per le applicazioni che devono convalidare, generare report o modificare selettivamente le annotazioni.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.AnnotationBase;
@@ -199,13 +203,13 @@ public class RetrieveAnnotations {
 **Comprendere i risultati:** Il metodo `get()` restituisce una `List<AnnotationBase>` contenente tutte le annotazioni. Ogni oggetto annotazione include proprietà come posizione, contenuto, autore, data di creazione e eventuali risposte associate.
 
 **Applicazioni pratiche:**
-- **Tracce di audit:** Traccia chi ha aggiunto quali annotazioni e quando  
+- **Tracciamento:** Monitora chi ha aggiunto quali annotazioni e quando  
 - **Filtraggio dei contenuti:** Rimuovi informazioni sensibili prima di condividere i documenti  
 - **Statistiche:** Genera report sull'uso delle annotazioni e sui pattern di collaborazione  
 
 ### Modifica delle risposte alle annotazioni
 
-Una delle attività più comuni negli ambienti collaborativi è gestire le risposte alle annotazioni. Gli utenti potrebbero voler eliminare risposte inadeguate, aggiornare informazioni obsolete o pulire lunghi thread di discussione.
+Uno dei compiti più comuni negli ambienti collaborativi è gestire le risposte alle annotazioni. Gli utenti potrebbero voler eliminare risposte inopportune, aggiornare informazioni obsolete o pulire discussioni troppo lunghe.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.AnnotationBase;
@@ -228,9 +232,9 @@ public class RemoveReplyFromAnnotation {
 }
 ```
 
-**Sicurezza prima di tutto:** Verifica sempre se le annotazioni e le risposte esistono prima di tentare di modificarle. Il codice sopra assume che esista almeno un'annotazione con almeno una risposta.
+**Prima la sicurezza:** Verifica sempre che annotazioni e risposte esistano prima di tentare di modificarle. Il codice sopra presuppone almeno un'annotazione con almeno una risposta.
 
-**Approccio migliore per la gestione degli errori:**
+**Approccio migliore alla gestione degli errori:**
 
 ```java
 if (!annotations.isEmpty() && !annotations.get(0).getReplies().isEmpty()) {
@@ -243,7 +247,7 @@ if (!annotations.isEmpty() && !annotations.get(0).getReplies().isEmpty()) {
 
 ### Salvataggio delle modifiche
 
-L'ultimo passo in qualsiasi flusso di lavoro di annotazione è persistere le modifiche. GroupDocs.Annotation rende questo semplice, ma ci sono considerazioni importanti per l'uso in produzione.
+L'ultimo passaggio in qualsiasi flusso di lavoro di annotazione è persistere le modifiche. GroupDocs.Annotation rende questo semplice, ma ci sono considerazioni importanti per l'uso in produzione.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.AnnotationBase;
@@ -270,13 +274,13 @@ public class SaveChangesToDocument {
 ```
 
 **Punti critici:**
-- **Chiama sempre `dispose()`** – Questo previene perdite di memoria, soprattutto importante in applicazioni ad alto volume  
+- **Chiama sempre `dispose()`** – Evita perdite di memoria, soprattutto in applicazioni ad alto volume  
 - **Usa percorsi di output diversi** – Non sovrascrivere mai i file originali durante lo sviluppo  
-- **Controlla i permessi di scrittura** – Assicurati che l'applicazione abbia accesso in scrittura alla directory di output  
+- **Verifica i permessi di scrittura** – Assicurati che l'applicazione abbia accesso in scrittura alla cartella di destinazione  
 
 ## Problemi comuni e soluzioni
 
-Dopo aver aiutato centinaia di sviluppatori a implementare funzionalità di annotazione PDF, ho visto gli stessi problemi riapparire più volte. Ecco i problemi più comuni e le loro soluzioni:
+Dopo aver aiutato centinaia di sviluppatori a implementare funzionalità di annotazione PDF, ho visto gli stessi problemi ripresentarsi più volte. Ecco i più frequenti e le relative soluzioni:
 
 ### Problemi di memoria con PDF di grandi dimensioni
 
@@ -306,7 +310,7 @@ try (Annotator annotator = new Annotator(inputPath, loadOptions)) {
 
 **Problema:** Le annotazioni appaiono in posizioni errate dopo la modifica.  
 
-**Soluzione:** Conserva sempre i sistemi di coordinate e i riferimenti alle pagine:
+**Soluzione:** Mantieni sempre i sistemi di coordinate e i riferimenti di pagina:
 
 ```java
 // When modifying annotation positions, maintain the coordinate system
@@ -316,16 +320,16 @@ double originalX = annotation.getBox().getX();
 double originalY = annotation.getBox().getY();
 ```
 
-### Colli di bottiglia delle prestazioni
+### Collo di bottiglia delle prestazioni
 
-**Problema:** Elaborazione lenta delle annotazioni negli ambienti di produzione.  
+**Problema:** L'elaborazione delle annotazioni è lenta in ambienti di produzione.  
 
 **Soluzioni:**  
 - **Operazioni batch:** Raggruppa più modifiche prima di chiamare `update()`  
 - **Caricamento selettivo:** Carica solo le annotazioni che devi effettivamente modificare  
 - **Pooling delle connessioni:** Se elabori molti file, riutilizza le istanze `Annotator` quando possibile  
 
-## Best practice per l'uso in produzione
+## Migliori pratiche per l'uso in produzione
 
 ### Gestione delle risorse
 
@@ -384,43 +388,9 @@ public class RobustAnnotationProcessor {
 }
 ```
 
-### Suggerimenti per l'ottimizzazione delle prestazioni
-
-**Per l'elaborazione ad alto volume:**
-
-1. **Riutilizza le istanze Annotator** quando elabori più file con proprietà simili  
-2. **Elabora le annotazioni in batch** anziché aggiornamenti uno‑a‑uno  
-3. **Usa impostazioni JVM heap appropriate** per le dimensioni tipiche dei file  
-4. **Implementa caching** per i documenti frequentemente accessi  
-
-**Linee guida per l'uso della memoria:**  
-- Assegna 2‑3× la dimensione del file nello heap per PDF di grandi dimensioni  
-- Monitora i pattern di garbage collection durante lo sviluppo  
-- Considera l'uso delle API di streaming per documenti molto grandi  
-
-## Quando usare GroupDocs.Annotation
-
-Questa libreria eccelle in diversi scenari:
-
-**Perfetto per:**
-- **Flussi di lavoro di revisione documenti** dove più utenti collaborano su PDF  
-- **Piattaforme educative** che richiedono capacità di annotazione e feedback  
-- **Elaborazione di documenti legali** con approvazione e tracciamento delle revisioni  
-- **Sistemi di gestione dei contenuti** che necessitano di funzionalità PDF avanzate  
-
-**Considera alternative se:**
-- Hai solo bisogno di visualizzare PDF di base senza capacità di modifica  
-- Il tuo budget è estremamente limitato (esistono alternative gratuite con limitazioni)  
-- Stai costruendo applicazioni mobile‑first (principalmente progettate per l'elaborazione lato server)
-
-**Considerazioni di integrazione:**
-- Funziona senza problemi con Spring Boot e altri framework Java  
-- Ottimo per architetture microservizi  
-- Scala bene in ambienti containerizzati (Docker, Kubernetes)  
-
 ## Esempi di implementazione nel mondo reale
 
-### Sistema di revisione di documenti legali
+### Sistema di revisione documenti legali
 
 ```java
 public class LegalDocumentProcessor {
@@ -476,65 +446,64 @@ loadOptions.setPassword("your-pdf-password");
 
 ### Esportazione dei dati delle annotazioni
 
-Sebbene GroupDocs.Annotation non fornisca un'esportazione diretta in JSON/XML, puoi serializzare gli oggetti `AnnotationBase` con librerie come Jackson per l'integrazione con altri sistemi.
+Sebbene GroupDocs.Annotation non fornisca un'esportazione diretta in JSON/XML, puoi serializzare gli oggetti `AnnotationBase` con librerie come Jackson per integrarli con altri sistemi.
 
 ### Distribuzione in Docker
 
-GroupDocs.Annotation funziona perfettamente nei container. Assicurati che il runtime Java e la memoria sufficiente siano allocati, e monta il file di licenza come volume o includilo nell'immagine.
+GroupDocs.Annotation funziona perfettamente nei container. Assicurati che il runtime Java e la memoria siano adeguati, e monta il file di licenza come volume o includilo nell'immagine.
 
-### Lavorare con lo storage cloud
+### Lavorare con storage cloud
 
-Scarica i file da AWS S3, Google Cloud, ecc., in un percorso locale temporaneo, elabora i file con GroupDocs, poi carica il risultato nuovamente nello storage cloud.
+Scarica i file da AWS S3, Google Cloud, ecc. in un percorso locale temporaneo, elabora i PDF con GroupDocs, quindi carica nuovamente il risultato nello storage cloud.
 
 ## Domande frequenti
 
-**Q: Posso usare GroupDocs.Annotation per Java in progetti commerciali?**  
-A: Sì, ma è necessaria una licenza commerciale. La prova gratuita è perfetta per sviluppo e test, ma l'uso in produzione richiede una licenza a pagamento. Consulta la pagina dei prezzi per le opzioni attuali.
+**D:** Posso usare GroupDocs.Annotation per Java in progetti commerciali?  
+**R:** Sì, ma è necessaria una licenza commerciale. La prova gratuita è ideale per sviluppo e test, ma per la produzione serve una licenza a pagamento. Consulta la pagina dei prezzi per le opzioni attuali.
 
-**Q: Qual è la versione minima di Java richiesta?**  
-A: Java 8 è il requisito minimo, ma Java 11+ è consigliato per migliori prestazioni e sicurezza. La libreria sfrutta le ottimizzazioni JVM più recenti quando disponibili.
+**D:** Qual è la versione minima di Java richiesta?  
+**R:** Java 8 è il requisito minimo, ma Java 11+ è consigliato per migliori prestazioni e sicurezza. La libreria sfrutta le ottimizzazioni JVM più recenti quando disponibili.
 
-**Q: GroupDocs.Annotation funziona con Spring Boot?**  
-A: Assolutamente! Si integra perfettamente con le applicazioni Spring Boot. Basta aggiungere la dipendenza Maven e configurarla come bean Spring se necessario. Molti sviluppatori lo usano in architetture microservizi.
+**D:** GroupDocs.Annotation funziona con Spring Boot?  
+**R:** Assolutamente! Si integra senza problemi con le applicazioni Spring Boot. Basta aggiungere la dipendenza Maven e configurarla come bean Spring, se necessario. Molti sviluppatori lo usano in architetture a microservizi.
 
-**Q: Posso elaborare PDF protetti da password?**  
-A: Sì, puoi gestire documenti protetti fornendo la password tramite `LoadOptions` (vedi l'esempio sopra).
+**D:** Posso elaborare PDF protetti da password?  
+**R:** Sì, è possibile gestire documenti protetti fornendo la password tramite `LoadOptions` (vedi l'esempio sopra).
 
-**Q: Come gestire file PDF di grandi dimensioni senza esaurire la memoria?**  
-A: Usa approcci di streaming e elabora le annotazioni in batch. Configura la JVM con impostazioni heap appropriate (tipicamente 2‑3× la dimensione del tuo file più grande) e chiama sempre `dispose()` per liberare rapidamente le risorse.
+**D:** Come gestire PDF di grandi dimensioni senza esaurire la memoria?  
+**R:** Usa approcci di streaming e processa le annotazioni in batch. Configura la JVM con impostazioni di heap adeguate (tipicamente 2‑3× la dimensione del file più grande) e chiama sempre `dispose()` per liberare rapidamente le risorse.
 
-**Q: La libreria è thread‑safe per l'elaborazione concorrente?**  
-A: La classe `Annotator` non è thread‑safe. Per l'elaborazione concorrente, crea istanze `Annotator` separate per ogni thread o implementa una corretta sincronizzazione.
+**D:** La libreria è thread‑safe per l'elaborazione concorrente?  
+**R:** La classe `Annotator` non è thread‑safe. Per l'elaborazione concorrente, crea istanze separate di `Annotator` per ogni thread o implementa una sincronizzazione appropriata.
 
-**Q: Cosa succede se provo a modificare un PDF corrotto?**  
-A: La libreria lancerà un'eccezione quando incontra file corrotti. Implementa sempre una gestione degli errori e considera la validazione del PDF prima dell'elaborazione.
+**D:** Cosa succede se provo a modificare un PDF corrotto?  
+**R:** La libreria solleverà un'eccezione al rilevare file corrotti. Implementa sempre una gestione degli errori e, se possibile, valida il PDF prima dell'elaborazione.
 
-**Q: Posso estrarre i dati delle annotazioni in JSON o XML?**  
-A: Sebbene la libreria non esporti direttamente in JSON/XML, puoi facilmente serializzare i dati delle annotazioni usando la serializzazione integrata di Java o librerie come Jackson.
+**D:** Posso estrarre i dati delle annotazioni in JSON o XML?  
+**R:** Sebbene la libreria non esporti direttamente in JSON/XML, puoi serializzare facilmente i dati delle annotazioni usando la serializzazione Java integrata o librerie come Jackson.
 
-**Q: Come distribuire questo in un container Docker?**  
-A: Includi il runtime Java, assegna memoria sufficiente e monta il file di licenza. La libreria funziona senza modifiche all'interno dei container.
+**D:** Come distribuisco questo in un container Docker?  
+**R:** Includi il runtime Java, assegna memoria sufficiente e monta il file di licenza. La libreria funziona senza modifiche all'interno dei container.
 
-**Q: Posso usarlo con storage cloud (AWS S3, Google Cloud)?**  
-A: Sì, ma dovrai prima scaricare il file localmente, elaborarlo, poi caricare il risultato. La libreria funziona con percorsi di file locali, non direttamente con URL cloud.
+**D:** Posso usarlo con storage cloud (AWS S3, Google Cloud)?  
+**R:** Sì, ma dovrai scaricare il file localmente, elaborarlo, quindi caricare il risultato. La libreria opera su percorsi file locali, non su URL cloud direttamente.
 
 ## Risorse aggiuntive
 
 ### Documentazione e supporto
 
 **Documentazione GroupDocs.Annotation**  
-- [Complete API Reference](https://reference.groupdocs.com/annotation/java/) - Documentazione API completa con tutte le classi e i metodi  
-- [Developer Guide](https://docs.groupdocs.com/annotation/java/) - Tutorial passo‑a‑passo ed esempi di utilizzo avanzato  
-- [Release Notes](https://releases.groupdocs.com/annotation/java/release-notes/) - Ultimi aggiornamenti, correzioni di bug e nuove funzionalità  
+- [Riferimento API completo](https://reference.groupdocs.com/annotation/java/) - Documentazione API dettagliata con tutte le classi e i metodi  
+- [Guida per sviluppatori](https://docs.groupdocs.com/annotation/java/) - Tutorial passo‑passo e esempi avanzati  
+- [Note di rilascio](https://releases.groupdocs.com/annotation/java/release-notes/) - Ultimi aggiornamenti, correzioni di bug e nuove funzionalità  
 
-### Community e supporto
-
-- [GroupDocs Forum](https://forum.groupdocs.com/c/annotation) - Forum della community attivo per domande e discussioni  
-- [Free Support Portal](https://helpdesk.groupdocs.com/) - Supporto tecnico ufficiale (i tempi di risposta variano in base al tipo di licenza)  
-- [GitHub Examples](https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java) - Progetti di esempio e snippet di codice  
+**Community e supporto**  
+- [Forum GroupDocs](https://forum.groupdocs.com/c/annotation) - Forum attivo per domande e discussioni  
+- [Portale di supporto gratuito](https://helpdesk.groupdocs.com/) - Supporto tecnico ufficiale (tempi di risposta variabili in base al tipo di licenza)  
+- [Esempi su GitHub](https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java) - Progetti di esempio e snippet di codice  
 
 ---
 
-**Ultimo aggiornamento:** 2025-12-20  
+**Ultimo aggiornamento:** 2026-03-24  
 **Testato con:** GroupDocs.Annotation 25.2 per Java  
 **Autore:** GroupDocs
