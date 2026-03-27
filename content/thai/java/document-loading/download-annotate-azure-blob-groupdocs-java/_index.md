@@ -1,14 +1,14 @@
 ---
 categories:
 - Java Development
-date: '2026-01-03'
-description: เรียนรู้วิธีบันทึกไฟล์ PDF ที่มีคำอธิบายด้วย GroupDocs Annotation สำหรับ
-  Java และ Azure Blob Storage คู่มือแบบขั้นตอนต่อขั้นตอนที่ครอบคลุมการทำคำอธิบายเอกสาร
-  Java, การดาวน์โหลด Azure Blob ด้วย Java, และแนวปฏิบัติที่ดีที่สุด.
+date: '2026-03-27'
+description: เรียนรู้วิธีบันทึก PDF ที่มีคำอธิบายด้วย GroupDocs Annotation สำหรับ
+  Java และ Azure Blob Storage คู่มือขั้นตอนต่อขั้นตอนที่ครอบคลุมการอธิบายเอกสาร Java,
+  การดาวน์โหลด Azure Blob ด้วย Java, และแนวปฏิบัติที่ดีที่สุด.
 keywords: GroupDocs Annotation Java tutorial, Azure Blob Storage Java integration,
   Java document annotation library, download files from Azure Blob Java, GroupDocs
   Maven setup
-lastmod: '2026-01-03'
+lastmod: '2026-03-27'
 linktitle: GroupDocs Annotation Java Azure Guide
 tags:
 - groupdocs
@@ -22,102 +22,38 @@ url: /th/java/document-loading/download-annotate-azure-blob-groupdocs-java/
 weight: 1
 ---
 
-# Save Annotated PDF using GroupDocs Java & Azure Blob
+# บันทึก PDF ที่มีคำอธิบายโดยใช้ GroupDocs Java & Azure Blob
 
-## ทำไมคุณถึงต้องการการบูรณาการนี้ (และมันจะช่วยคุณประหยัดเวลาหลายชั่วโมง)
+## ทำไมคุณต้องการการรวมนี้ (และมันจะช่วยคุณประหยัดเวลานานหลายชั่วโมง)
 
-เคยเจอปัญหาในการจัดการเอกสารบนคลาวด์ไหม? คุณกำลังดาวน์โหลดไฟล์จาก Azure Blob Storage, พยายามเพิ่ม annotation, แล้วรู้สึกว่าทุกอย่างซับซ้อนเกินความจำเป็น ฉันเคยผ่านมามาก่อน
+ในบทเรียนนี้คุณจะได้เรียนรู้วิธี **save annotated pdf** ไฟล์โดยตรงจาก Azure Blob storage ด้วย GroupDocs Annotation for Java เคยเจอปัญหาในการจัดการเอกสารบนคลาวด์หรือไม่? คุณกำลังดาวน์โหลดไฟล์จาก Azure Blob Storage, พยายามเพิ่มคำอธิบาย, และรู้สึกว่าทุกอย่างซับซ้อนเกินความจำเป็น เชื่อผมเถอะ ผมเคยผ่านมามาก่อน
 
-สิ่งที่ควรทราบ – การผสาน Azure Blob Storage กับ GroupDocs Annotation for Java ไม่ใช่แค่บทเรียนทั่วไป มันคือ **workflow การบันทึก PDF ที่มี annotation** ที่สร้างเป็น pipeline ที่พร้อมใช้งานใน production ไม่ว่าคุณจะสร้างระบบตรวจสอบเอกสาร, ฟีเจอร์การแก้ไขร่วมกัน, หรือแค่ต้องการประมวลผล PDF บนคลาวด์ คู่มือนี้ครอบคลุมทุกอย่างที่คุณต้องการ
+เรื่องคือ – การผสาน Azure Blob Storage กับ GroupDocs Annotation for Java ไม่ใช่แค่บทเรียนอีกอันหนึ่ง มันเป็น workflow **save annotated PDF** ที่สร้าง pipeline ที่ราบรื่นและพร้อมใช้งานใน production ไม่ว่าคุณจะสร้างระบบตรวจสอบเอกสาร, สร้างฟีเจอร์การแก้ไขร่วมกัน, หรือแค่ต้องการประมวลผล PDF บนคลาวด์ คู่มือนี้ครอบคลุมทุกอย่างที่คุณต้องการ
 
 **สิ่งที่คุณจะได้เรียนรู้:**
-- ความเข้าใจที่มั่นคงเกี่ยวกับการบูรณาการ GroupDocs Annotation Java  
+- ความเข้าใจที่มั่นคงเกี่ยวกับการผสาน GroupDocs Annotation Java  
 - โค้ดที่ใช้งานได้จริงในสถานการณ์จริง (ไม่ใช่แค่สาธิต)  
-- ความรู้การแก้ไขปัญหาที่จะช่วยคุณประหยัดเวลา debug  
+- ความรู้การแก้ไขปัญหาที่จะช่วยคุณประหยัดเวลาในการดีบัก  
 - เคล็ดลับประสิทธิภาพที่คุณในอนาคตจะขอบคุณ  
 
-พร้อมหรือยังที่จะเปลี่ยนการบูรณาการนี้จากปัญหาเป็นส่วนหนึ่งของ workflow ที่ราบรื่น? ไปดูกันเลย
+พร้อมหรือยังที่จะเปลี่ยนการผสานนี้จากปัญหาเป็นส่วนที่ไหลลื่นของ workflow ของคุณ? ไปดูกันเลย
 
 ## คำตอบอย่างรวดเร็ว
-- **บทเรียนนี้สอนอะไร?** วิธี **บันทึก PDF ที่มี annotation** ด้วย GroupDocs Annotation for Java ร่วมกับ Azure Blob Storage  
-- **ต้องมีลิขสิทธิ์ GroupDocs หรือไม่?** ทดลองใช้ฟรีได้สำหรับการทดสอบ; ต้องมีลิขสิทธิ์เต็มสำหรับ production  
+- **บทเรียนนี้สอนอะไร?** วิธี **save annotated PDF** ไฟล์โดยใช้ GroupDocs Annotation for Java ร่วมกับ Azure Blob Storage  
+- **ต้องมีลิขสิทธิ์ GroupDocs หรือไม่?** สามารถใช้ trial ฟรีสำหรับการทดสอบ; ต้องมีลิขสิทธิ์เต็มสำหรับ production  
 - **ใช้ Azure SDK ใด?** Azure Storage SDK for Java (Blob client)  
-- **สามารถประมวลผล PDF ขนาดใหญ่ได้หรือไม่?** ได้ – ใช้ streaming และ async pattern ตามที่แสดงในคู่มือ  
-- **เหมาะกับ Spring Boot หรือไม่?** แน่นอน – เพียงแค่ห่อโค้ดไว้ในคลาส @Service  
+- **สามารถประมวลผล PDF ขนาดใหญ่ได้หรือไม่?** ได้ – ใช้การสตรีมและรูปแบบ async ตามที่แสดงในคู่มือ  
+- **เหมาะกับ Spring Boot หรือไม่?** แน่นอน – เพียงแค่ห่อโค้ดในคลาส @Service  
 
-## ก่อนเริ่ม – สิ่งที่คุณต้องมีจริง ๆ
+## วิธีบันทึก PDF ที่มีคำอธิบายด้วย Azure Blob Storage (Java)
 
-### การตั้งค่าไลบรารี Annotation ของ Java ที่จำเป็น
+ส่วนนี้จะพาคุณผ่านขั้นตอนครบวงจร: ดาวน์โหลด PDF จาก Azure Blob, เพิ่มคำอธิบายด้วย GroupDocs, แล้วบันทึก PDF ที่มีคำอธิบายกลับไปยัง storage หรือเส้นทางโลคัล ขั้นตอนถูกแบ่งเป็นส่วนย่อยเพื่อให้คุณตามได้แม้จะใหม่กับเทคโนโลยีใดเทคโนโลยีหนึ่ง
 
-ก่อนอื่นให้แน่ใจว่าคุณได้เตรียมทุกอย่างเรียบร้อยแล้ว ไม่มีอะไรดีกว่าการเริ่มต้นที่ครบถ้วน
+## วิธีดาวน์โหลดไฟล์ Azure Blob ด้วย Java
 
-**ไลบรารีและ Dependencies ที่ต้องใช้:**
-- **Azure Storage SDK** – จัดการการโต้ตอบทั้งหมดกับ Azure Blob  
-- **GroupDocs.Annotation for Java** – พลังงานหลักของการทำ annotation เอกสาร  
-- **Maven** (แนะนำ) หรือ Gradle สำหรับจัดการ dependencies  
+ก่อนที่เราจะทำการอธิบาย เราต้องนำไฟล์เข้ามาในกระบวนการ Java ของเรา โค้ดด้านล่างแสดงวิธีที่สะอาดในการยืนยันตัวตนกับ Azure และดึง blob เป็น `InputStream` โดยใช้รูปแบบ **download azure blob java** ที่ช่วยลดการใช้หน่วยความจำ
 
-### การตั้งค่าสภาพแวดล้อมที่ไม่ทำให้คุณปวดหัว
-
-สิ่งที่ต้องเตรียมบนเครื่องของคุณ:
-- **สภาพแวดล้อมการพัฒนา Java** (IntelliJ IDEA, Eclipse, หรือ VS Code พร้อม extension Java)  
-- **บัญชี Azure พร้อมการเข้าถึง Blob Storage** (ระดับฟรีก็เพียงพอสำหรับการทดสอบ)  
-- **Maven 3.6+** สำหรับจัดการ dependencies  
-
-### ความรู้พื้นฐานที่ควรมี (พูดตรง ๆ กับตัวเอง)
-
-คุณจะทำงานได้ราบรื่นขึ้นหากคุณคุ้นเคยกับ:
-- การเขียนโปรแกรม Java เบื้องต้น (ถ้าคุณเขียนคลาสง่าย ๆ ได้ก็พอ)  
-- ความเข้าใจเรื่อง cloud storage (คิดว่าเป็นระบบไฟล์บนคลาวด์)  
-- พื้นฐาน RESTful API (ส่วนใหญ่ใช้สำหรับแก้ไขปัญหาการเชื่อมต่อ)  
-
-ไม่ต้องกังวลหากคุณยังไม่เป็นผู้เชี่ยวชาญ – ฉันจะอธิบายส่วนสำคัญให้คุณเข้าใจระหว่างทาง
-
-## การตั้งค่า GroupDocs Annotation Java (วิธีที่ถูกต้อง)
-
-### การกำหนดค่า Maven ที่ทำงานจริง
-
-เพิ่มโค้ดต่อไปนี้ลงใน `pom.xml` ของคุณ – การกำหนดค่านี้จะช่วยหลีกเลี่ยง “dependency hell” และชี้ Maven ไปยัง repository อย่างเป็นทางการของ GroupDocs:
-
-```xml
-<repositories>
-   <repository>
-      <id>repository.groupdocs.com</id>
-      <name>GroupDocs Repository</name>
-      <url>https://releases.groupdocs.com/annotation/java/</url>
-   </repository>
-</repositories>
-<dependencies>
-   <dependency>
-      <groupId>com.groupdocs</groupId>
-      <artifactId>groupdocs-annotation</artifactId>
-      <version>25.2</version>
-   </dependency>
-</dependencies>
-```
-
-### การจัดการลิขสิทธิ์ (อย่าข้ามขั้นตอนนี้)
-
-1. **เริ่มต้นด้วย trial ฟรี** – รับลิขสิทธิ์ชั่วคราวจากเว็บไซต์ GroupDocs สำหรับการทดสอบ  
-2. **ลิขสิทธิ์ชั่วคราวสำหรับการประเมินระยะยาว** – เหมาะสำหรับ proof‑of‑concepts และ demo  
-3. **ลิขสิทธิ์เต็มสำหรับ production** – เมื่อคุณมั่นใจ (และคุณจะมั่นใจ) ให้ซื้อลิขสิทธิ์เต็ม  
-
-### การเริ่มต้นพื้นฐานที่ทำให้คุณประสบความสำเร็จ
-
-อ็อบเจกต์ `Annotator` คือจุดเริ่มต้นสำหรับงาน annotation ทั้งหมด การใช้ `try‑with‑resources` ของ Java จะทำให้สตรีมปิดอัตโนมัติ:
-
-```java
-InputStream documentStream = // obtain your document stream;
-try (Annotator annotator = new Annotator(documentStream)) {
-    // Your annotation logic goes here
-    // The try-with-resources ensures proper cleanup
-}
-```
-
-## คู่มือการทำงาน (จุดที่เรื่องเริ่มน่าสนใจ)
-
-### ดาวน์โหลดไฟล์จาก Azure Blob Storage – การบูรณาการ Java
-
-#### ขั้นตอนที่ 1: ตั้งค่าการยืนยันตัวตนของ Azure (พื้นฐาน)
+### ขั้นตอนที่ 1: ตั้งค่าการยืนยันตัวตนของ Azure (พื้นฐาน)
 
 ```java
 private static CloudBlobContainer getContainer() {
@@ -139,9 +75,9 @@ private static CloudBlobContainer getContainer() {
 }
 ```
 
-**เคล็ดลับ:** เก็บข้อมูลรับรองไว้ใน environment variables หรือ Azure Key Vault – อย่า hard‑code ลงในโค้ด
+**เคล็ดลับ:** เก็บข้อมูลรับรองใน environment variables หรือ Azure Key Vault – อย่า hard‑code
 
-#### ขั้นตอนที่ 2: ดาวน์โหลด Blob จริง ๆ (พร้อมการจัดการข้อผิดพลาด)
+### ขั้นตอนที่ 2: ดาวน์โหลด Blob จริง ๆ (พร้อมการจัดการข้อผิดพลาด)
 
 ```java
 public static InputStream downloadFile(String blobName) {
@@ -154,9 +90,50 @@ public static InputStream downloadFile(String blobName) {
 
 เมธอดนี้จะคืนค่า `InputStream` ที่ GroupDocs สามารถใช้ได้โดยตรง
 
-### ไลบรารี Annotation ของ Java ทำงานจริง
+## การตั้งค่า GroupDocs Annotation Java (วิธีที่ถูกต้อง)
 
-#### การเริ่มต้น Annotator ของคุณ (จุดเริ่มต้น)
+### การกำหนดค่า Maven ที่ทำงานได้จริง
+
+เพิ่มโค้ดต่อไปนี้ใน `pom.xml` – การกำหนดค่านี้จะป้องกัน dependency hell และชี้ Maven ไปยัง repository อย่างเป็นทางการของ GroupDocs:
+
+```xml
+<repositories>
+   <repository>
+      <id>repository.groupdocs.com</id>
+      <name>GroupDocs Repository</name>
+      <url>https://releases.groupdocs.com/annotation/java/</url>
+   </repository>
+</repositories>
+<dependencies>
+   <dependency>
+      <groupId>com.groupdocs</groupId>
+      <artifactId>groupdocs-annotation</artifactId>
+      <version>25.2</version>
+   </dependency>
+</dependencies>
+```
+
+### การจัดการลิขสิทธิ์ของคุณ (ห้ามข้าม)
+
+1. **เริ่มต้นด้วย trial ฟรี** – รับลิขสิทธิ์ชั่วคราวจากเว็บไซต์ GroupDocs สำหรับการทดสอบ  
+2. **ลิขสิทธิ์ชั่วคราวสำหรับการประเมินระยะยาว** – เหมาะสำหรับ proof‑of‑concepts และสาธิต  
+3. **ลิขสิทธิ์เต็มสำหรับ production** – เมื่อคุณมั่นใจ (และคุณจะมั่นใจ) ให้ลงทุนในลิขสิทธิ์เต็ม  
+
+### การเริ่มต้นพื้นฐานที่ทำให้คุณประสบความสำเร็จ
+
+อ็อบเจ็กต์ `Annotator` เป็นจุดเริ่มต้นสำหรับงานคำอธิบายทั้งหมด การใช้ try‑with‑resources ของ Java จะทำให้สตรีมปิดอัตโนมัติ:
+
+```java
+InputStream documentStream = // obtain your document stream;
+try (Annotator annotator = new Annotator(documentStream)) {
+    // Your annotation logic goes here
+    // The try-with-resources ensures proper cleanup
+}
+```
+
+## ไลบรารีการอธิบายเอกสาร Java ทำงานจริง
+
+### การเริ่มต้น Annotator ของคุณ (จุดเริ่มต้น)
 
 ```java
 public static void annotate(InputStream inputStream, String outputPath) {
@@ -166,7 +143,7 @@ public static void annotate(InputStream inputStream, String outputPath) {
 }
 ```
 
-#### การสร้าง Annotation ที่มีความหมาย (ไม่ใช่แค่ไฮไลท์สวย)
+### การสร้างคำอธิบายที่มีความหมาย (ไม่ใช่แค่ไฮไลท์สวย)
 
 ```java
 AreaAnnotation area = new AreaAnnotation();
@@ -178,129 +155,134 @@ annotator.add(area);                             // Add it to your document
 annotator.save(outputPath);                      // Save the annotated result
 ```
 
-คุณสามารถเพิ่มหลายประเภทของ annotation, ผสานรวมกัน, หรือสร้างแบบไดนามิกตามการวิเคราะห์เนื้อหา
+คุณสามารถเพิ่มประเภทคำอธิบายหลายประเภท, ผสานรวมกัน, หรือสร้างแบบไดนามิกตามการวิเคราะห์เนื้อหา
 
-## ข้อผิดพลาดทั่วไปที่ควรหลีกเลี่ยง (เรียนจากประสบการณ์ของฉัน)
+## ข้อผิดพลาดทั่วไปที่ควรหลีกเลี่ยง (เรียนจากความผิดพลาดของผม)
 
 ### ปัญหาการจัดการหน่วยความจำ
 
-**ปัญหา:** โหลด PDF ขนาดใหญ่ทั้งหมดเข้าสู่หน่วยความจำอาจทำให้แอปพัง  
-**วิธีแก้:** ทำงานกับสตรีมและใช้ pattern `try‑with‑resources` เสมอ  
+**Problem:** การโหลด PDF ขนาดใหญ่ทั้งหมดเข้าสู่หน่วยความจำอาจทำให้แอปพัง  
+**Solution:** ทำงานกับสตรีมและใช้รูปแบบ try‑with‑resources เสมอ  
 
 ### การล้มเหลวของการยืนยันตัวตน
 
-**ปัญหา:** โค้ดทำงานบนเครื่อง local แต่ล้มเหลวใน production พร้อม error ที่ไม่ชัดเจน  
-**วิธีแก้:**  
+**Problem:** โค้ดทำงานในเครื่องโลคัลแต่ล้มเหลวใน production ด้วยข้อผิดพลาดลึกลับ  
+**Solution:**  
 - ตรวจสอบข้อมูลรับรองและสิทธิ์ของ Azure อีกครั้ง  
-- ตรวจสอบให้แน่ใจว่าชื่อ container ตรงกันเป๊ะ (case‑sensitive)  
+- ตรวจสอบให้แน่ใจว่าชื่อคอนเทนเนอร์ตรงกันเป๊ะ (case‑sensitive)  
 - ยืนยันการเชื่อมต่อเครือข่ายไปยัง endpoint ของ Azure  
 
-### สมมติฐานเกี่ยวกับรูปแบบไฟล์
+### สมมติฐานรูปแบบไฟล์
 
-**ปัญหา:** สมมติว่า blob ทุกไฟล์เป็นรูปแบบที่รองรับ  
-**วิธีแก้:** ตรวจสอบนามสกุลไฟล์ก่อนประมวลผล; GroupDocs รองรับ PDF, DOCX, XLSX, PPTX, PNG, JPG, TIFF, และอื่น ๆ  
+**Problem:** สมมติว่าแต่ละ blob เป็นรูปแบบที่รองรับ  
+**Solution:** ตรวจสอบนามสกุลไฟล์ก่อนประมวลผล; GroupDocs รองรับ PDF, DOCX, XLSX, PPTX, PNG, JPG, TIFF, และอื่น ๆ  
 
-## เคล็ดลับระดับมืออาชีพสำหรับ Production
+## เคล็ดลับระดับมืออาชีพสำหรับการใช้งาน Production
 
 ### การปรับประสิทธิภาพที่สำคัญจริง ๆ
 
-1. **Stream Processing** – อย่าโหลดไฟล์ทั้งหมดเข้าเมมโมรี  
+1. **Stream Processing** – อย่าโหลดไฟล์ทั้งหมด  
 2. **Async Operations** – ใช้ `CompletableFuture` สำหรับการดาวน์โหลดแบบไม่บล็อก  
 3. **Connection Pooling** – ใช้ Azure client ซ้ำแทนการสร้างใหม่ทุกครั้ง  
-4. **Caching Strategy** – แคช annotation ที่เข้าถึงบ่อยเพื่อลดเวลาในการประมวลผล  
+4. **Caching Strategy** – แคชคำอธิบายที่เข้าถึงบ่อยเพื่อลดเวลาในการประมวลผล  
 
-### แนวปฏิบัติด้านความปลอดภัย
+### แนวทางปฏิบัติด้านความปลอดภัย
 
-- **การจัดการข้อมูลรับรอง:** ใช้ Azure Managed Identity หรือ Key Vault  
-- **การควบคุมการเข้าถึง:** กำหนดสิทธิ์ระดับ blob อย่างน้อยที่สุด  
-- **การเข้ารหัส:** บังคับใช้ TLS สำหรับการส่งข้อมูลและเปิดใช้งาน Azure storage encryption at rest  
+- **Credential Management:** ใช้ Azure Managed Identity หรือ Key Vault  
+- **Access Control:** กำหนดสิทธิ์ระดับ blob อย่างน้อยที่สุด  
+- **Encryption:** บังคับใช้ TLS สำหรับการส่งข้อมูลและเปิดใช้งานการเข้ารหัสของ Azure storage ที่พักข้อมูล  
 
-### การมอนิเตอร์และ Debug
+### การตรวจสอบและดีบัก
 
-บันทึกข้อมูลต่อไปนี้:
-- การพยายามเชื่อมต่อ Azure และข้อล้มเหลว  
+บันทึกข้อมูลต่อไปนี้:  
+- ความพยายามและความล้มเหลวของการเชื่อมต่อ Azure  
 - ระยะเวลาการประมวลผลเอกสาร  
-- อัตราความสำเร็จ/ล้มเหลวของ annotation  
+- อัตราการสำเร็จ/ล้มเหลวของคำอธิบาย  
 - แนวโน้มการใช้หน่วยความจำ  
 
-## เมื่อใดควรใช้การบูรณาการนี้ (คู่มือการตัดสินใจ)
+## เมื่อใดควรใช้การผสานนี้ (คู่มือการตัดสินใจ)
 
-**เหมาะอย่างยิ่งสำหรับ:**
+**เหมาะสำหรับ:**  
 - Workflow การตรวจสอบเอกสารที่เก็บไฟล์ใน Azure  
-- ระบบ annotation แบบร่วมมือที่ใช้ storage บนคลาวด์  
-- Pipeline อัตโนมัติที่ต้อง **บันทึก PDF ที่มี annotation**  
-- แอป SaaS แบบ multi‑tenant ที่ต้องการการแยกเอกสารอย่างชัดเจน  
+- ระบบคำอธิบายร่วมกันที่ใช้ storage บนคลาวด์  
+- พายป์ไลน์อัตโนมัติที่ต้อง **save annotated PDF** ไฟล์  
+- แอป SaaS แบบหลายผู้เช่า ที่ต้องการการแยกเอกสารอย่างชัดเจน  
 
-**พิจารณาแนวทางอื่นหาก:**
-- ต้องการ annotation แบบ real‑time, latency ต่ำ (อาจใช้โซลูชัน WebSocket)  
-- เอกสารของคุณอยู่บนระบบไฟล์โลคัลเท่านั้น  
-- ต้องการประเภท annotation ที่กำหนดเองซึ่ง GroupDocs ไม่รองรับ  
+**พิจารณาทางเลือกอื่นหาก:**  
+- ต้องการการอธิบายแบบเรียลไทม์, latency ต่ำ (โซลูชัน WebSocket‑based อาจดีกว่า)  
+- เอกสารของคุณอยู่เฉพาะบนระบบไฟล์โลคัลเท่านั้น  
+- ต้องการประเภทคำอธิบายแบบกำหนดเองที่ GroupDocs ไม่รองรับ  
 
-## กรณีการใช้งานขั้นสูงและแอปพลิเคชันจริง
+## กรณีการใช้งานขั้นสูงและแอปพลิเคชันในโลกจริง
 
 ### ระบบจัดการเอกสารทางกฎหมาย
-บริษัทกฎหมายสามารถดาวน์โหลดสัญญาจาก Azure blob ที่ปลอดภัย, เพิ่มคอมเมนต์ตรวจสอบ, แล้วเก็บเวอร์ชันที่มี annotation กลับไปพร้อมการควบคุมเวอร์ชัน
+บริษัทกฎหมายสามารถดาวน์โหลดสัญญาจาก Azure blob ที่ปลอดภัย, เพิ่มคอมเมนต์ตรวจสอบ, แล้วเก็บเวอร์ชันที่มีคำอธิบายกลับไปพร้อมการควบคุมเวอร์ชัน
 
 ### ระบบจัดการเนื้อหาการศึกษา
-มหาวิทยาลัยเก็บ PDF บรรยายใน Azure, ให้ศาสตราจารย์ทำ annotation, แล้วแชร์ไฟล์ที่มี annotation ให้กับนักศึกษาอย่างปลอดภัย
+มหาวิทยาลัยเก็บ PDF บรรยายใน Azure, ให้ศาสตราจารย์อธิบาย, แล้วแชร์ไฟล์ที่มีคำอธิบายให้กับนักศึกษาอย่างปลอดภัย
 
-### เอกสารด้านสุขภาพ
-คลินิกเก็บบันทึกผู้ป่วยในสภาพแวดล้อม Azure ที่เป็นไปตาม HIPAA, ทำ annotation รายงานสำหรับการปรึกษา, และบันทึก audit trail อย่างครบถ้วน  
+### การจัดทำเอกสารด้านสุขภาพ
+คลินิกเก็บบันทึกผู้ป่วยในสภาพแวดล้อม Azure ที่เป็นไปตาม HIPAA, อธิบายรายงานสำหรับการปรึกษา, และรักษา audit trail อย่างครบถ้วน  
 
 ## คู่มือการแก้ไขปัญหา (เมื่อเกิดข้อผิดพลาด)
 
 ### ปัญหาการเชื่อมต่อ
-**อาการ:** Timeout หรือ “connection refused”  
-**วิธีแก้:** ตรวจสอบข้อมูลรับรอง, ตรวจสอบกฎ firewall, ยืนยันสิทธิ์ของ container  
+**Symptoms:** เวลารอคอยหรือ “connection refused”  
+**Solutions:** ตรวจสอบข้อมูลรับรอง, ตรวจสอบกฎไฟร์วอลล์, ยืนยันสิทธิ์ของคอนเทนเนอร์  
 
 ### ข้อผิดพลาดการประมวลผลไฟล์
-**อาการ:** เอกสารไม่โหลดหรือ annotation ไม่ได้บันทึก  
-**วิธีแก้:** ตรวจสอบความเข้ากันได้ของรูปแบบไฟล์, ทดสอบดาวน์โหลดไฟล์ด้วยตนเอง, ยืนยันว่ามีพื้นที่ดิสก์เพียงพอสำหรับไฟล์ชั่วคราว  
+**Symptoms:** เอกสารไม่โหลดหรือคำอธิบายไม่ถูกบันทึก  
+**Solutions:** ยืนยันความเข้ากันได้ของรูปแบบไฟล์, ทดสอบไฟล์โดยดาวน์โหลดด้วยตนเอง, ตรวจสอบว่ามีพื้นที่ดิสก์เพียงพอสำหรับไฟล์ชั่วคราว  
 
 ### ปัญหาประสิทธิภาพ
-**อาการ:** การประมวลผลช้า หรือ OutOfMemory  
-**วิธีแก้:** ใช้ streaming, เปิดใช้งาน async processing, มอนิเตอร์การใช้ heap, พิจารณา scale JVM  
+**Symptoms:** การประมวลผลช้า หรือ OutOfMemory errors  
+**Solutions:** ใช้สตรีม, เปิดใช้งาน async processing, ตรวจสอบการใช้ heap, พิจารณา scaling JVM  
 
 ## เกณฑ์การวัดประสิทธิภาพและการปรับแต่ง
 
-### เวลาในการประมวลผลที่คาดหวัง
-- **PDF ขนาดเล็ก (< 1 MB):** 100‑500 ms สำหรับ download + annotation  
-- **PDF ขนาดกลาง (1‑10 MB):** 500 ms‑2 s ขึ้นกับความซับซ้อนของ annotation  
+### เวลาการประมวลผลที่คาดหวัง
+- **PDF ขนาดเล็ก (< 1 MB):** 100‑500 ms สำหรับดาวน์โหลด + การอธิบาย  
+- **PDF ขนาดกลาง (1‑10 MB):** 500 ms‑2 s ขึ้นกับความซับซ้อนของคำอธิบาย  
 - **PDF ขนาดใหญ่ (> 10 MB):** ใช้การดาวน์โหลดแบบ chunked หรือ async เพื่อให้ตอบสนองได้  
 
 ### แนวทางการใช้หน่วยความจำ
 - **Heap ขั้นต่ำ:** 512 MB สำหรับการทำงานพื้นฐาน  
 - **แนะนำ:** 2 GB+ สำหรับ production ที่ต้องจัดการงานพร้อมกันหลายงาน  
-- **การปรับแต่ง:** API แบบ stream ช่วยลด footprint  
+- **การปรับแต่ง:** API สตรีมช่วยให้ footprint ต่ำ  
 
 ## คำถามที่พบบ่อย
 
-**Q:** *GroupDocs Annotation รองรับรูปแบบไฟล์อะไรบ้างเมื่อใช้กับ Azure Blob Storage?*  
-**A:** PDF, DOC/DOCX, XLS/XLSX, PPT/PPTX, PNG, JPG, TIFF, และอื่น ๆ อีกหลายรูปแบบ การสนับสนุนรูปแบบไฟล์ไม่ขึ้นกับตำแหน่งที่เก็บ  
+**Q:** *GroupDocs Annotation รองรับรูปแบบไฟล์ใดบ้างเมื่อใช้กับ Azure Blob Storage?*  
+**A:** PDF, DOC/DOCX, XLS/XLSX, PPT/PPTX, PNG, JPG, TIFF, และอื่น ๆ อีกหลายรูปแบบ การสนับสนุนรูปแบบแยกจากตำแหน่งที่เก็บ  
 
-**Q:** *สามารถประมวลผลเอกสารที่มีรหัสผ่านจาก Azure Blob Storage ได้หรือไม่?*  
+**Q:** *ฉันสามารถประมวลผลเอกสารที่มีรหัสผ่านจาก Azure Blob Storage ได้หรือไม่?*  
 **A:** ได้. ส่งรหัสผ่านเมื่อสร้าง `Annotator`: `new Annotator(inputStream, password)`  
 
-**Q:** *จะจัดการไฟล์ขนาดใหญ่ (100 MB+) อย่างมีประสิทธิภาพอย่างไร?*  
-**A:** ใช้การดาวน์โหลดระดับบล็อกของ Azure, stream ไฟล์เข้า GroupDocs, และประมวลผลแบบ asynchronous เพื่อหลีกเลี่ยงการบล็อกเธรด  
+**Q:** *ฉันจะจัดการไฟล์ขนาดใหญ่ (100 MB+) อย่างมีประสิทธิภาพได้อย่างไร?*  
+**A:** ใช้การดาวน์โหลดระดับบล็อกของ Azure, สตรีมไฟล์เข้าสู่ GroupDocs, และประมวลผลแบบ asynchronous เพื่อหลีกเลี่ยงการบล็อกเธรด  
 
-**Q:** *การบูรณาการนี้เหมาะกับแอป Spring Boot หรือไม่?*  
+**Q:** *การผสานนี้เหมาะกับแอป Spring Boot หรือไม่?*  
 **A:** แน่นอน. ห่อโลจิก Azure และ GroupDocs ไว้ใน bean `@Service`, ฉีดค่าคอนฟิกผ่าน `@ConfigurationProperties`, และใช้ `@Async` ของ Spring สำหรับการประมวลผลแบบขนาน  
 
 **Q:** *ควรทำมาตรการความปลอดภัยอะไรบ้างเพื่อให้สอดคล้องกับ HIPAA?*  
-**A:** บังคับใช้ HTTPS, ใช้ Azure Key Vault สำหรับความลับ, เปิดใช้การเข้ารหัส storage, ใช้ RBAC, และบันทึก audit log รายละเอียดสำหรับทุกการดาวน์โหลดและการทำ annotation  
+**A:** บังคับใช้ HTTPS, ใช้ Azure Key Vault สำหรับความลับ, เปิดการเข้ารหัส storage, ใช้การควบคุมการเข้าถึงตามบทบาท, และบันทึก audit log รายละเอียดสำหรับการดาวน์โหลดและการอธิบายทุกครั้ง  
 
-### แหล่งข้อมูลและอ้างอิงเพิ่มเติม
+### แหล่งข้อมูลเพิ่มเติมและอ้างอิง
 
 - [GroupDocs Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [GroupDocs Java API Reference](https://reference.groupdocs.com/annotation/java/)  
 - [Download GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)  
 - [Purchase GroupDocs License](https://purchase.groupdocs.com/buy)  
 - [Free Trial and Temporary License](https://releases.groupdocs.com/annotation/java/)  
-- [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+- [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**อัปเดตล่าสุด:** 2026-01-03  
-**ทดสอบกับ:** GroupDocs.Annotation 25.2  
-**ผู้เขียน:** GroupDocs  
+**Last Updated:** 2026-03-27  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs  
+
+{< /blocks/products/pf/tutorial-page-section >}
+{< /blocks/products/pf/main-container >}
+{< /blocks/products/pf/main-wrap-class >}
+{< blocks/products/products-backtop-button >}

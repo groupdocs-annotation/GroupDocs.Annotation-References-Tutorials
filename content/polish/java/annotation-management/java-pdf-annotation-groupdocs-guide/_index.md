@@ -1,55 +1,65 @@
 ---
 categories:
 - Java Development
-date: '2026-01-08'
+date: '2026-03-27'
 description: Opanuj adnotacje PDF w Javie z GroupDocs i dowiedz się, jak eksportować
-  oznaczone strony, dodawać adnotacje obszaru i elipsy oraz optymalizować wydajność.
+  oznaczone strony PDF, dodawać adnotacje obszaru i elipsy oraz optymalizować wydajność.
 keywords: Java PDF annotation tutorial, GroupDocs annotation Java examples, PDF annotation
   library Java, Java add annotations to PDF, how to annotate PDF documents in Java
-lastmod: '2026-01-08'
+lastmod: '2026-03-27'
 linktitle: Java PDF Annotation Tutorial
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF Annotation - Eksportowanie oznaczonych stron z GroupDocs'
+title: Java PDF Annotation – Eksportowanie stron PDF z adnotacjami (GroupDocs)
 type: docs
 url: /pl/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
 ---
 
-# Java PDF Annotation: Eksportowanie Stron z Adnotacjami przy użyciu GroupDocs
+# Java PDF Annotation – Eksportowanie stron PDF z adnotacjami przy użyciu GroupDocs
 
 ## Wprowadzenie
 
-Czy kiedykolwiek miałeś problem z uzyskaniem od swojego zespołu wartościowej informacji zwrotnej na temat dokumentów PDF? Nie jesteś sam. Tradycyjne procesy przeglądu dokumentów są bolesnie wolne — niekończące się łańcuchy e‑maili, rozproszone komentarze w różnych formatach i nieuniknione „Czy możesz podświetlić fragment, o którym mówisz?”.
+Czy kiedykolwiek miałeś problem z uzyskaniem od zespołu wartościowej informacji zwrotnej na temat dokumentów PDF? Nie jesteś sam. Tradycyjne procesy przeglądu dokumentów są niezwykle wolne — niekończące się łańcuchy e‑maili, rozproszone komentarze w różnych formatach i nieuniknione „Czy możesz podświetlić sekcję, o której mówisz?”.
 
-W tym przewodniku nauczysz się, jak **eksportować strony z adnotacjami** przy użyciu GroupDocs.Annotation dla Javy, przekształcając statyczne pliki PDF w współdzielone przestrzenie, w których członkowie zespołu mogą podświetlać, komentować i oznaczać dokumenty w czasie rzeczywistym.
+W tym przewodniku dowiesz się, jak **eksportować strony PDF z adnotacjami** przy użyciu GroupDocs.Annotation dla Javy, zamieniając statyczne PDF‑y w współdzielone przestrzenie, w których członkowie zespołu mogą podświetlać, komentować i oznaczać dokumenty w czasie rzeczywistym.
 
 **Co opanujesz do końca:**
-- Konfiguracja GroupDocs.Annotation w projekcie Maven (właściwy sposób)
-- Dodawanie adnotacji obszaru i elipsy z precyzją do piksela
-- Konfigurowanie opcji **eksportowania stron z adnotacjami** dla zwięzłych plików PDF
-- Rozwiązywanie najczęstszych problemów, z jakimi spotykają się programiści
-- Optymalizacja wydajności w środowiskach produkcyjnych
+- Konfigurację GroupDocs.Annotation w projekcie Maven (właściwy sposób)  
+- Dodawanie adnotacji typu obszar i elipsa z precyzją pikselową  
+- Konfigurowanie opcji **eksportowania stron PDF z adnotacjami** dla zwięzłych PDF‑ów  
+- Rozwiązywanie najczęstszych problemów, z którymi spotykają się programiści  
+- Optymalizację wydajności w środowiskach produkcyjnych  
 
-## Szybkie Odpowiedzi
-- **Jaka jest główna korzyść z eksportowania stron z adnotacjami?** Tworzy lekki plik PDF zawierający tylko istotną informację zwrotną, idealny do przeglądów i podsumowań.  
-- **Jaka wersja Maven jest wymagana?** Zalecana jest Maven 3.6+.  
-- **Czy potrzebna jest licencja na GroupDocs.Annotation?** Tak, wymagana jest licencja próbna lub komercyjna do użytku produkcyjnego.  
+## Szybkie odpowiedzi
+- **Jaka jest główna korzyść z eksportowania stron z adnotacjami?** Tworzy lekki PDF zawierający tylko istotne uwagi, idealny do przeglądów i podsumowań.  
+- **Jakiej wersji Maven wymaga się?** Zalecany jest Maven 3.6+.  
+- **Czy potrzebna jest licencja na GroupDocs.Annotation?** Tak, do użytku produkcyjnego wymagana jest licencja próbna lub komercyjna.  
 - **Czy mogę adnotować formaty inne niż PDF?** Oczywiście — GroupDocs obsługuje ponad 50 typów dokumentów.  
-- **Jak uniknąć problemów z pamięcią przy dużych plikach PDF?** Przetwarzaj strony w partiach, zwiększ pamięć heap JVM i zawsze zamykaj `Annotator` przy użyciu try‑with‑resources.
+- **Jak uniknąć problemów z pamięcią przy dużych PDF‑ach?** Przetwarzaj strony w partiach, zwiększ pulę pamięci JVM i zawsze zamykaj `Annotator` przy pomocy try‑with‑resources.  
+
+## Co to jest „eksportowanie stron PDF z adnotacjami”?
+
+Eksportowanie stron PDF z adnotacjami oznacza wygenerowanie nowego PDF‑a, który zawiera **tylko** te strony, na których istnieją adnotacje. Zmniejsza to rozmiar pliku, skupia recenzentów na istotnej treści i upraszcza kontrolę wersji.
+
+## Dlaczego eksportować strony PDF z adnotacjami?
+
+- **Skoncentrowane cykle przeglądu** — recenzenci widzą wyłącznie strony wymagające uwagi.  
+- **Mniejsze pliki** — idealne do dystrybucji e‑mailowej lub przesyłania w sieci.  
+- **Ścieżki audytu** — możesz zachować czysty zapis wszystkich uwag bez bałaganu niezmienionych stron.  
 
 ## Wymagania wstępne: Przygotowanie środowiska
 
-Zanim zaczniemy kodować, upewnijmy się, że wszystko jest poprawnie skonfigurowane. Uwierz mi, poświęcenie tutaj 5 minut zaoszczędzi ci godziny debugowania później.
+Zanim zaczniemy pisać kod, upewnijmy się, że wszystko jest poprawnie skonfigurowane. Zaufaj mi, poświęcenie 5 minut tutaj zaoszczędzi Ci godziny debugowania później.
 
 ### Wymagane biblioteki i zależności
 
-W swoim projekcie będziesz potrzebował GroupDocs.Annotation dla Javy. Oto konfiguracja Maven, która naprawdę działa (widziałem zbyt wiele tutoriali z przestarzałymi adresami repozytoriów):
+Potrzebujesz GroupDocs.Annotation dla Javy w swoim projekcie. Oto konfiguracja Maven, która naprawdę działa (widziałem zbyt wiele tutoriali z przestarzałymi adresami repozytoriów):
 
-**Maven Setup**
+**Konfiguracja Maven**
 
 ```xml
 <repositories>
@@ -70,45 +80,46 @@ W swoim projekcie będziesz potrzebował GroupDocs.Annotation dla Javy. Oto konf
 
 ### Wymagania systemowe
 
-- **Java Development Kit (JDK)**: Wersja 8 lub wyższa (zalecany JDK 11+ dla lepszej wydajności)  
-- **Maven**: Wersja 3.6+ do zarządzania zależnościami  
-- **Pamięć**: Co najmniej 2 GB RAM dostępne dla twojej aplikacji (więcej dla dużych plików PDF)
+- **Java Development Kit (JDK)**: wersja 8 lub wyższa (zalecany JDK 11+ dla lepszej wydajności)  
+- **Maven**: wersja 3.6+ do zarządzania zależnościami  
+- **Pamięć**: co najmniej 2 GB RAM dostępne dla aplikacji (więcej przy dużych PDF‑ach)
 
 ### Wymagania wiedzy
 
 Powinieneś być zaznajomiony z:
 - Podstawowymi koncepcjami programowania w Javie  
 - Zarządzaniem zależnościami Maven  
-- Operacjami wejścia/wyjścia plików  
+- Operacjami I/O na plikach  
 
-Nie martw się, jeśli nie jesteś ekspertem — wyjaśnię wszystko w trakcie.
+Nie martw się, jeśli nie jesteś ekspertem — wyjaśnię wszystko krok po kroku.
 
 ## Konfiguracja GroupDocs.Annotation dla Javy
 
-Teraz skonfigurujmy GroupDocs.Annotation prawidłowo w twoim projekcie. To miejsce, w którym wielu programistów napotyka pierwszą przeszkodę, więc zwróć uwagę na te szczegóły.
+Teraz skonfigurujemy GroupDocs.Annotation w Twoim projekcie. To miejsce, w którym wielu programistów napotyka pierwszą przeszkodę, więc zwróć uwagę na szczegóły.
 
 ### Krok 1: Dodaj zależność
 
-Użyj powyższej konfiguracji Maven, aby dodać GroupDocs.Annotation do swojego projektu. Po dodaniu go do `pom.xml`, uruchom:
+Użyj powyższej konfiguracji Maven, aby dodać GroupDocs.Annotation do projektu. Po dodaniu jej do `pom.xml` uruchom:
 
 ```bash
 mvn clean install
 ```
 
-Jeśli pojawią się błędy pobierania, sprawdź ponownie, czy adres URL repozytorium jest dokładnie taki, jak pokazano powyżej.
+Jeśli pojawią się błędy pobierania, sprawdź dokładnie, czy adres URL repozytorium jest identyczny z podanym powyżej.
 
-### Krok 2: Obsługa licencjonowania (Ważne!)
+### Krok 2: Obsługa licencjonowania (ważne!)
 
-Oto coś, co pomija większość tutoriali: GroupDocs.Annotation nie jest darmowy do użytku komercyjnego. Masz kilka opcji:
-- **Bezpłatna wersja próbna**: Dobra do rozwoju i testowania  
-- **Licencja tymczasowa**: Idealna na dłuższe okresy oceny  
-- **Pełna licencja**: Wymagana przy wdrożeniu produkcyjnym  
+Oto coś, co pomija większość tutoriali: GroupDocs.Annotation nie jest darmowy w zastosowaniach komercyjnych. Masz kilka opcji:
 
-Aby rozpocząć ocenę, odwiedź [GroupDocs Purchase](https://purchase.groupdocs.com/buy) po opcje licencjonowania.
+- **Bezpłatna wersja próbna**: dobra do rozwoju i testów  
+- **Licencja tymczasowa**: idealna do wydłużonych okresów ewaluacji  
+- **Pełna licencja**: wymagana przy wdrożeniu produkcyjnym  
+
+Aby rozpocząć ewaluację, odwiedź [GroupDocs Purchase](https://purchase.groupdocs.com/buy) po opcje licencjonowania.
 
 ### Krok 3: Podstawowa inicjalizacja
 
-Oto jak zainicjalizować klasę `Annotator` (to jest twój główny punkt wejścia):
+Oto jak zainicjalizować klasę `Annotator` (to Twój główny punkt wejścia):
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -119,15 +130,15 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/document
 }
 ```
 
-**Wskazówka**: Zawsze używaj try‑with‑resources (jak pokazano powyżej), aby zapewnić prawidłowe zwalnianie uchwytów plików. Widziałem zbyt wiele wycieków pamięci spowodowanych zapomnieniem tego kroku przez programistów.
+**Wskazówka pro**: Zawsze używaj try‑with‑resources (jak pokazano wyżej), aby zapewnić prawidłowe czyszczenie uchwytów plików. Zobaczyłem zbyt wiele wycieków pamięci, gdy programiści pomijają ten krok.
 
 ## Przewodnik implementacji: Dodawanie adnotacji krok po kroku
 
-Teraz przychodzi zabawna część — zacznijmy dodawać rzeczywiste adnotacje do twoich PDF‑ów. Skupimy się na dwóch popularnych typach adnotacji, które obejmują większość przypadków użycia.
+Teraz przychodzi najciekawsza część — zaczynamy dodawać rzeczywiste adnotacje do PDF‑ów. Skupimy się na dwóch popularnych typach, które pokrywają większość przypadków użycia.
 
-### Dodawanie adnotacji obszaru (idealne do podświetlania sekcji)
+### Dodawanie adnotacji typu obszar (idealne do podświetlania sekcji)
 
-Adnotacje obszaru są fantastyczne, gdy musisz podświetlić całe akapity, sekcje lub dowolny prostokątny obszar w PDF. Traktuj je jak cyfrowe markery podkreślające.
+Adnotacje typu obszar są świetne, gdy trzeba podświetlić całe akapity, sekcje lub dowolny prostokątny obszar w PDF. Traktuj je jak cyfrowe zakreślacze.
 
 #### Krok 1: Utwórz adnotację obszaru
 
@@ -143,20 +154,19 @@ area.setPageNumber(1); // First page (1-indexed)
 ```
 
 **Zrozumienie parametrów:**
-- `Rectangle(100, 100, 100, 100)`: Pozycja (100 px od lewej, 100 px od góry) z szerokością i wysokością po 100 px  
-- `65535`: To jest żółty w formacie ARGB. Popularne kolory: Red = 16711680, Blue = 255, Green = 65280  
-- `setPageNumber(1)`: Strony PDF są numerowane od 1, a nie od 0 (częsty błąd!)
+- `Rectangle(100, 100, 100, 100)`: pozycja (100 px od lewej, 100 px od góry) oraz szerokość i wysokość po 100 px  
+- `65535`: to żółty kolor w formacie ARGB. Popularne kolory: Red = 16711680, Blue = 255, Green = 65280  
+- `setPageNumber(1)`: strony PDF są numerowane od 1, nie od 0 (częsty błąd!)
 
-#### Kiedy używać adnotacji obszaru
-
+#### Kiedy używać adnotacji typu obszar
 - Podświetlanie ważnych akapitów w dokumentach prawnych  
 - Oznaczanie sekcji wymagających przeglądu w specyfikacjach projektowych  
 - Zwracanie uwagi na konkretne zakresy danych w raportach  
 - Tworzenie wizualnych granic wokół bloków treści  
 
-### Dodawanie adnotacji elipsy (świetne do notatek)
+### Dodawanie adnotacji typu elipsa (świetne do dymków)
 
-Adnotacje elipsy są idealne, gdy chcesz zwrócić uwagę na konkretne elementy bez ostrych krawędzi prostokątów. Są szczególnie przydatne do podświetlania okrągłych wykresów, logotypów lub tworzenia miękkiego obszaru.
+Adnotacje elipsy są idealne, gdy chcesz przyciągnąć uwagę do konkretnego elementu bez ostrych krawędzi prostokątów. Są szczególnie przydatne przy podświetlaniu okrągłych wykresów, logotypów lub tworzeniu miękkiego obszaru uwagi.
 
 #### Krok 2: Utwórz adnotację elipsy
 
@@ -170,15 +180,15 @@ ellipse.setBackgroundColor(123456); // Custom color
 ellipse.setPageNumber(1); // Same page as area annotation
 ```
 
-**Dlaczego używać elips zamiast prostokątów?**
+**Dlaczego elipsy zamiast prostokątów?**
 - Bardziej atrakcyjne wizualnie przy podświetlaniu elementów okrągłych  
-- Tworzy efekt „reflektoru”, który wydaje się mniej inwazyjny  
+- Tworzą efekt „reflektorowy”, który jest mniej inwazyjny  
 - Lepsze do przyciągania uwagi bez całkowitego zasłaniania treści  
 - Przydatne do uzyskania organicznego, ręcznie rysowanego wyglądu  
 
 #### Krok 3: Dodaj adnotacje do dokumentu
 
-Teraz połączmy obie adnotacje i dodajmy je do PDF:
+Teraz połączmy oba typy i dodajmy je do PDF‑a:
 
 ```java
 import java.util.ArrayList;
@@ -195,11 +205,11 @@ annotator.add(annotations);
 System.out.println("Added " + annotations.size() + " annotations successfully!");
 ```
 
-**Wskazówka wydajnościowa**: Dodawanie adnotacji w partiach (jak pokazano powyżej) jest znacznie szybsze niż wywoływanie `annotator.add()` wielokrotnie, szczególnie przy dużych dokumentach.
+**Wskazówka wydajnościowa**: Dodawanie adnotacji w partiach (jak pokazano wyżej) jest znacznie szybsze niż wywoływanie `annotator.add()` wielokrotnie, szczególnie przy dużych dokumentach.
 
-## Jak eksportować strony z adnotacjami przy użyciu GroupDocs
+## Jak eksportować strony PDF z adnotacjami przy użyciu GroupDocs
 
-Oto potężna funkcja, którą wielu programistów pomija: możesz skonfigurować GroupDocs, aby **eksportować tylko strony zawierające adnotacje**. Jest to niezwykle przydatne przy tworzeniu dokumentów podsumowujących lub zmniejszaniu rozmiaru plików.
+Oto potężna funkcja, której wielu programistów nie zauważa: możesz skonfigurować GroupDocs, aby **eksportował tylko strony zawierające adnotacje**. Jest to niezwykle przydatne przy tworzeniu dokumentów podsumowujących lub redukcji rozmiaru plików.
 
 #### Konfiguracja selektywnego eksportu stron
 
@@ -214,20 +224,20 @@ saveOptions.setOnlyAnnotatedPages(true); // This is the magic setting
 annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_summary.pdf", saveOptions);
 ```
 
-**Przykłady zastosowań w praktyce:**
-- **Przegląd prawny**: Eksportuj tylko strony z komentarzami prawnika  
-- **Ocena akademicka**: Twórz arkusze podsumowujące tylko oznaczone sekcje  
-- **Zarządzanie projektem**: Generuj raporty statusowe pokazujące tylko zaktualizowane sekcje  
-- **Zapewnienie jakości**: Wyodrębniaj strony z zidentyfikowanymi problemami  
+**Przykłady zastosowań w rzeczywistym świecie:**
+- **Przegląd prawny**: eksportuj tylko strony z komentarzami prawnika  
+- **Ocena akademicka**: twórz arkusze podsumowujące z jedynie oznaczonymi sekcjami  
+- **Zarządzanie projektem**: generuj raporty statusu pokazujące wyłącznie zaktualizowane części  
+- **Kontrola jakości**: wyodrębniaj strony z wykrytymi problemami  
 
 ## Typowe problemy i rozwiązania
 
-Omówmy problemy, z którymi najprawdopodobniej się spotkasz (i zaoszczędźmy ci trochę czasu na debugowanie).
+Omówmy problemy, z którymi najprawdopodobniej się spotkasz (i zaoszczędźmy Ci czas debugowania).
 
 ### Problem 1: „Plik jest używany przez inny proces”
 
 **Objawy**: `IOException` przy próbie zapisania dokumentu z adnotacjami  
-**Przyczyna**: Nieprawidłowe zamykanie instancji `Annotator`  
+**Przyczyna**: Nieprawidłowe zamknięcie instancji `Annotator`  
 **Rozwiązanie**: Zawsze używaj try‑with‑resources:
 
 ```java
@@ -244,17 +254,17 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 
 ### Problem 2: Adnotacje pojawiają się w niewłaściwych pozycjach
 
-**Objawy**: Twoje adnotacje pojawiają się w nieoczekiwanych miejscach  
-**Przyczyna**: Nieporozumienie co do systemu współrzędnych lub problemy ze skalowaniem DPI  
-**Rozwiązanie**:
-- Współrzędne PDF zaczynają się od **dolnego‑lewego** (nie od górnego‑lewego, jak w większości frameworków UI)  
-- Zawsze najpierw testuj ze znanymi wartościami współrzędnych  
+**Objawy**: Adnotacje wyświetlają się w nieoczekiwanych miejscach  
+**Przyczyna**: Nieporozumienie co do systemu współrzędnych lub skalowanie DPI  
+**Rozwiązanie**:  
+- Współrzędne PDF zaczynają się od **lewego dolnego rogu** (nie od lewego górnego, jak w większości UI)  
+- Najpierw testuj ze znanymi wartościami współrzędnych  
 - Uwzględnij wymiary strony PDF przy obliczaniu pozycji  
 
-### Problem 3: OutOfMemoryError przy dużych plikach PDF
+### Problem 3: OutOfMemoryError przy dużych PDF‑ach
 
-**Objawy**: Aplikacja się wyłącza przy przetwarzaniu dużych dokumentów  
-**Przyczyna**: Ładowanie całego PDF do pamięci  
+**Objawy**: Aplikacja się wyłącza podczas przetwarzania dużych dokumentów  
+**Przyczyna**: Ładowanie całego PDF‑a do pamięci  
 **Rozwiązanie**:
 
 ```java
@@ -267,11 +277,11 @@ for (int page = 1; page <= totalPages; page++) {
 }
 ```
 
-### Problem 4: Kolory nie wyświetlają się prawidłowo
+### Problem 4: Nieprawidłowe wyświetlanie kolorów
 
-**Objawy**: Kolory adnotacji wyglądają inaczej niż oczekiwano  
-**Przyczyna**: Niejasność formatu koloru (RGB vs ARGB)  
-**Rozwiązanie**: Używaj konsekwentnie formatu ARGB:
+**Objawy**: Kolory adnotacji różnią się od oczekiwanych  
+**Przyczyna**: Zamieszanie w formacie koloru (RGB vs ARGB)  
+**Rozwiązanie**: Stosuj konsekwentnie format ARGB:  
 - Czerwony: `0xFFFF0000` lub `16711680`  
 - Zielony: `0xFF00FF00` lub `65280`  
 - Niebieski: `0xFF0000FF` lub `255`  
@@ -334,58 +344,52 @@ public boolean addAnnotationSafely(String inputPath, String outputPath) {
 ### Wskazówki optymalizacji wydajności
 
 1. **Operacje wsadowe** – zawsze dodawaj wiele adnotacji jednocześnie  
-2. **Lenowe ładowanie** – ładować tylko strony, które rzeczywiście adnotujesz  
+2. **Lenistwo ładowania** – wczytuj tylko te strony, które rzeczywiście adnotujesz  
 3. **Pula połączeń** – ponownie używaj instancji `Annotator`, gdy to możliwe (z ostrożnością)  
 4. **Strumieniowanie plików** – używaj strumieniowania przy bardzo dużych dokumentach  
 
-## Kiedy wybrać GroupDocs vs alternatywy
+## Kiedy wybrać GroupDocs zamiast alternatyw
 
-GroupDocs.Annotation nie jest jedyną opcją na rynku. Oto kiedy ma sens:
+GroupDocs.Annotation nie jest jedyną opcją na rynku. Oto sytuacje, w których ma sens:
 
 **Wybierz GroupDocs, gdy:**
-- Potrzebujesz rozbudowanych typów adnotacji (ponad 20 obsługiwanych formatów)  
-- Praca z wieloma formatami dokumentów poza PDF  
-- Wymagasz wsparcia i dokumentacji na poziomie przedsiębiorstwa  
-- Budowanie aplikacji komercyjnych (licencjonowanie jest proste)
+- Potrzebujesz szerokiego wachlarza typów adnotacji (ponad 20 obsługiwanych formatów)  
+- Pracujesz z wieloma formatami dokumentów poza PDF  
+- Wymagasz wsparcia na poziomie przedsiębiorstwa oraz rozbudowanej dokumentacji  
+- Tworzysz aplikacje komercyjne (licencjonowanie jest przejrzyste)  
 
 **Rozważ alternatywy, gdy:**
-- Potrzebujesz jedynie podstawowej adnotacji PDF (Apache PDFBox może wystarczyć)  
-- Ograniczenia budżetowe (dostępne rozwiązania open‑source)  
-- Proste przypadki użycia (przesadne dla podstawowego podświetlania)
+- Potrzebujesz jedynie podstawowych adnotacji PDF (Apache PDFBox może wystarczyć)  
+- Ograniczenia budżetowe (dostępne są rozwiązania open‑source)  
+- Proste przypadki użycia (GroupDocs może być przesadą dla prostego podkreślania)  
 
 ## Praktyczne zastosowania w rzeczywistym świecie
 
-Oto jak zespoły faktycznie używają adnotacji PDF w Javie w środowisku produkcyjnym:
+Oto, jak zespoły faktycznie wykorzystują adnotacje PDF w Javie w środowisku produkcyjnym:
 
 ### Przegląd dokumentów prawnych
+Kancelarie używają adnotacji typu obszar do podświetlania klauzul umownych oraz adnotacji elipsy do oznaczania spornych fragmentów. Funkcja selektywnego eksportu tworzy czyste dokumenty podsumowujące dla klienta.
 
-Kancelarie prawne używają adnotacji obszaru do podświetlania klauzul umownych oraz adnotacji elipsy do oznaczania spornych sekcji. Funkcja selektywnego eksportu tworzy czyste dokumenty podsumowujące do przeglądu przez klienta.
-
-### Opinie o pracach akademickich
-
-Uczelnie wdrażają systemy adnotacji, w których wykładowcy mogą oznaczać prace studentów różnymi kolorowymi adnotacjami: gramatyka (czerwony), treść (niebieski) i struktura (zielony).
+### Informacja zwrotna do prac akademickich
+Uczelnie wdrażają systemy adnotacji, w których wykładowcy oznaczają prace studentów różnymi kolorami: czerwony – gramatyka, niebieski – treść, zielony – struktura.
 
 ### Przegląd dokumentacji oprogramowania
+Zespoły deweloperskie adnotują dokumentację API podczas cykli przeglądu, używając adnotacji do zaznaczania sekcji wymagających aktualizacji lub wyjaśnienia.
 
-Zespoły deweloperskie adnotują dokumentację API podczas cykli przeglądu, używając adnotacji do oznaczania sekcji wymagających aktualizacji lub wyjaśnień.
+### Procesy kontroli jakości
+Firmy produkcyjne adnotują raporty inspekcyjne, podświetlając niezgodności i oznaczając działania korygujące różnymi typami adnotacji.
 
-### Procesy zapewnienia jakości
-
-Firmy produkcyjne adnotują raporty inspekcyjne, podświetlając problemy z zgodnością i oznaczając działania korygujące różnymi typami adnotacji.
-
-## Rozważania wydajnościowe przy wdrożeniach na dużą skalę
+## Rozważania wydajnościowe przy dużej skali wdrożenia
 
 Gdy jesteś gotowy obsłużyć poważne obciążenia, pamiętaj o następujących czynnikach:
 
 ### Optymalizacja zużycia pamięci
+- **Rozmiar dokumentu**: PDF o wielkości 10 MB ≈ 50 MB pamięci podczas przetwarzania  
+- **Liczba adnotacji**: każda adnotacja dodaje około 1‑2 KB narzutu pamięciowego  
+- **Użytkownicy jednocześnie**: planuj 100 MB+ na sesję równoczesną  
 
-- **Rozmiar dokumentu**: PDF 10 MB ≈ 50 MB zużycia pamięci podczas przetwarzania  
-- **Liczba adnotacji**: Każda adnotacja dodaje ~1‑2 KB narzutu pamięciowego  
-- **Użytkownicy jednocześnie**: Planuj 100 MB+ na jednoczesną sesję adnotacji  
-
-### Benchmarki prędkości przetwarzania
-
-Na podstawie testów w rzeczywistych warunkach:
+### Benchmarki szybkości przetwarzania
+Na podstawie testów w rzeczywistych warunkach:  
 - Mały PDF (1‑10 stron): ~100‑500 ms na adnotację  
 - Średni PDF (10‑50 stron): ~500 ms‑2 s na adnotację  
 - Duży PDF (100+ stron): ~2‑10 s na adnotację  
@@ -404,26 +408,25 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 
 ## Najczęściej zadawane pytania
 
-**P: Jak zainstalować GroupDocs.Annotation w moim projekcie Java?**  
-O: Dodaj zależność Maven przedstawioną w sekcji wymagań wstępnych do swojego `pom.xml`, a następnie uruchom `mvn clean install`. Upewnij się, że adres URL repozytorium jest prawidłowy.
+**P: Jak zainstalować GroupDocs.Annotation w projekcie Java?**  
+O: Dodaj zależność Maven przedstawioną w sekcji wymagań wstępnych do `pom.xml`, a następnie uruchom `mvn clean install`. Upewnij się, że adres URL repozytorium jest poprawny.
 
 **P: Czy mogę adnotować formaty dokumentów inne niż PDF?**  
-O: Tak! GroupDocs.Annotation obsługuje ponad 50 formatów, w tym Word, Excel, PowerPoint i pliki graficzne. API pozostaje w dużej mierze takie samo dla różnych formatów.
+O: Tak! GroupDocs.Annotation obsługuje ponad 50 formatów, w tym Word, Excel, PowerPoint oraz pliki graficzne. API pozostaje w dużej mierze takie samo we wszystkich formatach.
 
 **P: Jakie typy adnotacji są dostępne oprócz obszaru i elipsy?**  
-O: GroupDocs obsługuje ponad 15 typów, takich jak podświetlenia tekstu, podkreślenia, przekreślenia, strzałki, znaki wodne, zamiana tekstu i adnotacje punktowe. Każdy typ ma określone opcje stylizacji.
+O: GroupDocs oferuje ponad 15 typów, m.in. podświetlenia tekstu, podkreślenia, przekreślenia, strzałki, znaki wodne, zamianę tekstu oraz adnotacje punktowe. Każdy typ ma własne opcje stylizacji.
 
-**P: Jak radzić sobie z dużymi plikami PDF, nie wyczerpując pamięci?**  
-O: Przetwarzaj dokumenty w fragmentach, zwiększ pamięć heap JVM (`-Xmx4g`), używaj strumieniowania tam, gdzie to możliwe, i zawsze zamykaj instancje `Annotator`. Dla plików powyżej 100 MB rozważ przetwarzanie stron indywidualnie.
+**P: Jak radzić sobie z dużymi plikami PDF, aby nie wyczerpać pamięci?**  
+O: Przetwarzaj dokumenty w partiach, zwiększ pulę pamięci JVM (`-Xmx4g`), używaj strumieniowania tam, gdzie to możliwe, i zawsze zamykaj instancje `Annotator`. Przy plikach powyżej 100 MB rozważ przetwarzanie poszczególnych stron osobno.
 
-**P: Czy istnieje sposób na dostosowanie wyglądu adnotacji poza podstawowymi kolorami?**  
-O: Oczywiście. Możesz dostosować przezroczystość, style obramowań, właściwości tekstu, a nawet dodać własne ikony. Każdy typ adnotacji udostępnia rozbudowane settery stylizacji.
- 
+**P: Czy można dostosować wygląd adnotacji poza podstawowymi kolorami?**  
+O: Oczywiście. Możesz modyfikować przezroczystość, style obramowań, właściwości tekstu oraz dodawać własne ikony. Każdy typ adnotacji udostępnia rozbudowane settery stylów.
 
 **Powiązane zasoby:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
 
 ---
 
-**Ostatnia aktualizacja:** 2026-01-08  
-**Testowano z:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs 
+**Ostatnia aktualizacja:** 2026-03-27  
+**Testowane z:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs
