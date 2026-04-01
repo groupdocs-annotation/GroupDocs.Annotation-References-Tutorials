@@ -1,45 +1,83 @@
 ---
-"description": "Migliora la collaborazione e l'annotazione dei documenti nelle applicazioni .NET utilizzando GroupDocs.Annotation per .NET. Annota, contrassegna e rivedi facilmente i documenti con questa potente libreria."
-"linktitle": "Genera anteprima senza annotazioni"
-"second_title": "API .NET di GroupDocs.Annotation"
-"title": "Genera anteprima senza annotazioni"
-"url": "/it/net/advanced-usage/generate-preview-without-annotations/"
+categories:
+- Document Processing
+date: '2026-04-01'
+description: Scopri come creare miniature PDF e generare un'anteprima PDF pulita senza
+  annotazioni in .NET. Guida passo‑passo con codice per la generazione di miniature
+  PDF usando GroupDocs.Annotation.
+keywords:
+- create pdf thumbnails
+- generate pdf preview
+- remove annotations preview
+- render pdf without markup
+- pdf thumbnail generation
+lastmod: '2025-01-02'
+linktitle: Genera anteprima senza annotazioni
+second_title: GroupDocs.Annotation .NET API
+tags:
+- pdf-preview
+- document-collaboration
+- annotations
+- net-development
+title: Crea miniature PDF in .NET – Anteprima pulita senza annotazioni
 type: docs
-"weight": 13
+url: /it/net/advanced-usage/generate-preview-without-annotations/
+weight: 13
 ---
 
-# Genera anteprima senza annotazioni
+# Crea miniature PDF in .NET – Anteprima pulita senza annotazioni
 
-## Introduzione
-Nell'era digitale odierna, una collaborazione efficiente sui documenti è fondamentale per la produttività e il successo. Che si lavori a un progetto con team sparsi in tutto il mondo o che si collabori con i clienti su contratti importanti, la possibilità di annotare e rivedere i documenti in modo fluido è fondamentale. Con GroupDocs.Annotation per .NET, è possibile portare la collaborazione sui documenti a un livello superiore, consentendo di annotare, marcare e rivedere facilmente direttamente dalle applicazioni .NET.
+Generare anteprime pulite dei documenti è una necessità comune quando si **creano miniature PDF** per gallerie, flussi di lavoro di approvazione o condivisione pubblica. In questo tutorial imparerai come **creare miniature PDF** che omettono ogni annotazione, offrendo ai tuoi utenti una visualizzazione impeccabile del contenuto originale del PDF.
+
+## Risposte rapide
+- **Cosa fa “RenderAnnotations = false”?** Indica a GroupDocs.Annotation di saltare tutti i markup durante il rendering dell'anteprima.  
+- **Quale formato immagine è consigliato per miniature ad alta qualità?** PNG fornisce qualità senza perdita; JPEG è più piccolo ma con perdita.  
+- **Posso selezionare pagine specifiche per il set di miniature?** Sì – imposta `PreviewOptions.PageNumbers` sulle pagine necessarie.  
+- **È necessaria una licenza per l'uso in produzione?** Una licenza è consigliata per funzionalità illimitate e supporto.  
+- **Questo approccio è compatibile con .NET Core?** Assolutamente – GroupDocs.Annotation funziona con .NET Framework e .NET Core.
+
+## Che cosa significa “creare miniature PDF”?
+Creare miniature PDF significa renderizzare ogni pagina di un PDF come immagine (PNG/JPEG) che può essere visualizzata in un'interfaccia utente. Le miniature sono utili per anteprime rapide, browser di documenti e per generare griglie di anteprima senza caricare l'intero PDF.
+
+## Perché generare un'anteprima senza annotazioni?
+Rimuovere le annotazioni dall'anteprima mantiene il focus sul contenuto originale del documento. Questo è essenziale per:
+
+- **Flussi di lavoro di approvazione dei documenti** – confronta la versione pulita con quella annotata.  
+- **Gallerie di miniature** – evita ingombri visivi da commenti o evidenziazioni.  
+- **Condivisione pubblica** – proteggi i markup sensibili mantenendo comunque la visualizzazione del documento.  
+- **Preparazione alla stampa** – genera un PDF pulito per la stampa mantenendo separate le note digitali.
+
 ## Prerequisiti
-Prima di immergerti nel mondo dell'annotazione dei documenti con GroupDocs.Annotation per .NET, è necessario soddisfare alcuni prerequisiti:
-### 1. Installa GroupDocs.Annotation per .NET
-Innanzitutto, devi scaricare e installare GroupDocs.Annotation per .NET. Puoi trovare il link per il download. [Qui](https://releases.groupdocs.com/annotation/net/)Seguire le istruzioni di installazione fornite per configurare la libreria nel proprio ambiente .NET.
-### 2. Ottieni una licenza (facoltativo)
-Sebbene GroupDocs.Annotation per .NET offra una prova gratuita, potresti valutare l'acquisto di una licenza per accedere a tutte le sue funzionalità. Puoi acquistare una licenza. [Qui](https://purchase.groupdocs.com/buy) o richiedere una licenza temporanea [Qui](https://purchase.groupdocs.com/temporary-license/) a scopo di test.
-### 3. Familiarità con lo sviluppo C# e .NET
-Per sfruttare al meglio GroupDocs.Annotation per .NET, è utile avere una conoscenza di base dello sviluppo in C# e .NET. Questo vi permetterà di integrare la libreria in modo ottimale nelle vostre applicazioni e nei vostri flussi di lavoro esistenti.
-### 4. Installa un visualizzatore PDF
-Poiché GroupDocs.Annotation per .NET funziona con i documenti PDF, è necessario un visualizzatore PDF installato sul sistema per visualizzare in anteprima i documenti annotati. Adobe Acrobat Reader o qualsiasi altro visualizzatore PDF sarà sufficiente.
+- **GroupDocs.Annotation per .NET** – installa dalla [pagina dei rilasci](https://releases.groupdocs.com/annotation/net/) ufficiale.  
+- **Licenza (opzionale ma consigliata)** – acquista una licenza completa tramite la [pagina di acquisto](https://purchase.groupdocs.com/buy) o richiedi una [licenza temporanea](https://purchase.groupdocs.com/temporary-license/).  
+- Conoscenza di base di C#/.NET.  
+- Un visualizzatore PDF (ad es., Adobe Acrobat Reader) per verificare le miniature generate.
 
-## Importa spazi dei nomi
-Prima di poter iniziare ad annotare i documenti, è necessario importare gli spazi dei nomi necessari nel progetto .NET. Questo consente di accedere alle classi e ai metodi forniti da GroupDocs.Annotation per .NET.
+## Importa gli spazi dei nomi
+Aggiungi le dichiarazioni `using` necessarie così puoi lavorare con l'API di annotazione:
 
 ```csharp
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 
-Ora che hai impostato tutto, generiamo un'anteprima di un documento senza annotazioni. Segui questi passaggi per farlo:
-## Passaggio 1: inizializzare l'annotatore
-Per prima cosa, crea un'istanza di `Annotator` classe, passando il percorso al documento che si desidera annotare.
+## Come creare miniature PDF senza annotazioni
+
+Di seguito trovi una guida passo‑passo che mostra esattamente come **generare anteprima PDF** come immagini mentre **rimuovi le annotazioni dall'anteprima** dall'output.
+
+### Passo 1: Inizializza l'Annotatore
+Crea un'istanza `Annotator` che punti al PDF di origine. Il blocco `using` garantisce il rilascio automatico delle risorse.
+
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
 ```
-## Passaggio 2: configurare le opzioni di anteprima
-Successivamente, configura le opzioni di anteprima in base alle tue esigenze. Puoi specificare i numeri di pagina da includere nell'anteprima, il formato di anteprima (ad esempio, PNG) e se visualizzare le annotazioni.
+
+> **Consiglio professionale:** Convalida il percorso del file e applica controlli di sicurezza adeguati quando gestisci PDF caricati dagli utenti.
+
+### Passo 2: Configura le opzioni di anteprima
+Imposta `PreviewOptions` per definire il formato di output, l'intervallo di pagine e, soprattutto, disabilitare il rendering delle annotazioni.
+
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -50,24 +88,79 @@ Successivamente, configura le opzioni di anteprima in base alle tue esigenze. Pu
     previewOptions.PageNumbers = new int[] {1, 2, 3, 4, 5, 6};
     previewOptions.RenderAnnotations = false;
 ```
-## Passaggio 3: Genera anteprima
-Infine, generare l'anteprima utilizzando il `GeneratePreview` metodo del `Document` classe, passando le opzioni di anteprima configurate.
+
+**Punti chiave**
+- **Denominazione file** – la lambda crea un file PNG unico per ogni pagina.  
+- **Scelta del formato** – PNG per miniature ad alta qualità; passa a JPEG per file più piccoli.  
+- **Selezione delle pagine** – specifica esattamente per quali pagine desideri la **generazione di miniature PDF**.  
+- **`RenderAnnotations = false`** – questo disabilita tutti i markup ed è il fulcro della **disabilitazione dell'anteprima delle annotazioni**.
+
+### Passo 3: Genera l'anteprima pulita
+Chiama il metodo `GeneratePreview` per renderizzare le immagini in base alle opzioni definite.
+
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-Seguendo questi semplici passaggi, è possibile generare un'anteprima di un documento senza annotazioni utilizzando GroupDocs.Annotation per .NET.
+
+I tuoi file di miniature pulite (`result1.png`, `result2.png`, …) sono ora pronti per l'uso.
+
+## Casi d'uso comuni in applicazioni reali
+- **Sistemi di gestione documentale** – miniature pulite per i browser di file mantenendo versioni annotate separate.  
+- **Piattaforme di revisione legale** – mostra ai clienti il contratto originale senza commenti interni.  
+- **Portali e‑learning** – visualizza i compiti originali mentre gli insegnanti mantengono private le note di valutazione.  
+- **Flussi di lavoro editoriali** – crea immagini di anteprima per il materiale di marketing senza markup editoriale.
+
+## Considerazioni sulle prestazioni
+- **Elaborazione batch** – gestisci più PDF in un unico job in background per ridurre l'overhead.  
+- **Caching** – memorizza le miniature generate dopo il primo upload per evitare il re‑rendering ad ogni richiesta.  
+- **Limiti di pagina** – per PDF molto grandi, limita l'anteprima alle prime pagine per mantenere basso il tempo di elaborazione.  
+- **Compromessi del formato file** – PNG fornisce miniature nitide; JPEG riduce lo spazio di archiviazione quando la larghezza di banda è un problema.
+
+## Risoluzione dei problemi comuni
+- **Miniature non create** – verifica i permessi di scrittura per la cartella di output e assicurati che il PDF di origine non sia corrotto.  
+- **Bassa qualità dell'immagine** – passa a PNG o regola le impostazioni DPI se la tua versione di GroupDocs.Annotation lo supporta.  
+- **Elevato utilizzo di memoria** – elabora le pagine in batch più piccoli o trasmetti in streaming il PDF invece di caricarlo interamente in memoria.  
+- **Problemi di percorso** – costruisci sempre i percorsi dei file con `Path.Combine()` per la sicurezza cross‑platform.
+
+## Buone pratiche per la produzione
+- Avvolgi la generazione dell'anteprima in un blocco `try‑catch` per gestire gli errori I/O in modo fluido.  
+- Usa le istruzioni `using` (come mostrato) per garantire il corretto rilascio dei handle dei file.  
+- Convalida i PDF in ingresso (dimensione, formato, protezione con password) prima dell'elaborazione.  
+- Registra ogni evento di generazione dell'anteprima per monitoraggio e debug.
+
+## Opzioni di configurazione avanzate
+- **DPI personalizzato** – alcune versioni consentono di impostare una risoluzione più alta per miniature più nitide.  
+- **Filigrana** – aggiungi una filigrana “Solo anteprima” per indicare che l'immagine non è il documento finale.  
+- **Selezione intelligente delle pagine** – scegli automaticamente le pagine più rilevanti (ad es., prima pagina, indice) in base ai metadati del documento.
 
 ## Conclusione
-In conclusione, GroupDocs.Annotation per .NET offre una soluzione potente per la collaborazione e l'annotazione dei documenti all'interno delle applicazioni .NET. Seguendo i passaggi descritti in questo tutorial, è possibile integrare perfettamente le funzionalità di annotazione dei documenti nei progetti, migliorando la collaborazione e la produttività.
+Ora hai una ricetta completa, pronta per la produzione, per **creare miniature PDF** e **generare anteprime PDF** senza alcun markup. Impostando `RenderAnnotations = false`, **rimuovi le annotazioni dall'anteprima** e fornisci miniature pulite e professionali che si integrano perfettamente in qualsiasi applicazione centrata sui documenti.
+
+---
+
 ## Domande frequenti
-### D: Posso utilizzare GroupDocs.Annotation per .NET con altri formati di documento oltre al PDF?
-Sì, GroupDocs.Annotation per .NET supporta numerosi formati di documenti, tra cui DOCX, XLSX, PPTX e altri.
-### D: GroupDocs.Annotation per .NET è compatibile con .NET Core?
-Sì, GroupDocs.Annotation per .NET è compatibile sia con gli ambienti .NET Framework che .NET Core.
-### D: GroupDocs.Annotation per .NET offre strumenti di annotazione personalizzabili?
-Sì, GroupDocs.Annotation per .NET fornisce una gamma di strumenti di annotazione che possono essere personalizzati in base alle tue esigenze specifiche.
-### D: Posso integrare GroupDocs.Annotation per .NET nelle mie applicazioni web?
-Sì, GroupDocs.Annotation per .NET può essere integrato sia nelle applicazioni desktop che in quelle web, offrendo funzionalità di collaborazione sui documenti senza interruzioni.
-### D: Esiste un forum della community in cui posso ottenere supporto e assistenza con GroupDocs.Annotation per .NET?
-Sì, puoi trovare supporto e assistenza sul forum GroupDocs.Annotation [Qui](https://forum.groupdocs.com/c/annotation/10).
+
+**Q: Posso usare GroupDocs.Annotation per .NET con formati diversi da PDF?**  
+A: Sì. La libreria supporta DOCX, XLSX, PPTX e molti altri. Lo stesso flusso di lavoro di anteprima si applica indipendentemente dal formato di origine.
+
+**Q: GroupDocs.Annotation per .NET è compatibile con .NET Core?**  
+A: Assolutamente. Funziona con .NET Framework, .NET Core e .NET 5/6+, così puoi mirare a moderne applicazioni cross‑platform.
+
+**Q: La libreria fornisce strumenti di annotazione personalizzabili?**  
+A: Sì, ma quando imposti `RenderAnnotations = false` quegli strumenti vengono ignorati per la generazione dell'anteprima.
+
+**Q: Posso integrare questo in un'applicazione web?**  
+A: Sì. Assicurati solo che il server web abbia i permessi di I/O file appropriati e considera lo streaming dell'output direttamente al client per evitare file temporanei.
+
+**Q: Quale formato immagine dovrei scegliere per le gallerie di miniature?**  
+A: PNG offre la migliore qualità, mentre JPEG riduce le dimensioni del file. Scegli in base alla fedeltà visiva necessaria rispetto ai vincoli di larghezza di banda.
+
+**Q: Dove posso ottenere supporto dalla community?**  
+A: Puoi trovare aiuto sul forum di GroupDocs.Annotation [qui](https://forum.groupdocs.com/c/annotation/10). La community è attiva e reattiva.
+
+---
+
+**Ultimo aggiornamento:** 2026-04-01  
+**Testato con:** GroupDocs.Annotation per .NET 23.12  
+**Autore:** GroupDocs
