@@ -1,36 +1,63 @@
 ---
-"date": "2025-05-06"
-"description": "Μάθετε πώς να φορτώνετε, να προσθέτετε σχόλια και να αποθηκεύετε με ασφάλεια έγγραφα που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Annotation για Java. Βελτιώστε την ασφάλεια των εγγράφων στις εφαρμογές Java που διαθέτετε."
-"title": "Ασφαλής διαχείριση εγγράφων με το GroupDocs.Annotation Java Φόρτωση και σχολιασμός εγγράφων που προστατεύονται με κωδικό πρόσβασης"
-"url": "/el/java/advanced-features/groupdocs-annotation-java-password-documents/"
+categories:
+- Java Development
+date: '2026-01-23'
+description: Πλήρης οδηγός για την επισήμανση προστατευμένων PDF σε Java χρησιμοποιώντας
+  το GroupDocs Annotation. Μάθετε πώς να διαχειρίζεστε PDF με κωδικό πρόσβασης, να
+  προσθέτετε επισήμανση και να εξασφαλίζετε ασφαλή επεξεργασία εγγράφων σε εφαρμογές
+  Java.
+keywords: java document annotation library, password protected document java, secure
+  document handling java, java pdf annotation, groupdocs annotation java example
+lastmod: '2026-01-23'
+linktitle: Java Document Annotation Library Guide
+tags:
+- document-processing
+- pdf-annotation
+- java-library
+- security
+title: Σχολιασμός προστατευμένου PDF Java – Πλήρης Οδηγός με το GroupDocs
 type: docs
-"weight": 1
+url: /el/java/advanced-features/groupdocs-annotation-java-password-documents/
+weight: 1
 ---
 
-# Ασφαλής διαχείριση εγγράφων με το GroupDocs.Annotation Java
-## Εισαγωγή
-Στη σημερινή ψηφιακή εποχή, η διασφάλιση της ασφάλειας ευαίσθητων εγγράφων είναι ζωτικής σημασίας σε διάφορους κλάδους, όπως η νομική, η χρηματοοικονομική και η υγειονομική περίθαλψη. Αυτό το σεμινάριο θα σας καθοδηγήσει στη χρήση του GroupDocs.Annotation για Java για την ασφαλή φόρτωση, σχολιασμό και αποθήκευση εγγράφων που προστατεύονται με κωδικό πρόσβασης.
-**Τι θα μάθετε:**
-- Πώς να φορτώσετε έγγραφα που προστατεύονται με κωδικό πρόσβασης με το GroupDocs.Annotation.
-- Τεχνικές για την προσθήκη σχολίων περιοχής σε έγγραφα.
-- Βήματα για την ασφαλή αποθήκευση του σχολιασμένου εγγράφου.
-Με αυτές τις γνώσεις, θα βελτιώσετε την ασφάλεια των εγγράφων σας διατηρώντας παράλληλα την παραγωγικότητα στις εφαρμογές Java σας. Ας ξεκινήσουμε ρυθμίζοντας το περιβάλλον σας.
+# annotate protected pdf java – Πλήρης Οδηγός με GroupDocs
 
-## Προαπαιτούμενα
-Πριν προχωρήσετε, βεβαιωθείτε ότι έχετε:
-- **Κιτ ανάπτυξης Java (JDK):** Έκδοση 8 ή νεότερη.
-- **Maven:** Για διαχείριση εξαρτήσεων και δημιουργία έργων.
-- **GroupDocs.Annotation για τη βιβλιοθήκη Java:** Συμπεριλάβετε την έκδοση 25.2 στο έργο σας.
+Δουλεύετε με ευαίσθητα PDF σε εφαρμογές Java; Αν χρειάζεστε να **annotate protected pdf java** αρχεία ενώ διατηρείτε τα δεδομένα ασφαλή, βρίσκεστε στο σωστό μέρος. Σε αυτόν τον οδηγό θα περάσουμε από τη φόρτωση PDF με κωδικό πρόσβασης, την προσθήκη επαγγελματικών σχολίων και την ασφαλή αποθήκευση του αποτελέσματος — όλα με το GroupDocs.Annotation για Java.
 
-### Απαιτήσεις Ρύθμισης Περιβάλλοντος
-1. Εγκαταστήστε το JDK εάν δεν είναι ήδη διαθέσιμο στο σύστημά σας.
-2. Ρυθμίστε το Maven ως εργαλείο δημιουργίας για τα έργα Java σας.
-3. Η εξοικείωση με βασικές έννοιες προγραμματισμού Java είναι ωφέλιμη.
+## Γρήγορες Απαντήσεις
+- **Ποια βιβλιοθήκη μου επιτρέπει να annotate protected PDFs σε Java;** GroupDocs.Annotation for Java  
+- **Χρειάζομαι άδεια για παραγωγή;** Ναι – μια εμπορική άδεια αφαιρεί τα υδατογράμματα και τους περιορισμούς  
+- **Ποια έκδοση JDK συνιστάται;** Java 11+ (Java 8 λειτουργεί αλλά το 11+ προσφέρει καλύτερη απόδοση)  
+- **Μπορώ να επεξεργαστώ πολλά αρχεία ταυτόχρονα;** Ναι, χρησιμοποιήστε παρτίδες ή ασύγχρονα μοτίβα που εμφανίζονται αργότερα  
+- **Ο κώδικας είναι thread‑safe;** Οι στιγμές του Annotator δεν μοιράζονται· δημιουργήστε μια νέα ανά αίτημα  
+
+## Τι είναι το “annotate protected pdf java”;
+Το “annotate protected pdf java” αναφέρεται στη διαδικασία ανοίγματος ενός PDF κρυπτογραφημένου με κωδικό σε περιβάλλον Java, προσθέτοντας προγραμματιστικά σημειώσεις, επισημάνσεις ή σχήματα, και στη συνέχεια αποθηκεύοντας το αρχείο διατηρώντας ή ενημερώνοντας την ασφάλειά του. Το GroupDocs.Annotation παρέχει ένα καθαρό API που διαχειρίζεται το επίπεδο κωδικού για εσάς.
+
+## Γιατί να επιλέξετε το GroupDocs.Annotation ως τη βιβλιοθήκη σχολιασμού εγγράφων Java σας;
+Πριν βυθιστούμε στον κώδικα, ας επαναλάβουμε γιατί το GroupDocs.Annotation ξεχωρίζει:
+
+- **Security First** – Ενσωματωμένη υποστήριξη για PDF με κωδικό και κρυπτογράφηση.  
+- **Format Flexibility** – Λειτουργεί με PDF, Word, Excel, PowerPoint, εικόνες και 50+ άλλες μορφές.  
+- **Enterprise Ready** – Διαχειρίζεται επεξεργασία μεγάλου όγκου, αξιόπιστη διαχείριση σφαλμάτων και κλιμακούμενη απόδοση.  
+- **Developer Experience** – Καθαρό API, εκτενής τεκμηρίωση και ενεργή κοινότητα.  
+
+## Προαπαιτούμενα (Μην παραλείψετε αυτό το τμήμα)
+
+- **JDK:** 8 ή νεότερο (συνιστάται Java 11+)  
+- **Build Tool:** Maven (λειτουργεί και το Gradle)  
+- **IDE:** IntelliJ IDEA, Eclipse ή οποιοδήποτε Java IDE προτιμάτε  
+- **Knowledge:** Βασικές αρχές Java, βασικά του Maven, I/O αρχείων  
+
+*Προαιρετικό αλλά χρήσιμο:* εξοικείωση με τις εσωτερικές λειτουργίες του PDF και προηγούμενη εμπειρία με πλαίσια σχολιασμού.  
 
 ## Ρύθμιση του GroupDocs.Annotation για Java
-Για να χρησιμοποιήσετε το GroupDocs.Annotation στο έργο Java σας, ενσωματώστε το μέσω του Maven:
 
-**Διαμόρφωση Maven:**
+### Maven Configuration (Ο σωστός τρόπος)
+
+Προσθέστε το αποθετήριο και την εξάρτηση στο `pom.xml`. Αυτό το ακριβές τμήμα πρέπει να παραμείνει αμετάβλητο:
+
 ```xml
 <repositories>
    <repository>
@@ -48,119 +75,341 @@ type: docs
    </dependency>
 </dependencies>
 ```
-### Απόκτηση Άδειας
-Για να χρησιμοποιήσετε το GroupDocs.Annotation, μπορείτε να κάνετε τα εξής:
-- **Δωρεάν δοκιμή:** Κατεβάστε μια δοκιμαστική έκδοση για να εξερευνήσετε τις δυνατότητές του.
-- **Προσωρινή Άδεια:** Ζητήστε προσωρινή άδεια για εκτεταμένη πρόσβαση χωρίς περιορισμούς.
-- **Αγορά:** Αγοράστε μια άδεια χρήσης για πλήρη δικαιώματα χρήσης.
 
-Μόλις εγκατασταθεί, αρχικοποιήστε τη βιβλιοθήκη στο έργο σας ως εξής:
+**Pro Tip:** Καθορίστε μια συγκεκριμένη έκδοση στην παραγωγή· αποφύγετε εύρη εκδόσεων που θα μπορούσαν να εισάγουν breaking changes.
+
+### License Setup (Παράκαμψη των περιορισμών της δοκιμής)
+
 ```java
 import com.groupdocs.annotation.Annotator;
-// Πρόσθετες απαραίτητες εισαγωγές
-public class InitializeGroupDocs {
-    public static void main(String[] args) {
-        // Βασικός κώδικας εγκατάστασης και αρχικοποίησης εδώ
+import com.groupdocs.annotation.License;
+
+public class GroupDocsSetup {
+    public static void initializeLicense() {
+        try {
+            License license = new License();
+            license.setLicense("path/to/your/license.lic");
+            System.out.println("License applied successfully");
+        } catch (Exception e) {
+            System.out.println("License not applied: " + e.getMessage());
+        }
     }
 }
 ```
-## Οδηγός Εφαρμογής
-Τώρα που έχετε ρυθμίσει το GroupDocs.Annotation για Java, ας εξερευνήσουμε τις βασικές λειτουργίες του μέσω της πρακτικής εφαρμογής.
-### Φόρτωση εγγράφων που προστατεύονται με κωδικό πρόσβασης
-**Επισκόπηση:**
-Η φόρτωση εγγράφων που προστατεύονται με κωδικό πρόσβασης είναι ζωτικής σημασίας κατά τον χειρισμό εμπιστευτικών αρχείων. Με το GroupDocs.Annotation, αυτή η διαδικασία απλοποιείται.
-**Βήματα Υλοποίησης:**
-1. **Ορισμός επιλογών φόρτωσης και ορισμός κωδικού πρόσβασης:**
-   Δημιουργήστε μια παρουσία του `LoadOptions` για να καθορίσετε τον κωδικό πρόσβασης του εγγράφου σας.
-   ```java
-   import com.groupdocs.annotation.options.LoadOptions;
 
-   LoadOptions loadOptions = new LoadOptions();
-   loadOptions.setPassword("1234");
-   ```
-2. **Αρχικοποίηση σχολιαστή με επιλογές φόρτωσης:**
-   Χρησιμοποιήστε το `Annotator` κλάση, περνώντας τη διαδρομή αρχείου και τις επιλογές φόρτωσης.
-   ```java
-   import com.groupdocs.annotation.Annotator;
+## Κύρια Υλοποίηση: Ασφαλής Επεξεργασία Εγγράφου
 
-   final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/InputProtected.pdf", loadOptions);
-   ```
-**Συμβουλές αντιμετώπισης προβλημάτων:**
-- Βεβαιωθείτε ότι ο κωδικός πρόσβασης του εγγράφου είναι σωστός.
-- Βεβαιωθείτε ότι η διαδρομή αρχείου είναι ακριβής και προσβάσιμη.
-### Προσθήκη σχολίου περιοχής σε ένα έγγραφο
-**Επισκόπηση:**
-Οι σχολιασμοί βελτιώνουν την ορατότητα του εγγράφου επισημαίνοντας σημαντικές ενότητες. Εδώ, θα προσθέσουμε μια απλή σχολίαση περιοχής.
-**Βήματα Υλοποίησης:**
-1. **Αρχικοποίηση σχολιαστή (Υποθέτοντας από το προηγούμενο βήμα):**
-   Χρησιμοποιήστε το ίδιο `Annotator` η παρουσία αρχικοποιήθηκε προηγουμένως.
-2. **Δημιουργία και ρύθμιση παραμέτρων AreaAnnotation:**
-   Ορίστε τη θέση και τις διαστάσεις του ορθογωνίου.
-   ```java
-   import com.groupdocs.annotation.models.Rectangle;
-   import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+### Πώς να annotate protected pdf java – Φόρτωση εγγράφων με κωδικό πρόσβασης
 
-   AreaAnnotation area = new AreaAnnotation();
-   area.setBox(new Rectangle(100, 100, 100, 100)); // συντεταγμένες x, y με πλάτος και ύψος
-   area.setBackgroundColor(65535); // Κωδικός χρώματος RGB για φόντο
-   ```
-3. **Προσθήκη σχολίου στο έγγραφο:**
-   ```java
-   annotator.add(area);
-   ```
-### Αποθήκευση σχολιασμένων εγγράφων
-**Επισκόπηση:**
-Αφού κάνετε τις σχολιασμοί σας, είναι σημαντικό να τις αποθηκεύσετε με ασφάλεια.
-**Βήματα Υλοποίησης:**
-1. **Ορισμός διαδρομής εξόδου:**
-   Καθορίστε πού θέλετε να αποθηκεύσετε το σχολιασμένο έγγραφο.
-   ```java
-   String outputPath = "YOUR_OUTPUT_DIRECTORY/AnnotatedDocument.pdf";
-   ```
-2. **Αποθήκευση και Απόρριψη Πόρων:**
-   Χρήση `save` μέθοδος και απελευθέρωση πόρων χρησιμοποιώντας `dispose`.
-   ```java
-   annotator.save(outputPath);
-   annotator.dispose();
-   ```
-**Συμβουλές αντιμετώπισης προβλημάτων:**
-- Βεβαιωθείτε ότι έχετε δικαιώματα εγγραφής στον κατάλογο εξόδου.
-- Επιβεβαιώστε ότι όλα τα προηγούμενα βήματα (φόρτωση, σχολιασμός) έχουν εκτελεστεί σωστά.
-## Πρακτικές Εφαρμογές
-Ακολουθούν ορισμένα σενάρια πραγματικού κόσμου όπου το GroupDocs.Annotation υπερέχει:
-1. **Αναθεώρηση Νομικών Εγγράφων:** Σχολιάστε τα συμβόλαια με σχόλια και επισημάνσεις για ευκολότερη ανασκόπηση.
-2. **Σχολιασμοί Ιατρικής Απεικόνισης:** Προσθέστε σημειώσεις σε ακτινογραφίες ή μαγνητικές τομογραφίες για να βοηθήσετε στη διάγνωση.
-3. **Εμπλουτισμός Εκπαιδευτικού Υλικού:** Επισημάνετε τα βασικά σημεία σε σχολικά βιβλία ή σημειώσεις διαλέξεων.
-4. **Σχόλια σχεδιασμού:** Παρέχετε οπτική ανατροφοδότηση σχετικά με αρχιτεκτονικά σχέδια ή σχέδια προϊόντων.
-5. **Ανάλυση Οικονομικών Εγγράφων:** Σημειώστε σημαντικά στοιχεία και τάσεις στις οικονομικές αναφορές.
-## Παράγοντες Απόδοσης
-Όταν εργάζεστε με σχολιασμούς εγγράφων, η βελτιστοποίηση της απόδοσης είναι απαραίτητη:
-- **Διαχείριση Πόρων:** Βεβαιωθείτε για την ορθή απόρριψη `Annotator` στιγμιότυπα για να ελευθερώσετε μνήμη.
-- **Μαζική επεξεργασία:** Εάν σχολιάζετε πολλά έγγραφα, σκεφτείτε το ενδεχόμενο ομαδοποίησης για να βελτιώσετε την αποτελεσματικότητα.
-- **Ασύγχρονες Λειτουργίες:** Για εφαρμογές μεγάλης κλίμακας, χρησιμοποιήστε ασύγχρονες μεθόδους όπου είναι δυνατόν.
-## Σύναψη
-Σε αυτό το σεμινάριο, μάθατε πώς να φορτώνετε, να προσθέτετε σχόλια και να αποθηκεύετε με ασφάλεια έγγραφα που προστατεύονται με κωδικό πρόσβασης χρησιμοποιώντας το GroupDocs.Annotation για Java. Αυτή η ισχυρή βιβλιοθήκη προσφέρει μια ισχυρή λύση για την εύκολη διαχείριση ευαίσθητων εγγράφων.
-**Επόμενα βήματα:**
-- Εξερευνήστε περισσότερους τύπους σχολιασμών που προσφέρονται από το GroupDocs.
-- Ενσωματώστε αυτήν τη λειτουργικότητα στις υπάρχουσες εφαρμογές Java που χρησιμοποιείτε.
-Είστε έτοιμοι να βελτιώσετε τις διαδικασίες διαχείρισης εγγράφων σας; Εφαρμόστε τις τεχνικές που συζητήθηκαν και δείτε πώς μπορούν να βελτιστοποιήσουν τη ροή εργασίας σας!
-## Ενότητα Συχνών Ερωτήσεων
-1. **Ποιες εκδόσεις του JDK είναι συμβατές με το GroupDocs.Annotation για Java;**  
-   Οι εκδόσεις 8 και άνω λειτουργούν άψογα.
-2. **Μπορώ να προσθέσω σχόλια σε πολλές σελίδες ταυτόχρονα;**  
-   Ναι, οι σχολιασμοί μπορούν να εφαρμοστούν σε διαφορετικές ενότητες εγγράφων.
-3. **Είναι δυνατή η εκτεταμένη προσαρμογή των στυλ σχολιασμού;**  
-   Απολύτως! Μπορείτε να τροποποιήσετε χρώματα, σχήματα και άλλες ιδιότητες ανάλογα με τις ανάγκες σας.
-4. **Πώς μπορώ να χειριστώ σφάλματα κατά τη φόρτωση εγγράφων που προστατεύονται με κωδικό πρόσβασης;**  
-   Βεβαιωθείτε ότι η διαδρομή του αρχείου είναι σωστή και ότι έχετε τα σωστά δικαιώματα.
-5. **Ποιες είναι μερικές βέλτιστες πρακτικές για τη διαχείριση μνήμης με το GroupDocs.Annotation;**  
-   Απελευθερώστε πάντα πόρους χρησιμοποιώντας `dispose` μετά από επεμβάσεις για την αποφυγή διαρροών μνήμης.
-## Πόροι
-Για περαιτέρω ανάγνωση και εργαλεία:
-- [Τεκμηρίωση GroupDocs](https://docs.groupdocs.com/annotation/java/)  
-- [Αναφορά API](https://reference.groupdocs.com/annotation/java/)  
-- [Λήψη τελευταίας έκδοσης](https://releases.groupdocs.com/annotation/java/)  
-- [Αγορά προϊόντων GroupDocs](https://purchase.groupdocs.com/buy)  
-- [Δωρεάν Δοκιμαστική Λήψη](https://releases.groupdocs.com/annotation/java/)  
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+
+public class SecureDocumentLoader {
+    
+    public static Annotator loadPasswordProtectedDocument(String filePath, String password) {
+        try {
+            // Configure load options with password
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            
+            // Initialize annotator with security options
+            Annotator annotator = new Annotator(filePath, loadOptions);
+            
+            System.out.println("Document loaded successfully");
+            return annotator;
+            
+        } catch (Exception e) {
+            System.err.println("Failed to load document: " + e.getMessage());
+            throw new RuntimeException("Document loading failed", e);
+        }
+    }
+}
+```
+
+**Συνηθισμένα Προβλήματα & Λύσεις**  
+- *Λάθος κωδικός*: επικυρώστε πριν από την επεξεργασία.  
+- *Αρχείο δεν βρέθηκε*: ελέγξτε την ύπαρξη και τα δικαιώματα.  
+- *Πίεση μνήμης*: χρησιμοποιήστε try‑with‑resources (δείτε παρακάτω).
+
+### Προσθήκη Επαγγελματικών Σχολίων Περιοχής
+
+```java
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+
+public class AnnotationProcessor {
+    
+    public static void addAreaAnnotation(Annotator annotator) {
+        try {
+            // Create area annotation with precise positioning
+            AreaAnnotation area = new AreaAnnotation();
+            
+            // Position and size (x, y, width, height in points)
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            
+            // Visual styling
+            area.setBackgroundColor(65535); // Light blue background
+            area.setOpacity(0.7); // Semi‑transparent
+            area.setBorderColor(255); // Red border
+            area.setBorderWidth(2); // Border thickness
+            
+            // Add descriptive message
+            area.setMessage("Important section for review");
+            
+            // Apply annotation
+            annotator.add(area);
+            
+            System.out.println("Area annotation added successfully");
+            
+        } catch (Exception e) {
+            System.err.println("Failed to add annotation: " + e.getMessage());
+        }
+    }
+}
+```
+
+**Συμβουλές Τοποθέτησης**  
+- Οι συντεταγμένες ξεκινούν από το πάνω‑αριστερό (0,0).  
+- Οι μετρήσεις είναι σε points (1 pt = 1/72 in).  
+- Δοκιμάστε σε διαφορετικά μεγέθη σελίδας για να εξασφαλίσετε σταθερή τοποθέτηση.
+
+### Ασφαλής Αποθήκευση Εγγράφου (Έτοιμο για Παραγωγή)
+
+```java
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class SecureDocumentSaver {
+    
+    public static void saveAnnotatedDocument(Annotator annotator, String outputPath) {
+        try {
+            // Validate output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Save with error handling
+            annotator.save(outputPath);
+            System.out.println("Document saved successfully to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Failed to save document: " + e.getMessage());
+            throw new RuntimeException("Document saving failed", e);
+        } finally {
+            // Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## Πλήρες Παράδειγμα Εργασίας (Έτοιμο για Αντιγραφή‑Επικόλληση)
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class CompleteAnnotationExample {
+    
+    public static void main(String[] args) {
+        String inputPath = "path/to/your/protected-document.pdf";
+        String outputPath = "path/to/output/annotated-document.pdf";
+        String password = "your-document-password";
+        
+        processPasswordProtectedDocument(inputPath, outputPath, password);
+    }
+    
+    public static void processPasswordProtectedDocument(String inputPath, String outputPath, String password) {
+        Annotator annotator = null;
+        
+        try {
+            // Step 1: Load password‑protected document
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            annotator = new Annotator(inputPath, loadOptions);
+            
+            // Step 2: Create and configure area annotation
+            AreaAnnotation area = new AreaAnnotation();
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            area.setBackgroundColor(65535); // Light blue
+            area.setOpacity(0.7);
+            area.setMessage("Reviewed and approved");
+            
+            // Step 3: Add annotation to document
+            annotator.add(area);
+            
+            // Step 4: Ensure output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Step 5: Save annotated document
+            annotator.save(outputPath);
+            System.out.println("Success! Annotated document saved to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Processing failed: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            // Step 6: Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## Πραγματικές Περιπτώσεις Χρήσης (Όπου Αυτό Λαμπυρίζει Πραγματικά)
+
+- **Legal Review Systems** – Επισημάνετε ρήτρες, προσθέστε σχόλια και διατηρήστε ένα αρχείο ελέγχου.  
+- **Medical Imaging** – Σχολιάστε ακτινογραφίες ή αναφορές διατηρώντας τη συμμόρφωση με το HIPAA.  
+- **Financial Document Analysis** – Σημειώστε βασικά τμήματα σε αιτήσεις δανείου ή εκθέσεις ελέγχου.  
+- **Educational Content** – Εκπαιδευτικοί και μαθητές προσθέτουν σημειώσεις σε PDF χωρίς να τροποποιούν το αρχικό.  
+- **Engineering Design Review** – Οι ομάδες σχολιάζουν σχέδια και εξαγωγές CAD με ασφάλεια.  
+
+## Απόδοση & Καλές Πρακτικές (Μην το παραλείψετε)
+
+### Διαχείριση Μνήμης (Κρίσιμη για Παραγωγή)
+
+```java
+// Good: Automatic resource management
+public void processDocumentSafely(String inputPath, String password) {
+    LoadOptions options = new LoadOptions();
+    options.setPassword(password);
+    
+    try (Annotator annotator = new Annotator(inputPath, options)) {
+        // Your annotation logic here
+        // Resources automatically cleaned up
+    } catch (Exception e) {
+        System.err.println("Processing error: " + e.getMessage());
+    }
+}
+```
+
+### Βελτιστοποίηση Επεξεργασίας Παρτίδων
+
+```java
+public void processBatchDocuments(List<DocumentInfo> documents) {
+    for (DocumentInfo doc : documents) {
+        Annotator annotator = null;
+        try {
+            // Process individual document
+            annotator = loadDocument(doc);
+            addAnnotations(annotator, doc.getAnnotations());
+            saveDocument(annotator, doc.getOutputPath());
+        } catch (Exception e) {
+            System.err.println("Failed to process: " + doc.getFileName());
+        } finally {
+            // Cleanup after each document
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+### Ασύγχρονη Επεξεργασία για Εφαρμογές Web
+
+```java
+import java.util.concurrent.CompletableFuture;
+
+public CompletableFuture<String> processDocumentAsync(String inputPath, String password) {
+    return CompletableFuture.supplyAsync(() -> {
+        try {
+            // Your document processing logic
+            return processPasswordProtectedDocument(inputPath, password);
+        } catch (Exception e) {
+            throw new RuntimeException("Async processing failed", e);
+        }
+    });
+}
+```
+
+## Προηγμένες Σκέψεις Ασφάλειας
+
+### Ασφαλής Διαχείριση Αρχείων (Καθαρισμός Κωδικών από τη Μνήμη)
+
+```java
+public class SecureFileHandler {
+    
+    public static void processSecurely(String inputPath, String password) {
+        // Clear password from memory after use
+        char[] passwordChars = password.toCharArray();
+        
+        try {
+            LoadOptions options = new LoadOptions();
+            options.setPassword(new String(passwordChars));
+            
+            // Process document
+            // ... your logic here
+            
+        } finally {
+            // Clear password from memory
+            Arrays.fill(passwordChars, '\0');
+        }
+    }
+}
+```
+
+### Καταγραφή Ελέγχου (Έτοιμη για Συμμόρφωση)
+
+```java
+import java.util.logging.Logger;
+
+public class AuditLogger {
+    private static final Logger logger = Logger.getLogger(AuditLogger.class.getName());
+    
+    public static void logDocumentAccess(String userId, String documentPath, String action) {
+        logger.info(String.format("User: %s, Action: %s, Document: %s, Timestamp: %s", 
+                   userId, action, documentPath, new Date()));
+    }
+}
+```
+
+## Οδηγός Επίλυσης Προβλημάτων (Όταν Τα Πράγματα Πηγαίνουν Λάθος)
+
+| Πρόβλημα | Τυπική Αιτία | Γρήγορη Διόρθωση |
+|----------|---------------|-------------------|
+| **Invalid Password** | Λάθος κωδικός ή κωδικοποίηση | Αφαιρέστε κενά, βεβαιωθείτε ότι η κωδικοποίηση είναι UTF‑8 |
+| **File Not Found** | Λανθασμένη διαδρομή ή έλλειψη δικαιώματος | Χρησιμοποιήστε απόλυτες διαδρομές, ελέγξτε τα δικαιώματα ανάγνωσης |
+| **Memory Leak** | Μη κλήση του `dispose()` | Πάντα καλέστε `annotator.dispose()` στο `finally` |
+| **Annotation Mis‑placement** | Σύγχυση μεταξύ points και pixels | Θυμηθείτε 1 pt = 1/72 in· δοκιμάστε σε δείγμα σελίδων |
+| **Slow Loading** | Μεγάλα αρχεία ή πολύπλοκα PDF | Προεπεξεργασία, αύξηση του heap της JVM, χρήση streaming APIs |
+
+## Συχνές Ερωτήσεις
+
+**Q:** *Μπορώ να annotate PDFs που χρησιμοποιούν κρυπτογράφηση AES‑256;*  
+**A:** Ναι. Το GroupDocs.Annotation υποστηρίζει την τυπική κρυπτογράφηση PDF, συμπεριλαμβανομένου AES‑256, εφόσον παρέχετε τον σωστό κωδικό.
+
+**Q:** *Χρειάζομαι εμπορική άδεια για παραγωγή;*  
+**A:** Απόλυτα. Η δοκιμαστική έκδοση προσθέτει υδατογραφήματα και περιορίζει την επεξεργασία. Μια εμπορική άδεια αφαιρεί αυτούς τους περιορισμούς.
+
+**Qύω κωδικούς σε απλό κ περιβάλλοντος και καθαρίτή σας είναι να περιορίζετε τη σύγχρονη επεξεργασία στον αριθμό των πυρήνων CPU και να παρακολουθείτε τη χρήση του heap.
+
+**Q:** *Μπορώ να ενσωματώσω αυτό με σύστημα διαχείρισης εγγράφων όπως το SharePoint;*  
+**A:** Ναι. Μπορείτε να μεταφέρετε αρχεία από το SharePoint στον Annotator και ναροι
+
+- [Τεκμηρίωση GroupDocs.Annotation για Java](https://docs.groupdocs.com/annotation/java/)  
+- [Πλήρης Οδηγός Αναφοράς API](https://reference.groupdocs.com/annotation/java/)  
+- [Λήψη Τελευταίας Έκδοσης](https://releases.groupdocs.com/annotation/java/)  
+- [Αγορά Εμπορικής Άδειας](https://purchase.groupdocs.com/buy)  
+- [Λήψη Δωρεάν Δοκιμαστικής Έκδοσης](https://releases.groupdocs.com/annotation/java/)  
 - [Αίτηση Προσωρινής Άδειας](https://purchase.groupdocs.com/temporary-license/)  
-- [Φόρουμ υποστήριξης GroupDocs](https://forum.groupdocs.com/c/annotation/)
+- [Φόρουμ Υποστήριξης Κοινότητας](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Τελευταία Ενημέρωση:** 2026-01-23  
+**Δοκιμή Με:** GroupDocs.Annotation 25.2  
+**Συγγραφέας:** GroupDocs

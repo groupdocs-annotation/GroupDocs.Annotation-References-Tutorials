@@ -1,36 +1,57 @@
 ---
-"date": "2025-05-06"
-"description": "Ismerje meg, hogyan tölthet be, láthat el jegyzetekkel és menthet el jelszóval védett dokumentumokat biztonságosan a GroupDocs.Annotation for Java segítségével. Növelje a dokumentumok biztonságát Java alkalmazásaiban."
-"title": "Biztonságos dokumentumkezelés a GroupDocs.Annotation segítségével. Java&#58; Jelszóval védett dokumentumok betöltése és megjegyzésekkel való ellátása"
-"url": "/hu/java/advanced-features/groupdocs-annotation-java-password-documents/"
+categories:
+- Java Development
+date: '2026-01-23'
+description: Teljes útmutató a védett PDF Java annotálásához a GroupDocs Annotation
+  használatával. Tanulja meg, hogyan kezelje a jelszóval védett PDF-eket, adjon megjegyzéseket,
+  és biztosítsa a dokumentumfeldolgozást Java alkalmazásokban.
+keywords: java document annotation library, password protected document java, secure
+  document handling java, java pdf annotation, groupdocs annotation java example
+lastmod: '2026-01-23'
+linktitle: Java Document Annotation Library Guide
+tags:
+- document-processing
+- pdf-annotation
+- java-library
+- security
+title: Védett PDF annotálása Java – Teljes útmutató a GroupDocs-szal
 type: docs
-"weight": 1
+url: /hu/java/advanced-features/groupdocs-annotation-java-password-documents/
+weight: 1
 ---
 
-# Biztonságos dokumentumkezelés GroupDocs.Annotation Java segítségével
-## Bevezetés
-A mai digitális korban a bizalmas dokumentumok biztonságának garantálása kulcsfontosságú számos iparágban, például a jogi, pénzügyi és egészségügyi szektorban. Ez az oktatóanyag végigvezeti Önt a GroupDocs.Annotation for Java használatán, amellyel biztonságosan betöltheti, jegyzetekkel láthatja el és mentheti a jelszóval védett dokumentumokat.
-**Amit tanulni fogsz:**
-- Jelszóval védett dokumentumok betöltése a GroupDocs.Annotation segítségével.
-- Technikák a dokumentumokhoz területi megjegyzések hozzáadására.
-- A jegyzetekkel ellátott dokumentum biztonságos mentéséhez szükséges lépések.
-Ezzel a tudással fokozhatja a dokumentumok biztonságát, miközben fenntartja a termelékenységet Java alkalmazásaiban. Kezdjük a környezet beállításával.
+# annotate protected pdf java – Teljes útmutató a GroupDocs-szal
 
-## Előfeltételek
-Mielőtt folytatná, győződjön meg arról, hogy rendelkezik a következőkkel:
-- **Java fejlesztőkészlet (JDK):** 8-as vagy újabb verzió.
-- **Szakértő:** Függőségkezeléshez és projektépítéshez.
-- **GroupDocs.Annotation a Java könyvtárhoz:** Vegye fel a 25.2-es verziót a projektbe.
+Érzékeny PDF-ekkel dolgozik Java alkalmazásokban? Ha **annotate protected pdf java** fájlokat kell megjelölnie, miközben az adatokat biztonságban tartja, jó helyen jár. Ebben az útmutatóban végigvezetjük a jelszóval védett PDF-ek betöltésén, a professzionális megjegyzések hozzáadásán és az eredmény biztonságos mentésén – mindezt a## Gyors válaszok
+- **Melyik könyvtár teszi lehetővé a védett PDF-ek megjelölését Java-ban?**Java 8 is működik, de Igen, használja a aszinkron mintákat  
+- **A kód szálbiztos?** Az Annotator példányok nincsenek megosztva; kérésenként hozzon létre újat  
 
-### Környezeti beállítási követelmények
-1. Telepítsd a JDK-t, ha még nem elérhető a rendszereden.
-2. Állítsd be a Mavent Java projektjeid build eszközeként.
-3. Előnyt jelent az alapvető Java programozási fogalmak ismerete.
+## Mi az a “annotate protected pdf java”?
+Az “annotate protected pdf java” a folyamatot jelenti, amikor egy jelszóval titkosított PDF-et nyit meg egy Java környezetben, programozottan jegyzeteket, kiemeléseket vagy alakzatokat ad hozzá, majd a fájlt elmenti, miközben megőrzi vagy frissíti a biztonságát. A GroupDocs.Annotation tiszta API-t biztosít, amely a jelszó réteget kezeli Ön helyett.
 
-## GroupDocs.Annotation beállítása Java-hoz
-A GroupDocs.Annotation Java projektben való használatához integráld azt Maven-en keresztül:
+## Miért válassza a GroupDocs.Annotation-t Java dokumentum megjegyzés könyvtáraként?
+Mielőtt a kódba merülnénk, foglaljuk össze, miért emelkedik ki a GroupDocs.Annotation:
 
-**Maven konfiguráció:**
+- **Security First** – Beépített támogatás a jelszóval védett PDF-ekhez és titkosításhoz.  
+- **Format Flexibility** – PDF, Word, Excel, PowerPoint, képek és több mint 50 egyéb formátum támogatása.  
+- **Enterprise Ready** – Nagy mennyiségű feldolgozást, robusztus hibakezelést és skálázható teljesítményt biztosít.  
+- **Developer Experience** – Tiszta API, kiterjedt dokumentáció és aktív közösség.  
+
+## Előfeltételek (Ne hagyja ki ezt a részt)
+
+- **JDK:** 8 vagy újabb (Java 11+ ajánlott)  
+- **Build Tool:** Maven (Gradle is működik)  
+- **IDE:** IntelliJ IDEA, Eclipse vagy bármely kedvelt Java IDE  
+- **Knowledge:** Java alapok, Maven alapok, fájl I/O  
+
+*Opcionális, de hasznos:* ismeret a PDF belső működéséről és korábbi tapasztalat a megjegyzés keretrendszerekkel.
+
+## A GroupDocs.Annotation beállítása Java-hoz
+
+### Maven konfiguráció (A helyes mód)
+
+Add the repository and dependency to your `pom.xml`. This exact block must stay unchanged:
+
 ```xml
 <repositories>
    <repository>
@@ -48,119 +69,347 @@ A GroupDocs.Annotation Java projektben való használatához integráld azt Mave
    </dependency>
 </dependencies>
 ```
-### Licencszerzés
-A GroupDocs.Annotation használatához a következőket teheti:
-- **Ingyenes próbaverzió:** Tölts le egy próbaverziót a képességeinek felfedezéséhez.
-- **Ideiglenes engedély:** Igényeljen ideiglenes licencet a korlátozások nélküli, meghosszabbított hozzáféréshez.
-- **Vásárlás:** Vásároljon licencet a teljes használati jogokért.
 
-A telepítés után inicializálja a könyvtárat a projektben az alábbiak szerint:
+**Pro Tip:** Rögzítse egy konkrét verzióra a termelésben; kerülje a verziótartományokat, amelyek törékeny változásokat hozhatnak.
+
+### Licenc beállítása (A próbaverzió korlátainak átlépése)
+
 ```java
 import com.groupdocs.annotation.Annotator;
-// További szükséges import
-public class InitializeGroupDocs {
-    public static void main(String[] args) {
-        // Alapvető beállítási és inicializálási kód itt
+import com.groupdocs.annotation.License;
+
+public class GroupDocsSetup {
+    public static void initializeLicense() {
+        try {
+            License license = new License();
+            license.setLicense("path/to/your/license.lic");
+            System.out.println("License applied successfully");
+        } catch (Exception e) {
+            System.out.println("License not applied: " + e.getMessage());
+        }
     }
 }
 ```
-## Megvalósítási útmutató
-Most, hogy beállította a GroupDocs.Annotation Java-hoz való használatát, vizsgáljuk meg a fő funkcióit a gyakorlati megvalósításon keresztül.
-### Jelszóval védett dokumentumok betöltése
-**Áttekintés:**
-A jelszóval védett dokumentumok betöltése kulcsfontosságú a bizalmas fájlok kezelésekor. A GroupDocs.Annotation segítségével ez a folyamat leegyszerűsödik.
-**Megvalósítási lépések:**
-1. **Betöltési beállítások megadása és jelszó beállítása:**
-   Hozz létre egy példányt a következőből: `LoadOptions` a dokumentum jelszavának megadásához.
-   ```java
-   import com.groupdocs.annotation.options.LoadOptions;
 
-   LoadOptions loadOptions = new LoadOptions();
-   loadOptions.setPassword("1234");
-   ```
-2. **Jegyzetelő inicializálása betöltési beállításokkal:**
-   Használd a `Annotator` osztály, átadva a fájl elérési útját és a betöltési opciókat.
-   ```java
-   import com.groupdocs.annotation.Annotator;
+## Alapvető megvalósítás: Biztonságos dokumentumfeldolgozás
 
-   final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/InputProtected.pdf", loadOptions);
-   ```
-**Hibaelhárítási tippek:**
-- Győződjön meg arról, hogy a dokumentum jelszava helyes.
-- Ellenőrizze, hogy a fájl elérési útja pontos és elérhető-e.
-### Területjegyzet hozzáadása egy dokumentumhoz
-**Áttekintés:**
-A jegyzetek a fontos szakaszok kiemelésével javítják a dokumentum láthatóságát. Itt egy egyszerű területjegyzetet fogunk hozzáadni.
-**Megvalósítási lépések:**
-1. **Annotátor inicializálása (az előző lépés alapján):**
-   Használja ugyanazt `Annotator` példány korábban inicializálva.
-2. **Területi megjegyzések létrehozása és konfigurálása:**
-   Határozza meg a téglalap helyét és méreteit.
-   ```java
-   import com.groupdocs.annotation.models.Rectangle;
-   import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+### How to annotate protected pdf java – Jelszóval védett dokumentumok betöltése
 
-   AreaAnnotation area = new AreaAnnotation();
-   area.setBox(new Rectangle(100, 100, 100, 100)); // x, y koordináták szélességgel és magassággal
-   area.setBackgroundColor(65535); // RGB színkód a háttérhez
-   ```
-3. **Jegyzet hozzáadása a dokumentumhoz:**
-   ```java
-   annotator.add(area);
-   ```
-### Jegyzetekkel ellátott dokumentumok mentése
-**Áttekintés:**
-A jegyzetek elkészítése után kulcsfontosságú, hogy biztonságosan elmentse azokat.
-**Megvalósítási lépések:**
-1. **Kimeneti útvonal meghatározása:**
-   Adja meg, hová szeretné menteni a jegyzetekkel ellátott dokumentumot.
-   ```java
-   String outputPath = "YOUR_OUTPUT_DIRECTORY/AnnotatedDocument.pdf";
-   ```
-2. **Erőforrások mentése és megsemmisítése:**
-   Használat `save` módszer és erőforrások felszabadítása a következő használatával: `dispose`.
-   ```java
-   annotator.save(outputPath);
-   annotator.dispose();
-   ```
-**Hibaelhárítási tippek:**
-- Győződjön meg arról, hogy rendelkezik írási jogosultságokkal a kimeneti könyvtárhoz.
-- Győződjön meg arról, hogy az összes korábbi lépés (betöltés, megjegyzések) helyesen lett végrehajtva.
-## Gyakorlati alkalmazások
-Íme néhány valós helyzet, ahol a GroupDocs.Annotation kiemelkedően teljesít:
-1. **Jogi dokumentumok felülvizsgálata:** A szerződéseket megjegyzésekkel és kiemelésekkel láthatja el a könnyebb áttekintés érdekében.
-2. **Orvosi képalkotási megjegyzések:** Jegyzeteket adjon a röntgen- vagy MRI-felvételekhez a diagnózis elősegítése érdekében.
-3. **Oktatási anyagok fejlesztése:** Emeld ki a tankönyvek vagy előadásjegyzetek kulcsfontosságú pontjait.
-4. **Tervezési visszajelzés:** Vizuális visszajelzést adjon az építészeti tervekről vagy terméktervekről.
-5. **Pénzügyi dokumentumok elemzése:** Jelölje meg a fontos adatokat és trendeket a pénzügyi jelentésekben.
-## Teljesítménybeli szempontok
-Dokumentumjegyzetekkel végzett munka során a teljesítmény optimalizálása elengedhetetlen:
-- **Erőforrás-gazdálkodás:** Gondoskodjon a megfelelő ártalmatlanításról `Annotator` példányok a memória felszabadítása érdekében.
-- **Kötegelt feldolgozás:** Több dokumentum megjegyzéseinek elkészítése esetén érdemes lehet kötegelt műveleteket végezni a hatékonyság növelése érdekében.
-- **Aszinkron műveletek:** Nagyméretű alkalmazások esetén, ahol lehetséges, aszinkron metódusokat használjon.
-## Következtetés
-Ebben az oktatóanyagban megtanultad, hogyan tölthetsz be, láthatsz el jegyzeteket és menthetsz el jelszóval védett dokumentumokat biztonságosan a GroupDocs.Annotation for Java segítségével. Ez a hatékony könyvtár robusztus megoldást kínál a bizalmas dokumentumok egyszerű kezeléséhez.
-**Következő lépések:**
-- Fedezze fel a GroupDocs által kínált további jegyzettípusokat.
-- Integrálja ezt a funkciót a meglévő Java alkalmazásaiba.
-Készen áll dokumentumkezelési folyamatainak fejlesztésére? Alkalmazza a megvitatott technikákat, és nézze meg, hogyan egyszerűsíthetik munkafolyamatát!
-## GYIK szekció
-1. **A JDK mely verziói kompatibilisek a GroupDocs.Annotation for Java-val?**  
-   A 8-as és újabb verziók zökkenőmentesen működnek.
-2. **Több oldalra is feljegyzéseket tudok tenni egyszerre?**  
-   Igen, a jegyzetek a dokumentum különböző szakaszaira is alkalmazhatók.
-3. **Lehetséges a jegyzetstílusok széleskörű testreszabása?**  
-   Természetesen! A színeket, formákat és egyéb tulajdonságokat igényeid szerint módosíthatod.
-4. **Hogyan kezeljem a jelszóval védett dokumentumok betöltése során fellépő hibákat?**  
-   Győződjön meg arról, hogy a fájl elérési útja helyes, és hogy rendelkezik a megfelelő jogosultságokkal.
-5. **Milyen ajánlott gyakorlatok vannak a memóriakezeléshez a GroupDocs.Annotation segítségével?**  
-   Mindig szabadítson fel erőforrásokat a következő használatával: `dispose` műtétek után a memóriavesztés megelőzése érdekében.
-## Erőforrás
-További olvasmányokért és eszközökért:
-- [GroupDocs dokumentáció](https://docs.groupdocs.com/annotation/java/)  
-- [API-referencia](https://reference.groupdocs.com/annotation/java/)  
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+
+public class SecureDocumentLoader {
+    
+    public static Annotator loadPasswordProtectedDocument(String filePath, String password) {
+        try {
+            // Configure load options with password
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            
+            // Initialize annotator with security options
+            Annotator annotator = new Annotator(filePath, loadOptions);
+            
+            System.out.println("Document loaded successfully");
+            return annotator;
+            
+        } catch (Exception e) {
+            System.err.println("Failed to load document: " + e.getMessage());
+            throw new RuntimeException("Document loading failed", e);
+        }
+    }
+}
+```
+
+**Gyakori problémák és megoldások**  
+- *Wrong password*: ellenőrizze a jelszót a feldolgozás előtt.  
+- *File not found*: ellenőrizze a létezést és a jogosultságokat.  
+- *Memory pressure*: használjon try‑with‑resources (lásd később).
+
+### Professzionális terület megjegyzések hozzáadása
+
+```java
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+
+public class AnnotationProcessor {
+    
+    public static void addAreaAnnotation(Annotator annotator) {
+        try {
+            // Create area annotation with precise positioning
+            AreaAnnotation area = new AreaAnnotation();
+            
+            // Position and size (x, y, width, height in points)
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            
+            // Visual styling
+            area.setBackgroundColor(65535); // Light blue background
+            area.setOpacity(0.7); // Semi‑transparent
+            area.setBorderColor(255); // Red border
+            area.setBorderWidth(2); // Border thickness
+            
+            // Add descriptive message
+            area.setMessage("Important section for review");
+            
+            // Apply annotation
+            annotator.add(area);
+            
+            System.out.println("Area annotation added successfully");
+            
+        } catch (Exception e) {
+            System.err.println("Failed to add annotation: " + e.getMessage());
+        }
+    }
+}
+```
+
+**Elhelyezési tippek**  
+- A koordináták a bal‑felső sarokból indulnak (0,0).  
+- A mérések pontban vannak (1 pt = 1/72 húz).  
+- Tesztelje különböző oldalméreteken a konzisztens elhelyezés érdekében.
+
+### Biztonságos dokumentum mentése (Termelés‑kész)
+
+```java
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class SecureDocumentSaver {
+    
+    public static void saveAnnotatedDocument(Annotator annotator, String outputPath) {
+        try {
+            // Validate output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Save with error handling
+            annotator.save(outputPath);
+            System.out.println("Document saved successfully to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Failed to save document: " + e.getMessage());
+            throw new RuntimeException("Document saving failed", e);
+        } finally {
+            // Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## Teljes működő példa (Másolás‑beillesztés kész)
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.options.LoadOptions;
+import com.groupdocs.annotation.models.Rectangle;
+import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class CompleteAnnotationExample {
+    
+    public static void main(String[] args) {
+        String inputPath = "path/to/your/protected-document.pdf";
+        String outputPath = "path/to/output/annotated-document.pdf";
+        String password = "your-document-password";
+        
+        processPasswordProtectedDocument(inputPath, outputPath, password);
+    }
+    
+    public static void processPasswordProtectedDocument(String inputPath, String outputPath, String password) {
+        Annotator annotator = null;
+        
+        try {
+            // Step 1: Load password‑protected document
+            LoadOptions loadOptions = new LoadOptions();
+            loadOptions.setPassword(password);
+            annotator = new Annotator(inputPath, loadOptions);
+            
+            // Step 2: Create and configure area annotation
+            AreaAnnotation area = new AreaAnnotation();
+            area.setBox(new Rectangle(100, 100, 200, 150));
+            area.setBackgroundColor(65535); // Light blue
+            area.setOpacity(0.7);
+            area.setMessage("Reviewed and approved");
+            
+            // Step 3: Add annotation to document
+            annotator.add(area);
+            
+            // Step 4: Ensure output directory exists
+            String outputDir = Paths.get(outputPath).getParent().toString();
+            if (!Files.exists(Paths.get(outputDir))) {
+                Files.createDirectories(Paths.get(outputDir));
+            }
+            
+            // Step 5: Save annotated document
+            annotator.save(outputPath);
+            System.out.println("Success! Annotated document saved to: " + outputPath);
+            
+        } catch (Exception e) {
+            System.err.println("Processing failed: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            // Step 6: Always cleanup resources
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+## Valós példák (Ahol ez igazán ragyog)
+
+- **Legal Review Systems** – Részletek kiemelése, megjegyzések hozzáadása és audit nyomvonal fenntartása.  
+- **Medical Imaging** – X‑ray vagy jelentések megjegyzése, miközben HIPAA‑kompatibilis marad.  
+- **Financial Document Analysis** – Kulcsfontosságú szakaszok jelölése hitelkérelmekben vagy audit jelentésekben.  
+- **Educational Content** – Tanárok és diákok megjegyzéseket adnak a PDF-ekhez az eredeti módosítása nélkül.  
+- **Engineering Design Review** – Csapatok biztonságosan megjegyzik a tervrajzokat és CAD exportokat.  
+
+## Teljesítmény és legjobb gyakorlatok (Ne hagyja ki ezt)
+
+### Memóriakezelés (Kritikus a termeléshez)
+
+```java
+// Good: Automatic resource management
+public void processDocumentSafely(String inputPath, String password) {
+    LoadOptions options = new LoadOptions();
+    options.setPassword(password);
+    
+    try (Annotator annotator = new Annotator(inputPath, options)) {
+        // Your annotation logic here
+        // Resources automatically cleaned up
+    } catch (Exception e) {
+        System.err.println("Processing error: " + e.getMessage());
+    }
+}
+```
+
+### Kötegelt feldolgozás optimalizálása
+
+```java
+public void processBatchDocuments(List<DocumentInfo> documents) {
+    for (DocumentInfo doc : documents) {
+        Annotator annotator = null;
+        try {
+            // Process individual document
+            annotator = loadDocument(doc);
+            addAnnotations(annotator, doc.getAnnotations());
+            saveDocument(annotator, doc.getOutputPath());
+        } catch (Exception e) {
+            System.err.println("Failed to process: " + doc.getFileName());
+        } finally {
+            // Cleanup after each document
+            if (annotator != null) {
+                annotator.dispose();
+            }
+        }
+    }
+}
+```
+
+### Aszinkron feldolgozás webalkalmazásokhoz
+
+```java
+import java.util.concurrent.CompletableFuture;
+
+public CompletableFuture<String> processDocumentAsync(String inputPath, String password) {
+    return CompletableFuture.supplyAsync(() -> {
+        try {
+            // Your document processing logic
+            return processPasswordProtectedDocument(inputPath, password);
+        } catch (Exception e) {
+            throw new RuntimeException("Async processing failed", e);
+        }
+    });
+}
+```
+
+## Haladó biztonsági megfontolások
+
+### Biztonságos fájlkezelés (Jelszavak törlése a memóriából)
+
+```java
+public class SecureFileHandler {
+    
+    public static void processSecurely(String inputPath, String password) {
+        // Clear password from memory after use
+        char[] passwordChars = password.toCharArray();
+        
+        try {
+            LoadOptions options = new LoadOptions();
+            options.setPassword(new String(passwordChars));
+            
+            // Process document
+            // ... your logic here
+            
+        } finally {
+            // Clear password from memory
+            Arrays.fill(passwordChars, '\0');
+        }
+    }
+}
+```
+
+### Audit naplózás (Megfelelőség‑kész)
+
+```java
+import java.util.logging.Logger;
+
+public class AuditLogger {
+    private static final Logger logger = Logger.getLogger(AuditLogger.class.getName());
+    
+    public static void logDocumentAccess(String userId, String documentPath, String action) {
+        logger.info(String.format("User: %s, Action: %s, Document: %s, Timestamp: %s", 
+                   userId, action, documentPath, new Date()));
+    }
+}
+```
+
+## Hibaelhárítási útmutató (Ha valami rosszul megy)
+
+| Probléma | Tipikus ok | Gyors megoldás |
+|----------|------------|----------------|
+| **Érvénytelen jelszó** | Rossz jelszó vagy kódolás | Távolítsa el a szóközöket, biztosítsa az UTF‑8 kódolást |
+| **Fájl nem található** | Helytelen útvonal vagy hiányzó jogosultság | Használjon abszolút útvonalakat, ellenőrizze az olvasási jogokat |
+| **Memóriaszivárgás** | `dispose()` hívásának hiánya | Mindig hívja a `annotator.dispose()`-t a `finally` blokkban |
+| **Megjegyzés helytelen elhelyezése** | Pontok és pixelek összekeverése | Ne feledje, hogy 1 pt = 1/72 in; tesztelje mintapéldákon |
+| **Lassú betöltés** | Nagy fájlok vagy összetett PDF-ek | Előfeldolgozás, JVM heap növelése, streaming API-k használata |
+
+## Gyakran ismételt kérdések
+
+**Q:** *Annotálhatok AES‑256 titkosítást használó PDF-eket?*  
+**A:** Igen. A GroupDocs.Annotation támogatja a szabványos PDF titkosítást, beleértve az AES‑256-ot is, amennyiben a helyes jelszót adja meg.
+
+**Q:** *Szükségem van kereskedelmi licencre a termeléshez?*  
+**A:** Teljesen. A próbaverzió vízjeleket és feldolgozási korlátokat ad hozzá. A kereskedelmi licenc eltávolítja ezeket a korlátokat.
+
+**Q:** *Biztonságos jelszavakat egyszerű szövegként tárolni?*  
+**A:** Soha. Használjon biztonságos tárolókat vagy környezeti változókat, és törölje a jelszó karaktertömböket használat után (lásd a Biztonságos fájlkezelés példát).
+
+**Q:** *Hány dokumentumot dolgozhatok fel egyszerre?*  
+**A:** A szerver erőforrásaitól függ. Egy gyakori minta, hogy a párhuzamosságot a CPU magok számához korlátozzuk, és figyeljük a heap használatot.
+
+**Q:** *Integrálhatom ezt egy dokumentumkezelő rendszerrel, például a SharePointtal?*  
+**A:** Igen. Fájlokat streamelhet a SharePointból az Annotatorba, majd visszaírhatja az eredményt, megtartva ugyanazt a biztonsági modellt.
+
+## További források
+
+- [GroupDocs.Annotation Java dokumentáció](https://docs.groupdocs.com/annotation/java/)  
+- [Teljes API referencia útmutató](https://reference.groupdocs.com/annotation/java/)  
 - [Legújabb verzió letöltése](https://releases.groupdocs.com/annotation/java/)  
-- [GroupDocs termékek vásárlása](https://purchase.groupdocs.com/buy)  
+- [Kereskedelmi licenc vásárlása](https://purchase.groupdocs.com/buy)  
 - [Ingyenes próbaverzió letöltése](https://releases.groupdocs.com/annotation/java/)  
-- [Ideiglenes engedélykérelem](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs támogatási fórum](https://forum.groupdocs.com/c/annotation/)
+- [Ideiglenes licenc kérése](https://purchase.groupdocs.com/temporary-license/)  
+- [Közösségi támogatási fórum](https://forum.groupdocs.com/c/annotation/)  
+
+---
+
+**Legutóbb frissítve:** 2026-01-23  
+**Tesztelve ezzel:** GroupDocs.Annotation 25.2  
+**Szerző:** GroupDocs
