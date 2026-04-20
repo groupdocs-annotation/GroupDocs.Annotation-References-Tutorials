@@ -1,10 +1,10 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-01-10'
-description: Naučte se, jak vytvořit interaktivní PDF tlačítka v Javě pomocí GroupDocs.Annotation.
-  Průvodce krok za krokem, ukázky kódu, řešení problémů a osvědčené postupy pro vývojáře
-  Javy.
+date: '2026-03-17'
+description: Naučte se, jak vytvořit PDF tlačítka v Javě pomocí GroupDocs.Annotation.
+  Krok za krokem průvodce, příklady kódu, řešení problémů a osvědčené postupy pro
+  vývojáře Javy.
 keywords: interactive pdf buttons java, GroupDocs Annotation tutorial, PDF button
   component Java, Java PDF interactivity, clickable PDF buttons
 lastmod: '2026-01-10'
@@ -14,62 +14,62 @@ tags:
 - groupdocs-annotation
 - java-tutorial
 - pdf-buttons
-title: Jak vytvořit interaktivní PDF tlačítka v Javě pomocí GroupDocs.Annotation
+title: Jak vytvořit PDF tlačítka v Javě pomocí GroupDocs.Annotation
 type: docs
 url: /cs/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/
 weight: 1
 ---
 
-# Jak vytvořit interaktivní PDF tlačítka v Javě pomocí GroupDocs.Annotation
+# Jak vytvořit PDF tlačítka v Javě s GroupDocs.Annotation
 
-Už jste někdy zírali na statický PDF a přáli si, aby byl zajímavější? **Interactive pdf buttons java** jsou dokonalým řešením. Ať už vytváříte systémy pro správu dokumentů, interaktivní formuláře, nebo se jen snažíte, aby vaše PDF byly méně… no, nudné, tato tlačítka mohou proměnit vaše dokumenty z pasivního čtení na dynamické, uživatelsky přívětivé zážitky.
-
-Pokud jste se potýkali se složitými PDF knihovnami nebo přemýšleli, jak přidat klikatelné prvky do vašich PDF založených na Javě, jste na správném místě. Tento tutoriál vás provede tvorbou interaktivních PDF tlačítek s odpověďmi pomocí GroupDocs.Annotation pro Javu – a věřte mi, je to jednodušší, než si možná myslíte.
+Už jste někdy zírali na statický PDF a přáli si, aby byl zajímavější? V tomto průvodci se naučíte, jak **create pdf buttons java** pomocí GroupDocs.Annotation. Ať už budujete systémy pro správu dokumentů, vytváříte interaktivní formuláře nebo jen chcete, aby vaše PDF byly méně… no, nudné, tato tlačítka mohou proměnit vaše dokumenty z pasivního čtení na dynamické, uživatelsky přívětivé zážitky.
 
 ## Rychlé odpovědi
-- **What are interactive pdf buttons java?** Vizuální prvky vložené do PDF, které reagují na kliknutí, mohou zobrazovat komentáře a spouštět akce.  
-- **Do I need a license?** Bezplatná zkušební verze stačí pro testování; pro produkci je vyžadována plná licence.  
-- **Which Java version is required?** JDK 8+ (doporučeno JDK 11+).  
-- **Can I add multiple buttons?** Ano – můžete přidat tolik, kolik potřebujete, před uložením dokumentu.  
-- **Will the buttons work in all PDF viewers?** Většina moderních prohlížečů (Adobe Reader, pluginy v prohlížečích, mobilní aplikace) je podporuje, ale vždy testujte na cílových platformách.
+- **Co jsou interaktivní pdf tlačítka java?** Vizuelní prvky vložené do PDF, které reagují na kliknutí, mohou zobrazovat komentáře a spouštět akce.  
+- **Potřebuji licenci?** Bezplatná zkušební verze stačí pro testování; pro produkci je vyžadována plná licence.  
+- **Jaká verze Javy je vyžadována?** JDK 8+ (doporučeno JDK 11+).  
+- **Mohu přidat více tlačítek?** Ano – přidejte tolik, kolik potřebujete, před uložením dokumentu.  
+- **Budou tlačítka fungovat ve všech PDF prohlížečích?** Většina moderních prohlížečů (Adobe Reader, PDF pluginy v prohlížečích, mobilní aplikace) je podporuje, ale vždy testujte na cílových platformách.
 
 ## Proč vytvářet interaktivní PDF tlačítka v Javě?
 
-Než se ponoříme do kódu, pojďme si promluvit o tom, proč byste to chtěli udělat. Interaktivní PDF tlačítka nejsou jen okázalá vizuální ozdoba (i když vypadají opravdu skvěle). Řeší skutečné problémy:
+Než se ponoříme do kódu, pojďme si říct, proč byste to vůbec chtěli dělat. Interaktivní PDF tlačítka nejsou jen okázalá vizuální ozdoba (i když vypadají opravdu skvěle). Řeší skutečné problémy:
 
-- **User Engagement**: Statické PDF jsou jako čtení knihy s přilepenými stránkami. Interaktivní prvky udržují uživatele zapojené a podporují prozkoumávání.  
-- **Data Collection**: Potřebujete zpětnou vazbu k návrhu? Chcete, aby uživatelé hodnotili různé sekce? Tlačítka mohou zachytit odpovědi přímo v dokumentu.  
-- **Navigation**: Velké dokumenty jsou snáze ovladatelné, když uživatelé mohou jedním kliknutím přejít mezi sekcemi.  
-- **Workflow Integration**: Tlačítka mohou spouštět akce, schvalovat dokumenty nebo posunovat procesy vpřed, aniž byste opustili PDF.
+- **Zapojení uživatele**: Statické PDF jsou jako kniha s přilepenými stránkami. Interaktivní prvky udržují uživatele zapojené a podporují průzkum.  
+- **Sbírání dat**: Potřebujete zpětnou vazbu k návrhu? Chcete, aby uživatelé hodnotili různé sekce? Tlačítka mohou zachytit odpovědi přímo v dokumentu.  
+- **Navigace**: Velké dokumenty jsou přehlednější, když uživatelé mohou přeskakovat mezi sekcemi jedním kliknutím.  
+- **Integrace do pracovních postupů**: Tlačítka mohou spouštět akce, schvalovat dokumenty nebo posunout procesy vpřed, aniž byste opustili PDF.
 
-Nejlepší na tom? Jakmile pochopíte základy, budete překvapeni, kolik případů použití objevíte.
+Nejlepší na tom? Jakmile pochopíte základy, budete překvapeni, kolik různých scénářů objevíte.
 
 ## Co se naučíte
 
 Na konci tohoto tutoriálu budete vědět, jak:
 
-- Nastavit GroupDocs.Annotation pro Javu (jednoduchý způsob)  
+- Nastavit GroupDocs.Annotation pro Javu (bezbolestně)  
 - Vytvořit **interactive pdf buttons java**, které skutečně fungují  
 - Přidat odpovědi a komentáře k vašim tlačítkům pro rozšířenou funkčnost  
-- Odhalit a řešit běžné problémy (protože, buďme upřímní, věci nefungují vždy na první pokus)  
+- Odhalit a opravit běžné problémy (protože, buďme upřímní, věci nefungují vždy hned na první pokus)  
 - Optimalizovat výkon pro reálné aplikace  
 
 ## Předpoklady a nastavení
 
 ### Co budete potřebovat
 
-1. **Java Development Environment**: JDK 8 nebo vyšší (i když doporučuji JDK 11+ pro lepší výkon)  
-2. **IDE**: IntelliJ IDEA, Eclipse nebo cokoliv, co vám vyhovuje  
-3. **Basic Java Knowledge**: Měli byste být obeznámeni s třídami, metodami a zpracováním výjimek  
-4. **Maven or Gradle**: Pro správu závislostí (příklady používají Maven)  
+Nebojte se – požadavky jsou poměrně jednoduché:
+
+1. **Java vývojové prostředí**: JDK 8 nebo vyšší (doporučuji JDK 11+ pro lepší výkon)  
+2. **IDE**: IntelliJ IDEA, Eclipse nebo jakékoli jiné, které vám vyhovuje  
+3. **Základní znalost Javy**: Měli byste být pohodlní s třídami, metodami a ošetřováním výjimek  
+4. **Maven nebo Gradle**: Pro správu závislostí (příklady používají Maven)  
 
 ### Nastavení GroupDocs.Annotation pro Javu
 
-Zde většina tutoriálů zdlouhavě vysvětluje. Přejděme rovnou k věci.
+Zde většina tutoriálů ztrácí čas dlouhými vysvětleními. Přejděme rovnou k věci.
 
-#### Nastavení Maven (Jednoduchý způsob)
+#### Maven nastavení (Jednoduchá cesta)
 
-Add this to your `pom.xml`:
+Přidejte následující do svého `pom.xml`:
 
 ```xml
 <repositories>
@@ -88,17 +88,17 @@ Add this to your `pom.xml`:
 </dependencies>
 ```
 
-A to je vše. Maven se postará o zbytek a jste připraveni začít vytvářet **interactive pdf buttons java**.
+A to je vše. Maven se postará o zbytek a vy můžete začít vytvářet **interactive pdf buttons java**.
 
 #### Možnosti licence (Vyberte si svou cestu)
 
-- **Free Trial**: Ideální pro testování. Stáhněte z [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: Potřebujete více času na vyhodnocení? Získejte ji na [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Full License**: Připraveno pro produkci? Zakupte na [GroupDocs Purchase](https://purchase.groupdocs.com/buy)  
+- **Free Trial**: Ideální pro vyzkoušení. Stáhněte z [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary License**: Potřebujete více času na hodnocení? Získejte ji na [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Full License**: Připravení na produkci? Zakupte na [GroupDocs Purchase](https://purchase.groupdocs.com/buy)  
 
 #### Rychlé ověření
 
-Testujte nastavení pomocí této jednoduché inicializace:
+Otestujte nastavení pomocí této jednoduché inicializace:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -127,11 +127,11 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-Vzor try‑with‑resources zajišťuje, že váš dokument bude řádně uzavřen, i když se něco pokazí. Vždy používejte tento přístup – vaše budoucí já vám poděkuje.
+Vzor `try‑with‑resources` zajišťuje, že se dokument správně uzavře, i když se něco pokazí. Vždy používejte tento přístup – vaše budoucí já vám poděkuje.
 
 ### Krok 2: Nakonfigurujte komponentu tlačítka
 
-Zde začíná zábava. Vytvořme tlačítko, které skutečně vypadá jako tlačítko:
+Tady začíná zábava. Vytvořme tlačítko, které opravdu vypadá jako tlačítko:
 
 ```java
 import com.groupdocs.annotation.models.formatspecificcomponents.pdf.ButtonComponent;
@@ -149,7 +149,7 @@ buttonComponent.setBorderWidth(12);
 buttonComponent.setBox(new Rectangle(100, 300, 90, 30));
 ```
 
-**Tip**: Tyto hodnoty RGB mohou vypadat krypticky, ale jsou to jen celá čísla představující barvy. Použijte online konvertor RGB‑na‑celé číslo, pokud chcete konkrétní odstíny.
+**Tip**: Ty RGB hodnoty mohou vypadat tajemně, ale jsou to jen celá čísla představující barvy. Použijte online konvertor RGB‑na‑celé číslo, pokud chcete konkrétní odstíny.
 
 ### Krok 3: Přidejte tlačítko a uložte
 
@@ -158,13 +158,15 @@ annotator.add(buttonComponent);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_button_component.pdf");
 ```
 
-Boom! Právě jste vytvořili své první **interactive pdf button java**. Ale nezastavujeme se zde.
+Bum! Právě jste vytvořili své první **interactive pdf button java**. Ale nezastavujeme se zde.
 
-## Přidávání odpovědí a komentářů k tlačítkům
+## Jak vytvořit pdf tlačítka v Javě
 
-Zde se věci stávají opravdu zajímavými. Interaktivní PDF tlačítka s odpověďmi otevírají celý svět možností pro zpětnou vazbu, spolupráci a uživatelskou interakci.
+Nyní, když jste viděli základní tok, podívejme se na o něco pokročilejší scénář, kde tlačítko nese data odpovědi. Tento vzor je užitečný, když chcete zachytit zpětnou vazbu uživatele přímo v PDF.
 
-### Vytváření komponent tlačítka s odpověďmi
+### Přidání odpovědí a komentářů k tlačítkům
+
+Zde se věci opravdu stávají zajímavými. Interaktivní PDF tlačítka s odpověďmi otevírají celý svět možností pro zpětnou vazbu, spolupráci a uživatelskou interakci.
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf")) {
@@ -208,45 +210,45 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 
 ## Reálné aplikace a příklady použití
 
-### 1. Interaktivní formuláře zpětné vazby
+### 1. Interaktivní formuláře pro zpětnou vazbu
 
-Představte si, že posíláte projektový návrh. Místo toho, abyste doufali, že klienti pošlou své myšlenky e-mailem, můžete vložit tlačítka zpětné vazby přímo do PDF:
+Představte si, že posíláte projektový návrh. Místo toho, aby klienti posílali své myšlenky e-mailem, můžete do PDF vložit tlačítka pro zpětnou vazbu:
 
-- tlačítka „Schválit sekci“ pro každou hlavní komponentu  
-- tlačítka „Požádat o změny“, která zachytí konkrétní zpětnou vazbu  
-- tlačítka pro hodnocení různých aspektů návrhu  
+- Tlačítka „Schválit sekci“ pro každou hlavní komponentu  
+- Tlačítka „Požádat o změny“, která zachytí konkrétní připomínky  
+- Hodnotící tlačítka pro různé aspekty návrhu  
 
 ### 2. Systémy navigace v dokumentech
 
 Pro rozsáhlou technickou dokumentaci nebo zprávy:
 
-- tlačítka „Přejít na souhrn“ na konci každé sekce  
-- tlačítka „Zpět na obsah“ po celém dokumentu  
-- tlačítka „Související sekce“, která vytvářejí křížové odkazy  
+- Tlačítka „Přejít na souhrn“ na konci každé sekce  
+- Tlačítka „Zpět na obsah“ po celém dokumentu  
+- Tlačítka „Související sekce“, která vytvářejí křížové odkazy  
 
 ### 3. Školící a vzdělávací materiály
 
-Interaktivní PDF fungují skvěle pro vzdělávací obsah:
+Interaktivní PDF fungují skvěle pro výukový obsah:
 
-- tlačítka „Zkontrolovat odpověď“ pro samohodnocení kvízů  
-- tlačítka „Více informací“, která odhalí další podrobnosti  
-- tlačítka „Odeslat odpověď“ pro úkoly  
+- Tlačítka „Zkontrolovat odpověď“ pro samostatné kvízy  
+- Tlačítka „Více informací“, která odhalí doplňující podrobnosti  
+- Tlačítka „Odeslat odpověď“ pro úkoly  
 
-### 4. Procesy zajištění kvality a revize
+### 4. Procesy zajišťování kvality a revize
 
 Pro workflow revize dokumentů:
 
-- tlačítka „Označit jako zkontrolováno“ pro různé sekce  
-- tlačítka „Označit k revizi“ s možností komentářů  
-- tlačítka „Schválit“ a „Odmítnout“ s časovým razítkem  
+- Tlačítka „Označit jako zkontrolováno“ pro různé sekce  
+- Tlačítka „Označit k revizi“ s možností komentářů  
+- Tlačítka „Schválit“ a „Odmítnout“ s časovým razítkem  
 
 ## Řešení běžných problémů
 
-### Chyby „Dokument nebyl nalezen“
+### Chyby „Document Not Found“
 
-Toto je obvykle první překážka. Dvojitě zkontrolujte cesty k souborům a ujistěte se, že:
+To je obvykle první překážka. Zkontrolujte své cesty k souborům a ujistěte se, že:
 
-- Soubor skutečně existuje tam, kde si myslíte, že je  
+- Soubor skutečně existuje tam, kde si myslíte  
 - Máte oprávnění ke čtení vstupního souboru  
 - Máte oprávnění k zápisu do výstupního adresáře  
 - Soubor není uzamčen jinou aplikací  
@@ -261,27 +263,19 @@ if (!inputFile.exists()) {
 
 ### Tlačítko se nezobrazuje v PDF
 
-Pokud se vaše komponenta tlačítka nezobrazuje:
+Pokud se komponenta tlačítka nezobrazuje:
 
-1. **Zkontrolujte čísla stránek** – číslování stránek začíná na 0, ne 1  
+1. **Zkontrolujte čísla stránek** – číslování stránek začíná na 0, ne na 1  
 2. **Ověřte souřadnice** – ujistěte se, že hodnoty `Rectangle` jsou v mezích stránky  
 3. **Viditelnost barvy** – zajistěte, aby barvy tlačítka kontrastovaly s pozadím  
 
 ### Problémy s pamětí u velkých PDF
 
-Zpracováváte velké dokumenty? Zde jsou některé strategie:
+Pracujete s velkými dokumenty? Zde jsou některé strategie:
 
 - Zpracovávejte dokumenty po menších částech, pokud je to možné  
-- Používejte try‑with‑resources pro zajištění řádného uvolnění zdrojů  
+- Používejte `try‑with‑resources` pro správné uvolnění zdrojů  
 - Zvažte zvýšení velikosti haldy JVM pro vaši aplikaci  
-
-### Chyby související s licencí
-
-Pokud vidíte varování nebo omezení evaluace:
-
-- Ověřte, že soubor licence je ve správném umístění  
-- Zkontrolujte, že licence nevypršela  
-- Ujistěte se, že používáte správný typ licence pro váš případ použití  
 
 ## Tipy pro optimalizaci výkonu
 
@@ -303,7 +297,7 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 
 ### 2. Správa zdrojů
 
-Vždy používejte bloky try‑with‑resources. Třída `Annotator` implementuje `AutoCloseable`, takže tento vzor zajišťuje řádné uvolnění zdrojů:
+Vždy používejte bloky `try‑with‑resources`. Třída `Annotator` implementuje `AutoCloseable`, takže tento vzor zajišťuje řádné vyčištění:
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -315,19 +309,19 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 
 Pro aplikace zpracovávající mnoho dokumentů:
 
-- Neuchovávejte reference na instance `Annotator` déle, než je potřeba  
+- Neponechávejte reference na instance `Annotator` déle, než je nutné  
 - Zvažte implementaci fronty zpracování pro scénáře s vysokým objemem  
-- Sledujte využití paměti a podle toho upravujte nastavení JVM  
+- Monitorujte využití paměti a podle potřeby upravujte nastavení JVM  
 
 ## Pokročilé tipy a osvědčené postupy
 
 ### 1. Pokyny pro návrh tlačítek
 
-- **Velikost je důležitá**: Vytvořte tlačítka alespoň 30 × 30 pixelů pro snadné klepnutí.  
-- **Kontrast barev**: Zajistěte, aby tlačítka vynikala oproti pozadí dokumentu.  
+- **Velikost má význam**: Tlačítka by měla mít alespoň 30 × 30 pixelů pro snadné klepnutí.  
+- **Barevný kontrast**: Zajistěte, aby tlačítka vynikala na pozadí dokumentu.  
 - **Konzistentní styl**: Používejte stejné barvy a styly okrajů v celém dokumentu.  
 
-### 2. Strategie pro zpracování chyb
+### 2. Strategie ošetření chyb
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -352,40 +346,40 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 
 ## Často kladené otázky
 
-- **Q: Mohu vytvořit různé typy interaktivních prvků kromě tlačítek?**  
-  A: Rozhodně! GroupDocs.Annotation podporuje zaškrtávací políčka, textová pole, rozbalovací nabídky a další. Tlačítka jsou jen jednou částí interaktivního PDF puzzle.  
+**Q: Mohu vytvořit jiné typy interaktivních prvků kromě tlačítek?**  
+A: Rozhodně! GroupDocs.Annotation podporuje zaškrtávací políčka, textová pole, rozbalovací seznamy a další. Tlačítka jsou jen jednou částí interaktivního PDF puzzle.
 
-- **Q: Jak mohu zpracovat události kliknutí na tlačítko v mé Java aplikaci?**  
-  A: Komponenty tlačítek jsou vloženy přímo do PDF. Zpracování kliknutí závisí na PDF prohlížeči. Pro vlastní aplikace můžete potřebovat knihovnu prohlížeče, která podporuje JavaScript nebo odesílání formulářů.  
+**Q: Jak mohu v mé Java aplikaci zpracovávat události kliknutí na tlačítko?**  
+A: Komponenty tlačítka jsou vloženy přímo do PDF. Zpracování kliknutí závisí na PDF prohlížeči. Pro vlastní aplikace můžete potřebovat knihovnu prohlížeče, která podporuje JavaScript nebo odesílání formulářů.
 
-- **Q: Existují nějaká omezení počtu tlačítek, která mohu přidat?**  
-  A: Neexistují pevná omezení, ale zvažte velikost souboru, výkon a uživatelský zážitek. Stovky jsou možné, ale ujistěte se, že přinášejí hodnotu.  
+**Q: Existují nějaká omezení počtu tlačítek, která mohu přidat?**  
+A: Neexistují tvrdá omezení, ale zvažte velikost souboru, výkon a uživatelský zážitek. Stovky jsou možné, ale ujistěte se, že přinášejí hodnotu.
 
-- **Q: Mohu stylovat tlačítka pomocí vlastních fontů nebo pokročilé grafiky?**  
-  A: GroupDocs.Annotation nabízí solidní stylování pro barvy, okraje a základní vzhled. Pro pokročilou grafiku můžete kombinovat tlačítka založená na obrázcích nebo použít další nástroje pro manipulaci s PDF.  
+**Q: Mohu stylovat tlačítka pomocí vlastních fontů nebo pokročilé grafiky?**  
+A: GroupDocs.Annotation nabízí solidní stylování pro barvy, okraje a základní vzhled. Pro pokročilejší grafiku můžete kombinovat tlačítka založená na obrázcích nebo použít další nástroje pro manipulaci s PDF.
 
-- **Q: Jak programově získám data tlačítka a odpovědi?**  
-  A: Načtěte anotovaný PDF pomocí `Annotator`, projděte jeho anotace a přečtěte vlastnosti tlačítka a připojené odpovědi. To je užitečné pro zpracování odeslání formulářů.  
+**Q: Jak programově extrahovat data tlačítek a odpovědi?**  
+A: Načtěte anotovaný PDF pomocí `Annotator`, projděte jeho anotace a přečtěte vlastnosti tlačítka a připojené odpovědi. To je užitečné pro zpracování odeslaných formulářů.
 
-- **Q: Funguje to s PDF chráněnými heslem?**  
-  A: Ano – při inicializaci `Annotator` zadejte heslo. Knihovna podporuje jak čtení, tak zápis chráněných dokumentů.  
+**Q: Funguje to s PDF chráněnými heslem?**  
+A: Ano – při inicializaci `Annotator` poskytněte heslo. Knihovna podporuje čtení i zápis chráněných dokumentů.
 
-- **Q: Mohu vytvořit tlačítka, která odesílají data na webový server?**  
-  A: Vizuální tlačítko vytvoří GroupDocs.Annotation, ale odesílání dat závisí na schopnostech PDF prohlížeče a může vyžadovat vložený JavaScript nebo integraci se službou pro zpracování formulářů.  
+**Q: Mohu vytvořit tlačítka, která odesílají data na webový server?**  
+A: Vizualizaci tlačítka vytvoří GroupDocs.Annotation, ale odesílání dat závisí na schopnostech PDF prohlížeče a může vyžadovat vložený JavaScript nebo integraci se službou pro zpracování formulářů.
 
 ## Co dál?
 
-Gratulujeme! Nyní víte, jak vytvořit **interactive pdf buttons java** pomocí GroupDocs.Annotation. Ale to je teprve začátek. Knihovna nabízí mnoho dalších typů anotací a funkcí:
+Gratulujeme! Nyní víte, jak **create pdf buttons java** s GroupDocs.Annotation. Ale to je jen začátek. Knihovna nabízí mnoho dalších typů anotací a funkcí:
 
-- Zvýraznění a značkování textu  
+- Zvýrazňování a označování textu  
 - Tvary a kreslicí anotace  
-- Obrázky a razítka  
+- Anotace obrázků a razítek  
 - Formulářová pole nad rámec tlačítek  
 
-Prozkoumejte [GroupDocs.Annotation dokumentaci](https://docs.groupdocs.com/annotation/java/), abyste objevili další způsoby, jak učinit vaše PDF interaktivní a poutavá.
+Prozkoumejte [GroupDocs.Annotation dokumentaci](https://docs.groupdocs.com/annotation/java/) a objevte další způsoby, jak učinit vaše PDF interaktivními a poutavými.
 
 ---
 
-**Last Updated:** 2026-01-10  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs
+**Poslední aktualizace:** 2026-03-17  
+**Testováno s:** GroupDocs.Annotation 25.2 pro Javu  
+**Autor:** GroupDocs
