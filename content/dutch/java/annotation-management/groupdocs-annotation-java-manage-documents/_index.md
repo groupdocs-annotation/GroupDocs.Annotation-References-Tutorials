@@ -1,13 +1,13 @@
 ---
 categories:
 - Java Development
-date: '2025-12-19'
+date: '2026-03-24'
 description: Beheers hoe je PDF‑annotaties laadt met Java en GroupDocs.Annotation.
-  Leer hoe je annotaties in documenten kunt laden, verwijderen en optimaliseren met
-  Java in real‑world scenario’s.
+  Leer PDF‑annotaties te laden, te verwijderen en te optimaliseren met Java in real‑world
+  scenario’s.
 keywords: Java annotation management, document annotation Java, PDF annotation management
   Java, GroupDocs annotation tutorial, manage annotations Java documents
-lastmod: '2025-12-19'
+lastmod: '2026-03-24'
 linktitle: Load PDF Annotations Java
 tags:
 - java
@@ -15,42 +15,42 @@ tags:
 - document-processing
 - groupdocs
 - pdf-management
-title: 'PDF-annotaties laden in Java - Complete gids voor GroupDocs-annotatiebeheer'
+title: PDF-annotaties laden in Java – Complete gids voor GroupDocs-annotatiebeheer
 type: docs
 url: /nl/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1
 ---
 
-# PDF‑annotaties laden Java: Complete GroupDocs Annotation Management‑gids
+# PDF-annotaties laden Java: Complete gids voor GroupDocs Annotation-beheer
 
-Heb je ooit moeite gehad met het beheren van documentannotaties in je Java‑toepassingen? Je bent niet de enige. Of je nu een document‑review‑systeem, een educatief platform of een collaboratieve bewerkingstool bouwt, **loading pdf annotations java** efficiënt kan de gebruikerservaring maken of breken. In deze gids lopen we alles door wat je moet weten — van het laden van annotaties tot het opruimen van ongewenste antwoorden — zodat je vandaag nog snelle, betrouwbare annotatiefuncties kunt leveren.
+Als u een documentreview‑systeem, een e‑learningplatform of een ander samenwerkings‑bewerkingshulpmiddel bouwt, is **loading pdf annotations java** een kernfunctionaliteit die u niet kunt negeren. In de komende paar minuten lopen we alles door wat u nodig heeft—van de basis van het laden van annotaties tot geavanceerde reply‑filtering‑technieken—zodat u vandaag snelle, betrouwbare annotatiefuncties aan uw Java‑applicaties kunt toevoegen.
 
 ## Snelle antwoorden
-- **Welke bibliotheek laat me pdf‑annotaties laden java?** GroupDocs.Annotation voor Java.  
-- **Heb ik een licentie nodig om het uit te proberen?** Er is een gratis proefversie beschikbaar; een productielicentie is vereist voor commercieel gebruik.  
+- **Welke bibliotheek laat me load pdf annotations java?** GroupDocs.Annotation for Java.  
+- **Heb ik een licentie nodig om het te proberen?** Een gratis proefversie is beschikbaar; een productie‑licentie is vereist voor commercieel gebruik.  
 - **Welke Java‑versie wordt ondersteund?** JDK 8 of nieuwer.  
-- **Kan ik grote PDF‑bestanden verwerken zonder OOM‑fouten?** Ja — gebruik streaming‑opties en zorg voor juiste resource‑afvoer.  
-- **Hoe verwijder ik alleen specifieke antwoorden?** Itereer over de lijst met antwoorden, filter op gebruiker of inhoud, en werk het document bij.
+- **Kan ik grote PDF’s verwerken zonder OOM‑fouten?** Ja—gebruik streaming‑opties en juiste resource‑verwijdering.  
+- **Hoe verwijder ik alleen specifieke replies?** Itereer over de lijst met replies, filter op gebruiker of inhoud, en werk het document bij.
 
 ## Wat is load pdf annotations java?
-PDF‑annotaties laden in Java betekent een PDF‑bestand openen, de ingebedde commentaarobjecten (highlights, notities, stempels, antwoorden, enz.) lezen en ze beschikbaar maken als Java‑objecten die je kunt inspecteren, wijzigen of exporteren. Deze stap vormt de basis voor elke annotatie‑gedreven workflow, zoals audit‑trails, collaboratieve reviews of data‑extractie.
+Het laden van PDF‑annotaties in Java betekent het openen van een PDF‑bestand, het lezen van de ingebedde commentaarobjecten (highlights, notities, stempels, replies, enz.), en deze beschikbaar maken als Java‑objecten die u kunt inspecteren, wijzigen of exporteren. Deze stap vormt de basis voor elke annotatie‑gedreven workflow, zoals audit‑trails, samenwerkings‑reviews of data‑extractie.
 
 ## Waarom GroupDocs.Annotation voor Java gebruiken?
-GroupDocs.Annotation biedt een uniforme API die werkt met PDF, Word, Excel, PowerPoint en meer. Het behandelt complexe annotatiestructuren, biedt fijnmazige controle over geheugenverbruik en bevat ingebouwde ondersteuning voor beveiligingsfuncties zoals wachtwoord‑beveiligde bestanden.
+GroupDocs.Annotation biedt een eenduidige API die werkt met PDF, Word, Excel, PowerPoint en meer. Het verwerkt complexe annotatiestructuren, biedt fijnmazige controle over geheugengebruik, en bevat ingebouwde ondersteuning voor beveiligingsfuncties zoals wachtwoord‑beveiligde bestanden.
 
-## Voorvereisten en omgeving configuratie
+## Vereisten en omgeving configuratie
 
-### Wat je nodig hebt
-- **GroupDocs.Annotation Library** – de kern‑dependency voor annotatie‑verwerking  
-- **Java‑ontwikkelomgeving** – JDK 8+ en een IDE (IntelliJ IDEA of Eclipse)  
-- **Maven of Gradle** – voor dependency‑beheer  
+### Wat u nodig heeft
+- **GroupDocs.Annotation Library** – de kern‑dependency voor annotatie‑verwerking  
+- **Java Development Environment** – JDK 8+ en een IDE (IntelliJ IDEA of Eclipse)  
+- **Maven of Gradle** – voor dependency‑beheer  
 - **Voorbeeld‑PDF‑documenten** met bestaande annotaties voor testen  
 
 ### GroupDocs.Annotation voor Java instellen
 
-#### Maven‑configuratie (aanbevolen)
+#### Maven‑configuratie (Aanbevolen)
 
-Voeg deze configuratie toe aan je `pom.xml`‑bestand voor naadloos dependency‑beheer:
+Voeg deze configuratie toe aan uw `pom.xml`‑bestand voor naadloos dependency‑beheer:
 
 ```xml
 <repositories>
@@ -69,22 +69,22 @@ Voeg deze configuratie toe aan je `pom.xml`‑bestand voor naadloos dependency�
 </dependencies>
 ```
 
-**Pro tip**: Gebruik altijd de nieuwste stabiele versie voor beveiligingsupdates en prestatie‑verbeteringen.
+**Pro tip**: Gebruik altijd de nieuwste stabiele versie voor beveiligingsupdates en prestatieverbeteringen.
 
 #### Licentie‑acquisitiestrategie
-- **Gratis proefversie** – perfect voor evaluatie en kleine projecten  
-- **Tijdelijke licentie** – ideaal voor ontwikkel‑ en testfasen  
-- **Productielicentie** – vereist voor commerciële toepassingen  
+- **Free Trial** – perfect voor evaluatie en kleine projecten  
+- **Temporary License** – ideaal voor ontwikkelings‑ en testfasen  
+- **Production License** – vereist voor commerciële toepassingen  
 
-Begin met de gratis proefversie om te bevestigen dat de bibliotheek voldoet aan je **load pdf annotations java**‑eisen.
+Begin met de gratis proefversie om te bevestigen dat de bibliotheek voldoet aan uw **load pdf annotations java**‑vereisten.
 
-## Hoe pdf‑annotaties laden java met GroupDocs.Annotation
+## Hoe load pdf annotations java te laden met GroupDocs.Annotation
 
 ### Het annotatie‑laadproces begrijpen
-Wanneer je annotaties uit een document laadt, krijg je toegang tot metadata die collaboratieve elementen beschrijft — commentaren, highlights, stempels en antwoorden. Dit proces is cruciaal voor:
-- **Audit‑trails** – volg wie welke wijzigingen wanneer heeft aangebracht  
-- **Collaboratie‑inzichten** – begrijp review‑patronen  
-- **Data‑extractie** – haal annotatiedata op voor rapportage of analytics  
+Wanneer u annotaties uit een document laadt, krijgt u toegang tot metadata die collaboratieve elementen beschrijft—commentaren, highlights, stempels en replies. Dit proces is cruciaal voor:
+- **Audit trails** – volg wie welke wijzigingen heeft aangebracht en wanneer  
+- **Collaboration insights** – begrijp review‑patronen  
+- **Data extraction** – haal annotatiedata op voor rapportage of analyse  
 
 ### Stapsgewijze implementatie
 
@@ -95,7 +95,7 @@ import com.groupdocs.annotation.options.LoadOptions;
 import java.util.List;
 ```
 
-#### 2. Annotaties uit je document laden
+#### 2. Annotaties laden uit uw document
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 LoadOptions loadOptions = new LoadOptions();
@@ -105,20 +105,20 @@ annotator.dispose();
 ```
 
 **Wat gebeurt er?**  
-- `LoadOptions` stelt je in staat het laadgedrag te configureren (bijv. wachtwoorden).  
+- `LoadOptions` stelt u in staat het laadgedrag te configureren (bijv. wachtwoorden).  
 - `Annotator` opent de annotatielaag van de PDF.  
 - `annotator.get()` retourneert elke annotatie als een `List<AnnotationBase>`.  
-- `annotator.dispose()` maakt native resources vrij — essentieel bij grote bestanden.
+- `annotator.dispose()` vrijgeeft native resources—essentieel voor grote bestanden.
 
-#### Wanneer deze functie gebruiken
-- Het bouwen van een **document‑review‑dashboard** dat elke opmerking weergeeft.  
-- Het exporteren van annotatiedata voor **compliance‑rapportage**.  
-- Het migreren van annotaties tussen formaten (PDF → DOCX, enz.).
+#### Wanneer deze functie te gebruiken
+- Een **document review dashboard** bouwen dat elke commentaar weergeeft.  
+- Annotatiedata exporteren voor **compliance‑rapportage**.  
+- Annotaties migreren tussen formaten (PDF → DOCX, enz.).
 
-## Geavanceerde functie: Specifieke annotatie‑antwoorden verwijderen
+## Geavanceerde functie: specifieke annotatie‑replies verwijderen
 
 ### De zakelijke reden voor reply‑beheer
-In collaboratieve omgevingen kunnen annotatiedraden rommelig worden. Gerichte verwijdering van antwoorden houdt discussies gefocust terwijl de oorspronkelijke opmerking behouden blijft.
+In collaboratieve omgevingen kunnen annotatiedraden rumoerig worden. Selectieve verwijdering van replies houdt discussies gefocust terwijl de oorspronkelijke commentaar behouden blijft.
 
 ### Implementatie‑gids
 
@@ -128,7 +128,7 @@ String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/RemovedRepliesOutput.pdf";
 ```
 
-#### 2. Antwoorden filteren en verwijderen
+#### 2. Replies filteren en verwijderen
 ```java
 LoadOptions loadOptions = new LoadOptions();
 final Annotator annotator = new Annotator(inputFilePath, loadOptions);
@@ -146,8 +146,8 @@ annotator.dispose();
 ```
 
 **Uitleg**  
-- De lus doorloopt de antwoorden van de eerste annotatie.  
-- Wanneer de auteur van het antwoord overeenkomt met `"Tom"`, wordt het verwijderd.  
+- De lus doorloopt de replies van de eerste annotatie.  
+- Wanneer de auteur van de reply overeenkomt met `"Tom"`, wordt deze verwijderd.  
 - `annotator.update()` schrijft de gewijzigde collectie terug naar het document.  
 - `annotator.save()` slaat de opgeschoonde PDF op.
 
@@ -167,11 +167,11 @@ if (reply.getUser().getRole().equals("temporary_reviewer")) {
 }
 ```
 
-## Praktische toepassingsscenario’s
+## Praktijkvoorbeelden
 
-### Scenario 1: Juridisch document‑review‑platform
-**Uitdaging** – advocatenkantoren moeten voorlopige reviewer‑commentaren verwijderen voordat ze het definitieve bestand leveren.  
-**Oplossing** – batch‑verwerk documenten en strip antwoorden van gebruikers “temporary_reviewer”:
+### Scenario 1: Juridisch document‑reviewplatform
+**Uitdaging** – Advocatenkantoren moeten voorlopige reviewer‑commentaren verwijderen voordat ze het definitieve bestand leveren.  
+**Oplossing** – Verwerk documenten in batches en verwijder replies van gebruikers “temporary_reviewer”:
 
 ```java
 // Process multiple documents
@@ -182,12 +182,12 @@ for (String docPath : documentPaths) {
 ```
 
 ### Scenario 2: Educatief content‑beheer
-**Uitdaging** – student‑annotaties vervuilen het overzicht van de docent na afloop van een semester.  
-**Oplossing** – bewaar docent‑feedback, archiveer student‑notities en genereer betrokkenheidsrapporten.
+**Uitdaging** – Student‑annotaties vervuilen het overzicht van de docent na afloop van een semester.  
+**Oplossing** – Behoud docentfeedback, archiveer student‑notities, en genereer betrokkenheidsrapporten.
 
 ### Scenario 3: Corporate compliance‑systemen
-**Uitdaging** – gevoelige interne discussies moeten worden verwijderd uit klant‑gerichte PDF‑bestanden.  
-**Oplossing** – pas rol‑gebaseerde filters toe en log elke verwijderingsactie in een audit‑log.
+**Uitdaging** – Gevoelige interne discussies moeten worden verwijderd uit klantgerichte PDF’s.  
+**Oplossing** – Pas rolgebaseerde filters toe en log elke verwijderingsactie.
 
 ## Prestatietips
 
@@ -216,14 +216,14 @@ options.setPreloadPageCount(1); // Load one page at a time
 
 ### Prestatiemonitoring
 Volg deze metrics in productie:
-- **Geheugengebruik** – heap‑consumptie tijdens annotatie‑verwerking  
-- **Verwerkingstijd** – duur van laad‑ en filterstappen  
-- **Impact op bestandsgrootte** – hoe bestandsgrootte latency beïnvloedt  
-- **Gelijktijdige bewerkingen** – respons bij gelijktijdige verzoeken  
+- **Memory usage** – heap‑verbruik tijdens annotatieverwerking  
+- **Processing time** – duur van laad‑ en filterstappen  
+- **Document size impact** – hoe bestandsgrootte latentie beïnvloedt  
+- **Concurrent operations** – respons bij gelijktijdige verzoeken  
 
-## Veelvoorkomende problemen en troubleshooting
+## Veelvoorkomende problemen en foutopsporing
 
-### Probleem 1: “Document Cannot Be Loaded”‑fouten
+### Probleem 1: “Document Cannot Be Loaded” fouten
 ```java
 try {
     Annotator annotator = new Annotator(inputFilePath);
@@ -237,7 +237,7 @@ try {
 }
 ```
 
-### Probleem 2: Memory Leaks in langdurige applicaties
+### Probleem 2: geheugenlekken in langdurige applicaties
 ```java
 // Use try-with-resources
 try (Annotator annotator = new Annotator(inputFilePath)) {
@@ -245,7 +245,7 @@ try (Annotator annotator = new Annotator(inputFilePath)) {
 } // Automatic cleanup
 ```
 
-### Probleem 3: Trage prestaties bij grote documenten
+### Probleem 3: trage prestaties bij grote documenten
 ```java
 // Limit annotation loading scope
 LoadOptions options = new LoadOptions();
@@ -260,16 +260,16 @@ for (int page = 0; page < totalPages; page++) {
 }
 ```
 
-### Probleem 4: Inconsistente annotatie‑ID’s na verwijdering
+### Probleem 4: inconsistente annotatie‑ID’s na verwijdering
 ```java
 // Refresh annotation collections after modifications
 annotator.update(annotations);
 annotations = annotator.get(); // Refresh the collection
 ```
 
-## Beveiligingsconsideraties
+## Beveiligingsoverwegingen
 
-### Inputvalidatie
+### Invoervalidatie
 ```java
 // Validate file paths and user inputs
 if (!isValidFilePath(inputFilePath)) {
@@ -289,11 +289,11 @@ auditLogger.info("User {} removed {} replies from document {}",
 ```
 
 ### Toegangscontrole
-Implementeer rol‑gebaseerde permissies:
-- **Read‑only** – alleen annotaties bekijken  
-- **Contributor** – eigen annotaties toevoegen/bewerken  
-- **Moderator** – elke annotatie of antwoord verwijderen  
-- **Administrator** – volledige controle  
+Implementeer rolgebaseerde permissies:
+- **Read‑only** – alleen annotaties bekijken  
+- **Contributor** – eigen annotaties toevoegen/bewerken  
+- **Moderator** – elke annotatie of reply verwijderen  
+- **Administrator** – volledige controle  
 
 ## Geavanceerde tips voor productiesystemen
 
@@ -320,7 +320,7 @@ CompletableFuture<Void> processDocumentAsync(String documentPath) {
 }
 ```
 
-### 3. Fout‑herstelmechanismen
+### 3. Mechanismen voor foutherstel
 ```java
 public boolean processWithRetry(String documentPath, int maxRetries) {
     for (int attempt = 1; attempt <= maxRetries; attempt++) {
@@ -344,9 +344,9 @@ public boolean processWithRetry(String documentPath, int maxRetries) {
 }
 ```
 
-## Testen van je annotatie‑beheersysteem
+## Uw annotatie‑beheersysteem testen
 
-### Unit‑test‑framework
+### Unit‑testframework
 ```java
 @Test
 public void testAnnotationLoading() {
@@ -367,10 +367,10 @@ public void testAnnotationLoading() {
 ```
 
 ### Integratietesten
-1. Laad test‑documenten met bekende aantallen annotaties.  
+1. Laad testdocumenten met bekende annotatie‑aantallen.  
 2. Verifieer dat de reply‑verwijderingslogica werkt zoals verwacht.  
-3. Meet geheugenverbruik onder belasting.  
-4. Controleer dat de output‑PDF’s visueel intact blijven.
+3. Meet geheugengebruik onder belasting.  
+4. Valideer dat de output‑PDF’s de visuele integriteit behouden.
 
 ## Veelgestelde vragen
 
@@ -386,22 +386,22 @@ Annotator annotator = new Annotator(filePath, options);
 A: Ja! GroupDocs.Annotation ondersteunt Word, Excel, PowerPoint en vele andere formaten. De API blijft consistent over formaten heen.
 
 **Q: Wat is de maximale documentgrootte die de bibliotheek aankan?**  
-A: Er is geen harde limiet, maar de prestaties hangen af van beschikbaar geheugen. Voor documenten groter dan 100 MB kun je beter streaming‑methoden en batch‑verwerking overwegen.
+A: Er is geen harde limiet, maar de prestaties hangen af van beschikbaar geheugen. Voor documenten groter dan 100 MB, overweeg streaming‑methoden en batchverwerking.
 
-**Q: Hoe behoud ik de opmaak van annotaties bij het verwijderen van antwoorden?**  
-A: De bibliotheek behoudt automatisch de opmaak. Na het verwijderen van antwoorden roep je `annotator.update()` aan om de opmaak te verversen en `annotator.save()` om de wijzigingen op te slaan.
+**Q: Hoe behoud ik de opmaak van annotaties bij het verwijderen van replies?**  
+A: De bibliotheek behoudt automatisch de opmaak. Na het verwijderen van replies, roep `annotator.update()` aan om de opmaak te vernieuwen en `annotator.save()` om de wijzigingen op te slaan.
 
-**Q: Kan ik verwijderde annotaties ongedaan maken?**  
-A: Er bestaat geen directe undo‑functie. Werk altijd op een kopie of implementeer versiebeheer in je applicatie om rollback mogelijk te maken.
+**Q: Kan ik verwijderingsacties van annotaties ongedaan maken?**  
+A: Er bestaat geen directe undo. Werk altijd op een kopie of implementeer versiebeheer in uw applicatie om terugrollen te ondersteunen.
 
 **Q: Hoe ga ik om met gelijktijdige toegang tot hetzelfde document?**  
-A: Implementeer bestands‑locking op applicatieniveau. GroupDocs.Annotation biedt geen ingebouwde concurrency‑controle.
+A: Implementeer bestandsvergrendelingsmechanismen op applicatieniveau. GroupDocs.Annotation biedt geen ingebouwde concurrency‑controle.
 
-**Q: Wat is het verschil tussen het verwijderen van antwoorden en het verwijderen van volledige annotaties?**  
-A: Het verwijderen van antwoorden houdt de hoofdannotatie (bijv. een notitie) intact terwijl de discussie‑thread wordt geleegd. Het verwijderen van de annotatie verwijdert het volledige object, inclusief alle antwoorden.
+**Q: Wat is het verschil tussen het verwijderen van replies en het verwijderen van volledige annotaties?**  
+A: Het verwijderen van replies behoudt de hoofdannotatie (bijv. een notitie) terwijl de discussiedraad wordt gewist. Het verwijderen van de annotatie verwijdert het volledige object, inclusief alle replies.
 
-**Q: Hoe haal ik annotatiestatistieken op (aantal, auteurs, data)?**  
-A: Loop door de annotatiecollectie en aggregeer de eigenschappen, bijvoorbeeld:  
+**Q: Hoe haal ik annotatiestatistieken (aantal, auteurs, datums) op?**  
+A: Loop door de annotatiecollectie en aggregeer eigenschappen, bijvoorbeeld:  
 ```java
 Map<String, Integer> authorCounts = annotations.stream()
     .collect(Collectors.groupingBy(
@@ -411,23 +411,23 @@ Map<String, Integer> authorCounts = annotations.stream()
 ```
 
 **Q: Is er een manier om annotaties te exporteren naar externe formaten (JSON, XML)?**  
-A: Hoewel dit niet ingebouwd is, kun je `AnnotationBase`‑objecten zelf serialiseren of de metadata‑extractiefuncties van de bibliotheek gebruiken om aangepaste exporters te bouwen.
+A: Hoewel niet ingebouwd, kunt u `AnnotationBase`‑objecten zelf serialiseren of de metadata‑extractiefuncties van de bibliotheek gebruiken om aangepaste exporters te bouwen.
 
 **Q: Hoe ga ik om met corrupte of gedeeltelijk beschadigde documenten?**  
-A: Implementeer defensief programmeren met uitgebreide exception‑handling. De bibliotheek gooit specifieke uitzonderingen voor verschillende corruptietypen — vang deze op en geef gebruikersvriendelijke feedback.
+A: Implementeer defensief programmeren met uitgebreide exception‑handling. De bibliotheek gooit specifieke uitzonderingen voor verschillende corruptietypen—vang deze op en geef gebruikersvriendelijke feedback.
 
 ## Aanvullende bronnen
 
-- **Documentatie**: [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- **API‑referentie**: [Complete Java API Reference](https://reference.groupdocs.com/annotation/java/)  
-- **Downloadcentrum**: [Latest Library Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Commerciële licenties**: [Purchase Options](https://purchase.groupdocs.com/buy)  
-- **Gratis proefversie**: [Start Your Evaluation](https://releases.groupdocs.com/annotation/java/)  
-- **Development License**: [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)  
-- **Community Support**: [Developer Forum](https://forum.groupdocs.com/c/annotation/)
+- **Documentatie**: [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- **API‑referentie**: [Complete Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- **Downloadcentrum**: [Latest Library Releases](https://releases.groupdocs.com/annotation/java/)
+- **Commerciële licenties**: [Purchase Options](https://purchase.groupdocs.com/buy)
+- **Gratis proefversie**: [Start Your Evaluation](https://releases.groupdocs.com/annotation/java/)
+- **Ontwikkelingslicentie**: [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- **Community‑ondersteuning**: [Developer Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Laatst bijgewerkt:** 2025-12-19  
+**Laatst bijgewerkt:** 2026-03-24  
 **Getest met:** GroupDocs.Annotation 25.2 (Java)  
 **Auteur:** GroupDocs

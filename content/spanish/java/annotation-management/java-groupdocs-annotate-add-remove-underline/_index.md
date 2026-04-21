@@ -1,20 +1,20 @@
 ---
 categories:
 - Java Development
-date: '2025-12-21'
-description: Aprende cómo crear archivos PDF limpios en Java y anotar PDFs en Java
-  usando GroupDocs.Annotation, con ejemplos de código completos y consejos de solución
-  de problemas.
+date: '2026-03-24'
+description: Aprende a crear archivos PDF limpios en Java, gestionar la memoria de
+  PDF en Java y anotar PDFs en Java usando GroupDocs.Annotation, con ejemplos de código
+  completos y consejos de solución de problemas.
 keywords: java document annotation library, groupdocs annotation tutorial, add underline
   annotation java, java pdf annotation, how to annotate pdf documents in java
-lastmod: '2025-12-21'
+lastmod: '2026-03-24'
 linktitle: Java Document Annotation with GroupDocs
 tags:
 - groupdocs
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Crear PDF limpio en Java - Subrayar anotaciones con GroupDocs'
+title: 'Crear PDF limpio en Java: Subrayar anotaciones con GroupDocs'
 type: docs
 url: /es/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1
@@ -22,15 +22,13 @@ weight: 1
 
 # Crear PDF limpio Java: Anotaciones subrayadas con GroupDocs
 
-## Introducción
+Si necesitas **crear archivos PDF Java limpios** y agregar anotaciones colaborativas, estás en el lugar correcto. ¿Tienes problemas con la gestión de documentos y la colaboración en tus aplicaciones Java? No estás solo. Muchos desarrolladores enfrentan el desafío de implementar funciones robustas de anotación de documentos que funcionen de manera fiable en diferentes formatos de archivo.
 
-¿Tienes problemas con la gestión y colaboración de documentos en tus aplicaciones Java? No estás solo. Muchos desarrolladores enfrentan el desafío de implementar funciones robustas de anotación de documentos que funcionen de manera fiable en diferentes formatos de archivo.
-
-En esta guía, **crearás PDF limpio Java** y aprenderás cómo **anotar PDF en Java** usando GroupDocs.Annotation. Al final de este tutorial, sabrás exactamente cómo agregar anotaciones subrayadas con comentarios, eliminar anotaciones existentes e integrar estas funciones sin problemas en tus proyectos.
+En esta guía, **crearás archivos PDF Java limpios** y aprenderás cómo **anotar PDF en Java** usando GroupDocs.Annotation. Al final de este tutorial, sabrás exactamente cómo agregar anotaciones subrayadas con comentarios, eliminar anotaciones existentes e integrar estas funciones sin problemas en tus proyectos.
 
 **Lo que dominarás en esta guía:**
 - Configurar GroupDocs.Annotation en tu proyecto Java (de la manera correcta)  
-- Añadir anotaciones subrayadas con comentarios y estilos personalizados  
+- Agregar anotaciones subrayadas con comentarios personalizados y estilo  
 - Eliminar todas las anotaciones para crear versiones limpias del documento  
 - Solucionar problemas comunes que encuentran los desarrolladores  
 - Optimizar el rendimiento para aplicaciones en producción  
@@ -39,36 +37,39 @@ Ya sea que estés construyendo un sistema de revisión de documentos, una plataf
 
 ## Respuestas rápidas
 - **¿Cómo agrego una anotación subrayada?** Usa `UnderlineAnnotation` y `annotator.add()` y luego guarda el documento.  
-- **¿Cómo creo un PDF limpio Java?** Carga el archivo anotado, establece `AnnotationType.NONE` en `SaveOptions` y guarda una nueva copia.  
+- **¿Cómo puedo crear un archivo PDF Java limpio?** Carga el archivo anotado, establece `AnnotationType.NONE` en `SaveOptions` y guarda una nueva copia.  
 - **¿Qué bibliotecas se requieren?** GroupDocs.Annotation v25.2 (o superior) y su repositorio Maven.  
 - **¿Necesito una licencia para producción?** Sí—aplica una licencia válida de GroupDocs para evitar marcas de agua.  
-- **¿Puedo procesar varios documentos de forma eficiente?** Envuelve cada `Annotator` en un bloque try‑with‑resources y dispón de él después de cada archivo.
+- **¿Puedo procesar varios documentos de forma eficiente?** Envuelve cada `Annotator` en un bloque try‑with‑resources y dispón después de cada archivo.
 
-## Cómo crear archivos PDF limpio Java
-Crear un archivo PDF limpio Java significa generar una versión del documento **sin ninguna anotación** mientras se conserva el contenido original. Esto es útil para la distribución final, archivado o cuando necesitas compartir una copia “limpia” después de un ciclo de revisión.
+## Cómo crear archivos PDF Java limpios
+Crear un archivo PDF Java limpio significa generar una versión del documento **sin ninguna anotación** mientras se preserva el contenido original. Esto es útil para distribución final, archivado o cuando necesitas compartir una copia “limpia” después de un ciclo de revisión.
 
 GroupDocs.Annotation hace esto sencillo: carga el archivo anotado, configura `SaveOptions` para excluir todos los tipos de anotación y guarda el resultado. Los pasos se ilustran más adelante en la sección **Eliminación de anotaciones**.
 
+## ¿Por qué crear archivos PDF Java limpios?
+Una versión limpia elimina marcas de revisores, comentarios y resaltados, dándote un documento pulido listo para clientes, reguladores o publicación pública. También reduce el tamaño del archivo y previene la divulgación accidental de notas internas—crítico para flujos de trabajo legales y de cumplimiento.
+
 ## Cómo anotar PDF en Java usando GroupDocs
-GroupDocs.Annotation proporciona una API completa para **anotar PDF en Java**. Soporta una amplia gama de tipos de anotación, incluidos resaltados, sellos y subrayados. En este tutorial nos centramos en las anotaciones subrayadas porque se usan comúnmente para enfatizar texto mientras se permiten comentarios en hilo.
+GroupDocs.Annotation proporciona una API rica para **anotar PDF en Java**. Soporta una amplia gama de tipos de anotación, incluidos resaltados, sellos y subrayados. En este tutorial nos enfocamos en las anotaciones subrayadas porque se usan comúnmente para enfatizar texto mientras permiten comentarios en cadena.
 
 ## Requisitos previos y configuración del entorno
 
-### Qué necesitarás antes de comenzar
+### Lo que necesitarás antes de comenzar
 
 **Requisitos del entorno de desarrollo:**
-- Java Development Kit (JDK) 8 o superior (se recomienda JDK 11+)  
+- Java Development Kit (JDK) 8 o superior (JDK 11+ recomendado)  
 - Maven 3.6+ o Gradle 6.0+ para la gestión de dependencias  
 - IDE como IntelliJ IDEA, Eclipse o VS Code con extensiones Java  
-- Al menos 2 GB de RAM disponible (el procesamiento de documentos puede consumir mucha memoria)
+- Al menos 2 GB de RAM disponible (el procesamiento de documentos puede ser intensivo en memoria)
 
 **Conocimientos previos:**
 Debes estar cómodo con conceptos básicos de Java—inicialización de objetos, llamadas a métodos y dependencias Maven. La experiencia previa con bibliotecas de terceros acelerará la adopción.
 
 **Documentos de prueba:**
-Ten algunos PDFs de muestra listos. Los PDFs basados en texto funcionan mejor; las imágenes escaneadas pueden requerir OCR antes de anotarlos.
+Ten algunos PDFs de muestra listos. Los PDFs basados en texto funcionan mejor; las imágenes escaneadas pueden requerir OCR antes de la anotación.
 
-### Configuración de Maven: Añadiendo GroupDocs a tu proyecto
+### Configuración de Maven: Obtener GroupDocs en tu proyecto
 
 Así es como debes configurar correctamente tu proyecto Maven (esto confunde a muchos desarrolladores en su primer intento):
 
@@ -89,7 +90,7 @@ Así es como debes configurar correctamente tu proyecto Maven (esto confunde a m
 </dependencies>
 ```
 
-**Importante:** La versión 25.2 es la última versión estable al momento de escribir este documento. Revisa el repositorio de GroupDocs regularmente para versiones más nuevas que incluyan correcciones de errores y mejoras de rendimiento.
+**Importante:** La versión 25.2 es la última versión estable al momento de escribir. Revisa el repositorio de GroupDocs regularmente para versiones más nuevas que incluyan correcciones de errores y mejoras de rendimiento.
 
 ### Configuración de la licencia (No lo omitas)
 
@@ -99,7 +100,7 @@ Descarga la prueba gratuita desde el sitio web de GroupDocs. La prueba incluye t
 **Para producción:**  
 Compra una licencia y aplícala durante el inicio de la aplicación. Sin una licencia válida, las compilaciones de producción estarán limitadas.
 
-## Guía de implementación: Añadiendo anotaciones subrayadas
+## Guía de implementación: Agregar anotaciones subrayadas
 
 ### Entendiendo el flujo de trabajo de anotación
 
@@ -108,7 +109,7 @@ Antes de sumergirnos en el código, repasemos el flujo de trabajo de cuatro paso
 1. **Carga del documento** – `Annotator` lee el archivo en memoria.  
 2. **Creación de la anotación** – Define propiedades como posición, estilo y comentarios.  
 3. **Aplicación de la anotación** – La biblioteca inserta la anotación en la estructura del PDF.  
-4. **Guardado del documento** – Persiste el archivo modificado, opcionalmente conservando el original.
+4. **Guardado del documento** – Persiste el archivo modificado, opcionalmente preservando el original.
 
 El proceso es no destructivo; el archivo fuente permanece intacto a menos que lo sobrescribas.
 
@@ -144,9 +145,9 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Uso en el mundo real:** Los revisores pueden discutir una cláusula específica añadiendo respuestas en hilo, manteniendo la conversación vinculada a la anotación exacta.
+**Uso en el mundo real:** Los revisores pueden discutir una cláusula específica añadiendo respuestas en cadena, manteniendo la conversación vinculada a la anotación exacta.
 
-### Paso 3: Definir las coordenadas de la anotación (Obtener la posición correcta)
+### Paso 3: Definir coordenadas de la anotación (Obtener la posición correcta)
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -188,7 +189,7 @@ annotator.add(underline);
 **Consejos de color y opacidad:**  
 - `FontColor` usa ARGB; `65535` (0x00FFFF) produce un amarillo brillante.  
 - Para rojo, usa `16711680` (0xFF0000); para azul, `255` (0x0000FF).  
-- Valores de opacidad entre 0.5 y 0.8 ofrecen buena legibilidad sin ocultar el texto.
+- Valores de opacidad entre 0.5 y 0.8 ofrecen buena legibilidad sin oscurecer el texto.
 
 ### Paso 5: Guardar tu documento anotado
 
@@ -198,7 +199,7 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Gestión de memoria:** La llamada a `dispose()` libera recursos nativos y previene fugas de memoria—crítico al procesar muchos archivos en lote.
+**Gestión de memoria:** La llamada `dispose()` libera recursos nativos y previene fugas de memoria—crítico al procesar muchos archivos en lote.
 
 ## Eliminación de anotaciones: Creando versiones limpias del documento
 
@@ -219,7 +220,7 @@ Puedes:
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**Paso 2: Configurar las opciones de guardado para una salida limpia**
+**Paso 2: Configurar opciones de guardado para una salida limpia**
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -237,7 +238,7 @@ annotator.save(noneAnnotationPath, saveOptions);
 annotator.dispose();
 ```
 
-Esto produce un **PDF limpio Java** que no contiene objetos de anotación, perfecto para la distribución final.
+Esto produce un **archivo PDF Java limpio** que no contiene objetos de anotación, perfecto para distribución final.
 
 ## Problemas comunes y soluciones
 
@@ -312,7 +313,7 @@ for (String docPath : documentPaths) {
 }
 ```
 
-### Consideraciones de subprocesos
+### Consideraciones de subprocesamiento
 
 GroupDocs.Annotation **no es thread‑safe** por defecto. Si tu aplicación procesa documentos concurrentemente:
 
@@ -322,9 +323,19 @@ GroupDocs.Annotation **no es thread‑safe** por defecto. Si tu aplicación proc
 
 ### Estrategias de caché
 
-- Cachea plantillas de anotación usadas frecuentemente.  
+- Cachea plantillas de anotación usadas con frecuencia.  
 - Reutiliza colecciones `Point` para conjuntos de coordenadas comunes.  
 - Mantén un **PDF plantilla** en memoria si anotas repetidamente el mismo documento base.
+
+## Consejos de gestión de memoria para PDF en Java
+El uso eficiente de la memoria es esencial al manejar PDFs grandes o procesar muchos archivos en lote. Aquí tienes algunas recomendaciones prácticas:
+
+- **Usa try‑with‑resources** para cada `Annotator` y garantiza su disposición.  
+- **Aumenta el heap de la JVM** (`-Xmx`) solo cuando sea necesario; monitorea el uso con herramientas de perfilado.  
+- **Procesa documentos secuencialmente** cuando sea posible, liberando memoria después de cada archivo.  
+- **Evita cargar el mismo PDF varias veces**; reutiliza el mismo stream si necesitas leerlo repetidamente.
+
+Aplicar estas prácticas ayuda a que tu aplicación se mantenga receptiva y evita caídas por falta de memoria durante cargas intensas de anotación.
 
 ## Aplicaciones del mundo real y casos de uso
 
@@ -341,7 +352,7 @@ GroupDocs.Annotation **no es thread‑safe** por defecto. Si tu aplicación proc
 
 ### Flujos de trabajo de aseguramiento de calidad
 
-- **Revisión de documentación técnica:** Ingenieros subrayan secciones que requieren actualizaciones.  
+- **Revisión de documentación técnica:** Ingenieros subrayan secciones que requieren actualización.  
 - **Procedimientos operativos estándar:** Oficiales de seguridad resaltan pasos críticos.
 
 ### Sistemas de gestión de contenido
@@ -388,15 +399,15 @@ underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentTex
 ### Monitoreo de rendimiento
 
 Observa estas métricas en producción:
-- **Uso de heap** – asegura que se llame a `dispose()`.  
+- **Uso de heap** – asegúrate de que se llame a `dispose()`.  
 - **Tiempo de procesamiento por documento** – registra marcas de tiempo antes y después de `annotator.save()`.  
 - **Tasa de errores** – captura excepciones y clasifícalas.
 
-### Trucos comunes en producción
+### Trampas comunes en producción
 
 - **Bloqueo de archivos** – asegura que los archivos subidos estén cerrados antes de anotarlos.  
 - **Ediciones concurrentes** – implementa bloqueo optimista o verificaciones de versión.  
-- **Archivos grandes (> 50 MB)** – aumenta el timeout de la JVM y considera APIs de streaming.
+- **Archivos grandes (> 50 MB)** – aumenta el tiempo de espera de la JVM y considera APIs de streaming.
 
 ### Mejores prácticas de manejo de errores
 
@@ -415,18 +426,18 @@ try (Annotator annotator = new Annotator(documentPath)) {
 
 ## Conclusión
 
-Ahora tienes todo lo necesario para **crear PDF limpio Java** y **anotar PDF en Java** con anotaciones subrayadas usando GroupDocs.Annotation. Recuerda:
+Ahora tienes todo lo necesario para **crear archivos PDF Java limpios** y **anotar PDF en Java** con anotaciones subrayadas usando GroupDocs.Annotation. Recuerda:
 
-- Gestionar los recursos con try‑with‑resources o con `dispose()` explícito.  
-- Validar las coordenadas temprano para evitar subrayados mal ubicados.  
-- Implementar un manejo de errores robusto para la estabilidad en producción.  
-- Aprovechar estilos basados en roles y metadatos para adaptarlos a tu flujo de trabajo.
+- Gestionar recursos con try‑with‑resources o `dispose()` explícito.  
+- Validar coordenadas temprano para evitar subrayados mal ubicados.  
+- Implementar un manejo de errores robusto para estabilidad en producción.  
+- Aprovechar estilos basados en roles y metadatos para adaptarse a tu flujo de trabajo.
 
-¿Próximos pasos? Prueba a añadir otros tipos de anotación—resaltados, sellos o reemplazos de texto—para construir una solución completa de revisión de documentos.
+¿Próximos pasos? Prueba agregar otros tipos de anotación—resaltados, sellos o reemplazos de texto—para construir una solución completa de revisión de documentos.
 
 ## Preguntas frecuentes
 
-**P: ¿Cómo anoto varias áreas de texto en una sola operación?**  
+**P: ¿Cómo anoto múltiples áreas de texto en una sola operación?**  
 R: Crea varios objetos `UnderlineAnnotation` con diferentes coordenadas y añádelos secuencialmente usando `annotator.add()`.
 
 **P: ¿Puedo anotar imágenes dentro de documentos PDF?**  
@@ -436,15 +447,13 @@ R: Sí. Usa el mismo sistema de coordenadas, asegurándote de que los puntos est
 R: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX) y formatos de imagen como JPEG, PNG, TIFF.
 
 **P: ¿Cómo manejo documentos muy grandes sin quedarme sin memoria?**  
-R: Procesa los documentos uno a la vez, aumenta el heap de la JVM (`-Xmx`) y siempre dispone de las instancias de `Annotator` rápidamente.
+R: Procesa los documentos uno a la vez, aumenta el heap de la JVM (`-Xmx`) y siempre dispone rápidamente las instancias de `Annotator`.
 
 **P: ¿Es posible extraer anotaciones existentes de un documento?**  
-R: Sí. Usa `annotator.get()` para obtener todas las anotaciones, luego filtra por tipo, autor o página según sea necesario.
+R: Sí. Usa `annotator.get()` para obtener todas las anotaciones y luego filtra por tipo, autor o página según sea necesario.
 
 ---
 
-**Última actualización:** 2025-12-21  
+**Última actualización:** 2026-03-24  
 **Probado con:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
-
----
+**Autor:** GroupDocs
