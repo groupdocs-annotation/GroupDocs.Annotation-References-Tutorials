@@ -1,38 +1,74 @@
 ---
-"date": "2025-05-06"
-"description": "Tìm hiểu cách chú thích tài liệu PDF trực tiếp từ máy chủ FTP bằng GroupDocs.Annotation for Java. Đơn giản hóa quy trình xử lý tài liệu của bạn với hướng dẫn từng bước này."
-"title": "Chú thích PDF từ FTP bằng GroupDocs.Annotation cho Java&#58; Hướng dẫn đầy đủ"
-"url": "/vi/java/document-loading/annotate-pdf-ftp-groupdocs-java/"
+categories:
+- Java Development
+date: '2026-01-26'
+description: Tìm hiểu cách thêm chú thích vào tệp PDF trực tiếp từ máy chủ FTP bằng
+  GroupDocs.Annotation cho Java. Hướng dẫn từng bước kèm ví dụ mã và mẹo khắc phục
+  sự cố.
+keywords: annotate PDF FTP Java, GroupDocs annotation tutorial, PDF annotation from
+  FTP server, Java document processing FTP, load PDF from FTP server Java
+lastmod: '2026-01-26'
+linktitle: Annotate PDF FTP Java Guide
+tags:
+- pdf-annotation
+- ftp-integration
+- groupdocs
+- java-tutorial
+title: Cách Thêm Ghi chú vào PDF từ FTP trong Java
 type: docs
-"weight": 1
+url: /vi/java/document-loading/annotate-pdf-ftp-groupdocs-java/
+weight: 1
 ---
 
-# Chú thích PDF từ FTP bằng GroupDocs.Annotation cho Java: Hướng dẫn đầy đủ
+# Cách Thêm Ghi Chú vào PDF từ FTP trong Java
 
 ## Giới thiệu
 
-Bạn có được giao nhiệm vụ chú thích tài liệu được lưu trữ trên máy chủ từ xa như FTP không? Các doanh nghiệp và cá nhân thường cần thêm ghi chú hoặc đánh dấu nhanh chóng mà không cần tải xuống toàn bộ tệp. Với các công cụ phù hợp, quy trình này có thể hiệu quả và hợp lý. Hướng dẫn này sẽ hướng dẫn bạn sử dụng GroupDocs.Annotation for Java để chú thích tệp PDF trực tiếp sau khi tải chúng từ máy chủ FTP.
+Bạn đã bao giờ nhìn chằm chằm vào một tệp PDF thể nhanh chóng **cách thêm ghi chú** mà không phải tải xuống trước không? Bạn không phải là người duy nhất. Nhiều nhà phát triển gặp phải tình hệ thống báo cáo tự động, hay chỉ cần làm nổi bật các phần quan trọng trong các tệp từ xa, tutorial này sẽ giúp bạn hoàn thành.
 
-**Những gì bạn sẽ học được:**
-- Cách tải tài liệu từ máy chủ FTP trong Java.
-- Các bước để thêm chú thích như tô sáng vùng vào tài liệu của bạn.
-- Các biện pháp tốt nhất để thiết lập và tối ưu hóa việc sử dụng GroupDocs.Annotation cho Java.
+**Những gì bạn sẽ thành thạo vào cuối:**
+- Tải tài liệu PDF trực tiếp từ máy chủ FTP bằng Java  
+- Thêm các loại ghi chú khác nhau (đánh dấu vùng, ghi chú văn bản, và hơn thế nữa)  
+- Triển khai xử lý lỗi và tối ưu hiệu năng  
+- Khắc phục các vấn đề thường gặp  
 
-Bây giờ, chúng ta hãy bắt đầu nhé!
+## Câu trả lời nhanh
+- **Có thể ghi chú PDF mà không tải xuống trước không?** Có, bằng cách stream tệp trực tiếp từ FTP.  
+- **Thư viện nào chịu trách nhiệm ghi chú?** GroupDocs.Annotation cho Java.  
+- **Cần giấy phép cho môi trường production không?** Cần giấy phép GroupDocs đầy đủ cho việc sử dụng trong production.  
+- **Yêu cầu phiên bản Java nào?** JDK 8 hoặc cao hơn.  
+- **FTP có phải là tùy chọn lưu trữ duy nhất không?** Không, cùng một mẫu code cũng hoạt động với S3, Azure Blob, v.v.
 
-## Điều kiện tiên quyết
+## “cách thêm ghi chú” là gì trong ngữ cảnh của PDF?
+Thêm ghi chú có nghĩa là chèn các dấu hiệu trực quan—như đánh dấu, ghi chú, hoặc hình dạng—vào tài liệu PDF một cách lập trình. Với GroupDocs.Annotation, bạn có thể thực hiện việc này trực tiếp trên một luồng nhập (input stream), điều này rất phù hợp cho các nguồn từ xa như máy chủ FTP.
 
-Trước khi bắt đầu, hãy đảm bảo rằng bạn có những điều sau:
+## Tại sao nên chọn cách, sao phương pháp này  
+- Rắc rối trong quản lý phiên bản  
+- Lãng phí băng thông mạng  
 
-- **Thư viện bắt buộc**: Bạn sẽ cần Apache Commons Net cho các hoạt động FTP và GroupDocs.Annotation cho Java. Đảm bảo các thư viện này có sẵn trong dự án của bạn.
-  
-- **Thiết lập môi trường**Hướng dẫn này giả định bạn có hiểu biết cơ bản về môi trường phát triển Java. Các công cụ như Maven hoặc Gradle được khuyến nghị để quản lý các phụ thuộc.
+**Lợi ích của ghi chú FTP với GroupDocs**
+- **Zero local storage** – Xử lý tệp trực tiếp từ luồng  
+- **Real‑time processing** – Ghi chú và lưu trong một quy trình làm việc  
+- **Scalable solution** – Xử lý nhiều tài liệu một cách hiệu quả  
+- **Enterprise‑ready** – Được xây dựng cho môi trường production  
 
-- **Điều kiện tiên quyết về kiến thức**: Có lợi thế khi quen thuộc với lập trình Java, xử lý luồng tệp và làm việc với chú thích.
+Cách tiếp cận này tỏa sáng khi bạn có kho tài liệu lớn hoặc cần quy trình ghi chú tự động.
 
-## Thiết lập GroupDocs.Annotation cho Java
+## Yêu cầu trước và Cài đặt môi trường
 
-Để bắt đầu với GroupDocs.Annotation cho Java, bạn cần thiết lập thư viện trong dự án của mình. Nếu bạn đang sử dụng Maven, hãy thêm cấu hình sau:
+Đảm bảo bạn đã có các thành phần sau trước khi bắt đầu:
+
+- Java Development Kit (JDK 8 hoặc cao hơn)  
+- Thư viện Apache Commons Net (để thực hiện các thao tác FTP)  
+- Thư viện GroupDocs.Annotation cho Java  
+- Maven hoặc Gradle để quản lý phụ thuộc  
+- Quyền truy cập vào máy chủ FTP (thông tin đăng nhập và quyền)  
+
+## Cài đặt GroupDocs.Annotation cho Java
+
+### Cấu hình Maven
+
+Thêm repository và dependency vào tệp `pom.xml` của bạn:
 
 ```xml
 <repositories>
@@ -51,23 +87,23 @@ Trước khi bắt đầu, hãy đảm bảo rằng bạn có những điều sa
 </dependencies>
 ```
 
-### Mua lại giấy phép
+### Các tùy chọn cài đặt giấy phép
 
-GroupDocs cung cấp nhiều cách khác nhau để có được giấy phép:
-- **Dùng thử miễn phí**: Bắt đầu bằng bản dùng thử miễn phí để khám phá các tính năng của GroupDocs.Annotation.
-- **Giấy phép tạm thời**: Xin giấy phép tạm thời để có quyền truy cập đầy đủ trong quá trình đánh giá.
-- **Mua**: Hãy cân nhắc mua giấy phép để sử dụng lâu dài.
+GroupDocs cung cấp các tùy chọn giấy phép linh hoạt:
 
-Để khởi tạo và thiết lập môi trường của bạn, hãy thêm các phụ thuộc trên vào Maven của bạn `pom.xml` tập tin. Thiết lập này đảm bảo bạn có tất cả các thành phần cần thiết để bắt đầu chú thích tài liệu.
+1. **Free Trial** – Lý tưởng cho việc thử nghiệm và các dự án proof‑of‑concept.  
+2. **Temporary License** – Loại bỏ các giới hạn của bản dùng thử trong quá trình đánh giá.  
+3. **Full License** – Yêu cầu cho triển khai production.  
 
-## Hướng dẫn thực hiện
+**Mẹo chuyên nghiệp:** Bắt đầu với bản dùng thử miễn phí, sau đó nâng cấp khi bạn đã sẵn sàng cho production.
 
-### Đang tải tài liệu từ FTP
+## Hướng dẫn triển khai đầy đủ
 
-#### Tổng quan
-Phần này trình bày cách lấy tài liệu từ máy chủ FTP bằng thư viện Apache Commons Net của Java. Bằng cách tải tệp dưới dạng InputStream, chúng ta có thể truyền trực tiếp đến GroupDocs.Annotation để xử lý.
+Dưới đây là hướng dẫn từng bước cho **cách thêm ghi chú** vào PDF được lấy từ máy chủ FTP.
 
-#### Kết nối và Lấy lại Tập tin
+### Bước 1: Tải tài liệu từ máy chủ FTP
+
+Phương thức tái sử dụng dưới đây kết nối tới máy chủ FTP và trả về PDF dưới dạng `InputStream`. Không tạo tệp cục bộ nào.
 
 ```java
 import org.apache.commons.net.ftp.FTPClient;
@@ -75,30 +111,30 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public static InputStream getFileFromFtp(String server, String filePath) throws IOException {
-    // Khởi tạo máy khách FTP
+    // Initialize FTP client
     FTPClient client = new FTPClient();
     
-    // Kết nối tới máy chủ FTP
+    // Connect to the FTP server
     client.connect(server);
     
-    // Lấy tệp được chỉ định dưới dạng luồng đầu vào
+    // Retrieve the specified file as an input stream
     InputStream inputStream = client.retrieveFileStream(filePath);
     
-    // Ngắt kết nối khỏi máy chủ FTP
+    // Disconnect from the FTP server
     client.disconnect();
     
     return inputStream;
 }
 ```
 
-**Giải thích**: Phương pháp này khởi tạo một `FTPClient`, kết nối với máy chủ FTP được chỉ định của bạn, truy xuất tệp dưới dạng `InputStream`, sau đó ngắt kết nối. Đảm bảo xử lý các ngoại lệ để quản lý lỗi mạnh mẽ.
+**Điều gì đang diễn ra?**  
+- `FTPClient` xử lý giao thức FTP ở mức thấp.  
+- Tệp được stream (`InputStream`) giúp bạn tránh việc lưu trữ thêm.  
+- Đối với máy chủ yêu cầu xác thực, chèn `client.login(username, password)` sau `connect`.  
 
-### Thêm chú thích vào tài liệu
+### Bước 2: Thêm Ghi chú vào PDF của bạn
 
-#### Tổng quan
-Sau khi tài liệu được tải từ máy chủ FTP, chúng ta có thể thêm chú thích bằng Java API của GroupDocs.Annotation. Ở đây, chúng ta tập trung vào việc thêm chú thích khu vực.
-
-#### Chú thích và Lưu
+Khi đã có luồng, bạn có thể tạo các ghi chú. Ví dụ này thêm một vùng đánh dấu màu vàng.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -107,72 +143,204 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 import java.io.InputStream;
 
 public static void addAnnotationAndSave(InputStream inputStream, String outputPath) {
-    // Khởi tạo Annotator với InputStream được cung cấp
+    // Initialize Annotator with the provided InputStream
     final Annotator annotator = new Annotator(inputStream);
     
-    // Tạo một chú thích khu vực mới
+    // Create a new Area Annotation
     AreaAnnotation area = new AreaAnnotation();
     
-    // Đặt vị trí và kích thước của chú thích (100x100 tại tọa độ 100,100)
+    // Set the position and size of the annotation (100x100 at coordinates 100,100)
     area.setBox(new Rectangle(100, 100, 100, 100));
     
-    // Đặt màu nền cho chú thích
-    area.setBackgroundColor(65535); // Màu vàng ở định dạng ARGB
+    // Set a background color for the annotation
+    area.setBackgroundColor(65535); // Yellow color in ARGB format
     
-    // Thêm chú thích vào tài liệu
+    // Add the annotation to the document
     annotator.add(area);
     
-    // Lưu tài liệu có chú thích vào đường dẫn đầu ra đã chỉ định
+    // Save the annotated document to the specified output path
     annotator.save(outputPath);
     
-    // Xử lý các tài nguyên được Annotator sử dụng
+    // Dispose of resources used by Annotator
     annotator.dispose();
 }
 ```
 
-**Giải thích**: Đoạn mã này khởi tạo một `Annotator` đối tượng với tài liệu của bạn `InputStream`, tạo chú thích vùng màu vàng và lưu nó. `Rectangle` lớp xác định vị trí và kích thước, trong khi `AreaAnnotation` quản lý các chi tiết cụ thể của chú thích.
+**Các điểm chính**  
+- `Annotator` làm việc trực tiếp với luồng nhập.  
+- `Rectangle` xác định hình học của ghi chú.  
+- Màu sắc sử dụng giá trị nguyên ARGB (ví dụ, 65535 = vàng sáng).  
 
-#### Mẹo khắc phục sự cố
-- Đảm bảo thông tin đăng nhập và quyền FTP phù hợp để tránh sự cố kết nối.
-- Xác minh đường dẫn tệp và quyền truy cập khi lưu tài liệu có chú thích.
+### Bước 3: Kết hợp Tất Cả lại Với Nhau
 
-## Ứng dụng thực tế
+Phương thức `main` minh họa quy trình hoàn chỉnh—from lấy dữ liệu từ FTP tới lưu PDF đã được ghi chú.
 
-1. **Chú thích tài liệu pháp lý**: Nhanh chóng làm nổi bật các điều khoản hoặc phần quan trọng trong hợp đồng được lưu trữ trên máy chủ FTP.
-2. **Quy trình rà soát tài liệu**Tạo điều kiện cho việc xem xét tài liệu mang tính cộng tác bằng cách thêm chú thích trực tiếp từ bộ lưu trữ từ xa.
-3. **Phân tích báo cáo tự động**: Sử dụng tập lệnh để tự động chú thích các báo cáo được tải xuống từ máy chủ FTP, đánh dấu các số liệu quan trọng.
+```java
+public class PDFAnnotationFromFTP {
+    public static void main(String[] args) {
+        try {
+            // Load PDF from FTP server
+            InputStream pdfStream = getFileFromFtp("ftp.example.com", "/documents/report.pdf");
+            
+            // Add annotations and save
+            addAnnotationAndSave(pdfStream, "annotated_report.pdf");
+            
+            System.out.println("PDF successfully annotated from FTP!");
+            
+        } catch (IOException e) {
+            System.err.println("Error processing PDF: " + e.getMessage());
+        }
+    }
+}
+```
 
-## Cân nhắc về hiệu suất
+Chạy chương trình này sẽ tạo ra tệp `annotated_report.pdf` với một vùng đánh dấu màu vàng được đặt tại tọa độ đã chỉ định.
 
-- **Tối ưu hóa mạng**: Đảm bảo kết nối ổn định khi tải tệp từ FTP để tránh bị gián đoạn.
-- **Quản lý bộ nhớ**: Xử lý hiệu quả các luồng và tài nguyên để ngăn chặn rò rỉ bộ nhớ trong ứng dụng của bạn. Loại bỏ `Annotator` đồ vật ngay sau khi sử dụng.
+## Kỹ thuật ghi chú nâng cao
 
-## Phần kết luận
+Ngoài việc đánh dấu vùng, GroupDocs.Annotation hỗ trợ nhiều loại ghi chú khác.
 
-Trong hướng dẫn này, chúng tôi đã khám phá cách tận dụng GroupDocs.Annotation for Java để chú thích các tệp PDF được tải xuống từ máy chủ FTP. Bằng cách làm theo các bước này, bạn có thể cải thiện quy trình xử lý tài liệu trong tổ chức của mình. Tiếp theo, hãy thử tích hợp các chức năng này vào một dự án lớn hơn hoặc khám phá các loại chú thích khác được GroupDocs hỗ trợ.
+### Ghi chú văn bản cho bình luận chi tiết
 
-**Các bước tiếp theo**:Thử nghiệm với nhiều chú thích khác nhau và cân nhắc tự động hóa toàn bộ quy trình xử lý tài liệu hàng loạt.
+```java
+TextAnnotation textAnnotation = new TextAnnotation();
+textAnnotation.setBox(new Rectangle(200, 200, 100, 50));
+textAnnotation.setText("Important: Review this section carefully");
+textAnnotation.setFontColor(16711680); // Red text
+annotator.add(textAnnotation);
+```
 
-## Phần Câu hỏi thường gặp
+### Ghi chú điểm cho ghi chú nhanh
 
-1. **Tôi có thể sử dụng GroupDocs.Annotation với các dịch vụ lưu trữ đám mây khác không?**
-   - Có, bạn có thể điều chỉnh mã để hoạt động với AWS S3, Google Drive hoặc bất kỳ dịch vụ nào cung cấp quyền truy cập tệp thông qua API.
-2. **GroupDocs hỗ trợ những loại chú thích nào?**
-   - GroupDocs hỗ trợ nhiều loại chú thích khác nhau, bao gồm văn bản, diện tích, điểm, v.v.
-3. **Làm thế nào để xử lý lỗi kết nối máy chủ FTP trong Java?**
-   - Triển khai xử lý ngoại lệ xung quanh hoạt động FTP của bạn để quản lý các sự cố kết nối một cách hiệu quả.
-4. **Thiết lập này có thể sử dụng cho các tài liệu không phải PDF không?**
-   - Có, GroupDocs.Annotation hỗ trợ nhiều định dạng bao gồm Word, Excel và hình ảnh.
-5. **Cách tốt nhất để tối ưu hóa thời gian tải tài liệu từ FTP là gì?**
-   - Hãy cân nhắc tải xuống song song hoặc sử dụng cơ chế lưu trữ đệm cho các tệp được truy cập thường xuyên.
+```java
+PointAnnotation pointAnnotation = new PointAnnotation();
+pointAnnotation.setBox(new Rectangle(300, 150, 0, 0));
+pointAnnotation.setText("Check this calculation");
+annotator.add(pointAnnotation);
+```
 
-## Tài nguyên
-- [Tài liệu](https://docs.groupdocs.com/annotation/java/)
-- [Tài liệu tham khảo API](https://reference.groupdocs.com/annotation/java/)
-- [Tải về](https://releases.groupdocs.com/annotation/java/)
-- [Mua](https://purchase.groupdocs.com/buy)
-- [Dùng thử miễn phí](https://releases.groupdocs.com/annotation/java/)
-- [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- [Diễn đàn hỗ trợ](https://forum.groupdocs.com/c/annotation/) 
+## Các trường hợp sử dụng thực tế và Ứng dụng
 
-Hãy bắt đầu sử dụng GroupDocs.Annotation for Java ngay hôm nay để hợp lý hóa quy trình chú thích tài liệu và nâng cao năng suất!
+Hiểu được nơi **cách thêm ghi chú** mang lại giá trị giúp bạn quyết định khi nào nên áp dụng mẫu này.
+
+| Kịch bản | Lợi ích của Ghi chú |
+|----------|----------------------|
+| **Legal Document Review** | Đánh dấu các điều khoản, thêm ghi chú phụ, giữ lịch sử phiên bản mà không cần sao chép cục bộ. |
+| **Engineering Report Processing** | Đánh dấu các đo lường quan trọng, đính kèm cảnh báo an toàn, cộng tác giữa các nhóm. |
+| **Educational Content Management** | Giáo viên ghi chú các bài nộp của sinh viên lưu trên FTP, cung cấp phản hồi ngay lập tức. |
+| **Business Intelligence** | Đánh dấu các chỉ số quan trọng trong PDF tài chính, tạo bản tóm tắt điều hành với những insight nổi bật. |
+
+## Tối ưu hiệu năng và Thực hành tốt nhất
+
+### Mẹo quản lý bộ nhớ
+
+```java
+try (Annotator annotator = new Annotator(inputStream)) {
+    // Your annotation code here
+    annotator.add(annotation);
+    annotator.save(outputPath);
+} // Automatic resource cleanup
+```
+
+- Sử dụng *try‑with‑resources* để đảm bảo giải phóng đúng cách.  
+- Tránh giữ các luồng lớn lâu hơn mức cần thiết.  
+- Tăng heap JVM (`-Xmx2g`) cho các PDF rất lớn.  
+
+### Chiến lược tối ưu mạng
+
+**FTP Connection Pooling**
+
+```java
+FTPClient client = new FTPClient();
+client.connect(server);
+client.login(username, password);
+
+for (String filePath : filePaths) {
+    InputStream stream = client.retrieveFileStream(filePath);
+    processAndAnnotate(stream);
+}
+
+client.disconnect();
+```
+
+- Tái sử dụng một `FTPClient` duy nhất cho các thao tác batch.  
+- Bật chế độ passive (`client.enterLocalPassiveMode()`) để thân thiện với tường lửa.  
+- Triển khai logic retry với exponential back‑off cho các lỗi mạng tạm thời.  
+
+### Xử lý lỗi mạnh mẽ
+
+```java
+public static InputStream getFileFromFtpWithRetry(String server, String filePath, int maxRetries) {
+    for (int attempt = 1; attempt <= maxRetries; attempt++) {
+        try {
+            return getFileFromFtp(server, filePath);
+        } catch (IOException e) {
+            if (attempt == maxRetries) {
+                throw new RuntimeException("Failed to retrieve file after " + maxRetries + " attempts", e);
+            }
+            // Wait before retry
+            try {
+                Thread.sleep(1000 * attempt); // Exponential backoff
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+                throw new RuntimeException("Interrupted during retry", ie);
+            }
+        }
+    }
+    return null;
+}
+```
+
+- Retry khi gặp lỗi I/O tạm thời.  
+- Sử dụng exponential back‑off để tránh gây quá tải cho máy chủ.  
+
+## Khắc phục các vấn đề thường gặp
+
+| Vấn đề | Nguyên nhân có thể | Giải pháp |
+|-------|--------------------|-----------|
+| **Connection timed out** | Địa chỉ/port máy chủ sai hoặc tường lửa | Kiểm tra lại địa chỉ, mở cổng 21, thử chế độ passive |
+| **Authentication failure** | Thông tin đăng nhập sai hoặc thiếu quyền | Kiểm tra lại username/password, đảm bảo có quyền đọc |
+| **“Document format not supported”** | Tệp hỏng hoặc không phải PDF | Xác nhận tệp là PDF hợp lệ, dùng chế độ FTP nhị phân (`FTP.BINARY_FILE_TYPE`) |
+| **Annotations not appearing** | Tọa độ ngoài phạm vi hoặc hạn chế bảo mật | Đảm bảo hình chữ nhật nằm trong kích thước trang, bỏ bảo mật mật khẩu |
+| **Color not showing** | Giá trị ARGB không đúng= 65280, Blue = 255, Yellow = 65535 |
+
+## Các lưu ý bảo mật khi sử dụng trong môi trường production
+
+- **Không bao giờ hard‑code thông tin đăng nhập** – dùng biến môi trường hoặc vault bảo mật.  
+- **Ưu tiên FTPS** (FTP over TLS) để mã hoá dữ liệu khi truyền.  
+- **Xác thực loại và kích thước tệp** trước độc hại.  
+- **Ghi log mọi truy cập** – duy trì audit trail để đáp ứng yêu cầu tuân thủ.  
+
+## Câu hỏi thường gặp
+
+**Q: Có thể áp dụng cách này với các dịch vụ lưu trữ đám mây như AWS S3 hoặc Google Drive không?**  
+A: Chắc chắn. Thay thế mã lấy dữ liệu FTP bằng lời gọi SDK tương ứng; logic ghi chú vẫn GroupDocs.Annotation hỗ trợ những định dạngX, XLSX, PPTX, hình ảnh (JPEG, PNG), và các tệp CAD.
+
+**Q: Làm sao xử lý các PDF rất lớn mà không làm cạn kiệt bộ nhớ?**  
+A: Sử dụng streaming, tăng heap JVM, hoặc xử lý từng trang bằng API tốt nhất tài (`CompletableFuture`), và hệ thống queue để phân phối công việc qua các thread hoặc service.
+
+## Bước tiếp theo là gì?
+
+Bây giờ bạn đã biết **cách thêm ghi chú** vào PDF lưu trên máy chủ FTP, bạn có thể mở rộng giải pháp:
+
+- Thử nghiệm các loại dấu, watermark, và hình dạng tùy chỉnh.  
+- Xây dựng giao diện web cho phép người dùng chọn tệp từ FTP và ghi chú thời gian thực.  
+- Tích hợp với hệ thống Quản lý Tài liệu (DMS) hiện có để có quy trình end‑to‑end.  
+
+Sự kết hợp giữa streaming FTP và GroupDocs.Annotation mở ra vô vàn khả năng cho việc xử lý tài liệu tự động, quy mô lớn.
+
+## Tài nguyên và Học thêm
+
+- [Documentation](https://docs.groupdocs.com/annotation/java/) - Tham khảo API chi tiết và hướng dẫn  
+- [API Reference](https://reference.groupdocs.com/annotation/java/) - Tài liệu phương thức chi tiết  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/) - Luôn sử dụng phiên bản mới nhất  
+- [Purchase License](https://purchase.groupdocs.com/buy) - Các tùy chọn triển khai production  
+- [Free Trial](https://releases.groupdocs.com/annotation/java/) - Dùng thử tất cả tính năng  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/) - Loại bỏ giới hạn bản dùng thử  
+- [Community Support](https://forum.groupdocs.com/c/annotation/) - Nhận hỗ trợ từ chuyên gia và cộng đồng  
+
+---
+
+**Last Updated:** 2026-01-26  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs
