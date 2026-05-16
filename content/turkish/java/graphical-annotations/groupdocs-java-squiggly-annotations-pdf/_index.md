@@ -1,75 +1,424 @@
 ---
 categories:
 - Java Development
-date: '2026-01-31'
-description: GroupDocs.Annotation kullanarak Java’da ek açıklama yanıtları oluşturmayı
-  öğrenin. Pratik örnekler ve en iyi uygulamalarla Java’da PDF ek açıklama konusunda
-  uzmanlaşın.
-keywords: Java PDF annotation library, PDF annotation Java tutorial, GroupDocs annotation
-  examples, Java document markup tools, how to annotate PDF files in Java, create
-  annotation replies java
-lastmod: '2026-01-31'
-linktitle: Java PDF Annotation Tutorial
+date: '2026-05-16'
+description: GroupDocs.Annotation kullanarak java ile açıklama yanıtları oluşturmayı
+  öğrenin. Java'da PDF açıklamaları konusunda pratik örnekler, performans ipuçları
+  ve en iyi uygulamalarla uzmanlaşın.
+keywords:
+- create annotation reply java
+- GroupDocs.Annotation Java
+- PDF annotation Java tutorial
+lastmod: '2026-05-16'
+linktitle: Java PDF Annotation Öğreticisi
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-16'
+  description: Learn how to create annotation replies java using GroupDocs.Annotation.
+    Master PDF annotation in Java with practical examples, performance tips, and best
+    practices.
+  headline: 'Java PDF Annotation Library: create annotation reply java'
+  type: TechArticle
+- description: Learn how to create annotation replies java using GroupDocs.Annotation.
+    Master PDF annotation in Java with practical examples, performance tips, and best
+    practices.
+  name: 'Java PDF Annotation Library: create annotation reply java'
+  steps:
+  - name: Import All Required Classes
+    text: '- `Annotator` is the entry point for all document‑level operations. - `Point`
+      represents a coordinate on a page (X and Y measured from the top‑left). - `SquigglyAnnotation`
+      defines the wavy underline used to highlight errors. - `Reply` stores threaded
+      comments attached to an annotation. - `SaveOptio'
+  - name: Create and Configure Your Squiggly Annotation
+    text: 'SquigglyAnnotation is a class that creates a wavy underline used to highlight
+      errors in a PDF. - **Coordinate system**: Points start at the top‑left corner.
+      The two points above draw a horizontal wavy line from (100, 200) to (300, 200).
+      - **Opacity** 0.7 means the annotation is 70 % opaque, letting '
+  - name: Add Interactive Replies (Optional but Powerful)
+    text: Reply is a class representing a comment thread attached to an annotation.
+      - Replies create a **threaded discussion** directly on the annotation, mirroring
+      the experience of modern PDF reviewers. - Each reply stores author information
+      and a timestamp, which you can later filter or display in a UI.
+  - name: Apply Annotation and Save Document
+    text: '- The **try‑with‑resources** construct automatically closes the `Annotator`,
+      releasing file handles and native buffers. - `save` writes the modified PDF
+      to `output.pdf`. > **Memory note:** The `Annotator` loads only the pages you
+      touch. For multi‑hundred‑page PDFs, this approach keeps heap usage und'
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Annotation focuses exclusively on annotation workflows, offering
+      over 30 annotation types, threaded replies, and native support for 50 + file
+      formats while keeping the memory footprint under 200 MB for 500‑page PDFs.
+    question: What makes GroupDocs.Annotation better than other Java PDF libraries?
+  - answer: Absolutely. Create a `@RestController` that injects the `Annotator` service,
+      processes multipart uploads, and streams the annotated PDF back to the client.
+      Remember to configure a thread‑pool for concurrent requests.
+    question: Can I use this library with Spring Boot applications?
+  - answer: Query each page’s dimensions via `annotator.getPageInfo(pageIndex)` and
+      calculate relative coordinates (e.g., percentages) instead of hard‑coding point
+      values. This ensures annotations appear correctly on A4, Letter, and custom‑size
+      pages.
+    question: How do I handle documents with different page sizes?
+  - answer: Yes. Call `annotator.get()` to retrieve a collection of all annotations,
+      then iterate to read properties such as author, comment, and geometry. This
+      is useful for migration or analytics scenarios.
+    question: Is there a way to extract existing annotations from PDFs?
+  - answer: Implement authentication at the application layer, store the user ID with
+      each `Reply`, and enforce business rules (e.g., only the author or an admin
+      can edit or delete a reply). The API itself does not enforce permissions, giving
+      you full flexibility.
+    question: What's the best approach for handling annotation permissions in multi‑user
+      systems?
+  type: FAQPage
 tags:
 - pdf-annotations
 - java-libraries
 - document-processing
 - groupdocs
-title: 'Java PDF Açıklama Kütüphanesi: açıklama yanıtları oluşturma.'
+title: 'Java PDF Annotation Library: java ile açıklama yanıtı oluşturma'
 type: docs
 url: /tr/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/
 weight: 1
 ---
 
-# Java PDF Açıklama Kütüphanesi: create annotation replies java
+# Java PDF Açıklama Kütüphanesi: create annotation reply java
 
-Hiç programlı olarak PDF belgelerine yardımcı dalgalı çizgiler, vurgulamalar ve yorumlar eklemeyi **ve create annotation replies java** düşündünüz mü? Belge yönetim sistemleri, inceleme platformları veya eğitim araçları geliştiriyorsanız, sağlam bir Java PDF açıklama kütüphanesine ihtiyacınız olacak.
-
-Şöyle bir şey var—belgeleri manuel olarak incelemek verimsiz, özellikle yüzlerce dosyayla uğraşıyorsanız. İşte bu noktada GroupDocs.Annotation for Java devreye giriyor. Belge açıklamaları için çok amaçlı bir İsviçre çakli öğelere kadar her şeyi ekleyebDocs.Annotation kurulumunu (düşündüğünüzden çok daha kolay)
-- Hata işaretleme için profesyonel dalgalı (squiggly) açıklamalar oluşturma
-- Renkleri, opaklığı ve konumlandırmayı bir uzman gibi ayarlama
-- Çoğu geliştiricinin takıldığı yaygın tuzakları ele alma bir hukuk belge inceleme sistemi ister bir eğitim platformu oluşturuyor olun, bu öğretici sizi PDF’leri deneyimli bir geliştirici gibi kısa sürede açıklama eklemeye hazırlar.
+If you need to **create annotation reply java** for PDFs—whether you’re building a contract‑review portal, an e‑learning system, or a bulk‑processing pipeline—this guide shows you exactly how to do it with GroupDocs.Annotation for Java. We’ll walk through setup, squiggly annotation creation, reply threading, and performance tuning so you can ship a reliable solution in days, not weeks.
 
 ## Hızlı Yanıtlar
-- **GroupDocs.Annotation’ın temel amacı nedir?** PDF açıklamalarını Java’da programlı olarak oluşturmayı, değiştirmeyi ve çıkarmayı sağlar.
-- **Dalgalı bir açıklama nasıl eklenir?** `SquigglyAnnotation` kullanın, özelliklerini ayarlayın ve `annotator.add(...)` çağırın.
-- **Bir açıklamaya yanıt ekleyebilir miyim?** Evet- **Üretim ortamı için lisansa ihtiyacım var mı?** Kesinlikle; aksi takdirde çıktılar su işareti (watermark) içerir.
-- **Toplu işleme için uygun mu?** Evet—belgeleri tek tek `try‑with‑resources` ile işleyerek bellek kullanımını düşük tutabilirsiniz.
+- **GroupDocs.Annotation'ın birincil amacı nedir?** Java'da PDF açıklamalarının programatik olarak oluşturulmasını, değiştirilmesini ve çıkarılmasını sağlar.  
+- **Bir squiggly açıklama nasıl eklenir?** `SquigglyAnnotation` sınıfını örnekleyin, geometrisini ve stilini ayarlayın, ardından `annotator.add(...)` metodunu çağırın.  
+- **Bir açıklamaya yanıt ekleyebilir miyim?** Evet—`Reply` nesneleri oluşturun, yazar ve metni ayarlayın ve bunları üst açıklama ile ilişkilendirin.  
+- **Üretim için lisansa ihtiyacım var mı?** Kesinlikle; geçerli bir lisans olmadan çıktı su işareti içerir.  
+- **Toplu işleme uygun mu?** Evet—her belgeyi açmak, açıklama eklemek ve kapatmak için try‑with‑resources kullanın, böylece bellek kullanımı düşük kalır.
 
 ## Java Geliştiricilerinin PDF Açıklama Kütüphanelerine Neden İhtiyacı Var
 
-Hiç programlı olarak PDF belgelerine yardımcı dalgalı çizgiler, vurgulamalar ve yorumlar eklemeyi düşündünüz mü? Belge yönetim sistemleri, inceleme platformları veya eğitim araçları geliştiriyorsanız, sağlam bir Java PDF açıklama kütüphanesine ihtiyacınız olacak.
+PDF'leri manuel olarak işaretlemek zaman alıcı ve hata yapmaya açıktır, özellikle yüzlerce sözleşme veya sınav kağıdını incelemeniz gerektiğinde. Bir Java PDF açıklama kütüphanesi bu işi otomatikleştirir, vurgular, dalgalı alt çizgiler ve dizili yorumları doğrudan dosyaya yerleştirmenizi sağlar. Sonuç, tüm işaretlemeleri ayrı bir görüntüleyiciye ihtiyaç duymadan koruyan, aranabilir ve taşınabilir bir belgedir.
 
-Şöyle bir şey var—belgeleri manuel olarak incelemek verimsiz, özellikle yüzlerce dosyayla uğraşıyorsanız for Java devreye giriyor. Belge açıklamaları için çok amaçlı bir İsviçre çakısı gibi; basit vurgulamalardan karmaşık etkileşimli öğelere kadar her şeyi ekleyebiliyorsunuz.
+**Bu kılavuzda öğrenecekleriniz**
+- Maven projesinde GroupDocs.Annotation'ı kurma ve lisanslama
+- Yerel Word alt çizgilerine benzeyen squiggly açıklamaları oluşturma
+- İşbirlikçi inceleme için herhangi bir açıklamaya dizili yanıtlar ekleme
+- Büyük PDF'leri işlerken bellek ve CPU kullanımını optimize etme
+- Çözümü Spring Boot, mikro‑servisler veya masaüstü uygulamalarda dağıtma  
 
-**Bu rehberdeizde GroupDocs.Annotation kurulumunu (düşündüğünüzden çok daha kolay)
-- Hata işaretleme için profesyonel dalgalı (squiggly) açıklamalar oluşturma
-- Renkleri, opaklığı ve konumlandırmayı bir uzman gibi ayarlama
-- Çoğu geliştiricinin takıldığı yaygın tuzakları ele alma
-- Büyük ölçekli belge işleme için performans optimizasyonu
+İster bir hukuk belgesi inceleme sistemi, ister eğitim notlandırma aracı, ister otomatik kalite‑kontrol hattı oluşturuyor olun, aşağıdaki teknikler size üretime hazır bir temel sağlayacaktır.
 
-İster bir hukuk belge inceleme sistemi ister bir eğitim platformu oluşturuyor olun, bu öğretici sizi PDF’leri deneyimli bir geliştirici gibi kısa sürede açıklama eklemeye hazırlar.
+## create annotation reply java nedir?
 
-## create annotation replies java nedir?
+`create annotation reply java`, Java kullanarak mevcut bir PDF açıklamasına bir yorum dizisi (Reply) ekleme programatik sürecidir. Yanıtlar, birden fazla inceleyicinin belgeyi terk etmeden belirli bir işaretleme üzerinde tartışmasına olanak tanır, sorunsuz ve yerinde işbirliği sağlar. Bu özellik, statik bir PDF'yi dosya içinde doğrudan bağlam ve denetim izlerini koruyan etkileşimli bir tartışma platformuna dönüştürür.
 
-`create annotation replies java`, bir PDF belgesindeki mevcut bir açıklamaya Java kullanarak programlı bir şekilde iş parçacıklı yorumlar (yanıtlar) ekleme sürecini ifade eder. Bu yanıtlar, açıklanan bölge üzerinde doğrudan iş birliği tartışmalarını mümkünşullar: Ortamınızı Hazulduğundan emin olalım. Burada birkaç dakikalık hazırlık, ileride saatler sürecek hata ayıklamaları önleyecek.
+## Önkoşullar: Ortamınızı Hazırlama
 
-**Temel Gereksinimler:**
-- **Java Development Kit (JDK)**: 8 veya üzeri sürüm (daha iyi performans için JDK 11+ önerilir)
-- **Maven veya Gradle**: Bağımlılık yönetimi için (örneklerde Maven kullanacağız)
-- **Temel Java bilgisi**: NesnelerÖnerilen KurulumIntelliJ IDEA, Eclipse veya VS Code)
-- IDE ve testler için en az 2 GB RAM
-- Test amaçlı örnek PDF dosyaları (test belgelerinin nasıl oluşturulacağını göstereceğiz)
+Koda geçmeden önce, geliştirme istasyonunuzun bu gereksinimleri karşıladığını doğrulayın:
 
-GroupDocs.Annotation’ın güzelliği, harici PDF okuyucuya veya karmaşık kurulumlara ihtiyaç duymamas uygulamanız içinde çalışır.
+- **JDK** 8 veya üzeri (daha iyi çöp toplama performansı için JDK 11 + önerilir)  
+- **Maven** veya **Gradle** bağımlılık yönetimi için (örnekler Maven kullanır)  
+- Maven desteği olan bir IDE (IntelliJ IDEA, Eclipse veya VS Code)  
+- IDE ve test çalıştırmaları için en az **2 GB** boş RAM  
+- Deneyim için örnek PDF dosyaları (herhangi bir PDF editörüyle basit PDF'ler oluşturabilirsiniz)
+
+GroupDocs.Annotation tamamen süreç içinde çalışır; harici PDF görüntüleyicileri veya yerel kütüphaneler gerekmez.
 
 ## GroupDocs.Annotation for Java Kurulumu
 
-GroupDocs.Annotation’ı projenize entegre etmek oldukça basittir, ancak dikkat etmeniz gereken birkaç nokta vardır.
+Kütüphaneyi entegre etmek birkaç adımlı bir süreçtir, ancak gözden kaçırılan birkaç gizli tuzak çalışma zamanı hatalarına yol açabilir.
 
 ### Maven Bağımlılık Yapılandırması
 
-`pom.xml` dosyanıza aşağıdakileri ekleyin—depo yapılandırmasını bağımlılık bölümünden önce yerleştirdiğinizden emin olun:
+`pom.xml` dosyanıza depoyu ve bağımlılığı ekleyin. Maven'in artefakti çözebilmesi için `<repositories>` öğesini **<dependencies>**'den **önce** yerleştirin.
+
+```xml
+<repositories>
+    <repository>
+        <id>groupdocs-repo</id>
+        <url>https://repo.groupdocs.com/repo</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.groupdocs</groupId>
+        <artifactId>groupdocs-annotation</artifactId>
+        <version>25.2</version>
+    </dependency>
+</dependencies>
+```
+
+> **Pro ipucu:** En son sürüm için GroupDocs sürüm sayfasını kontrol edin. Yeni sürümler genellikle yeni PDF standartları desteği ve performans iyileştirmeleri içerir.
+
+### Lisans Kurulumu (Bunu Atlamayın!)
+
+GroupDocs.Annotation üretim kullanımı için bir lisans dosyası gerektirir. Lisans olmadan, oluşturulan her PDF su işareti içerir.
+
+- **Ücretsiz Deneme** – 30 gün için tam özellik seti, değerlendirme için ideal.  
+- **Geçici Lisans** – Geliştirme ve iç testler için uygundur.  
+- **Tam Lisans** – Herhangi bir ticari dağıtım için gereklidir.  
+
+`GroupDocs.Annotation.lic` dosyasını resources klasörünüze yerleştirin ve başlangıçta yükleyin:
+
+```java
+License license = new License();
+license.setLicense("GroupDocs.Annotation.lic");
+```
+
+> **Yaygın tuzak:** Lisans adımını unutmak su işaretli PDF'lere ve sessizce başarısız olan API çağrılarına yol açar. Başlangıç rutininizde lisansı her zaman erken doğrulayın.
+
+## Tam Uygulama Kılavuzu: Squiggly Açıklamaları Ekleme
+
+Aşağıda, bir squiggly açıklama oluştururken **create annotation reply java** nasıl yapılacağını gösteren adım‑adım bir rehber bulunmaktadır. Her adım, her satırın “neden”ini anlamanız için kısa bir açıklama içerir.
+
+### Adım 1: Gerekli Tüm Sınıfları İçe Aktarın
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.Point;
+import com.groupdocs.annotation.models.annotation.SquigglyAnnotation;
+import com.groupdocs.annotation.models.annotation.Reply;
+import com.groupdocs.annotation.options.SaveOptions;
+```
+
+- `Annotator` belge‑seviyesindeki tüm işlemler için giriş noktasıdır.  
+- `Point` bir sayfadaki koordinatı temsil eder (X ve Y üst‑sol köşeden ölçülür).  
+- `SquigglyAnnotation` hataları vurgulamak için kullanılan dalgalı alt çizgiyi tanımlar.  
+- `Reply` bir açıklamaya eklenen dizili yorumları saklar.  
+- `SaveOptions` çıktı formatını ve sıkıştırmayı kontrol etmenizi sağlar.
+
+### Adım 2: Squiggly Açıklamanızı Oluşturun ve Yapılandırın
+
+```java
+SquigglyAnnotation squiggly = new SquigglyAnnotation();
+squiggly.setPageNumber(1);
+squiggly.setColor(0xFFFF0000); // ARGB red
+squiggly.setOpacity(0.7);
+squiggly.setPoints(Arrays.asList(
+    new Point(100, 200),
+    new Point(300, 200)
+));
+```
+
+SquigglyAnnotation, PDF'de hataları vurgulamak için kullanılan dalgalı bir alt çizgi oluşturan bir sınıftır.
+
+- **Koordinat sistemi**: Noktalar üst‑sol köşeden başlar. Yukarıdaki iki nokta (100, 200) ile (300, 200) arasında yatay bir dalgalı çizgi çizer.  
+- **Opacity** 0.7, açıklamanın %70 opak olduğu ve altındaki metnin okunabilir kalmasını sağlar.
+
+### Adım 3: Etkileşimli Yanıtlar Ekleyin (İsteğe Bağlı ama Güçlü)
+
+```java
+Reply reply1 = new Reply();
+reply1.setComment("Please double‑check this clause.");
+reply1.setAuthor("Alice");
+reply1.setCreatedOn(new Date());
+
+Reply reply2 = new Reply();
+reply2.setComment("I think the wording is correct.");
+reply2.setAuthor("Bob");
+reply2.setCreatedOn(new Date());
+
+squiggly.setReplies(Arrays.asList(reply1, reply2));
+```
+
+Reply, bir açıklamaya eklenen yorum dizisini temsil eden bir sınıftır.
+
+- Yanıtlar, açıklama üzerinde doğrudan **dizili bir tartışma** oluşturur, modern PDF inceleyicilerinin deneyimini yansıtır.  
+- Her yanıt yazar bilgisi ve zaman damgası saklar; bunları daha sonra bir UI'de filtreleyebilir veya görüntüleyebilirsiniz.
+
+### Adım 4: Açıklamayı Uygulayın ve Belgeyi Kaydedin
+
+```java
+try (Annotator annotator = new Annotator("input.pdf")) {
+    annotator.add(squiggly);
+    SaveOptions options = new SaveOptions();
+    options.setOutputPath("output.pdf");
+    annotator.save(options);
+}
+```
+
+- **try‑with‑resources** yapısı, `Annotator`'ı otomatik olarak kapatır, dosya tutamaçlarını ve yerel tamponları serbest bırakır.  
+- `save`, değiştirilmiş PDF'yi `output.pdf` dosyasına yazar.  
+
+> **Bellek notu:** `Annotator` yalnızca dokunduğunuz sayfaları yükler. Çok sayfalı PDF'lerde bu yaklaşım, tipik bir sunucuda yığın kullanımını 150 MB'nin altında tutar.
+
+## Gelişmiş Yapılandırma Seçenekleri
+
+### Açıklama Görünümünü Özelleştirme
+
+Görsel stili marka yönergelerinize uyacak şekilde ince ayar yapabilirsiniz:
+
+```java
+squiggly.setBorderWidth(2);
+squiggly.setColor(0xFF00FF00); // ARGB green
+squiggly.setOpacity(0.5);
+```
+
+- **Border width** çizgi kalınlığını (point cinsinden) kontrol eder.  
+- **ARGB** formatu, şeffaflık için alfa kanalını içerir.
+
+### Açıklamaları Hassas Bir Şekilde Konumlandırma
+
+Farklı sayfa boyutlarına sahip PDF'lerde koordinatları doğru almak zor olabilir. Bu sistematik yaklaşımı izleyin:
+
+1. **PDF'yi bir görüntüleyicide açın** (ör. Adobe Acrobat) ve hedef alan için cetvel değerlerini not alın.  
+2. **Cetvel değerlerini** point'e çevirin (1 point = 1/72 inç).  
+3. `annotator.getPageInfo(pageIndex)` kullanarak sayfa genişliğini ve yüksekliğini alın, ardından göreli konumları hesaplayın.
+
+## Yaygın Sorunlar ve Çözümler
+
+### Sorun: Açıklamalar Görünmüyor
+
+**En olası nedenler**
+- Noktalar sayfa sınırları dışındadır
+- Lisans yüklenmemiş (su işareti açıklamayı gizler)
+- Yanlış sayfa numarası (API'de sayfalar sıfır‑tabanlıdır)
+
+**Çözüm kontrol listesi**
+```text
+- Verify page dimensions with annotator.getPageInfo(pageIndex)
+- Ensure all Point X/Y values are within [0, pageWidth] and [0, pageHeight]
+- Confirm license file path and that license.setLicense() returns true
+- Check that squiggly.setPageNumber(pageIndex) uses zero‑based indexing
+```
+
+### Sorun: Büyük Dosyalarda Düşük Performans
+
+500‑sayfalık bir PDF'yi belleğe yüklemek hizmetinizi durdurabilir. Bunu şu şekilde hafifletin:
+
+- **Bir seferde bir sayfa işleme** – belgeyi açın, tek bir sayfayı açıklayın, kaydedin ve ardından bir sonraki sayfaya geçin.  
+- **Streaming** – tam belge tamponlamasını önlemek için `Annotator`'ın streaming API'sını kullanın.  
+- **Caching** – sık erişilen PDF'leri hızlı bir önbellekte (ör. Redis) saklayın ve önbellek kopyasını açıklayın.
+
+### Sorun: Renk Değerleri Çalışmıyor
+
+GroupDocs, düz RGB yerine **ARGB** (Alpha, Red, Green, Blue) bekler. `0xFFFF0000` ARGB değeri tamamen opak kırmızı anlamına gelir. `0xFF0000` sağlarsanız kütüphane bunu yanlış yorumlar ve siyah bir açıklama ortaya çıkar.
+
+```java
+int argbRed = 0xFFFF0000; // Alpha=255, Red=255, Green=0, Blue=0
+squiggly.setColor(argbRed);
+```
+
+## Performans En İyi Uygulamaları
+
+### Bellek Yönetimi
+
+Bir toplu işte onlarca PDF'yi açıklarken, her dosyayı kendi try‑with‑resources bloğu içinde sarın:
+
+```java
+for (String filePath : pdfList) {
+    try (Annotator annotator = new Annotator(filePath)) {
+        // add annotations
+        annotator.save(new SaveOptions().setOutputPath(filePath.replace(".pdf", "_annotated.pdf")));
+    }
+}
+```
+
+- Bu desen, her yinelemeden sonra yerel tamponların serbest bırakılmasını garanti eder, uzun süren işlemlerde **OutOfMemoryError** oluşmasını önler.
+
+### Toplu İşleme Optimizasyonu
+
+Yüksek verimli ortamlarda, sınırlı bir iş parçacığı havuzu ile birleştirilmiş paralel akışları düşünün:
+
+```java
+ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+pdfList.parallelStream().forEach(path -> executor.submit(() -> annotateDocument(path)));
+executor.shutdown();
+executor.awaitTermination(1, TimeUnit.HOURS);
+```
+
+- **Sınırlı havuz** iş parçacığı patlamasını önler, paralel akışlar ise CPU çekirdeklerini meşgul tutar.
+
+### Dosya Boyutu Hususları
+
+Büyük PDF'ler (> 100 MB) performansı düşürebilir. Bu stratejileri uygulayın:
+
+- **Ön‑sıkıştırın** kaynak PDF'yi Ghostscript gibi bir araçla açıklamadan önce.  
+- **Sadece gerekli sayfaları açıklayın** – işaretleme gerektirmeyen sayfaları atlayın.  
+- Belgeyi mantıksal bölümlere (ör. bölüm başına) **bölün** ve her parçayı bağımsız işleyin.
+
+## Gerçek‑Dünya Uygulamaları
+
+### Belge İnceleme Sistemleri
+
+Hukuk firmaları genellikle sorunlu maddeleri işaretlemeye ihtiyaç duyar. Squiggly açıklamaları ve dizili yanıtlar, birden fazla avukatın PDF'yi terk etmeden tek bir paragrafı tartışmasına olanak tanır:
+
+- **Avukat A** bir madde altına kırmızı bir squiggly ekler ve “Belirsiz ifade” yazar.  
+- **Avukat B** “‘material breach’ için tanım ekleyin” diye yanıt verir.  
+- Tüm tartışma gömülü, aranabilir ve denetlenebilir kalır.
+
+### Mevcut Sistemlerle Entegrasyon
+
+GroupDocs.Annotation popüler Java çerçeveleriyle sorunsuz çalışır:
+
+- **Spring Boot** – PDF çok parçalı yüklemesini kabul eden, açıklamalar ekleyen ve sonucu geri akış olarak sunan bir REST uç noktası `/api/annotate` ortaya çıkar.  
+- **JSF** – web görünümünde anlık işaretleme için açıklama eylemlerini UI bileşenlerine bağlayın.  
+- **Mikroservisler** – kütüphanenin küçük ayak izi (< 15 MB) Docker ile konteynerleştirmenize ve yatay olarak ölçeklendirmenize olanak tanır.
+
+### İş Akışı Otomasyonu
+
+Açıklamayı diğer GroupDocs ürünleriyle (ör. GroupDocs.Signature) birleştirerek uçtan‑uca iş akışları oluşturun:
+
+```text
+1. Upload contract → 2. Auto‑apply squiggly for missing signatures → 3. Add reviewer replies → 4. Route to signing service.
+```
+
+## Squiggly Açıklamaları Ne Zaman Kullanmalı vs. Alternatifler
+
+| Kullanım‑durumu | Önerilen açıklama |
+|----------------|-------------------|
+| Yazım veya dilbilgisi hatalarını işaretleme | **Squiggly** – kelime işlemcilere benzer görsel ipucu |
+| Bir hatayı ima etmeden önemli bölümleri vurgulama | **Highlight** – yarı saydam kaplama |
+| Detaylı geri bildirim sağlama | **Text** veya **Comment** – serbest biçimli not kutusu |
+| Bir belgeyi onaylama veya reddetme | **Stamp** – “Approved” veya “Rejected” rozeti |
+
+## Sonuç
+
+Artık GroupDocs.Annotation kullanarak **create annotation reply java** için eksiksiz, üretime hazır bir tarifiniz var. API'yi ustalıkla kullanarak, lisanslamayı yöneterek ve yukarıdaki performans ipuçlarını uygulayarak şunları yapabilirsiniz:
+
+- Binlerce PDF'de hata işaretlemeyi otomatikleştirin  
+- Dosyanın içinde işbirlikçi, dizili tartışmaları etkinleştirin  
+- Devasa belgeleri işlerken bile bellek kullanımını düşük tutun  
+
+**Sonraki adımlar**
+1. Diğer açıklama türleriyle (vurgular, damgalar, metin) deney yapın.  
+2. PDF'leri alan, açıklama ekleyen ve sonucu dönen bir REST servisi oluşturun.  
+3. Analitik için mevcut yorumları çekmek üzere çıkarma API'sını (`annotator.get()`) keşfedin.  
+
+Programatik PDF açıklamanın gücü, zahmetli manuel işaretlemeyi tekrarlanabilir, denetlenebilir kodla değiştirme yeteneğinde yatar. İster niş bir hukuk‑teknoloji ürünü ister genel amaçlı bir belge iş akışı motoru oluşturuyor olun, bu kılavuzdaki teknikler size ilerlemek için sağlam bir temel sağlar.
+
+## Sıkça Sorulan Sorular
+
+**Q: GroupDocs.Annotation'ı diğer Java PDF kütüphanelerinden daha iyi yapan nedir?**  
+A: GroupDocs.Annotation sadece açıklama iş akışlarına odaklanır, 30'dan fazla açıklama türü, dizili yanıtlar ve 50+ dosya formatı için yerel destek sunar ve 500‑sayfalık PDF'lerde bellek ayak izini 200 MB'nin altında tutar.
+
+**Q: Bu kütüphaneyi Spring Boot uygulamalarıyla kullanabilir miyim?**  
+A: Kesinlikle. `Annotator` servisini enjekte eden bir `@RestController` oluşturun, çok parçalı yüklemeleri işleyin ve açıklamalı PDF'yi istemciye geri akış olarak gönderin. Eşzamanlı istekler için bir iş parçacığı havuzu yapılandırmayı unutmayın.
+
+**Q: Farklı sayfa boyutlarına sahip belgelerle nasıl başa çıkabilirim?**  
+A: `annotator.getPageInfo(pageIndex)` ile her sayfanın boyutlarını sorgulayın ve nokta değerlerini sabit kodlamak yerine göreli koordinatlar (ör. yüzde) hesaplayın. Bu, açıklamaların A4, Letter ve özel boyutlu sayfalarda doğru görünmesini sağlar.
+
+**Q: PDF'lerden mevcut açıklamaları çıkarmanın bir yolu var mı?**  
+A: Evet. `annotator.get()` çağırarak tüm açıklamaların bir koleksiyonunu alın, ardından yazar, yorum ve geometri gibi özellikleri okumak için yineleyin. Bu, taşıma veya analiz senaryoları için faydalıdır.
+
+**Q: Çok‑kullanıcılı sistemlerde açıklama izinlerini yönetmenin en iyi yaklaşımı nedir?**  
+A: Uygulama katmanında kimlik doğrulama uygulayın, her `Reply` ile kullanıcı kimliğini saklayın ve iş kurallarını (ör. sadece yazar veya bir yönetici yanıtı düzenleyebilir veya silebilir) zorlayın. API kendisi izinleri zorlamaz, size tam esneklik sağlar.
+
+**Q: Yüzlerce PDF işlenirken bellek kullanımını nasıl optimize edebilirim?**  
+A: Her belge için try‑with‑resources kullanın, sayfaları tek tek işleyin ve eşzamanlı bellek tüketimini sınırlamak için sınırlı bir iş parçacığı havuzu düşünün. VisualVM gibi araçlarla JVM yığınını izlemek `-Xmx` ayarını ince ayar yapmanıza yardımcı olur.
+
+---
+
+**Son Güncelleme:** 2026-05-16  
+**Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
+**Yazar:** GroupDocs  
+
+**Ek Kaynaklar**
+- [GroupDocs.Annotation for Java Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)
+- [Tam API Referansı](https://reference.groupdocs.com/annotation/java/)
+
+{< /blocks/products/pf/tutorial-page-section >}
+{< /blocks/products/pf/main-container >}
+{< /blocks/products/pf/main-wrap-class >}
+{< blocks/products/products-backtop-button >}
 
 ```xml
 <repositories>
@@ -89,16 +438,6 @@ GroupDocs.Annotation’ı projenize entegre etmek oldukça basittir, ancak dikka
 </dependencies>
 ```
 
-**Pro ipucu**: En son sürümü GroupDocs sürüm sayfasından kontrol edin. Eski sürümler, yeni PDF formatlarıyla uyumluluk sorunları yaratabilir.
-
-### Lisans Ayarı (Bunu Atlamayın!)
-
-Birçok geliştiricinin takıldığı nokta burada. GroupDocs.Annotation, üretim kullanımı için uygun lisans gerektirir:
-
-- **Ücretsiz Deneme**: Değerlendirme için mükemmel—30 gün tam işlevsellik sağlar
-- **Geçici Lisans**: Geliştirme ve test aşamaları için ideal
-- **Tam Lisans**: Üretim dağıtımı için zorunlu
-
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -109,20 +448,6 @@ try (Annotator annotator = new Annotator("path/to/your/document.pdf")) {
 }
 ```
 
-**Sık karşılaşılan tuzak**: Lisans ayarını unutursanız su işareti (watermark) içeren çıktılar alırsınız. Dağıtıma geçmeden önce gerçek lisansınızla test etmeyi unutmayın.
-
-## Tam Uygulama Kılavuzu: Dalgalı (Squiggly) Açıklamalar Ekleme
-
-Şimdi asıl kısmı—üretimde kullanabileceğiniz sağlam bir dalgalı açıklama sistemi oluşturalım. Dalgalı açıklamalar, hataları işaretlemek, değişiklik önerileri sunmak veya dikkat gerektiren alanları vurgulamak için mükemmeldir.
-
-### create annotation replies java Nasıl Yapılır
-
-Aşağıda her adımı adım adım gösteriyoruz; **create annotation replies java** oluştururken aynı zamanda dalgalı bir açıklama da inşa ediyoruz.
-
-### Adım 1: Gerekli Tüm Sınıfları İçe Aktarın
-
-Bu içe aktarmaları sadece kopyala‑yapıştır yapmayın—her birinin ne işe yaradığını anlamak, ileride sorunları çözmenize yardımcı olur:
-
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Point;
@@ -132,16 +457,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 ```
-
-**Her bir içe aktarmanın yaptığı şey:**
-- `Annotator`: Belge manipülasyonu için ana arayüzünüz
-- `Point`: Belge üzerindeki koordinatları tanımlar
-- `Reply`: Açıklamalara iş parçacıklı sohbetler ekler
-- `SquigglyAnnotation`: Oluşturduğumuz belirli açıklama türü
-
-### Adım 2: Dalgalı Açıklamanızı Oluşturun ve Yapılandırın
-
-Gerçek özelleştirmenin gerçekleştiği yer burası. Bu kod, profesyonel görünümlü bir dalgalı açıklama oluşturur:
 
 ```java
 // Create a new SquigglyAnnotation instance
@@ -175,10 +490,6 @@ points.add(new Point(240, 650));
 squigglyAnnotation.setPoints(points);
 ```
 
-**Koordinat sistemini anlama**: Noktalar sayfanın sol‑üst köşesinden ölçülür. İlk iki nokta açıklama alanınızın başlangıç ve bitişini tanımlar, ek noktalar daha karmaşık şekiller oluşturabilir.
-
-### Adım 3leyin (İsteğe Bağlı gerçekten iş birliğine dönüşmesi burada gerçekleşir—belge inceleme iş akışları için mükemmel:
-
 ```java
 // Create replies to the annotation (optional)
 Reply reply1 = new Reply();
@@ -197,12 +508,6 @@ replies.add(reply2);
 squigglyAnnotation.setReplies(replies);
 ```
 
-**Gerçek dünya kullanım örneği**: Hukuki belge incelemede, birden fazla avukat aynı açıklamaya yanıt ekleyebilir ve belge üzerinde doğrudan iş parçacıklı bir tartışma oluşturur.
-
-### Adım 4: Açıklamayı ve Belgeyi Kaydedin
-
-Son olarak, açıklamayı belgeye ekleyip kaydedelim:
-
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
     // Add the prepared squiggly annotation to the document
@@ -212,12 +517,6 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
     annotator.save("YOUR_OUTPUT_DIRECTORY/result_squiggly_annotation.pdf");
 }
 ```
-
-**Bellek yönetimi notu**: `try‑with‑resources` ifadesi otomatik temizlik yapar, uzun çalışan uygulamalarda bellek sızıntılandırma Seçenekleri
-
-### Açirme
-
-Varsanıza veya uygulama temanızla uyumlu açıklamalar oluşturmanın yolu:
 
 ```java
 // Custom color configurations
@@ -231,23 +530,6 @@ squigglyAnnotation.setOpacity(0.3); // Very subtle
 squigglyAnnotation.setOpacity(0.9); // Almost opaque
 ```
 
-### Açıklamaları Hassas Bir Şekilde Konumlandırma
-
-Koordinatları doğru ayarlamak zor olabilir. Sistematik bir yaklaşım:
-
-1. **Kabaca tahminlerle başlayın**leyici kullanarak yaklaşık koordinatları belirleyin
-2. **Adım adım test edin**: Küçük ayarlamalar yapıp test edin
-3. **Farklı sayfa boyutlarını göz önünde bulundurun**: A4 farklıdır
-
-## Yaygın Sorunlar ve Çözümler
-
-### Sorun: Açıklamalar Görünmüyor
-
-**En olası- Sayfa sınırları dışındaki hatalı koordinat noktaları
-- Lisans ayarının eksik olması
-- Yanlış sayfa numarası belirtilmesi
-
-**Çözüm kontrol listesi:**
 ```java
 // Verify your points are within page boundaries
 System.out.println("Page dimensions: " + annotator.getPageInfo(0));
@@ -259,20 +541,6 @@ for (Point point : points) {
 }
 ```
 
-### Sorun: Büyük Dosyalarda Performans Düşüklüğü
-
-**Ne oluyor**: Devasa PDF’leri belleğe yüklemek uygulamanızı yavaşlatabilir.
-
-**Performans iyileştirme stratejileri:**
-- Tüm belgeyi yüklemek yerine sayfaları tek tek işleyin
-- Mümkün olduğunda akış (streaming) kullanın
-- Sık erişilen belgeler için önbellekleme uygulayın
-
-### Sorun: Renk Değerleri Çalışmıyor
-
-**Sorun**: RGB ile ARGB renk formatı karışıklığı.
-
-**Çözüm**: GroupDocs ARGB formatını (Alpha, Red, Green, Blue) kullanır:
 ```java
 // Wrong: RGB format
 int wrongColor = 0xFF0000; // This might not work as expected
@@ -280,12 +548,6 @@ int wrongColor = 0xFF0000; // This might not work as expected
 // Right: ARGB format
 int rightColor = 0xFFFF0000; // Full opacity red
 ```
-
-## Performans En İyi Uygulamaları
-
-### Bellek Yönetimi
-
-Birden fazla belge işlediğinizde bellek kullanımı hızla artabilir:
 
 ```java
 // Good practice: Use try-with-resources
@@ -298,10 +560,6 @@ try (Annotator annotator = new Annotator(inputPath)) {
 // Avoid: Manual resource management
 Annotator annotator = new Annotator(inputPath); // Resources might leak
 ```
-
-### Toplu İşleme Optimizasyonu
-
-Yüzlerce belgeyi açıklıyorsanız şu yaklaşımı düşünün:
 
 ```java
 public void processBatch(List<String> documentPaths) {
@@ -317,32 +575,6 @@ public void processBatch(List<String> documentPaths) {
     }
 }
 ```
-
-### Dosya Boyutu Hususları
-
-Büyük PDF’ler performansı etkileyebilir. İşte bazı stratejıkıştırın**: Açıklamadan önce PDF optimizasyon araçları kullanın
-- **Sayfaları seçici işleyin**: Yalnızca ihtiyacınız olan sayfaları yükleyip açıklayın
- küçük parçalara ayırın
-
-## Gerçek Dünya Uygulamaları
-
-### Belge İnceleme Sistemleri
-
-Dalgalı açıklamalar iş birliği ortamlarında parlıyor:
-
-- **Hukuk firmaları**: Sözleşme maddelerini işaretleme
-- **Yayıncılık**: Editöryel değişiklikleri gösterme
-- **Eğitim**: Öğrenci hatalarını vurgulama
-
-### Mevcut Sistemlerle Entegrasyon
-
-GroupDocs.Annotation popüler çerçevelerle sorunsuz çalışır:
-
-- **Spring Boot**: REST API’leriyle kolay entegrasyon
-- **JSF uygulamaları**: Bileşen‑tabanlı UI’lerle sorunsuz uyum
-- **Mikroservisler**: Konteynerleştirilmiş dağıtımlar için hafif
-
-### İş Akışı Ot:
 
 ```java
 public class DocumentWorkflow {
@@ -365,55 +597,8 @@ public class DocumentWorkflow {
 }
 ```
 
-## Dalgalı Açıklamalar ve Alternatifleri Ne Zaman Kullanmalı?
+## İlgili Eğitimler
 
-**Dalgalı açıklamaları şu durumlarda tercih edin:**
-- Hataları veya düzeltmeleri işaretleme (kelime denetimi gibi)
-- Şüpheli veya tartışmalı içerikleri göstermek
-- Kelime işlemcilerdeki “dalgalı altı çizgi” etkisini yaratmak
-
-**Alternatifleri şu durumlarda düşünün:**
-- **Vurgulama**: Vurgu amaçlı, hata ima etmeyen durumlar için highlight açıklamaları
-- **Yorumlar**: Detaylı geri bildirim için text açıklamaları
-- **Mühürler**:## Sonuç
-
-Artık Java kullanarak profesyonel PDF açıklamaları ekleme sanatını ustaca biliyorsunuz. GroupDocs.Annotation for Java, karmaşık belge manipülasyonu görevlerini basit kod uygulamalarına dönüştürüyor.
-
-**Bu rehberden alınacak temel noktalar:**
-- GroupDocs.Annotation’ı doğru kurmak, çoğu yaygın sor Koordinat sistemini anlamak, açıklamaların doğru konumlandırılması için kritiktir
-- Büyük belgeler veya toplu önemdedir
-- Özelleştirme seçenekleri, uygulamanızın ihtiyaçlarına tam uyumaki adımlarınız:**
-1. Diğer açıklama türleriyle (highlight, text, stamp) deney yapın
-2. Basit bir açıklama yönetim sistemi oluşturun
-3. Açıklama çıkarma ve değiştirme gibi gelişmiş özellikler için GroupDocs.Annotation API’sını keşfedin
-
-Programlı PDF açıklamaları güzelliği, temelleri öğrendikten sonra daha önce manuel müdahale gerektiren belge iş akışlarını otomatikleştirebilmenizdir. İster bir sonraki büyük belge iş birliği platformunu inşa ediyor olun, ister mevcut uygulamanıza işaretleme yetenekleri eklemek isteyin, artık bunu gerçekleştirecek araç ve bilgiye sahipsiniz.
-
-## Sık Sorulan Sorular
-
-**S: GroupDocs.Annotation, diğer Java PDF kütüphanelerinden neyi daha iyi yapıyor?**  
-C: GroupDocs.Annotation, açıklamalara odaklanırken birden çok belge formatıyla uyumluluğu korur. Açıklama iş akışları, iş parçacıklı yanıtlar ve geniş özelleştirme seçenekleri gibi özellikler, genel PDF kütüphanelerinin çoğunda bulunmaz.
-
-**S: Bu kütüphaneyi Spring Boot uygulamalarıyla kullanabilir miyim?**  
-C: Kesinlikle! GroupDocs.Annotation, Spring Boot ile sorunsuz bir şekilde bütünleşir. Belge yüklemelerini kabul eden REST uç noktaları oluşturabilir ve işlenmiş PDF’leri döndürebilirsiniz. Dosya yüklemelerini doğru şekilde yönettiğinizden ve büyük belgeler için asenkron işleme düşündüğünüzden emin olun.
-
-**S: Farklı sayfa boyutlarına sahip belgelerle nasıl başa çıkılır?**  
-C: Öncelikle `annotator.getPageInfo(pageIndex)` ile sayfa boyutlarını sorgulayın. Bu metod, sayfa genişliği, yüksekliği ve diğer meta verileri döndürür. Koordinatları sabit değerler yerine bu dinamik ölçüler üzerinden hesaplayarak farklı boyutlara uyum sağlayabilirsiniz.
-
-**S: Meabilir miyim?**  
-C: Evet! GroupDocs.Annotation, zaten içinde açıklama bulunan PDF’lerden açıklamaları çıkarabilir. `annotator.get()` metodunu kullanarak tüm açıklamaları alın, ardından döngüyle Çok‑kullanıcılı sistemlerde açıklama izinlerini nasıl yönetirim?**  
-C: GroupDocs metodlarını çağırmadan önce uygulama seviyesinde kullanıcı kimlik doğrulaması yapın. Yanıt nesnelerinde kullanıcıların belirli açıklamaları değiştirme veya silme yetkisini kontrol eden özel mantıklar geliştirebilirsiniz.
-
-**S: Y’yi işlerken bellek kullanımını nasıl optimize ederim?**  
-C: Belgeleri `try‑with‑resources` blokları içinde tek tek işleyin, için Java paralel akışlarını (parallel streams) değerlendirin. Ayrıca, tipik belge boyutlarınıza göre JVM bellek ayarlarını izleyip gerektiğinde artırın.
-
----
-
-**Son Güncelleme:** 2026-01-31  
-**Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
-**Yazar:** GroupDocs  
-
-**Ek Kaynaklar**
-
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
-- [Complete API Reference](https://reference.groupdocs.com/annotation/java/)
+- [Java PDF Açıklama Kütüphanesi Eğitimi](/annotation/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/)
+- [Java'da Açıklama Yanıtlarını Kaldırma - GroupDocs.Annotation ile ID'ye Göre Yanıtları Yönetme](/annotation/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/)
+- [PDF Açıklamalarını Düzenleme Java - Tam GroupDocs Eğitimi](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
