@@ -1,88 +1,172 @@
 ---
-"description": "Objevte pokročilé tutoriály pro používání GroupDocs.Annotation .NET. Vylepšete správu dokumentů pomocí podrobných návodů na kvalitu obrázků, export anotací a další."
-"linktitle": "Pokročilé použití"
-"second_title": "GroupDocs.Annotation .NET API"
-"title": "Pokročilé použití"
-"url": "/cs/net/advanced-usage/"
+categories:
+- Advanced Tutorials
+date: '2026-03-22'
+description: Naučte se, jak extrahovat text z dokumentu a ovládnout pokročilé funkce
+  GroupDocs.Annotation .NET, jako jsou vlastní písma, rozlišení náhledu a kvalita
+  obrázku.
+keywords: GroupDocs.Annotation .NET tutorial, document annotation .NET, .NET PDF annotation
+  library, advanced document management .NET, how to annotate documents in .NET applications
+lastmod: '2026-03-22'
+linktitle: Advanced Usage
+second_title: GroupDocs.Annotation .NET API
+tags:
+- GroupDocs.Annotation
+- NET-API
+- Document-Management
+- PDF-Annotation
+title: Extrahování textu dokumentu – Pokročilý průvodce GroupDocs.Annotation .NET
 type: docs
-"weight": 22
+url: /cs/net/advanced-usage/
+weight: 22
 ---
 
-# Pokročilé použití
+# Extrahování textu dokumentu – Průvodce pokročilými funkcemi
 
-## Zavedení
+Jste připraveni odemknout plný potenciál GroupDocs.Annotation pro .NET? V tomto průvodci **extrahujete text dokumentu** a prozkoumáte nejvýkonnější pokročilé funkce, od zlepšení kvality obrázků po načítání vlastních fontů. Ať už budujete podnikovou systém pro správu dokumentů nebo přidáváte nástroje pro spolupráci s anotacemi, tyto techniky vám pomohou dodat vylepšený, výkonný zážitek.
 
-Chcete posunout své dovednosti v GroupDocs.Annotation pro .NET na další úroveň? Jste na správném místě. Ponořte se do našich komplexních tutoriálů, které vám pomohou vylepšit vaše pracovní postupy správy dokumentů. Od optimalizace kvality obrázků až po bezproblémový export anotací – máme pro vás vše, co potřebujete.
+## Rychlé odpovědi
+- **Co znamená „extrahování textu dokumentu“?** Načte surový textový obsah z PDF, obrázků nebo souborů Office pro indexaci nebo analýzu.  
+- **Která funkce zlepšuje jasnost obrázku?** *Change PDF image quality* vám umožní zvýšit vizuální věrnost bez zvětšení velikosti souboru.  
+- **Mohu nastavit vlastní rozlišení náhledu?** Ano – použijte API *set preview resolution* k vyvážení kvality a šířky pásma.  
+- **Je možné skrýt komentáře v náhledu?** Naprosto, volba *preview PDF without comments* generuje čisté stránky pro prezentace.  
+- **Potřebuji speciální fonty pro anotace?** Načtěte vlastní fonty, aby vaše anotace odpovídaly firemnímu brandingu na všech zařízeních.  
 
-## Změnit kvalitu obrazu
-Nezobrazuje váš PDF soubor obrázky tak ostře, jak byste si přáli? Náš podrobný návod vám ukáže, jak vylepšit kvalitu obrazu pomocí nástroje GroupDocs.Annotation pro .NET. Zvyšte vizuální čistotu svých dokumentů bez námahy. [Číst dále](./change-image-quality/)
+## Co je „extrahování textu dokumentu“ v GroupDocs.Annotation?
+Extrahování textu dokumentu znamená programově číst textovou vrstvu souboru (PDF, Word, Excel atd.), abyste mohli vyhledávat, indexovat nebo analyzovat obsah. GroupDocs.Annotation .NET poskytuje jednoduché API pro získání těchto informací při zachování dat anotací.
 
-## Export anotací ze souboru XML
-Zjednodušte si pracovní postup správy dokumentů tím, že se naučíte exportovat anotace ze souborů XML pomocí nástroje GroupDocs.Annotation pro .NET. Zefektivněte spolupráci a zajistěte bezproblémové procesy kontroly dokumentů. [Číst dále](./export-annotations-xml-file/)
+## Proč používat pokročilé funkce GroupDocs.Annotation?
+- **Konzistentní branding:** Načtěte vlastní fonty, aby anotace vždy zobrazovaly správnou typografii.  
+- **Optimalizovaný výkon:** Nastavte rozlišení náhledu nebo změňte kvalitu obrázku PDF, abyste snížili šířku pásma a zároveň zachovali ostrost dokumentů.  
+- **Čisté prezentace:** Generujte náhledy bez komentářů nebo anotací, když potřebujete vylepšený vzhled pro klienty.  
+- **Robustní správa verzí:** Sledujte změny napříč verzemi dokumentů a načtěte konkrétní sady anotací.
 
-## Generování náhledu stránek dokumentu
-Efektivně generujte náhledy stránek dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Ponořte se do našeho tutoriálu a zjistěte, jak optimalizovat pracovní postupy správy dokumentů pomocí komplexních náhledů. [Číst dále](./generate-document-pages-preview/)
+## Pro koho je tento průvodce určen?
 
-## Generovat náhled bez anotací
-Usnadněte spolupráci na dokumentech a vytváření anotací ve vašich .NET aplikacích pomocí GroupDocs.Annotation pro .NET. Prozkoumejte náš tutoriál a naučte se, jak efektivně anotovat, označovat a kontrolovat dokumenty. [Číst dále](./generate-preview-without-annotations/)
+Tato sbírka tutoriálů je ideální pro .NET vývojáře, kteří chtějí:
+- **Vylepšit existující aplikace** pomocí profesionálních funkcí anotací  
+- **Optimalizovat pracovní postupy s dokumenty** pro lepší týmovou spolupráci  
+- **Implementovat vlastní řešení správy dokumentů**  
+- **Ovládnout pokročilé techniky práce s PDF a obrázky**  
 
-## Generovat náhled bez komentářů
-Integrujte bezproblémové funkce anotace dokumentů do svých .NET aplikací s GroupDocs.Annotation pro .NET. Zjistěte, jak bez námahy zefektivnit procesy kontroly dokumentů. [Číst dále](./generate-preview-without-comments/)
+## Vylepšení dokumentu a kontrola kvality
 
-## Generování sloupců náhledu pracovního listu
-Jste vývojář .NET a chcete efektivně anotovat dokumenty? Ponořte se do našeho podrobného tutoriálu a naučte se, jak využít GroupDocs.Annotation pro .NET k vylepšení vašich aplikací. [Číst dále](./generate-preview-worksheet-columns/)
+### Zlepšete kvalitu zobrazení dokumentu
 
-## Získat všechny klíče verzí v dokumentu
-Odemkněte plný potenciál správy dokumentů s GroupDocs.Annotation pro .NET. Naučte se, jak načíst všechny klíče verzí dokumentu a vylepšit své možnosti správy dokumentů. [Číst dále](./get-all-version-keys-document/)
+**Change Image Quality** – Máte problémy s rozmazanými obrázky ve vašich PDF dokumentech? Jedná se o jednu z nejoblíbenějších funkcí mezi vývojáři pracujícími se skenovanými dokumenty nebo PDF s velkým množstvím obrázků. Náš průvodce vám přesně ukáže, jak programově zlepšit kvalitu obrázku, aby uživatelé vždy viděli ostré, profesionálně vypadající dokumenty. Ideální pro aplikace zpracovávající smlouvy, technické výkresy nebo marketingové materiály. [Read more](./change-image-quality/)
 
-## Získání informací o obsahu textu dokumentu
-Bezproblémově anotujte dokumenty ve vašich .NET aplikacích s GroupDocs.Annotation pro .NET. Snadno integrujte funkce anotací a zefektivněte své pracovní postupy s dokumenty. [Číst dále](./get-document-text-content-information/)
+**Set Document Preview Resolution** – Získejte kontrolu nad tím, jak se vaše dokumenty zobrazují na různých zařízeních a velikostech obrazovek. Tento tutoriál je nezbytný pro aplikace, kde je důležitá jasnost dokumentu – například systémy pro revizi právních dokumentů nebo správu zdravotních záznamů. Naučíte se vyvážit velikost souboru a vizuální kvalitu pro optimální uživatelský zážitek. [Read more](./set-document-preview-resolution/)
 
-## Získejte seznam anotací pomocí klíče verze
-Vylepšete své .NET aplikace pomocí bezproblémové anotace dokumentů pomocí GroupDocs.Annotation. Postupujte podle našeho podrobného průvodce pro efektivní integraci a vylepšení spolupráce na dokumentech. [Číst dále](./get-list-annotations-version-key/)
+## Funkce náhledu a generování dokumentů
 
-## Importovat anotace z dokumentu
-Snadno importujte anotace z dokumentů v .NET pomocí GroupDocs.Annotation. Náš podrobný návod zajišťuje bezproblémovou integraci a umožňuje vám optimalizovat pracovní postupy správy dokumentů. [Číst dále](./import-annotations-from-document/)
+### Vytvořte výkonné možnosti náhledu
 
-## Načítání vlastních písem
-Vylepšete anotaci dokumentů pomocí GroupDocs.Annotation pro .NET bezproblémovým načítáním vlastních písem. Postupujte podle našeho jednoduchého průvodce integrací a bez námahy zvyšte efektivitu správy dokumentů. [Číst dále](./loading-custom-fonts/)
+**Generate Document Pages Preview** – Chcete zobrazit miniatury dokumentu před otevřením plného souboru uživatelem? Tato funkce mění hru pro systémy správy dokumentů, umožňuje uživatelům rychle procházet více stránkovými dokumenty. Zvláště cenné pro aplikace pracující s reporty, prezentacemi nebo jakýmkoli více stránkovým obsahem, kde je rychlá navigace klíčová. [Read more](./generate-document-pages-preview/)
 
-## Vložení obrázkové anotace přes text
-Posuňte správu dokumentů na novou úroveň tím, že se naučíte, jak přidávat obrázkové anotace k textu v .NET pomocí GroupDocs.Annotation. Zjednodušte spolupráci a zajistěte efektivní procesy kontroly dokumentů. [Číst dále](./put-image-annotation-over-text/)
+**Generate Preview without Annotations** – Někdy potřebujete čisté náhledy dokumentů pro prezentace nebo zobrazení klientům. Tento tutoriál vám ukáže, jak generovat čisté náhledy dokumentů při zachování anotací v pozadí. Ideální pro tvorbu profesionálních souhrnů dokumentů nebo klientských reportů. [Read more](./generate-preview-without-annotations/)
 
-## Otáčení PDF dokumentů
-Snadno otáčejte PDF dokumenty s GroupDocs.Annotation pro .NET. Zlepšete efektivitu správy dokumentů a zajistěte si bezproblémové prohlížení dokumentů. [Číst dále](./rotating-pdf-documents/)
+**Generate Preview without Comments** – Podobně jako výše, ale specificky pro odstranění komentářů. To je zvláště užitečné v pracovních postupech schvalování, kde chcete ukázat finální vzhled dokumentu bez rušivých recenzních komentářů. Skvělé pro přípravu právních dokumentů nebo finální prezentační materiály. [Read more](./generate-preview-without-comments/)
 
-## Nastavení rozlišení náhledu dokumentu
-Zjednodušte funkce anotací a náhledu s GroupDocs.Annotation pro .NET. Zvyšte spolupráci na dokumentech a zajistěte si optimální zážitek z jejich prohlížení. [Číst dále](./set-document-preview-resolution/)
+**Generate Preview Worksheet Columns** – Práce s Excel a tabulkami se právě zjednodušila. Tento specializovaný tutoriál se zaměřuje na generování náhledů konkrétních částí listu, ideální pro finanční aplikace, nástroje pro analýzu dat nebo jakýkoli systém pracující se strukturovanými tabulkovými daty. [Read more](./generate-preview-worksheet-columns/)
 
-Ponořte se do našich tutoriálů ještě dnes a odemkněte plný potenciál GroupDocs.Annotation pro .NET. Vylepšete své pracovní postupy správy dokumentů a zefektivnite spolupráci bez námahy.
-## Návody pro pokročilé použití
-### [Změnit kvalitu obrazu](./change-image-quality/)
-Naučte se, jak vylepšit kvalitu obrázků v souborech PDF pomocí nástroje Groupdocs.Annotation pro .NET. Postupujte podle našeho podrobného návodu.
-### [Export anotací ze souboru XML](./export-annotations-xml-file/)
-Naučte se, jak exportovat anotace ze souborů XML pomocí nástroje GroupDocs.Annotation pro .NET a efektivně tak zjednodušit pracovní postup správy dokumentů.
-### [Generování náhledu stránek dokumentu](./generate-document-pages-preview/)
-Naučte se, jak efektivně generovat náhledy stránek dokumentů pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete své pracovní postupy správy dokumentů s tímto komplexním návodem.
-### [Generovat náhled bez anotací](./generate-preview-without-annotations/)
-Vylepšete spolupráci na dokumentech a anotaci v aplikacích .NET pomocí knihovny GroupDocs.Annotation pro .NET. S touto výkonnou knihovnou snadno anotujete, označujete a kontrolujete dokumenty.
-### [Generovat náhled bez komentářů](./generate-preview-without-comments/)
-Naučte se, jak bezproblémově integrovat funkce anotace dokumentů do vašich .NET aplikací pomocí GroupDocs.Annotation for .NET.
-### [Generování sloupců náhledu pracovního listu](./generate-preview-worksheet-columns/)
-Naučte se, jak anotovat dokumenty pomocí GroupDocs.Annotation pro .NET. Podrobný návod pro vývojáře .NET. Vylepšete své aplikace.
-### [Získat všechny klíče verzí v dokumentu](./get-all-version-keys-document/)
-Naučte se, jak načíst všechny klíče verzí dokumentu pomocí nástroje GroupDocs.Annotation pro .NET. Vylepšete si možnosti správy dokumentů s tímto komplexním návodem.
-### [Získání informací o obsahu textu dokumentu](./get-document-text-content-information/)
-Anotujte dokumenty bez problémů s GroupDocs.Annotation pro .NET. Integrujte funkce anotací do svých .NET aplikací bez námahy.
-### [Získejte seznam anotací pomocí klíče verze](./get-list-annotations-version-key/)
-Vylepšete své .NET aplikace pomocí GroupDocs.Annotation pro bezproblémové anotace dokumentů. Postupujte podle našeho podrobného návodu pro efektivní integraci.
-### [Importovat anotace z dokumentu](./import-annotations-from-document/)
-Naučte se, jak importovat anotace z dokumentů v .NET pomocí GroupDocs.Annotation. Pro bezproblémovou integraci postupujte podle našeho podrobného návodu.
-### [Načítání vlastních písem](./loading-custom-fonts/)
-Naučte se, jak bezproblémově načíst vlastní písma v GroupDocs.Annotation pro .NET a vylepšit tak anotaci dokumentů. Postupujte podle našich podrobných pokynů pro snadnou integraci.
-### [Vložení obrázkové anotace přes text](./put-image-annotation-over-text/)
-Naučte se, jak přidávat anotace obrázků přes text v .NET pomocí GroupDocs.Annotation pro efektivní správu dokumentů a spolupráci.
-### [Otáčení PDF dokumentů](./rotating-pdf-documents/)
+## Správa dat a kontrola verzí
+
+### Spravujte komplexní pracovní postupy s dokumenty
+
+**Get All Version Keys on Document** – Verzování dokumentů je kritické v kolaborativních prostředích. Tento tutoriál vás naučí, jak programově sledovat a spravovat různé verze dokumentu. Nezbytné pro aplikace vyžadující auditní stopy, jako je správa právních dokumentů nebo systémy shody. [Read more](./get-all-version-keys-document/)
+
+**Get Document Text Content Information** – Potřebujete extrahovat metadata nebo analyzovat obsah dokumentu? Tato funkce je neocenitelná pro vytváření vyhledávacích funkcí, nástrojů pro analýzu obsahu nebo automatizovaných systémů zpracování dokumentů. Naučte se programově přistupovat k textovému obsahu pro indexaci, vyhledávání nebo extrakci dat. [Read more](./get-document-text-content-information/)
+
+**Get List of Annotations using Version Key** – Spravujte anotace napříč různými verzemi dokumentu s přesností. Tato pokročilá technika je klíčová pro aplikace, kde je důležitá historie anotací – například sledování změn v kolaborativním editování nebo udržování vláken komentářů napříč revizemi dokumentu. [Read more](./get-list-annotations-version-key/)
+
+## Import/Export a integrace dat
+
+### Plynulé pracovní postupy anotací
+
+**Export Annotations from XML File** – Integrace s existujícími systémy často vyžaduje flexibilní výměnu dat. Tento tutoriál vám ukáže, jak pracovat s XML‑založenými daty anotací, což umožňuje hladkou integraci s systémy pro správu obsahu, databázemi nebo nástroji třetích stran. Ideální pro podnikovou aplikaci s komplexními datovými toky. [Read more](./export-annotations-xml-file/)
+
+**Import Annotations from Document** – Doplněk k exportu – naučte se, jak načíst data anotací do vašeho systému z různých zdrojů. To je nezbytné pro migraci z jiných systémů anotací nebo budování hybridních pracovních postupů, které pracují s více platformami dokumentů. [Read more](./import-annotations-from-document/)
+
+## Přizpůsobení a pokročilé funkce
+
+### Profesionální vylepšení vašich aplikací
+
+**Loading Custom Fonts** – Konzistence značky je důležitá v profesionálních aplikacích. Tento tutoriál vám ukáže, jak zajistit, aby vaše anotace vždy zobrazovaly správné firemní fonty, bez ohledu na to, co je nainstalováno v systému uživatele. Kritické pro řešení s brandovanými dokumenty nebo aplikace s konkrétními typografickými požadavky. [Read more](./loading-custom-fonts/)
+
+**Put Image Annotation over Text** – Vytvořte sofistikované vrstvené anotace umístěním obrázků nad textový obsah. Tato pokročilá technika otevírá možnosti pro vodoznaky, vizuální značkovací systémy nebo kreativní pracovní postupy anotací. Skvělé pro aplikace zabývající se designovými revizemi nebo správou vizuálního obsahu. [Read more](./put-image-annotation-over-text/)
+
+**Rotating PDF Documents** – Programově řešte dokumenty, které potřebují úpravu orientace. Tato na první pohled jednoduchá funkce je ve skutečnosti klíčová pro aplikace pracující se skenovanými dokumenty, mobilními nahrávkami nebo dokumenty z různých zdrojů, které mohou mít odlišné orientace. [Read more](./rotating-pdf-documents/)
+
+## Začínáme s pokročilými funkcemi
+
+**Nový v GroupDocs.Annotation?** Začněte s **Generate Document Pages Preview**, abyste pochopili základní koncepty, a poté přejděte na **Change Image Quality** pro okamžitý vizuální dopad.
+
+**Budujete podniková řešení?** Zaměřte se nejprve na sekci Správa dat – kontrola verzí a správa anotací jsou základem pro škálovatelné systémy.
+
+**Vylepšujete existující aplikace?** Sekce Vylepšení dokumentu vám poskytne rychlé výhody, které uživatelé okamžitě zaznamenají.
+
+## Pokročilé tutoriály použití
+### [Change Image Quality](./change-image-quality/)
+Naučte se, jak zlepšit kvalitu obrázku v PDF souborech pomocí Groupdocs.Annotation pro .NET. Postupujte podle našeho krok‑za‑krokem průvodce.
+
+### [Export Annotations from XML File](./export-annotations-xml-file/)
+Naučte se, jak exportovat anotace z XML souborů pomocí GroupDocs.Annotation pro .NET, čímž efektivně zjednodušíte pracovní postup správy dokumentů.
+
+### [Generate Document Pages Preview](./generate-document-pages-preview/)
+Naučte se efektivně generovat náhled stránek dokumentu pomocí GroupDocs.Annotation pro .NET. Vylepšete své pracovní postupy správy dokumentů s tímto komplexním průvodcem.
+
+### [Generate Preview without Annotations](./generate-preview-without-annotations/)
+Zlepšete spolupráci na dokumentech a anotace v .NET aplikacích pomocí GroupDocs.Annotation pro .NET. Jednoduše anotujte, označujte a recenzujte dokumenty s touto výkonnou knihovnou.
+
+### [Generate Preview without Comments](./generate-preview-without-comments/)
+Naučte se, jak bez problémů integrovat možnosti anotací dokumentů do vašich .NET aplikací pomocí GroupDocs.Annotation pro .NET.
+
+### [Generate Preview Worksheet Columns](./generate-preview-worksheet-columns/)
+Naučte se, jak anotovat dokumenty pomocí GroupDocs.Annotation pro .NET. Krok‑za‑krokem tutoriál pro .NET vývojáře. Vylepšete své aplikace.
+
+### [Get All Version Keys on Document](./get-all-version-keys-document/)
+Naučte se, jak získat všechny klíče verzí v dokumentu pomocí GroupDocs.Annotation pro .NET. Rozšiřte své možnosti správy dokumentů s tímto komplexním průvodcem.
+
+### [Get Document Text Content Information](./get-document-text-content-information/)
+Annotate documents seamlessly with GroupDocs.Annotation for .NET. Integrate annotation functionalities into your .NET applications effortlessly.
+
+### [Get List of Annotations using Version Key](./get-list-annotations-version-key/)
+Vylepšete své .NET aplikace pomocí GroupDocs.Annotation pro plynulé anotace dokumentů. Postupujte podle našeho krok‑za‑krokem průvodce pro efektivní integraci.
+
+### [Import Annotations from Document](./import-annotations-from-document/)
+Naučte se, jak importovat anotace z dokumentů v .NET pomocí GroupDocs.Annotation. Postupujte podle našeho krok‑za‑krokem tutoriálu pro bezproblémovou integraci.
+
+### [Loading Custom Fonts](./loading-custom-fonts/)
+Naučte se, jak bez problémů načíst vlastní fonty v GroupDocs.Annotation pro .NET a vylepšit anotace dokumentů. Postupujte podle našeho krok‑za‑krokem průvodce pro snadnou integraci.
+
+### [Put Image Annotation over Text](./put-image-annotation-over-text/)
+Naučte se, jak přidat obrázkové anotace nad text v .NET pomocí GroupDocs.Annotation pro efektivní správu dokumentů a spolupráci.
+
+### [Rotating PDF Documents](./rotating-pdf-documents/)
 Naučte se, jak snadno otáčet PDF dokumenty pomocí Groupdocs.Annotation pro .NET. Zlepšete efektivitu správy dokumentů.
-### [Nastavení rozlišení náhledu dokumentu](./set-document-preview-resolution/)
-Vylepšete spolupráci na dokumentech s Groupdocs.Annotation pro .NET, který zefektivňuje anotace a bezproblémově zobrazuje náhled.
+
+### [Set Document Preview Resolution](./set-document-preview-resolution/)
+Pozvedněte spolupráci na dokumentech pomocí Groupdocs.Annotation pro .NET, zjednodušte funkce anotací a náhledů bez problémů.
+
+## Často kladené otázky
+
+**Q: Jak mohu extrahovat text dokumentu při zachování anotací?**  
+A: Použijte API `GetDocumentTextContentInformation` – vrátí surový text a zachová metadata anotací.
+
+**Q: Mohu změnit kvalitu obrázku PDF bez ovlivnění anotací?**  
+A: Ano, funkce *change pdf image quality* upravuje pouze rastrový obrázek a vrstvy anotací ponechává nedotčené.
+
+**Q: Jaký je nejlepší způsob, jak skrýt komentáře v náhledu?**  
+A: Zavolejte metodu *preview pdf without comments*, která vykreslí čistou stránku a zároveň uchová komentáře v původním souboru.
+
+**Q: Jak zajistit, aby se mé vlastní fonty zobrazovaly na každém klientském zařízení?**  
+A: Načtěte vlastní fonty za běhu pomocí API *loading custom fonts* a vložte je do renderovacího pipeline anotací.
+
+**Q: Je možné nastavit konkrétní rozlišení náhledu pro scénáře s nízkou šířkou pásma?**  
+A: Naprosto – volba *set preview resolution* vám umožní definovat DPI nebo rozměry v pixelech pro vyvážení kvality a výkonu.
+
+---
+
+**Poslední aktualizace:** 2026-03-22  
+**Testováno s:** GroupDocs.Annotation for .NET 23.12  
+**Autor:** GroupDocs

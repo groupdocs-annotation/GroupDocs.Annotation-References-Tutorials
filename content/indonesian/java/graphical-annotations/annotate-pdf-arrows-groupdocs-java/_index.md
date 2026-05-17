@@ -1,59 +1,45 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-01-16'
+date: '2026-03-22'
 description: Pelajari cara menambahkan panah ke PDF menggunakan GroupDocs.Annotation
   untuk Java. Tutorial langkah demi langkah ini mencakup anotasi PDF Java, contoh
   kode, pemecahan masalah, dan praktik terbaik.
 keywords: add arrows to PDF Java, PDF arrow annotation tutorial, Java PDF markup,
   annotate PDF documents Java, GroupDocs arrow annotation example
-lastmod: '2026-01-16'
+lastmod: '2026-03-22'
 linktitle: Add Arrow to PDF Java
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-processing
-title: Cara Menambahkan Panah ke PDF dengan Java – Tutorial Lengkap GroupDocs
+title: Menambahkan Arrow PDF di Java – Tutorial Lengkap GroupDocs
 type: docs
 url: /id/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/
 weight: 1
 ---
 
-# Cara Menambahkan Panah ke PDF di Java: Tutorial Lengkap GroupDocs
+# Cara Menambahkan Panah PDF di Java: Tutorial Lengkap GroupDocs
 
 ## Pendahuluan
 
-Ingin menyoroti bagian tertentu dalam PDF atau menunjukkan detail penting untuk tim Anda? Menambahkan panah ke dokumen PDF adalah salah satu cara paling efektif untuk meningkatkan kejelasan dokumen dan memperbaiki kolaborasi. Baik Anda membuat dokumentasi teknis, materi edukasi, atau melakukan review dokumen, anotasi panah dapat membuat konten Anda jauh lebih menarik dan lebih mudah dipahami.
-
-Dalam panduan ini, **Anda akan belajar cara menambahkan panah ke PDF** menggunakan GroupDocs.Annotation untuk Java. Kami akan membahas semuanya mulai dari penyiapan awal hingga teknik implementasi lanjutan, serta tips pemecahan masalah yang akan menghemat berjam‑jam frustrasi Anda.
+Pernahkah Anda perlu menyoroti bagian tertentu dalam PDF atau menunjukkan detail penting untuk tim Anda? Menambahkan panah ke dokumen PDF adalah salah satu cara paling efektif untuk meningkatkan kejelasan. **Dalam tutorial ini, Anda akan belajar cara menambahkan panah PDF menggunakan GroupDocs.Annotation untuk Java**, baik Anda sedang menyiapkan dokumentasi teknis, materi edukasi, atau tinjauan kolaboratif. Kami akan membahas semuanya mulai dari penyiapan awal hingga kustomisasi lanjutan, serta tips pemecahan masalah yang menghemat waktu Anda.
 
 ## Jawaban Cepat
-- **Apa perpustakaan yang menambahkan panah ke PDF?** GroupDocs.Annotation for Java  
-- **Berapa banyak baris kode yang dibutuhkan?** About 20 lines for a basic arrow  
-- **Apakah saya memerlukan lisensi?** A free trial works for testing; production requires a commercial license  
-- **Bisakah saya menyesuaikan warna panah?** Yes, via ArrowAnnotation properties (see advanced section)  
-- **Apakah thread‑safe?** Use a separate Annotator instance per thread  
+- **Perpustakaan apa yang menambahkan panah ke pdf?** GroupDocs.Annotation for Java  
+- **Berapa baris kode yang dibutuhkan?** Sekitar 20 baris untuk panah dasar  
+- **Apakah saya memerlukan lisensi?** Versi percobaan gratis cukup untuk pengujian; produksi memerlukan lisensi komersial  
+- **Bisakah saya menyesuaikan warna panah?** Ya, melalui properti ArrowAnnotation (lihat bagian lanjutan)  
+- **Apakah thread‑safe?** Gunakan instance Annotator terpisah per thread  
 
-## Mengapa Menggunakan Anotasi Panah dalam PDF?
+## Cara menambahkan panah PDF menggunakan GroupDocs.Annotation
 
-Sebelum kita masuk ke detail teknis, mari kita pahami mengapa anotasi panah begitu berharga:
-
-**Proses Review Dokumen**: Saat meninjau kontrak, proposal, atau spesifikasi teknis, panah membantu reviewer dengan cepat menunjukkan area spesifik yang memerlukan perhatian. Alih‑alih menulis “lihat paragraf 3, baris 5”, Anda cukup menggambar panah.
-
-**Konten Edukasi**: Jika Anda membuat materi pelatihan atau tutorial, panah mengarahkan perhatian pembaca ke elemen paling penting, meningkatkan pemahaman dan retensi.
-
-**Dokumentasi Teknis**: Dalam manual perangkat lunak atau dokumentasi API, panah dapat menyoroti langkah kritis dalam alur kerja atau menunjuk ke elemen UI spesifik dalam tangkapan layar.
-
-**Alur Kerja Kolaboratif**: Tim dapat menggunakan panah untuk menyarankan perubahan, menunjukkan area masalah, atau menyoroti pencapaian dalam dokumen bersama.
-
-## Cara menambahkan panah ke PDF menggunakan GroupDocs.Annotation
-
-Berikut adalah ikhtisar singkat tentang semua yang Anda butuhkan sebelum mulai menulis kode.
+Berikut adalah ikhtisar singkat tentang semua yang Anda perlukan sebelum mulai menulis kode.
 
 ### Prasyarat dan Persyaratan Penyiapan
 
-#### Perpustakaan dan Ketergantungan yang Diperlukan
+#### Perpustakaan dan Dependensi yang Diperlukan
 
 Untuk menggunakan GroupDocs.Annotation untuk Java, Anda perlu menambahkannya ke proyek Anda melalui Maven. Berikut konfigurasi untuk `pom.xml` Anda:
 
@@ -79,24 +65,24 @@ Untuk menggunakan GroupDocs.Annotation untuk Java, Anda perlu menambahkannya ke 
 
 - **Java Development Kit (JDK)**: Versi 8 atau lebih tinggi  
 - **IDE**: IntelliJ IDEA, Eclipse, atau IDE Java pilihan Anda  
-- **Maven**: Untuk manajemen ketergantungan (atau Gradle jika Anda lebih suka)  
-- **PDF Contoh**: Dokumen PDF untuk diuji  
+- **Maven**: Untuk manajemen dependensi (atau Gradle jika Anda lebih suka)  
+- **Sample PDF**: Dokumen PDF untuk diuji  
 
 #### Persyaratan Lisensi
 
 GroupDocs menawarkan beberapa opsi lisensi tergantung pada kebutuhan Anda:
 
-- **Free Trial**: Sempurna untuk pengujian dan proyek kecil. Unduh dari [rilisan GroupDocs](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: Membutuhkan lebih banyak waktu untuk evaluasi? Dapatkan satu [di sini](https://purchase.groupdocs.com/temporary-license/)  
+- **Free Trial**: Sempurna untuk pengujian dan proyek kecil. Unduh dari [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary License**: Butuh lebih banyak waktu untuk evaluasi? Dapatkan satu [di sini](https://purchase.groupdocs.com/temporary-license/)  
 - **Commercial License**: Untuk penggunaan produksi, beli [di sini](https://purchase.groupdocs.com/buy)  
 
-**Tips Pro**: Mulailah dengan trial gratis untuk membiasakan diri dengan API sebelum berkomitmen pada lisensi.
+**Pro Tip**: Mulailah dengan versi percobaan gratis untuk membiasakan diri dengan API sebelum berkomitmen pada lisensi.
 
 ### Menginstal GroupDocs.Annotation untuk Java
 
 #### Konfigurasi Maven
 
-Tambahkan konfigurasi Maven yang ditunjukkan di atas ke file `pom.xml` Anda. Jika Anda menggunakan Gradle, berikut konfigurasi setara:
+Tambahkan konfigurasi Maven yang ditampilkan di atas ke file `pom.xml` Anda. Jika Anda menggunakan Gradle, berikut konfigurasi setara:
 
 ```gradle
 repositories {
@@ -112,7 +98,7 @@ dependencies {
 
 #### Inisialisasi Dasar
 
-Setelah Anda menginstal perpustakaan, siapkan impor dasar di kelas Java Anda:
+Setelah pustaka terinstal, siapkan impor dasar di kelas Java Anda:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -136,7 +122,7 @@ public class AnnotationTest {
 }
 ```
 
-## Implementasi Langkah-demi-Langkah: Menambahkan Panah ke PDF
+## Implementasi Langkah demi Langkah: Menambahkan Panah ke PDF
 
 Sekarang saatnya acara utama! Mari kita jalani proses lengkap menambahkan anotasi panah ke dokumen PDF Anda.
 
@@ -144,9 +130,11 @@ Sekarang saatnya acara utama! Mari kita jalani proses lengkap menambahkan anotas
 
 Anotasi panah di GroupDocs adalah elemen visual yang menunjuk dari satu lokasi ke lokasi lain pada dokumen Anda. Mereka didefinisikan oleh:
 
-- **Titik awal** – tempat panah dimulai  
-- **Titik akhir** – tempat panah menunjuk  
-- **Properti gaya** – warna, ketebalan, dan tampilan  
+- **Starting point** – tempat panah dimulai  
+- **Ending point** – tempat panah mengarah  
+- **Style properties** – warna, ketebalan, dan tampilan  
+
+Memahami **sistem koordinat PDF** membantu Anda menempatkan panah dengan akurat, terutama karena koordinat PDF dimulai dari sudut kiri‑bawah.
 
 ### Contoh Implementasi Lengkap
 
@@ -195,12 +183,12 @@ arrowAnnotation.setBox(new Rectangle(100, 100, 200, 200));
 
 **Memahami parameter Rectangle**:
 
-- Nilai pertama (100): koordinat X dari titik awal  
-- Nilai kedua (100): koordinat Y dari titik awal  
-- Nilai ketiga (200): Lebar kotak pembatas panah  
-- Nilai keempat (200): Tinggi kotak pembatas panah  
+- Nilai pertama (100): koordinat X dari titik mulai  
+- Nilai kedua (100): koordinat Y dari titik mulai  
+- Nilai ketiga (200): lebar kotak pembatas panah  
+- Nilai keempat (200): tinggi kotak pembatas panah  
 
-**Tip penempatan**: Koordinat PDF dimulai dari sudut kiri bawah, yang dapat membingungkan jika Anda terbiasa dengan pengembangan web dimana (0,0) berada di sudut kiri atas.
+**Tip penempatan**: Koordinat PDF dimulai dari sudut kiri‑bawah, yang dapat membingungkan jika Anda terbiasa dengan pengembangan web di mana (0,0) berada di sudut kiri‑atas.
 
 ### Langkah 3: Tambahkan Anotasi
 
@@ -208,9 +196,9 @@ arrowAnnotation.setBox(new Rectangle(100, 100, 200, 200));
 annotator.add(arrowAnnotation);
 ```
 
-Baris ini menambahkan anotasi panah yang telah dikonfigurasi ke dokumen dalam memori. Dokumen tidak dimodifikasi sampai Anda menyimpannya.
+Baris ini menambahkan anotasi panah yang telah Anda konfigurasikan ke dokumen dalam memori. Dokumen tidak diubah hingga Anda **menyimpan PDF yang beranotasi**.
 
-### Langkah 4: Simpan Dokumen yang Diberi Anotasi
+### Langkah 4: Simpan Dokumen Beranotasi Anda
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf";
@@ -223,13 +211,13 @@ Ini membuat file PDF baru dengan anotasi panah Anda. Dokumen asli tetap tidak be
 
 Ingin membuat panah Anda lebih menarik secara visual? Berikut beberapa opsi kustomisasi lanjutan:
 
-### Menetapkan Warna dan Gaya Panah
+### Mengatur Warna dan Gaya Panah
 
-Meskipun contoh dasar menggunakan gaya default, Anda dapat menyesuaikan panah lebih lanjut dengan menjelajahi properti `ArrowAnnotation`. Periksa dokumentasi GroupDocs untuk opsi gaya terbaru yang tersedia pada versi 25.2.
+Meskipun contoh dasar menggunakan gaya default, Anda dapat **menyesuaikan warna panah** dengan mengatur properti yang sesuai pada `ArrowAnnotation`. Periksa dokumentasi GroupDocs untuk opsi gaya terbaru yang tersedia di versi 25.2.
 
-### Banyak Panah dalam Satu Dokumen
+### Beberapa Panah dalam Satu Dokumen
 
-Anda dapat menambahkan banyak panah ke dokumen yang sama:
+Anda dapat menambahkan beberapa panah ke dokumen yang sama:
 
 ```java
 try (Annotator annotator = new Annotator(inputFilePath)) {
@@ -258,16 +246,16 @@ Berdasarkan pengalaman nyata pengembang, berikut masalah paling umum yang mungki
 
 **Gejala**: Kode berjalan tanpa error, tetapi tidak ada panah yang muncul di PDF.
 
-**Solusi**  
+**Solusi**:
 - Periksa apakah koordinat `Rectangle` Anda berada dalam batas halaman  
 - Pastikan panah tidak ditempatkan di luar area yang terlihat  
 - Pastikan file output dihasilkan di lokasi yang diharapkan  
 
 ### Masalah 2: Kesalahan Izin File
 
-**Gejala**: `IOException` saat mencoba menyimpan dokumen yang diberi anotasi.
+**Gejala**: `IOException` saat mencoba menyimpan dokumen beranotasi.
 
-**Solusi**  
+**Solusi**:
 - Verifikasi izin menulis untuk direktori output  
 - Tutup semua penampil PDF yang mungkin memiliki file output terbuka  
 - Gunakan nama file output yang berbeda untuk menghindari konflik  
@@ -276,8 +264,8 @@ Berdasarkan pengalaman nyata pengembang, berikut masalah paling umum yang mungki
 
 **Gejala**: `OutOfMemoryError` saat memproses file PDF besar.
 
-**Solusi**  
-- Tingkatkan ukuran heap JVM: `-Xmx2g` untuk 2 GB  
+**Solusi**:
+- Tingkatkan ukuran heap JVM, misalnya `-Xmx2g` untuk **meningkatkan heap JVM** bagi beban kerja besar  
 - Proses dokumen secara batch jika menangani banyak file  
 - Selalu gunakan try‑with‑resources untuk memastikan pembersihan sumber daya yang tepat  
 
@@ -285,8 +273,8 @@ Berdasarkan pengalaman nyata pengembang, berikut masalah paling umum yang mungki
 
 **Gejala**: Panah muncul di lokasi yang tidak terduga.
 
-**Solusi**  
-- Ingat bahwa koordinat PDF dimulai dari kiri bawah, bukan kiri atas  
+**Solusi**:
+- Ingat bahwa koordinat PDF dimulai dari kiri‑bawah, bukan kiri‑atas  
 - Gunakan alat koordinat PDF untuk menentukan posisi tepat  
 - Mulailah dengan koordinat sederhana (seperti 100, 100) dan sesuaikan dari sana  
 
@@ -306,7 +294,7 @@ try (Annotator annotator = new Annotator(inputFilePath)) {
 
 ### Pemrosesan Batch
 
-Jika Anda memproses banyak dokumen, proses secara berurutan alih‑alih memuat semuanya sekaligus:
+Jika Anda memproses banyak dokumen, proses secara berurutan daripada memuat semuanya sekaligus:
 
 ```java
 List<String> documents = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
@@ -362,48 +350,48 @@ Dalam gambar arsitektur atau spesifikasi teknis, panah dapat menunjukkan arah al
 
 Anotasi panah bekerja sangat baik ketika diintegrasikan dengan alur kerja manajemen dokumen yang lebih besar:
 
-- **Kontrol Versi**: Dokumen yang diberi anotasi dapat di‑versi‑kan bersamaan dengan kode Anda  
-- **Alur Kerja Otomatis**: Memicu proses anotasi berdasarkan pembaruan dokumen  
-- **Platform Kolaboratif**: Integrasikan dengan alat seperti SharePoint atau Google Drive  
+- **Version Control**: Dokumen beranotasi dapat di‑versi bersamaan dengan kode Anda  
+- **Automated Workflows**: Memicu proses anotasi berdasarkan pembaruan dokumen  
+- **Collaborative Platforms**: Integrasikan dengan alat seperti SharePoint atau Google Drive  
 
 ## Kesimpulan
 
-Selamat! Anda telah belajar cara **menambahkan panah ke PDF** menggunakan GroupDocs.Annotation untuk Java. Fitur kuat ini dapat secara signifikan meningkatkan komunikasi dokumen, baik Anda melakukan review kode, membuat konten edukasi, atau berkolaborasi dengan anggota tim.
+Selamat! Anda telah mempelajari **cara menambahkan panah PDF** menggunakan GroupDocs.Annotation untuk Java. Fitur kuat ini dapat secara signifikan meningkatkan komunikasi dokumen, baik Anda melakukan review kode, membuat konten edukasi, atau berkolaborasi dengan anggota tim.
 
-**Poin Penting**  
-- Anotasi panah meningkatkan kejelasan dokumen dan kolaborasi  
-- GroupDocs.Annotation menyediakan API yang sederhana untuk anotasi PDF Java  
+**Poin penting**
+- Anotasi panah meningkatkan kejelasan dan kolaborasi dokumen  
+- GroupDocs.Annotation menyediakan API yang sederhana untuk pdf annotation java  
 - Manajemen sumber daya yang tepat dan penanganan error sangat penting untuk penggunaan produksi  
 - Memahami sistem koordinat PDF mencegah masalah penempatan umum  
 
 ### Langkah Selanjutnya
 
-Siap meningkatkan keterampilan anotasi PDF Anda ke tingkat berikutnya? Pertimbangkan untuk menjelajahi:
+Siap meningkatkan keterampilan anotasi PDF Anda ke tingkat berikutnya? Pertimbangkan untuk mengeksplorasi:
 
 - Anotasi teks untuk komentar detail  
 - Anotasi bentuk untuk menyoroti area  
 - Anotasi stempel untuk alur kerja persetujuan  
-- Menggabungkan berbagai jenis anotasi dalam dokumen kompleks  
+- Menggabungkan beberapa jenis anotasi dalam dokumen kompleks  
 
-**Ambil Tindakan**: Cobalah mengimplementasikan anotasi panah dalam proyek Anda saat ini. Mulailah dengan contoh dasar, lalu bereksperimen dengan kustomisasi warna, banyak panah, dan pemrosesan batch.
+**Take Action**: Cobalah mengimplementasikan anotasi panah dalam proyek Anda saat ini. Mulailah dengan contoh dasar, lalu bereksperimen dengan kustomisasi warna, beberapa panah, dan pemrosesan batch.
 
 ## Pertanyaan yang Sering Diajukan
 
 ### Apa sebenarnya anotasi panah dan kapan saya harus menggunakannya?
 
-Anotasi panah adalah penunjuk visual yang menarik perhatian ke area spesifik dalam dokumen. Gunakan panah ketika Anda perlu menyoroti hubungan antara bagian berbeda dalam dokumen, menunjukkan arah atau aliran, atau sekadar menandai informasi penting yang mungkin terlewatkan.
+Anotasi panah adalah penunjuk visual yang menarik perhatian ke area spesifik dalam dokumen. Gunakan panah ketika Anda perlu menyoroti hubungan antara bagian berbeda dokumen, menunjukkan arah atau aliran, atau sekadar menandai informasi penting yang mungkin terlewat.
 
 ### Bisakah saya menambahkan panah ke format file lain selain PDF?
 
 Ya! GroupDocs.Annotation mendukung berbagai format termasuk dokumen Word (DOC/DOCX), spreadsheet Excel (XLS/XLSX), presentasi PowerPoint (PPT/PPTX), dan berbagai format gambar (PNG, JPG, TIFF). API tetap konsisten di semua tipe file.
 
-### Bagaimana cara menangani file PDF besar tanpa mengalami masalah memori?
+### Bagaimana cara menangani file PDF besar tanpa masalah memori?
 
-Untuk file besar, tingkatkan ukuran heap JVM Anda menggunakan parameter `-Xmx`, pastikan Anda menggunakan blok try‑with‑resources untuk pembersihan yang tepat, dan pertimbangkan memproses dokumen secara batch alih‑alih sekaligus. Juga, tutup aplikasi yang tidak diperlukan yang mungkin mengonsumsi memori.
+Untuk file besar, tingkatkan ukuran heap JVM Anda menggunakan parameter `-Xmx`, pastikan Anda menggunakan blok try‑with‑resources untuk pembersihan yang tepat, dan pertimbangkan memproses dokumen secara batch daripada sekaligus. Juga, tutup aplikasi yang tidak diperlukan yang mungkin mengonsumsi memori.
 
 ### Mengapa saya tidak dapat melihat anotasi panah saya di PDF output?
 
-Hal ini biasanya terjadi ketika koordinat panah berada di luar area halaman yang terlihat. Periksa kembali koordinat `Rectangle` Anda dan pastikan berada dalam dimensi halaman PDF Anda. Juga pastikan file output disimpan di lokasi yang benar dan Anda membuka file yang tepat.
+Ini biasanya terjadi ketika koordinat panah berada di luar area halaman yang terlihat. Periksa kembali koordinat `Rectangle` Anda dan pastikan berada dalam dimensi halaman PDF Anda. Juga pastikan file output disimpan di lokasi yang benar dan Anda membuka file yang tepat.
 
 ### Apakah ada batas berapa banyak panah yang dapat saya tambahkan ke satu PDF?
 
@@ -411,35 +399,35 @@ Tidak ada batas keras yang diberlakukan oleh GroupDocs.Annotation, tetapi menamb
 
 ### Bagaimana cara menempatkan panah secara tepat pada teks atau elemen tertentu?
 
-Penempatan PDF dapat rumit karena koordinat dimulai dari sudut kiri bawah. Gunakan alat pengedit PDF untuk mengidentifikasi koordinat tepat, atau mulailah dengan posisi perkiraan dan sesuaikan secara bertahap. Anda juga dapat mengekstrak lokasi teks secara programatik jika memerlukan penempatan yang sempurna pixel.
+Penempatan PDF dapat rumit karena koordinat dimulai dari sudut kiri‑bawah. Gunakan alat pengedit PDF untuk mengidentifikasi koordinat tepat, atau mulai dengan posisi perkiraan dan sesuaikan secara bertahap. Anda juga dapat mengekstrak lokasi teks secara programatik jika memerlukan penempatan pixel‑perfect.
 
 ### Bisakah saya menyesuaikan tampilan panah (warna, ketebalan, gaya)?
 
-Kelas `ArrowAnnotation` dasar menyediakan fungsionalitas panah fundamental. Untuk opsi styling lanjutan seperti warna, ketebalan, atau gaya garis, lihat dokumentasi GroupDocs.Annotation terbaru karena fitur-fitur ini mungkin telah ditambahkan pada versi terbaru.
+Kelas `ArrowAnnotation` dasar menyediakan fungsi panah fundamental. Untuk opsi gaya lanjutan seperti warna, ketebalan, atau gaya garis, lihat dokumentasi GroupDocs.Annotation terbaru karena fitur ini mungkin telah ditambahkan pada versi terbaru.
 
-### Apa perbedaan antara versi trial dan berlisensi?
+### Apa perbedaan antara versi percobaan dan berlisensi?
 
-Versi trial biasanya mencakup watermark evaluasi atau batasan pada jumlah dokumen yang dapat Anda proses. Versi berlisensi menghapus pembatasan ini dan ditujukan untuk penggunaan produksi. Periksa situs web GroupDocs untuk batasan trial saat ini.
+Versi percobaan biasanya menyertakan watermark evaluasi atau batasan pada jumlah dokumen yang dapat diproses. Versi berlisensi menghapus pembatasan ini dan ditujukan untuk penggunaan produksi. Periksa situs GroupDocs untuk batasan percobaan saat ini.
 
 ### Bagaimana cara mengintegrasikan anotasi panah dengan alur kerja dokumen saya yang ada?
 
 Pertimbangkan membuat metode wrapper yang menstandarisasi proses anotasi Anda, mengimplementasikan pemrosesan batch untuk banyak dokumen, dan mengintegrasikannya dengan sistem kontrol versi Anda. Anda juga dapat membuat templat untuk pola anotasi umum guna mempercepat tugas berulang.
 
-### Di mana saya dapat mendapatkan bantuan jika menghadapi masalah yang tidak dibahas di sini?
+### Di mana saya dapat mendapatkan bantuan jika menemui masalah yang tidak dibahas di sini?
 
 Untuk dukungan tambahan, kunjungi [forum dukungan GroupDocs](https://forum.groupdocs.com/c/annotation/) dimana Anda dapat mengajukan pertanyaan dan mendapatkan bantuan dari komunitas serta staf GroupDocs. [Dokumentasi resmi](https://docs.groupdocs.com/annotation/java/) juga berisi referensi API lengkap dan contoh.
 
 ## Sumber Daya Tambahan
 
-- **Dokumentasi**: https://docs.groupdocs.com/annotation/java/  
-- **Referensi API**: https://reference.groupdocs.com/annotation/java/  
-- **Unduh Versi Terbaru**: https://releases.groupdocs.com/annotation/java/  
-- **Beli Lisensi**: https://purchase.groupdocs.com/buy  
-- **Dapatkan Lisensi Sementara**: https://purchase.groupdocs.com/temporary-license/  
-- **Dukungan Komunitas**: https://forum.groupdocs.com/c/annotation/  
+- **Documentation**: https://docs.groupdocs.com/annotation/java/
+- **API Reference**: https://reference.groupdocs.com/annotation/java/
+- **Download Latest Version**: https://releases.groupdocs.com/annotation/java/
+- **Purchase License**: https://purchase.groupdocs.com/buy
+- **Get Temporary License**: https://purchase.groupdocs.com/temporary-license/
+- **Community Support**: https://forum.groupdocs.com/c/annotation/
 
 ---
 
-**Terakhir Diperbarui:** 2026-01-16  
-**Diuji Dengan:** GroupDocs.Annotation 25.2  
-**Penulis:** GroupDocs
+**Last Updated:** 2026-03-22  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
