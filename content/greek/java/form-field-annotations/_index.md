@@ -1,114 +1,114 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-01-10'
-description: Μάθετε πώς να δημιουργείτε πεδία φόρμας PDF σε Java με το GroupDocs.Annotation.
-  Οδηγός βήμα‑βήμα για τη δημιουργία συμπληρώσιμων PDF, προσθήκη κουμπιών, πλαισίων
+date: '2026-03-14'
+description: Μάθετε πώς να προσθέσετε πεδίο κειμένου PDF σε Java με το GroupDocs.Annotation.
+  Οδηγός βήμα‑βήμα για τη δημιουργία συμπληρώσιμων PDF, την προσθήκη κουμπιών, πλαισίων
   ελέγχου, πτυσσόμενων λιστών και πεδίων κειμένου.
 keywords: PDF form fields Java, interactive PDF Java tutorial, GroupDocs annotation
   form fields, Java PDF button creation, create fillable PDF forms programmatically
   Java
-lastmod: '2026-01-10'
+lastmod: '2026-03-14'
 linktitle: PDF Form Fields Java Tutorials
 tags:
 - pdf-forms
 - java-tutorial
 - groupdocs-annotation
 - interactive-pdf
-title: Δημιουργία πεδίων φόρμας PDF σε Java – Οδηγός GroupDocs.Annotation
+title: Προσθήκη πεδίου κειμένου PDF σε Java – Οδηγός GroupDocs.Annotation
 type: docs
 url: /el/java/form-field-annotations/
 weight: 9
 ---
 
-# Δημιουργία πεδίων φόρμας PDF σε Java – Οδηγός GroupDocs.Annotation
+# Προσθήκη πεδίου κειμένου PDF σε Java – Οδηγός GroupDocs.Annotation
 
-Αν χρειάζεστε να **δημιουργήσετε πεδία φόρμας PDF** γρήγορα και αξιόπιστα, βρίσκεστε στο σωστό μέρος. Σε αυτό το tutorial θα δούμε πώς το GroupDocs.Annotation σας επιτρέπει να δημιουργείτε PDF με δυνατότητα συμπλήρωσης, να προσθέτετε διαδραστικά κουμπιά, πλαίσια ελέγχου, αναπτυσσόμενα μενού και πεδία κειμένου—όλα με καθαρό κώδικα Java. Είτε δημιουργείτε μια φόρμα ενσωμάτωσης πελατών, μια εσωτερική έρευνα ή μια πολύπλοκη ροή εργασίας πολλαπλών σελίδων, τα παρακάτω βήματα θα σας δώσουν μια σταθερή βάση.
+Αν χρειάζεστε **δημιουργία πεδίων φόρμας PDF** γρήγορα και αξιόπιστα, βρίσκεστε στο σωστό μέρος. Σε αυτό το tutorial θα δούμε πώς το GroupDocs.Annotation σας επιτρέπει να δημιουργήσετε συμπληρώσιμα PDFs, λειτουργικότητα **add text field PDF**, και να προσθέσετε διαδραστικά κουμπιά, πλαίσια ελέγχου, αναπτυσσόμενα μενού και πεδία κειμένου—όλα με καθαρό κώδικα Java. Είτε δημιουργείτε μια φόρμα ενσωμάτωσης πελατών, μια εσωτερική έρευνα ή μια πολύπλοκη ροή εργασίας πολλαπλών σελίδων, τα παρακάτω βήματα θα σας δώσουν μια σταθερή βάση.
 
 ## Γρήγορες Απαντήσεις
-- **Ποια βιβλιοθήκη είναι η καλύτερη για τη δημιουργία πεδίων φόρμας PDF σε Java;** GroupDocs.Annotation  
-- **Μπορώ να δημιουργήσω προγραμματιστικά ένα PDF με δυνατότητα συμπλήρωσης;** Ναι – το API δημιουργεί διαδραστικά πεδία σε πραγματικό χρόνο.  
-- **Λειτουργούν τα πεδία σε Adobe Reader και προβολείς προγράμματος περιήγησης;** Ακολουθούν τα πρότυπα PDF, επομένως λειτουργούν στους περισσότερους σύγχρονους προβολείς.  
+- **Ποια βιβλιοθήκη είναι η καλύτερη για δημιουργία πεδίων φόρμας PDF σε Java;** GroupDocs.Annotation  
+- **Μπορώ να δημιουργήσω ένα συμπληρώσιμο PDF προγραμματιστικά;** Ναι – το API δημιουργεί διαδραστικά πεδία σε πραγματικό χρόνο.  
+- **Λειτουργούν τα πεδία σε Adobe Reader και προγράμματα περιήγησης;** Ακολουθούν τα πρότυπα PDF, επομένως λειτουργούν στα περισσότερα σύγχρονα προγράμματα προβολής.  
 - **Υπάρχει υποστήριξη για εξαγωγή δεδομένων φόρμας PDF αργότερα;** Ναι, μπορείτε να διαβάσετε τις συμπληρωμένες τιμές με το GroupDocs.Annotation.  
-- **Χρειάζομαι άδεια για παραγωγική χρήση;** Απαιτείται εμπορική άδεια για μη‑αξιολογικές εγκαταστάσεις.
+- **Χρειάζομαι άδεια για παραγωγική χρήση;** Απαιτείται εμπορική άδεια για μη‑αξονικές εγκαταστάσεις.  
 
-## Τι σημαίνει “δημιουργία πεδίων φόρμας PDF”;
-Η δημιουργία πεδίων φόρμας PDF σημαίνει την προσθήκη διαδραστικών στοιχείων—όπως πλαίσια κειμένου, πλαίσια ελέγχου, λίστες αναπτυσσόμενων μενού και κουμπιά—σε ένα στατικό PDF ώστε οι χρήστες να μπορούν να εισάγουν, να επιλέγουν ή να υποβάλλουν πληροφορίες απευθείας μέσα στο έγγραφο.
+## Τι είναι το “add text field PDF”;
+Η προσθήκη ενός πεδίου κειμένου PDF σημαίνει την εισαγωγή ενός διαδραστικού πλαισίου κειμένου σε ένα στατικό PDF ώστε οι χρήστες να μπορούν να πληκτρολογούν πληροφορίες απευθείας μέσα στο έγγραφο. Αυτό είναι το βασικό δομικό στοιχείο για κάθε συμπληρώσιμη φόρμα.
 
 ## Γιατί να χρησιμοποιήσετε το GroupDocs.Annotation για αυτήν την εργασία;
-- **Μηδενική εξάρτηση στην επεξεργασία PDF** – η βιβλιοθήκη διαχειρίζεται τις χαμηλού επιπέδου δομές PDF για εσάς.  
-- **Υποστήριξη πολλαπλών πλατφορμών** – λειτουργεί σε JVMs Windows, Linux και macOS.  
-- **Πλούσιοι τύποι πεδίων** – από απλά πεδία κειμένου έως σύνθετες ενέργειες κουμπιών.  
-- **Ενσωματωμένη εξαγωγή** – διαβάστε τα συμπληρωμένα δεδομένα με το ίδιο API (ιδανικό για *extract pdf form data*).  
+- **Zero‑dependency PDF manipulation** – η βιβλιοθήκη διαχειρίζεται τις χαμηλού επιπέδου δομές PDF για εσάς.  
+- **Cross‑platform support** – λειτουργεί σε Windows, Linux και macOS JVMs.  
+- **Rich field types** – από απλά πεδία κειμένου μέχρι σύνθετες ενέργειες κουμπιών.  
+- **Built‑in extraction** – διαβάζετε τα συμπληρωμένα δεδομένα με το ίδιο API (ιδανικό για *extract pdf form data*).  
 
 ## Προαπαιτούμενα
 - Java 17 ή νεότερη εγκατεστημένη.  
 - Έργο Maven ή Gradle ρυθμισμένο.  
-- GroupDocs.Annotation for Java προστέθηκε ως εξάρτηση (δείτε την ενότητα **Additional Resources** για τον πιο πρόσφατο σύνδεσμο λήψης).  
+- Το GroupDocs.Annotation for Java προστέθηκε ως εξάρτηση (δείτε την ενότητα **Additional Resources** για τον πιο πρόσφατο σύνδεσμο λήψης).  
 
-## Πώς να δημιουργήσετε πεδία φόρμας PDF σε Java
+## Πώς να προσθέσετε πεδίο κειμένου PDF σε Java
 
 ### Βήμα 1: Αρχικοποίηση του Annotator
-First, load the PDF you want to enrich and create an `Annotator` instance.
+Πρώτα, φορτώστε το PDF που θέλετε να εμπλουτίσετε και δημιουργήστε μια παρουσία `Annotator`.
 
-> *The code for this step is covered in the official GroupDocs.Annotation quick‑start guide and is not repeated here to keep the tutorial focused on form‑field specifics.*
+> *Ο κώδικας για αυτό το βήμα καλύπτεται στον επίσημο οδηγό γρήγορης εκκίνησης του GroupDocs.Annotation και δεν επαναλαμβάνεται εδώ για να διατηρηθεί το tutorial εστιασμένο στις λεπτομέρειες των πεδίων φόρμας.*
 
-### Βήμα 2: Προσθήκη πεδίου κειμένου (generate fillable PDF Java)
-Text fields are ideal for free‑form input like names or comments.
+### Βήμα 2: Προσθήκη πεδίου κειμένου (generate fillable PDF java)
+Τα πεδία κειμένου είναι ιδανικά για ελεύθερη εισαγωγή όπως ονόματα ή σχόλια.
 
-> *The following helper method is shown later in the “Code Organization Strategies” section.*
+> *Η παρακάτω βοηθητική μέθοδος εμφανίζεται αργότερα στην ενότητα “Code Organization Strategies”.*  
 
-### Βήμα 3: Προσθήκη πλαίσιο ελέγχου (pdf form validation java)
-Checkboxes let users indicate yes/no or multiple selections. You can group them for validation logic in your Java code.
+### Βήμα 3: Προσθήκη πλαίσιου ελέγχου (pdf form validation java)
+Τα πλαίσια ελέγχου επιτρέπουν στους χρήστες να υποδείξουν ναι/όχι ή πολλαπλές επιλογές. Μπορείτε να τα ομαδοποιήσετε για λογική επικύρωσης στον κώδικα Java.
 
 ### Βήμα 4: Προσθήκη λίστας αναπτυσσόμενου μενού (how to add pdf dropdown)
-Dropdowns constrain input to predefined options, which helps maintain data consistency.
+Τα αναπτυσσόμενα μενού περιορίζουν την εισαγωγή σε προκαθορισμένες επιλογές, βοηθώντας στη διατήρηση της συνέπειας των δεδομένων.
 
 ### Βήμα 5: Προσθήκη κουμπιού (submit or navigation)
-Buttons can submit the completed form to a server endpoint or navigate between pages.
+Τα κουμπιά μπορούν να υποβάλουν τη συμπληρωμένη φόρμα σε ένα σημείο λήψης του διακομιστή ή να πλοηγηθούν μεταξύ σελίδων.
 
-> *All of the above actions are demonstrated in the dedicated sub‑tutorials linked below.*
+> *Όλες οι παραπάνω ενέργειες παρουσιάζονται στα αφιερωμένα υπο‑tutorials που συνδέονται παρακάτω.*
 
-## Οδηγοί Υλοποίησης Πεδίων Φόρμας
+## Οδηγοί Υλοποίησης Πεδίου Φόρμας
 
-Below are the deep‑dive guides that contain the exact Java snippets for each field type. Follow the links that match the form element you need.
+Παρακάτω βρίσκονται οι αναλυτικοί οδηγοί που περιέχουν τα ακριβή αποσπάσματα Java για κάθε τύπο πεδίου. Ακολουθήστε τους συνδέσμους που ταιριάζουν με το στοιχείο φόρμας που χρειάζεστε.
 
-### [Δημιουργία Διαδραστικών Κουμπιών PDF σε Java Χρησιμοποιώντας το GroupDocs.Annotation: Πλήρης Οδηγός](./create-pdf-buttons-java-groupdocs-annotation/)
+### [Create Interactive PDF Buttons in Java Using GroupDocs.Annotation: A Complete Guide](./create-pdf-buttons-java-groupdocs-annotation/)
 
-Master the art of PDF button creation with this comprehensive tutorial. You'll learn how to add clickable buttons that can trigger actions, submit forms, or navigate between pages. The guide covers button styling, event handling, and advanced features like button replies for interactive workflows.
+Κατακτήστε την τέχνη της δημιουργίας κουμπιών PDF με αυτό το ολοκληρωμένο tutorial. Θα μάθετε πώς να προσθέτετε κουμπιά με δυνατότητα κλικ που μπορούν να ενεργοποιούν ενέργειες, να υποβάλλουν φόρμες ή να πλοηγούν μεταξύ σελίδων. Ο οδηγός καλύπτει το στυλ των κουμπιών, τη διαχείριση συμβάντων και προηγμένα χαρακτηριστικά όπως απαντήσεις κουμπιών για διαδραστικές ροές εργασίας.
 
 **Ιδανικό για**: Υποβολές φορμών, ελέγχους πλοήγησης, ενεργοποιητές ενεργειών και διαδραστικές παρουσιάσεις.
 
-### [Δημιουργία Διαδραστικών Αναπτυσσόμενων Μενού PDF Χρησιμοποιώντας το GroupDocs.Annotation για Java](./create-pdf-dropdowns-groupdocs-annotation-java/)
+### [Create Interactive PDF Dropdowns Using GroupDocs.Annotation for Java](./create-pdf-dropdowns-groupdocs-annotation-java/)
 
-Transform your PDFs with smart dropdown menus that provide users with predefined choices. This tutorial shows you how to create both simple and multi‑level dropdowns, handle selection events, and populate options dynamically from your Java application.
+Μετατρέψτε τα PDFs σας με έξυπνα αναπτυσσόμενα μενού που παρέχουν στους χρήστες προκαθορισμένες επιλογές. Αυτό το tutorial σας δείχνει πώς να δημιουργήσετε τόσο απλά όσο και πολυεπίπεδα αναπτυσσόμενα μενού, να διαχειριστείτε τα γεγονότα επιλογής και να γεμίσετε τις επιλογές δυναμικά από την εφαρμογή Java.
 
-**Ιδανικό για**: Επιλογείς χώρας/πολιτείας, επιλογές κατηγοριών, επιλογές προϊόντων και οποιοδήποτε σενάριο απαιτεί ελεγχόμενη εισαγωγή.
+**Ιδανικό για**: Επιλογείς χώρας/πολιτείας, επιλογές κατηγορίας, επιλογές προϊόντων και οποιοδήποτε σενάριο που απαιτεί ελεγχόμενη εισαγωγή.
 
-### [Πώς να Προσθέσετε ΑναAnnotations Πλαισίων Ελέγχου σε PDF Χρησιμοποιώντας το GroupDocs.Annotation για Java](./add-checkbox-annotations-pdf-groupdocs-java/)
+### [How to Add CheckBox Annotations to PDFs Using GroupDocs.Annotation for Java](./add-checkbox-annotations-pdf-groupdocs-java/)
 
-Learn to implement checkbox functionality for surveys, agreements, and multi‑select forms. This guide covers individual checkboxes, checkbox groups, and advanced validation techniques to ensure data integrity.
+Μάθετε να υλοποιείτε λειτουργικότητα πλαισίων ελέγχου για έρευνες, συμφωνίες και φόρμες πολλαπλών επιλογών. Αυτός ο οδηγός καλύπτει μεμονωμένα πλαίσια ελέγχου, ομάδες πλαισίων ελέγχου και προηγμένες τεχνικές επικύρωσης για διασφάλιση της ακεραιότητας των δεδομένων.
 
 **Ιδανικό για**: Αποδοχή όρων, επιλογές χαρακτηριστικών, απαντήσεις σε έρευνες και φόρμες συγκατάθεσης.
 
-### [Υλοποίηση ΑναAnnotations Πεδίου Κειμένου σε Java Χρησιμοποιώντας το GroupDocs.Annotation: Πλήρης Οδηγός](./implement-textfield-annotations-java-groupdocs/)
+### [Implement TextField Annotations in Java Using GroupDocs.Annotation: A Comprehensive Guide](./implement-textfield-annotations-java-groupdocs/)
 
-Dive deep into text field implementation with this detailed tutorial. You'll discover how to create single‑line and multi‑line text fields, implement validation rules, handle different data types, and optimize for both desktop and mobile viewing.
+Βυθιστείτε στην υλοποίηση πεδίου κειμένου με αυτό το λεπτομερές tutorial. Θα ανακαλύψετε πώς να δημιουργήσετε πεδία κειμένου μίας γραμμής και πολλαπλών γραμμών, να εφαρμόσετε κανόνες επικύρωσης, να διαχειριστείτε διαφορετικούς τύπους δεδομένων και να βελτιστοποιήσετε για προβολή τόσο σε επιτραπέζιους όσο και σε κινητές συσκευές.
 
-**Ιδανικό για**: Συλλογή πληροφοριών χρήστη, φόρμες ανάδρασης, αίτηση εγγραφής και οποιοδήποτε σενάριο ελεύθερου κειμένου.
+**Ιδανικό για**: Συλλογή πληροφοριών χρηστών, φόρμες ανατροφοδότησης, αίτηση εγγραφής και οποιαδήποτε σενάρια ελεύθερης εισαγωγής κειμένου.
 
-## Καλές Πρακτικές για την Ανάπτυξη Πεδίων Φόρμας PDF
+## Καλές Πρακτικές για Ανάπτυξη Πεδίου Φόρμας PDF
 
 ### Συμβουλές Βελτιστοποίησης Απόδοσης
-When working with multiple form fields, keep these performance considerations in mind:
+Όταν εργάζεστε με πολλαπλά πεδία φόρμας, κρατήστε αυτές τις παραμέτρους απόδοσης στο μυαλό:
 
-- **Batch field creation** – Add several fields in one operation rather than separate API calls.  
-- **Optimize field positioning** – Use consistent coordinates and sizing to improve rendering speed.  
-- **Minimize field complexity** – Simple fields load faster than those with extensive styling or validation.  
-- **Consider mobile viewing** – Ensure field sizes work well on smaller screens.  
+- **Batch field creation** – Προσθέστε πολλά πεδία σε μία λειτουργία αντί για ξεχωριστές κλήσεις API.  
+- **Optimize field positioning** – Χρησιμοποιήστε συνεπείς συντεταγμένες και διαστάσεις για βελτίωση της ταχύτητας απόδοσης.  
+- **Minimize field complexity** – Τα απλά πεδία φορτώνουν πιο γρήγορα από εκείνα με εκτενή στυλιζάρισμα ή επικύρωση.  
+- **Consider mobile viewing** – Διασφαλίστε ότι τα μεγέθη πεδίων λειτουργούν καλά σε μικρότερες οθόνες.  
 
 ### Στρατηγικές Οργάνωσης Κώδικα
-Structure your form‑field code for maintainability:
+Δομήστε τον κώδικα των πεδίων φόρμας για ευκολία συντήρησης:
 
 ```java
 // Group related field creation in helper methods
@@ -120,52 +120,52 @@ private void createContactFields(Annotator annotator) {
 ```
 
 ### Οδηγίες Εμπειρίας Χρήστη
-- **Clear labeling** – Always provide descriptive labels for form fields.  
-- **Logical tab order** – Set appropriate tab sequences for keyboard navigation.  
-- **Consistent styling** – Use uniform fonts, colors, and sizes across all fields.  
-- **Responsive design** – Test your forms on different screen sizes and PDF viewers.  
+- **Clear labeling** – Παρέχετε πάντα περιγραφικές ετικέτες για τα πεδία φόρμας.  
+- **Logical tab order** – Ορίστε κατάλληλες ακολουθίες καρτελών για πλοήγηση με πληκτρολόγιο.  
+- **Consistent styling** – Χρησιμοποιήστε ομοιόμορφα γραμματοσειρές, χρώματα και μεγέθη σε όλα τα πεδία.  
+- **Responsive design** – Δοκιμάστε τις φόρμες σας σε διαφορετικά μεγέθη οθόνης και προγράμματα προβολής PDF.  
 
 ## Συχνά Προβλήματα & Λύσεις
 
 ### Το πεδίο δεν εμφανίζεται στο PDF
-**Problem**: Form field code executes without errors, but the field isn’t visible.  
-**Solution**: Verify your coordinate system and ensure fields aren’t placed outside page boundaries. Also, check that the field dimensions aren’t too small.
+**Problem**: Ο κώδικας του πεδίου φόρμας εκτελείται χωρίς σφάλματα, αλλά το πεδίο δεν είναι ορατό.  
+**Solution**: Επαληθεύστε το σύστημα συντεταγμένων σας και βεβαιωθείτε ότι τα πεδία δεν τοποθετούνται εκτός των ορίων της σελίδας. Επίσης, ελέγξτε ότι οι διαστάσεις του πεδίου δεν είναι πολύ μικρές.
 
 ### Το πεδίο κειμένου δεν δέχεται είσοδο
-**Problem**: Users see the text field but can’t type.  
-**Solution**: Make sure the field is marked as editable and not read‑only. Confirm the PDF viewer you’re testing with supports form editing.
+**Problem**: Οι χρήστες βλέπουν το πεδίο κειμένου αλλά δεν μπορούν να πληκτρολογήσουν.  
+**Solution**: Βεβαιωθείτε ότι το πεδίο είναι σημειωμένο ως επεξεργάσιμο και όχι μόνο για ανάγνωση. Επιβεβαιώστε ότι ο προβολέας PDF που δοκιμάζετε υποστηρίζει επεξεργασία φόρμας.
 
 ### Οι επιλογές του αναπτυσσόμενου μενού δεν εμφανίζονται
-**Problem**: Dropdown appears but shows no selectable options.  
-**Solution**: Ensure you’ve correctly added options during creation. Some viewers require a specific option format; double‑check the API docs.
+**Problem**: Το αναπτυσσόμενο μενού εμφανίζεται αλλά δεν δείχνει επιλογές.  
+**Solution**: Βεβαιωθείτε ότι έχετε προσθέσει σωστά τις επιλογές κατά τη δημιουργία. Ορισμένοι προβολείς απαιτούν συγκεκριμένη μορφή επιλογής· ελέγξτε ξανά την τεκμηρίωση API.
 
-### Προβλήματα απόδοσης με μεγάλα φορματ
-**Problem**: PDF becomes slow when many fields are present.  
-**Solution**: Split large forms across multiple pages or use lazy loading techniques for complex field sets.
+### Προβλήματα απόδοσης με μεγάλες φόρμες
+**Problem**: Το PDF γίνεται αργό όταν υπάρχουν πολλά πεδία.  
+**Solution**: Διαχωρίστε μεγάλες φόρμες σε πολλαπλές σελίδες ή χρησιμοποιήστε τεχνικές lazy loading για σύνθετα σύνολα πεδίων.
 
 ## Συχνές Ερωτήσεις
 
 **Q: Μπορώ να τροποποιήσω υπάρχοντα πεδία φόρμας σε PDF;**  
-A: Yes, GroupDocs.Annotation lets you update field properties, validation rules, or reposition fields after they’ve been created.
+A: Ναι, το GroupDocs.Annotation σας επιτρέπει να ενημερώσετε τις ιδιότητες του πεδίου, τους κανόνες επικύρωσης ή να επανατοποθετήσετε τα πεδία μετά τη δημιουργία τους.
 
 **Q: Λειτουργούν τα πεδία φόρμας σε όλους τους προβολείς PDF;**  
-A: They follow PDF standards, so they work in most modern viewers—including Adobe Reader, Chrome/Edge PDF plugins, and mobile apps. Advanced features may have limited support in older viewers.
+A: Ακολουθούν τα πρότυπα PDF, επομένως λειτουργούν στα περισσότερα σύγχρονα προγράμματα προβολής — συμπεριλαμβανομένου του Adobe Reader, των πρόσθετων PDF του Chrome/Edge και των κινητών εφαρμογών. Οι προηγμένες λειτουργίες μπορεί να έχουν περιορισμένη υποστήριξη σε παλαιότερους προβολείς.
 
-**Q: Πώς εξάγω δεδομένα από συμπληρωμένα πεδία φόρμας;**  
-A: Use the `Annotator` API to iterate over fields and read their current values. This enables you to store responses in a database or trigger downstream processes.
+**Q: Πώς εξάγω δεδομένα από τα συμπληρωμένα πεδία φόρμας;**  
+A: Χρησιμοποιήστε το API `Annotator` για να επαναλάβετε τα πεδία και να διαβάσετε τις τρέχουσες τιμές τους. Αυτό σας επιτρέπει να αποθηκεύσετε τις απαντήσεις σε βάση δεδομένων ή να ενεργοποιήσετε επόμενες διαδικασίες.
 
-**Q: Μπορώ να προσθέσω κανόνες επικύρωσης σε πεδία φόρμας;**  
-A: Basic validation (e.g., required fields) is supported. For complex validation, implement the logic in your Java application after the user submits the form.
+**Q: Μπορώ να προσθέσω κανόνες επικύρωσης στα πεδία φόρμας;**  
+A: Υποστηρίζεται βασική επικύρωση (π.χ., απαιτούμενα πεδία). Για σύνθετη επικύρωση, υλοποιήστε τη λογική στην εφαρμογή Java μετά την υποβολή της φόρμας από τον χρήστη.
 
-**Q: Είναι δυνατόν να δημιουργήσω PDF με δυνατότητα συμπλήρωσης πολλαπλών σελίδων;**  
-A: Absolutely. You can add fields to any page by specifying the page index when creating the annotation.
+**Q: Είναι δυνατόν να δημιουργήσετε συμπληρώσιμα PDFs πολλαπλών σελίδων;**  
+A: Απόλυτα. Μπορείτε να προσθέσετε πεδία σε οποιαδήποτε σελίδα καθορίζοντας το δείκτη σελίδας κατά τη δημιουργία της σημείωσης.
 
 **Q: Ποιες επιλογές αδειοδότησης είναι διαθέσιμες για το GroupDocs.Annotation;**  
-A: Various licensing models exist, including developer, site, and enterprise licenses. Refer to the official pricing page for details.
+A: Υπάρχουν διάφορα μοντέλα αδειοδότησης, συμπεριλαμβανομένων των αδειών για προγραμματιστές, τοποθεσία και επιχειρηματικές. Ανατρέξτε στη επίσημη σελίδα τιμών για λεπτομέρειες.
 
-## Έτοιμοι να Ξεκινήσετε τη Δημιουργία Διαδραστικών PDF;
+## Έτοιμοι να Ξεκινήσετε τη Δημιουργία Διαδραστικών PDFs;
 
-You now have a complete roadmap to **create PDF form fields** in Java, from basic text inputs to sophisticated button actions. Pick the sub‑tutorial that matches your immediate need, experiment with the code, and combine multiple field types to craft powerful, user‑friendly documents.
+Τώρα έχετε έναν πλήρη οδηγό για **add text field PDF** σε Java, από βασικές εισόδους κειμένου μέχρι σύνθετες ενέργειες κουμπιών. Επιλέξτε το υπο‑tutorial που ταιριάζει στην άμεση ανάγκη σας, πειραματιστείτε με τον κώδικα και συνδυάστε πολλαπλούς τύπους πεδίων για να δημιουργήσετε ισχυρά, φιλικά προς τον χρήστη έγγραφα.
 
 ## Πρόσθετοι Πόροι
 
@@ -178,8 +178,6 @@ You now have a complete roadmap to **create PDF form fields** in Java, from basi
 
 ---
 
-**Τελευταία Ενημέρωση:** 2026-01-10  
+**Τελευταία Ενημέρωση:** 2026-03-14  
 **Δοκιμάστηκε Με:** GroupDocs.Annotation 5.2 (τελευταία σταθερή έκδοση)  
-**Συγγραφέας:** GroupDocs  
-
----
+**Συγγραφέας:** GroupDocs
