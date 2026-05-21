@@ -1,40 +1,68 @@
 ---
-"date": "2025-05-06"
-"description": "GroupDocs.Annotation for Java를 사용하여 워터마크 주석을 추가하여 문서를 보호하는 방법을 알아보세요. 이 가이드에서는 설정, 사용자 지정 및 최적화 팁을 다룹니다."
-"title": "GroupDocs.Annotation Java를 사용하여 PDF에 워터마크 주석 구현하기 - 종합 가이드"
-"url": "/ko/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/"
+categories:
+- Java PDF Processing
+date: '2026-02-10'
+description: GroupDocs.Annotation을 사용하여 Java에서 PDF에 여러 페이지에 걸쳐 워터마크를 추가하는 방법을 배워보세요.
+  이 단계별 튜토리얼에서는 코드 예제, 문제 해결 팁 및 모범 사례와 함께 PDF 워터마크를 Java에 추가하는 방법을 보여줍니다.
+keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
+  annotation java, groupdocs java watermark
+lastmod: '2026-02-10'
+linktitle: Java PDF Watermark Guide
+tags:
+- java
+- pdf
+- watermark
+- groupdocs
+- document-security
+title: Java PDF 워터마크 – PDF 워터마크 다중 페이지 가이드
 type: docs
-"weight": 1
+url: /ko/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
+weight: 1
 ---
 
-# GroupDocs.Annotation Java를 사용하여 PDF에 워터마크 주석 구현: 종합 가이드
+# Java PDF 워터마크 – pdf 워터마크 다중 페이지 가이드
 
-## 소개
-오늘날 디지털 시대에는 무단 배포로부터 문서를 보호하는 것이 매우 중요합니다. 민감한 데이터를 보호하는 기업이든 지적 재산을 보호하는 개인이든 PDF에 워터마크를 추가하는 것은 간단하면서도 효과적인 해결책이 될 수 있습니다. 이 튜토리얼에서는 GroupDocs.Annotation Java API를 사용하여 PDF 문서에 워터마크 주석을 추가하는 과정을 안내합니다.
+Adding a **pdf 워터마크 다중 페이지** is a common requirement when you need to protect, brand, or label documents in bulk. In this tutorial you’ll see exactly how to **add pdf watermark java** using GroupDocs.Annotation, from project setup to advanced customizations. We’ll walk through each step, explain the why behind every setting, and give you practical tips to avoid the usual pitfalls.
 
-**배울 내용:**
-- Java용 GroupDocs.Annotation을 설정하고 구성하는 방법
-- 워터마크 주석을 만들고 사용자 지정하는 단계
-- 코드 성능 최적화를 위한 팁
+## Quick Answers
+- **What library can add pdf watermark multiple pages in Java?** GroupDocs.Annotation for Java.  
+- **Do I need a license?** Yes, a free trial works for development; a full license is required for production.  
+- **Can I watermark all pages at once?** Yes – create a watermark annotation for each page in a loop.  
+- **What Java version is required?** JDK 8+ (JDK 11+ recommended).  
+- **How do I control opacity?** Use `setOpacity(double)` where 0.0 is fully transparent and 1.0 is fully opaque.
 
-구현에 들어가기 전에, 시작하는 데 필요한 전제 조건을 살펴보겠습니다.
+## Why You Need PDF Watermarks (And How Java Makes It Easy)
 
-## 필수 조건
-### 필수 라이브러리, 버전 및 종속성
-이 기능을 구현하려면 다음 사항이 있는지 확인하세요.
-- 시스템에 Java Development Kit(JDK)가 설치되어 있어야 합니다.
-- 종속성 관리를 위한 Maven.
+Ever had your important documents shared without permission? Or needed to brand your company's PDFs but didn't know where to start? You're not alone. Adding watermarks to PDFs is one of the most common document security and branding needs developers face today.
 
-### 환경 설정 요구 사항
-Maven과 IntelliJ IDEA 또는 Eclipse와 같은 IDE를 사용하여 개발 환경이 준비되었는지 확인하세요. 
+Whether you're protecting sensitive business documents, branding marketing materials, or just want to prevent unauthorized distribution, adding watermarks programmatically can save you hours of manual work. And with Java and the right library, it's surprisingly straightforward.
 
-### 지식 전제 조건
-Java 프로그래밍에 대한 기본적인 이해와 PDF 파일을 프로그래밍 방식으로 처리하는 데 대한 익숙함이 도움이 될 것입니다.
+In this guide, you'll learn how to add professional‑looking watermarks to PDFs using GroupDocs.Annotation for Java – one of the most reliable Java watermark libraries available. We'll cover everything from basic setup to advanced customization, plus common pitfalls and how to avoid them.
 
-## Java용 GroupDocs.Annotation 설정
-시작하려면 Maven을 사용하여 프로젝트에 GroupDocs.Annotation 라이브러리를 설정해야 합니다. 방법은 다음과 같습니다.
+**What you'll master by the end:**
+- Setting up GroupDocs.Annotation for Java watermarks
+- Creating custom watermark annotations with full control
+- Troubleshooting common watermark implementation issues
+- Optimizing your watermark code for production use
 
-**Maven 설정**
+## What is a PDF Watermark and Why Use It on Multiple Pages?
+
+A PDF watermark is an overlay that sits on top of the document content without altering the original text. Using **pdf 워터마크 다중 페이지** lets you consistently mark every page with a brand, confidentiality notice, or version tag, ensuring the protection travels with the whole document.
+
+## Prerequisites
+
+### Essential Requirements
+
+- **Java Environment:** JDK 8 or higher (JDK 11+ recommended), Maven 3.6+, IDE of your choice.  
+- **Knowledge Prerequisites:** Basic Java, file I/O, Maven dependencies.  
+- **Project Setup:** Write permissions to the output folder and enough RAM for large PDFs.
+
+## Setting Up Your Java PDF Watermark Environment
+
+### Adding GroupDocs.Annotation to Your Project
+
+The first step to adding watermarks to PDFs in Java is getting the GroupDocs.Annotation library properly configured. Here's the Maven setup that actually works:
+
 ```xml
 <repositories>
    <repository>
@@ -52,13 +80,19 @@ Java 프로그래밍에 대한 기본적인 이해와 PDF 파일을 프로그래
 </dependencies>
 ```
 
-### 라이센스 취득 단계
-1. **무료 체험**: 체험판을 다운로드하세요 [GroupDocs 다운로드](https://releases.groupdocs.com/annotation/java/) 기능을 테스트하려면.
-2. **임시 면허**: 전체 기능 액세스를 위한 임시 라이센스를 얻으려면 다음을 방문하세요. [임시 면허 페이지](https://purchase.groupdocs.com/temporary-license/).
-3. **구입**: 장기 사용을 위해서는 정식 버전을 구매하세요. [GroupDocs 구매 페이지](https://purchase.groupdocs.com/buy).
+**Pro tip**: Always use the latest version for bug fixes and performance improvements. The version above is current as of 2025.
 
-### 기본 초기화 및 설정
-Maven을 구성한 후 다음과 같이 GroupDocs.Annotation을 초기화할 수 있습니다.
+### Getting Your License Sorted
+
+Here's something many tutorials skip – you need proper licensing for production use. Here are your options:
+
+1. **Free Trial**: Perfect for testing and development. Download from [GroupDocs 다운로드](https://releases.groupdocs.com/annotation/java/)
+2. **Temporary License**: Get full features for evaluation. Grab one from the [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)
+3. **Full License**: For production applications. Purchase from [Purchase GroupDocs 페이지](https://purchase.groupdocs.com/buy)
+
+### Basic Setup That Actually Works
+
+Once you've got your dependencies sorted, here's how to initialize the library properly:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -68,18 +102,27 @@ public class WatermarkSetup {
         String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
         Annotator annotator = new Annotator(inputFilePath);
         
-        // 주석 추가를 진행하세요...
+        // Your watermark code goes here...
+        // Always remember to dispose!
+        annotator.dispose();
     }
 }
 ```
 
-## 구현 가이드
-PDF 문서에 워터마크 주석을 추가하는 핵심 기능을 살펴보겠습니다.
+**Common mistake to avoid**: Forgetting to call `dispose()` can lead to memory leaks, especially when processing multiple documents.
 
-### 워터마크 주석 개요
-워터마크 주석을 사용하면 문서에 눈에 띄는 텍스트나 이미지를 오버레이로 추가할 수 있습니다. 이 기능은 특히 기밀 정보에 브랜딩이나 표시를 할 때 유용합니다.
+## How to Add pdf watermark multiple pages with Java
 
-#### 1단계: 필요한 클래스 가져오기
+Now for the main event – actually adding those watermarks! The GroupDocs.Annotation library makes this surprisingly straightforward once you understand the components.
+
+### Understanding Watermark Annotations
+
+Think of watermark annotations as overlay layers on your PDF. They can contain text, have custom positioning, colors, opacity levels, and even rotation angles. Unlike simple text additions, watermark annotations are specifically designed to be visible markers that don't interfere with the document's core content.
+
+### Step 1: Import the Right Classes
+
+First, let's get all our imports sorted. These are the essential classes you'll need:
+
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -89,16 +132,27 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-#### 2단계: 주석자 초기화 및 파일 경로 정의
+Each class has a specific role:
+- `Annotator`: Your main interface for working with the PDF  
+- `WatermarkAnnotation`: The watermark object you'll customize  
+- `Rectangle`: Defines where your watermark appears and its size  
+- `Reply`: Optional comments or notes about the watermark  
+
+### Step 2: Initialize Your PDF for Watermarking
+
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 
 final Annotator annotator = new Annotator(inputFilePath);
 ```
-*설명*: 그 `Annotator` 클래스는 PDF 파일 경로로 초기화됩니다. 이 객체는 주석을 추가하는 데 사용됩니다.
 
-#### 3단계: 주석에 대한 응답 개체 만들기
+**Important note**: The `Annotator` object loads your PDF into memory, so make sure you have sufficient RAM for large files. For PDFs over 50 MB, consider processing in smaller batches.
+
+### Step 3: Create Optional Reply Objects
+
+While not required, replies can be useful for document tracking or approval workflows:
+
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -108,72 +162,239 @@ Reply reply2 = new Reply();
 reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
-*설명*: 답변은 선택 사항이며 워터마크와 관련된 댓글이나 메모를 추가하는 데 사용할 수 있습니다.
 
-#### 4단계: 워터마크 주석 구성
+These replies become part of the annotation metadata and can be viewed in PDF readers that support annotation comments.
+
+### Step 4: Configure Your Watermark (The Fun Part!)
+
+This is where you get creative. The watermark configuration controls everything about how your watermark appears:
+
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 
 WatermarkAnnotation watermark = new WatermarkAnnotation();
-watermark.setAngle(75.0); // 워터마크의 각도를 설정합니다.
-watermark.setBox(new Rectangle(200, 200, 100, 50)); // 사각형으로 위치와 크기를 정의합니다.
+watermark.setAngle(75.0); // Set the angle of the watermark.
+watermark.setBox(new Rectangle(200, 200, 100, 50)); // Define position and size with a rectangle.
 watermark.setCreatedOn(Calendar.getInstance().getTime());
 watermark.setText("Watermark");
-watermark.setFontColor(65535); // ARGB 형식의 노란색
+watermark.setFontColor(65535); // Yellow color in ARGB format
 watermark.setFontSize(12.0);
 watermark.setMessage("This is a watermark annotation");
 watermark.setOpacity(0.7);
 watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
-*설명*이 섹션에서는 텍스트, 글꼴 크기, 색상, 불투명도를 포함하여 워터마크의 모양과 위치를 구성합니다.
 
-#### 5단계: Annotator에 워터마크 추가
+**Let's break down these settings:**
+- `setAngle(75.0)`: Rotates your watermark 75 degrees. Great for diagonal “CONFIDENTIAL” stamps.  
+- `setBox(new Rectangle(200, 200, 100, 50))`: Position (200, 200) with width 100 and height 50.  
+- `setFontColor(65535)`: ARGB color format – yellow in this case.  
+- `setOpacity(0.7)`: 70 % opacity – visible but not overwhelming.  
+- `setPageNumber(0)`: Applies to the first page (0‑indexed).  
+
+### Step 5: Apply and Save Your Watermarked PDF
+
 ```java
 annotator.add(watermark);
-anotator.save(outputPath);
-anotator.dispose();
+annotator.save(outputPath);
+annotator.dispose();
 ```
-*설명*: 구성된 워터마크가 문서에 추가됩니다. 마지막으로 리소스를 적절히 저장하고 폐기합니다.
 
-### 문제 해결 팁
-- **파일 경로 문제**: 파일 경로가 올바르고 접근 가능한지 확인하세요.
-- **라이브러리 버전 불일치**: Maven에 지정된 호환 버전을 사용하고 있는지 확인하세요.
-- **메모리 누수**: 항상 전화하세요 `dispose()` 주석 객체에 대한 리소스를 확보합니다.
+That's it! Your PDF now has a professional watermark. The `save()` method creates a new PDF file with your watermark applied, leaving the original untouched.
 
-## 실제 응용 프로그램
-1. **브랜딩 문서**: 브랜드 일관성을 위해 회사 로고나 이름을 워터마크로 추가합니다.
-2. **기밀 유지 표시**: 민감한 문서를 "기밀"로 표시하여 보호하세요.
-3. **버전 제어**: 워터마크를 사용하여 문서 버전이나 검토 상태를 나타냅니다.
-4. **교육 자료 보호**: 교육 콘텐츠의 무단 배포를 방지합니다.
-5. **법률 문서 보안**: 법률 및 금융 문서의 보안을 강화합니다.
+## How to Add pdf watermark multiple pages (All Pages)
 
-## 성능 고려 사항
-- **메모리 사용 최적화**: 다음을 사용하여 자원의 적절한 처리를 보장합니다. `annotator.dispose()`.
-- **일괄 처리**: 여러 문서를 순차적으로 처리하여 메모리를 효과적으로 관리합니다.
-- **병렬 실행**: Java의 G1 가비지 컬렉터를 고려하여 멀티스레딩을 신중하게 사용하세요.
+By default, a watermark applies to a single page. To **add pdf watermark multiple pages**, loop through the document pages and add a separate `WatermarkAnnotation` for each one:
 
-## 결론
-이 가이드를 따라 GroupDocs.Annotation for Java를 사용하여 PDF에 워터마크 주석을 추가하는 방법을 알아보았습니다. 이 기능은 문서 보호 및 브랜딩을 위한 강력한 도구입니다. 더 자세히 알아보려면 다양한 주석 유형을 시험해 보거나 다른 문서 관리 시스템과 통합해 보세요.
+```java
+// Get total page count first
+int pageCount = annotator.getDocument().getPages().size();
 
-**다음 단계**: 작은 프로젝트에 워터마킹을 구현해보고 GroupDocs.Annotation의 모든 기능을 살펴보세요.
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation watermark = new WatermarkAnnotation();
+    // Reuse the same configuration or customize per page
+    watermark.setAngle(45.0);
+    watermark.setText("CONFIDENTIAL");
+    watermark.setFontColor(16711680); // Red
+    watermark.setOpacity(0.3);
+    watermark.setFontSize(24.0);
+    watermark.setBox(new Rectangle(100, 300, 400, 100));
+    watermark.setPageNumber(i);
+    annotator.add(watermark);
+}
+annotator.save(outputPath);
+annotator.dispose();
+```
 
-## FAQ 섹션
-1. **파일 경로 오류가 발생하면 어떻게 해야 하나요?**
-   - 경로가 올바르게 설정되었고 애플리케이션에서 접근 가능한지 확인하세요.
-2. **워터마크의 글꼴 스타일을 사용자 정의할 수 있나요?**
-   - 예, 사용 가능한 API 메서드(예:)를 사용하여 글꼴 스타일을 조정할 수 있습니다. `setFontStyle`).
-3. **문서의 여러 페이지를 어떻게 처리하나요?**
-   - 필요에 따라 각 페이지에 별도의 워터마크 주석을 추가합니다.
-4. **텍스트 대신 이미지 워터마크를 추가하는 것이 가능합니까?**
-   - 이 가이드는 텍스트에 중점을 두고 있지만, GroupDocs는 이미지를 포함한 다양한 주석 유형을 지원합니다.
-5. **더 많은 예와 문서는 어디에서 찾을 수 있나요?**
-   - 방문하다 [GroupDocs 문서](https://docs.groupdocs.com/annotation/java/) 포괄적인 가이드와 API 참조를 확인하세요.
+This snippet demonstrates the exact pattern you need to **add pdf watermark multiple pages** efficiently.
 
-## 자원
-- **선적 서류 비치**: [GroupDocs 주석 Java 문서](https://docs.groupdocs.com/annotation/java/)
-- **API 참조**: [GroupDocs 주석 Java API](https://reference.groupdocs.com/annotation/java/)
-- **다운로드**: [GroupDocs 다운로드](https://releases.groupdocs.com/annotation/java/)
-- **구입**: [GroupDocs 구매](https://purchase.groupdocs.com/buy)
+## Common Issues and How to Fix Them
+
+### "File Not Found" Errors
+
+```java
+// Better error handling approach
+try {
+    File inputFile = new File(inputFilePath);
+    if (!inputFile.exists()) {
+        throw new FileNotFoundException("Input PDF not found: " + inputFilePath);
+    }
+    
+    Annotator annotator = new Annotator(inputFilePath);
+    // ... your watermark code
+} catch (Exception e) {
+    System.err.println("Error processing PDF: " + e.getMessage());
+}
+```
+
+- Double‑check absolute paths.  
+- Verify read/write permissions.  
+- Ensure the output folder exists.
+
+### Memory Issues with Large PDFs
+
+- Always call `dispose()`.  
+- Process files one at a time, not in parallel.  
+- Increase JVM heap (`-Xmx4g` for very large docs).  
+
+### Watermark Not Appearing Where Expected
+
+- Remember PDF coordinates start from the **bottom‑left**.  
+- Test with different page sizes; A4 vs. Letter can shift positions.  
+- Adjust opacity if the watermark looks faint.
+
+### Font Color Issues
+
+ARGB values you can use:
+- Red: `16711680`  
+- Blue: `255`  
+- Green: `65280`  
+- Black: `0`  
+- White: `16777215`  
+- Yellow: `65535` (as used in our example)
+
+## Real‑World Use Cases for Java PDF Watermarks
+
+### Business Document Protection
+
+```java
+WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
+confidentialWatermark.setAngle(45.0);
+confidentialWatermark.setText("CONFIDENTIAL");
+confidentialWatermark.setFontColor(16711680); // Red
+confidentialWatermark.setOpacity(0.3); // Subtle but visible
+confidentialWatermark.setFontSize(24.0);
+confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
+```
+
+### Branding Marketing Materials
+
+```java
+WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
+brandWatermark.setText("© YourCompany 2025");
+brandWatermark.setFontColor(0); // Black
+brandWatermark.setOpacity(0.6);
+brandWatermark.setFontSize(10.0);
+brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
+```
+
+### Version Control for Documents
+
+```java
+WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
+versionWatermark.setText("DRAFT - v2.1");
+versionWatermark.setFontColor(255); // Blue
+versionWatermark.setOpacity(0.8);
+versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
+```
+
+## Performance Optimization Tips
+
+### Memory Management Best Practices
+
+```java
+public void processMultiplePDFs(List<String> pdfPaths) {
+    for (String path : pdfPaths) {
+        Annotator annotator = null;
+        try {
+            annotator = new Annotator(path);
+            // Add your watermark logic here
+            annotator.save(path.replace(".pdf", "_watermarked.pdf"));
+        } finally {
+            if (annotator != null) {
+                annotator.dispose(); // Always dispose, even if exceptions occur
+            }
+        }
+    }
+}
+```
+
+### Batch Processing Strategies
+
+- Process documents sequentially to keep memory usage low.  
+- Use a progress indicator for long runs.  
+- Avoid parallel processing unless the library’s thread‑safety is confirmed.
+
+### Code Organization Tips
+
+```java
+public class WatermarkTemplates {
+    public static WatermarkAnnotation createConfidentialWatermark() {
+        WatermarkAnnotation watermark = new WatermarkAnnotation();
+        watermark.setAngle(45.0);
+        watermark.setText("CONFIDENTIAL");
+        watermark.setFontColor(16711680);
+        watermark.setOpacity(0.3);
+        watermark.setFontSize(24.0);
+        return watermark;
+    }
+    
+    public static WatermarkAnnotation createBrandWatermark(String companyName) {
+        WatermarkAnnotation watermark = new WatermarkAnnotation();
+        watermark.setText("© " + companyName + " 2025");
+        watermark.setFontColor(0);
+        watermark.setOpacity(0.6);
+        watermark.setFontSize(10.0);
+        return watermark;
+    }
+}
+```
+
+## Frequently Asked Questions
+
+**Q: How do I add watermarks to multiple pages in a PDF?**  
+A: Use a loop over the document’s page count and create a `WatermarkAnnotation` for each page, setting `setPageNumber(i)` inside the loop.
+
+**Q: Can I use custom fonts for my watermarks?**  
+A: GroupDocs.Annotation uses system‑installed fonts. Specify a font family that exists on the host machine; the library falls back to a default if the font isn’t found.
+
+**Q: What opacity setting works best for professional watermarks?**  
+A: Between **0.3** and **0.7** is ideal—low enough to keep the content readable, high enough to be noticeable.
+
+**Q: How should I handle very large PDF files?**  
+A: Increase JVM heap (`-Xmx4g` or more), process files one at a time, and always call `dispose()` after each document.
+
+**Q: Is it possible to remove or modify existing watermarks?**  
+A: Yes—retrieve existing annotations with `annotator.get()`, filter for `WatermarkAnnotation`, then edit or delete as needed:
+
+```java
+// Get existing annotations
+List<AnnotationBase> annotations = annotator.get();
+// Filter and modify as needed
+```
+
+## Additional Resources
+
+- **Documentation**: [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Complete API Reference**: [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **Download Latest Version**: [GroupDocs 다운로드](https://releases.groupdocs.com/annotation/java/)  
+- **Commercial Licensing**: [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **Community Support**: [GroupDocs 포럼](https://forum.groupdocs.com/c/annotation/10)
+
+---
+
+**Last Updated:** 2026-02-10  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
