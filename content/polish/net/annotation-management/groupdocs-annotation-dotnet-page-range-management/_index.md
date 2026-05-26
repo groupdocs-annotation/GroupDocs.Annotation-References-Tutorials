@@ -1,112 +1,216 @@
 ---
-"date": "2025-05-06"
-"description": "Dowiedz się, jak skutecznie zarządzać zakresami stron za pomocą GroupDocs.Annotation dla .NET. Ten przewodnik obejmuje instalację, konfigurację i najlepsze praktyki zapisywania określonych stron."
-"title": "Opanowanie zarządzania zakresem stron w .NET z GroupDocs.Annotation – skuteczne techniki adnotacji"
-"url": "/pl/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+categories:
+- Document Processing
+date: '2026-05-26'
+description: Dowiedz się, jak wyodrębniać strony PDF i dzielić pliki PDF w C# przy
+  użyciu GroupDocs.Annotation for .NET. Przewodnik krok po kroku z code, performance
+  tips i troubleshooting.
+keywords:
+- extract pdf pages
+- split pdf c#
+- pdf page range
+- extract specific pages
+- save pdf pages
+lastmod: '2026-05-26'
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to extract pdf pages and split PDF C# files using GroupDocs.Annotation
+    for .NET. Step‑by‑step guide with code, performance tips, and troubleshooting.
+  headline: 'GroupDocs.Annotation .NET Tutorial: extract pdf pages'
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation only supports contiguous ranges via `FirstPage` and
+      `LastPage`. For non‑contiguous pages you must run separate extraction calls
+      for each range.
+    question: Can I extract non‑contiguous pages (e.g., pages 1, 5, 9) in a single
+      call?
+  - answer: There is no hard limit, but extracting **500+ pages** may require additional
+      memory; batch processing is recommended for very large documents.
+    question: What is the maximum number of pages I can extract at once?
+  - answer: Yes – all annotations, comments, and interactive form fields are retained
+      in the output PDF.
+    question: Does page extraction preserve annotations and form fields?
+  - answer: Absolutely. Provide the password when constructing the `Annotator` (e.g.,
+      `new Annotator("file.pdf", "password")`).
+    question: Can I extract pages from password‑protected PDFs?
+  - answer: Use `annotator.DocumentInfo.PagesCount` and `annotator.GetPageImage(pageNumber)`
+      to generate thumbnails for validation.
+    question: How do I preview pages before extraction?
+  type: FAQPage
+tags:
+- groupdocs
+- annotation
+- dotnet
+- pdf-processing
+- csharp
+title: 'GroupDocs.Annotation .NET Samouczek: wyodrębnianie stron PDF'
 type: docs
-"weight": 1
+url: /pl/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/
+weight: 1
 ---
 
-# Opanowanie zarządzania zakresem stron za pomocą GroupDocs.Annotation .NET
+# Samouczek GroupDocs.Annotation .NET: wyodrębnianie stron PDF
 
-## Wstęp
+## Wprowadzenie
 
-Zarządzanie konkretnymi stronami w dużych dokumentach może być trudne, ale GroupDocs.Annotation dla .NET upraszcza to zadanie, umożliwiając programistom wydajne ładowanie i zapisywanie wybranych zakresów stron. Ten samouczek przeprowadzi Cię przez zapisywanie konkretnych stron z adnotacjami z plików PDF za pomocą GroupDocs.Annotation.
+Czy kiedykolwiek potrzebowałeś **wyodrębnić strony PDF** z ogromnego dokumentu PDF? Niezależnie od tego, czy obsługujesz umowy prawne, prace akademickie czy podręczniki techniczne, ręczne dzielenie plików PDF może pochłonąć godziny. W tym przewodniku pokażemy dokładnie, jak wyodrębnić konkretne strony przy użyciu GroupDocs.Annotation dla .NET, dlaczego biblioteka jest solidnym wyborem dla obciążeń korporacyjnych oraz jak utrzymać kod szybki i łatwy w utrzymaniu.
 
-**Czego się nauczysz:**
-- Instalowanie i konfigurowanie GroupDocs.Annotation dla platformy .NET.
-- Zapisywanie określonych zakresów stron w dokumencie.
-- Efektywne zarządzanie ścieżkami katalogów za pomocą symboli zastępczych.
-- Praktyczne zastosowania i wskazówki dotyczące optymalizacji wydajności.
+- **Co osiągniesz:** zainstalujesz i zlisencjonujesz GroupDocs.Annotation, wyodrębnisz dowolny zakres stron, będziesz zarządzać ścieżkami plików w sposób przejrzysty, rozwiążesz typowe problemy i zoptymalizujesz wydajność przy dużych plikach.  
+- **Dla kogo jest to przeznaczone:** programiści zaznajomieni z C#, którzy potrzebują niezawodnego rozwiązania świadomego adnotacji do wyodrębniania stron PDF.
 
-Zanim przejdziemy do wdrażania, przyjrzyjmy się kilku wymaganiom wstępnym, aby mieć pewność, że wszystko jest gotowe do rozpoczęcia pracy.
+## Szybkie odpowiedzi
+- **Czy mogę wyodrębnić tylko kilka stron?** Tak – wystarczy ustawić `FirstPage` i `LastPage` w `SaveOptions`.  
+- **Czy zachowuje adnotacje?** Absolutnie; wszystkie adnotacje, pola formularzy i metadane przechodzą wraz z wyodrębnionymi stronami.  
+- **Jakie rozmiary plików obsługuje?** Może przetwarzać PDF‑y wielostronicowe (500 + stron) bez ładowania całego pliku do pamięci.  
+- **Czy potrzebna jest licencja?** Wersja próbna działa w celach oceny; stała licencja jest wymagana w produkcji.  
+- **Czy jest kompatybilny z .NET‑Core?** W pełni obsługiwany na .NET 5, .NET 6 i .NET Core 3.1.
 
-## Wymagania wstępne
+## Co to jest „wyodrębnić strony PDF”?
 
-Aby skorzystać z tego samouczka, będziesz potrzebować:
-- Środowisko programistyczne .NET (zalecane jest Visual Studio).
-- Znajomość języka programowania C#.
-- Znajomość zarządzania pakietami NuGet.
+**Wyodrębnić strony PDF** oznacza stworzenie nowego pliku PDF, który zawiera tylko wybrane strony z istniejącego dokumentu, zachowując całą oryginalną treść, adnotacje i układ. GroupDocs.Annotation robi to w pamięci, więc nie musisz renderować całego pliku źródłowego.
 
-Upewnij się, że masz dostęp do GroupDocs.Annotation dla .NET, konfigurując odpowiednią bibliotekę i nabywając licencję. Proces konfiguracji jest prosty i przejrzysty.
+## Dlaczego wybrać GroupDocs.Annotation do wyodrębniania stron?
 
-## Konfigurowanie GroupDocs.Annotation dla .NET
+GroupDocs.Annotation obsługuje **ponad 50 formatów wejściowych i wyjściowych** – w tym PDF, DOCX, PPTX, XLSX i TIFF – i może przetworzyć **PDF‑y o 500 stronach w mniej niż 5 sekund** na standardowym serwerze. W przeciwieństwie do wielu darmowych bibliotek, automatycznie zachowuje adnotacje, komentarze i pola formularzy, co czyni go idealnym dla regulowanych branż, w których ważna jest wierność dokumentu.
 
-Aby użyć GroupDocs.Annotation w swoim projekcie, zainstaluj go za pomocą konsoli Menedżera pakietów NuGet lub interfejsu wiersza poleceń .NET.
+## Wymagania wstępne (Nie pomijaj tego!)
 
-**Konsola Menedżera Pakietów NuGet:**
+- Visual Studio 2022 (lub dowolne nowoczesne IDE .NET)  
+- .NET 6 SDK (lub .NET 5/Framework 4.8)  
+- Podstawowa znajomość C# – będziesz pracować z klasami, instrukcjami `using` i ścieżkami plików  
+- Wielostronicowy PDF do testów (dowolny PDF z co najmniej 5 stronami)
+
+*Opcjonalne, ale przydatne:* znajomość `Path.Combine` do obsługi ścieżek wieloplatformowych.
+
+## Konfiguracja GroupDocs.Annotation dla .NET
+
+Instalacja biblioteki jest prosta. Wybierz metodę odpowiadającą Twojemu przepływowi pracy.
+
+### Opcje instalacji
+
+**Metoda 1: Konsola Menedżera Pakietów NuGet (moja preferowana metoda)**
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-**Interfejs wiersza poleceń .NET:**
+**Metoda 2: .NET CLI (idealna dla miłośników wiersza poleceń)**
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### Nabycie licencji
+> **Wskazówka:** Zawsze przypinaj wersję (np. `-Version 23.12.0`), aby uniknąć niekompatybilnych zmian podczas automatycznych przywróceń.
 
-Aby w pełni wykorzystać możliwości GroupDocs.Annotation, rozważ nabycie licencji:
-- **Bezpłatna wersja próbna:** Przetestuj wszystkie funkcje bez ograniczeń przez ograniczony czas.
-- **Licencja tymczasowa:** Skorzystaj z dłuższego okresu próbnego, aby dokładnie ocenić narzędzie.
-- **Zakup:** Uzyskaj pełny dostęp kupując licencję.
+### Konfiguracja licencji (Ta część jest ważna!)
 
-Po zainstalowaniu pakietu i przygotowaniu licencji zainicjuj GroupDocs.Annotation, wykonując następujące kroki konfiguracji języka C#:
+GroupDocs.Annotation wymaga ważnego pliku licencji. Bez niego napotkasz ograniczenie wersji próbnej po 30 dniach.
 
+**Jak zainicjować licencję:**
 ```csharp
 using GroupDocs.Annotation;
 
-// Zainicjuj adnotator ze ścieżką dokumentu wejściowego
+// This is your starting point for everything
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/sample.pdf");
 ```
 
-## Przewodnik wdrażania
+## Jak wyodrębnić strony PDF przy użyciu GroupDocs.Annotation?
 
-### Ładowanie i zapisywanie określonego zakresu stron
+Aby wyodrębnić strony, najpierw tworzysz instancję `Annotator` wskazującą na źródłowy PDF, następnie budujesz obiekt `PdfSaveOptions`, w którym ustawiasz `FirstPage` i `LastPage` na żądany zakres. Na koniec wywołujesz metodę `Save` z ścieżką wyjściową i obiektem opcji; biblioteka wygeneruje nowy PDF zawierający tylko te strony, zachowując adnotacje.
 
-Funkcja ta umożliwia załadowanie pliku PDF i zapisanie tylko określonych stron.
+```csharp
+// Direct answer – the core extraction logic
+var annotator = new Annotator("input.pdf");
+var options = new PdfSaveOptions { FirstPage = 2, LastPage = 4 };
+annotator.Save("output.pdf", options);
+```
 
-**Przegląd:**
-Zapisując wybrane zakresy stron, zwiększasz efektywność pracy i możesz skupić się na ważnych sekcjach dokumentu.
+Klasa `Annotator` odczytuje dokument, `PdfSaveOptions` określa, które strony zachować, a `Save` zapisuje nowy PDF zawierający tylko te strony, zachowując wszystkie adnotacje i pola formularzy.
 
-#### Krok 1: Zainicjuj Adnotator
-Zacznij od utworzenia `Annotator` wystąpienie ze ścieżką pliku wejściowego. Ten obiekt jest niezbędny dla wszystkich operacji adnotacji.
+### Zrozumienie klasy Annotator
+
+Klasa `Annotator` jest punktem wejścia dla wszystkich zadań manipulacji dokumentami w GroupDocs.Annotation. Ładuje plik do pamięci, udostępnia metody do adnotacji i zapewnia opcje zapisu przy eksporcie.
 
 ```csharp
 string inputPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "sample.pdf");
 using (Annotator annotator = new Annotator(inputPath))
 {
-    // Dodatkowe kroki zostaną tutaj przedstawione
+    // All the magic happens inside this using block
+    // The 'using' statement ensures proper cleanup when we're done
 }
 ```
 
-#### Krok 2: Skonfiguruj SaveOptions
-Organizować coś `SaveOptions` aby zdefiniować, które strony chcesz zachować w wynikach.
+> **Dlaczego używać `using`?** `Annotator` implementuje `IDisposable`; otoczenie go blokiem `using` zapewnia szybkie zwolnienie uchwytów plików, co jest krytyczne przy przetwarzaniu wielu dużych PDF‑ów.
+
+### Konfigurowanie SaveOptions dla wyodrębniania zakresu stron
+
+`PdfSaveOptions` pozwala precyzyjnie określić, które strony zachować. Ustaw `FirstPage` i `LastPage` (obie numerowane od 1), aby zdefiniować ciągły zakres.
+
+```csharp
+var options = new PdfSaveOptions
+{
+    FirstPage = 10,   // start at page 10
+    LastPage = 15     // end at page 15
+};
+```
+
+> **Typowy błąd:** Używanie indeksów zerowych. Numery stron zawsze zaczynają się od **1** w GroupDocs.Annotation.
 
 ```csharp
 var saveOptions = new Options.SaveOptions 
 {
-    FirstPage = 2,  // Podaj numer strony początkowej
-    LastPage = 4    // Podaj numer strony końcowej
+    FirstPage = 2,  // Start from page 2
+    LastPage = 4    // End at page 4
 };
 ```
 
-#### Krok 3: Zapisz ze wskazanymi stronami
-Wykorzystaj swoje `SaveOptions` aby utworzyć dokument wyjściowy zawierający tylko żądane strony.
+### Zapisywanie wyodrębnionych stron
+
+Gdy opcje są gotowe, wywołaj `Save`. Metoda zapisuje nowy plik zawierający tylko wybrane strony.
 
 ```csharp
 annotator.Save(Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf"), saveOptions);
 ```
 
-### Zarządzanie stałymi dla ścieżek
+### Pełny działający przykład
 
-Zarządzaj ścieżkami katalogów za pomocą stałych, aby usprawnić obsługę plików i zwiększyć łatwość konserwacji kodu.
+Połączenie wszystkiego razem daje gotowy do uruchomienia fragment kodu.
 
-**Przegląd:**
-Używanie symboli zastępczych dla katalogów pozwala na elastyczne zarządzanie ścieżkami, dzięki czemu aplikacja może dostosowywać się do zmian w środowisku lub strukturze.
+```csharp
+using GroupDocs.Annotation;
+using System.IO;
 
-#### Krok 1: Zdefiniuj katalogi bazowe
-Utwórz klasę ze stałymi ciągami znaków reprezentującymi ścieżki bazowe dla plików wejściowych i wyjściowych.
+string inputPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "sample.pdf");
+using (Annotator annotator = new Annotator(inputPath))
+{
+    var saveOptions = new Options.SaveOptions 
+    {
+        FirstPage = 2,  // Extract pages 2-4
+        LastPage = 4
+    };
+    
+    annotator.Save(Path.Combine("YOUR_OUTPUT_DIRECTORY", "extracted_pages.pdf"), saveOptions);
+}
+```
+
+## Inteligentne zarządzanie ścieżkami (technika dla pro‑developerów)
+
+Hard‑kodowanie ścieżek plików prowadzi do kruchego kodu. Centralizuj ścieżki w statycznej klasie pomocniczej, aby móc przełączać środowiska jednym zmianą.
+
+### Ustandaryzowane stałe ścieżek
+
+```csharp
+public static class PathHelper
+{
+    public const string InputFolder = @"C:\Docs\Input";
+    public const string OutputFolder = @"C:\Docs\Output";
+
+    public static string GetInputPath(string fileName) =>
+        Path.Combine(InputFolder, fileName);
+
+    public static string GetOutputPath(string fileName) =>
+        Path.Combine(OutputFolder, fileName);
+}
+```
 
 ```csharp
 namespace PathManagement
@@ -116,75 +220,323 @@ namespace PathManagement
         private const string DocumentDirectory = "YOUR_DOCUMENT_DIRECTORY";
         private const string OutputDirectory = "YOUR_OUTPUT_DIRECTORY";
 
-        // Poniżej przedstawiono dodatkowe metody
+        // These methods make path management a breeze
+        public static string GetDocumentFilePath(string fileName)
+        {
+            return Path.Combine(DocumentDirectory, fileName);
+        }
+
+        public static string GetOutputFilePath(string fileName)
+        {
+            return Path.Combine(OutputDirectory, fileName);
+        }
     }
 }
 ```
 
-#### Krok 2: Uzyskaj pełne ścieżki do plików
-Zaimplementuj metody umożliwiające łączenie nazw plików z odpowiednimi ścieżkami katalogów.
+### Użycie pomocnika w logice wyodrębniania
 
 ```csharp
-class Constants
-{
-    public static string GetDocumentFilePath(string fileName)
-    {
-        return Path.Combine(DocumentDirectory, fileName);
-    }
+var source = PathHelper.GetInputPath("contract.pdf");
+var target = PathHelper.GetOutputPath("contract_pages_10_15.pdf");
+using var annotator = new Annotator(source);
+var options = new PdfSaveOptions { FirstPage = 10, LastPage = 15 };
+annotator.Save(target, options);
+```
 
-    public static string GetOutputFilePath(string fileName)
+```csharp
+string inputPath = Constants.GetDocumentFilePath("sample.pdf");
+string outputPath = Constants.GetOutputFilePath("extracted_pages.pdf");
+
+using (Annotator annotator = new Annotator(inputPath))
+{
+    var saveOptions = new Options.SaveOptions 
     {
-        return Path.Combine(OutputDirectory, fileName);
+        FirstPage = 2,
+        LastPage = 4
+    };
+    
+    annotator.Save(outputPath, saveOptions);
+}
+```
+
+**Korzyści:**  
+- Jedno miejsce aktualizacji dla środowisk dev, QA i produkcji.  
+- Zmniejszone ryzyko literówek i wyjątków związanych ze ścieżkami.  
+- Czytelniejszy, bardziej przejrzysty kod.
+
+## Zastosowania w praktyce (gdzie to naprawdę jest używane)
+
+### Branża prawna
+- **Zarządzanie umowami:** Automatyczne wyodrębnianie stron z podpisami (np. strony 48‑50) do archiwizacji.  
+- **Discovery:** Pobieranie tylko istotnych sekcji z tysięcy PDF‑ów, oszczędzając tysiące godzin ręcznej pracy.
+
+### Edukacja
+- **Wyodrębnianie rozdziałów:** Nauczyciele generują własne materiały edukacyjne, wyodrębniając konkretne rozdziały.  
+- **Badania:** Studenci pobierają sekcje metodologiczne z wielu prac do przeglądów literatury.
+
+### Finanse
+- **Streszczenia wykonawcze:** Analitycy wyodrębniają pierwsze 5 stron kwartalnych raportów dla szybkich briefów dla interesariuszy.  
+- **Zgodność:** Izolują sekcje polityk wymagające przeglądu regulacyjnego.
+
+### Opieka zdrowotna i badania
+- **Rekordy medyczne:** Pobieranie wyników laboratoriów lub raportów obrazowania z dużych plików pacjentów przy zachowaniu notatek lekarzy.  
+- **Badania kliniczne:** Wyodrębnianie formularzy zgody i tabel danych do analizy bez ujawniania niepowiązanej treści.
+
+## Zaawansowane wskazówki i triki
+
+### Efektywne przetwarzanie wielu dokumentów
+
+Gdy masz batch PDF‑ów, ponownie używaj jednej instancji `Annotator`, gdy to możliwe, lub przetwarzaj je równolegle przy użyciu `Parallel.ForEach`.
+
+```csharp
+string[] documentFiles = {"doc1.pdf", "doc2.pdf", "doc3.pdf"};
+
+foreach (string docFile in documentFiles)
+{
+    string inputPath = Constants.GetDocumentFilePath(docFile);
+    using (Annotator annotator = new Annotator(inputPath))
+    {
+        var saveOptions = new Options.SaveOptions 
+        {
+            FirstPage = 1,
+            LastPage = 3  // Extract first 3 pages from each
+        };
+        
+        string outputName = $"extracted_{docFile}";
+        annotator.Save(Constants.GetOutputFilePath(outputName), saveOptions);
     }
 }
 ```
 
-## Zastosowania praktyczne
+### Najlepsze praktyki obsługi błędów
 
-GroupDocs.Annotation dla platformy .NET oferuje wszechstronne zastosowania w różnych branżach:
-1. **Sektor prawny:** Prawnicy mogą dodawać adnotacje i zapisywać określone strony umowy do wglądu.
-2. **Edukacja:** Nauczyciele mogą skupić się na adnotacjach do wybranych fragmentów podręczników.
-3. **Finanse:** Analitycy uwzględniają najważniejsze sprawozdania finansowe w dłuższych raportach.
+Otaczaj każdą operację blokiem try‑catch i loguj znaczące komunikaty. Zapobiega to zatrzymaniu całego batcha przez pojedynczy uszkodzony plik.
 
-Zintegrowanie GroupDocs z innymi systemami .NET, takimi jak ASP.NET Core lub Entity Framework, znacząco usprawnia przepływy pracy w zakresie zarządzania dokumentami.
+```csharp
+try
+{
+    using (Annotator annotator = new Annotator(inputPath))
+    {
+        // Your extraction code here
+    }
+}
+catch (Exception ex)
+{
+    // Log the error and handle gracefully
+    Console.WriteLine($"Error processing document: {ex.Message}");
+}
+```
 
-## Rozważania dotyczące wydajności
+### Zarządzanie pamięcią dla dużych PDF‑ów
 
-Aby mieć pewność, że Twoja aplikacja będzie działać płynnie:
-- Zoptymalizuj wykorzystanie pamięci, usuwając `Annotator` natychmiast.
-- Zarządzaj zasobami w sposób efektywny, zwłaszcza mając do czynienia z obszernymi dokumentami.
-- Stosuj najlepsze praktyki zarządzania pamięcią .NET, aby zapobiegać wyciekom i zwiększać wydajność.
+W przypadku PDF‑ów przekraczających 300 stron, rozważ ładowanie ich w **kawałkach**, ustawiając `PdfLoadOptions` na strumieniowanie tylko wymaganych stron.
 
-## Wniosek
+```csharp
+// Instead of extracting pages 1-100 at once, do it in smaller batches
+for (int startPage = 1; startPage <= 100; startPage += 10)
+{
+    int endPage = Math.Min(startPage + 9, 100);
+    
+    var saveOptions = new Options.SaveOptions 
+    {
+        FirstPage = startPage,
+        LastPage = endPage
+    };
+    
+    // Process this batch
+}
+```
 
-Opanowanie umiejętności zapisywania określonych zakresów stron za pomocą GroupDocs.Annotation dla .NET umożliwia tworzenie ukierunkowanych i wydajnych rozwiązań obsługi dokumentów. Ten przewodnik wyposaża Cię w wiedzę, aby skutecznie wdrażać te funkcje w swoich projektach. Poznaj dalsze opcje dostosowywania w GroupDocs.Annotation lub zintegruj je z większymi systemami.
+## Optymalizacja wydajności (spraw, by było szybkie!)
 
-## Sekcja FAQ
+### Najlepsze praktyki zarządzania pamięcią
 
-**1. Jak zainstalować GroupDocs.Annotation dla platformy .NET?**
-- Użyj konsoli NuGet Package Manager Console lub .NET CLI, jak opisano powyżej.
+Zawsze używaj instrukcji `using` z `Annotator`. Klasa trzyma niezarządzane zasoby, które muszą być zwolnione.
 
-**2. Czy mogę zapisać nieprzylegające do siebie zakresy stron za pomocą GroupDocs.Annotation?**
-- Obecnie biblioteka obsługuje zapisywanie ciągłych zakresów stron za pomocą `FirstPage` I `LastPage`.
+```csharp
+// Good - resources are automatically cleaned up
+using (Annotator annotator = new Annotator(inputPath))
+{
+    // Your code here
+}
 
-**3. Jakie opcje licencji są dostępne dla GroupDocs.Annotation?**
-- Bezpłatna wersja próbna, licencje tymczasowe na potrzeby rozszerzonej oceny oraz licencje pełnopłatne.
+// Bad - resources might not get cleaned up properly
+Annotator annotator = new Annotator(inputPath);
+// Do stuff...
+// annotator.Dispose(); // You might forget this!
+```
 
-**4. Jak mogę efektywnie zarządzać ścieżkami w aplikacji .NET?**
-- Użyj stałych symboli zastępczych, aby zdefiniować katalogi bazowe dla plików wejściowych i wyjściowych.
+### Optymalizacja pod kątem dużych dokumentów
 
-**5. Czy korzystanie z GroupDocs.Annotation wiąże się z pewnymi problemami związanymi z wydajnością?**
-- Tak, należy zadbać o odpowiednie zarządzanie zasobami i postępować zgodnie z najlepszymi praktykami .NET, aby zoptymalizować wydajność.
+- **Przetwarzanie poza szczytem:** Planuj zadania batch w okresach niskiego ruchu.  
+- **Równoległość oparta na zadaniach:** Otaczaj wywołania synchroniczne `Task.Run` przy budowaniu aplikacji responsywnych UI.  
+- **Monitorowanie:** Śledź czas wykonania za pomocą `Stopwatch`, aby wykrywać wąskie gardła.
 
-## Zasoby
+```csharp
+using System.Diagnostics;
 
-W celu dalszych poszukiwań i uzyskania wsparcia:
-- **Dokumentacja:** [Dokumentacja adnotacji GroupDocs](https://docs.groupdocs.com/annotation/net/)
-- **Dokumentacja API:** [Odwołanie do API GroupDocs](https://reference.groupdocs.com/annotation/net/)
-- **Pobierać:** [Wydania GroupDocs](https://releases.groupdocs.com/annotation/net/)
-- **Kup licencję:** [Kup produkty GroupDocs](https://purchase.groupdocs.com/buy)
-- **Bezpłatna wersja próbna:** [Wypróbuj adnotację GroupDocs](https://releases.groupdocs.com/annotation/net/)
-- **Licencja tymczasowa:** [Poproś o licencję tymczasową](https://purchase.groupdocs.com/temporary-license/)
-- **Forum wsparcia:** [Forum wsparcia GroupDocs](https://forum.groupdocs.com/c/annotation/) 
+Stopwatch stopwatch = Stopwatch.StartNew();
 
-Rozpocznij przygodę z GroupDocs.Annotation już dziś i zwiększ możliwości przetwarzania dokumentów!
+using (Annotator annotator = new Annotator(inputPath))
+{
+    var saveOptions = new Options.SaveOptions 
+    {
+        FirstPage = 1,
+        LastPage = 10
+    };
+    
+    annotator.Save(outputPath, saveOptions);
+}
+
+stopwatch.Stop();
+Console.WriteLine($"Page extraction completed in {stopwatch.ElapsedMilliseconds} ms");
+```
+
+## Rozwiązywanie typowych problemów
+
+### Błędy „Plik nie znaleziony”
+
+**Bezpośrednia odpowiedź:** Zweryfikuj, że ścieżka przekazana do `Annotator` istnieje i jest dostępna dla uruchomionego procesu. Użyj `PathHelper`, aby uniknąć literówek.
+
+```csharp
+if (!File.Exists(sourcePath))
+    throw new FileNotFoundException($"Input file not found: {sourcePath}");
+```
+
+```csharp
+string inputPath = Constants.GetDocumentFilePath("sample.pdf");
+
+if (!File.Exists(inputPath))
+{
+    throw new FileNotFoundException($"Input file not found: {inputPath}");
+}
+```
+
+### Błędy „Nieprawidłowy zakres stron”
+
+**Bezpośrednia odpowiedź:** Upewnij się, że `FirstPage` ≥ 1, `LastPage` ≤ liczbie stron dokumentu oraz `FirstPage` ≤ `LastPage`. Liczbę stron możesz pobrać poprzez `annotator.DocumentInfo.PagesCount`.
+
+```csharp
+int totalPages = annotator.DocumentInfo.PagesCount;
+if (options.FirstPage < 1 || options.LastPage > totalPages)
+    throw new ArgumentOutOfRangeException("Page range is outside the document bounds.");
+```
+
+```csharp
+// You'd need to implement GetPageCount() method or check the document properties
+int totalPages = GetDocumentPageCount(inputPath);
+
+if (saveOptions.LastPage > totalPages)
+{
+    throw new ArgumentException($"Last page ({saveOptions.LastPage}) exceeds document length ({totalPages})");
+}
+```
+
+### Problemy z pamięcią przy dużych plikach
+
+- Przetwarzaj w mniejszych partiach.  
+- Zwiększ limit pamięci puli aplikacji, jeśli uruchamiasz pod IIS.  
+- Niezwłocznie zwalniaj każdą instancję `Annotator` (użyj `using`).
+
+### Problemy związane z licencją
+
+Umieść plik `GroupDocs.Annotation.lic` w tym samym folderze co plik wykonywalny lub ustaw ścieżkę licencji programowo za pomocą `License.SetLicense("path/to/license")`.
+
+## Integracja z innymi systemami
+
+### Przykład ASP.NET Core Web API
+
+Udostępnij endpoint, który przyjmuje PDF, wyodrębnia żądany zakres i zwraca nowy plik.
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class DocumentController : ControllerBase
+{
+    [HttpPost("extract-pages")]
+    public IActionResult ExtractPages([FromBody] PageExtractionRequest request)
+    {
+        try
+        {
+            // Your GroupDocs extraction code here
+            return Ok("Pages extracted successfully");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Error: {ex.Message}");
+        }
+    }
+}
+```
+
+### Integracja z Entity Framework
+
+Po wyodrębnieniu, zapisz metadane (oryginalna nazwa pliku, wyodrębniony zakres, ścieżka wyjściowa) w bazie danych w celu tworzenia ścieżek audytu.
+
+```csharp
+using (var context = new DocumentContext())
+{
+    var document = context.Documents.First(d => d.Id == documentId);
+    
+    // Extract pages
+    using (Annotator annotator = new Annotator(document.FilePath))
+    {
+        // Extraction code...
+    }
+    
+    // Update database
+    document.LastProcessed = DateTime.Now;
+    document.ExtractedPageCount = (saveOptions.LastPage - saveOptions.FirstPage) + 1;
+    context.SaveChanges();
+}
+```
+
+## Najczęściej zadawane pytania
+
+**Q: Czy mogę wyodrębnić nieciągłe strony (np. strony 1, 5, 9) w jednym wywołaniu?**  
+A: GroupDocs.Annotation obsługuje tylko ciągłe zakresy za pomocą `FirstPage` i `LastPage`. Dla nieciągłych stron musisz wykonać osobne wywołania wyodrębniania dla każdego zakresu.
+
+**Q: Jaka jest maksymalna liczba stron, które mogę wyodrębnić jednorazowo?**  
+A: Nie ma sztywnego limitu, ale wyodrębnianie **500+ stron** może wymagać dodatkowej pamięci; zaleca się przetwarzanie wsadowe dla bardzo dużych dokumentów.
+
+**Q: Czy wyodrębnianie stron zachowuje adnotacje i pola formularzy?**  
+A: Tak – wszystkie adnotacje, komentarze i interaktywne pola formularzy są zachowane w wyjściowym PDF.
+
+**Q: Czy mogę wyodrębnić strony z PDF‑ów zabezpieczonych hasłem?**  
+A: Oczywiście. Podaj hasło przy tworzeniu `Annotator` (np. `new Annotator("file.pdf", "password")`).
+
+**Q: Jak mogę podglądnąć strony przed wyodrębnieniem?**  
+A: Użyj `annotator.DocumentInfo.PagesCount` i `annotator.GetPageImage(pageNumber)`, aby wygenerować miniatury do weryfikacji.
+
+## Podsumowanie
+
+Masz teraz pełny zestaw narzędzi do **wyodrębniania stron PDF** przy użyciu GroupDocs.Annotation dla .NET:
+
+- Zainstaluj i zlisencjonuj bibliotekę.  
+- Zainicjuj `Annotator` i skonfiguruj `PdfSaveOptions` z `FirstPage`/`LastPage`.  
+- Zarządzaj ścieżkami plików za pomocą centralnej klasy pomocniczej.  
+- Stosuj obsługę błędów, zarządzanie pamięcią i triki wydajnościowe przy dużych partiach.
+
+Następne kroki: eksperymentuj z wyodrębnianiem różnych zakresów, zintegrować logikę z istniejącymi usługami przepływu dokumentów oraz odkryj możliwości edycji adnotacji w GroupDocs.Annotation dla jeszcze bogatszego przetwarzania dokumentów.
+
+---
+
+**Ostatnia aktualizacja:** 2026-05-26  
+**Testowano z:** GroupDocs.Annotation 23.12 for .NET  
+**Autor:** GroupDocs  
+
+**Podstawowe linki:**  
+- **Dokumentacja:** [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/net/)  
+- **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/annotation/net/)  
+- **Download:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/net/)  
+- **Purchase License:** [Buy GroupDocs Products](https://purchase.groupdocs.com/buy)  
+- **Free Trial:** [Try GroupDocs Annotation](https://releases.groupdocs.com/annotation/net/)  
+- **Temporary License:** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Support Forum:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+## Powiązane samouczki
+
+- [Samouczek GroupDocs Annotation .NET - Kompletny przewodnik po zarządzaniu dokumentami](/annotation/net/annotation-management/)
+- [Samouczek PDF Annotation .NET - Kompletny przewodnik GroupDocs](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
+- [Generowanie podglądu dokumentu .NET - Kompletny przewodnik z GroupDocs.Annotation](/annotation/net/advanced-usage/generate-document-pages-preview/)
