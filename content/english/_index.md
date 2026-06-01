@@ -7,7 +7,7 @@ keywords: [document annotation API, PDF annotation, document markup, collaborati
 weight: 11
 url: /
 type: docs
-date: 2025-12-17
+date: 2026-02-16
 ---
 
 # GroupDocs.Annotation Developer Guide - Document Annotation API
@@ -109,6 +109,6 @@ A: Yes. You can load and save documents directly from Amazon S3, Azure Blob Stor
 
 ---
 
-**Last Updated:** 2025-12-17  
+**Last Updated:** 2026-02-16  
 **Tested With:** GroupDocs.Annotation 23.11 for .NET & Java  
 **Author:** GroupDocs

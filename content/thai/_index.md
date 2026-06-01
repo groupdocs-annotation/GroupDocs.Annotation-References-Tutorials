@@ -1,9 +1,9 @@
 ---
 additionalTitle: GroupDocs API References
-date: 2025-12-17
+date: 2026-02-16
 description: เรียนรู้วิธีใช้ API การทำหมายเหตุเอกสารเพื่อเพิ่มหมายเหตุในไฟล์ PDF,
-  Word, Excel และ PowerPoint ในแอปพลิเคชัน .NET และ Java คำแนะนำแบบทีละขั้นตอนครอบคลุมการทำเครื่องหมายข้อความ,
-  ความคิดเห็น, รูปร่าง, และคุณสมบัติการทำงานร่วมกัน
+  Word, Excel และ PowerPoint ในแอปพลิเคชัน .NET และ Java บทเรียนแบบขั้นตอนครอบคลุมการทำเครื่องหมายข้อความ,
+  ความคิดเห็น, รูปร่าง, และคุณลักษณะการทำงานร่วมกัน
 keywords:
 - document annotation API
 - PDF annotation
@@ -14,111 +14,123 @@ keywords:
 - document comments
 - text highlighting
 linktitle: GroupDocs.Annotation Developer Guides
-title: API การทำหมายเหตุเอกสาร | บทเรียนและตัวอย่าง SDK ของ GroupDocs.Annotation
+title: API การทำเครื่องหมายเอกสาร | บทเรียน GroupDocs.Annotation & ตัวอย่าง SDK
 type: docs
 url: /th/
 weight: 11
 ---
 
-# คู่มือผู้พัฒนา GroupDocs.Annotation - API การทำเครื่องหมายเอกสาร
+.
 
-ในคู่มือนี้คุณจะได้ค้นพบว่า **document annotation API** ช่วยให้คุณฝังคุณลักษณะการทำเครื่องหมายที่หลากหลาย—เช่น ไฮไลท์, ความคิดเห็น, และรูปทรง—โดยตรงลงในไฟล์ PDF, Word, Excel, PowerPoint และไฟล์ประเภทอื่น ๆ อีกมากมาย ไม่ว่าคุณจะสร้างพอร์ทัลการตรวจสอบแบบร่วมมือ, แอปการศึกษา, หรือเวิร์กโฟลว์เอกสารทางกฎหมาย API จะมอบวิธีการทำงานกับการทำเครื่องหมายที่สอดคล้องและมีประสิทธิภาพสูงทั้งในสภาพแวดล้อม .NET และ Java
+**Last Updated:** 2026-02-16 (maybe keep English label? Should translate "Last Updated" to Thai: "**อัปเดตล่าสุด:**". But the bold label is part of content. We need to translate. So "**Last Updated:**" => "**อัปเดตล่าสุด:**". Keep date.
 
-## คำตอบอย่างรวดเร็ว
-- **Document annotation API ทำอะไรได้บ้าง?** มันช่วยให้นักพัฒนาสามารถเพิ่ม, แก้ไข, และจัดการการทำเครื่องหมายในรูปแบบเอกสารกว่า 50 ประเภทโดยไม่ต้องพึ่งพาไลบรารีภายนอก  
-- **แพลตฟอร์มที่รองรับคืออะไร?** .NET (Framework, Core, .NET 5/6) และ Java (JDK 8 ขึ้นไป)  
-- **ต้องมีลิขสิทธิ์สำหรับการพัฒนาหรือไม่?** มีการทดลองใช้ฟรี; จำเป็นต้องมีลิขสิทธิ์สำหรับการใช้งานในสภาพแวดล้อมการผลิต  
-- **สามารถทำเครื่องหมาย PDF และไฟล์ Office ด้วยโค้ดเดียวกันได้หรือไม่?** ใช่—API เดียวกันจัดการ PDF, Word, Excel, PowerPoint, ภาพ, HTML และอื่น ๆ  
-- **สามารถใช้งานบนคลาวด์ได้หรือไม่?** แน่นอน—สามารถรันบน Windows, Linux, macOS, Docker หรือบริการคลาวด์ใด ๆ  
+**Tested With:** => "**ทดสอบด้วย:**". Keep rest.
+
+**Author:** => "**ผู้เขียน:**". Keep "GroupDocs".
+
+Now ensure all markdown formatting preserved.
+
+Check for any code blocks: none.
+
+Now produce final content.# คู่มือผู้พัฒนา GroupDocs.Annotation - API การทำหมายเหตุเอกสาร
+
+ในคู่มือนี้คุณจะได้ค้นพบว่า **document annotation API** ช่วยให้คุณฝังคุณลักษณะการทำหมายเหตุที่หลากหลาย—เช่น ไฮไลท์, ความคิดเห็น, และรูปทรง—โดยตรงลงในไฟล์ PDF, Word, Excel, PowerPoint, และไฟล์ประเภทอื่น ๆ อีกมากมาย ไม่ว่าคุณจะสร้างพอร์ทัลการตรวจสอบร่วม, แอปการศึกษา, หรือกระบวนการทำงานเอกสารทางกฎหมาย, API นี้ให้วิธีการที่สอดคล้องและมีประสิทธิภาพสูงในการทำงานกับหมายเหตุทั้งในสภาพแวดล้อม .NET และ Java
+
+## คำตอบด่วน
+- **What does the document annotation API do?** มันทำให้ผู้พัฒนาสามารถเพิ่ม, แก้ไข, และจัดการหมายเหตุในรูปแบบเอกสารกว่า 50 แบบโดยไม่ต้องพึ่งพาไลบรารีภายนอก.  
+- **Which platforms are supported?** .NET (Framework, Core, .NET 5/6) และ Java (JDK 8+ ใดก็ได้).  
+- **Do I need a license for development?** มีการให้ทดลองใช้ฟรี; จำเป็นต้องมีลิขสิทธิ์สำหรับการใช้งานในสภาพแวดล้อมการผลิต.  
+- **Can I annotate PDFs and Office files with the same code?** ใช่—API เดียวที่รวมทั้งหมดสามารถจัดการ PDFs, Word, Excel, PowerPoint, รูปภาพ, HTML, และอื่น ๆ  
+- **Is cloud deployment possible?** แน่นอน—สามารถรันบน Windows, Linux, macOS, Docker, หรือบริการคลาวด์ใดก็ได้.
 
 ## Document Annotation API คืออะไร?
-**document annotation API** เป็น SDK ข้ามแพลตฟอร์มที่ทำให้การเรนเดอร์และแก้ไขเอกสารเป็นเรื่องง่าย มันให้โมเดลเจ็กต์ที่เรียบง่ายสำหรับการสร้างไฮไลท์ข้อความ, ขีดเส้นใต้, ขีดฆ่า, ความคิดเห็น, สติ๊กเกอร์, รูปทรง, ลายน้ำ, และแม้แต่ฟิลด์ฟอร์มแบบโต้ตอบ—all programmatically
+The **document annotation API** เป็น SDK แบบข้ามแพลตฟอร์มที่ทำให้ซับซ้อนของการเรนเดอร์และแก้ไขเอกสารเป็นเรื่องง่าย มันให้โมเดลอ็อบเจกต์ที่เรียบง่ายสำหรับสร้างการไฮไลท์ข้อความ, ขีดเส้นใต้, ขีดฆ่า, ความคิดเห็น, โน้ตติด, รูปทรง, ลายน้ำ, และแม้กระทั่งฟิลด์ฟอร์มแบบโต้ตอบ—ทั้งหมดผ่านโค้ดโปรแกรม
 
 ## ทำไมต้องเลือก GroupDocs.Annotation?
-- **ความเป็นอิสระของรูปแบบ** – API หนึ่งตัวทำงานกับเอกสารกว่า 50 ประเภท ตั้งแต่ PDF ถึงสเปรดชีต Excel  
-- **ประเภทการทำเครื่องหมายที่หลากหลาย** – การทำเครื่องหมายข้อความ, รูปทรงกราฟิก, ความคิดเห็น, และเธรดการตอบกลับแบบร่วมมือทั้งหมดรวมอยู่ในตัว  
-- **ไม่มีการพึ่งพาไลบรารีภายนอก** – ไม่ต้องใช้ Adobe Reader, Office, หรือเครื่องมือของบุคคลที่สามอื่น ๆ  
-- **การเรนเดอร์ประสิทธิภาพสูง** – ปรับคุณภาพและความละเอียดเพื่อสร้างตัวอย่างอย่างรวดเร็ว  
-- **รองรับข้ามแพลตฟอร์ม** – ทำงานอย่างราบรื่นบน Windows, Linux, macOS, Docker, หรือสภาพแวดล้อม serverless  
+- **Format Independence** – API หนึ่งตัวทำงานกับเอกสารกว่า 50 ประเภท ตั้งแต่ PDF ถึงสเปรดชีต Excel.  
+- **Rich Annotation Types** – การทำเครื่องหมายข้อความ, รูปทรงกราฟิก, ความคิดเห็น, และเธรดการตอบกลับแบบร่วมมือทั้งหมดเป็นฟีเจอร์ในตัว.  
+- **No External Dependencies** – ไม่จำเป็นต้องใช้ Adobe Reader, Office, หรือเครื่องมือของบุคคลที่สามอื่น ๆ.  
+- **High‑Performance Rendering** – สามารถปรับคุณภาพและความละเอียดเพื่อสร้างตัวอย่างอย่างรวดเร็ว.  
+- **Cross‑Platform Support** – ทำงานอย่างราบรื่นบน Windows, Linux, macOS, Docker, หรือสภาพแวดล้อมแบบ serverless.
 
 ## กรณีการใช้งานหลัก
-- **เวิร์กโฟลว์การตรวจสอบเอกสาร** – ให้ผู้ตรวจสอบเพิ่มความคิดเห็นและอนุมัติการเปลี่ยนแปลงแบบเรียลไทม์  
-- **แอปพลิเคชันการศึกษา** – ครูสามารถไฮไลท์เนื้อหาและให้ข้อเสนอแนะโดยตรงในเอกสาร  
-- **การประมวลผลเอกสารทางกฎหมาย** – ทำเครื่องหมายข้อกำหนด, เพิ่มโน้ต, และติดตามการแก้ไขในสัญญา  
-- **การจัดทำเอกสารด้านสุขภาพ** – ไฮไลท์ข้อมูลผู้ป่วยสำคัญพร้อมรักษาความสอดคล้องตาม HIPAA  
-- **การก่อสร้างและวิศวกรรม** – ทำเครื่องหมายแบบแปลน, แผนผัง, และภาพวาดทางเทคนิคด้วยการวัดที่แม่นยำ  
+- **Document Review Workflows** – ให้ผู้ตรวจสอบสามารถเพิ่มความคิดเห็นและอนุมัติการเปลี่ยนแปลงได้แบบเรียลไทม์.  
+- **Educational Applications** – ครูสามารถไฮไลท์เนื้อหาการศึกษาและให้ข้อเสนอแนะโดยตรงในเอกสาร.  
+- **Legal Document Processing** – ทำเครื่องหมายข้อกำหนด, เพิ่มโน้ต, และติดตามการแก้ไขในสัญญา.  
+- **Healthcare Documentation** – ไฮไลท์ข้อมูลผู้ป่วยสำคัญพร้อมรักษาการปฏิบัติตาม HIPAA.  
+- **Construction & Engineering** – ทำหมายเหตุบนแบบแปลน, แผนผัง, และภาพวาดเทคนิคด้วยการวัดที่แม่นยำ.
 
 ## เริ่มต้นกับ .NET
-การทำเครื่องหมายเอกสารที่ทรงพลังสำหรับแอปพลิเคชัน .NET  
+การทำหมายเหตุเอกสารที่ทรงพลังสำหรับแอปพลิเคชัน .NET
 
-รวมความสามารถการทำเครื่องหมายอย่างครบถ้วนเข้าในโครงการ C# และ .NET ของคุณด้วย API ที่เต็มไปด้วยคุณลักษณะ
+รวมคุณสมบัติการทำหมายเหตุอย่างครบถ้วนเข้าไปในโครงการ C# และ .NET ของคุณด้วย API ที่เต็มไปด้วยฟีเจอร์ของเรา.
 
 [Explore .NET Tutorials](./net/)
 
 ### บทเรียน .NET ที่จำเป็น
-- [**Document Loading**](./net/document-loading) - โหลดเอกสารจากไฟล์, สตรีม, URL, และคลาวด์สตอเรจ  
-- [**Annotation Types**](./net/text-annotations) - ใช้การทำเครื่องหมายข้อความ, กราฟิก, ฟอร์ม และภาพ  
-- [**Document Saving**](./net/document-saving) - บันทึกเอกสารที่ทำเครื่องหมายด้วยตัวเลือกการส่งออกหลายรูปแบบ  
-- [**Annotation Management**](./net/annotation-management) - เพิ่ม, อัปเดต, ลบและกรองการทำเครื่องหมายด้วยโปรแกรม  
-- [**Collaboration Features**](./net/reply-management) - สร้างเธรดความคิดเห็นและการตรวจสอบแบบร่วมมือ  
+- [**Document Loading**](./net/document-loading) - โหลดเอกสารจากไฟล์, สตรีม, URL, และคลาวด์สตอเรจ
+- [**Annotation Types**](./net/text-annotations) - ใช้การทำหมายเหตุประเภทข้อความ, กราฟิก, ฟอร์ม และรูปภาพ
+- [**Document Saving**](./net/document-saving) - บันทึกเอกสารที่ทำหมายเหตุพร้อมตัวเลือกการส่งออกหลายแบบ
+- [**Annotation Management**](./net/annotation-management) - เพิ่ม, ปรับปรุง, ลบและกรองหมายเหตุผ่านโปรแกรม
+- [**Collaboration Features**](./net/reply-management) - ใช้เธรดคอมเมนต์และการตรวจสอบร่วมกัน
 
-### คุณลักษณะ .NET ขั้นสูง
-- [**Document Preview**](./net/document-preview) - สร้างตัวอย่างเอกสารด้วยหนดเอง  
-- [**Form Fields**](./net/form-field-annotations) - สร้างคอมโพเนนต์ฟอร์มแบบโต้ตอบ  
-- [**Document Analysis**](./net/document-information) - ดึงเมตาดาต้าและข้อมูลหน้า  
-- [**Licensing Options**](./net/licensing-and-configuration) - นำไปใช้และกำหนดค่าการลิขสิทธิ์  
+### ฟีเจอร์ .NET ขั้นสูง
+- [**Document Preview**](./net/document-preview) - สร้างตัวอย่างเอกสารด้วยความละเอียดที่กำหนดเอง
+- [**Form Fields**](./net/form-field-annotations) - สร้างคอมโพเนนต์ฟอร์มแบบโต้ตอบ
+- [**Document Analysis**](./net/document-information) - ดึงข้อมูลเมตาดาต้าและข้อมูลหน้าของเอกสาร
+- [**Licensing Options**](./net/licensing-and-configuration) - นำไปใช้และกำหนดค่าการลิขสิทธิ์
 
 ## เริ่มต้นกับ Java
-Java Document Annotation SDK  
+Java Document Annotation SDK
 
-เพิ่มความสามารถการทำเครื่องหมายอย่างครบถ้วนให้กับแอปพลิเคชัน Java ด้วย API ที่ไม่ขึ้นกับแพลตฟอร์ม
+เพิ่มความสามารถการทำหมายเหตุอย่างครบถ้วนให้กับแอปพลิเคชัน Java ของคุณด้วย API ที่ไม่ขึ้นกับแพลตฟอร์มของเรา.
 
 [Explore Java Tutorials](./java/)
 
 ### บทเรียน Java ที่จำเป็น
-- [**Document Loading**](./java/document-loading) - วิธีหลายวิธีในการโหลดเอกสารรวมถึงการบูรณาการคลาวด์สตอเรจ  
-- [**Text Annotations**](./java/text-annotations) - ไฮไลท์, ขีดเส้นใต้, ขีดฆ่าและการแทนที่ข้อความ  
-- [**Graphical Annotations**](./java/graphical-annotations) - เพิ่มลูกศร, รูปทรงและการวัด  
+- [**Document Loading**](./java/document-loading) - วิธีการหลายแบบในการโหลดเอกสารรวมถึงการรวมคลาวด์สตอเรจ
+- [**Text Annotations**](./java/text-annotations) - ไฮไลท์, ขีดเส้นใต้, ขีดฆ่าและการแทนที่ข้อความ
+- [**Graphical Annotations**](./java/graphical-annotations) - เพิ่มลูกศร, รูปทรงและการวัด
 - [**Image Annotations**](./java/image-annotations) - แทรกและปรับแต่งรูปภาพในเอกสาร  
-- [**Annotation Management**](./java/annotation-management) - การจัดการวงจรชีวิตการทำเครื่องหมายอย่างครบถ้วน  
+- [**Annotation Management**](./java/annotation-management) - การจัดการวงจรชีวิตของหมายเหตุอย่างครบถ้วน
 
-### คุณลักษณะ Java ขั้นสูง
-- [**Document Preview**](./java/document-preview) - สร้างภาพย่อและตัวอย่างคุณภาพสูง  
-- [**Collaboration Tools**](./java/reply-management) - นำเสนอความคิดเห็นแบบเธรดและการตอบกลับ  
-- [**Document Information**](./java/document-information) - เข้าถึงเมตาดาต้าและโครงสร้างของเอกสาร  
-- [**Advanced Features**](./java/advanced-features) - ความสามารถการทำเครื่องหมายพิเศษและการปรับประสิทธิภาพ  
-- [**Configuration Options**](./java/licensing-and-configuration) - ปรับพฤติกรรมและประสิทธิภาพการทำเครื่องหมาย  
+### ฟีเจอร์ Java ขั้นสูง
+- [**Document Preview**](./java/document-preview) - สร้างภาพย่อและตัวอย่างคุณภาพสูง
+- [**Collaboration Tools**](./java/reply-management) - ใช้คอมเมนต์และการตอบกลับแบบเธรด
+- [**Document Information**](./java/document-information) - เข้าถึงเมตาดาต้าและโครงสร้างของเอกสาร
+- [**Advanced Features**](./java/advanced-features) - ความสามารถการทำหมายเหตุพิเศษและการปรับประสิทธิภาพ
+- [**Configuration Options**](./java/licensing-and-configuration) - ปรับแต่งพฤติกรรมและประสิทธิภาพของการทำหมายเหตุ
 
 ## วิธีลองใช้งานวันนี้
-สำรวจบทเรียนและโค้ดตัวอย่างของเราเพื่อทำให้แอปพลิเคชันของคุณมีคุณลักษณะการทำเครื่องหมายที่ทรงพลัง ไม่ว่าคุณจะสร้างระบบตรวจสอบเอกสารแบบร่วมมือ, เครื่องมือการศึกษา, หรือโซลูชันการจัดการเนื้อหา **document annotation API** จะให้ความสามารถที่คุณต้องการ
+สำรวจบทเรียนและโค้ดตัวอย่างอย่างครบถ้วนของเราเพื่อทำฟีเจอร์การทำหมายเหตุที่ทรงพลังในแอปพลิเคชันของคุณ ไม่ว่าคุณจะสร้างระบบตรวจสอบเอกสารร่วม, เครื่องมือการศึกษา, หรือโซลูชันการจัดการเนื้อหา, **document annotation API** ให้ความสามารถที่คุณต้องการ.
 
-### ทดลองใช้ฟรี
-เริ่มต้นด้วยการทดลองใช้ฟรีเพื่อสำรวจคุณลักษณะทั้งหมดก่อนซื้อ  
+### ทดลองใช้งานฟรี
+เริ่มต้นด้วยการทดลองใช้งานฟรีเพื่อสำรวจคุณสมบัติทั้งหมดก่อนซื้อ.  
 [Download Trial](https://releases.groupdocs.com/annotation/)
 
 ### เอกสาร API
-อ้างอิง API รายละเอียดสำหรับทุกแพลตฟอร์มที่รองรับ  
+อ้างอิง API อย่างละเอียดสำหรับทุกแพลตฟอร์มที่รองรับ.  
 [Browse API Reference](https://reference.groupdocs.com/annotation/)
 
 ## คำถามที่พบบ่อย
 
-**Q: สามารถใช้ document annotation API ในผลิตภัณฑ์เชิงพาณิชย์ได้หรือไม่?**  
-A: ใช่ ต้องมีลิขสิทธิ์ GroupDocs ที่ถูกต้องสำหรับการใช้งานในสภาพแวดล้อมการผลิต และมีการทดลองใช้ฟรีสำหรับการประเมิน
+**Q: Can I use the document annotation API in a commercial product?**  
+A: ใช่. จำเป็นต้องมีลิขสิทธิ์ GroupDocs ที่ถูกต้องสำหรับการใช้งานในสภาพแวดล้อมการผลิต, และมีการทดลองใช้ฟรีสำหรับการประเมิน.
 
-**Q: API รองรับ PDF ที่มีการป้องกันด้วยรหัสผ่านหรือไม่?**  
-A: แน่นอน คุณสามารถส่งรหัสผ่านเมื่อเปิดเอกสารและการทำเครื่องหมายทั้งหมดทำงานอย่างโปร่งใส
+**Q: Does the API support password‑protected PDFs?**  
+A: แน่นอน. คุณสามารถใส่รหัสผ่านเมื่อเปิดเอกสาร, และการทำหมายเหตุทั้งหมดทำงานอย่างโปร่งใส.
 
-**Q: .NET เวอร์ชันใดบ้างที่เข้ากันได้?**  
-A: SDK รองรับ .NET Framework 4.5+, .NET Core 3.1+, .NET 5, และ .NET 6+
+**Q: Which .NET versions are compatible?**  
+A: SDK รองรับ .NET Framework 4.5+, .NET Core 3.1+, .NET 5, และ .NET 6+.
 
-**Q: API จัดการไฟล์ขนาดใหญ่อย่างไร?**  
-A:สตรีมข้อมูลและมีวิธีการที่ช่วยประหยัดหน่วยความจำ เช่น `Document.OptimizeResources()` เพื่อรักษาการใช้หน่วยความจำให้ต่ำ
+**Q: How does the API handle large files?**  
+A: มันสตรีมเนื้อหาและให้วิธีการที่เพิ่มประสิทธิภาพการใช้หน่วยความจำ เช่น `Document.OptimizeResources()` เพื่อรักษาการใช้หน่วยความจำให้ต่ำ.
 
-**Q: มีการสนับสนุนการจัดเก็บบนคลาวด์ในตัวหรือไม่?**  
-A: มี คุณสามารถโหลดและบันทึกเอกสารโดยตรงจาก Amazon S3, Azure Blob Storage, Google Cloud Storage และผู้ให้บริการคลาวด์อื่น ๆ  
+**Q: Is there built‑in support for cloud storage services?**  
+A: ใช่. คุณสามารถโหลดและบันทึกเอกสารโดยตรงจาก Amazon S3, Azure Blob Storage, Google Cloud Storage, และผู้ให้บริการคลาวด์อื่น ๆ.
 
 ---
 
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 23.11 for .NET & Java  
-**Author:** GroupDocs
+**อัปเดตล่าสุด:** 2026-02-16  
+**ทดสอบด้วย:** GroupDocs.Annotation 23.11 for .NET & Java  
+**ผู้เขียน:** GroupDocs

@@ -1,9 +1,9 @@
 ---
 additionalTitle: GroupDocs API References
-date: 2025-12-17
-description: „Dowiedz się, jak korzystać z API adnotacji dokumentów, aby dodawać adnotacje
-  do plików PDF, Word, Excel i PowerPoint w aplikacjach .NET i Java. Samouczki krok
-  po kroku obejmują oznaczanie tekstu, komentarze, kształty oraz funkcje współpracy.”
+date: 2026-02-16
+description: Naucz się, jak korzystać z API adnotacji dokumentów, aby dodawać adnotacje
+  PDF, Word, Excel i PowerPoint w aplikacjach .NET i Java. Samouczki krok po kroku
+  obejmują oznaczanie tekstu, komentarze, kształty oraz funkcje współpracy.
 keywords:
 - document annotation API
 - PDF annotation
@@ -20,93 +20,119 @@ url: /pl/
 weight: 11
 ---
 
-# Przewodnik dewelopera GroupDocs.Annotation - API adnotacji dokumentów
+" to "Ostatnia aktualizacja". "Tested With" to "Testowano z". "Author" to "Autor". Keep values unchanged.
 
-W tym przewodniku odkryjesz, jak **document annotation API** umożliwia osadzanie bogatych funkcji adnotacji — takich jak podświetlenia, komentarze i kształty — bezpośrednio w plikach PDF, Word, Excel, PowerPoint i wielu innych typach plików. Niezależnie od tego, czy tworzysz portal współpracy przy przeglądzie, aplikację edukacyjną, czy przepływ pracy z dokumentami prawnymi, API zapewnia spójny, wysokowydajny sposób pracy z adnotacjami zarówno w środowiskach .NET, jak i Java.
+Thus:
+
+**Last Updated:** 2026-02-16  
+**Tested With:** GroupDocs.Annotation 23.11 for .NET & Java  
+**Author:** GroupDocs
+
+But we need translate labels. So:
+
+**Last Updated:** -> "**Ostatnia aktualizacja:**". Keep colon.
+
+**Tested With:** -> "**Testowano z:**". 
+
+**Author:** -> "**Autor:**".
+
+Now produce final markdown.
+
+Check for any code blocks: there is inline code `Document.OptimizeResources()`. Keep as is.
+
+No shortcodes.
+
+All URLs unchanged.
+
+Make sure headings levels same.
+
+Now craft final answer.# Przewodnik programisty GroupDocs.Annotation - API adnotacji dokumentów
+
+W tym przewodniku odkryjesz, jak **API adnotacji dokumentów** umożliwia osadzanie bogatych funkcji adnotacji — takich jak podświetlenia, komentarze i kształty — bezpośrednio w plikach PDF, Word, Excel, PowerPoint i wielu innych typach plików. Niezależnie od tego, czy tworzysz portal współpracy przy przeglądzie, aplikację edukacyjną, czy przepływ pracy z dokumentami prawnymi, API zapewnia spójny, wysokowydajny sposób pracy z adnotacjami zarówno w środowiskach .NET, jak i Java.
 
 ## Szybkie odpowiedzi
-- **Co robi document annotation API?** Umożliwia deweloperom dodawanie, edytowanie i zarządzanie adnotacjami w ponad 50 formatach dokumentów bez zewnętrznych zależności.  
+- **Do czego służy API adnotacji dokumentów?** Umożliwia programistom dodawanie, edytowanie i zarządzanie adnotacjami w ponad 50 formatach dokumentów bez zewnętrznych zależności.  
 - **Jakie platformy są obsługiwane?** .NET (Framework, Core, .NET 5/6) i Java (dowolny JDK 8+).  
-- **Czy potrzebna jest licencja do rozwoju?** Dostępna jest bezpłatna wersja próbna; licencja jest wymagana do użycia w produkcji.  
-- **Czy mogę adnotować pliki PDF i Office tym samym kodem?** Tak — jedno zunifikowane API obsługuje PDF‑y, Word, Excel, PowerPoint, obrazy, HTML i inne.  
-- **Czy wdrożenie w chmurze jest możliwe?** Absolutnie — działa na Windows, Linux, macOS, Docker lub dowolnej usłudze chmurowej.
+- **Czy potrzebna jest licencja do rozwoju?** Dostępna jest bezpłatna wersja próbna; licencja jest wymagana do użytku produkcyjnego.  
+- **Czy mogę adnotować pliki PDF i Office tym samym kodem?** Tak — jedno zunifikowane API obsługuje PDF, Word, Excel, PowerPoint, obrazy, HTML i wiele innych.  
+- **Czy wdrożenie w chmurze jest możliwe?** Zdecydowanie — można uruchamiać na Windows, Linux, macOS, Dockerze lub dowolnej usłudze chmurowej.
 
-## Czym jest Document Annotation API?
-**document annotation API** jest wieloplatformowym SDK, które abstrahuje złożoność renderowania i modyfikacji dokumentów. Dostarcza prosty model obiektowy do tworzenia podświetleń tekstu, podkreśleń, przekreśleń, komentarzy, notatek samoprzylepnych, kształtów, znaków wodnych oraz interaktywnych pól formularzy — wszystko programowo.
+## Czym jest API adnotacji dokumentów?
+API **adnotacji dokumentów** jest wieloplatformowym SDK, które abstrahuje złożoność renderowania i modyfikacji dokumentów. Dostarcza prosty model obiektowy do tworzenia podświetleń tekstu, podkreśleń, przekreśleń, komentarzy, notatek samoprzylepnych, kształtów, znaków wodnych oraz interaktywnych pól formularzy — wszystko programowo.
 
 ## Dlaczego wybrać GroupDocs.Annotation?
 - **Format Independence** – Jedno API działa z ponad 50 typami dokumentów, od PDF‑ów po arkusze Excel.  
 - **Rich Annotation Types** – Znaczniki tekstowe, kształty graficzne, komentarze i wątki odpowiedzi współpracy są wbudowane.  
-- **No External Dependencies** – Nie wymaga Adobe Reader, Office ani innych narzędzi firm trzecich.  
+- **No External Dependencies** – Nie ma potrzeby używania Adobe Reader, Office ani innych narzędzi firm trzecich.  
 - **High‑Performance Rendering** – Regulowana jakość i rozdzielczość dla szybkiego generowania podglądów.  
-- **Cross‑Platform Support** – Bezproblemowo działa na Windows, Linux, macOS, Docker lub w środowiskach serverless.
+- **Cross‑Platform Support** – Bezproblemowe działanie na Windows, Linux, macOS, Dockerze lub w środowiskach serverless.
 
 ## Główne przypadki użycia
-- **Document Review Workflows** – Umożliwia recenzentom dodawanie komentarzy i zatwierdzanie zmian w czasie rzeczywistym.  
-- **Educational Applications** – Nauczyciele mogą podświetlać materiały do nauki i udzielać informacji zwrotnej bezpośrednio w dokumencie.  
+- **Document Review Workflows** – Umożliwiaj recenzentom dodawanie komentarzy i zatwierdzanie zmian w czasie rzeczywistym.  
+- **Educational Applications** – Nauczyciele mogą podświetlać materiały do nauki i przekazywać opinie bezpośrednio w dokumencie.  
 - **Legal Document Processing** – Oznaczaj klauzule, dodawaj notatki i śledź zmiany w umowach.  
-- **Healthcare Documentation** – Podświetlaj krytyczne informacje o pacjencie, zachowując zgodność z HIPAA.  
-- **Construction & Engineering** – Adnotuj plany, schematy i rysunki techniczne precyzyjnymi wymiarami.
+- **Healthcare Documentation** – Podświetlaj kluczowe informacje o pacjencie, zachowując zgodność z HIPAA.  
+- **Construction & Engineering** – Adnotuj plany, schematy i rysunki techniczne z precyzyjnymi wymiarami.
 
 ## Rozpoczęcie pracy z .NET
-Potężne adnotacje dokumentów dla aplikacji .NET
+Potężna adnotacja dokumentów dla aplikacji .NET
 
-Zintegruj kompleksowe możliwości adnotacji w swoich projektach C# i .NET przy użyciu naszego bogatego w funkcje API.
+Zintegruj kompleksowe możliwości adnotacji w swoich projektach C# i .NET dzięki naszemu bogatemu w funkcje API.
 
-[Przeglądaj samouczki .NET](./net/)
+[Explore .NET Tutorials](./net/)
 
 ### Podstawowe samouczki .NET
-- [**Ładowanie dokumentu**](./net/document-loading) - Ładowanie dokumentów z plików, strumieni, adresów URL i przechowywania w chmurze
-- [**Typy adnotacji**](./net/text-annotations) - Implementacja adnotacji tekstowych, graficznych, formularzy i obrazów
-- [**Zapisywanie dokumentu**](./net/document-saving) - Zapisywanie adnotowanych dokumentów z różnymi opcjami wyjściowymi
-- [**Zarządzanie adnotacjami**](./net/annotation-management) - Dodawanie, aktualizowanie, usuwanie i filtrowanie adnotacji programowo
-- [**Funkcje współpracy**](./net/reply-management) - Implementacja wątków komentarzy i współpracy przy przeglądzie
+- [**Document Loading**](./net/document-loading) - Ładuj dokumenty z plików, strumieni, URL‑i i przechowywania w chmurze
+- [**Annotation Types**](./net/text-annotations) - Implementuj adnotacje tekstowe, graficzne, formularzowe i obrazkowe
+- [**Document Saving**](./net/document-saving) - Zapisuj adnotowane dokumenty z różnymi opcjami wyjścia
+- [**Annotation Management**](./net/annotation-management) - Dodawaj, aktualizuj, usuwaj i filtruj adnotacje programowo
+- [**Collaboration Features**](./net/reply-management) - Implementuj wątki komentarzy i współpracę przy przeglądzie
 
 ### Zaawansowane funkcje .NET
-- [**Podgląd dokumentu**](./net/document-preview) - Generowanie podglądów dokumentów z niestandardową rozdzielczością
-- [**Pola formularzy**](./net/form-field-annotations) - Tworzenie interaktywnych komponentów formularzy
-- [**Analiza dokumentu**](./net/document-information) - Wyodrębnianie metadanych i informacji o stronach
-- [**Opcje licencjonowania**](./net/licensing-and-configuration) - Implementacja i konfiguracja licencjonowania
+- [**Document Preview**](./net/document-preview) - Generuj podglądy dokumentów z niestandardową rozdzielczością
+- [**Form Fields**](./net/form-field-annotations) - Twórz interaktywne komponenty formularzy
+- [**Document Analysis**](./net/document-information) - Wyodrębniaj metadane i informacje o stronach
+- [**Licensing Options**](./net/licensing-and-configuration) - Implementuj i konfigurowaj licencjonowanie
 
 ## Rozpoczęcie pracy z Java
 Java Document Annotation SDK
 
-Dodaj kompleksowe możliwości adnotacji do aplikacji Java przy użyciu naszego platformowo‑niezależnego API.
+Dodaj kompleksowe możliwości adnotacji do aplikacji Java dzięki naszemu niezależnemu od platformy API.
 
-[Przeglądaj samouczki Java](./java/)
+[Explore Java Tutorials](./java/)
 
 ### Podstawowe samouczki Java
-- [**Ładowanie dokumentu**](./java/document-loading) - Wielokrotne metody ładowania dokumentów, w tym integracja z przechowywaniem w chmurze
-- [**Adnotacje tekstowe**](./java/text-annotations) - Podświetlanie, podkreślanie, przekreślanie i zamiana tekstu
-- [**Adnotacje graficzne**](./java/graphical-annotations) - Dodawanie strzałek, kształtów i wymiarów
-- [**Adnotacje obrazów**](./java/image-annotations) - Wstawianie i dostosowywanie obrazów w dokumentach  
-- [**Zarządzanie adnotacjami**](./java/annotation-management) - Kompletny zarządzanie cyklem życia adnotacji
+- [**Document Loading**](./java/document-loading) - Wielokrotne metody ładowania dokumentów, w tym integracja z przechowywaniem w chmurze
+- [**Text Annotations**](./java/text-annotations) - Podświetlanie, podkreślanie, przekreślanie i zamiana tekstu
+- [**Graphical Annotations**](./java/graphical-annotations) - Dodawaj strzałki, kształty i wymiary
+- [**Image Annotations**](./java/image-annotations) - Wstawiaj i dostosowuj obrazy w dokumentach  
+- [**Annotation Management**](./java/annotation-management) - Kompletny zarządzanie cyklem życia adnotacji
 
 ### Zaawansowane funkcje Java
-- [**Podgląd dokumentu**](./java/document-preview) - Generowanie wysokiej jakości miniatur i podglądów
-- [**Narzędzia współpracy**](./java/reply-management) - Implementacja wątkowanych komentarzy i odpowiedzi
-- [**Informacje o dokumencie**](./java/document-information) - Dostęp do metadanych i struktury dokumentu
-- [**Zaawansowane funkcje**](./java/advanced-features) - Specjalistyczne możliwości adnotacji i optymalizacje
-- [**Opcje konfiguracji**](./java/licensing-and-configuration) - Dostosowanie zachowania i wydajności adnotacji
+- [**Document Preview**](./java/document-preview) - Generuj miniatury i podglądy wysokiej jakości
+- [**Collaboration Tools**](./java/reply-management) - Implementuj wątkowane komentarze i odpowiedzi
+- [**Document Information**](./java/document-information) - Uzyskaj dostęp do metadanych i struktury dokumentu
+- [**Advanced Features**](./java/advanced-features) - Specjalistyczne możliwości adnotacji i optymalizacje
+- [**Configuration Options**](./java/licensing-and-configuration) - Dostosuj zachowanie i wydajność adnotacji
 
 ## Jak wypróbować już dziś
-Przeglądaj nasze kompleksowe samouczki i przykładowy kod, aby wdrożyć potężne funkcje adnotacji w swoich aplikacjach. Niezależnie od tego, czy tworzysz systemy współpracy przy przeglądzie dokumentów, narzędzia edukacyjne czy rozwiązania zarządzania treścią, **document annotation API** zapewnia potrzebne możliwości.
+Przeglądaj nasze kompleksowe samouczki i przykładowy kod, aby wdrożyć potężne funkcje adnotacji w swoich aplikacjach. Niezależnie od tego, czy tworzysz systemy współpracy przy przeglądzie dokumentów, narzędzia edukacyjne czy rozwiązania zarządzania treścią, **API adnotacji dokumentów** zapewnia potrzebne możliwości.
 
 ### Bezpłatna wersja próbna
-Rozpocznij z bezpłatną wersją próbną, aby wypróbować wszystkie funkcje przed zakupem.  
-[Pobierz wersję próbną](https://releases.groupdocs.com/annotation/)
+Rozpocznij bezpłatną wersję próbną, aby przetestować wszystkie funkcje przed zakupem.  
+[Download Trial](https://releases.groupdocs.com/annotation/)
 
 ### Dokumentacja API
 Szczegółowe odniesienia API dla wszystkich obsługiwanych platform.  
-[Przeglądaj odniesienia API](https://reference.groupdocs.com/annotation/)
+[Browse API Reference](https://reference.groupdocs.com/annotation/)
 
 ## Najczęściej zadawane pytania
 
-**Q: Czy mogę używać document annotation API w produkcie komercyjnym?**  
+**Q: Czy mogę używać API adnotacji dokumentów w produkcie komercyjnym?**  
 A: Tak. Wymagana jest ważna licencja GroupDocs do wdrożeń produkcyjnych, a bezpłatna wersja próbna jest dostępna do oceny.
 
-**Q: Czy API obsługuje PDF‑y zabezpieczone hasłem?**  
-A: Absolutnie. Możesz podać hasło przy otwieraniu dokumentu, a wszystkie operacje adnotacji działają transparentnie.
+**Q: Czy API obsługuje pliki PDF zabezpieczone hasłem?**  
+A: Zdecydowanie. Możesz podać hasło przy otwieraniu dokumentu, a wszystkie operacje adnotacji działają transparentnie.
 
 **Q: Które wersje .NET są kompatybilne?**  
 A: SDK obsługuje .NET Framework 4.5+, .NET Core 3.1+, .NET 5 oraz .NET 6+.
@@ -119,6 +145,6 @@ A: Tak. Możesz ładować i zapisywać dokumenty bezpośrednio z Amazon S3, Azur
 
 ---
 
-**Ostatnia aktualizacja:** 2025-12-17  
-**Testowano z:** GroupDocs.Annotation 23.11 dla .NET i Java  
+**Ostatnia aktualizacja:** 2026-02-16  
+**Testowano z:** GroupDocs.Annotation 23.11 for .NET & Java  
 **Autor:** GroupDocs

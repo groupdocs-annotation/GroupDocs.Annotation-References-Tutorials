@@ -1,67 +1,69 @@
 ---
 categories:
 - Java Development
-date: '2025-12-17'
+date: '2026-02-16'
 description: Domina cómo agregar anotaciones PDF en Java con GroupDocs.Annotation.
   Tutorial paso a paso con ejemplos de código, consejos de solución de problemas y
-  mejores prácticas para 2025.
+  mejores prácticas para 2026.
 keywords: PDF annotation Java tutorial, GroupDocs annotation guide, Java PDF markup,
   document annotation library, how to add annotations to PDF with Java
-lastmod: '2025-12-17'
+lastmod: '2026-02-16'
 linktitle: Add PDF Annotation Java Tutorial
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-management
-title: Tutorial de Java para agregar anotaciones PDF
+title: Tutorial de Java para añadir anotaciones PDF
 type: docs
 url: /es/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
-# Tutorial de Anotación PDF en Java
+ to translate each paragraph.
 
-## Por qué la anotación de PDF es importante para los desarrolladores Java
+Let's produce final output.
 
-¿Alguna vez te has quedado atascado intentando agregar **add pdf annotation java** en tu aplicación? No estás solo. Ya sea que estés construyendo un sistema de gestión de documentos, creando una plataforma de revisión colaborativa, o simplemente necesites que los usuarios resalten y comenten PDFs, lograr una anotación correcta puede ser complicado.
+# Add PDF Annotation Java Tutorial
+
+¿Alguna vez te has quedado atascado intentando **add pdf annotation java** en tu aplicación? No estás solo. Ya sea que estés construyendo un sistema de gestión de documentos, creando una plataforma de revisión colaborativa, o simplemente necesites que los usuarios resalten y comenten PDFs, lograr una anotación correcta puede ser complicado.
 
 Aquí tienes la buena noticia: **GroupDocs.Annotation for Java** hace que este proceso sea sorprendentemente sencillo. En este tutorial completo, aprenderás exactamente cómo agregar, actualizar y gestionar anotaciones PDF de forma programática — con ejemplos de código reales que realmente funcionan.
 
 Al final de esta guía, podrás implementar funciones de anotación PDF de nivel profesional que tus usuarios amarán. ¡Vamos a sumergirnos!
 
-## Respuestas rápidas
-- **¿Qué biblioteca debo usar?** GroupDocs.Annotation for Java  
-- **¿Qué versión de Java se requiere?** JDK 8 o superior (JDK 11 recomendado)  
-- **¿Necesito una licencia?** Sí, se requiere una licencia de prueba o completa para cualquier uso que no sea de evaluación  
-- **¿Puedo anotar PDFs en una aplicación web?** Absolutamente – solo gestiona los recursos con try‑with‑resources  
-- **¿Hay soporte para otros tipos de archivo?** Sí, Word, Excel, PowerPoint e imágenes también son compatibles  
+## Quick Answers
+- **What library should I use?** GroupDocs.Annotation for Java  
+- **Which Java version is required?** JDK 8 or higher (JDK 11 recommended)  
+- **Do I need a license?** Yes, a trial or full license is required for any non‑evaluation use  
+- **Can I annotate PDFs in a web app?** Absolutely – just manage resources with try‑with‑resources  
+- **Is there support for other file types?** Yes, Word, Excel, PowerPoint, and images are also supported  
 
-## ¿Qué es add pdf annotation java?
-Agregar anotación PDF en Java significa crear, actualizar o eliminar programáticamente notas visuales, resaltados, comentarios y otras marcas dentro de un archivo PDF. Esto permite revisiones colaborativas, bucles de retroalimentación y enriquecimiento de documentos sin alterar el contenido original.
+## What is add pdf annotation java?
+Agregar anotaciones PDF en Java significa crear, actualizar o eliminar programáticamente notas visuales, resaltados, comentarios y otras marcas dentro de un archivo PDF. Esto permite revisiones colaborativas, bucles de retroalimentación y enriquecimiento de documentos sin alterar el contenido original.
 
-## ¿Por qué usar GroupDocs.Annotation for Java?
-- **API unificada** para muchos formatos de documento  
-- **Tipos de anotación ricos** (área, texto, punto, redacción, etc.)  
-- **Alto rendimiento** con bajo consumo de memoria  
-- **Licenciamiento sencillo** y opciones de prueba  
-- **Documentación completa** y soporte activo  
+## Why Use GroupDocs.Annotation for Java?
+- **Unified API** for many document formats  
+- **Rich annotation types** (area, text, point, redaction, etc.)  
+- **High performance** with low memory footprint  
+- **Easy licensing** and trial options  
+- **Comprehensive documentation** and active support  
 
-## Prerrequisitos - Preparando tu entorno
+## Prerequisites – Getting Your Environment Ready
 
-Antes de sumergirnos en el código, asegúrate de que todo esté configurado correctamente. Créeme, hacerlo bien desde el principio te ahorrará horas de depuración más adelante.
+Before we jump into the code, let's make sure you have everything set up correctly. Trust me, getting this right upfront will save you hours of debugging later.
 
-### Requisitos esenciales
+### Essential Requirements
 
-Necesitarás:
-- **Java JDK 8 o superior** (JDK 11+ recomendado para mejor rendimiento)  
-- **Maven o Gradle** para la gestión de dependencias  
-- **Conocimientos básicos de Java** (debes sentirte cómodo con clases y manejo de archivos)  
-- Una **licencia de GroupDocs** (prueba gratuita disponible)  
+You'll need:
+- **Java JDK 8 or higher** (JDK 11+ recommended for better performance)  
+- **Maven or Gradle** for dependency management  
+- **Basic Java knowledge** (you should be comfortable with classes and file handling)  
+- A **GroupDocs license** (free trial available)
 
-### Configuración de la dependencia Maven
+### Maven Dependency Setup
 
-Esto es exactamente lo que debes añadir a tu `pom.xml`. He visto a muchos desarrolladores luchar porque omiten la configuración del repositorio:
+Here's exactly what you need to add to your `pom.xml`. I've seen too many developers struggle because they miss the repository configuration:
 
 ```xml
 <repositories>
@@ -80,23 +82,23 @@ Esto es exactamente lo que debes añadir a tu `pom.xml`. He visto a muchos desar
 </dependencies>
 ```
 
-**Consejo profesional**: Siempre verifica el número de versión más reciente en la página de lanzamientos de GroupDocs. Usar versiones obsoletas puede provocar problemas de compatibilidad y funciones faltantes.
+**Pro Tip**: Always check for the latest version number on the GroupDocs release page. Using outdated versions can lead to compatibility issues and missing features.
 
-### Configuración de la licencia
+### License Configuration
 
-¡No omitas este paso! Incluso para desarrollo, querrás establecer la licencia adecuada:
+Don't skip this step! Even for development, you'll want to set up proper licensing:
 
-1. **Prueba gratuita**: Perfecta para pruebas — visita la [página de prueba de GroupDocs](https://releases.groupdocs.com/annotation/java/)  
-2. **Licencia temporal**: Ideal para fases de desarrollo  
-3. **Licencia completa**: Requerida para despliegue en producción  
+1. **Free Trial**: Perfect for testing — visit the [GroupDocs trial page](https://releases.groupdocs.com/annotation/java/)  
+2. **Temporary License**: Ideal for development phases  
+3. **Full License**: Required for production deployment  
 
-## Configurando GroupDocs.Annotation - La forma correcta
+## Setting Up GroupDocs.Annotation – The Right Way
 
-La mayoría de los tutoriales omiten los detalles importantes aquí. Asegurémonos de hacerlo bien la primera vez.
+Most tutorials skip the important details here. Let's make sure you get it right the first time.
 
-### Inicialización básica
+### Basic Initialization
 
-Así es como se inicializa correctamente la clase Annotator:
+Here's how to properly initialize the `Annotator` class:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -107,11 +109,11 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
 }
 ```
 
-**¿Por qué try‑with‑resources?** GroupDocs.Annotation gestiona bloqueos de archivos y recursos de memoria. No disponer correctamente del Annotator puede generar problemas de acceso a archivos y fugas de memoria.
+**Why try-with-resources?** GroupDocs.Annotation manages file locks and memory resources. Failing to properly dispose of the `Annotator` can lead to file access issues and memory leaks.
 
-### Manejo correcto de rutas de archivo
+### Handling File Paths Correctly
 
-Uno de los problemas más comunes que veo es el manejo incorrecto de rutas de archivo. Aquí tienes algunas buenas prácticas:
+One of the most common issues I see developers face is incorrect file path handling. Here are some best practices:
 
 ```java
 // Use File.separator for cross-platform compatibility
@@ -123,13 +125,13 @@ Path inputFile = Paths.get("documents", "input.pdf");
 Path outputFile = Paths.get("output", "annotated_document.pdf");
 ```
 
-## Agregando anotaciones PDF - Paso a paso
+## Adding PDF Annotations – Step by Step
 
-¡Ahora viene la parte divertida! Creemos algunas anotaciones que realmente hagan algo útil.
+Now for the fun part! Let's create some annotations that actually do something useful.
 
-### Creando tu primera anotación de área
+### Creating Your First Area Annotation
 
-Las anotaciones de área son perfectas para resaltar regiones, añadir énfasis visual o crear zonas clicables. Así es como se crea una correctamente:
+Area annotations are perfect for highlighting regions, adding visual emphasis, or creating clickable zones. Here's how to create one properly:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -143,9 +145,9 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/UpdateAnnotation.pdf";
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-### Configuración de propiedades de la anotación
+### Configuring Annotation Properties
 
-Aquí puedes ser creativo. Configuraremos una anotación con múltiples respuestas (perfecto para flujos de trabajo colaborativos):
+This is where you can get creative. Let's set up an annotation with multiple replies (perfect for collaborative workflows):
 
 ```java
 // Create replies for collaborative feedback
@@ -172,29 +174,29 @@ areaAnnotation.setReplies(replies);
 annotator.add(areaAnnotation);
 ```
 
-**Entendiendo los valores de color**: El método `setBackgroundColor` usa formato ARGB. Aquí tienes algunos valores comunes:
-- `65535` – Azul claro  
-- `16711680` – Rojo  
-- `65280` – Verde  
-- `255` – Azul  
-- `16776960` – Amarillo  
+**Understanding Color Values**: The `setBackgroundColor` method uses ARGB format. Here are some common values:  
+- `65535` – Light blue  
+- `16711680` – Red  
+- `65280` – Green  
+- `255` – Blue  
+- `16776960` – Yellow  
 
-### Guardando tu documento anotado
+### Saving Your Annotated Document
 
-Recuerda siempre guardar y limpiar correctamente:
+Always remember to save and clean up properly:
 
 ```java
 annotator.save(outputPath);
 annotator.dispose(); // Critical for resource management
 ```
 
-## Actualizando anotaciones existentes - De forma inteligente
+## Updating Existing Annotations – The Smart Way
 
-Las aplicaciones reales necesitan actualizar anotaciones, no solo crearlas. Así es como se manejan las actualizaciones de manera eficiente.
+Real applications need to update annotations, not just create them. Here's how to handle updates efficiently.
 
-### Cargando documentos previamente anotados
+### Loading Previously Annotated Documents
 
-Al trabajar con documentos que ya contienen anotaciones, puede que necesites opciones de carga específicas:
+When working with documents that already contain annotations, you might need specific load options:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -205,9 +207,9 @@ LoadOptions loadOptions = new LoadOptions();
 final Annotator annotator1 = new Annotator("YOUR_OUTPUT_DIRECTORY/UpdateAnnotation.pdf", loadOptions);
 ```
 
-### Modificando anotaciones existentes
+### Modifying Existing Annotations
 
-Esta es la clave para actualizaciones exitosas — hacer coincidir el ID correctamente:
+Here's the key to successful annotation updates — matching the ID correctly:
 
 ```java
 Reply reply3 = new Reply();
@@ -232,42 +234,42 @@ updatedAnnotation.setReplies(updatedReplies);
 annotator1.update(updatedAnnotation);
 ```
 
-### Persistiendo tus cambios
+### Persisting Your Changes
 
-No olvides este paso crucial:
+Don't forget this crucial step:
 
 ```java
 annotator1.save(outputPath);
 annotator1.dispose();
 ```
 
-## Consejos de implementación en el mundo real
+## Real‑World Implementation Tips
 
-Permíteme compartir algunas ideas de la implementación de anotaciones PDF en aplicaciones de producción.
+Let me share some insights from implementing PDF annotation in production applications.
 
-### Cuándo usar anotaciones PDF
+### When to Use PDF Annotations
 
-Las anotaciones PDF brillan en estos escenarios:
+PDF annotations shine in these scenarios:
 
-- **Flujos de revisión de documentos** – contratos legales, edición de manuscritos, etc.  
-- **Aplicaciones educativas** – profesores que brindan retroalimentación en entregas de estudiantes.  
-- **Documentación técnica** – añadir notas aclaratorias o comentarios de versión.  
-- **Control de calidad** – marcar problemas en especificaciones de diseño o informes de pruebas.  
+- **Document Review Workflows** – legal contracts, manuscript editing, etc.  
+- **Educational Applications** – teachers providing feedback on student submissions.  
+- **Technical Documentation** – adding clarifying notes or version comments.  
+- **Quality Assurance** – marking issues in design specs or test reports.
 
-### Elegir el tipo de anotación correcto
+### Choosing the Right Annotation Type
 
-GroupDocs.Annotation ofrece varios tipos de anotación. Aquí cuándo usar cada uno:
+GroupDocs.Annotation offers several annotation types. Here's when to use each:
 
-- **AreaAnnotation** – resaltar regiones o énfasis visual  
-- **TextAnnotation** – comentarios en línea y sugerencias  
-- **PointAnnotation** – marcar ubicaciones específicas  
-- **RedactionAnnotation** – eliminar permanentemente contenido sensible  
+- **AreaAnnotation** – highlighting regions or visual emphasis  
+- **TextAnnotation** – inline comments and suggestions  
+- **PointAnnotation** – marking specific locations  
+- **RedactionAnnotation** – permanently removing sensitive content  
 
-### Consideraciones de rendimiento para producción
+### Performance Considerations for Production
 
-Basado en experiencia real, ten en cuenta estos factores:
+Based on real‑world experience, keep these factors in mind:
 
-**Gestión de memoria** – siempre dispone de las instancias de Annotator rápidamente. En aplicaciones de alto tráfico, considera patrones de pool de conexiones.
+**Memory Management** – always dispose of `Annotator` instances promptly. In high‑traffic apps, consider connection‑pooling patterns.
 
 ```java
 // Good practice for web applications
@@ -281,16 +283,16 @@ public class AnnotationService {
 }
 ```
 
-**Operaciones por lotes** – evita crear un nuevo Annotator para cada página al procesar muchos documentos.
+**Batch Operations** – avoid creating a new `Annotator` for every page when processing many documents.
 
-**Tamaño de archivo** – PDFs grandes con muchas anotaciones pueden afectar la velocidad. Implementa paginación o carga diferida para documentos con más de 100 anotaciones.
+**File Size** – large PDFs with many annotations can affect speed. Implement pagination or lazy loading for documents with 100+ annotations.
 
-## Problemas comunes y soluciones
+## Common Pitfalls and Solutions
 
-### Problema #1: Errores de acceso a archivos
+### Issue #1: File Access Errors
 
-**Problema**: `FileNotFoundException` o errores de acceso denegado  
-**Solución**: Valida la existencia del archivo y los permisos antes de abrir:
+**Problem**: `FileNotFoundException` or access denied errors  
+**Solution**: Validate file existence and permissions before opening:
 
 ```java
 File inputFile = new File("documents/input.pdf");
@@ -302,10 +304,10 @@ if (!inputFile.canRead()) {
 }
 ```
 
-### Problema #2: Los IDs de anotación no coinciden
+### Issue #2: Annotation IDs Not Matching
 
-**Problema**: Las operaciones de actualización fallan silenciosamente  
-**Solución**: Rastrea los IDs de forma consistente entre las llamadas de creación y actualización:
+**Problem**: Update operations fail silently  
+**Solution**: Track IDs consistently across create and update calls:
 
 ```java
 // Keep track of annotation IDs
@@ -318,10 +320,10 @@ int annotationId = annotationIds.get("main-highlight");
 updatedAnnotation.setId(annotationId);
 ```
 
-### Problema #3: Fugas de memoria en aplicaciones web
+### Issue #3: Memory Leaks in Web Applications
 
-**Problema**: El uso de memoria de la aplicación sigue creciendo  
-**Solución**: Usa try‑with‑resources o dispone explícitamente en las capas de servicio:
+**Problem**: Application memory usage keeps growing  
+**Solution**: Use try‑with‑resources or explicit `dispose` in service layers:
 
 ```java
 @Service
@@ -338,11 +340,11 @@ public class PDFAnnotationService {
 }
 ```
 
-## Mejores prácticas para uso en producción
+## Best Practices for Production Use
 
-### Consideraciones de seguridad
+### Security Considerations
 
-**Validación de entrada** – siempre verifica el tipo y tamaño del archivo antes de procesarlo:
+**Input Validation** – always verify file type and size before processing:
 
 ```java
 private void validatePDFFile(String filePath) {
@@ -356,7 +358,7 @@ private void validatePDFFile(String filePath) {
 }
 ```
 
-**Gestión de licencias** – carga la licencia de GroupDocs al iniciar la aplicación:
+**License Management** – load the GroupDocs license at application startup:
 
 ```java
 @PostConstruct
@@ -371,9 +373,9 @@ public void initializeLicense() {
 }
 ```
 
-### Estrategia de manejo de errores
+### Error Handling Strategy
 
-Envuelve el trabajo de anotación en un objeto de resultado para que los llamadores puedan reaccionar adecuadamente:
+Wrap annotation work in a result object so callers can react appropriately:
 
 ```java
 public class AnnotationResult {
@@ -397,65 +399,53 @@ public AnnotationResult processAnnotation(String inputPath, AnnotationConfig con
 }
 ```
 
-## Funcionalidades avanzadas que vale la pena explorar
+## Advanced Features Worth Exploring
 
-- **Marca de agua** – incrusta branding o información de seguimiento.  
-- **Redacción de texto** – elimina permanentemente datos sensibles.  
-- **Tipos de anotación personalizados** – extiende la API para necesidades específicas del dominio.  
-- **Integración de metadatos** – almacena contexto adicional con cada anotación para mejorar la buscabilidad.  
+- **Watermarking** – embed branding or tracking info.  
+- **Text Redaction** – permanently remove sensitive data.  
+- **Custom Annotation Types** – extend the API for domain‑specific needs.  
+- **Metadata Integration** – store extra context with each annotation for better searchability.
 
-## Guía de solución de problemas
+## Troubleshooting Guide
 
-### Diagnósticos rápidos
+### Quick Diagnostics
 
-1. **Verifica permisos de archivo** – ¿puede tu aplicación leer/escribir los archivos?  
-2. **Confirma el formato del archivo** – ¿es un PDF válido?  
-3. **Valida la licencia** – ¿está la licencia de GroupDocs configurada correctamente?  
-4. **Monitorea el uso de memoria** – ¿estás disponiendo de los recursos?  
+1. **Check file permissions** – can your app read/write the files?  
+2. **Verify file format** – is it a valid PDF?  
+3. **Validate license** – is the GroupDocs license correctly configured?  
+4. **Monitor memory usage** – are you disposing of resources?
 
-### Mensajes de error comunes y soluciones
+### Common Error Messages and Solutions
 
-- **"Cannot access file"** – suele ser un problema de permisos o bloqueo de archivo. Asegúrate de que ningún otro proceso mantenga el archivo abierto.  
-- **"Invalid annotation format"** – verifica las coordenadas del rectángulo y los valores de color.  
-- **"License not found"** – verifica la ruta del archivo de licencia y que sea accesible en tiempo de ejecución.  
+- **"Cannot access file"** – usually a permissions or file‑locking issue. Ensure no other process holds the file.  
+- **"Invalid annotation format"** – double‑check rectangle coordinates and color values.  
+- **"License not found"** – verify the license file path and that it’s accessible at runtime.
 
-## Conclusión
+## Frequently Asked Questions
 
-Ahora tienes una base sólida para implementar funciones de **add pdf annotation java** en tus aplicaciones Java. GroupDocs.Annotation proporciona las herramientas necesarias, pero el éxito depende de una configuración adecuada, gestión de recursos y conocimiento de los problemas comunes.
+**Q: How do I install GroupDocs.Annotation for Java?**  
+A: Add the Maven dependency shown in the prerequisites section to your `pom.xml`. Include the repository configuration; missing it is a common cause of build failures.
 
-Recuerda:
-- Usa try‑with‑resources para gestionar la memoria.  
-- Valida las entradas y maneja los errores de forma elegante.  
-- Lleva el control de los IDs de anotación para actualizaciones.  
-- Prueba con una variedad de tamaños de PDF y recuentos de anotaciones.
+**Q: Can I annotate document formats other than PDF?**  
+A: Absolutely! GroupDocs.Annotation supports Word, Excel, PowerPoint, and various image formats. The API usage remains consistent across formats.
 
-Comienza con anotaciones de área simples, luego explora capacidades más ricas como redacción, marcas de agua y metadatos personalizados. Tus usuarios apreciarán la experiencia colaborativa e interactiva que crees.
+**Q: What's the best way to handle annotation updates in a multi‑user environment?**  
+A: Implement optimistic locking by tracking annotation version numbers or last‑modified timestamps. This prevents conflicts when several users edit the same annotation simultaneously.
 
-## Preguntas frecuentes
+**Q: How do I change an annotation's appearance after creation?**  
+A: Call the `update()` method with the same annotation ID and modify properties such as `setBackgroundColor()`, `setBox()`, or `setMessage()`.
 
-**P: ¿Cómo instalo GroupDocs.Annotation for Java?**  
-R: Añade la dependencia Maven mostrada en la sección de prerrequisitos a tu `pom.xml`. Incluye la configuración del repositorio; omitirla es una causa común de fallos de compilación.
+**Q: Are there any file size limitations for PDF annotation?**  
+A: GroupDocs.Annotation can handle large PDFs, but performance may degrade with files larger than 100 MB or documents containing thousands of annotations. Consider pagination or lazy loading for better responsiveness.
 
-**P: ¿Puedo anotar formatos de documento distintos a PDF?**  
-R: ¡Absolutamente! GroupDocs.Annotation soporta Word, Excel, PowerPoint y varios formatos de imagen. El uso de la API se mantiene consistente entre formatos.
+**Q: Can I export annotations to other formats?**  
+A: Yes, you can export annotations to XML, JSON, or other formats, making it easy to integrate with external systems or migrate data.
 
-**P: ¿Cuál es la mejor manera de manejar actualizaciones de anotaciones en un entorno multi‑usuario?**  
-R: Implementa bloqueo optimista rastreando números de versión de la anotación o marcas de tiempo de última modificación. Esto previene conflictos cuando varios usuarios editan la misma anotación simultáneamente.
-
-**P: ¿Cómo cambio la apariencia de una anotación después de crearla?**  
-R: Llama al método `update()` con el mismo ID de anotación y modifica propiedades como `setBackgroundColor()`, `setBox()` o `setMessage()`.
-
-**P: ¿Existen limitaciones de tamaño de archivo para la anotación de PDF?**  
-R: GroupDocs.Annotation puede manejar PDFs grandes, pero el rendimiento puede degradarse con archivos mayores a 100 MB o documentos con miles de anotaciones. Considera paginación o carga diferida para mejor capacidad de respuesta.
-
-**P: ¿Puedo exportar anotaciones a otros formatos?**  
-R: Sí, puedes exportar anotaciones a XML, JSON u otros formatos, facilitando la integración con sistemas externos o la migración de datos.
-
-**P: ¿Cómo implemento permisos de anotación (quién puede editar qué)?**  
-R: Aunque GroupDocs.Annotation no ofrece gestión de permisos incorporada, puedes aplicarla en la capa de aplicación rastreando la propiedad de la anotación y verificando permisos antes de invocar operaciones de actualización.
+**Q: How do I implement annotation permissions (who can edit what)?**  
+A: While GroupDocs.Annotation doesn't provide built‑in permission management, you can enforce it at the application layer by tracking annotation ownership and checking permissions before invoking update operations.
 
 ---
 
-**Última actualización:** 2025-12-17  
-**Probado con:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs
+**Last Updated:** 2026-02-16  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
