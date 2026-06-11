@@ -1,13 +1,13 @@
 ---
 categories:
 - Java Development
-date: '2025-12-21'
+date: '2026-02-21'
 description: Tìm hiểu cách trích xuất chú thích PDF bằng Java sử dụng GroupDocs Java
-  API. Bao gồm hướng dẫn chú thích PDF cho Spring Boot, mã từng bước, khắc phục sự
-  cố và mẹo tối ưu hiệu suất.
+  API. Bao gồm hướng dẫn chú thích PDF trong Spring Boot, mã từng bước, khắc phục
+  sự cố và mẹo tối ưu hiệu năng.
 keywords: PDF annotation extraction Java, GroupDocs Java tutorial, automate PDF processing,
   Java document annotation, extract PDF comments Java
-lastmod: '2025-12-21'
+lastmod: '2026-02-21'
 linktitle: PDF Annotation Extraction Java Guide
 tags:
 - PDF processing
@@ -20,69 +20,76 @@ url: /vi/java/annotation-management/automate-pdf-annotation-extraction-groupdocs
 weight: 1
 ---
 
-# Trích xuất chú thích PDF Java: Hướng dẫn đầy đủ GroupDocs
+ not technical terms: e.g., "step‑by‑step" we kept as is? It's part of bullet; we can keep English but maybe translate "step‑by‑step" to "từng bước". But it's part of bullet containing **extract pdf annotations java** implementation. Could translate to "Triển khai **extract pdf annotations java** từng bước". That's fine.
+
+Also "Real‑world" maybe keep as "Thực tế". Already did.
+
+Now produce final markdown.# Trích xuất chú thích PDF Java: Hướng dẫn đầy đủ GroupDocs
 
 ## Giới thiệu
 
-Bạn gặp khó khăn khi trích xuất chú thích PDF một cách thủ công? Bạn không đơn độc. Dù bạn đang xử lý các bình luận của người đánh giá, văn bản được tô sáng, hay các đánh dấu phức tạp trong các ứng dụng Java của mình, việc xử lý chú thích thủ công tốn thời gian và dễ gây lỗi.
+Bạn gặp khó khăn khi trích xuất chú thích PDF thủ công? Bạn không phải là người duy nhất. Dù bạn đang xử lý các bình luận của người đánh giá, văn bản được đánh dấu, hay các đánh dấu phức tạp trong các ứng dụng Java của mình, việc xử lý chú thích một cách thủ công tốn thời gian và dễ gây lỗi.
 
-**GroupDocs.Annotation for Java** biến quá trình tẻ nhạt này thành chỉ vài dòng mã, cho phép bạn **extract pdf annotations java** nhanh chóng và đáng tin cậy. Trong hướng dẫn toàn diện này, bạn sẽ học cách thiết lập thư viện, lấy chú thích từ PDF, xử lý các trường hợp đặc biệt, và tối ưu hiệu năng cho các tải công việc sản xuất.
+**GroupDocs.Annotation for Java** biến quá trình tẻ nhạt này thành vài dòng mã, cho phép bạn **extract pdf annotations java** nhanh chóng và đáng tin cậy. Trong hướng dẫn toàn diện này, bạn sẽ học cách thiết lập thư viện, lấy chú thích từ PDF, xử lý các trường hợp đặc biệt, và tối ưu hiệu năng cho các tải công việc sản xuất.
 
-**Bạn sẽ nắm vững những gì vào cuối:**
+**Bạn sẽ thành thạo những gì vào cuối:**
 - Cài đặt đầy đủ GroupDocs.Annotation cho các dự án Java  
 - Triển khai **extract pdf annotations java** từng bước  
 - Khắc phục các vấn đề thường gặp (và giải pháp của chúng)  
 - Kỹ thuật tối ưu hiệu năng cho tài liệu lớn  
-- Các mẫu tích hợp thực tế, bao gồm **spring boot pdf annotations**  
+- Mẫu tích hợp thực tế, bao gồm **spring boot pdf annotations**  
 
-Sẵn sàng tinh giản quy trình xử lý tài liệu của bạn? Hãy bắt đầu với các yêu cầu tiên quyết cần thiết.
+Sẵn sàng tối ưu quy trình xử lý tài liệu của bạn? Hãy bắt đầu với các yêu cầu tiên quyết cần thiết.
 
 ## Câu trả lời nhanh
-- **“extract pdf annotations java” có nghĩa là gì?** Đó là quá trình đọc chương trình các bình luận, tô sáng và các đánh dấu khác từ một PDF bằng Java.  
-- **Tôi có cần giấy phép không?** Bản dùng thử miễn phí đủ cho phát triển; giấy phép thương mại cần thiết cho môi trường sản xuất.  
-- **Tôi có thể dùng với Spring Boot không?** Có – xem phần “Spring Boot PDF Annotations Integration”.  
-- **Yêu cầu phiên bản Java nào?** Tối thiểu JDK 8; JDK 11+ được khuyến nghị.  
-- **Có nhanh cho PDF lớn không?** Với streaming và xử lý batch, bạn có thể xử lý các tệp trên 100 trang một cách hiệu quả.
+- **extract pdf annotations java** có nghĩa là gì?** Đó là quá trình đọc chương trình các bình luận, đánh dấu và các chú thích khác từ một PDF bằng Java.  
+- **Tôi có cần giấy phép không?** Bản dùng thử miễn phí hoạt động cho phát triển; giấy phép thương mại cần thiết cho môi trường sản xuất.  
+- **Tôi có thể sử dụng với Spring Boot không?** Có – xem phần “Spring Boot PDF Annotations Integration”.  
+- **Phiên bản Java nào được yêu cầu?** Tối thiểu JDK 8; JDK 11+ được khuyến nghị.  
+- **Nó có nhanh cho PDF lớn không?** Với streaming và xử lý theo lô, bạn có thể xử lý các tệp hơn 100 trang một cách hiệu quả.
 
 ## extract pdf annotations java là gì?
-Trích xuất chú thích PDF trong Java có nghĩa là sử dụng một API để quét tệp PDF, xác định mọi đối tượng chú thích (bình luận, tô sáng, dấu, v.v.), và lấy các thuộc tính của chúng — như loại, nội dung, số trang và tác giả. Điều này cho phép tự động hoá quy trình đánh giá, phân tích, hoặc di chuyển các đánh dấu sang hệ thống khác.
+Việc trích xuất chú thích PDF trong Java có nghĩa là sử dụng một API để quét tệp PDF, xác định mọi đối tượng chú thích (bình luận, đánh dấu, dấu, v.v.), và lấy các thuộc tính của chúng — như loại, nội dung, số trang và tác giả. Điều này cho phép quy trình đánh giá tự động, phân tích, hoặc di chuyển các chú thích sang các hệ thống khác.
 
-## Tại sao nên dùng GroupDocs.Annotation cho Java?
-- **Hỗ trợ đa dạng các loại chú thích** trên tất cả các định dạng PDF chính.  
+## Tại sao nên sử dụng GroupDocs.Annotation cho Java?
+- **Hỗ trợ chú thích phong phú** cho tất cả các loại chú thích PDF chính.  
 - **API nhất quán** hoạt động giống nhau cho Word, Excel, PowerPoint và PDF.  
-- **Hiệu năng doanh nghiệp** với streaming tích hợp giúp giảm sử dụng bộ nhớ.  
+- **Hiệu năng cấp doanh nghiệp** với streaming tích hợp để giữ mức sử dụng bộ nhớ thấp.  
 - **Tài liệu đầy đủ** và hỗ trợ thương mại.
 
-## Yêu cầu tiên quyết và cài đặt
+## Tại sao điều này quan trọng
+Tự động hoá việc trích xuất chú thích tiết kiệm vô số giờ làm việc thủ công, giảm lỗi con người, và mở ra cơ hội cho các phân tích dựa trên dữ liệu — ví dụ như phân tích cảm xúc của các bình luận của người đánh giá hoặc tự động tạo báo cáo tóm tắt. Đối với các nhóm phụ thuộc vào việc đánh giá PDF (pháp lý, tài chính, giáo dục), khả năng lấy dữ liệu chú thích một cách lập trình là lợi thế cạnh tranh.
+
+## Yêu cầu trước và cài đặt
 
 Trước khi bắt đầu trích xuất chú thích PDF, hãy đảm bảo môi trường phát triển của bạn đáp ứng các yêu cầu sau:
 
 ### Yêu cầu thiết yếu
 
 **Môi trường phát triển:**
-- Java Development Kit (JDK) 8 trở lên (JDK 11+ được khuyến nghị để có hiệu năng tốt hơn)  
+- Java Development Kit (JDK) 8 hoặc cao hơn (JDK 11+ được khuyến nghị để có hiệu năng tốt hơn)  
 - Maven 3.6+ để quản lý phụ thuộc  
-- IDE yêu thích (IntelliJ IDEA, Eclipse, hoặc VS Code)
+- IDE bạn chọn (IntelliJ IDEA, Eclipse, hoặc VS Code)
 
-**Kiến thức cần có:**
+**Yêu cầu kiến thức:**
 - Các khái niệm cơ bản về lập trình Java  
 - Hiểu cấu trúc dự án Maven  
-- Quen với mẫu `try‑with‑resources` (chúng ta sẽ sử dụng nó rất nhiều)
+- Quen thuộc với mẫu try‑with‑resources (chúng tôi sẽ sử dụng rộng rãi)
 
 **Yêu cầu hệ thống:**
-- Tối thiểu 2 GB RAM (khuyến nghị 4 GB+ cho việc xử lý PDF lớn)  
-- Đủ không gian đĩa cho việc xử lý tệp tạm thời
+- Tối thiểu 2 GB RAM (khuyến nghị 4 GB+ để xử lý PDF lớn)  
+- Không gian đĩa đủ cho việc xử lý tệp tạm thời
 
 ### Tại sao các yêu cầu này quan trọng
-Phiên bản JDK quan trọng vì GroupDocs.Annotation tận dụng các tính năng mới của Java để quản lý bộ nhớ tốt hơn. Maven giúp đơn giản hoá việc quản lý phụ thuộc, đặc biệt khi làm việc với các kho lưu trữ của GroupDocs.
+Phiên bản JDK quan trọng vì GroupDocs.Annotation tận dụng các tính năng Java mới hơn để quản lý bộ nhớ tốt hơn. Maven đơn giản hoá việc quản lý phụ thuộc, đặc biệt khi làm việc với các kho lưu trữ GroupDocs.
 
 ## Cài đặt GroupDocs.Annotation cho Java
 
-Việc đưa GroupDocs.Annotation vào dự án của bạn khá đơn giản, nhưng có một số chi tiết cần lưu ý.
+Việc đưa GroupDocs.Annotation vào và chạy trong dự án của bạn khá đơn giản, nhưng có một số chi tiết đáng lưu ý.
 
 ### Cấu hình Maven
 
-Thêm cấu hình này vào `pom.xml` — lưu ý URL kho lưu trữ cụ thể mà nhiều nhà phát triển thường bỏ qua:
+Thêm cấu hình này vào `pom.xml` của bạn — lưu ý URL kho lưu trữ cụ thể mà nhiều nhà phát triển bỏ qua:
 
 ```xml
 <repositories>
@@ -105,12 +112,12 @@ Thêm cấu hình này vào `pom.xml` — lưu ý URL kho lưu trữ cụ th
 
 ### Các tùy chọn thiết lập giấy phép
 
-**Cho phát triển và thử nghiệm:**
-1. **Bản dùng thử miễn phí:** Hoàn hảo để đánh giá — cung cấp đầy đủ chức năng.  
-2. **Giấy phép tạm thời:** Gia hạn thời gian đánh giá để kiểm tra kỹ lưỡng.  
-3. **Giấy phép thương mại:** Yêu cầu cho triển khai sản xuất.
+**Đối với phát triển và thử nghiệm:**
+1. **Free Trial:** Hoàn hảo cho việc đánh giá — cung cấp đầy đủ chức năng.  
+2. **Temporary License:** Gia hạn thời gian đánh giá để kiểm tra kỹ lưỡng.  
+3. **Commercial License:** Cần thiết cho triển khai sản xuất.
 
-**Cài đặt giấy phép nhanh:**
+**Quick License Setup:**
 
 ```java
 // For temporary or commercial licenses
@@ -120,7 +127,7 @@ license.setLicense("path/to/your/license.lic");
 
 ### Khởi tạo dự án
 
-Đây là cấu trúc cơ bản mà bạn sẽ xây dựng tiếp:
+Đây là cấu hình cơ bản mà bạn sẽ xây dựng tiếp:
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -132,15 +139,15 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**Tại sao lại dùng mẫu này?** `try‑with‑resources` đảm bảo dọn dẹp đúng cách, ngăn ngừa rò rỉ bộ nhớ thường gặp khi xử lý nhiều tài liệu.
+**Tại sao mẫu này?** Try‑with‑resources đảm bảo dọn dẹp đúng cách, ngăn ngừa rò rỉ bộ nhớ thường gặp khi xử lý nhiều tài liệu.
 
 ## Hướng dẫn triển khai từng bước
 
-Bây giờ là phần trọng tâm — trích xuất chú thích từ tài liệu PDF của bạn. Chúng ta sẽ chia thành các bước dễ hiểu.
+Bây giờ là phần chính — trích xuất chú thích từ tài liệu PDF của bạn. Chúng tôi sẽ chia nó thành các bước dễ hiểu.
 
-### Bước 1: Tải tài liệu và kiểm tra
+### Bước 1: Tải tài liệu và xác thực
 
-**Mở tài liệu PDF của bạn:**
+**Opening Your PDF Document:**
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -157,21 +164,21 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**Điều gì đang diễn ra?** Chúng ta tạo một `InputStream` từ tệp PDF và khởi tạo `Annotator`. Bước kiểm tra tùy chọn giúp tiết kiệm thời gian xử lý nếu tài liệu không có chú thích.
+**Điều gì đang diễn ra?** Chúng tôi tạo một `InputStream` từ tệp PDF của bạn và khởi tạo `Annotator`. Bước xác thực tùy chọn giúp tiết kiệm thời gian xử lý nếu tài liệu không có chú thích.
 
 ### Bước 2: Lấy chú thích
 
-**Trích xuất tất cả chú thích:**
+**Extracting All Annotations:**
 
 ```java
 List<AnnotationBase> annotations = annotator.get();
 ```
 
-Dòng lệnh duy nhất này thực hiện công việc nặng — quét toàn bộ PDF và trả về danh sách các chú thích. Mỗi chú thích chứa siêu dữ liệu như loại, vị trí, nội dung và thông tin tác giả.
+Dòng duy nhất này thực hiện công việc nặng — nó quét toàn bộ PDF và trả về tất cả các chú thích dưới dạng danh sách. Mỗi chú thích chứa siêu dữ liệu như loại, vị trí, nội dung và thông tin tác giả.
 
 ### Bước 3: Xử lý và phân tích
 
-**Duyệt qua các chú thích:**
+**Iterating Through Annotations:**
 
 ```java
 Iterator<AnnotationBase> items = annotations.iterator();
@@ -187,11 +194,11 @@ while (items.hasNext()) {
 }
 ```
 
-**Mẹo thực tế:** Các loại chú thích khác nhau (tô sáng, bình luận, dấu) có các thuộc tính riêng. Bạn có thể lọc theo loại tùy vào nhu cầu.
+**Mẹo thực tế:** Các loại chú thích khác nhau (đánh dấu, bình luận, dấu) có các thuộc tính riêng. Bạn có thể muốn lọc theo loại tùy vào trường hợp sử dụng.
 
 ### Bước 4: Quản lý tài nguyên
 
-**Dọn dẹp đúng cách:**
+**Proper Cleanup:**
 
 ```java
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
@@ -199,7 +206,7 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 } // Stream automatically closed here
 ```
 
-Mẫu `try‑with‑resources` tự động xử lý dọn dẹp. Điều này rất quan trọng khi xử lý nhiều tài liệu hoặc trong các ứng dụng chạy lâu dài.
+Mẫu try‑with‑resources tự động xử lý việc dọn dẹp. Điều này rất quan trọng khi xử lý nhiều tài liệu hoặc trong các ứng dụng chạy lâu.
 
 ## Các vấn đề thường gặp và giải pháp
 
@@ -207,9 +214,8 @@ Dựa trên kinh nghiệm thực tế, dưới đây là những thách thức p
 
 ### Vấn đề 1: “Không tìm thấy chú thích” (Mặc dù bạn biết chúng tồn tại)
 
-**Nguyên nhân:** PDF của bạn có chú thích hiển thị, nhưng `annotator.get()` trả về danh sách rỗng.
-
-**Giải pháp:** Thường xảy ra với PDF đã điền form hoặc chú thích được tạo bởi phần mềm đặc thù.
+**Problem:** PDF của bạn có các chú thích hiển thị, nhưng `annotator.get()` trả về danh sách rỗng.  
+**Solution:** Điều này thường xảy ra với PDF đã được điền form hoặc các chú thích được tạo bởi phần mềm cụ thể.
 
 ```java
 // Try different annotation types
@@ -223,9 +229,8 @@ for (AnnotationType type : AnnotationType.values()) {
 
 ### Vấn đề 2: Vấn đề bộ nhớ với PDF lớn
 
-**Nguyên nhân:** `OutOfMemoryError` khi xử lý tài liệu lớn.
-
-**Giải pháp:** Xử lý chú thích theo batch và tối ưu cài đặt JVM:
+**Problem:** `OutOfMemoryError` khi xử lý tài liệu lớn.  
+**Solution:** Xử lý chú thích theo lô và tối ưu cài đặt JVM:
 
 ```java
 // Set JVM options: -Xmx4g -XX:+UseG1GC
@@ -239,11 +244,10 @@ for (int i = 0; i < annotations.size(); i += batchSize) {
 }
 ```
 
-### Vấn đề 3: Lỗi mã hoá ký tự đặc biệt
+### Vấn đề 3: Vấn đề mã hoá với ký tự đặc biệt
 
-**Nguyên nhân:** Văn bản chú thích bị hiển thị rối hoặc có dấu hỏi.
-
-**Giải pháp:** Đảm bảo xử lý mã hoá đúng cách:
+**Problem:** Văn bản chú thích hiển thị rối hoặc có dấu hỏi.  
+**Solution:** Đảm bảo xử lý mã hoá đúng cách:
 
 ```java
 // When reading file paths or annotation content
@@ -252,9 +256,9 @@ String content = new String(annotation.getMessage().getBytes(), StandardCharsets
 
 ## Mẹo tối ưu hiệu năng
 
-### Thực hành quản lý bộ nhớ
+### Thực hành tốt nhất quản lý bộ nhớ
 
-**1. Xử lý streaming cho tệp lớn:**
+**1. Stream Processing for Large Files:**
 
 ```java
 // Instead of loading entire document into memory
@@ -265,7 +269,7 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 }
 ```
 
-**2. Tinh chỉnh JVM cho xử lý tài liệu:**
+**2. JVM Tuning for Document Processing:**
 
 ```
 -Xmx4g                    # Increase heap size
@@ -275,7 +279,7 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 
 ### Cải thiện tốc độ xử lý
 
-**Xử lý song song cho nhiều tài liệu:**
+**Parallel Processing for Multiple Documents**
 
 ```java
 List<Path> pdfFiles = Files.list(Paths.get("documents/"))
@@ -285,14 +289,14 @@ List<Path> pdfFiles = Files.list(Paths.get("documents/"))
 pdfFiles.parallelStream().forEach(this::extractAnnotations);
 ```
 
-**Chiến lược batch:**  
-Xử lý nhiều tài liệu trong một phiên để giảm chi phí khởi tạo.
+**Chiến lược xử lý theo lô:**  
+Xử lý nhiều tài liệu trong một phiên duy nhất để giảm chi phí khởi tạo.
 
-## Ứng dụng thực tế và các trường hợp sử dụng
+## Ứng dụng thực tế và trường hợp sử dụng
 
 ### 1. Tự động hoá đánh giá tài liệu
 
-**Kịch bản:** Các công ty luật xử lý đánh giá hợp đồng với nhiều người đánh giá.
+**Scenario:** Các công ty luật xử lý đánh giá hợp đồng với nhiều người đánh giá.
 
 ```java
 // Extract and categorize reviewer feedback
@@ -306,7 +310,7 @@ reviewerComments.forEach((reviewer, comments) -> {
 
 ### 2. Tích hợp nền tảng giáo dục
 
-**Kịch bản:** Trích xuất chú thích của sinh viên từ sách giáo trình kỹ thuật số để phân tích.
+**Scenario:** Trích xuất chú thích của sinh viên từ sách giáo trình kỹ thuật số để phân tích.
 
 ```java
 // Analyze annotation patterns
@@ -317,9 +321,9 @@ long highlightCount = annotations.stream()
 System.out.println("Student made " + highlightCount + " highlights");
 ```
 
-### 3. Quy trình kiểm tra chất lượng
+### 3. Quy trình Đảm bảo chất lượng
 
-**Kịch bản:** Tự động thu thập phản hồi QA từ các báo cáo PDF.
+**Scenario:** Tự động thu thập phản hồi QA từ các báo cáo PDF.
 
 ```java
 // Filter critical issues marked with specific annotation types
@@ -330,7 +334,7 @@ List<AnnotationBase> criticalIssues = annotations.stream()
 
 ## Tích hợp Spring Boot PDF Annotations
 
-Nếu bạn xây dựng microservice với Spring Boot, có thể gói logic trích xuất vào một bean dịch vụ:
+Nếu bạn đang xây dựng một microservice với Spring Boot, bạn có thể gói logic trích xuất vào một bean dịch vụ:
 
 ```java
 @Service
@@ -349,33 +353,33 @@ public class AnnotationExtractionService {
 }
 ```
 
-Triển khai dưới dạng endpoint riêng và mở rộng ngang để xử lý khối lượng lớn.
+Triển khai nó như một endpoint riêng và mở rộng theo chiều ngang để xử lý khối lượng công việc cao.
 
-## Các phương pháp thay thế và khi nào nên dùng chúng
+## Các phương pháp thay thế và khi nào nên sử dụng chúng
 
-Mặc dù GroupDocs.Annotation mạnh mẽ, nhưng hãy cân nhắc các lựa chọn thay thế cho các tình huống cụ thể:
+Mặc dù GroupDocs.Annotation mạnh mẽ, hãy cân nhắc các lựa chọn thay thế cho các kịch bản cụ thể:
 
-- **Apache PDFBox:** Thích hợp cho việc trích xuất văn bản đơn giản mà không cần siêu dữ liệu chú thích phức tạp.  
-- **iText:** Tuyệt vời cho việc tạo PDF có chú thích (đối hướng ngược lại).  
+- **Apache PDFBox:** Tốt hơn cho việc trích xuất văn bản đơn giản mà không cần siêu dữ liệu chú thích phức tạp.  
+- **iText:** Tuyệt vời cho việc tạo PDF kèm tạo chú thích (đối hướng).  
 
-**Khi nên giữ GroupDocs:** Các loại chú thích phức tạp, nhu cầu hỗ trợ doanh nghiệp, hoặc khi bạn cần API nhất quán trên nhiều định dạng tài liệu.
+**Khi nào nên dùng GroupDocs:** Các loại chú thích phức tạp, nhu cầu hỗ trợ cấp doanh nghiệp, hoặc khi bạn cần một API nhất quán trên các định dạng tài liệu.
 
 ## Mẫu tích hợp cho ứng dụng doanh nghiệp
 
-### Kiến trúc microservice
+### Kiến trúc Microservice
 
-Triển khai trích xuất chú thích như một microservice riêng để tăng khả năng mở rộng và quản lý tài nguyên. Giao tiếp qua REST hoặc gRPC, và giữ service không trạng thái để dễ dàng scale out.
+Triển khai việc trích xuất chú thích như một microservice riêng để cải thiện khả năng mở rộng và quản lý tài nguyên. Giao tiếp qua REST hoặc gRPC, và giữ service không trạng thái để có thể mở rộng dễ dàng.
 
 ## Câu hỏi thường gặp
 
-**Q: Yêu cầu tối thiểu về phiên bản Java cho GroupDocs.Annotation là gì?**  
+**Q: Phiên bản Java tối thiểu cần cho GroupDocs.Annotation là gì?**  
 A: JDK 8 là tối thiểu, nhưng JDK 11+ được khuyến nghị để có hiệu năng và tính năng bảo mật tốt hơn.
 
 **Q: Tôi có thể trích xuất chú thích từ các định dạng tài liệu khác ngoài PDF không?**  
-A: Có, GroupDocs hỗ trợ Word (.docx), Excel (.xlsx), PowerPoint (.pptx) và nhiều định dạng khác.
+A: Có, GroupDocs hỗ trợ Word (.docx), Excel (.xlsx), PowerPoint (.pptx), và nhiều định dạng khác.
 
-**Q: Làm sao xử lý PDF có mật khẩu?**  
-A: Sử dụng constructor `Annotator` nhận `LoadOptions` có chứa mật khẩu:
+**Q: Làm sao để xử lý PDF có mật khẩu?**  
+A: Sử dụng constructor `Annotator` nhận `LoadOptions` kèm mật khẩu:
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -383,33 +387,33 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator(inputStream, loadOptions);
 ```
 
-**Q: Làm sao xử lý hiệu quả các tài liệu lớn (hơn 100 trang)?**  
-A: Dùng phương pháp streaming, xử lý theo batch và tăng kích thước heap JVM. Xem xét xử lý chú thích theo trang nếu cấu trúc tài liệu cho phép.
+**Q: Làm sao để xử lý hiệu quả các tài liệu lớn (hơn 100 trang)?**  
+A: Sử dụng các phương pháp streaming, xử lý theo lô, và tăng kích thước heap của JVM. Xem xét xử lý chú thích theo trang nếu cấu trúc tài liệu cho phép.
 
-**Q: Tại sao danh sách chú thích trả về rỗng khi trong PDF vẫn hiển thị chú thích?**  
-A: Một số PDF sử dụng trường form hoặc loại chú thích không chuẩn. Hãy thử duyệt các giá trị `AnnotationType` khác hoặc kiểm tra xem PDF có dùng trường form thay vì chú thích không.
+**Q: Tại sao tôi lại nhận được danh sách chú thích rỗng khi các chú thích hiển thị trong PDF?**  
+A: Một số PDF sử dụng trường biểu mẫu hoặc các loại chú thích không chuẩn. Hãy thử duyệt qua các giá trị `AnnotationType` khác nhau hoặc kiểm tra xem PDF có sử dụng trường biểu mẫu thay vì chú thích không.
 
-**Q: Làm sao xử lý ký tự đặc biệt hoặc văn bản không phải tiếng Anh trong chú thích?**  
-A: Đảm bảo xử lý mã hoá UTF‑8 khi đọc nội dung chú thích. Sử dụng `StandardCharsets.UTF_8` khi chuyển đổi mảng byte sang chuỗi.
+**Q: Làm sao để xử lý ký tự đặc biệt hoặc văn bản không phải tiếng Anh trong chú thích?**  
+A: Đảm bảo xử lý mã hoá UTF‑8 đúng cách khi xử lý nội dung chú thích. Sử dụng `StandardCharsets.UTF_8` khi chuyển đổi mảng byte thành chuỗi.
 
-**Q: Tôi có thể dùng GroupDocs.Annotation trong môi trường sản xuất mà không có giấy phép không?**  
-A: Không, giấy phép thương mại là bắt buộc cho việc sử dụng trong sản xuất. Bản dùng thử và giấy phép tạm thời chỉ dành cho phát triển và thử nghiệm.
+**Q: Tôi có thể sử dụng GroupDocs.Annotation trong môi trường sản xuất mà không có giấy phép không?**  
+A: Không, giấy phép thương mại là bắt buộc cho việc sử dụng trong môi trường sản xuất. Các bản dùng thử và giấy phép tạm thời có sẵn cho phát triển và thử nghiệm.
 
-**Q: Tôi có thể tìm phiên bản mới nhất và cập nhật ở đâu?**  
-A: Kiểm tra [Maven repository](https://releases.groupdocs.com/annotation/java/) hoặc trang web GroupDocs để biết các bản phát hành và ghi chú phiên bản mới nhất.
+**Q: Tôi có thể tìm phiên bản mới nhất và các cập nhật ở đâu?**  
+A: Kiểm tra [Maven repository](https://releases.groupdocs.com/annotation/java/) hoặc trang web GroupDocs để biết các bản phát hành mới nhất và ghi chú phiên bản.
 
-## Tài nguyên và đọc thêm
+## Tài nguyên và tài liệu tham khảo
 
-- [Documentation](https://docs.groupdocs.com/annotation/java/)  
-- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
-- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)  
-- [Commercial Licensing](https://purchase.groupdocs.com/buy)  
-- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
-- [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)  
-- [Community Support Forum](https://forum.groupdocs.com/c/annotation-java)
+- [Tài liệu](https://docs.groupdocs.com/annotation/java/)
+- [Hướng dẫn tham chiếu API](https://reference.groupdocs.com/annotation/java/)
+- [Tải xuống phiên bản mới nhất](https://releases.groupdocs.com/annotation/java/)
+- [Giấy phép thương mại](https://purchase.groupdocs.com/buy)
+- [Truy cập dùng thử miễn phí](https://releases.groupdocs.com/annotation/java/)
+- [Yêu cầu giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
+- [Diễn đàn hỗ trợ cộng đồng](https://forum.groupdocs.com/c/annotation-java)
 
 ---
 
-**Cập nhật lần cuối:** 2025-12-21  
+**Cập nhật lần cuối:** 2026-02-21  
 **Đã kiểm tra với:** GroupDocs.Annotation 25.2  
 **Tác giả:** GroupDocs
