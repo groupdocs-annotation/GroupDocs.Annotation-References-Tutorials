@@ -1,51 +1,57 @@
 ---
 categories:
 - Java Development
-date: '2026-01-10'
+date: '2026-03-14'
 description: GroupDocs.Annotation ile anotasyonlu belgelerden belirli sayfaları kaydetmek
-  için Java'da try‑with‑resources kullanımını öğrenin. Spring Boot belge hizmeti örneği
+  için Java’da try‑with‑resources kullanımını öğrenin. Spring Boot belge servisi örneği
   içerir.
 keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
   document annotation tutorial, selective PDF page saving Java, extract annotated
   pages
-lastmod: '2026-01-10'
+lastmod: '2026-03-14'
 linktitle: Save Specific Pages Java Annotation
 tags:
 - groupdocs
 - java-annotation
 - document-processing
 - pdf-manipulation
-title: Kaynaklarla Deneme Java – Açıklamalı Belgelerden Belirli Sayfaları Kaydet
+title: Java Try-with-resources – Açıklamalı Belgelerden Belirli Sayfaları Kaydet
 type: docs
 url: /tr/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# Annotated Documents'dan Belirli Sayfaları Java'da Kaydetme
+uluk Forumu"
+
+Make sure to keep the link URLs unchanged.
+
+Now produce final markdown.
+
+Let's craft final answer.# Anotasyonlu Belgelerden Belirli Sayfaları Java'da Kaydetme
 
 ## Giriş
 
-Kendinizi sadece birkaç belirli sayfaya ihtiyacınız olduğu halde devasa anotasyonlu belgeler içinde boğulmuş buldunuz mu? **try with resources java** ile GroupDocs.Annotation kullanarak sadece ihtiyacınız olan sayfaları verimli bir şekilde çıkarabilirsiniz. Hukuki sözleşmeler, teknik kılavuzlar ya da araştırma makaleleriyle çalışıyor olun, yalnızca ilgili sayfaları çıkarmak depolamayı tasarruf eder, işleme süresini hızlandırır ve iş akışınızı düzenli tutar.
+Kendinizi sadece birkaç belirli sayfaya ihtiyacınız olduğu halde devasa anotasyonlu belgeler içinde boğulmuş buldunuz mu? **try with resources java** ile GroupDocs.Annotation kullanarak sadece ihtiyacınız olan sayfaları verimli bir şekilde çıkarabilirsiniz. Hukuki sözleşmeler, teknik kılavuzlar ya da araştırma makaleleriyle çalışıyor olun, yalnızca ilgili sayfaları ayıklamak depolamayı tasarruf eder, işleme hızını artırır ve iş akışınızı düzenli tutar.
 
 Bu rehberde, kütüphaneyi kurmaktan Java uygulamanızın sorunsuz çalışmasını sağlayan gelişmiş performans ipuçlarına kadar bilmeniz gereken her şeyi adım adım anlatacağız.
 
 **Bu rehberin sonunda neler öğreneceksiniz:**
 - Java projenizde GroupDocs.Annotation'ı (doğru şekilde) kurma
-- Temiz, sürdürülebilir kodla seçici sayfa kaydetme uygulaması
+- Temiz ve sürdürülebilir kodla seçici sayfa kaydetmeyi uygulama
 - Çoğu geliştiriciyi zorlayan yaygın tuzaklardan kaçınma
-- Büyük belge işleme için performans optimizasyonu
+- Büyük belge işleme için performansı optimize etme
 - Sorunları baş ağrısına dönüşmeden önce giderme
 
-## Hızlı Cevaplar
+## Hızlı Yanıtlar
 - **“try with resources java” ne yapar?** Annotator'ı otomatik olarak kapatır, dosya kilitlenmelerini ve bellek sızıntılarını önler.  
-- **Hangi kütüphane sayfa‑aralığı kaydetmeyi yönetir?** `GroupDocs.Annotation` `setFirstPage`/`setLastPage` içeren `SaveOptions` sağlar.  
+- **Hangi kütüphane sayfa aralığı kaydetmeyi yönetir?** `GroupDocs.Annotation`, `setFirstPage`/`setLastPage` içeren `SaveOptions` sağlar.  
 - **Bunu bir Spring Boot servisi içinde kullanabilir miyim?** Evet – “Spring Boot Document Service Integration” bölümüne bakın.  
 - **Lisans gerekli mi?** Geliştirme için ücretsiz deneme çalışır; üretim için tam lisans gerekir.  
-- **Büyük PDF'ler (1000+ sayfa) için güvenli mi?** Bellek kullanımını düşük tutmak için load‑only‑annotated‑pages ve toplu işleme kullanın.
+- **1000+ sayfa büyük PDF'ler için güvenli mi?** Bellek kullanımını düşük tutmak için load‑only‑annotated‑pages ve toplu işleme kullanın.
 
 ## Neden Belirli Sayfalar Kaydedilir? (Gerçek Dünya Bağlamı)
 
-Teknik detaylara geçmeden önce, bu özelliğin neden bir oyun değiştirici olduğunu konuşalım:
+Teknik detaylara girmeden önce, bu özelliğin neden bir oyun değiştirici olduğunu konuşalım:
 
 **Depolama Verimliliği**: Sadece 20 sayfada anotasyon olan 500 sayfalık bir kılavuz mu? Tüm 500 sayfayı kaydetmek yerine ilgili 20 sayfayı çıkarıp dosya boyutunu %96 azaltabilirsiniz.
 
@@ -53,15 +59,15 @@ Teknik detaylara geçmeden önce, bu özelliğin neden bir oyun değiştirici ol
 
 **Daha İyi Kullanıcı Deneyimi**: Kimse anotasyonlu bölümleri bulmak için yüzlerce sayfayı kaydırmak istemez. Onlara tam olarak ihtiyaç duydukları şeyi verin.
 
-**Uyumluluk ve Güvenlik**: Düzenlenmiş sektörlerde, belgelerin sadece belirli bölümlerini paylaşmanıza izin verilebilir. Seçici kaydetme uyumluluğu kolaylaştırır.
+**Uyumluluk ve Güvenlik**: Düzenlenmiş sektörlerde, belgenin sadece belirli bölümlerini paylaşmanıza izin verilebilir. Seçici kaydetme uyumluluğu kolaylaştırır.
 
 ## Önkoşullar ve Kurulum
 
-### Gereksinimler
+### Gerekenler
 
 - **Java Development Kit (JDK)**: Versiyon 8 veya üzeri (JDK 11+ önerilir)  
 - **Maven veya Gradle**: Bağımlılık yönetimi için  
-- **GroupDocs.Annotation for Java**: Versiyon 25.2 veya üzeri  
+- **GroupDocs.Annotation for Java**: Versiyon 25.2 veya sonrası  
 - **Temel Java bilgisi**: Dosya I/O ve OOP anlayışı  
 
 ### GroupDocs.Annotation for Java Kurulumu
@@ -101,25 +107,29 @@ dependencies {
 }
 ```
 
-### Lisansınızı Düzenleme
+### Lisansınızı Alın
 
 Çoğu öğreticinin söylemediği şey: **ücretsiz deneme ile başlayın**. Cidden. İşleri karmaşıklaştırmayın.
 
-- **Ücretsiz Deneme**: Test ve geliştirme için mükemmel – [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) adresinden alın
+- **Ücretsiz Deneme**: Test ve geliştirme için mükemmel - [GroupDocs sürümleri](https://releases.groupdocs.com/annotation/java/) adresinden alın
 - **Geçici Lisans**: Değerlendirme için daha fazla zamana mı ihtiyacınız var? [geçici lisans](https://purchase.groupdocs.com/temporary-license/) alın
-- **Tam Lisans**: Üretime geçmeye hazır mısınız? [Buradan satın alın](https://purchase.groupdocs.com/buy)
+- **Tam Lisans**: Üretime geçmeye hazır mısınız? [Buradan satın al](https://purchase.groupdocs.com/buy)
 
-Profesyonel ipucu: Deneme sürümünün bazı sınırlamaları vardır, ancak bu öğreticiyi takip etmek ve bir konsept kanıtı oluşturmak için yeterlidir.
+Pro ipucu: Deneme sürümünün bazı sınırlamaları vardır, ancak bu öğreticiyi takip etmek ve bir konsept kanıtı oluşturmak için fazlasıyla yeterlidir.
+
+## Seçici Sayfa Kaydetme için try with resources java Kullanımı
+
+Ortam hazır olduğuna göre, **try with resources java**'nın sayfa aralığı işlemini nasıl güvenli ve özlü hale getirdiğine bakalım. Bu desen, `Annotator` örneğinin otomatik olarak yok edilmesini sağlar, dosya kilidi sorunlarını ortadan kaldırır ve bellek kullanımını düzenli tutar.
 
 ## Temel Uygulama: Belirli Sayfa Aralıklarını Kaydetme
 
 ### Temel Yaklaşım (Buradan Başlayın)
 
-En basit uygulanabilir örnekle başlayalım. Bu, %90 kullanım senaryosunun ihtiyacı olan şeydir:
+En basit uygulanabilir örnekle başlayalım. Bu, kullanım senaryolarının %90'ının ihtiyacı olan şeydir:
 
-#### Adım 1: Dosya Yolu Yönetimini Kurma
+#### Adım 1: Dosya Yolu Yönetimini Ayarlama
 
-İlk olarak, dosya yollarını yönetmek için bir yardımcı sınıf oluşturun (dizinleri değiştirdiğinizde size teşekkür edeceksiniz):
+İlk olarak, dosya yollarını yönetmek için bir yardımcı sınıf oluşturun (dizinleri değiştirdiğinizde size teşekkür edeceğim):
 
 ```java
 import org.apache.commons.io.FilenameUtils;
@@ -131,7 +141,7 @@ public class FilePathConfiguration {
 }
 ```
 
-**Neden bu yaklaşım?** Dosya‑yolu mantığınızı merkezileştirir ve test etmeyi kolaylaştırır. `FilenameUtils` kullanmak, orijinal dosya uzantısını otomatik olarak korumanızı sağlar.
+**Neden bu yaklaşım?** Dosya‑yolu mantığınızı merkezileştirir ve test etmeyi kolaylaştırır. `FilenameUtils` kullanmak, özgün dosya uzantısını otomatik olarak korumanızı sağlar.
 
 #### Adım 2: Sayfa Aralığı Kaydetmeyi Uygulama
 
@@ -157,7 +167,7 @@ public class SaveSpecificPageRange {
 ```
 
 **Burada ne oluyor:**
-- `**try‑with‑resources java**` bloğu (`try ( … )`) kullanıyoruz, böylece `Annotator` otomatik olarak kapanır ve dosya‑kilidi sorunları ortadan kalkar.
+- `Annotator`'ın otomatik kapanması için **try‑with‑resources java** bloğu (`try ( … )`) kullanıyoruz, dosya‑kilidi sorunlarını ortadan kaldırıyor.
 - `setFirstPage(2)` ve `setLastPage(4)` kapsayıcı aralığımızı tanımlar (sayfalar 2‑4).
 - Aralık her iki uçta da **kapsayıcıdır** – birçok geliştiriciyi şaşırtan bir detay.
 
@@ -187,13 +197,13 @@ public class FilePathConfiguration {
 
 Artık `contract_pages_2-4.pdf` gibi adları otomatik olarak oluşturabilirsiniz.
 
-## Yaygın Tuzaklar ve Kaçınma Yöntemleri
+## Yaygın Tuzaklar ve Kaçınma Yolları
 
-### Tuzak #1: Sayfa İndeksi Karışıklığı
+### Tuzak #1: Sayfa Dizini Karışıklığı
 
 **Sorun**: Sayfa numaralarının 0'dan başladığını varsaymak (GroupDocs.Annotation'da böyle değildir).
 
-**Çözüm**: Sayfa numaraları 1'den başlar, gerçek belgelerdeki gibi. Sayfa 1 ilk sayfadır, sayfa 0 değildir.
+**Çözüm**: Sayfa numaralandırması 1'den başlar, gerçek belgelerde olduğu gibi. Sayfa 1 ilk sayfadır, sayfa 0 değildir.
 
 ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
@@ -205,7 +215,7 @@ saveOptions.setFirstPage(1);
 
 ### Tuzak #2: Kaynak Sızıntıları
 
-**Sorun**: Annotator'ı düzgün kapatmayı unutmak, dosya kilitlenmelerine ve bellek sızıntılarına yol açar.
+**Sorun**: Annotator'ı düzgün kapatmayı unutmak, dosya kilitlerine ve bellek sızıntılarına yol açar.
 
 **Çözüm**: Her zaman **try‑with‑resources java** ya da açık kapanış kullanın:
 
@@ -260,7 +270,7 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
 
 ## Performans Optimizasyon İpuçları
 
-### Büyük Belgeler için Bellek Yönetimi
+### Büyük Belgeler İçin Bellek Yönetimi
 
 Büyük belgelerle (100 + sayfa) uğraşırken bellek kullanımı önem kazanır:
 
@@ -287,11 +297,11 @@ public class OptimizedPageRangeSaver {
 ```
 
 **Ana optimizasyon stratejileri**
-- `setLoadOnlyAnnotatedPages(true)` bellek ayak izini azaltır.
-- `setAnnotationsOnly(true)` yalnızca anotasyon katmanını içeren hafif bir dosya oluşturur.
+- `setLoadOnlyAnnotatedPages(true)` bellek ayak izini azaltır.  
+- `setAnnotationsOnly(true)` sadece anotasyon katmanını içeren hafif bir dosya oluşturur.  
 - Birçok dosyanız varsa belgeleri toplu işleyin.
 
-### Birden Fazla Belgeyi Toplu İşleme
+### Birden Çok Belgeyi Toplu İşleme
 
 Birçok belge işlediğiniz üretim senaryoları için:
 
@@ -352,7 +362,7 @@ public class DocumentPageRangeService {
 
 ### Hukuki Belge İşleme
 
-Hukuk firmaları genellikle sözleşmelerin veya mahkeme belgelerinin belirli bölümlerini çıkarmak zorundadır:
+Hukuk firmaları genellikle sözleşmelerin ya da mahkeme belgelerinin belirli bölümlerini çıkarmak zorundadır:
 
 ```java
 public class LegalDocumentProcessor {
@@ -418,19 +428,20 @@ public class QAReviewExtractor {
 ## En İyi Uygulama Özeti
 
 1. **Her zaman giriş parametrelerini doğrulayın** – işlemden önce sayfa aralıklarını kontrol edin.  
-2. **try‑with‑resources java** kullanın – kaynak sızıntılarını ve dosya‑kilitleme sorunlarını önler.  
-3. **Uygun hata yönetimi uygulayın** – tek bir hatalı dosyanın tüm toplu işlemi çökertmesine izin vermeyin.  
+2. **try‑with‑resources java** kullanın – kaynak sızıntılarını ve dosya kilitleme sorunlarını önler.  
+3. **Uygun hata yönetimi uygulayın** – tek bir hatalı dosyanın tüm toplu işi çökertmesine izin vermeyin.  
 4. **Bellek kullanımını düşünün** – büyük belgeler için `setLoadOnlyAnnotatedPages(true)` kullanın.  
 5. **Çeşitli dosya tipleriyle test edin** – PDF, Word, PowerPoint farklı davranabilir.  
-6. **Performansı izleyin** – üretimde işleme sürelerine ve belleğe göz kulak olun.
+6. **Performansı izleyin** – üretimde işleme sürelerine ve belleğe dikkat edin.
 
-## Yaygın Sorunları Giderme
+## Yaygın Sorunların Giderilmesi
 
-### Sorun: “File is locked” Hatası
+### Sorun: “Dosya kilitli” Hatası
 
-**Belirtiler**: Kaydetmeye çalışırken dosya kilitlerini belirten bir istisna fırlatılır.  
+**Belirtiler**: Kaydetmeye çalışırken dosya kilitlerinden bahseden bir istisna fırlatılır.
+
 **Nedenler**:
-- Annotator önceki bir işlemden düzgün kapanmamış.  
+- Annotator önceki işlemden düzgün kapanmamış.  
 - Dosya başka bir uygulamada hâlâ açık.  
 - Yetersiz izinler.  
 
@@ -454,7 +465,7 @@ if (!file.getParentFile().canWrite()) {
 
 ### Sorun: Bellek Yetersizliği Hataları
 
-**Belirtiler**: Büyük belgeler işlenirken `OutOfMemoryError`.  
+**Belirtiler**: Büyük belgeler işlenirken `OutOfMemoryError`.
 
 **Çözümler**:
 1. JVM yığın boyutunu artırın, örn. `-Xmx2g`.  
@@ -463,7 +474,7 @@ if (!file.getParentFile().canWrite()) {
 
 ### Sorun: Anotasyonlar Korunmuyor
 
-**Belirtiler**: Çıktı dosyası orijinal anotasyonları içermiyor.  
+**Belirtiler**: Çıktı dosyası orijinal anotasyonları içermiyor.
 
 **Çözüm**: Anotasyonları silmediğinizden emin olun:
 
@@ -474,38 +485,38 @@ saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
 
-## Sık Sorulan Sorular
+## Sıkça Sorulan Sorular
 
-**S: Tekrarlanmayan sayfaları (örneğin sayfalar 1, 3, 7) kaydedebilir miyim?**  
+**S: Tek‑ardışık olmayan sayfaları (örneğin 1, 3, 7) kaydedebilir miyim?**  
 C: Tek bir işlemle doğrudan mümkün değil. Her aralık için ayrı kaydetme yapmanız ya da sonuçları sonradan birleştirmeniz gerekir.
 
-**S: Bu, şifre korumalı belgelerle çalışır mı?**  
+**S: Şifre korumalı belgelerle çalışır mı?**  
 C: Evet, ancak `Annotator` oluştururken şifreyi sağlamalısınız: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
 **S: Hangi dosya formatları destekleniyor?**  
-C: PDF, Microsoft Word, Excel, PowerPoint ve daha birçok. Tam liste için [resmi dokümantasyona](https://docs.groupdocs.com/annotation/java/) bakın.
+C: PDF, Microsoft Word, Excel, PowerPoint ve daha birçok. Tam liste için [resmi dokümantasyon](https://docs.groupdocs.com/annotation/java/) adresine bakın.
 
 **S: Orijinal içeriği olmadan sadece anotasyonları kaydedebilir miyim?**  
-C: Kesinlikle – anotasyon‑sadece bir dosya oluşturmak için `saveOptions.setAnnotationsOnly(true)` ayarlayın.
+C: Kesinlikle – `saveOptions.setAnnotationsOnly(true)` ayarlayarak sadece anotasyon içeren bir dosya oluşturabilirsiniz.
 
 **S: Çok büyük belgelerle (1000+ sayfa) nasıl başa çıkılır?**  
 C: `setLoadOnlyAnnotatedPages(true)` kullanın, parçalar halinde işleyin ve JVM yığınını artırmayı düşünün.
 
-**S: Kaydetmeden önce sayfaları önizlemenin bir yolu var mı?**  
+**S: Kaydetmeden önce sayfaları önizleme imkanı var mı?**  
 C: GroupDocs.Annotation işleme odaklıdır, görüntüleme değil, ancak belge bilgilerini (sayfa sayısı, anotasyon konumları) alarak hangi aralıkların çıkarılacağına karar vermenize yardımcı olabilirsiniz.
 
 ## Kaynaklar
 
-- **Dokümantasyon**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API Referansı**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **İndirme**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Satın Alma**: [License Options](https://purchase.groupdocs.com/buy)  
-- **Ücretsiz Deneme**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Geçici Lisans**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Destek**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+- **Dokümantasyon**: [GroupDocs.Annotation for Java Belgeleri](https://docs.groupdocs.com/annotation/java/)  
+- **API Referansı**: [Tam API Dokümantasyonu](https://reference.groupdocs.com/annotation/java/)  
+- **İndirme**: [En Son Sürümler](https://releases.groupdocs.com/annotation/java/)  
+- **Satın Alma**: [Lisans Seçenekleri](https://purchase.groupdocs.com/buy)  
+- **Ücretsiz Deneme**: [Şimdi Deneyin](https://releases.groupdocs.com/annotation/java/)  
+- **Geçici Lisans**: [Değerlendirme Lisansı Al](https://purchase.groupdocs.com/temporary-license/)  
+- **Destek**: [Topluluk Forumu](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Son Güncelleme:** 2026-01-10  
+**Son Güncelleme:** 2026-03-14  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2 (Java)  
 **Yazar:** GroupDocs

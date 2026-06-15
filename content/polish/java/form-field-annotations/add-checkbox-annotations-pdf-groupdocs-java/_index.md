@@ -1,51 +1,64 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-01-08'
-description: Dowiedz się, jak dodać pola wyboru do plików PDF przy użyciu Javy. Ten
-  samouczek obejmuje interaktywne pola wyboru, pola formularzy PDF w Javie oraz dodawanie
-  wielu pól wyboru do PDF przy użyciu GroupDocs.Annotation.
-keywords: PDF checkbox Java, interactive PDF Java, Java PDF annotations, PDF form
-  fields Java, GroupDocs checkbox tutorial
-lastmod: '2026-01-08'
-linktitle: PDF Checkbox Java Tutorial
+date: '2026-03-14'
+description: Dowiedz się, jak dodać pole wyboru do plików PDF przy użyciu Javy. Ten
+  przewodnik krok po kroku pokazuje, jak dodać pole wyboru, zarządzać polami formularzy
+  PDF w Javie oraz tworzyć komponenty pól wyboru PDF za pomocą GroupDocs.Annotation.
+keywords: PDF checkbox Java, interactive PDF Java, Java PDF form fields, java create
+  pdf checkbox, GroupDocs checkbox tutorial
+lastmod: '2026-03-14'
+linktitle: How to Add Checkbox to PDF with Java
 tags:
 - pdf-annotations
 - groupdocs
 - java-pdf
 - interactive-forms
-title: PDF Checkbox Java – Dodaj interaktywne pola wyboru do PDF‑ów
+title: Jak dodać pole wyboru do PDF w Javie – Interaktywne pola wyboru przy użyciu
+  GroupDocs
 type: docs
 url: /pl/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# Dodaj pole wyboru do PDF w Javie – Interaktywne pola wyboru przy użyciu GroupDocs
+2  
+**Autor:** GroupDocs
 
-Jeśli potrzebujesz **dodawać pola wyboru do pdf** programowo, trafiłeś we właściwe miejsce. W dzisiejszym świecie cyfrowym statyczne PDF‑y to przeszłość. Niezależnie od tego, czy tworzysz przepływy zatwierdzania, ankiety czy formularze zgodności, dodanie interaktywnych pól wyboru może znacząco poprawić doświadczenie użytkownika i usprawnić Twoje procesy.
+Now produce final markdown with all translations.
 
-## Szybkie odpowiedzi
-- **Jaka biblioteka jest najlepsza do dodawania pól wyboru do pdf?** GroupDocs.Annotation for Java.  
+Make sure to keep placeholders unchanged.
+
+Let's craft final answer.# Jak dodać pole wyboru do PDF w Javie – Interaktywne pola wyboru przy użyciu GroupDocs
+
+Jeśli szukasz **how to add checkbox** do plików PDF programowo, trafiłeś we właściwe miejsce. W dzisiejszym cyfrowym świecie statyczne PDF‑y to przeszłość. Niezależnie od tego, czy tworzysz przepływy zatwierdzania, ankiety, czy formularze zgodności, dodanie interaktywnych pól wyboru może znacząco poprawić doświadczenie użytkownika i usprawnić Twoje procesy.
+
+## Quick Answers
+- **Jaka biblioteka jest najlepsza do dodawania pola wyboru do pdf?** GroupDocs.Annotation for Java.  
 - **Jak długo trwa implementacja?** Około 10‑15 minut dla podstawowego pola wyboru.  
 - **Czy potrzebna jest licencja?** Darmowa wersja próbna wystarczy do rozwoju; pełna licencja jest wymagana w środowisku produkcyjnym.  
 - **Czy mogę dodać wiele pól wyboru pdf w jednym dokumencie?** Tak – wystarczy utworzyć wiele instancji `CheckBoxComponent`.  
-- **Czy pola wyboru będą działać we wszystkich przeglądarkach PDF?** Standardowe pola formularzy PDF są obsługiwane przez Adobe Reader, Chrome, Firefox i większość nowoczesnych przeglądarek.
+- **Czy pola wyboru będą działać we wszystkich przeglądarkach PDF?** Standardowe pola formularza PDF są obsługiwane przez Adobe Reader, Chrome, Firefox i większość nowoczesnych przeglądarek.
 
-## Dlaczego dodawać interaktywne pola wyboru pdf?
+## Co to jest „how to add checkbox” w Javie?
+Dodanie pola wyboru tworzy **PDF form field**, które użytkownicy końcowi mogą zaznaczyć lub odznaczyć bezpośrednio w przeglądarce PDF. Pole zachowuje się jak każde natywne pole formularza, zachowując stan po zapisaniu dokumentu.
 
-Czy kiedykolwiek otrzymałeś formularz PDF, w którym trzeba było go wydrukować, aby zaznaczyć pole? Frustrujące, prawda? Dodanie **interaktywnych pól wyboru pdf** zamienia statyczny dokument w żywy formularz, który użytkownicy mogą wypełniać na dowolnym urządzeniu. To nie tylko oszczędza czas, ale także zmniejsza liczbę błędów i ułatwia zbieranie danych.
+## Why use GroupDocs.Annotation for Java PDF form fields?
+- **Proste API** – możesz tworzyć, stylizować i pozycjonować pola wyboru przy użyciu kilku linijek kodu.  
+- **Kompatybilność między przeglądarkami** – wygenerowane pola spełniają specyfikację PDF, więc działają wszędzie.  
+- **Wbudowane wsparcie dla odpowiedzi i stylizacji** – idealne do interaktywnych ankiet lub formularzy zatwierdzania.  
+- **Skalowalna wydajność** – przetwarzanie wsadowe i równoległe jest obsługiwane od razu.
 
-## Wymagania wstępne i konfiguracja
+## Prerequisites & Setup
 
 Zanim przejdziemy do kodu, upewnij się, że masz następujące elementy:
 
-### Niezbędne wymagania
+### Essential Requirements
 - **Java Development Kit**: wersja 8 lub wyższa.  
 - **GroupDocs.Annotation for Java**: wersja 25.2 lub nowsza (pokażemy, jak ją dodać).  
 - **Podstawowa znajomość Javy**: operacje I/O na plikach i inicjalizacja obiektów.  
 - **Plik PDF**: dowolny istniejący PDF do testów (użyjemy przykładowego dokumentu).
 
-### Szybka konfiguracja Maven
+### Quick Maven Setup
 
 Jeśli używasz Maven, dodaj to do swojego `pom.xml`. Ta konfiguracja automatycznie pobiera wymaganą bibliotekę:
 
@@ -66,19 +79,19 @@ Jeśli używasz Maven, dodaj to do swojego `pom.xml`. Ta konfiguracja automatycz
 </dependencies>
 ```
 
-### Licencjonowanie w prostych krokach
+### Licensing Made Simple
 
 - **Free Trial** – idealny do testów i małych projektów.  
-- **Temporary License** – przydatna podczas dłuższych cykli rozwoju.  
+- **Temporary License** – przydatna podczas dłuższych cykli rozwojowych.  
 - **Full License** – wymagana przy wdrożeniach produkcyjnych.
 
 Możesz od razu rozpocząć budowanie przy użyciu wersji próbnej.
 
-## Przewodnik krok po kroku: Jak dodać pole wyboru do pdf przy użyciu Javy
+## Step‑by‑Step Guide: How to Add Checkbox to PDF Using Java
 
 Przejdziemy przez trzy zwięzłe kroki. Każdy krok opiera się na poprzednim, więc postępuj zgodnie z kolejnością.
 
-### Krok 1: Inicjalizacja PDF Annotator
+### Step 1: Initialize the PDF Annotator
 
 Najpierw otwórz PDF do edycji. Klasa `Annotator` jest Twoim punktem wejścia:
 
@@ -94,9 +107,9 @@ public class InitializeAnnotator {
 }
 ```
 
-> **Wskazówka:** Używaj ścieżki bezwzględnej, aby uniknąć problemów „plik nie znaleziony”, oraz upewnij się, że PDF nie jest otwarty w innym programie.
+> **Pro tip:** Użyj ścieżki bezwzględnej, aby uniknąć problemów „file not found”, i upewnij się, że PDF nie jest otwarty w innym programie.
 
-### Krok 2: Utwórz i skonfiguruj komponent pola wyboru
+### Step 2: Create and Configure Your Checkbox Component
 
 Teraz tworzymy `CheckBoxComponent`. Tutaj definiujesz wygląd, stan i opcjonalne odpowiedzi:
 
@@ -145,12 +158,12 @@ public class CreateCheckBoxComponent {
 ```
 
 **Kluczowe punkty do zapamiętania:**
-- **Współrzędne prostokąta** to `(x, y, width, height)`. Dostosuj je, aby umieścić pole wyboru w odpowiednim miejscu.
-- **Kolor pióra** używa całkowitej wartości RGB (`65535` = żółty). Możesz użyć dowolnego koloru.
-- Opcje **BoxStyle** obejmują `STAR`, `CIRCLE`, `SQUARE`, `DIAMOND`.
+- **Współrzędne prostokąta** to `(x, y, width, height)`. Dostosuj je, aby umieścić pole wyboru w odpowiednim miejscu.  
+- **Kolor pióra** używa całkowitej wartości RGB (`65535` = żółty). Możesz użyć dowolnego koloru.  
+- Opcje **BoxStyle** obejmują `STAR`, `CIRCLE`, `SQUARE`, `DIAMOND`.  
 - **Replies** to opcjonalne komentarze wyświetlane po najechaniu.
 
-### Krok 3: Dodaj pole wyboru i zapisz PDF
+### Step 3: Add the Checkbox and Save the PDF
 
 Na koniec dołącz komponent do dokumentu i zapisz wynik na dysku:
 
@@ -174,28 +187,28 @@ public class AddCheckBoxAndSave {
 }
 ```
 
-> **Wskazówki dotyczące ścieżek plików:**  
-> • Używaj ścieżek bezwzględnych, aby uniknąć błędów „plik nie znaleziony”.  
+> **File path tips:**  
+> • Używaj ścieżek bezwzględnych, aby uniknąć błędów „file not found”.  
 > • Upewnij się, że katalog wyjściowy istnieje przed zapisem.  
 > • Rozważ unikalne nazwy plików, aby zapobiec nadpisaniu ważnych plików.
 
-## Zastosowania w rzeczywistym świecie (poza podstawowymi formularzami)
+## Real‑World Applications (Beyond Basic Forms)
 
 Zrozumienie, gdzie **java pdf form fields** błyszczy, pomaga dostrzec możliwości:
 
-### Przepływy zatwierdzania dokumentów
+### Document Approval Workflows
 Dodaj pola wyboru dla „Reviewed”, „Approved” lub „Needs Changes”. Idealne do umów, budżetów i potwierdzeń polityk.
 
-### Ankiety i zbieranie opinii
+### Survey & Feedback Collection
 Twórz ankiety działające offline, które zachowują dokładne formatowanie na różnych urządzeniach. Świetne do oceny satysfakcji pracowników, opinii klientów i ewaluacji wydarzeń.
 
-### Dokumentacja szkoleniowa i zgodności
+### Training & Compliance Documentation
 Śledź postępy za pomocą pól wyboru w podręcznikach bezpieczeństwa, listach kontrolnych zgodności lub zadaniach wprowadzających.
 
-### Formularze prawne i administracyjne
+### Legal & Administrative Forms
 Ustandaryzuj akceptację warunków, polityk prywatności, roszczeń ubezpieczeniowych i wniosków rządowych.
 
-## Typowe problemy i rozwiązania
+## Common Issues & Solutions
 
 Każdy programista napotyka czasem problemy. Oto najczęstsze z nich i sposoby ich rozwiązania:
 
@@ -210,41 +223,41 @@ if (!inputFile.exists()) {
 }
 ```
 
-### Pole wyboru pojawia się w niewłaściwej pozycji
+### Checkbox Appears in the Wrong Position
 **Problem:** System współrzędnych PDF zaczyna się od lewego dolnego rogu.  
-**Rozwiązanie:** Dostosuj współrzędną Y. Dla strony o wysokości 600 pikseli, wizualne „100 od góry” staje się `Y = 500`.
+**Rozwiązanie:** Dostosuj współrzędną Y. Dla strony o wysokości 600 px, wizualne „100 od góry” staje się `Y = 500`.
 
-### Problemy z pamięcią przy dużych PDF-ach
+### Memory Issues with Large PDFs
 **Problem:** `OutOfMemoryError`.  
-**Rozwiązanie:** Zwiększ przydział pamięci JVM lub przetwarzaj dokumenty w partiach:
+**Rozwiązanie:** Zwiększ pamięć heap JVM lub przetwarzaj dokumenty partiami:
 
 ```bash
 java -Xmx2048m YourApplication
 ```
 
-### Błędy walidacji licencji
+### License Validation Errors
 **Problem:** „License not found” lub „Invalid license”.  
-**Rozwiązanie:** Umieść plik licencji w katalogu głównym classpath lub ustaw ścieżkę explicite:
+**Rozwiązanie:** Umieść plik licencji w katalogu root classpath lub ustaw ścieżkę explicite:
 
 ```java
 License license = new License();
 license.setLicense("path/to/GroupDocs.Annotation.Java.lic");
 ```
 
-### Pole wyboru nie reaguje na kliknięcia
-**Problem:** Pole wyboru wygląda na statyczne.  
-**Rozwiązanie:** Upewnij się, że używasz `CheckBoxComponent` (pola formularza), a nie ogólnej adnotacji.
+### Checkbox Not Responding to Clicks
+**Problem:** Pole wyboru wygląda statycznie.  
+**Rozwiązanie:** Upewnij się, że używasz `CheckBoxComponent` (pole formularza), a nie ogólnej adnotacji.
 
-## Wskazówki optymalizacji wydajności
+## Performance Optimization Tips
 
 Gdy przechodzisz do produkcji, te usprawnienia utrzymują szybkość działania:
 
-### Najlepsze praktyki zarządzania pamięcią
+### Memory Management Best Practices
 - Zawsze używaj **try‑with‑resources** dla `Annotator`.  
-- Przetwarzaj dokumenty w partiach zamiast ładować wiele naraz.  
-- Dostosuj rozmiar sterty JVM w zależności od typowych wymiarów dokumentów.
+- Przetwarzaj dokumenty partiami zamiast ładować wiele naraz.  
+- Dostosuj rozmiar heap JVM w zależności od typowych wymiarów dokumentów.
 
-### Strategia przetwarzania wsadowego
+### Batch Processing Strategy
 Dla wielu PDF‑ów, iteruj z nowym `Annotator` w każdej iteracji:
 
 ```java
@@ -260,38 +273,38 @@ public void processPDFBatch(List<String> pdfPaths) {
 }
 ```
 
-### Rozważania przy przetwarzaniu równoległym
+### Concurrent Processing Considerations
 `GroupDocs.Annotation` jest bezpieczny wątkowo, więc możesz przetwarzać kilka dokumentów równocześnie:
 - Użyj `ExecutorService` z ograniczonym pulą wątków.  
-- Monitoruj zużycie RAM i odpowiednio ogranicz liczbę równoległych zadań.
+- Monitoruj zużycie RAM i odpowiednio ograniczaj równoległość.
 
-## Alternatywne podejścia do rozważenia
+## Alternative Approaches to Consider
 
 Choć GroupDocs.Annotation wyróżnia się w adnotacjach, warto znać alternatywy:
 
 | Biblioteka | Licencja | Zalety | Wady |
 |------------|----------|--------|------|
-| **Apache PDFBox** | Open‑source | Darmowa, dobra do podstawowych pól formularzy | API niższego poziomu, więcej kodu szkieletowego |
+| **Apache PDFBox** | Open‑source | Darmowa, dobra do podstawowych pól formularza | API niższego poziomu, więcej kodu szkieletowego |
 | **iText** | Commercial | Bardzo potężna, rozbudowane funkcje PDF | Droga przy dużych wdrożeniach |
 | **Aspose.PDF for Java** | Commercial | Bogaty zestaw funkcji, podobny do GroupDocs | Inny model cenowy |
 
 **Dlaczego wybrać GroupDocs.Annotation?**  
-- Optymalizowane pod scenariusze adnotacji.  
+- Zoptymalizowana pod scenariusze adnotacji.  
 - Proste API dla pól wyboru i innych elementów formularza.  
 - Konkurencyjne ceny i szybka obsługa.
 
-## Zaawansowana personalizacja pól wyboru
+## Advanced Checkbox Customization
 
 Gdy opanujesz podstawy, podnieś poziom dzięki tym technikom:
 
-### Opcje niestandardowego stylu
+### Custom Styling Options
 ```java
 checkbox.setPenWidth(2);              // Border thickness
 checkbox.setBackgroundColor(16777215); // White background
 checkbox.setOpacity(0.8);             // Semi‑transparent
 ```
 
-### Logika warunkowa
+### Conditional Logic
 Dodaj pole wyboru tylko wtedy, gdy istnieje określona sekcja:
 
 ```java
@@ -300,7 +313,7 @@ if (documentContainsSection("Terms and Conditions")) {
 }
 ```
 
-### Dynamiczne pozycjonowanie
+### Dynamic Positioning
 Oblicz najlepsze miejsce na podstawie istniejącej treści:
 
 ```java
@@ -308,25 +321,25 @@ Rectangle dynamicPosition = calculateOptimalPosition(document, contentType);
 checkbox.setBox(dynamicPosition);
 ```
 
-## Najczęściej zadawane pytania
+## Frequently Asked Questions
 
 **Q: Czy mogę dodać wiele pól wyboru pdf w tym samym dokumencie?**  
-A: Oczywiście. Utwórz tyle obiektów `CheckBoxComponent`, ile potrzebujesz, skonfiguruj każdy z nich i dodaj je kolejno do annotatora.
+A: Oczywiście. Utwórz dowolną liczbę obiektów `CheckBoxComponent`, skonfiguruj każdy z nich i dodaj je kolejno do annotatora.
 
 **Q: Czy pola wyboru działają we wszystkich przeglądarkach PDF?**  
-A: Tak. GroupDocs tworzy standardowe pola formularzy PDF, które są obsługiwane przez Adobe Reader, Chrome, Firefox i większość nowoczesnych przeglądarek.
+A: Tak. GroupDocs tworzy standardowe pola formularza PDF, które są obsługiwane przez Adobe Reader, Chrome, Firefox i większość nowoczesnych przeglądarek.
 
 **Q: Jak mogę odczytać wartości po wypełnieniu formularza przez użytkowników?**  
-A: Użyj API parsowania GroupDocs.Annotation, aby odczytać wartości pól formularza z wypełnionego PDF. To umożliwia automatyzację dalszego przetwarzania.
+A: Użyj API parsowania GroupDocs.Annotation, aby odczytać wartości pól formularza z wypełnionego PDF. Pozwala to na automatyzację dalszego przetwarzania.
 
 **Q: Czy istnieje limit liczby pól wyboru, które mogę dodać?**  
 A: Praktyczny limit zależy od dostępnej pamięci i wydajności przeglądarki. Setki pól wyboru zazwyczaj nie stanowią problemu.
 
-**Q: Czy mogę dodać pole wyboru do plików pdf chronionych hasłem?**  
+**Q: Czy mogę dodać pole wyboru do plików PDF chronionych hasłem?**  
 A: Tak. Podaj hasło przy tworzeniu `Annotator`; biblioteka automatycznie zajmie się odszyfrowaniem.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-01-08  
+**Ostatnia aktualizacja:** 2026-03-14  
 **Testowano z:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
