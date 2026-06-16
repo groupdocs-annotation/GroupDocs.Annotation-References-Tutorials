@@ -1,81 +1,73 @@
 ---
 categories:
 - Java Development
-date: '2025-12-17'
-description: GroupDocs.Annotation for Java ile inceleme yorumları PDF'si oluşturmayı
-  öğrenin. Bu adım adım kılavuz, kurulum, uygulama ve geliştiriciler için en iyi uygulamaları
-  kapsar.
+date: '2026-03-27'
+description: GroupDocs.Annotation kullanarak Java ile PDF açıklamaları oluşturmayı
+  öğrenin. Bu adım adım rehber, PDF dosyalarına programlı olarak açıklama eklemeyi,
+  inceleme yorumları eklemeyi ve en iyi uygulamaları takip etmeyi gösterir.
 keywords: PDF annotation Java tutorial, GroupDocs annotation Java setup, Java PDF
   markup library, add annotations PDF programmatically, GroupDocs annotation tutorial
   for beginners
-lastmod: '2025-12-17'
+lastmod: '2026-03-27'
 tags:
 - pdf-annotation
 - groupdocs
 - java-libraries
 - document-processing
-title: GroupDocs.Annotation Java kullanarak İnceleme Yorumları PDF'si Oluştur
+title: GroupDocs.Annotation ile Java’da PDF Açıklamaları Oluştur
 type: docs
 url: /tr/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
 
-# PDF Annotation Java Eğitimi
+# PDF Açıklama Java Öğreticisi
 
-## Modern Geliştirmede PDF Annotation'ın Önemi
-
-Java uygulamanızda PDF belgelerini programlı olarak işaretlemeniz gerektiğini hiç düşündünüz mü? İster bir belge inceleme sistemi, ister bir e‑learning platformu, ister işbirlikçi araçlar geliştiriyor olun, PDF annotation her yerde. Sorun nedir? Çoğu çözüm ya basit ihtiyaçlar için çok karmaşık ya da kurumsal gereksinimler için çok sınırlı.
-
-Bu eğitimde, GroupDocs.Annotation for Java kullanarak **inceleme yorumları PDF oluşturmayı** öğreneceksiniz, böylece sadece birkaç satır kodla herhangi bir belgeye profesyonel‑grade işaretleme ekleyebilirsiniz.
-
-**Bu rehberi farklı kılan nedir?** Sadece “nasıl”ı değil, “neden” ve “ne zaman”ı da ele alacağız, ayrıca diğer eğitimlerin genellikle atladığı tüm incelikleri de göstereceğiz.
+Java uygulamanızda **create pdf annotations java** oluşturmanız gerektiğini hiç düşündünüz mü? İster bir belge inceleme sistemi, ister bir e‑öğrenme platformu, ister işbirlikçi bir araç geliştirin, işaretleme eklemek programatik olarak yaygın bir gereksinimdir. Bu rehberde GroupDocs.Annotation kullanarak **programmatically annotate PDF** dosyalarını nasıl işaretleyeceğinizi adım adım gösterecek ve tam bir inceleme akışı için **add review comments pdf** eklemeyi de göstereceğiz.
 
 ## Hızlı Yanıtlar
-- **GroupDocs.Annotation'ın temel amacı nedir?** Java üzerinden birçok belge formatına ekleme, düzenleme ve yönetme işlemlerini gerçekleştirmek.
-- **İnceleme yorumları için hangi annotation türü en iyisidir?** Özel mesaj ve kullanıcı meta verileri içeren AreaAnnotation.
-- **Geliştirme için lisansa ihtiyacım var mı?** Test için ücretsiz deneme yeterli; üretim için tam lisans gerekir.
-- **50 MB'den büyük PDF'leri işleyebilir miyim?** Evet—akış (streaming), toplu işleme ve doğru atık yönetimiyle bellek kullanımını düşük tutabilirsiniz.
-- **Kütüphane çoklu iş parçacığı (thread) güvenli mi?** Örnekler thread‑safe değildir; her thread için ayrı bir Annotator oluşturun.
+- **GroupDocs.Annotation'ın temel amacı nedir?** Java'dan birçok belge formatı üzerinde ek açıklamaları eklemek, düzenlemek ve yönetmek.  
+- **İnceleme yorumları için en uygun açıklama türü hangisidir?** `AreaAnnotation` özel bir mesaj ve kullanıcı meta verileriyle.  
+- **Geliştirme için lisansa ihtiyacım var mı?** Ücretsiz deneme testi için yeterlidir; üretim için tam lisans gereklidir.  
+- **50 MB'den büyük PDF'leri işleyebilir miyim?** Evet—akış, toplu işleme ve doğru kaynak temizliği kullanarak bellek kullanımını düşük tutun.  
+- **Kütüphane çok iş parçacıklı (thread‑safe) mı?** Örnekler thread‑safe değildir; her iş parçacığı için ayrı bir `Annotator` oluşturun.
 
-## Neden GroupDocs Annotation Öne Çıkıyor
+## GroupDocs Annotation Neden Öne Çıkıyor
 
-Kodlamaya başlamadan önce, GroupDocs.Annotation'ın Java PDF annotation projeleriniz için en iyi seçenek olmasının nedenlerini konuşalım.
+Koda dalmadan önce, GroupDocs.Annotation'ın Java PDF açıklama projeleriniz için neden en iyi seçenek olabileceğinden bahsedelim.
 
 ### Alternatiflere Göre Temel Avantajlar
 
-**Kapsamlı Format Desteği**: Birçok kütüphane sadece PDF'ye odaklanırken, GroupDocs Word belgeleri, PowerPoint sunumları, görseller ve daha fazlasını destekler. Bu, tüm annotation ihtiyaçlarınız için tek bir API demektir.
+**Kapsamlı Format Desteği** – Birçok kütüphane yalnızca PDF'lere odaklanırken, GroupDocs Word belgeleri, PowerPoint sunumları, görüntüler ve daha fazlasını işler. Tüm açıklama ihtiyaçlarınız için tek bir API.
 
-**Zengin Annotation Türleri**: Basit vurguların ötesinde oklar, filigranlar, metin değişiklikleri ve özel şekiller elde edersiniz – farklı kullanım senaryoları için mükemmel.
+**Zengin Açıklama Türleri** – Basit vurguların ötesinde, oklar, filigranlar, metin değişimleri ve özel şekiller elde edersiniz – farklı kullanım senaryoları için mükemmel.
 
-**Kurumsal‑Hazır**: Lisanslama, ölçeklenebilirlik ve mevcut Java mimarileriyle entegrasyon için yerleşik destek.
+**Kurumsal‑Hazır** – Lisanslama, ölçeklenebilirlik ve mevcut Java mimarileriyle entegrasyon için yerleşik destek.
 
-**Aktif Geliştirme**: Düzenli güncellemeler ve yanıt veren destek topluluğu (kenar durumlarla karşılaştığınızda bunu takdir edeceksiniz).
+**Aktif Geliştirme** – Düzenli güncellemeler ve duyarlı bir destek topluluğu (bunu kenar durumlarıyla karşılaştığınızda takdir edeceksiniz).
 
 ## Önkoşullar ve Kurulum Gereksinimleri
 
-### Başlamadan Önce Neye İhtiyacınız Olacak
+### Başlamadan Önce Neye İhtiyacınız Var
 
-Sıkıcı kısmı önce halledelim. İşte kontrol listeniz:
+**Geliştirme Ortamı**
+- JDK 8 veya daha yenisi (daha iyi performans için Java 11+ önerilir)  
+- Favori IDE'niz (IntelliJ IDEA, Eclipse veya Java uzantılarıyla VS Code)  
+- Bağımlılık yönetimi için Maven veya Gradle  
 
-**Geliştirme Ortamı:**
-- JDK 8 veya üzeri (daha iyi performans için Java 11+ önerilir)
-- Sevdiğiniz IDE (IntelliJ IDEA, Eclipse veya Java uzantılı VS Code)
-- Bağımlılık yönetimi için Maven veya Gradle
+**Bilgi Önkoşulları**
+- Temel Java programlama (döngüler ve sınıfları biliyorsanız yeterlidir)  
+- Dosya I/O işlemlerine aşinalık  
+- Maven bağımlılıklarını anlama (bunu yine de adım adım göstereceğiz)  
 
-**Bilgi Önkoşulları:**
-- Temel Java programlama (döngüler ve sınıflar biliyorsanız yeterli)
-- Dosya I/O işlemlerine aşinalık
-- Maven bağımlılıklarını anlama (bu kısmı da adım adım göstereceğiz)
+**İsteğe Bağlı ama Faydalı**
+- PDF yapısının temel anlaşılması (sorun gidermeye yardımcı olur)  
+- Diğer Java kütüphaneleriyle deneyim (kavramları daha kolay kavramanızı sağlar)
 
-**Opsiyonel ama Faydalı:**
-- PDF yapısı hakkında temel bilgi (sorun giderme için yardımcı olur)
-- Diğer Java kütüphaneleri deneyimi (konseptleri daha kolay kavramanızı sağlar)
-
-### GroupDocs.Annotation for Java Kurulumu
+### GroupDocs.Annotation'ı Java için Kurma
 
 #### Maven Yapılandırması
 
-`pom.xml` dosyanıza GroupDocs deposunu ve bağımlılığını ekleyin. İşte tam olarak ihtiyacınız olanlar:
+GroupDocs deposunu ve bağımlılığını `pom.xml` dosyanıza ekleyin. İşte tam olarak ihtiyacınız olan şey:
 
 ```xml
 <repositories>
@@ -95,19 +87,19 @@ Sıkıcı kısmı önce halledelim. İşte kontrol listeniz:
 </dependencies>
 ```
 
-**İpucu**: Her zaman GroupDocs web sitesinden en son sürümü kontrol edin. Bu yazı itibarıyla sürüm 25.2’dir, ancak daha yeni sürümler genellikle performans iyileştirmeleri ve hata düzeltmeleri içerir.
+**Pro İpucu**: Her zaman GroupDocs web sitesinde en son sürümü kontrol edin. Bu yazının yazıldığı tarihte sürüm 25.2 günceldir, ancak daha yeni sürümler genellikle performans iyileştirmeleri ve hata düzeltmeleri içerir.
 
 #### Lisans Seçenekleri (Ve Gerçekte Ne Anlama Geliyor)
 
-**Ücretsiz Deneme**: İlk değerlendirme ve küçük projeler için ideal. Çıktı üzerine filigran eklenir; test için uygundur ancak üretim için değildir.
+**Ücretsiz Deneme** – İlk değerlendirme ve küçük projeler için mükemmeldir. Su işareti eklenmiş çıktı alırsınız, bu test için uygundur ancak üretim için değildir.
 
-**Geçici Lisans**: Geliştirme aşamaları için ideal. 30 gün sınırsız erişim için [buradan](https://purchase.groupdocs.com/temporary-license/) alın.
+**Geçici Lisans** – Geliştirme aşamaları için idealdir. 30 gün sınırsız erişim için bir tane [buradan](https://purchase.groupdocs.com/temporary-license/) alın.
 
-**Tam Lisans**: Üretim için gereklidir. Fiyatlandırma dağıtım tipi ve ölçeğe göre değişir.
+**Tam Lisans** – Üretim için gereklidir. Fiyatlandırma dağıtım tipi ve ölçeğe göre değişir.
 
 #### İlk Kurulum ve Doğrulama
 
-Bağımlılıklarınız yüklendikten sonra, bu basit testle her şeyin çalıştığını doğrulayın:
+Bağımlılıklarınız yerleştirildikten sonra, bu basit testle her şeyin çalıştığını doğrulayın:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -126,13 +118,13 @@ public class SetupVerification {
 }
 ```
 
-## GroupDocs.Annotation ile inceleme yorumları PDF oluşturma
+## GroupDocs.Annotation ile pdf annotations java nasıl oluşturulur
 
-### Belgeleri Yükleme: Sadece Dosya Yollarından Fazlası
+### Belgeleri Yükleme: Sadece Dosya Yollarından Daha Fazla
 
 #### Temel Belge Yükleme
 
-Temellere başlayalım. PDF belgesini yüklemek ilk adımınızdır:
+Temel kavramlarla başlayalım. PDF belgesini yüklemek ilk adımınızdır:
 
 ```java
 String INPUT_PDF = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
@@ -142,9 +134,9 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/output_annotated.pdf";
 final Annotator annotator = new Annotator(INPUT_PDF);
 ```
 
-**Gerçek Dünya Bağlamı**: Üretim uygulamalarında bu yollar genellikle kullanıcı yüklemelerinden, veritabanı kayıtlarından veya bulut depolama URL'lerinden gelir. GroupDocs’un güzelliği, yerel dosyaları, akışları ve URL'leri sorunsuz yönetebilmesidir.
+**Gerçek Dünya Bağlamı**: Üretim uygulamalarında bu yollar genellikle kullanıcı yüklemelerinden, veritabanı kayıtlarından veya bulut depolama URL'lerinden gelir. GroupDocs'ın güzelliği, yerel dosyaları, akışları ve URL'leri sorunsuz bir şekilde işlemesidir.
 
-#### Farklı Girdi Kaynaklarını Ele Alma
+#### Farklı Girdi Kaynaklarını İşleme
 
 ```java
 // From file path (most common)
@@ -158,11 +150,11 @@ Annotator annotatorFromStream = new Annotator(inputStream);
 inputStream.close();
 ```
 
-### İlk Annotation’ınızı Eklemek
+### İlk Açıklamanızı Eklemek
 
-#### Area Annotation’ı Anlamak
+#### Area Annotations'ı Anlamak
 
-Area annotation’ları, bölgeleri vurgulamak, önemli bölümleri işaretlemek veya görsel açıklamalar oluşturmak için mükemmeldir. Dijital yapışkan notlar gibi, stil ekleyebilirsiniz.
+Area annotation'lar bölgeleri vurgulamak, önemli bölümleri işaretlemek veya görsel açıklamalar oluşturmak için mükemmeldir. Onları stil sahibi dijital yapışkan notlar olarak düşünün.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -181,11 +173,12 @@ area.setBackgroundColor(65535);
 annotator.add(area);
 ```
 
-**Koordinat Sistemi Açıklaması**: PDF koordinatları sol‑alt köşeden başlarken, GroupDocs üst‑sol köken sistemini (geliştiriciler için daha sezgisel) kullanır. Sayılar, köşeden piksel cinsinden uzaklığı gösterir.
+**Koordinat Sistemi Açıklaması**: PDF koordinatları sol‑alt köşeden başlar, ancak GroupDocs üst‑sol köken sistemini kullanır (geliştiriciler için daha sezgisel). Sayılar kök noktasından piksel olarak temsil eder.
 
-#### Pratik Annotation Örnekleri
+#### Pratik Açıklama Örnekleri
 
 **Önemli Metni Vurgulama**:
+
 ```java
 // Create a semi‑transparent highlight
 AreaAnnotation highlight = new AreaAnnotation();
@@ -195,6 +188,7 @@ highlight.setMessage("Important clause - review carefully");
 ```
 
 **İnceleme Yorumları Oluşturma**:
+
 ```java
 // Add a comment annotation with custom styling
 AreaAnnotation comment = new AreaAnnotation();
@@ -217,7 +211,7 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Neden Dispose Önemli**: GroupDocs performans için belge verilerini bellekte tutar. Doğru şekilde dispose edilmezse uzun süren uygulamalarda bellek sızıntıları yaşarsınız.
+**Neden Dispose Önemlidir**: GroupDocs performans için belge verilerini bellekte tutar. Uygun şekilde dispose edilmezse, uzun süren uygulamalarda bellek sızıntıları yaşarsınız.
 
 #### Daha İyi Kaynak Yönetimi Deseni
 
@@ -240,16 +234,16 @@ public void annotateDocument(String inputPath, String outputPath) {
 }
 ```
 
-## Yaygın Tuzaklar ve Kaçınma Yolları
+## Yaygın Tuzaklar ve Nasıl Kaçınılır
 
 ### Dosya Yolu ve İzin Sorunları
 
-**Sorun**: “Dosya bulunamadı” veya “Erişim reddedildi” hataları sıkça görülür.
+**Sorun**: “Dosya bulunamadı” veya “Erişim reddedildi” hataları sıkça karşılaşılan sorunlardır.
 
 **Çözümler**:
-- Geliştirme sırasında her zaman mutlak yollar kullanın
-- İşleme başlamadan önce dosya izinlerini kontrol edin
-- Girdi dosyalarının varlığını ve okunabilirliğini doğrulayın
+- Geliştirme sırasında her zaman mutlak yollar kullanın  
+- İşleme başlamadan önce dosya izinlerini kontrol edin  
+- Girdi dosyalarının mevcut ve okunabilir olduğunu doğrulayın  
 
 ```java
 public boolean validateInputFile(String filePath) {
@@ -268,9 +262,9 @@ public boolean validateInputFile(String filePath) {
 
 ### Bellek Yönetimi Hataları
 
-**Sorun**: Birçok belge işlendikten sonra uygulama yavaşlar veya çökertir.
+**Sorun**: Uygulamalar birden fazla belge işledikten sonra yavaşlar veya çökebilir.
 
-**Çözüm**: Her zaman try‑with‑resources veya açıkça dispose kullanın:
+**Çözüm**: Her zaman try‑with‑resources veya açık disposal kullanın:
 
 ```java
 // Good practice - automatic resource management
@@ -292,7 +286,7 @@ try {
 
 ### Koordinat Sistemi Karışıklığı
 
-**Sorun**: Annotation’lar yanlış konumda veya ekranda görünmez.
+**Sorun**: Açıklamalar yanlış konumlarda veya ekrandan dışarıda görünür.
 
 **Çözüm**: PDF koordinat sistemlerini hatırlayın ve bilinen konumlarla test edin:
 
@@ -304,16 +298,16 @@ Rectangle testPosition = new Rectangle(50, 50, 100, 50);
 // Most PDFs are 612x792 points (8.5"x11" at 72 DPI)
 ```
 
-## Gerçek Dünya Kullanım Senaryoları ve Uygulamalar
+## Gerçek Dünya Kullanım Durumları ve Uygulamalar
 
 ### Belge İnceleme İş Akışları
 
-**Senaryo**: Hukuk firmalarının sözleşmeleri müşteri toplantılarından önce incelemesi.
+**Senaryo**: Hukuk firmalarının müşterileriyle toplantı öncesinde sözleşmeleri incelemesi.
 
 **Uygulama Stratejisi**:
-- Farklı inceleyenler için farklı annotation renkleri
-- Denetim izleri için zaman damgası ve kullanıcı takibi
-- Müşteri dağıtımı için dışa aktarma yetenekleri
+- Farklı inceleyiciler için farklı açıklama renkleri  
+- Denetim izleri için zaman damgası ve kullanıcı takibi  
+- Müşteri dağıtımı için dışa aktarma yetenekleri  
 
 ```java
 public void addReviewAnnotation(Annotator annotator, String reviewerName, 
@@ -331,21 +325,20 @@ public void addReviewAnnotation(Annotator annotator, String reviewerName,
 
 ### Eğitim İçeriği Oluşturma
 
-**Senaryo**: E‑learning platformlarının ders materyallerinde anahtar kavramları vurgulaması.
-
-**Neden İşe Yarıyor**: Görsel annotation’lar, özellikle teknik belgelerde, kavrayışı ve akılda kalıcılığı artırır.
+**Senaryo**: E‑öğrenme platformlarının çalışma materyallerindeki ana kavramları vurgulaması.  
+**Neden Etkili**: Görsel açıklamalar, özellikle teknik belgelerde, anlayışı ve hatırlamayı artırır.
 
 ### Kalite Güvence Dokümantasyonu
 
-**Senaryo**: Üretim şirketlerinin teknik çizim ve spesifikasyonları işaretlemesi.
-
+**Senaryo**: Üretim şirketlerinin teknik çizimleri ve spesifikasyonları işaretlemesi.  
 **Faydalar**: Takımlar arasında standartlaştırılmış işaretleme, revizyon takibi ve değişikliklerin net iletişimi.
 
-## Performans Optimizasyonu İpuçları
+## Performans Optimizasyon İpuçları
 
-### Büyük Belgeleri Verimli İşlemek
+### Büyük Belgeleri Verimli İşleme
 
 **Toplu İşleme Stratejisi**:
+
 ```java
 public void processDocumentBatch(List<String> documentPaths) {
     for (String path : documentPaths) {
@@ -361,9 +354,8 @@ public void processDocumentBatch(List<String> documentPaths) {
 }
 ```
 
-### Bellek Kullanımını İzleme
+### Bellek Kullanımı İzleme
 
-**Uygulamanızın Belleğini Takip Edin**:
 ```java
 Runtime runtime = Runtime.getRuntime();
 long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
@@ -374,9 +366,9 @@ long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
 System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
 ```
 
-### Eşzamanlı İşleme Dikkat Edilmesi Gerekenler
+### Eşzamanlı İşleme Düşünceleri
 
-**Thread Safety**: GroupDocs.Annotation örnek başına thread‑safe değildir. Eşzamanlı işleme için ayrı Annotator örnekleri kullanın:
+**Thread Güvenliği**: GroupDocs.Annotation örnek başına thread‑safe değildir. Eşzamanlı işleme için ayrı `Annotator` örnekleri kullanın:
 
 ```java
 public class ConcurrentAnnotationProcessor {
@@ -391,9 +383,9 @@ public class ConcurrentAnnotationProcessor {
 }
 ```
 
-## İleri Annotation Teknikleri
+## Gelişmiş Açıklama Teknikleri
 
-### Tek Belgede Birden Çok Annotation Türü
+### Tek Bir Belgede Birden Çok Açıklama Türü
 
 ```java
 public void createComprehensiveAnnotation(Annotator annotator) {
@@ -413,38 +405,31 @@ public void createComprehensiveAnnotation(Annotator annotator) {
 }
 ```
 
-### İçeriğe Dayalı Dinamik Annotation
+### İçeriğe Dayalı Dinamik Açıklama
 
-Bu eğitim manuel annotation yerleştirmeye odaklansa da, GroupDocs’u metin‑analiz kütüphaneleriyle birleştirerek belirli içerik kalıplarını otomatik tespit edip işaretleyebilirsiniz.
+Bu öğretici manuel açıklama yerleştirmeye odaklansa da, GroupDocs'u metin‑analiz kütüphaneleriyle birleştirerek belirli içerik desenlerini otomatik olarak algılayıp açıklayabilirsiniz.
 
 ## Sorun Giderme Kılavuzu
 
 ### Yaygın Hata Mesajları ve Çözümleri
 
-**“Invalid license” hataları**:
-- Lisans dosyasının konum ve formatını doğrulayın
-- Lisansın son kullanım tarihini kontrol edin
-- Lisansın dağıtım tipinizle eşleştiğinden emin olun
+**“Invalid license” hataları** – Lisans dosyası konumunu, formatını ve süresini doğrulayın. Lisansın dağıtım tipinizle eşleştiğinden emin olun.
 
-**“Unsupported file format” hataları**:
-- PDF’nin bozuk olmadığını doğrulayın
-- PDF’nin şifre korumalı olup olmadığını kontrol edin
-- Dosyanın sıfır bayt olmadığını veya eksik olmadığını kontrol edin
+**“Unsupported file format” hataları** – PDF'nin bozuk, şifre korumalı veya sıfır bayt olmadığını doğrulayın.
 
-**Performans sorunları**:
-- Bellek kullanımını izleyin ve doğru dispose uygulayın
-- Belgeleri toplu işleyerek işleme alın
-- Antivirüs yazılımının geçici dosyaları tarayıp taramadığını kontrol edin
+**Performans sorunları** – Bellek kullanımını izleyin, uygun disposal uygulayın ve toplu işleme düşünün.
 
-### Debug İpuçları
+### Hata Ayıklama İpuçları
 
-**Loglamayı Etkinleştirin**:
+**Enable Logging**:
+
 ```java
 // Add to your application properties or logging configuration
 java.util.logging.Logger.getLogger("com.groupdocs").setLevel(Level.FINE);
 ```
 
-**Girdileri Doğrulayın**:
+**Validate Inputs**:
+
 ```java
 public boolean validateAnnotationParameters(Rectangle box, int color) {
     if (box.getWidth() <= 0 || box.getHeight() <= 0) {
@@ -461,11 +446,10 @@ public boolean validateAnnotationParameters(Rectangle box, int color) {
 }
 ```
 
-## Sık Sorulan Sorular
+## Sıkça Sorulan Sorular
 
-### Tek bir PDF’ye birden çok annotation eklemek verimli nasıl yapılır?
-
-`annotator.add(annotation)` metodunu her annotation için kaydetmeden önce çağırın. GroupDocs tüm annotation’ları toplar ve `save()` çağrıldığında uygular:
+**S: Tek bir PDF'e birden fazla açıklamayı verimli bir şekilde nasıl eklerim?**  
+C: Kaydetmeden önce her açıklama için `annotator.add(annotation)` çağırmanız yeterlidir. GroupDocs tüm açıklamaları toplar ve `save()` çağırdığınızda uygular:
 
 ```java
 try (Annotator annotator = new Annotator("document.pdf")) {
@@ -476,13 +460,10 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 }
 ```
 
-### PDF dışındaki hangi dosya formatlarını GroupDocs.Annotation destekler?
+**S: PDF dışındaki hangi dosya formatlarını GroupDocs.Annotation destekliyor?**  
+C: GroupDocs.Annotation, Word (DOC, DOCX), PowerPoint (PPT, PPTX), Excel (XLS, XLSX), görüntüler (JPEG, PNG, TIFF) ve daha fazlası dahil olmak üzere 50'den fazla formatı destekler. Tam liste için [documentation](https://docs.groupdocs.com/annotation/java/) adresine bakın.
 
-GroupDocs.Annotation, DOC, DOCX, PPT, PPTX, XLS, XLSX, JPEG, PNG, TIFF gibi 50’den fazla formatı destekler. Tam liste için [belgelere](https://docs.groupdocs.com/annotation/java/) bakın.
-
-### Şifre korumalı PDF’leri nasıl ele alırım?
-
-Annotator’ı başlatırken LoadOptions parametresini kullanın:
+**S: Şifre korumalı PDF'leri nasıl yönetirim?**  
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -490,9 +471,7 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator("protected.pdf", loadOptions);
 ```
 
-### Mevcut bir PDF’deki annotation’ları alıp değiştirebilir miyim?
-
-Evet! Mevcut annotation’ları alabilir ve düzenleyebilirsiniz:
+**S: Bir PDF'deki mevcut açıklamaları alıp değiştirebilir miyim?**  
 
 ```java
 try (Annotator annotator = new Annotator("annotated.pdf")) {
@@ -506,13 +485,10 @@ try (Annotator annotator = new Annotator("annotated.pdf")) {
 }
 ```
 
-### Büyük PDF’lerin performans etkileri nelerdir?
+**S: Büyük PDF'leri işlemek performans açısından ne gibi etkiler doğurur?**  
+C: 50 MB'den büyük PDF'ler (>50 MB) dikkatli bellek yönetimi gerektirir. Mümkün olduğunda akış kullanın, gerekirse sayfaları tek tek işleyin ve her zaman kaynakları dispose edin. Uzun işlemler sırasında kullanıcı geri bildirimi için ilerleme takibi uygulamayı düşünün.
 
-50 MB üzerindeki PDF’ler dikkatli bellek yönetimi gerektirir. Mümkün olduğunca akış (streaming) kullanın, gerekirse sayfa sayfa işleyin ve her zaman kaynakları dispose edin. Uzun süren işlemler sırasında kullanıcı geri bildirimi için ilerleme takibi eklemeyi düşünün.
-
-### Web uygulamasında eşzamanlı belge işleme nasıl yapılır?
-
-Her thread kendi Annotator örneğine sahip olmalı çünkü kütüphane örnek başına thread‑safe değildir. Bir thread havuzu veya reaktif programlama desenleri kullanın:
+**S: Web uygulamasında eşzamanlı belge işleme nasıl yapılır?**  
 
 ```java
 @Service
@@ -528,13 +504,10 @@ public class AnnotationService {
 }
 ```
 
-### Annotation konumlandırma sorunlarını debug etmenin en iyi yolu nedir?
+**S: Açıklama konumlandırma sorunlarını debug etmenin en iyi yolu nedir?**  
+C: Bilinen koordinatlarla başlayın ve yavaş yavaş ayarlayın. Çoğu standart PDF 612x792 puan kullanır. Temel işlevselliği doğrulamak için önce (50, 50, 100, 50) konumunda bir test açıklaması oluşturun, ardından içeriğinizin düzenine göre ayarlayın.
 
-Bilinen koordinatlarla başlayın ve yavaş yavaş ayarlayın. Çoğu standart PDF 612x792 puan ölçüsündedir. İlk olarak (50, 50, 100, 50) konumunda bir test annotation oluşturup temel işlevselliği doğrulayın, ardından içerik düzeninize göre ayarlayın.
-
-### GroupDocs.Annotation’ı Spring Boot ile nasıl entegre ederim?
-
-Bir servis bileşeni oluşturun ve bağımlılık enjeksiyonunu kullanın:
+**S: GroupDocs.Annotation'ı Spring Boot ile nasıl entegre ederim?**  
 
 ```java
 @Service
@@ -554,32 +527,32 @@ public class DocumentAnnotationService {
 
 ## Ek SSS
 
-**S: Annotated PDF’leri başka formatlara dışa aktarabilir miyim?**  
-C: Evet, GroupDocs.Annotation işaretli belgeleri DOCX, PPTX veya görsellere dönüştürürken annotation’ları korur.
+**S: Açıklamalı PDF'leri diğer formatlara dışa aktarabilir miyim?**  
+C: Evet, GroupDocs.Annotation açıklamalı belgeleri DOCX, PPTX veya görüntüler gibi formatlara, açıklamaları koruyarak dönüştürebilir.
 
-**S: Kütüphanenin desteklediği tüm annotation türlerini nasıl listeleyebilirim?**  
-C: `AnnotationType.values()` metodunu kullanarak desteklenen tüm enum değerlerini alabilirsiniz.
+**S: Kütüphanenin desteklediği tüm açıklama türlerini listelemenin bir yolu var mı?**  
+C: Tüm desteklenen açıklama enum'larını almak için `AnnotationType.values()` kullanın.
 
-**S: Filigran annotation görünümünü nasıl özelleştiririm?**  
-C: `WatermarkAnnotation` örneğinde `setOpacity`, `setRotation` ve `setBackgroundColor` gibi özellikleri ayarlayın.
+**S: Filigran açıklamasının görünümünü nasıl özelleştirebilirim?**  
+C: `WatermarkAnnotation` örneğine eklemeden önce `setOpacity`, `setRotation` ve `setBackgroundColor` gibi özellikleri ayarlayın.
 
-**S: Yorumları bir veritabanından programatik olarak ekleyebilir miyim?**  
-C: Kesinlikle. Herhangi bir kaynaktan yorum verisini okuyup bir `AreaAnnotation` (veya `TextAnnotation`) içine yerleştirip belgeye ekleyebilirsiniz.
+**S: Kütüphane, veritabanından programatik olarak yorum eklemeyi destekliyor mu?**  
+C: Kesinlikle. Herhangi bir kaynaktan yorum verilerini okuyabilir, `AreaAnnotation` (veya `TextAnnotation`) içine yorum metnini doldurabilir ve ardından belgeye ekleyebilirsiniz.
 
-**S: Toplu işleme sırasında bellek sızıntısı alırsam ne yapmalıyım?**  
-C: Her `Annotator`ı try‑with‑resources ile kapatın, JVM heap’i izleyin ve belgeleri daha küçük partiler halinde işleyin.
+**S: Toplu işleme sırasında bir bellek sızıntısı ile karşılaşırsam ne yapmalıyım?**  
+C: Her `Annotator`'ın kapatıldığından emin olun (try‑with‑resources), JVM yığınını izleyin ve belgeleri daha küçük partiler halinde işlemeyi düşünün.
 
 **Ek Kaynaklar**  
-- [GroupDocs.Annotation Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)  
-- [API Referans Kılavuzu](https://reference.groupdocs.com/annotation/java/)  
-- [En Son Sürümü İndir](https://releases.groupdocs.com/annotation/java/)  
-- [Lisans Satın Al](https://purchase.groupdocs.com/buy)  
-- [Ücretsiz Deneme Erişimi](https://releases.groupdocs.com/annotation/java/)  
-- [Geçici Lisans](https://purchase.groupdocs.com/temporary-license/)  
-- [Destek Forumları](https://forum.groupdocs.com/c/annotation/)
+- [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)  
+- [Purchase License](https://purchase.groupdocs.com/buy)  
+- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- [Support Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Son Güncelleme:** 2025-12-17  
+**Son Güncelleme:** 2026-03-27  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
-**Yazar:** GroupDocs  
+**Yazar:** GroupDocs
