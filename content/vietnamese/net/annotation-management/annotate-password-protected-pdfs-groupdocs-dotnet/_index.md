@@ -1,139 +1,341 @@
 ---
-"date": "2025-05-06"
-"description": "Tìm hiểu cách chú thích an toàn cho các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET. Hướng dẫn từng bước này bao gồm việc tải, chú thích và lưu tài liệu."
-"title": "Cách chú thích các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET | Hướng dẫn từng bước"
-"url": "/vi/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/"
+categories:
+- PDF Processing
+date: '2026-04-26'
+description: Tìm hiểu cách chú thích PDF trong .NET, bao gồm cách tải PDF có mật khẩu
+  và thêm đánh dấu nổi bật vào PDF, sử dụng GroupDocs.Annotation để xử lý tài liệu
+  an toàn.
+keywords:
+- how to annotate pdf
+- load pdf with password
+- add highlight to pdf
+- annotate password protected pdf
+- change pdf password annotation
+lastmod: '2026-04-26'
+linktitle: Cách chú thích PDF trong .NET – PDF được bảo vệ bằng mật khẩu
+tags:
+- groupdocs
+- pdf-annotation
+- dotnet
+- password-protected
+- document-processing
+title: Cách chú thích PDF trong .NET – PDF được bảo vệ bằng mật khẩu
 type: docs
-"weight": 1
+url: /vi/net/annotation-management/annotate-password-protected-pdfs-groupdocs-dotnet/
+weight: 1
 ---
 
-# Cách chú thích các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET
-## Giới thiệu
-Trong thời đại kỹ thuật số ngày nay, việc bảo vệ các tài liệu nhạy cảm là rất quan trọng. Cho dù xử lý hồ sơ tài chính, thỏa thuận pháp lý hay kế hoạch kinh doanh bí mật, việc đảm bảo các tệp của bạn vẫn an toàn trong khi vẫn cho phép chú thích cần thiết có thể là một thách thức. Hướng dẫn này hướng dẫn bạn quy trình tải và chú thích các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET.
+# Cách Ghi chú PDF trong .NET – PDF được bảo vệ bằng mật khẩu
 
-### Những gì bạn sẽ học được:
-- Cách tải tài liệu có mật khẩu
-- Chú thích các khu vực cụ thể trong các tệp PDF được bảo vệ
-- Lưu tài liệu có chú thích một cách liền mạch
-Hãy cùng tìm hiểu những điều kiện tiên quyết cần thiết trước khi bắt đầu.
-## Điều kiện tiên quyết
-Trước khi triển khai giải pháp này, hãy đảm bảo bạn đã chuẩn bị những điều sau:
-- **GroupDocs.Annotation cho .NET** phiên bản 25.4.0 trở lên.
-- Môi trường phát triển hỗ trợ C# (.NET Framework hoặc .NET Core).
-- Hiểu biết cơ bản về lập trình C# và xử lý các hoạt động I/O tệp.
-## Thiết lập GroupDocs.Annotation cho .NET
-Để bắt đầu sử dụng GroupDocs.Annotation, bạn cần thiết lập thư viện trong dự án của mình. Sau đây là cách bạn có thể thực hiện:
-### Bảng điều khiển quản lý gói NuGet
+Nếu bạn đang tìm kiếm một hướng dẫn rõ ràng, từng bước về **cách ghi chú PDF** cho các tệp được bảo vệ bằng mật khẩu, bạn đã đến đúng nơi. Trong hướng dẫn này, chúng tôi sẽ chỉ cho bạn cách tải PDF có mật khẩu, thêm đánh dấu nổi bật vào các trang PDF và giữ tài liệu an toàn — tất cả đều sử dụng GroupDocs.Annotation cho .NET.
+
+## Câu trả lời nhanh
+- **Có thể ghi chú một PDF được bảo vệ bằng mật khẩu không?** Có – chỉ cần cung cấp mật khẩu qua `LoadOptions`.
+- **Thư viện nào hỗ trợ ghi chú an toàn?** GroupDocs.Annotation for .NET (v25.4.0+).
+- **Có cần giấy phép không?** Cần giấy phép cho môi trường sản xuất; bản dùng thử miễn phí hoạt động cho việc thử nghiệm.
+- **Các phiên bản .NET nào được hỗ trợ?** .NET Framework 4.6+, .NET Core 2.0+, .NET 5/6.
+- **Có thể thay đổi mật khẩu PDF sau khi ghi chú không?** Có, nhưng bạn sẽ cần GroupDocs.Conversion cho bước đó.
+
+## Tại sao điều này quan trọng (Và tại sao nó khó hơn bạn nghĩ)
+
+Bạn đã bao giờ cố gắng ghi chú một PDF được bảo vệ bằng mật khẩu trong ứng dụng .NET của mình, chỉ để gặp phải hàng loạt lỗi xác thực? Bạn không phải là người duy nhất. Làm việc với các tài liệu được bảo mật thêm một lớp phức tạp mà hầu hết các hướng dẫn thường bỏ qua.
+
+Thực tế là: người dùng của bạn không còn chỉ xử lý các PDF đơn giản nữa. Họ đang làm việc với các hợp đồng nhạy cảm, báo cáo bí mật và các tài liệu pháp lý được bảo vệ mật khẩu mà *cần* phải có bảo mật. Đồng thời, họ cũng cần cộng tác, thêm bình luận và thực hiện ghi chú mà không làm mất đi tính bảo mật.
+
+Đó là lúc mọi thứ trở nên thú vị (và đôi khi gây bực bội). Bạn cần một giải pháp có thể đáp ứng cả yêu cầu bảo mật và chức năng ghi chú một cách liền mạch.
+
+**Những gì bạn sẽ nắm vững trong hướng dẫn này:**
+- Tải và xác thực các PDF được bảo vệ bằng mật khẩu mà không gặp khó khăn  
+- Thêm các loại ghi chú khác nhau, bao gồm cách **thêm đánh dấu nổi bật vào các trang PDF**  
+- Xử lý các lỗi xác thực phổ biến mà ngay cả các nhà phát triển có kinh nghiệm cũng gặp phải  
+- Lưu tài liệu đã ghi chú trong khi vẫn duy trì bảo mật  
+- Các kịch bản khắc phục sự cố thực tế mà bạn sẽ thực sự gặp phải  
+
+Hãy cùng khám phá và giải quyết vấn đề này một lần và mãi mãi.
+
+## Yêu cầu trước (Nền tảng bạn cần)
+
+Trước khi chúng ta chuyển sang code, hãy chắc chắn rằng bạn đã chuẩn bị đầy đủ các yếu tố cơ bản sau:
+
+**Công cụ bắt buộc:**
+- **GroupDocs.Annotation for .NET** phiên bản 25.4.0 trở lên
+- Môi trường phát triển C# (.NET Framework 4.6+ hoặc .NET Core 2.0+)
+- Kiến thức cơ bản về C# và các thao tác với tệp
+
+**Tốt nếu có:**
+- Kinh nghiệm với các thư viện xử lý tài liệu
+- Hiểu biết về cấu trúc PDF (có ích nhưng không bắt buộc)
+
+**Mẹo chuyên nghiệp:** Nếu bạn làm việc trong môi trường doanh nghiệp, hãy kiểm tra với nhóm IT về bất kỳ yêu cầu bảo mật cụ thể nào đối với các thư viện xử lý tài liệu.
+
+## Cài đặt GroupDocs.Annotation cho .NET
+
+Việc đưa GroupDocs.Annotation vào hoạt động khá đơn giản, nhưng có một vài lưu ý đáng chú ý.
+
+### Các tùy chọn cài đặt
+
+**NuGet Package Manager Console:**
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-### .NETCLI
+
+**NET CLI (sở thích cá nhân của tôi cho các dự án mới):**
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
-#### Mua lại giấy phép
-GroupDocs.Annotation cung cấp bản dùng thử miễn phí cho mục đích đánh giá. Bạn cũng có thể yêu cầu cấp giấy phép tạm thời để khám phá toàn bộ khả năng của nó mà không có giới hạn hoặc mua giấy phép để sử dụng thương mại.
-#### Khởi tạo và thiết lập cơ bản
-Sau đây là đoạn mã C# đơn giản để khởi tạo lớp Annotator:
+
+### Cài đặt giấy phép (Đừng bỏ qua phần này)
+
+Đây là điều mà nhiều nhà phát triển thường không lường trước: GroupDocs.Annotation cần giấy phép hợp lệ để sử dụng trong môi trường sản xuất. Tin tốt là bạn có nhiều lựa chọn:
+
+- **Bản dùng thử**: Hoàn hảo cho việc thử nghiệm và chứng minh ý tưởng  
+- **Giấy phép tạm thời**: Tuyệt vời cho giai đoạn phát triển khi bạn cần đầy đủ chức năng  
+- **Giấy phép thương mại**: Cần thiết cho triển khai trong môi trường sản xuất  
+
+### Khởi tạo cơ bản
+
+Khi mọi thứ đã được cài đặt, đây là điểm khởi đầu của bạn:
+
 ```csharp
 using GroupDocs.Annotation;
 
-// Khởi tạo Annotator bằng đường dẫn tệp.
+// Simple initialization for unprotected documents
 Annotator annotator = new Annotator("sample.pdf");
 ```
-## Hướng dẫn thực hiện
-### Đang tải các tài liệu được bảo vệ bằng mật khẩu
-#### Tổng quan
-Tải một tài liệu được bảo vệ bằng mật khẩu là điều cần thiết khi bạn cần chú thích các tệp không thể truy cập công khai. Điều này đảm bảo chỉ những người dùng được ủy quyền mới có thể xem và sửa đổi nội dung.
-#### Hướng dẫn từng bước:
-##### Cấu hình Tùy chọn Tải
-Để tải một tài liệu được bảo vệ, hãy cấu hình `LoadOptions` với mật khẩu đúng.
+
+**Cạm bẫy phổ biến:** Nhiều nhà phát triển cố gắng dùng khởi tạo cơ bản này cho các tệp được bảo vệ bằng mật khẩu và thắc mắc tại sao lại thất bại. Chúng ta sẽ sửa lỗi này trong phần tiếp theo.
+
+## Cách tải PDF có mật khẩu trong .NET
+
+Việc tải một PDF được bảo mật không chỉ đơn giản là truyền một chuỗi mật khẩu; bạn cần cấu hình đúng các tùy chọn tải.
+
 ```csharp
 using GroupDocs.Annotation.Options;
 
-// Thiết lập tùy chọn tải bằng mật khẩu của tài liệu.
+// Configure load options with proper authentication
 LoadOptions loadOptions = new LoadOptions() { Password = "1234" };
 ```
-##### Khởi tạo đối tượng chú thích
-Với các tùy chọn tải được thiết lập, bây giờ bạn có thể khởi tạo `Annotator` đối tượng. Bước này rất quan trọng vì nó mở tài liệu để chú thích.
+
+**Kịch bản thực tế:** Trong môi trường sản xuất, bạn thường sẽ lấy mật khẩu từ đầu vào của người dùng, tệp cấu hình hoặc kho bảo mật. Không bao giờ hard‑code mật khẩu trong mã nguồn (dù có hấp dẫn cho các thử nghiệm nhanh, nhưng đừng làm như vậy).
+
+## Cách ghi chú PDF được bảo vệ bằng mật khẩu
+
+Khi tài liệu đã được xác thực, bạn có thể làm việc với nó giống như bất kỳ PDF nào khác.
+
 ```csharp
 using GroupDocs.Annotation;
 
-// Sử dụng Annotator với tùy chọn tải để truy cập tài liệu được bảo vệ.
+// The proper way to handle password‑protected documents
 using (Annotator annotator = new Annotator("protected_document.pdf", loadOptions))
 {
-    // Các bước chú thích bổ sung được nêu ở đây.
+    // Your annotation code goes here
+    // The document is now authenticated and ready for annotations
 }
 ```
-### Thêm chú thích
-#### Tổng quan
-Để thêm chú thích, bạn phải chỉ định loại chú thích bạn muốn và vị trí chú thích sẽ xuất hiện trong tài liệu.
-#### Hướng dẫn từng bước:
-##### Tạo một đối tượng chú thích
-Ở đây, chúng ta sẽ tạo ra một `AreaAnnotation` để làm nổi bật một phần cụ thể của tài liệu.
+
+**Tại sao cần câu lệnh `using`?** Nó đảm bảo tất cả các tài nguyên không quản lý được giải phóng, điều này rất quan trọng khi bạn xử lý các PDF lớn hoặc xử lý nhiều tệp liên tiếp.
+
+## Cách thêm đánh dấu nổi bật vào PDF
+
+Thêm vùng đánh dấu là một trong những loại ghi chú phổ biến nhất. Dưới đây là mẫu tạo một highlight màu vàng (annotation dạng khu vực).
+
 ```csharp
 using GroupDocs.Annotation.Models.AnnotationModels;
 
-// Xác định khu vực chú thích.
+// Create an area annotation (great for highlighting sections)
 AreaAnnotation area = new AreaAnnotation()
 {
-    Box = new Rectangle(100, 100, 100, 100), // X, Y, Chiều rộng, Chiều cao
-    BackgroundColor = 65535 // Định dạng màu ARGB
+    Box = new Rectangle(100, 100, 100, 100), // X, Y, Width, Height
+    BackgroundColor = 65535 // ARGB color format (this gives you yellow)
 };
-```
-##### Thêm chú thích vào tài liệu
-Bây giờ, thêm chú thích đã tạo vào tài liệu bằng cách sử dụng `Annotator` sự vật.
-```csharp
-// Thêm chú thích khu vực.
+
+// Add the annotation to your document
 annotator.Add(area);
 ```
-### Lưu tài liệu có chú thích
-#### Tổng quan
-Sau khi thêm chú thích, việc lưu tài liệu đảm bảo mọi thay đổi đều được lưu giữ. Bước này rất quan trọng để duy trì tính toàn vẹn của tác phẩm của bạn.
-#### Hướng dẫn từng bước:
-##### Lưu vào Đường dẫn đầu ra
-Cuối cùng, lưu tài liệu có chú thích vào đường dẫn đã chỉ định.
+
+**Mẹo chuyên nghiệp cho việc định vị ghi chú:**
+- Tọa độ PDF bắt đầu từ góc dưới‑trái (khác với hầu hết các framework UI).  
+- Hãy thử tọa độ của bạn bằng một trình xem PDF đơn giản trước.  
+- Lưu ý kích thước trang khi tính toán vị trí.
+
+## Cách lưu PDF đã ghi chú
+
+Bước cuối cùng là ghi lại các thay đổi. Tệp đã lưu sẽ vẫn giữ nguyên bảo mật bằng mật khẩu ban đầu.
+
 ```csharp
-// Xác định đường dẫn đầu ra.
+// Define where you want to save the result
 string outputPath = "output_directory/result.pdf";
 
-// Lưu tài liệu có chú thích.
+// Save the annotated document
 annotator.Save(outputPath);
 ```
-### Mẹo khắc phục sự cố
-- **Mật khẩu không đúng**: Đảm bảo bạn đã nhập đúng mật khẩu `LoadOptions`.
-- **Các vấn đề về đường dẫn tệp**: Kiểm tra lại đường dẫn tệp xem có lỗi đánh máy hoặc cấu trúc thư mục không chính xác không.
-## Ứng dụng thực tế
-1. **Đánh giá tài liệu pháp lý**:Luật sư có thể chú thích các hồ sơ vụ án nhạy cảm một cách an toàn.
-2. **Phân tích tài chính**:Các nhà phân tích có thể làm nổi bật các phần quan trọng của báo cáo tài chính.
-3. **Hợp tác nhóm**:Các nhóm có thể thêm bình luận vào tài liệu được chia sẻ mà không ảnh hưởng đến tính bảo mật.
-Việc tích hợp với các hệ thống .NET khác như ASP.NET Core hoặc Entity Framework rất đơn giản, cho phép sử dụng linh hoạt trong các ứng dụng web và các dự án dựa trên dữ liệu.
-## Cân nhắc về hiệu suất
-Khi làm việc với GroupDocs.Annotation, hãy cân nhắc những mẹo về hiệu suất sau:
-- Tối ưu hóa kích thước tài liệu trước khi chú thích.
-- Sử dụng các kỹ thuật quản lý bộ nhớ hiệu quả để xử lý các tệp lớn.
-- Cập nhật thư viện thường xuyên để cải thiện hiệu suất.
-Việc thực hiện các biện pháp tốt nhất có thể cải thiện đáng kể khả năng phản hồi và hiệu quả của ứng dụng.
-## Phần kết luận
-Bây giờ bạn đã biết cách tải, chú thích và lưu các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET. Công cụ mạnh mẽ này không chỉ bảo mật tài liệu của bạn mà còn cung cấp tính linh hoạt trong việc xử lý chú thích.
-Bước tiếp theo, hãy cân nhắc khám phá các loại chú thích nâng cao hơn và tích hợp thư viện vào các ứng dụng hoặc quy trình làm việc lớn hơn. Tại sao không thử triển khai giải pháp này trong các dự án của riêng bạn?
-## Phần Câu hỏi thường gặp
-**H: Tôi có thể chú thích vào tài liệu Word không?**
-A: Có, GroupDocs.Annotation hỗ trợ nhiều định dạng tài liệu bao gồm DOCX.
-**H: Nếu mật khẩu của tôi không đúng thì sao?**
-A: Bạn sẽ gặp lỗi khi tải tài liệu. Kiểm tra lại mật khẩu trong `LoadOptions`.
-**H: Làm sao để xử lý các tập tin lớn một cách hiệu quả?**
-A: Hãy cân nhắc việc chia tài liệu thành các phần nhỏ hơn hoặc tối ưu hóa kích thước tệp trước khi chú thích.
-**H: GroupDocs.Annotation có miễn phí sử dụng không?**
-A: Có phiên bản dùng thử để đánh giá, nhưng cần phải có giấy phép để sử dụng cho mục đích thương mại.
-**H: Giải pháp này có thể tích hợp với giải pháp lưu trữ đám mây không?**
-A: Có, bạn có thể tích hợp GroupDocs.Annotation với nhiều nền tảng đám mây khác nhau như AWS S3 hoặc Azure Blob Storage.
-## Tài nguyên
-- **Tài liệu**: [Chú thích GroupDocs Tài liệu .NET](https://docs.groupdocs.com/annotation/net/)
-- **Tài liệu tham khảo API**: [Tài liệu tham khảo API GroupDocs](https://reference.groupdocs.com/annotation/net/)
-- **Tải về**: [Bản phát hành GroupDocs](https://releases.groupdocs.com/annotation/net/)
-- **Mua**: [Mua giấy phép GroupDocs](https://purchase.groupdocs.com/buy)
-- **Dùng thử miễn phí**: [Dùng thử miễn phí GroupDocs](https://releases.groupdocs.com/annotation/net/)
-- **Giấy phép tạm thời**: [Yêu cầu Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- **Ủng hộ**: [Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/annotation/) 
-Với hướng dẫn này, bạn sẽ được trang bị đầy đủ để bắt đầu chú thích các tệp PDF được bảo vệ bằng mật khẩu bằng GroupDocs.Annotation cho .NET. Chúc bạn viết mã vui vẻ!
+
+**Lưu ý quan trọng:** Nếu bạn cần thay đổi hoặc loại bỏ mật khẩu, sẽ phải sử dụng các công cụ GroupDocs bổ sung (xem phần “Cách thay đổi mật khẩu PDF trong quá trình ghi chú”).
+
+## Cách thay đổi mật khẩu PDF trong quá trình ghi chú
+
+Đôi khi quy trình yêu cầu cập nhật mật khẩu của tài liệu sau khi đã thêm ghi chú. Mặc dù GroupDocs.Annotation không thay đổi mật khẩu trực tiếp, bạn có thể kết hợp nó với GroupDocs.Conversion:
+
+```csharp
+// This requires additional GroupDocs.Conversion functionality
+// Consider this for future implementation needs
+```
+
+Hãy ghi nhớ điều này cho các dự án cần bảo mật lại tệp bằng mật khẩu mới sau khi xử lý.
+
+## Các vấn đề thường gặp và cách khắc phục
+
+### Lỗi “Invalid Password”
+
+**Triệu chứng:** Code của bạn ném ra ngoại lệ mặc dù bạn chắc chắn mật khẩu đúng.
+
+**Nguyên nhân phổ biến:**
+- Có khoảng trắng thừa trong chuỗi mật khẩu  
+- Vấn đề mã hoá với các ký tự đặc biệt  
+- Vấn đề phân biệt chữ hoa/chữ thường  
+
+**Giải pháp:**
+```csharp
+// Clean and validate your password input
+string cleanPassword = userInputPassword.Trim();
+LoadOptions loadOptions = new LoadOptions() { Password = cleanPassword };
+```
+
+### Vấn đề đường dẫn tệp
+
+**Triệu chứng:** `FileNotFoundException` dù tệp tồn tại.
+
+**Cách khắc phục nhanh:**
+- Sử dụng đường dẫn tuyệt đối trong quá trình phát triển  
+- Kiểm tra quyền truy cập tệp (đặc biệt trong các ứng dụng web)  
+- Đảm bảo tệp không bị khóa bởi tiến trình khác  
+
+```csharp
+// More robust file handling
+string filePath = Path.GetFullPath("protected_document.pdf");
+if (!File.Exists(filePath))
+{
+    throw new FileNotFoundException($"Cannot find PDF file at: {filePath}");
+}
+```
+
+### Vấn đề bộ nhớ với tệp lớn
+
+**Triệu chứng:** `OutOfMemoryException` hoặc hiệu năng chậm.
+
+**Thực hành tốt:**
+- Xử lý tài liệu theo từng phần khi có thể  
+- Giải phóng các đối tượng `Annotator` kịp thời (khối `using` giúp ích)  
+- Đặt giới hạn kích thước tệp hợp lý trong giao diện người dùng  
+
+```csharp
+// Always dispose of resources properly
+using (var annotator = new Annotator(filePath, loadOptions))
+{
+    // Do your annotation work
+    annotator.Add(annotation);
+    annotator.Save(outputPath);
+} // Automatic disposal happens here
+```
+
+## Các trường hợp sử dụng thực tế
+
+### Đánh giá tài liệu pháp lý
+Các công ty luật ghi chú hợp đồng, lời khai và hồ sơ vụ án trong khi vẫn giữ tính bảo mật.
+
+### Phân tích báo cáo tài chính
+Các nhà phân tích đầu tư thêm bình luận vào báo cáo quý mà không lộ dữ liệu nhạy cảm.
+
+### Tài liệu y tế
+Bệnh viện ghi chú hồ sơ bệnh nhân đồng thời tuân thủ quy định HIPAA.
+
+### Hợp tác doanh nghiệp
+Các đội ngũ làm việc trên kế hoạch kinh doanh, bằng sáng chế hoặc bí mật thương mại có thể cộng tác một cách an toàn.
+
+## Mẹo tối ưu hiệu suất
+
+**Đối với tài liệu lớn:**
+- Chỉ tải những trang cần ghi chú  
+- Sử dụng API streaming nếu có  
+- Nén PDF đầu ra nếu kích thước quan trọng  
+
+**Đối với xử lý khối lượng lớn:**
+- Triển khai connection pooling cho các job batch  
+- Tận dụng `async/await` để mở rộng quy mô tốt hơn  
+- Cache các PDF thường xuyên truy cập một cách an toàn  
+
+**Quản lý bộ nhớ:** (xem khối mã ở trên)
+
+## Kịch bản nâng cao
+
+### Xử lý hàng loạt nhiều tài liệu được bảo vệ
+
+Khi cần xử lý nhiều PDF với các mật khẩu khác nhau, cách tiếp cận dựa trên từ điển hoạt động rất tốt:
+
+```csharp
+var documents = new Dictionary<string, string>
+{
+    {"document1.pdf", "password1"},
+    {"document2.pdf", "password2"}
+};
+
+foreach (var doc in documents)
+{
+    var loadOptions = new LoadOptions() { Password = doc.Value };
+    using (var annotator = new Annotator(doc.Key, loadOptions))
+    {
+        // Process each document
+    }
+}
+```
+
+## Danh sách kiểm tra khắc phục sự cố
+
+1. **Xác minh mật khẩu** – Kiểm tra trước trong trình xem PDF.  
+2. **Kiểm tra quyền truy cập tệp** – Đảm bảo ứng dụng của bạn có thể đọc/ghi tệp.  
+3. **Xác thực đường dẫn tệp** – Sử dụng đường dẫn tuyệt đối khi gỡ lỗi.  
+4. **Xác nhận phiên bản GroupDocs** – Phải là 25.4.0 trở lên.  
+5. **Xem lại thông báo lỗi** – `GroupDocs.Exception` cung cấp thông tin chi tiết.  
+6. **Thử với PDF đơn giản** – Cô lập vấn đề vào tài liệu riêng.
+
+## Câu hỏi thường gặp
+
+**Q: Tôi có thể sử dụng cách tiếp cận này với các loại tài liệu khác (Word, Excel, v.v.) không?**  
+A: Chắc chắn. GroupDocs.Annotation hỗ trợ nhiều định dạng, và việc xử lý mật khẩu hoạt động tương tự trên chúng.
+
+**Q: Điều gì xảy ra nếu người dùng nhập sai mật khẩu?**  
+A: Một `GroupDocsException` sẽ được ném ra với chi tiết về lỗi xác thực. Hãy bao quanh việc tạo `Annotator` bằng khối try‑catch để xử lý một cách nhẹ nhàng.
+
+**Q: Làm thế nào để xử lý các tài liệu mỗi tài liệu có mật khẩu khác nhau trong một công việc batch?**  
+A: Lưu cặp tên tệp‑mật khẩu trong tệp cấu hình hoặc cơ sở dữ liệu, sau đó lặp qua chúng như trong ví dụ xử lý batch.
+
+**Q: Có thể bỏ bảo vệ mật khẩu khi ghi chú không?**  
+A: Không thể trực tiếp với GroupDocs.Annotation. Bạn cần sử dụng GroupDocs.Conversion để giải mã tệp, ghi chú, và sau đó tùy chọn mã hóa lại bằng mật khẩu mới.
+
+**Q: Nhiều người dùng có thể ghi chú cùng một PDF được bảo vệ bằng mật khẩu đồng thời không?**  
+A: PDF không được thiết kế để chỉnh sửa đồng thời. Bạn có thể triển khai quy trình làm việc nơi mỗi người dùng làm việc trên một bản sao, sau đó hợp nhất các ghi chú phía máy chủ.
+
+**Q: Xác thực mật khẩu có ảnh hưởng đến hiệu suất không?**  
+A: Bước xác thực chỉ diễn ra một lần khi tài liệu được tải, vì vậy ảnh hưởng đến hiệu suất là không đáng kể trong hầu hết các trường hợp.
+
+## Kết luận
+
+Ghi chú các PDF được bảo vệ bằng mật khẩu trong .NET không còn là bí ẩn. Với GroupDocs.Annotation, bạn có thể tải, đánh dấu và lưu PDF một cách an toàn mà vẫn giữ nguyên bảo mật gốc. Hãy làm theo các bước trên, tuân thủ các nguyên tắc bảo mật, và bạn sẽ cung cấp trải nghiệm cộng tác mượt mà cho người dùng.
+
+Sẵn sàng thử ngay? Bắt đầu với các đoạn mã đơn giản, sau đó mở rộng sang xử lý hàng loạt, thay đổi mật khẩu và tích hợp với ASP.NET Core hoặc lưu trữ đám mây.
+
+---
+
+**Cập nhật lần cuối:** 2026-04-26  
+**Kiểm tra với:** GroupDocs.Annotation 25.4.0 cho .NET  
+**Tác giả:** GroupDocs  
+
+## Tài nguyên và đọc thêm
+
+- **Tài liệu**: [Tài liệu GroupDocs Annotation .NET](https://docs.groupdocs.com/annotation/net/)
+- **Tham chiếu API**: [Tham chiếu API đầy đủ](https://reference.groupdocs.com/annotation/net/)
+- **Tải xuống phiên bản mới nhất**: [Bản phát hành GroupDocs](https://releases.groupdocs.com/annotation/net/)
+- **Nhận giấy phép của bạn**: [Các tùy chọn mua](https://purchase.groupdocs.com/buy)
+- **Bản dùng thử miễn phí**: [Thử trước khi mua](https://releases.groupdocs.com/annotation/net/)
+- **Giấy phép tạm thời**: [Giấy phép phát triển](https://purchase.groupdocs.com/temporary-license/)
+- **Hỗ trợ cộng đồng**: [Diễn đàn GroupDocs](https://forum.groupdocs.com/c/annotation/)
