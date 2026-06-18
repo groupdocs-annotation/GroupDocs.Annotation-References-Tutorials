@@ -1,118 +1,230 @@
 ---
-"date": "2025-05-06"
-"description": "Aprenda a recuperar com eficiência as dimensões de páginas em PDF com o GroupDocs.Annotation para .NET. Siga este guia para aprimorar seus aplicativos de gerenciamento de documentos."
-"title": "Como recuperar dimensões de páginas PDF usando GroupDocs.Annotation para .NET"
-"url": "/pt/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/"
+categories:
+- Document Processing
+date: '2026-06-16'
+description: Aprenda como obter o tamanho da página pdf em .NET usando GroupDocs.Annotation.
+  Extraia a largura e altura da página pdf, recupere a largura e altura do pdf e manipule
+  as dimensões da página pdf em c# de forma eficiente.
+keywords: pdf page dimensions .net, groupdocs.annotation tutorial, pdf metadata extraction
+  c#, .net document processing, retrieve pdf dimensions programmatically
+lastmod: '2026-06-16'
+linktitle: Guia de Dimensões de Página PDF .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-16'
+  description: Learn how to get pdf page size in .NET using GroupDocs.Annotation.
+    Extract pdf page width height, retrieve pdf width height, and handle c# pdf page
+    dimensions efficiently.
+  headline: PDF Page Dimensions .NET - Extract Width & Height with C#
+  type: TechArticle
+- description: Learn how to get pdf page size in .NET using GroupDocs.Annotation.
+    Extract pdf page width height, retrieve pdf width height, and handle c# pdf page
+    dimensions efficiently.
+  name: PDF Page Dimensions .NET - Extract Width & Height with C#
+  steps:
+  - name: Initialize the Annotator with Your PDF
+    text: Create an `Annotator` instance pointing to your PDF file. Always wrap it
+      in a `using` block so the file handle is released promptly. **Pro Tip:** Proper
+      disposal prevents memory leaks, especially when processing dozens of large PDFs
+      in a batch job.
+  - name: Retrieve Document Information
+    text: '`DocumentInfo` is an object that holds overall PDF metadata such as total
+      page count and a collection of `PageInfo` objects for each page. GroupDocs.Annotation
+      makes metadata extraction a one‑liner: The returned `DocumentInfo` object gives
+      you: - Total page count - File format details - A `Pages` li'
+  - name: Validate the Retrieved Data
+    text: Before you start looping over pages, confirm the document info isn’t null
+      and that the page collection contains entries. This defensive check avoids null‑reference
+      exceptions and provides early feedback if the PDF is corrupted.
+  - name: Extract Width and Height for Each Page
+    text: '`PageInfo` represents a single page’s properties, including its width,
+      height, and rotation angle. Iterate through the `Pages` collection and read
+      `Width` and `Height`. Remember that the values are expressed in **points** (1
+      point = 1/72 inch). **Key Points** - Width appears first, then height. - Pa'
+  type: HowTo
+- questions:
+  - answer: Yes. The free trial version supports basic dimension extraction, though
+      it may impose a limit on the number of pages processed per session.
+    question: Can I extract PDF page dimensions without a license?
+  - answer: GroupDocs.Annotation returns dimensions in **points** (1 point = 1/72
+      inch). Convert to inches by dividing by 72, or to millimeters by multiplying
+      by 0.352778.
+    question: What units are the width and height measurements in?
+  - answer: 'Pass the password via `LoadOptions` when constructing the `Annotator`:
+      `new Annotator(path, new LoadOptions { Password = "your‑password" })`.'
+    question: How do I handle password‑protected PDFs?
+  - answer: Yes. Download the file to a local `Stream` first, then use the stream‑based
+      `Annotator` constructor to avoid intermediate files.
+    question: Can this work with PDFs stored in cloud storage like Azure or AWS?
+  - answer: GroupDocs.Annotation reads only the PDF’s cross‑reference table and page
+      dictionaries, so most PDFs under 100 MB are processed in under 1 second on typical
+      server hardware.
+    question: What is the performance impact of extracting dimensions from large PDFs?
+  type: FAQPage
+tags:
+- pdf-processing
+- dotnet
+- groupdocs
+- document-metadata
+title: Dimensões de Página PDF .NET - Extrair Largura e Altura com C#
 type: docs
-"weight": 1
+url: /pt/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/
+weight: 1
 ---
 
-# Como recuperar dimensões de páginas PDF usando GroupDocs.Annotation para .NET
+# Dimensões de Página PDF .NET - Extrair Largura e Altura com C#
 
 ## Introdução
 
-Com dificuldades para recuperar com eficiência as dimensões das páginas de documentos em seus arquivos PDF usando .NET? Este tutorial o guiará por um processo contínuo, aproveitando os poderosos recursos do .NET. **GroupDocs.Annotation para .NET**. Com esse recurso, os desenvolvedores podem acessar facilmente os detalhes de largura e altura da página, aprimorando a funcionalidade de seus aplicativos.
+Já se pegou lutando com documentos PDF em sua aplicação .NET, precisando **obter o tamanho da página pdf** para cada página? Você não está sozinho. Seja construindo um visualizador de documentos, criando layouts de impressão ou processando formulários, dimensões precisas da página são a espinha dorsal de uma experiência de usuário refinada.
 
-### O que você aprenderá
-- Como configurar o GroupDocs.Annotation no seu ambiente .NET.
-- Recuperando metadados de documentos usando GroupDocs.Annotation.
-- Iterando pelas páginas do PDF para extrair dimensões.
-- Aplicações práticas de recuperação de dimensões de página.
+Neste guia abrangente, vamos guiá‑lo na extração das dimensões de página PDF usando **GroupDocs.Annotation for .NET** — uma das bibliotecas mais confiáveis para essa tarefa. Ao final, você terá um código funcional que recupera largura, altura e outros metadados essenciais de qualquer documento PDF.
 
-Vamos nos aprofundar nos pré-requisitos necessários para começar essa jornada!
+### Respostas Rápidas
+- **Como obtenho o tamanho da página pdf em .NET?** Use `Annotator.GetDocumentInfo()` e leia `PageInfo.Width` / `PageInfo.Height`.
+- **Qual biblioteca suporta a extração de largura e altura de página pdf?** GroupDocs.Annotation for .NET (v25.4.0+).
+- **Preciso de licença para extração básica de dimensões?** Uma avaliação gratuita funciona; uma licença comercial é necessária para produção.
+- **Em que unidades são retornados?** Pontos (1/72 polegada); converta para polegadas ou milímetros conforme necessário.
+- **Posso processar PDFs grandes de forma eficiente?** Sim — o GroupDocs.Annotation lê metadados sem carregar o arquivo completo na memória.
 
-## Pré-requisitos
+### O que é **get pdf page size**?
+**Get pdf page size** refere‑se à recuperação programática da largura e altura de uma página PDF. Essa operação é essencial para cálculos de layout, preparação de impressão e posicionamento de campos de formulário em aplicações .NET.
 
-Antes de começar, certifique-se de ter o seguinte:
+## Por que as Dimensões de Página PDF Importam no Desenvolvimento .NET
 
-### Bibliotecas e versões necessárias
-- **GroupDocs.Annotation para .NET** (Versão 25.4.0)
+Antes de mergulharmos no código, vamos explorar por que conhecer a **largura e altura da página pdf** importa. Esses números não são apenas curiosidades — eles impulsionam funcionalidades do mundo real:
 
-### Requisitos de configuração do ambiente
-- Uma versão compatível do Visual Studio instalada na sua máquina.
-- Acesso a um diretório com arquivos PDF para testes.
+- **Gerenciamento de Layout** – Visualizadores responsivos podem redimensionar automaticamente com base no tamanho exato da página, eliminando barras de rolagem incômodas.
+- **Otimização de Impressão** – Dimensões precisas evitam desperdício de papel e impressões desalinhadas em fluxos de trabalho comerciais.
+- **Processamento de Formulários** – As coordenadas de extração dependem de um tamanho de página preciso; um erro de 2 mm pode comprometer a captura de dados.
+- **Planejamento de Recursos** – PDFs grandes e de tamanhos mistos requerem estratégias de memória diferentes; conhecer o tamanho antecipadamente permite lotes mais inteligentes.
 
-### Pré-requisitos de conhecimento
-- Noções básicas da linguagem de programação C#.
-- Familiaridade com o gerenciamento de pacotes NuGet em ambientes .NET.
+## Pré‑requisitos
 
-Com esses pré-requisitos em mente, vamos prosseguir para a configuração do GroupDocs.Annotation para .NET.
+### Bibliotecas Necessárias e Versões
+- **GroupDocs.Annotation for .NET** (Versão 25.4.0 ou posterior). Esta versão suporta **mais de 50 formatos de entrada e saída** e pode lidar com PDFs de centenas de páginas sem carregar o arquivo inteiro na memória.
+- .NET Framework 4.6.1+ **ou** .NET Core 2.0+
+
+### Requisitos de Configuração do Ambiente
+- Visual Studio 2019 ou posterior (a edição Community funciona perfeitamente)
+- Um arquivo PDF de teste (mostraremos como lidar com diferentes tipos)
+- Familiaridade básica com instruções `using` e descarte de objetos em C#
+
+### Pré‑requisitos de Conhecimento
+Você só precisa de:
+- Fundamentos de C#
+- Noções básicas de gerenciamento de pacotes NuGet
+- I/O de arquivos simples em .NET
+
+Tudo pronto? Ótimo — vamos configurar a biblioteca.
 
 ## Configurando GroupDocs.Annotation para .NET
 
-Para integrar **GroupDocs.Annotation** em seu projeto, siga estas etapas de instalação:
+Instalar o GroupDocs.Annotation é simples, mas há algumas maneiras de fazê‑lo dependendo do seu fluxo de trabalho.
 
-### Usando o console do gerenciador de pacotes NuGet
+### Método 1: Usando o Console do Gerenciador de Pacotes NuGet
+Abra o Console do Gerenciador de Pacotes no Visual Studio e execute:
+
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-### Usando .NET CLI
+### Método 2: Usando .NET CLI
+Se preferir ferramentas de linha de comando:
+
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-#### Etapas de aquisição de licença
-- **Teste grátis**: Acesse recursos limitados para testar a biblioteca.
-- **Licença Temporária**: Obtenha uma licença temporária para funcionalidade completa durante a avaliação.
-- **Comprar**: Compre uma licença comercial para uso de longo prazo.
+### Método 3: Gerenciador de Pacotes Visual
+1. Clique com o botão direito no seu projeto no Solution Explorer  
+2. Selecione **Manage NuGet Packages**  
+3. Procure por **GroupDocs.Annotation**  
+4. Clique em **Install**
 
-### Inicialização e configuração básicas
+#### Opções de Licenciamento (Escolha o que Funciona para Você)
 
-Veja como você pode inicializar GroupDocs.Annotation em seu aplicativo C#:
+- **Free Trial** – Recursos principais, incluindo extração de dimensões, estão disponíveis com limites de uso menores — perfeito para trabalhos de prova de conceito.  
+- **Temporary License** – Solicite uma chave temporária de 30 dias para funcionalidade completa durante a avaliação.  
+- **Commercial License** – Necessária para implantações em produção; o preço escala com o número de desenvolvedores e o modelo de implantação.
+
+### Verificação Rápida da Configuração
+
+Veja um teste simples para confirmar que tudo está configurado corretamente:
 
 ```csharp
 using GroupDocs.Annotation;
 
-// Inicializar o Annotator com o caminho do arquivo de entrada
-using (Annotator annotator = new Annotator(@"YOUR_DOCUMENT_DIRECTORY\INPUT_PDF"))
+// This should compile without errors if installation succeeded
+using (Annotator annotator = new Annotator(@"path\to\your\test.pdf"))
 {
-    // Seu código aqui para trabalhar com anotações de documentos
+    Console.WriteLine("GroupDocs.Annotation is ready to use!");
 }
 ```
 
-Com a configuração concluída, vamos implementar a funcionalidade para recuperar as dimensões das páginas do PDF.
+Se isso compilar e executar sem lançar exceções, você está pronto para extrair os tamanhos das páginas.
 
-## Guia de Implementação
+## O que é a classe **Annotator**?
 
-Nesta seção, exploraremos como usar o GroupDocs.Annotation para .NET para obter as dimensões de páginas em PDF. O processo é dividido em etapas gerenciáveis para maior clareza.
+A classe `Annotator` é o objeto central do GroupDocs.Annotation que representa um documento PDF na memória e fornece métodos para ler metadados, adicionar anotações e extrair informações de página. Ela encapsula o manuseio de arquivos, suporta carregamento a partir de streams e garante que todas as operações subsequentes fluam através de uma instância `Annotator`, simplificando o gerenciamento do fluxo de trabalho.
 
-### Etapa 1: inicializar o Annotator com arquivo de entrada
+## Como **obter o tamanho da página pdf** usando GroupDocs.Annotation?
 
-Primeiro, você precisa inicializar o `Annotator` objeto com seu documento de destino:
+`GetDocumentInfo()` retorna um objeto `DocumentInfo` contendo os metadados gerais do PDF, incluindo a contagem de páginas e uma coleção de detalhes de página. Carregue seu PDF com `new Annotator("file.pdf")` e chame este método; cada `PageInfo` na coleção `Pages` contém `Width` e `Height`. Esta abordagem em duas etapas fornece dimensões em pontos instantaneamente, sem analisar o arquivo completo.
+
+## Guia de Implementação Passo a Passo
+
+### Passo 1: Inicializar o Annotator com Seu PDF
+
+Crie uma instância `Annotator` apontando para seu arquivo PDF. Sempre envolva‑a em um bloco `using` para que o manipulador de arquivo seja liberado prontamente.
 
 ```csharp
 using (Annotator annotator = new Annotator(@"YOUR_DOCUMENT_DIRECTORY\INPUT_PDF"))
 {
-    // Prossiga com a recuperação das informações do documento
+    // All our dimension extraction magic happens here
 }
 ```
 
-### Etapa 2: recuperar informações do documento
+**Dica Pro:** A liberação adequada evita vazamentos de memória, especialmente ao processar dezenas de PDFs grandes em um trabalho em lote.
 
-Uma vez inicializado, recupere os metadados do documento usando `GetDocumentInfo()`:
+### Passo 2: Recuperar Informações do Documento
+
+`DocumentInfo` é um objeto que contém os metadados gerais do PDF, como a contagem total de páginas e uma coleção de objetos `PageInfo` para cada página.  
+
+O GroupDocs.Annotation torna a extração de metadados uma única linha:
 
 ```csharp
 IDocumentInfo info = annotator.Document.GetDocumentInfo();
 ```
 
-- **Parâmetros**: Nenhum necessário.
-- **Valor de retorno**: Uma instância de `IDocumentInfo` contendo detalhes do documento.
+O objeto `DocumentInfo` retornado fornece:
+- Contagem total de páginas
+- Detalhes do formato do arquivo
+- Uma lista `Pages` onde cada entrada contém largura, altura, rotação e mais
 
-### Etapa 3: verificar e exibir informações da página
+### Passo 3: Validar os Dados Recuperados
 
-Certifique-se de que as informações da página estejam disponíveis antes de prosseguir:
+Antes de começar a percorrer as páginas, confirme que as informações do documento não são nulas e que a coleção de páginas contém entradas.
 
 ```csharp
 if (info.PagesInfo != null && info.PagesInfo.Count > 0)
 {
     Console.WriteLine($"\t Document info: Type {info.FileType}, size = {info.Size}, pages = {info.PageCount}");
 }
+else
+{
+    Console.WriteLine("No page information available - check your PDF file");
+    return;
+}
 ```
 
-### Etapa 4: itere por cada página e exiba as dimensões
+Essa verificação defensiva evita exceções de referência nula e fornece feedback precoce se o PDF estiver corrompido.
 
-Agora, percorra cada página para exibir suas dimensões:
+### Passo 4: Extrair Largura e Altura de Cada Página
+
+`PageInfo` representa as propriedades de uma única página, incluindo sua largura, altura e ângulo de rotação.  
+
+Itere pela coleção `Pages` e leia `Width` e `Height`. Lembre‑se de que os valores são expressos em **pontos** (1 ponto = 1/72 polegada).
 
 ```csharp
 foreach (var page in info.PagesInfo)
@@ -121,60 +233,243 @@ foreach (var page in info.PagesInfo)
 }
 ```
 
-- **Parâmetros**: `PagesInfo` coleção de `IDocumentInfo`.
-- **Objetivo do Método**: Exibe a largura e a altura de cada página do PDF.
+**Pontos Principais**  
+- A largura aparece primeiro, depois a altura.  
+- Os números das páginas são baseados em 1, correspondendo ao que os usuários veem nos visualizadores.  
+- As informações de rotação também estão disponíveis se precisar ajustar coordenadas.
 
-### Dicas para solução de problemas
-- Certifique-se de que o caminho do documento esteja correto para evitar erros de arquivo não encontrado.
-- Verifique se a versão do GroupDocs.Annotation é compatível com seu framework .NET.
+### Exemplo Completo em Funcionamento (Método)
 
-## Aplicações práticas
+Você pode envolver os passos acima em um método reutilizável:
 
-Recuperar as dimensões da página pode ser benéfico em vários cenários do mundo real:
+```csharp
+using GroupDocs.Annotation;
+using System;
 
-1. **Sistemas de Gestão de Documentos**: Ajuste automaticamente os painéis de visualização com base no tamanho da página para melhor legibilidade.
-2. **Ferramentas de edição de PDF**: Forneça ferramentas para redimensionar ou reformatar o conteúdo dinamicamente de acordo com as dimensões da página.
-3. **Software de análise de dados**: Analise e extraia informações de layout de PDFs contendo dados tabulares.
+public void ExtractPdfPageDimensions(string pdfPath)
+{
+    try
+    {
+        using (Annotator annotator = new Annotator(pdfPath))
+        {
+            IDocumentInfo info = annotator.Document.GetDocumentInfo();
+            
+            if (info.PagesInfo != null && info.PagesInfo.Count > 0)
+            {
+                Console.WriteLine($"Document: {info.FileType}, {info.Size} bytes, {info.PageCount} pages");
+                
+                foreach (var page in info.PagesInfo)
+                {
+                    Console.WriteLine($"Page {page.PageNumber}: {page.Width} x {page.Height} points");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Could not retrieve page information");
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error processing PDF: {ex.Message}");
+    }
+}
+```
 
-## Considerações de desempenho
+## Armadilhas Comuns e Como Evitá‑las
 
-Para garantir que seu aplicativo seja executado de forma eficiente com GroupDocs.Annotation:
+Mesmo com código simples, os desenvolvedores encontram problemas previsíveis. Abaixo estão as armadilhas mais comuns e soluções comprovadas.
 
-- Otimize o uso de recursos manipulando apenas as páginas necessárias do documento ao processar arquivos grandes.
-- Siga as práticas recomendadas de gerenciamento de memória do .NET, como descartar o `Annotator` objeto corretamente.
+### Problemas de Caminho de Arquivo
 
-## Conclusão
+**Problema:** Erros “File not found” durante o desenvolvimento.  
+**Solução:** Use caminhos absolutos durante os testes e sempre verifique se o arquivo existe antes de criar o `Annotator`.
 
-Seguindo este guia, você aprendeu como recuperar efetivamente as dimensões da página PDF usando **GroupDocs.Annotation para .NET**Esse recurso pode aprimorar significativamente a funcionalidade e a experiência do usuário do seu aplicativo. Para explorar melhor o GroupDocs.Annotation, considere experimentar seus diversos recursos de anotação ou integrá-lo a projetos maiores.
+```csharp
+if (!File.Exists(pdfPath))
+{
+    throw new FileNotFoundException($"PDF file not found: {pdfPath}");
+}
+```
 
-### Próximos passos
-- Explore anotações adicionais, como destaque de texto e marca d'água.
-- Integre o GroupDocs.Annotation em soluções de gerenciamento de documentos baseadas em nuvem para escalabilidade.
+### Problemas de Permissão
 
-Pronto para implementar esta solução? Comece baixando os pacotes necessários do GroupDocs e configurando o ambiente do seu projeto. Boa programação!
+**Problema:** A aplicação não tem acesso de leitura ao arquivo PDF, especialmente em servidores web.  
+**Solução:** Conceda as permissões de leitura adequadas à identidade do pool de aplicativos ou use impersonação para pastas restritas.
 
-## Seção de perguntas frequentes
+### Manipulação de PDFs Corrompidos
 
-**1. Como instalo o GroupDocs.Annotation no meu projeto .NET?**
-   - Use o Gerenciador de Pacotes NuGet ou o .NET CLI conforme descrito acima.
+**Problema:** Alguns PDFs estão parcialmente danificados ou usam recursos não‑padrão.  
+**Solução:** Envolva a lógica de extração em um bloco `try‑catch` e exiba uma mensagem de erro clara. O GroupDocs.Annotation lançará um `DocumentException` para estruturas não suportadas.
 
-**2. O que é `IDocumentInfo` usado em GroupDocs.Annotation?**
-   - Ele fornece metadados sobre o documento, incluindo dimensões de página e outras propriedades.
+### Vazamentos de Memória com Arquivos Grandes
 
-**3. Posso usar GroupDocs.Annotation com aplicativos ASP.NET?**
-   - Sim, ele se integra perfeitamente ao ASP.NET para aprimorar os recursos de anotação em PDF baseados na web.
+**Problema:** Processar muitos PDFs grandes sem descartar instâncias `Annotator` leva a falhas por falta de memória.  
+**Solução:** Sempre use blocos `using` e considere processar arquivos em lotes menores ou modo streaming.
 
-**4. Como posso lidar com arquivos PDF grandes de forma eficiente no meu aplicativo?**
-   - Processe documentos em blocos ou páginas em vez de carregar o arquivo inteiro de uma vez.
+### Compatibilidade de Versão
 
-**5. Quais são alguns problemas comuns ao recuperar dimensões de página e como eles podem ser resolvidos?**
-   - Garanta os caminhos de arquivo corretos e a compatibilidade da versão do GroupDocs.Annotation com seu .NET framework.
+**Problema:** Misturar diferentes versões da biblioteca GroupDocs pode causar incompatibilidades de tipo.  
+**Solução:** Padronize uma única versão em toda a solução e atualize todos os pacotes relacionados simultaneamente.
 
-## Recursos
-- **Documentação**: [Documentação de Anotação do GroupDocs](https://docs.groupdocs.com/annotation/net/)
-- **Referência de API**: [Referência da API de Anotação do GroupDocs](https://reference.groupdocs.com/annotation/net/)
-- **Download**: [Lançamentos do GroupDocs](https://releases.groupdocs.com/annotation/net/)
-- **Comprar**: [Comprar GroupDocs](https://purchase.groupdocs.com/buy)
-- **Teste grátis**: [Experimente a versão gratuita](https://releases.groupdocs.com/annotation/net/)
+## Aplicações do Mundo Real
+
+Entender **retrieve pdf width height** desbloqueia cenários poderosos:
+
+### Aplicações de Visualização de Documentos
+
+Visualizadores responsivos podem definir automaticamente o nível de zoom inicial com base nas dimensões da página, oferecendo uma experiência “ajustar‑à‑tela” sem ajustes manuais.
+
+```csharp
+// Example: Calculate optimal zoom for viewport
+double optimalZoom = Math.Min(viewportWidth / pageWidth, viewportHeight / pageHeight);
+```
+
+### Geração Automatizada de Relatórios
+
+Ao mesclar vários PDFs em um único relatório, conhecer o tamanho de cada página garante escalonamento consistente e evita quebras de página inesperadas.
+
+### Sistemas de Gerenciamento de Impressão
+
+Dimensões exatas permitem calcular o uso ótimo de papel, detectar orientação retrato vs. paisagem e pré‑verificar documentos antes de enviá‑los a impressoras comerciais.
+
+### Soluções de Processamento de Formulários
+
+Coordenadas precisas derivadas do tamanho da página possibilitam extração confiável de caixas de seleção, assinaturas e campos de texto em PDFs com layouts variados.
+
+### Gerenciamento de Ativos Digitais
+
+Marque PDFs com metadados de tamanho para facilitar buscas rápidas (ex.: “exibir todos os documentos tamanho A4”) e melhorar a eficiência de catalogação.
+
+## Dicas de Otimização de Desempenho
+
+Quando você passa de um protótipo para produção, o desempenho torna‑se crítico.
+
+### Estratégia de Processamento em Lote
+
+Agrupe operações semelhantes para reduzir sobrecarga. Por exemplo, leia metadados para um lote de arquivos, armazene os resultados e depois processe anotações em uma segunda passagem.
+
+```csharp
+var results = new List<PageDimensionResult>();
+foreach (var pdfFile in pdfFiles.Take(10)) // Process in batches of 10
+{
+    // Extract dimensions and add to results
+}
+```
+
+### Cache de Dimensões Acessadas Frequentemente
+
+Se os mesmos PDFs forem consultados repetidamente, faça cache dos objetos `DocumentInfo` em um dicionário thread‑safe. Lembre‑se de invalidar o cache quando o arquivo fonte mudar.
+
+```csharp
+private static readonly Dictionary<string, IDocumentInfo> _dimensionCache = 
+    new Dictionary<string, IDocumentInfo>();
+```
+
+### Processamento Assíncrono para Arquivos Grandes
+
+Aproveite padrões `async/await` para manter as threads de UI responsivas enquanto o GroupDocs.Annotation lê metadados em segundo plano.
+
+```csharp
+public async Task<List<PageInfo>> ExtractDimensionsAsync(string pdfPath)
+{
+    return await Task.Run(() => {
+        // Your dimension extraction code here
+    });
+}
+```
+
+### Melhores Práticas de Gerenciamento de Memória
+
+- Libere cada instância `Annotator` prontamente.  
+- Processar grandes coleções em blocos de 20–50 arquivos para manter a pegada de memória baixa.  
+- Monitorar o uso de memória com contadores de desempenho ou ferramentas de profiling.  
+- Use referências fracas para objetos em cache se esperar alta rotatividade.
+
+## Casos de Uso Avançados
+
+Uma vez confortável com a extração básica, explore esses cenários sofisticados.
+
+### Manipulação de Documentos de Tamanhos Mistos
+
+Alguns PDFs contêm páginas de tamanhos diferentes (ex.: capa em A4 seguida por páginas internas em A5). Detecte mudanças de tamanho comparando valores consecutivos `PageInfo.Width`/`Height` e aplique lógica condicional.
+
+```csharp
+var pageSizes = info.PagesInfo.Select(p => new { p.PageNumber, p.Width, p.Height }).ToList();
+var uniqueSizes = pageSizes.Select(p => new { p.Width, p.Height }).Distinct().Count();
+
+if (uniqueSizes > 1)
+{
+    Console.WriteLine("Document contains multiple page sizes");
+}
+```
+
+### Detecção de Orientação
+
+Determine retrato vs. paisagem comparando largura e altura. Isso é útil para auto‑rotacionar páginas em visualizadores ou para gerar miniaturas conscientes da orientação.
+
+```csharp
+foreach (var page in info.PagesInfo)
+{
+    string orientation = page.Width > page.Height ? "Landscape" : "Portrait";
+    Console.WriteLine($"Page {page.PageNumber}: {orientation}");
+}
+```
+
+### Integração com Outros Recursos do GroupDocs
+
+Combine extração de dimensões com APIs de anotação para posicionar carimbos com precisão, ou com APIs de conversão para gerar imagens que respeitem o tamanho original da página.
+
+## Perguntas Frequentes
+
+**Q: Posso extrair dimensões de página PDF sem uma licença?**  
+A: Sim. A versão de avaliação gratuita suporta extração básica de dimensões, embora possa impor um limite no número de páginas processadas por sessão.
+
+**Q: Em que unidades são as medições de largura e altura?**  
+A: O GroupDocs.Annotation retorna dimensões em **pontos** (1 ponto = 1/72 polegada). Converta para polegadas dividindo por 72, ou para milímetros multiplicando por 0.352778.
+
+**Q: Como lidar com PDFs protegidos por senha?**  
+A: Passe a senha via `LoadOptions` ao construir o `Annotator`: `new Annotator(path, new LoadOptions { Password = "your‑password" })`.
+
+**Q: Isso funciona com PDFs armazenados em armazenamento em nuvem como Azure ou AWS?**  
+A: Sim. Baixe o arquivo para um `Stream` local primeiro, depois use o construtor baseado em stream do `Annotator` para evitar arquivos intermediários.
+
+**Q: Qual é o impacto de desempenho ao extrair dimensões de PDFs grandes?**  
+A: O GroupDocs.Annotation lê apenas a tabela de referência cruzada e os dicionários de página do PDF, de modo que a maioria dos PDFs com menos de 100 MB são processados em menos de 1 segundo em hardware de servidor típico.
+
+**Q: Como lidar com PDFs com páginas rotacionadas?**  
+A: A propriedade `PageInfo.Rotation` indica o ângulo de rotação. Se uma página estiver rotacionada 90° ou 270°, troque os valores de largura e altura para obter as dimensões exibidas.
+
+**Q: Posso extrair dimensões apenas de páginas específicas?**  
+A: Sim. Após chamar `GetDocumentInfo()`, filtre a coleção `Pages` por `PageNumber` para direcionar páginas individuais.
+
+**Q: Isso funciona com documentos no formato PDF/A?**  
+A: Absolutamente. O GroupDocs.Annotation oferece suporte total aos padrões PDF/A‑1, PDF/A‑2 e PDF/A‑3.
+
+**Q: Como solucionar erros “Unable to load document”?**  
+A: Verifique as permissões de arquivo, assegure‑se de que o arquivo não está corrompido abrindo‑o em um leitor de PDF, e confirme que está usando uma versão de PDF suportada (1.4–2.0).
+
+**Q: Posso obter dimensões em pixels em vez de pontos?**  
+A: Converta manualmente: `pixels = points * DPI / 72`. Para DPI típico de tela de 96, multiplique pontos por 1.3333.
+
+## Recursos Essenciais
+
+- **Documentação**: [Documentação do GroupDocs Annotation](https://docs.groupdocs.com/annotation/net/)
+- **Referência da API**: [Referência da API do GroupDocs Annotation](https://reference.groupdocs.com/annotation/net/)
+- **Download**: [Downloads do GroupDocs](https://releases.groupdocs.com/annotation/net/)
+- **Compra**: [Comprar GroupDocs](https://purchase.groupdocs.com/buy)
+- **Versão de Avaliação**: [Experimentar Versão Gratuita](https://releases.groupdocs.com/annotation/net/)
 - **Licença Temporária**: [Solicitar Licença Temporária](https://purchase.groupdocs.com/temporary-license/)
-- **Apoiar**: [Fórum GroupDocs](https://forum.groupdocs.com/c/annotation/)
+- **Suporte**: [Fórum do GroupDocs](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Última Atualização:** 2026-06-16  
+**Testado com:** GroupDocs.Annotation 25.4.0 for .NET  
+**Autor:** GroupDocs
+
+## Tutoriais Relacionados
+
+- [Extração de Metadados de Documentos .NET - Guia Completo do GroupDocs.Annotation](/annotation/net/document-information/)
+- [Carregar PDF a partir de URL .NET - Guia Completo com GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)
+- [Gerar Pré‑visualização de Documento .NET - Guia Completo com GroupDocs.Annotation](/annotation/net/advanced-usage/generate-document-pages-preview/)
