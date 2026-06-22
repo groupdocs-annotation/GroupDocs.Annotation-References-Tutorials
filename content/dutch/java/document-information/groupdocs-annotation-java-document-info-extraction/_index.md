@@ -1,36 +1,38 @@
 ---
 categories:
 - Java Development
-date: '2025-12-26'
-description: Leer hoe je PDF‑metadata in Java kunt extraheren, inclusief bestandstype,
-  paginatelling en grootte. Deze gids behandelt het omgaan met PDF‑bestandstypen in
-  Java met GroupDocs.
+date: '2026-02-26'
+description: Leer hoe je in Java het aantal PDF‑pagina's kunt verkrijgen en PDF‑metadata
+  kunt extraheren met GroupDocs. Deze gids toont bestandstype, paginacount en grootte‑extractie.
 keywords: Java document metadata extraction, extract PDF metadata Java, Java file
   information extraction, document properties Java API, PDF page count Java
-lastmod: '2025-12-26'
-linktitle: How to Extract PDF Metadata in Java with GroupDocs
+lastmod: '2026-02-26'
+linktitle: java get pdf page count and extract metadata with GroupDocs
 tags:
 - java
 - pdf
 - metadata
 - document-processing
 - api
-title: Hoe PDF-metadata te extraheren in Java met GroupDocs
+title: java pdf-paginatelling ophalen en metadata extraheren met GroupDocs
 type: docs
 url: /nl/java/document-information/groupdocs-annotation-java-document-info-extraction/
 weight: 1
 ---
 
-# Hoe PDF-metadata te extraheren in Java met GroupDocs
+# Hoe java pdf-paginatelling te krijgen en PDF-metadata te extraheren in Java met GroupDocs
 
-Heb je ooit snel basisinformatie van honderden documenten moeten ophalen? Je bent niet de enige. Of je nu een documentbeheersysteem bouwt, juridische bestanden verwerkt, of gewoon die chaotische gedeelde schijf wilt organiseren, **hoe PDF-metadata te extraheren** programmatically kan je uren handmatig werk besparen. In deze gids lopen we stap voor stap door het extraheren van het bestandstype, paginatelling en grootte met Java—perfect voor iedereen die de **pdf file type java** uitdaging efficiënt wil aanpakken.
+Heb je ooit snel basisinformatie van honderden documenten moeten ophalen? Je bent niet de enige. Of je nu een documentbeheersysteem bouwt, juridische bestanden verwerkt, of gewoon die chaotische gedeelde schijf wilt organiseren, **hoe java pdf-paginatelling** programmatically kan je uren handmatig werk besparen. In deze gids lopen we door het extraheren van het bestandstype, paginatelling en grootte met Java—perfect voor iedereen die de **pdf file type java** uitdaging efficiënt wil aanpakken en ook **extract pdf metadata java**.
 
 ## Snelle antwoorden
 - **Welke bibliotheek is het beste voor PDF-metadata in Java?** GroupDocs.Annotation biedt een eenvoudige API voor het extraheren van metadata zonder de volledige inhoud te laden.  
 - **Heb ik een licentie nodig?** Een gratis proefversie werkt voor ontwikkeling; een volledige licentie is vereist voor productie.  
 - **Kan ik metadata uit andere formaten extraheren?** Ja—GroupDocs ondersteunt Word, Excel en nog veel meer.  
-- **Hoe snel is metadata‑extractie?** Meestal milliseconden per bestand omdat alleen de header‑informatie wordt gelezen.  
+- **Hoe snel is metadata-extractie?** Meestal milliseconden per bestand omdat alleen de header‑informatie wordt gelezen.  
 - **Is het veilig voor grote batches?** Ja, wanneer je try‑with‑resources en batch‑verwerkingspatronen gebruikt.
+
+## Hoe java pdf-paginatelling te krijgen met GroupDocs
+Het verkrijgen van de paginatelling is vaak de eerste stap wanneer je PDF‑bestanden moet organiseren of valideren. De volgende secties laten je precies zien hoe je **java pdf-paginatelling** kunt uitvoeren terwijl je ook andere nuttige metadata ophaalt.
 
 ## Wat is PDF-metadata‑extractie?
 PDF-metadata omvat eigenschappen zoals het aantal pagina's, bestandstype, grootte, auteur, aanmaakdatum en eventuele aangepaste velden die in het document zijn ingebed. Het extraheren van deze gegevens stelt applicaties in staat om automatisch te catalogiseren, zoeken en bestanden te valideren zonder ze volledig te openen.
@@ -38,17 +40,17 @@ PDF-metadata omvat eigenschappen zoals het aantal pagina's, bestandstype, groott
 ## Waarom PDF-metadata extraheren in Java?
 - **Content Management Systems** kunnen bestanden automatisch taggen en indexeren zodra ze worden geüpload.  
 - **Legal & Compliance** teams kunnen documenteigenschappen verifiëren voor audits.  
-- **Digital Asset Management** wordt gestroomlijnd met automatische tagging.  
-- **Performance Optimization** vermijdt het laden van grote PDF’s wanneer alleen header‑informatie nodig is.
+- **Digital Asset Management** wordt gestroomlijnder met automatische tagging.  
+- **Performance Optimization** voorkomt het laden van grote PDF‑bestanden wanneer alleen header‑informatie nodig is.
 
 ## Vereisten en installatie
 - **Java 8+** (Java 11+ aanbevolen)  
 - IDE naar keuze (IntelliJ, Eclipse, VS Code)  
-- Maven of Gradle voor dependencies  
+- Maven of Gradle voor afhankelijkheden  
 - Basiskennis van Java‑bestandsafhandeling  
 
 ### GroupDocs.Annotation voor Java instellen
-Voeg de repository en dependency toe aan je `pom.xml`:
+Voeg de repository en afhankelijkheid toe aan je `pom.xml`:
 
 ```xml
 <repositories>
@@ -68,10 +70,10 @@ Voeg de repository en dependency toe aan je `pom.xml`:
 </dependencies>
 ```
 
-**Pro tip:** Controleer de GroupDocs releases‑pagina voor nieuwere versies; nieuwere releases brengen vaak prestatie‑verbeteringen.
+**Pro tip:** Controleer de GroupDocs‑releasespagina voor nieuwere versies; nieuwere releases brengen vaak prestatie‑verbeteringen.
 
-## Hoe PDF-metadata te extraheren met GroupDocs
-Hieronder vind je een stap‑voor‑stap walkthrough. De code‑blokken blijven ongewijzigd om functionaliteit te behouden.
+## Hoe PDF-metadata extraheren met GroupDocs
+Hieronder vind je een stap‑voor‑stap walkthrough. De code‑blokken blijven ongewijzigd om de functionaliteit te behouden.
 
 ### Stap 1: De Annotator initialiseren
 ```java
@@ -116,7 +118,7 @@ try (final Annotator annotator = new Annotator(inputFile)) {
     }
 }
 ```
-`getDocumentInfo()` leest alleen de header, zodat zelfs grote PDF’s snel worden verwerkt.
+`getDocumentInfo()` leest alleen de header, zodat zelfs grote PDF‑bestanden snel worden verwerkt. Dit toont hoe je **java pdf-paginatelling** efficiënt kunt uitvoeren terwijl je andere eigenschappen extraheert.
 
 ## Veelvoorkomende valkuilen & hoe ze te vermijden
 ### Bestands‑padproblemen
@@ -128,7 +130,7 @@ String inputFile = baseDir + "/documents/sample.pdf";
 ```
 
 ### Geheugenbeheer
-Bij het verwerken van grote batches, sluit resources altijd direct en houd het heap‑gebruik in de gaten. Het verwerken van bestanden in kleinere delen voorkomt `OutOfMemoryError`.
+Bij het verwerken van grote batches, sluit altijd resources direct en houd het heap‑gebruik in de gaten. Het verwerken van bestanden in kleinere delen voorkomt `OutOfMemoryError`.
 
 ### Exception‑afhandeling
 Vang specifieke uitzonderingen op om nuttige diagnostiek te behouden:
@@ -251,28 +253,28 @@ document.processing.batch-size=100
 ```
 
 ## Problemen oplossen
-- **File Not Found:** Controleer het pad, de rechten en of geen ander proces het bestand vergrendelt.  
+- **Bestand niet gevonden:** Controleer het pad, de rechten en of geen ander proces het bestand vergrendelt.  
 - **OutOfMemoryError:** Verhoog de JVM‑heap (`-Xmx2g`) of verwerk bestanden in kleinere batches.  
-- **Unsupported Format:** Bekijk de ondersteunde lijst van GroupDocs; val terug op Apache Tika voor onbekende typen.  
+- **Niet‑ondersteund formaat:** Controleer de ondersteunde lijst van GroupDocs; val terug op Apache Tika voor onbekende types.  
 
 ## Veelgestelde vragen
-**Q: Hoe ga ik om met met wachtwoord beveiligde PDF’s?**  
+**V: Hoe ga ik om met met wachtwoord beveiligde PDF’s?**  
 A: Geef een `LoadOptions`‑object met het wachtwoord mee bij het aanmaken van de `Annotator`.  
 
-**Q: Is metadata‑extractie snel voor grote PDF’s?**  
-A: Ja—omdat alleen header‑informatie wordt gelezen, voltooien zelfs PDF’s van honderden pagina’s in milliseconden.  
+**V: Is metadata‑extractie snel voor grote PDF’s?**  
+A: Ja—omdat alleen header‑informatie wordt gelezen, worden zelfs PDF’s van honderden pagina’s in milliseconden verwerkt.  
 
-**Q: Kan ik aangepaste eigenschappen extraheren?**  
+**V: Kan ik aangepaste eigenschappen extraheren?**  
 A: Gebruik `info.getCustomProperties()` om door de gebruiker gedefinieerde metadata‑velden op te halen.  
 
-**Q: Is het veilig om bestanden van onbetrouwbare bronnen te verwerken?**  
-A: Valideer bestandsgrootte, type en overweeg sandboxing van het extractie‑proces.  
+**V: Is het veilig om bestanden van onbetrouwbare bronnen te verwerken?**  
+A: Valideer bestandsgrootte, type en overweeg het sandboxen van het extractie‑proces.  
 
-**Q: Wat als een document corrupt is?**  
-A: GroupDocs gaat milde corruptie netjes af; bij ernstige gevallen vang je uitzonderingen en sla je het bestand over.  
+**V: Wat als een document corrupt is?**  
+A: GroupDocs gaat goed met lichte corruptie om; bij ernstige gevallen vang je uitzonderingen en sla je het bestand over.  
 
 ## Conclusie
-Je hebt nu een complete, productie‑klare aanpak voor **hoe PDF-metadata te extraheren** in Java. Begin met het eenvoudige `Annotator`‑voorbeeld, schaal vervolgens op met batch‑verwerking, caching en robuuste foutafhandeling. De hier getoonde patronen zullen je goed van pas komen bij het bouwen van grotere document‑verwerkingspijplijnen.
+Je beschikt nu over een volledige, productie‑klare aanpak om **java pdf-paginatelling** te krijgen en PDF‑metadata te extraheren in Java. Begin met het eenvoudige `Annotator`‑voorbeeld, schaal vervolgens op met batch‑verwerking, caching en robuuste foutafhandeling. De hier getoonde patronen zullen je goed van pas komen bij het bouwen van grotere document‑verwerkingspijplijnen.
 
 ---
 
@@ -283,11 +285,11 @@ Je hebt nu een complete, productie‑klare aanpak voor **hoe PDF-metadata te ext
 - **Downloads:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)
 - **Aankoopopties:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
 - **Gratis proefversie:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
-- **Development License:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
-- **Community Support:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+- **Ontwikkelaarslicentie:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- **Community‑ondersteuning:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Laatst bijgewerkt:** 2025-12-26  
+**Laatst bijgewerkt:** 2026-02-26  
 **Getest met:** GroupDocs.Annotation 25.2  
 **Auteur:** GroupDocs

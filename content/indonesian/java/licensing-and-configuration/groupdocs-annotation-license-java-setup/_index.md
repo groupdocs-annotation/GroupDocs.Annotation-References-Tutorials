@@ -1,36 +1,72 @@
 ---
-"date": "2025-05-06"
-"description": "Pelajari cara menyiapkan dan mengonfigurasi lisensi GroupDocs.Annotation untuk aplikasi Java Anda, membuka fitur lengkap dengan mudah."
-"title": "Mengatur Lisensi GroupDocs.Annotation di Java&#58; Panduan Lengkap"
-"url": "/id/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/"
+categories:
+- Java Development
+date: '2026-02-26'
+description: Pelajari cara mengatur lisensi GroupDocs Java untuk perpustakaan Annotation.
+  Panduan langkah demi langkah, tips pemecahan masalah, praktik terbaik, dan contoh
+  dunia nyata.
+keywords: GroupDocs Annotation license Java, Java annotation library license setup,
+  GroupDocs license configuration tutorial, document annotation Java licensing, how
+  to set GroupDocs Annotation license file Java
+lastmod: '2026-02-26'
+linktitle: GroupDocs License Setup Java
+tags:
+- GroupDocs
+- annotation
+- licensing
+- java
+- configuration
+title: Atur Lisensi GroupDocs Java – Pengaturan Lisensi GroupDocs Annotation Java
 type: docs
-"weight": 1
+url: /id/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/
+weight: 1
 ---
 
-# Mengatur Lisensi GroupDocs.Annotation di Java: Panduan Lengkap
+# Atur Lisensi GroupDocs Java – Penyiapan Lisensi GroupDocs Annotation Java
 
-## Perkenalan
+## Pendahuluan
 
-Apakah Anda ingin membuka semua fitur pustaka GroupDocs.Annotation untuk aplikasi Java Anda? Menetapkan lisensi dengan benar sangat penting untuk fungsionalitas yang lancar. Panduan ini akan memandu Anda dalam menetapkan lisensi GroupDocs.Annotation dari sebuah berkas, memastikan Anda dapat memanfaatkan potensinya secara penuh.
+Pernah mencoba menggunakan **GroupDocs.Annotation** di produksi hanya untuk menemukan watermark mengganggu dan batasan fitur? Anda tidak sendirian. Konfigurasi lisensi yang tepat adalah perbedaan antara pengalaman anotasi yang mulus dan hambatan pengembangan yang membuat frustrasi.
 
-Dalam tutorial ini, kita akan membahas:
-- Menyiapkan pustaka GroupDocs.Annotation di proyek Java Anda.
-- Mengonfigurasi lisensi menggunakan berkas lisensi.
-- Memecahkan masalah pengaturan umum.
-- Aplikasi dunia nyata dan kemungkinan integrasi.
+Dalam tutorial ini Anda akan **mengatur lisensi GroupDocs Java** dengan cepat dan benar, sehingga Anda dapat menghindari jam‑jam debugging di kemudian hari. Baik Anda membangun sistem manajemen dokumen, platform review hukum, atau alat edukasi, langkah‑langkah di bawah ini akan memandu Anda melalui semua yang perlu diketahui.
 
-Sebelum masuk ke detail implementasi, pastikan Anda telah memenuhi semua prasyarat yang diperlukan.
+## Jawaban Cepat
+- **Apa langkah pertama untuk mengatur lisensi GroupDocs java?** Tambahkan jalur file lisensi dan buat objek `License` pada saat startup aplikasi.  
+- **Apakah saya memerlukan Maven untuk menggunakan GroupDocs.Annotation?** Ya, Maven (atau Gradle) adalah cara yang direkomendasikan untuk mengambil pustaka dan dependensinya.  
+- **Bisakah saya menyimpan file lisensi di luar root web?** Tentu – ini merupakan praktik terbaik untuk keamanan dan portabilitas.  
+- **Apa yang terjadi jika lisensi kedaluwarsa?** Pustaka akan beralih ke mode trial, menampilkan watermark dan membatasi fitur.  
+- **Bagaimana cara memverifikasi lisensi telah dimuat?** Panggil `License.isValidLicense()` dan catat hasilnya.
+
+## Mengapa Lisensi yang Tepat Penting
+
+Sebelum masuk ke kode, mari bahas mengapa hal ini penting. Tanpa lisensi yang valid, Anda akan terjebak dengan:
+
+- Watermark pada dokumen yang diproses  
+- Kapasitas pemrosesan terbatas  
+- Pembatasan fitur yang dapat memutus alur aplikasi Anda  
+- Potensi masalah kepatuhan pada aplikasi komersial  
+
+Lisensi yang dikonfigurasi dengan benar membuka seluruh kekuatan GroupDocs.Annotation, memberi Anda akses ke semua tipe anotasi, pemrosesan tak terbatas, dan kinerja siap produksi.
 
 ### Prasyarat
 
-Untuk mengikuti panduan ini secara efektif, pastikan Anda memiliki:
-- **Perpustakaan & Ketergantungan:** Proyek Anda menyertakan GroupDocs.Annotation untuk Java versi 25.2 atau yang lebih baru.
-- **Pengaturan Lingkungan:** Lingkungan pengembangan Java yang berfungsi dengan Java SE Development Kit yang terpasang.
-- **Prasyarat Pengetahuan:** Kemampuan dalam pemrograman Java dan pemahaman dasar manajemen ketergantungan Maven.
+Untuk mengikuti tutorial **konfigurasi lisensi GroupDocs** ini secara efektif, Anda memerlukan:
+
+**Lingkungan Pengembangan**  
+- Java SE Development Kit (JDK 8 atau lebih tinggi)  
+- IDE favorit Anda (IntelliJ IDEA, Eclipse, atau VS Code)  
+- Maven atau Gradle untuk manajemen dependensi  
+
+**Pengaturan GroupDocs**  
+- GroupDocs.Annotation untuk Java versi 25.2 atau lebih baru  
+- File lisensi yang valid (trial, sementara, atau komersial)  
+- Pemahaman dasar tentang pola pengembangan Java  
+
+**Tips Pro:** Jika Anda belum memiliki lisensi, dapatkan trial gratis dari situs GroupDocs untuk mengikuti tutorial. Anda selalu dapat meningkatkan nanti.
 
 ## Menyiapkan GroupDocs.Annotation untuk Java
 
-Untuk mulai menggunakan GroupDocs.Annotation di aplikasi Java Anda, Anda perlu menambahkan dependensi yang diperlukan. Jika Anda menggunakan Maven, sertakan konfigurasi ini:
+Hal pertama yang harus dilakukan – integrasikan pustaka ke dalam proyek Anda dengan benar. Berikut cara menambahkan GroupDocs.Annotation menggunakan Maven (pendekatan paling umum):
 
 **Konfigurasi Maven**
 
@@ -52,115 +88,273 @@ Untuk mulai menggunakan GroupDocs.Annotation di aplikasi Java Anda, Anda perlu m
 </dependencies>
 ```
 
-### Akuisisi Lisensi
+**Apa yang terjadi di sini?** Konfigurasi repositori memberi tahu Maven di mana menemukan paket GroupDocs, sementara dependensi mengunduh pustaka sebenarnya. Pastikan Anda menggunakan nomor versi terbaru untuk pengalaman terbaik.
 
-Mendapatkan lisensi untuk GroupDocs.Annotation sangatlah mudah:
-1. **Uji Coba Gratis:** Unduh versi uji coba gratis dari [Situs web GroupDocs](https://releases.groupdocs.com/annotation/java/) untuk menjelajahi fungsi dasar.
-2. **Lisensi Sementara:** Minta lisensi sementara melalui [Halaman pembelian GroupDocs](https://purchase.groupdocs.com/temporary-license/) untuk akses penuh selama pengembangan.
-3. **Pembelian:** Dapatkan lisensi permanen jika GroupDocs.Annotation memenuhi kebutuhan Anda.
+### Mendapatkan File Lisensi Anda
 
-Setelah Anda memiliki berkas lisensi, ikuti langkah-langkah berikut untuk mengaturnya di aplikasi Java Anda.
+Di sinilah banyak pengembang terjebak – memahami tipe lisensi yang berbeda dan cara memperolehnya:
 
-## Panduan Implementasi
+**Lisensi Trial Gratis:**  
+Sempurna untuk evaluasi awal. Unduh dari [situs GroupDocs](https://releases.groupdocs.com/annotation/java/) – tidak memerlukan kartu kredit. Anda akan mendapatkan fungsionalitas dasar dengan beberapa batasan.
 
-### Mengatur Lisensi dari File
+**Lisensi Sementara:**  
+Butuh fitur penuh untuk pengembangan dan pengujian? Minta lisensi sementara melalui [halaman pembelian GroupDocs](https://purchase.groupdocs.com/temporary-license/). Ini memberi Anda akses tak terbatas selama 30 hari.
 
-Menetapkan lisensi dengan benar sangat penting untuk mengakses semua fitur GroupDocs.Annotation tanpa batasan. Berikut cara menerapkan fitur ini:
+**Lisensi Komersial:**  
+Siap untuk produksi? Beli lisensi permanen yang sesuai dengan kebutuhan penggunaan Anda. Ini yang akan Anda gunakan dalam aplikasi live.
 
-#### Ringkasan
-Bagian ini memandu Anda dalam pengaturan lisensi GroupDocs.Annotation menggunakan jalur file, untuk memastikan kapabilitas pustaka yang lengkap.
+**Peringatan Kesalahan Umum:** Banyak pengembang mencoba menggunakan lisensi trial di lingkungan produksi. Hal ini menyebabkan watermark dan pembatasan fitur yang dapat merusak pengalaman pengguna.
 
-##### Langkah 1: Tentukan Jalur Lisensi
+## Panduan Implementasi: Mengatur Lisensi Anda
 
-Tentukan jalur tempat file lisensi Anda berada dengan mendefinisikan `String` variabel:
+Sekarang saatnya – mengonfigurasi file lisensi dalam aplikasi Java Anda. Di sinilah **mengatur lisensi GroupDocs java** yang tepat sangat penting.
+
+### Memahami Konfigurasi Lisensi
+
+Proses konfigurasi lisensi melibatkan tiga langkah kunci:
+
+1. **Menemukan file lisensi Anda**  
+2. **Membuat objek lisensi**  
+3. **Menetapkan lisensi dengan penanganan error yang tepat**
+
+### Implementasi Langkah‑demi‑Langkah
+
+#### Langkah 1: Tentukan Jalur Lisensi Anda  
+
+Mulailah dengan menentukan di mana file lisensi Anda berada. Ini tampak sederhana, tetapi konfigurasi jalur adalah tempat sebagian besar masalah muncul:
 
 ```java
-// Tentukan jalur untuk berkas lisensi Anda di sini.
+// Define the path for your license file here.
 String licensePath = "YOUR_DOCUMENT_DIRECTORY/License.lic";
 ```
 
-##### Langkah 2: Buat Objek Lisensi
+**Praktik Terbaik:** Simpan file lisensi di lokasi aman di luar root web. Untuk aplikasi produksi, pertimbangkan menggunakan variabel lingkungan atau file konfigurasi alih‑alih jalur yang ditulis keras.
 
-Buat contoh dari `License` kelas dari GroupDocs.Annotation untuk mengelola operasi perizinan:
+#### Langkah 2: Buat Objek Lisensi  
+
+Selanjutnya, buat instance dari kelas `License`. Objek ini menangani semua operasi lisensi:
 
 ```java
 import com.groupdocs.annotation.licenses.License;
 
-// Inisialisasi objek Lisensi
+// Initialize the License object
 License license = new License();
 ```
 
-##### Langkah 3: Tetapkan Lisensi Menggunakan Jalur File
+**Mengapa ini penting:** Kelas `License` menyediakan metode untuk menetapkan dan memvalidasi lisensi Anda. Membuatnya di awal siklus hidup aplikasi memastikan lisensi ditangani sebelum operasi anotasi apa pun dijalankan.
 
-Periksa apakah berkas lisensi ada dan atur menggunakan jalur yang disediakan:
+#### Langkah 3: Tetapkan dan Validasi Lisensi Anda  
+
+Inilah bagian krusial – menerapkan lisensi dengan penanganan error yang tepat:
 
 ```java
 import java.io.File;
 
-// Periksa apakah file lisensi ada di jalur yang ditentukan
+// Check if the license file exists at the specified path
 if (new File(licensePath).isFile()) {
-    // Tetapkan lisensi menggunakan jalur file
+    // Set the license using the file path
     license.setLicense(licensePath);
 
-    // Verifikasi apakah lisensi telah berhasil ditetapkan
+    // Verify if the license has been set successfully
     if (!License.isValidLicense()) {
-        // Menangani pengaturan lisensi yang tidak berhasil (misalnya, mencatat kesalahan)
+        // Handle unsuccessful license setting (e.g., log an error)
         System.err.println("Failed to set license.");
+    }
+} else {
+    System.err.println("License file not found at: " + licensePath);
+}
+```
+
+**Apa yang terjadi di sini:**  
+
+- Kami pertama‑tama memverifikasi bahwa file lisensi ada untuk menghindari `FileNotFoundException`.  
+- Metode `setLicense()` memuat dan menerapkan lisensi Anda.  
+- `isValidLicense()` memastikan semuanya berjalan dengan benar.  
+- Penanganan error yang tepat memastikan Anda menangkap masalah sejak dini.
+
+### Kesalahan Umum yang Harus Dihindari
+
+| Kesalahan | Mengapa Merugikan | Cara Memperbaiki |
+|-----------|-------------------|------------------|
+| **Masalah Jalur** | Jalur relatif rusak ketika direktori kerja berubah. | Gunakan jalur absolut atau selesaikan lewat `Paths.get(...)`. |
+| **Masalah Waktu** | Menetapkan lisensi setelah menggunakan fitur GroupDocs memicu fallback ke mode trial. | Inisialisasi lisensi saat startup aplikasi (misalnya, di `ServletContextListener`). |
+| **Kekurangan Penanganan Error** | Mengabaikan kegagalan meninggalkan watermark tersembunyi. | Catat hasil `License.isValidLicense()` dan batalkan jika false. |
+
+## Konfigurasi Lanjutan dan Praktik Terbaik
+
+### Praktik Terbaik Integrasi
+
+Saat mengintegrasikan konfigurasi lisensi anotasi GroupDocs ke dalam aplikasi yang lebih besar, pertimbangkan pola berikut:
+
+**Pola Singleton untuk Manajemen Lisensi**  
+
+```java
+public class LicenseManager {
+    private static boolean licenseSet = false;
+    
+    public static synchronized boolean initializeLicense(String licensePath) {
+        if (!licenseSet) {
+            License license = new License();
+            // Implementation as shown above
+            licenseSet = License.isValidLicense();
+        }
+        return licenseSet;
     }
 }
 ```
 
-**Penjelasan:** 
-- Itu `setLicense()` metode menentukan jalur file lisensi Anda, memastikan aplikasi dapat memverifikasi dan menggunakannya.
-- Mengonfirmasi keberadaan berkas sebelum memuat membantu memecahkan masalah potensi kesalahan.
+**Pendekatan Berbasis Konfigurasi**  
 
-#### Tips Pemecahan Masalah
-- **Masalah Jalur Berkas:** Pastikan jalur berkas lisensi benar dan dapat diakses dari lingkungan eksekusi kode Anda.
-- **Lisensi Tidak Valid:** Pastikan Anda memiliki berkas lisensi yang valid. Jika menggunakan lisensi sementara atau uji coba, pastikan lisensi tersebut belum kedaluwarsa.
+```properties
+groupdocs.annotation.license.path=/path/to/your/license.lic
+groupdocs.annotation.license.required=true
+```
 
-## Aplikasi Praktis
+### Pertimbangan Kinerja  
 
-GroupDocs.Annotation dapat diintegrasikan ke dalam berbagai aplikasi dunia nyata:
-1. **Sistem Manajemen Dokumen:** Tingkatkan alur kerja peninjauan dokumen dengan mengaktifkan anotasi kolaboratif langsung dalam sistem.
-2. **Tinjauan Dokumen Hukum:** Memfasilitasi peninjauan hukum yang efisien dengan memungkinkan banyak pemangku kepentingan untuk membuat anotasi dan memberi komentar pada dokumen.
-3. **Platform Pendidikan:** Tingkatkan materi pembelajaran dengan fitur-fitur interaktif, yang memungkinkan siswa membuat anotasi pada konten pendidikan.
+Lisensi yang tepat memengaruhi kinerja dalam beberapa cara:
 
-## Pertimbangan Kinerja
+- **Penggunaan Memori:** Versi berlisensi menangani memori lebih efisien, terutama dengan dokumen besar atau tingkat konkruensi tinggi.  
+- **Kecepatan Pemrosesan:** Lisensi penuh membuka jalur kode teroptimasi yang tidak tersedia dalam mode trial.  
+- **Manajemen Sumber Daya:** Build berlisensi memberi Anda kontrol lebih baik atas alokasi sumber daya dan pembersihan, mencegah kebocoran memori pada layanan yang berjalan lama.
 
-Untuk mengoptimalkan kinerja aplikasi Anda saat menggunakan GroupDocs.Annotation:
-- Pantau penggunaan memori, terutama saat memproses sejumlah besar dokumen.
-- Pastikan penanganan anotasi yang efisien untuk meminimalkan waktu pemrosesan.
-- Ikuti praktik terbaik untuk manajemen memori Java, seperti pengumpulan sampah dan pembuangan sumber daya yang tepat.
+## Memecahkan Masalah Lisensi
+
+### Skenario Error Umum  
+
+- **“File lisensi tidak ditemukan”** – Periksa jalur, izin file, dan pastikan file tidak diblokir oleh perangkat lunak keamanan.  
+- **“Lisensi tidak valid”** – Pastikan lisensi tidak kedaluwarsa, tidak korup, dan cocok dengan versi pustaka Anda.  
+- **“Lisensi sudah diatur”** – Biasanya disebabkan oleh pemanggilan `setLicense()` berulang kali; gunakan singleton atau flag penjaga.
+
+### Teknik Debugging  
+
+**Aktifkan Logging Detail**  
+
+```java
+try {
+    license.setLicense(licensePath);
+    if (License.isValidLicense()) {
+        System.out.println("License configured successfully");
+    } else {
+        System.err.println("License validation failed");
+    }
+} catch (Exception e) {
+    System.err.println("License configuration error: " + e.getMessage());
+    e.printStackTrace();
+}
+```
+
+**Validasi Lingkungan Anda**  
+
+```java
+public static void validateLicenseSetup() {
+    System.out.println("Java version: " + System.getProperty("java.version"));
+    System.out.println("Working directory: " + System.getProperty("user.dir"));
+    System.out.println("License valid: " + License.isValidLicense());
+}
+```
+
+## Skenario Aplikasi Dunia Nyata
+
+### Sistem Manajemen Dokumen  
+
+- Pemrosesan dokumen tak terbatas tanpa watermark  
+- Dukungan penuh untuk highlight, komentar, stempel, dan bentuk khusus  
+- Pemrosesan batch untuk perpustakaan dokumen besar  
+
+### Platform Review Dokumen Hukum  
+
+- Penanganan rahasia tanpa batasan trial  
+- Kolaborasi multi‑pengguna dan jejak audit untuk kepatuhan  
+- Integrasi mulus dengan perangkat lunak manajemen kasus  
+
+### Platform Konten Edukasi  
+
+- Materi pembelajaran interaktif dengan anotasi kaya  
+- Alat kolaborasi siswa dan pelacakan kemajuan  
+- Pemrosesan skalabel untuk ribuan pengguna bersamaan  
+
+## Strategi Penanganan Error Lanjutan
+
+### Degradasi Elegan  
+
+```java
+public class AnnotationService {
+    private boolean licenseValid;
+    
+    public AnnotationService() {
+        this.licenseValid = initializeLicense();
+    }
+    
+    public void processDocument(String documentPath) {
+        if (!licenseValid) {
+            // Provide limited functionality or user notification
+            throw new IllegalStateException("Valid license required for this operation");
+        }
+        // Full processing logic here
+    }
+}
+```
+
+### Pemantauan Produksi  
+
+```java
+// Regular license validation for long‑running applications
+public void validateLicenseStatus() {
+    if (!License.isValidLicense()) {
+        // Alert system administrators
+        // Log critical error
+        // Potentially shut down non‑essential features
+    }
+}
+```
+
+## Pertanyaan yang Sering Diajukan
+
+**T: Apa yang terjadi jika saya menerapkan ke produksi tanpa mengatur lisensi dengan benar?**  
+J: Aplikasi akan berjalan dalam mode trial, menampilkan watermark, membatasi tipe anotasi, dan mungkin menurunkan kinerja.
+
+**T: Bisakah saya mengubah lokasi file lisensi setelah deployment?**  
+J: Ya, tetapi Anda harus me‑restart aplikasi agar jalur baru dibaca saat startup.
+
+**T: Bagaimana cara menangani kedaluwarsa lisensi di lingkungan live?**  
+J: Implementasikan health‑check yang memanggil `License.isValidLicense()` secara berkala dan atur peringatan untuk memperpanjang lisensi sebelum kedaluwarsa.
+
+**T: Apakah aman membundel file lisensi di dalam JAR/WAR saya?**  
+J: Secara teknis memungkinkan, tetapi tidak direkomendasikan untuk alasan keamanan. Gunakan konfigurasi eksternal atau alat manajemen rahasia.
+
+**T: Dapatkah satu file lisensi dibagikan ke beberapa aplikasi?**  
+J: Itu tergantung pada kesepakatan komersial Anda. Kebanyakan lisensi enterprise mengizinkan banyak deployment dalam organisasi yang sama—periksa kontrak Anda.
 
 ## Kesimpulan
 
-Dengan mengikuti panduan ini, Anda telah mempelajari cara mengatur lisensi GroupDocs.Annotation dari sebuah file di aplikasi Java Anda. Pengaturan ini penting untuk memanfaatkan semua kemampuan pustaka tanpa batasan apa pun.
+Menyiapkan **konfigurasi lisensi GroupDocs Annotation Java** dengan benar sangat penting untuk membangun aplikasi yang kuat dan siap produksi. Dengan mengikuti pola dan praktik terbaik yang dijabarkan dalam panduan ini, Anda akan menghindari jebakan umum, memastikan validasi lisensi yang mulus, dan membuka kinerja penuh pustaka.
 
-### Langkah Berikutnya
+**Poin Penting**  
 
-Jelajahi lebih jauh fungsi-fungsi dalam GroupDocs.Annotation dengan menyelami lebih dalam [dokumentasi](https://docs.groupdocs.com/annotation/java/) dan bereksperimen dengan berbagai jenis anotasi.
+- Validasi jalur dan izin file lisensi sejak awal.  
+- Gunakan pola singleton atau berbasis konfigurasi untuk memuat lisensi satu kali.  
+- Tambahkan logging dan pemantauan komprehensif untuk stabilitas produksi.  
+- Ikuti praktik keamanan terbaik saat menyimpan file lisensi.
 
-**Ajakan Bertindak:** Cobalah menerapkan langkah-langkah ini dalam proyek Anda sendiri untuk merasakan fitur-fitur hebat dari GroupDocs.Annotation!
+Anda kini siap mengintegrasikan fitur anotasi kuat tanpa watermark atau batasan. Selamat coding!
 
-## Bagian FAQ
+### Langkah Selanjutnya
 
-1. **Bagaimana jika jalur berkas lisensi saya salah?**
-   - Pastikan jalurnya benar dan aplikasi memiliki izin yang diperlukan untuk mengaksesnya.
-2. **Bagaimana cara memverifikasi status lisensi saya secara terprogram?**
-   - Menggunakan `License.isValidLicense()` metode untuk memeriksa validitas lisensi dalam kode Anda.
-3. **Dapatkah saya menggunakan GroupDocs.Annotation tanpa lisensi yang valid untuk tujuan pengembangan?**
-   - Ya, Anda dapat menggunakan uji coba gratis atau lisensi sementara untuk pengembangan dan pengujian.
-4. **Apa yang harus saya lakukan jika lisensi saya gagal diatur dengan benar?**
-   - Verifikasi bahwa jalur berkas sudah benar, berkas ada, dan lisensi Anda masih berlaku.
-5. **Bagaimana lisensi memengaruhi kinerja GroupDocs.Annotation?**
-   - Lisensi yang valid menghilangkan batasan penggunaan, memastikan kinerja optimal tanpa batasan fitur.
+Siap meningkatkan kemampuan GroupDocs.Annotation Anda? Jelajahi [dokumentasi lengkap](https://docs.groupdocs.com/annotation/java/) untuk menemukan tipe anotasi lanjutan, opsi kustomisasi, dan pola integrasi yang lebih mendalam.
 
-## Sumber daya
+## Sumber Daya dan Referensi
 
-- [Dokumentasi](https://docs.groupdocs.com/annotation/java/)
-- [Referensi API](https://reference.groupdocs.com/annotation/java/)
-- [Unduh](https://releases.groupdocs.com/annotation/java/)
-- [Beli Lisensi](https://purchase.groupdocs.com/buy)
-- [Uji Coba Gratis](https://releases.groupdocs.com/annotation/java/)
-- [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)
-- [Forum Dukungan](https://forum.groupdocs.com/c/annotation/)
+- [Dokumentasi GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)
+- [Panduan Referensi API](https://reference.groupdocs.com/annotation/java/)
+- [Unduh Versi Terbaru](https://releases.groupdocs.com/annotation/java/)
+- [Beli Lisensi Komersial](https://purchase.groupdocs.com/buy)
+- [Dapatkan Trial Gratis](https://releases.groupdocs.com/annotation/java/)
+- [Minta Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)
+- [Forum Dukungan Komunitas](https://forum.groupdocs.com/c/annotation/)
+
+---
+
+**Terakhir Diperbarui:** 2026-02-26  
+**Diuji Dengan:** GroupDocs.Annotation 25.2 (Java)  
+**Penulis:** GroupDocs

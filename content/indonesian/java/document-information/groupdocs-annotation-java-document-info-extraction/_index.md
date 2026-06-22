@@ -1,29 +1,29 @@
 ---
 categories:
 - Java Development
-date: '2025-12-26'
-description: Pelajari cara mengekstrak metadata PDF dalam Java, termasuk tipe file,
-  jumlah halaman, dan ukuran. Panduan ini mencakup penanganan tipe file PDF Java dengan
-  GroupDocs.
+date: '2026-02-26'
+description: Pelajari cara menggunakan Java untuk mendapatkan jumlah halaman PDF dan
+  mengekstrak metadata PDF dengan GroupDocs. Panduan ini menunjukkan cara mengekstrak
+  tipe file, jumlah halaman, dan ukuran.
 keywords: Java document metadata extraction, extract PDF metadata Java, Java file
   information extraction, document properties Java API, PDF page count Java
-lastmod: '2025-12-26'
-linktitle: How to Extract PDF Metadata in Java with GroupDocs
+lastmod: '2026-02-26'
+linktitle: java get pdf page count and extract metadata with GroupDocs
 tags:
 - java
 - pdf
 - metadata
 - document-processing
 - api
-title: Cara Mengekstrak Metadata PDF di Java dengan GroupDocs
+title: java mendapatkan jumlah halaman pdf dan mengekstrak metadata dengan GroupDocs
 type: docs
 url: /id/java/document-information/groupdocs-annotation-java-document-info-extraction/
 weight: 1
 ---
 
-# Cara Mengekstrak Metadata PDF di Java dengan GroupDocs
+# Cara java mendapatkan jumlah halaman pdf dan mengekstrak metadata PDF di Java dengan GroupDocs
 
-Pernahkah Anda perlu dengan cepat mengambil info dasar dari ratusan dokumen? Anda tidak sendirian. Apakah Anda sedang membangun sistem manajemen dokumen, memproses file legal, atau hanya mencoba mengatur drive bersama yang berantakan, **how to extract PDF metadata** secara programatis dapat menghemat jam kerja manual. Dalam panduan ini kami akan menjelaskan cara mengekstrak tipe file, jumlah halaman, dan ukuran menggunakan Java—sempurna bagi siapa saja yang perlu menangani tantangan **pdf file type java** secara efisien.
+Pernahkah Anda perlu dengan cepat mengambil info dasar dari ratusan dokumen? Anda tidak sendirian. Baik Anda sedang membangun sistem manajemen dokumen, memproses file legal, atau hanya mencoba mengatur drive bersama yang berantakan, **how to java get pdf page count** secara programatik dapat menghemat jam kerja manual Anda. Dalam panduan ini kami akan menjelaskan cara mengekstrak tipe file, jumlah halaman, dan ukuran menggunakan Java—sempurna bagi siapa saja yang perlu menangani tantangan **pdf file type java** secara efisien dan juga **extract pdf metadata java**.
 
 ## Jawaban Cepat
 - **What library is best for PDF metadata in Java?** GroupDocs.Annotation menyediakan API sederhana untuk mengekstrak metadata tanpa memuat seluruh konten.  
@@ -32,8 +32,11 @@ Pernahkah Anda perlu dengan cepat mengambil info dasar dari ratusan dokumen? And
 - **How fast is metadata extraction?** Biasanya dalam milidetik per file karena hanya membaca informasi header.  
 - **Is it safe for large batches?** Ya, ketika Anda menggunakan try‑with‑resources dan pola pemrosesan batch.
 
-## Apa Itu Ekstraksi Metadata PDF?
-Metadata PDF mencakup properti seperti jumlah halaman, tipe file, ukuran, penulis, tanggal pembuatan, dan bidang khusus apa pun yang tertanam dalam dokumen. Mengekstrak data ini memungkinkan aplikasi secara otomatis mengkatalogkan, mencari, dan memvalidasi file tanpa harus membuka seluruhnya.
+## Cara java mendapatkan jumlah halaman pdf dengan GroupDocs
+Mendapatkan jumlah halaman sering menjadi langkah pertama ketika Anda perlu mengatur atau memvalidasi PDF. Bagian-bagian berikut menunjukkan secara tepat cara **java get pdf page count** sekaligus mengambil metadata berguna lainnya.
+
+## Apa itu Ekstraksi Metadata PDF?
+Metadata PDF mencakup properti seperti jumlah halaman, tipe file, ukuran, penulis, tanggal pembuatan, dan bidang khusus yang disematkan dalam dokumen. Mengekstrak data ini memungkinkan aplikasi secara otomatis mengkatalogkan, mencari, dan memvalidasi file tanpa harus membuka seluruhnya.
 
 ## Mengapa Mengekstrak Metadata PDF di Java?
 - **Content Management Systems** dapat secara otomatis menandai dan mengindeks file segera setelah diunggah.  
@@ -48,7 +51,7 @@ Metadata PDF mencakup properti seperti jumlah halaman, tipe file, ukuran, penuli
 - Pengetahuan dasar penanganan file Java  
 
 ### Menyiapkan GroupDocs.Annotation untuk Java
-Tambahkan repositori dan dependensi ke `pom.xml` Anda:
+Add the repository and dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -68,7 +71,7 @@ Tambahkan repositori dan dependensi ke `pom.xml` Anda:
 </dependencies>
 ```
 
-**Pro tip:** Periksa halaman rilis GroupDocs untuk versi yang lebih baru; rilis terbaru sering membawa peningkatan performa.
+**Pro tip:** Periksa halaman rilis GroupDocs untuk versi terbaru; rilis terbaru biasanya membawa peningkatan performa.
 
 ## Cara Mengekstrak Metadata PDF dengan GroupDocs
 Berikut adalah panduan langkah demi langkah. Blok kode tidak diubah dari tutorial asli untuk mempertahankan fungsionalitas.
@@ -116,11 +119,11 @@ try (final Annotator annotator = new Annotator(inputFile)) {
     }
 }
 ```
-`getDocumentInfo()` hanya membaca header, sehingga bahkan PDF besar diproses dengan cepat.
+`getDocumentInfo()` hanya membaca header, sehingga bahkan PDF besar diproses dengan cepat. Ini menunjukkan cara **java get pdf page count** secara efisien sekaligus mengekstrak properti lainnya.
 
 ## Kesalahan Umum & Cara Menghindarinya
 ### Masalah Jalur File
-Path absolut yang dikodekan keras akan rusak ketika Anda berpindah ke lingkungan lain. Gunakan path relatif atau variabel lingkungan:
+Hard‑coded absolute paths break when you move to another environment. Use relative paths or environment variables:
 
 ```java
 String baseDir = System.getProperty("user.dir");
@@ -131,7 +134,7 @@ String inputFile = baseDir + "/documents/sample.pdf";
 Saat menangani batch besar, selalu tutup sumber daya dengan cepat dan pantau penggunaan heap. Memproses file dalam potongan lebih kecil menghindari `OutOfMemoryError`.
 
 ### Penanganan Eksepsi
-Tangkap eksepsi spesifik untuk mempertahankan diagnostik yang berguna:
+Catch specific exceptions to retain useful diagnostics:
 
 ```java
 try {
@@ -251,28 +254,28 @@ document.processing.batch-size=100
 ```
 
 ## Memecahkan Masalah Umum
-- **File Not Found:** Verifikasi path, izin, dan bahwa tidak ada proses lain yang mengunci file.  
+- **File Not Found:** Verifikasi jalur, izin, dan pastikan tidak ada proses lain yang mengunci file.  
 - **OutOfMemoryError:** Tingkatkan heap JVM (`-Xmx2g`) atau proses file dalam batch lebih kecil.  
-- **Unsupported Format:** Periksa daftar format yang didukung oleh GroupDocs; gunakan fallback ke Apache Tika untuk tipe yang tidak dikenal.  
+- **Unsupported Format:** Periksa daftar format yang didukung oleh GroupDocs; gunakan fallback ke Apache Tika untuk tipe yang tidak dikenal.
 
 ## Pertanyaan yang Sering Diajukan
 **Q: Bagaimana cara menangani PDF yang dilindungi password?**  
-A: Kirimkan objek `LoadOptions` dengan password saat membuat `Annotator`.  
+A: Pass a `LoadOptions` object with the password when constructing the `Annotator`.  
 
 **Q: Apakah ekstraksi metadata cepat untuk PDF besar?**  
-A: Ya—karena hanya informasi header yang dibaca, bahkan PDF dengan ratusan halaman selesai dalam milidetik.  
+A: Yes—because only header information is read, even multi‑hundred‑page PDFs finish in milliseconds.  
 
 **Q: Bisakah saya mengekstrak properti khusus?**  
-A: Gunakan `info.getCustomProperties()` untuk mengambil bidang metadata yang didefinisikan pengguna.  
+A: Use `info.getCustomProperties()` to retrieve user‑defined metadata fields.  
 
 **Q: Apakah aman memproses file dari sumber yang tidak terpercaya?**  
-A: Validasi ukuran file, tipe, dan pertimbangkan sandboxing proses ekstraksi.  
+A: Validate file size, type, and consider sandboxing the extraction process.  
 
 **Q: Bagaimana jika dokumen rusak?**  
-A: GroupDocs menangani korupsi minor dengan baik; untuk kasus yang parah, tangkap eksepsi dan lewati file.  
+A: GroupDocs handles minor corruption gracefully; for severe cases, catch exceptions and skip the file.  
 
 ## Kesimpulan
-Anda kini memiliki pendekatan lengkap dan siap produksi untuk **how to extract PDF metadata** di Java. Mulailah dengan contoh `Annotator` yang sederhana, lalu skalakan menggunakan pemrosesan batch, caching, dan penanganan error yang kuat. Pola-pola yang ditunjukkan di sini akan sangat membantu saat Anda membangun pipeline pemrosesan dokumen yang lebih besar.
+Anda kini memiliki pendekatan lengkap dan siap produksi untuk **java get pdf page count** dan mengekstrak metadata PDF di Java. Mulailah dengan contoh `Annotator` yang sederhana, lalu skalakan menggunakan pemrosesan batch, caching, dan penanganan error yang kuat. Pola-pola yang ditunjukkan di sini akan sangat membantu saat Anda membangun pipeline pemrosesan dokumen yang lebih besar.
 
 ---
 
@@ -282,12 +285,12 @@ Anda kini memiliki pendekatan lengkap dan siap produksi untuk **how to extract P
 - **Referensi API:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)
 - **Unduhan:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)
 - **Opsi Pembelian:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
-- **Uji Coba Gratis:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
+- **Percobaan Gratis:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
 - **Lisensi Pengembangan:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - **Dukungan Komunitas:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Terakhir Diperbarui:** 2025-12-26  
+**Terakhir Diperbarui:** 2026-02-26  
 **Diuji Dengan:** GroupDocs.Annotation 25.2  
 **Penulis:** GroupDocs
