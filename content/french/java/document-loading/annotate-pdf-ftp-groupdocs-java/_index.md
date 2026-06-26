@@ -1,80 +1,107 @@
 ---
 categories:
 - Java Development
-date: '2026-01-26'
-description: Apprenez à ajouter des annotations aux fichiers PDF directement depuis
-  des serveurs FTP en utilisant GroupDocs.Annotation pour Java. Guide étape par étape
-  avec des exemples de code et des conseils de dépannage.
-keywords: annotate PDF FTP Java, GroupDocs annotation tutorial, PDF annotation from
-  FTP server, Java document processing FTP, load PDF from FTP server Java
-lastmod: '2026-01-26'
-linktitle: Annotate PDF FTP Java Guide
+date: '2026-06-26'
+description: Apprenez à mettre en évidence des fichiers PDF Java directement depuis
+  des serveurs FTP en utilisant GroupDocs.Annotation for Java. Guide étape par étape
+  avec des espaces réservés de code, des conseils de performance et le dépannage.
+keywords:
+- highlight pdf java
+- pdf annotation ftp
+- groupdocs annotation java
+lastmod: '2026-06-26'
+linktitle: Guide d'annotation PDF FTP Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-26'
+  description: Learn how to highlight PDF Java files directly from FTP servers using
+    GroupDocs.Annotation for Java. Step‑by‑step guide with code placeholders, performance
+    tips, and troubleshooting.
+  headline: How to Highlight PDF Java from FTP – Add Annotation to PDF from FTP in
+    Java
+  type: TechArticle
+- description: Learn how to highlight PDF Java files directly from FTP servers using
+    GroupDocs.Annotation for Java. Step‑by‑step guide with code placeholders, performance
+    tips, and troubleshooting.
+  name: How to Highlight PDF Java from FTP – Add Annotation to PDF from FTP in Java
+  steps:
+  - name: Loading Documents from FTP Server
+    text: '`FTPClient` is Apache Commons Net''s class for handling FTP connections.
+      It abstracts the low‑level protocol and lets you retrieve files as streams.
+      **What’s happening?** - `FTPClient` opens a connection, logs in, and streams
+      the remote PDF. - The returned `InputStream` avoids creating a temporary fi'
+  - name: Adding Annotations to Your PDF
+    text: '`Annotator` is the core class in GroupDocs.Annotation that works directly
+      with an `InputStream`. It creates, modifies, and saves annotations without loading
+      the whole document into memory. `PdfLoadOptions` configures how a PDF is loaded,
+      such as password handling and page range. `Rectangle` defines '
+  - name: Putting It All Together
+    text: The `main` method demonstrates the full workflow—from FTP retrieval to saving
+      the highlighted PDF. Running this program produces `annotated_report.pdf` with
+      a yellow highlight placed at the coordinates you specified.
+  type: HowTo
+- questions:
+  - answer: Absolutely. Swap the FTP retrieval code with the appropriate SDK call;
+      the annotation logic stays exactly the same.
+    question: Can I use this approach with cloud storage services like AWS S3 or Google
+      Drive?
+  - answer: GroupDocs.Annotation supports **50+** formats, including DOCX, XLSX, PPTX,
+      JPEG, PNG, and CAD files.
+    question: Which file formats does GroupDocs.Annotation support besides PDF?
+  - answer: Stream the file, increase the JVM heap if needed, and use the page‑level
+      API to process one page at a time.
+    question: How do I handle very large PDFs without exhausting memory?
+  - answer: Yes. Call `annotator.get()` after loading the stream to retrieve all current
+      annotations before adding new ones.
+    question: Is it possible to read existing annotations from a PDF loaded from FTP?
+  - answer: Combine FTP connection pooling, Java’s `CompletableFuture` for asynchronous,
+      non‑blocking execution, and a message queue (e.g., RabbitMQ) to distribute work
+      across multiple worker nodes.
+    question: What’s the best way to process hundreds of documents efficiently?
+  type: FAQPage
 tags:
 - pdf-annotation
 - ftp-integration
 - groupdocs
 - java-tutorial
-title: Comment ajouter une annotation à un PDF depuis un FTP en Java
+title: Comment mettre en évidence un PDF Java depuis FTP – Ajouter une annotation
+  à un PDF depuis FTP en Java
 type: docs
 url: /fr/java/document-loading/annotate-pdf-ftp-groupdocs-java/
 weight: 1
 ---
 
-# Comment ajouter une annotation à un PDF depuis FTP en Java
+# Comment mettre en évidence PDF Java depuis FTP – Ajouter une annotation à un PDF depuis FTP en Java
 
-## Introduction
-
-Vous êtes déjà tombé sur un fichier PDF stocké sur un serveur FTP et vous avez souhaité pouvoir ajouter rapidement **how to add annotation** sans avoir à le télécharger au préalable ? Vous n'êtes pas seul. De nombreux développeurs rencontrent exactement ce scénario lorsqu'ils travaillent avec des systèmes de gestion de documents, notamment dans des environnements d'entreprise où les fichiers sont stockés à distance.
-
-Dans ce guide complet, vous découvrirez comment charger des documents PDF depuis un serveur FTP et ajouter des annotations de façon transparente à l’aide de GroupDocs.Annotation for Java. Que vous construisiez un système de révision de documents, un processeur de rapports automatisé, ou que vous ayez simplement besoin de mettre en évidence des sections importantes dans des fichiers distants, ce tutoriel vous couvre.
-
-**Ce que vous maîtriserez à la fin :**
-- Chargement de documents PDF directement depuis des serveurs FTP avec Java  
-- Ajout de différents types d'annotations (surbrillances de zone, notes texte, etc.)  
-- Mise en œuvre de la gestion des erreurs et d’optimisations de performances  
-- Dépannage des problèmes courants que vous pourriez rencontrer  
+Lorsque vous devez **highlight PDF Java** des fichiers qui se trouvent sur un serveur FTP, télécharger le document d'abord est souvent inutile. Dans ce tutoriel, vous verrez comment diffuser un PDF directement depuis FTP, appliquer une annotation de surbrillance et enregistrer le résultat — le tout sans créer de fichiers locaux intermédiaires. Nous passerons en revue les bibliothèques requises, montrerons les appels API exacts (les blocs de code de remplacement restent inchangés), et vous donnerons des conseils pratiques pour faire évoluer ce modèle en environnements de production.
 
 ## Réponses rapides
-- **Puis‑je annoter un PDF sans le télécharger d’abord ?** Oui, en diffusant le fichier directement depuis le FTP.  
-- **Quelle bibliothèque gère l’annotation ?** GroupDocs.Annotation for Java.  
-- **Ai‑je besoin d’une licence pour la production ?** Une licence complète GroupDocs est requise pour un usage en production.  
-- **Quelle version de Java est nécessaire ?** JDK 8 ou supérieur.  
-- **Le FTP est‑il la seule option de stockage ?** Non, le même schéma fonctionne avec S3, Azure Blob, etc  
+- **Puis-je annoter un PDF sans le télécharger d'abord ?** Oui – diffusez le fichier directement depuis FTP et annotez-le en mémoire.  
+- **Quelle bibliothèque gère l'annotation ?** GroupDocs.Annotation for Java fournit une API fluide pour les surlignages, les notes et les formes.  
+- **Ai-je besoin d'une licence pour la production ?** Une licence complète GroupDocs est requise pour les déploiements en production.  
+- **Quelle version de Java est requise ?** JDK 8 ou supérieur est pris en charge.  
+- **FTP est-il la seule option de stockage ?** Non – la même approche de diffusion fonctionne avec S3, Azure Blob ou les systèmes de fichiers locaux.
 
-## Qu’est‑ce que “how to add annotation” dans le contexte des PDF ?
-Ajouter une annotation signifie insérer programmétiquement des marques visuelles — telles que des surbrillances, des notes ou des formes — dans un document PDF. Avec GroupDocs.Annotation, vous pouvez le faire directement sur un flux d’entrée, ce qui le rend idéal pour des sources distantes comme les serveurs FTP.
+## Qu'est-ce que « comment ajouter une annotation » dans le contexte des PDF ?
+Ajouter une annotation signifie insérer programmétiquement des marques visuelles — comme des surlignages, des notes ou des formes — dans un document PDF. Avec GroupDocs.Annotation, vous pouvez le faire directement sur un flux d'entrée, ce qui le rend idéal pour les sources distantes comme les serveurs FTP.
 
-## Pourquoi choisir cette approche pour l’annotation PDF via FTP ?
+## Pourquoi choisir cette approche pour l'annotation PDF via FTP ?
+Chargez le PDF depuis FTP, appliquez une surbrillance et réécrivez-le dans un pipeline unique. Cela élimine les I/O sur disque local, réduit le trafic réseau et simplifie le contrôle de version. Dans des environnements à grande échelle, le modèle peut traiter des centaines de documents par minute tout en maintenant l'utilisation de la mémoire en dessous de 100 Mo par fichier.
 
-Avant de plonger dans le code, expliquons pourquoi cette méthode change la donne pour les développeurs qui travaillent avec l’annotation de documents à distance.
+## Prérequis et configuration de l'environnement
+Avant de commencer, assurez‑vous d'avoir :
 
-**Problèmes de l’approche traditionnelle**
-- Téléchargement des fichiers localement → surcharge de stockage  
-- Téléversement manuel après annotation → perte de temps  
-- Cauchemar de contrôle de version  
-- Gaspillage de bande passante réseau  
+- JDK 8 ou plus récent installé.  
+- Bibliothèque Apache Commons Net (fournit la classe `FTPClient`).  
+- Bibliothèque GroupDocs.Annotation for Java (dernière version recommandée).  
+- Maven ou Gradle pour la gestion des dépendances.  
+- Identifiants FTP valides avec permissions de lecture/écriture.  
 
-**Avantages de l’annotation FTP avec GroupDocs**
-- **Aucun stockage local** – Traitement des fichiers directement depuis les flux  
-- **Traitement en temps réel** – Annoter et enregistrer en un seul workflow  
-- **Solution évolutive** – Gérer plusieurs documents efficacement  
-- **Prêt pour l’entreprise** – Conçu pour les environnements deés.
-
-## Prérequis et configuration de l’environnement
-
-Assurez‑vous de disposer de ce qui suit avant de commencer :
-
-- Java Development Kit (JDK 8 ou supérieur)  
-- Bibliothèque Apache Commons Net (pour les opérations FTP)  
-- Bibliothèque GroupDocs.Annotation for Java  
-- Maven ou Gradle pour la gestion des dépendances  
-- Accès à un serveur FTP (identifiants et permissions)  
-
-## Configuration de GroupDocs.Annotation for Java
+## Configuration de GroupDocs.Annotation pour Java
 
 ### Configuration Maven
 
-Ajoutez le dépôt et la dépendance à votre fichier `pom.xml` :
+Ajoutez le dépôt et la dépendance à votre fichier `pom.xml` :
 
 ```xml
 <repositories>
@@ -93,11 +120,23 @@ Ajoutez le dépôt et la dépendance à votre fichier `pom.xml` :
 </dependencies>
 ```
 
-### Options de les. **Licence temporaire déroulement étape par étape qui montre **how to add annotation** à un PDF récupéré depuis un serveur FTP.
+### Options de configuration de licence
 
-### Étape 1 : Chargement des documents depuis le serveur FTP
+GroupDocs propose trois modèles de licence :
 
-La méthode réutilisable suivante se connecte à un serveur FTP et renvoie le PDF sous forme d’`InputStream`. Aucun fichier local n’est créé.
+1. **Free Trial** – Idéal pour les travaux de preuve de concept.  
+2. **Temporary License** – Supprime les limites d'essai pendant votre évaluation.  
+3. **Full License** – Requise pour tout déploiement en production.  
+
+**Pro tip:** Commencez avec l'essai gratuit, puis passez à la version payante une fois que vous avez confirmé que le flux de travail répond à vos objectifs de performance.
+
+## Guide complet d'implémentation
+
+Ci‑dessous un guide étape par étape qui montre **comment ajouter une annotation** à un PDF récupéré depuis un serveur FTP.
+
+### Étape 1 : Chargement des documents depuis le serveur FTP
+
+`FTPClient` est la classe d'Apache Commons Net pour gérer les connexions FTP. Elle abstrait le protocole de bas niveau et vous permet de récupérer les fichiers sous forme de flux.
 
 ```java
 import org.apache.commons.net.ftp.FTPClient;
@@ -122,13 +161,18 @@ public static InputStream getFileFromFtp(String server, String filePath) throws 
 ```
 
 **Ce qui se passe ?**  
-- `FTPClient` gère le protocole FTP de bas niveau.  
-- Le fichier est diffusé (`InputStream`) afin d’éviter un stockage supplémentaire.  
-- Pour les serveurs authentifiés, insérez `client.login(username, password)` après `connect`.  
+- `FTPClient` ouvre une connexion, s'authentifie et diffuse le PDF distant.  
+- Le `InputStream` retourné évite de créer un fichier temporaire sur le disque.  
+- Pour les environnements sécurisés, remplacez `FTPClient` par `FTPSClient` afin d'activer le chiffrement TLS.
 
-### Étape 2 : Ajout d’annotations à votre PDF
+`FTPSClient` étend `FTPClient` pour fournir le FTP sur TLS pour des transferts sécurisés.
 
-Une fois le flux obtenu, vous pouvez créer des annotations. Cet exemple ajoute une surbrillance de zone jaune.
+### Étape 2 : Ajout d'annotations à votre PDF
+
+`Annotator` est la classe principale de GroupDocs.Annotation qui travaille directement avec un `InputStream`. Elle crée, modifie et enregistre les annotations sans charger l'intégralité du document en mémoire.
+
+`PdfLoadOptions` configure la façon dont un PDF est chargé, comme la gestion du mot de passe et la plage de pages.  
+`Rectangle` définit la position et la taille de l'annotation sur une page.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -160,14 +204,14 @@ public static void addAnnotationAndSave(InputStream inputStream, String outputPa
 }
 ```
 
-**Points clés**
-- `Annotator` fonctionne directement avec le flux d’entrée.  
-- `Rectangle` définit la géométrie de l’annotation.  
-- Les couleurs utilisent des valeurs entières ARGB (par ex., 65535 = jaune vif).  
+**Points clés**  
+- `Annotator` accepte le flux PDF et un objet `PdfLoadOptions`.  
+- `Rectangle` définit la position et la taille de la surbrillance sur la page.  
+- Les couleurs sont exprimées en entiers ARGB ; `65535` correspond à un jaune vif.
 
-### Étape 3 : Assemblage complet
+### Étape 3 : Assembler le tout
 
-La méthode `main` montre le workflow complet — de la récupération FTP à l’enregistrement du PDF annoté.
+La méthode `main` montre le flux complet — de la récupération FTP à l'enregistrement du PDF surligné.
 
 ```java
 public class PDFAnnotationFromFTP {
@@ -188,13 +232,15 @@ public class PDFAnnotationFromFTP {
 }
 ```
 
-L’exécution de ce programme produira `annotated_report.pdf` avec une surbrillance jaune placée aux coordonnées spécifiées.
+L'exécution de ce programme produit `annotated_report.pdf` avec une surbrillance jaune placée aux coordonnées que vous avez spécifiées.
 
-## Techniques d’annotation avancées
+## Techniques d'annotation avancées
 
-Au‑delà des surbrillances de zone, GroupDocs.Annotation prend en charge de nombreux autres types d’annotation.
+Au‑delà des simples surbrillances de zone, GroupDocs.Annotation prend en charge un large éventail de types d'annotations, chacun utile pour différents scénarios métier.
 
-### Annotations texte pour des commentaires détaillés
+### Annotations de texte pour des commentaires détaillés
+
+`TextAnnotation` vous permet d'attacher des notes libres à n'importe quelle région de page.
 
 ```java
 TextAnnotation textAnnotation = new TextAnnotation();
@@ -204,7 +250,9 @@ textAnnotation.setFontColor(16711680); // Red text
 annotator.add(textAnnotation);
 ```
 
-### Annotations point pour des notes rapides
+### Annotations de point pour des notes rapides
+
+`PointAnnotation` crée un marqueur ponctuel qui peut être utilisé pour des éléments de liste de contrôle ou des indicateurs d'erreur.
 
 ```java
 PointAnnotation pointAnnotation = new PointAnnotation();
@@ -213,20 +261,21 @@ pointAnnotation.setText("Check this calculation");
 annotator.add(pointAnnotation);
 ```
 
-## Cas d’utilisation réels et applications
+## Cas d'utilisation réels et applications
 
-Comprendre où **how to add annotation** apporte de la valeur vous aide à décider quand adopter ce schéma.
+Comprendre où **highlight pdf java** apporte de la valeur vous aide à décider quand adopter ce modèle.
 
-| Scénario | Comment l’annotation aide |
-|----------|---------------------------|
-| **Révision de documents juridiques** | Mettre en évidence des clauses, ajouter des notes marginales, conserver l’historique des versions sans copies locales. |
-| **Traitement de rapports d’ingénierie** | Marquer des mesures critiques, joindre des avertissements de sécurité, collaborer entre équipes. |
-| **Gestion de contenu éducatif** | Les enseignants annotent les soumissions d’étudiants stockées sur FTP, fournissant un retour instantané. |
-| **Intelligence d’affaires** | Signaler des indicateurs clés dans des PDF financiers, générer des résumés exécutifs avec des insights mis en évidence. |
+| Scénario | Comment l'annotation aide |
+|----------|----------------------------|
+| **Revue de documents juridiques** | Surlignez les clauses, ajoutez des notes annexes, conservez une piste d'audit complète sans copier les fichiers localement. |
+| **Traitement de rapports d'ingénierie** | Marquez les mesures critiques, joignez des avertissements de sécurité et partagez instantanément les PDF annotés avec des équipes distantes. |
+| **Gestion de contenu éducatif** | Les enseignants peuvent annoter les soumissions d'étudiants stockées sur FTP, délivrant des retours en quelques secondes. |
+| **Intelligence d'affaires** | Identifiez les indicateurs clés de performance dans les PDF financiers, puis générez automatiquement des résumés exécutifs. |
 
 ## Optimisation des performances et bonnes pratiques
 
 ### Conseils de gestion de la mémoire
+`try‑with‑resources` garantit que les flux et le `Annotator` sont fermés rapidement, évitant les fuites de mémoire.
 
 ```java
 try (Annotator annotator = new Annotator(inputStream)) {
@@ -236,13 +285,13 @@ try (Annotator annotator = new Annotator(inputStream)) {
 } // Automatic resource cleanup
 ```
 
-- Utilisez le *try‑with‑resources* pour garantir une libération correcte.  
-- Évitez de conserver de gros flux plus longtemps que nécessaire.  
-- Augmentez le tas JVM (`-Xmx2g`) pour les PDF très volumineux.  
+- Libérez chaque flux dès que vous avez fini de l'utiliser.  
+- Pour les PDF dépassant 200 pages, augmentez le tas JVM (`-Xmx2g`) ou traitez les pages par lots en utilisant l'API au niveau des pages de `Annotator`.
 
-### Stratégies d’optimisation réseau
+### Stratégies d'optimisation réseau
+**Mise en pool des connexions FTP**
 
-**Pool de connexions FTP**
+Réutiliser une seule instance de `FTPClient` sur plusieurs fichiers réduit la surcharge de la poignée de main et améliore le débit.
 
 ```java
 FTPClient client = new FTPClient();
@@ -257,11 +306,13 @@ for (String filePath : filePaths) {
 client.disconnect();
 ```
 
-- Réutilisez un seul `FTPClient` pour les opérations par lots.  
-- Activez le mode passif (`client.enterLocalPassiveMode()`) pour la compatibilité avec les pare‑feu.  
-- Implémentez une logique de nouvelle tentative avec back‑off exponentiel pour les pannes réseau transitoires.  
+- Activez le mode passif (`client.enterLocalPassiveMode()`) pour traverser les pare‑feu.  
+- Mettez en œuvre des tentatives avec back‑off exponentiel pour gérer gracieusement les interruptions réseau transitoires.
 
 ### Gestion robuste des erreurs
+Anticipez les échecs d'E/S et fournissez des voies de récupération claires.
+
+`IOException` est une exception qui signale un échec lors d'opérations d'entrée ou de sortie.
 
 ```java
 public static InputStream getFileFromFtpWithRetry(String server, String filePath, int maxRetries) {
@@ -285,53 +336,69 @@ public static InputStream getFileFromFtpWithRetry(String server, String filePath
 }
 ```
 
-- Réessayez en cas d’erreurs d’E/S transitoires.  
-- Utilisez le back‑off exponentiel pour ne pas surcharger le serveur.  
+- Capturez `IOException` et réessayez jusqu'à trois fois.  
+- Enregistrez le nom du fichier, le code de réponse FTP et la trace de la pile à des fins d'audit.
 
-## Dépannage des problèmes courants
+## Résolution des problèmes courants
 
 | Problème | Cause probable | Solution |
 |----------|----------------|----------|
-| **Délai d’attente de la connexion** | Adresse/port incorrect ou pare‑feu | Vérifiez l’adresse, ouvrez le port 21, essayez le mode passif |
-| **Échec d’authentification** | Identifiants erronés ou permissions manquantes | Revérifiez le nom d’utilisateur/mot de passe, assurez‑vous des droits de lecture |
-| **« Format de document non pris en charge »** | Fichier corrompu ou non‑PDF | Confirmez que le fichier est un PDF valide, utilisez le mode FTP binaire (`FTP.BINARY_FILE_TYPE`) |
-| **Annotations invisibles** | Coordonnées hors limites ou restrictions de sécurité | Vérifiez que le rectangle tient dans la taille de la page, retirez |
-| **Couleur non affichée** | Valeur ARGB incorrecte | 65280 (iffrer les données en transit.  
-- **Validez le type et la taille du fichier** avant le traitement afin d’éviter les charges utiles malveillantes.  
-- **Consignez tous les accès** – maintenez utiliser cette approche avec des services de stockage cloud comme AWS S3 ou Google Drive ?**  
-R : Absolument. Remplacez le code de récupération FTP par l’appel SDK approprié ; la.
+| **Connexion expirée** | Serveur/port incorrect ou pare‑feu bloquant | Vérifiez l'adresse FTP, ouvrez le port 21 et activez le mode passif. |
+| **Échec d'authentification** | Identifiants incorrects ou permissions insuffisantes | Vérifiez à nouveau le nom d'utilisateur/mot de passe et assurez‑vous que le compte peut lire le répertoire cible. |
+| **« Format de document non pris en charge »** | Fichier corrompu ou contenu non PDF | Confirmez que le fichier est un PDF valide et définissez le mode binaire FTP (`FTP.BINARY_FILE_TYPE`). |
+| **Annotations non affichées** | Coordonnées hors des limites de la page ou restrictions de sécurité | Utilisez les dimensions de page de `PdfInfo` pour calculer des rectangles valides ; retirez la protection par mot de passe avant d'annoter. |
+| **Couleur non affichée** | Valeur ARGB incorrecte | Utilisez les valeurs connues : Rouge = 0xFFFF0000, Vert = 0xFF00FF00, Bleu = 0xFF0000FF, Jaune = 0xFFFFFF00. |
 
-**Q : Quels formats de fichier GroupDocs.Annotation supporte‑t‑il en plus du PDF ?**  
-R : Plus de 50 formats dont DOCX, XLSX, PPTXAnnotator`.
+`PdfInfo` fournit des métadonnées sur le PDF, y compris les tailles de page et le nombre de pages.
 
-**Q : Est‑il possible de lire les annotations existantes d’un PDF chargé depuis FTP ?**  
-R : Oui. Appelez `annotator.get()` pour récupérer toutes les annotations actuelles avant d’en ajouter de nouvelles.
+## Considérations de sécurité pour l'utilisation en production
+- **Ne jamais coder en dur les identifiants** – stockez‑les dans des variables d'environnement ou un gestionnaire de secrets.  
+- **Préférez FTPS** (FTP sur TLS) pour chiffrer les données en transit.  
+- **Validez le type et la taille du fichier** avant le traitement pour se prémunir contre les charges malveillantes.  
+- **Enregistrez chaque accès** – maintenez une piste d'audit pour la conformité et l'analyse forensique.
+
+## Questions fréquemment posées
+
+**Q : Puis‑je utiliser cette approche avec des services de stockage cloud comme AWS S3 ou Google Drive ?**  
+R : Absolument. Remplacez le code de récupération FTP par l'appel SDK approprié ; la logique d'annotation reste exactement la même.
+
+**Q : Quels formats de fichiers GroupDocs.Annotation prend‑en charge en plus du PDF ?**  
+R : GroupDocs.Annotation prend en charge **plus de 50** formats, dont DOCX, XLSX, PPTX, JPEG, PNG et les fichiers CAD.
+
+**Q : Comment gérer des PDF très volumineux sans épuiser la mémoire ?**  
+R : Diffusez le fichier, augmentez le tas JVM si nécessaire, et utilisez l'API au niveau des pages pour traiter une page à la fois.
+
+**Q : Est‑il possible de lire les annotations existantes d'un PDF chargé depuis FTP ?**  
+R : Oui. Appelez `annotator.get()` après le chargement du flux pour récupérer toutes les annotations actuelles avant d'en ajouter de nouvelles.
 
 **Q : Quelle est la meilleure façon de traiter des centaines de documents efficacement ?**  
-R : Combinez le pool de connexions, les flux parallèles (`CompletableFuture`) et un système de file d’attente pour répartir le travail sur plusieurs threads ou services.
+R : Combinez la mise en pool des connexions FTP, `CompletableFuture` de Java pour une exécution asynchrone et non bloquante, et une file de messages (par ex., RabbitMQ) pour répartir le travail sur plusieurs nœuds de travail.
+
+`CompletableFuture` permet l'exécution asynchrone et non bloquante des tâches en Java.
 
 ## Et après ?
 
-Maintenant que vous savez **how to add annotation** aux PDF stockés sur des serveurs FTP, vous pouvez étendre la solution :
+Commencez par intégrer le flux d'annotation en streaming dans votre service de gestion de documents existant. Ensuite, expérimentez des types d'annotations supplémentaires — tampons, filigranes et formes personnalisées — pour enrichir l'expérience utilisateur. Enfin, exposez un point d'accès REST simple qui accepte un chemin FTP, applique une surbrillance et renvoie le PDF annoté dans le corps de la réponse. Ce pipeline de bout en bout vous fournira un moteur de traitement PDF évolutif et en temps réel.
 
-- Expérimentez les tampons, filigranes et formes personnalisées.  
-- Créez une interface web permettant aux utilisateurs de sélectionner des fichiers FTP et d’annoter en temps réel.  
-- Intégrez‑la à votre système de gestion documentaire (DMS) existant pour des workflows de bout en bout.  
-
-L’association du streaming FTP et de GroupDocs.Annotation ouvre des possibilités infinies pour le traitement automatisé et évolutif de documents.
-
-## Ressources et apprentissage complémentaire
-
-- [Documentation](https://docs.groupdocs.com/annotation/java/) - Référence API complète et guides  
-- [Référence API](https://reference.groupdocs.com/annotation/java/) - Documentation détaillée des méthodes  
-- [Télécharger la dernière version](https://releases.groupdocs.com/annotation/java/) - Utilisez toujours la version la plus récente  
-- [Acheter une licence](https://purchase.groupdocs.com/buy) - Options de déploiement en production  
-- [Essai gratuit](https://releases.groupdocs.com/annotation/java/) - Testez toutes les fonctionnalités  
-- [Licence temporaire](https://purchase.groupdocs.com/temporary-license/) - Supprime les limitations d’essai  
-- [Support communautaire](https://forum.groupdocs.com/c/annotation/) - Obtenez de l’aide auprès d’experts et de pairs  
+## Ressources et apprentissage supplémentaire
+- [Documentation](https://docs.groupdocs.com/annotation/java/) - Comprehensive API reference and guides  
+- [Référence API](https://reference.groupdocs.com/annotation/java/) - Detailed method documentation  
+- [Télécharger la dernière version](https://releases.groupdocs.com/annotation/java/) - Always use the newest release  
+- [Acheter une licence](https://purchase.groupdocs.com/buy) - Production deployment options  
+- [Essai gratuit](https://releases.groupdocs.com/annotation/java/) - Test drive all features  
+- [Licence temporaire](https://purchase.groupdocs.com/temporary-license/) - Remove trial limitations  
+- [Support communautaire](https://forum.groupdocs.com/c/annotation/) - Get help from experts and peers  
 
 ---
 
-**Dernière mise à jour :** 2026-01-26  
+**Dernière mise à jour :** 2026-06-26  
 **Testé avec :** GroupDocs.Annotation 25.2 for Java  
-**Auteur :** GroupDocs
+**Auteur :** GroupDocs  
+
+{< blocks/products/products-backtop-button >}
+
+## Tutoriels associés
+
+- [Comment annoter un PDF – Charger un PDF depuis une URL Java Guide complet](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
+- [Comment annoter un PDF depuis Amazon S3 avec Java – Guide complet](/annotation/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/)
+- [Annotation de texte PDF Java : ajouter des surbrillances recherchables avec GroupDocs](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
