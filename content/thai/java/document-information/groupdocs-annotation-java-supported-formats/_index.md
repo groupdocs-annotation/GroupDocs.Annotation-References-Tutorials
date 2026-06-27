@@ -1,56 +1,65 @@
 ---
 categories:
 - Java Development
-date: '2025-12-29'
-description: เรียนรู้วิธีสร้างตัวตรวจสอบรูปแบบไฟล์ใน Java ด้วย GroupDocs.Annotation
-  เพื่อตรวจจับรูปแบบไฟล์ที่รองรับ จัดการกรณีขอบเขต และปรับปรุงแอปพลิเคชันการทำหมายเหตุของคุณ
+date: '2026-03-01'
+description: เรียนรู้วิธีการทำการตรวจสอบการอัปโหลดไฟล์ Java ด้วย GroupDocs.Annotation,
+  ดึงรูปแบบที่รองรับ, แคชส่วนขยายที่รองรับ, และตรวจสอบรูปแบบไฟล์ Java ในแอปพลิเคชันของคุณ.
 keywords: GroupDocs.Annotation Java supported formats, Java document annotation formats,
   retrieve file formats Java, GroupDocs annotation file types, Java annotation library
   file support, build format validator java
-lastmod: '2025-12-29'
+lastmod: '2026-03-01'
 linktitle: Java Supported Formats Detection
 tags:
 - groupdocs-annotation
 - java-development
 - document-annotation
 - file-formats
-title: วิธีสร้างตัวตรวจสอบรูปแบบ Java ด้วย GroupDocs.Annotation
+title: วิธีการทำการตรวจสอบการอัปโหลดไฟล์ Java ด้วย GroupDocs.Annotation
 type: docs
 url: /th/java/document-information/groupdocs-annotation-java-supported-formats/
 weight: 1
 ---
 
-# วิธีสร้าง Format Validator Java ด้วย GroupDocs.Annotation
+# วิธีการทำ Validation การอัปโหลดไฟล์ Java ด้วย GroupDocs.Annotation
 
 ## บทนำ
 
-เคยสงสัยบ้างไหมว่าแอปการทำ annotation ด้วย Java ของคุณสามารถจัดการกับรูปแบบไฟล์ใดได้บ้าง? คุณไม่ได้เป็นคนเดียวที่มีคำถามนี้ นักพัฒนาหลายคนประสบปัญหาความเข้ากันได้ของรูปแบบไฟล์ ทำให้ผู้ใช้รู้สึกหงุดหงิดและแอปพังเมื่อมีการอัปโหลดไฟล์ที่ไม่รองรับ  
+เคยสงสัยไหมว่าแอปการใส่คำอธิบาย (annotation) ของคุณใน Java สามารถจัดการรูปแบบไฟล์ใดได้บ้าง **when performing java file upload validation**? คุณไม่ได้เป็นคนเดียวที่เจอปัญหา นักพัฒนาหลายคนเจออุปสรรคเมื่อไฟล์ที่ไม่รองรับแอบเข้ามาในขั้นตอนอัปโหลด ทำให้เกิดข้อผิดพลาดหรือแม้กระทั่งแครช ด้วย **GroupDocs.Annotation for Java** คุณสามารถสอบถามไลบรารีเพื่อรับรายการรูปแบบไฟล์ที่รองรับอย่างแม่นยำ แคชส่วนขยายเหล่านั้น และทำการตรวจสอบรูปแบบไฟล์ java แบบเรียลไทม์ บทแนะนำนี้จะพาคุณผ่านการสร้าง validator ที่แข็งแรง การจัดการกรณีขอบ และทำให้แอปการใส่คำอธิบายของคุณมั่นคงอย่างร็อค‑โซลิด
 
-**GroupDocs.Annotation for Java** แก้ปัญหานี้ด้วยวิธีที่ง่ายแต่ทรงพลังในการตรวจจับรูปแบบไฟล์ที่รองรับโดยโปรแกรมเมติก คุณไม่ต้องเดาหรือดูแลรายการแบบแมนนวล (ซึ่งมักล้าสมัย) อีกต่อไป เพียงเรียกใช้ไลบรารีโดยตรงเพื่อรับข้อมูลการรองรับรูปแบบไฟล์ที่เป็นปัจจุบันที่สุด ในคู่มือนี้คุณจะ **build format validator java** อย่างเป็นขั้นตอน จัดการกับกรณีขอบ และทำให้แอปการทำ annotation ของคุณมั่นคง
+## คำตอบด่วน
+- **What does “java file upload validation” mean?**  
+  คือกระบวนการตรวจสอบนามสกุล (หรือเนื้อหา) ของไฟล์ที่อัปโหลดกับรูปแบบที่ GroupDocs.Annotation รองรับก่อนที่จะพยายามทำงานใด ๆ กับ annotation
+- **Which library version is required?**  
+  GroupDocs.Annotation for Java 25.2 (or newer) provides the `FileType.getSupportedFileTypes()` API.
+- **Do I need a license?**  
+  การทดลองใช้งานทำงานได้สำหรับการทดสอบ; จำเป็นต้องมีลิขสิทธิ์การผลิตสำหรับการใช้งานเชิงพาณิชย์
+- **Can I cache the supported formats?**  
+  ได้—การแคชช่วยปรับปรุงประสิทธิภาพและหลีกเลี่ยงการค้นหาแบบซ้ำ
+- **Where can I find the full list of supported extensions?**  
+  เรียก `FileType.getSupportedFileTypes()` ในเวลารัน; รายการจะอัปเดตอยู่เสมอ
 
-## คำตอบอย่างรวดเร็ว
-- **“build format validator java” หมายถึงอะไร?**  
-  หมายถึงการสร้างคอมโพเนนต์ Java ที่สามารถนำกลับมาใช้ใหม่ได้ ซึ่งตรวจสอบว่าการต่อท้ายไฟล์ (extension) นั้นได้รับการสนับสนุนโดย GroupDocs.Annotation หรือไม่.  
-- **เวอร์ชันของไลบรารีที่ต้องการคืออะไร?**  
-  GroupDocs.Annotation for Java 25.2 (หรือใหม่กว่า) มี API `FileType.getSupportedFileTypes()`  
-- **ฉันต้องมีลิขสิทธิ์หรือไม่?**  
-  การทดลองใช้งานสามารถใช้สำหรับการทดสอบได้; ต้องมีลิขสิทธิ์สำหรับการใช้งานเชิงพาณิชย์  
-- **ฉันสามารถแคชรูปแบบที่รองรับได้หรือไม่?**  
-  ได้—การแคชช่วยเพิ่มประสิทธิภาพและหลีกเลี่ยงการค้นหาแบบซ้ำ  
-- **ฉันจะหารายการส่วนขยายที่รองรับทั้งหมดได้จากที่ไหน?**  
-  เรียก `FileType.getSupportedFileTypes()` ในขณะรันไทม์; รายการจะเป็นข้อมูลล่าสุดเสมอ  
+## Java File Upload Validation คืออะไร?
+
+Java file upload validation คือการยืนยันว่าไฟล์ที่ผู้ใช้ส่งมานั้นสอดคล้องกับชุดประเภทที่อนุญาต **before** ที่คุณส่งต่อไปยังไลบรารีการประมวลผล การตรวจสอบตั้งแต่ต้นจะช่วยปกป้องแอปของคุณจากข้อยกเว้นที่ไม่คาดคิด ลดภาระเซิร์ฟเวอร์ และให้ข้อเสนอแนะที่ชัดเจนแก่ผู้ใช้
+
+## ทำไมต้องใช้ GroupDocs.Annotation สำหรับ Validation?
+
+- **Always current** – ไลบรารีดูแลทะเบียนภายในของตนเอง ดังนั้นคุณไม่ต้องอัปเดตรายการที่เขียนโค้ดแบบคงที่ด้วยตนเอง
+- **Built‑in content check** – GroupDocs ตรวจสอบเนื้อหาไฟล์จริง ไม่ใช่แค่ส่วนขยาย
+- **Performance‑ready** – คุณสามารถ **cache supported extensions** ได้หนึ่งครั้งเมื่อแอปพลิเคชันเริ่มทำงาน ทำให้การค้นหาเป็น O(1) สำหรับการอัปโหลดทุกครั้ง
 
 ## ข้อกำหนดเบื้องต้นและการตั้งค่า
 
-ก่อนที่เราจะลงมือเขียนโค้ด ให้แน่ใจว่าคุณมีทุกอย่างที่ต้องการแล้ว เชื่อฉันเถอะ การทำให้ถูกต้องตั้งแต่แรกจะช่วยคุณประหยัดเวลาการดีบักหลายชั่วโมงในภายหลัง  
+ก่อนที่เราจะลงลึกไปในโค้ด โปรดตรวจสอบว่าสภาพแวดล้อมของคุณพร้อมแล้ว
 
-### สิ่งที่คุณต้องมี
-- **ไลบรารีและเวอร์ชันที่ต้องการ** – GroupDocs.Annotation for Java 25.2. เวอร์ชันก่อนหน้าอาจมี API ที่แตกต่าง  
-- **สภาพแวดล้อม** – Java 8 หรือสูงกว่า (แนะนำ Java 11+) และ Maven 3.6+ (หรือ Gradle หากคุณชอบ)  
-- **ความรู้** – ความคุ้นเคยกับ Java พื้นฐาน, Maven/Gradle, และการจัดการข้อยกเว้น  
+### สิ่งที่คุณต้องการ
+- **Required Libraries and Versions** – GroupDocs.Annotation for Java 25.2 (or newer).
+- **Environment** – Java 8 หรือสูงกว่า (แนะนำ Java 11+) และ Maven 3.6+ (หรือ Gradle).
+- **Knowledge** – Java พื้นฐาน, Maven/Gradle, และการจัดการข้อยกเว้น
 
 ### การกำหนดค่า Maven
-นี่คือการตั้งค่า Maven ที่ทำงานได้จริง (ฉันเคยเห็นบทเรียนหลายๆ อย่างที่ใช้ URL ของรีโพซิทอรีล้าสมัย):
+
+นี่คือการตั้งค่า Maven ที่ใช้งานได้จริง (ฉันเคยเห็นบทแนะนำหลาย ๆ อย่างที่มี URL ของ repository ที่ล้าสมัย):
 
 ```xml
 <repositories>
@@ -69,14 +78,15 @@ weight: 1
 </dependencies>
 ```
 
-**เคล็ดลับ**: หากคุณอยู่หลังไฟร์วอลล์ขององค์กร ให้ตั้งค่าพร็อกซีของ Maven การใช้เวอร์ชันไลบรารีที่สอดคล้องกันในทีมจะช่วยป้องกันปัญหา “ทำงานบนเครื่องของฉัน”
+**Pro Tip**: หากคุณอยู่หลังไฟร์วอลล์ขององค์กร ให้กำหนดค่าการตั้งค่า proxy ของ Maven. การใช้เวอร์ชันไลบรารีที่สอดคล้องกันในทีมจะป้องกันความประหลาดใจแบบ “works on my machine”
 
 ### ตัวเลือกการรับลิขสิทธิ์
-- **Free Trial** – เหมาะสำหรับการพิสูจน์แนวคิด  
-- **Temporary License** – ขยายระยะเวลาการทดลองสำหรับการประเมินขนาดใหญ่  
-- **Production License** – จำเป็นสำหรับการใช้งานเชิงพาณิชย์  
+- **Free Trial** – เหมาะสำหรับการพิสูจน์แนวคิด (proof‑of‑concepts).
+- **Temporary License** – ขยายระยะเวลาการทดลองสำหรับการประเมินขนาดใหญ่.
+- **Production License** – จำเป็นสำหรับการใช้งานเชิงพาณิชย์
 
 ### รูปแบบการเริ่มต้นพื้นฐาน
+
 เมื่อจัดการ dependencies แล้ว นี่คือวิธีการเริ่มต้น GroupDocs.Annotation อย่างถูกต้อง:
 
 ```java
@@ -97,27 +107,32 @@ public class AnnotationSetup {
 }
 ```
 
-สังเกตรูปแบบ **try‑with‑resources** หรือไม่? มันรับประกันว่า `Annotator` จะถูกปิดโดยอัตโนมัติ ป้องกันการรั่วของหน่วยความจำ  
+สังเกตรูปแบบ **try‑with‑resources** หรือไม่? มันรับประกันว่า `Annotator` จะถูกปิดโดยอัตโนมัติ ป้องกันการรั่วไหลของหน่วยความจำ
 
-## วิธีดึงรูปแบบที่รองรับของ GroupDocs Annotation Java
-ต่อไปเป็นส่วนสำคัญ – การตรวจจับว่ารูปแบบไฟล์ใดที่แอปของคุณสามารถจัดการได้จริงๆ สิ่งนี้ง่ายกว่าที่คิด แต่มีรายละเอียดเล็กน้อยที่ควรเข้าใจ  
+## วิธีดึงรูปแบบไฟล์ที่รองรับของ GroupDocs Annotation Java
 
-### การดำเนินการตามขั้นตอน
+ต่อไปเป็นส่วนสำคัญ – การตรวจจับว่ารูปแบบไฟล์ใดที่แอปพลิเคชันของคุณสามารถจัดการได้ จริง ๆ แล้วง่ายกว่าที่คิด แต่มีรายละเอียดเล็กน้อยที่ควรเข้าใจ
+
+### การดำเนินการแบบขั้นตอน
+
 #### ขั้นตอนที่ 1: นำเข้าคลาสที่จำเป็น
+
 ```java
 import com.groupdocs.annotation.options.FileType;
 import java.util.List;
 ```
 
 #### ขั้นตอนที่ 2: ดึงประเภทไฟล์ที่รองรับ
+
 ```java
 // Retrieve the list of supported file types.
 List<FileType> fileTypes = FileType.getSupportedFileTypes();
 ```
 
-เมธอดนี้สอบถามจากรีจิสทรีภายในของ GroupDocs ดังนั้นรายการจึงสะท้อนความสามารถที่แท้จริงของเวอร์ชันไลบรารีที่คุณใช้อยู่เสมอ  
+เมธอดนี้สอบถามทะเบียนภายในของ GroupDocs ดังนั้นรายการจะสะท้อนความสามารถที่แท้จริงของเวอร์ชันไลบรารีที่คุณใช้อยู่เสมอ
 
 #### ขั้นตอนที่ 3: ประมวลผลและแสดงผลลัพธ์
+
 ```java
 // Iterate over each file type and print its extension.
 for (FileType fileType : fileTypes) {
@@ -125,10 +140,11 @@ for (FileType fileType : fileTypes) {
 }
 ```
 
-ในการผลิต คุณอาจเก็บส่วนขยายใน `Set` เพื่อการค้นหาอย่างรวดเร็ว หรือจัดกลุ่มตามประเภท (ภาพ, เอกสาร, สเปรดชีต)  
+ในสภาพแวดล้อมการผลิต คุณอาจเก็บส่วนขยายใน `Set` เพื่อการค้นหาอย่างรวดเร็ว หรือจัดกลุ่มตามประเภท (รูปภาพ, เอกสาร, สเปรดชีต)
 
-## วิธีสร้าง Format Validator Java
-หากคุณต้องการตรวจสอบไฟล์ที่อัปโหลดแบบเรียลไทม์ ตัวตรวจสอบแบบสแตติกจะให้การค้นหา O(1) และทำให้โค้ดของคุณสะอาด
+## วิธีสร้าง Cached Format Validator ใน Java
+
+หากคุณต้องการ **validate file format java** ในทุกการอัปโหลด validator แบบ static จะให้การค้นหา O(1) และทำให้โค้ดของคุณสะอาด
 
 ```java
 import com.groupdocs.annotation.options.FileType;
@@ -163,27 +179,34 @@ public class FormatValidator {
 }
 ```
 
-บล็อกสแตติกจะทำงานหนึ่งครั้งเมื่อคลาสถูกโหลด ทำการแคชส่วนขยายที่รองรับตลอดวงจรชีวิตของแอปพลิเคชัน  
+บล็อก static จะทำงานหนึ่งครั้งเมื่อคลาสถูกโหลด, **caching the supported extensions** ตลอดอายุการทำงานของแอปพลิเคชัน – สิ่งที่คุณต้องการสำหรับการทำ java file upload validation ที่มีประสิทธิภาพ
 
 ## ปัญหาทั่วไปและวิธีแก้
-### ปัญหาการขาด Dependencies
-- **Symptom**: `ClassNotFoundException` เมื่อเรียก `getSupportedFileTypes()`.  
-- **Solution**: ตรวจสอบ dependencies ของ Maven ด้วยคำสั่ง `mvn dependency:tree`. ให้แน่ใจว่ารีโพซิทอรีของ GroupDocs สามารถเข้าถึงได้.  
 
-### ปัญหาความเข้ากันได้ของเวอร์ชัน
-- **Symptom**: ลายเซ็นเมธอดที่ไม่คาดคิดหรือรูปแบบที่หายไป.  
-- **Solution**: ใช้เวอร์ชันไลบรารีที่อ้างอิงในคู่มือนี้ (25.2) เท่านั้น อัปเกรดหลังจากตรวจสอบบันทึกการปล่อยเวอร์ชัน.  
+### Missing Dependencies
 
-### พิจารณาด้านประสิทธิภาพ
-- **Symptom**: การตอบสนองช้าเมื่อเรียก `getSupportedFileTypes()` ซ้ำหลายครั้ง.  
-- **Solution**: แคชผลลัพธ์ตามที่แสดงในคลาส `FormatValidator`. ตัวเริ่มต้นสแตติกจะขจัดการค้นหาแบบซ้ำ.  
+- **Symptom**: `ClassNotFoundException` เมื่อเรียก `getSupportedFileTypes()`.
+- **Solution**: ตรวจสอบ dependencies ของ Maven ด้วย `mvn dependency:tree`. ให้แน่ใจว่า repository ของ GroupDocs สามารถเข้าถึงได้.
+
+### Version Compatibility
+
+- **Symptom**: ลายเซ็นเมธอดที่ไม่คาดคิดหรือรูปแบบที่หายไป.
+- **Solution**: ยึดตามเวอร์ชันไลบรารีที่อ้างอิงในคู่มือนี้ (25.2). อัปเกรดเฉพาะหลังจากตรวจสอบบันทึกการปล่อยเวอร์ชัน.
+
+### พิจารณาด้าน Performance
+
+- **Symptom**: การตอบสนองช้าเมื่อเรียก `getSupportedFileTypes()` ซ้ำหลายครั้ง.
+- **Solution**: **Cache the result** ตามที่แสดงในคลาส `FormatValidator`. ตัวเริ่มต้นแบบ static จะขจัดการค้นหาแบบซ้ำ.
 
 ### กรณีขอบของส่วนขยายไฟล์
-- **Symptom**: ไฟล์ที่มีส่วนขยายแปลกหรือไม่มีส่วนขยายทำให้การตรวจสอบล้มเหลว.  
-- **Solution**: ผสานการตรวจสอบส่วนขยายกับการตรวจจับตามเนื้อหา (เช่น Apache Tika) เพื่อการตรวจสอบที่แข็งแรง.  
 
-## การใช้งานจริงและกรณีตัวอย่าง
+- **Symptom**: ไฟล์ที่มีส่วนขยายแปลกหรือไม่มีส่วนขยายทำให้การตรวจสอบล้มเหลว.
+- **Solution**: ผสานการตรวจสอบส่วนขยายกับการตรวจจับตามเนื้อหา (เช่น Apache Tika) เพื่อการตรวจสอบที่แข็งแรง
+
+## การประยุกต์ใช้งานและกรณีใช้จริง
+
 ### ระบบจัดการเอกสาร
+
 ```java
 public class DocumentProcessor {
     public void processUpload(String fileName, InputStream fileStream) {
@@ -198,7 +221,8 @@ public class DocumentProcessor {
 }
 ```
 
-### ตัวกรองไฟล์สำหรับเว็บแอปพลิเคชัน
+### ตัวกรองไฟล์ของเว็บแอปพลิเคชัน
+
 ```java
 public class FileUploadController {
     public String getAllowedExtensions() {
@@ -210,9 +234,10 @@ public class FileUploadController {
 }
 ```
 
-โค้ดส่วนนั้นทำให้ตัวเลือกไฟล์บนหน้า Front‑end สอดคล้องอย่างสมบูรณ์กับความสามารถของ Back‑end  
+โค้ดส่วนนั้นทำให้ตัวเลือกไฟล์ของ front‑end สอดคล้องอย่างสมบูรณ์กับความสามารถของ back‑end ส่งมอบประสบการณ์ **java file upload validation** ที่ไร้รอยต่อ
 
 ## รูปแบบการจัดการข้อผิดพลาด
+
 ```java
 public boolean isDocumentSupported(String fileName) {
     try {
@@ -225,38 +250,40 @@ public boolean isDocumentSupported(String fileName) {
 }
 ```
 
-การลดระดับอย่างสุภาพทำให้ผู้ใช้ได้รับข้อความที่เป็นประโยชน์แทนการแสดง stack trace ที่ซับซ้อน  
+การลดระดับอย่างอ่อนโยนทำให้ผู้ใช้ได้รับข้อความที่เป็นประโยชน์แทนการแสดง stack trace ที่ซับซ้อน
 
 ## คำถามที่พบบ่อย
-**Q: จะเกิดอะไรขึ้นหากฉันพยายามทำ annotation กับไฟล์รูปแบบที่ไม่รองรับ?**  
-A: GroupDocs.Annotation จะโยนข้อยกเว้นในระหว่างการเริ่มต้น การใช้ตัวตรวจสอบรูปแบบจะช่วยให้คุณจับปัญหาได้ตั้งแต่ต้นและแสดงข้อความข้อผิดพลาดที่เป็นมิตร  
 
-**Q: ควรรีเฟรชรายการรูปแบบที่รองรับบ่อยแค่ไหน?**  
-A: เพียงเมื่อคุณอัปเกรดไลบรารี GroupDocs.Annotation เท่านั้น การแคชรายการตลอดอายุการใช้งานของแอปพลิเคชันก็เพียงพอ  
+**Q: What happens if I try to annotate an unsupported file format?**  
+A: GroupDocs.Annotation จะโยนข้อยกเว้นในระหว่างการเริ่มต้น ใช้ format validator จะช่วยให้คุณจับปัญหาได้ตั้งแต่ต้นและแสดงข้อความข้อผิดพลาดที่เป็นมิตร
 
-**Q: ฉันสามารถขยายการรองรับรูปแบบไฟล์เพิ่มเติมได้หรือไม่?**  
-A: การขยายโดยตรงทำได้ไม่เป็นผล คุณต้องแปลงไฟล์ที่ไม่รองรับเป็นรูปแบบที่รองรับก่อนส่งให้ GroupDocs  
+**Q: How often should I refresh the supported formats list?**  
+A: เฉพาะเมื่อคุณอัปเกรดไลบรารี GroupDocs.Annotation เท่านั้น การแคชรายการไว้ตลอดอายุการทำงานของแอปพลิเคชันก็เพียงพอ
 
-**Q: ความแตกต่างระหว่างส่วนขยายไฟล์และรูปแบบไฟล์จริงคืออะไร?**  
-A: ส่วนขยายเป็นการตั้งชื่อเท่านั้น; โครงสร้างภายในของไฟล์กำหนดรูปแบบที่แท้จริง GroupDocs ตรวจสอบเนื้อหา ไม่ใช่แค่ชื่อไฟล์  
+**Q: Can I extend support for additional file formats?**  
+A: การขยายการรองรับไฟล์เพิ่มเติมโดยตรงทำไม่ได้; คุณต้องแปลงไฟล์ที่ไม่รองรับเป็นรูปแบบที่รองรับก่อนส่งให้ GroupDocs
 
-**Q: ฉันจะจัดการไฟล์ที่ไม่มีหรือมีส่วนขยายไม่ถูกต้องอย่างไร?**  
-A: ผสานตัวตรวจสอบกับเครื่องมือตรวจจับตามเนื้อหาเช่น Apache Tika เพื่อสรุป MIME type ที่ถูกต้อง  
+**Q: What's the difference between file extension and actual file format?**  
+A: ส่วนขยายเป็นการตั้งชื่อตามข้อตกลง; โครงสร้างภายในของไฟล์กำหนดรูปแบบที่แท้จริงของมัน GroupDocs ตรวจสอบเนื้อหา ไม่ใช่แค่ชื่อไฟล์
 
-**Q: มีความแตกต่างด้านประสิทธิภาพระหว่างรูปแบบไฟล์หรือไม่?**  
-A: มี. ไฟล์ข้อความง่ายประมวลผลเร็วกว่าไฟล์ PowerPoint ขนาดใหญ่ ควรพิจารณาขีดจำกัดขนาดและเวลา timeout สำหรับรูปแบบที่หนัก  
+**Q: How do I handle files with missing or incorrect extensions?**  
+A: จับคู่ validator กับตัวตรวจจับตามเนื้อหาเช่น Apache Tika เพื่อสรุป MIME type ที่ถูกต้อง
+
+**Q: Is there a performance difference between formats?**  
+A: ใช่ ไฟล์ข้อความง่ายประมวลผลเร็วกว่าไฟล์ PowerPoint ขนาดใหญ่ ควรพิจารณาขีดจำกัดขนาดและ timeout สำหรับรูปแบบที่หนัก
 
 ## แหล่งข้อมูลเพิ่มเติม
-- [เอกสาร GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)
-- [คู่มืออ้างอิง API](https://reference.groupdocs.com/annotation/java/)
-- [ดาวน์โหลดเวอร์ชันล่าสุด](https://releases.groupdocs.com/annotation/java/)
-- [ซื้อไลเซนส์](https://purchase.groupdocs.com/buy)
-- [เริ่มทดลองใช้ฟรี](https://releases.groupdocs.com/annotation/java/)
-- [ขอไลเซนส์ชั่วคราว](https://purchase.groupdocs.com/temporary-license/)
-- [ฟอรั่มสนับสนุนชุมชน](https://forum.groupdocs.com/c/annotation/)
+
+- [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)
+- [Purchase License](https://purchase.groupdocs.com/buy)
+- [Start Free Trial](https://releases.groupdocs.com/annotation/java/)
+- [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**อัปเดตล่าสุด:** 2025-12-29  
-**ทดสอบกับ:** GroupDocs.Annotation 25.2 for Java  
+**อัปเดตล่าสุด:** 2026-03-01  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.2 for Java  
 **ผู้เขียน:** GroupDocs

@@ -1,20 +1,20 @@
 ---
-title: "How to Extract Metadata from Documents in Java – Complete Developer Guide"
+title: "Validate File Type Java & Extract Metadata using GroupDocs"
 linktitle: "Document Information Tutorials"
 description: "Learn how to extract metadata from documents in Java using GroupDocs.Annotation. This guide covers how to validate file type Java, get page count, detect file format Java, and retrieve creation dates."
 keywords: "java document metadata extraction, java document information api, extract document properties java, java file format detection, document analysis java"
 weight: 12
 url: "/java/document-information/"
-date: "2025-12-23"
-lastmod: "2025-12-23"
+date: "2026-03-01"
+lastmod: "2026-03-01"
 categories: ["Java Development"]
 tags: ["document-processing", "metadata-extraction", "java-api", "file-analysis"]
 type: docs
 ---
 
-# How to Extract Metadata from Documents in Java
+# Validate File Type Java & Extract Document Metadata
 
-Ever needed to know a document's page count before processing it? Or check if a file format is supported by your application? You're in the right place. This comprehensive guide shows you **how to extract metadata** and information using GroupDocs.Annotation for Java – making your document processing workflows smarter and more efficient.
+Ever needed to know a document's page count before processing it? Or check if a file format is supported by your application? **Validating file type Java** early can save you time and resources. This comprehensive guide shows you how to extract metadata and information using GroupDocs.Annotation for Java – making your document processing workflows smarter and more efficient.
 
 ## Quick Answers
 - **What is the primary purpose of metadata extraction?** It lets you gather file information (type, pages, size) before heavy processing.  
@@ -32,7 +32,7 @@ Metadata extraction is the process of programmatically reading a document’s bu
 - **Detect file format Java** to apply format‑specific logic.  
 - Provide users with accurate information (e.g., “Your PDF has 12 pages”).  
 
-## How to Extract Metadata from Documents Using GroupDocs.Annotation
+## How to Validate File Type Java and Extract Metadata from Documents Using GroupDocs.Annotation
 
 GroupDocs.Annotation offers a straightforward `DocumentInfo` class that returns all relevant properties in a single call. Below is the typical workflow:
 
@@ -41,6 +41,30 @@ GroupDocs.Annotation offers a straightforward `DocumentInfo` class that returns 
 3. **Read properties** such as `getFileType()`, `getPageCount()`, `getFileSize()`, and `getCreatedDate()`.
 
 > **Pro tip:** Cache the `DocumentInfo` object if you need to access the same document multiple times; this avoids redundant I/O.
+
+### How to Perform File Type Validation Java
+
+Use the `Annotation.isSupported(filePath)` method or compare the file’s extension against the list returned by `Annotation.getSupportedFileExtensions()`. This ensures you only process files your application can handle.
+
+### How to Read Document Properties
+
+The `DocumentInfo` object exposes getters for common properties:
+
+- `getFileType()` – returns the detected format (e.g., PDF, DOCX).  
+- `getFileSize()` – size in bytes.  
+- `getCreatedDate()` – creation timestamp (may be `null` if not available).  
+
+### How to Detect File Format Java
+
+If you need to know the exact format beyond the file extension, call `Annotation.getFileFormat(filePath)`. This inspects the file header and returns a reliable format identifier.
+
+### How to Extract PDF Page Count
+
+For PDFs, `DocumentInfo.getPageCount()` reads only the necessary header information, so you get the page count without loading the entire document into memory.
+
+### How to Get Document Page Count
+
+The same `getPageCount()` method works for all supported formats (DOCX, PPTX, XLSX, etc.), giving you a unified way to retrieve the number of pages or slides.
 
 ## Available Tutorials
 
@@ -131,7 +155,7 @@ A: Extract metadata first, cache the result, and consider processing the documen
 
 ---
 
-**Last Updated:** 2025-12-23  
+**Last Updated:** 2026-03-01  
 **Tested With:** GroupDocs.Annotation for Java 23.12  
 **Author:** GroupDocs  
 
