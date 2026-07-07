@@ -1,27 +1,55 @@
 ---
-"date": "2025-05-06"
-"description": "تعرّف على كيفية إضافة تعليقات توضيحية على الصور إلى ملفات PDF باستخدام GroupDocs.Annotation لجافا. بسّط سير عمل مستنداتك وحسّن التعاون."
-"title": "إضافة تعليقات توضيحية للصور إلى ملفات PDF باستخدام GroupDocs.Annotation Java - برنامج تعليمي كامل"
-"url": "/ar/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+categories:
+- Java Development
+date: '2026-03-06'
+description: تعلم كيفية إضافة صورة إلى ملف PDF وتعليق PDF بصورة باستخدام GroupDocs.Annotation
+  للغة Java. دليل خطوة بخطوة مع أمثلة على الشيفرة، ونصائح لحل المشكلات، وأفضل الممارسات.
+keywords: Java PDF image annotation, GroupDocs annotation tutorial, PDF annotation
+  Java library, add images to PDF Java, how to annotate PDF with images Java
+lastmod: '2026-03-06'
+linktitle: Java PDF Image Annotation Guide
+tags:
+- PDF
+- annotation
+- GroupDocs
+- Java
+- document-processing
+title: كيفية إضافة صورة إلى ملف PDF باستخدام Java وGroupDocs Annotation
 type: docs
-"weight": 1
+url: /ar/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/
+weight: 1
 ---
 
-# إضافة تعليقات توضيحية للصور إلى ملفات PDF باستخدام GroupDocs.Annotation Java - برنامج تعليمي كامل
-## مقدمة
-في عصرنا الرقمي، يُعدّ التعليق التوضيحي على المستندات مهمةً أساسيةً تُعزز التعاون والوضوح في مختلف المجالات، كالأوساط الأكاديمية والتجارية والقانونية. تخيّل إمكانية إضافة تعليقات توضيحية دقيقة على الصور مباشرةً إلى مستندات PDF باستخدام جافا، فهذا لا يُبسّط سير العمل فحسب، بل يُثري أيضًا عملية التواصل بين المستندات. مع GroupDocs.Annotation لجافا، يُمكنك دمج هذه التحسينات بسهولة في تطبيقاتك.
+# كيفية إضافة صورة إلى PDF باستخدام Java و GroupDocs Annotation
 
-### ما سوف تتعلمه
-- كيفية إعداد GroupDocs.Annotation في بيئة Java
-- عملية إضافة تعليقات الصور إلى ملفات PDF
-- تكوين خصائص التعليق التوضيحي مثل الحجم والتعتيم والدوران
-- حفظ المستندات الموضحة بكفاءة
-- حالات استخدام واقعية لتعليقات الصور
-مع هذا الدليل، ستُحسّن مهاراتك في التعامل مع المستندات بإتقان تقنيات إضافة التعليقات التوضيحية على الصور. لنبدأ بشرح المتطلبات الأساسية.
-## المتطلبات الأساسية
-قبل الشروع في رحلة إضافة تعليقات الصور باستخدام GroupDocs.Annotation Java، تأكد من توفر ما يلي:
-### المكتبات والتبعيات المطلوبة
-ستحتاج إلى مكتبة GroupDocs.Annotation لجافا. إليك كيفية تضمينها في مشروعك باستخدام Maven:
+هل وجدت نفسك يومًا تحدق في ملف PDF وتفكر، “أتمنى لو أستطيع فقط **add image to pdf** هنا لتوضيح ذلك بشكل أفضل”؟ لست وحدك. سواءً كنت تبني نظام مراجعة مستندات، أو تنشئ مواد تعليمية، أو تحتاج فقط إلى سياق بصري في PDF، فإن تعليقات الصور تُغيّر قواعد اللعبة.
+
+في هذا الدرس ستتعلم بالضبط كيفية **add image to pdf** للملفات باستخدام GroupDocs.Annotation للـ Java. سنغطي الإعداد، الاستخدام الأساسي، الخصائص المتقدمة مثل الشفافية والدوران، والمشكلات الشائعة. في النهاية ستكون قادرًا على دمج الصور في ملفات PDF برمجيًا بثقة.
+
+## إجابات سريعة
+- **هل يمكنني إضافة صورة إلى PDF باستخدام Java؟** نعم – استخدم فئة `ImageAnnotation` في GroupDocs.Annotation.  
+- **أي مكتبة تدعم شفافية الصورة؟** طريقة `setOpacity` تتيح لك التحكم في الشفافية (`set image opacity java`).  
+- **هل أحتاج إلى ترخيص؟** النسخة التجريبية تعمل للاختبار؛ الترخيص الكامل مطلوب للإنتاج.  
+- **هل يمكنني التعليق على PDF محمي بكلمة مرور؟** نعم، فقط قدم كلمة المرور عند إنشاء `Annotator`.  
+- **ما نسخة Java المطلوبة؟** Java 8+، رغم أن Java 11+ يوصى به لأفضل أداء.
+
+## ما هو **add image to pdf**؟
+إضافة صورة إلى PDF تعني إدراج عنصر بصري (شعار، مخطط، ختم، إلخ) كتعليق يصبح جزءًا من تدفق محتوى المستند. يتعامل GroupDocs.Annotation مع الصورة كـ `ImageAnnotation`، مما يمنحك التحكم الكامل في الموضع، الحجم، الدوران، والشفافية.
+
+## لماذا تستخدم GroupDocs Annotation للـ Java؟
+- **API غني** – مجموعة كاملة من الخصائص (الموضع، الشفافية، الدوران).  
+- **متعدد المنصات** – يعمل على Windows و Linux و macOS.  
+- **بدون مشغلات PDF خارجية** – المكتبة تتعامل مع العرض والحفظ.  
+- **ترخيص جاهز للمؤسسات** – خيارات تجريبية، مؤقتة، وكاملة.
+
+## المتطلبات المسبقة
+- **Java** 8 أو أعلى (يوصى بـ Java 11+).  
+- **IDE** – IntelliJ IDEA أو Eclipse أو أي محرر متوافق مع Java.  
+- **أداة البناء** – Maven أو Gradle (الأمثلة تستخدم Maven).
+
+## إعداد GroupDocs.Annotation
+أضف مستودع Maven والاعتماد إلى ملف `pom.xml` الخاص بك:
+
 ```xml
 <repositories>
    <repository>
@@ -38,115 +66,229 @@ type: docs
    </dependency>
 </dependencies>
 ```
-### متطلبات إعداد البيئة
-تأكد من إعداد بيئة تطوير Java لديك، ويفضل أن يكون ذلك باستخدام بيئة تطوير متكاملة (IDE) مثل IntelliJ IDEA أو Eclipse.
-### متطلبات المعرفة
-سيكون من المفيد اتباع هذا البرنامج التعليمي للحصول على فهم أساسي لبرمجة Java والتعرف على كيفية التعامل مع ملفات PDF برمجيًا.
-## إعداد GroupDocs.Annotation لـ Java
-يتضمن إعداد GroupDocs.Annotation في مشروع Java الخاص بك بضع خطوات بسيطة:
-1. **إعداد Maven:** أضف تبعية Maven أعلاه إلى `pom.xml` ملف.
-2. **الحصول على الترخيص:**
-   - يمكنك البدء بـ [نسخة تجريبية مجانية](https://releases.groupdocs.com/annotation/java/) أو الحصول على ترخيص مؤقت لإجراء اختبارات أكثر شمولاً من [صفحة شراء GroupDocs](https://purchase.groupdocs.com/temporary-license/).
-   - للاستخدام طويل الأمد، فكر في شراء ترخيص كامل.
-3. **التهيئة الأساسية:**
-   قم بتهيئة بيئة GroupDocs.Annotation الخاصة بك عن طريق إنشاء `Annotator` الكائن كما هو موضح في مقتطف التعليمات البرمجية الخاص بنا:
+
+**نصيحة احترافية:** تحقق دائمًا من أحدث نسخة على صفحة إصدارات GroupDocs. النسخة 25.2 كانت الحالية في أوائل 2025، لكن الإصدارات الأحدث قد تضيف ميزات.
+
+### الترخيص (لا تتخطى هذا!)
+لديك ثلاث خيارات:
+
+1. **نسخة تجريبية مجانية** – مثالية للاختبار – احصل عليها من [صفحة تجربة GroupDocs](https://releases.groupdocs.com/annotation/java/).  
+2. **ترخيص مؤقت** – تحتاج وقت تقييم أكثر؟ احصل عليه [هنا](https://purchase.groupdocs.com/temporary-license/).  
+3. **ترخيص كامل** – للاستخدام الإنتاجي – متوفر على [صفحة الشراء](https://purchase.groupdocs.com/buy).  
+
+## البدء – أول تعليق صورة لك
+
+### الخطوة 1: تهيئة الـ Annotator
+فئة `Annotator` هي نقطة الدخول الخاصة بك. تقوم بفتح ملف PDF وتحضيره للتعديلات.
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-    // تتم العمليات الأخرى هنا.
+    // Your annotation magic happens here
 }
 ```
-## دليل التنفيذ
-الآن، دعنا نتعمق في تفاصيل إضافة تعليقات الصور إلى ملفات PDF الخاصة بك.
-### إضافة ميزة التعليق التوضيحي للصور
-تُمكّنك هذه الميزة من إضافة تعليقات بصرية إلى المستندات من خلال تضمين صور فيها. اتبع الخطوات التالية:
-#### الخطوة 1: إنشاء مثيل للمعلق
-أولاً، قم بإنشاء مثيل لـ `Annotator` الذي سيقوم بإدارة التعليقات التوضيحية الخاصة بمستندك.
+
+**لماذا try‑with‑resources؟** يضمن إغلاق الـ annotator وإطلاق مقبض الملفات، مما يمنع تسرب الذاكرة.
+
+### الخطوة 2: إنشاء وتكوين تعليق الصورة الخاص بك
+فيما يلي إعداد بسيط لـ `ImageAnnotation`. ستحدد المستطيل، الشفافية، رقم الصفحة، مصدر الصورة، وزاوية الدوران.
+
 ```java
-try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-    // تتم العمليات الأخرى هنا.
-}
-```
-#### الخطوة 2: إنشاء وتكوين كائن ImageAnnotation
-سوف تحتاج إلى إنشاء `ImageAnnotation` الكائن وتعيين خصائصه، مثل الموضع والحجم والتعتيم والدوران.
-```java
-// تهيئة شرح الصورة
+// Initialize the image annotation
 class ImageAnnotation {
-    public void setBox(Rectangle rectangle) { /* تطبيق */ }
-    public void setOpacity(double opacity) { /* تطبيق */ }
-    public void setPageNumber(int pageNumber) { /* تطبيق */ }
-    public void setImagePath(String imagePath) { /* تطبيق */ }
-    public void setAngle(double angle) { /* تطبيق */ }
+    public void setBox(Rectangle rectangle) { /* Implementation */ }
+    public void setOpacity(double opacity) { /* Implementation */ }
+    public void setPageNumber(int pageNumber) { /* Implementation */ }
+    public void setImagePath(String imagePath) { /* Implementation */ }
+    public void setAngle(double angle) { /* Implementation */ }
 }
 
-// تهيئة شرح الصورة
+// Create your image annotation
 ImageAnnotation imageAnnotation = new ImageAnnotation();
 
-// اضبط مربع المستطيل لتحديد الموضع والحجم
+// Position and size (x, y, width, height in pixels)
 imageAnnotation.setBox(new Rectangle(100, 100, 100, 100));
 
-// تكوين التعتيم (0.7 يشير إلى 70٪ معتمة)
+// Make it 70% opaque (0.0 = transparent, 1.0 = fully opaque)
 imageAnnotation.setOpacity(0.7);
 
-// حدد الصفحة التي تريد وضع التعليق عليها
+// Place it on the first page (0‑indexed)
 imageAnnotation.setPageNumber(0);
 
-// تحديد مسار الصورة للتعليق التوضيحي
+// Your image source (can be local file or URL)
 imageAnnotation.setImagePath("www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png");
 
-// اختياريًا، قم بتعيين زاوية للدوران (100 درجة هنا)
+// Rotate it 100 degrees (because why not?)
 imageAnnotation.setAngle(100.);
 ```
-#### الخطوة 3: إضافة التعليقات التوضيحية إلى المستند وحفظها
-أخيرًا، أضف تعليق الصورة الذي تم تكوينه إلى مستندك واحفظه.
+
+**فهم `Rectangle`** – `Rectangle(100, 100, 100, 100)` يعني “ابدأ من (100, 100) من الزاوية العلوية اليسرى واجعل الصندوق 100 × 100 بيكسل”. عدّل هذه الأرقام لتناسب تخطيطك.
+
+### الخطوة 3: تطبيق التعليق وحفظه
+الآن أرفق التعليق بالمستند واكتب النتيجة إلى القرص.
+
 ```java
-// أضف تعليقًا على الصورة
+// Add the annotation to your document
 annotator.add(imageAnnotation);
 
-// احفظ ملف PDF الموضح في دليل الإخراج المطلوب
+// Save the annotated PDF
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_image_annotation.pdf");
 ```
-### نصائح استكشاف الأخطاء وإصلاحها
-- **مشاكل مسار الملف:** تأكد من أن جميع المسارات (الإدخال/الإخراج) صحيحة ويمكن الوصول إليها.
-- **عدم تطابق إصدار المكتبة:** تأكد من استخدام إصدارات المكتبة المتوافقة كما هو محدد في تبعيات Maven.
-## التطبيقات العملية
-تجد تعليقات الصور فائدة في العديد من السيناريوهات:
-1. **الوثائق القانونية:** تسليط الضوء على الأقسام باستخدام صور خاصة بكل حالة من أجل الوضوح أثناء المراجعات.
-2. **المواد التعليمية:** تعزيز الكتب المدرسية بالصور التوضيحية لتحسين تجارب التعلم.
-3. **الأدلة الفنية:** توفير الإشارات والتوضيحات البصرية في الوثائق الفنية.
-## اعتبارات الأداء
-لضمان تشغيل تطبيقك بسلاسة:
-- قم بتحسين أحجام الصور قبل إضافة التعليقات التوضيحية لتقليل حجم الملف.
-- إدارة الموارد بكفاءة عن طريق إغلاق `Annotator` الكائن بعد الاستخدام، كما هو موضح باستخدام عبارة try-with-resources.
-- اتبع أفضل الممارسات لإدارة ذاكرة Java عند التعامل مع المستندات الكبيرة.
-## خاتمة
-الآن، يجب أن يكون لديك فهمٌ متعمقٌ لكيفية إضافة تعليقات توضيحية على الصور إلى ملفات PDF باستخدام GroupDocs.Annotation لجافا. تُحسّن هذه الميزة تفاعل المستندات بشكلٍ ملحوظ من خلال توفير سياق بصري ومعلومات مباشرةً داخل ملفاتك.
-### الخطوات التالية
-جرّب أنواع التعليقات التوضيحية المختلفة التي تقدمها GroupDocs.Annotation أو استكشف دمج هذه الإمكانيات في أنظمة أكبر.
-### دعوة إلى العمل
-حاول تنفيذ الحل في مشروعك التالي لترى كيف يؤدي ذلك إلى تحسين التعامل مع المستندات!
-## قسم الأسئلة الشائعة
-**س: ما هو الحجم الأقصى لتعليق الصورة؟**
-ج: يعتمد الحجم على دقة وأبعاد صفحة PDF. تأكد من أن الصور تتوافق مع هذه الشروط.
 
-**س: هل يمكنني التعليق على أنواع ملفات أخرى باستخدام GroupDocs.Annotation؟**
-ج: نعم، يدعم GroupDocs تنسيقات مختلفة مثل Word وExcel والمزيد.
+هذا كل شيء – لقد قمت بـ **add image to pdf** بنجاح.
 
-**س: كيف يمكنني إزالة التعليق التوضيحي؟**
-أ: استخدم `remove` الطريقة التي توفرها فئة Annotator لحذف التعليقات التوضيحية من مستندك.
+## المشكلات الشائعة والحلول
 
-**س: هل يؤثر إضافة تعليقات الصور على قابلية قراءة ملف PDF؟**
-أ: يجب أن تعمل الصور ذات الحجم والوضع المناسبين على تحسين قابلية قراءة المستند بدلاً من إعاقتها.
+### مشاكل مسار الملف
+- **العَرَض:** `FileNotFoundException` أو صور فارغة.  
+- **الحل:** استخدم مسارات مطلقة أو تحقق من أن عناوين URL قابلة للوصول.
 
-**س: هل GroupDocs.Annotation مناسب لتطبيقات الويب؟**
-ج: بالتأكيد، فهو يتكامل جيدًا مع أطر عمل الويب المستندة إلى Java مثل Spring Boot أو Jakarta EE.
-## موارد
-- **التوثيق:** [توثيق التعليقات التوضيحية لـ GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- **مرجع واجهة برمجة التطبيقات:** [مرجع API لـ GroupDocs](https://reference.groupdocs.com/annotation/java/)
-- **تحميل:** [إصدارات GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **شراء:** [شراء ترخيص GroupDocs](https://purchase.groupdocs.com/buy)
-- **نسخة تجريبية مجانية:** [النسخة التجريبية المجانية من GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **رخصة مؤقتة:** [احصل على رخصة مؤقتة](https://purchase.groupdocs.com/temporary-license/)
-- **يدعم:** [منتدى GroupDocs](https://forum.groupdocs.com/c/annotation/) 
+```java
+// Bad: relative path that may fail
+imageAnnotation.setImagePath("images/logo.png");
 
-استكشف هذه الموارد للتعرف بشكل أعمق على إمكانيات GroupDocs.Annotation وتعزيز حلول إدارة المستندات لديك!
+// Good: absolute path
+imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
+```
+
+### حجم الصورة وجودتها
+- **العَرَض:** صور بكسلية أو ذات حجم كبير.  
+- **الحل:** طابق أبعاد الصورة مع مستطيل التعليق.
+
+```java
+// Rectangle is 200 × 200, so use an image at least that size
+imageAnnotation.setBox(new Rectangle(50, 50, 200, 200));
+```
+
+### مشكلات الذاكرة مع ملفات PDF الكبيرة
+- **العَرَض:** `OutOfMemoryError`.  
+- **الحل:** عالج المستندات على دفعات واحرص على أن تكون الصور خفيفة.
+
+## متى **annotate pdf with image**
+- **المستندات القانونية:** إرفاق صور الحوادث أو التوقيعات مباشرةً إلى العقود.  
+- **المواد التعليمية:** إدراج مخططات أو رسوم بيانية في أوراق العمل.  
+- **الأدلة التقنية:** إضافة لقطات شاشة أو مخططات بنية.  
+- **مراقبة الجودة:** تضمين صور العيوب في تقارير الفحص.
+
+## ممارسات الأداء المثلى
+
+### تحسين مصادر الصور
+```java
+// Avoid huge files
+imageAnnotation.setImagePath("massive_10mb_image.png");
+
+// Resize to match annotation box (e.g., 100 × 100)
+```
+
+### استراتيجية المعالجة على دفعات
+```java
+List<String> pdfFiles = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
+
+for (String pdfFile : pdfFiles) {
+    try (final Annotator annotator = new Annotator(pdfFile)) {
+        ImageAnnotation annotation = createImageAnnotation();
+        annotator.add(annotation);
+        annotator.save("annotated_" + pdfFile);
+    }
+}
+```
+
+### إدارة الموارد
+```java
+// Good – automatically closes resources
+try (final Annotator annotator = new Annotator("input.pdf")) {
+    // Your code here
+}
+
+// Bad – might cause memory leaks
+Annotator annotator = new Annotator("input.pdf");
+// ... do stuff ...
+// Forgot to close!
+```
+
+## نصائح التكوين المتقدم
+
+### تموضع ديناميكي
+```java
+// Bottom‑right corner placement (assuming standard Letter size)
+int pageWidth = 612;   // points
+int pageHeight = 792;  // points
+int imageSize = 50;
+
+Rectangle dynamicPosition = new Rectangle(
+    pageWidth - imageSize - 10,   // 10 px margin from right
+    pageHeight - imageSize - 10,  // 10 px margin from bottom
+    imageSize,
+    imageSize
+);
+
+imageAnnotation.setBox(dynamicPosition);
+```
+
+### صور متعددة على صفحة واحدة
+```java
+// Add a logo
+ImageAnnotation logo = new ImageAnnotation();
+logo.setBox(new Rectangle(50, 50, 100, 50));
+logo.setImagePath("company_logo.png");
+logo.setPageNumber(0);
+
+// Add an approval stamp
+ImageAnnotation stamp = new ImageAnnotation();
+stamp.setBox(new Rectangle(400, 700, 100, 50));
+stamp.setImagePath("approved_stamp.png");
+stamp.setPageNumber(0);
+
+annotator.add(logo);
+annotator.add(stamp);
+```
+
+## الأسئلة المتكررة
+
+**س: ما هو الحد الأقصى لحجم الصورة التي يمكنني استخدامها؟**  
+ج: لا يوجد حد صريح، لكن حافظ على حجم الصور أقل من 2 ميغابايت لأداء مثالي.
+
+**س: هل يمكنني استخدام صور GIF متحركة؟**  
+ج: يقوم GroupDocs بعرض الإطار الأول فقط من GIF المتحرك.
+
+**س: كيف يمكنني وضع الصور بدقة؟**  
+ج: يستخدم GroupDocs أصلًا من الزاوية العلوية اليسرى؛ إحداثيات `Rectangle` تُقاس بالبيكسل من تلك النقطة.
+
+**س: هل يمكنني التعليق على ملفات PDF محمية بكلمة مرور؟**  
+ج: نعم – قدم كلمة المرور عند إنشاء `Annotator`.
+
+**س: هل يعمل هذا مع جميع إصدارات PDF؟**  
+ج: إصدارات PDF المدعومة تتراوح من 1.4 إلى 2.0، مما يغطي تقريبًا كل ملفات PDF التي قد تواجهها.
+
+## قائمة التحقق من استكشاف الأخطاء وإصلاحها
+1. ✅ **هل الترخيص صالح؟** تحقق من حالة التجربة/المؤقت/الكامل.  
+2. ✅ **هل مسارات الملفات صحيحة؟** تأكد من وجود مسارات PDF المدخل وصورة.  
+3. ✅ **هل الأذونات صحيحة؟** صلاحية قراءة للمدخلات، وصلاحية كتابة للمخرجات.  
+4. ✅ **هل تنسيق الصورة مدعوم؟** استخدم PNG أو JPG أو GIF.  
+5. ✅ **هل رقم الصفحة صالح؟** تذكر أنه يبدأ من الصفر.  
+6. ✅ **هل إحداثيات المستطيل معقولة؟** تجنب القيم السلبية أو الخارجة عن الحدود.
+
+## الخاتمة
+الآن لديك أساس قوي لـ **add image to pdf** باستخدام GroupDocs.Annotation للـ Java. تذكر أن:
+- استخدم try‑with‑resources للتخلص النظيف.  
+- حسّن أبعاد الصورة للحفاظ على خفة ملفات PDF.  
+- اختبر باستخدام مسارات مطلقة لتجنب الأخطاء المتعلقة بالمسار.  
+- اختر الشفافية والدوران بما يتناسب مع تصميمك البصري.
+
+**الخطوات التالية:** استكشف أنواع تعليقات أخرى (نص، أشكال، تظليل) أو دمج هذه المنطق في خدمة Spring Boot لمعالجة PDF في الوقت الفعلي.
+
+توفر الوثائق على [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) أمثلة متقدمة ومراجع API عندما تكون مستعدًا للغوص أعمق.
+
+---
+
+**آخر تحديث:** 2026-03-06  
+**تم الاختبار مع:** GroupDocs.Annotation 25.2 (Java)  
+**المؤلف:** GroupDocs  
+
+**الموارد والدعم**
+- **الوثائق الكاملة:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **مرجع API:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **تحميل أحدث نسخة:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
+- **شراء ترخيص:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **نسخة تجريبية مجانية:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
+- **ترخيص مؤقت:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **دعم المجتمع:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)

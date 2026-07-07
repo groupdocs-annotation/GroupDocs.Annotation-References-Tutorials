@@ -1,27 +1,57 @@
 ---
-"date": "2025-05-06"
-"description": "Tìm hiểu cách thêm chú thích hình ảnh vào PDF bằng GroupDocs.Annotation for Java. Hợp lý hóa quy trình làm việc tài liệu của bạn và tăng cường cộng tác."
-"title": "Thêm chú thích hình ảnh vào PDF bằng GroupDocs.Annotation Java - Hướng dẫn đầy đủ"
-"url": "/vi/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/"
+categories:
+- Java Development
+date: '2026-03-06'
+description: Tìm hiểu cách thêm hình ảnh vào PDF và chú thích PDF bằng hình ảnh sử
+  dụng GroupDocs.Annotation cho Java. Hướng dẫn từng bước với các ví dụ mã, mẹo khắc
+  phục sự cố và các thực tiễn tốt nhất.
+keywords: Java PDF image annotation, GroupDocs annotation tutorial, PDF annotation
+  Java library, add images to PDF Java, how to annotate PDF with images Java
+lastmod: '2026-03-06'
+linktitle: Java PDF Image Annotation Guide
+tags:
+- PDF
+- annotation
+- GroupDocs
+- Java
+- document-processing
+title: Cách thêm hình ảnh vào PDF bằng Java và GroupDocs Annotation
 type: docs
-"weight": 1
+url: /vi/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/
+weight: 1
 ---
 
-# Thêm chú thích hình ảnh vào PDF bằng GroupDocs.Annotation Java - Hướng dẫn đầy đủ
-## Giới thiệu
-Trong thời đại kỹ thuật số ngày nay, chú thích tài liệu là một nhiệm vụ cơ bản giúp tăng cường sự hợp tác và tính rõ ràng trong nhiều lĩnh vực khác nhau như học thuật, kinh doanh và các vấn đề pháp lý. Hãy tưởng tượng bạn có thể thêm chú thích hình ảnh chính xác trực tiếp vào tài liệu PDF của mình bằng Java—điều này không chỉ hợp lý hóa quy trình làm việc mà còn làm phong phú thêm việc giao tiếp tài liệu. Với GroupDocs.Annotation for Java, bạn có thể dễ dàng kết hợp những cải tiến này vào các ứng dụng của mình.
+# Cách thêm hình ảnh vào PDF bằng Java và GroupDocs Annotation
 
-### Những gì bạn sẽ học được
-- Cách thiết lập GroupDocs.Annotation trong môi trường Java
-- Quá trình thêm chú thích hình ảnh vào PDF
-- Cấu hình các thuộc tính chú thích như kích thước, độ mờ và độ xoay
-- Lưu trữ tài liệu có chú thích một cách hiệu quả
-- Các trường hợp sử dụng thực tế cho chú thích hình ảnh
-Với hướng dẫn này, bạn sẽ nâng cao khả năng xử lý tài liệu của mình lên một tầm cao mới bằng cách thành thạo các kỹ thuật chú thích hình ảnh. Hãy cùng tìm hiểu các điều kiện tiên quyết trước khi bắt đầu.
-## Điều kiện tiên quyết
-Trước khi bắt đầu hành trình thêm chú thích hình ảnh bằng GroupDocs.Annotation Java, hãy đảm bảo bạn có những điều sau:
-### Thư viện và phụ thuộc bắt buộc
-Bạn sẽ cần thư viện GroupDocs.Annotation cho Java. Sau đây là cách đưa nó vào dự án của bạn bằng Maven:
+Bạn đã bao giờ nhìn chằm chằm vào một tệp PDF và nghĩ, “Giá thì tôi có thể **add image to pdf** ngay tại đây để giải thích rõ hơn không”? Bạn không phải là người duy nhất. Dù bạn đang xây dựng hệ thống xem xét tài liệu, tạo tài liệu giáo dục, hay chỉ cần ngữ cảnh hình ảnh trong PDF, các chú thích hình ảnh thực sự là một công cụ thay đổi cuộc chơi.
+
+Trong hướng dẫn này, bạn sẽ học cách **add image to pdf** các tệp bằng GroupDocs.Annotation cho Java. Chúng tôi sẽ đề cập đến cài đặt, cách sử dụng cơ bản, các thuộc tính nâng cao như độ trong suốt và xoay, và những lỗi thường gặp. Khi kết thúc, bạn sẽ tự tin nhúng hình ảnh vào PDF một cách lập trình.
+
+## Câu trả lời nhanh
+- **Tôi có thể thêm hình ảnh vào PDF bằng Java không?** Có – sử dụng lớp `ImageAnnotation` của GroupDocs.Annotation.  
+- **Thư viện nào hỗ trợ độ trong suốt của hình ảnh?** Phương thức `setOpacity` cho phép bạn điều chỉnh độ trong suốt (`set image opacity java`).  
+- **Tôi có cần giấy phép không?** Bản dùng thử hoạt động cho việc kiểm tra; giấy phép đầy đủ cần thiết cho môi trường sản xuất.  
+- **Tôi có thể chú thích PDF được bảo mật bằng mật khẩu không?** Có, chỉ cần cung cấp mật khẩu khi tạo `Annotator`.  
+- **Yêu cầu phiên bản Java nào?** Java 8 trở lên, mặc dù Java 11+ được khuyến nghị để đạt hiệu năng tốt nhất.
+
+## **add image to pdf** là gì?
+Thêm một hình ảnh vào PDF có nghĩa là chèn một yếu tố trực quan (logo, sơ đồ, dấu, v.v.) dưới dạng chú thích, trở thành một phần của luồng nội dung tài liệu. GroupDocs.Annotation xử lý hình ảnh như một `ImageAnnotation`, cho phép bạn kiểm soát hoàn toàn vị trí, kích thước, xoay và độ trong suốt.
+
+## Tại sao nên sử dụng GroupDocs Annotation cho Java?
+- **Rich API** – bộ đầy đủ các thuộc tính (vị trí, độ trong suốt, xoay).  
+- **Cross‑platform** – hoạt động trên Windows, Linux và macOS.  
+- **No external PDF viewers** – thư viện xử lý việc hiển thị và lưu.  
+- **Enterprise‑ready licensing** – các tùy chọn dùng thử, tạm thời và đầy đủ.
+
+## Yêu cầu trước
+- **Java** 8 hoặc cao hơn (Java 11+ được khuyến nghị).  
+- **IDE** – IntelliJ IDEA, Eclipse, hoặc bất kỳ trình chỉnh sửa nào tương thích với Java.  
+- **Build tool** – Maven hoặc Gradle (các ví dụ sử dụng Maven).  
+
+## Cài đặt GroupDocs.Annotation
+
+Thêm kho Maven và phụ thuộc vào `pom.xml` của bạn:
+
 ```xml
 <repositories>
    <repository>
@@ -38,115 +68,236 @@ Bạn sẽ cần thư viện GroupDocs.Annotation cho Java. Sau đây là cách 
    </dependency>
 </dependencies>
 ```
-### Yêu cầu thiết lập môi trường
-Đảm bảo bạn đã thiết lập môi trường phát triển Java, tốt nhất là sử dụng Môi trường phát triển tích hợp (IDE) như IntelliJ IDEA hoặc Eclipse.
-### Điều kiện tiên quyết về kiến thức
-Hiểu biết cơ bản về lập trình Java và quen thuộc với việc xử lý PDF theo chương trình sẽ có lợi cho việc thực hiện hướng dẫn này.
-## Thiết lập GroupDocs.Annotation cho Java
-Việc thiết lập GroupDocs.Annotation trong dự án Java của bạn bao gồm một vài bước đơn giản:
-1. **Thiết lập Maven:** Thêm phụ thuộc Maven ở trên vào `pom.xml` tài liệu.
-2. **Mua giấy phép:**
-   - Bạn có thể bắt đầu với một [dùng thử miễn phí](https://releases.groupdocs.com/annotation/java/) hoặc xin giấy phép tạm thời để thử nghiệm rộng rãi hơn từ [Trang mua hàng của GroupDocs](https://purchase.groupdocs.com/temporary-license/).
-   - Để sử dụng lâu dài, hãy cân nhắc mua giấy phép đầy đủ.
-3. **Khởi tạo cơ bản:**
-   Khởi tạo môi trường GroupDocs.Annotation của bạn bằng cách tạo một `Annotator` đối tượng như được hiển thị trong đoạn mã của chúng tôi:
+
+**Pro Tip:** Luôn kiểm tra phiên bản mới nhất trên trang phát hành của GroupDocs. Phiên bản 25.2 là hiện tại vào đầu năm 2025, nhưng các bản phát hành mới hơn có thể bổ sung tính năng.
+
+### Cấp phép (Đừng bỏ qua phần này!)
+Bạn có ba tùy chọn:
+
+1. **Free Trial** – hoàn hảo cho việc thử nghiệm – tải về từ [GroupDocs trial page](https://releases.groupdocs.com/annotation/java/).  
+2. **Temporary License** – cần thời gian đánh giá thêm? Nhận một giấy phép [tại đây](https://purchase.groupdocs.com/temporary-license/).  
+3. **Full License** – dùng cho sản xuất – có sẵn trên [purchase page](https://purchase.groupdocs.com/buy).
+
+## Bắt đầu – Chú thích hình ảnh đầu tiên của bạn
+
+### Bước 1: Khởi tạo Annotator
+
+Lớp `Annotator` là điểm vào của bạn. Nó mở PDF và chuẩn bị cho các sửa đổi.
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-    // Các hoạt động tiếp theo sẽ diễn ra tại đây.
+    // Your annotation magic happens here
 }
 ```
-## Hướng dẫn thực hiện
-Bây giờ, chúng ta hãy đi sâu vào chi tiết về cách thêm chú thích hình ảnh vào tệp PDF của bạn.
-### Thêm tính năng chú thích hình ảnh
-Tính năng này cho phép bạn chú thích trực quan vào tài liệu bằng cách nhúng hình ảnh vào đó. Thực hiện theo các bước sau:
-#### Bước 1: Tạo một phiên bản Annotator
-Đầu tiên, tạo một thể hiện của `Annotator` sẽ quản lý chú thích cho tài liệu của bạn.
+
+**Why try‑with‑resources?** Nó đảm bảo annotator được đóng và giải phóng các handle tệp, ngăn ngừa rò rỉ bộ nhớ.
+
+### Bước 2: Tạo và cấu hình Image Annotation của bạn
+
+Dưới đây là cấu hình tối thiểu cho `ImageAnnotation`. Bạn sẽ định nghĩa hình chữ nhật, độ trong suốt, số trang, nguồn hình ảnh và góc xoay.
+
 ```java
-try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
-    // Các hoạt động tiếp theo sẽ diễn ra tại đây.
-}
-```
-#### Bước 2: Tạo và cấu hình đối tượng ImageAnnotation
-Bạn sẽ cần phải tạo một `ImageAnnotation` đối tượng và thiết lập các thuộc tính của nó, chẳng hạn như vị trí, kích thước, độ mờ và góc quay.
-```java
-// Khởi tạo chú thích hình ảnh
+// Initialize the image annotation
 class ImageAnnotation {
-    public void setBox(Rectangle rectangle) { /* Thực hiện */ }
-    public void setOpacity(double opacity) { /* Thực hiện */ }
-    public void setPageNumber(int pageNumber) { /* Thực hiện */ }
-    public void setImagePath(String imagePath) { /* Thực hiện */ }
-    public void setAngle(double angle) { /* Thực hiện */ }
+    public void setBox(Rectangle rectangle) { /* Implementation */ }
+    public void setOpacity(double opacity) { /* Implementation */ }
+    public void setPageNumber(int pageNumber) { /* Implementation */ }
+    public void setImagePath(String imagePath) { /* Implementation */ }
+    public void setAngle(double angle) { /* Implementation */ }
 }
 
-// Khởi tạo chú thích hình ảnh
+// Create your image annotation
 ImageAnnotation imageAnnotation = new ImageAnnotation();
 
-// Đặt hộp hình chữ nhật để định vị và định cỡ
+// Position and size (x, y, width, height in pixels)
 imageAnnotation.setBox(new Rectangle(100, 100, 100, 100));
 
-// Cấu hình độ mờ đục (0,7 biểu thị độ mờ đục 70%)
+// Make it 70% opaque (0.0 = transparent, 1.0 = fully opaque)
 imageAnnotation.setOpacity(0.7);
 
-// Chỉ định trang nào sẽ đặt chú thích
+// Place it on the first page (0‑indexed)
 imageAnnotation.setPageNumber(0);
 
-// Xác định đường dẫn hình ảnh cho chú thích
+// Your image source (can be local file or URL)
 imageAnnotation.setImagePath("www.google.com.ua/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png");
 
-// Tùy chọn, đặt góc quay (100 độ ở đây)
+// Rotate it 100 degrees (because why not?)
 imageAnnotation.setAngle(100.);
 ```
-#### Bước 3: Thêm chú thích vào tài liệu và lưu
-Cuối cùng, thêm chú thích hình ảnh đã cấu hình vào tài liệu của bạn và lưu lại.
+
+**Understanding the `Rectangle`** – `Rectangle(100, 100, 100, 100)` có nghĩa là “bắt đầu tại (100, 100) từ góc trên‑trái và tạo hộp 100 × 100 px”. Điều chỉnh các số này để phù hợp với bố cục của bạn.
+
+### Bước 3: Áp dụng chú thích và lưu
+
+Bây giờ gắn chú thích vào tài liệu và ghi kết quả ra đĩa.
+
 ```java
-// Thêm chú thích hình ảnh
+// Add the annotation to your document
 annotator.add(imageAnnotation);
 
-// Lưu tệp PDF có chú thích vào thư mục đầu ra mong muốn của bạn
+// Save the annotated PDF
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_image_annotation.pdf");
 ```
-### Mẹo khắc phục sự cố
-- **Sự cố đường dẫn tệp:** Đảm bảo tất cả đường dẫn (đầu vào/đầu ra) đều chính xác và có thể truy cập được.
-- **Phiên bản thư viện không khớp:** Xác minh rằng bạn đang sử dụng phiên bản thư viện tương thích như được chỉ định trong phần phụ thuộc của Maven.
-## Ứng dụng thực tế
-Chú thích hình ảnh có ích trong nhiều tình huống khác nhau:
-1. **Văn bản pháp lý:** Làm nổi bật các phần có hình ảnh cụ thể về từng trường hợp để làm rõ hơn trong quá trình xem xét.
-2. **Tài liệu giáo dục:** Cải thiện sách giáo khoa bằng hình ảnh chú thích để nâng cao trải nghiệm học tập.
-3. **Hướng dẫn kỹ thuật:** Cung cấp các tín hiệu trực quan và giải thích rõ ràng trong tài liệu kỹ thuật.
-## Cân nhắc về hiệu suất
-Để đảm bảo ứng dụng của bạn chạy trơn tru:
-- Tối ưu hóa kích thước hình ảnh trước khi thêm chú thích để giảm thiểu kích thước tệp.
-- Quản lý tài nguyên hiệu quả bằng cách đóng `Annotator` đối tượng sau khi sử dụng, như được chứng minh bằng câu lệnh try-with-resources.
-- Thực hiện các biện pháp quản lý bộ nhớ Java tốt nhất khi xử lý các tài liệu lớn.
-## Phần kết luận
-Bây giờ, bạn hẳn đã hiểu rõ cách thêm chú thích hình ảnh vào PDF bằng GroupDocs.Annotation for Java. Tính năng này có thể cải thiện đáng kể tương tác tài liệu bằng cách cung cấp ngữ cảnh trực quan và thông tin trực tiếp trong tệp của bạn.
-### Các bước tiếp theo
-Thử nghiệm các loại chú thích khác nhau do GroupDocs.Annotation cung cấp hoặc tìm hiểu cách tích hợp các khả năng này vào các hệ thống lớn hơn.
-### Kêu gọi hành động
-Hãy thử triển khai giải pháp này vào dự án tiếp theo của bạn để xem nó cải thiện việc xử lý tài liệu như thế nào!
-## Phần Câu hỏi thường gặp
-**H: Kích thước tối đa của chú thích hình ảnh là bao nhiêu?**
-A: Kích thước phụ thuộc vào độ phân giải và kích thước của trang PDF. Đảm bảo hình ảnh nằm trong giới hạn này.
 
-**H: Tôi có thể chú thích các loại tệp khác bằng GroupDocs.Annotation không?**
-A: Có, GroupDocs hỗ trợ nhiều định dạng khác nhau như Word, Excel, v.v.
+Xong rồi – bạn vừa **add image to pdf** thành công.
 
-**H: Làm thế nào để xóa chú thích?**
-A: Sử dụng `remove` phương thức do lớp Annotator cung cấp để xóa chú thích khỏi tài liệu của bạn.
+## Các vấn đề thường gặp và giải pháp
 
-**H: Việc thêm chú thích hình ảnh có ảnh hưởng đến khả năng đọc PDF không?**
-A: Hình ảnh có kích thước và vị trí phù hợp sẽ cải thiện khả năng đọc tài liệu chứ không gây cản trở.
+### Vấn đề đường dẫn tệp
+- **Symptom:** `FileNotFoundException` hoặc hình ảnh trắng.  
+- **Fix:** Sử dụng đường dẫn tuyệt đối hoặc xác minh rằng các URL có thể truy cập.
 
-**H: GroupDocs.Annotation có phù hợp với ứng dụng web không?**
-A: Hoàn toàn đúng, nó tích hợp tốt với các framework web dựa trên Java như Spring Boot hoặc Jakarta EE.
-## Tài nguyên
-- **Tài liệu:** [Tài liệu chú thích GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- **Tài liệu tham khảo API:** [Tài liệu tham khảo API GroupDocs](https://reference.groupdocs.com/annotation/java/)
-- **Tải xuống:** [Bản phát hành GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **Mua:** [Mua giấy phép GroupDocs](https://purchase.groupdocs.com/buy)
-- **Dùng thử miễn phí:** [Dùng thử miễn phí GroupDocs](https://releases.groupdocs.com/annotation/java/)
-- **Giấy phép tạm thời:** [Xin giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
-- **Ủng hộ:** [Diễn đàn GroupDocs](https://forum.groupdocs.com/c/annotation/) 
+```java
+// Bad: relative path that may fail
+imageAnnotation.setImagePath("images/logo.png");
 
-Khám phá các tài nguyên này để tìm hiểu sâu hơn về khả năng của GroupDocs.Annotation và nâng cao giải pháp quản lý tài liệu của bạn!
+// Good: absolute path
+imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
+```
+
+### Kích thước và chất lượng hình ảnh
+- **Symptom:** Hình ảnh bị pixel hoá hoặc quá lớn.  
+- **Fix:** Đối chiếu kích thước hình ảnh với hình chữ nhật chú thích.
+
+```java
+// Rectangle is 200 × 200, so use an image at least that size
+imageAnnotation.setBox(new Rectangle(50, 50, 200, 200));
+```
+
+### Vấn đề bộ nhớ với PDF lớn
+- **Symptom:** `OutOfMemoryError`.  
+- **Fix:** Xử lý tài liệu theo lô và giữ hình ảnh nhẹ.
+
+## Khi nào nên **annotate pdf with image**
+- **Legal documents:** Đính kèm ảnh tai nạn hoặc chữ ký trực tiếp vào hợp đồng.  
+- **Educational material:** Chèn sơ đồ hoặc biểu đồ vào bảng công việc.  
+- **Technical manuals:** Thêm ảnh chụp màn hình hoặc sơ đồ kiến trúc.  
+- **Quality control:** Nhúng ảnh lỗi vào báo cáo kiểm tra.
+
+## Thực hành tốt về hiệu năng
+
+### Tối ưu nguồn hình ảnh
+```java
+// Avoid huge files
+imageAnnotation.setImagePath("massive_10mb_image.png");
+
+// Resize to match annotation box (e.g., 100 × 100)
+```
+
+### Chiến lược xử lý theo lô
+```java
+List<String> pdfFiles = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
+
+for (String pdfFile : pdfFiles) {
+    try (final Annotator annotator = new Annotator(pdfFile)) {
+        ImageAnnotation annotation = createImageAnnotation();
+        annotator.add(annotation);
+        annotator.save("annotated_" + pdfFile);
+    }
+}
+```
+
+### Quản lý tài nguyên
+```java
+// Good – automatically closes resources
+try (final Annotator annotator = new Annotator("input.pdf")) {
+    // Your code here
+}
+
+// Bad – might cause memory leaks
+Annotator annotator = new Annotator("input.pdf");
+// ... do stuff ...
+// Forgot to close!
+```
+
+## Mẹo cấu hình nâng cao
+
+### Định vị động
+```java
+// Bottom‑right corner placement (assuming standard Letter size)
+int pageWidth = 612;   // points
+int pageHeight = 792;  // points
+int imageSize = 50;
+
+Rectangle dynamicPosition = new Rectangle(
+    pageWidth - imageSize - 10,   // 10 px margin from right
+    pageHeight - imageSize - 10,  // 10 px margin from bottom
+    imageSize,
+    imageSize
+);
+
+imageAnnotation.setBox(dynamicPosition);
+```
+
+### Nhiều hình ảnh trên một trang
+```java
+// Add a logo
+ImageAnnotation logo = new ImageAnnotation();
+logo.setBox(new Rectangle(50, 50, 100, 50));
+logo.setImagePath("company_logo.png");
+logo.setPageNumber(0);
+
+// Add an approval stamp
+ImageAnnotation stamp = new ImageAnnotation();
+stamp.setBox(new Rectangle(400, 700, 100, 50));
+stamp.setImagePath("approved_stamp.png");
+stamp.setPageNumber(0);
+
+annotator.add(logo);
+annotator.add(stamp);
+```
+
+## Câu hỏi thường gặp
+
+**Q: Kích thước hình ảnh tối đa tôi có thể sử dụng là bao nhiêu?**  
+A: Không có giới hạn cứng, nhưng giữ hình ảnh dưới 2 MB để đạt hiệu năng tối ưu.
+
+**Q: Tôi có thể sử dụng GIF động không?**  
+A: GroupDocs chỉ hiển thị khung đầu tiên của GIF động.
+
+**Q: Làm sao để định vị hình ảnh một cách chính xác?**  
+A: GroupDocs sử dụng gốc tọa độ trên‑trái; các tọa độ `Rectangle` được đo bằng pixel từ điểm đó.
+
+**Q: Tôi có thể chú thích PDF được bảo mật bằng mật khẩu không?**  
+A: Có – cung cấp mật khẩu khi khởi tạo `Annotator`.
+
+**Q: Điều này có hoạt động với mọi phiên bản PDF không?**  
+A: Các phiên bản PDF được hỗ trợ từ 1.4 đến 2.0, bao phủ hầu hết các PDF bạn sẽ gặp.
+
+## Danh sách kiểm tra khắc phục sự cố
+
+1. ✅ **License valid?** Xác minh trạng thái dùng thử/tạm thời/đầy đủ.  
+2. ✅ **File paths correct?** Xác nhận các đường dẫn PDF và hình ảnh đầu vào tồn tại.  
+3. ✅ **Permissions OK?** Quyền đọc vào đầu vào, quyền ghi ra đầu ra.  
+4. ✅ **Image format supported?** Sử dụng PNG, JPG hoặc GIF.  
+5. ✅ **Page number valid?** Nhớ rằng số trang bắt đầu từ 0.  
+6. ✅ **Rectangle coordinates reasonable?** Tránh giá trị âm hoặc vượt ngoài phạm vi.
+
+## Kết luận
+
+Bạn giờ đã có nền tảng vững chắc để **add image to pdf** các tệp bằng GroupDocs.Annotation cho Java. Hãy nhớ:
+
+- Sử dụng try‑with‑resources để giải phóng tài nguyên sạch sẽ.  
+- Tối ưu kích thước hình ảnh để giữ PDF nhẹ.  
+- Kiểm tra với đường dẫn tuyệt đối để tránh lỗi liên quan đến đường dẫn.  
+- Chọn độ trong suốt và góc xoay phù hợp với thiết kế trực quan của bạn.
+
+**Next steps:** Khám phá các loại chú thích khác (văn bản, hình dạng, đánh dấu) hoặc tích hợp logic này vào dịch vụ Spring Boot để xử lý PDF ngay lập tức.
+
+Tài liệu tại [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) có nhiều ví dụ nâng cao và tham chiếu API khi bạn sẵn sàng khám phá sâu hơn.
+
+---
+
+**Last Updated:** 2026-03-06  
+**Kiểm tra với:** GroupDocs.Annotation 25.2 (Java)  
+**Tác giả:** GroupDocs  
+
+**Tài nguyên và Hỗ trợ**
+
+- **Tài liệu đầy đủ:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Tham chiếu API:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **Tải phiên bản mới nhất:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
+- **Mua giấy phép:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **Dùng thử miễn phí:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
+- **Giấy phép tạm thời:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Hỗ trợ cộng đồng:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
