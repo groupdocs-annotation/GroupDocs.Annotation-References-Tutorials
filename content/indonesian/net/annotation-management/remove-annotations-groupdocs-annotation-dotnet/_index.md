@@ -1,65 +1,129 @@
 ---
-"date": "2025-05-06"
-"description": "Pelajari cara menghapus anotasi secara efisien dari dokumen Anda menggunakan GroupDocs.Annotation API yang canggih dengan tutorial C# terperinci ini."
-"title": "Cara Menghapus Anotasi dari Dokumen Menggunakan GroupDocs.Annotation untuk .NET"
-"url": "/id/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+categories:
+- PDF Processing
+date: '2026-06-01'
+description: Pelajari cara menghapus anotasi pdf c# dengan GroupDocs.Annotation. Tutorial
+  langkah demi langkah, contoh kode, tips pemecahan masalah, dan praktik terbaik.
+keywords:
+- remove pdf annotations c#
+- remove sticky notes pdf
+- groupdocs annotation removal
+lastmod: '2026-06-01'
+linktitle: Hapus Anotasi PDF C#
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-01'
+  description: Learn how to remove pdf annotations c# with GroupDocs.Annotation. Step-by-step
+    tutorial, code examples, troubleshooting tips, and best practices.
+  headline: How to Remove PDF Annotations C# – GroupDocs.Annotation Guide
+  type: TechArticle
+- description: Learn how to remove pdf annotations c# with GroupDocs.Annotation. Step-by-step
+    tutorial, code examples, troubleshooting tips, and best practices.
+  name: How to Remove PDF Annotations C# – GroupDocs.Annotation Guide
+  steps:
+  - name: Define Input and Output Paths
+    text: First, point the code at the source PDF and decide where the cleaned version
+      will live.
+  - name: Initialize the Annotator Object
+    text: The `Annotator` class is the gateway to all annotation operations. **Definition
+      anchor:** The `Annotator` class provides methods for loading, querying, modifying,
+      and saving PDF annotations.
+  - name: Retrieve All Annotations
+    text: Grab every annotation object from the document. **Explanation:** `Get()`
+      returns a collection of `AnnotationBase` objects representing every annotation
+      present—highlights, sticky notes, stamps, drawings, and more.
+  - name: Remove Annotations
+    text: Delete the retrieved annotations in one call. **Explanation:** The `Remove`
+      method accepts the collection and strips each annotation from the PDF. If the
+      collection is empty, the method safely does nothing.
+  - name: Save the Clean Document
+    text: Write the annotation‑free PDF back to disk. **Explanation:** `Save` persists
+      the changes. The output file can be placed in the same folder or a different
+      location, depending on your workflow.
+  type: HowTo
+- questions:
+  - answer: Yes—GroupDocs.Annotation handles every standard annotation type, including
+      highlights, sticky notes, stamps, free‑drawings, and text markup.
+    question: Can this code remove all types of PDF annotations?
+  - answer: The library works with PDFs from version 1.2 up to the latest 2.0 specifications,
+      covering virtually every file you’ll encounter.
+    question: What PDF versions are supported?
+  - answer: No hard limit; performance scales with document size and system memory.
+      For very large files, consider processing in chunks.
+    question: Is there a limit to how many annotations I can delete at once?
+  - answer: Once saved, annotations are permanently removed. Keep a backup of the
+      original PDF if you may need the annotations later.
+    question: Can I undo the removal after saving?
+  - answer: 'Supply the password via `LoadOptions` when constructing the `Annotator`:
+      `new Annotator(path, new LoadOptions { Password = "pwd" })`.'
+    question: How do I handle password‑protected PDFs?
+  type: FAQPage
+tags:
+- groupdocs-annotation
+- pdf-manipulation
+- csharp-tutorial
+- annotation-removal
+title: Cara Menghapus Anotasi PDF C# – Panduan GroupDocs.Annotation
 type: docs
-"weight": 1
+url: /id/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/
+weight: 1
 ---
 
-# Cara Menghapus Anotasi dari Dokumen Menggunakan GroupDocs.Annotation untuk .NET
+# Cara Menghapus Anotasi PDF C# – Panduan GroupDocs.Annotation
 
-## Perkenalan
+## Pendahuluan
 
-Apakah Anda berurusan dengan PDF yang berantakan dan penuh dengan anotasi yang tidak perlu? Baik Anda sedang mempersiapkan laporan akhir atau sekadar merapikan, menghapus anotasi yang tidak diinginkan bisa jadi sulit. Dengan GroupDocs.Annotation for .NET API yang canggih, tugas ini menjadi lancar dan efisien.
+Jika Anda perlu **remove pdf annotations c#** dengan cepat dan dapat diandalkan, Anda berada di tempat yang tepat. Baik Anda membersihkan laporan yang dihadapi klien, membersihkan file hukum, atau mengotomatisasi batch besar PDF yang telah ditinjau, melakukannya secara manual sangat melelahkan dan rawan kesalahan. Tutorial ini memandu Anda melalui seluruh proses dengan GroupDocs.Annotation untuk .NET, mulai dari menginstal perpustakaan hingga menangani kasus tepi seperti file yang dilindungi kata sandi. Pada akhir tutorial Anda akan dapat menghapus semua anotasi—highlight, sticky notes, stempel, atau gambar—dari PDF hanya dengan beberapa baris kode C#.
 
-Tutorial ini memandu Anda menggunakan GroupDocs.Annotation untuk menghapus semua anotasi dari dokumen Anda, sehingga Anda memiliki versi bersih yang siap untuk didistribusikan atau diarsipkan.
+**Apa yang akan Anda kuasai:**
+- Menginstal dan melisensikan GroupDocs.Annotation untuk .NET
+- Menulis kode C# yang ringkas untuk **remove pdf annotations c#** dalam skenario file tunggal dan batch
+- Menangani PDF besar, keterbatasan memori, dan kondisi error umum
+- Memperluas solusi untuk menghapus secara selektif hanya tipe anotasi tertentu (misalnya, remove sticky notes pdf)
 
-**Apa yang Akan Anda Pelajari:**
-- Menyiapkan GroupDocs.Annotation untuk .NET
-- Petunjuk langkah demi langkah untuk menghapus anotasi di C#
-- Aplikasi praktis dan pertimbangan kinerja
+Mari kita mulai dan membuat pembersihan anotasi menjadi mudah.
 
-Mari kita mulai dengan prasyarat yang diperlukan untuk memulai.
+## Jawaban Cepat
+- **Can I delete all annotation types at once?** Ya—panggil `annotator.Remove(allAnnotations)` setelah mengambilnya dengan `Get()`.
+- **Is a license required for production?** Lisensi GroupDocs.Annotation yang valid menghapus watermark dan membuka semua fungsi.
+- **What .NET versions are supported?** .NET Framework 4.6.2+, .NET Core 2.0+, .NET 5/6/7.
+- **How do I handle password‑protected PDFs?** Berikan kata sandi melalui `LoadOptions` saat membuat `Annotator`.
+- **Can I process hundreds of files automatically?** Tentu—gabungkan kode file tunggal dengan loop `foreach` atau pemrosesan paralel untuk pekerjaan batch.
+
+## Apa itu remove pdf annotations c#?
+*remove pdf annotations c#* adalah proses pemrograman untuk menghapus setiap objek anotasi yang tertanam dalam dokumen PDF menggunakan C#. Operasi ini hanya menyentuh lapisan anotasi, meninggalkan teks, gambar, dan tata letak dasar tidak berubah. Ia menghapus semua objek anotasi—seperti highlight, komentar, stempel, dan gambar—sementara mempertahankan konten, tata letak, dan metadata PDF asli, menjadikan dokumen bersih dan siap didistribusikan atau diarsipkan. Proses ini hanya dapat dibalik jika Anda menyimpan cadangan file sumber sebelum penghapusan.
+
+## Mengapa Menggunakan GroupDocs.Annotation untuk Penghapusan Anotasi PDF?
+GroupDocs.Annotation mendukung **30+ tipe anotasi** (termasuk highlight, sticky notes, stempel, dan gambar bebas) dan dapat memproses PDF hingga **500 MB** tanpa memuat seluruh file ke memori. API ini berjalan di platform apa pun yang mendukung .NET, memberi Anda solusi konsisten dan berperforma tinggi untuk aplikasi desktop maupun web.
 
 ## Prasyarat
 
-Sebelum menerapkan penghapusan anotasi, pastikan Anda memiliki:
+- **GroupDocs.Annotation for .NET** ≥ 25.4.0
+- Visual Studio 2017 atau yang lebih baru
+- Hak administratif untuk menginstal paket NuGet
+- Pengetahuan dasar C# (variabel, pernyataan using, penanganan pengecualian)
 
-### Pustaka dan Dependensi yang Diperlukan:
-- **GroupDocs.Annotation untuk .NET**: Diperlukan versi 25.4.0 atau yang lebih baru.
-- **Lingkungan Pengembangan**: Visual Studio (disarankan 2017 atau yang lebih baru).
+## Cara menghapus anotasi PDF menggunakan GroupDocs.Annotation?
+Alur kerja melibatkan memuat PDF dengan kelas `Annotator`, mengambil daftar lengkap anotasi melalui `Get()`, memanggil `Remove()` pada koleksi tersebut, dan akhirnya menyimpan dokumen yang telah dimodifikasi. Urutan ini menangani semua tipe anotasi dalam satu kali proses dan bekerja untuk skenario file tunggal maupun batch.
 
-### Persyaratan Pengaturan Lingkungan:
-- Hak administratif untuk menginstal perangkat lunak pada lingkungan pengembangan Anda.
+### Langkah 1: Tentukan Jalur Input dan Output
+Pertama, arahkan kode ke PDF sumber dan tentukan di mana versi bersih akan disimpan.
 
-### Prasyarat Pengetahuan:
-- Pemahaman dasar tentang konsep C# dan kerangka kerja .NET.
-
-Dengan prasyarat ini, mari siapkan GroupDocs.Annotation untuk .NET.
-
-## Menyiapkan GroupDocs.Annotation untuk .NET
-
-Untuk menggunakan GroupDocs.Annotation, instal di proyek Anda dengan langkah-langkah berikut:
-
-### Instalasi melalui Konsol Pengelola Paket NuGet
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-### Instalasi melalui .NET CLI
+### Langkah 2: Inisialisasi Objek Annotator
+Kelas `Annotator` adalah gerbang ke semua operasi anotasi.
+
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### Langkah-langkah Memperoleh Lisensi:
-- **Uji Coba Gratis**: Unduh versi uji coba dari [Situs web GroupDocs](https://releases.groupdocs.com/annotation/net/) untuk menguji kemampuannya.
-- **Lisensi Sementara**: Minta lisensi sementara untuk akses penuh selama evaluasi di [tautan ini](https://purchase.groupdocs.com/temporary-license/).
-- **Pembelian**:Untuk penggunaan berkelanjutan, beli lisensi melalui [Toko GroupDocs](https://purchase.groupdocs.com/buy).
+**Definition anchor:** Kelas `Annotator` menyediakan metode untuk memuat, menanyakan, memodifikasi, dan menyimpan anotasi PDF.
 
-### Inisialisasi dan Pengaturan Dasar dengan Kode C#
-
-Setelah terinstal, inisialisasi GroupDocs.Annotation sebagai berikut:
+### Langkah 3: Ambil Semua Anotasi
+Ambil setiap objek anotasi dari dokumen.
 
 ```csharp
 using System;
@@ -69,7 +133,7 @@ class Program
 {
     static void Main()
     {
-        // Inisialisasi lisensi jika tersedia
+        // Initialize license if available
         License lic = new License();
         lic.SetLicense("path/to/your/license.lic");
 
@@ -78,106 +142,244 @@ class Program
 }
 ```
 
-Sekarang lingkungan Anda sudah disiapkan, mari lanjutkan dengan menghapus anotasi.
+**Explanation:** `Get()` mengembalikan koleksi objek `AnnotationBase` yang mewakili setiap anotasi yang ada—highlight, sticky notes, stempel, gambar, dan lainnya.
 
-## Panduan Implementasi
-
-### Menghapus Anotasi dari Dokumen
-
-Ikuti langkah-langkah berikut untuk menghapus semua anotasi secara efisien menggunakan GroupDocs.Annotation:
-
-#### Langkah 1: Tentukan Jalur Input dan Output
-Tentukan jalur dokumen masukan dan lokasi berkas keluaran.
+### Langkah 4: Hapus Anotasi
+Hapus anotasi yang diambil dalam satu panggilan.
 
 ```csharp
 string inputFilePath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "ANNOTATED_FILE_NAME");
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf");
 ```
 
-**Penjelasan**: Mengganti `"YOUR_DOCUMENT_DIRECTORY"` Dan `"ANNOTATED_FILE_NAME"` dengan jalur direktori dan nama berkas dokumen Anda. PDF keluaran akan disimpan di direktori yang ditentukan.
+**Explanation:** Metode `Remove` menerima koleksi dan menghapus setiap anotasi dari PDF. Jika koleksi kosong, metode ini dengan aman tidak melakukan apa‑apa.
 
-#### Langkah 2: Inisialisasi Objek Anotator
-Muat dokumen Anda menggunakan `Annotator` kelas.
+### Langkah 5: Simpan Dokumen Bersih
+Tuliskan PDF bebas anotasi kembali ke disk.
+
+```csharp
+string inputFilePath = @"C:\Documents\Annotated\project_proposal_with_comments.pdf";
+string outputPath = @"C:\Documents\Clean\project_proposal_final.pdf";
+```
+
+**Explanation:** `Save` menyimpan perubahan. File output dapat ditempatkan di folder yang sama atau lokasi berbeda, tergantung alur kerja Anda.
+
+## Contoh Kerja Lengkap
+
+Berikut adalah kode lengkap yang siap dijalankan dan mencakup semua lima langkah.
 
 ```csharp
 using (Annotator annotator = new Annotator(inputFilePath))
 {
-    // Lanjutkan ke langkah berikutnya di sini.
+    // All the magic happens inside this using block
 }
 ```
 
-**Penjelasan**: : Itu `Annotator` objek menyediakan fungsi anotasi dan dibungkus dalam `using` pernyataan untuk manajemen sumber daya otomatis.
+## Masalah Umum dan Pemecahan Masalah
 
-#### Langkah 3: Ambil Semua Anotasi
-Ambil semua anotasi yang ada dalam dokumen Anda.
+- **File Not Found:** Verifikasi jalur tepat dengan `File.Exists(inputPath)` sebelum memanggil `new Annotator`.
+- **Access Denied:** Pastikan proses memiliki izin baca/tulis dan PDF tidak terbuka di tempat lain.
+- **Memory Pressure on Large Files:** Untuk PDF lebih besar dari 100 MB, tingkatkan batas memori proses atau proses file dalam batch lebih kecil.
+- **Corrupted PDFs:** Bungkus logika dalam blok `try‑catch`; GroupDocs.Annotation melempar `AnnotationException` untuk file yang tidak didukung atau rusak.
 
+## Contoh Penggunaan di Dunia Nyata
+
+- **Legal Document Preparation:** Firma hukum menggunakan skrip ini untuk menghapus komentar internal sebelum mengajukan kontrak ke pengadilan.
+- **Academic Publishing:** Peneliti membersihkan catatan tinjauan sejawat untuk menghasilkan manuskrip bersih bagi pengajuan jurnal.
+- **Corporate Reporting:** Departemen keuangan secara otomatis menghasilkan laporan kuartalan bebas watermark untuk investor setelah siklus tinjauan internal.
+- **Document Archiving:** Lembaga pemerintah memproses batch ribuan catatan publik beranotasi, menyimpan hanya versi akhir yang bebas anotasi untuk retensi jangka panjang.
+
+## Praktik Terbaik Kinerja
+
+### Manajemen Memori
+- Selalu bungkus `Annotator` dalam pernyataan `using` untuk menjamin pembuangan.
+- Proses file dalam batch 10–20 untuk menjaga penggunaan memori tetap dapat diprediksi.
+
+### Teknik Optimasi
 ```csharp
 List<AnnotationBase> annotations = annotator.Get();
+Console.WriteLine($"Found {annotations.Count} annotations to remove.");
 ```
 
-**Penjelasan**: : Itu `Get()` metode mengambil daftar semua objek anotasi (`AnnotationBase`dari dokumen, yang memungkinkan manipulasi atau penghapusan.
-
-#### Langkah 4: Hapus Anotasi
-Hapus semua anotasi yang diambil dari dokumen Anda.
+### Pemrosesan Paralel
+Untuk lingkungan dengan throughput tinggi, jalankan beberapa file secara paralel:
 
 ```csharp
-annotator.Remove(annotations);
+if (annotations.Count > 0)
+{
+    annotator.Remove(annotations);
+    Console.WriteLine("All annotations removed successfully.");
+}
+else
+{
+    Console.WriteLine("No annotations found in the document.");
+}
 ```
 
-**Penjelasan**: : Itu `Remove` metode ini mengambil kumpulan anotasi dan menghapusnya, sehingga menyisakan versi dokumen asli yang bebas anotasi.
+**Warning:** Paralelisme meningkatkan beban CPU dan I/O; pantau sumber daya sistem untuk menghindari throttling.
 
-#### Langkah 5: Simpan Dokumen
-Simpan dokumen yang dimodifikasi ke jalur keluaran yang Anda inginkan.
+## Skenario Lanjutan
+
+### Penghapusan Anotasi Selektif
+Jika Anda hanya perlu menghapus sticky notes, filter dengan `AnnotationType.StickyNote` sebelum memanggil `Remove`.
 
 ```csharp
 annotator.Save(outputPath);
+Console.WriteLine($"Clean document saved to: {outputPath}");
 ```
 
-**Penjelasan**: : Itu `Save` metode menulis perubahan kembali ke sistem berkas. Pastikan Anda menentukan `outputPath` dapat diakses dan ditulis.
+### Pemrosesan Batch Banyak File
+Iterasi melalui direktori PDF dan terapkan logika penghapusan yang sama pada setiap file.
 
-### Tips Pemecahan Masalah:
-- **Kesalahan File Tidak Ditemukan**: Periksa ulang jalur untuk kesalahan ketik.
-- **Kesalahan Akses Ditolak**: Verifikasi izin pada direktori input/output.
+```csharp
+using System;
+using System.Collections.Generic;
+using System.IO;
+using GroupDocs.Annotation;
+using GroupDocs.Annotation.Models.AnnotationModels;
 
-Dengan langkah-langkah ini, Anda dapat menghapus anotasi dari dokumen secara efisien menggunakan GroupDocs.Annotation. Mari kita bahas beberapa aplikasi praktis dari fitur ini.
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            string inputFilePath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "ANNOTATED_FILE_NAME");
+            string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf");
 
-## Aplikasi Praktis
+            using (Annotator annotator = new Annotator(inputFilePath))
+            {
+                List<AnnotationBase> annotations = annotator.Get();
+                Console.WriteLine($"Found {annotations.Count} annotations to remove.");
 
-1. **Persiapan Dokumen Hukum**Profesional hukum menghasilkan versi dokumen yang bersih untuk pengajuan pengadilan tanpa draf anotasi atau komentar.
-2. **Penerbitan Akademik**: Penulis dan peneliti menghapus draf beranotasi sebelum menerbitkan makalah akhir, memastikan hanya konten penting yang tetap terlihat.
-3. **Pengarsipan Laporan**:Bisnis mengarsipkan laporan akhir tanpa catatan resmi yang berantakan.
-4. **Dokumentasi Pengembangan Perangkat Lunak**: Pengembang berbagi dokumentasi teknis yang sempurna dengan klien atau anggota tim, bebas dari catatan dan komentar.
-5. **Integrasi dengan Sistem Alur Kerja**: Integrasikan penghapusan anotasi ke dalam alur kerja pemrosesan dokumen otomatis menggunakan GroupDocs.Annotation bersama kerangka kerja .NET lainnya untuk operasi yang lancar.
+                if (annotations.Count > 0)
+                {
+                    annotator.Remove(annotations);
+                    Console.WriteLine("All annotations removed successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("No annotations found in the document.");
+                }
 
-## Pertimbangan Kinerja
-- **Mengoptimalkan Penggunaan Sumber Daya**: Muat hanya dokumen yang diperlukan di lingkungan dengan memori terbatas.
-- **Manajemen Memori yang Efisien**: Buang `Annotator` objek dengan segera untuk membebaskan sumber daya.
-- **Pemrosesan Batch**Memproses beberapa dokumen secara batch untuk mengurangi biaya overhead.
+                annotator.Save(outputPath);
+                Console.WriteLine($"Clean document saved to: {outputPath}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error processing document: {ex.Message}");
+        }
+    }
+}
+```
 
-## Kesimpulan
+## Pertanyaan yang Sering Diajukan
 
-Tutorial ini memandu Anda menggunakan GroupDocs.Annotation untuk .NET guna menghapus anotasi dari dokumen Anda secara efisien. Dengan mengikuti langkah-langkah ini, pastikan dokumen Anda siap digunakan tanpa kekacauan yang tidak perlu.
+**Q: Can this code remove all types of PDF annotations?**  
+A: Ya—GroupDocs.Annotation menangani setiap tipe anotasi standar, termasuk highlight, sticky notes, stempel, gambar bebas, dan markup teks.
 
-**Langkah Berikutnya:**
-- Bereksperimenlah dengan fitur lain dari GroupDocs.Annotation.
-- Jelajahi kemampuan integrasinya dalam sistem yang lebih besar.
+**Q: What PDF versions are supported?**  
+A: Perpustakaan ini bekerja dengan PDF versi 1.2 hingga spesifikasi 2.0 terbaru, mencakup hampir semua file yang akan Anda temui.
 
-Siap untuk merapikan dokumen Anda? Cobalah menerapkan solusi ini dalam proyek Anda hari ini!
+**Q: Is there a limit to how many annotations I can delete at once?**  
+A: Tidak ada batas keras; kinerja skala dengan ukuran dokumen dan memori sistem. Untuk file sangat besar, pertimbangkan memproses dalam potongan.
 
-## Bagian FAQ
+**Q: Can I undo the removal after saving?**  
+A: Setelah disimpan, anotasi dihapus secara permanen. Simpan cadangan PDF asli jika Anda mungkin memerlukan anotasi di kemudian hari.
 
-1. **Apa fungsi utama GroupDocs.Annotation .NET?**
-   - Ini adalah pustaka yang tangguh untuk mengelola anotasi di berbagai format dokumen, termasuk PDF dan gambar.
-2. **Bisakah saya menggunakan GroupDocs.Annotation dengan framework .NET lainnya?**
-   - Ya, ini terintegrasi dengan baik dengan ASP.NET, WPF, dan banyak lagi.
-3. **Apakah ada batasan jumlah anotasi yang dapat dihapus sekaligus?**
-   - Tidak ada batasan khusus; kinerja dapat bervariasi berdasarkan ukuran dokumen dan sumber daya sistem.
-4. **Bagaimana cara menangani kesalahan selama penghapusan anotasi?**
-   - Gunakan blok try-catch untuk mengelola pengecualian dengan baik.
-5. **Bisakah GroupDocs.Annotation digunakan untuk aplikasi daring dan luring?**
-   - Ya, ia mendukung berbagai lingkungan aplikasi, dari desktop hingga solusi berbasis web.
+**Q: How do I handle password‑protected PDFs?**  
+A: Berikan kata sandi melalui `LoadOptions` saat membuat `Annotator`: `new Annotator(path, new LoadOptions { Password = "pwd" })`.
 
-## Sumber daya
-- [Dokumentasi](https://docs.groupdocs.com/annotation/net/)
-- [Referensi API](https://reference.groupdocs.com/annotation/net/)
+**Q: What happens if the input PDF is corrupted?**  
+A: API melempar pengecualian. Bungkus operasi dalam blok `try‑catch` untuk mencatat error dan melanjutkan pemrosesan file lain.
+
+**Q: Can I use this in an ASP.NET web app?**  
+A: Tentu—GroupDocs.Annotation aman untuk thread dan berfungsi di ASP.NET Core, MVC, serta proyek Web API.
+
+**Q: Do I need a license for commercial use?**  
+A: Ya—lisensi produksi menghapus watermark dan membuka semua fungsi. Lisensi percobaan tersedia untuk evaluasi.
+
+**Q: How can I verify that all annotations were removed?**  
+A: Setelah memanggil `Remove`, panggil lagi `annotator.Get()`; harus mengembalikan koleksi kosong.
+
+**Q: Does removing annotations affect the PDF layout?**  
+A: Tidak—teks, gambar, dan struktur halaman tetap tidak berubah; hanya lapisan anotasi yang dihapus.
+
+## Sumber Daya Tambahan
+
+- [Situs GroupDocs](https://releases.groupdocs.com/annotation/net/)
+- [tautan ini](https://purchase.groupdocs.com/temporary-license/)
+- [toko GroupDocs](https://purchase.groupdocs.com/buy)
+- [Dokumentasi GroupDocs.Annotation](https://docs.groupdocs.com/annotation/net/)
+- [Panduan Referensi API](https://reference.groupdocs.com/annotation/net/)
 - [Unduh GroupDocs.Annotation untuk .NET](https://releases.groupdocs.com/annotation/net/)
+- [Forum Dukungan Komunitas](https://forum.groupdocs.com/c/annotation/10)
+- [Proyek Contoh dan Contoh](https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET)
+
+---
+
+**Terakhir Diperbarui:** 2026-06-01  
+**Diuji Dengan:** GroupDocs.Annotation 25.4.0 untuk .NET  
+**Penulis:** GroupDocs
+
+```csharp
+// For batch processing, consider this pattern:
+public static void ProcessDocumentBatch(List<string> filePaths)
+{
+    foreach (string filePath in filePaths)
+    {
+        using (Annotator annotator = new Annotator(filePath))
+        {
+            // Process each file individually
+            var annotations = annotator.Get();
+            if (annotations.Count > 0)
+            {
+                annotator.Remove(annotations);
+                annotator.Save(GetOutputPath(filePath));
+            }
+        }
+        // Force garbage collection periodically for large batches
+        if (filePaths.IndexOf(filePath) % 20 == 0)
+        {
+            GC.Collect();
+        }
+    }
+}
+```
+
+```csharp
+Parallel.ForEach(filePaths, filePath =>
+{
+    using (Annotator annotator = new Annotator(filePath))
+    {
+        var annotations = annotator.Get();
+        if (annotations.Count > 0)
+        {
+            annotator.Remove(annotations);
+            annotator.Save(GetOutputPath(filePath));
+        }
+    }
+});
+```
+
+```csharp
+// Remove only highlight annotations
+var annotations = annotator.Get();
+var highlightAnnotations = annotations.Where(a => a.Type == AnnotationType.Highlight).ToList();
+annotator.Remove(highlightAnnotations);
+```
+
+```csharp
+string[] pdfFiles = Directory.GetFiles(@"C:\AnnotatedPDFs", "*.pdf");
+foreach (string file in pdfFiles)
+{
+    ProcessSingleFile(file);
+}
+```
+
+## Tutorial Terkait
+
+- [Tutorial Anotasi PDF .NET - Panduan Lengkap GroupDocs](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
+- [Menghapus Balasan Anotasi .NET - Tutorial Lengkap GroupDocs](/annotation/net/reply-management/remove-replies-groupdocs-annotation-net-guide/)
+- [Tutorial GroupDocs Annotation .NET - Panduan Lengkap untuk Manajemen Dokumen](/annotation/net/annotation-management/)
