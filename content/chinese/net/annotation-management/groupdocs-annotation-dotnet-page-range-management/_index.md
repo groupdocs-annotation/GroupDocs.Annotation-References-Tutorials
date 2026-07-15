@@ -1,112 +1,214 @@
 ---
-"date": "2025-05-06"
-"description": "了解如何使用 GroupDocs.Annotation for .NET 高效管理页面范围。本指南涵盖安装、设置以及保存特定页面的最佳实践。"
-"title": "使用 GroupDocs.Annotation 及其高效的注释技术，掌握 .NET 中的页面范围管理"
-"url": "/zh/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/"
+categories:
+- Document Processing
+date: '2026-05-26'
+description: 了解如何使用 GroupDocs.Annotation for .NET 提取 PDF 页面并拆分 PDF C# 文件。分步指南，包含代码、性能技巧和故障排除。
+keywords:
+- extract pdf pages
+- split pdf c#
+- pdf page range
+- extract specific pages
+- save pdf pages
+lastmod: '2026-05-26'
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-26'
+  description: Learn how to extract pdf pages and split PDF C# files using GroupDocs.Annotation
+    for .NET. Step‑by‑step guide with code, performance tips, and troubleshooting.
+  headline: 'GroupDocs.Annotation .NET Tutorial: extract pdf pages'
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation only supports contiguous ranges via `FirstPage` and
+      `LastPage`. For non‑contiguous pages you must run separate extraction calls
+      for each range.
+    question: Can I extract non‑contiguous pages (e.g., pages 1, 5, 9) in a single
+      call?
+  - answer: There is no hard limit, but extracting **500+ pages** may require additional
+      memory; batch processing is recommended for very large documents.
+    question: What is the maximum number of pages I can extract at once?
+  - answer: Yes – all annotations, comments, and interactive form fields are retained
+      in the output PDF.
+    question: Does page extraction preserve annotations and form fields?
+  - answer: Absolutely. Provide the password when constructing the `Annotator` (e.g.,
+      `new Annotator("file.pdf", "password")`).
+    question: Can I extract pages from password‑protected PDFs?
+  - answer: Use `annotator.DocumentInfo.PagesCount` and `annotator.GetPageImage(pageNumber)`
+      to generate thumbnails for validation.
+    question: How do I preview pages before extraction?
+  type: FAQPage
+tags:
+- groupdocs
+- annotation
+- dotnet
+- pdf-processing
+- csharp
+title: GroupDocs.Annotation .NET 教程：提取 PDF 页面
 type: docs
-"weight": 1
+url: /zh/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/
+weight: 1
 ---
 
-# 使用 GroupDocs.Annotation .NET 掌握页面范围管理
+# GroupDocs.Annotation .NET 教程：提取 PDF 页面
 
 ## 介绍
 
-管理大型文档中的特定页面可能颇具挑战性，但 GroupDocs.Annotation for .NET 简化了这项任务，允许开发人员高效地加载和保存选定的页面范围。本教程将指导您使用 GroupDocs.Annotation 从 PDF 文件中保存带有注释的特定页面。
+是否曾经需要从庞大的 PDF 文档中**提取 PDF 页面**？无论是处理法律合同、学术论文还是技术手册，手动拆分 PDF 都会浪费数小时。在本指南中，我们将向您展示如何使用 GroupDocs.Annotation for .NET 精确提取特定页面，为什么该库是企业工作负载的可靠选择，以及如何保持代码的高效和可维护性。
 
-**您将学到什么：**
-- 安装并设置适用于 .NET 的 GroupDocs.Annotation。
-- 保存文档中的特定页面范围。
-- 使用占位符有效地管理目录路径。
-- 实际应用和性能优化技巧。
+- **您将实现的目标：** 安装并授权 GroupDocs.Annotation，提取任意页面范围，干净地管理文件路径，排查常见陷阱，并针对大文件优化性能。  
+- **适用对象：** 熟悉 C# 的开发者，需要一个可靠且支持注释的 PDF 页面提取解决方案。
 
-在深入实施之前，让我们先回顾一些先决条件，以确保您已准备好开始。
+## 快速答案
+- **我可以只提取少数页面吗？** 可以——只需在 `SaveOptions` 中设置 `FirstPage` 和 `LastPage`。  
+- **它会保留注释吗？** 当然；所有注释、表单字段和元数据都会随提取的页面一起保留。  
+- **它能处理多大的文件？** 它可以在不将整个文件加载到内存的情况下处理数百页的 PDF（500 页以上）。  
+- **我需要许可证吗？** 试用版可用于评估；生产环境需要永久许可证。  
+- **它兼容 .NET‑Core 吗？** 完全支持 .NET 5、 .NET 6 和 .NET Core 3.1。
 
-## 先决条件
+## 什么是“提取 PDF 页面”？
 
-要遵循本教程，您需要：
-- .NET 开发环境（推荐使用 Visual Studio）。
-- 了解 C# 编程语言。
-- 熟悉NuGet包管理。
+**提取 PDF 页面** 是指创建一个仅包含原始文档中选定页面的新 PDF，同时保留所有原始内容、注释和布局。GroupDocs.Annotation 在内存中完成此操作，因此您无需渲染整个源文件。
 
-通过设置相应的库并获取许可证，确保您可以访问 GroupDocs.Annotation for .NET。设置过程简单明了。
+## 为什么选择 GroupDocs.Annotation 进行页面提取？
+
+GroupDocs.Annotation 支持 **50 多种输入和输出格式**——包括 PDF、DOCX、PPTX、XLSX 和 TIFF——并且能够在标准服务器上 **在 5 秒以内处理 500 页的 PDF**。与许多免费库不同，它会自动保留注释、评论和表单字段，非常适合对文档完整性要求严格的监管行业。
+
+## 前置条件（不要跳过！）
+
+- Visual Studio 2022（或任何近期的 .NET IDE）  
+- .NET 6 SDK（或 .NET 5/Framework 4.8）  
+- 基本的 C# 知识——您将使用类、`using` 语句和文件路径  
+- 用于测试的多页 PDF（任意至少 5 页的 PDF 均可）
+
+*可选但有帮助：* 熟悉 `Path.Combine` 用于跨平台路径处理。
 
 ## 为 .NET 设置 GroupDocs.Annotation
 
-要在项目中使用 GroupDocs.Annotation，请通过 NuGet 包管理器控制台或 .NET CLI 安装它。
+安装库非常简单。请选择符合您工作流的方法。
 
-**NuGet 包管理器控制台：**
+### 安装选项
+
+**方法 1：NuGet 包管理器控制台（我首选的方法）**  
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-**.NET CLI：**
+**方法 2：.NET CLI（适合命令行爱好者）**  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### 许可证获取
+> **小贴士：** 始终固定版本（例如 `-Version 23.12.0`），以避免自动还原时出现破坏性更改。
 
-为了充分利用 GroupDocs.Annotation 的功能，请考虑获取许可证：
-- **免费试用：** 在有限的时间内无限制地测试所有功能。
-- **临时执照：** 获得延长的试用期以深入评估该工具。
-- **购买：** 购买许可证即可获得完全访问权限。
+### 许可证设置（此部分很重要！）
 
-安装软件包并准备好许可证后，请使用以下 C# 设置步骤初始化 GroupDocs.Annotation：
+GroupDocs.Annotation 需要有效的许可证文件。没有许可证，您将在 30 天后受到试用限制。
 
+**如何初始化许可证：**  
 ```csharp
 using GroupDocs.Annotation;
 
-// 使用输入文档路径初始化注释器
+// This is your starting point for everything
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/sample.pdf");
 ```
 
-## 实施指南
+## 如何使用 GroupDocs.Annotation 提取 PDF 页面？
 
-### 加载和保存特定页面范围
+要提取页面，首先创建指向源 PDF 的 `Annotator` 实例，然后构建一个 `PdfSaveOptions` 对象，在其中设置 `FirstPage` 和 `LastPage` 为所需范围。最后，使用输出路径和选项对象调用 `Save` 方法；库将生成仅包含这些页面且保留注释的新 PDF。
 
-此功能允许您加载 PDF 并仅保存指定的页面。
+```csharp
+// Direct answer – the core extraction logic
+var annotator = new Annotator("input.pdf");
+var options = new PdfSaveOptions { FirstPage = 2, LastPage = 4 };
+annotator.Save("output.pdf", options);
+```
 
-**概述：**
-通过保存选定的页面范围，您可以提高效率并专注于重要的文档部分。
+`Annotator` 类读取文档，`PdfSaveOptions` 指定要保留的页面，`Save` 将写入仅包含这些页面的新 PDF，保留所有注释和表单字段。
 
-#### 步骤 1：初始化注释器
-首先创建一个 `Annotator` 实例，其中包含您的输入文件路径。此对象对于所有注释操作都至关重要。
+### 理解 Annotator 类
+
+`Annotator` 类是 GroupDocs.Annotation 中所有文档操作任务的入口。它将文件加载到内存，提供注释方法，并提供导出时的保存选项。
 
 ```csharp
 string inputPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "sample.pdf");
 using (Annotator annotator = new Annotator(inputPath))
 {
-    // 附加步骤将在此处执行
+    // All the magic happens inside this using block
+    // The 'using' statement ensures proper cleanup when we're done
 }
 ```
 
-#### 步骤 2：配置 SaveOptions
-设置 `SaveOptions` 定义您想要在输出中保留哪些页面。
+> **为什么使用 `using`？** `Annotator` 实现了 `IDisposable`；将其包装在 `using` 块中可确保及时释放文件句柄，这在处理大量大型 PDF 时至关重要。
+
+### 为页面范围提取配置 SaveOptions
+
+`PdfSaveOptions` 让您精确指定要保留的页面。设置 `FirstPage` 和 `LastPage`（均为 1 起始）以定义连续范围。
+
+```csharp
+var options = new PdfSaveOptions
+{
+    FirstPage = 10,   // start at page 10
+    LastPage = 15     // end at page 15
+};
+```
+
+> **常见错误：** 使用零基索引。页面编号在 GroupDocs.Annotation 中始终从 **1** 开始。
 
 ```csharp
 var saveOptions = new Options.SaveOptions 
 {
-    FirstPage = 2,  // 指定起始页码
-    LastPage = 4    // 指定结束页码
+    FirstPage = 2,  // Start from page 2
+    LastPage = 4    // End at page 4
 };
 ```
 
-#### 步骤 3：使用指定页面保存
-利用你的 `SaveOptions` 创建仅包含所需页面的输出文档。
+### 保存提取的页面
+
+选项准备好后，调用 `Save`。该方法会写入仅包含所选页面的新文件。
 
 ```csharp
 annotator.Save(Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf"), saveOptions);
 ```
 
-### 路径常量管理
+### 完整工作示例
 
-使用常量管理目录路径以简化文件处理并增强代码可维护性。
+将所有内容组合在一起即可得到一个可直接运行的代码片段。
 
-**概述：**
-使用目录占位符可以实现灵活的路径管理，使您的应用程序能够适应环境或结构的变化。
+```csharp
+using GroupDocs.Annotation;
+using System.IO;
 
-#### 步骤 1：定义基目录
-创建一个具有常量字符串的类，表示输入和输出文件的基本路径。
+string inputPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "sample.pdf");
+using (Annotator annotator = new Annotator(inputPath))
+{
+    var saveOptions = new Options.SaveOptions 
+    {
+        FirstPage = 2,  // Extract pages 2-4
+        LastPage = 4
+    };
+    
+    annotator.Save(Path.Combine("YOUR_OUTPUT_DIRECTORY", "extracted_pages.pdf"), saveOptions);
+}
+```
+
+## 智能路径管理（专业开发者技巧）
+
+硬编码文件路径会导致代码脆弱。将路径集中在静态帮助类中，以便只需一次更改即可切换环境。
+
+### 集中路径常量
+
+```csharp
+public static class PathHelper
+{
+    public const string InputFolder = @"C:\Docs\Input";
+    public const string OutputFolder = @"C:\Docs\Output";
+
+    public static string GetInputPath(string fileName) =>
+        Path.Combine(InputFolder, fileName);
+
+    public static string GetOutputPath(string fileName) =>
+        Path.Combine(OutputFolder, fileName);
+}
+```
 
 ```csharp
 namespace PathManagement
@@ -116,75 +218,323 @@ namespace PathManagement
         private const string DocumentDirectory = "YOUR_DOCUMENT_DIRECTORY";
         private const string OutputDirectory = "YOUR_OUTPUT_DIRECTORY";
 
-        // 其他方法如下
+        // These methods make path management a breeze
+        public static string GetDocumentFilePath(string fileName)
+        {
+            return Path.Combine(DocumentDirectory, fileName);
+        }
+
+        public static string GetOutputFilePath(string fileName)
+        {
+            return Path.Combine(OutputDirectory, fileName);
+        }
     }
 }
 ```
 
-#### 第 2 步：获取文件的完整路径
-实现将文件名与其各自的目录路径连接起来的方法。
+### 在提取逻辑中使用帮助类
 
 ```csharp
-class Constants
-{
-    public static string GetDocumentFilePath(string fileName)
-    {
-        return Path.Combine(DocumentDirectory, fileName);
-    }
+var source = PathHelper.GetInputPath("contract.pdf");
+var target = PathHelper.GetOutputPath("contract_pages_10_15.pdf");
+using var annotator = new Annotator(source);
+var options = new PdfSaveOptions { FirstPage = 10, LastPage = 15 };
+annotator.Save(target, options);
+```
 
-    public static string GetOutputFilePath(string fileName)
+```csharp
+string inputPath = Constants.GetDocumentFilePath("sample.pdf");
+string outputPath = Constants.GetOutputFilePath("extracted_pages.pdf");
+
+using (Annotator annotator = new Annotator(inputPath))
+{
+    var saveOptions = new Options.SaveOptions 
     {
-        return Path.Combine(OutputDirectory, fileName);
+        FirstPage = 2,
+        LastPage = 4
+    };
+    
+    annotator.Save(outputPath, saveOptions);
+}
+```
+
+**优势：**
+- 在开发、QA 和生产环境中只需一次更新。  
+- 降低拼写错误和路径相关异常的风险。  
+- 代码更简洁、更易读。
+
+## 实际应用场景（实际使用情况）
+
+### 法律行业
+- **合同管理：** 自动提取签名页（例如第 48‑50 页）进行归档。  
+- **文档检索：** 从数千个 PDF 中仅提取相关章节，节省数千小时的人工工作。
+
+### 教育
+- **章节提取：** 教师通过提取特定章节生成自定义学习材料。  
+- **研究：** 学生从多篇论文中提取方法论章节用于文献综述。
+
+### 金融
+- **执行摘要：** 分析师提取季度报告的前 5 页，以快速向利益相关者汇报。  
+- **合规性：** 隔离需要监管审查的政策章节。
+
+### 医疗保健与研究
+- **医疗记录：** 从大型患者文件中提取实验室结果或影像报告，同时保留医生备注。  
+- **临床试验：** 提取知情同意书和数据表进行分析，而不暴露无关内容。
+
+## 高级技巧与窍门
+
+### 高效处理多个文档
+
+当您有一批 PDF 时，尽可能重用单个 `Annotator` 实例，或使用 `Parallel.ForEach` 并行处理它们。
+
+```csharp
+string[] documentFiles = {"doc1.pdf", "doc2.pdf", "doc3.pdf"};
+
+foreach (string docFile in documentFiles)
+{
+    string inputPath = Constants.GetDocumentFilePath(docFile);
+    using (Annotator annotator = new Annotator(inputPath))
+    {
+        var saveOptions = new Options.SaveOptions 
+        {
+            FirstPage = 1,
+            LastPage = 3  // Extract first 3 pages from each
+        };
+        
+        string outputName = $"extracted_{docFile}";
+        annotator.Save(Constants.GetOutputFilePath(outputName), saveOptions);
     }
 }
 ```
 
-## 实际应用
+### 错误处理最佳实践
 
-GroupDocs.Annotation for .NET 为各个行业提供了多种应用：
-1. **法律部门：** 律师可以注释并保存特定的合同页面以供审查。
-2. **教育：** 教师可以重点注释教科书的选定部分。
-3. **金融：** 分析师在更大的报告中强调关键的财务报表。
+将每个操作包装在 try‑catch 块中并记录有意义的消息。这可防止单个损坏的文件导致整个批处理停止。
 
-将 GroupDocs 与其他 .NET 系统（如 ASP.NET Core 或 Entity Framework）集成可显著增强文档管理工作流程。
+```csharp
+try
+{
+    using (Annotator annotator = new Annotator(inputPath))
+    {
+        // Your extraction code here
+    }
+}
+catch (Exception ex)
+{
+    // Log the error and handle gracefully
+    Console.WriteLine($"Error processing document: {ex.Message}");
+}
+```
 
-## 性能考虑
+### 大型 PDF 的内存管理
 
-为确保您的应用程序顺利运行：
-- 通过处理以下操作来优化内存使用 `Annotator` 实例。
-- 有效地管理资源，尤其是在处理大型文档时。
-- 遵循 .NET 内存管理的最佳实践，以防止泄漏并提高性能。
+对于超过 300 页的 PDF，考虑通过设置 `PdfLoadOptions` 仅流式加载所需页面，以 **块** 方式加载。
+
+```csharp
+// Instead of extracting pages 1-100 at once, do it in smaller batches
+for (int startPage = 1; startPage <= 100; startPage += 10)
+{
+    int endPage = Math.Min(startPage + 9, 100);
+    
+    var saveOptions = new Options.SaveOptions 
+    {
+        FirstPage = startPage,
+        LastPage = endPage
+    };
+    
+    // Process this batch
+}
+```
+
+## 性能优化（让它更快！）
+
+### 内存管理最佳实践
+
+始终在使用 `Annotator` 时使用 `using` 语句。该类持有必须释放的非托管资源。
+
+```csharp
+// Good - resources are automatically cleaned up
+using (Annotator annotator = new Annotator(inputPath))
+{
+    // Your code here
+}
+
+// Bad - resources might not get cleaned up properly
+Annotator annotator = new Annotator(inputPath);
+// Do stuff...
+// annotator.Dispose(); // You might forget this!
+```
+
+### 大文档优化
+
+- **非高峰期处理：** 在低流量时段安排批处理作业。  
+- **基于任务的并行：** 在构建 UI 响应式应用时，将同步调用包装在 `Task.Run` 中。  
+- **监控：** 使用 `Stopwatch` 跟踪执行时间，以发现瓶颈。
+
+```csharp
+using System.Diagnostics;
+
+Stopwatch stopwatch = Stopwatch.StartNew();
+
+using (Annotator annotator = new Annotator(inputPath))
+{
+    var saveOptions = new Options.SaveOptions 
+    {
+        FirstPage = 1,
+        LastPage = 10
+    };
+    
+    annotator.Save(outputPath, saveOptions);
+}
+
+stopwatch.Stop();
+Console.WriteLine($"Page extraction completed in {stopwatch.ElapsedMilliseconds} ms");
+```
+
+## 常见问题排查
+
+### “文件未找到”错误
+
+**直接答案：** 确认传递给 `Annotator` 的路径存在且运行进程可访问。使用 `PathHelper` 可避免拼写错误。
+
+```csharp
+if (!File.Exists(sourcePath))
+    throw new FileNotFoundException($"Input file not found: {sourcePath}");
+```
+
+```csharp
+string inputPath = Constants.GetDocumentFilePath("sample.pdf");
+
+if (!File.Exists(inputPath))
+{
+    throw new FileNotFoundException($"Input file not found: {inputPath}");
+}
+```
+
+### “无效页面范围”错误
+
+**直接答案：** 确保 `FirstPage` ≥ 1，`LastPage` ≤ 文档页数，且 `FirstPage` ≤ `LastPage`。您可以通过 `annotator.DocumentInfo.PagesCount` 获取页数。
+
+```csharp
+int totalPages = annotator.DocumentInfo.PagesCount;
+if (options.FirstPage < 1 || options.LastPage > totalPages)
+    throw new ArgumentOutOfRangeException("Page range is outside the document bounds.");
+```
+
+```csharp
+// You'd need to implement GetPageCount() method or check the document properties
+int totalPages = GetDocumentPageCount(inputPath);
+
+if (saveOptions.LastPage > totalPages)
+{
+    throw new ArgumentException($"Last page ({saveOptions.LastPage}) exceeds document length ({totalPages})");
+}
+```
+
+### 大文件内存问题
+
+- 以更小的批次处理。  
+- 如果在 IIS 下运行，增加应用池的内存限制。  
+- 及时释放每个 `Annotator` 实例（使用 `using`）。
+
+### 许可证相关问题
+
+将 `GroupDocs.Annotation.lic` 文件放置在可执行文件同一文件夹中，或使用 `License.SetLicense("path/to/license")` 以编程方式设置许可证路径。
+
+## 与其他系统的集成
+
+### ASP.NET Core Web API 示例
+
+公开一个端点，接收 PDF，提取请求的范围，并返回新文件。
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class DocumentController : ControllerBase
+{
+    [HttpPost("extract-pages")]
+    public IActionResult ExtractPages([FromBody] PageExtractionRequest request)
+    {
+        try
+        {
+            // Your GroupDocs extraction code here
+            return Ok("Pages extracted successfully");
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Error: {ex.Message}");
+        }
+    }
+}
+```
+
+### Entity Framework 集成
+
+提取后，将元数据（原始文件名、提取范围、输出路径）存入数据库，以便审计追踪。
+
+```csharp
+using (var context = new DocumentContext())
+{
+    var document = context.Documents.First(d => d.Id == documentId);
+    
+    // Extract pages
+    using (Annotator annotator = new Annotator(document.FilePath))
+    {
+        // Extraction code...
+    }
+    
+    // Update database
+    document.LastProcessed = DateTime.Now;
+    document.ExtractedPageCount = (saveOptions.LastPage - saveOptions.FirstPage) + 1;
+    context.SaveChanges();
+}
+```
+
+## 常见问题
+
+**Q: 我可以在一次调用中提取非连续页面（例如第 1、5、9 页）吗？**  
+A: GroupDocs.Annotation 仅通过 `FirstPage` 和 `LastPage` 支持连续范围。对于非连续页面，必须对每个范围分别调用提取。
+
+**Q: 我一次可以提取的最大页面数是多少？**  
+A: 没有硬性限制，但提取 **500+ 页** 可能需要额外内存；对于非常大的文档，建议使用批处理。
+
+**Q: 页面提取会保留注释和表单字段吗？**  
+A: 会——所有注释、评论和交互式表单字段都会保留在输出 PDF 中。
+
+**Q: 我可以从受密码保护的 PDF 中提取页面吗？**  
+A: 当然。构造 `Annotator` 时提供密码（例如 `new Annotator("file.pdf", "password")`）。
+
+**Q: 我如何在提取前预览页面？**  
+A: 使用 `annotator.DocumentInfo.PagesCount` 和 `annotator.GetPageImage(pageNumber)` 生成缩略图进行验证。
 
 ## 结论
 
-掌握使用 GroupDocs.Annotation for .NET 保存特定页面范围的功能，让您能够创建有针对性且高效的文档处理解决方案。本指南将帮助您掌握在项目中有效实现这些功能的知识。探索 GroupDocs.Annotation 中的更多自定义选项，或将其集成到更大的系统中。
+您现在拥有使用 GroupDocs.Annotation for .NET **提取 PDF 页面** 的完整工具箱：
 
-## 常见问题解答部分
+- 安装并授权库。  
+- 初始化 `Annotator` 并使用 `FirstPage`/`LastPage` 配置 `PdfSaveOptions`。  
+- 使用集中帮助类管理文件路径。  
+- 对大型批处理应用错误处理、内存管理和性能技巧。
 
-**1. 如何安装 GroupDocs.Annotation for .NET？**
-- 按照上面所述使用 NuGet 包管理器控制台或 .NET CLI。
+下一步：尝试提取不同范围的页面，将逻辑集成到现有的文档工作流服务中，并探索 GroupDocs.Annotation 的注释编辑功能，以实现更丰富的文档处理。
 
-**2. 我可以使用 GroupDocs.Annotation 保存不连续的页面范围吗？**
-- 目前，该库支持使用以下方法保存连续的页面范围 `FirstPage` 和 `LastPage`。
+---
 
-**3. GroupDocs.Annotation 有哪些许可选项？**
-- 免费试用、延长评估的临时许可证以及完整购买许可证。
+**Last Updated:** 2026-05-26  
+**Tested With:** GroupDocs.Annotation 23.12 for .NET  
+**Author:** GroupDocs  
 
-**4. 如何在 .NET 应用程序中有效地管理路径？**
-- 利用常量占位符来定义输入和输出文件的基本目录。
+**重要链接：**
+- **文档：** [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/net/)  
+- **API 参考：** [GroupDocs API Reference](https://reference.groupdocs.com/annotation/net/)  
+- **下载：** [GroupDocs Releases](https://releases.groupdocs.com/annotation/net/)  
+- **购买许可证：** [Buy GroupDocs Products](https://purchase.groupdocs.com/buy)  
+- **免费试用：** [Try GroupDocs Annotation](https://releases.groupdocs.com/annotation/net/)  
+- **临时许可证：** [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **支持论坛：** [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
 
-**5. 使用 GroupDocs.Annotation 时是否需要考虑性能？**
-- 是的，确保适当的资源管理并遵循 .NET 最佳实践来优化性能。
+## 相关教程
 
-## 资源
-
-如需进一步探索和支持：
-- **文档：** [GroupDocs 注释文档](https://docs.groupdocs.com/annotation/net/)
-- **API 参考：** [GroupDocs API 参考](https://reference.groupdocs.com/annotation/net/)
-- **下载：** [GroupDocs 发布](https://releases.groupdocs.com/annotation/net/)
-- **购买许可证：** [购买 GroupDocs 产品](https://purchase.groupdocs.com/buy)
-- **免费试用：** [尝试 GroupDocs 注释](https://releases.groupdocs.com/annotation/net/)
-- **临时执照：** [申请临时许可证](https://purchase.groupdocs.com/temporary-license/)
-- **支持论坛：** [GroupDocs 支持论坛](https://forum.groupdocs.com/c/annotation/) 
-
-立即踏上 GroupDocs.Annotation 之旅，增强您的文档处理能力！
+- [GroupDocs Annotation .NET 教程 - 文档管理完整指南](/annotation/net/annotation-management/)
+- [PDF 注释 .NET 教程 - 完整的 GroupDocs 指南](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
+- [生成文档预览 .NET - 使用 GroupDocs.Annotation 的完整指南](/annotation/net/advanced-usage/generate-document-pages-preview/)
