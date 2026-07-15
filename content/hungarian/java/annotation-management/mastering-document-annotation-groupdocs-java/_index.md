@@ -1,51 +1,56 @@
 ---
 categories:
 - Java Development
-date: '2025-12-29'
-description: Tanulja meg, hogyan lehet programozottan PDF-et annotálni Java-ban a
-  GroupDocs.Annotation segítségével. Teljes útmutató Maven beállítással, kódrészletekkel
-  és hibaelhárítási tippekkel.
+date: '2026-03-27'
+description: Tanulja meg, hogyan hozhat létre PDF-annotációkat Java-ban a GroupDocs.Annotation
+  segítségével. Tartalmaz Maven beállítást, Spring Boot PDF-annotációs példákat és
+  hibaelhárítási tippeket.
 keywords: Java PDF annotation tutorial, GroupDocs annotation Java example, document
   annotation library Java, PDF annotation programmatically Java, how to add annotations
   to PDF in Java, Java stream document annotation
-lastmod: '2025-12-29'
+lastmod: '2026-03-27'
 linktitle: Java PDF Annotation Tutorial
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Java útmutató - PDF programozott annotálása a GroupDocs segítségével'
+title: 'Java útmutató: PDF-annotációk létrehozása a GroupDocs használatával'
 type: docs
 url: /hu/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
 ---
 
-# Java útmutató: PDF programozott annotálása a GroupDocs segítségével
+# Java útmutató: PDF annotációk létrehozása a GroupDocs segítségével
 
-## Miért van szükséged PDF annotálásra a Java alkalmazásaidban
+## Miért van szükséged PDF annotációra a Java alkalmazásaidban
 
-Legyünk őszinték – a dokumentumok felülvizsgálata és az együttműködés menedzselése rémálom lehet a megfelelő eszközök nélkül. Akár egy vállalati dokumentumkezelő rendszert építesz, akár csak néhány megjegyzést szeretnél hozzáadni a PDF-ekhez a Java alkalmazásodban, a programozott annotálás igazi áttörés. **Ha programozottan szeretnél PDF-et annotálni**, ez az útmutató pontosan megmutatja, hogyan teheted ezt minimális súrlódással.
+Legyünk őszinték — a dokumentumok felülvizsgálata és együttműködése rémálom lehet a megfelelő eszközök nélkül. Akár vállalati dokumentumkezelő rendszert építesz, akár csak néhány megjegyzést szeretnél hozzáadni a PDF-ekhez a Java alkalmazásodban, a **create pdf annotations groupdocs** igazi áttörés. Ha **create pdf annotations groupdocs**‑t szeretnél, ez az útmutató pontosan megmutatja, hogyan teheted ezt minimális súrlódással.
 
-Ebben az átfogó oktatóanyagban elsajátítod a **Java PDF annotálást** a GroupDocs.Annotation segítségével – az egyik legrobosztusabb dokumentum‑annotációs könyvtárat, amely elérhető. A végére pontosan tudni fogod, hogyan tölts be dokumentumokat stream‑ekből, hogyan adj hozzá különböző annotációtípusokat, és hogyan kezeld a gyakori buktatókat, amelyek a legtöbb fejlesztőt meglepik.
+Ebben az átfogó bemutatóban elsajátítod a **Java PDF annotation** használatát a GroupDocs.Annotation‑del — az egyik legrobosztusabb dokumentum‑annotációs könyvtárral, amely elérhető. A végére pontosan tudni fogod, hogyan tölts be dokumentumokat stream‑ekből, hogyan adj hozzá különböző annotációtípusokat, és hogyan kezeld azokat a gyakori buktatókat, amelyek a legtöbb fejlesztőt elbizonytalanítják.
 
-**Mi teszi ezt az oktatóanyagot különlegessé?** Valós világos forgatókönyvekre fókuszálunk, nem csak alapvető példákra. Megtanulod a csapdákat, a teljesítmény‑szempontokat és a termelés‑kész technikákat, amelyek valóban számítanak.
+**Mi teszi ezt a bemutatót különlegessé?** Valós példákra fókuszálunk, nem csak alapvető példákra. Megtanulod a csapdákat, a teljesítménybeli megfontolásokat és a termelés‑kész technikákat, amelyek valóban számítanak.
 
 Készen állsz? Merüljünk el benne.
 
 ## Gyors válaszok
-- **Melyik könyvtár teszi lehetővé a PDF programozott annotálását Java‑ban?** GroupDocs.Annotation.
-- **Szükségem van fizetős licencre a kipróbáláshoz?** Nem, egy ingyenes próba verzió is elegendő fejlesztéshez és teszteléshez.
-- **Betölthetek PDF‑eket adatbázisból vagy felhő tárolóból?** Igen – használj stream‑alapú betöltést.
-- **Melyik Java verzió ajánlott?** Java 11+ a legjobb teljesítményért.
-- **Hogyan kerülhetem el a memória‑szivárgásokat?** Mindig bontsd le az `Annotator`‑t, vagy használd a try‑with‑resources‑t.
+- **Melyik könyvtár teszi lehetővé a PDF programozott annotálását Java‑ban?** GroupDocs.Annotation.  
+- **Szükségem van fizetős licencre a kipróbáláshoz?** Nem, egy ingyenes próba verzió is működik fejlesztéshez és teszteléshez.  
+- **Betölthetek PDF‑eket adatbázisból vagy felhő tárolóból?** Igen — használj stream‑alapú betöltést.  
+- **Melyik Java verzió ajánlott?** Java 11+ a legjobb teljesítményért.  
+- **Hogyan kerülhetem el a memória szivárgásokat?** Mindig zárd le az `Annotator`‑t, vagy használj try‑with‑resources‑t.
 
-## Hogyan annotálj PDF‑et programozottan Java‑ban
-Az alábbiakban lépésről‑lépésre bemutatjuk a folyamatot, a Maven beállításától a módosított fájl mentéséig. Minden szakasz rövid magyarázatot tartalmaz, hogy megértsd a *miért* minden kódsor mögött.
+## Mi az a create pdf annotations groupdocs?
+
+A PDF annotációk létrehozása a GroupDocs‑szel azt jelenti, hogy programozottan hozzáadsz megjegyzéseket, kiemeléseket, alakzatokat vagy bármilyen vizuális jelölőt egy PDF fájlhoz. Ez a képesség elengedhetetlen együttműködő felülvizsgálati eszközök, jogi szerződés‑ellenőrzők vagy bármilyen rendszer építéséhez, ahol a felhasználóknak a dokumentum tartalmát kell megvitatniuk anélkül, hogy elhagynák az alkalmazást.
+
+## Miért használjuk a GroupDocs‑t spring boot pdf annotation‑hoz?
+
+A GroupDocs.Annotation zökkenőmentesen integrálódik a Spring Boot‑tal, lehetővé téve az annotációs szolgáltatások REST végpontként való kiadását. Gazdag API‑ja, több mint 50 formátum támogatása és egyszerű licencelési modellje miatt első választás **spring boot pdf annotation** projektekhez.
 
 ## Előfeltételek: A környezet előkészítése
 
-Mielőtt profiként kezdenénk PDF‑eket annotálni, győződj meg róla, hogy ezek az alapok rendben vannak:
+Mielőtt profi módon elkezdenénk annotálni a PDF‑eket, győződj meg róla, hogy az alábbi alapok rendben vannak:
 
 ### Alapvető beállítási követelmények
 
@@ -57,22 +62,22 @@ Mielőtt profiként kezdenénk PDF‑eket annotálni, győződj meg róla, hogy 
 - Maven 3.6+ a függőségkezeléshez
 - GroupDocs.Annotation könyvtár 25.2 vagy újabb verziója
 
-### Szükséges tudás
+### Szükséges ismeretek
 
-Ne aggódj – nem kell Java‑guru lenned. Alapvető ismeretek:
+Ne aggódj — nem kell Java‑guru lenned. Alapvető ismeretek a következőkből:
 - Java szintaxis és objektum‑orientált koncepciók
 - Maven függőségkezelés
 - Fájl‑I/O műveletek
 
-Ennyi! A többit részletesen elmagyarázzuk.
+Ennyi! A többit útközben magyarázzuk el.
 
 ## GroupDocs.Annotation beállítása: A helyes mód
 
-A legtöbb oktatóanyag kihagyja a fontos beállítási részleteket. Nem ez itt. Integráljuk a GroupDocs.Annotation‑t megfelelően a projektedbe.
+A legtöbb tutorial kihagyja a fontos beállítási részleteket. Nem ez itt. Integráljuk a GroupDocs.Annotation‑t megfelelően a projektedbe.
 
 ### Maven konfiguráció, ami tényleg működik
 
-Add hozzá ezt a `pom.xml`‑hez (és igen, a repository beállítás kulcsfontosságú – sok fejlesztő kihagyja ezt a lépést):
+Add hozzá ezt a `pom.xml`‑hez (és igen, a repository konfiguráció kulcsfontosságú — sok fejlesztő kihagyja ezt a lépést):
 
 ```xml
 <repositories>
@@ -91,21 +96,21 @@ Add hozzá ezt a `pom.xml`‑hez (és igen, a repository beállítás kulcsfonto
 </dependencies>
 ```
 
-**Pro tipp**: Mindig ellenőrizd a legújabb verziót a GroupDocs kiadási oldalán. A 25.2‑es verzió jelentős teljesítményjavulást hoz a korábbi kiadásokhoz képest.
+**Pro tipp**: Mindig ellenőrizd a legújabb verziót a GroupDocs kiadási oldalán. A 25.2‑es verzió jelentős teljesítményjavulást hoz a korábbi verziókhoz képest.
 
-### Licencelés: A lehetőségek
+### Licencelés: Lehetőségeid
 
 Három út áll rendelkezésedre:
 
 1. **Ingyenes próba**: Tökéletes teszteléshez és kis projektekhez  
-2. **Ideiglenes licenc**: Fejlesztéshez és proof‑of‑concept‑ekhez ideális  
-3. **Teljes licenc**: Kötelező a termelésben való használathoz  
+2. **Ideiglenes licenc**: Kiváló fejlesztéshez és proof‑of‑concept‑ekhez  
+3. **Teljes licenc**: Szükséges a termelés‑bevetéshez  
 
-Ehhez az oktatóanyaghoz az ingyenes próba tökéletesen megfelel. Ne feledd, a termelési alkalmazásokhoz megfelelő licenc szükséges.
+Ehhez a tutorialhoz az ingyenes próba tökéletesen megfelel. Csak ne feledd, hogy a termelési alkalmazásokhoz megfelelő licenc szükséges.
 
 ### Gyors beállítási ellenőrzés
 
-Győződjünk meg róla, hogy minden működik, mielőtt a mókás részbe ugrunk:
+Győződjünk meg róla, hogy minden működik, mielőtt a mókás részhez érnénk:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -120,11 +125,11 @@ public class AnnotationSetup {
 
 ## Dokumentumok betöltése stream‑ekből: Az alap
 
-Itt kezdődik a izgalom. A legtöbb fejlesztő fájl‑útvonalakból tölti be a dokumentumokat, de a **stream‑alapú betöltés** hihetetlen rugalmasságot biztosít. Dokumentumokat betölthetsz adatbázisból, webkérésekből vagy bármilyen más forrásból.
+Itt kezdődik a valódi izgalom. A legtöbb fejlesztő fájl‑útvonalakból tölt be dokumentumokat, de a **stream‑alapú betöltés** hihetetlen rugalmasságot biztosít. Betöltheted a dokumentumokat adatbázisból, webkérésekből vagy bármilyen más forrásból.
 
 ### Miért fontosak a stream‑ek
 
-Gondolj bele: egy valós alkalmazásban a PDF‑ek a következőkből érkezhetnek:
+Gondolj csak bele: egy valós alkalmazásban a PDF‑eid a következőkből érkezhetnek:
 - Felhő tároló (AWS S3, Google Cloud, Azure)  
 - Adatbázis BLOB‑ok  
 - HTTP kérések  
@@ -147,7 +152,7 @@ public class LoadDocument {
 }
 ```
 
-**Valós világos megjegyzés**: Termelésben általában megfelelő kivételkezeléssel és erőforrás‑kezeléssel (try‑with‑resources a barátod) veszed körül.
+**Valóságos megjegyzés**: Termelésben általában megfelelő kivételkezeléssel és erőforrás‑menedzsmenttel (try‑with‑resources a barátod) csomagolod be.
 
 ### 2. lépés: Inicializáld az Annotator‑t
 
@@ -165,11 +170,11 @@ public class LoadDocument {
 }
 ```
 
-**Memória‑kezelési tipp**: Mindig hívd a `annotator.dispose()`‑t, amikor befejezted. Ez megakadályozza a memória‑szivárgásokat, amelyek idővel lemeríthetik az alkalmazás teljesítményét.
+**Memória‑kezelési tipp**: Mindig hívd meg a `annotator.dispose()`‑t, amikor befejezted. Ez megakadályozza a memória szivárgásokat, amelyek idővel lemeríthetik az alkalmazás teljesítményét.
 
 ## Az első annotációd hozzáadása: Terület‑annotációk
 
-A terület‑annotációk tökéletesek egy dokumentum adott részeinek kiemelésére. Olyan digitális ragasztócímkék, amelyeket bárhol elhelyezhetsz a PDF‑en.
+A terület‑annotációk tökéletesek egy dokumentum adott részeinek kiemelésére. Olyan digitális ragasztócímkék, amelyeket bárhol elhelyezhetsz a PDF‑eden.
 
 ### Terület‑annotáció létrehozása
 
@@ -208,7 +213,7 @@ A `Rectangle(100, 100, 100, 100)` paraméterek a következőképpen működnek:
 - **Harmadik 100**: Az annotáció szélessége  
 - **Negyedik 100**: Az annotáció magassága  
 
-**Koordináta tipp**: A PDF koordináták a bal‑felső sarokból indulnak. Ha a matematikai (bal‑alsó) koordináta‑rendszerhez vagy szokva, eleinte ez visszafelé tűnhet.
+**Koordináta tipp**: A PDF koordináták a bal‑felső sarokból indulnak. Ha matematikai koordinátákról (bal‑alsó origó) vagy hozzászokva, eleinte visszafelé érezheted.
 
 ## Haladó annotációs technikák
 
@@ -250,9 +255,9 @@ Az ARGB színek néha trükkösek. Íme néhány gyakori érték:
 - `16777215` = Fehér  
 - `0` = Fekete  
 
-**Pro tipp**: Használj online ARGB színkalkulátort a pontos értékekhez, vagy konvertálj hex színeket a `Integer.parseInt("FF0000", 16)`‑mel piros esetén.
+**Pro tipp**: Használj online ARGB színkalkulátort a pontos értékekhez, vagy konvertálj hex színből `Integer.parseInt("FF0000", 16)`‑nel a piroshoz.
 
-## Valós‑világos alkalmazások, amiket építhetsz
+## Valós‑világú alkalmazások, amelyeket építhetsz
 
 ### Dokumentum‑felülvizsgálati rendszerek
 
@@ -266,7 +271,7 @@ contractClause.setBackgroundColor(16776960); // Yellow highlight
 contractClause.setMessage("Review this clause for compliance");
 ```
 
-### Minőség‑ellenőrzési munkafolyamatok
+### Minőség‑biztosítási munkafolyamatok
 
 Használd az annotációkat a technikai dokumentációk hibáinak jelölésére:
 
@@ -280,7 +285,7 @@ updateNeeded.setMessage("Content outdated - requires immediate update");
 
 ### Oktatási eszközök
 
-Készíts interaktív tananyagokat:
+Interaktív tananyagok létrehozása:
 
 ```java
 // Example: Highlighting key concepts in textbooks
@@ -294,7 +299,7 @@ keyContent.setMessage("Key concept: Remember this for the exam!");
 
 ### Memória‑kezelési legjobb gyakorlatok
 
-**Mindig használj try‑with‑resources‑t**, amikor csak lehetséges:
+**Mindig használj try‑with‑resources‑t**, ha lehetséges:
 
 ```java
 public void annotateDocument(InputStream documentStream) throws Exception {
@@ -310,7 +315,7 @@ public void annotateDocument(InputStream documentStream) throws Exception {
 }
 ```
 
-### Tömeges feldolgozás nagy dokumentumok esetén
+### Nagy dokumentumok kötegelt feldolgozása
 
 Több dokumentum feldolgozásakor:
 
@@ -327,7 +332,7 @@ public void processBatch(List<InputStream> documents) throws Exception {
 
 ### Stream optimalizálás
 
-Nagy fájloknál fontold meg a pufferelést:
+Nagy fájlok esetén fontold meg a pufferelést:
 
 ```java
 import java.io.BufferedInputStream;
@@ -338,17 +343,17 @@ InputStream bufferedStream = new BufferedInputStream(
 );
 ```
 
-## Gyakori problémák és megoldások
+## Gyakori problémák és megoldásaik
 
 ### Probléma 1: „Document format not supported”
 
 **Probléma**: Olyan fájlt próbálsz annotálni, amelyet a GroupDocs.Annotation nem ismer fel.  
 
-**Megoldás**: Ellenőrizd a dokumentációban a támogatott formátumokat. A leggyakoribb formátumok (PDF, DOCX, PPTX) támogatottak, de néhány speciális formátum nem.
+**Megoldás**: Ellenőrizd a támogatott formátumok listáját a dokumentációban. A leggyakoribb formátumok (PDF, DOCX, PPTX) támogatottak, de egyes speciális formátumok nem.
 
 ### Probléma 2: OutOfMemoryError nagy fájloknál
 
-**Probléma**: Az alkalmazásod összeomlik nagy PDF‑ek feldolgozásakor.  
+**Probléma**: Az alkalmazásod összeomlik nagy PDF‑ek feldolgozása közben.  
 
 **Megoldások**:  
 1. Növeld a JVM heap méretét: `-Xmx2g`  
@@ -359,7 +364,7 @@ InputStream bufferedStream = new BufferedInputStream(
 
 **Probléma**: Az annotációk váratlan helyeken jelennek meg.  
 
-**Megoldás**: Ellenőrizd a koordináta‑rendszert. Ne feledd, a PDF koordináták a bal‑felső sarokból indulnak, és a mértékegység pont (1 inch = 72 pont).
+**Megoldás**: Ellenőrizd újra a koordináta‑rendszert. Ne feledd, hogy a PDF koordináták a bal‑felső sarokból indulnak, és egységük pont (1 inch = 72 pont).
 
 ### Probléma 4: A színek nem jelennek meg helyesen
 
@@ -369,9 +374,9 @@ InputStream bufferedStream = new BufferedInputStream(
 
 ## Legjobb gyakorlatok termelésben
 
-### 1. Hibakezelés
+### 1. Hiba‑kezelés
 
-Soha ne hagyj ki megfelelő kivételkezelést a termelési kódban:
+Soha ne hagyd ki a megfelelő kivételkezelést a termelési kódban:
 
 ```java
 public boolean annotateDocument(InputStream input, String outputPath) {
@@ -418,7 +423,7 @@ public void validateAnnotationParameters(Rectangle box) {
 
 ## Az annotációs kód tesztelése
 
-### Egységteszt megközelítés
+### Egység‑tesztelési megközelítés
 
 ```java
 @Test
@@ -443,7 +448,7 @@ public void testAreaAnnotationCreation() throws Exception {
 
 ## Integráció népszerű keretrendszerekkel
 
-### Spring Boot integráció
+### Spring Boot pdf annotation integráció
 
 ```java
 @Service
@@ -472,44 +477,44 @@ public class DocumentAnnotationService {
 }
 ```
 
-## Mi következik: Haladó funkciók felfedezése
+## Mi a következő: Haladó funkciók, amelyeket felfedezhetsz
 
-Miután elsajátítottad az ebben az oktatóanyagban bemutatott alapokat, érdemes megvizsgálni a következőket:
+Miután elsajátítottad a tutorialban bemutatott alapokat, érdemes megvizsgálni:
 
-1. **Szöveg‑annotációk** – Kommentek és jegyzetek hozzáadása közvetlenül a szövegrészekhez.  
-2. **Alakzat‑annotációk** – Nyilak, körök és egyéb alakzatok rajzolása a dokumentumelemek kiemeléséhez.  
-3. **Vízjelek** – Egyedi vízjelek hozzáadása márkázás vagy biztonság céljából.  
-4. **Annotáció‑kivonás** – Létező annotációk olvasása a dokumentumokból elemzés vagy migráció céljából.  
-5. **Egyedi annotáció‑típusok** – Speciális annotációk létrehozása a saját felhasználási esetedhez.
+1. **Text Annotations** – Megjegyzések és jegyzetek hozzáadása közvetlenül a szövegrészekhez.  
+2. **Shape Annotations** – Nyilak, körök és egyéb alakzatok rajzolása a dokumentumelemek kiemeléséhez.  
+3. **Watermarks** – Egyedi vízjelek hozzáadása márkázás vagy biztonság céljából.  
+4. **Annotation Extraction** – Létező annotációk kiolvasása a dokumentumokból elemzés vagy migráció céljából.  
+5. **Custom Annotation Types** – Speciális annotációtípusok létrehozása a saját felhasználási esetedhez.
 
-## Következtetés
+## Összegzés
 
-Most már szilárd alapokkal rendelkezel a **Java PDF annotálás** terén a GroupDocs.Annotation segítségével. A dokumentumok stream‑ekből történő betöltésétől az area‑annotációk hozzáadásáig és a termelés‑kész optimalizálásig fel vagy vértezve, hogy robusztus dokumentum‑annotációs funkciókat építhess.
+Most már szilárd alapokkal rendelkezel a **Java PDF annotation** használatához a GroupDocs.Annotation‑nel. A dokumentumok stream‑ekből történő betöltésétől az area annotációk hozzáadásáig és a termelés‑kész optimalizálásig fel vagy vértezve, hogy robusztus dokumentum‑annotációs funkciókat építs.
 
 **Főbb tanulságok**:  
 - A stream‑alapú betöltés maximális rugalmasságot biztosít.  
-- A megfelelő erőforrás‑kezelés megakadályozza a memória‑szivárgásokat.  
-- Az ARGB színformátum pontos megjelenést tesz lehetővé.  
-- A hibakezelés és a validáció elengedhetetlen a termelési rendszerekben.
+- A megfelelő erőforrás‑kezelés megakadályozza a memória szivárgásokat.  
+- Az ARGB színformátum pontos megjelenés‑szabályozást tesz lehetővé.  
+- A hiba‑kezelés és validáció elengedhetetlen a termelési rendszerekben.
 
-Az itt tanult technikák egyszerű proof‑of‑concept‑től az enterprise‑szintű dokumentumkezelő rendszerekig skálázhatók. Akár kollaboratív felülvizsgálati platformot építesz, akár annotációs funkciókat szeretnél hozzáadni meglévő szoftveredhez, most már tudod, hogyan csináld helyesen.
+A megtanult technikák egyszerű proof‑of‑concept‑től egészen vállalati szintű dokumentumkezelő rendszerekig skálázhatók. Akár együttműködő felülvizsgálati platformot építesz, akár annotációs funkciókat adsz egy meglévő szoftverhez, most már tudod, hogyan kell helyesen megvalósítani.
 
-## Gyakran feltett kérdések
+## Gyakran ismételt kérdések
 
-**Q: Mi a minimális Java verzió a GroupDocs.Annotation használatához?**  
+**Q: Mi a minimális Java verzió a GroupDocs.Annotation‑hoz?**  
 A: Java 8 a minimum, de a Java 11+ ajánlott a jobb teljesítmény és memória‑kezelés miatt.
 
 **Q: Annotálhatok más dokumentumtípusokat is, mint a PDF?**  
-A: Természetesen! A GroupDocs.Annotation több mint 50 formátumot támogat, köztük DOCX, PPTX, XLSX és különféle képformátumok.
+A: Természetesen! A GroupDocs.Annotation több mint 50 formátumot támogat, többek között DOCX, PPTX, XLSX és különféle képformátumok.
 
 **Q: Hogyan kezeljem a nagyon nagy PDF fájlokat memória‑kimerülés nélkül?**  
-A: Használd ezeket a stratégiákat: növeld a JVM heap méretét (`-Xmx4g`), dolgozd fel a dokumentumokat kisebb kötegekben, és mindig bontsd le az `Annotator` példányokat.
+A: Használd ezeket a stratégiákat: növeld a JVM heap méretét (`-Xmx4g`), dolgozd fel a dokumentumokat kisebb kötegekben, és mindig megfelelően zárd le az `Annotator` példányokat.
 
-**Q: Lehet testreszabni az annotáció színeit és átlátszóságát?**  
-A: Igen! Használj ARGB színértékeket a pontos vezérléshez. Például a `setBackgroundColor(65535)` ciánt állít be, a `setOpacity(0.5)` pedig 50 % átlátszóságot ad.
+**Q: Testreszabhatom az annotáció színeit és átlátszóságát?**  
+A: Igen! Használj ARGB színértékeket a pontos szabályozáshoz. Például a `setBackgroundColor(65535)` ciánt állít be, a `setOpacity(0.5)` pedig 50 % átlátszóságot ad.
 
-**Q: Mik a licencelési követelmények termelésben?**  
-A: A termelési telepítéshez érvényes GroupDocs.Annotation licenc szükséges. Fejlesztéshez és teszteléshez használható az ingyenes próba, de a kereskedelmi alkalmazásokhoz megvásárolt licenc szükséges.
+**Q: Milyen licencelési követelmények vannak a termeléshez?**  
+A: A termelési bevetéshez érvényes GroupDocs.Annotation licenc szükséges. Fejlesztéshez és teszteléshez használható az ingyenes próba, de a kereskedelmi alkalmazásokhoz megvásárolt licencre van szükség.
 
 **További források**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
@@ -522,6 +527,8 @@ A: A termelési telepítéshez érvényes GroupDocs.Annotation licenc szüksége
 
 ---
 
-**Utoljára frissítve:** 2025-12-29  
+**Utoljára frissítve:** 2026-03-27  
 **Tesztelve a következővel:** GroupDocs.Annotation 25.2  
 **Szerző:** GroupDocs  
+
+---
