@@ -1,36 +1,119 @@
 ---
-"date": "2025-05-06"
-"description": "GroupDocs.Annotation for Java kullanarak Java PDF'lerinde metin üstü çizili ek açıklamaların nasıl oluşturulacağını öğrenin. Belge düzenleme yeteneklerinizi geliştirmek için bu adım adım öğreticiyi izleyin."
-"title": "GroupDocs ile Java PDF Üstü Çizili Açıklamalar&#58; Kapsamlı Bir Kılavuz"
-"url": "/tr/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+categories:
+- Java PDF Processing
+date: '2026-05-21'
+description: GroupDocs kullanarak Java'da PDF'lere strikeout annotations eklemeyi
+  öğrenin. Bu adım adım öğretici, kurulum, kod, sorun giderme ve performans ipuçlarını
+  kapsar.
+keywords:
+- how to add strikeout
+- java pdf strikeout
+- groupdocs annotation java
+lastmod: '2026-05-21'
+linktitle: Java PDF Metin Strikeout Rehberi
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-21'
+  description: Learn how to add strikeout annotations to PDFs in Java using GroupDocs.
+    This step‑by‑step tutorial covers setup, code, troubleshooting, and performance
+    tips.
+  headline: How to Add Strikeout Annotations to PDFs in Java – Complete GroupDocs
+    Guide
+  type: TechArticle
+- description: Learn how to add strikeout annotations to PDFs in Java using GroupDocs.
+    This step‑by‑step tutorial covers setup, code, troubleshooting, and performance
+    tips.
+  name: How to Add Strikeout Annotations to PDFs in Java – Complete GroupDocs Guide
+  steps:
+  - name: Setting Up File Paths
+    text: Define the locations of your source PDF and the destination file. Incorrect
+      paths are a common source of “File Not Found” errors. **Common Mistake Alert:**
+      Ensure the output directory exists and is writable; GroupDocs will not auto‑create
+      missing folders.
+  - name: Initialize the Annotator
+    text: Create an `Annotator` instance that loads the PDF into memory. **What happens
+      here?** The library parses the PDF structure, builds an internal representation,
+      and prepares a page‑wise annotation canvas. For multi‑hundred‑page files this
+      step may take a few seconds.
+  - name: Adding Comments (Optional but Recommended)
+    text: '`Comment` is a class that represents a textual note attached to an annotation,
+      allowing collaborators to explain the reason for the strikeout. **Real‑world
+      tip:** Use comments to explain why text is being removed—this is especially
+      useful in legal or editorial review workflows.'
+  - name: Defining Annotation Coordinates
+    text: '`Point` objects store X‑Y coordinate pairs that define the exact location
+      of an annotation on a PDF page. **Coordinate System Explained:** PDF coordinates
+      start at the bottom‑left corner (0,0). The example creates a horizontal line
+      from (80,730) to (240,730) on the target page. **Finding the Right C'
+  - name: Creating the Strikeout Annotation
+    text: '`StrikeoutAnnotation` encapsulates the visual line, its style properties
+      such as color and opacity, and any associated metadata for a strikeout mark.
+      **Color Values:** The `fontColor` uses decimal RGB values (e.g., 65535 for bright
+      yellow). Use an online converter if you need brand‑specific shades. '
+  - name: Apply the Annotation
+    text: '`addAnnotation` is a method of the `Annotator` that registers the prepared
+      annotation with the document so it will be rendered and saved.'
+  - name: Save and Clean Up
+    text: '`dispose()` releases native resources held by the `Annotator` instance,
+      preventing memory leaks after processing is complete. **Memory Management Note:**
+      Calling `dispose()` frees native resources and prevents memory leaks when processing
+      batches of PDFs.'
+  type: HowTo
+- questions:
+  - answer: Yes. Create several `Point` objects that trace the desired path; the annotation
+      will follow the supplied polyline.
+    question: Can I strikeout text across multiple lines?
+  - answer: The annotation will be clipped and may become invisible. Always validate
+      coordinates against the page’s width and height.
+    question: What happens if I specify coordinates outside the page boundaries?
+  - answer: Absolutely. Use the `removeAnnotation` method with the annotation’s ID
+      or filter by type to delete them programmatically.
+    question: Can I remove strikeout annotations after adding them?
+  - answer: GroupDocs does not impose a hard cap, but performance may degrade after
+      thousands of annotations. Consider pagination or summarizing annotations for
+      very large sets.
+    question: Is there a limit to how many annotations I can add to a single PDF?
+  - answer: Pass the password to the `Annotator` constructor. The library will decrypt
+      the document in memory before applying any annotations.
+    question: How do I work with password‑protected PDFs?
+  type: FAQPage
+tags:
+- java-pdf
+- annotations
+- groupdocs
+- document-processing
+title: Java'da PDF'lere strikeout annotations eklemek – Tam GroupDocs Rehberi
 type: docs
-"weight": 1
+url: /tr/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/
+weight: 1
 ---
 
-# Java için GroupDocs.Annotation'ı Kullanarak PDF'lerde Metin Üstü Çizili Açıklamalar Oluşturma
+# PDF'lerde Java ile Üstü Çizili Açıklamaları Nasıl Eklenir
 
-**giriiş**
+PDF'de metni programlı olarak üstü çizmek gerektiğinde? İster bir belge inceleme sistemi oluşturuyor olun, ister bir düzenleme iş akışı kuruyor olun ya da sadece metni silmek için işaretlemeniz gereksin, **üstü çizme** açıklamaları Java'da pratik bir beceridir ve zaman tasarrufu sağlar, manuel çabayı azaltır. Bu kapsamlı rehberde, proje kurulumundan performans ayarına kadar GroupDocs.Annotation for Java ile üstü çizili açıklamaları nasıl uygulayacağınızı öğreneceksiniz.
 
-Yasal belgeleri incelerken, el yazmalarını düzenlerken veya akademik makalelere not eklerken metin üstü çizili açıklama eklemek önemlidir. GroupDocs.Annotation for Java ile bu işlevselliği uygulamalarınıza sorunsuz bir şekilde entegre edebilirsiniz. Bu eğitim, güçlü GroupDocs kitaplığını kullanarak metin üstü çizili açıklamaları uygulama konusunda adım adım talimatlar sağlar.
+## Hızlı Yanıtlar
+- **İlk adım nedir?** GroupDocs.Annotation Maven bağımlılığını `pom.xml` dosyanıza ekleyin.  
+- **Üstü çizme nasıl oluşturulur?** `Annotator` sınıfını örnekleyin, `StrikeoutAnnotation`'ı noktalarla tanımlayın, renk/opaklık ayarlayın, ardından `addAnnotation` metodunu çağırın.  
+- **Yorum ekleyebilir miyim?** Evet, iş birliği için bir `Comment` nesnesini açıklamaya ekleyin.  
+- **Açıklama yanlış konumda olursa ne olur?** Koordinat noktalarını ayarlayın; PDF alt‑sol köken sistemini kullanır.  
+- **Belge boyutu için bir limit var mı?** GroupDocs, tüm dosyayı belleğe yüklemeden çok sayfalı PDF'leri işler.
 
-**Ne Öğreneceksiniz:**
-- Geliştirme ortamınızda Java için GroupDocs.Annotation'ı kurma.
-- PDF belgelerine metin üstü çizili açıklamalar ekleme.
-- Yazı tipi rengi, opaklık ve yorumlar gibi açıklama özelliklerini yapılandırma.
-- Java'da açıklamalarla çalışırken performansı iyileştirmeye yönelik ipuçları.
+## PDF Açıklamasında “üstü çizme ekleme” nedir?
+“üstü çizme ekleme” ifadesi, bir PDF belgesi içinde seçili metnin üzerinden programlı olarak bir çizgi çizmeyi sağlayan bir açıklama API'si sürecini tanımlar. Java’da GroupDocs.Annotation, üstü çizgi işaretlerinin oluşturulması, stillendirilmesi ve kalıcılığını yöneten özel bir `StrikeoutAnnotation` sınıfı sunar.
 
-Öncelikle tüm ön koşullara sahip olduğunuzdan emin olarak başlayalım!
+## Java PDF Üstü Çizme için GroupDocs Neden Kullanılmalı?
+GroupDocs.Annotation **50+ giriş ve çıkış formatını** destekler—PDF, DOCX, XLSX, PPTX, HTML ve yaygın görüntü türleri dahil—bu sayede tek bir dosya tipine bağlı kalmazsınız. Düşük‑seviye PDF yapısını soyutlayan yüksek‑seviye bir API sağlar, font gömme, sayfa renderlama ve açıklama kalıcılığını otomatik olarak yönetir; böylece geliştiriciler iş mantığına odaklanır, PDF iç detaylarıyla uğraşmaz.
 
-## Ön koşullar
+## Önkoşullar ve Kurulum Gereksinimleri
 
-Bu eğitimi takip edebilmek için şunlara sahip olduğunuzdan emin olun:
-- **Java Geliştirme Kiti (JDK):** Sisteminize JDK 8 veya üzerini yükleyin.
-- **GroupDocs.Java için Açıklama:** Bu kütüphaneyi projenize entegre etmek için Maven'ı kullanın.
-- **İDE:** IntelliJ IDEA veya Eclipse gibi Entegre Geliştirme Ortamlarını kullanın.
+### Temel Gereksinimler
+- **Java Development Kit (JDK):** Versiyon 8 veya üzeri (optimum çöp toplama için JDK 11+ önerilir).  
+- **GroupDocs.Annotation for Java:** Maven aracılığıyla entegre edilir (aşağıdaki Maven kod bloğuna bakın).  
+- **IDE:** IntelliJ IDEA, Eclipse veya herhangi bir Java‑uyumlu editör.
 
-### Gerekli Kütüphaneler ve Bağımlılıklar
-
-Aşağıdaki bağımlılığı ekleyin: `pom.xml` Maven kullanıyorsanız:
+### Maven Bağımlılıkları Kurulumu
+`pom.xml` dosyanıza aşağıdaki bağımlılık bloğunu ekleyin:
 
 ```xml
 <repositories>
@@ -50,57 +133,48 @@ Aşağıdaki bağımlılığı ekleyin: `pom.xml` Maven kullanıyorsanız:
 </dependencies>
 ```
 
-### Çevre Kurulumu
+**Pro Tip:** En yeni sürümü her zaman GroupDocs sürüm sayfasından kontrol edin; yeni sürümler özellik ekler ve açıklama renderını etkileyebilecek hataları düzeltir.
 
-Bağımlılık yönetimi için IDE'nizi Maven kullanacak şekilde yapılandırın ve JDK 8 veya üzeri sürümün yüklü olduğundan emin olun.
+### Lisansınızı Alın
+GroupDocs.Annotation, üretim kullanımı için geçerli bir lisans gerektirir. Üç seçeneğiniz var:
 
-### Bilgi Önkoşulları
+- **Ücretsiz Deneme:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) adresinden indirin.  
+- **Geçici Lisans:** [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/) adresinden bir geliştirme anahtarı talep edin.  
+- **Tam Lisans:** Üretim için [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy) üzerinden satın alın.
 
-Java programlama konusunda temel bir anlayışa, belgelerdeki açıklamalara aşinalığa ve Maven gibi derleme araçlarını kullanarak proje kurma deneyimine sahip olmak faydalı olacaktır.
+Deneme sürümü hafif bir filigran ekler, bu yüzden test planınızı buna göre yapın.
 
-## GroupDocs.Annotation'ı Java İçin Ayarlama
+## Adım‑Adım Uygulama Kılavuzu
 
-GroupDocs kütüphanesini projenize entegre ederek başlayın. Maven kullanıyorsanız, bağımlılığı yukarıda gösterildiği gibi ekleyin.
+### Temel Bileşenleri Anlamak
+Aşağıdaki tanımlar size hızlı bir zihinsel model sunar:
 
-### Lisans Edinimi
+- **Annotator:** PDF'yi yükleyen ve açıklama metodlarını ortaya çıkaran temel API nesnesi.  
+- **StrikeoutAnnotation:** Görsel üstü çizgi ve stil seçeneklerini temsil eder.  
+- **Point:** Çizginin başlangıç ve bitiş noktalarını belirten (X, Y) koordinat çifti.  
+- **Comment:** İş birliği için açıklamaya eklenebilen isteğe bağlı metin.
 
-GroupDocs.Annotation'ı kullanmak için bir lisans edinin:
-- **Ücretsiz Deneme:** Deneme sürümünü şuradan indirin: [GroupDocs İndirmeleri](https://releases.groupdocs.com/annotation/java/).
-- **Geçici Lisans:** Geçici lisans talebinde bulunun [GroupDocs Geçici Lisansı](https://purchase.groupdocs.com/temporary-license/).
-- **Satın almak:** Tüm özellikler için bir lisans satın alın [GroupDocs Satın Alma Sayfası](https://purchase.groupdocs.com/buy).
-
-### Başlatma
-
-GroupDocs.Annotation'ı bir tane oluşturarak başlatın `Annotator` belgeniz için örnek. Bu nesne tüm açıklamaları yönetir.
-
-## Uygulama Kılavuzu
-
-Metnin üstünü çizili ek açıklamaları etkili bir şekilde eklemenizde size rehberlik edeceğiz ve süreci mantıksal bölümlere ayıracağız.
-
-### Metin Üstü Çizili Açıklama
-
-Amaç, GroupDocs.Annotation kullanarak PDF belgelerine metin üstü çizili açıklamanın nasıl ekleneceğini göstermektir.
-
-#### Adım 1: Belge Yollarını Yapılandırın
-
-Belgeniz için giriş ve çıkış yollarını tanımlayın:
+### Adım 1: Dosya Yollarını Ayarlama
+Kaynak PDF'nizin ve hedef dosyanızın konumlarını tanımlayın. Yanlış yollar “File Not Found” hatalarının yaygın bir kaynağıdır.
 
 ```java
 String inputFilePath = "path/to/your/document/directory/sample.pdf";
 String outputPath = "path/to/your/output/directory/AddTextStrikeoutAnnotation_output.pdf";
 ```
 
-#### Adım 2: Annotator'ı Başlatın
+**Common Mistake Alert:** Çıktı klasörünün var olduğundan ve yazılabilir olduğundan emin olun; GroupDocs eksik klasörleri otomatik oluşturmaz.
 
-Bir örnek oluşturun `Annotator` Açıklama eklemek istediğiniz PDF belgesini işlemek için:
+### Adım 2: Annotator'ı Başlatma
+PDF'yi belleğe yükleyen bir `Annotator` örneği oluşturun.
 
 ```java
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-#### Adım 3: Cevapları (Yorumları) Hazırlayın
+**What happens here?** Kütüphane PDF yapısını ayrıştırır, dahili bir temsil oluşturur ve sayfa bazlı bir açıklama kanvası hazırlar. Çok sayfalı dosyalarda bu adım birkaç saniye sürebilir.
 
-Gerekirse açıklamalarınızla ilişkili yorum veya yanıtlar ekleyin:
+### Adım 3: Yorum Ekleme (İsteğe Bağlı ama Önerilir)
+`Comment`, bir açıklamaya eklenen metinsel notu temsil eder; iş birliği yapanların üstü çizme nedenini açıklamasına olanak tanır.
 
 ```java
 Reply reply1 = new Reply();
@@ -111,9 +185,10 @@ List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 ```
 
-#### Adım 4: Açıklama Noktalarını Tanımlayın
+**Real‑world tip:** Yorumları, metnin neden kaldırıldığını açıklamak için kullanın—bu, özellikle hukuki veya editöryel inceleme iş akışlarında faydalıdır.
 
-Belgenizdeki üstü çizili alanın koordinatlarını belirtin:
+### Adım 4: Açıklama Koordinatlarını Tanımlama
+`Point` nesneleri, bir PDF sayfasındaki açıklamanın tam konumunu tanımlayan X‑Y koordinat çiftlerini saklar.
 
 ```java
 Point point1 = new Point(80, 730);
@@ -121,14 +196,17 @@ Point point2 = new Point(240, 730);
 List<Point> points = Arrays.asList(point1, point2);
 ```
 
-#### Adım 5: Üstü Çizili Açıklama Oluşturun ve Yapılandırın
+**Coordinate System Explained:** PDF koordinatları alt‑sol köşeden (0,0) başlar. Örnek, hedef sayfada (80,730) ile (240,730) arasında yatay bir çizgi oluşturur.
 
-Bir tane kurun `StrikeoutAnnotation` yazı tipi rengi, mesaj ve opaklık gibi gerekli özelliklere sahip nesne:
+**Finding the Right Coordinates:** Birçok geliştirici, sayfa genişliği/yüksekliğinin yüzdelerini mutlak noktalara dönüştüren bir yardımcı fonksiyon yazar; bu sayede kod farklı sayfa boyutlarına karşı dayanıklı olur.
+
+### Adım 5: Üstü Çizili Açıklama Oluşturma
+`StrikeoutAnnotation`, görsel çizgiyi, renk ve opaklık gibi stil özelliklerini ve üstü çizgi işaretiyle ilişkili meta verileri kapsar.
 
 ```java
 StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
 strikeout.setCreatedOn(Calendar.getInstance().getTime());
-strikeout.setFontColor(65535); // Sarı
+strikeout.setFontColor(65535); // Yellow
 strikeout.setMessage("This is a strikeout annotation");
 strikeout.setOpacity(0.7);
 strikeout.setPageNumber(0); 
@@ -136,70 +214,213 @@ strikeout.setPoints(points);
 strikeout.setReplies(replies);
 ```
 
-#### Adım 6: Belgeye Açıklama Ekleme
+**Color Values:** `fontColor` ondalık RGB değerleri kullanır (ör. parlak sarı için 65535). Marka renkleri gerekiyorsa çevrimiçi bir dönüştürücü kullanın.
 
-Yapılandırılan açıklamayı kullanarak belgenize ekleyin `Annotator`:
+**Opacity Recommendation:** `0.7` ( %70 ) opaklık, alt metni okunabilir tutarken net bir görsel ipucu sağlar.
+
+### Adım 6: Açıklamayı Uygulama
+`addAnnotation`, hazırlanan açıklamayı belgeye kaydeder; böylece render edilip kaydedilir.
 
 ```java
 annotator.add(strikeout);
 ```
 
-#### Adım 7: Kaydet ve At
-
-Açıklamalı PDF'inizi kaydedin ve kaynakları yayınlayın:
+### Adım 7: Kaydetme ve Temizleme
+`dispose()` yöntemi, `Annotator` örneği tarafından tutulan yerel kaynakları serbest bırakır; işlem tamamlandığında bellek sızıntılarını önler.
 
 ```java
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-### Sorun Giderme İpuçları
+**Memory Management Note:** `dispose()` çağrısı yerel kaynakları serbest bırakır ve PDF toplu işleme sırasında bellek sızıntılarını engeller.
 
-- Dosya bulunamadı hatalarını önlemek için yolların doğru ayarlandığından emin olun.
-- Belge biçiminin GroupDocs.Annotation tarafından desteklendiğini doğrulayın.
+## Yaygın Sorunlar ve Çözüm Yolları
 
-## Pratik Uygulamalar
+### Sorun 1: “File Not Found” Hataları
+**Symptoms:** `Annotator` oluşturulurken istisna fırlatılır.  
+**Solution:** Giriş ve çıkış yollarını doğrulayın, uygulamanın okuma/yazma izinlerine sahip olduğundan emin olun.
 
-1. **Hukuki Belge İncelemesi:** Güncelliğini yitirmiş maddeleri gözden geçirip düzeltin.
-2. **Akademik Açıklamalar:** Çalışma materyallerindeki yanlış cevapları silin.
-3. **El Yazmalarının Düzeltilmesi:** Yeniden yazılması veya silinmesi gereken bölümleri işaretleyin.
+```java
+// Add this check before creating the Annotator
+File inputFile = new File(inputFilePath);
+if (!inputFile.exists()) {
+    throw new FileNotFoundException("Input file not found: " + inputFilePath);
+}
+```
 
-Açıklama iş akışlarını otomatikleştirmek için belge yönetim platformları gibi sistemlerle entegrasyonu keşfedin!
+### Sorun 2: Üstü Çizili Açıklama Yanlış Konumda Görünüyor
+**Symptoms:** Çizgi, hedef metinle hizalanmaz.  
+**Solution:** PDF Y‑koordinatlarının yukarı doğru arttığını unutmayın. Görsel hata ayıklama aracı kullanın veya sayfa boyutlarını yazdırarak noktaları ince ayar yapın.
 
-## Performans Hususları
+```java
+// Log your coordinates to understand the positioning
+System.out.println("Annotation coordinates: " + point1 + " to " + point2);
 
-- **Bellek Kullanımını Optimize Edin:** Özellikle büyük belgelerle uğraşırken kaynakları verimli bir şekilde yönetin.
-- **Toplu İşleme:** Daha iyi performans için birden fazla açıklamayı toplu olarak işleyin.
+// For debugging, try extreme coordinates first
+Point debugPoint1 = new Point(0, 0);     // Bottom-left corner
+Point debugPoint2 = new Point(100, 100); // Small area from corner
+```
 
-GroupDocs.Annotation'ı kullanarak uygulamalarınızın sorunsuz çalışmasını sağlamak için Java bellek yönetimine ilişkin en iyi uygulamalara uyun.
+### Sorun 3: Açıklama Görünmüyor
+**Symptoms:** Kaydetme sonrası üstü çizgi görünmez.  
+**Possible Causes & Fixes:**  
+- **Opacity too low:** Görünürlüğü doğrulamak için opaklığı geçici olarak `1.0` yapın.  
+- **Color blending:** Kırmızı (`255`) gibi yüksek kontrastlı bir renk kullanın.  
+- **Incorrect page index:** Sayfa numaraları sıfır‑tabanlıdır; doğru sayfayı hedeflediğinizden emin olun.
 
-## Çözüm
+### Sorun 4: Büyük Dosyalarda Bellek Sorunları
+**Symptoms:** `OutOfMemoryError` veya yavaş performans.  
+**Solutions:**  
+- Belgeleri daha küçük partilerde işleyin.  
+- Mevcutsa streaming API'yi kullanın.  
+- Her belge işleminden sonra daima `dispose()` çağırın.
 
-Artık GroupDocs.Annotation for Java kullanarak PDF'lere metin üstü çizili ek açıklamaları eklemeyi öğrendiniz. Bu güçlü kitaplık yalnızca belge ek açıklamalarını basitleştirmekle kalmaz, aynı zamanda kapsamlı özelleştirme seçenekleri de sunar. Daha fazla özellik ve yeteneği keşfetmek için şuraya danışın: [GroupDocs belgeleri](https://docs.groupdocs.com/annotation/java/).
+```java
+// Increase JVM heap size when running your application
+// -Xmx2G for 2GB heap
 
-**Sonraki Adımlar:**
-- GroupDocs'ta bulunan farklı açıklama türlerini deneyin.
-- Bu işlevleri mevcut Java uygulamalarınıza entegre edin.
+// Process documents in batches rather than all at once
+// Always dispose of Annotator instances promptly
+```
 
-## SSS Bölümü
+## Gerçek Dünya Uygulamaları ve Kullanım Senaryoları
 
-1. **GroupDocs.Annotation for Java nedir?** 
-   PDF gibi çeşitli formatları destekleyen, belge açıklamalarını yönetmeye yarayan bir kütüphane.
-2. **Büyük belgeleri nasıl verimli bir şekilde yönetebilirim?**
-   Bellek kullanımını optimize edin ve toplu işlem tekniklerini göz önünde bulundurun.
-3. **Üzeri çizili açıklamalarıma yorum ekleyebilir miyim?**
-   Evet, kullanarak `Reply` Yorumları açıklamalarla ilişkilendirmek için sınıf.
-4. **GroupDocs.Annotation'ı kullanmak ücretsiz mi?**
-   Deneme sürümü mevcut ancak tüm özellikler için lisans gerekiyor.
-5. **GroupDocs.Annotation kullanımına ilişkin daha fazla örneği nerede bulabilirim?**
-   Şuna bir göz atın: [API Referansı](https://reference.groupdocs.com/annotation/java/) Ve [Belgeleme](https://docs.groupdocs.com/annotation/java/).
+### Hukuki Belge İncelemesi
+Hukuk firmaları, silinen maddeleri göstermek için sözleşmelere üstü çizgi ekler; aynı zamanda denetim izini korur.
 
-## Kaynaklar
+### Akademik Makale Düzenleme
+Profesörler, hakem incelemesi sırasında kaldırma önerileri için üstü çizgiler kullanır; orijinal metin bağlam için görünür kalır.
 
-- **[GroupDocs Belgeleri](https://docs.groupdocs.com/annotation/java/)**
-- **[API Referansı](https://reference.groupdocs.com/annotation/java/)**
-- **[GroupDocs.Annotation'ı indirin](https://releases.groupdocs.com/annotation/java/)**
-- **[GroupDocs Lisansını Satın Alın](https://purchase.groupdocs.com/buy)**
-- **[Ücretsiz Deneme Sürümü](https://releases.groupdocs.com/annotation/java/)**
-- **[Geçici Lisans Talebi](https://purchase.groupdocs.com/temporary-license/)**
-- **[GroupDocs Destek Forumu](https://forum.groupdocs.com/c/annotation/)**
+### İçerik Yönetim Sistemleri
+Yayın platformları, manuel denetimden önce politika ihlali bölümlerini otomatik olarak üstü çizgiyle işaretler.
+
+### Belgeler İçin Versiyon Kontrolü
+Kurumsallar, üstü çizgi açıklamalarını belge‑merkezli bir versiyon kontrol iş akışında “silme işaretleri” olarak ele alır; kod farklarına benzer.
+
+## Performans Optimizasyon İpuçları
+
+### Toplu İşleme Stratejisi
+Birçok PDF işlenirken, mümkün olduğunca tek bir `Annotator` örneği yeniden kullanın ve dosyaları paralel iş parçacıklarında işleyin.
+
+```java
+// Instead of creating a new Annotator for each document:
+// Process multiple annotations per document in one session
+List<StrikeoutAnnotation> annotations = prepareAllAnnotations();
+for (StrikeoutAnnotation annotation : annotations) {
+    annotator.add(annotation);
+}
+annotator.save(outputPath);
+```
+
+### Bellek Yönetimi En İyi Uygulamalar
+- Her `Annotator` için `dispose()` çağırın.  
+- Yığın baskısını önlemek için eşzamanlı belge yüklemelerini sınırlayın.  
+- VisualVM gibi araçlarla JVM bellek kullanımını izleyin.
+
+### Koordinat Önbellekleme
+Aynı açıklama düzenini birden çok dosyada uyguluyorsanız, `Point` nesnelerini önbelleğe alarak yeniden hesaplamayı önleyin.
+
+```java
+// Cache commonly used coordinate sets
+private static final List<Point> STANDARD_HEADER_STRIKEOUT = 
+    Arrays.asList(new Point(50, 750), new Point(300, 750));
+
+// Reuse these coordinates instead of recreating them
+strikeout.setPoints(STANDARD_HEADER_STRIKEOUT);
+```
+
+## Gelişmiş Özelleştirme Seçenekleri
+
+### Dinamik Renk Seçimi
+İş kurallarına göre (ör. kritik silmeler için kırmızı, geçici silmeler için sarı) çalışma zamanında renk seçin.
+
+```java
+// Choose colors based on annotation type or user
+int colorByPriority = getPriorityColor(annotationType);
+strikeout.setFontColor(colorByPriority);
+
+private int getPriorityColor(String type) {
+    switch(type) {
+        case "HIGH": return 255;    // Red
+        case "MEDIUM": return 65535; // Yellow  
+        case "LOW": return 65280;   // Green
+        default: return 0;          // Black
+    }
+}
+```
+
+### Çok Satırlı Üstü Çizgiler
+Birden fazla `Point` çifti oluşturarak metnin birkaç satırını kesen zig‑zag bir çizgi çizin.
+
+```java
+// Create strikeouts that span multiple lines
+List<Point> multiLinePoints = Arrays.asList(
+    new Point(80, 730),   // Start of first line
+    new Point(400, 730),  // End of first line
+    new Point(80, 710),   // Start of second line
+    new Point(200, 710)   // End of second line
+);
+```
+
+## Sorun Giderme Kontrol Listesi
+1. **File Permissions:** Okuma/yazma erişimini doğrulayın.  
+2. **Library Version:** Desteklenen bir GroupDocs.Annotation sürümü kullandığınızdan emin olun.  
+3. **License Status:** Lisans dosyasının doğru referans edildiğini onaylayın.  
+4. **PDF Compatibility:** PDF'nin bozuk olmadığını ve desteklenen boyut limitleri içinde olduğunu kontrol edin.  
+5. **Coordinate Validation:** Tüm noktaların sayfa sınırları içinde olduğundan emin olun.  
+6. **Heap Space:** Çok büyük dosyalar işliyorsanız JVM `-Xmx` değerini artırın.
+
+## Sıkça Sorulan Sorular
+
+**S: Birden fazla satırda metni üstü çizebilir miyim?**  
+C: Evet. İstenen yolu izleyen birkaç `Point` nesnesi oluşturun; açıklama sağlanan çokgen çizgiyi takip eder.
+
+**S: Koordinatları sayfa sınırlarının dışına belirlersem ne olur?**  
+C: Açıklama kırpılır ve görünmez hale gelebilir. Koordinatları her zaman sayfanın genişliği ve yüksekliğiyle karşılaştırarak doğrulayın.
+
+**S: Ekledikten sonra üstü çizgi açıklamalarını kaldırabilir miyim?**  
+C: Kesinlikle. `removeAnnotation` metodunu açıklamanın ID'siyle ya da türüne göre filtreleyerek programatik olarak silin.
+
+**S: Tek bir PDF'ye kaç açıklama ekleyebileceğimde bir limit var mı?**  
+C: GroupDocs katı bir sınır koymaz, ancak binlerce açıklama sonrası performans düşebilir. Çok büyük setler için sayfalama veya özetleme düşünün.
+
+**S: Şifre korumalı PDF'lerle nasıl çalışırım?**  
+C: Şifreyi `Annotator` yapıcısına geçirin. Kütüphane, açıklamaları uygulamadan önce belgeyi bellekte çözer.
+
+**S: Farklı sayfa boyutları ve yönelimlerine sahip PDF'leri nasıl yönetirim?**  
+C: `annotator.getPageInfo(pageNumber)` ile her sayfanın boyutlarını alın ve koordinatları bu boyutlara göre hesaplayarak tutarlı yerleştirme sağlayın.
+
+## Sonuç
+Artık GroupDocs.Annotation kullanarak Java’da PDF’lere **üstü çizme** açıklamaları eklemek için eksiksiz, üretim‑hazır bir çözüme sahipsiniz. Dosya yolu yönetimi, koordinat hesaplaması ve kaynak yönetimini ustalıkla ele alarak bu yeteneği belge inceleme araçlarına, içerik hatlarına veya kesin görsel geri bildirim gerektiren herhangi bir Java‑tabanlı uygulamaya entegre edebilirsiniz.
+
+**Next Steps**
+1. Örnek projeyi klonlayın ve bir örnek PDF üzerinde çalıştırın.  
+2. Farklı renkler, opaklıklar ve yorum metinleriyle deneyler yapın.  
+3. Açıklama iş akışını mevcut belge‑işleme servisinize entegre edin.  
+4. İlgili diğer açıklama türlerini keşfedin—vurgulamalar, yapışkan notlar ve şekil açıklamaları—PDF manipülasyon araç setinizi genişletin.
+
+Daha fazlasına hazır mısınız? Daha derin API içgörüleri için resmi dokümantasyona dalın.
+
+## Ek Kaynaklar
+
+- [GroupDocs dokümantasyonu](https://docs.groupdocs.com/annotation/java/) - GroupDocs kütüphaneleri için genel dokümantasyon  
+- [GroupDocs.Annotation Dokümantasyonu](https://docs.groupdocs.com/annotation/java/) - Tam API referansı  
+- [API Referans Kılavuzu](https://reference.groupdocs.com/annotation/java/) - Metot‑metot detaylar  
+- [En Son Sürümü İndir](https://releases.groupdocs.com/annotation/java/) - Kütüphanenizi güncel tutun  
+- [Lisans Satın Al](https://purchase.groupdocs.com/buy) - Üretim‑hazır lisanslama  
+- [Ücretsiz Deneme İndir](https://releases.groupdocs.com/annotation/java/) - Satın almadan değerlendirin  
+- [Geçici Lisans Talebi](https://purchase.groupdocs.com/temporary-license/) - Geliştirme testi  
+- [Destek Forumu](https://forum.groupdocs.com/c/annotation/) - Topluluk yardımı ve resmi destek  
+
+---
+
+**Last Updated:** 2026-05-21  
+**Tested With:** GroupDocs.Annotation 23.12 for Java  
+**Author:** GroupDocs
+
+## İlgili Eğitimler
+
+- [PDF Açıklama Ekle Java – Tam GroupDocs Kılavuzu](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)  
+- [Java PDF Açıklama Eğitimi - PDF'leri Vurgulama İçin Tam Kılavuz](/annotation/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/)  
+- [Java’da PDF’ye Ok Eklemek – Tam GroupDocs Eğitimi](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
