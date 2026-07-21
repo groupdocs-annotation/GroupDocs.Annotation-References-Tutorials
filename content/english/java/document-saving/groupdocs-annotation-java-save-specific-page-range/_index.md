@@ -5,8 +5,8 @@ description: "Learn how to use try with resources java to save specific pages fr
 keywords: "save specific pages Java annotation, GroupDocs annotation page range, Java document annotation tutorial, selective PDF page saving Java, extract annotated pages"
 weight: 1
 url: "/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
-date: "2026-01-10"
-lastmod: "2026-01-10"
+date: "2026-03-14"
+lastmod: "2026-03-14"
 categories: ["Java Development"]
 tags: ["groupdocs", "java-annotation", "document-processing", "pdf-manipulation"]
 type: docs
@@ -101,6 +101,10 @@ Here's what most tutorials won't tell you: **start with the free trial**. Seriou
 - **Full License**: Ready to go production? [Purchase here](https://purchase.groupdocs.com/buy)
 
 Pro tip: The trial version has some limitations, but it's more than enough to follow this tutorial and build a proof of concept.
+
+## Using try with resources java for selective page saving
+
+Now that the environment is ready, let’s see how **try with resources java** makes the page‑range operation safe and concise. The pattern ensures the `Annotator` instance is disposed automatically, which eliminates file‑lock headaches and keeps memory usage tidy.
 
 ## Core Implementation: Saving Specific Page Ranges
 
@@ -498,6 +502,6 @@ A: GroupDocs.Annotation focuses on processing rather than viewing, but you can r
 
 ---
 
-**Last Updated:** 2026-01-10  
+**Last Updated:** 2026-03-14  
 **Tested With:** GroupDocs.Annotation 25.2 (Java)  
 **Author:** GroupDocs

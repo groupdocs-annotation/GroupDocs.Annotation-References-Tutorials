@@ -1,114 +1,120 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-01-10'
-description: GroupDocs.Annotation ile Java’da PDF form alanları oluşturmayı öğrenin.
-  Doldurulabilir PDF’ler oluşturmak, düğmeler, onay kutuları, açılır menüler ve metin
-  alanları eklemek için adım adım rehber.
+date: '2026-03-14'
+description: GroupDocs.Annotation ile Java’da metin alanı PDF eklemeyi öğrenin. Doldurulabilir
+  PDF’ler oluşturmak, düğmeler, onay kutuları, açılır menüler ve metin alanları eklemek
+  için adım adım rehber.
 keywords: PDF form fields Java, interactive PDF Java tutorial, GroupDocs annotation
   form fields, Java PDF button creation, create fillable PDF forms programmatically
   Java
-lastmod: '2026-01-10'
+lastmod: '2026-03-14'
 linktitle: PDF Form Fields Java Tutorials
 tags:
 - pdf-forms
 - java-tutorial
 - groupdocs-annotation
 - interactive-pdf
-title: Java'da PDF Form Alanları Oluşturma – GroupDocs.Annotation Rehberi
+title: Java'da PDF'ye Metin Alanı Ekle – GroupDocs.Annotation Kılavuzu
 type: docs
 url: /tr/java/form-field-annotations/
 weight: 9
 ---
 
-# Java’da PDF Form Alanları Oluşturma – GroupDocs.Annotation Kılavuzu
+Finally "Last Updated:", "Tested With:", "Author:" translate.
 
-Eğer **create PDF form fields**'ı hızlı ve güvenilir bir şekilde oluşturmanız gerekiyorsa, doğru yerdesiniz. Bu öğreticide, GroupDocs.Annotation'ın doldurulabilir PDF'ler oluşturmanıza, etkileşimli düğmeler, onay kutuları, açılır menüler ve metin alanları eklemenize nasıl izin verdiğini adım adım göstereceğiz. İster müşteri onboarding formu, ister iç anket, ister karmaşık çok sayfalı bir iş akışı oluşturuyor olun, aşağıdaki adımlar size sağlam bir temel sağlayacak.
+Make sure to keep bold formatting.
+
+Now produce final markdown.
+
+# Java’da Metin Alanı PDF Ekle – GroupDocs.Annotation Rehberi
+
+Eğer **PDF form alanları oluşturmak** istiyor ve bunu hızlı ve güvenilir bir şekilde yapmak istiyorsanız doğru yerdesiniz. Bu öğreticide GroupDocs.Annotation’ın doldurulabilir PDF’ler oluşturmanıza, **add text field PDF** işlevselliği eklemenize ve etkileşimli düğmeler, onay kutuları, açılır menüler ve metin alanları eklemenize nasıl izin verdiğini adım adım inceleyeceğiz. Müşteri onboarding formu, iç anket ya da karmaşık çok‑sayfalı bir iş akışı oluşturuyor olun, aşağıdaki adımlar size sağlam bir temel sağlayacak.
 
 ## Hızlı Yanıtlar
-- **Java’da PDF form alanları oluşturmak için en iyi kütüphane hangisidir?** GroupDocs.Annotation
-- **Programlı olarak doldurulabilir bir PDF oluşturabilir miyim?** Evet – API anında etkileşimli alanlar oluşturur.
-- **Alanlar Adobe Reader ve tarayıcı görüntüleyicilerinde çalışıyor mu?** PDF standartlarını izlerler, bu yüzden çoğu modern görüntüleyicide çalışır.
-- **Daha sonra PDF form verilerini çıkarmak için destek var mı?** Evet, doldurulmuş değerleri GroupDocs.Annotation ile okuyabilirsiniz.
-- **Üretim kullanımında lisans gerekiyor mu?** Değerlendirme dışı dağıtımlar için ticari lisans gereklidir.
+- **Java’da PDF form alanları oluşturmak için en iyi kütüphane hangisidir?** GroupDocs.Annotation  
+- **Programatik olarak doldurulabilir bir PDF oluşturabilir miyim?** Evet – API anlık olarak etkileşimli alanlar yaratır.  
+- **Alanlar Adobe Reader ve tarayıcı görüntüleyicilerinde çalışıyor mu?** PDF standartlarını izlerler, bu yüzden çoğu modern görüntüleyicide çalışırlar.  
+- **Daha sonra PDF form verilerini çıkarmak için destek var mı?** Evet, doldurulmuş değerleri GroupDocs.Annotation ile okuyabilirsiniz.  
+- **Üretim ortamında lisansa ihtiyacım var mı?** Değerlendirme dışı dağıtımlar için ticari bir lisans gereklidir.  
 
-## “create PDF form fields” nedir?
-PDF form alanları oluşturmak, statik bir PDF'ye metin kutuları, onay kutuları, açılır listeler ve düğmeler gibi etkileşimli öğeler eklemek anlamına gelir; böylece kullanıcılar belge içinde doğrudan bilgi girebilir, seçebilir veya gönderebilir.
+## “add text field PDF” nedir?
+Metin alanı PDF eklemek, statik bir PDF’e etkileşimli bir metin kutusu yerleştirerek kullanıcıların belge içinde doğrudan bilgi girmesini sağlar. Bu, doldurulabilir herhangi bir formun temel yapı taşıdır.
 
-## Bu görev için neden GroupDocs.Annotation kullanmalı?
-- **Sıfır bağımlılık PDF manipülasyonu** – kütüphane düşük seviyeli PDF yapılarını sizin için yönetir.  
-- **Çapraz platform desteği** – Windows, Linux ve macOS JVM'lerinde çalışır.  
+## Bu görev için neden GroupDocs.Annotation kullanılmalı?
+- **Sıfır bağımlılık PDF işleme** – kütüphane düşük‑seviye PDF yapılarını sizin yerinize yönetir.  
+- **Çapraz platform desteği** – Windows, Linux ve macOS JVM’lerinde çalışır.  
 - **Zengin alan tipleri** – basit metin alanlarından karmaşık düğme eylemlerine kadar.  
-- **Yerleşik çıkarma** – aynı API ile doldurulmuş verileri okuyun (*extract pdf form data* için harika).
+- **Yerleşik çıkarma** – aynı API ile doldurulmuş verileri okuyun ( *extract pdf form data* için harika).  
 
 ## Önkoşullar
 - Java 17 veya daha yeni bir sürüm yüklü.  
 - Maven veya Gradle projesi kurulmuş.  
 - GroupDocs.Annotation for Java bağımlılık olarak eklenmiş (en son indirme bağlantısı için **Additional Resources** bölümüne bakın).  
 
-## Java’da PDF form alanları nasıl oluşturulur
+## Java’da Metin Alanı PDF Nasıl Eklenir
 
-### Adım 1: Annotator'ı Başlatma
-İlk olarak, zenginleştirmek istediğiniz PDF'yi yükleyin ve bir `Annotator` örneği oluşturun.
+### Adım 1: Annotator’ı Başlatın
+İlk olarak, zenginleştirmek istediğiniz PDF’i yükleyin ve bir `Annotator` örneği oluşturun.
 
-> *Bu adımın kodu resmi GroupDocs.Annotation hızlı‑başlangıç kılavuzunda yer alır ve burada form‑alanı detaylarına odaklanmak için tekrarlanmamıştır.*
+> *Bu adım için kod, resmi GroupDocs.Annotation hızlı‑başlangıç kılavuzunda yer alır ve burada tekrar edilmez; böylece öğretici form‑alanı detaylarına odaklanır.*
 
-### Adım 2: Metin Alanı Ekleme (generate fillable PDF Java)
+### Adım 2: Metin Alanı Ekle (fillable PDF java oluşturma)
 Metin alanları, isimler veya yorumlar gibi serbest biçimli girişler için idealdir.
 
-> *Aşağıdaki yardımcı yöntem, “Code Organization Strategies” bölümünde daha sonra gösterilmektedir.*
+> *Aşağıdaki yardımcı metod, “Kod Organizasyonu Stratejileri” bölümünde daha sonra gösterilir.*
 
-### Adım 3: Onay Kutusu Ekleme (pdf form validation java)
-Onay kutuları, kullanıcıların evet/hayır veya birden fazla seçim yapmasını sağlar. Java kodunuzda doğrulama mantığı için bunları gruplayabilirsiniz.
+### Adım 3: Onay Kutusu Ekle (pdf form validation java)
+Onay kutuları, kullanıcıların evet/hayır veya birden çok seçim yapmasını sağlar. Java kodunuzda doğrulama mantığı için bunları gruplayabilirsiniz.
 
-### Adım 4: Açılır Liste Ekleme (how to add pdf dropdown)
-Açılır menüler, girişi önceden tanımlı seçeneklerle sınırlar ve bu da veri tutarlılığını korumaya yardımcı olur.
+### Adım 4: Açılır Liste Ekle (how to add pdf dropdown)
+Açılır menüler, önceden tanımlı seçeneklerle girişi sınırlayarak veri tutarlılığını artırır.
 
-### Adım 5: Düğme Ekleme (submit or navigation)
+### Adım 5: Düğme Ekle (gönderme veya gezinme)
 Düğmeler, tamamlanmış formu bir sunucu uç noktasına gönderebilir veya sayfalar arasında gezinmeyi sağlayabilir.
 
-> *Yukarıdaki tüm eylemler, aşağıda bağlantı verilen özel alt‑öğreticilerde gösterilmektedir.*
+> *Yukarıdaki tüm eylemler, aşağıda bağlantıları verilen özel alt‑öğreticilerde gösterilmektedir.*
 
-## Form Alanı Uygulama Öğreticileri
+## Form Alanı Uygulama Eğitimleri
 
-Aşağıda, her alan tipi için tam Java kod parçacıklarını içeren derinlemesine kılavuzlar bulunmaktadır. İhtiyacınız olan form öğesine uygun bağlantıları takip edin.
+Aşağıda, her alan tipi için tam Java kod parçacıklarını içeren derinlemesine kılavuzlar yer almaktadır. İhtiyacınız olan form öğesine uygun bağlantıyı takip edin.
 
 ### [Java’da GroupDocs.Annotation Kullanarak Etkileşimli PDF Düğmeleri Oluşturma: Tam Kılavuz](./create-pdf-buttons-java-groupdocs-annotation/)
 
-Bu kapsamlı öğreticide PDF düğmesi oluşturma sanatını öğrenin. Tıklanabilir düğmeler ekleyerek eylemler tetikleyebilir, formları gönderebilir veya sayfalar arasında gezinebilirsiniz. Kılavuz, düğme stilini, olay yönetimini ve etkileşimli iş akışları için düğme yanıtları gibi gelişmiş özellikleri kapsar.
+Bu kapsamlı öğreticide PDF düğmesi oluşturmanın inceliklerini öğrenin. Tıklanabilir düğmeler ekleyerek eylemler tetikleyebilir, formları gönderebilir veya sayfalar arasında geçiş yapabilirsiniz. Kılavuz, düğme stilizasyonu, olay işleme ve etkileşimli iş akışları için gelişmiş özellikleri kapsar.
 
-**Mükemmel Kullanım Alanları**: Form gönderimleri, gezinme kontrolleri, eylem tetikleyicileri ve etkileşimli sunumlar.
+**Mükemmel**: Form gönderimleri, gezinme kontrolleri, eylem tetikleyicileri ve etkileşimli sunumlar.
 
 ### [Java için GroupDocs.Annotation Kullanarak Etkileşimli PDF Açılır Menüler Oluşturma](./create-pdf-dropdowns-groupdocs-annotation-java/)
 
-PDF'lerinizi, kullanıcılara önceden tanımlı seçenekler sunan akıllı açılır menülerle dönüştürün. Bu öğreticide, hem basit hem çok seviyeli açılır menüler oluşturmayı, seçim olaylarını yönetmeyi ve seçenekleri Java uygulamanızdan dinamik olarak doldurmayı öğreneceksiniz.
+PDF’lerinizi, kullanıcıların önceden tanımlı seçenekler arasından seçim yapmasını sağlayan akıllı açılır menülerle dönüştürün. Bu öğreticide basit ve çok‑seviyeli açılır menüler oluşturma, seçim olaylarını işleme ve seçenekleri Java uygulamanızdan dinamik olarak doldurma gösterilir.
 
-**Mükemmel Kullanım Alanları**: Ülke/eyalet seçicileri, kategori seçimleri, ürün seçenekleri ve kontrollü giriş gerektiren tüm senaryolar.
+**Mükemmel**: Ülke/il seçicileri, kategori seçimleri, ürün seçenekleri ve kontrol edilen giriş gerektiren her senaryo.
 
-### [Java için GroupDocs.Annotation Kullanarak PDF'lere CheckBox Açıklamaları Ekleme](./add-checkbox-annotations-pdf-groupdocs-java/)
+### [Java için GroupDocs.Annotation Kullanarak PDF’lere CheckBox Açıklamaları Ekleme](./add-checkbox-annotations-pdf-groupdocs-java/)
 
-Anketler, sözleşmeler ve çoklu seçim formları için onay kutusu işlevselliğini uygulamayı öğrenin. Bu kılavuz, tek tek onay kutularını, onay kutusu gruplarını ve veri bütünlüğünü sağlamak için gelişmiş doğrulama tekniklerini kapsar.
+Anketler, sözleşmeler ve çok‑seçimli formlar için onay kutusu işlevselliği uygulamayı öğrenin. Bu kılavuz, tek tek onay kutuları, onay kutusu grupları ve veri bütünlüğünü sağlamak için gelişmiş doğrulama tekniklerini kapsar.
 
-**Mükemmel Kullanım Alanları**: Şartların kabulü, özellik seçimleri, anket yanıtları ve onay formları.
+**Mükemmel**: Şart kabulü, özellik seçimleri, anket yanıtları ve onay formları.
 
-### [Java’da GroupDocs.Annotation Kullanarak TextField Açıklamaları Uygulama: Kapsamlı Kılavuz](./implement-textfield-annotations-java-groupdocs/)
+### [Java’da GroupDocs.Annotation Kullanarak TextField Açıklamaları Uygulama: Kapsamlı Rehber](./implement-textfield-annotations-java-groupdocs/)
 
-Bu detaylı öğreticide metin alanı uygulamasına derinlemesine dalın. Tek satır ve çok satırlı metin alanları oluşturmayı, doğrulama kuralları uygulamayı, farklı veri tiplerini yönetmeyi ve hem masaüstü hem mobil görüntüleme için optimize etmeyi öğreneceksiniz.
+Metin alanı uygulamasına derinlemesine dalın. Tek satır ve çok satır metin alanları oluşturma, doğrulama kuralları ekleme, farklı veri tiplerini işleme ve hem masaüstü hem de mobil görüntüleme için optimizasyon konularını keşfedin.
 
-**Mükemmel Kullanım Alanları**: Kullanıcı bilgileri toplama, geri bildirim formları, başvuru formları ve serbest metin girişine ihtiyaç duyan tüm senaryolar.
+**Mükemmel**: Kullanıcı bilgisi toplama, geri bildirim formları, başvuru formları ve serbest metin giriş senaryoları.
 
 ## PDF Form Alanı Geliştirme için En İyi Uygulamalar
 
-### Performans Optimizasyon İpuçları
-Birden fazla form alanı ile çalışırken, aşağıdaki performans hususlarını aklınızda bulundurun:
+### Performans Optimizasyonu İpuçları
+Birden çok form alanı ile çalışırken şu performans hususlarını göz önünde bulundurun:
 
-- **Toplu alan oluşturma** – Ayrı API çağrıları yerine tek bir işlemde birden fazla alan ekleyin.  
+- **Toplu alan oluşturma** – Alanları ayrı ayrı API çağrıları yerine tek bir işlemde ekleyin.  
 - **Alan konumlandırmasını optimize edin** – Tutarlı koordinatlar ve boyutlar kullanarak render hızını artırın.  
-- **Alan karmaşıklığını azaltın** – Geniş stil veya doğrulama içeren alanlardan daha basit alanlar daha hızlı yüklenir.  
-- **Mobil görüntülemeyi düşünün** – Alan boyutlarının küçük ekranlarda iyi çalıştığından emin olun.
+- **Alan karmaşıklığını azaltın** – Basit alanlar, kapsamlı stil veya doğrulama içerenlere göre daha hızlı yüklenir.  
+- **Mobil görüntülemeyi düşünün** – Alan boyutlarının küçük ekranlarda da iyi çalıştığından emin olun.
 
-### Kod Organizasyon Stratejileri
-Form‑alanı kodunuzu sürdürülebilirlik için yapılandırın:
+### Kod Organizasyonu Stratejileri
+Form‑alanı kodunuzu sürdürülebilir bir şekilde yapılandırın:
 
 ```java
 // Group related field creation in helper methods
@@ -121,65 +127,63 @@ private void createContactFields(Annotator annotator) {
 
 ### Kullanıcı Deneyimi Kılavuzları
 - **Açık etiketleme** – Form alanları için her zaman açıklayıcı etiketler sağlayın.  
-- **Mantıksal sekme sırası** – Klavye gezinmesi için uygun sekme dizileri ayarlayın.  
+- **Mantıksal sekme sırası** – Klavye ile gezinme için uygun sekme dizileri ayarlayın.  
 - **Tutarlı stil** – Tüm alanlarda aynı yazı tiplerini, renkleri ve boyutları kullanın.  
-- **Duyarlı tasarım** – Formlarınızı farklı ekran boyutlarında ve PDF görüntüleyicilerinde test edin.
+- **Duyarlı tasarım** – Formlarınızı farklı ekran boyutları ve PDF görüntüleyicilerinde test edin.
 
 ## Yaygın Sorunlar ve Çözümler
 
-### Alan PDF'de Görünmüyor
-**Problem**: Form alanı kodu hatasız çalışıyor ancak alan görünmüyor.  
-**Solution**: Koordinat sisteminizi doğrulayın ve alanların sayfa sınırları dışına yerleştirilmediğinden emin olun. Ayrıca, alan boyutlarının çok küçük olmadığını kontrol edin.
+### Alan PDF’de Görünmüyor
+**Sorun**: Form alanı kodu hatasız çalışıyor ancak alan görünmüyor.  
+**Çözüm**: Koordinat sisteminizi kontrol edin ve alanların sayfa sınırları dışına yerleştirilmediğinden emin olun. Ayrıca alan boyutlarının çok küçük olmadığını doğrulayın.
 
 ### Metin Alanı Giriş Kabul Etmiyor
-**Problem**: Kullanıcılar metin alanını görüyor ancak yazamıyor.  
-**Solution**: Alanın düzenlenebilir olarak işaretlendiğinden ve yalnızca‑okunur olmadığından emin olun. Test ettiğiniz PDF görüntüleyicisinin form düzenlemeyi desteklediğini doğrulayın.
+**Sorun**: Kullanıcılar metin alanını görüyor ancak yazamıyor.  
+**Çözüm**: Alanın düzenlenebilir (editable) olarak işaretlendiğinden ve yalnızca okuma‑yalnız (read‑only) olmadığından emin olun. Test ettiğiniz PDF görüntüleyicisinin form düzenlemeyi desteklediğini kontrol edin.
 
 ### Açılır Menü Seçenekleri Görünmüyor
-**Problem**: Açılır menü görünüyor ancak seçilebilir seçenek göstermiyor.  
-**Solution**: Oluşturma sırasında seçenekleri doğru eklediğinizden emin olun. Bazı görüntüleyiciler belirli bir seçenek formatı gerektirir; API belgelerini iki kez kontrol edin.
+**Sorun**: Açılır menü görünüyor ancak seçilebilir seçenek yok.  
+**Çözüm**: Oluşturma sırasında seçenekleri doğru eklediğinizi doğrulayın. Bazı görüntüleyiciler belirli bir seçenek formatı ister; API belgelerini iki kez kontrol edin.
 
 ### Büyük Formlarda Performans Sorunları
-**Problem**: Çok sayıda alan olduğunda PDF yavaşlıyor.  
-**Solution**: Büyük formları birden fazla sayfaya bölün veya karmaşık alan setleri için tembel yükleme tekniklerini kullanın.
+**Sorun**: Çok sayıda alan olduğunda PDF yavaşlıyor.  
+**Çözüm**: Büyük formları birden çok sayfaya bölün veya karmaşık alan setleri için tembel yükleme (lazy loading) tekniklerini kullanın.
 
 ## Sıkça Sorulan Sorular
 
-**Q: Mevcut bir PDF'deki form alanlarını değiştirebilir miyim?**  
-A: Evet, GroupDocs.Annotation, alan özelliklerini, doğrulama kurallarını güncellemenize veya alanları oluşturulduktan sonra yeniden konumlandırmanıza izin verir.
+**S: Mevcut bir PDF’deki form alanlarını değiştirebilir miyim?**  
+C: Evet, GroupDocs.Annotation oluşturulduktan sonra alan özelliklerini, doğrulama kurallarını veya konumlarını güncellemenize izin verir.
 
-**Q: Form alanları tüm PDF görüntüleyicilerinde çalışıyor mu?**  
-A: PDF standartlarını izlerler, bu yüzden çoğu modern görüntüleyicide çalışırlar—Adobe Reader, Chrome/Edge PDF eklentileri ve mobil uygulamalar dahil. Gelişmiş özellikler eski görüntüleyicilerde sınırlı destek alabilir.
+**S: Form alanları tüm PDF görüntüleyicilerinde çalışıyor mu?**  
+C: PDF standartlarını izlerler, bu yüzden Adobe Reader, Chrome/Edge PDF eklentileri ve mobil uygulamalar dahil çoğu modern görüntüleyicide çalışırlar. Gelişmiş özelliklerin eski görüntüleyicilerde sınırlı desteği olabilir.
 
-**Q: Doldurulmuş form alanlarından verileri nasıl çıkarırım?**  
-A: `Annotator` API'sini kullanarak alanlar üzerinde döngü yapın ve mevcut değerlerini okuyun. Bu, yanıtları bir veritabanına kaydetmenizi veya sonraki süreçleri tetiklemenizi sağlar.
+**S: Doldurulmuş form alanlarından veri nasıl çıkarılır?**  
+C: `Annotator` API’sını kullanarak alanlar üzerinde döngü kurabilir ve mevcut değerlerini okuyabilirsiniz. Bu sayede yanıtları bir veritabanına kaydedebilir veya sonraki süreçleri tetikleyebilirsiniz.
 
-**Q: Form alanlarına doğrulama kuralları ekleyebilir miyim?**  
-A: Temel doğrulama (ör. zorunlu alanlar) desteklenir. Karmaşık doğrulama için, kullanıcı formu gönderdikten sonra Java uygulamanızda mantığı uygulayın.
+**S: Form alanlarına doğrulama kuralları ekleyebilir miyim?**  
+C: Temel doğrulama (ör. zorunlu alanlar) desteklenir. Karmaşık doğrulama için, form gönderildikten sonra Java uygulamanızda mantığı uygulamanız gerekir.
 
-**Q: Çok sayfalı doldurulabilir PDF'ler oluşturmak mümkün mü?**  
-A: Kesinlikle. Açıklamayı oluştururken sayfa indeksini belirterek herhangi bir sayfaya alan ekleyebilirsiniz.
+**S: Çok‑sayfalı doldurulabilir PDF’ler oluşturmak mümkün mü?**  
+C: Kesinlikle. Alan oluştururken sayfa indeksini belirterek herhangi bir sayfaya alan ekleyebilirsiniz.
 
-**Q: GroupDocs.Annotation için hangi lisans seçenekleri mevcuttur?**  
-A: Geliştirici, site ve kurumsal lisanslar dahil olmak üzere çeşitli lisans modelleri vardır. Detaylar için resmi fiyatlandırma sayfasına bakın.
+**S: GroupDocs.Annotation için hangi lisans seçenekleri mevcut?**  
+C: Geliştirici, site ve kurumsal lisanslar dahil çeşitli lisans modelleri vardır. Detaylar için resmi fiyatlandırma sayfasına bakın.
 
-## Etkileşimli PDF'ler Oluşturmaya Hazır mısınız?
+## Etkileşimli PDF’ler Oluşturmaya Hazır mısınız?
 
-Artık Java’da **create PDF form fields** oluşturmak için temel metin girişlerinden gelişmiş düğme eylemlerine kadar eksiksiz bir yol haritasına sahipsiniz. Anlık ihtiyacınıza uygun alt‑öğreticiyi seçin, kodla deney yapın ve birden fazla alan tipini birleştirerek güçlü, kullanıcı dostu belgeler oluşturun.
+Artık Java’da **add text field PDF** eklemek için temel bir yol haritasına sahipsiniz; temel metin girişlerinden karmaşık düğme eylemlerine kadar. Hemen ihtiyacınıza uygun alt‑öğreticiyi seçin, kodla deney yapın ve birden çok alan tipini birleştirerek güçlü, kullanıcı‑dostu belgeler oluşturun.
 
 ## Ek Kaynaklar
 
-- [Java için GroupDocs.Annotation Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)
-- [Java için GroupDocs.Annotation API Referansı](https://reference.groupdocs.com/annotation/java/)
-- [Java için GroupDocs.Annotation İndir](https://releases.groupdocs.com/annotation/java/)
+- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- [GroupDocs.Annotation for Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- [Download GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)
 - [GroupDocs.Annotation Forum](https://forum.groupdocs.com/c/annotation)
-- [Ücretsiz Destek](https://forum.groupdocs.com/)
-- [Geçici Lisans](https://purchase.groupdocs.com/temporary-license/)
+- [Free Support](https://forum.groupdocs.com/)
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
 
 ---
 
-**Last Updated:** 2026-01-10  
-**Tested With:** GroupDocs.Annotation 5.2 (latest stable)  
-**Author:** GroupDocs  
-
----
+**Son Güncelleme:** 2026-03-14  
+**Test Edilen Versiyon:** GroupDocs.Annotation 5.2 (en son kararlı)  
+**Yazar:** GroupDocs

@@ -1,14 +1,14 @@
 ---
 categories:
 - Java Development
-date: '2026-01-10'
-description: Impara come utilizzare try‑with‑resources in Java per salvare pagine
-  specifiche da documenti annotati con GroupDocs.Annotation. Include un esempio di
-  servizio documenti Spring Boot.
+date: '2026-03-14'
+description: Impara come usare try‑with‑resources in Java per salvare pagine specifiche
+  da documenti annotati con GroupDocs.Annotation. Include un esempio di servizio di
+  documenti Spring Boot.
 keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
   document annotation tutorial, selective PDF page saving Java, extract annotated
   pages
-lastmod: '2026-01-10'
+lastmod: '2026-03-14'
 linktitle: Save Specific Pages Java Annotation
 tags:
 - groupdocs
@@ -21,54 +21,62 @@ url: /it/java/document-saving/groupdocs-annotation-java-save-specific-page-range
 weight: 1
 ---
 
+ with resources java" should stay as is? It's a phrase but maybe keep as is because technical term. Keep as is.
+
+Let's translate each paragraph.
+
+Will keep bold **try with resources java** unchanged.
+
+Proceed.
+
 # Come salvare pagine specifiche da documenti annotati in Java
 
 ## Introduzione
 
-Ti è mai capitato di affogare in documenti annotati enormi quando ti servono solo poche pagine specifiche? Con **try with resources java**, puoi estrarre in modo efficiente solo le pagine di cui hai bisogno usando GroupDocs.Annotation. Che tu stia gestendo contratti legali, manuali tecnici o articoli di ricerca, estrarre solo le pagine rilevanti salva spazio di archiviazione, velocizza l'elaborazione e mantiene il tuo flusso di lavoro ordinato.
+Ti è mai capitato di essere sommerso da enormi documenti annotati quando ti servono solo poche pagine specifiche? Con **try with resources java**, puoi estrarre in modo efficiente solo le pagine di cui hai bisogno usando GroupDocs.Annotation. Che tu stia gestendo contratti legali, manuali tecnici o articoli di ricerca, estrarre solo le pagine rilevanti riduce lo spazio di archiviazione, velocizza l'elaborazione e mantiene il flusso di lavoro ordinato.
 
-In questa guida, ti accompagneremo passo passo su tutto ciò che devi sapere – dall'installazione della libreria ai trucchi avanzati di performance che mantengono la tua applicazione Java funzionante senza problemi.
+In questa guida, percorreremo tutto ciò che devi sapere – dall'installazione della libreria ai trucchi avanzati di performance che mantengono la tua applicazione Java fluida.
 
 **Cosa imparerai alla fine:**
 - Configurare GroupDocs.Annotation nel tuo progetto Java (nel modo corretto)
-- Implementare il salvataggio selettivo delle pagine con codice pulito e manutenibile
-- Evitare le insidie comuni che ostacolano la maggior parte degli sviluppatori
-- Ottimizzare le prestazioni per l'elaborazione di documenti di grandi dimensioni
-- Risoluzione dei problemi prima che diventino gravi
+- Implementare il salvataggio selettivo di pagine con codice pulito e manutenibile
+- Evitare le insidie più comuni che ostacolano la maggior parte degli sviluppatori
+- Ottimizzare le performance per l'elaborazione di documenti di grandi dimensioni
+- Risolvere i problemi prima che diventino gravi
 
 ## Risposte rapide
-- **Cosa fa “try with resources java”?** Chiude automaticamente l'Annotator, prevenendo blocchi di file e perdite di memoria.  
+- **Cosa fa “try with resources java”?** Chiude automaticamente l'Annotator, evitando blocchi di file e perdite di memoria.  
 - **Quale libreria gestisce il salvataggio di intervalli di pagine?** `GroupDocs.Annotation` fornisce `SaveOptions` con `setFirstPage`/`setLastPage`.  
 - **Posso usarlo in un servizio Spring Boot?** Sì – vedi la sezione “Spring Boot Document Service Integration”.  
-- **Ho bisogno di una licenza?** Una prova gratuita funziona per lo sviluppo; è necessaria una licenza completa per la produzione.  
-- **È sicuro per PDF di grandi dimensioni (1000+ pagine)?** Usa load‑only‑annotated‑pages e l'elaborazione batch per mantenere basso l'uso della memoria.
+- **È necessaria una licenza?** Una prova gratuita è sufficiente per lo sviluppo; è richiesta una licenza completa per la produzione.  
+- **È sicuro per PDF di grandi dimensioni (1000+ pagine)?** Usa il caricamento solo delle pagine annotate e l'elaborazione a batch per mantenere basso l'uso di memoria.
 
 ## Perché salvare pagine specifiche? (Contesto reale)
 
-Prima di entrare negli aspetti tecnici, parliamo del perché questa funzionalità è rivoluzionaria:
+Prima di entrare nei dettagli tecnici, parliamo del perché questa funzionalità è rivoluzionaria:
 
-**Efficienza di archiviazione**: Un manuale di 500 pagine con annotazioni solo su 20 pagine? Perché salvare tutte le 500 quando puoi estrarre le 20 rilevanti e ridurre la dimensione del file del 96 %?
+**Efficienza di archiviazione**: Un manuale di 500 pagine con annotazioni su sole 20 pagine? Perché salvare tutte le 500 quando puoi estrarre le 20 rilevanti e ridurre la dimensione del file del 96 %?
 
-**Elaborazione più veloce**: File più piccoli significano upload, download e elaborazione più rapidi. I tuoi utenti (e i tuoi server) ti ringrazieranno.
+**Elaborazione più veloce**: File più piccoli significano upload, download e processing più rapidi. I tuoi utenti (e i tuoi server) ti ringrazieranno.
 
 **Migliore esperienza utente**: Nessuno vuole scorrere centinaia di pagine per trovare le sezioni annotate. Fornisci loro esattamente ciò di cui hanno bisogno.
 
-**Conformità e sicurezza**: Nei settori regolamentati, potresti essere autorizzato a condividere solo sezioni specifiche dei documenti. Il salvataggio selettivo semplifica la conformità.
+**Conformità e sicurezza**: In settori regolamentati, potresti essere autorizzato a condividere solo sezioni specifiche dei documenti. Il salvataggio selettivo semplifica la conformità.
 
 ## Prerequisiti e configurazione
 
 ### Cosa ti serve
 
-- **Java Development Kit (JDK)**: Versione 8 o superiore (consigliato JDK 11+)
-- **Maven o Gradle**: Per la gestione delle dipendenze
-- **GroupDocs.Annotation per Java**: Versione 25.2 o successiva
+- **Java Development Kit (JDK)**: Versione 8 o superiore (JDK 11+ consigliato)  
+- **Maven o Gradle**: Per la gestione delle dipendenze  
+- **GroupDocs.Annotation for Java**: Versione 25.2 o successiva  
 - **Conoscenze di base di Java**: Comprensione di I/O file e OOP  
 
-### Configurazione di GroupDocs.Annotation per Java
+### Configurare GroupDocs.Annotation for Java
 
 #### Configurazione Maven
 
-Add this to your `pom.xml` (trust me, copy‑paste is your friend here):
+Aggiungi questo al tuo `pom.xml` (fidati, il copia‑incolla è il tuo amico qui):
 
 ```xml
 <repositories>
@@ -87,7 +95,7 @@ Add this to your `pom.xml` (trust me, copy‑paste is your friend here):
 </dependencies>
 ```
 
-#### Configurazione Gradle (se sei del team Gradle)
+#### Configurazione Gradle (Se sei del team Gradle)
 
 ```gradle
 repositories {
@@ -103,23 +111,27 @@ dependencies {
 
 ### Ottenere la licenza
 
-Ecco cosa la maggior parte dei tutorial non ti dirà: **inizia con la prova gratuita**. Sul serio. Non complicare le cose.
+Ecco cosa la maggior parte dei tutorial non ti dice: **inizia con la prova gratuita**. Sul serio. Non complicare le cose.
 
-- **Prova gratuita**: Perfetta per test e sviluppo – ottienila da [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
-- **Licenza temporanea**: Hai bisogno di più tempo per valutare? Ottieni una [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Licenza completa**: Pronto per la produzione? [Purchase here](https://purchase.groupdocs.com/buy)
+- **Prova gratuita**: Perfetta per test e sviluppo – scaricala da [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Licenza temporanea**: Hai bisogno di più tempo per valutare? Ottieni una [licenza temporanea](https://purchase.groupdocs.com/temporary-license/)  
+- **Licenza completa**: Pronto per la produzione? [Acquista qui](https://purchase.groupdocs.com/buy)
 
-Consiglio: la versione di prova ha alcune limitazioni, ma è più che sufficiente per seguire questo tutorial e creare una proof of concept.
+Consiglio: la versione di prova ha alcune limitazioni, ma è più che sufficiente per seguire questo tutorial e costruire una proof of concept.
 
-## Implementazione principale: salvataggio di intervalli di pagine specifici
+## Usare try with resources java per il salvataggio selettivo di pagine
 
-### L'approccio base (inizia qui)
+Ora che l'ambiente è pronto, vediamo come **try with resources java** rende l'operazione di intervallo di pagine sicura e concisa. Il pattern garantisce che l'istanza `Annotator` venga eliminata automaticamente, eliminando i problemi di blocco file e mantenendo l'uso della memoria ordinato.
 
-Iniziamo con l'implementazione più semplice possibile. Questo è ciò di cui il 90 % dei casi d'uso ha bisogno:
+## Implementazione principale: Salvataggio di intervalli di pagine specifiche
+
+### Approccio di base (Inizia qui)
+
+Partiamo dall'implementazione più semplice possibile. È ciò che il 90 % dei casi d'uso richiede:
 
 #### Passo 1: Configurare la gestione dei percorsi file
 
-Per prima cosa, crea una classe di utilità per gestire i percorsi dei file (ti ringrazierò più tardi quando dovrai cambiare directory):
+Per prima cosa, crea una classe di utilità per gestire i percorsi file (ti ringrazierò più tardi quando dovrai cambiare directory):
 
 ```java
 import org.apache.commons.io.FilenameUtils;
@@ -131,7 +143,7 @@ public class FilePathConfiguration {
 }
 ```
 
-**Perché questo approccio?** Mantiene la logica dei percorsi dei file centralizzata e semplifica i test. Usare `FilenameUtils` garantisce di preservare automaticamente l'estensione originale del file.
+**Perché questo approccio?** Mantiene la logica dei percorsi file centralizzata e facilita i test. L'uso di `FilenameUtils` garantisce che l'estensione originale del file venga preservata automaticamente.
 
 #### Passo 2: Implementare il salvataggio dell'intervallo di pagine
 
@@ -156,10 +168,10 @@ public class SaveSpecificPageRange {
 }
 ```
 
-**Cosa sta succedendo:**
-- Usiamo un blocco **try‑with‑resources java** (`try ( … )`) così l'`Annotator` viene chiuso automaticamente, eliminando i problemi di blocco dei file.  
+**Cosa succede qui:**
+- Utilizziamo un blocco **try‑with‑resources java** (`try ( … )`) così l'`Annotator` viene chiuso automaticamente, eliminando i problemi di blocco file.  
 - `setFirstPage(2)` e `setLastPage(4)` definiscono il nostro intervallo inclusivo (pagine 2‑4).  
-- L'intervallo è **inclusivo** su entrambi i lati – un dettaglio che confonde molti sviluppatori.
+- L'intervallo è **inclusivo** su entrambi i lati – un dettaglio che inganna molti sviluppatori.
 
 ### Configurazione avanzata dei percorsi file
 
@@ -185,15 +197,15 @@ public class FilePathConfiguration {
 }
 ```
 
-Ora puoi generare automaticamente nomi come `contract_pages_2-4.pdf`.
+Ora puoi generare nomi come `contract_pages_2-4.pdf` automaticamente.
 
-## Problemi comuni e come evitarli
+## Insidie comuni e come evitarle
 
-### Problema #1: Confusione sull'indice delle pagine
+### Insidia #1: Confusione sull'indice delle pagine
 
-**Il problema**: Supporre che i numeri delle pagine inizino da 0 (non è così in GroupDocs.Annotation).
+**Il problema**: Supporre che i numeri di pagina partano da 0 (non è così in GroupDocs.Annotation).
 
-**La soluzione**: La numerazione delle pagine inizia da 1, proprio come nei documenti reali. La pagina 1 è la prima pagina, non la pagina 0.
+**La soluzione**: La numerazione delle pagine parte da 1, proprio come nei documenti reali. La pagina 1 è la prima pagina, non la pagina 0.
 
 ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
@@ -203,11 +215,11 @@ saveOptions.setFirstPage(0);
 saveOptions.setFirstPage(1);
 ```
 
-### Problema #2: Perdite di risorse
+### Insidia #2: Perdite di risorse
 
 **Il problema**: Dimenticare di chiudere correttamente l'Annotator, causando blocchi di file e perdite di memoria.
 
-**La soluzione**: Usa sempre **try‑with‑resources java** o la chiusura esplicita:
+**La soluzione**: Usa sempre **try‑with‑resources java** o chiusura esplicita:
 
 ```java
 // Good - automatic resource management
@@ -227,11 +239,11 @@ try {
 }
 ```
 
-### Problema #3: Intervalli di pagine non validi
+### Insidia #3: Intervalli di pagine non validi
 
 **Il problema**: Specificare intervalli di pagine che non esistono nel documento.
 
-**La soluzione**: Convalida prima gli intervalli:
+**La soluzione**: Valida prima gli intervalli:
 
 ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
@@ -258,11 +270,11 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
 }
 ```
 
-## Suggerimenti per l'ottimizzazione delle prestazioni
+## Suggerimenti per l'ottimizzazione delle performance
 
 ### Gestione della memoria per documenti di grandi dimensioni
 
-Quando si gestiscono documenti di grandi dimensioni (100 + pagine), l'uso della memoria diventa importante:
+Quando si trattano documenti voluminosi (100 + pagine), l'uso della memoria diventa cruciale:
 
 ```java
 public class OptimizedPageRangeSaver {
@@ -288,12 +300,12 @@ public class OptimizedPageRangeSaver {
 
 **Strategie chiave di ottimizzazione**
 - `setLoadOnlyAnnotatedPages(true)` riduce l'impronta di memoria.  
-- `setAnnotationsOnly(true)` crea un file leggero che contiene solo lo strato di annotazione.  
-- Elabora i documenti in batch se hai molti file.
+- `setAnnotationsOnly(true)` crea un file leggero che contiene solo il layer delle annotazioni.  
+- Elabora i documenti a batch se hai molti file.
 
-### Elaborazione batch di più documenti
+### Elaborazione a batch di più documenti
 
-Per scenari di produzione in cui elabori molti documenti:
+Per scenari di produzione in cui devi processare molti documenti:
 
 ```java
 public class BatchPageRangeSaver {
@@ -352,7 +364,7 @@ public class DocumentPageRangeService {
 
 ### Elaborazione di documenti legali
 
-Gli studi legali spesso devono estrarre sezioni specifiche di contratti o documenti giudiziari:
+Gli studi legali spesso hanno bisogno di estrarre sezioni specifiche di contratti o documenti giudiziari:
 
 ```java
 public class LegalDocumentProcessor {
@@ -371,7 +383,7 @@ public class LegalDocumentProcessor {
 
 ### Gestione di contenuti educativi
 
-Insegnanti che estraggono capitoli specifici da libri di testo per compiti degli studenti:
+Insegnanti che estraggono capitoli specifici da libri di testo per compiti studenteschi:
 
 ```java
 public class EducationalContentExtractor {
@@ -388,9 +400,9 @@ public class EducationalContentExtractor {
 }
 ```
 
-### Revisioni di assicurazione qualità
+### Revisioni di controllo qualità
 
-Estrarre solo le pagine con commenti di revisione per una revisione mirata:
+Estrazione solo delle pagine con commenti di revisione per una revisione mirata:
 
 ```java
 public class QAReviewExtractor {
@@ -417,20 +429,20 @@ public class QAReviewExtractor {
 
 ## Riepilogo delle migliori pratiche
 
-1. **Convalida sempre i parametri di input** – verifica gli intervalli di pagine prima dell'elaborazione.  
-2. **Usa try‑with‑resources java** – previene perdite di risorse e problemi di blocco dei file.  
+1. **Convalida sempre i parametri di input** – verifica gli intervalli di pagine prima di processare.  
+2. **Usa try‑with‑resources java** – previene perdite di risorse e problemi di blocco file.  
 3. **Implementa una corretta gestione degli errori** – non lasciare che un file difettoso blocchi l'intero batch.  
-4. **Considera l'uso della memoria** – usa `setLoadOnlyAnnotatedPages(true)` per documenti di grandi dimensioni.  
+4. **Considera l'uso della memoria** – utilizza `setLoadOnlyAnnotatedPages(true)` per documenti di grandi dimensioni.  
 5. **Testa con vari tipi di file** – PDF, Word, PowerPoint possono comportarsi diversamente.  
-6. **Monitora le prestazioni** – tieni sotto controllo i tempi di elaborazione e la memoria in produzione.
+6. **Monitora le performance** – tieni d'occhio i tempi di elaborazione e la memoria in produzione.
 
 ## Risoluzione dei problemi comuni
 
-### Problema: errore “File is locked”
+### Problema: Errore “File is locked”
 
-**Sintomi**: Eccezione lanciata durante il salvataggio, che menziona blocchi di file.
+**Sintomi**: Eccezione lanciata durante il salvataggio, che menziona blocchi di file.  
 
-**Cause**  
+**Cause**:  
 - Annotator non chiuso correttamente da un'operazione precedente.  
 - File ancora aperto in un'altra applicazione.  
 - Permessi insufficienti.  
@@ -453,18 +465,18 @@ if (!file.getParentFile().canWrite()) {
 }
 ```
 
-### Problema: errori Out of Memory
+### Problema: Errori Out of Memory
 
-**Sintomi**: `OutOfMemoryError` durante l'elaborazione di documenti di grandi dimensioni.
+**Sintomi**: `OutOfMemoryError` durante l'elaborazione di documenti di grandi dimensioni.  
 
-**Soluzioni**  
-1. Aumenta la dimensione dell'heap JVM, ad es. `-Xmx2g`.  
+**Soluzioni**:  
+1. Aumenta la dimensione dell'heap JVM, ad esempio `-Xmx2g`.  
 2. Usa le opzioni di caricamento ottimizzate mostrate in precedenza.  
-3. Elabora i documenti in batch più piccoli.  
+3. Processa i documenti in batch più piccoli.
 
-### Problema: annotazioni non preservate
+### Problema: Annotazioni non preservate
 
-**Sintomi**: Il file di output non contiene le annotazioni originali.
+**Sintomi**: Il file di output non contiene le annotazioni originali.  
 
 **Soluzione**: Assicurati di non rimuovere le annotazioni:
 
@@ -478,22 +490,22 @@ saveOptions.setLastPage(lastPage);
 ## Domande frequenti
 
 **D: Posso salvare pagine non consecutive (come pagine 1, 3, 7)?**  
-**R:** Non direttamente con un'unica operazione. È necessario eseguire salvataggi separati per ogni intervallo o combinare i risultati successivamente.
+R: Non direttamente con un'unica operazione. Devi eseguire salvataggi separati per ogni intervallo o combinare i risultati successivamente.
 
 **D: Funziona con documenti protetti da password?**  
-**R:** Sì, ma devi fornire la password quando crei l'`Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+R: Sì, ma devi fornire la password quando crei l'`Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
 **D: Quali formati di file sono supportati?**  
-**R:** PDF, Microsoft Word, Excel, PowerPoint e molti altri. Consulta la [official documentation](https://docs.groupdocs.com/annotation/java/) per l'elenco completo.
+R: PDF, Microsoft Word, Excel, PowerPoint e molti altri. Consulta la [documentazione ufficiale](https://docs.groupdocs.com/annotation/java/) per l'elenco completo.
 
 **D: Posso salvare solo le annotazioni senza il contenuto originale?**  
-**R:** Assolutamente – imposta `saveOptions.setAnnotationsOnly(true)` per creare un file contenente solo le annotazioni.
+R: Assolutamente – imposta `saveOptions.setAnnotationsOnly(true)` per creare un file contenente solo le annotazioni.
 
 **D: Come gestire documenti molto grandi (1000+ pagine)?**  
-**R:** Usa `setLoadOnlyAnnotatedPages(true)`, elabora a blocchi e considera di aumentare l'heap JVM.
+R: Usa `setLoadOnlyAnnotatedPages(true)`, elabora a blocchi e considera di aumentare l'heap JVM.
 
-**D: Esiste un modo per visualizzare in anteprima le pagine prima del salvataggio?**  
-**R:** GroupDocs.Annotation si concentra sull'elaborazione piuttosto che sulla visualizzazione, ma puoi recuperare informazioni sul documento (conteggio pagine, posizioni delle annotazioni) per aiutare a decidere quali intervalli estrarre.
+**D: Esiste un modo per visualizzare le pagine prima di salvarle?**  
+R: GroupDocs.Annotation è focalizzato sull'elaborazione piuttosto che sulla visualizzazione, ma puoi recuperare informazioni sul documento (conteggio pagine, posizioni delle annotazioni) per decidere quali intervalli estrarre.
 
 ## Risorse
 
@@ -507,6 +519,6 @@ saveOptions.setLastPage(lastPage);
 
 ---
 
-**Ultimo aggiornamento:** 2026-01-10  
+**Ultimo aggiornamento:** 2026-03-14  
 **Testato con:** GroupDocs.Annotation 25.2 (Java)  
 **Autore:** GroupDocs
