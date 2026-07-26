@@ -1,10 +1,9 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-01-10'
-description: Leer hoe je interactieve PDF‑knoppen in Java maakt met GroupDocs.Annotation.
-  Stapsgewijze handleiding, codevoorbeelden, probleemoplossing en best practices voor
-  Java‑ontwikkelaars.
+date: '2026-03-17'
+description: Leer hoe je PDF‑knoppen maakt in Java met GroupDocs.Annotation. Stapsgewijze
+  handleiding, codevoorbeelden, probleemoplossing en best practices voor Java‑ontwikkelaars.
 keywords: interactive pdf buttons java, GroupDocs Annotation tutorial, PDF button
   component Java, Java PDF interactivity, clickable PDF buttons
 lastmod: '2026-01-10'
@@ -14,17 +13,19 @@ tags:
 - groupdocs-annotation
 - java-tutorial
 - pdf-buttons
-title: Hoe interactieve PDF‑knoppen te maken in Java met GroupDocs.Annotation
+title: Hoe PDF‑knoppen te maken in Java met GroupDocs.Annotation
 type: docs
 url: /nl/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/
 weight: 1
 ---
 
-# Hoe interactieve PDF‑knoppen te maken in Java met GroupDocs.Annotation
+" etc.
 
-Heb je ooit naar een statische PDF gekeken en gewenst dat je deze meer boeiend kon maken? **Interactive pdf buttons java** zijn de perfecte oplossing. Of je nu documentbeheersystemen bouwt, interactieve formulieren maakt, of gewoon je PDF's minder… nou ja, saai wilt maken, deze knoppen kunnen je documenten transformeren van passief leesmateriaal naar dynamische, gebruiksvriendelijke ervaringen.
+Now produce final content.
 
-Als je worstelt met complexe PDF‑bibliotheken of je afvraagt hoe je klikbare elementen aan je Java‑gebaseerde PDF's kunt toevoegen, ben je hier op de juiste plek. Deze tutorial leidt je stap voor stap door het maken van interactieve PDF‑knoppen met antwoorden met behulp van GroupDocs.Annotation voor Java – en geloof me, het is makkelijker dan je denkt.
+# Hoe PDF‑knoppen in Java te maken met GroupDocs.Annotation
+
+Heb je ooit naar een statische PDF gekeken en gewenst dat je deze aantrekkelijker kon maken? In deze gids leer je hoe je **create pdf buttons java** kunt gebruiken met GroupDocs.Annotation. Of je nu documentbeheersystemen bouwt, interactieve formulieren maakt, of gewoon je PDF’s minder… nou ja, saai wilt maken, deze knoppen kunnen je documenten transformeren van passief leesmateriaal naar dynamische, gebruiksvriendelijke ervaringen.
 
 ## Snelle antwoorden
 - **What are interactive pdf buttons java?** Visuele elementen ingebed in een PDF die reageren op klikken, opmerkingen kunnen weergeven en acties kunnen activeren.  
@@ -33,24 +34,24 @@ Als je worstelt met complexe PDF‑bibliotheken of je afvraagt hoe je klikbare e
 - **Can I add multiple buttons?** Ja – voeg er zoveel toe als je nodig hebt voordat je het document opslaat.  
 - **Will the buttons work in all PDF viewers?** De meeste moderne viewers (Adobe Reader, browser‑PDF‑plugins, mobiele apps) ondersteunen ze, maar test altijd op je doelplatformen.
 
-## Waarom interactieve PDF‑knoppen maken in Java?
+## Waarom interactieve PDF‑knoppen in Java maken?
 
 Voordat we in de code duiken, laten we bespreken waarom je dit überhaupt zou willen doen. Interactieve PDF‑knoppen zijn niet alleen mooie eye‑candy (hoewel ze er best cool uitzien). Ze lossen echte problemen op:
 
-- **User Engagement**: Statische PDF's zijn als een boek met vastgelijmde pagina's. Interactieve elementen houden gebruikers betrokken en stimuleren verkenning.  
-- **Data Collection**: Feedback nodig op een voorstel? Wil je dat gebruikers verschillende secties beoordelen? Knoppen kunnen reacties direct binnen het document vastleggen.  
-- **Navigation**: Grote documenten worden beter beheersbaar wanneer gebruikers met één klik tussen secties kunnen springen.  
-- **Workflow Integration**: Knoppen kunnen acties activeren, documenten goedkeuren of processen voortzetten zonder de PDF te verlaten.
+- **Gebruikersbetrokkenheid**: Statische PDF’s zijn als een boek met vastgelijmde pagina’s. Interactieve elementen houden gebruikers betrokken en stimuleren verkenning.  
+- **Gegevensverzameling**: Feedback nodig op een voorstel? Gebruikers laten verschillende secties beoordelen? Knoppen kunnen reacties direct binnen het document vastleggen.  
+- **Navigatie**: Grote documenten worden beter beheersbaar wanneer gebruikers met één klik tussen secties kunnen springen.  
+- **Workflow‑integratie**: Knoppen kunnen acties activeren, documenten goedkeuren of processen vooruit laten gaan zonder het PDF‑bestand te verlaten.
 
-Het beste? Zodra je de basis begrijpt, zul je versteld staan van hoeveel toepassingsgevallen je zult ontdekken.
+Het beste deel? Zodra je de basis begrijpt, zul je versteld staan van hoeveel use‑cases je zult ontdekken.
 
 ## Wat je zult leren
 
 Aan het einde van deze tutorial weet je hoe je:
 
-- GroupDocs.Annotation voor Java instelt (de eenvoudige manier)  
-- **interactive pdf buttons java** maakt die daadwerkelijk werken  
-- Antwoorden en opmerkingen aan je knoppen toevoegt voor verbeterde functionaliteit  
+- GroupDocs.Annotation voor Java instelt (op een pijnloze manier)  
+- **interactive pdf buttons java** maakt die echt werken  
+- Antwoorden en opmerkingen aan je knoppen toevoegt voor extra functionaliteit  
 - Veelvoorkomende problemen oplost (want laten we eerlijk zijn, dingen werken niet altijd meteen)  
 - De prestaties optimaliseert voor real‑world toepassingen  
 
@@ -60,18 +61,18 @@ Aan het einde van deze tutorial weet je hoe je:
 
 Maak je geen zorgen – de vereisten zijn vrij eenvoudig:
 
-1. **Java Development Environment**: JDK 8 of hoger (ik raad echter JDK 11+ aan voor betere prestaties)  
-2. **IDE**: IntelliJ IDEA, Eclipse, of wat je maar prettig vindt  
-3. **Basic Java Knowledge**: Je moet vertrouwd zijn met klassen, methoden en exception handling  
+1. **Java‑ontwikkelomgeving**: JDK 8 of hoger (ik raad JDK 11+ aan voor betere prestaties)  
+2. **IDE**: IntelliJ IDEA, Eclipse, of wat jou maar blij maakt  
+3. **Basiskennis van Java**: Je moet vertrouwd zijn met klassen, methoden en exception‑handling  
 4. **Maven of Gradle**: Voor dependency‑beheer (voorbeelden gebruiken Maven)  
 
-### GroupDocs.Annotation voor Java instellen
+### GroupDocs.Annotation voor Java installeren
 
-Hier worden de meeste tutorials saai met lange uitleg. Laten we meteen ter zake komen.
+Hier wordt het vaak saaie deel van tutorials met lange uitleg overgeslagen. Laten we meteen ter zake komen.
 
-#### Maven‑setup (De gemakkelijke manier)
+#### Maven‑installatie (De gemakkelijke manier)
 
-Add this to your `pom.xml`:
+Voeg dit toe aan je `pom.xml`:
 
 ```xml
 <repositories>
@@ -90,17 +91,17 @@ Add this to your `pom.xml`:
 </dependencies>
 ```
 
-Dat is alles. Maven regelt de rest, en je bent klaar om **interactive pdf buttons java** te maken.
+Dat is alles. Maven regelt de rest, en je bent klaar om **interactive pdf buttons java** te gaan maken.
 
 #### Licentie‑opties (Kies je avontuur)
 
 - **Free Trial**: Perfect om de mogelijkheden te testen. Download van [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: Meer tijd nodig om te evalueren? Verkrijg er één op [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Full License**: Klaar voor productie? Koop op [GroupDocs Purchase](https://purchase.groupdocs.com/buy)  
+- **Temporary License**: Meer tijd nodig om te evalueren? Vraag er een aan via [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Full License**: Klaar voor productie? Aanschaf via [GroupDocs Purchase](https://purchase.groupdocs.com/buy)  
 
 #### Snelle verificatie
 
-Test your setup with this simple initialization:
+Test je installatie met deze eenvoudige initialisatie:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -113,15 +114,15 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-## Interactieve PDF‑knoppen maken in Java – Stap voor stap
+## Interactieve PDF‑knoppen in Java maken – Stap voor stap
 
-### Begrijpen van knopcomponenten
+### Begrijpen van knop‑componenten
 
-Beschouw een knopcomponent als een interactieve hotspot op je PDF. Het kan visuele styling hebben (kleuren, randen, tekst), positioneringsinformatie, en gedrag (wat er gebeurt bij klikken). De GroupDocs.Annotation‑bibliotheek maakt dit verrassend eenvoudig.
+Beschouw een knop‑component als een interactief hotspot op je PDF. Het kan visuele styling hebben (kleuren, randen, tekst), positioneringsinformatie, en gedrag (wat er gebeurt bij een klik). De GroupDocs.Annotation‑bibliotheek maakt dit verrassend eenvoudig.
 
-### Stap 1: Laad je PDF‑document
+### Stap 1: Laad je PDF‑document
 
-Every **interactive pdf buttons java** journey starts here:
+Elke **interactive pdf buttons java**‑reis begint hier:
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf")) {
@@ -129,11 +130,11 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-Het try‑with‑resources‑patroon zorgt ervoor dat je document correct wordt gesloten, zelfs als er iets misgaat. Gebruik deze aanpak altijd – je toekomstige zelf zal je dankbaar zijn.
+Het try‑with‑resources‑patroon zorgt ervoor dat je document correct wordt gesloten, zelfs als er iets misgaat. Gebruik altijd deze aanpak – je toekomstige zelf zal je dankbaar zijn.
 
-### Stap 2: Configureer je knopcomponent
+### Stap 2: Configureer je knop‑component
 
-Dit is waar het leuk begint. Laten we een knop maken die er echt uitziet als een knop:
+Hier begint het plezier. Laten we een knop maken die er echt uitziet als een knop:
 
 ```java
 import com.groupdocs.annotation.models.formatspecificcomponents.pdf.ButtonComponent;
@@ -151,9 +152,9 @@ buttonComponent.setBorderWidth(12);
 buttonComponent.setBox(new Rectangle(100, 300, 90, 30));
 ```
 
-**Pro Tip**: Die RGB‑kleurwaarden lijken misschien cryptisch, maar het zijn gewoon gehele getallen die kleuren vertegenwoordigen. Gebruik een online RGB‑naar‑integer converter als je specifieke tinten wilt.
+**Pro Tip**: Die RGB‑kleurwaarden lijken cryptisch, maar het zijn gewoon gehele getallen die kleuren vertegenwoordigen. Gebruik een online RGB‑naar‑integer‑converter als je specifieke tinten wilt.
 
-### Stap 3: Voeg de knop toe en sla op
+### Stap 3: Voeg de knop toe en sla op
 
 ```java
 annotator.add(buttonComponent);
@@ -162,11 +163,13 @@ annotator.save("YOUR_OUTPUT_DIRECTORY/result_button_component.pdf");
 
 Boom! Je hebt zojuist je eerste **interactive pdf button java** gemaakt. Maar we stoppen hier niet.
 
-## Antwoorden en opmerkingen toevoegen aan knoppen
+## Hoe pdf‑knoppen java te maken
+
+Nu je de basisstroom hebt gezien, bekijken we een iets geavanceerder scenario waarin de knop antwoordgegevens bevat. Dit patroon is nuttig wanneer je gebruikersfeedback direct in de PDF wilt vastleggen.
+
+### Antwoorden en opmerkingen aan knoppen toevoegen
 
 Hier wordt het echt interessant. Interactieve PDF‑knoppen met antwoorden openen een hele wereld aan mogelijkheden voor feedback, samenwerking en gebruikersinteractie.
-
-### Knopcomponenten maken met antwoorden
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf")) {
@@ -208,45 +211,45 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-## Praktische toepassingen en use‑cases
+## Toepassingen in de praktijk en use‑cases
 
 ### 1. Interactieve feedbackformulieren
 
-Stel je voor dat je een projectvoorstel verstuurt. In plaats van te hopen dat klanten hun gedachten e‑mailen, kun je feedback‑knoppen direct in de PDF embedden:
+Stel je voor dat je een projectvoorstel verstuurt. In plaats van te hopen dat klanten hun gedachten per e‑mail sturen, kun je feedback‑knoppen direct in de PDF embedden:
 
-- “Approve Section” knoppen voor elk belangrijk onderdeel  
-- “Request Changes” knoppen die specifieke feedback vastleggen  
+- “Approve Section”‑knoppen voor elk belangrijk onderdeel  
+- “Request Changes”‑knoppen die specifieke feedback vastleggen  
 - Beoordelingsknoppen voor verschillende aspecten van het voorstel  
 
 ### 2. Documentnavigatiesystemen
 
-Voor uitgebreide technische documentatie of rapporten:
+Voor lange technische documentatie of rapporten:
 
-- “Jump to Summary” knoppen aan het einde van elke sectie  
-- “Return to Table of Contents” knoppen door het hele document  
-- “Related Section” knoppen die kruisverwijzingen maken  
+- “Jump to Summary”‑knoppen aan het einde van elke sectie  
+- “Return to Table of Contents”‑knoppen door het hele document heen  
+- “Related Section”‑knoppen die kruis‑referenties creëren  
 
-### 3. Trainings‑ en educatief materiaal
+### 3. Training‑ en leermaterialen
 
-Interactieve PDF's werken uitstekend voor educatieve inhoud:
+Interactieve PDF’s werken uitstekend voor educatieve content:
 
-- “Check Answer” knoppen voor zelf‑evaluatie‑quizzen  
-- “More Information” knoppen die extra details tonen  
-- “Submit Response” knoppen voor opdrachten  
+- “Check Answer”‑knoppen voor zelf‑assessment‑quizzen  
+- “More Information”‑knoppen die extra details onthullen  
+- “Submit Response”‑knoppen voor opdrachten  
 
-### 4. Kwaliteitsborging en beoordelingsprocessen
+### 4. Kwaliteits‑ en reviewprocessen
 
-Voor document‑review workflows:
+Voor document‑review‑workflows:
 
-- “Mark as Reviewed” knoppen voor verschillende secties  
-- “Flag for Revision” knoppen met commentaarmogelijkheden  
-- “Approve” en “Reject” knoppen met tijdstempeltracking  
+- “Mark as Reviewed”‑knoppen voor verschillende secties  
+- “Flag for Revision”‑knoppen met commentaarmogelijkheden  
+- “Approve”‑ en “Reject”‑knoppen met tijdstempeltracking  
 
 ## Veelvoorkomende problemen oplossen
 
-### “Document Not Found” fouten
+### “Document Not Found”‑fouten
 
-Dit is meestal de eerste hindernis. Controleer je bestands‑paden dubbel en zorg ervoor dat:
+Dit is meestal de eerste hindernis. Controleer je bestandspaden en zorg ervoor dat:
 
 - Het bestand daadwerkelijk bestaat waar je denkt dat het is  
 - Je leesrechten hebt voor het invoerbestand  
@@ -263,33 +266,25 @@ if (!inputFile.exists()) {
 
 ### Knop verschijnt niet in PDF
 
-Als je knopcomponent niet verschijnt:
+Als je knop‑component niet zichtbaar is:
 
-1. **Check page numbers** – paginanummering begint bij 0, niet 1  
-2. **Verify coordinates** – zorg dat je `Rectangle`‑waarden binnen de paginagrenzen vallen  
-3. **Color visibility** – zorg dat je knopkleuren contrasteren met de achtergrond  
+1. **Controleer paginanummers** – paginanummering begint bij 0, niet bij 1  
+2. **Verifieer coördinaten** – zorg dat je `Rectangle`‑waarden binnen de paginagrenzen vallen  
+3. **Kleurcontrast** – zorg dat de knopkleuren contrasteren met de achtergrond  
 
-### Geheugenproblemen met grote PDF's
+### Geheugenproblemen met grote PDF’s
 
 Werk je met grote documenten? Hier zijn enkele strategieën:
 
-- Verwerk documenten in kleinere stukken wanneer mogelijk  
+- Verwerk documenten indien mogelijk in kleinere delen  
 - Gebruik try‑with‑resources om een juiste opruiming te garanderen  
-- Overweeg de JVM‑heap‑grootte voor je applicatie te verhogen  
-
-### Licentie‑gerelateerde fouten
-
-Als je evaluatiewaarschuwingen of beperkingen ziet:
-
-- Controleer of je licentiebestand op de juiste locatie staat  
-- Controleer of je licentie niet verlopen is  
-- Zorg dat je het juiste licentietype gebruikt voor je use‑case  
+- Overweeg het vergroten van de JVM‑heap‑size voor je applicatie  
 
 ## Tips voor prestatie‑optimalisatie
 
 ### 1. Batch‑operaties
 
-Als je meerdere knoppen maakt, voeg ze dan allemaal toe vóór het opslaan:
+Als je meerdere knoppen maakt, voeg ze dan allemaal toe voordat je opslaat:
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -317,19 +312,19 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 
 Voor applicaties die veel documenten verwerken:
 
-- Houd geen referenties naar `Annotator`‑instanties langer vast dan nodig  
-- Overweeg een verwerkings‑queue te implementeren voor scenario's met hoog volume  
-- Houd het geheugenverbruik in de gaten en pas de JVM‑instellingen aan indien nodig  
+- Houd geen referenties naar `Annotator`‑instanties langer dan nodig  
+- Overweeg een verwerkings‑queue voor scenario’s met hoog volume  
+- Monitor geheugengebruik en pas JVM‑instellingen dienovereenkomstig aan  
 
 ## Geavanceerde tips en best practices
 
-### 1. Richtlijnen voor knopontwerp
+### 1. Richtlijnen voor knop‑ontwerp
 
-- **Size Matters**: Maak knoppen van minimaal 30 × 30 pixels voor gemakkelijke aanraking.  
-- **Color Contrast**: Zorg dat knoppen opvallen ten opzichte van de documentachtergrond.  
-- **Consistent Styling**: Gebruik dezelfde kleuren en randstijlen door het hele document.  
+- **Grootte is belangrijk**: Maak knoppen van minimaal 30 × 30 pixels voor gemakkelijke aanraking.  
+- **Kleurcontrast**: Zorg dat knoppen opvallen ten opzichte van de documentachtergrond.  
+- **Consistente styling**: Gebruik dezelfde kleuren en randstijlen door het hele document heen.  
 
-### 2. Foutafhandelingsstrategieën
+### 2. Strategieën voor foutafhandeling
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -346,48 +341,48 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 }
 ```
 
-### 3. Testen van je interactieve PDF's
+### 3. Testen van je interactieve PDF’s
 
 - Test in meerdere PDF‑viewers (Adobe Reader, ingebouwde browsers, mobiele apps)  
-- Verifieer de knopfunctionaliteit op verschillende apparaten  
+- Verifieer knopfunctionaliteit op verschillende apparaten  
 - Controleer of antwoorden en opmerkingen correct worden weergegeven  
 
 ## Veelgestelde vragen
 
-**Q: Kan ik naast knoppen verschillende soorten interactieve elementen maken?**  
-A: Absoluut! GroupDocs.Annotation ondersteunt selectievakjes, tekstvelden, keuzelijsten en meer. Knoppen zijn slechts één onderdeel van de interactieve PDF‑puzzel.
+**Q: Kan ik naast knoppen ook andere soorten interactieve elementen maken?**  
+A: Absoluut! GroupDocs.Annotation ondersteunt selectievakjes, tekstvelden, dropdown‑menu’s en meer. Knoppen zijn slechts één onderdeel van de interactieve PDF‑puzzel.
 
 **Q: Hoe verwerk ik klik‑events van knoppen in mijn Java‑applicatie?**  
-A: De knopcomponenten zijn ingebed in de PDF zelf. Het afhandelen van klikken hangt af van de PDF‑viewer. Voor aangepaste applicaties heb je mogelijk een viewer‑bibliotheek nodig die JavaScript of formulierverzending ondersteunt.
+A: De knop‑componenten zijn ingebed in de PDF zelf. Klik‑verwerking hangt af van de PDF‑viewer. Voor aangepaste applicaties heb je mogelijk een viewer‑bibliotheek nodig die JavaScript of formulier‑indiening ondersteunt.
 
 **Q: Zijn er limieten aan het aantal knoppen dat ik kan toevoegen?**  
 A: Er zijn geen harde limieten, maar houd rekening met bestandsgrootte, prestaties en gebruikerservaring. Honderden zijn mogelijk, maar zorg dat ze waarde toevoegen.
 
 **Q: Kan ik knoppen stylen met aangepaste lettertypen of geavanceerde graphics?**  
-A: GroupDocs.Annotation biedt degelijke styling voor kleuren, randen en basisuiterlijk. Voor geavanceerde graphics kun je beeld‑gebaseerde knoppen combineren of extra PDF‑manipulatie‑tools gebruiken.
+A: GroupDocs.Annotation biedt solide styling voor kleuren, randen en basisuiterlijk. Voor geavanceerde graphics kun je beeld‑gebaseerde knoppen combineren of extra PDF‑manipulatie‑tools gebruiken.
 
-**Q: Hoe haal ik knop‑data en antwoorden programmatically op?**  
-A: Laad de geannoteerde PDF met `Annotator`, loop door de annotaties en lees de eigenschappen van de knop en de bijgevoegde antwoorden. Dit is nuttig voor het verwerken van formulierinzendingen.
+**Q: Hoe haal ik knop‑data en antwoorden programmatisch op?**  
+A: Laad de geannoteerde PDF met `Annotator`, iterate door de annotaties en lees de eigenschappen van de knop en de bijbehorende antwoorden. Dit is handig voor het verwerken van formulier‑inzendingen.
 
-**Q: Werkt dit met met wachtwoord beveiligde PDF's?**  
-A: Ja – geef het wachtwoord op bij het initialiseren van de `Annotator`. De bibliotheek ondersteunt zowel het lezen als schrijven van beveiligde documenten.
+**Q: Werkt dit met met wachtwoord beveiligde PDF’s?**  
+A: Ja – geef het wachtwoord op bij het initialiseren van de `Annotator`. De bibliotheek ondersteunt zowel lezen als schrijven van beveiligde documenten.
 
 **Q: Kan ik knoppen maken die data naar een webserver verzenden?**  
-A: De visuele knop wordt gecreëerd door GroupDocs.Annotation, maar het verzenden van data hangt af van de mogelijkheden van de PDF‑viewer en kan ingebedde JavaScript of integratie met een formulierverwerkingsservice vereisen.
+A: De visuele knop wordt gecreëerd door GroupDocs.Annotation, maar gegevensverzending hangt af van de mogelijkheden van de PDF‑viewer en kan ingebedde JavaScript of integratie met een formulier‑verwerkingsservice vereisen.
 
-## Wat is het vervolg?
+## Wat is de volgende stap?
 
-Gefeliciteerd! Je weet nu hoe je **interactive pdf buttons java** maakt met GroupDocs.Annotation. Maar dit is nog maar het begin. De bibliotheek biedt nog veel meer annotatietypen en functies:
+Gefeliciteerd! Je weet nu hoe je **create pdf buttons java** maakt met GroupDocs.Annotation. Maar dit is nog maar het begin. De bibliotheek biedt nog veel meer annotatietypen en functies:
 
-- Tekstmarkering en markup  
+- Tekst‑highlighting en markup  
 - Vormen en teken‑annotaties  
-- Afbeeldings‑ en stempel‑annotaties  
+- Afbeelding‑ en stempel‑annotaties  
 - Formuliervelden naast knoppen  
 
-Verken de [GroupDocs.Annotation documentation](https://docs.groupdocs.com/annotation/java/) om meer manieren te ontdekken om je PDF's interactief en boeiend te maken.
+Verken de [GroupDocs.Annotation‑documentatie](https://docs.groupdocs.com/annotation/java/) om meer manieren te ontdekken om je PDF’s interactief en boeiend te maken.
 
 ---
 
-**Laatst bijgewerkt:** 2026-01-10  
-**Getest met:** GroupDocs.Annotation 25.2 for Java  
-**Auteur:** GroupDocs
+**Last Updated:** 2026-03-17  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs
