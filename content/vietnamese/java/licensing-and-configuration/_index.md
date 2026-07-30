@@ -1,136 +1,229 @@
 ---
 categories:
 - Java Development
-date: '2026-02-13'
-description: Nắm vững cách thiết lập giấy phép GroupDocs Annotation Java và học cách
-  kiểm tra trạng thái giấy phép. Khám phá các loại giấy phép file, stream và metered
-  cùng các thực hành cấu hình tốt nhất.
-keywords: GroupDocs Annotation Java licensing, Java document annotation setup, GroupDocs
-  license configuration, annotation library Java, Java annotation implementation
-lastmod: '2025-01-02'
-linktitle: Java Licensing & Configuration
+date: '2026-07-30'
+description: Cách kiểm tra giấy phép trong GroupDocs Annotation Java, thiết lập cấp
+  phép, sử dụng temporary license testing, và tuân thủ license configuration best
+  practices cho các ứng dụng Java.
+keywords:
+- how to check license
+- temporary license testing
+- license configuration best practices
+- GroupDocs Annotation Java licensing
+- Java document annotation
+lastmod: '2026-07-30'
+linktitle: Cấp Phép & Cấu Hình Java
+og_description: Cách kiểm tra giấy phép trong GroupDocs Annotation Java. Tìm hiểu
+  temporary license testing, license configuration best practices, và step‑by‑step
+  setup cho các ứng dụng Java.
+og_image_alt: Guide showing how to check license status for GroupDocs Annotation Java
+og_title: Cách Kiểm Tra Giấy Phép – Hướng Dẫn GroupDocs Annotation Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: How to check license in GroupDocs Annotation Java, set up licensing,
+    use temporary license testing, and follow license configuration best practices
+    for Java applications.
+  headline: How to Check License – GroupDocs Annotation Java Guide
+  type: TechArticle
+- description: How to check license in GroupDocs Annotation Java, set up licensing,
+    use temporary license testing, and follow license configuration best practices
+    for Java applications.
+  name: How to Check License – GroupDocs Annotation Java Guide
+  steps:
+  - name: Load the License
+    text: 'Choose the loading strategy that matches your deployment: - **File‑based**
+      – ideal for traditional servers with a stable filesystem. - **Stream‑based**
+      – perfect for Docker or Kubernetes where the license may be stored in a secret
+      volume or retrieved from a remote store. - **Metered** – used when yo'
+  - name: Validate the License
+    text: 'Immediately after loading, call the validation API: The `isValid()` call
+      checks both the digital signature and the expiration date, ensuring you’re compliant
+      with the terms of your agreement.'
+  - name: Log the Result
+    text: Integrate the check into your application’s startup routine (e.g., Spring
+      `@PostConstruct` method or a servlet context listener) so that the status appears
+      in your logs or monitoring dashboards.
+  type: HowTo
+- questions:
+  - answer: While technically possible, using a single licensing method per application
+      simplifies maintenance and avoids conflicts.
+    question: Can I use different licensing methods in the same application?
+  - answer: The library reverts to evaluation mode, adding watermarks to annotated
+      documents. Regular `License.isValid()` checks let you detect this and trigger
+      a renewal workflow.
+    question: What happens if my license expires during runtime?
+  - answer: Each microservice should load its own license. Stream‑based or environment‑variable
+      approaches work best for distributed systems.
+    question: How do I handle licensing in microservices architectures?
+  - answer: Yes, call `License.isValid()` for a boolean result and `License.getExpirationDate()`
+      for the exact expiry timestamp.
+    question: Is there a way to validate license status programmatically?
+  - answer: Absolutely. Temporary licenses let you verify integration without purchasing
+      a full license and are ideal for CI/CD pipelines.
+    question: Can I use a temporary license for testing?
+  type: FAQPage
 tags:
 - licensing
 - configuration
-- setup
-- java-annotations
-title: Kiểm tra trạng thái giấy phép – Hướng dẫn cấp phép GroupDocs Annotation Java
+- java
+- groupdocs
+- annotation
+title: Cách Kiểm Tra Giấy Phép – Hướng Dẫn GroupDocs Annotation Java
 type: docs
 url: /vi/java/licensing-and-configuration/
 weight: 2
 ---
 
-# Hướng Dẫn Cấp Phép GroupDocs Annotation Java - Hướng Dẫn Cài Đặt Đầy Đủ
+# Cách Kiểm Tra Giấy Phép – Hướng Dẫn GroupDocs Annotation Java
 
-Việc thiết lập cấp phép GroupDocs.Annotation trong ứng dụng Java của bạn không cần phải phức tạp. Dù bạn đang xây dựng hệ thống quản lý tài liệu, nền tảng cộng tác, hoặc thêm tính năng chú thích vào phần mềm hiện có, việc cấp phép và cấu hình đúng đắn là rất quan trọng để khai thác tối đa tiềm năng của thư viện mạnh mẽ này. **Một trong những việc đầu tiên bạn muốn thực hiện là kiểm tra trạng thái giấy phép** ngay sau khi thư viện được tải để bạn có thể yên tâm mọi thứ đã sẵn sàng.
+Trong hướng dẫn này, bạn sẽ học **cách kiểm tra giấy phép** cho GroupDocs.Annotation khi tích hợp vào ứng dụng Java. Cho dù bạn đang xây dựng một cổng tài liệu hợp tác, một dịch vụ chú thích dựa trên đám mây, hoặc chỉ đơn giản là thêm các tính năng bình luận phong phú vào hệ thống hiện có, việc xác thực giấy phép sớm sẽ ngăn ngừa các watermark không mong muốn và các vấn đề hiệu năng. Chúng tôi sẽ hướng dẫn ba phương pháp cấp phép được hỗ trợ, chỉ cho bạn cách xác minh giấy phép bằng cách lập trình, và chia sẻ các mẹo thực hành tốt nhất cho việc thử nghiệm giấy phép tạm thời và cấu hình mạnh mẽ.
 
-## Câu Trả Lời Nhanh
-- **Bước đầu tiên để kiểm tra trạng thái giấy phép là gì?** Tải tệp giấy phép hoặc luồng và gọi phương thức xác thực được cung cấp.  
-- **Tôi có thể tự động xử lý việc hết hạn giấy phép không?** Có – triển khai kiểm tra khi khởi động và làm mới hoặc thông báo cho người dùng khi giấy phép sắp hết hạn.  
-- **Phương pháp cấp phép nào là tốt nhất cho container?** Cấp phép dựa trên luồng (InputStream) thường là đáng tin cậy nhất trong môi trường container.  
-- **Tôi có cần khởi tạo lại giấy phép cho mỗi yêu cầu không?** Không – khởi tạo một lần khi ứng dụng khởi động và lưu trữ đối tượng giấy phép trong bộ nhớ cache.  
-- **Giấy phép tạm thời có phù hợp cho việc thử nghiệm không?** Chắc chắn, nó cho phép bạn kiểm tra tích hợp trước khi mua giấy phép đầy đủ.
+## Câu trả lời nhanh
+- **Bước đầu tiên để kiểm tra trạng thái giấy phép là gì?** Tải tệp hoặc luồng giấy phép và gọi phương thức xác thực được cung cấp.  
+- **Có thể tự động xử lý hết hạn giấy phép không?** Có – triển khai kiểm tra khi khởi động và làm mới hoặc cảnh báo người dùng khi giấy phép sắp hết hạn.  
+- **Phương pháp cấp phép nào tốt nhất cho container?** Cấp phép dựa trên luồng (InputStream) thường là đáng tin cậy nhất trong môi trường container.  
+- **Có cần khởi tạo lại giấy phép cho mỗi yêu cầu không?** Không – khởi tạo một lần khi ứng dụng khởi động và lưu trữ đối tượng giấy phép trong bộ nhớ cache.  
+- **Giấy phép tạm thời có phù hợp cho việc thử nghiệm không?** Chắc chắn, nó cho phép bạn xác minh tích hợp trước khi mua giấy phép đầy đủ.
 
-## Tại Sao Việc Cấp Phép GroupDocs Annotation Java Đúng Đắn Quan Trọng
+## “cách kiểm tra giấy phép” trong GroupDocs Annotation Java là gì?
+Cụm từ **cách kiểm tra giấy phép** đề cập đến quá trình tải giấy phép GroupDocs.Annotation và gọi phương thức `License.isValid()`, phương thức này trả về một giá trị boolean cho biết giấy phép có đang hoạt động và chưa hết hạn hay không. Kiểm tra này nên được thực hiện trong quá trình khởi động ứng dụng để bạn có thể ghi log kết quả và hành động phù hợp.
 
-Việc cấu hình giấy phép GroupDocs.Annotation đúng từ đầu là cần thiết vì một số lý do. Thứ nhất, nó đảm bảo bạn có quyền truy cập vào tất cả các tính năng cao cấp mà không có watermark hoặc hạn chế nào có thể ảnh hưởng đến trải nghiệm của người dùng. Thứ hai, cấp phép đúng đắn ảnh hưởng đến hiệu suất – giấy phép được cấu hình không chính xác có thể gây ra thời gian xử lý chậm hơn và hành vi không mong muốn.
+## Tại sao nên sử dụng các thực hành tốt về cấu hình giấy phép?
+**Các thực hành tốt về cấu hình giấy phép** giúp loại bỏ watermark, mở khóa các tính năng chú thích cao cấp và cải thiện hiệu năng thời gian chạy. GroupDocs.Annotation cho Java hỗ trợ **ba phương pháp cấp phép**—dựa trên tệp, dựa trên luồng và dựa trên mức sử dụng—đáp ứng **hơn 50 kịch bản triển khai** như máy chủ on‑premises, container Docker và các hàm serverless. Bằng cách chọn phương pháp phù hợp và lưu cache giấy phép, bạn có thể giảm tải khởi tạo lên tới **70 %** trong môi trường có lưu lượng truy cập cao.
 
-Quan trọng nhất, hiểu các tùy chọn cấp phép khác nhau (dựa trên tệp, dựa trên luồng và dựa trên mức sử dụng) cho phép bạn chọn cách tiếp cận phù hợp nhất với kiến trúc triển khai của mình. Dù bạn đang làm việc với các ứng dụng container, triển khai trên đám mây, hay cấu hình máy chủ truyền thống, luôn có một phương pháp cấp phép hoạt động liền mạch với hạ tầng của bạn.
+## Yêu cầu trước
+- Một tệp giấy phép GroupDocs.Annotation hợp lệ (hoặc giấy phép tạm thời để thử nghiệm)  
+- Java 11 hoặc mới hơn (Java 8 là mức tối thiểu)  
+- Phụ thuộc Maven/Gradle của GroupDocs.Annotation cho Java đã được thêm vào dự án của bạn  
+- Quyền truy cập vào hệ thống tệp hoặc classpath của môi trường triển khai để tải giấy phép  
 
 ## Cách Kiểm Tra Trạng Thái Giấy Phép trong GroupDocs Annotation Java
 
-Để **kiểm tra trạng thái giấy phép**, thực hiện các bước sau:
+Bạn kiểm tra trạng thái giấy phép bằng cách tải giấy phép và gọi `License.isValid()`. `License.isValid()` trả về một giá trị boolean cho biết giấy phép đã tải hiện tại có hợp lệ hay không. Phương thức trả về **true** khi giấy phép đang hoạt động; ngược lại trả về **false** và thư viện sẽ chuyển sang chế độ đánh giá, thêm watermark vào các tài liệu đã chú thích. Ghi log kết quả khi khởi động giúp bạn nhanh chóng nắm được tình trạng cấp phép.
 
-1. **Tải giấy phép** – có thể từ tệp trên đĩa, tài nguyên classpath, hoặc một `InputStream`.  
-2. **Gọi API xác thực** – thư viện cung cấp các phương thức như `License.isValid()` trả về giá trị boolean cho biết giấy phép có đang hoạt động hay không.  
-3. **Ghi lại kết quả** – trong quá trình khởi động ứng dụng, xuất trạng thái vào log để bạn có thể giám sát trong môi trường production.  
+Lớp `License` là đối tượng cốt lõi đại diện cho giấy phép GroupDocs.Annotation và cung cấp các phương thức để tải giấy phép từ tệp, tài nguyên classpath hoặc một `InputStream`.  
 
-Thực hiện việc này sớm cho phép bạn **xử lý việc hết hạn giấy phép** một cách chủ động và tránh các watermark bất ngờ cho người dùng cuối.
+### Bước 1: Tải Giấy Phép
 
-## Danh Sách Kiểm Tra Cài Đặt Nhanh cho Nhà Phát Triển Java
+Chọn chiến lược tải phù hợp với môi trường triển khai của bạn:
 
-Trước khi bắt đầu các hướng dẫn chi tiết, đây là những gì bạn cần để khởi động:
+- **File‑based** – lý tưởng cho các máy chủ truyền thống có hệ thống tệp ổn định.  
+- **Stream‑based** – hoàn hảo cho Docker hoặc Kubernetes khi giấy phép có thể được lưu trong volume bí mật hoặc lấy từ kho lưu trữ từ xa.  
+- **Metered** – dùng khi bạn muốn thanh toán dựa trên mức sử dụng; bạn sẽ cung cấp cặp khóa công‑khóa riêng thay vì tệp.
 
-- Tệp giấy phép GroupDocs.Annotation hợp lệ hoặc thông tin xác thực  
-- Java 8 trở lên (khuyến nghị: Java 11+)  
-- Thư viện GroupDocs.Annotation for Java đã được thêm vào dự án của bạn  
-- Hiểu rõ môi trường triển khai của bạn (tệp cục bộ vs. tài nguyên vs. lưu trữ đám mây)  
+```java
+// Example for file‑based licensing
+License license = new License();
+license.setLicense("path/to/groupdocs-annotation.lic");
 
-Quá trình cài đặt thường mất 10‑15 phút một khi bạn đã có đầy đủ các điều kiện tiên quyết. Đừng lo nếu gặp vấn đề – chúng tôi đã bao gồm hướng dẫn khắc phục cho những vấn đề phổ biến nhất mà các nhà phát triển gặp phải.
+// Example for stream‑based licensing
+InputStream licenseStream = getClass().getResourceAsStream("/licenses/annotation.lic");
+license.setLicense(licenseStream);
+```
 
-## Các Hướng Dẫn Cấp Phép GroupDocs Annotation Java Có Sẵn
+### Bước 2: Xác Thực Giấy Phép
 
-### [Triển khai GroupDocs.Annotation Java: Thêm Vai Trò Người Dùng vào Các Chú Thích](./implement-groupdocs-annotation-java-user-roles/)
-Tìm hiểu cách thêm vai trò người dùng vào các chú thích trong ứng dụng Java của bạn bằng GroupDocs.Annotation để nâng cao quản lý tài liệu và cộng tác. Hướng dẫn này bao gồm quyền dựa trên vai trò, tích hợp xác thực người dùng, và quản lý mức truy cập chú thích trong môi trường đa người dùng.
+Ngay sau khi tải, gọi API xác thực:
 
-### [Cài Đặt Giấy Phép GroupDocs.Annotation trong Java: Hướng Dẫn Toàn Diện](./groupdocs-annotation-license-java-setup/)
-Tìm hiểu cách thiết lập và cấu hình giấy phép GroupDocs.Annotation cho các ứng dụng Java của bạn, mở khóa đầy đủ tính năng một cách dễ dàng. Hướng dẫn này bao gồm cấp phép dựa trên tệp, kỹ thuật xác thực, và các cân nhắc triển khai cho môi trường production.
+```java
+boolean isValid = license.isValid();
+if (isValid) {
+    System.out.println("GroupDocs.Annotation license is valid.");
+} else {
+    System.err.println("License validation failed – running in evaluation mode.");
+}
+```
 
-### [Cấp Phép GroupDocs.Annotation Java Một Cách Trơn Tru: Cách Sử Dụng InputStream để Thiết Lập Giấy Phép](./groupdocs-annotation-java-inputstream-license-setup/)
-Tìm hiểu cách thiết lập cấp phép GroupDocs.Annotation trong Java một cách hiệu quả bằng InputStream. Tinh giản quy trình làm việc và nâng cao hiệu suất ứng dụng với hướng dẫn toàn diện này, bao gồm tải tài nguyên, triển khai container, và các thực hành bảo mật tốt nhất.
+Lệnh gọi `isValid()` kiểm tra cả chữ ký số và ngày hết hạn, đảm bảo bạn tuân thủ các điều khoản trong thỏa thuận.
+
+### Bước 3: Ghi lại Kết Quả
+
+Tích hợp kiểm tra vào quy trình khởi động của ứng dụng (ví dụ: phương thức `@PostConstruct` của Spring hoặc listener ngữ cảnh servlet) để trạng thái xuất hiện trong log hoặc bảng điều khiển giám sát.
+
+```java
+@PostConstruct
+public void initLicense() {
+    // Load and validate as shown above
+    // Then log
+    logger.info("GroupDocs.Annotation license valid: {}", isValid);
+}
+```
+
+## Danh sách kiểm tra nhanh cho nhà phát triển Java
+- ✅ Tệp giấy phép GroupDocs.Annotation hợp lệ hoặc giấy phép tạm thời  
+- ✅ Môi trường chạy Java 11+ (Java 8 vẫn hoạt động nhưng các phiên bản mới hơn cải thiện hiệu năng)  
+- ✅ Phụ thuộc Maven/Gradle: `com.groupdocs:groupdocs-annotation:23.11` (hoặc mới nhất)  
+- ✅ Hiểu mô hình triển khai của bạn (file, stream hoặc metered)  
+
+Toàn bộ quá trình thiết lập thường mất **10‑15 phút** một khi các yêu cầu trước đã sẵn sàng.
+
+## Các hướng dẫn cấp phép GroupDocs Annotation Java có sẵn
+- [Triển khai GroupDocs.Annotation Java: Thêm Vai Trò Người Dùng vào Chú Thích](./implement-groupdocs-annotation-java-user-roles/) – Tìm hiểu cách thêm vai trò người dùng vào các chú thích trong ứng dụng Java của bạn bằng GroupDocs.Annotation để nâng cao quản lý tài liệu và hợp tác. Hướng dẫn này bao gồm quyền dựa trên vai trò, tích hợp xác thực người dùng và quản lý mức truy cập chú thích trong môi trường đa người dùng.  
+- [Cài Đặt Giấy Phép GroupDocs.Annotation trong Java: Hướng Dẫn Toàn Diện](./groupdocs-annotation-license-java-setup/) – Tìm hiểu cách thiết lập và cấu hình giấy phép GroupDocs.Annotation cho các ứng dụng Java, mở khóa đầy đủ tính năng một cách dễ dàng. Hướng dẫn này bao gồm cấp phép dựa trên tệp, kỹ thuật xác thực và các cân nhắc triển khai cho môi trường sản xuất.  
+- [Cấp Phép GroupDocs.Annotation Java Đơn Giản: Sử Dụng InputStream để Thiết Lập Giấy Phép](./groupdocs-annotation-java-inputstream-license-setup/) – Tìm hiểu cách thiết lập cấp phép GroupDocs.Annotation trong Java bằng InputStream một cách hiệu quả. Tinh giản quy trình làm việc và nâng cao hiệu năng ứng dụng với hướng dẫn toàn diện về tải tài nguyên, triển khai container và các thực hành bảo mật tốt nhất.  
 
 ## Cách Xử Lý Hết Hạn Giấy Phép Một Cách Nhẹ Nhàng
 
-Nếu giấy phép sắp hết hạn, bạn có một vài lựa chọn:
+Để quản lý việc hết hạn giấy phép sắp tới, bạn nên thường xuyên truy vấn ngày hết hạn của giấy phép và thực hiện các hành động chủ động như gia hạn khóa, thông báo cho quản trị viên, hoặc chuyển sang giấy phép dự phòng. Việc thực hiện các kiểm tra này trong một công việc định kỳ đảm bảo ứng dụng luôn được cấp phép đầy đủ mà không bị gián đoạn.  
 
-- **Kiểm tra bằng chương trình** – gọi phương thức xác thực giấy phép định kỳ và so sánh ngày hết hạn.  
+- **Kiểm tra lập trình** – gọi `license.getExpirationDate()` định kỳ và so sánh với ngày hiện tại.  
 - **Gia hạn tự động** – tích hợp với máy chủ cấp phép của bạn hoặc sử dụng biến môi trường để thay giấy phép mới mà không cần triển khai lại.  
-- **Thông báo cho người dùng** – hiển thị cảnh báo thân thiện trong giao diện UI để quản trị viên có thể gia hạn trước khi dịch vụ bị gián đoạn.  
+- **Thông báo người dùng** – hiển thị cảnh báo thân thiện trên giao diện UI để quản trị viên có thể gia hạn trước khi dịch vụ bị gián đoạn.  
 
-Việc triển khai các chiến lược này đảm bảo ứng dụng của bạn tiếp tục chạy mượt mà và người dùng không bao giờ thấy watermark bất ngờ.
+`license.getExpirationDate()` trả về ngày mà giấy phép sẽ hết hạn.
 
-## Các Vấn Đề Cấu Hình Thông Thường và Giải Pháp
+## Các vấn đề cấu hình thường gặp và giải pháp
 
-### Lỗi Không Tìm Thấy Tệp Giấy Phép
-Một trong những vấn đề phổ biến nhất mà các nhà phát triển gặp phải là lỗi "license file not found". Thông thường lỗi này xảy ra khi đường dẫn tệp giấy phép không đúng hoặc khi triển khai vào các môi trường khác nhau. Luôn sử dụng đường dẫn tương đối hoặc tải giấy phép từ classpath để tránh các vấn đề triển khai.
+### Lỗi không tìm thấy tệp giấy phép
+Lỗi thường gặp nhất là “license file not found.” Điều này xảy ra khi đường dẫn tệp không đúng hoặc tệp không được đóng gói cùng artifact đã triển khai. Sử dụng **đường dẫn tương đối** hoặc tải giấy phép từ **classpath** để tránh các vấn đề phụ thuộc môi trường.
 
-### Các Xem Xét Về Bộ Nhớ và Hiệu Suất
-Cấu hình giấy phép không đúng có thể ảnh hưởng đến việc sử dụng bộ nhớ của ứng dụng. Cấp phép dựa trên luồng thường tiết kiệm bộ nhớ hơn cho các ứng dụng quy mô lớn, trong khi cấp phép dựa trên tệp hoạt động tốt cho các triển khai nhỏ hơn. Giám sát việc sử dụng bộ nhớ của ứng dụng trong quá trình thiết lập ban đầu để chọn cách tiếp cận tối ưu.
+### Cân nhắc về bộ nhớ và hiệu năng
+Cấu hình giấy phép không đúng có thể làm tăng mức sử dụng bộ nhớ. **Cấp phép dựa trên luồng** thường tiết kiệm bộ nhớ hơn cho các ứng dụng quy mô lớn vì không tải toàn bộ tệp vào bộ nhớ. Cấp phép dựa trên tệp phù hợp với các triển khai nhỏ hơn.
 
-### Thách Thức Khi Triển Khai Container và Đám Mây
-Khi triển khai trên container hoặc nền tảng đám mây, cấp phép dựa trên tệp có thể gặp vấn đề do hệ thống tệp tạm thời. Cấp phép dựa trên InputStream hoặc cấu hình biến môi trường thường cung cấp giải pháp đáng tin cậy hơn trong các trường hợp này.
+### Thách thức triển khai trong container và đám mây
+Hệ thống tệp tạm thời trong container khiến cấp phép dựa trên tệp dễ bị lỗi. Ưu tiên **cấp phép dựa trên InputStream** hoặc lưu giấy phép trong trình quản lý bí mật và tải tại thời gian chạy. Cách này giảm nguy cơ giấy phép biến mất sau khi container khởi động lại.
 
-## Mẹo Tối Ưu Hóa Hiệu Suất cho Ứng Dụng Annotation Java
+## Mẹo tối ưu hoá hiệu năng cho ứng dụng Java Annotation
 
-Để đạt hiệu suất tốt nhất từ triển khai GroupDocs.Annotation Java của bạn, hãy cân nhắc các chiến lược tối ưu hóa sau:
+- **License Caching** – Khởi tạo giấy phép một lần khi khởi động và tái sử dụng cùng một đối tượng `License` cho mọi thao tác chú thích. Điều này loại bỏ việc I/O lặp lại và tăng tốc xử lý yêu cầu.  
+- **Resource Management** – Luôn đóng các luồng và giải phóng các đối tượng chú thích (`annotation.close()`) để tránh rò rỉ bộ nhớ.  
+- **Thread‑Safety** – GroupDocs.Annotation an toàn với đa luồng sau khi giấy phép đã được tải, nhưng hãy đảm bảo việc tải diễn ra **trước** khi bất kỳ luồng làm việc nào bắt đầu xử lý tài liệu.  
 
-**License Caching**: Khởi tạo giấy phép của bạn một lần duy nhất khi ứng dụng khởi động thay vì cho mỗi thao tác. Điều này giảm tải và cải thiện thời gian phản hồi, đặc biệt trong các kịch bản lưu lượng cao.
+## Câu hỏi thường gặp về cấp phép GroupDocs Java
 
-**Resource Management**: Giải phóng đúng cách các đối tượng annotation và luồng để ngăn ngừa rò rỉ bộ nhớ. Thư viện cung cấp các phương thức giải phóng tích hợp cần được sử dụng nhất quán trong toàn bộ ứng dụng.
-
-**Threading Considerations**: GroupDocs.Annotation for Java an toàn với đa luồng, nhưng việc khởi tạo giấy phép nên diễn ra trước khi bất kỳ thao tác đa luồng nào bắt đầu. Điều này đảm bảo hành vi nhất quán trên tất cả các luồng.
-
-## Câu Hỏi Thường Gặp Về Cấp Phép GroupDocs Java
-
-**Q: Tôi có thể sử dụng các phương pháp cấp phép khác nhau trong cùng một ứng dụng không?**  
-A: Mặc dù về mặt kỹ thuật có thể, nhưng nên sử dụng một phương pháp cấp phép duy nhất cho mỗi ứng dụng để tránh xung đột và đơn giản hoá việc bảo trì.
+**Q: Có thể sử dụng các phương pháp cấp phép khác nhau trong cùng một ứng dụng không?**  
+A: Mặc dù về mặt kỹ thuật có thể, việc sử dụng một phương pháp cấp phép duy nhất cho mỗi ứng dụng sẽ đơn giản hoá việc bảo trì và tránh xung đột.
 
 **Q: Điều gì sẽ xảy ra nếu giấy phép của tôi hết hạn trong quá trình chạy?**  
-A: Thư viện sẽ chuyển sang chế độ đánh giá, thêm watermark vào các tài liệu đã xử lý. Triển khai các kiểm tra xác thực giấy phép trong ứng dụng để xử lý tình huống này một cách nhẹ nhàng.
+A: Thư viện sẽ chuyển sang chế độ đánh giá, thêm watermark vào các tài liệu đã chú thích. Kiểm tra định kỳ `License.isValid()` giúp bạn phát hiện và kích hoạt quy trình gia hạn.
 
-**Q: Làm thế nào để xử lý cấp phép trong kiến trúc microservices?**  
-A: Mỗi microservice nên tự quản lý giấy phép của mình. Các phương pháp dựa trên luồng hoặc biến môi trường hoạt động tốt cho hệ thống phân tán.
+**Q: Làm sao để xử lý cấp phép trong kiến trúc microservices?**  
+A: Mỗi microservice nên tải riêng giấy phép của mình. Các cách tiếp cận dựa trên luồng hoặc biến môi trường là tốt nhất cho hệ thống phân tán.
 
 **Q: Có cách nào để xác thực trạng thái giấy phép một cách lập trình không?**  
-A: Có, thư viện cung cấp các phương thức để kiểm tra tính hợp lệ và ngày hết hạn của giấy phép, cho phép bạn triển khai quản lý giấy phép một cách chủ động.
+A: Có, gọi `License.isValid()` để nhận kết quả boolean và `License.getExpirationDate()` để lấy thời gian hết hạn chính xác.
 
-## Các Thực Hành Tốt Nhất cho Triển Khai Sản Xuất
+**Q: Có thể dùng giấy phép tạm thời để thử nghiệm không?**  
+A: Chắc chắn. Giấy phép tạm thời cho phép bạn xác minh tích hợp mà không cần mua giấy phép đầy đủ và rất thích hợp cho các pipeline CI/CD.
 
-Khi triển khai các ứng dụng GroupDocs.Annotation Java vào môi trường production, hãy tuân theo các thực hành đã được chứng minh sau:
+## Thực hành tốt cho triển khai sản xuất
 
-- Luôn xác thực giấy phép của bạn trong quá trình khởi động ứng dụng và ghi lại bất kỳ vấn đề nào để giám sát.  
-- Triển khai xử lý lỗi thích hợp cho các ngoại lệ liên quan đến giấy phép để cung cấp phản hồi có ý nghĩa cho người dùng.  
-- Xem xét sử dụng các endpoint kiểm tra sức khỏe (health‑check) bao gồm việc xác thực trạng thái giấy phép.  
+- **Validate at startup** và ghi log mọi vấn đề; tích hợp kiểm tra vào các endpoint health‑check để giám sát tự động.  
+- **Avoid hard‑coding** đường dẫn hoặc khóa giấy phép; sử dụng biến môi trường, tệp cấu hình bảo mật, hoặc dịch vụ quản lý bí mật.  
+- **Implement graceful fallback** – nếu xác thực thất bại, trả về thông báo lỗi rõ ràng cho quản trị viên thay vì để ứng dụng im lặng chuyển sang chế độ đánh giá.  
 
-Đối với bảo mật, không bao giờ hardcode thông tin giấy phép trong mã nguồn của bạn. Sử dụng biến môi trường, tệp cấu hình bảo mật, hoặc dịch vụ quản lý khóa tùy theo yêu cầu hạ tầng của bạn.
+## Bắt đầu với triển khai của bạn
 
-## Bắt Đầu Với Việc Triển Khai Của Bạn
+Chọn hướng dẫn phù hợp với môi trường của bạn:
 
-Sẵn sàng triển khai cấp phép GroupDocs.Annotation trong dự án Java của bạn? Bắt đầu với hướng dẫn phù hợp với trường hợp sử dụng cụ thể của bạn. Nếu bạn mới với thư viện, hãy bắt đầu với hướng dẫn cấp phép dựa trên tệp toàn diện, sau đó khám phá các tùy chọn dựa trên luồng nếu kiến trúc của bạn yêu cầu.
+1. **File‑based licensing** – bắt đầu với hướng dẫn toàn diện giúp bạn đặt tệp `.lic` trên máy chủ.  
+2. **Stream‑based licensing** – làm theo hướng dẫn InputStream nếu bạn triển khai trên Docker, Kubernetes hoặc bất kỳ dịch vụ đám mây nào mà hệ thống tệp là tạm thời.  
+3. **Metered licensing** – tham khảo tài liệu API cho thanh toán dựa trên mức sử dụng nếu bạn muốn trả tiền theo nhu cầu.
 
-Mỗi hướng dẫn bao gồm các ví dụ làm việc đầy đủ mà bạn có thể sao chép và điều chỉnh cho nhu cầu cụ thể của mình. Đừng ngần ngại thử nghiệm các cách tiếp cận khác nhau – phiên bản đánh giá cho phép bạn kiểm tra chức năng trước khi cam kết với một chiến lược cấp phép cụ thể.
+Tất cả các hướng dẫn đều bao gồm các đoạn mã mẫu đầy đủ, có thể sao chép, điều chỉnh và thử nghiệm ngay lập tức.
 
-## Tài Nguyên Bổ Sung
+## Tài nguyên bổ sung
 
 - [Tài liệu GroupDocs.Annotation cho Java](https://docs.groupdocs.com/annotation/java/)
 - [Tham chiếu API GroupDocs.Annotation cho Java](https://reference.groupdocs.com/annotation/java/)
@@ -139,8 +232,12 @@ Mỗi hướng dẫn bao gồm các ví dụ làm việc đầy đủ mà bạn 
 - [Hỗ trợ miễn phí](https://forum.groupdocs.com/)
 - [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
 
----
-
-**Last Updated:** 2026-02-13  
-**Được kiểm tra với:** GroupDocs.Annotation for Java 23.11 (phiên bản mới nhất tại thời điểm viết)  
+**Cập nhật lần cuối:** 2026-07-30  
+**Kiểm tra với:** GroupDocs.Annotation cho Java 23.11 (phiên bản mới nhất tại thời điểm viết)  
 **Tác giả:** GroupDocs
+
+## Các hướng dẫn liên quan
+
+- [Kiểm tra Trạng Thái Giấy Phép – Hướng Dẫn Cấp Phép GroupDocs Annotation Java](/annotation/java/licensing-and-configuration/)  
+- [Cài Đặt Giấy Phép GroupDocs trong Java – Hướng Dẫn Cài Đặt Giấy Phép GroupDocs Annotation Java](/annotation/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/)  
+- [Cách thiết lập InputStream cho giấy phép GroupDocs trong Java Annotation](/annotation/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/)

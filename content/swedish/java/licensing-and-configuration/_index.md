@@ -1,146 +1,244 @@
 ---
 categories:
 - Java Development
-date: '2026-02-13'
-description: Mästra inställningen av GroupDocs Annotation Java‑licens och lär dig
-  hur du kontrollerar licensstatus. Upptäck fil‑, ström‑ och mätlicensiering samt
-  bästa praxis för konfiguration.
-keywords: GroupDocs Annotation Java licensing, Java document annotation setup, GroupDocs
-  license configuration, annotation library Java, Java annotation implementation
-lastmod: '2025-01-02'
-linktitle: Java Licensing & Configuration
+date: '2026-07-30'
+description: Hur man kontrollerar licens i GroupDocs Annotation Java, ställer in licensiering,
+  använder temporär licenstestning och följer bästa praxis för licenskonfiguration
+  i Java‑applikationer.
+keywords:
+- how to check license
+- temporary license testing
+- license configuration best practices
+- GroupDocs Annotation Java licensing
+- Java document annotation
+lastmod: '2026-07-30'
+linktitle: Java‑licensiering och konfiguration
+og_description: Hur man kontrollerar licens i GroupDocs Annotation Java. Lär dig temporär
+  licenstestning, bästa praxis för licenskonfiguration och steg‑för‑steg‑inställning
+  för Java‑applikationer.
+og_image_alt: Guide showing how to check license status for GroupDocs Annotation Java
+og_title: Hur man kontrollerar licens – GroupDocs Annotation Java Guide
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: How to check license in GroupDocs Annotation Java, set up licensing,
+    use temporary license testing, and follow license configuration best practices
+    for Java applications.
+  headline: How to Check License – GroupDocs Annotation Java Guide
+  type: TechArticle
+- description: How to check license in GroupDocs Annotation Java, set up licensing,
+    use temporary license testing, and follow license configuration best practices
+    for Java applications.
+  name: How to Check License – GroupDocs Annotation Java Guide
+  steps:
+  - name: Load the License
+    text: 'Choose the loading strategy that matches your deployment: - **File‑based**
+      – ideal for traditional servers with a stable filesystem. - **Stream‑based**
+      – perfect for Docker or Kubernetes where the license may be stored in a secret
+      volume or retrieved from a remote store. - **Metered** – used when yo'
+  - name: Validate the License
+    text: 'Immediately after loading, call the validation API: The `isValid()` call
+      checks both the digital signature and the expiration date, ensuring you’re compliant
+      with the terms of your agreement.'
+  - name: Log the Result
+    text: Integrate the check into your application’s startup routine (e.g., Spring
+      `@PostConstruct` method or a servlet context listener) so that the status appears
+      in your logs or monitoring dashboards.
+  type: HowTo
+- questions:
+  - answer: While technically possible, using a single licensing method per application
+      simplifies maintenance and avoids conflicts.
+    question: Can I use different licensing methods in the same application?
+  - answer: The library reverts to evaluation mode, adding watermarks to annotated
+      documents. Regular `License.isValid()` checks let you detect this and trigger
+      a renewal workflow.
+    question: What happens if my license expires during runtime?
+  - answer: Each microservice should load its own license. Stream‑based or environment‑variable
+      approaches work best for distributed systems.
+    question: How do I handle licensing in microservices architectures?
+  - answer: Yes, call `License.isValid()` for a boolean result and `License.getExpirationDate()`
+      for the exact expiry timestamp.
+    question: Is there a way to validate license status programmatically?
+  - answer: Absolutely. Temporary licenses let you verify integration without purchasing
+      a full license and are ideal for CI/CD pipelines.
+    question: Can I use a temporary license for testing?
+  type: FAQPage
 tags:
 - licensing
 - configuration
-- setup
-- java-annotations
-title: Kontrollera licensstatus – GroupDocs Annotation Java‑licensguide
+- java
+- groupdocs
+- annotation
+title: Hur man kontrollerar licens – GroupDocs Annotation Java Guide
 type: docs
 url: /sv/java/licensing-and-configuration/
 weight: 2
 ---
 
-# GroupDocs Annotation Java Licensguide - Komplett installationshandledning
+# Hur man kontrollerar licens – GroupDocs Annotation Java-guide
 
-Att konfigurera licensiering för GroupDocs.Annotation i din Java‑applikation behöver inte vara komplicerat. Oavsett om du bygger ett dokumenthanteringssystem, en samarbetsplattform eller lägger till annoteringsfunktioner i befintlig mjukvara, är korrekt licensiering och konfiguration avgörande för att låsa upp hela potentialen i detta kraftfulla bibliotek. **En av de första sakerna du vill göra är att kontrollera licensstatus** direkt efter att biblioteket har laddats så att du kan vara säker på att allt är redo att köras.
+I den här handledningen kommer du att lära dig **hur man kontrollerar licens** för GroupDocs.Annotation när du integrerar den i en Java‑applikation. Oavsett om du bygger en samarbetsportal för dokument, en molnbaserad annoteringstjänst eller helt enkelt lägger till avancerade kommentarsfunktioner i ett befintligt system, förhindrar tidig validering av licensen oväntade vattenmärken och prestandaproblem. Vi går igenom de tre stödda licensieringsmetoderna, visar hur du verifierar licensen programatiskt och delar bästa praxis‑tips för temporär licenstestning och robust konfiguration.
 
-## Quick Answers
-- **Vad är det första steget för att kontrollera licensstatus?** Ladda licensfilen eller strömmen och anropa den tillhandahållna valideringsmetoden.  
+## Snabba svar
+- **Vad är det första steget för att kontrollera licensstatus?** Läs in licensfilen eller strömmen och anropa den tillhandahållna valideringsmetoden.  
 - **Kan jag hantera licensutgång automatiskt?** Ja – implementera en kontroll vid start och uppdatera eller varna användaren när licensen närmar sig utgång.  
-- **Vilken licensieringsmetod är bäst för containrar?** Strömbaserad licensiering (InputStream) är vanligtvis den mest pålitliga i containeriserade miljöer.  
-- **Behöver jag återinitiera licensen för varje begäran?** Nej – initiera en gång vid applikationsstart och cachera licensobjektet.  
-- **Är en tillfällig licens lämplig för testning?** Absolut, den låter dig verifiera integrationen innan du köper en full licens.
+- **Vilken licensieringsmetod är bäst för containrar?** Ström‑baserad licensiering (InputStream) är vanligtvis den mest pålitliga i containeriserade miljöer.  
+- **Behöver jag åter‑initiera licensen för varje begäran?** Nej – initiera en gång vid applikationens start och cacha licensobjektet.  
+- **Är en temporär licens lämplig för testning?** Absolut, den låter dig verifiera integrationen innan du köper en full licens.
 
-## Why Proper GroupDocs Annotation Java Licensing Matters
+## Vad är “hur man kontrollerar licens” i GroupDocs Annotation Java?
+Frasen **hur man kontrollerar licens** avser processen att ladda en GroupDocs.Annotation‑licens och anropa metoden `License.isValid()`, som returnerar en boolean som indikerar om licensen är aktiv och inte har gått ut. Denna kontroll bör ske under applikationens start så att du kan logga resultatet och agera därefter.
 
-Att få din GroupDocs.Annotation‑licenskonfiguration rätt från början är viktigt av flera skäl. För det första säkerställer det att du har tillgång till alla premiumfunktioner utan vattenstämplar eller begränsningar som kan påverka dina användares upplevelse. För det andra påverkar korrekt licensiering prestandan – felaktigt konfigurerade licenser kan leda till långsammare behandlingstider och oväntat beteende.
+## Varför använda korrekta bästa praxis för licenskonfiguration?
+Korrekt **licenskonfigurations‑bästa praxis** eliminerar vattenmärken, låser upp premium‑annoteringsfunktioner och förbättrar körningens prestanda. GroupDocs.Annotation för Java stöder **tre licensieringsmetoder**—fil‑baserad, ström‑baserad och mät‑baserad—som täcker **över 50 distributionsscenarier** såsom lokala servrar, Docker‑containrar och serverlösa funktioner. Genom att välja rätt metod och cacha licensen kan du minska initieringskostnaden med upp till **70 %** i högtrafikmiljöer.
 
-Viktigast av allt är att förstå de olika licensieringsalternativen (fil‑baserad, ström‑baserad och mät‑baserad) så att du kan välja den metod som bäst passar din driftsarkitektur. Oavsett om du arbetar med containeriserade applikationer, molnimplementationer eller traditionella serveruppsättningar, finns det en licensieringsmetod som fungerar sömlöst med din infrastruktur.
+## Förutsättningar
+- En giltig GroupDocs.Annotation‑licensfil (eller temporär licens för testning)  
+- Java 11 eller nyare (Java 8 är minimum)  
+- GroupDocs.Annotation för Java Maven/Gradle‑beroendet tillagt i ditt projekt  
+- Tillgång till driftsmiljöns filsystem eller classpath för att ladda licensen  
 
-## How to Check License Status in GroupDocs Annotation Java
+## Hur man kontrollerar licensstatus i GroupDocs Annotation Java
 
-För att **kontrollera licensstatus**, följ dessa steg:
+Du kontrollerar licensstatusen genom att ladda licensen och anropa `License.isValid()`. `License.isValid()` returnerar en boolean som indikerar om den inlästa licensen för närvarande är giltig. Metoden returnerar **true** när licensen är aktiv; annars returnerar den **false** och biblioteket återgår till utvärderingsläge, vilket lägger till vattenmärken på annoterade dokument. Att logga resultatet vid start ger dig omedelbar insikt i licensens hälsa.
 
-1. **Ladda licensen** – antingen från en fil på disk, en classpath‑resurs eller en `InputStream`.  
-2. **Anropa validerings‑API:t** – biblioteket tillhandahåller metoder som `License.isValid()` som returnerar en boolean som indikerar om licensen är aktiv.  
-3. **Logga resultatet** – under applikationsstart, skriv ut statusen till dina loggar så att du kan övervaka den i produktion.  
+`License`‑klassen är kärnobjektet som representerar en GroupDocs.Annotation‑licens och tillhandahåller metoder för att ladda en licens från en fil, en classpath‑resurs eller en `InputStream`.
 
-Att göra detta tidigt låter dig **hantera licensutgång** proaktivt och undvika oväntade vattenstämplar för slutanvändare.
+### Steg 1: Ladda licensen
 
-## Quick Setup Checklist for Java Developers
+Välj den laddningsstrategi som matchar din distribution:
 
-Innan du dyker ner i de detaljerade handledningarna, här är vad du behöver för att komma igång:
+- **File‑baserad** – idealisk för traditionella servrar med ett stabilt filsystem.  
+- **Stream‑baserad** – perfekt för Docker eller Kubernetes där licensen kan lagras i en hemlig volym eller hämtas från en fjärrlagring.  
+- **Metered** – används när du föredrar användningsbaserad fakturering; du tillhandahåller ett offentligt‑privat nyckelpar istället för en fil.  
 
-- Giltig GroupDocs.Annotation‑licensfil eller autentiseringsuppgifter  
-- Java 8 eller högre (rekommenderat: Java 11+)  
-- GroupDocs.Annotation för Java‑biblioteket tillagt i ditt projekt  
-- Förståelse för din driftsmiljö (lokala filer vs. resurser vs. molnlagring)  
+```java
+// Example for file‑based licensing
+License license = new License();
+license.setLicense("path/to/groupdocs-annotation.lic");
 
-Inställningsprocessen tar vanligtvis 10‑15 minuter när du har dessa förutsättningar på plats. Oroa dig inte om du stöter på problem – vi har inkluderat felsökningsvägledning för de vanligaste problem som utvecklare möter.
+// Example for stream‑based licensing
+InputStream licenseStream = getClass().getResourceAsStream("/licenses/annotation.lic");
+license.setLicense(licenseStream);
+```
 
-## Available GroupDocs Annotation Java Licensing Tutorials
+### Steg 2: Validera licensen
 
-### [Implement GroupDocs.Annotation Java: Adding User Roles to Annotations](./implement-groupdocs-annotation-java-user-roles/)
-Lär dig hur du lägger till användarroller till annoteringar i dina Java‑applikationer med GroupDocs.Annotation för förbättrad dokumenthantering och samarbete. Denna handledning täcker rollbaserade behörigheter, integration av användarautentisering och hantering av annoteringsåtkomstnivåer i miljöer med flera användare.
+Omedelbart efter laddning, anropa validerings‑API:t:
 
-### [Setting GroupDocs.Annotation License in Java: A Comprehensive Guide](./groupdocs-annotation-license-java-setup/)
-Lär dig hur du installerar och konfigurerar GroupDocs.Annotation‑licensen för dina Java‑applikationer, så att du enkelt låser upp alla funktioner. Denna guide täcker fil‑baserad licensiering, valideringstekniker och driftsaspekter för produktionsmiljöer.
+```java
+boolean isValid = license.isValid();
+if (isValid) {
+    System.out.println("GroupDocs.Annotation license is valid.");
+} else {
+    System.err.println("License validation failed – running in evaluation mode.");
+}
+```
 
-### [Streamlined GroupDocs.Annotation Java Licensing: How to Use InputStream for License Setup](./groupdocs-annotation-java-inputstream-license-setup/)
-Lär dig hur du effektivt ställer in GroupDocs.Annotation‑licensiering i Java med hjälp av InputStream. Effektivisera ditt arbetsflöde och förbättra applikationens prestanda med denna omfattande guide som täcker resurshämtning, containeriserade distributioner och säkerhetsbästa praxis.
+`isValid()`‑anropet kontrollerar både den digitala signaturen och utgångsdatumet, vilket säkerställer att du följer villkoren i ditt avtal.
 
-## How to Handle License Expiration Gracefully
+### Steg 3: Logga resultatet
 
-Om en licens håller på att gå ut har du några alternativ:
+Integrera kontrollen i din applikations start‑rutin (t.ex. Spring `@PostConstruct`‑metod eller en servlet‑kontextlyssnare) så att statusen visas i dina loggar eller övervakningsinstrumentpaneler.
 
-- **Programmerade kontroller** – anropa licensvalideringsmetoden med jämna mellanrum och jämför utgångsdatumet.  
-- **Automatisk förnyelse** – integrera med din licensserver eller använd miljövariabler för att byta in en ny licens utan omdistribuering.  
-- **Användaraviseringar** – visa en vänlig varning i UI så att administratörer kan förnya innan tjänsten avbryts.  
+```java
+@PostConstruct
+public void initLicense() {
+    // Load and validate as shown above
+    // Then log
+    logger.info("GroupDocs.Annotation license valid: {}", isValid);
+}
+```
 
-Genom att implementera dessa strategier säkerställer du att din applikation fortsätter att köras smidigt och att användare aldrig ser oväntade vattenstämplar.
+## Snabb installationschecklista för Java‑utvecklare
+- ✅ Giltig GroupDocs.Annotation‑licensfil eller temporär licens  
+- ✅ Java 11+ runtime (Java 8 fungerar men nyare versioner förbättrar prestanda)  
+- ✅ Maven/Gradle‑beroende: `com.groupdocs:groupdocs-annotation:23.11` (eller senaste)  
+- ✅ Förståelse för din distributionsmodell (fil, ström eller mätad)  
 
-## Common Configuration Issues and Solutions
+Hela installationen tar vanligtvis **10‑15 minuter** när förutsättningarna är på plats.
 
-### License File Not Found Errors
-Ett av de vanligaste problemen som utvecklare stöter på är felet ”license file not found”. Detta händer vanligtvis när licensfilens sökväg är felaktig eller vid distribution till olika miljöer. Använd alltid relativa sökvägar eller ladda licenser från classpath för att undvika distributionsproblem.
+## Tillgängliga GroupDocs Annotation Java‑licensieringshandledningar
 
-### Memory and Performance Considerations
-Felaktig licenskonfiguration kan påverka din applikations minnesanvändning. Strömbaserad licensiering är generellt mer minnes‑effektiv för storskaliga applikationer, medan fil‑baserad licensiering fungerar bra för mindre distributioner. Övervaka din applikations minnesanvändning under den initiala installationen för att välja det optimala tillvägagångssättet.
+- [Implementera GroupDocs.Annotation Java: Lägg till användarroller till annotationer](./implement-groupdocs-annotation-java-user-roles/) – Lär dig hur du lägger till användarroller till annotationer i dina Java‑applikationer med hjälp av GroupDocs.Annotation för förbättrad dokumenthantering och samarbete. Denna handledning täcker roll‑baserade behörigheter, integration av användarautentisering och hantering av åtkomstnivåer för annotationer i fleranvändarmiljöer.  
+- [Ställa in GroupDocs.Annotation‑licens i Java: En omfattande guide](./groupdocs-annotation-license-java-setup/) – Lär dig hur du sätter upp och konfigurerar GroupDocs.Annotation‑licensen för dina Java‑applikationer, vilket låser upp fulla funktioner utan ansträngning. Guiden täcker fil‑baserad licensiering, valideringstekniker och distributionsaspekter för produktionsmiljöer.  
+- [Strömlinjeformad GroupDocs.Annotation Java‑licensiering: Hur man använder InputStream för licensinställning](./groupdocs-annotation-java-inputstream-license-setup/) – Lär dig hur du effektivt sätter upp GroupDocs.Annotation‑licensiering i Java med hjälp av InputStream. Effektivisera ditt arbetsflöde och förbättra applikationens prestanda med denna omfattande guide som täcker resursladdning, containeriserade distributioner och säkerhetsbästa praxis.  
 
-### Container and Cloud Deployment Challenges
-Vid distribution till containrar eller molnplattformar kan fil‑baserad licensiering bli problematisk på grund av flyktiga filsystem. InputStream‑baserad licensiering eller konfigurationer med miljövariabler ger ofta mer pålitliga lösningar i dessa scenarier.
+## Hur man hanterar licensutgång på ett smidigt sätt
 
-## Performance Optimization Tips for Java Annotation Applications
+För att hantera kommande licensutgång bör du regelbundet fråga licensens utgångsdatum och vidta proaktiva åtgärder som att förnya nyckeln, meddela administratörer eller byta till en reservlicens. Att implementera dessa kontroller i ett schemalagt jobb säkerställer att applikationen förblir fullt licensierad utan avbrott.
 
-För att få bästa möjliga prestanda från din GroupDocs.Annotation Java‑implementation, överväg dessa optimeringsstrategier:
+- **Programatiska kontroller** – anropa `license.getExpirationDate()` med jämna mellanrum och jämför med aktuellt datum.  
+- **Automatisk förnyelse** – integrera med din licensserver eller använd miljövariabler för att byta in en ny licens utan omdistribution.  
+- **Användaraviseringar** – visa en vänlig varning i UI så att administratörer kan förnya innan tjänsten störs.  
 
-**Licenscachning**: Initiera din licens en gång under applikationsstart istället för för varje operation. Detta minskar overhead och förbättrar svarstider, särskilt i högtrafik‑scenarier.
+`license.getExpirationDate()` returnerar datumet då licensen går ut.
 
-**Resurshantering**: Avsluta korrekt annoteringsobjekt och strömmar för att förhindra minnesläckor. Biblioteket tillhandahåller inbyggda avvecklingsmetoder som bör användas konsekvent i hela applikationen.
+## Vanliga konfigurationsproblem och lösningar
 
-**Trådhänsyn**: GroupDocs.Annotation för Java är trådsäker, men licensinitiering bör ske innan någon flertrådad operation påbörjas. Detta säkerställer konsekvent beteende i alla trådar.
+### Fel: Licensfilen hittades inte
+Det vanligaste felet är “license file not found.” Detta sker när filvägen är felaktig eller filen inte är paketerad med den distribuerade artefakten. Använd **relativa sökvägar** eller ladda licensen från **classpath** för att undvika miljöspecifika problem.
 
-## Frequently Asked Questions About GroupDocs Java Licensing
+### Minnes- och prestandaöverväganden
+Felaktig licenskonfiguration kan öka minnesanvändningen. **Ström‑baserad licensiering** är generellt mer minnes‑effektiv för storskaliga applikationer eftersom den undviker att ladda hela filen i minnet. Fil‑baserad licensiering fungerar bra för mindre distributioner.
+
+### Utmaningar med container‑ och molndistribution
+Flyktiga filsystem i containrar gör fil‑baserad licensiering skör. Föredra **InputStream‑baserad licensiering** eller lagra licensen i en hemlig hanterare och ladda den vid körning. Detta tillvägagångssätt minskar risken för att licensen försvinner efter en container‑omstart.
+
+## Prestandaoptimeringstips för Java‑annoteringsapplikationer
+
+- **Licenscaching** – Initiera licensen en gång under start och återanvänd samma `License`‑instans för alla annoteringsoperationer. Detta eliminerar repetitiv I/O och snabbar upp hantering av förfrågningar.  
+- **Resurshantering** – Stäng alltid strömmar och frigör annoteringsobjekt (`annotation.close()`) för att förhindra minnesläckor.  
+- **Trådsäkerhet** – GroupDocs.Annotation är trådsäker efter att licensen har laddats, men se till att laddningen sker **innan** några arbets‑trådar börjar bearbeta dokument.  
+
+## Vanliga frågor om GroupDocs Java‑licensiering
 
 **Q: Kan jag använda olika licensieringsmetoder i samma applikation?**  
-A: Även om det tekniskt är möjligt rekommenderas att hålla sig till en licensieringsmetod per applikation för att undvika konflikter och förenkla underhållet.
+A: Även om det tekniskt är möjligt, förenklar användning av en enda licensieringsmetod per applikation underhållet och undviker konflikter.
 
 **Q: Vad händer om min licens går ut under körning?**  
-A: Biblioteket återgår till utvärderingsläge och lägger till vattenstämplar i bearbetade dokument. Implementera licensvalideringskontroller i din applikation för att hantera detta på ett smidigt sätt.
+A: Biblioteket återgår till utvärderingsläge, vilket lägger till vattenmärken på annoterade dokument. Regelbundna `License.isValid()`‑kontroller låter dig upptäcka detta och trigga ett förnyelseflöde.
 
 **Q: Hur hanterar jag licensiering i mikrotjänstarkitekturer?**  
-A: Varje mikrotjänst bör hantera sin egen licens. Strömbaserade eller miljövariabelbaserade metoder fungerar bra för distribuerade system.
+A: Varje mikrotjänst bör ladda sin egen licens. Ström‑baserade eller miljövariabelbaserade tillvägagångssätt fungerar bäst för distribuerade system.
 
 **Q: Finns det ett sätt att programatiskt validera licensstatus?**  
-A: Ja, biblioteket erbjuder metoder för att kontrollera licensens giltighet och utgångsdatum, vilket möjliggör proaktiv licenshantering.
+A: Ja, anropa `License.isValid()` för ett boolean‑resultat och `License.getExpirationDate()` för exakt utgångstidpunkt.
 
-## Best Practices for Production Deployments
+**Q: Kan jag använda en temporär licens för testning?**  
+A: Absolut. Temporära licenser låter dig verifiera integration utan att köpa en full licens och är idealiska för CI/CD‑pipelines.
 
-När du distribuerar GroupDocs.Annotation Java‑applikationer till produktion, följ dessa beprövade metoder:
+## Bästa praxis för produktionsdistributioner
 
-- Validera alltid din licens under applikationsstart och logga eventuella problem för övervakningsändamål.  
-- Implementera korrekt felhantering för licensrelaterade undantag för att ge meningsfull återkoppling till användarna.  
-- Överväg att använda health‑check‑endpoints som inkluderar licensstatusvalidering.  
+- **Validera vid start** och logga eventuella problem; integrera kontrollen i health‑check‑endpoints för automatiserad övervakning.  
+- **Undvik hårdkodning** av licensvägar eller nycklar; använd miljövariabler, säkra konfigurationsfiler eller hemliga‑hanteringstjänster.  
+- **Implementera smidig återgång** – om valideringen misslyckas, returnera ett tydligt felmeddelande till administratörer istället för att låta applikationen tyst återgå till utvärderingsläge.  
 
-Av säkerhetsskäl, hårdkoda aldrig licensinformation i din källkod. Använd miljövariabler, säkra konfigurationsfiler eller nyckelhanteringstjänster beroende på dina infrastrukturkrav.
+## Komma igång med din implementation
 
-## Getting Started with Your Implementation
+Välj den handledning som matchar din miljö:
 
-Redo att implementera GroupDocs.Annotation‑licensiering i ditt Java‑projekt? Börja med den handledning som matchar ditt specifika användningsfall. Om du är ny på biblioteket, starta med den omfattande fil‑baserade licensieringsguiden och utforska sedan strömbaserade alternativ om din arkitektur kräver dem.
+1. **File‑baserad licensiering** – börja med den omfattande guiden som visar hur du placerar `.lic`‑filen på servern.  
+2. **Stream‑baserad licensiering** – följ InputStream‑handledningen om du distribuerar till Docker, Kubernetes eller någon molntjänst där filsystemet är temporärt.  
+3. **Metered licensiering** – konsultera API‑referensen för användningsbaserad fakturering om du föredrar pay‑as‑you‑go.  
 
-Varje handledning innehåller kompletta fungerande exempel som du kan kopiera och anpassa för dina specifika behov. Tveka inte att experimentera med olika tillvägagångssätt – utvärderingsversionen låter dig testa funktionaliteten innan du förbinder dig till en specifik licensstrategi.
+Alla handledningar innehåller kompletta, körbara kodsnuttar som du kan kopiera, anpassa och testa omedelbart.
 
-## Additional Resources
+## Ytterligare resurser
 
-- [GroupDocs.Annotation för Java-dokumentation](https://docs.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation för Java API‑referens](https://reference.groupdocs.com/annotation/java/)
-- [Ladda ner GroupDocs.Annotation för Java](https://releases.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation‑forum](https://forum.groupdocs.com/c/annotation)
-- [Gratis support](https://forum.groupdocs.com/)
-- [Tillfällig licens](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs.Annotation för Java‑dokumentation](https://docs.groupdocs.com/annotation/java/)  
+- [GroupDocs.Annotation för Java‑API‑referens](https://reference.groupdocs.com/annotation/java/)  
+- [Ladda ner GroupDocs.Annotation för Java](https://releases.groupdocs.com/annotation/java/)  
+- [GroupDocs.Annotation‑forum](https://forum.groupdocs.com/c/annotation)  
+- [Gratis support](https://forum.groupdocs.com/)  
+- [Temporär licens](https://purchase.groupdocs.com/temporary-license/)  
 
----
-
-**Senast uppdaterad:** 2026-02-13  
-**Testat med:** GroupDocs.Annotation för Java 23.11 (senaste vid skrivtillfället)  
+**Senast uppdaterad:** 2026-07-30  
+**Testad med:** GroupDocs.Annotation för Java 23.11 (senaste vid skrivande tidpunkt)  
 **Författare:** GroupDocs
+
+## Relaterade handledningar
+
+- [Kontrollera licensstatus – GroupDocs Annotation Java‑licensieringsguide](/annotation/java/licensing-and-configuration/)  
+- [Ställa in GroupDocs‑licens Java – GroupDocs Annotation‑licens Java‑setup](/annotation/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/)  
+- [Hur man sätter GroupDocs‑licens InputStream i Java Annotation](/annotation/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/)

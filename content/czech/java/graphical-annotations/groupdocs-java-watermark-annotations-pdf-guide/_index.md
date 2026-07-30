@@ -1,69 +1,142 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: Naučte se, jak přidat vodoznak PDF na více stránek do PDF souborů v Javě
-  pomocí GroupDocs.Annotation. Tento krok‑za‑krokem návod ukazuje, jak přidat vodoznak
-  PDF v Javě s ukázkami kódu, tipy na řešení problémů a osvědčenými postupy.
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
-linktitle: Java PDF Watermark Guide
+date: '2026-07-30'
+description: Zjistěte, jak aplikovat vodoznak na všechny stránky PDF v Javě pomocí
+  GroupDocs.Annotation. Tento krok‑za‑krokem tutoriál ukazuje, jak přidat vodoznak
+  PDF na více stránek, s ukázkami kódu, tipy na řešení problémů a osvědčenými postupy.
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
+linktitle: Průvodce vodoznakem PDF v Javě
+og_description: Aplikujte vodoznak na všechny stránky PDF pomocí GroupDocs.Annotation
+  pro Javu. Tento průvodce pokrývá vodoznak PDF na více stránek, nastavení, kód a
+  řešení problémů v stručném tutoriálu.
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: Aplikovat vodoznak na všechny stránky – Průvodce vodoznakem PDF v Javě
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDF vodoznak – průvodce vodoznakováním PDF na více stránkách
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: Aplikovat vodoznak na všechny stránky – Průvodce vodoznakem PDF v Javě
 type: docs
 url: /cs/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
-# Java PDF Watermark – pdf watermark multiple pages Guide
+# Aplikovat vodoznak na všechny stránky – Průvodce Java PDF vodoznakem
 
-Přidání **pdf watermark multiple pages** je běžná potřeba, když potřebujete hromadně chránit, značkovat nebo označovat dokumenty. V tomto tutoriálu uvidíte přesně, jak **add pdf watermark java** pomocí GroupDocs.Annotation, od nastavení projektu až po pokročilá přizpůsobení. Provedeme vás každým krokem, vysvětlíme, proč je nastavení takové, a poskytneme praktické tipy, jak se vyhnout typickým úskalím.
+V tomto komplexním tutoriálu se naučíte **jak aplikovat vodoznak na všechny stránky** do PDF dokumentu pomocí Javy a GroupDocs.Annotation. Ať už potřebujete chránit důvěrné zprávy, značkovat marketingové PDF nebo přidat razítko „CONFIDENTIAL“ napříč celým souborem, níže uvedené kroky vás provedou vším – od nastavení Maven až po pokročilou přizpůsobení – takže můžete během několika minut implementovat spolehlivé řešení.
 
-## Quick Answers
-- **What library can add pdf watermark multiple pages in Java?** GroupDocs.Annotation for Java.  
-- **Do I need a license?** Yes, a free trial works for development; a full license is required for production.  
-- **Can I watermark all pages at once?** Yes – create a watermark annotation for each page in a loop.  
-- **What Java version is required?** JDK 8+ (JDK 11+ recommended).  
-- **How do I control opacity?** Use `setOpacity(double)` where 0.0 is fully transparent and 1.0 is fully opaque.
+## Rychlé odpovědi
+- **Jaká knihovna může přidat pdf vodoznak na více stránek v Javě?** GroupDocs.Annotation for Java.  
+- **Potřebuji licenci?** Ano, bezplatná zkušební verze funguje pro vývoj; plná licence je vyžadována pro produkci.  
+- **Mohu vodoznakovat všechny stránky najednou?** Ano – vytvořte anotaci vodoznaku pro každou stránku ve smyčce.  
+- **Jaká verze Javy je vyžadována?** JDK 8+ (doporučeno JDK 11+).  
+- **Jak mohu řídit neprůhlednost?** Použijte `setOpacity(double)`, kde 0,0 je zcela průhledné a 1,0 je zcela neprůhledné.
 
-## Why You Need PDF Watermarks (And How Java Makes It Easy)
+## Proč potřebujete PDF vodoznaky (a jak to Java usnadňuje)
 
-Už se vám někdy stalo, že se důležité dokumenty sdílely bez povolení? Nebo jste potřebovali značkovat PDF soubory vaší společnosti, ale nevěděli jste, kde začít? Nejste v tom sami. Přidávání vodoznaků do PDF je jednou z nejčastějších potřeb v oblasti zabezpečení a brandingu dokumentů, se kterými se vývojáři dnes setkávají.
+Už jste se někdy obávali, že důvěrný PDF bude sdílen bez vašeho povolení? Nebo jste potřebovali rychlý způsob, jak označit každou stránku prodejní brožury? Přidávání vodoznaků programově eliminuje ruční úsilí, zajišťuje konzistenci a posiluje bezpečnost dokumentu. S Javou a GroupDocs.Annotation – jednou z nejrobustnějších **java add watermark pdf** knihoven – získáte detailní kontrolu nad umístěním, rotací, barvou a neprůhledností, a to vše při efektivní práci s velkými soubory.
 
-Ať už chráníte citlivé obchodní dokumenty, značku marketingových materiálů, nebo jen chcete zabránit neautorizovanému šíření, programové přidání vodoznaků vám může ušetřit hodiny ruční práce. A s Javou a správnou knihovnou je to překvapivě jednoduché.
-
-V tomto průvodci se naučíte, jak pomocí GroupDocs.Annotation for Java přidat profesionálně vypadající vodoznaky do PDF – jedné z nejspolehlivějších Java watermark knihoven na trhu. Pokryjeme vše od základního nastavení po pokročilé přizpůsobení, včetně běžných úskalí a způsobů, jak se jim vyhnout.
-
-**Co na konci zvládnete:**
+**Co se naučíte do konce tohoto průvodce:**
 - Nastavení GroupDocs.Annotation pro Java vodoznaky  
-- Vytváření vlastních watermark anotací s plnou kontrolou  
-- Odstraňování běžných problémů při implementaci vodoznaků  
-- Optimalizaci kódu pro produkční nasazení  
+- Vytváření vlastních anotací vodoznaku, které se aplikují na **všechny stránky**  
+- Zpracování velkých PDF bez vyčerpání paměti  
+- Řešení běžných problémů a optimalizace výkonu  
 
-## What is a PDF Watermark and Why Use It on Multiple Pages?
+## Co je PDF vodoznak a proč jej použít na více stránkách?
 
-PDF vodoznak je překryv, který leží nad obsahem dokumentu, aniž by měnil původní text. Použití **pdf watermark multiple pages** vám umožní konzistentně označit každou stránku značkou, upozorněním na důvěrnost nebo verzí, čímž zajistíte, že ochrana cestuje s celým dokumentem.
+PDF vodoznak je překrytí, které se zobrazí nad obsahem dokumentu, aniž by měnilo podkladový text nebo obrázky. Aplikování vodoznaku na **všechny stránky** zajišťuje, že každá stránka nese stejnou značku nebo upozornění na důvěrnost, čímž se zabrání neúmyslnému šíření neoznačených stránek.
 
-## Prerequisites
+## Předpoklady
 
-### Essential Requirements
+### Základní požadavky
+- **Java prostředí:** JDK 8 nebo vyšší (doporučeno JDK 11+), Maven 3.6+, libovolné IDE (IntelliJ, Eclipse, VS Code).  
+- **Požadované znalosti:** Základní syntaxe Javy, práce se soubory, správa Maven závislostí.  
+- **Oprávnění projektu:** Zápisový přístup do výstupního adresáře a dostatek RAM pro velké PDF (≥ 4 GB doporučeno pro soubory s více než 200 stránkami).
 
-- **Java Environment:** JDK 8 nebo vyšší (JDK 11+ doporučeno), Maven 3.6+, IDE dle vašeho výběru.  
-- **Knowledge Prerequisites:** Základy Javy, práce se soubory (I/O), Maven závislosti.  
-- **Project Setup:** Oprávnění pro zápis do výstupní složky a dostatek RAM pro velké PDF soubory.
+## Nastavení prostředí pro Java PDF vodoznaky
 
-## Setting Up Your Java PDF Watermark Environment
+### Přidání GroupDocs.Annotation do vašeho projektu
 
-### Adding GroupDocs.Annotation to Your Project
+Nejprve přidejte Maven artefakt GroupDocs.Annotation. Tato závislost načte všechny potřebné binární soubory a transitivní knihovny.
 
-Prvním krokem k přidání vodoznaků do PDF v Javě je správně nakonfigurovat knihovnu GroupDocs.Annotation. Zde je Maven nastavení, které skutečně funguje:
+**Definice:** Element Maven `<dependency>` deklaruje knihovnu GroupDocs.Annotation pro váš projekt, což umožňuje kompilátoru najít JAR soubory během sestavení.  
 
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -81,20 +154,26 @@ Prvním krokem k přidání vodoznaků do PDF v Javě je správně nakonfigurova
 </dependencies>
 ```
 
-**Pro tip**: Vždy používejte nejnovější verzi kvůli opravám chyb a vylepšením výkonu. Výše uvedená verze je aktuální k roku 2025.
+**Tip:** Vždy používejte nejnovější vydanou verzi (příklad ukazuje 25.2, nejnovější k roku 2025), abyste získali opravy chyb a vylepšení výkonu.
 
-### Getting Your License Sorted
+### Zajištění licence
 
-Zde je něco, co mnoho tutoriálů opomíjí – potřebujete řádnou licenci pro produkční použití. Vaše možnosti jsou:
+Potřebujete platnou licenci pro produkční nasazení. Vyberte možnost, která vyhovuje vašemu časovému plánu:
 
-1. **Free Trial**: Ideální pro testování a vývoj. Stáhněte z [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-2. **Temporary License**: Získáte plné funkce pro hodnocení. Pořiďte si ji na [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
-3. **Full License**: Pro produkční aplikace. Zakupte na [Purchase GroupDocs Page](https://purchase.groupdocs.com/buy)
+1. **Free Trial:** Ideální pro vývoj a testování. Stáhněte z [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+2. **Temporary License:** Plná funkčnost pro hodnocení. Získejte ji na [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
+3. **Full License:** Vyžadována pro komerční použití. Zakupte na [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
 
-### Basic Setup That Actually Works
+### Základní nastavení, které skutečně funguje
 
-Jakmile máte závislosti nastavené, takto správně inicializujete knihovnu:
+Po přidání závislosti a získání licenčního souboru inicializujte objekt `Annotator`. Tento objekt načte PDF do paměti a poskytuje API pro vytváření anotací.
 
+**Definice:** `Annotator` je hlavní vstupní bod GroupDocs.Annotation; spravuje načítání PDF, vytváření anotací a ukládání.  
+
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -110,20 +189,21 @@ public class WatermarkSetup {
 }
 ```
 
-**Častá chyba, které se vyhněte**: Zapomenutí volání `dispose()` může vést k únikům paměti, zejména při zpracování více dokumentů.
+**Běžná chyba, které se vyhnout:** Zapomenout zavolat `annotator.dispose()` po zpracování; může to způsobit úniky paměti, zejména při zpracování mnoha dokumentů najednou.
 
-## How to Add pdf watermark multiple pages with Java
+## Jak aplikovat vodoznak na všechny stránky v Javě
 
-Nyní hlavní část – skutečné přidání vodoznaků! Knihovna GroupDocs.Annotation je překvapivě jednoduchá, jakmile pochopíte její komponenty.
+Pro aplikaci vodoznaku na každou stránku vytvoříte `WatermarkAnnotation`, nastavíte jeho vizuální vlastnosti a poté přidáte samostatnou instanci této anotace na každou stránku ve smyčce. Smyčka používá počet stránek dokumentu, přiřadí správné číslo stránky a nakonec uloží upravený PDF.
 
-### Understanding Watermark Annotations
+### Porozumění anotacím vodoznaku
 
-Přemýšlejte o watermark anotacích jako o překryvných vrstvách na vašem PDF. Mohou obsahovat text, mít vlastní umístění, barvy, úrovně opacity a dokonce úhly otočení. Na rozdíl od jednoduchých textových vložení jsou watermark anotace navrženy tak, aby byly viditelné značky, které nezasahují do hlavního obsahu dokumentu.
+`WatermarkAnnotation` představuje překryvnou vrstvu, která může obsahovat text, vlastní barvy, rotaci a neprůhlednost. Na rozdíl od jednoduchého přidání textu je uložena jako anotace, což ji později umožňuje odstranit nebo upravit.
 
-### Step 1: Import the Right Classes
+**Definice:** `WatermarkAnnotation` je třída v GroupDocs.Annotation, která zapouzdřuje všechny vizuální vlastnosti překryvu vodoznaku.  
 
-Nejprve si seřaďte všechny importy. Toto jsou základní třídy, které budete potřebovat:
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -133,14 +213,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-Každá třída má specifickou roli:
-- `Annotator`: Hlavní rozhraní pro práci s PDF  
-- `WatermarkAnnotation`: Objekt vodoznaku, který budete přizpůsobovat  
-- `Rectangle`: Definuje, kde se vodoznak objeví a jakou má velikost  
-- `Reply`: Volitelné komentáře nebo poznámky k vodoznaku  
+### Krok 1: Importujte požadované třídy
 
-### Step 2: Initialize Your PDF for Watermarking
+Než můžete použít API, importujte nezbytné třídy.
 
+**Definice:** Importovací příkazy přinášejí potřebné třídy GroupDocs.Annotation do aktuálního Java souboru, což vám umožní odkazovat na ně bez plně kvalifikovaných názvů.  
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -148,12 +232,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**Důležitá poznámka**: Objekt `Annotator` načte váš PDF do paměti, takže se ujistěte, že máte dostatek RAM pro velké soubory. Pro PDF nad 50 MB zvažte zpracování po menších dávkách.
+### Krok 2: Načtěte PDF dokument
 
-### Step 3: Create Optional Reply Objects
+Vytvořte instanci `Annotator`, která ukazuje na váš zdrojový PDF.
 
-I když nejsou povinné, odpovědi mohou být užitečné pro sledování dokumentů nebo schvalovací workflow:
+**Definice:** Konstruktor `Annotator` načte PDF soubor do spravovatelného objektu, připravujícím ho pro operace s anotacemi.  
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -164,12 +251,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-Tyto odpovědi se stanou součástí metadat anotace a mohou být zobrazeny v PDF čtečkách, které podporují komentáře anotací.
+> **Tip:** Pro PDF větší než 50 MB zvažte zvýšení haldy JVM (`-Xmx4g`) a zpracování souborů sekvenčně, aby se udržela nízká spotřeba paměti.
 
-### Step 4: Configure Your Watermark (The Fun Part!)
+### Krok 3: (Volitelné) Připravte metadata odpovědi
 
-Zde můžete být kreativní. Konfigurace vodoznaku řídí vše, co se týká vzhledu vašeho vodoznaku:
+Pokud potřebujete k vodoznaku připojit komentáře nebo schvalovací poznámky, vytvořte objekt `Reply`.
 
+**Definice:** `Reply` ukládá uživatelem vytvořené komentáře, které doprovázejí anotaci, užitečné pro auditní záznamy.  
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -188,27 +281,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**Rozkládáme nastavení:**
-- `setAngle(75.0)`: Otočí vodoznak o 75 stupňů. Skvělé pro diagonální nápisy „CONFIDENTIAL“.  
-- `setBox(new Rectangle(200, 200, 100, 50))`: Pozice (200, 200) s šířkou 100 a výškou 50.  
-- `setFontColor(65535)`: Formát ARGB – žlutá v tomto případě.  
-- `setOpacity(0.7)`: 70 % opacity – viditelné, ale ne přehlušující.  
-- `setPageNumber(0)`: Použije se na první stránku (indexováno od 0).  
+### Krok 4: Nakonfigurujte vzhled vodoznaku
 
-### Step 5: Apply and Save Your Watermarked PDF
+Nastavte vizuální vlastnosti jako text, barvu, rotaci, velikost a neprůhlednost.
 
+**Definice:** Následující settery přizpůsobují vzhled a umístění vodoznaku na každé stránce.  
+
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-A to je vše! Váš PDF nyní obsahuje profesionální vodoznak. Metoda `save()` vytvoří nový PDF soubor s aplikovaným vodoznakem, přičemž originál zůstane nedotčený.
+### Krok 5: Projděte všechny stránky a aplikujte vodoznak
 
-## How to Add pdf watermark multiple pages (All Pages)
+Pro **aplikaci vodoznaku na všechny stránky** iterujte přes počet stránek dokumentu a přiřaďte anotaci každé stránce.
 
-Ve výchozím nastavení se vodoznak aplikuje na jedinou stránku. Pro **add pdf watermark multiple pages** projděte stránky dokumentu ve smyčce a přidejte samostatný `WatermarkAnnotation` pro každou z nich:
+**Definice:** `annotator.getPageCount()` vrací celkový počet stránek, což umožňuje smyčku, která vytvoří samostatný `WatermarkAnnotation` pro každou stránku.  
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -229,12 +335,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-Tento úryvek ukazuje přesný vzor, který potřebujete pro **add pdf watermark multiple pages** efektivně.
+### Krok 6: Uložte PDF s vodoznakem
 
-## Common Issues and How to Fix Them
+Nakonec zapište změny do nového souboru. Původní PDF zůstane nedotčen.
 
-### "File Not Found" Errors
+**Definice:** `annotator.save("output.pdf")` uloží všechny přidané anotace do nového PDF souboru.  
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -250,36 +360,19 @@ try {
 }
 ```
 
-- Zkontrolujte absolutní cesty.  
-- Ověřte oprávnění pro čtení/zápis.  
-- Ujistěte se, že výstupní složka existuje.
+Toto je kompletní postup pro **aplikaci vodoznaku na všechny stránky** pomocí GroupDocs.Annotation pro Java.
 
-### Memory Issues with Large PDFs
+## Časté problémy a jak je vyřešit
 
-- Vždy volajte `dispose()`.  
-- Zpracovávejte soubory po jednom, ne paralelně.  
-- Zvyšte heap JVM (`-Xmx4g` pro opravdu velké dokumenty).  
+### Chyby „Soubor nenalezen“
 
-### Watermark Not Appearing Where Expected
-
-- Pamatujte, že souřadnice PDF začínají v **dolním‑levém** rohu.  
-- Testujte s různými velikostmi stránek; A4 vs. Letter může posunout pozice.  
-- Upravit opacity, pokud vodoznak vypadá slabě.
-
-### Font Color Issues
-
-ARGB hodnoty, které můžete použít:
-- Red: `16711680`  
-- Blue: `255`  
-- Green: `65280`  
-- Black: `0`  
-- White: `16777215`  
-- Yellow: `65535` (použito v našem příkladu)
-
-## Real‑World Use Cases for Java PDF Watermarks
-
-### Business Document Protection
-
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -290,8 +383,41 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### Branding Marketing Materials
+- Ověřte absolutní cesty a ujistěte se, že soubor existuje.  
+- Zkontrolujte oprávnění čtení/zápisu v vstupních i výstupních adresářích.  
+- Vytvořte výstupní složku předem, pokud neexistuje.
 
+### Problémy s pamětí u velkých PDF
+
+- Vždy po zpracování zavolejte `annotator.dispose()`.  
+- Zpracovávejte PDF po jednom; vyhněte se paralelním proudům, pokud knihovna není ověřena jako bezpečná pro vlákna.  
+- Zvyšte haldu JVM (`-Xmx4g` nebo vyšší) pro soubory přesahující 200 stránek.
+
+### Umístění vodoznaku není podle očekávání
+
+- Počátek souřadnic PDF je **dolní‑levý**; upravte hodnoty `Rectangle` odpovídajícím způsobem.  
+- Testujte s různými velikostmi stránek (A4 vs. Letter), protože rozměry ovlivňují umístění.  
+- Použijte `setOpacity(0.5)`, pokud se vodoznak jeví příliš slabě na pozadí s vysokým kontrastem.
+
+### Problémy s barvou písma
+
+GroupDocs.Annotation očekává celočíselné hodnoty ARGB. Běžné barvy:
+
+- Červená: `16711680`  
+- Modrá: `255`  
+- Zelená: `65280`  
+- Černá: `0`  
+- Bílá: `16777215`  
+- Žlutá: `65535` (použito v příkladu)
+
+## Reálné případy použití Java PDF vodoznaků
+
+### Ochrana obchodních dokumentů
+
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -301,8 +427,13 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### Version Control for Documents
+### Značkování marketingových materiálů
 
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -311,10 +442,12 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## Performance Optimization Tips
+### Správa verzí dokumentů
 
-### Memory Management Best Practices
-
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -332,14 +465,15 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### Batch Processing Strategies
+## Tipy pro optimalizaci výkonu
 
-- Zpracovávejte dokumenty sekvenčně, aby byl nízký odběr paměti.  
-- Používejte indikátor průběhu pro dlouhé běhy.  
-- Vyhněte se paralelnímu zpracování, pokud není potvrzena thread‑safety knihovny.
+### Nejlepší postupy pro správu paměti
 
-### Code Organization Tips
-
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -363,39 +497,62 @@ public class WatermarkTemplates {
 }
 ```
 
-## Frequently Asked Questions
+- Zpracovávejte dokumenty sekvenčně, aby se snížila velikost haldy.  
+- Použijte indikátor průběhu pro dávkové úlohy k monitorování využití paměti.  
+- Vyhněte se načítání celého PDF do paměti, pokud je potřeba vodoznakovat jen podmnožinu stránek; knihovna podporuje načítání na úrovni stránek.
 
-**Q: How do I add watermarks to multiple pages in a PDF?**  
-A: Use a loop over the document’s page count and create a `WatermarkAnnotation` for each page, setting `setPageNumber(i)` inside the loop.
+### Tipy pro organizaci kódu
 
-**Q: Can I use custom fonts for my watermarks?**  
-A: GroupDocs.Annotation uses system‑installed fonts. Specify a font family that exists on the host machine; the library falls back to a default if the font isn’t found.
+- Zabalte vytváření vodoznaku do pomocné metody: `createWatermark(String text, double opacity, int angle)`.  
+- Uchovávejte konfiguraci (barvy, písma, neprůhlednost) v externím souboru properties pro snadné ladění v různých prostředích.
 
-**Q: What opacity setting works best for professional watermarks?**  
-A: Between **0.3** and **0.7** is ideal—low enough to keep the content readable, high enough to be noticeable.
+## Často kladené otázky
 
-**Q: How should I handle very large PDF files?**  
-A: Increase JVM heap (`-Xmx4g` or more), process files one at a time, and always call `dispose()` after each document.
+**Q: Jak přidám vodoznaky na více stránek v PDF?**  
+A: Projděte počet stránek dokumentu, klonujte nakonfigurovaný `WatermarkAnnotation` pro každou stránku, nastavte `setPageNumber(i)` a přidejte jej pomocí `annotator.add()`.
 
-**Q: Is it possible to remove or modify existing watermarks?**  
-A: Yes—retrieve existing annotations with `annotator.get()`, filter for `WatermarkAnnotation`, then edit or delete as needed:
+**Q: Mohu použít vlastní písma pro své vodoznaky?**  
+A: GroupDocs.Annotation používá písma nainstalovaná v hostitelském OS. Zadejte rodinu písem, která existuje na serveru; knihovna použije výchozí, pokud písmo není nalezeno.
 
+**Q: Jaké nastavení neprůhlednosti je nejlepší pro profesionální vodoznaky?**  
+A: Hodnota mezi **0.3** a **0.7** poskytuje rovnováhu – dostatečně viditelnou, ale stále umožňuje číst podkladový obsah.
+
+**Q: Jak mám zacházet s velmi velkými PDF soubory?**  
+A: Zvyšte haldu JVM (`-Xmx4g` nebo více), zpracovávejte soubory po jednom a vždy po každém dokumentu zavolejte `dispose()`, aby se uvolnily nativní zdroje.
+
+**Q: Je možné odstranit nebo upravit existující vodoznaky?**  
+A: Ano – načtěte anotace pomocí `annotator.get()`, filtrujte podle `WatermarkAnnotation` a poté je podle potřeby upravte nebo smažte:  
+
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
 // Filter and modify as needed
 ```
 
-## Additional Resources
+## Další zdroje
 
-- **Documentation**: [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Complete API Reference**: [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
-- **Download Latest Version**: [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Commercial Licensing**: [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
-- **Community Support**: [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
+- **Dokumentace:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Kompletní reference API:** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **Stáhnout nejnovější verzi:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Komerní licencování:** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **Komunitní podpora:** [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
 
 ---
 
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**Poslední aktualizace:** 2026-07-30  
+**Testováno s:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  
+
+---
+
+## Související tutoriály
+
+- [Načtení PDF v Javě s GroupDocs Annotation: Průvodce načítáním dokumentu](/annotation/java/document-loading/)
+- [Přidání PDF anotace v Javě – Kompletní průvodce GroupDocs](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Jak přidat obrázek do PDF pomocí Javy a GroupDocs Annotation](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)
