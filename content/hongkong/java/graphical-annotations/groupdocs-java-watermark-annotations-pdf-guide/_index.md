@@ -1,70 +1,140 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: 學習如何在 Java 中使用 GroupDocs.Annotation 為 PDF 添加多頁水印。本分步教學示範如何在 Java 中加入
-  PDF 水印，並提供程式碼範例、故障排除技巧與最佳實踐。
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
-linktitle: Java PDF Watermark Guide
+date: '2026-07-30'
+description: 了解如何在 Java 中使用 GroupDocs.Annotation 對 PDF 套用全部頁面的 Watermark。此逐步教學示範如何在多頁
+  PDF 中加入 Watermark，並提供 code 範例、故障排除技巧與最佳實踐。
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
+linktitle: Java PDF Watermark 指南
+og_description: 使用 GroupDocs.Annotation for Java 對 PDF 套用全部頁面的 Watermark。本指南簡潔說明多頁
+  PDF Watermark 的設定、code 與故障排除。
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: 在所有頁面套用 Watermark – Java PDF Watermark Guide
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDF 水印 – 多頁 PDF 水印指南
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: 在所有頁面套用 Watermark – Java PDF Watermark Guide
 type: docs
 url: /zh-hant/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
- output with all translated content.
+# 套用浮水印於所有頁面 – Java PDF 浮水印指南
 
-# Java PDF Watermark – pdf watermark multiple pages 指南
-
-在需要批量保護、品牌化或標記文件時，加入 **pdf watermark multiple pages** 是常見需求。在本教學中，您將會看到如何使用 GroupDocs.Annotation **add pdf watermark java**，從專案設定到進階客製化。我們會逐步說明每個步驟，解釋每個設定背後的原因，並提供實用技巧以避免常見的陷阱。
+在本完整教學中，您將學習 **如何在所有頁面套用浮水印** 到 PDF 文件，使用 Java 與 GroupDocs.Annotation。無論您是需要保護機密報告、為行銷 PDF 加上品牌標誌，或在整個檔案上添加「CONFIDENTIAL」印章，以下步驟將從 Maven 設定到進階客製化，帶您一步步完成，讓您在數分鐘內實作可靠的解決方案。
 
 ## 快速解答
-- **什麼函式庫可以在 Java 中加入 pdf watermark multiple pages？** GroupDocs.Annotation for Java。  
-- **我需要授權嗎？** 是的，免費試用可用於開發；正式環境需要完整授權。  
-- **我可以一次為所有頁面加上水印嗎？** 可以 — 在迴圈中為每一頁建立 watermark annotation。  
+- **什麼函式庫可以在 Java 中為多頁 PDF 添加浮水印？** GroupDocs.Annotation for Java.  
+- **我需要授權嗎？** 是的，免費試用可用於開發；正式環境需購買完整授權。  
+- **我可以一次為所有頁面加浮水印嗎？** 可以 – 在迴圈中為每一頁建立浮水印註解。  
 - **需要哪個 Java 版本？** JDK 8 以上（建議使用 JDK 11 以上）。  
 - **如何控制不透明度？** 使用 `setOpacity(double)`，其中 0.0 為完全透明，1.0 為完全不透明。
 
-## 為什麼需要 PDF 水印（以及 Java 如何讓它變得簡單）
+## 為何需要 PDF 浮水印（以及 Java 如何讓它變得簡單）
 
-是否曾經發現重要文件在未經授權的情況下被分享？或是想為公司 PDF 加上品牌卻不知從何著手？您並不孤單。為 PDF 加上水印是開發者今天最常面對的文件安全與品牌需求之一。
+是否曾擔心機密 PDF 會在未經授權的情況下被分享？或需要快速為銷售手冊的每一頁加上品牌標誌？以程式方式添加浮水印可省去手動操作，確保一致性，並加強文件安全性。使用 Java 與 GroupDocs.Annotation——最強大的 **java add watermark pdf** 函式庫之一，您可以細緻控制浮水印的位置、旋轉、顏色與不透明度，同時高效處理大型檔案。
 
-無論是保護機密商業文件、為行銷素材加上品牌，或僅僅是防止未授權的散布，程式化加入水印都能為您節省大量手動時間。而使用 Java 搭配合適的函式庫，這個過程出奇地簡單。
+**本指南結束後您將掌握的內容：**
+- 設定 GroupDocs.Annotation 於 Java 的浮水印
+- 建立自訂浮水印註解，套用於 **所有頁面**
+- 處理大型 PDF 而不耗盡記憶體
+- 排除常見問題並優化效能  
 
-在本指南中，您將學會如何使用 GroupDocs.Annotation for Java 為 PDF 加上專業外觀的水印 — 這是市面上最可靠的 Java 水印函式庫之一。我們將從基礎設定講到進階客製化，並說明常見陷阱以及避免方法。
+## 什麼是 PDF 浮水印，以及為何在多頁上使用它？
 
-**您將在結束時掌握的內容：**
-- 設定 GroupDocs.Annotation for Java 的水印
-- 建立具完整控制的自訂 watermark annotation
-- 排除常見的 watermark 實作問題
-- 優化您的 watermark 程式碼以供正式環境使用
-
-## 什麼是 PDF 水印，為何要在多頁使用？
-
-A PDF 水印是一層覆蓋於文件內容之上的圖層，並不會改變原始文字。使用 **pdf watermark multiple pages** 可讓您在每一頁上持續標示品牌、機密聲明或版本標記，確保保護隨整份文件一起傳遞。
+PDF 浮水印是一層覆蓋於文件內容之上的圖層，並不會改變底層的文字或影像。將浮水印套用於 **所有頁面** 可確保每一頁都帶有相同的品牌或機密聲明，避免未加標記的頁面被意外散佈。
 
 ## 前置條件
 
 ### 必要條件
+- **Java 環境：** JDK 8 或以上（建議 JDK 11 以上），Maven 3.6+，任意 IDE（IntelliJ、Eclipse、VS Code）。  
+- **知識前置：** 基本 Java 語法、檔案 I/O、Maven 依賴管理。  
+- **專案權限：** 具寫入輸出目錄的權限，且有足夠記憶體處理大型 PDF（建議 ≥ 4 GB RAM 以處理超過 200 頁的檔案）。
 
-- **Java 環境：** JDK 8 或以上（建議 JDK 11+），Maven 3.6+，以及您選擇的 IDE。  
-- **知識前提：** 基本的 Java、檔案 I/O、Maven 依賴。  
-- **專案設定：** 具備輸出資料夾的寫入權限，且有足夠的記憶體處理大型 PDF。
-
-## 設定您的 Java PDF 水印環境
+## 設定 Java PDF 浮水印環境
 
 ### 將 GroupDocs.Annotation 加入您的專案
 
-在 Java 中為 PDF 加入水印的第一步是正確設定 GroupDocs.Annotation 函式庫。以下是可正常運作的 Maven 設定：
+首先，加入 GroupDocs.Annotation 的 Maven 套件。此依賴會自動下載所有必需的二進位檔與傳遞性函式庫。
 
+定義：Maven 的 `<dependency>` 元素宣告了 GroupDocs.Annotation 函式庫，讓編譯器在建置時能找到相應的 JAR 檔。  
+
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -82,20 +152,26 @@ A PDF 水印是一層覆蓋於文件內容之上的圖層，並不會改變原�
 </dependencies>
 ```
 
-**小技巧**：請始終使用最新版本以取得錯誤修正與效能提升。上述版本為 2025 年最新版本。
+專業提示：始終使用最新發佈的版本（範例顯示 25.2，為 2025 年最新），以獲得錯誤修正與效能提升。
 
 ### 取得授權
 
-許多教學會略過此步驟 — 正式環境需要正確的授權。以下是您的選項：
+正式環境部署需要有效授權。請依需求選擇以下方案：
 
-1. **免費試用**：適合測試與開發。從 [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) 下載  
-2. **臨時授權**：取得完整功能以供評估。從 [Temporary License Page](https://purchase.groupdocs.com/temporary-license/) 取得  
-3. **正式授權**：用於正式應用程式。從 [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy) 購買  
+1. **免費試用：** 適合開發與測試。從 [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) 下載。  
+2. **暫時授權：** 完整功能供評估使用。可於 [Temporary License Page](https://purchase.groupdocs.com/temporary-license/) 取得。  
+3. **正式授權：** 商業使用必須購買。請至 [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy) 購買。
 
-### 實用的基本設定
+### 可行的基本設定
 
-當您完成相依性設定後，以下說明如何正確初始化函式庫：
+加入依賴並取得授權檔後，初始化 `Annotator` 物件。此物件會將 PDF 載入記憶體，並提供建立註解的 API。
 
+定義：`Annotator` 為 GroupDocs.Annotation 的主要入口點，負責 PDF 載入、註解建立與儲存。  
+
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -111,20 +187,21 @@ public class WatermarkSetup {
 }
 ```
 
-**常見錯誤**：忘記呼叫 `dispose()` 可能導致記憶體洩漏，尤其在處理多個文件時。
+**常見錯誤避免：** 處理完畢後忘記呼叫 `annotator.dispose()`，可能導致記憶體洩漏，尤其在批次處理多個文件時。
 
-## 如何使用 Java 加入 pdf watermark multiple pages
+## 如何在 Java 中套用浮水印於所有頁面
 
-現在進入重點 — 真正加入水印！只要了解組件，GroupDocs.Annotation 函式庫就能讓此工作出奇地簡單。
+要為每一頁套用浮水印，您需要建立 `WatermarkAnnotation`，設定其視覺屬性，然後在迴圈中為每一頁新增此註解的獨立實例。迴圈會使用文件的頁數，指派正確的頁碼，最後儲存修改後的 PDF。
 
-### 了解 Watermark Annotation
+### 了解浮水印註解
 
-將 watermark annotation 視為 PDF 上的覆蓋層。它們可以包含文字、具自訂位置、顏色、不透明度以及旋轉角度。不同於簡單的文字加入，watermark annotation 專為可見標記而設計，且不會干擾文件的核心內容。
+`WatermarkAnnotation` 代表一個可包含文字、自訂顏色、旋轉與不透明度的覆蓋層。與單純的文字加入不同，它以註解形式儲存，之後可移除或編輯。
 
-### 步驟 1：匯入正確的類別
+定義：`WatermarkAnnotation` 為 GroupDocs.Annotation 中的類別，封裝了浮水印覆蓋層的所有視覺屬性。  
 
-首先，整理所有匯入的類別。以下是您需要的核心類別：
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -134,15 +211,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-每個類別都有其特定角色：
+### 步驟 1：匯入所需類別
 
-- `Annotator`：與 PDF 互動的主要介面  
-- `WatermarkAnnotation`：您將自訂的水印物件  
-- `Rectangle`：定義水印顯示位置與大小  
-- `Reply`：可選的關於水印的評論或備註  
+在使用 API 前，先匯入必要的類別。
 
-### 步驟 2：初始化 PDF 以便加水印
+定義：匯入語句將所需的 GroupDocs.Annotation 類別帶入當前 Java 檔案，使您無需使用完整限定名即可引用。  
 
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -150,12 +230,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**重要說明**：`Annotator` 物件會將 PDF 載入記憶體，請確保有足夠的 RAM 以處理大型檔案。對於超過 50 MB 的 PDF，建議分批處理。
+### 步驟 2：載入 PDF 文件
 
-### 步驟 3：建立可選的 Reply 物件
+建立指向來源 PDF 的 `Annotator` 實例。
 
-雖非必須，但 Reply 可用於文件追蹤或審批流程：
+定義：`Annotator` 建構子會將 PDF 檔載入可管理的物件，為註解操作做準備。  
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -166,12 +249,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-這些回覆會成為 annotation 的中繼資料，支援 annotation 註解的 PDF 閱讀器可顯示它們。
+> **專業提示：** 若 PDF 大於 50 MB，建議增大 JVM 堆積 (`-Xmx4g`) 並以順序方式處理檔案，以降低記憶體使用量。
 
-### 步驟 4：設定您的水印（有趣的部分！）
+### 步驟 3：（可選）準備回覆中繼資料
 
-這是發揮創意的地方。水印設定決定了水印的所有外觀屬性：
+若需為浮水印附加評論或核准備註，可建立 `Reply` 物件。
 
+定義：`Reply` 用於儲存隨註解一起的使用者評論，對稽核追蹤很有幫助。  
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -190,28 +279,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**讓我們拆解這些設定：**
+### 步驟 4：設定浮水印外觀
 
-- `setAngle(75.0)`：將水印旋轉 75 度。適合對角的「CONFIDENTIAL」印章。  
-- `setBox(new Rectangle(200, 200, 100, 50))`：位置 (200, 200)，寬度 100，高度 50。  
-- `setFontColor(65535)`：ARGB 顏色格式——此例為黃色。  
-- `setOpacity(0.7)`：70% 不透明度——可見但不會過於突兀。  
-- `setPageNumber(0)`：套用於第一頁（索引從 0 開始）。  
+設定文字、顏色、旋轉、大小與不透明度等視覺屬性。
 
-### 步驟 5：套用並儲存加了水印的 PDF
+定義：以下 setter 方法可自訂浮水印在每頁的外觀與位置。  
 
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-完成！您的 PDF 現在已擁有專業的水印。`save()` 方法會產生一個套用水印的新 PDF 檔案，原始檔保持不變。
+### 步驟 5：遍歷所有頁面並套用浮水印
 
-## 如何加入 pdf watermark multiple pages（全部頁面）
+要 **套用浮水印於所有頁面**，請遍歷文件的頁數，將註解指派給每一頁。
 
-預設情況下，水印只套用於單一頁面。若要 **add pdf watermark multiple pages**，請遍歷文件的每一頁，為每頁新增一個 `WatermarkAnnotation`：
+定義：`annotator.getPageCount()` 會回傳總頁數，讓您能在迴圈中為每頁建立獨立的 `WatermarkAnnotation`。  
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -232,12 +333,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-此程式碼片段示範了有效 **add pdf watermark multiple pages** 所需的完整模式。
+### 步驟 6：儲存加了浮水印的 PDF
 
-## 常見問題與解決方法
+最後，將變更寫入新檔案。原始 PDF 保持不變。
 
-### 「找不到檔案」錯誤
+定義：`annotator.save("output.pdf")` 會將所有新增的註解持久化為新的 PDF 檔案。  
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -253,37 +358,18 @@ try {
 }
 ```
 
-- 再次確認絕對路徑。  
-- 確認讀寫權限。  
-- 確保輸出資料夾已存在。
+以上即為使用 GroupDocs.Annotation for Java **套用浮水印於所有頁面** 的完整流程。
 
-### 大型 PDF 的記憶體問題
+## 常見問題與解決方法
 
-- 必須呼叫 `dispose()`。  
-- 一次處理單一檔案，避免平行處理。  
-- 增加 JVM 堆積記憶體（例如對非常大的文件使用 `-Xmx4g`）。
-
-### 水印未出現在預期位置
-
-- 記得 PDF 座標系統是從左下角開始。  
-- 測試不同頁面尺寸；A4 與 Letter 可能導致位置偏移。  
-- 若水印過淡，可調整不透明度。
-
-### 字型顏色問題
-
-可使用的 ARGB 值如下：
-
-- 紅色：`16711680`  
-- 藍色：`255`  
-- 綠色：`65280`  
-- 黑色：`0`  
-- 白色：`16777215`  
-- 黃色：`65535`（如範例所示）
-
-## Java PDF 水印的實務案例
-
-### 商業文件保護
-
+### 「找不到檔案」錯誤
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -294,8 +380,37 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### 品牌行銷素材
+- 核對絕對路徑並確認檔案存在。  
+- 檢查輸入與輸出目錄的讀寫權限。  
+- 若輸出資料夾不存在，請先建立。
 
+### 大型 PDF 的記憶體問題
+- 處理完畢後務必呼叫 `annotator.dispose()`。  
+- 一次處理一個 PDF；除非函式庫已證實為執行緒安全，否則避免使用平行串流。  
+- 對於超過 200 頁的檔案，請增大 JVM 堆積 (`-Xmx4g` 或更高)。
+
+### 浮水印位置不如預期
+- PDF 座標原點位於 **左下角**；請相應調整 `Rectangle` 的數值。  
+- 測試不同頁面尺寸（A4 與 Letter），因尺寸會影響定位。  
+- 若浮水印在高對比背景下過於淡薄，可使用 `setOpacity(0.5)`。
+
+### 字型顏色問題
+GroupDocs.Annotation 需要 ARGB 整數值。常用顏色如下：
+
+- 紅色：`16711680`  
+- 藍色：`255`  
+- 綠色：`65280`  
+- 黑色：`0`  
+- 白色：`16777215`  
+- 黃色：`65535`（範例中使用）
+
+## Java PDF 浮水印的實務應用案例
+
+### 商業文件保護
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -305,8 +420,12 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### 文件版本控制
-
+### 行銷素材品牌化
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -315,10 +434,11 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## 效能最佳化建議
-
-### 記憶體管理最佳實踐
-
+### 文件版本控制
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -336,14 +456,14 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### 批次處理策略
+## 效能優化建議
 
-- 依序處理文件以降低記憶體使用量。  
-- 長時間執行時使用進度指示器。  
-- 除非確認函式庫具備執行緒安全，否則避免平行處理。
-
-### 程式碼組織建議
-
+### 記憶體管理最佳實踐
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -367,23 +487,37 @@ public class WatermarkTemplates {
 }
 ```
 
+- 依序處理文件，以降低堆積佔用。  
+- 為批次作業加入進度指示器，以監控記憶體使用情況。  
+- 若僅需為部分頁面加浮水印，避免一次載入整份 PDF；函式庫支援頁面層級載入。
+
+### 程式碼組織建議
+- 將浮水印建立封裝於工具方法，例如 `createWatermark(String text, double opacity, int angle)`。  
+- 將設定（顏色、字型、不透明度）外部化於 properties 檔，以便在不同環境中輕鬆調整。
+
 ## 常見問答
 
-**Q: 如何在 PDF 的多頁加入水印？**  
-A: 透過迴圈遍歷文件的頁數，為每頁建立 `WatermarkAnnotation`，在迴圈內設定 `setPageNumber(i)`。
+**Q：如何在 PDF 的多頁添加浮水印？**  
+A：遍歷文件的頁數，為每頁克隆已設定好的 `WatermarkAnnotation`，使用 `setPageNumber(i)` 設定頁號，然後以 `annotator.add()` 加入。
 
-**Q: 我可以為水印使用自訂字型嗎？**  
-A: GroupDocs.Annotation 會使用系統已安裝的字型。請指定主機上存在的字型族；若找不到，函式庫會回退至預設字型。
+**Q：我可以為浮水印使用自訂字型嗎？**  
+A：GroupDocs.Annotation 會使用主機作業系統已安裝的字型。請指定伺服器上存在的字型族；若找不到，函式庫會回退至預設字型。
 
-**Q: 哪個不透明度設定最適合專業水印？**  
-A: **0.3** 至 **0.7** 之間為理想範圍——足夠低以保持內容可讀，亦足夠高以顯眼。
+**Q：專業浮水印的最佳不透明度設定為何？**  
+A：介於 **0.3** 與 **0.7** 之間較為平衡——足以被注意，同時不會妨礙閱讀底層內容。
 
-**Q: 如何處理非常大的 PDF 檔案？**  
-A: 增加 JVM 堆積記憶體（例如 `-Xmx4g` 或更高），一次處理單一檔案，且每個文件處理完畢後務必呼叫 `dispose()`。
+**Q：該如何處理非常大的 PDF 檔案？**  
+A：增大 JVM 堆積 (`-Xmx4g` 或更高)、一次處理一個檔案，且每處理完文件後務必呼叫 `dispose()` 以釋放原生資源。
 
-**Q: 是否可以移除或修改已存在的水印？**  
-A: 可以 — 透過 `annotator.get()` 取得現有的 annotation，篩選出 `WatermarkAnnotation`，然後依需求編輯或刪除：
+**Q：是否可以移除或修改已存在的浮水印？**  
+A：可以——使用 `annotator.get()` 取得註解，篩選出 `WatermarkAnnotation`，然後依需求編輯或刪除：
 
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
@@ -392,14 +526,20 @@ List<AnnotationBase> annotations = annotator.get();
 
 ## 其他資源
 
-- **文件**： [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **完整 API 參考**： [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
-- **下載最新版本**： [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **商業授權**： [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
-- **社群支援**： [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
+- **文件說明：** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **完整 API 參考：** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **下載最新版本：** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **商業授權：** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **社群支援：** [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
 
 ---
 
-**最後更新：** 2026-02-10  
-**測試環境：** GroupDocs.Annotation 25.2  
-**作者：** GroupDocs
+**最後更新：** 2026-07-30  
+**測試版本：** GroupDocs.Annotation 25.2  
+**作者：** GroupDocs  
+
+## 相關教學
+
+- [使用 GroupDocs Annotation 載入 PDF（Java）：文件載入指南](/annotation/java/document-loading/)
+- [在 Java 中新增 PDF 註解 – 完整 GroupDocs 教學](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [如何使用 Java 與 GroupDocs Annotation 在 PDF 中加入圖片](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)

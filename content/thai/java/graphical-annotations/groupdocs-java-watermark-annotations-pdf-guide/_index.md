@@ -1,71 +1,142 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: เรียนรู้วิธีเพิ่มลายน้ำ PDF หลายหน้าในไฟล์ PDF ด้วย Java โดยใช้ GroupDocs.Annotation
-  บทแนะนำขั้นตอนต่อขั้นตอนนี้แสดงวิธีเพิ่มลายน้ำ PDF ด้วย Java พร้อมตัวอย่างโค้ด เคล็ดลับการแก้ไขปัญหา
+date: '2026-07-30'
+description: เรียนรู้วิธีการเพิ่มลายน้ำในทุกหน้าให้กับไฟล์ PDF ด้วย Java โดยใช้ GroupDocs.Annotation
+  คู่มือแบบขั้นตอนแสดงวิธีการเพิ่ม pdf watermark หลายหน้า พร้อมตัวอย่าง code, เคล็ดลับการแก้ไขปัญหา,
   และแนวปฏิบัติที่ดีที่สุด
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
 linktitle: Java PDF Watermark Guide
+og_description: เพิ่มลายน้ำในทุกหน้าให้กับไฟล์ PDF ด้วย GroupDocs.Annotation สำหรับ
+  Java คู่มือนี้ครอบคลุมการใช้ pdf watermark หลายหน้า การตั้งค่า code และการแก้ไขปัญหาในบทแนะนำสั้น
+  ๆ
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: เพิ่มลายน้ำในทุกหน้า – คู่มือ Java PDF Watermark
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDF Watermark – คู่มือการใส่ลายน้ำ PDF หลายหน้า
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: เพิ่มลายน้ำในทุกหน้า – คู่มือ Java PDF Watermark
 type: docs
 url: /th/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
- to produce final markdown.
+# ใช้ลายน้ำบนทุกหน้า – คู่มือลายน้ำ PDF ด้วย Java
 
-# Java PDF Watermark – คู่มือการใส่ลายน้ำหลายหน้าใน PDF
+ในบทแนะนำที่ครอบคลุมนี้ คุณจะได้เรียนรู้ **วิธีการใส่ลายน้ำบนทุกหน้า** ให้กับเอกสาร PDF ด้วย Java และ GroupDocs.Annotation ไม่ว่าคุณจะต้องการปกป้องรายงานที่เป็นความลับ, ทำแบรนด์ให้กับ PDF การตลาด, หรือเพิ่มตราประทับ “CONFIDENTIAL” ทั่วทั้งไฟล์ ขั้นตอนต่อไปนี้จะพาคุณผ่านทุกอย่าง—from การตั้งค่า Maven ไปจนถึงการปรับแต่งขั้นสูง—เพื่อให้คุณสามารถนำโซลูชันที่เชื่อถือได้ไปใช้ภายในไม่กี่นาที.
 
-การเพิ่ม **pdf watermark multiple pages** เป็นความต้องการที่พบบ่อยเมื่อคุณต้องการปกป้อง, ทำแบรนด์, หรือระบุเอกสารเป็นชุด ในบทแนะนำนี้คุณจะได้เห็นวิธี **add pdf watermark java** อย่างละเอียดโดยใช้ GroupDocs.Annotation ตั้งแต่การตั้งค่าโปรเจกต์จนถึงการปรับแต่งขั้นสูง เราจะเดินผ่านแต่ละขั้นตอน, อธิบายเหตุผลของแต่ละการตั้งค่า, และให้เคล็ดลับที่เป็นประโยชน์เพื่อหลีกเลี่ยงปัญหาที่มักเกิดขึ้น
+## คำตอบด่วน
+- **ไลบรารีใดที่สามารถเพิ่มลายน้ำ PDF หลายหน้าใน Java?** GroupDocs.Annotation for Java.  
+- **ฉันต้องการไลเซนส์หรือไม่?** ใช่, การทดลองใช้ฟรีสามารถใช้สำหรับการพัฒนา; จำเป็นต้องมีไลเซนส์เต็มสำหรับการใช้งานจริง.  
+- **ฉันสามารถใส่ลายน้ำบนทุกหน้าได้พร้อมกันหรือไม่?** ใช่ – สร้าง Watermark Annotation สำหรับแต่ละหน้าในลูป.  
+- **ต้องการเวอร์ชัน Java ใด?** JDK 8+ (แนะนำ JDK 11+).  
+- **ฉันจะควบคุมความทึบแสงได้อย่างไร?** ใช้ `setOpacity(double)` โดยที่ 0.0 หมายถึงโปร่งใสเต็มและ 1.0 หมายถึงทึบเต็ม.
 
-## คำตอบสั้น
-- **ไลบรารีใดที่สามารถเพิ่ม pdf watermark multiple pages ใน Java ได้?** GroupDocs.Annotation for Java.  
-- **ต้องมีลิขสิทธิ์หรือไม่?** ใช่, สามารถใช้ trial ฟรีสำหรับการพัฒนา; ต้องมีลิขสิทธิ์เต็มสำหรับการใช้งานจริง.  
-- **สามารถใส่ลายน้ำทุกหน้าได้พร้อมกันหรือไม่?** ได้ – สร้าง watermark annotation สำหรับแต่ละหน้าในลูป.  
-- **ต้องใช้ Java เวอร์ชันอะไร?** JDK 8+ (แนะนำ JDK 11+).  
-- **จะควบคุมความโปร่งใสได้อย่างไร?** ใช้ `setOpacity(double)` โดยที่ 0.0 คือโปร่งใสเต็มและ 1.0 คือทึบเต็ม.
+## ทำไมคุณต้องการลายน้ำ PDF (และ Java ทำให้ง่ายขึ้น)
 
-## ทำไมคุณถึงต้องการ PDF Watermarks (และ Java ทำให้มันง่าย)
+เคยกังวลไหมว่า PDF ที่เป็นความลับอาจถูกแชร์โดยไม่ได้รับอนุญาต? หรือคุณต้องการวิธีรวดเร็วในการทำแบรนด์ให้กับทุกหน้าของโบรชัวร์การขาย? การเพิ่มลายน้ำโดยอัตโนมัติช่วยขจัดความพยายามด้วยมือ, รับประกันความสม่ำเสมอ, และเสริมความปลอดภัยของเอกสาร. ด้วย Java และ GroupDocs.Annotation—หนึ่งในไลบรารี **java add watermark pdf** ที่แข็งแกร่งที่สุด—คุณจะได้การควบคุมละเอียดในเรื่องตำแหน่ง, การหมุน, สี, และความทึบแสง, พร้อมจัดการไฟล์ขนาดใหญ่อย่างมีประสิทธิภาพ.
 
-เคยมีเอกสารสำคัญของคุณถูกแชร์โดยไม่ได้รับอนุญาตหรือไม่? หรืออยากทำแบรนด์ให้กับ PDF ของบริษัทแต่ไม่รู้จะเริ่มต้นอย่างไร? คุณไม่ได้อยู่คนเดียว การใส่ลายน้ำลงใน PDF เป็นหนึ่งในความต้องการด้านความปลอดภัยและการทำแบรนด์ของเอกสารที่นักพัฒนาต้องเผชิญบ่อยที่สุด
+**สิ่งที่คุณจะเชี่ยวชาญเมื่อจบคู่มือนี้:**
+- ตั้งค่า GroupDocs.Annotation สำหรับลายน้ำ Java  
+- สร้าง Watermark Annotation แบบกำหนดเองที่ใช้กับ **ทุกหน้า**  
+- จัดการ PDF ขนาดใหญ่โดยไม่ทำให้หน่วยความจำหมด  
+- แก้ไขปัญหาที่พบบ่อยและเพิ่มประสิทธิภาพการทำงาน  
 
-ไม่ว่าคุณจะปกป้องเอกสารธุรกิจที่ละเอียดอ่อน, ทำแบรนด์ให้กับสื่อการตลาด, หรือแค่ต้องการป้องกันการแจกจ่ายโดยไม่ได้รับอนุญาต การใส่ลายน้ำโดยอัตโนมัติสามารถประหยัดเวลาการทำงานด้วยมือหลายชั่วโมงได้ และด้วย Java พร้อมไลบรารีที่เหมาะสม มันก็ทำได้อย่างง่ายดาย
+## ลายน้ำ PDF คืออะไรและทำไมต้องใช้บนหลายหน้า?
 
-ในคู่มือนี้ คุณจะได้เรียนรู้วิธีใส่ลายน้ำที่ดูเป็นมืออาชีพลงใน PDF ด้วย GroupDocs.Annotation for Java – หนึ่งในไลบรารี Java watermark ที่เชื่อถือได้ที่สุด เราจะครอบคลุมตั้งแต่การตั้งค่าเบื้องต้นจนถึงการปรับแต่งขั้นสูง พร้อมกับปัญหาที่พบบ่อยและวิธีหลีกเลี่ยง
+ลายน้ำ PDF คือการซ้อนทับที่ปรากฏเหนือเนื้อหาเอกสารโดยไม่เปลี่ยนแปลงข้อความหรือรูปภาพพื้นฐาน การใส่ลายน้ำบน **ทุกหน้า** ทำให้ทุกหน้ามีแบรนด์หรือประกาศความลับเดียวกัน, ป้องกันการแจกจ่ายโดยบังเอิญของหน้าที่ไม่มีลายน้ำ.
 
-**สิ่งที่คุณจะเชี่ยวชาญเมื่อจบการเรียน:**
-- ตั้งค่า GroupDocs.Annotation for Java สำหรับลายน้ำ
-- สร้าง watermark annotation แบบกำหนดเองพร้อมการควบคุมเต็มรูปแบบ
-- แก้ไขปัญหาที่พบบ่อยในการใช้งานลายน้ำ
-- ปรับประสิทธิภาพโค้ดลายน้ำสำหรับการใช้งานในโปรดักชัน
+## Prerequisites
 
-## PDF Watermark คืออะไรและทำไมต้องใช้บนหลายหน้า?
+### ข้อกำหนดที่จำเป็น
+- **สภาพแวดล้อม Java:** JDK 8 หรือสูงกว่า (แนะนำ JDK 11+), Maven 3.6+, IDE ใดก็ได้ (IntelliJ, Eclipse, VS Code).  
+- **ความรู้พื้นฐานที่ต้องมี:** ไวยากรณ์ Java เบื้องต้น, การทำ I/O ไฟล์, การจัดการ dependency ของ Maven.  
+- **สิทธิ์ของโครงการ:** การเขียนเข้าถึงไดเรกทอรีผลลัพธ์และ RAM เพียงพอสำหรับ PDF ขนาดใหญ่ (แนะนำ ≥ 4 GB สำหรับไฟล์ > 200 หน้า).
 
-PDF watermark คือการซ้อนทับที่อยู่บนเนื้อหาเอกสารโดยไม่แก้ไขข้อความเดิม การใช้ **pdf watermark multiple pages** ทำให้คุณสามารถทำเครื่องหมายทุกหน้าอย่างสม่ำเสมอด้วยแบรนด์, คำเตือนความลับ, หรือแท็กเวอร์ชัน เพื่อให้การปกป้องเดินตามเอกสารทั้งหมด
+## Setting Up Your Java PDF Watermark Environment
 
-## ข้อกำหนดเบื้องต้น
+### เพิ่ม GroupDocs.Annotation ไปยังโปรเจคของคุณ
 
-### ความต้องการสำคัญ
+ขั้นแรก, เพิ่ม Maven artifact ของ GroupDocs.Annotation. Dependency นี้จะดึงไบนารีและไลบรารีที่จำเป็นทั้งหมด.
 
-- **สภาพแวดล้อม Java:** JDK 8 หรือสูงกว่า (แนะนำ JDK 11+), Maven 3.6+, IDE ที่คุณชอบ.  
-- **ความรู้พื้นฐาน:** Java เบื้องต้น, การทำงานกับไฟล์ I/O, การจัดการ dependencies ของ Maven.  
-- **การตั้งค่าโปรเจกต์:** มีสิทธิ์เขียนในโฟลเดอร์ผลลัพธ์และ RAM เพียงพอสำหรับ PDF ขนาดใหญ่.
+**คำจำกัดความ:** องค์ประกอบ `<dependency>` ของ Maven ประกาศไลบรารี GroupDocs.Annotation สำหรับโปรเจคของคุณ, ทำให้คอมไพเลอร์สามารถค้นหาไฟล์ JAR ระหว่างการสร้าง.  
 
-## การตั้งค่าสภาพแวดล้อม Java PDF Watermark ของคุณ
-
-### เพิ่ม GroupDocs.Annotation ไปยังโปรเจกต์
-
-ขั้นตอนแรกในการใส่ลายน้ำลงใน PDF ด้วย Java คือการตั้งค่าไลบรารี GroupDocs.Annotation ให้พร้อมใช้งาน นี่คือการตั้งค่า Maven ที่ทำงานได้จริง:
-
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -83,20 +154,26 @@ PDF watermark คือการซ้อนทับที่อยู่บน
 </dependencies>
 ```
 
-**เคล็ดลับ:** ควรใช้เวอร์ชันล่าสุดเสมอเพื่อรับการแก้บั๊กและปรับปรุงประสิทธิภาพ เวอร์ชันข้างต้นเป็นเวอร์ชันปัจจุบัน ณ ปี 2025
+**เคล็ดลับ:** ควรใช้เวอร์ชันล่าสุดที่ปล่อย (ตัวอย่างแสดง 25.2, ล่าสุด ณ ปี 2025) เพื่อรับประโยชน์จากการแก้บั๊กและการปรับปรุงประสิทธิภาพ.
 
-### จัดการลิขสิทธิ์ของคุณ
+### จัดการไลเซนส์ของคุณ
 
-นี่คือสิ่งที่หลายบทแนะนำมักละเลย – คุณต้องมีลิขสิทธิ์ที่เหมาะสมสำหรับการใช้งานจริง มีตัวเลือกดังนี้:
+คุณต้องการไลเซนส์ที่ถูกต้องสำหรับการใช้งานในสภาพแวดล้อมจริง. เลือกตัวเลือกที่เหมาะกับกำหนดเวลาของคุณ:
 
-1. **Free Trial**: เหมาะสำหรับการทดสอบและพัฒนา ดาวน์โหลดจาก [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-2. **Temporary License**: รับฟีเจอร์เต็มสำหรับการประเมินค่า ใช้ได้จาก [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
-3. **Full License**: สำหรับแอปพลิเคชันในโปรดักชัน ซื้อจาก [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
+1. **Free Trial:** เหมาะสำหรับการพัฒนาและทดสอบ. ดาวน์โหลดจาก [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+2. **Temporary License:** มีฟีเจอร์ครบสำหรับการประเมิน. รับได้จาก [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
+3. **Full License:** จำเป็นสำหรับการใช้งานเชิงพาณิชย์. ซื้อผ่าน [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
 
-### การตั้งค่าเบื้องต้นที่ทำงานได้จริง
+### การตั้งค่าพื้นฐานที่ใช้งานได้จริง
 
-เมื่อคุณจัดการ dependencies แล้ว นี่คือวิธีการเริ่มต้นไลบรารีอย่างถูกต้อง:
+หลังจากเพิ่ม dependency และได้ไฟล์ไลเซนส์, ให้เริ่มต้นอ็อบเจกต์ `Annotator`. อ็อบเจกต์นี้โหลด PDF เข้าสู่หน่วยความจำและให้ API สำหรับสร้าง annotation.
 
+**คำจำกัดความ:** `Annotator` เป็นจุดเริ่มต้นหลักของ GroupDocs.Annotation; มันจัดการการโหลด PDF, การสร้าง annotation, และการบันทึก.  
+
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -112,20 +189,21 @@ public class WatermarkSetup {
 }
 ```
 
-**ข้อผิดพลาดที่พบบ่อย:** ลืมเรียก `dispose()` จะทำให้เกิดการรั่วของหน่วยความจำ โดยเฉพาะเมื่อประมวลผลหลายเอกสาร
+**ข้อผิดพลาดทั่วไปที่ควรหลีกเลี่ยง:** ลืมเรียก `annotator.dispose()` หลังการประมวลผล; นี้อาจทำให้เกิดการรั่วของหน่วยความจำ, โดยเฉพาะเมื่อจัดการเอกสารหลายไฟล์ในชุด.
 
-## วิธีเพิ่ม pdf watermark multiple pages ด้วย Java
+## วิธีใส่ลายน้ำบนทุกหน้าใน Java
 
-ตอนนี้มาถึงส่วนสำคัญ – การใส่ลายน้ำจริง! ไลบรารี GroupDocs.Annotation ทำให้ขั้นตอนนี้ง่ายมากเมื่อคุณเข้าใจส่วนประกอบต่าง ๆ
+เพื่อใส่ลายน้ำบนทุกหน้า, คุณสร้าง `WatermarkAnnotation`, ตั้งค่าคุณสมบัติดู, แล้วเพิ่มอินสแตนซ์แยกของ annotation นี้ไปยังแต่ละหน้าในลูป. ลูปใช้จำนวนหน้าของเอกสาร, กำหนดหมายเลขหน้าที่ถูกต้อง, และสุดท้ายบันทึก PDF ที่แก้ไข.
 
-### ทำความเข้าใจ Watermark Annotations
+### ทำความเข้าใจ Watermark Annotation
 
-คิดว่า watermark annotation คือเลเยอร์ซ้อนบน PDF สามารถมีข้อความ, กำหนดตำแหน่ง, สี, ความโปร่งใส, และมุมการหมุนได้ ต่างจากการเพิ่มข้อความธรรมดา watermark annotation ถูกออกแบบให้เป็นเครื่องหมายที่มองเห็นได้โดยไม่รบกวนเนื้อหาเอกสารหลัก
+`WatermarkAnnotation` แทนชั้นซ้อนที่สามารถมีข้อความ, สีที่กำหนดเอง, การหมุน, และความทึบแสง. แตกต่างจากการเพิ่มข้อความธรรมดา, มันถูกเก็บเป็น annotation ทำให้สามารถลบหรือแก้ไขได้ในภายหลัง.
 
-### ขั้นตอนที่ 1: นำเข้าคลาสที่จำเป็น
+**คำจำกัดความ:** `WatermarkAnnotation` เป็นคลาสใน GroupDocs.Annotation ที่บรรจุคุณสมบัติดูทั้งหมดของลายน้ำ overlay.  
 
-ก่อนอื่นให้จัดการ import ทั้งหมดให้เรียบร้อย นี่คือคลาสที่จำเป็น:
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -135,14 +213,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-แต่ละคลาสมีบทบาทเฉพาะ:
-- `Annotator`: อินเทอร์เฟซหลักสำหรับทำงานกับ PDF  
-- `WatermarkAnnotation`: วัตถุลายน้ำที่คุณจะปรับแต่ง  
-- `Rectangle`: กำหนดตำแหน่งและขนาดของลายน้ำ  
-- `Reply`: คอมเมนต์หรือโน้ตเพิ่มเติมเกี่ยวกับลายน้ำ (ไม่บังคับ)
+### ขั้นตอนที่ 1: นำเข้าคลาสที่จำเป็น
 
-### ขั้นตอนที่ 2: เริ่มต้น PDF สำหรับการใส่ลายน้ำ
+ก่อนที่คุณจะใช้ API, ต้องนำเข้าคลาสที่จำเป็น.
 
+**คำจำกัดความ:** คำสั่ง import นำคลาสของ GroupDocs.Annotation ที่จำเป็นเข้าสู่ไฟล์ Java ปัจจุบัน, ทำให้คุณอ้างอิงได้โดยไม่ต้องใช้ชื่อเต็ม.  
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -150,12 +232,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**หมายเหตุสำคัญ:** วัตถุ `Annotator` จะโหลด PDF เข้าหน่วยความจำ ดังนั้นต้องแน่ใจว่ามี RAM เพียงพอสำหรับไฟล์ขนาดใหญ่ หาก PDF มีขนาดเกิน 50 MB ควรพิจารณาประมวลผลเป็นชุดย่อย
+### ขั้นตอนที่ 2: โหลดเอกสาร PDF
 
-### ขั้นตอนที่ 3: สร้างอ็อบเจ็กต์ Reply (ถ้าต้องการ)
+สร้างอินสแตนซ์ `Annotator` ที่ชี้ไปยัง PDF ต้นฉบับของคุณ.
 
-แม้ไม่จำเป็น แต่ Reply สามารถช่วยในกระบวนการติดตามเอกสารหรือเวิร์กโฟลว์การอนุมัติได้:
+**คำจำกัดความ:** คอนสตรัคเตอร์ `Annotator` โหลดไฟล์ PDF เข้าเป็นอ็อบเจกต์ที่จัดการได้, เตรียมพร้อมสำหรับการทำงานกับ annotation.  
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -166,12 +251,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-Reply เหล่านี้จะเป็นส่วนหนึ่งของเมตาดาต้า annotation และสามารถดูได้ใน PDF reader ที่รองรับคอมเมนต์ annotation
+> **เคล็ดลับ:** สำหรับ PDF ที่ใหญ่กว่า 50 MB, พิจารณาเพิ่ม heap ของ JVM (`-Xmx4g`) และประมวลผลไฟล์แบบต่อเนื่องเพื่อรักษาการใช้หน่วยความจำให้ต่ำ.
 
-### ขั้นตอนที่ 4: ตั้งค่าลายน้ำ (ส่วนที่สนุก!)
+### ขั้นตอนที่ 3: (ทางเลือก) เตรียมข้อมูลเมตา Reply
 
-นี่คือจุดที่คุณได้ปล่อยความคิดสร้างสรรค์ การตั้งค่าลายน้ำจะกำหนดทุกอย่างเกี่ยวกับการแสดงผลของลายน้ำ:
+หากคุณต้องการแนบคอมเมนต์หรือบันทึกการอนุมัติไปยังลายน้ำ, สร้างอ็อบเจกต์ `Reply`.
 
+**คำจำกัดความ:** `Reply` เก็บคอมเมนต์ที่ผู้ใช้สร้างซึ่งมาพร้อมกับ annotation, มีประโยชน์สำหรับการตรวจสอบ.  
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -190,27 +281,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**อธิบายการตั้งค่า:**
-- `setAngle(75.0)`: หมุนลายน้ำ 75 องศา เหมาะสำหรับสแตมป์แนวทแยง “CONFIDENTIAL”.  
-- `setBox(new Rectangle(200, 200, 100, 50))`: ตำแหน่ง (200, 200) ความกว้าง 100 ความสูง 50.  
-- `setFontColor(65535)`: รูปแบบสี ARGB – สีเหลืองในตัวอย่างนี้.  
-- `setOpacity(0.7)`: ความโปร่งใส 70 % – มองเห็นได้แต่ไม่รบกวนเนื้อหา.  
-- `setPageNumber(0)`: ใช้กับหน้าแรก (นับจาก 0).
+### ขั้นตอนที่ 4: กำหนดลักษณะลายน้ำ
 
-### ขั้นตอนที่ 5: ประยุกต์และบันทึก PDF ที่มีลายน้ำ
+ตั้งค่าคุณสมบัติดู เช่น ข้อความ, สี, การหมุน, ขนาด, และความทึบแสง.
 
+**คำจำกัดความ:** ตัว setter ด้านล่างปรับแต่งลักษณะของลายน้ำและตำแหน่งบนแต่ละหน้า.  
+
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-แค่นี้! PDF ของคุณตอนนี้มีลายน้ำระดับมืออาชีพแล้ว เมธอด `save()` จะสร้างไฟล์ PDF ใหม่ที่มีลายน้ำโดยไม่กระทบไฟล์ต้นฉบับ
+### ขั้นตอนที่ 5: วนลูปผ่านทุกหน้าและใส่ลายน้ำ
 
-## วิธีเพิ่ม pdf watermark multiple pages (ทุกหน้า)
+เพื่อ **ใส่ลายน้ำบนทุกหน้า**, ทำการวนลูปตามจำนวนหน้าของเอกสารและกำหนด annotation ให้แต่ละหน้า.
 
-โดยค่าเริ่มต้น ลายน้ำจะใช้กับหน้าเดียว เพื่อ **add pdf watermark multiple pages** ให้ทำลูปผ่านหน้าต่าง ๆ ของเอกสารและเพิ่ม `WatermarkAnnotation` แยกแต่ละหน้า:
+**คำจำกัดความ:** `annotator.getPageCount()` คืนค่าจำนวนหน้าทั้งหมด, ทำให้สามารถวนลูปเพื่อสร้าง `WatermarkAnnotation` แยกสำหรับแต่ละหน้า.  
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -231,12 +335,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-โค้ดส่วนนี้แสดงรูปแบบที่ต้องใช้เพื่อ **add pdf watermark multiple pages** อย่างมีประสิทธิภาพ
+### ขั้นตอนที่ 6: บันทึก PDF ที่มีลายน้ำ
 
-## ปัญหาที่พบบ่อยและวิธีแก้
+สุดท้าย, เขียนการเปลี่ยนแปลงลงไฟล์ใหม่. PDF ต้นฉบับจะไม่ถูกแก้ไข.
 
-### ข้อผิดพลาด “File Not Found”
+**คำจำกัดความ:** `annotator.save("output.pdf")` บันทึก annotation ทั้งหมดลงไฟล์ PDF ใหม่.  
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -252,36 +360,19 @@ try {
 }
 ```
 
-- ตรวจสอบ path แบบ absolute อีกครั้ง.  
-- ยืนยันสิทธิ์การอ่าน/เขียน.  
-- ตรวจสอบว่าโฟลเดอร์ผลลัพธ์มีอยู่จริง.
+นี่คือขั้นตอนทั้งหมดสำหรับ **ใส่ลายน้ำบนทุกหน้า** ด้วย GroupDocs.Annotation สำหรับ Java.
 
-### ปัญหาหน่วยความจำกับ PDF ขนาดใหญ่
+## ปัญหาทั่วไปและวิธีแก้ไข
 
-- เรียก `dispose()` เสมอ.  
-- ประมวลผลไฟล์ทีละไฟล์ ไม่ใช่แบบขนาน.  
-- เพิ่ม heap ของ JVM (`-Xmx4g` สำหรับไฟล์ใหญ่มาก).
+### ข้อผิดพลาด “File Not Found”
 
-### ลายน้ำไม่แสดงตรงที่คาดหวัง
-
-- จำไว้ว่า พิกัด PDF เริ่มจาก **มุมล่างซ้าย**.  
-- ทดสอบกับขนาดหน้าต่าง ๆ; A4 vs. Letter อาจทำให้ตำแหน่งเปลี่ยน.  
-- ปรับค่า opacity หากลายน้ำดูจางเกินไป.
-
-### ปัญหาสีฟอนต์
-
-ค่า ARGB ที่ใช้ได้:
-- แดง: `16711680`  
-- น้ำเงิน: `255`  
-- เขียว: `65280`  
-- ดำ: `0`  
-- ขาว: `16777215`  
-- เหลือง: `65535` (ตามตัวอย่าง)
-
-## กรณีใช้งานจริงสำหรับ Java PDF Watermarks
-
-### การปกป้องเอกสารธุรกิจ
-
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -292,8 +383,37 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### ทำแบรนด์ให้กับสื่อการตลาด
+- ตรวจสอบเส้นทางแบบ absolute และให้แน่ใจว่าไฟล์มีอยู่.  
+- ตรวจสอบสิทธิ์การอ่าน/เขียนในไดเรกทอรีอินพุตและเอาต์พุต.  
+- สร้างโฟลเดอร์เอาต์พุตล่วงหน้าหากยังไม่มี.
 
+### ปัญหาหน่วยความจำกับ PDF ขนาดใหญ่
+- เรียก `annotator.dispose()` เสมอหลังการประมวลผล.  
+- ประมวลผล PDF ทีละไฟล์; หลีกเลี่ยง parallel streams หากไลบรารียังไม่พิสูจน์ว่า thread‑safe.  
+- เพิ่ม heap ของ JVM (`-Xmx4g` หรือสูงกว่า) สำหรับไฟล์ที่เกิน 200 หน้า.
+
+### ตำแหน่งลายน้ำไม่เป็นไปตามที่คาดหวัง
+- จุดกำเนิดพิกัดของ PDF คือ **bottom‑left**; ปรับค่า `Rectangle` ให้สอดคล้อง.  
+- ทดสอบกับขนาดหน้าต่างๆ (A4 vs. Letter) เนื่องจากมิติส่งผลต่อการวางตำแหน่ง.  
+- ใช้ `setOpacity(0.5)` หากลายน้ำดูจางเกินไปบนพื้นหลังที่มีคอนทราสต์สูง.
+
+### ปัญหาเรื่องสีฟอนต์
+GroupDocs.Annotation คาดหวังค่า ARGB แบบจำนวนเต็ม. สีทั่วไป:
+- แดง: `16711680`  
+- น้ำเงิน: `255`  
+- เขียว: `65280`  
+- ดำ: `0`  
+- ขาว: `16777215`  
+- เหลือง: `65535` (ใช้ในตัวอย่าง)
+
+## กรณีการใช้งานจริงสำหรับลายน้ำ PDF ด้วย Java
+
+### การปกป้องเอกสารธุรกิจ
+
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -303,8 +423,13 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### การควบคุมเวอร์ชันของเอกสาร
+### การทำแบรนด์วัสดุการตลาด
 
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -313,10 +438,12 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## เคล็ดลับการเพิ่มประสิทธิภาพ
+### การควบคุมเวอร์ชันของเอกสาร
 
-### แนวทางการจัดการหน่วยความจำที่ดีที่สุด
-
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -334,14 +461,15 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### กลยุทธ์การประมวลผลเป็นชุด
+## เคล็ดลับการเพิ่มประสิทธิภาพ
 
-- ประมวลผลเอกสารต่อเนื่องเพื่อรักษาการใช้หน่วยความจำให้ต่ำ.  
-- ใช้ตัวบ่งชี้ความคืบหน้าเมื่อทำงานนาน.  
-- หลีกเลี่ยงการประมวลผลแบบขนานจนกว่าจะยืนยันว่าไลบรารีรองรับ thread‑safety.
+### แนวทางปฏิบัติที่ดีที่สุดสำหรับการจัดการหน่วยความจำ
 
-### เคล็ดลับการจัดโครงสร้างโค้ด
-
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -365,23 +493,37 @@ public class WatermarkTemplates {
 }
 ```
 
+- ประมวลผลเอกสารต่อเนื่องเพื่อให้การใช้ heap ต่ำ.  
+- ใช้ตัวบ่งชี้ความคืบหน้าสำหรับงานแบตช์เพื่อเฝ้าติดตามการใช้หน่วยความจำ.  
+- หลีกเลี่ยงการโหลด PDF ทั้งไฟล์เข้าสู่หน่วยความจำเมื่อต้องการลายน้ำเฉพาะบางหน้า; ไลบรารีรองรับการโหลดระดับหน้า.
+
+### เคล็ดลับการจัดระเบียบโค้ด
+- แยกการสร้างลายน้ำไว้ในเมธอดยูทิลิตี้: `createWatermark(String text, double opacity, int angle)`.  
+- เก็บการตั้งค่า (สี, ฟอนต์, ความทึบแสง) ไว้ในไฟล์ properties ภายนอกเพื่อปรับแต่งได้ง่ายในแต่ละสภาพแวดล้อม.
+
 ## คำถามที่พบบ่อย
 
-**Q: จะใส่ลายน้ำหลายหน้าใน PDF อย่างไร?**  
-A: ใช้ลูปวนตามจำนวนหน้าของเอกสารและสร้าง `WatermarkAnnotation` สำหรับแต่ละหน้า โดยตั้งค่า `setPageNumber(i)` ภายในลูป.
+**ถาม: ฉันจะเพิ่มลายน้ำหลายหน้าใน PDF อย่างไร?**  
+**ตอบ:** วนลูปตามจำนวนหน้าของเอกสาร, คัดลอก `WatermarkAnnotation` ที่กำหนดไว้สำหรับแต่ละหน้า, ตั้งค่า `setPageNumber(i)`, แล้วเพิ่มด้วย `annotator.add()`.
 
-**Q: สามารถใช้ฟอนต์กำหนดเองสำหรับลายน้ำได้หรือไม่?**  
-A: GroupDocs.Annotation ใช้ฟอนต์ที่ติดตั้งในระบบ ระบุชื่อฟอนต์ที่มีอยู่บนเครื่องโฮสต์; หากไม่พบไลบรารีจะใช้ฟอนต์เริ่มต้นแทน.
+**ถาม: ฉันสามารถใช้ฟอนต์กำหนดเองสำหรับลายน้ำของฉันได้หรือไม่?**  
+**ตอบ:** GroupDocs.Annotation ใช้ฟอนต์ที่ติดตั้งบน OS โฮสต์. ระบุฟอนต์ที่มีอยู่บนเซิร์ฟเวอร์; หากไม่พบไลบรารีจะใช้ฟอนต์เริ่มต้นแทน.
 
-**Q: ค่าความโปร่งใสที่เหมาะสมสำหรับลายน้ำระดับมืออาชีพคือเท่าไหร่?**  
-A: ระหว่าง **0.3** ถึง **0.7** เป็นค่าที่ดี – เพียงพอให้มองเห็นแต่ไม่ทำให้เนื้อหาอ่านยาก.
+**ถาม: การตั้งค่าความทึบแสงใดเหมาะกับลายน้ำระดับมืออาชีพ?**  
+**ตอบ:** ระหว่าง **0.3** ถึง **0.7** ให้สมดุล—มองเห็นพอที่จะสังเกตได้แต่ยังให้เนื้อหาพื้นฐานอ่านได้.
 
-**Q: ควรจัดการกับไฟล์ PDF ขนาดใหญ่อย่างไร?**  
-A: เพิ่ม heap ของ JVM (`-Xmx4g` หรือมากกว่า), ประมวลผลไฟล์ทีละไฟล์, และเรียก `dispose()` หลังจากแต่ละเอกสารเสร็จ.
+**ถาม: ฉันควรจัดการไฟล์ PDF ขนาดใหญ่อย่างไร?**  
+**ตอบ:** เพิ่ม heap ของ JVM (`-Xmx4g` หรือมากกว่า), ประมวลผลไฟล์ทีละไฟล์, และเรียก `dispose()` หลังเอกสารแต่ละไฟล์เพื่อปล่อยทรัพยากรเนทีฟ.
 
-**Q: สามารถลบหรือแก้ไขลายน้ำที่มีอยู่ได้หรือไม่?**  
-A: ได้ – ดึง annotation ที่มีอยู่ด้วย `annotator.get()`, กรองเป็น `WatermarkAnnotation`, แล้วทำการแก้ไขหรือลบตามต้องการ:
+**ถาม: สามารถลบหรือแก้ไขลายน้ำที่มีอยู่ได้หรือไม่?**  
+**ตอบ:** ได้—ดึง annotation ด้วย `annotator.get()`, คัดกรอง `WatermarkAnnotation`, แล้วแก้ไขหรือลบตามต้องการ:  
 
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
@@ -390,14 +532,22 @@ List<AnnotationBase> annotations = annotator.get();
 
 ## แหล่งข้อมูลเพิ่มเติม
 
-- **Documentation**: [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Complete API Reference**: [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
-- **Download Latest Version**: [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Commercial Licensing**: [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
-- **Community Support**: [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
+- **เอกสาร:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **อ้างอิง API เต็ม:** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **ดาวน์โหลดเวอร์ชันล่าสุด:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **ไลเซนส์เชิงพาณิชย์:** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **สนับสนุนจากชุมชน:** [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
 
 ---
 
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**อัปเดตล่าสุด:** 2026-07-30  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.2  
+**ผู้เขียน:** GroupDocs  
+
+---
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [โหลด PDF ด้วย Java และ GroupDocs Annotation: คู่มือการโหลดเอกสาร](/annotation/java/document-loading/)
+- [เพิ่ม PDF Annotation ด้วย Java – คู่มือครบของ GroupDocs](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [วิธีเพิ่มรูปภาพลงใน PDF ด้วย Java และ GroupDocs Annotation](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)
