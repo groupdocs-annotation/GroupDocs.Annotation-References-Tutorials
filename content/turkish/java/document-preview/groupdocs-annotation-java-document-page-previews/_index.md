@@ -1,92 +1,88 @@
 ---
 categories:
 - Java Development
-date: '2026-01-18'
-description: GroupDocs.Annotation kullanarak Java’da PDF Java dosyalarını önizlemeyi
-  öğrenin. PDF’lerden, Word belgelerinden ve daha fazlasından yüksek kaliteli PNG
-  küçük resimler oluşturun, basit kod örnekleriyle.
+date: '2026-03-19'
+description: GroupDocs.Annotation kullanarak Java'da PDF önizleme, PDF önizleme Java
+  oluşturma ve belgeyi yüksek kaliteli PNG küçük resimlerle görüntüye dönüştürmeyi
+  öğrenin.
 keywords: Java document page preview generator, GroupDocs.Annotation Java tutorial,
   generate PNG document previews Java, Java document thumbnail creation, how to create
   document page previews in Java
-lastmod: '2026-01-18'
+lastmod: '2026-03-19'
 linktitle: Java Document Page Preview Generator
 tags:
 - document-processing
 - java-libraries
 - pdf-preview
 - groupdocs
-title: PDF önizleme Java – Java Belge Önizleme Oluşturucu (2025)
+title: Java'da PDF Önizleme Nasıl Yapılır – Belge Önizleme Oluşturucu
 type: docs
 url: /tr/java/document-preview/groupdocs-annotation-java-document-page-previews/
 weight: 1
 ---
 
-# Java Belge Sayfa Önizleme Oluşturucu - PNG Küçük Resimler Oluşturun (2025 Kılavuzu)
+# Java'da PDF Önizleme Nasıl Yapılır – PNG Küçük Resimler Oluşturma (2025 Kılavuzu)
 
-## Giriş
+Java'da **PDF önizleme** nasıl yapılır** gerektiğini hiç merak ettiniz mi, kullanıcıları tüm dosyayı indirmeye zorlamadan? İster bir belge yönetim sistemi oluşturuyor olun, bir dosya tarayıcısı yapıyor olun, ya da sadece kullanıcılara içeriğin bir önizlemesini sunmak isteyin, **preview pdf java** bir oyun değiştirici.
 
-Kullanıcıların tüm dosyayı indirmeden bir belgenin hızlı bir önizlemesini göstermeye hiç ihtiyaç duydunuz mu? İster bir belge yönetim sistemi, bir dosya tarayıcısı oluşturuyor olun, ister sadece kullanıcılara içeriğin bir ön bakışını sunmak isteyin, **preview pdf java** tam bir oyun değiştirici.
+**preview pdf java** dosyalarını hızlıca önizlemek istiyorsanız, bu kılavuz tam olarak nasıl yapılacağını gösteriyor. Şöyle ki: küçük resimler ya da önizlemeler oluşturmak elle bir kabus olabilir. Farklı dosya türleri için farklı kütüphanelere ihtiyaç duyarsınız, çeşitli formatlarla uğraşır ve kenar durumlarıyla mücadele edersiniz. İşte **GroupDocs.Annotation for Java** burada devreye giriyor – belge önizleme üretimi için bir İsviçre çakısı gibi.
 
-**preview pdf java** dosyalarını hızlı bir şekilde önizlemeniz gerekiyorsa, bu kılavuz tam olarak nasıl yapılacağını gösterir. Şöyle ki: küçük resimler veya önizlemeler oluşturmak elle bir kabus olabilir. Farklı dosya türleri için farklı kütüphanelere, çeşitli formatların yönetimine ve kenar durumlarıyla mücadele etmeye ihtiyaç duyarsınız. İşte **GroupDocs.Annotation for Java** burada devreye girer – belge önizleme oluşturma konusunda bir çok amaçlı çakıktır.
+Bu öğreticide, sadece birkaç satır Java kodu kullanarak neredeyse her belge türünden yüksek kaliteli PNG önizlemeler oluşturmayı öğreneceksiniz. Temel kurulumdan gelişmiş optimizasyon tekniklerine, gerçek dünya örneklerine kadar her şeyi kapsayacağız.
 
-Bu öğreticide, sadece birkaç satır Java kodu kullanarak neredeyse her belge türünden yüksek kaliteli PNG önizlemeleri oluşturmayı öğreneceksiniz. Temel kurulumdan gelişmiş optimizasyon tekniklerine, ayrıca projelerinizde doğrudan kullanabileceğiniz gerçek dünya örneklerine kadar her şeyi kapsayacağız.
-
-**Ne Öğreneceksiniz:**
-- GroupDocs.Annotation for Java’ı (doğru şekilde) kurma  
-- Minimum kodla kristal netliğinde PNG önizlemeleri oluşturma  
-- Farklı kullanım senaryoları için önizleme seçeneklerini ince ayar yapma  
+**Öğrenecekleriniz:**
+- GroupDocs.Annotation for Java'ı (doğru şekilde) kurma  
+- Minimum kodla kristal netliğinde PNG önizlemeler oluşturma  
+- Farklı kullanım senaryoları için önizleme seçeneklerini ince ayarlama  
 - Sorunlar ortaya çıkmadan yaygın sorunları ele alma  
 - Üretim ortamları için performans optimizasyonu  
 
-Uygulamanızın belge önizlemelerini nasıl işlediğini dönüştürmeye hazır mısınız? Hadi başlayalım!
+Uygulamanızın belge önizlemelerini nasıl ele aldığını dönüştürmeye hazır mısınız? Hadi başlayalım!
 
 ## Hızlı Yanıtlar
-- **preview pdf java oluşturacak kütüphane nedir?** GroupDocs.Annotation for Java  
+- **PDF önizleme oluşturma kütüphanesi nedir?** GroupDocs.Annotation for Java  
 - **Kaç satır kod gerekir?** Temel bir önizleme için yaklaşık 10–15 satır  
 - **Hangi görüntü formatı önerilir?** Kayıpsız kalite için PNG  
 - **Birden fazla sayfayı aynı anda önizleyebilir miyim?** Evet, `PreviewOptions` içinde sayfa numaralarını belirtebilirsiniz  
 - **Üretim için lisans gerekli mi?** Evet, ticari lisans su işaretlerini kaldırır  
 
-## preview pdf java nedir?
-`preview pdf java`, bir PDF’in (veya desteklenen diğer belgelerin) her sayfasını bir görüntü—genellikle PNG veya JPEG—olarak Java kodu ile işleme sürecini ifade eder. Bu sayede belge küçük resimlerini web uygulamaları, mobil uygulamalar veya masaüstü araçları içinde, kullanıcıları orijinal dosyayı indirmeye veya açmaya zorlamadan gösterebilirsiniz.
+## Java'da **PDF önizleme** nedir?
+`how to preview pdf` ifadesi, bir PDF'nin (veya desteklenen diğer bir belgenin) her sayfasını bir görüntü—genellikle PNG veya JPEG—olarak Java kodu ile işleme sürecini ifade eder. Bu sayede belge küçük resimlerini web uygulamaları, mobil uygulamalar veya masaüstü araçları içinde, orijinal dosyayı indirmeye ya da açmaya zorlamadan gösterebilirsiniz.
 
-## Bu Özelliği Ne Zaman Kullanmalısınız
+## PDF Önizleme Oluşturmak için GroupDocs.Annotation Neden Kullanılmalı?
 
-Koda geçmeden önce, belge sayfa önizleme oluşturmanın gerçekten parladığı durumları konuşalım. Aşağıdaki senaryolarda bu özellik inanılmaz derecede faydalı olacaktır:
+GroupDocs.Annotation'ın güzelliği, tüm ağır işleri halletmesi—PDF, Word belgesi, Excel elektronik tablosu veya PowerPoint sunumu fark etmeksizin. Tek bir API, tüm formatlar. Ayrıca **convert document to image** gibi PNG, JPEG, BMP gibi formatlara dönüştürme yeteneği sayesinde her türlü görsel önizleme senaryosu için mükemmeldir.
 
-**Belge Yönetim Sistemleri** – Kullanıcılar her dosyayı açmadan hızlıca tarayabilir. Google Drive’ın belge önizlemeleri gösterdiğini düşünün – tam da bunu burada inşa ediyoruz.
+## Bu Özellik Ne Zaman Kullanılmalı
 
-**E‑ticaret Platformları** – eKitap, şablon veya rapor gibi dijital ürünler satıyorsanız? Önizleme görselleri müşterilerin ne satın aldığını görmesini sağlar ve dönüşüm oranlarını önemli ölçüde artırabilir.
+Kodu incelemeden önce, belge sayfa önizleme oluşturmanın gerçekten parladığı zamanları konuşalım. Aşağıdaki durumlarda bu özellik son derece faydalı olacaktır:
 
-**Hukuk Yazılımları** – Avukatlar ve asistanları sözleşmeler, ifadeler veya dava dosyalarından belirli sayfalara hızlıca referans vermek zorundadır. Önizleme küçük resimleri bu süreci ışık hızına çıkarır.
-
-**Eğitim Platformları** – Öğrenciler ders kitabı sayfalarını, ödevleri veya referans materyallerini indirmeden önce önizleyebilir.
-
-**İçerik Onay İş Akışları** – Pazarlama ekipleri, yayıncılar ve içerik üreticileri belge düzenlerini ve içeriğini bir bakışta inceleyebilir, birden fazla uygulama açmak zorunda kalmazlar.
-
-GroupDocs.Annotation’ın güzelliği, tüm ağır işleri halletmesidir – PDF, Word, Excel ya da PowerPoint fark etmez. Tek bir API, tüm formatlar.
+- **Belge Yönetim Sistemleri** – Kullanıcılar her dosyayı açmadan hızlıca tarayabilir. Google Drive'ın belge önizlemelerini nasıl gösterdiğini düşünün – tam da bunu burada inşa ediyoruz.  
+- **E‑ticaret Platformları** – eKitap, şablon veya rapor gibi dijital ürünler satıyorsanız? Önizleme görselleri müşterilerin ne satın aldığını görmesini sağlar ve dönüşüm oranlarını önemli ölçüde artırabilir.  
+- **Hukuk Yazılımları** – Avukatlar ve asistanlar sözleşmeler, ifadeler veya dava dosyalarından belirli sayfalara hızlıca referans vermek ister. Önizleme küçük resimleri bu süreci ışık hızında yapar.  
+- **Eğitim Platformları** – Öğrenciler ders kitabı sayfalarını, ödevleri veya referans materyallerini indirmeden önce önizleyebilir.  
+- **İçerik Onay İş Akışları** – Pazarlama ekipleri, yayıncılar ve içerik oluşturucular belge düzenlerini ve içeriğini bir bakışta inceleyebilir, birden fazla uygulama açmaya gerek kalmaz.  
 
 ## Önkoşullar
 
-Kodlamaya başlamadan önce ihtiyacınız olan her şeye sahip olduğunuzdan emin olalım. Endişelenmeyin – kurulum oldukça basit.
+Kodlamaya başlamadan önce her şeyin elinizde olduğundan emin olalım. Endişelenmeyin – kurulum oldukça basit.
 
 ### Gerekli Kütüphaneler ve Bağımlılıklar
-Gösterimizin baş yıldızı GroupDocs.Annotation for Java. Bağımlılık yönetimini Maven ile yapacağız; çünkü dürüst olmak gerekirse, artık JAR dosyalarını manuel indirmek ve yapılandırmak kimsenin istediği bir şey değil.
+Gösterimizin yıldızı GroupDocs.Annotation for Java. Bağımlılık yönetimini Maven ile yapacağız çünkü dürüst olmak gerekirse, artık JAR dosyalarını manuel olarak indirmek ve yapılandırmak kimsenin isteği değil.
 
 ### Ortam Kurulum Gereksinimleri
 - **Java Development Kit (JDK):** JDK 8 veya üzeri gerekir. Daha eski bir sürüm kullanıyorsanız, şimdi yükseltmenin tam zamanı – daha iyi performans ve güvenlik özellikleri elde edeceksiniz.  
-- **Yapı Aracı:** Maven veya Gradle (örneklerde Maven kullanacağız, ancak kavramlar kolayca diğerine aktarılabilir)  
-- **IDE:** Herhangi bir metin editörü kullanılabilir, ancak daha iyi hata ayıklama ve otomatik tamamlama için IntelliJ IDEA veya Eclipse öneririm
+- **Build Tool:** Maven veya Gradle (örneklerde Maven kullanacağız, ancak kavramlar kolayca diğerine aktarılabilir)  
+- **IDE:** Herhangi bir metin editörü kullanılabilir, ancak daha iyi hata ayıklama ve otomatik tamamlama özellikleri için IntelliJ IDEA veya Eclipse öneririm
 
 ### Bilgi Önkoşulları
-Temel Java programlamasına hâkim olmalı ve Maven bağımlılıklarının nasıl çalıştığını anlamalısınız. Maven’a yeniyseniz panik yapmayın – kullanacağımız kavramlar oldukça basit ve her zaman Maven’ın başlangıç rehberine başvurabilirsiniz.
+Temel Java programlamasına hâkim olmalı ve Maven bağımlılıklarının nasıl çalıştığını anlamalısınız. Maven’a yeniyseniz panik yapmayın – kullanacağımız kavramlar oldukça basit ve her zaman Maven'ın başlangıç rehberine başvurabilirsiniz.
 
 ## GroupDocs.Annotation for Java Kurulumu
 
 Şimdi gerçek kurulumla işe koyulalım. İyi haber? GroupDocs bu süreci şaşırtıcı derecede sorunsuz hâle getiriyor.
 
 **Maven Yapılandırması:**  
-GroupDocs.Annotation’ı projenize eklemek için `pom.xml` dosyanıza aşağıdaki yapılandırmayı ekleyin:
+Projenize GroupDocs.Annotation eklemek için `pom.xml` dosyanıza aşağıdaki yapılandırmayı ekleyin:
 
 ```xml
 <repositories>
@@ -108,27 +104,27 @@ GroupDocs.Annotation’ı projenize eklemek için `pom.xml` dosyanıza aşağıd
 **İpucu**: En son sürüm numarasını GroupDocs web sitesinden kontrol etmeyi unutmayın. Güncellemeler sık sık hata düzeltmeleri ve yeni özellikler içerir.
 
 ### Lisans Edinme
-Lisanslama konusunda önemli bir nokta var. GroupDocs.Annotation ticari kullanım için ücretsiz değildir, ancak değerlendirme sürecini kolaylaştırıyor:
+Lisanslama konusunda bilmeniz gereken önemli bir nokta var. GroupDocs.Annotation ticari kullanım için ücretsiz değildir, ancak deneme sürecini kolaylaştırıyor:
 
-- **Ücretsiz Deneme:** Test ve küçük projeler için ideal. [GroupDocs releases sayfasından](https://releases.groupdocs.com/annotation/java/) indirin. Deneme sürümü önizlemelere su işareti ekler, geliştirme aşaması için sorun olmaz.  
-- **Geçici Lisans:** Daha uzun bir deneme süresine mi ihtiyacınız var? Su işareti olmadan genişletilmiş deneme süresi için [destek forumundan](https://forum.groupdocs.com/c/annotation/) talep edin.  
-- **Tam Lisans:** Üretime hazır olduğunuzda, lisans satın almak için [satın alma sayfasını](https://purchase.groupdocs.com/buy) ziyaret edin. Fiyatlandırma, elde edeceğiniz özellikler göz önüne alındığında makul.
+- **Ücretsiz Deneme:** Test ve küçük projeler için ideal. [GroupDocs releases page](https://releases.groupdocs.com/annotation/java/) adresinden indirin. Deneme sürümü önizlemelere su işareti ekler, bu geliştirme aşaması için sorun olmaz.  
+- **Geçici Lisans:** Daha uzun bir deneme süresine mi ihtiyacınız var? Su işareti olmadan uzatılmış deneme süresi için [support forum](https://forum.groupdocs.com/c/annotation/) üzerinden talep edin.  
+- **Tam Lisans:** Üretime geçmeye hazır olduğunuzda, lisans satın almak için [purchase page](https://purchase.groupdocs.com/buy) adresini ziyaret edin. Fiyatlandırma, elde edeceğiniz özellikler göz önüne alındığında makul.
 
 ### Temel Başlatma
-Gerekli sınıfları içe aktarmak ve bir `Annotator` örneği oluşturmak kadar basit. Bunu bir sonraki bölümde göreceğiz, ancak akılda tutmanız gereken şey, GroupDocs’ın standart Java konvansiyonlarını takip etmesidir – garip başlatma ritüelleri ya da karmaşık yapılandırma dosyaları yok.
+Gerekli sınıfları içe aktarmak ve bir `Annotator` örneği oluşturmak kadar basit. Bunu bir sonraki bölümde göreceğiz, ancak aklınızda tutmanız gereken en önemli nokta, GroupDocs'ın standart Java konvansiyonlarını takip etmesidir – garip başlatma ritüelleri ya da karmaşık yapılandırma dosyaları yoktur.
 
 ## Uygulama Kılavuzu: Belge Sayfa Önizlemeleri Oluşturma
 
-Şimdi eğlenceli kısma geçiyoruz – gerçek belge önizlemelerini üretelim! Süreç beklediğinizden daha basit, ancak bazı incelikleri anlamak faydalı.
+Şimdi eğlenceli kısma geldik – gerçek belge önizlemeleri üretelim! Süreç beklediğinizden daha basit, ancak bazı incelikleri anlamak faydalı.
 
 ### Önizleme Oluşturma Sürecini Anlamak
 
 Belge önizleme oluşturmayı üç adımlı bir dans olarak düşünün:
-1. **Önizlemelerin nasıl görüneceğini ve nereye kaydedileceğini yapılandırın**  
-2. **Hangi sayfaları önizlemek istediğinizi belirtin**  
-3. **Gerçek görüntüleri oluşturun**  
+1. **Önizlemelerin nasıl görüneceğini ve nereye kaydedileceğini** yapılandırın  
+2. **Hangi sayfaları** önizlemek istediğinizi belirtin  
+3. **Gerçek görüntüleri** oluşturun  
 
-GroupDocs.Annotation sahnedeki tüm karmaşık işleri halleder – format algılama, sayfa render’ı, görüntü optimizasyonu ve dosya çıktısı. Sadece ne istediğinizi söylemeniz yeterli.
+GroupDocs.Annotation sahne arkasındaki tüm karmaşık işleri – format algılama, sayfa işleme, görüntü optimizasyonu ve dosya çıktısı – halleder. Sadece ne istediğinizi söylemeniz yeterli.
 
 #### Adım 1: Önizleme Seçeneklerini Tanımlama
 
@@ -156,11 +152,11 @@ PreviewOptions previewOptions = new PreviewOptions(new CreatePageStream() {
 });
 ```
 
-**Ne oluyor?** `CreatePageStream` arayüzü, önizlemek istediğiniz her sayfa için çağrılır. `pageNumber` parametresi, işlenen sayfanın numarasını verir, böylece benzersiz dosya adları oluşturabilirsiniz. Bu yaklaşım size maksimum esneklik sağlar – dosyaları farklı dizinlere kaydedebilir, farklı adlandırma kuralları kullanabilir ya da görüntüleri doğrudan bir web yanıtına akıtabilirsiniz.
+**Ne oluyor?** `CreatePageStream` arayüzü, önizlemek istediğiniz her sayfa için çağrılır. `pageNumber` parametresi, işlenen sayfanın numarasını verir, böylece benzersiz dosya adları oluşturabilirsiniz. Bu yaklaşım size maksimum esneklik sağlar – dosyaları farklı dizinlere kaydedebilir, farklı adlandırma kuralları kullanabilir veya görüntüleri doğrudan bir web yanıtına akıtabilirsiniz.
 
 #### Adım 2: Önizleme Seçeneklerini Yapılandırma
 
-Şimdi önizlemelerinizin nasıl görüneceğini ve davranacağını ince ayar yapabilirsiniz:
+Şimdi önizlemelerinizin nasıl görüneceğini ve davranacağını ince ayarlayabilirsiniz:
 
 ```java
 previewOptions.setResolution(85); // Set desired resolution.
@@ -168,19 +164,19 @@ previewOptions.setPreviewFormat(PreviewFormats.PNG); // Choose PNG as the output
 previewOptions.setPageNumbers(new int[]{1, 2}); // Specify pages to generate previews for.
 ```
 
-**Çözünürlük önemi**: Çözünürlük ayarı hem görüntü kalitesini hem de dosya boyutunu doğrudan etkiler. Hızlı bir kılavuz:
+**Çözünürlük önemi**: Çözünürlük ayarı doğrudan görüntü kalitesi ve dosya boyutunu etkiler. Hızlı bir kılavuz:
 - **72 DPI**: Web küçük resimleri için iyi, dosya boyutu küçük  
 - **96 DPI**: Çoğu web uygulaması için standart, kalite ve boyut dengesi iyi  
 - **150 DPI**: Daha yüksek kalite, baskı veya detaylı görüntüleme için uygun  
 - **300 DPI**: Baskı kalitesi, dosya boyutu büyük  
 
-**Format seçimi**: Bu örnekte PNG kullanıyoruz (en iyi kaliteyi verir), ancak daha küçük dosya boyutları ve hafif sıkıştırma sorunları kabul ediyorsanız JPEG de desteklenir.
+**Format seçimi**: Bu örnekte PNG kullanıyoruz (en iyi kaliteyi verir), ancak daha küçük dosya boyutları ve biraz sıkıştırma sorunu kabul ediyorsanız GroupDocs JPEG'i de destekler.
 
-**Sayfa seçimi**: `setPageNumbers` metodu, hangi sayfaların önizleneceğini seçmenizi sağlar. Büyük belgelerde sadece anahtar sayfaların önizlemesi gerektiğinde çok kullanışlıdır.
+**Sayfa seçimi**: `setPageNumbers` metodu, hangi sayfaların önizleneceğini seçmenizi sağlar. Büyük belgelerde sadece anahtar sayfaların önizlemesini almak istediğinizde çok kullanışlıdır.
 
-#### Adım 3: Önizlemeleri Oluşturma
+### Adım 3: Önizlemeleri Oluşturma
 
-İşte sihrin gerçekleştiği kısım:
+İşte sihrin gerçekleştiği yer:
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -188,24 +184,24 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
 }
 ```
 
-**Neden try‑with‑resources?** Bu yapı, belge işlendikten sonra doğru şekilde kapatılmasını sağlar; bellek yönetimi ve dosya kilitlenmelerinin önüne geçmek için kritiktir. GroupDocs.Annotation `AutoCloseable` arayüzünü uygular, bu yüzden bu desen mükemmel çalışır.
+**Neden try‑with‑resources?** Bu yapı, belge işlemden sonra doğru şekilde kapatılmasını sağlar; bellek yönetimi ve dosya kilitlenmelerinin önüne geçmek için kritiktir. GroupDocs.Annotation `AutoCloseable` arayüzünü uygular, bu yüzden bu desen mükemmel çalışır.
 
-**Dosya yolu tuzağı**: Girdi dosya yolunun doğru ve dosyanın gerçekten var olduğundan emin olun. Ayrıca, çıktı dizininin önceden var olduğundan emin olun – GroupDocs dizinleri otomatik oluşturmaz.
+**Dosya yolu uyarısı**: Girdi dosya yolunun doğru ve dosyanın gerçekten var olduğundan emin olun. Ayrıca çıktı dizininin önceden var olduğundan emin olun – GroupDocs dizinleri otomatik olarak oluşturmaz.
 
-### Yaygın Tuzaklar ve Kaçınma Yolları
+### Yaygın Tuzaklar ve Kaçınma Yöntemleri
 
-**Bellek Sorunları**: Büyük belgeler önizleme sırasında önemli bellek tüketebilir. Çok sayıda belge ya da çok büyük dosyalar işliyorsanız:
+**Bellek Sorunları**: Büyük belgeler önizleme sırasında önemli bellek tüketebilir. Birçok belge ya da çok büyük dosyalar işliyorsanız, şunları düşünün:
 - Belgeleri daha küçük partiler halinde işleyin  
-- JVM heap boyutunu `-Xmx` parametresiyle artırın  
+- JVM yığın boyutunu `-Xmx` parametresiyle artırın  
 - İlk önizlemeler için daha düşük çözünürlük ayarları kullanın  
 
-**Dosya İzinleri**: Uygulamanızın çıktı dizinine yazma izni olduğundan emin olun. Bu, konteyner ortamlarında ya da sıkı güvenlik politikalarına sahip sunucularda özellikle önemlidir.
+**Dosya İzinleri**: Uygulamanızın çıktı dizinine yazma izni olduğundan emin olun. Bu, konteyner ortamlarında ya da sıkı güvenlik politikaları olan sunucularda özellikle önemlidir.
 
-**Format Desteği**: GroupDocs birçok formatı desteklese de, her zaman kendi belge tiplerinizle test edin. Çok nadir ya da çok eski formatlar desteklenmeyebilir; bu durumları nazikçe ele alın.
+**Format Desteği**: GroupDocs birçok formatı desteklese de, her zaman kendi belge tiplerinizle test edin. Nadir ya da çok eski formatlar desteklenmeyebilir; bu durumları nazikçe ele almanız gerekir.
 
 ## Gelişmiş Yapılandırma ve En İyi Uygulamalar
 
-Belge önizleme oluşturmanızı bir üst seviyeye taşıyacak gelişmiş teknikler ve optimizasyonlar.
+Belge önizleme üretiminizi bir sonraki seviyeye taşıyacak bazı gelişmiş teknikler ve optimizasyonlar.
 
 ### Dinamik Dosya Adlandırma Stratejileri
 
@@ -268,7 +264,7 @@ public void generatePreviewsForDocuments(List<String> documentPaths, String outp
 }
 ```
 
-### Performans Optimizasyonu İpuçları
+### Performans Optimizasyon İpuçları
 
 **Bellek Yönetimi**: Üretim uygulamaları için bellek kullanımını izleyin ve temizlik stratejileri uygulayın:
 
@@ -283,18 +279,18 @@ System.gc();
 documentPaths.parallelStream().forEach(this::generatePreviewForDocument);
 ```
 
-**Önbellek Stratejisi**: Gereksiz yeniden üretimlerden kaçınmak için akıllı önbellekleme uygulayın:
+**Önbellek Stratejisi**: Gereksiz önizleme üretimini önlemek için akıllı önbellekleme uygulayın:
 - Önizleme dosyaları zaten mevcut ve kaynak belgeden daha yeni mi kontrol edin  
-- Dosya değiştirme zaman damgalarını kullanarak yeniden üretim ihtiyacını belirleyin  
-- Daha hızlı aramalar için önizleme meta verilerini bir veritabanında saklamayı düşünün  
+- Dosya değişiklik zaman damgalarını kullanarak yeniden üretim ihtiyacını belirleyin  
+- Daha hızlı sorgulamalar için önizleme meta verilerini bir veritabanında saklamayı düşünün  
 
 ## Gerçek Dünya Entegrasyon Örnekleri
 
-Bu önizleme üretiminin gerçek uygulamalarda nasıl kullanılacağını görelim.
+Bu önizleme üretiminin gerçek uygulamalara nasıl entegre edileceğine bir göz atalım.
 
 ### Web Uygulaması Entegrasyonu
 
-Spring Boot web uygulamasına nasıl entegre edebileceğinize bir örnek:
+Spring Boot web uygulamasına nasıl entegre edebileceğinize dair bir örnek:
 
 ```java
 @RestController
@@ -366,13 +362,13 @@ public class DocumentPreviewService {
 }
 ```
 
-## Performans Hususları ve Optimizasyon
+## Performans Düşünceleri ve Optimizasyon
 
-Üretimde belge önizleme üretimi söz konusu olduğunda performans kritik hâle gelir. Odaklanmanız gereken temel alanlar:
+Üretimde belge önizleme üretimiyle uğraşırken performans kritik bir faktördür. Odaklanmanız gereken ana alanlar şunlardır:
 
 ### Bellek Yönetimi Stratejileri
 
-**Belge Boyut Sınırları**: Büyük belgeler hızla mevcut belleği tüketebilir. Boyut kontrolleri uygulamayı düşünün:
+**Belge Boyut Sınırları**: Büyük belgeler hızla mevcut belleği tüketebilir. Boyut kontrolleri eklemeyi düşünün:
 
 ```java
 File documentFile = new File(documentPath);
@@ -413,7 +409,7 @@ public class PreviewGenerationWorker {
 }
 ```
 
-**Önbellek Stratejileri**: Gereksiz yeniden üretimlerden kaçınmak için akıllı önbellekleme uygulayın:
+**Önbellek Stratejileri**: Gereksiz yeniden üretimi önlemek için akıllı önbellekleme uygulayın:
 
 ```java
 public boolean shouldRegeneratePreview(String documentPath, String previewPath) {
@@ -457,75 +453,77 @@ En iyi kurulumla bile zaman zaman sorunlarla karşılaşabilirsiniz. İşte en s
 
 ### Dosya Erişimi ve İzin Sorunları
 
-**Problem**: “Erişim reddedildi” veya “Dosya bulunamadı” hataları  
+**Problem**: "Erişim reddedildi" ya da "Dosya bulunamadı" hataları  
 **Çözüm**:  
 - Dosya yollarının doğru ve dosyaların mevcut olduğunu doğrulayın  
 - Uygulamanızın kaynak belgelere okuma izni olduğundan emin olun  
 - Çıktı dizinlerine yazma izni verin  
 - Linux/Unix sistemlerde dosya sahipliği ve izinlerini kontrol edin  
 
-### Bellek ve Performans Problemleri
+### Bellek ve Performans Sorunları
 
-**Problem**: `OutOfMemoryError` veya yavaş işleme  
+**Problem**: `OutOfMemoryError` ya da yavaş işleme  
 **Çözüm**:  
-- JVM heap boyutunu artırın: `-Xmx2048m`  
+- JVM yığın boyutunu artırın: `-Xmx2048m`  
 - Aynı anda işlenen sayfa sayısını azaltın  
 - Büyük belgeler için daha düşük çözünürlük ayarları kullanın  
 - Belge boyut sınırları uygulayın (yukarıdaki kod örneğine bakın)  
 
-### Formata Özel Sorunlar
+### Formata Özgü Sorunlar
 
 **Problem**: Bazı belgeler önizleme üretmiyor  
 **Çözüm**:  
 - Belgeyi manuel olarak açarak bozuk olup olmadığını kontrol edin  
-- GroupDocs.Annotation’ın desteklediği format listesini kontrol edin (50+ format desteklenir)  
-- Şifre korumalı belgeler ek işlem gerektirebilir (SSS’ye bakın)  
+- GroupDocs.Annotation'ın desteklediği format listesini kontrol edin (kütüphane 50'den fazla formatı destekler)  
+- Şifre korumalı belgeler ek işlem gerektirebilir (SSS bölümüne bakın)  
 - Sunucuda gerekli tüm fontların yüklü olduğundan emin olun  
 
 ### Çıktı Kalitesi Sorunları
 
-**Problem**: Önizleme görüntüleri bulanık veya pikselli  
+**Problem**: Bulanık ya da pikselli önizleme görüntüleri  
 **Çözüm**:  
-- Çözünürlük ayarını artırın (bellek kullanımına dikkat)  
+- Çözünürlük ayarını artırın (bellek kullanımına dikkat edin)  
 - Metin ağırlıklı belgeler için PNG, JPEG yerine genellikle daha iyidir  
 - Kaynak belgenin yeterli kaliteye sahip olduğundan emin olun  
 
 ## Sık Sorulan Sorular
 
-**S: GroupDocs.Annotation hangi dosya formatlarını önizleme üretmek için destekliyor?**  
-C: 50’den fazla format desteklenir; PDF, Word, Excel, PowerPoint, OpenDocument, yaygın görüntü tipleri ve DWG, DXF gibi CAD dosyaları dahildir. Tam liste resmi dokümantasyonda yer alır.
+**S: GroupDocs.Annotation önizleme üretimi için hangi dosya formatlarını destekliyor?**  
+C: PDF, Word, Excel, PowerPoint, OpenDocument, yaygın görüntü tipleri ve DWG, DXF gibi CAD dosyaları dahil olmak üzere 50'den fazla format desteklenir. Tam liste resmi dokümantasyonda yer alır.
 
-**S: Şifre korumalı belgeler için önizleme üretebilir miyim?**  
+**S: Şifre korumalı belgeler için önizleme oluşturabilir miyim?**  
 C: Evet. Şifreyi içeren `LoadOptions` ile `Annotator` yapıcısını kullanın, örnek: `new Annotator(filePath, new LoadOptions(password))`.
 
 **S: Çok büyük belgeleri bellek tükenmeden nasıl yönetebilirim?**  
-C: Sayfaları daha küçük partiler halinde işleyin, önizlemeler için düşük çözünürlük kullanın, JVM heap’i artırın ve önizlemeleri akış olarak sunmayı düşünün.
+C: Sayfaları daha küçük partiler halinde işleyin, ilk küçük resimler için düşük çözünürlük kullanın, JVM yığın boyutunu artırın ve önizlemeleri akış olarak sunmayı düşünün.
 
 **S: Çıktı dizin yapısını dinamik olarak özelleştirebilir miyim?**  
-C: Kesinlikle. `CreatePageStream` arayüzü, dosyaların nereye kaydedileceği üzerinde tam kontrol sağlar. Tarihe, belge tipine, kullanıcıya vb. göre yol mantığını `invoke` içinde ayarlayabilirsiniz.
+C: Kesinlikle. `CreatePageStream` arayüzü, dosyaların nereye kaydedileceği üzerinde tam kontrol sağlar. Tarihe, belge tipine, kullanıcıya vb. göre yolu ayarlamak için `invoke` içindeki mantığı değiştirin.
 
-**S: PNG dışındaki formatlarda önizleme oluşturabilir miyim?**  
-C: Evet. GroupDocs.Annotation JPEG, BMP ve diğer görüntü formatlarını da destekler. Küçük dosya boyutları için `previewOptions.setPreviewFormat(PreviewFormats.JPEG)` gibi bir ayar yapabilirsiniz.
+**S: PNG dışındaki formatlarda önizleme üretebilir miyim?**  
+C: Evet. GroupDocs.Annotation JPEG, BMP ve diğer görüntü formatlarını da destekler. Daha küçük dosya boyutları için `previewOptions.setPreviewFormat(PreviewFormats.JPEG)` gibi bir ayar yapabilirsiniz.
 
 ## Sonuç
 
-Artık **preview pdf java** küçük resimlerini GroupDocs.Annotation ile üretme sanatını öğrendiniz! Bu güçlü özellik, uygulamalarınızdaki belge etkileşimini şu şekillerde dönüştürebilir:
-- Basit bir dosya tarayıcısı ya da karmaşık bir kurumsal belge yönetim sistemi olsun, sadece birkaç satır Java kodu ile yüksek kaliteli PNG önizlemeleri oluşturabilirsiniz.  
-- Esnek yapılandırma, çözünürlük, format ve sayfa seçimini her senaryoya uyacak şekilde ayarlamanıza olanak tanır.  
-- Performans odaklı ipuçları (bellek yönetimi, önbellekleme, asenkron işleme) ölçekli uygulamalarda sorunsuz çalışmanızı sağlar.  
-- Sağlam hata yönetimi ve sorun giderme rehberi, yaygın tuzaklardan kaçınmanıza yardımcı olur.  
+Artık **preview pdf java** küçük resimlerini GroupDocs.Annotation ile üretme sanatını ustalıkla biliyorsunuz! Bu güçlü özellik, uygulamalarınızda kullanıcıların belgelerle etkileşimini dönüştürebilir; basit bir dosya tarayıcısı ya da karmaşık bir kurumsal belge yönetim sistemi olsun fark etmez.
 
-**Daha ileri gitmek ister misiniz?** GroupDocs.Annotation’ın ek yeteneklerini keşfedin; örneğin ek açıklama ekleme, metin çıkarma veya formatlar arası dönüşüm. [Resmi dokümantasyon](https://docs.groupdocs.com/annotation/java/) bu özellikler için kapsamlı kılavuzlar sunar.
+**Anahtar çıkarımlar:**
+- GroupDocs.Annotation sadece birkaç satır Java kodu ile yüksek kaliteli PNG önizlemeleri oluşturur  
+- Esnek yapılandırma, çözünürlük, format ve sayfa seçimini her senaryoya uyacak şekilde ayarlamanızı sağlar  
+- Performans odaklı ipuçları (bellek yönetimi, önbellekleme, asenkron işleme) ölçekli uygulamalarda uygulamanızı hızlı tutar  
+- Sağlam hata yönetimi ve sorun giderme rehberi yaygın tuzakları önlemenize yardımcı olur  
+
+**Daha ileri gitmek ister misiniz?** GroupDocs.Annotation'ın ek yeteneklerini keşfedin; anotasyon ekleme, metin çıkarma veya formatlar arası dönüşüm gibi. [Resmi dokümantasyon](https://docs.groupdocs.com/annotation/java/) bu özellikler için kapsamlı kılavuzlar sunar.
 
 **Sonraki adımlar:**  
-1. Örnek bir proje klonlayın ve kodu kendi PDF, Word veya Excel dosyalarınızla deneyin.  
-2. UI’niz için en uygun kalite‑boyut dengesini bulmak amacıyla farklı çözünürlük ve formatları test edin.  
-3. Önizleme üretimini bir web uç noktasına entegre edin (örneklerde gösterildiği gibi) ve sonuçları hızlı bir şekilde sunmak için önbellekleme uygulayın.  
+1. Bir örnek projeyi klonlayın ve kodu kendi PDF, Word veya Excel dosyalarınızla deneyin.  
+2. UI'niz için en uygun kalite‑boyut dengesini bulmak üzere farklı çözünürlük ve formatları test edin.  
+3. Önizleme üretimini bir web uç noktasına entegre edin (örneklerde gösterildiği gibi) ve sonuçları hızlı bir şekilde sunmak için önbellekleme ekleyin.  
 
-Kodlamanın tadını çıkarın ve kullanıcılarınıza daha sorunsuz belge deneyimleri sunmanın keyfini yaşayın!
+Keyifli kodlamalar ve daha akıcı belge deneyimleri dileriz!
 
 ---
 
-**Son Güncelleme:** 2026-01-18  
+**Son Güncelleme:** 2026-03-19  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
 **Yazar:** GroupDocs
