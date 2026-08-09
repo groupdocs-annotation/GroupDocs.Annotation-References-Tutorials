@@ -1,51 +1,118 @@
 ---
 categories:
 - Java Development
-date: '2026-02-18'
-description: Dowiedz się, jak redagować pliki PDF przy użyciu Javy i GroupDocs.Annotation.
-  Ten przewodnik krok po kroku obejmuje konfigurację, implementację, przetwarzanie
-  wsadowe oraz najlepsze praktyki ochrony wrażliwych danych.
-keywords: how to redact pdf, PDF text redaction Java, GroupDocs annotation tutorial,
-  Java PDF redaction library, PDF annotation management Java, GroupDocs annotation
-  Maven setup
-lastmod: '2026-02-18'
-linktitle: How to redact pdf using java Tutorial
+date: '2026-08-09'
+description: Poznaj bezpieczne redagowanie plików PDF w Javie z GroupDocs.Annotation.
+  Ten przewodnik krok po kroku pokazuje, jak usuwać wrażliwe treści PDF, przetwarzać
+  pliki wsadowo i stosować najlepsze praktyki bezpieczeństwa.
+keywords:
+- secure pdf redaction
+- remove sensitive pdf
+- GroupDocs.Annotation Java
+- pdf redaction library
+- Java document privacy
+lastmod: '2026-08-09'
+linktitle: Jak redagować PDF przy użyciu Javy – samouczek
+og_description: Bezpieczne redagowanie plików PDF w Javie z GroupDocs.Annotation.
+  Skorzystaj z tego przewodnika, aby usuwać wrażliwe treści PDF, obsługiwać zadania
+  wsadowe i spełniać wymogi zgodności.
+og_image_alt: 'Developer guide: secure PDF redaction using GroupDocs.Annotation in
+  Java'
+og_title: Bezpieczne redagowanie plików PDF w Javie – samouczek GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-09'
+  description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  headline: Secure pdf redaction in Java – GroupDocs tutorial
+  type: TechArticle
+- description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  name: Secure pdf redaction in Java – GroupDocs tutorial
+  steps:
+  - name: Initialize the PDF annotator
+    text: The `Annotator` class is the entry point for all annotation operations in
+      GroupDocs.Annotation. It loads a PDF into memory and prepares it for modifications.
+      > **Pro tip:** Use try‑with‑resources or explicit disposal to avoid memory leaks.
+      We'll revisit proper cleanup later.
+  - name: Build annotation replies for an audit trail
+    text: Document why each redaction was performed by adding reply objects. These
+      replies become part of the document’s audit log, satisfying many compliance
+      regimes.
+  - name: Define precise redaction boundaries
+    text: Accurate coordinates ensure the correct text is removed. The origin (0,0)
+      is the top‑left corner of the page. > **Tip:** Use a PDF viewer that displays
+      coordinates, or build a UI that lets users click to capture points automatically.
+  - name: Create the text redaction annotation
+    text: Now we bind the coordinates, audit replies, and a descriptive message together.
+      The `setMessage()` field records the reason for redaction without exposing the
+      hidden content.
+  - name: Save the redacted document and clean up
+    text: Persist the changes and release resources. > **Critical:** Always call `dispose()`
+      (or use try‑with‑resources) to free file handles and memory.
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure,
+      so it cannot be recovered with standard extraction tools.
+    question: Is the redacted text permanently removed?
+  - answer: No. Redaction is irreversible by design to meet compliance requirements.
+      Keep an original copy if you need to reference the unredacted content later.
+    question: Can I undo a redaction after the file is saved?
+  - answer: Scanned PDFs are images; you’ll need OCR integration first to locate text
+      before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
+    question: Does the library support scanned PDFs?
+  - answer: Processing time grows roughly linearly with page count and annotation
+      count. For documents over 100 pages, consider asynchronous processing and progress
+      reporting.
+    question: How does performance scale with large documents?
+  - answer: Yes. As long as the Java runtime can access the file stream—either by
+      mounting the bucket or downloading to a temporary location—the API works identically.
+    question: Can I store PDFs in cloud storage (e.g., AWS S3) and still use the API?
+  type: FAQPage
 tags:
-- pdf-processing
-- document-annotation
-- data-privacy
-- java-libraries
-title: Jak redagować PDF przy użyciu Javy – Kompletny samouczek GroupDocs
+- secure pdf redaction
+- GroupDocs
+- Java PDF redaction
+- data privacy
+title: Bezpieczne redagowanie plików PDF w Javie – samouczek GroupDocs
 type: docs
 url: /pl/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/
 weight: 1
 ---
 
-# Jak redagować PDF przy użyciu Javy – Kompletny samouczek GroupDocs
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Jeśli potrzebujesz **redagować PDF przy użyciu Javy**, trafiłeś we właściwe miejsce. Niezależnie od tego, czy usuwasz poufne informacje z umów prawnych, dokumentacji medycznej, czy tajnych raportów biznesowych, ten samouczek przeprowadzi Cię przez gotowe do produkcji rozwiązanie z GroupDocs.Annotation. Omówimy wszystko, od konfiguracji środowiska po przetwarzanie wsadowe, kwestie bezpieczeństwa i wskazówki rozwiązywania problemów — abyś mógł chronić wrażliwe dane z pełnym przekonaniem.
+# Bezpieczne redagowanie PDF w Javie – samouczek GroupDocs
+
+Jeśli potrzebujesz **bezpiecznego redagowania PDF** w Javie, trafiłeś na właściwy przewodnik. Niezależnie od tego, czy czyszczysz umowy prawne, usuwasz identyfikatory pacjentów z dokumentacji medycznej, czy ukrywasz poufne dane firmowe, ten samouczek przeprowadzi Cię przez gotowe do produkcji rozwiązanie z GroupDocs.Annotation. Zobaczysz, jak skonfigurować środowisko, zastosować adnotacje redakcyjne, przetwarzać pliki zbiorczo i unikać typowych pułapek — abyś mógł chronić wrażliwe dane z pewnością.
 
 ## Szybkie odpowiedzi
-- **Jaką bibliotekę obsługuje redakcję PDF w Javie?** GroupDocs.Annotation Java API.  
-- **Czy redakcja jest trwała?** Tak – podległy tekst jest usunięty, a nie tylko ukryty.  
+- **Jaką bibliotekę obsługuje redagowanie PDF w Javie?** GroupDocs.Annotation Java API.  
+- **Czy redagowanie jest trwałe?** Tak – podstawowy tekst jest usunięty, a nie tylko ukryty.  
 - **Czy potrzebuję licencji do produkcji?** Wymagana jest pełna licencja; dostępna jest darmowa licencja tymczasowa do testów.  
 - **Czy mogę przetwarzać wiele plików jednocześnie?** Oczywiście – omówiono przetwarzanie wsadowe i ponowne użycie zasobów.  
-- **Jaką wersję Javy zaleca się?** Java 11+ dla optymalnej wydajności i bezpieczeństwa.
+- **Jaka wersja Javy jest zalecana?** Java 11+ dla optymalnej wydajności i bezpieczeństwa.
 
-## Czym jest redakcja PDF i dlaczego używać GroupDocs.Annotation?
-Redakcja PDF to proces trwałego usuwania lub zaciemniania wrażliwych treści z dokumentu. GroupDocs.Annotation wyróżnia się, ponieważ zapewnia **prawdziwą redakcję**, odpowiedzi gotowe do audytu oraz obsługę wielu typów adnotacji — wszystko niezbędne dla branż wymagających zgodności.
+## Czym jest bezpieczne redagowanie PDF i dlaczego warto używać GroupDocs.Annotation?
+Bezpieczne redagowanie PDF to proces trwałego usuwania lub zaciemniania wrażliwej zawartości z pliku PDF, tak aby nie mogła zostać odzyskana. GroupDocs.Annotation zapewnia prawdziwe redagowanie, odpowiedzi gotowe do audytu oraz obsługę ponad 30 typów adnotacji, co czyni go idealnym dla branż wymagających zgodności.
 
-## Dlaczego wybrać GroupDocs.Annotation do redakcji PDF?
+## Dlaczego wybrać GroupDocs.Annotation do redagowania PDF?
+GroupDocs.Annotation jest przeznaczony do potrzeb redagowania w przedsiębiorstwach, oferując prawdziwe usuwanie tekstu, wysokowydajne przetwarzanie dużych dokumentów oraz bogaty zestaw narzędzi adnotacji, które można łączyć z redagowaniem. Obsługa wielu formatów, precyzyjne kontrolowanie wyglądu oraz metadane gotowe do audytu czynią go niezawodnym wyborem dla regulowanych branż.
+
 - **Trwałe usunięcie** tekstu (bezpieczeństwo na poziomie HIPAA).  
-- **Bogaty ekosystem adnotacji** – łącz redakcję z podświetleniami, komentarzami i strzałkami.  
-- **Wydajność gotowa dla przedsiębiorstw** przy dużych obciążeniach.  
-- **Wsparcie wielu formatów** – nie ogranicza się tylko do PDF.  
+- **Bogaty ekosystem adnotacji** – łącz redagowanie z podświetleniami, komentarzami i strzałkami.  
+- **Wydajność gotowa dla przedsiębiorstw** – może obsłużyć dokumenty o 500 stronach bez ładowania całego pliku do pamięci.  
+- **Obsługa wielu formatów** – działa z PDF, DOCX, PPTX i plikami graficznymi.  
 - **Precyzyjna kontrola** nad wyglądem, przezroczystością i metadanymi.
 
-## Prerequisites and Environment Setup
+## Wymagania wstępne i konfiguracja środowiska
 
 ### Wymagane zależności
-Dodaj GroupDocs.Annotation do swojego projektu Maven. Zachowaj fragment kodu dokładnie tak, jak jest pokazany:
+Dodaj GroupDocs.Annotation do swojego projektu Maven. Zachowaj fragment kodu dokładnie tak, jak pokazano:
 
 ```xml
 <repositories>
@@ -73,10 +140,11 @@ Dodaj GroupDocs.Annotation do swojego projektu Maven. Zachowaj fragment kodu dok
 ### Rozważania licencyjne
 Do rozwoju i testów pobierz [darmową licencję tymczasową](https://purchase.groupdocs.com/temporary-license/). Wdrożenia produkcyjne wymagają pełnej licencji, ale wersja próbna udostępnia pełny zestaw funkcji do oceny.
 
-## Jak redagować PDF przy użyciu Javy z GroupDocs.Annotation
+## Jak redagować PDF przy użyciu Javy i GroupDocs.Annotation?
+Korzystając z GroupDocs.Annotation, zaczynasz od utworzenia instancji `Annotator`, która ładuje docelowy PDF, a następnie definiujesz adnotacje redakcyjne z precyzyjnymi współrzędnymi i opcjonalnymi odpowiedziami audytowymi. Po dodaniu adnotacji do dokumentu zapisujesz plik, co trwale usuwa wybraną zawartość i zwalnia wszystkie zasoby.
 
-### Krok 1: Inicjalizacja PDF Annotatora
-Utwórz instancję `Annotator`, która wskazuje na PDF, który chcesz zabezpieczyć.
+### Krok 1: Inicjalizacja annotatora PDF
+Klasa `Annotator` jest punktem wejścia dla wszystkich operacji adnotacji w GroupDocs.Annotation. Ładuje PDF do pamięci i przygotowuje go do modyfikacji.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -88,7 +156,7 @@ dual Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 > **Wskazówka:** Używaj try‑with‑resources lub jawnego zwalniania zasobów, aby uniknąć wycieków pamięci. Później wrócimy do właściwego czyszczenia.
 
 ### Krok 2: Tworzenie odpowiedzi adnotacji dla ścieżki audytu
-Udokumentuj, dlaczego każda redakcja została wykonana, dodając obiekty odpowiedzi.
+Udokumentuj, dlaczego każda redakcja została wykonana, dodając obiekty odpowiedzi. Te odpowiedzi stają się częścią dziennika audytu dokumentu, spełniając wymogi wielu regulacji.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -108,8 +176,6 @@ List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-
-Te odpowiedzi stają się częścią dziennika audytu dokumentu, spełniając wymogi wielu regulacji.
 
 ### Krok 3: Definiowanie precyzyjnych granic redakcji
 Dokładne współrzędne zapewniają usunięcie właściwego tekstu. Punkt początkowy (0,0) znajduje się w lewym górnym rogu strony.
@@ -131,7 +197,7 @@ points.add(point3);
 points.add(point4);
 ```
 
-> **Wskazówka:** Użyj przeglądarki PDF wyświetlającej współrzędne lub stwórz interfejs, który pozwala użytkownikom klikać, aby automatycznie przechwytywać punkty.
+> **Porada:** Użyj przeglądarki PDF wyświetlającej współrzędne lub zbuduj interfejs, który pozwala użytkownikom klikać, aby automatycznie przechwytywać punkty.
 
 ### Krok 4: Utworzenie adnotacji redakcji tekstu
 Teraz łączymy współrzędne, odpowiedzi audytowe i opisową wiadomość.
@@ -153,7 +219,7 @@ annotator.add(textRedaction);
 
 Pole `setMessage()` zapisuje powód redakcji bez ujawniania ukrytej treści.
 
-### Krok 5: Zapisz zredagowany dokument i posprzątaj
+### Krok 5: Zapisz zredagowany dokument i wyczyść zasoby
 Zachowaj zmiany i zwolnij zasoby.
 
 ```java
@@ -170,10 +236,10 @@ dual annotator.dispose();
 
 ### Współrzędne nie pasują do oczekiwanych obszarów
 - **Przyczyna:** Twórcy PDF mogą używać różnych początków współrzędnych.  
-- **Rozwiązanie:** Zweryfikuj współrzędne w tej samej przeglądarce, której użyjesz w produkcji, lub wdroż narzędzie podglądu pozwalające użytkownikom precyzyjnie dostroić punkty.
+- **Rozwiązanie:** Zweryfikuj współrzędne w tej samej przeglądarce, której użyjesz w produkcji, lub zaimplementuj narzędzie podglądu pozwalające użytkownikom automatycznie dopasowywać punkty.
 
-### Wycieki pamięci w scenariuszach wysokiego obciążenia
-- **Przyczyna:** Instancje Annotator utrzymują strumienie plików.  
+### Wycieki pamięci w scenariuszach wysokiego wolumenu
+- **Przyczyna:** Instancje Annotator trzymają strumienie plików.  
 - **Rozwiązanie:** Użyj try‑with‑resources, aby zapewnić zwolnienie:
 
 ```java
@@ -185,12 +251,12 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 
 ### Adnotacje niewidoczne po zapisaniu
 - **Przyczyna:** `add()` wywołane po `save()`, lub współrzędne poza granicami strony.  
-- **Rozwiązanie:** Upewnij się, że `add()` jest wywoływane przed `save()`, i podwójnie sprawdź, że wszystkie punkty mieszczą się w wymiarach strony.
+- **Rozwiązanie:** Upewnij się, że `add()` jest wywoływane przed `save()`, i podwójnie sprawdź, czy wszystkie punkty mieszczą się w wymiarach strony.
 
 ## Wskazówki optymalizacji wydajności
 
 ### Strategia przetwarzania wsadowego
-Ponownie używaj jednej instancji annotatora, gdy musisz przetworzyć wiele plików.
+Ponownie użyj jednej instancji annotatora, gdy musisz przetworzyć wiele plików.
 
 ```java
 // Less efficient - creates new instances
@@ -212,26 +278,26 @@ try (Annotator annotator = new Annotator()) {
 ```
 
 ### Najlepsze praktyki zarządzania pamięcią
-- Przetwarzaj duże PDF-y w partiach, gdy to możliwe.  
-- Ustaw limity sterty JVM (`-Xmx`) w zależności od oczekiwanej wielkości dokumentu.  
-- Monitoruj zużycie sterty podczas testów obciążeniowych, aby określić optymalne rozmiary wsadów.  
-- Używaj API strumieniowych dla ogromnych kolekcji dokumentów.
+- Przetwarzaj duże PDF-y w fragmentach, gdy to możliwe.  
+- Ustaw limity stosu JVM (`-Xmx`) w zależności od oczekiwanej wielkości dokumentu.  
+- Monitoruj zużycie stosu podczas testów obciążeniowych, aby określić optymalne rozmiary partii.  
+- Używaj API strumieniowych dla ogromnych zbiorów dokumentów.
 
-## Rozważania bezpieczeństwa dla wrażliwych danych
+## Rozważania bezpieczeństwa w odniesieniu do wrażliwych danych
 
-### Prawdziwa redakcja vs. ukrywanie wizualne
+### Prawdziwe redagowanie vs. ukrywanie wizualne
 GroupDocs.Annotation usuwa tekst z strumienia zawartości PDF, zapewniając, że dane nie mogą zostać odzyskane przy użyciu narzędzi do ekstrakcji tekstu — co jest niezbędne dla HIPAA, GDPR i innych regulacji.
 
 ### Higiena plików tymczasowych
 Biblioteka może zapisywać pliki tymczasowe podczas przetwarzania. Przechowuj je w bezpiecznym, niepublicznym katalogu i upewnij się, że zostaną usunięte po zakończeniu operacji.
 
-## Przykłady zastosowań w praktyce
+## Praktyczne przypadki użycia
 
-| Branża | Typowy scenariusz |
+| Industry | Typical scenario |
 |----------|-------------------|
 | **Prawo** | Usuwanie uprzywilejowanych informacji klienta przed e‑discovery. |
 | **Opieka zdrowotna** | Usuwanie identyfikatorów pacjentów z PDF-ami badawczymi. |
-| **Finanse** | Czyszczenie kwartalnych raportów przed ich publicznym udostępnieniem. |
+| **Finanse** | Oczyszczanie raportów kwartalnych przed publikacją. |
 | **Zasoby ludzkie** | Redagowanie danych osobowych pracowników w wewnętrznych notatkach. |
 
 ## Zaawansowana personalizacja
@@ -245,7 +311,7 @@ textRedaction.setOpacity(1.0); // Fully opaque
 ```
 
 ### Łączenie wielu typów adnotacji
-Możesz dodać podświetlenia, komentarze lub strzałki obok redakcji, aby stworzyć kompleksowy przepływ przeglądu.
+Możesz dodać podświetlenia, komentarze lub strzałki obok redakcji, aby stworzyć kompleksowy przepływ recenzji.
 
 ## Obsługa błędów w produkcji
 
@@ -263,23 +329,33 @@ Logowanie każdego zdarzenia redakcji — w tym nazwy dokumentu, znaczników cza
 
 ## Najczęściej zadawane pytania
 
-**Q:** Czy zredagowany tekst jest trwale usunięty?  
-**A:** Tak. GroupDocs.Annotation usuwa tekst z wewnętrznej struktury PDF, więc nie może być odzyskany przy użyciu standardowych narzędzi ekstrakcyjnych.
+**P:** Czy zredagowany tekst jest trwale usunięty?  
+**O:** Tak. GroupDocs.Annotation usuwa tekst z wewnętrznej struktury PDF, więc nie może być odzyskany przy użyciu standardowych narzędzi ekstrakcyjnych.
 
-**Q:** Czy mogę cofnąć redakcję po zapisaniu pliku?  
-**A:** Nie. Redakcja jest nieodwracalna z założenia, aby spełnić wymogi zgodności. Zachowaj oryginalną kopię, jeśli później potrzebujesz odwołać się do niezredagowanej treści.
+**P:** Czy mogę cofnąć redakcję po zapisaniu pliku?  
+**O:** Nie. Redakcja jest nieodwracalna z założenia, aby spełniać wymogi zgodności. Zachowaj oryginalną kopię, jeśli potrzebujesz odwołać się do niezredagowanej treści później.
 
-**Q:** Czy biblioteka obsługuje zeskanowane PDF-y?  
-**A:** Zeskanowane PDF-y są obrazami; najpierw potrzebna jest integracja OCR, aby zlokalizować tekst przed zastosowaniem redakcji. GroupDocs oferuje dodatek OCR, który działa bezproblemowo.
+**P:** Czy biblioteka obsługuje zeskanowane PDF-y?  
+**O:** Zeskanowane PDF-y są obrazami; najpierw potrzebna jest integracja OCR, aby zlokalizować tekst przed zastosowaniem redakcji. GroupDocs oferuje dodatek OCR, który działa bezproblemowo.
 
-**Q:** Jak wydajność skaluje się przy dużych dokumentach?  
-**A:** Czas przetwarzania rośnie w przybliżeniu liniowo wraz ze zwiększaniem liczby stron i adnotacji. Dla dokumentów powyżej 100 stron rozważ przetwarzanie asynchroniczne oraz raportowanie postępu.
+**P:** Jak wydajność skaluje się przy dużych dokumentach?  
+**O:** Czas przetwarzania rośnie w przybliżeniu liniowo wraz z liczbą stron i adnotacji. Dla dokumentów powyżej 100 stron rozważ przetwarzanie asynchroniczne i raportowanie postępu.
 
-**Q:** Czy mogę przechowywać PDF-y w chmurze (np. AWS S3) i nadal używać API?  
-**A:** Tak. Pod warunkiem, że środowisko Java może uzyskać dostęp do strumienia pliku — poprzez zamontowanie bucketu lub pobranie do tymczasowej lokalizacji — API działa identycznie.
+**P:** Czy mogę przechowywać PDF-y w chmurze (np. AWS S3) i nadal używać API?  
+**O:** Tak. Pod warunkiem, że środowisko Java może uzyskać dostęp do strumienia pliku — poprzez zamontowanie bucketu lub pobranie do tymczasowej lokalizacji — API działa identycznie.
 
 ---
-
-**Ostatnia aktualizacja:** 2026-02-18  
+**Ostatnia aktualizacja:** 2026-08-09  
 **Testowano z:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
+
+## Powiązane samouczki
+
+- [Ładowanie PDF w Javie z GroupDocs Annotation: Przewodnik po ładowaniu dokumentów](/annotation/java/document-loading/)
+- [Ładowanie PDF chronionego hasłem z GroupDocs.Annotation Java](/annotation/java/advanced-features/)
+- [Kompletny przewodnik – Jak zapisać adnotowany PDF z GroupDocs.Annotation dla Javy](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

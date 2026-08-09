@@ -1,51 +1,118 @@
 ---
 categories:
 - Java Development
-date: '2026-02-18'
-description: Tìm hiểu cách xóa thông tin nhạy cảm trong PDF bằng Java với GroupDocs.Annotation.
-  Hướng dẫn chi tiết này bao gồm cài đặt, triển khai, xử lý hàng loạt và các thực
-  tiễn tốt nhất để bảo vệ dữ liệu nhạy cảm.
-keywords: how to redact pdf, PDF text redaction Java, GroupDocs annotation tutorial,
-  Java PDF redaction library, PDF annotation management Java, GroupDocs annotation
-  Maven setup
-lastmod: '2026-02-18'
-linktitle: How to redact pdf using java Tutorial
+date: '2026-08-09'
+description: Tìm hiểu cách chỉnh sửa bảo mật PDF trong Java với GroupDocs.Annotation.
+  Hướng dẫn từng bước này chỉ cho bạn cách loại bỏ nội dung PDF nhạy cảm, xử lý hàng
+  loạt tệp và tuân thủ các biện pháp bảo mật tốt nhất.
+keywords:
+- secure pdf redaction
+- remove sensitive pdf
+- GroupDocs.Annotation Java
+- pdf redaction library
+- Java document privacy
+lastmod: '2026-08-09'
+linktitle: Cách chỉnh sửa PDF bằng Java – Hướng dẫn
+og_description: Chỉnh sửa bảo mật PDF trong Java với GroupDocs.Annotation. Thực hiện
+  theo hướng dẫn này để loại bỏ nội dung PDF nhạy cảm, xử lý công việc hàng loạt và
+  đáp ứng yêu cầu tuân thủ.
+og_image_alt: 'Developer guide: secure PDF redaction using GroupDocs.Annotation in
+  Java'
+og_title: Chỉnh sửa bảo mật PDF trong Java – Hướng dẫn GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-09'
+  description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  headline: Secure pdf redaction in Java – GroupDocs tutorial
+  type: TechArticle
+- description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  name: Secure pdf redaction in Java – GroupDocs tutorial
+  steps:
+  - name: Initialize the PDF annotator
+    text: The `Annotator` class is the entry point for all annotation operations in
+      GroupDocs.Annotation. It loads a PDF into memory and prepares it for modifications.
+      > **Pro tip:** Use try‑with‑resources or explicit disposal to avoid memory leaks.
+      We'll revisit proper cleanup later.
+  - name: Build annotation replies for an audit trail
+    text: Document why each redaction was performed by adding reply objects. These
+      replies become part of the document’s audit log, satisfying many compliance
+      regimes.
+  - name: Define precise redaction boundaries
+    text: Accurate coordinates ensure the correct text is removed. The origin (0,0)
+      is the top‑left corner of the page. > **Tip:** Use a PDF viewer that displays
+      coordinates, or build a UI that lets users click to capture points automatically.
+  - name: Create the text redaction annotation
+    text: Now we bind the coordinates, audit replies, and a descriptive message together.
+      The `setMessage()` field records the reason for redaction without exposing the
+      hidden content.
+  - name: Save the redacted document and clean up
+    text: Persist the changes and release resources. > **Critical:** Always call `dispose()`
+      (or use try‑with‑resources) to free file handles and memory.
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure,
+      so it cannot be recovered with standard extraction tools.
+    question: Is the redacted text permanently removed?
+  - answer: No. Redaction is irreversible by design to meet compliance requirements.
+      Keep an original copy if you need to reference the unredacted content later.
+    question: Can I undo a redaction after the file is saved?
+  - answer: Scanned PDFs are images; you’ll need OCR integration first to locate text
+      before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
+    question: Does the library support scanned PDFs?
+  - answer: Processing time grows roughly linearly with page count and annotation
+      count. For documents over 100 pages, consider asynchronous processing and progress
+      reporting.
+    question: How does performance scale with large documents?
+  - answer: Yes. As long as the Java runtime can access the file stream—either by
+      mounting the bucket or downloading to a temporary location—the API works identically.
+    question: Can I store PDFs in cloud storage (e.g., AWS S3) and still use the API?
+  type: FAQPage
 tags:
-- pdf-processing
-- document-annotation
-- data-privacy
-- java-libraries
-title: Cách xóa thông tin nhạy cảm trong PDF bằng Java – Hướng dẫn đầy đủ GroupDocs
+- secure pdf redaction
+- GroupDocs
+- Java PDF redaction
+- data privacy
+title: Chỉnh sửa bảo mật PDF trong Java – Hướng dẫn GroupDocs
 type: docs
 url: /vi/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/
 weight: 1
 ---
 
-# Cách redact pdf using java – Complete GroupDocs Tutorial
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Nếu bạn cần **redact pdf using java**, bạn đã đến đúng nơi. Dù bạn đang xóa thông tin nhạy cảm trong hợp đồng pháp lý, hồ sơ y tế, hay báo cáo kinh doanh bí mật, hướng dẫn này sẽ đưa bạn qua một giải pháp sẵn sàng cho môi trường sản xuất với GroupDocs.Annotation. Chúng tôi sẽ đề cập tới mọi thứ từ thiết lập môi trường đến xử lý hàng loạt, các cân nhắc bảo mật, và mẹo khắc phục sự cố—để bạn có thể bảo vệ dữ liệu nhạy cảm một cách tự tin.
+# Redaction PDF bảo mật trong Java – Hướng dẫn GroupDocs
+
+Nếu bạn cần **secure pdf redaction** trong Java, bạn đã đến đúng hướng dẫn. Dù bạn đang dọn dẹp hợp đồng pháp lý, loại bỏ thông tin nhận dạng bệnh nhân khỏi hồ sơ y tế, hoặc ẩn dữ liệu kinh doanh mật, hướng dẫn này sẽ dẫn bạn qua một giải pháp sẵn sàng cho sản xuất với GroupDocs.Annotation. Bạn sẽ thấy cách thiết lập môi trường, áp dụng các annotation redaction, xử lý hàng loạt tệp, và tránh các lỗi thường gặp—để bạn có thể bảo vệ dữ liệu nhạy cảm một cách tự tin.
 
 ## Câu trả lời nhanh
 - **Thư viện nào xử lý PDF redaction trong Java?** GroupDocs.Annotation Java API.  
-- **Redaction có phải là vĩnh viễn không?** Có – văn bản gốc được xóa, không chỉ ẩn.  
-- **Tôi có cần giấy phép cho môi trường sản xuất không?** Cần giấy phép đầy đủ; một giấy phép tạm thời miễn phí có sẵn cho việc thử nghiệm.  
-- **Tôi có thể xử lý nhiều tệp cùng lúc không?** Chắc chắn – xử lý hàng loạt và tái sử dụng tài nguyên được đề cập.  
-- **Phiên bản Java nào được khuyến nghị?** Java 11+ để đạt hiệu suất và bảo mật tối ưu.
+- **Redaction có cố định không?** Yes – the underlying text is removed, not just hidden.  
+- **Tôi có cần giấy phép cho môi trường production không?** A full license is required; a free temporary license is available for testing.  
+- **Tôi có thể xử lý nhiều tệp cùng lúc không?** Absolutely – batch processing and resource reuse are covered.  
+- **Phiên bản Java nào được khuyến nghị?** Java 11+ for optimal performance and security.
 
-## PDF Redaction là gì và tại sao nên dùng GroupDocs.Annotation?
-PDF redaction là quá trình loại bỏ hoặc che giấu vĩnh viễn nội dung nhạy cảm khỏi tài liệu. GroupDocs.Annotation nổi bật vì nó cung cấp **true redaction**, các phản hồi sẵn sàng cho audit, và hỗ trợ nhiều loại annotation — tất cả đều thiết yếu cho các ngành công nghiệp dựa trên tuân thủ.
+## Redaction PDF bảo mật là gì và tại sao nên sử dụng GroupDocs.Annotation?
+Redaction PDF bảo mật là quá trình xóa vĩnh viễn hoặc che khuất nội dung nhạy cảm khỏi một PDF để không thể khôi phục lại. GroupDocs.Annotation cung cấp redaction thực sự, các phản hồi sẵn sàng cho audit, và hỗ trợ hơn 30 loại annotation, làm cho nó trở nên lý tưởng cho các ngành công nghiệp dựa trên tuân thủ.
 
-## Tại sao chọn GroupDocs.Annotation cho PDF Redaction?
-- **Permanent removal** của văn bản (bảo mật cấp HIPAA).  
-- **Rich annotation ecosystem** – kết hợp redaction với highlight, comment và arrow.  
-- **Enterprise‑ready performance** cho khối lượng công việc lớn.  
-- **Cross‑format support** – không chỉ giới hạn ở PDF.  
-- **Fine‑grained control** về giao diện, độ trong suốt và metadata.
+## Tại sao chọn GroupDocs.Annotation cho pdf redaction?
+GroupDocs.Annotation được thiết kế cho nhu cầu redaction doanh nghiệp, cung cấp việc xóa thực sự văn bản, xử lý hiệu năng cao cho tài liệu lớn, và một bộ công cụ annotation phong phú có thể kết hợp với redaction. Hỗ trợ đa định dạng, kiểm soát hiển thị chi tiết, và metadata sẵn sàng cho audit khiến nó là lựa chọn đáng tin cậy cho các ngành công nghiệp được quy định.
 
-## Yêu cầu trước và Cài đặt môi trường
+- **Xóa vĩnh viễn** văn bản (bảo mật cấp HIPAA).  
+- **Hệ sinh thái annotation phong phú** – kết hợp redaction với highlight, comment và arrow.  
+- **Hiệu năng doanh nghiệp** – có thể xử lý tài liệu 500 trang mà không cần tải toàn bộ file vào bộ nhớ.  
+- **Hỗ trợ đa định dạng** – hoạt động với PDFs, DOCX, PPTX và các tệp hình ảnh.  
+- **Kiểm soát chi tiết** về giao diện, độ trong suốt và metadata.
 
-### Các phụ thuộc bắt buộc
-Thêm GroupDocs.Annotation vào dự án Maven của bạn. Giữ đoạn mã nguyên vẹn như dưới đây:
+## Yêu cầu trước và thiết lập môi trường
+
+### Các phụ thuộc cần thiết
+Add GroupDocs.Annotation to your Maven project. Keep the snippet exactly as shown:
 
 ```xml
 <repositories>
@@ -65,18 +132,19 @@ Thêm GroupDocs.Annotation vào dự án Maven của bạn. Giữ đoạn mã ng
 ```
 
 ### Danh sách kiểm tra môi trường phát triển
-- **Java 8+** (đề nghị Java 11+).  
-- **Maven 3.6+** (hoặc Gradle tương đương).  
-- **IDE** hỗ trợ Maven (IntelliJ IDEA, Eclipse, VS Code).  
-- **Test PDFs** chứa dữ liệu nhạy cảm thực tế để kiểm chứng thực tế.
+- **Java 8+** (Java 11+ recommended).  
+- **Maven 3.6+** (or Gradle equivalent).  
+- **IDE** with Maven support (IntelliJ IDEA, Eclipse, VS Code).  
+- **Test PDFs** that contain real sensitive data for realistic validation.
 
-### Các cân nhắc về giấy phép
-Đối với phát triển và thử nghiệm, lấy một [free temporary license](https://purchase.groupdocs.com/temporary-license/). Các triển khai sản xuất yêu cầu giấy phép đầy đủ, nhưng bản dùng thử cung cấp toàn bộ tính năng để đánh giá.
+### Các lưu ý về giấy phép
+Đối với phát triển và thử nghiệm, hãy lấy một [free temporary license](https://purchase.groupdocs.com/temporary-license/). Triển khai production yêu cầu giấy phép đầy đủ, nhưng bản dùng thử cung cấp cho bạn toàn bộ tính năng để đánh giá.
 
-## Cách redact pdf using java với GroupDocs.Annotation
+## Cách redaction PDF bằng Java với GroupDocs.Annotation?
+Sử dụng GroupDocs.Annotation, bạn bắt đầu bằng việc tạo một instance `Annotator` để tải PDF mục tiêu, sau đó định nghĩa các annotation redaction với tọa độ chính xác và các phản hồi audit tùy chọn. Sau khi thêm các annotation vào tài liệu, bạn lưu file, việc này sẽ xóa vĩnh viễn nội dung đã chọn và giải phóng mọi tài nguyên.
 
-### Bước 1: Khởi tạo PDF Annotator
-Tạo một instance `Annotator` trỏ tới PDF bạn muốn bảo vệ.
+### Bước 1: Khởi tạo PDF annotator
+Lớp `Annotator` là điểm vào cho tất cả các thao tác annotation trong GroupDocs.Annotation. Nó tải PDF vào bộ nhớ và chuẩn bị cho các thay đổi.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -85,10 +153,10 @@ import com.groupdocs.annotation.Annotator;
 dual Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-> **Pro tip:** Sử dụng try‑with‑resources hoặc giải phóng tài nguyên một cách rõ ràng để tránh rò rỉ bộ nhớ. Chúng ta sẽ xem lại cách dọn dẹp đúng sau.
+> **Mẹo chuyên nghiệp:** Sử dụng try‑with‑resources hoặc giải phóng tài nguyên một cách rõ ràng để tránh rò rỉ bộ nhớ. Chúng ta sẽ xem lại việc dọn dẹp đúng cách sau.
 
-### Bước 2: Xây dựng Annotation Replies cho Audit Trail
-Ghi lại lý do mỗi redaction được thực hiện bằng cách thêm các đối tượng reply.
+### Bước 2: Xây dựng các phản hồi annotation cho audit trail
+Document why each redaction was performed by adding reply objects. These replies become part of the document’s audit log, satisfying many compliance regimes.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -109,10 +177,8 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-Các reply này trở thành một phần của audit log của tài liệu, đáp ứng nhiều quy định tuân thủ.
-
-### Bước 3: Xác định ranh giới Redaction chính xác
-Các tọa độ chính xác đảm bảo văn bản đúng được xóa. Gốc (0,0) là góc trên‑trái của trang.
+### Bước 3: Xác định ranh giới redaction chính xác
+Accurate coordinates ensure the correct text is removed. The origin (0,0) is the top‑left corner of the page.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -131,10 +197,10 @@ points.add(point3);
 points.add(point4);
 ```
 
-> **Tip:** Sử dụng trình xem PDF hiển thị tọa độ, hoặc xây dựng UI cho phép người dùng click để tự động ghi lại các điểm.
+> **Tip:** Use a PDF viewer that displays coordinates, or build a UI that lets users click to capture points automatically.
 
-### Bước 4: Tạo Text Redaction Annotation
-Bây giờ chúng ta gắn kết các tọa độ, audit replies và một thông điệp mô tả lại với nhau.
+### Bước 4: Tạo annotation redaction văn bản
+Now we bind the coordinates, audit replies, and a descriptive message together.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.TextRedactionAnnotation;
@@ -151,10 +217,10 @@ textRedaction.setReplies(replies);
 annotator.add(textRedaction);
 ```
 
-Trường `setMessage()` ghi lại lý do redaction mà không lộ nội dung đã ẩn.
+Trường `setMessage()` ghi lại lý do redaction mà không tiết lộ nội dung đã ẩn.
 
-### Bước 5: Lưu tài liệu đã redacted và dọn dẹp
-Lưu các thay đổi và giải phóng tài nguyên.
+### Bước 5: Lưu tài liệu đã redaction và dọn dẹp
+Persist the changes and release resources.
 
 ```java
 // Save the annotated document
@@ -164,17 +230,17 @@ dual annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_output.pdf");
 dual annotator.dispose();
 ```
 
-> **Critical:** Luôn gọi `dispose()` (hoặc dùng try‑with‑resources) để giải phóng các file handle và bộ nhớ.
+> **Critical:** Always call `dispose()` (or use try‑with‑resources) to free file handles and memory.
 
 ## Các vấn đề thường gặp và giải pháp
 
 ### Tọa độ không khớp với khu vực mong muốn
-- **Cause:** Các công cụ tạo PDF có thể dùng gốc tọa độ khác nhau.  
-- **Fix:** Xác minh tọa độ bằng cùng một trình xem sẽ dùng trong sản xuất, hoặc triển khai công cụ preview cho phép người dùng tinh chỉnh các điểm.
+- **Cause:** PDF creators can use different coordinate origins.  
+- **Fix:** Verify coordinates with the same viewer you’ll use for production, or implement a preview tool that lets users fine‑tune points automatically.
 
-### Rò rỉ bộ nhớ trong kịch bản khối lượng lớn
-- **Cause:** Các instance Annotator giữ các file stream.  
-- **Fix:** Sử dụng try‑with‑resources để đảm bảo giải phóng:
+### Rò rỉ bộ nhớ trong các kịch bản khối lượng lớn
+- **Cause:** Annotator instances hold onto file streams.  
+- **Fix:** Use try‑with‑resources to guarantee disposal:
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -184,13 +250,13 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 ```
 
 ### Annotation không hiển thị sau khi lưu
-- **Cause:** `add()` được gọi sau `save()`, hoặc tọa độ nằm ngoài giới hạn trang.  
-- **Fix:** Đảm bảo `add()` được thực hiện trước `save()`, và kiểm tra lại rằng mọi điểm đều nằm trong kích thước trang.
+- **Cause:** `add()` called after `save()`, or coordinates outside page bounds.  
+- **Fix:** Ensure `add()` precedes `save()`, and double‑check that all points lie within the page dimensions.
 
-## Mẹo tối ưu hoá hiệu suất
+## Mẹo tối ưu hoá hiệu năng
 
-### Chiến lược xử lý hàng loạt
-Tái sử dụng một instance annotator duy nhất khi cần xử lý nhiều tệp.
+### Chiến lược xử lý batch
+Reuse a single annotator instance when you need to process many files.
 
 ```java
 // Less efficient - creates new instances
@@ -211,43 +277,43 @@ try (Annotator annotator = new Annotator()) {
 }
 ```
 
-### Thực hành tốt quản lý bộ nhớ
-- Xử lý các PDF lớn theo từng phần khi có thể.  
-- Đặt giới hạn heap JVM (`-Xmx`) dựa trên kích thước tài liệu dự kiến.  
-- Giám sát việc sử dụng heap trong quá trình load testing để xác định kích thước batch tối ưu.  
-- Sử dụng streaming APIs cho các bộ sưu tập tài liệu khổng lồ.
+### Thực hành tốt nhất quản lý bộ nhớ
+- Process large PDFs in chunks when possible.  
+- Set JVM heap limits (`-Xmx`) based on expected document size.  
+- Monitor heap usage during load testing to determine optimal batch sizes.  
+- Use streaming APIs for massive document collections.
 
-## Các cân nhắc bảo mật cho dữ liệu nhạy cảm
+## Các lưu ý bảo mật cho dữ liệu nhạy cảm
 
-### True Redaction vs. Visual Hiding
-GroupDocs.Annotation loại bỏ văn bản khỏi content stream của PDF, đảm bảo dữ liệu không thể được khôi phục bằng các công cụ trích xuất văn bản — điều cần thiết cho HIPAA, GDPR và các quy định khác.
+### Redaction thực sự vs. ẩn hình ảnh
+GroupDocs.Annotation removes the text from the PDF’s content stream, ensuring that the data cannot be recovered with text‑extraction tools—a must for HIPAA, GDPR, and other regulations.
 
 ### Vệ sinh tệp tạm thời
-Thư viện có thể ghi tệp tạm thời trong quá trình xử lý. Lưu chúng trong thư mục an toàn, không công khai và xác minh rằng chúng đã bị xóa sau khi thao tác hoàn tất.
+The library may write temporary files during processing. Store these in a secure, non‑public directory and verify that they are deleted after the operation completes.
 
 ## Các trường hợp sử dụng thực tế
 
-| Industry | Typical Scenario |
+| Industry | Typical scenario |
 |----------|-------------------|
 | **Pháp lý** | Removing privileged client information before e‑discovery. |
-| **Chăm sóc sức khỏe** | Stripping patient identifiers from research PDFs. |
+| **Y tế** | Stripping patient identifiers from research PDFs. |
 | **Tài chính** | Sanitizing quarterly reports before public release. |
 | **Nhân sự** | Redacting employee personal data in internal memos. |
 
 ## Tùy chỉnh nâng cao
 
-### Giao diện Redaction tùy chỉnh
-Kiểm soát cách redaction hiển thị trong PDF cuối cùng.
+### Giao diện redaction tùy chỉnh
+Control how the redaction looks in the final PDF.
 
 ```java
 textRedaction.setBackgroundColor(Color.BLACK); // Solid black block
 textRedaction.setOpacity(1.0); // Fully opaque
 ```
 
-### Kết hợp nhiều loại Annotation
-Bạn có thể thêm highlight, comment hoặc arrow cùng với redaction để tạo quy trình xem xét toàn diện.
+### Kết hợp nhiều loại annotation
+You can add highlights, comments, or arrows alongside redactions to create a comprehensive review workflow.
 
-## Xử lý lỗi cho môi trường sản xuất
+## Xử lý lỗi cho production
 
 ```java
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -259,27 +325,36 @@ try (Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-Ghi nhật ký mỗi sự kiện redaction — bao gồm tên tài liệu, thời gian và ID người dùng — tạo ra một audit trail mạnh mẽ.
+Logging each redaction event—including document name, timestamps, and user ID—creates a robust audit trail.
 
 ## Câu hỏi thường gặp
 
-**Q: Văn bản đã redacted có bị xóa vĩnh viễn không?**  
-A: Có. GroupDocs.Annotation xóa văn bản khỏi cấu trúc nội bộ của PDF, vì vậy không thể khôi phục bằng các công cụ trích xuất tiêu chuẩn.
+**Q: Is the redacted text permanently removed?**  
+A: Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure, so it cannot be recovered with standard extraction tools.
 
-**Q: Tôi có thể hoàn tác redaction sau khi tệp đã được lưu không?**  
-A: Không. Redaction được thiết kế không thể đảo ngược để đáp ứng yêu cầu tuân thủ. Giữ một bản sao gốc nếu bạn cần tham chiếu nội dung chưa redacted sau này.
+**Q: Can I undo a redaction after the file is saved?**  
+A: No. Redaction is irreversible by design to meet compliance requirements. Keep an original copy if you need to reference the unredacted content later.
 
-**Q: Thư viện có hỗ trợ PDF đã quét không?**  
-A: PDF đã quét là hình ảnh; bạn cần tích hợp OCR trước để xác định văn bản trước khi áp dụng redaction. GroupDocs cung cấp một OCR add‑on hoạt động liền mạch.
+**Q: Does the library support scanned PDFs?**  
+A: Scanned PDFs are images; you’ll need OCR integration first to locate text before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
 
-**Q: Hiệu suất thay đổi như thế nào khi xử lý tài liệu lớn?**  
-A: Thời gian xử lý tăng gần như tuyến tính với số trang và số annotation. Đối với tài liệu trên 100 trang, hãy cân nhắc xử lý bất đồng bộ và báo cáo tiến độ.
+**Q: How does performance scale with large documents?**  
+A: Processing time grows roughly linearly with page count and annotation count. For documents over 100 pages, consider asynchronous processing and progress reporting.
 
-**Q: Tôi có thể lưu PDF trong lưu trữ đám mây (ví dụ, AWS S3) và vẫn sử dụng API không?**  
-A: Có. Miễn là runtime Java có thể truy cập luồng tệp — bằng cách gắn bucket hoặc tải xuống vị trí tạm thời — API sẽ hoạt động tương tự.
+**Q: Can I store PDFs in cloud storage (e.g., AWS S3) and still use the API?**  
+A: Yes. As long as the Java runtime can access the file stream—either by mounting the bucket or downloading to a temporary location—the API works identically.
 
----
-
-**Last Updated:** 2026-02-18  
-**Tested With:** GroupDocs.Annotation 25.2  
+**Last updated:** 2026-08-09  
+**Tested with:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs
+
+## Hướng dẫn liên quan
+
+- [Tải PDF Java với GroupDocs Annotation: Hướng dẫn tải tài liệu](/annotation/java/document-loading/)
+- [Tải PDF có mật khẩu bảo vệ với GroupDocs.Annotation Java](/annotation/java/advanced-features/)
+- [Hướng dẫn toàn diện - Cách lưu PDF đã annotation với GroupDocs.Annotation cho Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

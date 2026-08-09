@@ -1,53 +1,118 @@
 ---
 categories:
 - Java Development
-date: '2026-02-18'
-description: Apprenez à caviarder des PDF avec Java et GroupDocs.Annotation. Ce guide
-  étape par étape couvre la configuration, l’implémentation, le traitement par lots
-  et les meilleures pratiques pour protéger les données sensibles.
-keywords: how to redact pdf, PDF text redaction Java, GroupDocs annotation tutorial,
-  Java PDF redaction library, PDF annotation management Java, GroupDocs annotation
-  Maven setup
-lastmod: '2026-02-18'
-linktitle: How to redact pdf using java Tutorial
+date: '2026-08-09'
+description: Apprenez la redaction sécurisée de pdf en Java avec GroupDocs.Annotation.
+  Ce guide étape par étape vous montre comment supprimer le contenu sensible du pdf,
+  traiter les fichiers par lots, et suivre les best‑practice security measures.
+keywords:
+- secure pdf redaction
+- remove sensitive pdf
+- GroupDocs.Annotation Java
+- pdf redaction library
+- Java document privacy
+lastmod: '2026-08-09'
+linktitle: Comment redact pdf avec java – Tutoriel
+og_description: Redaction sécurisée de pdf en Java avec GroupDocs.Annotation. Suivez
+  ce guide pour supprimer le contenu sensible du pdf, gérer les batch jobs, et répondre
+  aux exigences de compliance.
+og_image_alt: 'Developer guide: secure PDF redaction using GroupDocs.Annotation in
+  Java'
+og_title: Redaction sécurisée de pdf en Java – tutoriel GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-09'
+  description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  headline: Secure pdf redaction in Java – GroupDocs tutorial
+  type: TechArticle
+- description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  name: Secure pdf redaction in Java – GroupDocs tutorial
+  steps:
+  - name: Initialize the PDF annotator
+    text: The `Annotator` class is the entry point for all annotation operations in
+      GroupDocs.Annotation. It loads a PDF into memory and prepares it for modifications.
+      > **Pro tip:** Use try‑with‑resources or explicit disposal to avoid memory leaks.
+      We'll revisit proper cleanup later.
+  - name: Build annotation replies for an audit trail
+    text: Document why each redaction was performed by adding reply objects. These
+      replies become part of the document’s audit log, satisfying many compliance
+      regimes.
+  - name: Define precise redaction boundaries
+    text: Accurate coordinates ensure the correct text is removed. The origin (0,0)
+      is the top‑left corner of the page. > **Tip:** Use a PDF viewer that displays
+      coordinates, or build a UI that lets users click to capture points automatically.
+  - name: Create the text redaction annotation
+    text: Now we bind the coordinates, audit replies, and a descriptive message together.
+      The `setMessage()` field records the reason for redaction without exposing the
+      hidden content.
+  - name: Save the redacted document and clean up
+    text: Persist the changes and release resources. > **Critical:** Always call `dispose()`
+      (or use try‑with‑resources) to free file handles and memory.
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure,
+      so it cannot be recovered with standard extraction tools.
+    question: Is the redacted text permanently removed?
+  - answer: No. Redaction is irreversible by design to meet compliance requirements.
+      Keep an original copy if you need to reference the unredacted content later.
+    question: Can I undo a redaction after the file is saved?
+  - answer: Scanned PDFs are images; you’ll need OCR integration first to locate text
+      before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
+    question: Does the library support scanned PDFs?
+  - answer: Processing time grows roughly linearly with page count and annotation
+      count. For documents over 100 pages, consider asynchronous processing and progress
+      reporting.
+    question: How does performance scale with large documents?
+  - answer: Yes. As long as the Java runtime can access the file stream—either by
+      mounting the bucket or downloading to a temporary location—the API works identically.
+    question: Can I store PDFs in cloud storage (e.g., AWS S3) and still use the API?
+  type: FAQPage
 tags:
-- pdf-processing
-- document-annotation
-- data-privacy
-- java-libraries
-title: Comment caviarder un PDF avec Java – Tutoriel complet GroupDocs
+- secure pdf redaction
+- GroupDocs
+- Java PDF redaction
+- data privacy
+title: Redaction sécurisée de pdf en Java – tutoriel GroupDocs
 type: docs
 url: /fr/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/
 weight: 1
 ---
 
- unchanged.
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Now produce final answer.# Comment caviarder un PDF avec Java – Tutoriel complet GroupDocs
+# Redaction sécurisée de PDF en Java – Tutoriel GroupDocs
 
-Si vous devez **caviarder un PDF avec Java**, vous êtes au bon endroit. Que vous ayez besoin de nettoyer des contrats juridiques, des dossiers médicaux ou des rapports d'entreprise confidentiels, ce tutoriel vous guide à travers une solution prête pour la production avec GroupDocs.Annotation. Nous couvrirons tout, de la configuration de l'environnement au traitement par lots, aux considérations de sécurité et aux conseils de dépannage—pour que vous puissiez protéger les données sensibles en toute confiance.
+If you need to **secure pdf redaction** in Java, you’ve landed on the right guide. Whether you are cleaning up legal contracts, stripping patient identifiers from medical records, or hiding confidential business data, this tutorial walks you through a production‑ready solution with GroupDocs.Annotation. You’ll see how to set up the environment, apply redaction annotations, process files in bulk, and avoid common pitfalls—so you can protect sensitive data with confidence.
 
 ## Réponses rapides
-- **Quelle bibliothèque gère la caviature de PDF en Java ?** GroupDocs.Annotation Java API.  
-- **La caviature est‑elle permanente ?** Oui – le texte sous‑jacent est supprimé, pas seulement masqué.  
-- **Ai‑je besoin d’une licence pour la production ?** Une licence complète est requise ; une licence temporaire gratuite est disponible pour les tests.  
-- **Puis‑je traiter de nombreux fichiers en même temps ?** Absolument – le traitement par lots et la réutilisation des ressources sont couverts.  
-- **Quelle version de Java est recommandée ?** Java 11+ pour des performances et une sécurité optimales.
+- **What library handles PDF redaction in Java?** GroupDocs.Annotation Java API.  
+- **Is the redaction permanent?** Yes – the underlying text is removed, not just hidden.  
+- **Do I need a license for production?** A full license is required; a free temporary license is available for testing.  
+- **Can I process many files at once?** Absolutely – batch processing and resource reuse are covered.  
+- **What Java version is recommended?** Java 11+ for optimal performance and security.
 
-## Qu’est‑ce que la caviature de PDF et pourquoi utiliser GroupDocs.Annotation ?
-La caviature de PDF est le processus de suppression ou d’obscurcissement permanent du contenu sensible d’un document. GroupDocs.Annotation excelle car il offre **une vraie caviature**, des réponses prêtes pour l’audit, et la prise en charge de plusieurs types d’annotation—tout cela essentiel pour les secteurs soumis à la conformité.
+## Qu’est‑ce que la redaction sécurisée de PDF et pourquoi utiliser GroupDocs.Annotation ?
+Secure pdf redaction is the process of permanently deleting or obscuring sensitive content from a PDF so it cannot be recovered. GroupDocs.Annotation provides true redaction, audit‑ready replies, and support for over 30 annotation types, making it ideal for compliance‑driven industries.
 
-## Pourquoi choisir GroupDocs.Annotation pour la caviature de PDF ?
-- **Suppression permanente** du texte (sécurité de niveau HIPAA).  
-- **Écosystème d’annotation riche** – combinez la caviature avec des surlignages, des commentaires et des flèches.  
-- **Performance prête pour l’entreprise** pour des charges de travail à haut volume.  
-- **Prise en charge multi‑format** – pas limité aux PDF.  
-- **Contrôle granulaire** sur l’apparence, l’opacité et les métadonnées.
+## Pourquoi choisir GroupDocs.Annotation pour la redaction de PDF ?
+GroupDocs.Annotation is designed for enterprise redaction needs, offering true removal of text, high‑performance processing of large documents, and a rich set of annotation tools that can be combined with redaction. Its cross‑format support, fine‑grained appearance controls, and audit‑ready metadata make it a reliable choice for regulated industries.
+
+- **Permanent removal** of text (HIPAA‑grade security).  
+- **Rich annotation ecosystem** – combine redaction with highlights, comments, and arrows.  
+- **Enterprise‑ready performance** – can handle 500‑page documents without loading the entire file into memory.  
+- **Cross‑format support** – works with PDFs, DOCX, PPTX, and image files.  
+- **Fine‑grained control** over appearance, opacity, and metadata.
 
 ## Prérequis et configuration de l’environnement
 
 ### Dépendances requises
-Ajoutez GroupDocs.Annotation à votre projet Maven. Conservez le fragment exactement tel qu’il est présenté :
+Add GroupDocs.Annotation to your Maven project. Keep the snippet exactly as shown:
 
 ```xml
 <repositories>
@@ -67,18 +132,19 @@ Ajoutez GroupDocs.Annotation à votre projet Maven. Conservez le fragment exacte
 ```
 
 ### Checklist de l’environnement de développement
-- **Java 8+** (Java 11+ recommandé).  
-- **Maven 3.6+** (ou l’équivalent Gradle).  
-- **IDE** avec support Maven (IntelliJ IDEA, Eclipse, VS Code).  
-- **PDF de test** contenant de vraies données sensibles pour une validation réaliste.
+- **Java 8+** (Java 11+ recommended).  
+- **Maven 3.6+** (or Gradle equivalent).  
+- **IDE** with Maven support (IntelliJ IDEA, Eclipse, VS Code).  
+- **Test PDFs** that contain real sensitive data for realistic validation.
 
 ### Considérations de licence
-Pour le développement et les tests, récupérez une [licence temporaire gratuite](https://purchase.groupdocs.com/temporary-license/). Les déploiements en production nécessitent une licence complète, mais la version d’essai vous donne l’ensemble complet des fonctionnalités pour l’évaluation.
+For development and testing, grab a [licence temporaire gratuite](https://purchase.groupdocs.com/temporary-license/). Production deployments require a full license, but the trial gives you the complete feature set for evaluation.
 
-## Comment caviarder un PDF avec Java avec GroupDocs.Annotation
+## Comment redacter un PDF avec Java et GroupDocs.Annotation ?
+Using GroupDocs.Annotation, you start by creating an `Annotator` instance that loads the target PDF, then define redaction annotations with precise coordinates and optional audit replies. After adding the annotations to the document, you save the file, which permanently removes the selected content and releases all resources.
 
-### Étape 1 : Initialiser l’annotateur PDF
-Créez une instance `Annotator` qui pointe vers le PDF que vous souhaitez protéger.
+### Étape 1 : Initialiser l’annotateur PDF
+The `Annotator` class is the entry point for all annotation operations in GroupDocs.Annotation. It loads a PDF into memory and prepares it for modifications.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -87,10 +153,10 @@ import com.groupdocs.annotation.Annotator;
 dual Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-> **Astuce :** Utilisez try‑with‑resources ou une libération explicite pour éviter les fuites de mémoire. Nous reviendrons plus tard sur le nettoyage approprié.
+> **Pro tip:** Use try‑with‑resources or explicit disposal to avoid memory leaks. We'll revisit proper cleanup later.
 
-### Étape 2 : Construire des réponses d’annotation pour une piste d’audit
-Documentez pourquoi chaque caviature a été effectuée en ajoutant des objets de réponse.
+### Étape 2 : Construire les réponses d’annotation pour une piste d’audit
+Document why each redaction was performed by adding reply objects. These replies become part of the document’s audit log, satisfying many compliance regimes.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -111,10 +177,8 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-Ces réponses deviennent partie du journal d’audit du document, répondant à de nombreux régimes de conformité.
-
-### Étape 3 : Définir des limites précises de la caviature
-Des coordonnées précises garantissent que le texte correct est supprimé. L’origine (0,0) est le coin supérieur gauche de la page.
+### Étape 3 : Définir des limites de redaction précises
+Accurate coordinates ensure the correct text is removed. The origin (0,0) is the top‑left corner of the page.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -133,10 +197,10 @@ points.add(point3);
 points.add(point4);
 ```
 
-> **Conseil :** Utilisez un visualiseur PDF qui affiche les coordonnées, ou créez une interface qui permet aux utilisateurs de cliquer pour capturer automatiquement les points.
+> **Tip:** Use a PDF viewer that displays coordinates, or build a UI that lets users click to capture points automatically.
 
-### Étape 4 : Créer l’annotation de caviature de texte
-Nous associons maintenant les coordonnées, les réponses d’audit et un message descriptif.
+### Étape 4 : Créer l’annotation de redaction de texte
+Now we bind the coordinates, audit replies, and a descriptive message together.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.TextRedactionAnnotation;
@@ -153,10 +217,10 @@ textRedaction.setReplies(replies);
 annotator.add(textRedaction);
 ```
 
-Le champ `setMessage()` enregistre la raison de la caviature sans exposer le contenu masqué.
+The `setMessage()` field records the reason for redaction without exposing the hidden content.
 
-### Étape 5 : Enregistrer le document caviardé et nettoyer
-Enregistrez les modifications et libérez les ressources.
+### Étape 5 : Enregistrer le document redacté et nettoyer
+Persist the changes and release resources.
 
 ```java
 // Save the annotated document
@@ -166,17 +230,17 @@ dual annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_output.pdf");
 dual annotator.dispose();
 ```
 
-> **Critique :** Appelez toujours `dispose()` (ou utilisez try‑with‑resources) pour libérer les descripteurs de fichiers et la mémoire.
+> **Critical:** Always call `dispose()` (or use try‑with‑resources) to free file handles and memory.
 
 ## Problèmes courants et solutions
 
 ### Les coordonnées ne correspondent pas aux zones attendues
-- **Cause :** Les créateurs de PDF peuvent utiliser des origines de coordonnées différentes.  
-- **Solution :** Vérifiez les coordonnées avec le même visualiseur que vous utiliserez en production, ou implémentez un outil d’aperçu qui permet aux utilisateurs d’ajuster finement les points.
+- **Cause:** PDF creators can use different coordinate origins.  
+- **Fix:** Verify coordinates with the same viewer you’ll use for production, or implement a preview tool that lets users fine‑tune points automatically.
 
 ### Fuites de mémoire dans les scénarios à haut volume
-- **Cause :** Les instances d’Annotator conservent les flux de fichiers.  
-- **Solution :** Utilisez try‑with‑resources pour garantir la libération :
+- **Cause:** Annotator instances hold onto file streams.  
+- **Fix:** Use try‑with‑resources to guarantee disposal:
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -185,14 +249,14 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 } // automatically disposed
 ```
 
-### Annotations non visibles après l’enregistrement
-- **Cause :** `add()` appelé après `save()`, ou coordonnées hors des limites de la page.  
-- **Solution :** Assurez‑vous que `add()` précède `save()`, et revérifiez que tous les points se trouvent dans les dimensions de la page.
+### Les annotations ne sont pas visibles après l’enregistrement
+- **Cause:** `add()` called after `save()`, or coordinates outside page bounds.  
+- **Fix:** Ensure `add()` precedes `save()`, and double‑check that all points lie within the page dimensions.
 
 ## Conseils d’optimisation des performances
 
 ### Stratégie de traitement par lots
-Réutilisez une seule instance d’annotateur lorsque vous devez traiter de nombreux fichiers.
+Reuse a single annotator instance when you need to process many files.
 
 ```java
 // Less efficient - creates new instances
@@ -214,32 +278,32 @@ try (Annotator annotator = new Annotator()) {
 ```
 
 ### Meilleures pratiques de gestion de la mémoire
-- Traitez les gros PDF par morceaux lorsque cela est possible.  
-- Définissez les limites du tas JVM (`-Xmx`) en fonction de la taille attendue du document.  
-- Surveillez l’utilisation du tas pendant les tests de charge pour déterminer les tailles de lot optimales.  
-- Utilisez les API de streaming pour les collections de documents massives.
+- Process large PDFs in chunks when possible.  
+- Set JVM heap limits (`-Xmx`) based on expected document size.  
+- Monitor heap usage during load testing to determine optimal batch sizes.  
+- Use streaming APIs for massive document collections.
 
 ## Considérations de sécurité pour les données sensibles
 
-### Vraie caviature vs. masquage visuel
-GroupDocs.Annotation supprime le texte du flux de contenu du PDF, garantissant que les données ne peuvent pas être récupérées avec des outils d’extraction de texte—une exigence pour HIPAA, GDPR et d’autres réglementations.
+### Vraie redaction vs. masquage visuel
+GroupDocs.Annotation removes the text from the PDF’s content stream, ensuring that the data cannot be recovered with text‑extraction tools—a must for HIPAA, GDPR, and other regulations.
 
 ### Hygiène des fichiers temporaires
-La bibliothèque peut écrire des fichiers temporaires pendant le traitement. Stockez‑les dans un répertoire sécurisé et non public et vérifiez qu’ils sont supprimés une fois l’opération terminée.
+The library may write temporary files during processing. Store these in a secure, non‑public directory and verify that they are deleted after the operation completes.
 
 ## Cas d’utilisation réels
 
 | Secteur | Scénario typique |
 |----------|-------------------|
-| **Juridique** | Suppression des informations privilégiées du client avant l’e‑discovery. |
-| **Santé** | Suppression des identifiants des patients des PDF de recherche. |
-| **Finance** | Nettoyage des rapports trimestriels avant leur diffusion publique. |
-| **Ressources humaines** | Caviature des données personnelles des employés dans les notes internes. |
+| **Legal** | Suppression des informations privilégiées du client avant l’e‑discovery. |
+| **Healthcare** | Suppression des identifiants patients des PDF de recherche. |
+| **Finance** | Nettoyage des rapports trimestriels avant diffusion publique. |
+| **Human resources** | Redaction des données personnelles des employés dans les mémos internes. |
 
 ## Personnalisation avancée
 
-### Apparence personnalisée de la caviature
-Contrôlez l’apparence de la caviature dans le PDF final.
+### Apparence personnalisée de la redaction
+Control how the redaction looks in the final PDF.
 
 ```java
 textRedaction.setBackgroundColor(Color.BLACK); // Solid black block
@@ -247,9 +311,9 @@ textRedaction.setOpacity(1.0); // Fully opaque
 ```
 
 ### Combinaison de plusieurs types d’annotation
-Vous pouvez ajouter des surlignages, des commentaires ou des flèches en plus des caviatures pour créer un flux de révision complet.
+You can add highlights, comments, or arrows alongside redactions to create a comprehensive review workflow.
 
-## Gestion des erreurs en production
+## Gestion des erreurs pour la production
 
 ```java
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -261,27 +325,39 @@ try (Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-Enregistrer chaque événement de caviature—y compris le nom du document, les horodatages et l’ID utilisateur—crée une piste d’audit robuste.
+Logging each redaction event—including document name, timestamps, and user ID—creates a robust audit trail.
 
 ## Questions fréquemment posées
 
-**Q : Le texte caviardé est‑il supprimé de façon permanente ?**  
-R : Oui. GroupDocs.Annotation supprime le texte de la structure interne du PDF, il ne peut donc pas être récupéré avec des outils d’extraction standards.
+**Q : Le texte redacté est‑il définitivement supprimé ?**  
+A : Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure, so it cannot be recovered with standard extraction tools.
 
-**Q : Puis‑je annuler une caviature après que le fichier a été enregistré ?**  
-R : Non. La caviature est irréversible par conception pour répondre aux exigences de conformité. Conservez une copie originale si vous devez consulter le contenu non caviardé plus tard.
+**Q : Puis‑je annuler une redaction après l’enregistrement du fichier ?**  
+A : No. Redaction is irreversible by design to meet compliance requirements. Keep an original copy if you need to reference the unredacted content later.
 
-**Q : La bibliothèque prend‑elle en charge les PDF numérisés ?**  
-R : Les PDF numérisés sont des images ; vous devez d’abord intégrer l’OCR pour localiser le texte avant d’appliquer la caviature. GroupDocs propose un module OCR qui fonctionne parfaitement.
+**Q : La bibliothèque prend‑elle en charge les PDF scannés ?**  
+A : Scanned PDFs are images; you’ll need OCR integration first to locate text before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
 
 **Q : Comment les performances évoluent‑elles avec de gros documents ?**  
-R : Le temps de traitement augmente approximativement de façon linéaire avec le nombre de pages et le nombre d’annotations. Pour des documents de plus de 100 pages, envisagez un traitement asynchrone et un reporting de progression.
+A : Processing time grows roughly linearly with page count and annotation count. For documents over 100 pages, consider asynchronous processing and progress reporting.
 
-**Q : Puis‑je stocker les PDF dans un stockage cloud (p. ex. AWS S3) et continuer à utiliser l’API ?**  
-R : Oui. Tant que le runtime Java peut accéder au flux de fichier—soit en montant le bucket, soit en le téléchargeant dans un emplacement temporaire—l’API fonctionne de la même manière.
+**Q : Puis‑je stocker les PDF dans un stockage cloud (par ex., AWS S3) et toujours utiliser l’API ?**  
+A : Yes. As long as the Java runtime can access the file stream—either by mounting the bucket or downloading to a temporary location—the API works identically.
 
 ---
 
-**Dernière mise à jour :** 2026-02-18  
-**Testé avec :** GroupDocs.Annotation 25.2  
-**Auteur :** GroupDocs
+**Last updated:** 2026-08-09  
+**Tested with:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
+
+## Tutoriels associés
+
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
+- [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/)
+- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
