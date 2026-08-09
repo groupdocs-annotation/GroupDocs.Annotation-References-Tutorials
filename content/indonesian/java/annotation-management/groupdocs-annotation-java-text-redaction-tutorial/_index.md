@@ -1,61 +1,118 @@
 ---
 categories:
 - Java Development
-date: '2026-02-18'
-description: Pelajari cara menyunting PDF menggunakan Java dengan GroupDocs.Annotation.
-  Panduan langkah demi langkah ini mencakup pengaturan, implementasi, pemrosesan batch,
-  dan praktik terbaik untuk melindungi data sensitif.
-keywords: how to redact pdf, PDF text redaction Java, GroupDocs annotation tutorial,
-  Java PDF redaction library, PDF annotation management Java, GroupDocs annotation
-  Maven setup
-lastmod: '2026-02-18'
-linktitle: How to redact pdf using java Tutorial
+date: '2026-08-09'
+description: Pelajari redaksi PDF aman di Java dengan GroupDocs.Annotation. Panduan
+  langkah‑demi‑langkah ini menunjukkan cara menghapus konten PDF sensitif, memproses
+  file secara batch, dan mengikuti best‑practice security measures.
+keywords:
+- secure pdf redaction
+- remove sensitive pdf
+- GroupDocs.Annotation Java
+- pdf redaction library
+- Java document privacy
+lastmod: '2026-08-09'
+linktitle: Cara meredaksi PDF menggunakan Java Tutorial
+og_description: Redaksi PDF aman di Java dengan GroupDocs.Annotation. Ikuti panduan
+  ini untuk menghapus konten PDF sensitif, menangani batch jobs, dan memenuhi compliance
+  requirements.
+og_image_alt: 'Developer guide: secure PDF redaction using GroupDocs.Annotation in
+  Java'
+og_title: Redaksi PDF aman di Java – tutorial GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-09'
+  description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  headline: Secure pdf redaction in Java – GroupDocs tutorial
+  type: TechArticle
+- description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  name: Secure pdf redaction in Java – GroupDocs tutorial
+  steps:
+  - name: Initialize the PDF annotator
+    text: The `Annotator` class is the entry point for all annotation operations in
+      GroupDocs.Annotation. It loads a PDF into memory and prepares it for modifications.
+      > **Pro tip:** Use try‑with‑resources or explicit disposal to avoid memory leaks.
+      We'll revisit proper cleanup later.
+  - name: Build annotation replies for an audit trail
+    text: Document why each redaction was performed by adding reply objects. These
+      replies become part of the document’s audit log, satisfying many compliance
+      regimes.
+  - name: Define precise redaction boundaries
+    text: Accurate coordinates ensure the correct text is removed. The origin (0,0)
+      is the top‑left corner of the page. > **Tip:** Use a PDF viewer that displays
+      coordinates, or build a UI that lets users click to capture points automatically.
+  - name: Create the text redaction annotation
+    text: Now we bind the coordinates, audit replies, and a descriptive message together.
+      The `setMessage()` field records the reason for redaction without exposing the
+      hidden content.
+  - name: Save the redacted document and clean up
+    text: Persist the changes and release resources. > **Critical:** Always call `dispose()`
+      (or use try‑with‑resources) to free file handles and memory.
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure,
+      so it cannot be recovered with standard extraction tools.
+    question: Is the redacted text permanently removed?
+  - answer: No. Redaction is irreversible by design to meet compliance requirements.
+      Keep an original copy if you need to reference the unredacted content later.
+    question: Can I undo a redaction after the file is saved?
+  - answer: Scanned PDFs are images; you’ll need OCR integration first to locate text
+      before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
+    question: Does the library support scanned PDFs?
+  - answer: Processing time grows roughly linearly with page count and annotation
+      count. For documents over 100 pages, consider asynchronous processing and progress
+      reporting.
+    question: How does performance scale with large documents?
+  - answer: Yes. As long as the Java runtime can access the file stream—either by
+      mounting the bucket or downloading to a temporary location—the API works identically.
+    question: Can I store PDFs in cloud storage (e.g., AWS S3) and still use the API?
+  type: FAQPage
 tags:
-- pdf-processing
-- document-annotation
-- data-privacy
-- java-libraries
-title: Cara menyensor PDF menggunakan Java – Tutorial Lengkap GroupDocs
+- secure pdf redaction
+- GroupDocs
+- Java PDF redaction
+- data privacy
+title: Redaksi PDF aman di Java – tutorial GroupDocs
 type: docs
 url: /id/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/
 weight: 1
 ---
 
- markdown links: only the free temporary license link.
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Check for any images: none.
+# Redaksi PDF yang aman di Java – Tutorial GroupDocs
 
-Check for any shortcodes: none.
+Jika Anda perlu **secure pdf redaction** di Java, Anda berada di panduan yang tepat. Baik Anda sedang membersihkan kontrak hukum, menghapus pengidentifikasi pasien dari rekam medis, atau menyembunyikan data bisnis rahasia, tutorial ini akan memandu Anda melalui solusi siap produksi dengan GroupDocs.Annotation. Anda akan melihat cara menyiapkan lingkungan, menerapkan anotasi redaksi, memproses file secara massal, dan menghindari jebakan umum—sehingga Anda dapat melindungi data sensitif dengan percaya diri.
 
-Check for code blocks: placeholders.
+## Jawaban Cepat
+- **What library handles PDF redaction in Java?** GroupDocs.Annotation Java API.  
+- **Is the redaction permanent?** Yes – the underlying text is removed, not just hidden.  
+- **Do I need a license for production?** A full license is required; a free temporary license is available for testing.  
+- **Can I process many files at once?** Absolutely – batch processing and resource reuse are covered.  
+- **What Java version is recommended?** Java 11+ for optimal performance and security.
 
-All good.
+## Apa itu redaksi PDF yang aman dan mengapa menggunakan GroupDocs.Annotation?
+Redaksi PDF yang aman adalah proses menghapus atau menyamarkan konten sensitif secara permanen dari PDF sehingga tidak dapat dipulihkan. GroupDocs.Annotation menyediakan redaksi sejati, balasan audit‑ready, dan dukungan untuk lebih dari 30 jenis anotasi, menjadikannya ideal untuk industri yang berorientasi pada kepatuhan.
 
-Now produce final content.# Cara menyensor pdf menggunakan java – Tutorial Lengkap GroupDocs
+## Mengapa memilih GroupDocs.Annotation untuk redaksi PDF?
+GroupDocs.Annotation dirancang untuk kebutuhan redaksi perusahaan, menawarkan penghapusan teks yang sesungguhnya, pemrosesan berperforma tinggi untuk dokumen besar, dan rangkaian alat anotasi yang kaya yang dapat digabungkan dengan redaksi. Dukungan lintas format, kontrol tampilan yang halus, dan metadata audit‑ready menjadikannya pilihan andal untuk industri yang diatur.
 
-Jika Anda perlu **menyensor pdf menggunakan java**, Anda berada di tempat yang tepat. Baik Anda sedang membersihkan kontrak hukum, rekam medis, atau laporan bisnis rahasia, tutorial ini akan memandu Anda melalui solusi siap produksi dengan GroupDocs.Annotation. Kami akan membahas semuanya mulai dari penyiapan lingkungan hingga pemrosesan batch, pertimbangan keamanan, dan tip pemecahan masalah—sehingga Anda dapat melindungi data sensitif dengan percaya diri.
+- **Permanent removal** of text (HIPAA‑grade security).  
+- **Rich annotation ecosystem** – combine redaction with highlights, comments, and arrows.  
+- **Enterprise‑ready performance** – can handle 500‑page documents without loading the entire file into memory.  
+- **Cross‑format support** – works with PDFs, DOCX, PPTX, and image files.  
+- **Fine‑grained control** over appearance, opacity, and metadata.
 
-## Quick Answers
-- **Perpustakaan apa yang menangani penyensoran PDF di Java?** GroupDocs.Annotation Java API.  
-- **Apakah penyensoran bersifat permanen?** Ya – teks yang mendasarinya dihapus, bukan hanya disembunyikan.  
-- **Apakah saya memerlukan lisensi untuk produksi?** Lisensi penuh diperlukan; lisensi sementara gratis tersedia untuk pengujian.  
-- **Bisakah saya memproses banyak file sekaligus?** Tentu – pemrosesan batch dan penggunaan kembali sumber daya dibahas.  
-- **Versi Java apa yang direkomendasikan?** Java 11+ untuk kinerja dan keamanan optimal.
+## Prasyarat dan penyiapan lingkungan
 
-## What is PDF Redaction and Why Use GroupDocs.Annotation?
-Penyensoran PDF adalah proses menghapus atau menyamarkan konten sensitif secara permanen dari sebuah dokumen. GroupDocs.Annotation unggul karena menyediakan **penyensoran sejati**, balasan siap audit, dan dukungan untuk berbagai jenis anotasi—semua penting untuk industri yang berorientasi pada kepatuhan.
-
-## Why Choose GroupDocs.Annotation for PDF Redaction?
-- **Penghapusan permanen** teks (keamanan setara HIPAA).  
-- **Ekosistem anotasi kaya** – gabungkan penyensoran dengan sorotan, komentar, dan panah.  
-- **Kinerja siap perusahaan** untuk beban kerja volume tinggi.  
-- **Dukungan lintas format** – tidak terbatas pada PDF.  
-- **Kontrol detail** atas tampilan, opasitas, dan metadata.
-
-## Prerequisites and Environment Setup
-
-### Required Dependencies
-Tambahkan GroupDocs.Annotation ke proyek Maven Anda. Pertahankan potongan kode persis seperti yang ditampilkan:
+### Ketergantungan yang diperlukan
+Add GroupDocs.Annotation to your Maven project. Keep the snippet exactly as shown:
 
 ```xml
 <repositories>
@@ -74,19 +131,20 @@ Tambahkan GroupDocs.Annotation ke proyek Maven Anda. Pertahankan potongan kode p
 </dependencies>
 ```
 
-### Development Environment Checklist
-- **Java 8+** (Java 11+ direkomendasikan).  
-- **Maven 3.6+** (atau setara Gradle).  
-- **IDE** dengan dukungan Maven (IntelliJ IDEA, Eclipse, VS Code).  
-- **PDF uji** yang berisi data sensitif nyata untuk validasi realistis.
+### Daftar periksa lingkungan pengembangan
+- **Java 8+** (Java 11+ recommended).  
+- **Maven 3.6+** (or Gradle equivalent).  
+- **IDE** with Maven support (IntelliJ IDEA, Eclipse, VS Code).  
+- **Test PDFs** that contain real sensitive data for realistic validation.
 
-### Licensing Considerations
-Untuk pengembangan dan pengujian, dapatkan [lisensi sementara gratis](https://purchase.groupdocs.com/temporary-license/). Penyebaran produksi memerlukan lisensi penuh, tetapi percobaan memberikan Anda semua fitur lengkap untuk evaluasi.
+### Pertimbangan lisensi
+For development and testing, grab a [free temporary license](https://purchase.groupdocs.com/temporary-license/). Production deployments require a full license, but the trial gives you the complete feature set for evaluation.
 
-## Cara menyensor pdf menggunakan java dengan GroupDocs.Annotation
+## Cara meredaksi PDF menggunakan Java dengan GroupDocs.Annotation?
+Using GroupDocs.Annotation, you start by creating an `Annotator` instance that loads the target PDF, then define redaction annotations with precise coordinates and optional audit replies. After adding the annotations to the document, you save the file, which permanently removes the selected content and releases all resources.
 
-### Step 1: Initialize the PDF Annotator
-Buat instance `Annotator` yang menunjuk ke PDF yang ingin Anda lindungi.
+### Langkah 1: Inisialisasi annotator PDF
+The `Annotator` class is the entry point for all annotation operations in GroupDocs.Annotation. It loads a PDF into memory and prepares it for modifications.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -95,10 +153,10 @@ import com.groupdocs.annotation.Annotator;
 dual Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-> **Tip pro:** Gunakan try‑with‑resources atau pembuangan eksplisit untuk menghindari kebocoran memori. Kami akan meninjau pembersihan yang tepat nanti.
+> **Pro tip:** Use try‑with‑resources or explicit disposal to avoid memory leaks. We'll revisit proper cleanup later.
 
-### Step 2: Build Annotation Replies for an Audit Trail
-Dokumentasikan mengapa setiap penyensoran dilakukan dengan menambahkan objek balasan.
+### Langkah 2: Buat balasan anotasi untuk jejak audit
+Document why each redaction was performed by adding reply objects. These replies become part of the document’s audit log, satisfying many compliance regimes.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -119,10 +177,8 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-Balasan ini menjadi bagian dari log audit dokumen, memenuhi banyak regulasi kepatuhan.
-
-### Step 3: Define Precise Redaction Boundaries
-Koordinat yang akurat memastikan teks yang tepat dihapus. Asal (0,0) berada di sudut kiri‑atas halaman.
+### Langkah 3: Tentukan batas redaksi yang tepat
+Accurate coordinates ensure the correct text is removed. The origin (0,0) is the top‑left corner of the page.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -141,10 +197,10 @@ points.add(point3);
 points.add(point4);
 ```
 
-> **Tip:** Gunakan penampil PDF yang menampilkan koordinat, atau buat UI yang memungkinkan pengguna mengklik untuk menangkap titik secara otomatis.
+> **Tip:** Use a PDF viewer that displays coordinates, or build a UI that lets users click to capture points automatically.
 
-### Step 4: Create the Text Redaction Annotation
-Sekarang kami mengikat koordinat, balasan audit, dan pesan deskriptif bersama-sama.
+### Langkah 4: Buat anotasi redaksi teks
+Now we bind the coordinates, audit replies, and a descriptive message together.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.TextRedactionAnnotation;
@@ -161,10 +217,10 @@ textRedaction.setReplies(replies);
 annotator.add(textRedaction);
 ```
 
-Field `setMessage()` mencatat alasan penyensoran tanpa menampilkan konten yang disembunyikan.
+The `setMessage()` field records the reason for redaction without exposing the hidden content.
 
-### Step 5: Save the Redacted Document and Clean Up
-Simpan perubahan dan lepaskan sumber daya.
+### Langkah 5: Simpan dokumen yang telah diredaksi dan bersihkan
+Persist the changes and release resources.
 
 ```java
 // Save the annotated document
@@ -174,17 +230,17 @@ dual annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_output.pdf");
 dual annotator.dispose();
 ```
 
-> **Kritis:** Selalu panggil `dispose()` (atau gunakan try‑with‑resources) untuk membebaskan handle file dan memori.
+> **Critical:** Always call `dispose()` (or use try‑with‑resources) to free file handles and memory.
 
-## Common Issues and Solutions
+## Masalah umum dan solusi
 
-### Coordinates Don’t Match Expected Areas
-- **Penyebab:** Pembuat PDF dapat menggunakan asal koordinat yang berbeda.  
-- **Solusi:** Verifikasi koordinat dengan penampil yang sama yang akan Anda gunakan untuk produksi, atau implementasikan alat pratinjau yang memungkinkan pengguna menyesuaikan titik secara halus.
+### Koordinat tidak cocok dengan area yang diharapkan
+- **Cause:** PDF creators can use different coordinate origins.  
+- **Fix:** Verify coordinates with the same viewer you’ll use for production, or implement a preview tool that lets users fine‑tune points automatically.
 
-### Memory Leaks in High‑Volume Scenarios
-- **Penyebab:** Instance Annotator menahan aliran file.  
-- **Solusi:** Gunakan try‑with‑resources untuk menjamin pembuangan:
+### Kebocoran memori dalam skenario volume tinggi
+- **Cause:** Annotator instances hold onto file streams.  
+- **Fix:** Use try‑with‑resources to guarantee disposal:
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -193,14 +249,14 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 } // automatically disposed
 ```
 
-### Annotations Not Visible After Saving
-- **Penyebab:** `add()` dipanggil setelah `save()`, atau koordinat di luar batas halaman.  
-- **Solusi:** Pastikan `add()` dipanggil sebelum `save()`, dan periksa kembali bahwa semua titik berada dalam dimensi halaman.
+### Anotasi tidak terlihat setelah disimpan
+- **Cause:** `add()` called after `save()`, or coordinates outside page bounds.  
+- **Fix:** Ensure `add()` precedes `save()`, and double‑check that all points lie within the page dimensions.
 
-## Performance Optimization Tips
+## Tips optimasi kinerja
 
-### Batch Processing Strategy
-Gunakan kembali satu instance annotator ketika Anda perlu memproses banyak file.
+### Strategi pemrosesan batch
+Reuse a single annotator instance when you need to process many files.
 
 ```java
 // Less efficient - creates new instances
@@ -221,43 +277,43 @@ try (Annotator annotator = new Annotator()) {
 }
 ```
 
-### Memory Management Best Practices
-- Proses PDF besar dalam potongan bila memungkinkan.  
-- Atur batas heap JVM (`-Xmx`) berdasarkan ukuran dokumen yang diharapkan.  
-- Pantau penggunaan heap selama pengujian beban untuk menentukan ukuran batch optimal.  
-- Gunakan API streaming untuk koleksi dokumen yang sangat besar.
+### Praktik terbaik manajemen memori
+- Process large PDFs in chunks when possible.  
+- Set JVM heap limits (`-Xmx`) based on expected document size.  
+- Monitor heap usage during load testing to determine optimal batch sizes.  
+- Use streaming APIs for massive document collections.
 
-## Security Considerations for Sensitive Data
+## Pertimbangan keamanan untuk data sensitif
 
-### True Redaction vs. Visual Hiding
-GroupDocs.Annotation menghapus teks dari aliran konten PDF, memastikan data tidak dapat dipulihkan dengan alat ekstraksi teks—harus untuk HIPAA, GDPR, dan regulasi lainnya.
+### Redaksi sejati vs. penyembunyian visual
+GroupDocs.Annotation removes the text from the PDF’s content stream, ensuring that the data cannot be recovered with text‑extraction tools—a must for HIPAA, GDPR, and other regulations.
 
-### Temporary File Hygiene
-Perpustakaan dapat menulis file sementara selama pemrosesan. Simpan file tersebut di direktori yang aman dan tidak publik serta pastikan mereka dihapus setelah operasi selesai.
+### Kebersihan file sementara
+The library may write temporary files during processing. Store these in a secure, non‑public directory and verify that they are deleted after the operation completes.
 
-## Real‑World Use Cases
+## Kasus penggunaan dunia nyata
 
-| Industri | Skenario Umum |
+| Industri | Skenario umum |
 |----------|-------------------|
-| **Legal** | Menghapus informasi klien yang memiliki hak istimewa sebelum e‑discovery. |
-| **Healthcare** | Menghilangkan pengidentifikasi pasien dari PDF penelitian. |
-| **Finance** | Menyaring laporan triwulanan sebelum dirilis ke publik. |
-| **Human Resources** | Menyensor data pribadi karyawan dalam memo internal. |
+| **Hukum** | Menghapus informasi klien yang bersifat istimewa sebelum e‑discovery. |
+| **Kesehatan** | Menghapus identifikasi pasien dari PDF penelitian. |
+| **Keuangan** | Membersihkan laporan triwulanan sebelum dirilis ke publik. |
+| **Sumber Daya Manusia** | Meredaksi data pribadi karyawan dalam memo internal. |
 
-## Advanced Customization
+## Kustomisasi lanjutan
 
-### Custom Redaction Appearance
-Kontrol bagaimana penyensoran terlihat dalam PDF akhir.
+### Penampilan redaksi khusus
+Control how the redaction looks in the final PDF.
 
 ```java
 textRedaction.setBackgroundColor(Color.BLACK); // Solid black block
 textRedaction.setOpacity(1.0); // Fully opaque
 ```
 
-### Combining Multiple Annotation Types
-Anda dapat menambahkan sorotan, komentar, atau panah bersamaan dengan penyensoran untuk membuat alur kerja tinjauan yang komprehensif.
+### Menggabungkan beberapa jenis anotasi
+You can add highlights, comments, or arrows alongside redactions to create a comprehensive review workflow.
 
-## Error Handling for Production
+## Penanganan kesalahan untuk produksi
 
 ```java
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -269,27 +325,36 @@ try (Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-Mencatat setiap peristiwa penyensoran—termasuk nama dokumen, stempel waktu, dan ID pengguna—membuat jejak audit yang kuat.
+Logging each redaction event—including document name, timestamps, and user ID—creates a robust audit trail.
 
-## Frequently Asked Questions
+## Pertanyaan yang sering diajukan
 
-**T: Apakah teks yang disensor dihapus secara permanen?**  
-J: Ya. GroupDocs.Annotation menghapus teks dari struktur internal PDF, sehingga tidak dapat dipulihkan dengan alat ekstraksi standar.
+**Q: Is the redacted text permanently removed?**  
+A: Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure, so it cannot be recovered with standard extraction tools.
 
-**T: Bisakah saya membatalkan penyensoran setelah file disimpan?**  
-J: Tidak. Penyensoran tidak dapat dibatalkan secara desain untuk memenuhi persyaratan kepatuhan. Simpan salinan asli jika Anda perlu merujuk konten yang tidak disensor nanti.
+**Q: Can I undo a redaction after the file is saved?**  
+A: No. Redaction is irreversible by design to meet compliance requirements. Keep an original copy if you need to reference the unredacted content later.
 
-**T: Apakah perpustakaan mendukung PDF yang dipindai?**  
-J: PDF yang dipindai adalah gambar; Anda perlu integrasi OCR terlebih dahulu untuk menemukan teks sebelum menerapkan penyensoran. GroupDocs menawarkan add‑on OCR yang bekerja mulus.
+**Q: Does the library support scanned PDFs?**  
+A: Scanned PDFs are images; you’ll need OCR integration first to locate text before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
 
-**T: Bagaimana kinerja skala dengan dokumen besar?**  
-J: Waktu pemrosesan meningkat kira-kira secara linear dengan jumlah halaman dan anotasi. Untuk dokumen lebih dari 100 halaman, pertimbangkan pemrosesan asinkron dan pelaporan kemajuan.
+**Q: How does performance scale with large documents?**  
+A: Processing time grows roughly linearly with page count and annotation count. For documents over 100 pages, consider asynchronous processing and progress reporting.
 
-**T: Bisakah saya menyimpan PDF di penyimpanan cloud (misalnya, AWS S3) dan tetap menggunakan API?**  
-J: Ya. Selama runtime Java dapat mengakses aliran file—baik dengan memasang bucket atau mengunduh ke lokasi sementara—API berfungsi secara identik.
+**Q: Can I store PDFs in cloud storage (e.g., AWS S3) and still use the API?**  
+A: Yes. As long as the Java runtime can access the file stream—either by mounting the bucket or downloading to a temporary location—the API works identically.
 
----
+**Last updated:** 2026-08-09  
+**Tested with:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
 
-**Terakhir Diperbarui:** 2026-02-18  
-**Diuji Dengan:** GroupDocs.Annotation 25.2  
-**Penulis:** GroupDocs
+## Tutorial Terkait
+
+- [Muat PDF Java dengan GroupDocs Annotation: Panduan Memuat Dokumen](/annotation/java/document-loading/)
+- [Muat PDF yang Dilindungi Kata Sandi dengan GroupDocs.Annotation Java](/annotation/java/advanced-features/)
+- [Panduan Lengkap - Cara Menyimpan PDF Beranotasi dengan GroupDocs.Annotation untuk Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

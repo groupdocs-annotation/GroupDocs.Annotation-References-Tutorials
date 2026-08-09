@@ -1,53 +1,118 @@
 ---
 categories:
 - Java Development
-date: '2026-02-18'
-description: تعلم كيفية تعديل ملفات PDF باستخدام Java مع GroupDocs.Annotation. يغطي
-  هذا الدليل خطوة بخطوة الإعداد، التنفيذ، المعالجة الدفعية، وأفضل الممارسات لحماية
-  البيانات الحساسة.
-keywords: how to redact pdf, PDF text redaction Java, GroupDocs annotation tutorial,
-  Java PDF redaction library, PDF annotation management Java, GroupDocs annotation
-  Maven setup
-lastmod: '2026-02-18'
-linktitle: How to redact pdf using java Tutorial
+date: '2026-08-09'
+description: تعلم كيفية إزالة المعلومات الحساسة من ملفات PDF بأمان في Java باستخدام
+  GroupDocs.Annotation. يوضح لك هذا الدليل خطوة بخطوة كيفية حذف المحتوى الحساس من
+  PDF، ومعالجة الملفات على دفعات، واتباع أفضل ممارسات الأمان.
+keywords:
+- secure pdf redaction
+- remove sensitive pdf
+- GroupDocs.Annotation Java
+- pdf redaction library
+- Java document privacy
+lastmod: '2026-08-09'
+linktitle: كيفية إزالة معلومات حساسة من PDF باستخدام Java – دليل
+og_description: إزالة معلومات حساسة من PDF بأمان في Java باستخدام GroupDocs.Annotation.
+  اتبع هذا الدليل لحذف المحتوى الحساس من PDF، ومعالجة الوظائف على دفعات، وتلبية متطلبات
+  الامتثال.
+og_image_alt: 'Developer guide: secure PDF redaction using GroupDocs.Annotation in
+  Java'
+og_title: إزالة حساسة للـ PDF بأمان في Java – دليل GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-09'
+  description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  headline: Secure pdf redaction in Java – GroupDocs tutorial
+  type: TechArticle
+- description: Learn secure pdf redaction in Java with GroupDocs.Annotation. This
+    step‑by‑step guide shows you how to remove sensitive pdf content, batch process
+    files, and follow best‑practice security measures.
+  name: Secure pdf redaction in Java – GroupDocs tutorial
+  steps:
+  - name: Initialize the PDF annotator
+    text: The `Annotator` class is the entry point for all annotation operations in
+      GroupDocs.Annotation. It loads a PDF into memory and prepares it for modifications.
+      > **Pro tip:** Use try‑with‑resources or explicit disposal to avoid memory leaks.
+      We'll revisit proper cleanup later.
+  - name: Build annotation replies for an audit trail
+    text: Document why each redaction was performed by adding reply objects. These
+      replies become part of the document’s audit log, satisfying many compliance
+      regimes.
+  - name: Define precise redaction boundaries
+    text: Accurate coordinates ensure the correct text is removed. The origin (0,0)
+      is the top‑left corner of the page. > **Tip:** Use a PDF viewer that displays
+      coordinates, or build a UI that lets users click to capture points automatically.
+  - name: Create the text redaction annotation
+    text: Now we bind the coordinates, audit replies, and a descriptive message together.
+      The `setMessage()` field records the reason for redaction without exposing the
+      hidden content.
+  - name: Save the redacted document and clean up
+    text: Persist the changes and release resources. > **Critical:** Always call `dispose()`
+      (or use try‑with‑resources) to free file handles and memory.
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Annotation deletes the text from the PDF’s internal structure,
+      so it cannot be recovered with standard extraction tools.
+    question: Is the redacted text permanently removed?
+  - answer: No. Redaction is irreversible by design to meet compliance requirements.
+      Keep an original copy if you need to reference the unredacted content later.
+    question: Can I undo a redaction after the file is saved?
+  - answer: Scanned PDFs are images; you’ll need OCR integration first to locate text
+      before applying redaction. GroupDocs offers an OCR add‑on that works seamlessly.
+    question: Does the library support scanned PDFs?
+  - answer: Processing time grows roughly linearly with page count and annotation
+      count. For documents over 100 pages, consider asynchronous processing and progress
+      reporting.
+    question: How does performance scale with large documents?
+  - answer: Yes. As long as the Java runtime can access the file stream—either by
+      mounting the bucket or downloading to a temporary location—the API works identically.
+    question: Can I store PDFs in cloud storage (e.g., AWS S3) and still use the API?
+  type: FAQPage
 tags:
-- pdf-processing
-- document-annotation
-- data-privacy
-- java-libraries
-title: كيفية إخفاء محتوى PDF باستخدام Java – دليل GroupDocs الكامل
+- secure pdf redaction
+- GroupDocs
+- Java PDF redaction
+- data privacy
+title: إزالة حساسة للـ PDF بأمان في Java – دليل GroupDocs
 type: docs
 url: /ar/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/
 weight: 1
 ---
 
-# كيفية إخفاء محتوى PDF باستخدام Java – دليل GroupDocs الكامل
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-إذا كنت بحاجة إلى **إخفاء محتوى PDF باستخدام Java**، فقد وصلت إلى المكان الصحيح. سواءً كنت تقوم بتنظيف العقود القانونية، أو السجلات الطبية، أو التقارير التجارية السرية، فإن هذا الدليل يشرح لك حلاً جاهزًا للإنتاج باستخدام GroupDocs.Annotation. سنغطي كل شيء من إعداد البيئة إلى المعالجة الدفعية، واعتبارات الأمان، ونصائح استكشاف الأخطاء وإصلاحها—حتى تتمكن من حماية البيانات الحساسة بثقة.
+# تعديل PDF بأمان في Java – دليل GroupDocs
+
+إذا كنت بحاجة إلى **تعديل PDF بأمان** في Java، فقد وجدت الدليل المناسب. سواءً كنت تقوم بتنظيف العقود القانونية، أو إزالة معرفات المرضى من السجلات الطبية، أو إخفاء بيانات الأعمال السرية، فإن هذا الدرس يشرح لك حلاً جاهزًا للإنتاج باستخدام GroupDocs.Annotation. ستتعرف على كيفية إعداد البيئة، تطبيق تعليقات التعديل، معالجة الملفات بالجملة، وتجنب المشكلات الشائعة—لتتمكن من حماية البيانات الحساسة بثقة.
 
 ## إجابات سريعة
-- **ما المكتبة التي تتعامل مع إخفاء محتوى PDF في Java؟** GroupDocs.Annotation Java API.  
-- **هل الإخفاء دائم؟** نعم – يتم إزالة النص الأساسي، وليس مجرد إخفائه.  
-- **هل أحتاج إلى ترخيص للإنتاج؟** يلزم الحصول على ترخيص كامل؛ يتوفر ترخيص مؤقت مجاني للاختبار.  
-- **هل يمكنني معالجة ملفات متعددة في آن واحد؟** بالتأكيد – تم تغطية المعالجة الدفعية وإعادة استخدام الموارد.  
-- **ما نسخة Java الموصى بها؟** Java 11+ لأداء وأمان مثاليين.
+- **ما المكتبة التي تتعامل مع تعديل PDF في Java؟** GroupDocs.Annotation Java API.  
+- **هل التعديل دائم؟** نعم – يتم إزالة النص الأساسي، وليس مجرد إخفائه.  
+- **هل أحتاج إلى ترخيص للإنتاج؟** يلزم ترخيص كامل؛ يتوفر ترخيص مؤقت مجاني للاختبار.  
+- **هل يمكنني معالجة ملفات متعددة في آن واحد؟** بالطبع – يتم تغطية المعالجة الدفعية وإعادة استخدام الموارد.  
+- **ما نسخة Java الموصى بها؟** Java 11+ لأفضل أداء وأمان.
 
-## ما هو إخفاء محتوى PDF ولماذا نستخدم GroupDocs.Annotation؟
+## ما هو تعديل PDF بأمان ولماذا نستخدم GroupDocs.Annotation؟
+تعديل PDF بأمان هو عملية حذف أو إخفاء المحتوى الحساس من ملف PDF بشكل دائم بحيث لا يمكن استعادته. يوفر GroupDocs.Annotation تعديلًا حقيقيًا، ردود تدقيق جاهزة، ودعمًا لأكثر من 30 نوعًا من التعليقات، مما يجعله مثاليًا للقطاعات التي تتطلب الامتثال.
 
-إخفاء محتوى PDF هو عملية إزالة أو إخفاء المحتوى الحساس من المستند بشكل دائم. تتفوق GroupDocs.Annotation لأنها توفر **إخفاءً حقيقيًا**، وردود جاهزة للتدقيق، ودعمًا لأنواع متعددة من التعليقات—وكل ذلك أساسي للصناعات التي تعتمد على الامتثال.
-
-## لماذا تختار GroupDocs.Annotation لإخفاء محتوى PDF؟
+## لماذا نختار GroupDocs.Annotation لتعديل PDF؟
+تم تصميم GroupDocs.Annotation لتلبية احتياجات التعديل المؤسسية، حيث يقدم إزالة حقيقية للنص، معالجة عالية الأداء للمستندات الكبيرة، ومجموعة غنية من أدوات التعليق التي يمكن دمجها مع التعديل. يدعم صيغًا متعددة، تحكمًا دقيقًا في المظهر، وبيانات تدقيق جاهزة، مما يجعله خيارًا موثوقًا للقطاعات المنظمة.
 
 - **إزالة دائمة** للنص (أمان بمستوى HIPAA).  
-- **نظام تعليقات غني** – دمج الإخفاء مع التظليل، التعليقات، والأسهم.  
-- **أداء جاهز للمؤسسات** للعبء العالي.  
-- **دعم صيغ متعددة** – ليس مقصورًا على PDFs.  
+- **نظام تعليقات غني** – دمج التعديل مع التظليل، التعليقات، والأسهم.  
+- **أداء مؤسسي** – يمكنه التعامل مع مستندات من 500 صفحة دون تحميل الملف بالكامل في الذاكرة.  
+- **دعم صيغ متعددة** – يعمل مع PDFs، DOCX، PPTX، وملفات الصور.  
 - **تحكم دقيق** في المظهر، الشفافية، والبيانات الوصفية.
 
 ## المتطلبات المسبقة وإعداد البيئة
 
 ### الاعتمادات المطلوبة
-أضف GroupDocs.Annotation إلى مشروع Maven الخاص بك. احتفظ بالمقتطف كما هو بالضبط:
+أضف GroupDocs.Annotation إلى مشروع Maven الخاص بك. احتفظ بالمقتطف كما هو موضح:
 
 ```xml
 <repositories>
@@ -70,15 +135,16 @@ weight: 1
 - **Java 8+** (يوصى بـ Java 11+).  
 - **Maven 3.6+** (أو ما يعادله في Gradle).  
 - **IDE** يدعم Maven (IntelliJ IDEA، Eclipse، VS Code).  
-- **ملفات PDF للاختبار** التي تحتوي على بيانات حساسة حقيقية للتحقق الواقعي.
+- **ملفات PDF للاختبار** تحتوي على بيانات حساسة حقيقية للتحقق الواقعي.
 
 ### اعتبارات الترخيص
-للتطوير والاختبار، احصل على [ترخيص مؤقت مجاني](https://purchase.groupdocs.com/temporary-license/). تتطلب عمليات النشر في الإنتاج ترخيصًا كاملًا، لكن النسخة التجريبية توفر لك مجموعة الميزات الكاملة للتقييم.
+للتطوير والاختبار، احصل على [ترخيص مؤقت مجاني](https://purchase.groupdocs.com/temporary-license/). تتطلب عمليات الإنتاج ترخيصًا كاملاً، لكن النسخة التجريبية تمنحك مجموعة الميزات الكاملة للتقييم.
 
-## كيفية إخفاء محتوى PDF باستخدام Java مع GroupDocs.Annotation
+## كيف تقوم بتعديل PDF باستخدام Java وGroupDocs.Annotation؟
+باستخدام GroupDocs.Annotation، تبدأ بإنشاء كائن `Annotator` يقوم بتحميل ملف PDF المستهدف، ثم تعريف تعليقات التعديل بإحداثيات دقيقة وردود تدقيق اختيارية. بعد إضافة التعليقات إلى المستند، تحفظ الملف، مما يزيل المحتوى المحدد بشكل دائم ويحرر جميع الموارد.
 
-### الخطوة 1: تهيئة مُعَلِّم PDF
-أنشئ كائن `Annotator` يشير إلى ملف PDF الذي تريد حمايته.
+### الخطوة 1: تهيئة Annotator الخاص بـ PDF
+فئة `Annotator` هي نقطة الدخول لجميع عمليات التعليق في GroupDocs.Annotation. تقوم بتحميل PDF إلى الذاكرة وتجهزه للتعديلات.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -87,10 +153,10 @@ import com.groupdocs.annotation.Annotator;
 dual Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-> **نصيحة احترافية:** استخدم try‑with‑resources أو التخلص الصريح لتجنب تسرب الذاكرة. سنعود لاحقًا إلى عملية التنظيف الصحيحة.
+> **نصيحة احترافية:** استخدم try‑with‑resources أو التخلص الصريح لتجنب تسرب الذاكرة. سنعود لاحقًا إلى طريقة التنظيف الصحيحة.
 
-### الخطوة 2: بناء ردود التعليقات لسجل التدقيق
-وثّق سبب تنفيذ كل إخفاء بإضافة كائنات الرد.
+### الخطوة 2: بناء ردود التعليق لسجل التدقيق
+وثّق سبب كل تعديل بإضافة كائنات رد. تصبح هذه الردود جزءًا من سجل تدقيق المستند، مما يلبي العديد من متطلبات الامتثال.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -111,10 +177,8 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-تصبح هذه الردود جزءًا من سجل تدقيق المستند، مما يلبي العديد من أنظمة الامتثال.
-
-### الخطوة 3: تحديد حدود الإخفاء بدقة
-الإحداثيات الدقيقة تضمن إزالة النص الصحيح. الأصل (0,0) هو الزاوية العلوية اليسرى للصفحة.
+### الخطوة 3: تحديد حدود التعديل بدقة
+الإحداثيات الدقيقة تضمن حذف النص الصحيح. الأصل (0,0) هو الزاوية العليا اليسرى للصفحة.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -135,8 +199,8 @@ points.add(point4);
 
 > **نصيحة:** استخدم عارض PDF يعرض الإحداثيات، أو أنشئ واجهة تسمح للمستخدمين بالنقر لالتقاط النقاط تلقائيًا.
 
-### الخطوة 4: إنشاء تعليق إخفاء النص
-الآن نقوم بربط الإحداثيات، ردود التدقيق، ورسالة وصفية معًا.
+### الخطوة 4: إنشاء تعليق تعديل النص
+الآن نجمع الإحداثيات، ردود التدقيق، ورسالة توضيحية معًا.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.TextRedactionAnnotation;
@@ -153,9 +217,9 @@ textRedaction.setReplies(replies);
 annotator.add(textRedaction);
 ```
 
-حقل `setMessage()` يسجل سبب الإخفاء دون كشف المحتوى المخفي.
+حقل `setMessage()` يسجل سبب التعديل دون كشف المحتوى المخفي.
 
-### الخطوة 5: حفظ المستند المُخفى وتنظيف الموارد
+### الخطوة 5: حفظ المستند المعدل وتنظيف الموارد
 احفظ التغييرات وحرّر الموارد.
 
 ```java
@@ -166,13 +230,13 @@ dual annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_output.pdf");
 dual annotator.dispose();
 ```
 
-> **هام:** يجب دائمًا استدعاء `dispose()` (أو استخدام try‑with‑resources) لتحرير مقابض الملفات والذاكرة.
+> **حاسم:** دائمًا استدعِ `dispose()` (أو استخدم try‑with‑resources) لتحرير مقبض الملف والذاكرة.
 
 ## المشكلات الشائعة والحلول
 
 ### الإحداثيات لا تتطابق مع المناطق المتوقعة
 - **السبب:** قد يستخدم صانعو PDF أصول إحداثيات مختلفة.  
-- **الحل:** تحقق من الإحداثيات باستخدام نفس العارض الذي ستستخدمه في الإنتاج، أو نفّذ أداة معاينة تسمح للمستخدمين بضبط النقاط بدقة.
+- **الحل:** تحقق من الإحداثيات باستخدام نفس العارض الذي ستستخدمه في الإنتاج، أو نفّذ أداة معاينة تسمح للمستخدمين بضبط النقاط تلقائيًا.
 
 ### تسرب الذاكرة في سيناريوهات الحجم العالي
 - **السبب:** كائنات Annotator تحتفظ بتدفقات الملفات.  
@@ -187,12 +251,12 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 
 ### التعليقات غير مرئية بعد الحفظ
 - **السبب:** تم استدعاء `add()` بعد `save()`، أو إحداثيات خارج حدود الصفحة.  
-- **الحل:** تأكد من أن `add()` يسبق `save()`، وتأكد من أن جميع النقاط تقع ضمن أبعاد الصفحة.
+- **الحل:** تأكد من أن `add()` يسبق `save()`، وتحقق من أن جميع النقاط تقع داخل أبعاد الصفحة.
 
 ## نصائح تحسين الأداء
 
 ### استراتيجية المعالجة الدفعية
-أعد استخدام كائن annotator واحد عندما تحتاج إلى معالجة ملفات متعددة.
+أعد استخدام كائن Annotator واحد عندما تحتاج إلى معالجة ملفات متعددة.
 
 ```java
 // Less efficient - creates new instances
@@ -215,39 +279,39 @@ try (Annotator annotator = new Annotator()) {
 
 ### أفضل ممارسات إدارة الذاكرة
 - عالج ملفات PDF الكبيرة على دفعات عندما يكون ذلك ممكنًا.  
-- اضبط حدود ذاكرة JVM (`-Xmx`) بناءً على حجم المستند المتوقع.  
-- راقب استخدام الذاكرة أثناء اختبار التحميل لتحديد أحجام الدفعات المثلى.  
-- استخدم واجهات برمجة التطبيقات المتدفقة للمجموعات الضخمة من المستندات.
+- اضبط حدود ذاكرة JVM (`-Xmx`) وفقًا لحجم المستند المتوقع.  
+- راقب استهلاك الذاكرة أثناء اختبار التحميل لتحديد أحجام الدفعات المثلى.  
+- استخدم واجهات برمجة تطبيقات البث للجموع الضخمة من المستندات.
 
 ## اعتبارات الأمان للبيانات الحساسة
 
-### الإخفاء الحقيقي مقابل الإخفاء البصري
-تقوم GroupDocs.Annotation بإزالة النص من تدفق محتوى PDF، مما يضمن عدم إمكانية استعادة البيانات باستخدام أدوات استخراج النص—وهذا ضروري لـ HIPAA، GDPR، وغيرها من اللوائح.
+### تعديل حقيقي مقابل إخفاء بصري
+يقوم GroupDocs.Annotation بإزالة النص من تدفق محتوى PDF، مما يضمن عدم إمكانية استعادة البيانات باستخدام أدوات استخراج النص—وهو أمر ضروري لـ HIPAA، GDPR، وغيرها من اللوائح.
 
 ### نظافة الملفات المؤقتة
-قد تقوم المكتبة بإنشاء ملفات مؤقتة أثناء المعالجة. احفظها في دليل آمن غير عام وتأكد من حذفها بعد اكتمال العملية.
+قد تكتب المكتبة ملفات مؤقتة أثناء المعالجة. احفظها في دليل آمن غير عام وتأكد من حذفها بعد إكمال العملية.
 
 ## حالات الاستخدام الواقعية
 
 | الصناعة | السيناريو النموذجي |
 |----------|-------------------|
-| **قانونية** | إزالة معلومات العميل المحمية قبل عملية e‑discovery. |
+| **القانونية** | إزالة معلومات العميل المحمية قبل عملية الاكتشاف الإلكتروني. |
 | **الرعاية الصحية** | حذف معرفات المرضى من ملفات PDF البحثية. |
-| **مالية** | تنقية التقارير ربع السنوية قبل النشر العام. |
-| **الموارد البشرية** | إخفاء البيانات الشخصية للموظفين في المذكرات الداخلية. |
+| **المالية** | تنقية التقارير الربعية قبل النشر العام. |
+| **الموارد البشرية** | تعديل البيانات الشخصية للموظفين في المذكرات الداخلية. |
 
 ## تخصيص متقدم
 
-### مظهر الإخفاء المخصص
-تحكم في مظهر الإخفاء في ملف PDF النهائي.
+### مظهر تعديل مخصص
+تحكم في شكل التعديل في ملف PDF النهائي.
 
 ```java
 textRedaction.setBackgroundColor(Color.BLACK); // Solid black block
 textRedaction.setOpacity(1.0); // Fully opaque
 ```
 
-### دمج أنواع متعددة من التعليقات
-يمكنك إضافة تظليل، تعليقات، أو أسهم بجانب الإخفاءات لإنشاء سير عمل مراجعة شامل.
+### دمج أنواع تعليقات متعددة
+يمكنك إضافة تظليل، تعليقات، أو أسهم إلى جانب التعديلات لإنشاء سير عمل مراجعة شامل.
 
 ## معالجة الأخطاء للإنتاج
 
@@ -261,27 +325,39 @@ try (Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-تسجيل كل حدث إخفاء—بما في ذلك اسم المستند، الطوابع الزمنية، ومعرف المستخدم—ينشئ سجل تدقيق قوي.
+تسجيل كل حدث تعديل—بما في ذلك اسم المستند، الطوابع الزمنية، ومعرف المستخدم—يخلق سجل تدقيق قوي.
 
 ## الأسئلة المتكررة
 
-**Q: هل تم إزالة النص المُخفى بشكل دائم؟**  
-A: نعم. تقوم GroupDocs.Annotation بحذف النص من بنية PDF الداخلية، لذا لا يمكن استعادته باستخدام أدوات استخراج النص القياسية.
+**س: هل النص المعدل يُحذف بشكل دائم؟**  
+ج: نعم. يقوم GroupDocs.Annotation بحذف النص من بنية PDF الداخلية، بحيث لا يمكن استعادته بأدوات استخراج النص القياسية.
 
-**Q: هل يمكنني التراجع عن الإخفاء بعد حفظ الملف؟**  
-A: لا. الإخفاء غير قابل للعكس حسب التصميم لتلبية متطلبات الامتثال. احتفظ بنسخة أصلية إذا كنت بحاجة إلى الرجوع إلى المحتوى غير المُخفى لاحقًا.
+**س: هل يمكنني التراجع عن تعديل بعد حفظ الملف؟**  
+ج: لا. التعديل غير قابل للعكس بحكم التصميم لتلبية متطلبات الامتثال. احتفظ بنسخة أصلية إذا احتجت إلى الرجوع إلى المحتوى غير المعدل لاحقًا.
 
-**Q: هل تدعم المكتبة ملفات PDF الممسوحة ضوئيًا؟**  
-A: ملفات PDF الممسوحة ضوئيًا هي صور؛ ستحتاج إلى دمج OCR أولاً لتحديد النص قبل تطبيق الإخفاء. تقدم GroupDocs إضافة OCR تعمل بسلاسة.
+**س: هل تدعم المكتبة ملفات PDF الممسوحة ضوئيًا؟**  
+ج: ملفات PDF الممسوحة ضوئيًا هي صور؛ تحتاج أولًا إلى دمج OCR لتحديد النص قبل تطبيق التعديل. تقدم GroupDocs إضافة OCR تعمل بسلاسة.
 
-**Q: كيف يتغير الأداء مع المستندات الكبيرة؟**  
-A: يزداد وقت المعالجة تقريبًا خطيًا مع عدد الصفحات وعدد التعليقات. بالنسبة للمستندات التي تتجاوز 100 صفحة، فكر في المعالجة غير المتزامنة وتقرير التقدم.
+**س: كيف يتأثر الأداء مع المستندات الكبيرة؟**  
+ج: يزداد وقت المعالجة تقريبًا بصورة خطية مع عدد الصفحات وعدد التعليقات. للمستندات التي تتجاوز 100 صفحة، يُنصح بالمعالجة غير المتزامنة وتقرير التقدم.
 
-**Q: هل يمكنني تخزين ملفات PDF في التخزين السحابي (مثل AWS S3) وما زلت أستطيع استخدام الـ API؟**  
-A: نعم. طالما أن بيئة تشغيل Java يمكنها الوصول إلى تدفق الملف—إما بربط الدلو أو بتنزيله إلى موقع مؤقت—يعمل الـ API بنفس الطريقة.
+**س: هل يمكنني تخزين ملفات PDF في تخزين سحابي (مثل AWS S3) وما زالت أستطيع استخدام الـ API؟**  
+ج: نعم. طالما أن بيئة تشغيل Java يمكنها الوصول إلى تدفق الملف—إما بربط الدلو أو بتنزيله إلى موقع مؤقت—يعمل الـ API بنفس الطريقة.
 
 ---
 
-**آخر تحديث:** 2026-02-18  
+**آخر تحديث:** 2026-08-09  
 **تم الاختبار مع:** GroupDocs.Annotation 25.2  
 **المؤلف:** GroupDocs
+
+## دروس ذات صلة
+
+- [تحميل PDF في Java باستخدام GroupDocs Annotation: دليل تحميل المستند](/annotation/java/document-loading/)
+- [تحميل PDF محمي بكلمة مرور باستخدام GroupDocs.Annotation Java](/annotation/java/advanced-features/)
+- [الدليل الكامل - كيفية حفظ PDF معلق باستخدام GroupDocs.Annotation للـ Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
