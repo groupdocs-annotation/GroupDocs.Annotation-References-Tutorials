@@ -1,76 +1,80 @@
 ---
 categories:
 - Java Development
-date: '2025-12-29'
-description: Pelajari cara memberi anotasi pada PDF secara programatis di Java dengan
-  GroupDocs.Annotation. Tutorial lengkap dengan pengaturan Maven, contoh kode, dan
-  tips pemecahan masalah.
+date: '2026-03-27'
+description: Pelajari cara membuat anotasi PDF GroupDocs di Java dengan GroupDocs.Annotation.
+  Termasuk pengaturan Maven, contoh anotasi PDF Spring Boot, dan tips pemecahan masalah.
 keywords: Java PDF annotation tutorial, GroupDocs annotation Java example, document
   annotation library Java, PDF annotation programmatically Java, how to add annotations
   to PDF in Java, Java stream document annotation
-lastmod: '2025-12-29'
+lastmod: '2026-03-27'
 linktitle: Java PDF Annotation Tutorial
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-processing
-title: 'Panduan Java - memberi anotasi PDF secara programatis menggunakan GroupDocs'
+title: 'Panduan Java: Membuat Anotasi PDF GroupDocs Menggunakan GroupDocs'
 type: docs
 url: /id/java/annotation-management/mastering-document-annotation-groupdocs-java/
 weight: 1
 ---
 
-# Panduan Java: memberi anotasi pdf secara programatis menggunakan GroupDocs
+# Panduan Java: membuat anotasi pdf groupdocs menggunakan GroupDocs
 
 ## Mengapa Anda Membutuhkan Anotasi PDF dalam Aplikasi Java Anda
 
-Mari jujur—mengelola tinjauan dokumen dan kolaborasi bisa menjadi mimpi buruk tanpa alat yang tepat. Baik Anda sedang membangun sistem manajemen dokumen perusahaan atau hanya perlu menambahkan komentar ke PDF dalam aplikasi Java Anda, anotasi programatis adalah pengubah permainan. **Jika Anda ingin memberi anotasi pdf secara programatis**, panduan ini menunjukkan secara tepat cara melakukannya dengan gesekan minimal.
+Jujur saja—mengelola tinjauan dokumen dan kolaborasi dapat menjadi mimpi buruk tanpa alat yang tepat. Baik Anda sedang membangun sistem manajemen dokumen perusahaan atau hanya perlu menambahkan komentar ke PDF dalam aplikasi Java Anda, **creating pdf annotations groupdocs** adalah pengubah permainan. Jika Anda ingin **create pdf annotations groupdocs**, panduan ini menunjukkan secara tepat cara melakukannya dengan gesekan minimal.
 
-Dalam tutorial komprehensif ini, Anda akan menguasai **Java PDF annotation** menggunakan GroupDocs.Annotation—salah satu perpustakaan anotasi dokumen paling kuat yang tersedia. Pada akhir tutorial, Anda akan tahu cara memuat dokumen dari aliran, menambahkan berbagai jenis anotasi, dan menangani jebakan umum yang sering membuat pengembang terperangkap.
+Dalam tutorial komprehensif ini, Anda akan menguasai **Java PDF annotation** menggunakan GroupDocs.Annotation—salah satu perpustakaan anotasi dokumen paling kuat yang tersedia. Pada akhir tutorial, Anda akan tahu secara tepat cara memuat dokumen dari aliran, menambahkan berbagai jenis anotasi, dan menangani jebakan umum yang membuat kebanyakan pengembang terjebak.
 
-**Apa yang membuat tutorial ini berbeda?** Kami akan fokus pada skenario dunia nyata, bukan hanya contoh dasar. Anda akan mempelajari hal‑hal yang perlu diwaspadai, pertimbangan kinerja, dan teknik siap produksi yang benar‑benar penting.
+**What makes this tutorial different?** Kami akan fokus pada skenario dunia nyata, bukan hanya contoh dasar. Anda akan mempelajari hal‑hal yang perlu diwaspadai, pertimbangan kinerja, dan teknik siap produksi yang benar‑benar penting.
 
 Siap? Mari kita mulai.
 
 ## Jawaban Cepat
-- **Perpustakaan apa yang memungkinkan saya memberi anotasi pdf secara programatis di Java?** GroupDocs.Annotation.  
-- **Apakah saya memerlukan lisensi berbayar untuk mencobanya?** Tidak, percobaan gratis dapat digunakan untuk pengembangan dan pengujian.  
+- **Library apa yang memungkinkan saya memberi anotasi pdf secara programatis di Java?** GroupDocs.Annotation.  
+- **Apakah saya memerlukan lisensi berbayar untuk mencobanya?** Tidak, percobaan gratis berfungsi untuk pengembangan dan pengujian.  
 - **Bisakah saya memuat PDF dari basis data atau penyimpanan cloud?** Ya—gunakan pemuatan berbasis aliran.  
 - **Versi Java mana yang direkomendasikan?** Java 11+ untuk kinerja terbaik.  
-- **Bagaimana cara menghindari kebocoran memori?** Selalu dispose `Annotator` atau gunakan try‑with‑resources.  
+- **Bagaimana cara menghindari kebocoran memori?** Selalu dispose `Annotator` atau gunakan try‑with‑resources.
 
-## Cara memberi anotasi pdf secara programatis di Java
-Di bawah ini Anda akan melihat proses langkah‑demi‑langkah, mulai dari menyiapkan Maven hingga menyimpan file yang telah dianotasi. Setiap bagian menyertakan penjelasan singkat sehingga Anda memahami *mengapa* di balik setiap baris kode.
+## Apa itu create pdf annotations groupdocs?
+
+Membuat anotasi PDF dengan GroupDocs berarti menambahkan komentar, sorotan, bentuk, atau penanda visual apa pun ke file PDF secara programatis. Kemampuan ini penting untuk membangun alat tinjauan kolaboratif, pemeriksa kontrak hukum, atau sistem apa pun di mana pengguna perlu mendiskusikan konten dokumen tanpa meninggalkan aplikasi.
+
+## Mengapa menggunakan GroupDocs untuk spring boot pdf annotation?
+
+GroupDocs.Annotation terintegrasi dengan mulus dengan Spring Boot, memungkinkan Anda mengekspos layanan anotasi sebagai endpoint REST. API yang kaya, dukungan untuk lebih dari 50 format, dan model lisensi yang mudah membuatnya menjadi pilihan utama untuk proyek **spring boot pdf annotation**.
 
 ## Prasyarat: Menyiapkan Lingkungan Anda
 
-Sebelum kita mulai memberi anotasi PDF seperti profesional, pastikan Anda telah menyiapkan hal‑hal dasar berikut:
+Sebelum kita mulai memberi anotasi PDF seperti profesional, pastikan Anda telah menyiapkan dasar‑dasar berikut:
 
-### Persyaratan Penyiapan Esensial
+### Persyaratan Pengaturan Esensial
 
 **Lingkungan Java:**
-- JDK 8 atau lebih tinggi (JDK 11+ disarankan untuk kinerja lebih baik)
+- JDK 8 atau lebih tinggi (JDK 11+ direkomendasikan untuk kinerja lebih baik)
 - IDE favorit Anda (IntelliJ IDEA, Eclipse, atau VS Code)
 
 **Dependensi Proyek:**
 - Maven 3.6+ untuk manajemen dependensi
 - Perpustakaan GroupDocs.Annotation versi 25.2 atau lebih baru
 
-### Pengetahuan yang Anda Perlukan
+### Pengetahuan yang Anda Butuhkan
 
-Jangan khawatir—Anda tidak perlu menjadi ahli Java. Cukup familiar dengan:
+Jangan khawatir—Anda tidak perlu menjadi ahli Java. Familiaritas dasar dengan:
 - Sintaks Java dan konsep berorientasi objek
 - Manajemen dependensi Maven
-- Operasi I/O berkas
+- Operasi File I/O
 
-Itu saja! Kami akan menjelaskan semua hal lain saat melangkah.
+Itu saja! Kami akan menjelaskan semua hal lainnya saat berjalan.
 
 ## Menyiapkan GroupDocs.Annotation: Cara yang Benar
 
-Sebagian besar tutorial melewatkan detail penyiapan penting. Tidak dalam tutorial ini. Mari integrasikan GroupDocs.Annotation dengan benar ke dalam proyek Anda.
+Sebagian besar tutorial melewatkan detail pengaturan penting. Tidak dengan yang ini. Mari integrasikan GroupDocs.Annotation dengan benar ke dalam proyek Anda.
 
-### Konfigurasi Maven yang Benar‑Benar Berfungsi
+### Konfigurasi Maven yang Benar-benar Berfungsi
 
 Tambahkan ini ke `pom.xml` Anda (dan ya, konfigurasi repositori sangat penting—banyak pengembang melewatkan langkah ini):
 
@@ -91,21 +95,20 @@ Tambahkan ini ke `pom.xml` Anda (dan ya, konfigurasi repositori sangat penting�
 </dependencies>
 ```
 
-**Pro tip**: Selalu periksa versi terbaru di halaman rilis GroupDocs. Versi 25.2 mencakup peningkatan kinerja signifikan dibandingkan versi sebelumnya.
+**Pro tip**: Selalu periksa versi terbaru di halaman rilis GroupDocs. Versi 25.2 mencakup peningkatan kinerja yang signifikan dibandingkan versi sebelumnya.
 
 ### Lisensi: Pilihan Anda
 
 Anda memiliki tiga jalur di sini:
-
 1. **Free Trial**: Sempurna untuk pengujian dan proyek kecil  
-2. **Temporary License**: Bagus untuk pengembangan dan proof‑of‑concepts  
+2. **Temporary License**: Bagus untuk pengembangan dan proof‑of‑concept  
 3. **Full License**: Diperlukan untuk penyebaran produksi  
 
-Untuk tutorial ini, percobaan gratis bekerja dengan sempurna. Ingat bahwa aplikasi produksi akan memerlukan lisensi yang tepat.
+Untuk tutorial ini, percobaan gratis berfungsi dengan sempurna. Ingatlah bahwa aplikasi produksi memerlukan lisensi yang tepat.
 
-### Verifikasi Penyiapan Cepat
+### Verifikasi Pengaturan Cepat
 
-Pastikan semuanya berfungsi sebelum kita masuk ke bagian yang menyenangkan:
+Pastikan semuanya berfungsi sebelum kita masuk ke hal yang menyenangkan:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -118,9 +121,9 @@ public class AnnotationSetup {
 }
 ```
 
-## Memuat Dokumen dari Aliran: Dasar‑dasarnya
+## Memuat Dokumen dari Aliran: Dasar
 
-Di sinilah hal menjadi menarik. Kebanyakan pengembang memuat dokumen dari jalur berkas, tetapi **pemuat berbasis aliran** memberi Anda fleksibilitas luar biasa. Anda dapat memuat dokumen dari basis data, permintaan web, atau sumber apa pun.
+Di sinilah hal menjadi menarik. Kebanyakan pengembang memuat dokumen dari jalur file, tetapi **stream‑based loading** memberi Anda fleksibilitas luar biasa. Anda dapat memuat dokumen dari basis data, permintaan web, atau sumber lain apa pun.
 
 ### Mengapa Aliran Penting
 
@@ -128,11 +131,11 @@ Pikirkan: dalam aplikasi nyata, PDF Anda mungkin berasal dari:
 - Penyimpanan cloud (AWS S3, Google Cloud, Azure)  
 - BLOB basis data  
 - Permintaan HTTP  
-- Sistem berkas terenkripsi  
+- Sistem file terenkripsi  
 
 Aliran menangani semua skenario ini dengan elegan.
 
-### Langkah 1: Buka Aliran Masukan Anda
+### Langkah 1: Buka Input Stream Anda
 
 ```java
 import java.io.FileInputStream;
@@ -147,7 +150,7 @@ public class LoadDocument {
 }
 ```
 
-**Catatan dunia nyata**: Pada produksi, biasanya Anda membungkus ini dengan penanganan pengecualian yang tepat dan manajemen sumber daya (try‑with‑resources adalah sahabat Anda).
+**Catatan dunia nyata**: Dalam produksi, biasanya Anda membungkus ini dengan penanganan pengecualian yang tepat dan manajemen sumber daya (try‑with‑resources adalah sahabat Anda).
 
 ### Langkah 2: Inisialisasi Annotator
 
@@ -165,13 +168,13 @@ public class LoadDocument {
 }
 ```
 
-**Tip manajemen memori**: Selalu panggil `annotator.dispose()` saat selesai. Ini mencegah kebocoran memori yang dapat merusak kinerja aplikasi Anda seiring waktu.
+**Tips manajemen memori**: Selalu panggil `annotator.dispose()` setelah selesai. Ini mencegah kebocoran memori yang dapat merusak kinerja aplikasi Anda seiring waktu.
 
-## Menambahkan Anotasi Pertama Anda: Area Annotations
+## Menambahkan Anotasi Pertama Anda: Anotasi Area
 
-Area annotations sangat cocok untuk menyorot wilayah tertentu dalam dokumen. Anggaplah mereka sebagai catatan tempel digital yang dapat Anda tempatkan di mana saja pada PDF.
+Anotasi area sempurna untuk menyoroti wilayah spesifik dari dokumen. Anggaplah sebagai catatan tempel digital yang dapat Anda tempatkan di mana saja pada PDF Anda.
 
-### Membuat Area Annotation
+### Membuat Anotasi Area
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -208,13 +211,13 @@ Parameter `Rectangle(100, 100, 100, 100)` bekerja seperti ini:
 - **100 ketiga**: Lebar anotasi  
 - **100 keempat**: Tinggi anotasi  
 
-**Tip koordinat**: Koordinat PDF dimulai dari sudut kiri‑atas. Jika Anda terbiasa dengan koordinat matematika (asal kiri‑bawah), ini mungkin terasa terbalik pada awalnya.
+**Tips koordinat**: Koordinat PDF dimulai dari sudut kiri‑atas. Jika Anda terbiasa dengan koordinat matematika (asal kiri‑bawah), ini mungkin terasa terbalik pada awalnya.
 
 ## Teknik Anotasi Lanjutan
 
 ### Berbagai Jenis Anotasi
 
-Anda tidak terbatas pada area annotations. Berikut cara menambahkan tipe lain:
+Anda tidak terbatas pada anotasi area. Berikut cara menambahkan jenis lain:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -242,15 +245,15 @@ public class AddAnnotations {
 
 ### Tips Manajemen Warna
 
-Warna ARGB dapat membingungkan. Berikut beberapa nilai umum:
+Warna ARGB dapat rumit. Berikut beberapa nilai umum:
 - `65535` = Cyan  
-- `16711680` = Merah  
-- `65280` = Hijau  
-- `255` = Biru  
-- `16777215` = Putih  
-- `0` = Hitam  
+- `16711680` = Red  
+- `65280` = Green  
+- `255` = Blue  
+- `16777215` = White  
+- `0` = Black  
 
-**Pro tip**: Gunakan kalkulator warna ARGB daring untuk mendapatkan nilai tepat yang Anda butuhkan, atau konversi dari warna heks dengan `Integer.parseInt("FF0000", 16)` untuk merah.
+**Pro tip**: Gunakan kalkulator warna ARGB daring untuk mendapatkan nilai tepat yang Anda butuhkan, atau konversi dari warna hex menggunakan `Integer.parseInt("FF0000", 16)` untuk merah.
 
 ## Aplikasi Dunia Nyata yang Dapat Anda Bangun
 
@@ -266,7 +269,7 @@ contractClause.setBackgroundColor(16776960); // Yellow highlight
 contractClause.setMessage("Review this clause for compliance");
 ```
 
-### Alur Kerja Quality Assurance
+### Alur Kerja Jaminan Kualitas
 
 Gunakan anotasi untuk menandai masalah dalam dokumentasi teknis:
 
@@ -327,7 +330,7 @@ public void processBatch(List<InputStream> documents) throws Exception {
 
 ### Optimasi Aliran
 
-Untuk berkas besar, pertimbangkan buffering:
+Untuk file besar, pertimbangkan buffering:
 
 ```java
 import java.io.BufferedInputStream;
@@ -342,30 +345,26 @@ InputStream bufferedStream = new BufferedInputStream(
 
 ### Masalah 1: "Document format not supported"
 
-**Masalah**: Anda mencoba memberi anotasi pada berkas yang tidak dikenali oleh GroupDocs.Annotation.  
+**Masalah**: Anda mencoba memberi anotasi pada file yang tidak dikenali oleh GroupDocs.Annotation.  
+**Solusi**: Periksa format yang didukung dalam dokumentasi. Sebagian besar format umum (PDF, DOCX, PPTX) didukung, tetapi beberapa format khusus mungkin tidak.
 
-**Solusi**: Periksa format yang didukung dalam dokumentasi. Kebanyakan format umum (PDF, DOCX, PPTX) didukung, namun beberapa format khusus mungkin tidak.
-
-### Masalah 2: OutOfMemoryError dengan berkas besar
+### Masalah 2: OutOfMemoryError dengan file besar
 
 **Masalah**: Aplikasi Anda crash saat memproses PDF besar.  
-
-**Solusi**:  
+**Solusi**:
 1. Tingkatkan ukuran heap JVM: `-Xmx2g`  
-2. Proses dokumen dalam batch yang lebih kecil  
+2. Proses dokumen dalam batch lebih kecil  
 3. Pastikan Anda memanggil `dispose()` dengan benar  
 
 ### Masalah 3: Anotasi muncul di posisi yang salah
 
 **Masalah**: Anotasi Anda muncul di lokasi yang tidak terduga.  
-
 **Solusi**: Periksa kembali sistem koordinat Anda. Ingat bahwa koordinat PDF dimulai dari sudut kiri‑atas, dan satuannya dalam poin (1 inci = 72 poin).
 
-### Masalah 4: Warna tidak tampil dengan benar
+### Masalah 4: Warna tidak ditampilkan dengan benar
 
-**Masalah**: Warna anotasi tidak sesuai harapan.  
-
-**Solusi**: Pastikan Anda menggunakan format ARGB dengan tepat. Kanal alfa memengaruhi transparansi, yang dapat membuat warna tampak berbeda dari yang diharapkan.
+**Masalah**: Warna anotasi tidak sesuai dengan yang Anda harapkan.  
+**Solusi**: Pastikan Anda menggunakan format ARGB dengan benar. Saluran alfa memengaruhi transparansi, yang dapat membuat warna tampak berbeda dari yang diharapkan.
 
 ## Praktik Terbaik untuk Penggunaan Produksi
 
@@ -392,7 +391,7 @@ public boolean annotateDocument(InputStream input, String outputPath) {
 
 ### 2. Manajemen Konfigurasi
 
-Gunakan berkas konfigurasi untuk pengaturan umum:
+Gunakan file konfigurasi untuk pengaturan umum:
 
 ```properties
 # application.properties
@@ -443,7 +442,7 @@ public void testAreaAnnotationCreation() throws Exception {
 
 ## Integrasi dengan Kerangka Kerja Populer
 
-### Integrasi Spring Boot
+### Integrasi Spring Boot pdf annotation
 
 ```java
 @Service
@@ -474,44 +473,42 @@ public class DocumentAnnotationService {
 
 ## Selanjutnya: Fitur Lanjutan untuk Dijelajahi
 
-Setelah Anda menguasai dasar‑dasar yang dibahas dalam tutorial ini, pertimbangkan untuk mengeksplorasi:
-
-1. **Text Annotations** – Tambahkan komentar dan catatan langsung pada bagian teks tertentu.  
-2. **Shape Annotations** – Gambar panah, lingkaran, dan bentuk lain untuk menyorot elemen dokumen.  
-3. **Watermarks** – Tambahkan watermark khusus untuk branding atau keamanan.  
-4. **Annotation Extraction** – Baca anotasi yang sudah ada dari dokumen untuk analisis atau migrasi.  
-5. **Custom Annotation Types** – Buat tipe anotasi khusus untuk kebutuhan spesifik Anda.
+Setelah Anda menguasai dasar‑dasar yang dibahas dalam tutorial ini, pertimbangkan untuk menjelajahi:
+1. **Text Annotations** – Tambahkan komentar dan catatan langsung ke bagian teks tertentu.  
+2. **Shape Annotations** – Gambar panah, lingkaran, dan bentuk lain untuk menyoroti elemen dokumen.  
+3. **Watermarks** – Tambahkan watermark khusus untuk tujuan branding atau keamanan.  
+4. **Annotation Extraction** – Baca anotasi yang ada dari dokumen untuk analisis atau migrasi.  
+5. **Custom Annotation Types** – Buat jenis anotasi khusus untuk kasus penggunaan spesifik Anda.
 
 ## Kesimpulan
 
-Anda kini memiliki fondasi yang kuat dalam **Java PDF annotation** menggunakan GroupDocs.Annotation. Dari memuat dokumen via aliran hingga menambahkan area annotations dan mengoptimalkan untuk penggunaan produksi, Anda siap membangun fitur anotasi dokumen yang tangguh.
+Anda kini memiliki fondasi yang kuat dalam **Java PDF annotation** menggunakan GroupDocs.Annotation. Dari memuat dokumen via aliran hingga menambahkan anotasi area dan mengoptimalkan untuk penggunaan produksi, Anda siap membangun fitur anotasi dokumen yang kuat.
 
-**Poin penting**:  
+**Poin penting**:
 - Pemuatan berbasis aliran memberikan fleksibilitas maksimum.  
 - Manajemen sumber daya yang tepat mencegah kebocoran memori.  
 - Format warna ARGB memberikan kontrol presisi atas tampilan.  
 - Penanganan kesalahan dan validasi sangat penting untuk sistem produksi.
 
-Teknik yang Anda pelajari di sini dapat diskalakan dari proof‑of‑concept sederhana hingga sistem manajemen dokumen kelas perusahaan. Baik Anda membangun platform review kolaboratif atau menambahkan fitur anotasi ke perangkat lunak yang sudah ada, kini Anda memiliki alat untuk melakukannya dengan benar.
+Teknik yang Anda pelajari di sini dapat diskalakan dari proof‑of‑concept sederhana hingga sistem manajemen dokumen tingkat perusahaan. Baik Anda membangun platform review kolaboratif atau menambahkan fitur anotasi ke perangkat lunak yang ada, kini Anda memiliki alat untuk melakukannya dengan benar.
 
 ## Pertanyaan yang Sering Diajukan
 
-**Q: Versi minimum Java apa yang diperlukan untuk GroupDocs.Annotation?**  
-A: Java 8 adalah minimum, namun Java 11+ disarankan untuk kinerja dan manajemen memori yang lebih baik.
+**Q: Apa versi minimum Java yang diperlukan untuk GroupDocs.Annotation?**  
+A: Java 8 adalah minimum, tetapi Java 11+ direkomendasikan untuk kinerja dan manajemen memori yang lebih baik.
 
-**Q: Bisakah saya memberi anotasi pada dokumen selain PDF?**  
+**Q: Bisakah saya memberi anotasi dokumen selain PDF?**  
 A: Tentu saja! GroupDocs.Annotation mendukung lebih dari 50 format dokumen termasuk DOCX, PPTX, XLSX, dan berbagai format gambar.
 
 **Q: Bagaimana cara menangani file PDF sangat besar tanpa kehabisan memori?**  
-A: Gunakan strategi berikut: tingkatkan ukuran heap JVM (`-Xmx4g`), proses dokumen dalam batch yang lebih kecil, dan selalu dispose instance `Annotator` dengan benar.
+A: Gunakan strategi berikut: tingkatkan ukuran heap JVM (`-Xmx4g`), proses dokumen dalam batch lebih kecil, dan selalu dispose instance `Annotator` dengan benar.
 
 **Q: Apakah memungkinkan menyesuaikan warna dan transparansi anotasi?**  
-A: Ya! Gunakan nilai warna ARGB untuk kontrol presisi. Misalnya, `setBackgroundColor(65535)` memberi warna cyan, dan `setOpacity(0.5)` membuatnya 50 % transparan.
+A: Ya! Gunakan nilai warna ARGB untuk kontrol presisi. Misalnya, `setBackgroundColor(65535)` mengatur cyan, dan `setOpacity(0.5)` membuatnya 50 % transparan.
 
 **Q: Apa persyaratan lisensi untuk penggunaan produksi?**  
-A: Anda memerlukan lisensi GroupDocs.Annotation yang valid untuk penyebaran produksi. Pengembangan dan pengujian dapat menggunakan percobaan gratis, namun aplikasi komersial memerlukan lisensi yang dibeli.
+A: Anda memerlukan lisensi GroupDocs.Annotation yang valid untuk penyebaran produksi. Pengembangan dan pengujian dapat menggunakan percobaan gratis, tetapi aplikasi komersial memerlukan lisensi yang dibeli.
 
-**Sumber Daya Tambahan**  
 - [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [API Reference](https://reference.groupdocs.com/annotation/java/)  
 - [Download Library](https://releases.groupdocs.com/annotation/java/)  
@@ -522,6 +519,8 @@ A: Anda memerlukan lisensi GroupDocs.Annotation yang valid untuk penyebaran prod
 
 ---
 
-**Terakhir Diperbarui:** 2025-12-29  
-**Diuji Dengan:** GroupDocs.Annotation 25.2  
-**Penulis:** GroupDocs  
+**Last Updated:** 2026-03-27  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs  
+
+---
