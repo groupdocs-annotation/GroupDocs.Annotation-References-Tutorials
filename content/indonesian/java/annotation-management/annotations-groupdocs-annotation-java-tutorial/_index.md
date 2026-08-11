@@ -1,48 +1,47 @@
 ---
-date: '2025-12-17'
-description: Pelajari cara menyimpan file PDF yang telah dianotasi menggunakan GroupDocs.Annotation
-  untuk Java. Tutorial ini mencakup dependensi Maven GroupDocs, menginisialisasi Annotator
-  Java, menambahkan beberapa anotasi, dan praktik terbaik anotasi Java.
+date: '2026-03-24'
+description: Pelajari cara memberi anotasi PDF secara programatis menggunakan GroupDocs.Annotation
+  untuk Java. Ikuti petunjuk langkah demi langkah, tambahkan banyak anotasi, dan terapkan
+  praktik terbaik anotasi.
 keywords:
 - GroupDocs.Annotation for Java
 - Java document annotation
 - Annotator initialization
-title: 'Panduan Lengkap - Cara Menyimpan PDF yang Diberi Anotasi dengan GroupDocs.Annotation
-  untuk Java'
+title: Cara Menganotasi PDF dengan GroupDocs.Annotation untuk Java
 type: docs
 url: /id/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1
 ---
 
-# Simpan PDF Beranotasi dengan GroupDocs.Annotation untuk Java
+# Cara Menandai PDF dengan GroupDocs.Annotation untuk Java
 
-Meningkatkan aplikasi Java dengan kemampuan anotasi dokumen adalah cara yang kuat untuk memperbaiki kolaborasi, kepatuhan, dan pengalaman pengguna. Dalam panduan ini Anda akan mempelajari **cara menyimpan PDF beranotasi** menggunakan GroupDocs.Annotation untuk Java, mulai dari menyiapkan dependensi Maven hingga menambahkan beberapa anotasi dan mengikuti praktik terbaik anotasi Java. Mari kita lalui setiap langkah sehingga Anda dapat dengan percaya diri mengintegrasikan fitur ini ke dalam proyek Anda.
+Meningkatkan aplikasi Java dengan kemampuan anotasi dokumen adalah cara yang kuat untuk meningkatkan kolaborasi, kepatuhan, dan pengalaman pengguna. Dalam panduan ini Anda akan belajar **cara menandai PDF** menggunakan GroupDocs.Annotation untuk Java, mulai dari menyiapkan dependensi Maven hingga menambahkan beberapa anotasi dan mengikuti praktik terbaik anotasi. Mari kita jalani setiap langkah sehingga Anda dapat dengan percaya diri mengintegrasikan fitur ini ke dalam proyek Anda.
 
-## Jawaban Cepat
+## Quick Answers
 - **Apa tujuan utama GroupDocs.Annotation?**  
-  Untuk secara programatis membuat, mengedit, dan **menyimpan PDF beranotasi** dalam aplikasi Java.  
+  Untuk secara programatis membuat, mengedit, dan **menyimpan PDF yang dianotasi** dalam aplikasi Java.  
 - **Artifact Maven mana yang saya perlukan?**  
-  `com.groupdocs:groupdocs-annotation` (lihat bagian *maven dependency groupdocs*).  
-- **Bisakah saya menambahkan lebih dari satu anotasi sekaligus?**  
+  `com.groupdocs:groupdocs-annotation` (lihat bagian *Maven dependency*).  
+- **Apakah saya dapat menambahkan lebih dari satu anotasi sekaligus?**  
   Ya – Anda dapat **menambahkan beberapa anotasi** dalam satu operasi.  
 - **Bagaimana cara menginisialisasi annotator?**  
-  Gunakan pola **initialize annotator java** yang ditunjukkan dalam tutorial.  
-- **Apa saja tip praktik terbaik utama?**  
-  Ikuti daftar periksa *annotation best practices java* untuk manajemen memori dan kinerja.
+  Gunakan pola **initialize annotator** yang ditunjukkan dalam tutorial.  
+- **Apa saja tips praktik terbaik utama?**  
+  Ikuti daftar periksa *annotation best practices* untuk manajemen memori dan kinerja.  
 
-## Apa itu “menyimpan PDF beranotasi”?
-Menyimpan PDF beranotasi berarti menyimpan semua catatan visual—penyorotan, komentar, bentuk, dan markup lainnya—ke dalam file PDF sehingga siapa pun yang membuka dokumen dapat melihat perubahan tersebut. GroupDocs.Annotation menyediakan API sederhana untuk melakukan tugas ini secara programatis.
+## Apa itu “cara menandai PDF”?
+Menganotasi PDF berarti menyimpan catatan visual—highlight, komentar, bentuk, dan markup lainnya—langsung ke dalam file sehingga siapa pun yang membuka dokumen dapat melihat perubahan tersebut. GroupDocs.Annotation menyediakan API sederhana untuk melakukan tugas ini secara programatis.
 
 ## Mengapa menggunakan GroupDocs.Annotation untuk Java?
-- **Dukungan lintas‑platform** – berfungsi pada sistem operasi apa pun yang menjalankan Java.  
-- **Jenis anotasi yang kaya** – mulai dari sorotan sederhana hingga bentuk kompleks seperti elips.  
+- **Dukungan lintas platform** – berfungsi pada sistem operasi apa pun yang menjalankan Java.  
+- **Beragam tipe anotasi** – mulai dari highlight sederhana hingga bentuk kompleks seperti elips.  
 - **Tidak memerlukan editor PDF eksternal** – semua operasi terjadi di dalam kode Java Anda.  
-- **Skalabel untuk perusahaan** – cocok untuk alur kerja dokumen hukum, pendidikan, dan teknis.
+- **Skalabel untuk perusahaan** – cocok untuk alur kerja dokumen hukum, pendidikan, dan teknis.  
 
-## Prasyarat
-- **Java SDK** (JDK 8 atau lebih baru) terpasang di mesin Anda.  
+## Prerequisites
+- **Java SDK** (JDK 8 atau lebih baru) terpasang di mesin Anda.  
 - **Maven** untuk manajemen dependensi.  
-- IDE seperti **IntelliJ IDEA** atau **Eclipse**.  
+- Sebuah IDE seperti **IntelliJ IDEA** atau **Eclipse**.  
 - Pengetahuan dasar pemrograman Java.  
 
 ### Dependensi Maven GroupDocs
@@ -68,10 +67,10 @@ Tambahkan repositori GroupDocs dan pustaka anotasi ke `pom.xml` Anda:
 ## Akuisisi Lisensi
 1. **Free Trial:** Unduh versi percobaan untuk menguji GroupDocs.Annotation.  
 2. **Temporary License:** Dapatkan lisensi sementara untuk akses penuh selama evaluasi.  
-3. **Purchase:** Peroleh lisensi penuh untuk penggunaan produksi.
+3. **Purchase:** Dapatkan lisensi penuh untuk penggunaan produksi.  
 
 ## Inisialisasi Annotator Java
-Langkah pertama adalah **initialize annotator java** dengan dokumen yang ingin Anda kerjakan. Berikut adalah pola inisialisasi dasar:
+Langkah pertama adalah **menginisialisasi annotator** dengan dokumen yang ingin Anda kerjakan. Berikut adalah pola inisialisasi dasar:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -85,7 +84,7 @@ public class Feature1 {
 }
 ```
 
-### Fitur 1: Memuat dan Menginisialisasi Annotator
+### Fitur 1: Memuat dan Menginisialisasi Annotator
 Fitur ini menunjukkan cara menginisialisasi Annotator dengan jalur file dokumen, menyiapkan aplikasi Java Anda untuk tugas anotasi.
 
 ```java
@@ -100,10 +99,10 @@ public class Feature1 {
 }
 ```
 
-## Membuat Anotasi
+## Creating Annotations
 
-### Fitur 2: Membuat Anotasi Area
-Anotasi area memungkinkan Anda menyorot wilayah persegi panjang. Ikuti langkah-langkah berikut untuk membuatnya:
+### Fitur 2: Membuat Area Annotation
+Area annotation memungkinkan Anda menyorot wilayah persegi panjang. Ikuti langkah-langkah berikut untuk membuatnya:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -113,12 +112,15 @@ public class Feature2 {
     public AreaAnnotation createAreaAnnotation() {
         AreaAnnotation area = new AreaAnnotation();
 ```
+
 ```java
         area.setBox(new Rectangle(100, 100, 100, 100));
 ```
+
 ```java
         area.setBackgroundColor(65535);
 ```
+
 ```java
         area.setPageNumber(1);
 
@@ -127,8 +129,8 @@ public class Feature2 {
 }
 ```
 
-### Fitur 3: Membuat Anotasi Elips
-Anotasi elips sangat cocok untuk sorotan melingkar atau oval.
+### Fitur 3: Membuat Ellipse Annotation
+Ellipse annotation sangat cocok untuk highlight berbentuk lingkaran atau oval.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -138,12 +140,15 @@ public class Feature3 {
     public EllipseAnnotation createEllipseAnnotation() {
         EllipseAnnotation ellipse = new EllipseAnnotation();
 ```
+
 ```java
         ellipse.setBox(new Rectangle(100, 100, 100, 100));
 ```
+
 ```java
         ellipse.setBackgroundColor(123456);
 ```
+
 ```java
         ellipse.setPageNumber(2);
 
@@ -184,14 +189,15 @@ public class Feature4 {
 }
 ```
 
-## Menyimpan Dokumen – Cara Menyimpan PDF Beranotasi
-Sekarang anotasi Anda sudah siap, Anda akan **menyimpan PDF beranotasi** hanya dengan jenis anotasi yang diinginkan.
+## Menyimpan Dokumen – Cara Menyimpan PDF yang Dianotasi
+Sekarang anotasi Anda sudah ada, Anda akan **menyimpan PDF yang dianotasi** hanya dengan tipe anotasi yang diinginkan.
 
 ```java
 public class Feature5 {
     public String getOutputPath(String fileName) {
         return "YOUR_OUTPUT_DIRECTORY" + "/filtered_output.pdf";
 ```
+
 ```java
     public void saveAnnotatedDocument(Annotator annotator, String outputPath) {
         SaveOptions saveOptions = new SaveOptions();
@@ -204,32 +210,32 @@ public class Feature5 {
 
 ## Praktik Terbaik Anotasi Java
 - **Gunakan try‑with‑resources** untuk secara otomatis menutup `Annotator` dan membebaskan memori.  
-- **Tambahkan anotasi secara batch** (seperti yang ditunjukkan pada Fitur 4) untuk mengurangi beban I/O.  
-- **Tentukan hanya jenis anotasi yang diperlukan** dalam `SaveOptions` agar ukuran file tetap kecil.  
-- **Lepaskan dokumen besar** dari memori setelah menyimpan untuk menghindari kebocoran.
+- **Batch add annotations** (seperti yang ditunjukkan pada Fitur 4) untuk mengurangi overhead I/O.  
+- **Tentukan hanya tipe anotasi yang diperlukan** dalam `SaveOptions` untuk menjaga ukuran file tetap kecil.  
+- **Lepaskan dokumen besar** dari memori setelah menyimpan untuk menghindari kebocoran.  
 
 ## Aplikasi Praktis
-- **Tinjauan Dokumen Hukum:** Sorot klausul dan lampirkan komentar untuk pengacara.  
-- **Sumber Daya Pendidikan:** Anotasi buku teks untuk kelompok belajar.  
-- **Manual Teknis:** Tandai gambar teknik dengan catatan dan peringatan.
+- **Legal Document Review:** Sorot klausul dan lampirkan komentar untuk pengacara.  
+- **Educational Resources:** Anotasi buku teks untuk kelompok belajar.  
+- **Technical Manuals:** Tandai gambar teknik dengan catatan dan peringatan.  
 
 ## Pertimbangan Kinerja
 - Batasi anotasi bersamaan pada PDF yang sangat besar.  
-- Gunakan **annotation best practices java** yang direkomendasikan untuk mengelola memori secara efisien.  
-- Profil aplikasi Anda dengan Java Flight Recorder jika Anda memperhatikan penurunan kinerja.
+- Gunakan **annotation best practices** yang direkomendasikan untuk mengelola memori secara efisien.  
+- Profil aplikasi Anda dengan Java Flight Recorder jika Anda memperhatikan penurunan kinerja.  
 
 ## Masalah Umum dan Solusinya
 
 | Masalah | Solusi |
 |-------|----------|
 | **OutOfMemoryError** saat memuat PDF besar | Muat dokumen dalam mode streaming atau tingkatkan ukuran heap JVM. |
-| Anotasi tidak muncul setelah disimpan | Pastikan `SaveOptions` mencakup `AnnotationType` yang benar. |
-| Kesalahan lisensi | Verifikasi bahwa file lisensi percobaan atau permanen direferensikan dengan benar. |
+| Anotasi tidak muncul setelah disimpan | Pastikan `SaveOptions` mencakup `AnnotationType` yang tepat. |
+| Kesalahan lisensi | Verifikasi bahwa file lisensi percobaan atau permanen telah direferensikan dengan benar. |
 
 ## Pertanyaan yang Sering Diajukan
 
 **Q: Bisakah saya menambahkan komentar teks selain bentuk?**  
-A: Ya, GroupDocs.Annotation mendukung tipe `TextAnnotation` dan `CommentAnnotation`—cukup buat instance model yang sesuai dan tambahkan ke daftar.
+A: Ya, GroupDocs.Annotation mendukung tipe `TextAnnotation` dan `CommentAnnotation` — cukup buat instance model yang sesuai dan tambahkan ke daftar.
 
 **Q: Apakah memungkinkan mengedit anotasi yang sudah ada?**  
 A: Tentu saja. Ambil anotasi melalui ID-nya, ubah propertinya, dan panggil `annotator.update(updatedAnnotation)`.
@@ -240,14 +246,14 @@ A: Gunakan `annotator.delete(annotationId)` untuk menghapus anotasi tertentu ata
 **Q: Apakah perpustakaan ini bekerja dengan PDF yang dilindungi kata sandi?**  
 A: Ya. Berikan kata sandi saat membuat instance `Annotator`: `new Annotator(filePath, password)`.
 
-**Q: Versi Java apa yang dibutuhkan?**  
-A: Perpustakaan ini kompatibel dengan Java 8 dan yang lebih baru; kami menyarankan menggunakan versi LTS terbaru untuk kinerja terbaik.
+**Q: Versi Java apa yang diperlukan?**  
+A: Perpustakaan ini kompatibel dengan Java 8 dan yang lebih baru; kami merekomendasikan menggunakan versi LTS terbaru untuk kinerja terbaik.
 
 ## Kesimpulan
-Anda kini memiliki solusi lengkap end‑to‑end untuk **menyimpan file PDF beranotasi** dengan GroupDocs.Annotation untuk Java. Dengan mengikuti langkah-langkah di atas—menyiapkan dependensi Maven, menginisialisasi annotator, membuat dan menambahkan beberapa anotasi, serta menerapkan praktik terbaik anotasi—Anda dapat memperkaya aplikasi Java apa pun dengan kemampuan markup dokumen yang kuat.
+Anda kini memiliki solusi lengkap, end‑to‑end untuk **cara menandai PDF** dengan GroupDocs.Annotation untuk Java. Dengan mengikuti langkah-langkah di atas—menyiapkan dependensi Maven, menginisialisasi annotator, membuat dan menambahkan beberapa anotasi, serta menerapkan praktik terbaik anotasi—Anda dapat memperkaya aplikasi Java apa pun dengan kemampuan markup dokumen yang kuat.
 
 ---
 
-**Terakhir Diperbarui:** 2025-12-17  
+**Terakhir Diperbarui:** 2026-03-24  
 **Diuji Dengan:** GroupDocs.Annotation 25.2  
 **Penulis:** GroupDocs
