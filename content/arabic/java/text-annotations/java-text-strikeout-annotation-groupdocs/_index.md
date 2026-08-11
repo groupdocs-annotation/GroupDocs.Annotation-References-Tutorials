@@ -1,36 +1,58 @@
 ---
-"date": "2025-05-06"
-"description": "تعرّف على كيفية إضافة تعليقات توضيحية مشطوبة للنصوص في جافا باستخدام GroupDocs.Annotation. اتبع هذا الدليل خطوة بخطوة لإضافة تعليقات توضيحية سلسة للمستندات."
-"title": "دليل إضافة شطب نص جافا باستخدام GroupDocs.Annotation"
-"url": "/ar/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+categories:
+- Java Development
+date: '2026-03-30'
+description: تعلم كيفية إضافة تعليمة شطب في جافا باستخدام GroupDocs.Annotation. دليل
+  خطوة بخطوة مع أمثلة على الشيفرة، ونصائح لحل المشكلات، وأفضل الممارسات لتعليم المستند.
+keywords: Java strikeout annotation tutorial, GroupDocs annotation Java guide, text
+  markup Java, document annotation Java, how to add strikeout annotation java
+lastmod: '2026-03-30'
+linktitle: Add Strikeout Annotation Java Tutorial
+tags:
+- java-annotations
+- groupdocs
+- document-processing
+- pdf-manipulation
+title: إضافة تعليمة شطب في جافا مع GroupDocs
 type: docs
-"weight": 1
+url: /ar/java/text-annotations/java-text-strikeout-annotation-groupdocs/
+weight: 1
 ---
 
-# شرح شطب النصوص في Java باستخدام GroupDocs.Annotation
+# إضافة تعليقات الخط عبر Java - دليل GroupDocs الكامل
 
-في عالمنا الرقمي اليوم، غالبًا ما تتطلب المستندات تعليقات توضيحية لإبراز المعلومات المهمة أو الإشارة إلى المراجعات. سواء كنت تعمل على مشاريع تعاونية أو تحتاج إلى مراجعة المستندات والتعليق عليها، فإن إمكانية شطب النص تُعدّ ميزةً بالغة الأهمية. سيرشدك هذا البرنامج التعليمي إلى كيفية إضافة تعليق توضيحي لشطب النص باستخدام GroupDocs.Annotation for Java، وهي مكتبة فعّالة مُصممة لمعالجة المستندات.
+هل وجدت نفسك يومًا تحدق في مستند وتفكر، “أحتاج إلى شطب هذا النص، لكن لا يمكنني فقط أخذ قلم أحمر”؟ لست وحدك. سواء كنت تبني نظام مراجعة مستندات، أو تنشئ سير عمل تحرير، أو فقط تحتاج إلى وضع علامة على النص للحذف في تطبيق Java الخاص بك، فإن **add strikeout annotation java** هي مهارة أساسية. في هذا الدرس سنستعرض كل ما تحتاج معرفته لتنفيذ وظيفة شطب النص التي تعمل فعليًا في بيئة الإنتاج.
 
-**ما سوف تتعلمه:**
-- كيفية إعداد البيئة الخاصة بك باستخدام GroupDocs.Annotation.
-- تعليمات خطوة بخطوة لتنفيذ تعليق شطب النص في Java.
-- التطبيقات العملية لهذه الميزة في سيناريوهات العالم الحقيقي.
-- نصائح الأداء وأفضل الممارسات عند استخدام GroupDocs.Annotation.
+## إجابات سريعة
+- **ما المكتبة التي تدعم تعليقات الخط عبر في Java؟** GroupDocs.Annotation for Java  
+- **ما هي الكلمة المفتاحية الأساسية التي يجب استهدافها لتحسين محركات البحث؟** add strikeout annotation java  
+- **هل أحتاج إلى ترخيص لتشغيل الكود التجريبي؟** تجربة مجانية أو ترخيص مؤقت يعمل للتطوير؛ ترخيص كامل مطلوب للإنتاج.  
+- **هل يمكنني استخدام هذا مع ملفات PDF و DOCX و PPTX؟** نعم – يدعم GroupDocs.Annotation جميع صيغ المستندات الرئيسية.  
+- **ما نسخة Java المطلوبة؟** JDK 8 أو أعلى (يوصى بـ JDK 11+).
 
-## المتطلبات الأساسية
+## ما هو add strikeout annotation java؟
+تعليق الخط عبر يرسم خطًا عبر النص المحدد، مما يشير بصريًا إلى أن المحتوى يجب إزالته أو تجاهله. إنها طريقة غير مدمرة لاقتراح الحذف مع الحفاظ على النص الأصلي سليمًا لتتبع المراجعات أو للمراجعات التعاونية.
 
-قبل البدء في التنفيذ، تأكد من أن لديك ما يلي:
-- **مجموعة تطوير Java (JDK):** يجب أن يكون الإصدار 8 أو أعلى متوافقًا مع GroupDocs.Annotation.
-- **مكتبة GroupDocs.Annotation:** أدرج هذه المكتبة في مشروعك. الإصدار المستخدم هنا هو `25.2`.
-- **بيئة التطوير المتكاملة (IDE):** مثل IntelliJ IDEA، أو Eclipse، أو NetBeans.
+## لماذا نستخدم تعليقات الخط عبر في تطبيقات Java؟
+- **سير عمل مراجعة المستندات** – يمكن للمراجعين وضع علامة على النص غير المرغوب فيه دون تعديل المصدر.  
+- **تحرير تعاوني** – يرى أعضاء الفريق الحذف المقترح فورًا.  
+- **القانونية والامتثال** – الحفاظ على سجل تدقيق واضح للتغييرات.  
+- **ترحيل المحتوى** – وضع علامة على الأقسام القديمة قبل نقل المحتوى بين الأنظمة.  
+
+## المتطلبات المسبقة وإعداد البيئة
+ستحتاج إلى ما يلي قبل الغوص في الكود:
+
+- **Java Development Kit (JDK)** 8+ (JDK 11+ موصى به)  
+- **Maven أو Gradle** لإدارة التبعيات  
+- **IDE** – IntelliJ IDEA أو Eclipse أو VS Code مع ملحقات Java  
+- **GroupDocs.Annotation library** – سنستخدم الإصدار 25.2 في الأمثلة  
+
+*مفيد أن تكون لديك:* معرفة أساسية بتعليقات Java ومعالجة PDF.
 
 ## إعداد GroupDocs.Annotation لـ Java
 
-لبدء استخدام GroupDocs.Annotation لـ Java، اتبع الخطوات التالية:
-
-### تكوين Maven
-
-أضف التكوين التالي إلى ملفك `pom.xml` ملف لتضمين GroupDocs.Annotation في مشروعك:
+### تكوين Maven الذي يعمل فعليًا
+أضف المستودع والتبعيات إلى ملف `pom.xml` الخاص بك تمامًا كما هو موضح:
 
 ```xml
 <repositories>
@@ -50,149 +72,224 @@ type: docs
 </dependencies>
 ```
 
-### الحصول على الترخيص
+### الحصول على الترخيص الخاص بك
+تقدم GroupDocs عدة خيارات للترخيص:
 
-يقدم GroupDocs نسخة تجريبية مجانية، وتراخيص مؤقتة لأغراض التقييم، أو يمكنك شراء ترخيص للاستخدام المستمر. تفضل بزيارة [صفحة الشراء](https://purchase.groupdocs.com/buy) لاستكشاف خياراتك.
+- **تجربة مجانية** – مثالية للاختبار (لا تحتاج إلى بطاقة ائتمان)  
+- **ترخيص مؤقت** – مثالي للتطوير والاختبار  
+- **ترخيص كامل** – مطلوب للاستخدام في الإنتاج؛ راجع [صفحة الشراء](https://purchase.groupdocs.com/buy)
 
-### التهيئة والإعداد الأساسي
+> **نصيحة احترافية:** ابدأ بالتجربة المجانية لاستكشاف API، ثم انتقل إلى ترخيص مؤقت عندما تكون جاهزًا لبناء ميزة حقيقية.
 
-بعد إعداد تبعيات Maven، قم بتهيئة GroupDocs.Annotation في تطبيق Java الخاص بك:
+### إعداد فحص الصحة السريع
+شغّل هذا البرنامج البسيط للتحقق من تحميل المكتبة بشكل صحيح:
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
 public class DocumentSetup {
     public static void main(String[] args) {
-        Annotator annotator = new Annotator("path/to/your/document.pdf");
-        // متابعة مهام التوضيح...
+        try {
+            Annotator annotator = new Annotator("path/to/your/document.pdf");
+            System.out.println("GroupDocs.Annotation is ready to use!");
+            annotator.dispose();
+        } catch (Exception e) {
+            System.out.println("Setup issue: " + e.getMessage());
+        }
     }
 }
 ```
 
-## دليل التنفيذ
+إذا طبع الطرفية رسالة النجاح دون أخطاء، فأنت جاهز لإضافة تعليقات الخط عبر.
 
-في هذا القسم، سنتعمق في تنفيذ ميزة شطب النص باستخدام GroupDocs.Annotation.
+## كيفية إضافة تعليقات الخط عبر java
 
-### إضافة تعليق توضيحي لشطب النص
+فيما يلي تنفيذ كامل وجاهز للإنتاج مقسم إلى خطوات واضحة.
 
-#### ملخص
-تتضمن إضافة تعليق توضيحي لشطب النص تحديد المنطقة المراد شطبها وضبط خصائصها، مثل اللون والتعتيم ورقم الصفحة. تُعد هذه الميزة مفيدة بشكل خاص للإشارة إلى التغييرات أو الأخطاء في المستندات.
+### الخطوة 1 – تهيئة Annotator
+أنشئ كائن `Annotator` يشير إلى المستند المصدر:
 
-#### التنفيذ خطوة بخطوة
-1. **تهيئة المُعلّق**
-   إنشاء مثيل لـ `Annotator` مع مسار مستندك:
+```java
+Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
+```
 
-   ```java
-   Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
-   ```
+> **لماذا هذا مهم:** استخدام مسار مطلق أو مسار نسبي مُحلّ بشكل صحيح يمنع استثناءات “الملف غير موجود”.
 
-2. **إنشاء ردود على التعليقات التوضيحية (اختياري)**
-   إرفاق التعليقات أو الردود على التعليقات التوضيحية، والتي تظهر أثناء مراجعة المستند:
+### الخطوة 2 – (اختياري) إعداد ردود التعليقات
+إضافة الردود تجعل التعليق تعاونيًا:
 
-   ```java
-   Reply reply1 = new Reply();
-   reply1.setComment("First comment");
-   reply1.setRepliedOn(Calendar.getInstance().getTime());
+```java
+Reply reply1 = new Reply();
+reply1.setComment("First comment");
+reply1.setRepliedOn(Calendar.getInstance().getTime());
 
-   Reply reply2 = new Reply();
-   reply2.setComment("Second comment");
-   reply2.setRepliedOn(Calendar.getInstance().getTime());
-   
-   List<Reply> replies = Arrays.asList(reply1, reply2);
-   ```
+Reply reply2 = new Reply();
+reply2.setComment("Second comment");
+reply2.setRepliedOn(Calendar.getInstance().getTime());
 
-3. **تحديد منطقة الشطب**
-   حدد الإحداثيات التي تشكل مستطيلاً للضربة القاضية:
+List<Reply> replies = Arrays.asList(reply1, reply2);
+```
 
-   ```java
-   Point point1 = new Point(80, 730);
-   Point point2 = new Point(240, 730);
-   Point point3 = new Point(80, 650);
-   Point point4 = new Point(240, 650);
+تظهر هذه التعليقات عندما يمر المستخدم فوق الخط عبر.
 
-   List<Point> points = Arrays.asList(point1, point2, point3, point4);
-   ```
+### الخطوة 3 – تعريف منطقة الخط عبر
+حدد المستطيل الذي يحيط بالنص الذي تريد شطبه:
 
-4. **تكوين تعليق الشطب**
-   تعيين خصائص مثل لون الخط، والتعتيم، ورقم الصفحة:
+```java
+Point point1 = new Point(80, 730);
+Point point2 = new Point(240, 730);
+Point point3 = new Point(80, 650);
+Point point4 = new Point(240, 650);
 
-   ```java
-   StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
-   strikeout.setCreatedOn(Calendar.getInstance().getTime());
-   strikeout.setFontColor(65535);  // اللون الأصفر
-   strikeout.setMessage("This is a strikeout annotation");
-   strikeout.setOpacity(0.7);
-   strikeout.setPageNumber(0);
-   strikeout.setPoints(points);
-   strikeout.setReplies(replies);
-   ```
+List<Point> points = Arrays.asList(point1, point2, point3, point4);
+```
 
-5. **أضف التعليق التوضيحي**
-   أضف التعليقات التوضيحية التي قمت بتكوينها إلى المستند:
+> **نصيحة إحداثيات:** الأصل (0,0) هو الزاوية العلوية اليسرى للصفحة؛ X يزداد إلى اليمين، Y يزداد إلى الأسفل. استخدم عارض PDF يُظهر الإحداثيات لضبط هذه القيم بدقة.
 
-   ```java
-   annotator.add(strikeout);
-   ```
+### الخطوة 4 – تكوين تعليقات الخط عبر
+حدد المظهر، رقم الصفحة، وأرفق التعليقات:
 
-6. **حفظ المستند الموضح**
-   حفظ التغييرات في ملف جديد:
+```java
+StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
+strikeout.setCreatedOn(Calendar.getInstance().getTime());
+strikeout.setFontColor(65535);  // Yellow color
+strikeout.setMessage("This is a strikeout annotation");
+strikeout.setOpacity(0.7);
+strikeout.setPageNumber(0);
+strikeout.setPoints(points);
+strikeout.setReplies(replies);
+```
 
-   ```java
-   annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
-   ```
+*ملاحظة اللون:* `65535` يطابق الأصفر في صيغة RGB عددية. غيّر القيمة لاستخدام ألوان أخرى.
 
-7. **موارد التنظيف**
-   التخلص من الموارد بشكل صحيح:
+### الخطوة 5 – تطبيق التعليق وحفظه
+أضف التعليق إلى المستند واكتب ملف الإخراج:
 
-   ```java
-   if (annotator != null) {
-       annotator.dispose();
-   }
-   ```
+```java
+annotator.add(strikeout);
+annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
+```
 
-### نصائح استكشاف الأخطاء وإصلاحها
-- تأكد من أن الإحداثيات تحدد المنطقة التي سيتم شطبها بشكل صحيح.
-- تأكد من أن مسار المستند الخاص بك صحيح ويمكن الوصول إليه.
-- تحقق من وجود أي استثناءات تم طرحها أثناء التهيئة أو الحفظ، والتي قد تشير إلى مشكلات في التكوين.
+### الخطوة 6 – تنظيف الموارد (حاسم!)
+دائمًا قم بتحرير Annotator لتفريغ الموارد الأصلية:
 
-## التطبيقات العملية
+```java
+if (annotator != null) {
+    annotator.dispose();
+}
+```
 
-فيما يلي بعض السيناريوهات الواقعية حيث يمكن أن تكون تعليقات شطب النص مفيدة:
-1. **تحرير المستندات:** قم بتحديد المعلومات غير الصحيحة التي تحتاج إلى مراجعة.
-2. **عمليات المراجعة:** تسليط الضوء على التغييرات التي اقترحها المراجعون.
-3. **سير العمل التعاوني:** أشر إلى أقسام المستند قيد المناقشة أو المراجعة.
+في الإنتاج، غلف الاستخدام داخل كتلة try‑with‑resources أو بنية `try/finally`.
 
-## اعتبارات الأداء
-- **تحسين استخدام الذاكرة:** تأكد من أن نظامك يحتوي على موارد ذاكرة كافية عند العمل مع مستندات كبيرة.
-- **معالجة الدفعات:** معالجة مستندات متعددة على دفعات لإدارة استهلاك الموارد بشكل فعال.
-- **ممارسات الكود الفعالة:** استخدم هياكل البيانات والخوارزميات الفعالة للتعامل مع التعليقات التوضيحية.
+## المشكلات الشائعة وكيفية حلها
 
-## خاتمة
+| المشكلة | العرض | الحل |
+|---------|---------|-----|
+| **File Not Found** | `Annotator` يرمي استثناء | استخدم مسارات مطلقة، تحقق من أذونات القراءة، تأكد من عدم حجز ملف من عملية أخرى |
+| **Wrong Coordinates** | الخط عبر يظهر بعيدًا عن النص المقصود | تحقق مرة أخرى من نظام إحداثيات عارض PDF؛ اضبط النقاط وفقًا لذلك |
+| **Annotation Invisible** | لا يظهر خط عبر بعد الحفظ | زيادة `opacity` (مثلاً `0.9`)، تحقق من `pageNumber` (قائمة صفرية)، تأكد من أن النقاط تشكل مستطيلًا صحيحًا |
+| **OutOfMemoryError** | يتعطل التطبيق عند ملفات PDF الكبيرة | زيادة مساحة الذاكرة JVM (`-Xmx2048m`)، معالجة المستندات على دفعات، دائمًا استدعاء `dispose()` |
 
-لقد تعلمتَ الآن كيفية إضافة تعليق توضيحي لشطب النص باستخدام GroupDocs.Annotation لجافا. تُحسّن هذه الميزة عمليات إدارة مستنداتك بشكل ملحوظ من خلال توفير إشارات مرئية واضحة للتعديلات والمراجعات. 
+## أفضل ممارسات الأداء للإنتاج
 
-بعد ذلك، فكر في استكشاف الميزات الأخرى لـ GroupDocs.Annotation مثل تعليقات الصور أو إضافة ارتباطات تشعبية لإثراء سير عمل المستندات لديك بشكل أكبر.
+### إدارة الذاكرة
+```java
+// Good: try‑with‑resources (Java 7+)
+try (Annotator annotator = new Annotator(documentPath)) {
+    // annotation logic here
+} // annotator automatically disposed
 
-## قسم الأسئلة الشائعة
+// Alternative: explicit disposal
+Annotator annotator = null;
+try {
+    annotator = new Annotator(documentPath);
+    // annotation logic here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
 
-1. **ما هو GroupDocs.Annotation؟**
-   مكتبة شاملة تسمح بإضافة أنواع مختلفة من التعليقات التوضيحية إلى المستندات في تطبيقات Java.
-2. **هل يمكنني استخدام GroupDocs.Annotation للمعالجة الدفعية؟**
-   نعم، فهو يدعم التعليق على مستندات متعددة بكفاءة مع إدارة الموارد المناسبة.
-3. **كيف أقوم بإعداد ترخيص مؤقت؟**
-   قم بزيارة [صفحة الترخيص المؤقت](https://purchase.groupdocs.com/temporary-license/) واتبع التعليمات للحصول على واحدة.
-4. **ما هي بعض المشكلات الشائعة عند استخدام GroupDocs.Annotation؟**
-   تتضمن المشكلات الشائعة مسارات ملفات غير صحيحة، أو موارد ذاكرة غير كافية، أو تبعيات مفقودة في إعداد مشروعك.
-5. **كيف يمكنني دمج GroupDocs.Annotation مع الأنظمة الأخرى؟**
-   يمكن دمج GroupDocs.Annotation في تطبيقات الويب عبر واجهات برمجة التطبيقات REST، مما يسمح بالتوافق والمرونة بين الأنظمة الأساسية.
+### استراتيجية المعالجة الدفعية
+عندما تحتاج إلى تعليقات على عشرات أو مئات الملفات:
 
-## موارد
-- [توثيق التعليقات التوضيحية لـ GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- [مرجع واجهة برمجة التطبيقات](https://reference.groupdocs.com/annotation/java/)
-- [تنزيل المكتبة](https://releases.groupdocs.com/annotation/java/)
-- [شراء GroupDocs](https://purchase.groupdocs.com/buy)
-- [نسخة تجريبية مجانية](https://releases.groupdocs.com/annotation/java/)
-- [رخصة مؤقتة](https://purchase.groupdocs.com/temporary-license/)
-- [منتدى الدعم](https://forum.groupdocs.com/c/annotation/)
+- معالجة 10‑20 مستندًا لكل دفعة.  
+- سجّل النجاح/الفشل لكل ملف.  
+- أعد تهيئة `Annotator` لكل مستند لتجنب تسرب الذاكرة.  
 
-ابدأ رحلتك لإدارة تعليقات المستندات بفعالية باستخدام GroupDocs.Annotation for Java، واستكشف الإمكانيات الواسعة التي يوفرها!
+### نصائح التخزين المؤقت
+- خزن قوالب المستندات المستخدمة بشكل متكرر.  
+- احفظ خرائط الإحداثيات المحسوبة مسبقًا للتصاميم القياسية.  
+
+## حالات الاستخدام الواقعية
+
+- **أنظمة مراجعة المستندات** – يقترح المحررون حذفًا دون تعديل العقد الأصلي.  
+- **التعديلات القانونية** – يتتبع المحامون إزالة البنود مع الحفاظ على الصياغة الأصلية للتدقيق.  
+- **مراجعة الأقران الأكاديمية** – يحدد المراجعون الأقسام التي يجب إزالتها ويضيفون تعليقات داخلية.  
+- **ترحيل المحتوى** – أثناء ترحيل أنظمة إدارة المحتوى، يبرز الخط عبر النصوص القديمة التي تحتاج إلى استبدال.  
+
+## تخصيص متقدم
+
+### تنسيق مخصص
+```java
+// Red for critical errors
+strikeout.setFontColor(16711680);
+// Blue for style suggestions
+strikeout.setFontColor(255);
+// Adjust opacity based on confidence
+strikeout.setOpacity(0.9); // high confidence
+strikeout.setOpacity(0.5); // tentative suggestion
+```
+
+### إضافة بيانات تعريفية
+```java
+strikeout.setMessage("Deleted by: " + username + " on " + timestamp);
+strikeout.setSubject("Content Review – Q1 2026");
+```
+
+## قائمة التحقق من استكشاف الأخطاء وإصلاحها
+- ✅ هل يمكنك فتح ملف المصدر يدويًا؟  
+- ✅ هل جميع تبعيات GroupDocs موجودة في classpath؟  
+- ✅ هل النقاط تشكل مستطيلًا صالحًا؟  
+- ✅ هل رقم الصفحة صحيح (قائمة صفرية)؟  
+- ✅ هل هناك ما يكفي من ذاكرة الـ heap؟  
+- ✅ هل لديك إذن كتابة لمجلد الإخراج؟  
+- ✅ هل صيغة المستند مدعومة (PDF، DOCX، PPTX، إلخ)؟  
+
+## الأسئلة المتكررة
+
+**س: هل يمكنني استخدام GroupDocs.Annotation داخل خدمة Spring Boot؟**  
+ج: نعم. أضف تبعية Maven، حقن فئة خدمة تنشئ `Annotator`، وأدر دورة حياتها باستخدام نطاقات bean في Spring.
+
+**س: أي صيغ المستندات تدعم تعليقات الخط عبر؟**  
+ج: PDF، DOCX، PPTX، والعديد من الصيغ الأخرى المدعومة بواسطة GroupDocs.Annotation. يوفر PDF أكثر دقة في التعامل مع الإحداثيات.
+
+**س: كيف أتعامل مع المستندات ذات أحجام صفحات مختلفة؟**  
+ج: استرجع أبعاد الصفحة عبر `annotator.getPageInfo(pageNumber)` وقم بتعديل إحداثياتك وفقًا لذلك.
+
+**س: هل يمكن تعديل أو حذف تعليق خط عبر موجود؟**  
+ج: بالتأكيد. استخدم `annotator.getAnnotations(pageNumber)` لجلبه، ثم `annotator.update(updatedAnnotation)` أو `annotator.delete(annotationId)`.
+
+**س: ما هو تأثير الأداء عند إضافة العديد من التعليقات؟**  
+ج: إضافة مئات التعليقات عادةً لا مشكلة، لكن راقب استهلاك الذاكرة. بالنسبة لمجموعات تعليقات كبيرة جدًا، فكر في تقسيم العرض إلى صفحات أو تحميل التعليقات عند الطلب بشكل كسول.
+
+## الخلاصة
+أصبح لديك الآن دليل كامل وجاهز للإنتاج لإضافة **add strikeout annotation java** باستخدام GroupDocs.Annotation. ابدأ بالمثال البسيط لفحص الصحة، ثم قم بالتوسع إلى المعالجة الدفعية، التنسيق المخصص، وإثراء البيانات التعريفية. تذكر اختبار الإحداثيات بعناية، إدارة الموارد بمسؤولية، واختيار نموذج الترخيص المناسب لبيئتك.
+
+هل أنت مستعد لاستكشاف المزيد؟ تفقد أنواع التعليقات الأخرى—التظليل، الملاحظة، الصورة، السهم، والعلامة المائية—لبناء مجموعة كاملة من ميزات التعاون على المستندات.
+
+---
+
+**آخر تحديث:** 2026-03-30  
+**تم الاختبار مع:** GroupDocs.Annotation 25.2 for Java  
+**المؤلف:** GroupDocs  
+
+**موارد إضافية**
+- [توثيق GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)
+- [دليل مرجع API](https://reference.groupdocs.com/annotation/java/)
+- [تحميل أحدث نسخة](https://releases.groupdocs.com/annotation/java/)
+- [شراء ترخيص كامل](https://purchase.groupdocs.com/buy)
+- [ابدأ تجربة مجانية](https://releases.groupdocs.com/annotation/java/)
+- [احصل على ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/)
+- [منتدى دعم المجتمع](https://forum.groupdocs.com/c/annotation/)

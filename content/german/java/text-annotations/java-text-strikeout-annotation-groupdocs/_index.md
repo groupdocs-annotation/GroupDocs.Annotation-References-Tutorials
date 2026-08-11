@@ -1,36 +1,59 @@
 ---
-"date": "2025-05-06"
-"description": "Erfahren Sie, wie Sie mit GroupDocs.Annotation Text in Java durchstreichen. Folgen Sie dieser Schritt-für-Schritt-Anleitung für nahtlose Dokumentanmerkungen."
-"title": "Java-Text-Strikeout-Annotation-Handbuch mit GroupDocs.Annotation"
-"url": "/de/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+categories:
+- Java Development
+date: '2026-03-30'
+description: Erfahren Sie, wie Sie in Java eine Durchstreichungs‑Annotation mit GroupDocs.Annotation
+  hinzufügen. Schritt‑für‑Schritt‑Anleitung mit Codebeispielen, Tipps zur Fehlerbehebung
+  und bewährten Methoden für die Dokumentenmarkierung.
+keywords: Java strikeout annotation tutorial, GroupDocs annotation Java guide, text
+  markup Java, document annotation Java, how to add strikeout annotation java
+lastmod: '2026-03-30'
+linktitle: Add Strikeout Annotation Java Tutorial
+tags:
+- java-annotations
+- groupdocs
+- document-processing
+- pdf-manipulation
+title: Strikeout-Annotation hinzufügen Java‑Tutorial mit GroupDocs
 type: docs
-"weight": 1
+url: /de/java/text-annotations/java-text-strikeout-annotation-groupdocs/
+weight: 1
 ---
 
-# Java-Text-Durchstreichungsanmerkung mit GroupDocs.Annotation
+# Strikeout-Annotation in Java hinzufügen – Vollständiger GroupDocs-Leitfaden
 
-In der heutigen digitalen Welt benötigen Dokumente oft Anmerkungen, um wichtige Informationen hervorzuheben oder Änderungen anzuzeigen. Ob Sie an Gemeinschaftsprojekten arbeiten oder Dokumente überprüfen und kommentieren müssen – die Möglichkeit, Text durchzustreichen, kann von unschätzbarem Wert sein. Dieses Tutorial führt Sie durch das Hinzufügen einer Textdurchstreichungsanmerkung mit GroupDocs.Annotation für Java, einer leistungsstarken Bibliothek zur Dokumentbearbeitung.
+Haben Sie sich schon einmal dabei erwischt, wie Sie ein Dokument anstarren und denken: „Ich muss diesen Text durchstreichen, aber ich kann nicht einfach einen roten Stift nehmen“? Sie sind nicht allein. Egal, ob Sie ein Dokumenten‑Review‑System bauen, einen Bearbeitungs‑Workflow erstellen oder einfach Text in Ihrer Java‑Anwendung zum Löschen markieren müssen, **add strikeout annotation java** ist eine wesentliche Fähigkeit. In diesem Tutorial führen wir Sie durch alles, was Sie wissen müssen, um eine Text‑Durchstreich‑Funktion zu implementieren, die in der Produktion tatsächlich funktioniert.
 
-**Was Sie lernen werden:**
-- So richten Sie Ihre Umgebung mit GroupDocs.Annotation ein.
-- Schritt-für-Schritt-Anleitung zum Implementieren einer Textdurchstreichungsanmerkung in Java.
-- Praktische Anwendungen dieser Funktion in realen Szenarien.
-- Leistungstipps und bewährte Methoden bei der Verwendung von GroupDocs.Annotation.
+## Schnelle Antworten
+- **Welche Bibliothek unterstützt Durchstreich‑Annotationen in Java?** GroupDocs.Annotation for Java  
+- **Welches primäre Schlüsselwort sollte ich für SEO anvisieren?** add strikeout annotation java  
+- **Benötige ich eine Lizenz, um den Beispielcode auszuführen?** Eine kostenlose Testversion oder temporäre Lizenz reicht für die Entwicklung; für die Produktion ist eine Voll‑Lizenz erforderlich.  
+- **Kann ich das mit PDF-, DOCX- und PPTX‑Dateien verwenden?** Ja – GroupDocs.Annotation unterstützt alle gängigen Dokumentformate.  
+- **Welche Java‑Version wird benötigt?** JDK 8 oder höher (JDK 11+ empfohlen).
 
-## Voraussetzungen
+## Was ist add strikeout annotation java?
+Eine Durchstreich‑Annotation zeichnet eine Linie durch ausgewählten Text und zeigt visuell an, dass der Inhalt entfernt oder ignoriert werden soll. Es ist eine nicht‑destruktive Methode, um Löschungen vorzuschlagen, während der Originaltext für Prüfpfade oder kollaborative Überprüfungen intakt bleibt.
 
-Bevor Sie mit der Implementierung beginnen, stellen Sie sicher, dass Sie über Folgendes verfügen:
-- **Java Development Kit (JDK):** Für die Kompatibilität mit GroupDocs.Annotation ist Version 8 oder höher erforderlich.
-- **GroupDocs.Annotation-Bibliothek:** Binden Sie diese Bibliothek in Ihr Projekt ein. Die hier verwendete Version ist `25.2`.
-- **Integrierte Entwicklungsumgebung (IDE):** Wie beispielsweise IntelliJ IDEA, Eclipse oder NetBeans.
+## Warum Durchstreich‑Annotationen in Java‑Anwendungen verwenden?
+- **Dokumenten‑Review‑Workflows** – Prüfer können unerwünschten Text markieren, ohne die Quelle zu ändern.  
+- **Kollaboratives Bearbeiten** – Teammitglieder sehen vorgeschlagene Löschungen sofort.  
+- **Rechtliche und Compliance‑Anforderungen** – Ein klarer Prüfpfad von Änderungen wird erhalten.  
+- **Content‑Migration** – Veraltete Abschnitte markieren, bevor Inhalte zwischen Systemen verschoben werden.
 
-## Einrichten von GroupDocs.Annotation für Java
+## Voraussetzungen und Umgebungseinrichtung
+Sie benötigen Folgendes, bevor Sie mit dem Code beginnen:
 
-Um GroupDocs.Annotation für Java zu verwenden, führen Sie die folgenden Schritte aus:
+- **Java Development Kit (JDK)** 8+ (JDK 11+ empfohlen)  
+- **Maven oder Gradle** für das Abhängigkeitsmanagement  
+- **IDE** – IntelliJ IDEA, Eclipse oder VS Code mit Java‑Erweiterungen  
+- **GroupDocs.Annotation‑Bibliothek** – wir verwenden Version 25.2 in den Beispielen  
 
-### Maven-Konfiguration
+*Nice to have:* Grundkenntnisse von Java‑Annotationen und PDF‑Verarbeitung.
 
-Fügen Sie die folgende Konfiguration zu Ihrem `pom.xml` Datei zum Einbinden von GroupDocs.Annotation in Ihr Projekt:
+## GroupDocs.Annotation für Java einrichten
+
+### Maven‑Konfiguration, die tatsächlich funktioniert
+Fügen Sie das Repository und die Abhängigkeit zu Ihrer `pom.xml` exakt wie gezeigt hinzu:
 
 ```xml
 <repositories>
@@ -50,149 +73,224 @@ Fügen Sie die folgende Konfiguration zu Ihrem `pom.xml` Datei zum Einbinden von
 </dependencies>
 ```
 
-### Lizenzerwerb
+### Lizenzbeschaffung
+GroupDocs bietet mehrere Lizenzierungsoptionen:
 
-GroupDocs bietet eine kostenlose Testversion, temporäre Lizenzen zu Evaluierungszwecken oder den Erwerb einer Lizenz zur weiteren Nutzung an. Besuchen Sie die [Kaufseite](https://purchase.groupdocs.com/buy) um Ihre Optionen zu erkunden.
+- **Kostenlose Testversion** – ideal zum Testen (keine Kreditkarte erforderlich)  
+- **Temporäre Lizenz** – ideal für Entwicklung und Staging  
+- **Voll‑Lizenz** – für den Produktionseinsatz erforderlich; siehe die [Kaufseite](https://purchase.groupdocs.com/buy)
 
-### Grundlegende Initialisierung und Einrichtung
+> **Pro‑Tipp:** Beginnen Sie mit der kostenlosen Testversion, um die API zu erkunden, und wechseln Sie zu einer temporären Lizenz, wenn Sie bereit sind, ein Feature für die reale Welt zu entwickeln.
 
-Nachdem Sie Maven-Abhängigkeiten eingerichtet haben, initialisieren Sie GroupDocs.Annotation in Ihrer Java-Anwendung:
+### Schnell‑Check‑Setup
+Führen Sie dieses Minimalprogramm aus, um zu überprüfen, ob die Bibliothek korrekt geladen wird:
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
 public class DocumentSetup {
     public static void main(String[] args) {
-        Annotator annotator = new Annotator("path/to/your/document.pdf");
-        // Fahren Sie mit den Anmerkungsaufgaben fort …
+        try {
+            Annotator annotator = new Annotator("path/to/your/document.pdf");
+            System.out.println("GroupDocs.Annotation is ready to use!");
+            annotator.dispose();
+        } catch (Exception e) {
+            System.out.println("Setup issue: " + e.getMessage());
+        }
     }
 }
 ```
 
-## Implementierungshandbuch
+Wenn die Konsole die Erfolgsmeldung ohne Fehler ausgibt, sind Sie bereit, Durchstreich‑Annotationen hinzuzufügen.
 
-In diesem Abschnitt befassen wir uns mit der Implementierung einer Textdurchstreichungsfunktion mithilfe von GroupDocs.Annotation.
+## Wie man add strikeout annotation java hinzufügt
 
-### Hinzufügen einer durchgestrichenen Textanmerkung
+Unten finden Sie eine vollständige, produktionsreife Implementierung, aufgeteilt in klare Schritte.
 
-#### Überblick
-Um einen Text durchzustreichen, müssen Sie den zu streichenden Bereich definieren und seine Eigenschaften wie Farbe, Deckkraft und Seitenzahl konfigurieren. Diese Funktion ist besonders nützlich, um Änderungen oder Fehler in Dokumenten anzuzeigen.
+### Schritt 1 – Annotator initialisieren
+Erstellen Sie eine `Annotator`‑Instanz, die auf das Quelldokument verweist:
 
-#### Schrittweise Implementierung
-1. **Annotator initialisieren**
-   Erstellen Sie eine Instanz von `Annotator` mit dem Pfad Ihres Dokuments:
+```java
+Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
+```
 
-   ```java
-   Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
-   ```
+> **Warum das wichtig ist:** Die Verwendung eines absoluten oder korrekt aufgelösten relativen Pfads verhindert „file not found“-Ausnahmen.
 
-2. **Antworten für Anmerkungen erstellen (optional)**
-   Fügen Sie den Anmerkungen Kommentare oder Antworten hinzu, die während der Dokumentprüfung sichtbar sind:
+### Schritt 2 – (Optional) Kommentarantworten vorbereiten
+Das Hinzufügen von Antworten macht die Annotation kollaborativ:
 
-   ```java
-   Reply reply1 = new Reply();
-   reply1.setComment("First comment");
-   reply1.setRepliedOn(Calendar.getInstance().getTime());
+```java
+Reply reply1 = new Reply();
+reply1.setComment("First comment");
+reply1.setRepliedOn(Calendar.getInstance().getTime());
 
-   Reply reply2 = new Reply();
-   reply2.setComment("Second comment");
-   reply2.setRepliedOn(Calendar.getInstance().getTime());
-   
-   List<Reply> replies = Arrays.asList(reply1, reply2);
-   ```
+Reply reply2 = new Reply();
+reply2.setComment("Second comment");
+reply2.setRepliedOn(Calendar.getInstance().getTime());
 
-3. **Definieren Sie den Durchstreichungsbereich**
-   Geben Sie Koordinaten an, die ein Rechteck für den Durchstreicher bilden:
+List<Reply> replies = Arrays.asList(reply1, reply2);
+```
 
-   ```java
-   Point point1 = new Point(80, 730);
-   Point point2 = new Point(240, 730);
-   Point point3 = new Point(80, 650);
-   Point point4 = new Point(240, 650);
+Diese Kommentare erscheinen, wenn ein Benutzer über die Durchstreichung fährt.
 
-   List<Point> points = Arrays.asList(point1, point2, point3, point4);
-   ```
+### Schritt 3 – Durchstreich‑Bereich definieren
+Geben Sie das Rechteck an, das den Text umschließt, den Sie durchstreichen möchten:
 
-4. **Konfigurieren der Durchstreichungsanmerkung**
-   Legen Sie Eigenschaften wie Schriftfarbe, Deckkraft und Seitenzahl fest:
+```java
+Point point1 = new Point(80, 730);
+Point point2 = new Point(240, 730);
+Point point3 = new Point(80, 650);
+Point point4 = new Point(240, 650);
 
-   ```java
-   StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
-   strikeout.setCreatedOn(Calendar.getInstance().getTime());
-   strikeout.setFontColor(65535);  // Gelbe Farbe
-   strikeout.setMessage("This is a strikeout annotation");
-   strikeout.setOpacity(0.7);
-   strikeout.setPageNumber(0);
-   strikeout.setPoints(points);
-   strikeout.setReplies(replies);
-   ```
+List<Point> points = Arrays.asList(point1, point2, point3, point4);
+```
 
-5. **Hinzufügen der Anmerkung**
-   Fügen Sie dem Dokument Ihre konfigurierte Anmerkung hinzu:
+> **Koordinaten‑Tipp:** Ursprung (0,0) ist die obere linke Ecke der Seite; X wächst nach rechts, Y nach unten. Verwenden Sie einen PDF‑Viewer, der Koordinaten anzeigt, um diese Werte fein abzustimmen.
 
-   ```java
-   annotator.add(strikeout);
-   ```
+### Schritt 4 – Durchstreich‑Annotation konfigurieren
+Legen Sie das Aussehen, die Seitenzahl fest und hängen Sie die Kommentare an:
 
-6. **Speichern des kommentierten Dokuments**
-   Änderungen in einer neuen Datei speichern:
+```java
+StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
+strikeout.setCreatedOn(Calendar.getInstance().getTime());
+strikeout.setFontColor(65535);  // Yellow color
+strikeout.setMessage("This is a strikeout annotation");
+strikeout.setOpacity(0.7);
+strikeout.setPageNumber(0);
+strikeout.setPoints(points);
+strikeout.setReplies(replies);
+```
 
-   ```java
-   annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
-   ```
+*Hinweis zur Farbe:* `65535` entspricht Gelb im ganzzahligen RGB‑Format. Ändern Sie den Wert, um andere Farben zu verwenden.
 
-7. **Ressourcen bereinigen**
-   Ressourcen ordnungsgemäß entsorgen:
+### Schritt 5 – Annotation anwenden und speichern
+Fügen Sie die Annotation dem Dokument hinzu und schreiben Sie die Ausgabedatei:
 
-   ```java
-   if (annotator != null) {
-       annotator.dispose();
-   }
-   ```
+```java
+annotator.add(strikeout);
+annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
+```
 
-### Tipps zur Fehlerbehebung
-- Stellen Sie sicher, dass die Koordinaten den auszustreichenden Bereich korrekt definieren.
-- Überprüfen Sie, ob Ihr Dokumentpfad korrekt und zugänglich ist.
-- Überprüfen Sie, ob während der Initialisierung oder beim Speichern Ausnahmen aufgetreten sind, die auf Konfigurationsprobleme hinweisen können.
+### Schritt 6 – Ressourcen bereinigen (Kritisch!)
+Entsorgen Sie den Annotator immer, um native Ressourcen freizugeben:
 
-## Praktische Anwendungen
+```java
+if (annotator != null) {
+    annotator.dispose();
+}
+```
 
-Hier sind einige reale Szenarien, in denen durchgestrichene Textanmerkungen nützlich sein können:
-1. **Dokumente bearbeiten:** Markieren Sie falsche Informationen, die überarbeitet werden müssen.
-2. **Überprüfungsprozesse:** Markieren Sie die von den Gutachtern vorgeschlagenen Änderungen.
-3. **Kollaborative Workflows:** Geben Sie Abschnitte eines Dokuments an, die gerade diskutiert oder überprüft werden.
+In der Produktion sollten Sie die Verwendung in einem try‑with‑resources‑Block oder einer `try/finally`‑Konstruktion einbetten.
 
-## Überlegungen zur Leistung
-- **Speichernutzung optimieren:** Stellen Sie sicher, dass Ihr System über ausreichend Speicherressourcen verfügt, wenn Sie mit großen Dokumenten arbeiten.
-- **Stapelverarbeitung:** Verarbeiten Sie mehrere Dokumente in Stapeln, um den Ressourcenverbrauch effektiv zu verwalten.
-- **Effiziente Code-Praktiken:** Verwenden Sie effiziente Datenstrukturen und Algorithmen zur Handhabung von Anmerkungen.
+## Häufige Probleme und deren Behebung
 
-## Abschluss
+| Problem | Symptom | Lösung |
+|---------|---------|--------|
+| **Datei nicht gefunden** | `Annotator` wirft eine Ausnahme | Verwenden Sie absolute Pfade, prüfen Sie Lese­berechtigungen, stellen Sie sicher, dass kein anderer Prozess die Datei sperrt |
+| **Falsche Koordinaten** | Durchstreichung erscheint nicht am vorgesehenen Text | Überprüfen Sie das Koordinatensystem des PDF‑Viewers erneut; passen Sie die Punkte entsprechend an |
+| **Annotation unsichtbar** | Keine sichtbare Durchstreichung nach dem Speichern | Erhöhen Sie `opacity` (z. B. `0.9`), prüfen Sie `pageNumber` (0‑basiert), stellen Sie sicher, dass die Punkte ein korrektes Rechteck bilden |
+| **OutOfMemoryError** | Anwendung stürzt bei großen PDFs ab | Erhöern Sie den JVM‑Heap (`-Xmx2048m`), verarbeiten Sie Dokumente stapelweise, rufen Sie stets `dispose()` auf |
 
-Sie haben nun gelernt, wie Sie mit GroupDocs.Annotation für Java eine Textdurchstreichung hinzufügen. Diese Funktion kann Ihre Dokumentenverwaltungsprozesse erheblich verbessern, indem sie klare visuelle Hinweise für Bearbeitungen und Überarbeitungen bietet. 
+## Leistungs‑Best Practices für die Produktion
 
-Als Nächstes sollten Sie andere Funktionen von GroupDocs.Annotation erkunden, beispielsweise Bildanmerkungen oder Hyperlink-Ergänzungen, um Ihre Dokument-Workflows weiter zu bereichern.
+### Speicherverwaltung
+```java
+// Good: try‑with‑resources (Java 7+)
+try (Annotator annotator = new Annotator(documentPath)) {
+    // annotation logic here
+} // annotator automatically disposed
 
-## FAQ-Bereich
+// Alternative: explicit disposal
+Annotator annotator = null;
+try {
+    annotator = new Annotator(documentPath);
+    // annotation logic here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
 
-1. **Was ist GroupDocs.Annotation?**
-   Eine umfassende Bibliothek, die das Hinzufügen verschiedener Arten von Anmerkungen zu Dokumenten in Java-Anwendungen ermöglicht.
-2. **Kann ich GroupDocs.Annotation für die Stapelverarbeitung verwenden?**
-   Ja, es unterstützt die effiziente Kommentierung mehrerer Dokumente mit ordnungsgemäßer Ressourcenverwaltung.
-3. **Wie richte ich eine temporäre Lizenz ein?**
-   Besuchen Sie die [Seite mit temporärer Lizenz](https://purchase.groupdocs.com/temporary-license/) und befolgen Sie die Anweisungen, um eines zu erhalten.
-4. **Welche häufigen Probleme treten bei der Verwendung von GroupDocs.Annotation auf?**
-   Häufige Probleme sind falsche Dateipfade, unzureichende Speicherressourcen oder fehlende Abhängigkeiten in Ihrem Projekt-Setup.
-5. **Wie integriere ich GroupDocs.Annotation in andere Systeme?**
-   GroupDocs.Annotation kann über REST-APIs in Webanwendungen integriert werden, was plattformübergreifende Kompatibilität und Flexibilität ermöglicht.
+### Stapelverarbeitungs‑Strategie
+Wenn Sie Dutzende oder Hunderte von Dateien annotieren müssen:
 
-## Ressourcen
-- [GroupDocs-Anmerkungsdokumentation](https://docs.groupdocs.com/annotation/java/)
-- [API-Referenz](https://reference.groupdocs.com/annotation/java/)
-- [Download-Bibliothek](https://releases.groupdocs.com/annotation/java/)
-- [GroupDocs kaufen](https://purchase.groupdocs.com/buy)
-- [Kostenlose Testversion](https://releases.groupdocs.com/annotation/java/)
-- [Temporäre Lizenz](https://purchase.groupdocs.com/temporary-license/)
-- [Support-Forum](https://forum.groupdocs.com/c/annotation/)
+- Verarbeiten Sie 10‑20 Dokumente pro Batch.  
+- Protokollieren Sie Erfolg/Misserfolg für jede Datei.  
+- Initialisieren Sie den `Annotator` für jedes Dokument neu, um Speicherlecks zu vermeiden.  
 
-Begeben Sie sich auf die Reise zur effektiven Verwaltung von Dokumentanmerkungen mit GroupDocs.Annotation für Java und erkunden Sie die enormen Möglichkeiten, die es bietet!
+### Caching‑Tipps
+- Häufig verwendete Dokumentvorlagen zwischenspeichern.  
+- Vorab berechnete Koordinaten‑Maps für Standard‑Layouts speichern.
+
+## Praxisbeispiele
+
+1. **Dokumenten‑Review‑Systeme** – Redakteure schlagen Löschungen vor, ohne den Originalvertrag zu ändern.  
+2. **Rechtliche Änderungen** – Anwälte verfolgen das Entfernen von Klauseln, während die ursprüngliche Formulierung für Audits erhalten bleibt.  
+3. **Akademisches Peer‑Review** – Gutachter markieren Abschnitte zur Entfernung und fügen Inline‑Kommentare hinzu.  
+4. **Content‑Migration** – Bei CMS‑Migrationen heben Durchstreichungen veraltete Texte hervor, die ersetzt werden müssen.
+
+## Erweiterte Anpassungen
+
+### Benutzerdefiniertes Styling
+```java
+// Red for critical errors
+strikeout.setFontColor(16711680);
+// Blue for style suggestions
+strikeout.setFontColor(255);
+// Adjust opacity based on confidence
+strikeout.setOpacity(0.9); // high confidence
+strikeout.setOpacity(0.5); // tentative suggestion
+```
+
+### Metadaten hinzufügen
+```java
+strikeout.setMessage("Deleted by: " + username + " on " + timestamp);
+strikeout.setSubject("Content Review – Q1 2026");
+```
+
+## Fehlersuch‑Checkliste
+- ✅ Können Sie die Quelldatei manuell öffnen?  
+- ✅ Sind alle GroupDocs‑Abhängigkeiten im Klassenpfad vorhanden?  
+- ✅ Bilden die Punkte ein gültiges Rechteck?  
+- ✅ Ist die Seitenzahl korrekt (0‑basiert)?  
+- ✅ Gibt es genügend Heap‑Speicher?  
+- ✅ Haben Sie Schreibrechte für den Ausgabordner?  
+- ✅ Wird das Dokumentformat unterstützt (PDF, DOCX, PPTX usw.)?
+
+## Häufig gestellte Fragen
+
+**F: Kann ich GroupDocs.Annotation in einem Spring‑Boot‑Service verwenden?**  
+A: Ja. Fügen Sie die Maven‑Abhängigkeit hinzu, injizieren Sie eine Service‑Klasse, die den `Annotator` erstellt, und verwalten Sie dessen Lebenszyklus mit den Bean‑Scopes von Spring.
+
+**F: Welche Dokumentformate unterstützen Durchstreich‑Annotationen?**  
+A: PDF, DOCX, PPTX und viele andere Formate, die von GroupDocs.Annotation unterstützt werden. PDF bietet die präziseste Koordinaten‑Verarbeitung.
+
+**F: Wie gehe ich mit Dokumenten um, die unterschiedliche Seitengrößen haben?**  
+A: Rufen Sie die Seitenabmessungen über `annotator.getPageInfo(pageNumber)` ab und skalieren Sie Ihre Koordinaten entsprechend.
+
+**F: Ist es möglich, eine bestehende Durchstreich‑Annotation zu bearbeiten oder zu löschen?**  
+A: Ja. Verwenden Sie `annotator.getAnnotations(pageNumber)`, um sie abzurufen, und dann `annotator.update(updatedAnnotation)` bzw. `annotator.delete(annotationId)`.
+
+**F: Welche Auswirkungen hat das Hinzufügen vieler Annotationen auf die Performance?**  
+A: Das Hinzufügen von Hunderten von Annotationen ist im Allgemeinen unproblematisch, aber überwachen Sie den Speicherverbrauch. Bei sehr großen Annotationensätzen sollten Sie in Erwägung ziehen, die Ansicht zu paginieren oder Annotationen bei Bedarf lazy zu laden.
+
+## Fazit
+Sie haben nun einen vollständigen, produktionsreifen Leitfaden zum **add strikeout annotation java** mit GroupDocs.Annotation. Beginnen Sie mit dem einfachen Schnell‑Check‑Beispiel und skalieren Sie dann zu Stapelverarbeitung, benutzerdefiniertem Styling und Metadaten‑Anreicherung. Denken Sie daran, Koordinaten sorgfältig zu testen, Ressourcen verantwortungsbewusst zu verwalten und das passende Lizenzmodell für Ihre Umgebung zu wählen.
+
+Bereit, mehr zu entdecken? Schauen Sie sich weitere Annotationstypen an – Highlight, Note, Image, Arrow und Watermark – um eine voll ausgestattete Dokument‑Zusammenarbeits‑Suite zu erstellen.
+
+---
+
+**Zuletzt aktualisiert:** 2026-03-30  
+**Getestet mit:** GroupDocs.Annotation 25.2 für Java  
+**Autor:** GroupDocs  
+
+**Zusätzliche Ressourcen**
+- [GroupDocs Annotation Dokumentation](https://docs.groupdocs.com/annotation/java/)
+- [API‑Referenzhandbuch](https://reference.groupdocs.com/annotation/java/)
+- [Neueste Version herunterladen](https://releases.groupdocs.com/annotation/java/)
+- [Vollständige Lizenz kaufen](https://purchase.groupdocs.com/buy)
+- [Kostenlose Testversion starten](https://releases.groupdocs.com/annotation/java/)
+- [Temporäre Lizenz erhalten](https://purchase.groupdocs.com/temporary-license/)
+- [Community‑Support‑Forum](https://forum.groupdocs.com/c/annotation/)
