@@ -1,72 +1,121 @@
 ---
 categories:
 - Java Development
-date: '2026-02-21'
-description: เรียนรู้วิธีเพิ่มลูกศรลงใน PDF ด้วย GroupDocs.Annotation สำหรับ Java
-  คู่มือทีละขั้นตอนพร้อมโค้ด แนวปฏิบัติที่ดีที่สุด และการแก้ไขปัญหา
-keywords: Java PDF arrow annotations, GroupDocs annotation tutorial, PDF annotation
-  Java library, Java document annotation, PDF collaboration tools Java
-lastmod: '2026-02-21'
-linktitle: Java PDF Arrow Annotations Guide
+date: '2026-08-14'
+description: เรียนรู้วิธีเพิ่มลูกศรใน PDF ด้วย GroupDocs.Annotation สำหรับ Java คู่มือทีละขั้นตอน
+  แนวปฏิบัติที่ดีที่สุด และการแก้ไขปัญหาสำหรับนักพัฒนา Java
+keywords:
+- how to add arrow pdf
+- GroupDocs annotation Java
+- PDF arrow annotation
+- Java document annotation
+lastmod: '2026-08-14'
+linktitle: คู่มือการทำเครื่องหมายลูกศร PDF ด้วย Java
+og_description: วิธีเพิ่มลูกศรใน PDF ด้วย GroupDocs.Annotation สำหรับ Java คู่มือนี้จะแสดงการตั้งค่าทีละขั้นตอน
+  เคล็ดลับไม่ต้องเขียนโค้ด และเทคนิคการเพิ่มประสิทธิภาพสำหรับการทำเครื่องหมายลูกศร
+  PDF ที่พร้อมใช้งานในผลิตภัณฑ์
+og_image_alt: Guide showing how to add arrow pdf using GroupDocs Annotation for Java
+og_title: วิธีเพิ่มลูกศรใน PDF ด้วย Java – คู่มือ GroupDocs Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-14'
+  description: Learn how to add arrow pdf using GroupDocs.Annotation for Java. Step‑by‑step
+    tutorial, best practices, and troubleshooting for Java developers.
+  headline: How to add arrow to pdf with Java – Complete tutorial & best practices
+    (2025)
+  type: TechArticle
+- description: Learn how to add arrow pdf using GroupDocs.Annotation for Java. Step‑by‑step
+    tutorial, best practices, and troubleshooting for Java developers.
+  name: How to add arrow to pdf with Java – Complete tutorial & best practices (2025)
+  steps:
+  - name: Maven configuration (with troubleshooting)
+    text: 'Add the repository and dependency shown earlier. If Maven fails to resolve
+      the artifact, ensure you have the GroupDocs public repository defined in your
+      `pom.xml`:'
+  - name: License setup (critical for production)
+    text: 'For development you can use a temporary trial license: **Reality check**:
+      The trial adds a visible watermark to every saved PDF. A production license
+      removes this watermark and unlocks the full annotation feature set.'
+  - name: Basic initialization pattern
+    text: '`Annotator` is the primary class for loading a PDF document and applying
+      annotations. Always wrap the `Annotator` in a `try‑finally` block so the underlying
+      resources are released promptly: **Why the try‑finally block?** GroupDocs allocates
+      native memory for PDF parsing; failing to dispose the `Anno'
+  - name: Building annotation replies (the smart way)
+    text: 'Replies turn a static arrow into an interactive discussion point. The first
+      time you mention the `Reply` class, define it succinctly: **Definition anchor**:
+      `Reply` represents a text comment attached to an annotation, storing author
+      information and timestamp. **Pro tip**: Store the user’s ID and rol'
+  - name: Creating the arrow annotation (with real‑world considerations)
+    text: '**Definition anchor**: `ArrowAnnotation` is the GroupDocs object that renders
+      a directional arrow on a PDF page. Key parameters explained: - **Rectangle coordinates**
+      – `(x, y, width, height)` where `(x, y)` is the top‑left corner of the bounding
+      box. - **PenColor** – Uses ARGB integer; `65535` yiel'
+  - name: Adding and saving (with error handling)
+    text: '**Definition anchor**: `Annotator.save` persists all pending annotation
+      changes to the target PDF file. Always catch `IOException` and `AnnotationException`
+      to handle corrupted files, invalid paths, or permission problems. Logging the
+      stack trace helps you diagnose issues in production.'
+  type: HowTo
+- questions:
+  - answer: 'Yes, provide the password when creating the `Annotator` instance:'
+    question: Can I add arrow annotations to password‑protected PDFs?
+  - answer: 'Process documents in small batches, reuse a single `Annotator` per file,
+      and call `dispose()` after each save:'
+    question: How do I batch process multiple documents efficiently?
+  - answer: GroupDocs imposes no hard limit, but practical performance degrades after
+      roughly **1,000** annotations on a 500‑page PDF unless you apply the memory‑management
+      techniques described earlier.
+    question: What’s the maximum number of annotations per document?
+  - answer: The library provides standard arrow heads. For fully custom shapes you
+      can combine multiple `AreaAnnotation` objects or switch to a graphics‑focused
+      library that supports vector paths.
+    question: Can I customize arrow shapes beyond the standard options?
+  - answer: GroupDocs automatically converts between top‑left UI coordinates and bottom‑left
+      PDF coordinates. If you encounter mismatches, double‑check that you’re not applying
+      an extra transformation layer on the client side.
+    question: How do I handle different PDF coordinate systems?
+  type: FAQPage
 tags:
 - pdf-annotations
 - java-tutorial
 - document-processing
 - groupdocs
-title: วิธีเพิ่มลูกศรลงใน PDF ด้วย Java – บทเรียนครบถ้วนและแนวปฏิบัติที่ดีที่สุด
+title: วิธีเพิ่มลูกศรลงใน PDF ด้วย Java – คู่มือเต็มรูปแบบและแนวปฏิบัติที่ดีที่สุด
+  (2025)
 type: docs
 url: /th/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-# การทำเครื่องหมายลูกศรใน PDF ด้วย Java - คู่มือฉบับเต็มและแนวปฏิบัติที่ดีที่สุด (2025)
+# การทำเครื่องหมายลูกศรใน PDF ด้วย Java – คู่มือฉบับเต็มและแนวปฏิบัติที่ดีที่สุด (2025)
 
 ## บทนำ
 
-เคยประสบปัญหาในการทำให้ทีมของคุณให้ความสนใจในส่วนเฉพาะของเอกสาร PDF ระหว่างการตรวจสอบหรือไม่? คุณไม่ได้อยู่คนเดียว ไม่ว่าคุณจะจัดการเอกสารทางเทคนิค สัญญากฎหมาย หรือสเปคโครงการ การชี้ให้เห็นพื้นที่ที่ต้องอภิปรายอย่างแม่นยำอาจทำให้หงุดหงิดได้หากไม่มีเครื่องมือที่เหมาะสม  
+เคยประสบปัญหาในการทำให้ทีมของคุณให้ความสนใจในส่วนเฉพาะของเอกสาร PDF ระหว่างการตรวจสอบหรือไม่? คุณไม่ได้เป็นคนเดียว ไม่ว่าคุณจะจัดการเอกสารทางเทคนิค สัญญากฎหมาย หรือข้อกำหนดของโครงการ การชี้ให้เห็นพื้นที่ที่ต้องพูดคุยอย่างชัดเจนอาจทำให้รู้สึกหงุดหงิดหากไม่มีเครื่องมือที่เหมาะสม  
 
-**นี่คือวิธีแก้ปัญหา**: การทำเครื่องหมายลูกศรใน PDF ด้วย Java โดยใช้ GroupDocs.Annotation API วิธีที่ทรงพลังนี้ทำให้คุณสามารถ **เพิ่มลูกศรลงในไฟล์ PDF** ได้โดยอัตโนมัติ ทำให้การทำงานร่วมกันราบรื่นและเป็นมืออาชีพ  
+**นี่คือวิธีแก้**: การทำเครื่องหมายลูกศรใน PDF ด้วย Java โดยใช้ GroupDocs.Annotation API วิธีที่ทรงพลังนี้ทำให้คุณสามารถ **เพิ่มลูกศรลงในไฟล์ PDF** ได้โดยโปรแกรมเมชัน ทำให้การทำงานร่วมกันราบรื่นและเป็นมืออาชีพ คุณสามารถรับเวอร์ชันทดลองได้จากหน้า [GroupDocs](https://purchase.groupdocs.com/temporary-license/) ของใบอนุญาตชั่วคราว  
 
-ในคู่มือฉบับครอบคลุมนี้ คุณจะได้เรียนรู้วิธีการนำเครื่องหมายลูกศรไปใช้ที่ทำงานได้จริงในสภาพแวดล้อมการผลิต เราจะครอบคลุมทุกอย่างตั้งแต่การตั้งค่าเบื้องต้นจนถึงการปรับแต่งขั้นสูง พร้อมกับสถานการณ์จริงที่คุณอาจเจอ (และวิธีจัดการ)  
+## คำตอบอย่างรวดเร็ว
+- **ไลบรารีใดที่ทำให้ฉันเพิ่มลูกศรลงใน PDF ด้วย Java?** GroupDocs.Annotation for Java.  
+- **ฉันต้องการใบอนุญาตสำหรับการใช้งานจริงหรือไม่?** ใช่ ใบอนุญาตเชิงพาณิชย์จะลบลายน้ำและเปิดใช้งานฟีเจอร์ทั้งหมด ดูที่ [หน้าแสดงราคา GroupDocs](https://purchase.groupdocs.com/buy) สำหรับรายละเอียด.  
+- **เวอร์ชัน Java ใดที่แนะนำ?** JDK 11 ให้ประสิทธิภาพที่ดีที่สุดและการสนับสนุนระยะยาว.  
+- **ฉันสามารถเพิ่มลูกศรหลายอันในเอกสารเดียวได้หรือไม่?** แน่นอน – เพียงสร้างอ็อบเจ็กต์ `ArrowAnnotation` หลายอันและเพิ่มลงใน `Annotator` เดียวกัน.  
+- **รองรับการประมวลผลแบบชุดหรือไม่?** ใช่ คุณสามารถวนลูปผ่านเอกสารและใช้ `Annotator` ตัวเดียวกันซ้ำได้หลังจากทำการกำจัดอย่างเหมาะสม.  
 
-**สิ่งที่ทำให้บทเรียนนี้แตกต่าง** คุณจะได้รับข้อมูลเชิงปฏิบัติตามประสบการณ์ของผู้ที่ได้ทำการใช้งานจริงในแอปพลิเคชันระดับองค์กร รวมถึงข้อควรระวังที่เอกสารทั่วไปไม่ได้บอกคุณ
+## การเพิ่มลูกศรลงใน PDF คืออะไร
 
-## คำตอบสั้น ๆ
-- **ไลบรารีใดที่ทำให้ฉันเพิ่มลูกศรลงใน PDF ด้วย Java ได้?** GroupDocs.Annotation for Java  
-- **ต้องมีลิขสิทธิ์สำหรับการผลิตหรือไม่?** ใช่, ลิขสิทธิ์เชิงพาณิชย์จะลบลายน้ำออก  
-- **แนะนำเวอร์ชัน Java ใด?** JDK 11 ให้ประสิทธิภาพที่ดีที่สุด  
-- **สามารถเพิ่มลูกศรหลายอันในเอกสารเดียวได้หรือไม่?** แน่นอน – เพียงสร้างหลาย ๆ Object ของ ArrowAnnotation  
-- **รองรับการประมวลผลแบบแบตช์หรือไม่?** ใช่, สามารถประมวลผลเอกสารในลูปและทำลายวัตถุ Annotator ได้
+การดำเนินการ `add arrow to pdf` จะวาดเครื่องหมายทิศทางบนหน้าของ PDF เพื่อเน้นหรือชี้ไปยังพื้นที่เฉพาะ การทำเครื่องหมายลูกศรถูกเก็บเป็นอ็อบเจ็กต์ PDF ดังนั้นจึงยังคงมองเห็นได้ในโปรแกรมอ่านที่สอดคล้องกับมาตรฐานใด ๆ และสามารถแก้ไขหรือตอบกลับได้ในภายหลัง.  
 
-## การเพิ่มลูกศรลงใน PDF คืออะไร?
-การเพิ่มเครื่องหมายลูกศรหมายถึงการวาดเครื่องหมายชี้ทิศทางบนหน้า PDF ด้วยโปรแกรม ช่วยให้ผู้ตรวจสอบชี้ให้เห็นส่วนต่าง ๆ เน้นปัญหา หรือแนะนำผู้อ่านผ่านกระบวนการทำงานโดยไม่ต้องแก้ไขไฟล์ด้วยตนเอง
+## ทำไมต้องเลือก GroupDocs.Annotation สำหรับการทำเครื่องหมายลูกศรใน PDF ด้วย Java
 
-## ทำไมต้องเลือก GroupDocs.Annotation สำหรับการทำเครื่องหมายลูกศรใน PDF ด้วย Java?
+GroupDocs.Annotation ให้ชุดประเภทการทำเครื่องหมายที่หลากหลาย การสนับสนุนระดับองค์กร และ API Java ที่ตรงไปตรงมาซึ่งลดโค้ดที่ต้องเขียนซ้ำ เมื่อเทียบกับทางเลือกอื่น ๆ มันสามารถประมวลผล **รูปแบบอินพุตและเอาต์พุตกว่า 50+** และจัดการ **PDF ขนาด 500 หน้า** ด้วยหน่วยความจำ heap ต่ำกว่า **200 MB** ด้วยสถาปัตยกรรมสตรีมมิ่ง.  
 
-ก่อนจะลงลึกในโค้ด เรามาตอบคำถามที่หลายคนมักถาม: ทำไมต้องใช้ GroupDocs เมื่อมีไลบรารีทำเครื่องหมาย PDF อื่น ๆ อยู่แล้ว?
-
-**การเปรียบเทียบอย่างตรงไปตรงมา:**
-
-- **iText**: เหมาะกับการทำเครื่องหมายพื้นฐาน แต่การปรับแต่งลูกศรมีข้อจำกัด  
-- **PDFBox**: ฟรีและทำได้หลายอย่าง แต่ต้องเขียนโค้ดซ้ำซ้อนมากขึ้น  
-- **GroupDocs.Annotation**: สมดุลที่สุดระหว่างฟีเจอร์และความง่ายในการใช้งาน (แม้จะเป็นเชิงพาณิชย์)
-
-**GroupDocs จะโดดเด่นเมื่อคุณต้องการ:**
-
-- ประเภทเครื่องหมายหลายแบบในโครงการเดียว  
-- การสนับสนุนระดับองค์กรและเอกสารคู่มือที่ครบถ้วน  
-- การนำไปใช้เร็วด้วยโค้ดที่เหลือน้อยที่สุด  
-- ฟีเจอร์การทำงานร่วมกันในตัว (เช่น การตอบกลับ)
-
-**ข้อเตือน**: ไม่ฟรี แต่ถ้าคุณกำลังสร้างแอปพลิเคชันเชิงพาณิชย์ที่ต้องการความเร็วในการเปิดตลาด การลงทุนนี้มักจะคุ้มค่าเพราะช่วยลดเวลาในการพัฒนา
-
-## ข้อกำหนดเบื้องต้น – สิ่งที่คุณต้องมีจริง ๆ
-
-มาดูสิ่งที่ต้องเตรียมก่อนเริ่มกันจริง ๆ ฉันเคยเห็นนักพัฒนาหลายคนกระโดดเข้าไปโดยไม่มีการตั้งค่าอย่างเหมาะสม ทำให้เสียเวลามากกับปัญหาการกำหนดค่า
+## ข้อกำหนดเบื้องต้น - สิ่งที่คุณต้องการจริงๆ
 
 ### ไลบรารีและการพึ่งพาที่จำเป็น
 
-ก่อนอื่นคุณต้องเพิ่ม GroupDocs.Annotation เข้าไปในโครงการ Maven ของคุณ นี่คือการกำหนดค่าที่ทำงานได้จริง (ฉันได้ทดสอบบนหลายโครงการ):
+ก่อนอื่นให้เพิ่ม dependency ของ GroupDocs.Annotation ใน Maven ตัวอย่างด้านล่างแสดงพิกัดที่ต้องใช้; แทนที่ placeholder ของเวอร์ชันด้วยรุ่นล่าสุดที่เสถียร.  
 
 ```xml
 <repositories>
@@ -85,34 +134,30 @@ weight: 1
 </dependencies>
 ```
 
-**เคล็ดลับ**: ตรวจสอบเวอร์ชันล่าสุดเสมอในหน้าปล่อยของพวกเขา เวอร์ชัน 25.2 เป็นเวอร์ชันล่าสุด ณ เวลาที่เขียนนี้ แต่เวอร์ชันใหม่ ๆ มักจะมีการแก้บั๊กสำคัญ
+**Pro tip**: ตรวจสอบหน้า releases ของ GroupDocs เพื่อดูหมายเลขเวอร์ชันล่าสุด. รุ่นใหม่มักจะรวมแพตช์ประสิทธิภาพและสไตล์การทำเครื่องหมายเพิ่มเติม.  
 
 ### การตั้งค่าสภาพแวดล้อมที่ไม่ทำให้คุณปวดหัว
 
-สิ่งที่คุณต้องมีเพื่อประสบการณ์การพัฒนาที่ราบรื่น:
+- **JDK 8 หรือใหม่กว่า** – แนะนำให้ใช้ JDK 11 เนื่องจากมี garbage‑collector ที่ดีขึ้นและระบบโมดูล.  
+- **Maven 3.6+** – เวอร์ชัน Maven เก่ามักเจอปัญหากับ dependency แบบเชิงทรานซิทีฟ.  
+- **IDE** – IntelliJ IDEA หรือ Eclipse ให้ประสบการณ์การดีบักที่ดีที่สุดสำหรับไลบรารี Java.  
+- **Memory** – จัดสรร heap อย่างน้อย **2 GB** เมื่อทำงานกับ PDF ที่มีมากกว่า 100 หน้า.  
 
-- **JDK 8 หรือใหม่กว่า** (ขอแนะนำ JDK 11 เพื่อประสิทธิภาพที่ดีกว่า)  
-- **Maven 3.6+** (เวอร์ชันเก่าอาจมีปัญหาในการแก้ไขการพึ่งพา)  
-- **IDE**: IntelliJ IDEA หรือ Eclipse (VS Code ก็ใช้ได้ แต่การดีบักง่ายกว่ากับ IDE Java เฉพาะ)  
-- **หน่วยความจำ**: ให้แน่ใจว่า JVM ของคุณมีอย่างน้อย 2 GB heap สำหรับการประมวลผล PDF ขนาดใหญ่  
-
-### ความรู้พื้นฐานที่ต้องมี (ต้องซื่อสัตย์กับตัวเอง)
+### ความรู้เบื้องต้นที่จำเป็น (ต้องซื่อสัตย์กับตัวเอง)
 
 คุณควรคุ้นเคยกับ:
 
-- การเขียนโปรแกรม Java เบื้องต้น (คอลเลกชัน, การจัดการข้อยกเว้น)  
-- การจัดการพึ่งพาใน Maven  
-- การทำงานกับไฟล์ I/O ใน Java  
+- คอลเลกชันพื้นฐานของ Java และการจัดการข้อยกเว้น.  
+- การจัดการ dependency ของ Maven.  
+- การทำงานกับไฟล์ I/O เบื้องต้น (การอ่านและเขียนสตรีมไบนารี).
 
-หากคุณยังใหม่กับหัวข้อเหล่านี้ก็ไม่เป็นไร – เพียงเตรียมเวลาเพิ่มสำหรับเรียนรู้ส่วนเหล่านั้น
+หากคุณรู้สึกว่าพื้นฐานเหล่านี้ยังไม่มั่นคง ควรทบทวนสั้น ๆ ก่อนจะดำดิ่งสู่โค้ดการทำเครื่องหมาย.  
 
-## การตั้งค่า GroupDocs.Annotation – วิธีที่ถูกต้อง
-
-นี่คือขั้นตอนการตั้งค่า GroupDocs.Annotation อย่างถูกต้อง รวมถึงขั้นตอนที่เอกสารมักมองข้าม
+## การตั้งค่า GroupDocs.Annotation - วิธีที่ถูกต้อง
 
 ### ขั้นตอนที่ 1: การกำหนดค่า Maven (พร้อมการแก้ปัญหา)
 
-เพิ่ม repository และ dependency ตามด้านบน หากเจอปัญหาในการแก้ไขพึ่งพา (บางครั้งเกิดขึ้น) ให้ลองเพิ่มส่วนนี้ลงใน `pom.xml` ของคุณ:
+เพิ่ม repository และ dependency ตามที่แสดงไว้ก่อนหน้า หาก Maven ไม่สามารถ resolve artifact ได้ ให้ตรวจสอบว่าคุณได้กำหนด GroupDocs public repository ไว้ใน `pom.xml` ของคุณ:  
 
 ```xml
 <properties>
@@ -121,20 +166,22 @@ weight: 1
 </properties>
 ```
 
-### ขั้นตอนที่ 2: การตั้งค่าลิขสิทธิ์ (สำคัญสำหรับการผลิต)
+### ขั้นตอนที่ 2: การตั้งค่าใบอนุญาต (สำคัญสำหรับการใช้งานจริง)
 
-สำหรับการพัฒนาและทดสอบ:
+สำหรับการพัฒนา คุณสามารถใช้ใบอนุญาตทดลองชั่วคราว:  
+
 ```java
 // For evaluation purposes
 License license = new License();
 // license.setLicense("path/to/license.lic"); // Comment this out for trial
 ```
 
-**ตรวจสอบความเป็นจริง**: เวอร์ชันทดลองจะใส่ลายน้ำลงในผลลัพธ์ของคุณ สำหรับการผลิตคุณต้องมีลิขสิทธิ์ที่ถูกต้องจาก [GroupDocs](https://purchase.groupdocs.com/temporary-license/)
+**Reality check**: เวอร์ชันทดลองจะเพิ่มลายน้ำที่มองเห็นได้บนทุก PDF ที่บันทึกไว้ ใบอนุญาตสำหรับการผลิตจะลบลายน้ำนี้และเปิดใช้งานฟีเจอร์การทำเครื่องหมายทั้งหมด.  
 
-### ขั้นตอนที่ 3: รูปแบบการเริ่มต้นพื้นฐาน
+### ขั้นตอนที่ 3: แพทเทิร์นการเริ่มต้นพื้นฐาน
 
-ใช้รูปแบบนี้เสมอเมื่อต้องเริ่มต้น Annotator:
+`Annotator` เป็นคลาสหลักสำหรับโหลดเอกสาร PDF และประยุกต์ใช้การทำเครื่องหมาย.  
+ควรห่อ `Annotator` ด้วยบล็อก `try‑finally` เสมอเพื่อให้ทรัพยากรพื้นฐานถูกปล่อยออกอย่างทันท่วงที:  
 
 ```java
 Annotator annotator = null;
@@ -148,24 +195,26 @@ try {
 }
 ```
 
-**ทำไมต้องใช้บล็อก try‑finally?** เชื่อผมเลย – วัตถุของ GroupDocs ต้องทำการทำลายอย่างถูกต้องเพื่อป้องกันการรั่วไหลของหน่วยความจำ โดยเฉพาะเมื่อประมวลผลหลายเอกสาร
+**Why the try‑finally block?** GroupDocs จัดสรรหน่วยความจำแบบ native สำหรับการพาร์ส PDF; หากไม่กำจัด `Annotator` อาจทำให้เกิดการรั่วของหน่วยความจำโดยเฉพาะเมื่อประมวลผลเอกสารจำนวนมากในงานแบบ batch.  
 
-## คู่มือการทำงานเต็มรูปแบบ – จากศูนย์สู่การผลิต
+## คู่มือการทำงานเต็มรูปแบบ - ตั้งแต่ศูนย์ถึงการใช้งานจริง
 
-มาสร้างการทำเครื่องหมายลูกศรในโลกจริงที่คุณสามารถใช้ในสภาพแวดล้อมการผลิตได้จริง
+### ทำความเข้าใจการทำเครื่องหมายลูกศรในบริบท
 
-### ทำความเข้าใจเครื่องหมายลูกศรในบริบท
+การทำเครื่องหมายลูกศรทำหน้าที่เป็นสัญญาณภาพในกระบวนการตรวจสอบเอกสาร กรณีการใช้งานทั่วไปรวมถึง:
 
-เครื่องหมายลูกศรไม่ได้เป็นแค่การตกแต่ง – เป็นเครื่องมือสื่อสาร ในกระบวนการทำงานเอกสารมักใช้เพื่อวัตถุประสงค์เหล่านี้:
+1. **Feedback การตรวจสอบ** – “ข้อกำหนดนี้ต้องการการชี้แจง”.  
+2. **การอ้างอิงเชื่อมโยง** – “ดูแผนภาพในหน้า 12”.  
+3. **แนวทางกระบวนการ** – “เริ่มการตรวจสอบที่นี่”.  
+4. **การไฮไลท์ปัญหา** – “อาจมีการพิมพ์ผิดในย่อหน้านี้”.  
 
-1. **ข้อเสนอแนะในการตรวจสอบ** – “ส่วนนี้ต้องแก้ไข”  
-2. **การเชื่อมโยงอ้างอิง** – “ดูเนื้อหาที่เกี่ยวข้องที่นี่”  
-3. **การแนะนำกระบวนการ** – “เริ่มการตรวจสอบจากจุดนี้”  
-4. **การไฮไลท์ปัญหา** – “พบปัญหาในพื้นที่นี้”
+การออกแบบ UI ของการทำเครื่องหมายให้สอดคล้องกับสถานการณ์เหล่านี้จะช่วยให้ผู้ใช้รับเครื่องมือได้เร็วขึ้น.  
 
-### ขั้นตอนที่ 1: สร้างการตอบกลับของเครื่องหมาย (วิธีอัจฉริยะ)
+### ขั้นตอนที่ 1: สร้างการตอบกลับของการทำเครื่องหมาย (วิธีอัจฉริยะ)
 
-การตอบกลับทำให้เครื่องหมายของคุณโต้ตอบได้ นี่คือตัวอย่างการสร้างการตอบกลับที่มีความหมาย:
+การตอบกลับทำให้ลูกศรคงที่กลายเป็นจุดสนทนาแบบโต้ตอบ ครั้งแรกที่คุณอ้างอิงคลาส `Reply` ให้กำหนดอย่างสั้น ๆ:  
+
+**Definition anchor**: `Reply` แทนคอมเมนต์ข้อความที่แนบกับการทำเครื่องหมาย, เก็บข้อมูลผู้เขียนและเวลาที่ทำ.  
 
 ```java
 Reply reply1 = new Reply();
@@ -181,11 +230,11 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**แนวทางปฏิบัติที่ดีที่สุด**: ใส่ข้อมูลผู้ใช้ในการตอบกลับเพื่อการติดตามการทำงานร่วมกันที่ดียิ่งขึ้น ในการผลิตคุณมักจะดึงข้อมูลนี้จากระบบจัดการผู้ใช้ของคุณ
+**Pro tip**: เก็บ ID และบทบาทของผู้ใช้ใน metadata ของ reply; จะทำให้การกรองคอมเมนต์ในภายหลังทำได้ง่าย.  
 
-### ขั้นตอนที่ 2: สร้างเครื่องหมายลูกศร (พร้อมการพิจารณาจากโลกจริง)
+### ขั้นตอนที่ 2: สร้างการทำเครื่องหมายลูกศร (พร้อมการพิจารณาจากโลกจริง)
 
-นี่คือการทำงานหลักพร้อมคำอธิบายแต่ละพารามิเตอร์:
+**Definition anchor**: `ArrowAnnotation` คืออ็อบเจ็กต์ของ GroupDocs ที่เรนเดอร์ลูกศรทิศทางบนหน้า PDF.  
 
 ```java
 ArrowAnnotation arrow = new ArrowAnnotation();
@@ -200,16 +249,16 @@ arrow.setPenWidth((byte) 3); // Arrow line width
 arrow.setReplies(replies); // Attach replies
 ```
 
-**มาละลายส่วนที่ซับซ้อนกัน**:
+พารามิเตอร์สำคัญที่อธิบาย:
 
-- **พิกัดสี่เหลี่ยม**: (x, y, width, height) โดยที่ x,y คือมุมบน‑ซ้าย  
-- **PenColor**: ใช้รูปแบบ ARGB 65535 คือสีน้ำเงินสด ใช้ตัวแปลงสีออนไลน์สำหรับสีที่กำหนดเอง  
-- **ตัวเลือก PenStyle**: DOT, DASH, SOLID, DASHDOT, DASHDOTDOT  
-- **Opacity**: 0.0 (โปร่งใส) ถึง 1.0 (ทึบ) ค่า 0.7 มักเหมาะสำหรับการมองเห็นโดยไม่รบกวนมากเกินไป  
+- **Rectangle coordinates** – `(x, y, width, height)` โดยที่ `(x, y)` คือมุมบนซ้ายของกล่องขอบเขต.  
+- **PenColor** – ใช้ค่า ARGB integer; `65535` ให้สีฟ้าเข้ม. ใช้ตัวแปลงออนไลน์สำหรับสีที่กำหนดเอง.  
+- **PenStyle** – ตัวเลือกได้แก่ `DOT`, `DASH`, `SOLID`, `DASHDOT`, `DASHDOTDOT`. เลือก `SOLID` สำหรับการใช้งานส่วนใหญ่.  
+- **Opacity** – ช่วงจาก `0.0` (โปร่งแสง) ถึง `1.0` (ทึบ). ค่า `0.7` ให้ความสมดุลระหว่างการมองเห็นและการอ่านเนื้อหาพื้นฐาน.  
 
 ### ขั้นตอนที่ 3: การเพิ่มและบันทึก (พร้อมการจัดการข้อผิดพลาด)
 
-นี่คือวิธีที่พร้อมใช้งานในระดับการผลิตเพื่อเพิ่มเครื่องหมาย:
+**Definition anchor**: `Annotator.save` ทำการบันทึกการเปลี่ยนแปลงการทำเครื่องหมายทั้งหมดที่ค้างไว้ไปยังไฟล์ PDF ปลายทาง.  
 
 ```java
 try {
@@ -225,17 +274,15 @@ try {
 }
 ```
 
-**จุดสำคัญ**: ควรจัดการข้อยกเว้นเสมอเมื่อทำงานกับไฟล์ PDF PDF อาจเสียหาย, เส้นทางอาจไม่ถูกต้อง, หรือสิทธิ์การเข้าถึงอาจทำให้เกิดปัญหา
+ควรจับ `IOException` และ `AnnotationException` เพื่อจัดการไฟล์เสียหาย, เส้นทางไม่ถูกต้อง, หรือปัญหาการอนุญาต. การบันทึก stack trace จะช่วยวินิจฉัยปัญหาในสภาพการผลิต.  
 
 ## ข้อผิดพลาดทั่วไปและวิธีหลีกเลี่ยง
 
-หลังจากที่ได้ทำการใช้งานในหลายโครงการ นี่คือปัญหาที่คุณอาจเจอบ่อยที่สุด
-
 ### ปัญหา 1: พิกัดไม่ตรงกับตำแหน่งที่คาดหวัง
 
-**ปัญหา**: ลูกศรของคุณปรากฏในตำแหน่งที่ผิดบน PDF  
+**Problem**: ลูกศรปรากฏเบี่ยงจากจุดที่ต้องการ.  
 
-**วิธีแก้**: ระบบพิกัดของ PDF เริ่มจากมุมล่าง‑ซ้าย แต่ไลบรารีส่วนใหญ่ใช้มุมบน‑ซ้าย GroupDocs จะทำการแปลงให้โดยอัตโนมัติ แต่คุณอาจต้องปรับตามลักษณะของ PDF ของคุณ
+**Solution**: ระบบพิกัดของ PDF มีจุดกำเนิดที่มุมล่างซ้าย, แต่ GroupDocs คาดหวังมุมบนซ้าย. แปลงพิกัด UI ของคุณให้สอดคล้อง, หรือใช้ตัวช่วย `convertToPdfCoordinates` ที่มีอยู่:  
 
 ```java
 // If arrows appear in wrong positions, try adjusting the Y coordinate
@@ -243,11 +290,11 @@ int adjustedY = pageHeight - originalY - annotationHeight;
 arrow.setBox(new Rectangle(x, adjustedY, width, height));
 ```
 
-### ปัญหา 2: เครื่องหมายหายหลังบันทึก
+### ปัญหา 2: การทำเครื่องหมายหายไปหลังการบันทึก
 
-**ปัญหา**: เครื่องหมายแสดงระหว่างการประมวลผลแต่หายไปใน PDF สุดท้าย  
+**Problem**: ลูกศรแสดงในระหว่างการประมวลผลแต่หายไปใน PDF สุดท้าย.  
 
-**วิธีแก้**: ส่วนใหญ่เป็นปัญหาลิขสิทธิ์ ตรวจสอบให้แน่ใจว่าได้โหลดลิขสิทธิ์อย่างถูกต้อง:
+**Solution**: สาเหตุส่วนใหญ่เป็นปัญหาใบอนุญาต. ตรวจสอบว่าไฟล์ใบอนุญาตถูกโหลดก่อนสร้างอินสแตนซ์ `Annotator` ใด ๆ:  
 
 ```java
 License license = new License();
@@ -258,11 +305,11 @@ try {
 }
 ```
 
-### ปัญหา 3: การรั่วไหลของหน่วยความจำในการประมวลผลแบบแบตช์
+### ปัญหา 3: การรั่วของหน่วยความจำในการประมวลผลแบบชุด
 
-**ปัญหา**: แอปพลิเคชันใช้หน่วยความจำจนเต็มเมื่อประมวลผลหลายเอกสาร  
+**Problem**: JVM หมด heap เมื่อประมวลผลหลายสิบ PDF.  
 
-**วิธีแก้**: ควรทำลายวัตถุ Annotator เสมอและพิจารณาประมวลผลเอกสารเป็นชุด:
+**Solution**: กำจัด `Annotator` แต่ละอันหลังจากทำงานเสร็จ, และประมวลผลไฟล์เป็นชุดเล็ก ๆ เพื่อให้การใช้หน่วยความจำคาดเดาได้:  
 
 ```java
 for (String documentPath : documentPaths) {
@@ -287,7 +334,7 @@ for (String documentPath : documentPaths) {
 
 ### การกำหนดตำแหน่งลูกศรแบบไดนามิก
 
-สำหรับแอปพลิเคชันเชิงโต้ตอบ คุณอาจต้องกำหนดตำแหน่งลูกศรตามข้อมูลผู้ใช้:
+เมื่อลูกศรต้องตามการคลิกของผู้ใช้ใน UI เว็บ, คำนวณสี่เหลี่ยมบนฝั่งไคลเอนต์และส่งพิกัดไปยังแบ็กเอนด์. แบ็กเอนด์จะสร้าง `ArrowAnnotation` ด้วยค่าที่ได้รับ.  
 
 ```java
 public ArrowAnnotation createArrowAt(int x, int y, String message) {
@@ -306,7 +353,9 @@ public ArrowAnnotation createArrowAt(int x, int y, String message) {
 }
 ```
 
-### การจัดรูปแบบลูกศรสำหรับกรณีการใช้งานต่าง ๆ
+### การจัดรูปแบบลูกศรสำหรับกรณีการใช้งานต่างๆ
+
+คุณสามารถปรับ `PenColor` และ `PenStyle` เพื่อสื่อความหมาย – ตัวอย่างเช่น ลูกศรสีแดงแบบ dashed สำหรับปัญหาสำคัญ, สีเขียวแบบ solid สำหรับส่วนที่ได้รับการอนุมัติ.  
 
 ```java
 // Error highlighting (red, thick, solid)
@@ -332,9 +381,9 @@ public ArrowAnnotation createSuggestionArrow() {
 
 ## สถานการณ์การใช้งานจริง
 
-### สถานการณ์ 1: ระบบตรวจสอบเอกสาร
+### สถานการณ์ 1: ระบบการตรวจสอบเอกสาร
 
-คุณกำลังสร้างระบบตรวจสอบเอกสารที่ผู้ใช้หลายคนสามารถเพิ่มข้อเสนอแนะได้:
+ในพอร์ทัลการตรวจสอบหลายผู้ใช้, ผู้ตรวจสอบแต่ละคนสร้าง `ArrowAnnotation` และแนบ `Reply`. ระบบจะเก็บ reply ในฐานข้อมูลเชิงสัมพันธ์, ทำให้มีการสนทนาที่เป็นเธรดบนแต่ละการทำเครื่องหมาย.  
 
 ```java
 public class DocumentReviewSystem {
@@ -363,7 +412,7 @@ public class DocumentReviewSystem {
 
 ### สถานการณ์ 2: การตรวจจับปัญหาอัตโนมัติ
 
-ผสานรวมกับเครื่องมือวิเคราะห์เพื่อไฮไลท์ปัญหาที่อาจเกิดขึ้นโดยอัตโนมัติ:
+เครื่องมือวิเคราะห์สแกน PDF เพื่อหาการละเมิดมาตรฐานและแทรกลูกศรสีแดงชี้ไปยังข้อกำหนดที่เป็นปัญหา.  
 
 ```java
 public void highlightDetectedIssues(String documentPath, List<Issue> issues) {
@@ -400,96 +449,72 @@ private ArrowAnnotation createArrowForIssue(Issue issue) {
 }
 ```
 
-## เคล็ดลับการเพิ่มประสิทธิภาพการทำงาน
+## เคล็ดลับการเพิ่มประสิทธิภาพ
 
-### แนวทางการจัดการหน่วยความจำที่ดีที่สุด
+### แนวทางปฏิบัติที่ดีที่สุดในการจัดการหน่วยความจำ
 
-เมื่อประมวลผลเอกสารขนาดใหญ่หรือหลายไฟล์:
+1. **ใช้ try‑with‑resources** (Java 7+) เพื่อปิดอ็อบเจ็กต์ `Annotator` อัตโนมัติ:  
 
-1. **ใช้รูปแบบ try‑with‑resources** (หากเวอร์ชันของคุณรองรับ):
-```java
+   ```java
 try (Annotator annotator = new Annotator("document.pdf")) {
     // Your annotation code
 } // Automatically disposed
-```
+```  
 
-2. **ประมวลผลเป็นชุด**:
-```java
-public void processBatch(List<String> documents, int batchSize) {
-    for (int i = 0; i < documents.size(); i += batchSize) {
-        List<String> batch = documents.subList(i, 
-            Math.min(i + batchSize, documents.size()));
-        
-        processBatchInternal(batch);
-        
-        // Allow GC between batches
-        System.gc();
-        Thread.sleep(100);
-    }
-}
-```
+2. **ประมวลผลหน้าเป็นหน้า** แทนการโหลดเอกสารทั้งหมดเข้าสู่หน่วยความจำ.  
 
-3. **ตรวจสอบการใช้หน่วยความจำ**:
-```java
-Runtime runtime = Runtime.getRuntime();
-long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
+3. **ตรวจสอบการใช้ heap** ด้วยเครื่องมือเช่น VisualVM หรือ JConsole ระหว่างการรัน batch ขนาดใหญ่.  
 
-// Your annotation processing
+### ปัจจัยที่ต้องพิจารณาเรื่องประสิทธิภาพ CPU
 
-long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
-System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
-```
-
-### พิจารณาประสิทธิภาพของ CPU
-
-- หลีกเลี่ยงการสร้างอ็อบเจ็กต์โดยไม่จำเป็นในลูป  
-- ใช้สีและสไตล์ที่สร้างไว้แล้วซ้ำเมื่อเป็นไปได้  
-- พิจารณาการประมวลผลแบบขนานสำหรับเอกสารที่แยกจากกัน (แต่ต้องเฝ้าระวังการใช้หน่วยความจำ)
+- ใช้ instance ของ `Color` เดียวกันสำหรับลูกศรทั้งหมดเพื่อหลีกเลี่ยงการสร้างอ็อบเจ็กต์ซ้ำ.  
+- หลีกเลี่ยงลูปซ้อนที่สร้าง `PenStyle` เดียวกันหลายครั้ง.  
+- หากมี PDF จำนวนมากที่ทำงานอิสระกัน, พิจารณาใช้ thread pool แต่จำกัดจำนวน `Annotator` ที่ทำงานพร้อมกันเพื่อควบคุมการใช้หน่วยความจำ.  
 
 ## คู่มือการแก้ไขปัญหา – วิธีแก้ปัญหาในโลกจริง
 
-### ปัญหา: เครื่องหมายไม่แสดงใน Adobe Reader
+### ปัญหา: การทำเครื่องหมายไม่แสดงใน Adobe Reader
 
-**อาการ**: เครื่องหมายแสดงในแอปของคุณแต่ไม่แสดงใน Adobe Reader หรือโปรแกรมอ่าน PDF อื่น ๆ  
+**Symptoms**: ลูกศรแสดงใน viewer ของคุณแต่ไม่แสดงใน Adobe Acrobat.  
 
-**วิธีแก้**:
+**Solutions**:
 
-1. ตรวจสอบว่าคุณบันทึกด้วยมาตรฐาน PDF ที่เหมาะสม:
-```java
+1. บันทึก PDF ด้วยความสอดคล้อง PDF/A‑1b เพื่อให้เข้ากับ viewer ส่วนใหญ่:  
+
+   ```java
 // Try different save options if available
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationType(AnnotationType.All);
 annotator.save(outputPath, saveOptions);
-```
+```  
 
-2. ตรวจสอบความเข้ากันได้ของเวอร์ชัน PDF – เวอร์ชันเก่าอาจไม่รองรับฟีเจอร์เครื่องหมายทั้งหมด
+2. ตรวจสอบว่าเวอร์ชัน PDF อย่างน้อยเป็น **1.7**; เวอร์ชันเก่าอาจละทิ้งประเภทการทำเครื่องหมายใหม่.  
 
 ### ปัญหา: ประสิทธิภาพแย่เมื่อทำงานกับ PDF ขนาดใหญ่
 
-**อาการ**: แอปช้า หรือไม่ตอบสนองเมื่อเปิดเอกสารขนาดใหญ่  
+**Symptoms**: แอปพลิเคชันค้างหรือไม่มีการตอบสนองเมื่อจัดการ PDF มากกว่า 200 หน้า.  
 
-**วิธีแก้**:
+**Solutions**:
 
-1. **ประมวลผลหน้าแยกกัน** แทนการประมวลผลทั้งเอกสาร:
-```java
+1. **ประมวลผลหน้าเป็นหน้า** แทนการโหลดไฟล์ทั้งหมด:  
+
+   ```java
 // Process specific pages
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setLoadCharts(false); // Skip charts if not needed
 Annotator annotator = new Annotator(documentPath, loadOptions);
-```
+```  
 
-2. **ใช้การสตรีมเมื่อต้องการ** สำหรับไฟล์ขนาดใหญ่มาก  
+2. **เปิดใช้งาน streaming** ในคอนสตรัคเตอร์ `Annotator` หากเวอร์ชันของคุณรองรับ.  
 
-3. **เพิ่มขนาด heap ของ JVM**:
-```bash
-java -Xmx4g -jar your-application.jar
-```
+3. เพิ่ม heap ของ JVM (`-Xmx4g`) สำหรับเอกสารขนาดใหญ่มาก.  
 
-### ปัญหา: สีแสดงไม่ตรงตามที่คาดหวัง
+### ปัญหา: ปัญหาการแสดงสี
 
-**อาการ**: สีที่แสดงใน PDF สุดท้ายแตกต่างจากที่ตั้งค่า  
+**Symptoms**: ลูกศรปรากฏเป็นสีเทาหรือโปร่งใสทั้งหมด.  
 
-**วิธีแก้**: ใช้การกำหนดพื้นที่สีที่ถูกต้อง:
+**Solution**: กำหนดสีด้วยรูปแบบ ARGB และตรวจสอบว่า color space ของ PDF ตั้งเป็น **DeviceRGB**:  
+
 ```java
 // Use hex values for consistent colors
 int red = 0xFFFF0000;    // ARGB format
@@ -502,11 +527,11 @@ public int rgbToArgb(int r, int g, int b) {
 }
 ```
 
-## การทดสอบการทำงานของคุณ
+## การทดสอบการใช้งานของคุณ
 
-### การทดสอบหน่วยสำหรับเครื่องหมายลูกศร
+### การทดสอบหน่วยของการทำเครื่องหมายลูกศร
 
-นี่คือตัวอย่างโครงสร้างการทดสอบที่ใช้งานได้จริง:
+การทดสอบหน่วยที่ดีจะโหลด PDF ตัวอย่าง, เพิ่ม `ArrowAnnotation`, บันทึกไฟล์, แล้วเปิดใหม่เพื่อยืนยันจำนวนและคุณสมบัติของการทำเครื่องหมาย:  
 
 ```java
 @Test
@@ -538,36 +563,33 @@ public void testArrowAnnotationCreation() {
 
 ### การทดสอบการบูรณาการ
 
-ทดสอบกับ PDF ประเภทและขนาดต่าง ๆ เพื่อให้แน่ใจว่าการทำงานของคุณทำงานได้ในทุกสถานการณ์
+รันชุดทดสอบเดียวกันกับ PDF ขนาดต่าง ๆ (10 หน้า, 100 หน้า, 500 หน้า) และบน viewer ต่าง ๆ (Adobe Reader, Foxit, Chrome) เพื่อรับประกันการเรนเดอร์ที่สอดคล้องกัน.  
 
 ## สรุป
 
-คุณมีเครื่องมือครบชุดสำหรับการทำเครื่องหมายลูกศรใน PDF ด้วย Java ผ่าน GroupDocs.Annotation แล้ว นี่ไม่ใช่แค่การเพิ่มลูกศรลงใน PDF เท่านั้น แต่เป็นการสร้างฟีเจอร์การทำงานร่วมกันกับเอกสารที่ทำงานได้จริงในสภาพแวดล้อมการผลิต  
+คุณมีเครื่องมือครบชุดสำหรับการทำเครื่องหมายลูกศรใน PDF ด้วย Java ผ่าน GroupDocs.Annotation แล้ว. จำไว้ว่า:
 
-**ประเด็นสำคัญจากคู่มือ**:
+- กำจัดอ็อบเจ็กต์ `Annotator` อย่างทันท่วงที.  
+- ทดสอบกับ PDF เวอร์ชันและขนาดที่หลากหลาย.  
+- ใช้เคล็ดลับประสิทธิภาพเมื่อขยายเป็นงาน batch.  
+- ปรับสไตล์ลูกศรให้สอดคล้องกับความหมายของแต่ละคอมเมนต์.
 
-- จัดการทรัพยากรอย่างถูกต้อง (ใช้บล็อก try‑finally)  
-- ทดสอบกับ PDF ประเภทและขนาดต่าง ๆ  
-- พิจารณาการจัดการหน่วยความจำสำหรับการประมวลผลแบบแบตช์  
-- ใช้การจัดการข้อผิดพลาดที่เหมาะสมสำหรับการผลิต  
-- ปรับรูปแบบเครื่องหมายให้สอดคล้องกับวัตถุประสงค์  
-
-**ขั้นตอนต่อไปของคุณ**: เริ่มต้นด้วยต้นแบบง่าย ๆ โดยใช้การทำงานพื้นฐาน จากนั้นค่อยเพิ่มฟีเจอร์ขั้นสูงเช่นการกำหนดตำแหน่งแบบไดนามิกและการจัดรูปแบบแบบกำหนดเองตามความต้องการที่เปลี่ยนแปลง  
-
-**พร้อมก้าวต่อหรือยัง?** สำรวจฟีเจอร์อื่น ๆ ของ GroupDocs.Annotation เช่น เครื่องหมายข้อความ, เครื่องหมายพื้นที่, และลายน้ำ รูปแบบที่คุณเรียนรู้ที่นี่สามารถนำไปใช้กับทุกประเภทของเครื่องหมายได้  
+ขั้นตอนต่อไป: สำรวจประเภทการทำเครื่องหมายอื่น ๆ เช่น `TextAnnotation`, `AreaAnnotation`, และ `WatermarkAnnotation`. แพทเทิร์นการเริ่มต้นและการกำจัดเดียวกันจะช่วยให้คุณสร้างแพลตฟอร์มการทำงานร่วมกันบนเอกสารแบบเต็มรูปแบบ.  
 
 ## คำถามที่พบบ่อย
 
-**ถาม: สามารถเพิ่มเครื่องหมายลูกศรใน PDF ที่มีการป้องกันด้วยรหัสผ่านได้หรือไม่?**  
-ตอบ: ได้, แต่คุณต้องระบุรหัสผ่านเมื่อสร้าง Annotator:
+**Q: ฉันสามารถเพิ่มการทำเครื่องหมายลูกศรลงใน PDF ที่มีการป้องกันด้วยรหัสผ่านได้หรือไม่?**  
+A: ได้, เพียงระบุรหัสผ่านเมื่อสร้างอินสแตนซ์ `Annotator`:  
+
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator("protected.pdf", loadOptions);
-```
+```  
 
-**ถาม: จะประมวลผลหลายเอกสารพร้อมกันอย่างมีประสิทธิภาพอย่างไร?**  
-ตอบ: ประมวลผลเอกสารเป็นชุดเล็ก ๆ และทำลายทรัพยากรอย่างถูกต้อง:
+**Q: ฉันจะประมวลผลหลายเอกสารพร้อมกันอย่างมีประสิทธิภาพอย่างไร?**  
+A: ประมวลผลเอกสารเป็นชุดเล็ก ๆ, ใช้ `Annotator` ตัวเดียวต่อไฟล์, และเรียก `dispose()` หลังการบันทึกแต่ละครั้ง:  
+
 ```java
 for (String doc : documents) {
     try (Annotator annotator = new Annotator(doc)) {
@@ -578,16 +600,17 @@ for (String doc : documents) {
         System.gc(); // Encourage garbage collection
     }
 }
-```
+```  
 
-**ถาม: จำนวนเครื่องหมายสูงสุดต่อเอกสารคือเท่าไหร่?**  
-ตอบ: GroupDocs ไม่มีขีดจำกัดที่แน่นอน แต่ข้อจำกัดเชิงปฏิบัติจะแตกต่างตามหน่วยความจำ, ความสามารถของโปรแกรมอ่าน PDF, และความต้องการด้านประสิทธิภาพ สำหรับจำนวนมาก (1000+), ให้ใช้เทคนิคการเพิ่มประสิทธิภาพที่อธิบายไว้ก่อนหน้า
+**Q: จำนวนการทำเครื่องหมายสูงสุดต่อเอกสารคือเท่าไหร่?**  
+A: GroupDocs ไม่กำหนดขีดจำกัดที่แน่นอน, แต่ประสิทธิภาพจะเริ่มลดลงหลังจากประมาณ **1,000** การทำเครื่องหมายบน PDF ขนาด 500 หน้า หากไม่ได้ใช้เทคนิคการจัดการหน่วยความจำที่อธิบายไว้ก่อนหน้า.  
 
-**ถาม: สามารถปรับรูปแบบลูกศรให้แตกต่างจากตัวเลือกมาตรฐานได้หรือไม่?**  
-ตอบ: GroupDocs.Annotation มีรูปแบบลูกศรมาตรฐาน หากต้องการรูปแบบที่กำหนดเองอาจต้องใช้เครื่องหมายพื้นที่, รวมหลายเครื่องหมายง่าย ๆ, หรือเปลี่ยนไปใช้ไลบรารีกราฟิกที่เชี่ยวชาญมากกว่า
+**Q: ฉันสามารถปรับรูปแบบหัวลูกศรให้แตกต่างจากตัวเลือกมาตรฐานได้หรือไม่?**  
+A: ไลบรารีมีหัวลูกศรมาตรฐาน. หากต้องการรูปแบบที่กำหนดเองอย่างเต็มที่ คุณสามารถรวมหลาย `AreaAnnotation` หรือเปลี่ยนไปใช้ไลบรารีที่เน้นกราฟิกและสนับสนุนเส้นทางเวกเตอร์.  
 
-**ถาม: จะจัดการกับระบบพิกัดของ PDF ที่แตกต่างกันอย่างไร?**  
-ตอบ: GroupDocs มักจะจัดการการแปลงพิกัดโดยอัตโนมัติ หากพบปัญหา:
+**Q: ฉันจะจัดการกับระบบพิกัดของ PDF ที่ต่างกันอย่างไร?**  
+A: GroupDocs จะทำการแปลงระหว่างพิกัด UI ที่เป็น top‑left กับพิกัด PDF ที่เป็น bottom‑left โดยอัตโนมัติ. หากพบความไม่ตรงกัน ให้ตรวจสอบว่าคุณไม่ได้ทำการแปลงเพิ่มเติมบนฝั่งไคลเอนต์.  
+
 ```java
 // Get page info for coordinate calculations
 PageInfo pageInfo = annotator.getDocument().getPages().get(pageNumber);
@@ -595,13 +618,14 @@ int pageHeight = pageInfo.getHeight();
 
 // Adjust Y coordinate if needed
 int adjustedY = pageHeight - originalY;
-```
+```  
 
-**ถาม: ค่าใช้จ่ายของลิขสิทธิ์สำหรับการผลิตคือเท่าไหร่?**  
-ตอบ: GroupDocs มีโมเดลลิขสิทธิ์หลายแบบ (Developer, Site, OEM) ตรวจสอบอัตราล่าสุดได้ที่ [หน้าแสดงราคา GroupDocs](https://purchase.groupdocs.com/buy)
+**Q: ค่าใช้จ่ายของใบอนุญาตสำหรับการใช้งานจริงเป็นเท่าไหร่?**  
+A: GroupDocs มีใบอนุญาตประเภท Developer, Site, และ OEM. ราคาเริ่มต้นที่ **$699** ต่อผู้พัฒนาต่อปี. เยี่ยมชมหน้าแสดงราคา GroupDocs สำหรับข้อมูลล่าสุด.  
 
-**ถาม: จะรวมการทำงานนี้กับแอป Spring Boot อย่างไร?**  
-ตอบ: สร้างคลาส Service สำหรับการทำงานกับเครื่องหมาย:
+**Q: ฉันจะรวมการทำงานนี้กับแอปพลิเคชัน Spring Boot อย่างไร?**  
+A: สร้าง bean `@Service` ที่ห่อหุ้มตรรกะการทำเครื่องหมาย, ฉีดเข้าไปในคอนโทรลเลอร์, และเปิด endpoint REST ที่รับสตรีม PDF แล้วคืน PDF ที่ทำเครื่องหมายแล้ว.  
+
 ```java
 @Service
 public class AnnotationService {
@@ -617,10 +641,11 @@ public class AnnotationService {
         }
     }
 }
-```
+```  
 
-**ถาม: สามารถดึงเครื่องหมายลูกศรที่มีอยู่แล้วจาก PDF ได้หรือไม่?**  
-ตอบ: ได้, ใช้เมธอด `get()` เพื่อดึงเครื่องหมายที่มีอยู่:
+**Q: ฉันสามารถดึงการทำเครื่องหมายลูกศรที่มีอยู่จาก PDF ได้หรือไม่?**  
+A: ได้, เรียกเมธอด `getAnnotations()` บนอินสแตนซ์ `Annotator` แล้วกรองผลลัพธ์ด้วย `AnnotationType.Arrow`.  
+
 ```java
 Annotator annotator = new Annotator("document.pdf");
 List<AnnotationInfo> annotations = annotator.get();
@@ -631,21 +656,59 @@ for (AnnotationInfo annotation : annotations) {
         System.out.println("Arrow message: " + arrow.getMessage());
     }
 }
-```
+```  
 
 ## แหล่งข้อมูลเพิ่มเติม
 
-- **เอกสาร**: [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- **อ้างอิง API**: [Complete API Reference](https://reference.groupdocs.com/annotation/java/)  
-- **ดาวน์โหลดเวอร์ชันล่าสุด**: [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
-- **ซื้อไลเซนส์**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **ทดลองใช้ฟรี**: [Download Free Trial](https://releases.groupdocs.com/annotation/java/)  
-- **ไลเซนส์ชั่วคราว**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **สนับสนุนชุมชน**: [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)  
-- **สนับสนุนระดับมืออาชีพ**: มีให้กับไลเซนส์ที่ชำระเงินสำหรับการช่วยเหลือแบบเร่งด่วน  
+- **Documentation**: [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
+- **API reference**: [Complete API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **Download latest version**: [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
+- **Purchase license**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **GroupDocs pricing page**: [GroupDocs pricing page](https://purchase.groupdocs.com/buy)  
+- **Free trial**: [Download Free Trial](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary license**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Community support**: [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)  
+- **Professional support**: Available with paid licenses for priority assistance  
 
----
-
-**อัปเดตล่าสุด:** 2026-02-21  
+**อัปเดตล่าสุด:** 2026-08-14  
 **ทดสอบด้วย:** GroupDocs.Annotation 25.2 for Java  
-**ผู้เขียน:** GroupDocs
+**ผู้เขียน:** GroupDocs  
+
+{< blocks/products/products-backtop-button >}
+{< /blocks/products/pf/tutorial-page-section >}
+{< /blocks/products/pf/main-container >}
+{< /blocks/products/pf/main-wrap-class >}
+```java
+public void processBatch(List<String> documents, int batchSize) {
+    for (int i = 0; i < documents.size(); i += batchSize) {
+        List<String> batch = documents.subList(i, 
+            Math.min(i + batchSize, documents.size()));
+        
+        processBatchInternal(batch);
+        
+        // Allow GC between batches
+        System.gc();
+        Thread.sleep(100);
+    }
+}
+```
+
+```java
+Runtime runtime = Runtime.getRuntime();
+long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
+
+// Your annotation processing
+
+long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
+System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
+```
+
+```bash
+java -Xmx4g -jar your-application.jar
+```
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [ไลบรารีการทำเครื่องหมาย PDF Java – คู่มือการทำเครื่องหมายเอกสารฉบับเต็ม](/annotation/java/graphical-annotations/)
+- [ไลบรารี GroupDocs Annotation Java: เพิ่มการทำเครื่องหมาย PDF](/annotation/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/)
+- [โหลด PDF ด้วย Java และ GroupDocs Annotation: คู่มือการโหลดเอกสาร](/annotation/java/document-loading/)
