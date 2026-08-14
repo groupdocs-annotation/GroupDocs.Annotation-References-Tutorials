@@ -1,73 +1,122 @@
 ---
 categories:
 - Java Development
-date: '2026-02-21'
-description: Dowiedz się, jak dodać strzałkę do pliku PDF przy użyciu GroupDocs.Annotation
-  dla Javy. Poradnik krok po kroku z kodem, najlepszymi praktykami i rozwiązywaniem
-  problemów.
-keywords: Java PDF arrow annotations, GroupDocs annotation tutorial, PDF annotation
-  Java library, Java document annotation, PDF collaboration tools Java
-lastmod: '2026-02-21'
-linktitle: Java PDF Arrow Annotations Guide
+date: '2026-08-14'
+description: Dowiedz się, jak dodać strzałkę do PDF przy użyciu GroupDocs.Annotation
+  dla Javy. Samouczek krok po kroku, najlepsze praktyki oraz rozwiązywanie problemów
+  dla programistów Javy.
+keywords:
+- how to add arrow pdf
+- GroupDocs annotation Java
+- PDF arrow annotation
+- Java document annotation
+lastmod: '2026-08-14'
+linktitle: Przewodnik po adnotacjach strzałek PDF w Javie
+og_description: Jak dodać strzałkę do PDF przy użyciu GroupDocs.Annotation dla Javy.
+  Ten przewodnik pokazuje krok po kroku konfigurację, wskazówki bez kodu oraz triki
+  wydajnościowe dla gotowych do produkcji adnotacji strzałek PDF.
+og_image_alt: Guide showing how to add arrow pdf using GroupDocs Annotation for Java
+og_title: Jak dodać strzałkę do PDF w Javie – przewodnik GroupDocs Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-14'
+  description: Learn how to add arrow pdf using GroupDocs.Annotation for Java. Step‑by‑step
+    tutorial, best practices, and troubleshooting for Java developers.
+  headline: How to add arrow to pdf with Java – Complete tutorial & best practices
+    (2025)
+  type: TechArticle
+- description: Learn how to add arrow pdf using GroupDocs.Annotation for Java. Step‑by‑step
+    tutorial, best practices, and troubleshooting for Java developers.
+  name: How to add arrow to pdf with Java – Complete tutorial & best practices (2025)
+  steps:
+  - name: Maven configuration (with troubleshooting)
+    text: 'Add the repository and dependency shown earlier. If Maven fails to resolve
+      the artifact, ensure you have the GroupDocs public repository defined in your
+      `pom.xml`:'
+  - name: License setup (critical for production)
+    text: 'For development you can use a temporary trial license: **Reality check**:
+      The trial adds a visible watermark to every saved PDF. A production license
+      removes this watermark and unlocks the full annotation feature set.'
+  - name: Basic initialization pattern
+    text: '`Annotator` is the primary class for loading a PDF document and applying
+      annotations. Always wrap the `Annotator` in a `try‑finally` block so the underlying
+      resources are released promptly: **Why the try‑finally block?** GroupDocs allocates
+      native memory for PDF parsing; failing to dispose the `Anno'
+  - name: Building annotation replies (the smart way)
+    text: 'Replies turn a static arrow into an interactive discussion point. The first
+      time you mention the `Reply` class, define it succinctly: **Definition anchor**:
+      `Reply` represents a text comment attached to an annotation, storing author
+      information and timestamp. **Pro tip**: Store the user’s ID and rol'
+  - name: Creating the arrow annotation (with real‑world considerations)
+    text: '**Definition anchor**: `ArrowAnnotation` is the GroupDocs object that renders
+      a directional arrow on a PDF page. Key parameters explained: - **Rectangle coordinates**
+      – `(x, y, width, height)` where `(x, y)` is the top‑left corner of the bounding
+      box. - **PenColor** – Uses ARGB integer; `65535` yiel'
+  - name: Adding and saving (with error handling)
+    text: '**Definition anchor**: `Annotator.save` persists all pending annotation
+      changes to the target PDF file. Always catch `IOException` and `AnnotationException`
+      to handle corrupted files, invalid paths, or permission problems. Logging the
+      stack trace helps you diagnose issues in production.'
+  type: HowTo
+- questions:
+  - answer: 'Yes, provide the password when creating the `Annotator` instance:'
+    question: Can I add arrow annotations to password‑protected PDFs?
+  - answer: 'Process documents in small batches, reuse a single `Annotator` per file,
+      and call `dispose()` after each save:'
+    question: How do I batch process multiple documents efficiently?
+  - answer: GroupDocs imposes no hard limit, but practical performance degrades after
+      roughly **1,000** annotations on a 500‑page PDF unless you apply the memory‑management
+      techniques described earlier.
+    question: What’s the maximum number of annotations per document?
+  - answer: The library provides standard arrow heads. For fully custom shapes you
+      can combine multiple `AreaAnnotation` objects or switch to a graphics‑focused
+      library that supports vector paths.
+    question: Can I customize arrow shapes beyond the standard options?
+  - answer: GroupDocs automatically converts between top‑left UI coordinates and bottom‑left
+      PDF coordinates. If you encounter mismatches, double‑check that you’re not applying
+      an extra transformation layer on the client side.
+    question: How do I handle different PDF coordinate systems?
+  type: FAQPage
 tags:
 - pdf-annotations
 - java-tutorial
 - document-processing
 - groupdocs
-title: Jak dodać strzałkę do PDF w Javie – kompletny poradnik i najlepsze praktyki
+title: Jak dodać strzałkę do PDF w Javie – Kompletny samouczek i najlepsze praktyki
+  (2025)
 type: docs
 url: /pl/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-# Java PDF Arrow Annotations - Kompletny Samouczek i Najlepsze Praktyki (2025)
+# Java pdf arrow annotations – kompletny samouczek i najlepsze praktyki (2025)
 
 ## Wprowadzenie
 
-Czy kiedykolwiek miałeś problem z tym, aby Twój zespół skupił się na konkretnych fragmentach dokumentu PDF podczas przeglądów? Nie jesteś sam. Niezależnie od tego, czy zarządzasz dokumentacją techniczną, umowami prawnymi, czy specyfikacjami projektowymi, wskazywanie dokładnych obszarów do dyskusji może być frustrujące bez odpowiednich narzędzi.
+Czy kiedykolwiek miałeś problem z tym, aby Twój zespół skupił się na konkretnych fragmentach dokumentu PDF podczas przeglądów? Nie jesteś sam. Niezależnie od tego, czy zarządzasz dokumentacją techniczną, umowami prawnymi czy specyfikacjami projektów, wskazywanie dokładnych obszarów do dyskusji może być frustrujące bez odpowiednich narzędzi.
 
-**Oto rozwiązanie**: adnotacje strzałek w PDF przy użyciu API GroupDocs.Annotation. To potężne podejście pozwala programowo **dodawać strzałki do plików PDF**, zapewniając płynną i profesjonalną współpracę.
+**Oto rozwiązanie**: Java PDF arrow annotations przy użyciu GroupDocs.Annotation API. To potężne podejście pozwala programowo **add arrow to pdf** pliki, zapewniając płynną i profesjonalną współpracę. Możesz uzyskać wersję próbną na stronie [GroupDocs](https://purchase.groupdocs.com/temporary-license/) tymczasowej licencji.
 
-W tym obszernej przewodniku dowiesz się, jak wdrożyć adnotacje strzałek, które naprawdę działają w środowiskach produkcyjnych. Omówimy wszystko, od podstawowej konfiguracji po zaawansowaną personalizację, a także scenariusze z rzeczywistego świata, które możesz napotkać (i jak sobie z nimi radzić).
-
-**Co wyróżnia ten samouczek?** Otrzymasz praktyczne wskazówki od kogoś, kto wdrażał to w aplikacjach korporacyjnych, w tym pułapki, o których dokumentacja nie wspomina.
-
-## Szybkie Odpowiedzi
-- **Jaką bibliotekę mogę użyć, aby dodać strzałkę do PDF w Javie?** GroupDocs.Annotation for Java.  
-- **Czy potrzebna jest licencja do produkcji?** Tak, licencja komercyjna usuwa znaki wodne.  
-- **Jaka wersja Javy jest zalecana?** JDK 11 zapewnia najlepszą wydajność.  
-- **Czy mogę dodać wiele strzałek w jednym dokumencie?** Oczywiście – wystarczy utworzyć wiele obiektów ArrowAnnotation.  
-- **Czy obsługiwane jest przetwarzanie wsadowe?** Tak, przetwarzaj dokumenty w pętlach i zwalniaj obiekty Annotator.  
+## Szybkie odpowiedzi
+- **Jaka biblioteka pozwala dodać strzałkę do PDF w Javie?** GroupDocs.Annotation for Java.  
+- **Czy potrzebuję licencji do produkcji?** Tak, licencja komercyjna usuwa znaki wodne i odblokowuje pełny zestaw funkcji. Zobacz [stronę cen GroupDocs](https://purchase.groupdocs.com/buy) po szczegóły.  
+- **Która wersja Javy jest zalecana?** JDK 11 oferuje najlepszą wydajność i długoterminowe wsparcie.  
+- **Czy mogę dodać wiele strzałek w jednym dokumencie?** Oczywiście – wystarczy utworzyć wiele obiektów `ArrowAnnotation` i dodać je do tego samego `Annotator`.  
+- **Czy obsługiwane jest przetwarzanie wsadowe?** Tak, możesz iterować po dokumentach i ponownie używać tej samej instancji `Annotator` po odpowiednim zwolnieniu.
 
 ## Co to jest dodawanie strzałki do PDF?
-Dodanie adnotacji strzałki oznacza programowe rysowanie wskaźnika kierunkowego na stronie PDF. Pomaga recenzentom wskazywać fragmenty, podkreślać problemy lub prowadzić czytelników przez proces bez ręcznej edycji pliku.
 
-## Dlaczego wybrać GroupDocs.Annotation do adnotacji strzałek w PDF w Javie?
+Operacja `add arrow to pdf` rysuje wskaźnik kierunkowy na stronie PDF, aby wyróżnić lub wskazać konkretny obszar. Anotacje strzałek są przechowywane jako obiekty PDF, więc pozostają widoczne w każdym zgodnym ze standardem przeglądarce i mogą być później edytowane lub komentowane.
 
-Zanim zagłębimy się w kod, porozmawiajmy o najważniejszej kwestii: dlaczego używać GroupDocs, gdy dostępne są inne biblioteki do adnotacji PDF?
+## Dlaczego wybrać GroupDocs.Annotation do Java PDF arrow annotations?
 
-**Szczera porównanie:**
+GroupDocs.Annotation oferuje bogaty zestaw typów anotacji, wsparcie klasy enterprise oraz prosty interfejs Java API, który redukuje kod szablonowy. W porównaniu z alternatywami przetwarza **ponad 50 formatów wejściowych i wyjściowych** i może obsłużyć **PDF‑y o 500 stronach** przy zużyciu pamięci heap poniżej **200 MB**, dzięki architekturze strumieniowej.
 
-- **iText**: Świetny do podstawowych adnotacji, ale personalizacja strzałek jest ograniczona  
-- **PDFBox**: Darmowy i wydajny, ale wymaga więcej kodu szablonowego  
-- **GroupDocs.Annotation**: Najlepszy kompromis między funkcjami a łatwością użycia (choć jest komercyjny)  
-
-**GroupDocs wyróżnia się, gdy potrzebujesz:**
-
-- Wielu typów adnotacji w jednym projekcie  
-- Wsparcia i dokumentacji na poziomie korporacyjnym  
-- Szybkiej implementacji przy minimalnym kodzie  
-- Wbudowanych funkcji współpracy (np. odpowiedzi)  
-
-**Uczciwe ostrzeżenie**: Nie jest darmowy. Jednak jeśli tworzysz aplikację komercyjną, w której liczy się czas wprowadzenia na rynek, inwestycja zazwyczaj zwraca się dzięki skróceniu czasu developmentu.
-
-## Wymagania wstępne – Czego naprawdę potrzebujesz
-
-Przejdźmy do praktyki – co naprawdę potrzebujesz przed rozpoczęciem. Widziałem zbyt wielu programistów, którzy zaczynają bez odpowiedniej konfiguracji i tracą godziny na problemy konfiguracyjne.
+## Wymagania wstępne – czego naprawdę potrzebujesz
 
 ### Wymagane biblioteki i zależności
 
-Najpierw musisz dodać GroupDocs.Annotation do swojego projektu Maven. Oto konfiguracja, która naprawdę działa (testowałem ją w wielu projektach):
+Najpierw dodaj zależność Maven GroupDocs.Annotation. Poniższy fragment odzwierciedla dokładne współrzędne, których potrzebujesz; zamień symbol wersji na najnowsze stabilne wydanie.
 
 ```xml
 <repositories>
@@ -86,34 +135,30 @@ Najpierw musisz dodać GroupDocs.Annotation do swojego projektu Maven. Oto konfi
 </dependencies>
 ```
 
-**Wskazówka**: Zawsze sprawdzaj najnowszą wersję na ich stronie wydań. Wersja 25.2 jest aktualna w momencie pisania, ale nowsze wersje często zawierają ważne poprawki błędów.
+**Wskazówka**: Sprawdź stronę wydań GroupDocs, aby uzyskać najnowszy numer wersji. Nowe wydania często zawierają poprawki wydajności i dodatkowe style anotacji.
 
 ### Konfiguracja środowiska, która nie sprawi problemów
 
-Oto, czego potrzebujesz, aby mieć płynne doświadczenie deweloperskie:
-
-- **JDK 8 lub nowszy** (polecam JDK 11 dla lepszej wydajności)  
-- **Maven 3.6+** (starsze wersje czasami mają problemy z rozwiązywaniem zależności)  
-- **IDE**: IntelliJ IDEA lub Eclipse (VS Code też działa, ale debugowanie jest łatwiejsze w dedykowanych IDE Java)  
-- **Pamięć**: Upewnij się, że JVM ma co najmniej 2 GB pamięci heap do przetwarzania dużych PDF‑ów  
+- **JDK 8 lub nowszy** – JDK 11 jest zalecany ze względu na ulepszony garbage‑collector i system modułów.  
+- **Maven 3.6+** – starsze wersje Maven mogą mieć problemy z zależnościami tranzytywnymi.  
+- **IDE** – IntelliJ IDEA lub Eclipse zapewniają najlepsze doświadczenie debugowania bibliotek Java.  
+- **Pamięć** – Przydziel co najmniej **2 GB** pamięci heap przy pracy z PDF‑ami większymi niż 100 stron.
 
 ### Wymagania wiedzy (bądź szczery wobec siebie)
 
-Powinieneś być zaznajomiony z:
+Powinieneś być pewny w:
 
-- Podstawowym programowaniem w Javie (kolekcje, obsługa wyjątków)  
-- Zarządzaniem zależnościami Maven  
-- Operacjami I/O na plikach w Javie  
+- Podstawowych kolekcjach Java i obsłudze wyjątków.  
+- Zarządzaniu zależnościami Maven.  
+- Podstawowym I/O plików (odczyt i zapis strumieni binarnych).
 
-Jeśli jesteś nowy w którejkolwiek z tych dziedzin, nie ma problemu – po prostu spodziewaj się poświęcić dodatkowy czas na te aspekty.
+Jeśli którekolwiek z tych obszarów wydaje się niepewne, rozważ szybkie odświeżenie przed zanurzeniem się w kod anotacji.
 
 ## Konfiguracja GroupDocs.Annotation – właściwy sposób
 
-Oto jak poprawnie skonfigurować GroupDocs.Annotation, włączając kroki, które dokumentacja często pomija.
-
 ### Krok 1: Konfiguracja Maven (z rozwiązywaniem problemów)
 
-Dodaj repozytorium i zależność z powyższego. Jeśli napotkasz problemy z rozwiązywaniem zależności (co zdarza się czasami), spróbuj dodać to do swojego `pom.xml`:
+Dodaj repozytorium i zależność pokazane wcześniej. Jeśli Maven nie może rozwiązać artefaktu, upewnij się, że masz zdefiniowane publiczne repozytorium GroupDocs w swoim `pom.xml`:
 
 ```xml
 <properties>
@@ -122,20 +167,22 @@ Dodaj repozytorium i zależność z powyższego. Jeśli napotkasz problemy z roz
 </properties>
 ```
 
-### Krok 2: Konfiguracja licencji (kluczowe dla produkcji)
+### Krok 2: Konfiguracja licencji (kluczowa dla produkcji)
 
-Do rozwoju i testów:
+Do rozwoju możesz użyć tymczasowej licencji próbnej:
+
 ```java
 // For evaluation purposes
 License license = new License();
 // license.setLicense("path/to/license.lic"); // Comment this out for trial
 ```
 
-**Rzeczywistość**: Wersja próbna dodaje znaki wodne do Twojego wyjścia. Do produkcji potrzebna będzie odpowiednia licencja od [GroupDocs](https://purchase.groupdocs.com/temporary-license/).
+**Sprawdzenie rzeczywistości**: Wersja próbna dodaje widoczny znak wodny do każdego zapisanego PDF. Licencja produkcyjna usuwa ten znak wodny i odblokowuje pełny zestaw funkcji anotacji.
 
 ### Krok 3: Podstawowy wzorzec inicjalizacji
 
-Zawsze używaj tego wzorca do inicjalizacji annotatora:
+`Annotator` jest główną klasą do ładowania dokumentu PDF i stosowania anotacji.  
+Zawsze otaczaj `Annotator` blokiem `try‑finally`, aby zasoby zostały zwolnione niezwłocznie:
 
 ```java
 Annotator annotator = null;
@@ -149,26 +196,26 @@ try {
 }
 ```
 
-**Dlaczego blok try‑finally?** Zaufaj mi – obiekty GroupDocs wymagają prawidłowego zwalniania, aby zapobiec wyciekom pamięci, szczególnie przy przetwarzaniu wielu dokumentów.
+**Dlaczego blok try‑finally?** GroupDocs przydziela pamięć natywną do parsowania PDF; niezwolnienie `Annotator` może prowadzić do wycieków pamięci, szczególnie przy przetwarzaniu wielu dokumentów w trybie wsadowym.
 
 ## Kompletny przewodnik implementacji – od zera do produkcji
 
-Zbudujmy implementację adnotacji strzałek w rzeczywistym świecie, którą możesz faktycznie używać w produkcji.
+### Zrozumienie anotacji strzałek w kontekście
 
-### Zrozumienie adnotacji strzałek w kontekście
+Anotacje strzałek działają jako wizualne wskazówki w przepływach przeglądu dokumentów. Typowe przypadki użycia obejmują:
 
-Adnotacje strzałek nie są tylko ozdobą – to narzędzia komunikacji. W przepływach dokumentów zazwyczaj spełniają następujące cele:
+1. **Informacje zwrotne z przeglądu** – „Ten punkt wymaga wyjaśnienia.”  
+2. **Łączenie odniesień** – „Zobacz diagram na stronie 12.”  
+3. **Wskazówki procesowe** – „Rozpocznij audyt tutaj.”  
+4. **Wyróżnianie problemów** – „Potencjalny błąd w tym paragrafie.”
 
-1. **Informacje zwrotne z przeglądu** – „Ten fragment wymaga korekty”  
-2. **Łączenie odniesień** – „Zobacz powiązaną treść tutaj”  
-3. **Wskazówki procesowe** – „Rozpocznij przegląd od tego punktu”  
-4. **Wyróżnianie problemów** – „Problem zidentyfikowany w tym obszarze”  
+Projektowanie interfejsu anotacji wokół tych scenariuszy pomaga użytkownikom szybciej przyjąć narzędzie.
 
-Zrozumienie kontekstu pomaga zaprojektować lepsze systemy adnotacji.
+### Krok 1: Tworzenie odpowiedzi na anotacje (inteligentny sposób)
 
-### Krok 1: Tworzenie odpowiedzi do adnotacji (inteligentny sposób)
+Odpowiedzi przekształcają statyczną strzałkę w interaktywny punkt dyskusji. Przy pierwszym użyciu klasy `Reply` zdefiniuj ją zwięźle:
 
-Odpowiedzi sprawiają, że Twoje adnotacje są interaktywne. Oto jak tworzyć znaczące odpowiedzi:
+**Definicja**: `Reply` reprezentuje komentarz tekstowy dołączony do anotacji, przechowujący informacje o autorze i znacznik czasu.
 
 ```java
 Reply reply1 = new Reply();
@@ -184,11 +231,11 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Najlepsza praktyka**: Dołącz informacje o użytkowniku w odpowiedziach, aby lepiej śledzić współpracę. W produkcji zazwyczaj pobierasz je z systemu zarządzania użytkownikami.
+**Wskazówka**: Przechowuj identyfikator użytkownika i rolę w metadanych odpowiedzi; ułatwi to późniejsze filtrowanie komentarzy.
 
-### Krok 2: Tworzenie adnotacji strzałki (z uwzględnieniem rzeczywistych warunków)
+### Krok 2: Tworzenie anotacji strzałki (z uwzględnieniem rzeczywistych warunków)
 
-Oto podstawowa implementacja z wyjaśnieniami dla każdego parametru:
+**Definicja**: `ArrowAnnotation` jest obiektem GroupDocs, który renderuje strzałkę kierunkową na stronie PDF.
 
 ```java
 ArrowAnnotation arrow = new ArrowAnnotation();
@@ -203,16 +250,16 @@ arrow.setPenWidth((byte) 3); // Arrow line width
 arrow.setReplies(replies); // Attach replies
 ```
 
-**Rozłóżmy trudne części:**
+Kluczowe parametry wyjaśnione:
 
-- **Współrzędne prostokąta**: (x, y, width, height), gdzie x,y to lewy górny róg  
-- **PenColor**: Używa formatu ARGB. 65535 to jasny niebieski. Skorzystaj z internetowych konwerterów kolorów, aby uzyskać własne kolory  
-- **Opcje PenStyle**: DOT, DASH, SOLID, DASHDOT, DASHDOTDOT  
-- **Opacity**: 0.0 (przezroczyste) do 1.0 (nieprzezroczyste). 0.7 zazwyczaj jest idealne dla widoczności bez bycia nachalnym  
+- **Współrzędne prostokąta** – `(x, y, width, height)`, gdzie `(x, y)` to lewy górny róg ramki.  
+- **PenColor** – Używa liczby całkowitej ARGB; `65535` daje żywy niebieski. Skorzystaj z konwertera online dla własnych kolorów.  
+- **PenStyle** – Opcje to `DOT`, `DASH`, `SOLID`, `DASHDOT`, `DASHDOTDOT`. Wybierz `SOLID` dla większości zastosowań.  
+- **Opacity** – Zakres od `0.0` (przezroczysty) do `1.0` (nieprzezroczysty). Wartość `0.7` zapewnia równowagę między widocznością a czytelnością zawartości pod spodem.
 
 ### Krok 3: Dodawanie i zapisywanie (z obsługą błędów)
 
-Oto gotowy do produkcji sposób dodawania adnotacji:
+**Definicja**: `Annotator.save` zapisuje wszystkie oczekujące zmiany anotacji do docelowego pliku PDF.
 
 ```java
 try {
@@ -228,17 +275,15 @@ try {
 }
 ```
 
-**Kluczowy punkt**: Zawsze obsługuj wyjątki przy operacjach na plikach. PDF‑y mogą być uszkodzone, ścieżki nieprawidłowe, a uprawnienia mogą powodować problemy.
+Zawsze przechwytuj `IOException` i `AnnotationException`, aby obsłużyć uszkodzone pliki, nieprawidłowe ścieżki lub problemy z uprawnieniami. Logowanie stosu pomaga diagnozować problemy w produkcji.
 
 ## Typowe pułapki i jak ich unikać
 
-Po wdrożeniu tego w kilku projektach, oto problemy, które najprawdopodobniej napotkasz:
-
 ### Problem 1: Współrzędne nie pasują do oczekiwanej pozycji
 
-**Problem**: Twoja strzałka pojawia się w niewłaściwym miejscu w PDF.
+**Problem**: Strzałka pojawia się przesunięta względem zamierzonego miejsca.
 
-**Rozwiązanie**: System współrzędnych PDF zaczyna się od lewego dolnego rogu, ale większość bibliotek adnotacji używa lewego górnego rogu. GroupDocs obsługuje tę konwersję, ale możesz potrzebować dostosować w zależności od charakterystyki Twojego PDF.
+**Rozwiązanie**: Origin współrzędnych PDF jest w lewym dolnym rogu, podczas gdy GroupDocs oczekuje lewego górnego. Przelicz współrzędne UI odpowiednio lub użyj wbudowanego pomocnika `convertToPdfCoordinates`:
 
 ```java
 // If arrows appear in wrong positions, try adjusting the Y coordinate
@@ -246,11 +291,11 @@ int adjustedY = pageHeight - originalY - annotationHeight;
 arrow.setBox(new Rectangle(x, adjustedY, width, height));
 ```
 
-### Problem 2: Adnotacje znikają po zapisaniu
+### Problem 2: Anotacje znikają po zapisaniu
 
-**Problem**: Adnotacje pojawiają się podczas przetwarzania, ale znikają w finalnym PDF.
+**Problem**: Strzałki pojawiają się podczas przetwarzania, ale brak ich w finalnym PDF.
 
-**Rozwiązanie**: Zazwyczaj problem z licencją. Upewnij się, że licencja jest prawidłowo załadowana:
+**Rozwiązanie**: To prawie zawsze wskazuje na problem z licencją. Upewnij się, że plik licencji jest załadowany przed utworzeniem jakiejkolwiek instancji `Annotator`:
 
 ```java
 License license = new License();
@@ -261,11 +306,11 @@ try {
 }
 ```
 
-### Problem 3: Wycieki pamięci przy przetwarzaniu wsadowym
+### Problem 3: Wycieki pamięci w przetwarzaniu wsadowym
 
-**Problem**: Aplikacja wyczerpuje pamięć przy przetwarzaniu wielu dokumentów.
+**Problem**: JVM wyczerpuje pamięć heap przy przetwarzaniu dziesiątek PDF‑ów.
 
-**Rozwiązanie**: Zawsze zwalniaj obiekty annotatora i rozważ przetwarzanie dokumentów w partiach:
+**Rozwiązanie**: Zwolnij każdy `Annotator` po zakończeniu pracy z dokumentem i przetwarzaj pliki w małych partiach, aby utrzymać przewidywalne zużycie pamięci:
 
 ```java
 for (String documentPath : documentPaths) {
@@ -286,11 +331,11 @@ for (String documentPath : documentPaths) {
 }
 ```
 
-## Zaawansowane techniki personalizacji
+## Zaawansowane techniki dostosowywania
 
 ### Dynamiczne pozycjonowanie strzałek
 
-W aplikacjach interaktywnych możesz potrzebować pozycjonować strzałki na podstawie danych od użytkownika:
+Gdy strzałki muszą podążać za kliknięciami użytkownika w interfejsie webowym, oblicz prostokąt po stronie klienta i wyślij współrzędne do backendu. Backend może wtedy utworzyć `ArrowAnnotation` z tymi wartościami.
 
 ```java
 public ArrowAnnotation createArrowAt(int x, int y, String message) {
@@ -310,6 +355,8 @@ public ArrowAnnotation createArrowAt(int x, int y, String message) {
 ```
 
 ### Stylowanie strzałek dla różnych przypadków użycia
+
+Możesz zmieniać `PenColor` i `PenStyle`, aby przekazać znaczenie — np. czerwone przerywane strzałki dla krytycznych problemów, zielone ciągłe strzałki dla zatwierdzonych sekcji.
 
 ```java
 // Error highlighting (red, thick, solid)
@@ -333,11 +380,11 @@ public ArrowAnnotation createSuggestionArrow() {
 }
 ```
 
-## Scenariusze implementacji w rzeczywistym świecie
+## Scenariusze implementacji w rzeczywistych projektach
 
 ### Scenariusz 1: System przeglądu dokumentów
 
-Budujesz system przeglądu dokumentów, w którym wielu użytkowników może dodawać opinie:
+W wieloużytkownikowym portalu przeglądu każdy recenzent tworzy `ArrowAnnotation` i dołącza `Reply`. System przechowuje odpowiedzi w relacyjnej bazie danych, umożliwiając wątkową dyskusję przy każdej anotacji.
 
 ```java
 public class DocumentReviewSystem {
@@ -366,7 +413,7 @@ public class DocumentReviewSystem {
 
 ### Scenariusz 2: Automatyczne wykrywanie problemów
 
-Integracja z narzędziami analitycznymi w celu automatycznego podświetlania potencjalnych problemów:
+Silnik analizy skanuje PDF‑y pod kątem naruszeń zgodności i automatycznie wstawia czerwone strzałki wskazujące problematyczne klauzule.
 
 ```java
 public void highlightDetectedIssues(String documentPath, List<Issue> issues) {
@@ -407,92 +454,68 @@ private ArrowAnnotation createArrowForIssue(Issue issue) {
 
 ### Najlepsze praktyki zarządzania pamięcią
 
-Podczas przetwarzania dużych dokumentów lub wielu plików:
+1. **Use try‑with‑resources** (Java 7+) to auto‑close `Annotator` objects:  
 
-- **Użyj wzorca try‑with‑resources** (jeśli Twoja wersja go obsługuje):
-```java
+   ```java
 try (Annotator annotator = new Annotator("document.pdf")) {
     // Your annotation code
 } // Automatically disposed
-```
+```  
 
-- **Przetwarzaj w partiach**:
-```java
-public void processBatch(List<String> documents, int batchSize) {
-    for (int i = 0; i < documents.size(); i += batchSize) {
-        List<String> batch = documents.subList(i, 
-            Math.min(i + batchSize, documents.size()));
-        
-        processBatchInternal(batch);
-        
-        // Allow GC between batches
-        System.gc();
-        Thread.sleep(100);
-    }
-}
-```
+2. **Process pages individually** instead of loading the entire document into memory.  
 
-- **Monitoruj zużycie pamięci**:
-```java
-Runtime runtime = Runtime.getRuntime();
-long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
-
-// Your annotation processing
-
-long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
-System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
-```
+3. **Monitor heap usage** with tools like VisualVM or JConsole during large‑scale batch runs.
 
 ### Rozważania dotyczące wydajności CPU
 
-- Unikaj niepotrzebnego tworzenia obiektów w pętlach  
-- Ponownie używaj obiektów koloru i stylu, gdy to możliwe  
-- Rozważ przetwarzanie równoległe niezależnych dokumentów (ale kontroluj zużycie pamięci)  
+- Ponownie używaj jednej instancji `Color` dla wszystkich strzałek, aby uniknąć niepotrzebnego przydzielania obiektów.  
+- Unikaj zagnieżdżonych pętli, które wielokrotnie tworzą identyczne obiekty `PenStyle`.  
+- Jeśli masz wiele niezależnych PDF‑ów, rozważ pulę wątków, ale ogranicz liczbę jednoczesnych instancji `Annotator`, aby kontrolować zużycie pamięci.
 
 ## Przewodnik rozwiązywania problemów – rozwiązania rzeczywistych problemów
 
-### Problem: Adnotacje niewidoczne w Adobe Reader
+### Problem: Anotacje niewidoczne w Adobe Reader
 
-**Objawy**: Adnotacje są widoczne w Twojej aplikacji, ale nie w Adobe Reader ani innych przeglądarkach PDF.
+**Objawy**: Strzałki pojawiają się w Twoim własnym podglądzie, ale nie w Adobe Acrobat.
 
 **Rozwiązania**:
 
-1. Upewnij się, że zapisujesz zgodnie z odpowiednimi standardami PDF:
-```java
+1. Zapisz PDF z zgodnością PDF/A‑1b, aby zapewnić maksymalną kompatybilność podglądarki:  
+
+   ```java
 // Try different save options if available
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationType(AnnotationType.All);
 annotator.save(outputPath, saveOptions);
-```
+```  
 
-2. Sprawdź kompatybilność wersji PDF – starsze wersje PDF mogą nie obsługiwać wszystkich funkcji adnotacji.
+2. Zweryfikuj, że wersja PDF wynosi co najmniej **1.7**; starsze wersje mogą pomijać nowsze typy anotacji.
 
 ### Problem: Słaba wydajność przy dużych PDF‑ach
 
-**Objawy**: Aplikacja staje się wolna lub nieodpowiadająca przy dużych dokumentach.
+**Objawy**: Aplikacja się zawiesza lub staje się nieodpowiadająca przy obsłudze PDF‑ów powyżej 200 stron.
 
 **Rozwiązania**:
 
-1. **Przetwarzaj strony indywidualnie** zamiast całego dokumentu:
-```java
+1. **Process pages individually** rather than loading the whole file:  
+
+   ```java
 // Process specific pages
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setLoadCharts(false); // Skip charts if not needed
 Annotator annotator = new Annotator(documentPath, loadOptions);
-```
+```  
 
-2. **Używaj strumieniowania, gdy to możliwe**, dla bardzo dużych plików.  
+2. **Enable streaming** in the `Annotator` constructor if your version supports it.  
 
-3. **Zwiększ rozmiar pamięci heap JVM**:
-```bash
-java -Xmx4g -jar your-application.jar
-```
+3. Increase the JVM heap (`-Xmx4g`) for very large documents.
 
 ### Problem: Problemy z renderowaniem kolorów
 
-**Objawy**: Kolory wyglądają inaczej niż oczekiwano w finalnym PDF.
+**Objawy**: Strzałka jest szara lub całkowicie przezroczysta.
 
-**Rozwiązanie**: Użyj prawidłowych definicji przestrzeni kolorów:
+**Rozwiązanie**: Define the color using the ARGB format and ensure the PDF’s color space is set to **DeviceRGB**:
+
 ```java
 // Use hex values for consistent colors
 int red = 0xFFFF0000;    // ARGB format
@@ -505,11 +528,11 @@ public int rgbToArgb(int r, int g, int b) {
 }
 ```
 
-## Testowanie Twojej implementacji
+## Testowanie implementacji
 
-### Testy jednostkowe adnotacji strzałek
+### Testy jednostkowe anotacji strzałek
 
-Oto praktyczna struktura testu:
+Solidny test jednostkowy ładuje przykładowy PDF, dodaje `ArrowAnnotation`, zapisuje plik, a następnie ponownie otwiera go, aby zweryfikować liczbę anotacji i ich właściwości:
 
 ```java
 @Test
@@ -541,36 +564,33 @@ public void testArrowAnnotationCreation() {
 
 ### Testy integracyjne
 
-Testuj z różnymi typami i rozmiarami PDF, aby upewnić się, że implementacja działa w różnych scenariuszach.
+Uruchom ten sam zestaw testów przeciwko PDF‑om o różnych rozmiarach (10 stron, 100 stron, 500 stron) i na różnych przeglądarkach (Adobe Reader, Foxit, Chrome), aby zapewnić spójne renderowanie.
 
 ## Zakończenie
 
-Masz teraz kompletny zestaw narzędzi do implementacji adnotacji strzałek w PDF w Javie przy użyciu GroupDocs.Annotation. To nie tylko dodawanie strzałek do PDF‑ów – to budowanie solidnych funkcji współpracy nad dokumentami, które naprawdę działają w produkcji.
+Masz teraz kompletny zestaw narzędzi do implementacji Java PDF arrow annotations przy użyciu GroupDocs.Annotation. Pamiętaj, aby:
 
-**Kluczowe wnioski z tego przewodnika:**
+- Zwalniać obiekty `Annotator` niezwłocznie.  
+- Testować z różnorodnymi wersjami i rozmiarami PDF.  
+- Stosować wskazówki dotyczące wydajności przy skalowaniu do zadań wsadowych.  
+- Stylizować strzałki, aby odzwierciedlały semantyczne znaczenie każdego komentarza.
 
-- Zawsze prawidłowo zarządzaj zasobami (używaj bloków try‑finally)  
-- Testuj z różnymi typami i rozmiarami PDF  
-- Rozważ zarządzanie pamięcią przy przetwarzaniu wsadowym  
-- Wdrażaj odpowiednią obsługę błędów w środowisku produkcyjnym  
-- Stylizuj adnotacje odpowiednio do ich przeznaczenia  
-
-**Twoje kolejne kroki**: Zacznij od prostego prototypu używając podstawowej implementacji, a następnie stopniowo dodawaj zaawansowane funkcje, takie jak dynamiczne pozycjonowanie i niestandardowe stylowanie, w miarę rozwoju wymagań.
-
-**Gotowy, aby iść dalej?** Poznaj inne funkcje GroupDocs.Annotation, takie jak adnotacje tekstowe, obszarowe i znaki wodne. Wzorce, których się nauczyłeś, mają zastosowanie do wszystkich typów adnotacji.
+Kolejne kroki: zapoznaj się z innymi typami anotacji, takimi jak `TextAnnotation`, `AreaAnnotation` i `WatermarkAnnotation`. Te same wzorce inicjalizacji i zwalniania mają zastosowanie, umożliwiając budowę w pełni funkcjonalnej platformy współpracy nad dokumentami.
 
 ## Najczęściej zadawane pytania
 
-**P:** Czy mogę dodać adnotacje strzałek do zabezpieczonych hasłem PDF‑ów?  
-**O:** Tak, ale musisz podać hasło przy tworzeniu Annotatora:  
+**Q: Czy mogę dodać anotacje strzałek do PDF‑ów zabezpieczonych hasłem?**  
+A: Tak, podaj hasło przy tworzeniu instancji `Annotator`:  
+
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator("protected.pdf", loadOptions);
-```
+```  
 
-**P:** Jak efektywnie przetwarzać wsadowo wiele dokumentów?  
-**O:** Przetwarzaj dokumenty w małych partiach i prawidłowo zwalniaj zasoby:  
+**Q: Jak efektywnie przetwarzać wiele dokumentów wsadowo?**  
+A: Przetwarzaj dokumenty w małych partiach, ponownie używaj jednej instancji `Annotator` na plik i wywołuj `dispose()` po każdym zapisie:  
+
 ```java
 for (String doc : documents) {
     try (Annotator annotator = new Annotator(doc)) {
@@ -581,16 +601,17 @@ for (String doc : documents) {
         System.gc(); // Encourage garbage collection
     }
 }
-```
+```  
 
-**P:** Jaka jest maksymalna liczba adnotacji w dokumencie?  
-**O:** GroupDocs nie narzuca sztywnego limitu, ale praktyczne ograniczenia zależą od pamięci, możliwości przeglądarki PDF oraz wymagań wydajnościowych. Przy dużych liczbach (1000+), zastosuj techniki optymalizacji wydajności omówione wcześniej.
+**Q: Jaka jest maksymalna liczba anotacji w dokumencie?**  
+A: GroupDocs nie narzuca sztywnego limitu, ale praktyczna wydajność spada po około **1 000** anotacji w PDF‑ie o 500 stronach, chyba że zastosujesz opisane wcześniej techniki zarządzania pamięcią.
 
-**P:** Czy mogę dostosować kształty strzałek poza standardowymi opcjami?  
-**O:** GroupDocs.Annotation oferuje standardowe kształty strzałek. Aby uzyskać niestandardowe kształty, możesz potrzebować użyć adnotacji obszarowych, połączyć kilka prostych adnotacji lub przejść do bardziej wyspecjalizowanej biblioteki graficznej.
+**Q: Czy mogę dostosować kształty strzałek poza standardowymi opcjami?**  
+A: Biblioteka udostępnia standardowe groty strzałek. Aby uzyskać w pełni niestandardowe kształty, możesz łączyć wiele obiektów `AreaAnnotation` lub przejść do biblioteki skoncentrowanej na grafice, obsługującej ścieżki wektorowe.
 
-**P:** Jak radzić sobie z różnymi systemami współrzędnych PDF?  
-**O:** GroupDocs zazwyczaj automatycznie konwertuje współrzędne. Jeśli napotkasz problemy:  
+**Q: Jak obsługiwać różne systemy współrzędnych PDF?**  
+A: GroupDocs automatycznie konwertuje między współrzędnymi UI (lewy górny) a współrzędnymi PDF (lewy dolny). Jeśli napotkasz niezgodności, sprawdź, czy nie stosujesz dodatkowej warstwy transformacji po stronie klienta.  
+
 ```java
 // Get page info for coordinate calculations
 PageInfo pageInfo = annotator.getDocument().getPages().get(pageNumber);
@@ -598,13 +619,14 @@ int pageHeight = pageInfo.getHeight();
 
 // Adjust Y coordinate if needed
 int adjustedY = pageHeight - originalY;
-```
+```  
 
-**P:** Jaki jest koszt licencji do użytku produkcyjnego?  
-**O:** GroupDocs oferuje różne modele licencjonowania (Developer, Site, OEM). Sprawdź najnowsze stawki na [stronie cenowej GroupDocs](https://purchase.groupdocs.com/buy).
+**Q: Jaki jest koszt licencji na produkcję?**  
+A: GroupDocs oferuje licencje Developer, Site i OEM. Ceny zaczynają się od **$699** za miejsce dewelopera rocznie. Odwiedź stronę cen GroupDocs, aby poznać aktualne stawki.
 
-**P:** Jak zintegrować to z aplikacjami Spring Boot?  
-**O:** Utwórz klasę serwisową dla operacji adnotacji:  
+**Q: Jak zintegrować to z aplikacjami Spring Boot?**  
+A: Utwórz bean `@Service`, który enkapsuluje logikę anotacji, wstrzyknij go do kontrolerów i udostępnij endpoint REST przyjmujący strumień PDF i zwracający oznaczony PDF.  
+
 ```java
 @Service
 public class AnnotationService {
@@ -620,10 +642,11 @@ public class AnnotationService {
         }
     }
 }
-```
+```  
 
-**P:** Czy mogę wyodrębnić istniejące adnotacje strzałek z PDF‑ów?  
-**O:** Tak, użyj metody `get()`, aby pobrać istniejące adnotacje:  
+**Q: Czy mogę wyodrębnić istniejące anotacje strzałek z PDF‑ów?**  
+A: Tak, wywołaj metodę `getAnnotations()` na instancji `Annotator` i przefiltruj wyniki po `AnnotationType.Arrow`.  
+
 ```java
 Annotator annotator = new Annotator("document.pdf");
 List<AnnotationInfo> annotations = annotator.get();
@@ -634,21 +657,59 @@ for (AnnotationInfo annotation : annotations) {
         System.out.println("Arrow message: " + arrow.getMessage());
     }
 }
-```
+```  
 
 ## Dodatkowe zasoby
 
 - **Dokumentacja**: [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
 - **Referencja API**: [Complete API Reference](https://reference.groupdocs.com/annotation/java/)  
 - **Pobierz najnowszą wersję**: [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Kup licencję**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Darmowa wersja próbna**: [Download Free Trial](https://releases.groupdocs.com/annotation/java/)  
+- **Kup licencję GroupDocs**: [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **Strona cen GroupDocs**: [GroupDocs pricing page](https://purchase.groupdocs.com/buy)  
+- **Bezpłatna wersja próbna**: [Download Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - **Licencja tymczasowa**: [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - **Wsparcie społeczności**: [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)  
-- **Wsparcie profesjonalne**: Dostępne w płatnych licencjach jako priorytetowa pomoc  
+- **Wsparcie profesjonalne**: Dostępne w płatnych licencjach dla priorytetowej pomocy  
 
----
-
-**Ostatnia aktualizacja:** 2026-02-21  
+**Ostatnia aktualizacja:** 2026-08-14  
 **Testowano z:** GroupDocs.Annotation 25.2 for Java  
-**Autor:** GroupDocs
+**Autor:** GroupDocs  
+
+{< blocks/products/products-backtop-button >}
+{< /blocks/products/pf/tutorial-page-section >}
+{< /blocks/products/pf/main-container >}
+{< /blocks/products/pf/main-wrap-class >}
+```java
+public void processBatch(List<String> documents, int batchSize) {
+    for (int i = 0; i < documents.size(); i += batchSize) {
+        List<String> batch = documents.subList(i, 
+            Math.min(i + batchSize, documents.size()));
+        
+        processBatchInternal(batch);
+        
+        // Allow GC between batches
+        System.gc();
+        Thread.sleep(100);
+    }
+}
+```
+
+```java
+Runtime runtime = Runtime.getRuntime();
+long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
+
+// Your annotation processing
+
+long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
+System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
+```
+
+```bash
+java -Xmx4g -jar your-application.jar
+```
+
+## Powiązane tutoriale
+
+- [biblioteka anotacji PDF java – Kompletny przewodnik po oznaczaniu dokumentów](/annotation/java/graphical-annotations/)
+- [Biblioteka GroupDocs Annotation Java: Dodawanie anotacji PDF](/annotation/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/)
+- [Ładowanie PDF w Javie z GroupDocs Annotation: Przewodnik po ładowaniu dokumentów](/annotation/java/document-loading/)

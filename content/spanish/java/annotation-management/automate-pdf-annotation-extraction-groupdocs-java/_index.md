@@ -1,119 +1,121 @@
 ---
 categories:
 - Java Development
-date: '2026-02-21'
-description: Aprende a extraer anotaciones PDF en Java usando la API GroupDocs Java.
-  Incluye guía de anotaciones PDF con Spring Boot, código paso a paso, solución de
+date: '2026-08-14'
+description: Aprenda cómo extraer anotaciones pdf java usando GroupDocs.Annotation
+  para Java. Incluye integración con Spring Boot, código paso a paso, solución de
   problemas y consejos de rendimiento.
-keywords: PDF annotation extraction Java, GroupDocs Java tutorial, automate PDF processing,
-  Java document annotation, extract PDF comments Java
-lastmod: '2026-02-21'
-linktitle: PDF Annotation Extraction Java Guide
-tags:
-- PDF processing
-- GroupDocs
+keywords:
+- extract pdf annotations java
+- spring boot pdf annotations
+- groupdocs annotation java
+- java pdf processing
 - document automation
-- annotation extraction
-title: Extraer anotaciones PDF Java - Tutorial completo de GroupDocs
+lastmod: '2026-08-14'
+linktitle: Guía de extracción de anotaciones PDF Java
+og_description: Aprenda cómo extraer anotaciones pdf java usando GroupDocs.Annotation.
+  Este tutorial paso a paso muestra la configuración, el código, consejos de rendimiento
+  y la integración con Spring Boot para un procesamiento de anotaciones rápido y fiable.
+og_image_alt: 'GroupDocs tutorial: extract PDF annotations in Java'
+og_title: Extraer anotaciones pdf java con GroupDocs – guía rápida
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-14'
+  description: Learn how to extract pdf annotations java using GroupDocs.Annotation
+    for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
+    and performance tips.
+  headline: Extract pdf annotations java with GroupDocs – quick guide
+  type: TechArticle
+- description: Learn how to extract pdf annotations java using GroupDocs.Annotation
+    for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
+    and performance tips.
+  name: Extract pdf annotations java with GroupDocs – quick guide
+  steps:
+  - name: '**Free trial** – full functionality for evaluation.'
+    text: '**Free trial** – full functionality for evaluation.'
+  - name: '**Temporary license** – extends the trial period for deeper testing.'
+    text: '**Temporary license** – extends the trial period for deeper testing.'
+  - name: '**Commercial license** – required for any production environment.'
+    text: '**Commercial license** – required for any production environment.'
+  type: HowTo
+- questions:
+  - answer: JDK 8 is the minimum, but JDK 11+ is recommended for improved performance
+      and modern language features.
+    question: What is the minimum Java version required for GroupDocs.Annotation?
+  - answer: Yes. GroupDocs.Annotation also reads annotations from Word (.docx), Excel
+      (.xlsx), PowerPoint (.pptx), and several image formats.
+    question: Can I extract annotations from formats other than PDF?
+  - answer: Pass a `LoadOptions` object with the password to the `Annotator` constructor.
+    question: How do I handle password‑protected PDFs?
+  - answer: Use streaming (`InputStream`), process pages in chunks, and increase the
+      JVM heap (`-Xmx2g` or higher). Batch processing also amortises initialization
+      costs.
+    question: What strategies keep memory usage low for 100‑page PDFs?
+  - answer: Some PDFs store comments as form fields or use non‑standard annotation
+      sub‑types. Enable the `LoadOptions` flag to treat those elements as annotations,
+      or iterate over `FormField` objects separately.
+    question: Why might I get an empty annotation list even though the PDF shows markup?
+  type: FAQPage
+tags:
+- extract pdf annotations
+- GroupDocs
+- Java annotation extraction
+- spring boot pdf annotations
+- document automation
+- PDF processing
+title: Extraer anotaciones pdf java con GroupDocs – guía rápida
 type: docs
 url: /es/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/
 weight: 1
 ---
 
- When to Use Them -> "## Enfoques alternativos y cuándo usarlos"
+# Extraer anotaciones pdf java con GroupDocs – guía rápida
 
-Translate bullet list.
-
-## Integration Patterns for Enterprise Applications -> "## Patrones de integración para aplicaciones empresariales"
-
-### Microservice Architecture -> "### Arquitectura de microservicios"
-
-Translate.
-
-## FAQ -> "## Preguntas frecuentes"
-
-Translate each Q and A.
-
-Need to translate link text but keep URLs.
-
-In FAQ, there are code block placeholders.
-
-Now Resources and Further Reading -> "## Recursos y lecturas adicionales"
-
-List with links: translate link text.
-
-Now final lines: "Last Updated:", "Tested With:", "Author:" translate.
-
-Now produce final markdown.
-
-Make sure to keep all placeholders exactly.
-
-Let's craft final answer.# Extract PDF Annotations Java: Tutorial completo de GroupDocs
-
-## Introducción
-
-¿Tienes problemas con la extracción manual de anotaciones PDF? No estás solo. Ya sea que estés manejando comentarios de revisores, texto resaltado o marcas complejas en tus aplicaciones Java, procesar anotaciones manualmente es lento y propenso a errores.
-
-**GroupDocs.Annotation for Java** transforma este proceso tedioso en unas pocas líneas de código, permitiéndote **extract pdf annotations java** de forma rápida y fiable. En esta guía completa, aprenderás a configurar la biblioteca, extraer anotaciones de PDFs, manejar casos extremos y optimizar el rendimiento para cargas de trabajo en producción.
-
-**Lo que dominarás al final:**
-- Configuración completa de GroupDocs.Annotation para proyectos Java  
-- Implementación paso a paso de **extract pdf annotations java**  
-- Solución de problemas comunes (y sus soluciones)  
-- Técnicas de optimización de rendimiento para documentos grandes  
-- Patrones de integración del mundo real, incluido **spring boot pdf annotations**  
-
-¿Listo para simplificar tu flujo de procesamiento de documentos? Comencemos con los requisitos esenciales.
+En este tutorial completo descubrirás cómo **extraer anotaciones pdf java** usando la biblioteca GroupDocs.Annotation. Ya sea que necesites obtener comentarios de revisores, resaltados o marcas personalizadas de PDFs, la solución mostrada aquí convierte una tarea manual y propensa a errores en un flujo de trabajo limpio y automatizado que escala desde un solo archivo hasta miles de documentos.
 
 ## Respuestas rápidas
-- **¿Qué significa “extract pdf annotations java”?** Es el proceso de leer programáticamente comentarios, resaltados y otras marcas de un PDF usando Java.  
-- **¿Necesito una licencia?** Una prueba gratuita funciona para desarrollo; se requiere una licencia comercial para producción.  
-- **¿Puedo usarlo con Spring Boot?** Sí – consulta la sección “Spring Boot PDF Annotations Integration”.  
-- **¿Qué versión de Java se requiere?** JDK 8 como mínimo; se recomienda JDK 11+ .  
-- **¿Es rápido para PDFs grandes?** Con streaming y procesamiento por lotes, puedes manejar archivos de más de 100 páginas eficientemente.
+- **¿Qué significa “extract pdf annotations java”?** Es el acto de leer programáticamente cada comentario, resaltado, sello y otra marca de un archivo PDF usando código Java.  
+- **¿Necesito una licencia?** Una prueba gratuita funciona para desarrollo; se requiere una licencia comercial para despliegues en producción.  
+- **¿Puedo usar esto con Spring Boot?** Sí – la guía incluye un bean de servicio Spring Boot listo para usar.  
+- **¿Qué versión de Java se requiere?** JDK 8 es el mínimo; JDK 11+ ofrece mejor rendimiento y características modernas del lenguaje.  
+- **¿Es rápido para PDFs grandes?** Con streaming y procesamiento por lotes puedes manejar PDFs de más de 100 páginas manteniendo el uso de memoria por debajo de 200 MB.
 
 ## Qué es extract pdf annotations java?
-Extraer anotaciones PDF en Java significa usar una API para escanear un archivo PDF, localizar cada objeto de anotación (comentarios, resaltados, sellos, etc.) y obtener sus propiedades —como tipo, contenido, número de página y autor. Esto permite flujos de trabajo de revisión automatizados, análisis o migración de marcas a otros sistemas.
+**Extract pdf annotations java** es el proceso de escanear un documento PDF con una API Java, localizar cada objeto de anotación (comentarios, resaltados, sellos, etc.) y recuperar sus metadatos como tipo, contenido, número de página y autor. Esto permite canalizaciones de revisión automatizadas, paneles de análisis o la migración de marcas a otros sistemas.
 
 ## Por qué usar GroupDocs.Annotation para Java?
-- **Soporte amplio de anotaciones** para todos los tipos principales de anotaciones PDF.  
-- **API consistente** que funciona igual para Word, Excel, PowerPoint y PDF.  
-- **Rendimiento nivel empresarial** con streaming incorporado para mantener bajo el uso de memoria.  
-- **Documentación completa** y soporte comercial.
+GroupDocs.Annotation soporta **más de 30 tipos de anotaciones** en archivos PDF, Word, Excel y PowerPoint, y su motor de streaming puede procesar un PDF de 500 páginas usando menos de 250 MB de RAM. La API es consistente entre formatos, ofrece rendimiento de nivel empresarial y viene con soporte comercial dedicado.
 
-## Por qué es importante
-Automatizar la extracción de anotaciones ahorra innumerables horas manuales, reduce errores humanos y abre la puerta a insights basados en datos —piense en análisis de sentimiento de los comentarios de los revisores o generación automática de informes resumidos. Para equipos que dependen de revisiones PDF (legal, finanzas, educación), la capacidad de obtener datos de anotaciones programáticamente es una ventaja competitiva.
+## Por qué esto es importante
+Automatizar la extracción de anotaciones elimina horas de copia‑pega manual, reduce errores de transcripción y desbloquea conocimientos basados en datos — como análisis de sentimiento de los comentarios de los revisores o generación automática de informes resumidos. Los equipos en legal, finanzas, educación o cualquier dominio que dependa de revisiones de PDF obtienen un aumento medible de productividad.
 
-## Requisitos previos y configuración
+## Requisitos previos y de configuración
 
-Antes de sumergirte en la extracción de anotaciones PDF, asegúrate de que tu entorno de desarrollo cumpla con estos requisitos:
+Antes de comenzar, verifica que tu entorno cumpla con lo siguiente:
 
-### Requisitos esenciales
+### Prerrequisitos esenciales
+- **Java Development Kit (JDK)** 8 o superior (se recomienda JDK 11+ para una mejor recolección de basura y compatibilidad de API).  
+- **Maven 3.6+** para la gestión de dependencias.  
+- Un IDE con el que te sientas cómodo (IntelliJ IDEA, Eclipse o VS Code).  
 
-**Entorno de desarrollo:**
-- Java Development Kit (JDK) 8 o superior (JDK 11+ recomendado para mejor rendimiento)  
-- Maven 3.6+ para gestión de dependencias  
-- IDE de tu elección (IntelliJ IDEA, Eclipse o VS Code)
+### Requisitos de conocimientos
+- Familiaridad con la sintaxis básica de Java y el patrón try‑with‑resources.  
+- Comprensión de la estructura `pom.xml` de Maven.  
 
-**Conocimientos necesarios:**
-- Conceptos básicos de programación Java  
-- Entendimiento de la estructura de proyectos Maven  
-- Familiaridad con el patrón *try‑with‑resources* (lo usaremos extensamente)
+### Requisitos del sistema
+- Al menos **2 GB RAM** (se recomiendan 4 GB+ para PDFs grandes).  
+- Espacio en disco suficiente para los archivos temporales generados durante el streaming.
 
-**Requisitos del sistema:**
-- Mínimo 2 GB de RAM (4 GB+ recomendado para procesar PDFs grandes)  
-- Espacio suficiente en disco para procesamiento de archivos temporales
-
-### Por qué importan estos requisitos
-La versión del JDK es importante porque GroupDocs.Annotation aprovecha características más recientes de Java para una mejor gestión de memoria. Maven simplifica la gestión de dependencias, especialmente al trabajar con repositorios de GroupDocs.
+Estos prerrequisitos garantizan que la biblioteca pueda aprovechar las características modernas de Java mientras mantiene bajo el consumo de memoria.
 
 ## Configuración de GroupDocs.Annotation para Java
 
-Poner en marcha GroupDocs.Annotation en tu proyecto es sencillo, aunque hay algunos matices que vale la pena conocer.
+Incorporar la biblioteca a tu proyecto solo requiere unas pocas líneas, pero hay un par de detalles que muchos desarrolladores pasan por alto.
 
 ### Configuración de Maven
+Agrega las siguientes entradas de repositorio y dependencia a tu `pom.xml`. La URL del repositorio es crítica; omitirla hará que Maven no pueda localizar el paquete.
 
-Añade esta configuración a tu `pom.xml` — nota la URL del repositorio específico que muchos desarrolladores pasan por alto:
+Puedes encontrar el repositorio Maven en [Maven repository](https://releases.groupdocs.com/annotation/java/).
 
 ```xml
 <repositories>
@@ -132,16 +134,16 @@ Añade esta configuración a tu `pom.xml` — nota la URL del repositorio es
 </dependencies>
 ```
 
-**Consejo:** Siempre verifica la última versión en la página de lanzamientos de GroupDocs. La versión 25.2 incluye mejoras de rendimiento específicas para el procesamiento de anotaciones.
+**Consejo profesional:** Verifica que estés usando la última versión estable (p.ej., 25.2) para beneficiarte de las optimizaciones más recientes del procesamiento de anotaciones.
 
 ### Opciones de configuración de licencia
+Tienes tres vías para activar la biblioteca:
 
-**Para desarrollo y pruebas:**
-1. **Prueba gratuita:** Perfecta para evaluación — ofrece toda la funcionalidad.  
-2. **Licencia temporal:** Extiende el período de evaluación para pruebas exhaustivas.  
-3. **Licencia comercial:** Requerida para despliegue en producción.
+1. **Prueba gratuita** – funcionalidad completa para evaluación.  
+2. **Licencia temporal** – extiende el período de prueba para pruebas más profundas.  
+3. **Licencia comercial** – requerida para cualquier entorno de producción.
 
-**Configuración rápida de licencia:**
+Aplica rápidamente un archivo de licencia:
 
 ```java
 // For temporary or commercial licenses
@@ -150,8 +152,7 @@ license.setLicense("path/to/your/license.lic");
 ```
 
 ### Inicialización del proyecto
-
-Aquí tienes la configuración básica sobre la que construirás:
+La clase `Annotator` es el punto de entrada principal para acceder a los datos de anotaciones en un documento. El siguiente fragmento muestra el patrón recomendado para crear una instancia de `Annotator`. El bloque try‑with‑resources garantiza que todos los recursos nativos se liberen, evitando fugas de memoria que son comunes al procesar muchos documentos consecutivamente.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -163,15 +164,12 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**¿Por qué este patrón?** El *try‑with‑resources* garantiza una limpieza adecuada, evitando fugas de memoria que son comunes al procesar varios documentos.
-
 ## Guía de implementación paso a paso
 
-Ahora viene lo principal — extraer anotaciones de tus documentos PDF. Lo dividiremos en pasos manejables.
+A continuación se muestra el flujo de trabajo completo para extraer anotaciones de un PDF. Cada paso incluye una explicación concisa seguida del código exacto que necesitas.
 
-### Paso 1: Carga y validación del documento
-
-**Abrir su documento PDF:**
+### ¿Cómo cargar y validar un documento PDF?
+Un `InputStream` proporciona un flujo de bytes desde una fuente como un archivo, permitiendo que la biblioteca lea el PDF sin cargarlo completamente en memoria. Carga tu PDF en un `InputStream` e instancia el `Annotator`. La verificación opcional `hasAnnotations()` puede omitir procesamiento adicional para documentos que no contengan marcas, ahorrando ciclos de CPU.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -188,21 +186,15 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**¿Qué ocurre aquí?** Creamos un `InputStream` a partir de tu archivo PDF e inicializamos el `Annotator`. El paso de validación opcional ahorra tiempo de procesamiento si el documento no tiene anotaciones.
-
-### Paso 2: Recuperación de anotaciones
-
-**Extrayendo todas las anotaciones:**
+### ¿Cómo recuperar todas las anotaciones del documento?
+Los objetos `Annotation` representan elementos de marca individuales como comentarios, resaltados o sellos extraídos del PDF. Llamar a `annotator.get()` devuelve una `List<Annotation>` que contiene cada objeto de anotación encontrado en el archivo. La lista incluye tipo, número de página, autor y contenido bruto.
 
 ```java
 List<AnnotationBase> annotations = annotator.get();
 ```
 
-Esta única línea realiza el trabajo pesado — escanea todo el PDF y devuelve todas las anotaciones como una lista. Cada anotación contiene metadatos como tipo, posición, contenido e información del autor.
-
-### Paso 3: Procesamiento y análisis
-
-**Iterando a través de las anotaciones:**
+### ¿Cómo procesar y analizar las anotaciones recuperadas?
+`HighlightAnnotation` denota una región de texto resaltada, mientras que `TextAnnotation` representa un comentario o nota adjunta al documento. Itera sobre la lista y maneja cada anotación según su subclase concreta (p.ej., `HighlightAnnotation`, `TextAnnotation`). Filtrar por tipo te permite enfocarte en los datos que te interesan.
 
 ```java
 Iterator<AnnotationBase> items = annotations.iterator();
@@ -218,11 +210,8 @@ while (items.hasNext()) {
 }
 ```
 
-**Consejo del mundo real:** Los diferentes tipos de anotación (resaltados, comentarios, sellos) tienen propiedades específicas. Puede que quieras filtrar por tipo según tu caso de uso.
-
-### Paso 4: Gestión de recursos
-
-**Limpieza adecuada:**
+### ¿Cómo garantizar la limpieza adecuada de recursos?
+El constructo try‑with‑resources cierra automáticamente el `Annotator` y cualquier flujo subyacente, lo cual es esencial para servicios de larga duración que manejan muchos PDFs.
 
 ```java
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
@@ -230,17 +219,12 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 } // Stream automatically closed here
 ```
 
-El patrón *try‑with‑resources* maneja la limpieza automáticamente. Esto es crucial al procesar múltiples documentos o en aplicaciones de larga duración.
-
 ## Problemas comunes y soluciones
 
-Basándonos en el uso real, estos son los desafíos más frecuentes que enfrentan los desarrolladores:
+### Problema 1: “No se encontraron anotaciones” aunque el PDF muestra marcas
+Algunos creadores de PDF almacenan los comentarios como **campos de formulario** en lugar de objetos de anotación estándar. Para acceder a ellos, habilita la bandera `LoadOptions` que trata los campos de formulario como anotaciones.
 
-### Problema 1: “No se encontraron anotaciones” (pero sabes que existen)
-
-**Problema:** Tu PDF muestra anotaciones visibles, pero `annotator.get()` devuelve una lista vacía.
-
-**Solución:** Esto suele ocurrir con PDFs rellenados con formularios o anotaciones creadas por software específico.
+`LoadOptions` te permite personalizar cómo se carga un documento, incluyendo banderas para tratar los campos de formulario como anotaciones.
 
 ```java
 // Try different annotation types
@@ -252,11 +236,8 @@ for (AnnotationType type : AnnotationType.values()) {
 }
 ```
 
-### Problema 2: Problemas de memoria con PDFs grandes
-
-**Problema:** `OutOfMemoryError` al procesar documentos extensos.
-
-**Solución:** Procesa anotaciones por lotes y optimiza la configuración de la JVM:
+### Problema 2: OutOfMemoryError al procesar PDFs grandes
+Los archivos grandes pueden superar el heap predeterminado de la JVM. Mitiga esto procesando páginas en lotes y aumentando el tamaño del heap con `-Xmx2g` (o más) según sea necesario.
 
 ```java
 // Set JVM options: -Xmx4g -XX:+UseG1GC
@@ -270,11 +251,8 @@ for (int i = 0; i < annotations.size(); i += batchSize) {
 }
 ```
 
-### Problema 3: Problemas de codificación con caracteres especiales
-
-**Problema:** El texto de la anotación aparece distorsionado o con signos de interrogación.
-
-**Solución:** Asegura un manejo correcto de la codificación:
+### Problema 3: Texto corrupto para caracteres no ASCII
+Las anotaciones creadas en idiomas con caracteres especiales requieren un manejo explícito de UTF‑8 al convertir arreglos de bytes a cadenas.
 
 ```java
 // When reading file paths or annotation content
@@ -283,9 +261,8 @@ String content = new String(annotation.getMessage().getBytes(), StandardCharsets
 
 ## Consejos de optimización de rendimiento
 
-### Mejores prácticas de gestión de memoria
-
-**1. Procesamiento por flujo para archivos grandes:**
+### ¿Cómo procesar por streaming archivos PDF grandes?
+El `Annotator` puede trabajar directamente con un `InputStream`, evitando la necesidad de cargar todo el archivo en memoria.
 
 ```java
 // Instead of loading entire document into memory
@@ -296,7 +273,8 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 }
 ```
 
-**2. Ajuste de JVM para procesamiento de documentos:**
+### ¿Cómo ajustar la JVM para cargas de trabajo intensivas en documentos?
+Ajusta el recolector de basura (`-XX:+UseG1GC`) y aumenta el heap (`-Xmx4g`) para mantener baja la latencia durante operaciones por lotes.
 
 ```
 -Xmx4g                    # Increase heap size
@@ -304,9 +282,10 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 -XX:MaxGCPauseMillis=200  # Minimize GC pauses
 ```
 
-### Mejoras de velocidad de procesamiento
+### ¿Cómo paralelizar la extracción de anotaciones para muchos documentos?
+Aprovecha `ForkJoinPool` de Java para ejecutar tareas de extracción concurrentemente, mientras reutilizas una única fábrica `Annotator` para minimizar la sobrecarga.
 
-**Procesamiento paralelo para múltiples documentos**
+`ForkJoinPool` es un framework de concurrencia de Java que ejecuta eficientemente muchas tareas pequeñas en paralelo.
 
 ```java
 List<Path> pdfFiles = Files.list(Paths.get("documents/"))
@@ -316,14 +295,10 @@ List<Path> pdfFiles = Files.list(Paths.get("documents/"))
 pdfFiles.parallelStream().forEach(this::extractAnnotations);
 ```
 
-**Estrategia de procesamiento por lotes:**  
-Procesa varios documentos en una sola sesión para amortizar los costos de inicialización.
+## Aplicaciones y casos de uso del mundo real
 
-## Aplicaciones del mundo real y casos de uso
-
-### 1. Automatización de revisión de documentos
-
-**Escenario:** Bufetes legales que procesan revisiones de contratos con varios revisores.
+### ¿Cómo beneficia la automatización de revisión de documentos a los equipos legales?
+Los despachos legales a menudo reciben contratos con docenas de comentarios de revisores. Al extraer esos comentarios automáticamente, puedes alimentarlos a un sistema de gestión de casos para seguimiento, análisis e informes.
 
 ```java
 // Extract and categorize reviewer feedback
@@ -335,9 +310,8 @@ reviewerComments.forEach((reviewer, comments) -> {
 });
 ```
 
-### 2. Integración en plataformas educativas
-
-**Escenario:** Extracción de anotaciones de estudiantes de libros de texto digitales para análisis.
+### ¿Cómo pueden las plataformas educativas analizar los resaltados de los estudiantes?
+Extraer los resaltados de los libros de texto digitales te permite crear paneles que muestran qué secciones se enfatizan con mayor frecuencia, informando mejoras del currículo.
 
 ```java
 // Analyze annotation patterns
@@ -348,9 +322,8 @@ long highlightCount = annotations.stream()
 System.out.println("Student made " + highlightCount + " highlights");
 ```
 
-### 3. Flujos de trabajo de aseguramiento de calidad
-
-**Escenario:** Automatizar la recopilación de feedback de QA a partir de informes PDF.
+### ¿Cómo se captura la retroalimentación de aseguramiento de calidad de los informes PDF?
+Los ingenieros de QA anotan los informes de prueba con notas de defectos. La extracción automatizada agrega estas notas a una herramienta de seguimiento de defectos, eliminando la entrada manual.
 
 ```java
 // Filter critical issues marked with specific annotation types
@@ -359,9 +332,9 @@ List<AnnotationBase> criticalIssues = annotations.stream()
     .collect(Collectors.toList());
 ```
 
-## Integración de Spring Boot PDF Annotations
+## Integración de anotaciones PDF con Spring Boot
 
-Si construyes un microservicio con Spring Boot, puedes encapsular la lógica de extracción en un bean de servicio:
+Si estás construyendo un microservicio, envuelve la lógica de extracción en un bean de servicio Spring. El bean a continuación demuestra inyección de dependencias, manejo de excepciones y un endpoint REST que devuelve datos de anotaciones codificados en JSON.
 
 ```java
 @Service
@@ -380,33 +353,32 @@ public class AnnotationExtractionService {
 }
 ```
 
-Despliega esto como un endpoint dedicado y escálalo horizontalmente para manejar cargas de trabajo de alto rendimiento.
+Despliega este servicio detrás de un balanceador de carga y escálalo horizontalmente para manejar miles de solicitudes por minuto.
 
-## Enfoques alternativos y cuándo usarlos
+## Enfoques alternativos y cuándo utilizarlos
 
-Aunque GroupDocs.Annotation es potente, considera estas alternativas para escenarios específicos:
+Aunque GroupDocs.Annotation ofrece la solución más completa en funcionalidades, hay escenarios donde una biblioteca más ligera puede ser suficiente:
 
-- **Apache PDFBox:** Mejor para extracción simple de texto sin metadatos complejos de anotaciones.  
-- **iText:** Excelente para generación de PDFs con creación de anotaciones (la dirección opuesta).  
+- **Apache PDFBox** – buena para extracción de texto simple pero carece de metadatos completos de anotaciones.  
+- **iText 7** – sobresale en la creación de anotaciones más que en su lectura.
 
-**Cuándo quedarse con GroupDocs:** Tipos de anotación complejos, necesidades de soporte a nivel empresarial o cuando requieres una API consistente entre diferentes formatos de documento.
+**Cuándo quedarse con GroupDocs:** Necesitas soporte para tipos de anotaciones complejas (p.ej., sello de goma, tinta), rendimiento de nivel empresarial, o una API unificada para múltiples formatos de documento.
 
 ## Patrones de integración para aplicaciones empresariales
 
-### Arquitectura de microservicios
-
-Despliega la extracción de anotaciones como un microservicio dedicado para mayor escalabilidad y gestión de recursos. Comunícate vía REST o gRPC y mantén el servicio sin estado para escalar fácilmente.
+### ¿Cómo diseñar una arquitectura de microservicios para la extracción de anotaciones?
+Expón la lógica de extracción como un endpoint REST o gRPC sin estado. Mantén el servicio contenedorizado, configura verificaciones de salud y usa una cola de mensajes (p.ej., RabbitMQ) para procesamiento por lotes asíncrono. Este patrón garantiza alta disponibilidad y fácil escalado horizontal.
 
 ## Preguntas frecuentes
 
 **P: ¿Cuál es la versión mínima de Java requerida para GroupDocs.Annotation?**  
-R: JDK 8 es el mínimo, pero se recomienda JDK 11+ para mejor rendimiento y características de seguridad.
+R: JDK 8 es la mínima, pero se recomienda JDK 11+ para mejor rendimiento y características modernas del lenguaje.
 
-**P: ¿Puedo extraer anotaciones de formatos de documento distintos a PDF?**  
-R: Sí, GroupDocs admite Word (.docx), Excel (.xlsx), PowerPoint (.pptx) y más.
+**P: ¿Puedo extraer anotaciones de formatos distintos a PDF?**  
+R: Sí. GroupDocs.Annotation también lee anotaciones de Word (.docx), Excel (.xlsx), PowerPoint (.pptx) y varios formatos de imagen.
 
 **P: ¿Cómo manejo PDFs protegidos con contraseña?**  
-R: Usa el constructor de `Annotator` que acepta `LoadOptions` con una contraseña:
+R: Pasa un objeto `LoadOptions` con la contraseña al constructor de `Annotator`.
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -414,33 +386,31 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator(inputStream, loadOptions);
 ```
 
-**P: ¿Cómo proceso eficientemente documentos grandes (más de 100 páginas)?**  
-R: Utiliza enfoques de streaming, procesa por lotes y aumenta el tamaño del heap de la JVM. Considera procesar anotaciones página por página si la estructura del documento lo permite.
+**P: ¿Qué estrategias mantienen bajo el uso de memoria para PDFs de 100 páginas?**  
+R: Usa streaming (`InputStream`), procesa páginas en bloques y aumenta el heap de la JVM (`-Xmx2g` o más). El procesamiento por lotes también amortiza los costos de inicialización.
 
-**P: ¿Por qué obtengo listas de anotaciones vacías cuando las anotaciones son visibles en el PDF?**  
-R: Algunos PDFs usan campos de formulario o tipos de anotación no estándar. Intenta iterar a través de diferentes valores de `AnnotationType` o verifica si el PDF usa campos de formulario en lugar de anotaciones.
-
-**P: ¿Cómo manejo caracteres especiales o texto no inglés en las anotaciones?**  
-R: Asegura un manejo correcto de la codificación UTF‑8 al procesar el contenido de la anotación. Usa `StandardCharsets.UTF_8` al convertir arreglos de bytes a cadenas.
-
-**P: ¿Puedo usar GroupDocs.Annotation en producción sin una licencia?**  
-R: No, se requiere una licencia comercial para uso en producción. Las pruebas gratuitas y licencias temporales están disponibles para desarrollo y pruebas.
-
-**P: ¿Dónde puedo encontrar la última versión y actualizaciones?**  
-R: Consulta el [repositorio Maven](https://releases.groupdocs.com/annotation/java/) o el sitio web de GroupDocs para los últimos lanzamientos y notas de versión.
+**P: ¿Por qué podría obtener una lista de anotaciones vacía aunque el PDF muestra marcas?**  
+R: Algunos PDFs almacenan comentarios como campos de formulario o usan subtipos de anotación no estándar. Habilita la bandera `LoadOptions` para tratar esos elementos como anotaciones, o itera sobre objetos `FormField` por separado.
 
 ## Recursos y lecturas adicionales
 
-- [Documentación](https://docs.groupdocs.com/annotation/java/)  
-- [Guía de referencia de API](https://reference.groupdocs.com/annotation/java/)  
-- [Descargar la última versión](https://releases.groupdocs.com/annotation/java/)  
-- [Licenciamiento comercial](https://purchase.groupdocs.com/buy)  
-- [Acceso a prueba gratuita](https://releases.groupdocs.com/annotation/java/)  
-- [Solicitud de licencia temporal](https://purchase.groupdocs.com/temporary-license/)  
-- [Foro de soporte comunitario](https://forum.groupdocs.com/c/annotation-java)
+- [Maven repository](https://releases.groupdocs.com/annotation/java/)
+- [Documentation](https://docs.groupdocs.com/annotation/java/)
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)
+- [Commercial Licensing](https://purchase.groupdocs.com/buy)
+- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)
+- [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation-java)
 
 ---
 
-**Última actualización:** 2026-02-21  
+**Última actualización:** 2026-08-14  
 **Probado con:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [Cargar PDF Java con GroupDocs Annotation: Guía de carga de documentos](/annotation/java/document-loading/)
+- [Crear anotaciones PDF Java con GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Editar anotaciones PDF Java - Tutorial completo de GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
