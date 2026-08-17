@@ -43,7 +43,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-            hugo-version: 'latest'
+            hugo-version: '0.164.0'
             extended: true
       - name: Install Theme Dependencies
         run: npm install
