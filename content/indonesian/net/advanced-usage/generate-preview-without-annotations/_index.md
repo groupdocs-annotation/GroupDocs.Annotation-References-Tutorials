@@ -1,45 +1,83 @@
 ---
-"description": "Tingkatkan kolaborasi dan anotasi dokumen dalam aplikasi .NET menggunakan GroupDocs.Annotation untuk .NET. Buat anotasi, tandai, dan tinjau dokumen dengan mudah menggunakan pustaka canggih ini."
-"linktitle": "Hasilkan Pratinjau tanpa Anotasi"
-"second_title": "API .NET GroupDocs.Annotation"
-"title": "Hasilkan Pratinjau tanpa Anotasi"
-"url": "/id/net/advanced-usage/generate-preview-without-annotations/"
+categories:
+- Document Processing
+date: '2026-04-01'
+description: Pelajari cara membuat thumbnail PDF dan menghasilkan pratinjau PDF bersih
+  tanpa anotasi di .NET. Panduan langkah demi langkah dengan kode untuk pembuatan
+  thumbnail PDF menggunakan GroupDocs.Annotation.
+keywords:
+- create pdf thumbnails
+- generate pdf preview
+- remove annotations preview
+- render pdf without markup
+- pdf thumbnail generation
+lastmod: '2025-01-02'
+linktitle: Buat Pratinjau tanpa Anotasi
+second_title: GroupDocs.Annotation .NET API
+tags:
+- pdf-preview
+- document-collaboration
+- annotations
+- net-development
+title: Buat Thumbnail PDF di .NET – Pratinjau Bersih Tanpa Anotasi
 type: docs
-"weight": 13
+url: /id/net/advanced-usage/generate-preview-without-annotations/
+weight: 13
 ---
 
-# Hasilkan Pratinjau tanpa Anotasi
+# Buat Thumbnail PDF di .NET – Pratinjau Bersih Tanpa Anotasi
 
-## Perkenalan
-Di era digital saat ini, kolaborasi yang efisien pada dokumen merupakan kunci produktivitas dan keberhasilan. Baik Anda mengerjakan proyek dengan anggota tim yang tersebar di seluruh dunia atau berkolaborasi dengan klien pada kontrak penting, kemampuan untuk membuat anotasi dan meninjau dokumen dengan lancar sangatlah penting. Dengan GroupDocs.Annotation untuk .NET, Anda dapat membawa kolaborasi dokumen Anda ke tingkat berikutnya, yang memungkinkan pembuatan anotasi, markup, dan peninjauan yang mudah langsung dalam aplikasi .NET Anda.
+Membuat pratinjau dokumen yang bersih adalah kebutuhan umum ketika Anda **create pdf thumbnails** untuk galeri, alur kerja persetujuan, atau berbagi publik. Dalam tutorial ini Anda akan belajar cara **create pdf thumbnails** yang menghilangkan semua anotasi, memberikan pengguna Anda tampilan bersih dari konten PDF asli.
+
+## Jawaban Cepat
+- **Apa yang dilakukan “RenderAnnotations = false”?** Ini memberi tahu GroupDocs.Annotation untuk melewatkan semua markup saat merender pratinjau.  
+- **Format gambar mana yang direkomendasikan untuk thumbnail berkualitas tinggi?** PNG menyediakan kualitas lossless; JPEG lebih kecil tetapi lossy.  
+- **Apakah saya dapat memilih halaman tertentu untuk set thumbnail?** Ya – atur `PreviewOptions.PageNumbers` ke halaman yang Anda butuhkan.  
+- **Apakah saya memerlukan lisensi untuk penggunaan produksi?** Lisensi direkomendasikan untuk fitur tak terbatas dan dukungan.  
+- **Apakah pendekatan ini kompatibel dengan .NET Core?** Tentu – GroupDocs.Annotation bekerja dengan .NET Framework dan .NET Core.
+
+## Apa itu “create pdf thumbnails”?
+Membuat thumbnail PDF berarti merender setiap halaman PDF menjadi gambar (PNG/JPEG) yang dapat ditampilkan di UI. Thumbnail berguna untuk pratinjau cepat, penjelajah dokumen, dan menghasilkan grid pratinjau tanpa harus memuat PDF secara penuh.
+
+## Mengapa menghasilkan pratinjau tanpa anotasi?
+Menghapus anotasi dari pratinjau menjaga fokus pada konten dokumen asli. Ini penting untuk:
+
+- **Document approval workflows** – bandingkan versi bersih dengan versi beranotasi.  
+- **Thumbnail galleries** – hindari kekacauan visual dari komentar atau sorotan.  
+- **Public sharing** – lindungi markup sensitif sambil tetap menampilkan dokumen.  
+- **Print preparation** – hasilkan PDF bersih untuk pencetakan sambil memisahkan catatan digital.
+
 ## Prasyarat
-Sebelum menyelami dunia anotasi dokumen dengan GroupDocs.Annotation untuk .NET, ada beberapa prasyarat yang perlu Anda miliki:
-### 1. Instal GroupDocs.Annotation untuk .NET
-Pertama dan terutama, Anda perlu mengunduh dan menginstal GroupDocs.Annotation untuk .NET. Anda dapat menemukan tautan unduhannya [Di Sini](https://releases.groupdocs.com/annotation/net/)Ikuti petunjuk instalasi yang diberikan untuk menyiapkan pustaka di lingkungan .NET Anda.
-### 2. Dapatkan Lisensi (Opsional)
-Meskipun GroupDocs.Annotation untuk .NET menawarkan uji coba gratis, Anda mungkin ingin mempertimbangkan untuk mendapatkan lisensi untuk akses penuh ke fitur-fiturnya. Anda dapat membeli lisensi [Di Sini](https://purchase.groupdocs.com/buy) atau meminta lisensi sementara [Di Sini](https://purchase.groupdocs.com/temporary-license/) untuk tujuan pengujian.
-### 3. Keakraban dengan Pengembangan C# dan .NET
-Untuk memanfaatkan GroupDocs.Annotation untuk .NET secara maksimal, ada baiknya Anda memiliki pemahaman dasar tentang pengembangan C# dan .NET. Ini akan memungkinkan Anda untuk mengintegrasikan pustaka tersebut dengan lancar ke dalam aplikasi dan alur kerja yang sudah ada.
-### 4. Instal Penampil PDF
-Karena GroupDocs.Annotation for .NET berfungsi dengan dokumen PDF, Anda perlu menginstal penampil PDF di sistem Anda untuk melihat pratinjau dokumen yang diberi anotasi. Adobe Acrobat Reader atau penampil PDF lainnya sudah cukup.
+- **GroupDocs.Annotation for .NET** – instal dari [halaman rilis](https://releases.groupdocs.com/annotation/net/) resmi.  
+- **License (optional but recommended)** – beli lisensi penuh melalui [halaman pembelian](https://purchase.groupdocs.com/buy) atau minta [lisensi sementara](https://purchase.groupdocs.com/temporary-license/).  
+- Pengetahuan dasar tentang C#/.NET.  
+- Penampil PDF (misalnya Adobe Acrobat Reader) untuk memverifikasi thumbnail yang dihasilkan.
 
-## Mengimpor Ruang Nama
-Sebelum Anda dapat mulai membuat anotasi pada dokumen, Anda perlu mengimpor namespace yang diperlukan ke dalam proyek .NET Anda. Ini memungkinkan Anda untuk mengakses kelas dan metode yang disediakan oleh GroupDocs.Annotation untuk .NET.
+## Impor Namespace
+Tambahkan pernyataan `using` yang diperlukan agar Anda dapat bekerja dengan API anotasi:
 
 ```csharp
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 
-Setelah semuanya siap, mari buat pratinjau dokumen tanpa anotasi apa pun. Ikuti langkah-langkah berikut untuk melakukannya:
-## Langkah 1: Inisialisasi Anotator
-Pertama, buatlah sebuah instance dari `Annotator` kelas, yang meneruskan jalur ke dokumen yang ingin Anda beri anotasi.
+## Cara Membuat Thumbnail PDF Tanpa Anotasi
+
+Berikut adalah panduan langkah demi langkah yang menunjukkan secara tepat cara **generate pdf preview** gambar sambil **removing annotations preview** dari output.
+
+### Langkah 1: Inisialisasi Annotator
+Buat instance `Annotator` yang menunjuk ke PDF sumber. Blok `using` memastikan sumber daya dilepaskan secara otomatis.
+
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
 ```
-## Langkah 2: Konfigurasikan Opsi Pratinjau
-Selanjutnya, konfigurasikan opsi pratinjau sesuai dengan kebutuhan Anda. Anda dapat menentukan nomor halaman yang ingin disertakan dalam pratinjau, format pratinjau (misalnya, PNG), dan apakah akan memberikan anotasi.
+
+> **Pro Tip:** Validasi jalur file dan terapkan pemeriksaan keamanan yang tepat saat menangani PDF yang diunggah pengguna.
+
+### Langkah 2: Konfigurasi Opsi Pratinjau
+Siapkan `PreviewOptions` untuk menentukan format output, rentang halaman, dan yang paling penting, menonaktifkan rendering anotasi.
+
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -50,24 +88,76 @@ Selanjutnya, konfigurasikan opsi pratinjau sesuai dengan kebutuhan Anda. Anda da
     previewOptions.PageNumbers = new int[] {1, 2, 3, 4, 5, 6};
     previewOptions.RenderAnnotations = false;
 ```
-## Langkah 3: Buat Pratinjau
-Terakhir, buat pratinjau menggunakan `GeneratePreview` metode dari `Document` kelas, meneruskan opsi pratinjau yang dikonfigurasi.
+
+**Poin penting**
+
+- **File naming** – lambda membuat file PNG unik untuk setiap halaman.  
+- **Format choice** – PNG untuk thumbnail berkualitas tinggi; beralih ke JPEG untuk file yang lebih kecil.  
+- **Page selection** – tentukan secara tepat halaman mana yang Anda inginkan untuk **pdf thumbnail generation**.  
+- **`RenderAnnotations = false`** – ini menonaktifkan semua markup dan merupakan inti dari **disable annotations preview**.
+
+### Langkah 3: Hasilkan Pratinjau Bersih
+Panggil metode `GeneratePreview` untuk merender gambar berdasarkan opsi yang Anda tetapkan.
+
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-Dengan mengikuti langkah-langkah sederhana ini, Anda dapat membuat pratinjau dokumen tanpa anotasi menggunakan GroupDocs.Annotation untuk .NET.
+
+File thumbnail bersih Anda (`result1.png`, `result2.png`, …) kini siap digunakan.
+
+## Kasus Penggunaan Umum dalam Aplikasi Nyata
+- **Document Management Systems** – thumbnail bersih untuk penjelajah file sambil mempertahankan versi beranotasi terpisah.  
+- **Legal Review Platforms** – tunjukkan kontrak asli kepada klien tanpa komentar internal.  
+- **E‑learning Portals** – tampilkan tugas asli sementara guru menyimpan catatan penilaian secara pribadi.  
+- **Publishing Workflows** – buat gambar pratinjau untuk materi pemasaran tanpa markup editorial.
+
+## Pertimbangan Kinerja
+- **Batch processing** – tangani banyak PDF dalam satu pekerjaan latar belakang untuk mengurangi beban.  
+- **Caching** – simpan thumbnail yang dihasilkan setelah unggahan pertama untuk menghindari perenderan ulang pada setiap permintaan.  
+- **Page limits** – untuk PDF yang sangat besar, batasi pratinjau ke beberapa halaman pertama agar waktu pemrosesan tetap rendah.  
+- **File format trade‑offs** – PNG menghasilkan thumbnail tajam; JPEG mengurangi penyimpanan ketika bandwidth menjadi masalah.
+
+## Memecahkan Masalah Umum
+- **Thumbnails not created** – verifikasi izin menulis untuk folder output dan pastikan PDF sumber tidak rusak.  
+- **Low image quality** – beralih ke PNG atau sesuaikan pengaturan DPI jika versi GroupDocs.Annotation Anda mendukungnya.  
+- **High memory usage** – proses halaman dalam batch lebih kecil atau streaming PDF alih-alih memuat seluruhnya ke memori.  
+- **Path problems** – selalu bangun jalur file dengan `Path.Combine()` untuk keamanan lintas‑platform.
+
+## Praktik Terbaik untuk Produksi
+- Bungkus pembuatan pratinjau dalam blok `try‑catch` untuk menangani kesalahan I/O secara elegan.  
+- Gunakan pernyataan `using` (seperti yang ditunjukkan) untuk menjamin pembuangan penangan file yang tepat.  
+- Validasi PDF yang masuk (ukuran, format, perlindungan kata sandi) sebelum diproses.  
+- Catat setiap peristiwa pembuatan pratinjau untuk pemantauan dan debugging.
+
+## Opsi Konfigurasi Lanjutan
+- **Custom DPI** – beberapa versi memungkinkan Anda mengatur resolusi lebih tinggi untuk thumbnail yang lebih tajam.  
+- **Watermarking** – tambahkan watermark “Preview Only” untuk menunjukkan gambar bukan dokumen final.  
+- **Smart page selection** – secara otomatis pilih halaman paling relevan (mis., halaman pertama, daftar isi) berdasarkan metadata dokumen.
 
 ## Kesimpulan
-Sebagai kesimpulan, GroupDocs.Annotation untuk .NET menyediakan solusi yang hebat untuk kolaborasi dan anotasi dokumen dalam aplikasi .NET. Dengan mengikuti langkah-langkah yang diuraikan dalam tutorial ini, Anda dapat mengintegrasikan kemampuan anotasi dokumen ke dalam proyek Anda dengan lancar, sehingga meningkatkan kolaborasi dan produktivitas.
+Anda kini memiliki resep lengkap yang siap produksi untuk **create pdf thumbnails** dan **generate pdf preview** gambar tanpa markup apa pun. Dengan mengatur `RenderAnnotations = false`, Anda **remove annotations preview** dan menyajikan thumbnail bersih serta profesional yang terintegrasi mulus ke dalam aplikasi berpusat dokumen apa pun.
+
 ## Pertanyaan yang Sering Diajukan
-### T: Dapatkah saya menggunakan GroupDocs.Annotation untuk .NET dengan format dokumen lain selain PDF?
-Ya, GroupDocs.Annotation untuk .NET mendukung berbagai format dokumen, termasuk DOCX, XLSX, PPTX, dan banyak lagi.
-### T: Apakah GroupDocs.Annotation untuk .NET kompatibel dengan .NET Core?
-Ya, GroupDocs.Annotation untuk .NET kompatibel dengan lingkungan .NET Framework dan .NET Core.
-### T: Apakah GroupDocs.Annotation untuk .NET menawarkan alat anotasi yang dapat disesuaikan?
-Ya, GroupDocs.Annotation untuk .NET menyediakan berbagai alat anotasi yang dapat disesuaikan untuk memenuhi kebutuhan spesifik Anda.
-### T: Dapatkah saya mengintegrasikan GroupDocs.Annotation untuk .NET ke dalam aplikasi web saya?
-Ya, GroupDocs.Annotation untuk .NET dapat diintegrasikan ke dalam aplikasi desktop dan web, menyediakan kemampuan kolaborasi dokumen yang lancar.
-### T: Apakah ada forum komunitas tempat saya bisa mendapatkan dukungan dan bantuan dengan GroupDocs.Annotation untuk .NET?
-Ya, Anda dapat menemukan dukungan dan bantuan di forum GroupDocs.Annotation [Di Sini](https://forum.groupdocs.com/c/annotation/10).
+
+**Q: Dapatkah saya menggunakan GroupDocs.Annotation untuk .NET dengan format selain PDF?**  
+A: Ya. Perpustakaan mendukung DOCX, XLSX, PPTX, dan banyak lagi. Alur kerja pratinjau yang sama berlaku terlepas dari format sumber.
+
+**Q: Apakah GroupDocs.Annotation untuk .NET kompatibel dengan .NET Core?**  
+A: Tentu. Ia bekerja dengan .NET Framework, .NET Core, dan .NET 5/6+, sehingga Anda dapat menargetkan aplikasi lintas‑platform modern.
+
+**Q: Apakah perpustakaan menyediakan alat anotasi yang dapat disesuaikan?**  
+A: Ya, tetapi ketika Anda mengatur `RenderAnnotations = false` alat tersebut diabaikan untuk pembuatan pratinjau.
+
+**Q: Dapatkah saya mengintegrasikan ini ke dalam aplikasi web?**  
+A: Ya. Pastikan server web memiliki izin I/O file yang tepat dan pertimbangkan streaming output langsung ke klien untuk menghindari file sementara.
+
+**Q: Format gambar mana yang harus saya pilih untuk galeri thumbnail?**  
+A: PNG menawarkan kualitas terbaik, sementara JPEG mengurangi ukuran file. Pilih berdasarkan keakuratan visual yang Anda butuhkan versus keterbatasan bandwidth.
+
+**Q: Di mana saya dapat mendapatkan dukungan komunitas?**  
+A: Anda dapat menemukan bantuan di forum GroupDocs.Annotation [di sini](https://forum.groupdocs.com/c/annotation/10). Komunitasnya aktif dan responsif.
+
+**Terakhir Diperbarui:** 2026-04-01  
+**Diuji Dengan:** GroupDocs.Annotation for .NET 23.12  
+**Penulis:** GroupDocs
