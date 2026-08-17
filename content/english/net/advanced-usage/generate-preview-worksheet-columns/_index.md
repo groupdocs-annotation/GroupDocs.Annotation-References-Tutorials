@@ -1,5 +1,5 @@
 ---
-title: How to Preview Excel: Generate Worksheet Columns in .NET
+title: How to Preview Excel - Generate Worksheet Columns in .NET
 linktitle: Generate Preview Worksheet Columns
 second_title: GroupDocs.Annotation .NET API
 description: Learn how to preview Excel by generating worksheet column previews (export Excel columns PNG) using GroupDocs.Annotation for .NET. Step‑by‑step tutorial with code examples and troubleshooting tips.
