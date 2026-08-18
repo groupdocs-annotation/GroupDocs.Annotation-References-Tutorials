@@ -217,15 +217,6 @@ A: Renaming isn’t supported directly; you would need to copy annotations to a 
 
 **Q: What happens if I delete a document version file?**  
 A: Deleting the underlying document removes all associated annotations, including those tied to version keys. Ensure you back up needed versions before removal.
-
-## Target Keywords
-
-**Primary Keyword (HIGHEST PRIORITY):**  
-retrieve annotations by version
-
-**Secondary Keywords (SUPPORTING):**  
-(Not specified)
-
 ---
 
 **Last Updated:** 2026-04-06  
