@@ -289,8 +289,3 @@ Placówki medyczne przechowują rekordy pacjentów w środowisku Azure zgodnym z
 **Ostatnia aktualizacja:** 2026-03-27  
 **Testowano z:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

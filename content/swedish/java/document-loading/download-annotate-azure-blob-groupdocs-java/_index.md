@@ -287,8 +287,3 @@ Medicinska verksamheter håller patientjournaler i en HIPAA‑kompatibel Azure�
 **Senast uppdaterad:** 2026-03-27  
 **Testad med:** GroupDocs.Annotation 25.2  
 **Författare:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

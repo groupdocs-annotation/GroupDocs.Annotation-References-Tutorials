@@ -284,8 +284,3 @@ Les cabinets médicaux conservent les dossiers patients dans un environnement Az
 **Dernière mise à jour :** 2026-03-27  
 **Testé avec :** GroupDocs.Annotation 25.2  
 **Auteur :** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

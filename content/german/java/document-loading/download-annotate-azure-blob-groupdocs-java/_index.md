@@ -287,8 +287,3 @@ Medizinische Praxen bewahren Patientenakten in einer HIPAA‑konformen Azure‑U
 **Zuletzt aktualisiert:** 2026-03-27  
 **Getestet mit:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

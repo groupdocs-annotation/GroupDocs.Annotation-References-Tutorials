@@ -285,8 +285,3 @@ Le strutture mediche conservano i record dei pazienti in un ambiente Azure confo
 **Ultimo aggiornamento:** 2026-03-27  
 **Testato con:** GroupDocs.Annotation 25.2  
 **Autore:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
