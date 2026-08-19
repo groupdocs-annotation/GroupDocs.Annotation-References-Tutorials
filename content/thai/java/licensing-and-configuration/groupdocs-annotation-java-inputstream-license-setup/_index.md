@@ -1,101 +1,137 @@
 ---
 categories:
 - Java Development
-date: '2026-02-23'
-description: เรียนรู้วิธีตั้งค่า InputStream ใบอนุญาต GroupDocs สำหรับ Java Annotation
-  คู่มือทีละขั้นตอนพร้อมการแก้ไขปัญหา แนวทางปฏิบัติที่ดีที่สุด และตัวอย่างจากโลกจริงเพื่อการบูรณาการที่ราบรื่น
-keywords: GroupDocs Annotation Java InputStream license, Java license configuration
-  GroupDocs, GroupDocs Java licensing tutorial, InputStream license setup Java, how
-  to set GroupDocs license using InputStream
-lastmod: '2026-02-23'
-linktitle: Java InputStream License Setup
+date: '2026-08-19'
+description: เรียนรู้วิธีตั้งค่าไลเซนส์ InputStream ของ GroupDocs สำหรับ Java Annotation.
+  คู่มือแบบขั้นตอนต่อขั้นตอนพร้อมการแก้ไขปัญหา, แนวปฏิบัติที่ดีที่สุด, และตัวอย่างจากโลกจริงเพื่อการบูรณาการที่ราบรื่น.
+keywords:
+- set groupdocs license
+- groupdocs annotation java inputstream
+- java licensing with inputstream
+- groupdocs license configuration
+- java annotation licensing guide
+lastmod: '2026-08-19'
+linktitle: การตั้งค่าไลเซนส์ Java InputStream
+og_description: ตั้งค่าไลเซนส์ groupdocs ด้วย InputStream ใน Java Annotation. ทำตามบทเรียนขั้นตอนต่อขั้นตอน,
+  ดูแนวปฏิบัติที่ดีที่สุด, และหลีกเลี่ยงข้อผิดพลาดทั่วไปของการให้ลิขสิทธิ์.
+og_image_alt: Developer guide showing Java code to load GroupDocs license via InputStream
+og_title: ตั้งค่าไลเซนส์ InputStream ของ groupdocs ใน Java Annotation – คู่มือฉบับสมบูรณ์
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-19'
+  description: Learn how to set GroupDocs license InputStream for Java Annotation.
+    Step-by-step guide with troubleshooting, best practices, and real-world examples
+    for seamless integration.
+  headline: How to set groupdocs license InputStream in Java Annotation
+  type: TechArticle
+- description: Learn how to set GroupDocs license InputStream for Java Annotation.
+    Step-by-step guide with troubleshooting, best practices, and real-world examples
+    for seamless integration.
+  name: How to set groupdocs license InputStream in Java Annotation
+  steps:
+  - name: robust license path definition
+    text: Define the path to the license file in a way that can be overridden by an
+      environment variable. This makes the code portable across dev, test, and production
+      environments. **Pro tip:** Store the path in a configuration property (e.g.,
+      `groupdocs.license.path`) instead of hard‑coding it. This elimina
+  - name: enhanced file existence check
+    text: Before opening the file, verify that it exists and is readable. This prevents
+      cryptic `FileNotFoundException` later in the startup sequence. If the file is
+      missing, you can fall back to a classpath resource or abort with a clear log
+      message.
+  - name: proper inputstream management
+    text: Use Java’s try‑with‑resources statement to guarantee that the `InputStream`
+      is closed, even if an exception occurs. Leaking streams in a long‑running service
+      can eventually exhaust file descriptors.
+  - name: license application with validation
+    text: '`setLicense(InputStream)` applies the provided license stream to all GroupDocs
+      components. Immediately after setting, call `License.isValidLicense()` to ensure
+      the license was parsed correctly. If validation fails, log the error and optionally
+      switch to a fallback (e.g., a trial license) to keep the'
+  - name: comprehensive license verification
+    text: LicenseInfo holds details about the loaded license such as expiration date,
+      feature flags, and allowed domains. This extra check is useful in multi‑tenant
+      SaaS scenarios.
+  type: HowTo
+- questions:
+  - answer: Yes, but review your license agreement—some plans are per‑application
+      or per‑server. InputStream loading makes sharing straightforward.
+    question: Can I use the same license file for multiple applications?
+  - answer: GroupDocs.Annotation falls back to trial mode, adding watermarks and limiting
+      premium features. Continuously monitor `License.isValidLicense()` to trigger
+      renewal workflows.
+    question: What happens if my license expires during runtime?
+  - answer: At the moment a full JVM restart is required for a new license to take
+      effect. Use blue‑green deployments or rolling restarts to minimise downtime.
+    question: How do I handle license updates without restarting the app?
+  - answer: Log the error message and stack trace, but never log the raw license content
+      or private keys. Keep logs actionable yet secure.
+    question: Is it safe to log license validation errors?
+  - answer: Absolutely. Retrieve the bytes, wrap them in a `ByteArrayInputStream`,
+      and pass it to `License.setLicense()`. This works with S3, Azure Blob, Google
+      Cloud Storage, and even private HTTP endpoints.
+    question: Can I load the license from a cloud storage bucket?
+  type: FAQPage
 tags:
-- GroupDocs
-- Java
-- Licensing
-- InputStream
-- Configuration
-title: วิธีตั้งค่า InputStream ใบอนุญาต GroupDocs ใน Annotation ของ Java
+- groupdocs
+- java
+- licensing
+- inputstream
+- configuration
+title: วิธีตั้งค่าไลเซนส์ InputStream ของ groupdocs ใน Java Annotation
 type: docs
 url: /th/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/
 weight: 1
 ---
 
- "In this tutorial you'll learn **how to set GroupDocs license InputStream** for Java Annotation, whether you're building microservices, deploying to the cloud, or just want a more robust licensing setup."
-
-Translate.
-
-Then "What you'll master by the end:" etc.
-
-Proceed.
-
-Will translate bullet points.
-
-Make sure to keep bold formatting.
-
-Proceed.
-
-Will also translate "Quick Answers" heading.
-
-Proceed.
-
-Will keep code block placeholders unchanged.
-
-Let's craft final output.
-
-# ตั้งค่าไลเซนส์ GroupDocs ด้วย InputStream
+# ตั้งค่าใบอนุญาต groupdocs
 
 ## บทนำ
 
-การตั้งค่าไลเซนส์สำหรับ GroupDocs.Annotation ใน Java อาจรู้สึกท่วมท้น โดยเฉพาะเมื่อคุณทำงานกับสภาพแวดล้อมที่เปลี่ยนแปลงหรือแอปพลิเคชันที่อยู่ในคอนเทนเนอร์ ข่าวดีคือ การใช้ **InputStream** สำหรับการกำหนดค่าไลเซนส์เป็นวิธีที่ยืดหยุ่นและเชื่อถือได้ที่สุดหลายวิธี
+ในคู่มือนี้คุณจะได้เรียนรู้ **วิธีตั้งค่าใบอนุญาต groupdocs** โดยใช้ `InputStream` สำหรับ Java Annotation การตั้งค่าใบอนุญาตสำหรับ GroupDocs.Annotation ใน Java อาจรู้สึกซับซ้อน โดยเฉพาะเมื่อคุณทำงานในสภาพแวดล้อมที่เปลี่ยนแปลงหรือแอปพลิเคชันที่ทำงานในคอนเทนเนอร์ ข่าวดีคือ? การใช้ **InputStream** สำหรับการกำหนดค่าใบอนุญาตเป็นหนึ่งในวิธีที่ยืดหยุ่นและเชื่อถือได้ที่สุดที่มีอยู่
 
-ในบทแนะนำนี้คุณจะได้เรียนรู้ **วิธีตั้งค่าไลเซนส์ GroupDocs ด้วย InputStream** สำหรับ Java Annotation ไม่ว่าคุณจะสร้างไมโครเซอร์วิส, ปล่อยไปยังคลาวด์, หรือเพียงต้องการการตั้งค่าไลเซนส์ที่แข็งแรงยิ่งขึ้น
+คุณจะได้เดินผ่านการนำไปใช้แบบครบถ้วนพร้อมใช้งานในสภาพการผลิต, ดูวิธีจัดการข้อผิดพลาดอย่างราบรื่น, และค้นพบเคล็ดลับสำหรับการปรับใช้บนคลาวด์, Docker, และการติดตั้งในเครื่อง (on‑prem) เมื่อเสร็จสิ้นคุณจะมั่นใจว่าแอปพลิเคชันของคุณตรวจสอบความถูกต้องของใบอนุญาตได้อย่างถูกต้องและสามารถกู้คืนจากปัญหาทั่วไปได้โดยไม่ต้องรีสตาร์ทที่เจ็บปวด
 
-**สิ่งที่คุณจะเชี่ยวชาญเมื่อจบบทเรียน:**
-- การตั้งค่าไลเซนส์แบบ InputStream อย่างสมบูรณ์ (พร้อมการจัดการข้อผิดพลาดจริง)
-- การแก้ไขปัญหาไลเซนส์ที่พบบ่อย
-- แนวปฏิบัติที่ดีที่สุดสำหรับสถานการณ์การปรับใช้ต่าง ๆ
-- เคล็ดลับการปรับประสิทธิภาพที่มีผลจริง
+**สิ่งที่คุณจะเชี่ยวชาญเมื่อจบ:**
+- การตั้งค่าใบอนุญาต InputStream อย่างสมบูรณ์ (พร้อมการจัดการข้อผิดพลาดจริง)
+- การแก้ไขปัญหาเรื่องใบอนุญาตที่พบบ่อย
+- แนวทางปฏิบัติที่ดีที่สุดสำหรับสถานการณ์การปรับใช้ที่ต่างกัน
+- เคล็ดลับการเพิ่มประสิทธิภาพที่สำคัญจริงๆ
 
-## คำตอบสั้น ๆ
-- **วิธีหลักในการโหลดไลเซนส์ GroupDocs คืออะไร?** ใช้ `InputStream` กับ `License.setLicense(stream)`.
-- **ฉันสามารถเก็บไลเซนส์ในคลาวด์บัคเก็ตได้หรือไม่?** ได้, อ่านไฟล์เข้า `InputStream` จากแหล่งเก็บใดก็ได้
-- **ต้องรีสตาร์ทหลังจากเปลี่ยนไลเซนส์หรือไม่?** ปัจจุบันต้องรีสตาร์ทเพื่อให้ไลเซนส์ใหม่มีผล
-- **InputStream รองรับคอนเทนเนอร์หรือไม่?** แน่นอน – ไม่ต้องพึ่งพาเส้นทางไฟล์
-- **ตรวจสอบว่าไลเซนส์ทำงานอยู่หรือไม่อย่างไร?** เรียก `License.isValidLicense()` หลังจากตั้งค่า
+## คำตอบอย่างรวดเร็ว
 
-## ทำไมต้องเลือก InputStream สำหรับการไลเซนส์ GroupDocs Java?
+`License.isValidLicense()` เป็นเมธอดที่คืนค่า true เมื่อใบอนุญาตที่โหลดมาถูกต้อง
 
-ก่อนที่เราจะลงลึกการทำงาน ควรเข้าใจว่าทำไม **set groupdocs license inputstream** จึงมักเป็นตัวเลือกที่ดีที่สุดสำหรับแอปพลิเคชัน Java สมัยใหม่:
+- **วิธีหลักในการโหลดใบอนุญาต GroupDocs คืออะไร?** ใช้ `InputStream` กับ `License.setLicense(stream)`.
+- **ฉันสามารถเก็บใบอนุญาตในคลาวด์บัคเก็ตได้หรือไม่?** ได้, อ่านเป็น `InputStream` จากแหล่งจัดเก็บใดก็ได้.
+- **ต้องรีสตาร์ทหลังจากเปลี่ยนใบอนุญาตหรือไม่?** ปัจจุบันต้องรีสตาร์ทเพื่อให้ใบอนุญาตใหม่มีผล.
+- **การใช้ InputStream สำหรับใบอนุญาตเป็นมิตรกับคอนเทนเนอร์หรือไม่?** แน่นอน – ไม่มีการพึ่งพาเส้นทางไฟล์.
+- **ฉันจะตรวจสอบว่าใบอนุญาตใช้งานอยู่หรือไม่?** เรียก `License.isValidLicense()` หลังจากตั้งค่า.
 
-**ความยืดหยุ่นในการปรับใช้:** แตกต่างจากการไลเซนส์แบบพาธไฟล์, InputStream ทำงานได้อย่างราบรื่นไม่ว่าลิขสิทธิ์จะถูกเก็บไว้ในเครื่อง, บนคลาวด์, หรือฝังอยู่ในไฟล์ JAR ของคุณ
+## ทำไมต้องเลือก InputStream สำหรับใบอนุญาต groupdocs?
 
-**รองรับคอนเทนเนอร์:** เหมาะกับ Docker ที่เส้นทางไฟล์อาจคาดเดาไม่ได้ หรือเมื่อคุณต้องการหลีกเลี่ยงการเมานท์โวลุ่มภายนอก
-
-**ประโยชน์ด้านความปลอดภัย:** สามารถโหลดไลเซนส์จากแหล่งที่เข้ารหัสหรือที่เก็บข้อมูลที่ปลอดภัยโดยไม่ต้องเปิดเผยเส้นทางไฟล์ในไฟล์กำหนดค่า
-
-**การโหลดแบบไดนามิก:** เหมาะกับแอปพลิเคชันที่ต้องสลับไลเซนส์ตามเงื่อนไขรันไทม์หรือการกำหนดค่าของลูกค้า
+การใช้ใบอนุญาตแบบ InputStream ช่วยให้คุณโหลดใบอนุญาตจากแหล่งใดก็ได้—ดิสก์ท้องถิ่น, ที่เก็บข้อมูลบนคลาวด์, หรือทรัพยากรฝังตัว—โดยไม่ต้องพึ่งพาเส้นทางไฟล์ที่กำหนดไว้ล่วงหน้า วิธีนี้ทำงานอย่างสอดคล้องกันในสภาพแวดล้อมการพัฒนา, คอนเทนเนอร์, และเซิร์ฟเวอร์เลส, ทำให้การจัดการความลับง่ายขึ้นและลดความเสี่ยงจากข้อผิดพลาดที่เกี่ยวกับเส้นทางไฟล์
 
 ## ข้อกำหนดเบื้องต้นและการตั้งค่าสภาพแวดล้อม
 
-ก่อนจะทำการตั้งค่าไลเซนส์ InputStream สำหรับ GroupDocs Annotation Java ให้ตรวจสอบว่าคุณมี:
+ก่อนดำเนินการตั้งค่าใบอนุญาต GroupDocs.Annotation Java InputStream, ตรวจสอบว่าคุณมี:
 
-### ความต้องการพื้นฐาน
-- **Java Development Kit:** JDK 8 หรือสูงกว่า (แนะนำ JDK 11+ เพื่อประสิทธิภาพที่ดีที่สุด)
-- **GroupDocs.Annotation for Java:** เวอร์ชัน 25.2 หรือใหม่กว่า
+### ข้อกำหนดที่จำเป็น
+- **Java Development Kit:** JDK 8 หรือสูงกว่า (แนะนำ JDK 11+ สำหรับประสิทธิภาพที่ดีที่สุด)
+- **GroupDocs.Annotation for Java:** เวอร์ชัน 25.2 หรือใหม่กว่า (ไลบรารีสนับสนุน **50+** ฟอร์แมตการนำเข้าและส่งออก)
 - **เครื่องมือสร้าง:** Maven หรือ Gradle (ตัวอย่างใช้ Maven)
-- **ไลเซนส์ที่ถูกต้อง:** ไลเซนส์ทดลอง, ชั่วคราว, หรือไลเซนส์เต็มจาก GroupDocs
+- **ใบอนุญาตที่ถูกต้อง:** ใบอนุญาตทดลอง, ชั่วคราว, หรือเต็มจาก GroupDocs
 
 ### สภาพแวดล้อมการพัฒนา
-- **IDE:** IntelliJ IDEA, Eclipse หรือ VS Code พร้อมส่วนขยาย Java
+- **IDE:** IntelliJ IDEA, Eclipse, หรือ VS Code พร้อมส่วนขยาย Java
 - **หน่วยความจำ:** อย่างน้อย 4 GB RAM สำหรับการพัฒนาที่ราบรื่น (8 GB+ สำหรับเอกสารขนาดใหญ่)
-- **พื้นที่จัดเก็บ:** มีที่ว่างเพียงพอสำหรับการประมวลผลเอกสารของคุณ
+- **พื้นที่จัดเก็บ:** พื้นที่ดิสก์เพียงพอสำหรับความต้องการประมวลผลเอกสารของคุณ
 
-## การตั้งค่า GroupDocs.Annotation สำหรับ Java
+## การตั้งค่า groupdocs.annotation สำหรับ Java
 
 ### การกำหนดค่า Maven
 
-เพิ่มส่วนนี้ลงใน `pom.xml` – โปรดใส่การกำหนดค่า repository ที่สำคัญสำหรับการเข้าถึงเวอร์ชันล่าสุด:
+เพิ่ม dependency ต่อไปนี้ในไฟล์ `pom.xml` ของคุณ รายการ repository จำเป็นเพื่อดึงแพคเกจ GroupDocs ล่าสุด:
 
 ```xml
 <repositories>
@@ -116,7 +152,7 @@ Let's craft final output.
 
 ### การกำหนดค่า Gradle (ทางเลือก)
 
-หากคุณใช้ Gradle นี่คือตัวอย่างการตั้งค่าเทียบเคียง:
+หากคุณต้องการใช้ Gradle, ใช้โค้ดสแนปที่เทียบเท่า:
 
 ```gradle
 repositories {
@@ -130,26 +166,38 @@ dependencies {
 }
 ```
 
-### การเตรียมไฟล์ไลเซนส์
+### การเตรียมไฟล์ใบอนุญาต
 
-ไฟล์ไลเซนส์ GroupDocs ของคุณ (โดยทั่วไปมีนามสกุล `.lic`) ควร:
-- **เข้าถึงได้:** วางไว้ในโฟลเดอร์ resources หรือที่ปลอดภัยอื่น ๆ
-- **ถูกต้อง:** ตรวจสอบวันหมดอายุและสิทธิ์ฟีเจอร์
-- **อ่านได้:** ให้แอปพลิเคชันของคุณมีสิทธิ์อ่านไฟล์
+ไฟล์ใบอนุญาต GroupDocs ของคุณ (โดยทั่วไปมีนามสกุล `.lic`) ควรเป็น:
+- **เข้าถึงได้:** วางไว้ใน `src/main/resources` หรือที่ปลอดภัยภายนอก.
+- **ถูกต้อง:** ตรวจสอบวันหมดอายุและสิทธิ์ฟีเจอร์ในพอร์ทัลใบอนุญาต.
+- **อ่านได้:** ตรวจสอบให้ผู้ใช้รันไทม์มีสิทธิ์อ่าน (`chmod 600` บน Linux).
 
-## วิธีตั้งค่าไลเซนส์ GroupDocs ด้วย InputStream
+## วิธีตั้งค่าใบอนุญาต groupdocs ด้วย InputStream
 
-นี่คือวิธีการครบวงจรสำหรับการตั้งค่าไลเซนส์ InputStream ของ GroupDocs Annotation Java การทำงานนี้รวมถึงการจัดการข้อผิดพลาดและการตรวจสอบที่คุณต้องใช้จริงในสภาพแวดล้อมการผลิต
+การโหลดใบอนุญาตจาก `InputStream` เป็นกระบวนการสี่ขั้นตอนที่รวมการตรวจสอบความถูกต้องและการจัดการข้อผิดพลาดอย่างราบรื่น.
 
-### ขั้นตอนที่ 1: การกำหนดเส้นทางไลเซนส์อย่างแข็งแรง
+### คำตอบโดยตรง
+
+License คือคลาสของ GroupDocs ที่เปิดใช้งานใบอนุญาตสำหรับไลบรารี.  
+FileInputStream คือคลาสของ Java ที่อ่านไบต์ดิบจากไฟล์.  
+InputStream คือคลาสเชิงนามธรรมของ Java ที่แทนสตรีมของไบต์สำหรับการอ่านข้อมูล.
+
+โหลดไฟล์ใบอนุญาตเข้าสู่ `FileInputStream` (หรือ `InputStream` ใดก็ได้), ส่งให้กับ `new License().setLicense(stream)`, จากนั้นเรียก `license.isValidLicense()` เพื่อยืนยันความสำเร็จ. ห่อการดำเนินการทั้งหมดในบล็อก try‑with‑resources เพื่อให้สตรีมปิดโดยอัตโนมัติ, และบันทึกข้อยกเว้นใดๆ เพื่อการแก้ไขปัญหาอย่างรวดเร็ว.
+
+### ขั้นตอนที่ 1: การกำหนดเส้นทางใบอนุญาตที่ทนทาน
+
+กำหนดเส้นทางไปยังไฟล์ใบอนุญาตในรูปแบบที่สามารถแทนที่ด้วยตัวแปรสภาพแวดล้อมได้. วิธีนี้ทำให้โค้ดพกพาได้ระหว่างสภาพแวดล้อม dev, test, และ production.
 
 ```java
 String licensePath = YOUR_DOCUMENT_DIRECTORY + "/your-license-file.lic";
 ```
 
-**เคล็ดลับ:** ในการผลิต ควรใช้ตัวแปรสภาพแวดล้อมหรือไฟล์กำหนดค่าแทนการกำหนดค่าคงที่แบบฮาร์ด‑โค้ด เพื่อให้การปรับใช้ในหลายสภาพแวดล้อมเป็นไปอย่างราบรื่น
+**เคล็ดลับ:** เก็บเส้นทางใน property การกำหนดค่า (เช่น `groupdocs.license.path`) แทนการเขียนแบบคงที่. วิธีนี้ทำให้ไม่ต้องสร้างใหม่เมื่อย้ายระหว่างเซิร์ฟเวอร์.
 
-### ขั้นตอนที่ 2: การตรวจสอบการมีไฟล์อย่างละเอียด
+### ขั้นตอนที่ 2: การตรวจสอบการมีไฟล์ที่เพิ่มประสิทธิภาพ
+
+ก่อนเปิดไฟล์, ตรวจสอบว่ามีอยู่และสามารถอ่านได้. วิธีนี้ป้องกัน `FileNotFoundException` ที่ไม่ชัดเจนในขั้นตอนการเริ่มต้น.
 
 ```java
 if (new File(licensePath).isFile()) {
@@ -160,9 +208,11 @@ if (new File(licensePath).isFile()) {
 }
 ```
 
-การตรวจสอบง่าย ๆ นี้ช่วยป้องกันข้อผิดพลาดรันไทม์ที่ทำให้สับสนในภายหลัง คุณจะขอบคุณตัวเองเมื่อปรับใช้ในสภาพแวดล้อมต่าง ๆ
+หากไฟล์หาย, คุณสามารถย้อนกลับไปใช้ resource จาก classpath หรือยกเลิกพร้อมข้อความบันทึกที่ชัดเจน.
 
 ### ขั้นตอนที่ 3: การจัดการ InputStream อย่างเหมาะสม
+
+ใช้คำสั่ง try‑with‑resources ของ Java เพื่อรับประกันว่า `InputStream` จะถูกปิด, แม้จะเกิดข้อยกเว้น. การรั่วไหลของสตรีมในบริการที่ทำงานต่อเนื่องอาจทำให้ descriptor ของไฟล์หมด.
 
 ```java
 try (InputStream stream = new FileInputStream(licensePath)) {
@@ -176,9 +226,9 @@ try (InputStream stream = new FileInputStream(licensePath)) {
 }
 ```
 
-รูปแบบ `try‑with‑resources` นี้สำคัญ – มันทำให้ InputStream ปิดอย่างถูกต้อง ป้องกันการรั่วของทรัพยากรที่อาจทำให้แอปพลิเคชันทำงานนาน ๆ เกิดปัญหา
+### ขั้นตอนที่ 4: การใช้ใบอนุญาตพร้อมการตรวจสอบความถูกต้อง
 
-### ขั้นตอนที่ 4: การใช้ไลเซนส์พร้อมการตรวจสอบ
+`setLicense(InputStream)` ใช้สตรีมใบอนุญาตที่ให้กับคอมโพเนนต์ทั้งหมดของ GroupDocs. ทันทีหลังจากตั้งค่า, เรียก `License.isValidLicense()` เพื่อให้แน่ใจว่าใบอนุญาตถูกแยกวิเคราะห์อย่างถูกต้อง.
 
 ```java
 License license = new License();
@@ -191,7 +241,11 @@ try {
 }
 ```
 
-### ขั้นตอนที่ 5: การตรวจสอบไลเซนส์อย่างครอบคลุม
+หากการตรวจสอบล้มเหลว, บันทึกข้อผิดพลาดและอาจสลับไปใช้ fallback (เช่น ใบอนุญาตทดลอง) เพื่อให้บริการยังคงทำงาน.
+
+### ขั้นตอนที่ 5: การตรวจสอบใบอนุญาตอย่างครอบคลุม
+
+LicenseInfo เก็บรายละเอียดของใบอนุญาตที่โหลด เช่น วันหมดอายุ, ฟีเจอร์ฟล็ัก, และโดเมนที่อนุญาต. การตรวจสอบเพิ่มเติมนี้มีประโยชน์ในสถานการณ์ SaaS แบบหลายผู้เช่า.
 
 ```java
 if (!License.isValidLicense()) {
@@ -202,42 +256,39 @@ if (!License.isValidLicense()) {
 }
 ```
 
-## การเปรียบเทียบวิธีไลเซนส์แบบต่าง ๆ
+## การเปรียบเทียบวิธีการใบอนุญาตทางเลือก
 
-การเข้าใจตัวเลือกของคุณช่วยให้เลือกวิธีที่เหมาะกับกรณีการใช้งานของคุณ:
+การเข้าใจตัวเลือกของคุณช่วยให้เลือกวิธีที่เหมาะสมกับกรณีการใช้งานของคุณ:
 
-### File Path vs. InputStream vs. Embedded Licensing
+### เส้นทางไฟล์ vs. InputStream vs. การฝังใบอนุญาต
 
-**การไลเซนส์แบบพาธไฟล์:**
-- ✅ เรียบง่าย
-- ❌ มีปัญหาในการปรับใช้ในคอนเทนเนอร์
-- ❌ พึ่งพาเส้นทางที่แตกต่างกันในแต่ละสภาพแวดล้อม
+**File path licensing:**  
+- ✅ ง่ายต่อการใช้งานด้วยบรรทัดโค้ดเดียว.  
+- ❌ ทำให้ล้มเหลวในคอนเทนเนอร์ที่เส้นทางแบบ absolute แตกต่างกันระหว่างการสร้าง.
 
-**การไลเซนส์แบบ InputStream (แนะนำ):**
-- ✅ ยืดหยุ่นในการปรับใช้
-- ✅ รองรับคอนเทนเนอร์
-- ✅ ทำงานกับแบ็กเอนด์การจัดเก็บหลายประเภท
-- ❌ ซับซ้อนเล็กน้อยในการทำงาน
+**InputStream licensing (recommended):**  
+- ✅ ทำงานกับ backend การจัดเก็บใดก็ได้ (local, S3, Azure Blob, database).  
+- ✅ ไม่มีการพึ่งพาไฟล์ระบบแบบคงที่.  
+- ❌ โค้ดเพิ่มเล็กน้อย, แต่ความยืดหยุ่นคุ้มค่ากว่าค่าใช้จ่าย.
 
-**การไลเซนส์แบบฝังตัว:**
-- ✅ ไม่ต้องพึ่งพาไฟล์ภายนอก
-- ❌ ไลเซนส์มองเห็นได้ในโค้ดที่คอมไพล์แล้ว
-- ❌ ยากต่อการอัปเดตไลเซนส์
+**Embedded licensing:**  
+- ✅ ไม่ต้องไฟล์ภายนอก; ใบอนุญาตถูกรวมอยู่ใน JAR.  
+- ❌ การอัปเดตใบอนุญาตต้องสร้างใหม่และปรับใช้ใหม่.
 
 ## สถานการณ์การปรับใช้ที่พบบ่อย
 
-### สถานการณ์ที่ 1: การปรับใช้บนเซิร์ฟเวอร์แบบดั้งเดิม
+### สถานการณ์ 1: การปรับใช้บนเซิร์ฟเวอร์แบบดั้งเดิม
 
-สำหรับการปรับใช้บนเซิร์ฟเวอร์แบบดั้งเดิม คุณมักจะเก็บไฟล์ไลเซนส์ในไดเรกทอรีกำหนดค่า:
+สำหรับเซิร์ฟเวอร์ on‑prem คุณมักจะเก็บใบอนุญาตในไดเรกทอรีการกำหนดค่าและอ้างอิงผ่านตัวแปรสภาพแวดล้อม:
 
 ```java
 // Example for server deployment
 String licensePath = System.getProperty("app.config.dir", "/etc/myapp/") + "license.lic";
 ```
 
-### สถานการณ์ที่ 2: การปรับใช้ใน Docker Container
+### สถานการณ์ 2: การปรับใช้คอนเทนเนอร์ Docker
 
-ในสภาพแวดล้อมคอนเทนเนอร์ คุณอาจเมานท์ไลเซนส์เป็น secret หรือ volume:
+เมานท์ใบอนุญาตเป็นโวลุ่มลับหรือฉีดผ่านสคริปต์ entry‑point ที่เขียนไฟล์ไปที่ `/opt/groupdocs/license.lic`:
 
 ```java
 // Docker-friendly approach
@@ -247,9 +298,9 @@ if (licensePath == null) {
 }
 ```
 
-### สถานการณ์ที่ 3: แอปพลิเคชัน Cloud‑Native
+### สถานการณ์ 3: แอปพลิเคชันคลาวด์‑เนทีฟ
 
-สำหรับการปรับใช้บนคลาวด์ คุณอาจโหลดไลเซนส์จากคลาวด์สตอเรจ:
+ByteArrayInputStream คือคลาสของ Java ที่สร้าง InputStream จากอาร์เรย์ของไบต์. ดึงใบอนุญาตจากบัคเก็ตที่จัดเก็บบนคลาวด์ (AWS S3, Azure Blob, Google Cloud Storage), แปลงอาร์เรย์ไบต์เป็น `ByteArrayInputStream`, แล้วส่งให้ `License.setLicense()`:
 
 ```java
 // Example: Loading from cloud storage (pseudo-code)
@@ -257,14 +308,14 @@ if (licensePath == null) {
 InputStream licenseStream = cloudStorageClient.getObject("bucket", "license.lic");
 ```
 
-## คู่มือแก้ไขปัญหาเชิงลึก
+## คู่มือการแก้ไขปัญหาเชิงลึก
 
-### ข้อผิดพลาดทั่วไป: "License is not valid"
+### ข้อผิดพลาดทั่วไป: "license is not valid"
 
-**อาการ:** `License.isValidLicense()` คืนค่า `false`  
-**สาเหตุ:** ไลเซนส์หมดอายุ, ประเภทไลเซนส์ไม่ตรง, ไฟล์เสียหาย, รูปแบบไม่ถูกต้อง  
+**อาการ:** `License.isValidLicense()` คืนค่า `false`.  
+**สาเหตุ:** ใบอนุญาตหมดอายุ, รุ่นผลิตภัณฑ์ไม่ตรง, ไฟล์เสียหาย, หรือรูปแบบไฟล์ไม่ถูกต้อง.  
 
-**วิธีแก้:**
+**วิธีแก้:** ตรวจสอบไฟล์ใบอนุญาตกับพอร์ทัล GroupDocs, ดาวน์โหลดใหม่, และตรวจสอบให้แน่ใจว่าสตรีมไบต์ไม่ถูกเปลี่ยนแปลงระหว่างการส่ง.
 
 ```java
 // Add detailed license validation
@@ -280,12 +331,12 @@ try {
 }
 ```
 
-### ข้อผิดพลาดทั่วไป: FileNotFoundException
+### ข้อผิดพลาดทั่วไป: `FileNotFoundException`
 
-**อาการ:** ไม่พบไฟล์ไลเซนส์ในระหว่างรันไทม์  
-**สาเหตุ:** การกำหนดค่าเส้นทางไม่ถูกต้อง, ไฟล์หายไปในขั้นตอนการปรับใช้, ปัญหาการอนุญาต  
+**อาการ:** แอปพลิเคชันไม่สามารถหาไฟล์ใบอนุญาตได้ในขณะรัน.  
+**สาเหตุ:** การกำหนดค่าเส้นทางผิด, ไฟล์หายในอิมเมจ Docker, หรือสิทธิ์ไฟล์ไม่เพียงพอ.  
 
-**วิธีแก้:** ใช้กลยุทธ์ fallback:
+**วิธีแก้:** สร้าง fallback ที่ตรวจสอบตัวแปรสภาพแวดล้อมก่อน, จากนั้นมองหา resource จาก classpath, และสุดท้ายบันทึกข้อผิดพลาดที่ชัดเจนก่อนยกเลิก.
 
 ```java
 String[] possiblePaths = {
@@ -306,21 +357,22 @@ for (String path : possiblePaths) {
 
 ### ข้อผิดพลาดทั่วไป: ปัญหาหน่วยความจำกับเอกสารขนาดใหญ่
 
-**อาการ:** `OutOfMemoryError` ระหว่างการประมวลผลเอกสาร  
-**สาเหตุ:** Heap ของ JVM ไม่พอ, เอกสารขนาดใหญ่มาก, การรั่วของหน่วยความจำ  
+`setMemoryOptimization(boolean)` เปิดโหมดประหยัดหน่วยความจำใน GroupDocs เมื่อกำหนดเป็น true.  
+**อาการ:** `OutOfMemoryError` ระหว่างการประมวลผล annotation.  
+**สาเหตุ:** โหลดเอกสารทั้งหมดเข้าสู่หน่วยความจำ, heap ของ JVM ไม่พอ, หรือไม่มีตัวเลือกการประมวลผลแบบสตรีม.  
 
-**วิธีแก้:** ปรับตั้งค่า JVM และจัดการทรัพยากรอย่างเหมาะสม:
+**วิธีแก้:** เพิ่ม heap ของ JVM (`-Xmx2g` หรือสูงกว่า), เปิด `License.setMemoryOptimization(true)`, และประมวลผลเอกสารเป็นชิ้นส่วนเมื่อเป็นไปได้.
 
 ```java
 // Set appropriate JVM flags
 // -Xmx4g -XX:+UseG1GC -XX:MaxGCPauseMillis=200
 ```
 
-## แนวปฏิบัติการปรับประสิทธิภาพ
+## แนวทางปฏิบัติที่ดีที่สุดสำหรับการเพิ่มประสิทธิภาพ
 
 ### การจัดการหน่วยความจำ
 
-เมื่อทำงานกับ GroupDocs.Annotation การใช้หน่วยความจำอย่างมีประสิทธิภาพเป็นสิ่งสำคัญ:
+เมื่อทำงานกับ GroupDocs.Annotation, เปิดการโหลดแบบ lazy และปล่อยทรัพยากรโดยเร็ว:
 
 ```java
 // Always close resources properly
@@ -330,9 +382,9 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 } // Automatically closes and frees resources
 ```
 
-### การปรับแต่งการประมวลผลแบบแบตช์
+### การเพิ่มประสิทธิภาพการประมวลผลแบบแบตช์
 
-สำหรับการประมวลผลหลายเอกสาร ควรใช้การประมวลผลแบบแบตช์:
+สำหรับงาน annotation แบบจำนวนมาก, ใช้ `License` instance เดียวซ้ำและประมวลผลเอกสารใน thread‑pooled executor เพื่อเพิ่มการใช้ CPU ให้สูงสุดโดยไม่ทำให้หน่วยความจำเต็ม.
 
 ```java
 // Process documents in batches to manage memory
@@ -347,9 +399,9 @@ for (int i = 0; i < documents.size(); i += batchSize) {
 }
 ```
 
-### การแคชผลการตรวจสอบไลเซนส์
+### การแคชการตรวจสอบใบอนุญาต
 
-แคชผลการตรวจสอบไลเซนส์เพื่อหลีกเลี่ยงการเข้าถึงระบบไฟล์ซ้ำ ๆ:
+แคชผลลัพธ์ของ `License.isValidLicense()` ในตัวแปร static หรือแคชแบบกระจาย (เช่น Redis) เพื่อหลีกเลี่ยงการอ่านไฟล์ระบบหลายครั้งต่อคำขอ.
 
 ```java
 private static Boolean licenseValid = null;
@@ -362,11 +414,11 @@ public static boolean isLicenseValid() {
 }
 ```
 
-## พิจารณาด้านความปลอดภัย
+## ข้อควรระวังด้านความปลอดภัย
 
-### การปกป้องไฟล์ไลเซนส์
+### การปกป้องไฟล์ใบอนุญาต
 
-**การเข้ารหัส:** พิจารณาเข้ารหัสไฟล์ไลเซนส์เมื่อเก็บไว้บนดิสก์:
+**การเข้ารหัส:** เก็บใบอนุญาตเป็นแบบเข้ารหัสเมื่ออยู่ในที่พักและถอดรหัสในหน่วยความจำก่อนสร้าง `InputStream`.
 
 ```java
 // Example: Reading encrypted license file
@@ -375,29 +427,29 @@ byte[] decryptedLicense = decrypt(encryptedLicense);
 InputStream stream = new ByteArrayInputStream(decryptedLicense);
 ```
 
-**การควบคุมการเข้าถึง:** ตั้งค่าการอนุญาตไฟล์อย่างเหมาะสม (600 หรือ 400) เพื่อป้องกันการเข้าถึงโดยไม่ได้รับอนุญาต
+**การควบคุมการเข้าถึง:** ตั้งสิทธิ์ไฟล์เป็น `600` (เจ้าของอ่าน/เขียนเท่านั้น) บน Linux หรือจำกัด ACL บน Windows.
 
-**ตัวแปรสภาพแวดล้อม:** ใช้ตัวแปรสภาพแวดล้อมสำหรับเส้นทางที่สำคัญ:
+**ตัวแปรสภาพแวดล้อม:** ใช้ secret manager (AWS Secrets Manager, Azure Key Vault) เพื่อเก็บเส้นทางใบอนุญาตหรือเนื้อหาใบอนุญาตที่เข้ารหัส Base64, แล้วอ่านในขณะเริ่มต้น.
 
 ```java
 String licensePath = System.getenv("GROUPDOCS_LICENSE_PATH");
 ```
 
-## เช็คลิสต์การปรับใช้ในสภาพแวดล้อมการผลิต
+## รายการตรวจสอบการปรับใช้ใน Production
 
-ก่อนที่จะปล่อยแอปพลิเคชัน GroupDocs.Annotation ที่ใช้ InputStream licensing:
-
-- [ ] ตรวจสอบการเข้าถึงไฟล์ไลเซนส์ในสภาพแวดล้อมเป้าหมาย  
-- [ ] มีการจัดการข้อผิดพลาดสำหรับทุกสถานการณ์การล้มเหลว  
-- [ ] ตั้งค่าการบันทึกเหตุการณ์ที่เกี่ยวกับไลเซนส์  
-- [ ] ทำการทดสอบประสิทธิภาพด้วยขนาดเอกสารที่เป็นจริง  
-- [ ] ตรวจสอบความปลอดภัยของการจัดการไฟล์ไลเซนส์  
-- [ ] มีแผนสำรองสำหรับกรณีไลเซนส์หมดอายุ  
-- [ ] ตั้งค่าการมอนิเตอร์สำหรับการตรวจสอบความล้มเหลวของไลเซนส์  
+- [ ] ตรวจสอบการเข้าถึงไฟล์ใบอนุญาตในสภาพแวดล้อมเป้าหมาย
+- [ ] ดำเนินการจัดการข้อผิดพลาดสำหรับทุกสถานการณ์ที่ล้มเหลว
+- [ ] ตั้งค่าการบันทึกสำหรับเหตุการณ์ที่เกี่ยวกับใบอนุญาต (INFO เมื่อสำเร็จ, WARN เมื่อล้มเหลว)
+- [ ] ทำการทดสอบประสิทธิภาพด้วยขนาดเอกสารที่เป็นจริง (เช่น PDF 200 หน้า)
+- [ ] ตรวจสอบความปลอดภัยของการจัดการไฟล์ใบอนุญาต (การเข้ารหัส, สิทธิ์)
+- [ ] แผนสำรองสำหรับสถานการณ์ใบอนุญาตหมดอายุ (การแจ้งเตือนการตรวจสอบ)
+- [ ] ตั้งค่าการตรวจสอบสำหรับความล้มเหลวของการตรวจสอบใบอนุญาต (เมตริก Prometheus `groupdocs_license_valid`)
 
 ## ตัวอย่างการบูรณาการในโลกจริง
 
-### การบูรณาการกับ Spring Boot
+### การบูรณาการ Spring Boot
+
+บูรณาการตรรกะการจัดการใบอนุญาตเข้าไปในเมธอด `@PostConstruct` ของ Spring bean เพื่อให้ทำงานครั้งเดียวเมื่อแอปพลิเคชันเริ่มต้น:
 
 ```java
 @Component
@@ -424,9 +476,9 @@ public class GroupDocsLicenseManager {
 }
 ```
 
-### รูปแบบ Microservices
+### รูปแบบไมโครเซอร์วิส
 
-สำหรับไมโครเซอร์วิส ควรพิจารณาสร้างบริการไลเซนส์ร่วม:
+เปิดให้บริการ **License Service** เฉพาะที่ไมโครเซอร์วิสอื่น ๆ เรียกผ่าน gRPC หรือ REST เพื่อรับ `InputStream` ที่ตรวจสอบแล้ว. วิธีนี้รวมการจัดการความลับไว้ศูนย์และลดการทำซ้ำ.
 
 ```java
 @Service
@@ -442,7 +494,9 @@ public class LicenseService {
 }
 ```
 
-### โหลดไลเซนส์จากฐานข้อมูล
+### การโหลดใบอนุญาตจากฐานข้อมูล
+
+เก็บ blob `.lic` ในตารางที่ปลอดภัย, อ่านด้วย JDBC, ห่อไบต์ใน `ByteArrayInputStream`, แล้วใช้ใบอนุญาต:
 
 ```java
 byte[] licenseData = loadLicenseFromDatabase();
@@ -451,45 +505,51 @@ InputStream stream = new ByteArrayInputStream(licenseData);
 
 ## คำถามที่พบบ่อย
 
-**Q: สามารถใช้ไฟล์ไลเซนส์เดียวกันกับหลายแอปพลิเคชันได้หรือไม่?**  
-A: ใช่, แต่ต้องตรวจสอบเงื่อนไขไลเซนส์ของคุณ บางไลเซนส์อาจจำกัดต่อแอปพลิเคชันหรือเซิร์ฟเวอร์ การใช้ InputStream ทำให้แชร์ไฟล์ได้ง่ายขึ้นระหว่างบริการ
+- **ถาม: ฉันสามารถใช้ไฟล์ใบอนุญาตเดียวกันสำหรับหลายแอปพลิเคชันได้หรือไม่?**  
+  **ตอบ:** ได้, แต่ควรตรวจสอบข้อตกลงใบอนุญาตของคุณ—บางแผนเป็นต่อแอปพลิเคชันหรือต่อเซิร์ฟเวอร์. การโหลดด้วย InputStream ทำให้การแชร์ง่ายขึ้น.
 
-**Q: จะเกิดอะไรขึ้นหากไลเซนส์หมดอายุขณะรันไทม์?**  
-A: GroupDocs.Annotation มักจะทำงานต่อในโหมดทดลอง โดยเพิ่มลายน้ำหรือจำกัดฟีเจอร์ ควรตรวจสอบ `License.isValidLicense()` และวางแผนต่ออายุล่วงหน้า
+- **ถาม: จะเกิดอะไรขึ้นหากใบอนุญาตของฉันหมดอายุขณะทำงาน?**  
+  **ตอบ:** GroupDocs.Annotation จะกลับไปใช้โหมดทดลอง, เพิ่มลายน้ำและจำกัดฟีเจอร์พรีเมียม. ควรตรวจสอบ `License.isValidLicense()` อย่างต่อเนื่องเพื่อเรียกกระบวนการต่ออายุ.
 
-**Q: จะอัปเดตไลเซนส์โดยไม่รีสตาร์ทแอปได้อย่างไร?**  
-A: ปัจจุบันต้องรีสตาร์ทเพื่อให้ไลเซนส์ใหม่มีผล ใช้วิธีการปรับใช้แบบ blue‑green หรือ rolling restart เพื่อลดเวลาหยุดทำงาน
+- **ถาม: ฉันจะจัดการการอัปเดตใบอนุญาตโดยไม่ต้องรีสตาร์ทแอปได้อย่างไร?**  
+  **ตอบ:** ปัจจุบันต้องรีสตาร์ท JVM ทั้งหมดเพื่อให้ใบอนุญาตใหม่มีผล. ใช้การปรับใช้แบบ blue‑green หรือการรีสตาร์ทแบบ rolling เพื่อลดเวลาหยุดทำงาน.
 
-**Q: ปลอดภัยหรือไม่ที่จะบันทึกข้อผิดพลาดการตรวจสอบไลเซนส์?**  
-A: ควรบันทึกว่าการตรวจสอบล้มเหลว แต่ไม่ควรบันทึกเนื้อหาไลเซนส์หรือข้อมูลที่ละเอียดอ่อน ให้บันทึกที่เป็นประโยชน์แต่ปลอดภัย
+- **ถาม: การบันทึกข้อผิดพลาดการตรวจสอบใบอนุญาตปลอดภัยหรือไม่?**  
+  **ตอบ:** บันทึกข้อความข้อผิดพลาดและ stack trace, แต่ห้ามบันทึกเนื้อหาใบอนุญาตดิบหรือคีย์ส่วนตัว. ทำให้บันทึกมีประโยชน์แต่ปลอดภัย.
 
-**Q: สามารถโหลดไลเซนส์จากคลาวด์สตอเรจบัคเก็ตได้หรือไม่?**  
-A: แน่นอน ดึงไบต์มาแล้วห่อด้วย `ByteArrayInputStream` แล้วส่งให้ `License.setLicense()`
+- **ถาม: ฉันสามารถโหลดใบอนุญาตจากบัคเก็ตที่จัดเก็บบนคลาวด์ได้หรือไม่?**  
+  **ตอบ:** แน่นอน. ดึงไบต์, ห่อใน `ByteArrayInputStream`, แล้วส่งให้ `License.setLicense()`. วิธีนี้ทำงานกับ S3, Azure Blob, Google Cloud Storage, และแม้แต่ endpoint HTTP ส่วนตัว.
 
 ## สรุป
 
-คุณได้เรียนรู้ **วิธีตั้งค่าไลเซนส์ GroupDocs ด้วย InputStream** สำหรับ Java Annotation แล้ว วิธีนี้ให้ความยืดหยุ่นในการปรับใช้ในสภาพแวดล้อมที่หลากหลาย พร้อมการจัดการข้อผิดพลาดและประสิทธิภาพที่แข็งแรง
+ตอนนี้คุณมีคู่มือครบถ้วนพร้อมใช้งานในสภาพการผลิตเกี่ยวกับ **วิธีตั้งค่าใบอนุญาต groupdocs** โดยใช้ `InputStream` สำหรับ Java Annotation. วิธีนี้ให้ความยืดหยุ่นในการปรับใช้บนเซิร์ฟเวอร์แบบดั้งเดิม, คอนเทนเนอร์ Docker, และสภาพแวดล้อมคลาวด์‑เนทีฟ พร้อมรักษาความปลอดภัยและประสิทธิภาพของใบอนุญาต.
 
 **ประเด็นสำคัญ**
-- การไลเซนส์แบบ InputStream ให้ความยืดหยุ่นสูงสุดในการปรับใช้  
-- ตรวจสอบและจัดการข้อผิดพลาดอย่างรอบคอบ  
-- ปรับโค้ดให้สอดคล้องกับสถานการณ์การปรับใช้ของคุณ (เซิร์ฟเวอร์, Docker, คลาวด์)  
-- มอนิเตอร์สถานะไลเซนส์ในสภาพแวดล้อมการผลิต  
+- การใช้ใบอนุญาตแบบ InputStream ให้ความยืดหยุ่นสูงสุดในการปรับใช้.
+- ตรวจสอบใบอนุญาตเสมอและจัดการข้อผิดพลาดก่อนประมวลผลเอกสาร.
+- ปรับการนำไปใช้ให้สอดคล้องกับสถานการณ์การปรับใช้ของคุณ (เซิร์ฟเวอร์, Docker, คลาวด์).
+- ตรวจสอบสถานะใบอนุญาตใน production และตั้งค่าการแจ้งเตือนเมื่อใกล้หมดอายุ.
 
-พร้อมที่จะนำไปใช้ในโปรเจกต์ของคุณหรือยัง? เริ่มต้นด้วยการตั้งค่าพื้นฐาน แล้วค่อยเพิ่มรูปแบบขั้นสูงตามความต้องการของคุณ ขอให้เขียนโค้ดอย่างสนุกสนาน!
+เริ่มต้นด้วยการตั้งค่าพื้นฐานที่แสดงด้านบน, จากนั้นพัฒนาไปสู่รูปแบบขั้นสูงเมื่อแอปพลิเคชันของคุณขยายตัว. โค้ดดิ้งให้สนุก!
 
 ## แหล่งข้อมูลเพิ่มเติม
 
-- **Documentation:** [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
-- **API Reference:** [Complete API Reference](https://reference.groupdocs.com/annotation/java/)
-- **Download Latest Version:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)
-- **Get Support:** [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation/)
-- **Purchase License:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
-- **Free Trial:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
-- **Temporary License:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- **เอกสาร:** [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- **อ้างอิง API:** [Complete API Reference](https://reference.groupdocs.com/annotation/java/)
+- **ดาวน์โหลดเวอร์ชันล่าสุด:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)
+- **รับการสนับสนุน:** [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation/)
+- **ซื้อใบอนุญาต GroupDocs:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)
+- **ทดลองฟรี:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)
+- **ใบอนุญาตชั่วคราว:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)
 
 ---
 
-**Last Updated:** 2026-02-23  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**อัปเดตล่าสุด:** 2026-08-19  
+**ทดสอบกับ:** GroupDocs.Annotation 25.2  
+**ผู้เขียน:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [Check License Status – GroupDocs Annotation Java Licensing Guide](/annotation/java/licensing-and-configuration/)
+- [Set GroupDocs License Java – GroupDocs Annotation License Java Setup](/annotation/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/)
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)

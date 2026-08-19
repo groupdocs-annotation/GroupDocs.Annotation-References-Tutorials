@@ -1,87 +1,138 @@
 ---
 categories:
 - Java Development
-date: '2026-02-23'
-description: تعلم كيفية تعيين InputStream لترخيص GroupDocs في التعليقات التوضيحية
-  للغة Java. دليل خطوة بخطوة مع استكشاف الأخطاء وإصلاحها، وأفضل الممارسات، وأمثلة
-  واقعية لتحقيق تكامل سلس.
-keywords: GroupDocs Annotation Java InputStream license, Java license configuration
-  GroupDocs, GroupDocs Java licensing tutorial, InputStream license setup Java, how
-  to set GroupDocs license using InputStream
-lastmod: '2026-02-23'
-linktitle: Java InputStream License Setup
+date: '2026-08-19'
+description: تعرف على كيفية تعيين ترخيص GroupDocs InputStream لـ Java Annotation.
+  دليل خطوة بخطوة مع استكشاف الأخطاء وإصلاحها، وأفضل الممارسات، وأمثلة من الواقع لتكامل
+  سلس.
+keywords:
+- set groupdocs license
+- groupdocs annotation java inputstream
+- java licensing with inputstream
+- groupdocs license configuration
+- java annotation licensing guide
+lastmod: '2026-08-19'
+linktitle: إعداد ترخيص Java InputStream
+og_description: قم بتعيين ترخيص GroupDocs باستخدام InputStream في Java Annotation.
+  اتبع هذا الدليل خطوة بخطوة، وتعرف على أفضل الممارسات، وتجنب المشكلات الشائعة في
+  الترخيص.
+og_image_alt: Developer guide showing Java code to load GroupDocs license via InputStream
+og_title: تعيين ترخيص GroupDocs InputStream في Java Annotation – دليل كامل
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-19'
+  description: Learn how to set GroupDocs license InputStream for Java Annotation.
+    Step-by-step guide with troubleshooting, best practices, and real-world examples
+    for seamless integration.
+  headline: How to set groupdocs license InputStream in Java Annotation
+  type: TechArticle
+- description: Learn how to set GroupDocs license InputStream for Java Annotation.
+    Step-by-step guide with troubleshooting, best practices, and real-world examples
+    for seamless integration.
+  name: How to set groupdocs license InputStream in Java Annotation
+  steps:
+  - name: robust license path definition
+    text: Define the path to the license file in a way that can be overridden by an
+      environment variable. This makes the code portable across dev, test, and production
+      environments. **Pro tip:** Store the path in a configuration property (e.g.,
+      `groupdocs.license.path`) instead of hard‑coding it. This elimina
+  - name: enhanced file existence check
+    text: Before opening the file, verify that it exists and is readable. This prevents
+      cryptic `FileNotFoundException` later in the startup sequence. If the file is
+      missing, you can fall back to a classpath resource or abort with a clear log
+      message.
+  - name: proper inputstream management
+    text: Use Java’s try‑with‑resources statement to guarantee that the `InputStream`
+      is closed, even if an exception occurs. Leaking streams in a long‑running service
+      can eventually exhaust file descriptors.
+  - name: license application with validation
+    text: '`setLicense(InputStream)` applies the provided license stream to all GroupDocs
+      components. Immediately after setting, call `License.isValidLicense()` to ensure
+      the license was parsed correctly. If validation fails, log the error and optionally
+      switch to a fallback (e.g., a trial license) to keep the'
+  - name: comprehensive license verification
+    text: LicenseInfo holds details about the loaded license such as expiration date,
+      feature flags, and allowed domains. This extra check is useful in multi‑tenant
+      SaaS scenarios.
+  type: HowTo
+- questions:
+  - answer: Yes, but review your license agreement—some plans are per‑application
+      or per‑server. InputStream loading makes sharing straightforward.
+    question: Can I use the same license file for multiple applications?
+  - answer: GroupDocs.Annotation falls back to trial mode, adding watermarks and limiting
+      premium features. Continuously monitor `License.isValidLicense()` to trigger
+      renewal workflows.
+    question: What happens if my license expires during runtime?
+  - answer: At the moment a full JVM restart is required for a new license to take
+      effect. Use blue‑green deployments or rolling restarts to minimise downtime.
+    question: How do I handle license updates without restarting the app?
+  - answer: Log the error message and stack trace, but never log the raw license content
+      or private keys. Keep logs actionable yet secure.
+    question: Is it safe to log license validation errors?
+  - answer: Absolutely. Retrieve the bytes, wrap them in a `ByteArrayInputStream`,
+      and pass it to `License.setLicense()`. This works with S3, Azure Blob, Google
+      Cloud Storage, and even private HTTP endpoints.
+    question: Can I load the license from a cloud storage bucket?
+  type: FAQPage
 tags:
-- GroupDocs
-- Java
-- Licensing
-- InputStream
-- Configuration
-title: كيفية تعيين رخصة GroupDocs InputStream في التعليق التوضيحي لجافا
+- groupdocs
+- java
+- licensing
+- inputstream
+- configuration
+title: كيفية تعيين ترخيص GroupDocs InputStream في Java Annotation
 type: docs
 url: /ar/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-license-setup/
 weight: 1
 ---
 
-تم الاختبار مع:** GroupDocs.Annotation 25.2"
-**Author:** GroupDocs -> "**المؤلف:** GroupDocs"
+# تعيين ترخيص groupdocs
 
-Now produce final markdown with Arabic translations, preserving code block placeholders.
+## مقدمة
 
-We must keep markdown formatting exactly.
+في هذا الدليل ستتعلم **كيفية تعيين ترخيص groupdocs** باستخدام `InputStream` لت anotations جافا. قد يبدو إعداد الترخيص لـ GroupDocs.Annotation في جافا أمرًا مرهقًا، خاصةً عندما تتعامل مع بيئات ديناميكية أو تطبيقات حاوية. الخبر السار؟ استخدام **InputStream** لتكوين الترخيص هو في الواقع أحد أكثر الأساليب مرونة وموثوقية المتاحة.
 
-Let's construct final answer.# تعيين ترخيص GroupDocs باستخدام InputStream
+ستمرّ عبر تنفيذ كامل جاهز للإنتاج، وتتعرف على كيفية معالجة الأخطاء بلطف، وتكتشف نصائح للسحابة، Docker، والنشر المحلي. بنهاية الدليل ستكون واثقًا من أن تطبيقك يتحقق من صحة الترخيص بشكل صحيح ويمكنه التعافي من المشكلات الشائعة دون الحاجة إلى إعادة تشغيل مؤلمة.
 
-## المقدمة
-
-إعداد الترخيص لـ GroupDocs.Annotation في جافا قد يبدو مرهقًا، خاصةً عندما تتعامل مع بيئات ديناميكية أو تطبيقات مُحَزَّمَة. الخبر السار؟ استخدام **InputStream** لتكوين الترخيص هو في الواقع أحد أكثر الأساليب مرونة وموثوقية المتاحة.
-
-في هذا الدرس ستتعلم **كيفية تعيين ترخيص GroupDocs باستخدام InputStream** لتطبيق Annotation في جافا، سواءً كنت تبني خدمات ميكروية، تنشر إلى السحابة، أو تريد إعداد ترخيص أكثر صلابة.
-
-**ما ستتقنه بنهاية الدرس:**
+**ما ستتمكن من إتقانه بنهاية الدليل:**
 - إعداد ترخيص InputStream كامل (مع معالجة الأخطاء الفعلية)
-- استكشاف الأخطاء الشائعة في الترخيص
+- استكشاف الأخطاء الشائعة المتعلقة بالترخيص
 - أفضل الممارسات لسيناريوهات النشر المختلفة
 - نصائح تحسين الأداء التي تهم فعلاً
 
 ## إجابات سريعة
+License.isValidLicense() هي طريقة تُعيد true عندما يكون الترخيص المحمل صالحًا.
+
 - **ما هي الطريقة الأساسية لتحميل ترخيص GroupDocs؟** باستخدام `InputStream` مع `License.setLicense(stream)`.
-- **هل يمكنني تخزين الترخيص في حاوية سحابية؟** نعم، اقرأه إلى `InputStream` من أي مصدر تخزين.
-- **هل أحتاج إلى إعادة تشغيل بعد تغيير الترخيص؟** حالياً يلزم إعادة تشغيل لتفعيل الترخيص الجديد.
-- **هل ترخيص InputStream صديق للحاويات؟** بالتأكيد – لا توجد تبعيات مسار ملف.
-- **كيف أتحقق من أن الترخيص فعال؟** استدعِ `License.isValidLicense()` بعد تعيينه.
+- **هل يمكنني تخزين الترخيص في حاوية سحابة؟** نعم، اقرأه إلى `InputStream` من أي مصدر تخزين.
+- **هل أحتاج إلى إعادة تشغيل بعد تغيير الترخيص؟** حاليًا يلزم إعادة تشغيل لتفعيل الترخيص الجديد.
+- **هل ترخيص InputStream صديق للحاويات؟** بالتأكيد – لا توجد تبعيات لمسار ملف.
+- **كيف أتحقق من أن الترخيص نشط؟** استدعِ `License.isValidLicense()` بعد تعيينه.
 
-## لماذا اختيار InputStream لترخيص GroupDocs في جافا؟
+## لماذا نختار InputStream لترخيص groupdocs؟
 
-قبل أن نغوص في التنفيذ، يجدر بنا فهم لماذا **set groupdocs license inputstream** غالبًا ما يكون الخيار الأفضل لتطبيقات جافا الحديثة:
+يتيح لك ترخيص InputStream تحميل الترخيص من أي مصدر—قرص محلي، تخزين سحابي، أو مورد مدمج—دون الاعتماد على مسار ملف ثابت. يعمل هذا النهج بشكل موحد عبر بيئات التطوير، الحاويات، والبيئات الخالية من الخوادم، يبسط إدارة الأسرار، ويقلل من مخاطر الفشل المتعلق بالمسارات.
 
-**المرونة في النشر:** على عكس الترخيص القائم على مسار الملف، يعمل InputStream بسلاسة سواء كان الترخيص مخزنًا محليًا، في تخزين سحابي، أو مدمجًا في ملف JAR الخاص بك.
+## المتطلبات المسبقة وإعداد البيئة
 
-**صديق للحاويات:** مثالي لحاويات Docker حيث قد تكون مسارات الملفات غير متوقعة أو عندما تريد تجنب ربط وحدات تخزين خارجية.
-
-**فوائد الأمان:** يمكنك تحميل الترخيص من مصادر مشفرة أو تخزين آمن دون كشف مسارات الملفات في إعداداتك.
-
-**التحميل الديناميكي:** مثالي للتطبيقات التي تحتاج إلى تبديل الترخيص بناءً على ظروف وقت التشغيل أو تكوينات العملاء.
-
-## المتطلبات وإعداد البيئة
-
-قبل تنفيذ إعداد ترخيص GroupDocs Annotation باستخدام InputStream في جافا، تأكد من وجود:
+قبل تنفيذ إعداد ترخيص GroupDocs.Annotation Java باستخدام InputStream، تأكد من توفر ما يلي:
 
 ### المتطلبات الأساسية
-- **Java Development Kit:** JDK 8 أو أعلى (يوصى بـ JDK 11+ لأفضل أداء)
-- **GroupDocs.Annotation for Java:** الإصدار 25.2 أو أحدث
-- **أداة البناء:** Maven أو Gradle (الأمثلة تستخدم Maven)
-- **ترخيص صالح:** تجريبي، مؤقت، أو ترخيص كامل من GroupDocs
+- **مجموعة تطوير جافا:** JDK 8 أو أعلى (يفضل JDK 11+ لأفضل أداء)  
+- **GroupDocs.Annotation لجافا:** الإصدار 25.2 أو أحدث (المكتبة تدعم **50+** صيغة إدخال وإخراج)  
+- **أداة البناء:** Maven أو Gradle (الأمثلة تستخدم Maven)  
+- **ترخيص صالح:** تجريبي، مؤقت، أو ترخيص كامل من GroupDocs  
 
 ### بيئة التطوير
-- **IDE:** IntelliJ IDEA أو Eclipse أو VS Code مع امتدادات جافا
-- **الذاكرة:** على الأقل 4 GB RAM لتطوير سلس (8 GB+ للمستندات الكبيرة)
-- **التخزين:** مساحة كافية لاحتياجات معالجة المستندات
+- **IDE:** IntelliJ IDEA، Eclipse، أو VS Code مع ملحقات جافا  
+- **الذاكرة:** على الأقل 4 GB RAM لتطوير سلس (8 GB+ للوثائق الكبيرة)  
+- **التخزين:** مساحة قرص كافية لاحتياجات معالجة المستندات الخاصة بك  
 
-## إعداد GroupDocs.Annotation لجافا
+## إعداد groupdocs.annotation لجافا
 
 ### تكوين Maven
 
-أضف هذا إلى ملف `pom.xml` – لاحظ تكوين المستودع الذي يعد حاسمًا للوصول إلى أحدث الإصدارات:
+أضف الاعتماد التالي إلى ملف `pom.xml`. إدخال المستودع مطلوب لسحب أحدث حزم GroupDocs:
 
 ```xml
 <repositories>
@@ -102,7 +153,7 @@ Let's construct final answer.# تعيين ترخيص GroupDocs باستخدام 
 
 ### تكوين Gradle (بديل)
 
-إذا كنت تستخدم Gradle، فإليك الإعداد المكافئ:
+إذا كنت تفضّل Gradle، استخدم المقتطف المكافئ:
 
 ```gradle
 repositories {
@@ -118,24 +169,36 @@ dependencies {
 
 ### إعداد ملف الترخيص
 
-ملف ترخيص GroupDocs الخاص بك (عادةً بامتداد `.lic`) يجب أن يكون:
-- **قابل للوصول:** ضعها في مجلد الموارد أو موقع آمن
-- **صالح:** تحقق من تاريخ الانتهاء وصلاحيات الميزات
-- **قابل للقراءة:** تأكد من أن تطبيقك لديه أذونات القراءة
+يجب أن يكون ملف ترخيص GroupDocs الخاص بك (عادةً بامتداد `.lic`) :
 
-## كيفية تعيين ترخيص GroupDocs باستخدام InputStream
+- **متاح:** ضعّه في `src/main/resources` أو موقع خارجي آمن.  
+- **صالح:** تحقق من تاريخ الانتهاء وأذونات الميزات في بوابة الترخيص.  
+- **قابل للقراءة:** تأكد من أن المستخدم الذي يشغّل الوقت لديه صلاحيات قراءة (`chmod 600` على لينكس).
 
-إليك النهج الشامل لإعداد ترخيص GroupDocs Annotation في جافا باستخدام InputStream. يتضمن هذا التنفيذ معالجة الأخطاء والتحقق المناسبين اللذين ستحتاجهما فعليًا في بيئة الإنتاج.
+## كيفية تعيين ترخيص groupdocs باستخدام InputStream
 
-### الخطوة 1: تعريف مسار الترخيص القوي
+تحميل الترخيص من `InputStream` هو عملية من أربع خطوات تشمل التحقق ومعالجة الأخطاء بلطف.
+
+### إجابة مباشرة
+License هي الفئة في GroupDocs التي تُفعّل الترخيص للمكتبة.  
+FileInputStream هي فئة جافا تقرأ بايتات خام من ملف.  
+InputStream هي فئة جافا تجريدية تمثل تدفق بايتات لقراءة البيانات.  
+
+حمّل ملف الترخيص إلى `FileInputStream` (أو أي `InputStream`)، مرره إلى `new License().setLicense(stream)`, ثم استدعِ `license.isValidLicense()` لتأكيد النجاح. غلف العملية بالكامل بكتلة try‑with‑resources حتى يُغلق التدفق تلقائيًا، وسجّل أي استثناءات لتسهيل استكشاف الأخطاء.
+
+### الخطوة 1: تعريف مسار الترخيص بشكل مرن
+
+عرّف مسار ملف الترخيص بطريقة يمكن تجاوزها بمتغيّر بيئي. يجعل هذا الكود قابلًا للنقل عبر بيئات التطوير، الاختبار، والإنتاج.
 
 ```java
 String licensePath = YOUR_DOCUMENT_DIRECTORY + "/your-license-file.lic";
 ```
 
-**نصيحة احترافية:** في بيئة الإنتاج، فكر في استخدام متغيرات البيئة أو ملفات التكوين بدلاً من المسارات المكتوبة صراحة. هذا يجعل النشر أكثر سلاسة عبر البيئات المختلفة.
+**نصيحة احترافية:** خزن المسار في خاصية تكوين (مثل `groupdocs.license.path`) بدلاً من ترميزه صراحة. هذا يلغي الحاجة لإعادة بناء عند الانتقال بين الخوادم.
 
-### الخطوة 2: فحص وجود الملف المحسن
+### الخطوة 2: فحص وجود الملف بشكل محسن
+
+قبل فتح الملف، تحقق من أنه موجود وقابل للقراءة. يمنع ذلك استثناء `FileNotFoundException` الغامض لاحقًا في تسلسل بدء التشغيل.
 
 ```java
 if (new File(licensePath).isFile()) {
@@ -146,9 +209,11 @@ if (new File(licensePath).isFile()) {
 }
 ```
 
-هذا الفحص البسيط يحفظك من أخطاء وقت التشغيل الغامضة لاحقًا. صدقني، ستشكر نفسك عند النشر إلى بيئات مختلفة.
+إذا كان الملف مفقودًا، يمكنك الرجوع إلى مورد في classpath أو الإنهاء برسالة سجل واضحة.
 
 ### الخطوة 3: إدارة InputStream بشكل صحيح
+
+استخدم بيان try‑with‑resources في جافا لضمان إغلاق `InputStream`، حتى لو حدث استثناء. تسرب التدفقات في خدمة طويلة التشغيل قد يستنفد مقابض الملفات في النهاية.
 
 ```java
 try (InputStream stream = new FileInputStream(licensePath)) {
@@ -162,9 +227,9 @@ try (InputStream stream = new FileInputStream(licensePath)) {
 }
 ```
 
-نمط `try‑with‑resources` هنا حاسم – فهو يضمن إغلاق InputStream بشكل صحيح، مما يمنع تسرب الموارد التي قد تسبب مشاكل في التطبيقات طويلة التشغيل.
-
 ### الخطوة 4: تطبيق الترخيص مع التحقق
+
+`setLicense(InputStream)` يطبق تدفق الترخيص المقدم على جميع مكونات GroupDocs. فورًا بعد التعيين، استدعِ `License.isValidLicense()` لضمان أن الترخيص تم تحليله بشكل صحيح.
 
 ```java
 License license = new License();
@@ -177,7 +242,11 @@ try {
 }
 ```
 
+إذا فشل التحقق، سجّل الخطأ واختياريًا انتقل إلى ترخيص احتياطي (مثل ترخيص تجريبي) لإبقاء الخدمة حية.
+
 ### الخطوة 5: التحقق الشامل من الترخيص
+
+LicenseInfo يحمل تفاصيل عن الترخيص المحمّل مثل تاريخ الانتهاء، أعلام الميزات، والنطاقات المسموح بها. هذا الفحص الإضافي مفيد في سيناريوهات SaaS متعددة المستأجرين.
 
 ```java
 if (!License.isValidLicense()) {
@@ -192,29 +261,26 @@ if (!License.isValidLicense()) {
 
 فهم خياراتك يساعدك على اختيار النهج المناسب لحالتك الخاصة:
 
-### مسار الملف مقابل InputStream مقابل الترخيص المدمج
+### مسار الملف vs. InputStream vs. الترخيص المدمج
 
-**ترخيص مسار الملف:**
-- ✅ سهل التنفيذ
-- ❌ تحديات النشر في الحاويات
-- ❌ تبعيات المسار عبر البيئات
+**ترخيص مسار الملف:**  
+- ✅ سهل التنفيذ بسطر واحد من الكود.  
+- ❌ يتعطل في الحاويات حيث تختلف المسارات المطلقة بين البنيات.  
 
-**ترخيص InputStream (مستحسن):**
-- ✅ خيارات نشر مرنة
-- ✅ صديق للحاويات
-- ✅ يعمل مع مختلف أنظمة التخزين
-- ❌ تنفيذ أكثر تعقيدًا قليلاً
+**ترخيص InputStream (مُوصى به):**  
+- ✅ يعمل مع أي خلفية تخزين (محلية، S3، Azure Blob، قاعدة بيانات).  
+- ✅ لا توجد تبعيات ثابتة لنظام الملفات.  
+- ❌ يتطلب كودًا أكثر قليلًا، لكن المرونة تفوق العبء.  
 
-**الترخيص المدمج:**
-- ✅ لا تبعيات ملفات خارجية
-- ❌ الترخيص مرئي في الكود المترجم
-- ❌ صعب تحديث الترخيص
+**الترخيص المدمج:**  
+- ✅ لا حاجة لملف خارجي؛ الترخيص مدمج داخل الـ JAR.  
+- ❌ تحديث الترخيص يتطلب بناء جديد وإعادة نشر.  
 
 ## سيناريوهات النشر الشائعة
 
 ### السيناريو 1: نشر خادم تقليدي
 
-للنشر على خوادم تقليدية، عادةً ما تخزن ملف الترخيص في دليل التكوين:
+لخوادم on‑prem عادةً ما تخزن الترخيص في دليل تكوين وتُشير إليه عبر متغيّر بيئي:
 
 ```java
 // Example for server deployment
@@ -223,7 +289,7 @@ String licensePath = System.getProperty("app.config.dir", "/etc/myapp/") + "lice
 
 ### السيناريو 2: نشر حاوية Docker
 
-في البيئات المُحَزَّمَة، قد تقوم بتركيب الترخيص كسر أو حجم:
+قم بتركيب الترخيص كحجم سري أو أدخله عبر سكريبت entry‑point يكتب الملف إلى `/opt/groupdocs/license.lic`:
 
 ```java
 // Docker-friendly approach
@@ -233,9 +299,9 @@ if (licensePath == null) {
 }
 ```
 
-### السيناريو 3: التطبيقات السحابية الأصلية
+### السيناريو 3: تطبيقات سحابية‑محلية
 
-للنشر السحابي، قد تقوم بتحميل الترخيص من تخزين سحابي:
+ByteArrayInputStream هي فئة جافا تُنشئ InputStream من مصفوفة بايتات. استرجع الترخيص من حاوية تخزين سحابي (AWS S3، Azure Blob، Google Cloud Storage)، حوّل مصفوفة البايتات إلى `ByteArrayInputStream`، ومرره إلى `License.setLicense()`:
 
 ```java
 // Example: Loading from cloud storage (pseudo-code)
@@ -245,12 +311,12 @@ InputStream licenseStream = cloudStorageClient.getObject("bucket", "license.lic"
 
 ## دليل استكشاف الأخطاء المتقدم
 
-### خطأ شائع: "License is not valid"
+### الخطأ الشائع: "license is not valid"
 
-**الأعراض:** `License.isValidLicense()` يُعيد `false`  
-**الأسباب:** ترخيص منتهي، نوع ترخيص غير صحيح، ملف تالف، تنسيق غير صحيح  
+**الأعراض:** `License.isValidLicense()` تُعيد `false`.  
+**الأسباب:** ترخيص منتهي، نسخة منتج غير متطابقة، ملف تالف، أو تنسيق ملف غير صحيح.  
 
-**الحل:**
+**الحل:** تحقق من ملف الترخيص عبر بوابة GroupDocs، أعد تحميله، وتأكد من عدم تعديل تدفق البايتات أثناء النقل.
 
 ```java
 // Add detailed license validation
@@ -266,12 +332,12 @@ try {
 }
 ```
 
-### خطأ شائع: FileNotFoundException
+### الخطأ الشائع: `FileNotFoundException`
 
-**الأعراض:** عدم القدرة على العثور على ملف الترخيص أثناء وقت التشغيل  
-**الأسباب:** تكوين مسار غير صحيح، ملف مفقود في النشر، مشاكل أذونات  
+**الأعراض:** التطبيق لا يستطيع العثور على ملف الترخيص وقت التشغيل.  
+**الأسباب:** تكوين مسار خاطئ، ملف مفقود في صورة Docker، أو أذونات ملف غير كافية.  
 
-**الحل:** تنفيذ استراتيجية احتياطية:
+**الحل:** نفّذ آلية احتياطية تتحقق أولاً من متغيّر بيئي، ثم تبحث عن مورد في classpath، وأخيرًا تسجل خطأ واضح قبل الإنهاء.
 
 ```java
 String[] possiblePaths = {
@@ -290,12 +356,13 @@ for (String path : possiblePaths) {
 }
 ```
 
-### خطأ شائع: مشاكل الذاكرة مع المستندات الكبيرة
+### الخطأ الشائع: مشاكل الذاكرة مع المستندات الكبيرة
 
-**الأعراض:** `OutOfMemoryError` أثناء معالجة المستند  
-**الأسباب:** مساحة heap غير كافية في JVM، مستندات ضخمة جدًا، تسربات الذاكرة  
+`setMemoryOptimization(boolean)` يُفعّل وضع توفير الذاكرة في GroupDocs عندما يُضبط على true.  
+**الأعراض:** `OutOfMemoryError` أثناء معالجة التعليقات.  
+**الأسباب:** تحميل المستند بالكامل في الذاكرة، Heap JVM غير كافٍ، أو عدم وجود خيارات معالجة تعتمد على التدفق.  
 
-**الحل:** تحسين إعدادات JVM وتنفيذ إدارة موارد صحيحة:
+**الحل:** زد حجم Heap JVM (`-Xmx2g` أو أعلى)، فعّل `License.setMemoryOptimization(true)`, وعالج المستندات على دفعات عندما يكون ذلك ممكنًا.
 
 ```java
 // Set appropriate JVM flags
@@ -306,7 +373,7 @@ for (String path : possiblePaths) {
 
 ### إدارة الذاكرة
 
-عند العمل مع GroupDocs.Annotation، يكون الاستخدام الفعال للذاكرة أمرًا حاسمًا:
+عند العمل مع GroupDocs.Annotation، فعّل التحميل الكسول وأفرغ الموارد فورًا:
 
 ```java
 // Always close resources properly
@@ -318,7 +385,7 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 
 ### تحسين المعالجة الدفعية
 
-لمعالجة مستندات متعددة، نفّذ معالجة دفعية:
+لوظائف التعليقات الضخمة، أعد استخدام كائن `License` واحد وعالج المستندات في مُنفّذ مؤشرات خيوط لزيادة استغلال CPU دون إغراق الذاكرة.
 
 ```java
 // Process documents in batches to manage memory
@@ -333,9 +400,9 @@ for (int i = 0; i < documents.size(); i += batchSize) {
 }
 ```
 
-### تخزين التحقق من الترخيص في الذاكرة المؤقتة
+### تخزين نتيجة التحقق من الترخيص مؤقتًا
 
-احفظ نتائج التحقق من الترخيص لتجنب الوصول المتكرر إلى نظام الملفات:
+خزن نتيجة `License.isValidLicense()` في متغيّر ثابت أو ذاكرة موزعة (مثل Redis) لتجنب قراءات نظام الملفات المتكررة في كل طلب.
 
 ```java
 private static Boolean licenseValid = null;
@@ -352,7 +419,7 @@ public static boolean isLicenseValid() {
 
 ### حماية ملفات الترخيص
 
-**التشفير:** فكر في تشفير ملفات الترخيص أثناء التخزين:
+**التشفير:** خزن الترخيص مشفرًا في حالة السكون وفك تشفيره في الذاكرة قبل إنشاء `InputStream`.
 
 ```java
 // Example: Reading encrypted license file
@@ -361,9 +428,9 @@ byte[] decryptedLicense = decrypt(encryptedLicense);
 InputStream stream = new ByteArrayInputStream(decryptedLicense);
 ```
 
-**التحكم في الوصول:** تأكد من ضبط أذونات الملفات بشكل صحيح (600 أو 400) على ملفات الترخيص لمنع الوصول غير المصرح به.
+**التحكم في الوصول:** اضبط أذونات الملف إلى `600` (قراءة/كتابة للمالك فقط) على لينكس أو قيد ACLs على ويندوز.  
 
-**متغيرات البيئة:** استخدم متغيرات البيئة للمسارات الحساسة:
+**متغيّرات البيئة:** استخدم مدير أسرار (AWS Secrets Manager، Azure Key Vault) لتخزين مسار الترخيص أو محتوى الترخيص المشفر Base64، واقرأه عند بدء التشغيل.
 
 ```java
 String licensePath = System.getenv("GROUPDOCS_LICENSE_PATH");
@@ -371,19 +438,19 @@ String licensePath = System.getenv("GROUPDOCS_LICENSE_PATH");
 
 ## قائمة التحقق للنشر في الإنتاج
 
-قبل نشر تطبيق GroupDocs.Annotation مع ترخيص InputStream:
-
 - [ ] تم التحقق من إمكانية الوصول إلى ملف الترخيص في البيئة المستهدفة  
 - [ ] تم تنفيذ معالجة الأخطاء لجميع سيناريوهات الفشل  
-- [ ] تم تكوين التسجيل لأحداث الترخيص  
-- [ ] تم إكمال اختبار الأداء بأحجام مستندات واقعية  
-- [ ] تم مراجعة الأمان لمعالجة ملفات الترخيص  
-- [ ] تم إعداد خطة احتياطية لحالات انتهاء الترخيص  
-- [ ] تم إعداد مراقبة لفشل التحقق من الترخيص  
+- [ ] تم تكوين السجلات لأحداث الترخيص (INFO عند النجاح، WARN عند الفشل)  
+- [ ] تم إكمال اختبار الأداء بأحجام مستندات واقعية (مثلاً PDFs من 200 صفحة)  
+- [ ] تم مراجعة أمان معالجة ملف الترخيص (تشفير، أذونات)  
+- [ ] خطة احتياطية لسيناريوهات انتهاء الترخيص (تنبيهات مراقبة)  
+- [ ] تم إعداد مراقبة لفشل التحقق من الترخيص (مقياس Prometheus `groupdocs_license_valid`)  
 
 ## أمثلة تكامل من العالم الحقيقي
 
-### تكامل Spring Boot
+### تكامل Spring boot
+
+دمج منطق الترخيص داخل طريقة `@PostConstruct` في Bean سبرينغ لتعمل مرة واحدة عند بدء تشغيل التطبيق:
 
 ```java
 @Component
@@ -412,7 +479,7 @@ public class GroupDocsLicenseManager {
 
 ### نمط الميكروسيرفيس
 
-للتطبيقات الميكروسيرفيس، فكر في تنفيذ خدمة ترخيص مشتركة:
+قدّم **خدمة الترخيص** المخصصة التي تستدعيها الميكروسيرفيسات الأخرى عبر gRPC أو REST للحصول على `InputStream` مُتحقق. يركز هذا على إدارة الأسرار ويقلل التكرار.
 
 ```java
 @Service
@@ -430,6 +497,8 @@ public class LicenseService {
 
 ### تحميل الترخيص من قاعدة بيانات
 
+خزن الـ `.lic` كـ BLOB في جدول مؤمن، اقرأه عبر JDBC، غلف البايتات في `ByteArrayInputStream`، وطبق الترخيص:
+
 ```java
 byte[] licenseData = loadLicenseFromDatabase();
 InputStream stream = new ByteArrayInputStream(licenseData);
@@ -437,32 +506,32 @@ InputStream stream = new ByteArrayInputStream(licenseData);
 
 ## الأسئلة المتكررة
 
-**س: هل يمكنني استخدام نفس ملف الترخيص لعدة تطبيقات؟**  
-ج: نعم، لكن تحقق من شروط الترخيص الخاص بك. بعض التراخيص تكون لكل تطبيق أو لكل خادم. استخدام InputStream يجعل مشاركة الملف بين الخدمات سهلًا.
+**س: هل يمكنني استخدام ملف الترخيص نفسه لعدة تطبيقات؟**  
+ج: نعم، لكن راجع اتفاقية الترخيص الخاصة بك—بعض الخطط تكون لكل تطبيق أو لكل خادم. تحميل الترخيص عبر InputStream يجعل المشاركة بسيطة.
 
-**س: ماذا يحدث إذا انتهى ترخيصي أثناء وقت التشغيل؟**  
-ج: عادةً ما يستمر GroupDocs.Annotation في العمل بوضع تجريبي، مع إضافة علامات مائية أو تقييد الميزات. راقب `License.isValidLicense()` وخطط لتجديد الترخيص.
+**س: ماذا يحدث إذا انتهى الترخيص أثناء وقت التشغيل؟**  
+ج: يتحول GroupDocs.Annotation إلى وضع تجريبي، يضيف علامات مائية ويقيد الميزات المتميزة. راقب `License.isValidLicense()` باستمرار لتفعيل سير عمل التجديد.
 
 **س: كيف أتعامل مع تحديثات الترخيص دون إعادة تشغيل التطبيق؟**  
-ج: حاليًا يلزم إعادة تشغيل لتفعيل الترخيص الجديد. استخدم عمليات النشر الأزرق‑الأخضر أو إعادة تشغيل دورية لتجنب توقف الخدمة.
+ج: في الوقت الحالي يلزم إعادة تشغيل JVM كاملة لتفعيل الترخيص الجديد. استخدم نشرات blue‑green أو إعادة تشغيل متدرجة لتقليل وقت التوقف.
 
 **س: هل من الآمن تسجيل أخطاء التحقق من الترخيص؟**  
-ج: سجّل أن التحقق فشل، لكن لا تسجل محتوى الترخيص أو تفاصيل حساسة. احرص على أن تكون السجلات قابلة للعمل وآمنة.
+ج: سجّل رسالة الخطأ وتتبع الاستثناء، لكن لا تسجل محتوى الترخيص الأصلي أو المفاتيح الخاصة. اجعل السجلات قابلة للإجراءات وآمنة.
 
-**س: هل يمكنني تحميل الترخيص من حاوية تخزين سحابية؟**  
-ج: بالتأكيد. استرجع البايتات، غلفها في `ByteArrayInputStream`، ومرّرها إلى `License.setLicense()`.
+**س: هل يمكنني تحميل الترخيص من حاوية تخزين سحابي؟**  
+ج: بالتأكيد. استرجع البايتات، غلفها في `ByteArrayInputStream`، ومرّرها إلى `License.setLicense()`. يعمل ذلك مع S3، Azure Blob، Google Cloud Storage، وحتى نقاط النهاية HTTP الخاصة.
 
-## الخاتمة
+## الخلاصة
 
-لقد أتقنت الآن **كيفية تعيين ترخيص GroupDocs باستخدام InputStream** لتطبيق Annotation في جافا. يمنحك هذا النهج المرونة للنشر عبر بيئات متنوعة مع الحفاظ على معالجة الأخطاء القوية والأداء.
+أصبح لديك الآن دليل كامل جاهز للإنتاج حول **كيفية تعيين ترخيص groupdocs** باستخدام `InputStream` لت anotations جافا. توفر لك هذه الطريقة المرونة للنشر عبر الخوادم التقليدية، حاويات Docker، والبيئات السحابية مع الحفاظ على أمان الترخيص وأدائه.
 
 **النقاط الرئيسية**
-- ترخيص InputStream يوفر أقصى مرونة للنشر
-- دائمًا تحقق من الصحة وتعامل مع الأخطاء بلطف
-- خصص التنفيذ لسيناريو النشر الخاص بك (خادم، Docker، سحابة)
-- راقب حالة الترخيص في الإنتاج
+- ترخيص InputStream يوفر أقصى مرونة للنشر.  
+- دائمًا تحقق من الترخيص وتعامل مع الأخطاء قبل معالجة المستندات.  
+- خصص التنفيذ وفقًا لسيناريو النشر الخاص بك (خادم، Docker، سحابة).  
+- راقب حالة الترخيص في الإنتاج وضع تنبيهات لانتهاء الصلاحية.
 
-هل أنت مستعد لتطبيق ذلك في مشروعك؟ ابدأ بالإعداد الأساسي، ثم أضف الأنماط المتقدمة مع نمو احتياجاتك. برمجة سعيدة!
+ابدأ بالإعداد الأساسي الموضح أعلاه، ثم تطور إلى الأنماط المتقدمة مع توسع تطبيقك. Happy coding!
 
 ## موارد إضافية
 
@@ -476,6 +545,12 @@ InputStream stream = new ByteArrayInputStream(licenseData);
 
 ---
 
-**آخر تحديث:** 2026-02-23  
+**آخر تحديث:** 2026-08-19  
 **تم الاختبار مع:** GroupDocs.Annotation 25.2  
 **المؤلف:** GroupDocs
+
+## دروس ذات صلة
+
+- [Check License Status – GroupDocs Annotation Java Licensing Guide](/annotation/java/licensing-and-configuration/)
+- [Set GroupDocs License Java – GroupDocs Annotation License Java Setup](/annotation/java/licensing-and-configuration/groupdocs-annotation-license-java-setup/)
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
