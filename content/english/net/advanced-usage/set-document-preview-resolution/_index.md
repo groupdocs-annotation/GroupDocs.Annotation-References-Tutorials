@@ -3,7 +3,6 @@ title: "Reduce Preview File Size – Set Document Preview Resolution in .NET"
 linktitle: "Set Document Preview Resolution"
 second_title: GroupDocs.Annotation .NET API
 description: "Learn how to reduce preview file size and how to set preview resolution .NET with GroupDocs.Annotation. Boost PDF preview quality, customize DPI, and solve common resolution issues."
-keywords: "document preview resolution .NET, GroupDocs annotation preview settings, PDF preview resolution C#, .NET document preview DPI, customize document preview quality"
 weight: 23
 url: /net/advanced-usage/set-document-preview-resolution/
 date: "2026-04-14"
