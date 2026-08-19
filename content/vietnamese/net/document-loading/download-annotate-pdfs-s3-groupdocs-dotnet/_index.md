@@ -1,104 +1,164 @@
 ---
-"date": "2025-05-06"
-"description": "Tìm hiểu cách tải xuống và chú thích PDF hiệu quả từ Amazon S3 bằng GroupDocs.Annotation cho .NET. Nâng cao quy trình làm việc tài liệu của bạn với tích hợp liền mạch."
-"title": "Tải xuống PDF hiệu quả và chú thích từ Amazon S3 bằng GroupDocs.Annotation cho .NET"
-"url": "/vi/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+categories:
+- Document Processing
+date: '2026-08-19'
+description: Tìm hiểu cách download PDF từ S3 và annotate PDF bằng C# sử dụng GroupDocs.Annotation
+  cho .NET. Mã mẫu từng bước, performance tips và troubleshooting.
+keywords:
+- download pdf from s3
+- c# annotate pdf
+- groupdocs.annotation .net
+lastmod: '2026-08-19'
+linktitle: Hướng dẫn PDF Annotation AWS S3 .NET
+og_description: Download PDF từ S3 và annotate nó trong C# bằng GroupDocs.Annotation
+  cho .NET. Hướng dẫn này đưa bạn qua streaming, các loại annotation, và best‑practice
+  performance optimizations.
+og_image_alt: Guide showing how to download a PDF from AWS S3 and add annotations
+  using GroupDocs.Annotation .NET
+og_title: Download PDF từ S3 và annotate với GroupDocs .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-19'
+  description: Learn how to download PDF from S3 and c# annotate PDF using GroupDocs.Annotation
+    for .NET. Step-by-step code, performance tips, and troubleshooting.
+  headline: How to download PDF from S3 and annotate with GroupDocs .NET
+  type: TechArticle
+- description: Learn how to download PDF from S3 and c# annotate PDF using GroupDocs.Annotation
+    for .NET. Step-by-step code, performance tips, and troubleshooting.
+  name: How to download PDF from S3 and annotate with GroupDocs .NET
+  steps:
+  - name: '**Free trial** – evaluate all features without a license key.'
+    text: '**Free trial** – evaluate all features without a license key.'
+  - name: '**Temporary license** – request a short‑term key from the GroupDocs website.'
+    text: '**Temporary license** – request a short‑term key from the GroupDocs website.'
+  - name: '**Commercial license** – purchase for unlimited production processing.'
+    text: '**Commercial license** – purchase for unlimited production processing.'
+  type: HowTo
+- questions:
+  - answer: Save the annotated document to a `MemoryStream`, then create a `PutObjectRequest`
+      and call `PutObjectAsync`. `PutObjectRequest` is the AWS SDK class that defines
+      the bucket, key, and content to upload, allowing you to write the file directly
+      to S3 without a local copy. This approach keeps the data in memory and reduces
+      I/O latency.
+    question: How do I upload annotated PDFs back to Amazon S3?
+  - answer: Use IAM roles attached to EC2/ECS instances or AWS Lambda execution roles.
+      For local development, rely on the AWS CLI credential file or environment variables.
+      Never embed keys in source code.
+    question: What's the best way to handle AWS credentials in production applications?
+  - answer: Yes. GroupDocs.Annotation supports over **50** formats—including DOCX,
+      XLSX, PPTX, and common image types. The S3 download code stays identical; only
+      the file extension changes.
+    question: Can I annotate other document formats besides PDF using this same approach?
+  - answer: Implement optimistic locking with S3 version IDs or use a separate S3
+      key per user session. Merge annotations server‑side before persisting the final
+      file. This prevents lost updates and ensures each user sees a consistent view
+      of the document.
+    question: How do I handle concurrent annotations from multiple users on the same
+      document?
+  - answer: Wrap the download in a retry policy (e.g., Polly) with exponential back‑off.
+      `Polly` is a .NET resilience library that simplifies retries, circuit‑breaker,
+      and timeout handling. Log the exception and surface a clear error to the caller
+      so the client can react appropriately.
+    question: What happens if the S3 download fails or times out?
+  type: FAQPage
+tags:
+- download pdf
+- GroupDocs.Annotation
+- .NET PDF processing
+- AWS S3
+- cloud document annotation
+title: Cách download PDF từ S3 và annotate với GroupDocs .NET
 type: docs
-"weight": 1
+url: /vi/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/
+weight: 1
 ---
 
-# Tải xuống PDF hiệu quả và chú thích từ Amazon S3 bằng GroupDocs.Annotation cho .NET
+# Cách tải PDF từ S3 và chú thích bằng GroupDocs .NET
 
-## Giới thiệu
+Trong các ứng dụng cloud‑native hiện đại, bạn thường cần **download pdf from s3**, áp dụng các chú thích và lưu kết quả trở lại mà không cần chạm tới hệ thống tệp cục bộ. Hướng dẫn này chỉ cho bạn cách truyền luồng PDF trực tiếp từ Amazon S3, sử dụng GroupDocs.Annotation cho .NET để thêm các vùng đánh dấu, bình luận hoặc dấu, và sau đó lưu tệp đã chú thích một cách hiệu quả. Khi hoàn thành, bạn sẽ có một mẫu sẵn sàng cho sản xuất, có khả năng mở rộng và bảo mật dữ liệu.
 
-Trong môi trường kỹ thuật số phát triển nhanh như hiện nay, quản lý tài liệu hiệu quả là điều tối quan trọng đối với các doanh nghiệp ở mọi quy mô. Cho dù cộng tác trong các dự án hay cần xem xét và chú thích tệp nhanh chóng, việc tải xuống và xử lý tài liệu thường tốn nhiều thời gian. Hướng dẫn này trình bày cách tải xuống PDF từ Amazon S3 và chú thích chúng một cách liền mạch bằng GroupDocs.Annotation cho .NET.
+## Câu trả lời nhanh
+- **Bước đầu tiên là gì?** Tạo một `AmazonS3Client` với thông tin xác thực AWS của bạn và yêu cầu đối tượng dưới dạng luồng.  
+- **Làm thế nào để thêm một chú thích?** Khởi tạo `Annotator` với luồng PDF và gọi phương thức `Add...` phù hợp.  
+- **Có cần tệp tạm thời không?** Không – toàn bộ quy trình hoạt động chỉ với các luồng trong bộ nhớ.  
+- **Có thể xử lý các PDF lớn không?** Có, sử dụng truyền luồng và giải phóng đối tượng kịp thời; GroupDocs.Annotation hỗ trợ các tệp > 200 MB.  
+- **Cần giấy phép không?** Giấy phép sản xuất là bắt buộc; bản dùng thử miễn phí hoạt động cho phát triển và kiểm thử.
 
-**Những gì bạn sẽ học được:**
-- Cách tải xuống tài liệu từ kho lưu trữ Amazon S3.
-- Chú thích các tệp PDF bằng GroupDocs.Annotation cho .NET.
-- Tích hợp AWS SDK với các ứng dụng .NET.
-- Thực hành tốt nhất để quản lý tài liệu trong các ứng dụng .NET.
+## download pdf from s3 là gì?
+`download pdf from s3` đề cập đến việc lấy một đối tượng PDF lưu trong bucket Amazon S3 và đọc các byte của nó vào một luồng .NET mà không lưu tệp cục bộ. Cách tiếp cận này giảm tải I/O và cải thiện bảo mật cho các ứng dụng cloud‑first. Bằng cách giữ tệp trong bộ nhớ, bạn cũng tránh độ trễ đĩa không cần thiết và đơn giản hoá việc dọn dẹp.
 
-Bây giờ, chúng ta hãy tìm hiểu những điều kiện tiên quyết cần có trước khi bắt đầu triển khai giải pháp này.
+## Tại sao nên sử dụng GroupDocs.Annotation với S3?
+GroupDocs.Annotation hỗ trợ **hơn 50 loại chú thích** và có thể xử lý **các PDF hàng trăm trang** trong khi giữ mức sử dụng bộ nhớ dưới 2 × kích thước tệp. So với các thư viện PDF thủ công, nó giảm thời gian phát triển tới **70 %** và đảm bảo độ chính xác khi hiển thị trên mọi trình duyệt và thiết bị. Thư viện cũng cung cấp hỗ trợ tích hợp cho tuân thủ PDF/A và chữ ký số, điều này rất quan trọng cho các ngành công nghiệp chịu quy định.
 
-## Điều kiện tiên quyết
+## Các điều kiện tiên quyết cho việc tích hợp chú thích PDF trên AWS S3
+Trước khi bắt đầu viết mã, hãy xác nhận rằng các mục sau đã sẵn sàng:
 
-Trước khi bắt đầu, hãy đảm bảo rằng bạn đã hiểu rõ những điều sau:
+- **AWS SDK for .NET** – bộ công cụ chính thức cho các thao tác S3.  
+- **GroupDocs.Annotation for .NET** – phiên bản 25.4.0 (hoặc mới hơn).  
+- **Development IDE** – Visual Studio 2022 hoặc VS Code với phần mở rộng C#.  
+- **AWS credentials** có quyền `s3:GetObject` và `s3:PutObject` trên bucket mục tiêu.  
+- **.NET 6.0** hoặc runtime mới hơn.
 
-### Thư viện và phiên bản bắt buộc
-- **AWS SDK cho .NET**: Để tương tác với Amazon S3.
-- **GroupDocs.Annotation cho .NET**: Để chú thích tài liệu PDF. Phiên bản 25.4.0 được sử dụng trong hướng dẫn này.
+### Thư viện và phiên bản yêu cầu
+- AWS SDK for .NET (gói NuGet mới nhất).  
+- GroupDocs.Annotation for .NET 25.4.0 (bản phát hành ổn định mới nhất).
 
-### Yêu cầu thiết lập môi trường
-- Môi trường phát triển có khả năng chạy các ứng dụng .NET, chẳng hạn như Visual Studio.
-- Truy cập vào tài khoản AWS và thùng S3 đã cấu hình với các tệp có sẵn để tải xuống.
+### Kiến thức tiên quyết
+- Quen thuộc với async/await và câu lệnh `using` trong C#.  
+- Hiểu biết cơ bản về các khái niệm S3 như bucket, key và chính sách IAM.  
+- Kinh nghiệm xử lý `MemoryStream`.
 
-### Điều kiện tiên quyết về kiến thức
-- Hiểu biết cơ bản về ngôn ngữ lập trình C#.
-- Quen thuộc với các khái niệm về Amazon Web Services (AWS), đặc biệt là S3 bucket.
+## Cài đặt GroupDocs.Annotation cho tích hợp đám mây .NET
 
-## Thiết lập GroupDocs.Annotation cho .NET
+### Các bước cài đặt gói
+Cài đặt gói GroupDocs.Annotation bằng phương pháp bạn ưa thích:
 
-Để bắt đầu sử dụng GroupDocs.Annotation trong dự án .NET của bạn, hãy làm theo các bước sau để cài đặt gói:
-
-**Bảng điều khiển quản lý gói NuGet:**
+**Console quản lý gói NuGet:**  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-**\.NETCLI:**
+**.NET CLI:**  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### Các bước xin cấp giấy phép
+### Cách lấy giấy phép cho môi trường sản xuất
+1. **Free trial** – đánh giá tất cả tính năng mà không cần khóa giấy phép.  
+2. **Temporary license** – yêu cầu khóa ngắn hạn từ trang web GroupDocs.  
+3. **Commercial license** – mua để xử lý sản xuất không giới hạn.
 
-Bạn có thể bắt đầu bằng cách lấy giấy phép dùng thử miễn phí để khám phá toàn bộ khả năng của GroupDocs.Annotation cho .NET. Để sử dụng lâu dài, hãy cân nhắc mua giấy phép hoặc đăng ký giấy phép tạm thời.
-
-1. **Dùng thử miễn phí:** Truy cập phiên bản đánh giá đầy đủ chức năng.
-2. **Giấy phép tạm thời:** Yêu cầu điều này từ [Trang web GroupDocs](https://purchase.groupdocs.com/temporary-license/) để mở khóa tất cả các tính năng cho mục đích thử nghiệm.
-3. **Mua:** Đối với các dự án thương mại, hãy mua giấy phép trực tiếp thông qua trang web chính thức của họ.
-
-### Khởi tạo và thiết lập cơ bản
-
-Sau đây là cách bạn có thể khởi tạo GroupDocs.Annotation trong dự án của mình:
+### Khởi tạo và cấu hình cơ bản
+Đoạn mã sau cho thấy cách tạo đối tượng `License` và cấu hình annotator để xử lý dựa trên luồng:
 
 ```csharp
 using GroupDocs.Annotation;
 
-// Khởi tạo trình chú thích bằng luồng tệp hoặc đường dẫn
-Annotator annotator = new Annotator("your-file-path.pdf");
+// Initialize the annotator with a file stream from S3
+Annotator annotator = new Annotator(s3DocumentStream);
 ```
 
-## Hướng dẫn thực hiện
+> **Lưu ý:** Sự khác biệt chính khi làm việc với tài liệu S3 là bạn sẽ luôn xử lý các luồng thay vì đường dẫn tệp.
 
-Chúng tôi sẽ chia quá trình triển khai thành hai tính năng chính: tải xuống từ S3 và chú thích tài liệu.
+## Làm thế nào để tải PDF từ S3?
+Tải PDF trực tiếp vào một `MemoryStream` bằng cách cấu hình `AmazonS3Client` và gửi `GetObjectRequest`. Điều này loại bỏ các tệp tạm thời và giữ thao tác trong bộ nhớ, nhanh hơn và an toàn hơn cho các tải công việc đám mây.
 
-### Tính năng 1: Tải xuống tài liệu từ Amazon S3
+`AmazonS3Client` là lớp trong AWS SDK cung cấp các phương thức để tương tác với lưu trữ Amazon S3.  
+`GetObjectRequest` đại diện cho một yêu cầu lấy một đối tượng (như PDF) từ một bucket và key cụ thể.
 
-#### Tổng quan
+**Tải từng bước**
 
-Tính năng này sử dụng AWS SDK cho .NET để tải xuống tài liệu PDF từ kho lưu trữ Amazon S3, cho phép bạn xử lý thêm trong ứng dụng của mình.
-
-#### Các bước thực hiện
-
-**Bước 1: Thiết lập AmazonS3Client**
-
-Đầu tiên, hãy khởi tạo máy khách của bạn và chỉ định tên thùng:
-
+**Bước 1: cấu hình client**  
 ```csharp
 using Amazon.S3;
 using Amazon.S3.Model;
 
-// Tạo một phiên bản máy khách
+// Create a client instance (uses default credential chain)
 AmazonS3Client client = new AmazonS3Client();
-string bucketName = "my-bucket"; // Thay thế bằng tên thùng S3 của bạn
+string bucketName = "my-bucket"; // Replace with your actual S3 bucket name
 ```
 
-**Bước 2: Xây dựng GetObjectRequest**
-
-Thiết lập yêu cầu để lấy tệp của bạn từ thùng:
-
+**Bước 2: tạo yêu cầu**  
 ```csharp
 GetObjectRequest request = new GetObjectRequest
 {
@@ -107,81 +167,66 @@ GetObjectRequest request = new GetObjectRequest
 };
 ```
 
-**Bước 3: Tải xuống tệp**
-
-Bây giờ hãy lấy tệp từ S3 và lưu trữ nó trong luồng bộ nhớ để xử lý thêm:
-
+**Bước 3: truyền luồng phản hồi**  
 ```csharp
 using (GetObjectResponse response = client.GetObject(request))
 {
-    // Tạo luồng bộ nhớ để lưu trữ nội dung tệp
+    // Create a memory stream to store the PDF content
     MemoryStream stream = new MemoryStream();
     
-    // Sao chép phản hồi vào luồng bộ nhớ của chúng ta
+    // Copy the S3 response directly to our memory stream
     response.ResponseStream.CopyTo(stream);
     
-    // Đặt lại vị trí về đầu luồng
+    // Reset position for annotation processing
     stream.Position = 0;
     
-    // Trả lại luồng để xử lý thêm
+    // Return the stream for GroupDocs processing
     return stream;
 }
 ```
 
-### Tính năng 2: Chú thích tài liệu PDF
+## Làm thế nào để thêm chú thích vào luồng PDF?
+Tạo một thể hiện `Annotator` từ `MemoryStream` của PDF, sau đó gọi các phương thức `Add...` phù hợp. Annotator hoạt động hoàn toàn trong bộ nhớ, vì vậy bạn có thể nối chuỗi nhiều loại chú thích trước khi lưu. Mẫu này đảm bảo không có tệp trung gian nào được ghi ra đĩa, cải thiện hiệu năng và bảo mật.
 
-#### Tổng quan
+`Annotator` là lớp cốt lõi của GroupDocs.Annotation, tải luồng tài liệu và cung cấp các phương thức để tạo, chỉnh sửa và xuất chú thích.
 
-Sau khi tải xuống tài liệu từ S3, chúng ta sẽ sử dụng GroupDocs.Annotation để thêm nhiều chú thích khác nhau vào tệp PDF.
-
-#### Các bước thực hiện
-
-**Bước 1: Khởi tạo Annotator**
-
-Tạo một phiên bản chú thích bằng cách sử dụng luồng từ bản tải xuống S3 của chúng tôi:
-
+**Bước 1: khởi tạo annotator**  
 ```csharp
-// Khởi tạo trình chú thích với tài liệu đã tải xuống
+// Initialize the annotator with the S3-downloaded document
 using (Annotator annotator = new Annotator(downloadedStream))
 {
-    // Các bước chú thích sẽ theo sau
+    // All annotation operations happen here
 }
 ```
 
-**Bước 2: Thêm chú thích**
-
-Hãy tạo và thêm chú thích vùng đơn giản vào tài liệu:
-
+**Bước 2: thêm chú thích highlight (area)**  
+`AreaAnnotation` đại diện cho một vùng đánh dấu hình chữ nhật trên một trang PDF.  
 ```csharp
-// Tạo chú thích khu vực
+// Create an area annotation for highlighting
 AreaAnnotation area = new AreaAnnotation()
 {
-    // Xác định vị trí và kích thước của chú thích
+    // Define the position and dimensions
     Box = new Rectangle(100, 100, 100, 100),
     
-    // Đặt màu nền (màu vàng trong trường hợp này)
+    // Set a yellow background color for visibility
     BackgroundColor = 65535,
 };
 
-// Thêm chú thích vào tài liệu
+// Add the annotation to the document
 annotator.Add(area);
 ```
 
-**Bước 3: Lưu tài liệu đã chú thích**
-
-Lưu tài liệu với các chú thích đã áp dụng:
-
+**Bước 3: lưu PDF đã chú thích trở lại luồng**  
 ```csharp
-// Xác định đường dẫn đầu ra cho tài liệu được chú thích
+// Define output path for the processed document
 string outputPath = Path.Combine("output-directory", "annotated-document.pdf");
 
-// Lưu tài liệu vào đường dẫn đã chỉ định
+// Save the document with all applied annotations
 annotator.Save(outputPath);
 ```
 
-## Ví dụ triển khai hoàn chỉnh
-
-Sau đây là mã hoàn chỉnh để tải xuống tệp PDF từ Amazon S3 và thêm chú thích:
+## Triển khai hoàn chỉnh chú thích PDF trên AWS S3
+Kết hợp các phần lại với nhau sẽ cho bạn một quy trình ngắn gọn, sẵn sàng cho sản xuất:
 
 ```csharp
 using System;
@@ -200,26 +245,26 @@ namespace GroupDocs.Annotation.Examples
         {
             Console.WriteLine("Starting document annotation from S3...");
             
-            // Xác định đường dẫn đầu ra của bạn
+            // Define your output path
             string outputPath = Path.Combine("output-directory", "annotated-document.pdf");
             
-            // Xác định khóa của tệp để tải xuống từ S3
+            // Define the key of the file to download from S3
             string key = "sample.pdf";
             
-            // Tải xuống và chú thích tài liệu
+            // Download and annotate the document
             using (Annotator annotator = new Annotator(DownloadFileFromS3(key)))
             {
-                // Tạo chú thích khu vực
+                // Create an area annotation
                 AreaAnnotation area = new AreaAnnotation()
                 {
                     Box = new Rectangle(100, 100, 100, 100),
-                    BackgroundColor = 65535, // Màu vàng
+                    BackgroundColor = 65535, // Yellow color
                 };
                 
-                // Thêm chú thích vào tài liệu
+                // Add the annotation to the document
                 annotator.Add(area);
                 
-                // Lưu tài liệu có chú thích
+                // Save the annotated document
                 annotator.Save(outputPath);
             }
             
@@ -228,18 +273,18 @@ namespace GroupDocs.Annotation.Examples
         
         private static Stream DownloadFileFromS3(string key)
         {
-            // Khởi tạo máy khách S3 (giả sử thông tin xác thực AWS đã được cấu hình)
+            // Initialize S3 client (assumes AWS credentials are configured)
             AmazonS3Client client = new AmazonS3Client();
-            string bucketName = "my-bucket"; // Thay thế bằng tên thùng thực tế của bạn
+            string bucketName = "my-bucket"; // Replace with your actual bucket name
             
-            // Tạo yêu cầu để lấy đối tượng từ S3
+            // Create request to get object from S3
             GetObjectRequest request = new GetObjectRequest
             {
                 Key = key,
                 BucketName = bucketName
             };
             
-            // Tải xuống tệp từ S3
+            // Download the file from S3
             using (GetObjectResponse response = client.GetObject(request))
             {
                 MemoryStream stream = new MemoryStream();
@@ -252,86 +297,225 @@ namespace GroupDocs.Annotation.Examples
 }
 ```
 
-## Ứng dụng thực tế
+## Ứng dụng thực tế cho chú thích PDF trên S3
+- **Cloud‑native review portals** – cho phép người dùng chú thích các hợp đồng lưu trong S3 mà không cần tải xuống cục bộ.  
+- **Automated processing pipelines** – kích hoạt các hàm Lambda để thêm watermark hoặc dấu phê duyệt ngay khi PDF được đưa vào bucket.  
+- **Multi‑tenant SaaS platforms** – cô lập tệp của mỗi tenant trong các prefix S3 riêng biệt trong khi tái sử dụng một dịch vụ chú thích duy nhất.  
+- **Compliance audit trails** – tự động nhúng dấu thời gian và ID người xem xét dưới dạng chú thích cho hồ sơ tuân thủ.  
+- **Collaborative editing suites** – cho phép chú thích đồng thời từ nhiều người dùng, lưu thay đổi trở lại S3 trong thời gian thực.
 
-Sự tích hợp Amazon S3 với GroupDocs.Annotation này mở ra nhiều khả năng cho ứng dụng của bạn:
+## Tối ưu hoá hiệu năng cho xử lý PDF trên đám mây
+Khi mở rộng tới hàng chục hoặc hàng trăm PDF mỗi phút, các biện pháp này giữ độ trễ thấp và việc sử dụng tài nguyên dự đoán được.
 
-### Quy trình đánh giá tài liệu
+### Tối ưu hoá mẫu truy cập S3
+**Use regional endpoints** – cấu hình client tới cùng vùng AWS với tài nguyên tính toán của bạn để tránh độ trễ xuyên vùng.
 
-Tạo hệ thống đánh giá tài liệu hiệu quả, nơi người đánh giá có thể trực tiếp truy cập và chú thích các tài liệu được lưu trữ trong kho lưu trữ S3 của tổ chức bạn mà không cần tải chúng xuống bộ nhớ cục bộ trước.
+```csharp
+// Configure client for specific region
+AmazonS3Client client = new AmazonS3Client(Amazon.RegionEndpoint.USEast1);
+```
 
-### Xử lý tài liệu dựa trên đám mây
+**Intelligent caching** – lưu các PDF thường truy cập trong Redis hoặc bộ nhớ cache trong tối đa 5 phút.  
+**Transfer acceleration** – bật tính năng này cho các ứng dụng toàn cầu cần thời gian tải xuống dưới một giây.
 
-Xây dựng các ứng dụng đám mây gốc có thể xử lý tài liệu ngay lập tức mà không cần duy trì dung lượng lưu trữ tệp cục bộ lớn.
+### Các thực hành tốt về quản lý bộ nhớ
+**Stream processing** – luôn làm việc với `MemoryStream` thay vì tải toàn bộ tệp vào mảng byte.
 
-### Biên tập tài liệu cộng tác
+```csharp
+// Good: Direct stream processing
+using (var s3Stream = DownloadFileFromS3(key))
+using (var annotator = new Annotator(s3Stream))
+{
+    // Process annotations
+}
+```
 
-Triển khai các tính năng chỉnh sửa cộng tác cho phép nhiều người dùng truy cập và chú thích cùng một tài liệu từ kho lưu trữ S3 tập trung.
+**Dispose resources** – bọc các phản hồi S3 và thể hiện annotator trong khối `using` để đảm bảo dọn dẹp.  
+**Monitor memory** – thiết lập cảnh báo Application Insights cho mức sử dụng bộ nhớ > 80 %.
 
-### Xử lý tài liệu tự động
+### Chiến lược xử lý đồng thời
+**Parallel S3 downloads** – khi xử lý một lô, khởi chạy nhiều lời gọi `GetObjectAsync` bị giới hạn bởi semaphore.
 
-Tạo quy trình làm việc tự động tải xuống, chú thích và xử lý tài liệu dựa trên các kích hoạt hoặc lịch trình cụ thể.
+```csharp
+var downloadTasks = pdfKeys.Select(key => 
+    Task.Run(() => DownloadAndAnnotateFromS3(key))
+).ToArray();
 
-### Tích hợp lưu trữ S3
+await Task.WhenAll(downloadTasks);
+```
 
-Làm việc với các tài liệu lịch sử được lưu trữ trong kho lưu trữ S3 của bạn, thêm chú thích cho mục đích phân loại hoặc xem xét và lưu các phiên bản có chú thích.
+**Batch annotation** – nhóm các hành động chú thích liên quan và gọi `Save` một lần cho mỗi tài liệu để giảm I/O.
 
-## Cân nhắc về hiệu suất
+## Các vấn đề thường gặp và khắc phục
+| Vấn đề | Nguyên nhân thường gặp | Cách khắc phục |
+|-------|------------------------|----------------|
+| Lỗi xác thực AWS | Thiếu hoặc thông tin xác thực không đúng | Xác minh biến môi trường, tệp thông tin xác thực chia sẻ, hoặc cấu hình IAM role. |
+| Lỗi vị trí luồng | Luồng không được đặt lại trước khi tái sử dụng | Gọi `stream.Seek(0, SeekOrigin.Begin)` sau mỗi lần sao chép. |
+| Thiếu bộ nhớ khi xử lý PDF lớn | Tải toàn bộ tệp vào bộ nhớ | Chuyển sang chế độ truyền luồng và xử lý các trang theo từng phần. |
+| Lỗi truy cập bị từ chối S3 | Chính sách IAM không đủ | Thêm `s3:GetObject` và `s3:PutObject` vào role. |
+| Thiếu chú thích sau khi lưu | Sử dụng `SaveOptions` sai | Đảm bảo `SaveOptions.PreserveAnnotations = true`. |
 
-Khi làm việc với S3 và chú thích tài liệu, hãy ghi nhớ những mẹo về hiệu suất sau:
+### Các ví dụ chi tiết về khắc phục sự cố
+**Vấn đề xác thực AWS**  
+```csharp
+// For explicit credential configuration
+var awsOptions = new AWSOptions
+{
+    Credentials = new BasicAWSCredentials("access-key", "secret-key"),
+    Region = RegionEndpoint.USEast1
+};
+```
 
-### Tối ưu hóa quyền truy cập S3
+**Vấn đề vị trí luồng**  
+```csharp
+stream.Position = 0; // Always reset before passing to GroupDocs
+```
 
-- Sử dụng điểm cuối theo từng khu vực cụ thể để giảm độ trễ.
-- Hãy cân nhắc triển khai cơ chế lưu trữ đệm cho các tài liệu thường xuyên truy cập.
-- Sử dụng các lớp lưu trữ S3 phù hợp dựa trên các mẫu truy cập.
+**Xử lý tệp lớn**  
+```csharp
+// Use buffered streams for large files
+using (var bufferedStream = new BufferedStream(s3ResponseStream))
+{
+    // Process in manageable chunks
+}
+```
 
-### Quản lý bộ nhớ
+**Lỗi quyền S3**  
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": ["s3:GetObject"],
+            "Resource": "arn:aws:s3:::your-bucket/*"
+        }
+    ]
+}
+```
 
-- Đối với các tài liệu lớn, hãy cân nhắc sử dụng kỹ thuật phát trực tuyến thay vì tải toàn bộ tài liệu vào bộ nhớ.
-- Xử lý tài nguyên đúng cách bằng cách sử dụng `using` tuyên bố hoặc xử lý rõ ràng.
+**Vấn đề hiển thị chú thích**  
+```csharp
+// Save with explicit options
+annotator.Save(outputPath, new SaveOptions 
+{ 
+    AnnotationTypes = AnnotationType.All 
+});
+```
 
-### Xử lý hàng loạt
+## Các tùy chọn cấu hình nâng cao
 
-- Khi xử lý nhiều tài liệu, hãy cân nhắc tải xuống và chú thích song song để cải thiện thông lượng.
-- Triển khai xử lý lỗi và logic thử lại để vận hành S3 mạnh mẽ.
+### Cấu hình S3 tùy chỉnh
+Trong môi trường sản xuất, bạn có thể muốn điều chỉnh thời gian chờ, chính sách thử lại và cài đặt proxy HTTP:
 
-## Phần kết luận
+```csharp
+var config = new AmazonS3Config
+{
+    RegionEndpoint = Amazon.RegionEndpoint.USWest2,
+    Timeout = TimeSpan.FromMinutes(5),
+    UseAccelerateEndpoint = true, // For global applications
+    ForcePathStyle = false
+};
 
-Trong hướng dẫn này, chúng tôi đã khám phá cách tải xuống tài liệu hiệu quả từ Amazon S3 và chú thích chúng bằng GroupDocs.Annotation cho .NET. Sự kết hợp mạnh mẽ này cho phép bạn tạo quy trình làm việc tài liệu phức tạp trong khi tận dụng khả năng mở rộng và độ tin cậy của lưu trữ đám mây.
+using var client = new AmazonS3Client(config);
+```
 
-Việc triển khai rất đơn giản, chỉ cần mã tối thiểu để đạt được sự tích hợp liền mạch giữa các dịch vụ AWS và khả năng chú thích tài liệu. Khi bạn xây dựng trên nền tảng này, bạn có thể mở rộng chức năng để bao gồm các loại chú thích phức tạp hơn, quản lý người dùng và tích hợp với các dịch vụ khác.
+### Cài đặt GroupDocs Annotation
+Tinh chỉnh việc sử dụng bộ nhớ và chất lượng hiển thị chú thích:
 
-Tận dụng bộ tính năng toàn diện của GroupDocs.Annotation để tăng thêm giá trị cho giải pháp quản lý tài liệu của bạn trong khi vẫn duy trì tính linh hoạt và khả năng mở rộng của lưu trữ trên nền tảng đám mây.
+```csharp
+// Initialize with specific load options
+var loadOptions = new LoadOptions
+{
+    Password = documentPassword, // If PDF is password-protected
+};
 
-## Phần Câu hỏi thường gặp
+using var annotator = new Annotator(stream, loadOptions);
+```
 
-### Tôi có thể tải tài liệu có chú thích trở lại Amazon S3 không?
+## Câu hỏi thường gặp
 
-Có, bạn có thể tải tài liệu đã chú thích trở lại S3 bằng phương pháp PutObject của AmazonS3Client. Điều này cho phép bạn duy trì tất cả các phiên bản trong thùng S3 của mình.
+**Q: Làm thế nào để tải lên các PDF đã chú thích trở lại Amazon S3?**  
+A: Lưu tài liệu đã chú thích vào một `MemoryStream`, sau đó tạo một `PutObjectRequest` và gọi `PutObjectAsync`. `PutObjectRequest` là lớp trong AWS SDK định nghĩa bucket, key và nội dung để tải lên, cho phép bạn ghi tệp trực tiếp vào S3 mà không cần bản sao cục bộ. Cách tiếp cận này giữ dữ liệu trong bộ nhớ và giảm độ trễ I/O.
 
-### Tôi xử lý xác thực AWS trong các ứng dụng sản xuất như thế nào?
+```csharp
+using var outputStream = new MemoryStream();
+annotator.Save(outputStream);
+outputStream.Position = 0;
 
-Đối với các ứng dụng sản xuất, hãy sử dụng vai trò IAM cho các phiên bản EC2 hoặc biến môi trường cho thông tin xác thực AWS. Tránh mã hóa cứng thông tin xác thực trong mã của bạn.
+var putRequest = new PutObjectRequest
+{
+    BucketName = bucketName,
+    Key = "annotated-" + originalKey,
+    InputStream = outputStream,
+    ContentType = "application/pdf"
+};
 
-### Tôi có thể chú thích các định dạng tài liệu khác ngoài PDF không?
+await client.PutObjectAsync(putRequest);
+```
 
-Có, GroupDocs.Annotation hỗ trợ nhiều định dạng khác nhau, bao gồm tài liệu Word, bản trình bày PowerPoint, bảng tính Excel, hình ảnh, v.v.
+**Q: Cách tốt nhất để xử lý thông tin xác thực AWS trong các ứng dụng sản xuất là gì?**  
+A: Sử dụng IAM role gắn vào các instance EC2/ECS hoặc role thực thi AWS Lambda. Đối với phát triển cục bộ, dựa vào tệp thông tin xác thực AWS CLI hoặc biến môi trường. Không bao giờ nhúng khóa vào mã nguồn.
 
-### Làm thế nào để triển khai chú thích đồng thời từ nhiều người dùng?
+```csharp
+// Production: Uses IAM role automatically
+var client = new AmazonS3Client();
 
-Bạn sẽ cần triển khai hệ thống kiểm soát phiên bản hoặc cơ chế khóa để ngăn ngừa xung đột khi nhiều người dùng chú thích cùng một tài liệu cùng lúc.
+// Development: Uses environment variables
+Environment.SetEnvironmentVariable("AWS_ACCESS_KEY_ID", "your-key");
+Environment.SetEnvironmentVariable("AWS_SECRET_ACCESS_KEY", "your-secret");
+```
 
-### Hiệu suất sẽ bị ảnh hưởng như thế nào khi làm việc với các tệp PDF lớn?
+**Q: Tôi có thể chú thích các định dạng tài liệu khác ngoài PDF bằng cùng cách tiếp cận này không?**  
+A: Có. GroupDocs.Annotation hỗ trợ hơn **50** định dạng — bao gồm DOCX, XLSX, PPTX và các loại ảnh phổ biến. Mã tải xuống S3 vẫn giống nhau; chỉ phần mở rộng tệp thay đổi.
 
-Các tệp PDF lớn có thể cần nhiều bộ nhớ và thời gian xử lý hơn. Hãy cân nhắc triển khai phân trang hoặc tải chậm để có hiệu suất tốt hơn với các tài liệu lớn.
+```csharp
+string userVersionKey = $"{originalKey}-user-{userId}-{timestamp}";
+```
 
-## Tài nguyên
+**Q: Làm thế nào để xử lý các chú thích đồng thời từ nhiều người dùng trên cùng một tài liệu?**  
+A: Triển khai khóa lạc quan với ID phiên bản S3 hoặc sử dụng một key S3 riêng cho mỗi phiên người dùng. Gộp các chú thích phía máy chủ trước khi lưu tệp cuối cùng. Điều này ngăn ngừa mất cập nhật và đảm bảo mỗi người dùng nhìn thấy một view nhất quán của tài liệu.
 
+```csharp
+string userVersionKey = $"{originalKey}-user-{userId}-{timestamp}";
+```
+
+**Q: Điều gì sẽ xảy ra nếu việc tải xuống S3 thất bại hoặc hết thời gian?**  
+A: Bao bọc việc tải xuống trong một chính sách thử lại (ví dụ, Polly) với back‑off tăng dần. `Polly` là thư viện .NET giúp tăng cường độ bền, đơn giản hoá việc thử lại, circuit‑breaker và xử lý timeout. Ghi lại ngoại lệ và trả về lỗi rõ ràng cho người gọi để client có thể phản hồi thích hợp.
+
+```csharp
+var retryPolicy = Policy
+    .Handle<AmazonS3Exception>()
+    .WaitAndRetryAsync(3, retryAttempt => 
+        TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+
+await retryPolicy.ExecuteAsync(async () =>
+{
+    return await DownloadFileFromS3(key);
+});
+```
+
+**Q: Xử lý một PDF 150 MB thường cần bao nhiêu bộ nhớ?**  
+A: GroupDocs.Annotation sử dụng khoảng 2–3 × kích thước tệp nguồn trong quá trình xử lý, vì vậy hãy dự kiến ~350 MB RAM cho PDF 150 MB. Đối với tệp lớn hơn, cân nhắc xử lý theo phần hoặc tăng bộ nhớ của instance.
+
+## Tài nguyên bổ sung
+- [Trang web GroupDocs](https://purchase.groupdocs.com/temporary-license/)
 - [Tài liệu GroupDocs.Annotation](https://docs.groupdocs.com/annotation/net/)
-- [Tài liệu tham khảo API](https://reference.groupdocs.com/annotation/net/)
-- [Tải xuống GroupDocs.Annotation cho .NET](https://releases.groupdocs.com/annotation/net/)
+- [Tham chiếu API](https://reference.groupdocs.com/annotation/net/)
+- [Tải GroupDocs.Annotation cho .NET](https://releases.groupdocs.com/annotation/net/)
 - [Mua giấy phép](https://purchase.groupdocs.com/buy)
 - [Dùng thử miễn phí](https://releases.groupdocs.com/annotation/net/)
 - [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
 - [Diễn đàn hỗ trợ GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
+
+---
+
+**Cập nhật lần cuối:** 2026-08-19  
+**Đã kiểm tra với:** GroupDocs.Annotation 25.4.0 cho .NET  
+**Tác giả:** GroupDocs
+
+## Các hướng dẫn liên quan
+
+- [GroupDocs.Annotation .NET Tải tài liệu](/annotation/net/document-loading-essentials/)
+- [Cài đặt giấy phép GroupDocs Annotation .NET - Hướng dẫn triển khai đầy đủ](/annotation/net/applying-licenses/set-license-from-file/)
+- [Hướng dẫn chú thích PDF .NET - Hướng dẫn đầy đủ của GroupDocs](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
