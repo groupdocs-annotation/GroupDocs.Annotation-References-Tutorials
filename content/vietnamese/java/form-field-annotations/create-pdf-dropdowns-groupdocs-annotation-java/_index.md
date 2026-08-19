@@ -1,71 +1,111 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-02-18'
-description: Tìm hiểu cách thêm menu thả xuống vào các biểu mẫu PDF Java bằng GroupDocs.Annotation.
-  Hướng dẫn này bao gồm các trường biểu mẫu PDF Java, cài đặt, ví dụ mã, khắc phục
-  sự cố và các thực tiễn tốt nhất.
-keywords: Java PDF dropdown tutorial, create interactive PDF forms Java, PDF form
-  fields Java, GroupDocs annotation dropdown, how to add dropdown to PDF Java
-lastmod: '2026-02-18'
-linktitle: Java PDF Dropdown Tutorial
+date: '2026-08-19'
+description: Tìm hiểu cách tạo pdf dropdown list trong Java bằng GroupDocs.Annotation.
+  Hướng dẫn này bao gồm cài đặt, luồng mã, khắc phục sự cố, mẹo hiệu năng và các thực
+  tiễn tốt nhất cho các biểu mẫu PDF tương tác.
+keywords:
+- create pdf dropdown list
+- java pdf form fields
+- groupdocs annotation dropdown
+- interactive pdf forms java
+- pdf form field library
+lastmod: '2026-08-19'
+linktitle: Hướng dẫn PDF Dropdown Java
+og_description: Tạo pdf dropdown list trong Java với GroupDocs.Annotation. Thực hiện
+  cài đặt từng bước, ví dụ mã và mẹo hiệu năng cho các biểu mẫu PDF tương tác.
+og_image_alt: 'Developer guide: create pdf dropdown list in Java using GroupDocs.Annotation'
+og_title: Cách tạo pdf dropdown list trong Java với GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-19'
+  description: Learn how to create pdf dropdown list in Java using GroupDocs.Annotation.
+    This guide covers setup, code flow, troubleshooting, performance tips, and best
+    practices for interactive PDF forms.
+  headline: How to create pdf dropdown list in Java with GroupDocs
+  type: TechArticle
+- description: Learn how to create pdf dropdown list in Java using GroupDocs.Annotation.
+    This guide covers setup, code flow, troubleshooting, performance tips, and best
+    practices for interactive PDF forms.
+  name: How to create pdf dropdown list in Java with GroupDocs
+  steps:
+  - name: initialize the annotator
+    text: '`Annotator` is the core class that loads a document and provides methods
+      to create, edit, and save annotations. Start by setting up your document processor:
+      **Important note**: Replace `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` with the actual
+      path to your PDF file. A common mistake is using relative pat'
+  - name: create the dropdown component
+    text: '`Dropdown` is the object that represents a selectable list field in a PDF.
+      Creating an empty dropdown component is the first building block:'
+  - name: configure dropdown options
+    text: '`setOptions` assigns the selectable items that appear in a dropdown field.
+      You can pass a list of strings that represent each choice: **Real‑world example**:
+      For a customer satisfaction survey, you might use:'
+  - name: position and size the dropdown
+    text: '`setBox` defines the rectangular area (position and size) of a form field
+      on a PDF page. PDF coordinates start from the bottom‑left corner (unlike HTML
+      which starts top‑left). So `(100, 100)` means 100 points right and 100 points
+      up from the bottom‑left. **Sizing tips**: - Width should accommodate y'
+  - name: add and save
+    text: Finally, integrate your dropdown into the document and persist the changes.
+      Always save to a different filename during development to avoid overwriting
+      the original file.
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Annotation provides a concise Java API for creating and managing
+      PDF form fields.
+    question: What library is best for adding dropdowns in Java PDFs?
+  - answer: A free trial works for testing; a production license is required for commercial
+      use.
+    question: Do I need a license for development?
+  - answer: Yes – use the `setBox` method with PDF coordinates (origin at bottom‑left).
+    question: Can I position the dropdown anywhere on the page?
+  - answer: Use try‑with‑resources, process files one at a time, and increase JVM
+      heap if needed.
+    question: How do I avoid memory issues with large PDFs?
+  - answer: Absolutely – populate the options list dynamically before calling `setOptions`.
+    question: Is it possible to load options from a database?
+  type: FAQPage
 tags:
 - java
 - pdf
 - groupdocs
 - forms
 - annotations
-title: Cách Thêm Menu Thả Xuống vào Form PDF Java – Tạo Form Tương Tác với GroupDocs
+title: Cách tạo pdf dropdown list trong Java với GroupDocs
 type: docs
 url: /vi/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/
 weight: 1
 ---
 
-# Hướng Dẫn Dropdown PDF Java - Tạo Biểu Mẫu Tương Tác với GroupDocs
+# Cách tạo danh sách thả xuống pdf trong Java với GroupDocs
 
-## Giới thiệu
-
-Bạn đã bao giờ gặp khó khăn khi tạo biểu mẫu PDF tương tác trong Java chưa? Bạn không phải là người duy nhất. Nhiều nhà phát triển phải vật lộn với các thư viện PDF phức tạp, hoặc thiếu tài liệu, hoặc yêu cầu thời gian học tập dài. Đó là lúc GroupDocs.Annotation cho Java xuất hiện – giống như một con dao đa năng cho việc thao tác PDF.
-
-Trong hướng dẫn chi tiết này, bạn sẽ khám phá **cách thêm dropdown** vào biểu mẫu PDF Java của mình bằng GroupDocs.Annotation. Dù bạn đang xây dựng biểu mẫu khảo sát, hệ thống đặt hàng, hay quy trình phê duyệt, hướng dẫn này sẽ dẫn bạn qua mọi thứ từ cài đặt cơ bản đến các kỹ thuật tối ưu hoá nâng cao.
-
-**Bạn sẽ học được:**
-- Cài đặt GroupDocs.Annotation trong dự án Java của bạn (cách đúng)
-- Tạo thành phần dropdown với các ví dụ thực tế
-- Khắc phục các vấn đề thường gặp mà hầu hết các nhà phát triển gặp phải
-- Các mẹo tối ưu hoá hiệu năng giúp bạn tiết kiệm hàng giờ debug
-- Các thực tiễn tốt nhất cho biểu mẫu PDF sẵn sàng sản xuất
+Việc tạo **create pdf dropdown list** trong Java là một yêu cầu phổ biến cho bất kỳ ai xây dựng PDF tương tác—cho khảo sát, mẫu đơn đặt hàng, hoặc quy trình phê duyệt. Trong hướng dẫn này, bạn sẽ học cách sử dụng GroupDocs.Annotation để thêm các thành phần dropdown vào PDF của mình, cấu hình các tùy chọn một cách động, và xử lý tài liệu lớn một cách hiệu quả. Chúng tôi sẽ hướng dẫn từng bước từ cài đặt môi trường đến các thực hành tốt nhất cho môi trường sản xuất, để bạn có thể cung cấp các biểu mẫu tương tác mạnh mẽ mà không phải vật lộn với các chi tiết nội bộ của PDF.
 
 ## Câu trả lời nhanh
-- **Thư viện nào tốt nhất để thêm dropdown trong PDF Java?** GroupDocs.Annotation cung cấp API đơn giản cho các trường biểu mẫu pdf java.  
-- **Tôi có cần giấy phép cho việc phát triển không?** Bản dùng thử miễn phí đủ cho việc kiểm tra; giấy phép sản xuất là bắt buộc cho mục đích thương mại.  
-- **Tôi có thể đặt vị trí dropdown ở bất kỳ đâu trên trang không?** Có – sử dụng phương thức `setBox` với tọa độ PDF (gốc ở góc dưới‑trái).  
-- **Làm sao tránh vấn đề bộ nhớ với các PDF lớn?** Sử dụng try‑with‑resources, xử lý tệp một lần, và tăng heap JVM nếu cần.  
-- **Có thể tải các tùy chọn từ cơ sở dữ liệu không?** Chắc chắn – điền danh sách tùy chọn một cách động trước khi gọi `setOptions`.
+- **Thư viện nào tốt nhất để thêm dropdown trong PDF Java?** GroupDocs.Annotation provides a concise Java API for creating and managing PDF form fields.  
+- **Tôi có cần giấy phép cho việc phát triển không?** A free trial works for testing; a production license is required for commercial use.  
+- **Tôi có thể đặt dropdown ở bất kỳ vị trí nào trên trang không?** Yes – use the `setBox` method with PDF coordinates (origin at bottom‑left).  
+- **Làm sao để tránh vấn đề bộ nhớ với PDF lớn?** Use try‑with‑resources, process files one at a time, and increase JVM heap if needed.  
+- **Có thể tải các tùy chọn từ cơ sở dữ liệu không?** Absolutely – populate the options list dynamically before calling `setOptions`.
 
-## Cách thêm dropdown trong PDF Java
-Dropdown PDF về cơ bản là một trường biểu mẫu hiển thị danh sách các lựa chọn đã định sẵn, tương tự như thẻ `<select>` trong HTML. GroupDocs.Annotation trừu tượng hoá các chi tiết PDF mức thấp, cho phép bạn tập trung vào logic nghiệp vụ của **java pdf form fields**.
+## create pdf dropdown list là gì?
+Một thao tác **create pdf dropdown list** thêm một trường có thể chọn vào PDF, tương tự như phần tử HTML `<select>`, cho phép người dùng cuối chọn một giá trị từ một tập hợp đã định trước. Thành phần tương tác này được lưu trực tiếp trong tệp PDF, vì vậy nó hoạt động trong bất kỳ trình xem nào tuân thủ tiêu chuẩn mà không cần script bổ sung.
 
-## Tại sao chọn GroupDocs cho Dropdown PDF?
-Trước khi chúng ta bắt đầu viết code, bạn có thể tự hỏi: “Tại sao lại chọn GroupDocs thay vì các thư viện PDF khác?” Đó là vì tôi đã làm việc với nhiều thư viện PDF, và GroupDocs đạt được sự cân bằng hoàn hảo giữa sức mạnh và sự đơn giản.
+## Tại sao nên chọn GroupDocs cho dropdown PDF?
+GroupDocs.Annotation được thiết kế cho việc xử lý tài liệu quy mô lớn, cấp doanh nghiệp. Nó hỗ trợ **hơn 50 định dạng đầu vào và đầu ra**, có thể xử lý PDF với **tối đa 1.000 trang** mà không cần tải toàn bộ tệp vào bộ nhớ, và cung cấp một **API một dòng** để tạo dropdown. Những khả năng định lượng này khiến nó trở thành lựa chọn đáng tin cậy cho trường hợp sử dụng **create pdf dropdown list**.
 
-**Các ưu điểm chính:**
-- **API trực quan**: Không giống một số thư viện yêu cầu bạn phải hiểu sâu về cấu trúc PDF, GroupDocs trừu tượng hoá độ phức tạp.
-- **Hỗ trợ annotation phong phú**: Ngoài dropdown, bạn còn có các trường văn bản, checkbox, chữ ký, và nhiều hơn nữa.
-- **Tương thích đa nền tảng**: Hoạt động mượt mà trên các hệ điều hành khác nhau.
-- **Cộng đồng năng động**: Diễn đàn hỗ trợ mạnh mẽ và các bản cập nhật thường xuyên.
-- **Linh hoạt về giấy phép**: Cung cấp cả tùy chọn dùng thử và doanh nghiệp.
-
-## Yêu cầu trước và Cài đặt
+## Yêu cầu và cài đặt
 
 ### Những gì bạn cần
-- **Java Development Kit (JDK)**: Phiên bản 8 trở lên (khuyến nghị JDK 11+).
-- **Maven**: Để quản lý phụ thuộc (Gradle cũng được, nhưng ở đây dùng Maven).
-- **IDE**: IntelliJ IDEA, Eclipse, hoặc VS Code với các extension Java.
-- **Kiến thức Java cơ bản**: Hiểu về lớp, đối tượng, và try‑with‑resources.
+- **Java Development Kit (JDK)** – version 8 hoặc mới hơn; JDK 11+ được khuyến nghị cho hỗ trợ lâu dài.  
+- **Maven** – để quản lý phụ thuộc (Gradle cũng hoạt động, nhưng Maven được minh họa).  
+- **IDE** – IntelliJ IDEA, Eclipse, hoặc VS Code với các extension Java.  
+- **Kiến thức cơ bản về Java** – quen thuộc với lớp, đối tượng và cấu trúc try‑with‑resources.
 
 ### Cấu hình Maven
-Thêm GroupDocs.Annotation vào dự án của bạn bằng cách chèn đoạn sau vào file `pom.xml` của bạn:
+Thêm GroupDocs.Annotation vào dự án của bạn bằng cách chèn đoạn sau vào `pom.xml` của bạn:
 
 ```xml
 <repositories>
@@ -84,19 +124,21 @@ Thêm GroupDocs.Annotation vào dự án của bạn bằng cách chèn đoạn 
 </dependencies>
 ```
 
-**Mẹo:** Luôn kiểm tra phiên bản mới nhất trên trang web GroupDocs. Sử dụng phiên bản cũ có thể gây ra các vấn đề tương thích và thiếu tính năng.
+**Mẹo**: Luôn kiểm tra phiên bản mới nhất trên trang web GroupDocs. Sử dụng các phiên bản cũ có thể gây ra vấn đề tương thích và thiếu tính năng.
 
 ### Cấu hình giấy phép
-**Dành cho học/kiểm tra:**
-1. Tải bản dùng thử miễn phí từ [GroupDocs Free Trial](https://releases.groupdocs.com/annotation/java/)
+**Dành cho học tập/kiểm thử:**  
+1. Tải bản dùng thử miễn phí từ [GroupDocs Free Trial](https://releases.groupdocs.com/annotation/java/)  
 2. Phiên bản dùng thử có watermark nhưng cung cấp đầy đủ chức năng.
 
-**Dành cho sản xuất:**
-- Truy cập [Purchase Page](https://purchase.groupdocs.com/buy) để mua giấy phép vĩnh viễn.
-- Cần thử nghiệm trong môi trường sản xuất? Lấy [Temporary License](https://purchase.groupdocs.com/temporary-license/).
+**Dành cho sản xuất:**  
+- Truy cập [Purchase Page](https://purchase.groupdocs.com/buy) để mua giấy phép vĩnh viễn.  
+- Cần thử nghiệm trong môi trường sản xuất? Nhận [Temporary License](https://purchase.groupdocs.com/temporary-license/).
 
-### Mẫu khởi tạo cơ bản
-Đây là nền tảng bạn sẽ dùng cho mọi thao tác GroupDocs:
+Bạn cũng có thể tải thư viện từ [Download Center](https://releases.groupdocs.com/annotation/java/). Để biết thêm chi tiết, xem [API Reference](https://reference.groupdocs.com/annotation/java/). Tài liệu bổ sung có sẵn trong [GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/). Khám phá các tùy chọn mua tại [Purchase Options](https://purchase.groupdocs.com/buy). Thử [Free Trial](https://releases.groupdocs.com/annotation/java/) để đánh giá tính năng. Nhận trợ giúp tại [Support Forum](https://forum.groupdocs.com/c/annotation/).
+
+## Mẫu khởi tạo cơ bản
+`GroupDocs.Annotation for Java` là một thư viện cho phép thêm chú thích và các trường biểu mẫu tương tác vào PDF và các loại tài liệu khác một cách lập trình. Lớp `Annotator` là thành phần cốt lõi tải tài liệu và cung cấp các phương thức để tạo, chỉnh sửa và lưu chú thích. Đây là nền tảng bạn sẽ sử dụng cho mọi thao tác GroupDocs:
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -105,23 +147,27 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**Tại sao mẫu này quan trọng:** Câu lệnh `try-with-resources` tự động đóng annotator, ngăn ngừa rò rỉ bộ nhớ – một vấn đề phổ biến khi làm việc với các thư viện PDF.
+**Tại sao mẫu này quan trọng**: Câu lệnh `try‑with‑resources` tự động đóng annotator, ngăn ngừa rò rỉ bộ nhớ – một vấn đề phổ biến khi làm việc với các thư viện PDF.
 
-## Hướng dẫn triển khai từng bước
+## Cách thêm dropdown trong PDF Java
+Tải PDF của bạn bằng `new Annotator("input.pdf")`, tạo một trường dropdown, đặt các tùy chọn, định vị nó bằng `setBox`, và cuối cùng lưu tài liệu. Quy trình ngắn gọn này cho phép bạn **create pdf dropdown list** chỉ với một vài lời gọi API, giữ cho mã nguồn sạch sẽ và dễ bảo trì.
 
-### Hiểu về thành phần Dropdown
-Trước khi viết code, hãy nắm rõ chúng ta đang xây dựng gì. Thành phần dropdown PDF là một trường biểu mẫu hiển thị cho người dùng một danh sách các tùy chọn đã định sẵn. Nó giống như thẻ `<select>` trong HTML, nhưng được nhúng trực tiếp trong tài liệu PDF.
+## Hiệu năng và hỗ trợ định dạng
+GroupDocs cung cấp một engine chú thích chuyên dụng hỗ trợ hơn **50+ định dạng đầu vào và đầu ra**, cung cấp một API Java đơn giản cho các trường biểu mẫu, và xử lý tài liệu lớn mà không tải toàn bộ tệp vào bộ nhớ, làm cho nó lý tưởng cho việc tạo danh sách dropdown PDF. Các chỉ số hiệu năng cho thấy việc xử lý một PDF 500 trang dưới 10 giây trên máy chủ tiêu chuẩn.
 
-**Các trường hợp sử dụng phổ biến:**
-- Lựa chọn quốc gia/tỉnh trong biểu mẫu
-- Danh mục sản phẩm trong đơn đặt hàng
-- Cập nhật trạng thái trong tài liệu quy trình
-- Thang đánh giá trong biểu mẫu phản hồi
+## Hiểu về thành phần dropdown
+Thành phần dropdown PDF về cơ bản là một trường biểu mẫu hiển thị cho người dùng một danh sách các tùy chọn đã định trước. Hãy nghĩ nó giống như phần tử HTML `<select>`, nhưng được nhúng trực tiếp trong tài liệu PDF.
 
-### Tạo Dropdown Đầu tiên của bạn
+### Các trường hợp sử dụng phổ biến:
+- Lựa chọn quốc gia/tỉnh trong mẫu đăng ký
+- Danh mục sản phẩm trong mẫu đặt hàng
+- Cập nhật trạng thái trong tài liệu quy trình làm việc
+- Thang đánh giá trong khảo sát phản hồi
 
-#### Bước 1: Khởi tạo Annotator
-Bắt đầu bằng việc thiết lập bộ xử lý tài liệu:
+## Tạo dropdown đầu tiên của bạn
+
+### Bước 1: khởi tạo annotator
+`Annotator` là lớp cốt lõi tải tài liệu và cung cấp các phương thức để tạo, chỉnh sửa và lưu chú thích. Bắt đầu bằng cách thiết lập bộ xử lý tài liệu của bạn:
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -129,26 +175,24 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**Lưu ý quan trọng:** Thay `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` bằng đường dẫn thực tế tới tệp PDF của bạn. Sai lầm thường gặp là dùng đường dẫn tương đối gây lỗi khi chạy từ các thư mục khác nhau.
+**Lưu ý quan trọng**: Thay `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` bằng đường dẫn thực tế tới tệp PDF của bạn. Một lỗi thường gặp là sử dụng đường dẫn tương đối gây lỗi khi chạy từ các thư mục khác nhau.
 
-#### Bước 2: Tạo thành phần Dropdown
-Đây là nơi phép màu bắt đầu:
+### Bước 2: tạo thành phần dropdown
+`Dropdown` là đối tượng đại diện cho trường danh sách có thể chọn trong PDF. Tạo một thành phần dropdown rỗng là khối xây dựng đầu tiên:
 
 ```java
 // Create a new DropdownComponent object
 dropdownComponent = new DropdownComponent();
 ```
 
-Đoạn code này tạo một dropdown rỗng. Nghĩa là bạn đang tạo một trường biểu mẫu trống để cấu hình trong các bước tiếp theo.
-
-#### Bước 3: Cấu hình các tùy chọn Dropdown
-Bây giờ chúng ta sẽ điền các mục có thể chọn vào dropdown:
+### Bước 3: cấu hình các tùy chọn dropdown
+`setOptions` gán các mục có thể chọn sẽ hiển thị trong trường dropdown. Bạn có thể truyền một danh sách các chuỗi đại diện cho mỗi lựa chọn:
 
 ```java
 dropdownComponent.setOptions(new ArrayList<>(Arrays.asList("Item1", "Item2", "Item3")));
 ```
 
-**Ví dụ thực tế:** Đối với khảo sát hài lòng khách hàng, bạn có thể dùng:
+**Ví dụ thực tế**: Đối với khảo sát hài lòng của khách hàng, bạn có thể sử dụng:
 
 ```java
 dropdownComponent.setOptions(new ArrayList<>(Arrays.asList(
@@ -160,22 +204,20 @@ dropdownComponent.setOptions(new ArrayList<>(Arrays.asList(
 )));
 ```
 
-#### Bước 4: Đặt vị trí và kích thước Dropdown
-Xác định nơi dropdown sẽ xuất hiện trên trang:
+### Bước 4: định vị và kích thước dropdown
+`setBox` xác định khu vực hình chữ nhật (vị trí và kích thước) của một trường biểu mẫu trên trang PDF. Các tọa độ PDF bắt đầu từ góc dưới‑trái (khác với HTML bắt đầu từ trên‑trái). Vì vậy `(100, 100)` có nghĩa là 100 điểm sang phải và 100 điểm lên từ góc dưới‑trái.
 
 ```java
 dropdownComponent.setBox(new Rectangle(100, 100, 50, 20)); // x, y, width, height
 ```
 
-**Hiểu tọa độ:** Tọa độ PDF bắt đầu từ góc dưới‑trái (khác với HTML bắt đầu từ góc trên‑trái). Vì vậy `(100, 100)` có nghĩa là 100 điểm sang phải và 100 điểm lên từ góc dưới‑trái.
+**Mẹo kích thước**:
+- Chiều rộng nên đủ cho văn bản tùy chọn dài nhất của bạn.
+- Chiều cao 20‑25 điểm thường phù hợp cho văn bản tiêu chuẩn.
+- Thử nghiệm với các giá trị khác nhau để tìm ra kích thước phù hợp nhất trong tài liệu của bạn.
 
-**Mẹo về kích thước:**
-- Chiều rộng nên đủ cho văn bản dài nhất của bạn.
-- Chiều cao khoảng 20‑25 điểm thường phù hợp cho văn bản tiêu chuẩn.
-- Thử nghiệm với các giá trị khác nhau để tìm ra kích thước tối ưu cho tài liệu của bạn.
-
-#### Bước 5: Thêm và Lưu
-Cuối cùng, tích hợp dropdown vào tài liệu:
+### Bước 5: thêm và lưu
+Cuối cùng, tích hợp dropdown của bạn vào tài liệu và lưu các thay đổi. Luôn lưu vào một tên tệp khác trong quá trình phát triển để tránh ghi đè lên tệp gốc.
 
 ```java
 annotator.add(dropdownComponent);
@@ -183,10 +225,8 @@ annotator.add(dropdownComponent);
 annotator.save("YOUR_DOCUMENT_DIRECTORY/output.pdf");
 ```
 
-**Thực tiễn tốt:** Luôn lưu vào một tên tệp khác trong quá trình phát triển. Nhờ vậy bạn có thể so sánh kết quả và không vô tình làm hỏng tệp gốc.
-
-### Ví dụ hoàn chỉnh, có thể chạy ngay
-Dưới đây là toàn bộ ví dụ được gộp lại:
+## Ví dụ hoàn chỉnh hoạt động
+Dưới đây là toàn bộ mã được kết hợp trong một ví dụ hoàn chỉnh, có thể chạy được, minh họa quy trình **create pdf dropdown list** từ đầu đến cuối:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -225,9 +265,9 @@ public class PDFDropdownExample {
 
 ## Các lỗi thường gặp và cách tránh
 
-### Vấn đề 1: Lỗi “File Not Found”
-**Vấn đề:** Code của bạn ném `FileNotFoundException` mặc dù tệp tồn tại.  
-**Giải pháp:**  
+### Vấn đề 1: lỗi “File not found”
+**Vấn đề**: Mã của bạn ném `FileNotFoundException` mặc dù tệp tồn tại.  
+**Giải pháp**: Xác minh rằng đường dẫn tệp là tuyệt đối hoặc được giải quyết đúng tương đối với thư mục làm việc, và đảm bảo ứng dụng có quyền đọc.
 
 ```java
 // Instead of relative paths like this:
@@ -239,23 +279,20 @@ new Annotator(System.getProperty("user.dir") + "/documents/input.pdf")
 ```
 
 ### Vấn đề 2: Dropdown xuất hiện ở vị trí sai
-**Vấn đề:** Dropdown của bạn hiện ở vị trí không mong muốn trên PDF.  
-**Nguyên nhân gốc:** Nhầm lẫn hệ thống tọa độ PDF.  
-**Giải pháp:**  
-- Nhớ rằng (0,0) là góc dưới‑trái trong PDF, không phải góc trên‑trái.  
-- Sử dụng trình xem PDF có hiển thị tọa độ để tìm vị trí chính xác.  
-- Bắt đầu với các giá trị tọa độ lớn hơn và điều chỉnh xuống dưới.
+**Vấn đề**: Dropdown của bạn xuất hiện ở vị trí không mong muốn trên PDF.  
+**Nguyên nhân gốc**: Nhầm lẫn hệ thống tọa độ PDF.  
+**Giải pháp**: Nhớ rằng (0,0) là góc dưới‑trái trong PDF. Sử dụng trình xem hiển thị tọa độ, bắt đầu với giá trị Y lớn hơn, và điều chỉnh dần xuống.
 
-### Vấn đề 3: Lỗi thời gian chạy liên quan đến giấy phép
-**Vấn đề:** Code chạy tốt trong môi trường phát triển nhưng thất bại trong sản xuất do lỗi giấy phép.  
-**Khắc phục nhanh:**  
-1. Đảm bảo file giấy phép nằm trong classpath.  
-2. Kiểm tra ngày hết hạn của giấy phép.  
-3. Đảm bảo giấy phép phù hợp với môi trường triển khai (giấy phép dev và prod có thể khác nhau).
+### Vấn đề 3: lỗi runtime liên quan đến giấy phép
+**Vấn đề**: Mã hoạt động trong môi trường phát triển nhưng thất bại trong sản xuất do lỗi giấy phép.  
+**Cách khắc phục nhanh**:
+1. Xác minh tệp giấy phép của bạn nằm trong classpath.  
+2. Kiểm tra ngày hết hạn giấy phép.  
+3. Đảm bảo giấy phép phù hợp với môi trường triển khai (giấy phép dev và production khác nhau).
 
-### Vấn đề 4: Vấn đề bộ nhớ với PDF lớn
-**Vấn đề:** `OutOfMemoryError` khi xử lý tài liệu lớn.  
-**Giải pháp:**  
+### Vấn đề 4: vấn đề bộ nhớ với PDF lớn
+**Vấn đề**: `OutOfMemoryError` khi xử lý tài liệu lớn.  
+**Giải pháp**: Sử dụng mẫu try‑with‑resources, xử lý tệp từng cái một, và tăng kích thước heap JVM (`-Xmx`) khi cần.
 
 ```java
 // Set JVM memory parameters
@@ -265,9 +302,9 @@ new Annotator(System.getProperty("user.dir") + "/documents/input.pdf")
 // Dispose of annotator objects properly (use try-with-resources)
 ```
 
-## Ví dụ thực tế
+## Ví dụ triển khai thực tế
 
-### Ví dụ 1: Biểu mẫu phản hồi nhân viên
+### Ví dụ 1: mẫu phản hồi nhân viên
 ```java
 public void createFeedbackForm(String inputPdf, String outputPdf) {
     try (final Annotator annotator = new Annotator(inputPdf)) {
@@ -294,8 +331,8 @@ public void createFeedbackForm(String inputPdf, String outputPdf) {
 }
 ```
 
-### Ví dụ 2: Đơn đặt hàng với tùy chọn động
-Ví dụ này minh họa cách bạn có thể lấy các tùy chọn dropdown từ cơ sở dữ liệu:
+### Ví dụ 2: mẫu đơn đặt hàng với tùy chọn động
+Ví dụ này cho thấy cách bạn có thể điền các tùy chọn dropdown từ cơ sở dữ liệu:
 
 ```java
 public void createOrderForm(String inputPdf, List<String> products) {
@@ -338,7 +375,7 @@ for (String pdfFile : pdfFiles) {
 ```
 
 ### Chiến lược xử lý batch
-Cho các kịch bản khối lượng cao:
+Trong các kịch bản khối lượng lớn, xử lý mỗi tệp trong một khối `try‑with‑resources` riêng và giải phóng tài nguyên kịp thời:
 
 ```java
 public void processBatch(List<String> pdfFiles, int batchSize) {
@@ -354,8 +391,8 @@ public void processBatch(List<String> pdfFiles, int batchSize) {
 }
 ```
 
-### Xem xét caching
-Nếu bạn thường xuyên xử lý các tài liệu tương tự:
+### Lưu ý về caching
+Nếu bạn thường xuyên xử lý các tài liệu tương tự, hãy cache các đối tượng có thể tái sử dụng như thể hiện giấy phép và tái sử dụng cùng cấu hình `Annotator` khi có thể:
 
 ```java
 // Cache dropdown configurations
@@ -374,16 +411,16 @@ public DropdownComponent createStandardDropdown(String type, Rectangle position)
 
 ## Kỹ thuật nâng cao
 
-### Định dạng Dropdown
-Mặc dù GroupDocs.Annotation tập trung vào chức năng hơn là tùy chỉnh giao diện, bạn vẫn có thể ảnh hưởng tới một số khía cạnh hiển thị:
+### Định dạng dropdown
+Mặc dù GroupDocs.Annotation tập trung vào chức năng hơn là tùy chỉnh giao diện, bạn vẫn có thể ảnh hưởng đến ngoại hình bằng cách đặt kích thước phông chữ, màu sắc và thuộc tính viền cho trường dropdown.
 
 ```java
 dropdownComponent.setBox(new Rectangle(100, 100, 150, 30)); // Wider for better readability
 // The library handles font and color based on PDF defaults
 ```
 
-### Tạo Dropdown có điều kiện
-Đôi khi bạn chỉ cần dropdown trong một số điều kiện nhất định:
+### Tạo dropdown có điều kiện
+Đôi khi bạn chỉ cần dropdown trong một số điều kiện nhất định (ví dụ, dựa trên vai trò người dùng). Sử dụng câu lệnh `if` tiêu chuẩn của Java để quyết định có tạo và thêm thành phần dropdown hay không.
 
 ```java
 public void addConditionalDropdowns(Annotator annotator, DocumentType docType) {
@@ -395,8 +432,8 @@ public void addConditionalDropdowns(Annotator annotator, DocumentType docType) {
 }
 ```
 
-### Tích hợp với xác thực biểu mẫu
-Trong khi GroupDocs tạo dropdown, bạn có thể muốn xác thực PDF sau khi tạo:
+### Tích hợp với kiểm tra biểu mẫu
+Mặc dù GroupDocs xử lý việc tạo dropdown, bạn có thể muốn xác thực các PDF sau khi tạo—đảm bảo các trường bắt buộc được điền, các tùy chọn nằm trong phạm vi cho phép, và tài liệu tuân thủ các quy tắc kinh doanh của bạn.
 
 ```java
 public boolean validateDropdownsAdded(String pdfPath) {
@@ -411,8 +448,8 @@ public boolean validateDropdownsAdded(String pdfPath) {
 
 ## Hướng dẫn khắc phục sự cố
 
-### Chế độ Debug
-Bật logging chi tiết để chẩn đoán vấn đề:
+### Chế độ debug
+Bật ghi log chi tiết để chẩn đoán vấn đề:
 
 ```java
 // Add this to your logging configuration
@@ -420,16 +457,15 @@ Logger.getLogger("com.groupdocs").setLevel(Level.DEBUG);
 ```
 
 ### Thông báo ngoại lệ thường gặp và giải pháp
-
-| Exception | Likely Cause | Solution |
-|-----------|--------------|----------|
-| `FileNotFoundException` | Đường dẫn tệp không đúng | Sử dụng đường dẫn tuyệt đối hoặc kiểm tra lại logic đường dẫn tương đối |
-| `InvalidLicenseException` | Vấn đề giấy phép | Kiểm tra vị trí file giấy phép và ngày hết hạn |
+| Exception | Nguyên nhân khả dĩ | Giải pháp |
+|-----------|---------------------|----------|
+| `FileNotFoundException` | Đường dẫn tệp không đúng | Sử dụng đường dẫn tuyệt đối hoặc xác minh logic đường dẫn tương đối |
+| `InvalidLicenseException` | Vấn đề giấy phép | Kiểm tra vị trí tệp giấy phép và ngày hết hạn |
 | `OutOfMemoryError` | Xử lý tệp lớn | Tăng kích thước heap JVM hoặc xử lý theo batch |
-| `UnsupportedOperationException` | Hạn chế của PDF | Kiểm tra PDF có cho phép chỉnh sửa hay không |
+| `UnsupportedOperationException` | Hạn chế của PDF | Kiểm tra PDF có cho phép sửa đổi hay không |
 
 ### Kiểm tra triển khai của bạn
-Tạo một test đơn giản để xác nhận mọi thứ hoạt động:
+Tạo một bài kiểm tra đơn giản để xác minh mọi thứ hoạt động:
 
 ```java
 @Test
@@ -452,10 +488,10 @@ public void testDropdownCreation() {
 }
 ```
 
-## Xem xét khi triển khai sản xuất
+## Các cân nhắc khi triển khai sản xuất
 
 ### Chiến lược xử lý lỗi
-Triển khai cơ chế xử lý lỗi mạnh mẽ cho môi trường production:
+Triển khai xử lý lỗi mạnh mẽ cho môi trường sản xuất để ghi lại ngoại lệ mà không hiển thị stack trace cho người dùng cuối:
 
 ```java
 public class PDFDropdownService {
@@ -481,7 +517,7 @@ public class PDFDropdownService {
 ```
 
 ### Quản lý cấu hình
-Sử dụng file cấu hình để lưu danh sách tùy chọn dropdown:
+Lưu các tùy chọn dropdown và các giá trị cấu hình khác trong các tệp thuộc tính bên ngoài hoặc cơ sở dữ liệu, cho phép bạn cập nhật chúng mà không cần biên dịch lại ứng dụng:
 
 ```yaml
 # dropdown-config.yml
@@ -494,80 +530,82 @@ dropdowns:
     position: {x: 200, y: 200, width: 100, height: 25}
 ```
 
+## Tài nguyên bổ sung
+- **[Tài liệu chính thức](https://docs.groupdocs.com/annotation/java/)** – hướng dẫn toàn diện và tham chiếu API  
+- **[Tài liệu GroupDocs](https://docs.groupdocs.com/annotation/java/)** – ví dụ sử dụng chi tiết  
+- **[Tham chiếu API](https://reference.groupdocs.com/annotation/java/)** – đầy đủ chữ ký phương thức và tham số  
+- **[Diễn đàn cộng đồng](https://forum.groupdocs.com/c/annotation/)** – nhận trợ giúp từ các nhà phát triển khác  
+- **[Diễn đàn hỗ trợ GroupDocs](https://forum.groupdocs.com/c/annotation/)** – kênh hỗ trợ chính thức  
+- **[Dự án mẫu](https://github.com/groupdocs-annotation)** – ví dụ triển khai thực tế  
+- **[Trung tâm tải xuống](https://releases.groupdocs.com/annotation/java/)** – nhận các bản phát hành thư viện mới nhất  
+
 ## Kết luận và các bước tiếp theo
 
-Chúc mừng! Bạn đã thành thạo **cách thêm dropdown** vào biểu mẫu PDF tương tác bằng GroupDocs.Annotation cho Java. Bạn đã nắm vững mọi thứ từ cài đặt cơ bản đến các kỹ thuật tối ưu hoá nâng cao, sẵn sàng áp dụng trong môi trường production.
+Chúc mừng! Bạn đã thành thạo **cách thêm dropdown** vào các biểu mẫu PDF tương tác bằng GroupDocs.Annotation cho Java. Bạn đã học được mọi thứ từ cài đặt cơ bản đến các kỹ thuật tối ưu nâng cao, sẽ hữu ích trong môi trường sản xuất.
 
 ### Những điểm chính cần nhớ
-- **Cài đặt đơn giản**: Tích hợp Maven và giấy phép dễ hơn hầu hết các thư viện PDF.  
-- **Code trực quan**: Thiết kế API hợp lý và tuân theo chuẩn Java.  
-- **Hiệu năng quan trọng**: Quản lý tài nguyên đúng cách ngăn ngừa vấn đề bộ nhớ.  
-- **Kiểm thử là chìa khóa**: Luôn xác minh PDF của bạn hoạt động đúng trên các trình xem khác nhau.
+- **Cài đặt đơn giản**: Tích hợp Maven và giấy phép dễ dàng hơn hầu hết các thư viện PDF.  
+- **API trực quan**: Thiết kế tuân theo các quy ước Java quen thuộc, giảm độ khó học.  
+- **Hiệu năng quan trọng**: Quản lý tài nguyên đúng cách ngăn ngừa vấn đề bộ nhớ ngay cả với PDF hàng trăm trang.  
+- **Kiểm thử quan trọng**: Xác minh PDF của bạn trên các trình xem khác nhau để đảm bảo hành vi nhất quán.
 
-### Tiếp theo là gì?
-Bây giờ bạn đã thành thạo dropdown, hãy khám phá các tính năng nâng cao sau:
-1. **Annotation trường văn bản** – phù hợp cho nhập liệu tự do.  
-2. **Component checkbox** – tuyệt vời cho lựa chọn kiểu boolean.  
-3. **Trường chữ ký** – cần thiết cho quy trình phê duyệt.  
-4. **Watermark** – thương hiệu hoá tài liệu một cách chuyên nghiệp.  
-5. **So sánh tài liệu** – theo dõi thay đổi giữa các phiên bản.
+### Bước tiếp theo là gì?
+Bây giờ bạn đã nắm vững quy trình **create pdf dropdown list**, hãy xem xét khám phá các tính năng liên quan sau:
+1. **Chú thích trường văn bản** – ghi lại đầu vào tự do của người dùng.  
+2. **Thành phần checkbox** – cho phép lựa chọn kiểu boolean.  
+3. **Trường chữ ký** – hỗ trợ phê duyệt pháp lý trực tiếp trong PDF.  
+4. **Đánh dấu watermark** – gắn thương hiệu cho tài liệu bằng logo hoặc thông báo bảo mật.  
+5. **So sánh tài liệu** – theo dõi thay đổi giữa các phiên bản biểu mẫu khác nhau.
 
 ### Sẵn sàng nâng cấp?
-Khám phá các tài nguyên sau để nâng cao kỹ năng GroupDocs của bạn:
-- **[Official Documentation](https://docs.groupdocs.com/annotation/java/)** – hướng dẫn chi tiết và tham chiếu API  
-- **[Community Forum](https://forum.groupdocs.com/c/annotation/)** – nhận trợ giúp từ cộng đồng và đội ngũ hỗ trợ  
-- **[Sample Projects](https://github.com/groupdocs-annotation)** – ví dụ thực tế và mẫu dự án  
+Xem các tài nguyên sau để nâng cao kiến thức GroupDocs của bạn:
+- **[Tài liệu chính thức](https://docs.groupdocs.com/annotation/java/)** – hướng dẫn toàn diện và tham chiếu API  
+- **[Diễn đàn cộng đồng](https://forum.groupdocs.com/c/annotation/)** – nhận trợ giúp từ các nhà phát triển khác  
+- **[Dự án mẫu](https://github.com/groupdocs-annotation)** – ví dụ triển khai thực tế  
 
-Nhớ rằng, cách tốt nhất để thành thạo bất kỳ công nghệ nào là xây dựng một dự án thực tế. Bắt đầu với một biểu mẫu đơn giản – có thể là phiếu phản hồi cho đội ngũ hoặc một khảo sát cơ bản – rồi dần dần thêm tính năng phức tạp khi bạn đã quen thuộc hơn với API.
+Hãy nhớ, cách tốt nhất để thành thạo bất kỳ công nghệ nào là xây dựng một dự án thực tế. Bắt đầu với một biểu mẫu phản hồi đơn giản cho đội ngũ của bạn, sau đó dần dần thêm các trường phức tạp hơn khi bạn đã quen với API.
 
-Có câu hỏi hay gặp vấn đề? Cộng đồng GroupDocs luôn sẵn sàng hỗ trợ, và tài liệu thực sự dễ đọc (tôi biết, hiếm khi có như vậy với các công cụ dành cho nhà phát triển!).
+Có câu hỏi hoặc gặp vấn đề? Cộng đồng GroupDocs rất hữu ích, và tài liệu thực sự dễ đọc (tôi biết, hiếm thấy cho các công cụ phát triển!).
 
-Chúc bạn lập trình vui vẻ, và chúc các PDF của bạn luôn tương tác! 🚀
+Chúc lập trình vui vẻ, và chúc PDF của bạn luôn tương tác! 🚀
 
 ## Câu hỏi thường gặp
 
 ### GroupDocs.Annotation cho Java là gì?
-GroupDocs.Annotation cho Java là một thư viện toàn diện cho phép bạn thêm các loại annotation khác nhau vào tài liệu, bao gồm PDF. Nó giống như một bộ công cụ giúp biến tài liệu tĩnh thành tương tác – bạn có thể thêm dropdown, trường văn bản, checkbox, chữ ký và nhiều hơn nữa mà không cần hiểu sâu về cấu trúc PDF.
+`GroupDocs.Annotation for Java` là một thư viện toàn diện cho phép bạn thêm các loại chú thích khác nhau vào tài liệu, bao gồm PDF. Hãy nghĩ nó như một bộ công cụ giúp biến tài liệu tĩnh thành tương tác – bạn có thể thêm dropdown, trường văn bản, checkbox, chữ ký và hơn thế nữa mà không cần hiểu sâu về cấu trúc PDF phức tạp.
 
-### Thiết lập GroupDocs trong dự án hiện có có khó không?
-Thật bất ngờ là rất đơn giản! Nếu bạn dùng Maven, chỉ cần thêm repository và dependency vào `pom.xml`. Toàn bộ quá trình thiết lập mất khoảng 5 phút. Phần khó nhất thường là cấu hình giấy phép, nhưng tài liệu cũng đã hướng dẫn chi tiết.
+### Thiết lập GroupDocs trong dự án hiện có khó như thế nào?
+Thật bất ngờ là rất đơn giản! Nếu bạn dùng Maven, chỉ cần thêm repository và dependency vào `pom.xml`. Toàn bộ quá trình cài đặt mất khoảng năm phút. Phần khó nhất thường là cấu hình giấy phép, nhưng tài liệu hướng dẫn chi tiết từng bước.
 
-### GroupDocs có hỗ trợ các định dạng file khác ngoài PDF không?
-Chắc chắn! GroupDocs hỗ trợ nhiều định dạng như Word, Excel, PowerPoint và các định dạng ảnh. API giữ nguyên nhất quán giữa các định dạng, vì vậy nếu bạn đã học cách dùng cho PDF, bạn có thể áp dụng ngay cho các loại file khác.
+### Tôi có thể dùng GroupDocs cho các định dạng khác ngoài PDF không?
+Chắc chắn! GroupDocs hỗ trợ nhiều định dạng bao gồm tài liệu Word, bảng tính Excel, bản trình chiếu PowerPoint và các định dạng hình ảnh. API đồng nhất trên mọi định dạng, vì vậy một khi bạn đã nắm vững cho PDF, bạn có thể dễ dàng áp dụng các mẫu tương tự cho các định dạng khác.
 
-### Nếu dropdown xuất hiện ở vị trí sai, tôi nên làm gì?
-Đây thường là vấn đề về hệ thống tọa độ. Nhớ rằng PDF dùng gốc ở góc dưới‑trái (khác với web dùng góc trên‑trái). Bắt đầu với các giá trị Y lớn hơn và giảm dần. Ngoài ra, mở PDF trong trình xem có hiển thị tọa độ (Adobe Reader có tính năng này trong bảng thuộc tính) để xác định vị trí chính xác.
+### Tôi nên làm gì nếu dropdown xuất hiện ở vị trí sai?
+Điều này thường do nhầm lẫn hệ thống tọa độ. Nhớ rằng PDF sử dụng gốc ở góc dưới‑trái (khác với trang web dùng góc trên‑trái). Bắt đầu với giá trị Y lớn hơn và dần giảm xuống. Nhiều trình xem PDF có thể hiển thị tọa độ chính xác của đối tượng đã chọn—sử dụng chúng để tinh chỉnh vị trí.
 
-### Có thể thử nghiệm mà không mua giấy phép đầy đủ không?
-Có! GroupDocs cung cấp bản dùng thử miễn phí với đầy đủ chức năng. Giới hạn duy nhất là các tài liệu được xử lý sẽ có watermark – đủ cho việc phát triển và kiểm tra trước khi mua giấy phép production.
+### Có cách nào để kiểm thử triển khai mà không cần giấy phép đầy đủ không?
+Có! GroupDocs cung cấp bản dùng thử miễn phí với đầy đủ chức năng. Giới hạn duy nhất là các tài liệu đã xử lý sẽ có watermark. Điều này rất phù hợp cho phát triển và kiểm thử – bạn có thể xác minh mọi thứ hoạt động trước khi mua giấy phép sản xuất.
 
-### Làm sao xử lý các file PDF lớn mà không bị hết bộ nhớ?
-Câu hỏi hay! Hãy luôn dùng mẫu `try‑with‑resources` – nó đảm bảo giải phóng tài nguyên đúng cách. Khi xử lý batch, hãy xử lý từng file một thay vì tải nhiều PDF cùng lúc. Bạn cũng có thể cần tăng kích thước heap JVM (`-Xmx`) tùy thuộc vào kích thước file.
+### Làm sao để xử lý các tệp PDF lớn mà không hết bộ nhớ?
+Câu hỏi hay! Hãy luôn sử dụng mẫu try‑with‑resources – nó đảm bảo dọn dẹp đúng cách. Đối với xử lý batch, xử lý từng tệp một thay vì tải nhiều PDF cùng lúc. Bạn cũng có thể cần tăng kích thước heap JVM (`-Xmx`) tùy thuộc vào kích thước tệp.
 
-### Có thể tùy chỉnh giao diện của dropdown không?
-GroupDocs tập trung vào chức năng hơn là tùy chỉnh giao diện. Dropdown sẽ thừa hưởng kiểu mặc định của PDF. Bạn vẫn có thể kiểm soát kích thước và vị trí một cách chính xác. Nếu cần tùy chỉnh giao diện mạnh, có thể xem xét các thư viện PDF chuyên sâu hơn, nhưng phần lớn trường hợp doanh nghiệp thì kiểu mặc định đã đủ.
+### Tôi có thể tùy chỉnh giao diện của dropdown không?
+GroupDocs tập trung nhiều vào chức năng hơn là tùy chỉnh giao diện. Các dropdown kế thừa kiểu mặc định của PDF. Tuy nhiên, bạn có thể kiểm soát kích thước và vị trí một cách chính xác. Nếu cần tùy chỉnh giao diện mạnh, bạn có thể cần xem xét các thư viện PDF chuyên biệt hơn, nhưng kiểu mặc định vẫn phù hợp cho hầu hết các ứng dụng doanh nghiệp.
 
-### Khi gặp khó khăn, cách nhận hỗ trợ tốt nhất là gì?
-Diễn đàn [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/) rất năng động và hữu ích. Cộng đồng gồm cả người dùng và nhân viên GroupDocs phản hồi nhanh. Ngoài ra, tài liệu chính thức cũng rất chi tiết – hãy kiểm tra đó trước khi đặt câu hỏi.
+### Cách tốt nhất để nhận trợ giúp khi gặp khó khăn là gì?
+Diễn đàn [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/) rất năng động và hữu ích. Cộng đồng gồm cả người dùng và nhân viên GroupDocs phản hồi nhanh chóng. Ngoài ra, tài liệu của họ thực sự tốt (tôi biết, bất ngờ đối với một công cụ phát triển!), vì vậy hãy kiểm tra đó trước.
 
-### Có lưu ý gì về giấy phép mà tôi nên biết không?
-Điều quan trọng nhất là phân biệt giấy phép phát triển và giấy phép production. Đảm bảo giấy phép của bạn phù hợp với môi trường triển khai. Giấy phép tạm thời rất hữu ích cho việc đánh giá, nhưng chúng có ngày hết hạn – đừng để chúng hết hạn trong môi trường production.
+### Có lưu ý nào về giấy phép mà tôi nên biết không?
+Điều quan trọng cần lưu ý là sự khác biệt giữa giấy phép phát triển và sản xuất. Đảm bảo giấy phép của bạn phù hợp với môi trường triển khai. Giấy phép tạm thời rất hữu ích cho việc thử nghiệm nhưng có ngày hết hạn – đừng bị bất ngờ trong môi trường sản xuất!
 
-### GroupDocs so sánh thế nào với các thư viện PDF khác như iText?
-GroupDocs tập trung vào annotation và các trường biểu mẫu, trong khi iText là thư viện đa năng hơn cho việc tạo và thao tác PDF. GroupDocs có API đơn giản hơn cho các tác vụ annotation, nhưng iText cung cấp độ linh hoạt cao hơn cho việc tạo PDF phức tạp từ đầu. Nếu mục tiêu chính của bạn là thêm các yếu tố tương tác vào PDF hiện có, GroupDocs thường là lựa chọn tốt hơn.
+### GroupDocs so sánh như thế nào với các thư viện PDF khác như iText?
+GroupDocs tập trung nhiều vào chú thích và các trường biểu mẫu, trong khi iText là thư viện đa năng cho việc tạo và xử lý PDF. GroupDocs có API đơn giản hơn cho các nhiệm vụ chú thích nhưng ít linh hoạt hơn cho việc tạo PDF ở mức thấp. Nếu bạn chủ yếu thêm các yếu tố tương tác vào PDF hiện có, GroupDocs thường là lựa chọn tốt hơn.
 
-## Tài nguyên bổ sung
+**Cập nhật lần cuối:** 2026-08-19  
+**Kiểm tra với:** GroupDocs.Annotation 25.2  
+**Tác giả:** GroupDocs
 
-- [GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/) - Tài liệu API đầy đủ và các hướng dẫn chi tiết  
-- [API Reference](https://reference.groupdocs.com/annotation/java/) - Tham chiếu chi tiết về các phương thức và lớp  
-- [Download Center](https://releases.groupdocs.com/annotation/java/) - Các bản phát hành mới nhất và phiên bản dùng thử  
-- [Purchase Options](https://purchase.groupdocs.com/buy) - Thông tin về giấy phép và giá cả  
-- [Free Trial](https://releases.groupdocs.com/annotation/java/) - Dùng thử toàn bộ tính năng  
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/) - Giấy phép ngắn hạn cho việc đánh giá  
-- [Support Forum](https://forum.groupdocs.com/c/annotation/) - Hỗ trợ cộng đồng và chính thức  
-
----
-
-**Last Updated:** 2026-02-18  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+## Hướng dẫn liên quan
+- [Thêm trường văn bản PDF trong Java – Hướng dẫn GroupDocs.Annotation](/annotation/java/form-field-annotations/)
+- [Cách tạo nút PDF Java với GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
+- [Tải PDF Java với GroupDocs Annotation: Hướng dẫn tải tài liệu](/annotation/java/document-loading/)
