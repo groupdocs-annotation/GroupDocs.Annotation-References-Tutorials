@@ -20,18 +20,6 @@ url: /ar/java/text-annotations/
 weight: 5
 ---
 
-  
-
-Translate.
-
----
-
-Now produce final Arabic markdown.
-
-Make sure to keep code formatting like `save()`, `setAuthor(String)`, etc unchanged.
-
-Proceed to translate.
-
 # إضافة تمييز PDF في جافا – دليل كامل لتعليقات النص
 
 إذا كنت بحاجة إلى **add PDF highlight java** في تطبيق جافا، فقد وصلت إلى المكان الصحيح. في هذا الدرس سنستعرض لماذا تعليقات النص مهمة، وأنواع التعليقات المختلفة التي يمكنك إنشاؤها باستخدام GroupDocs.Annotation for Java، وكيفية تنفيذها بكفاءة. سواء كنت تبني نظام مراجعة قانونية، أو منصة تعلم إلكتروني، أو أداة تحرير تعاونية، فإن المفاهيم هنا ستساعدك على تقديم ميزات تعليمية احترافية.

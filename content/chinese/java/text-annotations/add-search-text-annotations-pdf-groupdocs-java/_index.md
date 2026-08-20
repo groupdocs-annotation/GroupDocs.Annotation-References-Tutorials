@@ -18,15 +18,7 @@ url: /zh/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
- documents, wishing you could quickly jump to important sections? You're not alone. Whether you're dealing ...". Translate.
-
-We must keep **bold** formatting.
-
-Proceed.
-
-Will keep code block placeholders as is.
-
-Let's produce final.# 创建可搜索的 PDF Java：使用 GroupDocs 的文本注释
+# 创建可搜索的 PDF Java：使用 GroupDocs 的文本注释
 
 是否曾在冗长的 PDF 文档中感到无从下手，渴望能够快速跳转到重要章节？你并不孤单。无论是处理法律合同、技术手册还是研究论文，**创建可搜索的 PDF Java** 文件都能在文档导航和协作方面带来巨大的改变。
 

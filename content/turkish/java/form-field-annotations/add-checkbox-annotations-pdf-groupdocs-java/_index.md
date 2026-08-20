@@ -21,17 +21,7 @@ url: /tr/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java
 weight: 1
 ---
 
-Make sure to keep markdown formatting.
-
-Also note "## Prerequisites & Setup" etc.
-
-Translate.
-
-Tables: need to translate header row and cells.
-
-Proceed.
-
-Now produce final output.# Java ile PDF'ye Onay Kutusu Ekleme – GroupDocs Kullanarak Etkileşimli Onay Kutuları
+# Java ile PDF'ye Onay Kutusu Ekleme – GroupDocs Kullanarak Etkileşimli Onay Kutuları
 
 Programatik olarak PDF dosyalarına **onay kutusu ekleme** yöntemini arıyorsanız, doğru yerdesiniz. Günümüzün dijital‑öncelikli dünyasında statik PDF'ler geçmişte kaldı. Onay akışları, anketler veya uyumluluk formları oluştururken, etkileşimli onay kutuları kullanıcı deneyimini büyük ölçüde iyileştirir ve süreçlerinizi hızlandırır.
 

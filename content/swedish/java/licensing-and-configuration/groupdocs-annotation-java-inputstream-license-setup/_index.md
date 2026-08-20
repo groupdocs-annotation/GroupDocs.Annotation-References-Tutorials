@@ -22,16 +22,6 @@ url: /sv/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-
 weight: 1
 ---
 
-://docs.groupdocs.com/annotation/java/) keep same.
-
-Also bullet lists.
-
-Let's translate.
-
-I'll write Swedish.
-
-Let's start.
-
 # sätt groupdocs licens inputstream
 
 ## Introduktion

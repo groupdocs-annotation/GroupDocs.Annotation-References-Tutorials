@@ -20,27 +20,7 @@ url: /el/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
- "Tested With" and "Author". Keep bold formatting.
-
-Thus:
-
-**Last Updated:** 2026-02-16 -> "**Τελευταία Ενημέρωση:** 2026-02-16"
-
-**Tested With:** GroupDocs.Annotation 25.2 -> "**Δοκιμή Με:** GroupDocs.Annotation 25.2"
-
-**Author:** GroupDocs -> "**Συγγραφέας:** GroupDocs"
-
-Now ensure we didn't miss any placeholders.
-
-Placeholders list: CODE_BLOCK_0 through CODE_BLOCK_15. Ensure each appears.
-
-Check after translation we kept them.
-
-Now produce final content with Greek translation.
-
-Make sure to keep markdown formatting exactly.
-
-Let's assemble.# Προσθήκη Σχολίων PDF με Java
+# Προσθήκη Σχολίων PDF με Java
 
 Έχετε κολλήσει ποτέ προσπαθώντας να **add pdf annotation java** χαρακτηριστικά στην εφαρμογή σας; Δεν είστε μόνοι. Είτε δημιουργείτε σύστημα διαχείρισης εγγράφων, είτε μια πλατφόρμα συνεργατικής ανασκόπησης, είτε απλώς χρειάζεστε να επιτρέψετε στους χρήστες να επισημαίνουν και να σχολιάζουν PDF, η σωστή υλοποίηση σχολίων μπορεί να είναι δύσκολη.
 

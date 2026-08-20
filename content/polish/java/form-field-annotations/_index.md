@@ -21,23 +21,7 @@ url: /pl/java/form-field-annotations/
 weight: 9
 ---
 
--14  
-**Tested With:** GroupDocs.Annotation 5.2 (latest stable)  
-**Author:** GroupDocs"
-
-Translate labels.
-
-"**Ostatnia aktualizacja:** 2026-03-14  
-**Testowano z:** GroupDocs.Annotation 5.2 (najnowsza stabilna)  
-**Autor:** GroupDocs"
-
-Now produce final content with same markdown.
-
-Check for any shortcodes: none.
-
-Make sure to keep code block placeholder unchanged.
-
-Proceed to output.# Dodaj pole tekstowe PDF w Javie – Przewodnik GroupDocs.Annotation
+# Dodaj pole tekstowe PDF w Javie – Przewodnik GroupDocs.Annotation
 
 Jeśli potrzebujesz **create PDF form fields** szybko i niezawodnie, trafiłeś we właściwe miejsce. W tym samouczku pokażemy, jak GroupDocs.Annotation umożliwia generowanie wypełnialnych PDF‑ów, **add text field PDF** funkcjonalność, oraz dodawanie interaktywnych przycisków, pól wyboru, list rozwijanych i pól tekstowych — wszystko przy użyciu czystego kodu Java. Niezależnie od tego, czy tworzysz formularz rejestracji klienta, wewnętrzną ankietę, czy złożony wielostronicowy przepływ pracy, poniższe kroki zapewnią solidne podstawy.
 

@@ -19,24 +19,6 @@ url: /th/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
-**  
-A: Yes, you can export annotations to XML, JSON, or other formats, making it easy to integrate with external systems or migrate data.
-
-**Q: How do I implement annotation permissions (who can edit what)?**  
-A: While GroupDocs.Annotation doesn't provide built‑in permission management, you can enforce it at the application layer by tracking annotation ownership and checking permissions before invoking update operations.
-
----
-
-**Last Updated:** 2026-02-16  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
-
-Now translate.
-
-We must keep code placeholders unchanged.
-
-Let's produce final markdown.
-
 # เพิ่มการทำ Annotation PDF ด้วย Java Tutorial
 
 เคยติดขัดกับการพยายาม **add pdf annotation java** ในแอปพลิเคชันของคุณหรือไม่? คุณไม่ได้อยู่คนเดียว ไม่ว่าคุณจะกำลังสร้างระบบจัดการเอกสาร, สร้างแพลตฟอร์มรีวิวแบบร่วมมือ, หรือแค่ต้องการให้ผู้ใช้ไฮไลต์และคอมเมนต์บน PDF การทำ Annotation ให้ถูกต้องอาจเป็นเรื่องท้าทาย

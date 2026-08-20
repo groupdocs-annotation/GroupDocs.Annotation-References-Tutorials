@@ -19,20 +19,6 @@ url: /ja/java/annotation-management/automate-pdf-annotation-extraction-groupdocs
 weight: 1
 ---
 
- start.
-
-# Extract PDF Annotations Java: Complete GroupDocs Tutorial => Japanese: "PDF アノテーション抽出 Java: 完全な GroupDocs チュートリアル". Keep heading.
-
-Proceed.
-
-I'll translate each paragraph.
-
-Be careful with bold **. Keep them.
-
-Also code block placeholders remain.
-
-Let's craft.
-
 # PDF アノテーション抽出 Java: 完全な GroupDocs チュートリアル
 
 ## はじめに

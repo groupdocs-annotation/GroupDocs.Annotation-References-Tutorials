@@ -20,25 +20,7 @@ url: /de/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
- keep technical terms in English, but these are not technical. Could translate. Safer to translate.
-
-Let's translate:
-
-**Last Updated:** 2026-02-16 -> **Zuletzt aktualisiert:** 2026-02-16
-
-**Tested With:** GroupDocs.Annotation 25.2 -> **Getestet mit:** GroupDocs.Annotation 25.2
-
-**Author:** GroupDocs -> **Autor:** GroupDocs
-
-Now ensure all markdown formatting preserved.
-
-Check for any missing placeholders: CODE_BLOCK_0 to CODE_BLOCK_15 all kept.
-
-Check for any shortcodes: none.
-
-Check for links: only one link in free trial bullet; keep unchanged.
-
-Now produce final content.# PDF‑Anmerkungen in Java hinzufügen – Tutorial
+# PDF‑Anmerkungen in Java hinzufügen – Tutorial
 
 Haben Sie schon einmal Schwierigkeiten gehabt, **add pdf annotation java**‑Funktionen in Ihrer Anwendung zu implementieren? Sie sind nicht allein. Egal, ob Sie ein Dokumenten‑Management‑System bauen, eine kollaborative Review‑Plattform erstellen oder einfach Benutzern ermöglichen möchten, PDFs zu markieren und zu kommentieren – das korrekte Hinzufügen von Anmerkungen kann knifflig sein.
 

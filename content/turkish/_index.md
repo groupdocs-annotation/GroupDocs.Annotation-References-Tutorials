@@ -20,21 +20,7 @@ url: /tr/
 weight: 11
 ---
 
-Yazar:** GroupDocs
-
-Make sure to keep bold formatting.
-
-Now ensure all markdown formatting preserved.
-
-Check for any code blocks: none.
-
-Check for shortcodes: none.
-
-Check for images: none.
-
-Check for URLs: we kept unchanged.
-
-Now produce final content.# GroupDocs.Annotation Geliştirici Kılavuzu - Belge Açıklama API'si
+# GroupDocs.Annotation Geliştirici Kılavuzu - Belge Açıklama API'si
 
 Bu kılavuzda, **document annotation API**'nin PDF, Word, Excel, PowerPoint ve birçok diğer dosya türüne doğrudan zengin açıklama özellikleri—örneğin vurgulamalar, yorumlar ve şekiller—eklemenizi nasıl sağladığını keşfedeceksiniz. İster işbirlikçi bir inceleme portalı, ister eğitim uygulaması ya da yasal belge iş akışı oluşturuyor olun, API hem .NET hem de Java ortamlarında açıklamalarla çalışmak için tutarlı, yüksek performanslı bir yol sunar.
 

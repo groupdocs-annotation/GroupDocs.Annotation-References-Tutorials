@@ -19,19 +19,7 @@ url: /zh-hant/java/form-field-annotations/
 weight: 9
 ---
 
-". Keep bold.
-
-"**Tested With:** GroupDocs.Annotation 5.2 (latest stable)" => translate "測試環境：" maybe.
-
-"**Author:** GroupDocs" => translate "作者：" maybe.
-
-But keep bold formatting.
-
-Now produce final markdown.
-
-Make sure to keep all original formatting, line breaks, etc.
-
-Let's craft final answer.# 在 Java 中新增文字欄位 PDF – GroupDocs.Annotation 指南
+# 在 Java 中新增文字欄位 PDF – GroupDocs.Annotation 指南
 
 如果您需要快速且可靠地 **建立 PDF 表單欄位**，您來對地方了。在本教學中，我們將說明 GroupDocs.Annotation 如何讓您產生可填寫的 PDF、**新增文字欄位 PDF** 功能，並加入互動按鈕、核取方塊、下拉式選單與文字欄位——全部使用簡潔的 Java 程式碼。無論您是要建立客戶上線表單、內部調查，或是複雜的多頁工作流程，以下步驟都能為您奠定堅實基礎。
 

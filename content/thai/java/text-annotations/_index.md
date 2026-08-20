@@ -20,21 +20,7 @@ url: /th/java/text-annotations/
 weight: 5
 ---
 
-.
-
-Now produce final markdown with Thai translations, preserving formatting.
-
-Check for any shortcodes: none.
-
-Check code fences: none.
-
-Check images: none.
-
-Check URLs: unchanged.
-
-Make sure to keep bold formatting and code formatting.
-
-Now produce final answer.# Add PDF Highlight Java – คู่มือฉบับสมบูรณ์สำหรับ Text Annotations
+# Add PDF Highlight Java – คู่มือฉบับสมบูรณ์สำหรับ Text Annotations
 
 หากคุณต้องการฟังก์ชัน **add PDF highlight java** ในแอปพลิเคชัน Java คุณมาถูกที่แล้ว ในบทแนะนำนี้เราจะอธิบายว่าทำไม text annotations ถึงสำคัญ ประเภทของ annotation ที่คุณสามารถสร้างด้วย GroupDocs.Annotation for Java และวิธีการนำไปใช้อย่างมีประสิทธิภาพ ไม่ว่าคุณจะกำลังสร้างระบบตรวจสอบกฎหมาย แพลตฟอร์ม e‑learning หรือเครื่องมือแก้ไขแบบร่วมมือ แนวคิดเหล่านี้จะช่วยให้คุณมอบฟีเจอร์ markup ระดับมืออาชีพ
 

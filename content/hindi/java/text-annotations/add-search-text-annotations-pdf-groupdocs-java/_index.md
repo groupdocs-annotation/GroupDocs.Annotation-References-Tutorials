@@ -19,17 +19,7 @@ url: /hi/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
- like "Resources and Further Reading" to Hindi.
-
-Let's translate bullet list items? Could keep as is. Safer to keep as is because they are names of pages. The instruction: keep URLs unchanged, but link text can be translated. However risk of altering proper names. I'll translate the bullet description but keep link text unchanged? Actually bullet is just link. So we could keep as is.
-
-I'll translate the heading "Resources and Further Reading" to Hindi: "संसाधन और आगे पढ़ने के लिए". Then keep bullet list unchanged.
-
-Now produce final markdown.
-
-Be careful to preserve code placeholders and markdown syntax.
-
-Let's craft final answer.# खोज योग्य PDF जावा बनाएं: ग्रुपडॉक्स के साथ टेक्स्ट एनोटेशन
+# खोज योग्य PDF जावा बनाएं: ग्रुपडॉक्स के साथ टेक्स्ट एनोटेशन
 
 क्या आप कभी लंबी PDF दस्तावेज़ों में डूबते हुए महसूस करते हैं और चाहते हैं कि आप जल्दी से महत्वपूर्ण सेक्शन पर जा सकें? आप अकेले नहीं हैं। चाहे आप कानूनी अनुबंधों, तकनीकी मैनुअल या शोध पत्रों से निपट रहे हों, **create searchable PDF Java** फ़ाइलें बनाना दस्तावेज़ नेविगेशन और सहयोग के लिए एक गेम‑चेंजर हो सकता है।
 

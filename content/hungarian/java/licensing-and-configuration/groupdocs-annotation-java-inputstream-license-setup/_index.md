@@ -22,13 +22,7 @@ url: /hu/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-
 weight: 1
 ---
 
-:** GroupDocs.Annotation 25.2 -> "Tesztelve: GroupDocs.Annotation 25.2"
-
-**Author:** GroupDocs -> "Szerző: GroupDocs"
-
-Make sure to keep markdown formatting.
-
-Now produce final content.# groupdocs licenc beállítása InputStream használatával
+# groupdocs licenc beállítása InputStream használatával
 
 ## Bevezetés
 

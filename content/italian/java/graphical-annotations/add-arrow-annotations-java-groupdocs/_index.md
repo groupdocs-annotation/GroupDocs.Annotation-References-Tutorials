@@ -20,22 +20,6 @@ url: /it/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
- translation.
-
-Be careful with bullet points, headings.
-
-Also note "RTL formatting if needed" not needed.
-
-Let's translate.
-
-We'll go through each section.
-
-Title: "# Java PDF Arrow Annotations - Complete Tutorial & Best Practices (2025)" => "# Annotazioni a Freccia PDF Java - Tutorial Completo e Best Practices (2025)" maybe keep "Java PDF Arrow Annotations" but translate: "Annotazioni a Freccia PDF Java". Keep "Complete Tutorial & Best Practices (2025)" => "Tutorial Completo e Best Practices (2025)". Probably fine.
-
-Proceed.
-
-I'll produce final markdown.
-
 # Annotazioni a Freccia PDF Java - Tutorial Completo e Best Practices (2025)
 
 ## Introduzione

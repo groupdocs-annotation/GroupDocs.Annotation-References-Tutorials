@@ -21,13 +21,7 @@ url: /tr/java/document-saving/groupdocs-annotation-java-save-specific-page-range
 weight: 1
 ---
 
-uluk Forumu"
-
-Make sure to keep the link URLs unchanged.
-
-Now produce final markdown.
-
-Let's craft final answer.# Anotasyonlu Belgelerden Belirli Sayfaları Java'da Kaydetme
+# Anotasyonlu Belgelerden Belirli Sayfaları Java'da Kaydetme
 
 ## Giriş
 

@@ -21,11 +21,7 @@ url: /it/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java
 weight: 1
 ---
 
- any other elements: there were no images.
-
-Make sure to keep code block placeholders unchanged.
-
-Now produce final content.# Come aggiungere una casella di controllo a PDF con Java – Caselle di controllo interattive usando GroupDocs
+# Come aggiungere una casella di controllo a PDF con Java – Caselle di controllo interattive usando GroupDocs
 
 Se stai cercando **come aggiungere una casella di controllo** ai file PDF in modo programmatico, sei nel posto giusto. Nell'odierno mondo digitale‑first, i PDF statici sono un ricordo del passato. Che tu stia creando flussi di approvazione, sondaggi o moduli di conformità, aggiungere caselle di controllo interattive può migliorare notevolmente l'esperienza dell'utente e semplificare i tuoi processi.
 

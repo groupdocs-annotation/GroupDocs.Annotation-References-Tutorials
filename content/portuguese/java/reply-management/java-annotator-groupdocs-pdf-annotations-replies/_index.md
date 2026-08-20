@@ -21,24 +21,6 @@ url: /pt/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/
 weight: 1
 ---
 
-aboração em PDF em Tempo Real com a Biblioteca de Anotação PDF para Java"
-
-Second heading: "## Introduction" => "## Introdução"
-
-Paragraph translation.
-
-We must keep **bold**.
-
-Proceed.
-
-Will translate bullet lists.
-
-Make sure to keep URLs unchanged.
-
-Also keep code block placeholders.
-
-Let's craft final output.
-
 # Colaboração em PDF em Tempo Real com a Biblioteca de Anotação PDF para Java
 
 ## Introdução

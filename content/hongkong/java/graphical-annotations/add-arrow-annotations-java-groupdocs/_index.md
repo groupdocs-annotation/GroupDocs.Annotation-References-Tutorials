@@ -18,10 +18,6 @@ url: /zh-hant/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-繁體中文, maybe use 「」 quotes, but not required. Keep English technical terms.
-
-Proceed.
-
 # Java PDF Arrow Annotations - 完整教學與最佳實踐 (2025)
 
 ## 介紹

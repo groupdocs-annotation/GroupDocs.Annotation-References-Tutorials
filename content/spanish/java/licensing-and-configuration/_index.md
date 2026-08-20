@@ -21,18 +21,6 @@ url: /es/java/licensing-and-configuration/
 weight: 2
 ---
 
- `License.isValid()`, `InputStream`, etc.
-
-Also keep markdown links.
-
-Let's produce final Spanish translation.
-
-We'll keep headings same but translate text after them.
-
-Also keep bold formatting.
-
-Let's write.
-
 # Guía de Licenciamiento de GroupDocs Annotation Java - Tutorial Completo de Configuración
 
 Configurar el licenciamiento de GroupDocs.Annotation en tu aplicación Java no tiene por qué ser complicado. Ya sea que estés construyendo un sistema de gestión de documentos, una plataforma colaborativa o añadiendo funciones de anotación a un software existente, un licenciamiento y una configuración adecuados son cruciales para desbloquear todo el potencial de esta poderosa biblioteca. **Una de las primeras cosas que querrás hacer es comprobar el estado de la licencia** justo después de cargar la biblioteca para estar seguro de que todo está listo para funcionar.

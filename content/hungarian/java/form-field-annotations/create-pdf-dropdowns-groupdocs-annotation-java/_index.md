@@ -22,16 +22,6 @@ url: /hu/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-j
 weight: 1
 ---
 
-"
-
-Translate: "# Java PDF legördülő menü oktató - Interaktív űrlapok létrehozása a GroupDocs-szal"
-
-But keep "Java PDF Dropdown Tutorial" maybe keep as is? Should translate natural Hungarian. Let's translate.
-
-Proceed.
-
-Will produce final markdown.
-
 # Java PDF legördülő menü oktató – Interaktív űrlapok létrehozása a GroupDocs-szal
 
 ## Bevezetés

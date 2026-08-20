@@ -21,12 +21,6 @@ url: /tr/java/form-field-annotations/
 weight: 9
 ---
 
-Finally "Last Updated:", "Tested With:", "Author:" translate.
-
-Make sure to keep bold formatting.
-
-Now produce final markdown.
-
 # Java’da Metin Alanı PDF Ekle – GroupDocs.Annotation Rehberi
 
 Eğer **PDF form alanları oluşturmak** istiyor ve bunu hızlı ve güvenilir bir şekilde yapmak istiyorsanız doğru yerdesiniz. Bu öğreticide GroupDocs.Annotation’ın doldurulabilir PDF’ler oluşturmanıza, **add text field PDF** işlevselliği eklemenize ve etkileşimli düğmeler, onay kutuları, açılır menüler ve metin alanları eklemenize nasıl izin verdiğini adım adım inceleyeceğiz. Müşteri onboarding formu, iç anket ya da karmaşık çok‑sayfalı bir iş akışı oluşturuyor olun, aşağıdaki adımlar size sağlam bir temel sağlayacak.

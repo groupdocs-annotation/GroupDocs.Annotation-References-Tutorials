@@ -20,11 +20,7 @@ url: /hu/java/licensing-and-configuration/
 weight: 2
 ---
 
- for any code blocks: none.
-
-Make sure to keep all markdown syntax.
-
-Let's craft final answer.# GroupDocs Annotation Java Licencelési Útmutató – Teljes Beállítási Bemutató
+# GroupDocs Annotation Java Licencelési Útmutató – Teljes Beállítási Bemutató
 
 A GroupDocs.Annotation licenc beállítása a Java alkalmazásodban nem kell, hogy bonyolult legyen. Akár dokumentumkezelő rendszert, együttműködő platformot építesz, vagy annotációs funkciókat adsz hozzá meglévő szoftverhez, a megfelelő licencelés és konfiguráció elengedhetetlen a könyvtár teljes potenciáljának kiaknázásához. **Az első dolgok egyike, amit meg kell tenni, a licenc állapotának ellenőrzése** közvetlenül a könyvtár betöltése után, hogy biztosan minden készen álljon.
 

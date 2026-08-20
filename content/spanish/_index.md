@@ -21,16 +21,7 @@ url: /es/
 weight: 11
 ---
 
-.11 para .NET y Java  
-**Autor:** GroupDocs
-
-Make sure to keep bold formatting.
-
-Now ensure we didn't miss any markdown elements. No code blocks. No images. No shortcodes.
-
-Check for any special characters: The dash in lists is "-". Keep same.
-
-Now produce final output with all translated content.# Guía del Desarrollador de GroupDocs.Annotation - API de Anotación de Documentos
+# Guía del Desarrollador de GroupDocs.Annotation - API de Anotación de Documentos
 
 En esta guía descubrirá cómo la **document annotation API** le permite incrustar funciones de anotación avanzadas —como resaltados, comentarios y formas— directamente en PDF, Word, Excel, PowerPoint y muchos otros tipos de archivo. Ya sea que esté construyendo un portal de revisión colaborativa, una aplicación educativa o un flujo de trabajo de documentos legales, la API le brinda una forma consistente y de alto rendimiento para trabajar con anotaciones tanto en entornos .NET como Java.
 

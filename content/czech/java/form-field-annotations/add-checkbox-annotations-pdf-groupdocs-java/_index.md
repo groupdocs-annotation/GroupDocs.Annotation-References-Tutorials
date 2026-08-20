@@ -22,23 +22,7 @@ url: /cs/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java
 weight: 1
 ---
 
- shortcodes (none). So just translate.
-
-We need to be careful with bullet points, etc.
-
-Let's produce the translated content.
-
-We need to translate headings: "# How to Add Checkbox to PDF with Java – Interactive Checkboxes using GroupDocs" => "# Jak přidat zaškrtávací políčko do PDF pomocí Javy – Interaktivní zaškrtávací políčka pomocí GroupDocs"
-
-Proceed.
-
-Translate each paragraph.
-
-Also note "step‑by‑step" etc.
-
-Make sure to keep code block placeholders unchanged.
-
-Let's craft final answer.# Jak přidat zaškrtávací políčko do PDF pomocí Javy – Interaktivní zaškrtávací políčka pomocí GroupDocs
+# Jak přidat zaškrtávací políčko do PDF pomocí Javy – Interaktivní zaškrtávací políčka pomocí GroupDocs
 
 Pokud hledáte **jak přidat zaškrtávací políčko** do PDF souborů programově, jste na správném místě. V dnešním digitálně orientovaném světě jsou statické PDF minulostí. Ať už vytváříte schvalovací workflow, průzkumy nebo formuláře pro soulad, přidání interaktivních zaškrtávacích políček může výrazně zlepšit uživatelský zážitek a zefektivnit vaše procesy.
 

@@ -19,10 +19,6 @@ url: /de/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
- - do not skip sections". We'll follow.
-
-Let's write translation.
-
 # Durchsuchbare PDF Java erstellen: Textannotation mit GroupDocs
 
 Haben Sie sich schon einmal in langen PDF‑Dokumenten verloren gefühlt und sich gewünscht, schnell zu wichtigen Abschnitten springen zu können? Sie sind nicht allein. Egal, ob Sie mit Rechtsverträgen, technischen Handbüchern oder Forschungsarbeiten arbeiten, die Möglichkeit, **durchsuchbare PDF Java**‑Dateien zu erstellen, kann die Dokumentennavigation und Zusammenarbeit revolutionieren.
