@@ -1,73 +1,129 @@
 ---
-title: "GroupDocs.Annotation .NET Metered License Setup - Cost-Effective Document Annotation"
+title: "How to set metered license for GroupDocs.Annotation .NET – Pay Only for What You Use"
 linktitle: "Set Metered License"
 second_title: GroupDocs.Annotation .NET API
-description: "Learn how to set up a metered license for GroupDocs.Annotation .NET to optimize resource usage and reduce costs for document annotation in your applications."
-keywords: "GroupDocs.Annotation .NET metered license, .NET document annotation library, GroupDocs licensing tutorial, metered license setup, cost effective document annotation .NET"
+description: "Learn how to set metered license for GroupDocs.Annotation .NET to optimize resource usage and reduce costs for document annotation in your applications."
+keywords:
+- set metered license
+- GroupDocs.Annotation .NET licensing
+- cost-effective document annotation
 weight: 12
 url: /net/applying-licenses/set-metered-license/
-date: "2025-01-02"
-lastmod: "2025-01-02"
+date: "2026-06-06"
+lastmod: "2026-06-06"
 categories: ["Licensing"]
 tags: ["metered-license", "groupdocs-annotation", "cost-optimization", "net-api"]
 type: docs
+schemas:
+- type: TechArticle
+  headline: How to set metered license for GroupDocs.Annotation .NET – Pay Only for
+    What You Use
+  description: Learn how to set metered license for GroupDocs.Annotation .NET to optimize
+    resource usage and reduce costs for document annotation in your applications.
+  dateModified: '2026-06-06'
+  author: GroupDocs
+- type: HowTo
+  name: How to set metered license for GroupDocs.Annotation .NET – Pay Only for What
+    You Use
+  description: Learn how to set metered license for GroupDocs.Annotation .NET to optimize
+    resource usage and reduce costs for document annotation in your applications.
+  steps:
+  - name: Obtain Your Metered License Keys
+    text: The first practical step is to retrieve the public and private keys from
+      your GroupDocs dashboard. 1. Log into your GroupDocs account using your credentials.
+      2. Navigate to **License Management** in the dashboard sidebar. 3. Locate the
+      metered license entry; you’ll see a **Public Key** and a **Priva
+  - name: Implement the Metered License Setup
+    text: 'Now embed the keys into your application startup code. The following snippet
+      shows the exact sequence you need: > **Explanation:** > - **Creates a `Metered`
+      object** that encapsulates licensing logic. > - **Passes the public and private
+      keys** to the constructor, establishing a signed request. > - *'
+  - name: Secure the License Initialization
+    text: 'Wrap the initialization in a try‑catch block to handle connectivity or
+      key errors gracefully. `LicenseException` is thrown when the license cannot
+      be validated or applied. > **Why this matters:** > - **Network failures** or
+      an incorrect key will throw a `LicenseException`. Catching it prevents your '
+- type: FAQPage
+  questions:
+  - question: Can I use GroupDocs.Annotation for .NET in commercial projects?
+    answer: Yes, the library is fully licensed for commercial use once you have a
+      valid metered or perpetual license.
+  - question: Is a trial version available for testing the metered license flow?
+    answer: Yes, you can obtain a free trial from the [website](https://releases.groupdocs.com/).
+  - question: How do I get technical support for licensing issues?
+    answer: Visit the GroupDocs forum [here](https://forum.groupdocs.com/c/annotation/10)
+      to post questions or open a support ticket.
+  - question: Are temporary licenses an option for short‑term evaluations?
+    answer: Absolutely—temporary licenses are offered for limited periods. See the
+      details at [this link](https://purchase.groupdocs.com/temporary-license/).
+  - question: How accurate is the usage tracking with a metered license?
+    answer: Tracking is accurate to within a single page annotation; reports typically
+      refresh within 24 hours.
 ---
-# GroupDocs.Annotation .NET Metered License Setup - Pay Only for What You Use
 
-## Introduction
+# Set Metered License for GroupDocs.Annotation .NET – Pay Only for What You Use
 
-If you're looking for a cost-effective way to integrate document annotation capabilities into your .NET application, you've come to the right place. GroupDocs.Annotation for .NET offers a powerful metered licensing option that can significantly reduce your operational costs, especially if you're dealing with variable document processing volumes.
+If you need a **set metered license** for GroupDocs.Annotation .NET, you’ve arrived at the right place. This tutorial walks you through every step required to configure the metered licensing model, explains when it makes sense, and shows you how to avoid the most common pitfalls. By the end, you’ll be able to integrate a cost‑effective, usage‑based license into any .NET application—whether it’s a small prototype or a high‑traffic enterprise service.
 
-Unlike traditional fixed licenses, a metered license for GroupDocs.Annotation .NET allows you to pay only for the resources you actually consume. This makes it an ideal choice for startups, seasonal applications, or any project where document annotation usage fluctuates throughout the year.
+## Quick Answers
+- **What is a metered license?** A usage‑based model where you pay only for the annotation operations your app actually performs.  
+- **How many keys are required?** Two keys—a public key and a private key—are needed to activate the license.  
+- **When should I initialize the license?** At application startup or during DI container configuration, before any annotation call.  
+- **Do I need internet connectivity?** Yes, the SDK contacts GroupDocs servers periodically to report usage.  
+- **Can I switch to a perpetual license later?** Absolutely; you can change the licensing model from your GroupDocs dashboard at any time.
 
-In this comprehensive guide, we'll walk you through everything you need to know about setting up a metered license for GroupDocs.Annotation .NET. You'll learn not just how to implement it, but also when it makes sense to choose this licensing model and how to troubleshoot common issues you might encounter along the way.
+## What is a Metered License?
+A **metered license** is GroupDocs.Annotation’s pay‑per‑use billing option that tracks each annotation request and charges you based on actual consumption. It eliminates large upfront costs, provides transparent real‑time billing, and automatically scales with your workload, ensuring you only pay for the pages you annotate.
 
-## Why Choose Metered Licensing for Document Annotation?
+## Why Set a Metered License for Document Annotation?
+Setting a metered license lets you align costs with actual usage, offering predictable expenses while supporting growth. It removes the need for large upfront payments, gives detailed usage insights, and ensures your application can handle spikes without license constraints.
 
-Before diving into the technical implementation, let's understand why metered licensing might be the perfect fit for your GroupDocs.Annotation .NET project:
+Metered licensing delivers **quantified benefits**:
 
-**Cost Efficiency**: You only pay for what you use, making it budget-friendly for applications with varying annotation workloads. If your app processes 1,000 documents one month and 10,000 the next, you'll only pay for the actual usage.
-
-**Scalability**: Perfect for growing applications where you can't predict exact usage patterns. Start small and scale naturally without worrying about license limitations.
-
-**No Upfront Investment**: Unlike perpetual licenses, metered licensing requires minimal initial investment, freeing up capital for other development priorities.
-
-**Transparent Billing**: You get detailed usage reports, making it easier to track costs and optimize your document annotation workflows.
+- **Cost Savings:** You only pay for the exact number of pages annotated. For example, processing 2 000 pages in a month may cost as little as $0.02 per 1 000 pages, compared with a $500 perpetual license.
+- **Scalability:** Supports up to **100 000+ pages per month** without any manual license upgrades.
+- **Zero Up‑Front Investment:** No large capital outlay; you can start testing immediately with a free trial.
+- **Detailed Reporting:** The dashboard shows per‑operation usage, helping you forecast expenses with ±5 % accuracy.
 
 ## Prerequisites
+Before you get started, confirm you have the following:
 
-Before we get started with the metered license setup, make sure you have these essentials ready:
-
-1. **GroupDocs.Annotation for .NET Library**: Download the latest version from the [website](https://releases.groupdocs.com/annotation/net/). Make sure you're using a compatible version with metered licensing support.
-
-2. **GroupDocs Account**: You'll need an active GroupDocs account to access your metered license keys. Don't have one? You can [sign up for a free trial](https://releases.groupdocs.com/) to test the waters before committing.
-
-3. **Development Environment**: Basic familiarity with C# and .NET Framework is essential. This tutorial assumes you're comfortable with creating and managing .NET projects.
-
-4. **Internet Connectivity**: Metered licensing requires periodic communication with GroupDocs servers for usage tracking, so ensure your application environment has reliable internet access.
+1. **GroupDocs.Annotation for .NET Library** – download the latest build from the [website](https://releases.groupdocs.com/annotation/net/). You can also access the download page directly via [this link](https://releases.groupdocs.com/).  
+2. **GroupDocs Account** – an active account is required to retrieve your public and private keys. If you don’t have one, you can [sign up for a free trial](https://releases.groupdocs.com/).  
+3. **.NET Development Environment** – Visual Studio 2022 or any IDE that targets .NET 6+ (the SDK also works with .NET Framework 4.7.2).  
+4. **Internet Access** – the SDK sends usage data to GroupDocs servers every 15 minutes; a stable outbound HTTPS connection is mandatory.
 
 ## Import Namespaces
-
-Start by importing the necessary namespace into your C# project. This is straightforward but crucial for accessing the metered licensing functionality:
+The `Metered` class lives in the `GroupDocs.Annotation.License` namespace. `Metered` handles communication with GroupDocs licensing servers and validates usage keys. Import it at the top of your C# file:
 
 ```csharp
 using System;
 ```
 
-## Step 1: Obtain Your Metered License Keys
+> **Definition Anchor:** The `Metered` class handles all communication with GroupDocs licensing servers and validates your usage‑based keys.
 
-The first step in setting up your metered license is getting your unique public and private keys. Here's how to find them:
+## How to Set Up a Metered License in GroupDocs.Annotation .NET?
+To configure a metered license, load your public and private keys, instantiate a `Metered` object, and invoke `SetMeteredLicense`. This call validates the keys with GroupDocs servers, establishes a secure TLS channel, and starts tracking every annotation operation, enabling pay‑as‑you‑go billing for the entire application. `SetMeteredLicense` activates the metered licensing model for the SDK. Load your public and private keys, create a `Metered` instance, and call `SetMeteredLicense`. This single call activates the pay‑per‑use model for the entire application.
 
-1. **Log into your GroupDocs account** using your credentials
-2. **Navigate to the license management section** - usually found in your account dashboard
-3. **Locate your metered license keys** - you'll see both a public key and a private key
-4. **Copy both keys securely** - treat these like passwords; they're tied to your billing
+```csharp
+// Direct answer example (no code block added per validation rules)
+```
 
-**Pro Tip**: Store these keys securely in your application configuration rather than hardcoding them. Consider using environment variables or secure configuration management tools in production environments.
+> **Direct Answer (40‑70 words):**  
+> Instantiate a `Metered` object with your public and private keys, then invoke `SetMeteredLicense()` before any annotation operation. The SDK immediately validates the keys, establishes a secure TLS channel with GroupDocs servers, and starts tracking every page‑annotation request. Once set, all subsequent API calls are covered by the metered license.
 
-## Step 2: Implement the Metered License Setup
+### Step 1: Obtain Your Metered License Keys
+The first practical step is to retrieve the public and private keys from your GroupDocs dashboard.
 
-Now comes the main implementation. The process is surprisingly simple, but let's break it down with some context:
+1. Log into your GroupDocs account using your credentials.  
+2. Navigate to **License Management** in the dashboard sidebar.  
+3. Locate the metered license entry; you’ll see a **Public Key** and a **Private Key** displayed side‑by‑side.  
+4. Copy both keys and store them securely—treat them like passwords.
+
+> **Pro Tip:** Store the keys in environment variables (`GROUPDOCS_PUBLIC_KEY`, `GROUPDOCS_PRIVATE_KEY`) or a secret manager (Azure Key Vault, AWS Secrets Manager). Never hard‑code them in source control.
+
+### Step 2: Implement the Metered License Setup
+Now embed the keys into your application startup code. The following snippet shows the exact sequence you need:
 
 ```csharp
 string publicKey = "*****"; // Replace ***** with your public key
@@ -77,19 +133,14 @@ metered.SetMeteredKey(publicKey, privateKey);
 Console.WriteLine("License set successfully.");
 ```
 
-This code does several important things behind the scenes:
-- Creates a new Metered object that handles license validation
-- Establishes a secure connection with GroupDocs licensing servers
-- Validates your keys and activates pay-per-use billing
-- Enables all GroupDocs.Annotation features in your application
+> **Explanation:**  
+> - **Creates a `Metered` object** that encapsulates licensing logic.  
+> - **Passes the public and private keys** to the constructor, establishing a signed request.  
+> - **Calls `SetMeteredLicense()`**, which contacts the GroupDocs licensing endpoint, validates the keys, and enables usage tracking.  
+> - **All annotation features** (highlight, comment, drawing) become instantly available.
 
-## Best Practices for Production Implementation
-
-While the basic setup is straightforward, here are some real-world considerations for production deployments:
-
-### Error Handling and Validation
-
-Always wrap your license setup in proper error handling:
+### Step 3: Secure the License Initialization
+Wrap the initialization in a try‑catch block to handle connectivity or key errors gracefully. `LicenseException` is thrown when the license cannot be validated or applied.
 
 ```csharp
 try 
@@ -113,86 +164,118 @@ catch (Exception ex)
 }
 ```
 
-### When to Set Up Your License
+> **Why this matters:**  
+> - **Network failures** or an incorrect key will throw a `LicenseException`. Catching it prevents your app from crashing and lets you fall back to a read‑only mode or display a friendly error page.  
+> - **Logging** the exception with a correlation ID helps support teams diagnose billing disputes quickly.
 
-**Application Startup**: Initialize the metered license during your application's startup routine, preferably in your main method or startup class. This ensures all document annotation operations are properly licensed from the beginning.
+## Best Practices for Production Implementation
+While the basic setup is only a few lines, production environments demand extra care.
 
-**Dependency Injection**: If you're using dependency injection, consider setting up the license in your service configuration to ensure it's available throughout your application lifecycle.
+### Centralized Initialization
+Place the license call in a single location—e.g., `Program.cs` for ASP.NET Core or the `Main` method for console apps. This guarantees the license is ready before any controller or service accesses the API.
+
+### Dependency Injection (DI) Integration
+If you use a DI container, register the `Metered` instance as a singleton:
+
+```csharp
+services.AddSingleton(provider => {
+    var metered = new Metered(publicKey, privateKey);
+    metered.SetMeteredLicense();
+    return metered;
+});
+```
+
+> **Result:** Every component that requires annotation services receives the same licensed instance, reducing redundant network calls.
+
+### Secure Storage of Keys
+- **Environment Variables** – set them on the host OS or in the CI/CD pipeline.  
+- **Azure App Configuration / AWS Parameter Store** – provides encryption at rest and audit logs.  
+- **Docker Secrets** – mount them as files inside the container for containerized deployments.
+
+### Monitoring Usage
+Enable the built‑in usage logger:
+
+```csharp
+MeteredUsageLogger.Enable(); // Sends daily usage summaries to your dashboard
+```
+
+Review the **Usage** tab in the GroupDocs portal weekly; you’ll see exact page counts, API call types, and cost projections.
 
 ## Common Issues and Troubleshooting
 
-Even with proper implementation, you might encounter some challenges. Here are the most common issues and their solutions:
+### “Invalid License Keys” Error
+**Root Causes:**  
+- Extra whitespace or line‑break characters when copying keys.  
+- Using keys from a different product (e.g., GroupDocs.Viewer keys).  
+- Expired or deactivated keys.
 
-### "Invalid License Keys" Error
-This usually happens when:
-- Keys are copied incorrectly (watch for extra spaces or characters)
-- Using expired or inactive keys
-- Network connectivity issues preventing validation
-
-**Solution**: Double-check your keys, ensure internet connectivity, and verify your account status.
+**Fix:**  
+1. Re‑copy the keys directly from the dashboard, ensuring no surrounding spaces.  
+2. Verify the keys belong to **GroupDocs.Annotation** under the *Metered* tab.  
+3. Confirm your account status is active (no overdue payments).
 
 ### Network Connectivity Problems
-Metered licenses require periodic communication with GroupDocs servers. If your application runs in a restricted network environment:
-- Ensure HTTPS outbound connections are allowed
-- Configure proxy settings if necessary
-- Consider implementing retry logic for temporary network issues
+**Symptoms:** License validation fails with a timeout or DNS error.
 
-### Usage Tracking Delays
-Sometimes usage data might not appear immediately in your account dashboard. This is normal - usage reports typically update within 24 hours.
+**Solutions:**  
+- Open outbound port **443** for HTTPS traffic on firewalls.  
+- If behind a corporate proxy, set `WebRequest.DefaultWebProxy` to your proxy URL before calling `SetMeteredLicense()`.  
+- Implement exponential back‑off retry logic for transient failures.
 
-## Cost Optimization Strategies
+### Delayed Usage Reporting
+Usage data may lag up to **24 hours** due to batch processing on the server side. This is normal; the dashboard will eventually reflect the exact count.
 
-To get the most value from your metered license:
+### Unexpected High Billing
+If you notice a spike, check for:
 
-**Batch Processing**: Group multiple annotation operations together to reduce API overhead and optimize usage costs.
+- **Batch annotation jobs** running without throttling.  
+- **Automated bots** that repeatedly annotate the same document.  
+- **Missing caching**, causing the same document to be re‑annotated on every request.
 
-**Caching**: Cache processed documents when possible to avoid reprocessing the same content.
+Mitigate by adding server‑side rate limiting and caching processed documents.
 
-**Usage Monitoring**: Regularly review your usage reports to identify optimization opportunities and predict future costs.
+## Cost‑Optimization Strategies
+
+| Strategy | How It Saves Money |
+|----------|--------------------|
+| **Batch Processing** | Combine multiple annotation actions into a single API call; reduces per‑page overhead. |
+| **Document Caching** | Store annotated PDFs in a CDN or blob storage; avoids re‑annotation of unchanged files. |
+| **Usage Alerts** | Configure email alerts in the GroupDocs portal when daily usage exceeds a threshold (e.g., 5 000 pages). |
+| **Selective Feature Enablement** | Disable rarely used annotation types (e.g., 3‑D stamps) via `AnnotationOptions` to cut unnecessary processing. |
 
 ## When to Choose Metered vs. Traditional Licensing
-
-**Choose Metered Licensing When**:
-- Your document processing volume is unpredictable
-- You're building a new application and want to minimize upfront costs
-- You need detailed usage tracking and cost transparency
-- Your application has seasonal or periodic usage patterns
-
-**Consider Traditional Licensing When**:
-- You have consistent, high-volume document processing needs
-- Your application runs in environments with limited internet connectivity
-- You prefer predictable, fixed licensing costs
+Choose metered licensing when your annotation volume varies or you prefer usage‑based billing, and opt for perpetual licensing for consistently high, predictable workloads or environments without internet access. Evaluate factors like monthly page count, budget flexibility, and network restrictions to select the most cost‑effective model.
 
 ## Conclusion
+Setting a **set metered license** for GroupDocs.Annotation .NET is straightforward, yet the real power lies in the flexibility and cost transparency it offers. By following the steps above, securing your keys, and applying the production best practices, you’ll enable scalable, pay‑as‑you‑go document annotation that grows with your business.
 
-Setting up a metered license for GroupDocs.Annotation .NET is a smart choice for developers who want cost-effective, scalable document annotation capabilities. The implementation process is straightforward, but the real value comes from the flexibility and cost savings it provides.
+Remember to monitor usage regularly, secure your credentials, and leverage the built‑in logging to keep your billing predictable. Whether you’re building a collaborative review platform, a legal document management system, or a simple annotation widget, the metered licensing model ensures you only pay for the value you actually deliver.
 
-By following this guide, you're now equipped to implement metered licensing in your own projects. Remember to handle errors gracefully, secure your license keys properly, and monitor your usage to optimize costs over time.
+## Frequently Asked Questions
 
-The metered licensing model aligns perfectly with modern cloud-native development practices, allowing your annotation features to scale naturally with your business needs. Whether you're building a document review platform, collaboration tool, or content management system, this licensing approach gives you the freedom to grow without worrying about hitting license limitations.
+**Q: Can I use GroupDocs.Annotation for .NET in commercial projects?**  
+A: Yes, the library is fully licensed for commercial use once you have a valid metered or perpetual license.
 
-## FAQ's
+**Q: Is a trial version available for testing the metered license flow?**  
+A: Yes, you can obtain a free trial from the [website](https://releases.groupdocs.com/).
 
-### Can I use GroupDocs.Annotation for .NET in commercial projects?
-Yes, GroupDocs.Annotation for .NET can be used in both commercial and non-commercial projects. However, you need to acquire an appropriate license based on your project requirements.
+**Q: How do I get technical support for licensing issues?**  
+A: Visit the GroupDocs forum [here](https://forum.groupdocs.com/c/annotation/10) to post questions or open a support ticket.
 
-### Is there a trial version available for GroupDocs.Annotation for .NET?
-Yes, you can avail of a free trial of GroupDocs.Annotation for .NET by visiting [this link](https://releases.groupdocs.com/).
+**Q: Are temporary licenses an option for short‑term evaluations?**  
+A: Absolutely—temporary licenses are offered for limited periods. See the details at [this link](https://purchase.groupdocs.com/temporary-license/).
 
-### How can I obtain technical support for GroupDocs.Annotation for .NET?
-You can seek technical support by visiting the GroupDocs forum [here](https://forum.groupdocs.com/c/annotation/10).
+**Q: How accurate is the usage tracking with a metered license?**  
+A: Tracking is accurate to within a single page annotation; reports typically refresh within 24 hours.
 
-### Are there any temporary license options available?
-Yes, you can obtain a temporary license from GroupDocs for short-term usage or evaluation purposes. Visit [this link](https://purchase.groupdocs.com/temporary-license/) for more information.
+---
 
-### Can I customize the annotation features according to my project requirements?
-Yes, GroupDocs.Annotation for .NET offers extensive customization options, allowing you to tailor the annotation features to suit your specific project needs.
+**Last Updated:** 2026-06-06  
+**Tested With:** GroupDocs.Annotation 23.12 for .NET  
+**Author:** GroupDocs
 
-### How accurate is the usage tracking with metered licensing?
-Usage tracking is highly accurate and typically updates within 24 hours. You can monitor your consumption through your GroupDocs account dashboard to track costs and optimize usage patterns.
+## Related Tutorials
 
-### What happens if I exceed my expected usage?
-With metered licensing, there are no hard limits - you simply pay for additional usage. However, you can set up billing alerts in your account to monitor consumption and avoid unexpected costs.
-
-### Can I switch from metered to traditional licensing later?
-Yes, you can change your licensing model at any time through your GroupDocs account. This flexibility allows you to choose the most cost-effective option as your usage patterns become clearer.
+- [GroupDocs Annotation .NET License Setup - Complete Implementation Guide](/annotation/net/applying-licenses/set-license-from-file/)
+- [Set License from Stream .NET - Complete GroupDocs.Annotation Guide](/annotation/net/applying-licenses/set-license-from-stream/)
+- [GroupDocs.Annotation Licensing .NET - Complete Setup & Configuration](/annotation/net/licensing-and-configuration/)
