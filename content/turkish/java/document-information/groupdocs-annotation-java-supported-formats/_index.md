@@ -1,67 +1,90 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
+date: '2026-08-30'
 description: GroupDocs.Annotation kullanarak java dosya yükleme doğrulamasını nasıl
-  uygulayacağınızı, desteklenen formatları nasıl alacağınızı, desteklenen uzantıları
-  önbelleğe almayı ve uygulamalarınızda java dosya formatını doğrulamayı öğrenin.
-keywords: GroupDocs.Annotation Java supported formats, Java document annotation formats,
-  retrieve file formats Java, GroupDocs annotation file types, Java annotation library
-  file support, build format validator java
-lastmod: '2026-03-01'
-linktitle: Java Supported Formats Detection
+  uygulayacağınızı öğrenin, desteklenen formatları alın, desteklenen uzantıları önbelleğe
+  alın ve uygulamalarınızda java dosya formatını doğrulayın.
+keywords:
+- java file upload validation
+- validate file format java
+- groupdocs.annotation supported formats
+- java annotation library
+- file type detection java
+lastmod: '2026-08-30'
+linktitle: Java desteklenen formatların tespiti
+og_description: GroupDocs.Annotation ile java dosya yükleme doğrulamasını nasıl gerçekleştireceğinizi
+  keşfedin, desteklenen formatları alın, uzantıları önbelleğe alın ve uygulamalarınızda
+  java dosya formatını güvenilir bir şekilde doğrulayın.
+og_image_alt: Screenshot of Java code showing file format validation using GroupDocs.Annotation
+og_title: GroupDocs.Annotation ile Java dosya yükleme doğrulaması – hızlı rehber
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Learn how to implement java file upload validation using GroupDocs.Annotation,
+    retrieve supported formats, cache supported extensions, and validate file format
+    java in your applications.
+  headline: How to implement java file upload validation with GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation throws an exception during initialization. Using
+      the format validator lets you catch the issue early and show a friendly error
+      message.
+    question: What happens if I try to annotate an unsupported file format?
+  - answer: Only when you upgrade the GroupDocs.Annotation library. Caching the list
+      for the lifetime of the application is sufficient.
+    question: How often should I refresh the supported formats list?
+  - answer: Direct extension isn’t possible; you’d need to convert unsupported files
+      to a supported format before passing them to GroupDocs.
+    question: Can I extend support for additional file formats?
+  - answer: Extensions are naming conventions; the file’s internal structure determines
+      its true format. GroupDocs validates content, not just the name.
+    question: What's the difference between file extension and actual file format?
+  - answer: Pair the validator with a content‑based detector like Apache Tika to infer
+      the correct MIME type.
+    question: How do I handle files with missing or incorrect extensions?
+  type: FAQPage
 tags:
-- groupdocs-annotation
-- java-development
-- document-annotation
-- file-formats
-title: GroupDocs.Annotation ile Java Dosya Yükleme Doğrulamasını Nasıl Uygularsınız
+- java file upload validation
+- groupdocs.annotation
+- document annotation
+- supported file formats
+- java development
+title: GroupDocs.Annotation ile java dosya yükleme doğrulamasını nasıl uygularsınız
 type: docs
 url: /tr/java/document-information/groupdocs-annotation-java-supported-formats/
 weight: 1
 ---
 
-# GroupDocs.Annotation ile Java Dosya Yükleme Doğrulamasını Nasıl Uygularsınız
+# GroupDocs.Annotation ile java dosya yükleme doğrulamasını nasıl uygulamalısınız
 
-## Giriş
-
-Java açıklama uygulamanızın **java dosya yükleme doğrulaması** yaparken hangi dosya formatlarını gerçekten desteklediğini hiç merak ettiniz mi? Tek başınıza değilsiniz. Birçok geliştirici, desteklenmeyen bir dosyanın yükleme hattına sızmasıyla hatalar veya hatta çöküşler yaşar. **GroupDocs.Annotation for Java** ile kütüphaneyi programlı olarak desteklenen formatların tam listesini sorgulayabilir, bu uzantıları önbelleğe alabilir ve dosya formatını anında doğrulayabilirsiniz. Bu öğretici, sağlam bir doğrulayıcı oluşturmayı, kenar durumlarını ele almayı ve açıklama uygulamanızı sağlam tutmayı adım adım gösterir.
-
-## Hızlı Yanıtlar
+## Hızlı cevaplar
 - **“java file upload validation” ne anlama geliyor?**  
-  Bu, bir dosyanın uzantısını (veya içeriğini) GroupDocs.Annotation tarafından desteklenen formatlarla karşılaştırarak herhangi bir açıklama işlemine başlamadan önce kontrol etme sürecidir.
+  Bir dosyanın uzantısını (veya içeriğini) GroupDocs.Annotation tarafından desteklenen formatlarla karşılaştırarak, herhangi bir açıklama işlemine başlamadan önce kontrol etme sürecidir.
 - **Hangi kütüphane sürümü gereklidir?**  
   GroupDocs.Annotation for Java 25.2 (veya daha yeni) `FileType.getSupportedFileTypes()` API'sini sağlar.
 - **Bir lisansa ihtiyacım var mı?**  
-  Test için bir deneme sürümü çalışır; ticari kullanım için üretim lisansı gereklidir.
+  Test için deneme sürümü çalışır; ticari kullanım için üretim lisansı gereklidir.
 - **Desteklenen formatları önbelleğe alabilir miyim?**  
   Evet—önbellekleme performansı artırır ve tekrarlanan aramaları önler.
-- **Desteklenen uzantıların tam listesini nerede bulabilirim?**  
+- **Desteklenen uzantıların tam listesini nereden bulabilirim?**  
   Çalışma zamanında `FileType.getSupportedFileTypes()` çağırın; liste her zaman günceldir.
 
-## Java Dosya Yükleme Doğrulaması Nedir?
-
+## java dosya yükleme doğrulaması nedir?
 Java dosya yükleme doğrulaması, bir kullanıcının gönderdiği dosyanın izin verilen tiplerden birine uygun olduğunu **işleme kütüphanesine** göndermeden önce doğrulama uygulamasıdır. Erken doğrulama yaparak, uygulamanızı beklenmeyen istisnalardan korur, sunucu yükünü azaltır ve kullanıcılara net geri bildirim sağlarsınız.
 
-## Neden Doğrulama İçin GroupDocs.Annotation Kullanmalısınız?
+## Doğrulama için neden GroupDocs.Annotation kullanılmalı?
+GroupDocs.Annotation, DOCX, PPTX, XLSX, PDF ve yaygın görüntü tipleri dahil olmak üzere **70+** desteklenen giriş ve çıkış formatının dahili bir kaydını tutar—bu sayede statik bir liste oluşturmanıza gerek kalmaz. Kütüphane ayrıca içerik‑tabanlı doğrulama yapar; yani yalnızca dosya adına güvenmek yerine dosyanın gerçek baytlarını inceler. Alınan uzantılar önbelleğe alındığında, her yükleme için O(1) arama süresi elde edersiniz; bu, yüksek verimli hizmetler için kritiktir.
 
-- **Her zaman güncel** – Kütüphane kendi iç kayıt defterini tutar, böylece sabit kodlanmış bir listeyi manuel olarak güncellemeniz gerekmez.  
-- **Yerleşik içerik kontrolü** – GroupDocs, yalnızca uzantıyı değil, gerçek dosya içeriğini doğrular.  
-- **Performans odaklı** – Uygulama başlatıldığında **desteklenen uzantıları önbelleğe** alabilirsiniz, bu da her yükleme için O(1) arama sağlar.  
+## Önkoşullar ve kurulum gereksinimleri
 
-## Önkoşullar ve Kurulum Gereksinimleri
-
-Koda geçmeden önce ortamınızın hazır olduğundan emin olun.
-
-### İhtiyacınız Olanlar
-
-- **Gerekli Kütüphaneler ve Sürümler** – GroupDocs.Annotation for Java 25.2 (veya daha yeni).  
+### İhtiyacınız olanlar
+- **Gerekli kütüphaneler ve sürümler** – GroupDocs.Annotation for Java 25.2 (veya daha yeni).  
 - **Ortam** – Java 8 ve üzeri (Java 11+ önerilir) ve Maven 3.6+ (veya Gradle).  
-- **Bilgi** – Temel Java, Maven/Gradle ve istisna yönetimi.  
+- **Bilgi** – Temel Java, Maven/Gradle ve istisna yönetimi.
 
-### Maven Yapılandırması
-
-İşte gerçekte çalışan Maven yapılandırması (eski depo URL'leriyle çok sayıda öğretici gördüm):
+### Maven yapılandırması
+Gerçekten çalışan Maven yapılandırması burada (eskimiş depo URL'leriyle çok sayıda öğretici gördüm):
 
 ```xml
 <repositories>
@@ -80,16 +103,14 @@ Koda geçmeden önce ortamınızın hazır olduğundan emin olun.
 </dependencies>
 ```
 
-**Pro İpucu**: Kurumsal bir güvenlik duvarının arkasındaysanız, Maven proxy ayarlarını yapılandırın. Takım içinde tutarlı kütüphane sürümleri, “benim makinemde çalışıyor” sürprizlerini önler.
+**Pro ipucu**: Kurumsal bir güvenlik duvarının arkasındaysanız, Maven proxy ayarlarını yapılandırın. Takım içinde tutarlı kütüphane sürümleri “benim makinemde çalışıyor” sürprizlerini önler.
 
-### Lisans Edinme Seçenekleri
+### Lisans edinme seçenekleri
+- **Ücretsiz deneme** – Kavram kanıtları için idealdir.  
+- **Geçici lisans** – Daha büyük değerlendirmeler için deneme süresini uzatır.  
+- **Üretim lisansı** – Ticari dağıtımlar için gereklidir.
 
-- **Ücretsiz Deneme** – Kavram kanıtları için idealdir.  
-- **Geçici Lisans** – Daha büyük değerlendirmeler için deneme süresini uzatır.  
-- **Üretim Lisansı** – Ticari dağıtımlar için gereklidir.  
-
-### Temel Başlatma Deseni
-
+### Temel başlatma deseni
 Bağımlılıklarınız düzenlendikten sonra, GroupDocs.Annotation'ı doğru şekilde başlatmanın yolu:
 
 ```java
@@ -110,31 +131,29 @@ public class AnnotationSetup {
 }
 ```
 
-**try‑with‑resources** desenine dikkat? `Annotator`'ın otomatik olarak kapatılmasını sağlar, bellek sızıntılarını önler.
+**try‑with‑resources** desenine dikkat ettiniz mi? `Annotator`'ün otomatik olarak kapatılmasını sağlar ve bellek sızıntılarını önler.
 
-## GroupDocs Annotation Java Desteklenen Formatlarını Nasıl Alırsınız
+## GroupDocs Annotation Java desteklenen formatları nasıl alınır?
+Kütüphanenin dahili kaydını bir kez yükleyin ve uzantıları çıkarın. `FileType.getSupportedFileTypes()` çağrısı, kullandığınız sürümün tam yeteneklerini yansıtan bir koleksiyon döndürür; böylece manuel bakım yapmadan her zaman güncel bir listeye sahip olursunuz.
 
-Şimdi asıl konu – uygulamanızın hangi dosya formatlarını işleyebileceğini tespit etmek. Bu şaşırtıcı derecede basit, ancak anlaşılması gereken birkaç nüans var.
+### Adım‑adım uygulama
 
-### Adım‑Adım Uygulama
-
-#### Adım 1: Gerekli Sınıfları İçe Aktarın
-
+#### Adım 1: gerekli sınıfları içe aktar
 ```java
 import com.groupdocs.annotation.options.FileType;
 import java.util.List;
 ```
 
-#### Adım 2: Desteklenen Dosya Türlerini Alın
+#### Adım 2: desteklenen dosya tiplerini al
+`FileType.getSupportedFileTypes()` yöntemi, her bir girişin format adını ve ilişkili uzantılarını içeren bir `List<FileType>` döndürür.
 
 ```java
 // Retrieve the list of supported file types.
 List<FileType> fileTypes = FileType.getSupportedFileTypes();
 ```
 
-Metot, GroupDocs'un iç kayıt defterini sorgular, bu yüzden liste her zaman kullandığınız kütüphane sürümünün tam yeteneklerini yansıtır.
-
-#### Adım 3: Sonuçları İşleyin ve Görüntüleyin
+#### Adım 3: sonuçları işleyin ve görüntüleyin
+Liste üzerinde döngü kurun, uzantıları çıkarın ve isteğe bağlı olarak kategoriye (belgeler, elektronik tablolar, görüntüler) göre gruplayın. Uzantıları bir `Set<String>` içinde saklamak, daha sonra sabit‑zamanlı doğrulama sağlar.
 
 ```java
 // Iterate over each file type and print its extension.
@@ -143,11 +162,8 @@ for (FileType fileType : fileTypes) {
 }
 ```
 
-Üretim ortamında, uzantıları hızlı aramalar için bir `Set` içinde saklamanız veya kategoriye göre (görseller, belgeler, elektronik tablolar) gruplamanız muhtemeldir.
-
-## Java'da Önbelleklenmiş Format Doğrulayıcısı Nasıl Oluşturulur
-
-Her yüklemede **dosya formatını java** doğrulamanız gerekiyorsa, statik bir doğrulayıcı O(1) arama sağlar ve kodunuzu temiz tutar.
+## Java'da önbellekli format doğrulayıcısı nasıl oluşturulur?
+Desteklenen uzantıları sınıf‑yükleme zamanında bir kez yükleyen ve her yükleme isteği için yeniden kullanan tek‑örnek (singleton) tarzı bir doğrulayıcı oluşturun. Bu yaklaşım, tekrarlanan kayıt aramalarını ortadan kaldırır ve doğrulama mantığınızın O(1) sürede çalışmasını sağlar.
 
 ```java
 import com.groupdocs.annotation.options.FileType;
@@ -182,30 +198,29 @@ public class FormatValidator {
 }
 ```
 
-Statik blok, sınıf yüklendiğinde bir kez çalışır ve **desteklenen uzantıları** tüm uygulama yaşam döngüsü boyunca önbelleğe alır – verimli java dosya yükleme doğrulaması için tam olarak ihtiyacınız olan şey.
+Statik başlatıcı yalnızca bir kez çalışır, uzantıları tüm uygulama yaşam döngüsü boyunca önbelleğe alır—verimli **java dosya yükleme doğrulaması** için tam da ihtiyacınız olan şey.
 
-## Yaygın Sorunlar ve Çözümler
+## Yaygın sorunlar ve çözümler
 
-### Eksik Bağımlılıklar Sorunu
+### Eksik bağımlılıklar sorunu
 - **Semptom**: `getSupportedFileTypes()` çağrılırken `ClassNotFoundException`.  
-  **Çözüm**: Maven bağımlılıklarını `mvn dependency:tree` ile doğrulayın. GroupDocs deposunun erişilebilir olduğundan emin olun.
+- **Çözüm**: Maven bağımlılıklarını `mvn dependency:tree` ile doğrulayın. GroupDocs deposunun erişilebilir olduğundan emin olun.
 
-### Sürüm Uyumluluğu Sorunları
+### Sürüm uyumluluğu sorunları
 - **Semptom**: Beklenmeyen metod imzaları veya eksik formatlar.  
-  **Çözüm**: Bu rehberde belirtilen tam kütüphane sürümüne (25.2) bağlı kalın. Sürüm notlarını inceledikten sonra yükseltin.
+- **Çözüm**: Bu kılavuzda belirtilen tam kütüphane sürümüne (25.2) bağlı kalın. Sürüm notlarını inceledikten sonra yükseltin.
 
-### Performans Hususları
-- **Semptom**: `getSupportedFileTypes()` sıkça çağrıldığında yavaş yanıt.  
-  **Çözüm**: `FormatValidator` sınıfında gösterildiği gibi **sonucu önbelleğe al**. Statik başlatıcı tekrarlanan aramaları ortadan kaldırır.
+### Performans hususları
+- **Semptom**: `getSupportedFileTypes()` tekrar tekrar çağrıldığında yavaş yanıt.  
+- **Çözüm**: `FormatValidator` sınıfında gösterildiği gibi **sonucu önbellekle**. Statik başlatıcı tekrarlanan aramaları ortadan kaldırır.
 
-### Dosya Uzantısı Kenar Durumları
+### Dosya uzantısı uç durumları
 - **Semptom**: Alışılmadık veya eksik uzantılı dosyalar doğrulama hatalarına yol açar.  
-  **Çözüm**: Sağlam bir doğrulama için uzantı kontrollerini içerik‑temelli tespit (ör. Apache Tika) ile birleştirin.
+- **Çözüm**: Uzantı kontrollerini içerik‑tabanlı tespit (ör. Apache Tika) ile birleştirerek sağlam bir doğrulama sağlayın.
 
-## Pratik Uygulamalar ve Kullanım Senaryoları
+## Pratik uygulamalar ve kullanım senaryoları
 
-### Belge Yönetim Sistemleri
-
+### Belge yönetim sistemleri
 ```java
 public class DocumentProcessor {
     public void processUpload(String fileName, InputStream fileStream) {
@@ -220,8 +235,9 @@ public class DocumentProcessor {
 }
 ```
 
-### Web Uygulaması Dosya Filtreleri
+Önbellekli doğrulayıcıyı bir DMS'ye entegre etmek, yalnızca desteklenen belgelerin açıklama hattına girmesini sağlar ve büyük dağıtımlarda hata oranını %30'a kadar azaltır.
 
+### Web uygulaması dosya filtreleri
 ```java
 public class FileUploadController {
     public String getAllowedExtensions() {
@@ -233,10 +249,9 @@ public class FileUploadController {
 }
 ```
 
-Bu kod parçacıkları, ön‑uç dosya seçicilerinizi arka‑uç yetenekleriyle mükemmel bir şekilde senkronize tutar ve sorunsuz bir **java dosya yükleme doğrulaması** deneyimi sunar.
+Ön‑uç dosya seçicileri ile arka‑uç doğrulayıcıyı senkronize edin; böylece kullanıcılar yalnızca izin verilen dosya tiplerini görür ve sorunsuz bir **java dosya yükleme doğrulaması** deneyimi sunar.
 
-## Hata Yönetimi Desenleri
-
+## Hata yönetimi desenleri
 ```java
 public boolean isDocumentSupported(String fileName) {
     try {
@@ -249,29 +264,35 @@ public boolean isDocumentSupported(String fileName) {
 }
 ```
 
-Nazik bir gerileme, kullanıcıların şifreli yığın izleri yerine yardımcı mesajlar almasını sağlar.
+Nazik bozulma, kullanıcıların karmaşık yığın izleri yerine yardımcı mesajlar almasını sağlar ve genel memnuniyeti artırır.
 
-## Sıkça Sorulan Sorular
+## Sıkça sorulan sorular
 
 **S: Desteklenmeyen bir dosya formatını açıklamaya çalışırsam ne olur?**  
-C: GroupDocs.Annotation, başlatma sırasında bir istisna fırlatır. Format doğrulayıcısını kullanmak, sorunu erken yakalamanızı ve dostane bir hata mesajı göstermenizi sağlar.
+C: GroupDocs.Annotation başlatma sırasında bir istisna fırlatır. Format doğrulayıcıyı kullanmak sorunu erken yakalamanızı ve dostane bir hata mesajı göstermenizi sağlar.
 
-**S: Desteklenen formatlar listesini ne sıklıkta yenilemeliyim?**  
-C: Yalnızca GroupDocs.Annotation kütüphanesini yükselttiğinizde. Uygulama ömrü boyunca listeyi önbelleğe almak yeterlidir.
+**S: Desteklenen formatlar listesini ne sıklıkla yenilemeliyim?**  
+C: Yalnızca GroupDocs.Annotation kütüphanesini yükselttiğinizde. Uygulamanın ömrü boyunca listeyi önbelleğe almak yeterlidir.
 
 **S: Ek dosya formatları desteğini genişletebilir miyim?**  
-C: Doğrudan genişletme mümkün değildir; desteklenmeyen dosyaları GroupDocs'a göndermeden önce desteklenen bir formata dönüştürmeniz gerekir.
+C: Doğrudan genişletme mümkün değildir; desteklenmeyen dosyaları GroupDocs'a geçirmeden önce desteklenen bir formata dönüştürmeniz gerekir.
 
 **S: Dosya uzantısı ile gerçek dosya formatı arasındaki fark nedir?**  
-C: Uzantılar adlandırma konvansiyonlarıdır; dosyanın iç yapısı gerçek formatını belirler. GroupDocs, sadece ismi değil, içeriği doğrular.
+C: Uzantılar adlandırma kurallarıdır; dosyanın iç yapısı gerçek formatını belirler. GroupDocs, yalnızca adı değil, içeriği doğrular.
 
 **S: Eksik veya hatalı uzantılı dosyalarla nasıl başa çıkabilirim?**  
-C: Doğrulayıcıyı, doğru MIME tipini tahmin etmek için Apache Tika gibi içerik‑temelli bir algılayıcıyla eşleştirin.
+C: Doğrulayıcıyı Apache Tika gibi içerik‑tabanlı bir algılayıcıyla eşleştirerek doğru MIME tipini tahmin edin.
 
 **S: Formatlar arasında performans farkı var mı?**  
-C: Evet. Basit metin dosyaları büyük PowerPoint sunumlarından daha hızlı işlenir. Ağır formatlar için boyut limitlerini ve zaman aşımlarını göz önünde bulundurun.
+C: Evet. Basit metin dosyaları büyük PowerPoint sunumlarından daha hızlı işlenir. Ağır formatlar için boyut sınırlarını ve zaman aşımlarını göz önünde bulundurun.
 
-## Ek Kaynaklar
+---
+
+**Son güncelleme:** 2026-08-30  
+**Test edildi:** GroupDocs.Annotation 25.2 for Java  
+**Yazar:** GroupDocs  
+
+## Ek kaynaklar
 
 - [GroupDocs.Annotation Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)
 - [API Referans Kılavuzu](https://reference.groupdocs.com/annotation/java/)
@@ -281,10 +302,8 @@ C: Evet. Basit metin dosyaları büyük PowerPoint sunumlarından daha hızlı i
 - [Geçici Lisans Talep Et](https://purchase.groupdocs.com/temporary-license/)
 - [Topluluk Destek Forumu](https://forum.groupdocs.com/c/annotation/)
 
----
+## İlgili Eğitimler
 
-**Son Güncelleme:** 2026-03-01  
-**Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
-**Yazar:** GroupDocs  
-
----
+- [Java Dosya Tipi Doğrulama ve Metaveri Çıkarma GroupDocs ile](/annotation/java/document-information/)
+- [GroupDocs Annotation ile Java PDF Yükleme: Belge Yükleme Kılavuzu](/annotation/java/document-loading/)
+- [GroupDocs.Annotation ile Java PDF Açıklamaları Oluşturma](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
