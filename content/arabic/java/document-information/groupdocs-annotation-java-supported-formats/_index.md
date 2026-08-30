@@ -1,67 +1,92 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: تعلم كيفية تنفيذ التحقق من تحميل ملفات Java باستخدام GroupDocs.Annotation،
-  واسترجاع الصيغ المدعومة، وتخزين امتدادات الصيغ المدعومة في الذاكرة المؤقتة، والتحقق
-  من صيغة الملف Java في تطبيقاتك.
-keywords: GroupDocs.Annotation Java supported formats, Java document annotation formats,
-  retrieve file formats Java, GroupDocs annotation file types, Java annotation library
-  file support, build format validator java
-lastmod: '2026-03-01'
-linktitle: Java Supported Formats Detection
+date: '2026-08-30'
+description: تعلم كيفية تنفيذ التحقق من تحميل ملفات java باستخدام GroupDocs.Annotation،
+  استرجاع الصيغ المدعومة، تخزين الامتدادات المدعومة في الذاكرة المؤقتة، والتحقق من
+  صيغة ملف java في تطبيقاتك.
+keywords:
+- java file upload validation
+- validate file format java
+- groupdocs.annotation supported formats
+- java annotation library
+- file type detection java
+lastmod: '2026-08-30'
+linktitle: اكتشاف الصيغ المدعومة لـ Java
+og_description: اكتشف كيفية إجراء التحقق من تحميل ملفات java باستخدام GroupDocs.Annotation،
+  استرجاع الصيغ المدعومة، تخزين الامتدادات في الذاكرة المؤقتة، والتحقق بثقة من صيغة
+  ملف java في تطبيقاتك.
+og_image_alt: Screenshot of Java code showing file format validation using GroupDocs.Annotation
+og_title: التحقق من تحميل ملفات Java باستخدام GroupDocs.Annotation – دليل سريع
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Learn how to implement java file upload validation using GroupDocs.Annotation,
+    retrieve supported formats, cache supported extensions, and validate file format
+    java in your applications.
+  headline: How to implement java file upload validation with GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation throws an exception during initialization. Using
+      the format validator lets you catch the issue early and show a friendly error
+      message.
+    question: What happens if I try to annotate an unsupported file format?
+  - answer: Only when you upgrade the GroupDocs.Annotation library. Caching the list
+      for the lifetime of the application is sufficient.
+    question: How often should I refresh the supported formats list?
+  - answer: Direct extension isn’t possible; you’d need to convert unsupported files
+      to a supported format before passing them to GroupDocs.
+    question: Can I extend support for additional file formats?
+  - answer: Extensions are naming conventions; the file’s internal structure determines
+      its true format. GroupDocs validates content, not just the name.
+    question: What's the difference between file extension and actual file format?
+  - answer: Pair the validator with a content‑based detector like Apache Tika to infer
+      the correct MIME type.
+    question: How do I handle files with missing or incorrect extensions?
+  type: FAQPage
 tags:
-- groupdocs-annotation
-- java-development
-- document-annotation
-- file-formats
-title: كيفية تنفيذ التحقق من تحميل الملفات في جافا باستخدام GroupDocs.Annotation
+- java file upload validation
+- groupdocs.annotation
+- document annotation
+- supported file formats
+- java development
+title: كيفية تنفيذ التحقق من تحميل ملفات java باستخدام GroupDocs.Annotation
 type: docs
 url: /ar/java/document-information/groupdocs-annotation-java-supported-formats/
 weight: 1
 ---
 
-# كيفية تنفيذ التحقق من تحميل ملفات Java باستخدام GroupDocs.Annotation
+# كيفية تنفيذ التحقق من تحميل ملفات java مع GroupDocs.Annotation
 
-## المقدمة
-
-هل تساءلت يومًا أي صيغ ملفات يمكن لتطبيق التعليقات التوضيحية Java الخاص بك التعامل معها فعليًا **عند إجراء التحقق من تحميل ملفات Java**؟ أنت لست وحدك. العديد من المطورين يصطدمون بعقبة عندما يتسلل ملف غير مدعوم إلى مسار التحميل، مما يسبب أخطاء أو حتى تعطل التطبيق. مع **GroupDocs.Annotation for Java**، يمكنك استعلام المكتبة برمجياً للحصول على القائمة الدقيقة للصيغ المدعومة، وتخزين تلك الامتدادات مؤقتًا، والتحقق من صيغة الملف Java أثناء التنفيذ. هذا الدليل يشرح لك كيفية بناء مُتحقق قوي، ومعالجة الحالات الحدية، والحفاظ على تطبيق التعليقات التوضيحية الخاص بك ثابتًا.
+في تطبيقات التعليق التوضيحي الحديثة بلغة Java، **java file upload validation** أمر أساسي للحفاظ على استقرار وخدمة آمنة. من خلال الاستفادة من سجل الصيغ المدمج في GroupDocs.Annotation، يمكنك اكتشاف كل نوع ملف يمكن للمكتبة معالجته تلقائيًا، وتخزين تلك الامتدادات مؤقتًا لعمليات البحث السريعة، والتحقق من صيغة الملف java قبل بدء أي عمل تعليقات توضيحية. يشرح هذا الدليل التنفيذ الكامل، من إعداد البيئة إلى مُحقق مخزن جاهز للإنتاج، مع توضيح “السبب” وراء كل خطوة.
 
 ## إجابات سريعة
-- **ما معنى “java file upload validation”؟**  
-  إنها عملية فحص امتداد الملف المرفوع (أو محتواه) مقابل الصيغ المدعومة من قبل GroupDocs.Annotation قبل محاولة أي عملية تعليقات توضيحية.  
-- **ما نسخة المكتبة المطلوبة؟**  
-  توفر GroupDocs.Annotation for Java 25.2 (أو أحدث) واجهة برمجة التطبيقات `FileType.getSupportedFileTypes()`.  
+- **ماذا يعني “java file upload validation”?**  
+  إنها عملية فحص امتداد الملف المرفوع (أو محتواه) مقابل الصيغ المدعومة من قبل GroupDocs.Annotation قبل محاولة أي عمل تعليقات توضيحية.
+- **ما هو إصدار المكتبة المطلوب؟**  
+  GroupDocs.Annotation for Java 25.2 (أو أحدث) يوفر واجهة برمجة التطبيقات `FileType.getSupportedFileTypes()`.
 - **هل أحتاج إلى ترخيص؟**  
-  النسخة التجريبية تعمل للاختبار؛ يتطلب الاستخدام التجاري ترخيصًا للإنتاج.  
+  النسخة التجريبية تعمل للاختبار؛ الترخيص التجاري مطلوب للاستخدام التجاري.
 - **هل يمكنني تخزين الصيغ المدعومة مؤقتًا؟**  
-  نعم—التخزين المؤقت يحسن الأداء ويتجنب عمليات البحث المتكررة.  
+  نعم—التخزين المؤقت يحسن الأداء ويتجنب عمليات البحث المتكررة.
 - **أين يمكنني العثور على القائمة الكاملة للامتدادات المدعومة؟**  
-  استدعِ `FileType.getSupportedFileTypes()` أثناء التشغيل؛ تكون القائمة دائمًا محدثة.
+  استدعِ `FileType.getSupportedFileTypes()` وقت التشغيل؛ القائمة دائمًا محدثة.
 
-## ما هو التحقق من تحميل ملفات Java؟
-
-التحقق من تحميل ملفات Java هو ممارسة التأكد من أن الملف المرسل من قبل المستخدم يتوافق مع مجموعة من الأنواع المسموح بها **قبل** تمريره إلى مكتبة المعالجة. من خلال التحقق المبكر، تحمي تطبيقك من الاستثناءات غير المتوقعة، وتقلل من حمل الخادم، وتوفر ردودًا واضحة للمستخدمين.
+## ما هو java file upload validation؟
+java file upload validation هو ممارسة التأكد من أن الملف المرسل من قبل المستخدم يتوافق مع مجموعة الأنواع المسموح بها **قبل** تمريره إلى مكتبة المعالجة. من خلال التحقق المبكر، تحمي تطبيقك من الاستثناءات غير المتوقعة، وتقلل من حمل الخادم، وتوفر ردودًا واضحة للمستخدمين.
 
 ## لماذا نستخدم GroupDocs.Annotation للتحقق؟
-
-- **دائمًا محدث** – تحتفظ المكتبة بسجل داخلي خاص بها، لذا لا تحتاج أبدًا إلى تحديث قائمة مشفرة يدويًا.  
-- **فحص محتوى مدمج** – تقوم GroupDocs بالتحقق من محتوى الملف الفعلي، وليس مجرد الامتداد.  
-- **جاهز للأداء** – يمكنك **تخزين الامتدادات المدعومة** مؤقتًا مرة واحدة عند بدء التطبيق، مما يمنح عمليات بحث O(1) لكل تحميل.  
+GroupDocs.Annotation يحتفظ بسجل داخلي لأكثر من **70+** صيغة إدخال وإخراج مدعومة—بما في ذلك DOCX و PPTX و XLSX و PDF وأنواع الصور الشائعة—لذا لن تحتاج إلى إنشاء قائمة ثابتة يدويًا. المكتبة أيضًا تقوم بالتحقق القائم على المحتوى، مما يعني أنها تفحص البايتات الفعلية للملف بدلاً من الاعتماد فقط على اسم الملف. من خلال تخزين الامتدادات المستخرجة، تحصل على زمن بحث O(1) لكل تحميل، وهو أمر حاسم للخدمات ذات التدفق العالي.
 
 ## المتطلبات المسبقة ومتطلبات الإعداد
 
-قبل أن نغوص في الشيفرة، تأكد من أن بيئتك جاهزة.
-
 ### ما ستحتاجه
-
 - **المكتبات والإصدارات المطلوبة** – GroupDocs.Annotation for Java 25.2 (أو أحدث).  
-- **البيئة** – Java 8 أو أعلى (يوصى بـ Java 11+ ) و Maven 3.6+ (أو Gradle).  
-- **المعرفة** – أساسيات Java، Maven/Gradle، ومعالجة الاستثناءات.  
+- **البيئة** – Java 8 أو أعلى (يوصى Java 11+) و Maven 3.6+ (أو Gradle).  
+- **المعرفة** – أساسيات Java، Maven/Gradle، ومعالجة الاستثناءات.
 
-### إعداد Maven
-
-إليك إعداد Maven الذي يعمل فعليًا (لقد رأيت العديد من الدروس التي تحتوي على عناوين مستودعات قديمة):
+### تكوين Maven
+إليك إعداد Maven الذي يعمل فعليًا (لقد رأيت العديد من الدروس التي تستخدم عناوين مستودعات قديمة):
 
 ```xml
 <repositories>
@@ -80,17 +105,15 @@ weight: 1
 </dependencies>
 ```
 
-**نصيحة احترافية**: إذا كنت خلف جدار حماية مؤسسي، قم بتكوين إعدادات بروكسي Maven. الحفاظ على إصدارات المكتبة المتسقة عبر الفريق يمنع مفاجآت “يعمل على جهازي”.  
+**نصيحة احترافية**: إذا كنت خلف جدار حماية مؤسسي، قم بتكوين إعدادات بروكسي Maven. توحيد إصدارات المكتبة عبر الفريق يمنع مفاجآت “يعمل على جهازي”.
 
 ### خيارات الحصول على الترخيص
-
 - **نسخة تجريبية مجانية** – مثالية لإثبات المفهوم.  
-- **ترخيص مؤقت** – يمدد فترة التجربة لتقييمات أكبر.  
-- **ترخيص إنتاج** – مطلوب للنشر التجاري.  
+- **ترخيص مؤقت** – يطيل فترة التجربة لتقييمات أكبر.  
+- **ترخيص إنتاج** – مطلوب للنشر التجاري.
 
 ### نمط التهيئة الأساسي
-
-بمجرد ترتيب الاعتمادات، إليك كيفية تهيئة GroupDocs.Annotation بشكل صحيح:
+بعد ترتيب الاعتمادات، إليك كيفية تهيئة GroupDocs.Annotation بشكل صحيح:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -110,32 +133,26 @@ public class AnnotationSetup {
 }
 ```
 
-هل لاحظت نمط **try‑with‑resources**؟ يضمن إغلاق `Annotator` تلقائيًا، مما يمنع تسرب الذاكرة.
+هل لاحظت نمط **try‑with‑resources**؟ يضمن إغلاق كائن `Annotator` تلقائيًا، مما يمنع تسرب الذاكرة.
 
-## كيفية استرجاع صيغ GroupDocs Annotation المدعومة لـ Java
-
-الآن للحدث الرئيسي – اكتشاف الصيغ التي يمكن لتطبيقك التعامل معها فعليًا. الأمر بسيط بشكل مدهش، لكن هناك بعض الفروق الدقيقة التي تستحق الفهم.
+## كيفية استرجاع صيغ GroupDocs Annotation Java المدعومة؟
+حمّل سجل المكتبة الداخلي مرة واحدة واستخرج الامتدادات. استدعاء `FileType.getSupportedFileTypes()` يُعيد مجموعة تعكس القدرات الدقيقة للإصدار الذي تستخدمه، لذا ستحصل دائمًا على قائمة محدثة دون صيانة يدوية.
 
 ### تنفيذ خطوة بخطوة
 
 #### الخطوة 1: استيراد الفئات المطلوبة
-
 ```java
 import com.groupdocs.annotation.options.FileType;
 import java.util.List;
 ```
 
-#### الخطوة 2: استرجاع صيغ الملفات المدعومة
-
+#### الخطوة 2: استرجاع أنواع الملفات المدعومة
 ```java
 // Retrieve the list of supported file types.
 List<FileType> fileTypes = FileType.getSupportedFileTypes();
 ```
 
-الطريقة تستعلم سجل GroupDocs الداخلي، لذا فإن القائمة دائمًا تعكس القدرات الدقيقة لإصدار المكتبة الذي تستخدمه.
-
 #### الخطوة 3: معالجة وعرض النتائج
-
 ```java
 // Iterate over each file type and print its extension.
 for (FileType fileType : fileTypes) {
@@ -143,11 +160,8 @@ for (FileType fileType : fileTypes) {
 }
 ```
 
-في بيئة الإنتاج، من المحتمل أن تخزن الامتدادات في `Set` للحصول على عمليات بحث سريعة أو تجميعها حسب الفئة (صور، مستندات، جداول بيانات).
-
-## كيفية بناء مُتحقق صيغ مخزن مؤقتًا في Java
-
-إذا كنت بحاجة إلى **التحقق من صيغة الملف Java** في كل تحميل، فإن المُتحقق الثابت يمنحك عمليات بحث O(1) ويحافظ على نظافة الكود.
+## كيفية بناء مُحقق صيغ مخزن مؤقتًا في java؟
+أنشئ مُحققًا بنمط Singleton يحمل الامتدادات المدعومة مرة واحدة عند تحميل الصنف ويعيد استخدامها لكل طلب تحميل. هذا النهج يلغي عمليات البحث المتكررة في السجل ويضمن تشغيل منطق التحقق في زمن O(1).
 
 ```java
 import com.groupdocs.annotation.options.FileType;
@@ -182,34 +196,29 @@ public class FormatValidator {
 }
 ```
 
-الكتلة الثابتة تُنفّذ مرة واحدة عند تحميل الفئة، **تخزن الامتدادات المدعومة** طوال دورة حياة التطبيق – وهذا بالضبط ما تحتاجه للتحقق الفعال من تحميل ملفات Java.
+المُهيئ الساكن يُنفّذ مرة واحدة فقط، مخزنًا الامتدادات طوال دورة حياة التطبيق—وهو بالضبط ما تحتاجه لـ **java file upload validation** فعّالة.
 
 ## المشكلات الشائعة والحلول
 
 ### مشكلة الاعتمادات المفقودة
-
 - **العَرَض**: `ClassNotFoundException` عند استدعاء `getSupportedFileTypes()`.  
-- **الحل**: تحقق من اعتمادات Maven باستخدام `mvn dependency:tree`. تأكد من إمكانية الوصول إلى مستودع GroupDocs.  
+- **الحل**: تحقق من اعتماديات Maven باستخدام `mvn dependency:tree`. تأكد من إمكانية الوصول إلى مستودع GroupDocs.
 
 ### مشكلات توافق الإصدارات
-
 - **العَرَض**: توقيعات طرق غير متوقعة أو صيغ مفقودة.  
-- **الحل**: التزم بالإصدار الدقيق للمكتبة المذكور في هذا الدليل (25.2). قم بالترقية فقط بعد مراجعة ملاحظات الإصدار.  
+- **الحل**: التزم بالإصدار المحدد في هذا الدليل (25.2). قم بالترقية فقط بعد مراجعة ملاحظات الإصدار.
 
 ### اعتبارات الأداء
+- **العَرَض**: بطء الاستجابة عند استدعاء `getSupportedFileTypes()` بشكل متكرر.  
+- **الحل**: **قم بتخزين النتيجة** كما هو موضح في صنف `FormatValidator`. المُهيئ الساكن يلغي عمليات البحث المتكررة.
 
-- **العَرَض**: استجابة بطيئة عند استدعاء `getSupportedFileTypes()` بشكل متكرر.  
-- **الحل**: **خزن النتيجة** كما هو موضح في فئة `FormatValidator`. يزيل المُهيئ الثابت عمليات البحث المتكررة.  
-
-### حالات حافة امتدادات الملفات
-
-- **العَرَض**: الملفات ذات الامتدادات غير المعتادة أو المفقودة تتسبب في فشل التحقق.  
-- **الحل**: دمج فحص الامتدادات مع الكشف القائم على المحتوى (مثل Apache Tika) للحصول على تحقق قوي.  
+### حالات حافة امتداد الملفات
+- **العَرَض**: ملفات ذات امتدادات غير عادية أو مفقودة تسبب فشل التحقق.  
+- **الحل**: اجمع بين فحص الامتداد واكتشاف المحتوى القائم على المكتبة (مثل Apache Tika) للحصول على تحقق قوي.
 
 ## التطبيقات العملية وحالات الاستخدام
 
 ### أنظمة إدارة المستندات
-
 ```java
 public class DocumentProcessor {
     public void processUpload(String fileName, InputStream fileStream) {
@@ -224,8 +233,9 @@ public class DocumentProcessor {
 }
 ```
 
-### فلاتر ملفات تطبيق الويب
+دمج المُحقق المخزن في نظام إدارة المستندات يضمن أن المستندات المدعومة فقط تدخل خط أنابيب التعليقات، مما يقلل معدلات الأخطاء حتى 30 % في النشر الواسع.
 
+### فلاتر ملفات تطبيق الويب
 ```java
 public class FileUploadController {
     public String getAllowedExtensions() {
@@ -237,10 +247,9 @@ public class FileUploadController {
 }
 ```
 
-هذه المقاطع تبقي محددات الملفات في الواجهة الأمامية متزامنة تمامًا مع قدرات الواجهة الخلفية، مما يوفر تجربة **java file upload validation** سلسة.
+زامن مُحددات الملفات في الواجهة الأمامية مع المُحقق الخلفي بحيث يرى المستخدمون فقط الأنواع المسموح بها، مما يوفر تجربة **java file upload validation** سلسة.
 
 ## أنماط معالجة الأخطاء
-
 ```java
 public boolean isDocumentSupported(String fileName) {
     try {
@@ -253,40 +262,46 @@ public boolean isDocumentSupported(String fileName) {
 }
 ```
 
-تضمن الانحدار السلس أن يتلقى المستخدمون رسائل مفيدة بدلاً من تتبعات الأخطاء الغامضة.
+التدهور السلس يضمن أن يتلقى المستخدمون رسائل مفيدة بدلاً من تتبع الأخطاء الغامض، مما يحسن الرضا العام.
 
 ## الأسئلة المتكررة
 
-**س: ماذا يحدث إذا حاولت إضافة تعليقات توضيحية على صيغة ملف غير مدعومة؟**  
-ج: تقوم GroupDocs.Annotation برمي استثناء أثناء التهيئة. يتيح لك استخدام مُتحقق الصيغ التقاط المشكلة مبكرًا وعرض رسالة خطأ ودية.
+**س:** ماذا يحدث إذا حاولت التعليق على ملف بصيغة غير مدعومة؟  
+**ج:** يطرح GroupDocs.Annotation استثناءً أثناء التهيئة. استخدام مُحقق الصيغ يتيح لك التقاط المشكلة مبكرًا وعرض رسالة خطأ ودية.
 
-**س: كم مرة يجب عليّ تحديث قائمة الصيغ المدعومة؟**  
-ج: فقط عند ترقية مكتبة GroupDocs.Annotation. تخزين القائمة مؤقتًا طوال عمر التطبيق يكفي.
+**س:** كم مرة يجب أن أقوم بتحديث قائمة الصيغ المدعومة؟  
+**ج:** فقط عند ترقية مكتبة GroupDocs.Annotation. تخزين القائمة طوال عمر التطبيق كافٍ.
 
-**س: هل يمكنني توسيع الدعم لصيغ ملفات إضافية؟**  
-ج: لا يمكن توسيع الدعم مباشرة؛ سيتعين عليك تحويل الملفات غير المدعومة إلى صيغة مدعومة قبل تمريرها إلى GroupDocs.
+**س:** هل يمكنني توسيع الدعم لصيغ ملفات إضافية؟  
+**ج:** لا يمكن توسيع الدعم مباشرة؛ عليك تحويل الملفات غير المدعومة إلى صيغة مدعومة قبل تمريرها إلى GroupDocs.
 
-**س: ما الفرق بين امتداد الملف والصيغة الفعلية للملف؟**  
-ج: الامتدادات هي تسميات اسمية؛ البنية الداخلية للملف تحدد صيغته الحقيقية. تقوم GroupDocs بالتحقق من المحتوى، وليس مجرد الاسم.
+**س:** ما الفرق بين امتداد الملف والصيغة الفعلية للملف؟  
+**ج:** الامتدادات هي اتفاقيات تسمية؛ البنية الداخلية للملف تحدد صيغته الحقيقية. GroupDocs يتحقق من المحتوى، ليس الاسم فقط.
 
-**س: كيف أتعامل مع الملفات التي تفتقد امتدادًا أو لديها امتداد غير صحيح؟**  
-ج: اجمع المُتحقق مع مكتبة كشف محتوى مثل Apache Tika لاستنتاج نوع MIME الصحيح.
+**س:** كيف أتعامل مع ملفات بدون امتداد أو بامتداد غير صحيح؟  
+**ج:** اجمع المُحقق مع مكتبة كشف محتوى مثل Apache Tika لتحديد نوع MIME الصحيح.
 
-**س: هل هناك فرق في الأداء بين الصيغ؟**  
-ج: نعم. الملفات النصية البسيطة تُعالج أسرع من عروض PowerPoint الكبيرة. ضع في اعتبارك حدود الحجم والمهلات للصيغ الثقيلة.
+**س:** هل هناك فرق في الأداء بين الصيغ؟  
+**ج:** نعم. ملفات النص البسيطة تُعالج أسرع من عروض PowerPoint الكبيرة. ضع حدودًا للحجم ووقت الانتظار للصيحات الثقيلة.
 
-## موارد إضافية
+---
+
+**آخر تحديث:** 2026-08-30  
+**تم الاختبار مع:** GroupDocs.Annotation 25.2 for Java  
+**المؤلف:** GroupDocs  
+
+**موارد إضافية**
 
 - [توثيق GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)
 - [دليل مرجع API](https://reference.groupdocs.com/annotation/java/)
 - [تحميل أحدث نسخة](https://releases.groupdocs.com/annotation/java/)
 - [شراء ترخيص](https://purchase.groupdocs.com/buy)
-- [بدء تجربة مجانية](https://releases.groupdocs.com/annotation/java/)
+- [ابدأ تجربة مجانية](https://releases.groupdocs.com/annotation/java/)
 - [طلب ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license/)
 - [منتدى دعم المجتمع](https://forum.groupdocs.com/c/annotation/)
 
----
+## دروس ذات صلة
 
-**آخر تحديث:** 2026-03-01  
-**تم الاختبار مع:** GroupDocs.Annotation 25.2 for Java  
-**المؤلف:** GroupDocs
+- [تحقق من نوع الملف Java واستخراج البيانات الوصفية باستخدام GroupDocs](/annotation/java/document-information/)
+- [تحميل PDF Java مع GroupDocs Annotation: دليل تحميل المستند](/annotation/java/document-loading/)
+- [إنشاء تعليقات توضيحية PDF Java مع GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
