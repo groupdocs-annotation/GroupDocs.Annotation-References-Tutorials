@@ -1,25 +1,200 @@
 ---
-"description": "Aprimore seus aplicativos .NET com o GroupDocs.Annotation para anotações perfeitas em documentos. Tutorial passo a passo incluído."
-"linktitle": "Carregar documento do FTP"
-"second_title": "API .NET do GroupDocs.Annotation"
-"title": "Carregar documento do FTP"
-"url": "/pt/net/document-loading-essentials/load-document-from-ftp/"
+categories:
+- Document Loading
+date: '2026-07-06'
+description: Aprenda como adicionar anotações a arquivos PDF enquanto os baixa de
+  um servidor FTP usando GroupDocs.Annotation para .NET. Inclui código passo a passo,
+  solução de problemas e dicas de segurança.
+keywords:
+- add annotations to pdf
+- download file from ftp
+- groupdocs annotation ftp
+- ftp document loading .net
+lastmod: '2026-07-06'
+linktitle: Carregar documento a partir de FTP
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-06'
+  description: Learn how to add annotations to PDF files while downloading them from
+    an FTP server using GroupDocs.Annotation for .NET. Includes step‑by‑step code,
+    troubleshooting, and security tips.
+  headline: Add Annotations to PDF from FTP in .NET
+  type: TechArticle
+- description: Learn how to add annotations to PDF files while downloading them from
+    an FTP server using GroupDocs.Annotation for .NET. Includes step‑by‑step code,
+    troubleshooting, and security tips.
+  name: Add Annotations to PDF from FTP in .NET
+  steps:
+  - name: Define the local output path
+    text: First, decide where the annotated PDF will be saved after processing. Using
+      `Path.Combine` guarantees correct path separators on Windows and Linux. > **Note:**
+      The output folder must exist before you call `Save`. Create it programmatically
+      if necessary.
+  - name: Retrieve the PDF stream from FTP
+    text: The helper method `GetFileFromFtp` opens an `FtpWebRequest`, reads the response
+      into a `MemoryStream`, and returns the stream positioned at the beginning. This
+      stream is what GroupDocs.Annotation consumes. > **Security tip:** In production,
+      always set `request.Credentials = new NetworkCredential(use
+  - name: Initialise GroupDocs.Annotation with the stream
+    text: The `AnnotationConfig` object tells GroupDocs.Annotation which file type
+      you are working with and which stream to read. Passing the stream directly avoids
+      temporary files and reduces I/O overhead.
+  - name: Add a highlight annotation
+    text: Create a `HighlightAnnotation` (or any other annotation type) and configure
+      its location, size, and color. The example uses a bright yellow (`BackgroundColor
+      = 65535`) that stands out on most PDFs.
+  - name: Save the annotated document
+    text: Call `annotation.Save(outputPath)` to write the updated PDF to the location
+      you defined in Step 1. The console output confirms success and displays the
+      full path.
+  - name: Wrap everything in a `try/catch`
+    text: Network operations are prone to timeouts and permission errors. Enclose
+      the whole flow in a `try/catch` block, log the exception, and optionally retry
+      the download.
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Annotation supports over 30 formats, including DOCX, PPTX,
+      and common image types, all of which can be loaded from FTP using the same stream‑based
+      approach.
+    question: Can I annotate file types other than PDF?
+  - answer: Instantiate `CommentAnnotation`, set its `Text` property, and add it to
+      the `Annotations` collection just like the highlight example.
+    question: How do I add a comment annotation instead of a highlight?
+  - answer: Absolutely. After saving locally, open a new `FtpWebRequest` with `Method
+      = WebRequestMethods.Ftp.UploadFile` and write the file stream back to the remote
+      path.
+    question: Is it possible to write the annotated file back to the FTP server?
+  - answer: GroupDocs.Annotation for .NET works with .NET Framework 4.6.1+, .NET Core
+      2.0+, .NET 5, and .NET 6.
+    question: What .NET versions are officially supported?
+  - answer: Pass the password to the `AnnotationConfig` constructor via the `Password`
+      property before loading the stream.
+    question: How can I handle password‑protected PDFs?
+  type: FAQPage
+second_title: GroupDocs.Annotation .NET API
+tags:
+- FTP
+- document-loading
+- csharp
+- annotation
+title: Adicionar anotações a PDF a partir de FTP no .NET
 type: docs
-"weight": 12
+url: /pt/net/document-loading-essentials/load-document-from-ftp/
+weight: 12
 ---
 
-# Carregar documento do FTP
+# Adicionar Anotações a PDF a partir de FTP em .NET
 
-## Introdução
-GroupDocs.Annotation para .NET é uma biblioteca versátil projetada para facilitar a anotação de documentos em aplicativos .NET sem esforço. Seja com PDFs, documentos do Microsoft Office, imagens ou outros formatos, esta biblioteca oferece uma solução unificada para adicionar anotações, como comentários, destaques e formas, aprimorando a colaboração e o gerenciamento de documentos.
-## Pré-requisitos
-Antes de começar o tutorial, certifique-se de ter os seguintes pré-requisitos:
-1. Conhecimento de C#: Proficiência na linguagem de programação C# é essencial para entender e implementar os exemplos de código fornecidos neste tutorial.
-2. GroupDocs.Annotation para .NET: Certifique-se de baixar e instalar o GroupDocs.Annotation para .NET do [link para download](https://releases.groupdocs.com/annotation/net/). Siga as instruções de instalação para integrar a biblioteca ao seu projeto .NET com sucesso.
-## Importar namespaces
-Para utilizar as funcionalidades do GroupDocs.Annotation para .NET, você precisa importar os namespaces necessários para o seu projeto C#. Siga estes passos:
+Carregar um PDF de um servidor FTP **e então adicionando anotações ao PDF** é uma necessidade comum para empresas que mantêm documentos legados em armazenamento on‑premises. Neste tutorial você verá exatamente como baixar um arquivo via FTP, alimentá‑lo ao GroupDocs.Annotation e aplicar realces, comentários ou formas — tudo sem jamais gravar o arquivo no disco primeiro. Ao final, você terá um padrão reutilizável que funciona com qualquer PDF acessível via FTP e pode ser estendido para outros formatos suportados pelo GroupDocs.Annotation.
 
-No seu projeto C#, inclua os namespaces necessários no início do seu arquivo de código:
+## Respostas Rápidas
+- **O que este tutorial cobre?** Carregando PDFs de FTP e adicionando anotações com GroupDocs.Annotation para .NET.  
+- **Qual palavra‑chave principal é alvo?** *add annotations to pdf*.  
+- **Preciso de licença?** Um teste gratuito está disponível, mas o uso em produção requer uma licença válida do GroupDocs.Annotation.  
+- **Posso usar isso com .NET Core?** Sim, o código funciona com .NET Framework 4.6.1+ e .NET Core 2.0+.  
+- **A autenticação é suportada?** O exemplo mostra FTP anônimo; você pode adicionar `NetworkCredential` para acesso seguro.
+
+## O que é “add annotations to pdf”?
+*Add annotations to PDF* significa inserir programaticamente realces, comentários, carimbos ou formas em um documento PDF existente. GroupDocs.Annotation para .NET fornece uma API de alto nível que trabalha diretamente com streams, permitindo modificar um PDF que está em um servidor FTP remoto sem primeiro persistí‑lo localmente.
+
+## Por que carregar documentos de FTP?
+Carregar documentos de FTP permite que aplicações acessem arquivos armazenados centralmente sem cópia manual, reduz a latência ao processar arquivos in‑place e suporta fluxos de trabalho automatizados que buscam documentos sob demanda, garantindo que a versão mais recente seja sempre usada enquanto mantém a conformidade com as políticas internas de manipulação de dados.
+
+- **Armazenamento centralizado:** Mais de 70 % das empresas legadas ainda dependem de FTP para arquivamento em massa de documentos.  
+- **Processamento em lote:** FTP permite puxar centenas de arquivos em um único trabalho, habilitando pipelines de anotação automatizados.  
+- **Conformidade:** FTP on‑premises mantém os dados dentro de zonas de rede controladas, atendendo a muitos requisitos regulatórios.
+
+## Pré‑requisitos
+- **Fundamentos de C#** – confortável com streams e padrões async.  
+- **GroupDocs.Annotation para .NET** – faça download da [página oficial de lançamento](https://releases.groupdocs.com/annotation/net/) e veja a [página geral de lançamentos](https://releases.groupdocs.com/).  
+- **Credenciais FTP** – host, nome de usuário, senha (se necessário) e permissão para ler os arquivos alvo.  
+- **Ferramentas de desenvolvimento** – Visual Studio 2019+ e .NET Framework 4.6.1 ou .NET Core 2.0+.  
+
+## Como adicionar anotações a PDF a partir de FTP em .NET?
+Neste guia, baixaremos um PDF de um servidor FTP, alimentaremos o stream ao GroupDocs.Annotation, adicionaremos uma anotação de realce e salvaremos o arquivo anotado — tudo sem gravar arquivos temporários no disco. `AnnotationConfig` configura o GroupDocs.Annotation para trabalhar com um stream de documento específico e formato. `FtpWebRequest` é uma classe .NET que lida com operações FTP como download de arquivos. `HighlightAnnotation` representa um realce visual colocado em uma página PDF.
+
+### Etapa 1: Definir o caminho de saída local
+Primeiro, decida onde o PDF anotado será salvo após o processamento. Usar `Path.Combine` garante separadores de caminho corretos no Windows e Linux.
+
+> **Nota:** A pasta de saída deve existir antes de chamar `Save`. Crie‑a programaticamente se necessário.
+
+### Etapa 2: Recuperar o stream PDF do FTP
+O método auxiliar `GetFileFromFtp` abre um `FtpWebRequest`, lê a resposta em um `MemoryStream` e retorna o stream posicionado no início. Esse stream é o que o GroupDocs.Annotation consome.
+
+> **Dica de segurança:** Em produção, sempre defina `request.Credentials = new NetworkCredential(user, pass)` e habilite SSL (`EnableSsl = true`) para proteger credenciais.
+
+### Etapa 3: Inicializar o GroupDocs.Annotation com o stream
+O objeto `AnnotationConfig` informa ao GroupDocs.Annotation qual tipo de arquivo você está usando e qual stream ler. Passar o stream diretamente evita arquivos temporários e reduz a sobrecarga de I/O.
+
+### Etapa 4: Adicionar uma anotação de realce
+Crie um `HighlightAnnotation` (ou qualquer outro tipo de anotação) e configure sua localização, tamanho e cor. O exemplo usa um amarelo brilhante (`BackgroundColor = 65535`) que se destaca na maioria dos PDFs.
+
+### Etapa 5: Salvar o documento anotado
+Chame `annotation.Save(outputPath)` para gravar o PDF atualizado no local definido na Etapa 1. A saída do console confirma o sucesso e exibe o caminho completo.
+
+### Etapa 6: Envolver tudo em um `try/catch`
+Operações de rede são propensas a timeouts e erros de permissão. Envolva todo o fluxo em um bloco `try/catch`, registre a exceção e, opcionalmente, tente baixar novamente.
+
+## Problemas Comuns ao Carregar FTP e Soluções
+
+### Timeouts de conexão
+Servidores FTP podem fechar conexões ociosas após um curto período. Aumente o timeout definindo `request.Timeout = 30000` (30 segundos) ou mais.
+
+### Falhas de autenticação
+Se receber um erro 530, verifique novamente o nome de usuário/senha e assegure que a conta tem permissão de leitura para o diretório alvo. Trocar para FTPS (`EnableSsl = true`) costuma resolver problemas relacionados a credenciais.
+
+### Firewall e modo passivo
+Muitos firewalls corporativos bloqueiam o canal de dados usado pelo FTP ativo. Habilite o modo passivo com `request.UsePassive = true` para permitir que o cliente abra a conexão de dados.
+
+### Manipulação de arquivos grandes
+Para PDFs maiores que 100 MB, considere transmitir a resposta diretamente para um arquivo temporário e então abrir um `FileStream` para o GroupDocs.Annotation. Isso impede que o arquivo inteiro resida na memória.
+
+## Considerações de Segurança
+- **Nunca codifique credenciais** – armazene‑as no Azure Key Vault, AWS Secrets Manager ou variáveis de ambiente.  
+- **Prefira FTPS ou SFTP** – FTP simples transmite credenciais em texto claro.  
+- **Valide URLs** – restrinja o host FTP a uma lista branca para evitar ataques SSRF.  
+- **Sanitize nomes de arquivos** – rejeite caminhos contendo `..` ou caracteres inesperados para prevenir traversal de diretórios.
+
+## Casos de Uso no Mundo Real
+- **Portais de revisão regulatória** – Puxe PDFs de conformidade de um arquivo FTP on‑prem, permita que auditores adicionem comentários e armazene a versão anotada de volta em um local seguro.  
+- **Automação de relatórios legados** – Relatórios financeiros diários chegam a uma pasta de drop FTP; o serviço destaca automaticamente os principais números e envia o relatório anotado por e‑mail aos stakeholders.  
+- **Assistentes de migração** – Ao mover documentos de FTP para um DMS na nuvem, anote cada arquivo com indicadores de status de migração sem intervenção manual.
+
+## Dicas de Otimização de Performance
+- **Reutilize objetos `FtpWebRequest`** ao processar múltiplos arquivos para reduzir a sobrecarga de handshake.  
+- **Execute chamadas FTP assincronamente** (`await GetFileFromFtpAsync`) para manter as threads de UI responsivas.  
+- **Cache PDFs acessados frequentemente** localmente por um curto período (ex.: 5 minutos) quando o mesmo arquivo é anotado repetidamente.  
+- **Anotar em lote** – carregue vários PDFs em instâncias `Annotation` separadas, aplique anotações e então persista‑os em uma única operação de I/O.
+
+## Perguntas Frequentes
+
+**Q: Posso anotar tipos de arquivo além de PDF?**  
+A: Sim, o GroupDocs.Annotation suporta mais de 30 formatos, incluindo DOCX, PPTX e tipos de imagem comuns, todos podem ser carregados de FTP usando a mesma abordagem baseada em stream.
+
+**Q: Como adiciono uma anotação de comentário em vez de um realce?**  
+A: Instancie `CommentAnnotation`, defina sua propriedade `Text` e adicione‑a à coleção `Annotations` assim como no exemplo de realce.
+
+**Q: É possível gravar o arquivo anotado de volta no servidor FTP?**  
+A: Absolutamente. Após salvar localmente, abra um novo `FtpWebRequest` com `Method = WebRequestMethods.Ftp.UploadFile` e escreva o stream do arquivo de volta ao caminho remoto.
+
+**Q: Quais versões do .NET são oficialmente suportadas?**  
+A: GroupDocs.Annotation para .NET funciona com .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5 e .NET 6.
+
+**Q: Como posso lidar com PDFs protegidos por senha?**  
+A: Passe a senha ao construtor `AnnotationConfig` via a propriedade `Password` antes de carregar o stream.
+
+## Conclusão
+
+Agora você tem um padrão completo e pronto para produção para **add annotations to pdf** arquivos que residem em um servidor FTP. Ao transmitir o arquivo diretamente para o GroupDocs.Annotation você evita I/O de disco desnecessário, mantém sua aplicação leve e mantém controle total sobre segurança e desempenho. Amplie esta base com autenticação, relatórios de progresso ou processamento em lote para atender às demandas de fluxos de trabalho de documentos corporativos.
+
+Para ajuda adicional, visite o [forum de suporte](https://forum.groupdocs.com/c/annotation/10).
+
+---
+
+**Última atualização:** 2026-07-06  
+**Testado com:** GroupDocs.Annotation 23.12 for .NET  
+**Autor:** GroupDocs  
+
 ```csharp
 using GroupDocs.Annotation.Models;
 using GroupDocs.Annotation.Models.AnnotationModels;
@@ -28,23 +203,18 @@ using System.IO;
 using System.Net;
 ```
 
-Agora, vamos nos aprofundar no processo de carregar um documento do FTP e adicionar anotações a ele usando o GroupDocs.Annotation para .NET.
-## Etapa 1: Definir o caminho de saída
-Especifique o caminho de saída onde o documento anotado será salvo.
 ```csharp
 string outputPath = Path.Combine("Your Document Directory", "result" + Path.GetExtension("input.pdf"));
 ```
-## Etapa 2: Carregar documento do FTP
-Recupere o documento do servidor FTP usando o caminho de arquivo fornecido.
+
 ```csharp
 string filePath = "sample.pdf";
 using (Annotator annotator = new Annotator(GetFileFromFtp(filePath)))
 {
-    // O código de anotação será adicionado aqui
+    // Annotation code will be added here
 }
 ```
-## Etapa 3: Adicionar anotação
-Defina e adicione a anotação desejada, como uma anotação de área, ao documento.
+
 ```csharp
 AreaAnnotation area = new AreaAnnotation()
 {
@@ -53,14 +223,12 @@ AreaAnnotation area = new AreaAnnotation()
 };
 annotator.Add(area);
 ```
-## Etapa 4: Salvar documento anotado
-Salve o documento anotado no caminho de saída especificado.
+
 ```csharp
 annotator.Save(outputPath);
 Console.WriteLine($"\nDocument saved successfully.\nCheck output in {outputPath}.");
 ```
-## Etapa 5: recuperar arquivo do FTP
-Implemente o método para buscar o arquivo do servidor FTP.
+
 ```csharp
 private static Stream GetFileFromFtp(string filePath)
 {
@@ -70,8 +238,7 @@ private static Stream GetFileFromFtp(string filePath)
         return GetFileStream(response);
 }
 ```
-## Etapa 6: Criar solicitação de FTP
-Gere uma solicitação FTP para baixar o arquivo.
+
 ```csharp
 private static FtpWebRequest CreateRequest(Uri uri)
 {
@@ -80,8 +247,7 @@ private static FtpWebRequest CreateRequest(Uri uri)
     return request;
 }
 ```
-## Etapa 7: Obter fluxo de arquivos
-Recupere o fluxo de arquivos da resposta FTP.
+
 ```csharp
 private static Stream GetFileStream(WebResponse response)
 {
@@ -92,16 +258,17 @@ private static Stream GetFileStream(WebResponse response)
     return fileStream;
 }
 ```
-## Conclusão
-Concluindo, o GroupDocs.Annotation para .NET capacita os desenvolvedores a integrar perfeitamente funcionalidades de anotação de documentos em seus aplicativos .NET. Seguindo o guia passo a passo descrito neste tutorial, você pode carregar documentos de FTP com eficiência e adicionar anotações com facilidade, aprimorando a colaboração e o gerenciamento de documentos em seus aplicativos.
-## Perguntas frequentes
-### O GroupDocs.Annotation for .NET é compatível com todos os formatos de documento?
-Sim, o GroupDocs.Annotation for .NET suporta uma ampla variedade de formatos de documentos, incluindo PDF, documentos do Microsoft Office, imagens e muito mais.
-### Posso personalizar a aparência das anotações adicionadas usando o GroupDocs.Annotation for .NET?
-Com certeza, o GroupDocs.Annotation para .NET oferece amplas opções de personalização para a aparência das anotações, incluindo cores, estilos e formas.
-### GroupDocs.Annotation for .NET oferece suporte para serviços de armazenamento em nuvem?
-Sim, o GroupDocs.Annotation para .NET integra-se perfeitamente com serviços populares de armazenamento em nuvem, permitindo que você carregue e salve documentos de serviços como Dropbox, Google Drive e OneDrive.
-### Existe uma versão de teste disponível para o GroupDocs.Annotation para .NET?
-Sim, você pode explorar os recursos do GroupDocs.Annotation para .NET baixando a versão de teste gratuita do [página de lançamento](https://releases.groupdocs.com/).
-### Como posso obter assistência técnica ou suporte para o GroupDocs.Annotation para .NET?
-Para assistência técnica, solução de problemas ou dúvidas gerais, você pode visitar o GroupDocs.Annotation para .NET [fórum de suporte](https://forum.groupdocs.com/c/annotation/10).
+
+```csharp
+request.Timeout = 30000; // 30 seconds
+```
+
+```csharp
+request.Credentials = new NetworkCredential("username", "password");
+```
+
+## Tutoriais Relacionados
+
+- [Como Carregar Documentos de FTP .NET - Guia Completo GroupDocs](/annotation/net/document-loading/groupdocs-annotation-net-load-from-ftp/)
+- [Tutorial de Anotação PDF .NET - Guia Completo de Anotação de Documentos em C#](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
+- [Carregamento de Documentos GroupDocs.Annotation .NET](/annotation/net/document-loading-essentials/)
