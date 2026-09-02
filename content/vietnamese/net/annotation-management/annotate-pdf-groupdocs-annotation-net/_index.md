@@ -484,11 +484,6 @@ Bạn đã có một lộ trình hoàn chỉnh, sẵn sàng cho production để
 - [Diễn đàn GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [Trang mua hàng](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Hướng dẫn liên quan
 
 - [Load PDF from URL .NET - Hướng dẫn đầy đủ với GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

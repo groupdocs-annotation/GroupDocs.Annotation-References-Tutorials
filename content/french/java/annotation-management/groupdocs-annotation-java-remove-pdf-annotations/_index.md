@@ -470,11 +470,6 @@ Prêt à implémenter ? Commencez avec l’essai gratuit, expérimentez avec v
 **Testé avec :** GroupDocs.Annotation 25.2  
 **Auteur :** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Tutoriels associés
 
 - [Modifier les annotations PDF Java - Tutoriel complet GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

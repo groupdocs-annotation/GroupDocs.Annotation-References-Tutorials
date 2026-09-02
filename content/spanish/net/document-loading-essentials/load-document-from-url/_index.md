@@ -368,8 +368,3 @@ R: .NET rechaza los certificados autofirmados por defecto. Para pruebas internas
 - [Cómo cargar documentos .NET - Tutorial completo de GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Anotar PDF desde URL C# - Tutorial de GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Vista previa de documentos .NET - Guía completa de GroupDocs.Annotation](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

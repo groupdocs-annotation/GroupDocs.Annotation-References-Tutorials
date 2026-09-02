@@ -363,9 +363,3 @@ A: .NET 預設會拒絕自簽憑證。內部測試時可覆寫憑證驗證，但
 - [如何在 .NET 載入文件 - 完整 GroupDocs.Annotation 教學](/annotation/net/document-loading/)
 - [從 URL 註解 PDF C# - GroupDocs.Annotation 教學](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [文件預覽 .NET 教學 - 完整 GroupDocs.Annotation 指南](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -354,11 +354,6 @@ GroupDocs.Annotation for .NET की व्यापक डॉक्यूमे
 **परीक्षित संस्करण:** GroupDocs.Annotation 23.12 for .NET  
 **लेखक:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```csharp
 var credentials = new BasicAWSCredentials("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 var s3Client = new AmazonS3Client(credentials, RegionEndpoint.USEast1);

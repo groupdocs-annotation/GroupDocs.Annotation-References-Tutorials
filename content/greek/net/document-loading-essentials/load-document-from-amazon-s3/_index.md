@@ -358,11 +358,6 @@ client.Config.Timeout = TimeSpan.FromMinutes(10);
 **Δοκιμάστηκε Με:** GroupDocs.Annotation 23.12 για .NET  
 **Συγγραφέας:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```csharp
 var credentials = new BasicAWSCredentials("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 var s3Client = new AmazonS3Client(credentials, RegionEndpoint.USEast1);

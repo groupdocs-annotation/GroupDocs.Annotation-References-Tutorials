@@ -393,8 +393,6 @@ Start by integrating the streaming annotation flow into your existing documentâ€
 **Tested With:** GroupDocs.Annotation 25.2 for Java  
 **Author:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Related Tutorials
 
 - [How to Annotate PDF â€“ Load PDF from URL Java Complete Guide](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

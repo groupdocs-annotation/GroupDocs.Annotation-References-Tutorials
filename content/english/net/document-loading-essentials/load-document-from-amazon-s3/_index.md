@@ -85,10 +85,6 @@ schemas:
       support team are active and helpful for troubleshooting integration problems.
 ---
 
-{< blocks/products/pf/main-wrap-class >}
-{< blocks/products/pf/main-container >}
-{< blocks/products/pf/tutorial-page-section >}
-
 # Configure AWS Credentials for GroupDocs Annotation S3 Integration
 
 In this tutorial you'll learn how to **configure AWS credentials** and seamlessly integrate GroupDocs.Annotation with Amazon S3 using C#. We'll walk through loading a document from an S3 bucket, adding annotations, and saving the result back to the cloud, while covering best‑practice security and performance tips.
@@ -353,11 +349,6 @@ A: While GroupDocs.Annotation can handle large files, practical limits depend on
 **Last Updated:** 2026-07-06  
 **Tested With:** GroupDocs.Annotation 23.12 for .NET  
 **Author:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
 
 ```csharp
 var credentials = new BasicAWSCredentials("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");

@@ -369,8 +369,3 @@ Akár egyszerű annotációs eszközt, akár komplex dokumentumkezelő rendszert
 - [Hogyan töltsünk be dokumentumokat .NET - Teljes GroupDocs.Annotation útmutató](/annotation/net/document-loading/)
 - [PDF annotálása URL-ről C# - GroupDocs.Annotation útmutató](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Dokumentum előnézet .NET tutorialok - Teljes GroupDocs.Annotation útmutató](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -368,8 +368,3 @@ A: .NET mặc định từ chối các chứng chỉ tự ký. Đối với ki�
 - [Cách tải tài liệu .NET - Hướng dẫn đầy đủ GroupDocs.Annotation](/annotation/net/document-loading/)  
 - [Chú thích PDF từ URL C# - Hướng dẫn GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)  
 - [Xem trước tài liệu .NET - Hướng dẫn đầy đủ GroupDocs.Annotation](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

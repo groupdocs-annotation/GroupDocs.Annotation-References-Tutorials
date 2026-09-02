@@ -412,11 +412,6 @@ A: प्रत्येक दस्तावेज़ के लिए try‑w
 - [GroupDocs.Annotation for Java दस्तावेज़](https://docs.groupdocs.com/annotation/java/)
 - [पूर्ण API रेफ़रेंस](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

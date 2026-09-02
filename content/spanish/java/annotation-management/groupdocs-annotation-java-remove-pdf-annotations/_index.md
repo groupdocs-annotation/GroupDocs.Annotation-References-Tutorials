@@ -471,11 +471,6 @@ Eliminar anotaciones de PDF con Java es sencillo una vez que tienes configurado 
 **Probado con:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Tutoriales relacionados
 
 - [Editar anotaciones PDF Java - Tutorial completo de GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

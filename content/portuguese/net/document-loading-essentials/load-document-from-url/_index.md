@@ -367,9 +367,3 @@ R: O .NET rejeita certificados autoassinados por padrão. Para testes internos v
 - [Como Carregar Documentos .NET - Tutorial Completo do GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Anotar PDF a partir de URL C# - Tutorial GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Pré‑visualização de Documentos .NET - Guia Completo do GroupDocs.Annotation](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -381,8 +381,6 @@ A: ผสานการทำ Pool การเชื่อมต่อ FTP, `C
 **ทดสอบด้วย:** GroupDocs.Annotation 25.2 for Java  
 **ผู้เขียน:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## บทแนะนำที่เกี่ยวข้อง
 - [วิธี Annotate PDF – โหลด PDF จาก URL Java คู่มือเต็ม](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
 - [วิธี Annotate PDF จาก Amazon S3 ด้วย Java – คู่มือเต็ม](/annotation/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/)

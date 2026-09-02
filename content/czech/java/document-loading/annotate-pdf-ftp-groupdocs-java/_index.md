@@ -402,8 +402,6 @@ Začněte integrací streamovacího toku anotací do vaší stávající služby
 **Testováno s:** GroupDocs.Annotation 25.2 for Java  
 **Autor:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Související tutoriály
 
 - [Jak anotovat PDF – Načíst PDF z URL Java Kompletní průvodce](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

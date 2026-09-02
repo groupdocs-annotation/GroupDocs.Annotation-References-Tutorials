@@ -400,8 +400,6 @@ Mulailah dengan mengintegrasikan alur anotasi streaming ke dalam layanan manajem
 **Tested With:** GroupDocs.Annotation 25.2 for Java  
 **Author:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Tutorial Terkait
 
 - [Cara Menganotasi PDF – Memuat PDF dari URL Java Panduan Lengkap](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

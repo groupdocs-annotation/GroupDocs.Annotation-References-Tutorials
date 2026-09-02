@@ -472,11 +472,6 @@ GroupDocs.Annotation सेटअप हो जाने के बाद जा
 **परीक्षित संस्करण:** GroupDocs.Annotation 25.2  
 **लेखक:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## संबंधित ट्यूटोरियल
 
 - [PDF एनोटेशन जावा संपादित करें - पूर्ण GroupDocs ट्यूटोरियल](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

@@ -368,9 +368,3 @@ A: .NET standardně odmítá samopodepsané certifikáty. Pro interní testován
 - [Jak načíst dokumenty .NET - Kompletní tutoriál GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Anotovat PDF z URL C# - Tutoriál GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Náhled dokumentu .NET tutoriály - Kompletní průvodce GroupDocs.Annotation](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

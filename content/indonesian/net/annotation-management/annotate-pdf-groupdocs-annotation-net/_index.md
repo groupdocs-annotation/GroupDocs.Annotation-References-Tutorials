@@ -484,11 +484,6 @@ Anda kini memiliki peta jalan lengkap yang siap produksi untuk **membuat anotasi
 - [Forum GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [Halaman Pembelian](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutorial Terkait
 
 - [Muat PDF dari URL .NET - Panduan Lengkap dengan GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

@@ -383,11 +383,6 @@ A: 각 문서에 대해 try‑with‑resources를 사용하고 페이지를 개�
 - [GroupDocs.Annotation for Java 문서](https://docs.groupdocs.com/annotation/java/)
 - [전체 API 레퍼런스](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

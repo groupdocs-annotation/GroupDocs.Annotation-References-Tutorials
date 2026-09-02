@@ -390,11 +390,6 @@ A: Sử dụng try‑with‑resources cho mỗi tài liệu, xử lý từng tra
 - [Tài liệu GroupDocs.Annotation cho Java](https://docs.groupdocs.com/annotation/java/)
 - [Tham chiếu API đầy đủ](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

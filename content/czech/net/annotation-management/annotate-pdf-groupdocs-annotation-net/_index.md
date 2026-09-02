@@ -484,11 +484,6 @@ Nyní máte kompletní, připravenou roadmapu pro **create PDF annotations .NET*
 - [Fórum GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [Stránka nákupu](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Související tutoriály
 
 - [Načtení PDF z URL .NET – Kompletní průvodce s GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

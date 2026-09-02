@@ -393,8 +393,6 @@ public static InputStream getFileFromFtpWithRetry(String server, String filePath
 **Tested With:** GroupDocs.Annotation 25.2 for Java  
 **Author:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## 相關教學
 
 - [如何註釋 PDF – 從 URL 載入 PDF 的 Java 完整指南](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

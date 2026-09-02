@@ -399,8 +399,6 @@ public static InputStream getFileFromFtpWithRetry(String server, String filePath
 **परीक्षण किया गया:** GroupDocs.Annotation 25.2 for Java  
 **लेखक:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## संबंधित ट्यूटोरियल
 
 - [PDF को एनोटेट कैसे करें – URL से PDF लोड करें Java पूर्ण गाइड](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

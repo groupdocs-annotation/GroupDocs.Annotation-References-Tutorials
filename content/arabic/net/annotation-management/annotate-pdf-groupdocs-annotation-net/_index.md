@@ -477,11 +477,6 @@ annotator.Remove(annotations[0]); // Remove first annotation
 - [منتدى GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [صفحة الشراء](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## دروس ذات صلة
 
 - [تحميل PDF من URL .NET - دليل كامل مع GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

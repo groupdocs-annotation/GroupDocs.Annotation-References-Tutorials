@@ -463,11 +463,6 @@ Java で PDF の注釈を除去するのは、GroupDocs.Annotation の設定さ�
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Related Tutorials
 
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

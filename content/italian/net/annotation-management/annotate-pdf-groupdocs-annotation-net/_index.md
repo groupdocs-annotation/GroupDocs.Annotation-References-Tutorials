@@ -484,11 +484,6 @@ Ora disponi di una roadmap completa, pronta per la produzione, per **creare anno
 - [Forum GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [Pagina di acquisto](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutorial correlati
 
 - [Carica PDF da URL .NET - Guida completa con GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

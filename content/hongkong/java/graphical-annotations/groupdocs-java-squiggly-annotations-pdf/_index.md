@@ -411,11 +411,6 @@ A: 為每個文件使用 try‑with‑resources，逐頁處理，並考慮使用
 - [GroupDocs.Annotation for Java 文件說明](https://docs.groupdocs.com/annotation/java/)
 - [完整 API 參考](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

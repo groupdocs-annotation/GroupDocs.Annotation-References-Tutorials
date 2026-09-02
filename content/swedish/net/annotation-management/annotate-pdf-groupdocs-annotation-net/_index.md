@@ -481,11 +481,6 @@ Du har nu en komplett, produktionsklar färdplan för att **skapa PDF-anteckning
 - [GroupDocs‑forum](https://forum.groupdocs.com/c/annotation)
 - [Köpsida](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Relaterade handledningar
 
 - [Ladda PDF från URL .NET - Komplett guide med GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

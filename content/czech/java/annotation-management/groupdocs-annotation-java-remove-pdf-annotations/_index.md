@@ -466,11 +466,6 @@ Jste připraveni implementovat? Začněte s bezplatnou zkušební verzí, vyzkou
 **Testováno s:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Související tutoriály
 
 - [Edit PDF Annotations Java – Kompletní GroupDocs tutoriál](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

@@ -401,8 +401,6 @@ Begin met het integreren van de streaming‑annotatie‑flow in je bestaande doc
 **Getest met:** GroupDocs.Annotation 25.2 for Java  
 **Auteur:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Gerelateerde tutorials
 
 - [Hoe PDF annoteren – PDF laden van URL Java Complete Guide](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

@@ -411,11 +411,6 @@ A: Gunakan try‑with‑resources untuk setiap dokumen, proses halaman secara in
 - [Dokumentasi GroupDocs.Annotation untuk Java](https://docs.groupdocs.com/annotation/java/)
 - [Referensi API Lengkap](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

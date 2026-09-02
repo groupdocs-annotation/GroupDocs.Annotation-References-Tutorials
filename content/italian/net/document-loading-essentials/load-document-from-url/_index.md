@@ -368,8 +368,3 @@ A: .NET rifiuta i certificati autofirmati per impostazione predefinita. Per test
 - [Come caricare documenti .NET - Tutorial completo GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Annotare PDF da URL C# - Tutorial GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Anteprima documento .NET - Guide completa GroupDocs.Annotation](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -478,11 +478,6 @@ You now have a complete, production‑ready roadmap to **create PDF annotations 
 - [Φόρουμ GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [Σελίδα Αγοράς](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Σχετικά Μαθήματα
 
 - [Φόρτωση PDF από URL .NET - Πλήρης Οδηγός με GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

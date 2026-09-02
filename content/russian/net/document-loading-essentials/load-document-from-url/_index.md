@@ -368,8 +368,3 @@ private static bool IsPdfContent(WebResponse response)
 - [Как загружать документы .NET — Полное руководство GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Аннотировать PDF из URL C# — Руководство GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Предпросмотр документов .NET — Полное руководство GroupDocs.Annotation](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

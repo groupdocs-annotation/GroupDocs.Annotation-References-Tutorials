@@ -496,11 +496,6 @@ annotator.Remove(annotations[0]); // Remove first annotation
 - [GroupDocs Forum](https://forum.groupdocs.com/c/annotation)  
 - [Purchase Page](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 関連チュートリアル
 
 - [URL から PDF をロードする .NET - GroupDocs.Annotation 完全ガイド](/annotation/net/document-loading-essentials/load-document-from-url/)

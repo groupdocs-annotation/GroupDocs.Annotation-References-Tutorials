@@ -367,9 +367,3 @@ A: .NET verwirft selbstsignierte Zertifikate standardmäßig. Für interne Tests
 - [Wie man Dokumente in .NET lädt – Komplettes GroupDocs.Annotation Tutorial](/annotation/net/document-loading/)
 - [PDF von URL annotieren C# – GroupDocs.Annotation Tutorial](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Dokumentvorschau .NET Tutorials – Komplettes GroupDocs.Annotation Handbuch](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

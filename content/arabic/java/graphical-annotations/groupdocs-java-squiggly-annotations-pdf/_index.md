@@ -408,11 +408,6 @@ GroupDocs.Annotation يعمل بسلاسة مع أطر جافا الشهيرة:
 - [توثيق GroupDocs.Annotation للغة جافا](https://docs.groupdocs.com/annotation/java/)
 - [مرجع API الكامل](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

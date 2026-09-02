@@ -355,11 +355,6 @@ A: Während GroupDocs.Annotation große Dateien verarbeiten kann, hängen prakti
 **Tested With:** GroupDocs.Annotation 23.12 for .NET  
 **Author:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```csharp
 var credentials = new BasicAWSCredentials("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 var s3Client = new AmazonS3Client(credentials, RegionEndpoint.USEast1);

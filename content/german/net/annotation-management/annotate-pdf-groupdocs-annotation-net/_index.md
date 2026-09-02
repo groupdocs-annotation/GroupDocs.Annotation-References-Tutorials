@@ -478,11 +478,6 @@ Sie haben nun einen vollständigen, produktionsbereiten Fahrplan, um **create PD
 - [GroupDocs Forum](https://forum.groupdocs.com/c/annotation)  
 - [Kaufseite](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Verwandte Tutorials
 
 - [PDF von URL laden .NET – Vollständiger Leitfaden mit GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

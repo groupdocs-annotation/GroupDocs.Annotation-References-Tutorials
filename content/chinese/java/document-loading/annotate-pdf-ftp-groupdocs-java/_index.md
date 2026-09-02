@@ -382,8 +382,6 @@ A: 结合 FTP 连接池、Java 的 `CompletableFuture` 实现异步非阻塞执�
 **测试环境：** GroupDocs.Annotation 25.2 for Java  
 **作者：** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## 相关教程
 - [如何注释 PDF – 从 URL 加载 PDF 的 Java 完整指南](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
 - [如何使用 Java 从 Amazon S3 注释 PDF – 完整指南](/annotation/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/)

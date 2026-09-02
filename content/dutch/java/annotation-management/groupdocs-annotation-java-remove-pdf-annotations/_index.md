@@ -464,11 +464,6 @@ Klaar om te implementeren? Begin met de gratis proefversie, experimenteer met je
 **Getest met:** GroupDocs.Annotation 25.2  
 **Auteur:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Gerelateerde tutorials
 
 - [PDF‑annotaties bewerken Java - Complete GroupDocs‑tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

@@ -400,8 +400,6 @@ C: FTP bağlantı havuzlamasını, Java’nın `CompletableFuture` ile asenkron,
 **Tested With:** GroupDocs.Annotation 25.2 for Java  
 **Author:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## İlgili Öğreticiler
 
 - [How to Annotate PDF – Load PDF from URL Java Complete Guide](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

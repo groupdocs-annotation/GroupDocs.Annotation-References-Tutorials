@@ -378,8 +378,6 @@ A: FTP 接続プーリング、非同期・ノンブロッキング実行のた�
 **テスト環境:** GroupDocs.Annotation 25.2 for Java  
 **作者:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## 関連チュートリアル
 - [PDFに注釈を付ける方法 – URLからPDFをロードするJava完全ガイド](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
 - [JavaでAmazon S3からPDFに注釈を付ける方法 – 完全ガイド](/annotation/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/)

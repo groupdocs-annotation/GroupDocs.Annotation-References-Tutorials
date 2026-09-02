@@ -402,8 +402,6 @@ A: Сочетайте пул соединений FTP, `CompletableFuture` в Ja
 **Тестировано с:** GroupDocs.Annotation 25.2 for Java  
 **Автор:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Связанные руководства
 
 - [Как аннотировать PDF — загрузка PDF из URL Java Полное руководство](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

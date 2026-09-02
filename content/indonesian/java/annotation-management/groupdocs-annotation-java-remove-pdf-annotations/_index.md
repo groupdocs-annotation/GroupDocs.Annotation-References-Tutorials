@@ -467,11 +467,6 @@ Siap mengimplementasikan? Mulailah dengan versi percobaan, coba pada PDF Anda se
 **Diuji Dengan:** GroupDocs.Annotation 25.2  
 **Penulis:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Tutorial Terkait
 
 - [Edit Anotasi PDF Java - Tutorial Lengkap GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

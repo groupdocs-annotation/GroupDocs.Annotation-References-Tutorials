@@ -466,11 +466,6 @@ Annotator annotator = new Annotator("document.pdf", loadOptions);
 **Δοκιμασμένο Με:** GroupDocs.Annotation 25.2  
 **Συγγραφέας:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Σχετικά Μαθήματα
 
 - [Επεξεργασία Σχολίων PDF Java - Πλήρης Οδηγός GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  

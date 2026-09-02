@@ -379,8 +379,6 @@ Bắt đầu bằng cách tích hợp luồng chú thích truyền luồng vào 
 **Tested With:** GroupDocs.Annotation 25.2 for Java  
 **Author:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Các hướng dẫn liên quan
 - [Cách chú thích PDF – Tải PDF từ URL Java Hướng dẫn đầy đủ](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
 - [Cách chú thích PDF từ Amazon S3 bằng Java – Hướng dẫn đầy đủ](/annotation/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/)

@@ -352,8 +352,3 @@ GroupDocs.Annotation for .NET के साथ URLs से PDF दस्ता�
 - [डॉक्यूमेंट लोड कैसे करें .NET - पूर्ण GroupDocs.Annotation ट्यूटोरियल](/annotation/net/document-loading/)
 - [URL से PDF एनोटेट करें C# - GroupDocs.Annotation ट्यूटोरियल](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [डॉक्यूमेंट प्रीव्यू .NET ट्यूटोरियल्स - पूर्ण GroupDocs.Annotation गाइड](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

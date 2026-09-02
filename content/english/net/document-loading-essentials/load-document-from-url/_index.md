@@ -370,9 +370,3 @@ A: .NET rejects self‑signed certificates by default. For internal testing you 
 - [How to Load Documents .NET - Complete GroupDocs.Annotation Tutorial](/annotation/net/document-loading/)
 - [Annotate PDF from URL C# - GroupDocs.Annotation Tutorial](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Document Preview .NET Tutorials - Complete GroupDocs.Annotation Guide](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

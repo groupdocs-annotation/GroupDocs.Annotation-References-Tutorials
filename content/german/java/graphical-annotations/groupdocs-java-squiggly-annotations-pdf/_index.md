@@ -416,11 +416,6 @@ A: Verwenden Sie try‑with‑resources für jedes Dokument, verarbeiten Sie Sei
 - [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
 - [Complete API Reference](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

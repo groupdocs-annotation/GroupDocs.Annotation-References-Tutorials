@@ -401,8 +401,6 @@ Comece integrando o fluxo de anotação por streaming ao seu serviço de gerenci
 **Testado com:** GroupDocs.Annotation 25.2 for Java  
 **Autor:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriais Relacionados
 
 - [Como Anotar PDF – Carregar PDF de URL Java Guia Completo](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

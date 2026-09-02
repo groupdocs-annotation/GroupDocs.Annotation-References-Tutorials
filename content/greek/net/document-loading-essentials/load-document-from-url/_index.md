@@ -372,8 +372,3 @@ A: Το .NET απορρίπτει τα αυτο‑υπογεγραμμένα π�
 - [Πώς να Φορτώσετε Έγγραφα .NET - Πλήρες Tutorial GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Σχολιάστε PDF από URL C# - Tutorial GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Προεπισκόπηση Εγγράφου .NET Tutorials - Πλήρης Οδηγός GroupDocs.Annotation](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

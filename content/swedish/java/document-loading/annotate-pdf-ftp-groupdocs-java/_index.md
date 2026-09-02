@@ -382,8 +382,6 @@ Börja med att integrera strömnings‑annotationsflödet i din befintliga dokum
 **Testad med:** GroupDocs.Annotation 25.2 for Java  
 **Författare:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Relaterade handledningar
 - [Hur man annoterar PDF – Ladda PDF från URL Java Komplett guide](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)  
 - [Hur man annoterar PDF från Amazon S3 med Java – Komplett guide](/annotation/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/)  

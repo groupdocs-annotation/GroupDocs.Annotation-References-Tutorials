@@ -400,8 +400,6 @@ Rozpocznij od zintegrowania strumieniowego przepływu adnotacji z istniejącą u
 **Tested With:** GroupDocs.Annotation 25.2 for Java  
 **Author:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Powiązane samouczki
 
 - [Jak adnotować PDF – Ładowanie PDF z URL w Javie – Kompletny przewodnik](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

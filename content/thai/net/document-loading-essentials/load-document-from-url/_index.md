@@ -365,9 +365,3 @@ A: .NET ปฏิเสธใบรับรองเซลฟ์‑Signed โ�
 - [วิธีโหลดเอกสาร .NET - บทแนะนำครบวงจร GroupDocs.Annotation](/annotation/net/document-loading/)
 - [ใส่คำอธิบาย PDF จาก URL C# - บทแนะนำ GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [การแสดงตัวอย่างเอกสาร .NET - คู่มือครบวงจร GroupDocs.Annotation](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

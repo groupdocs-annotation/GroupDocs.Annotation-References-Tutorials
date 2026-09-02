@@ -415,11 +415,6 @@ A: Her belge için try‑with‑resources kullanın, sayfaları tek tek işleyin
 - [GroupDocs.Annotation for Java Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)
 - [Tam API Referansı](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

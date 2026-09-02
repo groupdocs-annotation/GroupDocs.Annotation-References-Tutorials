@@ -368,8 +368,3 @@ private static bool IsPdfContent(WebResponse response)
 - [كيفية تحميل المستندات .NET - دليل GroupDocs.Annotation الكامل](/annotation/net/document-loading/)
 - [تعليق PDF من URL C# - دليل GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [معاينة المستند .NET - دليل GroupDocs.Annotation الكامل](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

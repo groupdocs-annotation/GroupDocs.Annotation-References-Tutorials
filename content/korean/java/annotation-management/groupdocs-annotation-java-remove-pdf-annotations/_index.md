@@ -466,11 +466,6 @@ GroupDocs.Annotation을 설정하면 Java에서 PDF 주석 제거가 매우 간�
 **테스트 환경:** GroupDocs.Annotation 25.2  
 **작성자:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## 관련 튜토리얼
 
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

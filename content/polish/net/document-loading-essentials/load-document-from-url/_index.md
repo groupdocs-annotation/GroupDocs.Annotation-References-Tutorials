@@ -363,8 +363,3 @@ O: .NET domyślnie odrzuca certyfikaty samopodpisane. Do testów wewnętrznych m
 - [Jak wczytać dokumenty .NET – Kompletny samouczek GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Anotowanie PDF z URL w C# – Samouczek GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Podgląd dokumentów .NET – Kompletny przewodnik GroupDocs.Annotation](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

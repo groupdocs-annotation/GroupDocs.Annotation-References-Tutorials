@@ -485,11 +485,6 @@ Masz teraz kompletną, gotową do produkcji mapę drogową, aby **tworzyć adnot
 - [Forum GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [Strona zakupu](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Powiązane samouczki
 
 - [Ładowanie PDF z URL .NET – Kompletny przewodnik z GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

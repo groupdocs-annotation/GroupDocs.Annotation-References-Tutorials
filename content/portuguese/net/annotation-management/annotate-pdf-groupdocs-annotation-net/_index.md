@@ -495,11 +495,6 @@ Agora você tem um roteiro completo e pronto para produção para **create PDF a
 - [GroupDocs Forum](https://forum.groupdocs.com/c/annotation)  
 - [Purchase Page](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriais Relacionados
 
 - [Carregar PDF a partir de URL .NET - Guia Completo com GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

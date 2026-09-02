@@ -484,11 +484,6 @@ Vous disposez maintenant d’une feuille de route complète et prête pour la pr
 - [Forum GroupDocs](https://forum.groupdocs.com/c/annotation)  
 - [Page d’achat](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriels associés
 
 - [Charger un PDF depuis une URL .NET - Guide complet avec GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

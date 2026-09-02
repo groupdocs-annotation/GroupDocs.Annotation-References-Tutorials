@@ -470,11 +470,6 @@ Redo att implementera? Börja med den gratis provperioden, experimentera med din
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Relaterade handledningar
 
 - [Redigera PDF‑anteckningar Java – Komplett GroupDocs‑handledning](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

@@ -411,11 +411,6 @@ A: Používejte try‑with‑resources pro každý dokument, zpracovávejte str�
 - [Dokumentace GroupDocs.Annotation pro Java](https://docs.groupdocs.com/annotation/java/)
 - [Kompletní referenční API](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

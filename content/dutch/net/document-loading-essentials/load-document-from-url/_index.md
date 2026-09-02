@@ -367,9 +367,3 @@ A: .NET weigert zelf‑ondertekende certificaten standaard. Voor intern testen k
 - [Hoe documenten laden .NET - Complete GroupDocs.Annotation tutorial](/annotation/net/document-loading/)
 - [PDF annoteren vanaf URL C# - GroupDocs.Annotation tutorial](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Documentpreview .NET tutorials - Complete GroupDocs.Annotation gids](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

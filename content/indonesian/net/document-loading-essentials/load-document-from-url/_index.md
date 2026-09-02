@@ -369,8 +369,3 @@ A: .NET menolak sertifikat self‑signed secara default. Untuk pengujian interna
 - [Cara Memuat Dokumen .NET - Tutorial Lengkap GroupDocs.Annotation](/annotation/net/document-loading/)
 - [Anotasi PDF dari URL C# - Tutorial GroupDocs.Annotation](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Pratinjau Dokumen .NET - Panduan Lengkap GroupDocs.Annotation](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -368,8 +368,3 @@ A: .NET 默认会拒绝自签名证书。内部测试时可以覆盖证书验证
 - [如何在 .NET 中加载文档 - 完整的 GroupDocs.Annotation 教程](/annotation/net/document-loading/)
 - [从 URL 注释 PDF C# - GroupDocs.Annotation 教程](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [文档预览 .NET 教程 - 完整的 GroupDocs.Annotation 指南](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

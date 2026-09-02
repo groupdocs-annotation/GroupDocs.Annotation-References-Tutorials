@@ -412,11 +412,6 @@ R: Usa try‑with‑resources per ogni documento, elabora le pagine singolarment
 - [Documentazione GroupDocs.Annotation per Java](https://docs.groupdocs.com/annotation/java/)
 - [Riferimento API Completo](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

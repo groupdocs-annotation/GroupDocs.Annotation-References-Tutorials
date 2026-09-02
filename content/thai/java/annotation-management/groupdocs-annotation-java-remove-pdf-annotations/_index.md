@@ -466,11 +466,6 @@ A: ไม่มีขีดจำกัดที่แน่นอน แต่�
 **ทดสอบกับ:** GroupDocs.Annotation 25.2  
 **ผู้เขียน:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## บทแนะนำที่เกี่ยวข้อง
 
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

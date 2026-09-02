@@ -504,11 +504,6 @@ Artık GroupDocs.Annotation ile **create PDF annotations .NET** için eksiksiz, 
 - [GroupDocs Forum](https://forum.groupdocs.com/c/annotation)
 - [Satın Alma Sayfası](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## İlgili Eğitimler
 
 - [URL'den PDF Yükleme .NET - GroupDocs.Annotation ile Tam Kılavuz](/annotation/net/document-loading-essentials/load-document-from-url/)

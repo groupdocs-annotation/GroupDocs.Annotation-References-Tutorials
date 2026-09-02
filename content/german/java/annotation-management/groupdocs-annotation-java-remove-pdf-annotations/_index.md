@@ -467,11 +467,6 @@ Bereit zur Implementierung? Beginnen Sie mit der kostenlosen Testversion, experi
 **Getestet mit:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Verwandte Tutorials
 
 - [PDF‑Anmerkungen in Java bearbeiten – Vollständiges GroupDocs‑Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

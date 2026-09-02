@@ -367,9 +367,3 @@ A: .NET avvisar själv‑signerade certifikat som standard. För intern testning
 - [Hur man laddar dokument .NET - Komplett GroupDocs.Annotation-handledning](/annotation/net/document-loading/)
 - [Kommentera PDF från URL C# - GroupDocs.Annotation-handledning](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [Dokumentförhandsgranskning .NET-handledningar - Komplett GroupDocs.Annotation-guide](/annotation/net/document-preview/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

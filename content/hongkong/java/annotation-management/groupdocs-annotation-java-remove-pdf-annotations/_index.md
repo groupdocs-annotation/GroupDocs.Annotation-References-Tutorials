@@ -469,11 +469,6 @@ A：沒有硬性限制，但極大檔案（100 MB 以上）可能需要增加 
 **測試環境：** GroupDocs.Annotation 25.2  
 **作者：** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## 相關教學
 
 - [編輯 PDF 註釋 Java - 完整 GroupDocs 教學](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

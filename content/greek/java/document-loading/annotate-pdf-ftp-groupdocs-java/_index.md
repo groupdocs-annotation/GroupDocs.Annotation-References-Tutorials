@@ -402,8 +402,6 @@ Start by integrating the streaming annotation flow into your existing document�
 **Δοκιμάστηκε Με:** GroupDocs.Annotation 25.2 for Java  
 **Συγγραφέας:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Σχετικά Μαθήματα
 
 - [How to Annotate PDF – Load PDF from URL Java Complete Guide](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

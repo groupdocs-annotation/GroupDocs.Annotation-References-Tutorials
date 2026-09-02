@@ -460,11 +460,6 @@ Ready to implement? Start with the free trial, experiment with your own PDFs, an
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Related Tutorials
 
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

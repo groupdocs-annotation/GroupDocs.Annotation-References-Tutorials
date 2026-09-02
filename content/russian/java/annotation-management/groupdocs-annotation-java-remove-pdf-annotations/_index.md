@@ -467,11 +467,6 @@ Annotator annotator = new Annotator("document.pdf", loadOptions);
 **Тестировано с:** GroupDocs.Annotation 25.2  
 **Автор:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## Похожие руководства
 
 - [Редактирование PDF‑аннотаций Java — Полный учебник GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

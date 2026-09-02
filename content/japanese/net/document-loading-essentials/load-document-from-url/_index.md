@@ -364,8 +364,3 @@ A: .NET はデフォルトで自己署名証明書を拒否します。内部テ
 - [ドキュメントのロード方法 .NET - 完全な GroupDocs.Annotation チュートリアル](/annotation/net/document-loading/)
 - [URL から PDF を注釈付け C# - GroupDocs.Annotation チュートリアル](/annotation/net/annotation-management/annotate-pdfs-online-groupdocs-annotation-net/)
 - [ドキュメントプレビュー .NET チュートリアル - 完全な GroupDocs.Annotation ガイド](/annotation/net/document-preview/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -360,11 +360,6 @@ A: Embora o GroupDocs.Annotation possa lidar com arquivos grandes, os limites pr
 **Testado com:** GroupDocs.Annotation 23.12 para .NET  
 **Autor:** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```csharp
 var credentials = new BasicAWSCredentials("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 var s3Client = new AmazonS3Client(credentials, RegionEndpoint.USEast1);

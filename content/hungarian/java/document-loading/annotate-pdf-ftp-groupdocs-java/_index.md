@@ -382,8 +382,6 @@ Kezdje azzal, hogy integrálja a streaming annotációs folyamatot a meglévő d
 **Tesztelve:** GroupDocs.Annotation 25.2 for Java  
 **Szerző:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Kapcsolódó oktatóanyagok
 - [Hogyan annotáljunk PDF‑et – PDF betöltése URL‑ről Java teljes útmutató](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)  
 - [Hogyan annotáljunk PDF‑et Amazon S3‑ról Java használatával – Teljes útmutató](/annotation/java/document-loading/annotate-documents-amazon-s3-java-groupdocs/)  

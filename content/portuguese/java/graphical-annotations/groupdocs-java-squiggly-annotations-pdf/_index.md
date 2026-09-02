@@ -411,11 +411,6 @@ A: Use try‑with‑resources para cada documento, processe páginas individualm
 - [Documentação do GroupDocs.Annotation para Java](https://docs.groupdocs.com/annotation/java/)
 - [Referência completa da API](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

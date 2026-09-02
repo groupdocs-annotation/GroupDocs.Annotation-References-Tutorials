@@ -398,8 +398,6 @@ Comienza integrando el flujo de anotación por transmisión en tu servicio de ge
 **Probado con:** GroupDocs.Annotation 25.2 for Java  
 **Autor:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriales relacionados
 
 - [Cómo anotar PDF – Cargar PDF desde URL Java Guía completa](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

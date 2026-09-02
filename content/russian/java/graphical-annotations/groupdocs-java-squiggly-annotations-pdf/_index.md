@@ -405,11 +405,6 @@ A: Используйте try‑with‑resources для каждого доку�
 - [Документация GroupDocs.Annotation для Java](https://docs.groupdocs.com/annotation/java/)
 - [Полный справочник API](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

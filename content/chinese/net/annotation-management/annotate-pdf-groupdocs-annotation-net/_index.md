@@ -503,11 +503,6 @@ annotator.Remove(annotations[0]); // Remove first annotation
 - [GroupDocs Forum](https://forum.groupdocs.com/c/annotation)  
 - [Purchase Page](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## 相关教程
 
 - [Load PDF from URL .NET - Complete Guide with GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

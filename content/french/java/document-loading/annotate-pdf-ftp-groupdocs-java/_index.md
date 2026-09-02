@@ -395,8 +395,6 @@ Commencez par intégrer le flux d'annotation en streaming dans votre service de 
 **Testé avec :** GroupDocs.Annotation 25.2 for Java  
 **Auteur :** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## Tutoriels associés
 
 - [Comment annoter un PDF – Charger un PDF depuis une URL Java Guide complet](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

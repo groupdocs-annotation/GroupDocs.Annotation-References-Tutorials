@@ -484,11 +484,6 @@ Je beschikt nu over een volledige, productie‑klare roadmap om **PDF‑annotati
 - [GroupDocs Forum](https://forum.groupdocs.com/c/annotation)  
 - [Purchase Page](https://purchase.groupdocs.com/buy)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ## Gerelateerde tutorials
 
 - [PDF laden vanaf URL .NET - Complete gids met GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

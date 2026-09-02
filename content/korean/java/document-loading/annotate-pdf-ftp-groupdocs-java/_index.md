@@ -397,8 +397,6 @@ A: FTP 연결 풀링, 비동기·논블로킹 실행을 위한 Java의 `Completa
 **테스트 환경:** GroupDocs.Annotation 25.2 for Java  
 **작성자:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## 관련 튜토리얼
 
 - [PDF에 주석 달기 – URL에서 PDF 로드 Java 완전 가이드](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)

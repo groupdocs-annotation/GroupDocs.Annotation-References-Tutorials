@@ -359,11 +359,6 @@ A: 虽然 GroupDocs.Annotation 能处理大文件，但实际限制取决于服�
 **测试环境：** GroupDocs.Annotation 23.12 for .NET  
 **作者：** GroupDocs  
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```csharp
 var credentials = new BasicAWSCredentials("YOUR_ACCESS_KEY", "YOUR_SECRET_KEY");
 var s3Client = new AmazonS3Client(credentials, RegionEndpoint.USEast1);

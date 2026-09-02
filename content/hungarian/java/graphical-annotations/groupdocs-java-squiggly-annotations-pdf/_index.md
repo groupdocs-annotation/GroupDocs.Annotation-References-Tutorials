@@ -414,11 +414,6 @@ A: Használj try‑with‑resources blokkot minden dokumentumhoz, dolgozd fel az
 - [GroupDocs.Annotation Java dokumentáció](https://docs.groupdocs.com/annotation/java/)
 - [Teljes API referencia](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

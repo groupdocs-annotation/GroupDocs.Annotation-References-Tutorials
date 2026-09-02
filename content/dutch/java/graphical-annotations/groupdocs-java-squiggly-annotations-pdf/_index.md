@@ -409,11 +409,6 @@ A: Gebruik try‑with‑resources voor elk document, verwerk pagina's individuee
 - [GroupDocs.Annotation voor Java Documentatie](https://docs.groupdocs.com/annotation/java/)
 - [Complete API-referentie](https://reference.groupdocs.com/annotation/java/)
 
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}
-
 ```xml
 <repositories>
    <repository>

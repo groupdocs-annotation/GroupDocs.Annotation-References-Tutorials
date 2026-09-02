@@ -465,11 +465,6 @@ Uygulamaya hazır mısınız? Ücretsiz deneme ile başlayın, kendi PDF'leriniz
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-
 ## İlgili Eğitimler
 
 - [PDF Açıklamalarını Düzenle Java - Tam GroupDocs Eğitimi](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

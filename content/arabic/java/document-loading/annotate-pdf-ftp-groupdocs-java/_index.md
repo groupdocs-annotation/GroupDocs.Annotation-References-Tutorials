@@ -402,8 +402,6 @@ public static InputStream getFileFromFtpWithRetry(String server, String filePath
 **تم الاختبار مع:** GroupDocs.Annotation 25.2 for Java  
 **المؤلف:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-
 ## دروس ذات صلة
 
 - [كيفية إضافة تعليقات توضيحية إلى PDF – تحميل PDF من URL Java دليل كامل](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
