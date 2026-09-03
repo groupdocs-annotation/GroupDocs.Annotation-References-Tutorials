@@ -1,42 +1,107 @@
 ---
-"date": "2025-05-06"
-"description": "เรียนรู้วิธีปรับปรุงเอกสาร PDF ของคุณโดยเพิ่มคำอธิบายประกอบจุดด้วยโปรแกรมด้วย GroupDocs.Annotation สำหรับ Java คู่มือนี้ครอบคลุมถึงการตั้งค่า การใช้งาน และแอปพลิเคชันในทางปฏิบัติ"
-"title": "วิธีการเพิ่มคำอธิบายจุดลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java"
-"url": "/th/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/"
+categories:
+- Java Development
+date: '2026-06-16'
+description: เรียนรู้วิธีสร้างไฟล์ PDF ที่มี point annotations และบันทึก PDF ที่มีการคอมเมนต์โดยใช้
+  GroupDocs.Annotation for Java รวมถึง batch pdf annotation, setup, และ troubleshooting
+keywords:
+- create point annotations pdf
+- groupdocs annotation java
+- pdf point annotation tutorial
+lastmod: '2026-06-16'
+linktitle: บทแนะนำ PDF Point Annotation Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-16'
+  description: Learn how to create point annotations PDF files and save annotated
+    PDFs using GroupDocs.Annotation for Java. Includes batch pdf annotation, setup,
+    and troubleshooting.
+  headline: Create Point Annotations PDF and Save Annotated PDF with Java Guide
+  type: TechArticle
+- description: Learn how to create point annotations PDF files and save annotated
+    PDFs using GroupDocs.Annotation for Java. Includes batch pdf annotation, setup,
+    and troubleshooting.
+  name: Create Point Annotations PDF and Save Annotated PDF with Java Guide
+  steps:
+  - name: Initialize Your Annotator
+    text: First, load the PDF you want to annotate. Using absolute paths during development
+      avoids “file not found” errors; you can switch to relative paths later.
+  - name: Creating Annotation Replies (Optional but Powerful)
+    text: '`AnnotationReply` lets you attach a threaded conversation to any annotation.
+      This is useful for collaborative reviews where multiple stakeholders discuss
+      a single point. **When to Use Replies:** Ideal for legal or engineering reviews
+      where each pinpointed issue may generate a discussion thread. Skip'
+  - name: Creating and Positioning Your Point Annotation
+    text: '`PointAnnotation` is the class that represents a single‑point marker. It
+      requires X‑Y coordinates, a page number, and optional visual properties such
+      as color and size. **Coordinate System Explained:** The origin (0,0) is the
+      top‑left corner of the page. X increases to the right, Y increases downwar'
+  - name: Save Your Work and Clean Up
+    text: Saving persists the annotations to disk. Forgetting this step means all
+      changes remain only in memory. `dispose` releases resources held by the Annotator
+      instance.
+  type: HowTo
+- questions:
+  - answer: Yes! You can customize color, size, opacity, and even add a custom icon
+      by setting the `appearance` properties on the `PointAnnotation` object.
+    question: Can I style my point annotations differently?
+  - answer: Calculate relative positions based on the page’s width and height (e.g.,
+      `x = pageWidth * 0.25`). This ensures the annotation scales correctly across
+      A4, Letter, and custom sizes.
+    question: How do I handle different PDF page sizes?
+  - answer: Absolutely. Create a list of `PointAnnotation` objects, add them to the
+      annotator, and call `save()` once—this reduces I/O overhead.
+    question: Can I add multiple points in a single operation?
+  - answer: Each annotation adds minimal processing time, but saving a document with
+      hundreds of points can increase write latency by up to 30 %. Batch your saves
+      or use asynchronous I/O for large batches.
+    question: What's the performance impact of adding many annotations?
+  - answer: Yes. Retrieve existing annotations via `annotator.getAnnotations()`, modify
+      their properties, or call `annotator.delete(annotationId)` before saving.
+    question: Can I remove or modify annotations after adding them?
+  type: FAQPage
+tags:
+- pdf-annotation
+- groupdocs
+- java-tutorial
+- document-processing
+title: สร้าง Point Annotations PDF และบันทึก PDF ที่มีการคอมเมนต์ด้วย Java Guide
 type: docs
-"weight": 1
+url: /th/java/graphical-annotations/groupdocs-annotation-java-add-point-pdf/
+weight: 1
 ---
 
-# วิธีการเพิ่มคำอธิบายจุดลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java
+# สร้าง Point Annotations PDF และบันทึก PDF ที่มี Annotation ด้วย Java Guide
 
-## การแนะนำ
+Adding interactive markers to PDFs has never been easier. In this guide you’ll **create point annotations PDF** files, position them precisely, and then **save annotated PDF** documents using GroupDocs.Annotation for Java. Whether you’re building a legal review tool, an e‑learning platform, or a collaborative viewer, point annotations let you highlight exact locations without obscuring the surrounding content.
 
-ปรับปรุงไฟล์ PDF ของคุณด้วยการเพิ่มคำอธิบายจุดด้วยโปรแกรมโดยใช้ GroupDocs.Annotation สำหรับ Java ไม่ว่าคุณจะกำลังสร้างระบบจัดการเอกสารหรือโปรแกรมดู PDF แบบโต้ตอบ ความสามารถในการใส่คำอธิบายสามารถปรับปรุงการมีส่วนร่วมและข้อเสนอแนะของผู้ใช้ได้อย่างมาก บทช่วยสอนนี้จะแนะนำคุณตลอดกระบวนการเพิ่มคำอธิบายจุดลงในไฟล์ PDF ได้อย่างราบรื่นด้วย GroupDocs.Annotation
+## คำตอบเร็ว
+`save` writes the annotated PDF to the specified output path.  
+- **What library adds point annotations?** GroupDocs.Annotation for Java.  
+- **Can I save the annotated PDF?** Yes—call `annotator.save(outputPath)`.  
+- **How to handle many files?** Use the batch pdf annotation pattern shown later.  
+- **Do I need a license?** A free trial works for development; a full license is required for production.  
+- **Is it Java 8 compatible?** Yes—Java 8+ is supported.
 
-ในบทความนี้เราจะกล่าวถึงเรื่อง:
-- การตั้งค่าสภาพแวดล้อมของคุณด้วย GroupDocs.Annotation สำหรับ Java
-- การนำจุดอ้างอิงไปใช้ในแอปพลิเคชัน Java
-- การประยุกต์ใช้งานจริงในการเพิ่มคำอธิบายประกอบ
+## Point Annotation คืออะไร?
+A point annotation is a tiny marker placed at a single X‑Y coordinate on a PDF page. It lets you pinpoint exact spots—such as reference numbers, map pins, or comment anchors—without covering surrounding text or images. Because it occupies only one pixel‑sized area, it’s ideal for precision tasks like linking a diagram to a note or flagging a specific clause in a contract.
 
-เมื่อสิ้นสุดหลักสูตร คุณจะมีความรู้และเครื่องมือที่จำเป็นในการปรับปรุงเอกสารของคุณอย่างมีประสิทธิภาพ มาเริ่มด้วยข้อกำหนดเบื้องต้นกันก่อน
+## ทำไมต้องใช้ Point Annotations?
+You can instantly guide readers to the exact location that needs attention while keeping the document’s visual integrity intact. Point annotations also support threaded replies, making them perfect for collaborative review cycles. Additionally, GroupDocs.Annotation can process **30+ annotation types** and handle PDFs up to **2 GB** without loading the whole file into memory, which means you can scale to batch pdf annotation scenarios with confidence.
 
 ## ข้อกำหนดเบื้องต้น
+- **Java Development Kit (JDK):** 8 or later (11+ recommended).  
+- **IDE:** IntelliJ IDEA, Eclipse, or VS Code with Java extensions.  
+- **Build Tool:** Maven (examples use Maven).  
+- **GroupDocs.Annotation for Java:** We'll add it to your `pom.xml`.  
+- **Test PDF:** Any readable PDF file.
 
-ก่อนที่จะเริ่มต้น ให้แน่ใจว่าคุณมี:
-- **ชุดพัฒนา Java (JDK):** ต้องมีเวอร์ชัน 8 ขึ้นไป
-- **ไอดี:** IDE ใดๆ ของ Java เช่น IntelliJ IDEA หรือ Eclipse ก็เพียงพอ
-- **เมเวน:** สำหรับการจัดการการอ้างอิงและการสร้าง
-- **GroupDocs.Annotation สำหรับไลบรารี Java:** เราจะแนะนำคุณเกี่ยวกับการเพิ่มสิ่งนี้ลงในโครงการของคุณ
-
-ขอแนะนำให้คุณมีความรู้พื้นฐานเกี่ยวกับการเขียนโปรแกรม Java หากคุณเพิ่งเริ่มใช้ GroupDocs ไม่ต้องกังวล เราจะอธิบายทุกขั้นตอนให้คุณทราบ!
+**Pro Tip:** Choose a PDF that contains both text and images so you can instantly see how the point lands relative to different content types.
 
 ## การตั้งค่า GroupDocs.Annotation สำหรับ Java
 
-หากต้องการเริ่มใช้ GroupDocs.Annotation สำหรับ Java ให้ทำตามขั้นตอนเหล่านี้:
-
-### การกำหนดค่า Maven
-
-เพิ่มที่เก็บข้อมูลและการอ้างอิงต่อไปนี้ให้กับคุณ `pom.xml` ไฟล์:
+### การกำหนดค่า Maven อย่างง่าย
+Add the following dependency to your `pom.xml`. The repository URL is specific to GroupDocs:
 
 ```xml
 <repositories>
@@ -56,40 +121,43 @@ type: docs
 </dependencies>
 ```
 
-### การขอใบอนุญาต
+### วิธีจัดการใบอนุญาตของคุณ
+Here’s how to obtain the right license for your project:
 
-ในการใช้ GroupDocs.Annotation ให้เกิดประโยชน์สูงสุด คุณสามารถทำได้ดังนี้:
-1. **ทดลองใช้งานฟรี:** ดาวน์โหลดเวอร์ชันทดลองใช้ได้จาก [เว็บไซต์ของ GroupDocs](https://releases.groupdocs.com/annotation/java/) เพื่อทดสอบคุณสมบัติ
-2. **ใบอนุญาตชั่วคราว:** ขอใบอนุญาตชั่วคราวเพื่อการเข้าถึงเต็มรูปแบบระหว่างการพัฒนาได้ที่ [ลิงค์นี้](https://purchase-groupdocs.com/temporary-license/).
-3. **ซื้อ:** สำหรับการใช้งานในระยะยาว ให้ซื้อใบอนุญาตจาก [ร้านค้า GroupDocs](https://purchase-groupdocs.com/buy).
+1. **Free Trial Route:** Perfect for prototyping and learning. Download from [เว็บไซต์ของ GroupDocs](https://releases.groupdocs.com/annotation/java/) and you’ll receive watermarked outputs (ideal for development).  
+2. **Temporary License:** Need a demo without watermarks? Grab a 30‑day temporary license [here](https://purchase.groupdocs.com/temporary-license/).  
+3. **Full License:** Ready for production? Check pricing at the [GroupDocs store](https://purchase.groupdocs.com/buy).
 
-### การเริ่มต้น
-
-เมื่อคุณตั้งค่าสภาพแวดล้อมและเพิ่มการอ้างอิงแล้ว ให้เริ่มต้น GroupDocs.Annotation ด้วย:
+### ตัวอย่างการสร้าง Annotator ตัวแรกของคุณ
+`Annotator` is the main class in GroupDocs.Annotation that loads, modifies, and saves PDF documents. The following snippet shows a minimal initialization to verify that your environment is set up correctly:
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
 public class AnnotationSetup {
     public static void main(String[] args) {
-        // เริ่มต้น Annotator ด้วยเส้นทางเอกสารอินพุต
+        // Initialize Annotator with the input document path
         Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
         
-        // อย่าลืมปล่อยทรัพยากรเมื่อทำเสร็จแล้ว
+        System.out.println("Annotator initialized successfully!");
+        
+        // Always clean up resources
         annotator.dispose();
     }
 }
 ```
 
-## คู่มือการใช้งาน
+**Common Setup Issue:** If you encounter a `ClassNotFoundException`, ensure Maven has downloaded all dependencies and refresh the project in your IDE.
 
-### การเพิ่มคำอธิบายจุด
+## คู่มือการดำเนินการแบบขั้นตอนต่อขั้นตอน
 
-ในส่วนนี้เราจะเน้นที่การเพิ่มคำอธิบายจุดลงในเอกสาร PDF ของคุณ
+Now let’s walk through the complete workflow for creating and saving point annotations.
 
-#### ขั้นตอนที่ 1: เริ่มต้น Annotator
+### ทำความเข้าใจ Point Annotations ก่อน
+Before we dive into code, remember that point annotations are single‑pixel markers. They’re stored as `PointAnnotation` objects, each carrying coordinates, appearance settings, and optional reply threads.
 
-เริ่มต้นโดยการเริ่มต้น `Annotator` ชั้นเรียนกับเอกสารอินพุตของคุณ:
+### ขั้นตอนที่ 1: เริ่มต้น Annotator ของคุณ
+First, load the PDF you want to annotate. Using absolute paths during development avoids “file not found” errors; you can switch to relative paths later.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -99,125 +167,309 @@ public class PointAnnotationExample {
     public static void main(String[] args) {
         final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
         
-        // โค้ดเพิ่มเติมจะอยู่ที่นี่
+        // We'll build on this foundation
         
         annotator.dispose();
     }
 }
 ```
 
-#### ขั้นตอนที่ 2: สร้างและกำหนดค่าการตอบกลับ
-
-คุณสามารถแนบคำตอบลงในคำอธิบายของคุณเพื่อเพิ่มบริบทหรือข้อเสนอแนะ:
+### ขั้นตอนที่ 2: สร้าง Annotation Replies (ไม่บังคับแต่มีประโยชน์)
+`AnnotationReply` lets you attach a threaded conversation to any annotation. This is useful for collaborative reviews where multiple stakeholders discuss a single point.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
 
-// เริ่มต้นการตอบกลับ
+// Create meaningful replies that add context
 Reply reply1 = new Reply();
-reply1.setComment("First comment");
+reply1.setComment("This section needs clarification");
 reply1.setRepliedOn(Calendar.getInstance().getTime());
 
 Reply reply2 = new Reply();
-reply2.setComment("Second comment");
+reply2.setComment("Agreed, let's discuss this in the next review");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 
 java.util.List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
-
-// แนบสิ่งเหล่านี้ไปกับคำอธิบายภายหลัง
 ```
 
-#### ขั้นตอนที่ 3: สร้างและกำหนดค่าคำอธิบายจุด
+**When to Use Replies:** Ideal for legal or engineering reviews where each pinpointed issue may generate a discussion thread. Skip this step for simple reference markers.
 
-กำหนดคำอธิบายจุดของคุณโดยใช้ `Rectangle` สำหรับการวางตำแหน่ง:
+### ขั้นตอนที่ 3: สร้างและกำหนดตำแหน่ง Point Annotation ของคุณ
+`PointAnnotation` is the class that represents a single‑point marker. It requires X‑Y coordinates, a page number, and optional visual properties such as color and size.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.annotationmodels.PointAnnotation;
 
-// สร้างคำอธิบายจุด
+// Create your point annotation with precise positioning
 PointAnnotation point = new PointAnnotation();
-point.setBox(new Rectangle(100, 100, 0, 0)); // พิกัด X,Y
+point.setBox(new Rectangle(100, 100, 0, 0)); // X=100px, Y=100px from top-left
 point.setCreatedOn(Calendar.getInstance().getTime());
-point.setMessage("This is a point annotation");
-point.setPageNumber(0);
-point.setReplies(replies);
+point.setMessage("Important reference point - check the calculation here");
+point.setPageNumber(0); // Remember: page numbering starts at 0!
+point.setReplies(replies); // Attach those replies we created
 
-// เพิ่มคำอธิบายลงในเอกสาร
+// Add the annotation to your document
 annotator.add(point);
 ```
 
-#### ขั้นตอนที่ 4: บันทึกและกำจัด
+**Coordinate System Explained:** The origin (0,0) is the top‑left corner of the page. X increases to the right, Y increases downward. Some viewers use a bottom‑left origin, so always verify with a test coordinate like (50, 50) first.
 
-บันทึกการเปลี่ยนแปลงของคุณและปล่อยทรัพยากร:
+### ขั้นตอนที่ 4: บันทึกงานของคุณและทำความสะอาด
+Saving persists the annotations to disk. Forgetting this step means all changes remain only in memory.  
+`dispose` releases resources held by the Annotator instance.
 
 ```java
 import java.io.File;
 
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddPointAnnotation.pdf";
 annotator.save(outputPath);
+
+System.out.println("Point annotation added successfully!");
+System.out.println("Output saved to: " + outputPath);
+
+// Always clean up to prevent memory leaks
 annotator.dispose();
 ```
 
-### เคล็ดลับการแก้ไขปัญหา
+## ปัญหาทั่วไปและวิธีแก้ไข
 
-- **ตรวจสอบเส้นทางไฟล์:** ตรวจสอบซ้ำอีกครั้งว่าเส้นทางไฟล์ทั้งหมดถูกต้องเพื่อหลีกเลี่ยง `FileNotFoundException`-
-- **สิ่งที่ต้องพึ่งพา:** ตรวจสอบให้แน่ใจว่าโหลดสิ่งที่ต้องพึ่งพาทั้งหมดลงใน IDE ของคุณอย่างถูกต้อง
-- **การจัดการหน่วยความจำ:** โทรมาได้ตลอดเวลา `dispose()` บน `Annotator` คัดค้านการปลดปล่อยทรัพยากร
+### ปัญหาเกี่ยวกับเส้นทางไฟล์
+**Issue:** `FileNotFoundException` even when the file exists.  
+**Solution:** Use absolute paths during development. On Windows, escape backslashes (`"C:\\Docs\\input.pdf"`) or use forward slashes (`"C:/Docs/input.pdf"`).
 
-## การประยุกต์ใช้งานจริง
+### การรั่วไหลของหน่วยความจำใน Production
+**Issue:** Application slows down when processing many PDFs.  
+**Solution:** Always call `annotator.dispose()` in a `finally` block or use try‑with‑resources:
 
-### กรณีการใช้งานสำหรับคำอธิบายจุด
+```java
+try {
+    Annotator annotator = new Annotator("input.pdf");
+    // Your annotation logic here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
 
-1. **สื่อการเรียนรู้:** เน้นประเด็นสำคัญหรือคำถามในคู่มือการศึกษาหรือตำราเรียน
-2. **การตรวจสอบเอกสาร:** ทำเครื่องหมายพื้นที่เฉพาะในเอกสารทางกฎหมายที่ต้องได้รับการดูแล
-3. **PDF แบบโต้ตอบ:** ปรับปรุงประสบการณ์ผู้ใช้โดยให้ผู้ใช้โต้ตอบกับคำอธิบายประกอบโดยตรงภายในเอกสาร
+### Annotation ปรากฏในตำแหน่งที่ผิด
+**Issue:** Points show up far from the intended spot.  
+**Solution:** Verify the coordinate system. Test with simple coordinates (e.g., (100, 100)) before using dynamic calculations.
 
-### ความเป็นไปได้ในการบูรณาการ
+### ความขัดแย้งของ Dependency
+**Issue:** `NoSuchMethodError` or similar runtime errors.  
+**Solution:** Ensure you’re using the compatible versions of supporting libraries listed in the GroupDocs.Annotation documentation. The library works best with specific versions of `commons-io` and `log4j`.
 
-- บูรณาการกับโซลูชันการจัดเก็บข้อมูลบนคลาวด์ เช่น AWS S3 เพื่อการอัปโหลดและดาวน์โหลดไฟล์ที่มีคำอธิบายประกอบโดยอัตโนมัติ
-- ใช้ REST API เพื่อรวมฟีเจอร์คำอธิบายประกอบลงในแอปพลิเคชันเว็บ เพิ่มการเข้าถึงและการใช้งาน
+## กรณีการใช้งานขั้นสูงและแนวปฏิบัติที่ดีที่สุด
 
-## การพิจารณาประสิทธิภาพ
+### กลยุทธ์การกำหนดตำแหน่งอัจฉริยะ
+Hard‑coding coordinates works for demos, but production code should calculate positions dynamically—e.g., based on text bounding boxes or image locations.
 
-เพื่อเพิ่มประสิทธิภาพการทำงานของแอปพลิเคชันของคุณ:
+```java
+// Calculate positions based on page dimensions
+// This makes your annotations responsive to different PDF sizes
+Rectangle pageRect = annotator.getDocument().getPages().get(0).getBoundingRectangle();
+double centerX = pageRect.getWidth() / 2;
+double centerY = pageRect.getHeight() / 2;
 
-- **เพิ่มประสิทธิภาพการจัดการไฟล์:** ประมวลผลเอกสารขนาดใหญ่ในส่วนย่อยๆ ทีละน้อยหากเป็นไปได้
-- **การจัดการทรัพยากร:** ปล่อยทรัพยากรออกอย่างสม่ำเสมอโดยใช้ `annotator.dispose()` เพื่อป้องกันการรั่วไหลของหน่วยความจำ
-- **การประมวลผลแบบแบตช์:** หากใช้ได้ ควรมีคำอธิบายกระบวนการแบบแบตช์เพื่อลดค่าใช้จ่าย
+PointAnnotation centeredPoint = new PointAnnotation();
+centeredPoint.setBox(new Rectangle(centerX, centerY, 0, 0));
+```
 
-## บทสรุป
+### การประมวลผล Batch PDF Annotation
+When you need to annotate dozens or hundreds of PDFs, wrap the single‑document workflow in a loop. The pattern below demonstrates efficient batch processing while reusing a single `Annotator` instance per document.
 
-หากทำตามคำแนะนำนี้ คุณจะได้เรียนรู้วิธีเพิ่มคำอธิบายประกอบจุดใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java ฟีเจอร์นี้ช่วยปรับปรุงเอกสารด้วยองค์ประกอบแบบโต้ตอบ และสามารถเป็นเครื่องมือที่มีประสิทธิภาพในชุดเครื่องมือพัฒนาของคุณ ลองพิจารณาดูประเภทคำอธิบายประกอบอื่นๆ ที่ไลบรารีเสนอให้ในครั้งถัดไป!
+```java
+public void annotateMultipleDocuments(List<String> documentPaths) {
+    for (String path : documentPaths) {
+        try (Annotator annotator = new Annotator(path)) {
+            // Add your annotations
+            PointAnnotation point = createStandardAnnotation();
+            annotator.add(point);
+            
+            // Save with systematic naming
+            String outputPath = path.replace(".pdf", "_annotated.pdf");
+            annotator.save(outputPath);
+        }
+    }
+}
+```
 
-หากต้องการสำรวจเพิ่มเติม ให้เจาะลึกคุณลักษณะคำอธิบายประกอบอื่น ๆ หรือรวมความสามารถเหล่านี้เข้ากับแอปพลิเคชันที่ใหญ่กว่า
+### การรวมกับเว็บแอปพลิเคชัน
+Expose a REST endpoint that receives JSON payloads describing points (page, X, Y, color) and returns the annotated PDF stream. This keeps your front‑end lightweight and lets you centralize licensing.
 
-## ส่วนคำถามที่พบบ่อย
+```java
+@Service
+public class PDFAnnotationService {
+    
+    public String addPointAnnotation(String documentPath, int x, int y, String message) {
+        try (Annotator annotator = new Annotator(documentPath)) {
+            PointAnnotation point = new PointAnnotation();
+            point.setBox(new Rectangle(x, y, 0, 0));
+            point.setMessage(message);
+            point.setPageNumber(0);
+            
+            String outputPath = generateOutputPath(documentPath);
+            annotator.save(outputPath);
+            
+            return outputPath;
+        } catch (Exception e) {
+            throw new DocumentAnnotationException("Failed to add annotation", e);
+        }
+    }
+}
+```
 
-1. **GroupDocs.Annotation คืออะไร?**
-   - ไลบรารี Java ที่ครอบคลุมสำหรับการเพิ่มคำอธิบายลงในรูปแบบเอกสารต่างๆ
-   
-2. **ฉันสามารถใช้ GroupDocs.Annotation กับเอกสารที่ไม่ใช่ PDF ได้หรือไม่**
-   - ใช่! รองรับรูปแบบไฟล์ต่างๆ มากมาย เช่น Word, Excel และรูปภาพ
+## เคล็ดลับการเพิ่มประสิทธิภาพ
 
-3. **ฉันจะจัดการไฟล์ขนาดใหญ่ได้อย่างมีประสิทธิภาพได้อย่างไร**
-   - ดำเนินการเป็นส่วนๆ หากเป็นไปได้ และจัดการทรัพยากรอย่างขยันขันแข็งด้วย `dispose()` การโทร
+### แนวปฏิบัติที่ดีที่สุดในการจัดการหน่วยความจำ
+**Load Documents Efficiently:** For PDFs larger than 200 MB, load them page‑by‑page to keep memory usage low.
 
-4. **มีการสนับสนุนสำหรับระบบพิกัดที่แตกต่างกันในคำอธิบายประกอบหรือไม่**
-   - คำอธิบายประกอบใช้พิกัดแบบพิกเซลภายในเค้าโครงของเอกสาร
+```java
+// For large documents, consider streaming approaches
+Annotator annotator = new Annotator("large-document.pdf");
+try {
+    // Process annotations for specific pages only
+    annotator.add(annotation, 0); // Add to page 0 only
+} finally {
+    annotator.dispose();
+}
+```
 
-5. **สามารถบันทึกคำอธิบายประกอบเป็นเลเยอร์หรือข้อมูลเมตาแยกกันได้หรือไม่**
-   - คำอธิบายประกอบจะถูกฝังลงในเอกสารโดยตรง แต่คุณสามารถปรับแต่งคุณสมบัติต่างๆ ได้อย่างกว้างขวาง
+**Resource Cleanup:** In high‑throughput services, monitor heap usage and invoke `System.gc()` sparingly after disposing of the annotator.
 
-## ทรัพยากร
+```java
+public class AnnotationProcessor {
+    private static final int BATCH_SIZE = 100;
+    
+    public void processBatch(List<AnnotationTask> tasks) {
+        for (int i = 0; i < tasks.size(); i++) {
+            processTask(tasks.get(i));
+            
+            // Cleanup every batch to prevent memory buildup
+            if (i % BATCH_SIZE == 0) {
+                System.gc(); // Suggest garbage collection
+            }
+        }
+    }
+}
+```
 
-- **เอกสารประกอบ:** [เอกสารประกอบ GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- **เอกสารอ้างอิง API:** [เอกสารอ้างอิง API](https://reference.groupdocs.com/annotation/java/)
-- **ดาวน์โหลด GroupDocs.Annotation:** [ดาวน์โหลดที่นี่](https://releases.groupdocs.com/annotation/java/)
-- **ซื้อใบอนุญาต:** [ซื้อเลย](https://purchase.groupdocs.com/buy)
-- **เวอร์ชันทดลองใช้งานฟรี:** [เริ่มทดลองใช้งานฟรี](https://releases.groupdocs.com/annotation/java/)
-- **ขอใบอนุญาตชั่วคราว:** [ใบอนุญาตชั่วคราว](https://purchase.groupdocs.com/temporary-license/)
-- **ฟอรั่มการสนับสนุน:** [การสนับสนุน GroupDocs](https://forum.groupdocs.com/)
+### การเพิ่มประสิทธิภาพสำหรับประเภท PDF ต่างๆ
+- **Text‑Heavy PDFs:** Use `PageTextExtractor` to locate keywords and place points relative to those words.  
+- **Image‑Heavy PDFs:** Account for DPI differences; convert image dimensions to PDF points (1 pt = 1/72 in).  
+- **Large PDFs (500+ pages):** Process annotations in batches of 50 pages, then merge results to avoid loading the entire file.
+
+## ตัวอย่างการใช้งานจริง
+
+### กระบวนการตรวจสอบเอกสาร
+Legal teams often need to flag exact clause numbers. Point annotations let reviewers click a pin and see a comment thread attached to that clause.
+
+```java
+// Example: Mark contract clauses for review
+PointAnnotation clauseMarker = new PointAnnotation();
+clauseMarker.setMessage("Clause 4.2 - Review liability terms");
+clauseMarker.setBox(new Rectangle(245, 380, 0, 0)); // Precise clause location
+```
+
+### การเพิ่มประสิทธิภาพเนื้อหาการศึกษา
+Add interactive hotspots to e‑books that link to supplemental videos or quizzes, turning static PDFs into engaging learning modules.
+
+```java
+// Mark important concepts for student attention
+PointAnnotation conceptHighlight = new PointAnnotation();
+conceptHighlight.setMessage("Key Concept: Remember this for the exam!");
+conceptHighlight.setBox(new Rectangle(150, 220, 0, 0));
+```
+
+### เอกสารทางเทคนิค
+Engineers can annotate schematics with precise reference points that link to detailed specifications stored elsewhere.
+
+```java
+// Point out important implementation details
+PointAnnotation implementationNote = new PointAnnotation();
+implementationNote.setMessage("Critical: This parameter is required in production");
+implementationNote.setBox(new Rectangle(300, 150, 0, 0));
+```
+
+## คำถามที่พบบ่อย
+
+`getAnnotations` returns all annotations in the document, and `delete` removes an annotation by its ID.
+
+**Q: Can I style my point annotations differently?**  
+A: Yes! You can customize color, size, opacity, and even add a custom icon by setting the `appearance` properties on the `PointAnnotation` object.
+
+```java
+point.setPenColor(1); // Different color options
+point.setOpacity(0.8); // Transparency level
+```
+
+**Q: How do I handle different PDF page sizes?**  
+A: Calculate relative positions based on the page’s width and height (e.g., `x = pageWidth * 0.25`). This ensures the annotation scales correctly across A4, Letter, and custom sizes.
+
+**Q: Can I add multiple points in a single operation?**  
+A: Absolutely. Create a list of `PointAnnotation` objects, add them to the annotator, and call `save()` once—this reduces I/O overhead.
+
+```java
+annotator.add(point1);
+annotator.add(point2);
+annotator.add(point3);
+annotator.save(outputPath);
+```
+
+**Q: What's the performance impact of adding many annotations?**  
+A: Each annotation adds minimal processing time, but saving a document with hundreds of points can increase write latency by up to 30 %. Batch your saves or use asynchronous I/O for large batches.
+
+**Q: Can I remove or modify annotations after adding them?**  
+A: Yes. Retrieve existing annotations via `annotator.getAnnotations()`, modify their properties, or call `annotator.delete(annotationId)` before saving.
+
+```java
+Annotator annotator = new Annotator("protected.pdf", "password");
+```
+
+**Q: Do point annotations work with password‑protected PDFs?**  
+A: Yes, but you must supply the password when constructing the `Annotator` instance.
+
+## ขั้นตอนต่อไปและฟีเจอร์ขั้นสูง
+Now that you’ve mastered point annotations, explore these additional capabilities:
+
+- **Area annotations** for highlighting larger sections.  
+- **Text annotations** for inline comments.  
+- **Arrow annotations** for directional guidance.  
+- **Custom annotation types** for niche use cases like GIS data overlays.
+
+### เส้นทางการเรียนแนะนำ
+1. Complete this tutorial and experiment with different coordinate strategies.  
+2. Add area and text annotations to build a full‑featured review UI.  
+3. Create a simple web viewer that loads annotated PDFs on demand.  
+4. Integrate GroupDocs.Annotation’s REST API for cross‑platform support.  
+
+## สรุป
+You now know how to **create point annotations PDF** files, position them precisely, and **save annotated PDF** documents using GroupDocs.Annotation for Java. From basic setup to batch processing and performance tuning, these techniques will help you build robust, interactive PDF solutions that add real value for end‑users.
+
+Start with a single PDF, verify the coordinates, then scale up to batch jobs or web services. The library’s extensive API and solid performance guarantees make it a reliable choice for anything from small utilities to enterprise‑grade document management systems.
+
+---
+
+**อัปเดตล่าสุด:** 2026-06-16  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.2  
+**ผู้เขียน:** GroupDocs  
+
+**แหล่งข้อมูลเพิ่มเติม**  
+- **Documentation:** [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
+- **API Reference:** [Complete API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **Download Latest Version:** [GroupDocs.Annotation Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Purchase Options:** [Licensing and Pricing](https://purchase.groupdocs.com/buy)  
+- **Free Trial:** [Try GroupDocs.Annotation](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary License:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Community Support:** [GroupDocs Support Forum](https://forum.groupdocs.com/)
+
+## บทเรียนที่เกี่ยวข้อง
+
+- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

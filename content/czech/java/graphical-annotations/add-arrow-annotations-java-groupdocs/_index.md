@@ -19,16 +19,6 @@ url: /cs/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
- like ### etc.
-
-Let's produce final content.
-
-Be careful with bullet points and formatting.
-
-Proceed step by step.
-
-Will produce final markdown.
-
 # Java PDF šipkové anotace – kompletní tutoriál a osvědčené postupy (2025)
 
 ## Úvod

@@ -1,45 +1,82 @@
 ---
-"description": "Aprimore a colaboração e a anotação de documentos em aplicativos .NET usando o GroupDocs.Annotation para .NET. Anote, marque e revise documentos facilmente com esta poderosa biblioteca."
-"linktitle": "Gerar visualização sem anotações"
-"second_title": "API .NET do GroupDocs.Annotation"
-"title": "Gerar visualização sem anotações"
-"url": "/pt/net/advanced-usage/generate-preview-without-annotations/"
+categories:
+- Document Processing
+date: '2026-04-01'
+description: Aprenda a criar miniaturas de PDF e gerar visualizações limpas de PDF
+  sem anotações no .NET. Guia passo a passo com código para geração de miniaturas
+  de PDF usando o GroupDocs.Annotation.
+keywords:
+- create pdf thumbnails
+- generate pdf preview
+- remove annotations preview
+- render pdf without markup
+- pdf thumbnail generation
+lastmod: '2025-01-02'
+linktitle: Gerar pré‑visualização sem anotações
+second_title: GroupDocs.Annotation .NET API
+tags:
+- pdf-preview
+- document-collaboration
+- annotations
+- net-development
+title: Criar miniaturas de PDF em .NET – Visualização limpa sem anotações
 type: docs
-"weight": 13
+url: /pt/net/advanced-usage/generate-preview-without-annotations/
+weight: 13
 ---
 
-# Gerar visualização sem anotações
+# Criar miniaturas de PDF em .NET – Visualização limpa sem anotações
 
-## Introdução
-Na era digital atual, a colaboração eficiente em documentos é fundamental para a produtividade e o sucesso. Seja trabalhando em um projeto com membros da equipe espalhados pelo mundo ou colaborando com clientes em contratos importantes, a capacidade de anotar e revisar documentos com facilidade é crucial. Com o GroupDocs.Annotation para .NET, você pode levar sua colaboração em documentos a um novo patamar, permitindo anotações, marcações e revisões fáceis diretamente em seus aplicativos .NET.
+Gerar visualizações limpas de documentos é uma necessidade comum ao **criar miniaturas de PDF** para galerias, fluxos de aprovação ou compartilhamento público. Neste tutorial, você aprenderá como **criar miniaturas de PDF** que omitam todas as anotações, oferecendo aos seus usuários uma visualização impecável do conteúdo original do PDF.
+
+## Respostas rápidas
+- **O que faz “RenderAnnotations = false”?** Informa ao GroupDocs.Annotation para ignorar toda a marcação ao renderizar a visualização.  
+- **Qual formato de imagem é recomendado para miniaturas de alta qualidade?** PNG fornece qualidade sem perdas; JPEG é menor, mas com perdas.  
+- **Posso selecionar páginas específicas para o conjunto de miniaturas?** Sim – defina `PreviewOptions.PageNumbers` para as páginas que precisar.  
+- **Preciso de uma licença para uso em produção?** Uma licença é recomendada para recursos ilimitados e suporte.  
+- **Esta abordagem é compatível com .NET Core?** Absolutamente – GroupDocs.Annotation funciona com .NET Framework e .NET Core.
+
+## O que é “criar miniaturas de PDF”?
+Criar miniaturas de PDF significa renderizar cada página de um PDF como uma imagem (PNG/JPEG) que pode ser exibida em uma interface. Miniaturas são úteis para visualizações rápidas, navegadores de documentos e geração de grades de pré-visualização sem carregar o PDF completo.
+
+## Por que gerar uma visualização sem anotações?
+Remover anotações da visualização mantém o foco no conteúdo original do documento. Isso é essencial para:
+- **Fluxos de aprovação de documentos** – compare a versão limpa com a anotada.  
+- **Galerias de miniaturas** – evite desordem visual de comentários ou realces.  
+- **Compartilhamento público** – proteja marcações sensíveis enquanto ainda exibe o documento.  
+- **Preparação para impressão** – gere um PDF limpo para impressão mantendo as notas digitais separadas.
+
 ## Pré-requisitos
-Antes de mergulhar no mundo das anotações em documentos com o GroupDocs.Annotation para .NET, há alguns pré-requisitos que você precisa ter:
-### 1. Instale o GroupDocs.Annotation para .NET
-Em primeiro lugar, você precisará baixar e instalar o GroupDocs.Annotation para .NET. Você pode encontrar o link para download [aqui](https://releases.groupdocs.com/annotation/net/). Siga as instruções de instalação fornecidas para configurar a biblioteca no seu ambiente .NET.
-### 2. Obtenha uma licença (opcional)
-Embora o GroupDocs.Annotation para .NET ofereça um teste gratuito, você pode considerar obter uma licença para acesso total aos seus recursos. Você pode comprar uma licença [aqui](https://purchase.groupdocs.com/buy) ou solicitar uma licença temporária [aqui](https://purchase.groupdocs.com/temporary-license/) para fins de teste.
-### 3. Familiaridade com desenvolvimento em C# e .NET
-Para aproveitar ao máximo o GroupDocs.Annotation para .NET, é útil ter um conhecimento básico de desenvolvimento em C# e .NET. Isso permitirá que você integre a biblioteca perfeitamente aos seus aplicativos e fluxos de trabalho existentes.
-### 4. Instale um visualizador de PDF
-Como o GroupDocs.Annotation para .NET funciona com documentos PDF, você precisará de um visualizador de PDF instalado no seu sistema para visualizar os documentos anotados. O Adobe Acrobat Reader ou qualquer outro visualizador de PDF será suficiente.
+- **GroupDocs.Annotation for .NET** – instale a partir da página oficial de [lançamentos](https://releases.groupdocs.com/annotation/net/).  
+- **Licença (opcional, mas recomendada)** – adquira uma licença completa via a [página de compra](https://purchase.groupdocs.com/buy) ou solicite uma [licença temporária](https://purchase.groupdocs.com/temporary-license/).  
+- Conhecimento básico de C#/.NET.  
+- Um visualizador de PDF (ex.: Adobe Acrobat Reader) para verificar as miniaturas geradas.
 
-## Importar namespaces
-Antes de começar a anotar documentos, você precisará importar os namespaces necessários para o seu projeto .NET. Isso permite que você acesse as classes e métodos fornecidos pelo GroupDocs.Annotation para .NET.
+## Importar Namespaces
+Adicione as declarações `using` necessárias para trabalhar com a API de anotação:
 
 ```csharp
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 
-Agora que você configurou tudo, vamos gerar uma prévia de um documento sem anotações. Siga estes passos para fazer isso:
-## Etapa 1: Inicializar o Annotator
-Primeiro, crie uma instância do `Annotator` classe, passando o caminho para o documento que você deseja anotar.
+## Como criar miniaturas de PDF sem anotações
+
+A seguir, um passo‑a‑passo que mostra exatamente como **gerar pré‑visualizações de PDF** em imagens enquanto **remove a visualização de anotações** do resultado.
+
+### Etapa 1: Inicializar o Annotator
+Crie uma instância `Annotator` que aponta para o PDF de origem. O bloco `using` garante que os recursos sejam liberados automaticamente.
+
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
 ```
-## Etapa 2: Configurar opções de visualização
-Em seguida, configure as opções de visualização de acordo com suas necessidades. Você pode especificar os números de página que deseja incluir na visualização, o formato da visualização (por exemplo, PNG) e se deseja renderizar anotações.
+
+> **Dica profissional:** Valide o caminho do arquivo e aplique verificações de segurança adequadas ao lidar com PDFs enviados por usuários.
+
+### Etapa 2: Configurar as opções de visualização
+Configure `PreviewOptions` para definir o formato de saída, intervalo de páginas e, crucialmente, desativar a renderização de anotações.
+
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -50,24 +87,77 @@ Em seguida, configure as opções de visualização de acordo com suas necessida
     previewOptions.PageNumbers = new int[] {1, 2, 3, 4, 5, 6};
     previewOptions.RenderAnnotations = false;
 ```
-## Etapa 3: gerar visualização
-Por fim, gere a pré-visualização usando o `GeneratePreview` método do `Document` classe, passando as opções de visualização configuradas.
+
+**Pontos-chave**
+- **Nomeação de arquivos** – a lambda cria um arquivo PNG exclusivo para cada página.  
+- **Escolha de formato** – PNG para miniaturas de alta qualidade; troque para JPEG para arquivos menores.  
+- **Seleção de páginas** – especifique exatamente quais páginas você deseja **gerar miniaturas de PDF**.  
+- **`RenderAnnotations = false`** – isso desativa toda a marcação e é o núcleo de **desativar a visualização de anotações**.
+
+### Etapa 3: Gerar a visualização limpa
+Chame o método `GeneratePreview` para renderizar as imagens com base nas opções que você definiu.
+
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-Seguindo estas etapas simples, você pode gerar uma visualização de um documento sem anotações usando o GroupDocs.Annotation para .NET.
+
+Seus arquivos de miniatura limpos (`result1.png`, `result2.png`, …) agora estão prontos para uso.
+
+## Casos de uso comuns em aplicações reais
+- **Sistemas de gerenciamento de documentos** – miniaturas limpas para navegadores de arquivos, mantendo versões anotadas separadas.  
+- **Plataformas de revisão jurídica** – mostre aos clientes o contrato original sem comentários internos.  
+- **Portais de e‑learning** – exiba as tarefas originais enquanto os professores mantêm notas de avaliação privadas.  
+- **Fluxos de trabalho de publicação** – crie imagens de pré‑visualização para material de marketing sem marcações editoriais.
+
+## Considerações de desempenho
+- **Processamento em lote** – manipule vários PDFs em um único job em segundo plano para reduzir a sobrecarga.  
+- **Cache** – armazene as miniaturas geradas após o primeiro upload para evitar re‑renderização a cada solicitação.  
+- **Limites de página** – para PDFs muito grandes, limite a visualização às primeiras páginas para manter o tempo de processamento baixo.  
+- **Compromissos de formato de arquivo** – PNG fornece miniaturas nítidas; JPEG reduz o armazenamento quando a largura de banda é uma preocupação.
+
+## Solução de problemas comuns
+- **Miniaturas não criadas** – verifique permissões de gravação na pasta de saída e assegure que o PDF de origem não esteja corrompido.  
+- **Qualidade de imagem baixa** – troque para PNG ou ajuste as configurações de DPI se sua versão do GroupDocs.Annotation suportar.  
+- **Uso elevado de memória** – processe páginas em lotes menores ou faça streaming do PDF ao invés de carregá-lo totalmente na memória.  
+- **Problemas de caminho** – sempre construa caminhos de arquivo com `Path.Combine()` para segurança multiplataforma.
+
+## Melhores práticas para produção
+- Envolva a geração da visualização em um bloco `try‑catch` para lidar com erros de I/O de forma elegante.  
+- Use declarações `using` (como mostrado) para garantir a liberação adequada de manipuladores de arquivos.  
+- Valide os PDFs recebidos (tamanho, formato, proteção por senha) antes do processamento.  
+- Registre cada evento de geração de visualização para monitoramento e depuração.
+
+## Opções avançadas de configuração
+- **DPI personalizado** – algumas versões permitem definir uma resolução maior para miniaturas mais nítidas.  
+- **Marca d'água** – adicione uma marca d'água “Apenas pré‑visualização” para indicar que a imagem não é o documento final.  
+- **Seleção inteligente de páginas** – escolha automaticamente as páginas mais relevantes (ex.: primeira página, índice) com base nos metadados do documento.
 
 ## Conclusão
-Concluindo, o GroupDocs.Annotation para .NET oferece uma solução poderosa para colaboração e anotação de documentos em aplicativos .NET. Seguindo os passos descritos neste tutorial, você poderá integrar perfeitamente os recursos de anotação de documentos aos seus projetos, aprimorando a colaboração e a produtividade.
+Agora você tem uma receita completa e pronta para produção para **criar miniaturas de PDF** e **gerar pré‑visualizações de PDF** sem qualquer marcação. Ao definir `RenderAnnotations = false`, você **remove a visualização de anotações** e entrega miniaturas limpas e profissionais que se encaixam perfeitamente em qualquer aplicação centrada em documentos.
+
+---
+
 ## Perguntas frequentes
-### P: Posso usar o GroupDocs.Annotation para .NET com outros formatos de documento além de PDF?
-Sim, o GroupDocs.Annotation for .NET suporta uma variedade de formatos de documentos, incluindo DOCX, XLSX, PPTX e muito mais.
-### P: O GroupDocs.Annotation for .NET é compatível com o .NET Core?
-Sim, o GroupDocs.Annotation para .NET é compatível com ambientes .NET Framework e .NET Core.
-### P: O GroupDocs.Annotation para .NET oferece ferramentas de anotação personalizáveis?
-Sim, o GroupDocs.Annotation for .NET fornece uma variedade de ferramentas de anotação que podem ser personalizadas para atender às suas necessidades específicas.
-### P: Posso integrar o GroupDocs.Annotation for .NET em meus aplicativos web?
-Sim, o GroupDocs.Annotation for .NET pode ser integrado a aplicativos de desktop e web, fornecendo recursos de colaboração de documentos perfeitos.
-### P: Existe um fórum da comunidade onde posso obter suporte e assistência com o GroupDocs.Annotation para .NET?
-Sim, você pode encontrar suporte e assistência no fórum GroupDocs.Annotation [aqui](https://forum.groupdocs.com/c/annotation/10).
+
+**Q: Posso usar o GroupDocs.Annotation for .NET com formatos além de PDF?**  
+A: Sim. A biblioteca suporta DOCX, XLSX, PPTX e muitos outros. O mesmo fluxo de pré‑visualização se aplica independentemente do formato de origem.
+
+**Q: O GroupDocs.Annotation for .NET é compatível com .NET Core?**  
+A: Absolutamente. Ele funciona com .NET Framework, .NET Core e .NET 5/6+, permitindo direcionar aplicações modernas multiplataforma.
+
+**Q: A biblioteca fornece ferramentas de anotação personalizáveis?**  
+A: Sim, mas quando você define `RenderAnnotations = false` essas ferramentas são ignoradas na geração da visualização.
+
+**Q: Posso integrar isso em uma aplicação web?**  
+A: Sim. Apenas garanta que o servidor web tenha permissões adequadas de I/O de arquivos e considere fazer streaming da saída diretamente para o cliente para evitar arquivos temporários.
+
+**Q: Qual formato de imagem devo escolher para galerias de miniaturas?**  
+A: PNG oferece a melhor qualidade, enquanto JPEG reduz o tamanho do arquivo. Escolha com base na fidelidade visual que você precisa versus as restrições de largura de banda.
+
+**Q: Onde posso obter suporte da comunidade?**  
+A: Você pode encontrar ajuda no fórum do GroupDocs.Annotation [aqui](https://forum.groupdocs.com/c/annotation/10). A comunidade é ativa e responsiva.
+
+**Última atualização:** 2026-04-01  
+**Testado com:** GroupDocs.Annotation for .NET 23.12  
+**Autor:** GroupDocs

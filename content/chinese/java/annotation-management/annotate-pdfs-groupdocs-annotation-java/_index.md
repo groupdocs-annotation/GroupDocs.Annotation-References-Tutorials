@@ -19,10 +19,6 @@ url: /zh/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
-.
-
-Let's write.
-
 # 添加 PDF 注释 Java 教程
 
 是否曾在应用程序中卡住，无法实现 **add pdf annotation java** 功能？你并不孤单。无论是构建文档管理系统、创建协作审阅平台，还是仅仅需要让用户在 PDF 上高亮和评论，正确处理注释都可能相当棘手。

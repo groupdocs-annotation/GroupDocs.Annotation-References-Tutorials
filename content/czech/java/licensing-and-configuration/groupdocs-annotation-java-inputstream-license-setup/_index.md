@@ -22,17 +22,7 @@ url: /cs/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-
 weight: 1
 ---
 
-Docs"
-
-Now produce final markdown with translations.
-
-Check for any leftover English text: headings, code block placeholders, etc.
-
-Make sure to keep code block placeholders unchanged.
-
-Also ensure we didn't translate any URLs.
-
-Now produce final answer.# nastavit licenci groupdocs pomocí InputStream
+# nastavit licenci groupdocs pomocí InputStream
 
 ## Úvod
 

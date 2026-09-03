@@ -20,17 +20,7 @@ url: /pt/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
- Anotação PDF Java Tutorial". Better: "Tutorial de Anotação PDF em Java". We'll translate.
-
-Proceed.
-
-Paragraphs.
-
-Let's craft translation.
-
-Make sure to keep bold formatting.
-
-Ok produce final.# Tutorial de Anotação PDF em Java
+# Tutorial de Anotação PDF em Java
 
 Já ficou preso tentando **add pdf annotation java** recursos em sua aplicação? Você não está sozinho. Seja construindo um sistema de gerenciamento de documentos, criando uma plataforma colaborativa de revisão, ou apenas precisando que usuários realcem e comentem PDFs, acertar a anotação pode ser complicado.
 

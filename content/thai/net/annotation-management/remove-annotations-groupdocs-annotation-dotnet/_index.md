@@ -1,65 +1,129 @@
 ---
-"date": "2025-05-06"
-"description": "เรียนรู้วิธีการลบคำอธิบายประกอบจากเอกสารของคุณอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation API อันทรงพลังด้วยบทช่วยสอน C# โดยละเอียดนี้"
-"title": "วิธีการลบคำอธิบายประกอบออกจากเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET"
-"url": "/th/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+categories:
+- PDF Processing
+date: '2026-06-01'
+description: เรียนรู้วิธีลบการทำหมายเหตุใน PDF ด้วย C# ด้วย GroupDocs.Annotation.
+  คู่มือทีละขั้นตอน, ตัวอย่างโค้ด, เคล็ดลับการแก้ปัญหา, และแนวปฏิบัติที่ดีที่สุด.
+keywords:
+- remove pdf annotations c#
+- remove sticky notes pdf
+- groupdocs annotation removal
+lastmod: '2026-06-01'
+linktitle: ลบการทำหมายเหตุใน PDF C#
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-01'
+  description: Learn how to remove pdf annotations c# with GroupDocs.Annotation. Step-by-step
+    tutorial, code examples, troubleshooting tips, and best practices.
+  headline: How to Remove PDF Annotations C# – GroupDocs.Annotation Guide
+  type: TechArticle
+- description: Learn how to remove pdf annotations c# with GroupDocs.Annotation. Step-by-step
+    tutorial, code examples, troubleshooting tips, and best practices.
+  name: How to Remove PDF Annotations C# – GroupDocs.Annotation Guide
+  steps:
+  - name: Define Input and Output Paths
+    text: First, point the code at the source PDF and decide where the cleaned version
+      will live.
+  - name: Initialize the Annotator Object
+    text: The `Annotator` class is the gateway to all annotation operations. **Definition
+      anchor:** The `Annotator` class provides methods for loading, querying, modifying,
+      and saving PDF annotations.
+  - name: Retrieve All Annotations
+    text: Grab every annotation object from the document. **Explanation:** `Get()`
+      returns a collection of `AnnotationBase` objects representing every annotation
+      present—highlights, sticky notes, stamps, drawings, and more.
+  - name: Remove Annotations
+    text: Delete the retrieved annotations in one call. **Explanation:** The `Remove`
+      method accepts the collection and strips each annotation from the PDF. If the
+      collection is empty, the method safely does nothing.
+  - name: Save the Clean Document
+    text: Write the annotation‑free PDF back to disk. **Explanation:** `Save` persists
+      the changes. The output file can be placed in the same folder or a different
+      location, depending on your workflow.
+  type: HowTo
+- questions:
+  - answer: Yes—GroupDocs.Annotation handles every standard annotation type, including
+      highlights, sticky notes, stamps, free‑drawings, and text markup.
+    question: Can this code remove all types of PDF annotations?
+  - answer: The library works with PDFs from version 1.2 up to the latest 2.0 specifications,
+      covering virtually every file you’ll encounter.
+    question: What PDF versions are supported?
+  - answer: No hard limit; performance scales with document size and system memory.
+      For very large files, consider processing in chunks.
+    question: Is there a limit to how many annotations I can delete at once?
+  - answer: Once saved, annotations are permanently removed. Keep a backup of the
+      original PDF if you may need the annotations later.
+    question: Can I undo the removal after saving?
+  - answer: 'Supply the password via `LoadOptions` when constructing the `Annotator`:
+      `new Annotator(path, new LoadOptions { Password = "pwd" })`.'
+    question: How do I handle password‑protected PDFs?
+  type: FAQPage
+tags:
+- groupdocs-annotation
+- pdf-manipulation
+- csharp-tutorial
+- annotation-removal
+title: วิธีลบการทำหมายเหตุใน PDF ด้วย C# – คู่มือ GroupDocs.Annotation
 type: docs
-"weight": 1
+url: /th/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/
+weight: 1
 ---
 
-# วิธีการลบคำอธิบายประกอบออกจากเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET
+# วิธีการลบคำอธิบาย PDF C# – คู่มือ GroupDocs.Annotation
 
-## การแนะนำ
+## บทนำ
 
-คุณกำลังจัดการกับไฟล์ PDF ที่เต็มไปด้วยคำอธิบายประกอบที่ไม่จำเป็นอยู่หรือไม่ ไม่ว่าคุณจะกำลังเตรียมรายงานขั้นสุดท้ายหรือเพียงแค่จัดระเบียบ การลบคำอธิบายประกอบที่ไม่ต้องการออกไปก็อาจเป็นเรื่องท้าทาย ด้วย GroupDocs.Annotation สำหรับ .NET API ที่ทรงพลัง งานนี้จึงราบรื่นและมีประสิทธิภาพ
+หากคุณต้องการ **remove pdf annotations c#** อย่างรวดเร็วและเชื่อถือได้ คุณมาถูกที่แล้ว ไม่ว่าคุณจะทำความสะอาดรายงานที่ส่งให้ลูกค้า ทำความสะอาดไฟล์กฎหมาย หรือทำอัตโนมัติการประมวลผลเป็นชุดขนาดใหญ่ของ PDF ที่ได้รับการตรวจสอบ การทำด้วยมือเป็นเรื่องน่าเบื่อและเสี่ยงต่อข้อผิดพลาด คู่มือการสอนนี้จะพาคุณผ่านกระบวนการทั้งหมดด้วย GroupDocs.Annotation สำหรับ .NET ตั้งแต่การติดตั้งไลบรารีจนถึงการจัดการกรณีขอบเช่นไฟล์ที่มีการป้องกันด้วยรหัสผ่าน เมื่อเสร็จสิ้นคุณจะสามารถลบคำอธิบายใด ๆ — ไฮไลท์, โน้ตติดกาว, แสตมป์ หรือการวาด — จาก PDF ได้ด้วยเพียงไม่กี่บรรทัดของโค้ด C#.
 
-บทช่วยสอนนี้จะแนะนำคุณเกี่ยวกับการใช้ GroupDocs.Annotation เพื่อลบคำอธิบายประกอบทั้งหมดออกจากเอกสารของคุณ เพื่อให้คุณมีเวอร์ชันที่สะอาดพร้อมสำหรับการแจกจ่ายหรือการเก็บถาวร
+**สิ่งที่คุณจะเชี่ยวชาญ:**
+- การติดตั้งและการขอใบอนุญาต GroupDocs.Annotation สำหรับ .NET
+- เขียนโค้ด C# อย่างกระชับเพื่อ **remove pdf annotations c#** ในสถานการณ์ไฟล์เดียวและชุด
+- จัดการกับ PDF ขนาดใหญ่, ข้อจำกัดของหน่วยความจำ, และเงื่อนไขข้อผิดพลาดทั่วไป
+- ขยายโซลูชันเพื่อเลือกลบเฉพาะประเภทคำอธิบายบางประเภท (เช่น remove sticky notes pdf)
 
-**สิ่งที่คุณจะได้เรียนรู้:**
-- การตั้งค่า GroupDocs.Annotation สำหรับ .NET
-- คำแนะนำทีละขั้นตอนในการลบคำอธิบายประกอบใน C#
-- การประยุกต์ใช้งานจริงและการพิจารณาประสิทธิภาพ
+มาเริ่มกันและทำให้การทำความสะอาดคำอธิบายเป็นเรื่องง่ายดาย.
 
-มาเริ่มต้นด้วยข้อกำหนดเบื้องต้นที่ต้องมีในการเริ่มต้นกันก่อน
+## คำตอบเร็ว
+- **ฉันสามารถลบประเภทคำอธิบายทั้งหมดพร้อมกันได้หรือไม่?** ใช่—เรียก `annotator.Remove(allAnnotations)` หลังจากดึงมาด้วย `Get()`.
+- **จำเป็นต้องมีใบอนุญาตสำหรับการใช้งานในผลิตภัณฑ์หรือไม่?** ใบอนุญาต GroupDocs.Annotation ที่ถูกต้องจะลบลายน้ำและเปิดใช้งานฟังก์ชันเต็มรูปแบบ.
+- **เวอร์ชัน .NET ที่รองรับคืออะไร?** .NET Framework 4.6.2+, .NET Core 2.0+, .NET 5/6/7.
+- **จะจัดการกับ PDF ที่ป้องกันด้วยรหัสผ่านอย่างไร?** ส่งรหัสผ่านผ่าน `LoadOptions` เมื่อสร้าง `Annotator`.
+- **สามารถประมวลผลหลายร้อยไฟล์โดยอัตโนมัติได้หรือไม่?** แน่นอน—รวมโค้ดไฟล์เดียวกับลูป `foreach` หรือการประมวลผลแบบขนานสำหรับงานชุด.
+
+## remove pdf annotations c# คืออะไร?
+*remove pdf annotations c#* คือกระบวนการโปรแกรมในการลบวัตถุคำอธิบายทั้งหมดที่ฝังอยู่ในเอกสาร PDF โดยใช้ C#. การดำเนินการนี้กระทบเฉพาะชั้นคำอธิบายเท่านั้น ทำให้ข้อความ, รูปภาพ และการจัดวางพื้นฐานคงเดิม ไม่ลบวัตถุคำอธิบายใด ๆ — เช่น ไฮไลท์, คอมเมนต์, แสตมป์, และการวาด — ในขณะที่ยังคงรักษาเนื้อหา, การจัดวาง, และเมทาดาต้าต้นฉบับของ PDF ทำให้เอกสารสะอาดและพร้อมสำหรับการแจกจ่ายหรือการเก็บรักษา กระบวนการนี้สามารถย้อนกลับได้เต็มที่เฉพาะเมื่อคุณเก็บสำเนาสำรองของไฟล์ต้นฉบับก่อนทำการลบ.
+
+## ทำไมต้องใช้ GroupDocs.Annotation สำหรับการลบคำอธิบาย PDF?
+GroupDocs.Annotation รองรับ **30+ ประเภทคำอธิบาย** (รวมถึงไฮไลท์, โน้ตติดกาว, แสตมป์, และการวาดฟรี) และสามารถประมวลผล PDF ขนาด **ถึง 500 MB** โดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ API ทำงานบนแพลตฟอร์มใด ๆ ที่สนับสนุน .NET ให้คุณมีโซลูชันที่สม่ำเสมอและประสิทธิภาพสูงสำหรับแอปพลิเคชันเดสก์ท็อปและเว็บ.
 
 ## ข้อกำหนดเบื้องต้น
 
-ก่อนที่จะดำเนินการลบคำอธิบายประกอบ ให้แน่ใจว่าคุณมี:
+- **GroupDocs.Annotation for .NET** ≥ 25.4.0
+- Visual Studio 2017 หรือใหม่กว่า
+- สิทธิ์ผู้ดูแลระบบเพื่อทำการติดตั้งแพคเกจ NuGet
+- ความรู้พื้นฐาน C# (ตัวแปร, คำสั่ง using, การจัดการข้อยกเว้น)
 
-### ไลบรารีและสิ่งที่ต้องพึ่งพา:
-- **GroupDocs.Annotation สำหรับ .NET**: ต้องมีเวอร์ชัน 25.4.0 ขึ้นไป
-- **สภาพแวดล้อมการพัฒนา**:Visual Studio (แนะนำรุ่น 2017 หรือใหม่กว่า)
+## วิธีการลบคำอธิบาย PDF ด้วย GroupDocs.Annotation?
+ขั้นตอนทำงานประกอบด้วยการโหลด PDF ด้วยคลาส `Annotator` ดึงรายการคำอธิบายทั้งหมดผ่าน `Get()` เรียก `Remove()` กับคอลเลกชันนั้น และสุดท้ายบันทึกเอกสารที่แก้ไขแล้ว ลำดับนี้จัดการทุกประเภทคำอธิบายในหนึ่งรอบและทำงานได้ทั้งในสถานการณ์ไฟล์เดียวและการประมวลผลชุด.
 
-### ข้อกำหนดการตั้งค่าสภาพแวดล้อม:
-- สิทธิ์ผู้ดูแลระบบในการติดตั้งซอฟต์แวร์บนสภาพแวดล้อมการพัฒนาของคุณ
+### ขั้นตอนที่ 1: กำหนดเส้นทางอินพุตและเอาต์พุต
+แรกเริ่ม ให้ชี้โค้ดไปที่ PDF ต้นฉบับและกำหนดตำแหน่งที่ไฟล์ที่ทำความสะอาดแล้วจะถูกจัดเก็บ.
 
-### ข้อกำหนดเบื้องต้นของความรู้:
-- ความเข้าใจพื้นฐานเกี่ยวกับแนวคิดของ C# และ .NET framework
-
-เมื่อมีข้อกำหนดเบื้องต้นเหล่านี้แล้ว มาตั้งค่า GroupDocs.Annotation สำหรับ .NET กัน
-
-## การตั้งค่า GroupDocs.Annotation สำหรับ .NET
-
-ในการใช้ GroupDocs.Annotation ให้ติดตั้งในโครงการของคุณตามขั้นตอนต่อไปนี้:
-
-### การติดตั้งผ่านคอนโซลตัวจัดการแพ็กเกจ NuGet
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-### การติดตั้งผ่าน .NET CLI
+### ขั้นตอนที่ 2: เริ่มต้นวัตถุ Annotator
+คลาส `Annotator` เป็นประตูสู่การดำเนินการคำอธิบายทั้งหมด.
+
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### ขั้นตอนการรับใบอนุญาต:
-- **ทดลองใช้งานฟรี**:ดาวน์โหลดเวอร์ชันทดลองใช้ได้จาก [เว็บไซต์ GroupDocs](https://releases.groupdocs.com/annotation/net/) เพื่อทดสอบศักยภาพของมัน
-- **ใบอนุญาตชั่วคราว**:ขอใบอนุญาตชั่วคราวเพื่อการเข้าถึงเต็มรูปแบบในช่วงการประเมินผลได้ที่ [ลิงค์นี้](https://purchase-groupdocs.com/temporary-license/).
-- **ซื้อ**:เพื่อการใช้งานอย่างต่อเนื่อง โปรดซื้อใบอนุญาตผ่านทาง [ร้านค้า GroupDocs](https://purchase-groupdocs.com/buy).
+**Definition anchor:** คลาส `Annotator` มีเมธอดสำหรับการโหลด, คิวรี, แก้ไข, และบันทึกคำอธิบาย PDF.
 
-### การเริ่มต้นและการตั้งค่าเบื้องต้นด้วยโค้ด C#
-
-เมื่อติดตั้งแล้ว ให้เริ่มต้น GroupDocs.Annotation ดังต่อไปนี้:
+### ขั้นตอนที่ 3: ดึงคำอธิบายทั้งหมด
+ดึงวัตถุคำอธิบายทุกอันจากเอกสาร.
 
 ```csharp
 using System;
@@ -69,7 +133,7 @@ class Program
 {
     static void Main()
     {
-        // เริ่มต้นใบอนุญาตหากมี
+        // Initialize license if available
         License lic = new License();
         lic.SetLicense("path/to/your/license.lic");
 
@@ -78,106 +142,244 @@ class Program
 }
 ```
 
-ตอนนี้คุณได้ตั้งค่าสภาพแวดล้อมของคุณเรียบร้อยแล้ว มาดำเนินการลบคำอธิบายประกอบกัน
+**Explanation:** `Get()` คืนคอลเลกชันของวัตถุ `AnnotationBase` ที่แทนทุกคำอธิบายที่มีอยู่ — ไฮไลท์, โน้ตติดกาว, แสตมป์, การวาด, และอื่น ๆ.
 
-## คู่มือการใช้งาน
-
-### การลบคำอธิบายประกอบออกจากเอกสาร
-
-ปฏิบัติตามขั้นตอนเหล่านี้เพื่อลบคำอธิบายประกอบทั้งหมดอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation:
-
-#### ขั้นตอนที่ 1: กำหนดเส้นทางอินพุตและเอาต์พุต
-ระบุเส้นทางเอกสารอินพุตและตำแหน่งไฟล์เอาท์พุต
+### ขั้นตอนที่ 4: ลบคำอธิบาย
+ลบคำอธิบายที่ดึงมาในหนึ่งคำสั่ง.
 
 ```csharp
 string inputFilePath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "ANNOTATED_FILE_NAME");
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf");
 ```
 
-**คำอธิบาย**: แทนที่ `"YOUR_DOCUMENT_DIRECTORY"` และ `"ANNOTATED_FILE_NAME"` โดยใช้เส้นทางไดเรกทอรีและชื่อไฟล์ของเอกสารของคุณ ไฟล์ PDF ที่ได้จะถูกบันทึกไว้ในไดเรกทอรีที่ระบุ
+**Explanation:** เมธอด `Remove` รับคอลเลกชันและลบคำอธิบายแต่ละรายการออกจาก PDF หากคอลเลกชันว่างเมธอดจะทำอะไรไม่ได้อย่างปลอดภัย.
 
-#### ขั้นตอนที่ 2: เริ่มต้นวัตถุ Annotator
-โหลดเอกสารของคุณโดยใช้ `Annotator` ระดับ.
+### ขั้นตอนที่ 5: บันทึกเอกสารที่ทำความสะอาดแล้ว
+เขียน PDF ที่ไม่มีคำอธิบายกลับไปยังดิสก์.
+
+```csharp
+string inputFilePath = @"C:\Documents\Annotated\project_proposal_with_comments.pdf";
+string outputPath = @"C:\Documents\Clean\project_proposal_final.pdf";
+```
+
+**Explanation:** `Save` บันทึกการเปลี่ยนแปลง ไฟล์ผลลัพธ์สามารถวางในโฟลเดอร์เดียวกันหรือที่อื่น ๆ ตามกระบวนการทำงานของคุณ.
+
+## ตัวอย่างการทำงานเต็มรูปแบบ
+
+ด้านล่างเป็นโค้ดเต็มที่พร้อมรันซึ่งรวมขั้นตอนทั้งห้าขั้นตอนเข้าด้วยกัน.
 
 ```csharp
 using (Annotator annotator = new Annotator(inputFilePath))
 {
-    // ดำเนินการขั้นตอนถัดไปที่นี่
+    // All the magic happens inside this using block
 }
 ```
 
-**คำอธิบาย**: เดอะ `Annotator` วัตถุมีฟังก์ชันคำอธิบายประกอบและถูกห่อหุ้มด้วย `using` คำชี้แจงสำหรับการจัดการทรัพยากรอัตโนมัติ
+## ปัญหาทั่วไปและการแก้ไขปัญหา
 
-#### ขั้นตอนที่ 3: ดึงข้อมูลคำอธิบายทั้งหมด
-ดึงคำอธิบายประกอบทั้งหมดที่มีอยู่ในเอกสารของคุณ
+- **File Not Found:** ตรวจสอบเส้นทางที่แน่นอนด้วย `File.Exists(inputPath)` ก่อนเรียก `new Annotator`.
+- **Access Denied:** ตรวจสอบให้กระบวนการมีสิทธิ์อ่าน/เขียนและว่า PDF ไม่ได้เปิดอยู่ที่อื่น.
+- **Memory Pressure on Large Files:** สำหรับ PDF ที่ใหญ่กว่า 100 MB ให้เพิ่มขีดจำกัดหน่วยความจำของกระบวนการหรือประมวลผลไฟล์เป็นชุดเล็ก ๆ.
+- **Corrupted PDFs:** ห่อหุ้มตรรกะในบล็อก `try‑catch`; GroupDocs.Annotation จะโยน `AnnotationException` สำหรับไฟล์ที่ไม่รองรับหรือเสียหาย.
 
+## กรณีการใช้งานจริง
+
+- **Legal Document Preparation:** บริษัทกฎหมายใช้สคริปต์นี้เพื่อลบคอมเมนต์ภายในก่อนยื่นสัญญาต่อศาล.
+- **Academic Publishing:** นักวิจัยทำความสะอาดโน้ตการตรวจสอบเพื่อสร้างต้นฉบับที่สะอาดสำหรับการส่งวารสาร.
+- **Corporate Reporting:** ฝ่ายการเงินสร้างรายงานไตรมาสที่ไม่มีลายน้ำโดยอัตโนมัติสำหรับนักลงทุนหลังรอบการตรวจสอบภายใน.
+- **Document Archiving:** หน่วยงานรัฐบาลประมวลผลเป็นชุดหลายพันบันทึกสาธารณะที่มีคำอธิบาย, เก็บเฉพาะเวอร์ชันสุดท้ายที่ไม่มีคำอธิบายเพื่อการเก็บรักษาระยะยาว.
+
+## แนวทางปฏิบัติที่ดีที่สุดด้านประสิทธิภาพ
+
+### การจัดการหน่วยความจำ
+- ห่อ `Annotator` ด้วยคำสั่ง `using` เสมอเพื่อรับประกันการทำลาย.
+- ประมวลผลไฟล์เป็นชุดละ 10–20 ไฟล์เพื่อให้การใช้หน่วยความจำคาดการณ์ได้.
+
+### เทคนิคการปรับแต่ง
 ```csharp
 List<AnnotationBase> annotations = annotator.Get();
+Console.WriteLine($"Found {annotations.Count} annotations to remove.");
 ```
 
-**คำอธิบาย**: เดอะ `Get()` วิธีการดึงรายการของวัตถุคำอธิบายประกอบทั้งหมด (`AnnotationBase`จากเอกสาร อนุญาตให้มีการแก้ไขหรือลบออก
-
-#### ขั้นตอนที่ 4: ลบคำอธิบายประกอบ
-ลบคำอธิบายประกอบที่ดึงมาทั้งหมดจากเอกสารของคุณ
+### การประมวลผลพร้อมกัน
+สำหรับสภาพแวดล้อมที่ต้องการ throughput สูง ให้รันหลายไฟล์พร้อมกัน:
 
 ```csharp
-annotator.Remove(annotations);
+if (annotations.Count > 0)
+{
+    annotator.Remove(annotations);
+    Console.WriteLine("All annotations removed successfully.");
+}
+else
+{
+    Console.WriteLine("No annotations found in the document.");
+}
 ```
 
-**คำอธิบาย**: เดอะ `Remove` วิธีนี้ใช้ชุดของคำอธิบายประกอบและลบออก ทำให้เหลือเพียงเวอร์ชันของเอกสารต้นฉบับที่ไม่มีคำอธิบายประกอบ
+**Warning:** การทำงานแบบขนานเพิ่มภาระ CPU และ I/O; ควรตรวจสอบทรัพยากรระบบเพื่อหลีกเลี่ยงการจำกัด.
 
-#### ขั้นตอนที่ 5: บันทึกเอกสาร
-บันทึกเอกสารที่แก้ไขไปยังเส้นทางเอาต์พุตที่คุณต้องการ
+## สถานการณ์ขั้นสูง
+
+### การลบคำอธิบายแบบเลือก
+หากต้องการลบเฉพาะโน้ตติดกาว ให้กรองโดย `AnnotationType.StickyNote` ก่อนเรียก `Remove`.
 
 ```csharp
 annotator.Save(outputPath);
+Console.WriteLine($"Clean document saved to: {outputPath}");
 ```
 
-**คำอธิบาย**: เดอะ `Save` วิธีการเขียนการเปลี่ยนแปลงกลับไปยังระบบไฟล์ ตรวจสอบให้แน่ใจว่าคุณได้ระบุ `outputPath` สามารถเข้าถึงและเขียนได้
+### การประมวลผลหลายไฟล์เป็นชุด
+วนลูปผ่านไดเรกทอรีของ PDF และใช้ตรรกะการลบเดียวกันกับแต่ละไฟล์.
 
-### เคล็ดลับการแก้ไขปัญหา:
-- **ข้อผิดพลาดไม่พบไฟล์**: ตรวจสอบเส้นทางอีกครั้งเพื่อดูว่ามีการพิมพ์ผิดหรือไม่
-- **ข้อผิดพลาดการเข้าถึงถูกปฏิเสธ**: ตรวจสอบสิทธิ์บนไดเร็กทอรีทั้งอินพุต/เอาต์พุต
+```csharp
+using System;
+using System.Collections.Generic;
+using System.IO;
+using GroupDocs.Annotation;
+using GroupDocs.Annotation.Models.AnnotationModels;
 
-ด้วยขั้นตอนเหล่านี้ คุณสามารถลบคำอธิบายประกอบออกจากเอกสารได้อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation มาสำรวจการใช้งานจริงของฟีเจอร์นี้กัน
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            string inputFilePath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "ANNOTATED_FILE_NAME");
+            string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf");
 
-## การประยุกต์ใช้งานจริง
+            using (Annotator annotator = new Annotator(inputFilePath))
+            {
+                List<AnnotationBase> annotations = annotator.Get();
+                Console.WriteLine($"Found {annotations.Count} annotations to remove.");
 
-1. **การเตรียมเอกสารทางกฎหมาย**:ผู้ประกอบวิชาชีพกฎหมายจะผลิตเอกสารที่สะอาดเพื่อยื่นต่อศาลโดยไม่ต้องมีคำอธิบายประกอบหรือความคิดเห็นในร่างเอกสาร
-2. **การตีพิมพ์ผลงานทางวิชาการ**:ผู้เขียนและนักวิจัยจะล้างร่างที่มีคำอธิบายประกอบก่อนที่จะเผยแพร่เอกสารขั้นสุดท้าย เพื่อให้แน่ใจว่าจะมีเพียงเนื้อหาที่จำเป็นเท่านั้นที่มองเห็นได้
-3. **การเก็บถาวรรายงาน**:ธุรกิจจัดเก็บรายงานสรุปโดยไม่มีบันทึกอย่างเป็นทางการที่ยุ่งยาก
-4. **เอกสารประกอบการพัฒนาซอฟต์แวร์**:นักพัฒนาสามารถแบ่งปันเอกสารทางเทคนิคที่สมบูรณ์แบบกับลูกค้าหรือสมาชิกในทีมโดยปราศจากบันทึกหรือความคิดเห็น
-5. **การบูรณาการกับระบบเวิร์กโฟลว์**:บูรณาการการลบคำอธิบายประกอบเข้าสู่เวิร์กโฟลว์การประมวลผลเอกสารอัตโนมัติโดยใช้ GroupDocs.Annotation ร่วมกับกรอบงาน .NET อื่นๆ เพื่อการดำเนินงานที่ราบรื่น
+                if (annotations.Count > 0)
+                {
+                    annotator.Remove(annotations);
+                    Console.WriteLine("All annotations removed successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("No annotations found in the document.");
+                }
 
-## การพิจารณาประสิทธิภาพ
-- **เพิ่มประสิทธิภาพการใช้ทรัพยากร**โหลดเฉพาะเอกสารที่จำเป็นในสภาพแวดล้อมที่มีหน่วยความจำจำกัด
-- **การจัดการหน่วยความจำที่มีประสิทธิภาพ**: กำจัดทิ้ง `Annotator` วัตถุเพื่อปลดปล่อยทรัพยากรอย่างทันท่วงที
-- **การประมวลผลแบบแบตช์**:ประมวลผลเอกสารหลายฉบับเป็นชุดเพื่อลดค่าใช้จ่าย
+                annotator.Save(outputPath);
+                Console.WriteLine($"Clean document saved to: {outputPath}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error processing document: {ex.Message}");
+        }
+    }
+}
+```
 
-## บทสรุป
+## คำถามที่พบบ่อย
 
-บทช่วยสอนนี้จะแนะนำคุณเกี่ยวกับการใช้ GroupDocs.Annotation สำหรับ .NET เพื่อลบคำอธิบายประกอบออกจากเอกสารของคุณอย่างมีประสิทธิภาพ โดยทำตามขั้นตอนเหล่านี้ เพื่อให้แน่ใจว่าเอกสารของคุณพร้อมใช้งานตามจุดประสงค์โดยไม่มีสิ่งไม่จำเป็น
+**Q: โค้ดนี้สามารถลบประเภทคำอธิบาย PDF ทั้งหมดได้หรือไม่?**  
+A: ใช่—GroupDocs.Annotation รองรับทุกประเภทคำอธิบายมาตรฐาน รวมถึงไฮไลท์, โน้ตติดกาว, แสตมป์, การวาดฟรี, และการทำเครื่องหมายข้อความ.
 
-**ขั้นตอนต่อไป:**
-- ทดลองใช้ฟีเจอร์อื่นๆ ของ GroupDocs.Annotation
-- สำรวจความสามารถในการบูรณาการภายในระบบที่ใหญ่กว่า
+**Q: รองรับเวอร์ชัน PDF ใดบ้าง?**  
+A: ไลบรารีทำงานกับ PDF ตั้งแต่เวอร์ชัน 1.2 จนถึงสเปคล่าสุด 2.0 ครอบคลุมไฟล์เกือบทุกประเภทที่คุณจะเจอ.
 
-พร้อมที่จะทำความสะอาดเอกสารของคุณหรือยัง ลองนำโซลูชันนี้ไปใช้ในโครงการของคุณวันนี้!
+**Q: มีขีดจำกัดจำนวนคำอธิบายที่สามารถลบพร้อมกันได้หรือไม่?**  
+A: ไม่มีขีดจำกัดที่แน่นอน; ประสิทธิภาพสเกลตามขนาดเอกสารและหน่วยความจำของระบบ สำหรับไฟล์ใหญ่มาก ควรพิจารณาประมวลผลเป็นชิ้นย่อย.
 
-## ส่วนคำถามที่พบบ่อย
+**Q: สามารถยกเลิกการลบหลังบันทึกได้หรือไม่?**  
+A: หลังบันทึก คำอธิบายจะถูกลบอย่างถาวร ควรเก็บสำเนาสำรองของ PDF ดั้งเดิมหากอาจต้องการคำอธิบายในภายหลัง.
 
-1. **ฟังก์ชันหลักของ GroupDocs.Annotation .NET คืออะไร**
-   - เป็นไลบรารีที่แข็งแกร่งสำหรับการจัดการคำอธิบายประกอบในรูปแบบเอกสารต่าง ๆ รวมถึง PDF และรูปภาพ
-2. **ฉันสามารถใช้ GroupDocs.Annotation ร่วมกับ .NET framework อื่นๆ ได้หรือไม่**
-   - ใช่ มันรวมเข้ากับ ASP.NET, WPF และอื่นๆ ได้ดี
-3. **จำนวนคำอธิบายประกอบที่สามารถลบออกได้ในครั้งเดียวมีจำกัดหรือไม่**
-   - ไม่มีข้อจำกัดที่เฉพาะเจาะจง ประสิทธิภาพอาจแตกต่างกันขึ้นอยู่กับขนาดเอกสารและทรัพยากรระบบ
-4. **ฉันจะจัดการข้อผิดพลาดระหว่างการลบคำอธิบายประกอบได้อย่างไร**
-   - ใช้บล็อค try-catch เพื่อจัดการข้อยกเว้นอย่างสวยงาม
-5. **GroupDocs.Annotation สามารถใช้กับแอพพลิเคชันทั้งแบบออนไลน์และออฟไลน์ได้หรือไม่**
-   - ใช่ รองรับสภาพแวดล้อมการใช้งานที่หลากหลายตั้งแต่เดสก์ท็อปจนถึงโซลูชันบนเว็บ
+**Q: จะจัดการกับ PDF ที่ป้องกันด้วยรหัสผ่านอย่างไร?**  
+A: ส่งรหัสผ่านผ่าน `LoadOptions` เมื่อตั้งค่า `Annotator`: `new Annotator(path, new LoadOptions { Password = "pwd" })`.
 
-## ทรัพยากร
-- [เอกสารประกอบ](https://docs.groupdocs.com/annotation/net/)
-- [เอกสารอ้างอิง API](https://reference.groupdocs.com/annotation/net/)
+**Q: จะเกิดอะไรขึ้นหาก PDF อินพุตเสียหาย?**  
+A: API จะโยนข้อยกเว้น ให้ห่อการดำเนินการในบล็อก `try‑catch` เพื่อล็อกข้อผิดพลาดและดำเนินการต่อกับไฟล์อื่น ๆ.
+
+**Q: สามารถใช้โค้ดนี้ในแอป ASP.NET ได้หรือไม่?**  
+A: แน่นอน—GroupDocs.Annotation ปลอดภัยต่อเธรดและทำงานใน ASP.NET Core, MVC, และโครงการ Web API.
+
+**Q: จำเป็นต้องมีใบอนุญาตสำหรับการใช้งานเชิงพาณิชย์หรือไม่?**  
+A: ใช่—ใบอนุญาตผลิตภัณฑ์จะลบลายน้ำและเปิดใช้งานฟังก์ชันเต็มรูปแบบ มีใบอนุญาตทดลองให้ใช้ประเมินผล.
+
+**Q: จะตรวจสอบว่าคำอธิบายทั้งหมดถูกลบแล้วอย่างไร?**  
+A: หลังเรียก `Remove` ให้เรียก `annotator.Get()` อีกครั้ง; ควรได้คอลเลกชันว่าง.
+
+**Q: การลบคำอธิบายส่งผลต่อการจัดวาง PDF หรือไม่?**  
+A: ไม่—ข้อความ, รูปภาพ, และโครงสร้างหน้า permanecen ไม่เปลี่ยนแปลง; เพียงชั้นคำอธิบายเท่านั้นที่ถูกลบ.
+
+## แหล่งข้อมูลเพิ่มเติม
+
+- [เว็บไซต์ GroupDocs](https://releases.groupdocs.com/annotation/net/)
+- [ลิงก์นี้](https://purchase.groupdocs.com/temporary-license/)
+- [ร้านค้า GroupDocs](https://purchase.groupdocs.com/buy)
+- [เอกสาร GroupDocs.Annotation](https://docs.groupdocs.com/annotation/net/)
+- [คู่มืออ้างอิง API](https://reference.groupdocs.com/annotation/net/)
 - [ดาวน์โหลด GroupDocs.Annotation สำหรับ .NET](https://releases.groupdocs.com/annotation/net/)
+- [ฟอรัมสนับสนุนชุมชน](https://forum.groupdocs.com/c/annotation/10)
+- [โครงการตัวอย่างและตัวอย่างโค้ด](https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET)
+
+---
+
+**อัปเดตล่าสุด:** 2026-06-01  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.4.0 for .NET  
+**ผู้เขียน:** GroupDocs
+
+```csharp
+// For batch processing, consider this pattern:
+public static void ProcessDocumentBatch(List<string> filePaths)
+{
+    foreach (string filePath in filePaths)
+    {
+        using (Annotator annotator = new Annotator(filePath))
+        {
+            // Process each file individually
+            var annotations = annotator.Get();
+            if (annotations.Count > 0)
+            {
+                annotator.Remove(annotations);
+                annotator.Save(GetOutputPath(filePath));
+            }
+        }
+        // Force garbage collection periodically for large batches
+        if (filePaths.IndexOf(filePath) % 20 == 0)
+        {
+            GC.Collect();
+        }
+    }
+}
+```
+
+```csharp
+Parallel.ForEach(filePaths, filePath =>
+{
+    using (Annotator annotator = new Annotator(filePath))
+    {
+        var annotations = annotator.Get();
+        if (annotations.Count > 0)
+        {
+            annotator.Remove(annotations);
+            annotator.Save(GetOutputPath(filePath));
+        }
+    }
+});
+```
+
+```csharp
+// Remove only highlight annotations
+var annotations = annotator.Get();
+var highlightAnnotations = annotations.Where(a => a.Type == AnnotationType.Highlight).ToList();
+annotator.Remove(highlightAnnotations);
+```
+
+```csharp
+string[] pdfFiles = Directory.GetFiles(@"C:\AnnotatedPDFs", "*.pdf");
+foreach (string file in pdfFiles)
+{
+    ProcessSingleFile(file);
+}
+```
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [PDF Annotation .NET Tutorial - Complete GroupDocs Guide](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
+- [Remove Annotation Replies .NET - Complete GroupDocs Tutorial](/annotation/net/reply-management/remove-replies-groupdocs-annotation-net-guide/)
+- [GroupDocs Annotation .NET Tutorial - Complete Guide for Document Management](/annotation/net/annotation-management/)

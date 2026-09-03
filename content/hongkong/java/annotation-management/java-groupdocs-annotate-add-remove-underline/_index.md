@@ -1,72 +1,73 @@
 ---
 categories:
 - Java Development
-date: '2025-12-21'
-description: 學習如何使用 GroupDocs.Annotation 在 Java 中建立乾淨的 PDF 檔案並對 PDF 進行註釋，提供完整的程式碼範例與故障排除技巧。
+date: '2026-03-24'
+description: 學習如何在 Java 中使用 GroupDocs.Annotation 建立乾淨的 PDF 檔案、管理 PDF 記憶體，以及為 PDF 加註，並提供完整程式碼範例與故障排除技巧。
 keywords: java document annotation library, groupdocs annotation tutorial, add underline
   annotation java, java pdf annotation, how to annotate pdf documents in java
-lastmod: '2025-12-21'
+lastmod: '2026-03-24'
 linktitle: Java Document Annotation with GroupDocs
 tags:
 - groupdocs
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 使用 Java 建立乾淨 PDF - 使用 GroupDocs 添加底線註釋
+title: 使用 GroupDocs 在 Java 中建立乾淨的 PDF：底線註解
 type: docs
 url: /zh-hant/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1
 ---
 
-# 建立 Clean PDF Java：使用 GroupDocs 的底線註解
+# 建立乾淨的 PDF（Java）檔案：使用 GroupDocs 的底線註解
 
-## 介紹
+如果您需要 **create clean PDF Java** 檔案並加入協作註解，您來對地方了。 在 Java 應用程式中為文件管理與協作而苦惱嗎？您並不孤單。許多開發者都面臨在不同檔案格式間可靠實作強大文件註解功能的挑戰。
 
-在 Java 應用程式中處理文件管理與協作時感到困擾嗎？你並不孤單。許多開發者都面臨在不同檔案格式間實作穩定文件註解功能的挑戰。
+在本指南中，您將 **create clean PDF Java** 檔案，並學習如何使用 GroupDocs.Annotation **annotate PDF in Java**。 完成本教學後，您將清楚知道如何加入帶有評論的底線註解、移除既有註解，並將這些功能無縫整合到您的專案中。
 
-在本指南中，你將 **建立 clean PDF Java** 檔案，並學習如何使用 GroupDocs.Annotation **在 Java 中註解 PDF**。完成本教學後，你將清楚知道如何加入帶有評論的底線註解、移除既有註解，並將這些功能無縫整合到專案中。
-
-**本指南將讓你掌握的內容：**
+**本指南您將掌握的內容：**
 - 以正確方式在 Java 專案中設定 GroupDocs.Annotation  
 - 使用自訂評論與樣式加入底線註解  
-- 移除所有註解以產生 clean document 版本  
-- 疑難排解開發者常見問題  
+- 移除所有註解以產生乾淨的文件版本  
+- 排除開發者常見問題的除錯技巧  
 - 為正式環境優化效能  
 
-無論你是建置文件審閱系統、教育平台，或是協作編輯工具，本教學都提供實用、經過測試的程式碼範例。
+無論您是在建置文件審閱系統、教育平台，或是協作編輯工具，本教學都提供實用且已測試的程式碼範例。
 
-## 快速回答
-- **如何加入底線註解？** 使用 `UnderlineAnnotation` 並呼叫 `annotator.add()` 後儲存文件。  
+## Quick Answers
+- **如何加入底線註解？** 使用 `UnderlineAnnotation` 並呼叫 `annotator.add()`，之後儲存文件。  
 - **如何建立 clean PDF Java 檔案？** 載入已註解的檔案，在 `SaveOptions` 中設定 `AnnotationType.NONE`，再儲存為新副本。  
 - **需要哪些函式庫？** GroupDocs.Annotation v25.2（或更新版本）以及其 Maven 套件庫。  
 - **正式環境需要授權嗎？** 需要——套用有效的 GroupDocs 授權以避免浮水印。  
-- **能否有效率地處理多個文件？** 在每個檔案使用 try‑with‑resources 包住 `Annotator`，處理完畢後釋放資源。
+- **能有效率地處理多個文件嗎？** 在每個 `Annotator` 使用 try‑with‑resources 包裝，處理完畢後即釋放資源。
 
-## 如何建立 clean PDF Java 檔案
-建立 clean PDF Java 檔案即是產生一個 **不含任何註解** 的文件版本，同時保留原始內容。這在最終發佈、歸檔，或在審閱流程結束後需要分享「乾淨」副本時非常有用。
+## How to create clean PDF Java files
+建立 clean PDF Java 檔案即是產生一個 **不含任何註解** 的文件版本，同時保留原始內容。此作法適用於最終發佈、歸檔，或在審閱流程結束後需要分享「乾淨」副本的情境。
 
-GroupDocs.Annotation 讓此操作變得簡單：載入已註解的檔案、將 `SaveOptions` 設定為排除所有註解類型，然後儲存結果。相關步驟稍後會在 **移除註解** 章節說明。
+GroupDocs.Annotation 讓此流程變得簡單：載入已註解的檔案、將 `SaveOptions` 設定為排除所有註解類型，然後儲存結果。相關步驟稍後於 **Removing Annotations** 章節說明。
 
-## 如何在 Java 中使用 GroupDocs 註解 PDF
-GroupDocs.Annotation 提供功能豐富的 API，讓你 **在 Java 中註解 PDF**。它支援多種註解類型，包括高亮、印章與底線。本教學聚焦於底線註解，因為它常用於強調文字，同時支援串接評論。
+## Why create clean PDF Java files?
+乾淨的版本會移除審閱者的標記、評論與標示，讓文件看起來更正式，適合交給客戶、監管機構或公開發佈。它同時可減少檔案大小，避免內部備註意外外洩——這在法律與合規工作流程中尤為重要。
 
-## 前置條件與環境設定
+## How to annotate PDF in Java using GroupDocs
+GroupDocs.Annotation 提供功能豐富的 API 讓您 **annotate PDF in Java**。它支援多種註解類型，包括高亮、印章與底線。本文聚焦於底線註解，因為它常用於強調文字，同時可加入串接式評論。
 
-### 開始前你需要的項目
+## Prerequisites and Environment Setup
+
+### What You'll Need Before Starting
 
 **開發環境需求：**
 - Java Development Kit (JDK) 8 或以上（建議 JDK 11+）  
 - Maven 3.6+ 或 Gradle 6.0+ 以管理相依性  
-- IntelliJ IDEA、Eclipse 或配備 Java 擴充功能的 VS Code 等 IDE  
+- IntelliJ IDEA、Eclipse 或具 Java 擴充功能的 VS Code 等 IDE  
 - 至少 2 GB 可用記憶體（文件處理可能相當吃記憶體）
 
 **知識前置條件：**
-你應熟悉基本的 Java 概念——物件初始化、方法呼叫與 Maven 相依性。若有使用第三方函式庫的經驗，會更快上手。
+您應熟悉基本的 Java 概念——物件初始化、方法呼叫與 Maven 相依性。若有使用過第三方函式庫的經驗，將能更快上手。
 
 **測試文件：**
-準備幾份範例 PDF。文字型 PDF 效果最佳；掃描圖像可能需要先做 OCR 才能註解。
+準備幾個範例 PDF。文字型 PDF 效果最佳；掃描圖像可能需要先做 OCR 才能加入註解。
 
-### Maven 設定：將 GroupDocs 加入專案
+### Maven Setup: Getting GroupDocs Into Your Project
 
 以下說明如何正確設定 Maven 專案（許多開發者第一次嘗試時常卡關）：
 
@@ -87,30 +88,30 @@ GroupDocs.Annotation 提供功能豐富的 API，讓你 **在 Java 中註解 PDF
 </dependencies>
 ```
 
-**重要提示：** 版本 25.2 為撰寫本文時的最新穩定版。請定期檢查 GroupDocs 套件庫，以取得更新的錯誤修正與效能改進。
+**重要提示：** 版本 25.2 為本文撰寫時的最新穩定版。請定期檢查 GroupDocs 套件庫，以取得包含錯誤修正與效能提升的更新版本。
 
-### 授權設定（千萬別跳過）
+### Licensing Setup (Don't Skip This)
 
 **開發/測試用：**  
-從 GroupDocs 官方網站下載免費試用版。試用版提供全部功能，但會在處理的文件上加上浮水印。
+從 GroupDocs 官方網站下載免費試用版。試用版具備全部功能，但會在處理的文件上加上浮水印。
 
 **正式環境用：**  
-購買授權並在應用程式啟動時套用。未套用有效授權的正式建置會受到功能限制。
+購買授權並於應用程式啟動時套用。若未使用有效授權，正式環境的建置將受到限制。
 
-## 實作指南：加入底線註解
+## Implementation Guide: Adding Underline Annotations
 
-### 了解註解工作流程
+### Understanding the Annotation Workflow
 
-在撰寫程式碼之前，先了解 **在 Java 中註解 PDF** 時的四步驟流程：
+在撰寫程式碼之前，先了解 **annotate PDF in Java** 時的四步工作流程：
 
 1. **文件載入** – `Annotator` 讀取檔案至記憶體。  
-2. **註解建立** – 定義位置、樣式、評論等屬性。  
+2. **註解建立** – 定義位置、樣式與評論等屬性。  
 3. **註解套用** – 函式庫將註解注入 PDF 結構。  
 4. **文件儲存** – 將修改後的檔案寫回磁碟，必要時保留原始檔。
 
-此流程為非破壞性操作，除非你自行覆寫原檔，否則來源檔不會被改動。
+此流程為非破壞性操作，除非您自行覆寫，否則原始檔不會被改動。
 
-### 步驟 1：初始化 Annotator 並載入文件
+### Step 1: Initialize the Annotator and Load Your Document
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -119,9 +120,9 @@ import com.groupdocs.annotation.Annotator;
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**小技巧：** 開發階段使用絕對路徑可避免「找不到檔案」錯誤。正式環境建議從 classpath 或雲端儲存桶載入資源。
+**小技巧：** 開發階段使用絕對路徑可避免「找不到檔案」的錯誤。正式環境建議從 classpath 或雲端儲存桶載入資源。
 
-### 步驟 2：建立評論與回覆（協作部分）
+### Step 2: Creating Comments and Replies (The Collaborative Part)
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -142,9 +143,9 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**實務應用：** 評審者可針對特定條款加入串接回覆，讓討論緊扣於該註解。
+**實務應用：** 審閱者可針對特定條款加入串接式回覆，讓討論緊扣該註解。
 
-### 步驟 3：定義註解座標（確保位置正確）
+### Step 3: Defining Annotation Coordinates (Getting the Position Right)
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -164,9 +165,9 @@ points.add(point4);
 **座標系統說明：**  
 - 點 1 與點 2 定義底線的上緣。  
 - 點 3 與點 4 定義底線的下緣。  
-- Y 軸差距（730 與 650）決定線條粗細。
+- Y 軸差距（730 vs 650）決定線條粗細。
 
-### 步驟 4：建立並設定底線註解
+### Step 4: Creating and Configuring the Underline Annotation
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.UnderlineAnnotation;
@@ -185,10 +186,10 @@ annotator.add(underline);
 
 **顏色與透明度小技巧：**  
 - `FontColor` 使用 ARGB；`65535`（0x00FFFF）會產生亮黃色。  
-- 紅色使用 `16711680`（0xFF0000），藍色使用 `255`（0x0000FF）。  
-- 透明度介於 0.5 至 0.8 之間，可在不遮蔽文字的前提下提供良好可讀性。
+- 紅色使用 `16711680`（0xFF0000）；藍色使用 `255`（0x0000FF）。  
+- 透明度介於 0.5 至 0.8 之間可在不遮蔽文字的前提下提供良好可讀性。
 
-### 步驟 5：儲存已註解的文件
+### Step 5: Saving Your Annotated Document
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/output.pdf";
@@ -196,20 +197,20 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**記憶體管理：** 呼叫 `dispose()` 會釋放原生資源，防止記憶體洩漏——在批次處理大量檔案時尤為重要。
+**記憶體管理：** 呼叫 `dispose()` 可釋放原生資源，防止記憶體泄漏——在批次處理大量檔案時尤為重要。
 
-## 移除註解：建立 Clean Document 版本
+## Removing Annotations: Creating Clean Document Versions
 
-有時你需要一個 **不含任何註解** 的 PDF 版本，例如交付最終批准的合約。GroupDocs 讓此操作相當簡單。
+有時您需要一個 **不含任何註解** 的 PDF 版本，例如交付最終批准的合約。GroupDocs 讓此操作相當簡易。
 
-### 了解註解移除選項
+### Understanding Annotation Removal Options
 
-你可以：
+您可以：
 - 移除 **全部** 註解（最常見）  
 - 移除特定類型（例如僅移除高亮）  
 - 依作者或頁碼移除註解  
 
-### 步驟式註解移除
+### Step‑by‑Step Annotation Removal
 
 **步驟 1：載入先前已註解的文件**
 
@@ -217,7 +218,7 @@ annotator.dispose();
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**步驟 2：設定 Clean 輸出的儲存選項**
+**步驟 2：設定 Clean 輸出的 Save Options**
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -227,7 +228,7 @@ SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationTypes(AnnotationType.NONE);
 ```
 
-**步驟 3：儲存 Clean 版本**
+**步驟 3：儲存乾淨版本**
 
 ```java
 String noneAnnotationPath = Paths.get(outputPath).resolveSibling("none-annotation.pdf").toString();
@@ -237,9 +238,9 @@ annotator.dispose();
 
 如此即可產生 **clean PDF Java** 檔案，內部不含任何註解物件，適合最終發佈使用。
 
-## 常見問題與解決方案
+## Common Issues and Solutions
 
-### 問題 1：「找不到文件」錯誤
+### Problem 1: “Document not found” Errors
 
 ```java
 File inputFile = new File("path/to/your/document.pdf");
@@ -253,7 +254,7 @@ if (!inputFile.canRead()) {
 Annotator annotator = new Annotator(inputFile.getAbsolutePath());
 ```
 
-### 問題 2：註解出現在錯誤位置
+### Problem 2: Annotations Appearing in Wrong Locations
 
 ```java
 // Test with a simple rectangle in the top‑left corner
@@ -263,7 +264,7 @@ Point point3 = new Point(10, 30);   // Bottom‑left
 Point point4 = new Point(100, 30);  // Bottom‑right
 ```
 
-### 問題 3：大型文件的記憶體問題
+### Problem 3: Memory Issues with Large Documents
 
 ```java
 // Increase JVM heap size when launching the app, e.g., -Xmx2g
@@ -273,7 +274,7 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 }
 ```
 
-### 問題 4：正式環境的授權問題
+### Problem 4: Licensing Issues in Production
 
 ```java
 try {
@@ -286,9 +287,9 @@ try {
 }
 ```
 
-## 正式環境效能最佳實踐
+## Performance Best Practices for Production Applications
 
-### 記憶體管理策略
+### Memory Management Strategies
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -310,46 +311,56 @@ for (String docPath : documentPaths) {
 }
 ```
 
-### 多執行緒考量
+### Threading Considerations
 
-GroupDocs.Annotation 預設 **非執行緒安全**。若你的應用程式同時處理多筆文件：
+GroupDocs.Annotation 預設 **非執行緒安全**。若您的應用程式同時處理多筆文件，請遵守以下原則：
 
-- **千萬不要**在多個執行緒間共享同一個 `Annotator` 實例。  
+- **絕不要**在多個執行緒間共享同一個 `Annotator` 實例。  
 - **同步**檔案存取或使用鎖定機制。  
 - 若需高吞吐量，可考慮建立 **Annotator 物件池**。
 
-### 快取策略
+### Caching Strategies
 
 - 快取常用的註解範本。  
-- 重複使用 `Point` 集合以減少座標建立開銷。  
-- 若經常對同一基礎文件進行註解，可將 **範本 PDF** 常駐記憶體。
+- 針對常見座標集合重複使用 `Point` 集合。  
+- 若頻繁對同一基礎文件加註解，可將 **範本 PDF** 常駐於記憶體。
 
-## 真實案例與應用場景
+## Java PDF Memory Management Tips
+在處理大型 PDF 或大量批次檔案時，記憶體使用效率相當重要。以下提供實務建議：
 
-### 文件審閱系統
+- 為每個 `Annotator` 使用 try‑with‑resources，確保即時釋放。  
+- 只在必要時調高 JVM 堆積大小（`-Xmx`），並使用效能分析工具監控使用情形。  
+- 盡可能順序處理文件，處理完畢即釋放記憶體。  
+- 避免多次載入相同 PDF；若需重複讀取，請重用同一個 InputStream。
 
-- **法律審查：** 底線標記合約條款並加入風險評論。  
-- **合規稽核：** 高亮財務報表中問題段落。  
-- **學術同行評審：** 教授底線需要說明的段落。
+落實上述做法，可讓您的應用程式保持回應速度，並防止在高負載的註解工作中發生記憶體不足的崩潰。
 
-### 教育平台
+## Real‑World Applications and Use Cases
+
+### Document Review Systems
+
+- **法律審查：** 底線標示合約條款並加入風險評論。  
+- **合規稽核：** 在財務報表中高亮問題段落。  
+- **學術同行評審：** 教授底線標示需澄清的段落。
+
+### Educational Platforms
 
 - **學生註解工具：** 讓學習者在電子書中底線關鍵概念。  
-- **教師回饋：** 直接在提交的作業上提供內嵌評論。
+- **教師回饋：** 直接在提交的作業上提供行內評論。
 
-### 品質保證工作流程
+### Quality Assurance Workflows
 
-- **技術文件審查：** 工程師底線需更新的章節。  
+- **技術文件審查：** 工程師底線需要更新的章節。  
 - **標準作業程序：** 安全主管標示關鍵步驟。
 
-### 內容管理系統
+### Content Management Systems
 
-- **編輯工作流：** 編輯者底線需要事實查證的文字。  
-- **版本控制：** 追蹤不同文件修訂間的註解歷史。
+- **編輯工作流程：** 編輯者底線需要事實查證的文字。  
+- **版本控制：** 追蹤文件修訂過程中的註解歷史。
 
-## 專業實作進階技巧
+## Advanced Tips for Professional Implementation
 
-### 自訂註解樣式
+### Custom Annotation Styles
 
 ```java
 UnderlineAnnotation underline = new UnderlineAnnotation();
@@ -359,7 +370,7 @@ underline.setFontSize(12);             // Consistent sizing
 underline.setMessage("URGENT REVIEW REQUIRED");
 ```
 
-### 註解中繼資料以便追蹤
+### Annotation Metadata for Tracking
 
 ```java
 underline.setCreatedBy("john.doe@company.com");
@@ -367,7 +378,7 @@ underline.setCreatedOn(Calendar.getInstance().getTime());
 underline.setMessage("Legal review required - Contract clause 4.2");
 ```
 
-### 與使用者管理系統整合
+### Integration with User Management Systems
 
 ```java
 // Assume you have a method that returns the current authenticated user
@@ -381,22 +392,22 @@ underline.setFontColor(getRoleColor(userRole));
 underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentText));
 ```
 
-## 正式環境問題排除
+## Troubleshooting Production Issues
 
-### 效能監控
+### Performance Monitoring
 
-在正式環境留意以下指標：
-- **Heap 使用量** – 確保呼叫 `dispose()`。  
-- **每份文件的處理時間** – 在 `annotator.save()` 前後記錄時間戳。  
-- **錯誤率** – 捕捉例外並分類。
+在正式環境中留意以下指標：
+- **Heap 使用率** – 確保已呼叫 `dispose()`。  
+- **每份文件的處理時間** – 在 `annotator.save()` 前後記錄時間戳記。  
+- **錯誤率** – 捕捉例外並分類統計。
 
-### 常見正式環境陷阱
+### Common Production Gotchas
 
 - **檔案鎖定** – 確保上傳的檔案在註解前已關閉。  
-- **同時編輯** – 實作樂觀鎖或版本檢查。  
+- **同時編輯** – 實作樂觀鎖或版本檢查機制。  
 - **大型檔案（> 50 MB）** – 增加 JVM 超時設定，並考慮使用串流 API。
 
-### 錯誤處理最佳實踐
+### Error Handling Best Practices
 
 ```java
 try (Annotator annotator = new Annotator(documentPath)) {
@@ -411,38 +422,36 @@ try (Annotator annotator = new Annotator(documentPath)) {
 }
 ```
 
-## 結論
+## Conclusion
 
-現在你已掌握如何使用 GroupDocs.Annotation **建立 clean PDF Java** 檔案，並 **在 Java 中註解 PDF** 以底線註解為例。請記得：
+您現在已掌握如何使用 GroupDocs.Annotation **create clean PDF Java** 檔案與 **annotate PDF in Java**，並加入底線註解。請記得：
 
-- 以 try‑with‑resources 或明確的 `dispose()` 來管理資源。  
-- 盡早驗證座標，避免底線位置錯位。  
-- 為正式環境實作完整的錯誤處理機制，以提升穩定性。  
-- 利用角色式樣式與中繼資料，讓工作流程更貼合需求。
+- 使用 try‑with‑resources 或明確的 `dispose()` 來管理資源。  
+- 盡早驗證座標，以免出現錯位的底線。  
+- 為正式環境實作健全的錯誤處理機制。  
+- 利用角色式樣式與註解中繼資料，配合您的工作流程。
 
-接下來的步驟？嘗試加入其他註解類型——高亮、印章或文字取代，打造功能完整的文件審閱解決方案。
+接下來的步驟是？嘗試加入其他註解類型——高亮、印章或文字取代，打造完整的文件審閱解決方案。
 
-## 常見問答
+## Frequently Asked Questions
 
-**Q: 如何在一次操作中註解多個文字區域？**  
+**Q: 如何在一次操作中為多個文字區域加入註解？**  
 A: 建立多個 `UnderlineAnnotation` 物件，分別設定不同座標，然後依序使用 `annotator.add()` 加入。
 
-**Q: 能否在 PDF 中的圖片上加入註解？**  
-A: 能。使用相同的座標系統，只要確保座標點位於圖片範圍內即可。
+**Q: 能在 PDF 內的圖片上加入註解嗎？**  
+A: 可以。使用相同的座標系統，只要確保座標點位於圖片範圍內即可。
 
 **Q: 除了 PDF，GroupDocs.Annotation 支援哪些檔案格式？**  
 A: 支援 Word（DOC/DOCX）、Excel（XLS/XLSX）、PowerPoint（PPT/PPTX）以及 JPEG、PNG、TIFF 等影像格式。
 
-**Q: 如何處理超大型文件而不致記憶體不足？**  
-A: 一次只處理一份文件，調整 JVM 堆疊大小（`-Xmx`），並確保及時呼叫 `dispose()` 釋放 `Annotator`。
+**Q: 如何在處理非常大的文件時避免記憶體耗盡？**  
+A: 一次只處理一份文件，必要時提升 JVM 堆積大小（`-Xmx`），並確保即時呼叫 `dispose()` 釋放 `Annotator` 實例。
 
-**Q: 能否從文件中擷取已存在的註解？**  
-A: 能。使用 `annotator.get()` 取得全部註解，然後依類型、作者或頁碼進行篩選。
+**Q: 能否從文件中擷取既有的註解？**  
+A: 能。使用 `annotator.get()` 取得所有註解，然後依類型、作者或頁碼等條件過濾。
 
 ---
 
-**最後更新日期：** 2025-12-21  
+**最後更新日期：** 2026-03-24  
 **測試環境：** GroupDocs.Annotation 25.2  
-**作者：** GroupDocs  
-
----
+**作者：** GroupDocs

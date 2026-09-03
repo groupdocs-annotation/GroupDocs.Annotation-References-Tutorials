@@ -20,17 +20,7 @@ url: /vi/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
- GroupDocs"
-
-Make sure to keep the markdown separators.
-
-Now produce final output with all translations.
-
-Check that we didn't translate any code block placeholders. Keep them unchanged.
-
-Also ensure we didn't translate URLs.
-
-Now produce final answer.# Java PDF Arrow Annotations - Hướng Dẫn Đầy Đủ & Thực Hành Tốt Nhất (2025)
+# Java PDF Arrow Annotations - Hướng Dẫn Đầy Đủ & Thực Hành Tốt Nhất (2025)
 
 ## Giới thiệu
 

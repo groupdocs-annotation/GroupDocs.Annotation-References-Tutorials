@@ -1,36 +1,59 @@
 ---
-"date": "2025-05-06"
-"description": "Leer hoe je tekstdoorhalingsannotaties toevoegt in Java met GroupDocs.Annotation. Volg deze stapsgewijze handleiding voor naadloze documentannotaties."
-"title": "Handleiding voor Java-tekstdoorhalingsannotatie met behulp van GroupDocs.Annotation"
-"url": "/nl/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+categories:
+- Java Development
+date: '2026-03-30'
+description: Leer hoe u een doorstreepte annotatie in Java kunt toevoegen met GroupDocs.Annotation.
+  Stapsgewijze handleiding met codevoorbeelden, tips voor probleemoplossing en best
+  practices voor documentmarkering.
+keywords: Java strikeout annotation tutorial, GroupDocs annotation Java guide, text
+  markup Java, document annotation Java, how to add strikeout annotation java
+lastmod: '2026-03-30'
+linktitle: Add Strikeout Annotation Java Tutorial
+tags:
+- java-annotations
+- groupdocs
+- document-processing
+- pdf-manipulation
+title: Voeg doorstreepte annotatie toe Java-tutorial met GroupDocs
 type: docs
-"weight": 1
+url: /nl/java/text-annotations/java-text-strikeout-annotation-groupdocs/
+weight: 1
 ---
 
-# Java-tekstdoorhalingsannotatie met GroupDocs.Annotation
+# Voeg doorstreepte annotatie Java toe - Complete GroupDocs-gids
 
-In de digitale wereld van vandaag vereisen documenten vaak annotaties om belangrijke informatie te markeren of wijzigingen aan te geven. Of u nu werkt aan samenwerkingsprojecten of documenten moet controleren en becommentariëren, de mogelijkheid om tekst door te strepen kan van onschatbare waarde zijn. Deze tutorial begeleidt u bij het toevoegen van een tekstdoorhalingsannotatie met behulp van GroupDocs.Annotation voor Java, een krachtige bibliotheek voor documentbewerking.
+Heb je ooit naar een document gekeken en gedacht: “Ik moet deze tekst doorstrepen, maar ik kan niet zomaar een rode pen pakken”? Je bent niet de enige. Of je nu een documentreview‑systeem bouwt, een bewerkingsworkflow maakt, of gewoon tekst moet markeren voor verwijdering in je Java‑applicatie, **add strikeout annotation java** is een essentiële vaardigheid. In deze tutorial lopen we alles door wat je moet weten om tekstdoorstrepingsfunctionaliteit te implementeren die echt in productie werkt.
 
-**Wat je leert:**
-- Hoe u uw omgeving instelt met GroupDocs.Annotation.
-- Stapsgewijze instructies voor het implementeren van een doorhalingsannotatie in Java.
-- Praktische toepassingen van deze functie in realistische scenario's.
-- Prestatietips en aanbevolen werkwijzen bij het gebruik van GroupDocs.Annotation.
+## Snelle antwoorden
+- **Welke bibliotheek ondersteunt doorstreepte annotaties in Java?** GroupDocs.Annotation for Java  
+- **Welk primair trefwoord moet ik targeten voor SEO?** add strikeout annotation java  
+- **Heb ik een licentie nodig om de voorbeeldcode uit te voeren?** Een gratis proefversie of tijdelijke licentie werkt voor ontwikkeling; een volledige licentie is vereist voor productie.  
+- **Kan ik dit gebruiken met PDF-, DOCX- en PPTX‑bestanden?** Ja – GroupDocs.Annotation ondersteunt alle belangrijke documentformaten.  
+- **Welke Java‑versie is vereist?** JDK 8 of hoger (JDK 11+ aanbevolen).
 
-## Vereisten
+## Wat is add strikeout annotation java?
+Een doorstreepte annotatie trekt een lijn door geselecteerde tekst, waardoor visueel wordt aangegeven dat de inhoud moet worden verwijderd of genegeerd. Het is een niet‑destructieve manier om verwijderingen voor te stellen terwijl de oorspronkelijke tekst intact blijft voor audit‑trails of collaboratieve beoordelingen.
 
-Voordat u met de implementatie begint, moet u ervoor zorgen dat u over het volgende beschikt:
-- **Java-ontwikkelingskit (JDK):** Voor compatibiliteit met GroupDocs.Annotation is versie 8 of hoger vereist.
-- **GroupDocs.Annotatiebibliotheek:** Neem deze bibliotheek op in uw project. De versie die hier wordt gebruikt is `25.2`.
-- **Geïntegreerde ontwikkelomgeving (IDE):** Zoals IntelliJ IDEA, Eclipse of NetBeans.
+## Waarom doorstreepte annotaties gebruiken in Java‑applicaties?
+- **Documentreview‑workflows** – reviewers kunnen ongewenste tekst markeren zonder de bron te wijzigen.  
+- **Collaboratieve bewerking** – teamleden zien voorgestelde verwijderingen direct.  
+- **Juridisch en compliance** – houd een duidelijke audit‑trail van wijzigingen bij.  
+- **Contentmigratie** – markeer verouderde secties voordat je inhoud tussen systemen verplaatst.  
+
+## Vereisten en omgeving configuratie
+Je hebt het volgende nodig voordat je in de code duikt:
+
+- **Java Development Kit (JDK)** 8+ (JDK 11+ aanbevolen)  
+- **Maven of Gradle** voor afhankelijkheidsbeheer  
+- **IDE** – IntelliJ IDEA, Eclipse of VS Code met Java‑extensies  
+- **GroupDocs.Annotation‑bibliotheek** – we gebruiken versie 25.2 in de voorbeelden  
+
+*Handig om te hebben:* basiskennis van Java‑annotaties en PDF‑verwerking.
 
 ## GroupDocs.Annotation instellen voor Java
 
-Volg deze stappen om GroupDocs.Annotation voor Java te gebruiken:
-
-### Maven-configuratie
-
-Voeg de volgende configuratie toe aan uw `pom.xml` bestand om GroupDocs.Annotation in uw project op te nemen:
+### Maven‑configuratie die echt werkt
+Voeg de repository en afhankelijkheid toe aan je `pom.xml` precies zoals weergegeven:
 
 ```xml
 <repositories>
@@ -50,149 +73,224 @@ Voeg de volgende configuratie toe aan uw `pom.xml` bestand om GroupDocs.Annotati
 </dependencies>
 ```
 
-### Licentieverwerving
+### Je licentie regelen
+GroupDocs biedt verschillende licentieopties:
 
-GroupDocs biedt een gratis proefversie, tijdelijke licenties voor evaluatiedoeleinden of u kunt een licentie kopen voor voortgezet gebruik. Bezoek de [aankooppagina](https://purchase.groupdocs.com/buy) om uw mogelijkheden te verkennen.
+- **Gratis proefversie** – perfect voor testen (geen creditcard vereist)  
+- **Tijdelijke licentie** – ideaal voor ontwikkeling en staging  
+- **Volledige licentie** – vereist voor productie; zie de [purchase page](https://purchase.groupdocs.com/buy)
 
-### Basisinitialisatie en -installatie
+> **Pro tip:** Begin met de gratis proefversie om de API te verkennen, schakel vervolgens over op een tijdelijke licentie wanneer je klaar bent om een real‑world functie te bouwen.
 
-Nadat u Maven-afhankelijkheden hebt ingesteld, initialiseert u GroupDocs.Annotation in uw Java-toepassing:
+### Snelle sanity‑check configuratie
+Voer dit minimale programma uit om te verifiëren dat de bibliotheek correct wordt geladen:
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
 public class DocumentSetup {
     public static void main(String[] args) {
-        Annotator annotator = new Annotator("path/to/your/document.pdf");
-        // Ga door met annotatietaken...
+        try {
+            Annotator annotator = new Annotator("path/to/your/document.pdf");
+            System.out.println("GroupDocs.Annotation is ready to use!");
+            annotator.dispose();
+        } catch (Exception e) {
+            System.out.println("Setup issue: " + e.getMessage());
+        }
     }
 }
 ```
 
-## Implementatiegids
+Als de console het succesbericht zonder fouten afdrukt, ben je klaar om doorstreepte annotaties toe te voegen.
 
-In dit gedeelte verdiepen we ons in het implementeren van een functie voor het doorhalen van tekst met behulp van GroupDocs.Annotation.
+## Hoe add strikeout annotation java toe te voegen
 
-### Tekst doorhalen toevoegen
+Hieronder vind je een volledige, productie‑klare implementatie, opgesplitst in duidelijke stappen.
 
-#### Overzicht
-Het toevoegen van een tekstdoorhalingsannotatie omvat het definiëren van het te doorhalen gebied en het configureren van de eigenschappen ervan, zoals kleur, dekking en paginanummer. Deze functie is vooral handig om wijzigingen of fouten in documenten aan te geven.
+### Stap 1 – Initialiseer de Annotator
+Maak een `Annotator`‑instantie die naar het bron‑document wijst:
 
-#### Stapsgewijze implementatie
-1. **Initialiseer Annotator**
-   Maak een exemplaar van `Annotator` met het pad van uw document:
+```java
+Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
+```
 
-   ```java
-   Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
-   ```
+> **Waarom dit belangrijk is:** Het gebruik van een absoluut of correct opgeloste relatieve pad voorkomt “file not found”‑exceptions.
 
-2. **Reacties voor annotaties maken (optioneel)**
-   Voeg opmerkingen of reacties toe aan de annotaties, die zichtbaar zijn tijdens het beoordelen van het document:
+### Stap 2 – (Optioneel) Bereid reactie‑commentaren voor
+Het toevoegen van reacties maakt de annotatie collaboratief:
 
-   ```java
-   Reply reply1 = new Reply();
-   reply1.setComment("First comment");
-   reply1.setRepliedOn(Calendar.getInstance().getTime());
+```java
+Reply reply1 = new Reply();
+reply1.setComment("First comment");
+reply1.setRepliedOn(Calendar.getInstance().getTime());
 
-   Reply reply2 = new Reply();
-   reply2.setComment("Second comment");
-   reply2.setRepliedOn(Calendar.getInstance().getTime());
-   
-   List<Reply> replies = Arrays.asList(reply1, reply2);
-   ```
+Reply reply2 = new Reply();
+reply2.setComment("Second comment");
+reply2.setRepliedOn(Calendar.getInstance().getTime());
 
-3. **Definieer het strikeout-gebied**
-   Geef coördinaten op die een rechthoek vormen voor de doorhaling:
+List<Reply> replies = Arrays.asList(reply1, reply2);
+```
 
-   ```java
-   Point point1 = new Point(80, 730);
-   Point point2 = new Point(240, 730);
-   Point point3 = new Point(80, 650);
-   Point point4 = new Point(240, 650);
+Deze commentaren verschijnen wanneer een gebruiker over de doorstreping hovert.
 
-   List<Point> points = Arrays.asList(point1, point2, point3, point4);
-   ```
+### Stap 3 – Definieer het doorstreepte gebied
+Specificeer de rechthoek die de tekst die je wilt doorstrepen omsluit:
 
-4. **Configureer de doorhalingsannotatie**
-   Eigenschappen instellen zoals letterkleur, dekking en paginanummer:
+```java
+Point point1 = new Point(80, 730);
+Point point2 = new Point(240, 730);
+Point point3 = new Point(80, 650);
+Point point4 = new Point(240, 650);
 
-   ```java
-   StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
-   strikeout.setCreatedOn(Calendar.getInstance().getTime());
-   strikeout.setFontColor(65535);  // Gele kleur
-   strikeout.setMessage("This is a strikeout annotation");
-   strikeout.setOpacity(0.7);
-   strikeout.setPageNumber(0);
-   strikeout.setPoints(points);
-   strikeout.setReplies(replies);
-   ```
+List<Point> points = Arrays.asList(point1, point2, point3, point4);
+```
 
-5. **Voeg de annotatie toe**
-   Voeg uw geconfigureerde annotatie toe aan het document:
+> **Coördinatentip:** Oorsprong (0,0) is de linkerbovenhoek van de pagina; X groeit naar rechts, Y groeit naar beneden. Gebruik een PDF‑viewer die coördinaten toont om deze waarden fijn af te stemmen.
 
-   ```java
-   annotator.add(strikeout);
-   ```
+### Stap 4 – Configureer de doorstreepte annotatie
+Stel uiterlijk, paginanummer en voeg de commentaren toe:
 
-6. **Het geannoteerde document opslaan**
-   Wijzigingen opslaan in een nieuw bestand:
+```java
+StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
+strikeout.setCreatedOn(Calendar.getInstance().getTime());
+strikeout.setFontColor(65535);  // Yellow color
+strikeout.setMessage("This is a strikeout annotation");
+strikeout.setOpacity(0.7);
+strikeout.setPageNumber(0);
+strikeout.setPoints(points);
+strikeout.setReplies(replies);
+```
 
-   ```java
-   annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
-   ```
+*Kleurnotitie:* `65535` komt overeen met geel in integer RGB‑formaat. Verander de waarde om andere kleuren te gebruiken.
 
-7. **Opruimmiddelen**
-   Maak op de juiste manier gebruik van hulpbronnen:
+### Stap 5 – Pas de annotatie toe en sla op
+Voeg de annotatie toe aan het document en schrijf het uitvoerbestand weg:
 
-   ```java
-   if (annotator != null) {
-       annotator.dispose();
-   }
-   ```
+```java
+annotator.add(strikeout);
+annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
+```
 
-### Tips voor probleemoplossing
-- Zorg ervoor dat de coördinaten het gebied dat u wilt uitzetten, correct definiëren.
-- Controleer of het documentpad correct en toegankelijk is.
-- Controleer of er uitzonderingen zijn opgetreden tijdens het initialiseren of opslaan. Deze kunnen duiden op configuratieproblemen.
+### Stap 6 – Ruim bronnen op (Kritisch!)
+Disposeer altijd de annotator om native bronnen vrij te geven:
 
-## Praktische toepassingen
+```java
+if (annotator != null) {
+    annotator.dispose();
+}
+```
 
-Hier volgen enkele praktijksituaties waarin het doorhalen van tekst nuttig kan zijn:
-1. **Documenten bewerken:** Markeer onjuiste informatie die gecorrigeerd moet worden.
-2. **Beoordelingsprocessen:** Markeer de wijzigingen die door reviewers zijn voorgesteld.
-3. **Samenwerkende workflows:** Geef aan welke delen van een document besproken of beoordeeld worden.
+In productie, wikkel het gebruik in een try‑with‑resources‑blok of een `try/finally`‑constructie.
 
-## Prestatieoverwegingen
-- **Geheugengebruik optimaliseren:** Zorg ervoor dat uw systeem over voldoende geheugenbronnen beschikt wanneer u met grote documenten werkt.
-- **Batchverwerking:** Verwerk meerdere documenten in batches om het resourceverbruik effectief te beheren.
-- **Efficiënte codepraktijken:** Gebruik efficiënte datastructuren en algoritmen voor het verwerken van annotaties.
+## Veelvoorkomende problemen en hoe ze op te lossen
+
+| Probleem | Symptoom | Oplossing |
+|----------|----------|-----------|
+| **Bestand niet gevonden** | `Annotator` gooit een uitzondering | Gebruik absolute paden, controleer leesrechten, zorg dat geen ander proces het bestand vergrendelt |
+| **Verkeerde coördinaten** | Doorstreping verschijnt op een andere plek dan de beoogde tekst | Controleer het coördinatensysteem van de PDF‑viewer; pas de punten dienovereenkomstig aan |
+| **Annotatie onzichtbaar** | Geen zichtbare doorstreping na opslaan | Verhoog `opacity` (bijv. `0.9`), controleer `pageNumber` (0‑gebaseerd), zorg dat punten een juiste rechthoek vormen |
+| **OutOfMemoryError** | Applicatie crasht bij grote PDF's | Verhoog de JVM‑heap (`-Xmx2048m`), verwerk documenten in batches, roep altijd `dispose()` aan |
+
+## Prestatie‑best practices voor productie
+
+### Geheugenbeheer
+```java
+// Good: try‑with‑resources (Java 7+)
+try (Annotator annotator = new Annotator(documentPath)) {
+    // annotation logic here
+} // annotator automatically disposed
+
+// Alternative: explicit disposal
+Annotator annotator = null;
+try {
+    annotator = new Annotator(documentPath);
+    // annotation logic here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
+
+### Batch‑verwerkingsstrategie
+Wanneer je tientallen of honderden bestanden moet annoteren:
+
+- Verwerk 10‑20 documenten per batch.  
+- Log succes/failure voor elk bestand.  
+- Initialiseer de `Annotator` opnieuw voor elk document om geheugenlekken te voorkomen.  
+
+### Caching‑tips
+- Cache vaak gebruikte documenttemplates.  
+- Sla vooraf berekende coördinatenkaarten op voor standaard lay‑outs.  
+
+## Praktijkvoorbeelden
+
+1. **Documentreview‑systemen** – Editors stellen verwijderingen voor zonder het originele contract te wijzigen.  
+2. **Juridische amendementen** – Juristen volgen clausuleverwijderingen terwijl de originele bewoording voor audit behouden blijft.  
+3. **Academische peer review** – Reviewers markeren secties voor verwijdering en voegen inline commentaren toe.  
+4. **Contentmigratie** – Tijdens CMS‑migraties markeren doorstrepingen verouderde tekst die vervangen moet worden.  
+
+## Geavanceerde aanpassing
+
+### Aangepaste styling
+```java
+// Red for critical errors
+strikeout.setFontColor(16711680);
+// Blue for style suggestions
+strikeout.setFontColor(255);
+// Adjust opacity based on confidence
+strikeout.setOpacity(0.9); // high confidence
+strikeout.setOpacity(0.5); // tentative suggestion
+```
+
+### Metadata toevoegen
+```java
+strikeout.setMessage("Deleted by: " + username + " on " + timestamp);
+strikeout.setSubject("Content Review – Q1 2026");
+```
+
+## Checklist voor probleemoplossing
+- ✅ Kun je het bronbestand handmatig openen?  
+- ✅ Zijn alle GroupDocs‑afhankelijkheden aanwezig in de classpath?  
+- ✅ Vormen de punten een geldige rechthoek?  
+- ✅ Is het paginanummer correct (0‑gebaseerd)?  
+- ✅ Is er voldoende heap‑geheugen?  
+- ✅ Heb je schrijfrechten voor de doelmap?  
+- ✅ Wordt het documentformaat ondersteund (PDF, DOCX, PPTX, enz.)?  
+
+## Veelgestelde vragen
+
+**Q: Kan ik GroupDocs.Annotation gebruiken binnen een Spring Boot‑service?**  
+A: Ja. Voeg de Maven‑afhankelijkheid toe, injecteer een service‑klasse die de `Annotator` maakt, en beheer de levenscyclus met Spring‑bean‑scopes.
+
+**Q: Welke documentformaten ondersteunen doorstreepte annotaties?**  
+A: PDF, DOCX, PPTX, en vele andere formaten ondersteund door GroupDocs.Annotation. PDF biedt de meest precieze coördinatenafhandeling.
+
+**Q: Hoe ga ik om met documenten met verschillende paginagroottes?**  
+A: Haal de paginadimensies op via `annotator.getPageInfo(pageNumber)` en schaal je coördinaten dienovereenkomstig.
+
+**Q: Is het mogelijk om een bestaande doorstreepte annotatie te bewerken of te verwijderen?**  
+A: Absoluut. Gebruik `annotator.getAnnotations(pageNumber)` om op te halen, vervolgens `annotator.update(updatedAnnotation)` of `annotator.delete(annotationId)`.
+
+**Q: Wat is de prestatie‑impact van het toevoegen van veel annotaties?**  
+A: Het toevoegen van honderden annotaties is over het algemeen geen probleem, maar houd het geheugenverbruik in de gaten. Voor zeer grote annotatiesets, overweeg paginering van de weergave of lazy‑loading van annotaties op aanvraag.
 
 ## Conclusie
+Je hebt nu een volledige, productie‑klare gids voor **add strikeout annotation java** met behulp van GroupDocs.Annotation. Begin met het eenvoudige sanity‑check‑voorbeeld, schaal vervolgens op naar batch‑verwerking, aangepaste styling en metadata‑verrijking. Vergeet niet de coördinaten zorgvuldig te testen, bronnen verantwoord te beheren en het juiste licentiemodel voor je omgeving te kiezen.
 
-Je hebt nu geleerd hoe je een tekstdoorhalingsannotatie toevoegt met GroupDocs.Annotation voor Java. Deze functie kan je documentbeheer aanzienlijk verbeteren door duidelijke visuele aanwijzingen te geven voor bewerkingen en revisies. 
+Klaar om meer te verkennen? Bekijk andere annotatietypen—highlight, note, image, arrow en watermark—om een volledige document‑samenwerkingssuite te bouwen.
 
-Overweeg vervolgens om andere functies van GroupDocs.Annotation te verkennen, zoals afbeeldingannotaties of het toevoegen van hyperlinks om uw documentworkflows verder te verrijken.
+---
 
-## FAQ-sectie
+**Laatst bijgewerkt:** 2026-03-30  
+**Getest met:** GroupDocs.Annotation 25.2 for Java  
+**Auteur:** GroupDocs  
 
-1. **Wat is GroupDocs.Annotation?**
-   Een uitgebreide bibliotheek waarmee u verschillende typen annotaties aan documenten in Java-toepassingen kunt toevoegen.
-2. **Kan ik GroupDocs.Annotation gebruiken voor batchverwerking?**
-   Ja, het ondersteunt het efficiënt annoteren van meerdere documenten met goed resourcebeheer.
-3. **Hoe stel ik een tijdelijke licentie in?**
-   Bezoek de [tijdelijke licentiepagina](https://purchase.groupdocs.com/temporary-license/) en volg de instructies om er een te verkrijgen.
-4. **Wat zijn enkele veelvoorkomende problemen bij het gebruik van GroupDocs.Annotation?**
-   Veelvoorkomende problemen zijn onder meer onjuiste bestandspaden, onvoldoende geheugenbronnen of ontbrekende afhankelijkheden in uw projectinstellingen.
-5. **Hoe integreer ik GroupDocs.Annotation met andere systemen?**
-   GroupDocs.Annotation kan via REST API's in webapplicaties worden geïntegreerd, wat zorgt voor platformonafhankelijke compatibiliteit en flexibiliteit.
-
-## Bronnen
-- [GroupDocs-annotatiedocumentatie](https://docs.groupdocs.com/annotation/java/)
-- [API-referentie](https://reference.groupdocs.com/annotation/java/)
-- [Download Bibliotheek](https://releases.groupdocs.com/annotation/java/)
-- [Aankoop GroupDocs](https://purchase.groupdocs.com/buy)
-- [Gratis proefperiode](https://releases.groupdocs.com/annotation/java/)
-- [Tijdelijke licentie](https://purchase.groupdocs.com/temporary-license/)
-- [Ondersteuningsforum](https://forum.groupdocs.com/c/annotation/)
-
-Ga aan de slag met het effectief beheren van documentannotaties met GroupDocs.Annotation voor Java en ontdek de enorme mogelijkheden die het biedt!
+**Aanvullende bronnen**
+- [GroupDocs Annotation Documentatie](https://docs.groupdocs.com/annotation/java/)
+- [API Referentiehandleiding](https://reference.groupdocs.com/annotation/java/)
+- [Download nieuwste versie](https://releases.groupdocs.com/annotation/java/)
+- [Volledige licentie kopen](https://purchase.groupdocs.com/buy)
+- [Gratis proefversie starten](https://releases.groupdocs.com/annotation/java/)
+- [Tijdelijke licentie verkrijgen](https://purchase.groupdocs.com/temporary-license/)
+- [Community‑ondersteuningsforum](https://forum.groupdocs.com/c/annotation/)

@@ -20,17 +20,7 @@ url: /el/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-Last Updated:** 2026-03-17 -> keep date.
-
-**Tested With:** GroupDocs.Annotation 25.2 -> keep.
-
-**Author:** GroupDocs -> keep.
-
-Now produce final markdown with Greek translations.
-
-Make sure to keep placeholders unchanged.
-
-Let's craft final output.# Δημιουργία Επισημάνσεων PDF Java: Πλήρης Οδηγός για Επισημάνσεις PDF
+# Δημιουργία Επισημάνσεων PDF Java: Πλήρης Οδηγός για Επισημάνσεις PDF
 
 ## Εισαγωγή
 

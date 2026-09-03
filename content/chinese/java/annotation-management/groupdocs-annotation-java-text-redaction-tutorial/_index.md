@@ -19,17 +19,7 @@ url: /zh/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-.
-
-All bullet lists.
-
-Headers.
-
-Tables.
-
-Make sure to keep markdown syntax.
-
-Let's produce final answer.# 如何使用 Java 对 PDF 进行脱敏 – 完整的 GroupDocs 教程
+# 如何使用 Java 对 PDF 进行脱敏 – 完整的 GroupDocs 教程
 
 如果您需要 **使用 Java 对 PDF 进行脱敏**，那么您来对地方了。无论是清理法律合同、医疗记录，还是机密的业务报告，本教程都将手把手教您使用 GroupDocs.Annotation 实现生产就绪的解决方案。我们会覆盖从环境搭建到批量处理、安全注意事项以及故障排查的全部内容，让您能够自信地保护敏感数据。
 

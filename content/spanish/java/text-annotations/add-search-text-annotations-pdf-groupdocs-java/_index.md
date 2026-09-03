@@ -19,19 +19,7 @@ url: /es/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-.com/c/annotation/)  
-
-Translate: "Foro de soporte de GroupDocs"
-
-Make sure to keep the URLs unchanged.
-
-Now produce final content with all translations.
-
-Check for any leftover English words that are technical but okay. Keep code placeholders unchanged.
-
-Make sure to preserve markdown formatting exactly.
-
-Now produce final answer.# Crear PDF buscable Java: anotación de texto con GroupDocs
+# Crear PDF buscable Java: anotación de texto con GroupDocs
 
 ¿Alguna vez te has encontrado ahogado en extensos documentos PDF, deseando poder saltar rápidamente a secciones importantes? No estás solo. Ya sea que estés manejando contratos legales, manuales técnicos o artículos de investigación, la capacidad de **crear PDF buscable Java** puede ser un cambio de juego para la navegación y colaboración de documentos.
 

@@ -21,17 +21,7 @@ url: /pl/java/document-saving/groupdocs-annotation-java-save-specific-page-range
 weight: 1
 ---
 
-Then line "---" keep.
-
-Then "**Last Updated:** 2026-03-14" => "**Ostatnia aktualizacja:** 2026-03-14"
-
-"**Tested With:** GroupDocs.Annotation 25.2 (Java)" => "**Testowano z:** GroupDocs.Annotation 25.2 (Java)"
-
-"**Author:** GroupDocs" => "**Autor:** GroupDocs"
-
-Make sure to keep markdown formatting.
-
-Now produce final content.# Jak zapisać określone strony z anotowanych dokumentów w Javie
+# Jak zapisać określone strony z anotowanych dokumentów w Javie
 
 ## Wprowadzenie
 

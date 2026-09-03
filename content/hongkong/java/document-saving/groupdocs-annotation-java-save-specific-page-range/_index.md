@@ -20,13 +20,7 @@ url: /zh-hant/java/document-saving/groupdocs-annotation-java-save-specific-page-
 weight: 1
 ---
 
-:** GroupDocs -> "**作者：** GroupDocs"
-
-Now produce final content with same markdown structure.
-
-Make sure to keep placeholders unchanged.
-
-Proceed.# 如何在 Java 中從帶註釋的文件保存特定頁面
+# 如何在 Java 中從帶註釋的文件保存特定頁面
 
 ## 介紹
 

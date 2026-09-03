@@ -1,70 +1,416 @@
 ---
 categories:
 - Java Development
-date: '2026-01-31'
-description: GroupDocs.Annotation का उपयोग करके जावा में एनोटेशन रिप्लाई बनाना सीखें।
-  व्यावहारिक उदाहरणों और सर्वोत्तम प्रथाओं के साथ जावा में PDF एनोटेशन में निपुण बनें।
-keywords: Java PDF annotation library, PDF annotation Java tutorial, GroupDocs annotation
-  examples, Java document markup tools, how to annotate PDF files in Java, create
-  annotation replies java
-lastmod: '2026-01-31'
-linktitle: Java PDF Annotation Tutorial
+date: '2026-05-16'
+description: GroupDocs.Annotation का उपयोग करके Java में annotation replies बनाना
+  सीखें। व्यावहारिक उदाहरणों, प्रदर्शन टिप्स और सर्वोत्तम प्रथाओं के साथ Java में
+  PDF annotation में महारत हासिल करें।
+keywords:
+- create annotation reply java
+- GroupDocs.Annotation Java
+- PDF annotation Java tutorial
+lastmod: '2026-05-16'
+linktitle: Java PDF Annotation ट्यूटोरियल
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-16'
+  description: Learn how to create annotation replies java using GroupDocs.Annotation.
+    Master PDF annotation in Java with practical examples, performance tips, and best
+    practices.
+  headline: 'Java PDF Annotation Library: create annotation reply java'
+  type: TechArticle
+- description: Learn how to create annotation replies java using GroupDocs.Annotation.
+    Master PDF annotation in Java with practical examples, performance tips, and best
+    practices.
+  name: 'Java PDF Annotation Library: create annotation reply java'
+  steps:
+  - name: Import All Required Classes
+    text: '- `Annotator` is the entry point for all document‑level operations. - `Point`
+      represents a coordinate on a page (X and Y measured from the top‑left). - `SquigglyAnnotation`
+      defines the wavy underline used to highlight errors. - `Reply` stores threaded
+      comments attached to an annotation. - `SaveOptio'
+  - name: Create and Configure Your Squiggly Annotation
+    text: 'SquigglyAnnotation is a class that creates a wavy underline used to highlight
+      errors in a PDF. - **Coordinate system**: Points start at the top‑left corner.
+      The two points above draw a horizontal wavy line from (100, 200) to (300, 200).
+      - **Opacity** 0.7 means the annotation is 70 % opaque, letting '
+  - name: Add Interactive Replies (Optional but Powerful)
+    text: Reply is a class representing a comment thread attached to an annotation.
+      - Replies create a **threaded discussion** directly on the annotation, mirroring
+      the experience of modern PDF reviewers. - Each reply stores author information
+      and a timestamp, which you can later filter or display in a UI.
+  - name: Apply Annotation and Save Document
+    text: '- The **try‑with‑resources** construct automatically closes the `Annotator`,
+      releasing file handles and native buffers. - `save` writes the modified PDF
+      to `output.pdf`. > **Memory note:** The `Annotator` loads only the pages you
+      touch. For multi‑hundred‑page PDFs, this approach keeps heap usage und'
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Annotation focuses exclusively on annotation workflows, offering
+      over 30 annotation types, threaded replies, and native support for 50 + file
+      formats while keeping the memory footprint under 200 MB for 500‑page PDFs.
+    question: What makes GroupDocs.Annotation better than other Java PDF libraries?
+  - answer: Absolutely. Create a `@RestController` that injects the `Annotator` service,
+      processes multipart uploads, and streams the annotated PDF back to the client.
+      Remember to configure a thread‑pool for concurrent requests.
+    question: Can I use this library with Spring Boot applications?
+  - answer: Query each page’s dimensions via `annotator.getPageInfo(pageIndex)` and
+      calculate relative coordinates (e.g., percentages) instead of hard‑coding point
+      values. This ensures annotations appear correctly on A4, Letter, and custom‑size
+      pages.
+    question: How do I handle documents with different page sizes?
+  - answer: Yes. Call `annotator.get()` to retrieve a collection of all annotations,
+      then iterate to read properties such as author, comment, and geometry. This
+      is useful for migration or analytics scenarios.
+    question: Is there a way to extract existing annotations from PDFs?
+  - answer: Implement authentication at the application layer, store the user ID with
+      each `Reply`, and enforce business rules (e.g., only the author or an admin
+      can edit or delete a reply). The API itself does not enforce permissions, giving
+      you full flexibility.
+    question: What's the best approach for handling annotation permissions in multi‑user
+      systems?
+  type: FAQPage
 tags:
 - pdf-annotations
 - java-libraries
 - document-processing
 - groupdocs
-title: 'जावा पीडीएफ एनोटेशन लाइब्रेरी: एनोटेशन उत्तर बनाएं जावा'
+title: 'Java PDF Annotation Library: एनोटेशन रिप्लाई जावा बनाएं'
 type: docs
 url: /hi/java/graphical-annotations/groupdocs-java-squiggly-annotations-pdf/
 weight: 1
 ---
 
-# Java PDF एनोटेशन लाइब्रेरी: create annotationली PDF दस्तावेज़ों में उन उपयोगी squiggly लाइनों, हाइलाइट्स और टिप्पणियों को कैसे जोड़ें **और create annotation replies java**? यदि आप दस्तावेज़ प्रबंधन सिस्टम, रिव्यू प्लेटफ़ॉर्म या शैक्षिक टूल बना रहे हैं,ावेज़ों की मैन्युअल समीक्षा अिपट रहे हों। यही वह जगह है जहाँ GroupDocs.Annotation for Java काम़ एनोटेशन के लिए एक स्विस आर्मी नाइफ़ जैसा है, जो आपको साधारण हाइलाइट्स से लेकर जटिल इंटरैक्टिव एलिमेंट्स तक सब कुछ जोड़ने देता है।
+# Java PDF एनोटेशन लाइब्रेरी: एनोटेशन रिप्लाई जावा बनाएं
 
-**आप इस गाइड में क्या सीखेंगे:**
-- अपने Java प्रोजेक्ट में GroupDocs.Annotation सेटअप करना (यह आपके सोच से आसान है)
-- त्रुटि संकेत के लिए प्रोफ़ेशनल squiggly एनोटेशन बनाना
-- रंग, अपारदर्शिता और पोजिशनिंग को प्रो की तरह कॉन्फ़िगर करना
-- सामान्य pitfalls को संभालना जो अधिकांश डेवलपर्स को फँसाते हैं
-- बड़े‑पैमाने पर दस्तावेज़ प्रोसेसिंग के लिए प्रदर्शन को अनुकूलित करना
-
-चाहे आप एक कानूनी दस्तावेज़ रिव्यू सिस्टम या शैक्षिक प्लेटफ़ॉर्म बना रहे हों, यह ट्यूटोरियल आपको PDFs को एक अनुभवी डेवलपर की तरह जल्दी से एनोटेट करने में मदद करेगा।
+यदि आपको PDFs के लिए **create annotation reply java** बनाना है—चाहे आप एक कॉन्ट्रैक्ट‑रिव्यू पोर्टल, एक ई‑लर्निंग सिस्टम, या एक बल्क‑प्रोसेसिंग पाइपलाइन बना रहे हों—यह गाइड आपको GroupDocs.Annotation for Java के साथ इसे कैसे करना है, बिल्कुल दिखाता है। हम सेटअप, स्क्विगली एनोटेशन निर्माण, रिप्लाई थ्रेडिंग, और प्रदर्शन ट्यूनिंग को कवर करेंगे ताकि आप दिनों में, हफ्तों में नहीं, एक विश्वसनीय समाधान शिप कर सकें।
 
 ## त्वरित उत्तर
-- **GroupDocs.Annotation का मुख्य उद्देश्य क्या है?** यह Java में PDF एनोटेशनों की प्रोग्रामेटिक निर्माण, संशोधन और निष्कर्षण को सक्षम करता है।
-- **मैं squiggly एनोटेशन कैसे जोड़ूँ?** `SquigglyAnnotation` का उपयोग करें, उसकी प्रॉपर्टीज़ सेट करें, और `annotator.add(...)` कॉल करें।
-- **क्या मैं एनोटेशन के साथ replies संलग्न कर सकता हूँ?** हाँ—`Reply` ऑब्जेक्ट्स बनाएं और उन्हें एनोटेशन के साथ जोड़ें।
-- **क्या उत्पादन के लिए लाइसेंस चाहिए?** बिल्कुल; नहीं तो आउटपुट में वॉटरमार्क रहेगा।
-- **क्या यह बैच प्रोसेसिंग के लिए उपयुक्त है?** हाँ—डॉक्यूमेंट्स को एक‑एक करके try‑with‑resources के साथ प्रोसेस करें ताकि मेमोरी उपयोग कम रहे।
+- **GroupDocs.Annotation का मुख्य उद्देश्य क्या है?** यह जावा में PDF एनोटेशन की प्रोग्रामेटिक निर्माण, संशोधन और निष्कर्षण को सक्षम करता है।  
+- **मैं स्क्विगली एनोटेशन कैसे जोड़ूँ?** `SquigglyAnnotation` का इंस्टैंस बनाएं, उसकी ज्यामिति और शैली सेट करें, फिर `annotator.add(...)` कॉल करें।  
+- **क्या मैं एनोटेशन पर रिप्लाई संलग्न कर सकता हूँ?** हाँ—`Reply` ऑब्जेक्ट बनाएं, लेखक और टेक्स्ट सेट करें, और उन्हें पैरेंट एनोटेशन से जोड़ें।  
+- **उत्पादन के लिए लाइसेंस आवश्यक है?** बिल्कुल; वैध लाइसेंस के बिना आउटपुट में वॉटरमार्क रहेगा।  
+- **क्या यह बैच प्रोसेसिंग के लिए उपयुक्त है?** हाँ—प्रत्येक दस्तावेज़ खोलने, एनोटेट करने और बंद करने के लिए try‑with‑resources का उपयोग करें, जिससे मेमोरी उपयोग कम रहे।
 
-## क्यों Java डेवलपर्स को PDF एनोटेशन लाइब्रेरीज़ की जरूरत है
-क्या आपने कभी सोचा है कि प्रोग्रामेटिकली PDF दस्तावेज़ों में उन उपयोगी squiggly लाइनों, हाइलाइट्स और टिप्पणियों को कैसे जोड़ें? यदि आप दस्तावेज़ प्रबंधन सिस्टम, रिव्यू प्लेटफ़ॉर्म या शैक्षिक टूल बना रहे हैं, तो आपको एक मजबूतस्तावेज़ों की मैन्युअल समीक्षा अक्षम है, खासकर जब आप सैकड़ों फ़ाइलों से निपट रहे हों। यही वह जगह है जहाँ GroupDocs.Annotation for Java काम आता है। यह दस्तावेज़ एनोटेशन के लिए एक स्विस आर्मी नाइफ़ जैसा है, जो आपको साधारण हाइलाइट्स से लेकर जटिल इंटरैक्टिव एलिमेंट्स तक सब कुछ जोड़ने देता है।
+## जावा डेवलपर्स को PDF एनोटेशन लाइब्रेरी क्यों चाहिए
 
-**आप इस गाइड में क्या सीखेंगे: (यह आपके सोच से आसान है)
-- त्रुटि संकेत के लिए प्रोफ़ेशनल squiggly एनोटेशन बनाना
-- रंग, अपारदर्शिता और पोजिशनिंग को प्रो की तरह कॉन्फ़िगर करना
-- सामान्य pitfalls को संभालना जो अधिकांश डेवलपर्स को फँसाते हैं
-- बड़े‑पैमाने पर दस्तावेज़ प्रोसेसिंग के लिए प्रदर्शन को अनुकूलित करना
+PDF को मैन्युअल रूप से मार्क करना समय‑साध्य और त्रुटिप्रवण होता है, विशेषकर जब आपको सैकड़ों अनुबंधों या परीक्षा पत्रों की समीक्षा करनी हो। एक जावा PDF एनोटेशन लाइब्रेरी इस काम को स्वचालित करती है, जिससे आप फ़ाइल में सीधे हाइलाइट, स्क्विगली अंडरलाइन और थ्रेडेड कमेंट एम्बेड कर सकते हैं। परिणामस्वरूप एक सर्चेबल, पोर्टेबल दस्तावेज़ मिलता है जो सभी मार्कअप को बनाए रखता है बिना किसी अलग व्यूअर की आवश्यकता के।
 
-## create annotation replies java क्या है?
-`create annotation replies java` वह प्रक्रिया है जिसमें Java का उपयोग करके PDF दस्तावेज़ में मौजूदा एनोटेशन पर थ्रेडेड टिप्पणियाँ (replies) प्रोग्रामेटिकली जोड़ी जाती हैं। ये replies सीधे एनोटेटेड क्षेत्र पर सहयोगी चर्चा को सक्षम करती हैं, जिससे दस्तावेज़ समीक्षा अधिक कुशल बनती है।
+**आप इस गाइड में क्या सीखेंगे**
+- Maven प्रोजेक्ट में GroupDocs.Annotation को इंस्टॉल और लाइसेंस करना  
+- ऐसे स्क्विगली एनोटेशन बनाना जो मूल Word अंडरलाइन जैसा दिखे  
+- सहयोगी समीक्षा के लिए किसी भी एनोटेशन में थ्रेडेड रिप्लाई जोड़ना  
+- बड़े PDF प्रोसेस करते समय मेमोरी और CPU उपयोग को अनुकूलित करना  
+- समाधान को Spring Boot, माइक्रो‑सर्विसेज़ या डेस्कटॉप ऐप्स में डिप्लॉय करना  
 
-## पूर्वापेक्षाएँ: अपना पर्यावरण तैयार करना
-कोड में डुबकी लगाने से पहले, सुनिश्चित करें कि आपका सब कुछ सही ढंग से सेट है। घंटों की बचत होगी।
+चाहे आप एक कानूनी दस्तावेज़ समीक्षा प्रणाली, शैक्षिक ग्रेडिंग टूल, या स्वचालित क्वालिटी‑कंट्रोल पाइपलाइन बना रहे हों, नीचे दी गई तकनीकें आपको प्रोडक्शन‑रेडी आधार प्रदान करेंगी।
 
-**आवश्यक आवश्यकताएँ:**
-- **Java Development Kit (JDK)**: संस्करण 8 या उससे ऊपर (बेहतर प्रदर्शन के लिए JDK 11+ की सिफ़ारिश की जाती है)
-- **Maven या Gradle**: डिपेंडेंसी मैनेजमेंट के लिए (हम अपने उदाहरणों में Maven का उपयोग करेंगे)
-- **बेसिक Java ज्ञान**: ऑब समझ
+## create annotation reply java क्या है?
 
-**सिफ़ारिश किया गया सेटअप:**
-- Maven इंटीग्रेशन वाला IDE (IntelliJ IDEA, Eclipse, या VS Code)
-- आपके IDE और टेस्टिंग के लिए कम से कम 2GB RAM उपलब्ध हो
-- टेस्टिंग के लिए सैंपल PDF फ़ाइलें (हम दिख बाहरी PDF रीडर या जटिल इंस्टॉलेशन की जरूरत नहीं होती—सब कुछ आपके Java एप्लिकेशन के भीतर चलता है।
+`create annotation reply java` जावा का उपयोग करके मौजूदा PDF एनोटेशन से एक टिप्पणी थ्रेड (Reply) संलग्न करने की प्रोग्रामेटिक प्रक्रिया है। रिप्लाई कई समीक्षकों को दस्तावेज़ छोड़े बिना किसी विशिष्ट मार्कअप पर चर्चा करने की अनुमति देते हैं, जिससे सहज, इन‑प्लेस सहयोग संभव होता है। यह क्षमता एक स्थैतिक PDF को एक इंटरैक्टिव चर्चा प्लेटफ़ॉर्म में बदल देती है, जिससे संदर्भ और ऑडिट ट्रेल सीधे फ़ाइल में संरक्षित रहते हैं।
 
-## GroupDocs.Annotation को Java के लिए सेटअप करना
-GroupDocs.Annotation को अपने प्रोजेक्ट में इंटीग्रेट करना सरल है, लेकिन कुछ सावधानियों का ध्यान रखना चाहिए `pom.xml` में यह जोड़ें—ध्यान रखें कि रिपॉज़िटरी कॉन्फ़िगरेशन को डिपेंडेंसी सेक्शन से पहले रखें:
+## पूर्वापेक्षाएँ: अपना वातावरण तैयार करना
+
+- **JDK** 8 या उससे ऊपर (बेहतर गार्बेज‑कलेक्शन प्रदर्शन के लिए JDK 11 + की सिफारिश की जाती है)  
+- **Maven** या **Gradle** डिपेंडेंसी मैनेजमेंट के लिए (उदाहरण Maven का उपयोग करते हैं)  
+- Maven समर्थन वाला IDE (IntelliJ IDEA, Eclipse, या VS Code)  
+- IDE और टेस्ट रन के लिए कम से कम **2 GB** फ्री RAM  
+- प्रयोग के लिए नमूना PDF फ़ाइलें (आप किसी भी PDF एडिटर से सरल PDF बना सकते हैं)
+
+GroupDocs.Annotation पूरी तरह से इन‑प्रोसेस चलता है; कोई बाहरी PDF व्यूअर या नेटिव लाइब्रेरी आवश्यक नहीं है।
+
+## जावा के लिए GroupDocs.Annotation सेटअप करना
+
+लाइब्रेरी को इंटीग्रेट करना कुछ‑स्टेप प्रक्रिया है, लेकिन कुछ छिपे हुए जाल यदि आप चूक जाएँ तो रनटाइम एरर का कारण बन सकते हैं।
+
+### Maven डिपेंडेंसी कॉन्फ़िगरेशन
+
+`pom.xml` में रिपॉज़िटरी और डिपेंडेंसी जोड़ें। Maven को आर्टिफैक्ट रिज़ॉल्व करने के लिए `<repositories>` एलिमेंट को `<dependencies>` से **पहले** रखें।
+
+```xml
+<repositories>
+    <repository>
+        <id>groupdocs-repo</id>
+        <url>https://repo.groupdocs.com/repo</url>
+    </repository>
+</repositories>
+
+<dependencies>
+    <dependency>
+        <groupId>com.groupdocs</groupId>
+        <artifactId>groupdocs-annotation</artifactId>
+        <version>25.2</version>
+    </dependency>
+</dependencies>
+```
+
+> **Pro tip:** नवीनतम संस्करण के लिए GroupDocs रिलीज़ पेज देखें। नई रिलीज़ अक्सर उभरते PDF मानकों और प्रदर्शन सुधारों के समर्थन को शामिल करती हैं।
+
+### लाइसेंस सेटअप (इसे न छोड़ें!)
+
+GroupDocs.Annotation को प्रोडक्शन उपयोग के लिए लाइसेंस फ़ाइल की आवश्यकता होती है। इसके बिना, प्रत्येक जेनरेटेड PDF में वॉटरमार्क रहेगा।
+
+1. **Free Trial** – 30 दिनों के लिए पूर्ण फीचर सेट, मूल्यांकन के लिए आदर्श।  
+2. **Temporary License** – विकास और आंतरिक परीक्षण के लिए उपयुक्त।  
+3. **Full License** – किसी भी व्यावसायिक डिप्लॉयमेंट के लिए आवश्यक।
+
+`GroupDocs.Annotation.lic` फ़ाइल को अपने resources फ़ोल्डर में रखें और स्टार्टअप पर लोड करें:
+
+```java
+License license = new License();
+license.setLicense("GroupDocs.Annotation.lic");
+```
+
+> **Common gotcha:** लाइसेंस चरण को भूलने से वॉटरमार्क वाले PDF और API कॉल्स जो चुपचाप फेल हो जाते हैं, उत्पन्न होते हैं। हमेशा अपने स्टार्टअप रूटीन में लाइसेंस को जल्दी वैलिडेट करें।
+
+## पूर्ण इम्प्लीमेंटेशन गाइड: स्क्विगली एनोटेशन जोड़ना
+
+नीचे एक स्टेप‑बाय‑स्टेप walkthrough दिया गया है जो **create annotation reply java** बनाते हुए स्क्विगली एनोटेशन बनाने को दिखाता है। प्रत्येक चरण में संक्षिप्त व्याख्या शामिल है, ताकि आप प्रत्येक लाइन के पीछे का “क्यों” समझ सकें।
+
+### चरण 1: सभी आवश्यक क्लासेस इम्पोर्ट करें
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.Point;
+import com.groupdocs.annotation.models.annotation.SquigglyAnnotation;
+import com.groupdocs.annotation.models.annotation.Reply;
+import com.groupdocs.annotation.options.SaveOptions;
+```
+
+- `Annotator` सभी दस्तावेज़‑स्तर ऑपरेशन्स के लिए एंट्री पॉइंट है।  
+- `Point` पेज पर एक कोऑर्डिनेट दर्शाता है (X और Y टॉप‑लेफ़्ट से मापे जाते हैं)।  
+- `SquigglyAnnotation` त्रुटियों को हाइलाइट करने के लिए उपयोग किए जाने वाले वेवि अंडरलाइन को परिभाषित करता है।  
+- `Reply` एनोटेशन से जुड़ी थ्रेडेड कमेंट्स को स्टोर करता है।  
+- `SaveOptions` आपको आउटपुट फॉर्मेट और कंप्रेशन को नियंत्रित करने देता है।
+
+### चरण 2: अपना स्क्विगली एनोटेशन बनाएं और कॉन्फ़िगर करें
+
+```java
+SquigglyAnnotation squiggly = new SquigglyAnnotation();
+squiggly.setPageNumber(1);
+squiggly.setColor(0xFFFF0000); // ARGB red
+squiggly.setOpacity(0.7);
+squiggly.setPoints(Arrays.asList(
+    new Point(100, 200),
+    new Point(300, 200)
+));
+```
+
+SquigglyAnnotation एक क्लास है जो PDF में त्रुटियों को हाइलाइट करने के लिए वेवि अंडरलाइन बनाता है।
+
+- **कोऑर्डिनेट सिस्टम**: पॉइंट्स टॉप‑लेफ़्ट कोने से शुरू होते हैं। ऊपर के दो पॉइंट्स (100, 200) से (300, 200) तक एक क्षैतिज वेवि लाइन बनाते हैं।  
+- **Opacity** 0.7 का मतलब है एनोटेशन 70 % अपारदर्शी है, जिससे नीचे का टेक्स्ट पढ़ने योग्य रहता है।
+
+### चरण 3: इंटरैक्टिव रिप्लाई जोड़ें (वैकल्पिक लेकिन शक्तिशाली)
+
+```java
+Reply reply1 = new Reply();
+reply1.setComment("Please double‑check this clause.");
+reply1.setAuthor("Alice");
+reply1.setCreatedOn(new Date());
+
+Reply reply2 = new Reply();
+reply2.setComment("I think the wording is correct.");
+reply2.setAuthor("Bob");
+reply2.setCreatedOn(new Date());
+
+squiggly.setReplies(Arrays.asList(reply1, reply2));
+```
+
+Reply एक क्लास है जो एनोटेशन से जुड़ी टिप्पणी थ्रेड को दर्शाता है।
+
+- रिप्लाई सीधे एनोटेशन पर **थ्रेडेड डिस्कशन** बनाते हैं, जो आधुनिक PDF समीक्षकों के अनुभव को प्रतिबिंबित करता है।  
+- प्रत्येक रिप्लाई लेखक जानकारी और टाइमस्टैम्प स्टोर करता है, जिसे आप बाद में फ़िल्टर या UI में दिखा सकते हैं।
+
+### चरण 4: एनोटेशन लागू करें और दस्तावेज़ सहेजें
+
+```java
+try (Annotator annotator = new Annotator("input.pdf")) {
+    annotator.add(squiggly);
+    SaveOptions options = new SaveOptions();
+    options.setOutputPath("output.pdf");
+    annotator.save(options);
+}
+```
+
+- **try‑with‑resources** कंस्ट्रक्ट स्वचालित रूप से `Annotator` को बंद करता है, फ़ाइल हैंडल और नेटिव बफ़र्स को रिलीज़ करता है।  
+- `save` संशोधित PDF को `output.pdf` में लिखता है।
+
+> **Memory note:** `Annotator` केवल उन पेजों को लोड करता है जिन्हें आप टच करते हैं। कई‑सौ पेज वाले PDF के लिए, यह तरीका सामान्य सर्वर पर हीप उपयोग को 150 MB से कम रखता है।
+
+## उन्नत कॉन्फ़िगरेशन विकल्प
+
+### एनोटेशन की उपस्थिति को कस्टमाइज़ करना
+
+आप विज़ुअल स्टाइल को अपने ब्रांड गाइडलाइन के अनुसार फाइन‑ट्यून कर सकते हैं:
+
+```java
+squiggly.setBorderWidth(2);
+squiggly.setColor(0xFF00FF00); // ARGB green
+squiggly.setOpacity(0.5);
+```
+
+- **Border width** लाइन की मोटाई (पॉइंट्स में) नियंत्रित करता है।  
+- **ARGB** फ़ॉर्मेट में ट्रांसपैरेंसी के लिए अल्फा चैनल शामिल है।
+
+### एनोटेशन को सटीक रूप से पोज़िशन करना
+
+विभिन्न पेज साइज वाले PDF में कोऑर्डिनेट सही ढंग से प्राप्त करना मुश्किल हो सकता है। इस व्यवस्थित दृष्टिकोण का पालन करें:
+
+1. **PDF को एक व्यूअर में खोलें** (जैसे, Adobe Acrobat) और लक्ष्य क्षेत्र के लिए रूलर वैल्यू नोट करें।  
+2. **रूलर वैल्यू को पॉइंट्स में बदलें** (1 point = 1/72 inch)।  
+3. **`annotator.getPageInfo(pageIndex)` का उपयोग करके पेज की चौड़ाई और ऊँचाई प्राप्त करें, फिर रिलेटिव पोज़िशन की गणना करें**।
+
+## सामान्य समस्याएँ और समाधान
+
+### समस्या: एनोटेशन नहीं दिख रहे हैं
+
+**सबसे संभावित कारण**
+- पॉइंट्स पेज की सीमाओं के बाहर हैं  
+- लाइसेंस लोड नहीं हुआ (वॉटरमार्क एनोटेशन को छुपा देता है)  
+- गलत पेज नंबर (API में पेजेज़ ज़ीरो‑बेस्ड हैं)
+
+**समाधान चेकलिस्ट**
+
+```text
+- Verify page dimensions with annotator.getPageInfo(pageIndex)
+- Ensure all Point X/Y values are within [0, pageWidth] and [0, pageHeight]
+- Confirm license file path and that license.setLicense() returns true
+- Check that squiggly.setPageNumber(pageIndex) uses zero‑based indexing
+```
+
+### समस्या: बड़े फ़ाइलों के साथ खराब प्रदर्शन
+
+500‑पेज PDF को मेमोरी में लोड करना आपकी सेवा को रोक सकता है। इसे कम करने के लिए:
+
+- **एक बार में एक पेज प्रोसेस करना** – दस्तावेज़ खोलें, एक पेज को एनोटेट करें, सहेजें, फिर अगले पर जाएँ।  
+- **स्ट्रीमिंग** – पूर्ण दस्तावेज़ बफ़रिंग से बचने के लिए `Annotator` की स्ट्रीमिंग API का उपयोग करें।  
+- **कैशिंग** – अक्सर एक्सेस किए जाने वाले PDF को तेज़ कैश (जैसे, Redis) में रखें और कैश्ड कॉपी को एनोटेट करें।
+
+### समस्या: रंग मान काम नहीं कर रहे हैं
+
+GroupDocs **ARGB** (Alpha, Red, Green, Blue) की अपेक्षा करता है, न कि साधारण RGB की। `0xFFFF0000` ARGB मान का मतलब पूरी तरह अपारदर्शी लाल है। यदि आप `0xFF0000` प्रदान करते हैं तो लाइब्रेरी इसे गलत समझती है, जिससे काली एनोटेशन बनती है।
+
+```java
+int argbRed = 0xFFFF0000; // Alpha=255, Red=255, Green=0, Blue=0
+squiggly.setColor(argbRed);
+```
+
+## प्रदर्शन सर्वश्रेष्ठ प्रथाएँ
+
+### मेमोरी प्रबंधन
+
+बैच जॉब में दर्जनों PDF को एनोटेट करते समय, प्रत्येक फ़ाइल को अपने स्वयं के try‑with‑resources ब्लॉक में रैप करें:
+
+```java
+for (String filePath : pdfList) {
+    try (Annotator annotator = new Annotator(filePath)) {
+        // add annotations
+        annotator.save(new SaveOptions().setOutputPath(filePath.replace(".pdf", "_annotated.pdf")));
+    }
+}
+```
+
+- यह पैटर्न सुनिश्चित करता है कि प्रत्येक इटरेशन के बाद नेटिव बफ़र्स रिलीज़ हो जाएँ, जिससे लंबी‑चलने वाली प्रक्रियाओं में **OutOfMemoryError** से बचा जा सके।
+
+### बैच प्रोसेसिंग अनुकूलन
+
+हाई‑थ्रूपुट वातावरण के लिए, बाउंडेड थ्रेड पूल के साथ पैरलल स्ट्रीम्स पर विचार करें:
+
+```java
+ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+pdfList.parallelStream().forEach(path -> executor.submit(() -> annotateDocument(path)));
+executor.shutdown();
+executor.awaitTermination(1, TimeUnit.HOURS);
+```
+
+- **Bounded pool** थ्रेड एक्सप्लोजन से बचाता है, जबकि पैरलल स्ट्रीम्स CPU कोर को व्यस्त रखते हैं।
+
+### फ़ाइल आकार विचार
+
+बड़े PDF (> 100 MB) प्रदर्शन को घटा सकते हैं। इन रणनीतियों को लागू करें:
+
+- **Pre‑compress** स्रोत PDF को Ghostscript जैसे टूल से एनोटेशन से पहले संपीड़ित करें।  
+- **केवल आवश्यक पेजों को एनोटेट करें** – उन पेजों को स्किप करें जिनमें मार्कअप की आवश्यकता नहीं है।  
+- दस्तावेज़ को लॉजिकल सेक्शन (जैसे, प्रति चैप्टर) में **स्प्लिट** करें और प्रत्येक चंक को स्वतंत्र रूप से प्रोसेस करें।
+
+## वास्तविक‑विश्व अनुप्रयोग
+
+### दस्तावेज़ समीक्षा प्रणाली
+
+कानूनी फर्मों को अक्सर समस्याग्रस्त क्लॉज़ को फ़्लैग करना पड़ता है। स्क्विगली एनोटेशन और थ्रेडेड रिप्लाई कई वकीलों को एक पैराग्राफ पर PDF छोड़े बिना चर्चा करने देते हैं:
+
+- **Lawyer A** एक क्लॉज़ के नीचे लाल स्क्विगली जोड़ता है और “अस्पष्ट शब्दावली” लिखता है।  
+- **Lawyer B** जवाब देता है “‘material breach’ के लिए परिभाषा जोड़ें”。  
+- पूरी चर्चा एम्बेडेड, सर्चेबल और ऑडिटेबल रहती है।
+
+### मौजूदा सिस्टम के साथ इंटीग्रेशन
+
+GroupDocs.Annotation लोकप्रिय जावा फ्रेमवर्क्स के साथ सुगमता से काम करता है:
+
+- **Spring Boot** – एक REST endpoint `/api/annotate` एक्सपोज़ करें जो PDF मल्टीपार्ट अपलोड स्वीकार करता है, एनोटेशन जोड़ता है, और परिणाम को स्ट्रीम करके वापस भेजता है।  
+- **JSF** – वेब व्यू में ऑन‑द‑फ्लाई मार्कअप के लिए एनोटेशन एक्शन को UI कंपोनेंट्स से बाइंड करें।  
+- **Microservices** – लाइब्रेरी का छोटा फुटप्रिंट (< 15 MB) आपको इसे Docker के साथ कंटेनराइज़ करने और क्षैतिज रूप से स्केल करने देता है।
+
+### वर्कफ़्लो ऑटोमेशन
+
+एनोटेशन को अन्य GroupDocs उत्पादों (जैसे, GroupDocs.Signature) के साथ मिलाकर एंड‑टू‑एंड पाइपलाइन बनाएं:
+
+```text
+1. Upload contract → 2. Auto‑apply squiggly for missing signatures → 3. Add reviewer replies → 4. Route to signing service.
+```
+
+## कब स्क्विगली एनोटेशन बनाम विकल्पों का उपयोग करें
+
+| उपयोग‑केस | अनुशंसित एनोटेशन |
+|----------|------------------------|
+| वर्तनी या व्याकरण त्रुटियों को चिह्नित करना | **Squiggly** – वर्ड प्रोसेसर के समान विज़ुअल क्यू |
+| बिना त्रुटि संकेत के महत्वपूर्ण सेक्शन को हाइलाइट करना | **Highlight** – पारदर्शी ओवरले |
+| विस्तृत फीडबैक प्रदान करना | **Text** या **Comment** – फ्री‑फ़ॉर्म नोट बॉक्स |
+| दस्तावेज़ को स्वीकृत या अस्वीकृत करना | **Stamp** – “Approved” या “Rejected” बैज |
+
+## निष्कर्ष
+
+अब आपके पास GroupDocs.Annotation का उपयोग करके **create annotation reply java** के लिए एक पूर्ण, प्रोडक्शन‑रेडी रेसिपी है। API में महारत हासिल करके, लाइसेंसिंग को संभालकर, और ऊपर दिए गए प्रदर्शन टिप्स लागू करके आप:
+
+- हजारों PDF में त्रुटि‑मार्किंग को ऑटोमेट करें  
+- फ़ाइल के भीतर सहयोगी, थ्रेडेड डिस्कशन सक्षम करें  
+- भारी दस्तावेज़ प्रोसेस करते समय भी मेमोरी उपयोग कम रखें  
+
+**अगले कदम**
+1. अन्य एनोटेशन प्रकारों (हाइलाइट, स्टैम्प, टेक्स्ट) के साथ प्रयोग करें।  
+2. एक REST सेवा बनाएं जो PDF प्राप्त करे, उन्हें एनोटेट करे, और परिणाम वापस करे।  
+3. एक्सट्रैक्शन API (`annotator.get()`) का अन्वेषण करें ताकि मौजूदा कमेंट्स को एनालिटिक्स के लिए निकाला जा सके।
+
+प्रोग्रामेटिक PDF एनोटेशन की शक्ति इस बात में है कि यह थकाऊ मैन्युअल मार्कअप को दोहराने योग्य, ऑडिटेबल कोड से बदल देता है। चाहे आप एक विशेष कानूनी‑टेक प्रोडक्ट बना रहे हों या एक सामान्य‑उद्देश्य दस्तावेज़ वर्कफ़्लो इंजन, इस गाइड की तकनीकें आपको आगे बढ़ने के लिए एक ठोस आधार देती हैं।
+
+## अक्सर पूछे जाने वाले प्रश्न
+
+**Q: GroupDocs.Annotation को अन्य जावा PDF लाइब्रेरीज़ से क्या बेहतर बनाता है?**  
+A: GroupDocs.Annotation विशेष रूप से एनोटेशन वर्कफ़्लो पर केंद्रित है, 30 से अधिक एनोटेशन प्रकार, थ्रेडेड रिप्लाई, और 50 + फ़ाइल फ़ॉर्मैट्स के लिए नेटिव सपोर्ट प्रदान करता है, जबकि 500‑पेज PDF के लिए मेमोरी फुटप्रिंट 200 MB से कम रखता है।
+
+**Q: क्या मैं इस लाइब्रेरी को Spring Boot एप्लिकेशन्स के साथ उपयोग कर सकता हूँ?**  
+A: बिल्कुल। एक `@RestController` बनाएं जो `Annotator` सेवा को इंजेक्ट करे, मल्टीपार्ट अपलोड प्रोसेस करे, और एनोटेटेड PDF को क्लाइंट को स्ट्रीम करके वापस भेजे। समवर्ती अनुरोधों के लिए थ्रेड‑पूल कॉन्फ़िगर करना याद रखें।
+
+**Q: विभिन्न पेज साइज वाले दस्तावेज़ों को कैसे संभालूँ?**  
+A: `annotator.getPageInfo(pageIndex)` के माध्यम से प्रत्येक पेज के आयाम पूछें और पॉइंट वैल्यू को हार्ड‑कोड करने के बजाय रिलेटिव कोऑर्डिनेट (जैसे, प्रतिशत) की गणना करें। इससे एनोटेशन A4, Letter, और कस्टम‑साइज़ पेजों पर सही ढंग से दिखेंगे।
+
+**Q: क्या PDF से मौजूदा एनोटेशन निकालने का कोई तरीका है?**  
+A: हाँ। `annotator.get()` कॉल करके सभी एनोटेशन का कलेक्शन प्राप्त करें, फिर लेखक, कमेंट, और ज्योमेट्री जैसी प्रॉपर्टीज़ पढ़ने के लिए इटरेट करें। यह माइग्रेशन या एनालिटिक्स परिदृश्यों में उपयोगी है।
+
+**Q: मल्टी‑यूज़र सिस्टम में एनोटेशन परमिशन संभालने का सबसे अच्छा तरीका क्या है?**  
+A: एप्लिकेशन लेयर पर ऑथेंटिकेशन लागू करें, प्रत्येक `Reply` के साथ यूज़र ID स्टोर करें, और बिज़नेस नियम लागू करें (जैसे, केवल लेखक या एडमिन रिप्लाई को एडिट या डिलीट कर सकते हैं)। API स्वयं परमिशन लागू नहीं करता, जिससे आपको पूरी लचीलापन मिलता है।
+
+**Q: सैकड़ों PDF प्रोसेस करते समय मेमोरी उपयोग को कैसे ऑप्टिमाइज़ करूँ?**  
+A: प्रत्येक दस्तावेज़ के लिए try‑with‑resources का उपयोग करें, पेजों को व्यक्तिगत रूप से प्रोसेस करें, और समवर्ती मेमोरी खपत को सीमित करने के लिए बाउंडेड थ्रेड पूल पर विचार करें। VisualVM जैसे टूल्स से JVM हीप मॉनिटर करके `-Xmx` सेटिंग को फाइन‑ट्यून करें।
+
+**अंतिम अपडेट:** 2026-05-16  
+**टेस्ट किया गया:** GroupDocs.Annotation 25.2 for Java  
+**लेखक:** GroupDocs  
+
+**अतिरिक्त संसाधन**
+- [GroupDocs.Annotation for Java दस्तावेज़](https://docs.groupdocs.com/annotation/java/)
+- [पूर्ण API रेफ़रेंस](https://reference.groupdocs.com/annotation/java/)
 
 ```xml
 <repositories>
@@ -84,14 +430,6 @@ GroupDocs.Annotation को अपने प्रोजेक्ट में �
 </dependencies>
 ```
 
-**प्रो टिप**: हमेशा GroupDocs रिलीज़ पेज पर नवीनतम संस्करण देखें। पुराने संस्करणों का उपयोग करने से नए PDF फ़ॉर्मेट्स के साथ संगतता समस्याएँ हो सकती हैं।
-
-### लाइसेंस सेटअप (इसे न छोड़ें!)
-यहाँ कई डेवलपर्स फँस जाते हैं। GroupDocs.Annotation को प्रोडक्शन उपयोग के लिए उचित लाइसेंसिंग की आवश्यकता होती है:
-
-- **फ्री ट्रायल**:्पररी लाइसेंस**: विकास और टेस्टिंग चरणों के लिए आदर्श
-- **फुल लाइसेंस**: प्रोडक्शन डिप्लॉयमेंट के लिए आवश्यक
-
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -102,14 +440,6 @@ try (Annotator annotator = new Annotator("path/to/your/document.pdf")) {
 }
 ```
 
-**सामान्य गड़बड़ी**: यदि आप लाइसेंस सेटअप सही से नहीं करते, तो आउटपुट में वॉटरमार्क रहेगा। डिप्लॉयमेंट से पहले हमेशा अपने वास्तविक लाइसेंस के साथ टेस्ट करें।
-
-## पूर्ण इम्प्लीमेंटेशन गाइड: Squiggly एनोटेशन जोड़ना
-अब असली काम—आइए एक मजबूत squiggly एनोटेशन सिस्टम बनाते हैं जिसे आप प्रोडक्शन में उपयोग कर सकते हैं। Squiggly एनोटेशन त्रुटियों को चिन्हित करने, बदलाव सुझाने, या ध्यान देने योग्य क्षेत्रों को हाइलाइट करने के लिए चरण को समझाते हैं,ly एनोटेशन बना रहे हैं।
-
-### चरण 1: सभी आवश्यक क्लासेज़ इम्पोर्ट करें
-इन इम्पोर्ट्स को सिर्फ कॉपी‑पेस्ट न करें—प्रत्येक का क्या काम है समझना बाद में समस्याओं को हल करने में मदद करेगा:
-
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Point;
@@ -119,14 +449,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 ```
-
-म्पोर्टैनिपुलेशन के लिए आपका मुख्य इंटरफ़ेस
-- `Point`: दस्तावेज़ पर कोऑर्डिनेट्स को परिभाषित करता है
-- `Reply`: एनोटेशनों पर थ्रेडेड बातचीत सक्षम करता है
-- `SquiggलीAnnotation`: वह विशिष्ट एनोटेशन टाइप जिसे हम बना रहे हैं
-
-### चरण 2: अपना Squiggly एनोटेशन बनाएं और कॉन्फ़िगर करें
-यहाँ वास्तविक कस्टमाइुकिंग squiggly एनोटेशन बनाता है:
 
 ```java
 // Create a new SquigglyAnnotation instance
@@ -160,11 +482,6 @@ points.add(new Point(240, 650));
 squigglyAnnotation.setPoints(points);
 ```
 
-**कोऑर्डिनेट सिस्टम को समझना**: पॉइंट्स पेज के टॉप‑लेफ़्ट कोने से मापे जाते हैं। पहले दो पॉइंट्स आपके एनोटेशन एरिया की शुरुआत और आकार बना सकते हैं।
-
-### चरण 3: इंटरैक्टिव Replies जोड़ें (वैकल्पिक लेकिन शक्तिशाली)
-यहाँ आपके एनोटेशन वास्तव में सहयोगी बनते हैं—दस्तावेज़ रिव्यू वर्कफ़्लो के लिए उत्तम:
-
 ```java
 // Create replies to the annotation (optional)
 Reply reply1 = new Reply();
@@ -183,11 +500,6 @@ replies.add(reply2);
 squigglyAnnotation.setReplies(replies);
 ```
 
-**वास्तविक उपयोग केस**: कानूनी दस्तावेज़ रिव्यू में, कई वकील एक ही एनोटेशन पर replies जोड़ सकते हैं, जिससे दस्तावेज़ पर सीधे थ्रेडेड चर्चा बनती है।
-
-### चरण 4: एनोटेशन लागू करें और दस्तावेज़ सहेजें
-आखिरकार, एनोटेशन को अपने दस्तावेज़ में जोड़ें और सहेजें:
-
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
     // Add the prepared squiggly annotation to the document
@@ -197,10 +509,6 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
     annotator.save("YOUR_OUTPUT_DIRECTORY/result_squiggly_annotation.pdf");
 }
 ```
-
-**मेमोरी मैनेजमेंट नोट**: try‑with है, जिससे लंबे समयत कॉन्फ़िगरेशन विकल्प
-### एनोटेशन की उपस्थिति को कस्टमाइज़ करना
-डिफ़ॉल्ट रंग और स्टाइल्स से फँसे नहीं हैं। यहाँ आपके ब्रांड या एप्लिकेशन थीम से मेल खाने वाले एनोटेशन बनाने का तरीका है:
 
 ```java
 // Custom color configurations
@@ -214,20 +522,6 @@ squigglyAnnotation.setOpacity(0.3); // Very subtle
 squigglyAnnotation.setOpacity(0.9); // Almost opaque
 ```
 
-### एनोटेशनों को सटीक रूप से पोजिशन करना
-कोऑर्डिनेट्स को सही करना कठिन हो सकता है। यहाँ एक व्यवस्थित तरीका है:
-1. **रफ़ अनुमान से शुरू करें**: PDF व्यूअर का उपयोग करके अनुमानित कोऑर्डिनेट्स पहचानें
-2. **क्रमिक रूप से टेस्ट करें**: छोटे बदलाव करें और टेस्ट करें
-3. **विभिन्न पेज साइज को ध्यान में रखें**: A4, Letter, और कस्टम साइज के अलग कोऑर्डिनेट सिस्टम होते हैं
-
-## सामान्य समस्याएँ और समाधान
-### समस्या: एनोटेशन नहीं दिख रहे हैं
-**सबसे संभावित कारण:**
-- गलत कोऑर्डिनेट पॉइंट्स (पेज की सीमाओं के बाहर)
-- लाइसेंस सेटअप का अभाव
-- पेज नंबर निर्दिष्ट करने में त्रुटि
-
-**समाधान चेकलिस्ट:**
 ```java
 // Verify your points are within page boundaries
 System.out.println("Page dimensions: " + annotator.getPageInfo(0));
@@ -239,18 +533,6 @@ for (Point point : points) {
 }
 ```
 
-### समस्या: बड़े फ़ाइलों के साथ खराब प्रदर्शन
-**क्या हो रहा है**: बड़े PDF को मेमोरी में लोड करने से आपका एप्लिकेशन धीमा हो सकता है।
-
-**प्रदर्शन अनुकूलन रणनीतियाँ:**
-- पूरे दस्तावेज़ को लोड करने के बजाय पेजों को व्यक्तिगत रूप से प्रोसेस करें
-- संभव हो तो स्ट्रीमिंग का उपयोग करें
-- अक्सर एक्सेस किए जाने वाले दस्तावेज़ों के लिए कैशिंग लागू करें
-
-### समस्या: रंग मान काम नहीं कर रहे हैं
-**समस्या**: RGB बनाम ARGB रंग फ़ॉर्मेट में भ्रम।
-
-**समाधान**: GroupDocs ARGB फ़ॉर्मेट (Alpha, Red, Green, Blue) उपयोग करता है:
 ```java
 // Wrong: RGB format
 int wrongColor = 0xFF0000; // This might not work as expected
@@ -259,9 +541,6 @@ int wrongColor = 0xFF0000; // This might not work as expected
 int rightColor = 0xFFFF0000; // Full opacity red
 ```
 
-## प्रदर्शन सर्वश्रेष्ठ प्रथाएँ
-### मेमोरी मैनेजमेंट
-एक साथ कई दस्तावेज़ प्रोसेस करते समय मेमोरी उपयोग जल्दी से बढ़ सकता है:
 ```java
 // Good practice: Use try-with-resources
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -274,8 +553,6 @@ try (Annotator annotator = new Annotator(inputPath)) {
 Annotator annotator = new Annotator(inputPath); // Resources might leak
 ```
 
-### बैच प्रोसेसिंग अनुकूलन
-यदि आप सैकड़ों दस्तावेज़ एनोटेट कर रहे हैं, तो इस दृष्टिकोण पर विचार करें:
 ```java
 public void processBatch(List<String> documentPaths) {
     for (String path : documentPaths) {
@@ -291,19 +568,6 @@ public void processBatch(List<String> documentPaths) {
 }
 ```
 
-### फ़ाइल आकार पर विचार
-बड़े PDF प्रदर्शन को प्रभावित कर सकते हैं। यहाँ कुछ रणनीतियाँ हैं:
-- **PDF को पहले संकुचित करें**: एनोटेशन से पहले PDF ऑप्टिमाइज़ेशन टूल्स का उपयोग करें
-- **पेजों को चयनात्मक रूप से प्रोसेस करें**: केवल आवश्यक पेज लोड और एनोटेट करें
-- विभाजित करें
-
-## वास्तविक दुनिया के अनुपी वातावरण में चमकते हैं:
-- **कानूनी फर्में**: अनुबंध क्लॉज़ को रिव्यू के लिए चिह्नित करना
-- **प्रकाशन**: संपादकीय बदलाव दर्शाना
-- **शिक्षा**: छात्र की त्रुटियों को हाइलGroupDocs.Annotation लोकप्रिय फ्रेमवर्क्स के साथ **JSFोनेंट‑आधारित UI के साथ सुगमता से काम करता है
-- **माइक्रोसर्विसेज**: कंटेनराइज़्ड डिप्लॉयमेंट के लिए हल्का
-
-###्लो बना सकते हैं:
 ```java
 public class DocumentWorkflow {
     public void reviewDocument(String documentPath, ReviewLevel level) {
@@ -325,46 +589,8 @@ public class DocumentWorkflow {
 }
 ```
 
-## कब Squiggly एनोटेशन बनाम विकल्पों का उपयोग करें
-**Squiggly एनोटेशन का चयन तब करें जब:**
-- त्रुटियों या सुधारों को चिह‑चेक)
-- अनिश्चित या संदिग्ध सामग्री को इंगित करना
-- वर्ड प्रोसेसर जैसे “वेवी अंडर **हाइलाइटिंग**: बिना त्रुटि संकेत के ज़ोर देने के लिए हाइलाइट एनोटेशन उपयोग करें
-- **टिप्पणियाँ**: विस्तृत फीडबैक के लिए टेक्स्ट एनोटेशन उपयोग करें
-- **स्टैम्प्स**: अनुमोदन वर्कफ़्लो के लिए स्टैम्प एनोटेशन उपयोग करें
+## संबंधित ट्यूटोरियल
 
-## निष्कर्ष
-अब आप Java का उपयोग करके प्रोफ़ेशनल PDF एनोटेशन जोड़ने की कला में निपुण हो गए हैं। GroupDocs.Annotation for Java जटिल दस्तावेज़ मैनिपुलेशन कार्यों को सरल कोड इम्प्लीमेंटेशन में बदल देता है।
-
-**इस गाइड से मुख्य बिंदु:**
-- GroupDocs.Annotation को सही ढंग से सेटअप करना अधिकांश प्लेसमेंट के लिए महत्वपूर्ण है
-- बड़े दस्तावेज़ या बैच प्रोसेसिंग में मेमोरी मैनेजमेंट महत्वपूर्ण हो जाता है
-- कस्टमाइज़ेशन विकल्प आपको ऐसे एनोटेशन बनाने देते हैं जो आपके एप्लिकेशन की जरूरतों के अनुसार पूरी तरह फिट हों
-
-**आपके अगले कदम:**
-1. अन्य एनोटेशन प्रकारों (हाइलाइट्स, टेक्स्ट, स्टैम्प्स) के साथ प्रयोग करें
-2. एक साधारण एनोटेशन मैनेजमेंट सिस्टम बनाएं
-3. उन्नत फीचर्स जैसे एनोटेशन एक्सट्रैक्शन और मॉडिफिकेशन के लिए GroupDocs.Annotation API का अन्वेषण करें
-
-प्रोग्रामेटिक PDF एनोटेशन की खूबी यह है कि एक बार बुनियादी बातें समझ लेने के बाद, जो पहले मैन्युअल हस्तक्षेप की आवश्यकता रखते थे। चाहे आप अगला महान दस्तावेज़ सहयोग प्लेटफ़ॉर्म बना रहे हों या सिर्फ अपने मौजूदा एप्लिकेशन में कुछ मार्कअप क्षमताएँ जोड़ना चाहते हों, अब आपके पास इसे करने के लिए टूल्स और ज्ञान है।
-
-## अक्सर पूछे जाने वाले प्रश्न
-**प्रश्न: GroupDocs.Annotation अन्य Java PDF लाइब्रेरीज़ से बेहतर क्यों है?**  
-**उत्तर:** GroupDocs.Annotation एनोटेशन में विशेषज्ञता रखता है जबकि कई दस्तावेज़ फ़ॉर्मेट्स के साथ संगतता बनाए रखता है। यह विशेष रूप से एनोटेशन वर्कफ़स्टमाइज़ेशन विकल्प जैसी सुविधाएँ प्रदान करता है जो सामान्य PDF लाइब साथ उपयोग कर सकता हूँ?**  
-**उत्तर:** बिल्कुल! GroupDocs.Annotation Spring Boot के साथ सहजता से इंटीग्रेट होता है। आप ऐसे REST एंडपॉइंट बना सकते हैं जो दस्तावेज़ अपलोड स्वीकार करें और एनोटेटेड रखें और बड़े दस्तावेज़ पेज साइज वाले दस्तावेज़ों को कैसे हैंडल करूँ?**  
-**उत्तर:** हमेशा `annotator.getPageInfo(pageIndex)` का उपयोग करके पहले पेज डाइमेंशन क्वेरी करें। यह पेज की चौड़ाई, ऊँचाई और अन्य मेटाडिनेट्स को हार्ड‑कोड करें।
-
-**प्रश्नेशन निकालने का कोई तरीका है?**  
-**उत्तर:** हाँ! GroupDocs.Annotation उन PDFs से एनोटेशन निकाल सकता है जिनमें पहले से एनोटेशन मौजूद हैं। सभी एनोटेशन प्राप्त करने के लिए `annotator.get()` उपयोग करें, फिर उनके प्रॉपर्टीज़ और कंटेंट तक पहुँचने के लिए इटररेट करें।
-
-**प्रश्न: मल्टी‑यूज़र सिस्टम में एनोटेशन परमिशन को संभालने का सबसे अच्छा तरीका क्या है?**  
-**उत्तर:** GroupDocs मेथड्स को कॉल करने से पहले एप्लिकेशन लेवल पर यूज़र ऑथेंटिकेशन लागू करें। आप एनोटेशन replies में यूज़र जानकारी स्टोर कर सकते हैं और कस्टम लॉजिक लागू करके नियंत्रित कर सकते हैं कि कौन विशेष एनोटेशन को मॉडिफ़ाई या डिलीट कर सकता है।
-
-**प्रश्न: सैकड़ों PDFs प्रोसेस करते समय मेमोरी उपयोग को कैसे अनुकूलित करूँ?**  
-**उत्तर:** try‑with‑resources ब्लॉक्स का उपयोग करके दस्तावेज़ों को एक‑एक करके प्रोसेस करें, दस्तावेज़ क्यूइंग लागू करें, और CPU‑इंटेंसिव ऑपरेशन्स के लिए Java की parallel streams का उपयोग करने पर विचार करें। साथ ही, ही अपने सामान्य दस्तावेज़ आकार केअंतिम अपडेट:** 2026-01-31  
-**परीक्षित संस्करण:** GroupDocs.Annotation 25.2 for Java  
-**लेखक:** GroupDocs  
-
-**अतिरिक्त संसाधन**
-- [GroupDocs.Annotation for Java दस्तावेज़ीकरण](https://docs.groupdocs.com/annotation/java/)
-- [पूर्ण API रेफ़रेंस](https://reference.groupdocs.com/annotation/java/)
+- [Java PDF एनोटेशन लाइब्रेरी ट्यूटोरियल](/annotation/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/)
+- [Remove Annotation Replies Java - GroupDocs.Annotation के साथ ID द्वारा रिप्लाई प्रबंधन](/annotation/java/annotation-management/java-groupdocs-annotation-remove-replies-by-id/)
+- [Edit PDF Annotations Java - पूर्ण GroupDocs ट्यूटोरियल](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

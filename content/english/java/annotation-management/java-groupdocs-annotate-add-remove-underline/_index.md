@@ -1,9 +1,9 @@
 ---
-title: "Create Clean PDF Java - Underline Annotations with GroupDocs"
+title: "Create Clean PDF Java: Underline Annotations with GroupDocs"
 linktitle: "Java Document Annotation with GroupDocs"
-description: "Learn how to create clean PDF Java files and annotate PDF in Java using GroupDocs.Annotation, with full code examples and troubleshooting tips."
-date: "2025-12-21"
-lastmod: "2025-12-21"
+description: "Learn how to create clean PDF Java files, manage Java PDF memory, and annotate PDF in Java using GroupDocs.Annotation, with full code examples and troubleshooting tips."
+date: "2026-03-24"
+lastmod: "2026-03-24"
 weight: 1
 url: "/java/annotation-management/java-groupdocs-annotate-add-remove-underline/"
 keywords: "java document annotation library, groupdocs annotation tutorial, add underline annotation java, java pdf annotation, how to annotate pdf documents in java"
@@ -14,9 +14,7 @@ type: docs
 
 # Create Clean PDF Java: Underline Annotations with GroupDocs
 
-## Introduction
-
-Struggling with document management and collaboration in your Java applications? You're not alone. Many developers face the challenge of implementing robust document annotation features that work reliably across different file formats.
+If you need to **create clean PDF Java** files and add collaborative annotations, you’re in the right place. Struggling with document management and collaboration in your Java applications? You're not alone. Many developers face the challenge of implementing robust document annotation features that work reliably across different file formats.
 
 In this guide, you'll **create clean PDF Java** files and learn how to **annotate PDF in Java** using GroupDocs.Annotation. By the end of this tutorial, you'll know exactly how to add underline annotations with comments, remove existing annotations, and integrate these features seamlessly into your projects.
 
@@ -40,6 +38,9 @@ Whether you're building a document review system, educational platform, or colla
 Creating a clean PDF Java file means generating a version of the document **without any annotations** while preserving the original content. This is useful for final distribution, archival, or when you need to share a “clean” copy after a review cycle.
 
 GroupDocs.Annotation makes this straightforward: load the annotated file, configure `SaveOptions` to exclude all annotation types, and save the result. The steps are illustrated later in the **Removing Annotations** section.
+
+## Why create clean PDF Java files?
+A clean version eliminates reviewer marks, comments, and highlights, giving you a polished document ready for clients, regulators, or public release. It also reduces file size and prevents accidental disclosure of internal notes—critical for legal and compliance workflows.
 
 ## How to annotate PDF in Java using GroupDocs
 GroupDocs.Annotation provides a rich API for **annotate PDF in Java**. It supports a wide range of annotation types, including highlights, stamps, and underlines. In this tutorial we focus on underline annotations because they are commonly used for emphasizing text while allowing threaded comments.
@@ -318,6 +319,16 @@ GroupDocs.Annotation is **not thread‑safe** by default. If your application pr
 - Reuse `Point` collections for common coordinate sets.  
 - Keep a **template PDF** in memory if you repeatedly annotate the same base document.
 
+## Java PDF Memory Management Tips
+Efficient memory use is essential when handling large PDFs or processing many files in a batch. Here are a few practical recommendations:
+
+- **Use try‑with‑resources** for every `Annotator` to guarantee disposal.  
+- **Increase the JVM heap** (`-Xmx`) only as needed; monitor usage with profiling tools.  
+- **Process documents sequentially** when possible, freeing memory after each file.  
+- **Avoid loading the same PDF multiple times**; reuse the same stream if you need to read it repeatedly.
+
+Applying these practices helps keep your application responsive and prevents out‑of‑memory crashes during heavy annotation workloads.
+
 ## Real‑World Applications and Use Cases
 
 ### Document Review Systems
@@ -435,7 +446,7 @@ A: Yes. Use `annotator.get()` to retrieve all annotations, then filter by type, 
 
 ---
 
-**Last Updated:** 2025-12-21  
+**Last Updated:** 2026-03-24  
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs  
 

@@ -1,36 +1,59 @@
 ---
-"date": "2025-05-06"
-"description": "Aprenda a adicionar anotações de texto riscado em Java usando GroupDocs.Annotation. Siga este guia passo a passo para anotações perfeitas em documentos."
-"title": "Guia de Anotação de Texto em Java com o GroupDocs.Annotation"
-"url": "/pt/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+categories:
+- Java Development
+date: '2026-03-30'
+description: Aprenda como adicionar anotação de tachado em Java usando o GroupDocs.Annotation.
+  Guia passo a passo com exemplos de código, dicas de solução de problemas e melhores
+  práticas para marcação de documentos.
+keywords: Java strikeout annotation tutorial, GroupDocs annotation Java guide, text
+  markup Java, document annotation Java, how to add strikeout annotation java
+lastmod: '2026-03-30'
+linktitle: Add Strikeout Annotation Java Tutorial
+tags:
+- java-annotations
+- groupdocs
+- document-processing
+- pdf-manipulation
+title: Adicionar Anotação de Tachado Tutorial Java com GroupDocs
 type: docs
-"weight": 1
+url: /pt/java/text-annotations/java-text-strikeout-annotation-groupdocs/
+weight: 1
 ---
 
-# Anotação de texto tachado em Java com GroupDocs.Annotation
+# Adicionar Anotação de Tachado Java - Guia Completo do GroupDocs
 
-No mundo digital de hoje, documentos frequentemente exigem anotações para destacar informações importantes ou indicar revisões. Seja trabalhando em projetos colaborativos ou precisando revisar e comentar documentos, a capacidade de riscar texto pode ser inestimável. Este tutorial guiará você na adição de uma anotação de texto riscado usando o GroupDocs.Annotation para Java, uma poderosa biblioteca projetada para manipulação de documentos.
+Já se pegou olhando para um documento pensando: “Preciso riscar este texto, mas não posso simplesmente pegar uma caneta vermelha”? Você não está sozinho. Seja construindo um sistema de revisão de documentos, criando um fluxo de edição ou apenas precisando marcar texto para exclusão em sua aplicação Java, **add strikeout annotation java** é uma habilidade essencial. Neste tutorial vamos percorrer tudo que você precisa saber para implementar a funcionalidade de tachado de texto que realmente funciona em produção.
 
-**O que você aprenderá:**
-- Como configurar seu ambiente com GroupDocs.Annotation.
-- Instruções passo a passo para implementar uma anotação de texto riscado em Java.
-- Aplicações práticas desse recurso em cenários do mundo real.
-- Dicas de desempenho e práticas recomendadas ao usar GroupDocs.Annotation.
+## Respostas Rápidas
+- **Qual biblioteca suporta anotações de tachado em Java?** GroupDocs.Annotation for Java  
+- **Qual palavra‑chave principal devo focar para SEO?** add strikeout annotation java  
+- **Preciso de uma licença para executar o código de exemplo?** Um teste gratuito ou licença temporária funciona para desenvolvimento; uma licença completa é necessária para produção.  
+- **Posso usar isso com arquivos PDF, DOCX e PPTX?** Sim – GroupDocs.Annotation suporta todos os principais formatos de documento.  
+- **Qual versão do Java é necessária?** JDK 8 ou superior (JDK 11+ recomendado).
 
-## Pré-requisitos
+## O que é add strikeout annotation java?
+Uma anotação de tachado desenha uma linha através do texto selecionado, indicando visualmente que o conteúdo deve ser removido ou ignorado. É uma forma não destrutiva de sugerir exclusões enquanto mantém o texto original intacto para trilhas de auditoria ou revisões colaborativas.
 
-Antes de mergulhar na implementação, certifique-se de ter o seguinte:
-- **Kit de Desenvolvimento Java (JDK):** A versão 8 ou superior é necessária para compatibilidade com GroupDocs.Annotation.
-- **Biblioteca de anotações do GroupDocs:** Inclua esta biblioteca em seu projeto. A versão usada aqui é `25.2`.
-- **Ambiente de Desenvolvimento Integrado (IDE):** Como IntelliJ IDEA, Eclipse ou NetBeans.
+## Por que usar anotações de tachado em aplicações Java?
+- **Fluxos de revisão de documentos** – revisores podem sinalizar texto indesejado sem alterar a fonte.  
+- **Edição colaborativa** – membros da equipe veem sugestões de exclusão instantaneamente.  
+- **Legal e conformidade** – mantém uma trilha de auditoria clara das alterações.  
+- **Migração de conteúdo** – marca seções obsoletas antes de mover conteúdo entre sistemas.  
+
+## Pré‑requisitos e Configuração do Ambiente
+Você precisará do seguinte antes de mergulhar no código:
+
+- **Java Development Kit (JDK)** 8+ (JDK 11+ recomendado)  
+- **Maven ou Gradle** para gerenciamento de dependências  
+- **IDE** – IntelliJ IDEA, Eclipse ou VS Code com extensões Java  
+- **GroupDocs.Annotation library** – usaremos a versão 25.2 nos exemplos  
+
+*Bom ter:* conhecimento básico de anotações Java e manipulação de PDF.
 
 ## Configurando GroupDocs.Annotation para Java
 
-Para começar a usar o GroupDocs.Annotation para Java, siga estas etapas:
-
-### Configuração do Maven
-
-Adicione a seguinte configuração ao seu `pom.xml` arquivo para incluir GroupDocs.Annotation em seu projeto:
+### Configuração Maven que Realmente Funciona
+Adicione o repositório e a dependência ao seu `pom.xml` exatamente como mostrado:
 
 ```xml
 <repositories>
@@ -50,149 +73,223 @@ Adicione a seguinte configuração ao seu `pom.xml` arquivo para incluir GroupDo
 </dependencies>
 ```
 
-### Aquisição de Licença
+### Obtendo sua Licença
+GroupDocs oferece várias opções de licenciamento:
 
-O GroupDocs oferece um teste gratuito, licenças temporárias para fins de avaliação ou você pode adquirir uma licença para uso contínuo. Visite o [página de compra](https://purchase.groupdocs.com/buy) para explorar suas opções.
+- **Teste gratuito** – perfeito para testes (sem necessidade de cartão de crédito)  
+- **Licença temporária** – ideal para desenvolvimento e testes  
+- **Licença completa** – necessária para uso em produção; veja a [purchase page](https://purchase.groupdocs.com/buy)
 
-### Inicialização e configuração básicas
+> **Dica profissional:** Comece com o teste gratuito para explorar a API, depois troque para uma licença temporária quando estiver pronto para construir um recurso real.
 
-Depois de configurar as dependências do Maven, inicialize GroupDocs.Annotation no seu aplicativo Java:
+### Configuração Rápida de Verificação
+Execute este programa mínimo para verificar se a biblioteca carrega corretamente:
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
 public class DocumentSetup {
     public static void main(String[] args) {
-        Annotator annotator = new Annotator("path/to/your/document.pdf");
-        // Prossiga com as tarefas de anotação...
+        try {
+            Annotator annotator = new Annotator("path/to/your/document.pdf");
+            System.out.println("GroupDocs.Annotation is ready to use!");
+            annotator.dispose();
+        } catch (Exception e) {
+            System.out.println("Setup issue: " + e.getMessage());
+        }
     }
 }
 ```
 
-## Guia de Implementação
+## Como adicionar add strikeout annotation java
 
-Nesta seção, vamos nos aprofundar na implementação de um recurso de riscar texto usando GroupDocs.Annotation.
+A seguir está uma implementação completa, pronta para produção, dividida em etapas claras.
 
-### Adicionando anotação de texto tachado
+### Etapa 1 – Inicializar o Annotator
+Crie uma instância `Annotator` que aponta para o documento fonte:
 
-#### Visão geral
-Adicionar uma anotação de texto tachado envolve definir a área a ser tachada e configurar suas propriedades, como cor, opacidade e número de página. Esse recurso é particularmente útil para indicar alterações ou erros em documentos.
+```java
+Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
+```
 
-#### Implementação passo a passo
-1. **Inicializar o Anotador**
-   Crie uma instância de `Annotator` com o caminho do seu documento:
+> **Por que isso importa:** Usar um caminho absoluto ou relativo resolvido corretamente evita exceções “arquivo não encontrado”.
 
-   ```java
-   Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
-   ```
+### Etapa 2 – (Opcional) Preparar Respostas de Comentário
+Adicionar respostas torna a anotação colaborativa:
 
-2. **Criar respostas para anotações (opcional)**
-   Anexe comentários ou respostas às anotações, visíveis durante a revisão do documento:
+```java
+Reply reply1 = new Reply();
+reply1.setComment("First comment");
+reply1.setRepliedOn(Calendar.getInstance().getTime());
 
-   ```java
-   Reply reply1 = new Reply();
-   reply1.setComment("First comment");
-   reply1.setRepliedOn(Calendar.getInstance().getTime());
+Reply reply2 = new Reply();
+reply2.setComment("Second comment");
+reply2.setRepliedOn(Calendar.getInstance().getTime());
 
-   Reply reply2 = new Reply();
-   reply2.setComment("Second comment");
-   reply2.setRepliedOn(Calendar.getInstance().getTime());
-   
-   List<Reply> replies = Arrays.asList(reply1, reply2);
-   ```
+List<Reply> replies = Arrays.asList(reply1, reply2);
+```
 
-3. **Defina a área de strikeout**
-   Especifique as coordenadas que formam um retângulo para o strikeout:
+Esses comentários aparecem quando um usuário passa o mouse sobre o tachado.
 
-   ```java
-   Point point1 = new Point(80, 730);
-   Point point2 = new Point(240, 730);
-   Point point3 = new Point(80, 650);
-   Point point4 = new Point(240, 650);
+### Etapa 3 – Definir a Área de Tachado
+Especifique o retângulo que envolve o texto que você deseja riscar:
 
-   List<Point> points = Arrays.asList(point1, point2, point3, point4);
-   ```
+```java
+Point point1 = new Point(80, 730);
+Point point2 = new Point(240, 730);
+Point point3 = new Point(80, 650);
+Point point4 = new Point(240, 650);
 
-4. **Configurar a anotação de strikeout**
-   Defina propriedades como cor da fonte, opacidade e número de página:
+List<Point> points = Arrays.asList(point1, point2, point3, point4);
+```
 
-   ```java
-   StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
-   strikeout.setCreatedOn(Calendar.getInstance().getTime());
-   strikeout.setFontColor(65535);  // Cor amarela
-   strikeout.setMessage("This is a strikeout annotation");
-   strikeout.setOpacity(0.7);
-   strikeout.setPageNumber(0);
-   strikeout.setPoints(points);
-   strikeout.setReplies(replies);
-   ```
+> **Dica de coordenadas:** A origem (0,0) é o canto superior esquerdo da página; X cresce para a direita, Y cresce para baixo. Use um visualizador de PDF que mostre coordenadas para ajustar esses valores com precisão.
 
-5. **Adicionar a anotação**
-   Adicione sua anotação configurada ao documento:
+### Etapa 4 – Configurar a Anotação de Tachado
+Defina a aparência, número da página e anexe os comentários:
 
-   ```java
-   annotator.add(strikeout);
-   ```
+```java
+StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
+strikeout.setCreatedOn(Calendar.getInstance().getTime());
+strikeout.setFontColor(65535);  // Yellow color
+strikeout.setMessage("This is a strikeout annotation");
+strikeout.setOpacity(0.7);
+strikeout.setPageNumber(0);
+strikeout.setPoints(points);
+strikeout.setReplies(replies);
+```
 
-6. **Salvar o documento anotado**
-   Salvar alterações em um novo arquivo:
+*Nota de cor:* `65535` corresponde ao amarelo no formato inteiro RGB. Altere o valor para usar outras cores.
 
-   ```java
-   annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
-   ```
+### Etapa 5 – Aplicar a Anotação e Salvar
+Adicione a anotação ao documento e escreva o arquivo de saída:
 
-7. **Recursos de limpeza**
-   Descarte os recursos adequadamente:
+```java
+annotator.add(strikeout);
+annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
+```
 
-   ```java
-   if (annotator != null) {
-       annotator.dispose();
-   }
-   ```
+### Etapa 6 – Limpar Recursos (Crítico!)
+Sempre descarte o annotator para liberar recursos nativos:
 
-### Dicas para solução de problemas
-- Certifique-se de que as coordenadas definam corretamente a área a ser delimitada.
-- Verifique se o caminho do seu documento está correto e acessível.
-- Verifique se há exceções lançadas durante a inicialização ou salvamento, o que pode indicar problemas de configuração.
+```java
+if (annotator != null) {
+    annotator.dispose();
+}
+```
 
-## Aplicações práticas
+Em produção, envolva o uso em um bloco try‑with‑resources ou em uma construção `try/finally`.
 
-Aqui estão alguns cenários do mundo real em que anotações de texto riscado podem ser úteis:
-1. **Edição de documentos:** Marque as informações incorretas que precisam de revisão.
-2. **Processos de revisão:** Destaque as alterações sugeridas pelos revisores.
-3. **Fluxos de trabalho colaborativos:** Indicar seções de um documento em discussão ou revisão.
+## Problemas Comuns e Como Corrigi‑los
 
-## Considerações de desempenho
-- **Otimize o uso da memória:** Certifique-se de que seu sistema tenha recursos de memória adequados ao trabalhar com documentos grandes.
-- **Processamento em lote:** Processe vários documentos em lotes para gerenciar o consumo de recursos de forma eficaz.
-- **Práticas de código eficientes:** Use estruturas de dados e algoritmos eficientes para lidar com anotações.
+| Problema | Sintoma | Correção |
+|----------|----------|----------|
+| **File Not Found** | `Annotator` lança uma exceção | Use caminhos absolutos, verifique permissões de leitura, assegure que nenhum outro processo bloqueie o arquivo |
+| **Wrong Coordinates** | O tachado aparece longe do texto desejado | Verifique novamente o sistema de coordenadas do visualizador de PDF; ajuste os pontos conforme necessário |
+| **Annotation Invisible** | Nenhum tachado visível após salvar | Aumente `opacity` (ex.: `0.9`), verifique `pageNumber` (base 0), assegure que os pontos formem um retângulo adequado |
+| **OutOfMemoryError** | Aplicação trava em PDFs grandes | Aumente o heap da JVM (`-Xmx2048m`), processe documentos em lotes, sempre chame `dispose()` |
+
+## Melhores Práticas de Performance para Produção
+
+### Gerenciamento de Memória
+```java
+// Good: try‑with‑resources (Java 7+)
+try (Annotator annotator = new Annotator(documentPath)) {
+    // annotation logic here
+} // annotator automatically disposed
+
+// Alternative: explicit disposal
+Annotator annotator = null;
+try {
+    annotator = new Annotator(documentPath);
+    // annotation logic here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
+
+### Estratégia de Processamento em Lote
+Quando precisar anotar dezenas ou centenas de arquivos:
+
+- Processar 10‑20 documentos por lote.  
+- Registrar sucesso/falha para cada arquivo.  
+- Re‑inicializar o `Annotator` para cada documento para evitar vazamentos de memória.  
+
+### Dicas de Cache
+- Cachear modelos de documentos usados com frequência.  
+- Armazenar mapas de coordenadas pré‑calculados para layouts padrão.  
+
+## Casos de Uso no Mundo Real
+
+1. **Sistemas de Revisão de Documentos** – Editores sugerem exclusões sem alterar o contrato original.  
+2. **Emendas Legais** – Advogados rastreiam remoções de cláusulas enquanto preservam a redação original para auditoria.  
+3. **Revisão Acadêmica por Pares** – Revisores marcam seções para remoção e adicionam comentários inline.  
+4. **Migração de Conteúdo** – Durante migrações de CMS, tachados destacam cópias desatualizadas que precisam ser substituídas.  
+
+## Personalização Avançada
+
+### Estilização Personalizada
+```java
+// Red for critical errors
+strikeout.setFontColor(16711680);
+// Blue for style suggestions
+strikeout.setFontColor(255);
+// Adjust opacity based on confidence
+strikeout.setOpacity(0.9); // high confidence
+strikeout.setOpacity(0.5); // tentative suggestion
+```
+
+### Adicionando Metadados
+```java
+strikeout.setMessage("Deleted by: " + username + " on " + timestamp);
+strikeout.setSubject("Content Review – Q1 2026");
+```
+
+## Lista de Verificação de Solução de Problemas
+- ✅ Você consegue abrir o arquivo fonte manualmente?  
+- ✅ Todas as dependências do GroupDocs estão presentes no classpath?  
+- ✅ Os pontos formam um retângulo válido?  
+- ✅ O número da página está correto (base 0)?  
+- ✅ Há memória heap suficiente?  
+- ✅ Você tem permissão de escrita para a pasta de saída?  
+- ✅ O formato do documento é suportado (PDF, DOCX, PPTX, etc.)?  
+
+## Perguntas Frequentes
+
+**Q: Posso usar GroupDocs.Annotation dentro de um serviço Spring Boot?**  
+A: Sim. Adicione a dependência Maven, injete uma classe de serviço que cria o `Annotator` e gerencie seu ciclo de vida com os escopos de bean do Spring.
+
+**Q: Quais formatos de documento suportam anotações de tachado?**  
+A: PDF, DOCX, PPTX e muitos outros formatos suportados pelo GroupDocs.Annotation. O PDF oferece o manuseio de coordenadas mais preciso.
+
+**Q: Como lidar com documentos de tamanhos de página variados?**  
+A: Recupere as dimensões da página via `annotator.getPageInfo(pageNumber)` e escale suas coordenadas de acordo.
+
+**Q: É possível editar ou excluir uma anotação de tachado existente?**  
+A: Absolutamente. Use `annotator.getAnnotations(pageNumber)` para buscar, então `annotator.update(updatedAnnotation)` ou `annotator.delete(annotationId)`.
+
+**Q: Qual é o impacto de performance ao adicionar muitas anotações?**  
+A: Adicionar centenas de anotações geralmente é aceitável, mas monitore o uso de memória. Para conjuntos muito grandes de anotações, considere paginar a visualização ou carregar anotações sob demanda.
 
 ## Conclusão
+Agora você tem um guia completo, pronto para produção, de **add strikeout annotation java** usando GroupDocs.Annotation. Comece com o exemplo de verificação simples, depois escale para processamento em lote, estilização personalizada e enriquecimento de metadados. Lembre‑se de testar as coordenadas cuidadosamente, gerenciar recursos de forma responsável e escolher o modelo de licenciamento adequado ao seu ambiente.
 
-Agora você aprendeu a adicionar uma anotação de texto riscado usando o GroupDocs.Annotation para Java. Esse recurso pode aprimorar significativamente seus processos de gerenciamento de documentos, fornecendo indicações visuais claras para edições e revisões. 
+Pronto para explorar mais? Confira outros tipos de anotação — realce, nota, imagem, seta e marca d’água — para construir uma suíte completa de colaboração em documentos.
 
-Em seguida, considere explorar outros recursos do GroupDocs.Annotation, como anotações de imagem ou adições de hiperlinks para enriquecer ainda mais seus fluxos de trabalho de documentos.
+---
 
-## Seção de perguntas frequentes
+**Última atualização:** 2026-03-30  
+**Testado com:** GroupDocs.Annotation 25.2 for Java  
+**Autor:** GroupDocs  
 
-1. **O que é GroupDocs.Annotation?**
-   Uma biblioteca abrangente que permite adicionar vários tipos de anotações a documentos em aplicativos Java.
-2. **Posso usar o GroupDocs.Annotation para processamento em lote?**
-   Sim, ele suporta anotação de múltiplos documentos de forma eficiente com gerenciamento adequado de recursos.
-3. **Como configuro uma licença temporária?**
-   Visite o [página de licença temporária](https://purchase.groupdocs.com/temporary-license/) e siga as instruções para obter um.
-4. **Quais são alguns problemas comuns ao usar GroupDocs.Annotation?**
-   Problemas comuns incluem caminhos de arquivo incorretos, recursos de memória insuficientes ou dependências ausentes na configuração do seu projeto.
-5. **Como integro o GroupDocs.Annotation com outros sistemas?**
-   O GroupDocs.Annotation pode ser integrado a aplicativos web por meio de APIs REST, permitindo compatibilidade e flexibilidade entre plataformas.
+**Recursos Adicionais**
 
-## Recursos
-- [Documentação de Anotação do GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- [Referência de API](https://reference.groupdocs.com/annotation/java/)
-- [Baixar Biblioteca](https://releases.groupdocs.com/annotation/java/)
-- [Comprar GroupDocs](https://purchase.groupdocs.com/buy)
-- [Teste grátis](https://releases.groupdocs.com/annotation/java/)
-- [Licença Temporária](https://purchase.groupdocs.com/temporary-license/)
-- [Fórum de Suporte](https://forum.groupdocs.com/c/annotation/)
-
-Embarque em sua jornada para gerenciar efetivamente anotações em documentos com o GroupDocs.Annotation para Java e explore as vastas possibilidades que ele oferece!
+- [Documentação do GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)  
+- [Guia de Referência da API](https://reference.groupdocs.com/annotation/java/)  
+- [Baixar a Versão Mais Recente](https://releases.groupdocs.com/annotation/java/)  
+- [Comprar Licença Completa](https://purchase.groupdocs.com/buy)  
+- [Iniciar Teste Gratuito](https://releases.groupdocs.com/annotation/java/)  
+- [Obter Licença Temporária](https://purchase.groupdocs.com/temporary-license/)  
+- [Fórum de Suporte da Comunidade](https://forum.groupdocs.com/c/annotation/)

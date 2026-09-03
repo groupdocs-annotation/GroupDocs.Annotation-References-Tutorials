@@ -21,18 +21,6 @@ url: /id/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java
 weight: 1
 ---
 
- Interactive Checkboxes using GroupDocs" -> "# Cara Menambahkan Checkbox ke PDF dengan Java – Checkbox Interaktif menggunakan GroupDocs"
-
-Next paragraph: "If you're looking for **how to add checkbox** to PDF files programmatically, you’ve come to the right place..." translate.
-
-Proceed.
-
-Will produce final markdown with Indonesian.
-
-Make sure to keep bold formatting.
-
-Let's craft translation.
-
 # Cara Menambahkan Checkbox ke PDF dengan Java – Checkbox Interaktif menggunakan GroupDocs
 
 Jika Anda mencari **cara menambahkan checkbox** ke file PDF secara programatis, Anda berada di tempat yang tepat. Di dunia yang kini mengutamakan digital, PDF statis sudah menjadi masa lalu. Baik Anda membangun alur kerja persetujuan, survei, atau formulir kepatuhan, menambahkan checkbox interaktif dapat secara signifikan meningkatkan pengalaman pengguna dan menyederhanakan proses Anda.

@@ -20,12 +20,6 @@ url: /fr/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
-.
-
-Proceed.
-
-I'll produce final markdown.
-
 # Ajouter des annotations PDF en Java – Tutoriel
 
 Vous êtes déjà bloqué en essayant d'**ajouter des annotations PDF Java** dans votre application ? Vous n'êtes pas seul. Que vous construisiez un système de gestion de documents, une plateforme de révision collaborative, ou que vous ayez simplement besoin de permettre aux utilisateurs de surligner et de commenter des PDF, bien gérer les annotations peut être compliqué.

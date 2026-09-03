@@ -20,12 +20,6 @@ url: /ko/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/
 weight: 1
 ---
 
-**Author:** GroupDocs" -> same.
-
-Make sure to keep markdown formatting.
-
-Now produce final content.
-
 # Java PDF 주석 라이브러리를 사용한 실시간 PDF 협업
 
 ## 소개

@@ -1,35 +1,107 @@
 ---
-"date": "2025-05-06"
-"description": "Узнайте, как добавлять аннотации с эллипсом в документы PDF с помощью мощной библиотеки GroupDocs.Annotation в Java. Следуйте этому пошаговому руководству, чтобы улучшить совместную работу с документами."
-"title": "Java&#58; Добавление аннотаций Ellipse в PDF-файлы с помощью GroupDocs.Annotation для Java"
-"url": "/ru/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/"
+categories:
+- Java Development
+date: '2026-07-25'
+description: Узнайте, как аннотировать PDF с помощью GroupDocs Annotation Library
+  Java – пошаговое руководство, примеры кода, советы по производительности и лучшие
+  практики.
+keywords:
+- how to annotate pdf
+- annotate pdf java
+- pdf annotation java
+- groupdocs annotation library
+- java pdf markup
+lastmod: '2026-07-25'
+linktitle: Добавление аннотаций PDF в Java
+og_description: Узнайте, как аннотировать PDF с помощью GroupDocs Annotation Library
+  Java – руководство, охватывающее ellipse annotations, comments, licensing и советы
+  для Java developers.
+og_image_alt: 'Developer guide: Add ellipse PDF annotations using GroupDocs Annotation
+  Library Java'
+og_title: Как аннотировать PDF с помощью GroupDocs Annotation Library Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-25'
+  description: Learn how to annotate PDF with GroupDocs Annotation Library Java –
+    step‑by‑step guide, code snippets, performance tips, and best practices.
+  headline: How to Annotate PDF with GroupDocs Annotation Library Java
+  type: TechArticle
+- description: Learn how to annotate PDF with GroupDocs Annotation Library Java –
+    step‑by‑step guide, code snippets, performance tips, and best practices.
+  name: How to Annotate PDF with GroupDocs Annotation Library Java
+  steps:
+  - name: Initialize the PDF Annotator
+    text: The `Annotator` class is the entry point for all annotation operations.
+      It loads the target PDF, applies security settings, and prepares an in‑memory
+      representation for editing.
+  - name: Create Interactive Comments and Replies
+    text: '`CommentAnnotation` lets you embed free‑form text, while `Reply` objects
+      enable threaded discussions directly on the PDF page.'
+  - name: Configure Your Ellipse Annotation
+    text: '`EllipseAnnotation` draws a scalable oval shape. You can set line color,
+      fill color, opacity, and custom border thickness to match your UI guidelines.'
+  - name: Add and Save Your Annotations
+    text: 'After configuring all annotation objects, invoke `annotator.save()` to
+      write the changes back to disk. Remember to call `dispose()` to free native
+      resources, especially when processing many files in a loop. > **Why call `dispose()`?**
+      It releases native resources, preventing memory leaks—especially '
+  type: HowTo
+- questions:
+  - answer: Yes. Use the overload `new Annotator(filePath, loadOptions)` where `loadOptions`
+      includes the password.
+    question: Can I add annotations to password‑protected PDFs?
+  - answer: Process pages individually, increase heap size, or leverage the GroupDocs
+      Annotation Cloud API for heavy workloads.
+    question: How should I handle PDFs larger than 100 MB?
+  - answer: No hard limit, but performance may degrade after thousands of annotations.
+      Consider pagination or grouping.
+    question: Is there a limit to the number of annotations per document?
+  - answer: Absolutely. Call `annotator.get()` to retrieve all annotations from a
+      PDF.
+    question: Can I extract existing annotations?
+  - answer: The library provides user‑based permission settings; configure them via
+      the `AnnotationPermission` API.
+    question: How do I secure annotations so only certain users can edit them?
+  type: FAQPage
+tags:
+- pdf annotation
+- java tutorial
+- groupdocs
+- document processing
+- ellipse annotation
+title: Как аннотировать PDF с помощью GroupDocs Annotation Library Java
 type: docs
-"weight": 1
+url: /ru/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/
+weight: 1
 ---
 
-# Как добавить аннотации в виде эллипса в PDF-файл с помощью GroupDocs.Annotation для Java
+# Как аннотировать PDF с помощью библиотеки GroupDocs Annotation для Java
 
-## Введение
-Добавление аннотаций в PDF-файлы может значительно улучшить совместную работу и коммуникацию, особенно при работе со сложными документами. Если вы хотите выделить или аннотировать определенные области в ваших PDF-файлах программным способом с помощью Java, это руководство проведет вас через процесс добавления аннотаций с многоточием без проблем. Используя возможности GroupDocs.Annotation для Java, разработчики могут легко включать сложные функции аннотаций в свои приложения.
+Добавление визуальных заметок, комментариев или штампов в PDF программно может значительно ускорить циклы рецензирования, проверки соответствия и совместные рабочие процессы. В этом руководстве вы узнаете **как аннотировать PDF** файлы с помощью GroupDocs Annotation Library для Java, охватывая всё от настройки проекта до продвинутых эллипсных аннотаций, лицензирования, оптимизации производительности и практических советов по интеграции.
 
-В этом уроке мы рассмотрим:
-- Как настроить и интегрировать GroupDocs.Annotation в проект Java.
-- Пошаговые инструкции по добавлению аннотации в виде эллипса в PDF-документ.
-- Практические примеры, демонстрирующие реальные варианты использования.
+## Быстрые ответы
+- **Что за библиотека добавляет аннотации в PDF на Java?** GroupDocs Annotation Library for Java.  
+- **Нужна ли лицензия?** Пробная версия подходит для тестирования; для коммерческого использования требуется производственная лицензия.  
+- **Какая IDE лучше всего подходит?** Любая Java IDE (IntelliJ IDEA, Eclipse, VS Code) подходит.  
+- **Можно ли аннотировать PDF, защищённые паролем?** Да — укажите пароль при создании `Annotator`.  
+- **Поддерживается ли пакетная обработка?** Абсолютно; см. пример пакетной обработки ниже.
 
-Давайте рассмотрим необходимые предварительные условия, прежде чем начать!
+## Что такое GroupDocs Annotation Library Java?
 
-## Предпосылки
-Для прохождения этого урока вам понадобится:
-- **Комплект разработчика Java (JDK)**: Убедитесь, что у вас установлен JDK. В этом примере используется Java 8 или выше.
-- **GroupDocs.Аннотация для библиотеки Java**: Мы будем использовать версию библиотеки 25.2.
-- **Настройка Maven**: Maven необходим для простого управления зависимостями.
+GroupDocs Annotation Library Java — это готовый к использованию API, позволяющий разработчикам создавать, редактировать, получать и удалять PDF‑аннотации полностью на Java. Он поддерживает **более 50 форматов документов**, предлагает встроенные ветки комментариев и предоставляет детализированные настройки прав доступа.
 
-Убедитесь, что ваша среда разработки поддерживает эти требования и что вы знакомы с основными концепциями программирования на Java, особенно с работой с библиотеками и обработкой файлов в Java.
+## Почему использовать GroupDocs Annotation Library Java?
 
-## Настройка GroupDocs.Annotation для Java
-### Установка через Maven
-Чтобы интегрировать GroupDocs.Annotation в ваш проект с помощью Maven, добавьте следующий репозиторий и зависимость в ваш проект `pom.xml` файл:
+Вы можете добавить богатую разметку — включая эллипсы, текстовые заметки, штампы и водяные знаки — всего несколькими вызовами методов, а библиотека обрабатывает **многосотстраничные PDF** без загрузки всего файла в память. По сравнению с низкоуровневыми инструментами вроде iText или PDFBox, она сокращает время разработки до **70 %** и поддерживает сложные функции PDF (слои, формы, цифровые подписи) «из коробки».
+
+## Предварительные требования и настройка
+- **JDK 8+** (рекомендован JDK 11)  
+- **Maven или Gradle** для управления зависимостями  
+- **IDE** по вашему выбору (IntelliJ IDEA, Eclipse, VS Code)  
+- Базовое знакомство с вводом‑выводом файлов в Java  
+
+### Интеграция Maven
+Добавьте репозиторий и зависимость в ваш `pom.xml`:
 
 ```xml
 <repositories>
@@ -48,31 +120,27 @@ type: docs
 </dependencies>
 ```
 
-### Приобретение лицензии
-Прежде чем начать, убедитесь, что вы приобрели лицензию на GroupDocs.Annotation. Вы можете получить бесплатную пробную версию или купить полную лицензию на их веб-сайте. Применение лицензии простое и гарантирует вам доступ ко всем функциям без ограничений.
-
-Вот как подать заявку на получение лицензии:
+### Конфигурация лицензии
+Примените вашу лицензию перед любой работой с аннотациями:
 
 ```java
 License license = new License();
 license.setLicense("path/to/your/license/file");
 ```
 
-## Руководство по внедрению
-### Добавление аннотации эллипса
-Добавление аннотаций эллипса включает инициализацию библиотеки аннотаций, настройку документа и настройку свойств аннотаций. Вот как вы можете добиться этого шаг за шагом.
+*Pro tip:* Сохраните файл лицензии в `src/main/resources` и загрузите его с помощью `getClass().getResourceAsStream()` для более удобного развертывания.
 
-#### Шаг 1: Инициализация аннотатора с входным документом
-Сначала создайте `Annotator` например, указав путь к вашему PDF-файлу:
+## Полное руководство по реализации
+
+### Шаг 1: Инициализация PDF Annotator
+Класс `Annotator` — точка входа для всех операций с аннотациями. Он загружает целевой PDF, применяет параметры безопасности и подготавливает представление в памяти для редактирования.
 
 ```java
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_document.pdf");
 ```
 
-Это инициализирует среду для добавления аннотаций.
-
-#### Шаг 2: Создание и настройка ответов
-Аннотации могут включать ответы или комментарии. Вот как настроить ответы:
+### Шаг 2: Создание интерактивных комментариев и ответов
+`CommentAnnotation` позволяет встраивать свободный текст, а объекты `Reply` обеспечивают ветвление обсуждений непосредственно на странице PDF.
 
 ```java
 Reply reply1 = new Reply();
@@ -88,83 +156,217 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-Эти ответы будут прикреплены к аннотации с многоточием.
-
-#### Шаг 3: Создание и настройка аннотации эллипса
-Теперь создайте `EllipseAnnotation` объект и настройте его свойства:
+### Шаг 3: Настройка эллипсной аннотации
+`EllipseAnnotation` рисует масштабируемую овальную форму. Вы можете задать цвет линии, цвет заливки, непрозрачность и толщину границы, чтобы соответствовать руководствам вашего UI.
 
 ```java
 EllipseAnnotation ellipse = new EllipseAnnotation();
-ellipse.setBackgroundColor(65535); // Желтый цвет фона
-ellipse.setBox(new Rectangle(100, 100, 100, 100)); // Определяет положение и размер
+ellipse.setBackgroundColor(65535); // Yellow background color
+ellipse.setBox(new Rectangle(100, 100, 100, 100)); // Position and size
 ellipse.setMessage("This is an ellipse annotation");
 ellipse.setOpacity(0.7);
-ellipse.setPageNumber(0); // Целевой номер страницы для аннотации
-ellipse.setPenColor(65535); // Цвет пера в формате RGB
-ellipse.setPenStyle(PenStyle.DOT); // Ручка-точка
-ellipse.setPenWidth((byte) 3); // Ширина пера
+ellipse.setPageNumber(0); // First page (0‑indexed)
+ellipse.setPenColor(65535); // Pen color in RGB
+ellipse.setPenStyle(PenStyle.DOT); // Dotted line style
+ellipse.setPenWidth((byte) 3); // Line thickness
 ellipse.setReplies(replies);
 ```
 
-Эта настройка определяет внешний вид и метаданные вашей аннотации эллипса.
-
-#### Шаг 4: Добавьте аннотацию к документу
-Добавьте настроенную аннотацию в виде эллипса в документ, используя:
+### Шаг 4: Добавление и сохранение аннотаций
+После настройки всех объектов аннотации вызовите `annotator.save()`, чтобы записать изменения на диск. Не забудьте вызвать `dispose()`, чтобы освободить нативные ресурсы, особенно при обработке множества файлов в цикле.
 
 ```java
 annotator.add(ellipse);
-```
-
-#### Шаг 5: Сохраните и утилизируйте ресурсы
-Наконец, сохраните аннотированный документ и освободите ресурсы:
-
-```java
 annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_document.pdf");
 annotator.dispose();
 ```
 
-## Практические применения
-- **Образовательные инструменты**: Выделение ключевых концепций в учебниках в формате PDF.
-- **Юридические документы**: Аннотирование разделов для проверки или утверждения.
-- **Медицинские записи**: Отметка важных наблюдений или заметок.
+> **Почему вызывают `dispose()`?** Он освобождает нативные ресурсы, предотвращая утечки памяти — особенно важно при обработке большого количества PDF в цикле.
 
-GroupDocs.Annotation может интегрироваться с системами управления документами, расширяя их возможности аннотирования.
+## Распространённые проблемы и решения
 
-## Соображения производительности
-Для оптимальной производительности:
-- **Управление памятью**Мониторинг и управление использованием памяти при обработке больших документов.
-- **Пакетная обработка**: При аннотировании нескольких PDF-файлов рассмотрите возможность их пакетной обработки для оптимизации использования ресурсов.
+### Проблема 1 – «Документ не найден»
+*Cause:* Неправильный путь к файлу или рабочий каталог.  
+*Fix:* Проверьте абсолютный путь или выведите `System.getProperty("user.dir")`, чтобы убедиться в базовом каталоге.
 
-Эти методы обеспечивают эффективную работу вашего Java-приложения с использованием GroupDocs.Annotation.
+### Проблема 2 – Аннотации не видны
+*Cause:* Неправильная система координат или индекс страницы.  
+*Fix:* Помните, что координаты PDF начинаются снизу‑слева, а нумерация страниц начинается с нуля.
+
+### Проблема 3 – OutOfMemoryError при больших PDF
+*Cause:* Полная загрузка документа в память.  
+*Fix:* Увеличьте размер кучи JVM (`-Xmx2g`) или обрабатывайте страницы пакетами (см. пример ниже).
+
+### Проблема 4 – Ошибки проверки лицензии
+*Cause:* Отсутствует или несовпадающий файл лицензии.  
+*Fix:* Дважды проверьте путь к файлу и убедитесь, что версия лицензии соответствует версии библиотеки.
+
+## Советы по оптимизации производительности
+
+### Лучшие практики управления памятью
+Избегайте удержания ссылок на крупные экземпляры `Annotator` дольше, чем это необходимо. Используйте try‑with‑resources или явные вызовы `dispose()` после обработки каждого файла.
+
+```java
+// Process multiple documents efficiently
+for (String documentPath : documentPaths) {
+    try (Annotator annotator = new Annotator(documentPath)) {
+        // Add annotations
+        // Save document
+    } // Automatic resource cleanup
+}
+```
+
+### Стратегии пакетной обработки
+- **Маленькие PDF (<10 MB):** Обрабатывать по отдельности.  
+- **Средние PDF (10‑50 MB):** Обрабатывать пакетами по 5‑10 файлов.  
+- **Большие PDF (>50 MB):** Использовать потоковую или порционную обработку, чтобы избежать OOM.
+
+### Вопросы кэширования
+Класс `AnnotationAppearance` инкапсулирует визуальные свойства аннотаций, такие как цвет и непрозрачность. Кешируйте переиспользуемые объекты, например `AnnotationAppearance` или экземпляры `Color`, когда аннотируете множество страниц с одинаковым оформлением.
+
+```java
+// Reusable annotation template
+private static EllipseAnnotation createStandardEllipse() {
+    EllipseAnnotation template = new EllipseAnnotation();
+    // Set common properties once
+    return template;
+}
+```
+
+## Примеры интеграции в реальном мире
+
+### Интеграция в веб‑приложение
+Создайте REST‑endpoint, принимающий поток PDF, применяющий эллипсную аннотацию в координатах, полученных от фронтенда, и возвращающий аннотированный PDF в виде массива байт.
+
+```java
+@RestController
+@RequestMapping("/api/documents")
+public class DocumentAnnotationController {
+    
+    @PostMapping("/{id}/annotate")
+    public ResponseEntity<String> addAnnotation(
+        @PathVariable String id,
+        @RequestBody AnnotationRequest request) {
+        
+        // Annotation logic here
+        // Return success/failure response
+    }
+}
+```
+
+### Пакетная обработка документов
+Пройдитесь по каталогу с контрактами, добавьте к каждому штамп «Reviewed» и переместите обработанные файлы в архивную папку.
+
+```java
+public class BatchAnnotationProcessor {
+    
+    public void processBatch(List<DocumentAnnotationTask> tasks) {
+        tasks.parallelStream()
+            .forEach(this::processDocument);
+    }
+    
+    private void processDocument(DocumentAnnotationTask task) {
+        // Individual document processing logic
+    }
+}
+```
+
+## Продвинутые техники аннотирования
+
+### Динамическое позиционирование аннотаций
+Вычисляйте координаты аннотации «на лету», основываясь на обнаруженных местах текста с помощью OCR или API извлечения текста из PDF, затем размещайте эллипсы вокруг ключевых слов.
+
+```java
+// Position based on a text search result
+Rectangle dynamicPosition = findTextPosition("important keyword");
+ellipse.setBox(dynamicPosition);
+```
+
+### Условное стилизование аннотаций
+Применяйте разные цвета или уровни непрозрачности в зависимости от роли автора аннотации (например, reviewer = blue, approver = green).
+
+```java
+// Different colors for warning vs. info annotations
+int color = annotationType.equals("warning") ? 16711680 : 65535; // Red : Yellow
+ellipse.setBackgroundColor(color);
+```
+
+## Практические применения и случаи использования
+- **Образовательные платформы:** Выделяйте концепции, добавляйте комментарии преподавателей, создавайте интерактивные учебные пособия.  
+- **Юридический обзор документов:** Помечайте пункты, добавляйте конфиденциальные заметки, ведите аудит‑журналы.  
+- **Медицинские записи:** Аннотируйте наблюдения, выделяйте критические данные, обеспечивайте безопасное сотрудничество.  
+- **Корпоративные рабочие процессы:** Упрощайте утверждение отчетов, добавляйте штампы рецензентов, отслеживайте изменения.
+
+## Когда использовать разные типы аннотаций
+
+Эллипсные аннотации идеальны, когда нужен не прямоугольный выделитель, например для подчёркивания круглых диаграмм, логотипов или областей, лучше представляемых овальной формой. Они дают чёткий визуальный сигнал, сохраняя читаемость, что делает их подходящими для дизайн‑ревью, проверок брендинга и любых сценариев, где предпочтительно круглое выделение.
+
+Хотя данное руководство сосредоточено на эллипсных аннотациях, GroupDocs Annotation Library Java также предлагает:
+- **Текстовые аннотации** для детальных комментариев.  
+- **Стрелочные аннотации** для указания на конкретные элементы.  
+- **Прямоугольные аннотации** для выделения областей.  
+- **Водяные знаки** для брендинга или защиты.  
+- **Штампы** для подтверждения.
+
+## Руководство по устранению неполадок
+
+### Проблемы с производительностью
+- **Symptom:** Медленная обработка.  
+- **Diagnosis:** Большой размер файла, множество аннотаций, ограниченная ОЗУ.  
+- **Solution:** Оптимизировать свойства аннотаций, обрабатывать асинхронно или разбивать большие PDF на части.
+
+### Проблемы совместимости
+- **Symptom:** Аннотации выглядят по‑разному в разных просмотрщиках.  
+- **Diagnosis:** Нестандартные функции PDF.  
+- **Solution:** Тестировать в Adobe Acrobat, Chrome и Firefox; придерживаться стандартных флагов аннотаций PDF.
+
+### Проблемы интеграции
+- **Symptom:** Конфликты зависимостей.  
+- **Diagnosis:** Несоответствия версий с другими библиотеками.  
+- **Solution:** Использовать `<dependencyManagement>` в Maven для принудительного указания совместимых версий или перейти на REST API для языконезависимой интеграции.
+
+## Часто задаваемые вопросы
+
+**Q: Можно ли добавить аннотации в PDF, защищённые паролем?**  
+A: Да. Используйте перегрузку `new Annotator(filePath, loadOptions)`, где `loadOptions` содержит пароль.
+
+**Q: Как обрабатывать PDF размером более 100 MB?**  
+A: Обрабатывайте страницы по отдельности, увеличьте размер кучи или используйте GroupDocs Annotation Cloud API для тяжёлых нагрузок.
+
+**Q: Есть ли ограничение на количество аннотаций в документе?**  
+A: Жёсткого ограничения нет, но производительность может падать после тысяч аннотаций. Рассмотрите пагинацию или группировку.
+
+**Q: Можно ли извлечь существующие аннотации?**  
+A: Абсолютно. Вызовите `annotator.get()`, чтобы получить все аннотации из PDF.
+
+**Q: Как защитить аннотации, чтобы их могли редактировать только определённые пользователи?**  
+A: Библиотека предоставляет настройки прав на основе пользователей; сконфигурируйте их через API `AnnotationPermission`.
 
 ## Заключение
-Следуя этому руководству, вы узнали, как добавлять аннотации с многоточием в PDF-файлы с помощью GroupDocs.Annotation для Java. Эта функция бесценна для приложений, требующих детального обзора документов и совместного редактирования. 
+**GroupDocs Annotation Library Java** предоставляет чистый, высокопроизводительный способ внедрять богатые PDF‑аннотации напрямую из Java‑кода. Следуя описанным шагам, вы сможете добавлять эллипсные аннотации, управлять комментариями и масштабировать решение до уровня корпоративных нагрузок.
 
-Чтобы еще больше улучшить свои навыки, изучите дополнительные типы аннотаций, доступные в библиотеке GroupDocs, или интегрируйте эту функциональность в более крупный проект.
+**Следующие шаги:**  
+1. Поэкспериментируйте с другими типами аннотаций (текст, штамп, водяной знак).  
+2. Интегрируйте библиотеку в существующий документооборот или веб‑сервис.  
+3. Изучите REST API для сценариев, не зависящих от языка.
 
-## Раздел часто задаваемых вопросов
-**В: Могу ли я аннотировать другие типы документов с помощью GroupDocs.Annotation?**
-A: Да, GroupDocs поддерживает аннотации в различных форматах документов, помимо PDF, включая файлы Word и Excel.
+---
 
-**В: Как динамически менять цвет аннотации в зависимости от ее содержимого?**
-A: Вы можете программно установить `penColor` свойство на основе вашей логики перед добавлением аннотации.
+**Last Updated:** 2026-07-25  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  
 
-**В: Какое максимальное количество поддерживаемых аннотаций?**
-A: GroupDocs.Annotation позволяет использовать большое количество аннотаций, но рекомендуется протестировать производительность с учетом конкретных размеров и типов документов.
+**Essential Links:**  
+- **Documentation:** [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)  
+- **API Reference:** [GroupDocs API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **Download:** [Download GroupDocs.Annotation](https://releases.groupdocs.com/annotation/java/)  
+- **Purchase:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **Free Trial:** [Start a Free Trial](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary License:** [Request a Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Support:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
 
-**В: Как обрабатывать перекрывающиеся аннотации?**
-А: Отрегулируйте `box` размеры и положения для управления наложениями или наложения нескольких аннотаций по мере необходимости.
+## Связанные руководства
 
-**В: Каковы наилучшие практики использования GroupDocs.Annotation в веб-приложении?**
-A: Используйте асинхронную обработку для больших документов, обеспечьте безопасное хранение аннотированных файлов и предоставьте удобные интерфейсы для взаимодействия с аннотациями.
-
-## Ресурсы
-- **Документация**: [GroupDocs Аннотация Java Документация](https://docs.groupdocs.com/annotation/java/)
-- **Ссылка на API**: [Ссылка на API GroupDocs](https://reference.groupdocs.com/annotation/java/)
-- **Скачать**: [Скачать GroupDocs.Annotation](https://releases.groupdocs.com/annotation/java/)
-- **Покупка**: [Купить лицензию GroupDocs](https://purchase.groupdocs.com/buy)
-- **Бесплатная пробная версия**: [Начать бесплатную пробную версию](https://releases.groupdocs.com/annotation/java/)
-- **Временная лицензия**: [Запросить временную лицензию](https://purchase.groupdocs.com/temporary-license/)
-- **Поддерживать**: [Форум поддержки GroupDocs](https://forum.groupdocs.com/c/annotation/)
-
-Это всеобъемлющее руководство должно снабдить вас знаниями для эффективного добавления аннотаций эллипса в ваши приложения Java с помощью GroupDocs.Annotation. Удачного кодирования!
+- [How to add arrow to pdf with Java – Complete Tutorial & Best Practices](/annotation/java/graphical-annotations/add-arrow-annotations-java-groupdocs/)  
+- [How to add image to PDF using Java and GroupDocs Annotation](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)  
+- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)

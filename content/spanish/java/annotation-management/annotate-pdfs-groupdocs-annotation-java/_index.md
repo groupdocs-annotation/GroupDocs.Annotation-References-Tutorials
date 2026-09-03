@@ -20,10 +20,6 @@ url: /es/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
- to translate each paragraph.
-
-Let's produce final output.
-
 # Add PDF Annotation Java Tutorial
 
 ¿Alguna vez te has quedado atascado intentando **add pdf annotation java** en tu aplicación? No estás solo. Ya sea que estés construyendo un sistema de gestión de documentos, creando una plataforma de revisión colaborativa, o simplemente necesites que los usuarios resalten y comenten PDFs, lograr una anotación correcta puede ser complicado.

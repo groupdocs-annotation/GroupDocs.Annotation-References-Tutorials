@@ -22,11 +22,7 @@ url: /pt/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-
 weight: 1
 ---
 
- At top "set groupdocs license inputstream" maybe keep as is? But translation required. We'll translate.
-
-Make sure to keep code block placeholders unchanged.
-
-Now produce final answer.# definir licença groupdocs inputstream
+# definir licença groupdocs inputstream
 
 ## Introdução
 

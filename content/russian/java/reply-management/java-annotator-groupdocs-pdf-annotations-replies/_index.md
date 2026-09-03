@@ -22,18 +22,6 @@ url: /ru/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/
 weight: 1
 ---
 
- collaboration" is a term; maybe keep English. We'll keep as is.
-
-Proceed.
-
-Will produce final markdown.
-
-Let's craft translation.
-
-Be careful with bullet lists, keep formatting.
-
-Let's write.
-
 # Совместная работа с PDF в реальном времени с библиотекой Java PDF Annotation
 
 ## Введение

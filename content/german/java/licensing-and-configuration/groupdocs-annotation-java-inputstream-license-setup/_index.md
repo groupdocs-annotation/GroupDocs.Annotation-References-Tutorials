@@ -22,12 +22,6 @@ url: /de/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-
 weight: 1
 ---
 
- original is lower case. Could translate as "# set groupdocs license inputstream" but German translation should reflect meaning. We'll translate.
-
-Proceed.
-
-Will produce final content.
-
 # GroupDocs-Lizenz per InputStream festlegen
 
 ## Einführung

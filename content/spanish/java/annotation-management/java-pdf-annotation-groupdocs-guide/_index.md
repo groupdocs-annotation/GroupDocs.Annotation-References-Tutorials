@@ -1,53 +1,63 @@
 ---
 categories:
 - Java Development
-date: '2026-01-08'
+date: '2026-03-27'
 description: Domina la anotación de PDF en Java con GroupDocs y aprende a exportar
-  páginas anotadas, agregar anotaciones de área y elipse, y optimizar el rendimiento.
+  páginas PDF anotadas, agregar anotaciones de área y elipse, y optimizar el rendimiento.
 keywords: Java PDF annotation tutorial, GroupDocs annotation Java examples, PDF annotation
   library Java, Java add annotations to PDF, how to annotate PDF documents in Java
-lastmod: '2026-01-08'
+lastmod: '2026-03-27'
 linktitle: Java PDF Annotation Tutorial
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Anotación de PDF en Java - Exportar páginas anotadas con GroupDocs'
+title: Anotación de PDF en Java – Exportar páginas PDF anotadas (GroupDocs)
 type: docs
 url: /es/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
 ---
 
-# Anotación PDF en Java: Exportar páginas anotadas con GroupDocs
+# Anotación de PDF en Java – Exportar páginas PDF anotadas con GroupDocs
 
 ## Introducción
 
-¿Alguna vez has tenido problemas para que tu equipo proporcione comentarios útiles en documentos PDF? No estás solo. Los procesos tradicionales de revisión de documentos son dolorosamente lentos: cadenas interminables de correos electrónicos, comentarios dispersos en diferentes formatos y la inevitable “¿Puedes resaltar la sección de la que hablas?”.  
+¿Alguna vez has tenido problemas para lograr que tu equipo proporcione comentarios significativos en documentos PDF? No estás solo. Los procesos tradicionales de revisión de documentos son dolorosamente lentos: cadenas interminables de correos electrónicos, comentarios dispersos en diferentes formatos y la inevitable “¿Puedes resaltar la sección de la que hablas?”.  
 
-En esta guía aprenderás a **exportar páginas anotadas** usando GroupDocs.Annotation para Java, convirtiendo PDFs estáticos en espacios de trabajo colaborativos donde los miembros del equipo pueden resaltar, comentar y marcar documentos en tiempo real.
+En esta guía aprenderás a **exportar páginas PDF anotadas** usando GroupDocs.Annotation para Java, convirtiendo PDFs estáticos en espacios de trabajo colaborativos donde los miembros del equipo pueden resaltar, comentar y marcar documentos en tiempo real.
 
 **Lo que dominarás al final:**
-- Configurar GroupDocs.Annotation en tu proyecto Maven (de la manera correcta)
-- Añadir anotaciones de área y elipse con precisión de píxel
-- Configurar las opciones de **exportar páginas anotadas** para PDFs concisos
-- Solucionar los problemas más comunes que enfrentan los desarrolladores
-- Optimizar el rendimiento para entornos de producción
+- Configurar GroupDocs.Annotation en tu proyecto Maven (de la manera correcta)  
+- Añadir anotaciones de área y elipse con precisión de píxel  
+- Configurar opciones de **exportar páginas PDF anotadas** para PDFs concisos  
+- Solucionar los problemas más comunes que enfrentan los desarrolladores  
+- Optimizar el rendimiento para entornos de producción  
 
 ## Respuestas rápidas
-- **¿Cuál es el principal beneficio de exportar páginas anotadas?** Crea un PDF ligero que contiene solo los comentarios relevantes, ideal para revisiones y resúmenes.  
-- **¿Qué versión de Maven se requiere?** Se recomienda Maven 3.6+ .  
+- **¿Cuál es el beneficio principal de exportar páginas anotadas?** Crea un PDF ligero que contiene solo los comentarios relevantes, ideal para revisiones y resúmenes.  
+- **¿Qué versión de Maven se requiere?** Se recomienda Maven 3.6+.  
 - **¿Necesito una licencia para GroupDocs.Annotation?** Sí, se requiere una licencia de prueba o comercial para uso en producción.  
-- **¿Puedo anotar formatos distintos a PDF?** Absolutamente—GroupDocs soporta más de 50 tipos de documentos.  
-- **¿Cómo evito problemas de memoria con PDFs grandes?** Procesa las páginas por lotes, aumenta el heap de la JVM y siempre cierra el `Annotator` con try‑with‑resources.
+- **¿Puedo anotar formatos diferentes a PDF?** Absolutamente—GroupDocs soporta más de 50 tipos de documentos.  
+- **¿Cómo evito problemas de memoria con PDFs grandes?** Procesa las páginas en lotes, aumenta el heap de JVM y siempre cierra el `Annotator` con try‑with‑resources.  
 
-## Prerrequisitos: Preparando tu entorno
+## ¿Qué es “exportar páginas PDF anotadas”?
+
+Exportar páginas PDF anotadas significa generar un nuevo PDF que contiene **solo** aquellas páginas donde existen anotaciones. Esto reduce el tamaño del archivo, enfoca a los revisores en el contenido relevante y simplifica el control de versiones.
+
+## ¿Por qué exportar páginas PDF anotadas?
+
+- **Ciclos de revisión enfocados** – los revisores ven solo las páginas que necesitan atención.  
+- **Archivos más pequeños** – ideal para distribución por correo electrónico o cargas web.  
+- **Rastros de auditoría** – puedes mantener un registro limpio de todos los comentarios sin el desorden de páginas sin tocar.  
+
+## Requisitos previos: Preparando su entorno
 
 Antes de comenzar a programar, asegurémonos de que todo esté configurado correctamente. Créeme, dedicar 5 minutos aquí te ahorrará horas de depuración después.
 
 ### Bibliotecas y dependencias requeridas
 
-Necesitarás GroupDocs.Annotation para Java en tu proyecto. Aquí tienes la configuración de Maven que realmente funciona (he visto demasiados tutoriales con URLs de repositorio desactualizadas):
+Necesitarás GroupDocs.Annotation para Java en tu proyecto. Aquí está la configuración de Maven que realmente funciona (he visto demasiados tutoriales con URLs de repositorio desactualizadas):
 
 **Configuración de Maven**
 
@@ -76,26 +86,26 @@ Necesitarás GroupDocs.Annotation para Java en tu proyecto. Aquí tienes la conf
 
 ### Conocimientos previos
 
-Deberías estar cómodo con:
+Deberías sentirte cómodo con:
 - Conceptos básicos de programación en Java  
 - Gestión de dependencias con Maven  
-- Operaciones de entrada/salida de archivos  
+- Operaciones de I/O de archivos  
 
-No te preocupes si no eres un experto—explicaré todo paso a paso.
+No te preocupes si no eres un experto—explicaré todo a medida que avanzamos.
 
-## Configuración de GroupDocs.Annotation para Java
+## Configurando GroupDocs.Annotation para Java
 
 Ahora configuremos GroupDocs.Annotation correctamente en tu proyecto. Aquí es donde muchos desarrolladores encuentran su primer obstáculo, así que presta atención a estos detalles.
 
 ### Paso 1: Añadir la dependencia
 
-Usa la configuración de Maven mostrada arriba para incluir GroupDocs.Annotation en tu proyecto. Después de agregarla a tu `pom.xml`, ejecuta:
+Usa la configuración de Maven anterior para incluir GroupDocs.Annotation en tu proyecto. Después de añadirlo a tu `pom.xml`, ejecuta:
 
 ```bash
 mvn clean install
 ```
 
-Si ves errores de descarga, verifica que la URL del repositorio sea exactamente la mostrada arriba.
+Si ves errores de descarga, verifica que la URL del repositorio sea exactamente como se muestra arriba.
 
 ### Paso 2: Gestionar la licencia (¡Importante!)
 
@@ -103,9 +113,9 @@ Esto es algo que la mayoría de los tutoriales omiten: GroupDocs.Annotation no e
 
 - **Prueba gratuita**: Ideal para desarrollo y pruebas  
 - **Licencia temporal**: Perfecta para periodos de evaluación extendidos  
-- **Licencia completa**: Necesaria para despliegue en producción  
+- **Licencia completa**: Requerida para despliegue en producción  
 
-Para comenzar con la evaluación, visita [Compra de GroupDocs](https://purchase.groupdocs.com/buy) para conocer las opciones de licencia.
+Para comenzar con la evaluación, visita [GroupDocs Purchase](https://purchase.groupdocs.com/buy) para opciones de licencia.
 
 ### Paso 3: Inicialización básica
 
@@ -120,7 +130,7 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/document
 }
 ```
 
-**Consejo profesional**: Siempre usa try‑with‑resources (como se muestra arriba) para garantizar la correcta liberación de los manejadores de archivo. He visto demasiadas fugas de memoria por desarrolladores que olvidan este paso.
+**Consejo profesional**: Siempre usa try‑with‑resources (como se muestra arriba) para garantizar la limpieza adecuada de los manejadores de archivo. He visto demasiadas fugas de memoria por desarrolladores que olvidan este paso.
 
 ## Guía de implementación: Añadiendo anotaciones paso a paso
 
@@ -146,17 +156,17 @@ area.setPageNumber(1); // First page (1-indexed)
 **Entendiendo los parámetros:**
 - `Rectangle(100, 100, 100, 100)`: Posición (100 px desde la izquierda, 100 px desde la parte superior) con ancho y alto de 100 px  
 - `65535`: Este es el amarillo en formato ARGB. Colores comunes: Rojo = 16711680, Azul = 255, Verde = 65280  
-- `setPageNumber(1)`: Las páginas del PDF se indexan a partir de 1, no de 0 (¡error frecuente!)
+- `setPageNumber(1)`: Las páginas PDF se indexan a partir de 1, no de 0 (¡error frecuente!)
 
 #### Cuándo usar anotaciones de área
 - Resaltar párrafos importantes en documentos legales  
-- Marcar secciones que requieren revisión en especificaciones de proyecto  
+- Marcar secciones que necesitan revisión en especificaciones de proyecto  
 - Llamar la atención sobre rangos de datos específicos en informes  
 - Crear límites visuales alrededor de bloques de contenido  
 
-### Añadiendo anotaciones de elipse (ideales para llamadas)
+### Añadiendo anotaciones de elipse (ideales para llamadas de atención)
 
-Las anotaciones de elipse son perfectas cuando deseas llamar la atención sobre elementos específicos sin los bordes duros de los rectángulos. Son especialmente útiles para resaltar gráficos circulares, logotipos o crear una zona de enfoque suave.
+Las anotaciones de elipse son perfectas cuando deseas llamar la atención a elementos específicos sin los bordes duros de los rectángulos. Son particularmente útiles para resaltar gráficos circulares, logotipos o crear un área de enfoque suave.
 
 #### Paso 2: Crear una anotación de elipse
 
@@ -174,9 +184,9 @@ ellipse.setPageNumber(1); // Same page as area annotation
 - Más atractivas visualmente para resaltar elementos circulares  
 - Crean un efecto de “foco” que resulta menos intrusivo  
 - Mejor para atraer la atención sin ocultar completamente el contenido  
-- Útiles para lograr una apariencia orgánica, como dibujada a mano  
+- Útiles para crear una apariencia orgánica, dibujada a mano  
 
-#### Paso 3: Añadir anotaciones a tu documento
+#### Paso 3: Añadir anotaciones a su documento
 
 Ahora combinemos ambas anotaciones y añádelas a tu PDF:
 
@@ -197,11 +207,11 @@ System.out.println("Added " + annotations.size() + " annotations successfully!")
 
 **Consejo de rendimiento**: Añadir anotaciones en lotes (como se muestra arriba) es significativamente más rápido que llamar a `annotator.add()` múltiples veces, especialmente con documentos grandes.
 
-## Cómo exportar páginas anotadas con GroupDocs
+## Cómo exportar páginas PDF anotadas con GroupDocs
 
-Aquí tienes una característica poderosa que muchos desarrolladores pasan por alto: puedes configurar GroupDocs para **exportar solo las páginas que contienen anotaciones**. Esto es increíblemente útil para crear documentos de resumen o reducir el tamaño de los archivos.
+Aquí hay una característica poderosa que muchos desarrolladores pasan por alto: puedes configurar GroupDocs para **exportar solo las páginas que contienen anotaciones**. Esto es increíblemente útil para crear documentos resumidos o reducir el tamaño de los archivos.
 
-#### Configuración de la exportación selectiva de páginas
+#### Configurando la exportación selectiva de páginas
 
 ```java
 import com.groupdocs.annotation.options.export.SaveOptions;
@@ -218,11 +228,11 @@ annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_summary.pdf", saveOptions);
 - **Revisión legal**: Exportar solo las páginas con comentarios de los abogados  
 - **Calificación académica**: Crear hojas de resumen con solo las secciones marcadas  
 - **Gestión de proyectos**: Generar informes de estado que muestren solo las secciones actualizadas  
-- **Control de calidad**: Extraer páginas con problemas identificados  
+- **Aseguramiento de calidad**: Extraer páginas con problemas identificados  
 
 ## Problemas comunes y soluciones
 
-Abordemos los problemas que probablemente encontrarás (y ahórrate tiempo de depuración).
+Abordemos los problemas que probablemente encontrarás (y ahórrate algo de tiempo de depuración).
 
 ### Problema 1: "El archivo está siendo usado por otro proceso"
 
@@ -244,16 +254,16 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 
 ### Problema 2: Las anotaciones aparecen en posiciones incorrectas
 
-**Síntomas**: Tus anotaciones aparecen en lugares inesperados  
+**Síntomas**: Tus anotaciones aparecen en ubicaciones inesperadas  
 **Causa**: Malentendido del sistema de coordenadas o problemas de escala DPI  
 **Solución**:  
-- Las coordenadas del PDF comienzan desde **abajo‑izquierda** (no desde arriba‑izquierda como la mayoría de los frameworks UI)  
-- Prueba primero con valores de coordenadas conocidos  
-- Ten en cuenta las dimensiones de la página PDF al calcular posiciones  
+- Las coordenadas PDF comienzan desde **abajo‑izquierda** (no desde arriba‑izquierda como la mayoría de los frameworks UI)  
+- Siempre prueba con valores de coordenadas conocidos primero  
+- Considera las dimensiones de la página PDF al calcular posiciones  
 
 ### Problema 3: OutOfMemoryError con PDFs grandes
 
-**Síntomas**: La aplicación se bloquea al procesar documentos voluminosos  
+**Síntomas**: La aplicación se bloquea al procesar documentos grandes  
 **Causa**: Cargar todo el PDF en memoria  
 **Solución**:
 
@@ -335,50 +345,50 @@ public boolean addAnnotationSafely(String inputPath, String outputPath) {
 
 1. **Operaciones en lote** – siempre añade múltiples anotaciones a la vez  
 2. **Carga diferida** – solo carga las páginas que realmente vas a anotar  
-3. **Pooling de conexiones** – reutiliza instancias de `Annotator` cuando sea posible (con precaución)  
+3. **Pool de conexiones** – reutiliza instancias de `Annotator` cuando sea posible (con precaución)  
 4. **Transmisión de archivos** – usa streaming para documentos muy grandes  
 
-## Cuándo elegir GroupDocs frente a alternativas
+## Cuándo elegir GroupDocs vs alternativas
 
 GroupDocs.Annotation no es la única opción disponible. Aquí tienes cuándo tiene sentido usarlo:
 
 **Elige GroupDocs cuando:**
-- Necesites una amplia variedad de tipos de anotación (más de 20 formatos soportados)  
-- Trabajes con múltiples formatos de documento más allá de PDF  
-- Requieras soporte empresarial y documentación completa  
-- Construyas aplicaciones comerciales (la licencia es directa)
+- Necesitas una amplia variedad de tipos de anotación (más de 20 formatos soportados)  
+- Trabajas con múltiples formatos de documento más allá de PDF  
+- Requieres soporte empresarial y documentación completa  
+- Construyes aplicaciones comerciales (la licencia es directa)
 
 **Considera alternativas cuando:**
 - Solo necesitas anotación básica de PDF (Apache PDFBox podría ser suficiente)  
-- Tienes limitaciones de presupuesto (existen soluciones open‑source)  
-- Los casos de uso son simples (exceso de capacidad para resaltar básico)  
+- Restricciones de presupuesto (existen soluciones de código abierto)  
+- Casos de uso simples (exceso de capacidad para resaltado básico)  
 
 ## Aplicaciones prácticas en el mundo real
 
-Así es como los equipos están usando la anotación de PDF en Java en producción:
+Así es como los equipos están usando realmente la anotación de PDF en Java en producción:
 
 ### Revisión de documentos legales
-Los despachos de abogados usan anotaciones de área para resaltar cláusulas contractuales y anotaciones de elipse para marcar secciones en disputa. La función de exportación selectiva crea documentos de resumen limpios para la revisión del cliente.
+Los despachos de abogados usan anotaciones de área para resaltar cláusulas de contrato y anotaciones de elipse para marcar secciones disputadas. La función de exportación selectiva crea documentos de resumen limpios para la revisión del cliente.
 
-### Retroalimentación en trabajos académicos  
+### Retroalimentación de trabajos académicos  
 Las universidades implementan sistemas de anotación donde los profesores marcan entregas de estudiantes con diferentes colores: gramática (rojo), contenido (azul) y estructura (verde).
 
 ### Revisión de documentación de software
-Los equipos de desarrollo anotan la documentación de APIs durante los ciclos de revisión, usando anotaciones para marcar secciones que necesitan actualizaciones o aclaraciones.
+Los equipos de desarrollo anotan la documentación de API durante los ciclos de revisión, usando anotaciones para marcar secciones que necesitan actualizaciones o aclaraciones.
 
 ### Procesos de aseguramiento de calidad
-Las empresas manufactureras anotan informes de inspección, resaltando problemas de cumplimiento y marcando acciones correctivas con distintos tipos de anotación.
+Las empresas manufactureras anotan informes de inspección, resaltando problemas de cumplimiento y marcando acciones correctivas con diferentes tipos de anotación.
 
 ## Consideraciones de rendimiento para despliegues a gran escala
 
-Cuando estés listo para manejar cargas de trabajo serias, ten en cuenta los siguientes factores:
+Cuando estés listo para manejar cargas de trabajo serias, ten en cuenta estos factores:
 
 ### Optimización del uso de memoria
 - **Tamaño del documento**: PDF de 10 MB ≈ 50 MB de uso de memoria durante el procesamiento  
-- **Cantidad de anotaciones**: Cada anotación añade ~1‑2 KB de sobrecarga de memoria  
+- **Cantidad de anotaciones**: Cada anotación agrega ~1‑2 KB de sobrecarga de memoria  
 - **Usuarios concurrentes**: Planifica al menos 100 MB+ por sesión de anotación simultánea  
 
-### Métricas de velocidad de procesamiento
+### Puntos de referencia de velocidad de procesamiento
 Basado en pruebas reales:  
 - PDF pequeño (1‑10 páginas): ~100‑500 ms por anotación  
 - PDF mediano (10‑50 páginas): ~500 ms‑2 s por anotación  
@@ -399,24 +409,24 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 ## Preguntas frecuentes
 
 **P: ¿Cómo instalo GroupDocs.Annotation en mi proyecto Java?**  
-R: Añade la dependencia de Maven mostrada en la sección de prerrequisitos a tu `pom.xml`, luego ejecuta `mvn clean install`. Asegúrate de que la URL del repositorio sea correcta.
+R: Añade la dependencia Maven mostrada en la sección de requisitos previos a tu `pom.xml`, luego ejecuta `mvn clean install`. Asegúrate de que la URL del repositorio sea correcta.
 
-**P: ¿Puedo anotar formatos de documento distintos a PDF?**  
+**P: ¿Puedo anotar formatos de documento diferentes a PDF?**  
 R: ¡Sí! GroupDocs.Annotation soporta más de 50 formatos, incluidos Word, Excel, PowerPoint y archivos de imagen. La API es prácticamente la misma en todos los formatos.
 
 **P: ¿Qué tipos de anotación están disponibles además de área y elipse?**  
-R: GroupDocs soporta más de 15 tipos, como resaltado de texto, subrayado, tachado, flechas, marcas de agua, reemplazo de texto y anotaciones de punto. Cada tipo tiene opciones de estilo específicas.
+R: GroupDocs soporta más de 15 tipos, como resaltados de texto, subrayados, tachados, flechas, marcas de agua, reemplazo de texto y anotaciones de punto. Cada tipo tiene opciones de estilo específicas.
 
 **P: ¿Cómo manejo archivos PDF grandes sin quedarme sin memoria?**  
-R: Procesa los documentos por fragmentos, aumenta el heap de la JVM (`-Xmx4g`), usa streaming cuando sea posible y siempre cierra las instancias de `Annotator`. Para archivos de más de 100 MB, considera procesar página por página.
+R: Procesa los documentos por fragmentos, aumenta el heap de JVM (`-Xmx4g`), usa streaming cuando sea posible y siempre cierra las instancias de `Annotator`. Para archivos de más de 100 MB, considera procesar las páginas individualmente.
 
 **P: ¿Hay forma de personalizar la apariencia de la anotación más allá de los colores básicos?**  
-R: Por supuesto. Puedes personalizar la opacidad, estilos de borde, propiedades de texto e incluso añadir íconos personalizados. Cada tipo de anotación expone extensos setters de estilo.
+R: Por supuesto. Puedes personalizar la opacidad, estilos de borde, propiedades de texto e incluso añadir íconos personalizados. Cada tipo de anotación expone amplios setters de estilo.
 
-**Recursos relacionados:** [Documentación de GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/) | [Referencia completa de la API](https://apireference.groupdocs.com/annotation/java) | [Foro de la comunidad de GroupDocs](https://forum.groupdocs.com/c/annotation)
+**Recursos relacionados:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
 
 ---
 
-**Última actualización:** 2026-01-08  
+**Última actualización:** 2026-03-27  
 **Probado con:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
+**Autor:** GroupDocs

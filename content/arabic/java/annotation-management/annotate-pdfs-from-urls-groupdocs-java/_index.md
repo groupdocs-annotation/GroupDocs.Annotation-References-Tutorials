@@ -20,20 +20,6 @@ url: /ar/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/
 weight: 1
 ---
 
-.
-
-Need to keep markdown formatting.
-
-Let's translate.
-
-I'll produce Arabic text.
-
-Be careful with bold formatting: keep **.
-
-Also code placeholders remain.
-
-Let's start constructing final answer.
-
 # كيفية التعليق على PDF – تحميل PDF من URL باستخدام Java
 
 ## المقدمة

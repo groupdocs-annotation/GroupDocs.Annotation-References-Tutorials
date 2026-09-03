@@ -20,22 +20,7 @@ url: /fr/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotatio
 weight: 1
 ---
 
- With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs
-
-Translate labels.
-
-**Dernière mise à jour**: 2026-03-17  
-**Testé avec**: GroupDocs.Annotation 25.2 for Java  
-**Auteur**: GroupDocs
-
-Now ensure we keep all markdown formatting.
-
-Check for any other elements: there are no images.
-
-Make sure to keep placeholders exactly as {{CODE_BLOCK_X}}.
-
-Now produce final content.# Comment créer des boutons PDF Java avec GroupDocs.Annotation
+# Comment créer des boutons PDF Java avec GroupDocs.Annotation
 
 Vous êtes‑vous déjà retrouvé devant un PDF statique en souhaitant le rendre plus attrayant ? Dans ce guide, vous apprendrez à **create pdf buttons java** en utilisant GroupDocs.Annotation. Que vous construisiez des systèmes de gestion de documents, créiez des formulaires interactifs, ou simplement essayiez de rendre vos PDFs moins… eh bien, ennuyeux, ces boutons peuvent transformer vos documents d’un support de lecture passif en expériences dynamiques et conviviales.
 
