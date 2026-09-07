@@ -135,7 +135,6 @@ GroupDocs.Annotation entegrasyonu çok basittir. Aşağıda projenize eklemeniz 
 Projenizin `pom.xml` dosyasına aşağıdaki yapılandırmayı ekleyin:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -150,7 +149,6 @@ Projenizin `pom.xml` dosyasına aşağıdaki yapılandırmayı ekleyin:
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Lisans Gereksinimlerini Anlama
@@ -168,12 +166,10 @@ GroupDocs.Annotation üç lisans modeli sunar:
 `Annotator` sınıfı tüm açıklama işlemleri için giriş noktasıdır. Bir belgeyi yükler, düzenleme API'leri sağlar ve sonucu diske yazar.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro İpucu:** Bellek sızıntılarını önlemek için `Annotator`ı try‑with‑resources bloğuna sarın veya açıkça `dispose()` çağırın.
@@ -186,7 +182,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 Yanıtlar, iş birliği yapanların bir ölçüme doğrudan yorum eklemesini sağlar ve basit bir cetveli tartışma dizisine dönüştürür.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -204,7 +199,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **Yanıtları ne zaman kullanmalı:** Çok‑kullanıcılı inceleme döngülerinde, bir boyutun neden seçildiğini açıklamak veya bir ekip üyesinden netleştirme istemek gerektiğinde.
 
@@ -214,7 +208,6 @@ replies.add(reply2);
 
 `Rectangle` açıklamanın sayfadaki sınırlayıcı kutusunu tanımlar. `PenStyle` ise düz, kesikli ve noktalı gibi çizgi stillerini sıralar.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -232,7 +225,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Ana yapılandırma seçenekleri**  
 - `setBox()` – Açıklamanın sayfadaki sınırlayıcı dikdörtgenini ayarlar.  
@@ -246,11 +238,9 @@ distance.setReplies(replies); // Attach replies
 Açıklama hazır olduğunda belgeye ekleyin ve değişiklikleri kalıcı hale getirin.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Önemli:** Özellikle toplu işlerde birden çok belge işliyorsanız, kaydetmeden sonra her zaman `dispose()` çağırın.
@@ -259,7 +249,6 @@ annotator.dispose();
 
 Her şeyi bir araya getirdiğimizde, PDF yükleyen, mesafe açıklaması ekleyen ve sonucu kaydeden tam bir uçtan‑uca örnek aşağıdadır.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -302,7 +291,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Parçacığı çalıştırın, çıktıyı açıklamaları destekleyen herhangi bir PDF görüntüleyicide açın; etkileşimli bir cetvel görünecektir.
 
@@ -339,11 +327,9 @@ Mesafe açıklamalarının nerelerde parladığını anlamak, ürününüze nas�
 **Çözüm:** Geliştirme sırasında mutlak yol kullanın, dosyanın varlığını doğrulayın ve işlemin okuma iznine sahip olduğundan emin olun.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Sorun: Açıklama Görünmüyor
@@ -353,11 +339,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Hızlı çözümler:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Sorun: Büyük Belgelerde Bellek Sorunları
@@ -368,12 +352,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Çok büyük girdiler için JVM yığın boyutunu (`-Xmx4g` veya daha yüksek) artırın.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Sorun: Lisansla İlgili Hatalar
@@ -401,7 +383,6 @@ Prototipten üretime geçerken aşağıdaki performans hususlarını göz önün
 Servisiniz birden çok dosyayı paralel işliyorsa şu kurallara uyun:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -415,7 +396,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Her iş parçacığı kendi `Annotator` örneğini oluşturmalıdır.  
 - Sistem kaynaklarını tüketmemek için sınırlı bir iş parçacığı havuzu kullanın.  
@@ -428,7 +408,6 @@ Temelleri kavradıktan sonra açıklamalarınızı ince ayar yapmak için bu gel
 ### Özel Stil Seçenekleri
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -439,25 +418,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Özel bir `Pen` nesnesi tanımlayabilir, degrade doldurmalar uygulayabilir veya cetvel ucuna SVG işaretçileri ekleyebilirsiniz.
 
 ### Dinamik Konumlandırma
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Sayfa‑göreli koordinatları kullanarak belge yakınlaştırıldığında veya döndürüldüğünde açıklamanın otomatik olarak yeniden konumlanmasını sağlayın.
 
 ### Koşullu Açıklamalar
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -467,7 +442,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Belirli bir koşul gerçekleştiğinde (ör. bir bileşen tolerans eşiğini aştığında) sadece mesafe açıklaması oluşturacak mantık ekleyin.
@@ -481,14 +455,12 @@ Mesafe açıklamaları izole değildir; daha geniş belge‑yönetim ekosistemle
 `AnnotationRecord` bir veritabanında açıklama meta verilerini kalıcı tutmak için özelleştirilmiş bir veri modelidir.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Açıklama meta verilerini (yazar, zaman damgası, ölçüm değeri) raporlama ve arama için ilişkisel bir veritabanında saklayın.
@@ -498,7 +470,6 @@ Açıklama meta verilerini (yazar, zaman damgası, ölçüm değeri) raporlama v
 `DistanceAnnotationRequest` istemciden sunucuya açıklama parametrelerini taşıyan bir DTO'dur.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -507,20 +478,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 JSON yüküyle bir dosya alıp mesafe açıklaması ekleyen ve ardından açıklamalı belgeyi döndüren bir REST uç noktası sunun.
 
 ### Bulut Depolama Entegrasyonu
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 AWS S3, Azure Blob Storage veya Google Cloud Storage SDK'larını kullanarak dosyaları doğrudan okuyup yazın, ardından akışları `Annotator`a aktarın.

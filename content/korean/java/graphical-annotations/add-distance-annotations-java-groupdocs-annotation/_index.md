@@ -134,7 +134,6 @@ GroupDocs.Annotation 통합은 매우 간단합니다. 아래에 프로젝트에
 `pom.xml` 파일에 다음 구성을 추가하십시오:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -149,7 +148,6 @@ GroupDocs.Annotation 통합은 매우 간단합니다. 아래에 프로젝트에
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### 라이선스 요구 사항 이해
@@ -167,12 +165,10 @@ GroupDocs.Annotation은 세 가지 라이선스 모델을 제공합니다:
 `Annotator` 클래스는 모든 주석 작업의 진입점입니다. 문서를 로드하고, 편집 API를 제공하며, 결과를 디스크에 저장합니다.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro Tip:** `Annotator`를 try‑with‑resources 블록으로 감싸거나 명시적으로 `dispose()`를 호출하여 네이티브 메모리 누수를 방지하십시오.
@@ -185,7 +181,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 답글을 사용하면 협업자가 측정에 직접 댓글을 달아 간단한 눈금을 토론 스레드로 전환할 수 있습니다.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -203,7 +198,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **답글을 사용할 때:** 다중 사용자 검토 단계에서 치수를 선택한 이유를 설명하거나 팀원에게 명확성을 요청해야 할 경우.
 
@@ -213,7 +207,6 @@ replies.add(reply2);
 
 `Rectangle`은 페이지에서 주석의 경계 상자를 정의합니다. `PenStyle`은 실선, 대시, 점 등 라인 스타일을 열거합니다.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -231,7 +224,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **핵심 구성 옵션**  
 - `setBox()` – 페이지에서 주석의 경계 사각형을 설정합니다.  
@@ -245,11 +237,9 @@ distance.setReplies(replies); // Attach replies
 주석이 준비되면 문서에 추가하고 변경 사항을 저장하십시오.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **중요:** 저장 후에는 항상 `dispose()`를 호출하십시오. 특히 배치 작업에서 다수의 문서를 처리할 때 필요합니다.
@@ -258,7 +248,6 @@ annotator.dispose();
 
 모든 것을 종합한 전체 엔드‑투‑엔드 예제로, PDF를 로드하고 거리 주석을 추가한 뒤 결과를 저장합니다.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -301,7 +290,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 코드를 실행하고, 주석을 지원하는 PDF 뷰어에서 출력 파일을 열면 인터랙션이 가능한 완전한 눈금을 확인할 수 있습니다.
 
@@ -339,11 +327,9 @@ public class DistanceAnnotationExample {
 **해결책:** 개발 중에는 절대 경로를 사용하고, 파일이 존재하는지 확인하며, 프로세스에 읽기 권한이 있는지 확인하십시오.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### 문제: 주석이 보이지 않음
@@ -354,11 +340,9 @@ final Annotator annotator = new Annotator(inputPath);
 **빠른 해결:**  
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### 문제: 대용량 문서에서 메모리 문제
@@ -370,12 +354,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - 매우 큰 입력에 대해 JVM 힙을 늘립니다(`-Xmx4g` 이상).
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### 문제: 라이선스 관련 오류
@@ -405,7 +387,6 @@ try (Annotator annotator = new Annotator("large-document.pdf")) {
 서비스가 다수의 파일을 병렬로 처리한다면 다음 규칙을 따르십시오:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -419,7 +400,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - 각 스레드는 자체 `Annotator` 인스턴스를 생성해야 합니다.  
 - 시스템 자원을 고갈시키지 않도록 제한된 스레드 풀을 사용하십시오.  
@@ -432,7 +412,6 @@ public void processMultipleDocuments(List<String> filePaths) {
 ### 사용자 정의 스타일 옵션
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -443,25 +422,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 맞춤 `Pen` 객체를 정의하고, 그라디언트 채우기를 적용하거나 눈금선 끝에 SVG 마커를 삽입할 수도 있습니다.
 
 ### 동적 위치 지정
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 페이지 상대 좌표를 활용하면 문서가 확대되거나 회전될 때 주석이 자동으로 재배치됩니다.
 
 ### 조건부 주석
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -471,7 +446,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 특정 조건이 충족될 때만 거리 주석을 생성하도록 로직을 추가하십시오(예: 부품이 허용 오차를 초과할 때).
@@ -485,14 +459,12 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
 `AnnotationRecord`는 데이터베이스에 주석 메타데이터를 저장하기 위한 맞춤 데이터 모델입니다.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 주석 메타데이터(작성자, 타임스탬프, 측정값)를 관계형 데이터베이스에 저장하여 보고 및 검색에 활용하십시오.
@@ -502,7 +474,6 @@ record.setCreatedDate(distance.getCreatedOn());
 `DistanceAnnotationRequest`는 클라이언트에서 서버로 주석 매개변수를 전달하는 DTO입니다.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -511,20 +482,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 파일을 받아 JSON 페이로드를 기반으로 거리 주석을 추가하고 주석이 적용된 문서를 반환하는 REST 엔드포인트를 노출하십시오.
 
 ### 클라우드 스토리지 통합
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 해당 SDK를 사용해 AWS S3, Azure Blob Storage, Google Cloud Storage에서 파일을 직접 읽고 쓰고, 스트림을 `Annotator`에 전달하십시오.

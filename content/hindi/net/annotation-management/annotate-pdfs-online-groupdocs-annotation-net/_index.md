@@ -82,13 +82,11 @@ GroupDocs.Annotation एक .NET लाइब्रेरी है जो क�
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### विकल्प B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### विकल्प C: Visual Studio UI
@@ -105,7 +103,6 @@ License एक क्लास है जो आपके GroupDocs.Annotation �
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### प्रोडक्शन लाइसेंस
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** विस्तारित मूल्यांकन के लिए वॉटरमार्क के बिना एक [अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license) का अनुरोध करें।
@@ -127,7 +123,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 यदि कोड कंपाइल और रन हो जाता है, तो आपका पर्यावरण अगले चरणों के लिए तैयार है।
@@ -143,7 +138,6 @@ HttpClient एक .NET क्लास है जो HTTP अनुरोध भ
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - सीधे फ़ाइल URL का उपयोग करें (उदाहरण के लिए, GitHub रॉ फ़ाइलों के लिए `?raw=true` जोड़ें)।  
@@ -166,7 +160,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` PDF को RAM में रखता है, जिससे GroupDocs को तेज़, रैंडम‑एक्सेस रीड क्षमता मिलती है।  
@@ -196,7 +189,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### एनोटेशन विवरण कॉन्फ़िगर करना
 ```text
@@ -208,7 +200,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` आयत को पॉइंट्स में परिभाषित करता है (1 pt ≈ 1/72 in)।  
@@ -231,7 +222,6 @@ Annotator.Save एक मेथड है जो संशोधित दस्
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** Windows, Linux, और macOS में फ़ाइल पाथ सुरक्षित रूप से बनाने के लिए `Path.Combine()` का उपयोग करें।
@@ -271,7 +261,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### बड़े PDFs के साथ एप्लिकेशन मेमोरी खत्म क्यों हो जाता है?
 बहुत बड़े PDFs को पूरी तरह `MemoryStream` में लोड करने से प्रक्रिया की उपलब्ध मेमोरी समाप्त हो सकती है, विशेषकर 32‑बिट वातावरण या सीमित RAM वाले कंटेनरों में।
@@ -296,7 +285,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### मेरे एनोटेशन गलत जगह पर क्यों दिख रहे हैं?
 गलत प्लेसमेंट अक्सर पेज डाइमेंशन, रोटेशन में असंगति, या PDF के अपेक्षित कॉर्डिनेट सिस्टम से अलग उपयोग के कारण होता है।
@@ -314,7 +302,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## प्रदर्शन सर्वश्रेष्ठ प्रथाएँ
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **डॉक्यूमेंट कैशिंग:** अक्सर एक्सेस किए जाने वाले PDFs को डिस्ट्रिब्यूटेड कैश (Redis, MemoryCache) में स्टोर करें।  
 - **Async APIs:** थ्रेड्स को मुक्त रखने के लिए असिंक्रोनस मेथड (`await annotator.SaveAsync(...)`) को प्राथमिकता दें।  
 ```text
@@ -342,7 +328,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### मेमोरी को प्रभावी ढंग से कैसे मैनेज करें?
@@ -356,7 +341,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 अपने एप्लिकेशन की मेमोरी फ़ुटप्रिंट को **dotMemory** या **PerfView** जैसे टूल्स से मॉनिटर करें, विशेषकर जब एक साथ कई PDFs प्रोसेस कर रहे हों।

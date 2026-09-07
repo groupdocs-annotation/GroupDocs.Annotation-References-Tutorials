@@ -82,13 +82,11 @@ GroupDocs.Annotation 是一个 .NET 库，能够在多种文档格式上添加�
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### 选项 B：.NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### 选项 C：Visual Studio UI
@@ -105,7 +103,6 @@ License 是一个类，用于加载你的 GroupDocs.Annotation 许可证文件�
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### 生产许可证
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **小贴士：** 请求一个[临时许可证](https://purchase.groupdocs.com/temporary-license)以获得更长的评估期且无水印。
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
 ```
-```
 
 ## 如何从远程 URL 加载 PDF 文档？
 HttpClient 是 .NET 中用于发送 HTTP 请求并接收响应的类。使用它可以将 PDF 下载为流，并直接将该流传入 Annotator 构造函数，从而避免在磁盘上创建任何临时文件。
@@ -141,7 +136,6 @@ HttpClient 是 .NET 中用于发送 HTTP 请求并接收响应的类。使用它
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - 使用直接的文件 URL（例如，对 GitHub 原始文件添加 `?raw=true`）。  
@@ -164,7 +158,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` 将 PDF 保存在内存中，为 GroupDocs 提供快速的随机访问读取能力。  
@@ -194,7 +187,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### 配置批注细节
 ```text
@@ -206,7 +198,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` 以点为单位定义矩形（1 pt ≈ 1/72 英寸）。  
@@ -229,7 +220,6 @@ Annotator.Save 是将修改后的文档（包括所有添加的批注）写入�
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **小贴士：** 使用 `Path.Combine()` 可在 Windows、Linux 和 macOS 上安全构建文件路径。
@@ -269,7 +259,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### 为什么在处理大 PDF 时应用会耗尽内存？
 将非常大的 PDF 完全加载到 `MemoryStream` 中可能会耗尽进程可用内存，尤其是在 32 位环境或内存受限的容器中。
@@ -294,7 +283,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### 为什么我的批注显示在错误的位置？
 位置错误通常是由于页面尺寸、旋转不匹配，或使用了与 PDF 不同的坐标系导致的。
@@ -312,7 +300,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## 性能最佳实践
 
@@ -328,7 +315,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **文档缓存：** 将常访问的 PDF 存入分布式缓存（Redis、MemoryCache）。  
 - **异步 API：** 优先使用异步方法（`await annotator.SaveAsync(...)`）以释放线程。  
 ```text
@@ -340,7 +326,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### 如何高效管理内存？
@@ -354,7 +339,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 使用 **dotMemory** 或 **PerfView** 等工具监控应用的内存占用，尤其是在并发处理 PDF 批次时。

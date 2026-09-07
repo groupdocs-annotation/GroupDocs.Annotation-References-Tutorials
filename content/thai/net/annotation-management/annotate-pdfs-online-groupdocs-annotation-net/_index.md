@@ -82,13 +82,11 @@ GroupDocs.Annotation เป็นไลบรารี .NET ที่ช่ว�
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### ตัวเลือก B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### ตัวเลือก C: Visual Studio UI
@@ -105,7 +103,6 @@ License คือคลาสที่โหลดไฟล์ไลเซนส
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### ไลเซนส์สำหรับการผลิต
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **เคล็ดลับ:** ขอรับ [ไลเซนส์ชั่วคราว](https://purchase.groupdocs.com/temporary-license) เพื่อการประเมินระยะยาวโดยไม่มีลายน้ำ
@@ -126,7 +122,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 หากโค้ดคอมไพล์และรันได้ สภาพแวดล้อมของคุณพร้อมสำหรับขั้นตอนต่อไป
@@ -142,7 +137,6 @@ HttpClient เป็นคลาส .NET ที่ใช้ส่งคำขอ
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - ใช้ URL ไฟล์โดยตรง (เช่น เพิ่ม `?raw=true` สำหรับไฟล์ raw ของ GitHub).  
@@ -165,7 +159,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` เก็บ PDF ใน RAM ทำให้ GroupDocs สามารถอ่านแบบ random‑access ได้อย่างรวดเร็ว.  
@@ -195,7 +188,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### การกำหนดรายละเอียดของ Annotation
 ```text
@@ -207,7 +199,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` กำหนดสี่เหลี่ยมในหน่วย points (1 pt ≈ 1/72 in).  
@@ -227,7 +218,6 @@ annotator.Add(area); // Add annotation to the document
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **เคล็ดลับ:** ใช้ `Path.Combine()` เพื่อสร้างเส้นทางไฟล์อย่างปลอดภัยบน Windows, Linux, และ macOS.
@@ -266,7 +256,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### ทำไมแอปถึงใช้หน่วยความจำหมดเมื่อจัดการกับ PDF ขนาดใหญ่?
 การโหลด PDF ขนาดใหญ่อย่างเต็มที่เข้าสู่ `MemoryStream` สามารถทำให้หน่วยความจำของกระบวนการหมด, โดยเฉพาะในสภาพแวดล้อม 32‑bit หรือคอนเทนเนอร์ที่มี RAM จำกัด
@@ -290,7 +279,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### ทำไม annotation ของฉันจึงแสดงในตำแหน่งผิด?
 การวางตำแหน่งที่ไม่ถูกต้องมักเกิดจากขนาดหน้าที่ไม่ตรงกัน, การหมุน, หรือการใช้ระบบพิกัดที่แตกต่างจากที่ PDF คาดหวัง
@@ -307,7 +295,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## แนวทางปฏิบัติที่ดีที่สุดสำหรับประสิทธิภาพ
 
@@ -322,7 +309,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Document Caching:** Store frequently accessed PDFs in a distributed cache (Redis, MemoryCache).  
 - **Async APIs:** Prefer asynchronous methods (`await annotator.SaveAsync(...)`) to keep threads free.  
 
@@ -336,7 +322,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### วิธีจัดการหน่วยความจำอย่างมีประสิทธิภาพ?
 คำสั่ง `using` ทำให้แน่ใจว่าออบเจ็กต์ที่สามารถทำลายได้ เช่น สตรีมและ Annotator จะถูกปิดและปล่อยอย่างถูกต้อง, ป้องกันการรั่วไหลของหน่วยความจำ  
@@ -349,7 +334,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 ตรวจสอบการใช้หน่วยความจำของแอปพลิเคชันด้วยเครื่องมือเช่น **dotMemory** หรือ **PerfView**, โดยเฉพาะเมื่อประมวลผลชุด PDF พร้อมกัน

@@ -133,7 +133,6 @@ weight: 1
 將以下設定加入您的 `pom.xml` 檔案：
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -148,7 +147,6 @@ weight: 1
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### 了解授權需求
@@ -166,12 +164,10 @@ GroupDocs.Annotation 提供三種授權模式：
 `Annotator` 類別是所有註釋操作的入口。它會載入文件、提供編輯 API，並將結果寫回磁碟。
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **專業提示：** 將 `Annotator` 包在 try‑with‑resources 區塊中，或明確呼叫 `dispose()`，以避免原生記憶體泄漏。
@@ -184,7 +180,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 回覆讓協作者能直接在測量上附加評論，將簡單的尺標轉變為討論串。
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -202,7 +197,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **何時使用回覆：** 在多使用者審閱流程中，需要說明為何選擇某個尺寸或向團隊成員請求說明時。
 
@@ -212,7 +206,6 @@ replies.add(reply2);
 
 `Rectangle` 定義註釋在頁面上的邊界框。`PenStyle` 列舉線條樣式，如實線、虛線與點線。
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -230,7 +223,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **主要設定選項**  
 - `setBox()` – 設定註釋在頁面上的邊界矩形。  
@@ -244,11 +236,9 @@ distance.setReplies(replies); // Attach replies
 註釋設定完成後，將其加入文件並保存變更。
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **重要提示：** 儲存後務必呼叫 `dispose()`，特別是在批次處理多個文件時。
@@ -257,7 +247,6 @@ annotator.dispose();
 
 以下為完整的端對端範例，載入 PDF、加入距離註釋，並儲存結果。
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -300,7 +289,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 執行程式碼，使用任何支援註釋的 PDF 檢視器開啟輸出檔，即可看到可互動的完整尺標。
 
@@ -336,11 +324,9 @@ public class DistanceAnnotationExample {
 **症狀：** 建立 `Annotator` 時拋出例外。**解決方案：** 開發期間使用絕對路徑，確認檔案存在，且程式具有讀取權限。
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### 問題：註釋未顯示
@@ -349,11 +335,9 @@ final Annotator annotator = new Annotator(inputPath);
 **快速修正：**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### 問題：大型文件的記憶體問題
@@ -363,12 +347,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - 對於極大檔案，提升 JVM 堆積大小（如 `-Xmx4g` 或更高）。
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### 問題：授權相關錯誤
@@ -395,7 +377,6 @@ try (Annotator annotator = new Annotator("large-document.pdf")) {
 若服務同時處理多個檔案，請遵循以下規則：
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -409,7 +390,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - 每個執行緒必須自行建立 `Annotator` 實例。  
 - 使用受限的執行緒池，以免耗盡系統資源。  
@@ -422,7 +402,6 @@ public void processMultipleDocuments(List<String> filePaths) {
 ### 自訂樣式選項
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -433,25 +412,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 您可以定義自訂的 `Pen` 物件、套用漸層填色，甚至在尺標線端點嵌入 SVG 標記。
 
 ### 動態定位
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 利用相對於頁面的座標，使註釋在文件縮放或旋轉時自動重新定位。
 
 ### 條件式註釋
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -461,7 +436,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 加入條件判斷，僅在滿足特定條件時（例如元件超過容差門檻）才建立距離註釋。
@@ -475,14 +449,12 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
 `AnnotationRecord` 是用於在資料庫中持久化註釋中繼資料的自訂資料模型。
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 將註釋中繼資料（作者、時間戳記、測量值）存入關聯式資料庫，以供報表與搜尋使用。
@@ -492,7 +464,6 @@ record.setCreatedDate(distance.getCreatedOn());
 `DistanceAnnotationRequest` 是從客戶端傳遞至伺服器的 DTO，承載註釋參數。
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -501,20 +472,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 提供一個 REST 端點，接受檔案、根據 JSON 載荷加入距離註釋，並回傳已註釋的文件。
 
 ### 雲端儲存整合
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 使用相應的 SDK，直接從 AWS S3、Azure Blob Storage 或 Google Cloud Storage 讀寫檔案，然後將串流傳遞給 `Annotator`。

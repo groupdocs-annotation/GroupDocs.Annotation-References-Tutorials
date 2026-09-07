@@ -135,7 +135,6 @@ Integrace GroupDocs.Annotation je hračka. Níže uvádíme Maven koordináty, k
 Přidejte následující konfiguraci do souboru `pom.xml`:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -150,7 +149,6 @@ Přidejte následující konfiguraci do souboru `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Porozumění požadavkům na licenci
@@ -168,12 +166,10 @@ Začněte s bezplatnou zkušební verzí a poté upgradujte, až budete připrav
 Třída `Annotator` je vstupním bodem pro všechny operace s anotacemi. Načte dokument, poskytuje API pro úpravy a zapisuje výsledek zpět na disk.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro tip:** Zabalte `Annotator` do try‑with‑resources bloku nebo explicitně zavolejte `dispose()`, abyste předešli únikům nativní paměti.
@@ -186,7 +182,6 @@ Nyní si projdeme kompletní, produkčně připravený workflow pro přidání a
 
 Odpovědi umožňují spolupracovníkům připojit komentáře přímo k měření, čímž se jednoduché pravítko promění v diskusní vlákno.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -204,7 +199,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **Kdy použít odpovědi:** V cyklech revizí více uživatelů, když potřebujete vysvětlit, proč byl zvolen určitý rozměr, nebo požádat o upřesnění od kolegy.
 
@@ -214,7 +208,6 @@ Třída `DistanceAnnotation` je hlavní objekt GroupDocs.Annotation, který pře
 
 `Rectangle` definuje ohraničující rámeček anotace na stránce. `PenStyle` enumeruje styly čar, jako jsou plná, čárkovaná a tečkovaná.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -232,7 +225,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Klíčové konfigurační možnosti**  
 - `setBox()` – Nastaví ohraničující obdélník anotace na stránce.  
@@ -246,11 +238,9 @@ distance.setReplies(replies); // Attach replies
 Jakmile je anotace připravena, přidejte ji do dokumentu a změny uložte.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Důležité:** Vždy po uložení zavolejte `dispose()`, zejména při zpracování mnoha dokumentů v dávce.
@@ -259,7 +249,6 @@ annotator.dispose();
 
 Spojením všech částí získáte kompletní end‑to‑end příklad, který načte PDF, přidá anotaci vzdálenosti a výsledek uloží.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -302,7 +291,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Spusťte úryvek, otevřete výstupní soubor v libovolném PDF prohlížeči, který podporuje anotace, a uvidíte plně funkční pravítko připravené k interakci.
 
@@ -339,11 +327,9 @@ I dobře napsaný příklad může narazit na potíže. Níže jsou nejčastěj�
 **Řešení:** Během vývoje používejte absolutní cestu, ověřte, že soubor existuje, a zajistěte, že proces má oprávnění ke čtení.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Problém: Anotace není viditelná
@@ -353,11 +339,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Rychlé opravy:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Problém: Problémy s pamětí u velkých dokumentů
@@ -368,12 +352,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Zvyšte heap JVM (`-Xmx4g` nebo více) pro opravdu velké vstupy.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Problém: Chyby související s licencí
@@ -401,7 +383,6 @@ Při přechodu z prototypu do produkce mějte na paměti následující úvahy o
 Pokud váš servis zpracovává mnoho souborů paralelně, dodržujte tato pravidla:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -415,7 +396,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Každé vlákno musí vytvořit vlastní instanci `Annotator`.  
 - Používejte omezený thread pool, aby nedošlo k vyčerpání systémových zdrojů.  
@@ -428,7 +408,6 @@ Jakmile zvládnete základy, prozkoumejte tyto pokročilé funkce pro doladění
 ### Vlastní možnosti stylování
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -439,25 +418,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Můžete definovat vlastní objekt `Pen`, aplikovat gradientní výplně nebo dokonce vložit SVG značky na konce čáry pravítka.
 
 ### Dynamické umístění
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Využijte souřadnice relativní k stránce, aby se anotace automaticky přepočítala při zoomu nebo rotaci dokumentu.
 
 ### Podmíněné anotace
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -467,7 +442,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Přidejte logiku, která vytvoří anotaci vzdálenosti jen tehdy, když je splněna určitá podmínka (např. když komponenta překročí toleranční práh).
@@ -481,14 +455,12 @@ Anotace vzdálenosti nejsou izolované – přirozeně zapadají do širších e
 `AnnotationRecord` je vlastní datový model pro ukládání metadat anotací v databázi.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Ukládejte metadata anotací (autor, časové razítko, hodnota měření) do relační databáze pro reporting a vyhledávání.
@@ -498,7 +470,6 @@ Ukládejte metadata anotací (autor, časové razítko, hodnota měření) do re
 `DistanceAnnotationRequest` je DTO, které přenáší parametry anotace z klienta na server.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -507,20 +478,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Poskytněte REST endpoint, který přijme soubor, přidá anotaci vzdálenosti na základě JSON payloadu a vrátí anotovaný dokument.
 
 ### Integrace cloudového úložiště
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Čtěte a zapisujte soubory přímo z AWS S3, Azure Blob Storage nebo Google Cloud Storage pomocí příslušných SDK, poté předávejte proudy `Annotator`.

@@ -103,13 +103,11 @@ weight: 1
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 **Χρήση του .NET CLI** (προτιμάται για CI/CD pipelines)  
 ``` 
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 > **Pro Tip:** Πάντα καθορίζετε την έκδοση (π.χ., `Install-Package GroupDocs.Annotation -Version 23.12`). Αυτό αποτρέπει τυχαίες αλλαγές που θα σπάσουν τον κώδικά σας όταν το πακέτο ενημερωθεί αυτόματα. Δείτε τις τελευταίες εκδόσεις στη [GroupDocs releases page](https://releases.groupdocs.com/annotation/net/).
@@ -135,7 +133,6 @@ using System.Collections.Generic;
 // Initialize Annotator with an input document path
 string inputPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "sample.pdf");
 ```
-```
 
 > **Important:** Αντικαταστήστε το `YOUR_DOCUMENT_DIRECTORY` με την απόλυτη διαδρομή προς τα PDF σας. Η χρήση του `Path.Combine` εγγυάται σωστούς διαχωριστές διαδρομής σε Windows και Linux.
 
@@ -159,7 +156,6 @@ catch (Exception ex)
 {
     Console.WriteLine($"Error loading document: {ex.Message}");
 }
-```
 ```
 
 Το μπλοκ `try‑catch` προστατεύει από ελλιπή αρχεία, κατεστραμμένα PDF ή μη υποστηριζόμενες μορφές, εξασφαλίζοντας ότι η εφαρμογή σας αποτυγχάνει με χάρη αντί για κατάρρευση.
@@ -189,7 +185,6 @@ HighlightAnnotation highlight = new HighlightAnnotation
 // Add the annotation to the document
 annotator.Add(highlight);
 ```
-```
 
 > **Γιατί είναι σημαντική η ιδιότητα `Box`:** Το ορθογώνιο χρησιμοποιεί μονάδες points (1 point = 1/72 inch) με μέτρηση από την κάτω‑αριστερή γωνία της σελίδας. Ακριβείς συντεταγμένες σας επιτρέπουν να τοποθετείτε σημειώσεις ακριβώς εκεί που οι αξιολογητές τις περιμένουν.
 
@@ -202,7 +197,6 @@ annotator.Add(highlight);
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_document.pdf");
 annotator.Save(outputPath);
 Console.WriteLine($"Document saved to: {outputPath}");
-```
 ```
 
 > **Best Practice:** Αποθηκεύετε τις αρχικές και τις σχολιασμένες εκδόσεις σε ξεχωριστούς φακέλους ελεγχόμενους από version control. Αυτή η στρατηγική απλοποιεί τη συμμόρφωση με κανονισμούς και την παρακολούθηση αλλαγών.
@@ -237,7 +231,6 @@ ArrowAnnotation pointer = new ArrowAnnotation
 annotator.Add(textNote);
 annotator.Add(pointer);
 ```
-```
 
 ### Πώς ενημερώνω το χρώμα ή το σχόλιο ενός υπάρχοντος σχολίου;
 Η μέθοδος `GetById` ανακτά ένα συγκεκριμένο σχόλιο με βάση το μοναδικό του αναγνωριστικό, επιτρέποντάς σας να τροποποιήσετε μόνο τα πεδία που χρειάζεστε. Αφού λάβετε το αντικείμενο, μπορείτε να αλλάξετε ιδιότητες όπως `Color` ή `Message` και στη συνέχεια να αποθηκεύσετε τις αλλαγές με `Update`.  
@@ -259,7 +252,6 @@ foreach (var annotation in annotations)
     }
 }
 ```
-```
 
 > **Performance Note:** Για έγγραφα με χιλιάδες σχολιασμούς, αποθηκεύστε τα IDs των σχολίων σε λεξικό για να αποφύγετε γραμμικές αναζητήσεις.
 
@@ -280,7 +272,6 @@ if (extension != ".pdf" && extension != ".docx" && extension != ".pptx")
     throw new NotSupportedException($"File format {extension} is not supported");
 }
 ```
-```
 
 ### Πρόβλημα 2 – Τα σχόλια εμφανίζονται σε λάθος θέσεις
 **Άμεση Απάντηση:** Βεβαιωθείτε ότι χρησιμοποιείτε το σωστό σύστημα συντεταγμένων (αρχή στο κάτω‑αριστερό) και ότι λαμβάνεται υπόψη το metadata περιστροφής της σελίδας. Προσαρμόστε τις τιμές του `Box` αναλόγως.  
@@ -295,7 +286,6 @@ private bool IsValidCoordinate(Rectangle box, double pageWidth, double pageHeigh
            (box.X + box.Width) <= pageWidth && 
            (box.Y + box.Height) <= pageHeight;
 }
-```
 ```
 
 ### Πρόβλημα 3 – Προβλήματα μνήμης με μεγάλα έγγραφα
@@ -332,7 +322,6 @@ using (Annotator annotator = new Annotator(inputPath))
     }
 }
 ```
-```
 
 ## Συμβουλές Βελτιστοποίησης Απόδοσης
 
@@ -355,7 +344,6 @@ foreach (var annotation in annotations)
 }
 annotator.Save(outputPath); // Save once at the end
 ```
-```
 
 ### Πώς διαχειρίζομαι τη μνήμη όταν εργάζομαι με PDF εκατοντάδων σελίδων;
 Ενεργοποιήστε τη σημαία `MemoryOptimization = true` στις `LoadOptions` και επεξεργαστείτε τις σελίδες διαδοχικά. Αυτό οδηγεί τη βιβλιοθήκη να διατηρεί μόνο τη ενεργή σελίδα στη μνήμη, μειώνοντας δραστικά το αποτύπωμα RAM για πολύ μεγάλα αρχεία.  
@@ -367,7 +355,6 @@ using (var annotator = new Annotator(inputPath))
 {
     // Your annotation code here
 } // Annotator is automatically disposed, freeing memory
-```
 ```
 
 ### Πώς πρέπει να κάνω cache συχνά προσπελαζόμενων εγγράφων;
@@ -390,7 +377,6 @@ private DocumentInfo GetDocumentInfo(string path)
     }
     return _documentCache[path];
 }
-```
 ```
 
 ## Καλές Πρακτικές για Εφαρμογές Παραγωγής
@@ -419,7 +405,6 @@ public async Task<bool> AddAnnotationSafely(string documentPath, AnnotationBase 
     }
 }
 ```
-```
 
 ### Πώς μπορώ να επικυρώσω δεδομένα σχολιασμού που παρέχονται από χρήστη;
 Ελέγξτε ότι τα πεδία JSON (αριθμός σελίδας, συντεταγμένες ορθογωνίου, τύπος σχολίου) βρίσκονται εντός αποδεκτών ορίων πριν δημιουργήσετε τα αντικείμενα σχολιασμού. Απορρίψτε συντεταγμένες εκτός ορίων με σαφή απάντηση HTTP 400 και παρέχετε κατατοπιστικό μήνυμα σφάλματος.  
@@ -440,7 +425,6 @@ public bool ValidateAnnotationInput(AnnotationBase annotation)
     return true;
 }
 ```
-```
 
 ### Πώς εξασφαλίζω thread safety σε μια web υπηρεσία πολλαπλών χρηστών;
 Δημιουργήστε ένα νέο `Annotator` ανά αίτηση· ποτέ μην μοιράζεστε ένα ενιαίο στιγμιότυπο μεταξύ νημάτων. Εάν χρειάζεται να συντονίσετε πρόσβαση σε κοινό αρχείο, χρησιμοποιήστε `SemaphoreSlim` ή κλείδωμα επιπέδου αρχείου για να αποτρέψετε ταυτόχρονες εγγραφές.  
@@ -460,7 +444,6 @@ public void AddAnnotationThreadSafe(string documentPath, AnnotationBase annotati
         }
     }
 }
-```
 ```
 
 ## Πότε να Χρησιμοποιήσετε το GroupDocs.Annotation έναντι Εναλλακτικών Λύσεων
@@ -497,7 +480,6 @@ using (Annotator annotator = new Annotator(inputPath, loadOptions))
     // Your annotation code here
 }
 ```
-```
 
 **Ε: Γιατί τα σχόλιά μου εμφανίζονται στη λάθος θέση;**  
 Α: Το GroupDocs χρησιμοποιεί καρτεσιανό σύστημα συντεταγμένων όπου (0,0) είναι η κάτω‑αριστερή γωνία και οι μετρήσεις είναι σε points. Η λανθασμένη θέση προέρχεται συνήθως από χρήση τιμών pixel ή αγνόηση της περιστροφής της σελίδας. Μετατρέψτε τις τιμές pixel σε points (1 pixel ≈ 0.75 point στα 96 DPI) και προσαρμόστε τυχόν metadata περιστροφής.
@@ -511,7 +493,6 @@ private bool ValidateCoordinates(Rectangle box, double pageWidth, double pageHei
            (box.X + box.Width) <= pageWidth && 
            (box.Y + box.Height) <= pageHeight;
 }
-```
 ```
 
 **Ε: Πώς ανακτώ υπάρχοντες σχολιασμούς από PDF;**  
@@ -528,7 +509,6 @@ using (Annotator annotator = new Annotator(inputPath))
     }
 }
 ```
-```
 
 **Ε: Μπορώ να διαγράψω συγκεκριμένους σχολιασμούς προγραμματιστικά;**  
 Α: Ναι. Χρησιμοποιήστε `Delete(id)` για να αφαιρέσετε ένα συγκεκριμένο σχόλιο ή `DeleteAll()` για να καθαρίσετε ολόκληρο το έγγραφο. Μπορείτε επίσης να φιλτράρετε ανά τύπο πριν τη διαγραφή.
@@ -544,7 +524,6 @@ foreach (var annotation in annotationsToDelete)
     annotator.Remove(annotation);
 }
 ```
-```
 
 **Ε: Πώς ενημερώνω ιδιότητες σχολίου όπως χρώμα ή μήνυμα;**  
 Α: Ανακτήστε το σχόλιο, τροποποιήστε `Color` ή `Message` και καλέστε `Update()`. Η αλλαγή αποθηκεύεται στην επόμενη κλήση `Save()`.
@@ -558,7 +537,6 @@ if (targetAnnotation != null)
     targetAnnotation.Message = "Updated message";
     annotator.Update(targetAnnotation);
 }
-```
 ```
 
 **Ε: Μπορώ να προσθέσω προσαρμοσμένα μεταδεδομένα σε σχολιασμούς;**  
@@ -579,7 +557,6 @@ var annotation = new HighlightAnnotation
     }
 };
 ```
-```
 
 **Ε: Υποστηρίζει το GroupDocs.Annotation ψηφιακές υπογραφές σε σχολιασμένα PDF;**  
 Α: Ενώ η βιβλιοθήκη Annotation εστιάζει στη σήμανση, μπορείτε να τη συνδυάσετε με το GroupDocs.Signature .NET για να εφαρμόσετε κρυπτογραφικές υπογραφές μετά την προσθήκη σχολίων, εξασφαλίζοντας τόσο οπτική όσο και νομική ακεραιότητα.
@@ -592,7 +569,6 @@ var annotation = new HighlightAnnotation
 List<AnnotationBase> annotations = annotator.Get();
 string jsonAnnotations = JsonConvert.SerializeObject(annotations, Formatting.Indented);
 File.WriteAllText("annotations.json", jsonAnnotations);
-```
 ```
 
 ---

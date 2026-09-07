@@ -137,7 +137,6 @@ weight: 1
 Προσθέστε την παρακάτω διαμόρφωση στο αρχείο `pom.xml` σας:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -152,7 +151,6 @@ weight: 1
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Κατανόηση των Απαιτήσεων Άδειας
@@ -170,12 +168,10 @@ weight: 1
 Η κλάση `Annotator` είναι το σημείο εισόδου για όλες τις λειτουργίες σημειώσεων. Φορτώνει ένα έγγραφο, παρέχει API επεξεργασίας και γράφει το αποτέλεσμα πίσω στο δίσκο.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro Tip:** Τυλίξτε το `Annotator` σε ένα μπλοκ try‑with‑resources ή καλέστε ρητά `dispose()` για να αποφύγετε διαρροές φυσικής μνήμης.
@@ -188,7 +184,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 Οι απαντήσεις επιτρέπουν στους συνεργάτες να επισυνάπτουν σχόλια απευθείας σε μια μέτρηση, μετατρέποντας έναν απλό χάρακα σε νήμα συζήτησης.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -206,7 +201,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **When to use replies:** Σε κύκλους ανασκόπησης πολλαπλών χρηστών, όταν χρειάζεται να εξηγήσετε γιατί επιλέχθηκε μια διάσταση ή να ζητήσετε διευκρινίσεις από έναν συνεργάτη.
 
@@ -216,7 +210,6 @@ replies.add(reply2);
 
 `Rectangle` ορίζει το ορθογώνιο περιγράμματος της σημείωσης στη σελίδα. `PenStyle` απαριθμεί τα στυλ γραμμής όπως solid, dash και dot.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -234,7 +227,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Key configuration options**  
 - `setBox()` – Ορίζει το ορθογώνιο περιγράμματος της σημείωσης στη σελίδα.  
@@ -248,11 +240,9 @@ distance.setReplies(replies); // Attach replies
 Μόλις η σημείωση είναι έτοιμη, προσθέστε την στο έγγραφο και διατηρήστε τις αλλαγές.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Important:** Πάντα καλέστε `dispose()` μετά την αποθήκευση, ειδικά όταν επεξεργάζεστε πολλά έγγραφα σε παρτίδα.
@@ -261,7 +251,6 @@ annotator.dispose();
 
 Συνδυάζοντας όλα τα παραπάνω, εδώ είναι ένα πλήρες παράδειγμα end‑to‑end που φορτώνει ένα PDF, προσθέτει μια distance annotation και αποθηκεύει το αποτέλεσμα.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -304,7 +293,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Εκτελέστε το απόσπασμα, ανοίξτε το αρχείο εξόδου σε οποιονδήποτε προβολέα PDF που υποστηρίζει σημειώσεις, και θα δείτε έναν πλήρως λειτουργικό χάρακα έτοιμο για αλληλεπίδραση.
 
@@ -341,11 +329,9 @@ public class DistanceAnnotationExample {
 **Solution:** Χρησιμοποιήστε απόλυτη διαδρομή κατά την ανάπτυξη, επαληθεύστε ότι το αρχείο υπάρχει και βεβαιωθείτε ότι η διαδικασία έχει δικαιώματα ανάγνωσης.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Πρόβλημα: Η Σημείωση Δεν Εμφανίζεται
@@ -355,11 +341,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Quick fixes:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Πρόβλημα: Προβλήματα Μνήμης με Μεγάλα Έγγραφα
@@ -370,12 +354,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Αυξήστε τη μνήμη heap του JVM (`-Xmx4g` ή περισσότερο) για πολύ μεγάλα αρχεία.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Πρόβλημα: Σφάλματα Σχετικά με την Άδεια
@@ -403,7 +385,6 @@ try (Annotator annotator = new Annotator("large-document.pdf")) {
 Αν η υπηρεσία σας επεξεργάζεται πολλά αρχεία παράλληλα, ακολουθήστε αυτούς τους κανόνες:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -417,7 +398,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Κάθε νήμα πρέπει να δημιουργεί τη δική του παρουσία `Annotator`.  
 - Χρησιμοποιήστε περιορισμένο thread pool για να αποφύγετε την εξάντληση των πόρων του συστήματος.  
@@ -430,7 +410,6 @@ public void processMultipleDocuments(List<String> filePaths) {
 ### Προσαρμοσμένες Επιλογές Στυλ
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -441,25 +420,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Μπορείτε να ορίσετε ένα προσαρμοσμένο αντικείμενο `Pen`, να εφαρμόσετε διαβαθμίσεις χρώματος ή ακόμη και να ενσωματώσετε δείκτες SVG στα άκρα της γραμμής του χάρακα.
 
 ### Δυναμική Τοποθέτηση
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Εκμεταλλευτείτε τις συντεταγμένες σχετικές με τη σελίδα ώστε η σημείωση να επανατοποθετείται αυτόματα όταν το έγγραφο ζουμάρεται ή περιστρέφεται.
 
 ### Υπό Συνθήκες Σημειώσεις
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -469,7 +444,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Προσθέστε λογική που δημιουργεί μια distance annotation μόνο όταν πληρούται μια συγκεκριμένη προϋπόθεση (π.χ., όταν ένα στοιχείο υπερβαίνει ένα όριο ανοχής).
@@ -483,14 +457,12 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
 Το `AnnotationRecord` είναι ένα προσαρμοσμένο μοντέλο δεδομένων για την αποθήκευση μεταδεδομένων σημειώσεων σε μια βάση δεδομένων.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Αποθηκεύστε τα μεταδεδομένα της σημείωσης (συγγραφέας, χρονική σήμανση, τιμή μέτρησης) σε μια σχεσιακή βάση δεδομένων για αναφορές και αναζήτηση.
@@ -500,7 +472,6 @@ record.setCreatedDate(distance.getCreatedOn());
 Το `DistanceAnnotationRequest` είναι ένα DTO που μεταφέρει τις παραμέτρους της σημείωσης από τον πελάτη στον διακομιστή.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -509,20 +480,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Αποκτήστε ένα REST endpoint που δέχεται αρχείο, προσθέτει μια distance annotation βάσει του JSON payload και επιστρέφει το σημειωμένο έγγραφο.
 
 ### Ενσωμάτωση Αποθήκευσης στο Cloud
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Διαβάστε και γράψτε αρχεία απευθείας από AWS S3, Azure Blob Storage ή Google Cloud Storage χρησιμοποιώντας τα αντίστοιχα SDKs, στη συνέχεια περάστε τα streams στο `Annotator`.

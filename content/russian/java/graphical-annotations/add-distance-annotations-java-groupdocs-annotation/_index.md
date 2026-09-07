@@ -136,7 +136,6 @@ weight: 1
 Добавьте следующую конфигурацию в ваш файл `pom.xml`:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -151,7 +150,6 @@ weight: 1
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Понимание требований к лицензии
@@ -169,12 +167,10 @@ GroupDocs.Annotation предлагает три модели лицензиро
 Класс `Annotator` — точка входа для всех операций с аннотациями. Он загружает документ, предоставляет API для редактирования и записывает результат обратно на диск.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro Tip:** Оберните `Annotator` в блок try‑with‑resources или явно вызывайте `dispose()`, чтобы избежать утечек нативной памяти.
@@ -187,7 +183,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 Ответы позволяют сотрудникам прикреплять комментарии непосредственно к измерению, превращая простую линейку в ветку обсуждения.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -205,7 +200,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **Когда использовать ответы:** В многопользовательских циклах рецензирования, когда необходимо объяснить, почему выбрано конкретное измерение, или запросить уточнение у коллеги.
 
@@ -215,7 +209,6 @@ replies.add(reply2);
 
 `Rectangle` задаёт ограничивающий прямоугольник аннотации на странице. `PenStyle` перечисляет стили линий, такие как solid, dash и dot.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -233,7 +226,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Ключевые параметры конфигурации**  
 - `setBox()` – задаёт ограничивающий прямоугольник аннотации на странице.  
@@ -247,11 +239,9 @@ distance.setReplies(replies); // Attach replies
 Когда аннотация готова, добавьте её в документ и сохраните изменения.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Важно:** Всегда вызывайте `dispose()` после сохранения, особенно при пакетной обработке большого количества документов.
@@ -260,7 +250,6 @@ annotator.dispose();
 
 Объединив всё вместе, получаем полный скрипт от загрузки PDF до сохранения результата.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -303,7 +292,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Запустите фрагмент, откройте полученный файл в любом PDF‑просмотрщике, поддерживающем аннотации, и вы увидите полностью функциональную линейку, готовую к взаимодействию.
 
@@ -340,11 +328,9 @@ public class DistanceAnnotationExample {
 **Решение:** Во время разработки используйте абсолютный путь, проверьте существование файла и убедитесь, что процесс имеет права чтения.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Проблема: Аннотация не видна
@@ -354,11 +340,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Быстрые исправления:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Проблема: Проблемы с памятью при работе с большими документами
@@ -369,12 +353,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Увеличьте размер кучи JVM (`-Xmx4g` и более) для очень больших входных файлов.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Проблема: Ошибки, связанные с лицензией
@@ -402,7 +384,6 @@ try (Annotator annotator = new Annotator("large-document.pdf")) {
 Если ваш сервис обрабатывает множество файлов одновременно, соблюдайте следующие правила:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -416,7 +397,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Каждый поток должен создавать собственный экземпляр `Annotator`.  
 - Используйте ограниченный пул потоков, чтобы не исчерпать системные ресурсы.  
@@ -429,7 +409,6 @@ public void processMultipleDocuments(List<String> filePaths) {
 ### Пользовательские параметры стиля
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -440,25 +419,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Можно определить собственный объект `Pen`, применить градиентные заливки или даже встроить SVG‑маркировки на концах линии линейки.
 
 ### Динамическое позиционирование
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Используйте координаты, относительные к странице, чтобы аннотация автоматически переориентировалась при масштабировании или повороте документа.
 
 ### Условные аннотации
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -468,7 +443,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Добавляйте аннотацию только при выполнении определённого условия (например, когда компонент превышает допустимый порог).
@@ -482,14 +456,12 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
 `AnnotationRecord` — пользовательская модель данных для сохранения метаданных аннотации в базе.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Храните метаданные (автор, временная метка, значение измерения) в реляционной базе для отчётности и поиска.
@@ -499,7 +471,6 @@ record.setCreatedDate(distance.getCreatedOn());
 `DistanceAnnotationRequest` — DTO, передающий параметры аннотации от клиента к серверу.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -508,20 +479,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Создайте REST‑endpoint, принимающий файл, добавляющий аннотацию расстояния на основе JSON‑payload и возвращающий аннотированный документ.
 
 ### Интеграция с облачным хранилищем
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Чтение и запись файлов напрямую из AWS S3, Azure Blob Storage или Google Cloud Storage с помощью соответствующих SDK, а затем передача потоков в `Annotator`.

@@ -83,13 +83,11 @@ GroupDocs.Annotation är ett .NET‑bibliotek som möjliggör att lägga till, r
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Alternativ B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Alternativ C: Visual Studio UI
@@ -106,7 +104,6 @@ License är en klass som laddar din GroupDocs.Annotation‑licensfil och aktiver
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Produktionslicens
 ```text
@@ -114,7 +111,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** Begär en [tillfällig licens](https://purchase.groupdocs.com/temporary-license) för förlängd utvärdering utan vattenstämplar.
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Om koden kompilerar och körs är din miljö redo för nästa steg.
@@ -144,7 +139,6 @@ För att **ladda pdf från url**, skapa en `HttpClient`‑förfrågan, läs svar
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Använd den direkta fil‑URL:en (t.ex. lägg till `?raw=true` för GitHub‑raw‑filer).  
@@ -167,7 +161,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` håller PDF‑filen i RAM, vilket ger GroupDocs snabb, slumpmässig åtkomst för läsning.  
@@ -197,7 +190,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Konfigurera annoteringsdetaljer
 ```text
@@ -209,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` definierar rektangeln i punkter (1 pt ≈ 1/72 in).  
@@ -230,7 +221,6 @@ Annotator.Save är en metod som skriver det modifierade dokumentet, inklusive al
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** Använd `Path.Combine()` för att bygga filsökvägar säkert på Windows, Linux och macOS.
@@ -270,7 +260,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Varför får appen minnesbrist med stora PDF‑filer?
 Att ladda mycket stora PDF‑filer helt in i en `MemoryStream` kan tömma processens tillgängliga minne, särskilt i 32‑bit‑miljöer eller containrar med begränsat RAM.
@@ -295,7 +284,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Varför visas mina annoteringar på fel plats?
 Felaktig placering beror ofta på missmatchade sidmått, rotation eller att ett annat koordinatsystem används än vad PDF‑filen förväntar sig.
@@ -313,7 +301,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Prestanda‑bästa praxis
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Document Caching:** Store frequently accessed PDFs in a distributed cache (Redis, MemoryCache).  
 - **Async APIs:** Prefer asynchronous methods (`await annotator.SaveAsync(...)`) to keep threads free.  
 
@@ -344,7 +330,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### Hur hanterar du minne effektivt?
 `using`‑satsen säkerställer att kassabela objekt som strömmar och Annotator stängs och frigörs korrekt, vilket förhindrar minnesläckor.
@@ -357,7 +342,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Övervaka din applikations minnesanvändning med verktyg som **dotMemory** eller **PerfView**, särskilt när du bearbetar PDF‑batchar parallellt.

@@ -138,7 +138,6 @@ Mengintegrasikan GroupDocs.Annotation sangat mudah. Di bawah ini kami tunjukkan 
 Tambahkan konfigurasi berikut ke file `pom.xml` Anda:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -153,7 +152,6 @@ Tambahkan konfigurasi berikut ke file `pom.xml` Anda:
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Memahami Persyaratan Lisensi
@@ -171,12 +169,10 @@ Mulailah dengan percobaan gratis, kemudian tingkatkan setelah Anda siap untuk pr
 Kelas `Annotator` adalah titik masuk untuk semua operasi anotasi. Ia memuat dokumen, menyediakan API pengeditan, dan menulis hasil kembali ke disk.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro Tip:** Bungkus `Annotator` dalam blok try‑with‑resources atau panggil `dispose()` secara eksplisit untuk menghindari kebocoran memori native.
@@ -189,7 +185,6 @@ Sekarang mari kita jalani alur kerja lengkap yang siap produksi untuk menambahka
 
 Balasan memungkinkan kolaborator melampirkan komentar langsung ke pengukuran, mengubah penggaris sederhana menjadi utas diskusi.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -207,7 +202,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **Kapan menggunakan balasan:** Dalam siklus tinjauan multi‑pengguna, ketika Anda perlu menjelaskan mengapa dimensi dipilih atau meminta klarifikasi dari rekan tim.
 
@@ -217,7 +211,6 @@ Kelas `DistanceAnnotation` adalah objek tingkat atas GroupDocs.Annotation yang m
 
 `Rectangle` mendefinisikan kotak pembatas anotasi pada halaman. `PenStyle` mengenumerasi gaya garis seperti solid, dash, dan dot.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -235,7 +228,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Opsi konfigurasi utama**  
 - `setBox()` – Menetapkan persegi panjang pembatas anotasi pada halaman.  
@@ -249,11 +241,9 @@ distance.setReplies(replies); // Attach replies
 Setelah anotasi siap, tambahkan ke dokumen dan simpan perubahan.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Penting:** Selalu panggil `dispose()` setelah menyimpan, terutama saat memproses banyak dokumen dalam pekerjaan batch.
@@ -262,7 +252,6 @@ annotator.dispose();
 
 Menggabungkan semuanya, berikut contoh lengkap end‑to‑end yang memuat PDF, menambahkan anotasi jarak, dan menyimpan hasilnya.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -305,7 +294,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Jalankan potongan kode, buka file output di viewer PDF apa pun yang mendukung anotasi, dan Anda akan melihat penggaris berfungsi penuh siap untuk interaksi.
 
@@ -342,11 +330,9 @@ Bahkan contoh yang ditulis dengan baik dapat mengalami kendala. Di bawah ini mas
 **Solusi:** Gunakan path absolut selama pengembangan, verifikasi file ada, dan pastikan proses memiliki izin baca.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Masalah: Anotasi Tidak Terlihat
@@ -356,11 +342,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Perbaikan cepat:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Masalah: Masalah Memori dengan Dokumen Besar
@@ -371,12 +355,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Tingkatkan heap JVM (`-Xmx4g` atau lebih tinggi) untuk input yang sangat besar.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Masalah: Kesalahan Terkait Lisensi
@@ -404,7 +386,6 @@ Saat Anda beralih dari prototipe ke produksi, ingat pertimbangan kinerja berikut
 Jika layanan Anda memproses banyak file secara paralel, ikuti aturan berikut:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -418,7 +399,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Setiap thread harus menginstansiasi `Annotator` masing‑masing.  
 - Gunakan thread pool terbatas untuk menghindari kehabisan sumber daya sistem.  
@@ -430,7 +410,6 @@ Setelah Anda menguasai dasar, jelajahi fitur lanjutan ini untuk menyempurnakan a
 
 ### Opsi Styling Kustom
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -441,23 +420,19 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Anda dapat mendefinisikan objek `Pen` kustom, menerapkan isian gradien, atau bahkan menyematkan penanda SVG di ujung garis penggaris.
 
 ### Penempatan Dinamis
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Manfaatkan koordinat relatif halaman sehingga anotasi secara otomatis berpindah posisi ketika dokumen di-zoom atau diputar.
 
 ### Anotasi Kondisional
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -467,7 +442,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Tambahkan logika yang hanya membuat anotasi jarak ketika kondisi tertentu terpenuhi (mis., ketika komponen melebihi ambang toleransi).
@@ -480,7 +454,6 @@ Anotasi jarak tidak terisolasi—mereka secara alami cocok dalam ekosistem manaj
 `AnnotationRecord` adalah model data kustom untuk menyimpan metadata anotasi dalam basis data.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
@@ -488,14 +461,12 @@ record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
 ```
-```
 
 Simpan metadata anotasi (penulis, timestamp, nilai pengukuran) dalam basis data relasional untuk pelaporan dan pencarian.
 
 ### Integrasi Aplikasi Web
 `DistanceAnnotationRequest` adalah DTO yang membawa parameter anotasi dari klien ke server.
 
-```java
 ```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
@@ -505,19 +476,16 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Ekspos endpoint REST yang menerima file, menambahkan anotasi jarak berdasarkan payload JSON, dan mengembalikan dokumen beranotasi.
 
 ### Integrasi Penyimpanan Cloud
-```java
 ```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Baca dan tulis file langsung dari AWS S3, Azure Blob Storage, atau Google Cloud Storage menggunakan SDK masing‑masing, lalu berikan stream ke `Annotator`.

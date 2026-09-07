@@ -136,7 +136,6 @@ A GroupDocs.Annotation integrálása gyerekjáték. Az alábbiakban megmutatjuk 
 Adja hozzá a következő konfigurációt a `pom.xml` fájlhoz:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -151,7 +150,6 @@ Adja hozzá a következő konfigurációt a `pom.xml` fájlhoz:
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### A licencelési követelmények megértése
@@ -169,12 +167,10 @@ Kezdje az ingyenes próbával, majd frissítsen, amikor készen áll a termelés
 Az `Annotator` osztály a belépési pont minden annotációs művelethez. Betölti a dokumentumot, szerkesztő API‑kat biztosít, és visszaírja az eredményt a lemezre.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro Tip:** Csomagolja be az `Annotator`‑t try‑with‑resources blokkba, vagy hívja meg explicit módon a `dispose()`‑t a natív memória szivárgásának elkerülése érdekében.
@@ -187,7 +183,6 @@ Most nézzük meg a teljes, termelés‑kész munkafolyamatot a távolság‑ann
 
 A válaszok lehetővé teszik, hogy az együttműködők közvetlenül a méréshez fűzzenek megjegyzéseket, így egy egyszerű vonalzót beszélgetés‑szállá válik.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -205,7 +200,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **Mikor használjon válaszokat:** Többfelhasználós felülvizsgálati ciklusokban, amikor magyarázni kell, miért választották a dimenziót, vagy tisztázást kell kérni a csapattárstól.
 
@@ -215,7 +209,6 @@ A `DistanceAnnotation` osztály a GroupDocs.Annotation felső szintű objektuma,
 
 `Rectangle` definiálja az annotáció határoló dobozát az oldalon. A `PenStyle` felsorolja a vonalstílusokat, például solid, dash és dot.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -233,7 +226,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Kulcsfontosságú konfigurációs lehetőségek**  
 - `setBox()` – Beállítja az annotáció határoló téglalapját az oldalon.  
@@ -247,11 +239,9 @@ distance.setReplies(replies); // Attach replies
 Miután az annotáció készen áll, adja hozzá a dokumentumhoz, és mentse el a változtatásokat.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Fontos:** Mindig hívja meg a `dispose()`‑t a mentés után, különösen ha sok dokumentumot dolgoz fel egy kötegelt feladatban.
@@ -260,7 +250,6 @@ annotator.dispose();
 
 Összegezve, itt egy teljes vég‑től‑végig példakód, amely betölti a PDF‑et, hozzáad egy távolság‑annotációt, és elmenti az eredményt.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -303,7 +292,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Futtassa a kódrészletet, nyissa meg a kimeneti fájlt bármely PDF‑nézőben, amely támogatja az annotációkat, és egy teljesen működő vonalzót fog látni, amely készen áll a interakcióra.
 
@@ -340,11 +328,9 @@ Még egy jól megírt példa is ütközhet akadályokba. Az alábbiakban a leggy
 **Megoldás:** Fejlesztés során használjon abszolút útvonalat, ellenőrizze, hogy a fájl létezik, és győződjön meg a megfelelő olvasási jogosultságokról.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Probléma: Az annotáció nem látható
@@ -354,11 +340,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Gyors javítások:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Probléma: Memória‑problémák nagy dokumentumoknál
@@ -369,12 +353,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Növelje a JVM heap‑et (`-Xmx4g` vagy nagyobb) nagyon nagy bemenetekhez.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Probléma: Licenc‑kapcsolódó hibák
@@ -402,7 +384,6 @@ Amikor a prototípusról a termelésre lép, vegye figyelembe ezeket a teljesít
 Ha a szolgáltatása sok fájlt dolgoz fel párhuzamosan, kövesse ezeket a szabályokat:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -416,7 +397,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Minden szálnak saját `Annotator` példányt kell létrehoznia.  
 - Használjon korlátozott szálkészletet a rendszer erőforrásainak kimerülésének elkerülése érdekében.  
@@ -429,7 +409,6 @@ Miután elsajátította az alapokat, fedezze fel ezeket a fejlett funkciókat, h
 ### Egyedi stílusbeállítások
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -440,25 +419,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Definiálhat egy egyedi `Pen` objektumot, alkalmazhat gradient kitöltést, vagy akár SVG‑markereket ágyazhat be a vonalzószárnyak végére.
 
 ### Dinamikus pozicionálás
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Használjon oldal‑relatív koordinátákat, hogy az annotáció automatikusan újrapozícionálódjon, amikor a dokumentum nagyításra vagy forgatásra kerül.
 
 ### Feltételes annotációk
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -468,7 +443,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Olyan logikát adhat hozzá, amely csak akkor hoz létre távolság‑annotációt, ha egy adott feltétel teljesül (például ha egy alkatrész meghalad egy tolerancia‑küszöböt).
@@ -482,14 +456,12 @@ A távolság‑annotációk nem állnak egyedül – természetesen illeszkednek
 Az `AnnotationRecord` egy egyedi adatmodell, amely az annotáció metaadatait tárolja egy adatbázisban.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Tárolja az annotáció metaadatait (szerző, időbélyeg, mérési érték) relációs adatbázisban jelentések és keresés céljából.
@@ -499,7 +471,6 @@ Tárolja az annotáció metaadatait (szerző, időbélyeg, mérési érték) rel
 A `DistanceAnnotationRequest` egy DTO, amely a kliensről a szerverre továbbítja az annotáció paramétereit.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -508,20 +479,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Hozzon létre egy REST végpontot, amely fogad egy fájlt, a JSON terhelés alapján hozzáad egy távolság‑annotációt, és visszaadja a megannotált dokumentumot.
 
 ### Felhő‑tároló integráció
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Olvassa és írja a fájlokat közvetlenül az AWS S3, Azure Blob Storage vagy Google Cloud Storage SDK‑k segítségével, majd adja át a stream‑eket az `Annotator`‑nek.

@@ -136,7 +136,6 @@ Việc tích hợp GroupDocs.Annotation rất đơn giản. Dưới đây là c�
 Thêm cấu hình sau vào tệp `pom.xml` của bạn:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -151,7 +150,6 @@ Thêm cấu hình sau vào tệp `pom.xml` của bạn:
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Hiểu yêu cầu cấp phép
@@ -169,12 +167,10 @@ Bắt đầu với bản dùng thử miễn phí, sau đó nâng cấp khi bạn
 Lớp `Annotator` là điểm vào cho mọi thao tác chú thích. Nó tải tài liệu, cung cấp API chỉnh sửa và ghi kết quả trở lại đĩa.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro Tip:** Đặt `Annotator` trong khối try‑with‑resources hoặc gọi `dispose()` một cách rõ ràng để tránh rò rỉ bộ nhớ native.
@@ -187,7 +183,6 @@ Bây giờ chúng ta sẽ đi qua một quy trình hoàn chỉnh, sẵn sàng ch
 
 Phản hồi cho phép cộng tác viên đính kèm bình luận trực tiếp vào một đo lường, biến một thước đo đơn giản thành một chuỗi thảo luận.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -205,7 +200,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **Khi nào nên sử dụng phản hồi:** Trong các vòng duyệt đa người dùng, khi bạn cần giải thích lý do chọn một kích thước hoặc yêu cầu đồng nghiệp làm rõ.
 
@@ -215,7 +209,6 @@ Lớp `DistanceAnnotation` là đối tượng cấp cao của GroupDocs.Annotat
 
 `Rectangle` xác định hộp bao của chú thích trên trang. `PenStyle` liệt kê các kiểu đường như solid, dash và dot.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -233,7 +226,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Các tùy chọn cấu hình chính**  
 - `setBox()` – Đặt hình chữ nhật bao quanh của chú thích trên trang.  
@@ -247,11 +239,9 @@ distance.setReplies(replies); // Attach replies
 Khi chú thích đã sẵn sàng, thêm nó vào tài liệu và lưu các thay đổi.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Important:** Luôn gọi `dispose()` sau khi lưu, đặc biệt khi xử lý nhiều tài liệu trong một công việc batch.
@@ -260,7 +250,6 @@ annotator.dispose();
 
 Kết hợp tất cả lại, dưới đây là một ví dụ end‑to‑end đầy đủ, tải một PDF, thêm chú thích khoảng cách và lưu kết quả.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -303,7 +292,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Chạy đoạn mã, mở tệp đầu ra trong bất kỳ trình xem PDF nào hỗ trợ chú thích, và bạn sẽ thấy một thước đo hoạt động đầy đủ, sẵn sàng cho tương tác.
 
@@ -341,11 +329,9 @@ Ngay cả một ví dụ được viết tốt cũng có thể gặp trục tr�
 **Solution:** Sử dụng đường dẫn tuyệt đối trong quá trình phát triển, xác minh tệp tồn tại và đảm bảo quy trình có quyền đọc.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Vấn đề: Chú thích không hiển thị
@@ -356,11 +342,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Quick fixes:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Vấn đề: Vấn đề bộ nhớ với tài liệu lớn
@@ -372,12 +356,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Tăng bộ nhớ heap JVM (`-Xmx4g` hoặc cao hơn) cho các đầu vào rất lớn.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Vấn đề: Lỗi liên quan đến giấy phép
@@ -407,7 +389,6 @@ Khi bạn chuyển từ prototype sang sản xuất, hãy lưu ý các cân nh�
 Nếu dịch vụ của bạn xử lý nhiều tệp đồng thời, hãy tuân theo các quy tắc sau:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -421,7 +402,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Mỗi luồng phải tạo một thể hiện `Annotator` riêng.  
 - Sử dụng thread pool có giới hạn để tránh cạn kiệt tài nguyên hệ thống.  
@@ -434,7 +414,6 @@ Khi bạn đã nắm vững các kiến thức cơ bản, hãy khám phá các t
 ### Tùy chọn kiểu dáng tùy chỉnh
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -445,25 +424,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Bạn có thể định nghĩa một đối tượng `Pen` tùy chỉnh, áp dụng gradient fill, hoặc thậm chí nhúng các ký hiệu SVG ở đầu và cuối đường thước.
 
 ### Định vị động
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Tận dụng tọa độ tương đối trang để chú thích tự động định vị lại khi tài liệu được phóng to hoặc xoay.
 
 ### Chú thích có điều kiện
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -473,7 +448,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Thêm logic chỉ tạo chú thích khoảng cách khi đáp ứng một điều kiện nhất định (ví dụ: khi một thành phần vượt quá ngưỡng dung sai).
@@ -487,14 +461,12 @@ Các chú thích khoảng cách không tồn tại độc lập — chúng tự 
 `AnnotationRecord` là mô hình dữ liệu tùy chỉnh để lưu trữ siêu dữ liệu chú thích trong cơ sở dữ liệu.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Lưu siêu dữ liệu chú thích (tác giả, thời gian, giá trị đo) trong cơ sở dữ liệu quan hệ để phục vụ báo cáo và tìm kiếm.
@@ -504,7 +476,6 @@ Lưu siêu dữ liệu chú thích (tác giả, thời gian, giá trị đo) tro
 `DistanceAnnotationRequest` là DTO truyền tham số chú thích từ client tới server.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -513,20 +484,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Cung cấp endpoint REST nhận tệp, thêm chú thích khoảng cách dựa trên payload JSON và trả về tài liệu đã được chú thích.
 
 ### Tích hợp lưu trữ đám mây
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Đọc và ghi tệp trực tiếp từ AWS S3, Azure Blob Storage hoặc Google Cloud Storage bằng SDK tương ứng, sau đó truyền stream tới `Annotator`.

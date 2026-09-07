@@ -82,13 +82,11 @@ GroupDocs.Annotation je .NET knihovna, která umožňuje přidávat, upravovat a
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Možnost B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Možnost C: Visual Studio UI
@@ -105,7 +103,6 @@ Licence je třída, která načte váš licenční soubor GroupDocs.Annotation a
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Produkční licence
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Tip:** Požádejte o [dočasnou licenci](https://purchase.groupdocs.com/temporary-license) pro prodloužené hodnocení bez vodoznaků.
@@ -127,7 +123,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Pokud se kód úspěšně zkompiluje a spustí, vaše prostředí je připravené na další kroky.
@@ -143,7 +138,6 @@ Pro **načíst pdf z url** vytvořte požadavek `HttpClient`, načtěte odpově�
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Použijte přímou URL souboru (např. přidejte `?raw=true` pro raw soubory na GitHubu).  
@@ -166,7 +160,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` uchovává PDF v RAM, poskytuje GroupDocs rychlé čtení s náhodným přístupem.  
@@ -196,7 +189,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Konfigurace detailů anotace
 ```text
@@ -208,7 +200,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` definuje obdélník v bodech (1 pt ≈ 1/72 in).  
@@ -231,7 +222,6 @@ Annotator.Save je metoda, která zapíše upravený dokument, včetně všech p�
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Tip:** Použijte `Path.Combine()` k bezpečnému sestavování cest k souborům napříč Windows, Linux a macOS.
@@ -271,7 +261,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Proč aplikace vyčerpává paměť při velkých PDF?
 Načítání velmi velkých PDF kompletně do `MemoryStream` může vyčerpat dostupnou paměť procesu, zejména v 32‑bitových prostředích nebo kontejnerech s omezenou RAM.
@@ -296,7 +285,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Proč se mé anotace zobrazují na špatném místě?
 Nesprávné umístění často vzniká kvůli neodpovídajícím rozměrům stránky, rotaci nebo použití jiného souřadnicového systému, než který PDF očekává.
@@ -314,7 +302,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Nejlepší postupy pro výkon
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Cache dokumentů:** Ukládejte často přistupované PDF do distribuované cache (Redis, MemoryCache).  
 - **Async API:** Upřednostňujte asynchronní metody (`await annotator.SaveAsync(...)`), aby byly vlákna volná.  
 ```text
@@ -342,7 +328,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### Jak efektivně spravovat paměť?
@@ -356,7 +341,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Sledujte paměťovou stopu vaší aplikace pomocí nástrojů jako **dotMemory** nebo **PerfView**, zejména při zpracování dávky PDF souběžně.

@@ -135,7 +135,6 @@ GroupDocs.Annotation को इंटीग्रेट करना बहु�
 अपने `pom.xml` फ़ाइल में निम्न कॉन्फ़िगरेशन जोड़ें:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -150,7 +149,6 @@ GroupDocs.Annotation को इंटीग्रेट करना बहु�
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### लाइसेंस आवश्यकताओं को समझना
@@ -168,12 +166,10 @@ GroupDocs.Annotation तीन लाइसेंसिंग मॉडल प�
 `Annotator` क्लास सभी एनोटेशन ऑपरेशन्स का एंट्री पॉइंट है। यह दस्तावेज़ लोड करता है, एडिटिंग API प्रदान करता है, और परिणाम को डिस्क पर लिखता है।
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Pro Tip:** `Annotator` को try‑with‑resources ब्लॉक में रैप करें या स्पष्ट रूप से `dispose()` कॉल करें ताकि नेटिव मेमोरी लीक्स न हों।
@@ -186,7 +182,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 रिप्लाईज़ सहयोगियों को सीधे माप पर कमेंट जोड़ने की अनुमति देती हैं, जिससे साधारण रूलर एक डिस्कशन थ्रेड बन जाता है।
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -204,7 +199,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **रिप्लाईज़ कब उपयोग करें:** मल्टी‑यूज़र रिव्यू साइकिल में, जब आपको यह समझाना हो कि कोई डाइमेंशन क्यों चुना गया या टीममेट से स्पष्टीकरण माँगना हो।
 
@@ -214,7 +208,6 @@ replies.add(reply2);
 
 `Rectangle` पेज पर एनोटेशन की बाउंडिंग बॉक्स निर्धारित करता है। `PenStyle` लाइन स्टाइल्स (solid, dash, dot) को एनेमरेट करता है।
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -232,7 +225,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **मुख्य कॉन्फ़िगरेशन विकल्प**  
 - `setBox()` – पेज पर एनोटेशन की बाउंडिंग रेक्टेंगल सेट करता है।  
@@ -246,11 +238,9 @@ distance.setReplies(replies); // Attach replies
 जब एनोटेशन तैयार हो जाए, उसे दस्तावेज़ में जोड़ें और बदलाव को स्थायी करें।
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **महत्वपूर्ण:** सहेजने के बाद हमेशा `dispose()` कॉल करें, विशेषकर जब आप बैच जॉब में कई दस्तावेज़ प्रोसेस कर रहे हों।
@@ -259,7 +249,6 @@ annotator.dispose();
 
 सब कुछ मिलाकर यहाँ एक एंड‑टू‑एंड उदाहरण है जो PDF लोड करता है, distance annotation जोड़ता है, और परिणाम सहेजता है।
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -302,7 +291,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 स्निपेट चलाएँ, किसी भी PDF व्यूअर (जो एनोटेशन सपोर्ट करता हो) में आउटपुट फ़ाइल खोलें, और आपको एक पूरी तरह कार्यशील रूलर दिखाई देगा।
 
@@ -339,11 +327,9 @@ public class DistanceAnnotationExample {
 **समाधान:** विकास के दौरान एब्सोल्यूट पाथ उपयोग करें, फ़ाइल की मौजूदगी वरीफ़ाई करें, और प्रोसेस को रीड परमिशन दें।
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### समस्या: एनोटेशन दिखाई नहीं दे रहा है
@@ -353,11 +339,9 @@ final Annotator annotator = new Annotator(inputPath);
 **त्वरित समाधान:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### समस्या: बड़े दस्तावेज़ों में मेमोरी समस्याएँ
@@ -368,12 +352,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - बहुत बड़े इनपुट के लिए JVM हीप बढ़ाएँ (`-Xmx4g` या अधिक)।
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### समस्या: लाइसेंस‑संबंधी त्रुटियाँ
@@ -401,7 +383,6 @@ try (Annotator annotator = new Annotator("large-document.pdf")) {
 यदि आपका सर्विस कई फ़ाइलों को समानांतर प्रोसेस करता है, तो इन नियमों का पालन करें:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -415,7 +396,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - प्रत्येक थ्रेड को अपना `Annotator` इंस्टेंस बनाना चाहिए।  
 - सिस्टम रिसोर्सेज़ खत्म न हों, इसके लिए बाउंडेड थ्रेड पूल उपयोग करें।  
@@ -428,7 +408,6 @@ public void processMultipleDocuments(List<String> filePaths) {
 ### कस्टम स्टाइलिंग विकल्प
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -439,25 +418,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 आप कस्टम `Pen` ऑब्जेक्ट परिभाषित कर सकते हैं, ग्रेडिएंट फ़िल्स लागू कर सकते हैं, या रूलर लाइन के अंत में SVG मार्कर्स एम्बेड कर सकते हैं।
 
 ### डायनामिक पोजिशनिंग
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 पेज‑रिलेटिव कोऑर्डिनेट्स का उपयोग करें ताकि ज़ूम या रोटेशन पर एनोटेशन स्वचालित रूप से री‑पोज़िशन हो।
 
 ### शर्तीय एनोटेशन
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -467,7 +442,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 ऐसी लॉजिक जोड़ें जो केवल तब distance annotation बनाता है जब कोई विशेष शर्त पूरी हो (जैसे, कंपोनेंट टॉलरेंस थ्रेशहोल्ड से अधिक हो)।
@@ -481,14 +455,12 @@ Distance annotations अकेले नहीं होते—वे व्�
 `AnnotationRecord` एक कस्टम डेटा मॉडल है जो डेटाबेस में एनोटेशन मेटाडेटा को स्थायी करता है।
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 रिपोर्टिंग और सर्च के लिए एनोटेशन मेटाडेटा (लेखक, टाइमस्टैम्प, माप वैल्यू) को रिलेशनल डेटाबेस में स्टोर करें।
@@ -498,7 +470,6 @@ record.setCreatedDate(distance.getCreatedOn());
 `DistanceAnnotationRequest` एक DTO है जो क्लाइंट से सर्वर तक एनोटेशन पैरामीटर्स ले जाता है।
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -507,20 +478,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 एक REST एंडपॉइंट एक्सपोज़ करें जो फ़ाइल लेता है, JSON पेलोड के आधार पर distance annotation जोड़ता है, और एनोटेटेड दस्तावेज़ वापस करता है।
 
 ### क्लाउड स्टोरेज एकीकरण
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 AWS S3, Azure Blob Storage, या Google Cloud Storage जैसे SDKs का उपयोग करके फ़ाइलें सीधे पढ़ें‑लिखें, फिर स्ट्रीम को `Annotator` को पास करें।

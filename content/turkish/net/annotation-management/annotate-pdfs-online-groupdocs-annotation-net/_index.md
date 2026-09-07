@@ -83,13 +83,11 @@ GroupDocs.Annotation, birçok belge formatında açıklama ekleme, düzenleme ve
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Seçenek B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Seçenek C: Visual Studio UI
@@ -106,7 +104,6 @@ License sınıfı, GroupDocs.Annotation lisans dosyanızı yükler ve kütüphan
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Üretim Lisansı
 ```text
@@ -114,7 +111,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** Filigransız uzun vadeli değerlendirme için bir [temporary license](https://purchase.groupdocs.com/temporary-license) isteyin.
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Kod derlenip çalışıyorsa ortamınız bir sonraki adımlara hazır demektir.
@@ -144,7 +139,6 @@ HttpClient, HTTP istekleri göndermek ve yanıtları almak için kullanılan bir
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Doğrudan dosya URL'sini kullanın (örneğin GitHub ham dosyaları için `?raw=true` ekleyin).  
@@ -167,7 +161,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream`, PDF'yi RAM'de tutar ve GroupDocs'a hızlı, rastgele‑erişim okuma yeteneği sağlar.  
@@ -197,7 +190,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Açıklama Ayrıntılarını Yapılandırma
 ```text
@@ -209,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box`, dikdörtgeni puan cinsinden tanımlar (1 pt ≈ 1/72 in).  
@@ -232,7 +223,6 @@ GroupDocs.Annotation ayrıca şunları destekler:
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** Dosya yollarını Windows, Linux ve macOS arasında güvenli bir şekilde birleştirmek için `Path.Combine()` kullanın.
@@ -272,7 +262,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Uygulama büyük PDF'lerde neden bellek tükeniyor?
 Çok büyük PDF'leri tamamen bir `MemoryStream` içine yüklemek, özellikle 32‑bit ortamlar veya sınırlı RAM'li konteynerlerde süreçteki kullanılabilir belleği tüketebilir.
@@ -297,7 +286,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Açıklamalarım neden yanlış yerde görünüyor?
 Yanlış konumlandırma genellikle sayfa boyutları, döndürme veya PDF'nin beklediği koordinat sisteminin farklı olmasından kaynaklanır.
@@ -315,7 +303,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Performans En İyi Uygulamaları
 
@@ -331,7 +318,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Document Caching:** Sık erişilen PDF'leri dağıtık bir önbellekte (Redis, MemoryCache) saklayın.  
 - **Async APIs:** İş parçacıklarını serbest bırakmak için asenkron metodları (`await annotator.SaveAsync(...)`) tercih edin.  
 ```text
@@ -343,7 +329,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### Belleği Verimli Bir Şekilde Nasıl Yönetirsiniz?
@@ -357,7 +342,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Bellek kullanımını **dotMemory** veya **PerfView** gibi araçlarla izleyin; özellikle aynı anda birden fazla PDF işliyorsanız bu kritik öneme sahiptir.

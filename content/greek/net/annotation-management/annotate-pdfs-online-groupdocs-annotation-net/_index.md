@@ -82,13 +82,11 @@ weight: 1
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Επιλογή B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Επιλογή C: Visual Studio UI
@@ -105,7 +103,6 @@ dotnet add package GroupDocs.Annotation --version 25.4.0
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Άδεια Παραγωγής
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Συμβουλή:** Ζητήστε μια [temporary license](https://purchase.groupdocs.com/temporary-license) για εκτεταμένη αξιολόγηση χωρίς υδατογραφήματα.
@@ -127,7 +123,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Αν ο κώδικας μεταγλωττίζεται και εκτελείται, το περιβάλλον σας είναι έτοιμο για τα επόμενα βήματα.
@@ -143,7 +138,6 @@ Annotator annotator = new Annotator("test.pdf");
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Χρησιμοποιήστε το άμεσο URL του αρχείου (π.χ., προσθέστε `?raw=true` για αρχεία raw του GitHub).  
@@ -166,7 +160,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - Το `MemoryStream` κρατά το PDF στη μνήμη RAM, παρέχοντας στο GroupDocs γρήγορη πρόσβαση τυχαίας ανάγνωσης.  
@@ -196,7 +189,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Διαμόρφωση Λεπτομερειών Σχολιασμού
 ```text
@@ -208,7 +200,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - Το `Box` ορίζει το ορθογώνιο σε μονάδες point (1 pt ≈ 1/72 in).  
@@ -231,7 +222,6 @@ annotator.Add(area); // Add annotation to the document
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Συμβουλή:** Χρησιμοποιήστε `Path.Combine()` για να δημιουργήσετε διαδρομές αρχείων με ασφάλεια σε Windows, Linux και macOS.
@@ -271,7 +261,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Γιατί η εφαρμογή εξαντλεί τη μνήμη με μεγάλα PDF;
 Η πλήρης φόρτωση πολύ μεγάλων PDF σε `MemoryStream` μπορεί να εξαντλήσει τη διαθέσιμη μνήμη της διεργασίας, ειδικά σε περιβάλλοντα 32‑bit ή containers με περιορισμένη RAM.
@@ -296,7 +285,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Γιατί οι σχολιασμοί μου εμφανίζονται σε λάθος θέση;
 Η λανθασμένη τοποθέτηση συχνά οφείλεται σε ασυμφωνία διαστάσεων σελίδας, περιστροφή ή χρήση διαφορετικού συστήματος συντεταγμένων από αυτό που αναμένει το PDF.
@@ -314,7 +302,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Καλές Πρακτικές Απόδοσης
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Caching Εγγράφων:** Αποθηκεύστε συχνά προσπελάσιμα PDF σε κατανεμημένη cache (Redis, MemoryCache).  
 - **Async API:** Προτιμήστε ασύγχρονες μεθόδους (`await annotator.SaveAsync(...)`) για να διατηρήσετε τις νήματα ελεύθερα.  
 ```text
@@ -342,7 +328,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### Πώς να Διαχειριστείτε τη Μνήμη Αποτελεσματικά;
@@ -356,7 +341,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Παρακολουθήστε το αποτύπωμα μνήμης της εφαρμογής σας με εργαλεία όπως **dotMemory** ή **PerfView**, ειδικά όταν επεξεργάζεστε παρτίδες PDF ταυτόχρονα.

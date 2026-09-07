@@ -81,13 +81,11 @@ GroupDocs.Annotation は、さまざまなドキュメント形式に対して�
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### オプション B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### オプション C: Visual Studio UI
@@ -104,7 +102,6 @@ License は、GroupDocs.Annotation のライセンスファイルをロードし
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### 本番用ライセンス
 ```text
@@ -112,7 +109,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **プロのコツ:** 透かしなしの拡張評価のために [temporary license](https://purchase.groupdocs.com/temporary-license) をリクエストしてください。
@@ -126,7 +122,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 コードがコンパイルおよび実行できれば、次のステップに進む準備が整っています。
@@ -142,7 +137,6 @@ HttpClient は HTTP リクエストを送信しレスポンスを受信するた
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - 直接のファイル URL を使用（例: GitHub の生ファイルの場合は `?raw=true` を追加）。  
@@ -165,7 +159,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` は PDF を RAM に保持し、GroupDocs に高速なランダムアクセス読み取り機能を提供します。  
@@ -195,7 +188,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### 注釈の詳細設定
 ```text
@@ -207,7 +199,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` は矩形をポイント単位で定義します（1 pt ≈ 1/72 インチ）。  
@@ -228,7 +219,6 @@ Annotator.Save は、追加されたすべての注釈を含む変更後のド�
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **プロのコツ:** `Path.Combine()` を使用して、Windows、Linux、macOS 間で安全にファイルパスを構築してください。
@@ -268,7 +258,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### 大きな PDF でアプリがメモリ不足になるのはなぜですか？
 非常に大きな PDF を `MemoryStream` に完全にロードすると、特に 32 ビット環境や RAM が制限されたコンテナでは、プロセスの利用可能メモリが枯渇する可能性があります。
@@ -293,7 +282,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### 注釈が誤った位置に表示されるのはなぜですか？
 位置がずれる原因は、ページサイズや回転が一致しない、または PDF が期待する座標系と異なる座標系を使用していることが多いです。
@@ -311,7 +299,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## パフォーマンスのベストプラクティス
 
@@ -328,7 +315,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 
 - **ドキュメントキャッシュ:** 頻繁にアクセスされる PDF を分散キャッシュ（Redis、MemoryCache）に保存します。  
 - **非同期 API:** スレッドを解放するために、非同期メソッド（`await annotator.SaveAsync(...)`）を優先します。
@@ -343,7 +329,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### メモリを効率的に管理する方法は？
 `using` ステートメントは、ストリームや Annotator などの破棄可能オブジェクトが正しく閉じられ、解放されることを保証し、メモリリークを防止します。
@@ -356,7 +341,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 特に PDF バッチを同時に処理する場合は、**dotMemory** や **PerfView** などのツールでアプリケーションのメモリ使用量を監視してください。

@@ -132,7 +132,6 @@ Integrating GroupDocs.Annotation is a breeze. Below we show the Maven coordinate
 Add the following configuration to your `pom.xml` file:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -147,7 +146,6 @@ Add the following configuration to your `pom.xml` file:
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### ทำความเข้าใจข้อกำหนดไลเซนส์
@@ -165,12 +163,10 @@ Start with the free trial, then upgrade once you’re ready for production.
 The `Annotator` class is the entry point for all annotation operations. It loads a document, provides editing APIs, and writes the result back to disk.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **เคล็ดลับ:** ห่อ `Annotator` ด้วยบล็อก try‑with‑resources หรือเรียก `dispose()` อย่างชัดเจนเพื่อหลีกเลี่ยงการรั่วไหลของหน่วยความจำเนทีฟ.
@@ -183,7 +179,6 @@ Now let’s walk through a complete, production‑ready workflow for adding dist
 
 Replies let collaborators attach comments directly to a measurement, turning a simple ruler into a discussion thread.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -201,7 +196,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **เมื่อใดควรใช้ replies:** ในรอบการตรวจสอบหลายผู้ใช้, เมื่อคุณต้องอธิบายเหตุผลที่เลือกมิติหรือขอคำชี้แจงจากทีมเมมเบอร์.
 
@@ -211,7 +205,6 @@ The `DistanceAnnotation` class is GroupDocs.Annotation's top‑level object that
 
 `Rectangle` defines the annotation's bounding box on the page. `PenStyle` enumerates line styles such as solid, dash, and dot.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -229,7 +222,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **ตัวเลือกการกำหนดค่าหลัก**  
 - `setBox()` – ตั้งค่ากล่องสี่เหลี่ยมของ annotation บนหน้า.  
@@ -243,11 +235,9 @@ distance.setReplies(replies); // Attach replies
 Once the annotation is ready, add it to the document and persist the changes.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **สำคัญ:** เรียก `dispose()` เสมอหลังจากบันทึก, โดยเฉพาะเมื่อประมวลผลหลายเอกสารในงานแบตช์.
@@ -256,7 +246,6 @@ annotator.dispose();
 
 Putting everything together, here is a full end‑to‑end example that loads a PDF, adds a distance annotation, and saves the result.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -299,7 +288,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Run the snippet, open the output file in any PDF viewer that supports annotations, and you’ll see a fully functional ruler ready for interaction.
 
@@ -338,11 +326,9 @@ Even a well‑written example can hit snags. Below are the most frequent problem
 **วิธีแก้:** ใช้เส้นทางแบบ absolute ระหว่างการพัฒนา, ตรวจสอบว่าไฟล์มีอยู่, และให้แน่ใจว่ากระบวนการมีสิทธิ์อ่าน.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### ปัญหา: Annotation ไม่แสดง
@@ -354,11 +340,9 @@ final Annotator annotator = new Annotator(inputPath);
 **วิธีแก้เร็ว:**  
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### ปัญหา: ปัญหาหน่วยความจำกับเอกสารขนาดใหญ่
@@ -371,12 +355,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - เพิ่ม heap ของ JVM (`-Xmx4g` หรือสูงกว่า) สำหรับอินพุตขนาดใหญ่มาก.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### ปัญหา: ข้อผิดพลาดที่เกี่ยวกับไลเซนส์
@@ -409,7 +391,6 @@ When you move from a prototype to production, keep these performance considerati
 If your service processes many files in parallel, follow these rules:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -423,7 +404,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - แต่ละเธรดต้องสร้างอินสแตนซ์ `Annotator` ของตนเอง.  
 - ใช้ thread pool ที่จำกัดเพื่อหลีกเลี่ยงการใช้ทรัพยากรระบบจนหมด.  
@@ -436,7 +416,6 @@ Once you’ve mastered the basics, explore these advanced features to fine‑tun
 ### ตัวเลือกการสไตล์แบบกำหนดเอง
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -447,25 +426,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 You can define a custom `Pen` object, apply gradient fills, or even embed SVG markers at the ends of the ruler line.
 
 ### การกำหนดตำแหน่งแบบไดนามิก
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Leverage page‑relative coordinates so the annotation automatically repositions when the document is zoomed or rotated.
 
 ### Annotation แบบมีเงื่อนไข
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -475,7 +450,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Add logic that only creates a distance annotation when a certain condition is met (e.g., when a component exceeds a tolerance threshold).
@@ -489,14 +463,12 @@ Distance annotations are not isolated—they fit naturally into broader document
 `AnnotationRecord` is a custom data model for persisting annotation metadata in a database.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Store annotation metadata (author, timestamp, measurement value) in a relational database for reporting and search.
@@ -506,7 +478,6 @@ Store annotation metadata (author, timestamp, measurement value) in a relational
 `DistanceAnnotationRequest` is a DTO that carries annotation parameters from the client to the server.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -515,20 +486,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Expose a REST endpoint that accepts a file, adds a distance annotation based on JSON payload, and returns the annotated document.
 
 ### การรวมกับคลาวด์สตอเรจ
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Read and write files directly from AWS S3, Azure Blob Storage, or Google Cloud Storage using the respective SDKs, then pass the streams to `Annotator`.

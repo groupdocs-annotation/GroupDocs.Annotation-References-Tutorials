@@ -82,13 +82,11 @@ GroupDocs.Annotation là một thư viện .NET cho phép thêm, chỉnh sửa v
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Tùy chọn B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Tùy chọn C: Giao diện Visual Studio
@@ -105,7 +103,6 @@ License là một lớp tải tệp giấy phép GroupDocs.Annotation của bạ
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Giấy phép sản xuất
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Mẹo chuyên nghiệp:** Yêu cầu một [temporary license](https://purchase.groupdocs.com/temporary-license) để đánh giá kéo dài mà không có watermark.
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
 ```
-```
 
 ## Cách tải tài liệu PDF từ URL từ xa?
 HttpClient là một lớp .NET dùng để gửi yêu cầu HTTP và nhận phản hồi. Sử dụng nó, bạn có thể tải PDF dưới dạng luồng và truyền luồng đó trực tiếp vào hàm khởi tạo Annotator, tránh việc tạo tệp tạm thời trên đĩa.
@@ -141,7 +136,6 @@ HttpClient là một lớp .NET dùng để gửi yêu cầu HTTP và nhận ph�
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Sử dụng URL tệp trực tiếp (ví dụ, thêm `?raw=true` cho các tệp raw của GitHub).  
@@ -164,7 +158,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` giữ PDF trong RAM, cung cấp cho GroupDocs khả năng đọc ngẫu nhiên nhanh.  
@@ -194,7 +187,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Cấu hình chi tiết chú thích
 ```text
@@ -206,7 +198,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` xác định hình chữ nhật bằng điểm (1 pt ≈ 1/72 in).  
@@ -227,7 +218,6 @@ annotator.Add(area); // Add annotation to the document
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Mẹo chuyên nghiệp:** Sử dụng `Path.Combine()` để xây dựng đường dẫn tệp một cách an toàn trên Windows, Linux và macOS.
@@ -267,7 +257,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Tại sao ứng dụng hết bộ nhớ khi xử lý PDF lớn?
 Việc tải toàn bộ PDF rất lớn vào `MemoryStream` có thể làm cạn kiệt bộ nhớ khả dụng của tiến trình, đặc biệt trên môi trường 32‑bit hoặc các container có RAM hạn chế.
@@ -292,7 +281,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Tại sao các chú thích của tôi xuất hiện sai vị trí?
 Vị trí sai thường do kích thước trang không khớp, xoay, hoặc sử dụng hệ tọa độ khác với PDF mong đợi.
@@ -310,7 +298,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Các thực hành tốt về hiệu suất
 
@@ -327,7 +314,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 
 - **Document Caching:** Lưu các PDF thường truy cập trong cache phân tán (Redis, MemoryCache).  
 - **Async APIs:** Ưu tiên các phương thức bất đồng bộ (`await annotator.SaveAsync(...)`) để giữ các luồng tự do.  
@@ -342,7 +328,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### Cách quản lý bộ nhớ hiệu quả?
 Câu lệnh `using` đảm bảo các đối tượng có thể giải phóng như streams và Annotator được đóng và giải phóng đúng cách, ngăn ngừa rò rỉ bộ nhớ.
@@ -355,7 +340,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Giám sát dung lượng bộ nhớ của ứng dụng bằng các công cụ như **dotMemory** hoặc **PerfView**, đặc biệt khi xử lý hàng loạt PDF đồng thời.

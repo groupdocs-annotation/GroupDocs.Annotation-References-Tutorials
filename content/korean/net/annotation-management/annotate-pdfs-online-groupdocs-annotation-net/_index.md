@@ -82,13 +82,11 @@ GroupDocs.Annotation은 PDF를 포함한 다양한 문서 형식에 주석을 �
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### 옵션 B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### 옵션 C: Visual Studio UI
@@ -105,7 +103,6 @@ License 클래스는 GroupDocs.Annotation 라이선스 파일을 로드하고 �
 // 무료 체험 - 초기에는 라이선스가 필요 없음
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### 프로덕션 라이선스
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Annotator 인스턴스를 만들기 전에 라이선스를 설정
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** 워터마크 없이 장기 평가를 원한다면 [임시 라이선스](https://purchase.groupdocs.com/temporary-license)를 요청하세요.
@@ -127,7 +123,6 @@ using GroupDocs.Annotation;
 
 // 오류 없이 컴파일되어야 함
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 코드가 컴파일되고 실행되면 다음 단계로 진행할 준비가 된 것입니다.
@@ -143,7 +138,6 @@ HttpClient는 HTTP 요청을 보내고 응답을 받는 .NET 클래스입니다.
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - 직접 파일 URL을 사용하세요 (예: GitHub 원본 파일은 `?raw=true` 추가).  
@@ -166,7 +160,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // 읽기 위해 위치 초기화
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream`은 PDF를 RAM에 보관해 GroupDocs가 빠르게 랜덤 액세스할 수 있게 합니다.  
@@ -196,7 +189,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // 주석 단계 진행
 }
 ```
-```
 
 #### 주석 세부 설정
 ```text
@@ -208,7 +200,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // 문서에 주석 추가
-```
 ```
 
 - `Box`는 포인트 단위(1 pt ≈ 1/72 in)로 사각형을 정의합니다.  
@@ -231,7 +222,6 @@ Annotator.Save 메서드는 수정된 문서(추가된 모든 주석 포함)를 
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** `Path.Combine()`을 사용하면 Windows, Linux, macOS에서 파일 경로를 안전하게 결합할 수 있습니다.
@@ -271,7 +261,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### 대용량 PDF 처리 시 메모리 부족 현상이 발생하는 이유는?
 매우 큰 PDF를 전체를 `MemoryStream`에 로드하면 특히 32‑bit 환경이나 메모리 제한이 있는 컨테이너에서 프로세스 메모리가 고갈될 수 있습니다.
@@ -296,7 +285,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### 주석이 잘못된 위치에 표시되는 이유는?
 페이지 크기 불일치, 회전, 또는 PDF가 기대하는 좌표계와 다른 좌표계를 사용하면 위치가 어긋날 수 있습니다.
@@ -314,7 +302,6 @@ if (pageInfo != null)
     // 좌표를 적절히 조정
 }
 ```
-```
 
 ## 성능 최적화 권장 사항
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **문서 캐싱:** 자주 접근하는 PDF를 Redis, MemoryCache 등 분산 캐시에 저장합니다.  
 - **비동기 API:** `await annotator.SaveAsync(...)`와 같이 비동기 메서드를 사용해 스레드를 자유롭게 유지합니다.  
 ```text
@@ -342,7 +328,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### 메모리 효율 관리 방법
@@ -356,7 +341,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // 여기서 리소스가 자동으로 해제됩니다
-```
 ```
 
 **dotMemory** 또는 **PerfView**와 같은 도구로 애플리케이션 메모리 사용량을 모니터링하고, 특히 여러 PDF를 동시에 처리할 때 주의하세요.

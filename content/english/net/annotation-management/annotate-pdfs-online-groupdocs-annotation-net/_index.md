@@ -75,13 +75,11 @@ GroupDocs.Annotation is a .NET library that enables adding, editing, and exporti
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Option B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Option C: Visual Studio UI
@@ -98,7 +96,6 @@ License is a class that loads your GroupDocs.Annotation license file and activat
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Production License
 ```text
@@ -106,7 +103,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** Request a [temporary license](https://purchase.groupdocs.com/temporary-license) for extended evaluation without watermarks.
@@ -120,7 +116,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 If the code compiles and runs, your environment is ready for the next steps.
@@ -136,7 +131,6 @@ To **load pdf from url**, create an `HttpClient` request, read the response into
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Use the direct file URL (e.g., add `?raw=true` for GitHub raw files).  
@@ -159,7 +153,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` holds the PDF in RAM, giving GroupDocs fast, random‑access read capability.  
@@ -189,7 +182,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Configuring the Annotation Details
 ```text
@@ -201,7 +193,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` defines the rectangle in points (1 pt ≈ 1/72 in).  
@@ -224,7 +215,6 @@ Annotator.Save is a method that writes the modified document, including all adde
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** Use `Path.Combine()` to build file paths safely across Windows, Linux, and macOS.
@@ -264,7 +254,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Why does the app run out of memory with large PDFs?
 Loading very large PDFs entirely into a `MemoryStream` can exhaust the process’s available memory, especially on 32‑bit environments or containers with limited RAM.
@@ -289,7 +278,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Why are my annotations appearing in the wrong place?
 Incorrect placement often results from mismatched page dimensions, rotation, or using a different coordinate system than the PDF expects.
@@ -307,7 +295,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Performance Best Practices
 
@@ -323,7 +310,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Document Caching:** Store frequently accessed PDFs in a distributed cache (Redis, MemoryCache).  
 - **Async APIs:** Prefer asynchronous methods (`await annotator.SaveAsync(...)`) to keep threads free.  
 ```text
@@ -335,7 +321,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### How to Manage Memory Efficiently?
@@ -349,7 +334,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Monitor your application’s memory footprint with tools like **dotMemory** or **PerfView**, especially when processing batches of PDFs concurrently.

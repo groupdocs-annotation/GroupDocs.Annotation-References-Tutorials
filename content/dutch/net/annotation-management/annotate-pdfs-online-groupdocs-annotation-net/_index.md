@@ -83,13 +83,11 @@ GroupDocs.Annotation is een .NET‑bibliotheek die het toevoegen, bewerken en ex
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Optie B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Optie C: Visual Studio UI
@@ -106,7 +104,6 @@ License is een klasse die je GroupDocs.Annotation‑licentiebestand laadt en de 
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Productielicentie
 ```text
@@ -114,7 +111,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** Vraag een [tijdelijke licentie](https://purchase.groupdocs.com/temporary-license) aan voor een verlengde evaluatie zonder watermerken.
@@ -129,7 +125,6 @@ using GroupDocs.Annotation;
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
 ```
-```
 
 ## Hoe PDF‑documenten van externe URL's te laden?
 HttpClient is een .NET‑klasse die wordt gebruikt om HTTP‑verzoeken te verzenden en antwoorden te ontvangen. Hiermee kun je een PDF downloaden als een stream en die stream direct aan de Annotator‑constructor doorgeven, waardoor je elk tijdelijk bestand op schijf vermijdt.
@@ -142,7 +137,6 @@ Om **pdf van url te laden**, maak je een `HttpClient`‑verzoek, lees je het ant
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Gebruik de directe bestands‑URL (bijv. voeg `?raw=true` toe voor GitHub‑raw‑bestanden).  
@@ -165,7 +159,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` houdt de PDF in RAM, waardoor GroupDocs snelle, willekeurige‑toegang leesmogelijkheden krijgt.  
@@ -195,7 +188,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### De annotatiedetails configureren
 ```text
@@ -207,7 +199,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` definieert de rechthoek in punten (1 pt ≈ 1/72 in).  
@@ -230,7 +221,6 @@ Annotator.Save is een methode die het gewijzigde document, inclusief alle toegev
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** Gebruik `Path.Combine()` om bestandspaden veilig te bouwen op Windows, Linux en macOS.
@@ -270,7 +260,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Waarom raakt de app zonder geheugen bij grote PDF's?
 Het volledig laden van zeer grote PDF's in een `MemoryStream` kan het beschikbare geheugen van het proces uitputten, vooral in 32‑bit omgevingen of containers met beperkt RAM.
@@ -295,7 +284,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Waarom verschijnen mijn annotaties op de verkeerde plaats?
 Onjuiste plaatsing ontstaat vaak door niet‑overeenkomende paginadimensies, rotatie, of het gebruik van een ander coördinatensysteem dan de PDF verwacht.
@@ -313,7 +301,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Prestatie‑best practices
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 
 - **Document Caching:** Sla vaak geraadpleegde PDF's op in een gedistribueerde cache (Redis, MemoryCache).  
 - **Async API's:** Geef de voorkeur aan asynchrone methoden (`await annotator.SaveAsync(...)`) om threads vrij te houden.  
@@ -345,7 +331,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### Hoe geheugen efficiënt te beheren?
 De `using`‑statement zorgt ervoor dat verwijderbare objecten zoals streams en de Annotator correct worden gesloten en vrijgegeven, waardoor geheugenlekken worden voorkomen.
@@ -358,7 +343,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Monitor de geheugenvoetafdruk van je applicatie met tools zoals **dotMemory** of **PerfView**, vooral bij het gelijktijdig verwerken van batches PDF's.

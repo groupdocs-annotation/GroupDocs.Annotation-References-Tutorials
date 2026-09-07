@@ -135,7 +135,6 @@ weight: 1
 أضف التكوين التالي إلى ملف `pom.xml` الخاص بك:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -150,7 +149,6 @@ weight: 1
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### فهم متطلبات الترخيص
@@ -168,12 +166,10 @@ weight: 1
 فئة `Annotator` هي نقطة الدخول لجميع عمليات التوضيح. تقوم بتحميل المستند، توفر واجهات برمجة التطبيقات للتعديل، وتكتب النتيجة مرة أخرى إلى القرص.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **نصيحة احترافية:** ضع كائن `Annotator` داخل كتلة try‑with‑resources أو استدعِ `dispose()` صراحة لتجنب تسرب الذاكرة الأصلية.
@@ -186,7 +182,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 تتيح الردود للمساهمين إرفاق تعليقات مباشرة بالقياس، مما يحول المسطرة البسيطة إلى سلسلة مناقشة.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -204,7 +199,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **متى تستخدم الردود:** في دورات المراجعة متعددة المستخدمين، عندما تحتاج إلى شرح سبب اختيار البُعد أو طلب توضيح من زميل.
 
@@ -214,7 +208,6 @@ replies.add(reply2);
 
 `Rectangle` يحدد الصندوق المحيط بالتوضيح على الصفحة. `PenStyle` يعدد أنماط الخط مثل الصلب، المتقطع، والنقطة.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -232,7 +225,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **خيارات التكوين الأساسية**  
 - `setBox()` – يحدد المستطيل المحيط بالتوضيح على الصفحة.  
@@ -246,11 +238,9 @@ distance.setReplies(replies); // Attach replies
 بمجرد أن يصبح التوضيح جاهزًا، أضفه إلى المستند واحفظ التغييرات.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **مهم:** دائمًا استدعِ `dispose()` بعد الحفظ، خاصةً عند معالجة العديد من المستندات في مهمة دفعة.
@@ -259,7 +249,6 @@ annotator.dispose();
 
 بدمج كل شيء معًا، إليك مثالًا كاملاً من البداية إلى النهاية يقوم بتحميل ملف PDF، إضافة توضيح مسافة، وحفظ النتيجة.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -302,7 +291,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 شغّل المقتطف، افتح ملف الإخراج في أي عارض PDF يدعم التوضيحات، وسترى مسطرة تعمل بالكامل جاهزة للتفاعل.
 
@@ -339,11 +327,9 @@ public class DistanceAnnotationExample {
 **الحل:** استخدم مسارًا مطلقًا أثناء التطوير، تحقق من وجود الملف، وتأكد من أن العملية لديها أذونات القراءة.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### المشكلة: عدم ظهور التوضيح
@@ -353,11 +339,9 @@ final Annotator annotator = new Annotator(inputPath);
 **إصلاحات سريعة:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### المشكلة: مشاكل الذاكرة مع المستندات الكبيرة
@@ -368,12 +352,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - زد حجم ذاكرة JVM (`-Xmx4g` أو أعلى) للمدخلات الكبيرة جدًا.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### المشكلة: أخطاء متعلقة بالترخيص
@@ -401,7 +383,6 @@ try (Annotator annotator = new Annotator("large-document.pdf")) {
 إذا كانت خدمتك تعالج العديد من الملفات بشكل متوازي، اتبع هذه القواعد:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -415,7 +396,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - كل خيط يجب أن ينشئ نسخة خاصة به من `Annotator`.  
 - استخدم مجموعة خيوط محدودة لتجنب استنزاف موارد النظام.  
@@ -427,7 +407,6 @@ public void processMultipleDocuments(List<String> filePaths) {
 
 ### خيارات التنسيق المخصص
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -438,23 +417,19 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 يمكنك تعريف كائن `Pen` مخصص، تطبيق تعبئة متدرجة، أو حتى تضمين علامات SVG في نهايات خط المسطرة.
 
 ### التحديد الديناميكي للموقع
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 استفد من الإحداثيات النسبية للصفحة بحيث يعيد التوضيح تحديد موقعه تلقائيًا عند تكبير أو تدوير المستند.
 
 ### توضيحات شرطية
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -464,7 +439,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 أضف منطقًا ينشئ توضيح مسافة فقط عندما يتحقق شرط معين (مثلاً، عندما يتجاوز مكون ما حد التحمل).
@@ -477,7 +451,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
 `AnnotationRecord` هو نموذج بيانات مخصص لحفظ بيانات توضيحات في قاعدة البيانات.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
@@ -485,14 +458,12 @@ record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
 ```
-```
 
 احفظ بيانات توضيحات (المؤلف، الطابع الزمني، قيمة القياس) في قاعدة بيانات علائقية للتقارير والبحث.
 
 ### التكامل مع تطبيقات الويب
 `DistanceAnnotationRequest` هو كائن نقل بيانات (DTO) يحمل معلمات التوضيح من العميل إلى الخادم.
 
-```java
 ```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
@@ -502,19 +473,16 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 اعرض نقطة نهاية REST تستقبل ملفًا، تضيف توضيح مسافة بناءً على حمولة JSON، وتعيد المستند الموضح.
 
 ### التكامل مع التخزين السحابي
-```java
 ```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 اقرأ واكتب الملفات مباشرةً من AWS S3، Azure Blob Storage، أو Google Cloud Storage باستخدام SDKs الخاصة بها، ثم مرّر التدفقات إلى `Annotator`.

@@ -83,13 +83,11 @@ GroupDocs.Annotation ist eine .NET‑Bibliothek, die das Hinzufügen, Bearbeiten
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Option B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Option C: Visual‑Studio‑UI
@@ -106,7 +104,6 @@ License ist eine Klasse, die Ihre GroupDocs.Annotation‑Lizenzdatei lädt und d
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Produktions‑Lizenz
 ```text
@@ -114,7 +111,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro‑Tipp:** Fordern Sie eine [temporäre Lizenz](https://purchase.groupdocs.com/temporary-license) für eine erweiterte Evaluierung ohne Wasserzeichen an.
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Wenn der Code kompiliert und ausgeführt wird, ist Ihre Umgebung für die nächsten Schritte bereit.
@@ -144,7 +139,6 @@ Um **load pdf from url** zu verwenden, erstellen Sie eine `HttpClient`‑Anfrage
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Verwenden Sie die direkte Datei‑URL (z. B. `?raw=true` für GitHub‑Raw‑Dateien).  
@@ -167,7 +161,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` hält das PDF im RAM und ermöglicht GroupDocs schnellen, zufälligen Lesezugriff.  
@@ -197,7 +190,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Konfigurieren der Annotationsdetails
 ```text
@@ -209,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` definiert das Rechteck in Punkten (1 pt ≈ 1/72 in).  
@@ -232,7 +223,6 @@ Annotator.Save ist eine Methode, die das modifizierte Dokument, einschließlich 
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro‑Tipp:** Verwenden Sie `Path.Combine()`, um Dateipfade sicher über Windows, Linux und macOS hinweg zu erstellen.
@@ -272,7 +262,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Warum läuft die Anwendung bei großen PDFs out of memory?
 Das vollständige Laden sehr großer PDFs in einen `MemoryStream` kann den verfügbaren Speicher des Prozesses erschöpfen, insbesondere in 32‑Bit‑Umgebungen oder Containern mit begrenztem RAM.
@@ -297,7 +286,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Warum erscheinen meine Anmerkungen an der falschen Stelle?
 Falsche Platzierung entsteht häufig durch nicht übereinstimmende Seitengrößen, Drehungen oder die Verwendung eines anderen Koordinatensystems als vom PDF erwartet.
@@ -315,7 +303,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Performance‑Best‑Practices
 
@@ -332,7 +319,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 
 - **Document Caching:** Speichern Sie häufig genutzte PDFs in einem verteilten Cache (Redis, MemoryCache).  
 - **Async APIs:** Bevorzugen Sie asynchrone Methoden (`await annotator.SaveAsync(...)`), um Threads frei zu halten.  
@@ -347,7 +333,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### Wie verwaltet man Speicher effizient?
 Die `using`‑Anweisung stellt sicher, dass verwertbare Objekte wie Streams und der Annotator korrekt geschlossen und freigegeben werden, wodurch Speicherlecks vermieden werden.
@@ -360,7 +345,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Überwachen Sie den Speicherverbrauch Ihrer Anwendung mit Tools wie **dotMemory** oder **PerfView**, insbesondere beim gleichzeitigen Verarbeiten von PDF‑Stapelaufträgen.

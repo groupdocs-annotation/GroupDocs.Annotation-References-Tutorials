@@ -83,13 +83,11 @@ GroupDocs.Annotation adalah pustaka .NET yang memungkinkan penambahan, penyuntin
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Opsi B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Opsi C: UI Visual Studio
@@ -106,7 +104,6 @@ License adalah kelas yang memuat file lisensi GroupDocs.Annotation Anda dan meng
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Lisensi Produksi
 ```text
@@ -114,7 +111,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Tip Pro:** Minta [lisensi sementara](https://purchase.groupdocs.com/temporary-license) untuk evaluasi yang diperpanjang tanpa watermark.
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Jika kode berhasil dikompilasi dan dijalankan, lingkungan Anda siap untuk langkah selanjutnya.
@@ -144,7 +139,6 @@ Untuk **memuat pdf dari url**, buat permintaan `HttpClient`, baca respons ke dal
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Gunakan URL file langsung (mis., tambahkan `?raw=true` untuk file mentah GitHub).  
@@ -167,7 +161,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` menyimpan PDF di RAM, memberikan GroupDocs kemampuan baca acak yang cepat.  
@@ -197,7 +190,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Mengonfigurasi Detail Anotasi
 ```text
@@ -209,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` mendefinisikan persegi panjang dalam poin (1 pt ≈ 1/72 in).  
@@ -230,7 +221,6 @@ Annotator.Save adalah metode yang menulis dokumen yang dimodifikasi, termasuk se
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Tip Pro:** Gunakan `Path.Combine()` untuk membangun jalur file secara aman di Windows, Linux, dan macOS.
@@ -270,7 +260,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Mengapa aplikasi kehabisan memori dengan PDF besar?
 Memuat PDF yang sangat besar sepenuhnya ke dalam `MemoryStream` dapat menghabiskan memori yang tersedia untuk proses, terutama pada lingkungan 32‑bit atau kontainer dengan RAM terbatas.
@@ -295,7 +284,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Mengapa anotasi saya muncul di tempat yang salah?
 Penempatan yang salah sering disebabkan oleh dimensi halaman yang tidak cocok, rotasi, atau penggunaan sistem koordinat yang berbeda dari yang diharapkan PDF.
@@ -313,7 +301,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Praktik Terbaik Kinerja
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 
 - **Document Caching:** Simpan PDF yang sering diakses dalam cache terdistribusi (Redis, MemoryCache).  
 - **Async APIs:** Lebih pilih metode asynchronous (`await annotator.SaveAsync(...)`) untuk menjaga thread tetap bebas.
@@ -345,7 +331,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### Cara Mengelola Memori Secara Efisien?
 Pernyataan `using` memastikan bahwa objek yang dapat dibuang seperti stream dan Annotator ditutup dan dilepaskan dengan benar, mencegah kebocoran memori.
@@ -358,7 +343,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Pantau jejak memori aplikasi Anda dengan alat seperti **dotMemory** atau **PerfView**, terutama saat memproses batch PDF secara bersamaan.

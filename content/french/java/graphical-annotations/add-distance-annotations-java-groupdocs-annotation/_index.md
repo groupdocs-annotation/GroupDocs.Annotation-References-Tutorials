@@ -142,7 +142,6 @@ Intégrer GroupDocs.Annotation est un jeu d’enfant. Ci‑dessous, nous montron
 Ajoutez la configuration suivante à votre fichier `pom.xml` :
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -157,7 +156,6 @@ Ajoutez la configuration suivante à votre fichier `pom.xml` :
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Comprendre les exigences de licence
@@ -175,12 +173,10 @@ Commencez avec l’essai gratuit, puis passez à la version payante lorsque vous
 La classe `Annotator` est le point d’entrée pour toutes les opérations d’annotation. Elle charge un document, fournit des API d’édition et écrit le résultat sur le disque.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Astuce :** Enveloppez le `Annotator` dans un bloc try‑with‑resources ou appelez explicitement `dispose()` pour éviter les fuites de mémoire native.
@@ -193,7 +189,6 @@ Passons maintenant en revue un flux de travail complet et prêt pour la producti
 
 Les réponses permettent aux collaborateurs d’attacher des commentaires directement à une mesure, transformant une simple règle en fil de discussion.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -211,7 +206,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **Quand utiliser les réponses :** Dans les cycles de révision multi‑utilisateurs, lorsque vous devez expliquer pourquoi une dimension a été choisie ou demander des éclaircissements à un coéquipier.
 
@@ -221,7 +215,6 @@ La classe `DistanceAnnotation` est l’objet de niveau supérieur de GroupDocs.A
 
 `Rectangle` définit la boîte englobante de l’annotation sur la page. `PenStyle` énumère les styles de ligne tels que plein, tiret et point.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -239,7 +232,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Options de configuration clés**  
 - `setBox()` – Définit le rectangle englobant de l’annotation sur la page.  
@@ -253,11 +245,9 @@ distance.setReplies(replies); // Attach replies
 Une fois l’annotation prête, ajoutez‑la au document et persistez les modifications.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Important :** Appelez toujours `dispose()` après l’enregistrement, surtout lors du traitement de nombreux documents en lot.
@@ -266,7 +256,6 @@ annotator.dispose();
 
 En rassemblant tous les éléments, voici un exemple complet de bout en bout qui charge un PDF, ajoute une annotation de distance et enregistre le résultat.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -308,7 +297,6 @@ public class DistanceAnnotationExample {
         }
     }
 }
-```
 ```
 
 Exécutez le fragment, ouvrez le fichier de sortie dans n’importe quel visualiseur PDF qui prend en charge les annotations, et vous verrez une règle entièrement fonctionnelle prête à l’interaction.
@@ -352,11 +340,9 @@ Même un exemple bien rédigé peut rencontrer des problèmes. Voici les problè
 **Solution :** Utilisez un chemin absolu pendant le développement, vérifiez que le fichier existe et assurez‑vous que le processus dispose des permissions de lecture.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Problème : annotation non visible
@@ -368,11 +354,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Correctifs rapides :**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Problème : problèmes de mémoire avec de gros documents
@@ -385,12 +369,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Augmentez le tas JVM (`-Xmx4g` ou plus) pour des entrées très volumineuses.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Problème : erreurs liées à la licence
@@ -423,7 +405,6 @@ Lorsque vous passez d’un prototype à la production, gardez à l’esprit ces 
 Si votre service traite de nombreux fichiers en parallèle, suivez ces règles :
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -437,7 +418,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Chaque thread doit instancier son propre `Annotator`.  
 - Utilisez un pool de threads limité pour éviter d’épuiser les ressources système.  
@@ -450,7 +430,6 @@ Une fois les bases maîtrisées, explorez ces fonctionnalités avancées pour af
 ### Options de style personnalisées
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -461,25 +440,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Vous pouvez définir un objet `Pen` personnalisé, appliquer des remplissages en dégradé, ou même intégrer des marqueurs SVG aux extrémités de la ligne de la règle.
 
 ### Positionnement dynamique
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Exploitez les coordonnées relatives à la page afin que l’annotation se repositionne automatiquement lorsque le document est zoomé ou pivoté.
 
 ### Annotations conditionnelles
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -489,7 +464,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Ajoutez une logique qui ne crée une annotation de distance que lorsqu’une certaine condition est remplie (par ex., lorsqu’un composant dépasse un seuil de tolérance).
@@ -501,14 +475,12 @@ Ajoutez une logique qui ne crée une annotation de distance que lorsqu’une cer
 `AnnotationRecord` est un modèle de données personnalisé pour persister les métadonnées d’annotation dans une base de données.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Stockez les métadonnées d’annotation (auteur, horodatage, valeur de mesure) dans une base de données relationnelle pour les rapports et la recherche.
@@ -518,7 +490,6 @@ Stockez les métadonnées d’annotation (auteur, horodatage, valeur de mesure) 
 `DistanceAnnotationRequest` est un DTO qui transporte les paramètres d’annotation du client vers le serveur.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -527,20 +498,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Exposez un point d’accès REST qui accepte un fichier, ajoute une annotation de distance basée sur la charge JSON, et renvoie le document annoté.
 
 ### Intégration de stockage cloud
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Lisez et écrivez des fichiers directement depuis AWS S3, Azure Blob Storage ou Google Cloud Storage à l’aide des SDK respectifs, puis transmettez les flux à `Annotator`.

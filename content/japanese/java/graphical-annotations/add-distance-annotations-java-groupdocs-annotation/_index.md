@@ -134,7 +134,6 @@ GroupDocs.Annotation の統合は簡単です。以下にプロジェクトに�
 `pom.xml` ファイルに以下の設定を追加してください：
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -149,7 +148,6 @@ GroupDocs.Annotation の統合は簡単です。以下にプロジェクトに�
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### ライセンス要件の理解
@@ -167,12 +165,10 @@ GroupDocs.Annotation には 3 つのライセンスモデルがあります：
 `Annotator` クラスはすべての注釈操作のエントリーポイントです。ドキュメントを読み込み、編集 API を提供し、結果をディスクに書き戻します。
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **プロのコツ:** `Annotator` を try‑with‑resources ブロックでラップするか、明示的に `dispose()` を呼び出してネイティブメモリリークを防ぎましょう。
@@ -185,7 +181,6 @@ final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 
 返信により、協力者は測定に直接コメントを添付でき、シンプルな定規をディスカッションスレッドに変えることができます。
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -203,7 +198,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **返信を使用するタイミング:** 複数ユーザーのレビューサイクルで、寸法の選択理由を説明したり、チームメイトに確認を求める必要があるとき。
 
@@ -213,7 +207,6 @@ replies.add(reply2);
 
 `Rectangle` はページ上の注釈のバウンディングボックスを定義します。`PenStyle` は実線、破線、点線などのラインスタイルを列挙します。
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -231,7 +224,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **主要な設定オプション**  
 - `setBox()` – ページ上の注釈のバウンディング矩形を設定します。  
@@ -245,11 +237,9 @@ distance.setReplies(replies); // Attach replies
 注釈の準備ができたら、ドキュメントに追加し、変更を永続化します。
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **重要:** 保存後は必ず `dispose()` を呼び出してください。特にバッチジョブで多数のドキュメントを処理する場合は重要です。
@@ -258,7 +248,6 @@ annotator.dispose();
 
 すべてをまとめると、PDF を読み込み、距離注釈を追加し、結果を保存するエンドツーエンドの完全な例が以下です。
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -301,7 +290,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 スニペットを実行し、注釈に対応した任意の PDF ビューアで出力ファイルを開くと、インタラクティブに使用できる完全な定規が表示されます。
 
@@ -340,11 +328,9 @@ public class DistanceAnnotationExample {
 **解決策:** 開発時は絶対パスを使用し、ファイルの存在を確認し、プロセスに読み取り権限があることを確認してください。
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### 問題: 注釈が表示されない
@@ -356,11 +342,9 @@ final Annotator annotator = new Annotator(inputPath);
 **簡単な修正:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### 問題: 大容量ドキュメントでのメモリ問題
@@ -373,12 +357,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - 非常に大きな入力の場合は JVM ヒープを増やす（例: `-Xmx4g` 以上）。
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### 問題: ライセンス関連エラー
@@ -409,7 +391,6 @@ try (Annotator annotator = new Annotator("large-document.pdf")) {
 サービスが多数のファイルを並列に処理する場合、以下のルールに従ってください：
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -423,7 +404,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - 各スレッドは独自の `Annotator` をインスタンス化する必要があります。  
 - システムリソースの枯渇を防ぐため、バウンドされたスレッドプールを使用してください。  
@@ -436,7 +416,6 @@ public void processMultipleDocuments(List<String> filePaths) {
 ### カスタムスタイリングオプション
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -447,25 +426,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 カスタム `Pen` オブジェクトを定義したり、グラデーション塗りを適用したり、定規線の端に SVG マーカーを埋め込むこともできます。
 
 ### 動的ポジショニング
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 ページ相対座標を活用すると、文書がズームや回転されたときに注釈が自動的に再配置されます。
 
 ### 条件付き注釈
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -475,7 +450,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 特定の条件が満たされたとき（例: コンポーネントが許容閾値を超えた場合）にのみ距離注釈を作成するロジックを追加します。
@@ -489,14 +463,12 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
 `AnnotationRecord` は、データベースに注釈メタデータを永続化するためのカスタムデータモデルです。
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 注釈メタデータ（作成者、タイムスタンプ、測定値）をリレーショナルデータベースに保存し、レポートや検索に利用します。
@@ -506,7 +478,6 @@ record.setCreatedDate(distance.getCreatedOn());
 `DistanceAnnotationRequest` は、クライアントからサーバーへ注釈パラメータを運ぶ DTO です。
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -515,20 +486,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 ファイルを受け取り、JSON ペイロードに基づいて距離注釈を追加し、注釈付きドキュメントを返す REST エンドポイントを公開します。
 
 ### クラウドストレージ統合
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 各 SDK を使用して AWS S3、Azure Blob Storage、Google Cloud Storage から直接ファイルを読み書きし、ストリームを `Annotator` に渡します。

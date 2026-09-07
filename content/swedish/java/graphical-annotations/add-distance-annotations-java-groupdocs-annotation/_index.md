@@ -136,7 +136,6 @@ Att integrera GroupDocs.Annotation är enkelt. Nedan visar vi Maven‑koordinate
 Lägg till följande konfiguration i din `pom.xml`‑fil:
 
 ```xml
-```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -151,7 +150,6 @@ Lägg till följande konfiguration i din `pom.xml`‑fil:
       <version>25.2</version>
    </dependency>
 </dependencies>
-```
 ```
 
 ### Förstå licenskraven
@@ -169,12 +167,10 @@ Börja med gratis provperiod, uppgradera sedan när du är redo för produktion.
 `Annotator`‑klassen är ingångspunkten för alla anteckningsoperationer. Den laddar ett dokument, tillhandahåller redigerings‑API:er och skriver resultatet tillbaka till disk.
 
 ```java
-```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize annotator with the input file path
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
-```
 ```
 
 **Proffstips:** Inslut `Annotator` i ett try‑with‑resources‑block eller anropa explicit `dispose()` för att undvika native‑minnesläckor.
@@ -187,7 +183,6 @@ Låt oss nu gå igenom ett komplett, produktionsklart arbetsflöde för att läg
 
 Svar låter samarbetspartners bifoga kommentarer direkt till en mätning, vilket förvandlar en enkel linjal till en diskussionstråd.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.ArrayList;
@@ -205,7 +200,6 @@ ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
-```
 
 **När du ska använda svar:** I fleranvändar‑granskningscykler, när du behöver förklara varför en dimension valdes eller begära förtydligande från en kollega.
 
@@ -215,7 +209,6 @@ replies.add(reply2);
 
 `Rectangle` definierar anteckningens begränsningsruta på sidan. `PenStyle` enumererar linjestilar såsom solid, dash och dot.
 
-```java
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.PenStyle;
@@ -233,7 +226,6 @@ distance.setPenWidth((byte) 3);
 
 distance.setReplies(replies); // Attach replies
 ```
-```
 
 **Viktiga konfigurationsalternativ**  
 - `setBox()` – Anger anteckningens begränsningsrektangel på sidan.  
@@ -247,11 +239,9 @@ distance.setReplies(replies); // Attach replies
 När anteckningen är klar, lägg till den i dokumentet och spara ändringarna.
 
 ```java
-```java
 annotator.add(distance);
 annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf");
 annotator.dispose();
-```
 ```
 
 **Viktigt:** Anropa alltid `dispose()` efter sparning, särskilt när du bearbetar många dokument i ett batchjobb.
@@ -260,7 +250,6 @@ annotator.dispose();
 
 Genom att sätta ihop allt, här är ett fullständigt end‑to‑end‑exempel som laddar en PDF, lägger till en avståndsanteckning och sparar resultatet.
 
-```java
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -303,7 +292,6 @@ public class DistanceAnnotationExample {
     }
 }
 ```
-```
 
 Kör kodsnutten, öppna utdatafilen i någon PDF‑visare som stödjer anteckningar, så ser du en fullt funktionell linjal redo för interaktion.
 
@@ -341,11 +329,9 @@ Att förstå var avståndsanteckningar briljerar hjälper dig att avgöra hur du
 **Lösning:** Använd en absolut sökväg under utveckling, verifiera att filen finns och säkerställ att processen har läsbehörighet.
 
 ```java
-```java
 // Better path handling
 String inputPath = new File("documents/input.pdf").getAbsolutePath();
 final Annotator annotator = new Annotator(inputPath);
-```
 ```
 
 ### Problem: Anteckning syns inte
@@ -356,11 +342,9 @@ final Annotator annotator = new Annotator(inputPath);
 **Snabba åtgärder:**
 
 ```java
-```java
 distance.setPageNumber(0); // First page
 distance.setOpacity(1.0);  // Fully opaque
 distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
-```
 ```
 
 ### Problem: Minnesproblem med stora dokument
@@ -372,12 +356,10 @@ distance.setBox(new Rectangle(50, 50, 200, 30)); // Visible position
 - Öka JVM‑heapen (`-Xmx4g` eller högre) för mycket stora indata.
 
 ```java
-```java
 // Good practice - use try-with-resources
 try (Annotator annotator = new Annotator("large-document.pdf")) {
     // Your annotation code here
 } // Automatic disposal
-```
 ```
 
 ### Problem: Licensrelaterade fel
@@ -409,7 +391,6 @@ När du går från prototyp till produktion, ha dessa prestandaöverväganden i 
 Om din tjänst bearbetar många filer parallellt, följ dessa regler:
 
 ```java
-```java
 // Example of efficient batch processing
 public void processMultipleDocuments(List<String> filePaths) {
     for (String path : filePaths) {
@@ -423,7 +404,6 @@ public void processMultipleDocuments(List<String> filePaths) {
     }
 }
 ```
-```
 
 - Varje tråd måste skapa sin egen `Annotator`.  
 - Använd en begränsad trådpool för att undvika att uttömma systemresurser.  
@@ -436,7 +416,6 @@ När du behärskar grunderna, utforska dessa avancerade funktioner för att finj
 ### Anpassade stilalternativ
 
 ```java
-```java
 // Advanced pen styling
 distance.setPenStyle(PenStyle.DASH_DOT);
 distance.setPenWidth((byte) 4);
@@ -447,25 +426,21 @@ distance.setOpacity(0.6); // Subtle background measurements
 // vs
 distance.setOpacity(1.0); // Prominent foreground measurements
 ```
-```
 
 Du kan definiera ett anpassat `Pen`‑objekt, applicera gradientfyllningar eller till och med bädda in SVG‑markörer i linjens ändar.
 
 ### Dynamisk positionering
 
 ```java
-```java
 // Calculate position based on document dimensions or content
 Rectangle dynamicBox = calculateOptimalPosition(documentWidth, documentHeight);
 distance.setBox(dynamicBox);
-```
 ```
 
 Utnyttja sidrelativa koordinater så att anteckningen automatiskt ompositioneras när dokumentet zoomas eller roteras.
 
 ### Villkorliga anteckningar
 
-```java
 ```java
 // Add annotations based on document content or user preferences
 if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
@@ -475,7 +450,6 @@ if (document.getType() == DocumentType.ARCHITECTURAL_PLAN) {
     distance.setMessage("Component spacing");
     distance.setPenStyle(PenStyle.DOT);
 }
-```
 ```
 
 Lägg till logik som endast skapar en avståndsanteckning när ett visst villkor är uppfyllt (t.ex. när en komponent överskrider en toleransgräns).
@@ -489,14 +463,12 @@ Avståndsanteckningar är inte isolerade – de passar naturligt in i bredare do
 `AnnotationRecord` är en anpassad datamodell för att lagra anteckningsmetadata i en databas.
 
 ```java
-```java
 // Save annotation details to database
 AnnotationRecord record = new AnnotationRecord();
 record.setDocumentId(documentId);
 record.setAnnotationType("distance");
 record.setMeasurement(distance.getMessage());
 record.setCreatedDate(distance.getCreatedOn());
-```
 ```
 
 Lagra anteckningsmetadata (författare, tidsstämpel, mätningsvärde) i en relationsdatabas för rapportering och sökning.
@@ -506,7 +478,6 @@ Lagra anteckningsmetadata (författare, tidsstämpel, mätningsvärde) i en rela
 `DistanceAnnotationRequest` är en DTO som bär anteckningsparametrar från klienten till servern.
 
 ```java
-```java
 @PostMapping("/documents/{id}/annotations/distance")
 public ResponseEntity<String> addDistanceAnnotation(
     @PathVariable String id,
@@ -515,20 +486,17 @@ public ResponseEntity<String> addDistanceAnnotation(
     // Return success/failure response
 }
 ```
-```
 
 Exponera en REST‑endpoint som accepterar en fil, lägger till en avståndsanteckning baserat på JSON‑payload och returnerar det annoterade dokumentet.
 
 ### Molnlagringsintegration
 
 ```java
-```java
 // Download from cloud, process, upload result
 byte[] documentBytes = cloudStorageService.download(documentPath);
 // Process with GroupDocs.Annotation
 byte[] annotatedDocument = processAnnotations(documentBytes);
 cloudStorageService.upload(outputPath, annotatedDocument);
-```
 ```
 
 Läs och skriv filer direkt från AWS S3, Azure Blob Storage eller Google Cloud Storage med respektive SDK, och skicka sedan strömmarna till `Annotator`.

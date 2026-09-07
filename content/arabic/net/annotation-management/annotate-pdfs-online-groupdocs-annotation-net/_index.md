@@ -82,13 +82,11 @@ GroupDocs.Annotation هي مكتبة .NET تمكّنك من إضافة، تعد�
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### الخيار ب: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### الخيار ج: واجهة Visual Studio
@@ -105,7 +103,6 @@ dotnet add package GroupDocs.Annotation --version 25.4.0
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### ترخيص الإنتاج
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **نصيحة احترافية:** اطلب [ترخيص مؤقت](https://purchase.groupdocs.com/temporary-license) لتقييم ممتد بدون علامات مائية.
@@ -127,7 +123,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 إذا تم تجميع الكود وتشغيله، فإن بيئتك جاهزة للخطوات التالية.
@@ -143,7 +138,6 @@ HttpClient هي فئة .NET تُستخدم لإرسال طلبات HTTP واست
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - استخدم URL الملف المباشر (مثلاً أضف `?raw=true` لملفات GitHub الخام).  
@@ -166,7 +160,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` يحتفظ بـ PDF في الذاكرة، مما يمنح GroupDocs إمكانية قراءة عشوائية سريعة.  
@@ -196,7 +189,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### ضبط تفاصيل التعليق
 ```text
@@ -208,7 +200,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` يحدد المستطيل بالنقاط (1 pt ≈ 1/72 in).  
@@ -231,7 +222,6 @@ Annotator.Save هي طريقة تكتب المستند المعدل، بما ف�
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **نصيحة احترافية:** استخدم `Path.Combine()` لبناء مسارات الملفات بأمان عبر Windows، Linux، وmacOS.
@@ -271,7 +261,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### لماذا ينهار التطبيق بسبب نقص الذاكرة مع PDFs الكبيرة؟
 تحميل PDFs الكبيرة بالكامل إلى `MemoryStream` قد يستنزف الذاكرة المتاحة للعملية، خصوصًا في بيئات 32‑bit أو الحاويات ذات الذاكرة المحدودة.
@@ -296,7 +285,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### لماذا تظهر تعليقاتي في المكان الخطأ؟
 الموضع غير الصحيح غالبًا ما ينتج عن أبعاد صفحة غير متطابقة، دوران، أو استخدام نظام إحداثيات مختلف عما يتوقعه PDF.
@@ -314,7 +302,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## أفضل ممارسات الأداء
 
@@ -330,7 +317,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **تخزين المستندات مؤقتًا:** احفظ ملفات PDF المتكررة في ذاكرة تخزين موزعة (Redis، MemoryCache).  
 - **واجهات Async:** فضل الأساليب غير المتزامنة (`await annotator.SaveAsync(...)`) لإبقاء الخيوط حرة.  
 ```text
@@ -342,7 +328,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### كيف أدير الذاكرة بكفاءة؟
@@ -356,7 +341,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 راقب استهلاك الذاكرة لتطبيقك باستخدام أدوات مثل **dotMemory** أو **PerfView**، خاصةً عند معالجة دفعات من PDFs بشكل متزامن.

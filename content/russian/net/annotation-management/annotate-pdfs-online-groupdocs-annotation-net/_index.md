@@ -83,13 +83,11 @@ GroupDocs.Annotation — это .NET‑библиотека, позволяющ�
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Вариант B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Вариант C: UI Visual Studio
@@ -106,7 +104,6 @@ License — это класс, который загружает ваш файл
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Лицензия для продакшн
 ```text
@@ -114,7 +111,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** Запросите [временную лицензию](https://purchase.groupdocs.com/temporary-license) для расширенной оценки без водяных знаков.
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Если код компилируется и запускается, ваше окружение готово к следующим шагам.
@@ -144,7 +139,6 @@ HttpClient — класс .NET, используемый для отправки
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Используйте прямой URL файла (например, добавьте `?raw=true` для raw‑файлов GitHub).  
@@ -167,7 +161,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` хранит PDF в ОЗУ, предоставляя GroupDocs быстрый доступ с произвольным чтением.  
@@ -197,7 +190,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Настройка деталей аннотации
 ```text
@@ -209,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` определяет прямоугольник в пунктах (1 pt ≈ 1/72 дюйма).  
@@ -232,7 +223,6 @@ GroupDocs.Annotation также поддерживает:
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** Используйте `Path.Combine()`, чтобы безопасно формировать пути к файлам в Windows, Linux и macOS.
@@ -272,7 +262,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Почему приложение выходит за пределы памяти при работе с большими PDF?
 Загрузка очень больших PDF‑файлов полностью в `MemoryStream` может исчерпать доступную память процесса, особенно в 32‑битных средах или контейнерах с ограниченной ОЗУ.
@@ -297,7 +286,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Почему мои аннотации отображаются в неправильном месте?
 Неправильное размещение часто вызвано несоответствием размеров страницы, вращением или использованием иной системы координат, чем ожидает PDF.
@@ -315,7 +303,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Лучшие практики производительности
 
@@ -332,7 +319,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 
 - **Document Caching:** Store frequently accessed PDFs in a distributed cache (Redis, MemoryCache).  
 - **Async APIs:** Prefer asynchronous methods (`await annotator.SaveAsync(...)`) to keep threads free.  
@@ -347,7 +333,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     return await response.Content.ReadAsStreamAsync();
 }
 ```
-```
 
 ### Как эффективно управлять памятью?
 Оператор `using` гарантирует, что объекты, реализующие IDisposable, такие как потоки и Annotator, корректно закрываются и освобождаются, предотвращая утечки памяти.
@@ -360,7 +345,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Отслеживайте объём памяти, используемый вашим приложением, с помощью инструментов, таких как **dotMemory** или **PerfView**, особенно при одновременной обработке пакетов PDF.

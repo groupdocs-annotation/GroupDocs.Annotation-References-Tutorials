@@ -82,13 +82,11 @@ A GroupDocs.Annotation egy .NET könyvtár, amely lehetővé teszi annotációk 
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Opció B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Opció C: Visual Studio UI
@@ -105,7 +103,6 @@ A License egy osztály, amely betölti a GroupDocs.Annotation licencfájlt, és 
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Produkciós licenc
 ```text
@@ -113,7 +110,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Pro tip:** Kérjen egy [ideiglenes licenc](https://purchase.groupdocs.com/temporary-license) licencet a kiterjesztett kiértékeléshez vízjelek nélkül.
@@ -127,7 +123,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Ha a kód lefordul és fut, a környezete készen áll a következő lépésekre.
@@ -143,7 +138,6 @@ A **load pdf from url** elvégzéséhez hozzon létre egy `HttpClient` kérést,
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Használja a közvetlen fájl URL‑t (pl. adja hozzá a `?raw=true`‑t a GitHub raw fájlokhoz).  
@@ -166,7 +160,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - A `MemoryStream` a PDF-et RAM‑ban tárolja, így a GroupDocs gyors, véletlenszerű hozzáférésű olvasást kap.  
@@ -196,7 +189,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Az annotáció részleteinek konfigurálása
 ```text
@@ -208,7 +200,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - A `Box` a téglalapot pontokban definiálja (1 pt ≈ 1/72 in).  
@@ -229,7 +220,6 @@ Az Annotator.Save egy metódus, amely a módosított dokumentumot, beleértve az
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Pro tip:** Használja a `Path.Combine()`‑t a fájlútvonalak biztonságos összeállításához Windows, Linux és macOS rendszereken.
@@ -269,7 +259,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Miért fogy el a memória nagy PDF-ek esetén?
 Nagyon nagy PDF-ek teljes betöltése egy `MemoryStream`‑be kimerítheti a folyamat rendelkezésre álló memóriáját, különösen 32‑bit környezetekben vagy korlátozott RAM‑mal rendelkező konténerekben.
@@ -294,7 +283,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Miért jelennek meg az annotációk a rossz helyen?
 A helytelen elhelyezés gyakran a lapméretek, forgatás vagy a PDF által elvárt koordináta-rendszer eltéréséből ered.
@@ -312,7 +300,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Teljesítmény legjobb gyakorlatai
 
@@ -328,7 +315,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Document Caching:** Gyakran elérhető PDF-ek tárolása elosztott gyorsítótárban (Redis, MemoryCache).  
 - **Async APIs:** Aszinkron metódusok előnyben részesítése (`await annotator.SaveAsync(...)`) a szálak felszabadításához.  
 ```text
@@ -340,7 +326,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### Hogyan kezeljük hatékonyan a memóriát?
@@ -354,7 +339,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Figyelje alkalmazása memóriahasználatát olyan eszközökkel, mint a **dotMemory** vagy a **PerfView**, különösen PDF-köteg párhuzamos feldolgozása esetén.

@@ -83,13 +83,11 @@ GroupDocs.Annotation to biblioteka .NET umożliwiająca dodawanie, edytowanie i 
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 ### Opcja B: .NET CLI
 ```text
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 ### Opcja C: Interfejs Visual Studio
@@ -106,7 +104,6 @@ Licencja to klasa, która ładuje plik licencyjny GroupDocs.Annotation i aktywuj
 // Free trial - no license needed initially
 Annotator annotator = new Annotator("input.pdf");
 ```
-```
 
 ### Licencja produkcyjna
 ```text
@@ -114,7 +111,6 @@ Annotator annotator = new Annotator("input.pdf");
 // Set license before creating annotator instances
 License license = new License();
 license.SetLicense("path/to/your/license.lic");
-```
 ```
 
 **Wskazówka:** Poproś o [temporary license](https://purchase.groupdocs.com/temporary-license) na wydłużoną ocenę bez znaków wodnych.
@@ -128,7 +124,6 @@ using GroupDocs.Annotation;
 
 // This should compile without errors
 Annotator annotator = new Annotator("test.pdf");
-```
 ```
 
 Jeśli kod się kompiluje i uruchamia, środowisko jest gotowe na kolejne kroki.
@@ -144,7 +139,6 @@ Aby **load pdf from url**, utwórz żądanie `HttpClient`, odczytaj odpowiedź d
 ```csharp
 string url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET/blob/master/Examples/Resources/SampleFiles/input.pdf?raw=true";
 WebRequest request = WebRequest.Create(url);
-```
 ```
 
 - Użyj bezpośredniego URL pliku (np. dodaj `?raw=true` dla surowych plików GitHub).  
@@ -167,7 +161,6 @@ private static Stream GetFileStream(WebResponse response)
     fileStream.Position = 0; // Reset for reading
     return fileStream;
 }
-```
 ```
 
 - `MemoryStream` przechowuje PDF w RAM, dając GroupDocs szybki dostęp losowy.  
@@ -197,7 +190,6 @@ using (Annotator annotator = new Annotator(GetRemoteFile("YOUR_DOCUMENT_DIRECTOR
     // Proceed with annotation steps
 }
 ```
-```
 
 #### Konfiguracja szczegółów adnotacji
 ```text
@@ -209,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation()
 };
 
 annotator.Add(area); // Add annotation to the document
-```
 ```
 
 - `Box` definiuje prostokąt w punktach (1 pt ≈ 1/72 in).  
@@ -232,7 +223,6 @@ GroupDocs.Annotation obsługuje także:
 ```csharp
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_output.pdf");
 annotator.Save(outputPath);
-```
 ```
 
 **Wskazówka:** Używaj `Path.Combine()` do budowania ścieżek w sposób bezpieczny na Windows, Linux i macOS.
@@ -272,7 +262,6 @@ catch (WebException ex)
     throw;
 }
 ```
-```
 
 ### Dlaczego aplikacja wyczerpuje pamięć przy dużych PDF‑ach?
 Ładowanie bardzo dużych PDF‑ów w całości do `MemoryStream` może wyczerpać dostępną pamięć procesu, szczególnie w środowiskach 32‑bitowych lub kontenerach z ograniczonym RAM.
@@ -297,7 +286,6 @@ private static Stream GetRemoteFile(string url)
     }
 }
 ```
-```
 
 ### Dlaczego moje adnotacje pojawiają się w niewłaściwym miejscu?
 Nieprawidłowe położenie często wynika z niezgodności wymiarów strony, rotacji lub użycia innego systemu współrzędnych niż oczekuje PDF.
@@ -315,7 +303,6 @@ if (pageInfo != null)
     // Adjust your coordinates accordingly
 }
 ```
-```
 
 ## Najlepsze praktyki wydajnościowe
 
@@ -331,7 +318,6 @@ private static readonly HttpClient httpClient = new HttpClient()
     Timeout = TimeSpan.FromSeconds(30)
 };
 ```
-```
 - **Cache dokumentów:** Przechowuj często używane PDF‑y w rozproszonym cache (Redis, MemoryCache).  
 - **Asynchroniczne API:** Preferuj metody asynchroniczne (`await annotator.SaveAsync(...)`), aby zwalniać wątki.  
 ```text
@@ -343,7 +329,6 @@ public async Task<Stream> GetRemoteFileAsync(string url)
     response.EnsureSuccessStatusCode();
     return await response.Content.ReadAsStreamAsync();
 }
-```
 ```
 
 ### Jak efektywnie zarządzać pamięcią?
@@ -357,7 +342,6 @@ using (var outputStream = new FileStream(outputPath, FileMode.Create))
 {
     annotator.Save(outputStream);
 } // Resources automatically disposed here
-```
 ```
 
 Monitoruj zużycie pamięci aplikacji przy pomocy narzędzi takich jak **dotMemory** lub **PerfView**, szczególnie przy przetwarzaniu partii PDF‑ów równocześnie.
