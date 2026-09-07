@@ -20,17 +20,7 @@ url: /el/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/
 weight: 1
 ---
 
- GroupDocs"
-
-Make sure to keep bold formatting.
-
-Now produce final content with markdown.
-
-Check for any missed shortcodes: none.
-
-Check code block placeholders: keep as is.
-
-Now output.# Πώς να Σχολιάσετε PDF – Φόρτωση PDF από URL Java
+# Πώς να Σχολιάσετε PDF – Φόρτωση PDF από URL Java
 
 ## Εισαγωγή
 

@@ -124,7 +124,6 @@ NuGet パッケージ マネージャ コンソールからライブラリをイ
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 または .NET CLI を使用します:
@@ -132,7 +131,6 @@ Install-Package GroupDocs.Annotation -Version 25.4.0
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 バージョン **25.4.0** は、クラウドベースのドキュメント読み込みで 30 % の速度向上をもたらし、メモリ使用量を最大 40 % 削減するため、推奨されています。
@@ -152,7 +150,6 @@ using GroupDocs.Annotation;
 
 // Basic initialization - we'll improve this for cloud documents
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **定義アンカー:** `Annotator` は GroupDocs.Annotation の主要クラスで、ドキュメント ストリームをロードし、注釈の追加、編集、取得のメソッドを提供します。
@@ -197,7 +194,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **説明:**  
@@ -226,7 +222,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **重要ポイント:**  
@@ -245,7 +240,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
 // Example pattern (you'll need Azure.Security.KeyVault.Secrets package)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### コンテナへの適切なアクセス制御を実施する方法は？
@@ -268,7 +262,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Implement your validation logic here
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## 効果的なパフォーマンス最適化戦略
@@ -289,7 +282,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### 頻繁にアクセスされるドキュメントのスマートキャッシュを実装する方法は？
@@ -314,7 +306,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### ネットワーク使用量を監視・最適化する方法は？
@@ -341,7 +332,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Process your annotations here
     // Both streams will be properly disposed
 }
-```  
 ```
 
 ### Azure のレートリミットエラーを優雅に処理する方法は？
@@ -367,7 +357,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### ネットワーク障害に対するレジリエンスを構築する方法は？

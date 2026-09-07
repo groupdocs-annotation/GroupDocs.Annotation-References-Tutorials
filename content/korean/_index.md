@@ -93,10 +93,6 @@ C# 및 .NET 프로젝트에 포괄적인 주석 기능을 통합하세요.
 - [**Document Saving**](./net/document-saving) - 다양한 출력 옵션으로 주석이 달린 문서를 저장합니다
 - [**Annotation Management**](./net/annotation-management) - 프로그래밍 방식으로 주석을 추가, 업데이트, 삭제 및 필터링합니다
 - [**Collaboration Features**](./net/reply-management) - 댓글 스레드와 협업 검토를 구현합니다
-- [**Document Preview**](./net/document-preview) - 사용자 정의 해상도로 문서 미리보기를 생성합니다
-- [**Form Fields**](./net/form-field-annotations) - 인터랙티브 폼 컴포넌트를 생성합니다
-- [**Document Analysis**](./net/document-information) - 메타데이터와 페이지 정보를 추출합니다
-- [**Licensing Options**](./net/licensing-and-configuration) - 라이선스를 구현하고 구성합니다
 
 ### 고급 .NET 기능
 - [**Document Preview**](./net/document-preview) - 사용자 정의 해상도로 문서 미리보기를 생성합니다

@@ -20,13 +20,7 @@ url: /it/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/
 weight: 1
 ---
 
-Now produce final content with all markdown.
-
-Check that we didn't alter any code block placeholders. They remain as {{CODE_BLOCK_X}}.
-
-Make sure to keep all headers levels same.
-
-Now produce final answer.# Come Annotare PDF – Caricare PDF da URL Java
+# Come Annotare PDF – Caricare PDF da URL Java
 
 ## Introduzione
 

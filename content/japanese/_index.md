@@ -93,10 +93,6 @@ C# と .NET プロジェクトに包括的な注釈機能を統合し、機能�
 - [**Document Saving**](./net/document-saving) - 各種出力オプションで注釈付きドキュメントを保存  
 - [**Annotation Management**](./net/annotation-management) - プログラムから注釈の追加、更新、削除、フィルタリングを実行  
 - [**Collaboration Features**](./net/reply-management) - コメントスレッドと共同レビューを実装  
-- [**Document Preview**](./net/document-preview) - カスタム解像度でドキュメントプレビューを生成  
-- [**Form Fields**](./net/form-field-annotations) - インタラクティブなフォームコンポーネントを作成  
-- [**Document Analysis**](./net/document-information) - メタデータとページ情報を抽出  
-- [**Licensing Options**](./net/licensing-and-configuration) - ライセンスの実装と設定
 
 ### 高度な .NET 機能
 - [**Document Preview**](./net/document-preview) - カスタム解像度でドキュメントプレビューを生成  

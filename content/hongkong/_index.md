@@ -91,10 +91,6 @@ GroupDocs.Annotation 突出的原因在於它能處理超過 50 種檔案類型�
 - [**Document Saving**](./net/document-saving) - 以多種輸出選項儲存已註釋的文件
 - [**Annotation Management**](./net/annotation-management) - 以程式方式新增、更新、刪除與篩選註釋
 - [**Collaboration Features**](./net/reply-management) - 實作評論串流與協作審閱
-- [**Document Preview**](./net/document-preview) - 以自訂解析度產生文件預覽
-- [**Form Fields**](./net/form-field-annotations) - 建立互動式表單元件
-- [**Document Analysis**](./net/document-information) - 擷取中繼資料與頁面資訊
-- [**Licensing Options**](./net/licensing-and-configuration) - 實作與設定授權
 
 ### 進階 .NET 功能
 - [**Document Preview**](./net/document-preview) - 以自訂解析度產生文件預覽

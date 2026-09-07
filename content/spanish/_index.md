@@ -51,9 +51,9 @@ url: /es/
 weight: 11
 ---
 
-# Guía del desarrollador de GroupDocs.Annotation – API de anotación de documentos
+# Guía del Desarrollador de GroupDocs.Annotation - API de Anotación de Documentos
 
-En esta guía descubrirá cómo la **document annotation API** le permite incrustar funciones de anotación avanzadas—como resaltados, comentarios y formas—directamente en PDF, Word, Excel, PowerPoint y muchos otros tipos de archivo. Ya sea que esté construyendo un portal de revisión colaborativa, una aplicación educativa o un flujo de trabajo de documentos legales, la API le brinda una forma coherente y de alto rendimiento para trabajar con anotaciones tanto en entornos .NET como Java.
+En esta guía descubrirá cómo la **document annotation API** le permite incrustar funciones de anotación avanzadas —como resaltados, comentarios y formas— directamente en PDF, Word, Excel, PowerPoint y muchos otros tipos de archivo. Ya sea que esté construyendo un portal de revisión colaborativa, una aplicación educativa o un flujo de trabajo de documentos legales, la API le brinda una forma consistente y de alto rendimiento para trabajar con anotaciones tanto en entornos .NET como Java.
 
 ## Respuestas rápidas
 - **¿Qué hace la document annotation API?** Permite a los desarrolladores agregar, editar y gestionar anotaciones en más de 50 formatos de documento sin dependencias externas.  
@@ -94,10 +94,6 @@ Integre capacidades de anotación completas en sus proyectos C# y .NET con nuest
 - [**Document Saving**](./net/document-saving) - Guarde documentos anotados con varias opciones de salida
 - [**Annotation Management**](./net/annotation-management) - Agregue, actualice, elimine y filtre anotaciones programáticamente
 - [**Collaboration Features**](./net/reply-management) - Implemente hilos de comentarios y revisión colaborativa
-- [**Document Preview**](./net/document-preview) - Genere vistas previas de documentos con resolución personalizada
-- [**Form Fields**](./net/form-field-annotations) - Cree componentes de formulario interactivos
-- [**Document Analysis**](./net/document-information) - Extraiga metadatos e información de páginas
-- [**Licensing Options**](./net/licensing-and-configuration) - Implemente y configure la licencia
 
 ### Funcionalidades avanzadas de .NET
 - [**Document Preview**](./net/document-preview) - Genere vistas previas de documentos con resolución personalizada

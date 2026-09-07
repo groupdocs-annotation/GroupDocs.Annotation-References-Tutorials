@@ -1,12 +1,12 @@
 ---
 categories:
 - Java Development
-date: '2025-12-19'
+date: '2026-03-24'
 description: GroupDocs.Annotation を使用して Java で PDF アノテーションを読み込む方法をマスターしましょう。実際のシナリオで
   Java を使い、ドキュメントのアノテーションを読み込み、削除し、最適化する方法を学びます。
 keywords: Java annotation management, document annotation Java, PDF annotation management
   Java, GroupDocs annotation tutorial, manage annotations Java documents
-lastmod: '2025-12-19'
+lastmod: '2026-03-24'
 linktitle: Load PDF Annotations Java
 tags:
 - java
@@ -22,34 +22,36 @@ weight: 1
 
 # PDF アノテーションのロード（Java）: 完全な GroupDocs Annotation 管理ガイド
 
-Java アプリケーションでドキュメント注釈の管理に苦労したことはありませんか？それはあなただけではありません。ドキュメントレビューシステム、教育プラットフォーム、共同編集ツールなど、どのようなものを構築している場合でも、**PDF 注釈を Java で効率的に読み込む** ことが、ユーザーエクスペリエンスの成否を左右します。このガイドでは、注釈の読み込みから不要な返信の削除まで、知っておくべきすべての手順を解説し、高速で信頼性の高い注釈機能を今すぐ提供できるようにします。
+ドキュメントレビューシステム、eラーニングプラットフォーム、またはあらゆる共同編集ツールを構築している場合、**loading pdf annotations java** は無視できないコア機能です。次の数分で、アノテーションのロードの基本から高度な返信フィルタリング手法まで必要なすべてを解説し、Java アプリケーションに高速で信頼性の高いアノテーション機能をすぐに追加できるようにします。
 
-## クイック アンサー
-- **PDF を Java で読み込むことができるライブラリはどれですか？**Java 版 GroupDocs.Annotation。
-- **試用するにはライセンスが必要ですか？**無料トライアルをご利用いただけます。商用利用には製品版ライセンスが必要です。
-- **サポートされている Java のバージョンはどれですか？**JDK8 以降。
-- **OOM エラーなしで大きな PDF を処理できますか？**はい。ストリーミング オプションと適切なリソース処理を使用してください。
-- **特定の返信だけを削除するにはどうすればよいですか？**返信リストを反復処理し、ユーザーまたはコンテンツでフィルタリングして、ドキュメントを更新します。
+## Quick Answers
+- **load pdf annotations java をロードできるライブラリはどれですか？** GroupDocs.Annotation for Java.  
+- **試用するのにライセンスは必要ですか？** A free trial is available; a production license is required for commercial use.  
+- **サポートされている Java バージョンはどれですか？** JDK 8 or newer.  
+- **OOM エラーなしで大きな PDF を処理できますか？** Yes—use streaming options and proper resource disposal.  
+- **特定の返信だけを削除するにはどうすればよいですか？** Iterate the replies list, filter by user or content, and update the document.
 
-## Java で PDF 注釈を読み込むとは？
-Java で PDF 注釈を読み込むということは、PDF ファイルを開き、埋め込まれたコメントオブジェクト（ハイライト、メモ、スタンプ、返信など）を読み取り、検査、変更、エクスポート可能な Java オブジェクトとして公開することを意味します。このステップは、監査証跡、共同レビュー、データ抽出など、注釈を活用したあらゆるワークフローの基盤となります。
+## load pdf annotations java とは？
 
-## Java で GroupDocs.Annotation を使用する理由
-GroupDocs.Annotation は、PDF、Word、Excel、PowerPoint など、さまざまなプラットフォームで動作する統合 API を提供します。複雑な注釈構造に対応し、メモリ使用量をきめ細かく制御できるほか、パスワード保護されたファイルなどのセキュリティ機能もサポートしています。
+Java で PDF アノテーションをロードするとは、PDF ファイルを開き、埋め込まれたコメントオブジェクト（ハイライト、ノート、スタンプ、返信など）を読み取り、それらを検査、変更、エクスポートできる Java オブジェクトとして公開することです。このステップは、監査トレイル、共同レビュー、データ抽出など、アノテーション駆動のワークフローの基盤となります。
 
-## 前提条件と環境設定
+## GroupDocs.Annotation for Java を使用する理由
 
-### 必要なもの
-- **GroupDocs.Annotation ライブラリ** – アノテーション処理のコア依存関係
-- **Java 開発環境** – JDK8 以上と IDE (IntelliJ IDEA または Eclipse)
-- **Maven または Gradle** – 依存関係管理用
-- **テスト用の既存のアノテーションを含む **サンプル PDF ドキュメント**
+GroupDocs.Annotation は PDF、Word、Excel、PowerPoint など幅広いフォーマットで動作する統一 API を提供します。複雑なアノテーション構造を処理し、メモリ使用量を細かく制御でき、パスワード保護ファイルなどのセキュリティ機能も組み込みでサポートします。
 
-### GroupDocs.Annotation の Java 向けセットアップ
+## Prerequisites and Environment Setup
 
-#### Maven 設定 (推奨)
+### What You'll Need
+- **GroupDocs.Annotation Library** – アノテーション処理のコア依存関係  
+- **Java Development Environment** – JDK 8 以上と IDE（IntelliJ IDEA または Eclipse）  
+- **Maven または Gradle** – 依存関係管理用  
+- **Sample PDF documents** – テスト用に既存のアノテーションが含まれるサンプル PDF 文書  
 
-シームレスな依存関係管理のために、`pom.xml` ファイルに以下の設定を追加します。
+### Setting Up GroupDocs.Annotation for Java
+
+#### Maven Configuration (Recommended)
+
+シームレスな依存関係管理のために、以下の設定を `pom.xml` ファイルに追加してください：
 
 ```xml
 <repositories>
@@ -68,24 +70,24 @@ GroupDocs.Annotation は、PDF、Word、Excel、PowerPoint など、さまざま
 </dependencies>
 ```
 
-**プロのヒント**: セキュリティアップデートとパフォーマンス向上のため、常に最新の安定バージョンを使用してください。
+**Pro tip**: セキュリティ更新とパフォーマンス向上のため、常に最新の安定版を使用してください。
 
-#### ライセンス取得戦略
-- **無料トライアル** – 評価や小規模プロジェクトに最適です
-- **一時ライセンス** – 開発およびテストフェーズに最適です
-- **本番環境ライセンス** – 商用アプリケーションに必要です
+#### License Acquisition Strategy
+- **Free Trial** – 評価や小規模プロジェクトに最適  
+- **Temporary License** – 開発・テストフェーズに理想的  
+- **Production License** – 商用アプリケーションに必須  
 
-まずは無料トライアルで、ライブラリが**PDF注釈の読み込み（Java）** 要件を満たしていることを確認してください。
+まずは無料トライアルから始め、ライブラリがあなたの **load pdf annotations java** 要件を満たすか検証してください。
 
-## GroupDocs.Annotation を使用して PDF注釈を Java で読み込む方法
+## GroupDocs.Annotation を使用した load pdf annotations java の方法
 
-### 注釈の読み込みプロセスについて
-ドキュメントから注釈を読み込む際は、コメント、ハイライト、スタンプ、返信といった共同作業要素を記述したメタデータにアクセスします。このプロセスは、以下の点で重要です。
-- **監査証跡** – 誰がいつどのような変更を行ったかを追跡する
-- **コラボレーションの分析情報** – レビューパターンを理解する
-- **データ抽出** – レポートや分析のために注釈データを取得する
+### Understanding the Annotation Loading Process
+ドキュメントからアノテーションをロードすると、コメント、ハイライト、スタンプ、返信といった共同作業要素を記述したメタデータにアクセスします。このプロセスは以下の点で重要です：
+- **Audit trails** – 誰がいつどのような変更を行ったかを追跡  
+- **Collaboration insights** – レビューのパターンを把握  
+- **Data extraction** – レポートや分析のためにアノテーションデータを抽出  
 
-### ステップバイステップの実装
+### Step‑by‑Step Implementation
 
 #### 1. 必要なクラスのインポート
 ```java
@@ -94,7 +96,7 @@ import com.groupdocs.annotation.options.LoadOptions;
 import java.util.List;
 ```
 
-#### 2. ドキュメントから注釈を読み込む
+#### 2. ドキュメントからアノテーションをロード
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 LoadOptions loadOptions = new LoadOptions();
@@ -103,31 +105,31 @@ List<AnnotationBase> annotations = annotator.get();
 annotator.dispose();
 ```
 
-**何が起こっているのか？**
-- `LoadOptions` で読み込み動作（例：パスワード）を設定できます。
-- `Annotator` でPDFの注釈レイヤーを開きます。
-- `annotator.get()` ですべての注釈を `List<AnnotationBase>` として返します。
-- `annotator.dispose()` でネイティブリソースを解放します（大容量ファイルには必須）。
+**何が起きているのか？**  
+- `LoadOptions` はロード時の動作（例: パスワード）を設定できます。  
+- `Annotator` は PDF のアノテーション層を開きます。  
+- `annotator.get()` はすべてのアノテーションを `List<AnnotationBase>` として返します。  
+- `annotator.dispose()` はネイティブリソースを解放します—大きなファイルでは必須です。
 
-#### この機能を使用するタイミング
-- すべてのコメントを一覧表示する**ドキュメントレビューダッシュボード**を構築する。
-- **コンプライアンスレポート**用に注釈データをエクスポートする。
-- 異なる形式間で注釈を移行する（PDF→DOCXなど）。
+#### When to Use This Feature
+- すべてのコメントを一覧表示する **document review dashboard** を構築する場合。  
+- **compliance reporting** 用にアノテーションデータをエクスポートする場合。  
+- フォーマット間でアノテーションを移行する場合（PDF → DOCX など）。
 
-## 高度な機能：特定の注釈への返信を削除する
+## Advanced Feature: Removing Specific Annotation Replies
 
-### 返信管理のビジネスケース
-共同作業環境では、注釈スレッドが混雑することがあります。返信を部分的に削除することで、元のコメントを維持しながら議論を集中させることができます。
+### The Business Case for Reply Management
+共同環境では、アノテーションスレッドがノイズになることがあります。選択的な返信削除により、議論を焦点化しつつ元のコメントは保持できます。
 
-### 実装ガイド
+### Implementation Guide
 
-#### 1. ドキュメントパスの設定
+#### 1. Setup Document Paths
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/RemovedRepliesOutput.pdf";
 ```
 
-#### 2. 返信をフィルタリングして削除する
+#### 2. Filter and Remove Replies
 ```java
 LoadOptions loadOptions = new LoadOptions();
 final Annotator annotator = new Annotator(inputFilePath, loadOptions);
@@ -144,13 +146,13 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**説明**
-- ループ処理は最初のアノテーションの返信を順に処理します。
-- 返信の作成者が「Tom」に一致する場合、削除されます。
-- `annotator.update()` は、変更されたコレクションをドキュメントに書き戻します。
-- `annotator.save()` は、クリーンアップされた PDF を保存します。
+**説明**  
+- ループは最初のアノテーションの返信を走査します。  
+- 返信作者が `"Tom"` と一致した場合、削除されます。  
+- `annotator.update()` は変更されたコレクションを書き戻します。  
+- `annotator.save()` はクリーンアップされた PDF を永続化します。
 
-### 高度な返信フィルタリング手法
+### Advanced Reply Filtering Techniques
 ```java
 // Remove replies older than 30 days
 Date cutoffDate = new Date(System.currentTimeMillis() - (30L * 24 * 60 * 60 * 1000));
@@ -166,11 +168,11 @@ if (reply.getUser().getRole().equals("temporary_reviewer")) {
 }
 ```
 
-## 実際のアプリケーションシナリオ
+## Real‑World Application Scenarios
 
-### シナリオ 1: 法務文書レビュープラットフォーム
-**課題** – 法律事務所は、最終ファイルを納品する前に、レビュー担当者の事前コメントを削除する必要があります。
-**解決策** – 文書を一括処理し、「temporary_reviewer」ユーザーからの返信を削除します。
+### Scenario 1: Legal Document Review Platform
+**Challenge** – 法律事務所は最終ファイルを納品する前に、暫定レビューコメントを削除する必要があります。  
+**Solution** – ドキュメントをバッチ処理し、`temporary_reviewer` ユーザーからの返信を除去します：
 
 ```java
 // Process multiple documents
@@ -180,17 +182,17 @@ for (String docPath : documentPaths) {
 }
 ```
 
-### シナリオ 2: 教育コンテンツ管理
-**課題** – 学期終了後、学生の注釈によって教員の画面が乱雑になります。
-**解決策** – 教員からのフィードバックを保存し、学生のメモをアーカイブし、エンゲージメントレポートを生成します。
+### Scenario 2: Educational Content Management
+**Challenge** – 学期終了後、学生のアノテーションが講師のビューを乱雑にします。  
+**Solution** – 講師のフィードバックは保持し、学生のノートをアーカイブし、エンゲージメントレポートを生成します。
 
-### シナリオ 3: 企業コンプライアンスシステム
-**課題** – 機密性の高い社内ディスカッションは、クライアント向け PDF から削除する必要があります。
-**解決策** – ロールベースのフィルターを適用し、すべての削除アクションを監査ログに記録します。
+### Scenario 3: Corporate Compliance Systems
+**Challenge** – 敏感な内部議論をクライアント向け PDF から除去する必要があります。  
+**Solution** – ロールベースのフィルタを適用し、すべての削除操作を監査ログに記録します。
 
-## パフォーマンスのベストプラクティス
+## Performance Best Practices
 
-### メモリ管理戦略
+### Memory Management Strategies
 ```java
 // Always Dispose Resources
 try (Annotator annotator = new Annotator(inputFilePath)) {
@@ -213,16 +215,15 @@ LoadOptions options = new LoadOptions();
 options.setPreloadPageCount(1); // Load one page at a time
 ```
 
-### パフォーマンスモニタリング
-本番環境では、以下の指標を追跡してください。
-- **メモリ使用量** – アノテーション処理中のヒープ消費量
-- **処理時間** – 読み込みとフィルタリングのステップにかかる時間
-- **ドキュメントサイズの影響** – ファイルサイズがレイテンシに与える影響
-- **同時操作** – 同時リクエスト時のレスポンス
+### Performance Monitoring
+- **Memory usage** – アノテーション処理中のヒープ使用量  
+- **Processing time** – ロードおよびフィルタリングステップの所要時間  
+- **Document size impact** – ファイルサイズがレイテンシに与える影響  
+- **Concurrent operations** – 同時リクエスト時の応答  
 
-## よくある問題とトラブルシューティング
+## Common Issues and Troubleshooting
 
-### 問題 1: 「ドキュメントを読み込めません」エラー
+### Issue 1: “Document Cannot Be Loaded” Errors
 ```java
 try {
     Annotator annotator = new Annotator(inputFilePath);
@@ -236,7 +237,7 @@ try {
 }
 ```
 
-### 問題 2: 長時間実行されるアプリケーションでのメモリリーク
+### Issue 2: Memory Leaks in Long‑Running Applications
 ```java
 // Use try-with-resources
 try (Annotator annotator = new Annotator(inputFilePath)) {
@@ -244,7 +245,7 @@ try (Annotator annotator = new Annotator(inputFilePath)) {
 } // Automatic cleanup
 ```
 
-### 問題 3: 大きなドキュメントのパフォーマンス低下
+### Issue 3: Slow Performance on Large Documents
 ```java
 // Limit annotation loading scope
 LoadOptions options = new LoadOptions();
@@ -259,16 +260,16 @@ for (int page = 0; page < totalPages; page++) {
 }
 ```
 
-### 問題 4: 削除後の注釈 ID の不一致
+### Issue 4: Inconsistent Annotation IDs After Removal
 ```java
 // Refresh annotation collections after modifications
 annotator.update(annotations);
 annotations = annotator.get(); // Refresh the collection
 ```
 
-## セキュリティに関する考慮事項
+## Security Considerations
 
-### 入力検証
+### Input Validation
 ```java
 // Validate file paths and user inputs
 if (!isValidFilePath(inputFilePath)) {
@@ -280,23 +281,23 @@ if (!hasPermissionToModify(userId, documentId)) {
 }
 ```
 
-### 監査ログ
+### Audit Logging
 ```java
 // Log annotation operations for compliance
 auditLogger.info("User {} removed {} replies from document {}", 
     userId, removedCount, documentId);
 ```
 
-### アクセス制御
-ロールベースの権限を実装します。
-- **読み取り専用** – 注釈の表示のみ
-- **投稿者** – 自分の注釈の追加/編集
-- **モデレーター** – すべての注釈または返信の削除
-- **管理者** – フルコントロール
+### Access Control
+ロールベースの権限を実装します：
+- **Read‑only** – アノテーションのみ閲覧可能  
+- **Contributor** – 自分のアノテーションを追加/編集  
+- **Moderator** – 任意のアノテーションまたは返信を削除  
+- **Administrator** – 完全な制御権限  
 
-## 本番環境システム向けの高度なヒント
+## Advanced Tips for Production Systems
 
-### 1. キャッシュ戦略を実装する
+### 1. Implement Caching Strategies
 ```java
 // Simple annotation cache
 Map<String, List<AnnotationBase>> annotationCache = new ConcurrentHashMap<>();
@@ -310,7 +311,7 @@ public List<AnnotationBase> getCachedAnnotations(String documentPath) {
 }
 ```
 
-### 2. 非同期処理
+### 2. Asynchronous Processing
 ```java
 CompletableFuture<Void> processDocumentAsync(String documentPath) {
     return CompletableFuture.runAsync(() -> {
@@ -319,7 +320,7 @@ CompletableFuture<Void> processDocumentAsync(String documentPath) {
 }
 ```
 
-### 3. エラー回復メカニズム
+### 3. Error Recovery Mechanisms
 ```java
 public boolean processWithRetry(String documentPath, int maxRetries) {
     for (int attempt = 1; attempt <= maxRetries; attempt++) {
@@ -343,9 +344,9 @@ public boolean processWithRetry(String documentPath, int maxRetries) {
 }
 ```
 
-## アノテーション管理システムのテスト
+## Testing Your Annotation Management System
 
-### ユニットテストフレームワーク
+### Unit Testing Framework
 ```java
 @Test
 public void testAnnotationLoading() {
@@ -365,42 +366,42 @@ public void testAnnotationLoading() {
 }
 ```
 
-### 統合テスト
-1. 既知の注釈数を持つドキュメントをロードテストします。
-2. 返信削除ロジックが期待どおりに動作することを確認します。
-3. 負荷時のメモリ消費量を測定します。
-4. 出力PDFの視覚的な整合性が維持されていることを確認します。
+### Integration Testing
+1. 既知のアノテーション数を持つテストドキュメントをロードする。  
+2. 返信削除ロジックが期待通りに動作することを検証する。  
+3. 負荷下でのメモリ消費を測定する。  
+4. 出力 PDF が視覚的整合性を保持していることを確認する。
 
-## よくある質問
+## Frequently Asked Questions
 
-**Q: パスワードで保護されたPDFファイルはどのように処理すればよいですか？**
-A: ドキュメントのパスワードを指定するには、`LoadOptions` を使用します。  
+**Q: パスワード保護された PDF ファイルを処理するにはどうすればよいですか？**  
+A: `LoadOptions` を使用してドキュメントのパスワードを指定します:  
 ```java
 LoadOptions options = new LoadOptions();
 options.setPassword("your-document-password");
 Annotator annotator = new Annotator(filePath, options);
 ```
 
-**Q: PDF 以外の複数のドキュメント形式を処理できますか？**
-A: はい！GroupDocs.Annotation は Word、Excel、PowerPoint をはじめ、多くの形式をサポートしています。API はどの形式であっても一貫性があります。
+**Q: PDF 以外の複数フォーマットも処理できますか？**  
+A: はい！GroupDocs.Annotation は Word、Excel、PowerPoint など多数のフォーマットをサポートします。API はフォーマット間で一貫しています。
 
-**Q: ライブラリが処理できるドキュメントの最大サイズはどれくらいですか？**
-A: 厳密な制限はありませんが、パフォーマンスは利用可能なメモリに依存します。100MB を超えるドキュメントの場合は、ストリーミング処理やバッチ処理を検討してください。
+**Q: ライブラリが扱える最大ドキュメントサイズはどれくらいですか？**  
+A: 明確な上限はありませんが、パフォーマンスは利用可能なメモリに依存します。100 MB 超のドキュメントでは、ストリーミング方式やバッチ処理の検討が必要です。
 
-**Q: 返信を削除する際に、注釈の書式設定を維持するにはどうすればよいですか？**
-A: ライブラリは自動的に書式設定を維持します。返信を削除した後は、`annotator.update()` を呼び出して書式設定を更新し、`annotator.save()` を呼び出して変更を確定してください。
+**Q: 返信を削除した際にアノテーションの書式を保持するには？**  
+A: ライブラリは自動的に書式を維持します。返信削除後に `annotator.update()` で書式を更新し、`annotator.save()` で変更を永続化してください。
 
-**Q: 注釈の削除操作を取り消すことはできますか？**
-A: 直接取り消すことはできません。ロールバックをサポートするには、必ずコピーで作業するか、アプリケーションにバージョン管理を実装してください。
+**Q: アノテーション削除操作を元に戻すことはできますか？**  
+A: 直接的な Undo 機能はありません。必ずコピーで作業するか、バージョン管理を実装してロールバックを可能にしてください。
 
-**Q: 同じドキュメントへの同時アクセスをどのように処理すればよいですか？**
-A: アプリケーションレベルでファイルロックメカニズムを実装してください。GroupDocs.Annotation には同時実行制御機能が組み込まれていません。
+**Q: 同一ドキュメントへの同時アクセスはどう扱いますか？**  
+A: アプリケーションレベルでファイルロック機構を実装してください。GroupDocs.Annotation には組み込みの同時制御はありません。
 
-**Q: 返信を削除することと注釈全体を削除することの違いは何ですか？**
-A: 返信を削除すると、メインの注釈（メモなど）は保持されますが、そのディスカッションスレッドはクリアされます。注釈を削除すると、すべての返信を含むオブジェクト全体が削除されます。
+**Q: 返信削除とアノテーション全体の削除の違いは？**  
+A: 返信削除はメインのアノテーション（例: ノート）を残しつつスレッドだけをクリアします。アノテーション全体の削除はオブジェクト全体とすべての返信を削除します。
 
-**Q: 注釈の統計情報（件数、作成者、日付）を抽出するにはどうすればよいですか？**
-A: 注釈コレクションと集計プロパティを反復処理します。例: 
+**Q: アノテーション統計（件数、作成者、日付）を取得するには？**  
+A: アノテーションコレクションを走査し、プロパティを集計します。例:  
 ```java
 Map<String, Integer> authorCounts = annotations.stream()
     .collect(Collectors.groupingBy(
@@ -409,24 +410,24 @@ Map<String, Integer> authorCounts = annotations.stream()
     ));
 ```
 
-**Q: アノテーションを外部形式（JSON、XML）にエクスポートする方法はありますか？**
-A: 組み込みではありませんが、`AnnotationBase` オブジェクトを独自にシリアル化するか、ライブラリのメタデータ抽出機能を使用してカスタムエクスポーターを構築できます。
+**Q: アノテーションを外部フォーマット（JSON、XML）にエクスポートできますか？**  
+A: 組み込み機能はありませんが、`AnnotationBase` オブジェクトを自前でシリアライズするか、メタデータ抽出機能を利用してカスタムエクスポーターを作成できます。
 
-**Q: 破損または部分的に破損したドキュメントをどのように処理すればよいですか？**
-A: 包括的な例外処理を備えた防御プログラミングを実装してください。ライブラリは破損の種類に応じて特定の例外をスローします。これらの例外をキャッチし、ユーザーフレンドリーなフィードバックを提供してください。
+**Q: 破損または部分的に損傷したドキュメントを処理するには？**  
+A: 包括的な例外処理を備えた防御的プログラミングを実装してください。ライブラリは破損タイプごとに固有の例外をスローするので、これらを捕捉しユーザーに分かりやすいフィードバックを提供します。
 
-## 追加リソース
+## Additional Resources
 
-- **ドキュメント**: [GroupDocs Annotation Java ドキュメント](https://docs.groupdocs.com/annotation/java/)
-- **API リファレンス**: [完全な Java API リファレンス](https://reference.groupdocs.com/annotation/java/)
-- **ダウンロードセンター**: [最新のライブラリリリース](https://releases.groupdocs.com/annotation/java/)
-- **商用ライセンス**: [購入オプション](https://purchase.groupdocs.com/buy)
-- **無料トライアル**: [評価版を開始](https://releases.groupdocs.com/annotation/java/)
-- **開発ライセンス**: [一時ライセンスのリクエスト](https://purchase.groupdocs.com/temporary-license/)
-- **コミュニティサポート**: [開発者フォーラム](https://forum.groupdocs.com/c/annotation/)
+- **Documentation**: [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- **API Reference**: [Complete Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- **Download Center**: [Latest Library Releases](https://releases.groupdocs.com/annotation/java/)
+- **Commercial Licensing**: [Purchase Options](https://purchase.groupdocs.com/buy)
+- **Free Trial**: [Start Your Evaluation](https://releases.groupdocs.com/annotation/java/)
+- **Development License**: [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- **Community Support**: [Developer Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**最終更新日:** 2025年12月19日
-**テスト環境:** GroupDocs.Annotation 25.2 (Java)
-**作成者:** GroupDocs
+**Last Updated:** 2026-03-24  
+**Tested With:** GroupDocs.Annotation 25.2 (Java)  
+**Author:** GroupDocs

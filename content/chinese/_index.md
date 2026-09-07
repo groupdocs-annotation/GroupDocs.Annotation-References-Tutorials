@@ -92,10 +92,6 @@ GroupDocs.Annotation 的优势在于它能够处理超过 50 种文件类型的�
 - [**文档保存**](./net/document-saving) - 使用多种输出选项保存带注释的文档  
 - [**注释管理**](./net/annotation-management) - 编程方式添加、更新、删除和过滤注释  
 - [**协作功能**](./net/reply-management) - 实现评论线程和协作审阅  
-- [**文档预览**](./net/document-preview) - 生成自定义分辨率的文档预览  
-- [**表单字段**](./net/form-field-annotations) - 创建交互式表单组件  
-- [**文档分析**](./net/document-information) - 提取元数据和页面信息  
-- [**许可选项**](./net/licensing-and-configuration) - 实现并配置许可证  
 
 ### 高级 .NET 功能
 - [**文档预览**](./net/document-preview) - 生成自定义分辨率的文档预览  

@@ -95,10 +95,6 @@ Integrálja a teljes körű annotációs képességeket C# és .NET projektjeibe
 - [**Document Saving**](./net/document-saving) - Annotált dokumentumok mentése különféle kimeneti opciókkal  
 - [**Annotation Management**](./net/annotation-management) - Annotációk hozzáadása, frissítése, törlése és szűrése programozottan  
 - [**Collaboration Features**](./net/reply-management) - Kommentárszálak és együttműködő felülvizsgálat megvalósítása  
-- [**Document Preview**](./net/document-preview) - Dokumentum előnézet generálása egyedi felbontással  
-- [**Form Fields**](./net/form-field-annotations) - Interaktív űrlapelemek létrehozása  
-- [**Document Analysis**](./net/document-information) - Metaadatok és oldalinformációk kinyerése  
-- [**Licensing Options**](./net/licensing-and-configuration) - Licenc implementálása és konfigurálása  
 
 ### Haladó .NET funkciók
 - [**Document Preview**](./net/document-preview) - Dokumentum előnézet generálása egyedi felbontással  

@@ -121,7 +121,6 @@ Nainstalujte knihovnu pomocí konzole NuGet Package Manager:
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 Nebo použijte .NET CLI:
@@ -129,7 +128,6 @@ Nebo použijte .NET CLI:
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 Verze **25.4.0** je doporučena, protože přináší 30 % zvýšení rychlosti při načítání dokumentů v cloudu a snižuje paměťovou zátěž až o 40 %.
@@ -149,7 +147,6 @@ using GroupDocs.Annotation;
 
 // Basic initialization - we'll improve this for cloud documents
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **Definition anchor:** `Annotator` je hlavní třída v GroupDocs.Annotation, která načítá stream dokumentu a poskytuje metody pro přidávání, úpravu a získávání anotací.
@@ -193,7 +190,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **Explanation:**  
@@ -221,7 +217,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **Key points:**  
@@ -239,7 +234,6 @@ Nikdy nevestavujte **azure blob connection string** do zdrojového kódu. Načt�
 // Example pattern (you'll need Azure.Security.KeyVault.Secrets package)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### Jak vynutit správné řízení přístupu k vašemu kontejneru?
@@ -260,7 +254,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Implement your validation logic here
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## Strategie optimalizace výkonu, které fungují
@@ -280,7 +273,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### Jak implementovat inteligentní cachování pro často přistupované dokumenty?
@@ -304,7 +296,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### Jak monitorovat a optimalizovat využití sítě?
@@ -329,7 +320,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Process your annotations here
     // Both streams will be properly disposed
 }
-```  
 ```
 
 ### Jak elegantně zvládnout chyby limitu rychlosti Azure?
@@ -354,7 +344,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### Jak vybudovat odolnost vůči selháním sítě?

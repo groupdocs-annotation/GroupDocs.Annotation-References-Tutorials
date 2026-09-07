@@ -21,11 +21,7 @@ url: /de/java/document-saving/groupdocs-annotation-java-save-specific-page-range
 weight: 1
 ---
 
- GroupDocs
-
-Make sure to keep the markdown separators.
-
-Now produce final content.# So speichern Sie bestimmte Seiten aus annotierten Dokumenten in Java
+# So speichern Sie bestimmte Seiten aus annotierten Dokumenten in Java
 
 ## Einführung
 

@@ -1,55 +1,65 @@
 ---
 categories:
 - Java Development
-date: '2026-01-08'
+date: '2026-03-27'
 description: Ovládněte anotaci PDF v Javě s GroupDocs a naučte se, jak exportovat
-  anotované stránky, přidávat oblastové a eliptické anotace a optimalizovat výkon.
+  anotované stránky PDF, přidávat oblastní a eliptické anotace a optimalizovat výkon.
 keywords: Java PDF annotation tutorial, GroupDocs annotation Java examples, PDF annotation
   library Java, Java add annotations to PDF, how to annotate PDF documents in Java
-lastmod: '2026-01-08'
+lastmod: '2026-03-27'
 linktitle: Java PDF Annotation Tutorial
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-collaboration
-title: 'Java PDF anotace - Export anotovaných stránek pomocí GroupDocs'
+title: Java PDF anotace – Export anotovaných stránek PDF (GroupDocs)
 type: docs
 url: /cs/java/annotation-management/java-pdf-annotation-groupdocs-guide/
 weight: 1
 ---
 
-# Java PDF anotace: Export anotovaných stránek pomocí GroupDocs
+# Java PDF anotace – Export anotovaných stránek PDF s GroupDocs
 
 ## Úvod
 
-Už jste někdy měli potíže přimět svůj tým, aby poskytl smysluplnou zpětnou vazbu k PDF dokumentům? Nejste v tom sami. Tradiční procesy revize dokumentů jsou bolestivě pomalé — nekonečné řetězce e‑mailů, roztříštěné komentáře v různých formátech a nevyhnutelná otázka „Můžete zvýraznit část, o které mluvíte?“
+Už jste někdy měli potíže přimět svůj tým, aby poskytoval smysluplnou zpětnou vazbu k PDF dokumentům? Nejste v tom sami. Tradiční procesy revize dokumentů jsou bolestně pomalé — nekonečné řetězce e‑mailů, rozptýlené komentáře v různých formátech a nevyhnutelná otázka „Můžete zvýraznit část, o které mluvíte?“
 
-V tomto průvodci se naučíte, jak **exportovat anotované stránky** pomocí GroupDocs.Annotation pro Java a proměnit statické PDF na spolupracující pracovní prostory, kde členové týmu mohou zvýrazňovat, komentovat a označovat dokumenty v reálném čase.
+V tomto průvodci se naučíte, jak **exportovat anotované stránky PDF** pomocí GroupDocs.Annotation pro Java, a proměnit statické PDF na spolupracující pracovní prostory, kde členové týmu mohou zvýrazňovat, komentovat a označovat dokumenty v reálném čase.
 
 **Co na konci zvládnete:**
-- Nastavení GroupDocs.Annotation ve vašem Maven projektu (správně)
-- Přidávání oblastních a eliptických anotací s pixel‑dokonalou přesností
-- Konfiguraci možností **export anotovaných stránek** pro stručná PDF
-- Řešení nejčastějších problémů, se kterými se vývojáři setkávají
-- Optimalizaci výkonu pro produkční prostředí
+- Nastavení GroupDocs.Annotation ve vašem Maven projektu (správným způsobem)  
+- Přidávání oblastních a eliptických anotací s pixelově dokonalou přesností  
+- Konfigurace možností **exportu anotovaných stránek PDF** pro stručná PDF  
+- Řešení nejčastějších problémů, se kterými se vývojáři setkávají  
+- Optimalizace výkonu pro produkční prostředí  
 
 ## Rychlé odpovědi
-- **Jaký je hlavní přínos exportu anotovaných stránek?** Vytvoří lehké PDF obsahující pouze relevantní zpětnou vazbu, ideální pro revize a souhrny.  
+- **Jaký je hlavní přínos exportu anotovaných stránek?** Vytváří lehké PDF obsahující pouze relevantní zpětnou vazbu, ideální pro revize a souhrny.  
 - **Jaká verze Maven je vyžadována?** Doporučuje se Maven 3.6+.  
 - **Potřebuji licenci pro GroupDocs.Annotation?** Ano, pro produkční použití je vyžadována zkušební nebo komerční licence.  
-- **Mohu anotovat formáty jiné než PDF?** Rozhodně — GroupDocs podporuje více než 50 typů dokumentů.  
-- **Jak se vyhnout problémům s pamětí u velkých PDF?** Zpracovávejte stránky po dávkách, zvyšte JVM heap a vždy uzavřete `Annotator` pomocí try‑with‑resources.
+- **Mohu anotovat formáty jiné než PDF?** Rozhodně — GroupDocs podporuje více než 50 typů dokumentů.  
+- **Jak se vyhnout problémům s pamětí u velkých PDF?** Zpracovávejte stránky po dávkách, zvyšte haldu JVM a vždy uzavřete `Annotator` pomocí try‑with‑resources.  
 
-## Předpoklady: Připravte si prostředí
+## Co je „export anotovaných stránek PDF“?
 
-Než začneme kódovat, ujistěte se, že máte vše správně nastavené. Věřte mi, 5 minut strávených zde vám ušetří hodiny ladění později.
+Export anotovaných stránek PDF znamená vytvoření nového PDF, které obsahuje **pouze** ty stránky, na kterých jsou anotace. Tím se snižuje velikost souboru, zaměřuje recenzenty na relevantní obsah a usnadňuje správu verzí.
+
+## Proč exportovat anotované stránky PDF?
+
+- **Zaměřené cykly revizí** – recenzenti vidí jen stránky, které vyžadují pozornost.  
+- **Menší soubory** – ideální pro e‑mailové rozesílání nebo nahrávání na web.  
+- **Auditní stopy** – můžete udržovat čistý záznam veškeré zpětné vazby bez nepořádku neotřesených stránek.  
+
+## Předpoklady: Připravte své prostředí
+
+Než začneme kódovat, ujistěte se, že máte vše správně nastavené. Věřte mi, že strávení 5 minut zde vám ušetří hodiny ladění později.
 
 ### Požadované knihovny a závislosti
 
-Do svého projektu budete potřebovat GroupDocs.Annotation pro Java. Zde je Maven konfigurace, která skutečně funguje (viděl jsem příliš mnoho tutoriálů se zastaralými URL repozitářů):
+Ve svém projektu budete potřebovat GroupDocs.Annotation pro Java. Zde je Maven konfigurace, která skutečně funguje (viděl jsem příliš mnoho tutoriálů se zastaralými URL repozitářů):
 
-**Maven Setup**
+**Nastavení Maven**
 
 ```xml
 <repositories>
@@ -72,44 +82,43 @@ Do svého projektu budete potřebovat GroupDocs.Annotation pro Java. Zde je Mave
 
 - **Java Development Kit (JDK)**: Verze 8 nebo vyšší (JDK 11+ doporučeno pro lepší výkon)  
 - **Maven**: Verze 3.6+ pro správu závislostí  
-- **Paměť**: Minimálně 2 GB RAM dostupné pro vaši aplikaci (více pro velké PDF)
+- **Paměť**: Minimálně 2 GB RAM dostupné pro vaši aplikaci (více pro velké PDF soubory)
 
-### Předpoklady znalostí
+### Předchozí znalosti
 
-Měli byste být pohodlní s:
-- Základními koncepty programování v Javě  
-- Správou závislostí v Maven  
-- Prací se souborovými I/O operacemi  
+- Základní koncepty programování v Javě  
+- Správa závislostí v Maven  
+- Práce s operacemi souborového I/O  
 
-Nebojte se, pokud nejste expert — vše vám vysvětlím během postupu.
+Nebojte se, pokud nejste expert — vše vám vysvětlím během postupu.
 
 ## Nastavení GroupDocs.Annotation pro Java
 
-Nyní nastavíme GroupDocs.Annotation ve vašem projektu. Zde se mnoho vývojářů setkává s první překážkou, takže věnujte pozornost detailům.
+Nyní správně nakonfigurujeme GroupDocs.Annotation ve vašem projektu. Zde mnoho vývojářů narazí na první překážku, proto věnujte pozornost těmto detailům.
 
-### Krok 1: Přidejte závislost
+### Krok 1: Přidejte závislost
 
-Použijte výše uvedenou Maven konfiguraci k zahrnutí GroupDocs.Annotation do projektu. Po přidání do souboru `pom.xml` spusťte:
+Použijte výše uvedenou Maven konfiguraci pro zahrnutí GroupDocs.Annotation do vašeho projektu. Po přidání do `pom.xml` spusťte:
 
 ```bash
 mvn clean install
 ```
 
-Pokud se objeví chyby při stahování, dvakrát zkontrolujte, že URL repozitáře je přesně taková, jak je uvedena výše.
+Pokud se objeví chyby při stahování, zkontrolujte, že URL repozitáře je přesně taková, jak je uvedena výše.
 
-### Krok 2: Správa licencování (Důležité!)
+### Krok 2: Správa licencí (Důležité!)
 
-Zde je něco, co většina tutoriálů vynechává: GroupDocs.Annotation není zdarma pro komerční použití. Máte několik možností:
+Zde je něco, co většina tutoriálů opomíjí: GroupDocs.Annotation není zdarma pro komerční použití. Máte několik možností:
 
-- **Free trial**: Vhodné pro vývoj a testování  
-- **Temporary license**: Ideální pro prodloužené evaluační období  
-- **Full license**: Požadováno pro produkční nasazení  
+- **Bezplatná zkušební verze**: Vhodná pro vývoj a testování  
+- **Dočasná licence**: Ideální pro prodloužené evaluační období  
+- **Plná licence**: Vyžadována pro nasazení do produkce  
 
-Pro zahájení evaluace navštivte [GroupDocs Purchase](https://purchase.groupdocs.com/buy) a vyberte si licenční možnost.
+Pro zahájení hodnocení navštivte [GroupDocs Purchase](https://purchase.groupdocs.com/buy) pro možnosti licencování.
 
-### Krok 3: Základní inicializace
+### Krok 3: Základní inicializace
 
-Takto inicializujete třídu `Annotator` (to je váš hlavní vstupní bod):
+Zde je, jak inicializovat třídu `Annotator` (to je váš hlavní vstupní bod):
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -120,17 +129,17 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/document
 }
 ```
 
-**Pro tip**: Vždy používejte try‑with‑resources (jak je ukázáno výše), aby byly správně uvolněny souborové handle. Viděl jsem příliš mnoho úniků paměti kvůli zapomenutí tohoto kroku.
+**Tip**: Vždy používejte try‑with‑resources (jak je ukázáno výše) pro zajištění správného uvolnění souborových handle. Viděl jsem příliš mnoho úniků paměti od vývojářů, kteří tento krok zapomínají.
 
-## Praktický návod: Přidávání anotací krok za krokem
+## Průvodce implementací: Přidávání anotací krok za krokem
 
-Teď přichází zábavná část — začneme přidávat skutečné anotace do vašich PDF. Zaměříme se na dva populární typy anotací, které pokrývají většinu případů použití.
+Nyní zábavná část — začněme přidávat skutečné anotace do vašich PDF. Zaměříme se na dva populární typy anotací, které pokrývají většinu případů použití.
 
-### Přidání oblastních anotací (Ideální pro zvýraznění sekcí)
+### Přidávání oblastních anotací (Ideální pro zvýraznění sekcí)
 
-Oblastní anotace jsou skvělé, když potřebujete zvýraznit celé odstavce, sekce nebo libovolnou obdélníkovou oblast v PDF. Představte si je jako digitální zvýrazňovače.
+Oblastní anotace jsou skvělé, když potřebujete zvýraznit celé odstavce, sekce nebo jakýkoli obdélníkový region ve vašem PDF. Považujte je za digitální zvýrazňovače.
 
-#### Krok 1: Vytvořte oblastní anotaci
+#### Krok 1: Vytvořte oblastní anotaci
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -143,22 +152,22 @@ area.setBackgroundColor(65535); // Yellow highlight color (ARGB format)
 area.setPageNumber(1); // First page (1-indexed)
 ```
 
-**Pochopení parametrů:**
+**Porozumění parametrům:**
 - `Rectangle(100, 100, 100, 100)`: Pozice (100 px zleva, 100 px shora) s šířkou a výškou 100 px  
-- `65535`: Žlutá barva v ARGB formátu. Běžné barvy: Red = 16711680, Blue = 255, Green = 65280  
-- `setPageNumber(1)`: Stránky PDF jsou indexovány od 1, ne od 0 (častá chyba!)
+- `65535`: Toto je žlutá v ARGB formátu. Běžné barvy: Červená = 16711680, Modrá = 255, Zelená = 65280  
+- `setPageNumber(1)`: Stránky PDF jsou indexovány od 1, ne od 0 (častá chyba!)
 
 #### Kdy použít oblastní anotace
 - Zvýraznění důležitých odstavců v právních dokumentech  
-- Označení sekcí, které vyžadují revizi ve specifikacích projektu  
+- Označování sekcí, které vyžadují revizi ve specifikacích projektu  
 - Upoutání pozornosti na konkrétní datové rozsahy v reportech  
-- Vytvoření vizuálních hranic kolem bloků obsahu  
+- Vytváření vizuálních hranic kolem bloků obsahu  
 
-### Přidání eliptických anotací (Skvělé pro callouty)
+### Přidávání eliptických anotací (Skvělé pro callouty)
 
-Eliptické anotace jsou ideální, když chcete upoutat pozornost na konkrétní prvky bez ostrých hran obdélníků. Hodí se zejména pro zvýraznění kruhových grafů, log nebo vytvoření měkkého fokusu.
+Eliptické anotace jsou ideální, když chcete upoutat pozornost na konkrétní prvky bez ostrých hran obdélníků. Jsou zvláště užitečné pro zvýraznění kruhových grafů, log nebo vytvoření oblasti s měkkým zaostřením.
 
-#### Krok 2: Vytvořte eliptickou anotaci
+#### Krok 2: Vytvořte eliptickou anotaci
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.EllipseAnnotation;
@@ -170,15 +179,15 @@ ellipse.setBackgroundColor(123456); // Custom color
 ellipse.setPageNumber(1); // Same page as area annotation
 ```
 
-**Proč použít elipsu místo obdélníku?**
+**Proč použít elipsy místo obdélníků?**
 - Vzhledově atraktivnější pro zvýraznění kruhových prvků  
-- Vytváří „reflektor“ efekt, který působí méně rušivě  
+- Vytváří efekt „reflektor“, který působí méně rušivě  
 - Lepší pro upoutání pozornosti bez úplného zakrytí obsahu  
-- Umožňuje vytvořit organický, ručně kreslený vzhled  
+- Užitečné pro vytvoření organického, ručně kresleného vzhledu  
 
-#### Krok 3: Přidejte anotace do dokumentu
+#### Krok 3: Přidejte anotace do dokumentu
 
-Nyní spojíme obě anotace a přidáme je do PDF:
+Nyní spojme obě anotace a přidejme je do vašeho PDF:
 
 ```java
 import java.util.ArrayList;
@@ -197,9 +206,9 @@ System.out.println("Added " + annotations.size() + " annotations successfully!")
 
 **Tip pro výkon**: Přidávání anotací po dávkách (jak je ukázáno výše) je výrazně rychlejší než volání `annotator.add()` opakovaně, zejména u velkých dokumentů.
 
-## Jak exportovat anotované stránky pomocí GroupDocs
+## Jak exportovat anotované stránky PDF pomocí GroupDocs
 
-Zde je mocná funkce, kterou mnoho vývojářů přehlíží: můžete nakonfigurovat GroupDocs tak, aby **exportoval pouze stránky obsahující anotace**. To je neuvěřitelně užitečné pro tvorbu souhrnných dokumentů nebo snížení velikosti souboru.
+Zde je výkonná funkce, kterou mnoho vývojářů přehlíží: můžete nakonfigurovat GroupDocs tak, aby **exportoval pouze stránky obsahující anotace**. To je neuvěřitelně užitečné pro tvorbu souhrnných dokumentů nebo snižování velikosti souborů.
 
 #### Nastavení selektivního exportu stránek
 
@@ -215,16 +224,16 @@ annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_summary.pdf", saveOptions);
 ```
 
 **Reálné příklady použití:**
-- **Právní revize**: Exportujte jen stránky s komentáři právníka  
-- **Akademické hodnocení**: Vytvořte souhrnné listy s jen označenými částmi  
-- **Projektové řízení**: Generujte stavové zprávy zobrazující jen aktualizované sekce  
-- **Kontrola kvality**: Extrahujte stránky s identifikovanými problémy  
+- **Právní revize**: Exportovat pouze stránky s komentáři právníka  
+- **Akademické hodnocení**: Vytvořit souhrnné listy pouze s označenými sekcemi  
+- **Projektové řízení**: Generovat stavové zprávy zobrazující pouze aktualizované sekce  
+- **Zajištění kvality**: Extrahovat stránky s identifikovanými problémy  
 
 ## Časté problémy a řešení
 
-Pojďme se podívat na problémy, se kterými se pravděpodobně setkáte (a ušetřit vám tak čas ladění).
+Pojďme se zabývat problémy, se kterými se pravděpodobně setkáte (a ušetřit vám čas ladění).
 
-### Problém 1: „Soubor je používán jiným procesem“
+### Problém 1: „Soubor je používán jiným procesem“
 
 **Příznaky**: `IOException` při pokusu uložit anotovaný dokument  
 **Příčina**: Nesprávné uzavření instance `Annotator`  
@@ -242,16 +251,16 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 } // Automatically closed here
 ```
 
-### Problém 2: Anotace se zobrazují na špatných pozicích
+### Problém 2: Anotace se zobrazují na špatných pozicích
 
-**Příznaky**: Anotace se objevují na neočekávaných místech  
-**Příčina**: Nesprávné pochopení souřadnicového systému nebo problémy se škálováním DPI  
+**Příznaky**: Vaše anotace se zobrazují na neočekávaných místech  
+**Příčina**: Nedorozumění v souřadnicovém systému nebo problémy se škálováním DPI  
 **Řešení**:  
-- Souřadnice PDF začínají **zleva dole** (ne shora jako ve většině UI frameworků)  
-- Nejprve testujte se známými hodnotami souřadnic  
-- Při výpočtu pozic zohledněte rozměry stránky PDF  
+- Souřadnice PDF začínají od **dolního levého** rohu (ne od horního levého, jako ve většině UI frameworků)  
+- Vždy nejprve testujte s známými hodnotami souřadnic  
+- Zohledněte rozměry stránky PDF při výpočtu pozic  
 
-### Problém 3: OutOfMemoryError u velkých PDF
+### Problém 3: OutOfMemoryError u velkých PDF
 
 **Příznaky**: Aplikace spadne při zpracování velkých dokumentů  
 **Příčina**: Načítání celého PDF do paměti  
@@ -267,19 +276,20 @@ for (int page = 1; page <= totalPages; page++) {
 }
 ```
 
-### Problém 4: Barvy se nezobrazují správně
+### Problém 4: Barvy se nezobrazují správně
 
 **Příznaky**: Barvy anotací se liší od očekávaných  
-**Příčina**: Záměna formátu barev (RGB vs ARGB)  
-**Řešení**: Používejte konzistentně ARGB formát:  
-- Red: `0xFFFF0000` nebo `16711680`  
-- Green: `0xFF00FF00` nebo `65280`  
-- Blue: `0xFF0000FF` nebo `255`  
-- Poloprůhledná červená: `0x80FF0000`
+**Příčina**: Záměna formátu barvy (RGB vs ARGB)  
+**Řešení**: Používejte formát ARGB konzistentně:  
 
-## Nejlepší postupy pro produkční nasazení
+- Červená: `0xFFFF0000` nebo `16711680`  
+- Zelená: `0xFF00FF00` nebo `65280`  
+- Modrá: `0xFF0000FF` nebo `255`  
+- Poloprůhledná červená: `0x80FF0000`  
 
-Jste připraveni nasadit funkce anotací? Zde jsou postupy, které oddělují amatérské implementace od profesionálních řešení.
+## Nejlepší postupy pro produkční použití
+
+Připraveni nasadit své funkce anotací? Zde jsou postupy, které oddělují amatérské implementace od profesionálních řešení.
 
 ### Správa paměti
 
@@ -333,56 +343,62 @@ public boolean addAnnotationSafely(String inputPath, String outputPath) {
 
 ### Tipy pro optimalizaci výkonu
 
-1. **Dávkové operace** – vždy přidávejte více anotací najednou  
-2. **Lazy loading** – načítejte jen stránky, které skutečně anotujete  
-3. **Connection pooling** – znovu používejte instance `Annotator`, pokud je to možné (s opatrností)  
-4. **Streamování souborů** – použijte streaming pro velmi velké dokumenty  
+1. **Dávkové operace** – vždy přidávejte více anotací najednou  
+2. **Líné načítání** – načítejte jen stránky, které skutečně anotujete  
+3. **Pooling připojení** – opakovaně používejte instance `Annotator`, pokud je to možné (s opatrností)  
+4. **Streamování souborů** – používejte streamování pro velmi velké dokumenty  
 
-## Kdy zvolit GroupDocs vs. alternativy
+## Kdy zvolit GroupDocs vs alternativy
 
-GroupDocs.Annotation není jedinou možností na trhu. Zde je, kdy má smysl jej použít:
+GroupDocs.Annotation není jedinou možností na trhu. Zde je, kdy má smysl:
 
 **Zvolte GroupDocs, když:**
-- Potřebujete širokou škálu typů anotací (20+ podporovaných formátů)  
-- Pracujete s více dokumentovými formáty než jen PDF  
-- Vyžadujete enterprise‑úroveň podpory a dokumentace  
-- Budujete komerční aplikace (licencování je přímočaré)  
+- Potřebujete rozsáhlé typy anotací (více než 20 podporovaných formátů)  
+- Pracujete s více dokumentovými formáty nad rámec PDF  
+- Vyžadujete podporu na úrovni podniku a dokumentaci  
+- Vytváříte komerční aplikace (licencování je přímočaré)  
 
 **Zvažte alternativy, když:**
-- Stačí vám jen základní PDF anotace (Apache PDFBox může stačit)  
-- Máte omezený rozpočet (k dispozici jsou open‑source řešení)  
-- Použití je jednoduché (GroupDocs může být přehnaný pro pouhé zvýraznění)  
+- Potřebujete jen základní PDF anotaci (Apache PDFBox může stačit)  
+- Rozpočtová omezení (k dispozici jsou open‑source řešení)  
+- Jednoduché případy použití (přehnané pro základní zvýrazňování)  
 
 ## Praktické aplikace v reálném světě
 
-Jak týmy skutečně používají Java PDF anotace v produkci:
+Zde je, jak týmy skutečně používají Java PDF anotace v produkci:
 
 ### Právní revize dokumentů
-Právnické firmy používají oblastní anotace k zvýraznění smluvních ustanovení a eliptické anotace k označení sporných částí. Selektivní export vytváří čisté souhrny pro klienty.
+
+Právnické firmy používají oblastní anotace k zvýraznění smluvních ustanovení a eliptické anotace k označení sporných částí. Funkce selektivního exportu vytváří čisté souhrnné dokumenty pro revizi klienta.
 
 ### Zpětná vazba k akademickým pracím
-Univerzity implementují systémy, kde profesoři označují studentovy práce různými barvami: červená pro gramatiku, modrá pro obsah, zelená pro strukturu.
 
-### Revize technické dokumentace
-Vývojové týmy anotují API dokumentaci během revizí, označují sekce, které potřebují aktualizaci nebo upřesnění.
+Univerzity implementují systémy anotací, kde profesoři mohou označovat studentské práce různobarevnými anotacemi pro gramatiku (červená), obsah (modrá) a strukturu (zelená).
 
-### Procesy kontroly kvality
-Výrobní společnosti anotují inspekční zprávy, zvýrazňují nesoulady a označují nápravná opatření různými typy anotací.
+### Revize softwarové dokumentace
 
-## Úvahy o výkonu při rozsáhlém nasazení
+Vývojové týmy anotují API dokumentaci během revizních cyklů, používají anotace k označení sekcí vyžadujících aktualizaci nebo upřesnění.
 
-Když jste připraveni na velké zatížení, mějte na paměti následující faktory:
+### Procesy zajištění kvality
+
+Výrobní společnosti anotují inspekční zprávy, zvýrazňují problémy s dodržováním předpisů a označují nápravná opatření různými typy anotací.
+
+## Úvahy o výkonu pro nasazení ve velkém měřítku
+
+Když jste připraveni zvládat náročné úlohy, mějte na paměti následující faktory:
 
 ### Optimalizace využití paměti
-- **Velikost dokumentu**: 10 MB PDF ≈ 50 MB paměti během zpracování  
-- **Počet anotací**: Každá anotace přidává ~1‑2 KB paměti  
-- **Současní uživatelé**: Plánujte 100 MB+ na každou paralelní relaci anotací  
 
-### Měření rychlosti zpracování
-Na základě reálných testů:  
-- Malé PDF (1‑10 stran): ~100‑500 ms na anotaci  
-- Střední PDF (10‑50 stran): ~500 ms‑2 s na anotaci  
-- Velké PDF (100+ stran): ~2‑10 s na anotaci  
+- **Velikost dokumentu**: 10 MB PDF ≈ 50 MB paměti během zpracování  
+- **Počet anotací**: Každá anotace přidá ~1‑2 KB paměťového overheadu  
+- **Současní uživatelé**: Plánujte 100 MB+ na každou simultánní anotaci  
+
+### Benchmarky rychlosti zpracování
+
+Na základě reálných testů:
+- Malé PDF (1‑10 stránek): ~100‑500 ms na anotaci  
+- Střední PDF (10‑50 stránek): ~500 ms‑2 s na anotaci  
+- Velké PDF (100+ stránek): ~2‑10 s na anotaci  
 
 ### Strategie škálování
 
@@ -399,24 +415,24 @@ CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
 ## Často kladené otázky
 
 **Q: Jak nainstaluji GroupDocs.Annotation do svého Java projektu?**  
-A: Přidejte Maven závislost uvedenou v sekci předpokladů do souboru `pom.xml` a spusťte `mvn clean install`. Ujistěte se, že URL repozitáře je správná.
+A: Přidejte Maven závislost uvedenou v sekci předpokladů do svého `pom.xml` a poté spusťte `mvn clean install`. Ujistěte se, že URL repozitáře je správná.
 
-**Q: Mohu anotovat dokumenty i v jiných formátech než PDF?**  
-A: Ano! GroupDocs.Annotation podporuje více než 50 formátů, včetně Word, Excel, PowerPoint a obrázkových souborů. API je napříč formáty prakticky stejné.
+**Q: Mohu anotovat formáty dokumentů jiné než PDF?**  
+A: Ano! GroupDocs.Annotation podporuje více než 50 formátů, včetně Word, Excel, PowerPoint a souborů obrázků. API zůstává v podstatě stejné napříč formáty.
 
 **Q: Jaké typy anotací jsou k dispozici kromě oblastních a eliptických?**  
-A: GroupDocs nabízí 15+ typů, např. textové zvýraznění, podtržení, přeškrtnutí, šipky, vodoznaky, nahrazení textu a bodové anotace. Každý typ má specifické možnosti stylování.
+A: GroupDocs podporuje více než 15 typů, jako jsou zvýraznění textu, podtržení, přeškrtnutí, šipky, vodoznaky, nahrazení textu a bodové anotace. Každý typ má specifické možnosti stylování.
 
-**Q: Jak zacházet s velkými PDF soubory, aby nedošlo k vyčerpání paměti?**  
-A: Zpracovávejte dokumenty po částech, zvyšte JVM heap (`-Xmx4g`), používejte streamování, a vždy uzavírejte instance `Annotator`. Pro soubory nad 100 MB zvažte zpracování stránek jednotlivě.
+**Q: Jak zacházet s velkými PDF soubory, aniž by došlo k nedostatku paměti?**  
+A: Zpracovávejte dokumenty po částech, zvyšte haldu JVM (`-Xmx4g`), používejte streamování, kde je to možné, a vždy uzavírejte instance `Annotator`. Pro soubory nad 100 MB zvažte zpracování stránek jednotlivě.
 
-**Q: Lze přizpůsobit vzhled anotací nad rámec základních barev?**  
-A: Rozhodně. Můžete měnit průhlednost, styly okrajů, textové vlastnosti a dokonce přidávat vlastní ikony. Každý typ anotace poskytuje rozsáhlé nastavení stylování.
+**Q: Existuje způsob, jak přizpůsobit vzhled anotací nad rámec základních barev?**  
+A: Rozhodně. Můžete přizpůsobit průhlednost, styly okrajů, vlastnosti textu a dokonce přidat vlastní ikony. Každý typ anotace poskytuje rozsáhlé nastavení stylování.
 
 **Související zdroje:** [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) | [Complete API Reference](https://apireference.groupdocs.com/annotation/java) | [GroupDocs Community Forum](https://forum.groupdocs.com/c/annotation)
 
 ---
 
-**Poslední aktualizace:** 2026-01-08  
-**Testováno s:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs  
+**Poslední aktualizace:** 2026-03-27  
+**Testováno s:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs

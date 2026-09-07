@@ -51,12 +51,12 @@ url: /tr/
 weight: 11
 ---
 
-# GroupDocs.Annotation geliştirici rehberi – belge açıklama API'si
+# GroupDocs.Annotation Geliştirici Kılavuzu - Belge Açıklama API'si
 
-Bu rehberde **document annotation API**'nin PDF, Word, Excel, PowerPoint ve birçok diğer dosya türüne doğrudan zengin açıklama özellikleri—örneğin vurgulamalar, yorumlar ve şekiller—eklemenizi nasıl sağladığını keşfedeceksiniz. İşbirlikçi inceleme portalı, eğitim uygulaması veya yasal belge iş akışı oluşturuyor olun, API .NET ve Java ortamlarında açıklamalarla çalışmak için tutarlı, yüksek performanslı bir yol sunar.
+Bu kılavuzda, **document annotation API**'nin PDF, Word, Excel, PowerPoint ve birçok diğer dosya türüne doğrudan zengin açıklama özellikleri—örneğin vurgulamalar, yorumlar ve şekiller—eklemenizi nasıl sağladığını keşfedeceksiniz. İster işbirlikçi bir inceleme portalı, ister eğitim uygulaması ya da yasal belge iş akışı oluşturuyor olun, API hem .NET hem de Java ortamlarında açıklamalarla çalışmak için tutarlı, yüksek performanslı bir yol sunar.
 
-## Hızlı cevaplar
-- **document annotation API ne yapar?** Geliştiricilerin 50+ belge formatında dış bağımlılıklar olmadan açıklama eklemesine, düzenlemesine ve yönetmesine olanak tanır.  
+## Hızlı Yanıtlar
+- **document annotation API ne yapar?** Geliştiricilerin dış bağımlılıklar olmadan 50+ belge formatı üzerinde açıklama eklemesine, düzenlemesine ve yönetmesine olanak tanır.  
 - **Hangi platformlar destekleniyor?** .NET (Framework, Core, .NET 5/6) ve Java (herhangi bir JDK 8+).  
 - **Geliştirme için lisansa ihtiyacım var mı?** Ücretsiz deneme mevcuttur; üretim kullanımı için lisans gereklidir.  
 - **PDF'leri ve Office dosyalarını aynı kodla açıklayabilir miyim?** Evet—tek bir birleşik API PDF'leri, Word, Excel, PowerPoint, görüntüleri, HTML ve daha fazlasını işler.  
@@ -94,10 +94,6 @@ C# ve .NET projelerinize kapsamlı açıklama yeteneklerini özellik‑zengin AP
 - [**Document Saving**](./net/document-saving) - Açıklamalı belgeleri çeşitli çıktı seçenekleriyle kaydedin
 - [**Annotation Management**](./net/annotation-management) - Açıklamaları programlı olarak ekleyin, güncelleyin, silin ve filtreleyin
 - [**Collaboration Features**](./net/reply-management) - Yorum zincirlerini ve işbirlikçi incelemeyi uygulayın
-- [**Document Preview**](./net/document-preview) - Özel çözünürlükle belge ön izlemeleri oluşturun
-- [**Form Fields**](./net/form-field-annotations) - Etkileşimli form bileşenleri oluşturun
-- [**Document Analysis**](./net/document-information) - Meta verileri ve sayfa bilgilerini çıkarın
-- [**Licensing Options**](./net/licensing-and-configuration) - Lisanslamayı uygulayın ve yapılandırın
 
 ### Gelişmiş .NET özellikleri
 - [**Document Preview**](./net/document-preview) - Özel çözünürlükle belge ön izlemeleri oluşturun

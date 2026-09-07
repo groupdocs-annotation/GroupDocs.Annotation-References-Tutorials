@@ -121,7 +121,6 @@ Cài đặt thư viện qua NuGet Package Manager Console:
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 Hoặc sử dụng .NET CLI:
@@ -129,7 +128,6 @@ Hoặc sử dụng .NET CLI:
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 Phiên bản **25.4.0** được khuyến nghị vì nó mang lại tăng tốc 30 % cho việc tải tài liệu dựa trên đám mây và giảm tải bộ nhớ lên tới 40 %.
@@ -149,7 +147,6 @@ using GroupDocs.Annotation;
 
 // Basic initialization - we'll improve this for cloud documents
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **Định nghĩa:** `Annotator` là lớp chính trong GroupDocs.Annotation chịu tải một stream tài liệu và cung cấp các phương thức để thêm, chỉnh sửa và truy xuất các chú thích.
@@ -194,7 +191,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **Giải thích:**  
@@ -223,7 +219,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **Các điểm chính:**  
@@ -242,7 +237,6 @@ Không bao giờ nhúng **azure blob connection string** vào mã nguồn. Hãy 
 // Example pattern (you'll need Azure.Security.KeyVault.Secrets package)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### Làm thế nào để thực thi kiểm soát truy cập đúng trên container của bạn?
@@ -265,7 +259,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Implement your validation logic here
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## Các chiến lược tối ưu hiệu năng hoạt động
@@ -286,7 +279,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### Làm thế nào để triển khai bộ nhớ đệm thông minh cho các tài liệu được truy cập thường xuyên?
@@ -311,7 +303,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### Làm thế nào để giám sát và tối ưu việc sử dụng mạng?
@@ -338,7 +329,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Process your annotations here
     // Both streams will be properly disposed
 }
-```  
 ```
 
 ### Làm thế nào để xử lý lỗi giới hạn tốc độ của Azure một cách nhẹ nhàng?
@@ -364,7 +354,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### Làm thế nào để xây dựng khả năng chịu lỗi trước các sự cố mạng?

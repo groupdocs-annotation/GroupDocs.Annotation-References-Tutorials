@@ -19,14 +19,6 @@ url: /ja/java/text-annotations/
 weight: 5
 ---
 
- "Author:" translate.
-
-Make sure to keep the date unchanged.
-
-Now produce final content.
-
-Let's construct.
-
 # PDFハイライト Java の追加 – テキスト注釈の完全ガイド
 
 Java アプリケーションに **add PDF highlight java** 機能を追加する必要がある場合、ここが最適な場所です。このチュートリアルでは、テキスト注釈が重要な理由、GroupDocs.Annotation for Java で作成できるさまざまな注釈タイプ、そしてそれらを効率的に実装する方法を解説します。法務レビューシステム、e‑ラーニングプラットフォーム、共同編集ツールのいずれを構築していても、ここで紹介する概念はプロフェッショナルなマークアップ機能の提供に役立ちます。

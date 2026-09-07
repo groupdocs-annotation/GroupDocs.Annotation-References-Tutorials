@@ -96,10 +96,6 @@ Integrujte komplexní možnosti anotací do svých C# a .NET projektů pomocí n
 - [**Ukládání dokumentu**](./net/document-saving) - Uložte anotované dokumenty s různými možnostmi výstupu
 - [**Správa anotací**](./net/annotation-management) - Přidávejte, aktualizujte, odstraňujte a filtrujte anotace programově
 - [**Funkce spolupráce**](./net/reply-management) - Implementujte vlákna komentářů a kolaborativní revizi
-- [**Náhled dokumentu**](./net/document-preview) - Generujte náhledy dokumentu s vlastní rozlišením
-- [**Formulářová pole**](./net/form-field-annotations) - Vytvořte interaktivní komponenty formulářů
-- [**Analýza dokumentu**](./net/document-information) - Extrahujte metadata a informace o stránkách
-- [**Možnosti licencování**](./net/licensing-and-configuration) - Implementujte a nakonfigurujte licencování
 
 ### Pokročilé .NET funkce
 - [**Náhled dokumentu**](./net/document-preview) - Generujte náhledy dokumentu s vlastní rozlišením

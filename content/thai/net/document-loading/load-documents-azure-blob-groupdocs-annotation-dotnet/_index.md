@@ -120,7 +120,6 @@ GroupDocs.Annotation รองรับ **50+** รูปแบบการน�
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 หรือใช้ .NET CLI:
@@ -128,7 +127,6 @@ Install-Package GroupDocs.Annotation -Version 25.4.0
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 แนะนำให้ใช้เวอร์ชัน **25.4.0** เนื่องจากมีการเพิ่มความเร็วขึ้น 30 % สำหรับการโหลดเอกสารบนคลาวด์และลดภาระหน่วยความจำได้ถึง 40 %  
@@ -146,7 +144,6 @@ using GroupDocs.Annotation;
 
 // Basic initialization - we'll improve this for cloud documents
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **Definition anchor:** `Annotator` คือคลาสหลักใน GroupDocs.Annotation ที่โหลดสตรีมเอกสารและเปิดเผยเมธอดสำหรับการเพิ่ม, แก้ไข, และดึงข้อมูลการอธิบาย  
@@ -189,7 +186,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **Explanation:**  
@@ -215,7 +211,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **Key points:**  
@@ -233,7 +228,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
 // Example pattern (you'll need Azure.Security.KeyVault.Secrets package)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### วิธีการบังคับใช้การควบคุมการเข้าถึงที่เหมาะสมบนคอนเทนเนอร์ของคุณ?
@@ -254,7 +248,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Implement your validation logic here
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## กลยุทธ์การเพิ่มประสิทธิภาพที่ใช้งานได้
@@ -274,7 +267,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### วิธีการทำแคชอัจฉริยะสำหรับเอกสารที่เข้าถึงบ่อย?
@@ -298,7 +290,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### วิธีการตรวจสอบและปรับแต่งการใช้เครือข่าย?
@@ -323,7 +314,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Process your annotations here
     // Both streams will be properly disposed
 }
-```  
 ```
 
 ### วิธีจัดการข้อผิดพลาดอัตราการจำกัดของ Azure อย่างราบรื่น?
@@ -348,7 +338,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### วิธีสร้างความยืดหยุ่นต่อความล้มเหลวของเครือข่าย?

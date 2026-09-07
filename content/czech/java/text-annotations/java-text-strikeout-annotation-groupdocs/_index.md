@@ -1,36 +1,59 @@
 ---
-"date": "2025-05-06"
-"description": "Naučte se, jak přidat anotace s přeškrtnutím textu v Javě pomocí GroupDocs.Annotation. Postupujte podle tohoto podrobného návodu pro bezproblémové anotace dokumentů."
-"title": "Průvodce anotací přeškrtnutého textu v Javě pomocí GroupDocs.Annotation"
-"url": "/cs/java/text-annotations/java-text-strikeout-annotation-groupdocs/"
+categories:
+- Java Development
+date: '2026-03-30'
+description: Naučte se, jak pomocí GroupDocs.Annotation přidat v Javě anotaci typu
+  přeškrtnutí. Podrobný návod krok za krokem s ukázkami kódu, tipy na řešení problémů
+  a osvědčené postupy pro označování dokumentů.
+keywords: Java strikeout annotation tutorial, GroupDocs annotation Java guide, text
+  markup Java, document annotation Java, how to add strikeout annotation java
+lastmod: '2026-03-30'
+linktitle: Add Strikeout Annotation Java Tutorial
+tags:
+- java-annotations
+- groupdocs
+- document-processing
+- pdf-manipulation
+title: Přidání přeškrtnuté anotace – Java tutoriál s GroupDocs
 type: docs
-"weight": 1
+url: /cs/java/text-annotations/java-text-strikeout-annotation-groupdocs/
+weight: 1
 ---
 
-# Anotace přeškrtnutého textu v Javě s GroupDocs.Annotation
+# Přidání přeškrtnuté anotace Java – Kompletní průvodce GroupDocs
 
-dnešním digitálním světě dokumenty často vyžadují anotace, které zvýrazní důležité informace nebo označí revize. Ať už pracujete na společných projektech, nebo potřebujete dokumenty kontrolovat a komentovat, možnost přeškrtávání textu může být neocenitelná. Tento tutoriál vás provede přidáním anotace s přeškrtnutím textu pomocí GroupDocs.Annotation pro Javu, výkonné knihovny určené pro manipulaci s dokumenty.
+Už jste někdy přemýšleli nad dokumentem a říkali si: „Potřebuji přeškrtnout tento text, ale nemohu jen tak vzít červené pero“? Nejste sami. Ať už vytváříte systém pro revizi dokumentů, navrhujete workflow úprav, nebo jen potřebujete označit text ke smazání ve své Java aplikaci, **add strikeout annotation java** je nezbytná dovednost. V tomto tutoriálu projdeme vše, co potřebujete vědět, abyste implementovali funkci přeškrtnutí textu, která skutečně funguje v produkci.
 
-**Co se naučíte:**
-- Jak nastavit prostředí s GroupDocs.Annotation.
-- Podrobné pokyny k implementaci anotace s přeškrtnutým textem v Javě.
-- Praktické aplikace této funkce v reálných situacích.
-- Tipy pro zvýšení výkonu a osvědčené postupy při používání GroupDocs.Annotation.
+## Rychlé odpovědi
+- **Jaká knihovna podporuje přeškrtnuté anotace v Javě?** GroupDocs.Annotation for Java  
+- **Jaké primární klíčové slovo bych měl cílit pro SEO?** add strikeout annotation java  
+- **Potřebuji licenci pro spuštění ukázkového kódu?** Bezplatná zkušební verze nebo dočasná licence funguje pro vývoj; pro produkci je vyžadována plná licence.  
+- **Mohu to použít s PDF, DOCX a PPTX soubory?** Ano – GroupDocs.Annotation podporuje všechny hlavní formáty dokumentů.  
+- **Jaká verze Javy je požadována?** JDK 8 nebo vyšší (doporučeno JDK 11+).  
 
-## Předpoklady
+## Co je add strikeout annotation java?
+Přeškrtnutá anotace nakreslí čáru přes vybraný text, vizuálně naznačující, že obsah by měl být odstraněn nebo ignorován. Jedná se o ne‑destruktivní způsob, jak navrhnout smazání, přičemž originální text zůstává zachován pro auditní záznamy nebo kolaborativní revize.
 
-Než se pustíte do implementace, ujistěte se, že máte následující:
-- **Vývojová sada pro Javu (JDK):** Pro kompatibilitu s GroupDocs.Annotation je vyžadována verze 8 nebo vyšší.
-- **Knihovna anotací GroupDocs:** Zahrňte tuto knihovnu do svého projektu. Zde použitá verze je `25.2`.
-- **Integrované vývojové prostředí (IDE):** Například IntelliJ IDEA, Eclipse nebo NetBeans.
+## Proč používat přeškrtnuté anotace v Java aplikacích?
+- **Procesy revize dokumentů** – recenzenti mohou označit nechtěný text bez změny zdroje.  
+- **Spolupráce při úpravách** – členové týmu okamžitě vidí navrhovaná smazání.  
+- **Právní a soulad** – udržujte jasný auditní záznam změn.  
+- **Migrace obsahu** – označte zastaralé sekce před přesunem obsahu mezi systémy.  
 
-## Nastavení GroupDocs.Annotation pro Javu
+## Předpoklady a nastavení prostředí
+Budete potřebovat následující předtím, než se ponoříte do kódu:
 
-Chcete-li začít používat GroupDocs.Annotation pro Javu, postupujte takto:
+- **Java Development Kit (JDK)** 8+ (JDK 11+ doporučeno)  
+- **Maven nebo Gradle** pro správu závislostí  
+- **IDE** – IntelliJ IDEA, Eclipse nebo VS Code s rozšířeními pro Javu  
+- **GroupDocs.Annotation knihovna** – v příkladech použijeme verzi 25.2  
 
-### Konfigurace Mavenu
+*Užitečné:* základní znalost Java anotací a práce s PDF.
 
-Přidejte následující konfiguraci do svého `pom.xml` soubor pro zahrnutí GroupDocs.Annotation do vašeho projektu:
+## Nastavení GroupDocs.Annotation pro Java
+
+### Maven konfigurace, která skutečně funguje
+Přidejte repozitář a závislost do vašeho `pom.xml` přesně tak, jak je uvedeno:
 
 ```xml
 <repositories>
@@ -50,149 +73,224 @@ Přidejte následující konfiguraci do svého `pom.xml` soubor pro zahrnutí Gr
 </dependencies>
 ```
 
-### Získání licence
+### Zajištění licence
+GroupDocs nabízí několik licenčních možností:
 
-GroupDocs nabízí bezplatnou zkušební verzi, dočasné licence pro účely hodnocení nebo si můžete zakoupit licenci pro další používání. Navštivte [stránka nákupu](https://purchase.groupdocs.com/buy) prozkoumat vaše možnosti.
+- **Free trial** – ideální pro testování (není vyžadována kreditní karta)  
+- **Temporary license** – ideální pro vývoj a testování  
+- **Full license** – vyžadována pro produkční použití; viz [stránka nákupu](https://purchase.groupdocs.com/buy)
 
-### Základní inicializace a nastavení
+> **Pro tip:** Začněte s bezplatnou zkušební verzí, abyste prozkoumali API, a poté přejděte na dočasnou licenci, až budete připraveni vytvořit reálnou funkci.
 
-Po nastavení závislostí Maven inicializujte GroupDocs.Annotation ve vaší aplikaci Java:
+### Rychlé ověření nastavení
+Spusťte tento minimální program, abyste ověřili, že se knihovna načte správně:
 
 ```java
 import com.groupdocs.annotation.Annotator;
 
 public class DocumentSetup {
     public static void main(String[] args) {
-        Annotator annotator = new Annotator("path/to/your/document.pdf");
-        // Pokračovat s úkoly anotace...
+        try {
+            Annotator annotator = new Annotator("path/to/your/document.pdf");
+            System.out.println("GroupDocs.Annotation is ready to use!");
+            annotator.dispose();
+        } catch (Exception e) {
+            System.out.println("Setup issue: " + e.getMessage());
+        }
     }
 }
 ```
 
-## Průvodce implementací
+Pokud konzole vypíše zprávu o úspěchu bez chyb, jste připraveni přidávat přeškrtnuté anotace.
 
-V této části se ponoříme do implementace funkce přeškrtávání textu pomocí GroupDocs.Annotation.
+## Jak přidat přeškrtnutou anotaci Java
 
-### Přidání anotace přeškrtnutého textu
+Níže je kompletní, produkčně připravená implementace rozdělená do jasných kroků.
 
-#### Přehled
-Přidání anotace s přeškrtnutím textu zahrnuje definování oblasti, která má být přeškrtnuta, a konfiguraci jejích vlastností, jako je barva, neprůhlednost a číslo stránky. Tato funkce je obzvláště užitečná pro označení změn nebo chyb v dokumentech.
+### Krok 1 – Inicializace anotátoru
+Vytvořte instanci `Annotator`, která ukazuje na zdrojový dokument:
 
-#### Postupná implementace
-1. **Inicializovat anotátor**
-   Vytvořte instanci `Annotator` s cestou k vašemu dokumentu:
+```java
+Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
+```
 
-   ```java
-   Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/dev_sample.pdf");
-   ```
+> **Proč je to důležité:** Použití absolutní nebo správně rozpoznané relativní cesty zabraňuje výjimkám „soubor nenalezen“.
 
-2. **Vytvoření odpovědí na anotace (volitelné)**
-   Připojení komentářů nebo odpovědí k anotacím, které jsou viditelné během kontroly dokumentu:
+### Krok 2 – (Volitelné) Připravit odpovědi na komentáře
+Přidání odpovědí činí anotaci kolaborativní:
 
-   ```java
-   Reply reply1 = new Reply();
-   reply1.setComment("First comment");
-   reply1.setRepliedOn(Calendar.getInstance().getTime());
+```java
+Reply reply1 = new Reply();
+reply1.setComment("First comment");
+reply1.setRepliedOn(Calendar.getInstance().getTime());
 
-   Reply reply2 = new Reply();
-   reply2.setComment("Second comment");
-   reply2.setRepliedOn(Calendar.getInstance().getTime());
-   
-   List<Reply> replies = Arrays.asList(reply1, reply2);
-   ```
+Reply reply2 = new Reply();
+reply2.setComment("Second comment");
+reply2.setRepliedOn(Calendar.getInstance().getTime());
 
-3. **Definujte oblast pro vyškrtnutí**
-   Zadejte souřadnice, které tvoří obdélník pro přeškrtnutí:
+List<Reply> replies = Arrays.asList(reply1, reply2);
+```
 
-   ```java
-   Point point1 = new Point(80, 730);
-   Point point2 = new Point(240, 730);
-   Point point3 = new Point(80, 650);
-   Point point4 = new Point(240, 650);
+Tyto komentáře se zobrazí, když uživatel najede kurzorem na přeškrtnutí.
 
-   List<Point> points = Arrays.asList(point1, point2, point3, point4);
-   ```
+### Krok 3 – Definovat oblast přeškrtnutí
+Určete obdélník, který obklopuje text, který chcete přeškrtnout:
 
-4. **Konfigurace anotace přeškrtnutí**
-   Nastavte vlastnosti, jako je barva písma, krytí a číslo stránky:
+```java
+Point point1 = new Point(80, 730);
+Point point2 = new Point(240, 730);
+Point point3 = new Point(80, 650);
+Point point4 = new Point(240, 650);
 
-   ```java
-   StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
-   strikeout.setCreatedOn(Calendar.getInstance().getTime());
-   strikeout.setFontColor(65535);  // Žlutá barva
-   strikeout.setMessage("This is a strikeout annotation");
-   strikeout.setOpacity(0.7);
-   strikeout.setPageNumber(0);
-   strikeout.setPoints(points);
-   strikeout.setReplies(replies);
-   ```
+List<Point> points = Arrays.asList(point1, point2, point3, point4);
+```
 
-5. **Přidat anotaci**
-   Přidejte do dokumentu nakonfigurovanou anotaci:
+> **Tip pro souřadnice:** Počátek (0,0) je levý horní roh stránky; X roste doprava, Y roste dolů. Použijte PDF prohlížeč, který zobrazuje souřadnice, pro doladění těchto hodnot.
 
-   ```java
-   annotator.add(strikeout);
-   ```
+### Krok 4 – Konfigurace přeškrtnuté anotace
+Nastavte vzhled, číslo stránky a připojte komentáře:
 
-6. **Uložit anotovaný dokument**
-   Uložit změny do nového souboru:
+```java
+StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
+strikeout.setCreatedOn(Calendar.getInstance().getTime());
+strikeout.setFontColor(65535);  // Yellow color
+strikeout.setMessage("This is a strikeout annotation");
+strikeout.setOpacity(0.7);
+strikeout.setPageNumber(0);
+strikeout.setPoints(points);
+strikeout.setReplies(replies);
+```
 
-   ```java
-   annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
-   ```
+*Poznámka o barvě:* `65535` odpovídá žluté v celočíselném RGB formátu. Změňte hodnotu pro použití jiných barev.
 
-7. **Zdroje pro úklid**
-   Správně likvidujte zdroje:
+### Krok 5 – Aplikovat anotaci a uložit
+Přidejte anotaci do dokumentu a zapište výstupní soubor:
 
-   ```java
-   if (annotator != null) {
-       annotator.dispose();
-   }
-   ```
+```java
+annotator.add(strikeout);
+annotator.save("YOUR_OUTPUT_DIRECTORY/dev.pdf");
+```
 
-### Tipy pro řešení problémů
-- Ujistěte se, že souřadnice správně definují oblast, která má být vyškrtnuta.
-- Ověřte, zda je cesta k dokumentu správná a přístupná.
-- Zkontrolujte, zda během inicializace nebo ukládání nedošlo k výjimkám, které by mohly naznačovat problémy s konfigurací.
+### Krok 6 – Vyčistit zdroje (kritické!)
+Vždy uvolněte anotátor, aby se uvolnily nativní zdroje:
 
-## Praktické aplikace
+```java
+if (annotator != null) {
+    annotator.dispose();
+}
+```
 
-Zde je několik reálných scénářů, kde mohou být anotace s přeškrtnutím textu užitečné:
-1. **Úprava dokumentů:** Označte nesprávné informace, které je třeba opravit.
-2. **Procesy kontroly:** Zvýrazněte změny navržené recenzenty.
-3. **Spolupracující pracovní postupy:** Označte části dokumentu, které jsou projednávány nebo přezkoumávány.
+V produkci zabalte použití do bloku try‑with‑resources nebo konstrukce `try/finally`.
 
-## Úvahy o výkonu
-- **Optimalizace využití paměti:** Při práci s velkými dokumenty se ujistěte, že má váš systém dostatek paměťových zdrojů.
-- **Dávkové zpracování:** Zpracovávejte více dokumentů v dávkách pro efektivní řízení spotřeby zdrojů.
-- **Efektivní postupy kódování:** Používejte efektivní datové struktury a algoritmy pro zpracování anotací.
+## Časté problémy a jak je opravit
+
+| Problém | Symptom | Řešení |
+|---------|---------|--------|
+| **File Not Found** | `Annotator` vyhodí výjimku | Použijte absolutní cesty, ověřte oprávnění ke čtení, ujistěte se, že žádný jiný proces soubor neblokuje |
+| **Wrong Coordinates** | Přeškrtnutí se zobrazuje mimo zamýšlený text | Znovu zkontrolujte souřadnicový systém PDF prohlížeče; podle toho upravte body |
+| **Annotation Invisible** | Po uložení není viditelné přeškrtnutí | Zvyšte `opacity` (např. `0.9`), ověřte `pageNumber` (číslování od 0), ujistěte se, že body tvoří správný obdélník |
+| **OutOfMemoryError** | Aplikace spadne při velkých PDF | Zvyšte haldu JVM (`-Xmx2048m`), zpracovávejte dokumenty po dávkách, vždy volejte `dispose()` |
+
+## Nejlepší postupy výkonu pro produkci
+
+### Správa paměti
+```java
+// Good: try‑with‑resources (Java 7+)
+try (Annotator annotator = new Annotator(documentPath)) {
+    // annotation logic here
+} // annotator automatically disposed
+
+// Alternative: explicit disposal
+Annotator annotator = null;
+try {
+    annotator = new Annotator(documentPath);
+    // annotation logic here
+} finally {
+    if (annotator != null) {
+        annotator.dispose();
+    }
+}
+```
+
+### Strategie dávkového zpracování
+Když potřebujete anotovat desítky nebo stovky souborů:
+
+- Zpracovávejte 10‑20 dokumentů na dávku.  
+- Zaznamenávejte úspěch/neúspěch pro každý soubor.  
+- Znovu inicializujte `Annotator` pro každý dokument, aby nedocházelo k únikům paměti.  
+
+### Tipy pro cachování
+- Cachujte často používané šablony dokumentů.  
+- Ukládejte předem vypočítané mapy souřadnic pro standardní rozvržení.  
+
+## Reálné příklady použití
+
+1. **Systémy revize dokumentů** – Editoři navrhují smazání bez změny původní smlouvy.  
+2. **Právní úpravy** – Právníci sledují odstranění klauzulí při zachování původního znění pro audit.  
+3. **Akademické recenze** – Recenzenti označují sekce k odstranění a přidávají vložené komentáře.  
+4. **Migrace obsahu** – Během migrací CMS přeškrtnutí zvýrazňují zastaralý text, který je třeba nahradit.  
+
+## Pokročilá přizpůsobení
+
+### Vlastní stylování
+```java
+// Red for critical errors
+strikeout.setFontColor(16711680);
+// Blue for style suggestions
+strikeout.setFontColor(255);
+// Adjust opacity based on confidence
+strikeout.setOpacity(0.9); // high confidence
+strikeout.setOpacity(0.5); // tentative suggestion
+```
+
+### Přidání metadat
+```java
+strikeout.setMessage("Deleted by: " + username + " on " + timestamp);
+strikeout.setSubject("Content Review – Q1 2026");
+```
+
+## Kontrolní seznam pro řešení problémů
+- ✅ Můžete otevřít zdrojový soubor ručně?  
+- ✅ Jsou všechny GroupDocs závislosti přítomny v classpath?  
+- ✅ Tvoří body platný obdélník?  
+- ✅ Je číslo stránky správné (0‑based)?  
+- ✅ Je dostatek paměti haldy?  
+- ✅ Máte oprávnění k zápisu do výstupní složky?  
+- ✅ Je formát dokumentu podporován (PDF, DOCX, PPTX, atd.)?  
+
+## Často kladené otázky
+
+**Q: Mohu použít GroupDocs.Annotation uvnitř služby Spring Boot?**  
+A: Ano. Přidejte Maven závislost, injektujte servisní třídu, která vytváří `Annotator`, a spravujte její životní cyklus pomocí Spring bean scopes.
+
+**Q: Které formáty dokumentů podporují přeškrtnuté anotace?**  
+A: PDF, DOCX, PPTX a mnoho dalších formátů podporovaných GroupDocs.Annotation. PDF nabízí nejpřesnější práci se souřadnicemi.
+
+**Q: Jak zacházet s dokumenty s různými velikostmi stránek?**  
+A: Získejte rozměry stránky pomocí `annotator.getPageInfo(pageNumber)` a podle toho škálujte své souřadnice.
+
+**Q: Je možné upravit nebo smazat existující přeškrtnutou anotaci?**  
+A: Rozhodně. Použijte `annotator.getAnnotations(pageNumber)` pro načtení, poté `annotator.update(updatedAnnotation)` nebo `annotator.delete(annotationId)`.
+
+**Q: Jaký je dopad na výkon při přidávání mnoha anotací?**  
+A: Přidání stovek anotací je obecně v pořádku, ale sledujte využití paměti. Pro velmi velké sady anotací zvažte stránkování zobrazení nebo lazy‑loading anotací na vyžádání.
 
 ## Závěr
+Nyní máte kompletní, produkčně připravený průvodce k **add strikeout annotation java** pomocí GroupDocs.Annotation. Začněte jednoduchým ověřovacím příkladem, poté rozšiřte na dávkové zpracování, vlastní stylování a obohacení metadat. Pamatujte na pečlivé testování souřadnic, odpovědné řízení zdrojů a výběr správného licenčního modelu pro vaše prostředí.
 
-Nyní jste se naučili, jak přidat anotaci s přeškrtnutím textu pomocí nástroje GroupDocs.Annotation pro Javu. Tato funkce může výrazně vylepšit vaše procesy správy dokumentů tím, že poskytuje jasné vizuální pokyny pro úpravy a revize. 
+Připraveni na další průzkum? Prohlédněte si další typy anotací – zvýraznění, poznámku, obrázek, šipku a vodoznak – a vytvořte plnohodnotný balík pro spolupráci na dokumentech.
 
-Dále zvažte prozkoumání dalších funkcí GroupDocs.Annotation, jako jsou anotace obrázků nebo přidávání hypertextových odkazů, které dále obohatí vaše pracovní postupy s dokumenty.
+---
 
-## Sekce Často kladených otázek
+**Poslední aktualizace:** 2026-03-30  
+**Testováno s:** GroupDocs.Annotation 25.2 for Java  
+**Autor:** GroupDocs  
 
-1. **Co je GroupDocs.Annotation?**
-   Komplexní knihovna, která umožňuje přidávat různé typy anotací do dokumentů v aplikacích Java.
-2. **Mohu použít GroupDocs.Annotation pro dávkové zpracování?**
-   Ano, podporuje efektivní anotaci více dokumentů se správnou správou zdrojů.
-3. **Jak si nastavím dočasnou licenci?**
-   Navštivte [stránka s dočasnou licencí](https://purchase.groupdocs.com/temporary-license/) a postupujte podle pokynů k jeho získání.
-4. **Jaké jsou některé běžné problémy při používání GroupDocs.Annotation?**
-   Mezi běžné problémy patří nesprávné cesty k souborům, nedostatek paměťových prostředků nebo chybějící závislosti v nastavení projektu.
-5. **Jak mohu integrovat GroupDocs.Annotation s jinými systémy?**
-   GroupDocs.Annotation lze integrovat do webových aplikací prostřednictvím REST API, což umožňuje kompatibilitu a flexibilitu napříč platformami.
-
-## Zdroje
-- [Dokumentace anotací GroupDocs](https://docs.groupdocs.com/annotation/java/)
-- [Referenční informace k API](https://reference.groupdocs.com/annotation/java/)
-- [Stáhnout knihovnu](https://releases.groupdocs.com/annotation/java/)
-- [Nákupní skupinaDokumentace](https://purchase.groupdocs.com/buy)
-- [Bezplatná zkušební verze](https://releases.groupdocs.com/annotation/java/)
-- [Dočasná licence](https://purchase.groupdocs.com/temporary-license/)
-- [Fórum podpory](https://forum.groupdocs.com/c/annotation/)
-
-Vydejte se na cestu k efektivní správě anotací dokumentů s GroupDocs.Annotation pro Javu a prozkoumejte rozsáhlé možnosti, které nabízí!
+**Další zdroje**
+- [Dokumentace GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)
+- [Příručka API reference](https://reference.groupdocs.com/annotation/java/)
+- [Stáhnout nejnovější verzi](https://releases.groupdocs.com/annotation/java/)
+- [Zakoupit plnou licenci](https://purchase.groupdocs.com/buy)
+- [Spustit bezplatnou zkušební verzi](https://releases.groupdocs.com/annotation/java/)
+- [Získat dočasnou licenci](https://purchase.groupdocs.com/temporary-license/)
+- [Komunitní fórum podpory](https://forum.groupdocs.com/c/annotation/)

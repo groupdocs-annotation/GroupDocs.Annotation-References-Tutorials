@@ -96,10 +96,6 @@ Integreer uitgebreide annotatiemogelijkheden in uw C#‑ en .NET‑projecten met
 - [**Document Saving**](./net/document-saving) - Sla geannoteerde documenten op met verschillende uitvoeropties
 - [**Annotation Management**](./net/annotation-management) - Voeg annotaties toe, werk ze bij, verwijder en filter ze programmatisch
 - [**Collaboration Features**](./net/reply-management) - Implementeer commentaarthreads en collaboratieve beoordeling
-- [**Document Preview**](./net/document-preview) - Genereer documentpreviews met aangepaste resolutie
-- [**Form Fields**](./net/form-field-annotations) - Maak interactieve formulierelementen
-- [**Document Analysis**](./net/document-information) - Extraheer metadata en paginainformatie
-- [**Licensing Options**](./net/licensing-and-configuration) - Implementeer en configureer licenties
 
 ### Geavanceerde .NET‑functies
 - [**Document Preview**](./net/document-preview) - Genereer documentpreviews met aangepaste resolutie

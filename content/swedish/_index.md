@@ -96,10 +96,6 @@ Integrera omfattande annoteringsfunktioner i dina C#‑ och .NET‑projekt med v
 - [**Document Saving**](./net/document-saving) - Spara annoterade dokument med olika utdataalternativ
 - [**Annotation Management**](./net/annotation-management) - Lägg till, uppdatera, radera och filtrera annotationer programatiskt
 - [**Collaboration Features**](./net/reply-management) - Implementera kommentarsstrådar och samarbetsgranskning
-- [**Document Preview**](./net/document-preview) - Generera förhandsgranskningar av dokument med anpassad upplösning
-- [**Form Fields**](./net/form-field-annotations) - Skapa interaktiva formulärkomponenter
-- [**Document Analysis**](./net/document-information) - Extrahera metadata och sidinformation
-- [**Licensing Options**](./net/licensing-and-configuration) - Implementera och konfigurera licensiering
 
 ### Avancerade .NET‑funktioner
 - [**Document Preview**](./net/document-preview) - Generera förhandsgranskningar av dokument med anpassad upplösning

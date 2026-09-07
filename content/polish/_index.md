@@ -96,10 +96,6 @@ Zintegruj kompleksowe możliwości adnotacji w swoich projektach C# i .NET dzię
 - [**Zapisywanie dokumentów**](./net/document-saving) - Zapisuj adnotowane dokumenty z różnymi opcjami wyjścia
 - [**Zarządzanie adnotacjami**](./net/annotation-management) - Dodawaj, aktualizuj, usuwaj i filtruj adnotacje programowo
 - [**Funkcje współpracy**](./net/reply-management) - Implementuj wątkowane komentarze i przegląd współpracy
-- [**Podgląd dokumentu**](./net/document-preview) - Generuj podglądy dokumentów z niestandardową rozdzielczością
-- [**Pola formularzy**](./net/form-field-annotations) - Twórz interaktywne komponenty formularzy
-- [**Analiza dokumentu**](./net/document-information) - Wyodrębniaj metadane i informacje o stronach
-- [**Opcje licencjonowania**](./net/licensing-and-configuration) - Implementuj i konfigurować licencjonowanie
 
 ### Zaawansowane funkcje .NET
 - [**Podgląd dokumentu**](./net/document-preview) - Generuj podglądy dokumentów z niestandardową rozdzielczością

@@ -123,7 +123,6 @@ GroupDocs.Annotation поддерживает **50+** форматов ввод�
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 Или используйте .NET CLI:
@@ -131,7 +130,6 @@ Install-Package GroupDocs.Annotation -Version 25.4.0
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 Версия **25.4.0** рекомендуется, так как она обеспечивает ускорение загрузки облачных документов на 30 % и снижает нагрузку на память до 40 %.
@@ -151,7 +149,6 @@ using GroupDocs.Annotation;
 
 // Basic initialization - we'll improve this for cloud documents
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **Определение:** `Annotator` — основной класс в GroupDocs.Annotation, который загружает поток документа и предоставляет методы для добавления, редактирования и получения аннотаций.
@@ -196,7 +193,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **Объяснение:**  
@@ -225,7 +221,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **Ключевые моменты:**  
@@ -244,7 +239,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
 // Example pattern (you'll need Azure.Security.KeyVault.Secrets package)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### Как обеспечить правильный контроль доступа к вашему контейнеру?
@@ -267,7 +261,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Implement your validation logic here
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## Стратегии оптимизации производительности, которые работают
@@ -288,7 +281,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### Как реализовать умное кэширование часто используемых документов?
@@ -313,7 +305,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### Как мониторить и оптимизировать использование сети?
@@ -340,7 +331,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Process your annotations here
     // Both streams will be properly disposed
 }
-```  
 ```
 
 ### Как корректно обрабатывать ошибки ограничения скорости Azure?
@@ -366,7 +356,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### Как построить устойчивость к сетевым сбоям?

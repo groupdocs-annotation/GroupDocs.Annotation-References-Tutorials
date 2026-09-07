@@ -94,10 +94,6 @@ Tích hợp khả năng chú thích toàn diện vào các dự án C# và .NET 
 - [**Lưu tài liệu**](./net/document-saving) - Lưu tài liệu đã chú thích với các tùy chọn xuất khác nhau
 - [**Quản lý chú thích**](./net/annotation-management) - Thêm, cập nhật, xóa và lọc chú thích bằng lập trình
 - [**Tính năng cộng tác**](./net/reply-management) - Triển khai chuỗi bình luận và đánh giá cộng tác
-- [**Xem trước tài liệu**](./net/document-preview) - Tạo preview tài liệu với độ phân giải tùy chỉnh
-- [**Trường biểu mẫu**](./net/form-field-annotations) - Tạo các thành phần biểu mẫu tương tác
-- [**Phân tích tài liệu**](./net/document-information) - Trích xuất siêu dữ liệu và thông tin trang
-- [**Tùy chọn cấp phép**](./net/licensing-and-configuration) - Triển khai và cấu hình cấp phép
 
 ### Các tính năng .NET nâng cao
 - [**Xem trước tài liệu**](./net/document-preview) - Tạo preview tài liệu với độ phân giải tùy chỉnh

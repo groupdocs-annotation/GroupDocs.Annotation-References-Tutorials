@@ -125,7 +125,6 @@ Telepítse a könyvtárat a NuGet Package Manager Console‑ból:
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 Vagy használja a .NET CLI‑t:
@@ -133,7 +132,6 @@ Vagy használja a .NET CLI‑t:
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 Az **25.4.0** verzió ajánlott, mivel 30 % gyorsulást hoz a felhő‑alapú dokumentumbetöltésben és akár 40 % memóriahasználatcsökkenést eredményez.
@@ -153,7 +151,6 @@ using GroupDocs.Annotation;
 
 // Alap inicializáció – később felhő dokumentumokra optimalizáljuk
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **Definíció:** `Annotator` a GroupDocs.Annotation fő osztálya, amely dokumentumstreamet tölt be, és metódusokat biztosít a megjegyzések hozzáadásához, szerkesztéséhez és lekérdezéséhez.
@@ -197,7 +194,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **Magyarázat:**  
@@ -226,7 +222,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **Fontos pontok:**  
@@ -245,7 +240,6 @@ Soha ne ágyazza be a **azure blob kapcsolati karakterláncot** a forráskódba.
 // Példa minta (az Azure.Security.KeyVault.Secrets csomagra lesz szükség)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### Hogyan kényszerítsük ki a megfelelő hozzáférés‑szabályokat a konténeren?
@@ -268,7 +262,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Ide írja a saját validációs logikáját
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## Teljesítményoptimalizáló stratégiák, amik működnek
@@ -289,7 +282,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### Hogyan valósítsunk meg okos gyorsítótárazást gyakran használt dokumentumokhoz?
@@ -314,7 +306,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### Hogyan monitorozzuk és optimalizáljuk a hálózati használatot?
@@ -341,7 +332,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Itt végezze el a megjegyzéseket
     // Mindkét stream megfelelően felszabadul
 }
-```  
 ```
 
 ### Hogyan kezeljük az Azure rate‑limit hibákat elegánsan?
@@ -367,7 +357,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### Hogyan építsünk ellenálló rendszert hálózati hibák ellen?

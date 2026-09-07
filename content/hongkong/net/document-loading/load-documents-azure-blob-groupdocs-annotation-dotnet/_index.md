@@ -122,7 +122,6 @@ GroupDocs.Annotation 支援 **50+** 種輸入與輸出格式，能在一般伺�
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 或使用 .NET CLI：
@@ -130,7 +129,6 @@ Install-Package GroupDocs.Annotation -Version 25.4.0
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 建議使用 **25.4.0** 版，因為它為雲端文件載入帶來 30 % 的速度提升，並將記憶體開銷降低至最高 40 %。
@@ -150,7 +148,6 @@ using GroupDocs.Annotation;
 
 // Basic initialization - we'll improve this for cloud documents
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **Definition anchor:** `Annotator` 是 GroupDocs.Annotation 的主要類別，用於載入文件串流，並提供新增、編輯與取得加註的方法。
@@ -195,7 +192,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **Explanation:**  
@@ -224,7 +220,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **Key points:**  
@@ -243,7 +238,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
 // Example pattern (you'll need Azure.Security.KeyVault.Secrets package)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### 如何在容器上實施適當的存取控制？
@@ -266,7 +260,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Implement your validation logic here
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## 有效的效能最佳化策略
@@ -287,7 +280,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### 如何為常存取的文件實作智慧快取？
@@ -312,7 +304,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### 如何監控與最佳化網路使用？
@@ -339,7 +330,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Process your annotations here
     // Both streams will be properly disposed
 }
-```  
 ```
 
 ### 如何優雅地處理 Azure 限流錯誤？
@@ -365,7 +355,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### 如何建立對網路失敗的彈性？

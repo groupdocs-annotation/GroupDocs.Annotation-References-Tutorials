@@ -95,10 +95,6 @@ Integrate comprehensive annotation capabilities into your C# and .NET projects w
 - [**Document Saving**](./net/document-saving) - Save annotated documents with various output options
 - [**Annotation Management**](./net/annotation-management) - Add, update, delete and filter annotations programmatically
 - [**Collaboration Features**](./net/reply-management) - Implement comment threads and collaborative review
-- [**Document Preview**](./net/document-preview) - Generate document previews with custom resolution
-- [**Form Fields**](./net/form-field-annotations) - Create interactive form components
-- [**Document Analysis**](./net/document-information) - Extract metadata and page information
-- [**Licensing Options**](./net/licensing-and-configuration) - Implement and configure licensing
 
 ### Advanced .NET features
 - [**Document Preview**](./net/document-preview) - Generate document previews with custom resolution

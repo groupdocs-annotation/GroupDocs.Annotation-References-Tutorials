@@ -81,16 +81,7 @@ url: /es/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/
 weight: 1
 ---
 
-# Crear anotaciones PDF java con GroupDocs.Annotation
-
-Si necesitas **crear anotaciones PDF en Java**—ya sea que estés construyendo una herramienta de revisión colaborativa, un flujo de trabajo de documentos legales o una plataforma educativa—este tutorial te cubre. Verás exactamente cómo **añadir comentario a PDF en Java**, actualizar notas existentes y gestionar recursos para que tu aplicación se mantenga rápida y confiable.
-
-## Respuestas rápidas
-- **¿Qué biblioteca debo usar?** GroupDocs.Annotation for Java  
-- **¿Qué versión de Java se requiere?** JDK 8 o superior (JDK 11 recomendado)  
-- **¿Necesito una licencia?** Sí, se requiere una licencia de prueba o completa para cualquier uso que no sea de evaluación  
-- **¿Puedo anotar PDFs en una aplicación web?** Absolutamente – solo gestiona los recursos con try‑with‑resources  
-- **¿Hay soporte para otros tipos de archivo?** Sí, Word, Excel, PowerPoint y imágenes también son compatibles  
+# Add PDF Annotation Java Tutorial
 
 ## ¿Qué es añadir anotación PDF en Java?
 Crear anotaciones PDF en Java significa agregar, actualizar o eliminar programáticamente notas visuales, resaltados, comentarios y otras marcas dentro de un archivo PDF. Esto permite revisiones colaborativas, bucles de retroalimentación y enriquecimiento de documentos sin alterar el contenido original. Permite a los desarrolladores incrustar comentarios, resaltados, sellos y otras indicaciones visuales directamente en el PDF sin cambiar el texto subyacente, apoyando un trabajo en equipo fluido.

@@ -97,10 +97,6 @@ Integra capacità di annotazione complete nei tuoi progetti C# e .NET con la nos
 - [**Salvataggio del documento**](./net/document-saving) - Salva documenti annotati con varie opzioni di output
 - [**Gestione delle annotazioni**](./net/annotation-management) - Aggiungi, aggiorna, elimina e filtra le annotazioni programmaticamente
 - [**Funzionalità di collaborazione**](./net/reply-management) - Implementa thread di commenti e revisione collaborativa
-- [**Anteprima del documento**](./net/document-preview) - Genera anteprime del documento con risoluzione personalizzata
-- [**Campi modulo**](./net/form-field-annotations) - Crea componenti di modulo interattivi
-- [**Analisi del documento**](./net/document-information) - Estrai metadati e informazioni di pagina
-- [**Opzioni di licenza**](./net/licensing-and-configuration) - Implementa e configura la licenza
 
 ### Funzionalità avanzate .NET
 - [**Anteprima del documento**](./net/document-preview) - Genera anteprime del documento con risoluzione personalizzata

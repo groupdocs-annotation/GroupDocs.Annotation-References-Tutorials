@@ -96,10 +96,6 @@ Integre recursos abrangentes de anotação em seus projetos C# e .NET com nossa 
 - [**Document Saving**](./net/document-saving) - Salve documentos anotados com várias opções de saída
 - [**Annotation Management**](./net/annotation-management) - Adicione, atualize, exclua e filtre anotações programaticamente
 - [**Collaboration Features**](./net/reply-management) - Implemente threads de comentários e revisão colaborativa
-- [**Document Preview**](./net/document-preview) - Gere pré-visualizações de documentos com resolução personalizada
-- [**Form Fields**](./net/form-field-annotations) - Crie componentes de formulário interativos
-- [**Document Analysis**](./net/document-information) - Extraia metadados e informações de página
-- [**Licensing Options**](./net/licensing-and-configuration) - Implemente e configure licenciamento
 
 ### Recursos avançados .NET
 - [**Document Preview**](./net/document-preview) - Gere pré-visualizações de documentos com resolução personalizada

@@ -122,7 +122,6 @@ NuGet Package Manager Console에서 라이브러리를 설치합니다:
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 또는 .NET CLI를 사용합니다:
@@ -130,7 +129,6 @@ Install-Package GroupDocs.Annotation -Version 25.4.0
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 버전 **25.4.0**을 권장하는 이유는 클라우드 기반 문서 로딩 속도가 30 % 빨라지고 메모리 오버헤드가 최대 40 % 감소하기 때문입니다.
@@ -150,7 +148,6 @@ using GroupDocs.Annotation;
 
 // 기본 초기화 - 클라우드 문서용으로 개선 예정
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **정의:** `Annotator`는 GroupDocs.Annotation의 핵심 클래스이며, 문서 스트림을 로드하고 주석 추가·편집·조회 메서드를 제공합니다.
@@ -195,7 +192,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **설명:**  
@@ -224,7 +220,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **핵심 포인트:**  
@@ -243,7 +238,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
 // 예시 패턴 (Azure.Security.KeyVault.Secrets 패키지가 필요합니다)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### 컨테이너에 적절한 접근 제어를 적용하려면?
@@ -266,7 +260,6 @@ private static bool IsValidDocument(Stream documentStream)
     // 여기서 검증 로직을 구현하세요
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## 실제로 효과가 입증된 성능 최적화 전략
@@ -287,7 +280,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### 자주 접근하는 문서에 스마트 캐싱을 적용하려면?
@@ -312,7 +304,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### 네트워크 사용량을 모니터링하고 최적화하려면?
@@ -339,7 +330,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // 여기서 주석 작업 수행
     // 두 스트림 모두 적절히 해제됩니다.
 }
-```  
 ```
 
 ### Azure 속도 제한(429) 오류를 우아하게 처리하려면?
@@ -365,7 +355,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### 네트워크 장애에 대한 복원력을 구축하려면?

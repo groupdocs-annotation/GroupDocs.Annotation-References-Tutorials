@@ -18,10 +18,6 @@ url: /zh/java/annotation-management/automate-pdf-annotation-extraction-groupdocs
 weight: 1
 ---
 
- needed.
-
-Let's produce.
-
 # 提取 PDF 注释 Java：完整 GroupDocs 教程
 
 ## 介绍

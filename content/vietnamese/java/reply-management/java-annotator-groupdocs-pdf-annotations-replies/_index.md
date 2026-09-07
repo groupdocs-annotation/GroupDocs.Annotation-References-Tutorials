@@ -21,15 +21,7 @@ url: /vi/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/
 weight: 1
 ---
 
- unchanged.
-
-Also keep markdown formatting like **bold**, etc.
-
-Let's craft translation.
-
-We'll need to translate technical terms like "API", "SDK", etc remain English.
-
-Let's produce final answer.# Hợp tác PDF thời gian thực với Thư viện chú thích PDF Java
+# Hợp tác PDF thời gian thực với Thư viện chú thích PDF Java
 
 ## Giới thiệu
 

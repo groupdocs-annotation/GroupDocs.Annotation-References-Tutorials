@@ -92,10 +92,6 @@ Integrasikan kemampuan anotasi lengkap ke dalam proyek C# dan .NET Anda dengan A
 - [**Document Saving**](./net/document-saving) - Menyimpan dokumen beranotasi dengan berbagai opsi output
 - [**Annotation Management**](./net/annotation-management) - Menambahkan, memperbarui, menghapus, dan menyaring anotasi secara programatik
 - [**Collaboration Features**](./net/reply-management) - Menerapkan utas komentar dan tinjauan kolaboratif
-- [**Document Preview**](./net/document-preview) - Menghasilkan pratinjau dokumen dengan resolusi khusus
-- [**Form Fields**](./net/form-field-annotations) - Membuat komponen formulir interaktif
-- [**Document Analysis**](./net/document-information) - Mengekstrak metadata dan informasi halaman
-- [**Licensing Options**](./net/licensing-and-configuration) - Menerapkan dan mengonfigurasi lisensi
 
 ### Fitur .NET Lanjutan
 - [**Document Preview**](./net/document-preview) - Menghasilkan pratinjau dokumen dengan resolusi khusus

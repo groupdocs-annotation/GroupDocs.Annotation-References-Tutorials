@@ -19,16 +19,6 @@ url: /ar/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-Docs.Annotation for Java** keep English.
-
-Proceed.
-
-Also list items.
-
-Make sure not to translate URLs.
-
-Let's craft translation.
-
 # إنشاء تمييزات PDF بجافا: دليل كامل لتظليل ملفات PDF
 
 ## المقدمة

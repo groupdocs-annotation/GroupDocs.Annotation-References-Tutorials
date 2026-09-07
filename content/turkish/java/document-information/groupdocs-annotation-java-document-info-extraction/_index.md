@@ -21,21 +21,6 @@ url: /tr/java/document-information/groupdocs-annotation-java-document-info-extra
 weight: 1
 ---
 
-2  
-**Author:** GroupDocs
-
-Translate labels:
-
-- "**Last Updated:**" -> "**Son Güncelleme:**"
-- "**Tested With:**" -> "**Test Edilen Versiyon:**"
-- "**Author:**" -> "**Yazar:**"
-
-Now produce final markdown with translations.
-
-Make sure to keep placeholders unchanged.
-
-Let's assemble.
-
 # Java ile PDF sayfa sayısını alma ve PDF meta verilerini GroupDocs ile çıkarma
 
 Ever found yourself needing to quickly grab basic info from hundreds of documents? You're not alone. Whether you're building a document management system, processing legal files, or just trying to organize that chaotic shared drive, **how to java get pdf page count** programmatically can save you hours of manual work. In this guide we’ll walk through extracting the file type, page count, and size using Java—perfect for anyone who needs to handle the **pdf file type java** challenge efficiently and also **extract pdf metadata java**.

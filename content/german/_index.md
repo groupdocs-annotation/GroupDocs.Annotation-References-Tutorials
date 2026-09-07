@@ -96,10 +96,6 @@ Integrieren Sie umfassende Anmerkungsfunktionen in Ihre C#‑ und .NET‑Projekt
 - [**Dokumenten‑Speicherung**](./net/document-saving) - Annotierte Dokumente mit verschiedenen Ausgabeoptionen speichern  
 - [**Anmerkungs‑Verwaltung**](./net/annotation-management) - Anmerkungen programmgesteuert hinzufügen, aktualisieren, löschen und filtern  
 - [**Kollaborations‑Funktionen**](./net/reply-management) - Kommentar‑Threads und kollaboratives Review implementieren  
-- [**Dokumenten‑Vorschau**](./net/document-preview) - Dokumenten‑Vorschauen mit benutzerdefinierter Auflösung erzeugen  
-- [**Formularfelder**](./net/form-field-annotations) - Interaktive Formularelemente erstellen  
-- [**Dokumenten‑Analyse**](./net/document-information) - Metadaten und Seiteninformationen extrahieren  
-- [**Lizenzierungs‑Optionen**](./net/licensing-and-configuration) - Lizenzierung implementieren und konfigurieren  
 
 ### Erweiterte .NET‑Funktionen
 - [**Dokumenten‑Vorschau**](./net/document-preview) - Dokumenten‑Vorschauen mit benutzerdefinierter Auflösung erzeugen  

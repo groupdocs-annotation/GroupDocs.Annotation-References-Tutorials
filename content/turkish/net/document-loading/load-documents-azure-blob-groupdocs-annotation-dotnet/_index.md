@@ -124,7 +124,6 @@ Kütüphaneyi NuGet Package Manager Console üzerinden kurun:
 ```  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```  
 ```
 
 Veya .NET CLI kullanın:
@@ -132,7 +131,6 @@ Veya .NET CLI kullanın:
 ```  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```  
 ```
 
 **25.4.0** sürümü önerilir çünkü bulut‑tabanlı belge yükleme için %30 hız artışı sağlar ve bellek kullanımını %40'a kadar azaltır.
@@ -152,7 +150,6 @@ using GroupDocs.Annotation;
 
 // Basic initialization - we'll improve this for cloud documents
 Annotator annotator = new Annotator("path/to/your/document.pdf");
-```  
 ```
 
 **Tanım referansı:** `Annotator`, bir belge akışını yükleyen ve açıklama ekleme, düzenleme ve alma yöntemlerini sunan GroupDocs.Annotation ana sınıfıdır.
@@ -197,7 +194,6 @@ public static CloudBlobContainer GetContainer()
     
     return container;
 }
-```  
 ```
 
 **Açıklama:**  
@@ -226,7 +222,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
         return memoryStream;
     }
 }
-```  
 ```
 
 **Ana noktalar:**  
@@ -245,7 +240,6 @@ public static Stream LoadDocumentFromAzure(CloudBlobContainer container, string 
 // Example pattern (you'll need Azure.Security.KeyVault.Secrets package)
 var keyVaultClient = new SecretClient(new Uri("https://your-keyvault.vault.azure.net/"), new DefaultAzureCredential());
 var storageKey = await keyVaultClient.GetSecretAsync("storage-account-key");
-```  
 ```
 
 ### Konteynerinizde doğru erişim kontrollerini nasıl uygularsınız?
@@ -268,7 +262,6 @@ private static bool IsValidDocument(Stream documentStream)
     // Implement your validation logic here
     return documentStream.Length > 0 && documentStream.Length < MaxAllowedFileSize;
 }
-```  
 ```
 
 ## Çalışan performans optimizasyon stratejileri
@@ -289,7 +282,6 @@ public static async Task<Stream> LoadDocumentFromAzureAsync(CloudBlobContainer c
     
     return memoryStream;
 }
-```  
 ```
 
 ### Sık erişilen belgeler için akıllı önbellekleme nasıl uygulanır?
@@ -314,7 +306,6 @@ public static Stream GetCachedOrLoadDocument(CloudBlobContainer container, strin
     
     return new MemoryStream(bytes);
 }
-```  
 ```
 
 ### Ağ kullanımını nasıl izler ve optimize edersiniz?
@@ -341,7 +332,6 @@ public static void ProcessDocumentSafely(CloudBlobContainer container, string bl
     // Process your annotations here
     // Both streams will be properly disposed
 }
-```  
 ```
 
 ### Azure oran‑sınırlama hatalarını nazikçe nasıl ele alırsınız?
@@ -367,7 +357,6 @@ private static async Task<T> ExecuteWithRetry<T>(Func<Task<T>> operation, int ma
     
     throw new Exception("Max retries exceeded");
 }
-```  
 ```
 
 ### Ağ hatalarına karşı dayanıklılık nasıl inşa edilir?

@@ -97,10 +97,6 @@ weight: 11
 - [**Document Saving**](./net/document-saving) - حفظ المستندات المعلّقة مع خيارات إخراج متعددة
 - [**Annotation Management**](./net/annotation-management) - إضافة، تحديث، حذف وتصفية التعليقات برمجياً
 - [**Collaboration Features**](./net/reply-management) - تنفيذ سلاسل التعليقات والمراجعة التعاونية
-- [**Document Preview**](./net/document-preview) - إنشاء معاينات المستندات بدقة مخصصة
-- [**Form Fields**](./net/form-field-annotations) - إنشاء مكونات نماذج تفاعلية
-- [**Document Analysis**](./net/document-information) - استخراج البيانات الوصفية ومعلومات الصفحات
-- [**Licensing Options**](./net/licensing-and-configuration) - تنفيذ وتكوين الترخيص
 
 ### ميزات .NET المتقدمة
 - [**Document Preview**](./net/document-preview) - إنشاء معاينات المستندات بدقة مخصصة
