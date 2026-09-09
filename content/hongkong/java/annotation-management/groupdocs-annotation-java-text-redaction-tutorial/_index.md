@@ -78,10 +78,6 @@ url: /zh-hant/java/annotation-management/groupdocs-annotation-java-text-redactio
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 在 Java 中的安全 PDF 編輯 – GroupDocs 教程
 
 如果您需要在 Java 中**安全 PDF 編輯**，您已經找到了正確的指南。無論是清理法律合約、從醫療記錄中剝除患者識別資訊，或是隱藏機密商業資料，本教程將帶您使用 GroupDocs.Annotation 完成可投入生產的解決方案。您將看到如何設定環境、套用編輯註解、批量處理檔案，以及避免常見陷阱——讓您能自信地保護敏感資料。
@@ -351,8 +347,3 @@ A: 可以。只要 Java 執行環境能存取檔案串流——無論是掛載 b
 - [使用 GroupDocs Annotation 載入 PDF（Java）：文件載入指南](/annotation/java/document-loading/)
 - [載入受密碼保護的 PDF（GroupDocs.Annotation Java）](/annotation/java/advanced-features/)
 - [完整指南 - 如何使用 GroupDocs.Annotation for Java 儲存已註解的 PDF](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

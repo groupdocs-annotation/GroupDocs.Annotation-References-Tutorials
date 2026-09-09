@@ -21,15 +21,7 @@ url: /hi/java/licensing-and-configuration/groupdocs-annotation-license-java-setu
 weight: 1
 ---
 
- "**अंतिम अपडेट:** 2026-02-26"
-
-**Tested With:** GroupDocs.Annotation 25.2 (Java) => "**परीक्षित संस्करण:** GroupDocs.Annotation 25.2 (Java)"
-
-**Author:** GroupDocs => "**लेखक:** GroupDocs"
-
-Make sure to keep markdown formatting.
-
-Now produce final answer with all translated content.# GroupDocs लाइसेंस Java सेट करें – GroupDocs Annotation लाइसेंस Java सेटअप
+# GroupDocs लाइसेंस Java सेट करें – GroupDocs Annotation लाइसेंस Java सेटअप
 
 ## परिचय
 

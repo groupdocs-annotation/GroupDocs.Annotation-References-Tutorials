@@ -20,14 +20,6 @@ url: /nl/java/annotation-management/automate-pdf-annotation-extraction-groupdocs
 weight: 1
 ---
 
-.Annotation for Java** unchanged.
-
-Also "extract pdf annotations java" phrase maybe keep as is? It's a keyword; but we can keep lower case? The phrase is part of text; we can keep it unchanged as it's a keyword. But translation may keep same phrase. We'll keep as is.
-
-Proceed.
-
-Will produce final answer.
-
 # PDF‑annotaties extraheren Java: Complete GroupDocs Tutorial
 
 ## Introductie

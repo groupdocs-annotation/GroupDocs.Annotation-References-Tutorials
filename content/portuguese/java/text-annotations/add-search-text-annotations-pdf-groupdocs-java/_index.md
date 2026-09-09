@@ -19,23 +19,7 @@ url: /pt/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
- Java" as phrase? Keep technical term "searchable PDF Java". Could translate "Create Searchable PDF Java" to "Criar PDF pesquisável Java". We'll keep.
-
-Proceed.
-
-Paragraph: "Ever found yourself drowning in lengthy PDF documents, wishing you could quickly jump to important sections? You're not alone. Whether you're dealing ..."
-
-Translate.
-
-Proceed.
-
-We'll translate all.
-
-Make sure to keep bold formatting.
-
-Proceed.
-
-Will produce final answer.# Criar PDF pesquisável Java: Anotação de Texto com GroupDocs
+# Criar PDF pesquisável Java: Anotação de Texto com GroupDocs
 
 Já se pegou afogado em documentos PDF extensos, desejando pular rapidamente para as seções importantes? Você não está sozinho. Seja lidando com contratos legais, manuais técnicos ou artigos de pesquisa, a capacidade de **criar searchable PDF Java** pode mudar o jogo para navegação e colaboração em documentos.
 

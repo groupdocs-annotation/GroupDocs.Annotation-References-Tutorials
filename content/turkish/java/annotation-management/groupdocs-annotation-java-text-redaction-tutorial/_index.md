@@ -83,10 +83,6 @@ url: /tr/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java’da güvenli pdf redaksiyonu – GroupDocs öğreticisi
 
 Java’da **güvenli pdf redaksiyonu** yapmanız gerekiyorsa, doğru kılavuza geldiniz. Hukuki sözleşmeleri temizliyor, tıbbi kayıtlardan hasta kimlik bilgilerini çıkarıyor ya da gizli iş verilerini gizliyor olun, bu öğretici sizi GroupDocs.Annotation ile üretime hazır bir çözüm üzerinden yönlendirecek. Ortamı nasıl kuracağınızı, redaksiyon açıklamalarını nasıl uygulayacağınızı, dosyaları toplu olarak nasıl işleyeceğinizi ve yaygın tuzaklardan nasıl kaçınacağınızı göreceksiniz—böylece hassas verileri güvenle koruyabilirsiniz.
@@ -355,8 +351,3 @@ C: Evet. Java çalışma zamanı dosya akışına erişebildiği sürece—kova 
 - [GroupDocs.Annotation Java ile Şifre Koruması Olan PDF Yükleme](/annotation/java/advanced-features/)
 - [Tam Kılavuz - GroupDocs.Annotation for Java ile Açıklamalı PDF Nasıl Kaydedilir](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

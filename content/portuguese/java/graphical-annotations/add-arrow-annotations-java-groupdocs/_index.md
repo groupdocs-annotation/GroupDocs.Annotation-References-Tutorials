@@ -19,7 +19,7 @@ url: /pt/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-Let's produce final output.# Anotações de Setas em PDF com Java - Tutorial Completo e Melhores Práticas (2025)
+# Anotações de Setas em PDF com Java - Tutorial Completo e Melhores Práticas (2025)
 
 ## Introdução
 

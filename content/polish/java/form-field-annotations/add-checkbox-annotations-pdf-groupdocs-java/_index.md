@@ -21,14 +21,7 @@ url: /pl/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java
 weight: 1
 ---
 
-2  
-**Autor:** GroupDocs
-
-Now produce final markdown with all translations.
-
-Make sure to keep placeholders unchanged.
-
-Let's craft final answer.# Jak dodać pole wyboru do PDF w Javie – Interaktywne pola wyboru przy użyciu GroupDocs
+# Jak dodać pole wyboru do PDF w Javie – Interaktywne pola wyboru przy użyciu GroupDocs
 
 Jeśli szukasz **how to add checkbox** do plików PDF programowo, trafiłeś we właściwe miejsce. W dzisiejszym cyfrowym świecie statyczne PDF‑y to przeszłość. Niezależnie od tego, czy tworzysz przepływy zatwierdzania, ankiety, czy formularze zgodności, dodanie interaktywnych pól wyboru może znacząco poprawić doświadczenie użytkownika i usprawnić Twoje procesy.
 

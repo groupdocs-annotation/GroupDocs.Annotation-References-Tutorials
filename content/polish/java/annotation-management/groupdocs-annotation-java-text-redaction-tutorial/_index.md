@@ -82,10 +82,6 @@ url: /pl/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Bezpieczne redagowanie PDF w Javie – samouczek GroupDocs
 
 Jeśli potrzebujesz **bezpiecznego redagowania PDF** w Javie, trafiłeś na właściwy przewodnik. Niezależnie od tego, czy czyszczysz umowy prawne, usuwasz identyfikatory pacjentów z dokumentacji medycznej, czy ukrywasz poufne dane firmowe, ten samouczek przeprowadzi Cię przez gotowe do produkcji rozwiązanie z GroupDocs.Annotation. Zobaczysz, jak skonfigurować środowisko, zastosować adnotacje redakcyjne, przetwarzać pliki zbiorczo i unikać typowych pułapek — abyś mógł chronić wrażliwe dane z pewnością.
@@ -354,8 +350,3 @@ Logowanie każdego zdarzenia redakcji — w tym nazwy dokumentu, znaczników cza
 - [Ładowanie PDF w Javie z GroupDocs Annotation: Przewodnik po ładowaniu dokumentów](/annotation/java/document-loading/)
 - [Ładowanie PDF chronionego hasłem z GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Kompletny przewodnik – Jak zapisać adnotowany PDF z GroupDocs.Annotation dla Javy](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

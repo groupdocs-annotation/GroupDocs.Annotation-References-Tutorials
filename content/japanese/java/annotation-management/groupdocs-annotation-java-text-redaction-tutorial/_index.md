@@ -79,10 +79,6 @@ url: /ja/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Javaでの安全なPDF赤字処理 – GroupDocsチュートリアル
 
 Javaで**secure pdf redaction**が必要な場合、適切なガイドにたどり着きました。法的契約書の整理、医療記録から患者識別子を除去、機密ビジネスデータの隠蔽など、この記事ではGroupDocs.Annotationを使用した本番環境向けソリューションをステップバイステップで解説します。環境設定、赤字注釈の適用、ファイルの一括処理、一般的な落とし穴の回避方法を学び、機密データを自信を持って保護できるようになります。
@@ -352,8 +348,3 @@ A: はい。Javaランタイムがファイルストリームにアクセスで�
 - [GroupDocs AnnotationでPDFをJavaでロード: ドキュメントロードガイド](/annotation/java/document-loading/)
 - [GroupDocs.Annotation Javaでパスワード保護PDFをロード](/annotation/java/advanced-features/)
 - [完全ガイド - GroupDocs.Annotation for Javaで注釈付きPDFを保存する方法](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

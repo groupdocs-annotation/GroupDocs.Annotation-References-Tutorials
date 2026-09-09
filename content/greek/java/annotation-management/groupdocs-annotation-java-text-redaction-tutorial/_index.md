@@ -82,10 +82,6 @@ url: /el/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Ασφαλής διαγραφή PDF σε Java – Οδηγός GroupDocs
 
 Αν χρειάζεστε **ασφαλή διαγραφή PDF** σε Java, βρήκατε τον σωστό οδηγό. Είτε καθαρίζετε νομικά συμβόλαια, αφαιρείτε ταυτοποιητικά ασθενών από ιατρικά αρχεία, είτε κρύβετε εμπιστευτικά επιχειρηματικά δεδομένα, αυτό το tutorial σας οδηγεί μέσα από μια έτοιμη για παραγωγή λύση με το GroupDocs.Annotation. Θα δείτε πώς να ρυθμίσετε το περιβάλλον, να εφαρμόσετε αναθέσεις διαγραφής, να επεξεργαστείτε αρχεία μαζικά και να αποφύγετε κοινά προβλήματα—ώστε να προστατεύετε τα ευαίσθητα δεδομένα με σιγουριά.
@@ -356,8 +352,3 @@ try (Annotator annotator = new Annotator(inputPath)) {
 - [Φόρτωση PDF με Προστασία Κωδικού με GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Πλήρης Οδηγός - Πώς να Αποθηκεύσετε Ανασχολιασμένο PDF με GroupDocs.Annotation για Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

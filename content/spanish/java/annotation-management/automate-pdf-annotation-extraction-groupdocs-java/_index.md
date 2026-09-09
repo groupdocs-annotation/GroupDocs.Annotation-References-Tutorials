@@ -20,35 +20,7 @@ url: /es/java/annotation-management/automate-pdf-annotation-extraction-groupdocs
 weight: 1
 ---
 
- When to Use Them -> "## Enfoques alternativos y cuándo usarlos"
-
-Translate bullet list.
-
-## Integration Patterns for Enterprise Applications -> "## Patrones de integración para aplicaciones empresariales"
-
-### Microservice Architecture -> "### Arquitectura de microservicios"
-
-Translate.
-
-## FAQ -> "## Preguntas frecuentes"
-
-Translate each Q and A.
-
-Need to translate link text but keep URLs.
-
-In FAQ, there are code block placeholders.
-
-Now Resources and Further Reading -> "## Recursos y lecturas adicionales"
-
-List with links: translate link text.
-
-Now final lines: "Last Updated:", "Tested With:", "Author:" translate.
-
-Now produce final markdown.
-
-Make sure to keep all placeholders exactly.
-
-Let's craft final answer.# Extract PDF Annotations Java: Tutorial completo de GroupDocs
+# Extract PDF Annotations Java: Tutorial completo de GroupDocs
 
 ## Introducción
 

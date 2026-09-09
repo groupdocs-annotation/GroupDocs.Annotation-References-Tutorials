@@ -80,10 +80,6 @@ url: /ko/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java에서 PDF 보안 편집 – GroupDocs 튜토리얼
 
 Java에서 **보안 PDF 편집**이 필요하다면, 이 가이드는 바로 당신을 위한 것입니다. 법률 계약서를 정리하거나, 의료 기록에서 환자 식별자를 제거하거나, 기밀 비즈니스 데이터를 숨기고자 할 때, 이 튜토리얼은 GroupDocs.Annotation을 사용한 프로덕션 수준 솔루션을 단계별로 안내합니다. 환경 설정, 편집 주석 적용, 대량 파일 처리, 일반적인 함정 회피 방법을 확인하여 민감 데이터를 자신 있게 보호할 수 있습니다.
@@ -354,8 +350,3 @@ A: 예. Java 런타임이 파일 스트림에 접근할 수만 있다면—버�
 - [GroupDocs.Annotation Java로 암호 보호 PDF 로드](/annotation/java/advanced-features/)
 - [전체 가이드 - Java용 GroupDocs.Annotation으로 주석이 달린 PDF 저장 방법](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -82,10 +82,6 @@ url: /cs/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Bezpečné redigování PDF v Javě – GroupDocs tutoriál
 
 Pokud potřebujete **bezpečné redigování PDF** v Javě, jste na správném místě. Ať už čistíte právní smlouvy, odstraňujete identifikátory pacientů z lékařských záznamů nebo skrýváte důvěrná firemní data, tento tutoriál vás provede produkčně připraveným řešením s GroupDocs.Annotation. Ukážeme si, jak nastavit prostředí, aplikovat anotace redigování, zpracovávat soubory hromadně a vyhnout se běžným úskalím – abyste mohli chránit citlivá data s jistotou.
@@ -355,8 +351,3 @@ A: Ano. Pokud Java runtime může přistupovat k souborovému proudu – buď p�
 - [Načíst PDF v Javě s GroupDocs Annotation: Průvodce načítáním dokumentu](/annotation/java/document-loading/)
 - [Načíst PDF chráněné heslem s GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Kompletní průvodce – Jak uložit anotovaný PDF s GroupDocs.Annotation pro Javu](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -1,69 +1,142 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: Lär dig hur du lägger till pdf‑vattenstämpel på flera sidor i PDF-filer
-  i Java med GroupDocs.Annotation. Denna steg‑för‑steg‑handledning visar hur du lägger
-  till pdf‑vattenstämpel i Java med kodexempel, felsökningstips och bästa praxis.
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
+date: '2026-07-30'
+description: Lär dig hur du applicerar watermark på alla sidor i PDF-filer i Java
+  med GroupDocs.Annotation. Denna steg‑för‑steg‑handledning visar hur du lägger till
+  pdf watermark på flera sidor, med code examples, troubleshooting tips och best practices.
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
 linktitle: Java PDF Watermark Guide
+og_description: Applicera watermark på alla sidor i PDF-filer med GroupDocs.Annotation
+  för Java. Denna guide täcker pdf watermark på flera sidor, setup, code och troubleshooting
+  i en koncis handledning.
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: Applicera vattenstämpel på alla sidor – Java PDF Watermark Guide
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDF‑vattenstämpel – guide för vattenstämpel på flera PDF‑sidor
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: Applicera vattenstämpel på alla sidor – Java PDF Watermark Guide
 type: docs
 url: /sv/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
-# Java PDF‑vattenstämpel – guide för pdf‑vattenstämpel på flera sidor
+# Applicera vattenstämpel på alla sidor – Java PDF‑vattenstämpelguide
 
-Att lägga till en **pdf‑vattenstämpel på flera sidor** är ett vanligt krav när du behöver skydda, märka eller märka dokument i stora mängder. I den här handledningen får du se exakt hur du **lägger till pdf‑vattenstämpel java** med GroupDocs.Annotation, från projektuppsättning till avancerade anpassningar. Vi går igenom varje steg, förklarar varför varje inställning finns och ger dig praktiska tips för att undvika de vanliga fallgroparna.
+I den här omfattande handledningen lär du dig **hur man applicerar vattenstämpel på alla sidor** till ett PDF‑dokument med Java och GroupDocs.Annotation. Oavsett om du behöver skydda konfidentiella rapporter, märka marknadsförings‑PDF‑er eller lägga till en “CONFIDENTIAL”-stämpel över hela filen, visar stegen nedan hur du gör allt—from Maven‑setup till avancerad anpassning—så att du kan implementera en pålitlig lösning på några minuter.
 
 ## Snabba svar
-- **Vilket bibliotek kan lägga till pdf‑vattenstämpel på flera sidor i Java?** GroupDocs.Annotation för Java.  
+- **Vilket bibliotek kan lägga till pdf‑vattenstämpel på flera sidor i Java?** GroupDocs.Annotation for Java.  
 - **Behöver jag en licens?** Ja, en gratis provversion fungerar för utveckling; en full licens krävs för produktion.  
-- **Kan jag vattenstämpla alla sidor på en gång?** Ja – skapa en vattenstämpel‑annotation för varje sida i en loop.  
+- **Kan jag vattenstämpla alla sidor på en gång?** Ja – skapa en vattenstämplings‑annotation för varje sida i en loop.  
 - **Vilken Java‑version krävs?** JDK 8+ (JDK 11+ rekommenderas).  
-- **Hur styr jag opacitet?** Använd `setOpacity(double)` där 0,0 är helt genomskinlig och 1,0 är helt ogenomskinlig.
+- **Hur styr jag opaciteten?** Använd `setOpacity(double)` där 0,0 är helt genomskinlig och 1,0 är helt ogenomskinlig.
 
 ## Varför du behöver PDF‑vattenstämplar (och hur Java gör det enkelt)
 
-Har du någonsin haft dina viktiga dokument delade utan tillstånd? Eller behövt märka ditt företags PDF‑filer men inte vetat var du ska börja? Du är inte ensam. Att lägga till vattenstämplar i PDF‑filer är ett av de vanligaste behoven för dokument‑säkerhet och varumärkesbyggande som utvecklare möter idag.
+Har du någonsin oroat dig för att en konfidentiell PDF kan delas utan ditt tillstånd? Eller behövt ett snabbt sätt att märka varje sida i en försäljningsbroschyr? Att lägga till vattenstämplar programatiskt eliminerar manuellt arbete, garanterar konsekvens och förstärker dokumentets säkerhet. Med Java och GroupDocs.Annotation—ett av de mest robusta **java add watermark pdf**‑biblioteken—får du fin‑granulär kontroll över placering, rotation, färg och opacitet, samtidigt som du hanterar stora filer effektivt.
 
-Oavsett om du skyddar känsliga affärsdokument, varumärker marknadsföringsmaterial eller bara vill förhindra obehörig spridning, kan programmatisk tillsats av vattenstämplar spara dig timmar av manuellt arbete. Och med Java och rätt bibliotek är det förvånansvärt enkelt.
-
-I den här guiden lär du dig hur du lägger till professionella vattenstämplar i PDF‑filer med GroupDocs.Annotation för Java – ett av de mest pålitliga Java‑vattenstämpel‑biblioteken som finns. Vi täcker allt från grundläggande installation till avancerad anpassning, samt vanliga fallgropar och hur du undviker dem.
-
-**Vad du kommer att behärska när du är klar:**
-- Installera GroupDocs.Annotation för Java‑vattenstämplar  
-- Skapa anpassade vattenstämpel‑annotationer med full kontroll  
-- Felsöka vanliga problem med vattenstämpel‑implementering  
-- Optimera din vattenstämpelkod för produktionsbruk  
+**Vad du kommer att behärska efter den här guiden:**
+- Konfigurera GroupDocs.Annotation för Java‑vattenstämplar  
+- Skapa anpassade vattenstämplings‑annotationer som gäller för **alla sidor**  
+- Hantera stora PDF‑filer utan att tömma minnet  
+- Felsöka vanliga fallgropar och optimera prestanda  
 
 ## Vad är en PDF‑vattenstämpel och varför använda den på flera sidor?
 
-En PDF‑vattenstämpel är ett överlägg som ligger ovanpå dokumentets innehåll utan att ändra den ursprungliga texten. Genom att använda **pdf‑vattenstämpel på flera sidor** kan du konsekvent märka varje sida med ett varumärke, en konfidentialitetsnotering eller en versionsetikett, så att skyddet följer med hela dokumentet.
+En PDF‑vattenstämpel är ett överlägg som visas ovanpå dokumentets innehåll utan att ändra den underliggande texten eller bilderna. Att applicera en vattenstämpel på **alla sidor** säkerställer att varje sida bär samma varumärke eller konfidentialitetsmeddelande, vilket förhindrar oavsiktlig distribution av omärkta sidor.
 
 ## Förutsättningar
 
 ### Grundläggande krav
+- **Java‑miljö:** JDK 8 eller högre (JDK 11+ rekommenderas), Maven 3.6+, valfri IDE (IntelliJ, Eclipse, VS Code).  
+- **Kunskapsförutsättningar:** Grundläggande Java‑syntax, fil‑I/O, Maven‑beroendehantering.  
+- **Projektbehörigheter:** Skrivbehörighet till utmatningskatalogen och tillräckligt med RAM för stora PDF‑filer (≥ 4 GB rekommenderas för filer med > 200 sidor).
 
-- **Java‑miljö:** JDK 8 eller högre (JDK 11+ rekommenderas), Maven 3.6+, valfri IDE.  
-- **Kunskapsförutsättningar:** Grundläggande Java, fil‑I/O, Maven‑beroenden.  
-- **Projektuppsättning:** Skrivbehörighet till målmappen och tillräckligt med RAM för stora PDF‑filer.
-
-## Installera din Java‑PDF‑vattenstämpel‑miljö
+## Konfigurera din Java PDF‑vattenstämpelmiljö
 
 ### Lägg till GroupDocs.Annotation i ditt projekt
 
-Det första steget för att lägga till vattenstämplar i PDF‑filer i Java är att konfigurera GroupDocs.Annotation‑biblioteket korrekt. Här är Maven‑inställningen som faktiskt fungerar:
+Börja med att lägga till GroupDocs.Annotation Maven‑artefakten. Detta beroende hämtar alla nödvändiga binärer och transitiva bibliotek.
 
+**Definition:** Maven‑elementet `<dependency>` deklarerar GroupDocs.Annotation‑biblioteket för ditt projekt, så att kompilatorn kan hitta JAR‑filerna under byggtiden.  
+
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -81,20 +154,26 @@ Det första steget för att lägga till vattenstämplar i PDF‑filer i Java är
 </dependencies>
 ```
 
-**Proffstips:** Använd alltid den senaste versionen för buggfixar och prestandaförbättringar. Versionen ovan är aktuell från 2025.
+**Proffstips:** Använd alltid den senaste släppta versionen (exemplet visar 25.2, den senaste per 2025) för att dra nytta av buggfixar och prestandaförbättringar.
 
-### Skaffa din licens i ordning
+### Skaffa din licens
 
-Det här är något som många handledningar hoppar över – du behöver en korrekt licens för produktionsbruk. Här är dina alternativ:
+Du behöver en giltig licens för produktionsdistributioner. Välj det alternativ som passar din tidsplan:
 
-1. **Gratis provversion:** Perfekt för testning och utveckling. Ladda ner från [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-2. **Tillfällig licens:** Få full funktionalitet för utvärdering. Hämta en från [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
-3. **Full licens:** För produktionsapplikationer. Köp från [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)  
+1. **Free Trial:** Idealiskt för utveckling och testning. Ladda ner från [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+2. **Temporary License:** Full funktionalitet för utvärdering. Skaffa en från [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
+3. **Full License:** Krävs för kommersiell användning. Köp via [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
 
-### Grundläggande installation som faktiskt fungerar
+### Grundläggande konfiguration som faktiskt fungerar
 
-När du har ordnat dina beroenden, så här initierar du biblioteket korrekt:
+Efter att ha lagt till beroendet och skaffat en licensfil, initiera `Annotator`‑objektet. Detta objekt laddar PDF‑filen i minnet och tillhandahåller API‑et för att skapa annotationer.
 
+**Definition:** `Annotator` är huvudingångspunkten för GroupDocs.Annotation; den hanterar PDF‑laddning, skapande av annotationer och sparande.  
+
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -110,20 +189,21 @@ public class WatermarkSetup {
 }
 ```
 
-**Vanligt misstag att undvika:** Att glömma att anropa `dispose()` kan leda till minnesläckor, särskilt när du bearbetar flera dokument.
+**Vanligt misstag att undvika:** Glömma att anropa `annotator.dispose()` efter bearbetning; detta kan orsaka minnesläckor, särskilt när man hanterar många dokument i en batch.
 
-## Så här lägger du till pdf‑vattenstämpel på flera sidor med Java
+## Så applicerar du vattenstämpel på alla sidor i Java
 
-Nu till huvuddelen – att faktiskt lägga till vattenstämplarna! GroupDocs.Annotation‑biblioteket gör detta förvånansvärt enkelt när du väl förstår komponenterna.
+För att applicera en vattenstämpel på varje sida skapar du en `WatermarkAnnotation`, sätter dess visuella egenskaper och lägger sedan till en separat instans av denna annotation på varje sida i en loop. Loopen använder dokumentets sidantal, tilldelar rätt sidnummer och sparar slutligen den modifierade PDF‑filen.
 
-### Förstå vattenstämpel‑annotationer
+### Förstå vattenstämplings‑annotationer
 
-Tänk på vattenstämpel‑annotationer som överläggslager i din PDF. De kan innehålla text, ha anpassad positionering, färger, opacitetsnivåer och till och med rotationsvinklar. Till skillnad från enkla texttillägg är vattenstämpel‑annotationer specifikt designade för att vara synliga markörer som inte stör dokumentets kärninnehåll.
+`WatermarkAnnotation` representerar ett överläggslager som kan innehålla text, anpassade färger, rotation och opacitet. Till skillnad från en enkel texttillägg lagras den som en annotation, vilket gör den avtagbar eller redigerbar senare.
 
-### Steg 1: Importera rätt klasser
+**Definition:** `WatermarkAnnotation` är en klass i GroupDocs.Annotation som kapslar in alla visuella egenskaper för ett vattenstämplings‑överlägg.  
 
-Först, låt oss ordna alla våra imports. Detta är de väsentliga klasserna du kommer att behöva:
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -133,14 +213,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-Varje klass har en specifik roll:
-- `Annotator`: Ditt huvudgränssnitt för att arbeta med PDF‑filen  
-- `WatermarkAnnotation`: Vattenstämpel‑objektet du anpassar  
-- `Rectangle`: Definierar var din vattenstämpel visas och dess storlek  
-- `Reply`: Valfria kommentarer eller noteringar om vattenstämpeln  
+### Steg 1: Importera de nödvändiga klasserna
 
-### Steg 2: Initiera din PDF för vattenstämpling
+Innan du kan använda API‑et, importera de nödvändiga klasserna.
 
+**Definition:** Import‑satserna tar in de behövda GroupDocs.Annotation‑klasserna i den aktuella Java‑filen, så att du kan referera till dem utan fullständiga namn.  
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -148,12 +232,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**Viktigt att notera:** `Annotator`‑objektet laddar din PDF i minnet, så se till att du har tillräckligt med RAM för stora filer. För PDF‑filer över 50 MB, överväg att bearbeta i mindre batcher.
+### Steg 2: Ladda PDF‑dokumentet
 
-### Steg 3: Skapa valfria Reply‑objekt
+Skapa `Annotator`‑instansen som pekar på din käll‑PDF.
 
-Även om de inte är obligatoriska kan svar vara användbara för dokumentspårning eller godkännandeflöden:
+**Definition:** `Annotator`‑konstruktorn laddar PDF‑filen till ett hanterbart objekt, vilket förbereder den för annoteringsoperationer.  
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -164,12 +251,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-Dessa svar blir en del av annoteringens metadata och kan visas i PDF‑läsare som stödjer annoteringskommentarer.
+> **Proffstips:** För PDF‑filer större än 50 MB, överväg att öka JVM‑heapen (`-Xmx4g`) och bearbeta filer sekventiellt för att hålla minnesanvändningen låg.
 
-### Steg 4: Konfigurera din vattenstämpel (det roliga)
+### Steg 3: (Valfritt) Förbered svarmetadata
 
-Här får du vara kreativ. Vattenstämpel‑konfigurationen styr allt om hur din vattenstämpel ser ut:
+Om du behöver bifoga kommentarer eller godkännandebemärkningar till vattenstämpeln, skapa ett `Reply`‑objekt.
 
+**Definition:** `Reply` lagrar användargenererade kommentarer som följer en annotation, användbart för revisionsspår.  
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -188,27 +281,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**Låt oss gå igenom inställningarna:**
-- `setAngle(75.0)`: Rotera vattenstämpeln 75 grader. Perfekt för diagonala “CONFIDENTIAL”-stämplar.  
-- `setBox(new Rectangle(200, 200, 100, 50))`: Position (200, 200) med bredd 100 och höjd 50.  
-- `setFontColor(65535)`: ARGB‑färgformat – gult i detta fall.  
-- `setOpacity(0.7)`: 70 % opacitet – synlig men inte överväldigande.  
-- `setPageNumber(0)`: Gäller den första sidan (0‑indexerad).  
+### Steg 4: Konfigurera vattenstämpelns utseende
 
-### Steg 5: Tillämpa och spara din vattenstämplade PDF
+Ställ in de visuella egenskaperna som text, färg, rotation, storlek och opacitet.
 
+**Definition:** Följande set‑metoder anpassar vattenstämpelns utseende och placering på varje sida.  
+
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-Klart! Din PDF har nu en professionell vattenstämpel. `save()`‑metoden skapar en ny PDF‑fil med vattenstämpeln applicerad, medan originalet förblir oförändrat.
+### Steg 5: Loopa igenom alla sidor och applicera vattenstämpeln
 
-## Så här lägger du till pdf‑vattenstämpel på flera sidor (alla sidor)
+För att **applicera vattenstämpel på alla sidor**, iterera över dokumentets sidantal och tilldela annotationen till varje sida.
 
-Som standard gäller en vattenstämpel bara en sida. För att **lägga till pdf‑vattenstämpel på flera sidor**, loopa igenom dokumentets sidor och lägg till en separat `WatermarkAnnotation` för varje:
+`annotator.getPageCount()` returnerar det totala antalet sidor, vilket möjliggör en loop som skapar en separat `WatermarkAnnotation` per sida.  
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -229,12 +335,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-Detta kodexempel visar exakt det mönster du behöver för att **lägga till pdf‑vattenstämpel på flera sidor** på ett effektivt sätt.
+### Steg 6: Spara den vattenstämplade PDF‑filen
 
-## Vanliga problem och hur du löser dem
+Slutligen, skriv ändringarna till en ny fil. Den ursprungliga PDF‑filen förblir orörd.
 
-### ”File Not Found”-fel
+`annotator.save("output.pdf")` sparar alla tillagda annotationer i en ny PDF‑fil.  
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -250,36 +360,18 @@ try {
 }
 ```
 
-- Dubbelkolla absoluta sökvägar.  
-- Verifiera läs‑/skrivrättigheter.  
-- Säkerställ att målmappen finns.
+Det är hela flödet för **applicera vattenstämpel på alla sidor** med GroupDocs.Annotation för Java.
 
-### Minnesproblem med stora PDF‑filer
+## Vanliga problem och hur du löser dem
 
-- Anropa alltid `dispose()`.  
-- Bearbeta filer en i taget, inte parallellt.  
-- Öka JVM‑heapen (`-Xmx4g` för mycket stora dokument).  
-
-### Vattenstämpeln visas inte där du förväntar dig
-
-- Kom ihåg att PDF‑koordinater startar från **nedre vänstra** hörnet.  
-- Testa med olika sidstorlekar; A4 vs. Letter kan flytta positioner.  
-- Justera opaciteten om vattenstämpeln ser blek ut.
-
-### Problem med teckensnittsfärg
-
-ARGB‑värden du kan använda:
-- Röd: `16711680`  
-- Blå: `255`  
-- Grön: `65280`  
-- Svart: `0`  
-- Vit: `16777215`  
-- Gul: `65535` (som i vårt exempel)
-
-## Verkliga användningsfall för Java PDF‑vattenstämplar
-
-### Skydd av affärsdokument
-
+### ”Fil ej funnen” fel
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -290,8 +382,36 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### Varumärkesbyggande av marknadsföringsmaterial
+- Verifiera absoluta sökvägar och säkerställ att filen finns.  
+- Kontrollera läs‑/skrivrättigheter i både in‑ och utmatningskataloger.  
+- Skapa utmatningsmappen i förväg om den inte finns.
 
+### Minnesproblem med stora PDF‑filer
+- Anropa alltid `annotator.dispose()` efter bearbetning.  
+- Bearbeta PDF‑filer en åt gången; undvik parallella strömmar om inte biblioteket är bevisat trådsäkert.  
+- Öka JVM‑heapen (`-Xmx4g` eller högre) för filer som överstiger 200 sidor.
+
+### Vattenstämpelns placering är inte som förväntat
+- PDF‑koordinatursprunget är **nedre‑vänster**; justera `Rectangle`‑värdena därefter.  
+- Testa med olika sidstorlekar (A4 vs. Letter) eftersom dimensionerna påverkar placeringen.  
+- Använd `setOpacity(0.5)` om vattenstämpeln är för svag på högkontrastbakgrunder.
+
+### Problem med teckensnittsfärg
+GroupDocs.Annotation förväntar sig ARGB‑heltalsvärden. Vanliga färger:
+- Röd: `16711680`  
+- Blå: `255`  
+- Grön: `65280`  
+- Svart: `0`  
+- Vit: `16777215`  
+- Gul: `65535` (används i exemplet)
+
+## Verkliga användningsfall för Java PDF‑vattenstämplar
+
+### Skydd av affärsdokument
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -301,8 +421,12 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### Versionskontroll för dokument
-
+### Varumärkesmarknadsföringsmaterial
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -311,10 +435,11 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## Tips för prestandaoptimering
-
-### Bästa praxis för minneshantering
-
+### Versionskontroll för dokument
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -332,14 +457,14 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### Strategier för batch‑bearbetning
+## Tips för prestandaoptimering
 
-- Bearbeta dokument sekventiellt för att hålla minnesanvändningen låg.  
-- Använd en förloppsindikator för långa körningar.  
-- Undvik parallell bearbetning om inte bibliotekets trådsäkerhet är bekräftad.
-
-### Tips för kodorganisation
-
+### Bästa praxis för minneshantering
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -363,23 +488,37 @@ public class WatermarkTemplates {
 }
 ```
 
+- Bearbeta dokument sekventiellt för att hålla heap‑avtrycket lågt.  
+- Använd en förloppsindikator för batchjobb för att övervaka minnesanvändning.  
+- Undvik att ladda hela PDF‑filen i minnet när endast ett delmängd av sidorna behöver vattenstämplas; biblioteket stödjer sidnivåladdning.
+
+### Tips för kodorganisation
+- Inkapsla skapandet av vattenstämpel i en hjälpfunktion: `createWatermark(String text, double opacity, int angle)`.  
+- Håll konfiguration (färger, teckensnitt, opacitet) externt i en properties‑fil för enkel justering i olika miljöer.
+
 ## Vanliga frågor
 
 **Q: Hur lägger jag till vattenstämplar på flera sidor i en PDF?**  
-A: Använd en loop över dokumentets sidantal och skapa en `WatermarkAnnotation` för varje sida, sätt `setPageNumber(i)` inuti loopen.
+A: Loopa över dokumentets sidantal, klona en konfigurerad `WatermarkAnnotation` för varje sida, sätt `setPageNumber(i)`, och lägg till den med `annotator.add()`.
 
 **Q: Kan jag använda anpassade teckensnitt för mina vattenstämplar?**  
-A: GroupDocs.Annotation använder systeminstallerade teckensnitt. Ange en teckensnittsfamilj som finns på värddatorn; biblioteket faller tillbaka på ett standardteckensnitt om det angivna inte finns.
+A: GroupDocs.Annotation använder teckensnitt som är installerade på värd‑OS. Ange en teckensnittsfamilj som finns på servern; biblioteket faller tillbaka till ett standardteckensnitt om teckensnittet inte hittas.
 
 **Q: Vilken opacitetsinställning fungerar bäst för professionella vattenstämplar?**  
-A: Mellan **0,3** och **0,7** är idealiskt – tillräckligt låg för att innehållet ska vara läsbart, tillräckligt hög för att märkas.
+A: Mellan **0,3** och **0,7** ger en balans—tillräckligt synlig för att märkas men ändå låter underliggande innehåll läsas.
 
-**Q: Hur hanterar jag mycket stora PDF‑filer?**  
-A: Öka JVM‑heapen (`-Xmx4g` eller mer), bearbeta filer en i taget och anropa alltid `dispose()` efter varje dokument.
+**Q: Hur bör jag hantera mycket stora PDF‑filer?**  
+A: Öka JVM‑heapen (`-Xmx4g` eller mer), bearbeta filer en åt gången, och anropa alltid `dispose()` efter varje dokument för att frigöra inhemska resurser.
 
 **Q: Är det möjligt att ta bort eller ändra befintliga vattenstämplar?**  
-A: Ja – hämta befintliga annotationer med `annotator.get()`, filtrera på `WatermarkAnnotation` och redigera eller radera vid behov:
+A: Ja – hämta annotationer med `annotator.get()`, filtrera för `WatermarkAnnotation`, och redigera eller ta bort efter behov:  
 
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
@@ -396,6 +535,12 @@ List<AnnotationBase> annotations = annotator.get();
 
 ---
 
-**Senast uppdaterad:** 2026-02-10  
-**Testat med:** GroupDocs.Annotation 25.2  
-**Författare:** GroupDocs
+**Senast uppdaterad:** 2026-07-30  
+**Testad med:** GroupDocs.Annotation 25.2  
+**Författare:** GroupDocs  
+
+## Relaterade handledningar
+
+- [Ladda PDF Java med GroupDocs Annotation: Dokumentladdningsguide](/annotation/java/document-loading/)
+- [Lägg till PDF‑annotation Java – Komplett GroupDocs‑guide](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Hur man lägger till bild i PDF med Java och GroupDocs Annotation](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)

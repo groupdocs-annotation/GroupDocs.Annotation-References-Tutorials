@@ -1,77 +1,69 @@
 ---
 categories:
 - Java Development
-date: '2025-12-17'
-description: Lär dig hur du skapar granskningskommentarer PDF med GroupDocs.Annotation
-  för Java. Denna steg‑för‑steg‑guide täcker installation, implementering och bästa
-  praxis för utvecklare.
+date: '2026-03-27'
+description: Lär dig hur du skapar PDF‑annotationer i Java med GroupDocs.Annotation.
+  Denna steg‑för‑steg‑guide visar hur du programatiskt kan annotera PDF‑filer, lägga
+  till granskningskommentarer och följa bästa praxis.
 keywords: PDF annotation Java tutorial, GroupDocs annotation Java setup, Java PDF
   markup library, add annotations PDF programmatically, GroupDocs annotation tutorial
   for beginners
-lastmod: '2025-12-17'
+lastmod: '2026-03-27'
 tags:
 - pdf-annotation
 - groupdocs
 - java-libraries
 - document-processing
-title: Skapa PDF med granskningskommentarer med GroupDocs.Annotation Java
+title: Skapa PDF‑anteckningar i Java med GroupDocs.Annotation
 type: docs
 url: /sv/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
 
-# PDF‑annotation Java‑handledning
+# PDF‑annotering Java‑handledning
 
-## Varför PDF‑annotation är viktigt i modern utveckling
-
-Har du någonsin behövt programatiskt märka upp PDF‑dokument i din Java‑applikation? Oavsett om du bygger ett dokumentgranskningssystem, skapar en e‑learning‑plattform eller utvecklar samarbetsverktyg, så finns PDF‑annotation överallt. Utmaningen? De flesta lösningar är antingen för komplexa för enkla behov eller för begränsade för företagskrav.
-
-I den här handledningen lär du dig hur du **skapar granskningskommentarer i PDF** med GroupDocs.Annotation för Java, så att du kan lägga till professionell markup i vilket dokument som helst med bara några rader kod.
-
-**Vad gör den här guiden annorlunda?** Vi täcker inte bara “hur” utan också “varför” och “när”, samt alla de fallgropar som andra handledningar ofta hoppar över.
+Har du någonsin behövt **create pdf annotations java** i din Java‑applikation? Oavsett om du bygger ett dokumentgranskningssystem, en e‑learning‑plattform eller ett samarbetsverktyg, är det vanligt att lägga till markeringar programatiskt. I den här guiden går vi igenom hur du **programmatically annotate PDF** filer med GroupDocs.Annotation, och vi visar också hur du **add review comments pdf** för ett komplett granskningsflöde.
 
 ## Snabba svar
-- **Vad är det primära syftet med GroupDocs.Annotation?** Att lägga till, redigera och hantera annotationer i många dokumentformat från Java.
-- **Vilken annotationstyp är bäst för granskningskommentarer?** AreaAnnotation med ett anpassat meddelande och användarmetadata.
-- **Behöver jag en licens för utveckling?** En gratis provversion fungerar för testning; en full licens krävs för produktion.
-- **Kan jag bearbeta PDF‑filer som är större än 50 MB?** Ja – använd streaming, batch‑bearbetning och korrekt disponering för att hålla minnesanvändningen låg.
-- **Är biblioteket trådsäkert?** Instanser är inte trådsäkra; skapa en separat Annotator per tråd.
+- **Vad är det primära syftet med GroupDocs.Annotation?** Att lägga till, redigera och hantera annoteringar i många dokumentformat från Java.  
+- **Vilken annoteringstyp är bäst för granskningskommentarer?** `AreaAnnotation` med ett anpassat meddelande och användarmetadata.  
+- **Behöver jag en licens för utveckling?** En gratis provperiod fungerar för testning; en full licens krävs för produktion.  
+- **Kan jag bearbeta PDF‑filer större än 50 MB?** Ja—använd streaming, batch‑bearbetning och korrekt disponering för att hålla minnesanvändningen låg.  
+- **Är biblioteket trådsäkert?** Instanser är inte trådsäkra; skapa en separat `Annotator` per tråd.
 
 ## Varför GroupDocs Annotation sticker ut
 
-Innan vi dyker ner i koden, låt oss prata om varför GroupDocs.Annotation kan vara ditt bästa val för Java‑PDF‑annotationsprojekt.
+Innan vi dyker ner i koden, låt oss prata om varför GroupDocs.Annotation kan vara ditt bästa val för Java‑PDF‑annoteringsprojekt.
 
-### Nyckelfördelar jämfört med alternativ
+### Viktiga fördelar jämfört med alternativ
 
-**Omfattande formatstöd**: Medan många bibliotek fokuserar enbart på PDF, hanterar GroupDocs Word‑dokument, PowerPoint‑presentationer, bilder och mer. Det betyder ett enda API för alla dina annoteringsbehov.
+**Omfattande formatstöd** – Medan många bibliotek fokuserar enbart på PDF‑filer, hanterar GroupDocs Word‑dokument, PowerPoint‑presentationer, bilder och mer. Ett API för alla dina annoteringsbehov.
 
-**Rika annotationstyper**: Utöver enkla markeringar får du pilar, vattenstämplar, textutbyten och anpassade former – perfekt för olika användningsfall.
+**Rika annoteringstyper** – Utöver enkla markeringar får du pilar, vattenstämplar, textersättningar och anpassade former – perfekt för olika användningsfall.
 
-**Företags‑klart**: Inbyggt stöd för licensiering, skalbarhet och integration med befintliga Java‑arkitekturer.
+**Företagsklar** – Inbyggt stöd för licensiering, skalbarhet och integration med befintliga Java‑arkitekturer.
 
-**Aktiv utveckling**: Regelbundna uppdateringar och ett responsivt support‑community (tro mig, du kommer att uppskatta detta när du stöter på kantfall).
+**Aktiv utveckling** – Regelbundna uppdateringar och ett responsivt supportcommunity (lita på mig, du kommer att uppskatta detta när du stöter på kantfall).
 
 ## Förutsättningar och installationskrav
 
 ### Vad du behöver innan du börjar
 
-Låt oss först få bort det tråkiga. Här är din checklista:
+**Utvecklingsmiljö**
+- JDK 8 eller senare (Java 11+ rekommenderas för bättre prestanda)  
+- Din favorit‑IDE (IntelliJ IDEA, Eclipse eller VS Code med Java‑tillägg)  
+- Maven eller Gradle för beroendehantering  
 
-**Utvecklingsmiljö:**
-- JDK 8 eller senare (Java 11+ rekommenderas för bättre prestanda)
-- Din favorit‑IDE (IntelliJ IDEA, Eclipse eller VS Code med Java‑tillägg)
-- Maven eller Gradle för beroendehantering
+**Kunskapsförutsättningar**
+- Grundläggande Java‑programmering (om du kan slingor och klasser, är du klar)  
+- Bekantskap med fil‑I/O‑operationer  
+- Förståelse för Maven‑beroenden (vi går igenom detta ändå)  
 
-**Kunskapsförutsättningar:**
-- Grundläggande Java‑programmering (om du kan slingor och klasser är du klar)
-- Bekantskap med fil‑I/O‑operationer
-- Förståelse för Maven‑beroenden (vi går igenom detta ändå)
+**Valfritt men användbart**
+- Grundläggande förståelse för PDF‑struktur (hjälper vid felsökning)  
+- Erfarenhet av andra Java‑bibliotek (gör koncepten lättare att förstå)
 
-**Valfritt men hjälpsamt:**
-- Grundläggande förståelse för PDF‑struktur (bra för felsökning)
-- Erfarenhet av andra Java‑bibliotek (gör koncepten lättare att greppa)
-
-### Installera GroupDocs.Annotation för Java
+### Så här konfigurerar du GroupDocs.Annotation för Java
 
 #### Maven‑konfiguration
 
@@ -97,15 +89,15 @@ Lägg till GroupDocs‑arkivet och beroendet i din `pom.xml`. Här är exakt vad
 
 **Proffstips**: Kontrollera alltid den senaste versionen på GroupDocs‑webbplatsen. Version 25.2 är aktuell vid skrivande stund, men nyare versioner innehåller ofta prestandaförbättringar och buggfixar.
 
-#### Licensalternativ (och vad de egentligen betyder)
+#### Licensalternativ (och vad de faktiskt betyder)
 
-**Gratis provversion**: Perfekt för första utvärderingen och små projekt. Du får vattenstämplat resultat, vilket är okej för testning men inte för produktion.
+**Gratis provperiod** – Perfekt för initial utvärdering och små projekt. Du får vattenstämplat resultat, vilket är okej för testning men inte för produktion.
 
-**Tillfällig licens**: Idealiskt för utvecklingsfaser. Skaffa en [här](https://purchase.groupdocs.com/temporary-license/) för 30 dagars obegränsad åtkomst.
+**Tillfällig licens** – Idealisk för utvecklingsfaser. Skaffa en [här](https://purchase.groupdocs.com/temporary-license/) för 30 dagars obegränsad åtkomst.
 
-**Full licens**: Krävs för produktion. Priset varierar beroende på driftsättningsmodell och skala.
+**Full licens** – Krävs för produktion. Prissättningen varierar beroende på implementeringstyp och skala.
 
-#### Första installation och verifiering
+#### Initial konfiguration och verifiering
 
 När dina beroenden är på plats, verifiera att allt fungerar med detta enkla test:
 
@@ -126,9 +118,9 @@ public class SetupVerification {
 }
 ```
 
-## Så skapar du granskningskommentarer i PDF med GroupDocs.Annotation
+## Hur man skapar pdf‑annoteringar java med GroupDocs.Annotation
 
-### Ladda dokument: mer än bara filsökvägar
+### Laddar dokument: mer än bara filsökvägar
 
 #### Grundläggande dokumentladdning
 
@@ -142,7 +134,7 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/output_annotated.pdf";
 final Annotator annotator = new Annotator(INPUT_PDF);
 ```
 
-**Verklig kontext**: I produktionsapplikationer kommer dessa sökvägar ofta från användaruppladdningar, databasinlägg eller molnlagrings‑URL:er. Det fina med GroupDocs är att det hanterar lokala filer, strömmar och URL:er sömlöst.
+**Verklig kontext**: I produktionsapplikationer kommer dessa sökvägar ofta från användaruppladdningar, databasposter eller molnlagrings‑URL:er. Det fina med GroupDocs är att det hanterar lokala filer, strömmar och URL:er sömlöst.
 
 #### Hantera olika inmatningskällor
 
@@ -158,11 +150,11 @@ Annotator annotatorFromStream = new Annotator(inputStream);
 inputStream.close();
 ```
 
-### Lägg till din första annotation
+### Lägg till din första annotering
 
-#### Förstå Area‑annotationer
+#### Förstå Area‑annoteringar
 
-Area‑annotationer är perfekta för att markera regioner, framhäva viktiga avsnitt eller skapa visuella kommentarer. Tänk på dem som digitala post‑its med stil.
+Area‑annoteringar är perfekta för att markera regioner, viktiga avsnitt eller skapa visuella anmärkningar. Tänk på dem som digitala post‑its med stil.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -186,6 +178,7 @@ annotator.add(area);
 #### Praktiska annoteringsexempel
 
 **Markera viktig text**:
+
 ```java
 // Create a semi‑transparent highlight
 AreaAnnotation highlight = new AreaAnnotation();
@@ -195,6 +188,7 @@ highlight.setMessage("Important clause - review carefully");
 ```
 
 **Skapa granskningskommentarer**:
+
 ```java
 // Add a comment annotation with custom styling
 AreaAnnotation comment = new AreaAnnotation();
@@ -240,16 +234,16 @@ public void annotateDocument(String inputPath, String outputPath) {
 }
 ```
 
-## Vanliga fallgropar och hur du undviker dem
+## Vanliga fallgropar och hur man undviker dem
 
-### Problem med filsökväg och behörigheter
+### Fil‑sökvägs‑ och behörighetsproblem
 
 **Problemet**: Fel som “File not found” eller “Access denied” är frustrerande vanliga.
 
 **Lösningarna**:
 - Använd alltid absoluta sökvägar under utveckling
 - Kontrollera filbehörigheter innan bearbetning
-- Validera att inmatningsfiler finns och är läsbara
+- Validera att inmatningsfiler finns och är läsbara  
 
 ```java
 public boolean validateInputFile(String filePath) {
@@ -292,7 +286,7 @@ try {
 
 ### Förvirring kring koordinatsystemet
 
-**Problemet**: Annotationer visas på fel positioner eller utanför skärmen.
+**Problemet**: Annoteringar visas på fel positioner eller utanför skärmen.
 
 **Lösningen**: Kom ihåg PDF‑koordinatsystemet och testa med kända positioner:
 
@@ -308,12 +302,12 @@ Rectangle testPosition = new Rectangle(50, 50, 100, 50);
 
 ### Dokumentgranskningsarbetsflöden
 
-**Scenario**: Juridiska firmor som granskar kontrakt inför kundmöten.
+**Scenario**: Juridiska firmor granskar kontrakt före kundmöten.
 
 **Implementeringsstrategi**:
 - Olika annoteringsfärger för olika granskare
 - Tidsstämpel och användarspårning för revisionsspår
-- Exportmöjligheter för kunddistribution
+- Exportmöjligheter för kunddistribution  
 
 ```java
 public void addReviewAnnotation(Annotator annotator, String reviewerName, 
@@ -331,21 +325,20 @@ public void addReviewAnnotation(Annotator annotator, String reviewerName,
 
 ### Skapande av utbildningsinnehåll
 
-**Scenario**: E‑learning‑plattformar som markerar nyckelbegrepp i studiematerial.
-
-**Varför det fungerar**: Visuella annotationer ökar förståelse och minne, särskilt för tekniska dokument.
+**Scenario**: E‑learning‑plattformar markerar nyckelkoncept i studiematerial.  
+**Varför detta fungerar**: Visuella annoteringar ökar förståelse och retention, särskilt för tekniska dokument.
 
 ### Kvalitetssäkringsdokumentation
 
-**Scenario**: Tillverkningsföretag som märker upp tekniska ritningar och specifikationer.
-
-**Fördelar**: Standardiserad markup över team, versionsspårning och tydlig kommunikation av förändringar.
+**Scenario**: Tillverkningsföretag markerar tekniska ritningar och specifikationer.  
+**Fördelar**: Standardiserad markering över team, revisionsspårning och tydlig kommunikation av förändringar.
 
 ## Tips för prestandaoptimering
 
 ### Hantera stora dokument effektivt
 
 **Batch‑bearbetningsstrategi**:
+
 ```java
 public void processDocumentBatch(List<String> documentPaths) {
     for (String path : documentPaths) {
@@ -361,9 +354,8 @@ public void processDocumentBatch(List<String> documentPaths) {
 }
 ```
 
-### Övervaka minnesanvändning
+### Övervakning av minnesanvändning
 
-**Spåra applikationens minne**:
 ```java
 Runtime runtime = Runtime.getRuntime();
 long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
@@ -376,7 +368,7 @@ System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
 
 ### Överväganden för samtidig bearbetning
 
-**Trådsäkerhet**: GroupDocs.Annotation är inte trådsäkert per instans. Använd separata Annotator‑instanser för samtidig bearbetning:
+**Trådsäkerhet**: GroupDocs.Annotation är inte trådsäker per instans. Använd separata `Annotator`‑instanser för samtidig bearbetning:
 
 ```java
 public class ConcurrentAnnotationProcessor {
@@ -415,36 +407,29 @@ public void createComprehensiveAnnotation(Annotator annotator) {
 
 ### Dynamisk annotering baserad på innehåll
 
-Även om den här handledningen fokuserar på manuell placering av annotationer, kan du kombinera GroupDocs med text‑analysbibliotek för att automatiskt upptäcka och annotera specifika innehållsmönster.
+Även om den här handledningen fokuserar på manuell placering av annoteringar, kan du kombinera GroupDocs med text‑analysbibliotek för att automatiskt upptäcka och annotera specifika innehållsmönster.
 
 ## Felsökningsguide
 
 ### Vanliga felmeddelanden och lösningar
 
-**“Invalid license”‑fel**:
-- Verifiera licensfilens plats och format
-- Kontrollera licensens utgångsdatum
-- Säkerställ att licensen matchar din driftsättningsmodell
+**“Invalid license”‑fel** – Verifiera licensfilens plats, format och utgångsdatum. Säkerställ att licensen matchar din implementeringstyp.
 
-**“Unsupported file format”‑fel**:
-- Kontrollera att PDF‑filen inte är korrupt
-- Se om PDF‑filen är lösenordsskyddad
-- Säkerställ att filen inte är tom eller ofullständig
+**“Unsupported file format”‑fel** – Bekräfta att PDF‑filen inte är korrupt, inte lösenordsskyddad och inte har noll byte.
 
-**Prestandaproblem**:
-- Övervaka minnesanvändning och implementera korrekt disponering
-- Överväg att bearbeta dokument i batcher
-- Kontrollera om antivirusprogram skannar temporära filer
+**Prestandaproblem** – Övervaka minnesanvändning, implementera korrekt disponering och överväg batch‑bearbetning.
 
-### Debug‑tips
+### Tips för felsökning
 
 **Aktivera loggning**:
+
 ```java
 // Add to your application properties or logging configuration
 java.util.logging.Logger.getLogger("com.groupdocs").setLevel(Level.FINE);
 ```
 
 **Validera indata**:
+
 ```java
 public boolean validateAnnotationParameters(Rectangle box, int color) {
     if (box.getWidth() <= 0 || box.getHeight() <= 0) {
@@ -463,9 +448,8 @@ public boolean validateAnnotationParameters(Rectangle box, int color) {
 
 ## Vanliga frågor
 
-### Hur lägger jag till flera annotationer i en PDF på ett effektivt sätt?
-
-Anropa helt enkelt `annotator.add(annotation)` för varje annotation innan du sparar. GroupDocs batchar alla annotationer och applicerar dem när du anropar `save()`:
+**Q: Hur lägger jag till flera annoteringar i en enda PDF på ett effektivt sätt?**  
+A: Anropa helt enkelt `annotator.add(annotation)` för varje annotering innan du sparar. GroupDocs samlar alla annoteringar och applicerar dem när du anropar `save()`:
 
 ```java
 try (Annotator annotator = new Annotator("document.pdf")) {
@@ -476,13 +460,10 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 }
 ```
 
-### Vilka filformat stödjer GroupDocs.Annotation förutom PDF?
+**Q: Vilka filformat stödjer GroupDocs.Annotation förutom PDF?**  
+A: GroupDocs.Annotation stödjer över 50 format inklusive Word (DOC, DOCX), PowerPoint (PPT, PPTX), Excel (XLS, XLSX), bilder (JPEG, PNG, TIFF) och många fler. Se [documentation](https://docs.groupdocs.com/annotation/java/) för den kompletta listan.
 
-GroupDocs.Annotation stödjer över 50 format inklusive Word‑dokument (DOC, DOCX), PowerPoint‑presentationer (PPT, PPTX), Excel‑arbetsböcker (XLS, XLSX), bilder (JPEG, PNG, TIFF) och många fler. Se [dokumentationen](https://docs.groupdocs.com/annotation/java/) för den kompletta listan.
-
-### Hur hanterar jag lösenordsskyddade PDF‑filer?
-
-Använd `LoadOptions`‑parametern när du initierar Annotator:
+**Q: Hur hanterar jag lösenordsskyddade PDF‑filer?**  
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -490,9 +471,7 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator("protected.pdf", loadOptions);
 ```
 
-### Kan jag hämta och modifiera befintliga annotationer i en PDF?
-
-Ja! Du kan hämta befintliga annotationer och ändra dem:
+**Q: Kan jag hämta och modifiera befintliga annoteringar i en PDF?**  
 
 ```java
 try (Annotator annotator = new Annotator("annotated.pdf")) {
@@ -506,13 +485,10 @@ try (Annotator annotator = new Annotator("annotated.pdf")) {
 }
 ```
 
-### Vilka prestandakonsekvenser har bearbetning av stora PDF‑filer?
+**Q: Vilka prestandaimplikationer har bearbetning av stora PDF‑filer?**  
+A: Stora PDF‑filer (>50 MB) kräver noggrann minneshantering. Använd streaming när möjligt, bearbeta sidor individuellt om behövs, och disponera alltid resurser. Överväg att implementera förloppsspårning för användarfeedback under långa operationer.
 
-Stora PDF‑filer (>50 MB) kräver noggrann minneshantering. Använd streaming när det är möjligt, bearbeta sidor individuellt om det behövs och disponera alltid resurser. Överväg att implementera progress‑spårning för användarfeedback under långa operationer.
-
-### Hur hanterar jag samtidig dokumentbearbetning i en webbapplikation?
-
-Varje tråd behöver sin egen Annotator‑instans eftersom biblioteket inte är trådsäkert per instans. Använd ett trådpool‑system eller reaktiva programmeringsmönster:
+**Q: Hur hanterar jag samtidig dokumentbearbetning i en webbapplikation?**  
 
 ```java
 @Service
@@ -528,13 +504,10 @@ public class AnnotationService {
 }
 ```
 
-### Vad är det bästa sättet att felsöka problem med annoteringspositioner?
+**Q: Vad är det bästa sättet att felsöka problem med annoteringspositionering?**  
+A: Börja med kända koordinater och justera gradvis. De flesta standard‑PDF‑filer använder 612x792 punkter. Skapa en testannotering på (50, 50, 100, 50) först för att verifiera grundläggande funktionalitet, justera sedan baserat på ditt innehållslayout.
 
-Börja med kända koordinater och justera gradvis. De flesta standard‑PDF‑filer använder 612 × 792 punkter. Skapa en test‑annotation på (50, 50, 100, 50) först för att verifiera grundläggande funktionalitet, och justera sedan efter ditt layoutbehov.
-
-### Hur integrerar jag GroupDocs.Annotation med Spring Boot?
-
-Skapa en service‑komponent och använd dependency injection:
+**Q: Hur integrerar jag GroupDocs.Annotation med Spring Boot?**  
 
 ```java
 @Service
@@ -555,31 +528,33 @@ public class DocumentAnnotationService {
 ## Ytterligare FAQ
 
 **Q: Kan jag exportera annoterade PDF‑filer till andra format?**  
-A: Ja, GroupDocs.Annotation kan konvertera annoterade dokument till format som DOCX, PPTX eller bilder samtidigt som annotationerna bevaras.
+A: Ja, GroupDocs.Annotation kan konvertera annoterade dokument till format som DOCX, PPTX eller bilder samtidigt som annoteringarna bevaras.
 
-**Q: Finns det ett sätt att lista alla annotationstyper som stöds av biblioteket?**  
-A: Använd `AnnotationType.values()` för att hämta en array med alla stödjade annotation‑enums.
+**Q: Finns det ett sätt att lista alla annoteringstyper som stöds av biblioteket?**  
+A: Använd `AnnotationType.values()` för att hämta en array med alla stödda annoterings‑enum.
 
-**Q: Hur kan jag anpassa utseendet på en vattenstämpel‑annotation?**  
+**Q: Hur kan jag anpassa utseendet på en vattenstämplings‑annotering?**  
 A: Ställ in egenskaper som `setOpacity`, `setRotation` och `setBackgroundColor` på en `WatermarkAnnotation`‑instans innan du lägger till den.
 
 **Q: Stöder biblioteket att lägga till kommentarer programatiskt från en databas?**  
 A: Absolut. Du kan läsa kommentarsdata från vilken källa som helst, fylla en `AreaAnnotation` (eller `TextAnnotation`) med kommentartexten och sedan lägga till den i dokumentet.
 
 **Q: Vad ska jag göra om jag stöter på ett minnesläckage under batch‑bearbetning?**  
-A: Säkerställ att varje `Annotator` stängs (try‑with‑resources), övervaka JVM‑heapen och överväg att bearbeta dokument i mindre batcher.  
+A: Säkerställ att varje `Annotator` stängs (try‑with‑resources), övervaka JVM‑heapen och överväg att bearbeta dokument i mindre batchar.
 
 **Ytterligare resurser**  
-- [GroupDocs.Annotation‑dokumentation](https://docs.groupdocs.com/annotation/java/)  
-- [API‑referensguide](https://reference.groupdocs.com/annotation/java/)  
-- [Ladda ner senaste versionen](https://releases.groupdocs.com/annotation/java/)  
-- [Köp licens](https://purchase.groupdocs.com/buy)  
-- [Gratis provåtkomst](https://releases.groupdocs.com/annotation/java/)  
-- [Tillfällig licens](https://purchase.groupdocs.com/temporary-license/)  
-- [Supportforum](https://forum.groupdocs.com/c/annotation/)
+- [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)  
+- [Purchase License](https://purchase.groupdocs.com/buy)  
+- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- [Support Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Senast uppdaterad:** 2025-12-17  
+**Senast uppdaterad:** 2026-03-27  
 **Testad med:** GroupDocs.Annotation 25.2 för Java  
-**Författare:** GroupDocs
+**Författare:** GroupDocs  
+
+---

@@ -1,20 +1,20 @@
 ---
 categories:
 - Java Development
-date: '2025-12-17'
-description: Leer hoe u een PDF met reviewcommentaren maakt met GroupDocs.Annotation
-  voor Java. Deze stap‑voor‑stap gids behandelt installatie, implementatie en best
-  practices voor ontwikkelaars.
+date: '2026-03-27'
+description: Leer hoe je PDF-annotaties in Java maakt met GroupDocs.Annotation. Deze
+  stapsgewijze gids laat zien hoe je PDF‑bestanden programmeerbaar kunt annoteren,
+  reviewcommentaren kunt toevoegen en best practices volgt.
 keywords: PDF annotation Java tutorial, GroupDocs annotation Java setup, Java PDF
   markup library, add annotations PDF programmatically, GroupDocs annotation tutorial
   for beginners
-lastmod: '2025-12-17'
+lastmod: '2026-03-27'
 tags:
 - pdf-annotation
 - groupdocs
 - java-libraries
 - document-processing
-title: Maak PDF met beoordelingscommentaren met GroupDocs.Annotation Java
+title: PDF-annotaties maken in Java met GroupDocs.Annotation
 type: docs
 url: /nl/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
@@ -22,20 +22,14 @@ weight: 1
 
 # PDF-annotatie Java Tutorial
 
-## Waarom PDF-annotatie belangrijk is in moderne ontwikkeling
-
-Heb je ooit moeten programmeren om PDF‑documenten te markeren in je Java‑applicatie? Of je nu een document‑review‑systeem bouwt, een e‑learning‑platform maakt, of samenwerkings‑tools ontwikkelt, PDF‑annotatie is overal. Het probleem? De meeste oplossingen zijn of te complex voor eenvoudige behoeften of te beperkt voor enterprise‑eisen.
-
-In deze tutorial leer je hoe je **review comments PDF maken** met GroupDocs.Annotation voor Java, zodat je professionele markup aan elk document kunt toevoegen met slechts een paar regels code.
-
-**Wat maakt deze gids anders?** We behandelen niet alleen het “hoe”, maar ook het “waarom” en “wanneer”, plus al die valkuilen die andere tutorials over het hoofd zien.
+Heb je ooit **create pdf annotations java** moeten maken in je Java‑applicatie? Of je nu een document‑review‑systeem, een e‑learning‑platform of een samenwerkings‑tool bouwt, het programmatisch toevoegen van markeringen is een veelvoorkomende eis. In deze gids lopen we stap voor stap door hoe je **programmatically annotate PDF**‑bestanden kunt annoteren met GroupDocs.Annotation, en laten we ook zien hoe je **add review comments pdf** kunt toevoegen voor een volledige review‑workflow.
 
 ## Snelle antwoorden
-- **Wat is het primaire doel van GroupDocs.Annotation?** Om annotaties toe te voegen, te bewerken en te beheren over vele documentformaten vanuit Java.  
-- **Welke annotatietype is het beste voor review comments?** AreaAnnotation met een aangepast bericht en gebruikersmetadata.  
+- **Wat is het primaire doel van GroupDocs.Annotation?** Annotations toevoegen, bewerken en beheren over vele documentformaten vanuit Java.  
+- **Welk annotatietype is het beste voor review‑commentaren?** `AreaAnnotation` met een aangepast bericht en gebruikers‑metadata.  
 - **Heb ik een licentie nodig voor ontwikkeling?** Een gratis proefversie werkt voor testen; een volledige licentie is vereist voor productie.  
-- **Kan ik PDF's groter dan 50 MB verwerken?** Ja—gebruik streaming, batchverwerking en juiste opruiming om het geheugenverbruik laag te houden.  
-- **Is de bibliotheek thread‑safe?** Instanties zijn niet thread‑safe; maak een aparte Annotator per thread.
+- **Kan ik PDF’s groter dan 50 MB verwerken?** Ja—gebruik streaming, batch‑verwerking en juiste opruiming om het geheugenverbruik laag te houden.  
+- **Is de bibliotheek thread‑safe?** Instanties zijn niet thread‑safe; maak een aparte `Annotator` per thread.
 
 ## Waarom GroupDocs Annotation zich onderscheidt
 
@@ -43,39 +37,37 @@ Voordat we in de code duiken, bespreken we waarom GroupDocs.Annotation jouw best
 
 ### Belangrijkste voordelen ten opzichte van alternatieven
 
-**Uitgebreide formaatondersteuning**: Terwijl veel bibliotheken zich uitsluitend op PDF's richten, verwerkt GroupDocs Word‑documenten, PowerPoint‑presentaties, afbeeldingen en meer. Dit betekent één API voor al je annotatiebehoeften.
+**Uitgebreide formaatondersteuning** – Terwijl veel bibliotheken zich alleen op PDF’s richten, ondersteunt GroupDocs Word‑documenten, PowerPoint‑presentaties, afbeeldingen en meer. Eén API voor al je annotatiebehoeften.
 
-**Rijke annotatietypen**: Naast eenvoudige markeringen krijg je pijlen, watermerken, tekstvervangingen en aangepaste vormen – perfect voor verschillende use‑cases.
+**Rijke annotatietypen** – Naast eenvoudige markeringen krijg je pijlen, watermerken, tekstvervangingen en aangepaste vormen – perfect voor verschillende use‑cases.
 
-**Enterprise‑Ready**: Ingebouwde ondersteuning voor licenties, schaalbaarheid en integratie met bestaande Java‑architecturen.
+**Enterprise‑ready** – Ingebouwde ondersteuning voor licenties, schaalbaarheid en integratie met bestaande Java‑architecturen.
 
-**Actieve ontwikkeling**: Regelmatige updates en een responsieve support‑community (geloof me, je zult dit waarderen wanneer je tegen randgevallen aanloopt).
+**Actieve ontwikkeling** – Regelmatige updates en een responsieve support‑community (geloof me, je zult dit waarderen bij lastige edge‑cases).
 
 ## Voorvereisten en installatie‑eisen
 
 ### Wat je nodig hebt voordat je begint
 
-Laten we eerst de saaie zaken afhandelen. Hier is je checklist:
+**Ontwikkelomgeving**
+- JDK 8 of hoger (Java 11+ aanbevolen voor betere prestaties)  
+- Je favoriete IDE (IntelliJ IDEA, Eclipse of VS Code met Java‑extensies)  
+- Maven of Gradle voor dependency‑beheer  
 
-**Ontwikkelomgeving:**
-- JDK 8 of later (Java 11+ aanbevolen voor betere prestaties)
-- Je favoriete IDE (IntelliJ IDEA, Eclipse, of VS Code met Java‑extensies)
-- Maven of Gradle voor afhankelijkheidsbeheer
+**Kennisvoorvereisten**
+- Basis Java‑programmeren (als je loops en classes kent, ben je klaar)  
+- Vertrouwdheid met bestands‑I/O‑operaties  
+- Begrip van Maven‑dependencies (we lopen hier toch doorheen)  
 
-**Kennisvoorvereisten:**
-- Basis Java‑programmeren (als je loops en classes kent, ben je klaar)
-- Vertrouwdheid met bestands‑I/O‑operaties
-- Begrip van Maven‑afhankelijkheden (we lopen dit toch nog even door)
-
-**Optioneel maar handig:**
-- Basiskennis van PDF‑structuur (handig bij foutopsporing)
+**Optioneel maar nuttig**
+- Basisbegrip van PDF‑structuur (helpt bij probleemoplossing)  
 - Ervaring met andere Java‑bibliotheken (maakt concepten makkelijker te begrijpen)
 
 ### GroupDocs.Annotation voor Java instellen
 
 #### Maven‑configuratie
 
-Voeg de GroupDocs‑repository en afhankelijkheid toe aan je `pom.xml`. Dit is precies wat je nodig hebt:
+Voeg de GroupDocs‑repository en dependency toe aan je `pom.xml`. Dit is precies wat je nodig hebt:
 
 ```xml
 <repositories>
@@ -95,19 +87,19 @@ Voeg de GroupDocs‑repository en afhankelijkheid toe aan je `pom.xml`. Dit is p
 </dependencies>
 ```
 
-**Pro Tip**: Controleer altijd de nieuwste versie op de GroupDocs‑website. Versie 25.2 is actueel op het moment van schrijven, maar nieuwere versies bevatten vaak prestatie‑verbeteringen en bug‑fixes.
+**Pro tip**: Controleer altijd de nieuwste versie op de GroupDocs‑website. Versie 25.2 is actueel op het moment van schrijven, maar nieuwere versies bevatten vaak prestatie‑verbeteringen en bug‑fixes.
 
-#### Licentie‑opties (en wat ze werkelijk betekenen)
+#### Licentieopties (en wat ze echt betekenen)
 
-**Gratis proefversie**: Perfect voor een eerste evaluatie en kleine projecten. Je krijgt een watermerk‑output, wat prima is voor testen maar niet voor productie.
+**Free Trial** – Perfect voor een eerste evaluatie en kleine projecten. Je krijgt watermerk‑output, wat prima is voor testen maar niet voor productie.
 
-**Tijdelijke licentie**: Ideaal voor ontwikkelingsfasen. Haal er één [hier](https://purchase.groupdocs.com/temporary-license/) voor 30 dagen onbeperkte toegang.
+**Temporary License** – Ideaal voor ontwikkelfasen. Haal er één [hier](https://purchase.groupdocs.com/temporary-license/) voor 30 dagen onbeperkte toegang.
 
-**Volledige licentie**: Vereist voor productie. De prijs varieert afhankelijk van het type implementatie en schaal.
+**Full License** – Vereist voor productie. Prijzen variëren afhankelijk van implementatietype en schaal.
 
-#### Eerste installatie en verificatie
+#### Initiële setup en verificatie
 
-Zodra je afhankelijkheden op hun plaats staan, controleer je of alles werkt met deze eenvoudige test:
+Zodra je dependencies aanwezig zijn, verifieer je dat alles werkt met deze eenvoudige test:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -126,7 +118,7 @@ public class SetupVerification {
 }
 ```
 
-## Hoe review comments PDF maken met GroupDocs.Annotation
+## Hoe je pdf annotations java maakt met GroupDocs.Annotation
 
 ### Documenten laden: meer dan alleen bestands‑paden
 
@@ -142,9 +134,9 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/output_annotated.pdf";
 final Annotator annotator = new Annotator(INPUT_PDF);
 ```
 
-**Real‑World‑context**: In productie‑applicaties komen deze paden vaak van gebruikers‑uploads, database‑records of cloud‑storage‑URL's. Het mooie van GroupDocs is dat het lokale bestanden, streams en URL's naadloos aankan.
+**Praktijkvoorbeeld**: In productie‑applicaties komen deze paden vaak van gebruikers‑uploads, database‑records of cloud‑storage‑URL’s. Het mooie van GroupDocs is dat het lokale bestanden, streams en URL’s naadloos afhandelt.
 
-#### Verschillende invoer‑bronnen afhandelen
+#### Verschillende invoerbronnen verwerken
 
 ```java
 // From file path (most common)
@@ -160,9 +152,9 @@ inputStream.close();
 
 ### Je eerste annotatie toevoegen
 
-#### Area‑annotaties begrijpen
+#### Area‑annotations begrijpen
 
-Area‑annotaties zijn perfect om regio's te markeren, belangrijke secties te markeren of visuele call‑outs te maken. Zie ze als digitale sticky notes met stijl.
+Area‑annotations zijn perfect om regio’s te markeren, belangrijke secties te benadrukken of visuele call‑outs te maken. Zie ze als digitale sticky notes met stijl.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -181,11 +173,12 @@ area.setBackgroundColor(65535);
 annotator.add(area);
 ```
 
-**Coördinatensysteem uitgelegd**: PDF‑coördinaten beginnen in de linker‑onderhoek, maar GroupDocs gebruikt een oorsprong in de linker‑bovenhoek (intuitiever voor ontwikkelaars). De getallen geven pixels vanaf de oorsprong weer.
+**Coördinatensysteem uitgelegd**: PDF‑coördinaten beginnen links‑onder, maar GroupDocs gebruikt een links‑boven oorsprongsysteem (intuitiever voor ontwikkelaars). De getallen geven pixels vanaf de oorsprong weer.
 
 #### Praktische annotatie‑voorbeelden
 
-**Belangrijke tekst markeren**:  
+**Belangrijkste tekst markeren**:
+
 ```java
 // Create a semi‑transparent highlight
 AreaAnnotation highlight = new AreaAnnotation();
@@ -194,7 +187,8 @@ highlight.setBackgroundColor(0x80FFFF00); // Semi‑transparent yellow
 highlight.setMessage("Important clause - review carefully");
 ```
 
-**Review comments maken**:  
+**Review‑commentaren maken**:
+
 ```java
 // Add a comment annotation with custom styling
 AreaAnnotation comment = new AreaAnnotation();
@@ -207,7 +201,7 @@ comment.setUser("John Reviewer");
 
 ### Opslaan en resource‑beheer
 
-#### Juiste bestands‑opslaaktechnieken
+#### Correcte bestands‑opslaaktechnieken
 
 ```java
 // Save the annotated document
@@ -217,7 +211,7 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Waarom opruimen belangrijk is**: GroupDocs houdt documentgegevens in het geheugen voor prestaties. Zonder juiste opruiming krijg je geheugen‑lekken in langdurige applicaties.
+**Waarom opruimen belangrijk is**: GroupDocs houdt documentdata in het geheugen voor prestaties. Zonder juiste opruiming krijg je geheugen‑lekken in langdurige applicaties.
 
 #### Beter resource‑beheerpatroon
 
@@ -247,9 +241,9 @@ public void annotateDocument(String inputPath, String outputPath) {
 **Het probleem**: “File not found” of “Access denied” fouten komen veel voor.
 
 **De oplossingen**:
-- Gebruik altijd absolute paden tijdens ontwikkeling
-- Controleer bestands‑permissies vóór verwerking
-- Valideer dat invoerbestanden bestaan en leesbaar zijn
+- Gebruik altijd absolute paden tijdens ontwikkeling  
+- Controleer bestands‑permissies vóór verwerking  
+- Valideer dat invoerbestanden bestaan en leesbaar zijn  
 
 ```java
 public boolean validateInputFile(String filePath) {
@@ -266,7 +260,7 @@ public boolean validateInputFile(String filePath) {
 }
 ```
 
-### Geheugen‑beheer‑fouten
+### Geheugen‑beheerfouten
 
 **Het probleem**: Applicaties vertragen of crashen na het verwerken van meerdere documenten.
 
@@ -292,9 +286,9 @@ try {
 
 ### Verwarring over coördinatensysteem
 
-**Het probleem**: Annotaties verschijnen op verkeerde posities of buiten het scherm.
+**Het probleem**: Annotations verschijnen op verkeerde posities of buiten het scherm.
 
-**De oplossing**: Onthoud de PDF‑coördinatensystemen en test met bekende posities:
+**De oplossing**: Houd rekening met PDF‑coördinatensystemen en test met bekende posities:
 
 ```java
 // Start with simple, visible coordinates for testing
@@ -304,16 +298,16 @@ Rectangle testPosition = new Rectangle(50, 50, 100, 50);
 // Most PDFs are 612x792 points (8.5"x11" at 72 DPI)
 ```
 
-## Real‑World use‑cases en toepassingen
+## Praktijkvoorbeelden en toepassingen
 
 ### Document‑review‑workflows
 
 **Scenario**: Juridische kantoren die contracten beoordelen vóór klantbijeenkomsten.
 
 **Implementatiestrategie**:
-- Verschillende annotatie‑kleuren voor verschillende reviewers
-- Tijdstempel‑ en gebruikers‑tracking voor audit‑trails
-- Export‑mogelijkheden voor klantdistributie
+- Verschillende annotatiekleurs voor verschillende reviewers  
+- Tijdstempel en gebruikers‑tracking voor audit‑trails  
+- Export‑mogelijkheden voor klantdistributie  
 
 ```java
 public void addReviewAnnotation(Annotator annotator, String reviewerName, 
@@ -331,21 +325,20 @@ public void addReviewAnnotation(Annotator annotator, String reviewerName,
 
 ### Educatieve contentcreatie
 
-**Scenario**: E‑learning‑platforms die kernconcepten in studiemateriaal markeren.
-
+**Scenario**: E‑learning‑platformen die kernconcepten in studiemateriaal markeren.  
 **Waarom dit werkt**: Visuele annotaties verhogen begrip en retentie, vooral bij technische documenten.
 
 ### Kwaliteits‑garantie‑documentatie
 
-**Scenario**: Productiebedrijven die technische tekeningen en specificaties markeren.
-
-**Voordelen**: Gestandaardiseerde markup over teams, revisietracering en duidelijke communicatie van wijzigingen.
+**Scenario**: Fabrikanten die technische tekeningen en specificaties annoteren.  
+**Voordelen**: Gestandaardiseerde markeringen binnen teams, revisietracering en duidelijke communicatie van wijzigingen.
 
 ## Tips voor prestatie‑optimalisatie
 
 ### Grote documenten efficiënt verwerken
 
-**Batch‑verwerkingsstrategie**:  
+**Batch‑verwerkingsstrategie**:
+
 ```java
 public void processDocumentBatch(List<String> documentPaths) {
     for (String path : documentPaths) {
@@ -363,7 +356,6 @@ public void processDocumentBatch(List<String> documentPaths) {
 
 ### Geheugen‑gebruik monitoren
 
-**Volg het geheugen van je applicatie**:  
 ```java
 Runtime runtime = Runtime.getRuntime();
 long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
@@ -374,9 +366,9 @@ long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
 System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
 ```
 
-### Overwegingen voor gelijktijdige verwerking
+### Overwegingen bij gelijktijdige verwerking
 
-**Thread‑veiligheid**: GroupDocs.Annotation is niet thread‑safe per instantie. Gebruik aparte Annotator‑instanties voor gelijktijdige verwerking:
+**Thread‑safety**: GroupDocs.Annotation is per instantie niet thread‑safe. Gebruik aparte `Annotator`‑instanties voor gelijktijdige verwerking:
 
 ```java
 public class ConcurrentAnnotationProcessor {
@@ -415,36 +407,29 @@ public void createComprehensiveAnnotation(Annotator annotator) {
 
 ### Dynamische annotatie op basis van inhoud
 
-Hoewel deze tutorial zich richt op handmatige plaatsing van annotaties, kun je GroupDocs combineren met tekst‑analyse‑bibliotheken om automatisch specifieke inhoudspatronen te detecteren en te annoteren.
+Hoewel deze tutorial zich richt op handmatige annotatie‑plaatsing, kun je GroupDocs combineren met tekst‑analyse‑bibliotheken om automatisch specifieke inhoudspatronen te detecteren en te annoteren.
 
 ## Probleemoplossingsgids
 
 ### Veelvoorkomende foutmeldingen en oplossingen
 
-**“Invalid license” fouten**:
-- Controleer de locatie en het formaat van het licentiebestand
-- Controleer de vervaldatum van de licentie
-- Zorg dat de licentie overeenkomt met je implementatietype
+**“Invalid license”‑fouten** – Controleer de locatie, het formaat en de vervaldatum van het licentiebestand. Zorg dat de licentie overeenkomt met je implementatietype.
 
-**“Unsupported file format” fouten**:
-- Controleer of de PDF niet corrupt is
-- Controleer of de PDF met een wachtwoord beveiligd is
-- Zorg dat het bestand geen 0‑byte of onvolledig is
+**“Unsupported file format”‑fouten** – Controleer of de PDF niet corrupt, niet met wachtwoord beveiligd en niet nul‑bytes is.
 
-**Prestatie‑problemen**:
-- Monitor het geheugen‑gebruik en implementeer juiste opruiming
-- Overweeg documenten in batches te verwerken
-- Controleer of antivirussoftware tijdelijke bestanden scant
+**Prestatie‑problemen** – Monitor geheugen‑gebruik, implementeer juiste opruiming en overweeg batch‑verwerking.
 
 ### Debug‑tips
 
-**Logging inschakelen**:  
+**Logging inschakelen**:
+
 ```java
 // Add to your application properties or logging configuration
 java.util.logging.Logger.getLogger("com.groupdocs").setLevel(Level.FINE);
 ```
 
-**Invoer valideren**:  
+**Invoer valideren**:
+
 ```java
 public boolean validateAnnotationParameters(Rectangle box, int color) {
     if (box.getWidth() <= 0 || box.getHeight() <= 0) {
@@ -463,9 +448,8 @@ public boolean validateAnnotationParameters(Rectangle box, int color) {
 
 ## Veelgestelde vragen
 
-### Hoe voeg ik efficiënt meerdere annotaties toe aan één PDF?
-
-Roep simpelweg `annotator.add(annotation)` aan voor elke annotatie vóór het opslaan. GroupDocs batch‑t alle annotaties en past ze toe wanneer je `save()` aanroept:
+**Q: Hoe voeg ik meerdere annotaties toe aan één PDF op een efficiënte manier?**  
+A: Roep simpelweg `annotator.add(annotation)` aan voor elke annotatie vóór het opslaan. GroupDocs batch‑t alle annotaties en past ze toe wanneer je `save()` aanroept:
 
 ```java
 try (Annotator annotator = new Annotator("document.pdf")) {
@@ -476,13 +460,10 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 }
 ```
 
-### Welke bestandsformaten ondersteunt GroupDocs.Annotation naast PDF?
+**Q: Welke bestandsformaten ondersteunt GroupDocs.Annotation naast PDF?**  
+A: GroupDocs.Annotation ondersteunt meer dan 50 formaten, waaronder Word (DOC, DOCX), PowerPoint (PPT, PPTX), Excel (XLS, XLSX), afbeeldingen (JPEG, PNG, TIFF) en vele anderen. Zie de [documentation](https://docs.groupdocs.com/annotation/java/) voor de volledige lijst.
 
-GroupDocs.Annotation ondersteunt meer dan 50 formaten, waaronder Word‑documenten (DOC, DOCX), PowerPoint‑presentaties (PPT, PPTX), Excel‑spreadsheets (XLS, XLSX), afbeeldingen (JPEG, PNG, TIFF) en vele anderen. Zie de [documentatie](https://docs.groupdocs.com/annotation/java/) voor de volledige lijst.
-
-### Hoe ga ik om met wachtwoord‑beveiligde PDF's?
-
-Gebruik de `LoadOptions`‑parameter bij het initialiseren van de Annotator:
+**Q: Hoe ga ik om met wachtwoord‑beveiligde PDF’s?**  
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -490,9 +471,7 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator("protected.pdf", loadOptions);
 ```
 
-### Kan ik bestaande annotaties in een PDF ophalen en wijzigen?
-
-Ja! Je kunt bestaande annotaties ophalen en aanpassen:
+**Q: Kan ik bestaande annotaties in een PDF ophalen en wijzigen?**  
 
 ```java
 try (Annotator annotator = new Annotator("annotated.pdf")) {
@@ -506,13 +485,10 @@ try (Annotator annotator = new Annotator("annotated.pdf")) {
 }
 ```
 
-### Wat zijn de prestatie‑implicaties bij het verwerken van grote PDF's?
+**Q: Wat zijn de prestatie‑implicaties bij het verwerken van grote PDF’s?**  
+A: Grote PDF’s (>50 MB) vereisen zorgvuldig geheugenbeheer. Gebruik streaming waar mogelijk, verwerk pagina’s afzonderlijk indien nodig, en ruim altijd resources op. Overweeg voortgangs‑tracking voor gebruikersfeedback bij langdurige operaties.
 
-Grote PDF's (>50 MB) vereisen zorgvuldig geheugenbeheer. Gebruik streaming waar mogelijk, verwerk pagina’s afzonderlijk indien nodig, en ruim altijd resources op. Overweeg voortgangs‑tracking voor gebruikersfeedback tijdens langdurige bewerkingen.
-
-### Hoe verwerk ik gelijktijdige documentverwerking in een webapplicatie?
-
-Elke thread heeft zijn eigen Annotator‑instantie nodig omdat de bibliotheek per instantie niet thread‑safe is. Gebruik een thread‑pool of reactieve programmeerpatronen:
+**Q: Hoe verwerk ik gelijktijdige documentverwerking in een webapplicatie?**  
 
 ```java
 @Service
@@ -528,13 +504,10 @@ public class AnnotationService {
 }
 ```
 
-### Wat is de beste manier om annotatie‑positioneringsproblemen te debuggen?
+**Q: Wat is de beste manier om annotatie‑positioneringsproblemen te debuggen?**  
+A: Begin met bekende coördinaten en pas geleidelijk aan. De meeste standaard PDF’s gebruiken 612 × 792 punten. Maak een test‑annotatie op (50, 50, 100, 50) om basisfunctionaliteit te verifiëren, en pas daarna aan op basis van je lay‑out.
 
-Begin met bekende coördinaten en pas geleidelijk aan. De meeste standaard PDF's gebruiken 612 × 792 punten. Maak eerst een test‑annotatie op (50, 50, 100, 50) om basisfunctionaliteit te verifiëren, en pas daarna aan op basis van je lay‑out.
-
-### Hoe integreer ik GroupDocs.Annotation met Spring Boot?
-
-Maak een service‑component en gebruik dependency injection:
+**Q: Hoe integreer ik GroupDocs.Annotation met Spring Boot?**  
 
 ```java
 @Service
@@ -552,21 +525,21 @@ public class DocumentAnnotationService {
 }
 ```
 
-## Aanvullende FAQ
+## Extra FAQ
 
-**Q: Kan ik geannoteerde PDF's exporteren naar andere formaten?**  
+**Q: Kan ik geannoteerde PDF’s exporteren naar andere formaten?**  
 A: Ja, GroupDocs.Annotation kan geannoteerde documenten converteren naar formaten zoals DOCX, PPTX of afbeeldingen, terwijl de annotaties behouden blijven.
 
 **Q: Is er een manier om alle ondersteunde annotatietypen van de bibliotheek op te sommen?**  
 A: Gebruik `AnnotationType.values()` om een array met alle ondersteunde annotatie‑enums op te halen.
 
 **Q: Hoe kan ik het uiterlijk van een watermerk‑annotatie aanpassen?**  
-A: Stel eigenschappen zoals `setOpacity`, `setRotation` en `setBackgroundColor` in op een `WatermarkAnnotation`‑instantie voordat je deze toevoegt.
+A: Stel eigenschappen zoals `setOpacity`, `setRotation` en `setBackgroundColor` in op een `WatermarkAnnotation`‑instantie vóór het toevoegen.
 
-**Q: Ondersteunt de bibliotheek het programmatic toevoegen van comments vanuit een database?**  
-A: Absoluut. Je kunt commentaar‑data uit elke bron lezen, een `AreaAnnotation` (of `TextAnnotation`) vullen met de commentaar‑tekst en deze vervolgens aan het document toevoegen.
+**Q: Ondersteunt de bibliotheek het programmatic toevoegen van commentaren vanuit een database?**  
+A: Absoluut. Je kunt commentaar‑data uit elke bron lezen, een `AreaAnnotation` (of `TextAnnotation`) vullen met de commentaartekst, en deze vervolgens aan het document toevoegen.
 
-**Q: Wat moet ik doen als ik een geheugen‑lek tegenkom tijdens batchverwerking?**  
+**Q: Wat moet ik doen als ik een geheugen‑lek tegenkom tijdens batch‑verwerking?**  
 A: Zorg dat elke `Annotator` wordt gesloten (try‑with‑resources), monitor de JVM‑heap en overweeg documenten in kleinere batches te verwerken.
 
 **Aanvullende bronnen**  
@@ -576,10 +549,12 @@ A: Zorg dat elke `Annotator` wordt gesloten (try‑with‑resources), monitor de
 - [Purchase License](https://purchase.groupdocs.com/buy)  
 - [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [Support Forum](https://forum.groupdocs.com/c/annotation/)
+- [Support Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Last Updated:** 2025-12-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs  
+**Laatst bijgewerkt:** 2026-03-27  
+**Getest met:** GroupDocs.Annotation 25.2 for Java  
+**Auteur:** GroupDocs  
+
+---

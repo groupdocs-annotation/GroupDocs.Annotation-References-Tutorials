@@ -78,13 +78,9 @@ url: /zh/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
+# 如何使用 Java 对 PDF 进行脱敏 – 完整的 GroupDocs 教程
 
-# Java 中的安全 PDF 涂黑 – GroupDocs 教程
-
-如果您需要在 Java 中实现 **安全 PDF 涂黑**，您已经找到了正确的指南。无论是清理法律合同、从医疗记录中剥离患者标识，还是隐藏机密商业数据，本教程都将带您使用 GroupDocs.Annotation 完成生产就绪的解决方案。您将了解如何设置环境、应用涂黑注释、批量处理文件以及避免常见陷阱，从而自信地保护敏感数据。
+如果您需要 **使用 Java 对 PDF 进行脱敏**，那么您来对地方了。无论是清理法律合同、医疗记录，还是机密的业务报告，本教程都将手把手教您使用 GroupDocs.Annotation 实现生产就绪的解决方案。我们会覆盖从环境搭建到批量处理、安全注意事项以及故障排查的全部内容，让您能够自信地保护敏感数据。
 
 ## 快速答案
 - **哪个库在 Java 中处理 PDF 涂黑？** GroupDocs.Annotation Java API.  
@@ -352,8 +348,3 @@ try (Annotator annotator = new Annotator(inputPath)) {
 - [使用 GroupDocs.Annotation Java 加载受密码保护的 PDF](/annotation/java/advanced-features/)
 - [完整指南 - 如何使用 GroupDocs.Annotation for Java 保存带注释的 PDF](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

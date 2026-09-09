@@ -22,20 +22,6 @@ url: /tr/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-
 weight: 1
 ---
 
- keep code block placeholders unchanged.
-
-Also markdown links remain same.
-
-Let's produce translation.
-
-Will translate each paragraph.
-
-Be careful with bullet points and code block placeholders.
-
-Let's start.
-
-I'll produce final markdown.
-
 # groupdocs lisansını inputstream ile ayarlama
 
 ## Giriş

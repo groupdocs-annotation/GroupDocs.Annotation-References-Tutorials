@@ -1,45 +1,82 @@
 ---
-"description": "GroupDocs.Annotation for .NET を使用すると、.NET アプリケーション内でのドキュメントの共同作業と注釈付けが強化されます。この強力なライブラリを使えば、ドキュメントへの注釈付け、マークアップ、レビューが簡単に行えます。"
-"linktitle": "注釈なしでプレビューを生成する"
-"second_title": "GroupDocs.Annotation .NET API"
-"title": "注釈なしでプレビューを生成する"
-"url": "/ja/net/advanced-usage/generate-preview-without-annotations/"
+categories:
+- Document Processing
+date: '2026-04-01'
+description: .NETでPDFサムネイルを作成し、注釈のないクリーンなPDFプレビューを生成する方法を学びましょう。GroupDocs.Annotation
+  を使用した PDF サムネイル生成のコード付きステップバイステップガイド。
+keywords:
+- create pdf thumbnails
+- generate pdf preview
+- remove annotations preview
+- render pdf without markup
+- pdf thumbnail generation
+lastmod: '2025-01-02'
+linktitle: 注釈なしでプレビューを生成
+second_title: GroupDocs.Annotation .NET API
+tags:
+- pdf-preview
+- document-collaboration
+- annotations
+- net-development
+title: .NETでPDFサムネイルを作成 – アノテーションなしのクリーンなプレビュー
 type: docs
-"weight": 13
+url: /ja/net/advanced-usage/generate-preview-without-annotations/
+weight: 13
 ---
 
-# 注釈なしでプレビューを生成する
+# .NET で PDF サムネイルを作成 – アノテーションなしのクリーンプレビュー
 
-## 導入
-今日のデジタル時代において、ドキュメントを効率的に共同作業することは、生産性と成功の鍵となります。世界中に散らばるチームメンバーとプロジェクトに取り組む場合でも、重要な契約書でクライアントと共同作業する場合でも、ドキュメントにシームレスに注釈を付け、レビューする機能は不可欠です。GroupDocs.Annotation for .NET を使えば、ドキュメントの共同作業をさらに進化させ、.NET アプリケーション内で簡単に注釈、マークアップ、レビューを行うことができます。
+クリーンなドキュメントプレビューを生成することは、ギャラリー、承認ワークフロー、または公開共有のために **create pdf thumbnails** を作成する際の一般的な要件です。このチュートリアルでは、すべてのアノテーションを除外した **create pdf thumbnails** の作成方法を学び、ユーザーに元の PDF コンテンツの純粋なビューを提供します。
+
+## クイック回答
+- **What does “RenderAnnotations = false” do?** GroupDocs.Annotation にプレビューをレンダリングする際、すべてのマークアップをスキップするよう指示します。  
+- **Which image format is recommended for high‑quality thumbnails?** PNG はロスレス品質を提供し、JPEG はサイズは小さいがロスがあります。  
+- **Can I select specific pages for the thumbnail set?** はい – 必要なページに `PreviewOptions.PageNumbers` を設定します。  
+- **Do I need a license for production use?** ライセンスは無制限の機能とサポートのために推奨されます。  
+- **Is this approach compatible with .NET Core?** 絶対に対応しています – GroupDocs.Annotation は .NET Framework と .NET Core の両方で動作します。
+
+## “create pdf thumbnails” とは何ですか？
+PDF サムネイルを作成することは、PDF の各ページを画像 (PNG/JPEG) としてレンダリングし、UI に表示できるようにすることを意味します。サムネイルは、クイックプレビュー、ドキュメントブラウザー、フル PDF を読み込まずにプレビューグリッドを生成する際に便利です。
+
+## なぜアノテーションなしのプレビューを生成するのですか？
+プレビューからアノテーションを除去することで、元のドキュメントコンテンツに焦点が当たります。これは次のような場合に重要です：
+
+- **Document approval workflows** – クリーンバージョンとアノテーション付きバージョンを比較します。  
+- **Thumbnail galleries** – コメントやハイライトによる視覚的な乱れを防ぎます。  
+- **Public sharing** – 敏感なマークアップを保護しつつ、ドキュメントを表示します。  
+- **Print preparation** – 印刷用にクリーンな PDF を生成し、デジタルノートは別に保ちます。  
+
 ## 前提条件
-GroupDocs.Annotation for .NET を使用してドキュメント注釈の世界に飛び込む前に、いくつかの前提条件を満たす必要があります。
-### 1. GroupDocs.Annotation for .NET をインストールする
-まず最初に、GroupDocs.Annotation for .NETをダウンロードしてインストールする必要があります。ダウンロードリンクは以下にあります。 [ここ](https://releases.groupdocs.com/annotation/net/)提供されているインストール手順に従って、.NET 環境にライブラリをセットアップします。
-### 2. ライセンスを取得する（オプション）
-GroupDocs.Annotation for .NETは無料トライアルを提供していますが、すべての機能にアクセスするにはライセンスの取得をご検討ください。ライセンスはご購入いただけます。 [ここ](https://purchase.groupdocs.com/buy) または一時ライセンスを申請する [ここ](https://purchase.groupdocs.com/temporary-license/) テスト目的のため。
-### 3. C#および.NET開発に精通していること
-GroupDocs.Annotation for .NETを最大限に活用するには、C#と.NET開発の基礎知識が役立ちます。これにより、ライブラリを既存のアプリケーションやワークフローにシームレスに統合できるようになります。
-### 4. PDFビューアをインストールする
-GroupDocs.Annotation for .NET は PDF ドキュメントを扱うため、注釈付きドキュメントをプレビューするには、システムに PDF ビューアーがインストールされている必要があります。Adobe Acrobat Reader などの PDF ビューアーで十分です。
+- **GroupDocs.Annotation for .NET** – 公式の [releases page](https://releases.groupdocs.com/annotation/net/) からインストールします。  
+- **License (optional but recommended)** – [purchase page](https://purchase.groupdocs.com/buy) でフルライセンスを購入するか、[temporary license](https://purchase.groupdocs.com/temporary-license/) をリクエストします。  
+- C#/.NET の基本知識。  
+- 生成されたサムネイルを確認するための PDF ビューア (例: Adobe Acrobat Reader)。  
 
 ## 名前空間のインポート
-ドキュメントに注釈を付けるには、まず必要な名前空間を.NETプロジェクトにインポートする必要があります。これにより、GroupDocs.Annotation for .NETが提供するクラスとメソッドにアクセスできるようになります。
+Add the required `using` statements so you can work with the annotation API:
 
 ```csharp
 using System.IO;
 using GroupDocs.Annotation.Options;
 ```
 
-準備が整ったので、注釈なしのドキュメントのプレビューを生成してみましょう。以下の手順に従ってください。
-## ステップ1: アノテーターを初期化する
-まず、 `Annotator` クラスに、注釈を付けるドキュメントへのパスを渡します。
+## アノテーションなしで PDF サムネイルを作成する方法
+
+以下はステップバイステップのウォークスルーで、出力から **removing annotations preview** を除去しながら **generate pdf preview** 画像を正確に作成する方法を示します。
+
+### ステップ 1: Annotator の初期化
+`Annotator` インスタンスを作成し、ソース PDF を指します。`using` ブロックはリソースを自動的に解放します。
+
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"))
 {
 ```
-## ステップ2: プレビューオプションを設定する
-次に、要件に応じてプレビューオプションを設定します。プレビューに含めるページ番号、プレビュー形式（例：PNG）、注釈をレンダリングするかどうかを指定できます。
+
+> **Pro Tip:** ユーザーがアップロードした PDF を扱う際、ファイルパスを検証し、適切なセキュリティチェックを実施してください。
+
+### ステップ 2: プレビューオプションの設定
+`PreviewOptions` を設定し、出力形式、ページ範囲、そして重要なことにアノテーションのレンダリングを無効にします。
+
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -50,24 +87,77 @@ using (Annotator annotator = new Annotator("annotated.pdf"))
     previewOptions.PageNumbers = new int[] {1, 2, 3, 4, 5, 6};
     previewOptions.RenderAnnotations = false;
 ```
-## ステップ3: プレビューを生成する
-最後に、 `GeneratePreview` の方法 `Document` クラスに、設定されたプレビュー オプションを渡します。
+
+**重要ポイント**
+- **File naming** – ラムダ式は各ページに対して一意の PNG ファイルを作成します。  
+- **Format choice** – 高品質サムネイルには PNG、ファイルサイズを小さくしたい場合は JPEG に切り替えます。  
+- **Page selection** – **pdf thumbnail generation** を行いたいページを正確に指定します。  
+- **`RenderAnnotations = false`** – これによりすべてのマークアップが無効になり、**disable annotations preview** の核心です。  
+
+### ステップ 3: クリーンプレビューの生成
+定義したオプションに基づいて画像をレンダリングするために `GeneratePreview` メソッドを呼び出します。
+
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-これらの簡単な手順に従うことで、GroupDocs.Annotation for .NET を使用して注釈なしのドキュメントのプレビューを生成できます。
+
+クリーンなサムネイルファイル (`result1.png`, `result2.png`, …) が使用できるようになりました。
+
+## 実際のアプリケーションでの一般的なユースケース
+- **Document Management Systems** – ファイルブラウザー用にクリーンなサムネイルを提供し、アノテーション付きバージョンは別に保持します。  
+- **Legal Review Platforms** – クライアントに内部コメントなしの元の契約書を示します。  
+- **E‑learning Portals** – 教師が採点メモを非公開にしたまま、元の課題を表示します。  
+- **Publishing Workflows** – 編集マークアップなしでマーケティング資料用のプレビュー画像を作成します。  
+
+## パフォーマンス上の考慮点
+- **Batch processing** – オーバーヘッドを減らすために、単一のバックグラウンドジョブで複数の PDF を処理します。  
+- **Caching** – 最初のアップロード後に生成されたサムネイルを保存し、各リクエストでの再レンダリングを回避します。  
+- **Page limits** – 非常に大きな PDF では、処理時間を抑えるために最初の数ページにプレビューを限定します。  
+- **File format trade‑offs** – PNG は鮮明なサムネイルを提供し、帯域幅が問題になる場合は JPEG がストレージを削減します。  
+
+## 一般的な問題のトラブルシューティング
+- **Thumbnails not created** – 出力フォルダーの書き込み権限を確認し、ソース PDF が破損していないことを確認します。  
+- **Low image quality** – PNG に切り替えるか、GroupDocs.Annotation のバージョンがサポートしていれば DPI 設定を調整します。  
+- **High memory usage** – ページを小さなバッチで処理するか、PDF をメモリに完全にロードせずにストリームします。  
+- **Path problems** – クロスプラットフォームの安全性のため、常に `Path.Combine()` でファイルパスを構築します。  
+
+## 本番環境でのベストプラクティス
+- プレビュー生成を `try‑catch` ブロックでラップし、I/O エラーを適切に処理します。  
+- `using` ステートメント（上記参照）を使用して、ファイルハンドルの適切な破棄を保証します。  
+- 処理前に受信した PDF（サイズ、形式、パスワード保護）を検証します。  
+- 監視とデバッグのために、各プレビュー生成イベントをログに記録します。  
+
+## 高度な構成オプション
+- **Custom DPI** – バージョンによっては、より高解像度のサムネイルを設定できます。  
+- **Watermarking** – 画像が最終ドキュメントでないことを示す “Preview Only” ウォーターマークを追加します。  
+- **Smart page selection** – ドキュメントメタデータに基づき、最も関連性の高いページ（例: 最初のページ、目次）を自動的に選択します。  
 
 ## 結論
-結論として、GroupDocs.Annotation for .NETは、.NETアプリケーション内でのドキュメントの共同作業と注釈作成のための強力なソリューションを提供します。このチュートリアルで概説した手順に従うことで、ドキュメント注釈機能をプロジェクトにシームレスに統合し、共同作業と生産性を向上させることができます。
+これで、**create pdf thumbnails** と **generate pdf preview** の画像をマークアップなしで作成する、完全な本番対応レシピが手に入りました。`RenderAnnotations = false` を設定することで、**remove annotations preview** が実現し、あらゆるドキュメント中心のアプリケーションにシームレスに統合できるクリーンでプロフェッショナルなサムネイルを提供できます。
+
+---
+
 ## よくある質問
-### Q: GroupDocs.Annotation for .NET を PDF 以外のドキュメント形式で使用できますか?
-はい、GroupDocs.Annotation for .NET は、DOCX、XLSX、PPTX など、さまざまなドキュメント形式をサポートしています。
-### Q: GroupDocs.Annotation for .NET は .NET Core と互換性がありますか?
-はい、GroupDocs.Annotation for .NET は、.NET Framework 環境と .NET Core 環境の両方と互換性があります。
-### Q: GroupDocs.Annotation for .NET ではカスタマイズ可能な注釈ツールが提供されていますか?
-はい、GroupDocs.Annotation for .NET は、特定の要件に合わせてカスタマイズできるさまざまな注釈ツールを提供します。
-### Q: GroupDocs.Annotation for .NET を Web アプリケーションに統合できますか?
-はい、GroupDocs.Annotation for .NET はデスクトップ アプリケーションと Web アプリケーションの両方に統合でき、シームレスなドキュメント コラボレーション機能を提供します。
-### Q: GroupDocs.Annotation for .NET に関するサポートや支援を受けられるコミュニティ フォーラムはありますか?
-はい、GroupDocs.Annotationフォーラムでサポートと支援を受けることができます。 [ここ](https://forum。groupdocs.com/c/annotation/10).
+
+**Q: PDF 以外の形式でも GroupDocs.Annotation for .NET を使用できますか？**  
+A: はい。ライブラリは DOCX、XLSX、PPTX など多数をサポートしています。ソース形式に関係なく同じプレビュー ワークフローが適用されます。
+
+**Q: GroupDocs.Annotation for .NET は .NET Core と互換性がありますか？**  
+A: はい、完全に互換性があります。 .NET Framework、.NET Core、そして .NET 5/6+ で動作するため、最新のクロスプラットフォームアプリケーションを対象にできます。
+
+**Q: ライブラリはカスタマイズ可能なアノテーションツールを提供していますか？**  
+A: 提供していますが、`RenderAnnotations = false` を設定すると、プレビュー生成時にそれらのツールは無視されます。
+
+**Q: これをウェブアプリケーションに統合できますか？**  
+A: はい。ウェブサーバーに適切なファイル I/O 権限があることを確認し、テンポラリファイルを作成しないように出力を直接クライアントにストリーミングすることを検討してください。
+
+**Q: サムネイルギャラリーにはどの画像形式を選べばよいですか？**  
+A: PNG は最高の品質を提供し、JPEG はファイルサイズを削減します。必要な視覚的忠実度と帯域幅の制約に基づいて選択してください。
+
+**Q: コミュニティサポートはどこで得られますか？**  
+A: GroupDocs.Annotation フォーラム [here](https://forum.groupdocs.com/c/annotation/10) でサポートを受けられます。コミュニティは活発で応答が早いです。
+
+**最終更新日:** 2026-04-01  
+**テスト環境:** GroupDocs.Annotation for .NET 23.12  
+**作者:** GroupDocs

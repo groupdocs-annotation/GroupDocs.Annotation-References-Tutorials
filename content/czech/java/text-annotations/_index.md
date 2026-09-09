@@ -20,19 +20,7 @@ url: /cs/java/text-annotations/
 weight: 5
 ---
 
- Keep bold.
-
-**Tested With:** -> "Testováno s:".
-
-**Author:** -> "Autor:".
-
-Now produce final markdown.
-
-Check for any shortcodes (none). Ensure code fences none. No images.
-
-Make sure to keep bold formatting (**text**) as in original.
-
-Now produce final content.# Přidání zvýraznění PDF v Javě – Kompletní průvodce textovými anotacemi
+# Přidání zvýraznění PDF v Javě – Kompletní průvodce textovými anotacemi
 
 Pokud potřebujete funkci **add PDF highlight java** do Java aplikace, jste na správném místě. V tomto tutoriálu si projdeme, proč jsou textové anotace důležité, různé typy anotací, které můžete vytvořit pomocí GroupDocs.Annotation for Java, a jak je efektivně implementovat. Ať už budujete systém pro právní revizi, platformu e‑learningu nebo nástroj pro kolaborativní úpravy, koncepty zde vám pomohou dodat profesionální funkce značkování.
 

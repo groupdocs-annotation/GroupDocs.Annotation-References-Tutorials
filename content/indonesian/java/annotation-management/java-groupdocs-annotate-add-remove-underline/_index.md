@@ -1,32 +1,30 @@
 ---
 categories:
 - Java Development
-date: '2025-12-21'
-description: Pelajari cara membuat file PDF Java yang bersih dan memberi anotasi PDF
-  di Java menggunakan GroupDocs.Annotation, lengkap dengan contoh kode dan tips pemecahan
-  masalah.
+date: '2026-03-24'
+description: Pelajari cara membuat file PDF Java yang bersih, mengelola memori PDF
+  Java, dan memberi anotasi PDF di Java menggunakan GroupDocs.Annotation, lengkap
+  dengan contoh kode dan tips pemecahan masalah.
 keywords: java document annotation library, groupdocs annotation tutorial, add underline
   annotation java, java pdf annotation, how to annotate pdf documents in java
-lastmod: '2025-12-21'
+lastmod: '2026-03-24'
 linktitle: Java Document Annotation with GroupDocs
 tags:
 - groupdocs
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Buat PDF Bersih Java - Garis Bawah Anotasi dengan GroupDocs'
+title: 'Buat PDF Bersih dengan Java: Anotasi Garis Bawah menggunakan GroupDocs'
 type: docs
 url: /id/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1
 ---
 
-# Buat PDF Bersih Java: Anotasi Garis Bawah dengan GroupDocs
+# Buat PDF Java Bersih: Anotasi Garis Bawah dengan GroupDocs
 
-## Pendahuluan
+Jika Anda perlu **membuat PDF Java bersih** dan menambahkan anotasi kolaboratif, Anda berada di tempat yang tepat. Kesulitan dengan manajemen dokumen dan kolaborasi dalam aplikasi Java Anda? Anda tidak sendirian. Banyak pengembang menghadapi tantangan dalam mengimplementasikan fitur anotasi dokumen yang kuat dan dapat diandalkan di berbagai format file.
 
-Kesulitan dengan manajemen dokumen dan kolaborasi dalam aplikasi Java Anda? Anda tidak sendirian. Banyak pengembang menghadapi tantangan dalam mengimplementasikan fitur anotasi dokumen yang kuat dan dapat diandalkan di berbagai format file.
-
-Dalam panduan ini, Anda akan **membuat PDF bersih Java** dan belajar cara **menambahkan anotasi PDF di Java** menggunakan GroupDocs.Annotation. Pada akhir tutorial, Anda akan tahu persis cara menambahkan anotasi garis bawah dengan komentar, menghapus anotasi yang ada, dan mengintegrasikan fitur-fitur ini secara mulus ke dalam proyek Anda.
+Dalam panduan ini, Anda akan **membuat PDF Java bersih** dan belajar cara **menambahkan anotasi PDF di Java** menggunakan GroupDocs.Annotation. Pada akhir tutorial, Anda akan tahu persis cara menambahkan anotasi garis bawah dengan komentar, menghapus anotasi yang ada, dan mengintegrasikan fitur‑fitur ini secara mulus ke dalam proyek Anda.
 
 **Apa yang akan Anda kuasai dalam panduan ini:**
 - Menyiapkan GroupDocs.Annotation dalam proyek Java Anda (dengan cara yang tepat)  
@@ -35,24 +33,25 @@ Dalam panduan ini, Anda akan **membuat PDF bersih Java** dan belajar cara **mena
 - Memecahkan masalah umum yang dihadapi pengembang  
 - Mengoptimalkan kinerja untuk aplikasi produksi  
 
-Apakah Anda membangun sistem review dokumen, platform edukasi, atau alat penyuntingan kolaboratif, tutorial ini menyediakan contoh kode praktis dan teruji untuk Anda.
+Apakah Anda membangun sistem tinjauan dokumen, platform edukasi, atau alat penyuntingan kolaboratif, tutorial ini mencakup semua yang Anda butuhkan dengan contoh kode yang praktis dan teruji.
 
 ## Jawaban Cepat
 - **Bagaimana cara menambahkan anotasi garis bawah?** Gunakan `UnderlineAnnotation` dan `annotator.add()` lalu simpan dokumen.  
-- **Bagaimana cara membuat file PDF bersih Java?** Muat file yang beranotasi, set `AnnotationType.NONE` dalam `SaveOptions`, dan simpan salinan baru.  
-- **Perpustakaan apa yang diperlukan?** GroupDocs.Annotation v25.2 (atau lebih baru) dan repositori Maven-nya.  
+- **Bagaimana cara membuat file PDF Java bersih?** Muat file yang beranotasi, set `AnnotationType.NONE` pada `SaveOptions`, dan simpan salinan baru.  
+- **Perpustakaan apa yang diperlukan?** GroupDocs.Annotation v25.2 (atau lebih baru) dan repositori Maven‑nya.  
 - **Apakah saya memerlukan lisensi untuk produksi?** Ya—terapkan lisensi GroupDocs yang valid untuk menghindari watermark.  
 - **Bisakah saya memproses banyak dokumen secara efisien?** Bungkus setiap `Annotator` dalam blok try‑with‑resources dan dispose setelah setiap file.
 
-## Cara membuat file PDF bersih Java
+## Cara membuat file PDF Java bersih
+Membuat file PDF Java bersih berarti menghasilkan versi dokumen **tanpa anotasi apa pun** sambil mempertahankan konten asli. Ini berguna untuk distribusi akhir, arsip, atau ketika Anda perlu membagikan salinan “bersih” setelah siklus tinjauan.
 
-Membuat file PDF bersih Java berarti menghasilkan versi dokumen **tanpa anotasi apa pun** sambil mempertahankan konten asli. Ini berguna untuk distribusi akhir, arsip, atau ketika Anda perlu membagikan salinan “bersih” setelah siklus review.
+GroupDocs.Annotation mempermudah hal ini: muat file yang beranotasi, konfigurasikan `SaveOptions` untuk mengecualikan semua tipe anotasi, dan simpan hasilnya. Langkah‑langkahnya diilustrasikan nanti pada bagian **Menghapus Anotasi**.
 
-GroupDocs.Annotation membuat ini sederhana: muat file yang beranotasi, konfigurasikan `SaveOptions` untuk mengecualikan semua tipe anotasi, dan simpan hasilnya. Langkah-langkahnya diilustrasikan nanti di bagian **Menghapus Anotasi**.
+## Mengapa membuat file PDF Java bersih?
+Versi bersih menghilangkan tanda‑tanda reviewer, komentar, dan highlight, memberikan Anda dokumen yang dipoles siap untuk klien, regulator, atau rilis publik. Ini juga mengurangi ukuran file dan mencegah pengungkapan tidak sengaja catatan internal—kritikal untuk alur kerja hukum dan kepatuhan.
 
 ## Cara menambahkan anotasi PDF di Java menggunakan GroupDocs
-
-GroupDocs.Annotation menyediakan API yang kaya untuk **menambahkan anotasi PDF di Java**. Ia mendukung berbagai tipe anotasi, termasuk highlight, stempel, dan garis bawah. Dalam tutorial ini kami fokus pada anotasi garis bawah karena biasanya digunakan untuk menekankan teks sambil memungkinkan komentar berutas.
+GroupDocs.Annotation menyediakan API yang kaya untuk **menambahkan anotasi PDF di Java**. Ia mendukung berbagai tipe anotasi, termasuk highlight, stamp, dan underline. Dalam tutorial ini kami fokus pada anotasi garis bawah karena sering dipakai untuk menekankan teks sambil memungkinkan komentar beruntai.
 
 ## Prasyarat dan Penyiapan Lingkungan
 
@@ -62,17 +61,17 @@ GroupDocs.Annotation menyediakan API yang kaya untuk **menambahkan anotasi PDF d
 - Java Development Kit (JDK) 8 atau lebih tinggi (JDK 11+ disarankan)  
 - Maven 3.6+ atau Gradle 6.0+ untuk manajemen dependensi  
 - IDE seperti IntelliJ IDEA, Eclipse, atau VS Code dengan ekstensi Java  
-- Setidaknya 2 GB RAM yang tersedia (pemrosesan dokumen dapat intensif memori)
+- Minimal 2 GB RAM yang tersedia (pemrosesan dokumen dapat intensif memori)
 
 **Prasyarat Pengetahuan:**
-Anda harus nyaman dengan konsep dasar Java—inisialisasi objek, pemanggilan metode, dan dependensi Maven. Pengalaman sebelumnya dengan perpustakaan pihak ketiga akan mempercepat adopsi.
+Anda sebaiknya sudah nyaman dengan konsep dasar Java—inisialisasi objek, pemanggilan metode, dan dependensi Maven. Pengalaman sebelumnya dengan pustaka pihak ketiga akan mempercepat adopsi.
 
 **Dokumen Pengujian:**
-Siapkan beberapa PDF contoh. PDF berbasis teks bekerja paling baik; gambar hasil scan mungkin memerlukan OCR sebelum anotasi.
+Siapkan beberapa PDF contoh. PDF berbasis teks bekerja paling baik; gambar hasil scan mungkin memerlukan OCR sebelum dapat dianotasi.
 
 ### Penyiapan Maven: Menambahkan GroupDocs ke Proyek Anda
 
-Berikut cara mengkonfigurasi proyek Maven Anda dengan benar (ini sering membuat banyak pengembang kebingungan pada percobaan pertama):
+Berikut cara mengonfigurasi proyek Maven dengan benar (ini sering membuat bingung banyak pengembang pada percobaan pertama):
 
 ```xml
 <repositories>
@@ -96,7 +95,7 @@ Berikut cara mengkonfigurasi proyek Maven Anda dengan benar (ini sering membuat 
 ### Penyiapan Lisensi (Jangan Lewatkan Ini)
 
 **Untuk Pengembangan/Pengujian:**  
-Unduh versi percobaan gratis dari situs web GroupDocs. Versi percobaan mencakup semua fitur tetapi menambahkan watermark pada dokumen yang diproses.
+Unduh trial gratis dari situs web GroupDocs. Trial mencakup semua fitur tetapi menambahkan watermark pada dokumen yang diproses.
 
 **Untuk Produksi:**  
 Beli lisensi dan terapkan saat aplikasi dimulai. Tanpa lisensi yang valid, build produksi akan terbatas.
@@ -105,12 +104,12 @@ Beli lisensi dan terapkan saat aplikasi dimulai. Tanpa lisensi yang valid, build
 
 ### Memahami Alur Kerja Anotasi
 
-Sebelum kita masuk ke kode, mari tinjau alur kerja empat langkah yang terjadi ketika Anda **menambahkan anotasi PDF di Java**:
+Sebelum masuk ke kode, mari lihat alur kerja empat langkah yang terjadi ketika Anda **menambahkan anotasi PDF di Java**:
 
-1. **Memuat Dokumen** – `Annotator` membaca file ke dalam memori.  
+1. **Pemuatan Dokumen** – `Annotator` membaca file ke memori.  
 2. **Pembuatan Anotasi** – Tentukan properti seperti posisi, gaya, dan komentar.  
-3. **Penerapan Anotasi** – Perpustakaan menyisipkan anotasi ke dalam struktur PDF.  
-4. **Menyimpan Dokumen** – Menyimpan file yang telah dimodifikasi, opsional mempertahankan yang asli.
+3. **Penerapan Anotasi** – Perpustakaan menyuntikkan anotasi ke struktur PDF.  
+4. **Penyimpanan Dokumen** – Simpan file yang telah dimodifikasi, opsional mempertahankan yang asli.
 
 Proses ini tidak merusak; file sumber tetap tidak tersentuh kecuali Anda menimpanya.
 
@@ -123,7 +122,7 @@ import com.groupdocs.annotation.Annotator;
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**Tips Pro:** Gunakan path absolut saat mengembangkan untuk menghindari error “file not found”. Di produksi, pertimbangkan memuat sumber daya dari classpath atau bucket penyimpanan cloud.
+**Tips Pro:** Gunakan path absolut saat pengembangan untuk menghindari error “file not found”. Pada produksi, pertimbangkan memuat sumber daya dari classpath atau bucket penyimpanan cloud.
 
 ### Langkah 2: Membuat Komentar dan Balasan (Bagian Kolaboratif)
 
@@ -146,9 +145,9 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Penggunaan Dunia Nyata:** Reviewer dapat mendiskusikan klausa tertentu dengan menambahkan balasan berutas, menjaga percakapan terikat pada anotasi yang tepat.
+**Penggunaan Dunia Nyata:** Reviewer dapat mendiskusikan klausa tertentu dengan menambahkan balasan beruntai, menjaga percakapan tetap terikat pada anotasi yang tepat.
 
-### Langkah 3: Menentukan Koordinat Anotasi (Mendapatkan Posisi yang Tepat)
+### Langkah 3: Menentukan Koordinat Anotasi (Menentukan Posisi yang Tepat)
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -200,28 +199,28 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Manajemen Memori:** Pemanggilan `dispose()` melepaskan sumber daya native dan mencegah kebocoran memori—kritikal saat memproses banyak file secara batch.
+**Manajemen Memori:** Pemanggilan `dispose()` melepaskan sumber daya native dan mencegah kebocoran memori—kritikal saat memproses banyak file dalam batch.
 
 ## Menghapus Anotasi: Membuat Versi Dokumen Bersih
 
-Terkadang Anda membutuhkan versi PDF **tanpa anotasi apa pun**—misalnya, saat menyerahkan kontrak akhir yang disetujui. GroupDocs memudahkan hal ini.
+Kadang‑kadang Anda memerlukan versi PDF **tanpa anotasi apa pun**—misalnya, saat menyerahkan kontrak final yang telah disetujui. GroupDocs mempermudah hal ini.
 
 ### Memahami Opsi Penghapusan Anotasi
 
 Anda dapat:
 - Menghapus **semua** anotasi (paling umum)  
-- Menghapus tipe tertentu (mis., hanya highlight)  
-- Menghapus anotasi berdasarkan penulis atau halaman
+- Menghapus tipe tertentu (misalnya hanya highlight)  
+- Menghapus anotasi berdasarkan penulis atau halaman  
 
-### Penghapusan Anotasi Langkah‑per‑Langkah
+### Langkah‑per‑Langkah Penghapusan Anotasi
 
-**Langkah 1: Load the Previously Annotated Document**
+**Langkah 1: Muat Dokumen yang Sebelumnya Beranotasi**
 
 ```java
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**Langkah 2: Configure Save Options for a Clean Output**
+**Langkah 2: Konfigurasikan Save Options untuk Output Bersih**
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -231,7 +230,7 @@ SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationTypes(AnnotationType.NONE);
 ```
 
-**Langkah 3: Save the Clean Version**
+**Langkah 3: Simpan Versi Bersih**
 
 ```java
 String noneAnnotationPath = Paths.get(outputPath).resolveSibling("none-annotation.pdf").toString();
@@ -239,7 +238,7 @@ annotator.save(noneAnnotationPath, saveOptions);
 annotator.dispose();
 ```
 
-Ini menghasilkan file **PDF bersih Java** yang tidak berisi objek anotasi, sempurna untuk distribusi akhir.
+Ini menghasilkan file **PDF Java bersih** yang tidak mengandung objek anotasi, sempurna untuk distribusi akhir.
 
 ## Masalah Umum dan Solusinya
 
@@ -318,38 +317,48 @@ for (String docPath : documentPaths) {
 
 GroupDocs.Annotation **tidak thread‑safe** secara default. Jika aplikasi Anda memproses dokumen secara bersamaan:
 
-- **Jangan pernah berbagi** instance `Annotator` antar thread.  
-- **Sinkronkan** akses file atau gunakan mekanisme kunci.  
+- **Jangan pernah** membagikan instance `Annotator` antar thread.  
+- **Sinkronkan** akses file atau gunakan mekanisme lock.  
 - Pertimbangkan **pool** objek `Annotator` jika Anda membutuhkan throughput tinggi.
 
 ### Strategi Caching
 
-- Cache templat anotasi yang sering digunakan.  
-- Gunakan kembali koleksi `Point` untuk set koordinat umum.  
-- Simpan **PDF templat** dalam memori jika Anda berulang kali menambahkan anotasi pada dokumen dasar yang sama.
+- Cache template anotasi yang sering dipakai.  
+- Reuse koleksi `Point` untuk set koordinat umum.  
+- Simpan **template PDF** di memori jika Anda berulang‑ulang mengannotasi dokumen dasar yang sama.
+
+## Tips Manajemen Memori PDF Java
+Penggunaan memori yang efisien sangat penting saat menangani PDF besar atau memproses banyak file dalam batch. Berikut beberapa rekomendasi praktis:
+
+- **Gunakan try‑with‑resources** untuk setiap `Annotator` agar disposal terjamin.  
+- **Tingkatkan heap JVM** (`-Xmx`) hanya bila diperlukan; pantau penggunaan dengan alat profiling.  
+- **Proses dokumen secara berurutan** bila memungkinkan, membebaskan memori setelah tiap file.  
+- **Hindari memuat PDF yang sama berulang‑ulang**; reuse stream yang sama bila perlu membaca berulang.
+
+Menerapkan praktik‑praktik ini membantu aplikasi tetap responsif dan mencegah crash out‑of‑memory selama beban anotasi berat.
 
 ## Aplikasi Dunia Nyata dan Kasus Penggunaan
 
-### Sistem Review Dokumen
+### Sistem Tinjauan Dokumen
 
-- **Review Hukum:** Garis bawahi klausa kontrak dan tambahkan komentar tentang risiko.  
-- **Audit Kepatuhan:** Sorot bagian bermasalah dalam laporan keuangan.  
-- **Review Sejawat Akademik:** Profesor menggarisbawahi bagian yang memerlukan klarifikasi.
+- **Tinjauan Hukum:** Garis bawahi klausa kontrak dan tambahkan komentar tentang risiko.  
+- **Audit Kepatuhan:** Highlight bagian bermasalah dalam laporan keuangan.  
+- **Tinjauan Akademik:** Profesor garis bawahi bagian yang memerlukan klarifikasi.
 
 ### Platform Edukasi
 
 - **Alat Anotasi Mahasiswa:** Biarkan pelajar menggarisbawahi konsep kunci dalam e‑book.  
-- **Umpan Balik Guru:** Berikan komentar inline langsung pada tugas yang dikumpulkan.
+- **Umpan Balik Guru:** Berikan komentar inline langsung pada tugas yang dikirim.
 
-### Alur Kerja Jaminan Kualitas
+### Alur Kerja Quality Assurance
 
-- **Review Dokumentasi Teknis:** Insinyur menggarisbawahi bagian yang perlu diperbarui.  
-- **Prosedur Operasi Standar:** Petugas keselamatan menyorot langkah kritis.
+- **Tinjauan Dokumentasi Teknis:** Insinyur garis bawahi bagian yang perlu diperbarui.  
+- **Prosedur Operasional Standar:** Petugas keamanan menyoroti langkah kritis.
 
 ### Sistem Manajemen Konten
 
-- **Alur Kerja Editorial:** Editor menggarisbawahi teks yang memerlukan pengecekan fakta.  
-- **Kontrol Versi:** Lacak riwayat anotasi di seluruh revisi dokumen.
+- **Alur Editorial:** Editor garis bawahi teks yang memerlukan verifikasi fakta.  
+- **Kontrol Versi:** Lacak riwayat anotasi lintas revisi dokumen.
 
 ## Tips Lanjutan untuk Implementasi Profesional
 
@@ -391,13 +400,13 @@ underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentTex
 
 Pantau metrik berikut di produksi:
 - **Penggunaan heap** – pastikan `dispose()` dipanggil.  
-- **Waktu pemrosesan per dokumen** – catat timestamp sebelum/setelah `annotator.save()`.  
-- **Tingkat error** – tangkap pengecualian dan kategorikan.
+- **Waktu proses per dokumen** – log timestamp sebelum dan sesudah `annotator.save()`.  
+- **Tingkat error** – tangkap exception dan kategorikan.
 
-### Masalah Umum Produksi
+### Gotchas Umum di Produksi
 
-- **Penguncian file** – pastikan file yang diunggah ditutup sebelum anotasi.  
-- **Edit bersamaan** – terapkan optimistic locking atau pemeriksaan versi.  
+- **File locking** – pastikan file yang di‑upload ditutup sebelum anotasi.  
+- **Edit bersamaan** – terapkan optimistic locking atau pengecekan versi.  
 - **File besar (> 50 MB)** – tingkatkan timeout JVM dan pertimbangkan API streaming.
 
 ### Praktik Terbaik Penanganan Error
@@ -417,34 +426,34 @@ try (Annotator annotator = new Annotator(documentPath)) {
 
 ## Kesimpulan
 
-Anda kini memiliki semua yang diperlukan untuk **membuat file PDF bersih Java** dan **menambahkan anotasi PDF di Java** dengan anotasi garis bawah menggunakan GroupDocs.Annotation. Ingatlah untuk:
+Anda kini memiliki semua yang diperlukan untuk **membuat PDF Java bersih** dan **menambahkan anotasi PDF di Java** dengan anotasi garis bawah menggunakan GroupDocs.Annotation. Ingat untuk:
 
-- Mengelola sumber daya dengan try‑with‑resources atau `dispose()` eksplisit.  
-- Memvalidasi koordinat lebih awal untuk menghindari garis bawah yang salah tempat.  
-- Menerapkan penanganan error yang kuat untuk stabilitas produksi.  
-- Memanfaatkan gaya berbasis peran dan metadata agar sesuai dengan alur kerja Anda.
+- Kelola sumber daya dengan try‑with‑resources atau `dispose()` eksplisit.  
+- Validasi koordinat lebih awal untuk menghindari garis bawah yang salah tempat.  
+- Terapkan penanganan error yang kuat untuk stabilitas produksi.  
+- Manfaatkan styling berbasis peran dan metadata agar sesuai dengan alur kerja Anda.
 
-Langkah selanjutnya? Coba tambahkan tipe anotasi lain—highlight, stempel, atau penggantian teks—untuk membangun solusi review dokumen lengkap.
+Langkah selanjutnya? Coba tambahkan tipe anotasi lain—highlight, stamp, atau penggantian teks—untuk membangun solusi tinjauan dokumen lengkap.
 
 ## Pertanyaan yang Sering Diajukan
 
-**T: Bagaimana cara menambahkan anotasi pada beberapa area teks dalam satu operasi?**  
+**T: Bagaimana cara mengannotasi beberapa area teks dalam satu operasi?**  
 J: Buat beberapa objek `UnderlineAnnotation` dengan koordinat berbeda dan tambahkan secara berurutan menggunakan `annotator.add()`.
 
-**T: Bisakah saya menambahkan anotasi pada gambar dalam dokumen PDF?**  
-J: Ya. Gunakan sistem koordinat yang sama, pastikan titik-titik berada di dalam batas gambar.
+**T: Bisakah saya mengannotasi gambar dalam dokumen PDF?**  
+J: Ya. Gunakan sistem koordinat yang sama, pastikan titik‑titik berada di dalam batas gambar.
 
 **T: Format file apa saja selain PDF yang didukung oleh GroupDocs.Annotation?**  
 J: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX), dan format gambar seperti JPEG, PNG, TIFF.
 
 **T: Bagaimana cara menangani dokumen sangat besar tanpa kehabisan memori?**  
-J: Proses dokumen satu per satu, tingkatkan heap JVM (`-Xmx`), dan selalu segera dispose instance `Annotator`.
+J: Proses dokumen satu per satu, tingkatkan heap JVM (`-Xmx`), dan selalu dispose instance `Annotator` sesegera mungkin.
 
-**T: Apakah memungkinkan mengekstrak anotasi yang ada dari dokumen?**  
+**T: Apakah mungkin mengekstrak anotasi yang sudah ada dari sebuah dokumen?**  
 J: Ya. Gunakan `annotator.get()` untuk mengambil semua anotasi, lalu filter berdasarkan tipe, penulis, atau halaman sesuai kebutuhan.
 
 ---
 
-**Terakhir Diperbarui:** 2025-12-21  
+**Terakhir Diperbarui:** 2026-03-24  
 **Diuji Dengan:** GroupDocs.Annotation 25.2  
 **Penulis:** GroupDocs

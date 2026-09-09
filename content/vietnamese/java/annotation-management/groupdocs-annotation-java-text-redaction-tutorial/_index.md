@@ -82,10 +82,6 @@ url: /vi/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Redaction PDF bảo mật trong Java – Hướng dẫn GroupDocs
 
 Nếu bạn cần **secure pdf redaction** trong Java, bạn đã đến đúng hướng dẫn. Dù bạn đang dọn dẹp hợp đồng pháp lý, loại bỏ thông tin nhận dạng bệnh nhân khỏi hồ sơ y tế, hoặc ẩn dữ liệu kinh doanh mật, hướng dẫn này sẽ dẫn bạn qua một giải pháp sẵn sàng cho sản xuất với GroupDocs.Annotation. Bạn sẽ thấy cách thiết lập môi trường, áp dụng các annotation redaction, xử lý hàng loạt tệp, và tránh các lỗi thường gặp—để bạn có thể bảo vệ dữ liệu nhạy cảm một cách tự tin.
@@ -353,8 +349,3 @@ A: Yes. As long as the Java runtime can access the file stream—either by mount
 - [Tải PDF Java với GroupDocs Annotation: Hướng dẫn tải tài liệu](/annotation/java/document-loading/)
 - [Tải PDF có mật khẩu bảo vệ với GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Hướng dẫn toàn diện - Cách lưu PDF đã annotation với GroupDocs.Annotation cho Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

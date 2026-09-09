@@ -82,10 +82,6 @@ url: /id/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Redaksi PDF yang aman di Java – Tutorial GroupDocs
 
 Jika Anda perlu **secure pdf redaction** di Java, Anda berada di panduan yang tepat. Baik Anda sedang membersihkan kontrak hukum, menghapus pengidentifikasi pasien dari rekam medis, atau menyembunyikan data bisnis rahasia, tutorial ini akan memandu Anda melalui solusi siap produksi dengan GroupDocs.Annotation. Anda akan melihat cara menyiapkan lingkungan, menerapkan anotasi redaksi, memproses file secara massal, dan menghindari jebakan umum—sehingga Anda dapat melindungi data sensitif dengan percaya diri.
@@ -353,8 +349,3 @@ A: Yes. As long as the Java runtime can access the file stream—either by mount
 - [Muat PDF Java dengan GroupDocs Annotation: Panduan Memuat Dokumen](/annotation/java/document-loading/)
 - [Muat PDF yang Dilindungi Kata Sandi dengan GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Panduan Lengkap - Cara Menyimpan PDF Beranotasi dengan GroupDocs.Annotation untuk Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

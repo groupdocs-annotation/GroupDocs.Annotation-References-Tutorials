@@ -83,10 +83,6 @@ url: /hu/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Biztonságos PDF redakció Java-ban – GroupDocs útmutató
 
 Ha Java-ban kell **biztonságos PDF redakció**, jó helyen jársz. Akár jogi szerződéseket tisztítasz, betegt azonosítókat távolítasz el orvosi feljegyzésekből, vagy bizalmas üzleti adatokat rejtesz el, ez az útmutató végigvezet egy termelésre kész megoldáson a GroupDocs.Annotation segítségével. Megmutatjuk, hogyan állítsd be a környezetet, alkalmazz redakciós annotációkat, kötegelt fájlfeldolgozást végezz, és kerüld el a gyakori buktatókat—így magabiztosan védheted az érzékeny adatokat.
@@ -357,8 +353,3 @@ V: Igen. Amíg a Java futtatókörnyezet hozzáfér a fájl‑streamhez – legy
 - [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

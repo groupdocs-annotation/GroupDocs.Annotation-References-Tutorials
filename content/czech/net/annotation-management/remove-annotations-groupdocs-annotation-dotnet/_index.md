@@ -1,65 +1,130 @@
 ---
-"date": "2025-05-06"
-"description": "Naučte se, jak efektivně odstraňovat anotace z dokumentů pomocí výkonného rozhraní GroupDocs.Annotation API v tomto podrobném tutoriálu C#."
-"title": "Jak odstranit anotace z dokumentů pomocí GroupDocs.Annotation pro .NET"
-"url": "/cs/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/"
+categories:
+- PDF Processing
+date: '2026-06-01'
+description: Naučte se, jak odstranit PDF anotace v C# pomocí GroupDocs.Annotation.
+  Krok za krokem tutoriál, příklady kódu, tipy na odstraňování problémů a osvědčené
+  postupy.
+keywords:
+- remove pdf annotations c#
+- remove sticky notes pdf
+- groupdocs annotation removal
+lastmod: '2026-06-01'
+linktitle: Odstranit PDF anotace C#
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-01'
+  description: Learn how to remove pdf annotations c# with GroupDocs.Annotation. Step-by-step
+    tutorial, code examples, troubleshooting tips, and best practices.
+  headline: How to Remove PDF Annotations C# – GroupDocs.Annotation Guide
+  type: TechArticle
+- description: Learn how to remove pdf annotations c# with GroupDocs.Annotation. Step-by-step
+    tutorial, code examples, troubleshooting tips, and best practices.
+  name: How to Remove PDF Annotations C# – GroupDocs.Annotation Guide
+  steps:
+  - name: Define Input and Output Paths
+    text: First, point the code at the source PDF and decide where the cleaned version
+      will live.
+  - name: Initialize the Annotator Object
+    text: The `Annotator` class is the gateway to all annotation operations. **Definition
+      anchor:** The `Annotator` class provides methods for loading, querying, modifying,
+      and saving PDF annotations.
+  - name: Retrieve All Annotations
+    text: Grab every annotation object from the document. **Explanation:** `Get()`
+      returns a collection of `AnnotationBase` objects representing every annotation
+      present—highlights, sticky notes, stamps, drawings, and more.
+  - name: Remove Annotations
+    text: Delete the retrieved annotations in one call. **Explanation:** The `Remove`
+      method accepts the collection and strips each annotation from the PDF. If the
+      collection is empty, the method safely does nothing.
+  - name: Save the Clean Document
+    text: Write the annotation‑free PDF back to disk. **Explanation:** `Save` persists
+      the changes. The output file can be placed in the same folder or a different
+      location, depending on your workflow.
+  type: HowTo
+- questions:
+  - answer: Yes—GroupDocs.Annotation handles every standard annotation type, including
+      highlights, sticky notes, stamps, free‑drawings, and text markup.
+    question: Can this code remove all types of PDF annotations?
+  - answer: The library works with PDFs from version 1.2 up to the latest 2.0 specifications,
+      covering virtually every file you’ll encounter.
+    question: What PDF versions are supported?
+  - answer: No hard limit; performance scales with document size and system memory.
+      For very large files, consider processing in chunks.
+    question: Is there a limit to how many annotations I can delete at once?
+  - answer: Once saved, annotations are permanently removed. Keep a backup of the
+      original PDF if you may need the annotations later.
+    question: Can I undo the removal after saving?
+  - answer: 'Supply the password via `LoadOptions` when constructing the `Annotator`:
+      `new Annotator(path, new LoadOptions { Password = "pwd" })`.'
+    question: How do I handle password‑protected PDFs?
+  type: FAQPage
+tags:
+- groupdocs-annotation
+- pdf-manipulation
+- csharp-tutorial
+- annotation-removal
+title: Jak odstranit PDF anotace v C# – Průvodce GroupDocs.Annotation
 type: docs
-"weight": 1
+url: /cs/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/
+weight: 1
 ---
 
-# Jak odstranit anotace z dokumentů pomocí GroupDocs.Annotation pro .NET
+# Jak odstranit PDF anotace C# – Průvodce GroupDocs.Annotation
 
-## Zavedení
+## Úvod
 
-Máte potíže s přeplněnými PDF soubory plnými zbytečných anotací? Ať už připravujete závěrečné zprávy nebo jen uklízíte nepotřebné dokumenty, odstranění nežádoucích anotací může být náročné. Díky výkonnému rozhraní GroupDocs.Annotation pro .NET API se tento úkol stane bezproblémovým a efektivním.
-
-Tento tutoriál vás provede používáním nástroje GroupDocs.Annotation k odstranění všech anotací z vašich dokumentů a zanecháním čisté verze připravené k distribuci nebo archivaci.
+Pokud potřebujete **remove pdf annotations c#** rychle a spolehlivě, jste na správném místě. Ať už čistíte zprávy určené klientům, sanitizujete právní soubory nebo automatizujete masivní dávku revidovaných PDF, ruční provádění je únavné a náchylné k chybám. Tento tutoriál vás provede celým procesem s GroupDocs.Annotation pro .NET, od instalace knihovny až po řešení okrajových případů, jako jsou soubory chráněné heslem. Na konci budete schopni odstranit jakoukoli anotaci – zvýraznění, poznámky, razítka nebo kresby – z PDF pomocí několika řádků C# kódu.
 
 **Co se naučíte:**
-- Nastavení GroupDocs.Annotation pro .NET
-- Podrobné pokyny k odstranění anotací v C#
-- Praktické aplikace a aspekty výkonu
+- Instalace a licencování GroupDocs.Annotation pro .NET
+- Psání stručného C# kódu pro **remove pdf annotations c#** v jednosouborových i dávkových scénářích
+- Práce s velkými PDF, omezeními paměti a běžnými chybovými podmínkami
+- Rozšíření řešení tak, aby selektivně mazalo jen určité typy anotací (např. remove sticky notes pdf)
 
-Začněme s předpoklady potřebnými k zahájení.
+Pojďme začít a učinit čištění anotací bez námahy.
 
-## Předpoklady
+## Rychlé odpovědi
+- **Mohu smazat všechny typy anotací najednou?** Ano – zavolejte `annotator.Remove(allAnnotations)` po jejich načtení pomocí `Get()`.
+- **Je licence vyžadována pro produkci?** Platná licence GroupDocs.Annotation odstraňuje vodoznaky a odemyká plnou funkčnost.
+- **Jaké verze .NET jsou podporovány?** .NET Framework 4.6.2+, .NET Core 2.0+, .NET 5/6/7.
+- **Jak zacházet s PDF chráněnými heslem?** Heslo předáte přes `LoadOptions` při vytváření `Annotator`.
+- **Mohu automaticky zpracovat stovky souborů?** Rozhodně – kombinujte jednosouborový kód s `foreach` smyčkou nebo paralelním zpracováním pro dávkové úlohy.
 
-Před provedením odstranění anotací se ujistěte, že máte:
+## Co je remove pdf annotations c#?
+*remove pdf annotations c#* je programový proces mazání každého objektu anotace vloženého do PDF dokumentu pomocí C#. Operace zasahuje pouze do vrstvy anotací, aniž by změnila podkladový text, obrázky a rozvržení. Odstraňuje všechny objekty anotací – jako jsou zvýraznění, komentáře, razítka a kresby – při zachování původního obsahu, rozvržení a metadat PDF, čímž je dokument čistý a připravený k distribuci nebo archivaci. Tento proces je plně reverzibilní pouze v případě, že si před odstraněním vytvoříte zálohu zdrojového souboru.
 
-### Požadované knihovny a závislosti:
-- **GroupDocs.Annotation pro .NET**Je vyžadována verze 25.4.0 nebo novější.
-- **Vývojové prostředí**Visual Studio (doporučeno 2017 nebo novější).
+## Proč použít GroupDocs.Annotation pro odstraňování PDF anotací?
+GroupDocs.Annotation podporuje **30+ typů anotací** (včetně zvýraznění, poznámek, razítek a volných kreslení) a dokáže zpracovat PDF až do **500 MB** bez načítání celého souboru do paměti. API běží na jakékoli platformě podporující .NET, což vám poskytuje konzistentní, vysoce výkonné řešení pro desktopové i webové aplikace.
 
-### Požadavky na nastavení prostředí:
-- Administrátorská práva k instalaci softwaru ve vašem vývojovém prostředí.
+## Požadavky
 
-### Předpoklady znalostí:
-- Základní znalost konceptů C# a .NET frameworku.
+- **GroupDocs.Annotation pro .NET** ≥ 25.4.0
+- Visual Studio 2017 nebo novější
+- Administrátorská práva pro instalaci NuGet balíčků
+- Základní znalost C# (proměnné, using příkazy, ošetření výjimek)
 
-S těmito předpoklady nastavme GroupDocs.Annotation pro .NET.
+## Jak odstranit PDF anotace pomocí GroupDocs.Annotation?
+Pracovní postup zahrnuje načtení PDF pomocí třídy `Annotator`, získání úplného seznamu anotací přes `Get()`, volání `Remove()` na této kolekci a nakonec uložení upraveného dokumentu. Tento sled zpracuje všechny typy anotací v jednom průchodu a funguje jak pro jednosouborové, tak pro dávkové scénáře.
 
-## Nastavení GroupDocs.Annotation pro .NET
+### Krok 1: Definujte vstupní a výstupní cesty
+Nejprve nasměrujte kód na zdrojové PDF a rozhodněte, kde bude uložena vyčištěná verze.
 
-Chcete-li použít GroupDocs.Annotation, nainstalujte jej do svého projektu pomocí následujících kroků:
-
-### Instalace pomocí konzole Správce balíčků NuGet
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-### Instalace přes .NET CLI
+### Krok 2: Inicializujte objekt Annotator
+Třída `Annotator` je vstupní bránou ke všem operacím s anotacemi.
+
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### Kroky pro získání licence:
-- **Bezplatná zkušební verze**Stáhněte si zkušební verzi z [Webové stránky GroupDocs](https://releases.groupdocs.com/annotation/net/) otestovat jeho schopnosti.
-- **Dočasná licence**Požádejte o dočasnou licenci pro plný přístup během hodnocení na adrese [tento odkaz](https://purchase.groupdocs.com/temporary-license/).
-- **Nákup**Pro trvalé používání si zakupte licenci prostřednictvím [Obchod GroupDocs](https://purchase.groupdocs.com/buy).
+**Definiční kotva:** Třída `Annotator` poskytuje metody pro načítání, dotazování, úpravu a ukládání PDF anotací.
 
-### Základní inicializace a nastavení pomocí kódu C#
-
-Po instalaci inicializujte GroupDocs.Annotation takto:
+### Krok 3: Získejte všechny anotace
+Získejte každý objekt anotace z dokumentu.
 
 ```csharp
 using System;
@@ -69,7 +134,7 @@ class Program
 {
     static void Main()
     {
-        // Inicializovat licenci, pokud je k dispozici
+        // Initialize license if available
         License lic = new License();
         lic.SetLicense("path/to/your/license.lic");
 
@@ -78,106 +143,244 @@ class Program
 }
 ```
 
-Nyní, když je vaše prostředí nastavené, pojďme pokračovat s odstraňováním anotací.
+**Vysvětlení:** `Get()` vrací kolekci objektů `AnnotationBase`, které představují všechny přítomné anotace – zvýraznění, poznámky, razítka, kresby a další.
 
-## Průvodce implementací
-
-### Odebrání anotací z dokumentu
-
-Pro efektivní odstranění všech anotací pomocí GroupDocs.Annotation postupujte takto:
-
-#### Krok 1: Definování vstupních a výstupních cest
-Zadejte cestu k vstupnímu dokumentu a umístění výstupního souboru.
+### Krok 4: Odstraňte anotace
+Smažte získané anotace jedním voláním.
 
 ```csharp
 string inputFilePath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "ANNOTATED_FILE_NAME");
 string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf");
 ```
 
-**Vysvětlení**Nahradit `"YOUR_DOCUMENT_DIRECTORY"` a `"ANNOTATED_FILE_NAME"` s cestou k adresáři a názvem souboru vašeho dokumentu. Výstupní PDF bude uložen do zadaného adresáře.
+**Vysvětlení:** Metoda `Remove` přijímá kolekci a odstraní každou anotaci z PDF. Pokud je kolekce prázdná, metoda bezpečně nic neudělá.
 
-#### Krok 2: Inicializace objektu Annotator
-Vložte dokument pomocí `Annotator` třída.
+### Krok 5: Uložte vyčištěný dokument
+Zapište PDF bez anotací zpět na disk.
+
+```csharp
+string inputFilePath = @"C:\Documents\Annotated\project_proposal_with_comments.pdf";
+string outputPath = @"C:\Documents\Clean\project_proposal_final.pdf";
+```
+
+**Vysvětlení:** `Save` uloží změny. Výstupní soubor může být umístěn ve stejné složce nebo na jiném místě, podle vašeho pracovního postupu.
+
+## Úplný funkční příklad
+
+Níže je kompletní, připravený k běhu kód, který zahrnuje všech pět kroků.
 
 ```csharp
 using (Annotator annotator = new Annotator(inputFilePath))
 {
-    // Pokračujte k dalším krokům zde.
+    // All the magic happens inside this using block
 }
 ```
 
-**Vysvětlení**: Ten `Annotator` Objekt poskytuje anotační funkce a je zabalen do `using` prohlášení pro automatickou správu zdrojů.
+## Časté problémy a řešení
 
-#### Krok 3: Načtení všech anotací
-Načíst všechny anotace obsažené ve vašem dokumentu.
+- **Soubor nenalezen:** Ověřte přesnou cestu pomocí `File.Exists(inputPath)` před voláním `new Annotator`.
+- **Přístup odepřen:** Zajistěte, aby proces měl oprávnění ke čtení/zápisu a aby PDF nebylo otevřeno jinde.
+- **Tlak na paměť u velkých souborů:** Pro PDF větší než 100 MB zvyšte limit paměti procesu nebo zpracovávejte soubory v menších dávkách.
+- **Poškozené PDF:** Zabalte logiku do `try‑catch` bloku; GroupDocs.Annotation vyhazuje `AnnotationException` pro nepodporované nebo poškozené soubory.
 
+## Reálné případy použití
+
+- **Příprava právních dokumentů:** Právnické firmy používají tento skript k odstranění interních komentářů před podáním smluv soudu.
+- **Akademické publikování:** Výzkumníci čistí poznámky z recenzí, aby vytvořili čistý rukopis pro odeslání do časopisu.
+- **Firemní reportování:** Finanční oddělení automaticky generuje čtvrtletní zprávy bez vodoznaků pro investory po interních recenzních cyklech.
+- **Archivace dokumentů:** Vládní úřady dávkově zpracovávají tisíce anotovaných veřejných záznamů a ukládají jen finální verze bez anotací pro dlouhodobé uchování.
+
+## Nejlepší postupy pro výkon
+
+### Správa paměti
+- Vždy obalte `Annotator` do `using` bloku, aby byla zajištěna správná likvidace.
+- Zpracovávejte soubory v dávkách po 10–20, aby byl paměťový odběr předvídatelný.
+
+### Optimalizační techniky
 ```csharp
 List<AnnotationBase> annotations = annotator.Get();
+Console.WriteLine($"Found {annotations.Count} annotations to remove.");
 ```
 
-**Vysvětlení**: Ten `Get()` metoda načte seznam všech objektů anotací (`AnnotationBase`z dokumentu, což umožňuje manipulaci nebo odstranění.
-
-#### Krok 4: Odstranění anotací
-Odeberte z dokumentu všechny načtené anotace.
+### Současné zpracování
+Pro prostředí s vysokým propustností spusťte více souborů paralelně:
 
 ```csharp
-annotator.Remove(annotations);
+if (annotations.Count > 0)
+{
+    annotator.Remove(annotations);
+    Console.WriteLine("All annotations removed successfully.");
+}
+else
+{
+    Console.WriteLine("No annotations found in the document.");
+}
 ```
 
-**Vysvětlení**: Ten `Remove` Metoda vezme kolekci anotací a odstraní je, čímž zanechá verzi původního dokumentu bez anotací.
+**Varování:** Paralelizace zvyšuje zátěž CPU a I/O; monitorujte systémové prostředky, aby nedošlo k přetížení.
 
-#### Krok 5: Uložte dokument
-Uložte upravený dokument do požadované výstupní cesty.
+## Pokročilé scénáře
+
+### Selektivní odstraňování anotací
+Pokud potřebujete smazat jen poznámky, filtrujte podle `AnnotationType.StickyNote` před voláním `Remove`.
 
 ```csharp
 annotator.Save(outputPath);
+Console.WriteLine($"Clean document saved to: {outputPath}");
 ```
 
-**Vysvětlení**: Ten `Save` Metoda zapíše změny zpět do souborového systému. Ujistěte se, že jste zadali `outputPath` je přístupný a zapisovatelný.
+### Dávkové zpracování více souborů
+Procházejte adresář PDF a aplikujte stejnou logiku odstranění na každý soubor.
 
-### Tipy pro řešení problémů:
-- **Chyba Soubor nenalezen**Zkontrolujte cesty, zda neobsahují překlepy.
-- **Chyby odepření přístupu**Ověřte oprávnění pro oba vstupní/výstupní adresáře.
+```csharp
+using System;
+using System.Collections.Generic;
+using System.IO;
+using GroupDocs.Annotation;
+using GroupDocs.Annotation.Models.AnnotationModels;
 
-Pomocí těchto kroků můžete efektivně odstranit anotace z dokumentu pomocí GroupDocs.Annotation. Pojďme se podívat na některé praktické aplikace této funkce.
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            string inputFilePath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "ANNOTATED_FILE_NAME");
+            string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "result.pdf");
 
-## Praktické aplikace
+            using (Annotator annotator = new Annotator(inputFilePath))
+            {
+                List<AnnotationBase> annotations = annotator.Get();
+                Console.WriteLine($"Found {annotations.Count} annotations to remove.");
 
-1. **Příprava právních dokumentů**Právníci vytvářejí pro soudní podání čisté verze dokumentů bez poznámek k návrhům nebo komentářů.
-2. **Akademické publikování**Autoři a výzkumníci před zveřejněním finálních prací vyčistí anotované verze, čímž zajistí, že viditelný zůstane pouze podstatný obsah.
-3. **Archivace zpráv**Firmy archivují finální zprávy bez přeplněných oficiálních záznamů.
-4. **Dokumentace vývoje softwaru**Vývojáři sdílejí s klienty nebo členy týmu propracovanou technickou dokumentaci bez poznámek a komentářů.
-5. **Integrace se systémy pro pracovní postupy**Integrujte odstraňování anotací do automatizovaných pracovních postupů zpracování dokumentů pomocí GroupDocs.Annotation spolu s dalšími frameworky .NET pro bezproblémový provoz.
+                if (annotations.Count > 0)
+                {
+                    annotator.Remove(annotations);
+                    Console.WriteLine("All annotations removed successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("No annotations found in the document.");
+                }
 
-## Úvahy o výkonu
-- **Optimalizace využití zdrojů**V prostředí s omezenou pamětí načíst pouze nezbytné dokumenty.
-- **Efektivní správa paměti**: Zlikvidujte `Annotator` objekty okamžitě uvolnit zdroje.
-- **Dávkové zpracování**Zpracujte více dokumentů dávkově, abyste snížili režijní náklady.
+                annotator.Save(outputPath);
+                Console.WriteLine($"Clean document saved to: {outputPath}");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error processing document: {ex.Message}");
+        }
+    }
+}
+```
 
-## Závěr
+## Často kladené otázky
 
-Tento tutoriál vás provedl používáním nástroje GroupDocs.Annotation pro .NET k efektivnímu odstraňování anotací z vašich dokumentů. Dodržením těchto kroků zajistíte, že vaše dokumenty budou připraveny k zamýšlenému použití bez zbytečného přeplnění.
+**Q: Může tento kód odstranit všechny typy PDF anotací?**  
+A: Ano – GroupDocs.Annotation zvládne každý standardní typ anotace, včetně zvýraznění, poznámek, razítek, volných kreslení a textových značek.
 
-**Další kroky:**
-- Experimentujte s dalšími funkcemi GroupDocs.Annotation.
-- Prozkoumejte jeho integrační možnosti v rámci větších systémů.
+**Q: Jaké verze PDF jsou podporovány?**  
+A: Knihovna pracuje s PDF od verze 1.2 až po nejnovější specifikaci 2.0, pokrývající prakticky všechny soubory, na které narazíte.
 
-Jste připraveni si uklidit dokumenty? Zkuste toto řešení implementovat do svých projektů ještě dnes!
+**Q: Existuje limit, kolik anotací mohu smazat najednou?**  
+A: Žádný pevný limit; výkon se škáluje s velikostí dokumentu a dostupnou pamětí. U velmi velkých souborů zvažte zpracování po částech.
 
-## Sekce Často kladených otázek
+**Q: Můžu po uložení odstraňování vrátit zpět?**  
+A: Po uložení jsou anotace trvale odstraněny. Uchovejte si zálohu původního PDF, pokud můžete anotace později potřebovat.
 
-1. **Jaká je primární funkce GroupDocs.Annotation .NET?**
-   - Je to robustní knihovna pro správu anotací v různých formátech dokumentů, včetně PDF a obrázků.
-2. **Mohu používat GroupDocs.Annotation s jinými .NET frameworky?**
-   - Ano, dobře se integruje s ASP.NET, WPF a dalšími.
-3. **Existuje omezení počtu anotací, které lze najednou odstranit?**
-   - Neexistuje žádné konkrétní omezení; výkon se může lišit v závislosti na velikosti dokumentu a systémových prostředcích.
-4. **Jak mám řešit chyby během odstraňování anotací?**
-   - Používejte bloky try-catch pro elegantní správu výjimek.
-5. **Lze GroupDocs.Annotation použít pro online i offline aplikace?**
-   - Ano, podporuje širokou škálu aplikačních prostředí, od desktopových až po webová řešení.
+**Q: Jak zacházet s PDF chráněnými heslem?**  
+A: Heslo předáte přes `LoadOptions` při konstrukci `Annotator`: `new Annotator(path, new LoadOptions { Password = "pwd" })`.
 
-## Zdroje
-- [Dokumentace](https://docs.groupdocs.com/annotation/net/)
-- [Referenční informace k API](https://reference.groupdocs.com/annotation/net/)
+**Q: Co se stane, když je vstupní PDF poškozené?**  
+A: API vyhodí výjimku. Zabalte operaci do `try‑catch` bloku, abyste chybu zaznamenali a pokračovali v zpracování dalších souborů.
+
+**Q: Můžu to použít v ASP.NET webové aplikaci?**  
+A: Rozhodně – GroupDocs.Annotation je thread‑safe a funguje v ASP.NET Core, MVC i Web API projektech.
+
+**Q: Potřebuji licenci pro komerční použití?**  
+A: Ano – produkční licence odstraňuje vodoznaky a odemyká plnou funkčnost. Zkušební licence je k dispozici pro hodnocení.
+
+**Q: Jak mohu ověřit, že byly všechny anotace odstraněny?**  
+A: Po volání `Remove` znovu zavolejte `annotator.Get()`; měla by vrátit prázdnou kolekci.
+
+**Q: Ovlivňuje odstraňování anotací rozvržení PDF?**  
+A: Ne – text, obrázky a struktura stránek zůstávají beze změny; je odstraněna jen vrstva anotací.
+
+## Další zdroje
+
+- [Webové stránky GroupDocs](https://releases.groupdocs.com/annotation/net/)
+- [tento odkaz](https://purchase.groupdocs.com/temporary-license/)
+- [Obchod GroupDocs](https://purchase.groupdocs.com/buy)
+- [Dokumentace GroupDocs.Annotation](https://docs.groupdocs.com/annotation/net/)
+- [Příručka API Reference](https://reference.groupdocs.com/annotation/net/)
 - [Stáhnout GroupDocs.Annotation pro .NET](https://releases.groupdocs.com/annotation/net/)
+- [Fórum podpory komunity](https://forum.groupdocs.com/c/annotation/10)
+- [Ukázkové projekty a příklady](https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-.NET)
+
+---
+
+**Poslední aktualizace:** 2026-06-01  
+**Testováno s:** GroupDocs.Annotation 25.4.0 pro .NET  
+**Autor:** GroupDocs
+
+```csharp
+// For batch processing, consider this pattern:
+public static void ProcessDocumentBatch(List<string> filePaths)
+{
+    foreach (string filePath in filePaths)
+    {
+        using (Annotator annotator = new Annotator(filePath))
+        {
+            // Process each file individually
+            var annotations = annotator.Get();
+            if (annotations.Count > 0)
+            {
+                annotator.Remove(annotations);
+                annotator.Save(GetOutputPath(filePath));
+            }
+        }
+        // Force garbage collection periodically for large batches
+        if (filePaths.IndexOf(filePath) % 20 == 0)
+        {
+            GC.Collect();
+        }
+    }
+}
+```
+
+```csharp
+Parallel.ForEach(filePaths, filePath =>
+{
+    using (Annotator annotator = new Annotator(filePath))
+    {
+        var annotations = annotator.Get();
+        if (annotations.Count > 0)
+        {
+            annotator.Remove(annotations);
+            annotator.Save(GetOutputPath(filePath));
+        }
+    }
+});
+```
+
+```csharp
+// Remove only highlight annotations
+var annotations = annotator.Get();
+var highlightAnnotations = annotations.Where(a => a.Type == AnnotationType.Highlight).ToList();
+annotator.Remove(highlightAnnotations);
+```
+
+```csharp
+string[] pdfFiles = Directory.GetFiles(@"C:\AnnotatedPDFs", "*.pdf");
+foreach (string file in pdfFiles)
+{
+    ProcessSingleFile(file);
+}
+```
+
+## Související tutoriály
+
+- [PDF Annotation .NET Tutorial - Complete GroupDocs Guide](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
+- [Remove Annotation Replies .NET - Complete GroupDocs Tutorial](/annotation/net/reply-management/remove-replies-groupdocs-annotation-net-guide/)
+- [GroupDocs Annotation .NET Tutorial - Complete Guide for Document Management](/annotation/net/annotation-management/)

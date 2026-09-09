@@ -81,10 +81,6 @@ url: /th/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # การลบข้อมูล PDF อย่างปลอดภัยใน Java – คู่มือ GroupDocs
 
 หากคุณต้องการ **secure pdf redaction** ใน Java คุณมาถูกที่แล้ว ไม่ว่าคุณจะกำลังทำความสะอาดสัญญากฎหมาย ลบข้อมูลผู้ป่วยออกจากบันทึกทางการแพทย์ หรือซ่อนข้อมูลธุรกิจที่เป็นความลับ คู่มือนี้จะพาคุณผ่านโซลูชันพร้อมใช้งานในระดับการผลิตด้วย GroupDocs.Annotation คุณจะได้เห็นวิธีตั้งค่าสภาพแวดล้อม การใช้แอนโนเทชันลบข้อมูล การประมวลผลไฟล์เป็นกลุ่ม และการหลีกเลี่ยงข้อผิดพลาดทั่วไป—เพื่อให้คุณสามารถปกป้องข้อมูลที่ละเอียดอ่อนได้อย่างมั่นใจ
@@ -352,8 +348,3 @@ A: ใช่. ตราบใดที่ Java runtime สามารถเข�
 - [โหลด PDF ด้วย Java และ GroupDocs Annotation: คู่มือการโหลดเอกสาร](/annotation/java/document-loading/)
 - [โหลด PDF ที่มีการป้องกันด้วยรหัสผ่านด้วย GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [คู่มือเต็ม - วิธีบันทึก PDF ที่มีแอนโนเทชันด้วย GroupDocs.Annotation สำหรับ Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

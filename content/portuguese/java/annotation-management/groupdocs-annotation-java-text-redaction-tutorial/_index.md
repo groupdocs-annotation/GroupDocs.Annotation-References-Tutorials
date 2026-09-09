@@ -82,10 +82,6 @@ url: /pt/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Redação segura de PDF em Java – Tutorial do GroupDocs
 
 Se você precisa **proteger a redação de PDF** em Java, chegou ao guia certo. Seja limpando contratos legais, removendo identificadores de pacientes de registros médicos ou ocultando dados confidenciais de negócios, este tutorial mostra uma solução pronta para produção com o GroupDocs.Annotation. Você verá como configurar o ambiente, aplicar anotações de redação, processar arquivos em lote e evitar armadilhas comuns — para que possa proteger dados sensíveis com confiança.
@@ -356,8 +352,3 @@ R: Sim. Desde que o runtime Java possa acessar o stream do arquivo — seja mont
 - [Carregar PDF protegido por senha com GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Guia completo – Como salvar PDF anotado com GroupDocs.Annotation para Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

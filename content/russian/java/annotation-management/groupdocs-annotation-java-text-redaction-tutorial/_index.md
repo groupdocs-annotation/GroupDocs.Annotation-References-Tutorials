@@ -82,10 +82,6 @@ url: /ru/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Защищённое редактирование PDF в Java – руководство GroupDocs
 
 Если вам нужна **защищённая редактирование PDF** в Java, вы попали в нужное руководство. Независимо от того, очищаете ли вы юридические контракты, удаляете идентификаторы пациентов из медицинских записей или скрываете конфиденциальные бизнес‑данные, это руководство проведёт вас через готовое к продакшену решение с GroupDocs.Annotation. Вы увидите, как настроить окружение, применить аннотации редактирования, обрабатывать файлы пакетно и избегать распространённых ошибок — чтобы вы могли надёжно защищать чувствительные данные.
@@ -356,8 +352,3 @@ try (Annotator annotator = new Annotator(inputPath)) {
 - [Загрузка PDF с паролем с помощью GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Полное руководство — Как сохранить аннотированный PDF с помощью GroupDocs.Annotation для Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

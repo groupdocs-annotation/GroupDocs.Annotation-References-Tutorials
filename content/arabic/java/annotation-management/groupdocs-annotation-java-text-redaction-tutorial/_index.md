@@ -82,10 +82,6 @@ url: /ar/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # تعديل PDF بأمان في Java – دليل GroupDocs
 
 إذا كنت بحاجة إلى **تعديل PDF بأمان** في Java، فقد وجدت الدليل المناسب. سواءً كنت تقوم بتنظيف العقود القانونية، أو إزالة معرفات المرضى من السجلات الطبية، أو إخفاء بيانات الأعمال السرية، فإن هذا الدرس يشرح لك حلاً جاهزًا للإنتاج باستخدام GroupDocs.Annotation. ستتعرف على كيفية إعداد البيئة، تطبيق تعليقات التعديل، معالجة الملفات بالجملة، وتجنب المشكلات الشائعة—لتتمكن من حماية البيانات الحساسة بثقة.
@@ -356,8 +352,3 @@ try (Annotator annotator = new Annotator(inputPath)) {
 - [تحميل PDF محمي بكلمة مرور باستخدام GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [الدليل الكامل - كيفية حفظ PDF معلق باستخدام GroupDocs.Annotation للـ Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

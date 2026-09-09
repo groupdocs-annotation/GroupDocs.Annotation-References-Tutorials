@@ -82,10 +82,6 @@ url: /hi/java/annotation-management/groupdocs-annotation-java-text-redaction-tut
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java में सुरक्षित PDF रेडैक्शन – GroupDocs ट्यूटोरियल
 
 यदि आपको Java में **secure pdf redaction** की आवश्यकता है, तो आप सही गाइड पर आए हैं। चाहे आप कानूनी अनुबंधों को साफ़ कर रहे हों, मेडिकल रिकॉर्ड्स से रोगी पहचानकर्ता हटाते हों, या गोपनीय व्यावसायिक डेटा छिपा रहे हों, यह ट्यूटोरियल GroupDocs.Annotation के साथ एक प्रोडक्शन‑रेडी समाधान के माध्यम से आपका मार्गदर्शन करता है। आप देखेंगे कि पर्यावरण कैसे सेट अप करें, रेडैक्शन एनोटेशन कैसे लागू करें, फ़ाइलों को बल्क में प्रोसेस करें, और सामान्य समस्याओं से कैसे बचें—ताकि आप आत्मविश्वास के साथ संवेदनशील डेटा की सुरक्षा कर सकें।
@@ -353,8 +349,3 @@ A: हाँ। जब तक Java रनटाइम फ़ाइल स्ट�
 - [GroupDocs Annotation के साथ PDF Java लोड करें: डॉक्यूमेंट लोडिंग गाइड](/annotation/java/document-loading/)
 - [GroupDocs.Annotation Java के साथ पासवर्ड प्रोटेक्टेड PDF लोड करें](/annotation/java/advanced-features/)
 - [पूरा गाइड - Java के लिए GroupDocs.Annotation के साथ एनोटेटेड PDF कैसे सहेजें](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

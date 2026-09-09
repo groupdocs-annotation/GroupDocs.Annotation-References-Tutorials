@@ -20,13 +20,7 @@ url: /ru/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-Also there are bullet lists, etc.
-
-Let's translate each section.
-
-Will keep markdown formatting.
-
-Proceed to write final answer.# Создание поискового PDF Java: Текстовые аннотации с GroupDocs
+# Создание поискового PDF Java: Текстовые аннотации с GroupDocs
 
 Когда‑то вы, вероятно, утонули в огромных PDF‑документах, желая быстро перейти к важным разделам? Вы не одиноки. Будь то юридические контракты, технические руководства или исследовательские статьи, возможность **create searchable PDF Java** может стать настоящим прорывом для навигации по документам и совместной работы.
 
