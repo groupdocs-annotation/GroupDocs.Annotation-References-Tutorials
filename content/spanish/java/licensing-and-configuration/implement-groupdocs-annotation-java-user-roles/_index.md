@@ -1,72 +1,135 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Aprende cómo implementar roles de usuario personalizados para la anotación
-  de documentos basada en roles en Java con GroupDocs. Incluye configuración, ejemplos
-  de código, anotación de documentos legales, guardar PDF anotado y procesamiento
-  por lotes de anotaciones.
-keywords: java annotation user roles, role based document annotation java, groupdocs
-  annotation tutorial, java pdf annotation permissions, document collaboration java
-lastmod: '2026-03-01'
-linktitle: Java Annotation User Roles Guide
+date: '2026-09-10'
+description: Aprenda cómo agregar anotaciones basadas en roles en Java con GroupDocs.Annotation,
+  cubriendo roles de usuario, configuraciones de permisos, guardado de PDF y procesamiento
+  para colaboración.
+keywords:
+- role based annotation java
+- java annotation user roles
+- groupdocs annotation java
+- document annotation permissions
+- role based document workflow
+lastmod: '2026-09-10'
+linktitle: Guía de roles de usuario para anotaciones en Java
+og_description: Aprenda cómo agregar anotaciones basadas en roles en Java con GroupDocs.Annotation,
+  cubriendo roles de usuario, configuraciones de permisos, guardado de PDF y procesamiento
+  para colaboración.
+og_image_alt: 'Developer guide: Add role based annotation in Java with GroupDocs.Annotation'
+og_title: Cómo agregar anotaciones basadas en roles en Java con GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to add role based annotation in Java with GroupDocs.Annotation,
+    covering user roles, permission settings, PDF saving, and processing for collaboration.
+  headline: How to add role based annotation in Java with GroupDocs
+  type: TechArticle
+- description: Learn how to add role based annotation in Java with GroupDocs.Annotation,
+    covering user roles, permission settings, PDF saving, and processing for collaboration.
+  name: How to add role based annotation in Java with GroupDocs
+  steps:
+  - name: creating replies with custom user roles
+    text: '**How do you create a reply that respects a specific user role?** Create
+      a `User` instance, assign the appropriate `Role` enum value (e.g., `EDITOR`
+      or `VIEWER`), then attach the user to a `Reply` object before adding it to the
+      annotation. This ensures the reply inherits the permissions defined by t'
+  - name: configuring area annotations
+    text: '**What is an area annotation and how do you bind role‑aware replies to
+      it?** An area annotation highlights a rectangular region on a page. After you
+      create the visual annotation, you attach the previously built `Reply` objects
+      so that the role logic is enforced whenever a user interacts with the hig'
+  - name: applying annotations and saving the PDF
+    text: '**How can you persist the role‑based annotations to a new PDF file?** Load
+      the target document with `Annotator`, add the prepared annotation, then call
+      `annotator.save("output.pdf")`. The save operation writes only the annotation
+      changes, keeping the original content intact while embedding the permi'
+  type: HowTo
+- questions:
+  - answer: It offers a built‑in role‑based permission system, supports 50+ input
+      and output formats, and provides enterprise‑grade features like audit trails
+      and batch processing.
+    question: What makes GroupDocs.Annotation stand out from other Java annotation
+      libraries?
+  - answer: Map your business‑specific roles to the existing `Role` enum (e.g., `Role.EDITOR`)
+      and handle additional logic in your application layer, as shown in the `DocumentRole`
+      example.
+    question: How can I create custom roles beyond EDITOR and VIEWER?
+  - answer: Yes. The `User` object accepts any identifier you use (e.g., database
+      ID). Simply map your authenticated user to a `User` instance with the appropriate
+      `Role`.
+    question: Can I integrate this with my existing authentication system?
+  - answer: Yes. The `annotator.save()` method writes only the annotation changes,
+      making the save operation fast even for large files.
+    question: Is it possible to **save annotated PDF** without re‑rendering the whole
+      document?
+  - answer: Loop through your file list, create a single `Annotator` per file, add
+      all needed annotations, call `save()`, and then `dispose()`. Consider using
+      a thread pool to parallelize the work.
+    question: How do I efficiently **batch process annotations** across many PDFs?
+  type: FAQPage
 tags:
+- role based annotation
 - groupdocs
-- annotations
-- user-roles
-- pdf
-- document-management
-title: 'Roles de usuario personalizados en anotaciones Java: Guía completa de implementación'
+- java annotations
+- pdf collaboration
+- document security
+title: Cómo agregar anotaciones basadas en roles en Java con GroupDocs
 type: docs
 url: /es/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/
 weight: 1
 ---
 
-# Roles de Usuario Personalizados en Anotaciones Java: Guía de Implementación Completa
+# Cómo agregar anotaciones basadas en roles en Java con GroupDocs
+
+En este tutorial descubrirá cómo agregar **anotaciones basadas en roles en Java** usando la biblioteca GroupDocs.Annotation. Al final de la guía podrá definir roles de usuario personalizados, controlar los permisos de edición y visualización en cada anotación, guardar el PDF anotado e incluso procesar muchos archivos de manera amigable para lotes.
 
 ## Introducción
 
-¿Alguna vez has tenido problemas para gestionar quién puede editar, ver o comentar partes específicas de tus documentos? No estás solo. **GroupDocs.Annotation for Java** hace que la implementación de **roles de usuario personalizados** sea sorprendentemente sencilla.
+¿Alguna vez ha tenido dificultades para gestionar quién puede editar, ver o comentar partes específicas de sus documentos? No está solo. **GroupDocs.Annotation for Java** hace que la implementación de **roles de usuario personalizados** sea sorprendentemente sencilla.
 
-En esta guía completa, te guiaremos paso a paso para configurar roles de usuario personalizados para anotaciones. Al final, podrás crear flujos de trabajo de documentos seguros y colaborativos que otorguen a cada usuario los permisos adecuados según su rol.
+En esta guía completa, le guiaremos paso a paso para configurar roles de usuario personalizados para anotaciones. Al final, podrá crear flujos de trabajo de documentos seguros y colaborativos que otorguen a cada usuario los permisos correctos según su rol.
 
-- **Lo que dominarás:**  
+- **Lo que dominará:**  
   - Configurar sistemas de anotación con roles de usuario personalizados en Java  
   - Configurar anotaciones de área con propiedades específicas de rol  
   - Gestionar permisos para comentarios, respuestas y guardado de documentos  
   - Manejar escenarios del mundo real como anotación de documentos legales y procesamiento por lotes  
 
-¿Listo para crear una gestión de documentos más inteligente en tus aplicaciones Java? ¡Vamos a sumergirnos!
+¿Listo para crear una gestión de documentos más inteligente en sus aplicaciones Java? ¡Vamos a sumergirnos!
 
-## Respuestas Rápidas
+## Respuestas rápidas
+
 - **¿Cuál es el beneficio principal de los roles de usuario personalizados?** Permiten controlar quién puede editar, ver o comentar cada anotación, garantizando seguridad y cumplimiento.  
 - **¿Qué biblioteca proporciona esta funcionalidad?** GroupDocs.Annotation for Java.  
-- **¿Necesito una licencia de pago para comenzar?** No—utiliza la prueba gratuita para desarrollar y probar el conjunto completo de funciones.  
-- **¿Puedo guardar el PDF anotado después de aplicar los roles?** Sí—llama a `annotator.save()` para generar un **PDF anotado guardado** con todos los permisos aplicados.  
-- **¿Se admite el procesamiento por lotes?** Absolutamente; puedes procesar muchos documentos o anotaciones en lotes para un mejor rendimiento.
+- **¿Necesito una licencia de pago para comenzar?** No—utilice la prueba gratuita para desarrollar y probar el conjunto completo de funciones.  
+- **¿Puedo guardar el PDF anotado después de aplicar los roles?** Sí—llame a `annotator.save()` para generar un **PDF anotado guardado** con todos los permisos aplicados.  
+- **¿Se admite el procesamiento por lotes?** Absolutamente; puede procesar muchos documentos o anotaciones en lotes para un mejor rendimiento.
 
-## ¿Qué Son los Roles de Usuario Personalizados?
+## ¿Qué son los roles de usuario personalizados?
 
-Los roles de usuario personalizados son definiciones de rol (p. ej., EDITOR, VIEWER, REVIEWER) que asignas a cada objeto `User`. El rol determina qué acciones puede realizar el usuario sobre una anotación—si puede editar el contenido, solo verlo o agregar respuestas.
+Los roles de usuario personalizados son definiciones de rol (p. ej., EDITOR, VIEWER, REVIEWER) que asigna a cada objeto `User`. El rol determina qué acciones puede realizar el usuario sobre una anotación—si puede editar el contenido, solo verlo o agregar respuestas.
 
-## ¿Por Qué Usar Roles de Usuario Personalizados?
+## ¿Por qué usar roles de usuario personalizados?
 
-- **Anotación de documentos legales** – Asegura que solo los abogados autorizados puedan aprobar cambios mientras los asistentes legales solo puedan comentar.  
-- **Control de colaboración** – Previene sobrescrituras accidentales restringiendo los derechos de edición.  
-- **Auditabilidad** – Rastrea quién realizó qué cambios y cuándo, lo cual es esencial para el cumplimiento.  
+Los roles de usuario personalizados le brindan un control granular sobre quién puede modificar, ver o comentar cada anotación, lo cual es esencial para mantener la integridad del documento y cumplir con los requisitos de cumplimiento. Al asignar permisos específicos a cada rol, reduce el riesgo de cambios accidentales y crea rastros de auditoría claros.
 
-## Cuándo Usar Anotaciones Basadas en Roles
+- **Anotación de documentos legales** – Garantizar que solo los abogados autorizados puedan aprobar cambios mientras los asistentes legales solo pueden comentar.  
+- **Control de colaboración** – Evitar sobrescrituras accidentales restringiendo los derechos de edición.  
+- **Auditabilidad** – Rastrear quién realizó qué cambios y cuándo, lo cual es esencial para el cumplimiento.
 
-Antes de sumergirnos en el código, exploremos los escenarios donde los roles de usuario personalizados brillan:
+## ¿Cuándo usar anotaciones basadas en roles?
 
-- **Documentos Legales y de Cumplimiento** – Contratos, NDAs y documentos de política requieren permisos de edición estrictos.  
-- **Plataformas Educativas** – Instructores (editores) vs. estudiantes (visualizadores).  
-- **Flujos de Trabajo Corporativos** – Gerentes de proyecto (todos los derechos) vs. miembros del equipo (solo comentarios).  
-- **Registros de Salud** – Médicos, enfermeras y pacientes requieren diferentes niveles de acceso.  
+Las anotaciones basadas en roles son más valiosas en entornos donde diferentes partes interesadas necesitan niveles de acceso distintos, como contratos legales, contenido educativo, flujos de trabajo corporativos o registros de salud. Implementarlas garantiza que solo los usuarios autorizados puedan editar secciones críticas mientras otros pueden proporcionar comentarios o ver el documento de forma segura.
 
-## Prerrequisitos y Configuración
+- **Documentos legales y de cumplimiento** – Contratos, NDA y documentos de política requieren permisos de edición estrictos.  
+- **Plataformas educativas** – Instructores (editores) vs. estudiantes (visualizadores).  
+- **Flujos de trabajo corporativos** – Gerentes de proyecto (todos los derechos) vs. miembros del equipo (solo comentarios).  
+- **Registros de salud** – Médicos, enfermeras y pacientes requieren diferentes niveles de acceso.
 
-Asegúrate de tener lo siguiente antes de comenzar:
+## Requisitos previos y configuración
+
+Asegúrese de tener lo siguiente antes de comenzar:
 
 - **GroupDocs.Annotation for Java** (versión 25.2 o posterior)  
 - JDK 8 + y Maven instalados  
@@ -76,7 +139,7 @@ Asegúrate de tener lo siguiente antes de comenzar:
 
 ### Configuración de Maven
 
-Agrega el repositorio y la dependencia a tu `pom.xml`:
+Agregue el repositorio y la dependencia a su `pom.xml`:
 
 ```xml
 <repositories>
@@ -96,17 +159,20 @@ Agrega el repositorio y la dependencia a tu `pom.xml`:
 </dependencies>
 ```
 
-### Obtención de Licencia
+### Obtención de licencia
 
-Puedes comenzar con una **prueba gratuita** que brinda funcionalidad completa. Cuando estés listo para producción, obtén una **licencia de desarrollo temporal** o compra una licencia completa.
+Puede comenzar con una **prueba gratuita** que brinda funcionalidad completa. Cuando esté listo para producción, obtenga una **licencia de desarrollo temporal** o compre una licencia completa.
 
-**Consejo profesional:** Prueba todo el flujo de trabajo de anotaciones con la prueba antes de comprometerte a una compra.
+**Consejo profesional:** Pruebe todo el flujo de trabajo de anotación con la prueba antes de comprometerse a una compra.
 
-## Implementación Central: Añadiendo Roles de Usuario Personalizados a las Anotaciones
+## Implementación central: agregar roles de usuario personalizados a las anotaciones
 
-### Paso 1: Crear Respuestas con Roles de Usuario Personalizados
+### Paso 1: crear respuestas con roles de usuario personalizados
 
-Cada respuesta está vinculada a un `User` que lleva un `Role` específico. Esto determina los permisos para esa respuesta.
+**¿Cómo crear una respuesta que respete un rol de usuario específico?**  
+Cree una instancia `User`, asigne el valor de enumeración `Role` apropiado (p. ej., `EDITOR` o `VIEWER`), luego adjunte el usuario a un objeto `Reply` antes de agregarlo a la anotación. Esto garantiza que la respuesta herede los permisos definidos por el rol.
+
+La clase `User` representa a una persona que interactúa con una anotación, mientras que la enumeración `Role` define el conjunto de permisos para ese usuario.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -135,11 +201,14 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-> **Por qué es importante:** El enum `Role` controla lo que cada usuario puede hacer. Un EDITOR puede modificar la anotación, mientras que un VIEWER solo puede verla.
+> **Por qué es importante:** La enumeración `Role` controla lo que cada usuario puede hacer. Un EDITOR puede modificar la anotación, mientras que un VIEWER solo puede verla.
 
-### Paso 2: Configurar Anotaciones de Área
+### Paso 2: configurar anotaciones de área
 
-Las anotaciones de área resaltan una región del documento. Adjuntaremos las respuestas creadas previamente para que se aplique la lógica de roles.
+**¿Qué es una anotación de área y cómo vincular respuestas conscientes del rol a ella?**  
+Una anotación de área resalta una región rectangular en una página. Después de crear la anotación visual, adjunta los objetos `Reply` previamente construidos para que la lógica de rol se aplique siempre que un usuario interactúe con el área resaltada.
+
+La clase `AreaAnnotation` define la forma, el color y el estilo de la región resaltada.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -165,11 +234,14 @@ area.setReplies(replies); // Attach the replies to this annotation
 - **Codificación de color**: `65535` (cian) hace que la anotación destaque sin oscurecer el texto.  
 - **Posicionamiento**: `Rectangle(100, 100, 100, 100)` coloca una caja de 100 × 100 px en (100, 100).  
 - **Estilo**: Estilo de lápiz punteado con opacidad 0.7 proporciona una pista visual sutil.  
-- **Adjunto de respuesta**: Vincula nuestras respuestas con roles personalizados a la anotación visual.
+- **Adjunto de respuesta**: Vincula nuestras respuestas con rol personalizado a la anotación visual.
 
-### Paso 3: Aplicar Anotaciones y Guardar el PDF
+### Paso 3: aplicar anotaciones y guardar el PDF
 
-Ahora añadimos la anotación a un documento y **guardamos el PDF anotado**.
+**¿Cómo puede persistir las anotaciones basadas en roles en un nuevo archivo PDF?**  
+Cargue el documento objetivo con `Annotator`, agregue la anotación preparada y luego llame a `annotator.save("output.pdf")`. La operación de guardado escribe solo los cambios de anotación, manteniendo el contenido original intacto mientras incrusta los metadatos de permisos.
+
+La clase `Annotator` es el punto de entrada para cargar, modificar y guardar documentos anotados.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -181,13 +253,14 @@ annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf"); // Save the annotated docume
 annotator.dispose(); // Release resources after saving
 ```
 
-> **Consejo de memoria:** Siempre llama a `dispose()` después de terminar el procesamiento para evitar fugas de memoria, especialmente cuando **procesas anotaciones por lotes** en muchos archivos.
+> **Consejo de memoria:** Siempre llame a `dispose()` después de terminar el procesamiento para evitar fugas de memoria, especialmente cuando **procese anotaciones por lotes** en muchos archivos.
 
-## Consejos Avanzados y Mejores Prácticas
+## Consejos avanzados y mejores prácticas
 
-### Gestionar Múltiples Roles de Usuario de Forma Eficiente
+### Gestionar múltiples roles de usuario de manera eficiente
 
-Crea un enum de utilidad para mapear roles de negocio a roles de GroupDocs:
+**¿Cómo mapear roles específicos del negocio a roles de GroupDocs sin saturar el código?**  
+Cree una enumeración de utilidad que traduzca sus roles de dominio (p. ej., `PROJECT_MANAGER`, `DEVELOPER`) a los valores `Role` correspondientes proporcionados por GroupDocs. Esto centraliza el mapeo y hace que los cambios futuros sean sencillos.
 
 ```java
 // Example of how you might organize roles in a real application
@@ -205,41 +278,40 @@ public enum DocumentRole {
 }
 ```
 
-### Optimización de Rendimiento para Documentos Grandes
+### Optimización de rendimiento para documentos grandes
 
-Cuando necesites **procesar anotaciones por lotes**, ten en cuenta estas estrategias:
+**¿Qué estrategias mantienen la anotación por lotes rápida y amigable con la memoria?**  
+1. Procese anotaciones en grupos en lugar de una por una.  
+2. Use renderizado de menor resolución para escenarios solo de vista previa.  
+3. Cachee los PDFs de acceso frecuente en disco o en memoria.  
+4. Descargue el trabajo pesado de anotación a hilos en segundo plano o a una cola de trabajos.  
 
-1. Procesa las anotaciones en grupos en lugar de una por una.  
-2. Utiliza renderizado de menor resolución para escenarios solo de vista previa.  
-3. Cachea los PDFs de acceso frecuente en disco o en memoria.  
-4. Descarga el trabajo pesado de anotación a hilos en segundo plano o a una cola de trabajos.  
-
-### Estrategias de Codificación de Color para Visibilidad de Roles
+### Estrategias de codificación de color para visibilidad de roles
 
 - **Editores** – `65535` (Cian) – brillante y accionable.  
 - **Revisores** – `16711680` (Rojo) – indica elementos que requieren atención.  
-- **Visualizadores** – `8421504` (Gris) – sutil, solo lectura.  
+- **Visualizadores** – `8421504` (Gris) – sutil, solo lectura.
 
-## Problemas Comunes de Implementación (Y Cómo Solucionarlos)
+## Problemas comunes de implementación (y cómo solucionarlos)
 
-### Anotaciones Que No Se Muestran Correctamente
+### Las anotaciones no se muestran correctamente
 
 - **Causa:** El sistema de coordenadas del PDF comienza desde la esquina inferior izquierda.  
-- **Solución:** Ajusta las coordenadas Y o usa `annotator.getPageHeight()` para calcular posiciones.  
+- **Solución:** Ajuste las coordenadas Y o use `annotator.getPageHeight()` para calcular posiciones.
 
-### Los Roles de Usuario No Se Aplican
+### Los roles de usuario no se aplican
 
-- **Causa:** Reutilizar la misma instancia `User` para diferentes roles o olvidar establecer el enum `Role`.  
-- **Solución:** Crea un nuevo objeto `User` para cada rol y establézcalo antes de agregar respuestas.  
+- **Causa:** Reutilizar la misma instancia `User` para diferentes roles u olvidar establecer la enumeración `Role`.  
+- **Solución:** Cree un nuevo objeto `User` para cada rol y establézcalo antes de agregar respuestas.
 
-### Problemas de Memoria con PDFs Grandes
+### Problemas de memoria con PDFs grandes
 
 - **Causa:** No disponer de los objetos `Annotator` o procesar demasiados documentos simultáneamente.  
-- **Solución:** Llama a `dispose()` después de cada documento y limita la cantidad de operaciones concurrentes.  
+- **Solución:** Llame a `dispose()` después de cada documento y limite el número de operaciones concurrentes.
 
-## Ejemplos de Integración del Mundo Real
+## Ejemplos de integración del mundo real
 
-### Integración con Plataforma de E‑Learning
+### Integración en plataforma de e‑learning
 
 ```java
 // Example: Setting up annotations for an educational document
@@ -257,57 +329,70 @@ studentQuestion.setComment("Could you clarify the third point?");
 studentQuestion.setUser(student);
 ```
 
-### Caso de Uso de Anotación de Documentos Legales
+### Caso de uso de anotación de documentos legales
 
-En un bufete de abogados, podrías definir:
+En un bufete de abogados, podría definir:
 
-- **Socios Senior** – `OWNER` (edición completa y gestión de permisos)  
+- **Socios senior** – `OWNER` (edición completa y gestión de permisos)  
 - **Asociados** – `COLLABORATOR` (editar y comentar)  
 - **Paralegales** – `REVIEWER` (solo comentar)  
-- **Clientes** – `VIEWER` (solo lectura con capacidad de comentar)  
+- **Clientes** – `VIEWER` (solo lectura con capacidad de comentar)
 
-Esta jerarquía garantiza que solo las personas adecuadas puedan aprobar cambios mientras todos los demás pueden contribuir de forma segura.
+Esta jerarquía garantiza que solo las personas adecuadas puedan aprobar cambios mientras que todos los demás pueden contribuir de forma segura.
 
 ## Conclusión
 
-Ahora tienes una base sólida para implementar **roles de usuario personalizados** en flujos de trabajo de anotaciones Java usando GroupDocs.Annotation. Al combinar la lógica de permisos basada en roles con una gestión adecuada de la memoria y trucos de rendimiento, puedes crear soluciones de documentos seguras y colaborativas que escalen desde un solo PDF hasta tuberías de procesamiento por lotes masivas.
+Ahora tiene una base sólida para implementar **roles de usuario personalizados** en flujos de trabajo de anotación Java usando GroupDocs.Annotation. Al combinar la lógica de permisos basada en roles con una gestión adecuada de la memoria y trucos de rendimiento, puede crear soluciones de documentos seguras y colaborativas que escalen desde un solo PDF hasta enormes tuberías de procesamiento por lotes.
 
 **Próximos pasos:**  
-- Prueba el código en un pequeño proyecto prototipo.  
-- Amplía el enum `DocumentRole` para que coincida con la jerarquía de tu organización.  
-- Explora las APIs de exportación de GroupDocs para generar informes de todas las anotaciones y sus roles asociados.
+- Pruebe el código en un pequeño proyecto prototipo.  
+- Amplíe la enumeración `DocumentRole` para que coincida con la jerarquía de su organización.  
+- Explore las APIs de exportación de GroupDocs para generar informes de todas las anotaciones y sus roles asociados.
 
 ---
 
-## Preguntas Frecuentes
+## Preguntas frecuentes
 
-**Q:** ¿Qué hace que GroupDocs.Annotation se destaque de otras bibliotecas de anotaciones Java?  
-**A:** Ofrece un sistema de permisos basado en roles incorporado, soporta muchos formatos de documentos y brinda características de nivel empresarial como auditorías y procesamiento por lotes.
+**P: ¿Qué hace que GroupDocs.Annotation se destaque de otras bibliotecas de anotación Java?**  
+R: Ofrece un sistema de permisos basado en roles incorporado, soporta más de 50 formatos de entrada y salida, y proporciona funciones de nivel empresarial como rastros de auditoría y procesamiento por lotes.
 
-**Q:** ¿Cómo puedo crear roles personalizados más allá de EDITOR y VIEWER?  
-**A:** Mapea tus roles específicos de negocio al enum `Role` existente (p. ej., `Role.EDITOR`) y maneja la lógica adicional en la capa de aplicación, como se muestra en el ejemplo `DocumentRole`.
+**P: ¿Cómo puedo crear roles personalizados más allá de EDITOR y VIEWER?**  
+R: Mapee sus roles específicos del negocio a la enumeración `Role` existente (p. ej., `Role.EDITOR`) y maneje la lógica adicional en la capa de su aplicación, como se muestra en el ejemplo `DocumentRole`.
 
-**Q:** ¿Puedo integrar esto con mi sistema de autenticación existente?  
-**A:** Sí. El objeto `User` acepta cualquier identificador que uses (p. ej., ID de base de datos). Simplemente asigna tu usuario autenticado a una instancia `User` con el `Role` apropiado.
+**P: ¿Puedo integrar esto con mi sistema de autenticación existente?**  
+R: Sí. El objeto `User` acepta cualquier identificador que utilice (p. ej., ID de base de datos). Simplemente mapee su usuario autenticado a una instancia `User` con el `Role` apropiado.
 
-**Q:** ¿Es posible **guardar PDF anotado** sin volver a renderizar todo el documento?  
-**A:** El método `annotator.save()` escribe solo los cambios de anotación, lo que hace que la operación de guardado sea rápida incluso para archivos grandes.
+**P: ¿Es posible **guardar PDF anotado** sin volver a renderizar todo el documento?**  
+R: Sí. El método `annotator.save()` escribe solo los cambios de anotación, haciendo que la operación de guardado sea rápida incluso para archivos grandes.
 
-**Q:** ¿Cómo proceso anotaciones **por lotes** de manera eficiente en muchos PDFs?  
-**A:** Recorre tu lista de archivos, crea un único `Annotator` por archivo, agrega todas las anotaciones necesarias, llama a `save()` y luego a `dispose()`. Considera usar un pool de hilos para paralelizar el trabajo.
+**P: ¿Cómo proceso anotaciones **por lotes** de manera eficiente en muchos PDFs?**  
+R: Recorra su lista de archivos, cree un `Annotator` único por archivo, agregue todas las anotaciones necesarias, llame a `save()` y luego a `dispose()`. Considere usar un pool de hilos para paralelizar el trabajo.
 
-**Q:** ¿Puedo exportar solo los datos de anotación (p. ej., a JSON) sin el PDF completo?  
-**A:** Sí. GroupDocs proporciona métodos de exportación que generan los metadatos de anotación en JSON o XML, útiles para informes o sincronización con otros sistemas.
+**P: ¿Puedo exportar solo los datos de anotación (p. ej., a JSON) sin el PDF completo?**  
+R: Sí. GroupDocs proporciona métodos de exportación que generan los metadatos de anotación en JSON o XML, útiles para informes o sincronización con otros sistemas.
 
 ---
 
-**Last Updated:** 2026-03-01  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
+**Última actualización:** 2026-09-10  
+**Probado con:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  
 
-**Recursos Adicionales**  
+**Recursos adicionales**  
 - Documentación: [Documentación de GroupDocs Annotation](https://docs.groupdocs.com/annotation/java/)  
-- Referencia API: [Guía Completa de Referencia API](https://reference.groupdocs.com/annotation/java/)  
-- Descargar Biblioteca: [Obtener la Última Versión](https://releases.groupdocs.com/annotation/java/)  
-- Soporte Comunitario: [Foro de Soporte de GroupDocs](https://forum.groupdocs.com/c/annotation/)  
-- Opciones de Compra: [Información de Licencias](https://purchase.groupdocs.com/license)
+- Referencia de API: [Guía completa de referencia de API](https://reference.groupdocs.com/annotation/java/)  
+- Descargar biblioteca: [Obtener la última versión](https://releases.groupdocs.com/annotation/java/)  
+- Soporte comunitario: [Foro de soporte de GroupDocs](https://forum.groupdocs.com/c/annotation/)  
+- Opciones de compra: [Información de licencias](https://purchase.groupdocs.com/license)
+
+## Tutoriales relacionados
+
+- [Roles de usuario personalizados en anotación Java: Guía completa de implementación](/annotation/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/)
+- [Cargar PDF Java con GroupDocs Annotation: Guía de carga de documentos](/annotation/java/document-loading/)
+- [Crear resaltados PDF Java: Guía completa con GroupDocs Annotation](/annotation/java/annotation-management/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}
