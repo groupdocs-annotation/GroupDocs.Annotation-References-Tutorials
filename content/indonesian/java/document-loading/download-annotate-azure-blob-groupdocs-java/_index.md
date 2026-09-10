@@ -289,8 +289,3 @@ Praktik medis menyimpan rekam medis pasien dalam lingkungan Azure yang mematuhi 
 **Terakhir Diperbarui:** 2026-03-27  
 **Diuji Dengan:** GroupDocs.Annotation 25.2  
 **Penulis:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

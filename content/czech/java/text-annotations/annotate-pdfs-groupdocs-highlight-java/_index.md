@@ -20,27 +20,7 @@ url: /cs/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
- dalších vývojářů"
-
-Finally footer:
-
-"---  
-
-**Last Updated:** 2026-03-17  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs"
-
-Translate:
-
-"---  
-
-**Poslední aktualizace:** 2026-03-17  
-**Testováno s:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs"
-
-Make sure to keep markdown formatting.
-
-Now produce final output.# Vytváření zvýraznění PDF v Javě: Kompletní průvodce zvýrazňováním PDF
+# Vytváření zvýraznění PDF v Javě: Kompletní průvodce zvýrazňováním PDF
 
 ## Úvod
 

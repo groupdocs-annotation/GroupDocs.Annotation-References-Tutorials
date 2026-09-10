@@ -1,36 +1,118 @@
 ---
-"date": "2025-05-06"
-"description": "เรียนรู้วิธีสร้างคำอธิบายประกอบการขีดฆ่าข้อความใน PDF ของ Java โดยใช้ GroupDocs.Annotation สำหรับ Java ทำตามบทช่วยสอนทีละขั้นตอนนี้เพื่อปรับปรุงความสามารถในการแก้ไขเอกสารของคุณ"
-"title": "Java PDF Strikeout Annotations พร้อม GroupDocs คู่มือฉบับสมบูรณ์"
-"url": "/th/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/"
+categories:
+- Java PDF Processing
+date: '2026-05-21'
+description: เรียนรู้วิธีเพิ่ม strikeout annotations ใน PDFs ด้วย Java โดยใช้ GroupDocs.
+  บทแนะนำขั้นตอนต่อขั้นตอนนี้ครอบคลุมการตั้งค่า, โค้ด, การแก้ไขปัญหา, และเคล็ดลับด้านประสิทธิภาพ.
+keywords:
+- how to add strikeout
+- java pdf strikeout
+- groupdocs annotation java
+lastmod: '2026-05-21'
+linktitle: คู่มือ Java PDF Text Strikeout
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-21'
+  description: Learn how to add strikeout annotations to PDFs in Java using GroupDocs.
+    This step‑by‑step tutorial covers setup, code, troubleshooting, and performance
+    tips.
+  headline: How to Add Strikeout Annotations to PDFs in Java – Complete GroupDocs
+    Guide
+  type: TechArticle
+- description: Learn how to add strikeout annotations to PDFs in Java using GroupDocs.
+    This step‑by‑step tutorial covers setup, code, troubleshooting, and performance
+    tips.
+  name: How to Add Strikeout Annotations to PDFs in Java – Complete GroupDocs Guide
+  steps:
+  - name: Setting Up File Paths
+    text: Define the locations of your source PDF and the destination file. Incorrect
+      paths are a common source of “File Not Found” errors. **Common Mistake Alert:**
+      Ensure the output directory exists and is writable; GroupDocs will not auto‑create
+      missing folders.
+  - name: Initialize the Annotator
+    text: Create an `Annotator` instance that loads the PDF into memory. **What happens
+      here?** The library parses the PDF structure, builds an internal representation,
+      and prepares a page‑wise annotation canvas. For multi‑hundred‑page files this
+      step may take a few seconds.
+  - name: Adding Comments (Optional but Recommended)
+    text: '`Comment` is a class that represents a textual note attached to an annotation,
+      allowing collaborators to explain the reason for the strikeout. **Real‑world
+      tip:** Use comments to explain why text is being removed—this is especially
+      useful in legal or editorial review workflows.'
+  - name: Defining Annotation Coordinates
+    text: '`Point` objects store X‑Y coordinate pairs that define the exact location
+      of an annotation on a PDF page. **Coordinate System Explained:** PDF coordinates
+      start at the bottom‑left corner (0,0). The example creates a horizontal line
+      from (80,730) to (240,730) on the target page. **Finding the Right C'
+  - name: Creating the Strikeout Annotation
+    text: '`StrikeoutAnnotation` encapsulates the visual line, its style properties
+      such as color and opacity, and any associated metadata for a strikeout mark.
+      **Color Values:** The `fontColor` uses decimal RGB values (e.g., 65535 for bright
+      yellow). Use an online converter if you need brand‑specific shades. '
+  - name: Apply the Annotation
+    text: '`addAnnotation` is a method of the `Annotator` that registers the prepared
+      annotation with the document so it will be rendered and saved.'
+  - name: Save and Clean Up
+    text: '`dispose()` releases native resources held by the `Annotator` instance,
+      preventing memory leaks after processing is complete. **Memory Management Note:**
+      Calling `dispose()` frees native resources and prevents memory leaks when processing
+      batches of PDFs.'
+  type: HowTo
+- questions:
+  - answer: Yes. Create several `Point` objects that trace the desired path; the annotation
+      will follow the supplied polyline.
+    question: Can I strikeout text across multiple lines?
+  - answer: The annotation will be clipped and may become invisible. Always validate
+      coordinates against the page’s width and height.
+    question: What happens if I specify coordinates outside the page boundaries?
+  - answer: Absolutely. Use the `removeAnnotation` method with the annotation’s ID
+      or filter by type to delete them programmatically.
+    question: Can I remove strikeout annotations after adding them?
+  - answer: GroupDocs does not impose a hard cap, but performance may degrade after
+      thousands of annotations. Consider pagination or summarizing annotations for
+      very large sets.
+    question: Is there a limit to how many annotations I can add to a single PDF?
+  - answer: Pass the password to the `Annotator` constructor. The library will decrypt
+      the document in memory before applying any annotations.
+    question: How do I work with password‑protected PDFs?
+  type: FAQPage
+tags:
+- java-pdf
+- annotations
+- groupdocs
+- document-processing
+title: วิธีเพิ่ม strikeout annotations ใน PDFs ด้วย Java – คู่มือครบวงจรของ GroupDocs
 type: docs
-"weight": 1
+url: /th/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/
+weight: 1
 ---
 
-# สร้างคำอธิบายการขีดฆ่าข้อความใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java
+# วิธีเพิ่มการทำเครื่องหมายขีดฆ่าใน PDF ด้วย Java
 
-**การแนะนำ**
+เคยต้องการขีดฆ่าข้อความใน PDF อย่างอัตโนมัติหรือไม่? ไม่ว่าคุณจะกำลังสร้างระบบตรวจทานเอกสาร, สร้างกระบวนการแก้ไข, หรือเพียงต้องการทำเครื่องหมายข้อความเพื่อการลบ, **how to add strikeout** annotations in Java เป็นทักษะที่เป็นประโยชน์ซึ่งช่วยประหยัดเวลาและลดความพยายามในการทำงานด้วยมือ. ในคู่มือฉบับครอบคลุมนี้คุณจะได้ค้นพบทุกอย่างที่ต้องรู้เพื่อทำการเพิ่มการทำเครื่องหมายขีดฆ่าโดยใช้ GroupDocs.Annotation for Java, ตั้งแต่การตั้งค่าโครงการจนถึงการปรับประสิทธิภาพ.
 
-การเพิ่มคำอธิบายข้อความขีดฆ่าเป็นสิ่งสำคัญเมื่อต้องตรวจสอบเอกสารทางกฎหมาย แก้ไขต้นฉบับ หรือใส่คำอธิบายในเอกสารวิชาการ ด้วย GroupDocs.Annotation สำหรับ Java คุณสามารถผสานฟังก์ชันนี้เข้ากับแอปพลิเคชันของคุณได้อย่างราบรื่น บทช่วยสอนนี้ให้คำแนะนำทีละขั้นตอนเกี่ยวกับการใช้คำอธิบายข้อความขีดฆ่าโดยใช้ไลบรารี GroupDocs อันทรงพลัง
+## คำตอบอย่างรวดเร็ว
+- **ขั้นตอนแรกคืออะไร?** Add the GroupDocs.Annotation Maven dependency to your `pom.xml`.  
+- **ฉันจะสร้าง strikeout อย่างไร?** Instantiate `Annotator`, define `StrikeoutAnnotation` with points, set color/opacity, then call `addAnnotation`.  
+- **ฉันสามารถเพิ่มความคิดเห็นได้หรือไม่?** Yes, attach a `Comment` object to the annotation for collaboration.  
+- **ถ้าการทำเครื่องหมายอยู่ผิดตำแหน่งจะทำอย่างไร?** Adjust the coordinate points; PDF uses a bottom‑left origin system.  
+- **มีขีดจำกัดขนาดเอกสารหรือไม่?** GroupDocs processes multi‑hundred‑page PDFs without loading the entire file into memory.
 
-**สิ่งที่คุณจะได้เรียนรู้:**
-- การตั้งค่า GroupDocs.Annotation สำหรับ Java ในสภาพแวดล้อมการพัฒนาของคุณ
-- การเพิ่มคำอธิบายการขีดฆ่าข้อความลงในเอกสาร PDF
-- การกำหนดค่าคุณสมบัติของคำอธิบายประกอบ เช่น สีแบบอักษร ความทึบ และความคิดเห็น
-- เคล็ดลับสำหรับการเพิ่มประสิทธิภาพการทำงานเมื่อทำงานกับคำอธิบายประกอบใน Java
+## “how to add strikeout” คืออะไรใน PDF annotation?
+วลี “how to add strikeout” หมายถึงกระบวนการวาดเส้นผ่านข้อความที่เลือกภายในเอกสาร PDF อย่างอัตโนมัติโดยใช้ API ของการทำเครื่องหมาย. ใน Java, GroupDocs.Annotation มีคลาส `StrikeoutAnnotation` เฉพาะที่จัดการการเรนเดอร์, การสไตลิ่ง, และการเก็บรักษาเครื่องหมายขีดฆ่า.
 
-เริ่มต้นด้วยการตรวจสอบให้แน่ใจว่าคุณมีข้อกำหนดเบื้องต้นทั้งหมด!
+## ทำไมต้องใช้ GroupDocs สำหรับ Java PDF Strikeout?
+GroupDocs.Annotation supports **50+ input and output formats**—including PDF, DOCX, XLSX, PPTX, HTML, and common image types—so you’re not locked into a single file type. It provides a high‑level API that abstracts the low‑level PDF structure, automatically handling font embedding, page rendering, and annotation persistence, which lets developers focus on business logic rather than PDF internals.
 
-## ข้อกำหนดเบื้องต้น
+## ข้อกำหนดเบื้องต้นและการตั้งค่า
 
-หากต้องการทำตามบทช่วยสอนนี้ ให้แน่ใจว่าคุณมี:
-- **ชุดพัฒนา Java (JDK):** ติดตั้ง JDK 8 หรือใหม่กว่าบนระบบของคุณ
-- **GroupDocs.Annotation สำหรับ Java:** ใช้ Maven เพื่อรวมไลบรารีนี้เข้ากับโปรเจ็กต์ของคุณ
-- **ไอดี:** ใช้สภาพแวดล้อมการพัฒนาแบบบูรณาการ เช่น IntelliJ IDEA หรือ Eclipse
+### ข้อกำหนดสำคัญ
+- **Java Development Kit (JDK):** Version 8 or later (JDK 11+ recommended for optimal garbage‑collection).  
+- **GroupDocs.Annotation for Java:** Integrated via Maven (see the Maven snippet below).  
+- **IDE:** IntelliJ IDEA, Eclipse, or any Java‑compatible editor.
 
-### ไลบรารีและการอ้างอิงที่จำเป็น
-
-รวมสิ่งที่ต้องพึ่งพาต่อไปนี้ในของคุณ `pom.xml` หากคุณใช้ Maven:
+### การตั้งค่า Maven Dependencies
+Add the following dependency block to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -50,57 +132,48 @@ type: docs
 </dependencies>
 ```
 
-### การตั้งค่าสภาพแวดล้อม
+**Pro Tip:** Always verify the latest version on the GroupDocs release page; newer releases add features and fix bugs that can affect annotation rendering.
 
-กำหนดค่า IDE ของคุณให้ใช้ Maven สำหรับการจัดการการอ้างอิงและให้แน่ใจว่าติดตั้ง JDK 8 หรือใหม่กว่า
+### การจัดการใบอนุญาตของคุณ
+GroupDocs.Annotation requires a valid license for production use. You have three options:
 
-### ข้อกำหนดเบื้องต้นของความรู้
+- **ทดลองใช้ฟรี:** Download from [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)
+- **Temporary License:** Request a development key at [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- **Full License:** Purchase for production at [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
 
-การมีความเข้าใจพื้นฐานเกี่ยวกับการเขียนโปรแกรม Java ความคุ้นเคยกับคำอธิบายประกอบในเอกสาร และประสบการณ์ในการตั้งค่าโปรเจ็กต์โดยใช้เครื่องมือสร้างเช่น Maven จะเป็นประโยชน์
+The trial adds a subtle watermark, so plan your testing accordingly.
 
-## การตั้งค่า GroupDocs.Annotation สำหรับ Java
+## คู่มือการทำงานแบบขั้นตอนต่อขั้นตอน
 
-เริ่มต้นด้วยการรวมไลบรารี GroupDocs เข้ากับโปรเจ็กต์ของคุณ หากคุณใช้ Maven ให้เพิ่มการอ้างอิงตามที่แสดงด้านบน
+### ทำความเข้าใจส่วนประกอบหลัก
+The following definitions give you a quick mental model:
 
-### การขอใบอนุญาต
+- **Annotator:** The primary API object that loads a PDF and exposes annotation methods.  
+- **StrikeoutAnnotation:** Represents the visual strikeout line and its styling options.  
+- **Point:** A coordinate pair (X, Y) that tells the library where the line starts and ends.  
+- **Comment:** Optional text attached to an annotation for collaboration.
 
-ในการใช้ GroupDocs.Annotation โปรดรับใบอนุญาต:
-- **ทดลองใช้งานฟรี:** ดาวน์โหลดเวอร์ชันทดลองใช้ได้จาก [ดาวน์โหลด GroupDocs](https://releases-groupdocs.com/annotation/java/).
-- **ใบอนุญาตชั่วคราว:** ขอใบอนุญาตชั่วคราวได้ที่ [ใบอนุญาตชั่วคราวของ GroupDocs](https://purchase-groupdocs.com/temporary-license/).
-- **ซื้อ:** หากต้องการคุณสมบัติครบถ้วน ให้ซื้อใบอนุญาตบน [หน้าการซื้อ GroupDocs](https://purchase-groupdocs.com/buy).
-
-### การเริ่มต้น
-
-เริ่มต้น GroupDocs.Annotation โดยการสร้าง `Annotator` อินสแตนซ์สำหรับเอกสารของคุณ อ็อบเจ็กต์นี้จัดการคำอธิบายประกอบทั้งหมด
-
-## คู่มือการใช้งาน
-
-เราจะแนะนำคุณในการเพิ่มคำอธิบายการขีดฆ่าข้อความอย่างมีประสิทธิผล โดยแบ่งกระบวนการออกเป็นส่วนที่สมเหตุสมผล
-
-### คำอธิบายการขีดฆ่าข้อความ
-
-เป้าหมายคือการสาธิตวิธีการเพิ่มคำอธิบายการขีดฆ่าข้อความในเอกสาร PDF โดยใช้ GroupDocs.Annotation
-
-#### ขั้นตอนที่ 1: กำหนดค่าเส้นทางเอกสาร
-
-กำหนดเส้นทางอินพุตและเอาต์พุตสำหรับเอกสารของคุณ:
+### ขั้นตอนที่ 1: การตั้งค่าเส้นทางไฟล์
+Define the locations of your source PDF and the destination file. Incorrect paths are a common source of “File Not Found” errors.
 
 ```java
 String inputFilePath = "path/to/your/document/directory/sample.pdf";
 String outputPath = "path/to/your/output/directory/AddTextStrikeoutAnnotation_output.pdf";
 ```
 
-#### ขั้นตอนที่ 2: เริ่มต้น Annotator
+**Common Mistake Alert:** Ensure the output directory exists and is writable; GroupDocs will not auto‑create missing folders.
 
-สร้างอินสแตนซ์ของ `Annotator` ในการจัดการเอกสาร PDF ที่คุณต้องการใส่คำอธิบายประกอบ:
+### ขั้นตอนที่ 2: เริ่มต้น Annotator
+Create an `Annotator` instance that loads the PDF into memory.
 
 ```java
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-#### ขั้นตอนที่ 3: เตรียมการตอบกลับ (ความคิดเห็น)
+**What happens here?** The library parses the PDF structure, builds an internal representation, and prepares a page‑wise annotation canvas. For multi‑hundred‑page files this step may take a few seconds.
 
-เพิ่มความคิดเห็นหรือการตอบกลับที่เกี่ยวข้องกับคำอธิบายประกอบของคุณหากจำเป็น:
+### ขั้นตอนที่ 3: การเพิ่มความคิดเห็น (ไม่บังคับแต่แนะนำ)
+`Comment` is a class that represents a textual note attached to an annotation, allowing collaborators to explain the reason for the strikeout.
 
 ```java
 Reply reply1 = new Reply();
@@ -111,9 +184,10 @@ List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 ```
 
-#### ขั้นตอนที่ 4: กำหนดจุดคำอธิบาย
+**Real‑world tip:** Use comments to explain why text is being removed—this is especially useful in legal or editorial review workflows.
 
-ระบุพิกัดสำหรับพื้นที่ขีดฆ่าในเอกสารของคุณ:
+### ขั้นตอนที่ 4: กำหนดพิกัดการทำเครื่องหมาย
+`Point` objects store X‑Y coordinate pairs that define the exact location of an annotation on a PDF page.
 
 ```java
 Point point1 = new Point(80, 730);
@@ -121,14 +195,17 @@ Point point2 = new Point(240, 730);
 List<Point> points = Arrays.asList(point1, point2);
 ```
 
-#### ขั้นตอนที่ 5: สร้างและกำหนดค่าคำอธิบายการขีดฆ่า
+**Coordinate System Explained:** PDF coordinates start at the bottom‑left corner (0,0). The example creates a horizontal line from (80,730) to (240,730) on the target page.
 
-ตั้งค่า `StrikeoutAnnotation` วัตถุที่มีคุณสมบัติที่จำเป็นเช่น สีแบบอักษร ข้อความ และความทึบ:
+**Finding the Right Coordinates:** Many developers create a helper that converts percentages of page width/height into absolute points, making the code resilient to different page sizes.
+
+### ขั้นตอนที่ 5: สร้าง Strikeout Annotation
+`StrikeoutAnnotation` encapsulates the visual line, its style properties such as color and opacity, and any associated metadata for a strikeout mark.
 
 ```java
 StrikeoutAnnotation strikeout = new StrikeoutAnnotation();
 strikeout.setCreatedOn(Calendar.getInstance().getTime());
-strikeout.setFontColor(65535); // สีเหลือง
+strikeout.setFontColor(65535); // Yellow
 strikeout.setMessage("This is a strikeout annotation");
 strikeout.setOpacity(0.7);
 strikeout.setPageNumber(0); 
@@ -136,70 +213,213 @@ strikeout.setPoints(points);
 strikeout.setReplies(replies);
 ```
 
-#### ขั้นตอนที่ 6: เพิ่มคำอธิบายลงในเอกสาร
+**Color Values:** The `fontColor` uses decimal RGB values (e.g., 65535 for bright yellow). Use an online converter if you need brand‑specific shades.
 
-เพิ่มคำอธิบายประกอบที่กำหนดค่าไว้ในเอกสารของคุณโดยใช้ `Annotator`-
+**Opacity Recommendation:** An opacity of `0.7` (70 %) offers a clear visual cue while keeping the underlying text legible.
+
+### ขั้นตอนที่ 6: ใช้ Annotation
+`addAnnotation` is a method of the `Annotator` that registers the prepared annotation with the document so it will be rendered and saved.
 
 ```java
 annotator.add(strikeout);
 ```
 
-#### ขั้นตอนที่ 7: บันทึกและกำจัด
-
-บันทึก PDF ที่มีคำอธิบายประกอบของคุณและเผยแพร่ทรัพยากร:
+### ขั้นตอนที่ 7: บันทึกและทำความสะอาด
+`dispose()` releases native resources held by the `Annotator` instance, preventing memory leaks after processing is complete.
 
 ```java
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-### เคล็ดลับการแก้ไขปัญหา
+**Memory Management Note:** Calling `dispose()` frees native resources and prevents memory leaks when processing batches of PDFs.
 
-- ตรวจสอบให้แน่ใจว่าเส้นทางได้รับการตั้งค่าอย่างถูกต้องเพื่อหลีกเลี่ยงข้อผิดพลาดไม่พบไฟล์
-- ตรวจสอบว่ารูปแบบเอกสารได้รับการสนับสนุนโดย GroupDocs.Annotation
+## ปัญหาทั่วไปและวิธีแก้ไข
 
-## การประยุกต์ใช้งานจริง
+### ปัญหา 1: ข้อผิดพลาด “File Not Found”
+**Symptoms:** Exception thrown during `Annotator` construction.  
+**Solution:** Verify both input and output paths, and confirm the application has read/write permissions.
 
-1. **การตรวจสอบเอกสารทางกฎหมาย:** เน้นข้อความส่วนที่ล้าสมัยเพื่อแก้ไข
-2. **หมายเหตุทางวิชาการ:** ขีดฆ่าคำตอบที่ไม่ถูกต้องออกจากเอกสารการศึกษา
-3. **การตรวจสอบต้นฉบับ:** ทำเครื่องหมายส่วนที่ต้องการเขียนใหม่หรือการลบ
+```java
+// Add this check before creating the Annotator
+File inputFile = new File(inputFilePath);
+if (!inputFile.exists()) {
+    throw new FileNotFoundException("Input file not found: " + inputFilePath);
+}
+```
 
-สำรวจการบูรณาการกับระบบต่างๆ เช่น แพลตฟอร์มการจัดการเอกสารเพื่อทำให้เวิร์กโฟลว์การใส่คำอธิบายเป็นแบบอัตโนมัติ!
+### ปัญหา 2: Strikeout ปรากฏในตำแหน่งผิด
+**Symptoms:** The line does not line up with the intended text.  
+**Solution:** Remember that PDF Y‑coordinates increase upward. Use a visual debugging tool or print the page dimensions to fine‑tune the points.
 
-## การพิจารณาประสิทธิภาพ
+```java
+// Log your coordinates to understand the positioning
+System.out.println("Annotation coordinates: " + point1 + " to " + point2);
 
-- **เพิ่มประสิทธิภาพการใช้หน่วยความจำ:** จัดการทรัพยากรอย่างมีประสิทธิภาพ โดยเฉพาะอย่างยิ่งเมื่อต้องจัดการกับเอกสารจำนวนมาก
-- **การประมวลผลแบบแบตช์:** ประมวลผลคำอธิบายประกอบหลายรายการเป็นชุดเพื่อประสิทธิภาพที่ดีขึ้น
+// For debugging, try extreme coordinates first
+Point debugPoint1 = new Point(0, 0);     // Bottom-left corner
+Point debugPoint2 = new Point(100, 100); // Small area from corner
+```
 
-ปฏิบัติตามแนวทางปฏิบัติที่ดีที่สุดสำหรับการจัดการหน่วยความจำ Java เพื่อให้แน่ใจว่าแอปพลิเคชันของคุณทำงานได้อย่างราบรื่นโดยใช้ GroupDocs.Annotation
+### ปัญหา 3: Annotation ไม่แสดง
+**Symptoms:** No strikeout shows up after saving.  
+**Possible Causes & Fixes:**
+- **Opacity too low:** Temporarily set opacity to `1.0` to verify visibility.  
+- **Color blending:** Use a high‑contrast color like red (`255`).  
+- **Incorrect page index:** Page numbers are zero‑based; ensure you target the correct page.
 
-## บทสรุป
+### ปัญหา 4: ปัญหา Memory กับไฟล์ขนาดใหญ่
+**Symptoms:** `OutOfMemoryError` or sluggish performance.  
+**Solutions:**  
+- Process documents in smaller batches.  
+- Use the streaming API if available.  
+- Always invoke `dispose()` after each document.
 
-ตอนนี้คุณได้เรียนรู้วิธีการเพิ่มคำอธิบายประกอบแบบขีดฆ่าข้อความลงใน PDF โดยใช้ GroupDocs.Annotation สำหรับ Java แล้ว ไลบรารีอันทรงพลังนี้ไม่เพียงแต่ทำให้คำอธิบายประกอบเอกสารง่ายขึ้นเท่านั้น แต่ยังมีตัวเลือกการปรับแต่งมากมายอีกด้วย สำรวจคุณลักษณะและความสามารถเพิ่มเติมโดยปรึกษากับ [เอกสาร GroupDocs](https://docs-groupdocs.com/annotation/java/).
+```java
+// Increase JVM heap size when running your application
+// -Xmx2G for 2GB heap
 
-**ขั้นตอนต่อไป:**
-- ทดลองใช้ประเภทคำอธิบายประกอบต่างๆ ที่มีอยู่ใน GroupDocs
-- บูรณาการฟังก์ชันเหล่านี้ลงในแอปพลิเคชัน Java ที่มีอยู่ของคุณ
+// Process documents in batches rather than all at once
+// Always dispose of Annotator instances promptly
+```
 
-## ส่วนคำถามที่พบบ่อย
+## การใช้งานจริงและกรณีศึกษา
 
-1. **GroupDocs.Annotation สำหรับ Java คืออะไร?** 
-   ไลบรารีสำหรับจัดการคำอธิบายประกอบเอกสาร รองรับรูปแบบต่างๆ เช่น PDF
-2. **ฉันจะจัดการเอกสารขนาดใหญ่ได้อย่างมีประสิทธิภาพได้อย่างไร**
-   เพิ่มประสิทธิภาพการใช้หน่วยความจำและพิจารณาเทคนิคการประมวลผลแบบแบตช์
-3. **ฉันสามารถเพิ่มความคิดเห็นลงในคำอธิบายการขีดฆ่าของฉันได้หรือไม่**
-   ใช่ครับ ใช้ `Reply` คลาสสำหรับการเชื่อมโยงความคิดเห็นกับคำอธิบายประกอบ
-4. **GroupDocs.Annotation สามารถใช้งานได้ฟรีหรือไม่?**
-   มีเวอร์ชันทดลองใช้งาน แต่ต้องมีใบอนุญาตจึงจะใช้งานฟีเจอร์ครบถ้วน
-5. **ฉันสามารถค้นหาตัวอย่างการใช้งาน GroupDocs.Annotation เพิ่มเติมได้ที่ไหน**
-   ตรวจสอบออก [เอกสารอ้างอิง API](https://reference.groupdocs.com/annotation/java/) และ [เอกสารประกอบ](https://docs-groupdocs.com/annotation/java/).
+### การตรวจสอบเอกสารทางกฎหมาย
+Law firms annotate contracts with strikeouts to indicate deleted clauses while preserving an audit trail.
 
-## ทรัพยากร
+### การแก้ไขเอกสารวิชาการ
+Professors use strikeouts to suggest removals during peer review, keeping the original text visible for context.
 
-- **[เอกสารประกอบ GroupDocs](https://docs.groupdocs.com/annotation/java/)**
-- **[เอกสารอ้างอิง API](https://reference.groupdocs.com/annotation/java/)**
-- **[ดาวน์โหลด GroupDocs.Annotation](https://releases.groupdocs.com/annotation/java/)**
-- **[ซื้อใบอนุญาต GroupDocs](https://purchase.groupdocs.com/buy)**
-- **[เวอร์ชันทดลองใช้งานฟรี](https://releases.groupdocs.com/annotation/java/)**
-- **[การขอใบอนุญาตชั่วคราว](https://purchase.groupdocs.com/temporary-license/)**
-- **[ฟอรัมสนับสนุน GroupDocs](https://forum.groupdocs.com/c/annotation/)**
+### ระบบจัดการเนื้อหา
+Publishing platforms automatically flag policy‑violating sections with strikeouts before manual moderation.
+
+### การควบคุมเวอร์ชันสำหรับเอกสาร
+Enterprises treat strikeout annotations as “deletion markers” in a document‑centric version‑control workflow, similar to code diffs.
+
+## เคล็ดลับการปรับประสิทธิภาพ
+
+### กลยุทธ์การประมวลผลเป็นชุด
+When handling many PDFs, reuse a single `Annotator` instance where possible and process files in parallel threads.
+
+```java
+// Instead of creating a new Annotator for each document:
+// Process multiple annotations per document in one session
+List<StrikeoutAnnotation> annotations = prepareAllAnnotations();
+for (StrikeoutAnnotation annotation : annotations) {
+    annotator.add(annotation);
+}
+annotator.save(outputPath);
+```
+
+### แนวทางปฏิบัติที่ดีที่สุดสำหรับการจัดการ Memory
+- Call `dispose()` on every `Annotator`.  
+- Limit concurrent document loads to avoid heap pressure.  
+- Monitor JVM memory usage with tools like VisualVM.
+
+### การแคชพิกัด
+If you apply the same annotation layout across multiple files, cache the `Point` objects to avoid recomputation.
+
+```java
+// Cache commonly used coordinate sets
+private static final List<Point> STANDARD_HEADER_STRIKEOUT = 
+    Arrays.asList(new Point(50, 750), new Point(300, 750));
+
+// Reuse these coordinates instead of recreating them
+strikeout.setPoints(STANDARD_HEADER_STRIKEOUT);
+```
+
+## ตัวเลือกการปรับแต่งขั้นสูง
+
+### การเลือกสีแบบไดนามิก
+Choose colors at runtime based on business rules (e.g., red for critical deletions, yellow for tentative ones).
+
+```java
+// Choose colors based on annotation type or user
+int colorByPriority = getPriorityColor(annotationType);
+strikeout.setFontColor(colorByPriority);
+
+private int getPriorityColor(String type) {
+    switch(type) {
+        case "HIGH": return 255;    // Red
+        case "MEDIUM": return 65535; // Yellow  
+        case "LOW": return 65280;   // Green
+        default: return 0;          // Black
+    }
+}
+```
+
+### Strikeout หลายบรรทัด
+Create a series of `Point` pairs to draw a zig‑zag line that crosses several lines of text.
+
+```java
+// Create strikeouts that span multiple lines
+List<Point> multiLinePoints = Arrays.asList(
+    new Point(80, 730),   // Start of first line
+    new Point(400, 730),  // End of first line
+    new Point(80, 710),   // Start of second line
+    new Point(200, 710)   // End of second line
+);
+```
+
+## รายการตรวจสอบการแก้ไขปัญหา
+1. **File Permissions:** Verify read/write access.  
+2. **Library Version:** Ensure you’re using a supported GroupDocs.Annotation release.  
+3. **License Status:** Confirm the license file is correctly referenced.  
+4. **PDF Compatibility:** Check that the PDF is not corrupted and is within supported size limits.  
+5. **Coordinate Validation:** Ensure all points lie inside page bounds.  
+6. **Heap Space:** Increase JVM `-Xmx` if processing very large files.
+
+## คำถามที่พบบ่อย
+
+**Q: Can I strikeout text across multiple lines?**  
+**A:** Yes. Create several `Point` objects that trace the desired path; the annotation will follow the supplied polyline.
+
+**Q: What happens if I specify coordinates outside the page boundaries?**  
+**A:** The annotation will be clipped and may become invisible. Always validate coordinates against the page’s width and height.
+
+**Q: Can I remove strikeout annotations after adding them?**  
+**A:** Absolutely. Use the `removeAnnotation` method with the annotation’s ID or filter by type to delete them programmatically.
+
+**Q: Is there a limit to how many annotations I can add to a single PDF?**  
+**A:** GroupDocs does not impose a hard cap, but performance may degrade after thousands of annotations. Consider pagination or summarizing annotations for very large sets.
+
+**Q: How do I work with password‑protected PDFs?**  
+**A:** Pass the password to the `Annotator` constructor. The library will decrypt the document in memory before applying any annotations.
+
+**Q: How can I handle PDFs with different page sizes and orientations?**  
+**A:** Retrieve each page’s dimensions via `annotator.getPageInfo(pageNumber)` and calculate coordinates relative to those dimensions to ensure consistent placement.
+
+## สรุป
+You now have a complete, production‑ready solution for **how to add strikeout** annotations to PDFs in Java using GroupDocs.Annotation. By mastering file‑path handling, coordinate calculation, and resource management, you can embed this capability into document review tools, content pipelines, or any Java‑based application that needs precise visual feedback.
+
+**Next Steps**
+1. Clone the example project and run it against a sample PDF.  
+2. Experiment with different colors, opacities, and comment texts.  
+3. Integrate the annotation workflow into your existing document‑processing service.  
+4. Explore related annotation types—highlights, sticky notes, and shape annotations—to broaden your PDF manipulation toolkit.
+
+Ready for more? Dive into the official documentation for deeper API insights.
+
+## แหล่งข้อมูลเพิ่มเติม
+
+- [GroupDocs documentation](https://docs.groupdocs.com/annotation/java/) - เอกสารทั่วไปสำหรับไลบรารี GroupDocs  
+- [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/) - อ้างอิง API อย่างครบถ้วน  
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/) - รายละเอียดเมธอดโดยละเอียด  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/) - รักษาไลบรารีให้เป็นเวอร์ชันล่าสุด  
+- [Purchase License](https://purchase.groupdocs.com/buy) - การจัดการใบอนุญาตสำหรับการผลิต  
+- [Free Trial Download](https://releases.groupdocs.com/annotation/java/) - ทดลองใช้ก่อนซื้อ  
+- [Temporary License Request](https://purchase.groupdocs.com/temporary-license/) - การทดสอบสำหรับการพัฒนา  
+- [Support Forum](https://forum.groupdocs.com/c/annotation/) - ชุมชนช่วยเหลือและการสนับสนุนจากทีมงาน  
+
+---
+
+**Last Updated:** 2026-05-21  
+**Tested With:** GroupDocs.Annotation 23.12 for Java  
+**Author:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [เพิ่มการทำเครื่องหมาย PDF ด้วย Java – คู่มือครบถ้วนของ GroupDocs](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Tutorial การทำเครื่องหมาย PDF ด้วย Java - คู่มือเต็มสำหรับการไฮไลท์ PDF](/annotation/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/)
+- [วิธีเพิ่มลูกศรใน PDF ด้วย Java – คู่มือเต็มของ GroupDocs](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)

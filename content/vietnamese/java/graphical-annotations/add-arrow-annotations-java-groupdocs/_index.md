@@ -88,7 +88,7 @@ url: /vi/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-# Java pdf arrow annotations – hướng dẫn hoàn chỉnh & các thực tiễn tốt nhất (2025)
+# Java PDF Arrow Annotations - Hướng Dẫn Đầy Đủ & Thực Hành Tốt Nhất (2025)
 
 ## Giới thiệu
 
@@ -675,10 +675,6 @@ for (AnnotationInfo annotation : annotations) {
 **Kiểm tra với:** GroupDocs.Annotation 25.2 for Java  
 **Tác giả:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
 ```java
 public void processBatch(List<String> documents, int batchSize) {
     for (int i = 0; i < documents.size(); i += batchSize) {

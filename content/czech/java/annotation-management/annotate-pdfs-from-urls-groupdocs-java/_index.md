@@ -159,7 +159,6 @@ Použijte `new URL("https://example.com/document.pdf")` k otevření vstupního 
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Krok 2: vytvořte objekt `Annotator`
 
@@ -171,14 +170,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Krok 3: zodpovědně spravujte prostředky
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Časté úskalí
@@ -196,7 +193,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Krok 5: nastavte pozici a velikost
 
@@ -205,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Poznámka k souřadnicím:** Počátek je v levém horním rohu stránky; hodnoty jsou v bodech.
@@ -216,14 +211,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Krok 7: připojte anotaci
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Tipy pro efektivní anotaci
@@ -240,7 +233,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Krok 9: uložte a vyčistěte
 
@@ -250,7 +242,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Pokročilý tip:** Zahrňte časové razítko nebo ID uživatele do názvu souboru (např. `review_20260814_1234.pdf`) pro zjednodušení sledování verzí.
@@ -270,7 +261,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Zpracovávejte dokumenty v dávkách po 5‑10, aby bylo využití haldy stabilní.  

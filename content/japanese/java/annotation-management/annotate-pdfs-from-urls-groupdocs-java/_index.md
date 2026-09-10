@@ -157,7 +157,6 @@ URL から PDF をロードすると、ファイルをディスクに書き込�
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### 手順 2: `Annotator` オブジェクトを作成する
 
@@ -169,14 +168,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### 手順 3: リソースを適切に管理する
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### よくある落とし穴
@@ -194,7 +191,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### 手順 5: 位置とサイズを設定する
 
@@ -203,7 +199,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **座標の注意:** 原点はページの左上隅で、値はポイント単位です。
@@ -214,14 +209,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### 手順 7: 注釈を添付する
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### 効果的な注釈のためのプロのコツ
@@ -238,7 +231,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### 手順 9: 保存とクリーンアップ
 
@@ -248,7 +240,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **高度なコツ:** ファイル名にタイムスタンプやユーザー ID を含める（例: `review_20260814_1234.pdf`）ことで、バージョン管理を簡素化できます。
@@ -268,7 +259,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - ヒープ使用量を安定させるために、ドキュメントを 5‑10 件のバッチで処理します。  

@@ -151,7 +151,6 @@ PDF'yi doğrudan uzak bir adresden yükleyin ve tek bir bellek‑verimli adımda
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Adım 2: `Annotator` nesnesini oluştur
 ```java
@@ -162,13 +161,11 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Adım 3: kaynakları sorumlu bir şekilde yönet
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Yaygın tuzaklar
@@ -184,7 +181,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Adım 5: konum ve boyutu ayarla
 ```java
@@ -192,7 +188,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Koordinat notu:** Orijin sayfanın sol‑üst köşesidir; değerler puan cinsindendir.
@@ -202,13 +197,11 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Adım 7: açıklamayı ekle
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Etkili açıklama için ipuçları
@@ -223,7 +216,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Adım 9: kaydet ve temizle
 ```java
@@ -232,7 +224,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Gelişmiş ipucu:** Dosya adında zaman damgaları veya kullanıcı kimlikleri ekleyin (ör. `review_20260814_1234.pdf`) böylece sürüm takibi basitleşir.
@@ -250,7 +241,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Belgeleri 5‑10'luk partiler halinde işleyerek yığın kullanımını istikrarlı tutun.  

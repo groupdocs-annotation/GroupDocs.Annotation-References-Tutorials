@@ -160,7 +160,6 @@ Sử dụng `new URL("https://example.com/document.pdf")` để mở một luồ
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Bước 2: tạo đối tượng `Annotator`
 
@@ -172,14 +171,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Bước 3: quản lý tài nguyên một cách có trách nhiệm
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Những khó khăn thường gặp
@@ -197,7 +194,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Bước 5: đặt vị trí và kích thước
 
@@ -206,7 +202,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Ghi chú tọa độ:** Gốc là góc trên‑trái của trang; các giá trị tính bằng point.
@@ -217,14 +212,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Bước 7: đính kèm ghi chú
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Mẹo chuyên nghiệp để ghi chú hiệu quả
@@ -241,7 +234,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Bước 9: lưu và dọn dẹp
 
@@ -251,7 +243,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Mẹo nâng cao:** Bao gồm dấu thời gian hoặc ID người dùng trong tên tệp (ví dụ, `review_20260814_1234.pdf`) để đơn giản hoá việc theo dõi phiên bản.
@@ -271,7 +262,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Xử lý tài liệu theo lô 5‑10 để giữ ổn định việc sử dụng heap.  

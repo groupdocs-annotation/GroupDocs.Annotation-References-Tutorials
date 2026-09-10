@@ -160,7 +160,6 @@ Usa `new URL("https://example.com/document.pdf")` para abrir un flujo de entrada
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Paso 2: crear el objeto `Annotator`
 
@@ -172,14 +171,12 @@ import java.net.URL;
 // Crear un objeto Annotator con el flujo de la URL
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Paso 3: gestionar los recursos responsablemente
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Errores comunes
@@ -197,7 +194,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Paso 5: establecer posición y tamaño
 
@@ -206,7 +202,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, ancho, alto.
-```
 ```
 
 > **Nota de coordenadas:** El origen es la esquina superior izquierda de la página; los valores están en puntos.
@@ -217,14 +212,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, ancho, alto.
 // ```java
 area.setBackgroundColor(65535); // Valor hexadecimal para amarillo
 ```
-```
 
 ### Paso 7: adjuntar la anotación
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Consejos profesionales para una anotación eficaz
@@ -241,7 +234,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Reemplaza con tu directorio deseado.
 ```
-```
 
 ### Paso 9: guardar y limpiar
 
@@ -251,7 +243,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Limpia recursos después de guardar.
-```
 ```
 
 > **Consejo avanzado:** Incluye marcas de tiempo o IDs de usuario en el nombre de archivo (p. ej., `review_20260814_1234.pdf`) para simplificar el seguimiento de versiones.
@@ -271,7 +262,6 @@ annotator.dispose(); // Limpia recursos después de guardar.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Lógica de anotación aquí
 } // Limpieza automática
-```
 ```
 
 - Procesa documentos en lotes de 5‑10 para mantener estable el uso del heap.  

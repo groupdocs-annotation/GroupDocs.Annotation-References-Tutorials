@@ -286,8 +286,3 @@ Las prácticas médicas mantienen los registros de pacientes en un entorno Azure
 **Última actualización:** 2026-03-27  
 **Probado con:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

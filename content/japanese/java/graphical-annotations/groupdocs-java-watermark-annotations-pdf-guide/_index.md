@@ -1,68 +1,140 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: GroupDocs.Annotation を使用して、Java で PDF に複数ページのウォーターマークを追加する方法を学びましょう。このステップバイステップのチュートリアルでは、コード例、トラブルシューティングのヒント、ベストプラクティスとともに、Java
-  で PDF ウォーターマークを追加する方法を示します。
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
+date: '2026-07-30'
+description: GroupDocs.Annotation を使用して Java で PDF にすべてのページに透かしを適用する方法を学びます。このステップバイステップのチュートリアルでは、pdf
+  透かしを複数ページに追加する方法を、コード例、トラブルシューティングのヒント、ベストプラクティスとともに示します。
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
 linktitle: Java PDF Watermark Guide
+og_description: Java 用 GroupDocs.Annotation を使用して PDF にすべてのページに透かしを適用します。このガイドでは、pdf
+  透かしを複数ページに適用する方法、セットアップ、コード、トラブルシューティングを簡潔なチュートリアルで解説します。
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: すべてのページに透かしを適用 – Java PDF Watermark Guide
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDFウォーターマーク – 複数ページにわたるPDFウォーターマークガイド
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: すべてのページに透かしを適用 – Java PDF Watermark Guide
 type: docs
 url: /ja/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
-# Java PDF透かし – 複数ページへのPDF透かしガイド
+# すべてのページに透かしを適用 – Java PDF 透かしガイド
 
-大量に文書を保護、ブランド付け、またはラベル付けする必要がある場合、**pdf watermark multiple pages** を追加することは一般的な要件です。このチュートリアルでは、GroupDocs.Annotation を使用して **add pdf watermark java** を行う方法を、プロジェクトの設定から高度なカスタマイズまで詳しく解説します。各ステップを順に説明し、設定の背景を解説するとともに、よくある落とし穴を回避する実用的なヒントを提供します。
+この包括的なチュートリアルでは、Java と GroupDocs.Annotation を使用して PDF ドキュメントに **すべてのページに透かしを適用** する方法を学びます。機密レポートを保護したり、マーケティング用 PDF にブランドを付けたり、ファイル全体に「CONFIDENTIAL」スタンプを追加したりする必要がある場合でも、以下の手順は Maven の設定から高度なカスタマイズまで、すべてを網羅しており、数分で信頼できるソリューションを実装できます。
 
-## Quick Answers
-- **Javaでpdf watermark multiple pages を追加できるライブラリは何ですか？** GroupDocs.Annotation for Java。  
-- **ライセンスは必要ですか？** はい、開発用には無料トライアルで動作しますが、本番環境ではフルライセンスが必要です。  
-- **すべてのページに一度に透かしを付けられますか？** はい – ループで各ページに透かしアノテーションを作成します。  
-- **必要なJavaバージョンは何ですか？** JDK 8+（JDK 11+ 推奨）。  
-- **不透明度はどのように制御しますか？** `setOpacity(double)` を使用し、0.0 が完全に透明、1.0 が完全に不透明です。
+## クイック回答
+- **Java で複数ページに PDF 透かしを追加できるライブラリは何ですか？** GroupDocs.Annotation for Java.  
+- **ライセンスは必要ですか？** はい、開発には無料トライアルが使用できますが、製品版にはフルライセンスが必要です。  
+- **すべてのページに一度に透かしを適用できますか？** はい – ループで各ページに透かしアノテーションを作成します。  
+- **必要な Java バージョンは何ですか？** JDK 8 以上 (JDK 11 以上推奨)。  
+- **不透明度はどう制御しますか？** `setOpacity(double)` を使用し、0.0 が完全に透明、1.0 が完全に不透明です。
 
-## Why You Need PDF Watermarks (And How Java Makes It Easy)
+## PDF 透かしが必要な理由（Java が簡単にする方法）
 
-重要な文書が許可なく共有されたことがありますか？または、会社のPDFにブランドを付けたいが、どこから始めればよいかわからないことがありますか？あなたは一人ではありません。PDFに透かしを付けることは、開発者が今日直面する最も一般的な文書セキュリティとブランディングのニーズのひとつです。
+機密 PDF が許可なく共有されることを心配したことはありませんか？または、販売パンフレットの各ページにすばやくブランドを付ける必要がありますか？プログラムで透かしを追加すれば、手作業の手間が省け、一貫性が保証され、ドキュメントのセキュリティが強化されます。Java と GroupDocs.Annotation—最も堅牢な **java add watermark pdf** ライブラリの一つ—を使用すると、配置、回転、色、不透明度を細かく制御でき、大容量ファイルも効率的に処理できます。
 
-機密ビジネス文書を保護したり、マーケティング資料にブランドを付けたり、無断配布を防止したりする場合、プログラムで透かしを追加すれば手作業の時間を大幅に削減できます。Java と適切なライブラリがあれば、驚くほどシンプルに実装できます。
+**このガイドの最後に習得できること:**
+- Java 用 GroupDocs.Annotation の設定  
+- **すべてのページ** に適用されるカスタム透かしアノテーションの作成  
+- メモリを使い切らずに大容量 PDF を処理する  
+- 一般的な落とし穴のトラブルシューティングとパフォーマンスの最適化  
 
-このガイドでは、GroupDocs.Annotation for Java を使用して、PDFにプロフェッショナルな透かしを追加する方法を学びます – 市場で最も信頼性の高い Java 透かしライブラリのひとつです。基本設定から高度なカスタマイズ、よくある落とし穴とその回避策まで網羅します。
+## PDF 透かしとは何か、なぜ複数ページで使用するのか
 
-**本ガイドを修了すると習得できること:**
-- GroupDocs.Annotation for Java での透かし設定
-- 完全にカスタマイズ可能な透かしアノテーションの作成
-- 透かし実装時の一般的な問題のトラブルシューティング
-- 本番環境向けに透かしコードを最適化する方法
+PDF 透かしは、文書の内容の上に表示されるオーバーレイで、基になるテキストや画像を変更しません。**すべてのページ** に透かしを適用すると、各ページが同じブランドや機密性通知を保持し、未マーキングのページが誤って配布されるのを防ぎます。
 
-## What is a PDF Watermark and Why Use It on Multiple Pages?
+## 前提条件
 
-PDF 透かしは、元のテキストを変更せずに文書コンテンツの上に重ねるオーバーレイです。**pdf watermark multiple pages** を使用すると、ブランド、機密性通知、バージョンタグなどをすべてのページに一貫して付与でき、保護が文書全体に及びます。
+### 必須要件
+- **Java 環境:** JDK 8 以上 (JDK 11+ 推奨)、Maven 3.6+、任意の IDE (IntelliJ、Eclipse、VS Code)。  
+- **知識の前提条件:** 基本的な Java 構文、ファイル I/O、Maven 依存関係管理。  
+- **プロジェクトの権限:** 出力ディレクトリへの書き込み権限と、大容量 PDF 用に十分な RAM (200 ページ以上のファイルには 4 GB 以上推奨)。
 
-## Prerequisites
+## Java PDF 透かし環境の設定
 
-### Essential Requirements
+### プロジェクトへの GroupDocs.Annotation の追加
 
-- **Java 環境:** JDK 8 以上（JDK 11+ 推奨）、Maven 3.6+、お好みの IDE。  
-- **前提知識:** 基本的な Java、ファイル I/O、Maven 依存関係。  
-- **プロジェクト設定:** 出力フォルダーへの書き込み権限と、大容量 PDF 用の十分な RAM。
+まず、GroupDocs.Annotation の Maven アーティファクトを追加します。この依存関係は必要なバイナリとトランジティブなライブラリをすべて取得します。
 
-## Setting Up Your Java PDF Watermark Environment
+**定義:** Maven の `<dependency>` 要素はプロジェクトに GroupDocs.Annotation ライブラリを宣言し、ビルド時にコンパイラが JAR ファイルを見つけられるようにします。
 
-### Adding GroupDocs.Annotation to Your Project
-
-Java で PDF に透かしを追加する最初のステップは、GroupDocs.Annotation ライブラリを正しく構成することです。実際に動作する Maven 設定は以下の通りです：
-
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -80,20 +152,26 @@ Java で PDF に透かしを追加する最初のステップは、GroupDocs.Ann
 </dependencies>
 ```
 
-**プロのコツ**: バグ修正とパフォーマンス向上のため、常に最新バージョンを使用してください。上記バージョンは 2025 年時点の最新です。
+**プロのコツ:** 常に最新のリリースバージョンを使用してください（例は 2025 年時点での最新 25.2）。バグ修正やパフォーマンス向上の恩恵を受けられます。
 
-### Getting Your License Sorted
+### ライセンスの取得
 
-多くのチュートリアルが省略しがちなポイント – 本番環境では正しいライセンスが必要です。選択肢は次の通りです：
+本番環境での展開には有効なライセンスが必要です。スケジュールに合わせて以下のオプションから選択してください：
 
-1. **無料トライアル**: テストと開発に最適。ダウンロードは [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) から。  
-2. **一時ライセンス**: 評価用にフル機能を取得。取得は [Temporary License Page](https://purchase.groupdocs.com/temporary-license/) から。  
-3. **フルライセンス**: 本番アプリケーション向け。購入は [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy) から。
+1. **Free Trial:** 開発・テストに最適です。[GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) からダウンロードしてください  
+2. **Temporary License:** 評価用にフル機能を提供します。[Temporary License Page](https://purchase.groupdocs.com/temporary-license/) から取得してください  
+3. **Full License:** 商用利用には必須です。[GroupDocs Purchase Page](https://purchase.groupdocs.com/buy) で購入してください
 
-### Basic Setup That Actually Works
+### 実際に機能する基本設定
 
-依存関係を整えたら、ライブラリを正しく初期化する方法は以下の通りです：
+依存関係を追加し、ライセンスファイルを取得したら、`Annotator` オブジェクトを初期化します。このオブジェクトは PDF をメモリに読み込み、アノテーション作成用の API を提供します。
 
+**定義:** `Annotator` は GroupDocs.Annotation の主要エントリーポイントで、PDF の読み込み、アノテーションの作成、保存を管理します。
+
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -109,20 +187,21 @@ public class WatermarkSetup {
 }
 ```
 
-**避けるべき一般的なミス**: `dispose()` を呼び忘れると、特に複数文書を処理する際にメモリリークが発生します。
+**避けるべき一般的なミス:** 処理後に `annotator.dispose()` を呼び出さないことです。特にバッチで多数のドキュメントを扱う場合、メモリリークの原因になります。
 
-## How to Add pdf watermark multiple pages with Java
+## Java で全ページに透かしを適用する方法
 
-本題 – 透かしを実際に追加します！GroupDocs.Annotation ライブラリは、コンポーネントを理解すれば驚くほどシンプルです。
+すべてのページに透かしを適用するには、`WatermarkAnnotation` を作成し、視覚プロパティを設定した上で、ループ内で各ページにこのアノテーションの別インスタンスを追加します。ループは文書のページ数を使用し、正しいページ番号を割り当て、最後に変更された PDF を保存します。
 
-### Understanding Watermark Annotations
+### 透かしアノテーションの理解
 
-透かしアノテーションは PDF 上のオーバーレイ層と考えてください。テキストを含め、位置、色、不透明度、回転角度などを自由に設定できます。単なるテキスト追加とは異なり、透かしアノテーションは文書の核心コンテンツに干渉しない可視マーカーとして設計されています。
+`WatermarkAnnotation` は、テキスト、カスタムカラー、回転、不透明度を含むことができるオーバーレイ層を表します。単純なテキスト追加とは異なり、アノテーションとして保存されるため、後で削除や編集が可能です。
 
-### Step 1: Import the Right Classes
+**定義:** `WatermarkAnnotation` は GroupDocs.Annotation のクラスで、透かしオーバーレイのすべての視覚プロパティをカプセル化します。
 
-まずはインポートを整理します。必要なクラスは以下の通りです：
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -132,14 +211,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-各クラスの役割:
-- `Annotator`: PDF 操作のメインインターフェイス  
-- `WatermarkAnnotation`: カスタマイズ対象の透かしオブジェクト  
-- `Rectangle`: 透かしの表示位置とサイズを定義  
-- `Reply`: 透かしに関する任意のコメントやメモ  
+### ステップ 1: 必要なクラスのインポート
 
-### Step 2: Initialize Your PDF for Watermarking
+API を使用する前に、必須クラスをインポートします。
 
+**定義:** インポート文は必要な GroupDocs.Annotation クラスを現在の Java ファイルに導入し、完全修飾名なしで参照できるようにします。
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -147,12 +230,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**重要な注意点**: `Annotator` オブジェクトは PDF をメモリにロードするため、大容量ファイルの場合は十分な RAM を確保してください。50 MB 超の PDF では、バッチ処理を検討すると良いでしょう。
+### ステップ 2: PDF ドキュメントの読み込み
 
-### Step 3: Create Optional Reply Objects
+ソース PDF を指す `Annotator` インスタンスを作成します。
 
-必須ではありませんが、返信オブジェクトは文書追跡や承認ワークフローで便利です：
+**定義:** `Annotator` コンストラクタは PDF ファイルを操作可能なオブジェクトに読み込み、アノテーション操作の準備を行います。
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -163,12 +249,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-これらの返信はアノテーションメタデータの一部となり、コメント機能をサポートする PDF リーダーで表示できます。
+> **プロのコツ:** 50 MB を超える PDF では、JVM ヒープ (`-Xmx4g`) を増やし、ファイルを順次処理してメモリ使用量を抑えることを検討してください。
 
-### Step 4: Configure Your Watermark (The Fun Part!)
+### ステップ 3: (オプション) Reply メタデータの準備
 
-ここで創造性を発揮します。透かし設定は、透かしの見た目すべてを制御します：
+透かしにコメントや承認メモを添付する必要がある場合は、`Reply` オブジェクトを作成します。
 
+**定義:** `Reply` はアノテーションに付随するユーザー生成コメントを保存し、監査トレイルに役立ちます。
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -187,27 +279,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**設定項目の解説:**
-- `setAngle(75.0)`: 透かしを 75 度回転させます。斜めの “CONFIDENTIAL” スタンプに最適です。  
-- `setBox(new Rectangle(200, 200, 100, 50))`: 位置 (200, 200) に幅 100、高さ 50 の矩形を設定。  
-- `setFontColor(65535)`: ARGB カラー形式 – この例では黄色。  
-- `setOpacity(0.7)`: 70 % の不透明度 – 視認性は保ちつつ目立ちすぎません。  
-- `setPageNumber(0)`: 最初のページに適用（0 ベース）。  
+### ステップ 4: 透かしの外観を設定
 
-### Step 5: Apply and Save Your Watermarked PDF
+テキスト、色、回転、サイズ、不透明度などの視覚プロパティを設定します。
 
+**定義:** 以下の setter は透かしの外観と各ページでの配置をカスタマイズします。
+
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-以上です！PDF にプロフェッショナルな透かしが付与されました。`save()` メソッドは透かしが適用された新しい PDF を生成し、元のファイルはそのまま残ります。
+### ステップ 5: すべてのページをループして透かしを適用
 
-## How to Add pdf watermark multiple pages (All Pages)
+**すべてのページに透かしを適用** するには、文書のページ数を反復し、各ページにアノテーションを割り当てます。
 
-デフォルトでは透かしは単一ページにしか適用されません。**pdf watermark multiple pages** を実現するには、ドキュメントページをループし、各ページに個別の `WatermarkAnnotation` を追加します：
+**定義:** `annotator.getPageCount()` は総ページ数を返し、各ページごとに別々の `WatermarkAnnotation` を作成するループを可能にします。
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -228,12 +333,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-このスニペットは、**pdf watermark multiple pages** を効率的に追加するための正確なパターンを示しています。
+### ステップ 6: 透かし付き PDF を保存
 
-## Common Issues and How to Fix Them
+最後に、変更を新しいファイルに書き込みます。元の PDF は変更されません。
 
-### "File Not Found" Errors
+**定義:** `annotator.save("output.pdf")` は追加されたすべてのアノテーションを新しい PDF ファイルに永続化します。
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -249,36 +358,19 @@ try {
 }
 ```
 
-- 絶対パスを再確認してください。  
-- 読み取り/書き込み権限を確認してください。  
-- 出力フォルダーが存在することを確認してください。
+これが GroupDocs.Annotation for Java を使用した **すべてのページに透かしを適用** する完全なフローです。
 
-### Memory Issues with Large PDFs
+## 一般的な問題とその解決方法
 
-- 常に `dispose()` を呼び出す。  
-- ファイルは並列ではなく、1 つずつ処理する。  
-- JVM ヒープを増やす（例: 非常に大きな文書は `-Xmx4g`）。
+### 「ファイルが見つかりません」エラー
 
-### Watermark Not Appearing Where Expected
-
-- PDF の座標系は **左下** が原点であることを忘れずに。  
-- ページサイズ（A4 と Letter）で位置が変わることをテストしてください。  
-- 透かしが薄い場合は不透明度を調整。
-
-### Font Color Issues
-
-使用できる ARGB 値:
-- 赤: `16711680`  
-- 青: `255`  
-- 緑: `65280`  
-- 黒: `0`  
-- 白: `16777215`  
-- 黄: `65535`（例で使用）
-
-## Real‑World Use Cases for Java PDF Watermarks
-
-### Business Document Protection
-
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -289,8 +381,41 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### Branding Marketing Materials
+- 絶対パスを確認し、ファイルが存在することを確認してください。  
+- 入出力ディレクトリの読み書き権限を確認してください。  
+- 出力フォルダーが存在しない場合は、事前に作成してください。
 
+### 大容量 PDF のメモリ問題
+
+- 処理後は必ず `annotator.dispose()` を呼び出してください。  
+- PDF は一度に 1 つずつ処理し、ライブラリがスレッドセーフであることが確認できない限り並列ストリームは避けてください。  
+- 200 ページを超えるファイルは JVM ヒープ (`-Xmx4g` 以上) を増やしてください。
+
+### 透かしの配置が期待通りでない
+
+- PDF の座標原点は **左下** です。`Rectangle` の値をそれに合わせて調整してください。  
+- ページサイズ (A4 と Letter) が異なると位置が変わるため、さまざまなサイズでテストしてください。  
+- 高コントラストの背景で透かしが薄すぎる場合は `setOpacity(0.5)` を使用してください。
+
+### フォントカラーの問題
+
+GroupDocs.Annotation は ARGB 整数値を期待します。一般的な色は以下の通りです:
+
+- 赤: `16711680`  
+- 青: `255`  
+- 緑: `65280`  
+- 黒: `0`  
+- 白: `16777215`  
+- 黄: `65535` (例で使用)
+
+## Java PDF 透かしの実践的ユースケース
+
+### ビジネス文書の保護
+
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -300,8 +425,13 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### Version Control for Documents
+### マーケティング資料のブランディング
 
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -310,10 +440,12 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## Performance Optimization Tips
+### 文書のバージョン管理
 
-### Memory Management Best Practices
-
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -331,14 +463,15 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### Batch Processing Strategies
+## パフォーマンス最適化のヒント
 
-- メモリ使用量を抑えるために文書を順次処理。  
-- 長時間実行時は進捗インジケーターを使用。  
-- ライブラリのスレッド安全性が確認できない限り、並列処理は避ける。
+### メモリ管理のベストプラクティス
 
-### Code Organization Tips
-
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -362,39 +495,60 @@ public class WatermarkTemplates {
 }
 ```
 
-## Frequently Asked Questions
+- ドキュメントは順次処理してヒープ使用量を低く保ちます。  
+- バッチジョブでは進捗インジケーターを使用してメモリ使用量を監視します。  
+- 必要なページだけに透かしを付ける場合は、PDF 全体をメモリに読み込むのを避けてください。ライブラリはページ単位の読み込みをサポートしています。
 
-**Q: How do I add watermarks to multiple pages in a PDF?**  
-A: ドキュメントのページ数をループし、各ページに `WatermarkAnnotation` を作成し、ループ内で `setPageNumber(i)` を設定します。
+### コード構成のヒント
 
-**Q: Can I use custom fonts for my watermarks?**  
-A: GroupDocs.Annotation はシステムにインストールされたフォントを使用します。ホストマシンに存在するフォントファミリーを指定してください。フォントが見つからない場合はデフォルトにフォールバックします。
+- 透かし作成をユーティリティメソッド `createWatermark(String text, double opacity, int angle)` にカプセル化します。  
+- 設定 (色、フォント、不透明度) はプロパティファイルに外部化し、環境ごとに簡単に調整できるようにします。
 
-**Q: What opacity setting works best for professional watermarks?**  
-A: **0.3** から **0.7** の範囲が理想的です – コンテンツの可読性を保ちつつ、十分に目立ちます。
+## よくある質問
 
-**Q: How should I handle very large PDF files?**  
-A: JVM ヒープを増やす（例: `-Xmx4g` 以上）、ファイルを1つずつ処理し、各文書の後に必ず `dispose()` を呼び出します。
+**Q: PDF の複数ページに透かしを追加するには？**  
+A: 文書のページ数をループし、設定済みの `WatermarkAnnotation` を各ページ用にクローンし、`setPageNumber(i)` を設定して `annotator.add()` で追加します。
 
-**Q: Is it possible to remove or modify existing watermarks?**  
-A: はい – `annotator.get()` で既存アノテーションを取得し、`WatermarkAnnotation` をフィルタリングして編集または削除できます：
+**Q: 透かしにカスタムフォントを使用できますか？**  
+A: GroupDocs.Annotation はホスト OS にインストールされたフォントを使用します。サーバーに存在するフォントファミリーを指定してください。フォントが見つからない場合はデフォルトにフォールバックします。
 
+**Q: プロフェッショナルな透かしに最適な不透明度設定は？**  
+A: **0.3** から **0.7** の範囲がバランスよく、目立ちすぎず、下のコンテンツも読めます。
+
+**Q: 非常に大きな PDF ファイルはどう扱うべきですか？**  
+A: JVM ヒープを増やす (`-Xmx4g` 以上)、ファイルは1つずつ処理し、各ドキュメント処理後は必ず `dispose()` を呼び出してネイティブリソースを解放します。
+
+**Q: 既存の透かしを削除または変更できますか？**  
+A: はい — `annotator.get()` でアノテーションを取得し、`WatermarkAnnotation` をフィルタリングして、必要に応じて編集または削除します：
+
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
 // Filter and modify as needed
 ```
 
-## Additional Resources
+## 追加リソース
 
-- **Documentation**: [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Complete API Reference**: [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
-- **Download Latest Version**: [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Commercial Licensing**: [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
-- **Community Support**: [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
+- **ドキュメント:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **完全な API リファレンス:** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **最新バージョンのダウンロード:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **商用ライセンス:** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **コミュニティサポート:** [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
 
 ---
 
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**最終更新日:** 2026-07-30  
+**テスト環境:** GroupDocs.Annotation 25.2  
+**作者:** GroupDocs  
+
+## 関連チュートリアル
+
+- [GroupDocs Annotation で PDF を Java で読み込む: ドキュメントロードガイド](/annotation/java/document-loading/)
+- [PDF アノテーションを Java で追加 – 完全な GroupDocs ガイド](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Java と GroupDocs Annotation を使用して PDF に画像を追加する方法](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)

@@ -1,70 +1,139 @@
 ---
-"date": "2025-05-06"
-"description": "เรียนรู้วิธีการดึงข้อมูลเอกสารอย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation สำหรับ .NET คู่มือนี้ครอบคลุมถึงการตั้งค่า การใช้งาน และแอปพลิเคชันจริงเพื่อปรับปรุงเวิร์กโฟลว์การประมวลผลเอกสารของคุณ"
-"title": "เรียนรู้การแยกเอกสารด้วย GroupDocs.Annotation .NET คู่มือฉบับสมบูรณ์สำหรับนักพัฒนา"
-"url": "/th/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/"
+categories:
+- Document Processing
+date: '2026-06-01'
+description: เรียนรู้วิธีดึง c# pdf page count, รับประเภทไฟล์, และอ่านคุณสมบัติของไฟล์
+  c# ด้วย GroupDocs.Annotation .NET. มีโค้ดเชิงปฏิบัติและเคล็ดลับ.
+keywords:
+- c# pdf page count
+- c# get file type
+- read file properties c#
+- c# read document size
+lastmod: '2026-06-01'
+linktitle: ดึงข้อมูลเอกสาร C#
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-01'
+  description: Learn how to extract c# pdf page count, get file type, and read file
+    properties c# using GroupDocs.Annotation .NET. Includes practical code and tips.
+  headline: c# pdf page count – Extract Document Info with GroupDocs
+  type: TechArticle
+- description: Learn how to extract c# pdf page count, get file type, and read file
+    properties c# using GroupDocs.Annotation .NET. Includes practical code and tips.
+  name: c# pdf page count – Extract Document Info with GroupDocs
+  steps:
+  - name: '**Start with the Free Trial**: Download from the [GroupDocs website](https://releases.groupdocs.com/annotation/net/)
+      – no strings attached.'
+    text: '**Start with the Free Trial**: Download from the [GroupDocs website](https://releases.groupdocs.com/annotation/net/)
+      – no strings attached.'
+  - name: '**Need More Time?** Get a [temporary license](https://purchase.groupdocs.com/temporary-license/)
+      for extended evaluation.'
+    text: '**Need More Time?** Get a [temporary license](https://purchase.groupdocs.com/temporary-license/)
+      for extended evaluation.'
+  - name: '**Ready to Go Live?** [Purchase a full license](https://purchase.groupdocs.com/buy)
+      when you''re ready to deploy.'
+    text: '**Ready to Go Live?** [Purchase a full license](https://purchase.groupdocs.com/buy)
+      when you''re ready to deploy.'
+  - name: Clone the sample project and run the provided placeholders with real files.
+    text: Clone the sample project and run the provided placeholders with real files.
+  - name: Explore additional GroupDocs.Annotation features like annotation rendering
+      and document comparison.
+    text: Explore additional GroupDocs.Annotation features like annotation rendering
+      and document comparison.
+  - name: Integrate the metadata extraction into your existing upload pipeline to
+      automate classification and validation.
+    text: Integrate the metadata extraction into your existing upload pipeline to
+      automate classification and validation.
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Annotation supports over 50 document formats, including PDF,
+      DOCX, XLSX, PPTX, JPEG, PNG, TIFF, CAD files, and many more.
+    question: What document formats does GroupDocs.Annotation support for information
+      extraction?
+  - answer: '`GetDocumentInfo()` provides core metadata like file type, page count,
+      and size. For custom properties such as author or creation date, combine GroupDocs.Annotation
+      with GroupDocs.Metadata or use the native file format’s property APIs.'
+    question: Can I extract custom metadata or properties from documents?
+  - answer: Provide the password when creating the `Annotator` instance, e.g., `new
+      Annotator("secure.pdf", new LoadOptions { Password = "pwd" })`.
+    question: How do I handle password‑protected documents?
+  - answer: Yes—`GetDocumentInfo()` reads only the file header, so memory consumption
+      stays low even for multi‑hundred‑page PDFs.
+    question: Is there a way to extract document information without loading the entire
+      file into memory?
+  - answer: Absolutely. GroupDocs.Annotation is thread‑safe; just create a new `Annotator`
+      per request and dispose of it promptly.
+    question: Can I use this in a web application or multi‑threaded environment?
+  type: FAQPage
+tags:
+- csharp
+- document-extraction
+- groupdocs
+- dotnet
+title: c# pdf page count – ดึงข้อมูลเอกสารด้วย GroupDocs
 type: docs
-"weight": 1
+url: /th/net/annotation-management/mastering-document-extraction-groupdocs-annotation-net/
+weight: 1
 ---
 
-# เรียนรู้การดึงข้อมูลเอกสารด้วย GroupDocs.Annotation .NET
+# c# pdf page count – ดึงข้อมูลเอกสารด้วย GroupDocs.Annotation
 
-## การแนะนำ
+## บทนำ
 
-คุณกำลังดิ้นรนเพื่อดึงข้อมูลสำคัญจากเอกสารอย่างมีประสิทธิภาพหรือไม่? คุณไม่ได้อยู่คนเดียว นักพัฒนาหลายคนเผชิญกับความท้าทายเมื่อต้องจัดการข้อมูลเอกสาร แต่ด้วยเครื่องมือและเทคนิคที่เหมาะสม งานนี้สามารถกลายเป็นเรื่องง่าย ในบทช่วยสอนนี้ เราจะมาสำรวจว่า **GroupDocs.Annotation สำหรับ .NET** สามารถช่วยให้คุณดึงข้อมูลเอกสารได้อย่างราบรื่นโดยใช้ C# คู่มือนี้เหมาะอย่างยิ่งหากคุณต้องการทำให้เวิร์กโฟลว์การประมวลผลเอกสารของคุณเป็นแบบอัตโนมัติหรือมีประสิทธิภาพมากขึ้น
+เคยพบว่าตัวเองมองดูกองเอกสารหลายๆ ฉบับโดยสงสัยว่ามีอะไรอยู่ภายในโดยไม่ต้องเปิดแต่ละไฟล์หรือไม่? คุณไม่ได้เป็นคนเดียวที่เผชิญกับความยากลำบากนี้ ไม่ว่าคุณจะกำลังสร้างระบบจัดการเอกสาร, ประมวลผลไฟล์กฎหมาย, หรือเพียงแค่พยายามจัดระเบียบสินทรัพย์ดิจิทัลของบริษัท การรู้วิธี **extract document information in C#**—รวมถึง **c# pdf page count**—สามารถเปลี่ยนเกมได้จริง
 
-สิ่งที่คุณจะได้เรียนรู้:
-- วิธีตั้งค่า GroupDocs.Annotation สำหรับ .NET
-- ขั้นตอนในการดึงข้อมูลรายละเอียดจากเอกสาร
-- การประยุกต์ใช้งานจริงของการดึงข้อมูลเอกสารในสถานการณ์จริง
-- เคล็ดลับการเพิ่มประสิทธิภาพการทำงาน
+การตรวจสอบคุณสมบัติไฟล์ด้วยตนเองใช้เวลานานและเสี่ยงต่อข้อผิดพลาด ด้วย **GroupDocs.Annotation for .NET** คุณสามารถทำกระบวนการนี้โดยอัตโนมัติและดึงข้อมูลประเภทไฟล์, จำนวนหน้า, ขนาดเอกสาร, และอื่นๆ เพียงไม่กี่บรรทัดของโค้ด บทเรียนนี้จะแสดงให้คุณเห็นว่าทำไมเรื่องนี้สำคัญ, วิธีตั้งค่าห้องสมุด, และโค้ดทีละขั้นตอนที่ทำงานได้ทันที
 
-พร้อมที่จะก้าวเข้าสู่โลกแห่งการจัดการเอกสารอย่างมีประสิทธิภาพหรือยัง เริ่มต้นด้วยการตรวจสอบให้แน่ใจว่าคุณมีทุกสิ่งที่คุณต้องการ
+## คำตอบด่วน
+- **GroupDocs.Annotation ดึงอะไรออกมาบ้าง?** ประเภทไฟล์, จำนวนหน้า, ขนาด, และเมตาดาต้าพื้นฐาน.  
+- **มีรูปแบบไฟล์ที่รองรับกี่ประเภท?** มากกว่า 50 รูปแบบการนำเข้าและส่งออก รวมถึง PDF, DOCX, XLSX, PPTX, และประเภทภาพทั่วไป.  
+- **ฉันสามารถรับ c# pdf page count ได้โดยไม่ต้องโหลดไฟล์ทั้งหมดหรือไม่?** ได้—`GetDocumentInfo()` อ่านเฉพาะข้อมูลส่วนหัวที่จำเป็นสำหรับจำนวนหน้า.  
+- **ฉันต้องการไลเซนส์สำหรับการพัฒนาหรือไม่?** การทดลองใช้ฟรีเพียงพอสำหรับการทดสอบ; จำเป็นต้องมีไลเซนส์เต็มสำหรับการใช้งานจริง.  
+- **API นี้ปลอดภัยต่อการทำงานหลายเธรดสำหรับเว็บแอปหรือไม่?** แน่นอน—เพียงแค่ทำการ dispose อินสแตนซ์ของ `Annotator` อย่างเหมาะสม.
 
-## ข้อกำหนดเบื้องต้น
+## c# pdf page count คืออะไร?
+**c# pdf page count** คือจำนวนหน้าทั้งหมดที่ไฟล์ PDF รายงานเมื่อสอบถามผ่าน API การใช้ GroupDocs.Annotation คุณจะได้ค่าดังกล่าวทันทีผ่านเมธอด `GetDocumentInfo()` โดยไม่ต้องเรนเดอร์เอกสารทั้งหมด จำนวนนี้ได้มาจากโครงสร้างภายในของ PDF ทำให้คุณสามารถตัดสินใจเกี่ยวกับการประมวลผล, การจัดเก็บ, หรือการแสดงผลโดยไม่ต้องเปิดไฟล์ในโปรแกรมดูไฟล์ มันมีประโยชน์อย่างยิ่งสำหรับการตรวจสอบเป็นชุด, การตรวจสอบการปฏิบัติตาม, และการแสดงตัวอย่าง UI ที่มีข้อจำกัดเรื่องจำนวนหน้า
 
-ก่อนที่เราจะเริ่มต้น โปรดตรวจสอบให้แน่ใจว่าสภาพแวดล้อมการพัฒนาของคุณพร้อมด้วยเครื่องมือและไลบรารีที่จำเป็น:
+## ทำไมต้องดึงข้อมูลเอกสารด้วย GroupDocs.Annotation?
+GroupDocs.Annotation รองรับ **50+ document formats** และสามารถประมวลผลไฟล์หลายร้อยหน้าโดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ ส่งมอบเมตาดาต้าในเวลาไม่เกิน 200 ms บนเซิร์ฟเวอร์ทั่วไป ความเร็วและความหลากหลายของรูปแบบทำให้เหมาะสำหรับการอัตโนมัติในระดับใหญ่, การตรวจสอบการปฏิบัติตาม, และการจัดประเภทเนื้อหาอัจฉริยะ.
 
-### ไลบรารีและเวอร์ชันที่จำเป็น
+## ข้อกำหนดเบื้องต้นและการตั้งค่า
 
-- **GroupDocs.Annotation สำหรับ .NET**: เวอร์ชัน 25.4.0
-- สภาพแวดล้อมการพัฒนา C# ที่เข้ากันได้ (เช่น Visual Studio)
+### สิ่งที่คุณต้องการ
+- Visual Studio 2019 หรือใหม่กว่า (รุ่น Community ใช้งานได้ดี)  
+- .NET Framework 4.6.1+ **หรือ** .NET Core 2.0+  
+- ความรู้พื้นฐาน C# และความคุ้นเคยกับ NuGet  
 
-### ข้อกำหนดการตั้งค่าสภาพแวดล้อม
+### การติดตั้ง GroupDocs.Annotation
+การนำไลบรารีเข้าสู่โปรเจกต์ของคุณทำได้ง่าย เลือกวิธีที่คุณต้องการ:
 
-1. ตรวจสอบให้แน่ใจว่าคุณได้ติดตั้ง .NET framework ที่ถูกต้อง
-2. ตรวจสอบให้แน่ใจว่า IDE ของคุณรองรับการจัดการแพ็กเกจ NuGet
-
-### ข้อกำหนดเบื้องต้นของความรู้
-
-- ความเข้าใจพื้นฐานเกี่ยวกับ C#
-- ความคุ้นเคยกับการตั้งค่าและการดำเนินการโครงการ .NET
-- ความรู้เกี่ยวกับแนวคิดการจัดการเอกสาร
-
-## การตั้งค่า GroupDocs.Annotation สำหรับ .NET
-
-หากต้องการเริ่มใช้งาน GroupDocs.Annotation คุณจะต้องติดตั้งโปรแกรมนี้ในโปรเจ็กต์ของคุณก่อน โดยคุณสามารถติดตั้งได้โดยใช้ตัวจัดการแพ็คเกจต่างๆ ดังนี้
-
-**คอนโซลตัวจัดการแพ็กเกจ NuGet**
+**ตัวเลือก 1: Package Manager Console (แนะนำ)**
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
-```
+```  
 
-**\.NET CLI**
+**ตัวเลือก 2: .NET CLI**
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
+```  
 
-### การขอใบอนุญาต
+**ตัวเลือก 3: Package Manager UI**  
+หากคุณชอบคลิกมากกว่าพิมพ์ เพียงค้นหา "GroupDocs.Annotation" ใน NuGet Package Manager UI แล้วติดตั้งเวอร์ชันล่าสุด.
 
-- **ทดลองใช้งานฟรี**:เริ่มต้นด้วยการดาวน์โหลดรุ่นทดลองใช้งานฟรีจาก [เว็บไซต์ GroupDocs](https://releases-groupdocs.com/annotation/net/).
-- **ใบอนุญาตชั่วคราว**:หากคุณต้องการประเมินคุณสมบัติเพิ่มเติม โปรดขอใบอนุญาตชั่วคราวได้ที่ [ลิงค์นี้](https://purchase-groupdocs.com/temporary-license/).
-- **ซื้อ**:หากต้องการเข้าถึงแบบเต็มรูปแบบ โปรดพิจารณาซื้อใบอนุญาตผ่าน [หน้านี้](https://purchase-groupdocs.com/buy).
+### การรับไลเซนส์ของคุณ
+1. **เริ่มต้นด้วยการทดลองใช้ฟรี**: ดาวน์โหลดจาก [GroupDocs website](https://releases.groupdocs.com/annotation/net/) – ไม่มีเงื่อนไขใดๆ  
+2. **ต้องการเวลามากกว่านี้?** รับ [temporary license](https://purchase.groupdocs.com/temporary-license/) สำหรับการประเมินระยะยาว  
+3. **พร้อมใช้งานจริงหรือยัง?** [Purchase a full license](https://purchase.groupdocs.com/buy) เมื่อคุณพร้อมที่จะเปิดใช้งาน  
 
-### การเริ่มต้นและการตั้งค่าเบื้องต้น
+> **เคล็ดลับมืออาชีพ:** การทดลองใช้ฟรีรวมลายน้ำด้วย แต่เหมาะอย่างยิ่งสำหรับการเรียนรู้และทดสอบโค้ดของคุณ
 
-นี่คือวิธีที่คุณสามารถเริ่มต้นไลบรารี GroupDocs.Annotation ในแอปพลิเคชัน C# ของคุณได้:
+สำหรับการเปลี่ยนแปลงล่าสุด ดูที่ [release notes](https://releases.groupdocs.com/annotation/net/).
 
+## วิธีรับ c# pdf page count ด้วย GroupDocs.Annotation?
+**Annotator** คือคลาสหลักที่โหลดเอกสารและให้ฟังก์ชันการทำ annotation และเมตาดาต้า  
+โหลด PDF ของคุณด้วย `new Annotator("file.pdf")` แล้วเรียก `GetDocumentInfo()` – คุณสมบัติ `PageCount` จะคืนค่าจำนวนหน้าที่แม่นยำในเพียงสองบรรทัดของโค้ด **GetDocumentInfo()** คืนค่าอ็อบเจ็กต์ **DocumentInfo** ที่บรรจุเมตาดาต้า เช่น จำนวนหน้า, ประเภทไฟล์, และขนาด วิธีนี้อ่านเฉพาะข้อมูลส่วนหัวที่จำเป็น ดังนั้นแม้ไฟล์ PDF ขนาดใหญ่ก็จะถูกจัดการอย่างมีประสิทธิภาพ
+
+### การตั้งค่าเบื้องต้นและการโหลดเอกสาร
 ```csharp
 using System;
 using GroupDocs.Annotation;
@@ -73,124 +142,404 @@ class Program
 {
     static void Main(string[] args)
     {
-        // เริ่มต้นตัวอธิบายด้วยเส้นทางเอกสาร
+        // Initialize the annotator with a document path
         using (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf"))
         {
-            Console.WriteLine("GroupDocs.Annotation is set up and ready to use.");
+            Console.WriteLine("Document loaded successfully!");
+            // We'll add the extraction code here next
         }
     }
 }
-```
+```  
 
-## คู่มือการใช้งาน
-
-ในส่วนนี้เราจะอธิบายการแยกข้อมูลจากเอกสารโดยใช้ GroupDocs.Annotation
-
-### การดึงข้อมูลเอกสาร
-
-คุณสมบัตินี้ช่วยให้คุณค้นหารายละเอียดที่สำคัญเกี่ยวกับเอกสารของคุณได้ ดังนี้:
-
-#### การโหลดเอกสาร
-
-ขั้นแรกโหลดเอกสารสำหรับคำอธิบายประกอบ:
-
+### การดึงเมตาดาต้าเอกสาร
+**DocumentInfo** รวมคุณสมบัติที่ดึงออกมาของไฟล์ ทำให้สามารถอ่านและใช้ในแอปพลิเคชันของคุณได้ง่าย  
 ```csharp
 using (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf"))
 {
-    // ดำเนินการตามขั้นตอนการสกัดดังต่อไปนี้
-}
-```
+    // Extract document info
+    IDocumentInfo info = annotator.Document.GetDocumentInfo();
+    
+    // Always check if info was retrieved successfully
+    if (info == null || info.PageCount == 0)
+    {
+        throw new Exception("Unexpected document information!");
+    }
 
-#### การดึงข้อมูลและการแสดงข้อมูล
-
-ขั้นตอนต่อไปคือการแยกข้อมูลเอกสาร:
-
-```csharp
-// ดึงข้อมูลเอกสาร
-IDocumentInfo info = annotator.Document.GetDocumentInfo();
-if (info == null || info.PageCount == 0)
-{
-    throw new Exception("Unexpected document information!");
-}
-
-// ส่งออกข้อมูลเอกสารที่แยกออกมา
-Console.WriteLine($"\
+    // Display the extracted information
+    Console.WriteLine($"\
 File type: {info.FileType}\
 Number of pages: {info.PageCount}\
 Document size: {info.Size} bytes.");
-```
+    
+    // Convert size to more readable format
+    string readableSize = FormatFileSize(info.Size);
+    Console.WriteLine($"Document size (formatted): {readableSize}");
+}
 
-**คำอธิบาย**- 
-- `Annotator`:โหลดและจัดเตรียมเอกสารเพื่อการใส่คำอธิบายประกอบ
-- `GetDocumentInfo()`:ดึงข้อมูลเมตาเช่นประเภทไฟล์ จำนวนหน้า และขนาด
-- การจัดการข้อยกเว้นช่วยให้การจัดการข้อผิดพลาดมีประสิทธิภาพหากข้อมูลเอกสารไม่พร้อมใช้งาน
+// Helper method to format file size
+static string FormatFileSize(long bytes)
+{
+    string[] suffixes = { "B", "KB", "MB", "GB", "TB" };
+    int counter = 0;
+    decimal number = bytes;
+    
+    while (Math.Round(number / 1024) >= 1)
+    {
+        number /= 1024;
+        counter++;
+    }
+    
+    return string.Format("{0:n1}{1}", number, suffixes[counter]);
+}
+```  
 
-### เคล็ดลับการแก้ไขปัญหา
+### การแสดงข้อมูลที่เพิ่มขึ้น
+หากคุณต้องการบริบทเพิ่มเติม—เช่นว่าเอกสารเกินขีดจำกัดขนาดหรือไม่—คุณสามารถขยายตัวอย่างพื้นฐานด้วยการตรวจสอบเพิ่มเติมและตรรกะธุรกิจ  
+```csharp
+using (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf"))
+{
+    IDocumentInfo info = annotator.Document.GetDocumentInfo();
+    
+    if (info == null)
+    {
+        Console.WriteLine("Could not retrieve document information.");
+        return;
+    }
 
-- ตรวจสอบให้แน่ใจว่าเส้นทางเอกสารของคุณถูกต้องและสามารถเข้าถึงได้
-- จัดการข้อยกเว้นเพื่อตรวจจับปัญหาที่ไม่คาดคิดในระหว่างการดำเนินการ
-- ตรวจสอบว่าเวอร์ชันไลบรารี GroupDocs.Annotation ตรงกับการตั้งค่าโครงการของคุณ
+    // Comprehensive info display
+    Console.WriteLine("=== Document Information ===");
+    Console.WriteLine($"File Type: {info.FileType}");
+    Console.WriteLine($"Page Count: {info.PageCount}");
+    Console.WriteLine($"Size: {FormatFileSize(info.Size)}");
+    
+    // Additional checks you might want to perform
+    if (info.PageCount > 100)
+    {
+        Console.WriteLine("⚠️  Large document detected - consider batch processing");
+    }
+    
+    if (info.Size > 10 * 1024 * 1024) // 10MB
+    {
+        Console.WriteLine("⚠️  Large file size - may impact processing time");
+    }
+    
+    Console.WriteLine("=== Analysis Complete ===");
+}
+```  
 
-## การประยุกต์ใช้งานจริง
+## ปัญหาทั่วไปและวิธีแก้
 
-ความเข้าใจเกี่ยวกับวิธีการดึงข้อมูลเอกสารจะเปิดประตูสู่การใช้งานจริงในโลกแห่งความเป็นจริง:
+### ปัญหา 1: ข้อผิดพลาด "File Not Found"
+**คำตอบโดยตรง:** ตรวจสอบว่าเส้นทางไฟล์เป็นแบบ absolute หรือกำหนด root อย่างถูกต้องไปยังไดเรกทอรีฐานของแอปพลิเคชัน และตรวจสอบว่ากระบวนการมีสิทธิ์อ่าน  
+```csharp
+string documentPath = @"C:\Documents\test.pdf";
 
-1. **ระบบจัดการเอกสารอัตโนมัติ**:จัดหมวดหมู่เอกสารอย่างรวดเร็วตามข้อมูลเมตาเพื่อการจัดระเบียบที่ดีขึ้น
-2. **การตรวจสอบข้อมูล**:ตรวจสอบให้แน่ใจว่ากรอกข้อมูลในช่องที่จำเป็นทั้งหมดในเอกสารก่อนดำเนินการต่อไป
-3. **การบูรณาการกับระบบ CRM**:อัปเดตข้อมูลลูกค้าโดยอัตโนมัติด้วยรายละเอียดเอกสารล่าสุด
-4. **การตรวจสอบกฎหมายและการปฏิบัติตาม**:ตรวจสอบความสอดคล้องของเอกสารตามข้อมูลที่สกัดมา
+// Always check if file exists first
+if (!File.Exists(documentPath))
+{
+    Console.WriteLine($"File not found: {documentPath}");
+    return;
+}
 
-## การพิจารณาประสิทธิภาพ
+try
+{
+    using (Annotator annotator = new Annotator(documentPath))
+    {
+        // Your code here
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error loading document: {ex.Message}");
+}
+```  
 
-การเพิ่มประสิทธิภาพการทำงานเป็นสิ่งสำคัญเมื่อต้องจัดการเอกสารจำนวนมาก:
+### ปัญหา 2: รูปแบบไฟล์ที่ไม่รองรับ
+**คำตอบโดยตรง:** ยืนยันว่าการต่อท้ายไฟล์ตรงกับหนึ่งในรูปแบบที่รองรับกว่า 50+ หากไม่ตรง ให้แปลงเป็นประเภทที่รองรับก่อนเรียก `GetDocumentInfo()`  
+```csharp
+try
+{
+    using (Annotator annotator = new Annotator(documentPath))
+    {
+        IDocumentInfo info = annotator.Document.GetDocumentInfo();
+        
+        if (info == null)
+        {
+            Console.WriteLine("Unsupported file format or corrupted document");
+            return;
+        }
+        
+        // Process the info
+    }
+}
+catch (UnsupportedFileTypeException ex)
+{
+    Console.WriteLine($"File type not supported: {ex.Message}");
+}
+```  
 
-- ใช้โครงสร้างข้อมูลที่มีประสิทธิภาพเพื่อจัดเก็บข้อมูลที่แยกออกมา
-- ลดการใช้หน่วยความจำโดยกำจัดวัตถุทันที
-- พิจารณาการประมวลผลแบบอะซิงโครนัสสำหรับแอปพลิเคชันประสิทธิภาพสูง
+### ปัญหา 3: ปัญหาหน่วยความจำกับเอกสารขนาดใหญ่
+**คำตอบโดยตรง:** ทำการตรวจสอบขนาดก่อนโหลดและใช้คำสั่ง `using` เพื่อรับประกันการทำลายอินสแตนซ์ `Annotator` ป้องกันการรั่วไหลของหน่วยความจำ  
+```csharp
+const long MAX_FILE_SIZE = 50 * 1024 * 1024; // 50MB limit
 
-**แนวทางปฏิบัติที่ดีที่สุด**-
-- อัปเดตไลบรารี GroupDocs ของคุณเป็นประจำเพื่อปรับปรุงประสิทธิภาพ
-- สร้างโปรไฟล์แอปพลิเคชันของคุณเพื่อระบุและแก้ไขปัญหาคอขวด
+FileInfo fileInfo = new FileInfo(documentPath);
+if (fileInfo.Length > MAX_FILE_SIZE)
+{
+    Console.WriteLine("File too large for processing");
+    return;
+}
 
-## บทสรุป
+// Use proper disposal patterns
+using (Annotator annotator = new Annotator(documentPath))
+{
+    // Process quickly and dispose
+    IDocumentInfo info = annotator.Document.GetDocumentInfo();
+    // Handle info immediately
+}
+// Annotator is automatically disposed here
+```  
 
-ตอนนี้คุณได้เรียนรู้วิธีการดึงข้อมูลเอกสารโดยใช้ GroupDocs.Annotation สำหรับ .NET แล้ว เครื่องมืออันทรงพลังนี้ช่วยลดความซับซ้อนของกระบวนการ ทำให้จัดการเอกสารในแอปพลิเคชันของคุณได้อย่างมีประสิทธิภาพยิ่งขึ้น
+## กรณีการใช้งานจริง
 
-ขั้นตอนต่อไป:
-- สำรวจคุณสมบัติอื่น ๆ ของ GroupDocs.Annotation
-- รวมฟังก์ชันนี้เข้ากับระบบที่ใหญ่กว่า
-- แบ่งปันข้อเสนอแนะหรือคำถามของคุณกับเรา [ฟอรั่มสนับสนุน](https://forum.groupdocs.com/c/annotation/)
+### การบูรณาการระบบจัดการเอกสาร
+เมื่อผู้ใช้อัปโหลดไฟล์ ให้ดึงเมตาดาต้าก่อนเพื่อกำหนดตำแหน่งจัดเก็บ, กลยุทธ์การทำดัชนี, หรือกระบวนการอนุมัติที่จำเป็น  
+```csharp
+public class DocumentProcessor
+{
+    public DocumentMetadata ProcessUpload(string filePath)
+    {
+        using (Annotator annotator = new Annotator(filePath))
+        {
+            IDocumentInfo info = annotator.Document.GetDocumentInfo();
+            
+            return new DocumentMetadata
+            {
+                FileName = Path.GetFileName(filePath),
+                FileType = info.FileType.ToString(),
+                PageCount = info.PageCount,
+                FileSizeBytes = info.Size,
+                ProcessedDate = DateTime.UtcNow,
+                Category = DetermineCategory(info)
+            };
+        }
+    }
+    
+    private string DetermineCategory(IDocumentInfo info)
+    {
+        // Business logic for automatic categorization
+        if (info.FileType.ToString().Contains("Pdf"))
+        {
+            return info.PageCount > 20 ? "Legal Document" : "Standard Document";
+        }
+        
+        return "Other";
+    }
+}
+```  
 
-พร้อมที่จะเริ่มดึงข้อมูลเอกสารหรือยัง? ลองใช้โซลูชันนี้วันนี้!
+### การวิเคราะห์เอกสารเป็นชุด
+ประมวลผลโฟลเดอร์ของไฟล์ในงานเบื้องหลัง, บันทึกจำนวนหน้าและประเภทของแต่ละเอกสารเพื่อการรายงาน  
+```csharp
+public void AnalyzeDocumentFolder(string folderPath)
+{
+    string[] supportedExtensions = { ".pdf", ".docx", ".xlsx", ".pptx" };
+    
+    foreach (string file in Directory.GetFiles(folderPath))
+    {
+        if (!supportedExtensions.Contains(Path.GetExtension(file).ToLower()))
+            continue;
+            
+        try
+        {
+            using (Annotator annotator = new Annotator(file))
+            {
+                IDocumentInfo info = annotator.Document.GetDocumentInfo();
+                Console.WriteLine($"{Path.GetFileName(file)}: {info.FileType}, {info.PageCount} pages");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Failed to process {file}: {ex.Message}");
+        }
+    }
+}
+```  
 
-## ส่วนคำถามที่พบบ่อย
+### การปฏิบัติตามและการตรวจสอบความถูกต้อง
+อุตสาหกรรมที่มีการควบคุมมักต้องการให้เอกสารมีจำนวนหน้า หรือขนาดไม่เกินเกณฑ์ที่กำหนด ใช้เมตาดาต้าที่ดึงออกมาปฏิเสธการอัปโหลดที่ไม่เป็นไปตามข้อกำหนดโดยอัตโนมัติ  
+```csharp
+public bool ValidateDocument(string filePath, DocumentRequirements requirements)
+{
+    using (Annotator annotator = new Annotator(filePath))
+    {
+        IDocumentInfo info = annotator.Document.GetDocumentInfo();
+        
+        // Check file type
+        if (requirements.AllowedTypes != null && 
+            !requirements.AllowedTypes.Contains(info.FileType.ToString()))
+        {
+            return false;
+        }
+        
+        // Check page count limits
+        if (info.PageCount < requirements.MinPages || 
+            info.PageCount > requirements.MaxPages)
+        {
+            return false;
+        }
+        
+        // Check file size
+        if (info.Size > requirements.MaxSizeBytes)
+        {
+            return false;
+        }
+        
+        return true;
+    }
+}
+```  
 
-**คำถามที่ 1: GroupDocs.Annotation รองรับรูปแบบไฟล์ใดบ้างสำหรับ .NET?**
+## เคล็ดลับการเพิ่มประสิทธิภาพ
 
-A1: รองรับรูปแบบต่างๆ มากมาย เช่น PDF, เอกสาร Word, สเปรดชีต Excel และอื่นๆ
+### 1. ใช้การแคช
+แคชผลลัพธ์ `DocumentInfo` สำหรับไฟล์ที่เข้าถึงบ่อยเพื่อหลีกเลี่ยงการทำ I/O ซ้ำ  
+```csharp
+private static readonly Dictionary<string, IDocumentInfo> _infoCache = 
+    new Dictionary<string, IDocumentInfo>();
 
-**คำถามที่ 2: ฉันจะจัดการข้อยกเว้นในระหว่างการแยกเอกสารได้อย่างไร**
+public IDocumentInfo GetDocumentInfoCached(string filePath)
+{
+    string fileHash = GetFileHash(filePath);
+    
+    if (_infoCache.ContainsKey(fileHash))
+    {
+        return _infoCache[fileHash];
+    }
+    
+    using (Annotator annotator = new Annotator(filePath))
+    {
+        IDocumentInfo info = annotator.Document.GetDocumentInfo();
+        _infoCache[fileHash] = info;
+        return info;
+    }
+}
+```  
 
-A2: นำบล็อก try-catch มาใช้งานรอบโค้ดของคุณเพื่อจัดการกับข้อผิดพลาดที่ไม่คาดคิดได้อย่างสวยงาม
+### 2. ใช้การประมวลผลแบบ Async สำหรับหลายเอกสาร
+ใช้ `Task.Run` หรือ async streams เพื่อประมวลผลหลายไฟล์พร้อมกันโดยไม่บล็อกเธรดหลัก  
+```csharp
+public async Task<List<DocumentMetadata>> ProcessDocumentsAsync(string[] filePaths)
+{
+    var tasks = filePaths.Select(async path =>
+    {
+        return await Task.Run(() =>
+        {
+            using (Annotator annotator = new Annotator(path))
+            {
+                IDocumentInfo info = annotator.Document.GetDocumentInfo();
+                return new DocumentMetadata(path, info);
+            }
+        });
+    });
+    
+    return (await Task.WhenAll(tasks)).ToList();
+}
+```  
 
-**คำถามที่ 3: ฉันสามารถดึงข้อมูลจากเอกสารที่เข้ารหัสได้หรือไม่**
+### 3. แนวทางปฏิบัติที่ดีที่สุดในการจัดการหน่วยความจำ
+- ห่อ `Annotator` ด้วยบล็อก `using` เสมอ.  
+- ประมวลผลเอกสารเป็นชุด ไม่ใช่ทั้งหมดพร้อมกัน.  
+- สำหรับไฟล์ที่ใหญ่กว่า 100 MB ควรสตรีมไฟล์ไปยังดิสก์ก่อนแล้วจึงอ่านเมตาดาต้า.  
 
-A3: ใช่ แต่คุณจะต้องระบุรหัสถอดรหัสหรือรหัสผ่านที่จำเป็น
+## คู่มือการแก้ไขปัญหา
 
-**คำถามที่ 4: สามารถปรับแต่งข้อมูลที่แยกออกมาซึ่งแสดงได้หรือไม่**
+### ปัญหาเกี่ยวกับไลเซนส์
+**License** คืออ็อบเจ็กต์ที่ลงทะเบียนไฟล์เปิดใช้งานผลิตภัณฑ์ของคุณกับไลบรารี GroupDocs ตรวจสอบให้แน่ใจว่าไฟล์ไลเซนส์อยู่ในโฟลเดอร์รากของแอปพลิเคชันและอ็อบเจ็กต์ `License` ถูกสร้างก่อนการเรียกใช้ GroupDocs ใดๆ  
+```csharp
+// Set license before using any GroupDocs functionality
+License license = new License();
+license.SetLicense("path/to/your/license.lic");
 
-A4: แน่นอน คุณสามารถปรับเปลี่ยนรูปแบบผลลัพธ์ตามต้องการในตรรกะแอปพลิเคชันของคุณได้
+// Or use stream for embedded licenses
+using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("YourApp.license.lic"))
+{
+    license.SetLicense(stream);
+}
+```  
 
-**คำถามที่ 5: ฉันจะอัปเดต GroupDocs.Annotation สำหรับ .NET เป็นเวอร์ชันใหม่กว่าได้อย่างไร**
+### ปัญหาด้านประสิทธิภาพ
+**คำตอบโดยตรง:** ทำการโปรไฟล์แอปพลิเคชันของคุณ, จำกัดขนาดไฟล์ที่ 100 MB สำหรับการประมวลผลแบบเรียลไทม์, และเปิดใช้งานการแคชสำหรับการอ่านซ้ำ  
 
-A5: ใช้คำสั่งตัวจัดการแพ็คเกจ NuGet หรือลองดูที่เวอร์ชันทางการ [หน้าวางจำหน่าย](https://releases.groupdocs.com/annotation/net/) เพื่อเป็นแนวทางในการอัปเดต
+### ปัญหาเฉพาะแพลตฟอร์ม
+**คำตอบโดยตรง:** ใช้ `Path.Combine` สำหรับการสร้างเส้นทางข้ามแพลตฟอร์ม; Windows ใช้ backslashes ส่วน Linux ใช้ forward slashes  
+```csharp
+// Use Path.Combine for cross-platform compatibility
+string documentPath = Path.Combine(baseDirectory, "documents", fileName);
+```  
 
-## ทรัพยากร
+### การจัดการเอกสารที่มีรหัสผ่าน
+**คำตอบโดยตรง:** ส่งรหัสผ่านไปยังคอนสตรัคเตอร์ `Annotator` หรือกำหนดผ่าน `LoadOptions` ก่อนเรียก `GetDocumentInfo()`  
+```csharp
+LoadOptions loadOptions = new LoadOptions() { Password = "your-password" };
+using (Annotator annotator = new Annotator("protected-document.pdf", loadOptions))
+{
+    // Extract information normally
+}
+```  
 
-- **เอกสารประกอบ**:สำรวจคำแนะนำโดยละเอียดได้ที่ [เอกสารประกอบ GroupDocs](https://docs.groupdocs.com/annotation/net/)
-- **เอกสารอ้างอิง API**:เข้าถึงรายละเอียด API ที่ครอบคลุมได้ที่นี่: [เอกสารอ้างอิง API ของ GroupDocs](https://reference.groupdocs.com/annotation/net/)
-- **ดาวน์โหลด**รับเวอร์ชันล่าสุดได้จาก [ลิงค์นี้](https://releases.groupdocs.com/annotation/net/)
-- **ซื้อ**:สำหรับการเข้าถึงแบบเต็ม กรุณาเยี่ยมชม [หน้าการซื้อ GroupDocs](https://purchase.groupdocs.com/buy)
-- **ทดลองใช้งานฟรี**:เริ่มต้นด้วยการทดลองใช้ฟรีได้ที่ [ทดลองใช้ GroupDocs ฟรี](https://releases.groupdocs.com/annotation/net/)
-- **ใบอนุญาตชั่วคราว**:ขอใบอนุญาตชั่วคราวได้ทาง [ลิงค์นี้](https://purchase.groupdocs.com/temporary-license/)
-- **สนับสนุน**:เข้าร่วมการสนทนาของเรา [ฟอรั่มสนับสนุน](https://forum.groupdocs.com/c/annotation/) หากมีข้อสงสัยใดๆ
+### อัปเดต GroupDocs.Annotation
+**คำตอบโดยตรง:** รัน `dotnet add package GroupDocs.Annotation --version <latest>` หรือใช้ NuGet Package Manager UI เพื่อดึงเวอร์ชันล่าสุด  
+```shell
+Update-Package GroupDocs.Annotation
+```  
+
+## คำถามที่พบบ่อย
+
+**Q: GroupDocs.Annotation รองรับรูปแบบเอกสารใดบ้างสำหรับการดึงข้อมูล?**  
+A: GroupDocs.Annotation รองรับมากกว่า 50 รูปแบบเอกสาร รวมถึง PDF, DOCX, XLSX, PPTX, JPEG, PNG, TIFF, ไฟล์ CAD, และอื่นๆ อีกมาก  
+
+**Q: ฉันสามารถดึงเมตาดาต้าหรือคุณสมบัติเฉพาะจากเอกสารได้หรือไม่?**  
+A: `GetDocumentInfo()` ให้เมตาดาต้าแกนเช่นประเภทไฟล์, จำนวนหน้า, และขนาด สำหรับคุณสมบัติเฉพาะเช่นผู้เขียนหรือวันที่สร้าง ให้รวม GroupDocs.Annotation กับ GroupDocs.Metadata หรือใช้ API ของรูปแบบไฟล์ดั้งเดิม  
+
+**Q: ฉันจะจัดการกับเอกสารที่มีรหัสผ่านอย่างไร?**  
+A: ให้ส่งรหัสผ่านเมื่อสร้างอินสแตนซ์ `Annotator` เช่น `new Annotator("secure.pdf", new LoadOptions { Password = "pwd" })`.  
+
+**Q: มีวิธีดึงข้อมูลเอกสารโดยไม่โหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำหรือไม่?**  
+A: มี—`GetDocumentInfo()` อ่านเฉพาะส่วนหัวของไฟล์ ทำให้การใช้หน่วยความจำต่ำแม้สำหรับ PDF หลายร้อยหน้า  
+
+**Q: ฉันสามารถใช้ในเว็บแอปพลิเคชันหรือสภาพแวดล้อมหลายเธรดได้หรือไม่?**  
+A: แน่นอน; GroupDocs.Annotation ปลอดภัยต่อเธรด; เพียงสร้าง `Annotator` ใหม่ต่อคำขอและทำการ dispose อย่างทันท่วงที  
+
+## สรุปและขั้นตอนต่อไป
+
+ตอนนี้คุณมีวิธีที่ครบถ้วนและพร้อมใช้งานในขั้นตอนการผลิตเพื่อดึง **c# pdf page count**, ประเภทไฟล์, และขนาดโดยใช้ GroupDocs.Annotation คุณได้เรียนรู้วิธีตั้งค่าห้องสมุด, ดึงเมตาดาต้า, จัดการกับข้อผิดพลาดทั่วไป, และเพิ่มประสิทธิภาพสำหรับสถานการณ์ขนาดใหญ่
+
+**ขั้นตอนต่อไป:**  
+1. คัดลอกโปรเจกต์ตัวอย่างและรันโค้ดตัวอย่างด้วยไฟล์จริง.  
+2. สำรวจคุณลักษณะเพิ่มเติมของ GroupDocs.Annotation เช่น การแสดงผล annotation และการเปรียบเทียบเอกสาร.  
+3. ผสานการดึงเมตาดาต้าเข้ากับ pipeline การอัปโหลดที่มีอยู่ของคุณเพื่ออัตโนมัติการจัดประเภทและการตรวจสอบ  
+
+จำไว้ว่า การประมวลผลเอกสารที่แข็งแกร่งเริ่มจากเมตาดาต้าที่เชื่อถือได้ ด้วย GroupDocs.Annotation คุณสามารถสร้างโซลูชันที่ฉลาด, เร็ว, และขยายได้มากขึ้น
+
+---
+
+**อัปเดตล่าสุด:** 2026-06-01  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.4.0 (latest)  
+**ผู้เขียน:** GroupDocs  
+
+**ลิงก์สำคัญ:**  
+- **[เอกสารประกอบ](https://docs.groupdocs.com/annotation/net/)**  
+- **[อ้างอิง API](https://reference.groupdocs.com/annotation/net/)**  
+- **[ดาวน์โหลดเวอร์ชันล่าสุด](https://releases.groupdocs.com/annotation/net/)**  
+- **[ซื้อไลเซนส์](https://purchase.groupdocs.com/buy)**  
+- **[ดาวน์โหลดการทดลองใช้ฟรี](https://releases.groupdocs.com/annotation/net/)**  
+- **[ขอไลเซนส์ชั่วคราว](https://purchase.groupdocs.com/temporary-license/)**  
+- **[ฟอรั่มสนับสนุนชุมชน](https://forum.groupdocs.com/c/annotation/)**  
+
+## บทเรียนที่เกี่ยวข้อง
+
+- [การดึงเมตาดาต้าเอกสาร .NET - คู่มือครบถ้วนสำหรับ GroupDocs.Annotation](/annotation/net/document-information/)
+- [ขนาดหน้ากระดาษ PDF .NET - ดึงความกว้างและความสูงด้วย C#](/annotation/net/document-information/groupdocs-annotation-net-retrieve-pdf-page-dimensions/)
+- [บทเรียน GroupDocs.Annotation .NET: ดึงและบันทึกหน้ากระดาษ PDF เฉพาะ](/annotation/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/)

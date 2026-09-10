@@ -89,7 +89,7 @@ url: /pt/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-# Anotações de setas em PDF Java – tutorial completo e melhores práticas (2025)
+# Anotações de Setas em PDF com Java - Tutorial Completo e Melhores Práticas (2025)
 
 ## Introdução
 
@@ -675,10 +675,6 @@ for (AnnotationInfo annotation : annotations) {
 **Testado com:** GroupDocs.Annotation 25.2 for Java  
 **Autor:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
 ```java
 public void processBatch(List<String> documents, int batchSize) {
     for (int i = 0; i < documents.size(); i += batchSize) {

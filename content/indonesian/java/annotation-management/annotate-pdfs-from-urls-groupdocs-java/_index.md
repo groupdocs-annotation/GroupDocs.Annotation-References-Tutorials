@@ -160,7 +160,6 @@ Gunakan `new URL("https://example.com/document.pdf")` untuk membuka aliran input
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Langkah 2: buat objek `Annotator`
 
@@ -172,14 +171,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Langkah 3: kelola sumber daya dengan bertanggung jawab
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Jebakan umum
@@ -197,7 +194,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Langkah 5: atur posisi dan ukuran
 
@@ -206,7 +202,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Coordinate note:** Asal koordinat adalah sudut kiri‑atas halaman; nilai dalam satuan point.
@@ -217,14 +212,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Langkah 7: lampirkan anotasi
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Tips pro untuk anotasi yang efektif
@@ -241,7 +234,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Langkah 9: simpan dan bersihkan
 
@@ -251,7 +243,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Advanced tip:** Sertakan cap waktu atau ID pengguna dalam nama file (misalnya, `review_20260814_1234.pdf`) untuk mempermudah pelacakan versi.
@@ -271,7 +262,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Proses dokumen dalam batch 5‑10 untuk menjaga penggunaan heap tetap stabil.  

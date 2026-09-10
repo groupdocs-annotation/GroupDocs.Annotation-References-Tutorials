@@ -162,7 +162,6 @@ Use `new URL("https://example.com/document.pdf")` to open an input stream, then 
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Step 2: create the `Annotator` object
 
@@ -174,14 +173,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Step 3: manage resources responsibly
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Common pitfalls
@@ -199,7 +196,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Step 5: set position and size
 
@@ -208,7 +204,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Coordinate note:** The origin is the top‑left corner of the page; values are in points.
@@ -219,14 +214,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Step 7: attach the annotation
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Pro tips for effective annotation
@@ -243,7 +236,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Step 9: save and clean up
 
@@ -253,7 +245,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Advanced tip:** Include timestamps or user IDs in the filename (e.g., `review_20260814_1234.pdf`) to simplify version tracking.
@@ -273,7 +264,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Process documents in batches of 5‑10 to keep heap usage stable.  

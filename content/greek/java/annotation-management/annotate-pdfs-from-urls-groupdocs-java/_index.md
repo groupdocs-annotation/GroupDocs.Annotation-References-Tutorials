@@ -85,13 +85,15 @@ title: Σχολιάστε pdf java – φόρτωση PDF από URL
 type: docs
 ---
 
-# Σχολιασμός pdf java – φόρτωση PDF από URL
+# Πώς να Σχολιάσετε PDF – Φόρτωση PDF από URL Java
 
-Σε αυτόν τον ολοκληρωμένο οδηγό θα μάθετε **πώς να σχολιάζετε pdf java** φορτώνοντας ένα PDF απευθείας από μια διεύθυνση ιστού. Είτε δημιουργείτε μια πύλη νομικής ανασκόπησης, ένα σύστημα e‑learning, είτε μια αυτοματοποιημένη γραμμή αναφοράς, η δυνατότητα λήψης PDF από URL και προσθήκης υπογραμμίσεων, σχολίων ή σχημάτων χωρίς αποθήκευση προσωρινού αρχείου αποτελεί τεράστια αύξηση παραγωγικότητας. Τα παρακάτω βήματα καλύπτουν τα πάντα, από τη ρύθμιση του περιβάλλοντος μέχρι την αποθήκευση του σχολιασμένου αρχείου, με συμβουλές απόδοσης, ασφάλειας και ενσωμάτωσης που κάνουν τη λύση έτοιμη για παραγωγή.
+## Εισαγωγή
 
-## Γρήγορες απαντήσεις
-- **Μπορώ να φορτώσω PDF από URL σε Java;** Ναι – το GroupDocs.Annotation ανοίγει ένα ρεύμα PDF απευθείας από οποιοδήποτε προσβάσιμο URL.  
-- **Ποια βιβλιοθήκη υποστηρίζει φόρτωση PDF βάσει URL;** GroupDocs.Annotation για Java (v25.2).  
+Αν ψάχνετε για **πώς να σχολιάσετε PDF** αρχεία απευθείας από μια διεύθυνση web, βρίσκεστε στο σωστό μέρος. Σε πολλές σύγχρονες εφαρμογές—είτε δημιουργείτε μια πύλη νομικής ανασκόπησης, ένα σύστημα e‑learning ή ένα αυτοματοποιημένο εργαλείο αναφορών—συχνά χρειάζεται να **φορτώσετε PDF από URL Java** και στη συνέχεια να προσθέσετε σχόλια, επισημάνσεις ή άλλα σήματα χωρίς πρώτα να αποθηκεύσετε το αρχείο τοπικά. Αυτό το σεμινάριο σας οδηγεί βήμα‑βήμα, από τη ρύθμιση του περιβάλλοντος μέχρι την αποθήκευση του σχολιασμένου εγγράφου, καλύπτοντας επίσης συμβουλές απόδοσης και πραγματικές περιπτώσεις χρήσης.
+
+## Γρήγορες Απαντήσεις
+- **Μπορώ να φορτώσω ένα PDF από URL σε Java;** Ναι, το GroupDocs.Annotation σας επιτρέπει να ανοίξετε ένα ρεύμα PDF απευθείας από ένα web URL.  
+- **Ποια βιβλιοθήκη υποστηρίζει φόρτωση PDF βάσει URL;** Το GroupDocs.Annotation for Java (v25.2).  
 - **Χρειάζομαι άδεια;** Μια δωρεάν δοκιμή λειτουργεί για ανάπτυξη· απαιτείται πλήρης άδεια για παραγωγή.  
 - **Τι τύποι σχολίων είναι διαθέσιμοι;** Περιοχή, κείμενο, βέλος, πολυγραμμή, σφραγίδα και πολλοί άλλοι.  
 - **Πώς αποθηκεύω το σχολιασμένο PDF;** Καλέστε `annotator.save(outputPath)` μετά την προσθήκη των σχολίων σας.  
@@ -160,7 +162,6 @@ type: docs
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Βήμα 2: δημιουργήστε το αντικείμενο `Annotator`
 
@@ -172,14 +173,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Βήμα 3: διαχειριστείτε τους πόρους υπεύθυνα
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Συνηθισμένα προβλήματα
@@ -197,7 +196,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Βήμα 5: ορίστε θέση και μέγεθος
 
@@ -206,7 +204,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Σημείωση συντεταγμένων:** Η αρχή είναι η πάνω‑αριστερή γωνία της σελίδας· οι τιμές είναι σε points.
@@ -217,14 +214,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Βήμα 7: προσθέστε το σχόλιο
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Συμβουλές επαγγελματία για αποτελεσματικό σχολιασμό
@@ -241,7 +236,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Βήμα 9: αποθηκεύστε και καθαρίστε
 
@@ -251,7 +245,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Συμβουλή προχωρημένου:** Συμπεριλάβετε χρονικές σφραγίδες ή αναγνωριστικά χρηστών στο όνομα αρχείου (π.χ., `review_20260814_1234.pdf`) για απλοποίηση της παρακολούθησης εκδόσεων.
@@ -271,7 +264,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Επεξεργαστείτε έγγραφα σε παρτίδες των 5‑10 για να διατηρήσετε τη χρήση heap σταθερή.  

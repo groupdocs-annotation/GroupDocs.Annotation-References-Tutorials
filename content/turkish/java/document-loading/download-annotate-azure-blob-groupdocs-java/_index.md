@@ -286,8 +286,3 @@ Tıbbi uygulamalar, hasta kayıtlarını HIPAA uyumlu bir Azure ortamında tutar
 **Son Güncelleme:** 2026-03-27  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

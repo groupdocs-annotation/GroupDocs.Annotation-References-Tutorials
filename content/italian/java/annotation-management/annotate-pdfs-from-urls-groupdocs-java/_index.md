@@ -85,19 +85,7 @@ title: Annotare PDF Java – caricare PDF da URL
 type: docs
 ---
 
-# Annotare PDF Java – caricare PDF da URL
-
-In questa guida completa imparerai **come annotare pdf java** caricando un PDF direttamente da un indirizzo web. Che tu stia costruendo un portale di revisione legale, un sistema e‑learning o una pipeline di reporting automatizzata, la possibilità di recuperare un PDF da un URL e aggiungere evidenziazioni, commenti o forme senza persistere un file temporaneo è un enorme vantaggio di produttività. I passaggi seguenti coprono tutto, dall’impostazione dell’ambiente al salvataggio del file annotato, con consigli su prestazioni, sicurezza e integrazione che rendono la soluzione pronta per la produzione.
-
-## Risposte rapide
-- **Posso caricare un PDF da un URL in Java?** Sì – GroupDocs.Annotation apre un flusso PDF direttamente da qualsiasi URL raggiungibile.  
-- **Quale libreria supporta il caricamento di PDF basato su URL?** GroupDocs.Annotation for Java (v25.2).  
-- **Ho bisogno di una licenza?** Una prova gratuita funziona per lo sviluppo; è necessaria una licenza completa per la produzione.  
-- **Quali tipi di annotazione sono disponibili?** Area, text, arrow, polyline, stamp e molti altri.  
-- **Come salvo il PDF annotato?** Chiama `annotator.save(outputPath)` dopo aver aggiunto le tue annotazioni.  
-- **Cosa fa `annotator.save(outputPath)`?** Scrive il documento annotato nel percorso file specificato.
-
-## Cos'è annotate pdf java?
+# Come Annotare PDF – Caricare PDF da URL Java
 
 `annotate pdf java` si riferisce al processo programmatico di aggiungere note visive o testuali — evidenziazioni, commenti, forme o timbri — direttamente in un documento PDF usando codice Java. Con GroupDocs.Annotation esegui tutto interamente in memoria, eliminando la necessità di file intermedi e consentendo flussi di lavoro cloud‑native senza interruzioni.
 
@@ -160,7 +148,6 @@ Usa `new URL("https://example.com/document.pdf")` per aprire uno stream di input
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Passo 2: creare l'oggetto `Annotator`
 
@@ -172,14 +159,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Passo 3: gestire le risorse in modo responsabile
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Problemi comuni
@@ -197,7 +182,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Passo 5: impostare posizione e dimensione
 
@@ -206,7 +190,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Nota sulle coordinate:** L'origine è l'angolo in alto a sinistra della pagina; i valori sono in punti.
@@ -217,14 +200,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Passo 7: allegare l'annotazione
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Suggerimenti professionali per annotazioni efficaci
@@ -241,7 +222,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Passo 9: salvare e pulire
 
@@ -251,7 +231,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Suggerimento avanzato:** Includi timestamp o ID utente nel nome file (ad es., `review_20260814_1234.pdf`) per semplificare il tracciamento delle versioni.
@@ -271,7 +250,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Elabora i documenti in batch di 5‑10 per mantenere stabile l'uso dell'heap.  

@@ -21,28 +21,6 @@ url: /th/java/licensing-and-configuration/groupdocs-annotation-java-inputstream-
 weight: 1
 ---
 
- "In this tutorial you'll learn **how to set GroupDocs license InputStream** for Java Annotation, whether you're building microservices, deploying to the cloud, or just want a more robust licensing setup."
-
-Translate.
-
-Then "What you'll master by the end:" etc.
-
-Proceed.
-
-Will translate bullet points.
-
-Make sure to keep bold formatting.
-
-Proceed.
-
-Will also translate "Quick Answers" heading.
-
-Proceed.
-
-Will keep code block placeholders unchanged.
-
-Let's craft final output.
-
 # ตั้งค่าไลเซนส์ GroupDocs ด้วย InputStream
 
 ## บทนำ

@@ -21,15 +21,7 @@ url: /ar/java/form-field-annotations/
 weight: 9
 ---
 
- "**تم الاختبار مع:** GroupDocs.Annotation 5.2 (أحدث نسخة مستقرة)"
-
-**Author:** GroupDocs -> "**المؤلف:** GroupDocs"
-
-Then final "---"? Already there.
-
-Make sure to keep markdown formatting.
-
-Now produce final content.# إضافة حقل نص PDF في Java – دليل GroupDocs.Annotation
+# إضافة حقل نص PDF في Java – دليل GroupDocs.Annotation
 
 إذا كنت بحاجة إلى **إنشاء حقول نموذج PDF** بسرعة وبشكل موثوق، فقد وصلت إلى المكان الصحيح. في هذا الدرس سنستعرض كيف يتيح لك GroupDocs.Annotation إنشاء ملفات PDF قابلة للملء، وإضافة وظيفة **add text field PDF**، وإضافة أزرار تفاعلية، ومربعات اختيار، وقوائم منسدلة، وحقول نصية—كل ذلك باستخدام شفرة Java نظيفة. سواءً كنت تبني نموذج تسجيل عملاء، أو استبيان داخلي، أو سير عمل متعدد الصفحات معقد، فإن الخطوات أدناه ستوفر لك أساسًا قويًا.
 

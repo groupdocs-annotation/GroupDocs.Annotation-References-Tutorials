@@ -282,8 +282,3 @@ annotator.save(outputPath);                      // Save the annotated result
 **마지막 업데이트:** 2026-03-27  
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

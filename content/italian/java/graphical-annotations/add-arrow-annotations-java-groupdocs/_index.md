@@ -89,7 +89,7 @@ url: /it/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-# Java pdf arrow annotations – tutorial completo e migliori pratiche (2025)
+# Annotazioni a Freccia PDF Java - Tutorial Completo e Best Practices (2025)
 
 ## Introduzione
 
@@ -675,10 +675,6 @@ for (AnnotationInfo annotation : annotations) {
 **Testato con:** GroupDocs.Annotation 25.2 for Java  
 **Autore:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
 ```java
 public void processBatch(List<String> documents, int batchSize) {
     for (int i = 0; i < documents.size(); i += batchSize) {

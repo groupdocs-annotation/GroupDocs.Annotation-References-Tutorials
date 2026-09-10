@@ -86,7 +86,7 @@ url: /zh-hant/java/graphical-annotations/add-arrow-annotations-java-groupdocs/
 weight: 1
 ---
 
-# Java PDF 箭頭註釋 – 完整教學與最佳實踐 (2025)
+# Java PDF Arrow Annotations - 完整教學與最佳實踐 (2025)
 
 ## 介紹
 
@@ -674,10 +674,6 @@ for (AnnotationInfo annotation : annotations) {
 **測試環境：** GroupDocs.Annotation 25.2 for Java  
 **作者：** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
 ```java
 public void processBatch(List<String> documents, int batchSize) {
     for (int i = 0; i < documents.size(); i += batchSize) {

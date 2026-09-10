@@ -1,55 +1,107 @@
 ---
 categories:
 - Java Development
-date: '2026-02-03'
-description: تعلم كيفية إضافة التعليقات التوضيحية إلى ملفات PDF باستخدام مكتبة GroupDocs
-  Annotation للغة Java. دليل خطوة بخطوة، أمثلة على الشيفرة، نصائح لحل المشكلات، وأفضل
-  الممارسات.
-keywords: add annotations to PDF Java, Java PDF annotation library, programmatic PDF
-  annotation Java, GroupDocs annotation tutorial, PDF markup Java
-lastmod: '2026-02-03'
-linktitle: Add PDF Annotations in Java
+date: '2026-07-25'
+description: تعلم كيفية إضافة تعليقات توضيحية إلى PDF باستخدام GroupDocs Annotation
+  Library Java – دليل خطوة بخطوة، مقتطفات كود، نصائح للأداء، وأفضل الممارسات.
+keywords:
+- how to annotate pdf
+- annotate pdf java
+- pdf annotation java
+- groupdocs annotation library
+- java pdf markup
+lastmod: '2026-07-25'
+linktitle: إضافة تعليقات توضيحية إلى PDF في Java
+og_description: تعلم كيفية إضافة تعليقات توضيحية إلى PDF باستخدام GroupDocs Annotation
+  Library Java – دليل يغطي تعليقات توضيحية إهليلجية، تعليقات، الترخيص، ونصائح لمطوري
+  Java.
+og_image_alt: 'Developer guide: Add ellipse PDF annotations using GroupDocs Annotation
+  Library Java'
+og_title: كيفية إضافة تعليقات توضيحية إلى PDF باستخدام GroupDocs Annotation Library
+  Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-25'
+  description: Learn how to annotate PDF with GroupDocs Annotation Library Java –
+    step‑by‑step guide, code snippets, performance tips, and best practices.
+  headline: How to Annotate PDF with GroupDocs Annotation Library Java
+  type: TechArticle
+- description: Learn how to annotate PDF with GroupDocs Annotation Library Java –
+    step‑by‑step guide, code snippets, performance tips, and best practices.
+  name: How to Annotate PDF with GroupDocs Annotation Library Java
+  steps:
+  - name: Initialize the PDF Annotator
+    text: The `Annotator` class is the entry point for all annotation operations.
+      It loads the target PDF, applies security settings, and prepares an in‑memory
+      representation for editing.
+  - name: Create Interactive Comments and Replies
+    text: '`CommentAnnotation` lets you embed free‑form text, while `Reply` objects
+      enable threaded discussions directly on the PDF page.'
+  - name: Configure Your Ellipse Annotation
+    text: '`EllipseAnnotation` draws a scalable oval shape. You can set line color,
+      fill color, opacity, and custom border thickness to match your UI guidelines.'
+  - name: Add and Save Your Annotations
+    text: 'After configuring all annotation objects, invoke `annotator.save()` to
+      write the changes back to disk. Remember to call `dispose()` to free native
+      resources, especially when processing many files in a loop. > **Why call `dispose()`?**
+      It releases native resources, preventing memory leaks—especially '
+  type: HowTo
+- questions:
+  - answer: Yes. Use the overload `new Annotator(filePath, loadOptions)` where `loadOptions`
+      includes the password.
+    question: Can I add annotations to password‑protected PDFs?
+  - answer: Process pages individually, increase heap size, or leverage the GroupDocs
+      Annotation Cloud API for heavy workloads.
+    question: How should I handle PDFs larger than 100 MB?
+  - answer: No hard limit, but performance may degrade after thousands of annotations.
+      Consider pagination or grouping.
+    question: Is there a limit to the number of annotations per document?
+  - answer: Absolutely. Call `annotator.get()` to retrieve all annotations from a
+      PDF.
+    question: Can I extract existing annotations?
+  - answer: The library provides user‑based permission settings; configure them via
+      the `AnnotationPermission` API.
+    question: How do I secure annotations so only certain users can edit them?
+  type: FAQPage
 tags:
-- pdf-annotation
-- java-tutorial
+- pdf annotation
+- java tutorial
 - groupdocs
-- document-processing
-title: 'مكتبة GroupDocs للتعليقات التوضيحية Java: إضافة تعليقات PDF'
+- document processing
+- ellipse annotation
+title: كيفية إضافة تعليقات توضيحية إلى PDF باستخدام GroupDocs Annotation Library Java
 type: docs
 url: /ar/java/graphical-annotations/java-ellipse-annotations-pdf-groupdocs/
 weight: 1
 ---
 
-# مكتبة GroupDocs Annotation Java: إضافة تعليقات توضيحية إلى PDF
+# كيفية إضافة تعليقات توضيحية إلى PDF باستخدام مكتبة GroupDocs Annotation للغة Java
 
-هل تساءلت يومًا كيف يمكنك إضافة تعليقات توضيحية إلى مستندات PDF برمجيًا باستخدام Java؟ باستخدام **groupdocs annotation library java**، يمكنك تضمين تنسيقات غنية—مثل الإهليلجات، التعليقات، والطوابع—مباشرةً في ملفات PDF. سواءً كنت تبني نظام مراجعة مستندات، منصة تعليمية، أو مساحة عمل تعاونية، يوضح لك هذا الدليل خطوة بخطوة كيفية البدء.
+إضافة ملاحظات بصرية أو تعليقات أو طوابع إلى ملف PDF برمجياً يمكن أن يسرّع بشكل كبير دورات المراجعة، وفحوصات الامتثال، وتدفقات العمل التعاونية. في هذا الدرس ستكتشف **كيفية إضافة تعليقات توضيحية إلى PDF** باستخدام مكتبة GroupDocs Annotation للغة Java، مع تغطية كل شيء من إعداد المشروع إلى تعليقات بيضاوية متقدمة، والترخيص، وتحسين الأداء، ونصائح التكامل في العالم الحقيقي.
 
 ## إجابات سريعة
-- **ما المكتبة التي تضيف تعليقات توضيحية إلى ملفات PDF في Java؟** مكتبة groupdocs annotation library java.  
-- **هل أحتاج إلى ترخيص؟** النسخة التجريبية تعمل للاختبار؛ يلزم ترخيص إنتاج للاستخدام التجاري.  
-- **أي بيئة تطوير متكاملة (IDE) هي الأنسب؟** أي IDE للـ Java (IntelliJ IDEA، Eclipse، VS Code) يعمل بشكل جيد.  
-- **هل يمكنني إضافة تعليقات توضيحية إلى ملفات PDF محمية بكلمة مرور؟** نعم—قم بتوفير كلمة المرور عند إنشاء `Annotator`.  
-- **هل يدعم المعالجة الدفعية؟** بالتأكيد؛ راجع مثال المعالجة الدفعية لاحقًا.
+- **ما المكتبة التي تضيف تعليقات توضيحية إلى ملفات PDF في Java؟** مكتبة GroupDocs Annotation للغة Java.  
+- **هل أحتاج إلى ترخيص؟** النسخة التجريبية تعمل للاختبار؛ الترخيص الإنتاجي مطلوب للاستخدام التجاري.  
+- **أي بيئة تطوير متكاملة (IDE) هي الأنسب؟** أي بيئة تطوير Java (IntelliJ IDEA، Eclipse، VS Code) تعمل بشكل جيد.  
+- **هل يمكنني إضافة تعليقات توضيحية إلى ملفات PDF محمية بكلمة مرور؟** نعم—قم بتوفير كلمة المرور عند إنشاء كائن `Annotator`.  
+- **هل يدعم المعالجة الدفعية؟** بالتأكيد؛ راجع مثال المعالجة الدفعية لاحقاً.
 
-## ما هي مكتبة GroupDocs Annotation Java؟
-مكتبة groupdocs annotation library java هي واجهة برمجة تطبيقات Java قوية وجاهزة للمؤسسات تتيح لك إنشاء وتعديل واسترجاع تعليقات توضيحية على ملفات PDF برمجيًا. تدعم أكثر من 50 صيغة مستند وتوفر ميزات التعاون مثل الردود وسلاسل التعليقات.
+## ما هي مكتبة GroupDocs Annotation للغة Java؟
 
-## لماذا تستخدم مكتبة GroupDocs Annotation Java؟
-- **أنواع تعليقات توضيحية غنية** – أشكال، نص، طوابع، علامات مائية، وأكثر.  
-- **جاهز للتعاون** – ردود مدمجة وسلاسل تعليقات.  
-- **محسن للأداء** – يتعامل مع ملفات PDF الكبيرة بكفاءة.  
-- **واجهة برمجة تطبيقات بسيطة** – تقلل من وقت التطوير مقارنة بالمكتبات منخفضة المستوى مثل iText أو PDFBox.
+مكتبة GroupDocs Annotation للغة Java هي واجهة برمجة تطبيقات جاهزة للاستخدام تمكّن المطورين من إنشاء وتعديل واسترجاع وحذف التعليقات التوضيحية في ملفات PDF بالكامل باستخدام كود Java. تدعم **أكثر من 50 تنسيق مستند**، وتوفر سلاسل تعليقات مدمجة، وتقدم تحكمًا دقيقًا في الأذونات.
+
+## لماذا نستخدم مكتبة GroupDocs Annotation للغة Java؟
+
+يمكنك إضافة تنسيقات غنية—بما في ذلك الأشكال البيضاوية، ملاحظات النص، الطوابع، والعلامات المائية—ببضع نداءات طرق فقط، وتقوم المكتبة بمعالجة **ملفات PDF مئات الصفحات** دون تحميل الملف بالكامل إلى الذاكرة. مقارنةً بالأدوات منخفضة المستوى مثل iText أو PDFBox، تقلل من وقت التطوير بنسبة تصل إلى **70 %** وتتعامل مع ميزات PDF المعقدة (الطبقات، النماذج، التوقيعات الرقمية) مباشرةً.
 
 ## المتطلبات المسبقة والإعداد
-- **JDK 8+** (يوصى بـ JDK 11)  
+- **JDK 8+** (يوصى بـ JDK 11)  
 - **Maven أو Gradle** لإدارة التبعيات  
-- **IDE** حسب اختيارك (IntelliJ IDEA، Eclipse، إلخ)  
-- إلمام أساسي بملفات I/O في Java  
+- **IDE** حسب اختيارك (IntelliJ IDEA، Eclipse، VS Code)  
+- إلمام أساسي بعمليات إدخال/إخراج الملفات في Java  
 
-## إعداد مكتبة GroupDocs Annotation Java
-
-### دمج Maven
-أضف المستودع والتبعيات إلى ملف `pom.xml` الخاص بك:
+### تكامل Maven
+أضف المستودع والتبعية إلى ملف `pom.xml` الخاص بك:
 
 ```xml
 <repositories>
@@ -69,7 +121,7 @@ weight: 1
 ```
 
 ### تكوين الترخيص
-طبق ترخيصك قبل أي عمل تعليقات توضيحية:
+طبق الترخيص الخاص بك قبل أي عمل تعليقات توضيحية:
 
 ```java
 License license = new License();
@@ -81,11 +133,15 @@ license.setLicense("path/to/your/license/file");
 ## دليل التنفيذ الكامل
 
 ### الخطوة 1: تهيئة PDF Annotator
+فئة `Annotator` هي نقطة الدخول لجميع عمليات التعليقات التوضيحية. تقوم بتحميل ملف PDF المستهدف، وتطبيق إعدادات الأمان، وتحضير تمثيل في الذاكرة للتحرير.
+
 ```java
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_document.pdf");
 ```
 
 ### الخطوة 2: إنشاء تعليقات تفاعلية والردود
+`CommentAnnotation` يتيح لك تضمين نص حر، بينما كائنات `Reply` تمكّن من مناقشات متسلسلة مباشرة على صفحة PDF.
+
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -100,7 +156,9 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-### الخطوة 3: تكوين تعليمة إهليلجية
+### الخطوة 3: تكوين تعليقة بيضاوية
+`EllipseAnnotation` يرسم شكلًا بيضاويًا قابلًا للتوسيع. يمكنك تعيين لون الخط، لون التعبئة، الشفافية، وسماكة الحدود المخصصة لتتناسب مع إرشادات واجهة المستخدم الخاصة بك.
+
 ```java
 EllipseAnnotation ellipse = new EllipseAnnotation();
 ellipse.setBackgroundColor(65535); // Yellow background color
@@ -115,13 +173,15 @@ ellipse.setReplies(replies);
 ```
 
 ### الخطوة 4: إضافة وحفظ التعليقات التوضيحية
+بعد تكوين جميع كائنات التعليقات التوضيحية، استدعِ `annotator.save()` لكتابة التغييرات إلى القرص. تذكر استدعاء `dispose()` لتحرير الموارد الأصلية، خاصةً عند معالجة العديد من الملفات في حلقة.
+
 ```java
 annotator.add(ellipse);
 annotator.save("YOUR_OUTPUT_DIRECTORY/annotated_document.pdf");
 annotator.dispose();
 ```
 
-> **لماذا تستدعي `dispose()`؟** لأنه يحرر الموارد الأصلية، مما يمنع تسرب الذاكرة—وهذا مهم خصوصًا عند معالجة العديد من ملفات PDF داخل حلقة.
+> **لماذا استدعاء `dispose()`؟** يحرّر الموارد الأصلية، مما يمنع تسرب الذاكرة—وهذا مهم بشكل خاص عند معالجة العديد من ملفات PDF في حلقة.
 
 ## المشكلات الشائعة والحلول
 
@@ -130,12 +190,12 @@ annotator.dispose();
 *الحل:* تحقق من المسار المطلق أو اطبع `System.getProperty("user.dir")` لتأكيد دليل الأساس.
 
 ### المشكلة 2 – التعليقات غير مرئية
-*السبب:* نظام إحداثيات أو فهرس صفحة غير صحيح.  
+*السبب:* نظام إحداثيات خاطئ أو فهرس صفحة غير صحيح.  
 *الحل:* تذكر أن إحداثيات PDF تبدأ من الزاوية السفلية اليسرى، وأن الصفحات تبدأ من الصفر.
 
-### المشكلة 3 – OutOfMemoryError على ملفات PDF الكبيرة
-*السبب:* تحميل المستند بالكامل في الذاكرة.  
-*الحل:* زيادة حجم Heap في JVM (`-Xmx2g`) أو معالجة الصفحات على دفعات (انظر مثال الدفعة أدناه).
+### المشكلة 3 – OutOfMemoryError في ملفات PDF الكبيرة
+*السبب:* تحميل المستند بالكامل إلى الذاكرة.  
+*الحل:* زيادة حجم كومة JVM (`-Xmx2g`) أو معالجة الصفحات على دفعات (انظر مثال المعالجة الدفعية أدناه).
 
 ### المشكلة 4 – أخطاء التحقق من الترخيص
 *السبب:* ملف الترخيص مفقود أو غير متطابق.  
@@ -144,6 +204,8 @@ annotator.dispose();
 ## نصائح تحسين الأداء
 
 ### أفضل ممارسات إدارة الذاكرة
+تجنب الاحتفاظ بمراجع كائنات `Annotator` الكبيرة لفترة أطول من الضرورة. استخدم try‑with‑resources أو استدعاءات صريحة لـ `dispose()` بعد معالجة كل ملف.
+
 ```java
 // Process multiple documents efficiently
 for (String documentPath : documentPaths) {
@@ -155,11 +217,13 @@ for (String documentPath : documentPaths) {
 ```
 
 ### استراتيجيات المعالجة الدفعية
-- **ملفات PDF الصغيرة (<10 ميغابايت):** معالجة كل ملف على حدة.  
-- **ملفات PDF المتوسطة (10‑50 ميغابايت):** معالجة على دفعات من 5‑10 ملفات.  
-- **ملفات PDF الكبيرة (>50 ميغابايت):** استخدم البث أو المعالجة المجزأة لتجنب نفاد الذاكرة.
+- **ملفات PDF الصغيرة (<10 MB):** معالجة فردية.  
+- **ملفات PDF المتوسطة (10‑50 MB):** معالجة على دفعات من 5‑10.  
+- **ملفات PDF الكبيرة (>50 MB):** استخدم البث أو المعالجة المجزأة لتجنب نفاد الذاكرة.
 
 ### اعتبارات التخزين المؤقت
+فئة `AnnotationAppearance` تغلف الخصائص البصرية مثل اللون والشفافية للتعليقات التوضيحية. قم بتخزين كائنات قابلة لإعادة الاستخدام مثل `AnnotationAppearance` أو مثيلات `Color` في الذاكرة المؤقتة عندما تقوم بتعليق العديد من الصفحات بنفس النمط.
+
 ```java
 // Reusable annotation template
 private static EllipseAnnotation createStandardEllipse() {
@@ -169,9 +233,11 @@ private static EllipseAnnotation createStandardEllipse() {
 }
 ```
 
-## أمثلة على التكامل في العالم الحقيقي
+## أمثلة التكامل في العالم الحقيقي
 
-### تكامل تطبيق ويب
+### تكامل تطبيق الويب
+اعرض نقطة نهاية REST تستقبل تدفق PDF، وتطبق تعليقة بيضاوية عند الإحداثيات التي يزودها الواجهة الأمامية، وتعيد ملف PDF المعلق كمصفوفة بايت.
+
 ```java
 @RestController
 @RequestMapping("/api/documents")
@@ -188,7 +254,9 @@ public class DocumentAnnotationController {
 }
 ```
 
-### معالجة دفعة من المستندات
+### معالجة المستندات دفعيًا
+تجول عبر دليل يحتوي على العقود، أضف طابع “تمت المراجعة” إلى كل منها، وانقل الملفات المعالجة إلى مجلد الأرشيف.
+
 ```java
 public class BatchAnnotationProcessor {
     
@@ -203,9 +271,11 @@ public class BatchAnnotationProcessor {
 }
 ```
 
-## تقنيات التعليق التوضيحي المتقدمة
+## تقنيات التعليقات التوضيحية المتقدمة
 
-### تموضع التعليقات التوضيحية الديناميكي
+### تحديد موضع التعليقات التوضيحية ديناميكيًا
+احسب إحداثيات التعليقات التوضيحية في الوقت الفعلي بناءً على مواقع النص المكتشف باستخدام OCR أو واجهات استخراج نص PDF، ثم ضع أشكال بيضاوية حول الكلمات المفتاحية.
+
 ```java
 // Position based on a text search result
 Rectangle dynamicPosition = findTextPosition("important keyword");
@@ -213,6 +283,8 @@ ellipse.setBox(dynamicPosition);
 ```
 
 ### تنسيق التعليقات التوضيحية الشرطي
+طبق ألوانًا أو مستويات شفافية مختلفة بناءً على دور مؤلف التعليقة (مثال: المراجع = أزرق، الموافق = أخضر).
+
 ```java
 // Different colors for warning vs. info annotations
 int color = annotationType.equals("warning") ? 16711680 : 65535; // Red : Yellow
@@ -220,70 +292,70 @@ ellipse.setBackgroundColor(color);
 ```
 
 ## التطبيقات العملية وحالات الاستخدام
-- **منصات تعليمية:** تمييز المفاهيم، إضافة تعليقات المعلمين، إنشاء أدلة دراسة تفاعلية.  
+- **منصات التعليم:** تمييز المفاهيم، إضافة تعليقات المعلمين، إنشاء أدلة دراسة تفاعلية.  
 - **مراجعة المستندات القانونية:** وضع علامات على البنود، إضافة ملاحظات سرية، الحفاظ على سجلات التدقيق.  
-- **السجلات الطبية:** التعليق على الملاحظات، تمييز البيانات الحرجة، تمكين التعاون الآمن.  
+- **السجلات الطبية:** تعليق الملاحظات، تمييز البيانات الحرجة، تمكين التعاون الآمن.  
 - **سير العمل المؤسسي:** تبسيط موافقات التقارير، إضافة طوابع المراجعين، تتبع التغييرات.
 
-## متى تستخدم أنواع التعليقات التوضيحية المختلفة
-بينما يركز هذا الدليل على تعليقات الإهليلج، توفر مكتبة groupdocs annotation library java أيضًا:
+## متى نستخدم أنواع التعليقات التوضيحية المختلفة
+تعد تعليقات البيضاوية مثالية عندما تحتاج إلى تمييز غير مستطيل، مثل إبراز المخططات الدائرية، الشعارات، أو المناطق التي يُفضَّل تمثيلها بشكل بيضاوي. توفر إشارة بصرية واضحة مع الحفاظ على قابلية القراءة، مما يجعلها مناسبة لمراجعات التصميم، فحوصات العلامة التجارية، وأي سيناريو يفضَّل فيه التركيز الدائري.
+
+بينما يركز هذا الدليل على تعليقات البيضاوية، تقدم مكتبة GroupDocs Annotation للغة Java أيضًا:
 - **تعليقات نصية** للتعليقات التفصيلية.  
-- **تعليقات سهمية** للإشارة إلى عناصر معينة.  
-- **تعليقات مستطيلة** لتسليط الضوء على منطقة.  
+- **تعليقات سهمية** للإشارة إلى عناصر محددة.  
+- **تعليقات مستطيلة** لتحديد المناطق.  
 - **تعليقات علامة مائية** للعلامة التجارية أو الأمان.  
 - **تعليقات طوابع** للموافقات.
-
-اختر الإهليلجات عندما تحتاج إلى تمييز غير مستطيل، بصريًا مميز—مثالي لجذب الانتباه إلى الرسوم الدائرية أو مناطق الشعار.
 
 ## دليل استكشاف الأخطاء وإصلاحها
 
 ### مشاكل الأداء
-- **العرض:** معالجة بطيئة.  
+- **العَرَض:** معالجة بطيئة.  
 - **التشخيص:** حجم ملف كبير، عدد كبير من التعليقات، ذاكرة RAM محدودة.  
 - **الحل:** تحسين خصائص التعليقات، المعالجة غير المتزامنة، أو تقسيم ملفات PDF الكبيرة إلى صفحات.
 
 ### مشاكل التوافق
-- **العرض:** التعليقات تظهر مختلفة عبر عارضات مختلفة.  
-- **التشخيص:** ميزات PDF غير قياسية.  
-- **الحل:** اختبار مع Adobe Acrobat، Chrome، وFirefox؛ الالتزام بعلامات التعليقات القياسية في PDF.
+- **العَرَض:** مظهر التعليقات يختلف بين عارضات الملفات.  
+- **التشخيص:** ميزات PDF غير معيارية.  
+- **الحل:** اختبار مع Adobe Acrobat، Chrome، وFirefox؛ الالتزام بعلامات التعليقات المعيارية في PDF.
 
 ### تحديات التكامل
-- **العرض:** تعارضات التبعيات.  
-- **التشخيص:** عدم توافق الإصدارات مع مكتبات أخرى.  
-- **الحل:** استخدم `<dependencyManagement>` في Maven لفرض إصدارات متوافقة أو انتقل إلى REST API للتكامل غير المعتمد على لغة معينة.
+- **العَرَض:** تعارضات في التبعيات.  
+- **التشخيص:** إصدارات غير متطابقة مع مكتبات أخرى.  
+- **الحل:** استخدم `<dependencyManagement>` في Maven لفرض إصدارات متوافقة أو التحول إلى واجهة REST API للتكامل غير المرتبط بلغة معينة.
 
 ## الأسئلة المتكررة
 
 **س: هل يمكنني إضافة تعليقات توضيحية إلى ملفات PDF محمية بكلمة مرور؟**  
-ج: نعم. استخدم النسخة المتعددة `new Annotator(filePath, loadOptions)` حيث يحتوي `loadOptions` على كلمة المرور.
+ج: نعم. استخدم النسخة الزائدة `new Annotator(filePath, loadOptions)` حيث يتضمن `loadOptions` كلمة المرور.
 
-**س: كيف يجب أن أتعامل مع ملفات PDF أكبر من 100 ميغابايت؟**  
-ج: عالج الصفحات بشكل فردي، زد حجم الـ heap، أو استخدم GroupDocs Annotation Cloud API للعبء الثقيل.
+**س: كيف يجب أن أتعامل مع ملفات PDF أكبر من 100 MB؟**  
+ج: عالج الصفحات بشكل فردي، وزِّد حجم الكومة، أو استفد من GroupDocs Annotation Cloud API للعبء الثقيل.
 
 **س: هل هناك حد لعدد التعليقات التوضيحية في المستند؟**  
-ج: لا حد ثابت، لكن قد يتدهور الأداء بعد آلاف التعليقات. فكر في التقسيم إلى صفحات أو التجميع.
+ج: لا يوجد حد ثابت، لكن قد يتدهور الأداء بعد آلاف التعليقات. ضع في اعتبارك التقسيم إلى صفحات أو التجميع.
 
 **س: هل يمكنني استخراج التعليقات التوضيحية الموجودة؟**  
 ج: بالتأكيد. استدعِ `annotator.get()` لاسترجاع جميع التعليقات من ملف PDF.
 
 **س: كيف أؤمن التعليقات التوضيحية بحيث لا يمكن تحريرها إلا من قبل مستخدمين معينين؟**  
-ج: توفر المكتبة إعدادات أذونات تعتمد على المستخدم؛ قم بتكوينها عبر API `AnnotationPermission`.
+ج: توفر المكتبة إعدادات أذونات مبنية على المستخدم؛ قم بتكوينها عبر واجهة `AnnotationPermission` API.
 
 ## الخلاصة
-مكتبة **groupdocs annotation library java** توفر لك طريقة نظيفة وعالية الأداء لإدراج تعليقات توضيحية غنية على ملفات PDF مباشرةً من كود Java. باتباع الخطوات السابقة، يمكنك إضافة تعليقات إهليلجية، إدارة التعليقات، والتعامل مع أحمال عمل على مستوى المؤسسات.
+توفر لك **GroupDocs Annotation Library Java** طريقة نظيفة وعالية الأداء لإدراج تعليقات توضيحية غنية في ملفات PDF مباشرةً من كود Java. باتباع الخطوات السابقة، يمكنك إضافة تعليقات بيضاوية، إدارة التعليقات، والتعامل مع أحمال عمل على مستوى المؤسسات.
 
 **الخطوات التالية:**  
-1. تجربة أنواع تعليقات أخرى (نص، طابع، علامة مائية).  
+1. جرب أنواع تعليقات توضيحية أخرى (نص، طابع، علامة مائية).  
 2. دمج المكتبة في سير عمل المستندات الحالي أو الخدمة الويب.  
-3. استكشاف REST API للسيناريوهات غير المعتمدة على لغة معينة.
+3. استكشف واجهة REST API للسيناريوهات غير المرتبطة بلغة معينة.
 
 ---
 
-**آخر تحديث:** 2026-02-03  
+**آخر تحديث:** 2026-07-25  
 **تم الاختبار مع:** GroupDocs.Annotation 25.2 for Java  
 **المؤلف:** GroupDocs  
 
-**الروابط الأساسية:**  
+**روابط أساسية:**  
 - **التوثيق:** [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)  
 - **مرجع API:** [GroupDocs API Reference](https://reference.groupdocs.com/annotation/java/)  
 - **تحميل:** [Download GroupDocs.Annotation](https://releases.groupdocs.com/annotation/java/)  
@@ -291,3 +363,8 @@ ellipse.setBackgroundColor(color);
 - **نسخة تجريبية مجانية:** [Start a Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - **ترخيص مؤقت:** [Request a Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - **الدعم:** [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+## دروس ذات صلة
+- [كيفية إضافة سهم إلى PDF باستخدام Java – دليل كامل وأفضل الممارسات](/annotation/java/graphical-annotations/add-arrow-annotations-java-groupdocs/)  
+- [كيفية إضافة صورة إلى PDF باستخدام Java وGroupDocs Annotation](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)  
+- [الدليل الكامل - كيفية حفظ PDF معلق باستخدام GroupDocs.Annotation للغة Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)

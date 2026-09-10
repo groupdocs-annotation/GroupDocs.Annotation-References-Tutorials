@@ -394,12 +394,10 @@ R : Certains PDF stockent les commentaires comme des champs de formulaire ou u
 
 ## Ressources et lectures complémentaires
 
-- [Dépôt Maven](https://releases.groupdocs.com/annotation/java/)
 - [Documentation](https://docs.groupdocs.com/annotation/java/)
 - [Guide de référence API](https://reference.groupdocs.com/annotation/java/)
 - [Télécharger la dernière version](https://releases.groupdocs.com/annotation/java/)
 - [Licence commerciale](https://purchase.groupdocs.com/buy)
-- [Accès à l'essai gratuit](https://releases.groupdocs.com/annotation/java/)
 - [Demande de licence temporaire](https://purchase.groupdocs.com/temporary-license/)
 - [Forum de support communautaire](https://forum.groupdocs.com/c/annotation-java)
 

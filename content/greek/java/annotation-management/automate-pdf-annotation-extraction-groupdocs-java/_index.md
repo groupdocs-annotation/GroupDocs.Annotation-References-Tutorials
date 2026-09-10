@@ -394,12 +394,10 @@ Annotator annotator = new Annotator(inputStream, loadOptions);
 
 ## Πόροι και περαιτέρω ανάγνωση
 
-- [Maven repository](https://releases.groupdocs.com/annotation/java/)
 - [Documentation](https://docs.groupdocs.com/annotation/java/)
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
 - [Download Latest Version](https://releases.groupdocs.com/annotation/java/)
 - [Commercial Licensing](https://purchase.groupdocs.com/buy)
-- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)
 - [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/annotation-java)
 

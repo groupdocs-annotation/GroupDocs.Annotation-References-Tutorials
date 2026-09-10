@@ -161,7 +161,6 @@ Használja a `new URL("https://example.com/document.pdf")`‑t egy bemeneti adat
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### 2. lépés: az `Annotator` objektum létrehozása
 
@@ -173,14 +172,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### 3. lépés: erőforrások felelős kezelése
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Gyakori buktatók
@@ -198,7 +195,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### 5. lépés: pozíció és méret beállítása
 
@@ -207,7 +203,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Coordinate note:** A koordináta‑rendszer origója az oldal bal‑felső sarka; az értékek pontban vannak megadva.
@@ -218,14 +213,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### 7. lépés: annotáció csatolása
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Pro tippek a hatékony annotációhoz
@@ -242,7 +235,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### 9. lépés: mentés és takarítás
 
@@ -252,7 +244,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Advanced tip:** Tegyen időbélyeget vagy felhasználói azonosítót a fájlnévre (pl. `review_20260814_1234.pdf`), hogy egyszerűsítse a verziókövetést.
@@ -272,7 +263,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Dokumentumokat 5‑10 darabos kötegekben dolgozzon fel a heap‑használat stabilitásáért.  

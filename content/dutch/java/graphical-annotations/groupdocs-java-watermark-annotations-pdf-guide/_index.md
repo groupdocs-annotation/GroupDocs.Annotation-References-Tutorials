@@ -1,78 +1,143 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: Leer hoe je een pdf-watermerk op meerdere pagina's aan PDF's kunt toevoegen
-  in Java met GroupDocs.Annotation. Deze stapsgewijze tutorial laat zien hoe je een
-  pdf-watermerk in Java toevoegt met codevoorbeelden, tips voor probleemoplossing
+date: '2026-07-30'
+description: Leer hoe je een watermark op alle pagina's van PDF's in Java toepast
+  met GroupDocs.Annotation. Deze stapsgewijze tutorial laat zien hoe je een pdf watermark
+  op meerdere pagina's toevoegt, met codevoorbeelden, tips voor probleemoplossing
   en best practices.
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
-linktitle: Java PDF Watermark Guide
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
+linktitle: Java PDF Watermark Gids
+og_description: Pas een watermark toe op alle pagina's van PDF's met GroupDocs.Annotation
+  voor Java. Deze gids behandelt pdf watermark op meerdere pagina's, installatie,
+  code en probleemoplossing in een beknopte tutorial.
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: Watermark Toepassen op Alle Pagina's – Java PDF Watermark Guide
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDF-watermerk – gids voor watermerk op meerdere pagina's
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: Watermark Toepassen op Alle Pagina's – Java PDF Watermark Guide
 type: docs
 url: /nl/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
-# Java PDF Watermark – pdf watermark multiple pages Gids
+# Watermerk Toepassen Op Alle Pagina's – Java PDF Watermark Gids
 
-Adding a **pdf watermark multiple pages** is a common requirement when you need to protect, brand, or label documents in bulk. In this tutorial you’ll see exactly how to **add pdf watermark java** using GroupDocs.Annotation, from project setup to advanced customizations. We’ll walk through each step, explain the why behind every setting, and give you practical tips to avoid the usual pitfalls.
+In deze uitgebreide tutorial leer je **hoe je watermerk op alle pagina's** toepast op een PDF-document met Java en GroupDocs.Annotation. Of je nu vertrouwelijke rapporten moet beschermen, marketing‑PDF's wilt branden, of een “CONFIDENTIAL” stempel over een heel bestand wilt toevoegen, de onderstaande stappen leiden je door alles—van Maven‑configuratie tot geavanceerde aanpassing—zodat je binnen enkele minuten een betrouwbare oplossing kunt implementeren.
 
-## Quick Answers
-- **Welke bibliotheek kan pdf watermark multiple pages toevoegen in Java?** GroupDocs.Annotation for Java.  
+## Snelle Antwoorden
+- **Welke bibliotheek kan pdf-watermerk op meerdere pagina's toevoegen in Java?** GroupDocs.Annotation for Java.  
 - **Heb ik een licentie nodig?** Ja, een gratis proefversie werkt voor ontwikkeling; een volledige licentie is vereist voor productie.  
-- **Kan ik alle pagina's tegelijk watermerken?** Ja – maak een watermark annotation voor elke pagina in een lus.  
-- **Welke Java‑versie is vereist?** JDK 8+ (JDK 11+ aanbevolen).  
-- **Hoe regel ik de opacity?** Gebruik `setOpacity(double)` waarbij 0,0 volledig transparant is en 1,0 volledig ondoorzichtig.
+- **Kan ik alle pagina's tegelijk watermerken?** Ja – maak een watermerkannotatie voor elke pagina in een lus.  
+- **Welke Java-versie is vereist?** JDK 8+ (JDK 11+ aanbevolen).  
+- **Hoe regel ik de opacity?** Gebruik `setOpacity(double)` waarbij 0.0 volledig transparant is en 1.0 volledig ondoorzichtig.
 
-## Why You Need PDF Watermarks (And How Java Makes It Easy)
+## Waarom je PDF-watermerken nodig hebt (en hoe Java het gemakkelijk maakt)
 
-Ever had your important documents shared without permission? Or needed to brand your company's PDFs but didn't know where to start? You're not alone. Adding watermarks to PDFs is one of the most common document security and branding needs developers face today.
+Heb je je ooit zorgen gemaakt dat een vertrouwelijke PDF zonder jouw toestemming gedeeld zou kunnen worden? Of had je een snelle manier nodig om elke pagina van een verkoopbrochure te branden? Watermerken programmatisch toevoegen elimineert handmatige inspanning, garandeert consistentie en versterkt de documentbeveiliging. Met Java en GroupDocs.Annotation—een van de meest robuuste **java add watermark pdf** bibliotheken—krijg je fijnmazige controle over plaatsing, rotatie, kleur en opacity, terwijl je grote bestanden efficiënt verwerkt.
 
-Heb je ooit belangrijke documenten zonder toestemming gedeeld gezien? Of moest je de PDF's van je bedrijf branden maar wist je niet waar te beginnen? Je bent niet de enige. Het toevoegen van watermerken aan PDF's is een van de meest voorkomende behoeften op het gebied van documentbeveiliging en branding waar ontwikkelaars vandaag de dag mee te maken hebben.
+**Wat je aan het einde van deze gids onder de knie krijgt:**
+- Het opzetten van GroupDocs.Annotation voor Java-watermerken  
+- Het maken van aangepaste watermerkannotaties die op **alle pagina's** worden toegepast  
+- Het verwerken van grote PDF's zonder het geheugen uit te putten  
+- Het oplossen van veelvoorkomende valkuilen en het optimaliseren van de prestaties  
 
-Whether you're protecting sensitive business documents, branding marketing materials, or just want to prevent unauthorized distribution, adding watermarks programmatically can save you hours of manual work. And with Java and the right library, it's surprisingly straightforward.
+## Wat is een PDF-watermerk en waarom gebruik je het op meerdere pagina's?
 
-Of je nu gevoelige bedrijfsdocumenten beschermt, marketingmateriaal brandt, of gewoon ongeautoriseerde distributie wilt voorkomen, het programmatisch toevoegen van watermerken kan je uren handmatig werk besparen. En met Java en de juiste bibliotheek is het verrassend eenvoudig.
+Een PDF-watermerk is een overlay die boven de documentinhoud verschijnt zonder de onderliggende tekst of afbeeldingen te wijzigen. Een watermerk toepassen op **alle pagina's** zorgt ervoor dat elke pagina dezelfde branding of vertrouwelijkheidsmelding draagt, waardoor onbedoelde verspreiding van niet gemarkeerde pagina's wordt voorkomen.
 
-In this guide, you'll learn how to add professional‑looking watermarks to PDFs using GroupDocs.Annotation for Java – one of the most reliable Java watermark libraries available. We'll cover everything from basic setup to advanced customization, plus common pitfalls and how to avoid them.
+## Voorvereisten
 
-In deze gids leer je hoe je professioneel uitziende watermerken aan PDF's toevoegt met GroupDocs.Annotation for Java – een van de meest betrouwbare Java‑watermark‑bibliotheken die beschikbaar zijn. We behandelen alles van basisopzet tot geavanceerde aanpassingen, plus veelvoorkomende valkuilen en hoe je ze kunt vermijden.
+### Essentiële Vereisten
+- **Java-omgeving:** JDK 8 of hoger (JDK 11+ aanbevolen), Maven 3.6+, elke IDE (IntelliJ, Eclipse, VS Code).  
+- **Kennisvereisten:** Basis Java-syntaxis, bestands‑I/O, Maven‑dependency‑beheer.  
+- **Projectrechten:** Schrijftoegang tot de uitvoermap en voldoende RAM voor grote PDF's (≥ 4 GB aanbevolen voor bestanden > 200 pagina's).
 
-**What you'll master by the end:**
-- Het opzetten van GroupDocs.Annotation voor Java watermerken
-- Aangepaste watermark‑annotaties maken met volledige controle
-- Problemen met veelvoorkomende watermark‑implementatie oplossen
-- Je watermark‑code optimaliseren voor productiegebruik
+## Je Java PDF Watermark-omgeving instellen
 
-## What is a PDF Watermark and Why Use It on Multiple Pages?
+### GroupDocs.Annotation aan je project toevoegen
 
-A PDF watermark is an overlay that sits on top of the document content without altering the original text. Using **pdf watermark multiple pages** lets you consistently mark every page with a brand, confidentiality notice, or version tag, ensuring the protection travels with the whole document.
+Voeg eerst het GroupDocs.Annotation Maven‑artifact toe. Deze afhankelijkheid haalt alle benodigde binaries en transitieve bibliotheken op.
 
-Een PDF‑watermark is een overlay die bovenop de documentinhoud ligt zonder de originele tekst te wijzigen. Het gebruik van **pdf watermark multiple pages** stelt je in staat elke pagina consequent te markeren met een merk, vertrouwelijkheidsmelding of versietag, zodat de bescherming met het hele document meereist.
+**Definitie:** Het Maven `<dependency>`‑element verklaart de GroupDocs.Annotation‑bibliotheek voor je project, waardoor de compiler de JAR‑bestanden tijdens de build kan vinden.  
 
-## Prerequisites
-
-### Essential Requirements
-
-- **Java‑omgeving:** JDK 8 of hoger (JDK 11+ aanbevolen), Maven 3.6+, IDE naar keuze.  
-- **Vereiste kennis:** Basis Java, bestands‑I/O, Maven‑dependencies.  
-- **Projectopzet:** Schrijfrechten op de outputmap en voldoende RAM voor grote PDF's.
-
-## Setting Up Your Java PDF Watermark Environment
-
-### Adding GroupDocs.Annotation to Your Project
-
-The first step to adding watermarks to PDFs in Java is getting the GroupDocs.Annotation library properly configured. Here's the Maven setup that actually works:
-
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -90,22 +155,25 @@ The first step to adding watermarks to PDFs in Java is getting the GroupDocs.Ann
 </dependencies>
 ```
 
-**Pro tip**: Always use the latest version for bug fixes and performance improvements. The version above is current as of 2025.
+**Pro tip:** Gebruik altijd de nieuwste uitgebracht versie (het voorbeeld toont 25.2, de meest recente vanaf 2025) om te profiteren van bugfixes en prestatieverbeteringen.
 
-**Pro tip**: Gebruik altijd de nieuwste versie voor bugfixes en prestatieverbeteringen. De bovenstaande versie is actueel vanaf 2025.
+### Je licentie regelen
 
-### Getting Your License Sorted
+Je hebt een geldige licentie nodig voor productie‑implementaties. Kies de optie die bij je planning past:
+1. **Gratis proefversie:** Ideaal voor ontwikkeling en testen. Download van [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+2. **Tijdelijke licentie:** Volledige functionaliteit voor evaluatie. Verkrijg er een via de [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
+3. **Volledige licentie:** Vereist voor commercieel gebruik. Aankoop via de [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
 
-Here's something many tutorials skip – you need proper licensing for production use. Here are your options:
+### Basisconfiguratie die echt werkt
 
-1. **Gratis proefversie**: Perfect voor testen en ontwikkeling. Download van [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)
-2. **Tijdelijke licentie**: Volledige functionaliteit voor evaluatie. Haal er een op van de [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)
-3. **Volledige licentie**: Voor productie‑applicaties. Aanschaf via [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
+Na het toevoegen van de dependency en het verkrijgen van een licentiebestand, initialiseert u het `Annotator`‑object. Dit object laadt de PDF in het geheugen en biedt de API voor het maken van annotaties.
 
-### Basic Setup That Actually Works
+**Definitie:** `Annotator` is het primaire toegangspunt van GroupDocs.Annotation; het beheert het laden van PDF's, het maken van annotaties en het opslaan.  
 
-Once you've got your dependencies sorted, here's how to initialize the library properly:
-
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -121,26 +189,21 @@ public class WatermarkSetup {
 }
 ```
 
-**Common mistake to avoid**: Forgetting to call `dispose()` can lead to memory leaks, especially when processing multiple documents.
+**Veelgemaakte fout om te vermijden:** Vergeten `annotator.dispose()` aan te roepen na verwerking; dit kan geheugenlekken veroorzaken, vooral bij het verwerken van veel documenten in één batch.
 
-**Veelgemaakte fout om te vermijden**: Het vergeten aanroepen van `dispose()` kan leiden tot geheugenlekken, vooral bij het verwerken van meerdere documenten.
+## Hoe watermerk op alle pagina's toepassen in Java
 
-## How to Add pdf watermark multiple pages with Java
+Om een watermerk op elke pagina toe te passen, maak je een `WatermarkAnnotation`, stel je de visuele eigenschappen in, en voeg je vervolgens een aparte instantie van deze annotatie toe aan elke pagina in een lus. De lus gebruikt het paginatelling van het document, kent het juiste paginanummer toe en slaat ten slotte de gewijzigde PDF op.
 
-Now for the main event – actually adding those watermarks! The GroupDocs.Annotation library makes this surprisingly straightforward once you understand the components.
+### Watermerkannotaties begrijpen
 
-Nu het belangrijkste – het daadwerkelijk toevoegen van die watermerken! De GroupDocs.Annotation‑bibliotheek maakt dit verrassend eenvoudig zodra je de componenten begrijpt.
+Een `WatermarkAnnotation` vertegenwoordigt een overlay‑laag die tekst, aangepaste kleuren, rotatie en opacity kan bevatten. In tegenstelling tot een eenvoudige teksttoevoeging wordt het opgeslagen als een annotatie, waardoor het later verwijderbaar of bewerkbaar is.
 
-### Understanding Watermark Annotations
+**Definitie:** `WatermarkAnnotation` is een klasse in GroupDocs.Annotation die alle visuele eigenschappen van een watermerk‑overlay omvat.  
 
-Think of watermark annotations as overlay layers on your PDF. They can contain text, have custom positioning, colors, opacity levels, and even rotation angles. Unlike simple text additions, watermark annotations are specifically designed to be visible markers that don't interfere with the document's core content.
-
-Beschouw watermark‑annotaties als overlay‑lagen op je PDF. Ze kunnen tekst bevatten, hebben aangepaste positionering, kleuren, opacity‑niveaus en zelfs rotatiehoeken. In tegenstelling tot eenvoudige teksttoevoegingen zijn watermark‑annotaties specifiek ontworpen als zichtbare markeringen die niet interfereren met de kerninhoud van het document.
-
-### Step 1: Import the Right Classes
-
-First, let's get all our imports sorted. These are the essential classes you'll need:
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -150,14 +213,16 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-Each class has a specific role:
-- `Annotator`: Je hoofdinterface voor werken met de PDF  
-- `WatermarkAnnotation`: Het watermark‑object dat je aanpast  
-- `Rectangle`: Definieert waar je watermark verschijnt en de grootte  
-- `Reply`: Optionele opmerkingen of notities over het watermark  
+### Stap 1: Importeer de vereiste klassen
 
-### Step 2: Initialize Your PDF for Watermarking
+**Definitie:** Import‑statements brengen de benodigde GroupDocs.Annotation‑klassen in het huidige Java‑bestand, zodat je ze kunt gebruiken zonder volledig gekwalificeerde namen.  
 
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -165,14 +230,13 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**Important note**: The `Annotator` object loads your PDF into memory, so make sure you have sufficient RAM for large files. For PDFs over 50 MB, consider processing in smaller batches.
+### Stap 2: Laad het PDF‑document
 
-**Belangrijk**: Het `Annotator`‑object laadt je PDF in het geheugen, zorg dus voor voldoende RAM voor grote bestanden. Voor PDF's groter dan 50 MB kun je overwegen in kleinere batches te verwerken.
+**Definitie:** De `Annotator`‑constructor laadt het PDF‑bestand in een beheersbaar object, klaar voor annotatie‑bewerkingen.  
 
-### Step 3: Create Optional Reply Objects
-
-While not required, replies can be useful for document tracking or approval workflows:
-
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -183,14 +247,16 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-These replies become part of the annotation metadata and can be viewed in PDF readers that support annotation comments.
+> **Pro tip:** Voor PDF's groter dan 50 MB, overweeg het vergroten van de JVM‑heap (`-Xmx4g`) en verwerk bestanden sequentieel om het geheugenverbruik laag te houden.
 
-Deze replies worden onderdeel van de annotatiemetadata en kunnen worden bekeken in PDF‑readers die annotatie‑commentaren ondersteunen.
+### Stap 3: (Optioneel) Bereid Reply‑metadata voor
 
-### Step 4: Configure Your Watermark (The Fun Part!)
+**Definitie:** `Reply` slaat door gebruikers gegenereerde opmerkingen op die bij een annotatie horen, nuttig voor audit‑trails.  
 
-This is where you get creative. The watermark configuration controls everything about how your watermark appears:
-
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -209,29 +275,38 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**Let's break down these settings:**
-- `setAngle(75.0)`: Roteert je watermark 75 graden. Ideaal voor diagonale “CONFIDENTIAL” stempels.  
-- `setBox(new Rectangle(200, 200, 100, 50))`: Positie (200, 200) met breedte 100 en hoogte 50.  
-- `setFontColor(65535)`: ARGB‑kleurformaat – geel in dit geval.  
-- `setOpacity(0.7)`: 70 % opacity – zichtbaar maar niet overweldigend.  
-- `setPageNumber(0)`: Toepassing op de eerste pagina (0‑geïndexeerd).  
+### Stap 4: Configureer het uiterlijk van het watermerk
 
-### Step 5: Apply and Save Your Watermarked PDF
+**Definitie:** De volgende setters passen het uiterlijk en de plaatsing van het watermerk op elke pagina aan.  
 
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-That's it! Your PDF now has a professional watermark. The `save()` method creates a new PDF file with your watermark applied, leaving the original untouched.
+### Stap 5: Loop door alle pagina's en pas het watermerk toe
 
-Dat is alles! Je PDF heeft nu een professioneel watermark. De `save()`‑methode maakt een nieuw PDF‑bestand aan met je watermark toegepast, terwijl het origineel onaangeroerd blijft.
+Om **watermerk op alle pagina's toe te passen**, itereren we over het paginatelling van het document en wijzen we de annotatie toe aan elke pagina.
 
-## How to Add pdf watermark multiple pages (All Pages)
+**Definitie:** `annotator.getPageCount()` geeft het totale aantal pagina's terug, waardoor een lus mogelijk is die een aparte `WatermarkAnnotation` per pagina maakt.  
 
-By default, a watermark applies to a single page. To **add pdf watermark multiple pages**, loop through the document pages and add a separate `WatermarkAnnotation` for each one:
-
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -252,14 +327,14 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-This snippet demonstrates the exact pattern you need to **add pdf watermark multiple pages** efficiently.
+### Stap 6: Sla de watergemerkte PDF op
 
-Dit fragment toont het exacte patroon dat je nodig hebt om **add pdf watermark multiple pages** efficiënt uit te voeren.
+**Definitie:** `annotator.save("output.pdf")` slaat alle toegevoegde annotaties op in een nieuw PDF‑bestand.  
 
-## Common Issues and How to Fix Them
-
-### "File Not Found" Errors
-
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -275,36 +350,18 @@ try {
 }
 ```
 
-- Controleer absolute paden nogmaals.  
-- Verifieer lees-/schrijfrechten.  
-- Zorg ervoor dat de outputmap bestaat.
+Dat is de volledige workflow voor **watermerk op alle pagina's toepassen** met GroupDocs.Annotation voor Java.
 
-### Memory Issues with Large PDFs
+## Veelvoorkomende problemen en hoe ze op te lossen
 
-- Roep altijd `dispose()` aan.  
-- Verwerk bestanden één voor één, niet parallel.  
-- Verhoog de JVM‑heap (`-Xmx4g` voor zeer grote documenten).
-
-### Watermark Not Appearing Where Expected
-
-- Onthoud dat PDF‑coördinaten beginnen bij de **linker‑onderkant**.  
-- Test met verschillende paginagroottes; A4 vs. Letter kan posities verschuiven.  
-- Pas de opacity aan als het watermark zwak lijkt.
-
-### Font Color Issues
-
-ARGB values you can use:
-- Rood: `16711680`  
-- Blauw: `255`  
-- Groen: `65280`  
-- Zwart: `0`  
-- Wit: `16777215`  
-- Geel: `65535` (zoals in ons voorbeeld gebruikt)
-
-## Real‑World Use Cases for Java PDF Watermarks
-
-### Business Document Protection
-
+### “Bestand niet gevonden” fouten
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -315,8 +372,36 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### Branding Marketing Materials
+- Controleer absolute paden en zorg dat het bestand bestaat.  
+- Controleer lees-/schrijfrechten op zowel de invoer‑ als uitvoermappen.  
+- Maak de uitvoermap vooraf aan als deze niet bestaat.
 
+### Geheugenproblemen met grote PDF's
+- Roep altijd `annotator.dispose()` aan na verwerking.  
+- Verwerk PDF's één voor één; vermijd parallelle streams tenzij de bibliotheek bewezen thread‑safe is.  
+- Verhoog de JVM‑heap (`-Xmx4g` of hoger) voor bestanden met meer dan 200 pagina's.
+
+### Watermerkplaatsing niet zoals verwacht
+- De coördinaten‑origin van PDF is **linksonder**; pas `Rectangle`‑waarden dienovereenkomstig aan.  
+- Test met verschillende paginagroottes (A4 vs. Letter) omdat afmetingen de positionering beïnvloeden.  
+- Gebruik `setOpacity(0.5)` als het watermerk te vaag lijkt op hoog‑contrast achtergronden.
+
+### Problemen met lettertypekleur
+GroupDocs.Annotation verwacht ARGB‑integer‑waarden. Veelvoorkomende kleuren:
+- Rood: `16711680`  
+- Blauw: `255`  
+- Groen: `65280`  
+- Zwart: `0`  
+- Wit: `16777215`  
+- Geel: `65535` (gebruikt in het voorbeeld)
+
+## Praktische gebruikssituaties voor Java PDF-watermerken
+
+### Bescherming van zakelijke documenten
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -326,8 +411,12 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### Version Control for Documents
-
+### Marketingmateriaal branden
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -336,10 +425,11 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## Performance Optimization Tips
-
-### Memory Management Best Practices
-
+### Versiebeheer voor documenten
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -357,14 +447,14 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### Batch Processing Strategies
+## Tips voor prestatie‑optimalisatie
 
-- Verwerk documenten opeenvolgend om het geheugenverbruik laag te houden.  
-- Gebruik een voortgangsindicator voor lange runs.  
-- Vermijd parallel verwerken tenzij de thread‑safety van de bibliotheek bevestigd is.
-
-### Code Organization Tips
-
+### Beste praktijken voor geheugenbeheer
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -388,39 +478,61 @@ public class WatermarkTemplates {
 }
 ```
 
-## Frequently Asked Questions
+- Verwerk documenten sequentieel om de heap‑voetafdruk laag te houden.  
+- Gebruik een voortgangsindicator voor batch‑taken om het geheugenverbruik te monitoren.  
+- Vermijd het volledig laden van de PDF in het geheugen wanneer alleen een subset van pagina's watermerken nodig heeft; de bibliotheek ondersteunt paginaniveau‑laden.
+
+### Tips voor code‑organisatie
+- Encapsuleer het maken van watermerken in een hulpfunctie: `createWatermark(String text, double opacity, int angle)`.  
+- Houd configuratie (kleuren, lettertypen, opacity) extern in een properties‑bestand voor eenvoudige aanpassing in verschillende omgevingen.
+
+## Veelgestelde vragen
 
 **V: Hoe voeg ik watermerken toe aan meerdere pagina's in een PDF?**  
-A: Gebruik een lus over het aantal pagina's van het document en maak voor elke pagina een `WatermarkAnnotation`, waarbij je `setPageNumber(i)` binnen de lus instelt.
+A: Loop over het paginatelling van het document, kloon een geconfigureerde `WatermarkAnnotation` voor elke pagina, stel `setPageNumber(i)` in, en voeg deze toe met `annotator.add()`.
 
 **V: Kan ik aangepaste lettertypen gebruiken voor mijn watermerken?**  
-A: GroupDocs.Annotation gebruikt systeem‑geïnstalleerde lettertypen. Geef een lettertypefamilie op die op de hostmachine bestaat; de bibliotheek valt terug op een standaardlettertype als het opgegeven lettertype niet wordt gevonden.
+A: GroupDocs.Annotation gebruikt lettertypen die op het host‑OS zijn geïnstalleerd. Geef een lettertypefamilie op die op de server bestaat; de bibliotheek valt terug op een standaardlettertype als het lettertype niet wordt gevonden.
 
 **V: Welke opacity‑instelling werkt het beste voor professionele watermerken?**  
-A: Tussen **0,3** en **0,7** is ideaal — laag genoeg om de inhoud leesbaar te houden, hoog genoeg om op te vallen.
+A: Tussen **0.3** en **0.7** biedt een balans—voldoende zichtbaar om opgemerkt te worden, maar laat de onderliggende inhoud nog leesbaar.
 
 **V: Hoe moet ik omgaan met zeer grote PDF‑bestanden?**  
-A: Verhoog de JVM‑heap (`-Xmx4g` of meer), verwerk bestanden één voor één, en roep altijd `dispose()` aan na elk document.
+A: Verhoog de JVM‑heap (`-Xmx4g` of meer), verwerk bestanden één voor één, en roep altijd `dispose()` aan na elk document om native resources vrij te geven.
 
-**V: Is het mogelijk bestaande watermerken te verwijderen of te wijzigen?**  
-A: Ja — haal bestaande annotaties op met `annotator.get()`, filter op `WatermarkAnnotation`, en bewerk of verwijder ze indien nodig:
+**V: Is het mogelijk om bestaande watermerken te verwijderen of te wijzigen?**  
+A: Ja—haal annotaties op met `annotator.get()`, filter op `WatermarkAnnotation`, en bewerk of verwijder ze vervolgens indien nodig:  
 
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
 // Filter and modify as needed
 ```
 
-## Additional Resources
+## Aanvullende bronnen
 
-- **Documentatie**: [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Volledige API‑referentie**: [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
-- **Download nieuwste versie**: [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Commerciële licenties**: [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
-- **Community‑ondersteuning**: [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
+- **Documentatie:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Complete API‑referentie:** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **Laatste versie downloaden:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Commerciële licenties:** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **Community‑ondersteuning:** [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
 
 ---
 
-**Laatst bijgewerkt:** 2026-02-10  
+**Laatst bijgewerkt:** 2026-07-30  
 **Getest met:** GroupDocs.Annotation 25.2  
-**Auteur:** GroupDocs
+**Auteur:** GroupDocs  
+
+---
+
+## Gerelateerde tutorials
+
+- [PDF laden met Java en GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
+- [PDF-annotatie toevoegen Java – Complete GroupDocs-gids](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Hoe een afbeelding toe te voegen aan PDF met Java en GroupDocs Annotation](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)

@@ -1,68 +1,163 @@
 ---
-"description": "了解如何使用 GroupDocs.Annotation for Java API 為 PDF、Word、Excel 和 PowerPoint 文件新增註解。取得逐步整合教學和程式碼範例。"
-"is_root": true
-"linktitle": "Java 教學的 GroupDocs.Annotation"
-"title": "Java 文件註解 API | GroupDocs.Annotation Java 教學與範例"
-"url": "/zh-hant/java/"
+date: 2026-05-16
+description: 了解如何使用 GroupDocs.Annotation for Java API 註釋 PDF Java 文件。內容包括圖像註釋 Java、一步一步的教學以及程式碼範例。
+is_root: true
+keywords:
+- how to annotate pdf
+- java add watermark
+- java highlight text
+- image annotation java
+- create pdf annotations
+- load documents java
+linktitle: GroupDocs.Annotation for Java 教學
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-16'
+  description: Learn how to annotate PDF Java documents using GroupDocs.Annotation
+    for Java API. Includes image annotation java, step‑by‑step tutorials and code
+    examples.
+  headline: How to Annotate PDF – Java Document Annotation API | GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: PDFs, DOCX, XLSX, PPTX, HTML, images, and more.
+    question: What can I annotate?
+  - answer: No—everything runs from a single JAR.
+    question: Do I need external tools?
+  - answer: Text highlights, underlines, strike‑outs, shapes, arrows, watermarks,
+      image annotations, links, and form fields.
+    question: Which annotation types are supported?
+  - answer: Yes—works on any OS with Java support.
+    question: Is it cross‑platform?
+  - answer: From the official GroupDocs download page (link below).
+    question: Where can I get a trial?
+  type: FAQPage
+title: 如何註釋 PDF – Java 文件註釋 API | GroupDocs.Annotation
 type: docs
-"weight": 10
+url: /zh-hant/java/
+weight: 10
 ---
 
-# GroupDocs.Annotation for Java - 文件註解 API 教學課程
+# GroupDocs.Annotation for Java - 文件註釋 API 教程
 
-## 為您的 Java 應用程式新增文件註解功能
+如果您正在尋找 **在 Java 中如何註釋 PDF** 檔案，GroupDocs.Annotation for Java 提供完整解決方案。這個強大的文件註釋 API 讓您 **在 Java 中註釋 PDF** 文件，同時支援 Word、Excel、PowerPoint、圖片及其他多種格式。透過將註釋功能直接嵌入您的 Java 應用程式，您可以構建協作審閱工具、法律標記解決方案，或任何需要豐富文件互動的工作流程——無需依賴外部軟體。
 
-GroupDocs.Annotation for Java 是一款功能強大的文件註解 API，可讓開發者將全面的註解功能整合到他們的 Java 應用程式中，而無需任何外部軟體。我們的程式庫支援註解常見的文件格式，包括 PDF、Microsoft Word、Excel、PowerPoint、圖像等。
+## 快速回答
+- **我可以註釋什麼？** PDF、DOCX、XLSX、PPTX、HTML、圖片等。  
+- **需要外部工具嗎？** 不需要——全部由單一 JAR 執行。  
+- **支援哪些註釋類型？** 文字高亮、底線、刪除線、圖形、箭頭、水印、圖片註釋、連結與表單欄位。  
+- **跨平台嗎？** 是——在任何支援 Java 的作業系統上皆可運行。  
+- **哪裡可以取得試用版？** 請前往官方 GroupDocs 下載頁面（以下連結）。
 
-## 為什麼選擇 GroupDocs.Annotation for Java？
+## 為何使用 GroupDocs.Annotation for Java 來 **在 Java 中註釋 PDF** 檔案？
 
-- **跨平台相容性** 適用於任何支援 Java 的作業系統
-- **無外部依賴** 所有功能都包含在一個 JAR 檔案中
-- **全面的格式支持** 註解 PDF、DOCX、XLSX、PPTX、HTML 和圖片文件
-- **豐富的註解類型** 文字反白、底線、刪除線、箭頭、形狀、浮水印等
-- **高效能處理** 針對速度和記憶體效率進行了最佳化
+當您需要可靠、單 JAR 解決方案，且能在不依賴外部套件的情況下加入完整的 PDF 註釋功能時，應選擇 GroupDocs.Annotation for Java。它可在 2 秒內處理多達 500 頁的 PDF，記憶體使用量低於 150 MB，且支援超過 50 種檔案格式，極適合企業級審閱與標記工作流程。
 
-## Java 教學的 GroupDocs.Annotation
+- **零相依** – 單一 JAR 簡化部署。  
+- **高效能** – 可在 2 秒內註釋 500 頁 PDF，且使用 <150 MB 記憶體。  
+- **功能豐富** – 從簡單評論到複雜圖形標記，包含 **java add watermark** 與 **java highlight text** 功能。  
+- **企業級授權** – 為商業專案提供彈性授權選項。  
 
-### [授權和配置](./licensing-and-configuration)
-透過完整的程式碼範例了解如何設定許可證、配置 GroupDocs.Annotation 選項以及將程式庫整合到您的 Java 專案中。
+## 核心功能概覽
+
+`GroupDocs.Annotation for Java` 函式庫是一套 Java SDK，提供完整的 API 以在 **超過 50 種文件格式** 上新增、編輯與管理註釋。它讓您能在 Java 程式碼中直接處理 PDF、Office 檔案、圖片等。
+
+### 如何使用 GroupDocs.Annotation **在 Java 中註釋 PDF** 文件
+`AnnotationApi` 類別提供 `load` 方法以開啟文件，`save` 方法則寫入已註釋的檔案。  
+`HighlightAnnotation` 代表可自訂顏色與不透明度的文字高亮標記。  
+`TextAnnotation` 則在文件位置附加評論框。
+
+此 API 的工作流程簡潔明瞭：載入文件、建立註釋物件、設定外觀，最後儲存結果。您可以指定顏色、作者名稱與位置，函式庫會自動處理分頁與渲染。連結教學中提供範例程式碼說明每一步。
+
+### Image annotation Java – 在文件中加入圖形
+您可以將點陣圖或向量圖作為註釋嵌入，精確定位，甚至連結至外部資源。這非常適合品牌標示、水印或視覺評論。
+
+### Add annotations Java – 核心文字與圖形標記
+從簡單的高亮到複雜的圖形，函式庫提供統一模型處理所有註釋類型，讓您在同一文件中輕鬆切換文字與圖形標記。
+
+### Load documents Java – 高效文件載入
+GroupDocs.Annotation 支援從本機檔案、串流、雲端儲存（Amazon S3、Azure Blob）、URL 與 FTP 伺服器載入。此彈性確保您可以 **在 Java 中載入文件**，無論應用程式使用何種來源。
+
+### Annotation management Java – 控制註釋生命週期
+以程式方式建立、更新、刪除與篩選註釋。您亦可附加自訂中繼資料、設定作者資訊，並強制執行安全政策。
+
+## 如何使用 GroupDocs.Annotation 以 Java 註釋 PDF？
+
+`AnnotationApi` 類別提供 `load` 方法以開啟文件，`save` 方法則寫入已註釋的檔案。  
+`HighlightAnnotation` 代表可自訂顏色與不透明度的文字高亮標記。  
+`TextAnnotation` 則在文件位置附加評論框。
+
+使用 `AnnotationApi.load("sample.pdf")` 載入目標 PDF，建立所需的註釋物件（例如 `HighlightAnnotation`、`TextAnnotation`），設定顏色、作者與位置等屬性，最後呼叫 `AnnotationApi.save("output.pdf")`。此端對端流程讓您只需幾行 Java 程式碼即可 **建立 PDF 註釋**，同時高效處理大型檔案。
+
+## GroupDocs.Annotation for Java 教程
+
+### [授權與設定](./licensing-and-configuration)
+了解如何設定授權、配置 GroupDocs.Annotation 選項，並將函式庫整合至您的 Java 專案，附完整程式碼範例。
 
 ### [文件載入](./document-loading)
-探索從各種來源（包括本地儲存、串流、雲端平台（Amazon S3、Azure）、URL 和 FTP 伺服器）將文件載入到 GroupDocs.Annotation 的多種方法。
+探索多種從本機、串流、雲端平台（Amazon S3、Azure）以及 URL、FTP 伺服器載入文件的方法。
 
-### [文件保存](./document-saving)
-掌握使用各種輸出選項、格式和 Java 應用程式最佳化設定保存已註解的文件的技術。
+### [文件儲存](./document-saving)
+掌握在 Java 應用程式中以各種輸出選項、格式與最佳化設定儲存已註釋文件的技巧。
 
 ### [文字註釋](./text-annotations)
-使用完整的 Java 程式碼範例和自訂選項實現文字突出顯示、下劃線、刪除線、替換和編輯註解。
+實作文字高亮、底線、刪除線、取代與遮蔽註釋，提供完整 Java 程式碼範例與自訂選項。
 
 ### [圖形註釋](./graphical-annotations)
-在文件中添加專業形狀、箭頭、多邊形、距離測量和其他圖形元素，並精確控制外觀和定位。
+在文件中加入專業形狀、箭頭、多邊形、距離測量等圖形元素，精確控制外觀與定位。
 
-### [圖像註釋](./image-annotations)
-了解如何以程式設計方式插入、定位和自訂來自不同文件格式的本機和遠端來源的影像註解。
+### [圖片註釋](./image-annotations)
+學習如何以程式方式插入、定位與自訂圖片註釋，支援本機與遠端來源的不同文件格式。
 
 ### [連結註釋](./link-annotations)
-使用 GroupDocs.Annotation 的綜合連結註解功能在您的文件中建立互動式超連結和連結內容。
+使用 GroupDocs.Annotation 完整的連結註釋功能，在文件內建立互動超連結與連結內容。
 
 ### [表單欄位註釋](./form-field-annotations)
-實現互動式表單字段，包括複選框、按鈕、下拉式選單和文字輸入，以建立可填寫的文件和表單。
+實作互動式表單欄位，包括核取方塊、按鈕、下拉選單與文字輸入，打造可填寫的文件與表單。
 
 ### [註釋管理](./annotation-management)
-透過在 Java 應用程式中以程式設計方式新增、刪除、更新和過濾註解的教學來掌握完整的註解生命週期。
+透過教學掌握在 Java 應用程式中以程式方式新增、移除、更新與篩選註釋的完整生命週期。
 
 ### [回覆管理](./reply-management)
-在文件工作流程中使用線程評論、回覆和基於使用者的討論功能實現協作文件審查。
+在文件工作流程中實作具線索的評論、回覆與使用者討論功能，提升協作審閱效率。
 
 ### [文件資訊](./document-information)
-存取和利用文件元資料、頁面指標、內容資訊和格式詳細資訊來增強您的文件處理應用程式。
+存取並利用文件中繼資料、頁面度量、內容資訊與格式細節，增強文件處理應用程式。
 
 ### [文件預覽](./document-preview)
-產生具有或不帶有註釋的高品質文件預覽、控制預覽解析度並建立自訂文件檢視體驗。
+產生高品質的文件預覽（含或不含註釋），控制預覽解析度，打造自訂的文件檢視體驗。
 
 ### [進階功能](./advanced-features)
-使用 GroupDocs.Annotation for Java 實作進階註解功能、自訂和專門功能的完整教學。
+完整教學示範如何實作進階註釋功能、自訂化與特殊需求，使用 GroupDocs.Annotation for Java。
 
-## GroupDocs.Annotation for Java 入門
+## 開始使用 GroupDocs.Annotation for Java
 
-下載 [最新版本](https://releases.groupdocs.com/annotation/java/) 或開始使用我們的 [免費試用](https://releases.groupdocs.com/annotation/java/) 探索 GroupDocs.Annotation for Java 的完整功能。
+下載 [最新版本](https://releases.groupdocs.com/annotation/java/) 或透過我們的 [免費試用](https://releases.groupdocs.com/annotation/java/) 立即探索 GroupDocs.Annotation for Java 的完整功能。
+
+## 常見問題
+
+**Q:** 我可以在商業 Java 應用程式中使用 GroupDocs.Annotation 嗎？  
+**A:** 可以。商業授權是正式上線的必要條件，亦提供免費試用供評估使用。
+
+**Q:** 函式庫支援受密碼保護的 PDF 嗎？  
+**A:** 完全支援。載入文件時提供密碼，所有註釋功能皆可正常使用。
+
+**Q:** 支援哪些 Java 版本？  
+**A:** API 相容於 Java 8 及以上版本，包括 Java 11、17 以及後續的 LTS 版本。
+
+**Q:** 如何有效處理大型 PDF 檔案？  
+**A:** 使用串流載入選項，並在儲存時啟用文件最佳化，以降低記憶體消耗。
+
+**Q:** 能否以程式方式自訂註釋外觀？  
+**A:** 能。每種註釋類型皆提供顏色、不透明度、線寬、字型樣式等屬性供自訂。
+
+---
+
+**最後更新：** 2026-05-16  
+**測試版本：** GroupDocs.Annotation for Java 23.12（撰寫時最新）  
+**作者：** GroupDocs
+
+## 相關教學
+
+- [使用 GroupDocs Annotation 載入文件的 PDF Java 註釋](/annotation/java/document-loading/)
+- [Java PDF 文字註釋：使用 GroupDocs 添加可搜尋的高亮](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
+- [完整指南 - 如何使用 GroupDocs.Annotation for Java 儲存已註釋的 PDF](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)

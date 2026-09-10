@@ -20,12 +20,6 @@ url: /ar/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/
 weight: 1
 ---
 
- produce Arabic translation.
-
-Make sure to keep markdown syntax.
-
-Let's craft.
-
 # التعاون الفوري على ملفات PDF باستخدام مكتبة تعليقات PDF للـ Java
 
 ## المقدمة

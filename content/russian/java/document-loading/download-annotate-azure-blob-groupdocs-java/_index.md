@@ -281,8 +281,3 @@ annotator.save(outputPath);                      // Save the annotated result
 **Последнее обновление:** 2026-03-27  
 **Тестировано с:** GroupDocs.Annotation 25.2  
 **Автор:** GroupDocs  
-
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
-{< blocks/products/products-backtop-button >}

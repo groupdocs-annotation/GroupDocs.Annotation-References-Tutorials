@@ -159,7 +159,6 @@ type: docs
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### ขั้นตอน 2: สร้างอ็อบเจ็กต์ `Annotator`
 
@@ -171,14 +170,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### ขั้นตอน 3: จัดการทรัพยากรอย่างรับผิดชอบ
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### ข้อผิดพลาดทั่วไป
@@ -196,7 +193,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### ขั้นตอน 5: ตั้งตำแหน่งและขนาด
 
@@ -205,7 +201,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Coordinate note:** จุดเริ่มต้นคือมุมซ้ายบนของหน้า; ค่าต่าง ๆ อยู่ในหน่วย points
@@ -216,14 +211,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### ขั้นตอน 7: แนบ annotation
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### เคล็ดลับมืออาชีพสำหรับการทำ annotation ที่มีประสิทธิภาพ
@@ -240,7 +233,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### ขั้นตอน 9: บันทึกและทำความสะอาด
 
@@ -250,7 +242,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Advanced tip:** ใส่ timestamp หรือ user ID ลงในชื่อไฟล์ (เช่น `review_20260814_1234.pdf`) เพื่อให้ง่ายต่อการติดตามเวอร์ชัน
@@ -270,7 +261,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - ประมวลผลเอกสารเป็นชุดละ 5‑10 ไฟล์เพื่อคงการใช้ heap ให้คงที่  

@@ -160,7 +160,6 @@ Użyj `new URL("https://example.com/document.pdf")`, aby otworzyć strumień wej
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Krok 2: utwórz obiekt `Annotator`
 
@@ -172,14 +171,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Krok 3: zarządzaj zasobami odpowiedzialnie
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Częste pułapki
@@ -197,7 +194,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Krok 5: ustaw pozycję i rozmiar
 
@@ -206,7 +202,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Uwaga o współrzędnych:** Pochodzenie znajduje się w lewym górnym rogu strony; wartości podawane są w punktach.
@@ -217,14 +212,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Krok 7: dołącz adnotację
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Porady profesjonalne dla efektywnej adnotacji
@@ -241,7 +234,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Krok 9: zapisz i posprzątaj
 
@@ -251,7 +243,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Zaawansowana wskazówka:** Dołącz znaczniki czasu lub identyfikatory użytkowników w nazwie pliku (np. `review_20260814_1234.pdf`), aby ułatwić śledzenie wersji.
@@ -271,7 +262,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Przetwarzaj dokumenty w partiach 5‑10, aby utrzymać stabilne zużycie sterty.  

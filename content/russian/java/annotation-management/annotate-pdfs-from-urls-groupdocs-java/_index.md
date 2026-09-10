@@ -160,7 +160,6 @@ type: docs
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Шаг 2: создать объект `Annotator`
 
@@ -172,14 +171,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Шаг 3: ответственно управлять ресурсами
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Распространённые подводные камни
@@ -197,7 +194,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Шаг 5: установить позицию и размер
 
@@ -206,7 +202,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Примечание о координатах:** Начало координат — верхний‑левый угол страницы; значения в пунктах.
@@ -217,14 +212,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Шаг 7: добавить аннотацию
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Советы профессионалов для эффективной аннотации
@@ -241,7 +234,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Шаг 9: сохранить и очистить
 
@@ -251,7 +243,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Продвинутый совет:** Включайте метки времени или идентификаторы пользователей в имя файла (например, `review_20260814_1234.pdf`), чтобы упростить отслеживание версий.
@@ -271,7 +262,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Обрабатывайте документы партиями по 5‑10, чтобы поддерживать стабильное использование кучи.  

@@ -675,10 +675,6 @@ for (AnnotationInfo annotation : annotations) {
 **टेस्ट किया गया:** GroupDocs.Annotation 25.2 for Java  
 **लेखक:** GroupDocs  
 
-{< blocks/products/products-backtop-button >}
-{< /blocks/products/pf/tutorial-page-section >}
-{< /blocks/products/pf/main-container >}
-{< /blocks/products/pf/main-wrap-class >}
 ```java
 public void processBatch(List<String> documents, int batchSize) {
     for (int i = 0; i < documents.size(); i += batchSize) {

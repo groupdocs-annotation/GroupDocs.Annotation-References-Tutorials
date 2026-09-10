@@ -154,7 +154,6 @@ PDF को सीधे रिमोट एड्रेस से लोड क�
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### चरण 2: `Annotator` ऑब्जेक्ट बनाएं
 
@@ -166,14 +165,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### चरण 3: संसाधनों को जिम्मेदारी से प्रबंधित करें
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### सामान्य कठिनाइयाँ
@@ -190,7 +187,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### चरण 5: स्थिति और आकार सेट करें
 
@@ -199,7 +195,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **कोऑर्डिनेट नोट:** मूल बिंदु पेज का टॉप‑लेफ़्ट कोना है; मान पॉइंट्स में होते हैं।
@@ -210,14 +205,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### चरण 7: एनोटेशन संलग्न करें
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### प्रभावी एनोटेशन के लिए प्रो टिप्स
@@ -233,7 +226,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### चरण 9: सहेजें और साफ़ करें
 
@@ -243,7 +235,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Advanced tip:** फ़ाइलनाम में टाइमस्टैम्प या यूज़र आईडी शामिल करें (जैसे, `review_20260814_1234.pdf`) ताकि वर्ज़न ट्रैकिंग सरल हो सके।
@@ -263,7 +254,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - हीप उपयोग को स्थिर रखने के लिए दस्तावेज़ों को 5‑10 के बैच में प्रोसेस करें।  

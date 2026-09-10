@@ -85,9 +85,11 @@ title: تعليق PDF Java – تحميل PDF من URL
 type: docs
 ---
 
-# تعليق PDF جافا – تحميل PDF من URL
+# كيفية التعليق على PDF – تحميل PDF من URL باستخدام Java
 
-في هذا الدليل الشامل ستتعلم **كيفية التعليق على PDF جافا** عن طريق تحميل PDF مباشرةً من عنوان ويب. سواءً كنت تبني بوابة مراجعة قانونية، أو نظام تعلم إلكتروني، أو خط أنابيب تقارير آلي، فإن القدرة على جلب PDF من URL وإضافة تظليل، تعليقات، أو أشكال دون حفظ ملف مؤقت تُعد فوزًا كبيرًا في الإنتاجية. تغطي الخطوات أدناه كل شيء من إعداد البيئة إلى حفظ الملف المُعَلَّق، مع نصائح حول الأداء، الأمان، والتكامل تجعل الحل جاهزًا للإنتاج.
+## المقدمة
+
+إذا كنت تبحث عن **كيفية التعليق على PDF** مباشرةً من عنوان ويب، فقد وصلت إلى المكان الصحيح. في العديد من التطبيقات الحديثة—سواء كنت تبني بوابة مراجعة قانونية، أو نظام تعليم إلكتروني، أو أداة تقارير آلية—ستحتاج غالبًا إلى **load PDF from URL Java** ثم إضافة تعليقات أو تظليل أو أي علامات أخرى دون حفظ الملف محليًا أولًا. يوضح هذا الدليل كل خطوة، من إعداد البيئة إلى حفظ المستند المُعلَّق، مع تغطية نصائح الأداء وحالات الاستخدام الواقعية.
 
 ## إجابات سريعة
 - **هل يمكنني تحميل PDF من URL في جافا؟** نعم – يفتح GroupDocs.Annotation تدفق PDF مباشرةً من أي URL يمكن الوصول إليه.  
@@ -160,7 +162,6 @@ type: docs
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### الخطوة 2: إنشاء كائن `Annotator`
 
@@ -172,14 +173,12 @@ import java.net.URL;
 // إنشاء كائن Annotator باستخدام تدفق URL
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### الخطوة 3: إدارة الموارد بمسؤولية
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### المشكلات الشائعة
@@ -197,7 +196,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### الخطوة 5: ضبط الموقع والحجم
 
@@ -206,7 +204,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, العرض, الارتفاع.
-```
 ```
 
 > **ملاحظة إحداثيات:** الأصل هو الزاوية العلوية اليسرى للصفحة؛ القيم بوحدات النقاط.
@@ -217,14 +214,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, العرض, الارت�
 // ```java
 area.setBackgroundColor(65535); // قيمة Hex للون الأصفر
 ```
-```
 
 ### الخطوة 7: إرفاق التعليق
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### نصائح احترافية للتعليق الفعّال
@@ -241,7 +236,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // استبدل بالدليل المطلوب.
 ```
-```
 
 ### الخطوة 9: الحفظ والتنظيف
 
@@ -251,7 +245,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // تنظيف الموارد بعد الحفظ.
-```
 ```
 
 > **نصيحة متقدمة:** أدرج طوابع زمنية أو معرفات مستخدمين في اسم الملف (مثال: `review_20260814_1234.pdf`) لتبسيط تتبع الإصدارات.
@@ -271,7 +264,6 @@ annotator.dispose(); // تنظيف الموارد بعد الحفظ.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // منطق التعليق هنا
 } // تنظيف تلقائي
-```
 ```
 
 - عالج المستندات على دفعات من 5‑10 للحفاظ على استقرار استهلاك الـ heap.  

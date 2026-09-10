@@ -21,28 +21,6 @@ url: /nl/java/licensing-and-configuration/groupdocs-annotation-license-java-setu
 weight: 1
 ---
 
-.
-
-Will translate bullet points, headings, paragraphs.
-
-Will keep code block placeholders unchanged.
-
-Will translate table rows.
-
-Will translate FAQ.
-
-Will translate conclusion.
-
-Will keep URLs unchanged.
-
-Will keep markdown formatting.
-
-Let's produce final Dutch translation.
-
-Be careful with bold, italics, etc.
-
-Now produce final content.
-
 # Set GroupDocs License Java – GroupDocs Annotation License Java Setup
 
 ## Introduction

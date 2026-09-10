@@ -158,7 +158,6 @@ URL에서 PDF를 로드하면 파일을 디스크에 쓰는 오버헤드가 사�
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### 단계 2: `Annotator` 객체 생성
 
@@ -170,14 +169,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### 단계 3: 리소스를 책임감 있게 관리
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### 일반적인 함정
@@ -194,7 +191,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### 단계 5: 위치 및 크기 설정
 
@@ -203,7 +199,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Coordinate note:** 원점은 페이지의 왼쪽 위 모서리이며 값은 포인트 단위입니다.
@@ -214,14 +209,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### 단계 7: 주석 첨부
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### 효과적인 주석을 위한 팁
@@ -237,7 +230,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### 단계 9: 저장 및 정리
 
@@ -247,7 +239,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Advanced tip:** 파일 이름에 타임스탬프 또는 사용자 ID를 포함(e.g., `review_20260814_1234.pdf`)하면 버전 추적이 간편해집니다.
@@ -267,7 +258,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - 문서를 5‑10개씩 배치 처리하여 힙 사용량을 안정적으로 유지하세요.  

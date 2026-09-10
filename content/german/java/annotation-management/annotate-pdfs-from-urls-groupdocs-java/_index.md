@@ -161,7 +161,6 @@ Verwenden Sie `new URL("https://example.com/document.pdf")`, um einen Input‑St
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Schritt 2: `Annotator`‑Objekt erstellen
 
@@ -173,14 +172,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Schritt 3: Ressourcen verantwortungsbewusst verwalten
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Häufige Stolperfallen
@@ -198,7 +195,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Schritt 5: Position und Größe festlegen
 
@@ -207,7 +203,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Koordinatenhinweis:** Der Ursprung ist die obere linke Ecke der Seite; Werte sind in Punkten.
@@ -218,14 +213,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Schritt 7: Annotation anhängen
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Pro‑Tipps für effektive Annotationen
@@ -242,7 +235,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Schritt 9: Speichern und Aufräumen
 
@@ -252,7 +244,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Erweiterter Tipp:** Integrieren Sie Zeitstempel oder Benutzer‑IDs in den Dateinamen (z. B. `review_20260814_1234.pdf`), um die Versionsverfolgung zu vereinfachen.
@@ -272,7 +263,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Verarbeiten Sie Dokumente in Chargen von 5‑10, um die Heap‑Nutzung stabil zu halten.  

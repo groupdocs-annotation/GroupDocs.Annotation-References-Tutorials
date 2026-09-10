@@ -160,7 +160,6 @@ Använd `new URL("https://example.com/document.pdf")` för att öppna en inmatni
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Steg 2: skapa `Annotator`‑objektet
 
@@ -172,14 +171,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Steg 3: hantera resurser ansvarsfullt
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Vanliga fallgropar
@@ -197,7 +194,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Steg 5: ange position och storlek
 
@@ -206,7 +202,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Koordinatnotering:** Ursprungspunkten är sidans övre vänstra hörn; värdena är i punkter.
@@ -217,14 +212,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Steg 7: fäst annoteringen
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Proffstips för effektiv annotering
@@ -241,7 +234,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Steg 9: spara och rensa upp
 
@@ -251,7 +243,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Avancerat tips:** Inkludera tidsstämplar eller användar‑ID:n i filnamnet (t.ex. `review_20260814_1234.pdf`) för att förenkla versionsspårning.
@@ -271,7 +262,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Bearbeta dokument i batchar om 5‑10 för att hålla heap‑användning stabil.  

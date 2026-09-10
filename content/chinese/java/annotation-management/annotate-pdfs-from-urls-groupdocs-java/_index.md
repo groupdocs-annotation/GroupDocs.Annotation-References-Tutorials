@@ -157,7 +157,6 @@ type: docs
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### 步骤 2：创建 `Annotator` 对象
 
@@ -169,14 +168,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### 步骤 3：负责任地管理资源
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### 常见陷阱
@@ -194,7 +191,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### 步骤 5：设置位置和大小
 
@@ -203,7 +199,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **坐标说明：** 原点是页面的左上角；数值单位为点（points）。
@@ -214,14 +209,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### 步骤 7：附加注释
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### 有效注释的专业提示
@@ -238,7 +231,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### 步骤 9：保存并清理
 
@@ -248,7 +240,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **高级提示：** 在文件名中加入时间戳或用户 ID（例如 `review_20260814_1234.pdf`），以简化版本追踪。
@@ -268,7 +259,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - 将文档分批处理（5‑10 个为一批），保持堆内存使用稳定。  

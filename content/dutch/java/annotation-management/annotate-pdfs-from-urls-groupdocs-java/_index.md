@@ -160,7 +160,6 @@ Gebruik `new URL("https://example.com/document.pdf")` om een input‑stream te o
 // ```java
 String url = "https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java/raw/api-v2/Examples/Resources/SampleFiles/input.pdf?raw=true";
 ```
-```
 
 ### Stap 2: maak het `Annotator`‑object aan
 
@@ -172,14 +171,12 @@ import java.net.URL;
 // Create an Annotator object with the URL stream
 Annotator annotator = new Annotator(new URL(url).openStream());
 ```
-```
 
 ### Stap 3: beheer bronnen verantwoord
 
 ```java
 // ```java
 annotator.dispose();
-```
 ```
 
 #### Veelvoorkomende valkuilen
@@ -197,7 +194,6 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 
 AreaAnnotation area = new AreaAnnotation();
 ```
-```
 
 ### Stap 5: stel positie en grootte in
 
@@ -206,7 +202,6 @@ AreaAnnotation area = new AreaAnnotation();
 import com.groupdocs.annotation.models.Rectangle;
 
 area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
-```
 ```
 
 > **Coördinatenopmerking:** De oorsprong is de linkerbovenhoek van de pagina; waarden zijn in punten.
@@ -217,14 +212,12 @@ area.setBox(new Rectangle(100, 100, 100, 100)); // x, y, width, height.
 // ```java
 area.setBackgroundColor(65535); // Hex value for yellow
 ```
-```
 
 ### Stap 7: voeg de annotatie toe
 
 ```java
 // ```java
 annotator.add(area);
-```
 ```
 
 #### Pro‑tips voor effectieve annotatie
@@ -241,7 +234,6 @@ annotator.add(area);
 // ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/annotated_output.pdf"; // Replace with your desired directory.
 ```
-```
 
 ### Stap 9: opslaan en opruimen
 
@@ -251,7 +243,6 @@ import org.apache.commons.io.FilenameUtils;
 
 annotator.save(outputPath);
 annotator.dispose(); // Clean up resources after saving.
-```
 ```
 
 > **Geavanceerde tip:** Voeg tijdstempels of gebruikers‑ID's toe aan de bestandsnaam (bijv. `review_20260814_1234.pdf`) om versie‑tracking te vereenvoudigen.
@@ -271,7 +262,6 @@ annotator.dispose(); // Clean up resources after saving.
 try (Annotator annotator = new Annotator(new URL(url).openStream())) {
     // Annotation logic here
 } // Automatic cleanup
-```
 ```
 
 - Verwerk documenten in batches van 5‑10 om het heap‑gebruik stabiel te houden.  
