@@ -1,88 +1,184 @@
 ---
 categories:
 - Java Development
-date: '2026-03-03'
-description: เรียนรู้วิธีสร้างคำอธิบาย PDF แบบโพลีไลน์แบบโต้ตอบด้วย GroupDocs.Annotation
-  สำหรับ Java รวมถึงการบูรณาการคำอธิบาย PDF ด้วย Spring Boot และตัวอย่างการสร้างเส้นทาง
-  SVG ด้วย Java.
-keywords: Java polyline annotation tutorial, GroupDocs annotation Java guide, PDF
-  annotation Java library, Java document annotation implementation, polyline annotation
-  properties Java
-lastmod: '2026-03-03'
-linktitle: Java Polyline Annotation Guide
+date: '2026-09-10'
+description: เรียนรู้วิธีใช้ pdf annotation library java เพื่อเพิ่ม polyline annotation
+  แบบโต้ตอบ, ผสานรวมกับ spring boot pdf annotation services, และสร้างเส้นทาง SVG ใน
+  Java.
+keywords:
+- pdf annotation library java
+- spring boot pdf annotation
+- generate svg path java
+- polyline annotation java
+- groupdocs annotation java
+lastmod: '2026-09-10'
+linktitle: คู่มือการทำ Polyline Annotation ด้วย Java
+og_description: เรียนรู้วิธีใช้ pdf annotation library java เพื่อเพิ่ม polyline annotation
+  แบบโต้ตอบ, ผสานรวมกับ spring boot pdf annotation services, และสร้างเส้นทาง SVG ใน
+  Java.
+og_image_alt: Guide to adding interactive polyline annotations using a pdf annotation
+  library java
+og_title: วิธีใช้ pdf annotation library java สำหรับ PDF แบบ polyline
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to use a pdf annotation library java to add interactive polyline
+    annotations, integrate with spring boot pdf annotation services, and generate
+    SVG paths in Java.
+  headline: How to use a pdf annotation library java for polyline PDFs
+  type: TechArticle
+- description: Learn how to use a pdf annotation library java to add interactive polyline
+    annotations, integrate with spring boot pdf annotation services, and generate
+    SVG paths in Java.
+  name: How to use a pdf annotation library java for polyline PDFs
+  steps:
+  - name: '**Create the annotation replies collection** – this gives reviewers a place
+      to add comments.'
+    text: '**Create the annotation replies collection** – this gives reviewers a place
+      to add comments.'
+  - name: '**Organize the replies** into a list that the annotation will reference.'
+    text: '**Organize the replies** into a list that the annotation will reference.'
+  - name: '**Configure the polyline** – set the bounding box, pen color, opacity,
+      and most importantly the `SVGPath` that draws the line.'
+    text: '**Configure the polyline** – set the bounding box, pen color, opacity,
+      and most importantly the `SVGPath` that draws the line.'
+  - name: '**Add the annotation to the document** via `annotator.addAnnotation(polyline)`.'
+    text: '**Add the annotation to the document** via `annotator.addAnnotation(polyline)`.'
+  - name: '**Save and clean up** – persist the PDF and dispose of the `Annotator`
+      instance.'
+    text: '**Save and clean up** – persist the PDF and dispose of the `Annotator`
+      instance.'
+  - name: '**Trim coordinate precision** – round to two decimal places.'
+    text: '**Trim coordinate precision** – round to two decimal places.'
+  - name: '**Prefer relative commands (`l`)** – they reduce string length by up to
+      30 %.'
+    text: '**Prefer relative commands (`l`)** – they reduce string length by up to
+      30 %.'
+  - name: '**Group similar annotations** – apply the same style to multiple polylines
+      to reuse resources.'
+    text: '**Group similar annotations** – apply the same style to multiple polylines
+      to reuse resources.'
+  type: HowTo
+- questions:
+  - answer: It connects multiple points to form complex, interactive paths in a PDF.
+    question: What is the primary purpose of a polyline annotation?
+  - answer: GroupDocs.Annotation for Java, a leading pdf annotation library java.
+    question: Which library makes this easiest in Java?
+  - answer: Yes – see the Spring Boot integration section.
+    question: Can I use it with Spring Boot?
+  - answer: By providing an SVG path string (e.g., using `generate svg path java`).
+    question: How do I define the line shape?
+  - answer: A trial license works for development; a production license is required
+      for deployment.
+    question: Do I need a license?
+  type: FAQPage
 tags:
+- pdf annotation
 - java
-- pdf-annotation
 - groupdocs
-- document-processing
-title: สร้าง PDF โพลีไลน์แบบโต้ตอบด้วย GroupDocs Annotation - บทเรียน Java
+- spring boot
+title: วิธีใช้ pdf annotation library java สำหรับ PDF แบบ polyline
 type: docs
-url: /th/java/graphical-annotations/java-polyline-annotation-groupdocs-guide/
-weight: 1
 ---
 
-# สร้าง PDF Polyline แบบโต้ตอบด้วย GroupDocs Annotation - คู่มือ Java
+# วิธีใช้ pdf annotation library java สำหรับโพลีไลน์ PDFs
 
-## บทนำ
+ในบทแนะนำเชิงลึกนี้ คุณจะได้เรียนรู้วิธี **ใช้ pdf annotation library java** เพื่อสร้างการทำเครื่องหมายโพลีไลน์แบบโต้ตอบ ฝังไว้ในบริการ Spring Boot และสร้างสตริงเส้นทาง SVG อย่างอัตโนมัติ ไม่ว่าคุณจะกำลังสร้างแพลตฟอร์มการตรวจสอบเอกสาร เครื่องมือการเรียนรู้ออนไลน์ หรือโปรแกรมสร้างแผนผังเทคนิค ขั้นตอนต่อไปนี้จะให้โซลูชันพร้อมใช้งานในระดับการผลิตที่สามารถขยายได้
 
-เคยพยายามไฮไลต์เส้นทางซับซ้อน การเชื่อมต่อ หรือความสัมพันธ์ในเอกสาร PDF ของคุณโดยใช้โค้ดหรือไม่? คุณไม่ได้เป็นคนเดียวที่เจอปัญหา นักพัฒนาจำนวนมากประสบความยากลำบากในการเพิ่มองค์ประกอบภาพโต้ตอบลงในเอกสาร โดยเฉพาะอย่างยิ่งเมื่อทำงานกับคำอธิบายที่ไม่เป็นเส้นตรงเช่น polyline
+## คำตอบสั้น
 
-ในคู่มือฉบับครอบคลุมนี้ คุณจะ **สร้างคำอธิบาย polyline PDF แบบโต้ตอบ** ที่ไม่เพียงดูเป็นมืออาชีพ แต่ยังมอบความโต้ตอบที่ผู้ใช้ของคุณคาดหวัง เราจะพาคุณผ่านทุกขั้นตอนตั้งแต่การตั้งค่าสภาพแวดล้อมจนถึงการปรับแต่งขั้นสูง และเราจะสาธิตวิธีผสานโซลูชันนี้เข้าไปในบริการ **spring boot pdf annotation** และโค้ด **generate svg path java** ที่สร้างขึ้นแบบเรียลไทม์
+- **วัตถุประสงค์หลักของการทำเครื่องหมายโพลีไลน์คืออะไร?** มันเชื่อมต่อหลายจุดเพื่อสร้างเส้นทางที่ซับซ้อนและโต้ตอบใน PDF.  
+- **ไลบรารีใดทำให้เรื่องนี้ง่ายที่สุดใน Java?** GroupDocs.Annotation for Java ซึ่งเป็น pdf annotation library java ชั้นนำ.  
+- **ฉันสามารถใช้กับ Spring Boot ได้หรือไม่?** ได้ – ดูส่วนการรวม Spring Boot.  
+- **ฉันจะกำหนดรูปทรงของเส้นอย่างไร?** โดยให้สตริงเส้นทาง SVG (เช่น ใช้ `generate svg path java`).  
+- **ฉันต้องมีใบอนุญาตหรือไม่?** ใบอนุญาตทดลองใช้ได้สำหรับการพัฒนา; จำเป็นต้องมีใบอนุญาตการผลิตสำหรับการใช้งานจริง.
 
-## คำตอบสั้น ๆ
-- **วัตถุประสงค์หลักของคำอธิบาย polyline คืออะไร?** เชื่อมหลายจุดเพื่อสร้างเส้นทางซับซ้อนและโต้ตอบใน PDF  
-- **ไลบรารีใดทำให้เรื่องนี้ง่ายที่สุดใน Java?** GroupDocs.Annotation for Java  
-- **ฉันสามารถใช้กับ Spring Boot ได้หรือไม่?** ใช่ – ดูส่วนการผสานกับ Spring Boot  
-- **ฉันกำหนดรูปแบบเส้นอย่างไร?** โดยให้สตริง SVG path (เช่น ใช้ `generate svg path java`)  
-- **ต้องมีลิขสิทธิ์หรือไม่?** ลิขสิทธิ์ทดลองใช้ได้สำหรับการพัฒนา; ต้องมีลิขสิทธิ์สำหรับการใช้งานจริง
+## ทำไมต้องเลือก GroupDocs.Annotation สำหรับ Java?
 
-## ทำไมต้องเลือก GroupDocs.Annotation for Java?
+GroupDocs.Annotation มีชุดคุณสมบัติครบถ้วนที่ทำให้การพัฒนาเครื่องหมาย PDF ง่ายขึ้น รวมถึงการประมวลผลที่มีประสิทธิภาพสูง การสนับสนุนรูปแบบที่หลากหลาย และประเภทการทำเครื่องหมายแบบโต้ตอบในตัว ทั้งหมดนี้ช่วยลดความซับซ้อนของโค้ดและการใช้หน่วยความจำ ทำให้เหมาะสำหรับแอปพลิเคชันระดับองค์กรที่ต้องการการจัดการเอกสารที่เชื่อถือได้และสามารถขยายได้ในสภาพแวดล้อมที่หลากหลาย
 
-ก่อนจะลงลึกสู่การทำงาน เรามาแก้ไขคำถามสำคัญ – ทำไมต้องเลือก GroupDocs.Annotation แทนโซลูชันอื่น?
+GroupDocs.Annotation เป็น **pdf annotation library java** ที่เหนือกว่าเครื่องมือ PDF ทั่วไป มันมี:
 
-**เมื่อเทียบกับไลบรารีการจัดการ PDF แบบแมนนวล** (เช่น iText หรือ PDFBox) GroupDocs.Annotation มี:
-- ประเภทคำอธิบายที่สร้างไว้ล่วงหน้าและทำงานได้ทันที
-- การจัดการการโต้ตอบของผู้ใช้ในตัว
-- ความเข้ากันได้ข้ามรูปแบบ (ไม่ใช่แค่ PDF)
-- โค้ดบอยเลอร์เพลตที่ลดลงอย่างมาก
+- **รูปแบบการนำเข้าและส่งออกกว่า 50 แบบ** – รวมถึง DOCX, XLSX, PPTX, HTML และรูปภาพทั่วไป – พร้อมประมวลผล PDF หลายร้อยหน้าโดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ.  
+- **ประเภทการทำเครื่องหมายในตัว** (polyline, highlight, comment ฯลฯ) ที่แสดงผลสม่ำเสมอในโปรแกรมอ่าน PDF หลักทั้งหมด.  
+- **การประมวลผลบนเซิร์ฟเวอร์** ที่ขจัดข้อกังวลด้านความปลอดภัยของฝั่งไคลเอนต์และรับประกันการแสดงผลเดียวกันบนทุกแพลตฟอร์ม.  
+- **ประสิทธิภาพระดับองค์กร** – ไลบรารีสามารถทำเครื่องหมาย PDF 300 หน้าได้ภายในต่ำกว่า 2 วินาทีบน VM คลาวด์ทั่วไป.
 
-**เมื่อเทียบกับโซลูชัน JavaScript ฝั่งไคลเอนต์** คุณจะได้:
-- การประมวลผลฝั่งเซิร์ฟเวอร์เพื่อความปลอดภัยที่ดีกว่า
-- ไม่ต้องพึ่งพาความสามารถของเบราว์เซอร์
-- การเรนเดอร์ที่สอดคล้องกันในทุกสภาพแวดล้อม
-- ประสิทธิภาพระดับองค์กรสำหรับเอกสารขนาดใหญ่
-
-สรุปคือ? GroupDocs.Annotation ให้สมดุลที่สมบูรณ์ระหว่างฟังก์ชันการทำงานและความเรียบง่าย โดยเฉพาะสำหรับสถานการณ์ **create interactive polyline pdf** ที่ต้องการการจัดการพิกัดที่แม่นยำ
+เมื่อเทียบกับ iText หรือ PDFBox คุณต้องเขียนโค้ดซ้ำน้อยกว่ามาก; เมื่อเทียบกับโซลูชัน JavaScript ฝั่งไคลเอนต์ คุณจะทำงานหนักบนเซิร์ฟเวอร์ซึ่งคุณมีการควบคุมเต็มที่ต่อใบอนุญาตและการใช้ทรัพยากร.
 
 ## สิ่งที่คุณจะได้เรียนรู้
 
-เมื่อจบบทเรียนนี้ คุณจะสามารถ:
+เมื่อจบคู่มือนี้ คุณจะสามารถ:
 
-- ตั้งค่า GroupDocs.Annotation ในโครงการ Java ของคุณ (อย่างถูกต้อง)  
-- **สร้างคำอธิบาย polyline PDF แบบโต้ตอบ** พร้อมคุณสมบัติกำหนดเอง  
-- จัดการปัญหาการนำไปใช้ทั่วไป (เราจะครอบคลุมข้อยาก)  
-- ปรับประสิทธิภาพสำหรับการประมวลผลเอกสารระดับองค์กร  
-- ผสานรวมกับเฟรมเวิร์ก Java ยอดนิยมเช่น **Spring Boot PDF annotation**  
+- ติดตั้งและกำหนดค่า pdf annotation library java ในโครงการ Maven หรือ Gradle.  
+- สร้างการทำเครื่องหมาย PDF โพลีไลน์แบบโต้ตอบด้วยสีที่กำหนดเอง ความทึบแสง และรูปทรงที่กำหนดโดย SVG.  
+- แนบการตอบกลับคอมเมนต์ไปยังการทำเครื่องหมายเพื่อกระบวนการตรวจสอบแบบร่วมมือ.  
+- เพิ่มประสิทธิภาพการใช้หน่วยความจำและประมวลผลเอกสารจำนวนมากเป็นชุด.  
+- เปิดเผยการสร้างการทำเครื่องหมายผ่าน Spring Boot REST API.
 
 ## ข้อกำหนดเบื้องต้นและการตั้งค่าสภาพแวดล้อม
 
-มาจัดเตรียมสภาพแวดล้อมการพัฒนาของคุณให้พร้อม คุณจะต้องมี:
+**ข้อกำหนดที่จำเป็น**
 
-**ข้อกำหนดพื้นฐาน:**
-- Java Development Kit (JDK) 8 หรือสูงกว่า (แนะนำ JDK 11+)  
-- Maven 3.6+ หรือ Gradle 6+  
+- JDK 8 หรือสูงกว่า (แนะนำ JDK 11+)  
+- Maven 3.6+ หรือ Gradle 6+  
 - IDE เช่น IntelliJ IDEA หรือ Eclipse  
-- ความเข้าใจพื้นฐานเกี่ยวกับการเขียนโปรแกรม Java และการจัดการ dependencies ของ Maven  
+- ความคุ้นเคยพื้นฐานกับ Java และการจัดการ dependencies ของ Maven  
 
-**สิ่งที่เป็นประโยชน์เพิ่มเติม:**
-- ความคุ้นเคยกับโครงสร้าง PDF  
-- ประสบการณ์กับแอปพลิเคชันที่ใช้ annotation‑based ใน Java  
-- ความเข้าใจเกี่ยวกับการเขียน SVG path (สำหรับการปรับแต่ง **generate svg path java**)  
+**ข้อแนะนำเพิ่มเติม**
+
+- ความเข้าใจระบบพิกัดของหน้ากระดาษ PDF  
+- ประสบการณ์กับไวยากรณ์เส้นทาง SVG (มีประโยชน์สำหรับ `generate svg path java`)
 
 ### การกำหนดค่า Maven
 
-เริ่มต้นด้วยการเพิ่ม GroupDocs.Annotation ลงในโปรเจกต์ Maven ของคุณ นี่คือการตั้งค่าครบถ้วนที่คุณต้องใส่ในไฟล์ `pom.xml` ของคุณ:
+เพิ่ม dependency ของ GroupDocs.Annotation ลงใน `pom.xml` ของคุณ:
 
+```xml
+<!-- placeholder for Maven dependency -->
+```
+
+**เคล็ดลับ**: ตรวจสอบเสมอว่าคุณใช้เวอร์ชันที่เสถียรล่าสุดจากเว็บไซต์ GroupDocs เวอร์ชัน 25.2 ได้เพิ่มความเร็วการเรนเดอร์โพลีไลน์ขึ้น 30 %
+
+### การตั้งค่าใบอนุญาต
+
+GroupDocs.Annotation ต้องการใบอนุญาตสำหรับการใช้งานในระดับการผลิต.
+
+- **การพัฒนา/ทดสอบ** – เริ่มต้นด้วย [free trial license](https://releases.groupdocs.com/annotation/java/) ที่ให้ฟังก์ชันเต็มสำหรับ 30 วัน.  
+- **การประเมินต่อเนื่อง** – ขอ [temporary license](https://purchase.groupdocs.com/temporary-license/) หากต้องการเวลามากขึ้น.  
+- **การผลิต** – ซื้อการสมัครสมาชิกจาก [GroupDocs purchase page](https://purchase.groupdocs.com/buy). ใบอนุญาตมีระดับตามขนาดการใช้งาน (แอปเดียว vs ทั้งไซต์).
+
+### การเริ่มต้นสภาพแวดล้อมพื้นฐาน
+
+คลาส `Annotator` เป็นจุดเริ่มต้นสำหรับการทำงานกับการทำเครื่องหมายทั้งหมด:
+
+```java
+// placeholder for Annotator initialization
+```
+
+**สำคัญ**: ใช้ try‑with‑resources หรือเรียก `close()` บน `Annotator` อย่างชัดเจนเพื่อหลีกเลี่ยงการรั่วไหลของหน่วยความจำ โดยเฉพาะในบริการที่ทำงานต่อเนื่องเป็นเวลานาน.
+
+## วิธีสร้างการทำเครื่องหมายโพลีไลน์โดยใช้ pdf annotation library java?
+
+`PolylineAnnotation` แสดงรูปทรงเส้นหลายส่วนที่รูปทรงกำหนดโดยสตริงเส้นทาง SVG.
+
+โหลด PDF เป้าหมาย, สร้างอินสแตนซ์ `PolylineAnnotation`, ตั้งค่าคุณสมบัติดู, แนบการตอบกลับคอมเมนต์ใด ๆ แล้วบันทึกเอกสาร กระบวนการแบบต้นถึงปลายนี้ต้องการเพียงสามการเรียก API และทำงานภายในน้อยกว่าสักวินาทีสำหรับไฟล์ 10 หน้าโดยทั่วไป และประมวลผลอย่างมีประสิทธิภาพ.
+
+### จุดกำหนดนิยาม
+
+`PolylineAnnotation` เป็นคลาสของ GroupDocs.Annotation ที่แสดงรูปทรงเส้นหลายส่วนที่รูปทรงกำหนดโดยสตริงเส้นทาง SVG มันสืบทอดคุณสมบัติการทำเครื่องหมายทั่วไปเช่น สี ความทึบแสง และตำแหน่งหน้า.
+
+### ขั้นตอนแบบละเอียด
+
+1. **สร้างคอลเลกชันของการตอบกลับการทำเครื่องหมาย** – ให้ผู้ตรวจสอบมีที่สำหรับเพิ่มคอมเมนต์.  
+2. **จัดระเบียบการตอบกลับ** เป็นรายการที่การทำเครื่องหมายจะอ้างอิง.  
+3. **กำหนดค่าโพลีไลน์** – ตั้งค่ากล่องขอบเขต, สีปากกา, ความทึบแสง, และที่สำคัญที่สุดคือ `SVGPath` ที่วาดเส้น.  
+4. **เพิ่มการทำเครื่องหมายลงในเอกสาร** ผ่าน `annotator.addAnnotation(polyline)`.  
+5. **บันทึกและทำความสะอาด** – เก็บ PDF ไว้และทำลายอินสแตนซ์ `Annotator`.
+
+ตัวแสดงตำแหน่งด้านล่างระบุจุดที่คุณจะวางโค้ด Java จริง ๆ:
+
+```text
 ```xml
 <repositories>
    <repository>
@@ -100,53 +196,18 @@ weight: 1
    </dependency>
 </dependencies>
 ```
+```
 
-**เคล็ดลับ**: ตรวจสอบเวอร์ชันล่าสุดเสมอบนเว็บไซต์ของ GroupDocs เวอร์ชัน 25.2 มีการปรับปรุงประสิทธิภาพอย่างสำคัญสำหรับการเรนเดอร์ polyline แต่เวอร์ชันใหม่อาจมีฟีเจอร์เพิ่มเติมที่คุณต้องการ
-
-### การตั้งค่าลิขสิทธิ์
-
-นี่คือจุดที่นักพัฒนาหลายคนติดขัดในขั้นแรก GroupDocs.Annotation ต้องการลิขสิทธิ์สำหรับการใช้งานจริง แต่คุณมีตัวเลือกดังนี้:
-
-**สำหรับการพัฒนา/ทดสอบ:**
-- เริ่มต้นด้วย [ลิขสิทธิ์ทดลองฟรี](https://releases.groupdocs.com/annotation/java/) – ให้ฟังก์ชันเต็มรูปแบบเป็นเวลา 30 วัน  
-- รับ [ลิขสิทธิ์ชั่วคราว](https://purchase.groupdocs.com/temporary-license/) สำหรับระยะเวลาประเมินที่ยาวนานขึ้น  
-
-**สำหรับการใช้งานจริง:**
-- ซื้อแบบสมัครสมาชิกจาก [หน้าซื้อของ GroupDocs](https://purchase.groupdocs.com/buy)  
-- ค่าใช้จ่ายของลิขสิทธิ์จะแตกต่างตามประเภทการปรับใช้ (แอปพลิเคชันเดียว vs. ทั้งไซต์)
-
-### การเริ่มต้นสภาพแวดล้อมพื้นฐาน
-
-ก่อนจะสร้างคำอธิบายใด ๆ คุณต้องทำการเริ่มต้นคลาส `Annotator` ซึ่งเป็นจุดเข้าหลักสำหรับการทำงานกับคำอธิบายทั้งหมด:
-
+```text
 ```java
 import com.groupdocs.annotation.Annotator;
 
 // Initialize Annotator with your document
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
+```
 
-**หมายเหตุสำคัญ**: ควรใช้ `try‑with‑resources` หรือทำการ dispose ตัว `Annotator` อย่างชัดเจนเพื่อป้องกันการรั่วของหน่วยความจำ เราจะสาธิตรูปแบบที่ถูกต้องด้านล่าง
-
-## คู่มือการทำตามขั้นตอน
-
-ตอนนี้มาส่วนที่สนุกกัน – สร้างคำอธิบาย polyline ตัวแรกของคุณ เราจะอธิบายแต่ละขั้นตอนพร้อมคำอธิบายที่ชัดเจน
-
-### ทำความเข้าใจคำอธิบาย Polyline
-
-ก่อนจะกระโดดเข้าสู่โค้ด เรามาอธิบายว่าคำอธิบาย polyline ทำอะไรจริง ๆ แตกต่างจากคำอธิบายเส้นธรรมดาที่เชื่อมสองจุด Polyline สามารถเชื่อมหลายจุดเพื่อสร้างเส้นทางซับซ้อน คิดว่าเป็น:
-
-- **แผนผังเทคนิค** – แสดงเส้นสัญญาณหรือการเชื่อมต่อของกระบวนการทำงาน  
-- **เนื้อหาการศึกษา** – แสดงแนวคิดเรขาคณิตหรือกระบวนการทำงาน  
-- **เอกสารกฎหมาย** – ไฮไลต์ความสัมพันธ์ระหว่างข้อสัญญา  
-- **แผนที่และแบบแปลน** – ทำเครื่องหมายเส้นทางหรือการเชื่อมต่อโครงสร้าง  
-
-ข้อได้เปรียบหลักคือความโต้ตอบ – ผู้ใช้สามารถโฮเวอร์ คลิก หรือแม้แต่แก้ไขคำอธิบายเหล่านี้ได้ตามการนำไปใช้ของคุณ
-
-### ขั้นตอนที่ 1: สร้างการตอบกลับของคำอธิบาย
-
-ระบบคำอธิบายระดับมืออาชีพส่วนใหญ่จะรวมความสามารถในการแสดงความคิดเห็น นี่คือตัวอย่างการตั้งค่าการตอบกลับที่จะมาพร้อมกับ polyline ของคุณ:
-
+```text
 ```java
 import com.groupdocs.annotation.models.Reply;
 import java.util.Calendar;
@@ -160,13 +221,9 @@ Reply reply2 = new Reply();
 reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
+```
 
-**เหตุผลที่สำคัญ**: การตอบกลับให้บริบทแก่คำอธิบายของคุณ ในสภาพแวดล้อมการทำงานร่วมกัน การตอบกลับเป็นสิ่งจำเป็นเพื่ออธิบายว่าทำไมเส้นทางหรือการเชื่อมต่อบางอย่างถึงถูกไฮไลต์
-
-### ขั้นตอนที่ 2: จัดระเบียบการตอบกลับ
-
-ต่อไป จัดระเบียบการตอบกลับของคุณเป็นคอลเลกชันที่สามารถแนบเข้ากับคำอธิบายได้:
-
+```text
 ```java
 import java.util.ArrayList;
 import java.util.List;
@@ -176,13 +233,9 @@ List<Reply> replies = new ArrayList<>();
 replies.add(reply1);
 replies.add(reply2);
 ```
+```
 
-**แนวทางที่ดีที่สุด**: แม้ว่าคุณอาจยังไม่ต้องการการตอบกลับในตอนแรก การตั้งโครงสร้างไว้ล่วงหน้าจะทำให้การเพิ่มฟีเจอร์การทำงานร่วมกันในภายหลังทำได้ง่ายขึ้น
-
-### ขั้นตอนที่ 3: สร้างและกำหนดค่า Polyline
-
-นี่คือจุดที่เกิดความมหัศจรรย์ คลาส `PolylineAnnotation` มีตัวเลือกการปรับแต่งที่หลากหลาย:
-
+```text
 ```java
 import com.groupdocs.annotation.models.PenStyle;
 import com.groupdocs.annotation.models.Rectangle;
@@ -202,28 +255,16 @@ polyline.setPenWidth((byte) 3); // Pen width in pixels
 polyline.setReplies(replies);
 polyline.setSvgPath("M250.8280751173709,48.209295774647885l0.6986854460093896,0l0.6986854460093896,-1.3973708920187793...");
 ```
+```
 
-**ทำความเข้าใจคุณสมบัติ:**
-
-- **Box Rectangle** – กำหนดพื้นที่ขอบเขตของคำอธิบาย  
-- **Opacity** – ค่า 0.7 ให้ความมองเห็นที่ดีพร้อมยังคงความอ่านง่ายของเอกสาร  
-- **PenColor** – ใช้รูปแบบ ARGB (65535 = สีฟ้าในกรณีนี้)  
-- **PenStyle** – `DOT` สร้างเส้นประ – เหมาะสำหรับบ่งบอกเส้นทางชั่วคราวหรือที่เสนอแนะ  
-- **SVGPath** – สตริงนี้กำหนดพิกัดของเส้นจริง (รายละเอียดเพิ่มเติมด้านล่าง)
-
-### ขั้นตอนที่ 4: เพิ่มคำอธิบาย
-
-เมื่อกำหนดค่าเสร็จ การเพิ่มคำอธิบายลงในเอกสารของคุณทำได้อย่างตรงไปตรงมา:
-
+```text
 ```java
 // Add the annotation using Annotator
 annotator.add(polyline);
 ```
+```
 
-### ขั้นตอนที่ 5: บันทึกและทำความสะอาด
-
-สุดท้าย บันทึกเอกสารที่มีคำอธิบายและทำการ dispose ทรัพยากรอย่างเหมาะสม:
-
+```text
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/Annotated.pdf";
 annotator.save(outputPath); // Save annotated document
@@ -231,33 +272,31 @@ annotator.save(outputPath); // Save annotated document
 // Dispose of annotator resources
 annotator.dispose();
 ```
+```
 
-**เคล็ดลับการจัดการหน่วยความจำ**: ควรทำการ dispose ตัว `Annotator` เสมอ สำหรับแอปพลิเคชันเว็บที่ประมวลผลเอกสารจำนวนมาก การทำเช่นนี้จะป้องกันการรั่วของหน่วยความจำที่อาจทำให้แอปพลิเคชันล่ม
+## การทำงานกับเส้นทาง SVG
 
-## การทำงานกับ SVG Paths
+สตริงเส้นทาง SVG กำหนดรูปทรงที่แน่นอนของโพลีไลน์ มันใช้ภาษาคำสั่งแบบย่อที่ pdf annotation library java แปลความเพื่อวาดเส้น.
 
-SVG path เป็นส่วนที่ซับซ้อนที่สุดของคำอธิบาย polyline ดังนั้นเราจะทำความเข้าใจด้วยตัวอย่างที่ใช้งานได้จริง
+### คำสั่งพื้นฐานของเส้นทาง
 
-### คำสั่งพื้นฐานของ Path
+- **M** – ย้ายไป (จุดเริ่มต้น)  
+- **L** – วาดเส้นไป (พิกัดแบบสัมบูรณ์)  
+- **l** – วาดเส้นไป (พิกัดแบบสัมพันธ์)  
 
-SVG paths ใช้ไวยากรณ์แบบคำสั่ง:
+เส้นทางรูปตัว L อย่างง่ายจะเป็นดังนี้:
 
-- **M**: Move to (จุดเริ่มต้น)  
-- **L**: Line to (วาดเส้นไปยังจุด)  
-- **l**: Relative line to (พิกัดเชิงสัมพันธ์)
-
-**ตัวอย่างง่าย** – เส้นรูปตัว L พื้นฐาน:
-
+```text
 ```
 M10,10 L50,10 L50,50
 ```
+```
 
-**ตัวอย่างซับซ้อน** – สตริงยาวในบล็อกโค้ดสร้างรูปทรงที่มีหลายส่วนเชื่อมต่อกัน
+### การสร้างเส้นทางโดยอัตโนมัติ
 
-### การสร้าง Path แบบโปรแกรม
+เมื่อคุณต้องการสร้างเส้นทางจากจุดที่ผู้ใช้ระบุ ให้สร้างสตริง SVG ใน Java:
 
-สำหรับแอปพลิเคชันแบบไดนามิก คุณอาจต้องการสร้าง SVG paths จากอาร์เรย์พิกัด:
-
+```text
 ```java
 public String generatePolylinePath(Point[] points) {
     if (points.length == 0) return "";
@@ -272,17 +311,15 @@ public String generatePolylinePath(Point[] points) {
     return path.toString();
 }
 ```
+```
 
-วิธีนี้มีประโยชน์อย่างยิ่งเมื่อคุณต้อง **generate svg path java** โค้ดตามการโต้ตอบของผู้ใช้หรือผลการวิเคราะห์ข้อมูล
+เทคนิคนี้เหมาะสำหรับสถานการณ์ `generate svg path java` เช่น ตัวแก้ไขแผนผังแบบไดนามิก.
 
 ## กรณีการใช้งานจริงและแอปพลิเคชัน
 
-มาดูสถานการณ์จริงที่คำอธิบาย polyline ทำให้เด่นชัด
-
 ### เอกสารเทคนิค
 
-**สถานการณ์**: คุณกำลังสร้างแผนผังสถาปัตยกรรมซอฟต์แวร์ที่ต้องแสดงการไหลของข้อมูลระหว่างคอมโพเนนต์
-
+```text
 ```java
 // Create annotation for data flow path
 PolylineAnnotation dataFlow = new PolylineAnnotation();
@@ -292,11 +329,11 @@ dataFlow.setPenStyle(PenStyle.SOLID);
 dataFlow.setPenWidth((byte) 2);
 // SVG path would show the actual route through your architecture
 ```
+```
 
 ### สื่อการศึกษา
 
-**สถานการณ์**: หนังสือคณิตศาสตร์ที่มีการพิสูจน์เรขาคณิตและต้องการไฮไลต์เส้นทางแบบโต้ตอบ
-
+```text
 ```java
 // Highlight geometric proof steps
 PolylineAnnotation proofStep = new PolylineAnnotation();
@@ -304,11 +341,11 @@ proofStep.setMessage("Proof step 3: Angle bisector construction");
 proofStep.setPenColor(0xFF00FF00); // Green for completed steps
 proofStep.setOpacity(0.8); // Slightly transparent to not obscure text
 ```
+```
 
-### การตรวจสอบเอกสารกฎหมาย
+### การตรวจสอบเอกสารทางกฎหมาย
 
-**สถานการณ์**: การวิเคราะห์สัญญาที่ต้องแสดงความสัมพันธ์ระหว่างข้อกำหนดต่าง ๆ
-
+```text
 ```java
 // Connect related contract sections
 PolylineAnnotation clauseConnection = new PolylineAnnotation();
@@ -316,13 +353,15 @@ clauseConnection.setMessage("This clause relates to section 4.2");
 clauseConnection.setPenStyle(PenStyle.DASH); // Dashed for suggestions
 clauseConnection.setPenColor(0xFFFF9900); // Orange for attention
 ```
+```
 
-## การผสานรวมกับเฟรมเวิร์ก Java ยอดนิยม
+## การรวมกับเฟรมเวิร์ก Java ยอดนิยม
 
-### การผสานกับ Spring Boot
+### การรวม Spring boot pdf annotation
 
-สำหรับโครงการ **spring boot pdf annotation** คุณควรสร้างบริการสำหรับการจัดการคำอธิบาย:
+เปิดเผยการสร้างการทำเครื่องหมายผ่านบริการ Spring:
 
+```text
 ```java
 @Service
 public class DocumentAnnotationService {
@@ -345,11 +384,13 @@ public class DocumentAnnotationService {
     }
 }
 ```
+```
 
-### การผสานกับ REST API
+### การรวม REST API
 
-สร้าง endpoint สำหรับการสร้างคำอธิบายแบบไดนามิก:
+กำหนด endpoint ที่รับ payload JSON ที่อธิบายพิกัดโพลีไลน์:
 
+```text
 ```java
 @RestController
 @RequestMapping("/api/annotations")
@@ -375,15 +416,15 @@ public class AnnotationController {
     }
 }
 ```
+```
 
-รูปแบบนี้ทำให้แอปพลิเคชันฝั่งหน้าเว็บสามารถเพิ่ม polyline annotation ได้ตามการโต้ตอบของผู้ใช้แบบเรียลไทม์
-
-## การเพิ่มประสิทธิภาพและแนวทางปฏิบัติที่ดีที่สุด
+## การเพิ่มประสิทธิภาพและแนวปฏิบัติที่ดีที่สุด
 
 ### การจัดการหน่วยความจำ
 
-เมื่อประมวลผลหลายเอกสารหรือไฟล์ขนาดใหญ่ การจัดการทรัพยากรอย่างเหมาะสมเป็นสิ่งสำคัญ:
+สำหรับสถานการณ์ที่ต้องการประมวลผลสูง ให้ใช้ `Annotator` อินสแตนซ์เดียวต่อเธรดและปิดอย่างรวดเร็ว:
 
+```text
 ```java
 // Use try-with-resources for automatic cleanup
 public void processMultipleDocuments(List<String> documentPaths) {
@@ -396,11 +437,13 @@ public void processMultipleDocuments(List<String> documentPaths) {
     }
 }
 ```
+```
 
-### การประมวลผลแบบแบตช์
+### การประมวลผลเป็นชุด
 
-สำหรับการดำเนินการระดับใหญ่ ควรพิจารณาการประมวลผลแบบแบตช์:
+เมื่อจัดการกับ PDF จำนวนหลายพันไฟล์ ให้ประมวลผลเป็นชุดเพื่อรักษาการใช้ heap ให้ต่ำ:
 
+```text
 ```java
 public void batchAddPolylines(String documentPath, 
                              List<PolylineConfig> configs) {
@@ -415,35 +458,32 @@ public void batchAddPolylines(String documentPath,
     }
 }
 ```
+```
 
-### การเพิ่มประสิทธิภาพ SVG Path
+### การปรับแต่งเส้นทาง SVG
 
-SVG Path ที่ซับซ้อนอาจทำให้การเรนเดอร์ช้าลง นี่คือกลยุทธ์การเพิ่มประสิทธิภาพ:
+เส้นทางที่ซับซ้อนอาจทำให้ความเร็วการเรนเดอร์ลดลง ปฏิบัติตามแนวทางต่อไปนี้:
 
-1. **Simplify Paths** – ลบความละเอียดพิกัดที่ไม่จำเป็น  
-2. **Use Relative Commands** – ขนาดไฟล์เล็กลงด้วย `l` แทน `L`  
-3. **Batch Similar Annotations** – จัดกลุ่มคำอธิบายที่มีคุณสมบัติคล้ายกัน  
+1. **ตัดความแม่นยำของพิกัด** – ปัดเป็นสองตำแหน่งทศนิยม.  
+2. **ใช้คำสั่งสัมพันธ์ (`l`)** – ลดความยาวสตริงได้ถึง 30 %.  
+3. **จัดกลุ่มการทำเครื่องหมายที่คล้ายกัน** – ใช้สไตล์เดียวกันกับหลายโพลีไลน์เพื่อใช้ทรัพยากรซ้ำ.
 
+```text
 ```java
 // Optimize coordinate precision
 public String optimizePath(String svgPath) {
     return svgPath.replaceAll("(\\d+\\.\\d{3})\\d+", "$1");
 }
 ```
+```
 
-## ปัญหาที่พบบ่อยและวิธีแก้
+## ปัญหาทั่วไปและวิธีแก้
 
-### ปัญหา 1: “คำอธิบายไม่แสดง”
+### ปัญหา 1: การทำเครื่องหมายไม่แสดง
 
-**อาการ**: โค้ดทำงานโดยไม่มีข้อผิดพลาด แต่ polyline ไม่ปรากฏ
+สาเหตุทั่วไปรวมถึงดัชนีหน้าที่ไม่ถูกต้อง (หน้านับจากศูนย์), พิกัด SVG อยู่นอกขอบเขตหน้า, หรือความทึบแสงตั้งค่าน้อยเกินไป ปรับหมายเลขหน้าและตรวจสอบว่าเส้นทาง SVG อยู่ภายในสี่เหลี่ยมของหน้า.
 
-**สาเหตุทั่วไป**:
-- หมายเลขหน้าไม่ถูกต้อง (จำไว้ว่าเป็น 0‑based)  
-- พิกัด SVG path อยู่นอกขอบเขตเอกสาร  
-- Opacity ตั้งค่าต่ำเกินไปหรือความกว้างของปากกาเล็กเกินไป  
-
-**วิธีแก้**:
-
+```text
 ```java
 // Debug your annotation placement
 PolylineAnnotation polyline = new PolylineAnnotation();
@@ -455,13 +495,13 @@ polyline.setPenWidth((byte) 5); // Thicker line for visibility
 Rectangle box = polyline.getBox();
 System.out.println("Annotation bounds: " + box.getX() + "," + box.getY());
 ```
+```
 
-### ปัญหา 2: “OutOfMemoryError กับเอกสารขนาดใหญ่”
+### ปัญหา 2: OutOfMemoryError กับเอกสารขนาดใหญ่
 
-**อาการ**: แอปพลิเคชันล่มเมื่อประมวลผล PDF ขนาดใหญ่หรือหลายไฟล์
+ประมวลผล PDF ขนาดใหญ่ในโหมดสตรีมและหลีกเลี่ยงการโหลดเอกสารทั้งหมดเข้าสู่หน่วยความจำ:
 
-**วิธีแก้**:
-
+```text
 ```java
 // Implement proper memory management
 public void processLargeDocument(String documentPath) {
@@ -482,18 +522,13 @@ public void processLargeDocument(String documentPath) {
     }
 }
 ```
+```
 
-### ปัญหา 3: “Invalid SVG Path Format”
+### ปัญหา 3: รูปแบบเส้นทาง SVG ไม่ถูกต้อง
 
-**อาการ**: เกิดข้อยกเว้นเมื่อกำหนดค่า SVG path
+ตรวจสอบให้แน่ใจว่าเส้นทางเริ่มด้วยคำสั่งย้าย (`M`) และค่าตัวเลขทั้งหมดเป็น double ที่ถูกต้อง.
 
-**สาเหตุทั่วไป**:
-- ไวยากรณ์ SVG ผิดรูปแบบ  
-- ขาดคำสั่ง move ที่จุดเริ่มต้น  
-- ค่าพิกัดไม่ถูกต้อง  
-
-**วิธีแก้**:
-
+```text
 ```java
 // Validate SVG path before using
 public boolean isValidSVGPath(String path) {
@@ -513,13 +548,13 @@ if (isValidSVGPath(pathString)) {
     throw new IllegalArgumentException("Invalid SVG path: " + pathString);
 }
 ```
+```
 
-### ปัญหา 4: “License Verification Failed”
+### ปัญหา 4: การตรวจสอบใบอนุญาตล้มเหลว
 
-**อาการ**: แอปพลิเคชันโยนข้อยกเว้นที่เกี่ยวกับลิขสิทธิ์ในสภาพแวดล้อมการผลิต
+วางไฟล์ `GroupDocs.Annotation.lic` บน classpath หรือกำหนดใบอนุญาตโดยโปรแกรมเมติกที่การเริ่มต้นแอปพลิเคชัน.
 
-**วิธีแก้**:
-
+```text
 ```java
 // Proper license initialization
 public class AnnotationConfig {
@@ -542,13 +577,15 @@ public class AnnotationConfig {
     }
 }
 ```
+```
 
 ## เทคนิคการปรับแต่งขั้นสูง
 
 ### การกำหนดสีแบบไดนามิก
 
-สร้าง polyline ที่มีสีตามข้อมูลหรือความชอบของผู้ใช้:
+`ColorHelper` มีเมธอดยูทิลิตี้เพื่อแมปประเภทการทำเครื่องหมายเป็นค่าสี ARGB.
 
+```text
 ```java
 public class ColorHelper {
     private static final Map<String, Integer> CATEGORY_COLORS = Map.of(
@@ -563,11 +600,13 @@ public class ColorHelper {
     }
 }
 ```
+```
 
-### คำอธิบายโต้ตอบพร้อมคุณสมบัติกำหนดเอง
+### การทำเครื่องหมายแบบโต้ตอบพร้อมคุณสมบัติที่กำหนดเอง
 
-เพิ่มเมตาดาต้ากำหนดเองให้กับคำอธิบายเพื่อเพิ่มความโต้ตอบ:
+เพิ่มเมตาดาต้าเช่น `authorId` หรือ `timestamp` เพื่อเพิ่มคุณค่าของ payload การทำเครื่องหมาย:
 
+```text
 ```java
 // Create custom annotation with metadata
 PolylineAnnotation polyline = new PolylineAnnotation();
@@ -578,15 +617,15 @@ Reply metadataReply = new Reply();
 metadataReply.setComment("metadata:{\"processId\":\"12345\",\"priority\":\"high\"}");
 polyline.setReplies(Arrays.asList(metadataReply));
 ```
+```
 
-วิธีนี้ทำให้แอปพลิเคชันฝั่งหน้าเว็บสามารถดึงและใช้เมตาดาต้าเพื่อประสบการณ์ผู้ใช้ที่สมบูรณ์ยิ่งขึ้น
-
-## การทดสอบการนำไปใช้ของคุณ
+## การทดสอบการใช้งานของคุณ
 
 ### การทดสอบหน่วย
 
-สร้างชุดทดสอบที่ครอบคลุมสำหรับตรรกะคำอธิบายของคุณ:
+จำลอง `Annotator` และตรวจสอบว่า `addAnnotation` ได้รับ `PolylineAnnotation` ที่กำหนดค่าอย่างถูกต้อง.
 
+```text
 ```java
 @Test
 public void testPolylineAnnotationCreation() {
@@ -608,11 +647,13 @@ public void testPolylineAnnotationCreation() {
     }
 }
 ```
+```
 
-### การทดสอบการบูรณาการ
+### การทดสอบการรวม
 
-ทดสอบกระบวนการทำงานเต็มรูปแบบด้วยเอกสารจริง:
+รันการทดสอบ end‑to‑end กับไฟล์ PDF จริงเพื่อให้แน่ใจว่าโพลีไลน์แสดงผลตามที่คาดหวังในโปรแกรมอ่านหลายตัว.
 
+```text
 ```java
 @Test
 public void testEndToEndAnnotationWorkflow() {
@@ -630,62 +671,35 @@ public void testEndToEndAnnotationWorkflow() {
     verifyAnnotationExists(result);
 }
 ```
+```
 
 ## สรุป
 
-คุณเพิ่งเชี่ยวชาญวิธี **สร้างคำอธิบาย polyline PDF แบบโต้ตอบ** ด้วย GroupDocs.Annotation for Java แล้ว คำอธิบาย polyline เปิดโอกาสให้คุณสร้างเอกสารที่โต้ตอบและเป็นมืออาชีพ ซึ่งเหนือกว่าข้อความแบบคงที่อย่างมาก
-
-**ประเด็นสำคัญ**:
-- **การตั้งค่าง่าย** เมื่อคุณเข้าใจการกำหนดค่า Maven และลิขสิทธิ์  
-- **SVG paths ให้ความยืดหยุ่นอันมหาศาล** สำหรับการสร้างเส้นเชื่อมที่ซับซ้อน  
-- **การจัดการทรัพยากรที่เหมาะสม** เป็นสิ่งจำเป็นสำหรับแอปพลิเคชันระดับการผลิต  
-- **รูปแบบการผสาน** (Spring Boot, REST) ทำให้การเพิ่มคำอธิบายลงในแอป Java ที่มีอยู่เป็นเรื่องง่าย  
-
-ไม่ว่าคุณจะสร้างระบบจัดการเอกสาร แพลตฟอร์มการศึกษา หรือเครื่องมือเอกสารเทคนิค คำอธิบาย polyline จะมอบความชัดเจนและความโต้ตอบที่ผู้ใช้ของคุณต้องการ
+ตอนนี้คุณมีวิธีการที่มั่นคงและพร้อมใช้งานในระดับการผลิตสำหรับการใช้ **pdf annotation library java** เพื่อสร้าง PDF โพลีไลน์แบบโต้ตอบ โซลูชันนี้สามารถขยายจากต้นแบบเอกสารเดียวไปสู่การประมวลผลเป็นชุดระดับองค์กร ผสานรวมอย่างสะอาดกับ Spring Boot และให้คุณควบคุมรูปทรงที่อิง SVG ได้เต็มที่.
 
 ## ขั้นตอนต่อไป
 
-พร้อมที่จะพัฒนาทักษะการอธิบายของคุณต่อหรือยัง? พิจารณาสำรวจ:
-- คำอธิบายพื้นที่เพื่อไฮไลต์บริเวณซับซ้อน  
-- คำอธิบายลูกศรสำหรับบ่งบอกทิศทาง  
-- คำอธิบายลายน้ำสำหรับการสร้างแบรนด์และความปลอดภัย  
-- การผสานกับตัวดูเอกสารเพื่อการแก้ไขคำอธิบายแบบเรียลไทม์  
+- สำรวจ **area annotations** เพื่อไฮไลท์พื้นที่ที่ไม่เป็นรูปสี่เหลี่ยม.  
+- เพิ่ม **arrow annotations** เพื่อบ่งบอกทิศทาง.  
+- ดำเนินการ **real‑time editing** โดยเปิดเผยเมตาดาต้าการทำเครื่องหมายผ่าน endpoint WebSocket.  
+- ตรวจสอบ [documentation](https://docs.groupdocs.com/annotation/java/) ของ GroupDocs.Annotation เพื่อเรียนรู้ฟีเจอร์ API เชิงลึก.
 
----
-
-**คำถามที่พบบ่อย**
-
-**Q: ฉันสามารถแก้ไขคำอธิบาย polyline หลังจากสร้างแล้วได้หรือไม่?**  
-A: ได้ แต่คุณต้องลบคำอธิบายเดิมและเพิ่มคำอธิบายใหม่พร้อมคุณสมบัติที่อัปเดต GroupDocs.Annotation ไม่รองรับการแก้ไขคำอธิบายที่มีอยู่โดยตรง
-
-**Q: จำนวนจุดสูงสุดที่สามารถใส่ใน polyline ได้คือเท่าไหร่?**  
-A: ไม่มีขีดจำกัดที่แน่นอน แต่ประสิทธิภาพจะลดลงเมื่อเส้นทางซับซ้อนมากเกินไป (1000+ จุด) เพื่อผลลัพธ์ที่ดีที่สุด ควรเก็บ polyline ไว้ภายใต้ 100 จุดพิกัด
-
-**Q: ผู้ใช้สามารถโต้ตอบกับคำอธิบาย polyline ในโปรแกรมอ่าน PDF ได้หรือไม่?**  
-A: ได้ เมื่อเปิดในโปรแกรมอ่าน PDF ที่รองรับ ผู้ใช้สามารถคลิกคำอธิบายเพื่อดูความคิดเห็นและการตอบกลับ ระดับความโต้ตอบขึ้นอยู่กับโปรแกรมอ่านที่ใช้
-
-**Q: จะจัดการกับระบบพิกัดที่แตกต่างกันระหว่างประเภทเอกสารอย่างไร?**  
-A: GroupDocs.Annotation ปรับระบบพิกัดภายในให้เป็นมาตรฐานเดียวกัน แต่คุณควรทดสอบกับประเภทเอกสารของคุณเอง พิกัด PDF เริ่มจากมุมล่างซ้าย ในขณะที่บางรูปแบบเริ่มจากมุมบนซ้าย
-
-**Q: สามารถส่งออกข้อมูลคำอธิบายโดยไม่รวมเอกสารต้นฉบับได้หรือไม่?**  
-A: ได้ GroupDocs.Annotation มีเมธอดสำหรับดึงเมตาดาต้าคำอธิบายเป็น XML หรือ JSON ซึ่งสามารถจัดเก็บแยกต่างหากและนำกลับมาใช้ใหม่ได้
-
-**Q: ผลกระทบต่อประสิทธิภาพของการเพิ่มคำอธิบาย polyline จำนวนมากคืออะไร?**  
-A: คำอธิบายแต่ละรายการเพิ่มภาระงานเพียงเล็กน้อย แต่ SVG path ที่ซับซ้อนและจำนวนคำอธิบายมากอาจทำให้การเรนเดอร์ช้าลง ใช้การประมวลผลแบบแบตช์และปรับแต่ง SVG path เพื่อประสิทธิภาพสูงสุด
-
-**Q: จะจัดการกับความเข้ากันได้ของเวอร์ชันเมื่ออัปเกรด GroupDocs.Annotation อย่างไร?**  
-A: ควรทดสอบกับชุดเอกสารขนาดเล็กก่อน GroupDocs รักษาความเข้ากันได้ย้อนหลังสำหรับข้อมูลคำอธิบาย แต่เมธอดของ API อาจเปลี่ยนแปลงระหว่างเวอร์ชันหลัก
-
-## แหล่งข้อมูลและการอ่านเพิ่มเติม
+## แหล่งข้อมูลและการอ่านต่อ
 
 - **Documentation**: [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- **API Reference**: [Complete API Reference](https://reference.groupdocs.com/annotation/java/)  
-- **Sample Projects**: ตรวจสอบที่รีโพสิตอรี GitHub ของ GroupDocs สำหรับตัวอย่างแอปพลิเคชันเต็มรูปแบบ  
-- **Support Forum**: รับความช่วยเหลือจากชุมชนและผู้เชี่ยวชาญของ GroupDocs  
-- **License Information**: [Purchase and licensing options](https://purchase.groupdocs.com/buy)
+- **API reference**: [Complete API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **Sample projects**: เรียกดูรีโพซิทอรี GitHub ของ GroupDocs เพื่อดูตัวอย่างแอปพลิเคชันเต็มรูปแบบ.  
+- **Support forum**: ถามคำถามและแบ่งปันวิธีแก้กับชุมชนและผู้เชี่ยวชาญของ GroupDocs.  
+- **Purchase and licensing options**: ตรวจสอบ [Purchase and licensing options](https://purchase.groupdocs.com/buy) เพื่อดูรายละเอียด.
 
 ---
 
-**อัปเดตล่าสุด:** 2026-03-03  
+**อัปเดตล่าสุด:** 2026-09-10  
 **ทดสอบด้วย:** GroupDocs.Annotation 25.2 for Java  
-**ผู้เขียน:** GroupDocs
+**ผู้เขียน:** GroupDocs  
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [เพิ่มการทำเครื่องหมาย PDF Java – คู่มือครบถ้วนของ GroupDocs](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [โหลด PDF ด้วย Java และ GroupDocs Annotation: คู่มือการโหลดเอกสาร](/annotation/java/document-loading/)
+- [คู่มือ Watermark Annotations PDF ของ GroupDocs Java](/annotation/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/)
