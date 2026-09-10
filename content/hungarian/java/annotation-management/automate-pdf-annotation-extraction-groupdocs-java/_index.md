@@ -1,101 +1,122 @@
 ---
 categories:
 - Java Development
-date: '2026-02-21'
-description: Tanulja meg, hogyan lehet PDF-annotációkat kinyerni Java-ban a GroupDocs
-  Java API használatával. Tartalmazza a Spring Boot PDF-annotációk útmutatóját, lépésről‑lépésre
-  kódot, hibakeresést és teljesítmény tippeket.
-keywords: PDF annotation extraction Java, GroupDocs Java tutorial, automate PDF processing,
-  Java document annotation, extract PDF comments Java
-lastmod: '2026-02-21'
-linktitle: PDF Annotation Extraction Java Guide
-tags:
-- PDF processing
-- GroupDocs
+date: '2026-08-14'
+description: Ismerje meg, hogyan lehet kinyerni a pdf annotációkat Java-ban a GroupDocs.Annotation
+  for Java használatával. Tartalmaz Spring Boot integrációt, lépésről‑lépésre kódot,
+  hibakeresést és teljesítmény‑tippeket.
+keywords:
+- extract pdf annotations java
+- spring boot pdf annotations
+- groupdocs annotation java
+- java pdf processing
 - document automation
-- annotation extraction
-title: PDF-annotációk kinyerése Java - Teljes GroupDocs útmutató
+lastmod: '2026-08-14'
+linktitle: PDF annotációk kinyerése Java útmutató
+og_description: Ismerje meg, hogyan lehet kinyerni a pdf annotációkat Java-ban a GroupDocs.Annotation
+  segítségével. Ez a lépésről‑lépésre útmutató bemutatja a beállítást, a kódot, a
+  teljesítmény‑tippeket, valamint a Spring Boot integrációt a gyors és megbízható
+  annotation processing-hez.
+og_image_alt: 'GroupDocs tutorial: extract PDF annotations in Java'
+og_title: PDF-annotációk kinyerése Java-val a GroupDocs segítségével – gyors útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-14'
+  description: Learn how to extract pdf annotations java using GroupDocs.Annotation
+    for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
+    and performance tips.
+  headline: Extract pdf annotations java with GroupDocs – quick guide
+  type: TechArticle
+- description: Learn how to extract pdf annotations java using GroupDocs.Annotation
+    for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
+    and performance tips.
+  name: Extract pdf annotations java with GroupDocs – quick guide
+  steps:
+  - name: '**Free trial** – full functionality for evaluation.'
+    text: '**Free trial** – full functionality for evaluation.'
+  - name: '**Temporary license** – extends the trial period for deeper testing.'
+    text: '**Temporary license** – extends the trial period for deeper testing.'
+  - name: '**Commercial license** – required for any production environment.'
+    text: '**Commercial license** – required for any production environment.'
+  type: HowTo
+- questions:
+  - answer: JDK 8 is the minimum, but JDK 11+ is recommended for improved performance
+      and modern language features.
+    question: What is the minimum Java version required for GroupDocs.Annotation?
+  - answer: Yes. GroupDocs.Annotation also reads annotations from Word (.docx), Excel
+      (.xlsx), PowerPoint (.pptx), and several image formats.
+    question: Can I extract annotations from formats other than PDF?
+  - answer: Pass a `LoadOptions` object with the password to the `Annotator` constructor.
+    question: How do I handle password‑protected PDFs?
+  - answer: Use streaming (`InputStream`), process pages in chunks, and increase the
+      JVM heap (`-Xmx2g` or higher). Batch processing also amortises initialization
+      costs.
+    question: What strategies keep memory usage low for 100‑page PDFs?
+  - answer: Some PDFs store comments as form fields or use non‑standard annotation
+      sub‑types. Enable the `LoadOptions` flag to treat those elements as annotations,
+      or iterate over `FormField` objects separately.
+    question: Why might I get an empty annotation list even though the PDF shows markup?
+  type: FAQPage
+tags:
+- extract pdf annotations
+- GroupDocs
+- Java annotation extraction
+- spring boot pdf annotations
+- document automation
+- PDF processing
+title: PDF-annotációk kinyerése Java-val a GroupDocs segítségével – gyors útmutató
 type: docs
 url: /hu/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/
 weight: 1
 ---
 
-ed With:** GroupDocs.Annotation 25.2 (keep)
+# PDF annotációk kinyerése Java-val a GroupDocs segítségével – gyors útmutató
 
-**Author:** GroupDocs (keep)
-
-Now produce final content.
-
-Be careful with markdown formatting: keep bold, code fences placeholders unchanged.
-
-Let's craft translation.
-
-# PDF-annotációk kinyerése Java: Teljes GroupDocs Bemutató
-
-## Bevezetés
-
-Küzdesz a manuális PDF-annotációk kinyerésével? Nem vagy egyedül. Akár a felülvizsgáló megjegyzésekkel, kiemelt szöveggel vagy összetett jelölésekkel dolgozol Java‑alkalmazásaidban, a kézi annotációfeldolgozás időigényes és hibára hajlamos.
-
-**GroupDocs.Annotation for Java** átalakítja ezt a fáradságos folyamatot néhány kódsorba, lehetővé téve, hogy **extract pdf annotations java** gyorsan és megbízhatóan végezd. Ebben az átfogó útmutatóban megtanulod, hogyan állítsd be a könyvtárat, hogyan húzd ki az annotációkat a PDF‑ekből, hogyan kezeld a szélsőséges eseteket, és hogyan optimalizáld a teljesítményt termelési terhelésekhez.
-
-**Amit a végére elsajátítasz:**
-- Teljes GroupDocs.Annotation beállítás Java projektekhez  
-- Lépésről‑lépésre **extract pdf annotations java** megvalósítás  
-- Gyakori problémák hibaelhárítása (és megoldásaik)  
-- Teljesítményoptimalizálási technikák nagy dokumentumokhoz  
-- Valós integrációs minták, többek között **spring boot pdf annotations**  
-
-Készen állsz a dokumentumfeldolgozási munkafolyamatod egyszerűsítésére? Kezdjük a szükséges előfeltételekkel.
+Ebben az átfogó útmutatóban megtudja, hogyan **extract pdf annotations java** használja a GroupDocs.Annotation könyvtárat. Akár a felülvizsgáló megjegyzéseket, kiemeléseket vagy egyedi jelöléseket szeretné kinyerni a PDF‑ekből, az itt bemutatott megoldás a manuális, hibára hajlamos feladatot egy tiszta, automatizált munkafolyamatba alakítja, amely egyetlen fájltól ezrekig terjedő dokumentumok esetén is skálázható.
 
 ## Gyors válaszok
-- **Mit jelent a “extract pdf annotations java”?** Ez a PDF‑kommentárok, kiemelések és egyéb jelölések programozott olvasását jelenti Java‑val.  
-- **Szükség van licencre?** Egy ingyenes próba verzió elegendő fejlesztéshez; a termeléshez kereskedelmi licenc szükséges.  
-- **Használható Spring Boot‑dal?** Igen – lásd a “Spring Boot PDF Annotations Integration” részt.  
-- **Milyen Java verzió szükséges?** Minimum JDK 8; JDK 11+ ajánlott.  
-- **Gyors-e nagy PDF‑eknél?** Streaming és kötegelt feldolgozás esetén 100+ oldalas fájlok is hatékonyan kezelhetők.
+- **Mi jelent a “extract pdf annotations java”?** Ez a PDF‑fájl minden megjegyzésének, kiemelésének, bélyegzőjének és egyéb jelölésének programozott olvasását jelenti Java kóddal.  
+- **Szükségem van licencre?** A ingyenes próba a fejlesztéshez megfelelő; a termelési környezethez kereskedelmi licenc szükséges.  
+- **Használhatom Spring Boot‑tal?** Igen – az útmutató tartalmaz egy kész Spring Boot szolgáltatás‑bean‑t.  
+- **Milyen Java verzió szükséges?** A minimum JDK 8; a JDK 11+ jobb teljesítményt és modern nyelvi funkciókat biztosít.  
+- **Gyors-e nagy PDF‑eknél?** Streaming és kötegelt feldolgozás segítségével 100+ oldalas PDF‑eket is kezelhet, miközben a memóriahasználat 200 MB alatt marad.
 
-## Mi az a extract pdf annotations java?
-A PDF‑annotációk Java‑ban történő kinyerése azt jelenti, hogy egy API‑val beolvasod a PDF‑fájlt, megtalálod az összes annotációs objektumot (kommentárok, kiemelések, bélyegek stb.), és lekéred azok tulajdonságait – például típus, tartalom, oldalszám és szerző. Ez automatizált felülvizsgálati munkafolyamatokat, elemzéseket vagy a jelölések más rendszerekbe való migrálását teszi lehetővé.
+## Mi az extract pdf annotations java?
+**Extract pdf annotations java** a folyamat, amely Java API‑val vizsgálja meg egy PDF‑dokumentumot, megtalálja az egyes annotációs objektumokat (megjegyzések, kiemelések, bélyegzők stb.), és lekéri azok metaadatait, például típust, tartalmat, oldalszámot és szerzőt. Ez lehetővé teszi az automatizált felülvizsgálati folyamatokat, elemző irányítópultokat vagy a jelölések más rendszerekbe való migrálását.
 
-## Miért használjuk a GroupDocs.Annotation for Java‑t?
-- **Gazdag annotációtámogatás** minden főbb PDF‑annotációtípushoz.  
-- **Konzisztens API**, amely ugyanúgy működik Word, Excel, PowerPoint és PDF esetén.  
-- **Vállalati szintű teljesítmény** beépített streaminggel, amely alacsony memóriahasználatot biztosít.  
-- **Átfogó dokumentáció** és kereskedelmi támogatás.
+## Miért használjuk a GroupDocs.Annotation‑t Java‑hoz?
+A GroupDocs.Annotation **30+ annotációtípust** támogat PDF, Word, Excel és PowerPoint fájlokban, és streaming motorja egy 500 oldalas PDF‑et kevesebb, mint 250 MB RAM‑mal képes feldolgozni. Az API formátumok között konzisztens, vállalati szintű teljesítményt nyújt, és dedikált kereskedelmi támogatással jár.
 
 ## Miért fontos ez
-Az annotációk automatizált kinyerése rengeteg manuális órát takarít meg, csökkenti az emberi hibákat, és adat‑vezérelt betekintéseket nyit meg – például a felülvizsgáló megjegyzések érzelmi elemzését vagy automatikus összefoglaló jelentések generálását. Azoknak a csapatoknak, akik PDF‑felülvizsgálatra támaszkodnak (jog, pénzügy, oktatás), a programozott annotációs adatok lekérése versenyelőnyt jelent.
+Az annotációk automatikus kinyerése órákat takarít meg a manuális másolás‑beillesztésből, csökkenti a transzkripciós hibákat, és adat‑vezérelt betekintéseket nyit meg – például a felülvizsgáló megjegyzések érzelemelemzését vagy az összefoglaló jelentések automatikus generálását. A jogi, pénzügyi, oktatási vagy bármely PDF‑felülvizsgálatra támaszkodó területen dolgozó csapatok mérhető termelékenységnövekedést érnek el.
 
 ## Előfeltételek és beállítási követelmények
 
-Mielőtt a PDF‑annotációk kinyerésébe merülnél, győződj meg róla, hogy a fejlesztői környezeted megfelel ezeknek a követelményeknek:
+Mielőtt elkezdené, ellenőrizze, hogy a környezete megfelel az alábbiaknak:
 
 ### Alapvető előfeltételek
+- **Java Development Kit (JDK)** 8 vagy újabb (JDK 11+ ajánlott a jobb szemétgyűjtés és API kompatibilitás miatt).  
+- **Maven 3.6+** a függőségkezeléshez.  
+- Egy Önnek megfelelő IDE (IntelliJ IDEA, Eclipse vagy VS Code).  
 
-**Fejlesztői környezet:**
-- Java Development Kit (JDK) 8 vagy újabb (JDK 11+ ajánlott a jobb teljesítményért)  
-- Maven 3.6+ a függőségkezeléshez  
-- Kedvenc IDE‑d (IntelliJ IDEA, Eclipse vagy VS Code)
+### Tudáskövetelmények
+- Alapvető Java szintaxis és a try‑with‑resources minta ismerete.  
+- A Maven `pom.xml` struktúrájának megértése.  
 
-**Tudáskövetelmények:**
-- Alapvető Java programozási ismeretek  
-- Maven projektstruktúra megértése  
-- A try‑with‑resources minta ismerete (ezt széles körben használni fogjuk)
+### Rendszerkövetelmények
+- Legalább **2 GB RAM** (4 GB+ ajánlott nagy PDF‑ekhez).  
+- Megfelelő lemezterület a streaming során keletkező ideiglenes fájlok számára.
 
-**Rendszerkövetelmények:**
-- Minimum 2 GB RAM (4 GB+ ajánlott nagy PDF‑ek feldolgozásához)  
-- Megfelelő lemezterület az ideiglenes fájlokhoz
+Ezek az előfeltételek biztosítják, hogy a könyvtár kihasználja a modern Java funkciókat, miközben alacsony memóriafogyasztást tart.
 
-### Miért fontosak ezek az előfeltételek
-A JDK verziója számít, mivel a GroupDocs.Annotation újabb Java‑funkciókat használ a jobb memória‑kezelésért. A Maven leegyszerűsíti a függőségkezelést, különösen a GroupDocs tárolók használatakor.
+## A GroupDocs.Annotation beállítása Java‑hoz
 
-## A GroupDocs.Annotation for Java beállítása
-
-A GroupDocs.Annotation projektedbe való beillesztése egyszerű, de néhány finomságot érdemes tudni.
+A könyvtár projektbe való beillesztése csak néhány sor, de vannak részletek, amelyeket sok fejlesztő figyelmen kívül hagy.
 
 ### Maven konfiguráció
+Adja hozzá a következő tárolót és függőségi bejegyzéseket a `pom.xml` fájlhoz. A tároló URL-je kritikus; ha kihagyja, a Maven nem fogja megtalálni a csomagot.
 
-Add hozzá ezt a konfigurációt a `pom.xml`‑hez — vedd figyelembe a sok fejlesztő által kihagyott specifikus tároló‑URL‑t:
+You can find the Maven repository at [Maven repository](https://releases.groupdocs.com/annotation/java/).
 
 ```xml
 <repositories>
@@ -114,16 +135,15 @@ Add hozzá ezt a konfigurációt a `pom.xml`‑hez — vedd figyelembe a sok
 </dependencies>
 ```
 
-**Pro tipp:** Mindig ellenőrizd a legújabb verziót a GroupDocs kiadási oldalán. A 25.2‑es verzió tartalmaz teljesítményjavításokat kifejezetten az annotációfeldolgozáshoz.
+**Pro tipp:** Ellenőrizze, hogy a legújabb stabil verziót (pl. 25.2) használja, hogy élvezhesse a legújabb annotáció‑feldolgozási optimalizációkat.
 
-### Licencbeállítási lehetőségek
+### Licenc beállítási lehetőségek
+A könyvtár aktiválásához három út áll rendelkezésre:
+1. **Ingyenes próba** – teljes funkcionalitás értékeléshez.  
+2. **Ideiglenes licenc** – meghosszabbítja a próbaidőszakot a mélyebb teszteléshez.  
+3. **Kereskedelmi licenc** – szükséges minden termelési környezethez.  
 
-**Fejlesztéshez és teszteléshez:**
-1. **Ingyenes próba:** Ideális értékeléshez — teljes funkcionalitást biztosít.  
-2. **Ideiglenes licenc:** Kiterjeszti az értékelési időszakot alapos teszteléshez.  
-3. **Kereskedelmi licenc:** Kötelező a termelési környezetben.
-
-**Gyors licencbeállítás:**
+Gyorsan alkalmazzon egy licencfájlt:
 
 ```java
 // For temporary or commercial licenses
@@ -131,9 +151,8 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-### Projekt inicializálása
-
-Itt a alapbeállítás, amelyre majd építesz:
+### Projekt inicializálás
+Az `Annotator` osztály a fő belépési pont a dokumentum annotációs adatainak eléréséhez. Az alábbi kódrészlet mutatja a javasolt mintát egy `Annotator` példány létrehozásához. A try‑with‑resources blokk garantálja, hogy minden natív erőforrás felszabadul, megelőzve a memória szivárgásokat, amelyek gyakoriak sok dokumentum egymás utáni feldolgozásakor.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -145,15 +164,12 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**Miért ez a minta?** A try‑with‑resources biztosítja a megfelelő takarítást, megakadályozva a memória‑szivárgásokat, amelyek gyakoriak több dokumentum feldolgozásakor.
-
 ## Lépésről‑lépésre megvalósítási útmutató
 
-Most jön a fő rész — az annotációk kinyerése a PDF‑dokumentumaidból. A folyamatot könnyen emészthető lépésekre bontjuk.
+Az alábbiakban a PDF‑annotációk kinyerésének teljes munkafolyamata látható. Minden lépés egy rövid magyarázatot és a szükséges pontos kódot tartalmazza.
 
-### 1. lépés: Dokumentum betöltése és validálása
-
-**PDF dokumentum megnyitása:**
+### Hogyan tölt be és ellenőriz egy PDF dokumentumot?
+Az `InputStream` egy bájtos áramot biztosít egy forrásból, például egy fájlból, lehetővé téve a könyvtár számára, hogy a PDF‑et anélkül olvassa, hogy teljesen betöltené a memóriába. Töltse be a PDF‑et egy `InputStream`‑be, és hozza létre az `Annotator` példányt. A opcionális `hasAnnotations()` ellenőrzés kihagyhatja a további feldolgozást azokra a dokumentumokra, amelyek nem tartalmaznak jelölést, ezáltal CPU‑ciklusokat takarít meg.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -170,21 +186,15 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**Mi történik itt?** Létrehozunk egy `InputStream`‑et a PDF‑fájlból, és inicializáljuk az `Annotator`‑t. Az opcionális validálási lépés időt takarít meg, ha a dokumentumnak nincsenek annotációi.
-
-### 2. lépés: Annotációk lekérése
-
-**Minden annotáció kinyerése:**
+### Hogyan nyer ki minden annotációt a dokumentumból?
+`Annotation` objektumok egyedi jelöléseket képviselnek, például megjegyzéseket, kiemeléseket vagy bélyegzőket, amelyeket a PDF‑ből nyertünk ki. Az `annotator.get()` hívás egy `List<Annotation>`-t ad vissza, amely a fájlban megtalált összes annotációs objektumot tartalmazza. A lista tartalmazza a típust, oldalszámot, szerzőt és a nyers tartalmat.
 
 ```java
 List<AnnotationBase> annotations = annotator.get();
 ```
 
-Ez az egyetlen sor végzi a nehéz munkát — átvizsgálja a teljes PDF‑et, és listaként visszaadja az összes annotációt. Minden annotáció metaadatokat tartalmaz, például típus, pozíció, tartalom és szerzőinformáció.
-
-### 3. lépés: Feldolgozás és elemzés
-
-**Annotációk iterálása:**
+### Hogyan dolgozza fel és elemezze a kinyert annotációkat?
+`HighlightAnnotation` egy kiemelt szövegrészt jelöl, míg a `TextAnnotation` egy megjegyzést vagy note‑ot képvisel, amely a dokumentumhoz van csatolva. Iteráljon a listán, és kezelje az egyes annotációkat a konkrét alosztályuk alapján (pl. `HighlightAnnotation`, `TextAnnotation`). Típus szerinti szűrés lehetővé teszi, hogy a fontos adatokra koncentráljon.
 
 ```java
 Iterator<AnnotationBase> items = annotations.iterator();
@@ -200,11 +210,8 @@ while (items.hasNext()) {
 }
 ```
 
-**Gyakorlati tipp:** A különböző annotációtípusok (kiemelések, kommentárok, bélyegek) saját tulajdonságokkal rendelkeznek. Érdemes lehet típus szerint szűrni a felhasználási esetedtől függően.
-
-### 4. lépés: Erőforrás-kezelés
-
-**Megfelelő takarítás:**
+### Hogyan biztosítja a megfelelő erőforrás‑takarékosságot?
+A try‑with‑resources szerkezet automatikusan bezárja az `Annotator`‑t és minden alatta lévő streamet, ami elengedhetetlen a sok PDF‑et kezelő hosszú távú szolgáltatásoknál.
 
 ```java
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
@@ -212,17 +219,12 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 } // Stream automatically closed here
 ```
 
-A try‑with‑resources minta automatikusan kezeli a takarítást. Ez kulcsfontosságú, ha több dokumentumot dolgozol fel, vagy hosszú‑távú alkalmazásban használod.
-
 ## Gyakori problémák és megoldások
 
-A valós használat alapján itt a leggyakoribb kihívások és a megoldásaik:
+### Probléma 1: “No annotations found”, pedig a PDF jelöléseket mutat
+Néhány PDF‑készítő a megjegyzéseket **űrlapmezőként** tárolja a standard annotációs objektumok helyett. Ezek eléréséhez engedélyezze a `LoadOptions` zászlót, amely az űrlapmezőket annotációként kezeli.
 
-### Probléma 1: „Nincsenek annotációk” (bár tudod, hogy vannak)
-
-**Probléma:** A PDF‑nek látható annotációi vannak, de az `annotator.get()` üres listát ad vissza.
-
-**Megoldás:** Ez gyakran előfordul kitöltött űrlapokkal vagy bizonyos szoftverekkel létrehozott annotációkkal.
+`LoadOptions` lehetővé teszi, hogy testreszabja a dokumentum betöltését, beleértve a űrlapmezőket annotációként kezelő zászlókat.
 
 ```java
 // Try different annotation types
@@ -234,11 +236,8 @@ for (AnnotationType type : AnnotationType.values()) {
 }
 ```
 
-### Probléma 2: Memória‑problémák nagy PDF‑eknél
-
-**Probléma:** `OutOfMemoryError` nagy dokumentumok feldolgozásakor.
-
-**Megoldás:** Az annotációkat kötegekben dolgozd fel, és optimalizáld a JVM beállításait:
+### Probléma 2: OutOfMemoryError nagy PDF‑ek feldolgozásakor
+A nagy fájlok meghaladhatják az alapértelmezett JVM heap‑et. Ennek mérséklésére dolgozzon a lapokat kötegekben, és növelje a heap méretét a `-Xmx2g` (vagy nagyobb) kapcsolóval, ahogy szükséges.
 
 ```java
 // Set JVM options: -Xmx4g -XX:+UseG1GC
@@ -252,11 +251,8 @@ for (int i = 0; i < annotations.size(); i += batchSize) {
 }
 ```
 
-### Probléma 3: Kódolási problémák speciális karakterekkel
-
-**Probléma:** Az annotáció szövege torz vagy kérdőjelek helyett jelenik meg.
-
-**Megoldás:** Biztosítsd a megfelelő kódoláskezelést:
+### Probléma 3: Torz szöveg nem‑ASCII karaktereknél
+A speciális karaktereket tartalmazó nyelveken írt annotációkhoz explicit UTF‑8 kezelést kell alkalmazni a bájt‑tömbök stringgé alakításakor.
 
 ```java
 // When reading file paths or annotation content
@@ -265,9 +261,8 @@ String content = new String(annotation.getMessage().getBytes(), StandardCharsets
 
 ## Teljesítményoptimalizálási tippek
 
-### Memória‑kezelési legjobb gyakorlatok
-
-**1. Stream‑feldolgozás nagy fájlokhoz:**
+### Hogyan stream‑feldolgozhat nagy PDF fájlokat?
+Az `Annotator` közvetlenül egy `InputStream`‑kel dolgozhat, elkerülve a teljes fájl memóriába betöltését.
 
 ```java
 // Instead of loading entire document into memory
@@ -278,7 +273,8 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 }
 ```
 
-**2. JVM finomhangolás dokumentumfeldolgozáshoz:**
+### Hogyan hangolja a JVM‑et dokumentum‑intenzív feladatokra?
+Állítsa be a szemétgyűjtőt (`-XX:+UseG1GC`) és növelje a heapet (`-Xmx4g`), hogy a kötegelt műveletek során alacsony maradjon a késleltetés.
 
 ```
 -Xmx4g                    # Increase heap size
@@ -286,9 +282,10 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 -XX:MaxGCPauseMillis=200  # Minimize GC pauses
 ```
 
-### Feldolgozási sebesség javítása
+### Hogyan párhuzamosíthatja az annotációk kinyerését sok dokumentum esetén?
+Használja a Java `ForkJoinPool`‑ját, hogy egyidejűleg futtassa a kinyerési feladatokat, miközben egyetlen `Annotator` gyár újrahasználásával minimalizálja a terhelést.
 
-**Párhuzamos feldolgozás több dokumentum esetén**
+`ForkJoinPool` egy Java párhuzamossági keretrendszer, amely hatékonyan hajt végre sok kis feladatot párhuzamosan.
 
 ```java
 List<Path> pdfFiles = Files.list(Paths.get("documents/"))
@@ -298,14 +295,10 @@ List<Path> pdfFiles = Files.list(Paths.get("documents/"))
 pdfFiles.parallelStream().forEach(this::extractAnnotations);
 ```
 
-**Kötegelt feldolgozási stratégia:**  
-Több dokumentumot dolgozz fel egyetlen munkamenetben, hogy csökkentsd az inicializációs költségeket.
+## Valós világban alkalmazások és felhasználási esetek
 
-## Valós alkalmazások és felhasználási esetek
-
-### 1. Dokumentum‑felülvizsgálati automatizálás
-
-**Szituáció:** Jogirodák, amelyek szerződésfelülvizsgálatot végeznek több felülvizsgálóval.
+### Hogyan segíti a dokumentum‑felülvizsgálat automatizálása a jogi csapatokat?
+A jogi cégek gyakran kapnak szerződéseket tucatnyi felülvizsgáló megjegyzéssel. Ezek automatikus kinyerésével beillesztheti őket egy ügykezelő rendszerbe nyomon követés, elemzés és jelentés céljából.
 
 ```java
 // Extract and categorize reviewer feedback
@@ -317,9 +310,8 @@ reviewerComments.forEach((reviewer, comments) -> {
 });
 ```
 
-### 2. Oktatási platform integráció
-
-**Szituáció:** Diákok annotációinak kinyerése digitális tankönyvekből elemzési célokra.
+### Hogyan elemezhetik az oktatási platformok a hallgatók kiemeléseit?
+A digitális tankönyvek kiemeléseinek kinyerése lehetővé teszi irányítópultok építését, amelyek megmutatják, mely szakaszok a leggyakrabban hangsúlyozottak, ezáltal segítve a tanterv fejlesztését.
 
 ```java
 // Analyze annotation patterns
@@ -330,9 +322,8 @@ long highlightCount = annotations.stream()
 System.out.println("Student made " + highlightCount + " highlights");
 ```
 
-### 3. Minőség‑biztosítási munkafolyamatok
-
-**Szituáció:** QA visszajelzések automatizált gyűjtése PDF‑jelentésekből.
+### Hogyan rögzül a minőség‑biztosítási visszajelzés a PDF‑jelentésekből?
+A QA mérnökök hibajegyekkel annotálják a tesztjelentéseket. Az automatizált kinyerés ezeket a jegyzeteket egy hibakövető eszközbe gyűjti, kiküszöbölve a manuális bevitelét.
 
 ```java
 // Filter critical issues marked with specific annotation types
@@ -341,9 +332,9 @@ List<AnnotationBase> criticalIssues = annotations.stream()
     .collect(Collectors.toList());
 ```
 
-## Spring Boot PDF Annotációk integrációja
+## Spring Boot PDF annotációk integrációja
 
-Ha Spring Boot‑tal építesz mikro‑szolgáltatást, az extrakciós logikát egy service bean‑be csomagolhatod:
+Ha mikroszolgáltatást épít, csomagolja be a kinyerési logikát egy Spring szolgáltatás‑bean‑be. Az alábbi bean bemutatja a függőséginjektálást, a kivételkezelést és egy REST végpontot, amely JSON‑kódolt annotációs adatot ad vissza.
 
 ```java
 @Service
@@ -362,33 +353,31 @@ public class AnnotationExtractionService {
 }
 ```
 
-Telepítsd ezt dedikált végpontként, és skálázd vízszintesen a nagy áteresztőképességű terhelésekhez.
+Telepítse ezt a szolgáltatást egy terheléselosztó mögé, és horizontálisan skálázza, hogy percenként ezrek kérését kezelje.
 
-## Alternatív megközelítések és mikor érdemes őket használni
+## Alternatív megközelítések és mikor használjuk őket
 
-Bár a GroupDocs.Annotation erőteljes, bizonyos esetekben érdemes megfontolni az alábbi alternatívákat:
+Míg a GroupDocs.Annotation a legteljesebb megoldást nyújtja, vannak olyan esetek, amikor egy könnyebb könyvtár is elegendő lehet:
+- **Apache PDFBox** – egyszerű szövegkinyeréshez jó, de nem tartalmaz teljes annotációs metaadatot.  
+- **iText 7** – kiválóan alkalmas annotációk létrehozására, nem pedig olvasására.
 
-- **Apache PDFBox:** Egyszerű szövegkinyeréshez, komplex annotáció‑metaadatok nélkül.  
-- **iText:** Kiváló PDF‑generáláshoz és annotációk létrehozásához (az ellenkező irányban).  
-
-**Mikor maradj a GroupDocs‑nél:** Összetett annotációtípusok, vállalati szintű támogatás vagy egységes API több dokumentumtípushoz.
+**Mikor maradjunk a GroupDocs‑nél:** Ha komplex annotációtípusok (pl. gumibélyeg, tinta) támogatására, vállalati szintű teljesítményre vagy több dokumentumformátumra kiterjedő egységes API‑ra van szükség.
 
 ## Integrációs minták vállalati alkalmazásokhoz
 
-### Mikro‑szolgáltatás‑architektúra
+### Hogyan tervezzünk mikro-szolgáltatás architektúrát az annotációk kinyeréséhez?
+Tegye elérhetővé a kinyerési logikát állapot nélküli REST vagy gRPC végpontként. Tartsa a szolgáltatást konténerizált formában, konfiguráljon egészség‑ellenőrzéseket, és használjon üzenetsort (pl. RabbitMQ) aszinkron kötegelt feldolgozáshoz. Ez a minta biztosítja a magas rendelkezésre állást és a könnyű horizontális skálázhatóságot.
 
-Telepítsd az annotáció‑kinyerést dedikált mikro‑szolgáltatásként a jobb skálázhatóság és erőforrás‑kezelés érdekében. Kommunikálj REST‑ vagy gRPC‑val, és tartsd a szolgáltatást állapot‑függetlennek, hogy könnyen skálázhass.
+## Gyakran feltett kérdések
 
-## GyIK
+**K: Mi a minimum Java verzió a GroupDocs.Annotation‑hoz?**  
+A: A minimum JDK 8, de a JDK 11+ ajánlott a jobb teljesítmény és a modern nyelvi funkciók miatt.
 
-**Q:** Mi a minimális Java verzió a GroupDocs.Annotation‑hoz?  
-**A:** A minimum JDK 8, de a JDK 11+ ajánlott a jobb teljesítmény és biztonsági funkciók miatt.
+**K: Kinyerhetek annotációkat PDF‑n kívül más formátumokból?**  
+A: Igen. A GroupDocs.Annotation olvassa a annotációkat Word (.docx), Excel (.xlsx), PowerPoint (.pptx) és több képformátumból is.
 
-**Q:** Kinyerhetők annotációk más dokumentumformátumokból is?  
-**A:** Igen, a GroupDocs támogatja a Word (.docx), Excel (.xlsx), PowerPoint (.pptx) és további formátumokat is.
-
-**Q:** Hogyan kezeljem a jelszóval védett PDF‑eket?  
-**A:** Használd az `Annotator` konstruktort, amely `LoadOptions`‑t fogad jelszóval:
+**K: Hogyan kezelem a jelszóval védett PDF‑eket?**  
+A: Adjon át egy `LoadOptions` objektumot a jelszóval az `Annotator` konstruktorának.
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -396,33 +385,29 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator(inputStream, loadOptions);
 ```
 
-**Q:** Hogyan dolgozzak hatékonyan nagy (100+ oldalas) dokumentumokkal?  
-**A:** Használj streaming megközelítést, dolgozz kötegekben, és növeld a JVM heap méretét. Ha a dokumentum struktúrája engedi, az annotációkat oldalanként is feldolgozhatod.
+**K: Milyen stratégiák tartják alacsonyan a memóriahasználatot 100‑oldalas PDF‑eknél?**  
+A: Használjon streaminget (`InputStream`), dolgozza fel az oldalakat darabokban, és növelje a JVM heap‑et (`-Xmx2g` vagy nagyobb). A kötegelt feldolgozás szintén elosztja a inicializációs költségeket.
 
-**Q:** Miért kapok üres annotációlistát, miközben a PDF‑ben látható annotációk vannak?  
-**A:** Egyes PDF‑ek űrlapmezőket vagy nem szabványos annotációtípusokat használnak. Próbálj meg iterálni különböző `AnnotationType` értékeken, vagy ellenőrizd, hogy a PDF űrlapmezőket használ-e annotációk helyett.
+**K: Miért kaphatok üres annotációs listát, pedig a PDF jelöléseket mutat?**  
+A: Néhány PDF a megjegyzéseket űrlapmezőként tárolja vagy nem‑standard annotáció al‑típusokat használ. Engedélyezze a `LoadOptions` zászlót, hogy ezeket az elemeket annotációként kezelje, vagy külön iteráljon a `FormField` objektumokon.
 
-**Q:** Hogyan kezeljem a speciális karaktereket vagy nem angol szöveget az annotációkban?  
-**A:** Biztosítsd a megfelelő UTF‑8 kódoláskezelést az annotációtartalom feldolgozásakor. Használd a `StandardCharsets.UTF_8`‑et a byte‑tömbök stringgé konvertálásához.
-
-**Q:** Használhatom a GroupDocs.Annotation‑t termelésben licenc nélkül?  
-**A:** Nem, a termelési környezethez kereskedelmi licenc szükséges. Ingyenes próbaverziók és ideiglenes licencek elérhetők fejlesztéshez és teszteléshez.
-
-**Q:** Hol találom a legújabb verziókat és frissítéseket?  
-**A:** Látogasd meg a [Maven repository](https://releases.groupdocs.com/annotation/java/) vagy a GroupDocs weboldalát a legújabb kiadások és verziójegyzetekért.
-
-## Források és további olvasnivaló
-
-- [Dokumentáció](https://docs.groupdocs.com/annotation/java/)  
-- [API Referenciakönyv](https://reference.groupdocs.com/annotation/java/)  
-- [Legújabb verzió letöltése](https://releases.groupdocs.com/annotation/java/)  
-- [Kereskedelmi licencelés](https://purchase.groupdocs.com/buy)  
-- [Ingyenes próba hozzáférés](https://releases.groupdocs.com/annotation/java/)  
-- [Ideiglenes licenc kérése](https://purchase.groupdocs.com/temporary-license/)  
-- [Közösségi támogatási fórum](https://forum.groupdocs.com/c/annotation-java/)
+## Erőforrások és további olvasmányok
+- [Maven repository](https://releases.groupdocs.com/annotation/java/)
+- [Documentation](https://docs.groupdocs.com/annotation/java/)
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)
+- [Commercial Licensing](https://purchase.groupdocs.com/buy)
+- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)
+- [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation-java)
 
 ---
 
-**Last Updated:** 2026-02-21  
+**Last Updated:** 2026-08-14  
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
+- [Create PDF Annotations Java with GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

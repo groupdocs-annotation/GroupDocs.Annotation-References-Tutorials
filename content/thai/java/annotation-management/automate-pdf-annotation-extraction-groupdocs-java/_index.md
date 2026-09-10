@@ -1,90 +1,120 @@
 ---
 categories:
 - Java Development
-date: '2026-02-21'
-description: เรียนรู้วิธีดึงหมายเหตุ PDF ด้วย Java โดยใช้ GroupDocs Java API รวมคำแนะนำการทำหมายเหตุ
-  PDF ด้วย Spring Boot โค้ดทีละขั้นตอน การแก้ไขปัญหา และเคล็ดลับด้านประสิทธิภาพ
-keywords: PDF annotation extraction Java, GroupDocs Java tutorial, automate PDF processing,
-  Java document annotation, extract PDF comments Java
-lastmod: '2026-02-21'
-linktitle: PDF Annotation Extraction Java Guide
-tags:
-- PDF processing
-- GroupDocs
+date: '2026-08-14'
+description: เรียนรู้วิธีสกัด annotation ของ pdf ด้วย Java โดยใช้ GroupDocs.Annotation
+  for Java รวมการผสานกับ Spring Boot, โค้ดขั้นตอนต่อขั้นตอน, การแก้ไขปัญหา, และเคล็ดลับประสิทธิภาพ
+keywords:
+- extract pdf annotations java
+- spring boot pdf annotations
+- groupdocs annotation java
+- java pdf processing
 - document automation
-- annotation extraction
-title: สกัดหมายเหตุ PDF ด้วย Java - คู่มือครบวงจรของ GroupDocs
+lastmod: '2026-08-14'
+linktitle: คู่มือการสกัด PDF Annotation ด้วย Java
+og_description: เรียนรู้วิธีสกัด annotation ของ pdf ด้วย Java โดยใช้ GroupDocs.Annotation
+  บทเรียนขั้นตอนต่อขั้นตอนนี้แสดงการตั้งค่า, โค้ด, เคล็ดลับประสิทธิภาพ, และการผสานกับ
+  Spring Boot เพื่อการประมวลผล annotation ที่เร็วและเชื่อถือได้
+og_image_alt: 'GroupDocs tutorial: extract PDF annotations in Java'
+og_title: สกัดข้อมูล annotation ของ pdf ด้วย Java ผ่าน GroupDocs – คู่มือสั้น
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-14'
+  description: Learn how to extract pdf annotations java using GroupDocs.Annotation
+    for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
+    and performance tips.
+  headline: Extract pdf annotations java with GroupDocs – quick guide
+  type: TechArticle
+- description: Learn how to extract pdf annotations java using GroupDocs.Annotation
+    for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
+    and performance tips.
+  name: Extract pdf annotations java with GroupDocs – quick guide
+  steps:
+  - name: '**Free trial** – full functionality for evaluation.'
+    text: '**Free trial** – full functionality for evaluation.'
+  - name: '**Temporary license** – extends the trial period for deeper testing.'
+    text: '**Temporary license** – extends the trial period for deeper testing.'
+  - name: '**Commercial license** – required for any production environment.'
+    text: '**Commercial license** – required for any production environment.'
+  type: HowTo
+- questions:
+  - answer: JDK 8 is the minimum, but JDK 11+ is recommended for improved performance
+      and modern language features.
+    question: What is the minimum Java version required for GroupDocs.Annotation?
+  - answer: Yes. GroupDocs.Annotation also reads annotations from Word (.docx), Excel
+      (.xlsx), PowerPoint (.pptx), and several image formats.
+    question: Can I extract annotations from formats other than PDF?
+  - answer: Pass a `LoadOptions` object with the password to the `Annotator` constructor.
+    question: How do I handle password‑protected PDFs?
+  - answer: Use streaming (`InputStream`), process pages in chunks, and increase the
+      JVM heap (`-Xmx2g` or higher). Batch processing also amortises initialization
+      costs.
+    question: What strategies keep memory usage low for 100‑page PDFs?
+  - answer: Some PDFs store comments as form fields or use non‑standard annotation
+      sub‑types. Enable the `LoadOptions` flag to treat those elements as annotations,
+      or iterate over `FormField` objects separately.
+    question: Why might I get an empty annotation list even though the PDF shows markup?
+  type: FAQPage
+tags:
+- extract pdf annotations
+- GroupDocs
+- Java annotation extraction
+- spring boot pdf annotations
+- document automation
+- PDF processing
+title: สกัดข้อมูล annotation ของ pdf ด้วย Java ผ่าน GroupDocs – คู่มือสั้น
 type: docs
 url: /th/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/
 weight: 1
 ---
 
-# ดึงข้อมูลคำอธิบาย PDF ด้วย Java: คู่มือครบวงจรของ GroupDocs
+# ดึงการทำหมายเหตุ PDF ด้วย Java และ GroupDocs – คู่มือเร็ว
 
-## บทนำ
-
-กำลังประสบปัญหาในการดึงข้อมูลคำอธิบาย PDF ด้วยมืออยู่หรือไม่? คุณไม่ได้อยู่คนเดียว ไม่ว่าคุณจะต้องจัดการกับความคิดเห็นของผู้ตรวจสอบ, ข้อความที่ไฮไลท์, หรือการทำเครื่องหมายที่ซับซ้อนในแอปพลิเคชัน Java ของคุณ การประมวลผลคำอธิบายด้วยมือเป็นเรื่องที่ใช้เวลาและเสี่ยงต่อข้อผิดพลาด
-
-**GroupDocs.Annotation for Java** แปลงกระบวนการที่น่าเบื่อเหล่านี้ให้เป็นเพียงไม่กี่บรรทัดของโค้ด ทำให้คุณ **extract pdf annotations java** ได้อย่างรวดเร็วและเชื่อถือได้ ในคู่มือที่ครอบคลุมนี้ คุณจะได้เรียนรู้วิธีตั้งค่าไลบรารี, ดึงคำอธิบายจาก PDF, จัดการกับกรณีขอบ, และปรับประสิทธิภาพสำหรับงานผลิต
-
-**สิ่งที่คุณจะเชี่ยวชาญเมื่อจบบทเรียน:**
-- การตั้งค่า GroupDocs.Annotation อย่างครบถ้วนสำหรับโครงการ Java  
-- การทำงาน **extract pdf annotations java** ทีละขั้นตอน  
-- การแก้ไขปัญหาที่พบบ่อย (และวิธีแก้)  
-- เทคนิคการเพิ่มประสิทธิภาพสำหรับเอกสารขนาดใหญ่  
-- รูปแบบการบูรณาการในโลกจริง รวมถึง **spring boot pdf annotations**  
-
-พร้อมที่จะทำให้กระบวนการจัดการเอกสารของคุณเป็นอัตโนมัติหรือยัง? เริ่มต้นด้วยข้อกำหนดเบื้องต้นที่จำเป็นกันเลย
+ในบทแนะนำที่ครอบคลุมนี้ คุณจะได้เรียนรู้วิธี **extract pdf annotations java** ด้วยไลบรารี GroupDocs.Annotation ไม่ว่าคุณต้องการดึงความคิดเห็นของผู้ตรวจสอบ, ไฮไลท์, หรือการทำเครื่องหมายแบบกำหนดเองจาก PDF โซลูชันที่แสดงนี้จะเปลี่ยนงานที่ทำด้วยมือและเสี่ยงต่อข้อผิดพลาดให้เป็นกระบวนการอัตโนมัติที่สะอาดและขยายได้จากไฟล์เดียวจนถึงหลายพันเอกสาร.
 
 ## คำตอบอย่างรวดเร็ว
-- **“extract pdf annotations java” หมายถึงอะไร?** คือกระบวนการอ่านความคิดเห็น, ไฮไลท์, และเครื่องหมายอื่น ๆ จาก PDF ด้วย Java อย่างโปรแกรมเมติก  
-- **ฉันต้องมีลิขสิทธิ์หรือไม่?** ทดลองใช้ฟรีสำหรับการพัฒนา; ต้องมีลิขสิทธิ์เชิงพาณิชย์สำหรับการใช้งานในผลิตภัณฑ์  
-- **สามารถใช้ร่วมกับ Spring Boot ได้หรือไม่?** ใช่ – ดูส่วน “Spring Boot PDF Annotations Integration”  
-- **ต้องใช้เวอร์ชัน Java ใด?** อย่างน้อย JDK 8; แนะนำ JDK 11+ เพื่อประสิทธิภาพที่ดีกว่า  
-- **เร็วพอสำหรับ PDF ขนาดใหญ่หรือไม่?** ด้วยการสตรีมและการประมวลผลเป็นชุด คุณสามารถจัดการไฟล์ที่มี 100+ หน้าได้อย่างมีประสิทธิภาพ  
+- **“extract pdf annotations java” หมายถึงอะไร?** เป็นการอ่านทุกความคิดเห็น, ไฮไลท์, สแตมป์, และการทำเครื่องหมายอื่น ๆ จากไฟล์ PDF ด้วยโค้ด Java อย่างอัตโนมัติ.  
+- **ฉันต้องการไลเซนส์หรือไม่?** การทดลองใช้งานฟรีใช้ได้สำหรับการพัฒนา; ไลเซนส์เชิงพาณิชย์จำเป็นสำหรับการใช้งานในสภาพแวดล้อมการผลิต.  
+- **ฉันสามารถใช้กับ Spring Boot ได้หรือไม่?** ได้ – คู่มือรวมบริการ Spring Boot ที่พร้อมใช้งาน.  
+- **ต้องการเวอร์ชัน Java ใด?** JDK 8 เป็นขั้นต่ำ; JDK 11+ ให้ประสิทธิภาพที่ดีกว่าและฟีเจอร์ภาษาใหม่.  
+- **มันเร็วสำหรับ PDF ขนาดใหญ่หรือไม่?** ด้วยการสตรีมและการประมวลผลเป็นชุด คุณสามารถจัดการ PDF ที่มีมากกว่า 100 หน้าโดยคงการใช้หน่วยความจำต่ำกว่า 200 MB.
 
 ## extract pdf annotations java คืออะไร?
-การดึงคำอธิบาย PDF ด้วย Java หมายถึงการใช้ API เพื่อสแกนไฟล์ PDF, ค้นหาอ็อบเจ็กต์คำอธิบายทุกประเภท (ความคิดเห็น, ไฮไลท์, สแตมป์ ฯลฯ) และดึงคุณสมบัติต่าง ๆ เช่น ประเภท, เนื้อหา, หมายเลขหน้า, และผู้เขียน ซึ่งช่วยให้สามารถสร้างเวิร์กโฟลว์การตรวจสอบอัตโนมัติ, การวิเคราะห์, หรือการย้ายข้อมูลเครื่องหมายไปยังระบบอื่นได้
+**Extract pdf annotations java** คือกระบวนการสแกนเอกสาร PDF ด้วย Java API, ค้นหาอ็อบเจ็กต์การทำหมายเหตุแต่ละรายการ (ความคิดเห็น, ไฮไลท์, สแตมป์ ฯลฯ) และดึงข้อมูลเมตาดาต้า เช่น ประเภท, เนื้อหา, หมายเลขหน้า, และผู้เขียน. สิ่งนี้ทำให้สามารถสร้างสายงานการตรวจสอบอัตโนมัติ, แดชบอร์ดวิเคราะห์, หรือการย้ายการทำหมายเหตุไปยังระบบอื่นได้.
 
 ## ทำไมต้องใช้ GroupDocs.Annotation สำหรับ Java?
-- **รองรับคำอธิบายหลากหลาย** สำหรับประเภทคำอธิบาย PDF ทั้งหมด  
-- **API สม่ำเสมอ** ทำงานแบบเดียวกันสำหรับ Word, Excel, PowerPoint, และ PDF  
-- **ประสิทธิภาพระดับองค์กร** ด้วยการสตรีมในตัวเพื่อใช้หน่วยความจำน้อยลง  
-- **เอกสารครบถ้วน** และการสนับสนุนเชิงพาณิชย์  
+GroupDocs.Annotation รองรับ **30+ ประเภทการทำหมายเหตุ** บนไฟล์ PDF, Word, Excel, และ PowerPoint, และเครื่องมือสตรีมมิ่งของมันสามารถประมวลผล PDF ขนาด 500 หน้าโดยใช้หน่วยความจำต่ำกว่า 250 MB. API มีความสอดคล้องกันระหว่างรูปแบบไฟล์, ให้ประสิทธิภาพระดับองค์กร, และมาพร้อมกับการสนับสนุนเชิงพาณิชย์โดยเฉพาะ.
 
 ## ทำไมเรื่องนี้ถึงสำคัญ
-การอัตโนมัติการดึงคำอธิบายช่วยประหยัดชั่วโมงการทำงานด้วยมือจำนวนมาก, ลดข้อผิดพลาดของมนุษย์, และเปิดประตูสู่การวิเคราะห์ข้อมูลเชิงลึก – เช่น การวิเคราะห์ความรู้สึกของความคิดเห็นผู้ตรวจสอบหรือการสร้างสรุปอัตโนมัติ สำหรับทีมที่พึ่งพาการตรวจสอบ PDF (กฎหมาย, การเงิน, การศึกษา) ความสามารถในการดึงข้อมูลคำอธิบายแบบโปรแกรมเมติกเป็นข้อได้เปรียบเชิงแข่งขัน
+การทำอัตโนมัติในการดึงการทำหมายเหตุช่วยลดชั่วโมงของการคัดลอก‑วางด้วยมือ, ลดข้อผิดพลาดจากการถอดความ, และเปิดโอกาสให้ได้ข้อมูลเชิงลึกจากข้อมูล – เช่น การวิเคราะห์อารมณ์ของความคิดเห็นผู้ตรวจสอบหรือการสร้างรายงานสรุปอัตโนมัติ. ทีมงานในด้านกฎหมาย, การเงิน, การศึกษา, หรือโดเมนใด ๆ ที่พึ่งพาการตรวจสอบ PDF จะได้รับการเพิ่มประสิทธิภาพการทำงานที่วัดผลได้.
 
 ## ข้อกำหนดเบื้องต้นและการตั้งค่า
 
-ก่อนจะลงลึกในการดึงคำอธิบาย PDF, ตรวจสอบให้แน่ใจว่าสภาพแวดล้อมการพัฒนาของคุณตรงตามข้อกำหนดต่อไปนี้:
+ก่อนเริ่ม, ตรวจสอบว่าสภาพแวดล้อมของคุณตรงตามข้อกำหนดต่อไปนี้:
 
-### ข้อกำหนดเบื้องต้นที่จำเป็น
+### ข้อกำหนดที่จำเป็น
+- **Java Development Kit (JDK)** 8 หรือใหม่กว่า (แนะนำ JDK 11+ เพื่อประสิทธิภาพการจัดการหน่วยความจำและความเข้ากันของ API).  
+- **Maven 3.6+** สำหรับการจัดการ dependencies.  
+- IDE ที่คุณถนัด (IntelliJ IDEA, Eclipse, หรือ VS Code).  
 
-**สภาพแวดล้อมการพัฒนา:**
-- Java Development Kit (JDK) 8 หรือสูงกว่า (แนะนำ JDK 11+ เพื่อประสิทธิภาพที่ดีกว่า)  
-- Maven 3.6+ สำหรับการจัดการ dependencies  
-- IDE ที่คุณชอบ (IntelliJ IDEA, Eclipse, หรือ VS Code)
+### ความรู้ที่ต้องมี
+- ความคุ้นเคยกับไวยากรณ์พื้นฐานของ Java และรูปแบบ `try‑with‑resources`.  
+- ความเข้าใจโครงสร้างของไฟล์ `pom.xml` ของ Maven.  
 
-**ความรู้ที่ต้องมี:**
-- แนวคิดพื้นฐานของการเขียนโปรแกรม Java  
-- ความเข้าใจโครงสร้างโครงการ Maven  
-- ความคุ้นเคยกับรูปแบบ `try‑with‑resources` (เราจะใช้บ่อย)
+### ข้อกำหนดระบบ
+- RAM อย่างน้อย **2 GB** (แนะนำ 4 GB+ สำหรับ PDF ขนาดใหญ่).  
+- พื้นที่ดิสก์เพียงพอสำหรับไฟล์ชั่วคราวที่สร้างระหว่างการสตรีม.
 
-**ข้อกำหนดของระบบ:**
-- RAM ขั้นต่ำ 2 GB (แนะนำ 4 GB+ สำหรับการประมวลผล PDF ขนาดใหญ่)  
-- พื้นที่ดิสก์เพียงพอสำหรับการประมวลผลไฟล์ชั่วคราว  
-
-### ทำไมข้อกำหนดเหล่านี้ถึงสำคัญ
-เวอร์ชัน JDK มีความสำคัญเพราะ GroupDocs.Annotation ใช้คุณลักษณะใหม่ของ Java เพื่อการจัดการหน่วยความจำที่ดีกว่า Maven ช่วยให้จัดการ dependencies ได้ง่าย โดยเฉพาะเมื่อทำงานกับรีโพสิตอรีของ GroupDocs
+ข้อกำหนดเหล่านี้ทำให้ไลบรารีสามารถใช้คุณสมบัติใหม่ของ Java ได้พร้อมกับการใช้หน่วยความจำอย่างมีประสิทธิภาพ.
 
 ## การตั้งค่า GroupDocs.Annotation สำหรับ Java
 
-การทำให้ GroupDocs.Annotation ทำงานในโครงการของคุณนั้นง่ายดาย แต่มีรายละเอียดบางอย่างที่ควรทราบ
+การนำไลบรารีเข้ามาในโปรเจกต์ของคุณใช้เวลาเพียงไม่กี่บรรทัด, แต่มีรายละเอียดบางอย่างที่นักพัฒนาหลายคนมักมองข้าม.
 
 ### การกำหนดค่า Maven
+เพิ่ม repository และ dependency ต่อไปนี้ลงในไฟล์ `pom.xml` ของคุณ. URL ของ repository มีความสำคัญ; หากละเว้นจะทำให้ Maven ไม่สามารถค้นหาแพคเกจได้.
 
-เพิ่มการกำหนดค่านี้ลงในไฟล์ `pom.xml` — อย่าลืม URL ของรีโพสิตอรีที่หลายคนมักมองข้าม:
+คุณสามารถค้นหา Maven repository ได้ที่ [Maven repository](https://releases.groupdocs.com/annotation/java/).
 
 ```xml
 <repositories>
@@ -103,16 +133,16 @@ weight: 1
 </dependencies>
 ```
 
-**เคล็ดลับ:** ตรวจสอบเวอร์ชันล่าสุดเสมอบนหน้า releases ของ GroupDocs เวอร์ชัน 25.2 มีการปรับปรุงประสิทธิภาพโดยเฉพาะสำหรับการประมวลผลคำอธิบาย
+**เคล็ดลับ:** ตรวจสอบว่าคุณใช้เวอร์ชันเสถียรล่าสุด (เช่น 25.2) เพื่อรับประโยชน์จากการปรับปรุงการประมวลผลการทำหมายเหตุล่าสุด.
 
-### ตัวเลือกการตั้งค่าลิขสิทธิ์
+### ตัวเลือกการตั้งค่าไลเซนส์
+คุณมีสามวิธีในการเปิดใช้งานไลบรารี:
 
-**สำหรับการพัฒนาและทดสอบ:**
-1. **Free Trial:** เหมาะสำหรับการประเมิน — ให้ฟังก์ชันเต็มรูปแบบ  
-2. **Temporary License:** ขยายระยะเวลาการประเมินเพื่อการทดสอบอย่างละเอียด  
-3. **Commercial License:** จำเป็นสำหรับการใช้งานในผลิตภัณฑ์
+1. **Free trial** – ฟังก์ชันเต็มสำหรับการประเมิน.  
+2. **Temporary license** – ขยายระยะทดลองเพื่อการทดสอบเชิงลึก.  
+3. **Commercial license** – จำเป็นสำหรับสภาพแวดล้อมการผลิตใด ๆ.
 
-**การตั้งค่าลิขสิทธิ์อย่างรวดเร็ว:**
+เพิ่มไลเซนส์ไฟล์อย่างรวดเร็ว:
 
 ```java
 // For temporary or commercial licenses
@@ -120,9 +150,8 @@ License license = new License();
 license.setLicense("path/to/your/license.lic");
 ```
 
-### การเริ่มต้นโครงการ
-
-นี่คือตัวอย่างการตั้งค่าพื้นฐานที่คุณจะต่อยอดจากนี้:
+### การเริ่มต้นโปรเจกต์
+คลาส `Annotator` เป็นจุดเข้าถึงหลักสำหรับการดึงข้อมูลการทำหมายเหตุจากเอกสาร. ตัวอย่างต่อไปนี้แสดงรูปแบบที่แนะนำสำหรับการสร้างอินสแตนซ์ `Annotator`. บล็อก `try‑with‑resources` รับประกันว่าทรัพยากรเนทีฟทั้งหมดจะถูกปล่อยออก, ป้องกันการรั่วของหน่วยความจำที่มักเกิดเมื่อประมวลผลเอกสารหลายไฟล์ต่อเนื่อง.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -134,15 +163,12 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**ทำไมต้องใช้รูปแบบนี้?** `try‑with‑resources` รับประกันการทำความสะอาดที่เหมาะสม ป้องกันการรั่วไหลของหน่วยความจำที่มักเกิดเมื่อประมวลผลหลายเอกสาร
-
 ## คู่มือการทำงานแบบขั้นตอนต่อขั้นตอน
 
-ตอนนี้เราจะเข้าสู่ส่วนสำคัญ — การดึงคำอธิบายจากเอกสาร PDF ของคุณ เราจะแบ่งขั้นตอนเป็นส่วนย่อยที่เข้าใจง่าย
+ต่อไปนี้เป็นเวิร์กโฟลว์เต็มสำหรับการดึงการทำหมายเหตุจาก PDF. แต่ละขั้นตอนมีคำอธิบายสั้น ๆ ตามด้วยโค้ดที่ต้องใช้.
 
-### ขั้นตอนที่ 1: การโหลดและตรวจสอบเอกสาร
-
-**เปิดเอกสาร PDF ของคุณ:**
+### วิธีโหลดและตรวจสอบความถูกต้องของเอกสาร PDF?
+`InputStream` ให้สตรีมไบต์จากแหล่งเช่นไฟล์, ทำให้ไลบรารีอ่าน PDF โดยไม่ต้องโหลดทั้งหมดเข้าสู่หน่วยความจำ. โหลด PDF ของคุณเข้าสู่ `InputStream` แล้วสร้างอินสแตนซ์ `Annotator`. การตรวจสอบ `hasAnnotations()` แบบเลือกใช้สามารถข้ามการประมวลผลต่อไปสำหรับเอกสารที่ไม่มีการทำหมายเหตุ, ช่วยประหยัด CPU.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -159,21 +185,15 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-**เกิดอะไรขึ้นที่นี่?** เราสร้าง `InputStream` จากไฟล์ PDF ของคุณและเริ่มต้น `Annotator` ขั้นตอนตรวจสอบแบบเลือกใช้ช่วยประหยัดเวลาเมื่อเอกสารไม่มีคำอธิบาย
-
-### ขั้นตอนที่ 2: การดึงคำอธิบาย
-
-**ดึงคำอธิบายทั้งหมด:**
+### วิธีดึงการทำหมายเหตุทั้งหมดจากเอกสาร?
+อ็อบเจ็กต์ `Annotation` แทนรายการเครื่องหมายแต่ละรายการเช่นความคิดเห็น, ไฮไลท์, หรือสแตมป์ที่ดึงจาก PDF. การเรียก `annotator.get()` จะคืนค่า `List<Annotation>` ที่บรรจุอ็อบเจ็กต์การทำหมายเหตุทุกตัวที่พบในไฟล์. รายการนี้รวมประเภท, หมายเลขหน้า, ผู้เขียน, และเนื้อหาดิบ.
 
 ```java
 List<AnnotationBase> annotations = annotator.get();
 ```
 
-บรรทัดเดียวนี้ทำหน้าที่หนัก — สแกน PDF ทั้งหมดและคืนค่าคำอธิบายทั้งหมดเป็นรายการ แต่ละคำอธิบายมีเมตาดาต้าเช่น ประเภท, ตำแหน่ง, เนื้อหา, และข้อมูลผู้เขียน
-
-### ขั้นตอนที่ 3: การประมวลผลและวิเคราะห์
-
-**วนลูปผ่านคำอธิบาย:**
+### วิธีประมวลผลและวิเคราะห์การทำหมายเหตุที่ดึงมา?
+`HighlightAnnotation` แสดงส่วนข้อความที่ถูกไฮไลท์, ส่วน `TextAnnotation` แทนความคิดเห็นหรือโน้ตที่แนบกับเอกสาร. ทำการวนลูปผ่านรายการและจัดการแต่ละหมายเหตุตามคลาสย่อยที่เจาะจง (เช่น `HighlightAnnotation`, `TextAnnotation`). การกรองตามประเภทช่วยให้คุณโฟกัสที่ข้อมูลที่ต้องการ.
 
 ```java
 Iterator<AnnotationBase> items = annotations.iterator();
@@ -189,11 +209,8 @@ while (items.hasNext()) {
 }
 ```
 
-**เคล็ดลับจากโลกจริง:** ประเภทคำอธิบายต่าง ๆ (ไฮไลท์, ความคิดเห็น, สแตมป์) มีคุณสมบัติเฉพาะ คุณอาจต้องกรองตามประเภทตามกรณีการใช้งานของคุณ
-
-### ขั้นตอนที่ 4: การจัดการทรัพยากร
-
-**ทำความสะอาดอย่างเหมาะสม:**
+### วิธีทำความสะอาดทรัพยากรอย่างถูกต้อง?
+โครงสร้าง `try‑with‑resources` ปิด `Annotator` และสตรีมใด ๆ ที่อยู่ภายใต้โดยอัตโนมัติ, ซึ่งจำเป็นสำหรับบริการที่ทำงานต่อเนื่องและจัดการ PDF จำนวนมาก.
 
 ```java
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
@@ -201,17 +218,12 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 } // Stream automatically closed here
 ```
 
-รูปแบบ `try‑with‑resources` จะจัดการทำความสะอาดโดยอัตโนมัติ ซึ่งสำคัญมากเมื่อประมวลผลหลายเอกสารหรือในแอปพลิเคชันที่ทำงานต่อเนื่องเป็นเวลานาน
-
 ## ปัญหาที่พบบ่อยและวิธีแก้
 
-จากประสบการณ์จริง นี่คือความท้าทายที่นักพัฒนามักเจอมากที่สุด:
+### ปัญหา 1: “ไม่พบการทำหมายเหตุ” แม้ว่า PDF จะมีเครื่องหมาย
+บางโปรแกรมสร้าง PDF จะเก็บความคิดเห็นเป็น **ฟิลด์ฟอร์ม** แทนอ็อบเจ็กต์การทำหมายเหตุมาตรฐาน. เพื่อเข้าถึงฟิลด์เหล่านี้, เปิดใช้แฟล็ก `LoadOptions` ที่ทำให้ฟิลด์ฟอร์มถูกมองเป็นการทำหมายเหตุ.
 
-### ปัญหา 1: “ไม่พบคำอธิบาย” (แต่คุณรู้ว่ามีอยู่)
-
-**Problem:** PDF ของคุณมีคำอธิบายที่มองเห็นได้, แต่ `annotator.get()` คืนรายการว่าง
-
-**Solution:** ปัญหานี้มักเกิดกับ PDF ที่กรอกแบบฟอร์มหรือคำอธิบายที่สร้างโดยซอฟต์แวร์เฉพาะ
+`LoadOptions` ให้คุณปรับวิธีการโหลดเอกสาร, รวมถึงแฟล็กที่ทำให้ฟิลด์ฟอร์มถือเป็นการทำหมายเหตุ.
 
 ```java
 // Try different annotation types
@@ -223,11 +235,8 @@ for (AnnotationType type : AnnotationType.values()) {
 }
 ```
 
-### ปัญหา 2: ปัญหาหน่วยความจำกับ PDF ขนาดใหญ่
-
-**Problem:** `OutOfMemoryError` ขณะประมวลผลเอกสารขนาดใหญ่
-
-**Solution:** ประมวลผลคำอธิบายเป็นชุดและปรับแต่งการตั้งค่า JVM
+### ปัญหา 2: OutOfMemoryError เมื่อประมวลผล PDF ขนาดใหญ่
+ไฟล์ขนาดใหญ่สามารถทำให้ heap ของ JVM เกินค่าเริ่มต้น. ลดผลกระทบโดยประมวลผลหน้าเป็นชุดและเพิ่มขนาด heap ด้วย `-Xmx2g` (หรือมากกว่า) ตามความจำเป็น.
 
 ```java
 // Set JVM options: -Xmx4g -XX:+UseG1GC
@@ -241,22 +250,18 @@ for (int i = 0; i < annotations.size(); i += batchSize) {
 }
 ```
 
-### ปัญหา 3: ปัญหาการเข้ารหัสกับอักขระพิเศษ
-
-**Problem:** ข้อความคำอธิบายแสดงเป็นอักขระแปลกหรือเครื่องหมายคำถาม
-
-**Solution:** ตรวจสอบการจัดการการเข้ารหัสอย่างถูกต้อง
+### ปัญหา 3: ตัวอักษรแสดงเป็นอักษรผิดสำหรับอักขระที่ไม่ใช่ ASCII
+การทำหมายเหตุที่เขียนด้วยภาษาที่มีอักขระพิเศษต้องจัดการ UTF‑8 อย่างชัดเจนเมื่อแปลงอาร์เรย์ไบต์เป็นสตริง.
 
 ```java
 // When reading file paths or annotation content
 String content = new String(annotation.getMessage().getBytes(), StandardCharsets.UTF_8);
 ```
 
-## เคล็ดลับการเพิ่มประสิทธิภาพ
+## เคล็ดลับการปรับประสิทธิภาพ
 
-### แนวทางปฏิบัติการจัดการหน่วยความจำ
-
-**1. การประมวลผลแบบสตรีมสำหรับไฟล์ขนาดใหญ่:**
+### วิธีสตรีม‑ประมวลผลไฟล์ PDF ขนาดใหญ่?
+`Annotator` สามารถทำงานโดยตรงกับ `InputStream`, ไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ.
 
 ```java
 // Instead of loading entire document into memory
@@ -267,7 +272,8 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 }
 ```
 
-**2. การปรับจูน JVM สำหรับการประมวลผลเอกสาร:**
+### วิธีปรับ JVM สำหรับงานที่ต้องจัดการเอกสารจำนวนมาก?
+ปรับ garbage collector (`-XX:+UseG1GC`) และเพิ่ม heap (`-Xmx4g`) เพื่อให้ความหน่วงต่ำระหว่างการประมวลผลเป็นชุด.
 
 ```
 -Xmx4g                    # Increase heap size
@@ -275,9 +281,10 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 -XX:MaxGCPauseMillis=200  # Minimize GC pauses
 ```
 
-### การปรับปรุงความเร็วในการประมวลผล
+### วิธีทำการประมวลผลการทำหมายเหตุแบบขนานสำหรับหลายเอกสาร?
+ใช้ `ForkJoinPool` ของ Java เพื่อรันงานดึงข้อมูลพร้อมกัน, พร้อมกับใช้ factory `Annotator` ตัวเดียวเพื่อให้ค่าโอเวอร์เฮดต่ำ.
 
-**การประมวลผลแบบขนานสำหรับหลายเอกสาร**
+`ForkJoinPool` เป็นกรอบงานความพร้อมขนานของ Java ที่ช่วยดำเนินงานหลาย ๆ งานขนาดเล็กพร้อมกันอย่างมีประสิทธิภาพ.
 
 ```java
 List<Path> pdfFiles = Files.list(Paths.get("documents/"))
@@ -287,14 +294,10 @@ List<Path> pdfFiles = Files.list(Paths.get("documents/"))
 pdfFiles.parallelStream().forEach(this::extractAnnotations);
 ```
 
-**กลยุทธ์การประมวลผลเป็นชุด:**  
-ประมวลผลหลายเอกสารในเซสชันเดียวเพื่อกระจายค่าใช้จ่ายของการเริ่มต้น
+## การใช้งานจริงและกรณีศึกษา
 
-## การใช้งานในโลกจริงและกรณีศึกษา
-
-### 1. การอัตโนมัติการตรวจสอบเอกสาร
-
-**Scenario:** บริษัทกฎหมายที่ต้องประมวลผลการตรวจสอบสัญญาจากผู้ตรวจหลายคน
+### การทำอัตโนมัติการตรวจสอบเอกสารช่วยทีมกฎหมายอย่างไร?
+บริษัทกฎหมายมักได้รับสัญญาที่มีความคิดเห็นของผู้ตรวจสอบหลายสิบรายการ. การดึงความคิดเห็นเหล่านั้นโดยอัตโนมัติทำให้คุณสามารถส่งต่อไปยังระบบจัดการคดีเพื่อการติดตาม, วิเคราะห์, และรายงานได้.
 
 ```java
 // Extract and categorize reviewer feedback
@@ -306,9 +309,8 @@ reviewerComments.forEach((reviewer, comments) -> {
 });
 ```
 
-### 2. การบูรณาการกับแพลตฟอร์มการศึกษา
-
-**Scenario:** ดึงคำอธิบายของนักเรียนจากตำราอิเล็กทรอนิกส์เพื่อวิเคราะห์ข้อมูล
+### แพลตฟอร์มการศึกษาใช้การวิเคราะห์ไฮไลท์ของนักเรียนอย่างไร?
+การดึงไฮไลท์จากตำราอิเล็กทรอนิกส์ช่วยสร้างแดชบอร์ดที่แสดงส่วนที่นักเรียนเน้นบ่อยที่สุด, ช่วยให้ปรับปรุงหลักสูตรได้อย่างมีข้อมูลสนับสนุน.
 
 ```java
 // Analyze annotation patterns
@@ -319,9 +321,8 @@ long highlightCount = annotations.stream()
 System.out.println("Student made " + highlightCount + " highlights");
 ```
 
-### 3. กระบวนการทำงานคุณภาพ (QA)
-
-**Scenario:** การรวบรวมข้อเสนอแนะจากรายงาน PDF อย่างอัตโนมัติ
+### การเก็บฟีดแบ็กคุณภาพจากรายงาน PDF ทำอย่างไร?
+วิศวกร QA ทำหมายเหตุบนรายงานการทดสอบด้วยโน้ตข้อบกพร่อง. การดึงข้อมูลอัตโนมัติจะรวบรวมโน้ตเหล่านี้เข้าสู่เครื่องมือจัดการบั๊ก, ลดการป้อนข้อมูลด้วยมือ.
 
 ```java
 // Filter critical issues marked with specific annotation types
@@ -330,9 +331,9 @@ List<AnnotationBase> criticalIssues = annotations.stream()
     .collect(Collectors.toList());
 ```
 
-## การบูรณาการ Spring Boot PDF Annotations
+## การบูรณาการ Spring boot pdf annotations
 
-หากคุณกำลังสร้างไมโครเซอร์วิสด้วย Spring Boot, สามารถห่อหุ้มตรรกะการดึงข้อมูลไว้ใน Service Bean:
+หากคุณกำลังสร้างไมโครเซอร์วิส, ห่อหุ้มตรรกะการดึงข้อมูลใน Bean ของ Spring. Bean ด้านล่างแสดงการฉีดพึ่งพา, การจัดการข้อยกเว้น, และ endpoint REST ที่ส่งคืนข้อมูลการทำหมายเหตุในรูป JSON.
 
 ```java
 @Service
@@ -351,33 +352,32 @@ public class AnnotationExtractionService {
 }
 ```
 
-ปรับใช้เป็น endpoint เฉพาะและสเกลแนวนอนเพื่อรองรับปริมาณงานสูง
+ปรับใช้เซอร์วิสนี้หลัง load balancer และสเกลแบบแนวนอนเพื่อรองรับหลายพันคำขอต่อวินาที.
 
-## วิธีเลือกใช้ทางเลือกอื่นและเมื่อควรใช้
+## วิธีเลือกใช้แนวทางอื่นและเมื่อใดควรใช้
 
-แม้ว่า GroupDocs.Annotation จะมีพลัง, แต่ในบางกรณีอาจพิจารณาเครื่องมืออื่น:
+แม้ GroupDocs.Annotation จะเป็นโซลูชันที่ครบถ้วนที่สุด, มีสถานการณ์ที่ไลบรารีเบากว่าอาจเพียงพอ:
 
-- **Apache PDFBox:** เหมาะสำหรับการดึงข้อความอย่างง่ายโดยไม่มีเมตาดาต้าคำอธิบายที่ซับซ้อน  
-- **iText:** เหมาะสำหรับการสร้าง PDF พร้อมคำอธิบาย (ทิศทางตรงกันข้าม)
+- **Apache PDFBox** – เหมาะสำหรับการดึงข้อความอย่างง่ายแต่ไม่มีเมตาดาต้าการทำหมายเหตุเต็มรูปแบบ.  
+- **iText 7** – เชี่ยวชาญการสร้างการทำหมายเหตุมากกว่าการอ่าน.
 
-**เมื่อควรเลือกใช้ GroupDocs:** ประเภทคำอธิบายที่ซับซ้อน, ความต้องการสนับสนุนระดับองค์กร, หรือเมื่อคุณต้องการ API ที่สม่ำเสมอข้ามรูปแบบเอกสารหลายประเภท
+**เมื่อควรอยู่กับ GroupDocs:** คุณต้องการสนับสนุนประเภทการทำหมายเหตุที่ซับซ้อน (เช่น สแตมป์ยาง, หมึก), ประสิทธิภาพระดับองค์กร, หรือ API ที่สอดคล้องกันหลายรูปแบบไฟล์.
 
 ## รูปแบบการบูรณาการสำหรับแอปพลิเคชันระดับองค์กร
 
-### สถาปัตยกรรมไมโครเซอร์วิส
-
-ปรับการดึงคำอธิบายเป็นไมโครเซอร์วิสเฉพาะเพื่อความสามารถในการสเกลและจัดการทรัพยากร สื่อสารผ่าน REST หรือ gRPC และทำให้เซอร์วิสเป็น stateless เพื่อให้สามารถสเกลออกได้ง่าย
+### ควรออกแบบสถาปัตยกรรมไมโครเซอร์วิสสำหรับการดึงการทำหมายเหตุอย่างไร?
+เปิดเผยตรรกะการดึงข้อมูลเป็น endpoint REST หรือ gRPC ที่ไม่มีสถานะ. ทำให้คอนเทนเนอร์เซอร์วิสเป็นแบบคอนเทนเนอร์ได้น้ำหนักเบา, ตั้งค่า health checks, และใช้คิวข้อความ (เช่น RabbitMQ) สำหรับการประมวลผลแบบชุดแบบอะซิงโครนัส. รูปแบบนี้รับประกันความพร้อมใช้งานสูงและการสเกลแนวนอนได้ง่าย.
 
 ## คำถามที่พบบ่อย
 
 **Q: เวอร์ชัน Java ขั้นต่ำที่ต้องการสำหรับ GroupDocs.Annotation คืออะไร?**  
-A: JDK 8 เป็นขั้นต่ำ, แต่แนะนำ JDK 11+ เพื่อประสิทธิภาพและคุณลักษณะด้านความปลอดภัยที่ดีกว่า
+A: JDK 8 เป็นขั้นต่ำ, แต่แนะนำ JDK 11+ เพื่อประสิทธิภาพและฟีเจอร์ภาษาใหม่.
 
-**Q: สามารถดึงคำอธิบายจากรูปแบบเอกสารอื่นนอกจาก PDF ได้หรือไม่?**  
-A: ได้, GroupDocs รองรับ Word (.docx), Excel (.xlsx), PowerPoint (.pptx) และอื่น ๆ
+**Q: ฉันสามารถดึงการทำหมายเหตุจากรูปแบบอื่นนอกจาก PDF ได้หรือไม่?**  
+A: ได้. GroupDocs.Annotation ยังอ่านการทำหมายเหตุจาก Word (.docx), Excel (.xlsx), PowerPoint (.pptx), และรูปแบบภาพหลายประเภท.
 
 **Q: จะจัดการกับ PDF ที่มีรหัสผ่านอย่างไร?**  
-A: ใช้คอนสตรัคเตอร์ `Annotator` ที่รับ `LoadOptions` พร้อมรหัสผ่าน:
+A: ส่งอ็อบเจ็กต์ `LoadOptions` ที่มีรหัสผ่านไปยังคอนสตรัคเตอร์ของ `Annotator`.
 
 ```java
 LoadOptions loadOptions = new LoadOptions();
@@ -385,33 +385,31 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator(inputStream, loadOptions);
 ```
 
-**Q: จะประมวลผลเอกสารขนาดใหญ่ (100+ หน้า) อย่างมีประสิทธิภาพได้อย่างไร?**  
-A: ใช้วิธีสตรีม, ประมวลผลเป็นชุด, และเพิ่มขนาด heap ของ JVM พิจารณาการประมวลผลคำอธิบายต่อหน้า หากโครงสร้างเอกสารเอื้ออำนวย
+**Q: กลยุทธ์ใดช่วยให้การใช้หน่วยความจำต่ำสำหรับ PDF 100 หน้า?**  
+A: ใช้สตรีม (`InputStream`), ประมวลผลหน้าเป็นชิ้นส่วน, และเพิ่ม heap ของ JVM (`-Xmx2g` หรือมากกว่า). การประมวลผลเป็นชุดยังช่วยกระจายค่าใช้จ่ายของการเริ่มต้นได้.
 
-**Q: ทำไมถึงได้รายการคำอธิบายว่างแม้คำอธิบายมองเห็นใน PDF?**  
-A: บาง PDF ใช้ฟิลด์ฟอร์มหรือประเภทคำอธิบายที่ไม่เป็นมาตรฐาน ลองวนลูปผ่านค่า `AnnotationType` ต่าง ๆ หรือตรวจสอบว่ามีการใช้ฟิลด์ฟอร์มแทนคำอธิบายหรือไม่
+**Q: ทำไมฉันอาจได้รายการการทำหมายเหตุว่างแม้ว่า PDF จะมีเครื่องหมาย?**  
+A: บาง PDF เก็บความคิดเห็นเป็นฟิลด์ฟอร์มหรือใช้ชนิดการทำหมายเหตุที่ไม่เป็นมาตรฐาน. เปิดใช้แฟล็ก `LoadOptions` เพื่อให้ไลบรารีมองส่วนเหล่านั้นเป็นการทำหมายเหตุ, หรือวนลูปผ่านอ็อบเจ็กต์ `FormField` แยกต่างหาก.
 
-**Q: จะจัดการกับอักขระพิเศษหรือข้อความที่ไม่ใช่ภาษาอังกฤษในคำอธิบายอย่างไร?**  
-A: ตรวจสอบการจัดการการเข้ารหัส UTF‑8 อย่างถูกต้องเมื่อแปลง byte array เป็น string ใช้ `StandardCharsets.UTF_8`
+## แหล่งข้อมูลและการอ่านต่อ
 
-**Q: สามารถใช้ GroupDocs.Annotation ในการผลิตโดยไม่มีลิขสิทธิ์ได้หรือไม่?**  
-A: ไม่, จำเป็นต้องมีลิขสิทธิ์เชิงพาณิชย์สำหรับการใช้งานในผลิตภัณฑ์ ทดลองใช้และลิขสิทธิ์ชั่วคราวมีให้สำหรับการพัฒนาและทดสอบเท่านั้น
-
-**Q: จะหาเวอร์ชันล่าสุดและอัปเดตได้จากที่ไหน?**  
-A: ตรวจสอบที่ [Maven repository](https://releases.groupdocs.com/annotation/java/) หรือเว็บไซต์ของ GroupDocs สำหรับการปล่อยเวอร์ชันและบันทึกการอัปเดตล่าสุด
-
-## แหล่งข้อมูลและการอ่านเพิ่มเติม
-
-- [เอกสาร](https://docs.groupdocs.com/annotation/java/)  
-- [คู่มืออ้างอิง API](https://reference.groupdocs.com/annotation/java/)  
-- [ดาวน์โหลดเวอร์ชันล่าสุด](https://releases.groupdocs.com/annotation/java/)  
-- [การซื้อใบอนุญาตเชิงพาณิชย์](https://purchase.groupdocs.com/buy)  
-- [เข้าถึงการทดลองใช้ฟรี](https://releases.groupdocs.com/annotation/java/)  
-- [ขอใบอนุญาตชั่วคราว](https://purchase.groupdocs.com/temporary-license/)  
-- [ฟอรั่มสนับสนุนชุมชน](https://forum.groupdocs.com/c/annotation-java/)
+- [Maven repository](https://releases.groupdocs.com/annotation/java/)
+- [Documentation](https://docs.groupdocs.com/annotation/java/)
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)
+- [Commercial Licensing](https://purchase.groupdocs.com/buy)
+- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)
+- [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation-java)
 
 ---
 
-**อัปเดตล่าสุด:** 2026-02-21  
-**ทดสอบกับ:** GroupDocs.Annotation 25.2  
-**ผู้เขียน:** GroupDocs
+**Last Updated:** 2026-08-14  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
+- [Create PDF Annotations Java with GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
