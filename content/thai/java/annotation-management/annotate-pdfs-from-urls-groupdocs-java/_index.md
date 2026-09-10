@@ -119,7 +119,6 @@ type: docs
 เพิ่ม GroupDocs.Annotation ลงใน `pom.xml` ของคุณ:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -134,7 +133,6 @@ type: docs
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Pro tip:** Keep the dependency version in sync with the latest stable release to benefit from performance improvements and new annotation types.

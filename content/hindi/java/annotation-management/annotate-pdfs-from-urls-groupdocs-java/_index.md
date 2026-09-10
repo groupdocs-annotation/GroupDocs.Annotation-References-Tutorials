@@ -115,7 +115,6 @@ URL से PDF लोड करने से फ़ाइल को डिस्
 `pom.xml` में GroupDocs.Annotation जोड़ें:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -130,7 +129,6 @@ URL से PDF लोड करने से फ़ाइल को डिस्
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Pro tip:** निर्भरताओं के संस्करण को नवीनतम स्थिर रिलीज़ के साथ सिंक रखें ताकि प्रदर्शन सुधार और नए एनोटेशन प्रकारों का लाभ मिल सके।

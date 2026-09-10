@@ -120,7 +120,6 @@ PDF‑t URL‑ről betölteni megszünteti a fájl lemezre írásának terheit, 
 Addja a GroupDocs.Annotation‑t a `pom.xml`‑hez:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -135,7 +134,6 @@ Addja a GroupDocs.Annotation‑t a `pom.xml`‑hez:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Pro tip:** Tartsa a függőség verzióját szinkronban a legújabb stabil kiadással, hogy élvezze a teljesítményjavulásokat és az új annotáció típusokat.

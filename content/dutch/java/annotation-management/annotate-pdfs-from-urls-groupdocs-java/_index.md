@@ -119,7 +119,6 @@ Het laden van een PDF van een URL verwijdert de overhead van het schrijven van h
 Add GroupDocs.Annotation to your `pom.xml`:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -134,7 +133,6 @@ Add GroupDocs.Annotation to your `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Pro tip:** Houd de afhankelijkheidsversie gesynchroniseerd met de nieuwste stabiele release om te profiteren van prestatieverbeteringen en nieuwe annotatietypen.

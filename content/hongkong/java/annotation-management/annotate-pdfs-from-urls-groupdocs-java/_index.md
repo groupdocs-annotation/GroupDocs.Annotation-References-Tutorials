@@ -116,7 +116,6 @@ type: docs
 將 GroupDocs.Annotation 加入您的 `pom.xml`：
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -131,7 +130,6 @@ type: docs
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **專業提示：** 請將相依性版本與最新穩定版保持同步，以獲得效能提升與新註解類型的好處。

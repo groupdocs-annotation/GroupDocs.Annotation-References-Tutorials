@@ -116,7 +116,6 @@ URL から PDF をロードすると、ファイルをディスクに書き込�
 `pom.xml` に GroupDocs.Annotation を追加します:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -131,7 +130,6 @@ URL から PDF をロードすると、ファイルをディスクに書き込�
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **プロのコツ:** 依存バージョンを最新の安定版と同期させ、パフォーマンス向上や新しい注釈タイプの恩恵を受けましょう。

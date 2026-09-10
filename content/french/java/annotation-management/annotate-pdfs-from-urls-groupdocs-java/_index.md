@@ -120,7 +120,6 @@ Le chargement d'un PDF depuis une URL supprime la surcharge d'écriture du fichi
 Ajoutez GroupDocs.Annotation à votre `pom.xml` :
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -135,7 +134,6 @@ Ajoutez GroupDocs.Annotation à votre `pom.xml` :
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Astuce pro :** Gardez la version de la dépendance synchronisée avec la dernière version stable pour bénéficier des améliorations de performance et des nouveaux types d'annotation.

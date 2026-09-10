@@ -117,7 +117,6 @@ URL에서 PDF를 로드하면 파일을 디스크에 쓰는 오버헤드가 사�
 `pom.xml`에 GroupDocs.Annotation을 추가합니다:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -132,7 +131,6 @@ URL에서 PDF를 로드하면 파일을 디스크에 쓰는 오버헤드가 사�
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Pro tip:** 최신 안정 버전과 종속성 버전을 맞추어 성능 향상 및 새로운 주석 유형의 혜택을 받으세요.

@@ -119,7 +119,6 @@ Loading a PDF from a URL removes the overhead of writing the file to disk, cuts 
 Add GroupDocs.Annotation to your `pom.xml`:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -134,7 +133,6 @@ Add GroupDocs.Annotation to your `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Mẹo chuyên nghiệp:** Giữ phiên bản phụ thuộc đồng bộ với bản phát hành ổn định mới nhất để hưởng lợi từ cải thiện hiệu năng và các loại ghi chú mới.

@@ -120,7 +120,6 @@ Das Laden eines PDFs von einer URL eliminiert den Overhead, die Datei auf die Fe
 Fügen Sie GroupDocs.Annotation zu Ihrer `pom.xml` hinzu:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -135,7 +134,6 @@ Fügen Sie GroupDocs.Annotation zu Ihrer `pom.xml` hinzu:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Pro tip:** Halten Sie die Versionsnummer der Abhängigkeit mit der neuesten stabilen Version synchron, um von Leistungsverbesserungen und neuen Annotationsarten zu profitieren.

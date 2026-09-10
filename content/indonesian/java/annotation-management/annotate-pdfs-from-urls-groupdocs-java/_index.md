@@ -119,7 +119,6 @@ Memuat PDF dari URL menghilangkan beban menulis file ke disk, mengurangi latensi
 Tambahkan GroupDocs.Annotation ke `pom.xml` Anda:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -134,7 +133,6 @@ Tambahkan GroupDocs.Annotation ke `pom.xml` Anda:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Pro tip:** Jaga versi dependensi tetap sinkron dengan rilis stabil terbaru untuk mendapatkan manfaat dari peningkatan kinerja dan jenis anotasi baru.

@@ -121,7 +121,6 @@ type: docs
 أضف GroupDocs.Annotation إلى ملف `pom.xml` الخاص بك:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -136,7 +135,6 @@ type: docs
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **نصيحة احترافية:** حافظ على توافق نسخة التبعيات مع أحدث إصدار ثابت للاستفادة من تحسينات الأداء وأنواع التعليقات الجديدة.

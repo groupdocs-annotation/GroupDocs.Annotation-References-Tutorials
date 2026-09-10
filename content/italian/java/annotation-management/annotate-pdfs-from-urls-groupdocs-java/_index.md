@@ -107,7 +107,6 @@ Caricare un PDF da un URL rimuove l’onere di scrivere il file su disco, riduce
 Aggiungi GroupDocs.Annotation al tuo `pom.xml`:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -122,7 +121,6 @@ Aggiungi GroupDocs.Annotation al tuo `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Suggerimento professionale:** Mantieni la versione della dipendenza sincronizzata con l'ultima release stabile per beneficiare di miglioramenti delle prestazioni e di nuovi tipi di annotazione.

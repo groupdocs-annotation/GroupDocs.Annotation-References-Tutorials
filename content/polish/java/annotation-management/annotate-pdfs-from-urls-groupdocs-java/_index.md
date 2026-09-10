@@ -119,7 +119,6 @@ W tym obszernej przewodniku dowiesz się **jak anotować pdf java** poprzez ład
 Dodaj GroupDocs.Annotation do swojego `pom.xml`:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -134,7 +133,6 @@ Dodaj GroupDocs.Annotation do swojego `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Wskazówka:** Utrzymuj wersję zależności zgodną z najnowszym stabilnym wydaniem, aby korzystać z ulepszeń wydajności i nowych typów adnotacji.

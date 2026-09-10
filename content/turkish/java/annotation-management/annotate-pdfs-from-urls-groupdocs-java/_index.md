@@ -113,7 +113,6 @@ Bir PDF'yi URL'den yüklemek, dosyayı diske yazma yükünü ortadan kaldırır,
 `pom.xml` dosyanıza GroupDocs.Annotation ekleyin:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -128,7 +127,6 @@ Bir PDF'yi URL'den yüklemek, dosyayı diske yazma yükünü ortadan kaldırır,
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **İpucu:** Bağımlılık sürümünü en son kararlı sürümle senkronize tutarak performans iyileştirmelerinden ve yeni açıklama türlerinden faydalanın.

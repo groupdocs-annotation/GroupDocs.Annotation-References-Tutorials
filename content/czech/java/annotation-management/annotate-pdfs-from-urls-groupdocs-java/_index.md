@@ -118,7 +118,6 @@ Načítání PDF z URL odstraňuje režii zápisu souboru na disk, snižuje late
 Přidejte GroupDocs.Annotation do vašeho `pom.xml`:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -133,7 +132,6 @@ Přidejte GroupDocs.Annotation do vašeho `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Tip:** Udržujte verzi závislosti synchronizovanou s nejnovější stabilní verzí, abyste získali výhody vylepšení výkonu a nových typů anotací.

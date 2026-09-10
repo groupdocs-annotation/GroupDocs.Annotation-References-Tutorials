@@ -119,7 +119,6 @@ Carregar um PDF de uma URL remove a sobrecarga de gravar o arquivo em disco, red
 Adicione o GroupDocs.Annotation ao seu `pom.xml`:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -134,7 +133,6 @@ Adicione o GroupDocs.Annotation ao seu `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Dica profissional:** Mantenha a versão da dependência sincronizada com a última versão estável para aproveitar melhorias de desempenho e novos tipos de anotação.

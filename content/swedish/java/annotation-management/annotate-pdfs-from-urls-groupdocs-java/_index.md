@@ -119,7 +119,6 @@ Att ladda en PDF från en URL tar bort overheaden av att skriva filen till disk,
 Lägg till GroupDocs.Annotation i din `pom.xml`:
 
 ```xml
-<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -134,7 +133,6 @@ Lägg till GroupDocs.Annotation i din `pom.xml`:
       <version>25.2</version>
    </dependency>
 </dependencies>
-``` -->
 ```
 
 > **Proffstips:** Håll beroendeversionen synkroniserad med den senaste stabila releasen för att dra nytta av prestandaförbättringar och nya annoteringstyper.
