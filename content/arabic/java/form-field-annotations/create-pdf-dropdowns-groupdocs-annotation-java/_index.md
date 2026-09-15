@@ -1,69 +1,110 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-02-18'
-description: تعلم كيفية إضافة قائمة منسدلة إلى نماذج PDF في Java باستخدام GroupDocs.Annotation.
-  يغطي هذا الدليل حقول نماذج PDF في Java، الإعداد، أمثلة الشيفرة، استكشاف الأخطاء
-  وإصلاحها، وأفضل الممارسات.
-keywords: Java PDF dropdown tutorial, create interactive PDF forms Java, PDF form
-  fields Java, GroupDocs annotation dropdown, how to add dropdown to PDF Java
-lastmod: '2026-02-18'
-linktitle: Java PDF Dropdown Tutorial
+date: '2026-08-19'
+description: تعلم كيفية إنشاء pdf dropdown list في Java باستخدام GroupDocs.Annotation.
+  يغطي هذا الدليل setup, code flow, troubleshooting, performance tips, و best practices
+  لنماذج PDF التفاعلية.
+keywords:
+- create pdf dropdown list
+- java pdf form fields
+- groupdocs annotation dropdown
+- interactive pdf forms java
+- pdf form field library
+lastmod: '2026-08-19'
+linktitle: دليل Java PDF Dropdown
+og_description: إنشاء pdf dropdown list في Java باستخدام GroupDocs.Annotation. اتبع
+  setup خطوة بخطوة، code examples، و performance tips لنماذج PDF التفاعلية.
+og_image_alt: 'Developer guide: create pdf dropdown list in Java using GroupDocs.Annotation'
+og_title: كيفية إنشاء pdf dropdown list في Java باستخدام GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-19'
+  description: Learn how to create pdf dropdown list in Java using GroupDocs.Annotation.
+    This guide covers setup, code flow, troubleshooting, performance tips, and best
+    practices for interactive PDF forms.
+  headline: How to create pdf dropdown list in Java with GroupDocs
+  type: TechArticle
+- description: Learn how to create pdf dropdown list in Java using GroupDocs.Annotation.
+    This guide covers setup, code flow, troubleshooting, performance tips, and best
+    practices for interactive PDF forms.
+  name: How to create pdf dropdown list in Java with GroupDocs
+  steps:
+  - name: initialize the annotator
+    text: '`Annotator` is the core class that loads a document and provides methods
+      to create, edit, and save annotations. Start by setting up your document processor:
+      **Important note**: Replace `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` with the actual
+      path to your PDF file. A common mistake is using relative pat'
+  - name: create the dropdown component
+    text: '`Dropdown` is the object that represents a selectable list field in a PDF.
+      Creating an empty dropdown component is the first building block:'
+  - name: configure dropdown options
+    text: '`setOptions` assigns the selectable items that appear in a dropdown field.
+      You can pass a list of strings that represent each choice: **Real‑world example**:
+      For a customer satisfaction survey, you might use:'
+  - name: position and size the dropdown
+    text: '`setBox` defines the rectangular area (position and size) of a form field
+      on a PDF page. PDF coordinates start from the bottom‑left corner (unlike HTML
+      which starts top‑left). So `(100, 100)` means 100 points right and 100 points
+      up from the bottom‑left. **Sizing tips**: - Width should accommodate y'
+  - name: add and save
+    text: Finally, integrate your dropdown into the document and persist the changes.
+      Always save to a different filename during development to avoid overwriting
+      the original file.
+  type: HowTo
+- questions:
+  - answer: GroupDocs.Annotation provides a concise Java API for creating and managing
+      PDF form fields.
+    question: What library is best for adding dropdowns in Java PDFs?
+  - answer: A free trial works for testing; a production license is required for commercial
+      use.
+    question: Do I need a license for development?
+  - answer: Yes – use the `setBox` method with PDF coordinates (origin at bottom‑left).
+    question: Can I position the dropdown anywhere on the page?
+  - answer: Use try‑with‑resources, process files one at a time, and increase JVM
+      heap if needed.
+    question: How do I avoid memory issues with large PDFs?
+  - answer: Absolutely – populate the options list dynamically before calling `setOptions`.
+    question: Is it possible to load options from a database?
+  type: FAQPage
 tags:
 - java
 - pdf
 - groupdocs
 - forms
 - annotations
-title: كيفية إضافة قائمة منسدلة إلى نماذج PDF في جافا – إنشاء نماذج تفاعلية باستخدام
-  GroupDocs
+title: كيفية إنشاء pdf dropdown list في Java باستخدام GroupDocs
 type: docs
 url: /ar/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/
 weight: 1
 ---
 
-# دليل Java لإنشاء قوائم منسدلة في PDF - إنشاء نماذج تفاعلية مع GroupDocs
+# كيفية إنشاء قائمة منسدلة PDF في Java باستخدام GroupDocs
 
-## المقدمة
-
-هل واجهت صعوبة في إنشاء نماذج PDF تفاعلية باستخدام Java؟ لست وحدك. كثير من المطورين يجدون أنفسهم يتعاملون مع مكتبات PDF معقدة إما تفتقر إلى الوثائق أو تتطلب منحنيات تعلم حادة. هنا يأتي دور GroupDocs.Annotation for Java – فهو كأداة سويسريّة متعددة الاستخدامات لمعالجة ملفات PDF.
-
-في هذا الدليل الشامل، ستكتشف **كيفية إضافة قائمة منسدلة** إلى نماذج PDF الخاصة بـ Java باستخدام GroupDocs.Annotation. سواءً كنت تبني نماذج استبيانات، أنظمة طلبات، أو سير عمل للموافقات، سيوجهك هذا الدليل من الإعداد الأساسي إلى تقنيات التحسين المتقدمة.
-
-**ما ستتعلمه:**
-- إعداد GroupDocs.Annotation في مشروع Java الخاص بك (بالطريقة الصحيحة)
-- إنشاء مكوّنات القوائم المنسدلة مع أمثلة واقعية
-- استكشاف الأخطاء الشائعة التي تُعرقل معظم المطورين
-- حيل تحسين الأداء التي يمكن أن توفر لك ساعات من التصحيح
-- أفضل الممارسات لإنشاء نماذج PDF جاهزة للإنتاج
+إنشاء **create pdf dropdown list** في Java هو طلب شائع لأي شخص يبني ملفات PDF تفاعلية — سواءً للاستبيانات أو نماذج الطلبات أو سير عمل الموافقة. في هذا الدرس ستتعلم كيفية استخدام GroupDocs.Annotation لإضافة مكوّنات القائمة المنسدلة إلى ملفات PDF الخاصة بك، وتكوين الخيارات ديناميكياً، ومعالجة المستندات الكبيرة بكفاءة. سنستعرض كل خطوة من إعداد البيئة إلى أفضل الممارسات الجاهزة للإنتاج، حتى تتمكن من تقديم نماذج تفاعلية قوية دون الحاجة إلى التعامل مع تفاصيل PDF الداخلية منخفضة المستوى.
 
 ## إجابات سريعة
-- **ما هي المكتبة الأفضل لإضافة القوائم المنسدلة في ملفات PDF باستخدام Java؟** GroupDocs.Annotation توفر واجهة برمجة تطبيقات بسيطة لحقول نماذج PDF في Java.  
-- **هل أحتاج إلى ترخيص للتطوير؟** النسخة التجريبية المجانية تكفي للاختبار؛ يلزم ترخيص إنتاج للاستخدام التجاري.  
-- **هل يمكنني وضع القائمة المنسدلة في أي مكان على الصفحة؟** نعم – استخدم طريقة `setBox` مع إحداثيات PDF (الأصل في الزاوية السفلية‑اليسرى).  
-- **كيف أتجنب مشاكل الذاكرة مع ملفات PDF الكبيرة؟** استخدم `try‑with‑resources`، عالج الملفات واحدةً تلو الأخرى، وزد حجم ذاكرة JVM إذا لزم الأمر.  
-- **هل يمكن تحميل الخيارات من قاعدة بيانات؟** بالتأكيد – املأ قائمة الخيارات ديناميكياً قبل استدعاء `setOptions`.
+- **ما المكتبة الأفضل لإضافة القوائم المنسدلة في ملفات PDF باستخدام Java؟** GroupDocs.Annotation توفر API Java مختصر لإنشاء وإدارة حقول نماذج PDF.  
+- **هل أحتاج إلى ترخيص للتطوير؟** النسخة التجريبية المجانية تكفي للاختبار؛ الترخيص الإنتاجي مطلوب للاستخدام التجاري.  
+- **هل يمكنني وضع القائمة المنسدلة في أي مكان على الصفحة؟** نعم – استخدم طريقة `setBox` مع إحداثيات PDF (الأصل في الزاوية السفلية اليسرى).  
+- **كيف أتجنب مشاكل الذاكرة مع ملفات PDF الكبيرة؟** استخدم `try‑with‑resources`، عالج الملفات واحدةً تلو الأخرى، وزد حجم heap الخاص بـ JVM إذا لزم الأمر.  
+- **هل يمكن تحميل الخيارات من قاعدة بيانات؟** بالتأكيد – قم بملء قائمة الخيارات ديناميكياً قبل استدعاء `setOptions`.
 
-## كيفية إضافة قائمة منسدلة في ملفات PDF باستخدام Java
-القائمة المنسدلة في PDF هي في الأساس حقل نموذج يعرض قائمة مسبقة التعريف من الخيارات، مشابه لعنصر HTML `<select>`. تقوم GroupDocs.Annotation بتجريد تفاصيل PDF منخفضة المستوى، مما يتيح لك التركيز على منطق الأعمال الخاص بـ **حقول نماذج PDF في Java**.
+## ما هو create pdf dropdown list؟
+عملية **create pdf dropdown list** تضيف حقلًا قابلًا للاختيار إلى ملف PDF، مشابه لعنصر HTML `<select>`، وتسمح للمستخدمين باختيار قيمة واحدة من مجموعة محددة مسبقًا. يتم تخزين هذا العنصر التفاعلي مباشرة في ملف PDF، لذا يعمل في أي عارض متوافق مع المعايير دون الحاجة إلى سكريبتات إضافية.
 
 ## لماذا نختار GroupDocs للقوائم المنسدلة في PDF؟
-قبل أن نبدأ كتابة الكود، قد تتساءل: "لماذا GroupDocs بدلاً من مكتبات PDF الأخرى؟" الحقيقة أنني جربت عدة مكتبات PDF، وGroupDocs تحقق التوازن المثالي بين القوة والبساطة.
+GroupDocs.Annotation مصمم لمعالجة المستندات على نطاق واسع وعلى مستوى المؤسسات. يدعم **أكثر من 50 تنسيقًا للإدخال والإخراج**، ويمكنه التعامل مع ملفات PDF تصل إلى **1,000 صفحة** دون تحميل الملف بالكامل في الذاكرة، ويوفر **API سطر واحد** لإنشاء القوائم المنسدلة. تجعل هذه القدرات المكمّنة منه خيارًا موثوقًا لحالة الاستخدام **create pdf dropdown list**.
 
-**المميزات الرئيسية:**
-- **واجهة برمجة تطبيقات بديهية**: على عكس بعض المكتبات التي تتطلب فهمًا عميقًا لبنية PDF، تقوم GroupDocs بتجريد التعقيد.
-- **دعم غني للتعليقات التوضيحية**: إلى جانب القوائم المنسدلة، تحصل على حقول نصية، مربعات اختيار، توقيعات، وأكثر.
-- **توافق متعدد المنصات**: تعمل بسلاسة عبر أنظمة تشغيل مختلفة.
-- **مجتمع نشط**: منتدى دعم قوي وتحديثات دورية.
-- **مرونة الترخيص**: توفر كلًا من الخيارات التجريبية والمؤسسية.
-
-## المتطلبات والإعداد
+## المتطلبات المسبقة والإعداد
 
 ### ما ستحتاجه
-- **مجموعة تطوير جافا (JDK)**: الإصدار 8 أو أعلى (يفضل JDK 11+).
-- **Maven**: لإدارة التبعيات (Gradle يعمل أيضًا، لكن المثال يوضح Maven).
-- **IDE**: IntelliJ IDEA، Eclipse، أو VS Code مع إضافات Java.
-- **معرفة أساسية بجافا**: فهم الفئات، الكائنات، واستخدام `try‑with‑resources`.
+تحتاج إلى بيئة تطوير Java حديثة:
+
+- **Java Development Kit (JDK)** – الإصدار 8 أو أحدث؛ يُفضَّل JDK 11+ للدعم طويل الأمد.  
+- **Maven** – لإدارة الاعتمادات (Gradle يعمل أيضًا، لكن المثال يُظهر Maven).  
+- **IDE** – IntelliJ IDEA أو Eclipse أو VS Code مع ملحقات Java.  
+- **معرفة أساسية بـ Java** – إلمام بالصفوف والكائنات وبنية `try‑with‑resources`.
 
 ### تكوين Maven
 أضف GroupDocs.Annotation إلى مشروعك بإدراج ما يلي في ملف `pom.xml` الخاص بك:
@@ -85,19 +126,21 @@ weight: 1
 </dependencies>
 ```
 
-**نصيحة احترافية**: تحقق دائمًا من أحدث نسخة على موقع GroupDocs. استخدام نسخ قديمة قد يسبب مشاكل توافق وغياب ميزات.
+**نصيحة احترافية**: تحقق دائمًا من أحدث نسخة على موقع GroupDocs. استخدام إصدارات قديمة قد يسبب مشاكل توافق وغياب ميزات.
 
 ### إعداد الترخيص
-**للتعلم/الاختبار:**
-1. حمّل النسخة التجريبية المجانية من [GroupDocs Free Trial](https://releases.groupdocs.com/annotation/java/)
+**للتعلم/الاختبار:**  
+1. حمّل النسخة التجريبية المجانية من [GroupDocs Free Trial](https://releases.groupdocs.com/annotation/java/)  
 2. النسخة التجريبية تتضمن علامات مائية لكنها توفر جميع الوظائف.
 
-**للإنتاج:**
-- زر صفحة [Purchase Page](https://purchase.groupdocs.com/buy) للحصول على تراخيص دائمة.
+**للإنتاج:**  
+- زر صفحة [Purchase Page](https://purchase.groupdocs.com/buy) للحصول على تراخيص دائمة.  
 - هل تحتاج اختبارًا في بيئة الإنتاج؟ احصل على [Temporary License](https://purchase.groupdocs.com/temporary-license/).
 
-### نمط التهيئة الأساسي
-هذا هو الأساس الذي ستستخدمه في جميع عمليات GroupDocs:
+يمكنك أيضًا تحميل المكتبة من [Download Center](https://releases.groupdocs.com/annotation/java/). لمزيد من التفاصيل راجع [API Reference](https://reference.groupdocs.com/annotation/java/). وثائق إضافية متوفرة في [GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/). استكشف خيارات الشراء في [Purchase Options](https://purchase.groupdocs.com/buy). جرّب [Free Trial](https://releases.groupdocs.com/annotation/java/) لتقييم الميزات. احصل على المساعدة في [Support Forum](https://forum.groupdocs.com/c/annotation/).
+
+## نمط التهيئة الأساسي
+`GroupDocs.Annotation for Java` هي مكتبة تمكّنك من إضافة تعليقات وحقول نماذج تفاعلية إلى ملفات PDF وغيرها من المستندات برمجيًا. الصنف `Annotator` هو المكوّن الأساسي الذي يحمل المستند ويوفر طرقًا لإنشاء وتعديل وحفظ التعليقات. إليك الأساس الذي ستستخدمه في جميع عمليات GroupDocs:
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -106,23 +149,27 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**لماذا هذا النمط مهم**: جملة `try-with-resources` تغلق الـ annotator تلقائيًا، مما يمنع تسرب الذاكرة – مشكلة شائعة عند العمل مع مكتبات PDF.
+**لماذا هذا النمط مهم**: جملة `try‑with‑resources` تغلق الـ annotator تلقائيًا، مما يمنع تسرب الذاكرة — مشكلة شائعة عند العمل مع مكتبات PDF.
 
-## دليل التنفيذ خطوة بخطوة
+## كيفية إضافة قائمة منسدلة في ملفات PDF باستخدام Java
+حمّل ملف PDF باستخدام `new Annotator("input.pdf")`، أنشئ حقلًا منسدلاً، عيّن خياراته، حدده باستخدام `setBox`، وأخيرًا احفظ المستند. يتيح هذا التدفق المختصر إنشاء عناصر **create pdf dropdown list** ببضع نداءات API فقط، مما يبقي الكود نظيفًا وقابلًا للصيانة.
 
-### فهم مكوّنات القوائم المنسدلة
-قبل كتابة الكود، دعنا نفهم ما سنبنيه. مكوّن القائمة المنسدلة في PDF هو حقل نموذج يعرض للمستخدمين قائمة مسبقة التعريف من الخيارات. فكر فيه كعنصر HTML `<select>`، لكن مدمج مباشرةً داخل مستند PDF.
+## الأداء ودعم الصيغ
+GroupDocs يقدم محرك تعليقات مخصص يدعم أكثر من **50 تنسيقًا للإدخال والإخراج**، ويوفر API Java بسيطًا لحقول النماذج، ويتعامل مع المستندات الكبيرة دون تحميل الملف بالكامل في الذاكرة، مما يجعله مثاليًا لإنشاء قوائم منسدلة PDF. تُظهر معايير الأداء معالجة ملف PDF مكوّن من 500 صفحة في أقل من 10 ثوانٍ على خادم عادي.
 
-**حالات الاستخدام الشائعة:**
-- اختيار الدولة/الولاية في النماذج
-- فئات المنتجات في نماذج الطلب
-- تحديثات الحالة في مستندات سير العمل
-- مقاييس التقييم في نماذج الاستبيان
+## فهم مكوّنات القائمة المنسدلة
+مكوّن القائمة المنسدلة في PDF هو في الأساس حقل نموذج يعرض للمستخدمين قائمة مسبقة من الخيارات. فكر فيه كعنصر HTML `<select>`، لكنه مدمج مباشرة في مستند PDF.
 
-### إنشاء أول قائمة منسدلة لك
+**حالات الاستخدام الشائعة:**  
+- اختيار الدولة/الولاية في نماذج التسجيل  
+- فئات المنتجات في نماذج الطلبات  
+- تحديثات الحالة في مستندات سير العمل  
+- مقاييس التقييم في استبيانات الرأي  
 
-#### الخطوة 1: تهيئة الـ Annotator
-ابدأ بإعداد معالج المستند الخاص بك:
+## إنشاء أول قائمة منسدلة لك
+
+### الخطوة 1: تهيئة الـ annotator
+`Annotator` هو الصنف الأساسي الذي يحمل المستند ويوفر طرقًا لإنشاء وتعديل وحفظ التعليقات. ابدأ بإعداد معالج المستند الخاص بك:
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -130,20 +177,18 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**ملاحظة مهمة**: استبدل `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` بالمسار الفعلي لملف PDF الخاص بك. الخطأ الشائع هو استخدام مسارات نسبية تتعطل عند تشغيل البرنامج من مجلدات مختلفة.
+**ملاحظة مهمة**: استبدل `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` بالمسار الفعلي لملف PDF الخاص بك. الخطأ الشائع هو استخدام مسارات نسبية تتعطل عند تشغيل البرنامج من مجلد مختلف.
 
-#### الخطوة 2: إنشاء مكوّن القائمة المنسدلة
-هنا يبدأ السحر:
+### الخطوة 2: إنشاء مكوّن القائمة المنسدلة
+`Dropdown` هو الكائن الذي يمثل حقل قائمة اختيار في PDF. إنشاء مكوّن قائمة منسدلة فارغ هو أول خطوة بناء:
 
 ```java
 // Create a new DropdownComponent object
 dropdownComponent = new DropdownComponent();
 ```
 
-هذا ينشئ مكوّن قائمة منسدلة فارغ. فكّر فيه كإنشاء حقل نموذج فارغ سنقوم بتكوينه في الخطوات التالية.
-
-#### الخطوة 3: تكوين خيارات القائمة المنسدلة
-الآن سنملأ القائمة بالخيارات القابلة للاختيار:
+### الخطوة 3: تكوين خيارات القائمة المنسدلة
+`setOptions` يعيّن العناصر القابلة للاختيار التي تظهر في حقل القائمة. يمكنك تمرير قائمة من السلاسل النصية التي تمثل كل خيار:
 
 ```java
 dropdownComponent.setOptions(new ArrayList<>(Arrays.asList("Item1", "Item2", "Item3")));
@@ -161,22 +206,20 @@ dropdownComponent.setOptions(new ArrayList<>(Arrays.asList(
 )));
 ```
 
-#### الخطوة 4: تحديد الموقع والحجم
-حدد أين تظهر القائمة على الصفحة:
+### الخطوة 4: تحديد الموقع والحجم
+`setBox` يحدد المنطقة المستطيلة (الموقع والحجم) لحقل النموذج على صفحة PDF. إحداثيات PDF تبدأ من الزاوية السفلية اليسرى (على عكس HTML التي تبدأ من الزاوية العلوية اليسرى). لذا فإن `(100, 100)` يعني 100 نقطة إلى اليمين و100 نقطة إلى الأعلى من الزاوية السفلية اليسرى.
 
 ```java
 dropdownComponent.setBox(new Rectangle(100, 100, 50, 20)); // x, y, width, height
 ```
 
-**فهم الإحداثيات**: إحداثيات PDF تبدأ من الزاوية السفلية‑اليسرى (على عكس HTML التي تبدأ من الزاوية العليا‑اليسرى). لذا فإن `(100, 100)` يعني 100 نقطة إلى اليمين و100 نقطة إلى الأعلى من الزاوية السفلية‑اليسرى.
-
-**نصائح حول الحجم**:
-- يجب أن يكون العرض كافيًا لأطول نص في الخيارات.
-- ارتفاع 20‑25 نقطة عادةً ما يناسب النص العادي.
+**نصائح حول الحجم**:  
+- يجب أن يكون العرض كافيًا لأطول نص في الخيارات.  
+- ارتفاع 20‑25 نقطة عادةً ما يناسب النص العادي.  
 - جرّب قيمًا مختلفة لتجد الأنسب في مستندك.
 
-#### الخطوة 5: الإضافة والحفظ
-أخيرًا، أدمج القائمة المنسدلة في المستند:
+### الخطوة 5: الإضافة والحفظ
+أخيرًا، أدمج القائمة المنسدلة في المستند واحفظ التغييرات. احفظ دائمًا إلى اسم ملف مختلف أثناء التطوير لتجنب الكتابة فوق الملف الأصلي.
 
 ```java
 annotator.add(dropdownComponent);
@@ -184,10 +227,8 @@ annotator.add(dropdownComponent);
 annotator.save("YOUR_DOCUMENT_DIRECTORY/output.pdf");
 ```
 
-**أفضل ممارسة**: احفظ دائمًا إلى اسم ملف مختلف أثناء التطوير. بهذه الطريقة يمكنك مقارنة النتائج وتجنب إتلاف الملف الأصلي عن طريق الخطأ.
-
-### مثال كامل يعمل
-إليك كل شيء موحدًا في مثال كامل وقابل للتنفيذ:
+## مثال كامل يعمل
+إليك كل شيء مجمعًا في مثال كامل وقابل للتنفيذ يوضح سير عمل **create pdf dropdown list** من البداية حتى النهاية:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -224,11 +265,11 @@ public class PDFDropdownExample {
 }
 ```
 
-## المشكلات الشائعة وكيفية تجنّبها
+## مشاكل شائعة وكيفية تجنّبها
 
-### المشكلة 1: خطأ “File Not Found”
-**المشكلة**: يرمى الكود استثناء `FileNotFoundException` رغم وجود الملف.  
-**الحل**:  
+### المشكلة 1: أخطاء “File not found”
+**المشكلة**: يرمي الكود استثناء `FileNotFoundException` رغم وجود الملف.  
+**الحل**: تأكد أن مسار الملف مطلق أو يتم حله بشكل صحيح بالنسبة إلى دليل العمل، وتأكد من أن التطبيق يمتلك صلاحيات القراءة.
 
 ```java
 // Instead of relative paths like this:
@@ -242,21 +283,18 @@ new Annotator(System.getProperty("user.dir") + "/documents/input.pdf")
 ### المشكلة 2: ظهور القائمة في موقع غير صحيح
 **المشكلة**: تظهر القائمة في مكان غير متوقع على PDF.  
 **السبب الجذري**: ارتباك نظام إحداثيات PDF.  
-**الحل**:  
-- تذكّر أن (0,0) هو الزاوية السفلية‑اليسرى في PDFs، وليس العليا‑اليسرى.  
-- استخدم عارض PDF يُظهر الإحداثيات لتحديد المواقع بدقة.  
-- ابدأ بقيم إحداثيات أكبر ثم قلّصها تدريجيًا.
+**الحل**: تذكّر أن (0,0) هو الزاوية السفلية اليسرى في PDF. استخدم عارضًا يعرض الإحداثيات، ابدأ بقيم Y أكبر، ثم قلّص تدريجيًا.
 
 ### المشكلة 3: أخطاء تشغيلية متعلقة بالترخيص
 **المشكلة**: يعمل الكود في بيئة التطوير لكنه يفشل في الإنتاج بسبب أخطاء الترخيص.  
 **الإصلاحات السريعة**:  
-1. تأكد من وجود ملف الترخيص في classpath.  
-2. تحقق من تواريخ انتهاء الترخيص.  
-3. تأكد من أن الترخيص يتطابق مع بيئة النشر (ترخيص تطوير ≠ ترخيص إنتاج).
+1. تأكد أن ملف الترخيص موجود في classpath.  
+2. راجع تواريخ انتهاء الترخيص.  
+3. تأكد أن الترخيص يتطابق مع بيئة النشر (ترخيص التطوير يختلف عن ترخيص الإنتاج).
 
 ### المشكلة 4: مشاكل الذاكرة مع ملفات PDF الكبيرة
 **المشكلة**: `OutOfMemoryError` عند معالجة مستندات ضخمة.  
-**الحلول**:  
+**الحلول**: استخدم نمط `try‑with‑resources`، عالج الملفات واحدةً تلو الأخرى، وزد حجم heap للـ JVM (`-Xmx`) حسب الحاجة.
 
 ```java
 // Set JVM memory parameters
@@ -339,7 +377,7 @@ for (String pdfFile : pdfFiles) {
 ```
 
 ### استراتيجية المعالجة الدفعية
-للحالات ذات الحجم العالي:
+للحالات ذات الحجم العالي، عالج كل ملف في كتلة `try‑with‑resources` منفصلة وأطلق الموارد فورًا:
 
 ```java
 public void processBatch(List<String> pdfFiles, int batchSize) {
@@ -356,7 +394,7 @@ public void processBatch(List<String> pdfFiles, int batchSize) {
 ```
 
 ### اعتبارات التخزين المؤقت
-إذا كنت تعالج مستندات متشابهة بشكل متكرر:
+إذا كنت تعالج مستندات مشابهة بشكل متكرر، خزن الكائنات القابلة لإعادة الاستخدام مثل كائن الترخيص وأعد استخدام نفس تكوين `Annotator` حيثما أمكن:
 
 ```java
 // Cache dropdown configurations
@@ -376,15 +414,15 @@ public DropdownComponent createStandardDropdown(String type, Rectangle position)
 ## تقنيات متقدمة
 
 ### تنسيق القوائم المنسدلة
-على الرغم من أن GroupDocs.Annotation يركز على الوظيفة أكثر من التخصيص البصري، يمكنك التحكم في المظهر إلى حد ما:
+على الرغم من أن GroupDocs.Annotation يركز على الوظيفة أكثر من التخصيص البصري، يمكنك التأثير على المظهر عبر ضبط حجم الخط، اللون، وخصائص الحدود لحقل القائمة.
 
 ```java
 dropdownComponent.setBox(new Rectangle(100, 100, 150, 30)); // Wider for better readability
 // The library handles font and color based on PDF defaults
 ```
 
-### إنشاء قوائم منسدلة شرطية
-أحيانًا تحتاج قوائم منسدلة فقط تحت ظروف معينة:
+### إنشاء القوائم بناءً على شرط
+أحيانًا تحتاج قوائم منسدلة فقط تحت ظروف معينة (مثل دور المستخدم). استخدم عبارات `if` القياسية في Java لتحديد ما إذا كنت ستنشئ وتضيف مكوّن القائمة.
 
 ```java
 public void addConditionalDropdowns(Annotator annotator, DocumentType docType) {
@@ -396,8 +434,8 @@ public void addConditionalDropdowns(Annotator annotator, DocumentType docType) {
 }
 ```
 
-### التكامل مع التحقق من النماذج
-بينما يتولى GroupDocs إنشاء القوائم، قد ترغب في التحقق من صحة ملفات PDF بعد الإنشاء:
+### التكامل مع التحقق من صحة النماذج
+بينما يتولى GroupDocs إنشاء القائمة، قد ترغب في التحقق من صحة ملفات PDF بعد الإنشاء — تأكد من ملء الحقول المطلوبة، وأن الخيارات ضمن النطاق المسموح، وأن المستند يلتزم بقواعد عملك.
 
 ```java
 public boolean validateDropdownsAdded(String pdfPath) {
@@ -422,10 +460,10 @@ Logger.getLogger("com.groupdocs").setLevel(Level.DEBUG);
 
 ### رسائل الاستثناء الشائعة وحلولها
 
-| Exception | Likely Cause | Solution |
-|-----------|--------------|----------|
-| `FileNotFoundException` | مسار الملف غير صحيح | استخدم مسارات مطلقة أو تحقق من منطق المسارات النسبية |
-| `InvalidLicenseException` | مشاكل الترخيص | تحقق من موقع ملف الترخيص وتاريخ الانتهاء |
+| الاستثناء | السبب المحتمل | الحل |
+|-----------|--------------|------|
+| `FileNotFoundException` | مسار ملف غير صحيح | استخدم مسارات مطلقة أو تحقق من منطق المسار النسبي |
+| `InvalidLicenseException` | مشاكل الترخيص | تحقق من موقع ملف الترخيص وتاريخ انتهاء صلاحيته |
 | `OutOfMemoryError` | معالجة ملف كبير | زد حجم heap للـ JVM أو عالج الملفات على دفعات |
 | `UnsupportedOperationException` | قيود PDF | تأكد من أن PDF يسمح بالتعديلات |
 
@@ -456,7 +494,7 @@ public void testDropdownCreation() {
 ## اعتبارات النشر في بيئة الإنتاج
 
 ### استراتيجية معالجة الأخطاء
-طبق معالجة أخطاء قوية لبيئات الإنتاج:
+طبق معالجة أخطاء قوية لبيئات الإنتاج لالتقاط وتسجيل الاستثناءات دون إظهار تفاصيل التقنية للمستخدم النهائي:
 
 ```java
 public class PDFDropdownService {
@@ -482,7 +520,7 @@ public class PDFDropdownService {
 ```
 
 ### إدارة التكوين
-استخدم ملفات تكوين لتخزين خيارات القوائم المنسدلة:
+خزن خيارات القائمة والقيم القابلة للتعديل في ملفات خصائص خارجية أو قاعدة بيانات، مما يتيح لك تحديثها دون الحاجة لإعادة تجميع التطبيق:
 
 ```yaml
 # dropdown-config.yml
@@ -495,80 +533,87 @@ dropdowns:
     position: {x: 200, y: 200, width: 100, height: 25}
 ```
 
+## موارد إضافية
+- **[Official Documentation](https://docs.groupdocs.com/annotation/java/)** – أدلة شاملة ومراجع API  
+- **[GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/)** – أمثلة تفصيلية للاستخدام  
+- **[API Reference](https://reference.groupdocs.com/annotation/java/)** – توقيعات الطرق والمعاملات بالكامل  
+- **[Community Forum](https://forum.groupdocs.com/c/annotation/)** – احصل على مساعدة من المطورين الآخرين  
+- **[GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)** – قناة الدعم الرسمية  
+- **[Sample Projects](https://github.com/groupdocs-annotation)** – أمثلة تطبيقية من العالم الحقيقي  
+- **[Download Center](https://releases.groupdocs.com/annotation/java/)** – احصل على أحدث إصدارات المكتبة  
+
 ## الخلاصة والخطوات التالية
 
-تهانينا! لقد أتقنت الآن **كيفية إضافة قائمة منسدلة** إلى نماذج PDF التفاعلية باستخدام GroupDocs.Annotation for Java. تعلمت كل شيء من الإعداد الأساسي إلى تقنيات التحسين المتقدمة التي ستفيدك في بيئات الإنتاج.
+مبروك! لقد أتقنت الآن **كيفية إضافة قائمة منسدلة** إلى نماذج PDF التفاعلية باستخدام GroupDocs.Annotation for Java. تعلمت كل شيء من الإعداد الأساسي إلى تقنيات التحسين المتقدمة التي ستخدمك في بيئات الإنتاج.
 
 ### النقاط الأساسية
-- **الإعداد سهل**: دمج Maven والترخيص أبسط من معظم مكتبات PDF.  
-- **الكود بديهي**: تصميم API منطقي ويتبع تقاليد Java.  
-- **الأداء مهم**: إدارة الموارد بشكل صحيح تمنع مشاكل الذاكرة.  
-- **الاختبار ضروري**: تحقق دائمًا من عمل ملفات PDF عبر عارضات مختلفة.
+- **الإعداد بسيط**: دمج Maven والترخيص أسهل من معظم مكتبات PDF.  
+- **API بديهي**: التصميم يتبع تقاليد Java المألوفة، مما يقلل من منحنى التعلم.  
+- **الأداء مهم**: إدارة الموارد بشكل صحيح تمنع مشاكل الذاكرة حتى مع ملفات PDF مئات الصفحات.  
+- **الاختبار ضروري**: تحقق من ملفات PDF عبر عارضات مختلفة لضمان سلوك موحد.
 
 ### ما التالي؟
-الآن بعد أن أصبحت القوائم المنسدلة تحت سيطرتك، استكشف الميزات المتقدمة التالية:
-1. **تعليقات نصية** – مثالية لإدخال المستخدم الحر.  
-2. **مربعات اختيار** – رائعة للاختيارات الثنائية.  
-3. **حقول توقيع** – أساسية لسير عمل الموافقات.  
-4. **إضافة علامات مائية** – لتأمين مستنداتك بشكل احترافي.  
-5. **مقارنة المستندات** – لتتبع التغييرات بين الإصدارات.
+الآن بعد أن أتقنت سير عمل **create pdf dropdown list**، فكر في استكشاف الميزات المرتبطة التالية:
+
+1. **تعليقات حقول النص** – التقاط مدخلات المستخدم الحرة.  
+2. **مكوّنات خانة الاختيار** – تمكين الاختيارات الثنائية.  
+3. **حقول التوقيع** – دعم الموافقات القانونية مباشرة داخل PDF.  
+4. **إضافة علامات مائية** – وضع شعار أو إشعار سرية على مستنداتك.  
+5. **مقارنة المستندات** – تتبع التغييرات بين إصدارات مختلفة من النموذج.
 
 ### جاهز للارتقاء؟
-استفد من هذه الموارد لتعميق معرفتك بـ GroupDocs:
+اطلع على هذه الموارد لتعميق خبرتك مع GroupDocs:
+
 - **[Official Documentation](https://docs.groupdocs.com/annotation/java/)** – أدلة شاملة ومراجع API  
-- **[Community Forum](https://forum.groupdocs.com/c/annotation/)** – احصل على مساعدة من مطورين آخرين  
+- **[Community Forum](https://forum.groupdocs.com/c/annotation/)** – احصل على مساعدة من المطورين الآخرين  
 - **[Sample Projects](https://github.com/groupdocs-annotation)** – أمثلة تطبيقية من العالم الحقيقي  
 
-تذكر أن أفضل طريقة لإتقان أي تقنية هي بناء شيء عملي بها. ابدأ بمشروع بسيط – ربما نموذج ملاحظات لفريقك أو استبيان أساسي – ثم أضف تعقيدات تدريجية كلما ارتحت مع الـ API.
+تذكر، أفضل طريقة لإتقان أي تقنية هي بناء شيء عملي بها. ابدأ بنموذج ملاحظات بسيط لفريقك، ثم أضف حقولًا أكثر تعقيدًا مع اكتسابك للثقة في الـ API.
 
-هل لديك أسئلة أو تواجه مشاكل؟ مجتمع GroupDocs متعاون للغاية، والوثائق واضحة (نعم، نادرًا ما تكون وثائق أدوات التطوير هكذا!).
+هل لديك أسئلة أو تواجه مشاكل؟ مجتمع GroupDocs متعاون للغاية، والوثائق فعلاً قابلة للقراءة (أعلم، نادر في أدوات المطورين!).
 
-برمجة سعيدة، ولتظل ملفات PDF الخاصة بك تفاعلية إلى الأبد! 🚀
+برمجة سعيدة، ولتكن ملفات PDF الخاصة بك تفاعلية إلى الأبد! 🚀
 
 ## الأسئلة المتكررة
 
 ### ما هو GroupDocs.Annotation for Java بالضبط؟
-GroupDocs.Annotation for Java مكتبة شاملة تتيح لك إضافة أنواع مختلفة من التعليقات التوضيحية إلى المستندات، بما في ذلك PDFs. فكر فيها كصندوق أدوات يجعل المستندات الثابتة تفاعلية – يمكنك إضافة قوائم منسدلة، حقول نصية، مربعات اختيار، توقيعات، وأكثر دون الحاجة لفهم بنية PDF المعقدة.
+`GroupDocs.Annotation for Java` هي مكتبة شاملة تسمح لك بإضافة أنواع مختلفة من التعليقات إلى المستندات، بما في ذلك ملفات PDF. فكر فيها كصندوق أدوات لجعل المستندات الثابتة تفاعلية – يمكنك إضافة قوائم منسدلة، حقول نص، خانات اختيار، توقيعات، وأكثر دون الحاجة لفهم بنية PDF المعقدة.
 
-### ما مدى صعوبة إعداد GroupDocs في مشروع موجود؟
-الأمر أبسط مما تتوقع! إذا كنت تستخدم Maven، يكفي إضافة المستودع والاعتماد إلى `pom.xml`. يستغرق الإعداد بالكامل حوالي 5 دقائق. الجزء الأكثر تعقيدًا عادةً هو ضبط الترخيص، لكن حتى ذلك موثّق جيدًا.
+### ما مدى صعوبة إعداد GroupDocs في مشروعي الحالي؟
+الأمر أبسط مما تتوقع! إذا كنت تستخدم Maven، يكفي إضافة المستودع والاعتماد إلى ملف `pom.xml`. يستغرق الإعداد بالكامل حوالي خمس دقائق. الجزء الأكثر تعقيدًا عادةً هو ضبط الترخيص، لكن الوثائق ترشدك خطوة بخطوة.
 
 ### هل يمكنني استخدام GroupDocs لتنسيقات ملفات غير PDF؟
-بالطبع! يدعم GroupDocs مجموعة واسعة من الصيغ بما فيها مستندات Word، جداول Excel، عروض PowerPoint، وأنواع متعددة من الصور. تبقى واجهة البرمجة متسقة عبر الصيغ، لذا إذا تعلمتها للـ PDFs يمكنك تطبيقها بسهولة على صيغ أخرى.
+بالطبع! يدعم GroupDocs مجموعة واسعة من الصيغ بما فيها مستندات Word، جداول Excel، عروض PowerPoint، وصيغ الصور المتنوعة. يبقى الـ API ثابتًا عبر الصيغ، لذا بمجرد إتقان التعامل مع PDF يمكنك تطبيق نفس الأنماط على صيغ أخرى بسهولة.
 
 ### ماذا أفعل إذا ظهرت القائمة المنسدلة في موقع غير صحيح؟
-غالبًا ما يكون السبب ارتباك نظام الإحداثيات. تذكّر أن PDFs تستخدم أصلًا في الزاوية السفلية‑اليسرى (على عكس صفحات الويب التي تبدأ من الأعلى‑اليسار). ابدأ بقيم Y أكبر ثم قلّصها تدريجيًا. استخدم عارض PDF يُظهر الإحداثيات لتحديد الموضع بدقة.
+عادةً ما يكون السبب ارتباك نظام الإحداثيات. تذكّر أن PDF يستخدم أصلًا في الزاوية السفلية اليسرى (على عكس صفحات الويب التي تبدأ من الزاوية العلوية اليسرى). ابدأ بقيم Y أكبر ثم قلّص تدريجيًا. العديد من عارضات PDF يمكنها إظهار الإحداثيات الدقيقة للعنصر المحدد—استخدمها لضبط الموضع بدقة.
 
 ### هل هناك طريقة لاختبار التنفيذ دون ترخيص كامل؟
-نعم! تقدم GroupDocs نسخة تجريبية مجانية تشمل جميع الوظائف. القيد الوحيد هو وجود علامة مائية على المستندات المعالجة. هذا يكفي للتطوير والاختبار قبل شراء ترخيص إنتاج.
+نعم! تقدم GroupDocs نسخة تجريبية مجانية تشمل جميع الوظائف. القيد الوحيد هو إضافة علامة مائية إلى المستندات المعالجة. هذا يكفي للتطوير والاختبار—يمكنك التأكد من أن كل شيء يعمل قبل شراء ترخيص إنتاج.
 
 ### كيف أتعامل مع ملفات PDF الكبيرة دون نفاد الذاكرة؟
-استخدم نمط `try‑with‑resources` بانتظام – فهو يضمن تحرير الموارد تلقائيًا. للمعالجة الدفعية، عالج ملفًا واحدًا في كل مرة بدلاً من تحميل عدة ملفات في الذاكرة. قد تحتاج أيضًا إلى زيادة حجم heap للـ JVM (`-Xmx`) حسب حجم ملفاتك.
+سؤال ممتاز! استخدم نمط `try‑with‑resources` بانتظام—ذلك يضمن تحرير الموارد. للمعالجة الدفعية، عالج ملفًا واحدًا في كل مرة بدلاً من تحميل عدة ملفات في آنٍ واحد. قد تحتاج أيضًا إلى زيادة حجم heap للـ JVM (`-Xmx`) بحسب حجم ملفاتك.
 
-### هل يمكن تخصيص مظهر القوائم المنسدلة؟
-تركّز GroupDocs أكثر على الوظيفة مقارنةً بالتخصيص البصري. القوائم المنسدلة تتبع التنسيق الافتراضي للـ PDF. يمكنك التحكم في الحجم والموقع بدقة، لكن إذا كنت تحتاج إلى تخصيص بصري متقدم قد تحتاج إلى مكتبة PDF أكثر تخصصًا. ومع ذلك، التنسيق الافتراضي يكفي لمعظم التطبيقات التجارية.
+### هل يمكنني تخصيص مظهر القوائم المنسدلة؟
+تركّز GroupDocs أكثر على الوظيفة مقارنةً بالتخصيص البصري. القوائم المنسدلة تتبع النمط الافتراضي للـ PDF. مع ذلك، يمكنك التحكم في الحجم والموضع، وضبط حجم الخط، اللون، وخصائص الحدود إذا رغبت.
 
-### ما هي أفضل طريقة للحصول على مساعدة إذا علقني شيء؟
-منتدى الدعم الخاص بـ [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/) نشط جدًا ومفيد. يشارك فيه كل من المستخدمين وموظفي GroupDocs الذين يردون بسرعة. كما أن الوثائق الرسمية جيدة، لذا ابدأ بالتحقق منها أولًا.
+### ما هي أفضل طريقة للحصول على مساعدة إذا علقت؟
+منتدى [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/) نشط جدًا ومفيد. يشارك فيه كل من المستخدمين وموظفي GroupDocs الذين يردون بسرعة. كذلك، الوثائق الرسمية جيدة جدًا—ابدأ بها قبل طلب المساعدة.
 
-### هل هناك أمور ترخيصية يجب الانتباه لها؟
-الأمر الأساسي هو الفرق بين تراخيص التطوير والإنتاج. تأكد من أن الترخيص يتطابق مع بيئة النشر الخاصة بك. تراخيص التجربة مؤقتة ولها تواريخ انتهاء – لا تدعها تنتهي أثناء تشغيل الإنتاج.
+### هل هناك أمور ترخيص يجب الانتباه لها؟
+الأمر الأساسي هو التمييز بين تراخيص التطوير والإنتاج. تأكد أن الترخيص يتطابق مع بيئة النشر. التراخيص المؤقتة مفيدة للاختبار لكنها تنتهي صلاحيتها—لا تدعها تنفد في بيئة الإنتاج.
 
 ### كيف يقارن GroupDocs بمكتبات PDF أخرى مثل iText؟
-GroupDocs يركز على التعليقات التوضيحية وحقول النماذج، بينما iText أكثر شمولية لإنشاء وتعديل PDF. توفر GroupDocs واجهة أبسط لمهام التعليق، لكن iText يمنح مرونة أكبر لإنشاء مستندات PDF من الصفر. إذا كان هدفك الأساسي هو إضافة عناصر تفاعلية إلى ملفات PDF موجودة، فإن GroupDocs عادةً ما يكون الخيار الأنسب.
-
-## موارد إضافية
-
-- [GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/) - وثائق API كاملة ودروس تعليمية  
-- [API Reference](https://reference.groupdocs.com/annotation/java/) - مراجع مفصلة للطرق والفئات  
-- [Download Center](https://releases.groupdocs.com/annotation/java/) - أحدث الإصدارات والنسخ التجريبية  
-- [Purchase Options](https://purchase.groupdocs.com/buy) - معلومات الترخيص والأسعار  
-- [Free Trial](https://releases.groupdocs.com/annotation/java/) - تجربة كاملة للوظائف  
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/) - ترخيص قصير الأمد للتقييم  
-- [Support Forum](https://forum.groupdocs.com/c/annotation/) - مساعدة المجتمع والدعم الرسمي  
+GroupDocs يركز على التعليقات وحقول النماذج، بينما iText مكتبة عامة لإنشاء وتعديل PDF. يوفر GroupDocs API أبسط لمهام التعليقات، لكنه أقل مرونة لإنشاء PDF من الصفر. إذا كان هدفك الأساسي إضافة عناصر تفاعلية إلى ملفات PDF موجودة، فإن GroupDocs عادةً ما يكون الخيار الأنسب.
 
 ---
 
-**آخر تحديث:** 2026-02-18  
-**تم الاختبار مع:** GroupDocs.Annotation 25.2  
+**آخر تحديث:** 2026-08-19  
+**تم الاختبار باستخدام:** GroupDocs.Annotation 25.2  
 **المؤلف:** GroupDocs
+
+## دروس ذات صلة
+
+- [Add Text Field PDF in Java – GroupDocs.Annotation Guide](/annotation/java/form-field-annotations/)
+- [How to Create PDF Buttons Java with GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)

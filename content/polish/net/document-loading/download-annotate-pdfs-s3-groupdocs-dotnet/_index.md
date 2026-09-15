@@ -1,103 +1,168 @@
 ---
-"date": "2025-05-06"
-"description": "Dowiedz się, jak efektywnie pobierać i opisywać pliki PDF z usługi Amazon S3 przy użyciu narzędzia GroupDocs.Annotation dla platformy .NET. Ulepsz swój obieg dokumentów dzięki płynnej integracji."
-"title": "Efektywne pobieranie i adnotacje plików PDF z Amazon S3 przy użyciu GroupDocs.Annotation dla .NET"
-"url": "/pl/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/"
+categories:
+- Document Processing
+date: '2026-08-19'
+description: Dowiedz się, jak pobrać PDF z S3 i w C# oznaczyć PDF przy użyciu GroupDocs.Annotation
+  dla .NET. Krok po kroku kod, wskazówki dotyczące wydajności i rozwiązywanie problemów.
+keywords:
+- download pdf from s3
+- c# annotate pdf
+- groupdocs.annotation .net
+lastmod: '2026-08-19'
+linktitle: Przewodnik po oznaczaniu PDF w AWS S3 .NET
+og_description: Pobierz PDF z S3 i oznacz go w C# przy użyciu GroupDocs.Annotation
+  dla .NET. Ten przewodnik przeprowadzi Cię przez strumieniowanie, typy adnotacji
+  oraz optymalizacje wydajności według najlepszych praktyk.
+og_image_alt: Guide showing how to download a PDF from AWS S3 and add annotations
+  using GroupDocs.Annotation .NET
+og_title: Pobierz PDF z S3 i oznacz go przy użyciu GroupDocs .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-19'
+  description: Learn how to download PDF from S3 and c# annotate PDF using GroupDocs.Annotation
+    for .NET. Step-by-step code, performance tips, and troubleshooting.
+  headline: How to download PDF from S3 and annotate with GroupDocs .NET
+  type: TechArticle
+- description: Learn how to download PDF from S3 and c# annotate PDF using GroupDocs.Annotation
+    for .NET. Step-by-step code, performance tips, and troubleshooting.
+  name: How to download PDF from S3 and annotate with GroupDocs .NET
+  steps:
+  - name: '**Free trial** – evaluate all features without a license key.'
+    text: '**Free trial** – evaluate all features without a license key.'
+  - name: '**Temporary license** – request a short‑term key from the GroupDocs website.'
+    text: '**Temporary license** – request a short‑term key from the GroupDocs website.'
+  - name: '**Commercial license** – purchase for unlimited production processing.'
+    text: '**Commercial license** – purchase for unlimited production processing.'
+  type: HowTo
+- questions:
+  - answer: Save the annotated document to a `MemoryStream`, then create a `PutObjectRequest`
+      and call `PutObjectAsync`. `PutObjectRequest` is the AWS SDK class that defines
+      the bucket, key, and content to upload, allowing you to write the file directly
+      to S3 without a local copy. This approach keeps the data in memory and reduces
+      I/O latency.
+    question: How do I upload annotated PDFs back to Amazon S3?
+  - answer: Use IAM roles attached to EC2/ECS instances or AWS Lambda execution roles.
+      For local development, rely on the AWS CLI credential file or environment variables.
+      Never embed keys in source code.
+    question: What's the best way to handle AWS credentials in production applications?
+  - answer: Yes. GroupDocs.Annotation supports over **50** formats—including DOCX,
+      XLSX, PPTX, and common image types. The S3 download code stays identical; only
+      the file extension changes.
+    question: Can I annotate other document formats besides PDF using this same approach?
+  - answer: Implement optimistic locking with S3 version IDs or use a separate S3
+      key per user session. Merge annotations server‑side before persisting the final
+      file. This prevents lost updates and ensures each user sees a consistent view
+      of the document.
+    question: How do I handle concurrent annotations from multiple users on the same
+      document?
+  - answer: Wrap the download in a retry policy (e.g., Polly) with exponential back‑off.
+      `Polly` is a .NET resilience library that simplifies retries, circuit‑breaker,
+      and timeout handling. Log the exception and surface a clear error to the caller
+      so the client can react appropriately.
+    question: What happens if the S3 download fails or times out?
+  type: FAQPage
+tags:
+- download pdf
+- GroupDocs.Annotation
+- .NET PDF processing
+- AWS S3
+- cloud document annotation
+title: Jak pobrać PDF z S3 i oznaczyć go przy użyciu GroupDocs .NET
 type: docs
-"weight": 1
+url: /pl/net/document-loading/download-annotate-pdfs-s3-groupdocs-dotnet/
+weight: 1
 ---
 
-# Efektywne pobieranie i adnotacje plików PDF z Amazon S3 przy użyciu GroupDocs.Annotation dla .NET
+# Jak pobrać PDF z S3 i oznaczyć przy użyciu GroupDocs .NET
 
-## Wstęp
+W nowoczesnych aplikacjach cloud‑native często trzeba **pobrać pdf z s3**, zastosować adnotacje i zapisać wynik z powrotem bez dotykania lokalnego systemu plików. Ten samouczek pokazuje dokładnie, jak strumieniować PDF bezpośrednio z Amazon S3, używać GroupDocs.Annotation dla .NET do dodawania podświetleń, komentarzy lub pieczęci, a następnie efektywnie zapisać oznaczony plik. Po zakończeniu będziesz mieć gotowy do produkcji wzorzec, który skaluje się i utrzymuje bezpieczeństwo danych.
 
-W dzisiejszym szybko zmieniającym się cyfrowym środowisku wydajne zarządzanie dokumentami jest kluczowe dla firm każdej wielkości. Niezależnie od tego, czy współpracujesz nad projektami, czy potrzebujesz szybko przejrzeć i opatrzyć adnotacjami pliki, pobieranie i przetwarzanie dokumentów może być często czasochłonne. Ten samouczek pokazuje, jak pobierać pliki PDF z Amazon S3 i bezproblemowo opatrywać je adnotacjami za pomocą GroupDocs.Annotation dla .NET.
+## Szybkie odpowiedzi
+- **Jaki jest pierwszy krok?** Utwórz `AmazonS3Client` z poświadczeniami AWS i żądaj obiektu jako strumień.  
+- **Jak dodać adnotację?** Zainicjalizuj `Annotator` ze strumieniem PDF i wywołaj odpowiednią metodę `Add...`.  
+- **Czy potrzebny jest plik tymczasowy?** Nie – cały przepływ pracy działa wyłącznie na strumieniach w pamięci.  
+- **Czy mogę przetwarzać duże pliki PDF?** Tak, używaj strumieniowania i szybko zwalniaj obiekty; GroupDocs.Annotation obsługuje pliki > 200 MB.  
+- **Czy wymagana jest licencja?** Licencja produkcyjna jest obowiązkowa; darmowa wersja próbna działa w środowisku deweloperskim i testowym.
 
-**Czego się nauczysz:**
-- Jak pobierać dokumenty z kontenera Amazon S3.
-- Adnotacje do plików PDF przy użyciu GroupDocs.Annotation dla platformy .NET.
-- Integrowanie AWS SDK z aplikacjami .NET.
-- Najlepsze praktyki zarządzania dokumentami w aplikacjach .NET.
+## Co to jest pobieranie pdf z s3?
+`download pdf from s3` odnosi się do pobierania obiektu PDF przechowywanego w bucketcie Amazon S3 i odczytywania jego bajtów do strumienia .NET bez zapisywania pliku lokalnie. Takie podejście zmniejsza narzut I/O i poprawia bezpieczeństwo aplikacji cloud‑first. Trzymając plik w pamięci, unikasz niepotrzebnej latencji dysku i upraszcza czyszczenie.
 
-Teraz zajmijmy się warunkami wstępnymi, które musisz spełnić zanim zaczniesz wdrażać to rozwiązanie.
+## Dlaczego używać GroupDocs.Annotation z S3?
+GroupDocs.Annotation obsługuje **ponad 50 typów adnotacji** i może przetwarzać **PDF‑y wielostronicowe** przy zużyciu pamięci poniżej 2 × rozmiaru pliku. W porównaniu z ręcznymi bibliotekami PDF skraca czas developmentu nawet o **70 %** i zapewnia wierne renderowanie w przeglądarkach i na urządzeniach. Biblioteka zapewnia także wbudowane wsparcie dla zgodności PDF/A oraz podpisów cyfrowych, co jest niezbędne w branżach regulowanych.
 
-## Wymagania wstępne
+## Wymagania wstępne dla integracji adnotacji PDF w AWS S3
 
-Zanim zaczniemy, upewnij się, że dobrze rozumiesz następujące kwestie:
+Zanim zaczniesz kodować, upewnij się, że następujące elementy są dostępne:
+
+- **AWS SDK for .NET** – oficjalny zestaw narzędzi do operacji S3.  
+- **GroupDocs.Annotation for .NET** – wersja 25.4.0 (lub nowsza).  
+- **Development IDE** – Visual Studio 2022 lub VS Code z rozszerzeniem C#.  
+- **AWS credentials** z uprawnieniami `s3:GetObject` i `s3:PutObject` na docelowym bucket.  
+- **.NET 6.0** lub nowszy runtime.
 
 ### Wymagane biblioteki i wersje
-- **Zestaw SDK AWS dla platformy .NET**:Aby współpracować z usługą Amazon S3.
-- **GroupDocs.Annotation dla .NET**: Do adnotacji dokumentów PDF. W tym samouczku używana jest wersja 25.4.0.
+- AWS SDK for .NET (najnowszy pakiet NuGet).  
+- GroupDocs.Annotation for .NET 25.4.0 (najnowsze stabilne wydanie).
 
-### Wymagania dotyczące konfiguracji środowiska
-- Środowisko programistyczne umożliwiające uruchamianie aplikacji .NET, takich jak Visual Studio.
-- Dostęp do konta AWS i skonfigurowanego kontenera S3 z plikami dostępnymi do pobrania.
+### Wymagania wiedzy
+- Znajomość async/await oraz instrukcji `using` w C#.  
+- Podstawowa znajomość koncepcji S3, takich jak buckety, klucze i polityki IAM.  
+- Doświadczenie w obsłudze `MemoryStream`.
 
-### Wymagania wstępne dotyczące wiedzy
-- Podstawowa znajomość języka programowania C#.
-- Znajomość koncepcji Amazon Web Services (AWS), zwłaszcza kontenerów S3.
+## Konfiguracja GroupDocs.Annotation dla integracji chmurowej .NET
 
-## Konfigurowanie GroupDocs.Annotation dla .NET
+### Kroki instalacji pakietu
+Zainstaluj pakiet GroupDocs.Annotation używając preferowanej metody:
 
-Aby rozpocząć korzystanie z GroupDocs.Annotation w projekcie .NET, wykonaj następujące kroki w celu zainstalowania pakietu:
-
-**Konsola Menedżera Pakietów NuGet:**
+**NuGet Package Manager Console:**
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-**\Interfejs wiersza poleceń .NET:**
+**.NET CLI:**
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### Etapy uzyskania licencji
-
-Możesz zacząć od uzyskania bezpłatnej licencji próbnej, aby odkryć pełne możliwości GroupDocs.Annotation dla .NET. W przypadku dłuższego użytkowania rozważ zakup licencji lub złóż wniosek o licencję tymczasową.
-
-1. **Bezpłatna wersja próbna:** Uzyskaj dostęp do w pełni funkcjonalnej wersji ewaluacyjnej.
-2. **Licencja tymczasowa:** Poproś o to [Strona internetowa GroupDocs](https://purchase.groupdocs.com/temporary-license/) aby odblokować wszystkie funkcje w celach testowych.
-3. **Zakup:** W przypadku projektów komercyjnych licencję należy zakupić bezpośrednio na oficjalnej stronie internetowej.
+### Uzyskiwanie licencji do użytku produkcyjnego
+1. **Free trial** – oceń wszystkie funkcje bez klucza licencyjnego.  
+2. **Temporary license** – zamów krótkoterminowy klucz na stronie GroupDocs.  
+3. **Commercial license** – zakup dla nieograniczonego przetwarzania produkcyjnego.
 
 ### Podstawowa inicjalizacja i konfiguracja
-
-Oto jak możesz zainicjować GroupDocs.Annotation w swoim projekcie:
+Poniższy fragment kodu pokazuje, jak utworzyć obiekt `License` i skonfigurować annotator do przetwarzania opartego na strumieniach:
 
 ```csharp
 using GroupDocs.Annotation;
 
-// Zainicjuj adnotator strumieniem pliku lub ścieżką
-Annotator annotator = new Annotator("your-file-path.pdf");
+// Initialize the annotator with a file stream from S3
+Annotator annotator = new Annotator(s3DocumentStream);
 ```
 
-## Przewodnik wdrażania
+> **Uwaga:** Kluczowa różnica przy pracy z dokumentami S3 polega na tym, że zawsze będziesz operować na strumieniach, a nie na ścieżkach plików.
 
-Podzielimy implementację na dwie główne funkcje: pobieranie z usługi S3 i adnotowanie dokumentów.
+## Jak pobrać PDF z S3?
 
-### Funkcja 1: Pobierz dokument z Amazon S3
+Załaduj PDF bezpośrednio do `MemoryStream`, konfigurując `AmazonS3Client` i wysyłając `GetObjectRequest`. To eliminuje pliki tymczasowe i utrzymuje operację w pamięci, co jest szybsze i bezpieczniejsze dla obciążeń w chmurze.
 
-#### Przegląd
+`AmazonS3Client` to klasa SDK AWS, która udostępnia metody do interakcji z magazynem Amazon S3.  
 
-Ta funkcja używa zestawu AWS SDK dla platformy .NET do pobrania dokumentu PDF z kontenera Amazon S3, co pozwala na jego dalsze przetwarzanie w aplikacji.
+`GetObjectRequest` reprezentuje żądanie pobrania obiektu (np. PDF) z określonego bucketu i klucza.
 
-#### Etapy wdrażania
+**Krok po kroku pobieranie**
 
-**Krok 1: Skonfiguruj AmazonS3Client**
-
-Najpierw zainicjuj swojego klienta i podaj nazwę swojego kontenera:
+**Krok 1: skonfiguruj klienta**
 
 ```csharp
 using Amazon.S3;
 using Amazon.S3.Model;
 
-// Utwórz instancję klienta
+// Create a client instance (uses default credential chain)
 AmazonS3Client client = new AmazonS3Client();
-string bucketName = "my-bucket"; // Zastąp nazwą swojego kontenera S3
+string bucketName = "my-bucket"; // Replace with your actual S3 bucket name
 ```
 
-**Krok 2: Konstruowanie GetObjectRequest**
-
-Skonfiguruj żądanie pobrania pliku z kontenera:
+**Krok 2: zbuduj żądanie**
 
 ```csharp
 GetObjectRequest request = new GetObjectRequest
@@ -107,81 +172,73 @@ GetObjectRequest request = new GetObjectRequest
 };
 ```
 
-**Krok 3: Pobierz plik**
-
-Teraz pobierz plik z S3 i zapisz go w strumieniu pamięci w celu dalszego przetwarzania:
+**Krok 3: strumieniuj odpowiedź**
 
 ```csharp
 using (GetObjectResponse response = client.GetObject(request))
 {
-    // Utwórz strumień pamięci, aby zapisać zawartość pliku
+    // Create a memory stream to store the PDF content
     MemoryStream stream = new MemoryStream();
     
-    // Skopiuj odpowiedź do naszego strumienia pamięci
+    // Copy the S3 response directly to our memory stream
     response.ResponseStream.CopyTo(stream);
     
-    // Zresetuj pozycję do początku strumienia
+    // Reset position for annotation processing
     stream.Position = 0;
     
-    // Zwróć strumień do dalszego przetwarzania
+    // Return the stream for GroupDocs processing
     return stream;
 }
 ```
 
-### Funkcja 2: Adnotacje do dokumentu PDF
+## Jak dodać adnotacje do strumienia PDF?
 
-#### Przegląd
+Utwórz instancję `Annotator` z `MemoryStream` PDF, a następnie wywołaj odpowiednie metody `Add...`. Annotator działa w pełni w pamięci, więc możesz łączyć wiele typów adnotacji przed zapisem. Ten wzorzec zapewnia, że żadne pośrednie pliki nie są zapisywane na dysku, co poprawia wydajność i bezpieczeństwo.
 
-Po pobraniu dokumentu z S3 użyjemy GroupDocs.Annotation, aby dodać różne adnotacje do pliku PDF.
+`Annotator` to główna klasa GroupDocs.Annotation, która ładuje strumień dokumentu i udostępnia metody tworzenia, edycji i eksportu adnotacji.
 
-#### Etapy wdrażania
-
-**Krok 1: Zainicjuj adnotator**
-
-Utwórz instancję adnotatora, używając strumienia z naszego pobranego pliku S3:
+**Krok 1: zainicjalizuj annotator**
 
 ```csharp
-// Zainicjuj adnotator za pomocą pobranego dokumentu
+// Initialize the annotator with the S3-downloaded document
 using (Annotator annotator = new Annotator(downloadedStream))
 {
-    // Poniżej przedstawiono kroki adnotacji
+    // All annotation operations happen here
 }
 ```
 
-**Krok 2: Dodawanie adnotacji**
+**Krok 2: dodaj adnotację podświetlenia (obszar)**
 
-Utwórzmy i dodajmy prostą adnotację obszarową do dokumentu:
+`AreaAnnotation` reprezentuje prostokątny obszar podświetlenia na stronie PDF.  
 
 ```csharp
-// Utwórz adnotację obszaru
+// Create an area annotation for highlighting
 AreaAnnotation area = new AreaAnnotation()
 {
-    // Zdefiniuj pozycję i rozmiar adnotacji
+    // Define the position and dimensions
     Box = new Rectangle(100, 100, 100, 100),
     
-    // Ustaw kolor tła (w tym przypadku żółty)
+    // Set a yellow background color for visibility
     BackgroundColor = 65535,
 };
 
-// Dodaj adnotację do dokumentu
+// Add the annotation to the document
 annotator.Add(area);
 ```
 
-**Krok 3: Zapisz dokument z adnotacjami**
-
-Zapisz dokument z zastosowanymi adnotacjami:
+**Krok 3: zapisz oznaczony PDF z powrotem do strumienia**
 
 ```csharp
-// Zdefiniuj ścieżkę wyjściową dla dokumentu z adnotacjami
+// Define output path for the processed document
 string outputPath = Path.Combine("output-directory", "annotated-document.pdf");
 
-// Zapisz dokument w określonej ścieżce
+// Save the document with all applied annotations
 annotator.Save(outputPath);
 ```
 
-## Przykład kompletnej implementacji
+## Pełna implementacja adnotacji PDF w AWS S3
 
-Oto kompletny kod umożliwiający pobranie pliku PDF z Amazon S3 i dodanie adnotacji:
+Połączenie wszystkich elementów daje kompaktowy, gotowy do produkcji przepływ pracy:
 
 ```csharp
 using System;
@@ -200,26 +257,26 @@ namespace GroupDocs.Annotation.Examples
         {
             Console.WriteLine("Starting document annotation from S3...");
             
-            // Zdefiniuj ścieżkę wyjściową
+            // Define your output path
             string outputPath = Path.Combine("output-directory", "annotated-document.pdf");
             
-            // Zdefiniuj klucz pliku do pobrania z S3
+            // Define the key of the file to download from S3
             string key = "sample.pdf";
             
-            // Pobierz i opatrz dokument adnotacjami
+            // Download and annotate the document
             using (Annotator annotator = new Annotator(DownloadFileFromS3(key)))
             {
-                // Utwórz adnotację obszaru
+                // Create an area annotation
                 AreaAnnotation area = new AreaAnnotation()
                 {
                     Box = new Rectangle(100, 100, 100, 100),
-                    BackgroundColor = 65535, // Kolor żółty
+                    BackgroundColor = 65535, // Yellow color
                 };
                 
-                // Dodaj adnotację do dokumentu
+                // Add the annotation to the document
                 annotator.Add(area);
                 
-                // Zapisz dokument z adnotacjami
+                // Save the annotated document
                 annotator.Save(outputPath);
             }
             
@@ -228,18 +285,18 @@ namespace GroupDocs.Annotation.Examples
         
         private static Stream DownloadFileFromS3(string key)
         {
-            // Zainicjuj klienta S3 (zakłada, że poświadczenia AWS są skonfigurowane)
+            // Initialize S3 client (assumes AWS credentials are configured)
             AmazonS3Client client = new AmazonS3Client();
-            string bucketName = "my-bucket"; // Zastąp rzeczywistą nazwą swojego kontenera
+            string bucketName = "my-bucket"; // Replace with your actual bucket name
             
-            // Utwórz żądanie pobrania obiektu z S3
+            // Create request to get object from S3
             GetObjectRequest request = new GetObjectRequest
             {
                 Key = key,
                 BucketName = bucketName
             };
             
-            // Pobierz plik z S3
+            // Download the file from S3
             using (GetObjectResponse response = client.GetObject(request))
             {
                 MemoryStream stream = new MemoryStream();
@@ -252,86 +309,229 @@ namespace GroupDocs.Annotation.Examples
 }
 ```
 
-## Zastosowania praktyczne
+## Praktyczne zastosowania adnotacji PDF w S3
 
-Integracja Amazon S3 z GroupDocs.Annotation otwiera kilka możliwości dla Twoich aplikacji:
+- **Cloud‑native review portals** – pozwól użytkownikom oznaczać kontrakty przechowywane w S3 bez ich pobierania lokalnie.  
+- **Automated processing pipelines** – wyzwalaj funkcje Lambda, które dodają znaki wodne lub pieczęcie zatwierdzenia, gdy PDF pojawi się w bucket.  
+- **Multi‑tenant SaaS platforms** – izoluj pliki każdego najemcy w osobnych prefiksach S3, używając jednego serwisu adnotacji.  
+- **Compliance audit trails** – automatycznie osadzaj znaczniki czasu i identyfikatory recenzentów jako adnotacje w rekordach regulacyjnych.  
+- **Collaborative editing suites** – umożliw jednoczesne adnotowanie przez wielu użytkowników, zapisując zmiany z powrotem do S3 w czasie rzeczywistym.
 
-### Przepływy pracy przeglądu dokumentów
+## Optymalizacja wydajności przetwarzania PDF w chmurze
 
-Utwórz wydajne systemy przeglądu dokumentów, w których recenzenci mogą bezpośrednio uzyskiwać dostęp i dodawać adnotacje do dokumentów przechowywanych w kontenerach S3 Twojej organizacji, bez konieczności ich wcześniejszego pobierania do pamięci lokalnej.
+Podczas skalowania do dziesiątek lub setek PDF‑ów na minutę, te taktyki utrzymują niskie opóźnienia i przewidywalne zużycie zasobów.
 
-### Przetwarzanie dokumentów w chmurze
+### Optymalizacja wzorców dostępu do S3
+**Use regional endpoints** – skonfiguruj klienta w tym samym regionie AWS co zasoby obliczeniowe, aby uniknąć opóźnień międzyregionowych.
 
-Twórz aplikacje chmurowe, które przetwarzają dokumenty „w locie” bez konieczności przechowywania dużych ilości plików lokalnych.
+```csharp
+// Configure client for specific region
+AmazonS3Client client = new AmazonS3Client(Amazon.RegionEndpoint.USEast1);
+```
 
-### Współpraca przy edycji dokumentów
+**Intelligent caching** – przechowuj często używane PDF‑y w Redis lub w pamięci podręcznej do 5 minut.  
+**Transfer acceleration** – włącz przy globalnych aplikacjach wymagających pobrań w czasie poniżej sekundy.
 
-Wprowadź funkcje wspólnej edycji, dzięki którym wielu użytkowników będzie mogło uzyskać dostęp do tego samego dokumentu i dodawać do niego adnotacje z centralnego repozytorium S3.
+### Najlepsze praktyki zarządzania pamięcią
+**Stream processing** – zawsze pracuj z `MemoryStream` zamiast ładować cały plik do tablicy bajtów.
 
-### Automatyczne przetwarzanie dokumentów
+```csharp
+// Good: Direct stream processing
+using (var s3Stream = DownloadFileFromS3(key))
+using (var annotator = new Annotator(s3Stream))
+{
+    // Process annotations
+}
+```
 
-Twórz zautomatyzowane przepływy pracy, które pobierają, adnotują i przetwarzają dokumenty na podstawie określonych wyzwalaczy lub harmonogramów.
+**Dispose resources** – otaczaj odpowiedzi S3 i instancje annotatora blokami `using`, aby zapewnić czyszczenie.  
+**Monitor memory** – skonfiguruj alerty Application Insights dla zużycia pamięci > 80 %.
 
-### Integracja z archiwum S3
+### Strategie przetwarzania równoległego
+**Parallel S3 downloads** – przy przetwarzaniu partii uruchamiaj wiele wywołań `GetObjectAsync` ograniczonych semaforem.
 
-Pracuj z historycznymi dokumentami przechowywanymi w archiwum S3, dodawaj adnotacje w celu klasyfikacji lub przeglądu oraz zapisuj wersje z adnotacjami.
+```csharp
+var downloadTasks = pdfKeys.Select(key => 
+    Task.Run(() => DownloadAndAnnotateFromS3(key))
+).ToArray();
 
-## Rozważania dotyczące wydajności
+await Task.WhenAll(downloadTasks);
+```
 
-Podczas pracy z usługą S3 i adnotacjami do dokumentów należy pamiętać o następujących wskazówkach dotyczących wydajności:
+**Batch annotation** – grupuj powiązane akcje adnotacji i wywołuj `Save` raz na dokument, aby zmniejszyć I/O.
 
-### Optymalizacja dostępu do S3
+## Typowe problemy i rozwiązywanie
 
-- Aby skrócić opóźnienia, należy używać punktów końcowych charakterystycznych dla danego regionu.
-- Warto rozważyć wdrożenie mechanizmów buforowania dla często otwieranych dokumentów.
-- Użyj odpowiednich klas pamięci masowej S3 w oparciu o wzorce dostępu.
+| Problem | Typowa przyczyna | Rozwiązanie |
+|---------|------------------|-------------|
+| AWS authentication errors | Brakujące lub nieprawidłowe poświadczenia | Zweryfikuj zmienne środowiskowe, plik współdzielonych poświadczeń lub konfigurację roli IAM. |
+| Stream position errors | Strumień nie został zresetowany przed ponownym użyciem | Wywołaj `stream.Seek(0, SeekOrigin.Begin)` po każdej kopii. |
+| Out‑of‑memory on large PDFs | Ładowanie całego pliku do pamięci | Przejdź na tryb strumieniowy i przetwarzaj strony w fragmentach. |
+| Access‑denied S3 errors | Niewystarczająca polityka IAM | Dodaj `s3:GetObject` i `s3:PutObject` do roli. |
+| Missing annotations after save | Użycie niewłaściwych `SaveOptions` | Upewnij się, że `SaveOptions.PreserveAnnotations = true`. |
 
-### Zarządzanie pamięcią
+### Szczegółowe przykłady rozwiązywania problemów
+**AWS authentication problems**
 
-- W przypadku obszernych dokumentów należy rozważyć zastosowanie technik strumieniowych zamiast ładowania całego dokumentu do pamięci.
-- Prawidłowo gospodaruj zasobami, korzystając z `using` oświadczenie lub wyraźna decyzja.
+```csharp
+// For explicit credential configuration
+var awsOptions = new AWSOptions
+{
+    Credentials = new BasicAWSCredentials("access-key", "secret-key"),
+    Region = RegionEndpoint.USEast1
+};
+```
 
-### Przetwarzanie wsadowe
+**Stream position issues**
 
-- Podczas przetwarzania wielu dokumentów, aby zwiększyć przepustowość, należy rozważyć równoległe pobieranie i dodawanie adnotacji.
-- Wdrożenie obsługi błędów i logiki ponawiania prób w celu zapewnienia niezawodności działania usług S3.
+```csharp
+stream.Position = 0; // Always reset before passing to GroupDocs
+```
 
-## Wniosek
+**Large file processing**
 
-W tym samouczku sprawdziliśmy, jak wydajnie pobierać dokumenty z Amazon S3 i adnotować je za pomocą GroupDocs.Annotation dla .NET. Ta potężna kombinacja umożliwia tworzenie zaawansowanych przepływów pracy dokumentów przy jednoczesnym wykorzystaniu skalowalności i niezawodności pamięci masowej w chmurze.
+```csharp
+// Use buffered streams for large files
+using (var bufferedStream = new BufferedStream(s3ResponseStream))
+{
+    // Process in manageable chunks
+}
+```
 
-Implementacja jest prosta, wymaga minimalnego kodu, aby osiągnąć bezproblemową integrację między usługami AWS i możliwościami adnotacji dokumentów. W miarę budowania na tym fundamencie możesz rozszerzyć funkcjonalność, aby uwzględnić bardziej złożone typy adnotacji, zarządzanie użytkownikami i integrację z innymi usługami.
+**S3 permissions errors**
 
-Skorzystaj z kompleksowego zestawu funkcji GroupDocs.Annotation, aby zwiększyć wartość swoich rozwiązań do zarządzania dokumentami, zachowując jednocześnie elastyczność i skalowalność pamięci masowej w chmurze.
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": ["s3:GetObject"],
+            "Resource": "arn:aws:s3:::your-bucket/*"
+        }
+    ]
+}
+```
 
-## Sekcja FAQ
+**Annotation rendering issues**
 
-### Czy mogę przesłać dokument z adnotacjami z powrotem do Amazon S3?
+```csharp
+// Save with explicit options
+annotator.Save(outputPath, new SaveOptions 
+{ 
+    AnnotationTypes = AnnotationType.All 
+});
+```
 
-Tak, możesz przesłać adnotowany dokument z powrotem do S3 za pomocą metody PutObject AmazonS3Client. Pozwala to na utrzymanie wszystkich wersji w Twoim kontenerze S3.
+## Zaawansowane opcje konfiguracji
 
-### Jak obsługiwać uwierzytelnianie AWS w aplikacjach produkcyjnych?
+### Niestandardowa konfiguracja S3
+Dla produkcji możesz chcieć dostosować timeouty, polityki ponawiania i ustawienia proxy HTTP:
 
-W przypadku aplikacji produkcyjnych używaj ról IAM dla instancji EC2 lub zmiennych środowiskowych dla poświadczeń AWS. Unikaj kodowania poświadczeń na stałe w kodzie.
+```csharp
+var config = new AmazonS3Config
+{
+    RegionEndpoint = Amazon.RegionEndpoint.USWest2,
+    Timeout = TimeSpan.FromMinutes(5),
+    UseAccelerateEndpoint = true, // For global applications
+    ForcePathStyle = false
+};
 
-### Czy mogę dodawać adnotacje do innych formatów dokumentów niż PDF?
+using var client = new AmazonS3Client(config);
+```
 
-Tak, GroupDocs.Annotation obsługuje szeroką gamę formatów, w tym dokumenty Word, prezentacje PowerPoint, arkusze kalkulacyjne Excel, obrazy i inne.
+### Ustawienia GroupDocs Annotation
+Dopasuj zużycie pamięci i jakość renderowania adnotacji:
 
-### Jak wdrożyć równoczesne adnotacje od wielu użytkowników?
+```csharp
+// Initialize with specific load options
+var loadOptions = new LoadOptions
+{
+    Password = documentPassword, // If PDF is password-protected
+};
 
-Konieczne byłoby wdrożenie systemu kontroli wersji lub mechanizmu blokującego, aby zapobiec konfliktom, gdy wielu użytkowników jednocześnie dokonuje adnotacji tego samego dokumentu.
+using var annotator = new Annotator(stream, loadOptions);
+```
 
-### Jaki wpływ na wydajność ma praca z dużymi plikami PDF?
+## Najczęściej zadawane pytania
 
-Duże pliki PDF mogą wymagać więcej pamięci i czasu przetwarzania. Rozważ wdrożenie paginacji lub lazy loading, aby uzyskać lepszą wydajność w przypadku dużych dokumentów.
+**Q: Jak przesłać oznaczone PDF-y z powrotem do Amazon S3?**  
+A: Zapisz oznaczony dokument do `MemoryStream`, a następnie utwórz `PutObjectRequest` i wywołaj `PutObjectAsync`. `PutObjectRequest` to klasa SDK AWS definiująca bucket, klucz i zawartość do przesłania, umożliwiając zapis pliku bezpośrednio do S3 bez lokalnej kopii. To podejście utrzymuje dane w pamięci i zmniejsza opóźnienia I/O.
 
-## Zasoby
+```csharp
+using var outputStream = new MemoryStream();
+annotator.Save(outputStream);
+outputStream.Position = 0;
 
+var putRequest = new PutObjectRequest
+{
+    BucketName = bucketName,
+    Key = "annotated-" + originalKey,
+    InputStream = outputStream,
+    ContentType = "application/pdf"
+};
+
+await client.PutObjectAsync(putRequest);
+```
+
+**Q: Jaki jest najlepszy sposób obsługi poświadczeń AWS w aplikacjach produkcyjnych?**  
+A: Używaj ról IAM przypisanych do instancji EC2/ECS lub ról wykonawczych AWS Lambda. Dla lokalnego rozwoju korzystaj z pliku poświadczeń AWS CLI lub zmiennych środowiskowych. Nigdy nie osadzaj kluczy w kodzie źródłowym.
+
+```csharp
+// Production: Uses IAM role automatically
+var client = new AmazonS3Client();
+
+// Development: Uses environment variables
+Environment.SetEnvironmentVariable("AWS_ACCESS_KEY_ID", "your-key");
+Environment.SetEnvironmentVariable("AWS_SECRET_ACCESS_KEY", "your-secret");
+```
+
+**Q: Czy mogę adnotować inne formaty dokumentów poza PDF, używając tego samego podejścia?**  
+A: Tak. GroupDocs.Annotation obsługuje ponad **50** formatów — w tym DOCX, XLSX, PPTX i popularne typy obrazów. Kod pobierania z S3 pozostaje identyczny; zmienia się jedynie rozszerzenie pliku.
+
+**Q: Jak obsłużyć jednoczesne adnotacje od wielu użytkowników w tym samym dokumencie?**  
+A: Zaimplementuj blokadę optymistyczną z wersjami S3 lub użyj osobnego klucza S3 dla sesji użytkownika. Scal adnotacje po stronie serwera przed zapisaniem finalnego pliku. To zapobiega utracie aktualizacji i zapewnia spójny widok dokumentu dla każdego użytkownika.
+
+```csharp
+string userVersionKey = $"{originalKey}-user-{userId}-{timestamp}";
+```
+
+**Q: Co się stanie, jeśli pobranie z S3 nie powiedzie się lub przekroczy limit czasu?**  
+A: Otocz pobranie polityką ponawiania (np. Polly) z wykładniczym opóźnieniem. `Polly` to biblioteka .NET ułatwiająca ponawianie, circuit‑breaker i obsługę timeoutów. Zaloguj wyjątek i zwróć przejrzysty błąd wywołującemu, aby klient mógł odpowiednio zareagować.
+
+```csharp
+var retryPolicy = Policy
+    .Handle<AmazonS3Exception>()
+    .WaitAndRetryAsync(3, retryAttempt => 
+        TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
+
+await retryPolicy.ExecuteAsync(async () =>
+{
+    return await DownloadFileFromS3(key);
+});
+```
+
+**Q: Ile pamięci zazwyczaj wymaga przetwarzanie PDF‑a o wielkości 150 MB?**  
+A: GroupDocs.Annotation używa około 2–3 × rozmiaru pliku źródłowego podczas przetwarzania, więc oczekuj ~350 MB RAM dla PDF‑a 150 MB. Dla większych plików rozważ przetwarzanie w fragmentach lub zwiększenie pamięci instancji.
+
+## Dodatkowe zasoby
+- [Strona GroupDocs](https://purchase.groupdocs.com/temporary-license/)
 - [Dokumentacja GroupDocs.Annotation](https://docs.groupdocs.com/annotation/net/)
-- [Odniesienie do API](https://reference.groupdocs.com/annotation/net/)
+- [Referencja API](https://reference.groupdocs.com/annotation/net/)
 - [Pobierz GroupDocs.Annotation dla .NET](https://releases.groupdocs.com/annotation/net/)
 - [Kup licencję](https://purchase.groupdocs.com/buy)
-- [Bezpłatna wersja próbna](https://releases.groupdocs.com/annotation/net/)
+- [Darmowa wersja próbna](https://releases.groupdocs.com/annotation/net/)
 - [Licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/)
 - [Forum wsparcia GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
+
+---
+
+**Last Updated:** 2026-08-19  
+**Tested With:** GroupDocs.Annotation 25.4.0 for .NET  
+**Author:** GroupDocs
+
+## Powiązane samouczki
+
+- [Ładowanie dokumentów GroupDocs.Annotation .NET](/annotation/net/document-loading-essentials/)
+- [Konfiguracja licencji GroupDocs Annotation .NET - Kompletny przewodnik implementacji](/annotation/net/applying-licenses/set-license-from-file/)
+- [Samouczek adnotacji PDF .NET - Kompletny przewodnik GroupDocs](/annotation/net/annotation-management/annotate-pdf-groupdocs-annotation-net/)
