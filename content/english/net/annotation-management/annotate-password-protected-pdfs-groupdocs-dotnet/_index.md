@@ -2,7 +2,6 @@
 title: "How to Annotate PDF in .NET – Password‑Protected PDFs"
 linktitle: "How to Annotate PDF in .NET – Password‑Protected PDFs"
 description: "Learn how to annotate PDF in .NET, including how to load PDF with password and add highlight to PDF, using GroupDocs.Annotation for secure document processing."
-keywords: "annotate password protected PDF .NET, GroupDocs annotation tutorial, secure PDF annotation C#, .NET document annotation, password protected PDF C#"
 date: "2026-04-26"
 lastmod: "2026-04-26"
 weight: 1

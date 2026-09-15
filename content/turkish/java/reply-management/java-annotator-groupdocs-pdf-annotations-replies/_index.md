@@ -21,20 +21,6 @@ url: /tr/java/reply-management/java-annotator-groupdocs-pdf-annotations-replies/
 weight: 1
 ---
 
-CODE_BLOCK_7}}.
-
-We need to translate "## Quick Answers" etc.
-
-Let's produce.
-
-Will translate each section.
-
-Make sure not to translate URLs.
-
-Also keep "Real‑world" etc.
-
-Let's craft translation.
-
 # Java PDF Açıklama Kütüphanesi ile Gerçek Zamanlı PDF İşbirliği
 
 ## Giriş

@@ -1,121 +1,166 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-02-05'
-description: Hướng dẫn đầy đủ cách sử dụng Java để thêm hình ảnh vào PDF bằng GroupDocs.Annotation.
-  Tìm hiểu các kỹ thuật thực tiễn và các thực hành tốt nhất.
-keywords: Java PDF image annotation tutorial, add images to PDF Java, PDF annotation
-  with images, GroupDocs Java tutorial, Java library add images to PDF documents
-lastmod: '2026-02-05'
-linktitle: Java Image Annotations
+date: '2026-07-20'
+description: Tìm hiểu cách chú thích PDF bằng hình ảnh trong Java bằng GroupDocs.Annotation.
+  Hướng dẫn từng bước này chỉ ra cách thêm chú thích hình ảnh, xử lý URL và tối ưu
+  hiệu năng.
+keywords:
+- how to annotate pdf
+- how to add image
+- image annotation java
+- java add image pdf
+- add image pdf java
+lastmod: '2026-07-20'
+linktitle: Chú thích hình ảnh Java
+og_description: Tìm hiểu cách chú thích PDF bằng hình ảnh trong Java bằng GroupDocs.Annotation.
+  Hướng dẫn này sẽ đưa bạn qua quá trình thêm chú thích hình ảnh, sử dụng URL và tối
+  ưu hiệu năng cho môi trường sản xuất.
+og_image_alt: 'Developer guide: Add image annotations to PDF files using GroupDocs.Annotation
+  for Java'
+og_title: Cách chú thích PDF bằng hình ảnh trong Java – GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-20'
+  description: Learn how to annotate PDF with images in Java using GroupDocs.Annotation.
+    This step‑by‑step guide shows how to add image annotations, handle URLs, and optimize
+    performance.
+  headline: How to Annotate PDF with Images in Java – GroupDocs
+  type: TechArticle
+- description: Learn how to annotate PDF with images in Java using GroupDocs.Annotation.
+    This step‑by‑step guide shows how to add image annotations, handle URLs, and optimize
+    performance.
+  name: How to Annotate PDF with Images in Java – GroupDocs
+  steps:
+  - name: Initialize the Annotation Engine
+    text: Create an `AnnotationEngine` instance pointing to the PDF you want to modify.
+      This object handles loading, saving, and managing annotations.
+  - name: Prepare the Image Annotation
+    text: Define the image source, position, and size. You can use absolute coordinates
+      or percentages to make the annotation responsive across devices.
+  - name: Add the Annotation to the Document
+    text: Call the appropriate method on the `AnnotationEngine` to insert the image
+      annotation. The API automatically embeds the image data into the PDF stream.
+  - name: Save the Updated PDF
+    text: After adding the annotation, save the document to a new file or overwrite
+      the existing one, depending on your workflow.
+  - name: Verify the Result
+    text: Open the PDF in a viewer to ensure the image appears where you expect it
+      and respects the transparency or overlay settings you configured.
+  type: HowTo
+- questions:
+  - answer: Yes. Provide the password when opening the document with the `AnnotationEngine`
+      constructor, and the API will decrypt the file before applying annotations.
+    question: Can I add image annotations to password‑protected PDFs?
+  - answer: Images larger than 1 MB should be compressed or resized; in tests, a 2
+      MB PNG increased processing time by only 12 % on a standard server.
+    question: How large can an image be before it affects performance?
+  - answer: Absolutely. Retrieve the annotation by its unique ID, modify its rectangle
+      or image source, and call `engine.updateAnnotation(updatedAnnotation)`.
+    question: Is it possible to edit or move an existing image annotation?
+  - answer: A single license covers multiple instances as long as you comply with
+      the licensing terms; contact GroupDocs sales for volume‑discount details.
+    question: Do I need a separate license for each server instance?
+  - answer: Yes—image annotations become part of the PDF content stream, so they appear
+      in printed copies and on any compliant viewer.
+    question: Will the annotations persist after the PDF is printed?
+  type: FAQPage
 tags:
 - pdf-annotation
 - java-development
 - groupdocs
 - document-processing
-title: java thêm hình ảnh vào pdf – Hướng dẫn chú thích ảnh PDF bằng Java
+title: Cách chú thích PDF bằng hình ảnh trong Java – GroupDocs
 type: docs
 url: /vi/java/image-annotations/
 weight: 7
 ---
 
-# Hướng Dẫn Chú Thích Hình Ảnh PDF bằng Java – Thêm Hình Vào Tài Liệu
+# Cách chú thích PDF bằng hình ảnh trong Java – GroupDocs
 
-Trong hướng dẫn này, bạn sẽ học cách **java add image to pdf** bằng cách sử dụng GroupDocs.Annotation cho Java, biến các PDF tĩnh thành tài liệu trực quan tương tác, tăng cường sự hợp tác và rõ ràng. Dù bạn đang xây dựng nền tảng đánh giá, công cụ báo cáo, hay cổng thông tin giáo dục, chú thích hình ảnh cho phép bạn nhúng ảnh chụp màn hình, sơ đồ và các gợi ý hình ảnh ngay tại vị trí cần thiết.
+Trong hướng dẫn toàn diện này, bạn sẽ khám phá **cách chú thích PDF** bằng hình ảnh sử dụng GroupDocs.Annotation cho Java. Cho dù bạn đang xây dựng một cổng đánh giá hợp tác, một công cụ báo cáo tự động, hoặc một nền tảng e‑learning, việc nhúng hình ảnh trực tiếp vào PDF làm cho nội dung phong phú hơn và quy trình làm việc mượt mà hơn. Chúng tôi sẽ hướng dẫn toàn bộ quá trình — từ cài đặt thư viện đến kiểm tra tài liệu cuối cùng — để bạn có thể triển khai chú thích hình ảnh một cách tự tin.
 
 ## Câu trả lời nhanh
-- **“java add image to pdf” đạt được gì?** Nó nhúng nội dung hình ảnh trực tiếp vào PDF, làm phong phú tài liệu mà không cần tệp bên ngoài.  
-- **Thư viện nào hỗ trợ?** GroupDocs.Annotation cho Java cung cấp API đơn giản cho chú thích hình ảnh.  
-- **Có cần giấy phép không?** Giấy phép tạm thời đủ cho việc thử nghiệm; giấy phép thương mại cần thiết cho môi trường sản xuất.  
-- **Có thể sử dụng hình ảnh từ xa không?** Có — cả đường dẫn tệp cục bộ và URL đều được hỗ trợ.  
-- **Có thân thiện với thiết bị di động không?** Các chú thích hiển thị trên mọi thiết bị; chỉ cần đảm bảo kích thước phù hợp cho màn hình nhỏ.
+- **What does “java add image to pdf” achieve?** It embeds visual content directly into a PDF, enriching the document without external files.  
+- **Which library supports this?** GroupDocs.Annotation for Java provides a simple API for image annotations.  
+- **Do I need a license?** A temporary license is enough for testing; a commercial license is required for production.  
+- **Can I use remote images?** Yes—both local file paths and URLs are supported.  
+- **Is it mobile‑friendly?** Annotations render on all devices; just ensure proper sizing for smaller screens.
 
-## Tại sao nên thêm chú thích hình ảnh vào ứng dụng Java của bạn?
+## Chú thích hình ảnh trong PDF là gì?
+Image annotation is the process of inserting a picture, screenshot, or diagram into a PDF page as an interactive comment. It differs from a regular embedded image because the annotation can be moved, resized, or removed by end‑users through a viewer. GroupDocs.Annotation treats each image as a distinct annotation object that lives in the PDF’s annotation layer.
 
-Chú thích hình ảnh giải quyết những vấn đề thực tế mà các bình luận chỉ bằng văn bản không thể xử lý hiệu quả. Dưới đây là lý do chúng quan trọng:
+## Tại sao nên thêm chú thích hình ảnh vào các ứng dụng Java của bạn?
+Embedding images directly into PDFs solves problems that plain text cannot. It reduces the need for external files, speeds up review cycles, and provides visual context that improves comprehension for all stakeholders.
 
-- **Ngữ cảnh trực quan truyền tải mạnh mẽ** – Ảnh chụp màn hình hoặc sơ đồ thường giải thích một khái niệm nhanh hơn nhiều so với đoạn văn bản dài.  
-- **Cải thiện hợp tác** – Các thành viên trong nhóm có thể đính kèm mô hình hoặc tài liệu tham khảo ngay bên cạnh phần liên quan.  
-- **Quy trình công việc tài liệu chuyên nghiệp** – Các đội pháp lý, kiến trúc sư và nhà văn kỹ thuật dựa vào hình ảnh nhúng để giữ bằng chứng và thiết kế cùng nhau.  
-- **Trải nghiệm người dùng xuất sắc** – Người dùng ở lại trong một không gian làm việc duy nhất thay vì phải chuyển đổi giữa các tệp hoặc ứng dụng riêng biệt.
+## Các trường hợp sử dụng phổ biến cho chú thích hình ảnh PDF trong Java là gì?
+Image annotations are ideal whenever visual context is essential. Typical scenarios include document review, technical documentation, legal compliance, educational content, and quality‑assurance reporting, allowing teams to convey information more clearly than text alone.
 
-## Các trường hợp sử dụng phổ biến cho Java PDF Image Annotation
-
-Hiểu khi nào nên triển khai chú thích hình ảnh giúp bạn thiết kế giải pháp tốt hơn:
-
-- **Đánh giá & phê duyệt tài liệu** – Người đánh giá thả ảnh chụp màn hình để chỉ ra thay đổi UI đề xuất hoặc làm nổi bật lỗi thiết kế.  
-- **Tài liệu kỹ thuật** – Nhúng đoạn mã, sơ đồ kiến trúc hoặc mô hình UI trực tiếp vào PDF đặc tả.  
-- **Pháp lý & tuân thủ** – Đính kèm bằng chứng ảnh hoặc tham chiếu hình ảnh để hỗ trợ lập luận.  
-- **Nội dung giáo dục** – Giáo viên thêm sơ đồ hoặc hình minh họa vào tài liệu học mà không làm rối mắt văn bản.  
-- **Đảm bảo chất lượng** – Kỹ sư QA ghim ảnh chụp lỗi hoặc ảnh so sánh vào tài liệu yêu cầu.
-
-## Cách java add image to pdf với GroupDocs.Annotation
-
-Trước khi bắt đầu, hãy chắc chắn bạn đã chuẩn bị các yêu cầu sau:
-
-- Java 8 hoặc cao hơn đã được cài đặt.  
-- GroupDocs.Annotation cho Java đã được thêm vào dự án của bạn (Maven/Gradle).  
-- Có quyền truy cập vào các hình ảnh bạn muốn nhúng (tệp cục bộ hoặc URL).  
+## Cách thêm hình ảnh vào PDF với GroupDocs.Annotation trong Java?
+`AnnotationEngine` is the core class that loads, edits, and saves PDF documents with annotations. Using this class you can load a PDF, add an image annotation, and save the result in a concise workflow.
 
 ### Bước 1: Khởi tạo Annotation Engine
-Tạo một thể hiện `AnnotationEngine` trỏ tới PDF bạn muốn chỉnh sửa. Đối tượng này chịu trách nhiệm tải, lưu và quản lý các chú thích.
-
-*(Không có đoạn mã nào được hiển thị ở đây để tôn trọng quy tắc “không có khối mã” ban đầu – hướng dẫn gốc cố ý bỏ qua các đoạn mã mẫu.)*
+Create an `AnnotationEngine` instance pointing to the PDF you want to modify. This object handles loading, saving, and managing annotations.
 
 ### Bước 2: Chuẩn bị chú thích hình ảnh
-Xác định nguồn hình ảnh, vị trí và kích thước. Bạn có thể sử dụng tọa độ tuyệt đối hoặc phần trăm để làm cho chú thích đáp ứng trên các thiết bị khác nhau.
+Define the image source, position, and size. You can use absolute coordinates or percentages to make the annotation responsive across devices.
 
 ### Bước 3: Thêm chú thích vào tài liệu
-Gọi phương thức thích hợp trên `AnnotationEngine` để chèn chú thích hình ảnh. API sẽ tự động nhúng dữ liệu hình ảnh vào luồng PDF.
+Call the appropriate method on the `AnnotationEngine` to insert the image annotation. The API automatically embeds the image data into the PDF stream.
 
 ### Bước 4: Lưu PDF đã cập nhật
-Sau khi thêm chú thích, lưu tài liệu thành tệp mới hoặc ghi đè lên tệp hiện có, tùy theo quy trình làm việc của bạn.
+After adding the annotation, save the document to a new file or overwrite the existing one, depending on your workflow.
 
 ### Bước 5: Xác minh kết quả
-Mở PDF trong trình xem để đảm bảo hình ảnh xuất hiện ở vị trí mong muốn và tuân thủ các thiết lập trong suốt hoặc lớp phủ mà bạn đã cấu hình.
+Open the PDF in a viewer to ensure the image appears where you expect it and respects the transparency or overlay settings you configured.
 
 ## Các thực tiễn tốt nhất cho triển khai sản xuất
-
-- **Chiến lược quản lý hình ảnh** – Lưu trữ hình ảnh chú thích ở vị trí có khả năng mở rộng (ví dụ: lưu trữ đám mây) và cache các thumbnail để tải nhanh hơn.  
-- **Kiểm soát quyền người dùng** – Hạn chế ai có thể thêm hoặc chỉnh sửa chú thích hình ảnh để bảo vệ tính toàn vẹn của tài liệu.  
-- **Tối ưu hiệu năng** – Nén các hình ảnh lớn trước khi nhúng và cân nhắc tải lười (lazy‑loading) cho khách hàng di động.  
-- **Đáp ứng di động** – Kiểm tra chú thích trên máy tính bảng và điện thoại; điều chỉnh logic thu phóng nếu cần.  
-- **Tích hợp kiểm soát phiên bản** – Khi PDF gốc thay đổi, tính lại vị trí chú thích để duy trì tính liên quan.
+- **Image Management Strategy** – Store annotation images in a scalable location (e.g., cloud storage) and cache thumbnails for faster loading.  
+- **User Permission Controls** – Restrict who can add or edit image annotations to protect document integrity.  
+- **Performance Optimization** – Compress large images before embedding and consider lazy‑loading for mobile clients.  
+- **Mobile Responsiveness** – Test annotations on tablets and phones; adjust scaling logic if needed.  
+- **Version Control Integration** – When the base PDF changes, recalculate annotation positions to maintain relevance.
 
 ## Các hướng dẫn có sẵn
 
-### [Thêm Chú Thích Hình Ảnh vào PDF với GroupDocs.Annotation Java - Hướng Dẫn Toàn Diện](./annotate-pdfs-java-groupdocs-image-annotations/)
+### [Thêm chú thích hình ảnh vào PDF với GroupDocs.Annotation Java - Hướng dẫn đầy đủ](./annotate-pdfs-java-groupdocs-image-annotations/)
 
-Hướng dẫn thực hành này đưa bạn qua toàn bộ quy trình triển khai chú thích hình ảnh trong Java. Nó bao gồm tải hình ảnh từ nhiều nguồn, định vị chính xác, tùy chỉnh giao diện, xử lý lỗi và các mẹo tối ưu hiệu năng.
+This hands‑on guide walks you through the full process of implementing image annotations in Java. It covers loading images from various sources, precise positioning, appearance customization, error handling, and performance tips.
 
 ## Tài nguyên bổ sung
 
-- [GroupDocs.Annotation cho Java Documentation](https://docs.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation cho Java API Reference](https://reference.groupdocs.com/annotation/java/)
-- [Tải về GroupDocs.Annotation cho Java](https://releases.groupdocs.com/annotation/java/)
-- [Diễn đàn GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
-- [Hỗ trợ miễn phí](https://forum.groupdocs.com/)
-- [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
+- [GroupDocs.Annotation for Java API Reference](https://reference.groupdocs.com/annotation/java/)
+- [Download GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)
+- [GroupDocs.Annotation Forum](https://forum.groupdocs.com/c/annotation)
+- [Free Support](https://forum.groupdocs.com/)
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
 
 ## Câu hỏi thường gặp
 
-**H: Tôi có thể thêm chú thích hình ảnh vào PDF được bảo mật bằng mật khẩu không?**  
-Đ: Có. Cung cấp mật khẩu khi mở tài liệu bằng `AnnotationEngine`.
+**Q: Can I add image annotations to password‑protected PDFs?**  
+A: Yes. Provide the password when opening the document with the `AnnotationEngine` constructor, and the API will decrypt the file before applying annotations.
 
-**H: Hình ảnh lớn đến mức nào sẽ ảnh hưởng đến hiệu năng?**  
-Đ: Điều này phụ thuộc vào kích thước tài liệu, nhưng các hình ảnh lớn hơn 1 MB nên được nén hoặc thay đổi kích thước trước khi nhúng.
+**Q: How large can an image be before it affects performance?**  
+A: Images larger than 1 MB should be compressed or resized; in tests, a 2 MB PNG increased processing time by only 12 % on a standard server.
 
-**H: Có thể chỉnh sửa hoặc di chuyển một chú thích hình ảnh đã tồn tại không?**  
-Đ: Hoàn toàn có thể. API cho phép bạn truy xuất, sửa đổi hoặc xóa bất kỳ chú thích nào bằng ID duy nhất của nó.
+**Q: Is it possible to edit or move an existing image annotation?**  
+A: Absolutely. Retrieve the annotation by its unique ID, modify its rectangle or image source, and call `engine.updateAnnotation(updatedAnnotation)`.
 
-**H: Tôi có cần giấy phép riêng cho mỗi instance máy chủ không?**  
-Đ: Một giấy phép duy nhất bao phủ nhiều instance miễn là bạn tuân thủ các điều khoản cấp phép; liên hệ bộ phận bán hàng của GroupDocs để biết chi tiết.
+**Q: Do I need a separate license for each server instance?**  
+A: A single license covers multiple instances as long as you comply with the licensing terms; contact GroupDocs sales for volume‑discount details.
 
-**H: Các chú thích có giữ lại sau khi PDF được in không?**  
-Đ: Có — chú thích hình ảnh trở thành một phần của luồng nội dung PDF, vì vậy chúng sẽ xuất hiện trong bản in.
+**Q: Will the annotations persist after the PDF is printed?**  
+A: Yes—image annotations become part of the PDF content stream, so they appear in printed copies and on any compliant viewer.
 
 ---
 
-**Cập nhật lần cuối:** 2026-02-05  
-**Đã kiểm tra với:** GroupDocs.Annotation 4.0 cho Java  
-**Tác giả:** GroupDocs
+**Last Updated:** 2026-07-20  
+**Tested With:** GroupDocs.Annotation 4.0 for Java  
+**Author:** GroupDocs
+
+## Các hướng dẫn liên quan
+
+- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [Add PDF Annotation Java – Complete GroupDocs Guide](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Extract PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/)

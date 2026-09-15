@@ -22,12 +22,7 @@ url: /es/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java
 weight: 1
 ---
 
-Docs.Annotation 25.2  
-**Autor:** GroupDocs"
-
-Make sure to keep the markdown horizontal rule (---) and bold formatting.
-
-Now produce final content. Ensure no extra explanations.# Cómo agregar casilla de verificación a PDF con Java – Casillas interactivas usando GroupDocs
+# Cómo agregar casilla de verificación a PDF con Java – Casillas interactivas usando GroupDocs
 
 Si buscas **cómo agregar casilla de verificación** a archivos PDF de forma programática, has llegado al lugar correcto. En el mundo digital‑first de hoy, los PDFs estáticos son cosa del pasado. Ya sea que estés creando flujos de aprobación, encuestas o formularios de cumplimiento, agregar casillas interactivas puede mejorar drásticamente la experiencia del usuario y optimizar tus procesos.
 

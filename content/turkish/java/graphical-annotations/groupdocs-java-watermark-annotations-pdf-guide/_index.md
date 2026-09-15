@@ -1,69 +1,142 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: GroupDocs.Annotation kullanarak Java’da PDF’lere çok sayfalı PDF filigranı
-  eklemeyi öğrenin. Bu adım‑adım öğretici, kod örnekleri, sorun giderme ipuçları ve
-  en iyi uygulamalarla birlikte Java’da PDF filigranı eklemeyi gösterir.
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
-linktitle: Java PDF Watermark Guide
+date: '2026-07-30'
+description: Java'da GroupDocs.Annotation kullanarak PDF'lere tüm sayfalara filigran
+  eklemeyi öğrenin. Bu adım adım öğretici, pdf watermark birden fazla sayfaya eklemeyi,
+  kod örnekleri, sorun giderme ipuçları ve en iyi uygulamaları gösterir.
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
+linktitle: Java PDF Watermark Kılavuzu
+og_description: Java için GroupDocs.Annotation kullanarak PDF'lere tüm sayfalara filigran
+  uygulayın. Bu kılavuz, pdf watermark birden fazla sayfa, kurulum, kod ve sorun giderme
+  konularını kısa bir öğreticide kapsar.
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: Tüm Sayfalara Filigran Uygula – Java PDF Watermark Guide
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDF Filigranı – Çok Sayfalı PDF Filigranı Rehberi
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: Tüm Sayfalara Filigran Uygula – Java PDF Watermark Guide
 type: docs
 url: /tr/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
-# Java PDF Watermark – pdf watermark multiple pages Kılavuzu
+# Tüm Sayfalara Filigran Uygulama – Java PDF Filigran Kılavuzu
 
-Adding a **pdf watermark multiple pages** is a common requirement when you need to protect, brand, or label documents in bulk. In this tutorial you’ll see exactly how to **add pdf watermark java** using GroupDocs.Annotation, from project setup to advanced customizations. We’ll walk through each step, explain the why behind every setting, and give you practical tips to avoid the usual pitfalls.
+Bu kapsamlı öğreticide Java ve GroupDocs.Annotation kullanarak bir PDF belgesine **tüm sayfalara filigran nasıl uygulanır** öğreneceksiniz. Gizli raporları korumanız, pazarlama PDF'lerini markalamanız veya tüm dosya boyunca bir “CONFIDENTIAL” damgası eklemeniz gerekse, aşağıdaki adımlar Maven kurulumundan gelişmiş özelleştirmeye kadar her şeyi size anlatır—böylece dakikalar içinde güvenilir bir çözüm uygulayabilirsiniz.
 
-## Quick Answers
-- **Java'da pdf watermark multiple pages ekleyebilen kütüphane nedir?** GroupDocs.Annotation for Java.  
-- **Bir lisansa ihtiyacım var mı?** Evet, ücretsiz deneme sürümü geliştirme için çalışır; üretim için tam lisans gereklidir.  
-- **Tüm sayfalara aynı anda watermark ekleyebilir miyim?** Evet – bir döngü içinde her sayfa için bir watermark annotation oluşturun.  
-- **Gerekli Java sürümü nedir?** JDK 8+ (JDK 11+ önerilir).  
-- **Opaklığı nasıl kontrol ederim?** `setOpacity(double)` kullanın; 0.0 tamamen şeffaf, 1.0 tamamen opaktır.
+## Hızlı Yanıtlar
+- **Java'da birden çok sayfaya pdf filigranı ekleyebilen kütüphane hangisidir?** GroupDocs.Annotation for Java.  
+- **Bir lisansa ihtiyacım var mı?** Evet, ücretsiz deneme geliştirme için çalışır; üretim için tam lisans gereklidir.  
+- **Tüm sayfalara aynı anda filigran ekleyebilir miyim?** Evet – bir döngüde her sayfa için bir filigran ek açıklaması oluşturun.  
+- **Hangi Java sürümü gereklidir?** JDK 8+ (JDK 11+ önerilir).  
+- **Şeffaflığı nasıl kontrol ederim?** `setOpacity(double)` kullanın; 0.0 tamamen şeffaf, 1.0 tamamen opaktır.
 
-## PDF Watermark'lara Neden İhtiyacınız Var (Ve Java Nasıl Kolaylaştırıyor)
+## PDF Filigranlarına Neden İhtiyacınız Var (Ve Java Nasıl Kolaylaştırıyor)
 
-Ever had your important documents shared without permission? Or needed to brand your company's PDFs but didn't know where to start? You're not alone. Adding watermarks to PDFs is one of the most common document security and branding needs developers face today.
+Gizli bir PDF'nin izniniz olmadan paylaşılacağından hiç endişe duydunuz mu? Ya da bir satış broşürünün her sayfasını hızlıca markalamanız gerekti mi? Filigranları programlı olarak eklemek manuel çabayı ortadan kaldırır, tutarlılığı garanti eder ve belge güvenliğini güçlendirir. Java ve GroupDocs.Annotation—en sağlam **java add watermark pdf** kütüphanelerinden biri—ile konum, dönüş, renk ve şeffaflık üzerinde ince ayar kontrolü elde eder, büyük dosyaları verimli bir şekilde işlersiniz.
 
-İster hassas iş belgelerini koruyor olun, ister pazarlama materyallerine marka ekliyor olun, ya da sadece yetkisiz dağıtımı önlemek istiyor olun, programatik olarak watermark eklemek manuel çalışmayı saatlerce tasarruf ettirebilir. Ve Java ve doğru kütüphane ile bu şaşırtıcı derecede basittir.
+**Bu kılavuzun sonunda öğrenecekleriniz:**
+- GroupDocs.Annotation for Java filigranlarını kurma
+- **tüm sayfalara** uygulanacak özel filigran ek açıklamaları oluşturma
+- Belleği tüketmeden büyük PDF'leri işleme
+- Yaygın sorunları giderme ve performansı optimize etme  
 
-In this guide, you'll learn how to add professional‑looking watermarks to PDFs using GroupDocs.Annotation for Java – one of the most reliable Java watermark libraries available. We'll cover everything from basic setup to advanced customization, plus common pitfalls and how to avoid them.
+## PDF Filigranı Nedir ve Neden Birden Çok Sayfada Kullanılır?
 
-**Sonunda neyi öğreneceksiniz:**
-- GroupDocs.Annotation for Java watermark'larını kurma
-- Tam kontrol ile özel watermark annotation'ları oluşturma
-- Yaygın watermark uygulama sorunlarını giderme
-- Üretim kullanımı için watermark kodunuzu optimize etme
+PDF filigranı, belge içeriğinin üzerine yerleşen ve alttaki metin veya görüntüleri değiştirmeyen bir üst katmandır. **Tüm sayfalara** filigran uygulamak, her sayfanın aynı marka ya da gizlilik bildirimini taşımasını sağlar ve işaretsiz sayfaların yanlışlıkla dağıtılmasını önler.
 
-## PDF Watermark Nedir ve Neden Çoklu Sayfalarda Kullanılır?
-
-A PDF watermark is an overlay that sits on top of the document content without altering the original text. Using **pdf watermark multiple pages** lets you consistently mark every page with a brand, confidentiality notice, or version tag, ensuring the protection travels with the whole document.
-
-## Prerequisites
+## Önkoşullar
 
 ### Temel Gereksinimler
+- **Java Ortamı:** JDK 8 veya üzeri (JDK 11+ önerilir), Maven 3.6+, herhangi bir IDE (IntelliJ, Eclipse, VS Code).  
+- **Bilgi Önkoşulları:** Temel Java sözdizimi, dosya G/Ç, Maven bağımlılık yönetimi.  
+- **Proje İzinleri:** Çıktı dizinine yazma erişimi ve büyük PDF'ler için yeterli RAM (≥ 4 GB, > 200 sayfalı dosyalar için önerilir).
 
-- **Java Ortamı:** JDK 8 veya üzeri (JDK 11+ önerilir), Maven 3.6+, tercih ettiğiniz IDE.  
-- **Bilgi Gereksinimleri:** Temel Java, dosya I/O, Maven bağımlılıkları.  
-- **Proje Kurulumu:** Çıktı klasörüne yazma izinleri ve büyük PDF'ler için yeterli RAM.
+## Java PDF Filigran Ortamınızı Kurma
 
-## Setting Up Your Java PDF Watermark Environment
+### Projenize GroupDocs.Annotation Ekleme
 
-### Adding GroupDocs.Annotation to Your Project
+İlk olarak, GroupDocs.Annotation Maven artefaktını ekleyin. Bu bağımlılık gerekli tüm ikili dosyaları ve geçişli kütüphaneleri çeker.
 
-The first step to adding watermarks to PDFs in Java is getting the GroupDocs.Annotation library properly configured. Here's the Maven setup that actually works:
+Tanım: Maven `<dependency>` öğesi, projeniz için GroupDocs.Annotation kütüphanesini bildirir ve derleyicinin derleme sırasında JAR dosyalarını bulmasını sağlar.  
 
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -81,20 +154,25 @@ The first step to adding watermarks to PDFs in Java is getting the GroupDocs.Ann
 </dependencies>
 ```
 
-**İpucu**: Hata düzeltmeleri ve performans iyileştirmeleri için her zaman en son sürümü kullanın. Yukarıdaki sürüm 2025 itibarıyla günceldir.
+Pro ipucu: Hata düzeltmeleri ve performans iyileştirmelerinden yararlanmak için her zaman en son sürümü kullanın (örnek 2025 itibarıyla en yeni 25.2 sürümünü gösterir).
 
-### Getting Your License Sorted
+### Lisansınızı Düzenleme
 
-Here's something many tutorials skip – you need proper licensing for production use. Here are your options:
+Üretim dağıtımları için geçerli bir lisansa ihtiyacınız var. Zaman çizelgenize uyan seçeneği seçin:
+1. **Ücretsiz Deneme:** Geliştirme ve test için idealdir. [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) adresinden indirin  
+2. **Geçici Lisans:** Değerlendirme için tam özellik seti. [Temporary License Page](https://purchase.groupdocs.com/temporary-license/) adresinden edinin  
+3. **Tam Lisans:** Ticari kullanım için gereklidir. [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy) üzerinden satın alın
 
-1. **Ücretsiz Deneme**: Test ve geliştirme için mükemmel. Download from [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)
-2. **Geçici Lisans**: Değerlendirme için tam özellikler. Grab one from the [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)
-3. **Tam Lisans**: Üretim uygulamaları için. Purchase from [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
+### Gerçekten İşe Yarayan Temel Kurulum
 
-### Basic Setup That Actually Works
+Bağımlılığı ekleyip bir lisans dosyası aldıktan sonra `Annotator` nesnesini başlatın. Bu nesne PDF'yi belleğe yükler ve ek açıklama oluşturmak için API'yi sağlar.
 
-Once you've got your dependencies sorted, here's how to initialize the library properly:
+Tanım: `Annotator` GroupDocs.Annotation'ın birincil giriş noktasıdır; PDF yükleme, ek açıklama oluşturma ve kaydetme işlemlerini yönetir.  
 
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -110,20 +188,21 @@ public class WatermarkSetup {
 }
 ```
 
-**Kaçınılması gereken yaygın hata**: `dispose()` çağırmayı unutmak, özellikle birden fazla belge işlenirken bellek sızıntılarına yol açabilir.
+Kaçınılması gereken yaygın hata: İşlem sonrası `annotator.dispose()` çağırmayı unutmak; bu, özellikle bir toplu işlemde çok sayıda belgeyle çalışırken bellek sızıntılarına neden olabilir.
 
-## How to Add pdf watermark multiple pages with Java
+## Java'da Tüm Sayfalara Filigran Uygulama
 
-Now for the main event – actually adding those watermarks! The GroupDocs.Annotation library makes this surprisingly straightforward once you understand the components.
+Her sayfaya filigran uygulamak için bir `WatermarkAnnotation` oluşturur, görsel özelliklerini ayarlarsınız ve ardından bu ek açıklamanın ayrı bir örneğini bir döngüde her sayfaya eklersiniz. Döngü, belgenin sayfa sayısını kullanır, doğru sayfa numarasını atar ve sonunda değiştirilmiş PDF'yi kaydeder.
 
-### Understanding Watermark Annotations
+### Filigran Ek Açıklamalarını Anlamak
 
-Think of watermark annotations as overlay layers on your PDF. They can contain text, have custom positioning, colors, opacity levels, and even rotation angles. Unlike simple text additions, watermark annotations are specifically designed to be visible markers that don't interfere with the document's core content.
+`WatermarkAnnotation`, metin, özel renkler, dönüş ve şeffaflık içerebilen bir üst katmanı temsil eder. Basit bir metin eklemesinden farklı olarak, bir ek açıklama olarak depolanır ve daha sonra kaldırılabilir veya düzenlenebilir.
 
-### Step 1: Import the Right Classes
+Tanım: `WatermarkAnnotation`, GroupDocs.Annotation içinde bir filigran üst katmanının tüm görsel özelliklerini kapsayan sınıftır.  
 
-First, let's get all our imports sorted. These are the essential classes you'll need:
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -133,14 +212,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-Each class has a specific role:
-- `Annotator`: PDF ile çalışmak için ana arayüzünüz  
-- `WatermarkAnnotation`: Özelleştireceğiniz watermark nesnesi  
-- `Rectangle`: Watermark'in nerede görüneceğini ve boyutunu tanımlar  
-- `Reply`: Watermark hakkında isteğe bağlı yorumlar veya notlar  
+### Adım 1: Gerekli Sınıfları İçe Aktarın
 
-### Step 2: Initialize Your PDF for Watermarking
+API'yi kullanmadan önce gerekli sınıfları içe aktarın.
 
+Tanım: İçe aktarma ifadeleri, gerekli GroupDocs.Annotation sınıflarını mevcut Java dosyasına getirir, tam nitelikli adları kullanmadan onlara referans vermenizi sağlar.  
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -148,12 +231,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**Important note**: The `Annotator` object loads your PDF into memory, so make sure you have sufficient RAM for large files. For PDFs over 50 MB, consider processing in smaller batches.
+### Adım 2: PDF Belgesini Yükleyin
 
-### Step 3: Create Optional Reply Objects
+Kaynak PDF'nize işaret eden `Annotator` örneğini oluşturun.
 
-While not required, replies can be useful for document tracking or approval workflows:
+Tanım: `Annotator` yapıcı, PDF dosyasını yönetilebilir bir nesneye yükler ve ek açıklama işlemleri için hazırlık yapar.  
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -164,12 +250,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-These replies become part of the annotation metadata and can be viewed in PDF readers that support annotation comments.
+> **Pro ipucu:** 50 MB'den büyük PDF'ler için JVM yığınını (`-Xmx4g`) artırmayı ve bellek kullanımını düşük tutmak için dosyaları sıralı olarak işlemeyi düşünün.
 
-### Step 4: Configure Your Watermark (The Fun Part!)
+### Adım 3: (İsteğe Bağlı) Yanıt Metaverisini Hazırlayın
 
-This is where you get creative. The watermark configuration controls everything about how your watermark appears:
+Filigrana yorumlar veya onay notları eklemeniz gerekiyorsa, bir `Reply` nesnesi oluşturun.
 
+Tanım: `Reply`, bir ek açıklamaya eşlik eden kullanıcı tarafından oluşturulan yorumları saklar; denetim izleri için faydalıdır.  
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -188,27 +280,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**Let's break down these settings:**
-- `setAngle(75.0)`: Watermark'inizi 75 derece döndürür. Çapraz “CONFIDENTIAL” damgaları için harika.  
-- `setBox(new Rectangle(200, 200, 100, 50))`: Konum (200, 200) genişlik 100 ve yükseklik 50.  
-- `setFontColor(65535)`: ARGB renk formatı – bu örnekte sarı.  
-- `setOpacity(0.7)`: %70 opaklık – görünür ama çok baskıcı değil.  
-- `setPageNumber(0)`: İlk sayfaya uygulanır (0‑indeksli).  
+### Adım 4: Filigran Görünümünü Yapılandırın
 
-### Step 5: Apply and Save Your Watermarked PDF
+Metin, renk, dönüş, boyut ve şeffaflık gibi görsel özellikleri ayarlayın.
 
+Tanım: Aşağıdaki ayarlayıcılar, filigranın görünümünü ve her sayfadaki konumunu özelleştirir.  
+
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-That's it! Your PDF now has a professional watermark. The `save()` method creates a new PDF file with your watermark applied, leaving the original untouched.
+### Adım 5: Tüm Sayfalarda Döngü Oluşturup Filigranı Uygulayın
 
-## How to Add pdf watermark multiple pages (All Pages)
+**Tüm sayfalara filigran uygulamak** için, belgenin sayfa sayısı üzerinde yineleme yapın ve ek açıklamayı her sayfaya atayın.
 
-By default, a watermark applies to a single page. To **add pdf watermark multiple pages**, loop through the document pages and add a separate `WatermarkAnnotation` for each one:
+Tanım: `annotator.getPageCount()` toplam sayfa sayısını döndürür; bu, her sayfa için ayrı bir `WatermarkAnnotation` oluşturmanıza olanak tanıyan bir döngü sağlar.  
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -229,12 +334,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-This snippet demonstrates the exact pattern you need to **add pdf watermark multiple pages** efficiently.
+### Adım 6: Filigranlı PDF'yi Kaydedin
 
-## Common Issues and How to Fix Them
+Son olarak, değişiklikleri yeni bir dosyaya yazın. Orijinal PDF dokunulmaz kalır.
 
-### "File Not Found" Errors
+Tanım: `annotator.save("output.pdf")` eklenen tüm ek açıklamaları yeni bir PDF dosyasına kalıcı olarak yazar.  
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -250,36 +359,18 @@ try {
 }
 ```
 
-- Mutlak yolları iki kez kontrol edin.  
-- Okuma/yazma izinlerini doğrulayın.  
-- Çıktı klasörünün var olduğundan emin olun.
+Bu, GroupDocs.Annotation for Java kullanarak **tüm sayfalara filigran uygulama** için tam akıştır.
 
-### Memory Issues with Large PDFs
+## Yaygın Sorunlar ve Çözümleri
 
-- Her zaman `dispose()` çağırın.  
-- Dosyaları paralel değil, tek tek işleyin.  
-- JVM yığınını artırın (`-Xmx4g` çok büyük belgeler için).  
-
-### Watermark Not Appearing Where Expected
-
-- PDF koordinatlarının **sol‑alt** köşeden başladığını unutmayın.  
-- Farklı sayfa boyutlarıyla test edin; A4 vs. Letter konumları kaydırabilir.  
-- Watermark soluk görünüyorsa opaklığı ayarlayın.
-
-### Font Color Issues
-
-ARGB values you can use:
-- Kırmızı: `16711680`  
-- Mavi: `255`  
-- Yeşil: `65280`  
-- Siyah: `0`  
-- Beyaz: `16777215`  
-- Sarı: `65535` (örneğimizde kullanılan)
-
-## Real‑World Use Cases for Java PDF Watermarks
-
-### Business Document Protection
-
+### “Dosya Bulunamadı” Hataları
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -290,8 +381,36 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### Branding Marketing Materials
+- Mutlak yolları doğrulayın ve dosyanın mevcut olduğundan emin olun.  
+- Girdi ve çıktı dizinlerindeki okuma/yazma izinlerini kontrol edin.  
+- Çıktı klasörü yoksa önceden oluşturun.
 
+### Büyük PDF'lerde Bellek Sorunları
+- İşlem sonrası her zaman `annotator.dispose()` çağırın.  
+- PDF'leri birer birer işleyin; kütüphane thread‑safe kanıtlanmadıysa paralel akışlardan kaçının.  
+- 200 sayfayı aşan dosyalar için JVM yığınını (`-Xmx4g` veya daha yüksek) artırın.
+
+### Filigran Konumu Beklenildiği Gibi Değil
+- PDF koordinat başlangıcı **sol‑alt**tır; `Rectangle` değerlerini buna göre ayarlayın.  
+- Boyutların konumu etkilediği için farklı sayfa boyutlarıyla (A4 vs. Letter) test edin.  
+- Filigran yüksek kontrastlı arka planlarda çok soluk görünüyorsa `setOpacity(0.5)` kullanın.
+
+### Yazı Rengi Sorunları
+GroupDocs.Annotation ARGB tamsayı değerleri bekler. Yaygın renkler:
+- Kırmızı: `16711680`  
+- Mavi: `255`  
+- Yeşil: `65280`  
+- Siyah: `0`  
+- Beyaz: `16777215`  
+- Sarı: `65535` (örnekte kullanılmıştır)
+
+## Java PDF Filigranları için Gerçek Dünya Kullanım Senaryoları
+
+### İş Belgesi Koruması
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -301,8 +420,12 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### Version Control for Documents
-
+### Pazarlama Materyallerini Markalama
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -311,10 +434,11 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## Performance Optimization Tips
-
-### Memory Management Best Practices
-
+### Belgeler İçin Sürüm Kontrolü
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -332,14 +456,14 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### Batch Processing Strategies
+## Performans Optimizasyon İpuçları
 
-- Bellek kullanımını düşük tutmak için belgeleri sıralı işleyin.  
-- Uzun çalışmalarda ilerleme göstergesi kullanın.  
-- Kütüphanenin çoklu iş parçacığı güvenliği onaylanmadıkça paralel işlemden kaçının.
-
-### Code Organization Tips
-
+### Bellek Yönetimi En İyi Uygulamalar
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -363,39 +487,59 @@ public class WatermarkTemplates {
 }
 ```
 
-## Frequently Asked Questions
+- Bellek ayak izini düşük tutmak için belgeleri sıralı işleyin.  
+- Bellek kullanımını izlemek için toplu işler için bir ilerleme göstergesi kullanın.  
+- Sadece bir sayfa alt kümesi filigran gerektirdiğinde tüm PDF'yi belleğe yüklemekten kaçının; kütüphane sayfa‑seviyesi yüklemeyi destekler.
 
-**Q: How do I add watermarks to multiple pages in a PDF?**  
-A: Use a loop over the document’s page count and create a `WatermarkAnnotation` for each page, setting `setPageNumber(i)` inside the loop.
+### Kod Organizasyonu İpuçları
+- Filigran oluşturmayı bir yardımcı metoda kapsülle: `createWatermark(String text, double opacity, int angle)`.  
+- Konfigürasyonu (renkler, yazı tipleri, şeffaflık) ortamlar arasında kolay ayarlama için bir properties dosyasında dışa aktarılmış tutun.
 
-**Q: Can I use custom fonts for my watermarks?**  
-A: GroupDocs.Annotation uses system‑installed fonts. Specify a font family that exists on the host machine; the library falls back to a default if the font isn’t found.
+## Sık Sorulan Sorular
 
-**Q: What opacity setting works best for professional watermarks?**  
-A: Between **0.3** and **0.7** is ideal—low enough to keep the content readable, high enough to be noticeable.
+**S: PDF'de birden çok sayfaya nasıl filigran eklerim?**  
+C: Belgenin sayfa sayısı üzerinde döngü yapın, her sayfa için yapılandırılmış bir `WatermarkAnnotation` klonlayın, `setPageNumber(i)` ayarlayın ve `annotator.add()` ile ekleyin.
 
-**Q: How should I handle very large PDF files?**  
-A: Increase JVM heap (`-Xmx4g` or more), process files one at a time, and always call `dispose()` after each document.
+**S: Filigranlarım için özel yazı tipleri kullanabilir miyim?**  
+C: GroupDocs.Annotation, ana işletim sisteminde yüklü yazı tiplerini kullanır. Sunucuda mevcut bir yazı tipi ailesi belirtin; yazı tipi bulunamazsa kütüphane varsayılan bir tipine geri döner.
 
-**Q: Is it possible to remove or modify existing watermarks?**  
-A: Yes—retrieve existing annotations with `annotator.get()`, filter for `WatermarkAnnotation`, then edit or delete as needed:
+**S: Profesyonel filigranlar için en iyi şeffaflık ayarı nedir?**  
+C: **0.3** ile **0.7** arasında bir değer denge sağlar—fark edilmesi yeterince görünür ama alttaki içeriğin okunmasına izin verir.
 
+**S: Çok büyük PDF dosyalarıyla nasıl başa çıkmalıyım?**  
+C: JVM yığınını (`-Xmx4g` veya daha fazla) artırın, dosyaları birer birer işleyin ve her belge sonrası yerel kaynakları serbest bırakmak için her zaman `dispose()` çağırın.
+
+**S: Mevcut filigranları kaldırmak veya değiştirmek mümkün mü?**  
+C: Evet—`annotator.get()` ile ek açıklamaları alın, `WatermarkAnnotation` için filtreleyin, ardından gerektiği gibi düzenleyin veya silin:  
+
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
 // Filter and modify as needed
 ```
 
-## Additional Resources
+## Ek Kaynaklar
 
-- **Dokümantasyon**: [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Tam API Referansı**: [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
-- **En Son Sürümü İndir**: [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Ticari Lisanslama**: [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
-- **Topluluk Desteği**: [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
+- **Dokümantasyon:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Tam API Referansı:** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **En Son Sürümü İndir:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Ticari Lisanslama:** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **Topluluk Desteği:** [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
 
 ---
 
-**Last Updated:** 2026-02-10  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**Son Güncelleme:** 2026-07-30  
+**Test Edilen Sürüm:** GroupDocs.Annotation 25.2  
+**Yazar:** GroupDocs  
+
+## İlgili Öğreticiler
+
+- [GroupDocs Annotation ile Java'da PDF Yükleme: Belge Yükleme Kılavuzu](/annotation/java/document-loading/)
+- [Java ile PDF Ek Açıklaması Ekle – Tam GroupDocs Kılavuzu](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Java ve GroupDocs Annotation kullanarak PDF'ye resim ekleme](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)

@@ -1,70 +1,145 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: Aprende cómo agregar marcas de agua en PDF de varias páginas a PDFs en
+date: '2026-07-30'
+description: Aprende cómo aplicar una marca de agua en todas las páginas de PDFs en
   Java usando GroupDocs.Annotation. Este tutorial paso a paso muestra cómo añadir
-  una marca de agua en PDF con Java, con ejemplos de código, consejos de solución
-  de problemas y mejores prácticas.
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
-linktitle: Java PDF Watermark Guide
+  una marca de agua en PDF a múltiples páginas, con ejemplos de código, consejos de
+  solución de problemas y buenas prácticas.
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
+linktitle: Guía de Marca de Agua en PDF con Java
+og_description: Aplica una marca de agua en todas las páginas de PDFs usando GroupDocs.Annotation
+  para Java. Esta guía cubre la marca de agua en PDF en múltiples páginas, configuración,
+  código y solución de problemas en un tutorial conciso.
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: Aplicar Marca de Agua en Todas las Páginas – Guía de Marca de Agua en PDF
+  con Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Marca de agua PDF en Java – Guía para marcas de agua en PDF de varias páginas
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: Aplicar Marca de Agua en Todas las Páginas – Guía de Marca de Agua en PDF con
+  Java
 type: docs
 url: /es/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
-# Marca de agua PDF en Java – Guía de marca de agua PDF en varias páginas
+# Aplicar marca de agua a todas las páginas – Guía de marca de agua PDF en Java
 
-Agregar una **marca de agua PDF en varias páginas** es un requisito común cuando necesitas proteger, marcar o etiquetar documentos en masa. En este tutorial verás exactamente cómo **añadir una marca de agua PDF en Java** usando GroupDocs.Annotation, desde la configuración del proyecto hasta personalizaciones avanzadas. Recorreremos cada paso, explicaremos el porqué de cada configuración y te daremos consejos prácticos para evitar los problemas habituales.
+En este tutorial completo aprenderás **cómo aplicar marca de agua a todas las páginas** a un documento PDF usando Java y GroupDocs.Annotation. Ya sea que necesites proteger informes confidenciales, marcar PDFs de marketing con la marca de la empresa, o agregar un sello “CONFIDENTIAL” en todo el archivo, los pasos a continuación te guiarán a través de todo—desde la configuración de Maven hasta la personalización avanzada—para que puedas implementar una solución fiable en minutos.
 
 ## Respuestas rápidas
-- **¿Qué biblioteca puede agregar marca de agua PDF en varias páginas en Java?** GroupDocs.Annotation for Java.  
+- **¿Qué biblioteca puede agregar marca de agua PDF a múltiples páginas en Java?** GroupDocs.Annotation for Java.  
 - **¿Necesito una licencia?** Sí, una prueba gratuita funciona para desarrollo; se requiere una licencia completa para producción.  
-- **¿Puedo marcar todas las páginas a la vez?** Sí – crea una anotación de marca de agua para cada página en un bucle.  
-- **¿Qué versión de Java se requiere?** JDK 8+ (JDK 11+ recomendado).  
+- **¿Puedo aplicar marca de agua a todas las páginas a la vez?** Sí – crea una anotación de marca de agua para cada página en un bucle.  
+- **¿Qué versión de Java se requiere?** JDK 8+ (se recomienda JDK 11+).  
 - **¿Cómo controlo la opacidad?** Usa `setOpacity(double)` donde 0.0 es totalmente transparente y 1.0 es totalmente opaco.
 
-## Por qué necesitas marcas de agua PDF (y cómo Java lo hace fácil)
+## Por qué necesitas marcas de agua PDF (y cómo Java lo facilita)
 
-¿Alguna vez tus documentos importantes se han compartido sin permiso? ¿O necesitabas marcar los PDFs de tu empresa pero no sabías por dónde empezar? No estás solo. Añadir marcas de agua a los PDFs es una de las necesidades más comunes de seguridad y branding de documentos que enfrentan los desarrolladores hoy en día.
+¿Alguna vez te has preocupado de que un PDF confidencial sea compartido sin tu permiso? ¿O necesitaste una forma rápida de marcar cada página de un folleto de ventas? Añadir marcas de agua programáticamente elimina el esfuerzo manual, garantiza la consistencia y refuerza la seguridad del documento. Con Java y GroupDocs.Annotation—una de las bibliotecas **java add watermark pdf** más robustas—obtienes un control granular sobre la posición, rotación, color y opacidad, todo mientras manejas archivos grandes de manera eficiente.
 
-Ya sea que estés protegiendo documentos empresariales sensibles, marcando materiales de marketing o simplemente quieras evitar la distribución no autorizada, añadir marcas de agua programáticamente puede ahorrarte horas de trabajo manual. Y con Java y la biblioteca adecuada, es sorprendentemente sencillo.
+**Lo que dominarás al final de esta guía:**
+- Configurar GroupDocs.Annotation para marcas de agua en Java  
+- Crear anotaciones de marca de agua personalizadas que se apliquen a **todas las páginas**  
+- Manejar PDFs grandes sin agotar la memoria  
+- Solucionar problemas comunes y optimizar el rendimiento  
 
-En esta guía, aprenderás a añadir marcas de agua de aspecto profesional a los PDFs usando GroupDocs.Annotation for Java – una de las bibliotecas de marcas de agua Java más fiables disponibles. Cubriremos todo, desde la configuración básica hasta la personalización avanzada, además de los errores comunes y cómo evitarlos.
+## Qué es una marca de agua PDF y por qué usarla en múltiples páginas?
 
-**Lo que dominarás al final:**
-- Configurar GroupDocs.Annotation para marcas de agua en Java
-- Crear anotaciones de marca de agua personalizadas con control total
-- Resolver problemas comunes de implementación de marcas de agua
-- Optimizar tu código de marca de agua para uso en producción
+Una marca de agua PDF es una superposición que aparece sobre el contenido del documento sin alterar el texto o imágenes subyacentes. Aplicar una marca de agua a **todas las páginas** garantiza que cada página lleve la misma marca o aviso de confidencialidad, evitando la distribución accidental de páginas sin marcar.
 
-## ¿Qué es una marca de agua PDF y por qué usarla en varias páginas?
-
-Una marca de agua PDF es una superposición que se sitúa sobre el contenido del documento sin alterar el texto original. Usar una **marca de agua PDF en varias páginas** te permite marcar de forma consistente cada página con una marca, aviso de confidencialidad o etiqueta de versión, asegurando que la protección viaja con todo el documento.
-
-## Prerrequisitos
+## Requisitos previos
 
 ### Requisitos esenciales
+- **Entorno Java:** JDK 8 o superior (se recomienda JDK 11+), Maven 3.6+, cualquier IDE (IntelliJ, Eclipse, VS Code).  
+- **Prerequisitos de conocimiento:** Sintaxis básica de Java, I/O de archivos, gestión de dependencias Maven.  
+- **Permisos del proyecto:** Acceso de escritura al directorio de salida y suficiente RAM para PDFs grandes (≥ 4 GB recomendado para archivos de > 200 páginas).
 
-- **Entorno Java:** JDK 8 o superior (JDK 11+ recomendado), Maven 3.6+, IDE de tu elección.  
-- **Prerequisitos de conocimiento:** Java básico, I/O de archivos, dependencias Maven.  
-- **Configuración del proyecto:** Permisos de escritura en la carpeta de salida y suficiente RAM para PDFs grandes.
-
-## Configuración de tu entorno de marca de agua PDF en Java
+## Configurando tu entorno de marca de agua PDF en Java
 
 ### Añadiendo GroupDocs.Annotation a tu proyecto
 
-El primer paso para añadir marcas de agua a PDFs en Java es configurar correctamente la biblioteca GroupDocs.Annotation. Aquí tienes la configuración Maven que realmente funciona:
+Primero, agrega el artefacto Maven de GroupDocs.Annotation. Esta dependencia trae todos los binarios requeridos y las bibliotecas transitivas.
 
+**Definición:** El elemento Maven `<dependency>` declara la biblioteca GroupDocs.Annotation para tu proyecto, permitiendo al compilador localizar los archivos JAR durante el tiempo de compilación.  
+
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -82,20 +157,26 @@ El primer paso para añadir marcas de agua a PDFs en Java es configurar correcta
 </dependencies>
 ```
 
-**Consejo profesional**: Siempre usa la última versión para correcciones de errores y mejoras de rendimiento. La versión anterior es actual a 2025.
+**Consejo profesional:** Siempre usa la última versión publicada (el ejemplo muestra 25.2, la más reciente a partir de 2025) para beneficiarte de correcciones de errores y mejoras de rendimiento.
 
-### Obteniendo tu licencia
+### Obtén tu licencia
 
-Esto es algo que muchos tutoriales omiten: necesitas una licencia adecuada para uso en producción. Estas son tus opciones:
+Necesitas una licencia válida para implementaciones en producción. Elige la opción que se ajuste a tu cronograma:
 
-1. **Prueba gratuita**: Perfecta para pruebas y desarrollo. Descarga desde [Descargas de GroupDocs](https://releases.groupdocs.com/annotation/java/)
-2. **Licencia temporal**: Obtén todas las funciones para evaluación. Consíguela en la [Página de Licencia Temporal](https://purchase.groupdocs.com/temporary-license/)
-3. **Licencia completa**: Para aplicaciones en producción. Compra en la [Página de Compra de GroupDocs](https://purchase.groupdocs.com/buy)
+1. **Prueba gratuita:** Ideal para desarrollo y pruebas. Descarga desde [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+2. **Licencia temporal:** Conjunto completo de funciones para evaluación. Obtén una en la [Temporary License Page](https://purchase.groupdocs.com/temporary-license/)  
+3. **Licencia completa:** Requerida para uso comercial. Compra a través de la [GroupDocs Purchase Page](https://purchase.groupdocs.com/buy)
 
 ### Configuración básica que realmente funciona
 
-Una vez que tienes tus dependencias listas, así es como inicializas la biblioteca correctamente:
+Después de agregar la dependencia y obtener un archivo de licencia, inicializa el objeto `Annotator`. Este objeto carga el PDF en memoria y proporciona la API para crear anotaciones.
 
+**Definición:** `Annotator` es el punto de entrada principal de GroupDocs.Annotation; gestiona la carga del PDF, la creación de anotaciones y el guardado.  
+
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -111,20 +192,21 @@ public class WatermarkSetup {
 }
 ```
 
-**Error común a evitar**: Olvidar llamar a `dispose()` puede provocar fugas de memoria, especialmente al procesar varios documentos.
+**Error común a evitar:** Olvidar llamar a `annotator.dispose()` después del procesamiento; esto puede causar fugas de memoria, especialmente al manejar muchos documentos en lote.
 
-## Cómo añadir marca de agua PDF en varias páginas con Java
+## Cómo aplicar marca de agua a todas las páginas en Java
 
-Ahora viene lo principal: ¡añadir esas marcas de agua! La biblioteca GroupDocs.Annotation lo hace sorprendentemente sencillo una vez que entiendes los componentes.
+Para aplicar una marca de agua a cada página, creas un `WatermarkAnnotation`, estableces sus propiedades visuales y luego añades una instancia separada de esta anotación a cada página en un bucle. El bucle usa el recuento de páginas del documento, asigna el número de página correcto y finalmente guarda el PDF modificado.
 
 ### Entendiendo las anotaciones de marca de agua
 
-Piensa en las anotaciones de marca de agua como capas superpuestas en tu PDF. Pueden contener texto, tener posicionamiento personalizado, colores, niveles de opacidad e incluso ángulos de rotación. A diferencia de simples adiciones de texto, las anotaciones de marca de agua están diseñadas específicamente para ser marcadores visibles que no interfieren con el contenido principal del documento.
+Un `WatermarkAnnotation` representa una capa superpuesta que puede contener texto, colores personalizados, rotación y opacidad. A diferencia de una simple adición de texto, se almacena como una anotación, lo que la hace removible o editable posteriormente.
 
-### Paso 1: Importar las clases correctas
+**Definición:** `WatermarkAnnotation` es una clase en GroupDocs.Annotation que encapsula todas las propiedades visuales de una superposición de marca de agua.  
 
-Primero, organicemos todas nuestras importaciones. Estas son las clases esenciales que necesitarás:
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -134,14 +216,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-Cada clase tiene un rol específico:
-- `Annotator`: Tu interfaz principal para trabajar con el PDF  
-- `WatermarkAnnotation`: El objeto de marca de agua que personalizarás  
-- `Rectangle`: Define dónde aparece tu marca de agua y su tamaño  
-- `Reply`: Comentarios u notas opcionales sobre la marca de agua  
+### Paso 1: Importar las clases requeridas
 
-### Paso 2: Inicializar tu PDF para marcarlo
+Antes de poder usar la API, importa las clases esenciales.
 
+**Definición:** Las declaraciones de importación traen las clases necesarias de GroupDocs.Annotation al archivo Java actual, permitiéndote referenciarlas sin nombres totalmente calificados.  
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -149,12 +235,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**Nota importante**: El objeto `Annotator` carga tu PDF en memoria, así que asegúrate de tener suficiente RAM para archivos grandes. Para PDFs de más de 50 MB, considera procesarlos en lotes más pequeños.
+### Paso 2: Cargar el documento PDF
 
-### Paso 3: Crear objetos Reply opcionales
+Crea la instancia `Annotator` que apunta a tu PDF de origen.
 
-Aunque no son obligatorios, los replies pueden ser útiles para el seguimiento de documentos o flujos de aprobación:
+**Definición:** El constructor `Annotator` carga el archivo PDF en un objeto manejable, preparándolo para operaciones de anotación.  
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -165,12 +254,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-Estos replies forman parte de los metadatos de la anotación y pueden verse en lectores PDF que soporten comentarios de anotación.
+> **Consejo profesional:** Para PDFs mayores de 50 MB, considera aumentar el heap de JVM (`-Xmx4g`) y procesar los archivos secuencialmente para mantener bajo el uso de memoria.
 
-### Paso 4: Configurar tu marca de agua (¡La parte divertida!)
+### Paso 3: (Opcional) Preparar metadatos de respuesta
 
-Aquí es donde puedes ser creativo. La configuración de la marca de agua controla todo lo que respecta a su apariencia:
+Si necesitas adjuntar comentarios o notas de aprobación a la marca de agua, crea un objeto `Reply`.
 
+**Definición:** `Reply` almacena comentarios generados por el usuario que acompañan a una anotación, útil para auditorías.  
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -189,27 +284,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**Desglosemos estos ajustes:**
-- `setAngle(75.0)`: Rota tu marca de agua 75 grados. Ideal para sellos diagonales de “CONFIDENCIAL”.  
-- `setBox(new Rectangle(200, 200, 100, 50))`: Posición (200, 200) con ancho 100 y alto 50.  
-- `setFontColor(65535)`: Formato de color ARGB – amarillo en este caso.  
-- `setOpacity(0.7)`: Opacidad del 70 % – visible pero no abrumadora.  
-- `setPageNumber(0)`: Se aplica a la primera página (índice 0).  
+### Paso 4: Configurar la apariencia de la marca de agua
 
-### Paso 5: Aplicar y guardar tu PDF con marca de agua
+Establece las propiedades visuales como texto, color, rotación, tamaño y opacidad.
 
+**Definición:** Los siguientes setters personalizan el aspecto y la posición de la marca de agua en cada página.  
+
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-¡Eso es todo! Tu PDF ahora tiene una marca de agua profesional. El método `save()` crea un nuevo archivo PDF con la marca de agua aplicada, dejando el original intacto.
+### Paso 5: Recorrer todas las páginas y aplicar la marca de agua
 
-## Cómo añadir marca de agua PDF en varias páginas (Todas las páginas)
+Para **aplicar marca de agua a todas las páginas**, itera sobre el recuento de páginas del documento y asigna la anotación a cada página.
 
-Por defecto, una marca de agua se aplica a una sola página. Para **añadir marca de agua PDF en varias páginas**, recorre las páginas del documento y añade una `WatermarkAnnotation` separada para cada una:
+**Definición:** `annotator.getPageCount()` devuelve el número total de páginas, habilitando un bucle que crea un `WatermarkAnnotation` separado por página.  
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -230,12 +338,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-Este fragmento muestra el patrón exacto que necesitas para **añadir marca de agua PDF en varias páginas** de manera eficiente.
+### Paso 6: Guardar el PDF con marca de agua
 
-## Problemas comunes y cómo solucionarlos
+Finalmente, escribe los cambios en un nuevo archivo. El PDF original permanece intacto.
 
-### Errores “File Not Found”
+**Definición:** `annotator.save("output.pdf")` persiste todas las anotaciones añadidas en un nuevo archivo PDF.  
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -251,36 +363,19 @@ try {
 }
 ```
 
-- Verifica nuevamente las rutas absolutas.  
-- Verifica los permisos de lectura/escritura.  
-- Asegúrate de que la carpeta de salida exista.
+Ese es el flujo completo para **aplicar marca de agua a todas las páginas** usando GroupDocs.Annotation para Java.
 
-### Problemas de memoria con PDFs grandes
+## Problemas comunes y cómo solucionarlos
 
-- Siempre llama a `dispose()`.  
-- Procesa los archivos uno a la vez, no en paralelo.  
-- Incrementa el heap de JVM (`-Xmx4g` para documentos muy grandes).  
+### Errores “File Not Found”
 
-### La marca de agua no aparece donde se espera
-
-- Recuerda que las coordenadas PDF comienzan desde la **esquina inferior izquierda**.  
-- Prueba con diferentes tamaños de página; A4 vs. Letter pueden desplazar la posición.  
-- Ajusta la opacidad si la marca de agua se ve tenue.
-
-### Problemas con el color de fuente
-
-Valores ARGB que puedes usar:
-- Rojo: `16711680`  
-- Azul: `255`  
-- Verde: `65280`  
-- Negro: `0`  
-- Blanco: `16777215`  
-- Amarillo: `65535` (como se usó en nuestro ejemplo)
-
-## Casos de uso reales para marcas de agua PDF en Java
-
-### Protección de documentos empresariales
-
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -291,8 +386,40 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### Branding de materiales de marketing
+- Verifica rutas absolutas y asegura que el archivo exista.  
+- Revisa los permisos de lectura/escritura en los directorios de entrada y salida.  
+- Crea la carpeta de salida previamente si no existe.
 
+### Problemas de memoria con PDFs grandes
+
+- Siempre invoca `annotator.dispose()` después del procesamiento.  
+- Procesa PDFs uno a la vez; evita flujos paralelos a menos que la biblioteca haya demostrado ser segura para hilos.  
+- Aumenta el heap de JVM (`-Xmx4g` o superior) para archivos que superen las 200 páginas.
+
+### La posición de la marca de agua no es la esperada
+
+- El origen de coordenadas del PDF es **abajo‑izquierda**; ajusta los valores de `Rectangle` en consecuencia.  
+- Prueba con diferentes tamaños de página (A4 vs. Letter) porque las dimensiones afectan la posición.  
+- Usa `setOpacity(0.5)` si la marca de agua aparece demasiado tenue en fondos de alto contraste.
+
+### Problemas de color de fuente
+
+GroupDocs.Annotation espera valores enteros ARGB. Colores comunes:
+- Rojo: `16711680`  
+- Azul: `255`  
+- Verde: `65280`  
+- Negro: `0`  
+- Blanco: `16777215`  
+- Amarillo: `65535` (usado en el ejemplo)
+
+## Casos de uso reales para marcas de agua PDF en Java
+
+### Protección de documentos empresariales
+
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -302,8 +429,13 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### Control de versiones para documentos
+### Materiales de marketing con marca
 
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -312,10 +444,12 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## Consejos para optimizar el rendimiento
+### Control de versiones para documentos
 
-### Mejores prácticas de gestión de memoria
-
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -333,14 +467,15 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### Estrategias de procesamiento por lotes
+## Consejos de optimización de rendimiento
 
-- Procesa los documentos secuencialmente para mantener bajo el uso de memoria.  
-- Utiliza un indicador de progreso para ejecuciones largas.  
-- Evita el procesamiento paralelo a menos que la seguridad de hilos de la biblioteca esté confirmada.
+### Mejores prácticas de gestión de memoria
 
-### Consejos de organización de código
-
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -364,23 +499,38 @@ public class WatermarkTemplates {
 }
 ```
 
+- Procesa documentos secuencialmente para mantener bajo el consumo de heap.  
+- Usa un indicador de progreso para trabajos por lotes y monitorear el uso de memoria.  
+- Evita cargar todo el PDF en memoria cuando solo un subconjunto de páginas necesita marca de agua; la biblioteca soporta carga a nivel de página.
+
+### Consejos de organización de código
+
+- Encapsula la creación de la marca de agua en un método utilitario: `createWatermark(String text, double opacity, int angle)`.  
+- Mantén la configuración (colores, fuentes, opacidad) externalizada en un archivo de propiedades para facilitar ajustes en diferentes entornos.
+
 ## Preguntas frecuentes
 
-**P: ¿Cómo añado marcas de agua a varias páginas en un PDF?**  
-R: Usa un bucle sobre el recuento de páginas del documento y crea una `WatermarkAnnotation` para cada página, estableciendo `setPageNumber(i)` dentro del bucle.
+**Q: ¿Cómo añado marcas de agua a múltiples páginas en un PDF?**  
+A: Recorre el recuento de páginas del documento, clona una `WatermarkAnnotation` configurada para cada página, establece `setPageNumber(i)`, y añádela con `annotator.add()`.
 
-**P: ¿Puedo usar fuentes personalizadas para mis marcas de agua?**  
-R: GroupDocs.Annotation usa fuentes instaladas en el sistema. Especifica una familia de fuentes que exista en la máquina anfitriona; la biblioteca recurre a una predeterminada si la fuente no se encuentra.
+**Q: ¿Puedo usar fuentes personalizadas para mis marcas de agua?**  
+A: GroupDocs.Annotation usa fuentes instaladas en el sistema operativo host. Especifica una familia de fuentes que exista en el servidor; la biblioteca recurre a una predeterminada si la fuente no se encuentra.
 
-**P: ¿Qué configuración de opacidad funciona mejor para marcas de agua profesionales?**  
-R: Entre **0.3** y **0.7** es ideal—baja lo suficiente para que el contenido siga siendo legible, alta lo suficiente para ser perceptible.
+**Q: ¿Qué configuración de opacidad funciona mejor para marcas de agua profesionales?**  
+A: Entre **0.3** y **0.7** ofrece un equilibrio—suficientemente visible para ser notada pero aún permite leer el contenido subyacente.
 
-**P: ¿Cómo debo manejar archivos PDF muy grandes?**  
-R: Incrementa el heap de JVM (`-Xmx4g` o más), procesa los archivos uno a la vez y siempre llama a `dispose()` después de cada documento.
+**Q: ¿Cómo debo manejar archivos PDF muy grandes?**  
+A: Aumenta el heap de JVM (`-Xmx4g` o más), procesa los archivos uno a la vez, y siempre llama a `dispose()` después de cada documento para liberar recursos nativos.
 
-**P: ¿Es posible eliminar o modificar marcas de agua existentes?**  
-R: Sí—recupera las anotaciones existentes con `annotator.get()`, filtra por `WatermarkAnnotation` y luego edita o elimina según sea necesario:
+**Q: ¿Es posible eliminar o modificar marcas de agua existentes?**  
+A: Sí—recupera anotaciones con `annotator.get()`, filtra por `WatermarkAnnotation`, luego edita o elimina según sea necesario:  
 
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
@@ -389,14 +539,20 @@ List<AnnotationBase> annotations = annotator.get();
 
 ## Recursos adicionales
 
-- **Documentación**: [Documentación de GroupDocs Annotation Java](https://docs.groupdocs.com/annotation/java/)  
-- **Referencia completa de API**: [API de GroupDocs Annotation Java](https://reference.groupdocs.com/annotation/java/)  
-- **Descargar la última versión**: [Descargas de GroupDocs](https://releases.groupdocs.com/annotation/java/)  
-- **Licenciamiento comercial**: [Comprar GroupDocs](https://purchase.groupdocs.com/buy)  
-- **Soporte comunitario**: [Foros de GroupDocs](https://forum.groupdocs.com/c/annotation/10)
+- **Documentación:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Referencia completa de API:** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
+- **Descargar la última versión:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Licenciamiento comercial:** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
+- **Soporte comunitario:** [GroupDocs Forums](https://forum.groupdocs.com/c/annotation/10)
 
 ---
 
-**Última actualización:** 2026-02-10  
+**Última actualización:** 2026-07-30  
 **Probado con:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs
+**Autor:** GroupDocs  
+
+## Tutoriales relacionados
+
+- [Cargar PDF Java con GroupDocs Annotation: Guía de carga de documentos](/annotation/java/document-loading/)  
+- [Agregar anotación PDF Java – Guía completa de GroupDocs](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)  
+- [Cómo agregar una imagen a PDF usando Java y GroupDocs Annotation](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)

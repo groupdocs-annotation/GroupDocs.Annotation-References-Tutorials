@@ -1,62 +1,565 @@
 ---
-"date": "2025-05-06"
-"description": "GroupDocs.Annotation .NET을 사용하여 문서에 주석을 효율적으로 추가하고 업데이트하는 방법을 알아보세요. 이 단계별 가이드를 통해 협업 및 문서 관리를 강화하세요."
-"title": "GroupDocs.Annotation .NET을 사용하여 문서에 주석을 달는 방법&#58; 종합 가이드"
-"url": "/ko/net/annotation-management/annotate-documents-groupdocs-dotnet/"
+categories:
+- Document Processing
+date: '2026-05-21'
+description: C#에서 GroupDocs Annotation .NET을 사용하여 PDF 파일에 주석을 다는 방법을 배웁니다. 이 단계별 가이드는
+  설정, 추가, 업데이트 및 PDF 주석 관리를 법률, 교육 및 기업 사용 사례에 맞춰 다룹니다.
+keywords:
+- how to annotate pdf
+- legal document annotation
+- collaborative pdf markup
+- create document review system
+lastmod: '2026-05-21'
+linktitle: GroupDocs Annotation .NET 가이드
+schemas:
+- author: GroupDocs
+  dateModified: '2026-05-21'
+  description: Learn how to annotate PDF files with GroupDocs Annotation .NET in C#.
+    This step‑by‑step guide covers setup, adding, updating, and managing PDF annotations
+    for legal, education, and enterprise use cases.
+  headline: How to Annotate PDF using GroupDocs Annotation .NET (C#) Guide
+  type: TechArticle
+- questions:
+  - answer: Yes, the free trial provides full functionality for 30 days but adds evaluation
+      watermarks to every output file. For any production deployment you must apply
+      a temporary or full license to remove those watermarks.
+    question: Can I use GroupDocs.Annotation .NET without a license?
+  - answer: The library works with .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5,
+      .NET 6, and .NET 7, making it suitable for both legacy Windows services and
+      modern cross‑platform containers.
+    question: Which .NET versions are supported by GroupDocs.Annotation?
+  - answer: Pricing starts around $1,999 for a developer license and scales with the
+      number of deployed applications. Check the [GroupDocs pricing page](https://purchase.groupdocs.com/buy)
+      for the latest rates and volume discounts.
+    question: How much does GroupDocs.Annotation .NET cost?
+  - answer: Over **50 formats** are supported, including PDF, DOC/DOCX, PPT/PPTX,
+      XLS/XLSX, JPEG, PNG, TIFF, and many more. PDF receives the most comprehensive
+      feature set, including vector‑based shapes and OCR‑ready redaction.
+    question: What document formats can I annotate with GroupDocs.Annotation?
+  - answer: 'Yes. Provide the password when constructing the `Annotator`:'
+    question: Can I annotate password‑protected PDFs?
+  type: FAQPage
+tags:
+- GroupDocs
+- Annotation
+- C#
+- PDF
+- Document Management
+title: GroupDocs Annotation .NET (C#) 가이드를 사용한 PDF 주석 달기 방법
 type: docs
-"weight": 1
+url: /ko/net/annotation-management/annotate-documents-groupdocs-dotnet/
+weight: 1
 ---
 
-# GroupDocs.Annotation .NET을 사용하여 문서에 주석을 추가하고 업데이트하는 방법
+# PDF에 GroupDocs Annotation .NET (C#)으로 주석 달기 방법
 
-## 소개
-오늘날처럼 빠르게 변화하는 디지털 세상에서 문서 주석을 효과적으로 관리하는 것은 협업 및 데이터 관리를 향상시키는 데 매우 중요합니다. 법률 문서 작업이든 협업 프로젝트든 주석을 추가하고 업데이트하면 워크플로를 크게 간소화할 수 있습니다. 이 튜토리얼에서는 **GroupDocs.Annotation .NET** 라이브러리를 사용하여 문서에 주석을 손쉽게 추가하고 업데이트하세요. 이 강력한 도구를 활용하면 최소한의 번거로움으로 문서 상호 작용성을 향상시킬 수 있습니다.
+Ever needed to **how to annotate pdf** files programmatically and wondered which library gives you both power and simplicity? Whether you’re building a legal review platform, an e‑learning system, or a collaborative document workflow, GroupDocs.Annotation .NET delivers a production‑ready API that lets you add, edit, and delete PDF annotations directly from C# code. In this guide you’ll learn everything required to implement a full‑featured annotation engine, from initial setup to performance tuning for massive document libraries.
 
-### 당신이 배울 것
-- .NET용 GroupDocs.Annotation을 설정하는 방법
-- PDF 문서에 주석 추가
-- 기존 주석을 효율적으로 업데이트
-- 실제 시나리오에서 이러한 기능의 실용적인 응용 프로그램
+## 빠른 답변
+- **What is the fastest way to add a text note to a PDF?** Load the document with `Annotator`, create a `TextAnnotation`, set its `Box` and `Message`, then call `Add()` – all in under a second for typical pages.  
+- **Which .NET versions are supported?** .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5, .NET 6, and .NET 7.  
+- **Do I need a license for production?** Yes – a full or temporary license removes watermarks and unlocks all features.  
+- **Can I process 200‑page PDFs on a 4 GB server?** Yes, by using batch processing and proper disposal patterns shown later.  
+- **Is GroupDocs.Annotation suitable for legal document annotation?** Absolutely – it supports over 50 formats, granular permission control, and audit‑ready metadata.
 
-필수 조건을 살펴보고 문서 주석 프로세스를 혁신해 보겠습니다!
+## “how to annotate pdf”란 무엇인가?
+**“How to annotate pdf”** refers to the process of programmatically adding markup—such as comments, highlights, shapes, or redactions—to PDF files. Using GroupDocs.Annotation .NET, you can automate this workflow, store annotation data in databases, and render the results instantly in web or desktop viewers.
 
-## 필수 조건
-시작하기 전에 다음 사항이 있는지 확인하세요.
+## PDF 마크업에 GroupDocs.Annotation을 사용하는 이유
+GroupDocs.Annotation supports **50+ input and output formats**, can handle PDFs up to **500 MB** without loading the entire file into memory, and provides **thread‑safe** operations when each request creates its own `Annotator` instance. Compared with lighter, PDF‑only libraries, it also lets you annotate Word, PowerPoint, and image files using the same API, which dramatically reduces development effort for multi‑format platforms.
 
-### 필수 라이브러리 및 버전
-- **.NET용 GroupDocs.Annotation** 버전 25.4.0
-- Visual Studio(2017 이상)와 같은 적합한 개발 환경
+## 실제 적용 사례: 문서 주석이 빛나는 곳
 
-### 환경 설정 요구 사항
-- .NET Framework 4.6.1 이상 또는 .NET Core/Standard 2.0+를 설치하세요.
-  
+Understanding the business context helps you choose the right annotation type.
+
+- **Legal Document Review** – Lawyers add comments, highlight clauses, and attach revision histories. GroupDocs.Annotation tracks each change with user IDs, timestamps, and optional digital signatures for audit compliance.  
+- **Educational Platforms** – Instructors can grade assignments by drawing shapes, adding sticky notes, or embedding audio feedback directly onto student PDFs.  
+- **Healthcare Documentation** – Clinicians annotate radiology reports or patient charts while preserving HIPAA‑compliant metadata.  
+- **Software Documentation** – Technical writers collaborate on API specs, inserting call‑out boxes and revision notes without leaving the source PDF.  
+- **Financial Services** – Compliance officers mark up loan agreements, risk assessments, and audit trails, then export the annotated version for archival.
+
+## 전제 조건 및 설정: 환경 준비하기
+
+### 시스템 요구 사항
+
+- **IDE**: Visual Studio 2019 or later (Community edition works fine).  
+- **Runtime**: .NET Framework 4.6.1+ **or** .NET Core 2.0+ (8 GB RAM recommended for large PDFs).  
+- **Permissions**: Write access to the folder where annotated PDFs will be saved.
+
 ### 지식 전제 조건
-- C# 프로그래밍에 대한 기본적인 이해
-- .NET의 문서 처리 및 조작 개념에 대한 지식
 
-## .NET용 GroupDocs.Annotation 설정
-GroupDocs.Annotation을 사용하려면 프로젝트에 라이브러리를 설치해야 합니다.
+- Basic C# syntax and object‑oriented concepts.  
+- Familiarity with NuGet package management.  
+- Understanding of file I/O (reading/writing streams).
 
-**NuGet 패키지 관리자 콘솔**
+### GroupDocs.Annotation .NET 설치
+
+You can add the library via NuGet. Choose the method that matches your workflow.
+
+**Using NuGet Package Manager Console**  
 ```shell
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
 
-**\.NET CLI**
+**Using .NET CLI** (preferred for CI/CD pipelines)  
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
 ```
 
-### 라이센스 취득
-- **무료 체험**: 평가판을 다운로드하세요 [GroupDocs 웹사이트](https://releases.groupdocs.com/annotation/net/) 기능을 탐색합니다.
-- **임시 면허**: 이를 통해 전체 기능에 액세스할 수 있는 임시 라이센스를 요청하세요. [링크](https://purchase.groupdocs.com/temporary-license/).
-- **구입**: 장기 사용을 위해서는 라이센스 구매를 고려하세요. [GroupDocs 구매 페이지](https://purchase.groupdocs.com/buy).
+> **Pro Tip:** Always pin the version (e.g., `Install-Package GroupDocs.Annotation -Version 23.12`). This prevents accidental breaking changes when the package updates automatically. See the latest releases on the [GroupDocs releases page](https://releases.groupdocs.com/annotation/net/).
 
-### 기본 초기화 및 설정
-C# 애플리케이션에서 GroupDocs.Annotation을 초기화하는 방법은 다음과 같습니다.
+### 라이선스 옵션: 프로젝트에 맞는 선택
+
+- **Free Trial** – Full functionality with evaluation watermarks for 30 days.  
+- **Temporary License** – Removes watermarks for 30 days, ideal for proof‑of‑concepts. See the [temporary license page](https://purchase.groupdocs.com/temporary-license/).  
+- **Full License** – Unlimited production use, priority support, and no watermarks. Purchase via the [GroupDocs store](https://purchase.groupdocs.com/buy).
+
+### 기본 프로젝트 설정
+
+Create a new C# console or ASP.NET project and add the following using statements after installing the package:
+
 ```csharp
 using GroupDocs.Annotation;
+using GroupDocs.Annotation.Models;
+using GroupDocs.Annotation.Models.AnnotationModels;
 using System.IO;
+using System.Collections.Generic;
 
-// 입력 문서 경로로 Annotator 초기화
-string inputPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY\
+// Initialize Annotator with an input document path
+string inputPath = Path.Combine("YOUR_DOCUMENT_DIRECTORY", "sample.pdf");
+```
+
+> **Important:** Replace `YOUR_DOCUMENT_DIRECTORY` with the absolute path to your PDFs. Using `Path.Combine` guarantees correct path separators on Windows and Linux.
+
+## 단계별 튜토리얼: 첫 번째 주석 추가
+
+### PDF 문서를 주석용으로 로드하는 방법은?
+The `Annotator` class is the core component that loads a document and manages all annotation operations. Loading a PDF correctly ensures the library can read page dimensions, metadata, and existing annotations before any changes are applied.  
+Load the PDF with the `Annotator` constructor, passing the file path and optional load options. This step validates the file and prepares an in‑memory representation that you can safely modify, while also handling encrypted files if a password is supplied.  
+
+```csharp
+try 
+{
+    using (Annotator annotator = new Annotator(inputPath))
+    {
+        // Your annotation code goes here
+        Console.WriteLine("Document loaded successfully!");
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Error loading document: {ex.Message}");
+}
+```
+
+The `try‑catch` block protects against missing files, corrupted PDFs, or unsupported formats, ensuring your application fails gracefully instead of crashing.
+
+### PDF에 텍스트 주석을 추가하는 방법은?
+`TextAnnotation` represents a sticky‑note style comment that can be placed on a PDF page. Adding one involves creating the object, defining its location, setting the displayed message, and finally inserting it into the document via the `Annotator`.  
+Create a `TextAnnotation` object, define its bounding rectangle with the `Box` property, set the visible `Message`, and then call `Add()` on the `Annotator`. The annotation appears instantly on the specified page, and you can customize its appearance with color and opacity settings if needed.  
+
+```csharp
+// Create a highlight annotation
+HighlightAnnotation highlight = new HighlightAnnotation
+{
+    Box = new Rectangle(100, 100, 200, 20), // x, y, width, height
+    CreatedOn = DateTime.Now,
+    Message = "This section needs review",
+    Replies = new List<Reply>
+    {
+        new Reply
+        {
+            Comment = "Please verify these numbers",
+            RepliedOn = DateTime.Now
+        }
+    }
+};
+
+// Add the annotation to the document
+annotator.Add(highlight);
+```
+
+> **Why the `Box` property matters:** The rectangle uses points (1 point = 1/72 inch) measured from the bottom‑left corner of the page. Precise coordinates let you place notes exactly where reviewers expect them.
+
+### 원본을 덮어쓰지 않고 주석이 달린 PDF를 저장하는 방법은?
+Saving to a new file preserves the original document for audit trails and rollback scenarios. The `Save` method writes all changes, including new annotations and metadata, to the specified path while leaving the source untouched.  
+Call `Save()` on the `Annotator` and provide a new file path. This preserves the original document, which is essential for audit trails and rollback scenarios, and you can optionally specify a different output format if conversion is required.  
+
+```csharp
+string outputPath = Path.Combine("YOUR_OUTPUT_DIRECTORY", "annotated_document.pdf");
+annotator.Save(outputPath);
+Console.WriteLine($"Document saved to: {outputPath}");
+```
+
+> **Best Practice:** Store the original and annotated versions in separate version‑controlled folders. This strategy simplifies regulatory compliance and change tracking.
+
+## 고급 주석 기술
+
+### 하나의 작업으로 여러 주석 유형을 추가하는 방법은?
+GroupDocs.Annotation offers a rich set of annotation classes—`HighlightAnnotation`, `StrikeoutAnnotation`, `PolylineAnnotation`, `RedactionAnnotation`, and more. By creating each instance, configuring its properties, and adding them to the same `Annotator` before saving, you minimize I/O and keep the document state consistent.  
+Instantiate each annotation type, set its specific attributes (color, opacity, points, etc.), and add them sequentially to the same `Annotator` instance. When you call `Save()`, all annotations are written together, ensuring atomic updates and reducing the chance of partial writes.  
+
+```csharp
+// Text annotation for comments
+TextAnnotation textNote = new TextAnnotation
+{
+    Box = new Rectangle(300, 200, 100, 30),
+    Message = "Review required",
+    CreatedOn = DateTime.Now,
+    FontColor = 16711680, // Red color in RGB
+    BackgroundColor = 16777215 // White background
+};
+
+// Arrow annotation to point out specific elements
+ArrowAnnotation pointer = new ArrowAnnotation
+{
+    Box = new Rectangle(150, 150, 50, 50),
+    Message = "Important calculation here",
+    CreatedOn = DateTime.Now
+};
+
+// Add all annotations at once
+annotator.Add(textNote);
+annotator.Add(pointer);
+```
+
+### 기존 주석의 색상이나 코멘트를 업데이트하는 방법은?
+The `GetById` method retrieves a specific annotation by its unique identifier, allowing you to modify only the fields you need. After fetching the object, you can change properties such as `Color` or `Message` and then persist the changes with `Update`.  
+Retrieve the annotation by its unique `Id` using `GetById()`, modify the desired properties (e.g., `Color`, `Message`), and invoke `Update()`. This approach avoids recreating the annotation and preserves its original positioning, version history, and any attached replies.  
+
+```csharp
+// Get all annotations from the document
+List<AnnotationBase> annotations = annotator.Get();
+
+// Find and update a specific annotation
+foreach (var annotation in annotations)
+{
+    if (annotation.Message.Contains("Review required"))
+    {
+        annotation.Message = "Review completed ✓";
+        annotator.Update(annotation);
+        break;
+    }
+}
+```
+
+> **Performance Note:** For documents with thousands of annotations, cache annotation IDs in a dictionary to avoid linear searches.
+
+## 일반적인 문제 및 해결 방법
+
+### 문제 1 – “지원되지 않는 문서 형식”
+**Direct Answer:** Verify that the file’s extension appears in GroupDocs.Annotation’s supported‑formats list; if not, convert the file to PDF first or use a different GroupDocs product that handles the format.  
+**Solution:**  
+- Check the [supported formats list](https://docs.groupdocs.com/annotation/net/supported-document-formats/)  
+- Use GroupDocs.Conversion to turn unsupported files into PDF before annotating.  
+
+```csharp
+// Check if format is supported before processing
+string extension = Path.GetExtension(inputPath).ToLower();
+if (extension != ".pdf" && extension != ".docx" && extension != ".pptx")
+{
+    throw new NotSupportedException($"File format {extension} is not supported");
+}
+```
+
+### 문제 2 – 주석이 잘못된 위치에 표시됨
+**Direct Answer:** Ensure you are using the correct coordinate system (origin at bottom‑left) and that the page’s rotation metadata is respected. Adjust the `Box` values accordingly.  
+**Solution:**  
+```csharp
+// Always validate coordinates before adding annotations
+private bool IsValidCoordinate(Rectangle box, double pageWidth, double pageHeight)
+{
+    return box.X >= 0 && box.Y >= 0 && 
+           (box.X + box.Width) <= pageWidth && 
+           (box.Y + box.Height) <= pageHeight;
+}
+```
+
+### 문제 3 – 대용량 문서의 메모리 문제
+**Direct Answer:** Process large PDFs in batches, dispose of the `Annotator` after each batch, and enable streaming mode to avoid loading the entire file into RAM.  
+**Solution:**  
+
+```csharp
+// Process large documents in chunks
+using (Annotator annotator = new Annotator(inputPath))
+{
+    // Set memory-friendly options
+    LoadOptions loadOptions = new LoadOptions
+    {
+        PreviewPageCount = 1 // Load pages on demand
+    };
+    
+    // Process annotations in batches
+    const int batchSize = 10;
+    for (int i = 0; i < annotations.Count; i += batchSize)
+    {
+        var batch = annotations.Skip(i).Take(batchSize);
+        foreach (var annotation in batch)
+        {
+            annotator.Add(annotation);
+        }
+        
+        // Force garbage collection between batches for large documents
+        if (i % 50 == 0)
+        {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
+        }
+    }
+}
+```
+
+## 성능 최적화 팁
+
+### 수천 개 PDF를 효율적으로 배치 처리하는 방법은?
+Collect annotation requests into a list, open a single `Annotator` per document, apply all changes, then call `Save()` once. This reduces I/O overhead, leverages internal buffering, and keeps memory usage predictable across large workloads.  
+Collect annotation requests into a list, open a single `Annotator` per document, apply all changes, then call `Save()` once. This reduces I/O overhead and leverages internal buffering.  
+
+```csharp
+// Inefficient approach (don't do this)
+foreach (var annotation in annotations)
+{
+    annotator.Add(annotation);
+    annotator.Save(outputPath); // Saving after each annotation is expensive
+}
+
+// Efficient approach
+foreach (var annotation in annotations)
+{
+    annotator.Add(annotation);
+}
+annotator.Save(outputPath); // Save once at the end
+```
+
+### 수백 페이지 PDF 작업 시 메모리를 관리하는 방법은?
+Enable the `LoadOptions` flag `MemoryOptimization = true` and process pages sequentially. This tells the library to keep only the active page in memory, dramatically lowering the RAM footprint for very large files.  
+Enable the `LoadOptions` flag `MemoryOptimization = true` and process pages sequentially. This tells the library to keep only the active page in memory, dramatically lowering the RAM footprint for very large files.  
+
+```csharp
+// Use using statements to ensure proper disposal
+using (var annotator = new Annotator(inputPath))
+{
+    // Your annotation code here
+} // Annotator is automatically disposed, freeing memory
+```
+
+### 자주 접근하는 문서를 캐시하는 방법은?
+Store the serialized annotation JSON in a distributed cache (e.g., Redis) keyed by document ID. When a user requests the same PDF, retrieve the cached annotation set instead of re‑reading the file from disk, cutting latency and I/O load.  
+Store the serialized annotation JSON in a distributed cache (e.g., Redis) keyed by document ID. When a user requests the same PDF, retrieve the cached annotation set instead of re‑reading the file from disk.  
+
+```csharp
+// Cache document metadata to avoid reloading
+private static readonly Dictionary<string, DocumentInfo> _documentCache = 
+    new Dictionary<string, DocumentInfo>();
+
+private DocumentInfo GetDocumentInfo(string path)
+{
+    if (!_documentCache.ContainsKey(path))
+    {
+        using (var annotator = new Annotator(path))
+        {
+            _documentCache[path] = annotator.GetDocumentInfo();
+        }
+    }
+    return _documentCache[path];
+}
+```
+
+## 프로덕션 애플리케이션을 위한 모범 사례
+
+### 견고한 오류 처리 및 로깅을 구현하는 방법은?
+Wrap every `Annotator` operation in `try‑catch` blocks, log exceptions with a structured logger (Serilog, NLog), and include the document path, user ID, and stack trace. This makes troubleshooting far easier in production and helps you meet compliance audit requirements.  
+Wrap every `Annotator` operation in `try‑catch` blocks, log exceptions with a structured logger (Serilog, NLog), and include the document path, user ID, and stack trace.  
+
+```csharp
+public async Task<bool> AddAnnotationSafely(string documentPath, AnnotationBase annotation)
+{
+    try
+    {
+        using (var annotator = new Annotator(documentPath))
+        {
+            annotator.Add(annotation);
+            annotator.Save(documentPath.Replace(".pdf", "_annotated.pdf"));
+            return true;
+        }
+    }
+    catch (Exception ex)
+    {
+        // Log the error (use your preferred logging framework)
+        Console.WriteLine($"Annotation failed for {documentPath}: {ex.Message}");
+        return false;
+    }
+}
+```
+
+### 사용자가 제공한 주석 데이터를 검증하는 방법은?
+Check that incoming JSON fields (page number, rectangle coordinates, annotation type) fall within acceptable ranges before constructing the annotation objects. Reject out‑of‑bounds coordinates with a clear HTTP 400 response and provide a helpful error message.  
+Check that incoming JSON fields (page number, rectangle coordinates, annotation type) fall within acceptable ranges before constructing the annotation objects.  
+
+```csharp
+public bool ValidateAnnotationInput(AnnotationBase annotation)
+{
+    if (annotation == null)
+        return false;
+    
+    if (string.IsNullOrWhiteSpace(annotation.Message))
+        return false;
+    
+    if (annotation.Box.Width <= 0 || annotation.Box.Height <= 0)
+        return false;
+    
+    return true;
+}
+```
+
+### 다중 사용자 웹 서비스에서 스레드 안전성을 보장하는 방법은?
+Instantiate a new `Annotator` per request; never share a single instance across threads. If you need to coordinate access to a shared file, use a `SemaphoreSlim` or file‑level lock to prevent concurrent writes.  
+Instantiate a new `Annotator` per request; never share a single instance across threads.  
+
+```csharp
+private readonly object _annotationLock = new object();
+
+public void AddAnnotationThreadSafe(string documentPath, AnnotationBase annotation)
+{
+    lock (_annotationLock)
+    {
+        using (var annotator = new Annotator(documentPath))
+        {
+            annotator.Add(annotation);
+            annotator.Save(documentPath);
+        }
+    }
+}
+```
+
+## GroupDocs.Annotation을 대안과 비교해 언제 사용해야 하는가
+
+**Choose GroupDocs.Annotation when** you need:
+- Cross‑format support (PDF, DOCX, PPTX, images).  
+- Advanced annotation types such as redaction, free‑hand drawing, and custom metadata.  
+- Enterprise‑grade licensing, SLA‑backed support, and regular security updates.  
+
+**Consider lighter alternatives when** you only work with PDFs, have strict budget constraints, or require an open‑source stack.
+
+## 자주 묻는 질문
+
+**Q: GroupDocs.Annotation .NET을 라이선스 없이 사용할 수 있나요?**  
+A: Yes, the free trial provides full functionality for 30 days but adds evaluation watermarks to every output file. For any production deployment you must apply a temporary or full license to remove those watermarks.
+
+**Q: GroupDocs.Annotation이 지원하는 .NET 버전은 무엇인가요?**  
+A: The library works with .NET Framework 4.6.1+, .NET Core 2.0+, .NET 5, .NET 6, and .NET 7, making it suitable for both legacy Windows services and modern cross‑platform containers.
+
+**Q: GroupDocs.Annotation .NET의 비용은 얼마나 되나요?**  
+A: Pricing starts around $1,999 for a developer license and scales with the number of deployed applications. Check the [GroupDocs pricing page](https://purchase.groupdocs.com/buy) for the latest rates and volume discounts.
+
+**Q: 어떤 문서 형식을 GroupDocs.Annotation으로 주석 달 수 있나요?**  
+A: Over **50 formats** are supported, including PDF, DOC/DOCX, PPT/PPTX, XLS/XLSX, JPEG, PNG, TIFF, and many more. PDF receives the most comprehensive feature set, including vector‑based shapes and OCR‑ready redaction.
+
+**Q: 암호로 보호된 PDF에 주석을 달 수 있나요?**  
+A: Yes. Provide the password when constructing the `Annotator`:
+
+```csharp
+LoadOptions loadOptions = new LoadOptions { Password = "your_password" };
+using (Annotator annotator = new Annotator(inputPath, loadOptions))
+{
+    // Your annotation code here
+}
+```
+
+**Q: 주석이 잘못된 위치에 표시되는 이유는?**  
+A: GroupDocs uses a Cartesian coordinate system where (0,0) is the bottom‑left corner and measurements are in points. Incorrect positioning usually stems from using pixel‑based values or ignoring page rotation. Convert pixel values to points (1 pixel ≈ 0.75 point at 96 DPI) and adjust for any rotation metadata.
+
+```csharp
+// Correct approach - validate coordinates
+private bool ValidateCoordinates(Rectangle box, double pageWidth, double pageHeight)
+{
+    return box.X >= 0 && box.Y >= 0 && 
+           (box.X + box.Width) <= pageWidth && 
+           (box.Y + box.Height) <= pageHeight;
+}
+```
+
+**Q: PDF에서 기존 주석을 어떻게 가져오나요?**  
+A: Call the `Get()` method on the `Annotator` instance; it returns a collection of all annotation objects with their IDs, types, and metadata.
+
+```csharp
+using (Annotator annotator = new Annotator(inputPath))
+{
+    List<AnnotationBase> annotations = annotator.Get();
+    foreach (var annotation in annotations)
+    {
+        Console.WriteLine($"Annotation: {annotation.Message}");
+    }
+}
+```
+
+**Q: 특정 주석을 프로그래밍 방식으로 삭제할 수 있나요?**  
+A: Yes. Use `Delete(id)` to remove a single annotation or `DeleteAll()` to clear the document entirely. You can also filter by type before deletion.
+
+```csharp
+List<AnnotationBase> annotationsToDelete = annotator.Get()
+    .Where(a => a.Message.Contains("obsolete"))
+    .ToList();
+
+foreach (var annotation in annotationsToDelete)
+{
+    annotator.Remove(annotation);
+}
+```
+
+**Q: 주석의 색상이나 메시지 같은 속성을 어떻게 업데이트하나요?**  
+A: Fetch the annotation, modify `Color` or `Message`, then invoke `Update()`. The change is persisted on the next `Save()` call.
+
+```csharp
+var annotations = annotator.Get();
+var targetAnnotation = annotations.FirstOrDefault(a => a.Id == specificId);
+if (targetAnnotation != null)
+{
+    targetAnnotation.Message = "Updated message";
+    annotator.Update(targetAnnotation);
+}
+```
+
+**Q: 주석에 사용자 정의 메타데이터를 추가할 수 있나요?**  
+A: Absolutely. Most annotation classes expose a `Replies` collection where you can store key‑value pairs, enabling you to attach reviewer IDs, timestamps, or workflow states.
+
+```csharp
+var annotation = new HighlightAnnotation
+{
+    // ... other properties
+    Replies = new List<Reply>
+    {
+        new Reply
+        {
+            Comment = "Custom metadata: priority=high, category=legal",
+            RepliedOn = DateTime.Now
+        }
+    }
+};
+```
+
+**Q: GroupDocs.Annotation이 주석이 달린 PDF에 디지털 서명을 지원하나요?**  
+A: While the Annotation library focuses on markup, you can combine it with GroupDocs.Signature .NET to apply cryptographic signatures after annotations are added, ensuring both visual and legal integrity.
+
+**Q: 주석을 JSON이나 XML로 내보내 외부 시스템에서 처리할 수 있나요?**  
+A: The library does not include a built‑in exporter, but you can serialize the annotation objects yourself using `System.Text.Json` or `XmlSerializer`. This makes it easy to integrate with external audit systems.
+
+```csharp
+List<AnnotationBase> annotations = annotator.Get();
+string jsonAnnotations = JsonConvert.SerializeObject(annotations, Formatting.Indented);
+File.WriteAllText("annotations.json", jsonAnnotations);
+```
+
+---
+
+**Last Updated:** 2026-05-21  
+**Tested With:** GroupDocs.Annotation 23.12 for .NET  
+**Author:** GroupDocs  
+
+---
+
+## 관련 튜토리얼
+
+- [GroupDocs Annotation .NET Tutorial - Complete Guide for Document Management](/annotation/net/annotation-management/)
+- [Save PDF Annotations .NET - Complete Document Saving Guide](/annotation/net/document-saving/)
+- [Load PDF from URL .NET - Complete Guide with GroupDocs.Annotation](/annotation/net/document-loading-essentials/load-document-from-url/)

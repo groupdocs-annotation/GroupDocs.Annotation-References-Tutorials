@@ -1,69 +1,143 @@
 ---
 categories:
 - Java PDF Processing
-date: '2026-02-10'
-description: Tudja meg, hogyan adhat hozzá PDF‑vízjelet több oldalra Java‑ban a GroupDocs.Annotation
-  használatával. Ez a lépésről‑lépésre útmutató bemutatja, hogyan kell PDF‑vízjelet
-  hozzáadni Java‑ban kódrészletekkel, hibaelhárítási tippekkel és legjobb gyakorlatokkal.
-keywords: java pdf watermark, add watermark to pdf java, java watermark library, pdf
-  annotation java, groupdocs java watermark
-lastmod: '2026-02-10'
-linktitle: Java PDF Watermark Guide
+date: '2026-07-30'
+description: Ismerje meg, hogyan alkalmazhat vízjelet minden oldalra PDF-ekben Java
+  segítségével a GroupDocs.Annotation használatával. Ez a lépésről‑lépésre útmutató
+  bemutatja, hogyan adhat hozzá PDF vízjelet több oldalra, kódrészletekkel, hibaelhárítási
+  tippekkel és legjobb gyakorlatokkal.
+keywords:
+- apply watermark all pages
+- pdf watermark multiple pages
+- java add watermark pdf
+- add pdf watermark java
+lastmod: '2026-07-30'
+linktitle: Java PDF vízjel útmutató
+og_description: Alkalmazzon vízjelet minden oldalra PDF-ekben a GroupDocs.Annotation
+  for Java használatával. Ez az útmutató lefedi a PDF vízjel több oldalra, a beállítást,
+  a kódot és a hibaelhárítást egy tömör tutorialban.
+og_image_alt: 'Guide: Apply watermark to all pages of a PDF using GroupDocs.Annotation
+  Java'
+og_title: Vízjel alkalmazása minden oldalra – Java PDF vízjel útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-07-30'
+  description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  headline: Apply Watermark All Pages – Java PDF Watermark Guide
+  type: TechArticle
+- description: Learn how to apply watermark all pages to PDFs in Java using GroupDocs.Annotation.
+    This step‑by‑step tutorial shows how to add pdf watermark multiple pages, with
+    code examples, troubleshooting tips, and best practices.
+  name: Apply Watermark All Pages – Java PDF Watermark Guide
+  steps:
+  - name: Import the Required Classes
+    text: Before you can use the API, import the essential classes. **Definition:**
+      Import statements bring the needed GroupDocs.Annotation classes into the current
+      Java file, allowing you to reference them without fully qualified names.
+  - name: Load the PDF Document
+    text: Create the `Annotator` instance that points to your source PDF. **Definition:**
+      The `Annotator` constructor loads the PDF file into a manageable object, preparing
+      it for annotation operations. > **Pro tip:** For PDFs larger than 50 MB, consider
+      increasing the JVM heap (`-Xmx4g`) and processing files
+  - name: (Optional) Prepare Reply Metadata
+    text: If you need to attach comments or approval notes to the watermark, create
+      a `Reply` object. **Definition:** `Reply` stores user‑generated comments that
+      accompany an annotation, useful for audit trails.
+  - name: Configure the Watermark Appearance
+    text: Set the visual properties such as text, color, rotation, size, and opacity.
+      **Definition:** The following setters customize the watermark’s look and placement
+      on each page.
+  - name: Loop Through All Pages and Apply the Watermark
+    text: To **apply watermark all pages**, iterate over the document’s page count
+      and assign the annotation to each page. **Definition:** `annotator.getPageCount()`
+      returns the total number of pages, enabling a loop that creates a separate `WatermarkAnnotation`
+      per page.
+  - name: Save the Watermarked PDF
+    text: Finally, write the changes to a new file. The original PDF remains untouched.
+      **Definition:** `annotator.save("output.pdf")` persists all added annotations
+      into a new PDF file. That’s the complete flow for **apply watermark all pages**
+      using GroupDocs.Annotation for Java.
+  type: HowTo
+- questions:
+  - answer: Loop over the document’s page count, clone a configured `WatermarkAnnotation`
+      for each page, set `setPageNumber(i)`, and add it with `annotator.add()`.
+    question: How do I add watermarks to multiple pages in a PDF?
+  - answer: GroupDocs.Annotation uses fonts installed on the host OS. Specify a font
+      family that exists on the server; the library falls back to a default if the
+      font isn’t found.
+    question: Can I use custom fonts for my watermarks?
+  - answer: Between **0.3** and **0.7** provides a balance—visible enough to be noticed
+      but still allows underlying content to be read.
+    question: What opacity setting works best for professional watermarks?
+  - answer: Increase the JVM heap (`-Xmx4g` or more), process files one at a time,
+      and always call `dispose()` after each document to free native resources.
+    question: How should I handle very large PDF files?
+  - answer: 'Yes—retrieve annotations with `annotator.get()`, filter for `WatermarkAnnotation`,
+      then edit or delete as needed:'
+    question: Is it possible to remove or modify existing watermarks?
+  type: FAQPage
 tags:
-- java
-- pdf
-- watermark
-- groupdocs
-- document-security
-title: Java PDF vízjel – PDF vízjel több oldalra útmutató
+- java pdf watermark
+- groupdocs annotation
+- document security
+- apply watermark all pages
+- pdf processing
+title: Vízjel alkalmazása minden oldalra – Java PDF vízjel útmutató
 type: docs
 url: /hu/java/graphical-annotations/groupdocs-java-watermark-annotations-pdf-guide/
 weight: 1
 ---
 
-# Java PDF Vízjel – pdf watermark több oldalra útmutató
+# Vízjel alkalmazása minden oldalra – Java PDF vízjel útmutató
 
-A **pdf watermark multiple pages** hozzáadása gyakori igény, amikor nagy mennyiségben kell dokumentumokat védeni, márkázni vagy címkézni. Ebben az útmutatóban pontosan megmutatjuk, hogyan **add pdf watermark java** használatával a GroupDocs.Annotation segítségével, a projekt beállításától a fejlett testreszabásokig. Lépésről lépésre végigvezetünk, elmagyarázzuk minden beállítás okát, és gyakorlati tippeket adunk a szokásos buktatók elkerüléséhez.
+Ebben az átfogó útmutatóban megtanulja, hogyan alkalmazzon **vízjelet minden oldalra** egy PDF dokumentumra Java és a GroupDocs.Annotation segítségével. Akár bizalmas jelentéseket kell védenie, márkás marketing PDF-eket kell ellátnia, vagy egy „CONFIDENTIAL” pecsétet szeretne hozzáadni az egész fájlhoz, az alábbi lépések mindent végigvezetnek – a Maven beállítástól a fejlett testreszabásig –, így percek alatt megvalósíthat egy megbízható megoldást.
 
 ## Gyors válaszok
-- **Melyik könyvtár tud pdf watermark multiple pages-t hozzáadni Java-ban?** GroupDocs.Annotation for Java.  
-- **Szükség van licencre?** Igen, a fejlesztéshez ingyenes próba verzió is működik; a termeléshez teljes licenc szükséges.  
-- **Lehet egyszerre az összes oldalt vízjelezni?** Igen – egy ciklusban hozhat létre vízjel‑annotációt minden oldalra.  
+- **Melyik könyvtár tud több oldalas PDF vízjelet hozzáadni Java-ban?** GroupDocs.Annotation for Java.  
+- **Szükségem van licencre?** Igen, egy ingyenes próba a fejlesztéshez megfelelő; a termeléshez teljes licenc szükséges.  
+- **Alkalmazhatok vízjelet egyszerre minden oldalra?** Igen – hozzon létre egy vízjel annotációt minden oldalra egy ciklusban.  
 - **Milyen Java verzió szükséges?** JDK 8+ (JDK 11+ ajánlott).  
 - **Hogyan szabályozhatom az átlátszatlanságot?** Használja a `setOpacity(double)` metódust, ahol a 0.0 teljesen átlátszó, az 1.0 teljesen átlátszatlan.
 
-## Miért van szükség PDF vízjelekre (és hogyan könnyíti meg a Java)
+## Miért van szükség PDF vízjelekre (és hogyan könnyíti meg Java)
 
-Volt már olyan, hogy fontos dokumentumait engedély nélkül megosztották? Vagy szeretné a cég PDF-jeit márkázni, de nem tudta, hol kezdje? Nem egyedül van. A PDF‑ek vízjelezése az egyik leggyakoribb dokumentumbiztonsági és márkázási igény, amellyel a fejlesztők ma szembesülnek.
+Gondolt már arra, hogy egy bizalmas PDF-et engedélye nélkül megoszthatják? Vagy gyors megoldásra van szüksége, hogy minden oldalra feltegye a márkáját egy értékesítési prospektusban? A vízjelek programozott hozzáadása megszünteti a kézi munkát, garantálja a konzisztenciát, és erősíti a dokumentum biztonságát. A Java és a GroupDocs.Annotation – a legrobosztusabb **java add watermark pdf** könyvtárak egyike – segítségével finomhangolt irányítást kap a elhelyezés, forgatás, szín és átlátszatlanság felett, miközben nagy fájlokkal is hatékonyan dolgozik.
 
-Akár érzékeny üzleti dokumentumokat véd, akár marketing anyagokat márkáz, vagy csak meg akarja akadályozni az illetéktelen terjesztést, a programozott vízjelek órákat spórolhatnak a kézi munkával szemben. És a Java és a megfelelő könyvtár segítségével meglepően egyszerű.
-
-Ebben az útmutatóban megtanulja, hogyan adjon professzionális megjelenésű vízjeleket PDF-ekhez a GroupDocs.Annotation for Java használatával – az egyik legmegbízhatóbb Java vízjel‑könyvtár. Mindent lefedünk a alapbeállítástól a fejlett testreszabásig, valamint a gyakori buktatókat és azok elkerülését.
-
-**Amit a végére elsajátít:**
-- A GroupDocs.Annotation for Java vízjelek beállítása
-- Egyedi vízjel‑annotációk létrehozása teljes kontrollal
-- Gyakori vízjel‑implementációs problémák hibakeresése
-- A vízjel‑kód optimalizálása termelési környezetben
+**Amit a végére elsajátít ebben az útmutatóban:**
+- A GroupDocs.Annotation beállítása Java vízjelekhez  
+- Egyéni vízjel annotációk létrehozása, amelyek **minden oldalra** alkalmazandók  
+- Nagy PDF-ek kezelése memória kimerülése nélkül  
+- Gyakori hibák elhárítása és a teljesítmény optimalizálása  
 
 ## Mi az a PDF vízjel és miért használjuk több oldalon?
 
-A PDF vízjel egy átfedés, amely a dokumentum tartalma fölött helyezkedik el anélkül, hogy az eredeti szöveget módosítaná. A **pdf watermark multiple pages** használatával minden oldalt konzisztensen megjelölhet márkával, titoktartási nyilatkozattal vagy verziócímkével, biztosítva, hogy a védelem az egész dokumentummal együtt utazik.
+A PDF vízjel egy átfedés, amely a dokumentum tartalma felett jelenik meg anélkül, hogy megváltoztatná az alatta lévő szöveget vagy képeket. A vízjel **minden oldalra** való alkalmazása biztosítja, hogy minden oldal ugyanazt a márkát vagy bizalmas megjegyzést viselje, megakadályozva a jelöletlen oldalak véletlen terjesztését.
 
 ## Előfeltételek
 
 ### Alapvető követelmények
-
-- **Java környezet:** JDK 8 vagy újabb (JDK 11+ ajánlott), Maven 3.6+, kedvenc IDE.  
-- **Tudás előfeltételek:** Alap Java, fájl‑I/O, Maven függőségek.  
-- **Projekt beállítása:** Írási jogosultság a kimeneti mappához és elegendő RAM nagy PDF-ekhez.
+- **Java környezet:** JDK 8 vagy újabb (JDK 11+ ajánlott), Maven 3.6+, bármely IDE (IntelliJ, Eclipse, VS Code).  
+- **Tudás előfeltételek:** Alapvető Java szintaxis, fájl I/O, Maven függőségkezelés.  
+- **Projekt jogosultságok:** Írási hozzáférés a kimeneti könyvtárhoz és elegendő RAM nagy PDF-ekhez (≥ 4 GB ajánlott > 200‑oldalas fájlokhoz).
 
 ## A Java PDF vízjel környezet beállítása
 
-### A GroupDocs.Annotation hozzáadása a projekthez
+### GroupDocs.Annotation hozzáadása a projekthez
 
-Az első lépés a PDF‑ek vízjelezéséhez Java-ban a GroupDocs.Annotation könyvtár megfelelő konfigurálása. Íme a működő Maven beállítás:
+Először adja hozzá a GroupDocs.Annotation Maven artefaktot. Ez a függőség betölti az összes szükséges binárist és tranzitív könyvtárat.
 
+**Definition:** A Maven `<dependency>` elem deklarálja a GroupDocs.Annotation könyvtárat a projekt számára, lehetővé téve a fordító számára, hogy a build idő alatt megtalálja a JAR fájlokat.  
+
+```xml
+<!-- Maven dependency for GroupDocs.Annotation -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
 ```xml
 <repositories>
    <repository>
@@ -81,20 +155,25 @@ Az első lépés a PDF‑ek vízjelezéséhez Java-ban a GroupDocs.Annotation k�
 </dependencies>
 ```
 
-**Pro tipp:** Mindig a legújabb verziót használja a hibajavítások és a teljesítményjavulás érdekében. A fenti verzió 2025‑ös állapotot tükröz.
+**Pro tip:** Mindig a legújabb kiadott verziót használja (a példa a 25.2-t mutatja, ami 2025-ig a legfrissebb), hogy élvezze a hibajavítások és a teljesítményjavítások előnyeit.
 
-### Licenc beszerzése
+### A licenc beszerzése
 
-Sok útmutató kihagyja – a termeléshez megfelelő licenc szükséges. Lehetőségek:
+Éles környezetben érvényes licencre van szükség. Válassza ki az Ön idővonalához illő lehetőséget:
+1. **Ingyenes próba:** Ideális fejlesztéshez és teszteléshez. Letöltés innen: [GroupDocs letöltések](https://releases.groupdocs.com/annotation/java/)  
+2. **Ideiglenes licenc:** Teljes funkciókészlet értékeléshez. Szerezze be a [Ideiglenes licenc oldalról](https://purchase.groupdocs.com/temporary-license/)  
+3. **Teljes licenc:** Szükséges kereskedelmi felhasználáshoz. Vásárlás a [GroupDocs vásárlási oldalról](https://purchase.groupdocs.com/buy)
 
-1. **Ingyenes próba:** Tökéletes teszteléshez és fejlesztéshez. Letölthető a [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) oldalról.  
-2. **Ideiglenes licenc:** Teljes funkciók értékeléshez. Szerezze be a [Temporary License Page](https://purchase.groupdocs.com/temporary-license/) oldalról.  
-3. **Teljes licenc:** Termelési alkalmazásokhoz. Vásárolja a [Purchase Page](https://purchase.groupdocs.com/buy) oldalon.
+### Alapbeállítás, amely valóban működik
 
-### Alapbeállítás, ami tényleg működik
+A függőség hozzáadása és a licencfájl beszerzése után inicializálja az `Annotator` objektumot. Ez az objektum betölti a PDF-et a memóriába, és biztosítja az API-t az annotációk létrehozásához.
 
-Miután a függőségek rendben vannak, így inicializálja a könyvtárat:
+**Definition:** Az `Annotator` a GroupDocs.Annotation elsődleges belépési pontja; kezeli a PDF betöltését, az annotációk létrehozását és a mentést.  
 
+```java
+// Initialize Annotator with a license and input PDF
+Annotator annotator = new Annotator("input.pdf", "GroupDocs.Annotation.lic");
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 
@@ -110,20 +189,21 @@ public class WatermarkSetup {
 }
 ```
 
-**Gyakori hiba, amit kerülni kell:** A `dispose()` hívás elhagyása memória szivárgáshoz vezethet, különösen több dokumentum feldolgozása esetén.
+**Common mistake to avoid:** Elfelejti meghívni a `annotator.dispose()` metódust a feldolgozás után; ez memória szivárgáshoz vezethet, különösen sok dokumentum kötegelt feldolgozása esetén.
 
-## Hogyan adjon pdf watermark multiple pages‑t Java‑val
+## Hogyan alkalmazzon vízjelet minden oldalra Java-ban
 
-Most jön a fő rész – a vízjelek tényleges hozzáadása! A GroupDocs.Annotation könyvtár meglepően egyszerű, ha megérti a komponenseket.
+A vízjel minden oldalra való alkalmazásához létrehozza a `WatermarkAnnotation` objektumot, beállítja a vizuális tulajdonságait, majd egy külön példányt ad hozzá minden oldalhoz egy ciklusban. A ciklus a dokumentum oldal számát használja, a megfelelő oldal számot rendeli hozzá, és végül elmenti a módosított PDF-et.
 
-### A vízjel‑annotációk megértése
+### A vízjel annotációk megértése
 
-A vízjel‑annotációkat tekintse átfedés‑rétegeknek a PDF‑jén. Tartalmazhatnak szöveget, egyedi pozicionálást, színeket, átlátszatlansági szinteket és akár forgatási szögeket is. Az egyszerű szöveg‑hozzáadásoktól eltérően a vízjel‑annotációk kifejezetten látható jelölők, amelyek nem zavarják a dokumentum fő tartalmát.
+A `WatermarkAnnotation` egy átfedő réteget képvisel, amely tartalmazhat szöveget, egyedi színeket, forgatást és átlátszatlanságot. Egy egyszerű szöveg hozzáadása helyett annotációként tárolódik, így később eltávolítható vagy szerkeszthető.
 
-### 1. lépés: A megfelelő osztályok importálása
+**Definition:** A `WatermarkAnnotation` a GroupDocs.Annotation osztálya, amely a vízjel átfedés összes vizuális tulajdonságát tartalmazza.  
 
-Először rendezzük az importokat. Ezek a szükséges osztályok:
-
+```java
+WatermarkAnnotation watermark = new WatermarkAnnotation();
+```
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.Reply;
@@ -133,14 +213,18 @@ import java.util.ArrayList;
 import java.util.Calendar;
 ```
 
-Az egyes osztályok szerepe:
-- `Annotator`: A fő interfész a PDF‑el való munkához  
-- `WatermarkAnnotation`: A testreszabandó vízjel objektum  
-- `Rectangle`: Meghatározza, hol jelenik meg a vízjel és mekkora  
-- `Reply`: Opcionális megjegyzések vagy kommentárok a vízjellel kapcsolatban  
+### 1. lépés: A szükséges osztályok importálása
 
-### 2. lépés: PDF inicializálása a vízjelezéshez
+Mielőtt használhatná az API-t, importálja a szükséges osztályokat.
 
+**Definition:** Az importálási utasítások a szükséges GroupDocs.Annotation osztályokat a jelenlegi Java fájlba hozza, lehetővé téve, hogy teljesen kvalifikált nevek nélkül hivatkozzon rájuk.  
+
+```java
+import com.groupdocs.annotation.Annotator;
+import com.groupdocs.annotation.models.annotation.WatermarkAnnotation;
+import com.groupdocs.annotation.models.common.Rectangle;
+import com.groupdocs.annotation.models.annotation.Reply;
+```
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
@@ -148,12 +232,15 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AddWatermarkAnnotation.pdf";
 final Annotator annotator = new Annotator(inputFilePath);
 ```
 
-**Fontos megjegyzés:** Az `Annotator` objektum betölti a PDF‑et a memóriába, ezért nagy fájlok esetén elegendő RAM‑ra van szükség. 50 MB‑nál nagyobb PDF‑eknél érdemes kisebb adagokban feldolgozni.
+### 2. lépés: A PDF dokumentum betöltése
 
-### 3. lépés: Opcionális Reply objektumok létrehozása
+Hozza létre az `Annotator` példányt, amely a forrás PDF-re mutat.
 
-Bár nem kötelező, a válaszok hasznosak lehetnek dokumentumkövetéshez vagy jóváhagyási munkafolyamatokhoz:
+**Definition:** Az `Annotator` konstruktor betölti a PDF fájlt egy kezelhető objektumba, előkészítve azt az annotációs műveletekhez.  
 
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
 ```java
 Reply reply1 = new Reply();
 reply1.setComment("First comment");
@@ -164,12 +251,18 @@ reply2.setComment("Second comment");
 reply2.setRepliedOn(Calendar.getInstance().getTime());
 ```
 
-Ezek a válaszok az annotáció metaadatai részévé válnak, és megtekinthetők olyan PDF‑olvasókban, amelyek támogatják az annotációs kommentárokat.
+> **Pro tip:** 50 MB-nál nagyobb PDF-ek esetén fontolja meg a JVM heap növelését (`-Xmx4g`), és dolgozza fel a fájlokat sorban, hogy alacsonyan tartsa a memóriahasználatot.
 
-### 4. lépés: A vízjel konfigurálása (A szórakoztató rész!)
+### 3. lépés: (Opcionális) Válasz metaadatok előkészítése
 
-Itt engedheti szabadjára a kreativitását. A vízjel beállításai határozzák meg, hogyan jelenik meg:
+Ha megjegyzéseket vagy jóváhagyási jegyzeteket szeretne a vízjelhez csatolni, hozza létre a `Reply` objektumot.
 
+**Definition:** A `Reply` felhasználó által generált megjegyzéseket tárol, amelyek egy annotációt kísérnek, hasznosak audit nyomon követéshez.  
+
+```java
+Reply reply = new Reply();
+reply.setComment("Confidential – Internal Use Only");
+```
 ```java
 ArrayList<Reply> replies = new ArrayList<>();
 replies.add(reply1);
@@ -188,27 +281,40 @@ watermark.setPageNumber(0);
 watermark.setReplies(replies);
 ```
 
-**Részletezzük a beállításokat:**
-- `setAngle(75.0)`: 75 fokos elforgatás. Ideális átlós “CONFIDENTIAL” pecséthez.  
-- `setBox(new Rectangle(200, 200, 100, 50))`: Pozíció (200, 200), szélesség 100, magasság 50.  
-- `setFontColor(65535)`: ARGB színformátum – jelen esetben sárga.  
-- `setOpacity(0.7)`: 70 % átlátszatlanság – látható, de nem túl erőteljes.  
-- `setPageNumber(0)`: Az első oldalra alkalmazza (0‑indexelt).  
+### 4. lépés: A vízjel megjelenésének beállítása
 
-### 5. lépés: Alkalmazás és a vízjelezett PDF mentése
+Állítsa be a vizuális tulajdonságokat, például a szöveget, színt, forgatást, méretet és átlátszatlanságot.
 
+**Definition:** Az alábbi beállítók testreszabják a vízjel megjelenését és elhelyezését minden oldalon.  
+
+```java
+watermark.setText("CONFIDENTIAL");
+watermark.setAngle(75.0);                     // Diagonal orientation
+watermark.setBox(new Rectangle(200, 200, 300, 100)); // Position & size
+watermark.setFontColor(65535);               // Yellow (ARGB)
+watermark.setOpacity(0.7);                   // 70% opacity
+watermark.setReply(reply);                   // Attach the optional reply
+```
 ```java
 annotator.add(watermark);
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-Ennyi! A PDF‑je most már professzionális vízjellel rendelkezik. A `save()` metódus egy új PDF‑fájlt hoz létre a vízjellel, az eredetit érintetlenül hagyva.
+### 5. lépés: Az összes oldal bejárása és a vízjel alkalmazása
 
-## Hogyan adjon pdf watermark multiple pages‑t (Minden oldal)
+A **vízjel minden oldalra való alkalmazásához** iteráljon a dokumentum oldal számán, és rendelje hozzá az annotációt minden oldalhoz.
 
-Alapértelmezés szerint egy vízjel csak egy oldalra vonatkozik. A **pdf watermark multiple pages** hozzáadásához iteráljon a dokumentum oldalain, és minden oldalra hozzon létre egy külön `WatermarkAnnotation`‑t:
+**Definition:** A `annotator.getPageCount()` visszaadja az összes oldal számát, lehetővé téve egy ciklust, amely minden oldalra külön `WatermarkAnnotation`-t hoz létre.  
 
+```java
+int pageCount = annotator.getPageCount();
+for (int i = 0; i < pageCount; i++) {
+    WatermarkAnnotation pageWatermark = watermark.clone(); // Duplicate settings
+    pageWatermark.setPageNumber(i);                       // Zero‑based index
+    annotator.add(pageWatermark);                         // Add to current page
+}
+```
 ```java
 // Get total page count first
 int pageCount = annotator.getDocument().getPages().size();
@@ -229,12 +335,16 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-Ez a kódrészlet pontosan azt a mintát mutatja, amelyet a **pdf watermark multiple pages** hatékony megvalósításához használhat.
+### 6. lépés: A vízjelezett PDF mentése
 
-## Gyakori problémák és megoldások
+Végül írja a változásokat egy új fájlba. Az eredeti PDF érintetlen marad.
 
-### „File Not Found” hibák
+**Definition:** A `annotator.save("output.pdf")` minden hozzáadott annotációt egy új PDF fájlba ment.  
 
+```java
+annotator.save("output_watermarked.pdf");
+annotator.dispose(); // Release resources
+```
 ```java
 // Better error handling approach
 try {
@@ -250,36 +360,19 @@ try {
 }
 ```
 
-- Ellenőrizze a teljes elérési útvonalakat.  
-- Győződjön meg a olvasási/írási jogosultságokról.  
-- Bizonyosodjon meg arról, hogy a kimeneti mappa létezik.
+Ez a teljes folyamat a **vízjel minden oldalra való alkalmazásához** a GroupDocs.Annotation for Java használatával.
 
-### Memória problémák nagy PDF‑eknél
+## Gyakori problémák és megoldások
 
-- Mindig hívja meg a `dispose()`‑t.  
-- Fájlokat egyenként dolgozza fel, ne párhuzamosan.  
-- Növelje a JVM heap‑et (`-Xmx4g` nagyon nagy dokumentumokhoz).  
+### „File Not Found” hibák
 
-### A vízjel nem a várt helyen jelenik meg
-
-- Ne feledje, hogy a PDF koordináták a **bal‑alsó** sarokból indulnak.  
-- Teszteljen különböző oldalméretekkel; az A4 és a Letter eltérő pozíciókat eredményezhet.  
-- Állítsa be az átlátszatlanságot, ha a vízjel túl halvány.
-
-### Betűszín problémák
-
-Használható ARGB értékek:
-- Piros: `16711680`  
-- Kék: `255`  
-- Zöld: `65280`  
-- Fekete: `0`  
-- Fehér: `16777215`  
-- Sárga: `65535` (a példában használt)
-
-## Valós példák Java PDF vízjelekre
-
-### Üzleti dokumentumok védelme
-
+```java
+// Example of handling missing file paths
+File inputFile = new File("nonexistent.pdf");
+if (!inputFile.exists()) {
+    throw new IllegalArgumentException("Input PDF not found at: " + inputFile.getAbsolutePath());
+}
+```
 ```java
 WatermarkAnnotation confidentialWatermark = new WatermarkAnnotation();
 confidentialWatermark.setAngle(45.0);
@@ -290,8 +383,40 @@ confidentialWatermark.setFontSize(24.0);
 confidentialWatermark.setBox(new Rectangle(100, 300, 400, 100));
 ```
 
-### Marketing anyagok márkázása
+- Ellenőrizze a abszolút útvonalakat, és győződjön meg arról, hogy a fájl létezik.  
+- Ellenőrizze az olvasási/írási jogosultságokat mind a bemeneti, mind a kimeneti könyvtárakon.  
+- Hozza létre a kimeneti mappát előre, ha még nem létezik.
 
+### Memória problémák nagy PDF-ekkel
+
+- Mindig hívja meg a `annotator.dispose()` metódust a feldolgozás után.  
+- PDF-eket egyenként dolgozza fel; kerülje a párhuzamos stream-eket, hacsak a könyvtár nem bizonyítottan szálbiztos.  
+- Növelje a JVM heap-et (`-Xmx4g` vagy magasabb) 200 oldalon túl lévő fájlok esetén.
+
+### A vízjel elhelyezése nem a várt módon
+
+- A PDF koordináta eredete **bal‑alsó**; ennek megfelelően állítsa be a `Rectangle` értékeket.  
+- Tesztelje különböző oldalméretekkel (A4 vs. Letter), mivel a méretek befolyásolják a pozicionálást.  
+- Használja a `setOpacity(0.5)`-t, ha a vízjel túl halvány a nagy kontrasztú háttérrel szemben.
+
+### Betűszín problémák
+
+A GroupDocs.Annotation ARGB egész szám értékeket vár. Gyakori színek:
+- Piros: `16711680`  
+- Kék: `255`  
+- Zöld: `65280`  
+- Fekete: `0`  
+- Fehér: `16777215`  
+- Sárga: `65535` (a példában használt)
+
+## Valós példák Java PDF vízjelekre
+
+### Üzleti dokumentumvédelem
+
+```java
+// Apply a corporate logo watermark across all pages of a contract
+watermark.setText("© Acme Corp – Confidential");
+```
 ```java
 WatermarkAnnotation brandWatermark = new WatermarkAnnotation();
 brandWatermark.setText("© YourCompany 2025");
@@ -301,8 +426,13 @@ brandWatermark.setFontSize(10.0);
 brandWatermark.setBox(new Rectangle(400, 50, 150, 30));
 ```
 
-### Dokumentum verziókövetés
+### Márkázott marketing anyagok
 
+```java
+// Use a semi‑transparent brand slogan as a watermark
+watermark.setText("Acme Marketing 2026");
+watermark.setOpacity(0.4);
+```
 ```java
 WatermarkAnnotation versionWatermark = new WatermarkAnnotation();
 versionWatermark.setText("DRAFT - v2.1");
@@ -311,10 +441,12 @@ versionWatermark.setOpacity(0.8);
 versionWatermark.setBox(new Rectangle(50, 750, 100, 30));
 ```
 
-## Teljesítményoptimalizálási tippek
+### Verziókezelés dokumentumokhoz
 
-### Memóriakezelési legjobb gyakorlatok
-
+```java
+// Append version number dynamically
+watermark.setText("Version 3.2 – Reviewed");
+```
 ```java
 public void processMultiplePDFs(List<String> pdfPaths) {
     for (String path : pdfPaths) {
@@ -332,14 +464,15 @@ public void processMultiplePDFs(List<String> pdfPaths) {
 }
 ```
 
-### Kötetes feldolgozási stratégiák
+## Teljesítmény optimalizálási tippek
 
-- Dokumentumokat sorban dolgozza fel a memóriahasználat alacsonyan tartásához.  
-- Hosszú futásoknál használjon előrehaladási indikátort.  
-- Kerülje a párhuzamos feldolgozást, hacsak a könyvtár szálbiztonságát nem erősítette meg.
+### Memória kezelés legjobb gyakorlatai
 
-### Kód szervezési tippek
-
+```java
+// Explicitly release resources after each document
+annotator.dispose();
+System.gc(); // Hint to the JVM (optional)
+```
 ```java
 public class WatermarkTemplates {
     public static WatermarkAnnotation createConfidentialWatermark() {
@@ -363,23 +496,38 @@ public class WatermarkTemplates {
 }
 ```
 
+- A dokumentumokat sorban dolgozza fel, hogy alacsonyan tartsa a heap lábnyomát.  
+- Használjon folyamatjelzőt kötegelt feladatokhoz a memóriahasználat nyomon követéséhez.  
+- Kerülje el a teljes PDF memóriába töltését, ha csak egy részoldalra van szükség a vízjelhez; a könyvtár támogatja az oldal‑szintű betöltést.
+
+### Kód szervezési tippek
+
+- A vízjel létrehozását egy segédmetódusba kapszulázza: `createWatermark(String text, double opacity, int angle)`.  
+- A konfigurációt (színek, betűtípusok, átlátszatlanság) helyezze egy properties fájlba, hogy könnyen módosítható legyen különböző környezetekben.
+
 ## Gyakran feltett kérdések
 
-**Q: Hogyan adhatok vízjeleket több oldalra egy PDF‑ben?**  
-A: Használjon egy ciklust a dokumentum oldalainak számán, és minden oldalra hozzon létre egy `WatermarkAnnotation`‑t, a ciklusban `setPageNumber(i)` beállítással.
+**K: Hogyan adhatok vízjelet több oldalra egy PDF-ben?**  
+A: A dokumentum oldal számán iteráljon, klónozza a konfigurált `WatermarkAnnotation`-t minden oldalra, állítsa be a `setPageNumber(i)`-t, és adja hozzá a `annotator.add()` segítségével.
 
-**Q: Használhatok egyedi betűtípusokat a vízjelekhez?**  
-A: A GroupDocs.Annotation a rendszer‑telepített betűtípusokat használja. Adjon meg egy olyan betűcsaládot, amely a gépen elérhető; ha a betűtípus nem található, a könyvtár alapértelmezettet használ.
+**K: Használhatok egyéni betűtípusokat a vízjelekhez?**  
+A: A GroupDocs.Annotation a gazda operációs rendszerben telepített betűtípusokat használja. Adjon meg egy olyan betűcsaládot, amely a szerveren létezik; ha a betűtípus nem található, a könyvtár alapértelmezettre vált.
 
-**Q: Melyik átlátszatlansági beállítás a legjobb a professzionális vízjelekhez?**  
-A: A **0.3** és **0.7** közötti érték ideális – elég alacsony ahhoz, hogy a tartalom olvasható maradjon, elég magas ahhoz, hogy észrevehető legyen.
+**K: Melyik átlátszatlanság beállítás működik a legjobban professzionális vízjelekhez?**  
+A: A **0.3** és **0.7** közötti érték egyensúlyt biztosít – elég látható ahhoz, hogy észrevegyék, de még mindig lehetővé teszi az alatta lévő tartalom olvasását.
 
-**Q: Hogyan kezeljem a nagyon nagy PDF fájlokat?**  
-A: Növelje a JVM heap‑et (`-Xmx4g` vagy nagyobb), dolgozza fel a fájlokat egyenként, és minden dokumentum után hívja meg a `dispose()`‑t.
+**K: Hogyan kezeljem a nagyon nagy PDF fájlokat?**  
+A: Növelje a JVM heap-et (`-Xmx4g` vagy több), dolgozza fel a fájlokat egyenként, és mindig hívja meg a `dispose()` metódust minden dokumentum után a natív erőforrások felszabadításához.
 
-**Q: Lehet-e eltávolítani vagy módosítani a meglévő vízjeleket?**  
-A: Igen – kérje le a meglévő annotációkat a `annotator.get()` metódussal, szűrje ki a `WatermarkAnnotation`‑t, majd szerkessze vagy törölje őket:
+**K: Lehetőség van meglévő vízjelek eltávolítására vagy módosítására?**  
+A: Igen – a `annotator.get()` segítségével lekérheti az annotációkat, szűrje a `WatermarkAnnotation`-ra, majd szükség szerint szerkessze vagy törölje:  
 
+```java
+List<AnnotationBase> watermarks = annotator.get().stream()
+    .filter(a -> a instanceof WatermarkAnnotation)
+    .collect(Collectors.toList());
+annotator.delete(watermarks.get(0)); // Example: delete first watermark
+```
 ```java
 // Get existing annotations
 List<AnnotationBase> annotations = annotator.get();
@@ -388,7 +536,7 @@ List<AnnotationBase> annotations = annotator.get();
 
 ## További források
 
-- **Dokumentáció:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Dokumentáció:** [GroupDocs Annotation Java dokumentáció](https://docs.groupdocs.com/annotation/java/)  
 - **Teljes API referencia:** [GroupDocs Annotation Java API](https://reference.groupdocs.com/annotation/java/)  
 - **Legújabb verzió letöltése:** [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
 - **Kereskedelmi licenc:** [Purchase GroupDocs](https://purchase.groupdocs.com/buy)  
@@ -396,6 +544,12 @@ List<AnnotationBase> annotations = annotator.get();
 
 ---
 
-**Utoljára frissítve:** 2026-02-10  
-**Tesztelve:** GroupDocs.Annotation 25.2  
-**Szerző:** GroupDocs
+**Utoljára frissítve:** 2026-07-30  
+**Tesztelve a következővel:** GroupDocs.Annotation 25.2  
+**Szerző:** GroupDocs  
+
+## Kapcsolódó oktatóanyagok
+
+- [PDF betöltése Java-val a GroupDocs Annotation segítségével: Dokumentum betöltési útmutató](/annotation/java/document-loading/)
+- [PDF annotáció hozzáadása Java – Teljes GroupDocs útmutató](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Hogyan adjon hozzá képet PDF-hez Java és a GroupDocs Annotation használatával](/annotation/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/)

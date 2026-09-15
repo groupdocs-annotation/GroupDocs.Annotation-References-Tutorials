@@ -20,11 +20,7 @@ url: /vi/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotatio
 weight: 1
 ---
 
- -> same. "**Tested With:** GroupDocs.Annotation 25.2 for Java" unchanged. "**Author:** GroupDocs" unchanged.
-
-Make sure to keep markdown formatting.
-
-Now produce final content.# Cách Tạo Nút PDF Java với GroupDocs.Annotation
+# Cách Tạo Nút PDF Java với GroupDocs.Annotation
 
 Bạn đã bao giờ nhìn chằm chằm vào một tệp PDF tĩnh và ước muốn có thể làm cho nó sinh động hơn chưa? Trong hướng dẫn này, bạn sẽ học cách **create pdf buttons java** bằng cách sử dụng GroupDocs.Annotation. Dù bạn đang xây dựng hệ thống quản lý tài liệu, tạo biểu mẫu tương tác, hay chỉ muốn làm cho PDF của mình bớt… chán, những nút này có thể biến tài liệu của bạn từ tài liệu đọc thụ động thành trải nghiệm động, thân thiện với người dùng.
 

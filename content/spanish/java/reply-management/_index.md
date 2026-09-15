@@ -21,22 +21,7 @@ url: /es/java/reply-management/
 weight: 11
 ---
 
-.Annotation for Java (última versión)  
-**Autor:** GroupDocs"
-
-Make sure to keep bold formatting.
-
-Now ensure we didn't miss any markdown elements.
-
-Check for code blocks: none. Inline code kept.
-
-Check for shortcodes: none.
-
-Check for images: none.
-
-All URLs unchanged.
-
-Now produce final translated markdown content.# Crear comentarios con hilos en Java con GroupDocs.Annotation – Guía de implementación completa
+# Crear comentarios con hilos en Java con GroupDocs.Annotation – Guía de implementación completa
 
 ¿Construyendo sistemas colaborativos de revisión de documentos en Java? Si necesitas **crear comentarios con hilos en Java**, probablemente estés luchando con cómo mantener las discusiones organizadas, buscables y receptivas entre muchos usuarios. Esta guía te muestra exactamente cómo implementar una gestión robusta de respuestas a anotaciones PDF usando GroupDocs.Annotation para Java, para que tu equipo pueda discutir, responder y resolver comentarios sin perder el contexto.
 

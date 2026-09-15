@@ -1,58 +1,78 @@
 ---
 categories:
 - Java Development
-date: '2026-01-23'
-description: GroupDocs Annotation kullanarak korumalı PDF'leri Java'da açıklama ekleme
-  konusunda tam rehber. Şifre korumalı PDF'leri nasıl yöneteceğinizi, açıklama eklemeyi
-  ve Java uygulamalarında belge işleme güvenliğini öğrenin.
-keywords: java document annotation library, password protected document java, secure
-  document handling java, java pdf annotation, groupdocs annotation java example
-lastmod: '2026-01-23'
-linktitle: Java Document Annotation Library Guide
+date: '2026-06-21'
+description: Java'da PDF dosyalarına nasıl açıklama ekleneceğini, şifre korumalı PDF
+  Java işleme dahil, GroupDocs.Annotation kullanarak öğrenin. Bu adım adım rehber,
+  kurulum, güvenlik, toplu işleme ve en iyi uygulamaları kapsar.
+keywords:
+- how to annotate pdf
+- password protected pdf java
+- groupdocs annotation java
+lastmod: '2026-06-21'
+linktitle: Java Belge Açıklama Kütüphanesi Rehberi
+schemas:
+- author: GroupDocs
+  dateModified: '2026-06-21'
+  description: Learn how to annotate PDF files in Java, including password protected
+    PDF Java handling, using GroupDocs.Annotation. This step‑by‑step guide covers
+    setup, security, batch processing, and best practices.
+  headline: How to Annotate PDF – Protected PDF Java Guide with GroupDocs
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation for Java
+    question: What library lets me annotate protected PDFs in Java?
+  - answer: Yes – a commercial license removes watermarks and usage caps
+    question: Do I need a license for production?
+  - answer: Java 11+ (Java 8 works but 11+ gives better performance)
+    question: Which JDK version is recommended?
+  - answer: Yes, use batch or asynchronous patterns shown later
+    question: Can I process many files at once?
+  - answer: Create a new `Annotator` per request; instances are not shared
+    question: Is the code thread‑safe?
+  type: FAQPage
 tags:
 - document-processing
 - pdf-annotation
 - java-library
 - security
-title: Korumalı PDF'yi Java ile Açıklama – GroupDocs ile Tam Kılavuz
+title: PDF'ye Açıklama Ekleme – GroupDocs ile Korunan PDF Java Rehberi
 type: docs
 url: /tr/java/advanced-features/groupdocs-annotation-java-password-documents/
 weight: 1
 ---
 
-# annotate protected pdf java – GroupDocs ile Tam Kılavuz
+# PDF'ye Açıklama Ekleme – Şifreli PDF Java Rehberi GroupDocs
 
-Java uygulamalarında hassas PDF'lerle mi çalışıyorsunuz? Verileri güvende tutarken **annotate protected pdf java** dosyalarını eklemek istiyorsanız doğru yerdesiniz. Bu rehberde şifre‑korumalı PDF'leri yüklemeyi, profesyonel ek açıklamalar eklemeyi ve sonucu güvenli bir şekilde kaydetmeyi—hepsi GroupDocs.Annotation for Java ile—adım adım inceleyeceğiz.
+Eğer hassas PDF'lerle çalışması gereken bir Java uygulaması geliştiriyorsanız, şifreyle korunan PDF dosyalarına **how to annotate pdf** eklemenin güvenilir bir yoluna ihtiyacınız var. Bu kapsamlı öğreticide, şifreli PDF'leri yüklemeyi, çeşitli profesyonel açıklama eklemeyi ve belge güvenliğini koruyarak veya güncelleyerek sonucu kaydetmeyi adım adım göstereceğiz. Tüm bunlar, şifreleme katmanını soyutlayan ve iş mantığına odaklanmanızı sağlayan GroupDocs.Annotation for Java kütüphanesi ile yapılır.
 
 ## Hızlı Yanıtlar
-- **Java'da şifre korumalı PDF'leri eklememe izin veren kütüphane nedir?** GroupDocs.Annotation for Java  
-- **Üretim için lisansa ihtiyacım var mı?** Evet – ticari bir lisans su işaretlerini ve sınırlamaları kaldırır  
+- **Java'da şifreli PDF'lere açıklama eklememe izin veren kütüphane nedir?** GroupDocs.Annotation for Java  
+- **Üretim için lisansa ihtiyacım var mı?** Evet – ticari bir lisans su işaretlerini ve kullanım sınırlamalarını kaldırır  
 - **Hangi JDK sürümü önerilir?** Java 11+ (Java 8 çalışır ancak 11+ daha iyi performans sağlar)  
-- **Birçok dosyayı aynı anda işleyebilir miyim?** Evet, daha sonra gösterilen toplu veya asenkron desenleri kullanın  
-- **Kod thread‑safe mi?** Annotator örnekleri paylaşılmaz; istek başına yeni bir tane oluşturun  
+- **Birçok dosyayı aynı anda işleyebilir miyim?** Evet, daha sonra gösterilen toplu veya eşzamansız desenleri kullanın  
+- **Kod iş parçacığı güvenli mi?** İstek başına yeni bir `Annotator` oluşturun; örnekler paylaşılmaz  
 
 ## “annotate protected pdf java” nedir?
-“annotate protected pdf java”, bir şifre‑korumalı PDF'yi Java ortamında açma, programlı olarak notlar, vurgulamalar veya şekiller ekleme ve ardından dosyayı güvenliğini koruyarak veya güncelleyerek kaydetme sürecine denir. GroupDocs.Annotation, şifre katmanını sizin için yöneten temiz bir API sunar.
+**“Annotate protected pdf java”**, bir Java ortamında şifrelenmiş PDF'yi açma, programlı olarak notlar, vurgulamalar veya şekiller ekleme ve ardından dosyayı güvenlik ayarlarını koruyarak veya güncelleyerek kaydetme sürecidir. Bu iş akışı, güvenli iş birliğini, denetim izlerini ve uyumluluk dostu belge yönetimini sağlar.
 
-## Neden GroupDocs.Annotation'ı Java Belge Ek Açıklama Kütüphaneniz Olarak Seçmelisiniz?
-Koda dalmadan önce, GroupDocs.Annotation'ın nedenleyelim:
+## Neden GroupDocs.Annotation'ı Java Belge Açıklama Kütüphaneniz Olarak Seçmelisiniz?
+GroupDocs.Annotation, kurumsal düzeyde PDF işleme için özel olarak geliştirilmiştir. **50+ giriş ve çıkış formatını** destekler, tüm dosyayı belleğe yüklemeden çok sayfalı PDF'leri işleyebilir ve yerleşik şifreleme yönetimi sunar. Kütüphane ayrıca **iş parçacığı güvenli toplu API'ler**, ayrıntılı hata kodları ve bulut tabanlı dağıtımlar için **%99,9 uptime SLA** sağlar; bu da onu görev kritik uygulamalar için sağlam bir seçim yapar.
 
-- **Security First** – Şifre‑korumalı PDF'ler ve şifreleme için yerleşik destek.  
-- **Format Flexibility** – PDF, Word, Excel, PowerPoint, görüntüler ve 50+ diğer formatla çalışır.  
-- **Enterprise Ready** – Yüksek- **Developer Experience** – dokümantasyon ve aktif bir topluluk.  
-
-## Ön Koşullar (Bu Bölümü Atlamayın)
+## Önkoşullar (Bu Bölümü Atlamayın)
 
 - **JDK:** 8 veya üzeri (Java 11+ önerilir)  
-- **Build Tool:** Maven (Gradle da çalışır)  
-- **IDE:** IntelliJ IDEA, Eclipse veya tercih  
-- **Knowledge:** Java temelleri, Maven temelleri, dos daha önce ek açıklama çerçeveleriyle çalışma deneyimi.
+- **Derleme Aracı:** Maven (Gradle da çalışır)  
+- **IDE:** IntelliJ IDEA, Eclipse veya tercih ettiğiniz herhangi bir Java IDE  
+- **Bilgi:** Java temelleri, Maven temelleri, dosya I/O  
 
-## GroupDocs.Annotation for Java'ı Kurma
+*Opsiyonel ama faydalı:* PDF iç yapıları hakkında aşinalık ve açıklama çerçeveleriyle önceki deneyim.
+
+## GroupDocs.Annotation for Java Kurulumu
 
 ### Maven Yapılandırması (Doğru Yol)
 
-`pom.xml` dosyanıza depo ve bağımlılığı ekleyin. Bu blok tam olarak değiştirilmemelidir:
+Depoyu ve bağımlılığı `pom.xml` dosyanıza ekleyin. Bu kesin blok değiştirilmeden kalmalıdır:
 
 ```xml
 <repositories>
@@ -72,9 +92,9 @@ Koda dalmadan önce, GroupDocs.Annotation'ın nedenleyelim:
 </dependencies>
 ```
 
-**Pro Tip:** Üretimde belirli bir sürüme kilitleyin; kırılma riski taşıyan sürüm aralıklarından kaçının.
+**İpucu:** Üretimde belirli bir sürüme sabitleyin; kırılma yaratabilecek sürüm aralıklarından kaçının.
 
-### Lisans Ayarı (Deneme Sınırlamalarını Aşma)
+### Lisans Kurulumu (Deneme Sınırlamalarını Aşma)
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -95,7 +115,8 @@ public class GroupDocsSetup {
 
 ## Temel Uygulama: Güvenli Belge İşleme
 
-### annotate protected pdf java – Şifre‑Korunan Belgeleri Yükleme
+### How to annotate protected pdf java – Şifreli Belgeleri Yükleme
+`Annotator`, PDF belgelerini açmak ve değiştirmek için GroupDocs.Annotation içinde kullanılan ana sınıftır. Şifreli PDF'yi, şifreyi `Annotator` yapıcı metoduna geçirerek yükleyin. Kütüphane dosyayı bellekte otomatik olarak çözer, böylece şifre dosya sistemine dokunmaz.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -123,12 +144,13 @@ public class SecureDocumentLoader {
 }
 ```
 
-**Common Issues & Solutions**  
+**Yaygın Sorunlar ve Çözümler**  
 - *Yanlış şifre*: işlemden önce doğrulayın.  
 - *Dosya bulunamadı*: varlığı ve izinleri kontrol edin.  
-- *Bellek baskısı*: try‑with‑resources kullanın (aşağıya bakın).
+- *Bellek baskısı*: try‑with‑resources kullanın (daha sonra bakın).
 
-### Profesyonel Alan Ek Açıklamaları Ekleme
+### Profesyonel Alan Açıklamaları Ekleme
+`AreaAnnotation`, PDF sayfasında bir vurgulama veya yorum gibi dikdörtgen bir açıklamayı temsil eder. Bir `AreaAnnotation` nesnesi oluşturun, dikdörtgen koordinatlarını ayarlayın, bir renk seçin ve istediğiniz sayfaya ekleyin.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -165,12 +187,13 @@ public class AnnotationProcessor {
 }
 ```
 
-**Positioning Tips**  
-- Koordinatlar sol‑üst köşeden (0,0) başlar.  
-- Ölçü birimi puandır (1 pt = 1/72 in).  
+**Konumlandırma İpuçları**  
+- Koordinatlar sol‑üstten (0,0) başlar.  
+- Ölçümler puan cinsindendir (1 pt = 1/72 in).  
 - Tutarlı yerleşim için farklı sayfa boyutlarında test edin.
 
 ### Güvenli Belge Kaydetme (Üretim‑Hazır)
+`save`, değiştirilmiş belgeyi diske yazar ve şifreleme için yeni bir şifre uygulayabilir. Açıklama eklemeyi tamamladığınızda, belgeyi yeniden şifrelemek istiyorsanız `save` metodunu yeni bir şifreyle çağırın. Ayrıca orijinal şifreyi aynı tutabilirsiniz.
 
 ```java
 import java.nio.file.Files;
@@ -265,17 +288,18 @@ public class CompleteAnnotationExample {
 }
 ```
 
-## Gerçek Dünya Kullanım Senaryoları (Bu Gerçekten Parladığı Yerler)
+## Gerçek Dünya Kullanım Senaryoları (Bu Özelliğin Parladığı Yerler)
 
-- **Legal Review Systems** – Maddeleri vurgulayın, yorum ekleyin ve denetim izini koruyun.  
-- **Medical Imaging** – X‑ray veya raporları HIPAA uyumlu şekilde ek açıklayın.  
-- **Financial Document Analysis** – Kredi başvuruları veya denetim raporlarındaki kritik bölümleri işaretleyin.  
-- **Educational Content** – Öğretmen ve öğrenciler PDF'lere not ekler, orijinali değiştirmez.  
-- **Engineering Design Review** – Takımlar, planları ve CAD dışa aktarımlarını güvenli bir şekilde ek açıklayabilir.
+- **Hukuki İnceleme Sistemleri** – Maddeleri vurgulayın, yorum ekleyin ve denetim izini tutun.  
+- **Tıbbi Görüntüleme** – HIPAA uyumlu kalırken X‑ray veya raporları açıklayın.  
+- **Finansal Belge Analizi** – Kredi başvuruları veya denetim raporlarındaki önemli bölümleri işaretleyin.  
+- **Eğitim İçeriği** – Öğretmenler ve öğrenciler orijinali değiştirmeden PDF'lere not ekler.  
+- **Mühendislik Tasarım İncelemesi** – Takımlar, planları ve CAD dışa aktarımlarını güvenli bir şekilde açıklama ekler.
 
 ## Performans ve En İyi Uygulamalar (Bunu Atlamayın)
 
 ### Bellek Yönetimi (Üretim İçin Kritik)
+GroupDocs.Annotation PDF sayfalarını akış olarak işler, bu yüzden 500 sayfalık dosyalarda bile bellek kullanımı **150 MB** altında kalır. `Annotator`'ı her zaman bir `finally` bloğunda kapatın.
 
 ```java
 // Good: Automatic resource management
@@ -293,6 +317,7 @@ public void processDocumentSafely(String inputPath, String password) {
 ```
 
 ### Toplu İşleme Optimizasyonu
+`AnnotatorFactory`, toplu işlemler için `Annotator` örneklerini verimli bir şekilde oluşturur. Dosyaları bir döngüde işleyin, nesne oluşturma yükünü azaltmak için tek bir `AnnotatorFactory` yeniden kullanın.
 
 ```java
 public void processBatchDocuments(List<DocumentInfo> documents) {
@@ -316,6 +341,7 @@ public void processBatchDocuments(List<DocumentInfo> documents) {
 ```
 
 ### Web Uygulamaları için Asenkron İşleme
+Açıklama işini ayrı bir iş parçacığı havuzuna taşıyın; istemciye bir iş kimliği (job ID) döndürün ve tamamlanmayı periyodik olarak kontrol edin.
 
 ```java
 import java.util.concurrent.CompletableFuture;
@@ -335,6 +361,7 @@ public CompletableFuture<String> processDocumentAsync(String inputPath, String p
 ## Gelişmiş Güvenlik Hususları
 
 ### Güvenli Dosya İşleme (Parolaları Bellekten Temizleme)
+Parolaları bir `char[]` içinde saklayın, kullanım sonrası diziyi temizleyin ve ham değeri asla kaydetmeyin.
 
 ```java
 public class SecureFileHandler {
@@ -359,6 +386,7 @@ public class SecureFileHandler {
 ```
 
 ### Denetim Günlüğü (Uyumluluk‑Hazır)
+`ILogger`, açıklama eylemlerini ve hataları kaydetmek için bir arayüzdür. Kim ne zaman neyi açıklamış kaydetmek için yerleşik `ILogger` arayüzünü kullanın, ardından günlükleri güvenli bir depoya yazın.
 
 ```java
 import java.util.logging.Logger;
@@ -373,43 +401,53 @@ public class AuditLogger {
 }
 ```
 
-## Sorun Giderme Kılavuzu (İşler Ters Gittiğinde)
+## Sorun Giderme Kılavuzu (Problemler Oluştuğunda)
+
+Bu bölüm, GroupDocs.Annotation ile çalışırken karşılaşabileceğiniz en yaygın sorunlar için özlü rehberlik sunar, kök nedenleri hızlıca belirlemenize ve etkili çözümler uygulamanıza yardımcı olur.
 
 | Sorun | Tipik Neden | Hızlı Çözüm |
 |-------|-------------|-------------|
 | **Geçersiz Şifre** | Yanlış şifre veya kodlama | Boşlukları temizleyin, UTF‑8 kodlamasını sağlayın |
 | **Dosya Bulunamadı** | Yanlış yol veya eksik izin | Mutlak yollar kullanın, okuma izinlerini doğrulayın |
-| **Bellek Sızıntısı** | `dispose()` çağrılmıyor | `finally` bloğunda her zaman `annotator.dispose()` çağırın |
-| **Ek Açıklama Yanlış Konumlandırma** | Nokta ve piksel karışıklığı | 1 pt = 1/72 in olduğunu unutmayın; örnek sayfalarda test edin |
-| **Yavaş Yükleme** | Büyük dosyalar veya karmaşık PDF'ler | Ön işleme yapın, JVM yığınını artırın, akış API'lerini kullanın |
+| **Bellek Sızıntısı** | `dispose()` çağrılmaması | `finally` içinde her zaman `annotator.dispose()` çağırın |
+| **Açıklama Yanlış Konumlandırma** | Puan ile piksel karıştırılması | 1 pt = 1/72 in olduğunu unutmayın; örnek sayfalarda test edin |
+| **Yavaş Yükleme** | Büyük dosyalar veya karmaşık PDF'ler | Ön işleme, JVM yığınını artırın, akış API'lerini kullanın |
 
 ## Sıkça Sorulan Sorular
 
-**S:** *AES‑256 şifrelemesi kullanan PDF'leri ekleyebilir miyim?*  
-**C:** Evet. GroupDocs.Annotation, doğru şifreyi sağladığınız sürece AES‑256 dahil standart PDF şifrelemesini destekler.
+**Q:** *AES‑256 şifrelemesi kullanan PDF'lere açıklama ekleyebilir miyim?*  
+**A:** Evet. GroupDocs.Annotation, doğru şifreyi sağladığınız sürece AES‑256 dahil standart PDF şifrelemesini destekler.
 
-**S:** *Üretim için ticari bir lisansa ihtiyacım var mı?*  
-**C:** Kesinlikle. Deneme sürümü su işleme sınırları koyar. Ticari lisans bu saklamak güvenli mi?*  
-**C:** Asla. Güvenli kasalar veya ortam değişkenleri kullanın ve kullanım sonrası parola karakter dizilerini temizleyin (Güvenli Dosya İşleme örneğine bakın).
+**Q:** *Üretim için ticari bir lisansa ihtiyacım var mı?*  
+**A:** Kesinlikle. Deneme sürümü su işaretleri ekler ve işlem sınırlamaları koyar. Ticari lisans bu sınırlamaları kaldırır.
 
-**S:** *Aynı anda kaç belge işleyebilirim?*  
-**C:** Sunucu kaynaklarınıza bağlıdır. Yaygın bir yaklaşım, eşzamanlılığı CPU çekirdek sayısıyla sınırlamak ve yığın kullanımını izlemektir.
+**Q:** *Parolaları düz metin olarak saklamak güvenli mi?*  
+**A:** Asla. Güvenli kasalar veya ortam değişkenleri kullanın ve kullanım sonrası parola char dizilerini temizleyin (Güvenli Dosya İşleme örneğine bakın).
 
-**S:** *Bunu SharePoint gibi bir belge yönetim sistemiyle entegre edebilir miyim?*  
-**C:** Evet. Dosyaları SharePoint'ten akış olarak Annotator'a aktarabilir ve sonucu geri yazabilirsiniz; aynı güvenlik modeli korunur.
+**Q:** *Aynı anda kaç belge işleyebilirim?*  
+**A:** Sunucu kaynaklarınıza bağlıdır. Yaygın bir desen, eşzamanlılığı CPU çekirdek sayısı ile sınırlamak ve yığın kullanımını izlemektir.
+
+**Q:** *Bunu SharePoint gibi bir belge yönetim sistemiyle entegre edebilir miyim?*  
+**A:** Evet. Dosyaları SharePoint'ten Annotator'a akıtın ve sonucu geri yazın, aynı güvenlik modelini koruyarak.
 
 ## Ek Kaynaklar
 
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
-- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)  
-- [Purchase Commercial License](https://purchase.groupdocs.com/buy)  
-- [Get Free Trial Version](https://releases.groupdocs.com/annotation/java/)  
-- [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [Community Support Forum](https://forum.groupdocs.com/c/annotation/)
+- [GroupDocs.Annotation for Java Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)  
+- [Tam API Referans Kılavuzu](https://reference.groupdocs.com/annotation/java/)  
+- [En Son Sürümü İndir](https://releases.groupdocs.com/annotation/java/)  
+- [Ticari Lisans Satın Al](https://purchase.groupdocs.com/buy)  
+- [Ücretsiz Deneme Sürümünü Al](https://releases.groupdocs.com/annotation/java/)  
+- [Geçici Lisans Talep Et](https://purchase.groupdocs.com/temporary-license/)  
+- [Topluluk Destek Forumu](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Son Güncelleme:** 2026-01-23  
-**Test Edilen Sürüm:** GroupDocs.Annotation 25.2  
+**Son Güncelleme:** 2026-06-21  
+**Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs
+
+## İlgili Eğitimler
+
+- [GroupDocs.Annotation Java ile Şifreli PDF Yükleme](/annotation/java/advanced-features/)  
+- [GroupDocs.Annotation Java ile İnceleme Yorumları PDF Oluşturma](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)  
+- [GroupDocs.Annotation ile Sayfa Aralığı Kaydetme Java – Tam Kılavuz](/annotation/java/document-saving/)

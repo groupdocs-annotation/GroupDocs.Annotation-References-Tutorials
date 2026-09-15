@@ -21,14 +21,6 @@ url: /it/java/document-saving/groupdocs-annotation-java-save-specific-page-range
 weight: 1
 ---
 
- with resources java" should stay as is? It's a phrase but maybe keep as is because technical term. Keep as is.
-
-Let's translate each paragraph.
-
-Will keep bold **try with resources java** unchanged.
-
-Proceed.
-
 # Come salvare pagine specifiche da documenti annotati in Java
 
 ## Introduzione

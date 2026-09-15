@@ -21,14 +21,7 @@ url: /sv/java/form-field-annotations/
 weight: 9
 ---
 
-) => "**Testad med:** GroupDocs.Annotation 5.2 (senaste stabila)"
-**Author:** GroupDocs => "**Författare:** GroupDocs"
-
-Then final "---"? Already there.
-
-Make sure to keep markdown formatting.
-
-Now produce final content.# Lägg till textfält PDF i Java – GroupDocs.Annotation Guide
+# Lägg till textfält PDF i Java – GroupDocs.Annotation Guide
 
 Om du behöver **skapa PDF-formulärfält** snabbt och pålitligt, har du kommit till rätt ställe. I den här handledningen går vi igenom hur GroupDocs.Annotation låter dig generera ifyllbara PDF‑filer, **add text field PDF**‑funktionalitet, och lägga till interaktiva knappar, kryssrutor, rullgardinsmenyer och textfält – allt med ren Java‑kod. Oavsett om du bygger ett kundintroduktionsformulär, en intern enkät eller ett komplext flersidigt arbetsflöde, ger stegen nedan dig en solid grund.
 
