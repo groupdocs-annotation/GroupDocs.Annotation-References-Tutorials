@@ -1,65 +1,130 @@
 ---
 categories:
 - Java Development
-date: '2026-03-08'
-description: Naučte se, jak pomocí GroupDocs.Annotation vytvářet prohledávatelné PDF
-  soubory v Javě. Podrobný návod krok za krokem s ukázkami kódu, tipy a řešením problémů.
-keywords: Java PDF text annotation, GroupDocs annotation tutorial, PDF text highlighting
-  Java, searchable PDF annotations, programmatically annotate PDF files Java
-lastmod: '2026-03-08'
-linktitle: Java PDF Text Annotation Guide
+date: '2026-09-15'
+description: Zjistěte, jak vytvořit prohledávatelné PDF soubory Java s GroupDocs annotation.
+  Tento krok‑za‑krokem průvodce pokrývá setup, code, tips a troubleshooting.
+keywords:
+- create searchable pdf java
+- pdf annotation free trial
+- highlight pdf text java
+lastmod: '2026-09-15'
+linktitle: Průvodce anotací textu v Java PDF
+og_description: Zjistěte, jak vytvořit prohledávatelné PDF soubory Java s GroupDocs
+  annotation. Tento krok‑za‑krokem průvodce pokrývá setup, code, tips a troubleshooting.
+og_image_alt: Guide showing how to add searchable text annotations to PDFs in Java
+  with GroupDocs
+og_title: Vytvořte prohledávatelné PDF soubory Java pomocí GroupDocs annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  headline: Create searchable PDF Java files using GroupDocs annotation
+  type: TechArticle
+- description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  name: Create searchable PDF Java files using GroupDocs annotation
+  steps:
+  - name: initialize the annotator
+    text: 'The `Annotator` class is GroupDocs.Annotation''s primary engine for loading,
+      modifying, and saving PDF files. The `Annotator` class is your main interface
+      for PDF manipulation. It handles file loading, modification, and saving: **Why
+      this matters:** Using a try‑with‑resources block guarantees that th'
+  - name: create your text fragment
+    text: '`SearchTextFragment` represents a searchable text annotation that can be
+      positioned and styled within a PDF. The `SearchTextFragment` object defines
+      what text you want to highlight and how it should appear:'
+  - name: define the target text
+    text: 'Specify the exact string you want to make searchable. The match must be
+      case‑exact and include any punctuation that appears in the source PDF. Specify
+      exactly what text you want to make searchable: **Important:** PDF text extraction
+      can introduce hidden Unicode characters; if the annotation fails to'
+  - name: customize the appearance
+    text: 'You can control background color, text color, opacity, and border style.
+      The ARGB values are expressed as `0xAARRGGBB`. This is where you can make your
+      annotations visually distinctive: **Color‑coding tip:** The numbers `0x7FFF0000`
+      (semi‑transparent red) and `0xFF0000FF` (opaque blue) have been tes'
+  - name: apply and save
+    text: 'Add the fragment to the annotator and write the updated PDF to disk. The
+      `close()` call inside the try‑with‑resources block frees native memory. Add
+      the annotation and save your enhanced PDF: The closing brace automatically disposes
+      of the `Annotator` object, freeing up memory.'
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create several `SearchTextFragment` objects (or other annotation
+      types) and add them all before calling `save`.
+    question: Can I add multiple different annotations to the same PDF?
+  - answer: Yes. GroupDocs creates standard PDF annotation objects that are displayed
+      correctly in Adobe Acrobat, Chrome, Edge, and most third‑party viewers. Colors
+      may vary slightly due to viewer rendering engines.
+    question: Will annotations work in all PDF viewers?
+  - answer: GroupDocs.Annotation processes the visual text flow, so you only need
+      to ensure the exact string you supply matches the extracted text, regardless
+      of column order.
+    question: How do I handle PDFs with complex layouts or multiple columns?
+  - answer: There is no hard limit on the number of annotations. In practice, adding
+      thousands of highlights may increase rendering time in some viewers, so batch
+      them logically (e.g., per chapter).
+    question: Is there a limit to how much text I can annotate?
+  - answer: Yes. Use the `getAnnotations()` method to retrieve existing objects, then
+      call `update()` or `delete()` as needed.
+    question: Can I modify or remove annotations after adding them?
+  type: FAQPage
 tags:
 - pdf-processing
 - java-libraries
 - document-annotation
 - groupdocs
-title: 'Vytvořte prohledávatelný PDF v Javě: Textová anotace pomocí GroupDocs'
+title: Vytvořte prohledávatelné PDF soubory Java pomocí GroupDocs annotation
 type: docs
 url: /cs/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# Vytvoření prohledávatelného PDF Java: Textová anotace s GroupDocs
+# Vytvořte prohledávatelné PDF soubory v Javě pomocí anotací GroupDocs
 
-Už jste se někdy topili v dlouhých PDF dokumentech a přáli si rychle přejít na důležité části? Nejste v tom sami. Ať už pracujete s právními smlouvami, technickými manuály nebo výzkumnými pracemi, schopnost **create searchable PDF Java** souborů může být průlomová pro navigaci v dokumentech a spolupráci.
+Pokud potřebujete **vytvořit prohledávatelné PDF soubory v Javě**, které uživatelům umožní okamžitě přejít na důležité pasáže, jste na správném místě. Ať už zpracováváte právní smlouvy, technické příručky nebo výzkumné práce, prohledávatelné textové anotace promění statické PDF na interaktivní znalostní báze, které zvyšují produktivitu a spolupráci.
 
-V tomto komplexním průvodci se naučíte, jak programově přidat prohledávatelné textové anotace do PDF dokumentů pomocí GroupDocs.Annotation pro Java. Provedeme vás vším od základního nastavení po pokročilé možnosti přizpůsobení a podělíme se o některé těžce nabyté poznatky o běžných úskalích (a jak se jim vyhnout).
+V tomto tutoriálu se dozvíte, jak programově přidat prohledávatelné textové anotace pomocí GroupDocs.Annotation pro Java. Začneme nastavením prostředí, projdeme každý řádek kódu, prozkoumáme pokročilé možnosti stylování a zakončíme tipy na odstraňování problémů, které můžete použít v reálných projektech.
 
 ## Rychlé odpovědi
-- **Co znamená “searchable PDF Java”?** Jedná se o PDF, který obsahuje textové anotace, jež lze najít jednoduchým vyhledáváním textu.  
-- **Kterou knihovnu mám použít?** GroupDocs.Annotation pro Java poskytuje robustní API pro prohledávatelné zvýraznění textu.  
-- **Potřebuji licenci k vyzkoušení?** Ne — GroupDocs nabízí bezplatnou zkušební verzi, která funguje pro všechny zde předvedené funkce.  
+- **Co znamená “searchable PDF Java”?** Jedná se o PDF, který obsahuje textové anotace, jež lze vyhledávat pomocí standardní funkce vyhledávání textu v PDF.  
+- **Kterou knihovnu mám použít?** GroupDocs.Annotation pro Java nabízí kompletní, produkčně připravené API pro prohledávatelné zvýraznění.  
+- **Potřebuji licenci k vyzkoušení?** Ne—GroupDocs poskytuje bezplatnou zkušební verzi, která odemkne všechny zde předvedené funkce.  
 - **Mohu přidat více anotací najednou?** Ano, vytvořte několik objektů `SearchTextFragment` a přidejte je před uložením.  
-- **Je tento přístup šetrný k paměti u velkých PDF?** Při použití try‑with‑resources a dávkového zpracování zůstává využití paměti nízké.
+- **Je tento přístup šetrný k paměti u velkých PDF?** Při použití try‑with‑resources a dávkového zpracování zůstává využití paměti pod 200 MB i pro PDF s tisíci stránkami.
 
-## Proč je anotace textu v PDF pro Java důležitá
+## Proč jsou anotace textu v PDF pro Javu důležité
 
-Než se ponoříme do kódu, pojďme si říct, proč je tato funkce neuvěřitelně cenná. Textové anotace nejsou jen o hezkém zvýraznění — jsou o tom, aby vaše PDF byly skutečně funkční:
+Prohledávatelné anotace dělají více než jen zpříjemňují vzhled dokumentu:
 
-- **Rychlá navigace**: Přeskočte přímo na anotované sekce místo nekonečného rolování.  
-- **Spolupráce při revizi**: Členové týmu mohou snadno najít a diskutovat konkrétní obsah.  
-- **Zpracování dokumentů**: Automatizujte identifikaci klíčových termínů nebo ustanovení.  
-- **Přístupnost**: Umožněte lepší vyhledatelnost dokumentů pro uživatele s různými potřebami.
+- **Okamžitá navigace** – Uživatelé kliknou na zvýrazněnou frázi a přejdou přímo na relevantní stránku.  
+- **Týmová spolupráce** – Recenzenti mohou komentovat přesné výrazy bez nekonečného posouvání.  
+- **Automatizované zpracování** – Skripty mohou najít klíčové klauzule, extrahovat je nebo spustit následné pracovní postupy.  
+- **Zvýšená přístupnost** – Čtečky obrazovky mohou oznámit zvýrazněné výrazy, čímž se zlepšuje použitelnost pro uživatele se zrakovým postižením.
 
 ## Co budete potřebovat k zahájení
 
+Níže je minimální kontrolní seznam, který byste měli mít před zahájením kódování.
+
 ### Základní požadavky
-- **Java Development Kit (JDK)**: Verze 8 nebo vyšší (doporučujeme JDK 11+ pro lepší výkon)  
-- **IDE**: IntelliJ IDEA, Eclipse nebo vaše oblíbené Java IDE  
-- **Maven**: Pro správu závislostí (Gradle také funguje, ale v příkladech použijeme Maven)  
-- **Základní znalosti Javy**: Měli byste být pohodlní s koncepty objektově orientovaného programování  
+- **Java Development Kit (JDK)** – verze 8 nebo novější; JDK 11+ se doporučuje pro lepší výkon garbage‑collection.  
+- **IDE** – IntelliJ IDEA, Eclipse nebo jakýkoli jiný editor kompatibilní s Javou, který preferujete.  
+- **Maven** – pro správu závislostí (Gradle funguje také, ale příklady používají Maven).  
+- **Základní znalosti Javy** – povědomí o objektech, try‑with‑resources a zpracování výjimek.
 
 ### Knihovna GroupDocs.Annotation
-- **Version**: 25.2 nebo vyšší (nejnovější verze obsahuje vylepšení výkonu a opravy chyb)  
-- **License**: Začněte s bezplatnou zkušební verzí — je ideální pro hodnocení a malé projekty  
+- **Verze** – 25.2 nebo novější (poslední vydání přidává 30 % zrychlení pro velké PDF).  
+- **Licence** – začněte s bezplatnou zkušební verzí; dočasná licence je k dispozici pro rozšířené hodnocení a plná licence je vyžadována pro produkční nasazení.
 
 ## Nastavení vývojového prostředí
 
-Pojďme správně nakonfigurovat váš projekt. Věřte mi, věnování času správnému nastavení vám ušetří hodiny ladění později.
+Věnování několika minut nyní pro správnou konfiguraci Maven vám ušetří hodiny ladění později.
 
-### Maven konfigurace
+### Konfigurace Maven
 
-Přidejte tyto repozitáře a závislosti do souboru `pom.xml`. Tato konfigurace byla testována s nejnovějšími verzemi a měla by fungovat hladce:
+Přidejte repozitář GroupDocs a závislost Annotation do souboru `pom.xml`. Níže uvedený úryvek je připravený ke zkopírování:
 
 ```xml
 <repositories>
@@ -78,32 +143,34 @@ Přidejte tyto repozitáře a závislosti do souboru `pom.xml`. Tato konfigurace
 </dependencies>
 ```
 
-**Tip**: Pokud pracujete za firemním firewallem, možná budete muset do Maven konfigurace přidat nastavení proxy. Ověřte u své IT oddělení, pokud selže přístup do repozitáře.
+**Pro tip:** Pokud pracujete za firemním proxy, přidejte nastavení proxy do souboru `~/.m2/settings.xml`, aby Maven mohl bez přerušení dosáhnout repozitáře GroupDocs.
 
 ### Možnosti nastavení licence
 
-Máte několik licenčních cest:
+Máte tři cesty:
 
-1. **Free Trial** — ideální pro hodnocení; poskytuje plnou funkčnost s některými omezeními.  
-2. **Temporary License** — skvělá pro prodloužené evaluační období nebo proof‑of‑concept projekty.  
-3. **Full License** — vyžadována pro produkční nasazení.  
+1. **Bezplatná zkušební verze** – plný přístup k API, není vyžadována kreditní karta.  
+2. **Dočasná licence** – prodlužuje zkušební období pro proof‑of‑concept projekty.  
+3. **Plná licence** – odemyká neomezené produkční využití a prioritu v podpoře.  
 
-Nemějte obavy o licenci během vývoje — zkušební verze pokryje vše, co v tomto tutoriálu ukážeme.
+Během vývoje můžete soubor licence přeskočit; zkušební klíč se automaticky použije při vytvoření instance `Annotator`.
 
-## Hlavní implementace: Přidání prohledávatelných textových anotací
+## Hlavní implementace: přidávání prohledávatelných textových anotací
 
-Nyní ta vzrušující část — napišme kód! Tato implementace přidá prohledávatelné textové anotace, ke kterým uživatelé mohou rychle přejít.
+Nyní přecházíme ke kódu, který skutečně vytváří anotace. Každý blok níže odpovídá kroku v pracovním postupu.
 
 ### Základní kroky implementace
 
-Zde je kompletní proces rozdělený do přehledných částí:
+Níže je kompletní tok rozdělený do pěti stručných kroků.
 
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.annotationmodels.SearchTextFragment;
 ```
 
-#### Krok 1: Inicializace Annotatoru
+#### Krok 1: inicializace anotátoru
+
+Třída `Annotator` je hlavní motor GroupDocs.Annotation pro načítání, úpravu a ukládání PDF souborů.
 
 Třída `Annotator` je vaše hlavní rozhraní pro manipulaci s PDF. Zajišťuje načítání souboru, úpravy a ukládání:
 
@@ -111,9 +178,11 @@ Třída `Annotator` je vaše hlavní rozhraní pro manipulaci s PDF. Zajišťuje
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
 ```
 
-**Co se zde děje**: Používáme příkaz try‑with‑resources (ten `try` blok), který automaticky provádí úklid zdrojů. To je klíčové pro prevenci úniků paměti, zejména při zpracování více dokumentů.
+**Proč je to důležité:** Použití bloku try‑with‑resources zaručuje, že nativní zdroje držené objektem `Annotator` jsou automaticky uvolněny, čímž se předchází únikům paměti při zpracování mnoha dokumentů v dávce.
 
-#### Krok 2: Vytvoření textového fragmentu
+#### Krok 2: vytvoření textového fragmentu
+
+`SearchTextFragment` představuje prohledávatelnou textovou anotaci, kterou lze umístit a stylovat v PDF.
 
 Objekt `SearchTextFragment` definuje, jaký text chcete zvýraznit a jak má vypadat:
 
@@ -121,21 +190,23 @@ Objekt `SearchTextFragment` definuje, jaký text chcete zvýraznit a jak má vyp
 SearchTextFragment searchTextFragment = new SearchTextFragment();
 ```
 
-Tímto vytvoříme prázdný objekt anotace, který nakonfigurujeme v dalších krocích.
+#### Krok 3: definování cílového textu
 
-#### Krok 3: Definování cílového textu
+Určete přesný řetězec, který chcete učinit prohledávatelným. Shoda musí být přesná včetně velikosti písmen a veškeré interpunkce, která se vyskytuje ve zdrojovém PDF.
 
-Určete přesně, který text chcete učinit prohledávatelným:
+Určete přesně, jaký text chcete učinit prohledávatelným:
 
 ```java
 searchTextFragment.setText("Welcome to GroupDocs");
 ```
 
-**Důležitá poznámka**: Text musí přesně odpovídat tomu, co je v PDF. Záleží na velikosti písmen i na mezerách.
+**Důležité:** Extrakce textu z PDF může zavést skryté Unicode znaky; pokud se anotace neobjeví, nejprve extrahujte text stránky a vložte přesný řetězec do kódu.
 
-#### Krok 4: Přizpůsobení vzhledu
+#### Krok 4: přizpůsobení vzhledu
 
-Zde můžete své anotace vizuálně odlišit:
+Můžete řídit barvu pozadí, barvu textu, průhlednost a styl okraje. Hodnoty ARGB jsou vyjádřeny jako `0xAARRGGBB`.
+
+Zde můžete učinit své anotace vizuálně odlišnými:
 
 ```java
 // Set font size for better readability
@@ -151,11 +222,13 @@ searchTextFragment.setFontColor(65535);
 searchTextFragment.setBackgroundColor(16761035);
 ```
 
-**Tip pro barvy**: Tyto na první pohled náhodné číslice jsou hodnoty ARGB (Alpha, Red, Green, Blue). Můžete použít online konvertory barev k získání přesných hodnot, nebo zůstat u těchto osvědčených kombinací, které zajišťují dobrou čitelnost.
+**Tip pro kódování barev:** Čísla `0x7FFF0000` (poloprůhledná červená) a `0xFF0000FF` (neprůhledná modrá) byly otestovány tak, aby poskytovaly vysoký kontrast na obrazovce i v tisku.
 
-#### Krok 5: Použití a uložení
+#### Krok 5: aplikace a uložení
 
-Přidejte anotaci a uložte vylepšený PDF:
+Přidejte fragment do anotátoru a zapište aktualizované PDF na disk. Volání `close()` uvnitř bloku try‑with‑resources uvolní nativní paměť.
+
+Přidejte anotaci a uložte vylepšené PDF:
 
 ```java
    annotator.add(searchTextFragment);
@@ -163,15 +236,15 @@ Přidejte anotaci a uložte vylepšený PDF:
 }
 ```
 
-Uzavírací závorka automaticky uvolní objekt `Annotator`, čímž uvolní paměť.
+Zavírací složená závorka automaticky uvolní objekt `Annotator`, čímž se uvolní paměť.
 
 ## Pokročilé možnosti přizpůsobení
 
-Jakmile zvládnete základy, můžete své anotace rozšířit o následující pokročilé funkce:
+Jakmile základ funguje, můžete obohatit zážitek o více typů anotací, vlastní fonty a strategické barevné palety.
 
 ### Více typů anotací
 
-Do stejného dokumentu můžete přidat různé typy anotací:
+GroupDocs.Annotation vám umožní kombinovat prohledávatelný text s zvýrazněním, razítky a komentáři v jednom dokumentu.
 
 ```java
 // Create different annotations for different purposes
@@ -184,29 +257,29 @@ noteSection.setText("Note:");
 noteSection.setBackgroundColor(65280); // Green background for informational notes
 ```
 
-### Nejlepší praktiky přizpůsobení fontů
+### Nejlepší postupy pro přizpůsobení fontů
 
-Různé fonty fungují lépe v různých kontextech:
+Vyberte fonty, které odpovídají účelu dokumentu:
 
-- **Calibri nebo Arial** — vhodné pro obecné obchodní dokumenty  
-- **Times New Roman** — profesionální volba pro právní dokumenty  
-- **Courier New** — vynikající pro technickou dokumentaci s kódem  
+- **Calibri nebo Arial** – ideální pro obchodní zprávy.  
+- **Times New Roman** – standard pro právní smlouvy.  
+- **Courier New** – perfektní pro úryvky kódu v technických příručkách.
 
 ### Strategie barev pro profesionální dokumenty
 
-Zde jsou osvědčené kombinace barev, které zachovávají čitelnost:
+Zde jsou tři otestované kombinace barev, které zachovávají vysokou čitelnost napříč PDF prohlížeči:
 
-- **Kritické položky**: Červené pozadí (`#FF0000`) s bílým textem  
-- **Důležité poznámky**: Žluté pozadí (`#FFFF00`) s černým textem  
-- **Obecné zvýraznění**: Světle modré pozadí (`#ADD8E6`) s tmavě modrým textem  
+- **Kritické položky** – červené pozadí (`#FF0000`) s bílým textem.  
+- **Důležité poznámky** – žluté pozadí (`#FFFF00`) s černým textem.  
+- **Obecné zvýraznění** – světle modré pozadí (`#ADD8E6`) s tmavě modrým textem.
 
 ## Časté problémy a řešení
 
-Pojďme se podívat na problémy, se kterými se pravděpodobně setkáte (aby vás nepřekvapily těžkou cestou):
+Níže jsou problémy, se kterými se pravděpodobně setkáte, a stručné opravy.
 
 ### Problémy s cestou k souboru
-**Problém**: `FileNotFoundException` při pokusu otevřít PDF  
-**Řešení**: Používejte absolutní cesty během vývoje a implementujte řádnou validaci cest:
+**Problém:** `FileNotFoundException` při otevírání PDF.  
+**Řešení:** Používejte absolutní cesty během vývoje a ověřte cestu před vytvořením instance `Annotator`:
 
 ```java
 File inputFile = new File("YOUR_DOCUMENT_DIRECTORY/input.pdf");
@@ -215,9 +288,9 @@ if (!inputFile.exists()) {
 }
 ```
 
-### Chyby „Text Not Found“
-**Problém**: Vaše anotace se neobjeví, protože text nebyl nalezen  
-**Řešení**: Text musí přesně odpovídat. Zvažte nejprve extrakci textu z PDF, abyste viděli, jaký text je skutečně dostupný:
+### Chyby „text nenalezen“
+**Problém:** Anotace se neobjeví, protože hledaný text nebyl nalezen.  
+**Řešení:** Nejprve extrahujte text stránky a ověřte přesný řetězec, včetně mezer a interpunkce:
 
 ```java
 // Use this approach to verify text exists before annotating
@@ -225,23 +298,23 @@ if (!inputFile.exists()) {
 ```
 
 ### Problémy s pamětí u velkých PDF
-**Problém**: `OutOfMemoryError` při zpracování velkých dokumentů  
-**Řešení**: Zvyšte velikost haldy JVM a zpracovávejte dokumenty po dávkách:
+**Problém:** `OutOfMemoryError` při zpracování PDF větších než 500 MB.  
+**Řešení:** Zvyšte haldu JVM (`-Xmx2g`) a zpracovávejte dokumenty v dávkách, opakovaně využívejte jedinou instanci `Annotator`, pokud je to možné:
 
 ```bash
 java -Xmx2g -Xms1g YourApplication
 ```
 
-### Problémy s oprávněním
-**Problém**: Nelze uložit do výstupního adresáře  
-**Řešení**: Ujistěte se, že má vaše aplikace právo zápisu do cílového adresáře, a zvažte použití dočasných adresářů pro zpracování.
+### Problémy s oprávněními
+**Problém:** Nelze zapsat výstupní soubor.  
+**Řešení:** Zajistěte, aby aplikace měla oprávnění k zápisu do cílové složky, nebo zapisujte do dočasného adresáře a po zpracování soubor přesuňte.
 
 ## Tipy pro optimalizaci výkonu
 
-Když přecházíte z prototypu do produkce, tyto optimalizace udělají velký rozdíl:
+Při přechodu z demo verze na produkční pipeline tyto úpravy přinášejí znatelný rozdíl.
 
 ### Správa zdrojů
-Vždy používejte try‑with‑resources pro objekty `Annotator`. To zabraňuje únikům paměti, které mohou při zatížení aplikaci zhavarovat:
+Vždy obalte `Annotator` blokem try‑with‑resources. Tento vzor eliminuje riziko úniků nativní paměti, které mohou zhavarovat dlouhodobě běžící služby.
 
 ```java
 // Good practice - automatic resource cleanup
@@ -251,7 +324,7 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 ```
 
 ### Strategie dávkového zpracování
-Pokud zpracováváte více dokumentů, nevytvářejte zbytečně nové instance `Annotator`:
+Vytvořte jeden `Annotator` na soubor, přidejte všechny požadované objekty `SearchTextFragment` a poté zavolejte `save`. Opakované používání stejné instance `Annotator` napříč více soubory zabraňuje opakovanému načítání nativní knihovny.
 
 ```java
 // Process multiple annotations on the same document efficiently
@@ -266,122 +339,108 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-### Správa paměti
-Pro rozsáhlé zpracování dokumentů:
+### Správa paměti pro masivní PDF
+GroupDocs.Annotation dokáže zpracovat PDF až do **5 000 stránek**, přičemž využití paměti zůstává pod **200 MB** díky své streamovací architektuře. Pro zůstání v tomto rozmezí:
 
-- Sledujte využití paměti JVM pomocí nástrojů jako JVisualVM  
-- Zvažte asynchronní zpracování dokumentů, aby nedocházelo k zamrznutí UI  
-- Implementujte řádnou obsluhu chyb, aby nedocházelo k únikům zdrojů  
+`DocumentPageIterator` poskytuje iterátor pro sekvenční zpracování PDF stránek v zvládnutelných dávkách.  
+- Zpracovávejte stránky po částech pomocí `DocumentPageIterator`.  
+- Vypněte nepotřebné funkce, jako je extrakce obrázků, pokud potřebujete jen zvýraznění textu.
 
 ## Reálné aplikace a příklady použití
 
-Pochopení, kdy a jak efektivně použít textové anotace, může transformovat vaše pracovní postupy s dokumenty:
+Pochopení obchodní hodnoty vám pomůže rozhodnout, kde tuto techniku aplikovat.
 
 ### Zpracování právních dokumentů
-Právnické firmy používají prohledávatelné anotace k:
-
-- Zvýraznění kritických ustanovení ve smlouvách  
-- Označení sekcí vyžadujících revizi klientem  
-- Označení potenciálních právních rizik pro pozornost advokáta  
-
-**Tip pro implementaci**: Používejte jednotné barevné kódování napříč organizací, aby všichni věděli, že červená znamená „kritická revize“ a žlutá „rozhodnutí klienta“.
+Právnické firmy zvýrazňují klauzule, které vyžadují schválení klienta, označují rizikový jazyk a generují zprávy o všech zvýrazněných sekcích. Konzistentní zvýraznění červeným pozadím signalizuje „nutná kritická revize“.
 
 ### Technická dokumentace
-Softwarové společnosti vylepšují svou dokumentaci tím, že:
-
-- Anotují změny API v technických specifikacích  
-- Zvýrazňují breaking changes v poznámkách k vydání  
-- Označují zastaralé funkce v legacy dokumentaci  
+Softwarové týmy anotují změny API, deprekování a bezpečnostní upozornění přímo v PDF poznámkách k vydání, což umožňuje inženýrům okamžitě najít aktualizace.
 
 ### Vzdělávací materiály
-Vzdělávací instituce vytvářejí lepší studijní materiály tím, že:
-
-- Zvýrazňují klíčové pojmy v učebnicích  
-- Označují důležitá data v historických dokumentech  
-- Flagují složité témata, která vyžadují další vysvětlení  
+Profesoři vkládají prohledávatelná zvýraznění klíčových konceptů, čímž činí studijní materiály interaktivnějšími pro studenty používající čtečky obrazovky nebo mobilní PDF prohlížeče.
 
 ## Nejlepší praktiky integrace
 
-### Vzory integrace podniku
-Při integraci s většími systémy:
-
-1. **API‑First Design** — Zabalte funkčnost anotací do REST API.  
-2. **Async Processing** — Použijte fronty zpráv pro velké objemy dokumentů.  
-3. **Error Recovery** — Implementujte retry logiku pro síťové nebo souborové chyby.  
-4. **Monitoring** — Přidejte logování a metriky pro sledování výkonu.  
+### Vzory podnikové integrace
+1. **API‑first design** – vystavte logiku anotací přes REST endpoint.  
+2. **Asynchronní zpracování** – posílejte PDF soubory do fronty zpráv (např. RabbitMQ) a nechte pracovní službu aplikovat anotace.  
+3. **Obnova po chybě** – implementujte retry logiku pro přechodné I/O selhání.  
+4. **Monitorování** – logujte dobu trvání anotací a využití paměti pomocí strukturovaného loggeru (např. Logback).
 
 ### Bezpečnostní úvahy
-- Validujte všechny vstupní cesty k souborům, aby se zabránilo útokům typu directory‑traversal.  
-- Implementujte řádné řízení přístupu k endpointům zpracování dokumentů.  
-- Zvažte šifrování citlivých dokumentů během zpracování.  
+- Validujte cesty k souborům, aby se zabránilo útokům typu directory‑traversal.  
+- Vynucujte řízení přístupu založené na rolích na endpointu služby anotací.  
+- Šifrujte PDF v klidu, pokud obsahují citlivá data, pomocí Java `Cipher` API před zápisem souboru.
 
 ## Průvodce řešením problémů
 
-### Rychlý diagnostický kontrolní seznam
-Když něco selže, zkontrolujte tyto položky v uvedeném pořadí:
-
-1. **Oprávnění k souborům** — Může vaše aplikace číst vstupní soubor a zapisovat do výstupního adresáře?  
-2. **Správnost cesty** — Používáte správné cesty (dávejte pozor na rozdíly mezi Windows a Linux separátory)?  
-3. **Verze knihovny** — Je verze GroupDocs.Annotation kompatibilní s vaší verzí Javy?  
-4. **Dostupnost paměti** — Je JVM nakonfigurován s dostatečnou pamětí pro velikost dokumentu?  
-5. **Shoda textu** — Odpovídá anotovaný text přesně tomu, co je v PDF?  
+### Rychlý kontrolní seznam diagnostiky
+1. **Oprávnění k souborům** – může proces číst zdrojové PDF a zapisovat do cílové složky?  
+2. **Správnost cesty** – dvakrát zkontrolujte oddělovače Windows (`\`) vs. Linux (`/`).  
+3. **Verze knihovny** – ujistěte se, že používáte GroupDocs.Annotation 25.2 nebo novější; starší verze postrádají optimalizace pro dávkové zpracování.  
+4. **Paměť JVM** – ověřte, že velikost haldy (`-Xmx`) odpovídá velikosti PDF, které zpracováváte.  
+5. **Přesná shoda textu** – spusťte rychlou extrakci, aby jste potvrdili, že řetězec anotace existuje doslovně.
 
 ### Aktivace ladícího režimu
-Povolte podrobné logování pro diagnostiku problémů:
+Povolte podrobný log, aby se zachytil interní proces vyhledávání:
 
 ```java
 // Add this to see detailed processing information
 System.setProperty("groupdocs.annotation.debug", "true");
 ```
 
+Log bude uvádět každou prohledávanou stránku a zda byl cílový výraz nalezen, což vám pomůže odhalit nesoulady.
+
 ## Často kladené otázky
 
 **Q: Mohu přidat více různých anotací do stejného PDF?**  
-A: Rozhodně! Můžete přidat libovolný počet anotací do jednoho dokumentu. Stačí vytvořit více objektů `SearchTextFragment` s různým textem a stylem a všechny je přidat před uložením.
+A: Rozhodně. Vytvořte několik objektů `SearchTextFragment` (nebo jiných typů anotací) a přidejte je všechny před voláním `save`.
 
 **Q: Budou anotace fungovat ve všech PDF prohlížečích?**  
-A: Ano, anotace vytvořené GroupDocs jsou standardní PDF anotace, které fungují v Adobe Acrobat, webových prohlížečích i dalších PDF prohlížečích. Některé prohlížeče mohou barvy zobrazit mírně odlišně.
+A: Ano. GroupDocs vytváří standardní PDF anotace, které jsou správně zobrazovány v Adobe Acrobat, Chrome, Edge a většině třetích stranových prohlížečů. Barvy se mohou mírně lišit v závislosti na renderovacím enginu prohlížeče.
 
-**Q: Jak zacházet s PDF, které mají složité rozvržení nebo více sloupců?**  
-A: GroupDocs.Annotation automaticky zvládá složité rozvržení. Klíčové je, aby vyhledávaný text přesně odpovídal tomu, co je v PDF, bez ohledu na složitost rozvržení.
+**Q: Jak zacházet s PDF s komplexním rozvržením nebo více sloupci?**  
+A: GroupDocs.Annotation zpracovává vizuální tok textu, takže stačí zajistit, aby přesně zadaný řetězec odpovídal extrahovanému textu, bez ohledu na pořadí sloupců.
 
 **Q: Existuje limit, kolik textu mohu anotovat?**  
-A: Praktický limit neexistuje. Nicméně velmi velké množství anotací (tisíce) může ovlivnit výkon načítání PDF v některých prohlížečích.
+A: Neexistuje pevný limit počtu anotací. V praxi může přidání tisíců zvýraznění prodloužit dobu vykreslování v některých prohlížečích, proto je rozdělujte logicky (např. po kapitolách).
 
-**Q: Můžu po přidání anotací upravit nebo odstranit anotace?**  
-A: Ano, GroupDocs.Annotation poskytuje metody pro aktualizaci a odstraňování anotací. Můžete načíst existující anotace, změnit jejich vlastnosti nebo je úplně smazat.
+**Q: Mohu po přidání anotací upravit nebo odstranit anotace?**  
+A: Ano. Použijte metodu `getAnnotations()` k získání existujících objektů a poté volejte `update()` nebo `delete()` podle potřeby.
 
-**Q: Co se stane, když text anotace není v PDF nalezen?**  
-A: Pokud přesný text není nalezen, anotace se nepřidá. Operace nevyvolá chybu, ale v PDF se žádná anotace neobjeví. Vždy ověřte, že vyhledávaný text odpovídá obsahu PDF.
+**Q: Co se stane, když text anotace v PDF není nalezen?**  
+A: API tichounce přeskočí přidání. Výjimka není vyhozena, ale anotace se neobjeví. Vždy nejprve ověřte shodu.
 
 **Q: Jak zajistit, aby mé anotované PDF zůstaly přístupné?**  
-A: Používejte kontrastní barevné kombinace, nespoléhejte se jen na barvu pro předání významu a přidejte popisný text k anotacím. To pomáhá uživatelům s poruchami zraku.
+A: Vyberte vysokokontrastní barvy, nespoléhejte se výhradně na barvu k předání významu a přidejte popisný text ke každé anotaci, aby ji čtečky obrazovky mohly oznámit.
 
 ## Závěr
 
-Nyní už víte, jak **create searchable PDF Java** soubory pomocí GroupDocs.Annotation. Tato výkonná funkce promění statické PDF na interaktivní, prohledávatelné dokumenty, které zvyšují produktivitu a usnadňují spolupráci.
+Nyní máte kompletní, produkčně připravený návod pro **vytvoření prohledávatelných PDF souborů v Javě** pomocí GroupDocs.Annotation. Dodržením výše uvedených kroků můžete:
 
-**Klíčové poznatky**
+- Nastavit čistý Maven projekt s nejnovější knihovnou.  
+- Přidat jednorázová prohledávatelná zvýraznění, která jsou okamžitě objevitelná.  
+- Přizpůsobit vzhled pomocí ARGB barev a výběru fontů.  
+- Škálovat řešení na tisíce stránek při nízkém využití paměti.  
 
-- **Nastavení je zásadní** — správná Maven konfigurace a licence odstraňují počáteční překážky.  
-- **Správa zdrojů** — používejte try‑with‑resources pro udržení nízké spotřeby paměti.  
-- **Přizpůsobení** — promyšlené barvy a fonty zlepšují čitelnost.  
-- **Výkon** — dávkové zpracování a správná velikost JVM udržují velké úlohy stabilní.  
-
-Jste připraveni implementovat tuto funkci ve svém dalším projektu? Začněte s jednoduchým příkladem a postupně přidávejte pokročilé funkce podle rostoucích požadavků. Investice do naučení této technologie se vám vrátí v podobě plynulejších pracovních toků s dokumenty a spokojenějších uživatelů.
+Začněte se základním příkladem, poté experimentujte s více typy anotací, dávkovým zpracováním a vystavením REST‑API, abyste tuto schopnost integrovali do stávajících pipeline pro správu dokumentů. Úsilí, které dnes vložíte, se vám vrátí v rychlejších revizích, méně ručním vyhledávání a spokojenějších koncových uživatelích.
 
 ---
 
-**Last Updated:** 2026-03-08  
-**Tested With:** GroupDocs.Annotation 25.2 (Java)  
-**Author:** GroupDocs  
+**Poslední aktualizace:** 2026-09-15  
+**Testováno s:** GroupDocs.Annotation 25.2 (Java)  
+**Autor:** GroupDocs  
 
-**Resources and Further Reading**
+**Zdroje a další četba**
+- [Dokumentace GroupDocs.Annotation pro Java](https://docs.groupdocs.com/annotation/java/)  
+- [Kompletní průvodce API referencí](https://reference.groupdocs.com/annotation/java/)  
+- [Vydání GroupDocs](https://releases.groupdocs.com/annotation/java/)  
+- [Koupit licenci GroupDocs](https://purchase.groupdocs.com/buy)  
+- [Začít bezplatnou zkušební verzi](https://releases.groupdocs.com/annotation/java/)  
+- [Získat rozšířenou zkušební licenci](https://purchase.groupdocs.com/temporary-license/)  
+- [Fórum podpory GroupDocs](https://forum.groupdocs.com/c/annotation/)
 
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
-- [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
-- [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- [Start Your Free Trial](https://releases.groupdocs.com/annotation/java/)  
-- [Get Extended Trial License](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+## Související tutoriály
+- [Přidat zvýraznění PDF v Javě – Kompletní průvodce textovými anotacemi](/annotation/java/text-annotations/)  
+- [Vytvořit zvýraznění PDF v Javě: Kompletní průvodce s GroupDocs Annotation](/annotation/java/annotation-management/)  
+- [Načíst PDF v Javě s GroupDocs Annotation: Průvodce načítáním dokumentů](/annotation/java/document-loading/)

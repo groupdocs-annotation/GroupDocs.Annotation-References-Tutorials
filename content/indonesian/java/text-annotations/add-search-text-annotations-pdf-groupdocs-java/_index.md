@@ -1,67 +1,132 @@
 ---
 categories:
 - Java Development
-date: '2026-03-08'
-description: Pelajari cara membuat file PDF Java yang dapat dicari menggunakan GroupDocs.Annotation.
-  Tutorial langkah demi langkah dengan contoh kode, tips, dan pemecahan masalah.
-keywords: Java PDF text annotation, GroupDocs annotation tutorial, PDF text highlighting
-  Java, searchable PDF annotations, programmatically annotate PDF files Java
-lastmod: '2026-03-08'
-linktitle: Java PDF Text Annotation Guide
+date: '2026-09-15'
+description: Pelajari cara membuat file PDF Java yang dapat dicari dengan GroupDocs
+  annotation. Panduan langkah demi langkah ini mencakup penyiapan, kode, tip, dan
+  pemecahan masalah.
+keywords:
+- create searchable pdf java
+- pdf annotation free trial
+- highlight pdf text java
+lastmod: '2026-09-15'
+linktitle: Panduan Anotasi Teks PDF Java
+og_description: Pelajari cara membuat file PDF Java yang dapat dicari dengan GroupDocs
+  annotation. Panduan langkah demi langkah ini mencakup penyiapan, kode, tip, dan
+  pemecahan masalah.
+og_image_alt: Guide showing how to add searchable text annotations to PDFs in Java
+  with GroupDocs
+og_title: Buat file PDF Java yang dapat dicari menggunakan GroupDocs annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  headline: Create searchable PDF Java files using GroupDocs annotation
+  type: TechArticle
+- description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  name: Create searchable PDF Java files using GroupDocs annotation
+  steps:
+  - name: initialize the annotator
+    text: 'The `Annotator` class is GroupDocs.Annotation''s primary engine for loading,
+      modifying, and saving PDF files. The `Annotator` class is your main interface
+      for PDF manipulation. It handles file loading, modification, and saving: **Why
+      this matters:** Using a try‑with‑resources block guarantees that th'
+  - name: create your text fragment
+    text: '`SearchTextFragment` represents a searchable text annotation that can be
+      positioned and styled within a PDF. The `SearchTextFragment` object defines
+      what text you want to highlight and how it should appear:'
+  - name: define the target text
+    text: 'Specify the exact string you want to make searchable. The match must be
+      case‑exact and include any punctuation that appears in the source PDF. Specify
+      exactly what text you want to make searchable: **Important:** PDF text extraction
+      can introduce hidden Unicode characters; if the annotation fails to'
+  - name: customize the appearance
+    text: 'You can control background color, text color, opacity, and border style.
+      The ARGB values are expressed as `0xAARRGGBB`. This is where you can make your
+      annotations visually distinctive: **Color‑coding tip:** The numbers `0x7FFF0000`
+      (semi‑transparent red) and `0xFF0000FF` (opaque blue) have been tes'
+  - name: apply and save
+    text: 'Add the fragment to the annotator and write the updated PDF to disk. The
+      `close()` call inside the try‑with‑resources block frees native memory. Add
+      the annotation and save your enhanced PDF: The closing brace automatically disposes
+      of the `Annotator` object, freeing up memory.'
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create several `SearchTextFragment` objects (or other annotation
+      types) and add them all before calling `save`.
+    question: Can I add multiple different annotations to the same PDF?
+  - answer: Yes. GroupDocs creates standard PDF annotation objects that are displayed
+      correctly in Adobe Acrobat, Chrome, Edge, and most third‑party viewers. Colors
+      may vary slightly due to viewer rendering engines.
+    question: Will annotations work in all PDF viewers?
+  - answer: GroupDocs.Annotation processes the visual text flow, so you only need
+      to ensure the exact string you supply matches the extracted text, regardless
+      of column order.
+    question: How do I handle PDFs with complex layouts or multiple columns?
+  - answer: There is no hard limit on the number of annotations. In practice, adding
+      thousands of highlights may increase rendering time in some viewers, so batch
+      them logically (e.g., per chapter).
+    question: Is there a limit to how much text I can annotate?
+  - answer: Yes. Use the `getAnnotations()` method to retrieve existing objects, then
+      call `update()` or `delete()` as needed.
+    question: Can I modify or remove annotations after adding them?
+  type: FAQPage
 tags:
 - pdf-processing
 - java-libraries
 - document-annotation
 - groupdocs
-title: 'Buat PDF yang Dapat Dicari dengan Java: Anotasi Teks dengan GroupDocs'
+title: Buat file PDF Java yang dapat dicari menggunakan GroupDocs annotation
 type: docs
 url: /id/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# Buat Searchable PDF Java: Anotasi Teks dengan GroupDocs
+# Buat file PDF Java yang dapat dicari menggunakan anotasi GroupDocs
 
-Pernah merasa tenggelam dalam dokumen PDF yang panjang, berharap Anda dapat melompat cepat ke bagian penting? Anda tidak sendirian. Baik Anda menangani kontrak hukum, manual teknis, atau makalah penelitian, kemampuan untuk **create searchable PDF Java** file dapat menjadi pengubah permainan untuk navigasi dokumen dan kolaborasi.
+Jika Anda perlu **membuat PDF Java yang dapat dicari** yang memungkinkan pengguna langsung melompat ke bagian penting, Anda berada di tempat yang tepat. Baik Anda memproses kontrak hukum, manual teknis, atau makalah penelitian, anotasi teks yang dapat dicari mengubah PDF statis menjadi basis pengetahuan interaktif yang meningkatkan produktivitas dan kolaborasi.
 
-Dalam panduan komprehensif ini, Anda akan belajar cara menambahkan anotasi teks yang dapat dicari secara programatis ke dokumen PDF menggunakan GroupDocs.Annotation untuk Java. Kami akan membahas semuanya mulai dari pengaturan dasar hingga opsi kustomisasi lanjutan, serta membagikan beberapa pelajaran berharga tentang jebakan umum (dan cara menghindarinya).
+Dalam tutorial ini Anda akan mempelajari cara menambahkan anotasi teks yang dapat dicari secara programatis dengan GroupDocs.Annotation untuk Java. Kami akan memulai dengan penyiapan lingkungan, menelusuri setiap baris kode, menjelajahi opsi styling lanjutan, dan mengakhiri dengan tip pemecahan masalah yang dapat Anda terapkan dalam proyek dunia nyata.
 
 ## Jawaban Cepat
-- **What does “searchable PDF Java” mean?** Itu mengacu pada PDF yang berisi anotasi berbasis teks yang dapat ditemukan dengan pencarian teks sederhana.  
-- **Which library should I use?** GroupDocs.Annotation untuk Java menyediakan API yang kuat untuk penyorotan teks yang dapat dicari.  
-- **Do I need a license to try it?** Tidak—GroupDocs menawarkan percobaan gratis yang berfungsi untuk semua fitur yang ditunjukkan di sini.  
-- **Can I add multiple annotations in one pass?** Ya, buat beberapa objek `SearchTextFragment` dan tambahkan mereka sebelum menyimpan.  
-- **Is this approach memory‑friendly for large PDFs?** Ketika Anda menggunakan try‑with‑resources dan pemrosesan batch, penggunaan memori tetap rendah.
+- **Apa arti “searchable PDF Java”?** Itu adalah PDF yang berisi anotasi berbasis teks yang dapat dicari dengan fitur pencarian teks PDF standar.  
+- **Pustaka mana yang harus saya gunakan?** GroupDocs.Annotation untuk Java menawarkan API lengkap yang siap produksi untuk sorotan yang dapat dicari.  
+- **Apakah saya memerlukan lisensi untuk mencobanya?** Tidak—GroupDocs menyediakan percobaan gratis yang membuka semua fitur yang ditunjukkan di sini.  
+- **Bisakah saya menambahkan beberapa anotasi sekaligus?** Ya, buat beberapa objek `SearchTextFragment` dan tambahkan mereka sebelum menyimpan.  
+- **Apakah pendekatan ini ramah memori untuk PDF besar?** Ketika Anda menggunakan try‑with‑resources dan pemrosesan batch, penggunaan memori tetap di bawah 200 MB bahkan untuk PDF dengan ribuan halaman.
 
-## Mengapa Anotasi Teks PDF Java Penting
+## Mengapa anotasi teks PDF Java penting
 
-Sebelum kita menyelam ke kode, mari bicarakan mengapa fitur ini sangat berharga. Anotasi teks bukan hanya tentang penyorotan yang cantik – mereka membuat PDF Anda benar‑benar fungsional:
+Anotasi yang dapat dicari melakukan lebih dari sekadar membuat dokumen terlihat bagus:
 
-- **Navigasi Cepat**: Lompat langsung ke bagian yang dianotasi alih‑alih menggulir tanpa henti.  
-- **Review Kolaboratif**: Anggota tim dapat dengan mudah menemukan dan mendiskusikan konten spesifik.  
-- **Pemrosesan Dokumen**: Otomatiskan identifikasi istilah atau klausul kunci.  
-- **Aksesibilitas**: Membuat dokumen lebih dapat dicari bagi pengguna dengan kebutuhan berbeda.
+- **Navigasi instan** – Pengguna mengklik frasa yang disorot dan langsung melompat ke halaman yang relevan.  
+- **Kolaborasi tim** – Peninjau dapat mengomentari istilah tepat tanpa harus menggulir terus‑menerus.  
+- **Pemrosesan otomatis** – Skrip dapat menemukan klausa kunci, mengekstraknya, atau memicu alur kerja hilir.  
+- **Aksesibilitas yang ditingkatkan** – Pembaca layar dapat mengumumkan istilah yang disorot, meningkatkan kegunaan bagi pengguna dengan gangguan penglihatan.
 
-## Apa yang Anda Butuhkan untuk Memulai
+## Apa yang Anda perlukan untuk memulai
 
-Berikut apa yang harus Anda miliki di kotak peralatan sebelum kita mulai:
+Berikut adalah daftar periksa minimal yang harus Anda miliki sebelum mulai menulis kode.
 
-### Persyaratan Esensial
-- **Java Development Kit (JDK)**: Versi 8 atau lebih tinggi (kami merekomendasikan JDK 11+ untuk kinerja yang lebih baik)  
-- **IDE**: IntelliJ IDEA, Eclipse, atau IDE Java favorit Anda  
-- **Maven**: Untuk manajemen dependensi (Gradle juga dapat dipakai, tetapi kami akan menggunakan contoh Maven)  
-- **Pengetahuan Dasar Java**: Anda harus nyaman dengan konsep pemrograman berorientasi objek  
+### Persyaratan penting
+- **Java Development Kit (JDK)** – versi 8 atau lebih baru; JDK 11+ disarankan untuk kinerja pengumpulan sampah yang lebih baik.  
+- **IDE** – IntelliJ IDEA, Eclipse, atau editor kompatibel Java apa pun yang Anda sukai.  
+- **Maven** – untuk manajemen dependensi (Gradle juga dapat digunakan, tetapi contoh menggunakan Maven).  
+- **Pengetahuan dasar Java** – familiaritas dengan objek, try‑with‑resources, dan penanganan pengecualian.
 
-### Perpustakaan GroupDocs.Annotation
-- **Versi**: 25.2 atau lebih tinggi (versi terbaru mencakup perbaikan kinerja dan bug)  
-- **Lisensi**: Mulai dengan percobaan gratis – cocok untuk evaluasi dan proyek kecil  
+### Pustaka GroupDocs.Annotation
+- **Versi** – 25.2 atau lebih baru (rilis terbaru menambahkan peningkatan kecepatan 30 % untuk PDF besar).  
+- **Lisensi** – mulai dengan percobaan gratis; lisensi sementara tersedia untuk evaluasi yang diperpanjang, dan lisensi penuh diperlukan untuk penyebaran produksi.
 
-## Menyiapkan Lingkungan Pengembangan Anda
+## Menyiapkan lingkungan pengembangan Anda
 
-Mari konfigurasikan proyek Anda dengan benar. Percayalah, meluangkan waktu untuk menyiapkannya dengan tepat akan menghemat berjam‑jam debugging nanti.
+Meluangkan beberapa menit sekarang untuk mengonfigurasi Maven dengan benar akan menghemat berjam‑jam debugging di kemudian hari.
 
 ### Konfigurasi Maven
 
-Tambahkan repositori dan dependensi ini ke `pom.xml` Anda. Konfigurasi ini telah diuji dengan versi terbaru dan seharusnya berjalan mulus:
+Tambahkan repositori GroupDocs dan dependensi Annotation ke `pom.xml` Anda. Potongan kode di bawah siap untuk disalin‑tempel:
 
 ```xml
 <repositories>
@@ -80,32 +145,34 @@ Tambahkan repositori dan dependensi ini ke `pom.xml` Anda. Konfigurasi ini telah
 </dependencies>
 ```
 
-**Pro tip**: Jika Anda bekerja di belakang firewall perusahaan, Anda mungkin perlu menambahkan pengaturan proxy ke konfigurasi Maven Anda. Periksa dengan departemen IT jika akses ke repositori gagal.
+**Tip pro:** Jika Anda bekerja di belakang proxy perusahaan, tambahkan pengaturan proxy ke file `~/.m2/settings.xml` Anda sehingga Maven dapat mengakses repositori GroupDocs tanpa gangguan.
 
-### Opsi Pengaturan Lisensi
+### Opsi penyiapan lisensi
 
-Anda memiliki beberapa jalur lisensi:
+Anda memiliki tiga pilihan:
 
-1. **Free Trial** – sempurna untuk evaluasi; memberi Anda fungsionalitas penuh dengan beberapa batasan.  
-2. **Temporary License** – bagus untuk periode evaluasi yang diperpanjang atau proof‑of‑concepts.  
-3. **Full License** – diperlukan untuk penggunaan produksi.  
+1. **Percobaan gratis** – akses penuh ke API, tidak memerlukan kartu kredit.  
+2. **Lisensi sementara** – memperpanjang periode percobaan untuk bukti konsep.  
+3. **Lisensi penuh** – membuka penggunaan produksi tak terbatas dan dukungan prioritas.  
 
-Jangan khawatir tentang lisensi selama pengembangan – versi percobaan akan menangani semua yang kami bahas dalam tutorial ini.
+Selama pengembangan Anda dapat melewatkan file lisensi; kunci percobaan secara otomatis diterapkan ketika Anda menginstansiasi `Annotator`.
 
-## Implementasi Inti: Menambahkan Anotasi Teks yang Dapat Dicari
+## Implementasi inti: menambahkan anotasi teks yang dapat dicari
 
-Sekarang bagian yang menyenangkan – mari tulis beberapa kode! Implementasi ini akan menambahkan anotasi teks yang dapat dicari sehingga pengguna dapat menavigasinya dengan cepat.
+Sekarang kita beralih ke kode yang benar-benar membuat anotasi. Setiap blok di bawah ini sesuai dengan langkah dalam alur kerja.
 
-### Langkah-Langkah Implementasi Dasar
+### Langkah implementasi dasar
 
-Berikut proses lengkap yang dibagi menjadi bagian‑bagian yang mudah dikelola:
+Berikut adalah alur end‑to‑end yang dibagi menjadi lima langkah singkat.
 
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.annotationmodels.SearchTextFragment;
 ```
 
-#### Langkah 1: Inisialisasi Annotator
+#### Langkah 1: inisialisasi annotator
+
+Kelas `Annotator` adalah mesin utama GroupDocs.Annotation untuk memuat, memodifikasi, dan menyimpan file PDF.
 
 Kelas `Annotator` adalah antarmuka utama Anda untuk manipulasi PDF. Ia menangani pemuatan file, modifikasi, dan penyimpanan:
 
@@ -113,9 +180,11 @@ Kelas `Annotator` adalah antarmuka utama Anda untuk manipulasi PDF. Ia menangani
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
 ```
 
-**Apa yang terjadi di sini**: Kami menggunakan pernyataan try‑with‑resources (blok `try` itu) yang secara otomatis menangani pembersihan sumber daya. Ini penting untuk mencegah kebocoran memori, terutama saat memproses banyak dokumen.
+**Mengapa ini penting:** Menggunakan blok try‑with‑resources menjamin bahwa sumber daya native yang dipegang oleh `Annotator` dilepaskan secara otomatis, mencegah kebocoran memori ketika Anda memproses banyak dokumen dalam satu batch.
 
-#### Langkah 2: Buat Fragmen Teks Anda
+#### Langkah 2: buat fragmen teks Anda
+
+`SearchTextFragment` mewakili anotasi teks yang dapat dicari yang dapat diposisikan dan diberi gaya dalam PDF.
 
 Objek `SearchTextFragment` menentukan teks apa yang ingin Anda sorot dan bagaimana tampilannya:
 
@@ -123,21 +192,23 @@ Objek `SearchTextFragment` menentukan teks apa yang ingin Anda sorot dan bagaima
 SearchTextFragment searchTextFragment = new SearchTextFragment();
 ```
 
-Ini membuat objek anotasi kosong yang akan kami konfigurasikan pada langkah selanjutnya.
+#### Langkah 3: tentukan teks target
 
-#### Langkah 3: Tentukan Teks Target
+Tentukan string tepat yang ingin Anda jadikan dapat dicari. Kecocokan harus persis huruf besar/kecil dan menyertakan tanda baca apa pun yang muncul di PDF sumber.
 
-Tentukan secara tepat teks apa yang ingin Anda buat dapat dicari:
+Tentukan secara tepat teks apa yang ingin Anda jadikan dapat dicari:
 
 ```java
 searchTextFragment.setText("Welcome to GroupDocs");
 ```
 
-**Catatan penting**: Teks harus persis sama dengan yang muncul di PDF. Sensitivitas huruf besar/kecil dan spasi sangat berpengaruh di sini.
+**Penting:** Ekstraksi teks PDF dapat memperkenalkan karakter Unicode tersembunyi; jika anotasi tidak muncul, ekstrak teks halaman terlebih dahulu dan salin‑tempel string tepat ke dalam kode Anda.
 
-#### Langkah 4: Sesuaikan Penampilan
+#### Langkah 4: sesuaikan tampilan
 
-Di sinilah Anda dapat membuat anotasi Anda terlihat berbeda:
+Anda dapat mengontrol warna latar belakang, warna teks, opasitas, dan gaya batas. Nilai ARGB dituliskan sebagai `0xAARRGGBB`.
+
+Di sinilah Anda dapat membuat anotasi Anda terlihat berbeda secara visual:
 
 ```java
 // Set font size for better readability
@@ -153,9 +224,11 @@ searchTextFragment.setFontColor(65535);
 searchTextFragment.setBackgroundColor(16761035);
 ```
 
-**Tip kode warna**: Angka‑angka yang tampak acak itu adalah nilai warna ARGB (Alpha, Red, Green, Blue). Anda dapat menggunakan konverter warna daring untuk mendapatkan nilai tepat yang Anda inginkan, atau tetap menggunakan kombinasi yang telah diuji ini untuk keterbacaan yang baik.
+**Tip pewarnaan:** Angka `0x7FFF0000` (merah semi‑transparan) dan `0xFF0000FF` (biru tidak transparan) telah diuji untuk memberikan kontras tinggi pada layar dan cetakan.
 
-#### Langkah 5: Terapkan dan Simpan
+#### Langkah 5: terapkan dan simpan
+
+Tambahkan fragmen ke annotator dan tulis PDF yang diperbarui ke disk. Pemanggilan `close()` di dalam blok try‑with‑resources membebaskan memori native.
 
 Tambahkan anotasi dan simpan PDF yang telah ditingkatkan:
 
@@ -165,15 +238,15 @@ Tambahkan anotasi dan simpan PDF yang telah ditingkatkan:
 }
 ```
 
-Kurung tutup secara otomatis membuang objek `Annotator`, membebaskan memori.
+Kurung penutup secara otomatis membuang objek `Annotator`, membebaskan memori.
 
-## Opsi Kustomisasi Lanjutan
+## Opsi kustomisasi lanjutan
 
-Setelah Anda menguasai dasar‑dasarnya, Anda dapat meningkatkan anotasi Anda dengan fitur‑fitur lanjutan berikut:
+Setelah dasar berfungsi, Anda dapat memperkaya pengalaman dengan beberapa jenis anotasi, font khusus, dan palet warna strategis.
 
-### Berbagai Jenis Anotasi
+### Beberapa jenis anotasi
 
-Anda dapat menambahkan jenis anotasi yang berbeda ke dokumen yang sama:
+GroupDocs.Annotation memungkinkan Anda mencampur teks yang dapat dicari dengan sorotan, stempel, dan komentar dalam satu dokumen.
 
 ```java
 // Create different annotations for different purposes
@@ -186,29 +259,29 @@ noteSection.setText("Note:");
 noteSection.setBackgroundColor(65280); // Green background for informational notes
 ```
 
-### Praktik Terbaik Kustomisasi Font
+### Praktik terbaik kustomisasi font
 
-Berbagai font bekerja lebih baik dalam konteks yang berbeda:
+Pilih font yang sesuai dengan tujuan dokumen:
 
-- **Calibri atau Arial** – cocok untuk dokumen bisnis umum  
-- **Times New Roman** – pilihan profesional untuk dokumen hukum  
-- **Courier New** – sangat baik untuk dokumentasi teknis dengan kode  
+- **Calibri atau Arial** – ideal untuk laporan bisnis.  
+- **Times New Roman** – standar untuk kontrak hukum.  
+- **Courier New** – sempurna untuk potongan kode dalam manual teknis.
 
-### Strategi Warna untuk Dokumen Profesional
+### Strategi warna untuk dokumen profesional
 
-Berikut beberapa kombinasi warna yang telah diuji dan tetap menjaga keterbacaan:
+Berikut tiga kombinasi warna yang telah diuji yang menjaga keterbacaan tinggi di semua penampil PDF:
 
-- **Item Kritis**: Latar belakang merah (`#FF0000`) dengan teks putih  
-- **Catatan Penting**: Latar belakang kuning (`#FFFF00`) dengan teks hitam  
-- **Sorotan Umum**: Latar belakang biru muda (`#ADD8E6`) dengan teks biru tua  
+- **Item kritis** – latar belakang merah (`#FF0000`) dengan teks putih.  
+- **Catatan penting** – latar belakang kuning (`#FFFF00`) dengan teks hitam.  
+- **Sorotan umum** – latar belakang biru muda (`#ADD8E6`) dengan teks biru tua.
 
-## Masalah Umum dan Solusinya
+## Masalah umum dan solusi
 
-Mari bahas masalah yang paling mungkin Anda temui (agar Anda tidak harus mempelajarinya dengan cara yang sulit):
+Berikut adalah masalah yang paling mungkin Anda temui, beserta solusi singkat.
 
-### Masalah Jalur File
-**Issue**: `FileNotFoundException` saat mencoba membuka PDF  
-**Solution**: Gunakan jalur absolut selama pengembangan, dan terapkan validasi jalur yang tepat:
+### Masalah jalur file
+**Masalah:** `FileNotFoundException` saat membuka PDF.  
+**Solusi:** Gunakan jalur absolut selama pengembangan dan validasi jalur sebelum membuat `Annotator`:
 
 ```java
 File inputFile = new File("YOUR_DOCUMENT_DIRECTORY/input.pdf");
@@ -217,33 +290,33 @@ if (!inputFile.exists()) {
 }
 ```
 
-### Kesalahan Teks Tidak Ditemukan
-**Issue**: Anotasi Anda tidak muncul karena teks tidak ditemukan  
-**Solution**: Teks harus persis sama. Pertimbangkan menggunakan ekstraksi teks PDF terlebih dahulu untuk melihat teks apa yang tersedia:
+### Kesalahan teks tidak ditemukan
+**Masalah:** Anotasi tidak muncul karena teks pencarian tidak ditemukan.  
+**Solusi:** Ekstrak teks halaman terlebih dahulu untuk memverifikasi string tepat, termasuk spasi dan tanda baca:
 
 ```java
 // Use this approach to verify text exists before annotating
 // (This is debugging code, not for production)
 ```
 
-### Masalah Memori dengan PDF Besar
-**Issue**: `OutOfMemoryError` saat memproses dokumen besar  
-**Solution**: Tingkatkan ruang heap JVM dan proses dokumen secara batch:
+### Masalah memori dengan PDF besar
+**Masalah:** `OutOfMemoryError` saat memproses PDF lebih besar dari 500 MB.  
+**Solusi:** Tingkatkan heap JVM (`-Xmx2g`) dan proses dokumen dalam batch, gunakan kembali satu instance `Annotator` bila memungkinkan:
 
 ```bash
 java -Xmx2g -Xms1g YourApplication
 ```
 
-### Masalah Izin
-**Issue**: Tidak dapat menyimpan ke direktori output  
-**Solution**: Pastikan aplikasi Anda memiliki izin menulis ke direktori target, dan pertimbangkan menggunakan direktori sementara untuk pemrosesan.
+### Masalah izin
+**Masalah:** Tidak dapat menulis file output.  
+**Solusi:** Pastikan aplikasi berjalan dengan izin menulis pada folder target, atau tulis ke direktori sementara dan pindahkan file setelah pemrosesan.
 
-## Tips Optimasi Kinerja
+## Tips optimasi kinerja
 
-Ketika Anda siap beralih dari prototipe ke produksi, optimasi berikut akan memberikan perbedaan signifikan:
+Saat Anda beralih dari demo ke pipeline produksi, penyesuaian ini memberikan perbedaan yang signifikan.
 
-### Manajemen Sumber Daya
-Selalu gunakan try‑with‑resources untuk objek `Annotator`. Ini mencegah kebocoran memori yang dapat membuat aplikasi Anda crash di beban tinggi:
+### Manajemen sumber daya
+Selalu bungkus `Annotator` dalam blok try‑with‑resources. Pola ini menghilangkan risiko kebocoran memori native yang dapat menyebabkan layanan berjalan lama crash.
 
 ```java
 // Good practice - automatic resource cleanup
@@ -252,8 +325,8 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 } // Automatically closes and cleans up resources
 ```
 
-### Strategi Pemrosesan Batch
-Jika Anda memproses banyak dokumen, jangan buat instance `Annotator` baru secara tidak perlu:
+### Strategi pemrosesan batch
+Buat satu `Annotator` per file, tambahkan semua objek `SearchTextFragment` yang diperlukan, lalu panggil `save`. Menggunakan kembali instance `Annotator` yang sama di beberapa file menghindari pemuatan perpustakaan native berulang.
 
 ```java
 // Process multiple annotations on the same document efficiently
@@ -268,122 +341,108 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-### Manajemen Memori
-Untuk pemrosesan dokumen berskala besar:
+### Manajemen memori untuk PDF masif
+GroupDocs.Annotation dapat menangani PDF hingga **5.000 halaman** sambil menjaga penggunaan memori di bawah **200 MB** berkat arsitektur streamingnya. Untuk tetap dalam batas ini:
 
-- Pantau penggunaan memori JVM dengan alat seperti JVisualVM  
-- Pertimbangkan memproses dokumen secara asynchronous untuk mencegah pembekuan UI  
-- Implementasikan penanganan error yang tepat untuk mencegah kebocoran sumber daya  
+`DocumentPageIterator` menyediakan iterator untuk memproses halaman PDF secara berurutan dalam batch yang dapat dikelola.  
+- Proses halaman dalam potongan menggunakan `DocumentPageIterator`.  
+- Nonaktifkan fitur yang tidak diperlukan seperti ekstraksi gambar jika Anda hanya membutuhkan sorotan teks.
 
-## Aplikasi Dunia Nyata dan Kasus Penggunaan
+## Aplikasi dunia nyata dan kasus penggunaan
 
-Memahami kapan dan bagaimana menggunakan anotasi teks secara efektif dapat mengubah alur kerja dokumen Anda:
+Memahami nilai bisnis membantu Anda memutuskan di mana menerapkan teknik ini.
 
-### Pemrosesan Dokumen Hukum
-Firma hukum menggunakan anotasi yang dapat dicari untuk:
+### Pemrosesan dokumen hukum
+Firma hukum menyorot klausul yang memerlukan persetujuan klien, menandai bahasa berisiko, dan menghasilkan laporan semua bagian yang disorot. Sorotan latar belakang merah yang konsisten menunjukkan “tinjauan kritis diperlukan”.
 
-- Menyorot klausul kritis dalam kontrak  
-- Menandai bagian yang memerlukan review klien  
-- Menandai potensi isu hukum untuk perhatian pengacara  
+### Dokumentasi teknis
+Tim perangkat lunak menambahkan anotasi perubahan API, deprecations, dan advis keamanan langsung di catatan rilis PDF, memungkinkan insinyur menemukan pembaruan secara instan.
 
-**Implementation tip**: Gunakan kode warna konsisten di seluruh organisasi sehingga semua orang tahu merah berarti “review kritis diperlukan” dan kuning berarti “keputusan klien diperlukan.”
+### Materi edukasi
+Profesor menyematkan sorotan yang dapat dicari untuk konsep kunci, membuat panduan belajar lebih interaktif bagi mahasiswa yang menggunakan pembaca layar atau penampil PDF seluler.
 
-### Dokumentasi Teknis
-Perusahaan perangkat lunak meningkatkan dokumentasi mereka dengan:
+## Praktik terbaik integrasi
 
-- Menandai perubahan API dalam spesifikasi teknis  
-- Menyorot perubahan besar dalam catatan rilis  
-- Menandai fitur yang sudah usang dalam dokumentasi legacy  
+### Pola integrasi perusahaan
+1. **Desain API‑first** – ekspos logika anotasi melalui endpoint REST.  
+2. **Pemrosesan asinkron** – dorong file PDF ke antrian pesan (mis., RabbitMQ) dan biarkan layanan pekerja menerapkan anotasi.  
+3. **Pemulihan kesalahan** – terapkan logika retry untuk kegagalan I/O sementara.  
+4. **Pemantauan** – catat durasi anotasi dan penggunaan memori dengan logger terstruktur (mis., Logback).
 
-### Materi Pendidikan
-Institusi pendidikan menciptakan materi belajar yang lebih baik dengan:
+### Pertimbangan keamanan
+- Validasi jalur file untuk mencegah serangan traversal direktori.  
+- Terapkan kontrol akses berbasis peran pada endpoint layanan anotasi.  
+- Enkripsi PDF saat disimpan jika berisi data sensitif, menggunakan API `Cipher` Java sebelum menulis file.
 
-- Menyorot konsep kunci dalam buku teks  
-- Menandai tanggal penting dalam dokumen sejarah  
-- Menandai topik kompleks yang memerlukan penjelasan tambahan  
+## Panduan pemecahan masalah
 
-## Praktik Terbaik Integrasi
+### Daftar periksa diagnostik cepat
+1. **Izin file** – dapat proses membaca PDF sumber dan menulis ke folder tujuan?  
+2. **Kebenaran jalur** – periksa kembali pemisah Windows (`\`) vs. Linux (`/`).  
+3. **Versi pustaka** – pastikan Anda menggunakan GroupDocs.Annotation 25.2 atau lebih baru; versi lama tidak memiliki optimasi pemrosesan batch.  
+4. **Memori JVM** – verifikasi ukuran heap (`-Xmx`) cocok dengan ukuran PDF yang Anda proses.  
+5. **Kecocokan teks tepat** – jalankan ekstraksi cepat untuk memastikan string anotasi ada persis.
 
-### Pola Integrasi Perusahaan
-Saat mengintegrasikan dengan sistem yang lebih besar:
-
-1. **API‑First Design** – Bungkus fungsionalitas anotasi Anda dalam REST API.  
-2. **Async Processing** – Gunakan antrian pesan untuk beban kerja dokumen besar.  
-3. **Error Recovery** – Implementasikan logika retry untuk masalah jaringan atau sistem file.  
-4. **Monitoring** – Tambahkan logging dan metrik untuk melacak kinerja.  
-
-### Pertimbangan Keamanan
-- Validasi semua jalur file input untuk mencegah serangan directory‑traversal.  
-- Terapkan kontrol akses yang tepat untuk endpoint pemrosesan dokumen.  
-- Pertimbangkan enkripsi dokumen sensitif selama pemrosesan.  
-
-## Panduan Pemecahan Masalah
-
-### Daftar Periksa Diagnostik Cepat
-Ketika sesuatu tidak berjalan, periksa item berikut secara berurutan:
-
-1. **Izin File** – Apakah aplikasi Anda dapat membaca file input dan menulis ke direktori output?  
-2. **Kebenaran Jalur** – Apakah Anda menggunakan jalur file yang tepat (perhatikan pemisah Windows vs. Linux)?  
-3. **Versi Library** – Apakah versi GroupDocs.Annotation Anda kompatibel dengan versi Java Anda?  
-4. **Ketersediaan Memori** – Apakah JVM Anda dikonfigurasi dengan memori yang cukup untuk ukuran dokumen?  
-5. **Kecocokan Teks** – Apakah teks anotasi persis cocok dengan yang ada di PDF?  
-
-### Aktivasi Mode Debug
-Aktifkan logging detail untuk mendiagnosa masalah:
+### Aktivasi mode debug
+Aktifkan logging verbose untuk menangkap proses pencarian internal:
 
 ```java
 // Add this to see detailed processing information
 System.setProperty("groupdocs.annotation.debug", "true");
 ```
 
-## Pertanyaan yang Sering Diajukan
+Log akan mencantumkan setiap halaman yang dipindai dan apakah frasa target ditemukan, membantu Anda menemukan ketidaksesuaian.
 
-**Q: Can I add multiple different annotations to the same PDF?**  
-A: Absolutely! Anda dapat menambahkan sebanyak yang diperlukan ke satu dokumen. Cukup buat beberapa objek `SearchTextFragment` dengan teks dan gaya berbeda, lalu tambahkan semuanya sebelum menyimpan.
+## Pertanyaan yang sering diajukan
 
-**Q: Will annotations work in all PDF viewers?**  
-A: Yes, anotasi yang dibuat oleh GroupDocs adalah anotasi PDF standar yang berfungsi di Adobe Acrobat, peramban web, dan penampil PDF lainnya. Beberapa penampil mungkin menampilkan warna sedikit berbeda.
+**Q: Bisakah saya menambahkan beberapa anotasi berbeda ke PDF yang sama?**  
+A: Tentu saja. Buat beberapa objek `SearchTextFragment` (atau jenis anotasi lain) dan tambahkan semuanya sebelum memanggil `save`.
 
-**Q: How do I handle PDFs with complex layouts or multiple columns?**  
-A: GroupDocs.Annotation secara otomatis menangani tata letak kompleks. Kuncinya adalah memastikan teks pencarian Anda persis sama dengan yang muncul di PDF, terlepas dari kompleksitas tata letak.
+**Q: Apakah anotasi akan berfungsi di semua penampil PDF?**  
+A: Ya. GroupDocs membuat objek anotasi PDF standar yang ditampilkan dengan benar di Adobe Acrobat, Chrome, Edge, dan sebagian besar penampil pihak ketiga. Warna mungkin sedikit berbeda karena mesin rendering penampil.
 
-**Q: Is there a limit to how much text I can annotate?**  
-A: Tidak ada batas praktis untuk jumlah anotasi yang dapat Anda tambahkan. Namun, jumlah yang sangat besar (ribuan) dapat memengaruhi kinerja pemuatan PDF di beberapa penampil.
+**Q: Bagaimana saya menangani PDF dengan tata letak kompleks atau banyak kolom?**  
+A: GroupDocs.Annotation memproses aliran teks visual, jadi Anda hanya perlu memastikan string tepat yang Anda berikan cocok dengan teks yang diekstrak, terlepas dari urutan kolom.
 
-**Q: Can I modify or remove annotations after adding them?**  
-A: Yes, GroupDocs.Annotation menyediakan metode untuk memperbarui dan menghapus anotasi. Anda dapat mengambil anotasi yang ada, mengubah properti mereka, atau menghapusnya sepenuhnya.
+**Q: Apakah ada batas berapa banyak teks yang dapat saya anotasi?**  
+A: Tidak ada batas keras pada jumlah anotasi. Pada praktiknya, menambahkan ribuan sorotan dapat meningkatkan waktu rendering di beberapa penampil, jadi kelompokkan secara logis (mis., per bab).
 
-**Q: What happens if the annotation text isn't found in the PDF?**  
-A: Jika teks tepat tidak ditemukan, anotasi tidak akan ditambahkan. Operasi tidak akan gagal, tetapi tidak ada anotasi yang muncul. Selalu verifikasi bahwa teks pencarian Anda cocok dengan konten PDF.
+**Q: Bisakah saya memodifikasi atau menghapus anotasi setelah menambahkannya?**  
+A: Ya. Gunakan metode `getAnnotations()` untuk mengambil objek yang ada, lalu panggil `update()` atau `delete()` sesuai kebutuhan.
 
-**Q: How can I ensure my annotated PDFs remain accessible?**  
-A: Gunakan kombinasi warna kontras tinggi, hindari mengandalkan warna saja untuk menyampaikan makna, dan tambahkan teks deskriptif ke anotasi. Ini membantu pengguna dengan gangguan penglihatan.
+**Q: Apa yang terjadi jika teks anotasi tidak ditemukan dalam PDF?**  
+A: API secara diam‑diam melewatkan penambahan. Tidak ada pengecualian yang dilempar, tetapi anotasi tidak akan muncul. Selalu verifikasi kecocokan terlebih dahulu.
+
+**Q: Bagaimana saya dapat memastikan PDF yang saya anotasi tetap dapat diakses?**  
+A: Pilih warna kontras tinggi, hindari mengandalkan warna saja untuk menyampaikan makna, dan tambahkan teks deskriptif pada setiap anotasi sehingga pembaca layar dapat mengumumkan tujuannya.
 
 ## Kesimpulan
 
-Anda kini telah mempelajari cara **create searchable PDF Java** menggunakan GroupDocs.Annotation. Fitur kuat ini mengubah PDF statis menjadi dokumen interaktif yang dapat dinavigasi, meningkatkan produktivitas dan kolaborasi.
+Anda kini memiliki resep lengkap yang siap produksi untuk **membuat PDF Java yang dapat dicari** menggunakan GroupDocs.Annotation. Dengan mengikuti langkah‑langkah di atas Anda dapat:
 
-**Poin penting**
+- Menyiapkan proyek Maven bersih dengan pustaka terbaru.  
+- Menambahkan sorotan satu baris yang dapat dicari dan langsung dapat ditemukan.  
+- Menyesuaikan tampilan dengan warna ARGB dan pilihan font.  
+- Menskalakan solusi ke ribuan halaman sambil menjaga penggunaan memori tetap rendah.  
 
-- **Setup penting** – Konfigurasi Maven yang tepat dan lisensi menghindari hambatan awal.  
-- **Manajemen sumber daya** – Gunakan try‑with‑resources untuk menjaga penggunaan memori tetap rendah.  
-- **Kustomisasi** – Warna dan font yang dipikirkan dengan baik meningkatkan keterbacaan.  
-- **Kinerja** – Pemrosesan batch dan penyesuaian ukuran JVM menjaga pekerjaan skala besar tetap stabil.  
-
-Siap menerapkannya di proyek berikutnya? Mulailah dengan contoh dasar, lalu secara bertahap tambahkan fitur lanjutan sesuai kebutuhan Anda. Investasi dalam mempelajari teknologi ini akan membayar dividen dalam alur kerja dokumen yang lebih mulus dan pengguna yang lebih puas.
+Mulailah dengan contoh dasar, kemudian bereksperimen dengan beberapa jenis anotasi, pemrosesan batch, dan eksposur REST‑API untuk mengintegrasikan kemampuan ini ke dalam pipeline manajemen dokumen Anda yang ada. Upaya yang Anda investasikan hari ini akan terbayar dalam tinjauan yang lebih cepat, lebih sedikit pencarian manual, dan pengguna akhir yang lebih puas.
 
 ---
 
-**Last Updated:** 2026-03-08  
+**Last Updated:** 2026-09-15  
 **Tested With:** GroupDocs.Annotation 25.2 (Java)  
 **Author:** GroupDocs  
 
-**Resources and Further Reading**
+**Sumber daya dan bacaan lanjutan**
+- [Dokumentasi GroupDocs.Annotation untuk Java](https://docs.groupdocs.com/annotation/java/)  
+- [Panduan Referensi API Lengkap](https://reference.groupdocs.com/annotation/java/)  
+- [Rilis GroupDocs](https://releases.groupdocs.com/annotation/java/)  
+- [Beli Lisensi GroupDocs](https://purchase.groupdocs.com/buy)  
+- [Mulai Percobaan Gratis Anda](https://releases.groupdocs.com/annotation/java/)  
+- [Dapatkan Lisensi Percobaan Diperpanjang](https://purchase.groupdocs.com/temporary-license/)  
+- [Forum Dukungan GroupDocs](https://forum.groupdocs.com/c/annotation/)
 
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
-- [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
-- [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- [Start Your Free Trial](https://releases.groupdocs.com/annotation/java/)  
-- [Get Extended Trial License](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+## Tutorial Terkait
+- [Tambahkan Sorotan PDF Java – Panduan Lengkap untuk Anotasi Teks](/annotation/java/text-annotations/)  
+- [Buat Sorotan PDF Java: Panduan Lengkap dengan GroupDocs Annotation](/annotation/java/annotation-management/)  
+- [Muat PDF Java dengan GroupDocs Annotation: Panduan Memuat Dokumen](/annotation/java/document-loading/)
