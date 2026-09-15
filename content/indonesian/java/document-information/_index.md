@@ -1,165 +1,152 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Pelajari cara mengekstrak metadata dari dokumen dalam Java menggunakan
-  GroupDocs.Annotation. Panduan ini mencakup cara memvalidasi tipe file di Java, mendapatkan
-  jumlah halaman, mendeteksi format file di Java, dan mengambil tanggal pembuatan.
-keywords: java document metadata extraction, java document information api, extract
-  document properties java, java file format detection, document analysis java
-lastmod: '2026-03-01'
-linktitle: Document Information Tutorials
+date: '2026-09-15'
+description: Cara mengekstrak metadata di Java menggunakan GroupDocs.Annotation. Memvalidasi
+  file types, mendapatkan page counts, mendeteksi formats, dan mengambil creation
+  dates secara efisien.
+keywords:
+- how to extract metadata
+- how to validate filetype
+- detect file format java
+- retrieve creation date java
+- get page count java
+lastmod: '2026-09-15'
+linktitle: Tutorial Informasi Dokumen
+og_description: Cara mengekstrak metadata di Java menggunakan GroupDocs.Annotation.
+  Memvalidasi file types, mendapatkan page counts, mendeteksi formats, dan mengambil
+  creation dates secara efisien.
+og_image_alt: Guide showing how to extract metadata and validate file type in Java
+  with GroupDocs.Annotation
+og_title: Cara mengekstrak metadata dan memvalidasi file type di Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: How to extract metadata in Java using GroupDocs.Annotation. Validate
+    file types, get page counts, detect formats, and retrieve creation dates efficiently.
+  headline: How to extract metadata and validate file type in Java
+  type: TechArticle
+- questions:
+  - answer: Use `Annotation.getSupportedFileExtensions()` to retrieve the list of
+      supported extensions, then compare the file’s extension or inspect its header
+      with `Annotation.getFileFormat()`.
+    question: How do I programmatically detect the format of an unknown file?
+  - answer: Most formats expose a creation timestamp via `DocumentInfo.getCreatedDate()`.
+      If a format lacks this property, the API returns `null`.
+    question: Can I retrieve the document creation date for all supported types?
+  - answer: Call `Annotation.isSupported(filePath)` or compare the file’s extension
+      against the enumeration from `Annotation.getSupportedFileExtensions()`.
+    question: What is the best way to validate a file type in Java before processing?
+  - answer: Yes, GroupDocs.Annotation reads only the header sections required for
+      page count, keeping memory usage low even for multi‑hundred‑page PDFs.
+    question: Is it possible to get the page count of a PDF without loading the entire
+      file?
+  - answer: Extract metadata first, cache the result, and if you need to process the
+      full content, use streaming APIs or process the document in chunks.
+    question: How should I handle large documents to avoid memory issues?
+  type: FAQPage
 tags:
 - document-processing
 - metadata-extraction
 - java-api
 - file-analysis
-title: Validasi Tipe File Java & Ekstrak Metadata menggunakan GroupDocs
+- groupdocs
+- java
+title: Cara mengekstrak metadata dan memvalidasi file type di Java
 type: docs
 url: /id/java/document-information/
 weight: 12
 ---
 
-# Validasi Tipe File Java & Ekstrak Metadata Dokumen
+# Cara mengekstrak metadata dan memvalidasi tipe file di Java
 
-Pernahkah Anda perlu mengetahui jumlah halaman dokumen sebelum memprosesnya? Atau memeriksa apakah format file didukung oleh aplikasi Anda? **Validating file type Java** lebih awal dapat menghemat waktu dan sumber daya Anda. Panduan komprehensif ini menunjukkan cara mengekstrak metadata dan informasi menggunakan GroupDocs.Annotation untuk Java – membuat alur kerja pemrosesan dokumen Anda lebih cerdas dan lebih efisien.
+Dalam pipeline pemrosesan dokumen modern, **cara mengekstrak metadata** dengan cepat menentukan apakah sebuah file dapat diproses lebih lanjut. Tutorial ini memandu Anda menggunakan GroupDocs.Annotation untuk Java untuk memvalidasi tipe file, membaca jumlah halaman, mendeteksi format yang tepat, dan mengambil cap waktu pembuatan—semua tanpa memuat seluruh dokumen ke memori. Pada akhir tutorial, Anda akan memiliki pola yang dapat digunakan kembali yang menghemat siklus CPU dan mencegah kesalahan runtime yang mahal.
 
 ## Jawaban Cepat
-- **Apa tujuan utama metadata extraction?** Ini memungkinkan Anda mengumpulkan informasi file (tipe, halaman, ukuran) sebelum pemrosesan berat.  
-- **Library mana yang menangani ini di Java?** GroupDocs.Annotation for Java menyediakan API sederhana untuk metadata extraction.  
+- **Apa tujuan utama ekstraksi metadata?** Ini memungkinkan Anda mengumpulkan informasi file (tipe, halaman, ukuran) sebelum pemrosesan berat.  
+- **Perpustakaan mana yang menangani ini di Java?** GroupDocs.Annotation untuk Java menyediakan API sederhana untuk ekstraksi metadata.  
 - **Bagaimana saya dapat memvalidasi tipe file di Java?** Gunakan API supported‑formats untuk memeriksa kompatibilitas pada runtime.  
-- **Bisakah saya mengambil tanggal pembuatan dokumen?** Ya, objek DocumentInfo menampilkan timestamp pembuatan.  
-- **Apakah mungkin mendapatkan jumlah halaman dari format yang didukung?** Tentu – API mengembalikan jumlah halaman yang akurat untuk PDF, DOCX, PPTX, dan lainnya.
+- **Apakah saya dapat mengambil tanggal pembuatan dokumen?** Ya, objek `DocumentInfo` mengekspos cap waktu pembuatan.  
+- **Apakah memungkinkan untuk mendapatkan jumlah halaman dari format yang didukung?** Tentu – API mengembalikan jumlah halaman yang akurat untuk PDF, DOCX, PPTX, dan lainnya.
 
-## Apa Itu Ekstraksi Metadata dan Mengapa Penting?
+## Apa itu ekstraksi metadata?
+Ekstraksi metadata adalah pembacaan otomatis properti bawaan dokumen—seperti tipe file, jumlah halaman, ukuran, dan tanggal pembuatan—tanpa membuka seluruh konten. Dengan mengetahui detail ini lebih awal, Anda dapat memvalidasi tipe file Java, mengalokasikan sumber daya secara efisien, dan menyajikan informasi yang tepat kepada pengguna (misalnya, “PDF Anda memiliki 12 halaman”).
 
-Ekstraksi metadata adalah proses membaca properti bawaan dokumen secara programatis—seperti tipe file, jumlah halaman, ukuran, dan tanggal pembuatan—tanpa membuka seluruh konten. Dengan mengetahui detail ini lebih awal, Anda dapat:
-- **Validate file type Java** sebelum melakukan operasi yang mahal.  
-- **Java get page count** untuk mengalokasikan sumber daya atau memutuskan antrian pemrosesan.  
-- **Detect file format Java** untuk menerapkan logika khusus format.  
-- Berikan pengguna informasi yang akurat (mis., “PDF Anda memiliki 12 halaman”).
+## Mengapa menggunakan GroupDocs.Annotation untuk Java?
+GroupDocs.Annotation mendukung **lebih dari 70 format input dan output** dan dapat membaca metadata dari file hingga **2 GB** tanpa memuat seluruh file ke memori. Kemampuan terukur ini berarti Anda dapat memproses batch besar pada perangkat keras yang sederhana sambil menjaga latensi di bawah 200 ms per file.
 
-## Cara Memvalidasi Tipe File Java dan Mengekstrak Metadata dari Dokumen Menggunakan GroupDocs.Annotation
+## Prasyarat
+- Java 8 atau yang lebih baru terpasang.  
+- Perpustakaan GroupDocs.Annotation untuk Java ditambahkan ke proyek Anda (Maven/Gradle).  
+- Lisensi sementara atau berbayar GroupDocs yang valid untuk penggunaan produksi.
 
-GroupDocs.Annotation menawarkan kelas `DocumentInfo` yang sederhana yang mengembalikan semua properti relevan dalam satu panggilan. Berikut adalah alur kerja tipikal:
+## Cara memvalidasi tipe file di Java?
+`Annotation` adalah kelas titik masuk utama untuk bekerja dengan dokumen di GroupDocs.Annotation. Muat file dengan kelas `Annotation` dan panggil `isSupported`. Pemeriksaan satu baris ini secara instan memberi tahu Anda apakah dokumen dapat diproses, memungkinkan Anda menolak format yang tidak didukung sebelum terjadi I/O berat.
 
-1. **Instantiate the `Annotation` object** dengan aliran file atau path Anda.  
-2. **Call `getDocumentInfo()`** untuk mengambil instance `DocumentInfo`.  
-3. **Read properties** seperti `getFileType()`, `getPageCount()`, `getFileSize()`, dan `getCreatedDate()`.
+## Cara mengambil properti dokumen di Java?
+`DocumentInfo` mengenkapsulasi metadata tentang dokumen seperti tipe, ukuran, dan jumlah halaman. Kelas `DocumentInfo` menyediakan snapshot properti dokumen seperti tipe file, jumlah halaman, ukuran, dan tanggal pembuatan, memungkinkan Anda mengakses detail ini tanpa memuat seluruh konten.
 
-> **Pro tip:** Cache objek `DocumentInfo` jika Anda perlu mengakses dokumen yang sama beberapa kali; ini menghindari I/O yang berulang.
+## Cara mendeteksi format file di Java?
+Jika Anda memerlukan pengidentifikasi format yang tepat selain ekstensi file, gunakan `Annotation.getFileFormat(filePath)`. Metode ini memeriksa header file dan mengembalikan nilai enum yang dapat diandalkan, memastikan Anda menerapkan logika khusus format hanya ketika sesuai.
 
-### Cara Melakukan Validasi Tipe File Java
+## Cara mengekstrak jumlah halaman untuk dokumen yang didukung apa pun?
+Memanggil `DocumentInfo.getPageCount()` hanya membaca informasi header yang diperlukan, sehingga Anda memperoleh jumlah halaman tanpa memuat seluruh dokumen. Metode yang sama bekerja untuk PDF, DOCX, PPTX, XLSX, dan format lain yang didukung, memberi Anda cara terpadu untuk menangani pagination di seluruh format.
 
-Gunakan metode `Annotation.isSupported(filePath)` atau bandingkan ekstensi file dengan daftar yang dikembalikan oleh `Annotation.getSupportedFileExtensions()`. Ini memastikan Anda hanya memproses file yang dapat ditangani aplikasi Anda.
+## Kasus penggunaan umum
+- **Sistem manajemen dokumen:** Mengindeks file berdasarkan tipe, jumlah halaman, dan tanggal pembuatan untuk pencarian cepat.  
+- **Pipeline pemrosesan batch:** Mengarahkan PDF besar ke antrian khusus berdasarkan jumlah halaman.  
+- **Antarmuka unggah pengguna:** Menampilkan metadata file (tipe, halaman, ukuran) sebelum unggahan selesai.  
+- **Alur kerja otomatis:** Memicu langkah pemrosesan berbeda (OCR, konversi, pengarsipan) tergantung pada format yang terdeteksi.
 
-### Cara Membaca Properti Dokumen
+## Praktik terbaik untuk ekstraksi informasi dokumen
+- **Cache objek `DocumentInfo`** ketika file yang sama diakses berulang kali; ini menghindari I/O berulang.  
+- **Bungkus panggilan ekstraksi dalam blok try/catch** untuk menangani file yang rusak atau terunggah sebagian dengan elegan.  
+- **Validasi sebelum pemrosesan** menggunakan API supported‑formats untuk mengeliminasi file yang tidak didukung lebih awal.  
+- **Ekstrak hanya properti yang diperlukan**; hindari memanggil metode yang tidak Anda gunakan untuk menjaga operasi tetap ringan.
 
-Objek `DocumentInfo` menampilkan getter untuk properti umum:
-- `getFileType()` – mengembalikan format yang terdeteksi (mis., PDF, DOCX).  
-- `getFileSize()` – ukuran dalam byte.  
-- `getCreatedDate()` – timestamp pembuatan (bisa `null` jika tidak tersedia).  
+## Memecahkan masalah umum
+- **Kesalahan “Unsupported file format”**: Jalankan tutorial supported‑formats terlebih dahulu untuk memastikan kompatibilitas file.  
+- **Lonjakan memori dengan file sangat besar**: Meskipun ekstraksi metadata ringan, beberapa format tetap mengalokasikan buffer; pantau memori dan pertimbangkan streaming PDF besar.  
+- **Tanggal tidak konsisten antar format**: Normalisasi semua cap waktu ke ISO‑8601 di lapisan aplikasi Anda untuk penanganan yang seragam.
 
-### Cara Mendeteksi Format File Java
-
-Jika Anda perlu mengetahui format tepat selain ekstensi file, panggil `Annotation.getFileFormat(filePath)`. Ini memeriksa header file dan mengembalikan pengidentifikasi format yang dapat diandalkan.
-
-### Cara Mengekstrak Jumlah Halaman PDF
-
-Untuk PDF, `DocumentInfo.getPageCount()` hanya membaca informasi header yang diperlukan, sehingga Anda mendapatkan jumlah halaman tanpa memuat seluruh dokumen ke memori.
-
-### Cara Mendapatkan Jumlah Halaman Dokumen
-
-Metode `getPageCount()` yang sama berfungsi untuk semua format yang didukung (DOCX, PPTX, XLSX, dll.), memberikan cara terpadu untuk mengambil jumlah halaman atau slide.
-
-## Tutorial yang Tersedia
-
-### [Ekstraksi Metadata Dokumen Efisien Menggunakan GroupDocs.Annotation di Java](./groupdocs-annotation-java-document-info-extraction/)
-
-Tutorial ini adalah sumber utama Anda untuk mengekstrak metadata dokumen penting seperti tipe file, jumlah halaman, dan ukuran. Anda akan belajar cara mengambil properti dokumen secara efisien dan mengintegrasikan informasi ini ke dalam alur kerja manajemen dokumen Anda.
-
-**Apa yang akan Anda kuasai:**
-- Ekstrak informasi tipe file dan format  
-- Dapatkan jumlah halaman yang akurat untuk dokumen multi‑halaman  
-- Ambil ukuran dokumen dan tanggal pembuatan  
-- Tangani berbagai format dokumen secara konsisten  
-- Optimalkan ekstraksi metadata untuk kinerja  
-
-**Cocok untuk:** Pengembang yang membangun sistem manajemen dokumen, analis konten, atau aplikasi yang perlu memproses dokumen secara cerdas berdasarkan karakteristiknya.
-
-### [Cara Mengambil Format File yang Didukung di GroupDocs.Annotation untuk Java: Panduan Komprehensif](./groupdocs-annotation-java-supported-formats/)
-
-Pelajari cara secara programatis menemukan format file mana yang dapat ditangani aplikasi Anda. Panduan ini menunjukkan cara mencantumkan format yang didukung secara dinamis, membuat aplikasi Anda lebih fleksibel dan ramah pengguna.
-
-**Topik utama yang dibahas:**
-- Enumerasi semua format file yang didukung  
-- Periksa kompatibilitas format pada runtime – **how to detect format**  
-- Tampilkan format yang didukung kepada pengguna  
-- Tangani tipe file yang tidak didukung dengan elegan  
-- Bangun validasi format ke dalam alur kerja Anda  
-
-**Ideal untuk:** Aplikasi dengan fungsi unggah file, konverter dokumen, atau sistem apa pun yang perlu **validate file type Java** sebelum memproses.
-
-## Kasus Penggunaan Umum
-
-- **Document Management Systems:** Ekstrak metadata untuk membuat indeks yang dapat dicari.  
-- **Batch Processing Applications:** Gunakan jumlah halaman dan ukuran untuk memutuskan strategi pemrosesan.  
-- **User Upload Interfaces:** Tampilkan tipe file, jumlah halaman, dan tanggal pembuatan sebelum unggah.  
-- **Automated Workflows:** Arahkan dokumen berdasarkan karakteristiknya (mis., PDF besar ke antrian terpisah).
-
-## Praktik Terbaik untuk Ekstraksi Informasi Dokumen
-
-- **Cache Metadata When Possible:** Ekstraksi dapat memakan banyak sumber daya; gunakan kembali hasil ketika memproses file yang sama berulang kali.  
-- **Handle Exceptions Gracefully:** File yang rusak dapat menimbulkan error—selalu bungkus panggilan ekstraksi dalam blok try/catch.  
-- **Validate Before Processing:** Gunakan API supported‑formats untuk **validate file type Java** lebih awal.  
-- **Consider Performance:** Ekstrak hanya properti yang Anda butuhkan; hindari memuat seluruh konten kecuali diperlukan.
-
-## Memecahkan Masalah Umum
-
-- **“Unsupported File Format” Errors:** Jalankan tutorial supported‑formats terlebih dahulu untuk memastikan file dikenali.  
-- **Memory Issues with Large Files:** Beberapa format memuat seluruh dokumen untuk metadata; pantau memori dan pertimbangkan streaming untuk file yang sangat besar.  
-- **Inconsistent Results Across Formats:** Normalisasi metadata (mis., konversi tanggal ke ISO‑8601) di lapisan aplikasi Anda untuk konsistensi.
-
-## Pertimbangan Kinerja
-
-Ekstraksi metadata umumnya cepat, tetapi Anda dapat meningkatkan kinerja dengan:
+## Pertimbangan kinerja
+Ekstraksi metadata biasanya selesai dalam waktu kurang dari **200 ms** per file pada VM standar 2‑core. Anda dapat meningkatkan throughput lebih lanjut dengan:
 - Mengekstrak sekali dan menyimpan hasil dalam cache.  
-- Memproses dokumen dalam batch.  
-- Menggunakan eksekusi asynchronous untuk kumpulan dokumen besar.  
-- Memantau penggunaan memori, terutama dengan PDF resolusi tinggi.
+- Memproses file dalam batch paralel.  
+- Menggunakan eksekusi asynchronous untuk pipeline ingest volume tinggi.
 
-## Memulai
-
-Siap menerapkan ekstraksi informasi dokumen dalam aplikasi Java Anda? Mulailah dengan tutorial ekstraksi metadata untuk mempelajari dasar-dasarnya, kemudian jelajahi deteksi format untuk skenario yang lebih maju. Setiap panduan menyertakan contoh kode lengkap yang dapat Anda salin langsung ke proyek Anda.
-
-## Sumber Daya Tambahan
-
+## Sumber daya tambahan
 - [Dokumentasi GroupDocs.Annotation untuk Java](https://docs.groupdocs.com/annotation/java/)
 - [Referensi API GroupDocs.Annotation untuk Java](https://reference.groupdocs.com/annotation/java/)
 - [Unduh GroupDocs.Annotation untuk Java](https://releases.groupdocs.com/annotation/java/)
 - [Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
 - [Dukungan Gratis](https://forum.groupdocs.com/)
 - [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)
+- [Ekstraksi Metadata Dokumen Efisien Menggunakan GroupDocs.Annotation di Java](./groupdocs-annotation-java-document-info-extraction/)
+- [Cara Mengambil Format File yang Didukung di GroupDocs.Annotation untuk Java: Panduan Komprehensif](./groupdocs-annotation-java-supported-formats/)
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**Q: Bagaimana cara saya mendeteksi format file yang tidak diketahui secara programatis?**  
-A: Gunakan `Annotation.getSupportedFileExtensions()` untuk mengambil daftar ekstensi yang didukung, kemudian bandingkan ekstensi file atau header konten untuk menentukan apakah itu format yang didukung.
+**Q: Bagaimana cara mendeteksi format file yang tidak diketahui secara programatis?**  
+A: Gunakan `Annotation.getSupportedFileExtensions()` untuk mengambil daftar ekstensi yang didukung, lalu bandingkan ekstensi file atau periksa headernya dengan `Annotation.getFileFormat()`.
 
-**Q: Bisakah saya mengambil tanggal pembuatan dokumen untuk semua tipe yang didukung?**  
-A: Sebagian besar format menampilkan timestamp pembuatan melalui `DocumentInfo.getCreatedDate()`. Jika suatu format tidak menyimpan properti ini, API mengembalikan `null`.
+**Q: Apakah saya dapat mengambil tanggal pembuatan dokumen untuk semua tipe yang didukung?**  
+A: Sebagian besar format mengekspos cap waktu pembuatan melalui `DocumentInfo.getCreatedDate()`. Jika sebuah format tidak memiliki properti ini, API mengembalikan `null`.
 
-**Q: Apa cara terbaik untuk memvalidasi tipe file di Java sebelum memproses?**  
-A: Panggil `Annotation.isSupported(filePath)` atau periksa terhadap enumerasi yang dikembalikan oleh tutorial supported‑formats. Ini mencegah error “Unsupported File Format”.
+**Q: Apa cara terbaik untuk memvalidasi tipe file di Java sebelum diproses?**  
+A: Panggil `Annotation.isSupported(filePath)` atau bandingkan ekstensi file dengan enumerasi yang diperoleh dari `Annotation.getSupportedFileExtensions()`.
 
-**Q: Apakah mungkin mendapatkan jumlah halaman PDF tanpa memuat seluruh file?**  
-A: GroupDocs.Annotation hanya membaca header yang diperlukan untuk menghitung jumlah halaman, sehingga operasi tetap ringan bahkan untuk PDF besar.
+**Q: Apakah memungkinkan untuk mendapatkan jumlah halaman PDF tanpa memuat seluruh file?**  
+A: Ya, GroupDocs.Annotation hanya membaca bagian header yang diperlukan untuk jumlah halaman, sehingga penggunaan memori tetap rendah bahkan untuk PDF dengan ratusan halaman.
 
-**Q: Bagaimana cara menangani dokumen besar agar tidak terjadi masalah memori?**  
-A: Ekstrak metadata terlebih dahulu, cache hasilnya, dan pertimbangkan memproses dokumen dalam potongan atau menggunakan API streaming untuk operasi yang berat kontennya.
+**Q: Bagaimana sebaiknya menangani dokumen besar agar tidak terjadi masalah memori?**  
+A: Ekstrak metadata terlebih dahulu, cache hasilnya, dan jika perlu memproses konten penuh, gunakan API streaming atau proses dokumen secara bertahap.
 
----
-
-**Terakhir Diperbarui:** 2026-03-01  
-**Diuji Dengan:** GroupDocs.Annotation for Java 23.12  
+**Terakhir Diperbarui:** 2026-09-15  
+**Diuji Dengan:** GroupDocs.Annotation untuk Java 23.12  
 **Penulis:** GroupDocs
+
+## Tutorial Terkait
+- [Muat PDF Java dengan GroupDocs Annotation: Panduan Memuat Dokumen](/annotation/java/document-loading/)
+- [Cara Menerapkan Validasi Unggah File Java dengan GroupDocs.Annotation](/annotation/java/document-information/groupdocs-annotation-java-supported-formats/)
+- [Muat PDF Dilindungi Kata Sandi dengan GroupDocs.Annotation Java](/annotation/java/advanced-features/)

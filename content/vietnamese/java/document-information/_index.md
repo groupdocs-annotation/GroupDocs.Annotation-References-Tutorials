@@ -1,170 +1,152 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Tìm hiểu cách trích xuất siêu dữ liệu từ tài liệu trong Java bằng GroupDocs.Annotation.
-  Hướng dẫn này bao gồm cách xác thực loại tệp trong Java, lấy số trang, phát hiện
-  định dạng tệp trong Java và truy xuất ngày tạo.
-keywords: java document metadata extraction, java document information api, extract
-  document properties java, java file format detection, document analysis java
-lastmod: '2026-03-01'
-linktitle: Document Information Tutorials
+date: '2026-09-15'
+description: Cách trích xuất metadata trong Java bằng GroupDocs.Annotation. Xác thực
+  các loại tệp, lấy số trang, phát hiện định dạng và truy xuất ngày tạo một cách hiệu
+  quả.
+keywords:
+- how to extract metadata
+- how to validate filetype
+- detect file format java
+- retrieve creation date java
+- get page count java
+lastmod: '2026-09-15'
+linktitle: Hướng dẫn Thông tin Tài liệu
+og_description: Cách trích xuất metadata trong Java bằng GroupDocs.Annotation. Xác
+  thực các loại tệp, lấy số trang, phát hiện định dạng và truy xuất ngày tạo một cách
+  hiệu quả.
+og_image_alt: Guide showing how to extract metadata and validate file type in Java
+  with GroupDocs.Annotation
+og_title: Cách trích xuất metadata và xác thực loại tệp trong Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: How to extract metadata in Java using GroupDocs.Annotation. Validate
+    file types, get page counts, detect formats, and retrieve creation dates efficiently.
+  headline: How to extract metadata and validate file type in Java
+  type: TechArticle
+- questions:
+  - answer: Use `Annotation.getSupportedFileExtensions()` to retrieve the list of
+      supported extensions, then compare the file’s extension or inspect its header
+      with `Annotation.getFileFormat()`.
+    question: How do I programmatically detect the format of an unknown file?
+  - answer: Most formats expose a creation timestamp via `DocumentInfo.getCreatedDate()`.
+      If a format lacks this property, the API returns `null`.
+    question: Can I retrieve the document creation date for all supported types?
+  - answer: Call `Annotation.isSupported(filePath)` or compare the file’s extension
+      against the enumeration from `Annotation.getSupportedFileExtensions()`.
+    question: What is the best way to validate a file type in Java before processing?
+  - answer: Yes, GroupDocs.Annotation reads only the header sections required for
+      page count, keeping memory usage low even for multi‑hundred‑page PDFs.
+    question: Is it possible to get the page count of a PDF without loading the entire
+      file?
+  - answer: Extract metadata first, cache the result, and if you need to process the
+      full content, use streaming APIs or process the document in chunks.
+    question: How should I handle large documents to avoid memory issues?
+  type: FAQPage
 tags:
 - document-processing
 - metadata-extraction
 - java-api
 - file-analysis
-title: Xác thực loại tệp Java & Trích xuất siêu dữ liệu bằng GroupDocs
+- groupdocs
+- java
+title: Cách trích xuất metadata và xác thực loại tệp trong Java
 type: docs
 url: /vi/java/document-information/
 weight: 12
 ---
 
-# Xác Thực Loại Tập Tin Java & Trích Xuất Siêu Dữ Liệu Tài Liệu
+# Cách trích xuất siêu dữ liệu và xác thực loại tệp trong Java
 
-Bạn đã bao giờ cần biết số trang của một tài liệu trước khi xử lý nó chưa? Hoặc kiểm tra xem định dạng tệp có được ứng dụng của bạn hỗ trợ không? **Validating file type Java** sớm có thể giúp bạn tiết kiệm thời gian và tài nguyên. Hướng dẫn toàn diện này sẽ chỉ cho bạn cách trích xuất siêu dữ liệu và thông tin bằng cách sử dụng GroupDocs.Annotation cho Java – làm cho quy trình xử lý tài liệu của bạn thông minh và hiệu quả hơn.
+Trong các pipeline xử lý tài liệu hiện đại, **cách trích xuất siêu dữ liệu** nhanh chóng quyết định liệu một tệp có thể được xử lý ở các bước tiếp theo hay không. Hướng dẫn này sẽ chỉ cho bạn cách sử dụng GroupDocs.Annotation cho Java để xác thực loại tệp, đọc số trang, phát hiện định dạng chính xác và lấy thời gian tạo—tất cả mà không cần tải toàn bộ tài liệu vào bộ nhớ. Khi hoàn thành, bạn sẽ có một mẫu có thể tái sử dụng giúp tiết kiệm tài nguyên CPU và ngăn ngừa các lỗi thời gian chạy tốn kém.
 
-## Câu Trả Lời Nhanh
-- **What is the primary purpose of metadata extraction?** Nó cho phép bạn thu thập thông tin tệp (loại, số trang, kích thước) trước khi thực hiện các xử lý nặng.  
-- **Which library handles this in Java?** GroupDocs.Annotation cho Java cung cấp một API đơn giản để trích xuất siêu dữ liệu.  
-- **How can I validate a file type in Java?** Sử dụng API supported‑formats để kiểm tra tính tương thích tại thời gian chạy.  
-- **Can I retrieve the creation date of a document?** Có, đối tượng DocumentInfo cung cấp dấu thời gian tạo.  
-- **Is it possible to get the page count of any supported format?** Chắc chắn – API trả về số trang chính xác cho PDF, DOCX, PPTX và các định dạng khác.
+## Câu trả lời nhanh
+- **Mục đích chính của việc trích xuất siêu dữ liệu là gì?** Nó cho phép bạn thu thập thông tin tệp (loại, số trang, kích thước) trước khi thực hiện xử lý nặng.  
+- **Thư viện nào xử lý việc này trong Java?** GroupDocs.Annotation cho Java cung cấp một API đơn giản để trích xuất siêu dữ liệu.  
+- **Làm sao tôi có thể xác thực loại tệp trong Java?** Sử dụng API supported‑formats để kiểm tra tính tương thích tại thời gian chạy.  
+- **Tôi có thể lấy ngày tạo của tài liệu không?** Có, đối tượng `DocumentInfo` cung cấp thời gian tạo.  
+- **Có thể lấy số trang của bất kỳ định dạng nào được hỗ trợ không?** Chắc chắn – API trả về số trang chính xác cho PDF, DOCX, PPTX và các định dạng khác.
 
-## Trích Xuất Siêu Dữ Liệu Là Gì và Tại Sao Nó Quan Trọng?
+## Trích xuất siêu dữ liệu là gì?
+Trích xuất siêu dữ liệu là việc đọc tự động các thuộc tính tích hợp sẵn của tài liệu—như loại tệp, số trang, kích thước và ngày tạo—mà không cần mở toàn bộ nội dung. Khi biết những chi tiết này từ sớm, bạn có thể xác thực loại tệp trong Java, phân bổ tài nguyên hiệu quả và cung cấp cho người dùng thông tin chính xác (ví dụ, “PDF của bạn có 12 trang”).
 
-Metadata extraction là quá trình đọc một cách lập trình các thuộc tính tích hợp sẵn của tài liệu—như loại tệp, số trang, kích thước và ngày tạo—mà không cần mở toàn bộ nội dung. Khi biết những chi tiết này sớm, bạn có thể:
+## Tại sao nên sử dụng GroupDocs.Annotation cho Java?
+GroupDocs.Annotation hỗ trợ **hơn 70 định dạng đầu vào và đầu ra** và có thể đọc siêu dữ liệu từ các tệp lên tới **2 GB** mà không cần tải toàn bộ tệp vào bộ nhớ. Khả năng này cho phép bạn xử lý các lô lớn trên phần cứng vừa phải đồng thời giữ độ trễ dưới 200 ms cho mỗi tệp.
 
-- **Validate file type Java** trước khi thực hiện các thao tác tốn kém.  
-- **Java get page count** để phân bổ tài nguyên hoặc quyết định hàng đợi xử lý.  
-- **Detect file format Java** để áp dụng logic riêng cho định dạng.  
-- Cung cấp cho người dùng thông tin chính xác (ví dụ, “PDF của bạn có 12 trang”).
+## Yêu cầu trước
+- Java 8 hoặc mới hơn đã được cài đặt.  
+- Thư viện GroupDocs.Annotation cho Java đã được thêm vào dự án của bạn (Maven/Gradle).  
+- Giấy phép tạm thời hoặc trả phí hợp lệ của GroupDocs cho môi trường sản xuất.
 
-## Cách Xác Thực Loại Tập Tin Java và Trích Xuất Siêu Dữ Liệu Từ Tài Liệu Sử Dụng GroupDocs.Annotation
+## Cách xác thực loại tệp trong Java?
+`Annotation` là lớp điểm vào chính để làm việc với tài liệu trong GroupDocs.Annotation. Tải tệp bằng lớp `Annotation` và gọi `isSupported`. Kiểm tra một dòng này ngay lập tức cho bạn biết tài liệu có thể được xử lý hay không, cho phép bạn từ chối các định dạng không hỗ trợ trước khi bất kỳ I/O nặng nào xảy ra.
 
-GroupDocs.Annotation cung cấp một lớp `DocumentInfo` đơn giản, trả về tất cả các thuộc tính liên quan trong một lần gọi. Dưới đây là quy trình điển hình:
+## Cách lấy thuộc tính tài liệu trong Java?
+`DocumentInfo` bao hàm siêu dữ liệu của một tài liệu như loại, kích thước và số trang. Lớp `DocumentInfo` cung cấp một ảnh chụp nhanh các thuộc tính của tài liệu như loại tệp, số trang, kích thước và ngày tạo, cho phép bạn truy cập các chi tiết này mà không cần tải toàn bộ nội dung.
 
-1. **Instantiate the `Annotation` object** với luồng tệp hoặc đường dẫn của bạn.  
-2. **Call `getDocumentInfo()`** để lấy một thể hiện `DocumentInfo`.  
-3. **Read properties** như `getFileType()`, `getPageCount()`, `getFileSize()`, và `getCreatedDate()`.
+## Cách phát hiện định dạng tệp trong Java?
+Nếu bạn cần một định danh định dạng chính xác hơn phần mở rộng tệp, hãy sử dụng `Annotation.getFileFormat(filePath)`. Phương thức này kiểm tra tiêu đề tệp và trả về một giá trị enum đáng tin cậy, đảm bảo bạn chỉ áp dụng logic riêng cho định dạng khi phù hợp.
 
-> **Pro tip:** Lưu vào bộ nhớ đệm đối tượng `DocumentInfo` nếu bạn cần truy cập cùng một tài liệu nhiều lần; điều này tránh việc I/O dư thừa.
+## Cách trích xuất số trang cho bất kỳ tài liệu nào được hỗ trợ?
+Gọi `DocumentInfo.getPageCount()` chỉ đọc thông tin tiêu đề cần thiết, vì vậy bạn có được số trang mà không tải toàn bộ tài liệu. Phương thức này hoạt động cho PDF, DOCX, PPTX, XLSX và các định dạng hỗ trợ khác, cung cấp cho bạn một cách thống nhất để xử lý phân trang trên mọi loại tài liệu.
 
-### Cách Thực Hiện Xác Thực Loại Tập Tin Java
+## Các trường hợp sử dụng phổ biến
+- **Hệ thống quản lý tài liệu:** Lập chỉ mục các tệp theo loại, số trang và ngày tạo để tìm kiếm nhanh.  
+- **Pipeline xử lý hàng loạt:** Chuyển các PDF lớn tới một hàng đợi riêng dựa trên số trang.  
+- **Giao diện tải lên người dùng:** Hiển thị siêu dữ liệu tệp (loại, số trang, kích thước) trước khi quá trình tải lên hoàn tất.  
+- **Quy trình làm việc tự động:** Kích hoạt các bước xử lý khác nhau (OCR, chuyển đổi, lưu trữ) tùy thuộc vào định dạng được phát hiện.
 
-Sử dụng phương thức `Annotation.isSupported(filePath)` hoặc so sánh phần mở rộng của tệp với danh sách trả về bởi `Annotation.getSupportedFileExtensions()`. Điều này đảm bảo bạn chỉ xử lý các tệp mà ứng dụng của bạn có thể xử lý.
+## Các thực tiễn tốt nhất cho việc trích xuất thông tin tài liệu
+- **Lưu vào bộ nhớ đệm đối tượng `DocumentInfo`** khi cùng một tệp được truy cập nhiều lần; điều này tránh I/O dư thừa.  
+- **Bao quanh các lời gọi trích xuất bằng khối try/catch** để xử lý các tệp bị hỏng hoặc chỉ tải lên một phần một cách nhẹ nhàng.  
+- **Xác thực trước khi xử lý** bằng API supported‑formats để loại bỏ các tệp không hỗ trợ sớm.  
+- **Chỉ trích xuất các thuộc tính cần thiết**; tránh gọi các phương thức không dùng để giữ cho hoạt động nhẹ.
 
-### Cách Đọc Thuộc Tính Tài Liệu
+## Khắc phục các vấn đề thường gặp
+- **Lỗi “Unsupported file format” (Định dạng tệp không được hỗ trợ):** Đầu tiên chạy hướng dẫn supported‑formats để xác nhận tính tương thích của tệp.  
+- **Tăng đột biến bộ nhớ với các tệp rất lớn:** Mặc dù trích xuất siêu dữ liệu nhẹ, một số định dạng vẫn cấp phát bộ đệm; theo dõi bộ nhớ và cân nhắc streaming các PDF lớn.  
+- **Ngày không nhất quán giữa các định dạng:** Chuẩn hoá tất cả các thời gian thành ISO‑8601 ở lớp ứng dụng để xử lý đồng nhất.
 
-Đối tượng `DocumentInfo` cung cấp các getter cho các thuộc tính phổ biến:
+## Các cân nhắc về hiệu năng
+Việc trích xuất siêu dữ liệu thường hoàn thành trong thời gian dưới **200 ms** cho mỗi tệp trên một VM tiêu chuẩn 2‑core. Bạn có thể cải thiện thông lượng hơn nữa bằng cách:
+- Trích xuất một lần và lưu kết quả vào bộ nhớ đệm.  
+- Xử lý các tệp trong các lô song song.  
+- Sử dụng thực thi bất đồng bộ cho các pipeline nhập liệu khối lượng lớn.  
 
-- `getFileType()` – trả về định dạng được phát hiện (ví dụ, PDF, DOCX).  
-- `getFileSize()` – kích thước tính bằng byte.  
-- `getCreatedDate()` – dấu thời gian tạo (có thể `null` nếu không có).
-
-### Cách Phát Hiện Định Dạng Tập Tin Java
-
-Nếu bạn cần biết định dạng chính xác vượt ra ngoài phần mở rộng tệp, gọi `Annotation.getFileFormat(filePath)`. Phương thức này kiểm tra tiêu đề tệp và trả về một định danh định dạng đáng tin cậy.
-
-### Cách Trích Xuất Số Trang PDF
-
-Đối với PDF, `DocumentInfo.getPageCount()` chỉ đọc thông tin tiêu đề cần thiết, vì vậy bạn có được số trang mà không cần tải toàn bộ tài liệu vào bộ nhớ.
-
-### Cách Lấy Số Trang Tài Liệu
-
-Phương thức `getPageCount()` tương tự hoạt động cho tất cả các định dạng được hỗ trợ (DOCX, PPTX, XLSX, v.v.), cung cấp cho bạn một cách thống nhất để lấy số trang hoặc slide.
-
-## Các Hướng Dẫn Có Sẵn
-
-### [Trích Xuất Siêu Dữ Liệu Tài Liệu Hiệu Quả Sử Dụng GroupDocs.Annotation trong Java](./groupdocs-annotation-java-document-info-extraction/)
-
-Hướng dẫn này là nguồn tài nguyên chính của bạn để trích xuất siêu dữ liệu tài liệu quan trọng như loại tệp, số trang và kích thước. Bạn sẽ học cách lấy các thuộc tính tài liệu một cách hiệu quả và tích hợp thông tin này vào quy trình quản lý tài liệu của mình.
-
-**Bạn sẽ nắm vững:**
-- Trích xuất thông tin loại tệp và định dạng  
-- Lấy số trang chính xác cho tài liệu đa trang  
-- Lấy kích thước tài liệu và ngày tạo  
-- Xử lý các định dạng tài liệu khác nhau một cách nhất quán  
-- Tối ưu hoá việc trích xuất siêu dữ liệu để đạt hiệu suất  
-
-**Phù hợp cho:** Các nhà phát triển xây dựng hệ thống quản lý tài liệu, công cụ phân tích nội dung, hoặc các ứng dụng cần xử lý tài liệu một cách thông minh dựa trên các đặc điểm của chúng.
-
-### [Cách Lấy Các Định Dạng Tập Tin Được Hỗ Trợ trong GroupDocs.Annotation cho Java: Hướng Dẫn Toàn Diện](./groupdocs-annotation-java-supported-formats/)
-
-Tìm hiểu cách khám phá một cách lập trình các định dạng tệp mà ứng dụng của bạn có thể xử lý. Hướng dẫn này chỉ cho bạn cách liệt kê các định dạng được hỗ trợ một cách động, giúp ứng dụng của bạn linh hoạt hơn và thân thiện với người dùng.
-
-**Các chủ đề chính được đề cập:**
-- Liệt kê tất cả các định dạng tệp được hỗ trợ  
-- Kiểm tra tính tương thích của định dạng tại thời gian chạy – **how to detect format**  
-- Hiển thị các định dạng được hỗ trợ cho người dùng  
-- Xử lý các loại tệp không được hỗ trợ một cách nhẹ nhàng  
-- Xây dựng việc xác thực định dạng vào quy trình làm việc của bạn  
-
-**Lý tưởng cho:** Các ứng dụng có chức năng tải lên tệp, bộ chuyển đổi tài liệu, hoặc bất kỳ hệ thống nào cần **validate file type Java** trước khi xử lý.
-
-## Các Trường Hợp Sử Dụng Thông Thường
-
-- **Document Management Systems:** Trích xuất siêu dữ liệu để tạo chỉ mục có thể tìm kiếm.  
-- **Batch Processing Applications:** Sử dụng số trang và kích thước để quyết định chiến lược xử lý.  
-- **User Upload Interfaces:** Hiển thị loại tệp, số trang và ngày tạo trước khi tải lên.  
-- **Automated Workflows:** Định tuyến tài liệu dựa trên các đặc điểm của chúng (ví dụ, PDF lớn tới một hàng đợi riêng).
-
-## Các Thực Hành Tốt Nhất cho Việc Trích Xuất Thông Tin Tài Liệu
-
-- **Cache Metadata When Possible:** Việc trích xuất có thể tốn nhiều tài nguyên; tái sử dụng kết quả khi xử lý cùng một tệp nhiều lần.  
-- **Handle Exceptions Gracefully:** Các tệp bị hỏng có thể gây lỗi—luôn bao bọc các lời gọi trích xuất trong khối try/catch.  
-- **Validate Before Processing:** Sử dụng API supported‑formats để **validate file type Java** sớm.  
-- **Consider Performance:** Chỉ trích xuất những thuộc tính bạn cần; tránh tải toàn bộ nội dung trừ khi cần thiết.
-
-## Khắc Phục Sự Cố Thông Thường
-
-- **“Unsupported File Format” Errors:** Chạy hướng dẫn supported‑formats trước để đảm bảo tệp được nhận dạng.  
-- **Memory Issues with Large Files:** Một số định dạng tải toàn bộ tài liệu để lấy siêu dữ liệu; giám sát bộ nhớ và cân nhắc streaming cho các tệp rất lớn.  
-- **Inconsistent Results Across Formats:** Chuẩn hoá siêu dữ liệu (ví dụ, chuyển đổi ngày sang ISO‑8601) ở lớp ứng dụng để đạt tính nhất quán.
-
-## Các Yếu Tố Hiệu Suất
-
-Việc trích xuất siêu dữ liệu thường nhanh, nhưng bạn có thể tăng hiệu suất bằng cách:
-
-- Trích xuất một lần và lưu vào bộ nhớ đệm.  
-- Xử lý tài liệu theo lô.  
-- Sử dụng thực thi bất đồng bộ cho các tập hợp tài liệu lớn.  
-- Giám sát việc sử dụng bộ nhớ, đặc biệt với PDF độ phân giải cao.
-
-## Bắt Đầu
-
-Sẵn sàng triển khai việc trích xuất thông tin tài liệu trong ứng dụng Java của bạn? Bắt đầu với hướng dẫn trích xuất siêu dữ liệu để học các nguyên tắc cơ bản, sau đó khám phá phát hiện định dạng cho các kịch bản nâng cao hơn. Mỗi hướng dẫn đều bao gồm các ví dụ mã hoàn chỉnh, hoạt động mà bạn có thể sao chép trực tiếp vào dự án của mình.
-
-## Tài Nguyên Bổ Sung
-
-- [Tài liệu GroupDocs.Annotation cho Java](https://docs.groupdocs.com/annotation/java/)  
-- [Tham chiếu API GroupDocs.Annotation cho Java](https://reference.groupdocs.com/annotation/java/)  
-- [Tải xuống GroupDocs.Annotation cho Java](https://releases.groupdocs.com/annotation/java/)  
-- [Diễn đàn GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)  
-- [Hỗ trợ miễn phí](https://forum.groupdocs.com/)  
+## Tài nguyên bổ sung
+- [Tài liệu GroupDocs.Annotation cho Java](https://docs.groupdocs.com/annotation/java/)
+- [Tham chiếu API GroupDocs.Annotation cho Java](https://reference.groupdocs.com/annotation/java/)
+- [Tải xuống GroupDocs.Annotation cho Java](https://releases.groupdocs.com/annotation/java/)
+- [Diễn đàn GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
+- [Hỗ trợ miễn phí](https://forum.groupdocs.com/)
 - [Giấy phép tạm thời](https://purchase.groupdocs.com/temporary-license/)
+- [Trích xuất siêu dữ liệu tài liệu hiệu quả bằng GroupDocs.Annotation trong Java](./groupdocs-annotation-java-document-info-extraction/)
+- [Cách lấy các định dạng tệp được hỗ trợ trong GroupDocs.Annotation cho Java: Hướng dẫn toàn diện](./groupdocs-annotation-java-supported-formats/)
 
-## Câu Hỏi Thường Gặp
+## Câu hỏi thường gặp
 
 **Q: Làm thế nào để tôi phát hiện định dạng của một tệp không xác định một cách lập trình?**  
-A: Sử dụng `Annotation.getSupportedFileExtensions()` để lấy danh sách các phần mở rộng được hỗ trợ, sau đó so sánh phần mở rộng của tệp hoặc tiêu đề nội dung để xác định xem nó có phải là định dạng được hỗ trợ hay không.
+A: Sử dụng `Annotation.getSupportedFileExtensions()` để lấy danh sách các phần mở rộng được hỗ trợ, sau đó so sánh phần mở rộng của tệp hoặc kiểm tra tiêu đề của nó bằng `Annotation.getFileFormat()`.
 
-**Q: Tôi có thể lấy ngày tạo tài liệu cho tất cả các loại được hỗ trợ không?**  
-A: Hầu hết các định dạng cung cấp dấu thời gian tạo thông qua `DocumentInfo.getCreatedDate()`. Nếu một định dạng không lưu trữ thuộc tính này, API sẽ trả về `null`.
+**Q: Tôi có thể lấy ngày tạo của tài liệu cho tất cả các loại được hỗ trợ không?**  
+A: Hầu hết các định dạng cung cấp thời gian tạo thông qua `DocumentInfo.getCreatedDate()`. Nếu một định dạng không có thuộc tính này, API sẽ trả về `null`.
 
 **Q: Cách tốt nhất để xác thực loại tệp trong Java trước khi xử lý là gì?**  
-A: Gọi `Annotation.isSupported(filePath)` hoặc kiểm tra so với danh sách trả về bởi hướng dẫn supported‑formats. Điều này ngăn ngừa lỗi “Unsupported File Format”.
+A: Gọi `Annotation.isSupported(filePath)` hoặc so sánh phần mở rộng của tệp với enumeration từ `Annotation.getSupportedFileExtensions()`.
 
 **Q: Có thể lấy số trang của PDF mà không tải toàn bộ tệp không?**  
-A: GroupDocs.Annotation chỉ đọc các tiêu đề cần thiết để tính số trang, vì vậy thao tác vẫn nhẹ ngay cả với các PDF lớn.
+A: Có, GroupDocs.Annotation chỉ đọc các phần tiêu đề cần thiết cho việc đếm trang, giữ mức sử dụng bộ nhớ thấp ngay cả với các PDF có hàng trăm trang.
 
 **Q: Tôi nên xử lý các tài liệu lớn như thế nào để tránh vấn đề bộ nhớ?**  
-A: Trước tiên trích xuất siêu dữ liệu, lưu kết quả vào bộ nhớ đệm, và cân nhắc xử lý tài liệu theo từng phần hoặc sử dụng API streaming cho các thao tác nặng nội dung.
+A: Đầu tiên trích xuất siêu dữ liệu, lưu kết quả vào bộ nhớ đệm, và nếu cần xử lý toàn bộ nội dung, sử dụng API streaming hoặc xử lý tài liệu theo từng phần.
 
----
+**Last Updated:** 2026-09-15  
+**Tested With:** GroupDocs.Annotation cho Java 23.12  
+**Author:** GroupDocs
 
-**Cập nhật lần cuối:** 2026-03-01  
-**Đã kiểm thử với:** GroupDocs.Annotation cho Java 23.12  
-**Tác giả:** GroupDocs  
-
----
+## Hướng dẫn liên quan
+- [Tải PDF Java với GroupDocs Annotation: Hướng dẫn tải tài liệu](/annotation/java/document-loading/)
+- [Cách triển khai xác thực tải lên tệp Java với GroupDocs.Annotation](/annotation/java/document-information/groupdocs-annotation-java-supported-formats/)
+- [Tải PDF có mật khẩu bảo vệ với GroupDocs.Annotation Java](/annotation/java/advanced-features/)

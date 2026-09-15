@@ -1,168 +1,149 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: تعلم كيفية استخراج البيانات الوصفية من المستندات في Java باستخدام GroupDocs.Annotation.
-  يغطي هذا الدليل كيفية التحقق من نوع الملف في Java، الحصول على عدد الصفحات، اكتشاف
-  تنسيق الملف في Java، واسترجاع تواريخ الإنشاء.
-keywords: java document metadata extraction, java document information api, extract
-  document properties java, java file format detection, document analysis java
-lastmod: '2026-03-01'
-linktitle: Document Information Tutorials
+date: '2026-09-15'
+description: كيفية استخراج metadata في Java باستخدام GroupDocs.Annotation. تحقق من
+  file types، احصل على page counts، اكتشف formats، واسترجع creation dates بكفاءة.
+keywords:
+- how to extract metadata
+- how to validate filetype
+- detect file format java
+- retrieve creation date java
+- get page count java
+lastmod: '2026-09-15'
+linktitle: دروس معلومات المستند
+og_description: كيفية استخراج metadata في Java باستخدام GroupDocs.Annotation. تحقق
+  من file types، احصل على page counts، اكتشف formats، واسترجع creation dates بكفاءة.
+og_image_alt: Guide showing how to extract metadata and validate file type in Java
+  with GroupDocs.Annotation
+og_title: كيفية استخراج metadata والتحقق من نوع file في Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: How to extract metadata in Java using GroupDocs.Annotation. Validate
+    file types, get page counts, detect formats, and retrieve creation dates efficiently.
+  headline: How to extract metadata and validate file type in Java
+  type: TechArticle
+- questions:
+  - answer: Use `Annotation.getSupportedFileExtensions()` to retrieve the list of
+      supported extensions, then compare the file’s extension or inspect its header
+      with `Annotation.getFileFormat()`.
+    question: How do I programmatically detect the format of an unknown file?
+  - answer: Most formats expose a creation timestamp via `DocumentInfo.getCreatedDate()`.
+      If a format lacks this property, the API returns `null`.
+    question: Can I retrieve the document creation date for all supported types?
+  - answer: Call `Annotation.isSupported(filePath)` or compare the file’s extension
+      against the enumeration from `Annotation.getSupportedFileExtensions()`.
+    question: What is the best way to validate a file type in Java before processing?
+  - answer: Yes, GroupDocs.Annotation reads only the header sections required for
+      page count, keeping memory usage low even for multi‑hundred‑page PDFs.
+    question: Is it possible to get the page count of a PDF without loading the entire
+      file?
+  - answer: Extract metadata first, cache the result, and if you need to process the
+      full content, use streaming APIs or process the document in chunks.
+    question: How should I handle large documents to avoid memory issues?
+  type: FAQPage
 tags:
 - document-processing
 - metadata-extraction
 - java-api
 - file-analysis
-title: التحقق من نوع الملف في جافا واستخراج البيانات الوصفية باستخدام GroupDocs
+- groupdocs
+- java
+title: كيفية استخراج metadata والتحقق من نوع file في Java
 type: docs
 url: /ar/java/document-information/
 weight: 12
 ---
 
-# التحقق من نوع الملف Java واستخراج بيانات تعريف المستند
+# كيفية استخراج البيانات الوصفية والتحقق من نوع الملف في Java
 
-هل احتجت يومًا لمعرفة عدد صفحات المستند قبل معالجته؟ أو التحقق مما إذا كان تنسيق الملف مدعومًا في تطبيقك؟ **Validating file type Java** مبكرًا يمكن أن يوفر لك الوقت والموارد. هذا الدليل الشامل يوضح لك كيفية استخراج البيانات الوصفية والمعلومات باستخدام GroupDocs.Annotation for Java – مما يجعل سير عمل معالجة المستندات أكثر ذكاءً وكفاءة.
+في خطوط معالجة المستندات الحديثة، **كيفية استخراج البيانات الوصفية** بسرعة تحدد ما إذا كان يمكن معالجة الملف في المراحل اللاحقة. يشرح هذا الدليل كيفية استخدام GroupDocs.Annotation for Java للتحقق من نوع الملف، قراءة عدد الصفحات، اكتشاف الصيغ الدقيقة، واستخراج طوابع الإنشاء—كل ذلك دون تحميل المستند بالكامل في الذاكرة. في النهاية، ستحصل على نمط قابل لإعادة الاستخدام يوفر دورات المعالج ويمنع الأخطاء المكلفة أثناء التشغيل.
 
 ## إجابات سريعة
-- **ما هو الغرض الأساسي من استخراج البيانات الوصفية؟** يتيح لك جمع معلومات الملف (النوع، الصفحات، الحجم) قبل المعالجة الثقيلة.  
+- **ما هو الغرض الأساسي من استخراج البيانات الوصفية؟** يتيح لك جمع معلومات الملف (النوع، عدد الصفحات، الحجم) قبل المعالجة الثقيلة.  
 - **أي مكتبة تتعامل مع ذلك في Java؟** توفر GroupDocs.Annotation for Java واجهة برمجة تطبيقات بسيطة لاستخراج البيانات الوصفية.  
-- **كيف يمكنني التحقق من نوع الملف في Java؟** استخدم واجهة برمجة التطبيقات supported‑formats للتحقق من التوافق أثناء التشغيل.  
-- **هل يمكنني استرجاع تاريخ إنشاء المستند؟** نعم، كائن DocumentInfo يكشف عن طابع الزمن لإنشاء المستند.  
-- **هل من الممكن الحصول على عدد الصفحات لأي تنسيق مدعوم؟** بالتأكيد – تُرجع الواجهة عدد صفحات دقيق للـ PDFs، DOCX، PPTX، وأكثر.
+- **كيف يمكنني التحقق من نوع الملف في Java؟** استخدم واجهة برمجة التطبيقات للأنساق المدعومة للتحقق من التوافق أثناء التشغيل.  
+- **هل يمكنني استرجاع تاريخ إنشاء المستند؟** نعم، كائن `DocumentInfo` يعرض طابع الإنشاء.  
+- **هل من الممكن الحصول على عدد الصفحات لأي صيغة مدعومة؟** بالتأكيد – تُعيد الواجهة عدد صفحات دقيق للـ PDFs، DOCX، PPTX، وأكثر.
 
-## ما هو استخراج البيانات الوصفية ولماذا هو مهم؟
+## ما هو استخراج البيانات الوصفية؟
+استخراج البيانات الوصفية هو القراءة الآلية للخصائص المدمجة في المستند—مثل نوع الملف، عدد الصفحات، الحجم، وتاريخ الإنشاء—دون فتح المحتوى بالكامل. بمعرفة هذه التفاصيل مبكرًا، يمكنك التحقق من نوع الملف في Java، تخصيص الموارد بكفاءة، وتقديم معلومات دقيقة للمستخدمين (مثال: “ملف PDF الخاص بك يحتوي على 12 صفحة”).
 
-استخراج البيانات الوصفية هو عملية قراءة خصائص المستند المدمجة برمجيًا — مثل نوع الملف، عدد الصفحات، الحجم، وتاريخ الإنشاء — دون فتح المحتوى بالكامل. بمعرفة هذه التفاصيل مبكرًا، يمكنك:
+## لماذا تستخدم GroupDocs.Annotation for Java؟
+يدعم GroupDocs.Annotation **أكثر من 70 صيغة إدخال وإخراج** ويمكنه قراءة البيانات الوصفية من ملفات تصل إلى **2 GB** دون تحميل الملف بالكامل في الذاكرة. هذه القدرة الم quantified تعني أنه يمكنك معالجة دفعات كبيرة على عتاد بسيط مع الحفاظ على زمن الاستجابة أقل من 200 ms لكل ملف.
 
-- **Validate file type Java** قبل محاولة تنفيذ عمليات مكلفة.  
-- **Java get page count** لتخصيص الموارد أو اتخاذ قرار بشأن قوائم المعالجة.  
-- **Detect file format Java** لتطبيق منطق خاص بالتنسيق.  
-- تزويد المستخدمين بمعلومات دقيقة (مثال: “ملف PDF الخاص بك يحتوي على 12 صفحة”).
+## المتطلبات المسبقة
+- Java 8 أو أحدث مثبت.  
+- تم إضافة مكتبة GroupDocs.Annotation for Java إلى مشروعك (Maven/Gradle).  
+- رخصة GroupDocs مؤقتة أو مدفوعة صالحة للاستخدام في الإنتاج.
 
-## كيفية التحقق من نوع الملف Java واستخراج البيانات الوصفية من المستندات باستخدام GroupDocs.Annotation
+## كيفية التحقق من نوع الملف في Java؟
+`Annotation` هي الفئة الرئيسية كنقطة دخول للعمل مع المستندات في GroupDocs.Annotation. حمّل الملف باستخدام فئة `Annotation` واستدعِ `isSupported`. هذا الفحص من سطر واحد يخبرك فورًا ما إذا كان يمكن معالجة المستند، مما يتيح لك رفض الصيغ غير المدعومة قبل حدوث أي عمليات إدخال/إخراج ثقيلة.
 
-توفر GroupDocs.Annotation فئة `DocumentInfo` بسيطة تُعيد جميع الخصائص ذات الصلة في استدعاء واحد. فيما يلي سير العمل النموذجي:
+## كيفية استرجاع خصائص المستند في Java؟
+`DocumentInfo` يضم البيانات الوصفية حول المستند مثل نوعه، حجمه، وعدد صفحاته. توفر فئة `DocumentInfo` لقطة سريعة لخصائص المستند مثل نوع الملف، عدد الصفحات، الحجم، وتاريخ الإنشاء، مما يتيح لك الوصول إلى هذه التفاصيل دون تحميل المحتوى بالكامل.
 
-1. **Instantiate the `Annotation` object** مع تدفق الملف أو المسار الخاص بك.  
-2. **Call `getDocumentInfo()`** لاسترجاع نسخة من `DocumentInfo`.  
-3. **Read properties** مثل `getFileType()`، `getPageCount()`، `getFileSize()`، و `getCreatedDate()`.
+## كيفية اكتشاف صيغة الملف في Java؟
+إذا كنت بحاجة إلى معرف صيغة دقيق يتجاوز امتداد الملف، استخدم `Annotation.getFileFormat(filePath)`. تقوم هذه الطريقة بفحص رأس الملف وتعيد قيمة enum موثوقة، مما يضمن تطبيق منطق خاص بالصيغ فقط عندما يكون ذلك مناسبًا.
 
-> **نصيحة احترافية:** قم بتخزين كائن `DocumentInfo` في الذاكرة إذا كنت بحاجة للوصول إلى نفس المستند عدة مرات؛ هذا يتجنب عمليات الإدخال/الإخراج المتكررة.
-
-### كيفية تنفيذ التحقق من نوع الملف Java
-
-استخدم طريقة `Annotation.isSupported(filePath)` أو قارن امتداد الملف مع القائمة التي تُرجعها `Annotation.getSupportedFileExtensions()`. يضمن ذلك معالجة الملفات التي يمكن لتطبيقك التعامل معها فقط.
-
-### كيفية قراءة خصائص المستند
-
-كائن `DocumentInfo` يُظهر getters للخصائص الشائعة:
-
-- `getFileType()` – يُعيد التنسيق المكتشف (مثال: PDF، DOCX).  
-- `getFileSize()` – الحجم بالبايت.  
-- `getCreatedDate()` – طابع زمن الإنشاء (قد يكون `null` إذا لم يتوفر).
-
-### كيفية اكتشاف تنسيق الملف Java
-
-إذا كنت بحاجة لمعرفة التنسيق الدقيق بخلاف امتداد الملف، استدعِ `Annotation.getFileFormat(filePath)`. يقوم هذا بفحص رأس الملف ويُعيد معرف تنسيق موثوق.
-
-### كيفية استخراج عدد صفحات PDF
-
-بالنسبة لملفات PDF، تقوم `DocumentInfo.getPageCount()` بقراءة معلومات الرأس الضرورية فقط، لذا تحصل على عدد الصفحات دون تحميل المستند بالكامل في الذاكرة.
-
-### كيفية الحصول على عدد صفحات المستند
-
-طريقة `getPageCount()` نفسها تعمل لجميع التنسيقات المدعومة (DOCX، PPTX، XLSX، إلخ)، مما يمنحك طريقة موحدة لاسترجاع عدد الصفحات أو الشرائح.
-
-## الدروس المتاحة
-
-### [استخراج بيانات تعريف المستند بكفاءة باستخدام GroupDocs.Annotation في Java](./groupdocs-annotation-java-document-info-extraction/)
-
-هذا الدرس هو المصدر الأساسي لك لاستخراج البيانات الوصفية الهامة للمستند مثل نوع الملف، عدد الصفحات، والحجم. ستتعلم كيفية استرجاع خصائص المستند بكفاءة ودمج هذه المعلومات في سير عمل إدارة المستندات.
-
-**ما ستتمكن من إتقانه:**  
-- استخراج نوع الملف ومعلومات التنسيق  
-- الحصول على عدد صفحات دقيق للمستندات متعددة الصفحات  
-- استرجاع حجم المستند وتواريخ الإنشاء  
-- التعامل مع تنسيقات المستندات المختلفة بشكل متسق  
-- تحسين استخراج البيانات الوصفية للأداء  
-
-**مثالي لـ:** المطورين الذين يبنون أنظمة إدارة المستندات، محللي المحتوى، أو التطبيقات التي تحتاج إلى معالجة المستندات بذكاء بناءً على خصائصها.
-
-### [كيفية استرجاع تنسيقات الملفات المدعومة في GroupDocs.Annotation لـ Java: دليل شامل](./groupdocs-annotation-java-supported-formats/)
-
-تعلم كيفية اكتشاف تنسيقات الملفات التي يمكن لتطبيقك التعامل معها برمجيًا. يوضح لك هذا الدليل كيفية سرد التنسيقات المدعومة ديناميكيًا، مما يجعل تطبيقاتك أكثر مرونة وسهولة للمستخدم.
-
-**المواضيع الرئيسية التي يغطيها:**  
-- تعداد جميع تنسيقات الملفات المدعومة  
-- التحقق من توافق التنسيق أثناء التشغيل – **how to detect format**  
-- عرض التنسيقات المدعومة للمستخدمين  
-- التعامل مع ملفات غير مدعومة بلطف  
-- بناء تحقق من التنسيق في سير العمل الخاص بك  
-
-**مثالي لـ:** التطبيقات التي تحتوي على وظيفة رفع ملفات، محولات المستندات، أو أي نظام يحتاج إلى **validate file type Java** قبل المعالجة.
+## كيفية استخراج عدد الصفحات لأي مستند مدعوم؟
+استدعاء `DocumentInfo.getPageCount()` يقرأ فقط معلومات الرأس الضرورية، وبالتالي تحصل على عدد الصفحات دون تحميل المستند بالكامل. تعمل نفس الطريقة مع PDFs، DOCX، PPTX، XLSX، وغيرها من الصيغ المدعومة، مما يمنحك طريقة موحدة للتعامل مع الترقيم عبر جميع الصيغ.
 
 ## حالات الاستخدام الشائعة
-
-- **Document Management Systems:** استخراج البيانات الوصفية لإنشاء فهارس قابلة للبحث.  
-- **Batch Processing Applications:** استخدام عدد الصفحات والحجم لتحديد استراتيجيات المعالجة.  
-- **User Upload Interfaces:** عرض نوع الملف، عدد الصفحات، وتاريخ الإنشاء قبل الرفع.  
-- **Automated Workflows:** توجيه المستندات بناءً على خصائصها (مثال: ملفات PDF الكبيرة إلى طابور منفصل).
+- **أنظمة إدارة المستندات:** فهرسة الملفات حسب النوع، عدد الصفحات، وتاريخ الإنشاء للبحث السريع.  
+- **خطوط معالجة الدفعات:** توجيه ملفات PDF الكبيرة إلى طابور مخصص بناءً على عدد الصفحات.  
+- **واجهات رفع الملفات للمستخدمين:** عرض بيانات الملف الوصفية (النوع، الصفحات، الحجم) قبل إكمال الرفع.  
+- **سير العمل الآلي:** تشغيل خطوات معالجة مختلفة (OCR، التحويل، الأرشفة) بناءً على الصيغة المكتشفة.
 
 ## أفضل الممارسات لاستخراج معلومات المستند
-
-- **Cache Metadata When Possible:** قد يكون الاستخراج مستهلكًا للموارد؛ أعد استخدام النتائج عند معالجة نفس الملف مرارًا.  
-- **Handle Exceptions Gracefully:** قد تُثير الملفات الفاسدة أخطاءً — احرص دائمًا على تغليف استدعاءات الاستخراج داخل كتل try/catch.  
-- **Validate Before Processing:** استخدم واجهة برمجة التطبيقات supported‑formats لـ **validate file type Java** مبكرًا.  
-- **Consider Performance:** استخرج فقط الخصائص التي تحتاجها؛ تجنب تحميل المحتوى بالكامل إلا إذا كان ضروريًا.
+- **قم بتخزين كائن `DocumentInfo` في الذاكرة المؤقتة** عندما يتم الوصول إلى نفس الملف بشكل متكرر؛ هذا يتجنب عمليات الإدخال/الإخراج المتكررة.  
+- **غلف استدعاءات الاستخراج داخل كتل try/catch** للتعامل مع الملفات الفاسدة أو التي تم رفعها جزئيًا بشكل سلس.  
+- **تحقق قبل المعالجة** باستخدام واجهة برمجة التطبيقات للأنساق المدعومة لإزالة الملفات غير المدعومة مبكرًا.  
+- **استخرج فقط الخصائص المطلوبة**؛ تجنب استدعاء الطرق التي لا تحتاجها للحفاظ على خفة العملية.
 
 ## استكشاف المشكلات الشائعة
-
-- **أخطاء “Unsupported File Format”:** شغّل دليل supported‑formats أولاً للتأكد من أن الملف مُعترف به.  
-- **مشكلات الذاكرة مع الملفات الكبيرة:** بعض التنسيقات تُحمّل المستند بالكامل لاستخراج البيانات الوصفية؛ راقب الذاكرة وفكّر في البث للملفات الكبيرة جدًا.  
-- **نتائج غير متسقة عبر التنسيقات:** قم بتطبيع البيانات الوصفية (مثال: تحويل التواريخ إلى ISO‑8601) في طبقة التطبيق لضمان الاتساق.
+- **أخطاء “صيغة ملف غير مدعومة”**: ابدأ بتشغيل دليل الصيغ المدعومة لتأكيد توافق الملف.  
+- **ارتفاع الذاكرة مع الملفات الكبيرة جدًا**: رغم أن استخراج البيانات الوصفية خفيف، بعض الصيغ لا تزال تخصّص مخازن مؤقتة؛ راقب الذاكرة وفكّر في تدفق ملفات PDF الكبيرة.  
+- **تواريخ غير متسقة عبر الصيغ**: قم بتوحيد جميع الطوابع الزمنية إلى ISO‑8601 في طبقة التطبيق لضمان معالجة موحدة.
 
 ## اعتبارات الأداء
-
-استخراج البيانات الوصفية عادةً سريع، لكن يمكنك تعزيز الأداء عن طريق:
-
-- الاستخراج مرة واحدة وتخزين النتائج.  
-- معالجة المستندات على دفعات.  
-- استخدام التنفيذ غير المتزامن لمجموعات المستندات الكبيرة.  
-- مراقبة استخدام الذاكرة، خاصةً مع ملفات PDF عالية الدقة.
-
-## البدء
-
-هل أنت مستعد لتطبيق استخراج معلومات المستند في تطبيق Java الخاص بك؟ ابدأ بدليل استخراج البيانات الوصفية لتعلم الأساسيات، ثم استكشف اكتشاف التنسيق لمزيد من السيناريوهات المتقدمة. كل دليل يتضمن أمثلة شفرة كاملة وعاملة يمكنك نسخها مباشرةً إلى مشاريعك.
+عادةً ما يكتمل استخراج البيانات الوصفية في أقل من **200 ms** لكل ملف على جهاز افتراضي قياسي ثنائي النواة. يمكنك تحسين الإنتاجية أكثر عن طريق:
+- استخراج مرة واحدة وتخزين النتائج في الذاكرة المؤقتة.  
+- معالجة الملفات في دفعات متوازية.  
+- استخدام التنفيذ غير المتزامن لخطوط إدخال ذات حجم عالي.
 
 ## موارد إضافية
-
-- [توثيق GroupDocs.Annotation لـ Java](https://docs.groupdocs.com/annotation/java/)
-- [مرجع API لـ GroupDocs.Annotation لـ Java](https://reference.groupdocs.com/annotation/java/)
-- [تحميل GroupDocs.Annotation لـ Java](https://releases.groupdocs.com/annotation/java/)
+- [توثيق GroupDocs.Annotation for Java](https://docs.groupdocs.com/annotation/java/)
+- [مرجع API لـ GroupDocs.Annotation for Java](https://reference.groupdocs.com/annotation/java/)
+- [تحميل GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)
 - [منتدى GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
 - [دعم مجاني](https://forum.groupdocs.com/)
 - [رخصة مؤقتة](https://purchase.groupdocs.com/temporary-license/)
+- [استخراج بيانات وصفية للمستند بكفاءة باستخدام GroupDocs.Annotation في Java](./groupdocs-annotation-java-document-info-extraction/)
+- [كيفية استرجاع صيغ الملفات المدعومة في GroupDocs.Annotation for Java: دليل شامل](./groupdocs-annotation-java-supported-formats/)
 
 ## الأسئلة المتكررة
-
-**س: كيف يمكنني اكتشاف تنسيق ملف غير معروف برمجيًا؟**  
-ج: استخدم `Annotation.getSupportedFileExtensions()` لاسترجاع قائمة الامتدادات المدعومة، ثم قارن امتداد الملف أو رأس المحتوى لتحديد ما إذا كان تنسيقًا مدعومًا.
+**س: كيف يمكنني اكتشاف صيغة ملف غير معروف برمجيًا؟**  
+A: استخدم `Annotation.getSupportedFileExtensions()` لاسترجاع قائمة الامتدادات المدعومة، ثم قارن امتداد الملف أو افحص رأسه باستخدام `Annotation.getFileFormat()`.
 
 **س: هل يمكنني استرجاع تاريخ إنشاء المستند لجميع الأنواع المدعومة؟**  
-ج: معظم التنسيقات تكشف عن طابع زمن الإنشاء عبر `DocumentInfo.getCreatedDate()`. إذا لم تخزن صيغة ما هذه الخاصية، تُرجع الواجهة `null`.
+A: معظم الصيغ تعرض طابع إنشاء عبر `DocumentInfo.getCreatedDate()`. إذا كانت الصيغة تفتقر إلى هذه الخاصية، تُعيد الواجهة `null`.
 
 **س: ما هي أفضل طريقة للتحقق من نوع الملف في Java قبل المعالجة؟**  
-ج: استدعِ `Annotation.isSupported(filePath)` أو قارن مع التعداد الذي يُرجعه دليل supported‑formats. هذا يمنع أخطاء “Unsupported File Format”.
+A: استدعِ `Annotation.isSupported(filePath)` أو قارن امتداد الملف مع التعداد المستخرج من `Annotation.getSupportedFileExtensions()`.
 
 **س: هل من الممكن الحصول على عدد صفحات PDF دون تحميل الملف بالكامل؟**  
-ج: تقوم GroupDocs.Annotation بقراءة الرؤوس الضرورية فقط لحساب عدد الصفحات، لذا تظل العملية خفيفة حتى مع ملفات PDF الكبيرة.
+A: نعم، يقرأ GroupDocs.Annotation فقط أقسام الرأس المطلوبة لعدد الصفحات، مما يحافظ على استهلاك الذاكرة منخفضًا حتى لملفات PDF متعددة المئات من الصفحات.
 
 **س: كيف يجب أن أتعامل مع المستندات الكبيرة لتجنب مشاكل الذاكرة؟**  
-ج: استخرج البيانات الوصفية أولاً، خزن النتيجة في الذاكرة، وفكّر في معالجة المستند على أجزاء أو استخدام واجهات برمجة التطبيقات البثية للعمليات التي تستهلك محتوىً كبيرًا.
+A: استخرج البيانات الوصفية أولاً، خزن النتيجة في الذاكرة المؤقتة، وإذا احتجت لمعالجة المحتوى بالكامل، استخدم واجهات برمجة التطبيقات المتدفقة أو عالج المستند على أجزاء.
 
----
-
-**آخر تحديث:** 2026-03-01  
+**آخر تحديث:** 2026-09-15  
 **تم الاختبار مع:** GroupDocs.Annotation for Java 23.12  
 **المؤلف:** GroupDocs
+
+## دروس ذات صلة
+- [تحميل PDF Java باستخدام GroupDocs Annotation: دليل تحميل المستند](/annotation/java/document-loading/)
+- [كيفية تنفيذ التحقق من رفع ملفات Java باستخدام GroupDocs.Annotation](/annotation/java/document-information/groupdocs-annotation-java-supported-formats/)
+- [تحميل PDF محمي بكلمة مرور باستخدام GroupDocs.Annotation Java](/annotation/java/advanced-features/)

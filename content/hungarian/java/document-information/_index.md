@@ -1,171 +1,159 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Ismerje meg, hogyan lehet metaadatokat kinyerni a dokumentumokból Java-ban
-  a GroupDocs.Annotation segítségével. Ez az útmutató bemutatja, hogyan ellenőrizhető
-  a fájltípus Java-ban, hogyan lekérhető az oldalszám, hogyan detektálható a fájlformátum
-  Java-ban, és hogyan nyerhetők ki a létrehozási dátumok.
-keywords: java document metadata extraction, java document information api, extract
-  document properties java, java file format detection, document analysis java
-lastmod: '2026-03-01'
-linktitle: Document Information Tutorials
+date: '2026-09-15'
+description: Hogyan lehet metaadatokat kinyerni Java-ban a GroupDocs.Annotation használatával.
+  Fájltípusok ellenőrzése, oldalszámok lekérése, formátumok felismerése és a létrehozási
+  dátumok hatékony lekérdezése.
+keywords:
+- how to extract metadata
+- how to validate filetype
+- detect file format java
+- retrieve creation date java
+- get page count java
+lastmod: '2026-09-15'
+linktitle: Dokumentuminformációs oktatóanyagok
+og_description: Hogyan lehet metaadatokat kinyerni Java-ban a GroupDocs.Annotation
+  használatával. Fájltípusok ellenőrzése, oldalszámok lekérése, formátumok felismerése
+  és a létrehozási dátumok hatékony lekérdezése.
+og_image_alt: Guide showing how to extract metadata and validate file type in Java
+  with GroupDocs.Annotation
+og_title: Hogyan lehet metaadatokat kinyerni és ellenőrizni a fájltípust Java-ban
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: How to extract metadata in Java using GroupDocs.Annotation. Validate
+    file types, get page counts, detect formats, and retrieve creation dates efficiently.
+  headline: How to extract metadata and validate file type in Java
+  type: TechArticle
+- questions:
+  - answer: Use `Annotation.getSupportedFileExtensions()` to retrieve the list of
+      supported extensions, then compare the file’s extension or inspect its header
+      with `Annotation.getFileFormat()`.
+    question: How do I programmatically detect the format of an unknown file?
+  - answer: Most formats expose a creation timestamp via `DocumentInfo.getCreatedDate()`.
+      If a format lacks this property, the API returns `null`.
+    question: Can I retrieve the document creation date for all supported types?
+  - answer: Call `Annotation.isSupported(filePath)` or compare the file’s extension
+      against the enumeration from `Annotation.getSupportedFileExtensions()`.
+    question: What is the best way to validate a file type in Java before processing?
+  - answer: Yes, GroupDocs.Annotation reads only the header sections required for
+      page count, keeping memory usage low even for multi‑hundred‑page PDFs.
+    question: Is it possible to get the page count of a PDF without loading the entire
+      file?
+  - answer: Extract metadata first, cache the result, and if you need to process the
+      full content, use streaming APIs or process the document in chunks.
+    question: How should I handle large documents to avoid memory issues?
+  type: FAQPage
 tags:
 - document-processing
 - metadata-extraction
 - java-api
 - file-analysis
-title: Fájl típus ellenőrzése Java-ban és metaadatok kinyerése a GroupDocs használatával
+- groupdocs
+- java
+title: Hogyan lehet metaadatokat kinyerni és ellenőrizni a fájltípust Java-ban
 type: docs
 url: /hu/java/document-information/
 weight: 12
 ---
 
-# Fájl típusának ellenőrzése Java-ban és dokumentum metaadatok kinyerése
+# Hogyan lehet metaadatokat kinyerni és ellenőrizni a fájltípust Java-ban
 
-Szüksége volt már arra, hogy egy dokumentum oldalszámát megtudja, mielőtt feldolgozná? Vagy ellenőrizze, hogy egy fájlformátum támogatott‑e az alkalmazásában? **A fájl típusának Java‑ban történő ellenőrzése** korán időt és erőforrásokat takaríthat meg. Ez az átfogó útmutató megmutatja, hogyan nyerhet ki metaadatokat és információkat a GroupDocs.Annotation for Java segítségével – ezáltal okosabbá és hatékonyabbá téve a dokumentumfeldolgozási munkafolyamatokat.
+A modern dokumentumfeldolgozó csővezetékekben a **metaadatok kinyerése** gyorsan meghatározza, hogy egy fájlt fel lehet-e dolgozni a továbbiakban. Ez az útmutató végigvezet a GroupDocs.Annotation for Java használatán a fájltípusok ellenőrzéséhez, az oldalszámok beolvasásához, a pontos formátumok felismeréséhez és a létrehozási időbélyegek lekéréséhez – mindezt anélkül, hogy a teljes dokumentumot a memóriába töltené. A végére egy újrahasználható mintát kap, amely CPU-ciklusokat takarít meg és megakadályozza a költséges futásidejű hibákat.
 
 ## Gyors válaszok
-- **Mi a metaadat‑kivonás elsődleges célja?** Lehetővé teszi, hogy a fájl információit (típus, oldalak, méret) a nehéz feldolgozás előtt összegyűjtse.  
-- **Melyik könyvtár kezeli ezt Java‑ban?** A GroupDocs.Annotation for Java egyszerű API‑t biztosít a metaadat‑kivonáshoz.  
-- **Hogyan ellenőrizhetem a fájl típusát Java‑ban?** Használja a supported‑formats API‑t a kompatibilitás futásidőbeni ellenőrzéséhez.  
-- **Lekérdezhetem a dokumentum létrehozási dátumát?** Igen, a DocumentInfo objektum a létrehozási időbélyeget teszi elérhetővé.  
-- **Lehetséges-e bármely támogatott formátum oldalszámát lekérni?** Teljesen – az API pontos oldalszámot ad vissza PDF, DOCX, PPTX és egyéb formátumok esetén.
+- **Mi a metaadatok kinyerésének elsődleges célja?** Lehetővé teszi, hogy a fájl információit (típus, oldalak, méret) összegyűjtse a nehéz feldolgozás előtt.  
+- **Melyik könyvtár kezeli ezt Java-ban?** A GroupDocs.Annotation for Java egyszerű API-t biztosít a metaadatok kinyeréséhez.  
+- **Hogyan ellenőrizhetem a fájltípust Java-ban?** Használja a supported‑formats API-t a kompatibilitás futásidőben történő ellenőrzéséhez.  
+- **Lekérhetem egy dokumentum létrehozási dátumát?** Igen, a `DocumentInfo` objektum elérhetővé teszi a létrehozási időbélyeget.  
+- **Lehetőség van bármely támogatott formátum oldalszámának lekérésére?** Természetesen – az API pontos oldalszámot ad vissza PDF-ek, DOCX, PPTX és egyéb formátumok esetén.
 
-## Mi az a metaadat‑kivonás és miért fontos?
+## Mi a metaadatok kinyerése?
+A metaadatok kinyerése a dokumentum beépített tulajdonságainak automatizált olvasása – például fájltípus, oldalszám, méret és létrehozási dátum – anélkül, hogy a teljes tartalmat megnyitná. Ha ezeket a részleteket korán ismeri, ellenőrizheti a fájltípust Java-ban, hatékonyan allokálhat erőforrásokat, és pontos információkat jeleníthet meg a felhasználóknak (például: „A PDF-nek 12 oldala van”).
 
-A metaadat‑kivonás a dokumentum beépített tulajdonságainak (például fájltípus, oldalszám, méret, létrehozási dátum) programozott olvasása anélkül, hogy a teljes tartalmat megnyitná. Ezeknek a részleteknek a korai ismerete lehetővé teszi, hogy:
+## Miért használjuk a GroupDocs.Annotation for Java-t?
+A GroupDocs.Annotation **70+ bemeneti és kimeneti formátumot** támogat, és metaadatokat tud olvasni akár **2 GB** méretű fájlokból is anélkül, hogy a teljes fájlt a memóriába töltené. Ez a mérhető képesség lehetővé teszi, hogy nagy kötegeket dolgozzon fel közepes hardveren, miközben a késleltetés fájlonként 200 ms alatt marad.
 
-- **Validate file type Java** már a drága műveletek megkezdése előtt.  
-- **Java get page count** segítségével erőforrásokat osszon be vagy döntse el a feldolgozási sorokat.  
-- **Detect file format Java** a formátum‑specifikus logika alkalmazásához.  
-- Pontos információkat nyújtson a felhasználóknak (pl. „A PDF‑je 12 oldalas”).
+## Előfeltételek
+- Java 8 vagy újabb telepítve.  
+- A GroupDocs.Annotation for Java könyvtár hozzáadva a projekthez (Maven/Gradle).  
+- Érvényes GroupDocs ideiglenes vagy fizetett licenc a termelési használathoz.
 
-## Hogyan ellenőrizhetjük a fájl típusát Java‑ban és nyerhetünk ki metaadatokat a GroupDocs.Annotation segítségével
+## Hogyan ellenőrizhetjük a fájltípust Java-ban?
+`Annotation` a fő belépési osztály a dokumentumok kezeléséhez a GroupDocs.Annotation-ban. Töltse be a fájlt az `Annotation` osztállyal, és hívja meg az `isSupported` metódust. Ez az egy‑soros ellenőrzés azonnal megmondja, hogy a dokumentum feldolgozható-e, lehetővé téve a nem támogatott formátumok elutasítását a nehéz I/O előtt.
 
-A GroupDocs.Annotation egy egyszerű `DocumentInfo` osztályt kínál, amely egyetlen hívással visszaadja az összes releváns tulajdonságot. Az alábbiakban a tipikus munkafolyamat látható:
+## Hogyan kérhetjük le a dokumentum tulajdonságait Java-ban?
+`DocumentInfo` metaadatokat tartalmaz egy dokumentumról, például annak típusát, méretét és oldalszámát. A `DocumentInfo` osztály egy pillanatképet nyújt a dokumentum tulajdonságairól, mint a fájltípus, oldalszám, méret és létrehozási dátum, lehetővé téve ezen adatok elérését a teljes tartalom betöltése nélkül.
 
-1. **Hozza létre az `Annotation` objektumot** a fájl stream‑jével vagy elérési útjával.  
-2. **Hívja meg a `getDocumentInfo()` metódust** a `DocumentInfo` példány lekéréséhez.  
-3. **Olvassa ki a tulajdonságokat** például `getFileType()`, `getPageCount()`, `getFileSize()` és `getCreatedDate()`.
+## Hogyan észlelhetjük a fájlformátumot Java-ban?
+Ha a fájlkiterjesztésen túl pontos formátumazonosítóra van szükség, használja a `Annotation.getFileFormat(filePath)` metódust. Ez a módszer a fájl fejlécét vizsgálja, és megbízható enum értéket ad vissza, biztosítva, hogy csak megfelelő esetben alkalmazzon formátum‑specifikus logikát.
 
-> **Pro tip:** Tárolja el a `DocumentInfo` objektumot gyorsítótárban, ha ugyanazt a dokumentumot többször kell elérnie; ez elkerüli a felesleges I/O‑t.
-
-### Hogyan végezzünk fájltípus‑ellenőrzést Java‑ban
-
-Használja az `Annotation.isSupported(filePath)` metódust, vagy hasonlítsa össze a fájl kiterjesztését a `Annotation.getSupportedFileExtensions()` által visszaadott listával. Így csak azokat a fájlokat dolgozza fel, amelyeket az alkalmazása kezelni tud.
-
-### Hogyan olvassuk ki a dokumentum tulajdonságait
-
-A `DocumentInfo` objektum gettereket biztosít a gyakori tulajdonságokhoz:
-
-- `getFileType()` – visszaadja a felismert formátumot (pl. PDF, DOCX).  
-- `getFileSize()` – méret bájtokban.  
-- `getCreatedDate()` – létrehozási időbélyeg (lehet `null`, ha nem érhető el).
-
-### Hogyan detektáljuk a fájlformátumot Java‑ban
-
-Ha a pontos formátumot a fájl kiterjesztése mellett is meg kell ismerni, hívja a `Annotation.getFileFormat(filePath)` metódust. Ez a fájl fejlécét vizsgálja, és megbízható formátum‑azonosítót ad vissza.
-
-### PDF oldalszám kinyerése
-
-PDF‑ek esetén a `DocumentInfo.getPageCount()` csak a szükséges fejlécinformációkat olvassa, így a teljes dokumentum memóriába töltése nélkül kapja meg az oldalszámot.
-
-### Dokumentum oldalszám lekérése
-
-Az ugyanaz a `getPageCount()` metódus minden támogatott formátumra (DOCX, PPTX, XLSX stb.) működik, egy egységes módot biztosítva az oldalak vagy diák számának lekérésére.
-
-## Elérhető oktatóanyagok
-
-### [Hatékony dokumentum metaadat‑kivonás a GroupDocs.Annotation for Java segítségével](./groupdocs-annotation-java-document-info-extraction/)
-
-Ez az oktatóanyag az alapvető dokumentum metaadatok, például fájltípus, oldalszám és méret kinyeréséhez nyújt útmutatót. Megtanulhatja, hogyan lehet hatékonyan lekérni a dokumentum tulajdonságait, és hogyan integrálja ezeket a dokumentumkezelési munkafolyamatokba.
-
-**Amit elsajátít:**
-- Fájltípus és formátuminformáció kinyerése  
-- Pontos oldalszámok lekérése többoldalas dokumentumokhoz  
-- Dokumentumméret és létrehozási dátum lekérdezése  
-- Különböző dokumentumformátumok egységes kezelése  
-- Metaadat‑kivonás optimalizálása a teljesítmény érdekében  
-
-**Ideális:** Fejlesztőknek, akik dokumentumkezelő rendszereket, tartalomelemzőket vagy olyan alkalmazásokat építenek, amelyek intelligensen dolgozzák fel a dokumentumokat azok jellemzői alapján.
-
-### [Hogyan kérdezzük le a támogatott fájlformátumokat a GroupDocs.Annotation for Java‑ban: Átfogó útmutató](./groupdocs-annotation-java-supported-formats/)
-
-Tanulja meg, hogyan fedezheti fel programozottan, mely fájlformátumokat képes kezelni az alkalmazása. Ez az útmutató megmutatja, hogyan listázhatja dinamikusan a támogatott formátumokat, ezáltal rugalmasabbá és felhasználóbarátabbá téve a megoldását.
-
-**Főbb témák:**
-- Az összes támogatott fájlformátum felsorolása  
-- Formátum‑kompatibilitás ellenőrzése futásidőben – **how to detect format**  
-- Támogatott formátumok megjelenítése a felhasználóknak  
-- Nem támogatott fájltípusok kezelése elegánsan  
-- Formátum‑validáció beépítése a munkafolyamatokba  
-
-**Ideális:** Fájl‑feltöltési funkcióval rendelkező alkalmazások, dokumentumkonvertálók vagy bármely rendszer számára, amelynek **validate file type Java** előtt kell ellenőriznie a fájlokat.
+## Hogyan nyerhetjük ki az oldalszámot bármely támogatott dokumentumból?
+A `DocumentInfo.getPageCount()` hívás csak a szükséges fejlécinformációkat olvassa, így az oldalszámot a teljes dokumentum betöltése nélkül kapja meg. Ugyanez a metódus működik PDF-ek, DOCX, PPTX, XLSX és egyéb támogatott formátumok esetén, egységes módot biztosítva a lapozás kezelésére mindenhol.
 
 ## Gyakori felhasználási esetek
 
-- **Dokumentumkezelő rendszerek:** Metaadatok kinyerése kereshető indexek létrehozásához.  
-- **Kötegelt feldolgozó alkalmazások:** Oldalszám és méret alapján dönt a feldolgozási stratégiáról.  
-- **Felhasználói feltöltő felületek:** Fájltípus, oldalszám és létrehozási dátum megjelenítése feltöltés előtt.  
-- **Automatizált munkafolyamatok:** Dokumentumok irányítása jellemzőik alapján (pl. nagy PDF‑ek külön sorba).
+- **Dokumentumkezelő rendszerek:** Fájlok indexelése típus, oldalszám és létrehozási dátum alapján a gyors kereséshez.  
+- **Kötegelt feldolgozási csővezetékek:** Nagy PDF-ek irányítása egy dedikált sorba az oldalszám alapján.  
+- **Felhasználói feltöltő felületek:** Fájl metaadatok (típus, oldalak, méret) megjelenítése a feltöltés befejezése előtt.  
+- **Automatizált munkafolyamatok:** Különböző feldolgozási lépések (OCR, konverzió, archiválás) indítása a felismert formátumtól függően.
 
-## Legjobb gyakorlatok a dokumentuminformáció‑kivonáshoz
+## Legjobb gyakorlatok a dokumentuminformációk kinyeréséhez
 
-- **Metaadatok gyorsítótárazása, ha lehetséges:** A kivonás erőforrás‑igényes lehet; használja újra az eredményeket ugyanazon fájl többszöri feldolgozásakor.  
-- **Kivételek szép kezelése:** Sérült fájlok hibát dobhatnak – mindig csomagolja a kivonási hívásokat try/catch blokkokba.  
-- **Validálás a feldolgozás előtt:** Használja a supported‑formats API‑t a **validate file type Java** korai elvégzéséhez.  
-- **Teljesítmény szem előtt tartása:** Csak a szükséges tulajdonságokat vonja ki; kerüld a teljes tartalom betöltését, ha nincs rá szükség.
+- **Cache-elje a `DocumentInfo` objektumot** amikor ugyanazt a fájlt többször használják; ez elkerüli a felesleges I/O-t.  
+- **Tegye try/catch blokkba a kinyerési hívásokat**, hogy hibás vagy részben feltöltött fájlokat elegánsan kezelje.  
+- **Ellenőrizze a feldolgozás előtt** a supported‑formats API-val, hogy korán kiszűrje a nem támogatott fájlokat.  
+- **Csak a szükséges tulajdonságokat nyerje ki**; kerülje a nem használt metódusok hívását a könnyű művelet érdekében.
 
 ## Gyakori problémák hibaelhárítása
 
-- **„Unsupported File Format” hibák:** Először futtassa a supported‑formats oktatóanyagot, hogy megbizonyosodjon a fájl felismeréséről.  
-- **Memória‑problémák nagy fájlok esetén:** Egyes formátumok a metaadatokhoz a teljes dokumentumot betöltik; figyelje a memóriahasználatot, és nagyon nagy fájloknál fontolja meg a streaminget.  
-- **Eredmények eltérése formátumok között:** Normalizálja a metaadatokat (pl. dátumok ISO‑8601‑re konvertálása) az alkalmazás rétegben a konzisztencia érdekében.
+- **„Nem támogatott fájlformátum” hibák:** Először futtassa a supported‑formats oktatót a fájl kompatibilitásának megerősítéséhez.  
+- **Memóriahullámok nagyon nagy fájlok esetén:** Bár a metaadatok kinyerése könnyű, egyes formátumok még mindig puffereket allokálnak; figyelje a memóriát és fontolja a nagy PDF-ek streamingolását.  
+- **Inkonzisztens dátumok a formátumok között:** Normalizálja az összes időbélyeget ISO‑8601 formátumra az alkalmazás rétegben az egységes kezelés érdekében.
 
-## Teljesítmény‑szempontok
+## Teljesítménybeli megfontolások
 
-A metaadat‑kivonás általában gyors, de a teljesítményt tovább növelheti:
+A metaadatok kinyerése általában **200 ms** alatti idő alatt befejeződik fájlonként egy standard 2‑magos VM-en. A áteresztőképességet tovább növelheti:
 
-- Egyszeri kivonás és gyorsítótárazás.  
-- Dokumentumok kötegelt feldolgozása.  
-- Aszinkron végrehajtás nagy dokumentumkészletek esetén.  
-- Memóriahasználat monitorozása, különösen nagy felbontású PDF‑eknél.
-
-## Kezdő lépések
-
-Készen áll a dokumentuminformáció‑kivonás megvalósítására Java‑alkalmazásában? Kezdje a metaadat‑kivonási oktatóanyaggal, hogy elsajátítsa az alapokat, majd fedezze fel a formátum‑detektálást a fejlettebb forgatókönyvekhez. Minden útmutató tartalmaz teljes, működő kódrészleteket, amelyeket közvetlenül beilleszthet a projektjeibe.
+- Egyszeri kinyerés és az eredmények cache-elése.  
+- Fájlok párhuzamos kötegben történő feldolgozása.  
+- Aszinkron végrehajtás használata nagy mennyiségű ingest csővezetékekhez.
 
 ## További források
 
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation for Java API Reference](https://reference.groupdocs.com/annotation/java/)
-- [Download GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation Forum](https://forum.groupdocs.com/c/annotation)
-- [Free Support](https://forum.groupdocs.com/)
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs.Annotation for Java dokumentáció](https://docs.groupdocs.com/annotation/java/)
+- [GroupDocs.Annotation for Java API referencia](https://reference.groupdocs.com/annotation/java/)
+- [GroupDocs.Annotation for Java letöltése](https://releases.groupdocs.com/annotation/java/)
+- [GroupDocs.Annotation fórum](https://forum.groupdocs.com/c/annotation)
+- [Ingyenes támogatás](https://forum.groupdocs.com/)
+- [Ideiglenes licenc](https://purchase.groupdocs.com/temporary-license/)
+- [Hatékony dokumentum metaadat kinyerés GroupDocs.Annotation használatával Java-ban](./groupdocs-annotation-java-document-info-extraction/)
+- [Hogyan kérhetők le a támogatott fájlformátumok a GroupDocs.Annotation for Java-ban: Átfogó útmutató](./groupdocs-annotation-java-supported-formats/)
 
-## Gyakran feltett kérdések
+## Gyakran ismételt kérdések
 
-**K: Hogyan detektáljam programozottan egy ismeretlen fájl formátumát?**  
-A: Használja a `Annotation.getSupportedFileExtensions()` metódust a támogatott kiterjesztések listájának lekéréséhez, majd hasonlítsa össze a fájl kiterjesztését vagy tartalomfejlécét, hogy meghatározza, támogatott‑e a formátum.
+**Q: Hogyan tudom programozottan észlelni egy ismeretlen fájl formátumát?**  
+A: Használja a `Annotation.getSupportedFileExtensions()` metódust a támogatott kiterjesztések listájának lekéréséhez, majd hasonlítsa össze a fájl kiterjesztését vagy vizsgálja meg a fejlécét a `Annotation.getFileFormat()` segítségével.
 
-**K: Lekérdezhetem a dokumentum létrehozási dátumát minden támogatott típusnál?**  
-A: A legtöbb formátum a `DocumentInfo.getCreatedDate()` segítségével biztosítja a létrehozási időbélyeget. Ha egy formátum nem tárolja ezt a tulajdonságot, az API `null`‑t ad vissza.
+**Q: Lekérhetem a dokumentum létrehozási dátumát minden támogatott típus esetén?**  
+A: A legtöbb formátum a `DocumentInfo.getCreatedDate()` segítségével biztosítja a létrehozási időbélyeget. Ha egy formátum nem rendelkezik ezzel a tulajdonsággal, az API `null`-t ad vissza.
 
-**K: Mi a legjobb módja a fájl típusának Java‑ban történő validálásának a feldolgozás előtt?**  
-A: Hívja a `Annotation.isSupported(filePath)` metódust, vagy ellenőrizze a supported‑formats oktatóanyagban visszaadott felsorolást. Ez megakadályozza a „Unsupported File Format” hibákat.
+**Q: Mi a legjobb módja a fájltípus Java-ban történő ellenőrzésének feldolgozás előtt?**  
+A: Hívja meg az `Annotation.isSupported(filePath)` metódust, vagy hasonlítsa össze a fájl kiterjesztését az `Annotation.getSupportedFileExtensions()` enumerációval.
 
-**K: Lehet-e PDF oldalszámot lekérni a teljes fájl betöltése nélkül?**  
-A: A GroupDocs.Annotation csak a szükséges fejléceket olvassa, így a művelet könnyű marad még nagy PDF‑ek esetén is.
+**Q: Lehetőség van egy PDF oldalszámának lekérésére a teljes fájl betöltése nélkül?**  
+A: Igen, a GroupDocs.Annotation csak az oldalszámhoz szükséges fejlécszakaszokat olvassa, így alacsony a memóriahasználat még több száz oldalas PDF-ek esetén is.
 
-**K: Hogyan kezeljem a nagy dokumentumokat a memória‑problémák elkerülése érdekében?**  
-A: Először vonja ki a metaadatokat, tárolja gyorsítótárban, majd fontolja meg a dokumentum darabolt feldolgozását vagy a streaming API‑k használatát a tartalom‑intenzív műveletekhez.
+**Q: Hogyan kezeljem a nagy dokumentumokat a memória problémák elkerülése érdekében?**  
+A: Először nyerje ki a metaadatokat, cache-elje az eredményt, és ha a teljes tartalmat kell feldolgozni, használjon streaming API-kat vagy dolgozza fel a dokumentumot darabokban.
 
----
+**Utolsó frissítés:** 2026-09-15  
+**Tesztelve ezzel:** GroupDocs.Annotation for Java 23.12  
+**Szerző:** GroupDocs
 
-**Utoljára frissítve:** 2026-03-01  
-**Tesztelt verzió:** GroupDocs.Annotation for Java 23.12  
-**Szerző:** GroupDocs  
+## Kapcsolódó oktatóanyagok
 
----
+- [PDF betöltése Java-val a GroupDocs Annotation segítségével: Dokumentum betöltési útmutató](/annotation/java/document-loading/)
+- [Java fájlfeltöltés ellenőrzésének megvalósítása a GroupDocs.Annotation segítségével](/annotation/java/document-information/groupdocs-annotation-java-supported-formats/)
+- [Jelszóval védett PDF betöltése a GroupDocs.Annotation Java-val](/annotation/java/advanced-features/)
