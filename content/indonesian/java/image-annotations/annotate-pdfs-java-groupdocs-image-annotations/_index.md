@@ -1,55 +1,98 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: Pelajari cara menambahkan gambar ke PDF dan memberi anotasi PDF dengan
-  gambar menggunakan GroupDocs.Annotation untuk Java. Tutorial langkah demi langkah
-  dengan contoh kode, tips pemecahan masalah, dan praktik terbaik.
-keywords: Java PDF image annotation, GroupDocs annotation tutorial, PDF annotation
-  Java library, add images to PDF Java, how to annotate PDF with images Java
-lastmod: '2026-03-06'
-linktitle: Java PDF Image Annotation Guide
+date: '2026-09-15'
+description: Pelajari cara memberi anotasi PDF dengan gambar menggunakan GroupDocs.Annotation
+  untuk Java. Panduan langkah demi langkah, contoh kode, tips pemecahan masalah, dan
+  praktik terbaik untuk pengembang Java.
+keywords:
+- annotate pdf with image
+- java add image pdf
+- add image pdf java
+- embed image pdf java
+- groupdocs annotation java
+lastmod: '2026-09-15'
+linktitle: Panduan Anotasi Image PDF Java
+og_description: Berikan anotasi PDF dengan gambar menggunakan GroupDocs.Annotation
+  untuk Java. Panduan ini menunjukkan cara menambahkan, memutar, dan menata gambar
+  dalam PDF dengan contoh kode yang jelas.
+og_image_alt: 'Developer guide: annotate PDF with image using GroupDocs Annotation
+  for Java'
+og_title: Cara memberi anotasi PDF dengan gambar di Java menggunakan GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  headline: How to annotate PDF with image in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  name: How to annotate PDF with image in Java using GroupDocs
+  steps:
+  - name: initialize the annotator
+    text: '`Annotator` is the entry point that opens a PDF and prepares it for modifications.
+      `Annotator` is the core class that loads a PDF document, exposes annotation
+      collections, and writes changes back to disk. **Why try‑with‑resources?** It
+      guarantees the annotator closes and releases file handles, preve'
+  - name: create and configure your image annotation
+    text: Below is a minimal `ImageAnnotation` setup; `ImageAnnotation` represents
+      an image‑based annotation that can be placed on a PDF page. You’ll define the
+      rectangle, opacity, page number, image source, and rotation angle. `Rectangle`
+      defines the position and size of the annotation on the page. `Rectangl
+  - name: apply the annotation and save
+    text: Now attach the annotation to the document and write the result to disk.
+      That’s it – you’ve just **annotate PDF with image** successfully.
+  type: HowTo
+- questions:
+  - answer: No hard limit, but keep images under 2 MB for optimal performance.
+    question: What’s the maximum image size I can use?
+  - answer: GroupDocs renders only the first frame of an animated GIF.
+    question: Can I use animated GIFs?
+  - answer: GroupDocs uses a top‑left origin; the `Rectangle` coordinates are measured
+      in pixels from that point.
+    question: How do I position images precisely?
+  - answer: Yes – provide the password when constructing the `Annotator`.
+    question: Can I annotate password‑protected PDFs?
+  - answer: Supported PDF versions range from 1.4 to 2.0, covering virtually every
+      PDF you’ll encounter.
+    question: Does this work with all PDF versions?
+  type: FAQPage
 tags:
-- PDF
-- annotation
-- GroupDocs
-- Java
-- document-processing
-title: Cara menambahkan gambar ke PDF menggunakan Java dan GroupDocs Annotation
+- annotate pdf with image
+- java pdf annotation
+- groupdocs
+- pdf image annotation
+- document processing
+title: Cara memberi anotasi PDF dengan gambar di Java menggunakan GroupDocs
 type: docs
-url: /id/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/
-weight: 1
 ---
 
-# Cara menambahkan gambar ke PDF menggunakan Java dan GroupDocs Annotation
+# Cara memberi anotasi PDF dengan gambar di Java menggunakan GroupDocs
 
-Pernahkah Anda menatap sebuah PDF dan berpikir, “Andai saja saya bisa **menambahkan gambar ke pdf** di sini untuk menjelaskannya lebih baik”? Anda tidak sendirian. Baik Anda sedang membangun sistem tinjauan dokumen, membuat materi edukasi, atau hanya membutuhkan konteks visual dalam PDF, anotasi gambar adalah pengubah permainan.
-
-Dalam tutorial ini Anda akan belajar secara tepat cara **menambahkan gambar ke pdf** dengan GroupDocs.Annotation untuk Java. Kami akan membahas pengaturan, penggunaan dasar, properti lanjutan seperti opacity dan rotasi, serta jebakan umum. Pada akhir tutorial Anda akan dengan percaya diri menyematkan gambar ke dalam PDF secara programatik.
+Jika Anda perlu **annotate PDF with image**—misalnya, menyisipkan logo, diagram, atau foto langsung ke dalam kontrak atau manual pelatihan—GroupDocs.Annotation untuk Java membuatnya mudah. Dalam tutorial ini Anda akan melihat cara menambahkan anotasi gambar, mengontrol opasitas dan rotasinya, serta menangani masalah umum seperti PDF yang dilindungi kata sandi atau file besar. Pada akhir tutorial Anda akan dapat menyematkan gambar ke dalam PDF secara programatis dan dengan yakin mengirim solusi ke produksi.
 
 ## Jawaban Cepat
-- **Apakah saya dapat menambahkan gambar ke PDF dengan Java?** Ya – gunakan kelas `ImageAnnotation` milik GroupDocs.Annotation.  
-- **Perpustakaan mana yang mendukung opacity gambar?** Metode `setOpacity` memungkinkan Anda mengontrol opacity (`set image opacity java`).  
-- **Apakah saya memerlukan lisensi?** Versi percobaan dapat digunakan untuk pengujian; lisensi penuh diperlukan untuk produksi.  
-- **Bisakah saya memberi anotasi pada PDF yang dilindungi password?** Ya, cukup berikan password saat membuat `Annotator`.  
-- **Versi Java apa yang dibutuhkan?** Java 8+, meskipun Java 11+ direkomendasikan untuk kinerja terbaik.
+- **Bisakah saya menambahkan gambar ke PDF dengan Java?** Ya – gunakan kelas `ImageAnnotation` milik GroupDocs.Annotation.  
+- **Metode mana yang mengontrol opasitas gambar?** Panggil `setOpacity(float)` pada objek anotasi.  
+- **Apakah saya memerlukan lisensi untuk produksi?** Versi percobaan dapat digunakan untuk pengujian; lisensi penuh diperlukan untuk penggunaan komersial.  
+- **Bisakah saya memberi anotasi pada PDF yang dilindungi kata sandi?** Ya – berikan kata sandi saat membuat `Annotator`.  
+- **Versi Java apa yang diperlukan?** Java 8+, meskipun Java 11+ direkomendasikan untuk kinerja terbaik.
 
-## Apa itu **menambahkan gambar ke pdf**?
-Menambahkan gambar ke PDF berarti menyisipkan elemen visual (logo, diagram, stempel, dll.) sebagai anotasi yang menjadi bagian dari aliran konten dokumen. GroupDocs.Annotation memperlakukan gambar sebagai `ImageAnnotation`, memberi Anda kontrol penuh atas penempatan, ukuran, rotasi, dan opacity.
+## Apa itu menambahkan gambar ke PDF?
+Memuat gambar ke halaman PDF membuat **image annotation** yang menjadi bagian dari aliran konten dokumen. `ImageAnnotation` adalah objek yang menyimpan data gambar, posisinya, ukuran, rotasi, dan gaya visual, memungkinkan Anda memperlakukan gambar seperti jenis anotasi lainnya.
 
 ## Mengapa menggunakan GroupDocs Annotation untuk Java?
-- **Rich API** – set lengkap properti (posisi, opacity, rotasi).  
-- **Cross‑platform** – bekerja di Windows, Linux, dan macOS.  
-- **No external PDF viewers** – perpustakaan menangani rendering dan penyimpanan.  
-- **Enterprise‑ready licensing** – opsi trial, temporary, dan full.
+Muat PDF Anda, lampirkan `ImageAnnotation`, dan simpan—tanpa memerlukan penampil eksternal. GroupDocs Annotation mendukung **lebih dari 50 format input dan output**, dapat memproses PDF hingga **500 MB** tanpa memuat seluruh file ke memori, dan berjalan di Windows, Linux, serta macOS. API‑nya memberi Anda kontrol detail atas penempatan, opasitas (rentang 0‑1), dan rotasi (0‑360°), menjadikannya ideal untuk alur kerja dokumen tingkat perusahaan.
 
 ## Prasyarat
 - **Java** 8 atau lebih tinggi (Java 11+ direkomendasikan).  
-- **IDE** – IntelliJ IDEA, Eclipse, atau editor yang kompatibel dengan Java.  
+- **IDE** – IntelliJ IDEA, Eclipse, atau editor Java apa pun yang kompatibel.  
 - **Alat build** – Maven atau Gradle (contoh menggunakan Maven).  
 
 ## Menyiapkan GroupDocs.Annotation
-
 Tambahkan repositori Maven dan dependensi ke `pom.xml` Anda:
 
 ```xml
@@ -69,20 +112,19 @@ Tambahkan repositori Maven dan dependensi ke `pom.xml` Anda:
 </dependencies>
 ```
 
-**Pro Tip:** Selalu verifikasi versi terbaru di halaman rilis GroupDocs. Versi 25.2 adalah yang terbaru pada awal 2025, namun rilis yang lebih baru mungkin menambahkan fitur.
+**Tips pro:** Selalu periksa versi terbaru di halaman rilis GroupDocs. Versi 25.2 adalah yang terbaru pada awal 2025, tetapi rilis yang lebih baru mungkin menambahkan fitur.
 
-### Lisensi (Jangan Lewatkan Ini!)
-Anda memiliki tiga pilihan:
+### Lisensi (jangan lewatkan ini!)
+Anda memiliki tiga opsi:
 
-1. **Free Trial** – sempurna untuk pengujian – dapatkan dari [halaman percobaan GroupDocs](https://releases.groupdocs.com/annotation/java/).  
-2. **Temporary License** – butuh waktu evaluasi lebih lama? Dapatkan satu [di sini](https://purchase.groupdocs.com/temporary-license/).  
-3. **Full License** – penggunaan produksi – tersedia di [halaman pembelian](https://purchase.groupdocs.com/buy).
+1. **Free trial** – sempurna untuk pengujian – dapatkan dari [halaman percobaan GroupDocs](https://releases.groupdocs.com/annotation/java/).  
+2. **Temporary license** – butuh waktu evaluasi lebih lama? Dapatkan satu dari [halaman lisensi sementara](https://purchase.groupdocs.com/temporary-license/).  
+3. **Full license** – penggunaan produksi – tersedia di [halaman pembelian](https://purchase.groupdocs.com/buy).
 
-## Memulai – Anotasi Gambar Pertama Anda
+## Memulai – anotasi gambar pertama Anda
 
-### Langkah 1: Inisialisasi Annotator
-
-Kelas `Annotator` adalah titik masuk Anda. Ia membuka PDF dan menyiapkannya untuk modifikasi.
+### Langkah 1: inisialisasi annotator
+`Annotator` adalah titik masuk yang membuka PDF dan menyiapkannya untuk modifikasi. `Annotator` adalah kelas inti yang memuat dokumen PDF, menampilkan koleksi anotasi, dan menulis perubahan kembali ke disk.
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -90,11 +132,12 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**Mengapa try‑with‑resources?** Ini menjamin annotator ditutup dan melepaskan handle file, mencegah kebocoran memori.
+**Mengapa try‑with‑resources?** Ini memastikan annotator ditutup dan melepaskan handle file, mencegah kebocoran memori.
 
-### Langkah 2: Buat dan Konfigurasikan Image Annotation Anda
+### Langkah 2: buat dan konfigurasikan anotasi gambar Anda
+Berikut adalah konfigurasi minimal `ImageAnnotation`; `ImageAnnotation` mewakili anotasi berbasis gambar yang dapat ditempatkan pada halaman PDF. Anda akan menentukan rectangle, opasitas, nomor halaman, sumber gambar, dan sudut rotasi.
 
-Berikut adalah contoh minimal `ImageAnnotation`. Anda akan menentukan rectangle, opacity, nomor halaman, sumber gambar, dan sudut rotasi.
+`Rectangle` menentukan posisi dan ukuran anotasi pada halaman. `Rectangle(100, 100, 100, 100)` berarti “mulai pada (100, 100) dari sudut kiri atas dan buat kotak berukuran 100 × 100 px”. Sesuaikan angka-angka ini agar cocok dengan tata letak Anda.
 
 ```java
 // Initialize the image annotation
@@ -125,10 +168,9 @@ imageAnnotation.setImagePath("www.google.com.ua/images/branding/googlelogo/2x/go
 imageAnnotation.setAngle(100.);
 ```
 
-**Memahami `Rectangle`** – `Rectangle(100, 100, 100, 100)` berarti “mulai pada (100, 100) dari sudut kiri‑atas dan buat kotak berukuran 100 × 100 px”. Sesuaikan angka‑angka ini agar cocok dengan tata letak Anda.
+**Memahami `setOpacity`** – metode `setOpacity(float)` mengatur transparansi anotasi pada skala dari 0 (sempurna transparan) hingga 1 (sempurna opak).
 
-### Langkah 3: Terapkan Anotasi dan Simpan
-
+### Langkah 3: terapkan anotasi dan simpan
 Sekarang lampirkan anotasi ke dokumen dan tulis hasilnya ke disk.
 
 ```java
@@ -139,13 +181,13 @@ annotator.add(imageAnnotation);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_image_annotation.pdf");
 ```
 
-Itu saja – Anda baru saja **menambahkan gambar ke pdf** dengan sukses.
+Itu saja – Anda baru saja **annotate PDF with image** berhasil.
 
-## Masalah Umum dan Solusinya
+## Masalah umum dan solusi
 
-### Masalah Jalur File
+### Masalah jalur file
 - **Gejala:** `FileNotFoundException` atau gambar kosong.  
-- **Solusi:** Gunakan jalur absolut atau pastikan URL dapat diakses.
+- **Solusi:** Gunakan jalur absolut atau pastikan URL dapat dijangkau.
 
 ```java
 // Bad: relative path that may fail
@@ -155,7 +197,7 @@ imageAnnotation.setImagePath("images/logo.png");
 imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
 ```
 
-### Ukuran dan Kualitas Gambar
+### Ukuran dan kualitas gambar
 - **Gejala:** Gambar pixelated atau terlalu besar.  
 - **Solusi:** Sesuaikan dimensi gambar dengan rectangle anotasi.
 
@@ -164,20 +206,17 @@ imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
 imageAnnotation.setBox(new Rectangle(50, 50, 200, 200));
 ```
 
-### Masalah Memori pada PDF Besar
+### Masalah memori dengan PDF besar
 - **Gejala:** `OutOfMemoryError`.  
-- **Solusi:** Proses dokumen secara batch dan gunakan gambar yang ringan.
+- **Solusi:** Proses dokumen secara batch dan pertahankan gambar ringan.
 
-## Kapan **menannotasi pdf dengan gambar**
+## Kapan harus memberi anotasi PDF dengan gambar
+Anda harus memberi anotasi PDF dengan gambar ketika konteks visual menambah nilai yang tidak dapat disampaikan oleh teks biasa—seperti melampirkan foto lokasi ke laporan inspeksi, menyematkan diagram dalam lembar kerja pelatihan, atau menempelkan logo pada kontrak. Menggunakan anotasi gambar mempertahankan tata letak PDF asli sambil menyampaikan informasi visual tambahan secara langsung kepada pembaca.
 
-- **Dokumen hukum:** Lampirkan foto kecelakaan atau tanda tangan langsung ke kontrak.  
-- **Materi edukasi:** Sisipkan diagram atau grafik ke lembar kerja.  
-- **Manual teknis:** Tambahkan screenshot atau diagram arsitektur.  
-- **Kontrol kualitas:** Sematkan foto cacat ke laporan inspeksi.
+## Praktik terbaik kinerja
 
-## Praktik Terbaik Kinerja
+### Optimalkan sumber gambar
 
-### Optimalkan Sumber Gambar
 ```java
 // Avoid huge files
 imageAnnotation.setImagePath("massive_10mb_image.png");
@@ -185,7 +224,8 @@ imageAnnotation.setImagePath("massive_10mb_image.png");
 // Resize to match annotation box (e.g., 100 × 100)
 ```
 
-### Strategi Pemrosesan Batch
+### Strategi pemrosesan batch
+
 ```java
 List<String> pdfFiles = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
 
@@ -198,7 +238,8 @@ for (String pdfFile : pdfFiles) {
 }
 ```
 
-### Manajemen Sumber Daya
+### Manajemen sumber daya
+
 ```java
 // Good – automatically closes resources
 try (final Annotator annotator = new Annotator("input.pdf")) {
@@ -211,9 +252,10 @@ Annotator annotator = new Annotator("input.pdf");
 // Forgot to close!
 ```
 
-## Tips Konfigurasi Lanjutan
+## Tips konfigurasi lanjutan
 
-### Penempatan Dinamis
+### Penempatan dinamis
+
 ```java
 // Bottom‑right corner placement (assuming standard Letter size)
 int pageWidth = 612;   // points
@@ -230,7 +272,8 @@ Rectangle dynamicPosition = new Rectangle(
 imageAnnotation.setBox(dynamicPosition);
 ```
 
-### Banyak Gambar pada Satu Halaman
+### Banyak gambar pada satu halaman
+
 ```java
 // Add a logo
 ImageAnnotation logo = new ImageAnnotation();
@@ -248,57 +291,51 @@ annotator.add(logo);
 annotator.add(stamp);
 ```
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**T: Berapa ukuran maksimum gambar yang dapat saya gunakan?**  
-J: Tidak ada batas keras, namun usahakan gambar di bawah 2 MB untuk kinerja optimal.
+**Q: Berapa ukuran gambar maksimum yang dapat saya gunakan?**  
+A: Tidak ada batas keras, tetapi pertahankan gambar di bawah 2 MB untuk kinerja optimal.
 
-**T: Bisakah saya menggunakan GIF animasi?**  
-J: GroupDocs hanya merender frame pertama dari GIF animasi.
+**Q: Bisakah saya menggunakan GIF animasi?**  
+A: GroupDocs hanya merender frame pertama dari GIF animasi.
 
-**T: Bagaimana cara menempatkan gambar secara presisi?**  
-J: GroupDocs menggunakan asal titik kiri‑atas; koordinat `Rectangle` diukur dalam piksel dari titik tersebut.
+**Q: Bagaimana cara menempatkan gambar dengan tepat?**  
+A: GroupDocs menggunakan asal titik kiri‑atas; koordinat `Rectangle` diukur dalam piksel dari titik tersebut.
 
-**T: Bisakah saya memberi anotasi pada PDF yang dilindungi password?**  
-J: Ya – berikan password saat membangun `Annotator`.
+**Q: Bisakah saya memberi anotasi pada PDF yang dilindungi kata sandi?**  
+A: Ya – berikan kata sandi saat membuat `Annotator`.
 
-**T: Apakah ini bekerja dengan semua versi PDF?**  
-J: Versi PDF yang didukung berkisar dari 1.4 hingga 2.0, mencakup hampir semua PDF yang akan Anda temui.
+**Q: Apakah ini bekerja dengan semua versi PDF?**  
+A: Versi PDF yang didukung berkisar dari 1.4 hingga 2.0, mencakup hampir semua PDF yang akan Anda temui.
 
-## Daftar Periksa Pemecahan Masalah
-
-1. ✅ **Lisensi valid?** Verifikasi status trial/temporary/full.  
-2. ✅ **Jalur file benar?** Pastikan PDF input dan jalur gambar ada.  
-3. ✅ **Izin OK?** Akses baca ke input, akses tulis ke output.  
-4. ✅ **Format gambar didukung?** Gunakan PNG, JPG, atau GIF.  
-5. ✅ **Nomor halaman valid?** Ingat bahwa nomor halaman dimulai dari 0.  
-6. ✅ **Koordinat rectangle wajar?** Hindari nilai negatif atau di luar batas.
-
-## Penutup
-
-Anda kini memiliki dasar yang kuat untuk **menambahkan gambar ke pdf** menggunakan GroupDocs.Annotation untuk Java. Ingatlah untuk:
+## Kesimpulan
+Anda kini memiliki dasar yang kuat untuk **annotate PDF with image** menggunakan GroupDocs.Annotation untuk Java. Ingatlah untuk:
 
 - Gunakan try‑with‑resources untuk pembuangan yang bersih.  
 - Optimalkan dimensi gambar agar PDF tetap ringan.  
 - Uji dengan jalur absolut untuk menghindari kesalahan terkait jalur.  
-- Pilih opacity dan rotasi yang sesuai dengan desain visual Anda.
+- Pilih opasitas dan rotasi yang sesuai dengan desain visual Anda.
 
-**Langkah selanjutnya:** Jelajahi tipe anotasi lain (teks, bentuk, highlight) atau integrasikan logika ini ke layanan Spring Boot untuk pemrosesan PDF secara real‑time.
+**Langkah selanjutnya:** Jelajahi jenis anotasi lain (teks, bentuk, sorotan) atau integrasikan logika ini ke dalam layanan Spring Boot untuk pemrosesan PDF secara langsung.
 
-Dokumentasi di [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) memiliki contoh lanjutan dan referensi API ketika Anda siap menyelam lebih dalam.
+Dokumentasi di [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) memiliki contoh lanjutan dan referensi API ketika Anda siap menyelami lebih dalam.
 
 ---
 
-**Terakhir Diperbarui:** 2026-03-06  
-**Diuji Dengan:** GroupDocs.Annotation 25.2 (Java)  
+**Terakhir Diperbarui:** 2026-09-15  
+**Diuji dengan:** GroupDocs.Annotation 25.2 (Java)  
 **Penulis:** GroupDocs  
 
-**Sumber Daya dan Dukungan**
-
-- **Dokumentasi Lengkap:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+**Sumber daya dan dukungan**
+- **Dokumentasi lengkap:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
 - **Referensi API:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
-- **Unduh Versi Terbaru:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Beli Lisensi:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Percobaan Gratis:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
-- **Lisensi Sementara:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Dukungan Komunitas:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+- **Unduh versi terbaru:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
+- **Beli lisensi:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **Percobaan gratis:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
+- **Lisensi sementara:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Dukungan komunitas:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+
+## Tutorial Terkait
+- [Cara memberi anotasi PDF – API Anotasi Dokumen Java | GroupDocs.Annotation](/annotation/java/)
+- [Tambahkan Anotasi PDF Java – Panduan Lengkap GroupDocs](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Muat PDF Java dengan GroupDocs Annotation: Panduan Memuat Dokumen](/annotation/java/document-loading/)

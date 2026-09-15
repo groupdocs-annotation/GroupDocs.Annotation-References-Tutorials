@@ -1,54 +1,98 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: GroupDocs.Annotation for Java kullanarak PDF'ye resim eklemeyi ve PDF'yi
-  resimle açıklamayı öğrenin. Kod örnekleri, sorun giderme ipuçları ve en iyi uygulamalarla
-  adım adım öğretici.
-keywords: Java PDF image annotation, GroupDocs annotation tutorial, PDF annotation
-  Java library, add images to PDF Java, how to annotate PDF with images Java
-lastmod: '2026-03-06'
-linktitle: Java PDF Image Annotation Guide
+date: '2026-09-15'
+description: Java için GroupDocs.Annotation kullanarak PDF'ye resim eklemeyi öğrenin.
+  Adım adım rehber, kod parçacıkları, sorun giderme ipuçları ve Java geliştiricileri
+  için en iyi uygulamalar.
+keywords:
+- annotate pdf with image
+- java add image pdf
+- add image pdf java
+- embed image pdf java
+- groupdocs annotation java
+lastmod: '2026-09-15'
+linktitle: Java PDF Resim Anotasyonu Rehberi
+og_description: Java için GroupDocs.Annotation kullanarak PDF'ye resim ekleyin. Bu
+  rehber, PDF'lerde resimleri ekleme, döndürme ve stil verme işlemlerini net kod örnekleriyle
+  gösterir.
+og_image_alt: 'Developer guide: annotate PDF with image using GroupDocs Annotation
+  for Java'
+og_title: Java'da GroupDocs kullanarak PDF'ye resim ekleme
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  headline: How to annotate PDF with image in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  name: How to annotate PDF with image in Java using GroupDocs
+  steps:
+  - name: initialize the annotator
+    text: '`Annotator` is the entry point that opens a PDF and prepares it for modifications.
+      `Annotator` is the core class that loads a PDF document, exposes annotation
+      collections, and writes changes back to disk. **Why try‑with‑resources?** It
+      guarantees the annotator closes and releases file handles, preve'
+  - name: create and configure your image annotation
+    text: Below is a minimal `ImageAnnotation` setup; `ImageAnnotation` represents
+      an image‑based annotation that can be placed on a PDF page. You’ll define the
+      rectangle, opacity, page number, image source, and rotation angle. `Rectangle`
+      defines the position and size of the annotation on the page. `Rectangl
+  - name: apply the annotation and save
+    text: Now attach the annotation to the document and write the result to disk.
+      That’s it – you’ve just **annotate PDF with image** successfully.
+  type: HowTo
+- questions:
+  - answer: No hard limit, but keep images under 2 MB for optimal performance.
+    question: What’s the maximum image size I can use?
+  - answer: GroupDocs renders only the first frame of an animated GIF.
+    question: Can I use animated GIFs?
+  - answer: GroupDocs uses a top‑left origin; the `Rectangle` coordinates are measured
+      in pixels from that point.
+    question: How do I position images precisely?
+  - answer: Yes – provide the password when constructing the `Annotator`.
+    question: Can I annotate password‑protected PDFs?
+  - answer: Supported PDF versions range from 1.4 to 2.0, covering virtually every
+      PDF you’ll encounter.
+    question: Does this work with all PDF versions?
+  type: FAQPage
 tags:
-- PDF
-- annotation
-- GroupDocs
-- Java
-- document-processing
-title: Java ve GroupDocs Annotation kullanarak PDF'ye resim ekleme
+- annotate pdf with image
+- java pdf annotation
+- groupdocs
+- pdf image annotation
+- document processing
+title: Java'da GroupDocs kullanarak PDF'ye resim ekleme
 type: docs
-url: /tr/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/
-weight: 1
 ---
 
-# Java ve GroupDocs Annotation kullanarak PDF'ye resim ekleme
+# Java'da GroupDocs kullanarak PDF'ye resim ekleme
 
-Hiç bir PDF'ye bakıp, “Keşke burada **add image to pdf** ekleyebilseydim, böylece daha iyi açıklayabilirim” diye düşündünüz mü? Yalnız değilsiniz. İster bir belge inceleme sistemi geliştiriyor olun, ister eğitim materyalleri oluşturuyor olun, ya da sadece PDF'de görsel bir bağlam eklemeniz gerekiyorsa, resim açıklamaları oyunu değiştiren bir özelliktir.
+PDF'ye **PDF'ye resim eklemek** gerekiyorsa—örneğin bir logoyu, diyagramı veya bir fotoğrafı doğrudan bir sözleşmeye veya eğitim kılavuzuna eklemek—GroupDocs.Annotation for Java bunu zahmetsiz hale getirir. Bu öğreticide bir resim ek açıklamasını nasıl ekleyeceğinizi, saydamlığını ve dönüşünü nasıl kontrol edeceğinizi ve şifre korumalı PDF'ler veya büyük dosyalar gibi yaygın sorunları nasıl ele alacağınızı göreceksiniz. Sonunda, PDF'lere programlı olarak resim gömebilecek ve çözümü üretimde güvenle dağıtabileceksiniz.
 
-Bu öğreticide, GroupDocs.Annotation for Java ile **add image to pdf** dosyalarına nasıl ekleyeceğinizi tam olarak öğreneceksiniz. Kurulum, temel kullanım, opaklık ve döndürme gibi gelişmiş özellikler ve yaygın hatalar hakkında bilgi vereceğiz. Sonunda, PDF'lere programlı olarak resim ekleme konusunda kendinizden emin olacaksınız.
-
-## Hızlı Yanıtlar
+## Hızlı cevaplar
 - **Java ile bir PDF'ye resim ekleyebilir miyim?** Evet – GroupDocs.Annotation’ın `ImageAnnotation` sınıfını kullanın.  
-- **Hangi kütüphane resim opaklığını destekliyor?** `setOpacity` metodu opaklığı kontrol etmenizi sağlar (`set image opacity java`).  
-- **Lisans gerekli mi?** Test için bir deneme sürümü çalışır; üretim için tam lisans gereklidir.  
-- **Şifre korumalı bir PDF'yi açıklayabilir miyim?** Evet, `Annotator` oluştururken şifreyi sağlayın.  
-- **Hangi Java sürümü gerekiyor?** Java 8+, ancak en iyi performans için Java 11+ önerilir.
+- **Hangi yöntem resim saydamlığını kontrol eder?** Açıklama nesnesi üzerinde `setOpacity(float)` metodunu çağırın.  
+- **Üretim için lisansa ihtiyacım var mı?** Deneme sürümü test için çalışır; ticari kullanım için tam lisans gereklidir.  
+- **Şifre korumalı bir PDF'yi açıklayabilir miyim?** Evet – `Annotator` oluştururken şifreyi sağlayın.  
+- **Hangi Java sürümü gereklidir?** Java 8+, ancak en iyi performans için Java 11+ önerilir.
 
-## **add image to pdf** nedir?
-Bir PDF'ye resim eklemek, bir görsel öğeyi (logo, diyagram, damga vb.) açıklama olarak eklemek ve bu öğenin belgenin içerik akışının bir parçası haline gelmesi anlamına gelir. GroupDocs.Annotation, resmi bir `ImageAnnotation` olarak ele alır ve konum, boyut, döndürme ve opaklık üzerinde tam kontrol sağlar.
+## PDF'ye resim ekleme nedir?
+Bir PDF sayfasına bir resim yüklemek, belgenin içerik akışının bir parçası haline gelen bir **image annotation** oluşturur. `ImageAnnotation`, resim verilerini, konumunu, boyutunu, dönüşünü ve görsel stilini depolayan nesnedir ve resmi diğer açıklama türleri gibi işlemeyi sağlar.
 
-## Neden Java için GroupDocs Annotation kullanmalı?
-- **Zengin API** – konum, opaklık, döndürme gibi tam özellik seti.  
-- **Çapraz platform** – Windows, Linux ve macOS'ta çalışır.  
-- **Harici PDF görüntüleyiciler gerekmez** – kütüphane renderleme ve kaydetmeyi yönetir.  
-- **Kurumsal lisanslama** – deneme, geçici ve tam lisans seçenekleri.
+## Neden GroupDocs Annotation for Java kullanmalı?
+PDF'nizi yükleyin, bir `ImageAnnotation` ekleyin ve kaydedin—harici görüntüleyicilere gerek yok. GroupDocs Annotation **50+ giriş ve çıkış formatını** destekler, **500 MB**'a kadar PDF'leri bütün dosyayı belleğe yüklemeden işleyebilir ve Windows, Linux ve macOS'ta çalışır. API'si yerleştirme, saydamlık (0‑1 aralığı) ve dönüş (0‑360°) üzerinde ayrıntılı kontrol sağlar, bu da kurumsal düzeyde belge iş akışları için idealdir.
 
 ## Önkoşullar
 - **Java** 8 veya üzeri (Java 11+ önerilir).  
 - **IDE** – IntelliJ IDEA, Eclipse veya herhangi bir Java uyumlu editör.  
-- **Derleme aracı** – Maven veya Gradle (örnekler Maven kullanır).  
+- **Build tool** – Maven veya Gradle (örnekler Maven kullanır).  
 
-## GroupDocs.Annotation Kurulumu
+## GroupDocs.Annotation'ı Kurma
 
 Maven deposunu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 
@@ -69,20 +113,20 @@ Maven deposunu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 </dependencies>
 ```
 
-**İpucu:** Her zaman GroupDocs sürüm sayfasında en son sürümü kontrol edin. Versiyon 25.2, 2025 başlarında günceldi, ancak daha yeni sürümler yeni özellikler ekleyebilir.
+**İpucu:** En son sürümü her zaman GroupDocs sürüm sayfasından doğrulayın. Version 25.2, 2025'in başlarında günceldi, ancak daha yeni sürümler özellik ekleyebilir.
 
-### Lisanslama (Bunu Atlamayın!)
+### Lisanslama (bunu atlamayın!)
 Üç seçeneğiniz var:
 
-1. **Ücretsiz Deneme** – test için mükemmel – [GroupDocs deneme sayfasından](https://releases.groupdocs.com/annotation/java/) alın.  
-2. **Geçici Lisans** – daha fazla değerlendirme süresine mi ihtiyacınız var? [buradan](https://purchase.groupdocs.com/temporary-license/) edinin.  
-3. **Tam Lisans** – üretim kullanımı – [satın alma sayfasında](https://purchase.groupdocs.com/buy) mevcuttur.
+1. **Ücretsiz deneme** – test için mükemmel – [GroupDocs deneme sayfasından](https://releases.groupdocs.com/annotation/java/) alın.  
+2. **Geçici lisans** – daha fazla değerlendirme süresi mi gerekiyor? [geçici lisans sayfasından](https://purchase.groupdocs.com/temporary-license/) bir tane alın.  
+3. **Tam lisans** – üretim kullanımı – [satın alma sayfasında](https://purchase.groupdocs.com/buy) mevcuttur.
 
-## Başlarken – İlk Resim Açıklamanız
+## Başlarken – ilk resim ek açıklamanız
 
-### Adım 1: Annotator'ı Başlatma
+### Adım 1: annotator'ı başlatma
 
-`Annotator` sınıfı giriş noktanızdır. PDF'yi açar ve değişiklikler için hazırlar.
+`Annotator`, bir PDF'yi açan ve değişiklikler için hazırlayan giriş noktasıdır. `Annotator`, PDF belgesini yükleyen, açıklama koleksiyonlarını ortaya çıkaran ve değişiklikleri diske geri yazan çekirdek sınıftır.
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -92,9 +136,11 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 
 **Neden try‑with‑resources?** Annotator'ün kapanmasını ve dosya tutamaçlarını serbest bırakmasını garanti eder, bellek sızıntılarını önler.
 
-### Adım 2: Resim Açıklamanızı Oluşturun ve Yapılandırın
+### Adım 2: resim ek açıklamanızı oluşturma ve yapılandırma
 
-Aşağıda minimal bir `ImageAnnotation` kurulumu bulunmaktadır. Dikdörtgen, opaklık, sayfa numarası, resim kaynağı ve döndürme açısını tanımlayacaksınız.
+Aşağıda minimal bir `ImageAnnotation` kurulumu bulunmaktadır; `ImageAnnotation`, PDF sayfasına yerleştirilebilen bir resim‑tabanlı açıklamayı temsil eder. Dikdörtgeni, saydamlığı, sayfa numarasını, resim kaynağını ve dönüş açısını tanımlayacaksınız.
+
+`Rectangle`, açıklamanın sayfadaki konum ve boyutunu tanımlar. `Rectangle(100, 100, 100, 100)` ifadesi, “sol‑üst köşeden (100, 100) konumunda başlayıp kutuyu 100 × 100 px yap” anlamına gelir. Bu sayıları düzenleyerek yerleşiminize uyarlayın.
 
 ```java
 // Initialize the image annotation
@@ -125,9 +171,9 @@ imageAnnotation.setImagePath("www.google.com.ua/images/branding/googlelogo/2x/go
 imageAnnotation.setAngle(100.);
 ```
 
-**`Rectangle`'ı Anlamak** – `Rectangle(100, 100, 100, 100)` “sol‑üst köşeden (100, 100) konumunda başlayıp kutuyu 100 × 100 px yap” anlamına gelir. Bu sayıları düzeninizi uyacak şekilde ayarlayın.
+**`setOpacity`'ı anlama** – `setOpacity(float)` metodu, açıklamanın saydamlığını 0 (tamamen şeffaf) ile 1 (tamamen opak) arasında bir ölçekle ayarlar.
 
-### Adım 3: Açıklamayı Uygulayın ve Kaydedin
+### Adım 3: açıklamayı uygulama ve kaydetme
 
 Şimdi açıklamayı belgeye ekleyin ve sonucu diske yazın.
 
@@ -139,11 +185,11 @@ annotator.add(imageAnnotation);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_image_annotation.pdf");
 ```
 
-Hepsi bu – **add image to pdf** işlemini başarıyla gerçekleştirdiniz.
+Hepsi bu – **PDF'ye resim ekleme** işlemini başarıyla tamamladınız.
 
-## Yaygın Sorunlar ve Çözümler
+## Yaygın sorunlar ve çözümler
 
-### Dosya Yolu Problemleri
+### Dosya yolu sorunları
 - **Belirti:** `FileNotFoundException` veya boş resimler.  
 - **Çözüm:** Mutlak yollar kullanın veya URL'lerin erişilebilir olduğunu doğrulayın.
 
@@ -155,7 +201,7 @@ imageAnnotation.setImagePath("images/logo.png");
 imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
 ```
 
-### Resim Boyutu ve Kalitesi
+### Resim boyutu ve kalitesi
 - **Belirti:** Pikselleşmiş veya çok büyük resimler.  
 - **Çözüm:** Resim boyutlarını açıklama dikdörtgeniyle eşleştirin.
 
@@ -164,19 +210,16 @@ imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
 imageAnnotation.setBox(new Rectangle(50, 50, 200, 200));
 ```
 
-### Büyük PDF'lerde Bellek Sorunları
+### Büyük PDF'lerde bellek sorunları
 - **Belirti:** `OutOfMemoryError`.  
 - **Çözüm:** Belgeleri toplu işleyin ve resimleri hafif tutun.
 
-## **annotate pdf with image** ne zaman kullanılmalı
-- **Hukuki belgeler:** Kaza fotoğraflarını veya imzaları doğrudan sözleşmelere ekleyin.  
-- **Eğitim materyalleri:** Çalışma kağıtlarına diyagram veya grafik ekleyin.  
-- **Teknik kılavuzlar:** Ekran görüntüleri veya mimari diyagramlar ekleyin.  
-- **Kalite kontrol:** Denetim raporlarına kusur fotoğrafları ekleyin.
+## PDF'ye resim ekleme ne zaman yapılmalı
+PDF'ye resim ekleme, görsel bağlamın düz metnin iletemeyeceği değeri eklediği durumlarda yapılmalıdır—örneğin bir denetim raporuna saha fotoğrafı eklemek, bir eğitim çalışma sayfasına diyagram yerleştirmek veya bir sözleşmeye logo damgası eklemek gibi. Bir resim ek açıklaması, orijinal PDF düzenini korurken ek görsel bilgiyi okuyucuya anında sunar.
 
-## Performans En İyi Uygulamaları
+## Performans en iyi uygulamaları
 
-### Optimize Image Sources
+### Resim kaynaklarını optimize edin
 ```java
 // Avoid huge files
 imageAnnotation.setImagePath("massive_10mb_image.png");
@@ -184,7 +227,7 @@ imageAnnotation.setImagePath("massive_10mb_image.png");
 // Resize to match annotation box (e.g., 100 × 100)
 ```
 
-### Batch Processing Strategy
+### Toplu işleme stratejisi
 ```java
 List<String> pdfFiles = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
 
@@ -197,7 +240,7 @@ for (String pdfFile : pdfFiles) {
 }
 ```
 
-### Resource Management
+### Kaynak yönetimi
 ```java
 // Good – automatically closes resources
 try (final Annotator annotator = new Annotator("input.pdf")) {
@@ -210,9 +253,9 @@ Annotator annotator = new Annotator("input.pdf");
 // Forgot to close!
 ```
 
-## Gelişmiş Yapılandırma İpuçları
+## Gelişmiş yapılandırma ipuçları
 
-### Dynamic Positioning
+### Dinamik konumlandırma
 ```java
 // Bottom‑right corner placement (assuming standard Letter size)
 int pageWidth = 612;   // points
@@ -229,7 +272,7 @@ Rectangle dynamicPosition = new Rectangle(
 imageAnnotation.setBox(dynamicPosition);
 ```
 
-### Multiple Images on One Page
+### Tek sayfada birden fazla resim
 ```java
 // Add a logo
 ImageAnnotation logo = new ImageAnnotation();
@@ -247,54 +290,51 @@ annotator.add(logo);
 annotator.add(stamp);
 ```
 
-## Sıkça Sorulan Sorular
+## Sıkça sorulan sorular
 
 **S: Kullanabileceğim maksimum resim boyutu nedir?**  
-C: Katı bir limit yok, ancak optimal performans için resimleri 2 MB'nin altında tutun.
+C: Katı bir limit yok, ancak optimal performans için resimleri 2 MB'ın altında tutun.
 
-**S: Animasyonlu GIF kullanabilir miyim?**  
-C: GroupDocs yalnızca animasyonlu GIF'in ilk çerçevesini render eder.
+**S: Animasyonlu GIF'leri kullanabilir miyim?**  
+C: GroupDocs, animasyonlu bir GIF'in yalnızca ilk çerçevesini render eder.
 
 **S: Resimleri tam olarak nasıl konumlandırırım?**  
-C: GroupDocs sol‑üst kökeni kullanır; `Rectangle` koordinatları bu noktadan piksel cinsinden ölçülür.
+C: GroupDocs, sol‑üst kökeni kullanır; `Rectangle` koordinatları bu noktadan piksel cinsinden ölçülür.
 
 **S: Şifre korumalı PDF'leri açıklayabilir miyim?**  
 C: Evet – `Annotator` oluştururken şifreyi sağlayın.
 
 **S: Bu tüm PDF sürümleriyle çalışır mı?**  
-C: Desteklenen PDF sürümleri 1.4'ten 2.0'ye kadar değişir, neredeyse karşılaşacağınız her PDF'yi kapsar.
-
-## Sorun Giderme Kontrol Listesi
-
-1. ✅ **Lisans geçerli mi?** Deneme/geçici/tam durumunu doğrulayın.  
-2. ✅ **Dosya yolları doğru mu?** Giriş PDF ve resim yollarının mevcut olduğunu doğrulayın.  
-3. ✅ **İzinler uygun mu?** Giriş dosyalarına okuma, çıkış dosyalarına yazma erişimi.  
-4. ✅ **Resim formatı destekleniyor mu?** PNG, JPG veya GIF kullanın.  
-5. ✅ **Sayfa numarası geçerli mi?** 0‑indeksli olduğunu unutmayın.  
-6. ✅ **Rectangle koordinatları makul mu?** Negatif veya sınır dışı değerlerden kaçının.
+C: Desteklenen PDF sürümleri 1.4'ten 2.0'ye kadar değişir ve karşılaşacağınız hemen hemen her PDF'yi kapsar.
 
 ## Sonuç
 
-Artık GroupDocs.Annotation for Java kullanarak **add image to pdf** dosyalarına resim eklemek için sağlam bir temele sahipsiniz. Şunu unutmayın:
-
-- Temiz bir şekilde serbest bırakmak için try‑with‑resources kullanın.  
+Artık GroupDocs.Annotation for Java kullanarak **PDF'ye resim ekleme** için sağlam bir temele sahipsiniz. Unutmayın:
+- Temiz bir şekilde kaynakları serbest bırakmak için try‑with‑resources kullanın.  
 - PDF'leri hafif tutmak için resim boyutlarını optimize edin.  
-- Yol hatalarını önlemek için mutlak yollarla test edin.  
-- Görsel tasarımınıza uygun opaklık ve döndürmeyi seçin.
+- Yol ile ilgili hataları önlemek için mutlak yollarla test edin.  
+- Görsel tasarımınıza uygun saydamlık ve dönüşü seçin.
 
 **Sonraki adımlar:** Diğer açıklama türlerini (metin, şekiller, vurgulamalar) keşfedin veya bu mantığı anlık PDF işleme için bir Spring Boot servisine entegre edin.
 
-[docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) adresindeki dokümantasyon, daha derinlemesine ilerlemeye hazır olduğunuzda daha gelişmiş örnekler ve API referansları içerir.
+Belgelendirme [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) adresinde, daha derinlemesine örnekler ve API referansları bulabilirsiniz.
 
-**Son Güncelleme:** 2026-03-06  
-**Test Edilen Versiyon:** GroupDocs.Annotation 25.2 (Java)  
+---
+
+**Son Güncelleme:** 2026-09-15  
+**Test Edilen:** GroupDocs.Annotation 25.2 (Java)  
 **Yazar:** GroupDocs  
 
-**Kaynaklar ve Destek**
-- **Tam Dokümantasyon:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API Referansı:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
-- **En Son Sürümü İndir:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Lisans Satın Al:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
-- **Ücretsiz Deneme:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
-- **Geçici Lisans:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Topluluk Desteği:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+**Kaynaklar ve destek**
+- **Tam dokümantasyon:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **API referansı:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **En son sürümü indir:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
+- **Lisans satın al:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
+- **Ücretsiz deneme:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
+- **Geçici lisans:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Topluluk desteği:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+
+## İlgili Eğitimler
+- [PDF'yi Açıklama – Java Belge Açıklama API | GroupDocs.Annotation](/annotation/java/)
+- [PDF Açıklama Ekle Java – Tam GroupDocs Rehberi](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [GroupDocs Annotation ile PDF Yükleme Java: Belge Yükleme Rehberi](/annotation/java/document-loading/)

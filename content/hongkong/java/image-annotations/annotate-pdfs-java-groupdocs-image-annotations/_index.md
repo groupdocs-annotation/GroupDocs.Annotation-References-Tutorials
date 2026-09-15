@@ -1,54 +1,97 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: 學習如何使用 GroupDocs.Annotation for Java 在 PDF 中加入圖片並以圖片註解 PDF。一步一步的教學，包含程式碼範例、故障排除技巧與最佳實踐。
-keywords: Java PDF image annotation, GroupDocs annotation tutorial, PDF annotation
-  Java library, add images to PDF Java, how to annotate PDF with images Java
-lastmod: '2026-03-06'
-linktitle: Java PDF Image Annotation Guide
+date: '2026-09-15'
+description: 了解如何使用 GroupDocs.Annotation for Java 為 PDF 加註圖像。一步一步的指南、程式碼片段、故障排除技巧以及
+  Java 開發者的最佳實踐。
+keywords:
+- annotate pdf with image
+- java add image pdf
+- add image pdf java
+- embed image pdf java
+- groupdocs annotation java
+lastmod: '2026-09-15'
+linktitle: Java PDF 圖像加註指南
+og_description: 使用 GroupDocs.Annotation for Java 為 PDF 加註圖像。本指南示範如何在 PDF 中新增、旋轉及設定圖像樣式，並提供清晰的程式碼範例。
+og_image_alt: 'Developer guide: annotate PDF with image using GroupDocs Annotation
+  for Java'
+og_title: 如何在 Java 中使用 GroupDocs 為 PDF 加註圖像
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  headline: How to annotate PDF with image in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  name: How to annotate PDF with image in Java using GroupDocs
+  steps:
+  - name: initialize the annotator
+    text: '`Annotator` is the entry point that opens a PDF and prepares it for modifications.
+      `Annotator` is the core class that loads a PDF document, exposes annotation
+      collections, and writes changes back to disk. **Why try‑with‑resources?** It
+      guarantees the annotator closes and releases file handles, preve'
+  - name: create and configure your image annotation
+    text: Below is a minimal `ImageAnnotation` setup; `ImageAnnotation` represents
+      an image‑based annotation that can be placed on a PDF page. You’ll define the
+      rectangle, opacity, page number, image source, and rotation angle. `Rectangle`
+      defines the position and size of the annotation on the page. `Rectangl
+  - name: apply the annotation and save
+    text: Now attach the annotation to the document and write the result to disk.
+      That’s it – you’ve just **annotate PDF with image** successfully.
+  type: HowTo
+- questions:
+  - answer: No hard limit, but keep images under 2 MB for optimal performance.
+    question: What’s the maximum image size I can use?
+  - answer: GroupDocs renders only the first frame of an animated GIF.
+    question: Can I use animated GIFs?
+  - answer: GroupDocs uses a top‑left origin; the `Rectangle` coordinates are measured
+      in pixels from that point.
+    question: How do I position images precisely?
+  - answer: Yes – provide the password when constructing the `Annotator`.
+    question: Can I annotate password‑protected PDFs?
+  - answer: Supported PDF versions range from 1.4 to 2.0, covering virtually every
+      PDF you’ll encounter.
+    question: Does this work with all PDF versions?
+  type: FAQPage
 tags:
-- PDF
-- annotation
-- GroupDocs
-- Java
-- document-processing
-title: 如何使用 Java 與 GroupDocs Annotation 為 PDF 添加圖片
+- annotate pdf with image
+- java pdf annotation
+- groupdocs
+- pdf image annotation
+- document processing
+title: 如何在 Java 中使用 GroupDocs 為 PDF 加註圖像
 type: docs
-url: /zh-hant/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/
-weight: 1
 ---
 
-# 如何使用 Java 和 GroupDocs Annotation 在 PDF 中加入圖片
+# 如何在 Java 中使用 GroupDocs 為 PDF 加上圖片註釋
 
-你有沒有曾經盯著 PDF 看，心想「如果我能在這裡**加入圖片**就能更好說明了」？你並不孤單。無論你是在構建文件審核系統、製作教學教材，或只是需要在 PDF 中加入視覺說明，圖片註解都是一個改變遊戲規則的功能。
-
-在本教學中，你將學會如何使用 GroupDocs.Annotation for Java **加入圖片** 到 PDF 檔案。我們會涵蓋設定、基本用法、如不透明度與旋轉等進階屬性，以及常見的陷阱。完成後，你將能自信地以程式方式將圖片嵌入 PDF。
+如果您需要 **annotate PDF with image**——例如在合約或培訓手冊上直接插入標誌、圖表或照片——GroupDocs.Annotation for Java 讓這變得輕鬆。於本教學中，您將學會如何新增圖片註釋、控制其不透明度與旋轉角度，並處理常見的問題，例如受密碼保護的 PDF 或大型檔案。完成後，您即可以程式方式將圖片嵌入 PDF，並自信地在生產環境中部署此解決方案。
 
 ## 快速解答
-- **我可以使用 Java 在 PDF 中加入圖片嗎？** 是的 – 使用 GroupDocs.Annotation 的 `ImageAnnotation` 類別。  
-- **哪個函式庫支援圖片不透明度？** `setOpacity` 方法讓你控制不透明度（`set image opacity java`）。  
-- **我需要授權嗎？** 試用版可用於測試；正式環境需要完整授權。  
-- **我可以在受密碼保護的 PDF 上加註嗎？** 可以，只需在建立 `Annotator` 時提供密碼。  
+- **我可以使用 Java 為 PDF 添加圖片嗎？** Yes – use GroupDocs.Annotation’s `ImageAnnotation` class.  
+- **哪個方法控制圖片不透明度？** Call `setOpacity(float)` on the annotation object.  
+- **我需要生產環境的授權嗎？** A trial works for testing; a full license is required for commercial use.  
+- **我可以為受密碼保護的 PDF 加上註釋嗎？** Yes – provide the password when creating the `Annotator`.  
 - **需要哪個 Java 版本？** Java 8 以上，建議使用 Java 11 以上以獲得最佳效能。
 
-## 什麼是 **加入圖片**？
-在 PDF 中加入圖片是指將視覺元素（如標誌、圖表、印章等）作為註解插入，成為文件內容流的一部分。GroupDocs.Annotation 將圖片視為 `ImageAnnotation`，讓你完整控制其位置、大小、旋轉與不透明度。
+## 什麼是向 PDF 添加圖片？
+將圖片載入 PDF 頁面會建立一個 **image annotation**，它成為文件內容流的一部分。`ImageAnnotation` 是用來儲存圖片資料、位置、尺寸、旋轉角度與視覺樣式的物件，讓您可以像處理其他註釋類型一樣操作圖片。
 
-## 為什麼使用 GroupDocs Annotation for Java？
-- **功能豐富的 API** – 完整的屬性集合（位置、不透明度、旋轉）。  
-- **跨平台** – 可在 Windows、Linux 與 macOS 上運行。  
-- **不需外部 PDF 檢視器** – 函式庫自行處理渲染與儲存。  
-- **企業級授權** – 提供試用、臨時與完整授權選項。
+## 為何使用 GroupDocs Annotation for Java？
+載入 PDF，附加 `ImageAnnotation`，然後儲存——不需要外部檢視器。GroupDocs Annotation 支援 **50+ 種輸入與輸出格式**，可在不將整個檔案載入記憶體的情況下處理高達 **500 MB** 的 PDF，且可在 Windows、Linux 與 macOS 上執行。其 API 提供對位置、不透明度（0‑1 範圍）與旋轉角度（0‑360°）的精細控制，十分適合企業級文件工作流程。
 
 ## 前置條件
 - **Java** 8 或以上（建議使用 Java 11+）。  
 - **IDE** – IntelliJ IDEA、Eclipse 或任何相容 Java 的編輯器。  
-- **建置工具** – Maven 或 Gradle（範例使用 Maven）。
+- **Build tool** – Maven 或 Gradle（範例使用 Maven）。  
 
 ## 設定 GroupDocs.Annotation
 
-在你的 `pom.xml` 中加入 Maven 倉庫與相依性：
+在您的 `pom.xml` 中加入 Maven 倉庫與相依性：
 
 ```xml
 <repositories>
@@ -67,19 +110,21 @@ weight: 1
 </dependencies>
 ```
 
-**小技巧：** 請隨時在 GroupDocs 發行頁面確認最新版本。Version 25.2 為 2025 年初的最新版本，但更新的版本可能加入新功能。
+**小技巧：** 請務必在 GroupDocs 發佈頁面確認最新版本。Version 25.2 為 2025 年初的最新版本，但較新版本可能加入新功能。
 
 ### 授權（千萬別跳過！）
-你有三種選擇：
 
-1. **免費試用** – 適合測試 – 從 [GroupDocs 試用頁面](https://releases.groupdocs.com/annotation/java/) 取得。  
-2. **臨時授權** – 需要更長的評估時間？點此取得 [here](https://purchase.groupdocs.com/temporary-license/)。  
-3. **完整授權** – 正式環境使用 – 可於 [購買頁面](https://purchase.groupdocs.com/buy) 取得。
+您有三個選項：
 
-## 入門 – 首個圖片註解
+1. **Free trial** – 完美的測試版 – 從 [GroupDocs trial page](https://releases.groupdocs.com/annotation/java/) 取得。  
+2. **Temporary license** – 需要更長的評估時間？請從 [temporary license page](https://purchase.groupdocs.com/temporary-license/) 取得。  
+3. **Full license** – 生產環境使用 – 可於 [purchase page](https://purchase.groupdocs.com/buy) 取得。
 
-### 步驟 1：初始化 Annotator
-`Annotator` 類別是你的入口點。它會開啟 PDF 並為修改做準備。
+## 開始使用 – 您的第一個圖片註釋
+
+### 步驟 1：初始化 annotator
+
+`Annotator` 是開啟 PDF 並為修改做準備的入口點。`Annotator` 為核心類別，負責載入 PDF 文件、提供註釋集合，並將變更寫回磁碟。
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -87,10 +132,13 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**為什麼使用 try‑with‑resources？** 它保證在使用完畢後關閉 annotator 並釋放檔案句柄，避免記憶體洩漏。
+**為何使用 try‑with‑resources？** 它可確保 annotator 關閉並釋放檔案句柄，防止記憶體洩漏。
 
-### 步驟 2：建立與設定圖片註解
-以下是一個最小化的 `ImageAnnotation` 設定範例。你需要定義矩形、不透明度、頁碼、圖片來源與旋轉角度。
+### 步驟 2：建立並設定圖片註釋
+
+以下為最小化的 `ImageAnnotation` 設定；`ImageAnnotation` 代表可放置於 PDF 頁面的圖片註釋。您需要定義矩形、透明度、頁碼、圖片來源與旋轉角度。
+
+`Rectangle` 定義註釋在頁面上的位置與大小。`Rectangle(100, 100, 100, 100)` 表示「從左上角 (100, 100) 開始，建立 100 × 100 像素的方框」。請依需求調整這些數值以符合版面配置。
 
 ```java
 // Initialize the image annotation
@@ -121,10 +169,11 @@ imageAnnotation.setImagePath("www.google.com.ua/images/branding/googlelogo/2x/go
 imageAnnotation.setAngle(100.);
 ```
 
-**了解 `Rectangle`** – `Rectangle(100, 100, 100, 100)` 表示「從左上角的 (100, 100) 開始，建立一個 100 × 100 像素的方框」。請依需求調整這些數值以符合版面配置。
+**了解 `setOpacity`** – `setOpacity(float)` 方法將註釋的透明度設定在 0（完全透明）到 1（完全不透明）的範圍內。
 
-### 步驟 3：套用註解並儲存
-現在將註解附加至文件，並將結果寫入磁碟。
+### 步驟 3：套用註釋並儲存
+
+現在將註釋附加至文件，並將結果寫入磁碟。
 
 ```java
 // Add the annotation to your document
@@ -134,7 +183,7 @@ annotator.add(imageAnnotation);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_image_annotation.pdf");
 ```
 
-就這樣 – 你已成功 **加入圖片** 到 PDF。
+完成！您已成功 **annotate PDF with image**。
 
 ## 常見問題與解決方案
 
@@ -152,7 +201,7 @@ imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
 
 ### 圖片尺寸與品質
 - **症狀：** 圖片像素化或過大。  
-- **解決方法：** 使圖片尺寸與註解矩形相符。
+- **解決方法：** 讓圖片尺寸與註釋矩形相匹配。
 
 ```java
 // Rectangle is 200 × 200, so use an image at least that size
@@ -161,17 +210,15 @@ imageAnnotation.setBox(new Rectangle(50, 50, 200, 200));
 
 ### 大型 PDF 的記憶體問題
 - **症狀：** `OutOfMemoryError`。  
-- **解決方法：** 分批處理文件，並保持圖片檔案輕量化。
+- **解決方法：** 分批處理文件，並保持圖片檔案輕量。
 
-## 何時 **使用圖片註解 PDF**
-- **法律文件：** 直接在合約上附加事故照片或簽名。  
-- **教學教材：** 在練習紙上插入圖表或示意圖。  
-- **技術手冊：** 加入螢幕截圖或架構圖。  
-- **品質管制：** 在檢驗報告中嵌入缺陷照片。
+## 何時使用圖片註釋於 PDF
+當視覺資訊能提供純文字無法傳達的價值時，您應該在 PDF 中加入圖片註釋——例如在檢查報告中附上現場照片、在培訓工作表中嵌入圖表，或在合約上蓋上標誌。使用圖片註釋可保留原始 PDF 版面，同時即時向讀者傳遞額外的視覺資訊。
 
 ## 效能最佳實踐
 
 ### 最佳化圖片來源
+
 ```java
 // Avoid huge files
 imageAnnotation.setImagePath("massive_10mb_image.png");
@@ -180,6 +227,7 @@ imageAnnotation.setImagePath("massive_10mb_image.png");
 ```
 
 ### 批次處理策略
+
 ```java
 List<String> pdfFiles = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
 
@@ -193,6 +241,7 @@ for (String pdfFile : pdfFiles) {
 ```
 
 ### 資源管理
+
 ```java
 // Good – automatically closes resources
 try (final Annotator annotator = new Annotator("input.pdf")) {
@@ -208,6 +257,7 @@ Annotator annotator = new Annotator("input.pdf");
 ## 進階設定技巧
 
 ### 動態定位
+
 ```java
 // Bottom‑right corner placement (assuming standard Letter size)
 int pageWidth = 612;   // points
@@ -225,6 +275,7 @@ imageAnnotation.setBox(dynamicPosition);
 ```
 
 ### 單頁多圖
+
 ```java
 // Add a logo
 ImageAnnotation logo = new ImageAnnotation();
@@ -244,49 +295,42 @@ annotator.add(stamp);
 
 ## 常見問答
 
-**Q: 我能使用的圖片最大尺寸是多少？**  
-A: 沒有硬性上限，但為了最佳效能，請將圖片大小控制在 2 MB 以下。
+**Q: 我可以使用的圖片最大尺寸是多少？**  
+A: 沒有硬性限制，但為了最佳效能，建議將圖片大小控制在 2 MB 以下。
 
 **Q: 我可以使用動畫 GIF 嗎？**  
 A: GroupDocs 只會渲染動畫 GIF 的第一幀。
 
-**Q: 我要如何精確定位圖片？**  
-A: GroupDocs 以左上角為原點；`Rectangle` 的座標是以像素為單位從該點測量。
+**Q: 我如何精確定位圖片？**  
+A: GroupDocs 以左上角為原點；`Rectangle` 座標以像素為單位，從該點測量。
 
-**Q: 我可以在受密碼保護的 PDF 上加註嗎？**  
-A: 可以 – 在建立 `Annotator` 時提供密碼。
+**Q: 我可以為受密碼保護的 PDF 加上註釋嗎？**  
+A: 可以——在建立 `Annotator` 時提供密碼。
 
 **Q: 這適用於所有 PDF 版本嗎？**  
-A: 支援的 PDF 版本範圍為 1.4 至 2.0，幾乎涵蓋所有你會遇到的 PDF。
-
-## 疑難排解清單
-1. ✅ **授權有效嗎？** 檢查試用、臨時或完整授權狀態。  
-2. ✅ **檔案路徑正確嗎？** 確認輸入的 PDF 與圖片路徑存在。  
-3. ✅ **權限是否正確？** 讀取輸入檔案的權限，寫入輸出檔案的權限。  
-4. ✅ **支援的圖片格式？** 請使用 PNG、JPG 或 GIF。  
-5. ✅ **頁碼有效嗎？** 記得頁碼是從 0 開始計算。  
-6. ✅ **Rectangle 座標合理嗎？** 避免負值或超出範圍的座標。
+A: 支援的 PDF 版本範圍為 1.4 到 2.0，幾乎涵蓋您會遇到的所有 PDF。
 
 ## 結語
 
-現在你已具備使用 GroupDocs.Annotation for Java **加入圖片** 到 PDF 檔案的堅實基礎。請記得：
+您現在已具備使用 GroupDocs.Annotation for Java **annotate PDF with image** 的堅實基礎。請記得：
 
 - 使用 try‑with‑resources 以確保資源正確釋放。  
 - 最佳化圖片尺寸，使 PDF 保持輕量。  
 - 使用絕對路徑測試，以避免路徑相關錯誤。  
-- 選擇適合的不透明度與旋轉角度，以符合你的視覺設計。
+- 選擇適合的透明度與旋轉角度以符合視覺設計。
 
-**下一步：** 探索其他註解類型（文字、形狀、標註）或將此邏輯整合至 Spring Boot 服務，以即時處理 PDF。
+**下一步：** 探索其他註釋類型（文字、形狀、標註）或將此邏輯整合至 Spring Boot 服務，以即時處理 PDF。
 
-文件位於 [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/)，其中有更多進階範例與 API 參考，供你深入了解。
+[docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) 的文件提供更多進階範例與 API 參考，供您深入了解。
 
 ---
 
-**最後更新：** 2026-03-06  
-**測試環境：** GroupDocs.Annotation 25.2 (Java)  
-**作者：** GroupDocs  
+**Last Updated:** 2026-09-15  
+**Tested with:** GroupDocs.Annotation 25.2 (Java)  
+**Author:** GroupDocs  
 
 **資源與支援**
+
 - **完整文件：** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
 - **API 參考：** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
 - **下載最新版本：** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
@@ -294,3 +338,9 @@ A: 支援的 PDF 版本範圍為 1.4 至 2.0，幾乎涵蓋所有你會遇到的
 - **免費試用：** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
 - **臨時授權：** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - **社群支援：** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+
+## 相關教學
+
+- [如何為 PDF 加註 – Java 文件註釋 API | GroupDocs.Annotation](/annotation/java/)
+- [在 Java 中新增 PDF 註釋 – 完整 GroupDocs 指南](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [使用 GroupDocs Annotation 載入 PDF（Java）：文件載入指南](/annotation/java/document-loading/)
