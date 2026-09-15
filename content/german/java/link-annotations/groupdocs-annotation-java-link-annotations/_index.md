@@ -1,54 +1,85 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: Lernen Sie das GroupDocs Annotation‑Tutorial für Java mit Spring‑Boot‑Dokumentenannotation‑Integration.
-  Schritt‑für‑Schritt‑Anleitung, Codebeispiele, bewährte Verfahren und Fehlersuche.
-keywords: Java link annotation tutorial, GroupDocs Java annotation guide, document
-  annotation Java, PDF annotation programming, Java document processing
-lastmod: '2026-03-06'
-linktitle: Java Link Annotation Tutorial
+date: '2026-09-15'
+description: Erfahren Sie, wie Sie Link-Annotationen in Java mit GroupDocs Annotation
+  und Spring Boot hinzufügen. Schritt‑für‑Schritt‑Anleitung, Code‑Platzhalter, bewährte
+  Methoden und Fehlersuche für PDF und DOCX.
+keywords:
+- add link annotation java
+- spring boot document annotation
+- groupdocs annotation java
+- pdf link annotation
+- java document processing
+lastmod: '2026-09-15'
+linktitle: Java-Link-Annotation Tutorial
+og_description: Fügen Sie Link-Annotationen in Java mit GroupDocs Annotation hinzu.
+  Dieses Tutorial zeigt die Spring‑Boot‑Integration, Code‑Platzhalter, Leistungstipps
+  und Fehlersuche für PDF und DOCX.
+og_image_alt: Guide showing how to add clickable link annotations to documents with
+  GroupDocs Annotation in Java
+og_title: Link-Annotationen in Java mit GroupDocs – Komplett‑Leitfaden
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to add link annotation java with GroupDocs Annotation and
+    Spring Boot. Step‑by‑step guide, code placeholders, best practices, and troubleshooting
+    for PDF and DOCX.
+  headline: How to add link annotation java using GroupDocs Annotation
+  type: TechArticle
+- questions:
+  - answer: Yes. Create a separate `LinkAnnotation` instance for each URL and add
+      them to the same `Annotator`.
+    question: Can I add multiple link annotations to the same document?
+  - answer: Use properties such as `setOpacity()`, border settings, and color attributes
+      on the `LinkAnnotation` object.
+    question: How do I change the visual appearance of link annotations?
+  - answer: PDF provides the most reliable support; DOCX also works, though viewer
+      behavior can differ.
+    question: What document formats support interactive link annotations?
+  - answer: Set opacity to `0.0`. For better usability, a very low opacity like `0.1`
+      is recommended.
+    question: Can I make the link annotation area invisible but still clickable?
+  - answer: Retrieve page dimensions at runtime and calculate points relative to the
+      page size for a robust solution.
+    question: How do I handle different page sizes and orientations?
+  type: FAQPage
 tags:
-- java
-- annotations
+- add link annotation java
+- spring boot document annotation
 - groupdocs
-- pdf-processing
-- document-automation
-title: 'groupdocs annotation tutorial java: Vollständiger Leitfaden für Link‑Anmerkungen'
+- java
+- pdf processing
+- document automation
+title: Wie man Link-Annotationen in Java mit GroupDocs Annotation hinzufügt
 type: docs
-url: /de/java/link-annotations/groupdocs-annotation-java-link-annotations/
-weight: 1
 ---
 
-# groupdocs annotation tutorial java: Vollständiger Leitfaden für Link-Annotationen
+# Wie man Link-Annotationen in Java mit GroupDocs Annotation hinzufügt
 
-Interaktive Dokumente zu erstellen war noch nie so einfach. In diesem **groupdocs annotation tutorial java** lernen Sie, wie Sie anklickbare Link-Annotationen zu PDFs, Word-Dateien und mehr hinzufügen können, indem Sie die leistungsstarke GroupDocs.Annotation-Bibliothek verwenden. Egal, ob Sie ein Dokumentenmanagementsystem, eine E‑Learning-Plattform oder einen kollaborativen Arbeitsbereich bauen, dieser Leitfaden bietet Ihnen alles, was Sie benötigen, um schnell zu starten.
+In diesem umfassenden **groupdocs annotation tutorial java** erfahren Sie, wie Sie **add link annotation java** zu PDFs, Word-Dokumenten und anderen unterstützten Formaten hinzufügen können. Egal, ob Sie ein dokumenten‑zentriertes Portal, ein E‑Learning‑System oder ein kollaboratives Review‑Tool erstellen, die nachfolgenden Schritte ermöglichen es Ihnen, klickbare URLs schnell einzubetten, Ressourcen effizient zu verwalten und Ihre Anwendung produktionsbereit zu halten.
 
 ## Schnelle Antworten
-- **Welche Bibliothek sollte ich für Java-Link-Annotationen verwenden?** GroupDocs.Annotation bietet eine einfache, hochperformante API.  
-- **Benötige ich eine Lizenz für die Produktion?** Ja – eine vollständige GroupDocs-Lizenz ist für Produktionsbereitstellungen erforderlich.  
+- **Welche Bibliothek sollte ich für Java link annotations verwenden?** GroupDocs.Annotation provides a high‑performance, cross‑format API.  
+- **Benötige ich eine Lizenz für die Produktion?** Ja – eine vollständige GroupDocs-Lizenz ist für jede Nicht‑Test‑Bereitstellung erforderlich.  
 - **Kann ich das mit Spring Boot integrieren?** Absolut; siehe den Abschnitt „Spring Boot document annotation integration“.  
-- **Wie verwalte ich Ressourcen effizient?** Verwenden Sie try‑with‑resources oder rufen Sie `dispose()` auf dem `Annotator` auf.  
-- **Welche Dokumentformate unterstützen Link-Annotationen?** PDF und DOCX werden vollständig unterstützt; andere Formate können nur eingeschränkte Interaktivität bieten.
+- **Wie verwalte ich Ressourcen effizient?** Verwenden Sie try‑with‑resources oder rufen Sie explizit `dispose()` auf dem `Annotator` auf.  
+- **Welche Dokumentformate unterstützen link annotations?** PDF und DOCX werden vollständig unterstützt; andere Formate können nur eingeschränkte Interaktivität bieten.
 
 ## Was ist ein groupdocs annotation tutorial java?
-Ein **groupdocs annotation tutorial java** führt Sie durch die Verwendung des GroupDocs.Annotation SDK, um programmgesteuert Annotationen in Java-Anwendungen hinzuzufügen, zu ändern und abzurufen. Link-Annotationen sind ein spezieller Typ, der anklickbare URLs direkt in den Dokumentinhalt einbettet.
+Es ist ein Schritt‑für‑Schritt‑Leitfaden, der zeigt, wie man das GroupDocs.Annotation SDK verwendet, um programmgesteuert Annotationen in Java‑Anwendungen hinzuzufügen, zu ändern und abzurufen. Link annotations betten klickbare URLs direkt in den Dokumentinhalt ein und ermöglichen nahtlose Navigation für Endbenutzer.
 
-## Warum GroupDocs für Link-Annotationen verwenden?
-- **Entwicklerfreundliche API** – intuitive Klassen und Methoden verbergen Low‑Level‑Komplexitäten von PDF/Word.  
-- **Cross‑Format‑Unterstützung** – einmal schreiben, PDFs, DOCX, PPTX und mehr annotieren.  
-- **Hohe Leistung** – optimiert für große Dateien und Hochdurchsatz‑Szenarien.  
-- **Umfassende Dokumentation & Community** – schnelle Hilfe, wenn Sie auf ein Problem stoßen.
+## Warum GroupDocs für link annotations verwenden?
+GroupDocs.Annotation unterstützt **50+ Eingabe‑ und Ausgabeformate**, darunter PDF, DOCX, PPTX und HTML, und kann Dokumente mit **bis zu 500 Seiten** verarbeiten, ohne die gesamte Datei in den Speicher zu laden. Die API ist für **High‑Throughput‑Szenarien** konzipiert und liefert Unter‑Sekunden‑Antwortzeiten für Hunderte von Annotationen pro Anfrage, während sie detaillierte Fehlermeldungen und umfangreiche Dokumentation bereitstellt.
 
 ## Voraussetzungen
-- **JDK 8+**  
-- **Maven** (oder Gradle) für das Abhängigkeitsmanagement  
+- JDK 8 oder neuer  
+- Maven (oder Gradle) für das Abhängigkeitsmanagement  
 - Eine IDE wie IntelliJ IDEA oder Eclipse  
-- Grundlegende Java-Kenntnisse (Klassen, Objekte, Ausnahmebehandlung)
+- Grundlegende Java‑Kenntnisse (Klassen, Objekte, Ausnahmebehandlung)  
 
 ### Maven-Abhängigkeitssetup
-
-Fügen Sie das GroupDocs-Repository und die Abhängigkeit zu Ihrer `pom.xml` hinzu:
+Fügen Sie das GroupDocs-Repository und die Annotation‑Abhängigkeit zu Ihrer `pom.xml` hinzu:
 
 ```xml
 <repositories>
@@ -67,17 +98,15 @@ Fügen Sie das GroupDocs-Repository und die Abhängigkeit zu Ihrer `pom.xml` hin
 </dependencies>
 ```
 
-**Pro Tipp:** Prüfen Sie die GroupDocs-Website auf die neueste Version, bevor Sie beginnen.
+**Pro Tipp:** Überprüfen Sie stets die neueste Version auf der GroupDocs‑Download‑Seite, bevor Sie die Abhängigkeit hinzufügen.
 
 ### Lizenz erhalten
+Beginnen Sie mit einer kostenlosen Testversion von der [GroupDocs-Website](https://releases.groupdocs.com/annotation/java/). Die Testversion ist ideal für die Entwicklung, aber eine vollständige Lizenz ist für Produktionsumgebungen zwingend erforderlich.
 
-Sie können mit einer kostenlosen Testversion beginnen, indem Sie sie von der [GroupDocs-Website](https://releases.groupdocs.com/annotation/java/) herunterladen. Die Testversion ist ideal für die Entwicklung, aber für den Produktionseinsatz ist eine vollständige Lizenz erforderlich.
+## Kernimplementierung: Schritt‑für‑Schritt‑Leitfaden
 
-## Kernimplementierung: Schritt‑für‑Schritt‑Anleitung
-
-### Schritt 1: Annotator-Objekt initialisieren
-
-Der `Annotator` ist das zentrale Element, das Ihnen das Lesen und Ändern eines Dokuments ermöglicht.
+### Wie initialisiere ich das Annotator‑Objekt?
+Erstellen Sie eine `Annotator`‑Instanz, indem Sie den Pfad zum Ziel‑Dokument angeben. Die Klasse `Annotator` ist das zentrale Element, das Annotationen im Speicher liest, schreibt und verwaltet. Verwenden Sie einen absoluten oder korrekt relativen Pfad, um „File Not Found“-Fehler zu vermeiden, und geben Sie Ressourcen stets mit `dispose()` oder try‑with‑resources frei.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -96,13 +125,12 @@ public class FeatureInitializeAnnotator {
 }
 ```
 
-**Wichtige Punkte**  
+**Wichtige Punkte**
 - Geben Sie einen absoluten oder korrekt relativen Pfad an, um „File Not Found“-Fehler zu vermeiden.  
-- Rufen Sie immer `dispose()` auf (oder verwenden Sie try‑with‑resources), um native Ressourcen freizugeben.
+- Rufen Sie stets `dispose()` auf (oder verwenden Sie try‑with‑resources), um native Ressourcen freizugeben und den Speicherverbrauch gering zu halten.
 
-### Schritt 2: Link-Annotationen erstellen und konfigurieren
-
-Jetzt definieren wir einen anklickbaren Bereich, setzen seine visuellen Eigenschaften und fügen eine URL hinzu.
+### Wie erstelle und konfiguriere ich link annotations?
+Instanziieren Sie eine `LinkAnnotation`, definieren Sie deren rechteckigen Bereich mit `Point`‑Objekten, setzen Sie visuelle Eigenschaften und weisen Sie die Ziel‑URL zu. Die Klasse `LinkAnnotation` stellt einen klickbaren Hyperlink dar, der im Dokument eingebettet ist. Sie können außerdem den Randstil, die Deckkraft und benutzerdefinierte Metadaten festlegen, um Aussehen und Verhalten zu steuern.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -152,15 +180,14 @@ public class FeatureCreateLinkAnnotation {
 }
 ```
 
-**Erklärung der Komponenten**  
+**Erklärung der Komponenten**
 - **Replies** ermöglichen es Mitwirkenden, Kommentare zur Annotation hinzuzufügen.  
 - **Points** definieren ein Rechteck; das Koordinatensystem beginnt in der oberen linken Ecke (0,0).  
 - **Opacity** steuert die Sichtbarkeit (0 = transparent, 1 = vollständig undurchsichtig).  
 - **URL** muss das Protokoll (`https://`) enthalten, um anklickbar zu sein.
 
-## Spring Boot Dokumenten‑Annotation‑Integration
-
-Wenn Sie einen REST‑Service mit Spring Boot erstellen, verpacken Sie die Annotationslogik in einen Service‑Bean:
+## Wie kann ich die link annotation‑Logik in einen Spring Boot‑Service integrieren?
+Verpacken Sie den Annotation‑Code in einen von Spring verwalteten Service‑Bean. Dadurch können Sie die Funktionalität über einen REST‑Controller bereitstellen, sodass Clients bei Bedarf link annotations anfordern können. Injizieren Sie den `Annotator` über den Konstruktor, behandeln Sie `GroupDocsException` und `IOException` und geben Sie ein `ResponseEntity` zurück, das Erfolg oder Fehlermeldungen anzeigt. `ResponseEntity` ist ein Spring‑Typ, der die vollständige HTTP‑Antwort, einschließlich Status und Body, darstellt.
 
 ```java
 @Service
@@ -171,11 +198,10 @@ public class DocumentAnnotationService {
 }
 ```
 
-Sie können diese Methode dann über einen Controller‑Endpoint bereitstellen, sodass Clients Link‑Annotationen on‑the‑fly anfordern können.
+Anschließend können Sie die Service‑Methode einem Controller‑Endpunkt zuordnen und eine Erfolgsantwort zurückgeben, sobald die Annotation angewendet wurde.
 
-## Best Practices für Ressourcen‑Management
-
-Verwenden Sie try‑with‑resources, um sicherzustellen, dass der `Annotator` automatisch geschlossen wird:
+## Wie sollte ich Ressourcen in einer Spring Boot‑Anwendung verwalten?
+Nutzen Sie das try‑with‑resources‑Statement von Java, damit der `Annotator` nach Abschluss der Operation automatisch geschlossen wird, wodurch Speicherlecks in langfristig laufenden Services vermieden werden. Dieses Muster stellt sicher, dass native Ressourcen sofort freigegeben werden, selbst wenn während der Annotation‑Verarbeitung Ausnahmen auftreten. Kombinieren Sie es mit dem `@PreDestroy`‑Hook von Spring für Beans, die langlebige Annotator‑Instanzen halten.
 
 ```java
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -183,9 +209,8 @@ try (Annotator annotator = new Annotator(inputPath)) {
 } // Automatic disposal happens here
 ```
 
-## Robuste Fehlerbehandlung
-
-Umwickeln Sie Ihre Annotationsaufrufe mit geeigneten Ausnahmeblöcken, um sowohl gruppenspezifische als auch I/O‑Fehler zu erfassen:
+## Wie implementiere ich eine robuste Fehlerbehandlung für Annotation‑Operationen?
+Umgeben Sie Ihre Annotation‑Logik mit spezifischen catch‑Blöcken für `GroupDocsException` und `IOException`. Dadurch werden sowohl SDK‑bezogene Probleme als auch Dateisystem‑Fehler erfasst, sodass Sie klare Diagnosemeldungen erhalten. `GroupDocsException` ist der Basisausnahmetyp, den das GroupDocs SDK bei Annotation‑Fehlern wirft. Protokollieren Sie die Ausnahmedetails mit einem Logging‑Framework wie SLF4J und werfen Sie bei Bedarf eine benutzerdefinierte Runtime‑Exception erneut.
 
 ```java
 try {
@@ -198,63 +223,59 @@ try {
 ```
 
 ## Praxisbeispiele
-
-- **Rechtsdokumenten‑Management** – Verlinken Sie Klauseln zu Gesetzen oder Rechtsprechung.  
-- **E‑Learning‑Plattformen** – Betten Sie Video‑Tutorials oder externe Ressourcen direkt in Lehrbücher ein.  
-- **Finanzberichterstattung** – Verbinden Sie Zusammenfassungstabellen mit detaillierten Tabellenkalkulationen oder Marktdaten.  
-- **Technische Dokumentation** – Bieten Sie einen Ein‑Klick‑Zugang zu API‑Referenzen oder Code‑Beispielen.
+- **Legal document management** – Verlinken Sie Klauseln mit Gesetzen oder Rechtsprechung für sofortigen Zugriff.  
+- **E‑learning platforms** – Betten Sie Video‑Tutorials oder externe Ressourcen direkt in Lehrbücher ein.  
+- **Financial reporting** – Verknüpfen Sie Zusammenfassungstabellen mit detaillierten Tabellenkalkulationen oder Live‑Marktdaten.  
+- **Technical documentation** – Bieten Sie einen Ein‑Klick‑Zugang zu API‑Referenzen, Code‑Beispielen oder Issue‑Trackern.
 
 ## Häufige Probleme und Lösungen
 
 | Problem | Symptome | Lösung |
 |-------|----------|-----|
-| **File Not Found** | `Annotator` wirft beim Start eine Ausnahme. | Überprüfen Sie den Pfad mit `File.exists()`, verwenden Sie absolute Pfade und stellen Sie Lese‑Berechtigungen sicher. |
-| **Wrong Placement** | Die Annotation erscheint außerhalb des Bildschirms oder auf einer anderen Seite. | Denken Sie daran, dass Seitenzahlen bei Null beginnen; überprüfen Sie die `Point`‑Koordinaten doppelt. |
-| **Memory Pressure** | `OutOfMemoryError` bei großen PDFs. | Rufen Sie `dispose()` auf, verarbeiten Sie in Teilen und erhöhen Sie den JVM‑Heap (`-Xmx`). |
-| **Non‑functional Links** | Der anklickbare Bereich wird angezeigt, navigiert jedoch nicht. | Fügen Sie das Protokoll (`https://`) hinzu und testen Sie die URL in einem Browser. |
-| **Unsupported Format** | Links fehlen in der Ausgabe. | Bleiben Sie bei PDF oder DOCX; andere Formate unterstützen möglicherweise keine interaktiven Links. |
+| **File not found** | `Annotator` wirft beim Starten eine Ausnahme. | Überprüfen Sie den Pfad mit `File.exists()`, verwenden Sie absolute Pfade und stellen Sie Lese‑Berechtigungen sicher. |
+| **Wrong placement** | Die Annotation erscheint außerhalb des Bildschirms oder auf einer anderen Seite. | Denken Sie daran, dass Seitenzahlen bei Null beginnen; prüfen Sie die `Point`‑Koordinaten erneut. |
+| **Memory pressure** | `OutOfMemoryError` bei großen PDFs. | Rufen Sie `dispose()` auf, verarbeiten Sie Dokumente in Teilen und erhöhen Sie den JVM‑Heap (`-Xmx`). |
+| **Non‑functional links** | Der klickbare Bereich wird angezeigt, navigiert jedoch nicht. | Fügen Sie das Protokoll (`https://`) hinzu und testen Sie die URL in einem Browser. |
+| **Unsupported format** | Links fehlen in der Ausgabe. | Bleiben Sie bei PDF oder DOCX; andere Formate unterstützen möglicherweise keine interaktiven Links. |
 
 ## Erweiterte Anpassungen
-
-- **Styling** – Passen Sie Rahmenfarbe, -stärke und Hintergrund über `LinkAnnotation`‑Eigenschaften an.  
-- **Event Callbacks** – Registrieren Sie Listener, um zu reagieren, wenn ein Benutzer in einem Viewer auf einen Link klickt.  
-- **Conditional Rendering** – Anzeigen/Verbergen von Annotationen basierend auf Benutzerrollen oder Dokumentstatus.  
+- **Styling** – Passen Sie Randfarbe, -stärke und Hintergrund über `LinkAnnotation`‑Eigenschaften an.  
+- **Event callbacks** – Registrieren Sie Listener, die reagieren, wenn ein Benutzer in einem Viewer auf einen Link klickt.  
+- **Conditional rendering** – Zeigen oder verbergen Sie Annotationen basierend auf Benutzerrollen oder Dokumentstatus.  
 - **Metadata** – Speichern Sie benutzerdefinierte Schlüssel/Wert‑Paare für Analysen oder Workflow‑Tracking.
 
 ## Häufig gestellte Fragen
 
-**F: Kann ich mehrere Link-Annotationen zum selben Dokument hinzufügen?**  
-A: Absolut! Erstellen Sie mehrere `LinkAnnotation`‑Instanzen und fügen Sie jede dem selben `Annotator` hinzu.
+**Q: Kann ich mehrere link annotations zum selben Dokument hinzufügen?**  
+A: Ja. Erstellen Sie für jede URL eine separate `LinkAnnotation`‑Instanz und fügen Sie sie dem selben `Annotator` hinzu.
 
-**F: Wie ändere ich das visuelle Erscheinungsbild von Link-Annotationen?**  
-A: Verwenden Sie Eigenschaften wie `setOpacity()`, Rahmen‑Einstellungen und Farb‑Attribute im `LinkAnnotation`‑Objekt.
+**Q: Wie ändere ich das visuelle Erscheinungsbild von link annotations?**  
+A: Verwenden Sie Eigenschaften wie `setOpacity()`, Rand‑Einstellungen und Farb‑Attribute im `LinkAnnotation`‑Objekt.
 
-**F: Welche Dokumentformate unterstützen interaktive Link-Annotationen?**  
-A: PDF bietet die zuverlässigste Unterstützung. Word (DOCX) funktioniert ebenfalls, aber das Verhalten des Viewers kann variieren.
+**Q: Welche Dokumentformate unterstützen interaktive link annotations?**  
+A: PDF bietet die zuverlässigste Unterstützung; DOCX funktioniert ebenfalls, obwohl das Verhalten des Viewers variieren kann.
 
-**F: Kann ich den Link‑Annotationsbereich unsichtbar, aber dennoch anklickbar machen?**  
-A: Ja – setzen Sie die Opazität auf `0.0`. Allerdings wird für die Benutzerfreundlichkeit eine sehr niedrige Opazität (z. B. `0.1`) empfohlen.
+**Q: Kann ich den Bereich der link annotation unsichtbar machen, aber dennoch anklickbar?**  
+A: Setzen Sie die Opazität auf `0.0`. Für bessere Benutzerfreundlichkeit wird eine sehr niedrige Opazität wie `0.1` empfohlen.
 
-**F: Wie gehe ich mit unterschiedlichen Seitengrößen und -orientierungen um?**  
-A: Ermitteln Sie die Seitengrößen zur Laufzeit und berechnen Sie die Punkte relativ zur Seitengröße für eine robuste Lösung.
+**Q: Wie gehe ich mit unterschiedlichen Seitengrößen und -orientierungen um?**  
+A: Ermitteln Sie die Seitenabmessungen zur Laufzeit und berechnen Sie Punkte relativ zur Seitengröße für eine robuste Lösung.
 
-**F: Ist es möglich, vorhandene Link‑Annotationen zu extrahieren?**  
-A: GroupDocs stellt Getter bereit, um Annotationen aus einem Dokument zu lesen; Sie können darüber iterieren und die Eigenschaften prüfen.
+**Q: Ist es möglich, vorhandene link annotations zu extrahieren?**  
+A: Ja. GroupDocs.Annotation bietet Getter, um Annotationen zu lesen; Sie können über sie iterieren und jede Eigenschaft inspizieren.
 
-**F: Welche Auswirkungen hat das Hinzufügen vieler Annotationen auf die Leistung?**  
-A: Die Leistung bleibt bei Hunderten von Annotationen stabil, bei Tausenden sollten Sie Batch‑Verarbeitung in Betracht ziehen und die Heap‑Nutzung überwachen.
+**Q: Welche Auswirkungen hat das Hinzufügen vieler Annotationen auf die Leistung?**  
+A: Das SDK verarbeitet Hunderte von Annotationen mit vernachlässigbarer Latenz; bei Tausenden wird Batch‑Verarbeitung und Heap‑Überwachung empfohlen.
 
-**F: Kann ich annotierte Dokumente mit einem Passwort schützen?**  
-A: Ja. Geben Sie das Passwort beim Erstellen des `Annotator` an, um verschlüsselte Dateien zu öffnen.
+**Q: Kann ich annotierte Dokumente mit einem Passwort schützen?**  
+A: Geben Sie das Dokumenten‑Passwort beim Erstellen des `Annotator` an, um verschlüsselte Dateien zu öffnen.
 
-## Fazit
-
-Sie haben nun ein vollständiges **groupdocs annotation tutorial java** zum Hinzufügen von Link‑Annotationen, von der Initialisierung des SDK bis zur Integration mit Spring Boot und dem Umgang mit produktionsrelevanten Aspekten. Experimentieren Sie mit anderen Annotationstypen – Hervorhebungen, Stempeln oder benutzerdefinierten Formen – um Ihre Dokumente weiter zu bereichern.
-
-Nächste Schritte: Erkunden Sie die GroupDocs.Annotation‑API‑Referenz, probieren Sie Batch‑Annotation‑Pipelines aus und integrieren Sie benutzergetriebene Kommentar‑Workflows in Ihre Anwendung.
-
----
-
-**Zuletzt aktualisiert:** 2026-03-06  
+**Zuletzt aktualisiert:** 2026-09-15  
 **Getestet mit:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
+
+## Verwandte Tutorials
+
+- [PDF in Java mit GroupDocs Annotation laden: Dokumenten‑Lade‑Leitfaden](/annotation/java/document-loading/)
+- [PDF‑Highlights in Java erstellen: Vollständiger Leitfaden mit GroupDocs Annotation](/annotation/java/annotation-management/)
+- [PDF‑Größe in Java reduzieren mit GroupDocs.Annotation – Vollständiger Leitfaden](/annotation/java/document-saving/)

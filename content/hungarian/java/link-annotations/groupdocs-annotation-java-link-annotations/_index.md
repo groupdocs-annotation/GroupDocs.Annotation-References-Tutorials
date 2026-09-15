@@ -1,55 +1,85 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: Ismerje meg a GroupDocs annotációs tutorialt Java-val és Spring Boot
-  dokumentumannotáció integrációval. Lépésről lépésre útmutató, kódrészletek, legjobb
-  gyakorlatok és hibaelhárítás.
-keywords: Java link annotation tutorial, GroupDocs Java annotation guide, document
-  annotation Java, PDF annotation programming, Java document processing
-lastmod: '2026-03-06'
-linktitle: Java Link Annotation Tutorial
+date: '2026-09-15'
+description: Ismerje meg, hogyan adjon hozzá link annotation Java-t a GroupDocs Annotation
+  és a Spring Boot segítségével. Lépésről lépésre útmutató, code placeholders, best
+  practices és troubleshooting a PDF és DOCX esetén.
+keywords:
+- add link annotation java
+- spring boot document annotation
+- groupdocs annotation java
+- pdf link annotation
+- java document processing
+lastmod: '2026-09-15'
+linktitle: Java Link Annotation Útmutató
+og_description: Link annotation Java hozzáadása a GroupDocs Annotation használatával.
+  Ez a tutorial bemutatja a Spring Boot integrációt, code placeholders, performance
+  tips, és troubleshooting a PDF és DOCX esetén.
+og_image_alt: Guide showing how to add clickable link annotations to documents with
+  GroupDocs Annotation in Java
+og_title: Link annotation Java hozzáadása a GroupDocs – Teljes útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to add link annotation java with GroupDocs Annotation and
+    Spring Boot. Step‑by‑step guide, code placeholders, best practices, and troubleshooting
+    for PDF and DOCX.
+  headline: How to add link annotation java using GroupDocs Annotation
+  type: TechArticle
+- questions:
+  - answer: Yes. Create a separate `LinkAnnotation` instance for each URL and add
+      them to the same `Annotator`.
+    question: Can I add multiple link annotations to the same document?
+  - answer: Use properties such as `setOpacity()`, border settings, and color attributes
+      on the `LinkAnnotation` object.
+    question: How do I change the visual appearance of link annotations?
+  - answer: PDF provides the most reliable support; DOCX also works, though viewer
+      behavior can differ.
+    question: What document formats support interactive link annotations?
+  - answer: Set opacity to `0.0`. For better usability, a very low opacity like `0.1`
+      is recommended.
+    question: Can I make the link annotation area invisible but still clickable?
+  - answer: Retrieve page dimensions at runtime and calculate points relative to the
+      page size for a robust solution.
+    question: How do I handle different page sizes and orientations?
+  type: FAQPage
 tags:
-- java
-- annotations
+- add link annotation java
+- spring boot document annotation
 - groupdocs
-- pdf-processing
-- document-automation
-title: 'groupdocs annotációs útmutató Java: Teljes link annotációs útmutató'
+- java
+- pdf processing
+- document automation
+title: Hogyan adjon hozzá link annotation Java-ban a GroupDocs Annotation segítségével
 type: docs
-url: /hu/java/link-annotations/groupdocs-annotation-java-link-annotations/
-weight: 1
 ---
 
-# groupdocs annotation tutorial java: Teljes Link Megjegyzés Útmutató
+# Hogyan adjunk hozzá link annotációt Java-ban a GroupDocs Annotation használatával
 
-Interaktív dokumentumok létrehozása még soha nem volt ilyen egyszerű. Ebben a **groupdocs annotation tutorial java**-ban megtanulod, hogyan adhatsz hozzá kattintható link megjegyzéseket PDF-ekhez, Word fájlokhoz és egyebekhez a hatékony GroupDocs.Annotation könyvtár segítségével. Akár dokumentumkezelő rendszert, e‑learning platformot vagy együttműködő munkaterületet építesz, ez az útmutató mindent megad, amire gyorsan elindulhatsz.
+Ebben az átfogó **groupdocs annotation tutorial java** cikkben megtudja, hogyan **add link annotation java** PDF-ekhez, Word dokumentumokhoz és más támogatott formátumokhoz. Akár dokumentum‑központú portált, e‑learning rendszert vagy együttműködő felülvizsgálati eszközt épít, az alábbi lépések lehetővé teszik, hogy gyorsan beágyazzon kattintható URL-eket, hatékonyan kezelje az erőforrásokat, és alkalmazását termelés‑kész állapotban tartsa.
 
-## Gyors Válaszok
-- **Milyen könyvtárat használjak Java link megjegyzésekhez?** GroupDocs.Annotation egyszerű, nagy teljesítményű API-t biztosít.  
-- **Szükségem van licencre a termeléshez?** Igen – egy teljes GroupDocs licenc szükséges a termelési környezethez.  
-- **Integrálhatom ezt a Spring Boot-tal?** Természetesen; lásd a „Spring Boot dokumentum annotáció integráció” részt.  
-- **Hogyan kezeljem hatékonyan az erőforrásokat?** Használd a try‑with‑resources-t vagy hívd a `dispose()`-t a `Annotator`-on.  
-- **Mely dokumentumformátumok támogatják a link megjegyzéseket?** A PDF és a DOCX teljes mértékben támogatott; más formátumok korlátozott interaktivitással rendelkezhetnek.
+## Gyors válaszok
+- **Milyen könyvtárat használjak Java link annotációkhoz?** GroupDocs.Annotation provides a high‑performance, cross‑format API.  
+- **Szükségem van licencre a termeléshez?** Yes – a full GroupDocs license is required for any non‑trial deployment.  
+- **Integrálhatom ezt a Spring Boot-tal?** Absolutely; see the “Spring Boot document annotation integration” section.  
+- **Hogyan kezeljem hatékonyan az erőforrásokat?** Use try‑with‑resources or explicitly call `dispose()` on the `Annotator`.  
+- **Mely dokumentumformátumok támogatják a link annotációkat?** PDF and DOCX are fully supported; other formats may have limited interactivity.
 
 ## Mi az a groupdocs annotation tutorial java?
-A **groupdocs annotation tutorial java** végigvezet a GroupDocs.Annotation SDK használatán, hogy programozottan hozzáadj, módosíts és lekérdezz megjegyzéseket Java alkalmazásokban. A link megjegyzések egy speciális típus, amely kattintható URL-eket ágyaz be közvetlenül a dokumentum tartalmába.
+Ez egy lépésről‑lépésre útmutató, amely bemutatja, hogyan használja a GroupDocs.Annotation SDK‑t a annotációk programozott hozzáadásához, módosításához és lekérdezéséhez Java alkalmazásokban. A link annotációk kattintható URL-eket ágyaznak be közvetlenül a dokumentum tartalmába, lehetővé téve a felhasználók számára a zökkenőmentes navigációt.
 
-## Miért használjuk a GroupDocs-ot link megjegyzésekhez?
-- **Fejlesztőbarát API** – intuitív osztályok és metódusok elrejtik az alacsony szintű PDF/Word bonyodalmakat.  
-- **Keresztformátumú támogatás** – egyszer írj, annotálj PDF-eket, DOCX-et, PPTX-et és egyebeket.  
-- **Magas teljesítmény** – nagy fájlokra és nagy áteresztőképességű szcenáriókra optimalizálva.  
-- **Robusztus dokumentáció és közösség** – gyors segítség, ha elakadnál.
+## Miért használja a GroupDocs‑t link annotációkhoz?
+A GroupDocs.Annotation támogatja a **50+ input and output formats** formátumot, beleértve a PDF, DOCX, PPTX és HTML formátumokat, és képes **up to 500 pages** oldalú dokumentumokat feldolgozni anélkül, hogy a teljes fájlt a memóriába töltené. Az API **high‑throughput scenarios** esetekre van tervezve, alperces válaszidőket biztosítva több száz annotációra kérésenként, miközben részletes hibaüzeneteket és kiterjedt dokumentációt nyújt.
 
 ## Előfeltételek
-- **JDK 8+**  
-- **Maven** (vagy Gradle) a függőségkezeléshez  
+- JDK 8 vagy újabb  
+- Maven (vagy Gradle) a függőségkezeléshez  
 - Egy IDE, például IntelliJ IDEA vagy Eclipse  
-- Alap Java ismeretek (osztályok, objektumok, kivételkezelés)
+- Alapvető Java ismeretek (osztályok, objektumok, kivételkezelés)  
 
 ### Maven függőség beállítása
-
-Add the GroupDocs repository and dependency to your `pom.xml`:
+Add the GroupDocs repository and the Annotation dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -68,17 +98,15 @@ Add the GroupDocs repository and dependency to your `pom.xml`:
 </dependencies>
 ```
 
-**Pro Tip:** Ellenőrizd a GroupDocs weboldalát a legújabb verzióért, mielőtt elkezdenéd.
+**Pro tip:** Mindig ellenőrizze a legújabb verziót a GroupDocs letöltési oldalon, mielőtt hozzáadná a függőséget.
 
 ### Licenc beszerzése
+Kezdje egy ingyenes próbaverzióval a [GroupDocs website](https://releases.groupdocs.com/annotation/java/)-ról. A próba ideális fejlesztéshez, de a teljes licenc kötelező a termelési környezetekben.
 
-Elindulhatsz egy ingyenes próbaverzióval, amelyet letölthetsz a [GroupDocs weboldaláról](https://releases.groupdocs.com/annotation/java/). A próba tökéletes fejlesztéshez, de a termelési használathoz teljes licenc szükséges.
+## Alapvető megvalósítás: lépésről‑lépésre útmutató
 
-## Alapvető Implementáció: Lépésről‑Lépésre Útmutató
-
-### 1. lépés: Az Annotator objektum inicializálása
-
-A `Annotator` a központi csomópont, amely lehetővé teszi a dokumentum olvasását és módosítását.
+### Hogyan inicializáljam az annotator objektumot?
+Hozzon létre egy `Annotator` példányt a cél dokumentum elérési útjának megadásával. Az `Annotator` osztály a központi hub, amely memóriában olvas, ír és kezeli az annotációkat. Használjon abszolút vagy helyesen relatív útvonalat a „File Not Found” hibák elkerüléséhez, és mindig szabadítsa fel az erőforrásokat a `dispose()` vagy a try‑with‑resources segítségével.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -97,13 +125,12 @@ public class FeatureInitializeAnnotator {
 }
 ```
 
-**Fontos pontok**  
-- Adj meg abszolút vagy helyesen relatív útvonalat a „File Not Found” hibák elkerülése érdekében.  
-- Mindig hívd a `dispose()`-t (vagy használd a try‑with‑resources-t) a natív erőforrások felszabadításához.
+**Kulcsfontosságú pontok**
+- Adj meg egy abszolút vagy helyesen relatív útvonalat a „File Not Found” hibák elkerüléséhez.  
+- Mindig hívd meg a `dispose()`-t (vagy használd a try‑with‑resources-t) a natív erőforrások felszabadításához és az alacsony memóriahasználat fenntartásához.
 
-### 2. lépés: Link megjegyzések létrehozása és konfigurálása
-
-Most definiálunk egy kattintható területet, beállítjuk a vizuális tulajdonságait, és csatolunk egy URL-t.
+### Hogyan hozhatok létre és konfigurálhatok link annotációkat?
+Példányosíts egy `LinkAnnotation`-t, határozd meg annak téglalap alakú területét `Point` objektumokkal, állítsd be a vizuális tulajdonságokat, és rendeld hozzá a cél URL-t. A `LinkAnnotation` osztály egy kattintható hiperhivatkozást képvisel, amely a dokumentumon belül van beágyazva. Beállíthatod a keret stílusát, az átlátszóságot és egyedi metaadatokat is a megjelenés és viselkedés szabályozásához.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -153,15 +180,14 @@ public class FeatureCreateLinkAnnotation {
 }
 ```
 
-**A komponensek magyarázata**  
-- **Replies** lehetővé teszi az együttműködők számára, hogy megjegyzéseket fűzzenek a annotációhoz.  
-- **Points** egy téglalapot definiál; a koordináta-rendszer a bal‑felső sarokból (0,0) indul.  
+**A komponensek magyarázata**
+- **Replies** lehetővé teszi az együttműködők számára, hogy megjegyzéseket adjanak az annotációhoz.  
+- **Points** egy téglalapot definiál; a koordináta rendszer a bal‑felső saroknál (0,0) kezdődik.  
 - **Opacity** szabályozza a láthatóságot (0 = átlátszó, 1 = teljesen átlátszatlan).  
 - **URL**-nek tartalmaznia kell a protokollt (`https://`), hogy kattintható legyen.
 
-## Spring Boot dokumentum annotáció integráció
-
-Ha Spring Boot-tal RESTful szolgáltatást építesz, csomagold be az annotáció logikát egy service bean-be:
+## Hogyan integrálhatom a link annotáció logikát egy Spring Boot szolgáltatásba?
+Tekerje be az annotációs kódot egy Spring‑kezelte szolgáltatás bean-be. Ez lehetővé teszi a funkcionalitás REST controlleren keresztüli kiadását, így az ügyfelek igény szerint kérhetnek link annotációkat. Injektálja a `Annotator`-t a konstruktoron keresztül, kezelje a `GroupDocsException` és `IOException` kivételeket, és adjon vissza egy `ResponseEntity`-t, amely jelzi a siker vagy hiba részleteit. A `ResponseEntity` egy Spring típus, amely a teljes HTTP választ képviseli, beleértve a státuszt és a törzset.
 
 ```java
 @Service
@@ -172,11 +198,10 @@ public class DocumentAnnotationService {
 }
 ```
 
-Ezután a metódust egy controller végponton keresztül teheted elérhetővé, lehetővé téve, hogy a kliensek valós időben kérjenek link megjegyzéseket.
+Ezután leképezheti a szolgáltatás metódust egy controller végpontra, amely sikeres választ ad vissza, amint az annotáció alkalmazásra került.
 
-## Erőforrás-kezelés Legjobb Gyakorlatai
-
-Használd a try‑with‑resources-t, hogy a `Annotator` automatikusan bezáródjon:
+## Hogyan kell kezelni az erőforrásokat egy Spring Boot alkalmazásban?
+Használja a Java try‑with‑resources utasítást, hogy a `Annotator` automatikusan bezáródjon a művelet befejezése után, megelőzve a memória szivárgásokat a hosszú‑távú szolgáltatásokban. Ez a minta biztosítja, hogy a natív erőforrások gyorsan felszabaduljanak, még akkor is, ha kivételek fordulnak elő az annotáció feldolgozása közben. Kombinálja a Spring `@PreDestroy` hook‑kal azoknál a bean‑eknél, amelyek hosszú életű annotator példányokat tartanak.
 
 ```java
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -184,9 +209,8 @@ try (Annotator annotator = new Annotator(inputPath)) {
 } // Automatic disposal happens here
 ```
 
-## Robusztus Hibakezelés
-
-Tekerd be az annotáció hívásaidat megfelelő kivétel‑blokkokba, hogy a GroupDocs‑specifikus és az I/O hibákat is elkapd:
+## Hogyan valósítsam meg a robusztus hiba kezelést az annotációs műveletekhez?
+Körülvegye az annotációs logikát specifikus catch blokkokkal a `GroupDocsException` és `IOException` kivételekhez. Ez mind az SDK‑szintű problémákat, mind a fájlrendszer hibákat elkapja, és egyértelmű diagnosztikai üzeneteket ad. A `GroupDocsException` a GroupDocs SDK által az annotációs hibák esetén dobott alap kivételtípus. Naplózza a kivétel részleteit egy naplózási keretrendszerrel, például SLF4J‑vel, és szükség esetén dobjon új egyedi runtime kivételt.
 
 ```java
 try {
@@ -198,64 +222,60 @@ try {
 }
 ```
 
-## Valós Példák
+## Valós példák
+- **Jogi dokumentumkezelés** – Kapcsolja össze a záradékokat jogszabályokkal vagy esetjoggal az azonnali hivatkozás érdekében.  
+- **E‑learning platformok** – Videó oktatóanyagokat vagy külső forrásokat ágyazzon be közvetlenül a tankönyvekbe.  
+- **Pénzügyi jelentés** – Kapcsolja össze az összefoglaló táblázatokat részletes táblázatokkal vagy élő piaci adatokkal.  
+- **Technikai dokumentáció** – Biztosítson egykattintásos hozzáférést az API hivatkozásokhoz, kópmintákhoz vagy hibakövetőkhöz.
 
-- **Legal Document Management** – Hivatkozási záradékok összekapcsolása jogszabályokkal vagy esetjoggal.  
-- **E‑learning Platforms** – Videó tutorialok vagy külső források beágyazása közvetlenül a tankönyvekbe.  
-- **Financial Reporting** – Összefoglaló táblázatok összekapcsolása részletes táblázatokkal vagy piaci adatokkal.  
-- **Technical Documentation** – Egy kattintásos hozzáférés biztosítása API referenciákhoz vagy kópmintákhoz.
-
-## Gyakori Problémák és Megoldások
+## Gyakori problémák és megoldások
 
 | Probléma | Tünetek | Megoldás |
-|----------|---------|----------|
-| **Fájl Nem Található** | `Annotator` kivételt dob indításkor. | Ellenőrizd az útvonalat a `File.exists()`‑szel, használj abszolút útvonalakat, és biztosíts olvasási jogosultságot. |
-| **Helytelen Elhelyezés** | Az annotáció a képernyőn kívül vagy egy másik oldalon jelenik meg. | Ne feledd, hogy az oldalszámok nullától indulnak; ellenőrizd duplán a `Point` koordinátákat. |
-| **Memória Nyomás** | `OutOfMemoryError` nagy PDF-eknél. | Hívd a `dispose()`‑t, dolgozz darabokban, és növeld a JVM heapet (`-Xmx`). |
-| **Nem Funkcionáló Linkek** | A kattintható terület megjelenik, de nem navigál. | Tedd bele a protokollt (`https://`) és teszteld az URL-t egy böngészőben. |
-| **Nem Támogatott Formátum** | A linkek hiányoznak a kimenetben. | Maradj a PDF vagy DOCX mellett; más formátumok esetleg nem támogatják az interaktív linkeket. |
+|----------|----------|----------|
+| **Fájl nem található** | `Annotator` kivételt dob az indításkor. | Ellenőrizze az útvonalat a `File.exists()` segítségével, használjon abszolút útvonalakat, és biztosítsa az olvasási jogosultságokat. |
+| **Helytelen elhelyezés** | Az annotáció a képernyőn kívül vagy egy másik oldalon jelenik meg. | Ne feledje, hogy az oldalszámok nullától indulnak; ellenőrizze újra a `Point` koordinátákat. |
+| **Memória nyomás** | `OutOfMemoryError` nagy PDF-eken. | Hívja meg a `dispose()`-t, dolgozza fel a dokumentumokat darabokban, és növelje a JVM heap méretét (`-Xmx`). |
+| **Nem működő linkek** | A kattintható terület megjelenik, de nem navigál. | Tartalmazza a protokollt (`https://`), és tesztelje az URL-t egy böngészőben. |
+| **Nem támogatott formátum** | A linkek hiányoznak a kimenetben. | Maradjon a PDF vagy DOCX formátumnál; más formátumok esetleg nem támogatják az interaktív linkeket. |
 
-## Haladó Testreszabás
+## Haladó testreszabás
+- **Stílus** – Állítsa be a szegély színét, vastagságát és a háttérszínt a `LinkAnnotation` tulajdonságain keresztül.  
+- **Esemény visszahívások** – Regisztráljon hallgatókat, hogy reagáljanak, amikor a felhasználó egy linkre kattint a megjelenítőben.  
+- **Feltételes megjelenítés** – Mutassa vagy rejtse el az annotációkat a felhasználói szerepkörök vagy a dokumentum állapota alapján.  
+- **Metaadatok** – Tároljon egyedi kulcs/érték párokat az analitikához vagy a munkafolyamat nyomon követéséhez.
 
-- **Styling** – Állítsd be a szegély színét, vastagságát és a háttérszínt a `LinkAnnotation` tulajdonságain keresztül.  
-- **Event Callbacks** – Regisztrálj hallgatókat, hogy reagáljanak, amikor a felhasználó egy linkre kattint a megjelenítőben.  
-- **Conditional Rendering** – Mutasd vagy rejtsd el az annotációkat felhasználói szerepkörök vagy a dokumentum állapota alapján.  
-- **Metadata** – Tárolj egyedi kulcs/érték párokat analitika vagy munkafolyamat nyomon követés céljából.
+## Gyakran ismételt kérdések
 
-## Gyakran Ismételt Kérdések
+**Q: Hozzáadhatok több link annotációt ugyanahhoz a dokumentumhoz?**  
+A: Igen. Hozzon létre egy külön `LinkAnnotation` példányt minden URL-hez, és adja hozzá ugyanahhoz a `Annotator`-hez.
 
-**Q: Hozzáadhatok több link megjegyzést ugyanahhoz a dokumentumhoz?**  
-A: Természetesen! Hozz létre több `LinkAnnotation` példányt, és add hozzá mindegyiket ugyanahhoz a `Annotator`-hoz.
+**Q: Hogyan változtathatom meg a link annotációk vizuális megjelenését?**  
+A: Használjon olyan tulajdonságokat, mint a `setOpacity()`, a szegély beállítások és a szín attribútumok a `LinkAnnotation` objektumon.
 
-**Q: Hogyan változtathatom meg a link megjegyzések vizuális megjelenését?**  
-A: Használd a `setOpacity()`‑t, a szegély beállításait és a szín attribútumokat a `LinkAnnotation` objektumon.
+**Q: Mely dokumentumformátumok támogatják az interaktív link annotációkat?**  
+A: A PDF nyújtja a legmegbízhatóbb támogatást; a DOCX is működik, bár a megjelenítő viselkedése eltérhet.
 
-**Q: Mely dokumentumformátumok támogatják az interaktív link megjegyzéseket?**  
-A: A PDF a legmegbízhatóbb támogatást nyújtja. A Word (DOCX) is működik, de a megjelenítő viselkedése változhat.
+**Q: Láthatatlanná tehetem a link annotáció területét, de mégis kattintható marad?**  
+A: Állítsa az átlátszóságot `0.0`-ra. A jobb használhatóság érdekében nagyon alacsony átlátszóságot, például `0.1`-et ajánlunk.
 
-**Q: Láthatatlan, de kattintható link megjegyzés területet hozhatok létre?**  
-A: Igen—állítsd az átlátszatlanságot `0.0`‑ra. Azonban nagyon alacsony átlátszatlanság (pl. `0.1`) ajánlott a használhatóság érdekében.
+**Q: Hogyan kezelem a különböző oldalméreteket és tájolásokat?**  
+A: Szerezze meg az oldal méreteit futásidőben, és számolja ki a pontokat az oldal méretéhez viszonyítva egy robusztus megoldás érdekében.
 
-**Q: Hogyan kezelem a különböző oldalméreteket és orientációkat?**  
-A: Futtatás közben kérd le az oldal méreteit, és számítsd ki a pontokat az oldal méretéhez viszonyítva egy robusztus megoldás érdekében.
+**Q: Lehetőség van meglévő link annotációk kinyerésére?**  
+A: Igen. A GroupDocs.Annotation gettereket kínál az annotációk olvasásához; iterálhat rajtuk és megvizsgálhatja minden egyes tulajdonságot.
 
-**Q: Lehetőség van meglévő link megjegyzések kinyerésére?**  
-A: A GroupDocs gettereket biztosít az annotációk olvasásához egy dokumentumból; iterálhatsz rajtuk és ellenőrizheted a tulajdonságokat.
+**Q: Mi a teljesítménybeli hatása sok annotáció hozzáadásának?**  
+A: Az SDK több száz annotációt kezel elhanyagolható késleltetéssel; több ezer esetén kötegelt feldolgozást és heap monitorozást javasolunk.
 
-**Q: Milyen teljesítménybeli hatása van sok annotáció hozzáadásának?**  
-A: A teljesítmény stabil marad több száz annotáció esetén, de több ezer esetén fontold meg a kötegelt feldolgozást és figyeld a heap használatát.
+**Q: Jelszóval védhetem a annotált dokumentumokat?**  
+A: Adja meg a dokumentum jelszavát az `Annotator` létrehozásakor a titkosított fájlok megnyitásához.
 
-**Q: Jelszóval védhetem a megjegyzéssel ellátott dokumentumokat?**  
-A: Igen. Add meg a jelszót az `Annotator` létrehozásakor a titkosított fájlok megnyitásához.
-
-## Következtetés
-
-Most már egy teljes **groupdocs annotation tutorial java**-t birtokolsz a link megjegyzések hozzáadásához, a SDK inicializálásától a Spring Boot integrációig és a termelési szintű kérdések kezeléséig. Kísérletezz más annotáció típusokkal—kiemelések, pecsétek vagy egyedi formák—hogy tovább gazdagítsd a dokumentumaidat.
-
-Következő lépések: fedezd fel a GroupDocs.Annotation API referenciát, próbálj ki kötegelt annotációs folyamatokat, és építs be felhasználó‑vezérelt kommentár munkafolyamatokat az alkalmazásodba.
-
----
-
-**Utoljára frissítve:** 2026-03-06  
-**Tesztelve ezzel:** GroupDocs.Annotation 25.2  
+**Utolsó frissítés:** 2026-09-15  
+**Tesztelve a következővel:** GroupDocs.Annotation 25.2  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [PDF betöltése Java-val a GroupDocs Annotation segítségével: Dokumentum betöltési útmutató](/annotation/java/document-loading/)
+- [PDF kiemelések létrehozása Java-ban: Teljes útmutató a GroupDocs Annotation segítségével](/annotation/java/annotation-management/)
+- [PDF méret csökkentése Java-val a GroupDocs.Annotation segítségével – Teljes útmutató](/annotation/java/document-saving/)

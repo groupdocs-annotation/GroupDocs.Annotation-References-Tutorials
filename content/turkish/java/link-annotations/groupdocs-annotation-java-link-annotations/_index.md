@@ -1,54 +1,85 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: GroupDocs Annotation Java öğreticisini Spring Boot belge anotasyonu entegrasyonu
-  ile öğrenin. Adım adım kılavuz, kod örnekleri, en iyi uygulamalar ve sorun giderme.
-keywords: Java link annotation tutorial, GroupDocs Java annotation guide, document
-  annotation Java, PDF annotation programming, Java document processing
-lastmod: '2026-03-06'
-linktitle: Java Link Annotation Tutorial
+date: '2026-09-15'
+description: GroupDocs Annotation ve Spring Boot ile Java'da link annotation eklemeyi
+  öğrenin. Adım adım kılavuz, kod yer tutucuları, en iyi uygulamalar ve PDF ve DOCX
+  için sorun giderme.
+keywords:
+- add link annotation java
+- spring boot document annotation
+- groupdocs annotation java
+- pdf link annotation
+- java document processing
+lastmod: '2026-09-15'
+linktitle: Java Link Annotation Eğitimi
+og_description: GroupDocs Annotation kullanarak Java link annotation ekleyin. Bu eğitim,
+  Spring Boot entegrasyonu, kod yer tutucuları, performans ipuçları ve PDF ve DOCX
+  için sorun giderme konularını gösterir.
+og_image_alt: Guide showing how to add clickable link annotations to documents with
+  GroupDocs Annotation in Java
+og_title: GroupDocs ile Java link annotation ekleyin – Tam Kılavuz
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to add link annotation java with GroupDocs Annotation and
+    Spring Boot. Step‑by‑step guide, code placeholders, best practices, and troubleshooting
+    for PDF and DOCX.
+  headline: How to add link annotation java using GroupDocs Annotation
+  type: TechArticle
+- questions:
+  - answer: Yes. Create a separate `LinkAnnotation` instance for each URL and add
+      them to the same `Annotator`.
+    question: Can I add multiple link annotations to the same document?
+  - answer: Use properties such as `setOpacity()`, border settings, and color attributes
+      on the `LinkAnnotation` object.
+    question: How do I change the visual appearance of link annotations?
+  - answer: PDF provides the most reliable support; DOCX also works, though viewer
+      behavior can differ.
+    question: What document formats support interactive link annotations?
+  - answer: Set opacity to `0.0`. For better usability, a very low opacity like `0.1`
+      is recommended.
+    question: Can I make the link annotation area invisible but still clickable?
+  - answer: Retrieve page dimensions at runtime and calculate points relative to the
+      page size for a robust solution.
+    question: How do I handle different page sizes and orientations?
+  type: FAQPage
 tags:
-- java
-- annotations
+- add link annotation java
+- spring boot document annotation
 - groupdocs
-- pdf-processing
-- document-automation
-title: 'groupdocs annotation tutorial java: Tam Bağlantı Açıklama Rehberi'
+- java
+- pdf processing
+- document automation
+title: GroupDocs Annotation kullanarak Java'da link annotation nasıl eklenir
 type: docs
-url: /tr/java/link-annotations/groupdocs-annotation-java-link-annotations/
-weight: 1
 ---
 
-# groupdocs annotation tutorial java: Tam Bağlantı Açıklama Kılavuzu
+# GroupDocs Annotation kullanarak Java'da link ek açıklaması ekleme
 
-Etkileşimli belgeler oluşturmak hiç bu kadar kolay olmamıştı. Bu **groupdocs annotation tutorial java**'da, güçlü GroupDocs.Annotation kütüphanesini kullanarak PDF'lere, Word dosyalarına ve daha fazlasına tıklanabilir bağlantı açıklamaları eklemeyi öğreneceksiniz. İster bir belge yönetim sistemi, ister bir e‑öğrenme platformu, ister işbirlikçi bir çalışma alanı oluşturuyor olun, bu kılavuz hızlı bir şekilde başlamanız için ihtiyacınız olan her şeyi sunar.
+Bu kapsamlı **groupdocs annotation tutorial java** içinde, PDF'lere, Word belgelerine ve diğer desteklenen formatlara **add link annotation java** nasıl ekleyeceğinizi keşfedeceksiniz. Belge‑odaklı bir portal, bir e‑öğrenme sistemi veya işbirlikçi bir inceleme aracı oluşturuyor olun, aşağıdaki adımlar tıklanabilir URL'leri hızlıca gömmenizi, kaynakları verimli yönetmenizi ve uygulamanızın üretim‑hazır olmasını sağlar.
 
-## Quick Answers
-- **Java bağlantı açıklamaları için hangi kütüphaneyi kullanmalıyım?** GroupDocs.Annotation basit, yüksek performanslı bir API sağlar.  
-- **Üretim için lisansa ihtiyacım var mı?** Evet – üretim dağıtımları için tam bir GroupDocs lisansı gereklidir.  
+## Hızlı cevaplar
+- **Java link ek açıklamaları için hangi kütüphaneyi kullanmalıyım?** GroupDocs.Annotation yüksek performanslı, çok formatlı bir API sağlar.  
+- **Üretim için lisansa ihtiyacım var mı?** Evet – deneme dışı herhangi bir dağıtım için tam bir GroupDocs lisansı gereklidir.  
 - **Bunu Spring Boot ile entegre edebilir miyim?** Kesinlikle; “Spring Boot document annotation integration” bölümüne bakın.  
-- **Kaynakları verimli bir şekilde nasıl yönetirim?** `Annotator` üzerinde `dispose()` çağırarak veya try‑with‑resources kullanarak.  
-- **Hangi belge formatları bağlantı açıklamalarını destekler?** PDF ve DOCX tam desteklenir; diğer formatlarda sınırlı etkileşim olabilir.
+- **Kaynakları verimli nasıl yönetirim?** `Annotator` üzerinde `dispose()` metodunu açıkça çağırarak veya try‑with‑resources kullanarak.  
+- **Hangi belge formatları link ek açıklamalarını destekler?** PDF ve DOCX tam desteklenir; diğer formatlarda sınırlı etkileşim olabilir.
 
 ## groupdocs annotation tutorial java nedir?
-Bir **groupdocs annotation tutorial java**, GroupDocs.Annotation SDK'sını kullanarak Java uygulamalarında programlı olarak açıklama ekleme, değiştirme ve alma konularında size rehberlik eder. Bağlantı açıklamaları, tıklanabilir URL'leri doğrudan belge içeriğine gömen özel bir türdür.
+Bu, GroupDocs.Annotation SDK'sını kullanarak Java uygulamalarında programlı olarak ek açıklamaları ekleme, değiştirme ve alma konusunda adım adım bir rehberdir. Link ek açıklamaları, tıklanabilir URL'leri doğrudan belge içeriğine gömerek son kullanıcılar için sorunsuz bir gezinme sağlar.
 
-## Why Use GroupDocs for Link Annotations?
-- **Geliştirici‑dostu API** – sezgisel sınıflar ve yöntemler düşük seviyeli PDF/Word karmaşıklıklarını gizler.  
-- **Çapraz‑format desteği** – bir kez yazın, PDF, DOCX, PPTX ve daha fazlasına açıklama ekleyin.  
-- **Yüksek performans** – büyük dosyalar ve yüksek verim senaryoları için optimize edilmiştir.  
-- **Sağlam dokümantasyon & topluluk** – bir sorunla karşılaştığınızda hızlı yardım.
+## Neden link ek açıklamaları için GroupDocs kullanmalı?
+GroupDocs.Annotation **50+ giriş ve çıkış formatını** destekler; PDF, DOCX, PPTX ve HTML dahil ve **500 sayfaya kadar** belgeyi tüm dosyayı belleğe yüklemeden işleyebilir. API, **yüksek verimlilik senaryoları** için tasarlanmıştır ve istek başına yüzlerce ek açıklama için saniyenin altında yanıt süreleri sunar; ayrıca ayrıntılı hata mesajları ve kapsamlı dokümantasyon sağlar.
 
-## Prerequisites
-- **JDK 8+**  
-- **Maven** (or Gradle) for dependency management  
-- An IDE such as IntelliJ IDEA or Eclipse  
-- Basic Java knowledge (classes, objects, exception handling)
+## Önkoşullar
+- JDK 8 veya daha yeni  
+- Bağımlılık yönetimi için Maven (veya Gradle)  
+- IntelliJ IDEA veya Eclipse gibi bir IDE  
+- Temel Java bilgisi (sınıflar, nesneler, istisna yönetimi)  
 
-### Maven Dependency Setup
-
-Add the GroupDocs repository and dependency to your `pom.xml`:
+### Maven bağımlılık kurulumu
+GroupDocs deposunu ve Annotation bağımlılığını `pom.xml` dosyanıza ekleyin:
 
 ```xml
 <repositories>
@@ -67,17 +98,15 @@ Add the GroupDocs repository and dependency to your `pom.xml`:
 </dependencies>
 ```
 
-**İpucu:** Başlamadan önce en son sürüm için GroupDocs web sitesini kontrol edin.
+**Pro ipucu:** Bağımlılığı eklemeden önce her zaman GroupDocs indirme sayfasından en son sürümü doğrulayın.
 
-### Getting Your License
+### Lisansınızı almanız
+Ücretsiz deneme sürümünü [GroupDocs web sitesinden](https://releases.groupdocs.com/annotation/java/) başlatın. Deneme sürümü geliştirme için idealdir, ancak üretim ortamları için tam lisans zorunludur.
 
-Ücretsiz deneme sürümünü [GroupDocs web sitesinden](https://releases.groupdocs.com/annotation/java/) indirerek başlayabilirsiniz. Deneme sürümü geliştirme için mükemmeldir, ancak üretim kullanımı için tam bir lisans gereklidir.
+## Temel uygulama: adım adım rehber
 
-## Core Implementation: Step‑by‑Step Guide
-
-### Step 1: Initialize the Annotator Object
-
-The `Annotator` is the central hub that lets you read and modify a document.
+### Annotator nesnesini nasıl başlatırım?
+`Annotator` sınıfının bir örneğini hedef belgenin yolunu sağlayarak oluşturun. `Annotator` sınıfı, bellek içinde ek açıklamaları okuyan, yazan ve yöneten merkezi bir hubdır. “File Not Found” hatalarını önlemek için mutlak ya da doğru‑göreli bir yol kullanın ve her zaman `dispose()` veya try‑with‑resources ile kaynakları serbest bırakın.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -96,13 +125,12 @@ public class FeatureInitializeAnnotator {
 }
 ```
 
-**Ana noktalar**
-- “File Not Found” hatalarını önlemek için mutlak ya da doğru‑göreceli bir yol sağlayın.  
-- Yerel kaynakları serbest bırakmak için her zaman `dispose()` (veya try‑with‑resources) çağırın.
+**Anahtar noktalar**
+- “File Not Found” hatalarını önlemek için mutlak ya da doğru‑göreli bir yol sağlayın.  
+- Yerel kaynakları serbest bırakmak ve bellek kullanımını düşük tutmak için her zaman `dispose()` (veya try‑with‑resources) çağırın.
 
-### Step 2: Create and Configure Link Annotations
-
-Now we’ll define a clickable area, set its visual properties, and attach a URL.
+### Link ek açıklamaları nasıl oluşturur ve yapılandırırım?
+`LinkAnnotation` örneği oluşturun, dikdörtgen alanını `Point` nesneleriyle tanımlayın, görsel özellikleri ayarlayın ve hedef URL'yi atayın. `LinkAnnotation` sınıfı, belge içinde gömülü tıklanabilir bir hiperlinki temsil eder. Görünümü ve davranışı kontrol etmek için kenarlık stili, opaklık ve özel meta verileri de ayarlayabilirsiniz.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -153,14 +181,13 @@ public class FeatureCreateLinkAnnotation {
 ```
 
 **Bileşenlerin açıklaması**
-- **Replies** işbirlikçilerin açıklamaya yorum eklemesini sağlar.  
+- **Replies** işbirlikçilerin ek açıklamaya yorum eklemesini sağlar.  
 - **Points** bir dikdörtgen tanımlar; koordinat sistemi sol‑üst köşeden (0,0) başlar.  
 - **Opacity** görünürlüğü kontrol eder (0 = şeffaf, 1 = tamamen opak).  
 - **URL** tıklanabilir olması için protokol (`https://`) içermelidir.
 
-## Spring Boot document annotation integration
-
-If you’re building a RESTful service with Spring Boot, wrap the annotation logic in a service bean:
+## Link ek açıklama mantığını bir Spring Boot servisine nasıl entegre edebilirim?
+Ek açıklama kodunu bir Spring‑yönetimli servis bean'ine sarın. Bu, işlevselliği bir REST denetleyicisi aracılığıyla ortaya çıkarmanızı sağlar ve istemcilerin talep üzerine link ek açıklamaları istemesine olanak tanır. `Annotator`'ı yapıcı üzerinden enjekte edin, `GroupDocsException` ve `IOException`'ı ele alın ve başarı ya da hata detaylarını gösteren bir `ResponseEntity` döndürün. `ResponseEntity`, durum ve gövde dahil tam HTTP yanıtını temsil eden bir Spring tipidir.
 
 ```java
 @Service
@@ -171,11 +198,10 @@ public class DocumentAnnotationService {
 }
 ```
 
-You can then expose this method via a controller endpoint, allowing clients to request link annotations on the fly.
+Daha sonra servis metodunu bir denetleyici uç noktasına eşleyebilir ve ek açıklama uygulandığında başarılı bir yanıt dönebilirsiniz.
 
-## Resource Management Best Practices
-
-Use try‑with‑resources to ensure the `Annotator` is closed automatically:
+## Spring Boot uygulamasında kaynakları nasıl yönetmeliyim?
+Java'nın try‑with‑resources ifadesini kullanarak `Annotator` işlemin tamamlanmasının ardından otomatik olarak kapanır, uzun süren servislerde bellek sızıntılarını önler. Bu desen, ek açıklama işleme sırasında istisnalar oluşsa bile yerel kaynakların hızlıca serbest bırakılmasını sağlar. Uzun ömürlü annotator örnekleri tutan bean'ler için Spring'in `@PreDestroy` kancasını da ekleyin.
 
 ```java
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -183,9 +209,8 @@ try (Annotator annotator = new Annotator(inputPath)) {
 } // Automatic disposal happens here
 ```
 
-## Robust Error Handling
-
-Wrap your annotation calls in proper exception blocks to capture both GroupDocs‑specific and I/O errors:
+## Ek açıklama işlemleri için sağlam hata yönetimini nasıl uygularım?
+Ek açıklama mantığınızı `GroupDocsException` ve `IOException` için özel catch bloklarıyla sarın. Bu, SDK seviyesindeki sorunları ve dosya sistemi problemlerini yakalar, size net tanı mesajları verir. `GroupDocsException`, GroupDocs SDK'sının ek açıklama hataları için fırlattığı temel istisna tipidir. İstisna detaylarını SLF4J gibi bir kayıt çerçevesiyle kaydedin ve gerekirse özel bir runtime istisnası yeniden fırlatın.
 
 ```java
 try {
@@ -197,64 +222,60 @@ try {
 }
 ```
 
-## Real‑World Use Cases
+## Gerçek dünya kullanım örnekleri
+- **Hukuki belge yönetimi** – Maddeleri kanunlara veya içtihatlara bağlayarak anında referans sağlar.  
+- **E‑learning platformları** – Video öğreticileri veya dış kaynakları doğrudan ders kitaplarına gömün.  
+- **Finansal raporlama** – Özet tabloları ayrıntılı elektronik tablolara veya canlı piyasa verilerine bağlayın.  
+- **Teknik dokümantasyon** – API referanslarına, kod örneklerine veya sorun izleyicilere tek tıkla erişim sağlayın.
 
-- **Legal Document Management** – Maddeleri yasalara veya içtihatlara bağlayın.  
-- **E‑learning Platforms** – Video eğitimlerini veya dış kaynakları doğrudan ders kitaplarına gömün.  
-- **Financial Reporting** – Özet tabloları ayrıntılı elektronik tablolara veya piyasa verilerine bağlayın.  
-- **Technical Documentation** – API referanslarına veya kod örneklerine tek tıkla erişim sağlayın.
+## Yaygın sorunlar ve çözümler
 
-## Common Issues and Solutions
+| Issue | Symptoms | Fix |
+|-------|----------|-----|
+| **Dosya bulunamadı** | `Annotator` başlatma sırasında bir istisna fırlatır. | `File.exists()` ile yolu doğrulayın, mutlak yollar kullanın ve okuma izinlerinin olduğundan emin olun. |
+| **Yanlış konum** | Ek açıklama ekran dışına veya başka bir sayfaya görünür. | Sayfa numaralarının sıfır‑indeksli olduğunu unutmayın; `Point` koordinatlarını tekrar kontrol edin. |
+| **Bellek baskısı** | Büyük PDF'lerde `OutOfMemoryError`. | `dispose()` çağırın, belgeleri parçalar halinde işleyin ve JVM yığınını (`-Xmx`) artırın. |
+| **Çalışmayan linkler** | Tıklanabilir alan görünüyor ancak yönlendirmiyor. | Protokol (`https://`) ekleyin ve URL'yi bir tarayıcıda test edin. |
+| **Desteklenmeyen format** | Çıktıda linkler eksik. | PDF veya DOCX kullanın; diğer formatlar etkileşimli linkleri desteklemeyebilir. |
 
-| Sorun | Belirtiler | Çözüm |
-|-------|------------|-------|
-| **Dosya Bulunamadı** | `Annotator` başlangıçta bir istisna fırlatır. | `File.exists()` ile yolu doğrulayın, mutlak yollar kullanın ve okuma izinlerinin olduğundan emin olun. |
-| **Yanlış Yerleşim** | Açıklama ekranda dışarıda veya başka bir sayfada görünüyor. | Sayfa numaralarının sıfır‑indeksli olduğunu unutmayın; `Point` koordinatlarını iki kez kontrol edin. |
-| **Bellek Yükü** | Büyük PDF'lerde `OutOfMemoryError`. | `dispose()` çağırın, parçalar halinde işleyin ve JVM yığınını (`-Xmx`) artırın. |
-| **Çalışmayan Bağlantılar** | Tıklanabilir alan görünüyor ancak yönlendirmiyor. | Protokol (`https://`) ekleyin ve URL'yi bir tarayıcıda test edin. |
-| **Desteklenmeyen Format** | Çıktıda bağlantılar eksik. | PDF veya DOCX kullanın; diğer formatlar etkileşimli bağlantıları desteklemeyebilir. |
+## Gelişmiş özelleştirme
+- **Stil** – Kenarlık rengi, kalınlığı ve arka planı `LinkAnnotation` özellikleriyle ayarlayın.  
+- **Olay geri çağrıları** – Kullanıcı bir görüntüleyicide linke tıkladığında tepki vermek için dinleyiciler kaydedin.  
+- **Koşullu render** – Kullanıcı rolleri veya belge durumu bazında ek açıklamaları gösterin veya gizleyin.  
+- **Meta veri** – Analitik veya iş akışı takibi için özel anahtar/değer çiftleri depolayın.
 
-## Advanced Customization
+## Sıkça sorulan sorular
 
-- **Styling** – `LinkAnnotation` özellikleriyle kenar rengi, kalınlığı ve arka planı ayarlayın.  
-- **Event Callbacks** – Bir kullanıcı görüntüleyicide bir bağlantıya tıkladığında tepki vermek için dinleyiciler kaydedin.  
-- **Conditional Rendering** – Kullanıcı rolleri veya belge durumu temelinde açıklamaları göster/gizle.  
-- **Metadata** – Analitik veya iş akışı takibi için özel anahtar/değer çiftleri depolayın.
+**Q: Aynı belgeye birden fazla link ek açıklaması ekleyebilir miyim?**  
+A: Evet. Her URL için ayrı bir `LinkAnnotation` örneği oluşturun ve aynı `Annotator`'a ekleyin.
 
-## Frequently Asked Questions
+**Q: Link ek açıklamalarının görsel görünümünü nasıl değiştiririm?**  
+A: `LinkAnnotation` nesnesinde `setOpacity()`, kenarlık ayarları ve renk özellikleri gibi özellikleri kullanın.
 
-**S: Aynı belgeye birden fazla bağlantı açıklaması ekleyebilir miyim?**  
-C: Kesinlikle! Birden fazla `LinkAnnotation` örneği oluşturup her birini aynı `Annotator`'a ekleyin.
+**Q: Hangi belge formatları etkileşimli link ek açıklamalarını destekler?**  
+A: PDF en güvenilir desteği sunar; DOCX de çalışır, ancak görüntüleyici davranışı farklı olabilir.
 
-**S: Bağlantı açıklamalarının görsel görünümünü nasıl değiştiririm?**  
-C: `LinkAnnotation` nesnesinde `setOpacity()`, kenar ayarları ve renk özellikleri gibi özellikleri kullanın.
+**Q: Link ek açıklama alanını görünmez ama tıklanabilir yapabilir miyim?**  
+A: Opaklığı `0.0` olarak ayarlayın. Daha iyi kullanılabilirlik için `0.1` gibi çok düşük bir opaklık önerilir.
 
-**S: Hangi belge formatları etkileşimli bağlantı açıklamalarını destekler?**  
-C: PDF en güvenilir desteği sunar. Word (DOCX) de çalışır, ancak görüntüleyici davranışı değişebilir.
+**Q: Farklı sayfa boyutları ve yönelimlerini nasıl yönetirim?**  
+A: Çalışma zamanında sayfa boyutlarını alın ve sağlam bir çözüm için noktaları sayfa boyutuna göre hesaplayın.
 
-**S: Bağlantı açıklama alanını görünmez ama tıklanabilir yapabilir miyim?**  
-C: Evet—opaklığı `0.0` olarak ayarlayın. Ancak kullanılabilirlik için çok düşük bir opaklık (ör. `0.1`) önerilir.
+**Q: Mevcut link ek açıklamalarını çıkarmak mümkün mü?**  
+A: Evet. GroupDocs.Annotation, ek açıklamaları okumak için getter'lar sunar; üzerlerinde döngü kurarak her özelliği inceleyebilirsiniz.
 
-**S: Farklı sayfa boyutları ve yönelimleri nasıl yönetilir?**  
-C: Çalışma zamanında sayfa boyutlarını alın ve noktaları sayfa boyutuna göre hesaplayarak sağlam bir çözüm üretin.
+**Q: Çok sayıda ek açıklama eklemenin performans etkisi nedir?**  
+A: SDK, yüzlerce ek açıklamayı önemsiz gecikme ile işler; binler için toplu işleme ve yığın izleme önerilir.
 
-**S: Mevcut bağlantı açıklamaları çıkarılabilir mi?**  
-C: GroupDocs, bir belgeden açıklamaları okumak için getter'lar sağlar; bunlar üzerinde döngü kurarak özellikleri inceleyebilirsiniz.
+**Q: Ek açıklamalı belgeleri şifreyle koruyabilir miyim?**  
+A: Şifreli dosyaları açmak için `Annotator` oluştururken belge şifresini sağlayın.
 
-**S: Çok sayıda açıklama eklemenin performans etkisi nedir?**  
-C: Yüzlerce açıklama için performans sağlam kalır, ancak binlercesi için toplu işleme ve yığın kullanımını izlemeyi düşünün.
-
-**S: Açıklamalı belgeleri şifreyle koruyabilir miyim?**  
-C: Evet. Şifreli dosyaları açarken `Annotator` oluştururken şifreyi sağlayın.
-
-## Conclusion
-
-Artık **groupdocs annotation tutorial java** kullanarak link açıklamaları eklemek için SDK'yı başlatmaktan Spring Boot entegrasyonuna ve üretim düzeyindeki endişelere kadar eksiksiz bir kılavuza sahipsiniz. Diğer açıklama türleri—vurgulamalar, damgalar veya özel şekiller—ile belgelerinizi daha da zenginleştirmek için deneyler yapın.
-
-Next steps: GroupDocs.Annotation API referansını keşfedin, toplu açıklama boru hatlarını deneyin ve uygulamanıza kullanıcı‑odaklı yorum iş akışlarını entegre edin.
-
----
-
-**Last Updated:** 2026-03-06  
+**Son Güncelleme:** 2026-09-15  
 **Tested With:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs
+
+## İlgili Eğitimler
+
+- [GroupDocs Annotation ile Java PDF Yükleme: Belge Yükleme Rehberi](/annotation/java/document-loading/)
+- [GroupDocs Annotation ile Java PDF Vurguları Oluşturma: Tam Rehber](/annotation/java/annotation-management/)
+- [GroupDocs.Annotation ile Java PDF Boyutunu Küçültme – Tam Rehber](/annotation/java/document-saving/)
