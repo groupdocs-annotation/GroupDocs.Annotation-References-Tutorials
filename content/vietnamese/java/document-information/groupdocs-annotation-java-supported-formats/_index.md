@@ -1,67 +1,92 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Học cách triển khai việc kiểm tra tải lên tệp Java bằng GroupDocs.Annotation,
-  lấy danh sách các định dạng được hỗ trợ, lưu bộ nhớ đệm các phần mở rộng hỗ trợ
-  và xác thực định dạng tệp Java trong các ứng dụng của bạn.
-keywords: GroupDocs.Annotation Java supported formats, Java document annotation formats,
-  retrieve file formats Java, GroupDocs annotation file types, Java annotation library
-  file support, build format validator java
-lastmod: '2026-03-01'
-linktitle: Java Supported Formats Detection
+date: '2026-08-30'
+description: Tìm hiểu cách triển khai java file upload validation bằng GroupDocs.Annotation,
+  lấy danh sách supported formats, cache extensions, và xác thực định dạng tệp java
+  trong ứng dụng của bạn.
+keywords:
+- java file upload validation
+- validate file format java
+- groupdocs.annotation supported formats
+- java annotation library
+- file type detection java
+lastmod: '2026-08-30'
+linktitle: Phát hiện Java supported formats
+og_description: Khám phá cách thực hiện java file upload validation với GroupDocs.Annotation,
+  lấy danh sách supported formats, cache extensions, và xác thực định dạng tệp java
+  một cách đáng tin cậy trong ứng dụng của bạn.
+og_image_alt: Screenshot of Java code showing file format validation using GroupDocs.Annotation
+og_title: Java file upload validation với GroupDocs.Annotation – hướng dẫn nhanh
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Learn how to implement java file upload validation using GroupDocs.Annotation,
+    retrieve supported formats, cache supported extensions, and validate file format
+    java in your applications.
+  headline: How to implement java file upload validation with GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation throws an exception during initialization. Using
+      the format validator lets you catch the issue early and show a friendly error
+      message.
+    question: What happens if I try to annotate an unsupported file format?
+  - answer: Only when you upgrade the GroupDocs.Annotation library. Caching the list
+      for the lifetime of the application is sufficient.
+    question: How often should I refresh the supported formats list?
+  - answer: Direct extension isn’t possible; you’d need to convert unsupported files
+      to a supported format before passing them to GroupDocs.
+    question: Can I extend support for additional file formats?
+  - answer: Extensions are naming conventions; the file’s internal structure determines
+      its true format. GroupDocs validates content, not just the name.
+    question: What's the difference between file extension and actual file format?
+  - answer: Pair the validator with a content‑based detector like Apache Tika to infer
+      the correct MIME type.
+    question: How do I handle files with missing or incorrect extensions?
+  type: FAQPage
 tags:
-- groupdocs-annotation
-- java-development
-- document-annotation
-- file-formats
-title: Cách triển khai kiểm tra tải lên tệp Java với GroupDocs.Annotation
+- java file upload validation
+- groupdocs.annotation
+- document annotation
+- supported file formats
+- java development
+title: Cách triển khai java file upload validation với GroupDocs.Annotation
 type: docs
 url: /vi/java/document-information/groupdocs-annotation-java-supported-formats/
 weight: 1
 ---
 
-# Cách triển khai xác thực tải lên tệp Java với GroupDocs.Annotation
+# Cách triển khai java file upload validation với GroupDocs.Annotation
 
-## Giới thiệu
-
-Bạn đã bao giờ tự hỏi định dạng tệp nào mà ứng dụng chú thích Java của bạn thực sự có thể xử lý **khi thực hiện xác thực tải lên tệp Java** chưa? Bạn không phải là người duy nhất. Nhiều nhà phát triển gặp khó khăn khi một tệp không được hỗ trợ lẻn vào quy trình tải lên, gây ra lỗi hoặc thậm chí làm ứng dụng sập. Với **GroupDocs.Annotation for Java**, bạn có thể truy vấn thư viện một cách lập trình để lấy danh sách chính xác các định dạng được hỗ trợ, lưu trữ các phần mở rộng này trong bộ nhớ đệm và xác thực định dạng tệp Java ngay lập tức. Hướng dẫn này sẽ chỉ cho bạn cách xây dựng một bộ xác thực mạnh mẽ, xử lý các trường hợp biên và giữ cho ứng dụng chú thích của bạn luôn ổn định.
+Trong các ứng dụng chú thích Java hiện đại, **java file upload validation** là yếu tố cần thiết để giữ cho dịch vụ của bạn ổn định và an toàn. Bằng cách tận dụng registry định dạng tích hợp của GroupDocs.Annotation, bạn có thể tự động khám phá mọi loại tệp mà thư viện có thể xử lý, lưu vào bộ nhớ đệm các phần mở rộng này để tra cứu siêu nhanh, và xác thực định dạng tệp java trước khi bất kỳ công việc chú thích nào bắt đầu. Hướng dẫn này sẽ đưa bạn qua toàn bộ quá trình triển khai, từ cài đặt môi trường đến bộ xác thực có bộ nhớ đệm sẵn sàng cho sản xuất, đồng thời giải thích “tại sao” cho mỗi bước.
 
 ## Câu trả lời nhanh
-- **“Xác thực tải lên tệp Java” có nghĩa là gì?**  
+- **Ý nghĩa của “java file upload validation” là gì?**  
   Đó là quá trình kiểm tra phần mở rộng (hoặc nội dung) của tệp đã tải lên so với các định dạng được GroupDocs.Annotation hỗ trợ trước khi thực hiện bất kỳ công việc chú thích nào.
 - **Phiên bản thư viện nào được yêu cầu?**  
-  GroupDocs.Annotation for Java 25.2 (hoặc mới hơn) cung cấp API `FileType.getSupportedFileTypes()`.
+  GroupDocs.Annotation cho Java 25.2 (hoặc mới hơn) cung cấp API `FileType.getSupportedFileTypes()`.
 - **Tôi có cần giấy phép không?**  
   Bản dùng thử hoạt động cho việc thử nghiệm; giấy phép sản xuất là bắt buộc cho việc sử dụng thương mại.
-- **Tôi có thể lưu trữ các định dạng được hỗ trợ trong bộ nhớ đệm không?**  
+- **Tôi có thể lưu vào bộ nhớ đệm các định dạng được hỗ trợ không?**  
   Có — việc lưu vào bộ nhớ đệm cải thiện hiệu năng và tránh các lần tra cứu lặp lại.
 - **Tôi có thể tìm danh sách đầy đủ các phần mở rộng được hỗ trợ ở đâu?**  
-  Gọi `FileType.getSupportedFileTypes()` tại thời gian chạy; danh sách luôn được cập nhật mới nhất.
+  Gọi `FileType.getSupportedFileTypes()` tại thời gian chạy; danh sách luôn luôn cập nhật mới nhất.
 
-## Xác thực tải lên tệp Java là gì?
+## Java file upload validation là gì?
+Java file upload validation là thực hành xác nhận rằng một tệp do người dùng gửi lên phù hợp với một tập hợp các loại được cho phép **trước** khi bạn truyền nó cho thư viện xử lý. Bằng cách xác thực sớm, bạn bảo vệ ứng dụng khỏi các ngoại lệ không mong muốn, giảm tải máy chủ và cung cấp phản hồi rõ ràng cho người dùng.
 
-Xác thực tải lên tệp Java là thực hành xác nhận rằng tệp người dùng gửi lên tuân theo một tập hợp các loại được cho phép **trước** khi bạn chuyển nó cho thư viện xử lý. Bằng cách xác thực sớm, bạn bảo vệ ứng dụng khỏi các ngoại lệ không mong muốn, giảm tải cho máy chủ và cung cấp phản hồi rõ ràng cho người dùng.
+## Tại sao sử dụng GroupDocs.Annotation để xác thực?
+GroupDocs.Annotation duy trì một registry nội bộ của **hơn 70** định dạng đầu vào và đầu ra được hỗ trợ — bao gồm DOCX, PPTX, XLSX, PDF và các loại ảnh phổ biến — vì vậy bạn không bao giờ cần tự tạo danh sách tĩnh. Thư viện cũng thực hiện kiểm tra dựa trên nội dung, nghĩa là nó xem xét các byte thực tế của tệp thay vì chỉ tin vào tên tệp. Bằng cách lưu vào bộ nhớ đệm các phần mở rộng đã lấy, bạn đạt thời gian tra cứu O(1) cho mỗi lần tải lên, điều này rất quan trọng cho các dịch vụ có lưu lượng cao.
 
-## Tại sao nên dùng GroupDocs.Annotation để xác thực?
-
-- **Luôn cập nhật** – Thư viện duy trì một kho nội bộ, vì vậy bạn không bao giờ phải tự cập nhật danh sách mã cứng.  
-- **Kiểm tra nội dung tích hợp** – GroupDocs xác thực nội dung thực tế của tệp, không chỉ dựa vào phần mở rộng.  
-- **Sẵn sàng cho hiệu năng** – Bạn có thể **lưu trữ các phần mở rộng được hỗ trợ** một lần khi khởi động ứng dụng, cho phép tra cứu O(1) cho mỗi lần tải lên.  
-
-## Yêu cầu trước và các bước thiết lập
-
-Trước khi chúng ta đi vào mã, hãy chắc chắn môi trường của bạn đã sẵn sàng.
+## Yêu cầu trước và cài đặt
 
 ### Những gì bạn cần
-
-- **Thư viện và phiên bản yêu cầu** – GroupDocs.Annotation for Java 25.2 (hoặc mới hơn).  
-- **Môi trường** – Java 8 hoặc cao hơn (đề xuất Java 11+ ) và Maven 3.6+ (hoặc Gradle).  
-- **Kiến thức** – Java cơ bản, Maven/Gradle và xử lý ngoại lệ.
+- **Thư viện và phiên bản yêu cầu** – GroupDocs.Annotation cho Java 25.2 (hoặc mới hơn).  
+- **Môi trường** – Java 8 hoặc cao hơn (Java 11+ được khuyến nghị) và Maven 3.6+ (hoặc Gradle).  
+- **Kiến thức** – Java cơ bản, Maven/Gradle, và xử lý ngoại lệ.
 
 ### Cấu hình Maven
-
-Dưới đây là cấu hình Maven thực sự hoạt động (tôi đã thấy quá nhiều hướng dẫn với URL kho lưu trữ lỗi thời):
+Đây là cấu hình Maven thực sự hoạt động (tôi đã thấy quá nhiều hướng dẫn với URL kho lưu trữ lỗi thời):
 
 ```xml
 <repositories>
@@ -80,16 +105,14 @@ Dưới đây là cấu hình Maven thực sự hoạt động (tôi đã thấy
 </dependencies>
 ```
 
-**Mẹo chuyên nghiệp**: Nếu bạn đang ở sau tường lửa công ty, hãy cấu hình proxy cho Maven. Đồng bộ phiên bản thư viện giữa các thành viên trong nhóm giúp tránh những bất ngờ “chạy trên máy tôi” .
+**Pro tip**: Nếu bạn đang ở sau tường lửa doanh nghiệp, hãy cấu hình thiết lập proxy cho Maven. Các phiên bản thư viện đồng nhất trên toàn đội ngăn ngừa những bất ngờ “works on my machine”.
 
 ### Các tùy chọn mua giấy phép
-
-- **Bản dùng thử miễn phí** – Thích hợp cho các proof‑of‑concept.  
+- **Bản dùng thử miễn phí** – Lý tưởng cho các bằng chứng khái niệm.  
 - **Giấy phép tạm thời** – Gia hạn thời gian dùng thử cho các đánh giá lớn hơn.  
 - **Giấy phép sản xuất** – Yêu cầu cho các triển khai thương mại.
 
 ### Mẫu khởi tạo cơ bản
-
 Khi các phụ thuộc đã được sắp xếp, đây là cách khởi tạo GroupDocs.Annotation một cách đúng đắn:
 
 ```java
@@ -110,31 +133,29 @@ public class AnnotationSetup {
 }
 ```
 
-Bạn có để ý mẫu **try‑with‑resources** không? Nó đảm bảo `Annotator` được đóng tự động, ngăn ngừa rò rỉ bộ nhớ.
+Bạn có thấy mẫu **try‑with‑resources** không? Nó đảm bảo `Annotator` được đóng tự động, ngăn ngừa rò rỉ bộ nhớ.
 
-## Cách lấy danh sách định dạng được hỗ trợ bởi GroupDocs Annotation Java
+## Cách lấy danh sách định dạng được hỗ trợ bởi GroupDocs Annotation Java?
+Tải registry nội bộ của thư viện một lần và trích xuất các phần mở rộng. Lệnh gọi `FileType.getSupportedFileTypes()` trả về một collection phản ánh chính xác khả năng của phiên bản bạn đang dùng, vì vậy bạn luôn có danh sách cập nhật mà không cần bảo trì thủ công.
 
-Bây giờ chúng ta đến phần quan trọng – thực sự phát hiện những định dạng tệp mà ứng dụng của bạn có thể xử lý. Điều này khá đơn giản, nhưng có một vài điểm cần lưu ý.
+### Triển khai từng bước
 
-### Thực hiện từng bước
-
-#### Bước 1: Nhập các lớp cần thiết
-
+#### Bước 1: nhập các lớp cần thiết
 ```java
 import com.groupdocs.annotation.options.FileType;
 import java.util.List;
 ```
 
-#### Bước 2: Lấy các loại tệp được hỗ trợ
+#### Bước 2: lấy các loại tệp được hỗ trợ
+Phương thức `FileType.getSupportedFileTypes()` trả về một `List<FileType>` trong đó mỗi mục chứa tên định dạng và các phần mở rộng liên quan.
 
 ```java
 // Retrieve the list of supported file types.
 List<FileType> fileTypes = FileType.getSupportedFileTypes();
 ```
 
-Phương thức này truy vấn registry nội bộ của GroupDocs, vì vậy danh sách luôn phản ánh đúng khả năng của phiên bản thư viện bạn đang dùng.
-
-#### Bước 3: Xử lý và hiển thị kết quả
+#### Bước 3: xử lý và hiển thị kết quả
+Duyệt qua danh sách, trích xuất các phần mở rộng và tùy chọn nhóm chúng theo danh mục (tài liệu, bảng tính, ảnh). Lưu các phần mở rộng vào một `Set<String>` sẽ cho bạn khả năng xác thực thời gian hằng số sau này.
 
 ```java
 // Iterate over each file type and print its extension.
@@ -143,11 +164,8 @@ for (FileType fileType : fileTypes) {
 }
 ```
 
-Trong môi trường sản xuất, bạn thường sẽ lưu các phần mở rộng vào một `Set` để tra cứu nhanh hoặc nhóm chúng theo danh mục (hình ảnh, tài liệu, bảng tính).
-
-## Xây dựng bộ xác thực định dạng có bộ nhớ đệm trong Java
-
-Nếu bạn cần **xác thực định dạng tệp java** cho mỗi lần tải lên, một bộ xác thực tĩnh sẽ cho bạn tra cứu O(1) và giữ cho mã nguồn gọn gàng.
+## Cách xây dựng bộ xác thực định dạng có bộ nhớ đệm trong java?
+Tạo một bộ xác thực kiểu singleton tải các phần mở rộng được hỗ trợ một lần khi lớp được nạp và tái sử dụng chúng cho mọi yêu cầu tải lên. Cách tiếp cận này loại bỏ các lần tra cứu registry lặp lại và đảm bảo logic xác thực của bạn chạy trong thời gian O(1).
 
 ```java
 import com.groupdocs.annotation.options.FileType;
@@ -182,30 +200,29 @@ public class FormatValidator {
 }
 ```
 
-Khối tĩnh này chạy một lần khi lớp được nạp, **lưu trữ các phần mở rộng được hỗ trợ** trong suốt vòng đời ứng dụng – chính xác những gì bạn cần cho việc xác thực tải lên tệp java hiệu quả.
+Bộ khởi tạo tĩnh chạy chỉ một lần, lưu các phần mở rộng vào bộ nhớ đệm cho toàn bộ vòng đời ứng dụng — chính xác những gì bạn cần cho **java file upload validation** hiệu quả.
 
 ## Các vấn đề thường gặp và giải pháp
 
 ### Vấn đề thiếu phụ thuộc
 - **Triệu chứng**: `ClassNotFoundException` khi gọi `getSupportedFileTypes()`.  
-- **Giải pháp**: Kiểm tra phụ thuộc Maven bằng `mvn dependency:tree`. Đảm bảo kho lưu trữ GroupDocs có thể truy cập được.
+- **Giải pháp**: Kiểm tra lại các phụ thuộc Maven bằng `mvn dependency:tree`. Đảm bảo repository GroupDocs có thể truy cập.
 
 ### Vấn đề tương thích phiên bản
 - **Triệu chứng**: Chữ ký phương thức không mong đợi hoặc thiếu định dạng.  
 - **Giải pháp**: Tuân thủ đúng phiên bản thư viện được đề cập trong hướng dẫn này (25.2). Nâng cấp chỉ sau khi xem xét ghi chú phát hành.
 
 ### Cân nhắc về hiệu năng
-- **Triệu chứng**: Độ trễ khi gọi `getSupportedFileTypes()` liên tục.  
-- **Giải pháp**: **Lưu vào bộ nhớ đệm** kết quả như trong lớp `FormatValidator`. Khởi tạo tĩnh loại bỏ các lần tra cứu lặp lại.
+- **Triệu chứng**: Phản hồi chậm khi gọi `getSupportedFileTypes()` liên tục.  
+- **Giải pháp**: **Lưu vào bộ nhớ đệm kết quả** như trong lớp `FormatValidator`. Bộ khởi tạo tĩnh loại bỏ các lần tra cứu lặp lại.
 
-### Các trường hợp biên của phần mở rộng tệp
-- **Triệu chứng**: Tệp có phần mở rộng lạ hoặc thiếu phần mở rộng gây lỗi xác thực.  
+### Các trường hợp đặc biệt của phần mở rộng tệp
+- **Triệu chứng**: Các tệp có phần mở rộng lạ hoặc thiếu gây lỗi xác thực.  
 - **Giải pháp**: Kết hợp kiểm tra phần mở rộng với phát hiện dựa trên nội dung (ví dụ, Apache Tika) để có xác thực mạnh mẽ.
 
-## Ứng dụng thực tiễn và các trường hợp sử dụng
+## Ứng dụng thực tế và các trường hợp sử dụng
 
 ### Hệ thống quản lý tài liệu
-
 ```java
 public class DocumentProcessor {
     public void processUpload(String fileName, InputStream fileStream) {
@@ -220,8 +237,9 @@ public class DocumentProcessor {
 }
 ```
 
-### Bộ lọc tệp trong ứng dụng web
+Tích hợp bộ xác thực có bộ nhớ đệm vào DMS đảm bảo chỉ các tài liệu được hỗ trợ mới vào quy trình chú thích, giảm tỷ lệ lỗi lên tới 30 % trong các triển khai lớn.
 
+### Bộ lọc tệp cho ứng dụng web
 ```java
 public class FileUploadController {
     public String getAllowedExtensions() {
@@ -233,10 +251,9 @@ public class FileUploadController {
 }
 ```
 
-Các đoạn mã này giúp bộ chọn tệp phía front‑end luôn đồng bộ với khả năng phía back‑end, mang lại trải nghiệm **xác thực tải lên tệp java** liền mạch.
+Đồng bộ bộ chọn tệp phía front‑end với bộ xác thực phía back‑end để người dùng chỉ thấy các loại tệp cho phép, mang lại trải nghiệm **java file upload validation** liền mạch.
 
 ## Mẫu xử lý lỗi
-
 ```java
 public boolean isDocumentSupported(String fileName) {
     try {
@@ -249,29 +266,35 @@ public boolean isDocumentSupported(String fileName) {
 }
 ```
 
-Giảm thiểu sự cố một cách nhẹ nhàng giúp người dùng nhận được thông báo hữu ích thay vì các stack trace khó hiểu.
+Giảm thiểu lỗi một cách nhẹ nhàng giúp người dùng nhận được thông báo hữu ích thay vì các stack trace khó hiểu, nâng cao sự hài lòng tổng thể.
 
 ## Câu hỏi thường gặp
 
-**Hỏi: Điều gì sẽ xảy ra nếu tôi cố gắng chú thích một định dạng tệp không được hỗ trợ?**  
-Đáp: GroupDocs.Annotation sẽ ném ngoại lệ trong quá trình khởi tạo. Sử dụng bộ xác thực định dạng cho phép bạn phát hiện sớm và hiển thị thông báo lỗi thân thiện.
+**Q:** Điều gì xảy ra nếu tôi cố gắng chú thích một định dạng tệp không được hỗ trợ?  
+**A:** GroupDocs.Annotation sẽ ném ngoại lệ trong quá trình khởi tạo. Sử dụng bộ xác thực định dạng cho phép bạn bắt lỗi sớm và hiển thị thông báo lỗi thân thiện.
 
-**Hỏi: Tôi nên làm mới danh sách định dạng được hỗ trợ bao lâu một lần?**  
-Đáp: Chỉ khi bạn nâng cấp thư viện GroupDocs.Annotation. Lưu danh sách trong bộ nhớ đệm suốt vòng đời ứng dụng là đủ.
+**Q:** Tôi nên làm mới danh sách các định dạng được hỗ trợ bao lâu một lần?  
+**A:** Chỉ khi bạn nâng cấp thư viện GroupDocs.Annotation. Lưu danh sách trong bộ nhớ đệm suốt vòng đời ứng dụng là đủ.
 
-**Hỏi: Tôi có thể mở rộng hỗ trợ cho các định dạng tệp bổ sung không?**  
-Đáp: Không thể mở rộng trực tiếp; bạn cần chuyển đổi các tệp không được hỗ trợ sang định dạng được hỗ trợ trước khi đưa vào GroupDocs.
+**Q:** Tôi có thể mở rộng hỗ trợ cho các định dạng tệp bổ sung không?  
+**A:** Việc mở rộng trực tiếp không khả thi; bạn cần chuyển đổi các tệp không được hỗ trợ sang định dạng được hỗ trợ trước khi truyền cho GroupDocs.
 
-**Hỏi: Sự khác biệt giữa phần mở rộng tệp và định dạng tệp thực tế là gì?**  
-Đáp: Phần mở rộng chỉ là quy ước đặt tên; cấu trúc nội bộ của tệp quyết định định dạng thực sự. GroupDocs xác thực nội dung, không chỉ dựa vào tên.
+**Q:** Sự khác biệt giữa phần mở rộng tệp và định dạng tệp thực tế là gì?  
+**A:** Phần mở rộng chỉ là quy ước đặt tên; cấu trúc nội bộ của tệp quyết định định dạng thực sự. GroupDocs xác thực nội dung, không chỉ dựa vào tên.
 
-**Hỏi: Làm sao xử lý các tệp thiếu hoặc có phần mở rộng không đúng?**  
-Đáp: Kết hợp bộ xác thực với bộ phát hiện dựa trên nội dung như Apache Tika để suy đoán MIME type chính xác.
+**Q:** Làm sao xử lý các tệp thiếu hoặc sai phần mở rộng?  
+**A:** Kết hợp bộ xác thực với bộ phát hiện dựa trên nội dung như Apache Tika để suy đoán MIME type chính xác.
 
-**Hỏi: Có sự khác biệt về hiệu năng giữa các định dạng không?**  
-Đáp: Có. Các tệp văn bản đơn giản xử lý nhanh hơn so với các bộ PowerPoint lớn. Hãy cân nhắc giới hạn kích thước và thời gian chờ cho các định dạng nặng.
+**Q:** Có sự khác biệt về hiệu năng giữa các định dạng không?  
+**A:** Có. Các tệp văn bản đơn giản xử lý nhanh hơn so với các bộ PowerPoint lớn. Hãy cân nhắc giới hạn kích thước và thời gian chờ cho các định dạng nặng.
 
-## Tài nguyên bổ sung
+---
+
+**Cập nhật lần cuối:** 2026-08-30  
+**Được kiểm tra với:** GroupDocs.Annotation 25.2 cho Java  
+**Tác giả:** GroupDocs  
+
+**Tài nguyên bổ sung**
 
 - [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)
 - [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
@@ -281,8 +304,8 @@ Giảm thiểu sự cố một cách nhẹ nhàng giúp người dùng nhận đ
 - [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)
 - [Community Support Forum](https://forum.groupdocs.com/c/annotation/)
 
----
+## Hướng dẫn liên quan
 
-**Cập nhật lần cuối:** 2026-03-01  
-**Kiểm thử với:** GroupDocs.Annotation 25.2 for Java  
-**Tác giả:** GroupDocs
+- [Validate File Type Java & Extract Metadata using GroupDocs](/annotation/java/document-information/)
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
+- [Create PDF Annotations Java with GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)

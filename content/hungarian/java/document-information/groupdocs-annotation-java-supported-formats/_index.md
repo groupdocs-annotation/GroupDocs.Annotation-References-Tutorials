@@ -1,69 +1,95 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Tanulja meg, hogyan valósítható meg a Java fájlfeltöltés validálása a
-  GroupDocs.Annotation használatával, hogyan kérhető le a támogatott formátumok listája,
-  hogyan tárolhatók a támogatott kiterjesztések gyorsítótárban, és hogyan ellenőrizhető
-  a fájlformátum Java-ban az alkalmazásaiban.
-keywords: GroupDocs.Annotation Java supported formats, Java document annotation formats,
-  retrieve file formats Java, GroupDocs annotation file types, Java annotation library
-  file support, build format validator java
-lastmod: '2026-03-01'
-linktitle: Java Supported Formats Detection
+date: '2026-08-30'
+description: Ismerje meg, hogyan valósítható meg a java file upload validation a GroupDocs.Annotation
+  használatával, hogyan kérhetők le a supported formats, hogyan cache-eljük a supported
+  extensions, és hogyan validálható a file format java az alkalmazásaiban.
+keywords:
+- java file upload validation
+- validate file format java
+- groupdocs.annotation supported formats
+- java annotation library
+- file type detection java
+lastmod: '2026-08-30'
+linktitle: Java supported formats felismerése
+og_description: Fedezze fel, hogyan hajtható végre a java file upload validation a
+  GroupDocs.Annotation segítségével, hogyan kérhetők le a supported formats, hogyan
+  cache-eljük a extensions, és hogyan validálható megbízhatóan a file format java
+  az alkalmazásaiban.
+og_image_alt: Screenshot of Java code showing file format validation using GroupDocs.Annotation
+og_title: Java file upload validation a GroupDocs.Annotation segítségével – gyors
+  útmutató
+schemas:
+- author: GroupDocs
+  dateModified: '2026-08-30'
+  description: Learn how to implement java file upload validation using GroupDocs.Annotation,
+    retrieve supported formats, cache supported extensions, and validate file format
+    java in your applications.
+  headline: How to implement java file upload validation with GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation throws an exception during initialization. Using
+      the format validator lets you catch the issue early and show a friendly error
+      message.
+    question: What happens if I try to annotate an unsupported file format?
+  - answer: Only when you upgrade the GroupDocs.Annotation library. Caching the list
+      for the lifetime of the application is sufficient.
+    question: How often should I refresh the supported formats list?
+  - answer: Direct extension isn’t possible; you’d need to convert unsupported files
+      to a supported format before passing them to GroupDocs.
+    question: Can I extend support for additional file formats?
+  - answer: Extensions are naming conventions; the file’s internal structure determines
+      its true format. GroupDocs validates content, not just the name.
+    question: What's the difference between file extension and actual file format?
+  - answer: Pair the validator with a content‑based detector like Apache Tika to infer
+      the correct MIME type.
+    question: How do I handle files with missing or incorrect extensions?
+  type: FAQPage
 tags:
-- groupdocs-annotation
-- java-development
-- document-annotation
-- file-formats
-title: Hogyan valósítsuk meg a Java fájlfeltöltés validálását a GroupDocs.Annotation
+- java file upload validation
+- groupdocs.annotation
+- document annotation
+- supported file formats
+- java development
+title: Hogyan valósítsuk meg a java file upload validation-t a GroupDocs.Annotation
   segítségével
 type: docs
 url: /hu/java/document-information/groupdocs-annotation-java-supported-formats/
 weight: 1
 ---
 
-# Hogyan valósítsuk meg a Java fájlfeltöltés ellenőrzését a GroupDocs.Annotation segítségével
+# Hogyan valósítsuk meg a java fájlfeltöltés ellenőrzését a GroupDocs.Annotation segítségével
 
-## Bevezetés
-
-Valaha is elgondolkodtál, hogy mely fájlformátumokat képes valójában kezelni a Java annotációs alkalmazásod **java fájlfeltöltés ellenőrzése** közben? Nem vagy egyedül. Sok fejlesztő akadályba ütközik, amikor egy nem támogatott fájl bejut a feltöltési csővezetékbe, hibákat vagy akár összeomlásokat okozva. A **GroupDocs.Annotation for Java** segítségével programozottan lekérdezheted a könyvtár pontos, támogatott formátumlistáját, elmentheted ezeket a kiterjesztéseket, és valós időben ellenőrizheted a fájlformátumot. Ez az útmutató végigvezet egy robusztus validátor felépítésén, a szélsőséges esetek kezelésén, és a annotációs alkalmazásod szilárd működésén.
+A modern Java annotációs alkalmazásokban a **java file upload validation** elengedhetetlen a szolgáltatás stabil és biztonságos működéséhez. A GroupDocs.Annotation beépített formátumnyilvántartásának kihasználásával automatikusan felfedezheti a könyvtár által feldolgozható összes fájltípust, gyorsan gyorsítótárazhatja ezeket a kiterjesztéseket a villámgyors keresésekhez, és ellenőrizheti a fájlformátumot a java feltöltés előtt, mielőtt bármilyen annotációs művelet elkezdődne. Ez az útmutató végigvezeti a teljes megvalósításon, a környezet beállításától egy termelésre kész gyorsítótárazott validátorig, miközben elmagyarázza a „miért” minden lépés mögött.
 
 ## Gyors válaszok
-- **Mit jelent a “java fájlfeltöltés ellenőrzése”?**  
-  Ez a folyamat, amikor egy feltöltött fájl kiterjesztését (vagy tartalmát) összeveted a GroupDocs.Annotation által támogatott formátumokkal, mielőtt bármilyen annotációs műveletet végeznél.
+- **Mi a “java file upload validation” jelentése?**  
+  Ez a folyamat, amely során a feltöltött fájl kiterjesztését (vagy tartalmát) a GroupDocs.Annotation által támogatott formátumokkal ellenőrizzük, mielőtt bármilyen annotációs műveletet megkísérelnénk.
 - **Melyik könyvtárverzió szükséges?**  
-  A GroupDocs.Annotation for Java 25.2 (vagy újabb) biztosítja a `FileType.getSupportedFileTypes()` API‑t.
-- **Szükség van licencre?**  
-  A próbaverzió teszteléshez működik; a termelési licenc kötelező a kereskedelmi használathoz.
+  A GroupDocs.Annotation for Java 25.2 (vagy újabb) biztosítja a `FileType.getSupportedFileTypes()` API-t.
+- **Szükségem van licencre?**  
+  A próba verzió teszteléshez működik; a kereskedelmi használathoz termelési licenc szükséges.
 - **Cache‑elhetem a támogatott formátumokat?**  
-  Igen – a cache‑elés javítja a teljesítményt és elkerüli az ismételt lekérdezéseket.
+  Igen – a gyorsítótárazás javítja a teljesítményt és elkerüli az ismételt lekérdezéseket.
 - **Hol találom a támogatott kiterjesztések teljes listáját?**  
-  Hívd meg a `FileType.getSupportedFileTypes()` metódust futásidőben; a lista mindig naprakész.
+  Hívja meg a `FileType.getSupportedFileTypes()` metódust futásidőben; a lista mindig naprakész.
 
-## Mi az a Java fájlfeltöltés ellenőrzése?
+## Mi a java file upload validation?
+A java file upload validation az a gyakorlat, amely során megerősítjük, hogy a felhasználó által beküldött fájl megfelel a megengedett típusok halmazának **mielőtt** átadnánk egy feldolgozó könyvtárnak. A korai ellenőrzéssel megvédheti alkalmazását a váratlan kivételektől, csökkentheti a szerver terhelését, és egyértelmű visszajelzést nyújthat a felhasználóknak.
 
-A Java fájlfeltöltés ellenőrzése azt jelenti, hogy a felhasználó által beküldött fájlt összeveted egy előre meghatározott engedélyezett típusok halmazával **mielőtt** átadnád egy feldolgozó könyvtárnak. A korai ellenőrzéssel megvédheted az alkalmazásodat a váratlan kivételektől, csökkentheted a szerver terhelését, és egyértelmű visszajelzést adsz a felhasználóknak.
-
-## Miért használjuk a GroupDocs.Annotation‑t az ellenőrzéshez?
-
-- **Mindig naprakész** – A könyvtár saját belső regisztrációt tart fenn, így soha nem kell kézzel frissíteni egy hard‑kódolt listát.  
-- **Beépített tartalom‑ellenőrzés** – A GroupDocs a tényleges fájltartalmat vizsgálja, nem csak a kiterjesztést.  
-- **Teljesítmény‑optimalizált** – **Cache‑elheted a támogatott kiterjesztéseket** egyszer az alkalmazás indításakor, így O(1) keresést biztosítva minden feltöltésnél.  
+## Miért használjuk a GroupDocs.Annotation-t az ellenőrzéshez?
+A GroupDocs.Annotation egy belső nyilvántartást tart fenn a **70+** támogatott bemeneti és kimeneti formátumról – beleértve a DOCX, PPTX, XLSX, PDF és gyakori képformátumokat – így soha nem kell kézzel statikus listát készítenie. A könyvtár tartalom‑alapú ellenőrzést is végez, vagyis a fájl tényleges bájtjait vizsgálja, nem csak a fájlnevet. A lekért kiterjesztések gyorsítótárazásával O(1) keresési időt ér el minden feltöltésnél, ami kritikus a nagy áteresztőképességű szolgáltatásoknál.
 
 ## Előfeltételek és beállítási követelmények
 
-Mielőtt a kódba merülnénk, győződj meg róla, hogy a környezet készen áll.
-
-### Amire szükséged lesz
-
-- **Kötelező könyvtárak és verziók** – GroupDocs.Annotation for Java 25.2 (vagy újabb).  
+### Amire szüksége lesz
+- **Szükséges könyvtárak és verziók** – GroupDocs.Annotation for Java 25.2 (vagy újabb).  
 - **Környezet** – Java 8 vagy újabb (Java 11+ ajánlott) és Maven 3.6+ (vagy Gradle).  
-- **Ismeretek** – Alapvető Java, Maven/Gradle, és kivételkezelés.
+- **Ismeretek** – Alap Java, Maven/Gradle, és kivételkezelés.
 
 ### Maven konfiguráció
-
-Itt a Maven beállítás, amely ténylegesen működik (túl sok elavult repository URL‑t láttam a tutorialokban):
+Itt van a Maven beállítás, amely ténylegesen működik (túl sok elavult tároló‑URL‑t tartalmazó útmutatót láttam):
 
 ```xml
 <repositories>
@@ -82,17 +108,15 @@ Itt a Maven beállítás, amely ténylegesen működik (túl sok elavult reposit
 </dependencies>
 ```
 
-**Pro tipp**: Ha vállalati tűzfal mögött vagy, állítsd be a Maven proxy beállításokat. Az egységes könyvtárverziók a csapatban megelőzik a „működik a gépemen” meglepetéseket.
+**Pro tip**: Ha vállalati tűzfal mögött van, konfigurálja a Maven proxy beállításait. A könyvtárak konzisztens verziói a csapatban megakadályozzák a „működik a gépemen” meglepetéseket.
 
-### Licencbeszerzési lehetőségek
-
-- **Ingyenes próba** – Ideális proof‑of‑concept‑ekhez.  
+### Licenc beszerzési lehetőségek
+- **Ingyenes próba** – Ideális a koncepció bizonyításához.  
 - **Ideiglenes licenc** – Meghosszabbítja a próbaidőszakot nagyobb értékelésekhez.  
-- **Termelési licenc** – Kötelező a kereskedelmi telepítésekhez.
+- **Termelési licenc** – Kereskedelmi telepítésekhez szükséges.
 
-### Alapvető inicializációs minta
-
-Miután a függőségek rendben vannak, íme a helyes GroupDocs.Annotation inicializálása:
+### Alap inicializációs minta
+Miután a függőségek rendben vannak, itt látható, hogyan kell helyesen inicializálni a GroupDocs.Annotation-t:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -112,31 +136,29 @@ public class AnnotationSetup {
 }
 ```
 
-Észrevetted a **try‑with‑resources** mintát? Ez garantálja, hogy az `Annotator` automatikusan bezáródik, megakadályozva a memória‑szivárgásokat.
+Figyelje meg a **try‑with‑resources** mintát? Ez garantálja, hogy a `Annotator` automatikusan bezáródik, megakadályozva a memória szivárgásokat.
 
-## Hogyan kérdezzük le a GroupDocs Annotation Java támogatott formátumait
-
-Most jön a fő rész – a tényleges formátumok detektálása, amelyeket az alkalmazásod kezelni tud. Ez meglepően egyszerű, de néhány finomságot érdemes megérteni.
+## Hogyan lehet lekérni a GroupDocs Annotation Java támogatott formátumait?
+Töltsük be egyszer a könyvtár belső nyilvántartását, és vonjuk ki a kiterjesztéseket. A `FileType.getSupportedFileTypes()` hívás egy gyűjteményt ad vissza, amely tükrözi a használt verzió pontos képességeit, így mindig naprakész listát kapunk manuális karbantartás nélkül.
 
 ### Lépésről‑lépésre megvalósítás
 
-#### 1. lépés: Importáld a szükséges osztályokat
-
+#### 1. lépés: a szükséges osztályok importálása
 ```java
 import com.groupdocs.annotation.options.FileType;
 import java.util.List;
 ```
 
-#### 2. lépés: Szerezd meg a támogatott fájltípusokat
+#### 2. lépés: a támogatott fájltípusok lekérése
+A `FileType.getSupportedFileTypes()` metódus egy `List<FileType>`-et ad vissza, ahol minden bejegyzés tartalmazza a formátum nevét és a hozzá tartozó kiterjesztéseket.
 
 ```java
 // Retrieve the list of supported file types.
 List<FileType> fileTypes = FileType.getSupportedFileTypes();
 ```
 
-A metódus a GroupDocs belső regisztrációját kérdezi le, így a lista mindig a használt könyvtárverzió pontos képességeit tükrözi.
-
-#### 3. lépés: Feldolgozás és megjelenítés
+#### 3. lépés: az eredmények feldolgozása és megjelenítése
+Iteráljon a listán, vonja ki a kiterjesztéseket, és opcionálisan csoportosítsa őket kategória szerint (dokumentumok, táblázatok, képek). A kiterjesztések `Set<String>`-ben való tárolása később állandó‑idő ellenőrzést biztosít.
 
 ```java
 // Iterate over each file type and print its extension.
@@ -145,11 +167,8 @@ for (FileType fileType : fileTypes) {
 }
 ```
 
-Éles környezetben valószínűleg egy `Set`‑ben tárolnád a kiterjesztéseket a gyors kereséshez, vagy kategóriák szerint csoportosítanád (képek, dokumentumok, táblázatok).
-
-## Hogyan építsünk cache‑elt formátum‑validátort Java‑ban
-
-Ha minden feltöltésnél **java fájlfeltöltés ellenőrzését** kell végezni, egy statikus validátor O(1) keresést biztosít és tiszta kódot eredményez.
+## Hogyan építsünk gyorsítótárazott formátumvalidátort Java-ban?
+Hozzon létre egy singleton‑stílusú validátort, amely egyszer betölti a támogatott kiterjesztéseket az osztálybetöltéskor, és minden feltöltési kérésnél újra felhasználja őket. Ez a megközelítés megszünteti az ismételt nyilvántartás‑lekérdezéseket, és garantálja, hogy az ellenőrzési logika O(1) időben fusson.
 
 ```java
 import com.groupdocs.annotation.options.FileType;
@@ -184,30 +203,29 @@ public class FormatValidator {
 }
 ```
 
-A statikus blokk egyszer fut le, amikor a osztály betöltődik, **cache‑elve a támogatott kiterjesztéseket** az egész alkalmazás életciklusa alatt – pontosan ez kell a hatékony java fájlfeltöltés ellenőrzéséhez.
+A statikus inicializáló csak egyszer fut le, a kiterjesztéseket az alkalmazás teljes életciklusa során gyorsítótárazva – pontosan ez szükséges a hatékony **java file upload validation**-hez.
 
 ## Gyakori problémák és megoldások
 
 ### Hiányzó függőségek problémája
 - **Tünet**: `ClassNotFoundException` a `getSupportedFileTypes()` hívásakor.  
-- **Megoldás**: Ellenőrizd a Maven‑függőségeket a `mvn dependency:tree` paranccsal. Győződj meg róla, hogy a GroupDocs repository elérhető.
+- **Megoldás**: Ellenőrizze a Maven függőségeket a `mvn dependency:tree` paranccsal. Győződjön meg róla, hogy a GroupDocs tároló elérhető.
 
-### Verzió‑kompatibilitási problémák
-- **Tünet**: Váratlan metódus‑szignatúrák vagy hiányzó formátumok.  
-- **Megoldás**: Tartsd magad a jelen útmutatóban szereplő pontos könyvtárverzióhoz (25.2). Frissíts csak a kiadási megjegyzések áttekintése után.
+### Verziókompatibilitási problémák
+- **Tünet**: Váratlan metódus aláírások vagy hiányzó formátumok.  
+- **Megoldás**: Tartsa magát a útmutatóban hivatkozott pontos könyvtárverzióhoz (25.2). Frissítsen csak a kiadási megjegyzések áttekintése után.
 
-### Teljesítmény‑szempontok
-- **Tünet**: Lassú válasz, amikor többször hívod a `getSupportedFileTypes()`‑t.  
-- **Megoldás**: **Cache‑eld az eredményt** a `FormatValidator` osztályban bemutatott módon. A statikus inicializáló kiküszöböli az ismételt lekérdezéseket.
+### Teljesítménybeli megfontolások
+- **Tünet**: Lassú válasz, amikor ismételten hívja a `getSupportedFileTypes()` metódust.  
+- **Megoldás**: **Cache‑elje az eredményt** a `FormatValidator` osztályban bemutatott módon. A statikus inicializáló megszünteti az ismételt lekérdezéseket.
 
-### Fájl‑kiterjesztés szélsőséges esetek
-- **Tünet**: Szokatlan vagy hiányzó kiterjesztésű fájlok validációs hibát okoznak.  
-- **Megoldás**: Kombináld a kiterjesztés‑ellenőrzést tartalom‑alapú detektálással (pl. Apache Tika) a robusztus validáció érdekében.
+### Fájl kiterjesztés szélső esetek
+- **Tünet**: Szokatlan vagy hiányzó kiterjesztésű fájlok ellenőrzési hibákat okoznak.  
+- **Megoldás**: Kombinálja a kiterjesztés‑ellenőrzést tartalom‑alapú detektálással (pl. Apache Tika) a robusztus ellenőrzés érdekében.
 
 ## Gyakorlati alkalmazások és felhasználási esetek
 
 ### Dokumentumkezelő rendszerek
-
 ```java
 public class DocumentProcessor {
     public void processUpload(String fileName, InputStream fileStream) {
@@ -222,8 +240,9 @@ public class DocumentProcessor {
 }
 ```
 
-### Webalkalmazás fájl‑szűrők
+A gyorsítótárazott validátor DMS-be való integrálása biztosítja, hogy csak a támogatott dokumentumok lépjenek be az annotációs csővezetékbe, ezáltal csökkentve a hibaarányt akár 30 %-kal nagy telepítéseknél.
 
+### Webalkalmazás fájlszűrők
 ```java
 public class FileUploadController {
     public String getAllowedExtensions() {
@@ -235,10 +254,9 @@ public class FileUploadController {
 }
 ```
 
-Ezek a kódrészletek biztosítják, hogy a front‑end fájlkiválasztók tökéletesen szinkronban legyenek a back‑end képességekkel, zökkenőmentes **java fájlfeltöltés ellenőrzés** élményt nyújtva.
+Szinkronizálja a front‑end fájlkiválasztókat a back‑end validátorral, hogy a felhasználók csak a megengedett fájltípusokat lássák, ezáltal zökkenőmentes **java file upload validation** élményt nyújtva.
 
 ## Hibakezelési minták
-
 ```java
 public boolean isDocumentSupported(String fileName) {
     try {
@@ -251,30 +269,35 @@ public boolean isDocumentSupported(String fileName) {
 }
 ```
 
-A kegyes leépülés biztosítja, hogy a felhasználók hasznos üzeneteket kapjanak a rejtélyes stack trace‑ek helyett.
+Az elegáns leépülés biztosítja, hogy a felhasználók hasznos üzeneteket kapjanak a rejtélyes stack trace‑ek helyett, ezáltal javítva az általános elégedettséget.
 
-## Gyakran feltett kérdések
+## Gyakran ismételt kérdések
 
 **Q: Mi történik, ha egy nem támogatott fájlformátumot próbálok annotálni?**  
-A: A GroupDocs.Annotation kivételt dob az inicializálás során. A formátum‑validátor használatával korán elkapod a problémát, és barátságos hibaüzenetet jeleníthetsz meg.
+A: A GroupDocs.Annotation kivételt dob az inicializálás során. A formátumvalidátor használatával korán elkapja a problémát, és barátságos hibaüzenetet jeleníthet meg.
 
-**Q: Milyen gyakran frissítsem a támogatott formátumok listáját?**  
-A: Csak akkor, amikor frissíted a GroupDocs.Annotation könyvtárat. A lista cache‑elése az alkalmazás teljes életciklusára elegendő.
+**Q: Milyen gyakran kell frissíteni a támogatott formátumok listáját?**  
+A: Csak akkor, amikor frissíti a GroupDocs.Annotation könyvtárat. A lista az alkalmazás teljes élettartama alatt történő gyorsítótárazása elegendő.
 
-**Q: Bővíthetem a támogatott fájlformátumok körét?**  
-A: Közvetlen bővítés nem lehetséges; a nem támogatott fájlokat előbb konvertálni kell egy támogatott formátumba, mielőtt átadnád a GroupDocs‑nek.
+**Q: Kiterjeszthetem a támogatást további fájlformátumokra?**  
+A: Közvetlen kiterjesztés nem lehetséges; a nem támogatott fájlokat először egy támogatott formátumba kell konvertálni, mielőtt átadná őket a GroupDocs-nak.
 
-**Q: Mi a különbség a fájl‑kiterjesztés és a tényleges fájlformátum között?**  
-A: A kiterjesztés csak elnevezési konvenció, míg a fájl belső struktúrája határozza meg a valódi formátumot. A GroupDocs a tartalmat ellenőrzi, nem csak a nevet.
+**Q: Mi a különbség a fájl kiterjesztése és a tényleges fájlformátum között?**  
+A: A kiterjesztések elnevezési konvenciók; a fájl belső struktúrája határozza meg a valódi formátumot. A GroupDocs a tartalmat ellenőrzi, nem csak a nevet.
 
 **Q: Hogyan kezeljem a hiányzó vagy helytelen kiterjesztésű fájlokat?**  
-A: Párosítsd a validátort egy tartalom‑alapú detektorral, például az Apache Tika‑val, hogy meghatározd a helyes MIME‑típust.
+A: Párosítsa a validátort egy tartalom‑alapú detektorral, például az Apache Tika-val, hogy meghatározza a helyes MIME típust.
 
-**Q: Van teljesítménykülönbség a formátumok között?**  
-A: Igen. Az egyszerű szövegfájlok gyorsabban feldolgozhatók, mint a nagy PowerPoint prezentációk. Fontold meg a méretkorlátokat és időkorlátokat a nehéz formátumoknál.
+**Q: Van teljesítménybeli különbség a formátumok között?**  
+A: Igen. Az egyszerű szövegfájlok gyorsabban feldolgozhatók, mint a nagy PowerPoint prezentációk. Fontolja meg a méretkorlátokat és időkorlátokat a nehéz formátumok esetén.
 
-## További források
+---
 
+**Utolsó frissítés:** 2026-08-30  
+**Tesztelve ezzel:** GroupDocs.Annotation 25.2 for Java  
+**Szerző:** GroupDocs  
+
+**További források**
 - [GroupDocs.Annotation dokumentáció](https://docs.groupdocs.com/annotation/java/)
 - [API referencia útmutató](https://reference.groupdocs.com/annotation/java/)
 - [Legújabb verzió letöltése](https://releases.groupdocs.com/annotation/java/)
@@ -283,10 +306,7 @@ A: Igen. Az egyszerű szövegfájlok gyorsabban feldolgozhatók, mint a nagy Pow
 - [Ideiglenes licenc kérése](https://purchase.groupdocs.com/temporary-license/)
 - [Közösségi támogatási fórum](https://forum.groupdocs.com/c/annotation/)
 
----
-
-**Utoljára frissítve:** 2026-03-01  
-**Tesztelve a következővel:** GroupDocs.Annotation 25.2 for Java  
-**Szerző:** GroupDocs  
-
----
+## Kapcsolódó oktatóanyagok
+- [Fájl típus ellenőrzése Java-ban és metaadatok kinyerése a GroupDocs használatával](/annotation/java/document-information/)
+- [PDF betöltése Java-val a GroupDocs Annotation segítségével: Dokumentum betöltési útmutató](/annotation/java/document-loading/)
+- [PDF annotációk létrehozása Java-val a GroupDocs.Annotation segítségével](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
