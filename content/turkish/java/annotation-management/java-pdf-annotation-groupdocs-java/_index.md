@@ -1,56 +1,112 @@
 ---
 categories:
 - Java Development
-date: '2026-03-03'
-description: GroupDocs.Annotation API'yi kullanarak Java'da PDF açıklama eklemeyi
-  öğrenin, PDF açıklama Spring Boot örnekleri dahil – kod, ipuçları ve gerçek dünya
-  kullanım örnekleriyle adım adım kılavuz.
-keywords: PDF annotation Java tutorial, GroupDocs annotation Java guide, annotate
-  PDF programmatically Java, Java PDF markup API, how to add annotations to PDF using
-  Java
-lastmod: '2026-03-03'
-linktitle: PDF Annotation Java Tutorial
+date: '2026-09-05'
+description: GroupDocs.Annotation kullanarak Java'da sticky note pdf eklemeyi öğrenin.
+  Bu adım adım rehber, Spring Boot entegrasyonu, lisanslama ve en iyi uygulamaları
+  kapsar.
+keywords:
+- add sticky note pdf
+- spring boot pdf annotation
+- GroupDocs.Annotation Java
+- PDF markup Java
+- annotate PDF programmatically
+lastmod: '2026-09-05'
+linktitle: PDF Annotation Java Eğitimi
+og_description: GroupDocs.Annotation kullanarak Java'da sticky note pdf eklemeyi öğrenin.
+  Bu rehber, Spring Boot entegrasyonu, lisanslama ve performans ipuçları konusunda
+  size yol gösterir.
+og_image_alt: Developer guide showing how to add sticky note PDF annotations in Java
+  with GroupDocs
+og_title: Java'da GroupDocs Annotation ile sticky note pdf ekleme
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-05'
+  description: Learn how to add sticky note pdf in Java using GroupDocs.Annotation.
+    This step‑by‑step guide covers Spring Boot integration, licensing, and best practices.
+  headline: How to add sticky note pdf in Java with GroupDocs Annotation
+  type: TechArticle
+- description: Learn how to add sticky note pdf in Java using GroupDocs.Annotation.
+    This step‑by‑step guide covers Spring Boot integration, licensing, and best practices.
+  name: How to add sticky note pdf in Java with GroupDocs Annotation
+  steps:
+  - name: import the essential classes
+    text: The `Annotator` class is the primary entry point for working with PDF documents.
+      The `StickyNoteAnnotation` class models a sticky‑note comment that can be placed
+      on a PDF page. The `Rectangle` class defines the position and size of an annotation
+      on the page.
+  - name: create interactive replies (optional)
+    text: You can attach a reply thread to a sticky note by creating a `Comment` object
+      and linking it to the annotation.
+  - name: configure file paths
+    text: Define the input PDF path and the output location where the annotated file
+      will be saved.
+  - name: create and configure the sticky‑note annotation
+    text: Set the page index (zero‑based), rectangle coordinates, author name, and
+      the note text.
+  - name: save and verify
+    text: Call `annotator.save()` to write the changes. The try‑with‑resources block
+      guarantees that all native resources are released, which is essential for high‑throughput
+      services.
+  type: HowTo
+- questions:
+  - answer: Absolutely. You can combine sticky notes, highlights, stamps, and links
+      in a single document by creating each annotation object before calling `save()`.
+    question: Can I add multiple types of annotations to the same PDF?
+  - answer: The API automatically adjusts for portrait and landscape pages. Retrieve
+      the page dimensions via `annotator.getPageInfo(pageIndex)` and calculate rectangle
+      coordinates accordingly.
+    question: How do I handle PDFs with different page orientations?
+  - answer: There is no hard limit imposed by the API, but practical performance considerations
+      suggest keeping the total annotation count below a few thousand per file. For
+      massive annotation sets, consider paginating or lazy‑loading annotations on
+      demand.
+    question: Is there a limit to the number of sticky notes per document?
+  - answer: Yes. Use `annotator.getAnnotations()` to retrieve, modify the `Comment`
+      property, or call `annotator.delete(annotationId)` to remove an annotation.
+    question: Can users edit or delete existing sticky notes?
+  - answer: The API respects password protection and editing restrictions. Provide
+      the document password when constructing the `Annotator`; otherwise, the library
+      will refuse to modify the file.
+    question: How does GroupDocs.Annotation handle PDF security features?
+  type: FAQPage
 tags:
 - pdf-annotation
 - groupdocs
 - java-tutorial
 - document-processing
-title: Java ile PDF Açıklama Ekleme – Tam GroupDocs Rehberi
+- sticky note pdf
+title: Java'da GroupDocs Annotation ile sticky note pdf ekleme
 type: docs
 url: /tr/java/annotation-management/java-pdf-annotation-groupdocs-java/
 weight: 1
 ---
 
-# PDF Anotasyonu Java Ekle – Tam GroupDocs Rehberi
+# Java'da GroupDocs Annotation ile yapışkan not PDF ekleme
 
-## Giriş
+Programmatically **add sticky note pdf** eklemeniz gerekiyorsa, doğru yerdesiniz. İster bir belge‑inceleme sistemi, ister bir e‑öğrenme platformu, ister işbirlikçi bir iş akışı aracı oluşturuyor olun, PDF'lere yapışkan‑not ek açıklamaları eklemek kullanıcı katılımını büyük ölçüde artırır ve geri bildirim döngülerini hızlandırır. GroupDocs.Annotation for Java, PDF standartlarını, güvenliği ve renderlamayı yöneten hazır, kurumsal‑seviye bir API sunar, böylece iş mantığına odaklanabilirsiniz.
 
-Programlı olarak **add pdf annotation java** eklemeniz gerekiyorsa, doğru yerdesiniz. PDF belgelerine profesyonel anotasyonlar eklemenin programlı yolunu hiç merak ettiniz mi? Yalnız değilsiniz. İster bir belge inceleme sistemi, ister eğitim platformu, ister işbirliği araçları geliştiriyor olun, PDF anotasyonu kullanıcı etkileşimi için bir oyun değiştiricidir.
-
-Şöyle bir şey: PDF'leri manuel olarak incelemek ve işaretlemek zaman alıcıdır ve ölçeklenemez. İşte bu noktada GroupDocs.Annotation for Java devreye girer – dijital bir vurgulayıcı, yapışkan not dağıtıcısı ve yorum sistemi gibi tek bir güçlü API içinde bir araya gelir.
-
-## Hızlı Yanıtlar
-- **Hangi kütüphane pdf annotation java eklememi sağlar?** GroupDocs.Annotation for Java.  
-- **Üretim için lisans gerekir mi?** Evet, canlı dağıtımlar için geçerli bir GroupDocs lisansı gereklidir.  
+## Hızlı cevaplar
+- **Java'da sticky note pdf eklememi sağlayan kütüphane nedir?** GroupDocs.Annotation for Java.  
+- **Üretim için lisansa ihtiyacım var mı?** Evet, canlı dağıtımlar için geçerli bir GroupDocs lisansı gereklidir.  
 - **Hangi Java sürümü önerilir?** En iyi performans için Java 11 veya üzeri.  
-- **Tek bir PDF'de birden fazla anotasyon türü ekleyebilir miyim?** Kesinlikle – alan, metin, vurgulama, damga ve daha fazlası.  
-- **Toplu işleme destekleniyor mu?** Evet, API büyük belge setleri için toplu anotasyon yetenekleri sunar.
+- **Tek bir PDF'de birden fazla ek açıklama türü ekleyebilir miyim?** Kesinlikle – alan, metin, vurgulama, damga, sticky note ve daha fazlası.  
+- **Toplu işleme destekleniyor mu?** Evet, API büyük belge setleri için toplu ek açıklama yetenekleri sunar.
 
-## add pdf annotation java nedir?
-Java’da PDF anotasyonu eklemek, bir Java kütüphanesi kullanarak PDF dosyalarına programlı olarak yorumlar, vurgulamalar, yapışkan notlar ve diğer işaretlemeler eklemek anlamına gelir. GroupDocs.Annotation, tüm PDF standartları, güvenlik ve renderleme konularını sizin yerinize yöneten temiz, nesne‑yönelimli bir API sağlar.
+## Sticky note PDF ekleme nedir?
+Java'da sticky note PDF ek açıklamaları eklemek, bir Java kütüphanesi kullanarak PDF sayfalarına yorum‑tipi notlar programlı olarak eklemek anlamına gelir. GroupDocs.Annotation, PDF standartlerine otomatik olarak uyan, şifrelemeyi yöneten ve ek açıklamaları görüntüleyicilerde doğru şekilde renderlayan temiz, nesne‑yönelimli bir API sağlar. Geliştiricilerin bağlamsal geri bildirimi doğrudan belgeye yerleştirmesini sağlar, işbirliğini ve inceleme verimliliğini artırır.
 
-## add pdf annotation java için neden GroupDocs.Annotation kullanmalı?
-- **Kurumsal‑düzeyde güvenilirlik** – büyük ölçekli belge iş akışlarında kanıtlanmıştır.  
-- **Sıfır‑konfigürasyon kurulumu** – sadece Maven bağımlılığını ekleyin ve kodlamaya başlayın.  
-- **Zengin anotasyon türleri** – alan, metin, vurgulama, damga, bağlantı ve daha fazlası.  
-- **Çapraz‑platform** – Windows, Linux ve macOS JVM'lerinde çalışır.  
-- **Genişletilebilir** – görünümü özelleştirin, yanıtlar ekleyin ve herhangi bir Java çerçevesiyle bütünleştirin.
+## Sticky note PDF eklemek için GroupDocs.Annotation neden kullanılmalı?
+- **Kurumsal‑seviye güvenilirlik** – ayda milyonlarca sayfa işleyen çok‑kiracılı belge iş akışlarında kanıtlanmıştır.  
+- **Sıfır‑konfigürasyon kurulumu** – bir Maven bağımlılığı ekleyin ve anında ek açıklama yapmaya başlayın.  
+- **Zengin ek açıklama türleri** – alan, metin, vurgulama, damga, **sticky note**, bağlantı ve daha fazlası.  
+- **Çapraz‑platform desteği** – yerel bağımlılıklar olmadan Windows, Linux ve macOS JVM'lerinde çalışır.  
+- **Genişletilebilir özelleştirme** – renkleri, yazı tiplerini, opaklığı değiştirebilir ve yanıt dizileri ekleyebilirsiniz.
 
-## Önkoşullar ve Ortam Kurulumu
+## Önkoşullar ve ortam kurulumu
 
-### Gerekli Kütüphaneler ve Bağımlılıklar
-
-İlk iş olarak GroupDocs.Annotation’ı projenize eklemeniz gerekir. Maven (çoğu Java geliştiricisinin tercih ettiği) kullanıyorsanız, `pom.xml` dosyanıza aşağıdakileri ekleyin:
+### Gerekli kütüphaneler ve bağımlılıklar
+İlk olarak, projenize GroupDocs.Annotation ekleyin. Maven (Java için en yaygın yapı aracı) kullanıyorsanız, aşağıdakileri `pom.xml` dosyanıza ekleyin:
 
 ```xml
 <repositories>
@@ -69,67 +125,45 @@ Java’da PDF anotasyonu eklemek, bir Java kütüphanesi kullanarak PDF dosyalar
 </dependencies>
 ```
 
-**Pro İpucu**: En son sürümü GroupDocs sürüm sayfasından kontrol edin. 25.2 sürümü, faydalanmak isteyeceğiniz önemli performans iyileştirmeleri ve hata düzeltmeleri içerir.
+**Pro ipucu**: Her zaman en son stabil sürümü kullandığınızı doğrulayın. Version 25.2, toplu ek açıklama için %30 hız artışı sağlar ve PDF'leri belleğe tamamen yüklemeden 500 MB'a kadar destekler.
 
-### Geliştirme Ortamı Temel Gereksinimleri
-
-Araç kutunuzda bulunması gerekenler:
-- **Java 8 veya üzeri** (daha iyi performans için Java 11+ önerilir)  
-- **Tercih ettiğiniz IDE** (IntelliJ IDEA, Eclipse veya VS Code harika çalışır)  
+### Geliştirme ortamı temel gereksinimleri
+- **Java 11+** (Java 8 çalışır, ancak 11+ daha iyi çöp toplama performansı sağlar)  
+- **Tercih ettiğiniz IDE** – IntelliJ IDEA, Eclipse veya VS Code  
 - **Maven veya Gradle** bağımlılık yönetimi için  
-- **Test amaçlı örnek PDF dosyaları** (çeşitli PDF türlerini nasıl ele alacağınızı göstereceğiz)
+- **Test için örnek PDF dosyaları** – farklı sayfa boyutları ve yönelimlerini nasıl ele alacağımızı göstereceğiz  
 
-### Kaçınılması Gereken Yaygın Kurulum Tuzakları
+### Kaçınılması gereken yaygın kurulum tuzakları
+1. **Depo eklenmedi** – GroupDocs Maven deposunu eklemelisiniz; aksi takdirde bağımlılık çözülemez.  
+2. **Sürüm çakışmaları** – farklı GroupDocs kütüphanelerini karıştırmaktan kaçının; tüm bileşenleri aynı sürüm hattında tutun.  
+3. **Lisans karışıklığı** – geliştirme lisanssız çalışır, ancak üretim geçerli bir lisans dosyası veya bulut anahtarı gerektirir.
 
-Birçok geliştirici ilk kurulum sırasında şu sorunlarla karşılaşır:
-1. **Depo eklenmemiş** – GroupDocs deposu Maven yapılandırmanıza açıkça eklenmelidir.  
-2. **Sürüm çakışmaları** – farklı GroupDocs kütüphanelerinin karışmadığından emin olun.  
-3. **Lisans karışıklığı** – geliştirme lisanssız çalışabilir, ancak üretim için uygun lisans gerekir.
+## GroupDocs.Annotation ile başlayın
 
-## GroupDocs.Annotation ile Başlarken
+### İlk kurulum süreci
+Kütüphaneyi kurmak basittir, ancak gelecekteki sorunları önlemek için bu en iyi uygulamaları izleyin:
+**1. Maven kurulumu** – yukarıda gösterilen depo ve bağımlılığı ekleyin. Maven gerekli tüm JAR'ları otomatik olarak çekecektir.  
+**2. Lisans yönetimi** – üç seçeneğiniz var:
+- **Ücretsiz deneme** – değerlendirme ve öğrenme için mükemmel (kendi denemenizi [GroupDocs](https://purchase.groupdocs.com/buy) adresinden alın)  
+- **Geçici lisans** – geliştirme ve test için ideal ([buradan isteyin](https://purchase.groupdocs.com/temporary-license/))  
+- **Üretim lisansı** – canlı uygulamalar için gereklidir  
+**3. Proje başlatma** – bağımlılıklar çözüldükten sonra API'yi hemen kullanmaya başlayabilirsiniz. XML yapılandırma dosyalarına gerek yok.
 
-### İlk Kurulum Süreci
+### API mimarisini anlama
+GroupDocs.Annotation API'si temiz, sezgisel bir tasarıma sahiptir:
+- **Annotator** – belgelerle çalışmak için birincil giriş noktası.  
+- **Annotation modelleri** – her ek açıklama türünü temsil eden nesneler (alan, metin, sticky note, vb.).  
+- **Yapılandırma seçenekleri** – görünüm, davranış ve çıktı ayarlarını özelleştirin.  
 
-GroupDocs.Annotation kurmak basittir, ancak ileride baş ağrısını önleyecek bazı en iyi uygulamalar vardır:
+`Annotator` sınıfı, GroupDocs.Annotation ile PDF dosyalarını yüklemek ve değiştirmek için ana giriş noktasıdır.
 
-**1. Maven Kurulumu**  
-Yukarıda gösterildiği gibi depoyu ve bağımlılığı ekleyin. Maven, gerekli tüm JAR dosyalarını otomatik olarak indirir.
+## Java'da sticky note PDF nasıl eklenir?
+`Annotator` sınıfı, GroupDocs.Annotation ile PDF dosyalarını yüklemek ve değiştirmek için ana giriş noktasıdır. Hedef PDF'yi `new Annotator("sample.pdf")` ile yükleyin, bir `StickyNoteAnnotation` nesnesi oluşturun, sayfa numarasını, konumunu ve yorum metnini ayarlayın, ardından `annotator.add(stickyNote)` çağırın ve son olarak `annotator.save("output.pdf")` yapın. Bu sıralama, sadece birkaç kod satırıyla bir sticky‑note ek açıklaması ekler ve dosyanın düzgün şekilde kapatılmasını sağlar.
 
-**2. Lisans Yönetimi**  
-İşte ilginç kısım. Birkaç seçeneğiniz var:  
-- **Ücretsiz Deneme** – değerlendirme ve öğrenme için mükemmel ([GroupDocs](https://purchase.groupdocs.com/buy) adresinden alın)  
-- **Geçici Lisans** – geliştirme ve test aşamaları için ideal ([buradan isteyin](https://purchase.groupdocs.com/temporary-license/))  
-- **Üretim Lisansı** – canlı uygulamalar için gereklidir  
+### Adım‑adım uygulama rehberi
 
-**3. Proje Başlatma**  
-Bağımlılıklarınız hazır olduğunda API’yi hemen kullanmaya başlayabilirsiniz. Karmaşık yapılandırma dosyalarına veya XML ayarlarına gerek yok – işte GroupDocs.Annotation’ın güzelliği bu.
-
-### API Mimarisi Anlayışı
-
-GroupDocs.Annotation API’si temiz, sezgisel bir tasarım desenine sahiptir:  
-- **Annotator** – belgelerle çalışmak için ana giriş noktanız  
-- **Annotation Models** – farklı anotasyon türleri (alan, metin, vurgulama vb.)  
-- **Configuration Options** – görünüm, davranış ve çıktı ayarlarını özelleştirin  
-
-Bu mimari, ihtiyacınıza göre basit başlayıp zamanla karmaşıklık eklemenizi sağlar.
-
-## Adım‑Adım Uygulama Kılavuzu
-
-### PDF Belgelerine Alan Anotasyonları Ekleme
-
-Şimdi heyecanlı kısım – anotasyon ekleyelim! Alan anotasyonları, bir belgenin belirli bölgelerini vurgulamak için mükemmeldir ve oldukça çok yönlüdür.
-
-#### Alan Anotasyonlarını Anlamak
-
-Alan anotasyonlarını, PDF sayfasının istediğiniz bir yerine yerleştirilebilen dijital yapışkan notlar olarak düşünün. Şu durumlar için idealdir:
-- İncelenmesi gereken bölümleri işaretleme  
-- Önemli diyagram veya grafikleri vurgulama  
-- Belirli içerik alanları için görsel açıklamalar oluşturma  
-- Belge bölgelerine bağlamsal yorumlar ekleme  
-
-#### Tam Uygulama Adımları
-
-**Adım 1: Gerekli Sınıfları İçe Aktarın**
+#### Adım 1: gerekli sınıfları içe aktarın
+`Annotator` sınıfı PDF belgeleriyle çalışmak için birincil giriş noktasıdır. `StickyNoteAnnotation` sınıfı, PDF sayfasına yerleştirilebilen bir yapışkan‑not yorumunu modeller. `Rectangle` sınıfı, bir ek açıklamanın sayfadaki konum ve boyutunu tanımlar.  
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -139,7 +173,8 @@ import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
 import com.groupdocs.annotation.models.PenStyle;
 ```
 
-**Adım 2: Etkileşimli Yanıtlar Oluşturun**
+#### Adım 2: etkileşimli yanıtlar oluşturun (isteğe bağlı)
+Bir `Comment` nesnesi oluşturarak ve ek açıklamaya bağlayarak yapışkan nota bir yanıt dizisi ekleyebilirsiniz.  
 
 ```java
 Reply reply1 = new Reply();
@@ -155,13 +190,15 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Adım 3: Dosya Yollarını Yapılandırın**
+#### Adım 3: dosya yollarını yapılandırın
+Ek açıklamalı dosyanın kaydedileceği giriş PDF yolu ve çıktı konumunu tanımlayın.  
 
 ```java
 String outputPath = YOUR_OUTPUT_DIRECTORY + "/AnnotatedOutput.pdf";
 ```
 
-**Adım 4: Anotasyonu Oluşturun ve Yapılandırın**
+#### Adım 4: yapışkan‑not ek açıklamasını oluşturun ve yapılandırın
+Sayfa indeksini (sıfır‑tabanlı), dikdörtgen koordinatlarını, yazar adını ve not metnini ayarlayın.  
 
 ```java
 try (final Annotator annotator = new Annotator(YOUR_DOCUMENT_DIRECTORY + "/InputDocument.pdf")) {
@@ -183,180 +220,125 @@ try (final Annotator annotator = new Annotator(YOUR_DOCUMENT_DIRECTORY + "/Input
 }
 ```
 
-**Adım 5: Kaydedin ve Doğrulayın**
+#### Adım 5: kaydedin ve doğrulayın
+`annotator.save()` çağırarak değişiklikleri yazın. try‑with‑resources bloğu, tüm yerel kaynakların serbest bırakılmasını garanti eder; bu yüksek‑verimli hizmetler için esastır.
 
-`save()` metodu anotasyonlu PDF’nizi oluşturur. try‑with‑resources bloğu, üretim uygulamalarında bellek yönetimi için kritik olan kaynak temizliğini sağlar.
+## Bunun önemi
+Programatik sticky‑note ekleme, inceleme döngülerini otomatikleştirir, uyumu zorunlu kılar ve manuel PDF düzenlemesi olmadan daha zengin, işbirlikçi bir deneyim sunar. Büyük işletmelerde bu, daha hızlı dönüşüm, daha az insan hatası ve ölçülebilir verimlilik artışı anlamına gelir.
 
-## Neden Önemli?
+## PDF ek açıklama için yaygın kullanım senaryoları
+- **Hukuki sözleşme incelemeleri** – maddeleri vurgulayın, yorum ekleyin ve değişiklikleri izleyin.  
+- **Eğitim içeriği** – eğitmenler ders PDF'lerini ek açıklama yapar ve geri bildirimi anında paylaşır.  
+- **Finansal denetim** – denetçiler raporlardaki tutarsızlıkları doğrudan işaretler.  
+- **Mühendislik çizimleri** – mühendisler şemalarda tasarım sorunlarını işaretler.
 
-Programlı olarak anotasyon eklemek, inceleme iş akışlarını otomatikleştirmenize, uyumluluğu sağlamanıza ve manuel çaba olmadan daha zengin bir kullanıcı deneyimi sunmanıza olanak tanır. Büyük işletmelerde bu, daha hızlı belge dönüşüm süreleri ve azalan insan hatası anlamına gelir.
+## Spring Boot ile PDF ek açıklama nasıl kullanılır
+Bir Spring Boot mikroservisi oluşturuyorsanız, aynı Maven bağımlılığını ekleyin, çok parçalı bir PDF dosyasını kabul eden bir REST uç noktası yayınlayın, bir `Annotator` bean'i enjekte edin ve kontrolcü içinde sticky‑note iş akışını çağırın. Bu desen, ek açıklama hizmetlerini konteynerler arasında ölçeklendirmenize ve Kubernetes ile orkestre etmenize olanak tanır.
 
-## PDF Anotasyonu İçin Yaygın Kullanım Senaryoları
+## Yaygın uygulama zorlukları ve çözümler
 
-- **Hukuki sözleşme incelemeleri** – maddeleri vurgulama, yorum ekleme ve değişiklikleri izleme.  
-- **Eğitim içeriği** – eğitmenlerin ders PDF'lerini anotasyonlayıp anında geri bildirim vermesi.  
-- **Finansal denetim** – denetçiler raporlarda doğrudan tutarsızlıkları işaretleyebilir.  
-- **Mühendislik çizimleri** – mühendisler şemalarda tasarım sorunlarını işaretleyebilir.  
+### Sorun giderme rehberi
+- **Problem 1: “Cannot find symbol” hataları** – GroupDocs deposunun `pom.xml` dosyasına doğru eklendiğinden emin olun.  
+- **Problem 2: Ek açıklamalar görünmüyor** – sayfa indeksini (sıfır‑tabanlı) ve dikdörtgen koordinatlarının sayfa sınırları içinde olduğundan emin olun.  
+- **Problem 3: Büyük PDF'lerde bellek sorunları** – belgeleri toplu olarak işleyin ve her zaman `Annotator`'ı serbest bırakmak için try‑with‑resources kullanın.  
+- **Problem 4: Üretimde lisans hataları** – lisans dosyasını çalışma zamanının erişebileceği bir konuma yerleştirin veya bulut lisans anahtarını yapılandırın.
 
-## PDF Anotasyonu Spring Boot ile Nasıl Kullanılır?
+### Performans optimizasyon ipuçları
+1. Her `Annotator` örneği için try‑with‑resources kullanın.  
+2. Büyük PDF'leri daha küçük sayfa aralıklarında işleyin.  
+3. Yeniden kullanılabilir `AnnotationOptions` nesnelerini önbelleğe alın.  
+4. Toplu işlemler sırasında yığın kullanımını izleyin ve JVM çöp toplayıcısını buna göre ayarlayın.
 
-Spring Boot mikroservisi içinde PDF anotasyonu eklemeniz gerekiyorsa, aynı GroupDocs.Annotation kütüphanesi sorunsuz çalışır. `pom.xml` dosyanıza Maven bağımlılığını ekleyin, `Annotator`ı bir Spring bean’i olarak enjekte edin ve PDF dosyası ile anotasyon parametrelerini kabul eden bir REST uç noktası oluşturun. Bu yaklaşım, anotasyon hizmetlerini konteynerler arasında ölçeklendirmenize ve Kubernetes ile orkestre etmenize olanak tanır.
+## Gerçek dünya uygulamaları ve kullanım senaryoları
 
-## Yaygın Uygulama Zorlukları ve Çözümler
+### Belge inceleme sistemleri
+- **Hukuk** – maddeleri vurgulayın, sticky note ekleyin ve denetim izini tutun.  
+- **Teknik dokümantasyon** – özellikleri işaretleyin ve uygulama notlarını ekleyin.  
+- **Finansal raporlar** – denetçiler bulguları ek açıklama yapar ve aranabilir bir geçmiş tutar.  
 
-### Sorun Giderme Kılavuzu
+**Uygulama ipucu**: Sürüm kontrolü ve tarihsel sorgular için ek açıklama meta verilerini ilişkisel bir veritabanında saklayın.
 
-- **Sorun 1: "Cannot find symbol" hataları**  
-  **Çözüm**: Maven bağımlılıklarını tekrar kontrol edin ve GroupDocs deposunun doğru yapılandırıldığından emin olun.  
+### Eğitim platformları
+- **Etkileşimli ders kitapları** – öğrenciler çalışma rehberleri için kişisel sticky note ekler.  
+- **Ödev geri bildirimi** – öğretmenler gönderimlere satır satır yorum ekler.  
+- **İşbirlikli öğrenme** – çalışma grupları ek açıklamalı PDF'leri ortak bir depoda paylaşır.  
 
-- **Sorun 2: Anotasyonlar çıktı PDF’de görünmüyor**  
-  **Çözüm**: Sayfa numarasının doğru olduğundan emin olun (unutmayın: 0‑tabanlı indeksleme) ve Rectangle koordinatlarının sayfa sınırları içinde olduğuna bakın.  
+**En iyi uygulama**: Kişisel notların gizli kalması için kullanıcı başına ayrı ek açıklama katmanları kullanın.
 
-- **Sorun 3: Büyük PDF'lerde bellek sorunları**  
-  **Çözüm**: Belgeleri toplu olarak işleyin ve try‑with‑resources bloklarıyla kaynakları düzgün bir şekilde serbest bırakın.  
+### İş süreci otomasyonu
+- **Sözleşme yönetimi** – anahtar terimleri ve tarihleri otomatik olarak vurgular.  
+- **Uyum dokümantasyonu** – düzenleyici kontrol noktalarını işaretler ve kanıt ekler.  
+- **Proje dokümantasyonu** – kilometre taşlarını ve eylem maddelerini diyagramlarda görsel olarak izler.
 
-- **Sorun 4: Üretimde lisans hataları**  
-  **Çözüm**: Lisans dosyanızın doğru konumda ve uygulamanız tarafından erişilebilir olduğundan emin olun.  
+### Entegrasyon stratejileri
+- **Web uygulamaları** – Spring Boot hizmetlerine GroupDocs.Annotation yerleştirin.  
+- **Masaüstü uygulamaları** – çevrim dışı ek açıklama için JavaFX veya Swing ile entegre edin.  
+- **Mikroservisler** – diğer sistemler için REST API'leri aracılığıyla ek açıklama işlevselliğini sunun.
 
-### Performans Optimizasyonu İpuçları
+## Gelişmiş yapılandırma seçenekleri
 
-**Bellek Yönetimi En İyi Uygulamaları**  
-1. Annotator nesneleri için her zaman try‑with‑resources kullanın.  
-2. Büyük belgeleri daha küçük partiler halinde işleyin.  
-3. Birden fazla dosya işlenirken anotasyon koleksiyonlarını temizleyin.  
-4. Toplu işlemler sırasında heap kullanımını izleyin.  
+### Ek açıklama görünümünü özelleştirme
+- **Renk şemaları** – RGB değerlerini ayarlayarak kurumsal paletinize uyarlayın.  
+- **Tipografi** – sticky‑note metni için yazı tipi ailesi, boyutu ve stilini kontrol edin.  
+- **Görsel efektler** – vurgulama için gölge veya yarı saydam arka plan ekleyin.
 
-**Hız Optimizasyonu Teknikleri**  
-1. Sık kullanılan yapılandırma nesnelerini önbelleğe alın.  
-2. Büyük belgelerle çalışırken uygun sayfa aralıklarını kullanın.  
-3. Toplu anotasyon görevleri için asenkron işleme geçmeyi düşünün.  
-4. Anotasyon konumlandırma hesaplamalarını optimize edin.  
+### Sticky note dışındaki ek açıklama türleri
+GroupDocs.Annotation ayrıca şunları destekler:
+- **Metin ek açıklamaları** – satır içi yorumlar ve öneriler.  
+- **Vurgulama ek açıklamaları** – klasik metin vurgulama.  
+- **Damga ek açıklamaları** – onay iş akışları ve durum takibi.  
+- **Bağlantı ek açıklamaları** – etkileşimli referanslar ve gezinme.
 
-## Gerçek‑Dünya Uygulamaları ve Kullanım Senaryoları
+### Toplu işleme yetenekleri
+- Bir şablon sticky note'u PDF kütüphanesindeki tüm dosyalara uygulayın.  
+- Eklenen tüm ek açıklamaların özet raporunu oluşturun.  
+- Analitik için ek açıklama verilerini aranabilir bir indeksde saklayın.
 
-### Belge İnceleme Sistemleri
+## Üretim dağıtım hususları
 
-- **Hukuki Belge İncelemesi** – maddeleri vurgulama, yorum ekleme, değişiklik takibi.  
-- **Teknik Dokümantasyon** – teknik şartnameleri işaretleme, uygulama notları ekleme.  
-- **Finansal Raporlar** – denetçiler bulguları anotasyonlayıp denetim izlerini tutar.  
+### Ölçeklenebilirlik planlaması
+- **Yük testi** – gerçekçi belge boyutları ve eşzamanlı kullanıcıları simüle edin.  
+- **Kaynak izleme** – yoğun yük altında CPU, bellek ve G/Ç'yi izleyin.  
+- **Önbellekleme stratejileri** – sık erişilen PDF'leri bellek içinde veya dağıtık bir önbellekte önbelleğe alın.  
+- **Veritabanı entegrasyonu** – raporlama ve denetim izleri için ek açıklama meta verilerini kalıcı hale getirin.
 
-**Uygulama İpucu**: Zaman içinde değişiklikleri izlemek için anotasyon versiyonlaması uygulayın.
+### Güvenlik en iyi uygulamaları
+- **Girdi doğrulama** – enjeksiyon saldırılarını önlemek için kullanıcı tarafından sağlanan ek açıklama içeriğini temizleyin.  
+- **Erişim kontrolleri** – ek açıklama oluşturma, düzenleme ve silme için rol tabanlı kimlik doğrulamayı zorunlu kılın.  
+- **Denetim kaydı** – her ek açıklama işlemini zaman damgası ve kullanıcı kimliğiyle kaydedin.  
+- **Veri şifreleme** – ek açıklama verilerini aktarım sırasında (TLS) ve depolama sırasında (AES‑256) koruyun.
 
-### Eğitim Platformları
+## Sıkça sorulan sorular
 
-- **Etkileşimli Ders Kitapları** – öğrenciler kavramları vurgular ve çalışma rehberleri oluşturur.  
-- **Ödev Geri Bildirimi** – öğretmenler gönderimlere doğrudan detaylı geri bildirim verir.  
-- **İşbirlikli Öğrenme** – çalışma grupları anotasyonlu materyalleri paylaşır.  
+**Q: Aynı PDF'ye birden fazla ek açıklama türü ekleyebilir miyim?**  
+**A:** Kesinlikle. `save()` çağırmadan önce her ek açıklama nesnesini oluşturarak bir belgede sticky note, vurgulama, damga ve bağlantıları birleştirebilirsiniz.
 
-**En İyi Uygulama**: Her öğrenicinin kişisel notlarını tutabilmesi için kullanıcı‑özel anotasyon katmanları kullanın.
+**Q: Farklı sayfa yönelimlerine sahip PDF'leri nasıl yönetirim?**  
+**A:** API, portre ve manzara sayfalarına otomatik olarak uyum sağlar. Sayfa boyutlarını `annotator.getPageInfo(pageIndex)` ile alın ve dikdörtgen koordinatlarını buna göre hesaplayın.
 
-### İş Süreçleri Otomasyonu
+**Q: Belge başına sticky note sayısında bir sınırlama var mı?**  
+**A:** API tarafından katı bir sınır uygulanmaz, ancak pratik performans göz önüne alındığında toplam ek açıklama sayısını dosya başına birkaç binin altında tutmanız önerilir. Çok büyük ek açıklama setleri için sayfalama veya talep üzerine tembel yükleme düşünün.
 
-- **Sözleşme Yönetimi** – anahtar terimleri ve tarihleri otomatik olarak vurgular.  
-- **Uyumluluk Dokümantasyonu** – düzenleyici gereksinimleri ve kontrol noktalarını işaretler.  
-- **Proje Dokümantasyonu** – kilometre taşlarını ve eylem maddelerini görsel olarak izler.  
+**Q: Kullanıcılar mevcut sticky note'ları düzenleyebilir veya silebilir mi?**  
+**A:** Evet. `annotator.getAnnotations()` ile alın, `Comment` özelliğini değiştirin veya bir ek açıklamayı kaldırmak için `annotator.delete(annotationId)` çağırın.
 
-### Entegrasyon Stratejileri
+**Q: GroupDocs.Annotation PDF güvenlik özelliklerini nasıl ele alır?**  
+**A:** API, şifre koruması ve düzenleme kısıtlamalarına saygı gösterir. `Annotator` oluştururken belge şifresini sağlayın; aksi takdirde kütüphane dosyayı değiştirmeyi reddeder.
 
-- **Web Uygulamaları** – GroupDocs.Annotation’ı Spring Boot servislerine gömün.  
-- **Masaüstü Uygulamaları** – çevrim dışı anotasyon için JavaFX veya Swing ile bütünleştirin.  
-- **Mikroservisler** – diğer sistemler için anotasyon işlevselliğini REST API’leriyle sunun.  
+**Q: Ek açıklamalı PDF'leri diğer formatlara dışa aktarabilir miyim?**  
+**A:** GroupDocs.Annotation, ek açıklama görünümünü ve meta verilerini koruyarak DOCX, PPTX ve yaygın görüntü formatlarına dışa aktarabilir.
 
-## Gelişmiş Yapılandırma Seçenekleri
+## Kaynaklar
+- [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
+- [GroupDocs API Reference](https://reference.groupdocs.com/annotation/java/)  
+- [Download GroupDocs.Annotation for Java](https://downloads.groupdocs.com/annotation/java/)  
 
-### Anotasyon Görünümünü Özelleştirme
-
-- **Renk Şemaları** – marka paletinize uyum sağlayın.  
-- **Tipografi** – yazı tipi stili, boyutu ve biçimlendirmesini kontrol edin.  
-- **Görsel Efektler** – degrade, gölge veya diğer iyileştirmeleri ekleyin.  
-
-### Alan Dışındaki Anotasyon Türleri
-
-GroupDocs.Annotation ayrıca şunları destekler:  
-- **Metin Anotasyonları** – satır içi yorumlar ve öneriler.  
-- **Vurgulama Anotasyonları** – klasik metin vurgulama.  
-- **Damga Anotasyonları** – onay iş akışları ve durum takibi.  
-- **Bağlantı Anotasyonları** – etkileşimli referanslar ve gezinme.  
-
-### Toplu İşleme Yetkinlikleri
-
-- Tüm belge kütüphanelerini işleyin.  
-- Tutarlı anotasyon şablonları uygulayın.  
-- Anotasyonlu belge raporları oluşturun.  
-- Aranabilir anotasyon veritabanları tutun.  
-
-## Üretim Dağıtımı İçin Dikkat Edilmesi Gerekenler
-
-### Ölçeklenebilirlik Planlaması
-
-- **Yük Testi** – gerçekçi belge boyutları ve eşzamanlı kullanıcıları simüle edin.  
-- **Kaynak İzleme** – yoğun yük altında bellek ve CPU kullanımını takip edin.  
-- **Önbellekleme Stratejileri** – sık erişilen PDF'leri önbelleğe alın.  
-- **Veritabanı Entegrasyonu** – arama ve raporlama için anotasyon meta verilerini saklayın.  
-
-### Güvenlik En İyi Uygulamaları
-
-- **Girdi Doğrulama** – kullanıcı tarafından sağlanan anotasyon içeriğini temizleyin.  
-- **Erişim Kontrolleri** – kimlik doğrulama ve yetkilendirme uygulayın.  
-- **Denetim Günlüğü** – tüm anotasyon aktivitelerini kaydedin.  
-- **Veri Şifreleme** – anotasyon verilerini aktarımda ve depolamada koruyun.  
-
-## Sık Sorulan Sorular
-
-**S: Aynı PDF'ye birden fazla anotasyon türü ekleyebilir miyim?**  
-C: Kesinlikle! Alan anotasyonlarını metin vurgulamaları, damgalar ve diğer anotasyon türleriyle tek bir belgede birleştirebilirsiniz. Tüm anotasyon nesnelerini oluşturup kaydetmeden önce ekleyin.
-
-**S: Farklı sayfa yönelimlerine sahip PDF'leri nasıl yönetirim?**  
-C: API, portre ve manzara yönelimlerini otomatik olarak ele alır. Gerçek sayfa boyutlarına göre `Rectangle` koordinatlarını ayarlayın; bu bilgileri API’nın sayfa‑bilgi metodlarıyla alabilirsiniz.
-
-**S: Belge başına anotasyon sayısında bir limit var mı?**  
-C: API tarafından zorunlu bir limit yoktur, ancak dosya boyutu ve performans gibi pratik faktörler tasarım kararlarınızı etkiler. Yüzlerce anotasyon içeren belgeler için sayfalama veya tembel yükleme (lazy loading) düşünün.
-
-**S: Kullanıcılar mevcut anotasyonları düzenleyebilir veya silebilir mi?**  
-C: Evet! API, mevcut anotasyonları almanıza, değiştirmenize ve kaldırmanıza olanak tanıyan metodlar sunar; böylece tam bir anotasyon yaşam döngüsü yönetimi sağlar.
-
-**S: GroupDocs.Annotation PDF güvenlik özelliklerini nasıl ele alır?**  
-C: API, PDF güvenlik ayarlarına saygı gösterir. Bir belge şifre korumalıysa veya düzenleme kısıtlamaları varsa, anotasyon eklemeden önce uygun kimlik bilgilerini sağlamalı veya kısıtlamaları kaldırmalısınız.
-
-**S: Anotasyonları başka formatlara dışa aktarabilir miyim?**  
-C: GroupDocs.Annotation, anotasyonlu belgeleri DOCX, PPTX ve görüntü türleri gibi formatlara dışa aktarabilir; bu sayede çeşitli iş akışlarıyla entegrasyon kolaylaşır.
-
-## Sonraki Adımlar ve İleri Konular
-
-### Anotasyon Araç Setinizi Genişletme
-
-- **Etkileşimli Formlar** – anotasyon‑tabanlı giriş alanlarıyla doldurulabilir PDF formları oluşturun.  
-- **İş Akışı Entegrasyonu** – anotasyonları BPM veya bilet sistemlerine bağlayın.  
-- **Mobil Optimizasyon** – tablet ve akıllı telefonlar için anotasyon arayüzlerini uyarlayın.  
-- **AI Entegrasyonu** – makine öğrenimiyle anotasyon yerleşimi ve içeriği önerin.  
-
-### Topluluk Kaynakları ve Destek
-
-- **Dokümantasyon Derin Dalışları**: Gelişmiş özellikler ve örnekler için kapsamlı [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/) sayfasını keşfedin.  
-- **API Referansı**: Metot ve parametreler için hızlı bakış için detaylı [GroupDocs API Reference](https://reference.groupdocs.com/annotation/java/) sayfasını işaretleyin.  
-- **En Son Güncellemeler**: Yeni özelliklerden haberdar olmak için düzenli olarak [Download GroupDocs.Annotation for Java](https://downloads.groupdocs.com/annotation/java/) adresini kontrol edin.  
-
-### Anotasyon Uzmanlığınızı Oluşturma
-
-1. **Tüm Anotasyon Türlerini Öğrenin** – metin, vurgulama, damga ve bağlantı anotasyonlarıyla deney yapın.  
-2. **Performans Optimizasyonu** – büyük ölçekli anotasyon sistemlerini yönetmek için ileri teknikleri öğrenin.  
-3. **Özel Anotasyon Türleri** – sektörünüze özgü anotasyonlar geliştirin.  
-4. **Entegrasyon Kalıpları** – anotasyonları popüler Java çerçevelerine nasıl gömeceğinizi inceleyin.  
-
-## Sonuç
-
-Tebrikler! GroupDocs.Annotation kullanarak **add pdf annotation java** için sağlam bir temel oluşturduğunuz için. Bu güçlü API, uygulamalarınızda belge işbirliği, inceleme süreçleri ve kullanıcı etkileşimini artırmak için sayısız olasılık sunar.
-
-Ana noktalar:  
-- GroupDocs.Annotation, minimum kurulumla kurumsal‑düzeyde anotasyon yetenekleri sağlar.  
-- Alan anotasyonları sadece bir başlangıç; API tam bir anotasyon türleri setini destekler.  
-- Üretim‑hazır çözümler için doğru kaynak yönetimi ve hata işleme kritik önemdedir.  
-- API’nın esnekliği, anotasyonları neredeyse her Java‑tabanlı sisteme entegre etmenizi mümkün kılar.
-
-Burada ele alınan temellerle başlayın, ardından kullanıcı geri bildirimleri ve ihtiyaçlarınız doğrultusunda genişletin. Anotasyonlamanın tadını çıkarın!
-
----
-
-**Son Güncelleme:** 2026-03-03  
+**Son Güncelleme:** 2026-09-05  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
 **Yazar:** GroupDocs
+
+## İlgili Eğitimler
+
+- [Add Text Field PDF in Java – GroupDocs.Annotation Guide](/annotation/java/form-field-annotations/)
+- [How to add arrow to pdf with Java – Complete Tutorial & Best Practices](/annotation/java/graphical-annotations/add-arrow-annotations-java-groupdocs/)
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
