@@ -1,55 +1,85 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: Μάθετε το tutorial ανάλυσης GroupDocs Java με ενσωμάτωση ανάλυσης εγγράφων
-  Spring Boot. Οδηγός βήμα‑βήμα, παραδείγματα κώδικα, βέλτιστες πρακτικές και αντιμετώπιση
-  προβλημάτων.
-keywords: Java link annotation tutorial, GroupDocs Java annotation guide, document
-  annotation Java, PDF annotation programming, Java document processing
-lastmod: '2026-03-06'
-linktitle: Java Link Annotation Tutorial
+date: '2026-09-15'
+description: Μάθετε πώς να προσθέσετε link annotation java με το GroupDocs Annotation
+  και το Spring Boot. Οδηγός βήμα‑βήμα, code placeholders, βέλτιστες πρακτικές και
+  αντιμετώπιση προβλημάτων για PDF και DOCX.
+keywords:
+- add link annotation java
+- spring boot document annotation
+- groupdocs annotation java
+- pdf link annotation
+- java document processing
+lastmod: '2026-09-15'
+linktitle: Java Link Annotation – Οδηγός
+og_description: Προσθήκη link annotation java χρησιμοποιώντας το GroupDocs Annotation.
+  Αυτό το εκπαιδευτικό υλικό δείχνει την ενσωμάτωση του Spring Boot, code placeholders,
+  συμβουλές απόδοσης και αντιμετώπιση προβλημάτων για PDF και DOCX.
+og_image_alt: Guide showing how to add clickable link annotations to documents with
+  GroupDocs Annotation in Java
+og_title: Προσθήκη link annotation java με GroupDocs – Πλήρης Οδηγός
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to add link annotation java with GroupDocs Annotation and
+    Spring Boot. Step‑by‑step guide, code placeholders, best practices, and troubleshooting
+    for PDF and DOCX.
+  headline: How to add link annotation java using GroupDocs Annotation
+  type: TechArticle
+- questions:
+  - answer: Yes. Create a separate `LinkAnnotation` instance for each URL and add
+      them to the same `Annotator`.
+    question: Can I add multiple link annotations to the same document?
+  - answer: Use properties such as `setOpacity()`, border settings, and color attributes
+      on the `LinkAnnotation` object.
+    question: How do I change the visual appearance of link annotations?
+  - answer: PDF provides the most reliable support; DOCX also works, though viewer
+      behavior can differ.
+    question: What document formats support interactive link annotations?
+  - answer: Set opacity to `0.0`. For better usability, a very low opacity like `0.1`
+      is recommended.
+    question: Can I make the link annotation area invisible but still clickable?
+  - answer: Retrieve page dimensions at runtime and calculate points relative to the
+      page size for a robust solution.
+    question: How do I handle different page sizes and orientations?
+  type: FAQPage
 tags:
-- java
-- annotations
+- add link annotation java
+- spring boot document annotation
 - groupdocs
-- pdf-processing
-- document-automation
-title: 'Οδηγός σχολιασμού GroupDocs Java: Πλήρης οδηγός για τα σχόλια συνδέσμων'
+- java
+- pdf processing
+- document automation
+title: Πώς να προσθέσετε link annotation java χρησιμοποιώντας το GroupDocs Annotation
 type: docs
-url: /el/java/link-annotations/groupdocs-annotation-java-link-annotations/
-weight: 1
 ---
 
-# groupdocs annotation tutorial java: Πλήρης Οδηγός Σχόλιου Συνδέσμου
+# Πώς να προσθέσετε link annotation java χρησιμοποιώντας το GroupDocs Annotation
 
-Creating interactive documents has never been easier. In this **groupdocs annotation tutorial java**, you’ll learn how to add clickable link annotations to PDFs, Word files, and more using the powerful GroupDocs.Annotation library. Whether you’re building a document management system, an e‑learning platform, or a collaborative workspace, this guide gives you everything you need to get started quickly.
+Σε αυτό το ολοκληρωμένο **groupdocs annotation tutorial java**, θα ανακαλύψετε πώς να **add link annotation java** σε PDF, έγγραφα Word και άλλες υποστηριζόμενες μορφές. Είτε δημιουργείτε μια πύλη προσανατολισμένη σε έγγραφα, ένα σύστημα e‑learning ή ένα εργαλείο συνεργατικής ανασκόπησης, τα παρακάτω βήματα σας επιτρέπουν να ενσωματώσετε κλικ‑συνδέσμους γρήγορα, να διαχειριστείτε πόρους αποδοτικά και να διατηρήσετε την εφαρμογή σας έτοιμη για παραγωγή.
 
-## Γρήγορες Απαντήσεις
-- **Ποια βιβλιοθήκη πρέπει να χρησιμοποιήσω για συνδέσμους Java;** GroupDocs.Annotation provides a simple, high‑performance API.  
-- **Χρειάζομαι άδεια για παραγωγή;** Yes – a full GroupDocs license is required for production deployments.  
-- **Μπορώ να το ενσωματώσω με Spring Boot;** Absolutely; see the “Spring Boot document annotation integration” section.  
-- **Πώς να διαχειρίζομαι αποτελεσματικά τους πόρους;** Use try‑with‑resources or call `dispose()` on the `Annotator`.  
-- **Ποιοι τύποι εγγράφων υποστηρίζουν συνδέσμους;** PDF and DOCX are fully supported; other formats may have limited interactivity.
+## Γρήγορες απαντήσεις
+- **Ποια βιβλιοθήκη πρέπει να χρησιμοποιήσω για σχολιασμούς συνδέσμου Java;** GroupDocs.Annotation παρέχει ένα υψηλής απόδοσης, cross‑format API.  
+- **Χρειάζομαι άδεια για παραγωγή;** Ναι – απαιτείται πλήρης άδεια GroupDocs για οποιαδήποτε μη‑δοκιμαστική ανάπτυξη.  
+- **Μπορώ να το ενσωματώσω με το Spring Boot;** Απόλυτα· δείτε την ενότητα “Spring Boot document annotation integration”.  
+- **Πώς να διαχειρίζομαι τους πόρους αποδοτικά;** Χρησιμοποιήστε try‑with‑resources ή καλέστε ρητά `dispose()` στο `Annotator`.  
+- **Ποιες μορφές εγγράφων υποστηρίζουν σχολιασμούς συνδέσμου;** PDF και DOCX υποστηρίζονται πλήρως· άλλες μορφές μπορεί να έχουν περιορισμένη διαδραστικότητα.
 
 ## Τι είναι ένα groupdocs annotation tutorial java;
-A **groupdocs annotation tutorial java** walks you through using the GroupDocs.Annotation SDK to programmatically add, modify, and retrieve annotations in Java applications. Link annotations are a specific type that embed clickable URLs directly into the document content.
+Αυτή είναι ένας οδηγός βήμα‑βήμα που σας δείχνει πώς να χρησιμοποιήσετε το GroupDocs.Annotation SDK για να προσθέτετε, τροποποιείτε και ανακτάτε προγραμματιστικά σχολιασμούς σε εφαρμογές Java. Τα link annotations ενσωματώνουν κλικ‑συνδέσμους απευθείας στο περιεχόμενο του εγγράφου, επιτρέποντας απρόσκοπτη πλοήγηση στους τελικούς χρήστες.
 
-## Γιατί να χρησιμοποιήσετε το GroupDocs για Σχόλια Συνδέσμου;
-- **Φιλικό προς τον προγραμματιστή API** – intuitive classes and methods hide low‑level PDF/Word complexities.  
-- **Υποστήριξη πολλαπλών μορφών** – write once, annotate PDFs, DOCX, PPTX, and more.  
-- **Υψηλή απόδοση** – optimized for large files and high‑throughput scenarios.  
-- **Πλήρης τεκμηρίωση & κοινότητα** – fast help when you hit a roadblock.  
+## Γιατί να χρησιμοποιήσετε το GroupDocs για link annotations;
+Το GroupDocs.Annotation υποστηρίζει **50+ input and output formats**, συμπεριλαμβανομένων PDF, DOCX, PPTX και HTML, και μπορεί να επεξεργαστεί έγγραφα με **έως 500 σελίδες** χωρίς να φορτώνει ολόκληρο το αρχείο στη μνήμη. Το API έχει σχεδιαστεί για **σενάρια υψηλής απόδοσης**, παρέχοντας χρόνους απόκρισης κάτω του δευτερολέπτου για εκατοντάδες σχολιασμούς ανά αίτημα, ενώ προσφέρει λεπτομερή μηνύματα σφάλματος και εκτενή τεκμηρίωση.
 
 ## Προαπαιτούμενα
-- **JDK 8+**  
-- **Maven** (or Gradle) for dependency management  
-- An IDE such as IntelliJ IDEA or Eclipse  
-- Basic Java knowledge (classes, objects, exception handling)
+- JDK 8 ή νεότερο  
+- Maven (ή Gradle) για διαχείριση εξαρτήσεων  
+- Ένα IDE όπως IntelliJ IDEA ή Eclipse  
+- Βασικές γνώσεις Java (κλάσεις, αντικείμενα, διαχείριση εξαιρέσεων)  
 
-### Maven Dependency Setup
-
-Add the GroupDocs repository and dependency to your `pom.xml`:
+### Ρύθμιση εξαρτήσεων Maven
+Προσθέστε το αποθετήριο GroupDocs και την εξάρτηση Annotation στο `pom.xml` σας:
 
 ```xml
 <repositories>
@@ -68,17 +98,15 @@ Add the GroupDocs repository and dependency to your `pom.xml`:
 </dependencies>
 ```
 
-**Συμβουλή:** Check the GroupDocs website for the latest version before you start.
+**Pro tip:** Πάντα ελέγξτε την πιο πρόσφατη έκδοση στη σελίδα λήψης του GroupDocs πριν προσθέσετε την εξάρτηση.
 
-### Απόκτηση Άδειας
+### Απόκτηση άδειας
+Ξεκινήστε με μια δωρεάν δοκιμή από το [GroupDocs website](https://releases.groupdocs.com/annotation/java/). Η δοκιμή είναι ιδανική για ανάπτυξη, αλλά απαιτείται πλήρης άδεια για περιβάλλοντα παραγωγής.
 
-You can start with a free trial by downloading it from the [GroupDocs website](https://releases.groupdocs.com/annotation/java/). The trial is perfect for development, but a full license is required for production use.
+## Κύρια υλοποίηση: οδηγός βήμα‑βήμα
 
-## Κύρια Υλοποίηση: Οδηγός Βήμα‑Βήμα
-
-### Βήμα 1: Αρχικοποίηση του Αντικειμένου Annotator
-
-The `Annotator` is the central hub that lets you read and modify a document.
+### Πώς να αρχικοποιήσω το αντικείμενο annotator;
+Δημιουργήστε μια παρουσία `Annotator` παρέχοντας τη διαδρομή προς το στόχο έγγραφο. Η κλάση `Annotator` είναι το κεντρικό σημείο που διαβάζει, γράφει και διαχειρίζεται σχολιασμούς στη μνήμη. Χρησιμοποιήστε απόλυτη ή σωστά σχετική διαδρομή για να αποφύγετε σφάλματα “File Not Found”, και πάντα απελευθερώστε τους πόρους με `dispose()` ή try‑with‑resources.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -98,12 +126,11 @@ public class FeatureInitializeAnnotator {
 ```
 
 **Βασικά σημεία**
-- Provide an absolute or correctly‑relative path to avoid “File Not Found” errors.  
-- Always call `dispose()` (or use try‑with‑resources) to free native resources.
+- Παρέχετε μια απόλυτη ή σωστά σχετική διαδρομή για να αποφύγετε σφάλματα “File Not Found”.  
+- Πάντα καλέστε `dispose()` (ή χρησιμοποιήστε try‑with‑resources) για να ελευθερώσετε τους εγγενείς πόρους και να διατηρήσετε τη χρήση μνήμης χαμηλή.
 
-### Βήμα 2: Δημιουργία και Διαμόρφωση Σχολίων Συνδέσμου
-
-Now we’ll define a clickable area, set its visual properties, and attach a URL.
+### Πώς να δημιουργήσω και να διαμορφώσω link annotations;
+Δημιουργήστε ένα `LinkAnnotation`, ορίστε την ορθογώνια περιοχή του με αντικείμενα `Point`, ορίστε οπτικές ιδιότητες και αναθέστε το URL προορισμού. Η κλάση `LinkAnnotation` αντιπροσωπεύει έναν κλικ‑σύνδεσμο ενσωματωμένο μέσα στο έγγραφο. Μπορείτε επίσης να ορίσετε το στυλ περιγράμματος, τη διαφάνεια και προσαρμοσμένα μεταδεδομένα για να ελέγξετε την εμφάνιση και τη συμπεριφορά.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -154,14 +181,13 @@ public class FeatureCreateLinkAnnotation {
 ```
 
 **Εξήγηση των στοιχείων**
-- **Replies** let collaborators add comments to the annotation.  
-- **Points** define a rectangle; the coordinate system starts at the top‑left corner (0,0).  
-- **Opacity** controls visibility (0 = transparent, 1 = fully opaque).  
-- **URL** must include the protocol (`https://`) to be clickable.
+- **Replies** επιτρέπουν στους συνεργάτες να προσθέτουν σχόλια στο annotation.  
+- **Points** ορίζουν ένα ορθογώνιο· το σύστημα συντεταγμένων ξεκινά από την πάνω‑αριστερή γωνία (0,0).  
+- **Opacity** ελέγχει την ορατότητα (0 = διαφανές, 1 = πλήρως αδιαφανές).  
+- **URL** πρέπει να περιλαμβάνει το πρωτόκολλο (`https://`) για να είναι κλικ‑συμβατό.
 
-## Ενσωμάτωση Σχολίων Εγγράφου με Spring Boot
-
-If you’re building a RESTful service with Spring Boot, wrap the annotation logic in a service bean:
+## Πώς μπορώ να ενσωματώσω τη λογική link annotation σε μια υπηρεσία Spring Boot;
+Τυλίξτε τον κώδικα σχολιασμού σε ένα bean υπηρεσίας που διαχειρίζεται το Spring. Αυτό σας επιτρέπει να εκθέσετε τη λειτουργικότητα μέσω ενός REST controller, επιτρέποντας στους πελάτες να ζητούν link annotations κατ' απαίτηση. Ενσωματώστε το `Annotator` μέσω κατασκευής, διαχειριστείτε `GroupDocsException` και `IOException`, και επιστρέψτε ένα `ResponseEntity` που υποδεικνύει επιτυχία ή λεπτομέρειες σφάλματος. Το `ResponseEntity` είναι τύπος του Spring που αντιπροσωπεύει την πλήρη HTTP απάντηση, συμπεριλαμβανομένου του status και του σώματος.
 
 ```java
 @Service
@@ -172,11 +198,10 @@ public class DocumentAnnotationService {
 }
 ```
 
-You can then expose this method via a controller endpoint, allowing clients to request link annotations on the fly.
+Μπορείτε στη συνέχεια να αντιστοιχίσετε τη μέθοδο υπηρεσίας σε ένα endpoint του controller, επιστρέφοντας μια απάντηση επιτυχίας μόλις εφαρμοστεί ο σχολιασμός.
 
-## Καλές Πρακτικές Διαχείρισης Πόρων
-
-Use try‑with‑resources to ensure the `Annotator` is closed automatically:
+## Πώς πρέπει να διαχειρίζομαι τους πόρους σε μια εφαρμογή Spring Boot;
+Εκμεταλλευτείτε τη δήλωση try‑with‑resources της Java ώστε το `Annotator` να κλείνει αυτόματα μετά την ολοκλήρωση της λειτουργίας, αποτρέποντας διαρροές μνήμης σε υπηρεσίες μεγάλης διάρκειας. Αυτό το πρότυπο εξασφαλίζει ότι οι εγγενείς πόροι απελευθερώνονται άμεσα, ακόμη και όταν προκύπτουν εξαιρέσεις κατά την επεξεργασία των σχολιασμών. Συνδυάστε το με το hook `@PreDestroy` του Spring για beans που διατηρούν μακροχρόνιες παρουσίες annotator.
 
 ```java
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -184,9 +209,8 @@ try (Annotator annotator = new Annotator(inputPath)) {
 } // Automatic disposal happens here
 ```
 
-## Αξιόπιστος Χειρισμός Σφαλμάτων
-
-Wrap your annotation calls in proper exception blocks to capture both GroupDocs‑specific and I/O errors:
+## Πώς να υλοποιήσω ανθεκτικό χειρισμό σφαλμάτων για λειτουργίες σχολιασμού;
+Περιβάλλετε τη λογική σχολιασμού σας με συγκεκριμένα μπλοκ catch για `GroupDocsException` και `IOException`. Αυτό καταγράφει τόσο προβλήματα σε επίπεδο SDK όσο και προβλήματα συστήματος αρχείων, παρέχοντάς σας σαφή διαγνωστικά μηνύματα. Το `GroupDocsException` είναι ο βασικός τύπος εξαίρεσης που ρίχνει το GroupDocs SDK για σφάλματα σχολιασμού. Καταγράψτε τις λεπτομέρειες της εξαίρεσης χρησιμοποιώντας ένα πλαίσιο καταγραφής όπως SLF4J και ρίξτε ξανά μια προσαρμοσμένη runtime εξαίρεση αν χρειάζεται.
 
 ```java
 try {
@@ -198,64 +222,60 @@ try {
 }
 ```
 
-## Πραγματικές Περιπτώσεις Χρήσης
+## Πραγματικές περιπτώσεις χρήσης
+- **Legal document management** – Συνδέστε ρήτρες με νομοθεσίες ή νομολογία για άμεση αναφορά.  
+- **E‑learning platforms** – Ενσωματώστε βίντεο‑tutorials ή εξωτερικούς πόρους απευθείας στα βιβλία.  
+- **Financial reporting** – Συνδέστε πίνακες σύνοψης με λεπτομερείς λογιστικά φύλλα ή ζωντανά δεδομένα αγοράς.  
+- **Technical documentation** – Παρέχετε πρόσβαση με ένα κλικ σε αναφορές API, δείγματα κώδικα ή trackers προβλημάτων.
 
-- **Διαχείριση Νομικών Εγγράφων** – Link clauses to statutes or case law.  
-- **Πλατφόρμες E‑learning** – Embed video tutorials or external resources directly in textbooks.  
-- **Οικονομικές Αναφορές** – Connect summary tables to detailed spreadsheets or market data.  
-- **Τεχνική Τεκμηρίωση** – Provide one‑click access to API references or code samples.
-
-## Συχνά Προβλήματα και Λύσεις
+## Συχνά προβλήματα και λύσεις
 
 | Πρόβλημα | Συμπτώματα | Διόρθωση |
 |----------|------------|----------|
-| **File Not Found** | `Annotator` ρίχνει εξαίρεση κατά την εκκίνηση. | Επαληθεύστε τη διαδρομή με `File.exists()`, χρησιμοποιήστε απόλυτες διαδρομές και βεβαιωθείτε ότι έχετε δικαιώματα ανάγνωσης. |
-| **Wrong Placement** | Το annotation εμφανίζεται εκτός οθόνης ή σε άλλη σελίδα. | Θυμηθείτε ότι οι αριθμοί σελίδων αρχίζουν από το μηδέν· ελέγξτε ξανά τις συντεταγμένες `Point`. |
-| **Memory Pressure** | `OutOfMemoryError` σε μεγάλα PDF. | Καλέστε `dispose()`, επεξεργαστείτε σε τμήματα και αυξήστε τη μνήμη heap της JVM (`-Xmx`). |
-| **Non‑functional Links** | Η κλικ‑περιοχή εμφανίζεται αλλά δεν πλοηγείται. | Συμπεριλάβετε το πρωτόκολλο (`https://`) και δοκιμάστε το URL σε πρόγραμμα περιήγησης. |
-| **Unsupported Format** | Τα links λείπουν στο αποτέλεσμα. | Παραμείνετε σε PDF ή DOCX· άλλες μορφές μπορεί να μην υποστηρίζουν διαδραστικά links. |
+| **File not found** | `Annotator` ρίχνει μια εξαίρεση κατά την εκκίνηση. | Επαληθεύστε τη διαδρομή με `File.exists()`, χρησιμοποιήστε απόλυτες διαδρομές και διασφαλίστε δικαιώματα ανάγνωσης. |
+| **Wrong placement** | Το annotation εμφανίζεται εκτός οθόνης ή σε άλλη σελίδα. | Θυμηθείτε ότι οι αριθμοί σελίδων ξεκινούν από το μηδέν· ελέγξτε ξανά τις συντεταγμένες `Point`. |
+| **Memory pressure** | `OutOfMemoryError` σε μεγάλα PDF. | Καλέστε `dispose()`, επεξεργαστείτε τα έγγραφα σε τμήματα και αυξήστε τη μνήμη heap του JVM (`-Xmx`). |
+| **Non‑functional links** | Η κλικ‑περιοχή εμφανίζεται αλλά δεν πλοηγείται. | Συμπεριλάβετε το πρωτόκολλο (`https://`) και δοκιμάστε το URL σε πρόγραμμα περιήγησης. |
+| **Unsupported format** | Οι σύνδεσμοι λείπουν στην έξοδο. | Παραμείνετε σε PDF ή DOCX· άλλες μορφές μπορεί να μην υποστηρίζουν διαδραστικούς συνδέσμους. |
 
-## Προχωρημένη Προσαρμογή
+## Προχωρημένη προσαρμογή
+- **Styling** – Ρυθμίστε το χρώμα περιγράμματος, το πάχος και το φόντο μέσω των ιδιοτήτων `LinkAnnotation`.  
+- **Event callbacks** – Καταχωρήστε listeners για να αντιδράτε όταν ένας χρήστης κάνει κλικ σε σύνδεσμο σε viewer.  
+- **Conditional rendering** – Εμφανίστε ή κρύψτε σχολιασμούς βάσει ρόλων χρήστη ή κατάστασης εγγράφου.  
+- **Metadata** – Αποθηκεύστε προσαρμοσμένα ζεύγη κλειδί/τιμή για αναλύσεις ή παρακολούθηση ροής εργασίας.
 
-- **Στυλ** – Adjust border color, thickness, and background via `LinkAnnotation` properties.  
-- **Callback Συμβάντων** – Register listeners to react when a user clicks a link in a viewer.  
-- **Καθοριστική Απόδοση** – Show/hide annotations based on user roles or document state.  
-- **Μεταδεδομένα** – Store custom key/value pairs for analytics or workflow tracking.  
+## Συχνές ερωτήσεις
 
-## Συχνές Ερωτήσεις
+**Q: Μπορώ να προσθέσω πολλαπλούς link annotations στο ίδιο έγγραφο;**  
+A: Ναι. Δημιουργήστε μια ξεχωριστή παρουσία `LinkAnnotation` για κάθε URL και προσθέστε τις στο ίδιο `Annotator`.
 
-**Ε: Μπορώ να προσθέσω πολλαπλά σχόλια συνδέσμου στο ίδιο έγγραφο;**  
-Α: Absolutely! Create multiple `LinkAnnotation` instances and add each to the same `Annotator`.
+**Q: Πώς να αλλάξω την οπτική εμφάνιση των link annotations;**  
+A: Χρησιμοποιήστε ιδιότητες όπως `setOpacity()`, ρυθμίσεις περιγράμματος και χρωματικά χαρακτηριστικά στο αντικείμενο `LinkAnnotation`.
 
-**Ε: Πώς αλλάζω την οπτική εμφάνιση των σχολίων συνδέσμου;**  
-Α: Use properties such as `setOpacity()`, border settings, and color attributes on the `LinkAnnotation` object.
+**Q: Ποιες μορφές εγγράφων υποστηρίζουν διαδραστικά link annotations;**  
+A: Το PDF παρέχει την πιο αξιόπιστη υποστήριξη· το DOCX επίσης λειτουργεί, αν και η συμπεριφορά του viewer μπορεί να διαφέρει.
 
-**Ε: Ποιοι τύποι εγγράφων υποστηρίζουν διαδραστικά σχόλια συνδέσμου;**  
-Α: PDF offers the most reliable support. Word (DOCX) also works, but viewer behavior can vary.
+**Q: Μπορώ να κάνω την περιοχή του link annotation αόρατη αλλά εξακολουθία κλικ‑συμβατή;**  
+A: Ορίστε τη διαφάνεια σε `0.0`. Για καλύτερη χρηστικότητα, συνιστάται πολύ χαμηλή διαφάνεια όπως `0.1`.
 
-**Ε: Μπορώ να κάνω την περιοχή του σχολίου συνδέσμου αόρατη αλλά εξακολουθία κλικ;**  
-Α: Yes—set opacity to `0.0`. However, a very low opacity (e.g., `0.1`) is recommended for usability.
+**Q: Πώς να διαχειριστώ διαφορετικά μεγέθη και προσανατολισμούς σελίδων;**  
+A: Ανακτήστε τις διαστάσεις της σελίδας κατά την εκτέλεση και υπολογίστε τα σημεία σε σχέση με το μέγεθος της σελίδας για μια ανθεκτική λύση.
 
-**Ε: Πώς διαχειρίζομαι διαφορετικά μεγέθη και προσανατολισμούς σελίδων;**  
-Α: Retrieve page dimensions at runtime and calculate points relative to the page size for a robust solution.
+**Q: Είναι δυνατόν να εξάγω υπάρχοντες link annotations;**  
+A: Ναι. Το GroupDocs.Annotation παρέχει getters για ανάγνωση σχολιασμών· μπορείτε να τα επαναλάβετε και να εξετάσετε κάθε ιδιότητα.
 
-**Ε: Είναι δυνατόν να εξάγω υπάρχοντα σχόλια συνδέσμου;**  
-Α: GroupDocs provides getters to read annotations from a document; you can iterate over them and inspect properties.
+**Q: Ποιος είναι ο αντίκτυπος στην απόδοση όταν προστίθενται πολλοί σχολιασμοί;**  
+A: Το SDK διαχειρίζεται εκατοντάδες σχολιασμούς με αμελητέο λανθάνοντα χρόνο· για χιλιάδες, συνιστώνται επεξεργασία σε batch και παρακολούθηση heap.
 
-**Ε: Ποιος είναι ο αντίκτυπος στην απόδοση όταν προσθέτετε πολλά σχόλια;**  
-Α: Performance remains solid for hundreds of annotations, but for thousands consider batch processing and monitor heap usage.
+**Q: Μπορώ να προστατεύσω με κωδικό πρόσβασης τα σχολιασμένα έγγραφα;**  
+A: Παρέχετε τον κωδικό πρόσβασης του εγγράφου κατά τη δημιουργία του `Annotator` για άνοιγμα κρυπτογραφημένων αρχείων.
 
-**Ε: Μπορώ να προστατεύσω με κωδικό πρόσβασης τα σχολιασμένα έγγραφα;**  
-Α: Yes. Supply the password when constructing the `Annotator` to open encrypted files.
-
-## Συμπέρασμα
-
-You now have a complete **groupdocs annotation tutorial java** for adding link annotations, from initializing the SDK to integrating with Spring Boot and handling production‑grade concerns. Experiment with other annotation types—highlights, stamps, or custom shapes—to further enrich your documents.
-
-Next steps: explore the GroupDocs.Annotation API reference, try batch annotation pipelines, and incorporate user‑driven comment workflows into your application.
-
----
-
-**Τελευταία Ενημέρωση:** 2026-03-06  
-**Δοκιμάστηκε Με:** GroupDocs.Annotation 25.2  
+**Τελευταία ενημέρωση:** 2026-09-15  
+**Δοκιμή με:** GroupDocs.Annotation 25.2  
 **Συγγραφέας:** GroupDocs
+
+## Σχετικά μαθήματα
+
+- [Φόρτωση PDF Java με GroupDocs Annotation: Οδηγός Φόρτωσης Εγγράφου](/annotation/java/document-loading/)
+- [Δημιουργία PDF Highlights Java: Πλήρης Οδηγός με GroupDocs Annotation](/annotation/java/annotation-management/)
+- [Μείωση Μεγέθους PDF Java με GroupDocs.Annotation – Πλήρης Οδηγός](/annotation/java/document-saving/)

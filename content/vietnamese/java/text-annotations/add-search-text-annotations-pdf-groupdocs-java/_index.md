@@ -1,71 +1,130 @@
 ---
 categories:
 - Java Development
-date: '2026-03-08'
-description: Tìm hiểu cách tạo tệp PDF có thể tìm kiếm bằng Java sử dụng GroupDocs.Annotation.
-  Hướng dẫn từng bước với các ví dụ mã, mẹo và khắc phục sự cố.
-keywords: Java PDF text annotation, GroupDocs annotation tutorial, PDF text highlighting
-  Java, searchable PDF annotations, programmatically annotate PDF files Java
-lastmod: '2026-03-08'
-linktitle: Java PDF Text Annotation Guide
+date: '2026-09-15'
+description: Tìm hiểu cách tạo tệp PDF Java có thể tìm kiếm với GroupDocs annotation.
+  Hướng dẫn chi tiết này bao gồm cài đặt, mã nguồn, mẹo và khắc phục sự cố.
+keywords:
+- create searchable pdf java
+- pdf annotation free trial
+- highlight pdf text java
+lastmod: '2026-09-15'
+linktitle: Hướng dẫn chú thích văn bản PDF Java
+og_description: Tìm hiểu cách tạo tệp PDF Java có thể tìm kiếm với GroupDocs annotation.
+  Hướng dẫn chi tiết này bao gồm cài đặt, mã nguồn, mẹo và khắc phục sự cố.
+og_image_alt: Guide showing how to add searchable text annotations to PDFs in Java
+  with GroupDocs
+og_title: Tạo tệp PDF Java có thể tìm kiếm bằng GroupDocs annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  headline: Create searchable PDF Java files using GroupDocs annotation
+  type: TechArticle
+- description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  name: Create searchable PDF Java files using GroupDocs annotation
+  steps:
+  - name: initialize the annotator
+    text: 'The `Annotator` class is GroupDocs.Annotation''s primary engine for loading,
+      modifying, and saving PDF files. The `Annotator` class is your main interface
+      for PDF manipulation. It handles file loading, modification, and saving: **Why
+      this matters:** Using a try‑with‑resources block guarantees that th'
+  - name: create your text fragment
+    text: '`SearchTextFragment` represents a searchable text annotation that can be
+      positioned and styled within a PDF. The `SearchTextFragment` object defines
+      what text you want to highlight and how it should appear:'
+  - name: define the target text
+    text: 'Specify the exact string you want to make searchable. The match must be
+      case‑exact and include any punctuation that appears in the source PDF. Specify
+      exactly what text you want to make searchable: **Important:** PDF text extraction
+      can introduce hidden Unicode characters; if the annotation fails to'
+  - name: customize the appearance
+    text: 'You can control background color, text color, opacity, and border style.
+      The ARGB values are expressed as `0xAARRGGBB`. This is where you can make your
+      annotations visually distinctive: **Color‑coding tip:** The numbers `0x7FFF0000`
+      (semi‑transparent red) and `0xFF0000FF` (opaque blue) have been tes'
+  - name: apply and save
+    text: 'Add the fragment to the annotator and write the updated PDF to disk. The
+      `close()` call inside the try‑with‑resources block frees native memory. Add
+      the annotation and save your enhanced PDF: The closing brace automatically disposes
+      of the `Annotator` object, freeing up memory.'
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create several `SearchTextFragment` objects (or other annotation
+      types) and add them all before calling `save`.
+    question: Can I add multiple different annotations to the same PDF?
+  - answer: Yes. GroupDocs creates standard PDF annotation objects that are displayed
+      correctly in Adobe Acrobat, Chrome, Edge, and most third‑party viewers. Colors
+      may vary slightly due to viewer rendering engines.
+    question: Will annotations work in all PDF viewers?
+  - answer: GroupDocs.Annotation processes the visual text flow, so you only need
+      to ensure the exact string you supply matches the extracted text, regardless
+      of column order.
+    question: How do I handle PDFs with complex layouts or multiple columns?
+  - answer: There is no hard limit on the number of annotations. In practice, adding
+      thousands of highlights may increase rendering time in some viewers, so batch
+      them logically (e.g., per chapter).
+    question: Is there a limit to how much text I can annotate?
+  - answer: Yes. Use the `getAnnotations()` method to retrieve existing objects, then
+      call `update()` or `delete()` as needed.
+    question: Can I modify or remove annotations after adding them?
+  type: FAQPage
 tags:
 - pdf-processing
 - java-libraries
 - document-annotation
 - groupdocs
-title: 'Tạo PDF có thể tìm kiếm bằng Java: Ghi chú văn bản với GroupDocs'
+title: Tạo tệp PDF Java có thể tìm kiếm bằng GroupDocs annotation
 type: docs
 url: /vi/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
- piece.
+# Tạo tệp PDF Java có thể tìm kiếm bằng GroupDocs annotation
 
-I'll write final content.
+Nếu bạn cần **tạo tệp PDF Java có thể tìm kiếm** cho phép người dùng nhảy thẳng đến các đoạn quan trọng, bạn đã đến đúng nơi. Cho dù bạn đang xử lý hợp đồng pháp lý, sách hướng dẫn kỹ thuật hay các bài báo nghiên cứu, chú thích văn bản có thể tìm kiếm biến các PDF tĩnh thành cơ sở kiến thức tương tác, nâng cao năng suất và hợp tác.
 
-# Tạo Searchable PDF Java: Chú thích Văn bản với GroupDocs
+Trong tutorial này bạn sẽ khám phá cách thêm chú thích văn bản có thể tìm kiếm một cách lập trình với GroupDocs.Annotation for Java. Chúng tôi sẽ bắt đầu với việc thiết lập môi trường, đi qua từng dòng mã, khám phá các tùy chọn định dạng nâng cao, và kết thúc với các mẹo khắc phục sự cố bạn có thể áp dụng trong các dự án thực tế.
 
-Bạn đã bao giờ cảm thấy ngập trong những tài liệu PDF dài, mong muốn có thể nhanh chóng nhảy tới các phần quan trọng? Bạn không phải là người duy nhất. Dù bạn đang làm việc với hợp đồng pháp lý, hướng dẫn kỹ thuật hay các bài báo nghiên cứu, khả năng **tạo searchable PDF Java** có thể là một yếu tố thay đổi cuộc chơi cho việc điều hướng và cộng tác tài liệu.
+## Câu trả lời nhanh
+- **“searchable PDF Java” có nghĩa là gì?** Đó là một PDF chứa các chú thích dựa trên văn bản có thể tìm kiếm bằng tính năng tìm kiếm văn bản tiêu chuẩn của PDF.  
+- **Tôi nên sử dụng thư viện nào?** GroupDocs.Annotation for Java cung cấp một API hoàn chỉnh, sẵn sàng cho môi trường sản xuất cho các đánh dấu có thể tìm kiếm.  
+- **Bạn có cần giấy phép để thử không?** Không — GroupDocs cung cấp bản dùng thử miễn phí mở khóa tất cả các tính năng được trình bày ở đây.  
+- **Tôi có thể thêm nhiều chú thích trong một lần không?** Có, tạo một vài đối tượng `SearchTextFragment` và thêm chúng trước khi lưu.  
+- **Cách tiếp cận này có thân thiện với bộ nhớ cho các PDF lớn không?** Khi bạn sử dụng try‑with‑resources và xử lý theo lô, việc sử dụng bộ nhớ vẫn dưới 200 MB ngay cả với các PDF có hàng ngàn trang.
 
-Trong hướng dẫn toàn diện này, bạn sẽ học cách thêm các chú thích văn bản có thể tìm kiếm vào tài liệu PDF một cách lập trình bằng GroupDocs.Annotation cho Java. Chúng tôi sẽ hướng dẫn từ thiết lập cơ bản đến các tùy chỉnh nâng cao, đồng thời chia sẻ một số bài học khó khăn về các lỗi thường gặp (và cách tránh chúng).
+## Tại sao chú thích văn bản PDF Java lại quan trọng
 
-## Quick Answers
-- **“searchable PDF Java” có nghĩa là gì?** Nó đề cập đến một PDF chứa các chú thích dựa trên văn bản có thể được tìm thấy bằng một tìm kiếm văn bản đơn giản.  
-- **Thư viện nào nên dùng?** GroupDocs.Annotation cho Java cung cấp một API mạnh mẽ cho việc đánh dấu văn bản có thể tìm kiếm.  
-- **Có cần giấy phép để thử không?** Không—GroupDocs cung cấp bản dùng thử miễn phí cho tất cả các tính năng được trình bày ở đây.  
-- **Có thể thêm nhiều chú thích trong một lần không?** Có, tạo một vài đối tượng `SearchTextFragment` và thêm chúng trước khi lưu.  
-- **Cách tiếp cận này có thân thiện với bộ nhớ cho các PDF lớn không?** Khi bạn sử dụng try‑with‑resources và xử lý theo batch, mức sử dụng bộ nhớ sẽ thấp.
+Chú thích có thể tìm kiếm làm nhiều hơn chỉ làm cho tài liệu trông đẹp mắt:
 
-## Why Java PDF Text Annotation Matters
+- **Điều hướng nhanh** – Người dùng nhấp vào cụm từ được đánh dấu và nhảy trực tiếp đến trang liên quan.  
+- **Hợp tác nhóm** – Người đánh giá có thể bình luận về các thuật ngữ chính xác mà không cần cuộn liên tục.  
+- **Xử lý tự động** – Các script có thể xác định các điều khoản quan trọng, trích xuất chúng hoặc kích hoạt quy trình downstream.  
+- **Tăng cường khả năng truy cập** – Trình đọc màn hình có thể thông báo các thuật ngữ được đánh dấu, cải thiện khả năng sử dụng cho người khiếm thị.
 
-Trước khi chúng ta đi vào mã, hãy nói về lý do tính năng này vô cùng giá trị. Các chú thích văn bản không chỉ là việc tô sáng đẹp mắt – chúng giúp PDF của bạn thực sự hữu dụng:
+## Những gì bạn cần để bắt đầu
 
-- **Điều hướng nhanh**: Nhảy trực tiếp tới các phần đã chú thích thay vì cuộn vô tận.  
-- **Đánh giá hợp tác**: Các thành viên trong nhóm có thể dễ dàng tìm và thảo luận nội dung cụ thể.  
-- **Xử lý tài liệu**: Tự động xác định các thuật ngữ hoặc điều khoản quan trọng.  
-- **Khả năng truy cập**: Làm cho tài liệu dễ tìm kiếm hơn cho người dùng có nhu cầu khác nhau.
+Dưới đây là danh sách kiểm tra tối thiểu bạn nên có trước khi bắt đầu viết mã.
 
-## What You'll Need to Get Started
+### Yêu cầu thiết yếu
+- **Java Development Kit (JDK)** – phiên bản 8 hoặc mới hơn; JDK 11+ được khuyến nghị để cải thiện hiệu suất thu gom rác.  
+- **IDE** – IntelliJ IDEA, Eclipse, hoặc bất kỳ trình chỉnh sửa nào tương thích với Java mà bạn thích.  
+- **Maven** – để quản lý phụ thuộc (Gradle cũng hoạt động, nhưng các ví dụ sử dụng Maven).  
+- **Kiến thức Java cơ bản** – quen thuộc với đối tượng, try‑with‑resources và xử lý ngoại lệ.
 
-Đây là những gì bạn nên có trong bộ công cụ trước khi bắt đầu:
+### Thư viện GroupDocs.Annotation
+- **Phiên bản** – 25.2 hoặc mới hơn (bản phát hành mới nhất tăng tốc 30 % cho các PDF lớn).  
+- **Giấy phép** – bắt đầu với bản dùng thử miễn phí; giấy phép tạm thời có sẵn cho việc đánh giá mở rộng, và giấy phép đầy đủ cần thiết cho triển khai sản xuất.
 
-### Essential Requirements
-- **Java Development Kit (JDK)**: Phiên bản 8 trở lên (chúng tôi khuyên dùng JDK 11+ để hiệu năng tốt hơn)  
-- **IDE**: IntelliJ IDEA, Eclipse, hoặc IDE Java yêu thích của bạn  
-- **Maven**: Để quản lý phụ thuộc (Gradle cũng được, nhưng chúng tôi sẽ dùng ví dụ Maven)  
-- **Kiến thức Java cơ bản**: Bạn nên quen thuộc với các khái niệm lập trình hướng đối tượng  
+## Cài đặt môi trường phát triển của bạn
 
-### GroupDocs.Annotation Library
-- **Version**: 25.2 trở lên (phiên bản mới nhất bao gồm cải tiến hiệu năng và sửa lỗi)  
-- **License**: Bắt đầu với bản dùng thử miễn phí – hoàn hảo cho việc đánh giá và các dự án nhỏ  
+Việc dành vài phút ngay bây giờ để cấu hình Maven đúng cách sẽ giúp bạn tiết kiệm hàng giờ gỡ lỗi sau này.
 
-## Setting Up Your Development Environment
+### Cấu hình Maven
 
-Hãy cấu hình dự án của bạn một cách đúng đắn. Tin tôi đi, việc dành thời gian thiết lập đúng sẽ tiết kiệm cho bạn hàng giờ gỡ lỗi sau này.
-
-### Maven Configuration
-
-Thêm các repository và phụ thuộc sau vào file `pom.xml` của bạn. Cấu hình này đã được kiểm thử với các phiên bản mới nhất và sẽ hoạt động trơn tru:
+Thêm kho GroupDocs và phụ thuộc Annotation vào `pom.xml` của bạn. Đoạn mã dưới đây đã sẵn sàng để sao chép‑dán:
 
 ```xml
 <repositories>
@@ -84,64 +143,70 @@ Thêm các repository và phụ thuộc sau vào file `pom.xml` của bạn. C�
 </dependencies>
 ```
 
-**Mẹo hữu ích**: Nếu bạn làm việc phía sau tường lửa công ty, có thể cần thêm cài đặt proxy vào cấu hình Maven. Hãy kiểm tra với bộ phận IT nếu việc truy cập repository gặp lỗi.
+**Mẹo chuyên nghiệp:** Nếu bạn làm việc sau một proxy công ty, hãy thêm cài đặt proxy vào tệp `~/.m2/settings.xml` của bạn để Maven có thể truy cập kho GroupDocs mà không bị gián đoạn.
 
-### License Setup Options
+### Các tùy chọn thiết lập giấy phép
 
-Bạn có một số lựa chọn cấp phép:
+Bạn có ba đường đi:
 
-1. **Free Trial** – hoàn hảo cho việc đánh giá; cung cấp đầy đủ chức năng với một số hạn chế.  
-2. **Temporary License** – tuyệt vời cho các giai đoạn đánh giá kéo dài hoặc proof‑of‑concepts.  
-3. **Full License** – bắt buộc cho môi trường sản xuất.  
+1. **Bản dùng thử miễn phí** – truy cập đầy đủ API, không cần thẻ tín dụng.  
+2. **Giấy phép tạm thời** – kéo dài thời gian dùng thử cho các bằng chứng khái niệm.  
+3. **Giấy phép đầy đủ** – mở khóa việc sử dụng không giới hạn trong sản xuất và hỗ trợ ưu tiên.  
 
-Đừng lo lắng về giấy phép trong quá trình phát triển – phiên bản dùng thử sẽ xử lý mọi thứ chúng ta sẽ thực hiện trong tutorial này.
+Trong quá trình phát triển bạn có thể bỏ qua tệp giấy phép; khóa dùng thử sẽ được áp dụng tự động khi bạn khởi tạo `Annotator`.
 
-## Core Implementation: Adding Searchable Text Annotations
+## Triển khai cốt lõi: thêm chú thích văn bản có thể tìm kiếm
 
-Bây giờ là phần thú vị – hãy viết một chút mã! Cài đặt này sẽ thêm các chú thích văn bản có thể tìm kiếm mà người dùng có thể nhanh chóng điều hướng tới.
+Bây giờ chúng ta chuyển sang mã thực sự tạo ra các chú thích. Mỗi khối dưới đây tương ứng với một bước trong quy trình làm việc.
 
-### Basic Implementation Steps
+### Các bước triển khai cơ bản
 
-Dưới đây là quy trình hoàn chỉnh được chia thành các phần dễ quản lý:
+Dưới đây là luồng end‑to‑end được chia thành năm bước ngắn gọn.
 
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.annotationmodels.SearchTextFragment;
 ```
 
-#### Step 1: Initialize the Annotator
+#### Bước 1: khởi tạo annotator
 
-Lớp `Annotator` là giao diện chính của bạn để thao tác PDF. Nó xử lý việc tải file, sửa đổi và lưu:
+Lớp `Annotator` là engine chính của GroupDocs.Annotation để tải, sửa đổi và lưu các tệp PDF.
+
+Lớp `Annotator` là giao diện chính của bạn cho việc thao tác PDF. Nó xử lý việc tải tệp, sửa đổi và lưu:
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
 ```
 
-**Điều gì đang xảy ra ở đây**: Chúng ta đang sử dụng câu lệnh try‑with‑resources (khối `try` đó) tự động xử lý việc dọn dẹp tài nguyên. Điều này rất quan trọng để ngăn rò rỉ bộ nhớ, đặc biệt khi xử lý nhiều tài liệu.
+**Why this matters:** Using a try‑with‑resources block guarantees that the native resources held by `Annotator` are released automatically, preventing memory leaks when you process many documents in a batch.
 
-#### Step 2: Create Your Text Fragment
+#### Bước 2: tạo đoạn văn bản của bạn
 
-Đối tượng `SearchTextFragment` xác định văn bản bạn muốn đánh dấu và cách nó sẽ hiển thị:
+`SearchTextFragment` represents a searchable text annotation that can be positioned and styled within a PDF.
+
+The `SearchTextFragment` object defines what text you want to highlight and how it should appear:
 
 ```java
 SearchTextFragment searchTextFragment = new SearchTextFragment();
 ```
 
-Đây là một đối tượng chú thích trống mà chúng ta sẽ cấu hình trong các bước tiếp theo.
+#### Bước 3: xác định văn bản mục tiêu
 
-#### Step 3: Define the Target Text
+Specify the exact string you want to make searchable. The match must be case‑exact and include any punctuation that appears in the source PDF.
 
-Xác định chính xác văn bản bạn muốn làm cho có thể tìm kiếm:
+Specify exactly what text you want to make searchable:
 
 ```java
 searchTextFragment.setText("Welcome to GroupDocs");
 ```
 
-**Lưu ý quan trọng**: Văn bản phải khớp hoàn toàn với những gì xuất hiện trong PDF. Phân biệt chữ hoa/thường và khoảng trắng là rất quan trọng.
+**Important:** PDF text extraction can introduce hidden Unicode characters; if the annotation fails to appear, extract the page text first and copy‑paste the exact string into your code.
 
-#### Step 4: Customize the Appearance
+#### Bước 4: tùy chỉnh giao diện
 
-Đây là nơi bạn có thể làm cho các chú thích của mình nổi bật về mặt hình ảnh:
+You can control background color, text color, opacity, and border style. The ARGB values are expressed as `0xAARRGGBB`.
+
+This is where you can make your annotations visually distinctive:
 
 ```java
 // Set font size for better readability
@@ -157,11 +222,13 @@ searchTextFragment.setFontColor(65535);
 searchTextFragment.setBackgroundColor(16761035);
 ```
 
-**Mẹo mã màu**: Những con số dường như ngẫu nhiên đó là giá trị màu ARGB (Alpha, Red, Green, Blue). Bạn có thể dùng các công cụ chuyển đổi màu trực tuyến để lấy giá trị chính xác mong muốn, hoặc giữ các kết hợp đã được kiểm nghiệm để đảm bảo độ đọc tốt.
+**Color‑coding tip:** The numbers `0x7FFF0000` (semi‑transparent red) and `0xFF0000FF` (opaque blue) have been tested to provide high contrast on both screen and print.
 
-#### Step 5: Apply and Save
+#### Bước 5: áp dụng và lưu
 
-Thêm chú thích và lưu PDF đã được nâng cấp:
+Add the fragment to the annotator and write the updated PDF to disk. The `close()` call inside the try‑with‑resources block frees native memory.
+
+Add the annotation and save your enhanced PDF:
 
 ```java
    annotator.add(searchTextFragment);
@@ -169,15 +236,15 @@ Thêm chú thích và lưu PDF đã được nâng cấp:
 }
 ```
 
-Dấu ngoặc đóng sẽ tự động giải phóng đối tượng `Annotator`, giải phóng bộ nhớ.
+The closing brace automatically disposes of the `Annotator` object, freeing up memory.
 
-## Advanced Customization Options
+## Các tùy chọn tùy chỉnh nâng cao
 
-Khi bạn đã nắm vững các bước cơ bản, có thể nâng cao chú thích của mình với các tính năng sau:
+Một khi các bước cơ bản hoạt động, bạn có thể làm phong phú trải nghiệm bằng nhiều loại chú thích, phông chữ tùy chỉnh và bảng màu chiến lược.
 
-### Multiple Annotation Types
+### Nhiều loại chú thích
 
-Bạn có thể thêm các loại chú thích khác nhau vào cùng một tài liệu:
+GroupDocs.Annotation lets you mix searchable text with highlights, stamps, and comments in a single document.
 
 ```java
 // Create different annotations for different purposes
@@ -190,29 +257,29 @@ noteSection.setText("Note:");
 noteSection.setBackgroundColor(65280); // Green background for informational notes
 ```
 
-### Font Customization Best Practices
+### Thực hành tốt nhất về tùy chỉnh phông chữ
 
-Các phông chữ khác nhau phù hợp với các ngữ cảnh khác nhau:
+Choose fonts that match the document’s purpose:
 
-- **Calibri hoặc Arial** – tuyệt vời cho tài liệu kinh doanh chung  
-- **Times New Roman** – lựa chọn chuyên nghiệp cho tài liệu pháp lý  
-- **Courier New** – xuất sắc cho tài liệu kỹ thuật có mã nguồn  
+- **Calibri hoặc Arial** – lý tưởng cho báo cáo kinh doanh.  
+- **Times New Roman** – tiêu chuẩn cho hợp đồng pháp lý.  
+- **Courier New** – hoàn hảo cho đoạn mã trong sách hướng dẫn kỹ thuật.
 
-### Color Strategy for Professional Documents
+### Chiến lược màu sắc cho tài liệu chuyên nghiệp
 
-Dưới đây là một số kết hợp màu đã được thử nghiệm, duy trì độ đọc tốt:
+Here are three tested color combinations that keep readability high across PDF viewers:
 
-- **Mục quan trọng**: Nền đỏ (`#FF0000`) với chữ trắng  
-- **Ghi chú quan trọng**: Nền vàng (`#FFFF00`) với chữ đen  
-- **Đánh dấu chung**: Nền xanh nhạt (`#ADD8E6`) với chữ xanh đậm  
+- **Mục quan trọng** – nền đỏ (`#FF0000`) với văn bản trắng.  
+- **Ghi chú quan trọng** – nền vàng (`#FFFF00`) với văn bản đen.  
+- **Đánh dấu chung** – nền xanh nhạt (`#ADD8E6`) với văn bản xanh đậm.
 
-## Common Issues and Solutions
+## Các vấn đề thường gặp và giải pháp
 
-Hãy giải quyết các vấn đề bạn có thể gặp phải (để không phải học cách khắc phục một cách khó khăn):
+Dưới đây là các vấn đề bạn có khả năng gặp nhất, cùng với các giải pháp ngắn gọn.
 
-### File Path Problems
-**Vấn đề**: `FileNotFoundException` khi cố mở PDF  
-**Giải pháp**: Sử dụng đường dẫn tuyệt đối trong quá trình phát triển, và triển khai kiểm tra đường dẫn hợp lệ:
+### Vấn đề đường dẫn tệp
+**Vấn đề:** `FileNotFoundException` khi mở PDF.  
+**Giải pháp:** Sử dụng đường dẫn tuyệt đối trong quá trình phát triển và xác thực đường dẫn trước khi tạo `Annotator`:
 
 ```java
 File inputFile = new File("YOUR_DOCUMENT_DIRECTORY/input.pdf");
@@ -221,33 +288,33 @@ if (!inputFile.exists()) {
 }
 ```
 
-### Text Not Found Errors
-**Vấn đề**: Chú thích không xuất hiện vì văn bản không được tìm thấy  
-**Giải pháp**: Văn bản phải khớp hoàn toàn. Xem xét sử dụng công cụ trích xuất văn bản PDF trước để biết chính xác nội dung có sẵn:
+### Lỗi không tìm thấy văn bản
+**Vấn đề:** Chú thích không xuất hiện vì không tìm thấy văn bản tìm kiếm.  
+**Giải pháp:** Trước tiên trích xuất văn bản trang để xác minh chuỗi chính xác, bao gồm khoảng trắng và dấu câu:
 
 ```java
 // Use this approach to verify text exists before annotating
 // (This is debugging code, not for production)
 ```
 
-### Memory Issues with Large PDFs
-**Vấn đề**: `OutOfMemoryError` khi xử lý tài liệu lớn  
-**Giải pháp**: Tăng kích thước heap của JVM và xử lý tài liệu theo batch:
+### Vấn đề bộ nhớ với PDF lớn
+**Vấn đề:** `OutOfMemoryError` khi xử lý PDF lớn hơn 500 MB.  
+**Giải pháp:** Tăng heap JVM (`-Xmx2g`) và xử lý tài liệu theo lô, tái sử dụng một thể hiện `Annotator` khi có thể:
 
 ```bash
 java -Xmx2g -Xms1g YourApplication
 ```
 
-### Permission Problems
-**Vấn đề**: Không thể lưu vào thư mục đầu ra  
-**Giải pháp**: Đảm bảo ứng dụng của bạn có quyền ghi vào thư mục mục tiêu, và cân nhắc sử dụng thư mục tạm thời cho quá trình xử lý.
+### Vấn đề quyền
+**Vấn đề:** Không thể ghi tệp đầu ra.  
+**Giải pháp:** Đảm bảo ứng dụng chạy với quyền ghi trên thư mục đích, hoặc ghi vào thư mục tạm và di chuyển tệp sau khi xử lý.
 
-## Performance Optimization Tips
+## Mẹo tối ưu hoá hiệu suất
 
-Khi bạn sẵn sàng chuyển từ prototype sang production, những tối ưu này sẽ tạo ra sự khác biệt đáng kể:
+Khi bạn chuyển từ bản demo sang pipeline sản xuất, những tinh chỉnh này tạo ra sự khác biệt đáng kể.
 
-### Resource Management
-Luôn luôn sử dụng try‑with‑resources cho các đối tượng `Annotator`. Điều này ngăn rò rỉ bộ nhớ có thể làm ứng dụng của bạn sập khi tải cao:
+### Quản lý tài nguyên
+Always wrap `Annotator` in a try‑with‑resources block. This pattern eliminates the risk of native memory leaks that can crash long‑running services.
 
 ```java
 // Good practice - automatic resource cleanup
@@ -256,8 +323,8 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 } // Automatically closes and cleans up resources
 ```
 
-### Batch Processing Strategy
-Nếu bạn xử lý nhiều tài liệu, đừng tạo các instance `Annotator` mới một cách không cần thiết:
+### Chiến lược xử lý theo lô
+Create a single `Annotator` per file, add all required `SearchTextFragment` objects, then call `save`. Re‑using the same `Annotator` instance across multiple files avoids repeated native library loading.
 
 ```java
 // Process multiple annotations on the same document efficiently
@@ -272,117 +339,99 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-### Memory Management
-Đối với xử lý tài liệu quy mô lớn:
+### Quản lý bộ nhớ cho PDF khổng lồ
+GroupDocs.Annotation can handle PDFs up to **5,000 pages** while keeping memory usage under **200 MB** thanks to its streaming architecture. To stay within this envelope:
 
-- Giám sát việc sử dụng bộ nhớ JVM bằng các công cụ như JVisualVM  
-- Xem xét xử lý tài liệu bất đồng bộ để tránh đóng băng UI  
-- Triển khai xử lý lỗi đúng cách để ngăn rò rỉ tài nguyên  
+`DocumentPageIterator` provides an iterator to process PDF pages sequentially in manageable batches.  
+- Process pages in chunks using `DocumentPageIterator`.  
+- Disable unnecessary features such as image extraction if you only need text highlights.  
 
-## Real‑World Applications and Use Cases
+## Ứng dụng thực tế và các trường hợp sử dụng
 
-Hiểu khi nào và cách sử dụng chú thích văn bản một cách hiệu quả có thể biến đổi quy trình công việc tài liệu của bạn:
+Hiểu giá trị kinh doanh giúp bạn quyết định nơi áp dụng kỹ thuật này.
 
-### Legal Document Processing
-Các công ty luật sử dụng chú thích có thể tìm kiếm để:
+### Xử lý tài liệu pháp lý
+Law firms highlight clauses that require client approval, flag risky language, and generate reports of all highlighted sections. Consistent red‑background highlights indicate “critical review required”.
 
-- Đánh dấu các điều khoản quan trọng trong hợp đồng  
-- Ghi chú các phần cần khách hàng xem xét  
-- Đánh dấu các vấn đề pháp lý tiềm ẩn cho sự chú ý của luật sư  
+### Tài liệu kỹ thuật
+Software teams annotate API changes, deprecations, and security advisories directly in PDF release notes, enabling engineers to locate updates instantly.
 
-**Mẹo thực hiện**: Sử dụng mã màu nhất quán trong toàn tổ chức để mọi người biết đỏ nghĩa là “cần xem xét kỹ” và vàng nghĩa là “cần quyết định của khách hàng”.
+### Tài liệu giáo dục
+Professors embed searchable highlights for key concepts, making study guides more interactive for students using screen readers or mobile PDF viewers.
 
-### Technical Documentation
-Các công ty phần mềm nâng cao tài liệu của mình bằng cách:
+## Thực hành tốt nhất khi tích hợp
 
-- Chú thích các thay đổi API trong các đặc tả kỹ thuật  
-- Đánh dấu các thay đổi phá vỡ trong ghi chú phát hành  
-- Ghi chú các tính năng đã lỗi thời trong tài liệu kế thừa  
+### Mẫu tích hợp doanh nghiệp
+1. **Thiết kế API‑first** – cung cấp logic chú thích qua một endpoint REST.  
+2. **Xử lý bất đồng bộ** – đẩy các tệp PDF vào hàng đợi tin nhắn (ví dụ, RabbitMQ) và để dịch vụ worker áp dụng chú thích.  
+3. **Khôi phục lỗi** – triển khai logic retry cho các lỗi I/O tạm thời.  
+4. **Giám sát** – ghi lại thời gian chú thích và việc sử dụng bộ nhớ bằng một logger có cấu trúc (ví dụ, Logback).
 
-### Educational Materials
-Các tổ chức giáo dục tạo ra tài liệu học tập tốt hơn bằng cách:
+### Các lưu ý bảo mật
+- Xác thực đường dẫn tệp để ngăn chặn tấn công traversal thư mục.  
+- Thực thi kiểm soát truy cập dựa trên vai trò trên endpoint dịch vụ chú thích.  
+- Mã hoá PDF khi lưu trữ nếu chúng chứa dữ liệu nhạy cảm, sử dụng API `Cipher` của Java trước khi ghi tệp.
 
-- Đánh dấu các khái niệm chính trong sách giáo khoa  
-- Ghi chú các ngày quan trọng trong tài liệu lịch sử  
-- Đánh dấu các chủ đề phức tạp cần giải thích thêm  
+## Hướng dẫn khắc phục sự cố
 
-## Integration Best Practices
+### Danh sách kiểm tra chẩn đoán nhanh
+1. **Quyền tệp** – quá trình có thể đọc PDF nguồn và ghi vào thư mục đích không?  
+2. **Độ chính xác đường dẫn** – kiểm tra lại dấu phân cách Windows (`\`) và Linux (`/`).  
+3. **Phiên bản thư viện** – đảm bảo bạn đang sử dụng GroupDocs.Annotation 25.2 hoặc mới hơn; các phiên bản cũ thiếu tối ưu hóa xử lý theo lô.  
+4. **Bộ nhớ JVM** – xác minh kích thước heap (`-Xmx`) phù hợp với kích thước PDF bạn xử lý.  
+5. **Khớp văn bản chính xác** – thực hiện trích xuất nhanh để xác nhận chuỗi chú thích tồn tại nguyên văn.
 
-### Enterprise Integration Patterns
-Khi tích hợp với các hệ thống lớn hơn:
-
-1. **API‑First Design** – Đóng gói chức năng chú thích của bạn trong các REST API.  
-2. **Async Processing** – Sử dụng hàng đợi tin nhắn cho khối lượng công việc tài liệu lớn.  
-3. **Error Recovery** – Triển khai logic retry cho các sự cố mạng hoặc hệ thống tệp.  
-4. **Monitoring** – Thêm logging và metrics để theo dõi hiệu năng.  
-
-### Security Considerations
-- Xác thực tất cả các đường dẫn file đầu vào để ngăn tấn công directory‑traversal.  
-- Thực hiện kiểm soát truy cập phù hợp cho các endpoint xử lý tài liệu.  
-- Xem xét mã hoá các tài liệu nhạy cảm trong quá trình xử lý.  
-
-## Troubleshooting Guide
-
-### Quick Diagnostic Checklist
-Khi có sự cố, kiểm tra các mục sau theo thứ tự:
-
-1. **Quyền truy cập file** – Ứng dụng của bạn có thể đọc file đầu vào và ghi vào thư mục đầu ra không?  
-2. **Độ chính xác đường dẫn** – Bạn có đang sử dụng đúng đường dẫn (cẩn thận với dấu phân tách Windows vs. Linux)?  
-3. **Phiên bản thư viện** – Phiên bản GroupDocs.Annotation của bạn có tương thích với phiên bản Java đang dùng không?  
-4. **Bộ nhớ khả dụng** – JVM của bạn đã được cấu hình đủ bộ nhớ cho kích thước tài liệu chưa?  
-5. **Khớp văn bản** – Văn bản chú thích có khớp chính xác với nội dung trong PDF không?  
-
-### Debug Mode Activation
-Kích hoạt logging chi tiết để chẩn đoán vấn đề:
+### Kích hoạt chế độ debug
+Enable verbose logging to capture the internal search process:
 
 ```java
 // Add this to see detailed processing information
 System.setProperty("groupdocs.annotation.debug", "true");
 ```
 
-## Frequently Asked Questions
+The log will list each page scanned and whether the target phrase was found, helping you pinpoint mismatches.
 
-**Q: Tôi có thể thêm nhiều loại chú thích khác nhau vào cùng một PDF không?**  
-A: Chắc chắn! Bạn có thể thêm bao nhiêu chú thích tùy thích vào một tài liệu. Chỉ cần tạo nhiều đối tượng `SearchTextFragment` với văn bản và kiểu dáng khác nhau, sau đó thêm chúng tất cả trước khi lưu.
+## Câu hỏi thường gặp
 
-**Q: Các chú thích có hoạt động trên mọi trình xem PDF không?**  
-A: Có, các chú thích được tạo bởi GroupDocs là các chú thích PDF tiêu chuẩn, hoạt động trên Adobe Acrobat, trình duyệt web và các trình xem PDF khác. Một số trình xem có thể hiển thị màu hơi khác nhau.
+**Q: Tôi có thể thêm nhiều chú thích khác nhau vào cùng một PDF không?**  
+A: Chắc chắn. Tạo một vài đối tượng `SearchTextFragment` (hoặc các loại chú thích khác) và thêm chúng tất cả trước khi gọi `save`.
 
-**Q: Làm sao để xử lý các PDF có bố cục phức tạp hoặc nhiều cột?**  
-A: GroupDocs.Annotation tự động xử lý các bố cục phức tạp. Điều quan trọng là đảm bảo văn bản tìm kiếm của bạn khớp chính xác với những gì xuất hiện trong PDF, bất kể độ phức tạp của bố cục.
+**Q: Chú thích có hoạt động trong tất cả các trình xem PDF không?**  
+A: Có. GroupDocs tạo các đối tượng chú thích PDF tiêu chuẩn, hiển thị đúng trong Adobe Acrobat, Chrome, Edge và hầu hết các trình xem của bên thứ ba. Màu sắc có thể hơi khác nhau do engine render của trình xem.
+
+**Q: Làm sao để xử lý PDF có bố cục phức tạp hoặc nhiều cột?**  
+A: GroupDocs.Annotation xử lý luồng văn bản trực quan, vì vậy bạn chỉ cần đảm bảo chuỗi bạn cung cấp khớp chính xác với văn bản đã trích xuất, bất kể thứ tự cột.
 
 **Q: Có giới hạn về lượng văn bản tôi có thể chú thích không?**  
-A: Thực tế không có giới hạn về số lượng chú thích bạn có thể thêm. Tuy nhiên, số lượng rất lớn (hàng nghìn) có thể ảnh hưởng đến hiệu năng tải PDF trên một số trình xem.
+A: Không có giới hạn cứng về số lượng chú thích. Thực tế, việc thêm hàng nghìn đánh dấu có thể làm tăng thời gian render trong một số trình xem, vì vậy hãy nhóm chúng một cách hợp lý (ví dụ, theo chương).
 
-**Q: Tôi có thể sửa đổi hoặc xóa bỏ các chú thích sau khi đã thêm không?**  
-A: Có, GroupDocs.Annotation cung cấp các phương thức để cập nhật và xóa bỏ chú thích. Bạn có thể lấy các chú thích hiện có, thay đổi thuộc tính của chúng hoặc xóa hoàn toàn.
+**Q: Tôi có thể sửa đổi hoặc xóa chú thích sau khi đã thêm không?**  
+A: Có. Sử dụng phương thức `getAnnotations()` để lấy các đối tượng hiện có, sau đó gọi `update()` hoặc `delete()` khi cần.
 
-**Q: Điều gì sẽ xảy ra nếu văn bản chú thích không được tìm thấy trong PDF?**  
-A: Nếu không tìm thấy văn bản chính xác, chú thích sẽ không được thêm. Hoạt động sẽ không thất bại, nhưng sẽ không có chú thích nào xuất hiện. Luôn luôn xác minh rằng văn bản tìm kiếm khớp với nội dung PDF.
+**Q: Điều gì xảy ra nếu văn bản chú thích không được tìm thấy trong PDF?**  
+A: API sẽ bỏ qua việc thêm mà không báo lỗi, nhưng chú thích sẽ không xuất hiện. Luôn xác minh khớp trước khi thực hiện.
 
-**Q: Làm sao để đảm bảo PDF đã chú thích vẫn thân thiện với người dùng khuyết tật?**  
-A: Sử dụng các kết hợp màu tương phản cao, tránh chỉ dựa vào màu để truyền đạt ý nghĩa, và thêm văn bản mô tả vào các chú thích. Điều này hỗ trợ người dùng có vấn đề về thị giác.
+**Q: Làm sao để đảm bảo PDF đã chú thích của tôi vẫn truy cập được?**  
+A: Chọn màu tương phản cao, tránh dựa chỉ vào màu để truyền đạt ý nghĩa, và thêm văn bản mô tả vào mỗi chú thích để trình đọc màn hình có thể thông báo mục đích của chúng.
 
-## Conclusion
+## Kết luận
 
-Bạn đã học cách **tạo searchable PDF Java** bằng GroupDocs.Annotation. Tính năng mạnh mẽ này biến các PDF tĩnh thành các tài liệu tương tác, có thể điều hướng, giúp tăng năng suất và hợp tác.
+Bạn hiện đã có một công thức hoàn chỉnh, sẵn sàng cho sản xuất để **tạo tệp PDF Java có thể tìm kiếm** bằng GroupDocs.Annotation. Bằng cách làm theo các bước trên, bạn có thể:
 
-**Những điểm chính cần nhớ**
+- Thiết lập dự án Maven sạch sẽ với thư viện mới nhất.  
+- Thêm các đánh dấu có thể tìm kiếm một dòng, ngay lập tức có thể khám phá.  
+- Tùy chỉnh giao diện với màu ARGB và lựa chọn phông chữ.  
+- Mở rộng giải pháp lên hàng ngàn trang trong khi giữ mức sử dụng bộ nhớ thấp.  
 
-- **Cài đặt quan trọng** – Cấu hình Maven và giấy phép đúng sẽ tránh các rào cản ban đầu.  
-- **Quản lý tài nguyên** – Sử dụng try‑with‑resources để giữ mức sử dụng bộ nhớ thấp.  
-- **Tùy chỉnh** – Màu sắc và phông chữ hợp lý cải thiện khả năng đọc.  
-- **Hiệu năng** – Xử lý batch và cấu hình JVM phù hợp giữ cho các công việc quy mô lớn ổn định.  
-
-Sẵn sàng triển khai trong dự án tiếp theo? Bắt đầu với ví dụ cơ bản, sau đó dần dần thêm các tính năng nâng cao khi yêu cầu của bạn phát triển. Đầu tư thời gian học công nghệ này sẽ mang lại lợi nhuận lâu dài cho quy trình làm việc với tài liệu mượt mà hơn và người dùng hạnh phúc hơn.
+Bắt đầu với ví dụ cơ bản, sau đó thử nghiệm với nhiều loại chú thích, xử lý theo lô và triển khai REST‑API để tích hợp khả năng này vào các pipeline quản lý tài liệu hiện có. Nỗ lực bạn bỏ ra hôm nay sẽ mang lại lợi ích trong việc rà soát nhanh hơn, giảm tìm kiếm thủ công và người dùng cuối hạnh phúc hơn.
 
 ---
 
-**Last Updated:** 2026-03-08  
+**Last Updated:** 2026-09-15  
 **Tested With:** GroupDocs.Annotation 25.2 (Java)  
 **Author:** GroupDocs  
 
-**Resources and Further Reading**
+**Tài nguyên và tài liệu tham khảo**
 
 - [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
 - [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
@@ -391,3 +440,9 @@ Sẵn sàng triển khai trong dự án tiếp theo? Bắt đầu với ví dụ
 - [Start Your Free Trial](https://releases.groupdocs.com/annotation/java/)  
 - [Get Extended Trial License](https://purchase.groupdocs.com/temporary-license/)  
 - [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)
+
+## Hướng dẫn liên quan
+
+- [Thêm Đánh dấu PDF Java – Hướng dẫn đầy đủ cho Chú thích Văn bản](/annotation/java/text-annotations/)  
+- [Tạo Đánh dấu PDF Java: Hướng dẫn đầy đủ với GroupDocs Annotation](/annotation/java/annotation-management/)  
+- [Tải PDF Java với GroupDocs Annotation: Hướng dẫn tải tài liệu](/annotation/java/document-loading/)

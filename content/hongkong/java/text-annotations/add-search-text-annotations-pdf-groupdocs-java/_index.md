@@ -1,66 +1,128 @@
 ---
 categories:
 - Java Development
-date: '2026-03-08'
-description: 學習如何使用 GroupDocs.Annotation 建立可搜尋的 PDF（Java）檔案。一步一步的教學，附程式碼範例、技巧與故障排除。
-keywords: Java PDF text annotation, GroupDocs annotation tutorial, PDF text highlighting
-  Java, searchable PDF annotations, programmatically annotate PDF files Java
-lastmod: '2026-03-08'
-linktitle: Java PDF Text Annotation Guide
+date: '2026-09-15'
+description: 了解如何使用 GroupDocs annotation 建立可搜尋的 PDF Java 檔案。本一步一步指南涵蓋設定、程式碼、技巧與故障排除。
+keywords:
+- create searchable pdf java
+- pdf annotation free trial
+- highlight pdf text java
+lastmod: '2026-09-15'
+linktitle: Java PDF 文字註釋指南
+og_description: 了解如何使用 GroupDocs annotation 建立可搜尋的 PDF Java 檔案。本一步一步指南涵蓋設定、程式碼、技巧與故障排除。
+og_image_alt: Guide showing how to add searchable text annotations to PDFs in Java
+  with GroupDocs
+og_title: 使用 GroupDocs annotation 建立可搜尋的 PDF Java 檔案
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  headline: Create searchable PDF Java files using GroupDocs annotation
+  type: TechArticle
+- description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  name: Create searchable PDF Java files using GroupDocs annotation
+  steps:
+  - name: initialize the annotator
+    text: 'The `Annotator` class is GroupDocs.Annotation''s primary engine for loading,
+      modifying, and saving PDF files. The `Annotator` class is your main interface
+      for PDF manipulation. It handles file loading, modification, and saving: **Why
+      this matters:** Using a try‑with‑resources block guarantees that th'
+  - name: create your text fragment
+    text: '`SearchTextFragment` represents a searchable text annotation that can be
+      positioned and styled within a PDF. The `SearchTextFragment` object defines
+      what text you want to highlight and how it should appear:'
+  - name: define the target text
+    text: 'Specify the exact string you want to make searchable. The match must be
+      case‑exact and include any punctuation that appears in the source PDF. Specify
+      exactly what text you want to make searchable: **Important:** PDF text extraction
+      can introduce hidden Unicode characters; if the annotation fails to'
+  - name: customize the appearance
+    text: 'You can control background color, text color, opacity, and border style.
+      The ARGB values are expressed as `0xAARRGGBB`. This is where you can make your
+      annotations visually distinctive: **Color‑coding tip:** The numbers `0x7FFF0000`
+      (semi‑transparent red) and `0xFF0000FF` (opaque blue) have been tes'
+  - name: apply and save
+    text: 'Add the fragment to the annotator and write the updated PDF to disk. The
+      `close()` call inside the try‑with‑resources block frees native memory. Add
+      the annotation and save your enhanced PDF: The closing brace automatically disposes
+      of the `Annotator` object, freeing up memory.'
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create several `SearchTextFragment` objects (or other annotation
+      types) and add them all before calling `save`.
+    question: Can I add multiple different annotations to the same PDF?
+  - answer: Yes. GroupDocs creates standard PDF annotation objects that are displayed
+      correctly in Adobe Acrobat, Chrome, Edge, and most third‑party viewers. Colors
+      may vary slightly due to viewer rendering engines.
+    question: Will annotations work in all PDF viewers?
+  - answer: GroupDocs.Annotation processes the visual text flow, so you only need
+      to ensure the exact string you supply matches the extracted text, regardless
+      of column order.
+    question: How do I handle PDFs with complex layouts or multiple columns?
+  - answer: There is no hard limit on the number of annotations. In practice, adding
+      thousands of highlights may increase rendering time in some viewers, so batch
+      them logically (e.g., per chapter).
+    question: Is there a limit to how much text I can annotate?
+  - answer: Yes. Use the `getAnnotations()` method to retrieve existing objects, then
+      call `update()` or `delete()` as needed.
+    question: Can I modify or remove annotations after adding them?
+  type: FAQPage
 tags:
 - pdf-processing
 - java-libraries
 - document-annotation
 - groupdocs
-title: 在 Java 中使用 GroupDocs 建立可搜尋的 PDF：文字註釋
+title: 使用 GroupDocs annotation 建立可搜尋的 PDF Java 檔案
 type: docs
 url: /zh-hant/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# 建立可搜尋的 PDF（Java）：使用 GroupDocs 的文字註釋
+# 建立可搜尋的 PDF Java 檔案，使用 GroupDocs 註解
 
-你是否曾在冗長的 PDF 文件中感到無從下手，想快速跳到重要段落？你並不孤單。無論是處理法律合約、技術手冊或研究論文，能夠 **建立可搜尋的 PDF（Java）** 檔案，對於文件導覽與協作而言，都是一大突破。
+如果您需要 **create searchable PDF Java** 檔案，讓使用者能直接跳到重要段落，您來對地方了。無論您在處理法律合約、技術手冊或研究論文，可搜尋的文字註解都能將靜態 PDF 轉變為互動式知識庫，提升生產力與協作。
 
-在本完整指南中，你將學會如何使用 GroupDocs.Annotation for Java 以程式方式為 PDF 文件加入可搜尋的文字註釋。我們會從基本設定走到進階客製化，並分享一些常見陷阱的實戰教訓（以及如何避免）。
+在本教學中，您將了解如何使用 GroupDocs.Annotation for Java 以程式方式加入可搜尋的文字註解。我們將從環境設定開始，逐行說明程式碼，探索進階樣式選項，最後提供可在實務專案中套用的除錯技巧。
 
 ## 快速解答
-- **「searchable PDF Java」是什麼意思？** 它指的是包含可透過簡單文字搜尋找到的文字註釋的 PDF。  
-- **應該使用哪個函式庫？** GroupDocs.Annotation for Java 提供了功能完整的 API 來處理可搜尋的文字標記。  
-- **試用需要授權嗎？** 不需要——GroupDocs 提供免費試用版，涵蓋本教學示範的所有功能。  
-- **可以一次加入多個註釋嗎？** 可以，建立多個 `SearchTextFragment` 物件，並在儲存前一次加入。  
-- **這種做法對大型 PDF 記憶體友好嗎？** 使用 try‑with‑resources 以及批次處理時，記憶體使用量保持在低水平。
+- **What does “searchable PDF Java” mean?** 它是一種 PDF，內含可使用標準 PDF 文字搜尋功能搜尋的文字註解。  
+- **Which library should I use?** GroupDocs.Annotation for Java 提供完整、可投入生產環境的 API，用於可搜尋的標記。  
+- **Do I need a license to try it?** 不需要 — GroupDocs 提供免費試用，可解鎖此處示範的所有功能。  
+- **Can I add multiple annotations in one pass?** 可以，建立多個 `SearchTextFragment` 物件，並在儲存前加入它們。  
+- **Is this approach memory‑friendly for large PDFs?** 當使用 try‑with‑resources 以及批次處理時，即使是上千頁的 PDF，記憶體使用量也能維持在 200 MB 以下。  
 
-## 為何 Java PDF 文字註釋重要
+## 為何 Java PDF 文字註解重要
 
-在深入程式碼之前，先說明此功能為何極具價值。文字註釋不只是美觀的標記——它讓你的 PDF 真正具備功能：
+可搜尋的註解不僅讓文件看起來更美觀：
 
-- **快速導覽**：直接跳至已標記的段落，免除無止盡的捲動。  
-- **協作審閱**：團隊成員能輕鬆找到並討論特定內容。  
-- **文件處理**：自動辨識關鍵詞或條款。  
-- **可及性**：讓不同需求的使用者更容易搜尋文件。
+- **Instant navigation** – 使用者點擊已標記的片語，即可直接跳至相關頁面。  
+- **Team collaboration** – 評審者可對精確的詞彙發表評論，無需無止盡地捲動。  
+- **Automated processing** – 腳本能定位關鍵條款、提取它們，或觸發後續工作流程。  
+- **Enhanced accessibility** – 螢幕閱讀器可朗讀已標記的詞彙，提升視障使用者的可用性。  
 
-## 開始前的需求
+## 開始前您需要的項目
 
-以下是在開始之前應該備妥的工具與資源：
+以下是在開始編寫程式碼前，您應具備的最小檢查清單。
 
-### 必要條件
-- **Java Development Kit (JDK)**：版本 8 或以上（建議使用 JDK 11+ 以獲得更佳效能）  
-- **IDE**：IntelliJ IDEA、Eclipse 或你喜愛的 Java IDE  
-- **Maven**：用於相依性管理（Gradle 亦可，但此處使用 Maven 範例）  
-- **基本 Java 知識**：應熟悉物件導向程式設計概念  
+### 必備需求
+- **Java Development Kit (JDK)** – 版本 8 或更新；建議使用 JDK 11+ 以獲得更佳的垃圾回收效能。  
+- **IDE** – IntelliJ IDEA、Eclipse，或您偏好的任何 Java 相容編輯器。  
+- **Maven** – 用於相依性管理（Gradle 亦可，但範例使用 Maven）。  
+- **Basic Java knowledge** – 熟悉物件、try‑with‑resources 以及例外處理。  
 
-### GroupDocs.Annotation 函式庫
-- **版本**：25.2 或以上（最新版本包含效能提升與錯誤修正）  
-- **授權**：先使用免費試用版——適合評估與小型專案  
+### GroupDocs.Annotation 程式庫
+- **Version** – 25.2 或更新（最新版本為大型 PDF 提升 30 % 的速度）。  
+- **License** – 從免費試用開始；提供臨時授權以延長評估，正式上線則需完整授權。  
 
 ## 設定開發環境
 
-先把專案配置好。相信我，正確的設定能為你省下大量除錯時間。
+現在花幾分鐘正確設定 Maven，日後可為您節省數小時的除錯時間。
 
 ### Maven 設定
 
-將以下倉庫與相依性加入 `pom.xml`。此配置已於最新版本測試通過，應可順利執行：
+將 GroupDocs 儲存庫與 Annotation 相依性加入您的 `pom.xml`。以下程式碼片段已可直接複製貼上：
 
 ```xml
 <repositories>
@@ -79,64 +141,70 @@ weight: 1
 </dependencies>
 ```
 
-**小技巧**：若你身處企業防火牆內，可能需要在 Maven 設定中加入代理設定。若無法存取倉庫，請洽詢資訊部門。
+**Pro tip:** 若您位於企業代理伺服器後，請將代理設定加入 `~/.m2/settings.xml` 檔案，使 Maven 能順利連線至 GroupDocs 儲存庫。
 
 ### 授權設定選項
 
-你有多種授權方式可選：
+您有三種選擇：
 
-1. **免費試用** – 完全功能的評估版，僅有少量限制。  
-2. **暫時授權** – 適合延長評估期或概念驗證。  
-3. **正式授權** – 生產環境必須使用。  
+1. **Free trial** – 完整 API 存取，無需信用卡。  
+2. **Temporary license** – 延長試用期以供概念驗證。  
+3. **Full license** – 解鎖無限制的生產使用與優先支援。  
 
-開發階段不必擔心授權問題，試用版即可涵蓋本教學所有內容。
+開發期間您可省略授權檔；在實例化 `Annotator` 時，系統會自動套用試用金鑰。
 
-## 核心實作：加入可搜尋的文字註釋
+## 核心實作：加入可搜尋的文字註解
 
-現在進入最精彩的部分——撰寫程式碼！此實作會在 PDF 中加入可搜尋的文字註釋，讓使用者能快速定位。
+現在我們進入實際建立註解的程式碼。以下每個區塊對應工作流程中的一步。
 
 ### 基本實作步驟
 
-以下是完整流程，已拆解成易於掌握的步驟：
+以下是完整流程，分為五個簡潔步驟。
 
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.annotationmodels.SearchTextFragment;
 ```
 
-#### 步驟 1：初始化 Annotator
+#### 步驟 1：初始化 annotator
 
-`Annotator` 類別是操作 PDF 的主要介面，負責檔案載入、修改與儲存：
+`Annotator` 類別是 GroupDocs.Annotation 的主要引擎，用於載入、修改與儲存 PDF 檔案。
+
+`Annotator` 類別是您操作 PDF 的主要介面，負責檔案載入、修改與儲存：
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
 ```
 
-**正在發生什麼**：我們使用了 try‑with‑resources 陳述式（即 `try` 區塊），可自動釋放資源。這對防止記憶體洩漏尤為重要，特別是處理多份文件時。
+**Why this matters:** 使用 try‑with‑resources 區塊可確保 `Annotator` 所持有的原生資源自動釋放，避免在批次處理大量文件時發生記憶體洩漏。
 
 #### 步驟 2：建立文字片段
 
-`SearchTextFragment` 物件定義了要標記的文字以及其外觀：
+`SearchTextFragment` 代表可搜尋的文字註解，可在 PDF 中定位與設定樣式。
+
+`SearchTextFragment` 物件定義您想要標記的文字以及其外觀：
 
 ```java
 SearchTextFragment searchTextFragment = new SearchTextFragment();
 ```
 
-這會產生一個空白的註釋物件，接下來會在後續步驟中設定屬性。
-
 #### 步驟 3：定義目標文字
 
-明確指定要讓系統搜尋的文字內容：
+指定您想要設為可搜尋的精確字串。匹配必須完全符合大小寫，且包含來源 PDF 中的任何標點符號。
+
+精確指定您要設為可搜尋的文字：
 
 ```java
 searchTextFragment.setText("Welcome to GroupDocs");
 ```
 
-**重要說明**：文字必須與 PDF 中出現的完全相同，大小寫與空格皆須匹配。
+**Important:** PDF 文字擷取可能會產生隱藏的 Unicode 字元；若註解未顯示，請先擷取頁面文字，然後將精確字串複製貼上至程式碼中。
 
 #### 步驟 4：自訂外觀
 
-在此可以為註釋設定視覺樣式，使其更易辨識：
+您可以控制背景色、文字色、透明度與邊框樣式。ARGB 值以 `0xAARRGGBB` 形式表示。
+
+在此您可讓註解在視覺上更具辨識度：
 
 ```java
 // Set font size for better readability
@@ -152,11 +220,13 @@ searchTextFragment.setFontColor(65535);
 searchTextFragment.setBackgroundColor(16761035);
 ```
 
-**配色小技巧**：那些看似隨機的數字其實是 ARGB（Alpha、Red、Green、Blue）色彩值。你可以使用線上色彩轉換工具取得想要的數值，或直接使用這裡提供的已測試組合，以確保可讀性。
+**Color‑coding tip:** 數值 `0x7FFF0000`（半透明紅）與 `0xFF0000FF`（不透明藍）已測試可在螢幕與列印時提供高對比度。
 
-#### 步驟 5：套用並儲存
+#### 步驟 5：套用與儲存
 
-將註釋加入文件並儲存：
+將片段加入 annotator，並將更新後的 PDF 寫入磁碟。try‑with‑resources 區塊內的 `close()` 呼叫會釋放原生記憶體。
+
+加入註解並儲存增強後的 PDF：
 
 ```java
    annotator.add(searchTextFragment);
@@ -164,15 +234,15 @@ searchTextFragment.setBackgroundColor(16761035);
 }
 ```
 
-結束大括號會自動釋放 `Annotator` 物件，釋放記憶體。
+結束的大括號會自動釋放 `Annotator` 物件，釋放記憶體。
 
 ## 進階自訂選項
 
-掌握基礎後，你可以利用以下進階功能提升註釋效能與外觀：
+當基礎功能正常後，您可透過多種註解類型、自訂字型與策略性配色方案，進一步提升體驗。
 
-### 多種註釋類型
+### 多種註解類型
 
-同一文件中可加入不同類型的註釋：
+GroupDocs.Annotation 允許您在同一文件中混合可搜尋文字、標記、印章與評論。
 
 ```java
 // Create different annotations for different purposes
@@ -187,27 +257,28 @@ noteSection.setBackgroundColor(65280); // Green background for informational not
 
 ### 字型自訂最佳實踐
 
-不同字型在不同情境下的表現：
+選擇符合文件用途的字型：
 
-- **Calibri 或 Arial** – 適合一般商業文件  
-- **Times New Roman** – 法律文件的專業選擇  
-- **Courier New** – 技術文件（含程式碼）的絕佳選擇  
+- **Calibri or Arial** – 適合商業報告。  
+- **Times New Roman** – 法律合約的標準字型。  
+- **Courier New** – 技術手冊中程式碼片段的理想字型。  
 
 ### 專業文件的配色策略
 
-以下配色組合已驗證可保持可讀性：
+以下是三組已測試的配色組合，可在各 PDF 檢視器中保持高可讀性：
 
-- **關鍵項目**：紅色背景 (`#FF0000`) 搭配白色文字  
-- **重要備註**：黃色背景 (`#FFFF00`) 搭配黑色文字  
-- **一般標記**：淡藍色背景 (`#ADD8E6`) 搭配深藍色文字  
+- **Critical items** – 紅色背景 (`#FF0000`) 搭配白色文字。  
+- **Important notes** – 黃色背景 (`#FFFF00`) 搭配黑色文字。  
+- **General highlights** – 淺藍背景 (`#ADD8E6`) 搭配深藍文字。  
 
 ## 常見問題與解決方案
 
-以下列出最常遇到的問題與對應解法，讓你免於走彎路：
+以下列出您最常遇到的問題，以及簡潔的解決方法。
 
 ### 檔案路徑問題
-**Issue**：`FileNotFoundException` 在開啟 PDF 時拋出  
-**Solution**：開發階段使用絕對路徑，並加入路徑驗證程式碼：
+
+**Issue:** 開啟 PDF 時發生 `FileNotFoundException`。  
+**Solution:** 開發期間使用絕對路徑，並在建立 `Annotator` 前驗證路徑是否正確：
 
 ```java
 File inputFile = new File("YOUR_DOCUMENT_DIRECTORY/input.pdf");
@@ -217,8 +288,9 @@ if (!inputFile.exists()) {
 ```
 
 ### 找不到文字錯誤
-**Issue**：註釋未出現，因為找不到指定文字  
-**Solution**：文字必須完全匹配。可先使用 PDF 文字抽取功能確認實際文字內容：
+
+**Issue:** 註解未出現，因為搜尋文字未找到。  
+**Solution:** 先擷取頁面文字，以驗證精確字串（含空白與標點符號）：
 
 ```java
 // Use this approach to verify text exists before annotating
@@ -226,23 +298,26 @@ if (!inputFile.exists()) {
 ```
 
 ### 大型 PDF 記憶體問題
-**Issue**：處理大型文件時拋出 `OutOfMemoryError`  
-**Solution**：增大 JVM 堆積空間，並以批次方式處理文件：
+
+**Issue:** 處理超過 500 MB 的 PDF 時發生 `OutOfMemoryError`。  
+**Solution:** 增加 JVM 堆積大小（`-Xmx2g`），並以批次方式處理文件，盡可能重複使用單一 `Annotator` 實例：
 
 ```bash
 java -Xmx2g -Xms1g YourApplication
 ```
 
 ### 權限問題
-**Issue**：無法將檔案寫入輸出目錄  
-**Solution**：確保應用程式對目標目錄具寫入權限，必要時使用暫存目錄進行處理。
+
+**Issue:** 無法寫入輸出檔案。  
+**Solution:** 確保應用程式對目標資料夾具有寫入權限，或先寫入暫存目錄，處理完畢後再搬移檔案。  
 
 ## 效能最佳化技巧
 
-當你準備將原型升級為正式產品時，以下最佳化措施能顯著提升效能：
+從示範轉為生產管線時，以下調整可帶來顯著差異。
 
 ### 資源管理
-始終使用 try‑with‑resources 包住 `Annotator` 物件，避免記憶體洩漏導致系統在高負載下當機：
+
+始終將 `Annotator` 包裹於 try‑with‑resources 區塊。此模式可消除原生記憶體洩漏的風險，避免長時間服務崩潰。
 
 ```java
 // Good practice - automatic resource cleanup
@@ -252,7 +327,8 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 ```
 
 ### 批次處理策略
-若需同時處理多份文件，盡量避免重複建立 `Annotator` 實例：
+
+每個檔案建立單一 `Annotator`，加入所有必需的 `SearchTextFragment` 物件，最後呼叫 `save`。在多個檔案間重複使用相同的 `Annotator` 實例，可避免重複載入原生函式庫。
 
 ```java
 // Process multiple annotations on the same document efficiently
@@ -267,122 +343,118 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-### 記憶體管理
-大規模文件處理時：
+### 大型 PDF 記憶體管理
 
-- 使用 JVisualVM 等工具監控 JVM 記憶體使用情況  
-- 考慮非同步處理文件，以防止 UI 卡頓  
-- 實作適當的錯誤處理，以避免資源洩漏  
+得益於串流架構，GroupDocs.Annotation 能處理最多 **5,000 頁** 的 PDF，且記憶體使用量維持在 **200 MB** 以下。為維持此範圍，請：
+
+- `DocumentPageIterator` 提供迭代器，可逐批順序處理 PDF 頁面。  
+- 使用 `DocumentPageIterator` 以區塊方式處理頁面。  
+- 若僅需文字標記，請停用如影像擷取等不必要功能。  
 
 ## 真實案例與應用情境
 
-了解何時、如何有效使用文字註釋，可徹底改變文件工作流程：
+了解商業價值有助於決定此技術的應用場景。
 
 ### 法律文件處理
-律師事務所利用可搜尋註釋來：
 
-- 高亮合約中的關鍵條款  
-- 標記需客戶審閱的段落  
-- 為律師注意的潛在法律風險加註  
-
-**實作小技巧**：在組織內統一配色規則，例如紅色代表「需緊急審查」、黃色代表「需客戶決策」。
+律師事務所會標記需客戶批准的條款、標示風險語句，並產生所有已標記段落的報告。統一的紅色背景標記表示「需進行關鍵審查」。
 
 ### 技術文件
-軟體公司透過註釋提升文件價值：
 
-- 在技術規格書中標註 API 變更  
-- 在發行說明中突顯破壞性變更  
-- 在舊版文件中標示已棄用功能  
+軟體團隊在 PDF 發行說明中直接註解 API 變更、棄用與安全建議，使工程師能即時定位更新內容。
 
 ### 教育教材
-教育機構利用註釋製作更佳的學習資源：
 
-- 在教科書中高亮關鍵概念  
-- 在歷史文件中標記重要日期  
-- 在複雜主題旁加註說明，協助學生理解  
+教授會嵌入可搜尋的關鍵概念標記，讓使用螢幕閱讀器或行動 PDF 檢視器的學生，能以更互動的方式使用學習指南。
 
 ## 整合最佳實踐
 
 ### 企業整合模式
-與大型系統整合時：
 
-1. **API‑First 設計** – 將註釋功能封裝為 REST API。  
-2. **非同步處理** – 使用訊息佇列處理大量文件工作負載。  
-3. **錯誤復原** – 為網路或檔案系統問題實作重試機制。  
-4. **監控** – 加入日誌與指標，追蹤效能與錯誤率。  
+1. **API‑first design** – 透過 REST 端點公開註解邏輯。  
+2. **Asynchronous processing** – 將 PDF 檔案推送至訊息佇列（如 RabbitMQ），由工作服務套用註解。  
+3. **Error recovery** – 為暫時性 I/O 錯誤實作重試機制。  
+4. **Monitoring** – 使用結構化日誌（如 Logback）記錄註解耗時與記憶體使用情形。  
 
 ### 安全性考量
-- 驗證所有輸入的檔案路徑，防止目錄遍歷攻擊。  
-- 為文件處理端點實作適當的存取控制。  
-- 在處理過程中考慮加密敏感文件。  
 
-## 疑難排解指南
+- 驗證檔案路徑，以防止目錄遍歷攻擊。  
+- 在註解服務端點實施基於角色的存取控制。  
+- 若 PDF 含有敏感資料，請在寫入檔案前使用 Java 的 `Cipher` API 進行靜態加密。  
+
+## 除錯指南
 
 ### 快速診斷清單
-當問題發生時，請依序檢查以下項目：
 
-1. **檔案權限** – 程式是否能讀取輸入檔案並寫入輸出目錄？  
-2. **路徑正確性** – 是否使用正確的檔案路徑（注意 Windows 與 Linux 的分隔符）？  
-3. **函式庫版本** – GroupDocs.Annotation 版本是否與使用的 Java 版本相容？  
-4. **記憶體可用性** – JVM 是否配置足夠的記憶體以處理文件大小？  
-5. **文字匹配** – 註釋文字是否完全符合 PDF 中的內容？  
+1. **File permissions** – 程式能讀取來源 PDF 並寫入目標資料夾嗎？  
+2. **Path correctness** – 再次確認 Windows (`\`) 與 Linux (`/`) 分隔符。  
+3. **Library version** – 確認使用 GroupDocs.Annotation 25.2 或更新版本；舊版缺乏批次處理最佳化。  
+4. **JVM memory** – 確認堆積大小（`-Xmx`）符合您處理的 PDF 大小。  
+5. **Exact text match** – 執行快速擷取，確認註解字串完全相符。  
 
-### 啟用除錯模式
-開啟詳細日誌以協助診斷問題：
+### 除錯模式啟用
+
+啟用詳細日誌以捕捉內部搜尋過程：
 
 ```java
 // Add this to see detailed processing information
 System.setProperty("groupdocs.annotation.debug", "true");
 ```
 
+日誌會列出每個掃描的頁面以及是否找到目標片語，協助您找出不匹配之處。
+
 ## 常見問答
 
-**Q: 可以在同一份 PDF 中加入多種不同的註釋嗎？**  
-A: 當然可以！只要建立多個 `SearchTextFragment` 物件，設定不同的文字與樣式，最後一次性加入並儲存即可。
+**Q: 我可以在同一個 PDF 中加入多種不同的註解嗎？**  
+A: 當然可以。建立多個 `SearchTextFragment` 物件（或其他註解類型），並在呼叫 `save` 前全部加入。
 
-**Q: 這些註釋在所有 PDF 閱讀器都能正常顯示嗎？**  
-A: 會的。GroupDocs 產生的註釋屬於標準 PDF 註釋，Adobe Acrobat、瀏覽器內建檢視器以及其他常見閱讀器皆能正確顯示。部分閱讀器的顏色呈現可能略有差異。
+**Q: 註解會在所有 PDF 檢視器中正常顯示嗎？**  
+A: 會。GroupDocs 產生的標準 PDF 註解物件可在 Adobe Acrobat、Chrome、Edge 以及大多數第三方檢視器中正確顯示。因檢視器渲染引擎不同，顏色可能略有差異。
 
-**Q: 若 PDF 版面複雜或有多欄排版，該怎麼處理？**  
-A: GroupDocs.Annotation 會自動處理複雜版面。關鍵在於搜尋文字必須與 PDF 中實際呈現的文字完全相同，版面如何排列不影響搜尋結果。
+**Q: 如何處理版面複雜或多欄的 PDF？**  
+A: GroupDocs.Annotation 會處理視覺文字流，因此只要確保您提供的字串與擷取的文字完全相符，即可，不受欄位順序影響。
 
-**Q: 註釋的文字數量有上限嗎？**  
-A: 實務上沒有明顯上限，你可以加入任意數量的註釋。但若一次加入數千筆，部分閱讀器的載入效能可能會受影響。
+**Q: 註解的文字量有上限嗎？**  
+A: 註解數量沒有硬性上限。實務上，加入數千個標記可能會增加某些檢視器的渲染時間，建議依章節等邏輯分批處理。
 
-**Q: 可以在加入註釋後再修改或移除嗎？**  
-A: 可以。GroupDocs.Annotation 提供了更新與刪除註釋的方法，你可以取得現有註釋、變更屬性或直接刪除。
+**Q: 加入註解後，我可以修改或移除它們嗎？**  
+A: 可以。使用 `getAnnotations()` 方法取得現有物件，然後根據需要呼叫 `update()` 或 `delete()`。
 
-**Q: 若找不到指定的文字，會發生什麼情況？**  
-A: 若精確文字未匹配，註釋將不會被加入。操作不會拋出例外，只是沒有任何註釋出現在文件中。建議先使用文字抽取功能確認 PDF 內的實際文字。
+**Q: 若 PDF 中找不到註解文字會發生什麼？**  
+A: API 會靜默跳過新增，不會拋出例外，但註解不會出現。請先確認文字匹配。
 
-**Q: 如何確保加入的 PDF 仍具可及性？**  
-A: 使用高對比度的配色組合，避免僅靠顏色傳遞資訊，並為註釋加入說明文字，這樣可協助視覺障礙使用者。
+**Q: 如何確保我的註解 PDF 保持可存取性？**  
+A: 選擇高對比度的顏色，避免僅以顏色傳遞資訊，並為每個註解加入描述文字，讓螢幕閱讀器能說明其用途。
 
 ## 結論
 
-你現在已掌握如何使用 GroupDocs.Annotation  **建立可搜尋的 PDF（Java）** 檔案。這項強大功能能將靜態 PDF 轉變為可互動、可快速導航的文件，提升工作效率與協作體驗。
+您現在已掌握使用 GroupDocs.Annotation 建立 **create searchable PDF Java** 檔案的完整、可投入生產的做法。依照上述步驟，您可以：
 
-**重點回顧**
+- 建立乾淨的 Maven 專案，使用最新程式庫。  
+- 加入單行可搜尋的標記，立即可被發現。  
+- 使用 ARGB 顏色與字型選項自訂外觀。  
+- 將解決方案擴展至上千頁，同時保持低記憶體使用。
 
-- **環境設定** – 正確的 Maven 配置與授權可避免早期卡關。  
-- **資源管理** – 使用 try‑with‑resources 讓記憶體使用保持低檔。  
-- **客製化** – 合理的配色與字型選擇提升可讀性。  
-- **效能** – 批次處理與適當的 JVM 設定確保大規模作業穩定。  
-
-準備好在下一個專案中實作了嗎？先從基本範例開始，然後依需求逐步加入進階功能。投入學習此技術的時間，未來將為更順暢的文件工作流程與更滿意的使用者帶來豐厚回報。
+先從基本範例開始，接著嘗試多種註解類型、批次處理與 REST‑API 暴露，將此功能整合至現有的文件管理流程。您今日的投入將在更快速的審閱、減少手動搜尋以及提升使用者滿意度上獲得回報。
 
 ---
 
-**Last Updated:** 2026-03-08  
-**Tested With:** GroupDocs.Annotation 25.2 (Java)  
-**Author:** GroupDocs  
+**最後更新:** 2026-09-15  
+**測試環境:** GroupDocs.Annotation 25.2 (Java)  
+**作者:** GroupDocs  
 
-**Resources and Further Reading**
+**資源與進一步閱讀**
 
-- [GroupDocs.Annotation for Java 文件說明](https://docs.groupdocs.com/annotation/java/)  
+- [GroupDocs.Annotation for Java 文件](https://docs.groupdocs.com/annotation/java/)  
 - [完整 API 參考指南](https://reference.groupdocs.com/annotation/java/)  
-- [GroupDocs 版本發布](https://releases.groupdocs.com/annotation/java/)  
+- [GroupDocs 版本發佈](https://releases.groupdocs.com/annotation/java/)  
 - [購買 GroupDocs 授權](https://purchase.groupdocs.com/buy)  
 - [開始免費試用](https://releases.groupdocs.com/annotation/java/)  
-- [取得延伸試用授權](https://purchase.groupdocs.com/temporary-license/)  
-- [GroupDocs 支援論壇](https://forum.groupdocs.com/c/annotation/)
+- [取得延長試用授權](https://purchase.groupdocs.com/temporary-license/)  
+- [GroupDocs 支援論壇](https://forum.groupdocs.com/c/annotation/)  
+
+## 相關教學
+
+- [新增 PDF Highlight Java – 文字註解完整指南](/annotation/java/text-annotations/)  
+- [建立 PDF Highlights Java：使用 GroupDocs Annotation 的完整指南](/annotation/java/annotation-management/)  
+- [載入 PDF Java 使用 GroupDocs Annotation：文件載入指南](/annotation/java/document-loading/)

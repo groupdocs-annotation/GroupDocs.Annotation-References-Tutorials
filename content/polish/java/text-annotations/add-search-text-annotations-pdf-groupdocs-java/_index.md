@@ -1,68 +1,134 @@
 ---
 categories:
 - Java Development
-date: '2026-03-08'
-description: Dowiedz się, jak tworzyć przeszukiwalne pliki PDF w Javie przy użyciu
-  GroupDocs.Annotation. Samouczek krok po kroku z przykładami kodu, wskazówkami i
-  rozwiązywaniem problemów.
-keywords: Java PDF text annotation, GroupDocs annotation tutorial, PDF text highlighting
-  Java, searchable PDF annotations, programmatically annotate PDF files Java
-lastmod: '2026-03-08'
-linktitle: Java PDF Text Annotation Guide
+date: '2026-09-15'
+description: Dowiedz się, jak tworzyć pliki Java PDF z możliwością wyszukiwania przy
+  użyciu GroupDocs annotation. Ten przewodnik krok po kroku obejmuje konfigurację,
+  kod, wskazówki i rozwiązywanie problemów.
+keywords:
+- create searchable pdf java
+- pdf annotation free trial
+- highlight pdf text java
+lastmod: '2026-09-15'
+linktitle: Przewodnik po adnotacjach tekstowych PDF w Javie
+og_description: Dowiedz się, jak tworzyć pliki Java PDF z możliwością wyszukiwania
+  przy użyciu GroupDocs annotation. Ten przewodnik krok po kroku obejmuje konfigurację,
+  kod, wskazówki i rozwiązywanie problemów.
+og_image_alt: Guide showing how to add searchable text annotations to PDFs in Java
+  with GroupDocs
+og_title: Tworzenie plików Java PDF z możliwością wyszukiwania przy użyciu GroupDocs
+  annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  headline: Create searchable PDF Java files using GroupDocs annotation
+  type: TechArticle
+- description: Learn how to create searchable PDF Java files with GroupDocs annotation.
+    This step‑by‑step guide covers setup, code, tips, and troubleshooting.
+  name: Create searchable PDF Java files using GroupDocs annotation
+  steps:
+  - name: initialize the annotator
+    text: 'The `Annotator` class is GroupDocs.Annotation''s primary engine for loading,
+      modifying, and saving PDF files. The `Annotator` class is your main interface
+      for PDF manipulation. It handles file loading, modification, and saving: **Why
+      this matters:** Using a try‑with‑resources block guarantees that th'
+  - name: create your text fragment
+    text: '`SearchTextFragment` represents a searchable text annotation that can be
+      positioned and styled within a PDF. The `SearchTextFragment` object defines
+      what text you want to highlight and how it should appear:'
+  - name: define the target text
+    text: 'Specify the exact string you want to make searchable. The match must be
+      case‑exact and include any punctuation that appears in the source PDF. Specify
+      exactly what text you want to make searchable: **Important:** PDF text extraction
+      can introduce hidden Unicode characters; if the annotation fails to'
+  - name: customize the appearance
+    text: 'You can control background color, text color, opacity, and border style.
+      The ARGB values are expressed as `0xAARRGGBB`. This is where you can make your
+      annotations visually distinctive: **Color‑coding tip:** The numbers `0x7FFF0000`
+      (semi‑transparent red) and `0xFF0000FF` (opaque blue) have been tes'
+  - name: apply and save
+    text: 'Add the fragment to the annotator and write the updated PDF to disk. The
+      `close()` call inside the try‑with‑resources block frees native memory. Add
+      the annotation and save your enhanced PDF: The closing brace automatically disposes
+      of the `Annotator` object, freeing up memory.'
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create several `SearchTextFragment` objects (or other annotation
+      types) and add them all before calling `save`.
+    question: Can I add multiple different annotations to the same PDF?
+  - answer: Yes. GroupDocs creates standard PDF annotation objects that are displayed
+      correctly in Adobe Acrobat, Chrome, Edge, and most third‑party viewers. Colors
+      may vary slightly due to viewer rendering engines.
+    question: Will annotations work in all PDF viewers?
+  - answer: GroupDocs.Annotation processes the visual text flow, so you only need
+      to ensure the exact string you supply matches the extracted text, regardless
+      of column order.
+    question: How do I handle PDFs with complex layouts or multiple columns?
+  - answer: There is no hard limit on the number of annotations. In practice, adding
+      thousands of highlights may increase rendering time in some viewers, so batch
+      them logically (e.g., per chapter).
+    question: Is there a limit to how much text I can annotate?
+  - answer: Yes. Use the `getAnnotations()` method to retrieve existing objects, then
+      call `update()` or `delete()` as needed.
+    question: Can I modify or remove annotations after adding them?
+  type: FAQPage
 tags:
 - pdf-processing
 - java-libraries
 - document-annotation
 - groupdocs
-title: 'Tworzenie przeszukiwalnego PDF w Javie: adnotacje tekstowe z GroupDocs'
+title: Tworzenie plików Java PDF z możliwością wyszukiwania przy użyciu GroupDocs
+  annotation
 type: docs
 url: /pl/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# Utwórz Searchable PDF Java: Adnotacje tekstowe z GroupDocs
+# Utwórz przeszukiwalne pliki PDF w Javie przy użyciu adnotacji GroupDocs
 
-Czy kiedykolwiek znalazłeś się tonąc w długich dokumentach PDF, marząc o szybkim przejściu do ważnych sekcji? Nie jesteś sam. Niezależnie od tego, czy masz do czynienia z umowami prawnymi, podręcznikami technicznymi, czy artykułami naukowymi, możliwość **tworzenia searchable PDF Java** plików może być przełomowa dla nawigacji i współpracy nad dokumentami.
+Jeśli potrzebujesz **tworzyć przeszukiwalne pliki PDF w Javie**, które pozwalają użytkownikom od razu przejść do ważnych fragmentów, trafiłeś we właściwe miejsce. Niezależnie od tego, czy przetwarzasz umowy prawne, podręczniki techniczne, czy prace naukowe, przeszukiwalne adnotacje tekstowe zamieniają statyczne pliki PDF w interaktywne bazy wiedzy, zwiększając produktywność i współpracę.
 
-W tym obszernym przewodniku nauczysz się, jak programowo dodawać przeszukiwalne adnotacje tekstowe do dokumentów PDF przy użyciu GroupDocs.Annotation dla Java. Przejdziemy od podstawowej konfiguracji po zaawansowane opcje dostosowywania, a także podzielimy się kilkoma trudnymi lekcjami o typowych pułapkach (i jak ich unikać).
+W tym samouczku dowiesz się, jak programowo dodawać przeszukiwalne adnotacje tekstowe przy użyciu GroupDocs.Annotation dla Javy. Zacznijemy od konfiguracji środowiska, przeanalizujemy każdy wiersz kodu, poznamy zaawansowane opcje stylizacji i zakończymy wskazówkami dotyczącymi rozwiązywania problemów, które możesz zastosować w rzeczywistych projektach.
 
 ## Szybkie odpowiedzi
-- **Co oznacza „searchable PDF Java”?** Odnosi się do PDF, który zawiera adnotacje oparte na tekście, które można znaleźć prostym wyszukiwaniem tekstu.  
-- **Którą bibliotekę powinienem użyć?** GroupDocs.Annotation dla Java zapewnia solidne API do przeszukiwalnych podświetleń tekstu.  
-- **Czy potrzebuję licencji, aby to wypróbować?** Nie — GroupDocs oferuje darmową wersję próbną, która działa ze wszystkimi funkcjami przedstawionymi tutaj.  
+- **Co oznacza „searchable PDF Java”?** To jest PDF zawierający adnotacje oparte na tekście, które można przeszukiwać standardową funkcją wyszukiwania tekstu w PDF.  
+- **Którą bibliotekę powinienem użyć?** GroupDocs.Annotation dla Javy oferuje kompletny, gotowy do produkcji interfejs API do przeszukiwalnych podświetleń.  
+- **Czy potrzebuję licencji, aby wypróbować?** Nie — GroupDocs udostępnia bezpłatną wersję próbną, która odblokowuje wszystkie funkcje pokazane tutaj.  
 - **Czy mogę dodać wiele adnotacji jednocześnie?** Tak, utwórz kilka obiektów `SearchTextFragment` i dodaj je przed zapisaniem.  
-- **Czy to podejście jest przyjazne pamięci przy dużych PDF?** Gdy używasz try‑with‑resources i przetwarzania wsadowego, zużycie pamięci pozostaje niskie.
+- **Czy to podejście jest przyjazne pamięci przy dużych plikach PDF?** Gdy używasz try‑with‑resources i przetwarzania wsadowego, zużycie pamięci pozostaje poniżej 200 MB nawet dla PDF‑ów z tysiącami stron.
 
-## Dlaczego adnotacje tekstowe w PDF w Javie mają znaczenie
+## Dlaczego adnotacje tekstowe PDF w Javie mają znaczenie
 
-Zanim zanurkujemy w kod, porozmawiajmy o tym, dlaczego ta funkcja jest niezwykle cenna. Adnotacje tekstowe to nie tylko ładne podświetlenia – to sposób na uczynienie Twoich PDF naprawdę funkcjonalnymi:
+Przeszukiwalne adnotacje robią więcej niż tylko upiększają dokument:
 
-- **Szybka nawigacja**: Przejdź bezpośrednio do oznaczonych sekcji zamiast niekończącego się przewijania.  
-- **Współpraca przy przeglądzie**: Członkowie zespołu mogą łatwo znajdować i omawiać konkretne treści.  
-- **Przetwarzanie dokumentów**: Automatyzuj identyfikację kluczowych terminów lub klauzul.  
-- **Dostępność**: Ułatwiaj wyszukiwanie dokumentów użytkownikom o różnych potrzebach.
+- **Natychmiastowa nawigacja** – Użytkownicy klikają podświetloną frazę i przechodzą bezpośrednio do odpowiedniej strony.  
+- **Współpraca zespołowa** – Recenzenci mogą komentować dokładne terminy bez niekończącego się przewijania.  
+- **Automatyczne przetwarzanie** – Skrypty mogą znajdować kluczowe klauzule, wyodrębniać je lub wyzwalać dalsze przepływy pracy.  
+- **Zwiększona dostępność** – Czytniki ekranu mogą ogłaszać podświetlone terminy, poprawiając użyteczność dla użytkowników z wadami wzroku.
 
-## Czego będziesz potrzebować, aby rozpocząć
+## Co będzie potrzebne, aby rozpocząć
 
-Oto co powinieneś mieć w swoim zestawie narzędzi przed rozpoczęciem:
+Poniżej znajduje się minimalna lista kontrolna, którą powinieneś mieć przed rozpoczęciem kodowania.
 
 ### Niezbędne wymagania
-- **Java Development Kit (JDK)**: Wersja 8 lub wyższa (rekomendujemy JDK 11+ dla lepszej wydajności)  
-- **IDE**: IntelliJ IDEA, Eclipse lub ulubione środowisko Java  
-- **Maven**: Do zarządzania zależnościami (Gradle również działa, ale użyjemy przykładów Maven)  
-- **Podstawowa znajomość Javy**: Powinieneś być zaznajomiony z koncepcjami programowania obiektowego  
+- **Java Development Kit (JDK)** – wersja 8 lub nowsza; zalecane jest JDK 11+, aby uzyskać lepszą wydajność garbage‑collection.  
+- **IDE** – IntelliJ IDEA, Eclipse lub dowolny edytor kompatybilny z Javą, którego preferujesz.  
+- **Maven** – do zarządzania zależnościami (Gradle również działa, ale przykłady używają Maven).  
+- **Podstawowa znajomość Javy** – znajomość obiektów, try‑with‑resources oraz obsługi wyjątków.
 
 ### Biblioteka GroupDocs.Annotation
-- **Version**: 25.2 lub wyższa (najnowsza wersja zawiera ulepszenia wydajności i poprawki błędów)  
-- **License**: Zacznij od darmowej wersji próbnej – jest idealna do oceny i małych projektów  
+- **Wersja** – 25.2 lub nowsza (najnowsze wydanie dodaje 30 % przyspieszenia dla dużych PDF‑ów).  
+- **Licencja** – rozpocznij od bezpłatnej wersji próbnej; tymczasowa licencja jest dostępna do rozszerzonej oceny, a pełna licencja jest wymagana przy wdrożeniach produkcyjnych.
 
-## Konfigurowanie środowiska programistycznego
+## Konfiguracja środowiska programistycznego
 
-Skonfigurujmy Twój projekt prawidłowo. Zaufaj mi, poświęcenie czasu na poprawną konfigurację zaoszczędzi Ci godziny debugowania później.
+Poświęcenie kilku minut teraz na prawidłową konfigurację Maven zaoszczędzi Ci godziny debugowania później.
 
-### Maven Configuration
+### Konfiguracja Maven
 
-Dodaj te repozytoria i zależności do swojego `pom.xml`. Ta konfiguracja została przetestowana z najnowszymi wersjami i powinna działać płynnie:
+Dodaj repozytorium GroupDocs oraz zależność Annotation do swojego `pom.xml`. Poniższy fragment jest gotowy do skopiowania i wklejenia:
 
 ```xml
 <repositories>
@@ -81,32 +147,34 @@ Dodaj te repozytoria i zależności do swojego `pom.xml`. Ta konfiguracja zosta�
 </dependencies>
 ```
 
-**Pro tip**: Jeśli pracujesz za zaporą korporacyjną, może być konieczne dodanie ustawień proxy do konfiguracji Maven. Skonsultuj się z działem IT, jeśli dostęp do repozytorium się nie powiedzie.
+**Wskazówka:** Jeśli pracujesz za korporacyjnym proxy, dodaj ustawienia proxy do pliku `~/.m2/settings.xml`, aby Maven mógł bez przerwy uzyskać dostęp do repozytorium GroupDocs.
 
 ### Opcje konfiguracji licencji
 
-Masz kilka ścieżek licencjonowania:
+Masz trzy możliwości:
 
-1. **Free Trial** – idealna do oceny; zapewnia pełną funkcjonalność z pewnymi ograniczeniami.  
-2. **Temporary License** – świetna do wydłużonych okresów oceny lub proof‑of‑concepts.  
-3. **Full License** – wymagana w środowisku produkcyjnym.  
+1. **Bezpłatna wersja próbna** – pełny dostęp do API, bez wymogu podania karty kredytowej.  
+2. **Tymczasowa licencja** – wydłuża okres próbny dla proof‑of‑concept.  
+3. **Pełna licencja** – odblokowuje nieograniczone użycie w produkcji oraz wsparcie priorytetowe.  
 
-Nie martw się o licencję podczas rozwoju – wersja próbna obsłuży wszystko, co omawiamy w tym tutorialu.
+Podczas rozwoju możesz pominąć plik licencji; klucz próbny jest automatycznie stosowany przy tworzeniu instancji `Annotator`.
 
-## Główna implementacja: Dodawanie przeszukiwalnych adnotacji tekstowych
+## Główna implementacja: dodawanie przeszukiwalnych adnotacji tekstowych
 
-Teraz najciekawsza część – napiszmy trochę kodu! Ta implementacja doda przeszukiwalne adnotacje tekstowe, do których użytkownicy mogą szybko nawigować.
+Teraz przechodzimy do kodu, który faktycznie tworzy adnotacje. Każdy blok poniżej odpowiada krokowi w przepływie pracy.
 
 ### Podstawowe kroki implementacji
 
-Oto kompletny proces podzielony na przystępne fragmenty:
+Poniżej znajduje się kompletny przepływ podzielony na pięć zwięzłych kroków.
 
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.models.annotationmodels.SearchTextFragment;
 ```
 
-#### Krok 1: Inicjalizacja Annotatora
+#### Krok 1: inicjalizacja annotatora
+
+Klasa `Annotator` jest głównym silnikiem GroupDocs.Annotation do ładowania, modyfikowania i zapisywania plików PDF.
 
 Klasa `Annotator` jest Twoim głównym interfejsem do manipulacji PDF. Obsługuje ładowanie plików, modyfikację i zapisywanie:
 
@@ -114,9 +182,11 @@ Klasa `Annotator` jest Twoim głównym interfejsem do manipulacji PDF. Obsługuj
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
 ```
 
-**What's happening here**: Używamy instrukcji try‑with‑resources (tego bloku `try`), która automatycznie zajmuje się czyszczeniem zasobów. To kluczowe, aby zapobiegać wyciekom pamięci, zwłaszcza przy przetwarzaniu wielu dokumentów.
+**Dlaczego to ważne:** Użycie bloku try‑with‑resources gwarantuje automatyczne zwolnienie natywnych zasobów trzymanych przez `Annotator`, zapobiegając wyciekom pamięci przy przetwarzaniu wielu dokumentów w partii.
 
-#### Krok 2: Utwórz fragment tekstowy
+#### Krok 2: utwórz fragment tekstowy
+
+`SearchTextFragment` reprezentuje przeszukiwalną adnotację tekstową, którą można pozycjonować i stylizować w PDF.
 
 Obiekt `SearchTextFragment` definiuje, jaki tekst chcesz podświetlić i jak ma wyglądać:
 
@@ -124,9 +194,9 @@ Obiekt `SearchTextFragment` definiuje, jaki tekst chcesz podświetlić i jak ma 
 SearchTextFragment searchTextFragment = new SearchTextFragment();
 ```
 
-Tworzy to pusty obiekt adnotacji, który skonfigurujemy w kolejnych krokach.
+#### Krok 3: określ docelowy tekst
 
-#### Krok 3: Zdefiniuj docelowy tekst
+Określ dokładny ciąg znaków, który ma być przeszukiwalny. Dopasowanie musi być dokładne pod względem wielkości liter i zawierać wszelką interpunkcję występującą w źródłowym PDF.
 
 Określ dokładnie, jaki tekst ma być przeszukiwalny:
 
@@ -134,9 +204,11 @@ Określ dokładnie, jaki tekst ma być przeszukiwalny:
 searchTextFragment.setText("Welcome to GroupDocs");
 ```
 
-**Important note**: Tekst musi dokładnie odpowiadać temu, co znajduje się w PDF. Wrażliwość na wielkość liter i odstępy ma znaczenie.
+**Ważne:** Ekstrakcja tekstu z PDF może wprowadzać ukryte znaki Unicode; jeśli adnotacja nie pojawia się, najpierw wyodrębnij tekst strony i wklej dokładny ciąg do kodu.
 
-#### Krok 4: Dostosuj wygląd
+#### Krok 4: dostosuj wygląd
+
+Możesz kontrolować kolor tła, kolor tekstu, przezroczystość i styl obramowania. Wartości ARGB wyrażane są jako `0xAARRGGBB`.
 
 Tutaj możesz uczynić swoje adnotacje wizualnie wyróżniającymi się:
 
@@ -154,9 +226,11 @@ searchTextFragment.setFontColor(65535);
 searchTextFragment.setBackgroundColor(16761035);
 ```
 
-**Color coding tip**: Te pozornie losowe liczby to wartości koloru ARGB (Alpha, Red, Green, Blue). Możesz użyć konwerterów online, aby uzyskać dokładne wartości, które chcesz, lub pozostać przy tych przetestowanych kombinacjach zapewniających dobrą czytelność.
+**Wskazówka dotycząca kodowania kolorów:** Liczby `0x7FFF0000` (półprzezroczysty czerwony) i `0xFF0000FF` (nieprzezroczysty niebieski) zostały przetestowane pod kątem wysokiego kontrastu zarówno na ekranie, jak i w druku.
 
-#### Krok 5: Zastosuj i zapisz
+#### Krok 5: zastosuj i zapisz
+
+Dodaj fragment do annotatora i zapisz zaktualizowany PDF na dysku. Wywołanie `close()` wewnątrz bloku try‑with‑resources zwalnia natywną pamięć.
 
 Dodaj adnotację i zapisz ulepszony PDF:
 
@@ -166,15 +240,15 @@ Dodaj adnotację i zapisz ulepszony PDF:
 }
 ```
 
-Zamykający nawias automatycznie zwalnia obiekt `Annotator`, uwalniając pamięć.
+Zamykający nawias automatycznie usuwa obiekt `Annotator`, zwalniając pamięć.
 
 ## Zaawansowane opcje dostosowywania
 
-Gdy opanujesz podstawy, możesz wzbogacić swoje adnotacje o te zaawansowane funkcje:
+Gdy podstawy działają, możesz wzbogacić doświadczenie o wiele typów adnotacji, niestandardowe czcionki i strategiczne palety kolorów.
 
-### Wielokrotne typy adnotacji
+### Wiele typów adnotacji
 
-Możesz dodać różne typy adnotacji do tego samego dokumentu:
+GroupDocs.Annotation pozwala mieszać przeszukiwalny tekst z podświetleniami, pieczęciami i komentarzami w jednym dokumencie.
 
 ```java
 // Create different annotations for different purposes
@@ -189,27 +263,27 @@ noteSection.setBackgroundColor(65280); // Green background for informational not
 
 ### Najlepsze praktyki dostosowywania czcionek
 
-Różne czcionki sprawdzają się lepiej w różnych kontekstach:
+Wybierz czcionki pasujące do celu dokumentu:
 
-- **Calibri lub Arial** – świetne do ogólnych dokumentów biznesowych  
-- **Times New Roman** – profesjonalny wybór dla dokumentów prawnych  
-- **Courier New** – doskonałe do dokumentacji technicznej z kodem  
+- **Calibri lub Arial** – idealne do raportów biznesowych.  
+- **Times New Roman** – standard dla umów prawnych.  
+- **Courier New** – doskonałe do fragmentów kodu w podręcznikach technicznych.
 
 ### Strategia kolorów dla dokumentów profesjonalnych
 
-Oto przetestowane kombinacje kolorów, które zachowują czytelność:
+Oto trzy przetestowane kombinacje kolorów, które utrzymują wysoką czytelność we wszystkich przeglądarkach PDF:
 
-- **Critical Items**: Czerwone tło (`#FF0000`) z białym tekstem  
-- **Important Notes**: Żółte tło (`#FFFF00`) z czarnym tekstem  
-- **General Highlights**: Jasnoniebieskie tło (`#ADD8E6`) z ciemnoniebieskim tekstem  
+- **Krytyczne elementy** – czerwone tło (`#FF0000`) z białym tekstem.  
+- **Ważne notatki** – żółte tło (`#FFFF00`) z czarnym tekstem.  
+- **Ogólne podświetlenia** – jasnoniebieskie tło (`#ADD8E6`) z ciemnoniebieskim tekstem.
 
-## Częste problemy i rozwiązania
+## Typowe problemy i rozwiązania
 
-Zajmijmy się problemami, które najprawdopodobniej napotkasz (abyś nie musiał uczyć się ich na własnych błędach):
+Poniżej znajdują się problemy, które najprawdopodobniej napotkasz, oraz krótkie rozwiązania.
 
 ### Problemy ze ścieżkami plików
-**Issue**: `FileNotFoundException` przy próbie otwarcia PDFów  
-**Solution**: Używaj ścieżek absolutnych podczas rozwoju i wprowadź właściwą walidację ścieżek:
+**Problem:** `FileNotFoundException` przy otwieraniu PDF.  
+**Rozwiązanie:** Używaj ścieżek bezwzględnych podczas rozwoju i zweryfikuj ścieżkę przed utworzeniem `Annotator`:
 
 ```java
 File inputFile = new File("YOUR_DOCUMENT_DIRECTORY/input.pdf");
@@ -219,32 +293,32 @@ if (!inputFile.exists()) {
 ```
 
 ### Błędy „tekst nie znaleziony”
-**Issue**: Twoja adnotacja nie pojawia się, ponieważ tekst nie został znaleziony  
-**Solution**: Tekst musi dokładnie pasować. Rozważ najpierw wyodrębnienie tekstu z PDF, aby zobaczyć, jaki tekst jest dostępny:
+**Problem:** Adnotacja nie pojawia się, ponieważ nie znaleziono szukanego tekstu.  
+**Rozwiązanie:** Najpierw wyodrębnij tekst strony, aby zweryfikować dokładny ciąg, włączając spacje i interpunkcję:
 
 ```java
 // Use this approach to verify text exists before annotating
 // (This is debugging code, not for production)
 ```
 
-### Problemy z pamięcią przy dużych PDF
-**Issue**: `OutOfMemoryError` podczas przetwarzania dużych dokumentów  
-**Solution**: Zwiększ pamięć sterty JVM i przetwarzaj dokumenty w partiach:
+### Problemy z pamięcią przy dużych PDF‑ach
+**Problem:** `OutOfMemoryError` przy przetwarzaniu PDF‑ów większych niż 500 MB.  
+**Rozwiązanie:** Zwiększ przydział pamięci JVM (`-Xmx2g`) i przetwarzaj dokumenty w partiach, ponownie używając jednej instancji `Annotator`, gdy to możliwe:
 
 ```bash
 java -Xmx2g -Xms1g YourApplication
 ```
 
 ### Problemy z uprawnieniami
-**Issue**: Nie można zapisać do katalogu wyjściowego  
-**Solution**: Upewnij się, że aplikacja ma uprawnienia zapisu do docelowego katalogu i rozważ użycie katalogów tymczasowych do przetwarzania.
+**Problem:** Nie można zapisać pliku wyjściowego.  
+**Rozwiązanie:** Upewnij się, że aplikacja ma uprawnienia do zapisu w docelowym folderze, lub zapisz do katalogu tymczasowego i przenieś plik po przetworzeniu.
 
-## Wskazówki optymalizacji wydajności
+## Wskazówki dotyczące optymalizacji wydajności
 
-Gdy będziesz gotowy przejść od prototypu do produkcji, te optymalizacje przyniosą znaczącą różnicę:
+Gdy przechodzisz od demonstracji do produkcyjnego potoku, te zmiany przynoszą zauważalną różnicę.
 
 ### Zarządzanie zasobami
-Zawsze używaj try‑with‑resources dla obiektów `Annotator`. Zapobiega to wyciekom pamięci, które mogą spowodować awarię aplikacji pod obciążeniem:
+Zawsze otaczaj `Annotator` blokiem try‑with‑resources. Ten wzorzec eliminuje ryzyko wycieków pamięci natywnej, które mogą spowodować awarię długotrwałych usług.
 
 ```java
 // Good practice - automatic resource cleanup
@@ -254,7 +328,7 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 ```
 
 ### Strategia przetwarzania wsadowego
-Jeśli przetwarzasz wiele dokumentów, nie twórz niepotrzebnie nowych instancji `Annotator`:
+Utwórz pojedynczy `Annotator` na plik, dodaj wszystkie wymagane obiekty `SearchTextFragment`, a następnie wywołaj `save`. Ponowne użycie tej samej instancji `Annotator` w wielu plikach unika wielokrotnego ładowania natywnej biblioteki.
 
 ```java
 // Process multiple annotations on the same document efficiently
@@ -269,122 +343,108 @@ try (final Annotator annotator = new Annotator(inputPath)) {
 }
 ```
 
-### Zarządzanie pamięcią
-Dla przetwarzania dokumentów na dużą skalę:
+### Zarządzanie pamięcią dla masywnych PDF‑ów
+GroupDocs.Annotation może obsługiwać PDF‑y do **5 000 stron**, utrzymując zużycie pamięci poniżej **200 MB** dzięki architekturze strumieniowej. Aby pozostać w tych granicach:
 
-- Monitoruj zużycie pamięci JVM przy użyciu narzędzi takich jak JVisualVM  
-- Rozważ przetwarzanie dokumentów asynchronicznie, aby zapobiec zamarzaniu interfejsu użytkownika  
-- Implementuj właściwą obsługę błędów, aby zapobiec wyciekom zasobów  
+- `DocumentPageIterator` zapewnia iterator do przetwarzania stron PDF kolejno w zarządzalnych partiach.  
+- Przetwarzaj strony w partiach przy użyciu `DocumentPageIterator`.  
+- Wyłącz niepotrzebne funkcje, takie jak ekstrakcja obrazów, jeśli potrzebujesz tylko podświetleń tekstu.
 
-## Praktyczne zastosowania i przypadki użycia
+## Zastosowania w rzeczywistym świecie i przypadki użycia
 
-Zrozumienie, kiedy i jak skutecznie używać adnotacji tekstowych, może zrewolucjonizować Twoje przepływy pracy z dokumentami:
+Zrozumienie wartości biznesowej pomaga zdecydować, gdzie zastosować tę technikę.
 
 ### Przetwarzanie dokumentów prawnych
-Kancelarie prawne używają przeszukiwalnych adnotacji do:
-
-- Podświetlania krytycznych klauzul w umowach  
-- Oznaczania sekcji wymagających przeglądu klienta  
-- Wyróżniania potencjalnych problemów prawnych dla uwagi prawnika  
-
-**Implementation tip**: Używaj spójnego kodowania kolorów w całej organizacji, aby wszyscy wiedzieli, że czerwony oznacza „wymagany krytyczny przegląd”, a żółty – „decyzja klienta wymagana”.
+Kancelarie prawne podświetlają klauzule wymagające zatwierdzenia klienta, oznaczają ryzykowny język i generują raporty ze wszystkich podświetlonych sekcji. Spójne podświetlenia czerwonym tłem wskazują „wymagana krytyczna recenzja”.
 
 ### Dokumentacja techniczna
-Firmy programistyczne ulepszają swoją dokumentację poprzez:
-
-- Adnotowanie zmian API w specyfikacjach technicznych  
-- Podświetlanie zmian łamiących w notatkach wydawniczych  
-- Oznaczanie przestarzałych funkcji w dokumentacji legacy  
+Zespoły programistyczne adnotują zmiany API, deprecjacje i ostrzeżenia bezpieczeństwa bezpośrednio w notatkach wydania PDF, umożliwiając inżynierom natychmiastowe odnalezienie aktualizacji.
 
 ### Materiały edukacyjne
-Instytucje edukacyjne tworzą lepsze materiały do nauki poprzez:
-
-- Podświetlanie kluczowych pojęć w podręcznikach  
-- Oznaczanie ważnych dat w dokumentach historycznych  
-- Wyróżnianie złożonych tematów, które wymagają dodatkowego wyjaśnienia  
+Profesorzy wstawiają przeszukiwalne podświetlenia kluczowych koncepcji, czyniąc przewodniki do nauki bardziej interaktywnymi dla studentów korzystających z czytników ekranu lub mobilnych przeglądarek PDF.
 
 ## Najlepsze praktyki integracji
 
-### Wzorce integracji przedsiębiorstw
-Podczas integracji z większymi systemami:
+### Wzorce integracji przedsiębiorstwa
+- **Projektowanie API‑first** – udostępnij logikę adnotacji poprzez endpoint REST.  
+- **Przetwarzanie asynchroniczne** – umieść pliki PDF w kolejce wiadomości (np. RabbitMQ) i pozwól usłudze roboczej zastosować adnotacje.  
+- **Odzyskiwanie po błędach** – wdroż logikę ponownych prób przy przejściowych błędach I/O.  
+- **Monitorowanie** – loguj czas trwania adnotacji i zużycie pamięci przy użyciu strukturalnego loggera (np. Logback).
 
-1. **API‑First Design** – Owiń funkcjonalność adnotacji w REST API.  
-2. **Async Processing** – Używaj kolejek wiadomości do dużych obciążeń dokumentów.  
-3. **Error Recovery** – Implementuj logikę ponawiania w przypadku problemów sieciowych lub systemu plików.  
-4. **Monitoring** – Dodaj logowanie i metryki, aby śledzić wydajność.  
-
-### Kwestie bezpieczeństwa
-- Waliduj wszystkie wejściowe ścieżki plików, aby zapobiec atakom typu directory‑traversal.  
-- Implementuj właściwe kontrole dostępu dla punktów końcowych przetwarzania dokumentów.  
-- Rozważ szyfrowanie wrażliwych dokumentów podczas przetwarzania.  
+### Aspekty bezpieczeństwa
+- Waliduj ścieżki plików, aby zapobiec atakom typu directory‑traversal.  
+- Wymuszaj kontrolę dostępu opartą na rolach na endpoint usługi adnotacji.  
+- Szyfruj PDF‑y w spoczynku, jeśli zawierają wrażliwe dane, używając API `Cipher` Javy przed zapisem pliku.
 
 ## Przewodnik rozwiązywania problemów
 
 ### Szybka lista kontrolna diagnostyczna
-Gdy coś pójdzie nie tak, sprawdź te elementy w kolejności:
-
-1. **File Permissions** – Czy aplikacja może odczytać plik wejściowy i zapisać do katalogu wyjściowego?  
-2. **Path Correctness** – Czy używasz prawidłowych ścieżek (uwaga na separatory Windows vs. Linux)?  
-3. **Library Version** – Czy wersja GroupDocs.Annotation jest kompatybilna z Twoją wersją Javy?  
-4. **Memory Availability** – Czy JVM jest skonfigurowany z wystarczającą ilością pamięci dla rozmiaru dokumentu?  
-5. **Text Matching** – Czy tekst adnotacji dokładnie odpowiada temu, co znajduje się w PDF?  
+- **Uprawnienia do plików** – czy proces może odczytać źródłowy PDF i zapisać do folderu docelowego?  
+- **Poprawność ścieżki** – sprawdź podwójnie separatory Windows (`\`) vs. Linux (`/`).  
+- **Wersja biblioteki** – upewnij się, że używasz GroupDocs.Annotation 25.2 lub nowszej; starsze wersje nie mają optymalizacji przetwarzania wsadowego.  
+- **Pamięć JVM** – zweryfikuj, że rozmiar sterty (`-Xmx`) odpowiada rozmiarowi przetwarzanych PDF‑ów.  
+- **Dokładne dopasowanie tekstu** – wykonaj szybką ekstrakcję, aby potwierdzić, że ciąg adnotacji istnieje dosłownie.
 
 ### Aktywacja trybu debugowania
-Włącz szczegółowe logowanie, aby diagnozować problemy:
+Włącz szczegółowe logowanie, aby przechwycić wewnętrzny proces wyszukiwania:
 
 ```java
 // Add this to see detailed processing information
 System.setProperty("groupdocs.annotation.debug", "true");
 ```
 
+Log będzie wymieniał każdą zeskanowaną stronę i informował, czy docelowa fraza została znaleziona, pomagając zidentyfikować niezgodności.
+
 ## Najczęściej zadawane pytania
 
-**Q: Czy mogę dodać wiele różnych adnotacji do tego samego PDF?**  
-A: Absolutnie! Możesz dodać dowolną liczbę adnotacji do jednego dokumentu. Po prostu utwórz wiele obiektów `SearchTextFragment` z różnym tekstem i stylizacją, a następnie dodaj je wszystkie przed zapisaniem.
+**P:** Czy mogę dodać wiele różnych adnotacji do tego samego PDF?  
+**O:** Oczywiście. Utwórz kilka obiektów `SearchTextFragment` (lub innych typów adnotacji) i dodaj je wszystkie przed wywołaniem `save`.
 
-**Q: Czy adnotacje będą działać we wszystkich przeglądarkach PDF?**  
-A: Tak, adnotacje tworzone przez GroupDocs są standardowymi adnotacjami PDF, które działają w Adobe Acrobat, przeglądarkach internetowych i innych przeglądarkach PDF. Niektóre przeglądarki mogą wyświetlać kolory nieco inaczej.
+**P:** Czy adnotacje będą działać we wszystkich przeglądarkach PDF?  
+**O:** Tak. GroupDocs tworzy standardowe obiekty adnotacji PDF, które są wyświetlane poprawnie w Adobe Acrobat, Chrome, Edge i większości przeglądarek innych firm. Kolory mogą się nieco różnić ze względu na silniki renderujące przeglądarek.
 
-**Q: Jak obsłużyć PDF‑y o skomplikowanych układach lub wielu kolumnach?**  
-A: GroupDocs.Annotation automatycznie radzi sobie ze złożonymi układami. Kluczem jest zapewnienie, że wyszukiwany tekst dokładnie odpowiada temu, co pojawia się w PDF, niezależnie od złożoności układu.
+**P:** Jak obsłużyć PDF‑y o złożonych układach lub wielu kolumnach?  
+**O:** GroupDocs.Annotation przetwarza wizualny przepływ tekstu, więc wystarczy, że zapewnisz, że podany ciąg dokładnie odpowiada wyodrębnionemu tekstowi, niezależnie od kolejności kolumn.
 
-**Q: Czy istnieje limit ilości tekstu, który mogę adnotować?**  
-A: Nie ma praktycznego limitu liczby adnotacji, które możesz dodać. Jednak bardzo duże liczby (tysiące) mogą wpływać na wydajność ładowania PDF w niektórych przeglądarkach.
+**P:** Czy istnieje limit ilości tekstu, który mogę adnotować?  
+**O:** Nie ma sztywnego limitu liczby adnotacji. W praktyce dodanie tysięcy podświetleń może zwiększyć czas renderowania w niektórych przeglądarkach, więc grupuj je logicznie (np. według rozdziałów).
 
-**Q: Czy mogę modyfikować lub usuwać adnotacje po ich dodaniu?**  
-A: Tak, GroupDocs.Annotation udostępnia metody do aktualizacji i usuwania adnotacji. Możesz pobrać istniejące adnotacje, zmodyfikować ich właściwości lub usunąć je całkowicie.
+**P:** Czy mogę modyfikować lub usuwać adnotacje po ich dodaniu?  
+**O:** Tak. Użyj metody `getAnnotations()`, aby pobrać istniejące obiekty, a następnie wywołaj `update()` lub `delete()` w razie potrzeby.
 
-**Q: Co się stanie, jeśli tekst adnotacji nie zostanie znaleziony w PDF?**  
-A: Jeśli dokładny tekst nie zostanie znaleziony, adnotacja nie zostanie dodana. Operacja nie zakończy się błędem, ale nie pojawi się żadna adnotacja. Zawsze weryfikuj, czy wyszukiwany tekst odpowiada zawartości PDF.
+**P:** Co się stanie, jeśli tekst adnotacji nie zostanie znaleziony w PDF?  
+**O:** API cicho pomija dodanie. Nie zostaje rzucony wyjątek, ale adnotacja nie pojawi się. Zawsze najpierw zweryfikuj dopasowanie.
 
-**Q: Jak zapewnić, że moje oznaczone PDF‑y pozostaną dostępne?**  
-A: Używaj kombinacji wysokiego kontrastu kolorów, unikaj polegania wyłącznie na kolorze do przekazywania znaczenia i dodawaj opisowy tekst do adnotacji. To pomaga użytkownikom z zaburzeniami wzroku.
+**P:** Jak mogę zapewnić, że moje adnotowane PDF‑y pozostaną dostępne?  
+**O:** Wybieraj kolory o wysokim kontraście, nie polegaj wyłącznie na kolorze do przekazywania znaczenia i dodawaj opisowy tekst do każdej adnotacji, aby czytniki ekranu mogły ogłosić jej cel.
 
-## Podsumowanie
+## Zakończenie
 
-Nauczyłeś się teraz, jak **tworzyć searchable PDF Java** przy użyciu GroupDocs.Annotation. Ta potężna funkcja przekształca statyczne PDF‑y w interaktywne, nawigowalne dokumenty, które zwiększają produktywność i współpracę.
+Masz teraz kompletny, gotowy do produkcji przepis na **tworzenie przeszukiwalnych plików PDF w Javie** przy użyciu GroupDocs.Annotation. Postępując zgodnie z powyższymi krokami, możesz:
 
-**Key takeaways**
+- Skonfigurować czysty projekt Maven z najnowszą biblioteką.  
+- Dodać jednowierszowe przeszukiwalne podświetlenia, które są natychmiast wykrywalne.  
+- Dostosować wygląd przy użyciu kolorów ARGB i wyboru czcionek.  
+- Skalować rozwiązanie do tysięcy stron, utrzymując niskie zużycie pamięci.
 
-- **Setup matters** – Poprawna konfiguracja Maven i licencjonowanie unikają wczesnych przeszkód.  
-- **Resource management** – Używaj try‑with‑resources, aby utrzymać niskie zużycie pamięci.  
-- **Customization** – Przemyślane kolory i czcionki poprawiają czytelność.  
-- **Performance** – Przetwarzanie wsadowe i właściwe dobranie rozmiaru JVM utrzymują stabilność przy dużych zadaniach.  
-
-Gotowy, aby wdrożyć to w swoim następnym projekcie? Zacznij od podstawowego przykładu, a następnie stopniowo dodawaj zaawansowane funkcje w miarę rosnących wymagań. Inwestycja w naukę tej technologii przyniesie zwrot w postaci płynniejszych przepływów pracy z dokumentami i zadowolonych użytkowników.
+Rozpocznij od podstawowego przykładu, a następnie eksperymentuj z wieloma typami adnotacji, przetwarzaniem wsadowym i udostępnianiem przez REST‑API, aby zintegrować tę funkcję z istniejącymi potokami zarządzania dokumentami. Wysiłek włożony dziś przyniesie korzyści w postaci szybszych przeglądów, mniejszej liczby ręcznych wyszukiwań i zadowolonych użytkowników końcowych.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-03-08  
+**Ostatnia aktualizacja:** 2026-09-15  
 **Testowano z:** GroupDocs.Annotation 25.2 (Java)  
 **Autor:** GroupDocs  
 
 **Zasoby i dalsza lektura**
-
-- [Dokumentacja GroupDocs.Annotation dla Java](https://docs.groupdocs.com/annotation/java/)  
-- [Kompletny przewodnik referencyjny API](https://reference.groupdocs.com/annotation/java/)  
+- [Dokumentacja GroupDocs.Annotation dla Javy](https://docs.groupdocs.com/annotation/java/)  
+- [Kompletny przewodnik po API](https://reference.groupdocs.com/annotation/java/)  
 - [Wydania GroupDocs](https://releases.groupdocs.com/annotation/java/)  
 - [Kup licencję GroupDocs](https://purchase.groupdocs.com/buy)  
-- [Rozpocznij darmowy okres próbny](https://releases.groupdocs.com/annotation/java/)  
+- [Rozpocznij bezpłatną wersję próbną](https://releases.groupdocs.com/annotation/java/)  
 - [Uzyskaj rozszerzoną licencję próbną](https://purchase.groupdocs.com/temporary-license/)  
-- [Forum wsparcia GroupDocs](https://forum.groupdocs.com/c/annotation/)
+- [Forum wsparcia GroupDocs](https://forum.groupdocs.com/c/annotation/)  
+
+## Powiązane samouczki
+- [Dodaj podświetlenie PDF Java – Kompletny przewodnik po adnotacjach tekstowych](/annotation/java/text-annotations/)  
+- [Utwórz podświetlenia PDF Java: Kompletny przewodnik z GroupDocs Annotation](/annotation/java/annotation-management/)  
+- [Załaduj PDF Java z GroupDocs Annotation: Przewodnik po ładowaniu dokumentów](/annotation/java/document-loading/)

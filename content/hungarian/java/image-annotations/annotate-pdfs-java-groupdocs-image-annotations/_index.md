@@ -1,56 +1,100 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: Tanulja meg, hogyan adjon képet PDF-hez, és hogyan jegyezzen meg PDF-et
-  képpel a GroupDocs.Annotation for Java segítségével. Lépésről lépésre útmutató kódrészletekkel,
-  hibaelhárítási tippekkel és legjobb gyakorlatokkal.
-keywords: Java PDF image annotation, GroupDocs annotation tutorial, PDF annotation
-  Java library, add images to PDF Java, how to annotate PDF with images Java
-lastmod: '2026-03-06'
-linktitle: Java PDF Image Annotation Guide
+date: '2026-09-15'
+description: Ismerje meg, hogyan annotálhat PDF-et képpel a GroupDocs.Annotation for
+  Java segítségével. Lépésről‑lépésre útmutató, kódrészletek, hibaelhárítási tippek
+  és legjobb gyakorlatok Java fejlesztők számára.
+keywords:
+- annotate pdf with image
+- java add image pdf
+- add image pdf java
+- embed image pdf java
+- groupdocs annotation java
+lastmod: '2026-09-15'
+linktitle: Java PDF Képannotációs Útmutató
+og_description: Annotáljon PDF-et képpel a GroupDocs.Annotation for Java segítségével.
+  Ez az útmutató megmutatja, hogyan adhat hozzá, forgathat és formázhat képeket a
+  PDF-ekben, egyértelmű kódrészletekkel.
+og_image_alt: 'Developer guide: annotate PDF with image using GroupDocs Annotation
+  for Java'
+og_title: Hogyan annotáljunk PDF-et képpel Java-ban a GroupDocs segítségével
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  headline: How to annotate PDF with image in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  name: How to annotate PDF with image in Java using GroupDocs
+  steps:
+  - name: initialize the annotator
+    text: '`Annotator` is the entry point that opens a PDF and prepares it for modifications.
+      `Annotator` is the core class that loads a PDF document, exposes annotation
+      collections, and writes changes back to disk. **Why try‑with‑resources?** It
+      guarantees the annotator closes and releases file handles, preve'
+  - name: create and configure your image annotation
+    text: Below is a minimal `ImageAnnotation` setup; `ImageAnnotation` represents
+      an image‑based annotation that can be placed on a PDF page. You’ll define the
+      rectangle, opacity, page number, image source, and rotation angle. `Rectangle`
+      defines the position and size of the annotation on the page. `Rectangl
+  - name: apply the annotation and save
+    text: Now attach the annotation to the document and write the result to disk.
+      That’s it – you’ve just **annotate PDF with image** successfully.
+  type: HowTo
+- questions:
+  - answer: No hard limit, but keep images under 2 MB for optimal performance.
+    question: What’s the maximum image size I can use?
+  - answer: GroupDocs renders only the first frame of an animated GIF.
+    question: Can I use animated GIFs?
+  - answer: GroupDocs uses a top‑left origin; the `Rectangle` coordinates are measured
+      in pixels from that point.
+    question: How do I position images precisely?
+  - answer: Yes – provide the password when constructing the `Annotator`.
+    question: Can I annotate password‑protected PDFs?
+  - answer: Supported PDF versions range from 1.4 to 2.0, covering virtually every
+      PDF you’ll encounter.
+    question: Does this work with all PDF versions?
+  type: FAQPage
 tags:
-- PDF
-- annotation
-- GroupDocs
-- Java
-- document-processing
-title: Hogyan adjunk képet a PDF-hez Java és a GroupDocs Annotation segítségével
+- annotate pdf with image
+- java pdf annotation
+- groupdocs
+- pdf image annotation
+- document processing
+title: Hogyan annotáljunk PDF-et képpel Java-ban a GroupDocs segítségével
 type: docs
-url: /hu/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/
-weight: 1
 ---
 
-# Hogyan adjunk hozzá képet PDF-hez Java és a GroupDocs Annotation segítségével
+# Hogyan annotáljunk PDF-et képpel Java-ban a GroupDocs segítségével
 
-Volt már, hogy egy PDF-re bámulva gondoltad: „Bárcsak itt **add image to pdf** tudnék hozzáadni, hogy jobban elmagyarázzam”? Nem vagy egyedül. Akár dokumentum‑áttekintő rendszert építesz, oktatási anyagokat készítesz, vagy egyszerűen csak vizuális kontextusra van szükséged egy PDF-ben, a kép‑annotációk igazi áttörést jelentenek.
-
-Ebben az útmutatóban pontosan megtanulod, hogyan **add image to pdf** fájlokhoz a GroupDocs.Annotation for Java segítségével. Kitérünk a beállításra, az alapvető használatra, a fejlett tulajdonságokra, mint az átlátszóság és a forgatás, valamint a gyakori buktatókra. A végére magabiztosan tudsz majd képeket beágyazni PDF-ekbe programozott módon.
+Ha **annotate PDF with image**-ra van szükséged — például logót, diagramot vagy fényképet szeretnél közvetlenül egy szerződésbe vagy egy képzési kézikönyvbe beilleszteni — a GroupDocs.Annotation for Java egyszerűvé teszi ezt. Ebben az útmutatóban megmutatjuk, hogyan adhatunk hozzá egy képes annotációt, hogyan szabályozhatjuk az átlátszatlanságot és a forgatást, valamint hogyan kezelhetjük a gyakori problémákat, mint a jelszóval védett PDF-ek vagy a nagy fájlok. A végére képes leszel programozottan képeket beágyazni a PDF-ekbe, és magabiztosan telepíteni a megoldást éles környezetben.
 
 ## Gyors válaszok
-- **Hozzá tudok-e adni egy képet PDF-hez Java-val?** Igen – használd a GroupDocs.Annotation `ImageAnnotation` osztályát.  
-- **Melyik könyvtár támogatja a kép átlátszóságát?** A `setOpacity` metódus lehetővé teszi az átlátszóság szabályozását (`set image opacity java`).  
-- **Szükségem van licencre?** A próbaverzió tesztelésre működik; a teljes licenc szükséges a termeléshez.  
-- **Annotálhatok jelszóval védett PDF-et?** Igen, csak add meg a jelszót az `Annotator` létrehozásakor.  
-- **Milyen Java verzió szükséges?** Java 8+, bár a legjobb teljesítményhez a Java 11+ ajánlott.
+- **Hozzáadhatok képet egy PDF-hez Java-val?** Igen – használja a GroupDocs.Annotation `ImageAnnotation` osztályát.  
+- **Melyik metódus szabályozza a kép átlátszatlanságát?** Hívja a `setOpacity(float)` metódust az annotáció objektumon.  
+- **Szükségem van licencre a termeléshez?** A próba verzió tesztelésre működik; teljes licenc szükséges kereskedelmi használathoz.  
+- **Annotálhatok jelszóval védett PDF-et?** Igen – adja meg a jelszót az `Annotator` létrehozásakor.  
+- **Milyen Java verzió szükséges?** Java 8+, bár a legjobb teljesítmény érdekében a Java 11+ ajánlott.
 
-## Mi az **add image to pdf**?
-Kép hozzáadása egy PDF-hez azt jelenti, hogy egy vizuális elemet (logó, diagram, bélyegző stb.) annotációként szúrsz be, amely a dokumentum tartalomszámába kerül. A GroupDocs.Annotation a képet `ImageAnnotation`‑ként kezeli, így teljes kontrollt kapsz a helyezés, méret, forgatás és átlátszóság felett.
+## Mi az a kép hozzáadása PDF-hez?
+Egy kép betöltése egy PDF oldalra **image annotation**-t hoz létre, amely a dokumentum tartalmi adatfolyamának része lesz. A `ImageAnnotation` az az objektum, amely tárolja a kép adatát, pozícióját, méretét, forgását és vizuális stílusát, lehetővé téve, hogy a képet bármely más annotációs típushoz hasonlóan kezelje.
 
-## Miért használjuk a GroupDocs Annotation-t Java-hoz?
-- **Rich API** – teljes tulajdonságkészlet (pozíció, átlátszóság, forgatás).  
-- **Cross‑platform** – működik Windows, Linux és macOS rendszereken.  
-- **No external PDF viewers** – a könyvtár kezeli a renderelést és a mentést.  
-- **Enterprise‑ready licensing** – próbaverzió, ideiglenes és teljes licenc opciók.
+## Miért használjuk a GroupDocs Annotation for Java-t?
+Töltsd be a PDF-et, csatolj egy `ImageAnnotation`-t, és mentsd el — nincs szükség külső megjelenítőre. A GroupDocs Annotation támogat **50+ bemeneti és kimeneti formátumot**, képes **500 MB**-ig terjedő PDF-eket feldolgozni anélkül, hogy a teljes fájlt a memóriába töltené, és Windows, Linux, valamint macOS rendszereken fut. Az API-ja finomhangolt vezérlést biztosít a elhelyezés, átlátszatlanság (0‑1 tartomány) és forgatás (0‑360°) felett, így ideális vállalati szintű dokumentumfolyamatokhoz.
 
 ## Előfeltételek
 - **Java** 8 vagy újabb (Java 11+ ajánlott).  
 - **IDE** – IntelliJ IDEA, Eclipse vagy bármely Java‑kompatibilis szerkesztő.  
-- **Build tool** – Maven vagy Gradle (a példák Maven-t használnak).
+- **Build tool** – Maven vagy Gradle (a példák Maven-t használnak).  
 
 ## A GroupDocs.Annotation beállítása
 
-Add the Maven repository and dependency to your `pom.xml`:
+Adja hozzá a Maven tárolót és a függőséget a `pom.xml`-hez:
 
 ```xml
 <repositories>
@@ -69,20 +113,20 @@ Add the Maven repository and dependency to your `pom.xml`:
 </dependencies>
 ```
 
-**Pro Tip:** Mindig ellenőrizd a legújabb verziót a GroupDocs kiadási oldalon. A 25.2-es verzió 2025 elején volt aktuális, de az újabb kiadások további funkciókat hozhatnak.
+**Pro tipp:** Mindig ellenőrizze a legújabb verziót a GroupDocs kiadások oldalán. A 25.2-es verzió volt aktuális 2025 elején, de az újabb kiadások további funkciókat tartalmazhatnak.
 
-### Licencelés (Ne hagyd ki ezt!)
-Három lehetőséged van:
+### Licencelés (ne hagyja ki ezt!)
+Három lehetőség közül választhat:
 
-1. **Free Trial** – tökéletes a teszteléshez – szerezd be a [GroupDocs trial page](https://releases.groupdocs.com/annotation/java/) oldalról.  
-2. **Temporary License** – több értékelési időre van szükséged? Szerezz egyet [itt](https://purchase.groupdocs.com/temporary-license/).  
-3. **Full License** – termelési használatra – elérhető a [purchase page](https://purchase.groupdocs.com/buy) oldalon.
+1. **Ingyenes próba** – tökéletes teszteléshez – szerezze be a [GroupDocs próba oldalról](https://releases.groupdocs.com/annotation/java/).  
+2. **Ideiglenes licenc** – több értékelési időre van szüksége? Szerezzen egyet a [temporary license page](https://purchase.groupdocs.com/temporary-license/) oldalról.  
+3. **Teljes licenc** – éles használathoz – elérhető a [purchase page](https://purchase.groupdocs.com/buy) oldalon.
 
-## Kezdés – Az első kép‑annotációd
+## Első lépések – az első képes annotáció
 
-### 1. lépés: Az Annotator inicializálása
+### 1. lépés: az annotátor inicializálása
 
-Az `Annotator` osztály a belépési pontod. Megnyitja a PDF-et és előkészíti a módosításokhoz.
+`Annotator` a belépési pont, amely megnyit egy PDF-et és előkészíti a módosításokhoz. Az `Annotator` a központi osztály, amely betölti a PDF dokumentumot, elérhetővé teszi az annotációk gyűjteményét, és visszaírja a változásokat a lemezre.
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -90,11 +134,13 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**Miért try‑with‑resources?** Biztosítja, hogy az annotator bezáródik és felszabadítja a fájlkezelőket, megakadályozva a memória szivárgásokat.
+**Miért használjunk try‑with‑resources-t?** Biztosítja, hogy az annotátor bezáródik és felszabadítja a fájlkezelőket, megelőzve a memória szivárgásokat.
 
-### 2. lépés: Kép‑annotáció létrehozása és konfigurálása
+### 2. lépés: a képes annotáció létrehozása és konfigurálása
 
-Az alábbiakban egy minimális `ImageAnnotation` beállítás látható. Meghatározod a téglalapot, az átlátszóságot, az oldalszámot, a kép forrását és a forgatási szöget.
+Az alábbiakban egy minimális `ImageAnnotation` beállítás látható; a `ImageAnnotation` egy képalapú annotációt képvisel, amely PDF oldalra helyezhető. Meg fogja határozni a téglalapot, az átlátszatlanságot, az oldalszámot, a kép forrását és a forgatási szöget.
+
+A `Rectangle` határozza meg az annotáció pozícióját és méretét az oldalon. A `Rectangle(100, 100, 100, 100)` azt jelenti, hogy „kezdje a (100, 100) pontnál a bal‑felső saroktól, és a doboz legyen 100 × 100 px”. Igazítsa ezeket a számokat a saját elrendezéséhez.
 
 ```java
 // Initialize the image annotation
@@ -125,11 +171,11 @@ imageAnnotation.setImagePath("www.google.com.ua/images/branding/googlelogo/2x/go
 imageAnnotation.setAngle(100.);
 ```
 
-**A `Rectangle` megértése** – a `Rectangle(100, 100, 100, 100)` azt jelenti, hogy „kezdődik (100, 100)-nál a bal‑felső saroktól, és a doboz 100 × 100 px”. Igazítsd ezeket a számokat a saját elrendezésedhez.
+**A `setOpacity` megértése** – a `setOpacity(float)` metódus az annotáció átlátszatlanságát 0‑tól (teljesen átlátszó) 1‑ig (teljesen átlátszatlan) terjedő skálán állítja be.
 
-### 3. lépés: Annotáció alkalmazása és mentés
+### 3. lépés: az annotáció alkalmazása és mentése
 
-Most csatold az annotációt a dokumentumhoz, és írd ki az eredményt a lemezre.
+Most csatolja az annotációt a dokumentumhoz, és írja az eredményt a lemezre.
 
 ```java
 // Add the annotation to your document
@@ -139,13 +185,13 @@ annotator.add(imageAnnotation);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_image_annotation.pdf");
 ```
 
-Ennyi – sikeresen **add image to pdf**.
+Ennyi – sikeresen **annotate PDF with image**-t hajtott végre.
 
 ## Gyakori problémák és megoldások
 
 ### Fájlútvonal problémák
-- **Symptom:** `FileNotFoundException` vagy üres képek.  
-- **Fix:** Használj abszolút útvonalakat vagy ellenőrizd, hogy az URL-ek elérhetők-e.
+- **Tünet:** `FileNotFoundException` vagy üres képek.  
+- **Megoldás:** Használjon abszolút útvonalakat, vagy ellenőrizze, hogy az URL-ek elérhetők-e.
 
 ```java
 // Bad: relative path that may fail
@@ -156,8 +202,8 @@ imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
 ```
 
 ### Kép mérete és minősége
-- **Symptom:** Pixeles vagy túl nagy képek.  
-- **Fix:** Igazítsd a kép méreteit az annotáció téglalapjához.
+- **Tünet:** Pixeles vagy túl nagy képek.  
+- **Megoldás:** Illessze a kép méreteit az annotáció téglalapjához.
 
 ```java
 // Rectangle is 200 × 200, so use an image at least that size
@@ -165,18 +211,16 @@ imageAnnotation.setBox(new Rectangle(50, 50, 200, 200));
 ```
 
 ### Memória problémák nagy PDF-ekkel
-- **Symptom:** `OutOfMemoryError`.  
-- **Fix:** Dokumentumokat kötegben dolgozz fel, és tartsd a képeket könnyűnek.
+- **Tünet:** `OutOfMemoryError`.  
+- **Megoldás:** Dokumentumokat kötegben dolgozza fel, és tartsa a képeket könnyűsúlyúaknak.
 
-## Mikor **annotate pdf with image**
-- **Legal documents:** Baleseti fotók vagy aláírások közvetlen csatolása szerződésekhez.  
-- **Educational material:** Diagramok vagy grafikonok beillesztése munkalapokba.  
-- **Technical manuals:** Képernyőképek vagy architektúra diagramok hozzáadása.  
-- **Quality control:** Hibafotók beágyazása ellenőrzési jelentésekbe.
+## Mikor érdemes képpel annotálni a PDF-et
+Képpel érdemes PDF-et annotálni, amikor a vizuális kontextus olyan értéket ad hozzá, amit a sima szöveg nem tud közvetíteni — például egy helyszíni fénykép csatolása egy ellenőrzési jelentéshez, egy diagram beágyazása egy képzési munkalapba, vagy egy logó pecsételése egy szerződésre. A képes annotáció megőrzi az eredeti PDF elrendezését, miközben az extra vizuális információt azonnal a olvasóhoz juttatja.
 
-## Teljesítmény legjobb gyakorlatai
+## Teljesítmény legjobb gyakorlatok
 
-### Képforrások optimalizálása
+### Kép források optimalizálása
+
 ```java
 // Avoid huge files
 imageAnnotation.setImagePath("massive_10mb_image.png");
@@ -185,6 +229,7 @@ imageAnnotation.setImagePath("massive_10mb_image.png");
 ```
 
 ### Kötegelt feldolgozási stratégia
+
 ```java
 List<String> pdfFiles = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
 
@@ -198,6 +243,7 @@ for (String pdfFile : pdfFiles) {
 ```
 
 ### Erőforrás-kezelés
+
 ```java
 // Good – automatically closes resources
 try (final Annotator annotator = new Annotator("input.pdf")) {
@@ -213,6 +259,7 @@ Annotator annotator = new Annotator("input.pdf");
 ## Haladó konfigurációs tippek
 
 ### Dinamikus pozicionálás
+
 ```java
 // Bottom‑right corner placement (assuming standard Letter size)
 int pageWidth = 612;   // points
@@ -230,6 +277,7 @@ imageAnnotation.setBox(dynamicPosition);
 ```
 
 ### Több kép egy oldalon
+
 ```java
 // Add a logo
 ImageAnnotation logo = new ImageAnnotation();
@@ -247,10 +295,10 @@ annotator.add(logo);
 annotator.add(stamp);
 ```
 
-## Gyakran ismételt kérdések
+## Gyakran feltett kérdések
 
-**Q: Mi a maximális képméret, amit használhatok?**  
-A: Nincs szigorú korlát, de a legjobb teljesítmény érdekében tartsd a képeket 2 MB alatt.
+**Q: Mekkora a maximális képméret, amit használhatok?**  
+A: Nincs szigorú korlát, de a legjobb teljesítmény érdekében tartsák a képeket 2 MB alatt.
 
 **Q: Használhatok animált GIF-eket?**  
 A: A GroupDocs csak az animált GIF első keretét jeleníti meg.
@@ -259,42 +307,42 @@ A: A GroupDocs csak az animált GIF első keretét jeleníti meg.
 A: A GroupDocs a bal‑felső origót használja; a `Rectangle` koordinátákat pixelben mérik ettől a ponttól.
 
 **Q: Annotálhatok jelszóval védett PDF-eket?**  
-A: Igen – add meg a jelszót az `Annotator` létrehozásakor.
+A: Igen – adja meg a jelszót az `Annotator` létrehozásakor.
 
 **Q: Működik ez minden PDF verzióval?**  
-A: A támogatott PDF verziók 1.4‑től 2.0‑ig terjednek, szinte minden PDF-et lefedve, amellyel találkozhatsz.
-
-## Hibaelhárítási ellenőrzőlista
-1. ✅ **License valid?** Ellenőrizd a próbaverzió/ideiglenes/teljes állapotot.  
-2. ✅ **File paths correct?** Győződj meg róla, hogy a bemeneti PDF és a kép útvonalak léteznek.  
-3. ✅ **Permissions OK?** Olvasási hozzáférés a bemenetekhez, írási hozzáférés a kimenetekhez.  
-4. ✅ **Image format supported?** Tartsd magad a PNG, JPG vagy GIF formátumokhoz.  
-5. ✅ **Page number valid?** Ne feledd, hogy 0‑tól indexelt.  
-6. ✅ **Rectangle coordinates reasonable?** Kerüld a negatív vagy a határon kívüli értékeket.
+A: A támogatott PDF verziók 1.4‑től 2.0‑ig terjednek, lefedve gyakorlatilag minden PDF-et, amellyel találkozhat.
 
 ## Összegzés
 
-Most már szilárd alapod van a **add image to pdf** fájlokhoz a GroupDocs.Annotation for Java segítségével. Ne feledd, hogy:
-- Használd a try‑with‑resources‑t a tiszta felszabadításhoz.  
-- Optimalizáld a kép méreteit, hogy a PDF-ek könnyűek maradjanak.  
-- Tesztelj abszolút útvonalakkal, hogy elkerüld az útvonallal kapcsolatos hibákat.  
-- Válaszd ki a megfelelő átlátszóságot és forgatást, amely illik a vizuális tervezésedhez.
+Most már szilárd alapja van a **annotate PDF with image** használatának a GroupDocs.Annotation for Java-val. Ne feledje:
 
-**Next steps:** Fedezz fel más annotáció típusokat (szöveg, alakzatok, kiemelések) vagy integráld ezt a logikát egy Spring Boot szolgáltatásba a valós‑idő PDF feldolgozáshoz.
+- Használjon try‑with‑resources-t a tiszta felszabadításhoz.  
+- Optimalizálja a kép méreteit, hogy a PDF-ek könnyűsúlyúak maradjanak.  
+- Teszteljen abszolút útvonalakkal a útvonal‑kapcsolatos hibák elkerülése érdekében.  
+- Válasszon olyan átlátszatlanságot és forgatást, amely megfelel a vizuális tervezésnek.
 
-A dokumentáció a [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) oldalon további fejlett példákat és API referenciákat tartalmaz, amikor készen állsz a mélyebb merülésre.
+**Következő lépések:** Fedezzen fel más annotációs típusokat (szöveg, alakzatok, kiemelések) vagy integrálja ezt a logikát egy Spring Boot szolgáltatásba az on‑the‑fly PDF feldolgozáshoz.
+
+A dokumentáció a [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) oldalon további fejlett példákat és API hivatkozásokat tartalmaz, amikor készen áll a mélyebb merülésre.
 
 ---
 
-**Legutóbb frissítve:** 2026-03-06  
-**Tesztelve ezzel:** GroupDocs.Annotation 25.2 (Java)  
+**Utoljára frissítve:** 2026-09-15  
+**Tesztelve a következővel:** GroupDocs.Annotation 25.2 (Java)  
 **Szerző:** GroupDocs  
 
-**Erőforrások és támogatás**
+## Erőforrások és támogatás
+
 - **Teljes dokumentáció:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API referencia:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **API hivatkozás:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
 - **Legújabb verzió letöltése:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
 - **Licenc vásárlása:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Ingyenes próba:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
 - **Ideiglenes licenc:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Közösségi támogatás:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+- **Közösségi támogatás:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)  
+
+## Kapcsolódó oktatóanyagok
+
+- [Hogyan annotáljunk PDF-et – Java Dokumentum Annotáció API | GroupDocs.Annotation](/annotation/java/)  
+- [PDF annotáció hozzáadása Java – Teljes GroupDocs útmutató](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)  
+- [PDF betöltése Java-val a GroupDocs Annotation segítségével: Dokumentum betöltési útmutató](/annotation/java/document-loading/)

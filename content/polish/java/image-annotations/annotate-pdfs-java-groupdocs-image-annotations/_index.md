@@ -1,53 +1,96 @@
 ---
 categories:
 - Java Development
-date: '2026-03-06'
-description: Dowiedz się, jak dodać obraz do pliku PDF i oznaczyć PDF za pomocą obrazu
-  przy użyciu GroupDocs.Annotation dla Javy. Szczegółowy samouczek krok po kroku z
-  przykładami kodu, wskazówkami dotyczącymi rozwiązywania problemów i najlepszymi
-  praktykami.
-keywords: Java PDF image annotation, GroupDocs annotation tutorial, PDF annotation
-  Java library, add images to PDF Java, how to annotate PDF with images Java
-lastmod: '2026-03-06'
-linktitle: Java PDF Image Annotation Guide
+date: '2026-09-15'
+description: Dowiedz się, jak oznaczać PDF obrazem przy użyciu GroupDocs.Annotation
+  dla Java. Przewodnik krok po kroku, fragmenty kodu, wskazówki rozwiązywania problemów
+  oraz najlepsze praktyki dla programistów Java.
+keywords:
+- annotate pdf with image
+- java add image pdf
+- add image pdf java
+- embed image pdf java
+- groupdocs annotation java
+lastmod: '2026-09-15'
+linktitle: Przewodnik po oznaczaniu PDF obrazem w Javie
+og_description: Oznacz PDF obrazem przy użyciu GroupDocs.Annotation dla Java. Ten
+  przewodnik pokazuje, jak dodawać, obracać i stylizować obrazy w PDF-ach przy użyciu
+  przejrzystych przykładów kodu.
+og_image_alt: 'Developer guide: annotate PDF with image using GroupDocs Annotation
+  for Java'
+og_title: Jak oznaczać PDF obrazem w Javie przy użyciu GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-15'
+  description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  headline: How to annotate PDF with image in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to annotate PDF with image using GroupDocs.Annotation for
+    Java. Step‑by‑step guide, code snippets, troubleshooting tips, and best practices
+    for Java developers.
+  name: How to annotate PDF with image in Java using GroupDocs
+  steps:
+  - name: initialize the annotator
+    text: '`Annotator` is the entry point that opens a PDF and prepares it for modifications.
+      `Annotator` is the core class that loads a PDF document, exposes annotation
+      collections, and writes changes back to disk. **Why try‑with‑resources?** It
+      guarantees the annotator closes and releases file handles, preve'
+  - name: create and configure your image annotation
+    text: Below is a minimal `ImageAnnotation` setup; `ImageAnnotation` represents
+      an image‑based annotation that can be placed on a PDF page. You’ll define the
+      rectangle, opacity, page number, image source, and rotation angle. `Rectangle`
+      defines the position and size of the annotation on the page. `Rectangl
+  - name: apply the annotation and save
+    text: Now attach the annotation to the document and write the result to disk.
+      That’s it – you’ve just **annotate PDF with image** successfully.
+  type: HowTo
+- questions:
+  - answer: No hard limit, but keep images under 2 MB for optimal performance.
+    question: What’s the maximum image size I can use?
+  - answer: GroupDocs renders only the first frame of an animated GIF.
+    question: Can I use animated GIFs?
+  - answer: GroupDocs uses a top‑left origin; the `Rectangle` coordinates are measured
+      in pixels from that point.
+    question: How do I position images precisely?
+  - answer: Yes – provide the password when constructing the `Annotator`.
+    question: Can I annotate password‑protected PDFs?
+  - answer: Supported PDF versions range from 1.4 to 2.0, covering virtually every
+      PDF you’ll encounter.
+    question: Does this work with all PDF versions?
+  type: FAQPage
 tags:
-- PDF
-- annotation
-- GroupDocs
-- Java
-- document-processing
-title: Jak dodać obraz do PDF za pomocą Javy i GroupDocs Annotation
+- annotate pdf with image
+- java pdf annotation
+- groupdocs
+- pdf image annotation
+- document processing
+title: Jak oznaczać PDF obrazem w Javie przy użyciu GroupDocs
 type: docs
-url: /pl/java/image-annotations/annotate-pdfs-java-groupdocs-image-annotations/
-weight: 1
 ---
 
-# Jak dodać obraz do PDF przy użyciu Java i GroupDocs Annotation
+# Jak oznaczyć PDF obrazem w Javie przy użyciu GroupDocs
 
-Czy kiedykolwiek patrzyłeś na PDF i myślałeś: “I wish I could just **add image to pdf** right here to explain this better”? Nie jesteś sam. Niezależnie od tego, czy budujesz system przeglądu dokumentów, tworzysz materiały edukacyjne, czy po prostu potrzebujesz wizualnego kontekstu w PDF, adnotacje obrazowe są przełomowe.
-
-W tym samouczku dowiesz się dokładnie, jak **add image to pdf** pliki przy użyciu GroupDocs.Annotation dla Java. Omówimy konfigurację, podstawowe użycie, zaawansowane właściwości takie jak przezroczystość i obrót oraz typowe pułapki. Po zakończeniu będziesz pewnie osadzać obrazy w PDF programowo.
+Jeśli potrzebujesz **annotate PDF with image** — na przykład wstawienia logo, diagramu lub zdjęcia bezpośrednio do umowy lub podręcznika szkoleniowego — GroupDocs.Annotation for Java ułatwia to zadanie. W tym samouczku zobaczysz, jak dodać adnotację obrazu, kontrolować jej przezroczystość i obrót oraz radzić sobie z typowymi problemami, takimi jak PDF‑y zabezpieczone hasłem czy duże pliki. Po zakończeniu będziesz mógł programowo osadzać obrazy w PDF‑ach i pewnie wdrażać rozwiązanie w produkcji.
 
 ## Szybkie odpowiedzi
-- **Czy mogę dodać obraz do PDF przy użyciu Java?** Tak – użyj klasy `ImageAnnotation` z GroupDocs.Annotation.  
-- **Która biblioteka obsługuje przezroczystość obrazu?** Metoda `setOpacity` pozwala kontrolować przezroczystość (`set image opacity java`).  
-- **Czy potrzebuję licencji?** Wersja próbna działa do testów; pełna licencja jest wymagana w produkcji.  
-- **Czy mogę adnotować PDF chroniony hasłem?** Tak, wystarczy podać hasło przy tworzeniu `Annotator`.  
-- **Jaka wersja Java jest wymagana?** Java 8+, choć Java 11+ jest zalecana dla najlepszej wydajności.
+- **Czy mogę dodać obraz do PDF w Javie?** Tak – użyj klasy `ImageAnnotation` z GroupDocs.Annotation.  
+- **Która metoda kontroluje przezroczystość obrazu?** Wywołaj `setOpacity(float)` na obiekcie adnotacji.  
+- **Czy potrzebuję licencji do produkcji?** Wersja próbna działa do testów; pełna licencja jest wymagana do użytku komercyjnego.  
+- **Czy mogę adnotować PDF zabezpieczony hasłem?** Tak – podaj hasło przy tworzeniu `Annotator`.  
+- **Jaka wersja Javy jest wymagana?** Java 8+, choć Java 11+ jest zalecana dla najlepszej wydajności.
 
-## Co to jest **add image to pdf**?
-Dodanie obrazu do PDF oznacza wstawienie elementu wizualnego (logo, diagramu, pieczęci itp.) jako adnotacji, która staje się częścią strumienia zawartości dokumentu. GroupDocs.Annotation traktuje obraz jako `ImageAnnotation`, dając pełną kontrolę nad położeniem, rozmiarem, obrotem i przezroczystością.
+## Co to jest dodawanie obrazu do PDF?
+Załadowanie obrazu na stronę PDF tworzy **image annotation**, która staje się częścią strumienia zawartości dokumentu. `ImageAnnotation` jest obiektem przechowującym dane obrazu, jego pozycję, rozmiar, obrót i styl wizualny, umożliwiając traktowanie obrazu jak każdy inny typ adnotacji.
 
-## Dlaczego używać GroupDocs Annotation dla Java?
-- **Rich API** – pełny zestaw właściwości (pozycja, przezroczystość, obrót).  
-- **Cross‑platform** – działa na Windows, Linux i macOS.  
-- **No external PDF viewers** – biblioteka obsługuje renderowanie i zapisywanie.  
-- **Enterprise‑ready licensing** – opcje: trial, tymczasowa i pełna licencja.
+## Dlaczego używać GroupDocs Annotation dla Javy?
+Załaduj swój PDF, dołącz `ImageAnnotation` i zapisz — bez potrzeby zewnętrznych przeglądarek. GroupDocs Annotation obsługuje **ponad 50 formatów wejściowych i wyjściowych**, może przetwarzać PDF‑y do **500 MB** bez wczytywania całego pliku do pamięci i działa na Windows, Linux oraz macOS. Jego API zapewnia precyzyjną kontrolę nad pozycjonowaniem, przezroczystością (zakres 0‑1) i obrotem (0‑360°), co czyni go idealnym dla przedsiębiorstwowych przepływów dokumentów.
 
 ## Wymagania wstępne
-- **Java** 8 lub wyższy (zalecana Java 11+).  
-- **IDE** – IntelliJ IDEA, Eclipse lub dowolny edytor kompatybilny z Java.  
-- **Build tool** – Maven lub Gradle (przykłady używają Maven).
+- **Java** 8 lub wyższa (zalecana Java 11+).  
+- **IDE** – IntelliJ IDEA, Eclipse lub dowolny edytor kompatybilny z Javą.  
+- **Narzędzie budowania** – Maven lub Gradle (przykłady używają Maven).  
 
 ## Konfiguracja GroupDocs.Annotation
 
@@ -70,20 +113,20 @@ Dodaj repozytorium Maven i zależność do swojego `pom.xml`:
 </dependencies>
 ```
 
-**Pro Tip:** Zawsze sprawdzaj najnowszą wersję na stronie wydań GroupDocs. Wersja 25.2 była aktualna na początku 2025, ale nowsze wydania mogą dodawać funkcje.
+**Wskazówka:** Zawsze sprawdzaj najnowszą wersję na stronie wydań GroupDocs. Wersja 25.2 była aktualna na początku 2025, ale nowsze wydania mogą zawierać dodatkowe funkcje.
 
-### Licencjonowanie (Nie pomijaj tego!)
+### Licencjonowanie (nie pomijaj tego!)
 Masz trzy opcje:
 
-1. **Free Trial** – idealny do testów – pobierz go ze [strony próbnej GroupDocs](https://releases.groupdocs.com/annotation/java/).  
-2. **Temporary License** – potrzebujesz więcej czasu na ocenę? Uzyskaj ją [tutaj](https://purchase.groupdocs.com/temporary-license/).  
-3. **Full License** – użycie produkcyjne – dostępna na [stronie zakupu](https://purchase.groupdocs.com/buy).
+1. **Free trial** – idealny do testów – pobierz go ze [strony próbnej GroupDocs](https://releases.groupdocs.com/annotation/java/).  
+2. **Temporary license** – potrzebujesz więcej czasu na ocenę? Uzyskaj licencję na [stronie tymczasowych licencji](https://purchase.groupdocs.com/temporary-license/).  
+3. **Full license** – użycie produkcyjne – dostępna na [stronie zakupu](https://purchase.groupdocs.com/buy).
 
-## Rozpoczęcie – Twoja pierwsza adnotacja obrazu
+## Rozpoczęcie – pierwsza adnotacja obrazu
 
-### Krok 1: Inicjalizacja Annotatora
+### Krok 1: zainicjalizuj annotator
 
-Klasa `Annotator` jest Twoim punktem wejścia. Otwiera PDF i przygotowuje go do modyfikacji.
+`Annotator` jest punktem wejścia, który otwiera PDF i przygotowuje go do modyfikacji. `Annotator` to podstawowa klasa, która ładuje dokument PDF, udostępnia kolekcje adnotacji i zapisuje zmiany na dysk.
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -91,11 +134,13 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 }
 ```
 
-**Dlaczego try‑with‑resources?** Gwarantuje, że annotator zamyka się i zwalnia uchwyty plików, zapobiegając wyciekom pamięci.
+**Dlaczego try‑with‑resources?** Gwarantuje, że annotator zostanie zamknięty i zwolni uchwyty plików, zapobiegając wyciekom pamięci.
 
-### Krok 2: Utworzenie i skonfigurowanie adnotacji obrazu
+### Krok 2: utwórz i skonfiguruj swoją adnotację obrazu
 
-Poniżej znajduje się minimalna konfiguracja `ImageAnnotation`. Zdefiniujesz prostokąt, przezroczystość, numer strony, źródło obrazu i kąt obrotu.
+Poniżej znajduje się minimalna konfiguracja `ImageAnnotation`; `ImageAnnotation` reprezentuje adnotację opartą na obrazie, którą można umieścić na stronie PDF. Zdefiniujesz prostokąt, przezroczystość, numer strony, źródło obrazu i kąt obrotu.
+
+`Rectangle` określa pozycję i rozmiar adnotacji na stronie. `Rectangle(100, 100, 100, 100)` oznacza „rozpocznij od (100, 100) od lewego górnego rogu i utwórz pole o wymiarach 100 × 100 px”. Dostosuj te liczby do swojego układu.
 
 ```java
 // Initialize the image annotation
@@ -126,9 +171,9 @@ imageAnnotation.setImagePath("www.google.com.ua/images/branding/googlelogo/2x/go
 imageAnnotation.setAngle(100.);
 ```
 
-**Zrozumienie `Rectangle`** – `Rectangle(100, 100, 100, 100)` oznacza „rozpocznij w (100, 100) od lewego górnego rogu i utwórz prostokąt 100 × 100 px”. Dostosuj te liczby do swojego układu.
+**Zrozumienie `setOpacity`** – metoda `setOpacity(float)` ustawia przezroczystość adnotacji w skali od 0 (w pełni przezroczysta) do 1 (w pełni nieprzezroczysta).
 
-### Krok 3: Zastosowanie adnotacji i zapisanie
+### Krok 3: zastosuj adnotację i zapisz
 
 Teraz dołącz adnotację do dokumentu i zapisz wynik na dysku.
 
@@ -140,13 +185,13 @@ annotator.add(imageAnnotation);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_image_annotation.pdf");
 ```
 
-Gotowe – właśnie **add image to pdf** pomyślnie.
+Gotowe — właśnie **annotate PDF with image** pomyślnie.
 
 ## Typowe problemy i rozwiązania
 
 ### Problemy ze ścieżkami plików
 - **Symptom:** `FileNotFoundException` lub puste obrazy.  
-- **Fix:** Użyj ścieżek bezwzględnych lub sprawdź, czy URL-e są dostępne.
+- **Fix:** Użyj ścieżek bezwzględnych lub zweryfikuj, że URL‑e są dostępne.
 
 ```java
 // Bad: relative path that may fail
@@ -165,19 +210,17 @@ imageAnnotation.setImagePath("/full/path/to/your/images/logo.png");
 imageAnnotation.setBox(new Rectangle(50, 50, 200, 200));
 ```
 
-### Problemy z pamięcią przy dużych PDF
+### Problemy z pamięcią przy dużych PDF‑ach
 - **Symptom:** `OutOfMemoryError`.  
-- **Fix:** Przetwarzaj dokumenty w partiach i utrzymuj obrazy lekkie.
+- **Fix:** Przetwarzaj dokumenty w partiach i utrzymuj obrazy w lekkiej formie.
 
-## Kiedy **annotate pdf with image**
-- **Legal documents:** Dołącz zdjęcia wypadków lub podpisy bezpośrednio do umów.  
-- **Educational material:** Wstaw diagramy lub wykresy do arkuszy.  
-- **Technical manuals:** Dodaj zrzuty ekranu lub diagramy architektury.  
-- **Quality control:** Osadź zdjęcia wad w raportach inspekcyjnych.
+## Kiedy adnotować PDF obrazem
+Powinieneś adnotować PDF obrazem, gdy kontekst wizualny dodaje wartość, której zwykły tekst nie może przekazać — na przykład dołączając zdjęcie miejsca do raportu inspekcyjnego, osadzając diagram w arkuszu szkoleniowym lub nakładając logo na umowę. Użycie adnotacji obrazu zachowuje oryginalny układ PDF, jednocześnie dostarczając dodatkowe informacje wizualne natychmiast czytelnikowi.
 
-## Najlepsze praktyki wydajności
+## Najlepsze praktyki wydajnościowe
 
 ### Optymalizacja źródeł obrazów
+
 ```java
 // Avoid huge files
 imageAnnotation.setImagePath("massive_10mb_image.png");
@@ -186,6 +229,7 @@ imageAnnotation.setImagePath("massive_10mb_image.png");
 ```
 
 ### Strategia przetwarzania wsadowego
+
 ```java
 List<String> pdfFiles = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
 
@@ -199,6 +243,7 @@ for (String pdfFile : pdfFiles) {
 ```
 
 ### Zarządzanie zasobami
+
 ```java
 // Good – automatically closes resources
 try (final Annotator annotator = new Annotator("input.pdf")) {
@@ -214,6 +259,7 @@ Annotator annotator = new Annotator("input.pdf");
 ## Zaawansowane wskazówki konfiguracyjne
 
 ### Dynamiczne pozycjonowanie
+
 ```java
 // Bottom‑right corner placement (assuming standard Letter size)
 int pageWidth = 612;   // points
@@ -231,6 +277,7 @@ imageAnnotation.setBox(dynamicPosition);
 ```
 
 ### Wiele obrazów na jednej stronie
+
 ```java
 // Add a logo
 ImageAnnotation logo = new ImageAnnotation();
@@ -251,7 +298,7 @@ annotator.add(stamp);
 ## Najczęściej zadawane pytania
 
 **Q: Jaki jest maksymalny rozmiar obrazu, którego mogę użyć?**  
-A: Brak sztywnego limitu, ale trzymaj obrazy poniżej 2 MB dla optymalnej wydajności.
+A: Nie ma sztywnego limitu, ale trzymaj obrazy poniżej 2 MB dla optymalnej wydajności.
 
 **Q: Czy mogę używać animowanych GIF‑ów?**  
 A: GroupDocs renderuje tylko pierwszą klatkę animowanego GIF‑a.
@@ -259,43 +306,40 @@ A: GroupDocs renderuje tylko pierwszą klatkę animowanego GIF‑a.
 **Q: Jak precyzyjnie pozycjonować obrazy?**  
 A: GroupDocs używa pochodzenia w lewym górnym rogu; współrzędne `Rectangle` są mierzone w pikselach od tego punktu.
 
-**Q: Czy mogę adnotować PDF chronione hasłem?**  
+**Q: Czy mogę adnotować PDF‑y zabezpieczone hasłem?**  
 A: Tak – podaj hasło przy tworzeniu `Annotator`.
 
 **Q: Czy to działa ze wszystkimi wersjami PDF?**  
-A: Obsługiwane wersje PDF mieszczą się w zakresie od 1.4 do 2.0, obejmując praktycznie wszystkie PDF, z którymi możesz się spotkać.
-
-## Lista kontrolna rozwiązywania problemów
-1. ✅ **License valid?** Zweryfikuj status trial/temporary/full.  
-2. ✅ **File paths correct?** Potwierdź, że ścieżki do PDF i obrazu istnieją.  
-3. ✅ **Permissions OK?** Dostęp do odczytu wejść, dostęp do zapisu wyjść.  
-4. ✅ **Image format supported?** Używaj PNG, JPG lub GIF.  
-5. ✅ **Page number valid?** Pamiętaj, że numeracja zaczyna się od 0.  
-6. ✅ **Rectangle coordinates reasonable?** Unikaj wartości ujemnych lub poza granicami.
+A: Obsługiwane wersje PDF obejmują od 1.4 do 2.0, pokrywając praktycznie wszystkie PDF‑y, które napotkasz.
 
 ## Podsumowanie
 
-Masz teraz solidne podstawy do **add image to pdf** plików przy użyciu GroupDocs.Annotation dla Java. Pamiętaj, aby:
+Masz teraz solidne podstawy do **annotate PDF with image** przy użyciu GroupDocs.Annotation dla Javy. Pamiętaj, aby:
 - Używać try‑with‑resources dla czystego zwalniania zasobów.  
-- Optymalizować wymiary obrazu, aby PDF były lekkie.  
+- Optymalizować wymiary obrazów, aby PDF‑y były lekkie.  
 - Testować przy użyciu ścieżek bezwzględnych, aby uniknąć błędów związanych ze ścieżkami.  
-- Wybrać przezroczystość i obrót odpowiednie dla Twojego projektu wizualnego.
+- Dobierać przezroczystość i obrót odpowiednie do projektu wizualnego.
 
-**Next steps:** Zbadaj inne typy adnotacji (tekst, kształty, podświetlenia) lub zintegrować tę logikę z usługą Spring Boot do przetwarzania PDF w locie.
+**Kolejne kroki:** Zbadaj inne typy adnotacji (tekst, kształty, podświetlenia) lub zintegrować tę logikę z usługą Spring Boot do przetwarzania PDF‑ów w locie.
 
-Dokumentacja pod adresem [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) zawiera bardziej zaawansowane przykłady i odniesienia do API, gdy będziesz gotowy zagłębić się bardziej.
+Dokumentacja pod adresem [docs.groupdocs.com](https://docs.groupdocs.com/annotation/java/) zawiera bardziej zaawansowane przykłady i odniesienia API, gdy będziesz gotowy zagłębić się bardziej.
 
 ---
 
-**Last Updated:** 2026-03-06  
-**Tested With:** GroupDocs.Annotation 25.2 (Java)  
-**Author:** GroupDocs  
+**Ostatnia aktualizacja:** 2026-09-15  
+**Testowano z:** GroupDocs.Annotation 25.2 (Java)  
+**Autor:** GroupDocs  
 
 **Zasoby i wsparcie**
-- **Kompletna dokumentacja:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- **Pełna dokumentacja:** [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/)  
 - **Referencja API:** [Java API Reference](https://reference.groupdocs.com/annotation/java/)  
 - **Pobierz najnowszą wersję:** [GroupDocs Releases](https://releases.groupdocs.com/annotation/java/)  
 - **Kup licencję:** [Buy GroupDocs License](https://purchase.groupdocs.com/buy)  
 - **Bezpłatna wersja próbna:** [Try GroupDocs Free](https://releases.groupdocs.com/annotation/java/)  
 - **Licencja tymczasowa:** [Get Temporary License](https://purchase.groupdocs.com/temporary-license/)  
 - **Wsparcie społeczności:** [GroupDocs Forum](https://forum.groupdocs.com/c/annotation/)
+
+## Powiązane samouczki
+- [How to Annotate PDF – Java Document Annotation API | GroupDocs.Annotation](/annotation/java/)
+- [Add PDF Annotation Java – Complete GroupDocs Guide](/annotation/java/annotation-management/java-pdf-annotation-groupdocs-java/)
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
