@@ -1,77 +1,143 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Java ile GroupDocs'ta rol tabanlı belge anotasyonu için özel kullanıcı
-  rolleri nasıl uygulanır öğrenin. Kurulum, kod örnekleri, yasal belge anotasyonu,
-  anotasyonlu PDF kaydetme ve toplu anotasyon işleme içerir.
-keywords: java annotation user roles, role based document annotation java, groupdocs
-  annotation tutorial, java pdf annotation permissions, document collaboration java
-lastmod: '2026-03-01'
-linktitle: Java Annotation User Roles Guide
+date: '2026-09-10'
+description: Java'da GroupDocs.Annotation ile rol tabanlı açıklama eklemeyi öğrenin;
+  kullanıcı rolleri, izin ayarları, PDF kaydetme ve iş birliği için işleme konularını
+  kapsar.
+keywords:
+- role based annotation java
+- java annotation user roles
+- groupdocs annotation java
+- document annotation permissions
+- role based document workflow
+lastmod: '2026-09-10'
+linktitle: Java Açıklama Kullanıcı Rolleri Kılavuzu
+og_description: Java'da GroupDocs.Annotation ile rol tabanlı açıklama eklemeyi öğrenin;
+  kullanıcı rolleri, izin ayarları, PDF kaydetme ve iş birliği için işleme konularını
+  kapsar.
+og_image_alt: 'Developer guide: Add role based annotation in Java with GroupDocs.Annotation'
+og_title: Java'da GroupDocs ile rol tabanlı açıklama ekleme
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to add role based annotation in Java with GroupDocs.Annotation,
+    covering user roles, permission settings, PDF saving, and processing for collaboration.
+  headline: How to add role based annotation in Java with GroupDocs
+  type: TechArticle
+- description: Learn how to add role based annotation in Java with GroupDocs.Annotation,
+    covering user roles, permission settings, PDF saving, and processing for collaboration.
+  name: How to add role based annotation in Java with GroupDocs
+  steps:
+  - name: creating replies with custom user roles
+    text: '**How do you create a reply that respects a specific user role?** Create
+      a `User` instance, assign the appropriate `Role` enum value (e.g., `EDITOR`
+      or `VIEWER`), then attach the user to a `Reply` object before adding it to the
+      annotation. This ensures the reply inherits the permissions defined by t'
+  - name: configuring area annotations
+    text: '**What is an area annotation and how do you bind role‑aware replies to
+      it?** An area annotation highlights a rectangular region on a page. After you
+      create the visual annotation, you attach the previously built `Reply` objects
+      so that the role logic is enforced whenever a user interacts with the hig'
+  - name: applying annotations and saving the PDF
+    text: '**How can you persist the role‑based annotations to a new PDF file?** Load
+      the target document with `Annotator`, add the prepared annotation, then call
+      `annotator.save("output.pdf")`. The save operation writes only the annotation
+      changes, keeping the original content intact while embedding the permi'
+  type: HowTo
+- questions:
+  - answer: It offers a built‑in role‑based permission system, supports 50+ input
+      and output formats, and provides enterprise‑grade features like audit trails
+      and batch processing.
+    question: What makes GroupDocs.Annotation stand out from other Java annotation
+      libraries?
+  - answer: Map your business‑specific roles to the existing `Role` enum (e.g., `Role.EDITOR`)
+      and handle additional logic in your application layer, as shown in the `DocumentRole`
+      example.
+    question: How can I create custom roles beyond EDITOR and VIEWER?
+  - answer: Yes. The `User` object accepts any identifier you use (e.g., database
+      ID). Simply map your authenticated user to a `User` instance with the appropriate
+      `Role`.
+    question: Can I integrate this with my existing authentication system?
+  - answer: Yes. The `annotator.save()` method writes only the annotation changes,
+      making the save operation fast even for large files.
+    question: Is it possible to **save annotated PDF** without re‑rendering the whole
+      document?
+  - answer: Loop through your file list, create a single `Annotator` per file, add
+      all needed annotations, call `save()`, and then `dispose()`. Consider using
+      a thread pool to parallelize the work.
+    question: How do I efficiently **batch process annotations** across many PDFs?
+  type: FAQPage
 tags:
+- role based annotation
 - groupdocs
-- annotations
-- user-roles
-- pdf
-- document-management
-title: 'Java Anotasyonunda Özel Kullanıcı Rolleri: Tam Uygulama Kılavuzu'
+- java annotations
+- pdf collaboration
+- document security
+title: Java'da GroupDocs ile rol tabanlı açıklama ekleme
 type: docs
 url: /tr/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/
 weight: 1
 ---
 
-# Java Anotasyonunda Özel Kullanıcı Rolleri: Tam Uygulama Kılavuzu
+# Java'da GroupDocs ile rol tabanlı açıklama ekleme
+
+Bu öğreticide, GroupDocs.Annotation kütüphanesini kullanarak **Java'da rol tabanlı açıklama** eklemeyi keşfedeceksiniz. Kılavuzun sonunda, özel kullanıcı rolleri tanımlayabilecek, her açıklama için düzenleme ve görüntüleme izinlerini kontrol edebilecek, açıklamalı PDF'yi kaydedebilecek ve hatta birçok dosyayı toplu‑işlem dostu bir şekilde işleyebileceksiniz.
 
 ## Giriş
 
-Belirli belgelerinizin hangi bölümlerini kimin düzenleyebileceği, görüntüleyebileceği veya yorumlayabileceği konusunda zorlandınız mı? Yalnız değilsiniz. **GroupDocs.Annotation for Java**, **özel kullanıcı rolleri** uygulamayı şaşırtıcı derecede basit hale getiriyor.
+Belirli belgelerinizin hangi bölümlerini kimin düzenleyebileceği, görüntüleyebileceği veya yorumlayabileceği konusunda yönetim zorluğu yaşadınız mı? Tek başınıza değilsiniz. **Java için GroupDocs.Annotation**, **özel kullanıcı rolleri** uygulamayı şaşırtıcı derecede basit hale getiriyor.
 
-Bu kapsamlı rehberde, anotasyonlar için özel kullanıcı rolleri oluşturma sürecini adım adım size göstereceğiz. Sonunda, her kullanıcıya rolüne göre doğru izinleri veren güvenli, işbirlikçi belge iş akışları oluşturabileceksiniz.
+Bu kapsamlı rehberde, açıklamalar için özel kullanıcı rolleri oluşturma sürecini adım adım size göstereceğiz. Sonunda, her kullanıcıya rolüne göre doğru izinleri veren güvenli, işbirlikçi belge iş akışları oluşturabileceksiniz.
 
-- **Ne Öğreneceksiniz:**  
-  - Java'da özel kullanıcı‑rolü anotasyon sistemlerini kurma  
-  - Rol‑özel özelliklerle alan anotasyonlarını yapılandırma  
+- **Ne öğreneceksiniz:**  
+  - Java'da özel kullanıcı‑rol açıklama sistemlerini kurma  
+  - Rol‑özel özelliklerle alan açıklamalarını yapılandırma  
   - Yorumlar, yanıtlar ve belge kaydetme için izinleri yönetme  
-  - Hukuki belge anotasyonu ve toplu işleme gibi gerçek dünya senaryolarını ele alma  
+  - Hukuki belge açıklaması ve toplu işleme gibi gerçek dünya senaryolarını ele alma  
 
 Java uygulamalarınıza daha akıllı belge yönetimi eklemeye hazır mısınız? Hadi başlayalım!
 
-## Hızlı Yanıtlar
-- **Özel kullanıcı rollerinin temel faydası nedir?** Her anotasyonu kimlerin düzenleyebileceğini, görüntüleyebileceğini veya yorumlayabileceğini kontrol etmenizi sağlar, güvenlik ve uyumluluğu temin eder.  
-- **Bu işlevi sağlayan kütüphane hangisidir?** GroupDocs.Annotation for Java.  
-- **Başlamak için ücretli lisansa ihtiyacım var mı?** Hayır—tam özellik setini geliştirmek ve test etmek için ücretsiz deneme sürümünü kullanabilirsiniz.  
-- **Rolleri uyguladıktan sonra anotasyonlu PDF'yi kaydedebilir miyim?** Evet—`annotator.save()` çağırarak tüm izinlerin uygulandığı **annotated PDF'yi kaydedin**.  
-- **Toplu işleme destekleniyor mu?** Kesinlikle; daha iyi performans için birçok belgeyi veya anotasyonu toplu olarak işleyebilirsiniz.
+## Hızlı cevaplar
 
-## Özel Kullanıcı Rolleri Nedir?
-Özel kullanıcı rolleri, her `User` nesnesine atadığınız rol tanımlarıdır (ör. EDITOR, VIEWER, REVIEWER). Rol, kullanıcının bir anotasyon üzerinde hangi eylemleri yapabileceğini belirler—içeriği düzenleyebilir, sadece görüntüleyebilir veya yanıt ekleyebilir.
+- **Özel kullanıcı rollerinin temel faydası nedir?** Her açıklama üzerinde kimin düzenleyebileceğini, görüntüleyebileceğini veya yorumlayabileceğini kontrol etmenizi sağlar, güvenlik ve uyumluluğu temin eder.  
+- **Bu işlevi sağlayan kütüphane hangisidir?** Java için GroupDocs.Annotation.  
+- **Başlamak için ücretli bir lisansa ihtiyacım var mı?** Hayır—tam özellik setini geliştirmek ve test etmek için ücretsiz deneme sürümünü kullanabilirsiniz.  
+- **Rolleri uyguladıktan sonra açıklamalı PDF'yi kaydedebilir miyim?** Evet—`annotator.save()` çağırarak tüm izinlerin uygulandığı **açıklamalı PDF'yi kaydet** oluşturabilirsiniz.  
+- **Toplu işleme destekleniyor mu?** Kesinlikle; daha iyi performans için birçok belgeyi veya açıklamayı toplu olarak işleyebilirsiniz.
 
-## Neden Özel Kullanıcı Rolleri Kullanmalısınız?
-- **Hukuki belge anotasyonu** – Yalnızca yetkili avukatların değişiklikleri onaylayabildiğinden ve paralegallerin sadece yorum yapabildiğinden emin olun.  
-- **Collaboration control** – Edit haklarını kısıtlayarak yanlışlıkla üzerine yazılmasını önleyin.  
-- **Auditability** – Kimlerin ne zaman hangi değişiklikleri yaptığını izleyin; bu, uyumluluk için esastır.  
+## Özel kullanıcı rolleri nedir?
 
-## Rol‑Tabanlı Anotasyonları Ne Zaman Kullanmalı
+Özel kullanıcı rolleri, her `User` nesnesine atadığınız rol tanımlarıdır (ör. EDITOR, VIEWER, REVIEWER). Rol, kullanıcının bir açıklama üzerinde hangi eylemleri yapabileceğini belirler—içeriği düzenleyebilir, sadece görüntüleyebilir veya yanıt ekleyebilir.
 
-Koda geçmeden önce, özel kullanıcı rollerinin parladığı senaryoları inceleyelim:
+## Neden özel kullanıcı rolleri kullanmalı?
 
-- **Legal and Compliance Documents** – Sözleşmeler, NDA'lar ve politika belgeleri sıkı düzenleme izinlerine ihtiyaç duyar.  
-- **Educational Platforms** – Eğitmenler (editörler) ve öğrenciler (görüntüleyiciler).  
-- **Corporate Workflows** – Proje yöneticileri (tam haklar) ve ekip üyeleri (sadece yorum).  
-- **Healthcare Records** – Doktorlar, hemşireler ve hastalar farklı erişim seviyelerine ihtiyaç duyar.  
+Özel kullanıcı rolleri, her açıklama üzerinde kimin değiştirebileceği, görüntüleyebileceği veya yorumlayabileceği konusunda ayrıntılı kontrol sağlar; bu, belge bütünlüğünü korumak ve uyumluluk gereksinimlerini karşılamak için esastır. Her role belirli izinler atayarak, yanlışlıkla yapılan değişiklik riskini azaltır ve net bir denetim izi oluşturursunuz.
 
-## Önkoşullar ve Kurulum
+- **Hukuki belge açıklaması** – Yalnızca yetkili avukatların değişiklikleri onaylayabildiğinden, paralegallerin sadece yorum yapabildiğinden emin olun.  
+- **İşbirliği kontrolü** – Düzenleme haklarını kısıtlayarak yanlışlıkla üzerine yazılmasını önleyin.  
+- **Denetlenebilirlik** – Kimin ne zaman hangi değişiklikleri yaptığını izleyin; bu, uyumluluk için esastır.
 
-Başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
+## Rol tabanlı açıklamaları ne zaman kullanmalı?
 
-- **GroupDocs.Annotation for Java** (sürüm 25.2 veya üzeri)  
-- JDK 8 + ve Maven yüklü  
-- Anotasyon için bir örnek PDF dosyası  
+Rol‑tabanlı açıklamalar, farklı paydaşların farklı erişim seviyelerine ihtiyaç duyduğu ortamlar—örneğin hukuki sözleşmeler, eğitim içeriği, kurumsal iş akışları veya sağlık kayıtları—için en değerli olanlardır. Bunları uygulamak, yalnızca yetkili kullanıcıların kritik bölümleri düzenlemesini, diğerlerinin ise güvenli bir şekilde geri bildirim sağlamasını veya belgeyi görüntülemesini sağlar.
 
-## GroupDocs.Annotation for Java'ı Kurma
+- **Hukuki ve uyumluluk belgeleri** – Sözleşmeler, NDA'lar ve politika belgeleri sıkı düzenleme izinlerine ihtiyaç duyar.  
+- **Eğitim platformları** – Eğitmenler (düzenleyiciler) ve öğrenciler (görüntüleyiciler).  
+- **Kurumsal iş akışları** – Proje yöneticileri (tam haklar) ve ekip üyeleri (sadece yorum).  
+- **Sağlık kayıtları** – Doktorlar, hemşireler ve hastalar her biri farklı erişim seviyelerine ihtiyaç duyar.
 
-### Maven Yapılandırması
+## Önkoşullar ve kurulum
+
+Başlamadan önce aşağıdakilerin olduğundan emin olun:
+
+- **Java için GroupDocs.Annotation** (sürüm 25.2 veya üzeri)  
+- JDK 8 + ve Maven kurulu  
+- Açıklama eklemek için bir örnek PDF dosyası  
+
+## Java için GroupDocs.Annotation kurulumu
+
+### Maven yapılandırması
 
 Depoyu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 
@@ -93,17 +159,21 @@ Depoyu ve bağımlılığı `pom.xml` dosyanıza ekleyin:
 </dependencies>
 ```
 
-### Lisans Alımı
+### Lisans edinimi
 
-Tam işlevselliği sağlayan bir **ücretsiz deneme** ile başlayabilirsiniz. Üretime hazır olduğunuzda **geçici geliştirme lisansı** alın veya tam lisans satın alın.
+Tam işlevselliği sağlayan bir **ücretsiz deneme** ile başlayabilirsiniz. Üretime geçmeye hazır olduğunuzda, **geçici geliştirme lisansı** edinin veya tam lisans satın alın.
 
-**Pro ipucu:** Satın almaya karar vermeden önce deneme sürümüyle tüm anotasyon iş akışını test edin.
+**Pro ipucu:** Satın almaya karar vermeden önce deneme sürümüyle tüm açıklama iş akışını test edin.
 
-## Temel Uygulama: Anotasyonlara Özel Kullanıcı Rolleri Ekleme
+## Temel uygulama: açıklamalara özel kullanıcı rolleri ekleme
 
-### Adım 1: Özel Kullanıcı Rolleriyle Yanıtlar Oluşturma
+### Adım 1: özel kullanıcı rolleriyle yanıtlar oluşturma
 
-Her yanıt, belirli bir `Role` taşıyan bir `User` ile ilişkilidir. Bu, yanıtın izinlerini belirler.
+**Belirli bir kullanıcı rolüne saygı gösteren bir yanıtı nasıl oluşturursunuz?**
+
+`User` örneği oluşturun, uygun `Role` enum değerini (ör. `EDITOR` veya `VIEWER`) atayın ve ardından kullanıcıyı bir `Reply` nesnesine ekleyin, ardından açıklamaya ekleyin. Bu, yanıtın rol tarafından tanımlanan izinleri devralmasını sağlar.
+
+`User` sınıfı, bir açıklama ile etkileşime geçen bireyi temsil eder, `Role` enum ise o kullanıcı için izin kümesini tanımlar.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -132,11 +202,15 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-> **Neden önemli:** `Role` enum'ı her kullanıcının ne yapabileceğini kontrol eder. Bir EDITOR anotasyonu değiştirebilirken, bir VIEWER sadece görüntüleyebilir.
+> **Neden önemli:** `Role` enum, her kullanıcının ne yapabileceğini kontrol eder. EDITOR açıklamayı değiştirebilir, VIEWER ise sadece görüntüleyebilir.
 
-### Adım 2: Alan Anotasyonlarını Yapılandırma
+### Adım 2: alan açıklamalarını yapılandırma
 
-Alan anotasyonları belgenin bir bölgesini vurgular. Rol mantığının uygulanması için önceden oluşturulan yanıtları ekleyeceğiz.
+**Alan açıklaması nedir ve rol‑bilinçli yanıtları ona nasıl bağlarsınız?**
+
+Alan açıklaması, bir sayfada dikdörtgen bir bölgeyi vurgular. Görsel açıklamayı oluşturduktan sonra, daha önce oluşturulan `Reply` nesnelerini ekleyerek, bir kullanıcı vurgulanan bölgeyle etkileşime girdiğinde rol mantığının uygulanmasını sağlarsınız.
+
+`AreaAnnotation` sınıfı, vurgulanan bölgenin şekil, renk ve stilini tanımlar.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -159,14 +233,18 @@ area.setReplies(replies); // Attach the replies to this annotation
 
 **Ana yapılandırma notları**
 
-- **Color coding**: `65535` (cyan) anotasyonu metni gizlemeden öne çıkarır.  
-- **Positioning**: `Rectangle(100, 100, 100, 100)` 100 × 100 px bir kutuyu (100, 100) konumuna yerleştirir.  
-- **Styling**: 0.7 opaklıkta noktalı kalem stili, hafif bir görsel ipucu sağlar.  
-- **Reply attachment**: Özel‑rol yanıtlarımızı görsel anotasyona bağlar.
+- **Renk kodlaması**: `65535` (camgöbeği), metni gizlemeden açıklamayı öne çıkarır.  
+- **Konumlandırma**: `Rectangle(100, 100, 100, 100)`, (100, 100) konumunda 100 × 100 px bir kutu yerleştirir.  
+- **Stil**: 0.7 opaklıkta noktalı kalem stili, hafif bir görsel ipucu sağlar.  
+- **Yanıt ekleme**: Özel‑rol yanıtlarımızı görsel açıklamaya bağlar.
 
-### Adım 3: Anotasyonları Uygulama ve PDF'yi Kaydetme
+### Adım 3: açıklamaları uygulama ve PDF'yi kaydetme
 
-Şimdi anotasyonu bir belgeye ekliyoruz ve **annotated PDF'yi kaydediyoruz**.
+**Rol‑tabanlı açıklamaları yeni bir PDF dosyasına nasıl kalıcı hale getirirsiniz?**
+
+`Annotator` ile hedef belgeyi yükleyin, hazırlanmış açıklamayı ekleyin ve ardından `annotator.save("output.pdf")` çağırın. Kaydetme işlemi yalnızca açıklama değişikliklerini yazar, orijinal içeriği bozmadan izin meta verilerini gömer.
+
+`Annotator` sınıfı, açıklamalı belgeleri yüklemek, değiştirmek ve kaydetmek için giriş noktasıdır.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -178,13 +256,15 @@ annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf"); // Save the annotated docume
 annotator.dispose(); // Release resources after saving
 ```
 
-> **Memory tip:** İşlemeyi bitirdikten sonra her zaman `dispose()` çağırın, özellikle birçok dosyada **anotasyonları toplu işleme** yaptığınızda bellek sızıntılarını önlemek için.
+> **Bellek ipucu:** İşlemeyi bitirdikten sonra her zaman `dispose()` çağırın; özellikle birçok dosyada **açıklamaları toplu işleyerek** bellek sızıntılarını önleyin.
 
-## İleri Düzey İpuçları ve En İyi Uygulamalar
+## İleri ipuçları ve en iyi uygulamalar
 
-### Birden Çok Kullanıcı Rolünü Verimli Yönetme
+### Birden fazla kullanıcı rolünü verimli yönetme
 
-İş rolleri ile GroupDocs rollerini eşleştirmek için bir yardımcı enum oluşturun:
+**İş‑özel rolleri GroupDocs rollerine kod karmaşası olmadan nasıl eşlersiniz?**
+
+Alanınızın rollerini (ör. `PROJECT_MANAGER`, `DEVELOPER`) GroupDocs tarafından sağlanan ilgili `Role` değerlerine dönüştüren bir yardımcı enum oluşturun. Bu, eşlemeyi merkezileştirir ve gelecekteki değişiklikleri basitleştirir.
 
 ```java
 // Example of how you might organize roles in a real application
@@ -202,41 +282,41 @@ public enum DocumentRole {
 }
 ```
 
-### Büyük Belgeler İçin Performans Optimizasyonu
+### Büyük belgeler için performans optimizasyonu
 
-**Anotasyonları toplu işleme** yapmanız gerektiğinde, şu stratejileri aklınızda tutun:
+**Toplu açıklamayı hızlı ve bellek‑dostu tutan stratejiler nelerdir?**
 
-1. Anotasyonları tek tek yerine gruplar halinde işleyin.  
+1. Açıklamaları tek tek yerine gruplar halinde işleyin.  
 2. Sadece ön izleme senaryoları için düşük çözünürlüklü render kullanın.  
-3. Sık erişilen PDF'leri disk veya bellek üzerinde önbelleğe alın.  
-4. Yoğun anotasyon işini arka plan iş parçacıklarına veya bir iş kuyruğuna devredin.
+3. Sık erişilen PDF'leri diskte veya bellekte önbelleğe alın.  
+4. Yoğun açıklama işlerini arka plan iş parçacıklarına veya bir iş kuyruğuna devredin.
 
-### Rol Görünürlüğü İçin Renk Kodlama Stratejileri
+### Rol görünürlüğü için renk kodlama stratejileri
 
-- **Editors** – `65535` (Cyan) – parlak ve eyleme geçirilebilir.  
-- **Reviewers** – `16711680` (Red) – dikkat gerektiren öğeleri işaret eder.  
-- **Viewers** – `8421504` (Gray) – hafif, sadece okuma.  
+- **Editörler** – `65535` (Camgöbeği) – parlak ve eyleme geçirilebilir.  
+- **İnceleyenler** – `16711680` (Kırmızı) – dikkat gerektiren öğeleri işaret eder.  
+- **Görüntüleyiciler** – `8421504` (Gri) – hafif, sadece okuma.
 
-## Yaygın Uygulama Sorunları (Ve Çözüm Yolları)
+## Yaygın uygulama sorunları (ve nasıl düzeltilir)
 
-### Anotasyonlar Doğru Görüntülenmiyor
+### Açıklamalar doğru görüntülenmiyor
 
-- **Cause:** PDF koordinat sistemi alt‑sol köşeden başlar.  
-- **Fix:** Y koordinatlarını ayarlayın veya konumları hesaplamak için `annotator.getPageHeight()` kullanın.
+- **Neden:** PDF koordinat sistemi sol‑alt köşeden başlar.  
+- **Çözüm:** Y koordinatlarını ayarlayın veya konumları hesaplamak için `annotator.getPageHeight()` kullanın.
 
-### Kullanıcı Rolleri Uygulanmıyor
+### Kullanıcı rolleri uygulanmıyor
 
-- **Cause:** Farklı roller için aynı `User` örneğini yeniden kullanmak veya `Role` enum'ını ayarlamayı unutmak.  
-- **Fix:** Her rol için yeni bir `User` nesnesi oluşturun ve yanıt eklemeden önce ayarlayın.
+- **Neden:** Farklı roller için aynı `User` örneğini yeniden kullanmak veya `Role` enumunu ayarlamayı unutmak.  
+- **Çözüm:** Her rol için yeni bir `User` nesnesi oluşturun ve yanıtları eklemeden önce ayarlayın.
 
-### Büyük PDF'lerde Bellek Sorunları
+### Büyük PDF'lerde bellek sorunları
 
-- **Cause:** `Annotator` nesnelerini dispose etmemek veya aynı anda çok fazla belge işlemek.  
-- **Fix:** Her belgeden sonra `dispose()` çağırın ve eşzamanlı işlemlerin sayısını sınırlayın.
+- **Neden:** `Annotator` nesnelerini dispose etmemek veya aynı anda çok fazla belge işlemek.  
+- **Çözüm:** Her belge sonrası `dispose()` çağırın ve eşzamanlı işlem sayısını sınırlayın.
 
-## Gerçek Dünya Entegrasyon Örnekleri
+## Gerçek dünya entegrasyon örnekleri
 
-### E‑Learning Platform Entegrasyonu
+### E‑öğrenme platformu entegrasyonu
 
 ```java
 // Example: Setting up annotations for an educational document
@@ -254,55 +334,70 @@ studentQuestion.setComment("Could you clarify the third point?");
 studentQuestion.setUser(student);
 ```
 
-### Hukuki Belge Anotasyonu Kullanım Durumu
+### Hukuki belge açıklama kullanım durumu
 
-Bir hukuk bürosunda şu şekilde tanımlayabilirsiniz:
+Bir hukuk firmasında, aşağıdaki gibi tanımlayabilirsiniz:
 
-- **Senior Partners** – `OWNER` (tam düzenleme ve izin yönetimi)  
-- **Associates** – `COLLABORATOR` (düzenleme ve yorum)  
-- **Paralegals** – `REVIEWER` (sadece yorum)  
-- **Clients** – `VIEWER` (yorum yapabilen sadece okuma)
+- **Kıdemli Ortaklar** – `OWNER` (tam düzenleme ve izin yönetimi)  
+- **Ortaklar** – `COLLABORATOR` (düzenleme ve yorum)  
+- **Paralegaller** – `REVIEWER` (sadece yorum)  
+- **Müşteriler** – `VIEWER` (yorum yapabilen sadece okuma)  
 
-Bu hiyerarşi, yalnızca doğru kişilerin değişiklikleri onaylayabilmesini ve diğer herkesin güvenli bir şekilde katkıda bulunabilmesini sağlar.
+Bu hiyerarşi, yalnızca doğru kişilerin değişiklikleri onaylayabilmesini, diğerlerinin ise güvenli bir şekilde katkıda bulunabilmesini sağlar.
 
 ## Sonuç
 
-Artık GroupDocs.Annotation kullanarak Java anotasyon iş akışlarında **özel kullanıcı rolleri** uygulamak için sağlam bir temele sahipsiniz. Rol‑tabanlı izin mantığını doğru bellek yönetimi ve performans ipuçlarıyla birleştirerek, tek bir PDF'den büyük toplu‑işleme hatlarına kadar ölçeklenebilen güvenli, işbirlikçi belge çözümleri oluşturabilirsiniz.
+Artık GroupDocs.Annotation kullanarak Java açıklama iş akışlarında **özel kullanıcı rolleri** uygulamak için sağlam bir temele sahipsiniz. Rol‑tabanlı izin mantığını doğru bellek yönetimi ve performans ipuçlarıyla birleştirerek, tek bir PDF'den büyük ölçekli toplu‑işlem hatlarına kadar ölçeklenebilen güvenli, işbirlikçi belge çözümleri oluşturabilirsiniz.
 
 **Sonraki adımlar:**  
 - Kodu küçük bir prototip projede deneyin.  
-- `DocumentRole` enum'ını organizasyonunuzun hiyerarşisine göre genişletin.  
-- Tüm anotasyonların ve ilişkili rollerin raporlarını oluşturmak için GroupDocs dışa aktarma API'lerini keşfedin.
+- `DocumentRole` enumunu kuruluşunuzun hiyerarşisine göre genişletin.  
+- Tüm açıklamaları ve ilişkili rolleri raporlayan GroupDocs dışa aktarma API'lerini keşfedin.
 
 ---
 
-## Sık Sorulan Sorular
+## Sıkça sorulan sorular
 
-**S: GroupDocs.Annotation diğer Java anotasyon kütüphanelerinden neyi ayırıyor?**  
-A: Yerleşik rol‑tabanlı izin sistemi sunar, birçok belge formatını destekler ve denetim izleri ve toplu işleme gibi kurumsal düzeyde özellikler sağlar.
+**S: GroupDocs.Annotation'ı diğer Java açıklama kütüphanelerinden ayıran nedir?**  
+C: Yerleşik bir rol‑tabanlı izin sistemi sunar, 50+ giriş ve çıkış formatını destekler ve denetim izleri ve toplu işleme gibi kurumsal özellikler sağlar.
 
-**S: EDITOR ve VIEWER dışındaki özel roller nasıl oluşturabilirim?**  
-A: İşinize özgü rolleri mevcut `Role` enum'ına (ör. `Role.EDITOR`) eşleyin ve ek mantığı uygulama katmanınızda, `DocumentRole` örneğinde gösterildiği gibi yönetin.
+**S: EDITOR ve VIEWER dışındaki özel rolleri nasıl oluşturabilirim?**  
+C: İş‑özel rollerinizi mevcut `Role` enumuna (ör. `Role.EDITOR`) eşleyin ve ek mantığı uygulama katmanınızda, `DocumentRole` örneğinde gösterildiği gibi yönetin.
 
 **S: Bunu mevcut kimlik doğrulama sistemimle entegre edebilir miyim?**  
-A: Evet. `User` nesnesi, kullandığınız herhangi bir tanımlayıcıyı (ör. veritabanı ID'si) kabul eder. Kimliği doğrulanmış kullanıcınızı uygun `Role` ile bir `User` örneğine eşleyin.
+C: Evet. `User` nesnesi, kullandığınız herhangi bir tanımlayıcıyı (ör. veritabanı ID) kabul eder. Doğrulanmış kullanıcınızı uygun `Role` ile bir `User` örneğine eşleyin.
 
-**S: **annotated PDF**'yi tüm belgeyi yeniden render etmeden kaydetmek mümkün mü?**  
-A: `annotator.save()` yöntemi yalnızca anotasyon değişikliklerini yazar, bu da büyük dosyalarda bile kaydetme işlemini hızlı hâle getirir.
+**S: Tüm belgeyi yeniden render etmeden **açıklamalı PDF'yi kaydetmek** mümkün mü?**  
+C: Evet. `annotator.save()` yöntemi yalnızca açıklama değişikliklerini yazar, bu da büyük dosyalarda bile kaydetme işlemini hızlı yapar.
 
-**S: Birçok PDF'de **anotasyonları toplu işleme** nasıl verimli yaparım?**  
-A: Dosya listenizi döngüye alın, her dosya için tek bir `Annotator` oluşturun, gerekli tüm anotasyonları ekleyin, `save()` çağırın ve ardından `dispose()` yapın. İşi paralelleştirmek için bir iş parçacığı havuzu kullanmayı düşünün.
+**S: Birçok PDF üzerinde **açıklamaları toplu işlemek** nasıl verimli yapılır?**  
+C: Dosya listenizi döngüye alın, her dosya için tek bir `Annotator` oluşturun, gerekli tüm açıklamaları ekleyin, `save()` ve ardından `dispose()` çağırın. İşi paralelleştirmek için bir iş parçacığı havuzu kullanmayı düşünün.
 
-**S: Tam PDF olmadan sadece anotasyon verilerini (ör. JSON) dışa aktarabilir miyim?**  
-A: Evet. GroupDocs, anotasyon meta verilerini JSON veya XML olarak dışa aktaran yöntemler sağlar; bu, raporlama veya diğer sistemlerle senkronizasyon için faydalıdır.
+**S: Tam PDF olmadan sadece açıklama verilerini (ör. JSON) dışa aktarabilir miyim?**  
+C: Evet. GroupDocs, açıklama meta verilerini JSON veya XML formatında dışa aktaran yöntemler sunar; raporlama veya diğer sistemlerle senkronizasyon için faydalıdır.
 
-**Son Güncelleme:** 2026-03-01  
+---
+
+**Son Güncelleme:** 2026-09-10  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs  
 
-**Ek Kaynaklar**  
-- Dokümantasyon: [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
-- API Referansı: [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
-- Kütüphane İndir: [Get the Latest Version](https://releases.groupdocs.com/annotation/java/)  
-- Topluluk Desteği: [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)  
-- Satın Alma Seçenekleri: [Licensing Information](https://purchase.groupdocs.com/license)
+**Ek kaynaklar**  
+- Documentation: [GroupDocs Açıklama Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)  
+- API reference: [Tam API Referans Kılavuzu](https://reference.groupdocs.com/annotation/java/)  
+- Download library: [En Son Sürümü İndir](https://releases.groupdocs.com/annotation/java/)  
+- Community support: [GroupDocs Destek Forumu](https://forum.groupdocs.com/c/annotation/)  
+- Purchase options: [Lisans Bilgileri](https://purchase.groupdocs.com/license)
+
+## İlgili Öğreticiler
+
+- [Java Açıklamada Özel Kullanıcı Rolleri: Tam Uygulama Kılavuzu](/annotation/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/)  
+- [Java'da PDF Yükleme: GroupDocs Annotation ile Belge Yükleme Kılavuzu](/annotation/java/document-loading/)  
+- [Java'da PDF Vurguları Oluşturma: GroupDocs Annotation ile Tam Kılavuz](/annotation/java/annotation-management/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

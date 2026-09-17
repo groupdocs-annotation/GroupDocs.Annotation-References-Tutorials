@@ -1,82 +1,144 @@
 ---
 categories:
 - Java Development
-date: '2026-03-01'
-description: Dowiedz się, jak wdrożyć niestandardowe role użytkowników do adnotacji
-  dokumentów opartej na rolach w Javie z GroupDocs. Zawiera konfigurację, przykłady
-  kodu, adnotacje dokumentów prawnych, zapisywanie oznaczonego PDF oraz przetwarzanie
-  adnotacji wsadowo.
-keywords: java annotation user roles, role based document annotation java, groupdocs
-  annotation tutorial, java pdf annotation permissions, document collaboration java
-lastmod: '2026-03-01'
-linktitle: Java Annotation User Roles Guide
+date: '2026-09-10'
+description: Dowiedz się, jak dodać adnotacje oparte na rolach w Javie z GroupDocs.Annotation,
+  obejmujące role użytkowników, ustawienia uprawnień, zapisywanie PDF oraz przetwarzanie
+  w celu współpracy.
+keywords:
+- role based annotation java
+- java annotation user roles
+- groupdocs annotation java
+- document annotation permissions
+- role based document workflow
+lastmod: '2026-09-10'
+linktitle: Przewodnik po rolach użytkowników w adnotacjach Java
+og_description: Dowiedz się, jak dodać adnotacje oparte na rolach w Javie z GroupDocs.Annotation,
+  obejmujące role użytkowników, ustawienia uprawnień, zapisywanie PDF oraz przetwarzanie
+  w celu współpracy.
+og_image_alt: 'Developer guide: Add role based annotation in Java with GroupDocs.Annotation'
+og_title: Jak dodać adnotacje oparte na rolach w Javie z GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to add role based annotation in Java with GroupDocs.Annotation,
+    covering user roles, permission settings, PDF saving, and processing for collaboration.
+  headline: How to add role based annotation in Java with GroupDocs
+  type: TechArticle
+- description: Learn how to add role based annotation in Java with GroupDocs.Annotation,
+    covering user roles, permission settings, PDF saving, and processing for collaboration.
+  name: How to add role based annotation in Java with GroupDocs
+  steps:
+  - name: creating replies with custom user roles
+    text: '**How do you create a reply that respects a specific user role?** Create
+      a `User` instance, assign the appropriate `Role` enum value (e.g., `EDITOR`
+      or `VIEWER`), then attach the user to a `Reply` object before adding it to the
+      annotation. This ensures the reply inherits the permissions defined by t'
+  - name: configuring area annotations
+    text: '**What is an area annotation and how do you bind role‑aware replies to
+      it?** An area annotation highlights a rectangular region on a page. After you
+      create the visual annotation, you attach the previously built `Reply` objects
+      so that the role logic is enforced whenever a user interacts with the hig'
+  - name: applying annotations and saving the PDF
+    text: '**How can you persist the role‑based annotations to a new PDF file?** Load
+      the target document with `Annotator`, add the prepared annotation, then call
+      `annotator.save("output.pdf")`. The save operation writes only the annotation
+      changes, keeping the original content intact while embedding the permi'
+  type: HowTo
+- questions:
+  - answer: It offers a built‑in role‑based permission system, supports 50+ input
+      and output formats, and provides enterprise‑grade features like audit trails
+      and batch processing.
+    question: What makes GroupDocs.Annotation stand out from other Java annotation
+      libraries?
+  - answer: Map your business‑specific roles to the existing `Role` enum (e.g., `Role.EDITOR`)
+      and handle additional logic in your application layer, as shown in the `DocumentRole`
+      example.
+    question: How can I create custom roles beyond EDITOR and VIEWER?
+  - answer: Yes. The `User` object accepts any identifier you use (e.g., database
+      ID). Simply map your authenticated user to a `User` instance with the appropriate
+      `Role`.
+    question: Can I integrate this with my existing authentication system?
+  - answer: Yes. The `annotator.save()` method writes only the annotation changes,
+      making the save operation fast even for large files.
+    question: Is it possible to **save annotated PDF** without re‑rendering the whole
+      document?
+  - answer: Loop through your file list, create a single `Annotator` per file, add
+      all needed annotations, call `save()`, and then `dispose()`. Consider using
+      a thread pool to parallelize the work.
+    question: How do I efficiently **batch process annotations** across many PDFs?
+  type: FAQPage
 tags:
+- role based annotation
 - groupdocs
-- annotations
-- user-roles
-- pdf
-- document-management
-title: 'Niestandardowe role użytkowników w adnotacjach Java: Kompletny przewodnik
-  implementacji'
+- java annotations
+- pdf collaboration
+- document security
+title: Jak dodać adnotacje oparte na rolach w Javie z GroupDocs
 type: docs
 url: /pl/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/
 weight: 1
 ---
 
-# Niestandardowe role użytkowników w adnotacjach Java: Kompletny przewodnik implementacji
+# Jak dodać adnotacje oparte na rolach w Javie z GroupDocs
+
+W tym samouczku odkryjesz, jak dodać **adnotacje oparte na rolach w Javie** przy użyciu biblioteki GroupDocs.Annotation. Po zakończeniu przewodnika będziesz w stanie zdefiniować niestandardowe role użytkowników, kontrolować uprawnienia edycji i podglądu dla każdej adnotacji, zapisać oznaczony PDF oraz przetwarzać wiele plików w trybie przyjaznym dla wsadowego przetwarzania.
 
 ## Wprowadzenie
 
-Czy kiedykolwiek miałeś problem z zarządzaniem tym, kto może edytować, przeglądać lub komentować konkretne części Twoich dokumentów? Nie jesteś sam. **GroupDocs.Annotation for Java** sprawia, że implementacja **niestandardowych ról użytkowników** jest zaskakująco prosta.
+Czy kiedykolwiek miałeś problem z zarządzaniem tym, kto może edytować, przeglądać lub komentować określone części dokumentów? Nie jesteś sam. **GroupDocs.Annotation for Java** sprawia, że wdrożenie **niestandardowych ról użytkowników** jest zaskakująco proste.
 
-W tym obszernym przewodniku przeprowadzimy Cię krok po kroku przez konfigurację niestandardowych ról użytkowników dla adnotacji. Po zakończeniu będziesz w stanie tworzyć bezpieczne, współpracujące przepływy dokumentów, które przydzielają każdemu użytkownikowi odpowiednie uprawnienia w zależności od jego roli.
+W tym obszernym przewodniku przeprowadzimy Cię krok po kroku przez konfigurację niestandardowych ról użytkowników dla adnotacji. Po zakończeniu będziesz mógł tworzyć bezpieczne, współpracujące przepływy dokumentów, które przyznają każdemu użytkownikowi odpowiednie uprawnienia w zależności od jego roli.
 
 - **Co opanujesz:**  
-  - Konfigurowanie systemów adnotacji z niestandardowymi rolami użytkowników w Javie  
+  - Ustawianie systemów adnotacji z niestandardowymi rolami użytkowników w Javie  
   - Konfigurowanie adnotacji obszarowych z właściwościami specyficznymi dla roli  
   - Zarządzanie uprawnieniami do komentarzy, odpowiedzi i zapisywania dokumentu  
   - Obsługa scenariuszy rzeczywistych, takich jak adnotacje dokumentów prawnych i przetwarzanie wsadowe  
 
-Gotowy, aby zbudować inteligentniejsze zarządzanie dokumentami w swoich aplikacjach Java? Zanurzmy się!
+Gotowy, aby wbudować inteligentniejsze zarządzanie dokumentami w swoje aplikacje Java? Zanurzmy się!
 
 ## Szybkie odpowiedzi
-- **What is the primary benefit of custom user roles?** They let you control who can edit, view, or comment on each annotation, ensuring security and compliance.  
-- **Which library provides this functionality?** GroupDocs.Annotation for Java.  
-- **Do I need a paid license to start?** No—use the free trial to develop and test the full feature set.  
-- **Can I save the annotated PDF after applying roles?** Yes—call `annotator.save()` to generate a **save annotated PDF** with all permissions applied.  
-- **Is batch processing supported?** Absolutely; you can process many documents or annotations in batches for better performance.
+- **Jaka jest główna korzyść z niestandardowych ról użytkowników?** Pozwalają kontrolować, kto może edytować, przeglądać lub komentować każdą adnotację, zapewniając bezpieczeństwo i zgodność.  
+- **Która biblioteka zapewnia tę funkcjonalność?** GroupDocs.Annotation for Java.  
+- **Czy potrzebuję płatnej licencji, aby rozpocząć?** Nie — użyj bezpłatnej wersji próbnej, aby opracować i przetestować pełny zestaw funkcji.  
+- **Czy mogę zapisać oznaczony PDF po zastosowaniu ról?** Tak — wywołaj `annotator.save()`, aby wygenerować **zapisany oznaczony PDF** ze wszystkimi zastosowanymi uprawnieniami.  
+- **Czy przetwarzanie wsadowe jest obsługiwane?** Absolutnie; możesz przetwarzać wiele dokumentów lub adnotacji w partiach, aby uzyskać lepszą wydajność.
 
 ## Czym są niestandardowe role użytkowników?
 
-Custom user roles are role definitions (e.g., EDITOR, VIEWER, REVIEWER) that you assign to each `User` object. The role determines what actions the user can perform on an annotation—whether they can edit the content, only view it, or add replies.
+Niestandardowe role użytkowników to definicje ról (np. EDITOR, VIEWER, REVIEWER), które przypisujesz każdemu obiektowi `User`. Rola określa, jakie działania użytkownik może wykonać na adnotacji — czy może edytować treść, tylko ją przeglądać, czy dodawać odpowiedzi.
 
 ## Dlaczego używać niestandardowych ról użytkowników?
-- **Legal document annotation** – Ensure only authorized lawyers can approve changes while paralegals can only comment.  
-- **Collaboration control** – Prevent accidental overwrites by restricting edit rights.  
-- **Auditability** – Track who made which changes and when, which is essential for compliance.  
 
-## Kiedy używać adnotacji opartych na rolach
+Niestandardowe role użytkowników dają Ci precyzyjną kontrolę nad tym, kto może modyfikować, przeglądać lub komentować każdą adnotację, co jest niezbędne do utrzymania integralności dokumentu i spełnienia wymagań zgodności. Przypisując konkretne uprawnienia do każdej roli, zmniejszasz ryzyko przypadkowych zmian i tworzysz przejrzyste ścieżki audytu.
 
-Before we jump into the code, let’s explore scenarios where custom user roles shine:
+- **Adnotacje dokumentów prawnych** – Zapewnij, że tylko upoważnieni prawnicy mogą zatwierdzać zmiany, podczas gdy paralegale mogą jedynie komentować.  
+- **Kontrola współpracy** – Zapobiegaj przypadkowym nadpisaniom, ograniczając prawa edycji.  
+- **Audytowalność** – Śledź, kto wprowadził jakie zmiany i kiedy, co jest kluczowe dla zgodności.  
 
-- **Legal and Compliance Documents** – Contracts, NDAs, and policy papers need strict edit permissions.  
-- **Educational Platforms** – Instructors (editors) vs. students (viewers).  
-- **Corporate Workflows** – Project managers (full rights) vs. team members (comments only).  
-- **Healthcare Records** – Doctors, nurses, and patients each require different access levels.  
+## Kiedy używać adnotacji opartych na rolach?
 
-## Prerequisites and Setup
+Adnotacje oparte na rolach są najbardziej wartościowe w środowiskach, w których różni interesariusze potrzebują odrębnych poziomów dostępu, takich jak umowy prawne, materiały edukacyjne, procesy korporacyjne czy rekordy medyczne. Ich wdrożenie zapewnia, że tylko upoważnieni użytkownicy mogą edytować krytyczne sekcje, podczas gdy inni mogą bezpiecznie udzielać opinii lub przeglądać dokument.
 
-Make sure you have the following before you start:
+- **Dokumenty prawne i zgodności** – Umowy, NDA i dokumenty polityki wymagają ścisłych uprawnień edycji.  
+- **Platformy edukacyjne** – Instruktorzy (edytorzy) vs. studenci (odbiorcy).  
+- **Procesy korporacyjne** – Kierownicy projektów (pełne prawa) vs. członkowie zespołu (tylko komentarze).  
+- **Rekordy medyczne** – Lekarze, pielęgniarki i pacjenci wymagają różnych poziomów dostępu.  
 
-- **GroupDocs.Annotation for Java** (version 25.2 or later)  
-- JDK 8 + and Maven installed  
-- A sample PDF file to annotate  
+## Wymagania wstępne i konfiguracja
+
+Upewnij się, że masz następujące elementy przed rozpoczęciem:
+
+- **GroupDocs.Annotation for Java** (wersja 25.2 lub nowsza)
+- JDK 8 + oraz zainstalowany Maven
+- Przykładowy plik PDF do adnotacji
 
 ## Konfiguracja GroupDocs.Annotation dla Java
 
-### Maven Configuration
+### Konfiguracja Maven
 
-Add the repository and dependency to your `pom.xml`:
+Dodaj repozytorium i zależność do swojego `pom.xml`:
 
 ```xml
 <repositories>
@@ -96,17 +158,20 @@ Add the repository and dependency to your `pom.xml`:
 </dependencies>
 ```
 
-### Uzyskiwanie licencji
+### Uzyskanie licencji
 
-You can start with a **free trial** that provides full functionality. When you’re ready for production, obtain a **temporary development license** or purchase a full license.
+Możesz rozpocząć od **bezpłatnej wersji próbnej**, która zapewnia pełną funkcjonalność. Gdy będziesz gotowy do produkcji, uzyskaj **tymczasową licencję deweloperską** lub zakup pełną licencję.
 
-**Pro tip:** Test the entire annotation workflow with the trial before committing to a purchase.
+**Wskazówka:** Przetestuj cały przepływ pracy adnotacji w wersji próbnej przed podjęciem decyzji o zakupie.
 
-## Główna implementacja: Dodawanie niestandardowych ról użytkowników do adnotacji
+## Główna implementacja: dodawanie niestandardowych ról użytkowników do adnotacji
 
-### Krok 1: Tworzenie odpowiedzi z niestandardowymi rolami użytkowników
+### Krok 1: tworzenie odpowiedzi z niestandardowymi rolami użytkowników
 
-Each reply is linked to a `User` who carries a specific `Role`. This determines the permissions for that reply.
+**Jak utworzyć odpowiedź, która respektuje określoną rolę użytkownika?**  
+Utwórz instancję `User`, przypisz odpowiednią wartość wyliczenia `Role` (np. `EDITOR` lub `VIEWER`), a następnie dołącz użytkownika do obiektu `Reply` przed dodaniem go do adnotacji. To zapewnia, że odpowiedź dziedziczy uprawnienia zdefiniowane przez rolę.
+
+Klasa `User` reprezentuje osobę, która wchodzi w interakcję z adnotacją, natomiast wyliczenie `Role` definiuje zestaw uprawnień dla tego użytkownika.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -135,11 +200,14 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-> **Why this matters:** The `Role` enum controls what each user can do. An EDITOR can modify the annotation, while a VIEWER can only view it.
+> **Dlaczego to ważne:** Wyliczenie `Role` kontroluje, co każdy użytkownik może zrobić. EDITOR może modyfikować adnotację, podczas gdy VIEWER może ją tylko przeglądać.
 
-### Krok 2: Konfigurowanie adnotacji obszarowych
+### Krok 2: konfigurowanie adnotacji obszarowych
 
-Area annotations highlight a region of the document. We’ll attach the previously created replies so the role logic is enforced.
+**Czym jest adnotacja obszarowa i jak powiązać z nią odpowiedzi uwzględniające role?**  
+Adnotacja obszarowa podświetla prostokątny obszar na stronie. Po utworzeniu wizualnej adnotacji, dołączasz wcześniej utworzone obiekty `Reply`, aby logika ról była egzekwowana przy każdej interakcji użytkownika z podświetlonym obszarem.
+
+Klasa `AreaAnnotation` definiuje kształt, kolor i styl podświetlonego obszaru.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -162,14 +230,17 @@ area.setReplies(replies); // Attach the replies to this annotation
 
 **Kluczowe uwagi konfiguracyjne**
 
-- **Color coding**: `65535` (cyan) makes the annotation stand out without obscuring text.  
-- **Positioning**: `Rectangle(100, 100, 100, 100)` places a 100 × 100 px box at (100, 100).  
-- **Styling**: Dotted pen style with 0.7 opacity provides a subtle visual cue.  
-- **Reply attachment**: Links our custom‑role replies to the visual annotation.
+- **Kodowanie kolorów**: `65535` (cyjan) sprawia, że adnotacja wyróżnia się bez zasłaniania tekstu.  
+- **Pozycjonowanie**: `Rectangle(100, 100, 100, 100)` umieszcza kwadrat 100 × 100 px w punkcie (100, 100).  
+- **Styl**: Kropkowany styl pióra z przezroczystością 0.7 zapewnia subtelną wskazówkę wizualną.  
+- **Dołączanie odpowiedzi**: Łączy nasze odpowiedzi z niestandardowymi rolami z wizualną adnotacją.
 
-### Krok 3: Zastosowanie adnotacji i zapisanie PDF
+### Krok 3: stosowanie adnotacji i zapisywanie PDF
 
-Now we add the annotation to a document and **save the annotated PDF**.
+**Jak możesz zachować adnotacje oparte na rolach w nowym pliku PDF?**  
+Wczytaj docelowy dokument przy użyciu `Annotator`, dodaj przygotowaną adnotację, a następnie wywołaj `annotator.save("output.pdf")`. Operacja zapisu zapisuje tylko zmiany adnotacji, pozostawiając oryginalną treść nienaruszoną, jednocześnie osadzając metadane uprawnień.
+
+Klasa `Annotator` jest punktem wejścia do wczytywania, modyfikowania i zapisywania oznakowanych dokumentów.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -181,13 +252,14 @@ annotator.save("YOUR_OUTPUT_DIRECTORY/output.pdf"); // Save the annotated docume
 annotator.dispose(); // Release resources after saving
 ```
 
-> **Memory tip:** Always call `dispose()` after you finish processing to avoid memory leaks, especially when you **batch process annotations** across many files.
+> **Wskazówka dotycząca pamięci:** Zawsze wywołuj `dispose()` po zakończeniu przetwarzania, aby uniknąć wycieków pamięci, szczególnie gdy **przetwarzasz adnotacje wsadowo** w wielu plikach.
 
 ## Zaawansowane wskazówki i najlepsze praktyki
 
 ### Efektywne zarządzanie wieloma rolami użytkowników
 
-Create a utility enum to map business roles to GroupDocs roles:
+**Jak mapować role specyficzne dla biznesu na role GroupDocs bez zaśmiecania kodu?**  
+Utwórz pomocnicze wyliczenie, które tłumaczy Twoje role domenowe (np. `PROJECT_MANAGER`, `DEVELOPER`) na odpowiadające wartości `Role` dostarczane przez GroupDocs. To centralizuje mapowanie i ułatwia przyszłe zmiany.
 
 ```java
 // Example of how you might organize roles in a real application
@@ -207,37 +279,36 @@ public enum DocumentRole {
 
 ### Optymalizacja wydajności dla dużych dokumentów
 
-When you need to **batch process annotations**, keep these strategies in mind:
+**Jakie strategie utrzymują szybkie i przyjazne pamięciowo przetwarzanie wsadowe adnotacji?**  
+1. Przetwarzaj adnotacje w grupach, a nie pojedynczo.  
+2. Używaj renderowania o niższej rozdzielczości w scenariuszach tylko podglądu.  
+3. Buforuj często używane pliki PDF na dysku lub w pamięci.  
+4. Przenoś ciężką pracę adnotacji na wątki w tle lub kolejkę zadań.
 
-1. Process annotations in groups rather than one‑by‑one.  
-2. Use lower‑resolution rendering for preview‑only scenarios.  
-3. Cache frequently accessed PDFs on disk or in memory.  
-4. Offload heavy annotation work to background threads or a job queue.
+### Strategie kodowania kolorami dla widoczności ról
 
-### Strategie kolorowania dla widoczności ról
-
-- **Editors** – `65535` (Cyan) – bright and actionable.  
-- **Reviewers** – `16711680` (Red) – signals items needing attention.  
-- **Viewers** – `8421504` (Gray) – subtle, read‑only.
+- **Edytorzy** – `65535` (Cyjan) – jasny i wyraźny.  
+- **Recenzenci** – `16711680` (Czerwony) – sygnalizuje elementy wymagające uwagi.  
+- **Odbiorcy** – `8421504` (Szary) – subtelnny, tylko do odczytu.
 
 ## Typowe problemy implementacyjne (i jak je naprawić)
 
 ### Adnotacje nie wyświetlają się prawidłowo
 
-- **Cause:** PDF coordinate system starts from the bottom‑left.  
-- **Fix:** Adjust Y‑coordinates or use `annotator.getPageHeight()` to calculate positions.
+- **Przyczyna:** System współrzędnych PDF zaczyna się od lewego dolnego rogu.  
+- **Rozwiązanie:** Dostosuj współrzędne Y lub użyj `annotator.getPageHeight()`, aby obliczyć pozycje.
 
 ### Role użytkowników nie są stosowane
 
-- **Cause:** Re‑using the same `User` instance for different roles or forgetting to set the `Role` enum.  
-- **Fix:** Create a fresh `User` object for each role and set it before adding replies.
+- **Przyczyna:** Ponowne użycie tej samej instancji `User` dla różnych ról lub zapomnienie ustawienia wyliczenia `Role`.  
+- **Rozwiązanie:** Utwórz nowy obiekt `User` dla każdej roli i ustaw go przed dodaniem odpowiedzi.
 
-### Problemy z pamięcią przy dużych PDF
+### Problemy z pamięcią przy dużych PDF-ach
 
-- **Cause:** Not disposing of `Annotator` objects or processing too many documents simultaneously.  
-- **Fix:** Call `dispose()` after each document and limit the number of concurrent operations.
+- **Przyczyna:** Nie zwalnianie obiektów `Annotator` lub przetwarzanie zbyt wielu dokumentów jednocześnie.  
+- **Rozwiązanie:** Wywołaj `dispose()` po każdym dokumencie i ogranicz liczbę równoczesnych operacji.
 
-## Przykłady integracji w rzeczywistym świecie
+## Przykłady integracji w rzeczywistych zastosowaniach
 
 ### Integracja platformy e‑learningowej
 
@@ -259,55 +330,68 @@ studentQuestion.setUser(student);
 
 ### Przypadek użycia adnotacji dokumentów prawnych
 
-In a law firm, you might define:
+W kancelarii prawnej możesz zdefiniować:
 
-- **Senior Partners** – `OWNER` (full edit & permission management)  
-- **Associates** – `COLLABORATOR` (edit & comment)  
-- **Paralegals** – `REVIEWER` (comment only)  
-- **Clients** – `VIEWER` (read‑only with comment capability)
+- **Starszy Partnerzy** – `OWNER` (pełna edycja i zarządzanie uprawnieniami)  
+- **Stażowicze** – `COLLABORATOR` (edycja i komentarz)  
+- **Paralegale** – `REVIEWER` (tylko komentarz)  
+- **Klienci** – `VIEWER` (tylko odczyt z możliwością komentowania)
 
-This hierarchy ensures that only the right people can approve changes while everyone else can contribute safely.
+Ta hierarchia zapewnia, że tylko odpowiednie osoby mogą zatwierdzać zmiany, podczas gdy pozostali mogą bezpiecznie przyczyniać się do projektu.
 
-## Zakończenie
+## Podsumowanie
 
-You now have a solid foundation for implementing **custom user roles** in Java annotation workflows using GroupDocs.Annotation. By combining role‑based permission logic with proper memory management and performance tricks, you can build secure, collaborative document solutions that scale from a single PDF to massive batch‑processing pipelines.
+Masz teraz solidne podstawy do wdrożenia **niestandardowych ról użytkowników** w przepływach pracy adnotacji w Javie przy użyciu GroupDocs.Annotation. Łącząc logikę uprawnień opartą na rolach z odpowiednim zarządzaniem pamięcią i trikami wydajnościowymi, możesz tworzyć bezpieczne, współpracujące rozwiązania dokumentacyjne, które skalują się od pojedynczego PDF do masowych linii przetwarzania wsadowego.
 
-**Next steps:**  
-- Try the code in a small prototype project.  
-- Expand the `DocumentRole` enum to match your organization’s hierarchy.  
-- Explore GroupDocs’ export APIs to generate reports of all annotations and their associated roles.
+**Kolejne kroki:**  
+- Wypróbuj kod w małym projekcie prototypowym.  
+- Rozszerz wyliczenie `DocumentRole`, aby odpowiadało hierarchii Twojej organizacji.  
+- Zapoznaj się z API eksportu GroupDocs, aby generować raporty wszystkich adnotacji i ich powiązanych ról.
 
 ---
 
 ## Najczęściej zadawane pytania
 
-**Q: What makes GroupDocs.Annotation stand out from other Java annotation libraries?**  
-A: It offers a built‑in role‑based permission system, supports many document formats, and provides enterprise‑grade features like audit trails and batch processing.
+**Q: Co wyróżnia GroupDocs.Annotation w porównaniu z innymi bibliotekami adnotacji Java?**  
+A: Oferuje wbudowany system uprawnień oparty na rolach, obsługuje ponad 50 formatów wejściowych i wyjściowych oraz zapewnia funkcje klasy korporacyjnej, takie jak ścieżki audytu i przetwarzanie wsadowe.
 
-**Q: How can I create custom roles beyond EDITOR and VIEWER?**  
-A: Map your business‑specific roles to the existing `Role` enum (e.g., `Role.EDITOR`) and handle additional logic in your application layer, as shown in the `DocumentRole` example.
+**Q: Jak mogę stworzyć niestandardowe role poza EDITOR i VIEWER?**  
+A: Mapuj role specyficzne dla Twojego biznesu na istniejące wyliczenie `Role` (np. `Role.EDITOR`) i obsłuż dodatkową logikę w warstwie aplikacji, jak pokazano w przykładzie `DocumentRole`.
 
-**Q: Can I integrate this with my existing authentication system?**  
-A: Yes. The `User` object accepts any identifier you use (e.g., database ID). Simply map your authenticated user to a `User` instance with the appropriate `Role`.
+**Q: Czy mogę zintegrować to z istniejącym systemem uwierzytelniania?**  
+A: Tak. Obiekt `User` akceptuje dowolny identyfikator, którego używasz (np. ID z bazy danych). Po prostu mapuj uwierzytelnionego użytkownika na instancję `User` z odpowiednią `Role`.
 
-**Q: Is it possible to **save annotated PDF** without re‑rendering the whole document?**  
-A: The `annotator.save()` method writes only the annotation changes, making the save operation fast even for large files.
+**Q: Czy możliwe jest **zapisanie oznaczonego PDF** bez ponownego renderowania całego dokumentu?**  
+A: Tak. Metoda `annotator.save()` zapisuje tylko zmiany adnotacji, co sprawia, że operacja zapisu jest szybka nawet dla dużych plików.
 
-**Q: How do I efficiently **batch process annotations** across many PDFs?**  
-A: Loop through your file list, create a single `Annotator` per file, add all needed annotations, call `save()`, and then `dispose()`. Consider using a thread pool to parallelize the work.
+**Q: Jak efektywnie **przetwarzać adnotacje wsadowo** w wielu PDF-ach?**  
+A: Przejdź w pętli przez listę plików, utwórz pojedynczy `Annotator` dla każdego pliku, dodaj wszystkie potrzebne adnotacje, wywołaj `save()`, a następnie `dispose()`. Rozważ użycie puli wątków do równoległego przetwarzania.
 
-**Q: Can I export just the annotation data (e.g., to JSON) without the full PDF?**  
-A: Yes. GroupDocs provides export methods that output annotation metadata in JSON or XML, useful for reporting or syncing with other systems.
+**Q: Czy mogę wyeksportować tylko dane adnotacji (np. do JSON) bez pełnego PDF?**  
+A: Tak. GroupDocs udostępnia metody eksportu, które zwracają metadane adnotacji w formacie JSON lub XML, przydatne do raportowania lub synchronizacji z innymi systemami.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-03-01  
-**Tested With:** GroupDocs.Annotation 25.2  
+**Ostatnia aktualizacja:** 2026-09-10  
+**Testowano z:** GroupDocs.Annotation 25.2  
 **Author:** GroupDocs  
 
-**Additional Resources**  
+**Dodatkowe zasoby**  
 - Dokumentacja: [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
 - Referencja API: [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
 - Pobierz bibliotekę: [Get the Latest Version](https://releases.groupdocs.com/annotation/java/)  
 - Wsparcie społeczności: [GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)  
 - Opcje zakupu: [Licensing Information](https://purchase.groupdocs.com/license)
+
+## Powiązane samouczki
+
+- [Niestandardowe role użytkowników w adnotacjach Java: Kompletny przewodnik implementacji](/annotation/java/licensing-and-configuration/implement-groupdocs-annotation-java-user-roles/)
+- [Ładowanie PDF w Javie z GroupDocs Annotation: Przewodnik ładowania dokumentu](/annotation/java/document-loading/)
+- [Tworzenie podświetleń PDF w Javie: Kompletny przewodnik z GroupDocs Annotation](/annotation/java/annotation-management/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+
+{{< blocks/products/products-backtop-button >}}

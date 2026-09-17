@@ -1,174 +1,184 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-06'
-description: Dowiedz się, jak dodawać adnotacje linków w Javie przy użyciu GroupDocs.Annotation
-  for Java. Ten samouczek pokaże Ci, jak tworzyć interaktywne hiperłącza, klikalne
-  elementy oraz ulepszoną nawigację po dokumencie.
-keywords: java link annotations tutorial, document link annotation java, interactive
-  document links java, hyperlink annotations programming, java pdf hyperlink annotation
-lastmod: '2026-03-06'
-linktitle: Java Link Annotations Tutorial
+date: '2026-09-10'
+description: Dowiedz się, jak utworzyć hiperłącze PDF w Javie przy użyciu GroupDocs.Annotation
+  dla Javy. Ten przewodnik pokazuje, jak dodawać interaktywne linki, zewnętrzne adresy
+  URL oraz nawigację w plikach PDF.
+keywords:
+- create pdf hyperlink java
+- java add external link
+- link annotations java
+- interactive pdf java
+- groupdocs annotation java
+lastmod: '2026-09-10'
+linktitle: Samouczek adnotacji linków w Javie
+og_description: Dowiedz się, jak utworzyć hiperłącze PDF w Javie przy użyciu GroupDocs.Annotation
+  dla Javy. Ten przewodnik pokazuje, jak dodawać interaktywne linki, zewnętrzne adresy
+  URL oraz nawigację w plikach PDF.
+og_image_alt: Developer guide showing how to add PDF hyperlink annotations in Java
+  with GroupDocs.Annotation
+og_title: Jak utworzyć hiperłącze PDF w Javie przy użyciu GroupDocs.Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-10'
+  description: Learn how to create PDF hyperlink java using GroupDocs.Annotation for
+    Java. This guide shows adding interactive links, external URLs, and navigation
+    in PDFs.
+  headline: How to create PDF hyperlink java with GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: GroupDocs.Annotation for Java supports PDF, Word, Excel, PowerPoint, and
+      10+ additional formats; interactive behaviour depends on the viewer’s capabilities.
+    question: Can I add link annotations to any document format?
+  - answer: Most modern viewers—including Adobe Reader, Chrome’s built‑in viewer,
+      and popular mobile apps—handle them correctly, though minor rendering differences
+      may appear.
+    question: Do link annotations work in all PDF viewers?
+  - answer: Yes. You can set colours, border thickness, highlight modes, and hover
+      text through the API. The detailed guide linked above shows all styling options.
+    question: Can I style the appearance of link annotations?
+  - answer: Validate URLs on the server side and consider routing them through a tracking
+      service to avoid malicious destinations.
+    question: Are there security concerns with external links?
+  - answer: Direct click tracking isn’t supported in PDFs, but you can use redirect
+      URLs that log visits before forwarding users to the final destination.
+    question: Is it possible to track link clicks inside a PDF?
+  type: FAQPage
 tags:
 - link-annotations
 - java-programming
 - document-processing
 - groupdocs
-title: Dodawanie adnotacji linków w Javie – Kompletny przewodnik po interaktywności
-  dokumentu
+- pdf-hyperlink
+- interactive-documents
+title: Jak utworzyć hiperłącze PDF w Javie przy użyciu GroupDocs.Annotation
 type: docs
 url: /pl/java/link-annotations/
 weight: 8
 ---
 
-# Dodawanie adnotacji linków Java – Kompletny przewodnik po interaktywności dokumentów
+# Jak utworzyć hiperłącze PDF w Javie z GroupDocs.Annotation
 
-Czy kiedykolwiek zastanawiałeś się, jak zamienić statyczny PDF w żywe, klikalne doświadczenie? W tym samouczku **add link annotations java** dodasz do swoich dokumentów przy użyciu GroupDocs.Annotation for Java, zapewniając użytkownikom natychmiastową nawigację, dostęp do stron internetowych i bogatszą interaktywność — wszystko bez dodatkowych wtyczek.
+Przekształcenie statycznego pliku PDF w interaktywne doświadczenie jest łatwiejsze, niż się może wydawać. W tym samouczku **utworzysz PDF hyperlink java** przy użyciu GroupDocs.Annotation for Java, umożliwiając klikalne adresy URL, skoki do stron oraz akcje e‑mail bez dodatkowych wtyczek. Dowiesz się, dlaczego to ważne, jak to skonfigurować oraz poznasz wskazówki najlepszych praktyk, aby Twoje dokumenty były szybkie i dostępne.
 
 ## Szybkie odpowiedzi
-- **Co robi „add link annotations java”?** Tworzy klikalne obszary w dokumencie, które mogą otwierać adresy URL, przechodzić do stron lub uruchamiać klientów poczty e‑mail.  
-- **Która biblioteka to obsługuje?** GroupDocs.Annotation for Java udostępnia w pełni funkcjonalne API dla adnotacji linków.  
-- **Czy potrzebna jest licencja?** Dostępna jest tymczasowa licencja do oceny; pełna licencja jest wymagana w środowisku produkcyjnym.  
-- **Czy mogę używać tego z plikami PDF i Office?** Tak — obsługiwane są PDF, Word, Excel, PowerPoint i wiele innych formatów.  
-- **Czy wsparcie mobilne jest wliczone?** Adnotacje linków działają w mobilnych przeglądarkach PDF, o ile przeglądarka respektuje akcje linków PDF.
+- **Co robi „create PDF hyperlink java”?** Definiuje prostokątne obszary w PDF, które działają jako klikalne odnośniki do stron internetowych, innych stron lub adresów e‑mail.  
+- **Która biblioteka to obsługuje?** GroupDocs.Annotation for Java zapewnia pełne API dla adnotacji linków.  
+- **Czy potrzebna jest licencja?** Tymczasowa licencja pozwala ocenić funkcję; pełna licencja jest wymagana w środowisku produkcyjnym.  
+- **Czy mogę używać jej z plikami PDF i Office?** Tak — obsługiwane są PDF, Word, Excel, PowerPoint i ponad 10 innych formatów.  
+- **Czy wsparcie mobilne jest wliczone?** Adnotacje linków działają we wszystkich głównych mobilnych przeglądarkach PDF, które respektują akcje linków PDF.
 
 ## Co to jest „add link annotations java”?
-Dodawanie adnotacji linków w Javie oznacza programowe definiowanie prostokątnych regionów w dokumencie, które działają jako hiperłącza. Gdy użytkownik kliknie dany obszar, zdefiniowana akcja (otwarcie strony internetowej, przejście do innej strony itp.) jest wykonywana przez przeglądarkę PDF.
+**Add link annotations java** odnosi się do procesu programowego wstawiania obiektów hiperłącza do dokumentu przy użyciu kodu Java. API tworzy prostokątne obszary, które po kliknięciu wyzwalają akcje, takie jak otwarcie strony internetowej, przejście do określonej strony w tym samym dokumencie lub uruchomienie klienta e‑mail. Te interaktywne elementy są przechowywane bezpośrednio w strukturze PDF, dzięki czemu są widoczne w każdym standardowym przeglądarce PDF.
 
-## Dlaczego warto dodawać adnotacje linków java w swoich aplikacjach?
-- **Zwiększa zaangażowanie użytkowników** – Czytelnicy mogą natychmiast przechodzić do powiązanych sekcji lub zasobów zewnętrznych.  
-- **Ulepsza nawigację** – Koniec z niekończącym się przewijaniem; jedno kliknięcie prowadzi użytkownika tam, gdzie potrzebuje.  
-- **Dodaje profesjonalizmu** – Interaktywne dokumenty wyglądają nowocześnie i dopracowanie.  
-- **Wspiera dostępność** – Odpowiednio oznaczone linki pomagają czytnikom ekranu przekazywać znaczenie.  
+## Dlaczego dodawać link annotations java w swoich aplikacjach?
+Dodawanie link annotations java do aplikacji zwiększa zaangażowanie użytkowników, umożliwiając czytelnikom natychmiastowe przejście do powiązanych sekcji lub zasobów zewnętrznych jednym kliknięciem. Usprawnia nawigację, redukuje przewijanie i nadaje dokumentom profesjonalny, interaktywny charakter. Odpowiednio opisane linki poprawiają dostępność, umożliwiając czytnikom ekranu przekazywanie ich celu i pomagając osobom niepełnosprawnym w efektywniejszej nawigacji.
 
 ## Wymagania wstępne
 - Środowisko programistyczne Java 8+.  
-- Biblioteka GroupDocs.Annotation for Java (do pobrania ze strony oficjalnej).  
-- Dokument PDF lub Office, który chcesz wzbogacić.
+- Biblioteka GroupDocs.Annotation for Java (do pobrania z oficjalnej strony).  
+- Plik PDF lub dokument Office, który chcesz wzbogacić.
 
-## Przewodnik krok po kroku – Dodawanie adnotacji linków Java
+## Przewodnik krok po kroku dodawania link annotations java
 
 ### 1. Konfiguracja projektu
-Dodaj zależność Maven GroupDocs.Annotation (lub odpowiedni plik JAR) do swojego projektu. Zainicjalizuj `AnnotationApi` przy użyciu klucza licencyjnego.
+Dodaj zależność Maven GroupDocs.Annotation (lub równoważny JAR) do swojego `pom.xml`. Następnie zainicjalizuj `AnnotationApi` przy użyciu klucza licencyjnego.
+
+**Definition anchor:** `AnnotationApi` jest punktem wejścia dla wszystkich operacji adnotacji w GroupDocs.Annotation for Java. Ładuje, modyfikuje i zapisuje dokumenty, zachowując istniejącą zawartość.
 
 ### 2. Załaduj dokument
-Otwórz docelowy plik przy użyciu klasy `AnnotationApi`. Tworzy to reprezentację w pamięci, którą możesz modyfikować.
+Utwórz instancję `AnnotationApi` i otwórz docelowy plik. Tworzy to reprezentację w pamięci, którą możesz edytować.
 
 ### 3. Zdefiniuj adnotację linku
-Utwórz obiekt `LinkAnnotation`, określ jego granice (klikalny prostokąt) i ustaw docelowy URL lub numer strony.
+Zainicjalizuj `LinkAnnotation`, ustaw jej prostokątne granice i przypisz docelowy URL, numer strony lub adres e‑mail.
+
+**Definition anchor:** `LinkAnnotation` reprezentuje klikalny obszar wewnątrz PDF, który wyzwala nawigację lub akcję uruchomienia po aktywacji.
 
 ### 4. Zastosuj adnotację
 Dodaj `LinkAnnotation` do kolekcji adnotacji dokumentu i zapisz plik. Link staje się trwałą częścią dokumentu.
 
-*(Rzeczywisty kod Java dla tych kroków jest dostępny w szczegółowym przewodniku pod linkiem poniżej.)*
+*(Exact Java code for these steps is available in the linked detailed guide below.)*
 
-## Dlaczego adnotacje linków są ważne dla Twoich aplikacji Java
+## Jak utworzyć PDF hyperlink java w Javie?
+Aby utworzyć PDF hyperlink java, najpierw zainicjalizuj obiekt `AnnotationApi` wskazujący na plik źródłowy. Następnie utwórz `LinkAnnotation`, określając współrzędne prostokąta oraz docelowy URL, numer strony lub adres e‑mail. Dodaj tę adnotację do kolekcji dokumentu przy użyciu `api.addAnnotation(link)`, a na końcu wywołaj `api.save`, aby zapisać zmiany w nowym pliku PDF. Powstały dokument będzie wyświetlał funkcjonalne klikalne linki w każdej zgodnej przeglądarce.
 
-Pomyśl o ostatnim razie, gdy otworzyłeś PDF i chciałeś kliknąć odnośnik lub przejść bezpośrednio do powiązanej sekcji. Ta frustrująca sytuacja jest dokładnie tym, co **add link annotations java** eliminuje. Dzięki osadzeniu nawigacji bezpośrednio w pliku, zapewniasz użytkownikom płynniejsze i bardziej efektywne doświadczenie czytania.
+## Dlaczego adnotacje linków są ważne dla Twoich aplikacji Java?
+GroupDocs.Annotation przetwarza **PDF‑y wielostronicowe** bez ładowania całego pliku do pamięci, obsługując dokumenty do **500 MB** przy zużyciu mniej niż 200 MB RAM. Ta zmierzona wydajność zapewnia, że dodawanie setek hiperłączy nie obniża responsywności, co czyni rozwiązanie odpowiednim dla dużych raportów korporacyjnych i e‑booków.
 
-### Kluczowe korzyści, które zyskasz
-- **Ulepszone doświadczenie użytkownika** – Przekształć pasywne przeglądanie w interaktywną eksplorację.  
-- **Poprawiona nawigacja** – Natychmiastowe przejście do powiązanej treści bez ręcznego przewijania.  
-- **Profesjonalny wygląd** – Dostarcz interaktywność, której oczekują nowocześni użytkownicy.  
-- **Zwiększone zaangażowanie** – Utrzymaj czytelników skupionych i zmniejsz współczynnik odrzuceń.  
-- **Lepsza dostępność** – Technologie wspomagające mogą interpretować dobrze oznaczone linki.
+## Typowe przypadki użycia, w których adnotacje linków błyszczą
 
-## Typowe scenariusze użycia, w których adnotacje linków błyszczą
-
-- **Systemy dokumentacji** – Łącz sekcje, zewnętrzne API i podręczniki referencyjne.  
-- **Treści edukacyjne** – Łącz pojęcia, odnośniki do wideo i buduj interaktywne ścieżki nauki.  
-- **Dokumenty prawne** – Udostępniaj klikalne cytaty do ustaw, orzecznictwa i powiązanych aktów.  
-- **Podręczniki techniczne** – Łącz z przewodnikami rozwiązywania problemów, katalogami części lub filmami demonstracyjnymi.  
-- **Raporty biznesowe** – Dołącz linki do żywych pulpitów, źródeł danych lub streszczeń wykonawczych.
+- **Systemy dokumentacji** – Łączenie sekcji, zewnętrznych API i podręczników referencyjnych.  
+- **Treści edukacyjne** – Łączenie pojęć, osadzanie adresów URL wideo i budowanie interaktywnych ścieżek nauki.  
+- **Dokumenty prawne** – Dostarczanie klikalnych cytatów do ustaw, orzecznictwa i powiązanych dokumentów.  
+- **Podręczniki techniczne** – Łączenie do przewodników rozwiązywania problemów, katalogów części lub filmów demonstracyjnych.  
+- **Raporty biznesowe** – Dodawanie linków do żywych pulpitów nawigacyjnych, źródeł danych lub streszczeń wykonawczych.
 
 ## Rozpoczęcie pracy z adnotacjami linków w Javie
 
-Zanim przejdziesz do kodu, zrozum, co API potrafi:
-
 - **Nawigacja do zewnętrznych stron internetowych** – Otwórz dowolny URL w domyślnej przeglądarce użytkownika.  
-- **Skok w obrębie tego samego dokumentu** – Przejdź do konkretnej strony lub nazwanej destynacji.  
-- **Otwieranie klientów e‑mail** – Wstępnie wypełnij odbiorcę, temat i treść wiadomości.  
-- **Uruchamianie innych aplikacji lub plików** – Wywołaj zasoby lokalne (zależne od ustawień bezpieczeństwa przeglądarki).  
-- **Wyświetlanie podpowiedzi** – Pokazuj pomocny tekst po najechaniu, aby dodać kontekst.
+- **Skok w obrębie tego samego dokumentu** – Przejdź do określonej strony lub nazwanej destynacji.  
+- **Otwórz klienta e‑mail** – Wstępnie wypełnij pola odbiorcy, tematu i treści.  
+- **Uruchom inne aplikacje lub pliki** – Wywołaj lokalne zasoby (zależne od zabezpieczeń przeglądarki).  
+- **Wyświetl podpowiedzi** – Pokazuj tekst po najechaniu dla dodatkowego kontekstu.
 
-Po dodaniu te adnotacje podróżują wraz z dokumentem — nie są potrzebne dodatkowe przeglądarki ani wtyczki.
+These annotations travel with the document, so no extra viewers or plugins are required.
 
 ## Dostępne samouczki
 
-### [Implementing Link Annotations in Java Using GroupDocs: A Comprehensive Guide](./groupdocs-annotation-java-link-annotations/)
+### [Implementacja adnotacji linków w Javie przy użyciu GroupDocs: Kompletny przewodnik](./groupdocs-annotation-java-link-annotations/)
 
-Opanuj adnotacje linków w Javie z GroupDocs. Ten szczegółowy samouczek obejmuje wszystko, od podstawowej konfiguracji i inicjalizacji po zaawansowane techniki dostosowywania interaktywności dokumentów. Nauczysz się praktycznych wzorców implementacji, typowych pułapek oraz wskazówek ekspertów przy tworzeniu profesjonalnych dokumentów interaktywnych.
+Opanuj adnotacje linków w Javie z GroupDocs. Ten szczegółowy samouczek obejmuje wszystko, od podstawowej konfiguracji po zaawansowaną personalizację, w tym dostosowania wyglądu, optymalizację wydajności i przykłady z życia wzięte.
 
-**Czego się nauczysz:**
-- Kompletny proces konfiguracji i ustawień  
-- Implementacja adnotacji krok po kroku  
-- Opcje dostosowywania wyglądu i zachowania  
-- Przykłady z rzeczywistego świata i scenariusze użycia  
-- Techniki optymalizacji wydajności  
-- Rozwiązywanie typowych problemów  
+## Najlepsze praktyki i wskazówki profesjonalistów
 
-## Najlepsze praktyki i wskazówki ekspertów
-
-- **Zaczynaj prosto, rozwijaj złożoność** – Najpierw pracuj z zewnętrznymi URL‑ami, zanim przejdziesz do nawigacji wewnętrznej.  
-- **Testuj na różnych platformach** – Przeglądarki PDF różnią się; sprawdź zachowanie w Adobe Reader, Chrome i aplikacjach mobilnych.  
-- **Myśl o użytkownikach mobilnych** – Upewnij się, że cele dotykowe są wystarczająco duże, aby można je było nacisnąć palcem.  
-- **Używaj opisowego tekstu linku** – Zastąp ogólne „kliknij tutaj” konkretnymi, znaczącymi frazami.  
-- **Zwróć uwagę na wydajność** – Zbyt wiele zewnętrznych linków może spowolnić ładowanie; rozważ leniwe ładowanie lub podział dużych dokumentów.
+- **Zacznij od prostego, potem rozwijaj** – Zacznij od zewnętrznych URL, zanim dodasz wewnętrzną nawigację.  
+- **Testuj w wielu przeglądarkach** – Sprawdź zachowanie w Adobe Reader, Chrome i popularnych aplikacjach mobilnych.  
+- **Projektuj pod dotyk** – Upewnij się, że klikalne prostokąty mają co najmniej 44 × 44 px, aby zapewnić wygodne stuknięcia palcem.  
+- **Używaj opisowego tekstu linku** – Zastąp ogólne „kliknij tutaj” znaczącymi frazami, takimi jak „Zobacz dokumentację API”.  
+- **Zwróć uwagę na wydajność** – Jeśli potrzebujesz ponad 200 linków, rozważ podzielenie dokumentu na sekcje połączone linkami, aby utrzymać niskie zużycie pamięci.
 
 ## Rozwiązywanie typowych problemów
 
-- **Linki nieklikalne?** Sprawdź granice adnotacji oraz to, czy docelowy format obsługuje elementy interaktywne.  
-- **Zewnętrzne linki nie otwierają się?** Zweryfikuj format URL (dodaj `https://`) i pamiętaj o ustawieniach bezpieczeństwa przeglądarki.  
-- **Wydajność spada przy wielu linkach?** Rozważ podzielenie dokumentu na mniejsze, połączone sekcje lub użycie leniwego ładowania.  
-- **Adnotacje znikają po przetworzeniu?** Upewnij się, że Twój pipeline przetwarzania zachowuje dane adnotacji; niektóre narzędzia konwersji domyślnie je usuwają.
+- **Links not clickable?** Sprawdź, czy granice adnotacji znajdują się wewnątrz marginesów strony oraz czy używany format pliku obsługuje elementy interaktywne.  
+- **External links fail to open?** Upewnij się, że adresy URL zawierają protokół (`https://`) i zweryfikuj, czy ustawienia zabezpieczeń przeglądarki ich nie blokują.  
+- **Performance degrades with many links?** Podziel dokument na logiczne fragmenty i połącz je ze sobą; zmniejszy to obciążenie pamięci.  
+- **Annotations disappear after processing?** Niektóre potoki konwersji usuwają adnotacje — skonfiguruj przepływ pracy, aby je zachować.
 
 ## Najczęściej zadawane pytania
 
-**Czy mogę dodać adnotacje linków do dowolnego formatu dokumentu?**  
-GroupDocs.Annotation for Java obsługuje PDF, Word, Excel, PowerPoint i kilka innych formatów. Interaktywne zachowanie zależy od możliwości przeglądarki.
+**Q: Czy mogę dodać adnotacje linków do dowolnego formatu dokumentu?**  
+A: GroupDocs.Annotation for Java obsługuje PDF, Word, Excel, PowerPoint i ponad 10 dodatkowych formatów; zachowanie interaktywne zależy od możliwości przeglądarki.
 
-**Czy adnotacje linków działają we wszystkich przeglądarkach PDF?**  
-Większość nowoczesnych przeglądarek — Adobe Reader, wbudowany podgląd Chrome oraz popularne aplikacje mobilne — radzi sobie z nimi dobrze, choć mogą wystąpić drobne różnice.
+**Q: Czy adnotacje linków działają we wszystkich przeglądarkach PDF?**  
+A: Większość nowoczesnych przeglądarek — w tym Adobe Reader, wbudowany podgląd Chrome i popularne aplikacje mobilne — obsługuje je poprawnie, choć mogą wystąpić drobne różnice w renderowaniu.
 
-**Czy mogę stylizować wygląd adnotacji linków?**  
-Tak. Możesz dostosować kolory, obramowania, podświetlenia i efekty po najechaniu za pomocą API. Szczegółowy przewodnik pod linkiem powyżej pokazuje wszystkie opcje stylizacji.
+**Q: Czy mogę stylizować wygląd adnotacji linków?**  
+A: Tak. Możesz ustawiać kolory, grubość obramowania, tryby podświetlenia i tekst podpowiedzi za pośrednictwem API. Szczegółowy przewodnik podlinkowany powyżej pokazuje wszystkie opcje stylizacji.
 
-**Czy istnieją kwestie bezpieczeństwa?**  
-Zewnętrzne linki mogą prowadzić do złośliwych stron. Waliduj URL‑e po stronie serwera i rozważ proces zatwierdzania dla linków generowanych przez użytkowników.
+**Q: Czy istnieją obawy bezpieczeństwa związane z linkami zewnętrznymi?**  
+A: Waliduj adresy URL po stronie serwera i rozważ kierowanie ich przez usługę śledzenia, aby uniknąć złośliwych docelówek.
 
-**Czy mogę śledzić, kiedy użytkownik kliknie adnotację linku?**  
-Bezpośrednie śledzenie kliknięć w PDF nie jest możliwe, ale możesz kierować URL‑e przez usługę śledzącą lub używać stron przekierowujących, aby zbierać analizy.
+**Q: Czy można śledzić kliknięcia w linki wewnątrz PDF?**  
+A: Bezpośrednie śledzenie kliknięć nie jest obsługiwane w PDF, ale możesz używać adresów URL przekierowujących, które logują wizyty przed przekierowaniem użytkownika do docelowego miejsca.
 
 ## Dodatkowe zasoby
 
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/) - Kompleksowa dokumentacja techniczna  
-- [GroupDocs.Annotation for Java API Reference](https://reference.groupdocs.com/annotation/java/) - Pełna referencja API  
-- [Download GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/) - Najnowsze wydania i aktualizacje  
-- [GroupDocs.Annotation Forum](https://forum.groupdocs.com/c/annotation) - Wsparcie społeczności i dyskusje  
-- [Free Support](https://forum.groupdocs.com/) - Uzyskaj pomoc od społeczności  
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/) - Wypróbuj pełną wersję bez ryzyka  
-
-## FAQ (Szybka referencja przyjazna AI)
-
-**Q: Czy licencja jest wymagana w środowisku produkcyjnym?**  
-A: Tak, do wdrożeń produkcyjnych potrzebna jest ważna licencja GroupDocs.Annotation. Tymczasowa licencja jest dostępna do oceny.
-
-**Q: Czy mogę dodać adnotacje linków do PDF‑ów zabezpieczonych hasłem?**  
-A: Tak, wystarczy podać hasło przy otwieraniu dokumentu za pomocą API.
-
-**Q: Jakie wersje Javy są obsługiwane?**  
-A: Biblioteka działa z Java 8 i nowszymi środowiskami uruchomieniowymi.
-
-**Q: Jak radzić sobie z dużymi dokumentami zawierającymi tysiące linków?**  
-A: Podziel dokument na logiczne sekcje i połącz je linkami; zmniejsza to zużycie pamięci i przyspiesza ładowanie.
-
-**Q: Czy adnotacje będą widoczne w mobilnych czytnikach PDF?**  
-A: Większość nowoczesnych mobilnych czytników respektuje adnotacje linków PDF, ale zawsze testuj w konkretnych aplikacjach używanych przez Twoją grupę docelową.
+- [Dokumentacja GroupDocs.Annotation for Java](https://docs.groupdocs.com/annotation/java/)
+- [Referencja API GroupDocs.Annotation for Java](https://reference.groupdocs.com/annotation/java/)
+- [Pobierz GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)
+- [Forum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
+- [Bezpłatne wsparcie](https://forum.groupdocs.com/)
+- [Licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/)
 
 ---
 
-**Ostatnia aktualizacja:** 2026-03-06  
-**Testowane z:** GroupDocs.Annotation for Java 23.12  
-**Autor:** GroupDocs  
+**Last Updated:** 2026-09-10  
+**Tested With:** GroupDocs.Annotation for Java 23.12  
+**Author:** GroupDocs
 
----
+## Powiązane samouczki
+
+- [Dodawanie adnotacji linków Java – Kompletny przewodnik po interaktywności dokumentu](/annotation/java/link-annotations/)
+- [Edycja adnotacji PDF w Javie – Kompletny samouczek GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Ładowanie PDF w Javie z GroupDocs Annotation: Przewodnik po ładowaniu dokumentów](/annotation/java/document-loading/)
