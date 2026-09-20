@@ -1,66 +1,131 @@
 ---
 categories:
 - Document Processing
-date: '2026-04-01'
-description: Aprende a generar miniaturas en .NET sin comentarios usando GroupDocs.Annotation.
-  Esta guía cubre cómo ocultar anotaciones, eliminar la vista previa de comentarios
-  y crear vistas previas de PDF limpias.
+date: '2026-09-20'
+description: Aprenda a eliminar comentarios de PDF y generar miniaturas limpias en
+  .NET usando GroupDocs.Annotation. Esta guía muestra cómo ocultar anotaciones, crear
+  vistas previas sin comentarios y producir miniaturas profesionales de PDF.
 keywords:
-- how to generate thumbnails
-- how to hide annotations
-- remove comments preview
-- document preview without comments
-- clean pdf preview
-lastmod: '2026-04-01'
+- remove pdf comments
+- hide pdf annotations
+- file explorer pdf thumbnail
+- render pdf pages images
+- pdf to png thumbnail
+lastmod: '2026-09-20'
 linktitle: Generar vista previa sin comentarios
+og_description: Elimine comentarios de PDF y cree miniaturas limpias en .NET con GroupDocs.Annotation.
+  Siga instrucciones paso a paso para ocultar anotaciones, elegir formatos y optimizar
+  el rendimiento.
+og_image_alt: Guide showing clean PDF thumbnail generation in .NET using GroupDocs.Annotation
+og_title: Cómo eliminar comentarios de PDF y generar miniaturas en .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to remove PDF comments and generate clean thumbnails in .NET
+    using GroupDocs.Annotation. This guide shows how to hide annotations, create comment‑free
+    previews, and produce professional PDF thumbnails.
+  headline: How to remove PDF comments and generate thumbnails in .NET
+  type: TechArticle
+- description: Learn how to remove PDF comments and generate clean thumbnails in .NET
+    using GroupDocs.Annotation. This guide shows how to hide annotations, create comment‑free
+    previews, and produce professional PDF thumbnails.
+  name: How to remove PDF comments and generate thumbnails in .NET
+  steps:
+  - name: Initialize the annotator
+    text: '`Annotator` is the main entry point in GroupDocs.Annotation for loading
+      and processing documents. The `Annotator` object loads the source file. The
+      `using` block guarantees that all unmanaged resources are released once we’re
+      done.'
+  - name: Configure preview options
+    text: '`PreviewOptions` defines how each page is rendered, including format, DPI,
+      and output stream. Here we tell the library where to store each page’s image.
+      The lambda receives the page number and returns a writable `FileStream`.'
+  - name: Choose format and pages
+    text: PNG delivers crisp thumbnails, but you can switch to JPEG if file size is
+      a bigger concern. Selecting a subset of pages reduces processing time—perfect
+      for thumbnail galleries that only need the first few pages.
+  - name: Disable rendering of comments
+    text: '`RenderComments` is a boolean flag that tells the renderer whether to include
+      annotation comment layers in the output. **This line is the key to “how to hide
+      annotations.”** Setting `RenderComments` to `false` strips out all comment layers,
+      giving you a clean PDF preview.'
+  - name: Generate the preview images
+    text: The library processes the document and writes the images to the locations
+      you defined earlier.
+  type: HowTo
+- questions:
+  - answer: Yes. It supports PDF, DOCX, PPTX, XLSX, common image types, and many OpenDocument
+      formats.
+    question: Is GroupDocs.Annotation for .NET compatible with all document formats?
+  - answer: Absolutely. You can change `PreviewFormat`, set image dimensions, DPI,
+      and choose specific pages to render.
+    question: Can I customize the look of the generated previews?
+  - answer: GroupDocs.Annotation offers collaborative annotation features. The preview
+      generation can be used to create clean views that hide all user comments.
+    question: Does the library support multi‑user collaboration?
+  - answer: The community and support team are active on the **[support forum](https://forum.groupdocs.com/c/annotation/10)**
+      where you can ask questions and share experiences.
+    question: Where can I get help if I run into issues?
+  - answer: Yes, you can download a full‑function trial **[full‑function trial download](https://releases.groupdocs.com/)**
+      to test the preview generation capabilities before purchasing.
+    question: Is there a free trial available?
+  type: FAQPage
 second_title: GroupDocs.Annotation .NET API
 tags:
-- document-preview
-- pdf-thumbnails
-- groupdocs
-- dotnet
-title: Cómo generar miniaturas en .NET – Vistas previas limpias de PDF
+- remove pdf comments
+- pdf thumbnail
+- groupdocs annotation
+- dotnet preview
+title: Cómo eliminar comentarios de PDF y generar miniaturas en .NET
 type: docs
 url: /es/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-# Cómo generar miniaturas en .NET – Vistas previas de PDF limpias
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
+
+# Cómo eliminar comentarios de PDF y generar miniaturas en .NET
 
 ## Introducción
 
-¿Alguna vez necesitó **cómo generar miniaturas** para un visor de documentos, explorador de archivos o sistema de gestión de contenido mientras mantiene las imágenes libres de notas de usuario? No está solo. Muchos desarrolladores .NET se topan con un obstáculo al intentar crear vistas previas de documentos que oculten anotaciones y comentarios.  
-
-En este tutorial recorreremos los pasos exactos para producir vistas previas de PDF limpias usando **GroupDocs.Annotation for .NET**. Verá cómo ocultar anotaciones, eliminar la vista previa de comentarios y generar miniaturas de aspecto profesional que encajen perfectamente en galerías, paneles de control o cualquier interfaz donde se requiera una captura sin desorden.
+Si necesita **eliminar comentarios de PDF** mientras genera miniaturas para un visor de documentos, explorador de archivos o sistema de gestión de contenido, ha llegado al lugar correcto. Muchos desarrolladores .NET luchan por producir vistas previas limpias que oculten notas y anotaciones de los usuarios. En este tutorial recorreremos los pasos exactos para crear miniaturas de PDF sin comentarios usando **GroupDocs.Annotation for .NET**. Aprenderá cómo ocultar anotaciones, configurar formatos de salida y producir imágenes de aspecto profesional que encajen perfectamente en galerías, paneles de control o cualquier interfaz donde se requiera una captura sin desorden.
 
 ## Respuestas rápidas
+
 - **¿Qué biblioteca crea miniaturas sin comentarios?** GroupDocs.Annotation for .NET  
 - **¿Qué propiedad desactiva las anotaciones?** `RenderComments = false`  
-- **¿Puedo elegir el formato de imagen?** Sí – PNG, JPEG, BMP, etc. mediante `PreviewFormat`  
+- **¿Puedo elegir el formato de imagen?** Sí – PNG, JPEG, BMP, etc. a través de `PreviewFormat`  
 - **¿Necesito una licencia para producción?** Se requiere una licencia comercial; una licencia temporal funciona para pruebas.  
-- **¿Es solo para .NET?** Funciona con .NET Framework, .NET Core y .NET 5/6+.
+- **¿Es solo para .NET?** Funciona con .NET Framework, .NET Core y .NET 5/6+.
 
 ## ¿Qué es la generación de miniaturas sin comentarios?
 
-La generación de miniaturas sin comentarios significa renderizar una captura visual de cada página **sin** ninguna marca, nota o anotación colaborativa que pudiera haberse añadido al archivo original. El resultado es una imagen estática y limpia que representa el contenido real del documento, ideal para portales de acceso público, archivos legales o cualquier escenario donde los comentarios internos deben permanecer ocultos.
+La generación de miniaturas sin comentarios significa renderizar una captura visual de cada página **sin** ningún marcado, notas o anotaciones colaborativas que puedan haberse añadido al archivo original. El resultado es una imagen estática y limpia que representa el contenido real del documento, ideal para portales públicos, archivos legales o cualquier escenario donde los comentarios internos deben permanecer ocultos.
 
 ## ¿Por qué ocultar anotaciones al crear vistas previas?
 
-- **Apariencia profesional:** Los usuarios finales ven solo el contenido del documento, no la conversación de revisión.  
+Debe ocultar las anotaciones para que la vista previa sea profesional, segura y rápida. Renderizar menos capas reduce el tiempo de procesamiento, protege los comentarios sensibles y garantiza que la miniatura coincida con la versión final impresa o exportada que también omite los comentarios.
+
+- **Aspecto profesional:** Los usuarios finales ven solo el contenido del documento, no la conversación de revisión.  
 - **Seguridad y privacidad:** Los comentarios sensibles permanecen internos.  
 - **Rendimiento:** Renderizar menos capas acelera la creación de imágenes.  
 - **Consistencia:** Las miniaturas coinciden con las versiones impresas o exportadas que también omiten los comentarios.
 
 ## Requisitos previos
 
-### 1. Instalar GroupDocs.Annotation para .NET
-Obtenga el paquete desde la página oficial de distribución **[aquí](https://releases.groupdocs.com/annotation/net/)** o instálelo mediante NuGet. Asegúrese de que su proyecto apunte a una versión compatible de .NET.
+### 1. Instalar GroupDocs.Annotation for .NET
+
+Obtenga el paquete desde la página oficial de distribución **[official distribution page](https://releases.groupdocs.com/annotation/net/)** o instálelo mediante NuGet. Asegúrese de que su proyecto apunte a una versión compatible de .NET.
 
 ### 2. Obtener una licencia
-Se requiere una licencia comercial para uso en producción. Compre una **[aquí](https://purchase.groupdocs.com/buy)** o solicite una licencia de evaluación temporal **[aquí](https://purchase.groupdocs.com/temporary-license/)**.
+
+Se requiere una licencia comercial para uso en producción. Adquiera una en **[purchase page](https://purchase.groupdocs.com/buy)** o solicite una licencia de evaluación temporal **[temporary evaluation license page](https://purchase.groupdocs.com/temporary-license/)**.
 
 ### 3. Conocimientos de .NET
-Debe estar familiarizado con los conceptos básicos de C#, entrada/salida de archivos y el uso de sentencias `using` para la gestión de recursos.
+
+Debe estar cómodo con los conceptos básicos de C#, manejo de archivos (I/O) y el uso de sentencias `using` para la gestión de recursos.
 
 ## Importar espacios de nombres
 
@@ -74,14 +139,21 @@ using GroupDocs.Annotation.Options;
 
 ## Guía paso a paso: generar vistas previas de documentos limpias
 
-### Paso 1: Inicializar el Annotator
+### Paso 1: Inicializar el anotador
+
+`Annotator` es el punto de entrada principal en GroupDocs.Annotation para cargar y procesar documentos.  
+El objeto `Annotator` carga el archivo fuente. El bloque `using` garantiza que todos los recursos no administrados se liberen una vez que terminemos.
+
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 {
 ```
-El objeto `Annotator` carga el archivo fuente. El bloque `using` garantiza que todos los recursos no administrados se liberen una vez que terminemos.
 
 ### Paso 2: Configurar opciones de vista previa
+
+`PreviewOptions` define cómo se renderiza cada página, incluyendo el formato, DPI y el flujo de salida.  
+Aquí indicamos a la biblioteca dónde almacenar la imagen de cada página. La lambda recibe el número de página y devuelve un `FileStream` escribible.
+
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -89,27 +161,33 @@ El objeto `Annotator` carga el archivo fuente. El bloque `using` garantiza que t
         return File.Create(pagePath);
     });
 ```
-Aquí indicamos a la biblioteca dónde almacenar la imagen de cada página. La lambda recibe el número de página y devuelve un `FileStream` con permisos de escritura.
 
 ### Paso 3: Elegir formato y páginas
+
+PNG ofrece miniaturas nítidas, pero puede cambiar a JPEG si el tamaño del archivo es una mayor preocupación. Seleccionar un subconjunto de páginas reduce el tiempo de procesamiento, perfecto para galerías de miniaturas que solo necesitan las primeras páginas.
+
 ```csharp
     previewOptions.PreviewFormat = PreviewFormats.PNG;
     previewOptions.PageNumbers = new int[] { 1, 2, 3, 4, 5, 6 };
 ```
-PNG ofrece miniaturas nítidas, pero puede cambiar a JPEG si el tamaño del archivo es una mayor preocupación. Seleccionar un subconjunto de páginas reduce el tiempo de procesamiento, perfecto para galerías de miniaturas que solo necesitan las primeras páginas.
 
-### Paso 4: Desactivar la renderización de comentarios
+### Paso 4: Desactivar el renderizado de comentarios
+
+`RenderComments` es una bandera booleana que indica al renderizador si debe incluir capas de comentarios de anotación en la salida.  
+**Esta línea es la clave para “cómo ocultar anotaciones”.** Establecer `RenderComments` a `false` elimina todas las capas de comentarios, brindándole una vista previa de PDF limpia.
+
 ```csharp
     previewOptions.RenderComments = false;
 ```
-**Esta línea es la clave para “cómo ocultar anotaciones”.** Establecer `RenderComments` a `false` elimina todas las capas de comentarios, brindándole una vista previa de PDF limpia.
 
 ### Paso 5: Generar las imágenes de vista previa
+
+La biblioteca procesa el documento y escribe las imágenes en las ubicaciones que definió anteriormente.
+
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-La biblioteca procesa el documento y escribe las imágenes en las ubicaciones que definió anteriormente.
 
 ## Mejores prácticas para la generación de vistas previas de documentos
 
@@ -127,48 +205,56 @@ La biblioteca procesa el documento y escribe las imágenes en las ubicaciones qu
 
 ## Consejos para optimizar el rendimiento
 
-- **Procesar varios documentos en lote:** Recorra una colección y reutilice una única instancia de `Annotator` cuando sea posible.  
-- **Generación async:** Despliegue la creación de vistas previas a un servicio en segundo plano para que la UI permanezca receptiva.  
-- **Cachear resultados:** Almacene las miniaturas generadas en un CDN o caché local para evitar volver a procesar el mismo archivo.  
-- **Elegir el formato adecuado:** PNG para calidad sin pérdida, JPEG para archivos más pequeños cuando el documento contiene muchas imágenes.
+- **Procesar varios documentos en lote:** Recorrer una colección y reutilizar una sola instancia de `Annotator` cuando sea posible.  
+- **Generación async:** Delegue la creación de vistas previas a un servicio en segundo plano para que la UI permanezca receptiva.  
+- **Cachear resultados:** Almacene las miniaturas generadas en una CDN o caché local para evitar volver a procesar el mismo archivo.  
+- **Elegir el formato adecuado:** PNG para calidad sin pérdidas, JPEG para archivos más pequeños cuando el documento contiene muchas imágenes.
 
-## Formatos de documento compatibles
+## Formatos de documentos compatibles
 
-GroupDocs.Annotation for .NET puede generar vistas previas para:
+GroupDocs.Annotation for .NET soporta **más de 30** formatos de entrada y salida, permitiendo la generación de vistas previas para PDFs, archivos de Office, imágenes y estándares OpenDocument.
 
 - **PDF** – el caso de uso más común.  
-- **Microsoft Office** – DOCX, XLSX, PPTX y sus versiones heredadas.  
+- **Microsoft Office** – DOCX, XLSX, PPTX y sus contrapartes heredadas.  
 - **Imágenes** – TIFF, JPEG, PNG, BMP (útil para documentos escaneados).  
 - **OpenDocument** – ODT, ODS, ODP y otros estándares abiertos.
 
-## Cuándo usar generación de vistas previas sin comentarios
+## Cuándo usar la generación de vistas previas sin comentarios
 
-- **Portales públicos** donde las notas de revisión internas deben permanecer ocultas.  
-- **Navegadores de archivo** que muestran una cuadrícula de miniaturas limpias.  
-- **Flujos de trabajo listos para imprimir** que necesitan mostrar la apariencia final antes de enviarla a la impresora.  
-- **Controles de calidad** donde se comparan versiones “con comentarios” vs. “sin comentarios”.
+La generación de vistas previas sin comentarios es ideal para portales públicos donde las notas de revisión internas deben permanecer ocultas, para navegadores de archivos que muestran una cuadrícula de miniaturas limpias, para flujos de trabajo listos para imprimir que necesitan mostrar la apariencia final antes de la impresión, y para controles de calidad donde se comparan versiones con y sin comentarios.
 
 ## Conclusión
 
-Ahora sabe **cómo generar miniaturas** en .NET mientras elimina completamente anotaciones y comentarios. Al establecer `RenderComments = false` obtiene vistas previas de PDF limpias y profesionales que encajan perfectamente en cualquier interfaz. Recuerde adaptar el formato de vista previa, la selección de páginas y las dimensiones de la imagen a su escenario específico, y siempre manejar la licencia y los casos de error de forma adecuada. Con estos pasos, su aplicación entregará miniaturas de documentos rápidas y sin desorden que mejoran la experiencia del usuario.
+Ahora sabe **cómo eliminar comentarios de PDF y generar miniaturas** en .NET mientras elimina completamente las anotaciones. Al establecer `RenderComments = false` obtiene vistas previas de PDF limpias y profesionales que encajan perfectamente en cualquier interfaz. Recuerde adaptar el formato de vista previa, la selección de páginas y las dimensiones de la imagen a su escenario específico, y siempre maneje la licencia y los casos de error de forma adecuada. Con estos pasos, su aplicación entregará miniaturas de documentos rápidas y sin desorden que mejoran la experiencia del usuario.
 
 ## Preguntas frecuentes
 
-**Q: ¿Es GroupDocs.Annotation para .NET compatible con todos los formatos de documento?**  
-A: Sí. Soporta PDF, DOCX, PPTX, XLSX, tipos de imagen comunes y muchos formatos OpenDocument.
+**P: ¿GroupDocs.Annotation for .NET es compatible con todos los formatos de documento?**  
+R: Sí. Soporta PDF, DOCX, PPTX, XLSX, tipos de imagen comunes y muchos formatos OpenDocument.
 
-**Q: ¿Puedo personalizar el aspecto de las vistas previas generadas?**  
-A: Por supuesto. Puede cambiar `PreviewFormat`, establecer dimensiones de imagen, DPI y elegir páginas específicas para renderizar.
+**P: ¿Puedo personalizar el aspecto de las vistas previas generadas?**  
+R: Por supuesto. Puede cambiar `PreviewFormat`, establecer dimensiones de imagen, DPI y elegir páginas específicas para renderizar.
 
-**Q: ¿La biblioteca admite colaboración multiusuario?**  
-A: GroupDocs.Annotation ofrece funciones de anotación colaborativa. La generación de vistas previas puede usarse para crear vistas limpias que oculten todos los comentarios de los usuarios.
+**P: ¿La biblioteca soporta colaboración multi‑usuario?**  
+R: GroupDocs.Annotation ofrece funciones de anotación colaborativa. La generación de vistas previas puede usarse para crear vistas limpias que oculten todos los comentarios de los usuarios.
 
-**Q: ¿Dónde puedo obtener ayuda si encuentro problemas?**  
-A: La comunidad y el equipo de soporte están activos en el **[foro de soporte](https://forum.groupdocs.com/c/annotation/10)** donde puede hacer preguntas y compartir experiencias.
+**P: ¿Dónde puedo obtener ayuda si tengo problemas?**  
+R: La comunidad y el equipo de soporte están activos en el **[support forum](https://forum.groupdocs.com/c/annotation/10)** donde puede hacer preguntas y compartir experiencias.
 
-**Q: ¿Hay una prueba gratuita disponible?**  
-A: Sí, puede descargar una prueba de funciones completas **[aquí](https://releases.groupdocs.com/)** para probar las capacidades de generación de vistas previas antes de comprar.
+**P: ¿Hay una prueba gratuita disponible?**  
+R: Sí, puede descargar una prueba de funcionalidad completa **[full‑function trial download](https://releases.groupdocs.com/)** para probar las capacidades de generación de vistas previas antes de comprar.
 
-**Última actualización:** 2026-04-01  
+**Última actualización:** 2026-09-20  
 **Probado con:** GroupDocs.Annotation for .NET (última versión)  
 **Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [Generar vistas previas de documentos sin comentarios en .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
+- [Crear miniatura de PDF con GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
+- [Cómo eliminar anotaciones de PDF C# – Guía de GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

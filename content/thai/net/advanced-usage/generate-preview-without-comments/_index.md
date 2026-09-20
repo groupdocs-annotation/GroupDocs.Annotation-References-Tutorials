@@ -1,68 +1,127 @@
 ---
 categories:
 - Document Processing
-date: '2026-04-01'
-description: เรียนรู้วิธีสร้างภาพย่อใน .NET โดยไม่มีคอมเมนต์ด้วย GroupDocs.Annotation
-  คู่มือนี้อธิบายวิธีซ่อนคำอธิบาย, ลบการแสดงตัวอย่างคอมเมนต์, และสร้างตัวอย่าง PDF
-  ที่สะอาด
+date: '2026-09-20'
+description: เรียนรู้วิธีลบความคิดเห็นใน PDF และสร้างภาพย่อที่สะอาดใน .NET ด้วย GroupDocs.Annotation
+  คู่มือนี้แสดงวิธีซ่อน annotations, สร้าง preview ที่ไม่มีความคิดเห็น, และผลิตภาพย่อ
+  PDF ระดับมืออาชีพ
 keywords:
-- how to generate thumbnails
-- how to hide annotations
-- remove comments preview
-- document preview without comments
-- clean pdf preview
-lastmod: '2026-04-01'
-linktitle: สร้างตัวอย่างโดยไม่มีความคิดเห็น
+- remove pdf comments
+- hide pdf annotations
+- file explorer pdf thumbnail
+- render pdf pages images
+- pdf to png thumbnail
+lastmod: '2026-09-20'
+linktitle: สร้าง preview โดยไม่มีความคิดเห็น
+og_description: ลบความคิดเห็นใน PDF และสร้างภาพย่อที่สะอาดใน .NET ด้วย GroupDocs.Annotation
+  ทำตามคำแนะนำขั้นตอนต่อขั้นตอนเพื่อซ่อน annotations, เลือก formats, และเพิ่มประสิทธิภาพ
+  performance
+og_image_alt: Guide showing clean PDF thumbnail generation in .NET using GroupDocs.Annotation
+og_title: วิธีลบความคิดเห็นใน PDF และสร้างภาพย่อใน .NET
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to remove PDF comments and generate clean thumbnails in .NET
+    using GroupDocs.Annotation. This guide shows how to hide annotations, create comment‑free
+    previews, and produce professional PDF thumbnails.
+  headline: How to remove PDF comments and generate thumbnails in .NET
+  type: TechArticle
+- description: Learn how to remove PDF comments and generate clean thumbnails in .NET
+    using GroupDocs.Annotation. This guide shows how to hide annotations, create comment‑free
+    previews, and produce professional PDF thumbnails.
+  name: How to remove PDF comments and generate thumbnails in .NET
+  steps:
+  - name: Initialize the annotator
+    text: '`Annotator` is the main entry point in GroupDocs.Annotation for loading
+      and processing documents. The `Annotator` object loads the source file. The
+      `using` block guarantees that all unmanaged resources are released once we’re
+      done.'
+  - name: Configure preview options
+    text: '`PreviewOptions` defines how each page is rendered, including format, DPI,
+      and output stream. Here we tell the library where to store each page’s image.
+      The lambda receives the page number and returns a writable `FileStream`.'
+  - name: Choose format and pages
+    text: PNG delivers crisp thumbnails, but you can switch to JPEG if file size is
+      a bigger concern. Selecting a subset of pages reduces processing time—perfect
+      for thumbnail galleries that only need the first few pages.
+  - name: Disable rendering of comments
+    text: '`RenderComments` is a boolean flag that tells the renderer whether to include
+      annotation comment layers in the output. **This line is the key to “how to hide
+      annotations.”** Setting `RenderComments` to `false` strips out all comment layers,
+      giving you a clean PDF preview.'
+  - name: Generate the preview images
+    text: The library processes the document and writes the images to the locations
+      you defined earlier.
+  type: HowTo
+- questions:
+  - answer: Yes. It supports PDF, DOCX, PPTX, XLSX, common image types, and many OpenDocument
+      formats.
+    question: Is GroupDocs.Annotation for .NET compatible with all document formats?
+  - answer: Absolutely. You can change `PreviewFormat`, set image dimensions, DPI,
+      and choose specific pages to render.
+    question: Can I customize the look of the generated previews?
+  - answer: GroupDocs.Annotation offers collaborative annotation features. The preview
+      generation can be used to create clean views that hide all user comments.
+    question: Does the library support multi‑user collaboration?
+  - answer: The community and support team are active on the **[support forum](https://forum.groupdocs.com/c/annotation/10)**
+      where you can ask questions and share experiences.
+    question: Where can I get help if I run into issues?
+  - answer: Yes, you can download a full‑function trial **[full‑function trial download](https://releases.groupdocs.com/)**
+      to test the preview generation capabilities before purchasing.
+    question: Is there a free trial available?
+  type: FAQPage
 second_title: GroupDocs.Annotation .NET API
 tags:
-- document-preview
-- pdf-thumbnails
-- groupdocs
-- dotnet
-title: วิธีสร้างภาพย่อใน .NET – ตัวอย่าง PDF ที่ชัดเจน
+- remove pdf comments
+- pdf thumbnail
+- groupdocs annotation
+- dotnet preview
+title: วิธีลบความคิดเห็นใน PDF และสร้างภาพย่อใน .NET
 type: docs
 url: /th/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-# วิธีสร้างภาพย่อใน .NET – ตัวอย่าง PDF ที่สะอาด
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
+
+# วิธีลบคอมเมนต์ PDF และสร้างภาพย่อใน .NET
 
 ## บทนำ
 
-เคยต้องการ **วิธีสร้างภาพย่อ** สำหรับตัวดูเอกสาร, ตัวสำรวจไฟล์, หรือระบบจัดการเนื้อหา โดยต้องการให้ภาพไม่มีบันทึกของผู้ใช้หรือไม่? คุณไม่ได้เป็นคนเดียว นักพัฒนา .NET จำนวนมากเจออุปสรรคเมื่อต้องสร้างตัวอย่างเอกสารที่ซ่อนการอธิบายและความคิดเห็น  
-
-ในบทแนะนำนี้เราจะพาคุณผ่านขั้นตอนที่แม่นยำเพื่อสร้างตัวอย่าง PDF ที่สะอาดโดยใช้ **GroupDocs.Annotation for .NET** คุณจะได้เห็นวิธีซ่อนการอธิบาย, ลบการแสดงตัวอย่างความคิดเห็น, และสร้างภาพย่อที่ดูเป็นมืออาชีพซึ่งพอดีกับแกลเลอรี, แดชบอร์ด, หรือ UI ใด ๆ ที่ต้องการภาพสแนปช็อตที่ไม่มีความรก
+หากคุณต้องการ **remove PDF comments** ขณะสร้างภาพย่อสำหรับตัวดูเอกสาร, ตัวสำรวจไฟล์, หรือระบบการจัดการเนื้อหา, คุณมาถูกที่แล้ว นักพัฒนา .NET จำนวนมากประสบปัญหาในการผลิตตัวอย่างที่สะอาดซึ่งซ่อนโน้ตและคำอธิบายของผู้ใช้ ในบทเรียนนี้เราจะอธิบายขั้นตอนที่แน่นอนเพื่อสร้างภาพย่อ PDF ที่ไม่มีคอมเมนต์โดยใช้ **GroupDocs.Annotation for .NET** คุณจะได้เรียนรู้วิธีซ่อนคำอธิบาย, กำหนดรูปแบบผลลัพธ์, และสร้างภาพที่ดูเป็นมืออาชีพซึ่งพอดีกับแกลเลอรี, แดชบอร์ด, หรือ UI ใด ๆ ที่ต้องการภาพสแนปช็อตที่ไม่มีความรก
 
 ## คำตอบอย่างรวดเร็ว
-- **ไลบรารีที่สร้างภาพย่อไม่มีคอมเมนต์คืออะไร?** GroupDocs.Annotation for .NET  
-- **คุณสมบัติใดที่ปิดการอธิบาย?** `RenderComments = false`  
-- **ฉันสามารถเลือกรูปแบบภาพได้หรือไม่?** ใช่ – PNG, JPEG, BMP ฯลฯ ผ่าน `PreviewFormat`  
-- **ฉันต้องการไลเซนส์สำหรับการผลิตหรือไม่?** จำเป็นต้องมีไลเซนส์เชิงพาณิชย์; ไลเซนส์ชั่วคราวสามารถใช้สำหรับการทดสอบได้  
-- **มันเป็นเฉพาะ .NET เท่านั้นหรือ?** ทำงานกับ .NET Framework, .NET Core, และ .NET 5/6+
+- **ไลบรารีใดสร้างภาพย่อที่ไม่มีคอมเมนต์?** GroupDocs.Annotation for .NET  
+- **คุณสมบัติใดที่ปิดการใช้งานคำอธิบาย?** `RenderComments = false`  
+- **ฉันสามารถเลือกรูปแบบภาพได้หรือไม่?** ใช่ – PNG, JPEG, BMP, ฯลฯ ผ่าน `PreviewFormat`  
+- **ฉันต้องการไลเซนส์สำหรับการผลิตหรือไม่?** จำเป็นต้องมีไลเซนส์เชิงพาณิชย์; ไลเซนส์ชั่วคราวทำงานสำหรับการทดสอบ  
+- **มันเป็นเฉพาะ .NET เท่านั้นหรือ?** ทำงานกับ .NET Framework, .NET Core, และ .NET 5/6+
 
 ## การสร้างภาพย่อโดยไม่มีคอมเมนต์คืออะไร?
 
-การสร้างภาพย่อโดยไม่มีคอมเมนต์หมายถึงการเรนเดอร์ภาพสแนปช็อตของแต่ละหน้า **โดยไม่มี** การทำเครื่องหมาย, บันทึก, หรือการอธิบายร่วมที่อาจถูกเพิ่มในไฟล์ต้นฉบับ ผลลัพธ์คือภาพที่สะอาดและคงที่ซึ่งแสดงเนื้อหาจริงของเอกสาร—เหมาะสำหรับพอร์ทัลสาธารณะ, คลังเอกสารทางกฎหมาย, หรือสถานการณ์ใด ๆ ที่ต้องการให้ข้อคิดเห็นภายในถูกซ่อน
+การสร้างภาพย่อโดยไม่มีคอมเมนต์หมายถึงการเรนเดอร์ภาพสแนปช็อตของแต่ละหน้า **without** ใด ๆ ที่เป็นมาร์กอัป, โน้ต, หรือคำอธิบายร่วมที่อาจถูกเพิ่มลงในไฟล์ต้นฉบับ ผลลัพธ์คือภาพคงที่ที่สะอาดซึ่งแสดงเนื้อหาที่แท้จริงของเอกสาร—เหมาะสำหรับพอร์ทัลสาธารณะ, คลังเอกสารทางกฎหมาย, หรือสถานการณ์ใด ๆ ที่ต้องการซ่อนข้อคิดเห็นภายใน
 
-## ทำไมต้องซ่อนการอธิบายเมื่อสร้างตัวอย่าง?
+## ทำไมต้องซ่อนคำอธิบายเมื่อสร้างตัวอย่าง?
 
-- **รูปลักษณ์มืออาชีพ:** ผู้ใช้ปลายทางเห็นเฉพาะเนื้อหาเอกสาร, ไม่ใช่การสนทนาการตรวจสอบ  
-- **ความปลอดภัยและความเป็นส่วนตัว:** ความคิดเห็นที่สำคัญจะอยู่ภายใน  
-- **ประสิทธิภาพ:** การเรนเดอร์ชั้นน้อยลงทำให้การสร้างภาพเร็วขึ้น  
-- **ความสอดคล้อง:** ภาพย่อสอดคล้องกับเวอร์ชันที่พิมพ์หรือส่งออกซึ่งก็ไม่มีคอมเมนต์  
+- **Professional look:** ผู้ใช้ปลายทางจะเห็นเฉพาะเนื้อหาเอกสาร, ไม่ใช่การสนทนาการตรวจสอบ  
+- **Security & privacy:** คอมเมนต์ที่สำคัญจะอยู่ภายใน  
+- **Performance:** การเรนเดอร์ชั้นที่น้อยลงทำให้การสร้างภาพเร็วขึ้น  
+- **Consistency:** ภาพย่อจะตรงกับเวอร์ชันที่พิมพ์หรือส่งออกซึ่งก็ไม่มีคอมเมนต์
 
 ## ข้อกำหนดเบื้องต้น
 
 ### 1. ติดตั้ง GroupDocs.Annotation for .NET
-ดาวน์โหลดแพคเกจจากหน้าแจกจ่ายอย่างเป็นทางการ **[ที่นี่](https://releases.groupdocs.com/annotation/net/)** หรือทำการติดตั้งผ่าน NuGet ตรวจสอบให้แน่ใจว่าโครงการของคุณตั้งเป้าหมายเป็นเวอร์ชัน .NET ที่รองรับ  
+Grab the package from the official distribution page **[official distribution page](https://releases.groupdocs.com/annotation/net/)** or install it via NuGet. Make sure your project targets a supported .NET version.
 
 ### 2. รับไลเซนส์
-จำเป็นต้องมีไลเซนส์เชิงพาณิชย์สำหรับการใช้งานในผลิตภัณฑ์ ซื้อได้ **[ที่นี่](https://purchase.groupdocs.com/buy)** หรือขอไลเซนส์ประเมินชั่วคราว **[ที่นี่](https://purchase.groupdocs.com/temporary-license/)**  
+A commercial license is required for production use. Purchase one **[purchase page](https://purchase.groupdocs.com/buy)** or request a temporary evaluation license **[temporary evaluation license page](https://purchase.groupdocs.com/temporary-license/)**.
 
 ### 3. ความรู้ .NET
-คุณควรคุ้นเคยกับพื้นฐานของ C#, การทำงานกับไฟล์ I/O, และการใช้คำสั่ง `using` สำหรับการจัดการทรัพยากร  
+You should be comfortable with C# basics, file I/O, and using `using` statements for resource management.
 
-## นำเข้า Namespaces
+## นำเข้าเนมสเปซ
 
 ```csharp
 using System;
@@ -74,14 +133,21 @@ using GroupDocs.Annotation.Options;
 
 ## คู่มือขั้นตอนต่อขั้นตอน: สร้างตัวอย่างเอกสารที่สะอาด
 
-### ขั้นตอนที่ 1: เริ่มต้น Annotator
+### ขั้นตอนที่ 1: เริ่มต้น annotator
+
+`Annotator` is the main entry point in GroupDocs.Annotation for loading and processing documents.  
+The `Annotator` object loads the source file. The `using` block guarantees that all unmanaged resources are released once we’re done.
+
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 {
 ```
-อ็อบเจกต์ `Annotator` โหลดไฟล์ต้นฉบับ บล็อก `using` รับประกันว่าทรัพยากรที่ไม่ได้จัดการทั้งหมดจะถูกปล่อยออกเมื่อเสร็จสิ้น  
 
-### ขั้นตอนที่ 2: กำหนดค่า Preview Options
+### ขั้นตอนที่ 2: กำหนดค่า preview options
+
+`PreviewOptions` defines how each page is rendered, including format, DPI, and output stream.  
+Here we tell the library where to store each page’s image. The lambda receives the page number and returns a writable `FileStream`.
+
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -89,90 +155,102 @@ using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
         return File.Create(pagePath);
     });
 ```
-ที่นี่เราบอกไลบรารีว่าจะเก็บภาพของแต่ละหน้าที่ไหน Lambda จะรับหมายเลขหน้าและคืนค่า `FileStream` ที่สามารถเขียนได้  
 
 ### ขั้นตอนที่ 3: เลือกรูปแบบและหน้า
+
+PNG delivers crisp thumbnails, but you can switch to JPEG if file size is a bigger concern. Selecting a subset of pages reduces processing time—perfect for thumbnail galleries that only need the first few pages.
+
 ```csharp
     previewOptions.PreviewFormat = PreviewFormats.PNG;
     previewOptions.PageNumbers = new int[] { 1, 2, 3, 4, 5, 6 };
 ```
-PNG ให้ภาพย่อคมชัด, แต่คุณสามารถเปลี่ยนเป็น JPEG หากขนาดไฟล์เป็นเรื่องสำคัญ การเลือกชุดย่อยของหน้า ลดเวลาในการประมวลผล—เหมาะสำหรับแกลเลอรีภาพย่อที่ต้องการเพียงไม่กี่หน้าตั้งแต่แรก  
 
 ### ขั้นตอนที่ 4: ปิดการเรนเดอร์คอมเมนต์
+
+`RenderComments` is a boolean flag that tells the renderer whether to include annotation comment layers in the output.  
+**This line is the key to “how to hide annotations.”** Setting `RenderComments` to `false` strips out all comment layers, giving you a clean PDF preview.
+
 ```csharp
     previewOptions.RenderComments = false;
 ```
-**บรรทัดนี้เป็นกุญแจสำคัญสำหรับ “วิธีซ่อนการอธิบาย”.** การตั้งค่า `RenderComments = false` จะลบชั้นคอมเมนต์ทั้งหมด ทำให้คุณได้ตัวอย่าง PDF ที่สะอาด  
 
 ### ขั้นตอนที่ 5: สร้างภาพตัวอย่าง
+
+The library processes the document and writes the images to the locations you defined earlier.
+
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-ไลบรารีประมวลผลเอกสารและเขียนภาพไปยังตำแหน่งที่คุณกำหนดไว้ก่อนหน้า  
 
 ## แนวทางปฏิบัติที่ดีที่สุดสำหรับการสร้างตัวอย่างเอกสาร
 
-- **ปรับขนาดสำหรับภาพย่อ:** หลังจากสร้าง PNG แล้ว, พิจารณาปรับขนาดเป็นประมาณ 200 × 300 px เพื่อให้ UI โหลดเร็วขึ้น  
-- **ประมวลผลไฟล์ขนาดใหญ่เป็นชุด:** สร้างเฉพาะไม่กี่หน้าตั้งแต่แรก, แล้วสร้างส่วนที่เหลือตามความต้องการ  
-- **ห่อหุ้มด้วย `using` เสมอ:** รับประกันการทำความสะอาดหน่วยความจำอย่างเหมาะสม, โดยเฉพาะเมื่อจัดการเอกสารจำนวนมาก  
-- **เพิ่มการจัดการข้อผิดพลาด:** ดักจับ `FileNotFoundException`, `InvalidOperationException`, และข้อผิดพลาดของไลเซนส์เพื่อให้แอปของคุณมั่นคง  
+- **Resize for thumbnails:** After generating PNGs, consider resizing them to ~200 × 300 px for faster UI loading.  
+- **Process large files in batches:** Generate only the first few pages initially, then create the rest on demand.  
+- **Always wrap in `using`:** Guarantees proper memory cleanup, especially when handling many documents.  
+- **Add error handling:** Catch `FileNotFoundException`, `InvalidOperationException`, and licensing errors to keep your app robust.
 
-## ปัญหาทั่วไปและการแก้ไข
+## ปัญหาที่พบบ่อยและการแก้ไข
 
-- **ไม่มีภาพปรากฏ:** ตรวจสอบว่าโฟลเดอร์ผลลัพธ์มีอยู่และแอปมีสิทธิ์เขียน  
-- **ภาพย่อเบลอ:** ลองเพิ่ม DPI โดยตั้งค่า `previewOptions.Dpi = 150;` (ไม่ได้แสดงในโค้ดเพื่อรักษาบล็อกเดิมไว้)  
-- **ข้อผิดพลาด Out‑of‑memory กับ PDF ขนาดใหญ่:** ประมวลผลหน้าแบบทีละหน้า, หรือใช้ async API ใน background worker  
-- **ไม่พบไลเซนส์:** ตรวจสอบว่าอ็อบเจกต์ `License` ถูกโหลดก่อนสร้าง `Annotator`  
+- **No images appear:** Verify the output folder exists and the app has write permissions.  
+- **Blurry thumbnails:** Try increasing the DPI by setting `previewOptions.Dpi = 150;` (not shown in the code to keep the original block intact).  
+- **Out‑of‑memory errors on huge PDFs:** Process pages one at a time, or use the async API in a background worker.  
+- **License not found:** Ensure the `License` object is loaded before creating the `Annotator`.
 
 ## เคล็ดลับการเพิ่มประสิทธิภาพ
 
-- **ประมวลผลหลายเอกสารเป็นชุด:** วนลูปผ่านคอลเลกชันและใช้ `Annotator` ตัวเดียวซ้ำเมื่อเป็นไปได้  
-- **การสร้างแบบ Async:** ย้ายการสร้างตัวอย่างไปยังบริการพื้นหลังเพื่อให้ UI ตอบสนองได้  
-- **แคชผลลัพธ์:** เก็บภาพย่อที่สร้างไว้ใน CDN หรือแคชท้องถิ่นเพื่อหลีกเลี่ยงการประมวลผลไฟล์เดียวซ้ำ  
-- **เลือกรูปแบบที่เหมาะสม:** PNG สำหรับคุณภาพ loss‑less, JPEG สำหรับไฟล์ขนาดเล็กเมื่อเอกสารมีภาพหลายรูป  
+- **Batch multiple documents:** Loop through a collection and reuse a single `Annotator` instance when possible.  
+- **Async generation:** Offload preview creation to a background service so the UI stays responsive.  
+- **Cache results:** Store generated thumbnails in a CDN or local cache to avoid re‑processing the same file.  
+- **Choose the right format:** PNG for loss‑less quality, JPEG for smaller files when the document contains many images.
 
 ## รูปแบบเอกสารที่รองรับ
 
-GroupDocs.Annotation for .NET สามารถสร้างตัวอย่างสำหรับ:
+GroupDocs.Annotation for .NET supports **30+** input and output formats, enabling preview generation for PDFs, Office files, images, and OpenDocument standards.
 
-- **PDF** – การใช้งานที่พบบ่อยที่สุด  
-- **Microsoft Office** – DOCX, XLSX, PPTX, และรูปแบบเก่าอื่น ๆ  
-- **Images** – TIFF, JPEG, PNG, BMP (มีประโยชน์สำหรับเอกสารสแกน)  
-- **OpenDocument** – ODT, ODS, ODP, และมาตรฐานเปิดอื่น ๆ  
+- **PDF** – the most common use case.  
+- **Microsoft Office** – DOCX, XLSX, PPTX, and their legacy counterparts.  
+- **Images** – TIFF, JPEG, PNG, BMP (useful for scanned docs).  
+- **OpenDocument** – ODT, ODS, ODP, and other open standards.
 
-## เมื่อใดควรใช้การสร้างตัวอย่างไม่มีคอมเมนต์
+## เมื่อใดควรใช้การสร้างตัวอย่างที่ไม่มีคอมเมนต์
 
-- **พอร์ทัลสาธารณะ** ที่ต้องซ่อนบันทึกการตรวจสอบภายใน  
-- **ตัวเรียกดูคลังเอกสาร** ที่แสดงกริดภาพย่อที่สะอาด  
-- **กระบวนการพร้อมพิมพ์** ที่ต้องแสดงลักษณะสุดท้ายก่อนส่งไปยังเครื่องพิมพ์  
-- **การตรวจสอบคุณภาพ** ที่คุณเปรียบเทียบเวอร์ชัน “มีคอมเมนต์” กับ “ไม่มีคอมเมนต์”  
+Comment‑free preview generation is ideal for public portals where internal review notes must stay hidden, for archive browsers that display a clean thumbnail grid, for print‑ready workflows that need to show the final appearance before printing, and for quality‑control checks where you compare versions with and without comments.
 
 ## สรุป
 
-ตอนนี้คุณรู้ **วิธีสร้างภาพย่อ** ใน .NET พร้อมการลบการอธิบายและคอมเมนต์อย่างสมบูรณ์ โดยการตั้งค่า `RenderComments = false` คุณจะได้ตัวอย่าง PDF ที่สะอาดและเป็นมืออาชีพซึ่งพอดีกับ UI ใด ๆ อย่าลืมปรับรูปแบบตัวอย่าง, การเลือกหน้า, และขนาดภาพให้เหมาะกับสถานการณ์ของคุณ, และจัดการไลเซนส์และข้อผิดพลาดอย่างเหมาะสม ด้วยขั้นตอนเหล่านี้ แอปของคุณจะมอบภาพย่อเอกสารที่เร็ว, ปราศจากความรก, ซึ่งเพิ่มประสบการณ์ผู้ใช้  
+You now know **how to remove PDF comments and generate thumbnails** in .NET while completely stripping annotations. By setting `RenderComments = false` you get clean, professional PDF previews that fit perfectly into any UI. Remember to tailor the preview format, page selection, and image dimensions to your specific scenario, and always handle licensing and error cases gracefully. With these steps, your application will deliver fast, clutter‑free document thumbnails that enhance the user experience.
 
 ## คำถามที่พบบ่อย
 
-**Q: GroupDocs.Annotation for .NET รองรับรูปแบบเอกสารทั้งหมดหรือไม่?**  
-A: ใช่. รองรับ PDF, DOCX, PPTX, XLSX, ประเภทภาพทั่วไป, และหลายรูปแบบ OpenDocument  
+**Q: Is GroupDocs.Annotation for .NET compatible with all document formats?**  
+A: Yes. It supports PDF, DOCX, PPTX, XLSX, common image types, and many OpenDocument formats.
 
-**Q: ฉันสามารถปรับแต่งลักษณะของตัวอย่างที่สร้างได้หรือไม่?**  
-A: แน่นอน. คุณสามารถเปลี่ยน `PreviewFormat`, ตั้งค่าขนาดภาพ, DPI, และเลือกหน้าที่ต้องการเรนเดอร์  
+**Q: Can I customize the look of the generated previews?**  
+A: Absolutely. You can change `PreviewFormat`, set image dimensions, DPI, and choose specific pages to render.
 
-**Q: ไลบรารีนี้รองรับการทำงานร่วมกันหลายผู้ใช้หรือไม่?**  
-A: GroupDocs.Annotation มีฟีเจอร์การอธิบายร่วมกัน การสร้างตัวอย่างสามารถใช้เพื่อสร้างมุมมองที่สะอาดซึ่งซ่อนคอมเมนต์ของผู้ใช้ทั้งหมด  
+**Q: Does the library support multi‑user collaboration?**  
+A: GroupDocs.Annotation offers collaborative annotation features. The preview generation can be used to create clean views that hide all user comments.
 
-**Q: ฉันจะหาแนวทางช่วยเหลือเมื่อเจอปัญหาได้จากที่ไหน?**  
-A: ชุมชนและทีมสนับสนุนมีการทำงานบน **[ฟอรั่มสนับสนุน](https://forum.groupdocs.com/c/annotation/10)** ที่คุณสามารถถามคำถามและแบ่งปันประสบการณ์  
+**Q: Where can I get help if I run into issues?**  
+A: The community and support team are active on the **[support forum](https://forum.groupdocs.com/c/annotation/10)** where you can ask questions and share experiences.
 
-**Q: มีการทดลองใช้ฟรีหรือไม่?**  
-A: มี, คุณสามารถดาวน์โหลดการทดลองใช้เต็มฟังก์ชัน **[ที่นี่](https://releases.groupdocs.com/)** เพื่อทดสอบความสามารถการสร้างตัวอย่างก่อนซื้อ  
-
----
-
-**อัปเดตล่าสุด:** 2026-04-01  
-**ทดสอบด้วย:** GroupDocs.Annotation for .NET (รุ่นล่าสุด)  
-**ผู้เขียน:** GroupDocs  
+**Q: Is there a free trial available?**  
+A: Yes, you can download a full‑function trial **[full‑function trial download](https://releases.groupdocs.com/)** to test the preview generation capabilities before purchasing.
 
 ---
+
+**Last Updated:** 2026-09-20  
+**Tested With:** GroupDocs.Annotation for .NET (latest release)  
+**Author:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [สร้างตัวอย่างเอกสารโดยไม่มีคอมเมนต์ใน .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
+- [สร้างภาพย่อ PDF ด้วย GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
+- [วิธีลบคำอธิบาย PDF C# – คู่มือ GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
