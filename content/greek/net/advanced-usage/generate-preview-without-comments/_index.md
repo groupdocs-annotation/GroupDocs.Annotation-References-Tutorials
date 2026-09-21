@@ -83,10 +83,6 @@ url: /el/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Πώς να αφαιρέσετε σχόλια PDF και να δημιουργήσετε μικρογραφίες σε .NET
 
 ## Εισαγωγή
@@ -252,9 +248,3 @@ using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 - [Δημιουργία προεπισκοπήσεων εγγράφων χωρίς σχόλια σε .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [Δημιουργία μικρογραφίας PDF με GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [Πώς να αφαιρέσετε τις επισημάνσεις PDF C# – Οδηγός GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

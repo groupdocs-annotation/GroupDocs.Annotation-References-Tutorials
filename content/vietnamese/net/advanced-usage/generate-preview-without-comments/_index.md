@@ -81,10 +81,6 @@ url: /vi/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cách xóa bình luận PDF và tạo ảnh thu nhỏ trong .NET
 
 ## Giới thiệu
@@ -243,8 +239,3 @@ A: Có, bạn có thể tải xuống bản dùng thử đầy đủ chức năn
 - [Tạo bản xem trước tài liệu không có bình luận trong .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [Tạo ảnh thu nhỏ PDF với GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [Cách xóa chú thích PDF C# – Hướng dẫn GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

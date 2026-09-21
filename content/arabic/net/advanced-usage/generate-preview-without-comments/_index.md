@@ -81,10 +81,6 @@ url: /ar/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # كيفية إزالة تعليقات PDF وإنشاء صور مصغرة في .NET
 
 ## مقدمة
@@ -237,9 +233,3 @@ using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 - [إنشاء معاينات المستندات دون تعليقات في .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [إنشاء صورة مصغرة PDF باستخدام GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [كيفية إزالة تعليقات PDF C# – دليل GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

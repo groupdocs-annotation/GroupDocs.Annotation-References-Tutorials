@@ -82,10 +82,6 @@ url: /th/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # วิธีลบคอมเมนต์ PDF และสร้างภาพย่อใน .NET
 
 ## บทนำ
@@ -249,8 +245,3 @@ A: Yes, you can download a full‑function trial **[full‑function trial downlo
 - [สร้างตัวอย่างเอกสารโดยไม่มีคอมเมนต์ใน .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [สร้างภาพย่อ PDF ด้วย GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [วิธีลบคำอธิบาย PDF C# – คู่มือ GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
