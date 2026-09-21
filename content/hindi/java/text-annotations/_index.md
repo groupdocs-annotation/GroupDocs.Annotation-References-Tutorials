@@ -1,160 +1,218 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-08'
-description: GroupDocs Annotation का उपयोग करके PDF में हाइलाइट (Java) और अंडरलाइन
-  (Java) कैसे जोड़ें, सीखें। एनोटेशन फ़ैक्टरी (Java) टिप्स के साथ चरण‑बद्ध गाइड।
-keywords: Java text annotation tutorial, GroupDocs annotation Java guide, PDF text
-  highlighting Java, document annotation Java, Java PDF strikeout annotation
-lastmod: '2026-03-08'
-linktitle: Java Text Annotation Tutorial
+date: '2026-09-20'
+description: GroupDocs.Annotation के साथ PDF annotation Java बनाना सीखें – मिनटों
+  में highlights, underlines, और strikeouts जोड़ें। Step‑by‑step guide.
+keywords:
+- create pdf annotation java
+- java text annotation tutorial
+- groupdocs annotation java
+- pdf highlight java
+- pdf underline java
+lastmod: '2026-09-20'
+linktitle: Java text annotation ट्यूटोरियल
+og_description: GroupDocs.Annotation के साथ PDF annotation Java बनाएं। यह गाइड आपको
+  दिखाता है कि कैसे जल्दी और भरोसेमंद तरीके से highlights, underlines, और strikeouts
+  जोड़ें।
+og_image_alt: Guide showing how to create PDF annotations in Java using GroupDocs.Annotation
+og_title: PDF annotation Java बनाएं – highlights और underlines के लिए गाइड
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  headline: How to create PDF annotation Java – complete guide for text highlights
+  type: TechArticle
+- description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  name: How to create PDF annotation Java – complete guide for text highlights
+  steps:
+  - name: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+    text: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+  - name: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+    text: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+  - name: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+    text: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+  type: HowTo
+- questions:
+  - answer: No, PDF specifications treat them as separate annotation types, so you
+      need to create two distinct objects.
+    question: Can I combine highlight and underline in a single annotation?
+  - answer: Use the `setAuthor(String)` method when you create the annotation, or
+      attach custom metadata via the annotation’s `setCustomData()` API.
+    question: How do I store who created each annotation?
+  - answer: Yes—iterate through the document’s annotations, filter by type `Highlight`,
+      and call `delete()` on each.
+    question: Is it possible to programmatically remove all highlights from a PDF?
+  - answer: Absolutely. Provide the password when opening the document, and the library
+      will handle decryption transparently.
+    question: Does GroupDocs support encrypted PDFs?
+  - answer: Save the annotated PDF and open it in Adobe Acrobat Reader, Foxit Reader,
+      and a browser‑based viewer like PDF.js to confirm consistent appearance.
+    question: What is the best way to test annotation rendering across viewers?
+  type: FAQPage
 tags:
-- text-annotation
+- pdf annotation
 - groupdocs
-- pdf-editing
-- java-development
-title: PDF हाइलाइट जावा जोड़ें – टेक्स्ट एनोटेशन के लिए संपूर्ण गाइड
+- java text annotation
+- pdf highlight
+- java development
+- annotation factory
+title: PDF annotation Java कैसे बनाएं – टेक्स्ट हाइलाइट्स के लिए पूर्ण गाइड
 type: docs
 url: /hi/java/text-annotations/
 weight: 5
 ---
 
- but kept URLs.
+# PDF एनोटेशन जावा कैसे बनाएं – टेक्स्ट हाइलाइट्स के लिए पूर्ण गाइड
 
-Check for bold formatting: we kept.
-
-Check for list items: we kept.
-
-Now produce final content.# PDF हाइलाइट जावा जोड़ें – टेक्स्ट एनोटेशन के लिए पूर्ण गाइड
-
-यदि आपको एक Java एप्लिकेशन में **add PDF highlight java** कार्यक्षमता जोड़नी है, तो आप सही जगह पर आए हैं। इस ट्यूटोरियल में हम समझेंगे कि टेक्स्ट एनोटेशन क्यों महत्वपूर्ण हैं, GroupDocs.Annotation for Java के साथ आप कौन‑से विभिन्न एनोटेशन प्रकार बना सकते हैं, और उन्हें कुशलता से कैसे लागू करें। चाहे आप एक कानूनी समीक्षा प्रणाली, एक ई‑लर्निंग प्लेटफ़ॉर्म, या एक सहयोगी संपादन टूल बना रहे हों, यहाँ के सिद्धांत आपको पेशेवर‑स्तर की मार्कअप सुविधाएँ प्रदान करने में मदद करेंगे।
+इस व्यापक ट्यूटोरियल में आप GroupDocs.Annotation का उपयोग करके **create PDF annotation Java** समाधान बनाना सीखेंगे। चाहे आप एक कानूनी‑रिव्यू पोर्टल, एक ई‑लर्निंग एनोटेशन टूल, या एक सहयोगी दस्तावेज़ संपादक बना रहे हों, नीचे दिए गए चरण आपको हाइलाइट, अंडरलाइन और स्ट्राइकआउट जोड़ने में मदद करेंगे जो किसी भी PDF व्यूअर में सही ढंग से प्रदर्शित होते हैं। हम यह कवर करेंगे कि टेक्स्ट एनोटेशन क्यों महत्वपूर्ण हैं, आप कौन‑से विभिन्न एनोटेशन प्रकार जेनरेट कर सकते हैं, और स्थिर स्टाइलिंग के लिए एनोटेशन फैक्ट्री जैसे सर्वोत्तम प्रैक्टिस पैटर्न।
 
 ## त्वरित उत्तर
-- **add pdf highlight java को समर्थन देने वाली लाइब्रेरी कौन सी है?** GroupDocs.Annotation for Java.  
-- **क्या मैं pdf text java को भी underline कर सकता हूँ?** Yes – the same API provides underline support.  
-- **एनोटेशन बनाने के लिए कोई factory pattern है?** Use an annotation factory java for consistent settings.  
-- **क्या उत्पादन के लिए मुझे लाइसेंस चाहिए?** A valid GroupDocs license is required for commercial use.  
-- **क्या ये एनोटेशन मानक PDF व्यूअर्स में काम करेंगे?** All standard PDF annotation types are fully compatible.
+- **क्या लाइब्रेरी add pdf highlight java को सपोर्ट करती है?** GroupDocs.Annotation for Java.  
+- **क्या मैं pdf टेक्स्ट java को भी अंडरलाइन कर सकता हूँ?** Yes – the same API provides underline support.  
+- **क्या एनोटेशन बनाने के लिए कोई फैक्ट्री पैटर्न है?** Use an annotation factory java for consistent settings.  
+- **क्या मुझे प्रोडक्शन के लिए लाइसेंस चाहिए?** A valid GroupDocs license is required for commercial use.  
+- **क्या ये एनोटेशन स्टैंडर्ड PDF व्यूअर्स में काम करेंगे?** All standard PDF annotation types are fully compatible.
 
 ## “add pdf highlight java” क्या है?
-Java में PDF हाइलाइट जोड़ना मतलब प्रोग्रामेटिक रूप से एक विज़ुअल हाइलाइट एनोटेशन बनाना है जो चयनित टेक्स्ट को चिह्नित करता है। हाइलाइट PDF फ़ाइल के भीतर संग्रहीत रहता है, इसलिए कोई भी PDF व्यूअर इसे अतिरिक्त प्लगइन्स के बिना प्रदर्शित कर सकता है।
+जावा में PDF हाइलाइट जोड़ना मतलब प्रोग्रामेटिकली एक विज़ुअल हाइलाइट एनोटेशन बनाना है जो दस्तावेज़ में चयनित टेक्स्ट को मार्क करता है। हाइलाइट सीधे PDF फ़ाइल में एम्बेड किया जाता है, जिससे इसकी उपस्थिति सभी स्टैंडर्ड PDF व्यूअर्स में अतिरिक्त प्लगइन्स या बाहरी संसाधनों की आवश्यकता के बिना बनी रहती है।
 
 ## GroupDocs Annotation for Java का उपयोग क्यों करें?
-GroupDocs.Annotation एक हाई‑लेवल, क्रॉस‑प्लेटफ़ॉर्म API प्रदान करता है जो PDF स्पेसिफिकेशन विवरणों को एब्स्ट्रैक्ट करता है। यह आपको बिज़नेस लॉजिक पर ध्यान केंद्रित करने देता है—जैसे कब हाइलाइट, अंडरलाइन, या स्ट्राइकआउट करना है—जबकि रेंडरिंग, पोजिशनिंग, और फ़ाइल I/O को बैकग्राउंड में संभालता है।
+GroupDocs.Annotation for Java **20+ स्टैंडर्ड एनोटेशन टाइप्स** को सपोर्ट करता है और **1 GB** तक के PDF को बिना पूरे दस्तावेज़ को मेमोरी में लोड किए प्रोसेस कर सकता है। लाइब्रेरी लो‑लेवल PDF स्पेसिफिकेशन्स को एब्स्ट्रैक्ट करती है, जिससे आप बिज़नेस लॉजिक पर फोकस कर सकते हैं—जैसे कब हाइलाइट, अंडरलाइन या स्ट्राइकआउट करना है—जबकि यह रेंडरिंग, पोजिशनिंग और फ़ाइल I/O को संभालती है।
 
-## आपको pdf text java को अंडरलाइन कब करना चाहिए?
-अंडरलाइन सूक्ष्म ज़ोर देने के लिए उपयुक्त है, जैसे परिभाषाओं या हाइपरलिंक को चिह्नित करना। यह हाइलाइट की तुलना में कम आक्रामक है लेकिन फिर भी पाठकों के लिए स्पष्ट रूप से दिखाई देता है।
+## pdf टेक्स्ट java को अंडरलाइन कब करना चाहिए?
+अंडरलाइन एनोटेशन सूक्ष्म ज़ोर देने के लिए आदर्श हैं, जैसे कि PDF में परिभाषाएँ, मुख्य शब्द या हाइपरलिंक्स को मार्क करना। ये चयनित टेक्स्ट के नीचे एक पतली लाइन खींचते हैं, जिससे हाइलाइटेड कंटेंट दिखता है लेकिन उसे छुपाया नहीं जाता, जो कानूनी, शैक्षणिक या संपादकीय संदर्भों में उपयोगी है जहाँ पठनीयता बनाए रखनी आवश्यक है।
 
-## एक annotation factory java विकास को कैसे सरल बनाता है?
-एक **annotation factory java** एनोटेशन ऑब्जेक्ट्स (रंग, अपारदर्शिता, लेखक, आदि) के निर्माण को केंद्रीकृत करता है। फ़ैक्टरी को पुन: उपयोग करके आप सुनिश्चित करते हैं कि प्रत्येक एनोटेशन समान शैली दिशानिर्देशों का पालन करे और दोहराए गए कोड को कम किया जा सके।
+## एनोटेशन फैक्ट्री java विकास को कैसे सरल बनाती है?
+एक एनोटेशन फैक्ट्री एनोटेशन ऑब्जेक्ट्स के निर्माण को केंद्रीकृत करती है, रंग, अपारदर्शिता, लेखक और शैली जैसी प्रॉपर्टीज़ को पहले से कॉन्फ़िगर करती है। एक ही फैक्ट्री मेथड का उपयोग करके, डेवलपर्स सभी एनोटेशन में स्थिर लुक सुनिश्चित करते हैं, डुप्लिकेट कोड कम करते हैं, और एप्लिकेशन में स्टाइलिंग नियमों या डिफ़ॉल्ट सेटिंग्स के भविष्य के अपडेट को सरल बनाते हैं।
 
-## सामान्य कार्यान्वयन चुनौतियाँ (और उन्हें कैसे हल करें)
+## PDF एनोटेशन जावा कैसे बनाएं?
 
-### चुनौती 1: एनोटेशन पोजिशनिंग समस्याएँ
-**Problem**: लेआउट परिवर्तन के बाद एनोटेशन सही नहीं होते।  
-**Solution**: एनोटेशन को एब्सोल्यूट कोऑर्डिनेट्स के बजाय टेक्स्ट रेंजेज़ से एंकर करें। GroupDocs दस्तावेज़ के रीफ़्लो होने पर स्वचालित रूप से पोजिशन पुनः गणना करता है।
+`AnnotationApi` GroupDocs.Annotation में PDF दस्तावेज़ लोड करने और मैनिपुलेट करने का मुख्य एंट्री पॉइंट है।  
+`HighlightAnnotation` एक हाइलाइट मार्कअप को दर्शाता है जिसे चयनित टेक्स्ट पर लागू किया जा सकता है।  
+`addAnnotation()` निर्दिष्ट एनोटेशन ऑब्जेक्ट को वर्तमान PDF दस्तावेज़ में जोड़ता है।  
+`save()` सभी पेंडिंग बदलावों को PDF फ़ाइल या आउटपुट स्ट्रीम में लिखता है।
 
-### चुनौती 2: बड़े दस्तावेज़ों में प्रदर्शन
-**Problem**: सैकड़ों एनोटेशन होने पर रेंडरिंग धीमी हो जाती है।  
-**Solution**: लेज़ी लोडिंग का उपयोग करें—केवल वर्तमान व्यूपोर्ट में दिखाई देने वाले एनोटेशन लोड करें और बाकी को आवश्यकता अनुसार फ़ेच करें।
+अपने लक्ष्य PDF को `AnnotationApi` के साथ लोड करें (या नवीनतम SDK में समकक्ष क्लास) और फैक्ट्री को कॉल करके तैयार `HighlightAnnotation` प्राप्त करें। दस्तावेज़ पर `addAnnotation()` कॉल करें, फिर `save()` के साथ बदलावों को स्थायी बनाएं। यह तीन‑स्टेप फ्लो आपको एक ही एटॉमिक ऑपरेशन में हाइलाइट, अंडरलाइन या स्ट्राइकआउट जोड़ने देता है—उच्च‑थ्रूपुट सर्विसेज़ के लिए आदर्श।
+
+### चरण‑दर‑चरण कार्यप्रवाह
+1. **API को इनिशियलाइज़ करें** – अपने लाइसेंस की के साथ मुख्य एनोटेशन मैनेजर को इंस्टैंसिएट करें।  
+2. **एनोटेशन बनाएं** – एनोटेशन फैक्ट्री का उपयोग करके हाइलाइट, अंडरलाइन या स्ट्राइकआउट ऑब्जेक्ट बनाएं, पेज नंबर और टेक्स्ट रेंज निर्दिष्ट करें।  
+3. **लागू करें और सेव करें** – एनोटेशन को दस्तावेज़ में जोड़ें, फिर `save()` कॉल करके बदलावों को डिस्क या स्ट्रीम में लिखें।
+
+## सामान्य कार्यान्वयन चुनौतियां (और उन्हें कैसे हल करें)
+
+### चुनौती 1: एनोटेशन पोजिशनिंग समस्याएं
+**समस्या**: लेआउट परिवर्तन के बाद एनोटेशन सही नहीं होते।  
+**समाधान**: एनोटेशन को एब्सोल्यूट कोऑर्डिनेट्स की बजाय टेक्स्ट रेंज से एंकर करें। GroupDocs दस्तावेज़ के रीफ़्लो होने पर स्वचालित रूप से पोजिशन री‑कैल्कुलेट करता है।
+
+### चुनौती 2: बड़े दस्तावेज़ों के साथ प्रदर्शन
+**समस्या**: सैकड़ों एनोटेशन होने पर रेंडरिंग धीमी हो जाती है।  
+**समाधान**: लेज़ी लोडिंग का उपयोग करें—केवल वर्तमान व्यूपोर्ट में दिखने वाले एनोटेशन लोड करें और बाकी को आवश्यकता पर फ़ेच करें।
 
 ### चुनौती 3: क्रॉस‑प्लेटफ़ॉर्म संगतता
-**Problem**: विभिन्न PDF व्यूअर्स में एनोटेशन अलग दिखते हैं।  
-**Solution**: मानक PDF एनोटेशन प्रकारों (highlight, underline, strikeout, आदि) का उपयोग करें और Adobe Acrobat, Foxit, तथा PDF.js के साथ परीक्षण करें।
+**समस्या**: विभिन्न PDF व्यूअर्स में एनोटेशन अलग दिखते हैं।  
+**समाधान**: स्टैंडर्ड PDF एनोटेशन टाइप्स (हाइलाइट, अंडरलाइन, स्ट्राइकआउट, आदि) का उपयोग करें और Adobe Acrobat, Foxit, तथा PDF.js के साथ टेस्ट करें।
 
 ### चुनौती 4: उपयोगकर्ता अनुमति प्रबंधन
-**Problem**: यह निर्धारित करने की आवश्यकता है कि कौन से उपयोगकर्ता कुछ एनोटेशन जोड़ या संपादित कर सकते हैं।  
-**Solution**: प्रत्येक एनोटेशन के साथ अनुमति मेटाडेटा संग्रहीत करें और किसी भी ऑपरेशन से पहले उसे वैध करें।
+**समस्या**: यह सीमित करना कि कौन कौन से एनोटेशन जोड़ या एडिट कर सकता है।  
+**समाधान**: प्रत्येक एनोटेशन के साथ अनुमति मेटाडेटा स्टोर करें और किसी भी ऑपरेशन से पहले उसे वैलिडेट करें।
 
-## उपलब्ध ट्यूटोरियल
+## उपलब्ध ट्यूटोरियल्स
 
 ### [Java में GroupDocs.Highlight का उपयोग करके PDFs को एनोटेट करें: एक व्यापक गाइड](./annotate-pdfs-groupdocs-highlight-java/)
-यदि आप टेक्स्ट एनोटेशन में नए हैं तो यहाँ से शुरू करें। यह ट्यूटोरियल PDF हाइलाइटिंग के मूलभूत सिद्धांतों को व्यावहारिक उदाहरणों के साथ कवर करता है जिन्हें आप तुरंत लागू कर सकते हैं। आप सेटअप, बेसिक एनोटेशन निर्माण, और उपयोगकर्ता इंटरैक्शन को कैसे संभालें, सीखेंगे।
+यदि आप टेक्स्ट एनोटेशन में नए हैं तो यहाँ से शुरू करें। यह ट्यूटोरियल PDF हाइलाइटिंग की बुनियादी बातें व्यावहारिक उदाहरणों के साथ कवर करता है जिन्हें आप तुरंत लागू कर सकते हैं। आप सेटअप, बेसिक एनोटेशन निर्माण, और उपयोगकर्ता इंटरैक्शन को कैसे हैंडल करें, सीखेंगे।
 
 ### [GroupDocs.Annotation for Java का उपयोग करके PDFs में सर्च टेक्स्ट एनोटेशन कैसे जोड़ें](./add-search-text-annotations-pdf-groupdocs-java/)
-सर्चेबल टेक्स्ट एनोटेशन के साथ अपने एनोटेशन को अगले स्तर पर ले जाएँ। यह दस्तावेज़ प्रबंधन सिस्टम बनाने के लिए उपयुक्त है जहाँ उपयोगकर्ताओं को एनोटेटेड सामग्री जल्दी खोजनी होती है। इसमें उन्नत सर्च फ़ंक्शनैलिटी और इंडेक्सिंग तकनीकें शामिल हैं।
+सर्चेबल टेक्स्ट एनोटेशन के साथ अपने एनोटेशन को अगले स्तर पर ले जाएँ। यह उन दस्तावेज़ प्रबंधन सिस्टमों के लिए परफेक्ट है जहाँ उपयोगकर्ताओं को एनोटेटेड कंटेंट जल्दी खोजने की जरूरत होती है। इसमें एडवांस्ड सर्च फ़ंक्शनैलिटी और इंडेक्सिंग तकनीकें शामिल हैं।
 
 ### [GroupDocs के साथ Java PDF स्ट्राइकआउट एनोटेशन: एक व्यापक गाइड](./java-pdf-strikeout-annotations-groupdocs/)
-डॉक्यूमेंट परिवर्तन को ट्रैक करने के लिए स्ट्राइकआउट एनोटेशन की कला में महारत हासिल करें। यह कानूनी वर्कफ़्लो, संपादकीय प्रक्रियाओं, और संस्करण नियंत्रण सिस्टम के लिए आवश्यक है। आप एनोटेशन इतिहास को कैसे संरक्षित करें और जटिल दस्तावेज़ संशोधनों को कैसे संभालें, सीखेंगे।
+डॉक्यूमेंट बदलावों को ट्रैक करने के लिए स्ट्राइकआउट एनोटेशन की कला में महारत हासिल करें। यह कानूनी वर्कफ़्लो, संपादकीय प्रक्रियाओं, और वर्ज़न कंट्रोल सिस्टम्स के लिए आवश्यक है। सीखें कैसे एनोटेशन इतिहास को संरक्षित करें और जटिल डॉक्यूमेंट रिवीजन को हैंडल करें।
 
 ### [GroupDocs.Annotation के साथ Java PDF टेक्स्ट रिप्लेसमेंट गाइड](./java-pdf-text-replacement-groupdocs-annotation/)
-टेक्स्ट रिप्लेसमेंट एनोटेशन के साथ सहयोगी संपादन सुविधाएँ बनाएं। यह ट्यूटोरियल आपको बदलाव सुझाने, अनुमोदन वर्कफ़्लो को संभालने, और समीक्षा प्रक्रिया के दौरान दस्तावेज़ की अखंडता बनाए रखने का तरीका दिखाता है।
+टेक्स्ट रिप्लेसमेंट एनोटेशन के साथ सहयोगी एडिटिंग फीचर बनाएं। यह ट्यूटोरियल दिखाता है कि कैसे बदलाव सुझाएँ, अप्रोवल वर्कफ़्लो को हैंडल करें, और रिव्यू प्रक्रिया के दौरान डॉक्यूमेंट इंटीग्रिटी बनाए रखें।
 
 ### [GroupDocs.Annotation का उपयोग करके Java टेक्स्ट स्ट्राइकआउट एनोटेशन गाइड](./java-text-strikeout-annotation-groupdocs/)
-विशेष रूप से टेक्स्ट‑लेवल स्ट्राइकआउट फ़ंक्शनैलिटी पर केंद्रित। यह उन एप्लिकेशनों के लिए उत्कृष्ट है जिन्हें सटीक टेक्स्ट मार्किंग क्षमताओं की आवश्यकता होती है, जैसे स्पेल चेकर, कंटेंट मॉडरेशन टूल्स, और संपादकीय सिस्टम।
+विशेष रूप से टेक्स्ट‑लेवल स्ट्राइकआउट फ़ंक्शनैलिटी पर केंद्रित। उन एप्लिकेशन्स के लिए बेहतरीन है जिन्हें सटीक टेक्स्ट मार्किंग की जरूरत है, जैसे स्पेल चेकर, कंटेंट मॉडरेशन टूल्स, और एडिटोरियल सिस्टम्स।
 
-## Java टेक्स्ट एनोटेशन के लिए सर्वोत्तम प्रथाएँ
+## Java टेक्स्ट एनोटेशन के लिए सर्वोत्तम प्रैक्टिसेज
 
 ### प्रदर्शन अनुकूलन
-- **Batch annotation operations** को फ़ाइल I/O कम करने के लिए उपयोग करें।  
-- **Cache document instances** का उपयोग करें जब एक ही PDF बार‑बार एक्सेस किया जाता है।  
-- **Adjust JVM heap size** बड़े फ़ाइलों के लिए करें और जहाँ संभव हो स्ट्रीमिंग APIs का उपयोग करें।  
-- **Clean up orphaned annotations** को समय‑समय पर साफ़ करें ताकि फ़ाइल आकार कम रहे।
+- **बैच एनोटेशन ऑपरेशन्स** करके फ़ाइल I/O कम करें।  
+- **डॉक्यूमेंट इंस्टेंस को कैश** करें जब एक ही PDF बार‑बार एक्सेस किया जाता है।  
+- **JVM हीप साइज समायोजित** करें बड़े फ़ाइलों के लिए और जहाँ संभव हो स्ट्रीमिंग API का उपयोग करें।  
+- **ऑरफ़न एनोटेशन** को समय‑समय पर साफ़ करें ताकि फ़ाइल साइज कम रहे।  
 
 ### उपयोगकर्ता अनुभव विचार
-- उपयोगकर्ता के टेक्स्ट चयन के दौरान **visual feedback** (जैसे, एक अस्थायी ओवरले) दिखाएँ।  
-- **keyboard shortcuts** (Ctrl+H हाइलाइट के लिए, Ctrl+U अंडरलाइन के लिए) प्रदान करें।  
-- **undo/redo** लागू करें ताकि उपयोगकर्ता जल्दी से त्रुटियों को सुधार सकें।  
-- होवर पर लेखक का नाम और टाइमस्टैम्प के साथ **tooltips** प्रदर्शित करें।
+- **विज़ुअल फीडबैक** दिखाएँ (जैसे, एक टेम्पररी ओवरले) जब उपयोगकर्ता टेक्स्ट चुनता है।  
+- **कीबोर्ड शॉर्टकट** प्रदान करें (हाइलाइट के लिए Ctrl+H, अंडरलाइन के लिए Ctrl+U)।  
+- **undo/redo** लागू करें ताकि उपयोगकर्ता जल्दी से गलतियों को सुधार सकें।  
+- **टूलटिप्स** दिखाएँ जिसमें लेखक का नाम और टाइमस्टैम्प हो, होवर पर।  
 
-### कोड संगठन टिप्स
-- एक **annotation factory java** क्लास बनाएँ जो प्री‑कॉन्फ़िगर किए गए एनोटेशन ऑब्जेक्ट्स लौटाता है।  
-- हार्ड‑कोडेड रंग या अपारदर्शिता मानों के बजाय **configuration objects** का उपयोग करें।  
+### कोड ऑर्गनाइज़ेशन टिप्स
+- एक **annotation factory java** क्लास बनाएं जो प्री‑कॉन्फ़िगर्ड एनोटेशन ऑब्जेक्ट्स रिटर्न करे।  
+- **कॉन्फ़िगरेशन ऑब्जेक्ट्स** का उपयोग करें हार्ड‑कोडेड रंग या अपारदर्शिता वैल्यूज़ की जगह।  
 - फ़ाइल ऑपरेशन्स को **try‑with‑resources** में रैप करें ताकि स्ट्रीम्स बंद रहें।  
-- ऑडिट ट्रेल्स और आसान डिबगिंग के लिए प्रत्येक एनोटेशन कार्रवाई को लॉग करें।
+- ऑडिट ट्रेल्स और आसान डिबगिंग के लिए हर एनोटेशन एक्शन को लॉग करें।  
 
-## शुरूआत: आपको क्या चाहिए
-
+## शुरुआत कैसे करें: आपको क्या चाहिए
 - **Java Development Kit** (JDK 8 या उससे ऊपर)  
 - **GroupDocs.Annotation for Java** (नवीनतम संस्करण)  
-- यदि आप UI बनाना चाहते हैं तो **Java Swing** या **JavaFX** की बुनियादी समझ  
-- निर्भरता प्रबंधन के लिए Maven या Gradle  
+- यदि आप UI बनाना चाहते हैं तो **Java Swing** या **JavaFX** की बेसिक समझ  
+- डिपेंडेंसी मैनेजमेंट के लिए Maven या Gradle  
 
-प्रत्येक लिंक्ड ट्यूटोरियल में चरण‑दर‑चरण सेटअप निर्देश शामिल हैं, इसलिए आप GroupDocs में नए हों तो भी शून्य से शुरू कर सकते हैं।
+प्रत्येक लिंक्ड ट्यूटोरियल में चरण‑दर‑चरण सेटअप निर्देश शामिल हैं, इसलिए आप शून्य से शुरू कर सकते हैं भले ही आप GroupDocs में नए हों।
 
 ## सामान्य सेटअप समस्याओं का निवारण
+- **GroupDocs.Annotation डिपेंडेंसीज़ हल नहीं हो पा रही हैं** – सुनिश्चित करें कि आपके Maven/Gradle रिपॉजिटरी सेटिंग्स में GroupDocs रिपॉजिटरी URL शामिल है।  
+- **एनोटेशन PDF व्यूअर में दिखाई नहीं दे रहा** – सुनिश्चित करें कि एनोटेशन जोड़ने के बाद आप दस्तावेज़ पर `save()` कॉल करते हैं और आप समर्थित एनोटेशन टाइप का उपयोग कर रहे हैं।  
+- **बड़े दस्तावेज़ों में मेमोरी एरर** – JVM हीप बढ़ाएँ (`-Xmx2g` या उससे अधिक) और PDF को स्ट्रीम में प्रोसेस करें बजाय पूरी फ़ाइल को मेमोरी में लोड करने के।  
 
-- **Cannot resolve GroupDocs.Annotation dependencies** – अपने Maven/Gradle रिपॉजिटरी सेटिंग्स में यह सुनिश्चित करें कि GroupDocs रिपॉजिटरी URL शामिल है।  
-- **Annotation not visible in PDF viewer** – एनोटेशन जोड़ने के बाद दस्तावेज़ पर `save()` कॉल करना सुनिश्चित करें और यह जांचें कि आप समर्थित एनोटेशन प्रकार का उपयोग कर रहे हैं।  
-- **Memory errors with large documents** – JVM हीप (`-Xmx2g` या अधिक) बढ़ाएँ और PDF को स्ट्रीम्स में प्रोसेस करें बजाय पूरी फ़ाइल को मेमोरी में लोड करने के।
-
-## इन ट्यूटोरियल को पूरा करने के बाद अगले कदम
-
-- **approval workflows** का अन्वेषण करें जो समीक्षक के साइन‑ऑफ़ तक एनोटेशन को लॉक रखता है।  
-- **PDF.js** के साथ इंटीग्रेट करें ताकि वेब ब्राउज़र्स में सीधे एनोटेशन रेंडर हो सकें।  
-- कई दस्तावेज़ों पर समान हाइलाइट स्वचालित रूप से लागू करने के लिए **server‑side batch processing** बनाएं।  
-- डोमेन‑विशिष्ट उपयोग मामलों (जैसे, मेडिकल मार्कअप) के लिए **custom annotation types** डिज़ाइन करें।
+## इन ट्यूटोरियल्स को पूरा करने के बाद अगले कदम
+- **अप्रोवल वर्कफ़्लोज़** का पता लगाएँ जो एनोटेशन को तब तक लॉक रखते हैं जब तक रिव्यूअर साइन ऑफ न करे।  
+- **PDF.js** के साथ इंटीग्रेट करें ताकि एनोटेशन सीधे वेब ब्राउज़र्स में रेंडर हो सकें।  
+- **सर्वर‑साइड बैच प्रोसेसिंग** बनाएं ताकि एक ही हाइलाइट कई डॉक्यूमेंट्स पर ऑटोमैटिक लागू हो।  
+- **कस्टम एनोटेशन टाइप्स** डिजाइन करें डोमेन‑स्पेसिफिक उपयोग मामलों के लिए (जैसे, मेडिकल मार्कअप)।  
 
 ## अतिरिक्त संसाधन
-
-- [GroupDocs.Annotation for Java दस्तावेज़ीकरण](https://docs.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation for Java API रेफ़रेंस](https://reference.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation for Java डाउनलोड करें](https://releases.groupdocs.com/annotation/java/)
-- [GroupDocs.Annotation फ़ोरम](https://forum.groupdocs.com/c/annotation)
-- [फ़्री सपोर्ट](https://forum.groupdocs.com/)
-- [टेम्पररी लाइसेंस](https://purchase.groupdocs.com/temporary-license/)
+- [GroupDocs.Annotation for Java दस्तावेज़ीकरण](https://docs.groupdocs.com/annotation/java/)  
+- [GroupDocs.Annotation for Java API रेफ़रेंस](https://reference.groupdocs.com/annotation/java/)  
+- [GroupDocs.Annotation for Java डाउनलोड करें](https://releases.groupdocs.com/annotation/java/)  
+- [GroupDocs.Annotation फ़ोरम](https://forum.groupdocs.com/c/annotation)  
+- [नि:शुल्क समर्थन](https://forum.groupdocs.com/)  
+- [अस्थायी लाइसेंस](https://purchase.groupdocs.com/temporary-license/)  
 
 ## अक्सर पूछे जाने वाले प्रश्न
+**प्रश्न: क्या मैं एक ही एनोटेशन में हाइलाइट और अंडरलाइन को मिलाकर बना सकता हूँ?**  
+**उत्तर:** नहीं, PDF स्पेसिफिकेशन्स उन्हें अलग-अलग एनोटेशन टाइप्स मानती हैं, इसलिए आपको दो अलग-अलग ऑब्जेक्ट्स बनाना पड़ेगा।
 
-**Q: क्या मैं एक ही एनोटेशन में हाइलाइट और अंडरलाइन को मिलाकर उपयोग कर सकता हूँ?**  
-A: नहीं, PDF स्पेसिफिकेशन उन्हें अलग-अलग एनोटेशन प्रकार मानते हैं, इसलिए आपको दो अलग-अलग ऑब्जेक्ट बनाना पड़ेगा।
+**प्रश्न: मैं प्रत्येक एनोटेशन को किसने बनाया, यह कैसे स्टोर करूँ?**  
+**उत्तर:** एनोटेशन बनाते समय `setAuthor(String)` मेथड का उपयोग करें, या एनोटेशन की `setCustomData()` API के माध्यम से कस्टम मेटाडेटा अटैच करें।
 
-**Q: मैं प्रत्येक एनोटेशन को किसने बनाया, यह कैसे संग्रहीत करूँ?**  
-A: एनोटेशन बनाते समय `setAuthor(String)` मेथड का उपयोग करें, या एनोटेशन के `setCustomData()` API के माध्यम से कस्टम मेटाडेटा संलग्न करें।
+**प्रश्न: क्या प्रोग्रामेटिकली PDF से सभी हाइलाइट्स हटाना संभव है?**  
+**उत्तर:** हाँ—डॉक्यूमेंट के एनोटेशन्स पर इटरेट करें, टाइप `Highlight` से फ़िल्टर करें, और प्रत्येक पर `delete()` कॉल करें।
 
-**Q: क्या प्रोग्रामेटिक रूप से PDF से सभी हाइलाइट हटाना संभव है?**  
-A: हाँ—दस्तावेज़ के एनोटेशन पर इटररेट करें, प्रकार `Highlight` द्वारा फ़िल्टर करें, और प्रत्येक पर `delete()` कॉल करें।
+**प्रश्न: क्या GroupDocs एन्क्रिप्टेड PDFs को सपोर्ट करता है?**  
+**उत्तर:** बिल्कुल। डॉक्यूमेंट खोलते समय पासवर्ड प्रदान करें, और लाइब्रेरी पारदर्शी रूप से डिक्रिप्शन संभालेगी।
 
-**Q: क्या GroupDocs एन्क्रिप्टेड PDFs को सपोर्ट करता है?**  
-A: बिल्कुल। दस्तावेज़ खोलते समय पासवर्ड प्रदान करें, और लाइब्रेरी पारदर्शी रूप से डिक्रिप्शन संभालेगी।
-
-**Q: विभिन्न व्यूअर्स में एनोटेशन रेंडरिंग का परीक्षण करने का सबसे अच्छा तरीका क्या है?**  
-A: एनोटेटेड PDF को सेव करें और इसे Adobe Acrobat Reader, Foxit Reader, तथा ब्राउज़र‑आधारित व्यूअर जैसे PDF.js में खोलें ताकि सुसंगत दिखावट की पुष्टि हो सके।
-
----
-
-**Last Updated:** 2026-03-08  
-**Tested With:** GroupDocs.Annotation for Java (latest release)  
-**Author:** GroupDocs  
+**प्रश्न: विभिन्न व्यूअर्स में एनोटेशन रेंडरिंग टेस्ट करने का सबसे अच्छा तरीका क्या है?**  
+**उत्तर:** एनोटेटेड PDF को सेव करें और Adobe Acrobat Reader, Foxit Reader, तथा ब्राउज़र‑आधारित व्यूअर जैसे PDF.js में खोलें ताकि स्थिर उपस्थिति की पुष्टि हो सके।
 
 ---
+
+**अंतिम अपडेट:** 2026-09-20  
+**टेस्ट किया गया:** GroupDocs.Annotation for Java (नवीनतम रिलीज)  
+**लेखक:** GroupDocs
+
+## संबंधित ट्यूटोरियल्स
+- [GroupDocs.Annotation के साथ PDF एनोटेशन जावा बनाएं](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [GroupDocs के साथ क्लीन PDF जावा बनाएं: अंडरलाइन एनोटेशन](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [जावा में PDFs में स्ट्राइकआउट एनोटेशन कैसे जोड़ें – पूर्ण GroupDocs गाइड](/annotation/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/)

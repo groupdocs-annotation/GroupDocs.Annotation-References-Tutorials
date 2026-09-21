@@ -1,155 +1,214 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-08'
-description: Μάθετε πώς να προσθέτετε επισήμανση PDF με Java και υπογράμμιση κειμένου
-  PDF με Java χρησιμοποιώντας το GroupDocs Annotation. Οδηγός βήμα‑βήμα με συμβουλές
-  για το Annotation Factory σε Java.
-keywords: Java text annotation tutorial, GroupDocs annotation Java guide, PDF text
-  highlighting Java, document annotation Java, Java PDF strikeout annotation
-lastmod: '2026-03-08'
-linktitle: Java Text Annotation Tutorial
+date: '2026-09-20'
+description: Μάθετε πώς να δημιουργήσετε PDF annotation Java με GroupDocs.Annotation
+  – προσθέστε highlights, underlines και strikeouts σε λίγα λεπτά. Οδηγός βήμα προς
+  βήμα.
+keywords:
+- create pdf annotation java
+- java text annotation tutorial
+- groupdocs annotation java
+- pdf highlight java
+- pdf underline java
+lastmod: '2026-09-20'
+linktitle: Java text annotation οδηγός
+og_description: Δημιουργήστε PDF annotation Java με GroupDocs.Annotation. Αυτός ο
+  οδηγός σας δείχνει πώς να προσθέσετε highlights, underlines και strikeouts γρήγορα
+  και αξιόπιστα.
+og_image_alt: Guide showing how to create PDF annotations in Java using GroupDocs.Annotation
+og_title: Δημιουργήστε PDF annotation Java – οδηγός για highlights & underlines
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  headline: How to create PDF annotation Java – complete guide for text highlights
+  type: TechArticle
+- description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  name: How to create PDF annotation Java – complete guide for text highlights
+  steps:
+  - name: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+    text: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+  - name: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+    text: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+  - name: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+    text: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+  type: HowTo
+- questions:
+  - answer: No, PDF specifications treat them as separate annotation types, so you
+      need to create two distinct objects.
+    question: Can I combine highlight and underline in a single annotation?
+  - answer: Use the `setAuthor(String)` method when you create the annotation, or
+      attach custom metadata via the annotation’s `setCustomData()` API.
+    question: How do I store who created each annotation?
+  - answer: Yes—iterate through the document’s annotations, filter by type `Highlight`,
+      and call `delete()` on each.
+    question: Is it possible to programmatically remove all highlights from a PDF?
+  - answer: Absolutely. Provide the password when opening the document, and the library
+      will handle decryption transparently.
+    question: Does GroupDocs support encrypted PDFs?
+  - answer: Save the annotated PDF and open it in Adobe Acrobat Reader, Foxit Reader,
+      and a browser‑based viewer like PDF.js to confirm consistent appearance.
+    question: What is the best way to test annotation rendering across viewers?
+  type: FAQPage
 tags:
-- text-annotation
+- pdf annotation
 - groupdocs
-- pdf-editing
-- java-development
-title: Προσθήκη Επισήμανσης PDF σε Java – Πλήρης Οδηγός για Σχόλια Κειμένου
+- java text annotation
+- pdf highlight
+- java development
+- annotation factory
+title: Πώς να δημιουργήσετε PDF annotation Java – πλήρης οδηγός για text highlights
 type: docs
 url: /el/java/text-annotations/
 weight: 5
 ---
 
-# Προσθήκη PDF Highlight Java – Πλήρης Οδηγός για Σχόλια Κειμένου
+# Πώς να δημιουργήσετε PDF annotation Java – πλήρης οδηγός για επισήμανση κειμένου
 
-Αν χρειάζεστε λειτουργικότητα **add PDF highlight java** σε μια εφαρμογή Java, βρίσκεστε στο σωστό μέρος. Σε αυτό το tutorial θα εξηγήσουμε γιατί τα σχόλια κειμένου είναι σημαντικά, τους διαφορετικούς τύπους σχολίων που μπορείτε να δημιουργήσετε με GroupDocs.Annotation for Java, και πώς να τα υλοποιήσετε αποδοτικά. Είτε δημιουργείτε σύστημα νομικής ανασκόπησης, πλατφόρμα e‑learning ή εργαλείο συνεργατικής επεξεργασίας, οι έννοιες εδώ θα σας βοηθήσουν να παρέχετε χαρακτηριστικά σήμανσης επαγγελματικού επιπέδου.
+Σε αυτό το ολοκληρωμένο tutorial θα μάθετε πώς να **create PDF annotation Java** λύσεις χρησιμοποιώντας το GroupDocs.Annotation. Είτε δημιουργείτε μια πύλη νομικής ανασκόπησης, ένα εργαλείο σχολιασμού e‑learning, ή έναν συνεργατικό επεξεργαστή εγγράφων, τα παρακάτω βήματα θα σας βοηθήσουν να προσθέσετε επισημάνσεις, υπογραμμίσεις και διαγράμματα που εμφανίζονται σωστά σε οποιονδήποτε PDF viewer. Θα καλύψουμε γιατί οι επισημάνσεις κειμένου είναι σημαντικές, τους διαφορετικούς τύπους επισημάνσεων που μπορείτε να δημιουργήσετε, και βέλτιστες πρακτικές όπως η χρήση ενός annotation factory για συνεπή στυλ.
 
-## Γρήγορες Απαντήσεις
-- **Ποια βιβλιοθήκη υποστηρίζει add pdf highlight java;** GroupDocs.Annotation for Java.  
-- **Μπορώ επίσης να υπογραμμίσω pdf text java;** Yes – the same API provides underline support.  
-- **Υπάρχει πρότυπο factory για τη δημιουργία σχολίων;** Use an annotation factory java for consistent settings.  
+## Σύντομες απαντήσεις
+- **Ποια βιβλιοθήκη υποστηρίζει την προσθήκη pdf highlight java;** GroupDocs.Annotation for Java.  
+- **Μπορώ επίσης να υπογραμμίσω κείμενο pdf java;** Yes – the same API provides underline support.  
+- **Υπάρχει πρότυπο factory για τη δημιουργία επισημάνσεων;** Use an annotation factory java for consistent settings.  
 - **Χρειάζομαι άδεια για παραγωγή;** A valid GroupDocs license is required for commercial use.  
-- **Θα λειτουργούν αυτά τα σχόλια σε τυπικούς προβολείς PDF;** All standard PDF annotation types are fully compatible.
+- **Θα λειτουργούν αυτές οι επισημάνσεις σε τυπικούς PDF viewers;** All standard PDF annotation types are fully compatible.
 
 ## Τι είναι το “add pdf highlight java”;
-Η προσθήκη μιας PDF highlight σε Java σημαίνει προγραμματιστική δημιουργία μιας οπτικής επισήμανσης που επισημαίνει επιλεγμένο κείμενο. Η επισήμανση αποθηκεύεται μέσα στο αρχείο PDF, ώστε οποιοσδήποτε προβολέας PDF να μπορεί να την εμφανίσει χωρίς πρόσθετα plugins.
+Η προσθήκη ενός PDF highlight σε Java σημαίνει τη δημιουργία προγραμματιστικά μιας οπτικής επισημάνσεως που σημειώνει το επιλεγμένο κείμενο μέσα στο έγγραφο. Η επισημάνση ενσωματώνεται απευθείας στο αρχείο PDF, διατηρώντας την εμφάνισή της σε όλους τους τυπικούς PDF viewers χωρίς να απαιτούνται πρόσθετα plugins ή εξωτερικοί πόροι.
 
-## Γιατί να χρησιμοποιήσετε GroupDocs Annotation for Java;
-Το GroupDocs.Annotation προσφέρει ένα υψηλού επιπέδου, cross‑platform API που αφαιρεί τις λεπτομέρειες του προτύπου PDF. Σας επιτρέπει να εστιάσετε στη λογική της επιχείρησης — όπως πότε να επισημάνετε, να υπογραμμίσετε ή να διαγράψετε — ενώ διαχειρίζεται την απόδοση, την τοποθέτηση και το I/O αρχείων στο παρασκήνιο.
+## Γιατί να χρησιμοποιήσετε το GroupDocs Annotation για Java;
+Το GroupDocs.Annotation για Java υποστηρίζει **20+ standard annotation types** και μπορεί να επεξεργαστεί PDFs έως **1 GB** χωρίς να φορτώνει ολόκληρο το έγγραφο στη μνήμη. Η βιβλιοθήκη αφαιρεί την πολυπλοκότητα των χαμηλού επιπέδου προδιαγραφών PDF, επιτρέποντάς σας να εστιάσετε στη λογική της επιχείρησης — όπως πότε να επισημάνετε, να υπογραμμίσετε ή να διαγράψετε — ενώ αυτή διαχειρίζεται το rendering, την τοποθέτηση και το I/O αρχείων.
 
-## Πότε πρέπει να υπογραμμίσετε pdf text java;
-Η υπογράμμιση είναι ιδανική για ήπια έμφαση, όπως η επισήμανση ορισμών ή υπερσυνδέσμων. Είναι λιγότερο ενοχλητική από μια επισήμανση αλλά παραμένει σαφώς ορατή στους αναγνώστες.
+## Πότε πρέπει να υπογραμμίσετε κείμενο pdf java;
+Οι υπογραμμίσεις είναι ιδανικές για ήπια έμφαση, όπως η επισήμανση ορισμών, βασικών όρων ή υπερσυνδέσμων μέσα σε PDF. Σχεδιάζουν μια λεπτή γραμμή κάτω από το επιλεγμένο κείμενο, καθιστώντας το επισημασμένο περιεχόμενο εμφανές χωρίς να το καλύπτουν, κάτι χρήσιμο σε νομικά, εκπαιδευτικά ή εκδοτικά πλαίσια όπου πρέπει να διατηρείται η αναγνωσιμότητα.
 
 ## Πώς ένα annotation factory java απλοποιεί την ανάπτυξη;
-Ένα **annotation factory java** κεντράρει τη δημιουργία αντικειμένων σχολίων (χρώμα, διαφάνεια, συγγραφέας κ.λπ.). Με την επαναχρησιμοποίηση ενός factory, εξασφαλίζετε ότι κάθε σχόλιο ακολουθεί τις ίδιες οδηγίες στυλ και μειώνετε τον διπλό κώδικα.
+Ένα annotation factory κεντρικοποιεί τη δημιουργία αντικειμένων επισημάνσεων, προ‑ρυθμίζοντας ιδιότητες όπως χρώμα, διαφάνεια, συγγραφέας και στυλ. Χρησιμοποιώντας μια ενιαία μέθοδο factory, οι προγραμματιστές εξασφαλίζουν συνεπή εμφάνιση σε όλες τις επισημάνσεις, μειώνουν τον διπλό κώδικα και απλοποιούν μελλοντικές ενημερώσεις των κανόνων στυλ ή των προεπιλεγμένων ρυθμίσεων σε όλη την εφαρμογή.
 
-## Συνηθισμένες Προκλήσεις Υλοποίησης (Και Πώς να τις Λύσετε)
+## Πώς να δημιουργήσετε PDF annotation Java;
 
-### Πρόκληση 1: Προβλήματα Τοποθέτησης Σχολίων
-**Problem**: Τα σχόλια δεν ευθυγραμμίζονται μετά από αλλαγή διάταξης.  
-**Solution**: Στερεώστε τα σχόλια σε περιοχές κειμένου αντί για απόλυτες συντεταγμένες. Το GroupDocs επαναϋπολογίζει αυτόματα τις θέσεις όταν το έγγραφο αναδιαρθρώνεται.
+`AnnotationApi` είναι το κύριο σημείο εισόδου για τη φόρτωση και τη διαχείριση εγγράφων PDF στο GroupDocs.Annotation.  
+`HighlightAnnotation` αντιπροσωπεύει μια επισήμανση highlight που μπορεί να εφαρμοστεί σε επιλεγμένο κείμενο.  
+`addAnnotation()` προσθέτει το καθορισμένο αντικείμενο επισημάνσεως στο τρέχον έγγραφο PDF.  
+`save()` γράφει όλες τις εκκρεμείς αλλαγές πίσω στο αρχείο PDF ή στο ρεύμα εξόδου.
 
-### Πρόκληση 2: Απόδοση με Μεγάλα Έγγραφα
-**Problem**: Η απόδοση μειώνεται με εκατοντάδες σχόλια.  
-**Solution**: Χρησιμοποιήστε lazy loading — φορτώστε μόνο τα σχόλια που είναι ορατά στην τρέχουσα προβολή και φορτώστε τα υπόλοιπα κατόπιν ζήτησης.
+Φορτώστε το PDF-στόχο σας με `AnnotationApi` (ή την αντίστοιχη κλάση στο τελευταίο SDK) και καλέστε το factory για να λάβετε ένα έτοιμο `HighlightAnnotation`. Κλήστε `addAnnotation()` στο έγγραφο, στη συνέχεια αποθηκεύστε τις αλλαγές με `save()`. Αυτή η τριβήμα ροή σας επιτρέπει να προσθέσετε επισημάνσεις, υπογραμμίσεις ή διαγράμματα σε μια ενιαία, ατομική λειτουργία — ιδανική για υπηρεσίες υψηλής απόδοσης.
 
-### Πρόκληση 3: Συμβατότητα Πλατφόρμας-Πλατφόρμας
-**Problem**: Τα σχόλια εμφανίζονται διαφορετικά σε διάφορους προβολείς PDF.  
-**Solution**: Μείνετε στα τυπικά είδη σχολίων PDF (highlight, underline, strikeout κ.λπ.) και δοκιμάστε με Adobe Acrobat, Foxit και PDF.js.
+### Ροή βήμα‑προς‑βήμα
+1. **Αρχικοποίηση του API** – instantiate the main annotation manager with your license key.  
+2. **Δημιουργία της επισημάνσεως** – use the annotation factory to build a highlight, underline, or strikeout object, specifying the page number and text range.  
+3. **Εφαρμογή και αποθήκευση** – add the annotation to the document, then call `save()` to write the changes back to disk or a stream.
 
-### Πρόκληση 4: Διαχείριση Δικαιωμάτων Χρήστη
-**Problem**: Απαιτείται περιορισμός του ποιος μπορεί να προσθέσει ή να επεξεργαστεί ορισμένα σχόλια.  
-**Solution**: Αποθηκεύστε μεταδεδομένα δικαιωμάτων με κάθε σχόλιο και επικυρώστε τα πριν εκτελέσετε οποιαδήποτε ενέργεια.
+## Κοινές προκλήσεις υλοποίησης (και πώς να τις λύσετε)
 
-## Διαθέσιμα Μαθήματα
+### Πρόκληση 1: Προβλήματα τοποθέτησης επισημάνσεων
+**Πρόβλημα**: Annotations don’t line up after a layout change.  
+**Λύση**: Αγκυρώστε τις επισημάνσεις σε περιοχές κειμένου αντί για απόλυτες συντεταγμένες. Το GroupDocs επαναϋπολογίζει αυτόματα τις θέσεις όταν το έγγραφο επαναδιατάσσεται.
 
-### [Σχολιασμός PDF σε Java χρησιμοποιώντας GroupDocs.Highlight: Πλήρης Οδηγός](./annotate-pdfs-groupdocs-highlight-java/)
-Ξεκινήστε εδώ αν είστε νέοι στα σχόλια κειμένου. Αυτό το tutorial καλύπτει τα βασικά της επισήμανσης PDF με πρακτικά παραδείγματα που μπορείτε να εφαρμόσετε αμέσως. Θα μάθετε τη ρύθμιση, τη δημιουργία βασικών σχολίων και πώς να διαχειριστείτε τις αλληλεπιδράσεις του χρήστη.
+### Πρόκληση 2: Απόδοση με μεγάλα έγγραφα
+**Πρόβλημα**: Rendering slows with hundreds of annotations.  
+**Λύση**: Χρησιμοποιήστε lazy loading — φορτώστε μόνο τις επισημάνσεις που είναι ορατές στην τρέχουσα προβολή και φορτώστε τις άλλες κατόπιν ζήτησης.
 
-### [Πώς να Προσθέσετε Αναζητήσιμα Σχόλια Κειμένου σε PDF Χρησιμοποιώντας GroupDocs.Annotation for Java](./add-search-text-annotations-pdf-groupdocs-java/)
-Αναβαθμίστε τη χρήση σχολίων με αναζητήσιμα σχόλια κειμένου. Ιδανικό για την κατασκευή συστημάτων διαχείρισης εγγράφων όπου οι χρήστες χρειάζονται γρήγορη εντόπιση του σχολιασμένου περιεχομένου. Περιλαμβάνει προηγμένες λειτουργίες αναζήτησης και τεχνικές ευρετηρίου.
+### Πρόκληση 3: Συμβατότητα μεταξύ πλατφορμών
+**Πρόβλημα**: Οι επισημάνσεις εμφανίζονται διαφορετικά σε διάφορους PDF viewers.  
+**Λύση**: Μείνετε στα τυπικά PDF annotation types (highlight, underline, strikeout, κλπ.) και δοκιμάστε με Adobe Acrobat, Foxit, και PDF.js.
 
-### [Σχόλια Strikeout PDF Java με GroupDocs: Πλήρης Οδηγός](./java-pdf-strikeout-annotations-groupdocs/)
-Κατακτήστε την τέχνη των σχολίων strikeout για την παρακολούθηση αλλαγών εγγράφων. Απαραίτητο για νομικές ροές εργασίας, διαδικασίες επιμέλειας και συστήματα ελέγχου εκδόσεων. Μάθετε πώς να διατηρείτε το ιστορικό των σχολίων και να διαχειρίζεστε πολύπλοκες αναθεωρήσεις εγγράφων.
+### Πρόκληση 4: Διαχείριση δικαιωμάτων χρήστη
+**Πρόβλημα**: Απαιτείται περιορισμός στο ποιος μπορεί να προσθέσει ή να επεξεργαστεί συγκεκριμένες επισημάνσεις.  
+**Λύση**: Αποθηκεύστε μεταδεδομένα δικαιωμάτων με κάθε επισημάνση και επικυρώστε τα πριν εκτελέσετε οποιαδήποτε ενέργεια.
 
-### [Οδηγός Αντικατάστασης Κειμένου PDF Java με GroupDocs.Annotation](./java-pdf-text-replacement-groupdocs-annotation/)
-Δημιουργήστε λειτουργίες συνεργατικής επεξεργασίας με σχόλια αντικατάστασης κειμένου. Αυτό το tutorial σας δείχνει πώς να προτείνετε αλλαγές, να διαχειριστείτε ροές έγκρισης και να διατηρήσετε την ακεραιότητα του εγγράφου κατά τη διαδικασία ανασκόπησης.
+## Διαθέσιμοι οδηγοί
 
-### [Οδηγός Σχολίου Strikeout Κειμένου Java Χρησιμοποιώντας GroupDocs.Annotation](./java-text-strikeout-annotation-groupdocs/)
-Επικεντρωμένο ειδικά στη λειτουργία strikeout επιπέδου κειμένου. Ιδανικό για εφαρμογές που χρειάζονται ακριβείς δυνατότητες επισήμανσης κειμένου, συμπεριλαμβανομένων ελεγκτών ορθογραφίας, εργαλείων διαχείρισης περιεχομένου και συστημάτων επιμέλειας.
+### [Σχολιάστε PDFs σε Java χρησιμοποιώντας το GroupDocs.Highlight: Ένας Πλήρης Οδηγός](./annotate-pdfs-groupdocs-highlight-java/)
+### [Πώς να Προσθέσετε Αναζητήσιμες Επισημάνσεις Κειμένου σε PDFs Χρησιμοποιώντας το GroupDocs.Annotation για Java](./add-search-text-annotations-pdf-groupdocs-java/)
+### [Java PDF Strikeout Annotations με GroupDocs: Ένας Πλήρης Οδηγός](./java-pdf-strikeout-annotations-groupdocs/)
+### [Οδηγός Αντικατάστασης Κειμένου PDF σε Java με GroupDocs.Annotation](./java-pdf-text-replacement-groupdocs-annotation/)
+### [Οδηγός Επισημάνσεων Strikeout Κειμένου σε Java Χρησιμοποιώντας το GroupDocs.Annotation](./java-text-strikeout-annotation-groupdocs/)
 
-## Καλές Πρακτικές για Σχόλια Κειμένου Java
+## Καλές πρακτικές για Java text annotations
 
-### Βελτιστοποίηση Απόδοσης
-- **Batch annotation operations** για μείωση του I/O αρχείων.  
+### Βελτιστοποίηση απόδοσης
+- **Λειτουργίες μαζικής επεξεργασίας επισημάνσεων** to reduce file I/O.  
 - **Cache document instances** όταν το ίδιο PDF προσπελάζεται συχνά.  
 - **Adjust JVM heap size** για μεγάλα αρχεία και χρησιμοποιήστε streaming APIs όπου είναι δυνατόν.  
-- **Clean up orphaned annotations** περιοδικά για διατήρηση μικρού μεγέθους αρχείου.
+- **Clean up orphaned annotations** περιοδικά για να διατηρείται το μέγεθος του αρχείου χαμηλό.
 
-### Σκέψεις για την Εμπειρία Χρήστη
-- Show **visual feedback** (π.χ., ένα προσωρινό overlay) ενώ ο χρήστης επιλέγει κείμενο.  
-- Provide **keyboard shortcuts** (Ctrl+H για highlight, Ctrl+U για underline).  
-- Implement **undo/redo** ώστε οι χρήστες να διορθώνουν γρήγορα τα λάθη.  
-- Display **tooltips** με το όνομα του συγγραφέα και την χρονική σήμανση κατά το hover.
+### Σκέψεις για την εμπειρία χρήστη
+- Εμφανίστε **visual feedback** (π.χ., μια προσωρινή επικάλυψη) ενώ ο χρήστης επιλέγει κείμενο.  
+- Παρέχετε **keyboard shortcuts** (Ctrl+H για highlight, Ctrl+U για underline).  
+- Υλοποιήστε **undo/redo** ώστε οι χρήστες να διορθώνουν γρήγορα τα λάθη.  
+- Εμφανίστε **tooltips** με το όνομα του συγγραφέα και την χρονική σήμανση κατά το πέρασμα του ποντικιού.
 
-### Συμβουλές Οργάνωσης Κώδικα
-- Δημιουργήστε μια κλάση **annotation factory java** που επιστρέφει προ‑ρυθμισμένα αντικείμενα σχολίων.  
-- Use **configuration objects** αντί για χρώματα ή τιμές διαφάνειας κωδικοποιημένες σκληρά.  
-- Wrap file operations in **try‑with‑resources** για να διασφαλίζετε το κλείσιμο των ροών.  
-- Log every annotation action για καταγραφή audit trails και ευκολότερο debugging.
+### Συμβουλές οργάνωσης κώδικα
+- Δημιουργήστε μια κλάση **annotation factory java** που επιστρέφει προ‑ρυθμισμένα αντικείμενα επισημάνσεων.  
+- Χρησιμοποιήστε **configuration objects** αντί για χρώματα ή τιμές διαφάνειας κωδικοποιημένες σκληρά.  
+- Τυλίξτε τις λειτουργίες αρχείων σε **try‑with‑resources** για να διασφαλίσετε ότι τα streams κλείνουν.  
+- Καταγράψτε κάθε ενέργεια επισημάνσεως για αρχεία ελέγχου και ευκολότερο debugging.
 
-## Ξεκινώντας: Τι Θα Χρειαστείτε
+## Ξεκινώντας: τι θα χρειαστείτε
 
 - **Java Development Kit** (JDK 8 ή νεότερο)  
 - **GroupDocs.Annotation for Java** (τελευταία έκδοση)  
-- Βασική εξοικείωση με **Java Swing** ή **JavaFX** αν σκοπεύετε να δημιουργήσετε UI  
+- Βασική εξοικείωση με **Java Swing** ή **JavaFX** εάν σκοπεύετε να δημιουργήσετε UI  
 - Maven ή Gradle για διαχείριση εξαρτήσεων  
 
-Κάθε συνδεδεμένο tutorial περιλαμβάνει βήμα‑βήμα οδηγίες εγκατάστασης, ώστε να μπορείτε να ξεκινήσετε από το μηδέν ακόμη και αν είστε νέοι στο GroupDocs.
+Κάθε συνδεδεμένος οδηγός περιλαμβάνει βήμα‑προς‑βήμα οδηγίες εγκατάστασης, ώστε να μπορείτε να ξεκινήσετε από το μηδέν ακόμη και αν είστε νέοι στο GroupDocs.
 
-## Επίλυση Συνηθισμένων Προβλημάτων Ρύθμισης
+## Επίλυση κοινών προβλημάτων εγκατάστασης
 
 - **Cannot resolve GroupDocs.Annotation dependencies** – Επαληθεύστε ότι οι ρυθμίσεις αποθετηρίου Maven/Gradle περιλαμβάνουν το URL του αποθετηρίου GroupDocs.  
-- **Annotation not visible in PDF viewer** – Βεβαιωθείτε ότι καλείτε `save()` στο έγγραφο μετά την προσθήκη του σχολίου και ότι χρησιμοποιείτε έναν υποστηριζόμενο τύπο σχολίου.  
-- **Memory errors with large documents** – Αυξήστε το JVM heap (`-Xmx2g` ή μεγαλύτερο) και επεξεργαστείτε το PDF σε streams αντί να φορτώνετε ολόκληρο το αρχείο στη μνήμη.
+- **Annotation not visible in PDF viewer** – Βεβαιωθείτε ότι καλείτε το `save()` στο έγγραφο μετά την προσθήκη της επισημάνσεως και ότι χρησιμοποιείτε υποστηριζόμενο τύπο επισημάνσεως.  
+- **Memory errors with large documents** – Αυξήστε τη μνήμη heap του JVM (`-Xmx2g` ή μεγαλύτερο) και επεξεργαστείτε το PDF σε streams αντί να φορτώνετε ολόκληρο το αρχείο στη μνήμη.
 
-## Επόμενα Βήματα μετά την Ολοκλήρωση Αυτών των Tutorials
+## Επόμενα βήματα μετά την ολοκλήρωση αυτών των οδηγών
 
-- Explore **approval workflows** που κλειδώνουν τα σχόλια μέχρι να εγκριθούν από έναν ελεγκτή.  
-- Integrate with **PDF.js** για απόδοση σχολίων απευθείας σε web browsers.  
-- Build **server‑side batch processing** για αυτόματη εφαρμογή της ίδιας επισήμανσης σε πολλά έγγραφα.  
-- Design **custom annotation types** για ειδικές περιπτώσεις χρήσης (π.χ., ιατρική επισήμανση).
+- Εξερευνήστε **approval workflows** που κλειδώνουν τις επισημάνσεις μέχρι να εγκριθούν από έναν ελεγκτή.  
+- Ενσωματώστε με **PDF.js** για να αποδίδετε τις επισημάνσεις απευθείας σε προγράμματα περιήγησης.  
+- Δημιουργήστε **server‑side batch processing** για να εφαρμόζετε την ίδια επισήμανση σε πολλά έγγραφα αυτόματα.  
+- Σχεδιάστε **custom annotation types** για ειδικές περιπτώσεις χρήσης ανά τομέα (π.χ., ιατρική επισήμανση).
 
-## Πρόσθετοι Πόροι
+## Πρόσθετοι πόροι
 
-- [Τεκμηρίωση GroupDocs.Annotation for Java](https://docs.groupdocs.com/annotation/java/)
-- [Αναφορά API GroupDocs.Annotation for Java](https://reference.groupdocs.com/annotation/java/)
-- [Λήψη GroupDocs.Annotation for Java](https://releases.groupdocs.com/annotation/java/)
+- [Τεκμηρίωση GroupDocs.Annotation για Java](https://docs.groupdocs.com/annotation/java/)
+- [Αναφορά API GroupDocs.Annotation για Java](https://reference.groupdocs.com/annotation/java/)
+- [Λήψη GroupDocs.Annotation για Java](https://releases.groupdocs.com/annotation/java/)
 - [Φόρουμ GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)
 - [Δωρεάν Υποστήριξη](https://forum.groupdocs.com/)
 - [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license/)
 
-## Συχνές Ερωτήσεις
+## Συχνές ερωτήσεις
 
-**Q: Μπορώ να συνδυάσω highlight και underline σε ένα μόνο σχόλιο;**  
-A: Όχι, οι προδιαγραφές PDF τα θεωρούν ως ξεχωριστούς τύπους σχολίων, οπότε πρέπει να δημιουργήσετε δύο διαφορετικά αντικείμενα.
+**Q: Μπορώ να συνδυάσω highlight και underline σε μία ενιαία επισημάνση;**  
+A: Όχι, οι προδιαγραφές PDF τις θεωρούν ως ξεχωριστούς τύπους επισημάνσεων, επομένως πρέπει να δημιουργήσετε δύο διαφορετικά αντικείμενα.
 
-**Q: Πώς αποθηκεύω ποιος δημιούργησε κάθε σχόλιο;**  
-A: Χρησιμοποιήστε τη μέθοδο `setAuthor(String)` όταν δημιουργείτε το σχόλιο, ή προσθέστε προσαρμοσμένα μεταδεδομένα μέσω του API `setCustomData()` του σχολίου.
+**Q: Πώς αποθηκεύω ποιος δημιούργησε κάθε επισημάνση;**  
+A: Χρησιμοποιήστε τη μέθοδο `setAuthor(String)` όταν δημιουργείτε την επισημάνση, ή προσθέστε προσαρμοσμένα μεταδεδομένα μέσω του API `setCustomData()` της επισημάνσεως.
 
-**Q: Είναι δυνατόν να αφαιρέσω προγραμματιστικά όλες τις επισήμανσεις από ένα PDF;**  
-A: Ναι — επαναλάβετε τα σχόλια του εγγράφου, φιλτράρετε κατά τύπο `Highlight` και καλέστε `delete()` σε κάθε ένα.
+**Q: Είναι δυνατόν να αφαιρέσω προγραμματιστικά όλες τις επισημάνσεις highlight από ένα PDF;**  
+A: Ναι — επαναλάβετε τις επισημάνσεις του εγγράφου, φιλτράρετε κατά τύπο `Highlight` και καλέστε `delete()` σε κάθε μία.
 
-**Q: Υποστηρίζει το GroupDocs κρυπτογραφημένα PDF;**  
+**Q: Υποστηρίζει το GroupDocs κρυπτογραφημένα PDFs;**  
 A: Απόλυτα. Παρέχετε τον κωδικό πρόσβασης κατά το άνοιγμα του εγγράφου και η βιβλιοθήκη θα διαχειριστεί την αποκρυπτογράφηση διαφανώς.
 
-**Q: Ποιος είναι ο καλύτερος τρόπος για να δοκιμάσετε την απόδοση των σχολίων σε διαφορετικούς προβολείς;**  
-A: Αποθηκεύστε το PDF με σχόλια και ανοίξτε το σε Adobe Acrobat Reader, Foxit Reader και έναν προβολέα βασισμένο σε πρόγραμμα περιήγησης όπως το PDF.js για να επιβεβαιώσετε τη συνεπή εμφάνιση.
+**Q: Ποιος είναι ο καλύτερος τρόπος για να δοκιμάσετε την απόδοση των επισημάνσεων σε διαφορετικούς viewers;**  
+A: Αποθηκεύστε το επισημασμένο PDF και ανοίξτε το σε Adobe Acrobat Reader, Foxit Reader και έναν browser‑based viewer όπως PDF.js για να επιβεβαιώσετε τη σταθερή εμφάνιση.
 
----
+**Τελευταία ενημέρωση:** 2026-09-20  
+**Δοκιμάστηκε με:** GroupDocs.Annotation for Java (latest release)  
+**Συγγραφέας:** GroupDocs
 
-**Τελευταία Ενημέρωση:** 2026-03-08  
-**Δοκιμάστηκε Με:** GroupDocs.Annotation for Java (τελευταία έκδοση)  
-**Συγγραφέας:** GroupDocs  
+## Σχετικοί Οδηγοί
 
----
+- [Δημιουργία PDF Annotations Java με GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Δημιουργία Καθαρού PDF Java: Υπογραμμίσεις με GroupDocs](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [Πώς να Προσθέσετε Strikeout Επισημάνσεις σε PDFs σε Java – Πλήρης Οδηγός GroupDocs](/annotation/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/)

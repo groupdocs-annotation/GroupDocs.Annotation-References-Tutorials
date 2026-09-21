@@ -1,124 +1,180 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-08'
-description: Lär dig hur du lägger till PDF‑markering i Java och understryker PDF‑text
-  i Java med GroupDocs Annotation. Steg‑för‑steg‑guide med tips för Annotation Factory
-  i Java.
-keywords: Java text annotation tutorial, GroupDocs annotation Java guide, PDF text
-  highlighting Java, document annotation Java, Java PDF strikeout annotation
-lastmod: '2026-03-08'
-linktitle: Java Text Annotation Tutorial
+date: '2026-09-20'
+description: Lär dig hur du skapar PDF annotation Java med GroupDocs.Annotation –
+  lägg till highlights, underlines och strikeouts på några minuter. Steg‑för‑steg
+  guide.
+keywords:
+- create pdf annotation java
+- java text annotation tutorial
+- groupdocs annotation java
+- pdf highlight java
+- pdf underline java
+lastmod: '2026-09-20'
+linktitle: Java text annotation handledning
+og_description: Skapa PDF annotation Java med GroupDocs.Annotation. Denna guide visar
+  hur du lägger till highlights, underlines och strikeouts snabbt och pålitligt.
+og_image_alt: Guide showing how to create PDF annotations in Java using GroupDocs.Annotation
+og_title: Skapa PDF annotation Java – guide till highlights & underlines
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  headline: How to create PDF annotation Java – complete guide for text highlights
+  type: TechArticle
+- description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  name: How to create PDF annotation Java – complete guide for text highlights
+  steps:
+  - name: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+    text: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+  - name: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+    text: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+  - name: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+    text: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+  type: HowTo
+- questions:
+  - answer: No, PDF specifications treat them as separate annotation types, so you
+      need to create two distinct objects.
+    question: Can I combine highlight and underline in a single annotation?
+  - answer: Use the `setAuthor(String)` method when you create the annotation, or
+      attach custom metadata via the annotation’s `setCustomData()` API.
+    question: How do I store who created each annotation?
+  - answer: Yes—iterate through the document’s annotations, filter by type `Highlight`,
+      and call `delete()` on each.
+    question: Is it possible to programmatically remove all highlights from a PDF?
+  - answer: Absolutely. Provide the password when opening the document, and the library
+      will handle decryption transparently.
+    question: Does GroupDocs support encrypted PDFs?
+  - answer: Save the annotated PDF and open it in Adobe Acrobat Reader, Foxit Reader,
+      and a browser‑based viewer like PDF.js to confirm consistent appearance.
+    question: What is the best way to test annotation rendering across viewers?
+  type: FAQPage
 tags:
-- text-annotation
+- pdf annotation
 - groupdocs
-- pdf-editing
-- java-development
-title: Lägg till PDF‑markering i Java – Komplett guide för textanteckningar
+- java text annotation
+- pdf highlight
+- java development
+- annotation factory
+title: Hur man skapar PDF annotation Java – komplett guide för text highlights
 type: docs
 url: /sv/java/text-annotations/
 weight: 5
 ---
 
-# Lägg till PDF Highlight Java – Komplett guide för textanteckningar
+# Hur man skapar PDF-annotation Java – komplett guide för textmarkeringar
 
-Om du behöver **add PDF highlight java** funktionalitet i en Java‑applikation, har du kommit till rätt ställe. I den här handledningen går vi igenom varför textanteckningar är viktiga, de olika annoteringstyperna du kan skapa med GroupDocs.Annotation för Java, och hur du implementerar dem effektivt. Oavsett om du bygger ett juridiskt granskningssystem, en e‑learning‑plattform eller ett verktyg för samarbetsredigering, kommer koncepten här att hjälpa dig leverera professionella markup‑funktioner.
+I den här omfattande handledningen kommer du att lära dig hur du **create PDF annotation Java**‑lösningar med hjälp av GroupDocs.Annotation. Oavsett om du bygger en juridisk granskningsportal, ett e‑learning‑annotationsverktyg eller en samarbetsdokumentredigerare, hjälper stegen nedan dig att lägga till markeringar, understrykningar och genomstrykningar som visas korrekt i alla PDF‑visare. Vi kommer att gå igenom varför textannotationer är viktiga, de olika annotationstyperna du kan generera och bästa praxis‑mönster såsom att använda en annotation‑factory för konsekvent stil.
 
-## Quick Answers
-- **Vilket bibliotek stödjer add pdf highlight java?** GroupDocs.Annotation for Java.  
-- **Kan jag också understryka pdf text java?** Ja – samma API ger stöd för understrykning.  
-- **Finns det ett fabriksmönster för att skapa annoteringar?** Använd en annotation factory java för konsekventa inställningar.  
-- **Behöver jag en licens för produktion?** En giltig GroupDocs‑licens krävs för kommersiell användning.  
-- **Kommer dessa annoteringar att fungera i standard‑PDF‑visare?** Alla standard‑PDF‑annoteringstyper är fullt kompatibla.
+## Snabba svar
+- **What library supports add pdf highlight java?** GroupDocs.Annotation for Java.  
+- **Can I underline pdf text java as well?** Ja – samma API tillhandahåller stöd för understrykning.  
+- **Is there a factory pattern for creating annotations?** Använd en annotation factory java för konsekventa inställningar.  
+- **Do I need a license for production?** A valid GroupDocs license is required for commercial use.  
+- **Will these annotations work in standard PDF viewers?** All standard PDF annotation types are fully compatible.
 
 ## Vad är “add pdf highlight java”?
-Att lägga till en PDF‑highlight i Java innebär att programatiskt skapa en visuell highlight‑annotering som markerar vald text. Highlighten lagras i PDF‑filen, så vilken PDF‑visare som helst kan visa den utan extra plugins.
+Att lägga till en PDF‑highlight i Java betyder att programatiskt skapa en visuell highlight‑annotation som markerar vald text i dokumentet. Highlighten bäddas in direkt i PDF‑filen och bevarar sitt utseende i alla standard‑PDF‑visare utan att kräva ytterligare plugins eller externa resurser.
 
 ## Varför använda GroupDocs Annotation för Java?
-GroupDocs.Annotation erbjuder ett hög‑nivå, plattformsoberoende API som abstraherar PDF‑specifikationsdetaljer. Det låter dig fokusera på affärslogik—t.ex. när du ska highlighta, understryka eller stryka igenom—medan rendering, positionering och fil‑I/O sköts i bakgrunden.
+GroupDocs.Annotation för Java stödjer **20+ standard annotation types** och kan bearbeta PDF‑filer upp till **1 GB** utan att ladda hela dokumentet i minnet. Biblioteket abstraherar låg‑nivå PDF‑specifikationer, så att du kan fokusera på affärslogik — såsom när du ska highlighta, understryka eller genomstryka — medan det hanterar rendering, positionering och fil‑I/O.
 
 ## När bör du understryka pdf text java?
-Understrykning är perfekt för subtil betoning, såsom att markera definitioner eller hyperlänkar. Det är mindre påträngande än en highlight men fortfarande tydligt synligt för läsarna.
+Understrykning‑annotationer är idealiska för subtil betoning, såsom att markera definitioner, nyckelbegrepp eller hyperlänkar i en PDF. De ritar en tunn linje under den valda texten, vilket gör det markerade innehållet märkbart utan att dölja det, vilket är användbart i juridiska, utbildnings‑ eller redaktionella sammanhang där läsbarhet måste bevaras.
 
 ## Hur förenklar en annotation factory java utvecklingen?
-En **annotation factory java** centraliserar skapandet av annoteringsobjekt (färg, opacitet, författare osv.). Genom att återanvända en fabrik säkerställer du att varje annotering följer samma stilriktlinjer och du minskar duplicerad kod.
+En annotation factory centraliserar skapandet av annotation‑objekt, förkonfigurerar egenskaper som färg, opacitet, författare och stil. Genom att använda en enda factory‑metod säkerställer utvecklare enhetligt utseende för alla annotationer, minskar duplicerad kod och förenklar framtida uppdateringar av stilregler eller standardinställningar i hela applikationen.
 
-## Vanliga implementationsutmaningar (och hur man löser dem)
+## Hur man skapar PDF annotation Java?
 
-### Utmaning 1: Problem med annoteringspositionering
-**Problem**: Annoteringar hamnar inte rätt efter en layoutändring.  
-**Lösning**: Fäst annoteringar till textintervall snarare än absoluta koordinater. GroupDocs beräknar automatiskt om positionerna när dokumentet flödar om.
+`AnnotationApi` is the main entry point for loading and manipulating PDF documents in GroupDocs.Annotation.  
+`HighlightAnnotation` represents a highlight markup that can be applied to selected text.  
+`addAnnotation()` adds the specified annotation object to the current PDF document.  
+`save()` writes all pending changes back to the PDF file or output stream.
+
+Läs in din mål‑PDF med `AnnotationApi` (eller motsvarande klass i den senaste SDK:n) och anropa fabriken för att få en färdig `HighlightAnnotation`. Anropa `addAnnotation()` på dokumentet och spara sedan ändringarna med `save()`. Detta trestegsflöde låter dig lägga till highlights, understrykningar eller genomstrykningar i en enda atomisk operation — idealiskt för högpresterande tjänster.
+
+### Steg‑för‑steg arbetsflöde
+1. **Initialize the API** – skapa en instans av huvud‑annotation‑hanteraren med din licensnyckel.  
+2. **Create the annotation** – använd annotation‑factory för att bygga ett highlight‑, underline‑ eller strikeout‑objekt, ange sidnummer och textintervall.  
+3. **Apply and save** – lägg till annotationen i dokumentet, anropa sedan `save()` för att skriva tillbaka ändringarna till disk eller en ström.
+
+## Vanliga implementeringsutmaningar (och hur man löser dem)
+
+### Utmaning 1: Problem med annotation‑positionering
+**Problem**: Annotationer matchar inte efter en layout‑ändring.  
+**Solution**: Fäst annotationer till textintervall snarare än absoluta koordinater. GroupDocs beräknar automatiskt om positionerna när dokumentet flödar om.
 
 ### Utmaning 2: Prestanda med stora dokument
-**Problem**: Rendering blir långsam med hundratals annoteringar.  
-**Lösning**: Använd lazy loading—ladda endast annoteringar som är synliga i den aktuella vyn och hämta övriga vid behov.
+**Problem**: Rendering blir långsam med hundratals annotationer.  
+**Solution**: Använd lazy loading — ladda endast annotationer som är synliga i den aktuella vyn och hämta övriga vid behov.
 
-### Utmaning 3: Plattformoberoende kompatibilitet
-**Problem**: Annoteringar visas olika i olika PDF‑visare.  
-**Lösning**: Håll dig till standard‑PDF‑annoteringstyper (highlight, underline, strikeout osv.) och testa med Adobe Acrobat, Foxit och PDF.js.
+### Utmaning 3: Plattform‑överskridande kompatibilitet
+**Problem**: Annotationer visas olika i olika PDF‑visare.  
+**Solution**: Håll dig till standard‑PDF‑annotationstyper (highlight, underline, strikeout, etc.) och testa med Adobe Acrobat, Foxit och PDF.js.
 
 ### Utmaning 4: Hantering av användarbehörigheter
-**Problem**: Behöver begränsa vem som kan lägga till eller redigera vissa annoteringar.  
-**Lösning**: Spara behörighetsmetadata med varje annotering och validera dem innan någon operation utförs.
+**Problem**: Behöver begränsa vem som kan lägga till eller redigera vissa annotationer.  
+**Solution**: Spara behörighetsmetadata med varje annotation och validera dem innan någon operation utförs.
 
 ## Tillgängliga handledningar
 
 ### [Annotera PDF‑filer i Java med GroupDocs.Highlight: En omfattande guide](./annotate-pdfs-groupdocs-highlight-java/)
-Börja här om du är ny på textannoteringar. Denna handledning täcker grunderna i PDF‑highlighting med praktiska exempel som du kan implementera omedelbart. Du lär dig installation, grundläggande skapande av annoteringar och hur du hanterar användarinteraktioner.
-
-### [Hur man lägger till söktext‑annoteringar i PDF‑filer med GroupDocs.Annotation för Java](./add-search-text-annotations-pdf-groupdocs-java/)
-Ta ditt annoteringsarbete till nästa nivå med sökbara textannoteringar. Perfekt för att bygga dokumenthanteringssystem där användare snabbt måste hitta annoterat innehåll. Inkluderar avancerad sökfunktionalitet och indexeringstekniker.
-
-### [Java PDF‑strikeout‑annoteringar med GroupDocs: En omfattande guide](./java-pdf-strikeout-annotations-groupdocs/)
-Behärska konsten med strikeout‑annoteringar för att spåra dokumentändringar. Avgörande för juridiska arbetsflöden, redaktionella processer och versionskontrollsystem. Lär dig hur du bevarar annoteringshistorik och hanterar komplexa dokumentrevisioner.
-
+### [Hur man lägger till söktext‑annotationer till PDF‑filer med GroupDocs.Annotation för Java](./add-search-text-annotations-pdf-groupdocs-java/)
+### [Java PDF‑genomstrykningsannotationer med GroupDocs: En omfattande guide](./java-pdf-strikeout-annotations-groupdocs/)
 ### [Java PDF‑textutbytesguide med GroupDocs.Annotation](./java-pdf-text-replacement-groupdocs-annotation/)
-Bygg samarbetsredigeringsfunktioner med textutbytes‑annoteringar. Denna handledning visar hur du föreslår ändringar, hanterar godkännandeflöden och upprätthåller dokumentintegritet under granskningsprocessen.
+### [Java‑text‑genomstrykningsannotationsguide med GroupDocs.Annotation](./java-text-strikeout-annotation-groupdocs/)
 
-### [Java Text‑strikeout‑annoteringsguide med GroupDocs.Annotation](./java-text-strikeout-annotation-groupdocs/)
-Fokuserad specifikt på strikeout‑funktionalitet på textradenivå. Perfekt för applikationer som behöver exakt textmarkering, inklusive stavningskontroller, verktyg för innehållsmoderering och redaktionssystem.
-
-## Bästa praxis för Java‑textannoteringar
+## Bästa praxis för Java‑textannotationer
 
 ### Prestandaoptimering
-- **Batch‑annoteringsoperationer** för att minska fil‑I/O.  
-- **Cacha dokumentinstanser** när samma PDF ofta öppnas.  
-- **Justera JVM‑heap‑storlek** för stora filer och använd streaming‑API:er där det är möjligt.  
-- **Rensa bort föräldralösa annoteringar** periodiskt för att hålla filstorleken låg.
+- **Batch annotation operations** för att minska fil‑I/O.  
+- **Cache document instances** när samma PDF åtkomsts ofta.  
+- **Adjust JVM heap size** för stora filer och använd streaming‑API:er där det är möjligt.  
+- **Clean up orphaned annotations** periodiskt för att hålla filstorleken låg.
 
 ### Användarupplevelse‑överväganden
-- Visa **visuell återkoppling** (t.ex. ett tillfälligt overlay) medan användaren markerar text.  
-- Tillhandahåll **kortkommandon** (Ctrl+H för highlight, Ctrl+U för underline).  
+- Visa **visual feedback** (t.ex. ett tillfälligt överlägg) medan användaren markerar text.  
+- Tillhandahåll **keyboard shortcuts** (Ctrl+H för highlight, Ctrl+U för underline).  
 - Implementera **undo/redo** så att användare snabbt kan rätta fel.  
-- Visa **verktygstips** med författarnamn och tidsstämpel vid hovring.
+- Visa **tooltips** med författarnamn och tidsstämpel vid hovring.
 
 ### Tips för kodorganisation
-- Skapa en **annotation factory java**‑klass som returnerar förkonfigurerade annoteringsobjekt.  
-- Använd **konfigurationsobjekt** istället för hårdkodade färger eller opacitetsvärden.  
+- Skapa en **annotation factory java**‑klass som returnerar förkonfigurerade annotation‑objekt.  
+- Använd **configuration objects** istället för hårdkodade färger eller opacitetsvärden.  
 - Omslut filoperationer i **try‑with‑resources** för att säkerställa att strömmar stängs.  
-- Logga varje annoteringsåtgärd för revisionsspår och enklare felsökning.
+- Logga varje annotation‑åtgärd för revisionsspår och enklare felsökning.
 
-## Komma igång: Vad du behöver
+## Komma igång: vad du behöver
 
 - **Java Development Kit** (JDK 8 eller högre)  
-- **GroupDocs.Annotation för Java** (senaste versionen)  
+- **GroupDocs.Annotation for Java** (senaste versionen)  
 - Grundläggande kunskap om **Java Swing** eller **JavaFX** om du planerar att bygga ett UI  
 - Maven eller Gradle för beroendehantering  
 
-Varje länkad handledning innehåller steg‑för‑steg installationsinstruktioner, så du kan börja från början även om du är ny på GroupDocs.
+Varje länkad handledning innehåller steg‑för‑steg installationsinstruktioner, så att du kan börja från början även om du är ny på GroupDocs.
 
 ## Felsökning av vanliga installationsproblem
 
-- **Kan inte lösa GroupDocs.Annotation‑beroenden** – Verifiera att dina Maven/Gradle‑förrådsinställningar inkluderar GroupDocs‑förråds‑URL:en.  
-- **Annotering syns inte i PDF‑visare** – Se till att du anropar `save()` på dokumentet efter att ha lagt till annoteringen och att du använder en stödjande annoteringstyp.  
-- **Minnesfel med stora dokument** – Öka JVM‑heap (`-Xmx2g` eller högre) och bearbeta PDF‑filen i strömmar istället för att ladda hela filen i minnet.
+- **Cannot resolve GroupDocs.Annotation dependencies** – Verifiera att dina Maven/Gradle‑förrådsinställningar inkluderar GroupDocs‑förråds‑URL:en.  
+- **Annotation not visible in PDF viewer** – Se till att du anropar `save()` på dokumentet efter att ha lagt till annotationen och att du använder en stödjande annotationstyp.  
+- **Memory errors with large documents** – Öka JVM‑heapen (`-Xmx2g` eller högre) och bearbeta PDF‑en i strömmar istället för att ladda hela filen i minnet.
 
 ## Nästa steg efter att ha slutfört dessa handledningar
 
-- Utforska **godkännandeflöden** som låser annoteringar tills en granskare godkänner.  
-- Integrera med **PDF.js** för att rendera annoteringar direkt i webbläsare.  
-- Bygg **server‑sidig batch‑behandling** för att automatiskt applicera samma highlight på många dokument.  
-- Designa **anpassade annoteringstyper** för domänspecifika användningsfall (t.ex. medicinsk markup).
+- Utforska **approval workflows** som låser annotationer tills en granskare godkänner.  
+- Integrera med **PDF.js** för att rendera annotationer direkt i webbläsare.  
+- Bygg **server‑side batch processing** för att automatiskt applicera samma highlight på många dokument.  
+- Designa **custom annotation types** för domänspecifika användningsfall (t.ex. medicinsk markup).
 
 ## Ytterligare resurser
 
@@ -131,23 +187,29 @@ Varje länkad handledning innehåller steg‑för‑steg installationsinstruktio
 
 ## Vanliga frågor
 
-**Q: Kan jag kombinera highlight och underline i en enda annotering?**  
-A: Nej, PDF‑specifikationerna behandlar dem som separata annoteringstyper, så du måste skapa två distinkta objekt.
+**Q: Kan jag kombinera highlight och underline i en enda annotation?**  
+A: Nej, PDF specifications treat them as separate annotation types, so you need to create two distinct objects.
 
-**Q: Hur lagrar jag vem som skapade varje annotering?**  
-A: Använd `setAuthor(String)`‑metoden när du skapar annoteringen, eller bifoga anpassad metadata via annoteringens `setCustomData()`‑API.
+**Q: Hur lagrar jag vem som skapade varje annotation?**  
+A: Use the `setAuthor(String)` method when you create the annotation, or attach custom metadata via the annotation’s `setCustomData()` API.
 
 **Q: Är det möjligt att programatiskt ta bort alla highlights från en PDF?**  
-A: Ja—iterera genom dokumentets annoteringar, filtrera efter typ `Highlight` och anropa `delete()` på var och en.
+A: Ja—iterate through the document’s annotations, filter by type `Highlight`, and call `delete()` on each.
 
 **Q: Stöder GroupDocs krypterade PDF‑filer?**  
-A: Absolut. Ange lösenordet när du öppnar dokumentet, så hanterar biblioteket dekryptering transparent.
+A: Absolutely. Provide the password when opening the document, and the library will handle decryption transparently.
 
-**Q: Vad är det bästa sättet att testa annoteringsrendering i olika visare?**  
-A: Spara den annoterade PDF‑filen och öppna den i Adobe Acrobat Reader, Foxit Reader och en webbläsarbaserad visare som PDF.js för att bekräfta enhetligt utseende.
+**Q: Vad är det bästa sättet att testa annotation‑rendering i olika visare?**  
+A: Save the annotated PDF and open it in Adobe Acrobat Reader, Foxit Reader, and a browser‑based viewer like PDF.js to confirm consistent appearance.
 
 ---
 
-**Senast uppdaterad:** 2026-03-08  
-**Testat med:** GroupDocs.Annotation för Java (senaste versionen)  
+**Senast uppdaterad:** 2026-09-20  
+**Testat med:** GroupDocs.Annotation for Java (latest release)  
 **Författare:** GroupDocs
+
+## Relaterade handledningar
+
+- [Skapa PDF‑annotationer Java med GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Skapa ren PDF Java: Underline‑annotationer med GroupDocs](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [Hur man lägger till strikeout‑annotationer till PDF‑filer i Java – Komplett GroupDocs‑guide](/annotation/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/)

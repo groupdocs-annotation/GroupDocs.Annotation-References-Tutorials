@@ -1,126 +1,190 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-08'
-description: Tanulja meg, hogyan adhat hozzá PDF-kiemelést és aláhúzást Java‑val a
-  GroupDocs Annotation segítségével. Lépésről‑lépésre útmutató az Annotation Factory
-  Java tippekkel.
-keywords: Java text annotation tutorial, GroupDocs annotation Java guide, PDF text
-  highlighting Java, document annotation Java, Java PDF strikeout annotation
-lastmod: '2026-03-08'
-linktitle: Java Text Annotation Tutorial
+date: '2026-09-20'
+description: Ismerje meg, hogyan hozhat létre PDF annotation Java-t a GroupDocs.Annotation
+  segítségével – adjon hozzá kiemeléseket, aláhúzásokat és áthúzásokat percek alatt.
+  Lépésről‑lépésre útmutató.
+keywords:
+- create pdf annotation java
+- java text annotation tutorial
+- groupdocs annotation java
+- pdf highlight java
+- pdf underline java
+lastmod: '2026-09-20'
+linktitle: Java szövegannotációs útmutató
+og_description: PDF annotation Java létrehozása a GroupDocs.Annotation segítségével.
+  Ez az útmutató megmutatja, hogyan adhat hozzá kiemeléseket, aláhúzásokat és áthúzásokat
+  gyorsan és megbízhatóan.
+og_image_alt: Guide showing how to create PDF annotations in Java using GroupDocs.Annotation
+og_title: PDF annotation Java létrehozása – útmutató a kiemelésekhez és aláhúzásokhoz
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  headline: How to create PDF annotation Java – complete guide for text highlights
+  type: TechArticle
+- description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  name: How to create PDF annotation Java – complete guide for text highlights
+  steps:
+  - name: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+    text: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+  - name: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+    text: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+  - name: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+    text: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+  type: HowTo
+- questions:
+  - answer: No, PDF specifications treat them as separate annotation types, so you
+      need to create two distinct objects.
+    question: Can I combine highlight and underline in a single annotation?
+  - answer: Use the `setAuthor(String)` method when you create the annotation, or
+      attach custom metadata via the annotation’s `setCustomData()` API.
+    question: How do I store who created each annotation?
+  - answer: Yes—iterate through the document’s annotations, filter by type `Highlight`,
+      and call `delete()` on each.
+    question: Is it possible to programmatically remove all highlights from a PDF?
+  - answer: Absolutely. Provide the password when opening the document, and the library
+      will handle decryption transparently.
+    question: Does GroupDocs support encrypted PDFs?
+  - answer: Save the annotated PDF and open it in Adobe Acrobat Reader, Foxit Reader,
+      and a browser‑based viewer like PDF.js to confirm consistent appearance.
+    question: What is the best way to test annotation rendering across viewers?
+  type: FAQPage
 tags:
-- text-annotation
+- pdf annotation
 - groupdocs
-- pdf-editing
-- java-development
-title: PDF kiemelés hozzáadása Java-val – Teljes útmutató a szöveges annotációkhoz
+- java text annotation
+- pdf highlight
+- java development
+- annotation factory
+title: Hogyan készítsünk PDF annotation Java – teljes útmutató a szövegkiemelésekhez
 type: docs
 url: /hu/java/text-annotations/
 weight: 5
 ---
 
- formatting.
+# Hogyan hozzunk létre PDF annotációt Java‑ban – átfogó útmutató szöveges kiemelésekhez
 
-Now produce final content.# PDF kiemelés hozzáadása Java – Teljes útmutató a szöveges megjegyzésekhez
-
-Ha **add PDF highlight java** funkciót szeretne hozzáadni egy Java alkalmazáshoz, jó helyen jár. Ebben az útmutatóban áttekintjük, miért fontosak a szöveges megjegyzések, milyen különböző megjegyzéstípusokat hozhat létre a GroupDocs.Annotation for Java segítségével, és hogyan valósíthatja meg őket hatékonyan. Akár jogi felülvizsgálati rendszert, e‑learning platformot vagy együttműködő szerkesztőeszközt épít, az itt bemutatott koncepciók segítenek professzionális szintű jelölő funkciók biztosításában.
+Ebben az átfogó útmutatóban megtanulja, hogyan **create PDF annotation Java** megoldásokat használva a GroupDocs.Annotation‑t. Akár jogi‑ellenőrző portált, e‑learning annotációs eszközt vagy együttműködő dokumentumszerkesztőt épít, az alábbi lépések segítenek kiemelések, aláhúzások és áthúzások hozzáadásában, amelyek helyesen jelennek meg bármely PDF‑nézőben. Kitérünk arra, miért fontosak a szöveges annotációk, a különböző annotációtípusokra, és a legjobb gyakorlatokra, például egy annotációgyár használatára a konzisztens stílus érdekében.
 
 ## Gyors válaszok
-- **Melyik könyvtár támogatja az add pdf highlight java funkciót?** GroupDocs.Annotation for Java.  
-- **Alá tudom-e húzni a pdf text java szöveget is?** Igen – ugyanaz az API biztosít aláhúzási támogatást.  
-- **Létezik gyári minta (factory pattern) a megjegyzések létrehozásához?** Használjon annotation factory java-t a konzisztens beállításokhoz.  
-- **Szükségem van licencre a termeléshez?** Érvényes GroupDocs licenc szükséges kereskedelmi használathoz.  
-- **Működni fognak ezek a megjegyzések a szabványos PDF megjelenítőkben?** Minden szabványos PDF megjegyzéstípus teljesen kompatibilis.
+- **Melyik könyvtár támogatja a pdf kiemelés hozzáadását Java‑ban?** GroupDocs.Annotation for Java.  
+- **Alá tudom-e húzni a pdf szöveget Java‑ban is?** Igen – ugyanaz az API biztosítja az aláhúzás támogatását.  
+- **Létezik gyári minta az annotációk létrehozásához?** Használjon egy annotation factory java‑t a konzisztens beállításokhoz.  
+- **Szükségem van licencre a termeléshez?** Érvényes GroupDocs licenc szükséges kereskedelmi felhasználáshoz.  
+- **Működni fognak ezek az annotációk a szabványos PDF‑nézőkben?** Minden szabványos PDF annotációtípus teljesen kompatibilis.
 
-## Mi az a “add pdf highlight java”?
-A PDF kiemelés hozzáadása Java-ban azt jelenti, hogy programozottan hozunk létre egy vizuális kiemelés megjegyzést, amely a kiválasztott szöveget jelöli. A kiemelés a PDF fájlban tárolódik, így bármely PDF megjelenítő kiegészítő pluginok nélkül is meg tudja jeleníteni.
+## Mi az „add pdf highlight java”?
+A PDF kiemelés hozzáadása Java‑ban azt jelenti, hogy programozott módon hozunk létre egy vizuális kiemelés annotációt, amely megjelöli a dokumentumban kiválasztott szöveget. A kiemelés közvetlenül a PDF‑fájlba van beágyazva, megőrizve megjelenését minden szabványos PDF‑nézőben, anélkül, hogy további pluginekre vagy külső erőforrásokra lenne szükség.
 
-## Miért használja a GroupDocs Annotation for Java-t?
-A GroupDocs.Annotation egy magas szintű, platformfüggetlen API-t kínál, amely elrejti a PDF specifikáció részleteit. Lehetővé teszi, hogy az üzleti logikára koncentráljon – például mikor kell kiemelni, aláhúzni vagy áthúzni – miközben a renderelést, pozicionálást és a fájl I/O-t a háttérben kezeli.
+## Miért használjuk a GroupDocs Annotation for Java‑t?
+A GroupDocs.Annotation for Java támogat **20+ szabványos annotációtípust**, és akár **1 GB** méretű PDF‑eket is képes feldolgozni anélkül, hogy a teljes dokumentumot a memóriába töltené. A könyvtár elrejti az alacsony szintű PDF specifikációkat, lehetővé téve, hogy az üzleti logikára koncentráljon – például mikor kell kiemelni, aláhúzni vagy áthúzni – miközben a megjelenítést, pozicionálást és fájl‑I/O‑t kezeli.
 
-## Mikor kell aláhúzni a pdf text java szöveget?
-Az aláhúzás tökéletes a finom hangsúlyozáshoz, például definíciók vagy hiperhivatkozások jelöléséhez. Kevésbé tolakodó, mint a kiemelés, de mégis jól látható az olvasók számára.
+## Mikor kell aláhúzni a pdf szöveget Java‑ban?
+Az aláhúzási annotációk ideálisak a finom hangsúlyozásra, például definíciók, kulcsszavak vagy hiperhivatkozások megjelölésére egy PDF‑ben. Egy vékony vonalat húznak a kiválasztott szöveg alá, így a kiemelt tartalom látható marad anélkül, hogy eltakarná, ami jogi, oktatási vagy szerkesztői környezetben hasznos, ahol az olvashatóságot meg kell őrizni.
 
 ## Hogyan egyszerűsíti a fejlesztést egy annotation factory java?
-Az **annotation factory java** központosítja a megjegyzésobjektumok (szín, átlátszóság, szerző stb.) létrehozását. A gyár újrahasználatával biztosítható, hogy minden megjegyzés ugyanazokat a stílusirányelveket kövesse, és csökkenthető a duplikált kód.
+Egy annotációgyár központosítja az annotációobjektumok létrehozását, előre beállítva olyan tulajdonságokat, mint a szín, átlátszóság, szerző és stílus. Egyetlen gyári metódus használatával a fejlesztők biztosítják a konzisztens megjelenést minden annotációnál, csökkentik a duplikált kódot, és egyszerűsítik a jövőbeni frissítéseket a stílus szabályokban vagy az alapértelmezett beállításokban az alkalmazás egészében.
+
+## Hogyan hozhatunk létre PDF annotációt Java‑ban?
+
+`AnnotationApi` is the main entry point for loading and manipulating PDF documents in GroupDocs.Annotation.  
+`HighlightAnnotation` represents a highlight markup that can be applied to selected text.  
+`addAnnotation()` adds the specified annotation object to the current PDF document.  
+`save()` writes all pending changes back to the PDF file or output stream.
+
+Load your target PDF with `AnnotationApi` (or the equivalent class in the latest SDK) and invoke the factory to obtain a ready‑made `HighlightAnnotation`. Call `addAnnotation()` on the document, then persist the changes with `save()`. This three‑step flow lets you add highlights, underlines, or strikeouts in a single, atomic operation—ideal for high‑throughput services.
+
+### Lépésről‑lépésre munkafolyamat
+1. **Inicializálja az API‑t** – hozza létre a fő annotációkezelőt a licenckulccsal.  
+2. **Hozza létre az annotációt** – használja az annotációgyárat egy kiemelés, aláhúzás vagy áthúzás objektum felépítéséhez, megadva az oldalszámot és a szövegtartományt.  
+3. **Alkalmazza és mentse** – adja hozzá az annotációt a dokumentumhoz, majd hívja meg a `save()`‑t a változások lemezre vagy adatfolyamra írásához.
 
 ## Gyakori megvalósítási kihívások (és hogyan oldjuk meg őket)
 
-### Kihívás 1: Megjegyzés pozicionálási problémák
-**Problem**: A megjegyzések nem illeszkednek a layoutváltozás után.  
-**Solution**: Rögzítse a megjegyzéseket szövegtartományokhoz, nem abszolút koordinátákhoz. A GroupDocs automatikusan újraszámolja a pozíciókat, amikor a dokumentum újraformázódik.
+### 1. kihívás: Annotáció pozicionálási problémák
+**Probléma**: Az annotációk nem illeszkednek a layout‑változás után.  
+**Megoldás**: Rögzítse az annotációkat szövegtartományokhoz, nem abszolút koordinátákhoz. A GroupDocs automatikusan újraszámolja a pozíciókat, amikor a dokumentum újraformázódik.
 
-### Kihívás 2: Teljesítmény nagy dokumentumok esetén
-**Problem**: A renderelés lelassul több száz megjegyzés esetén.  
-**Solution**: Használjon lusta betöltést – csak a jelenlegi nézetablakban látható megjegyzéseket töltse be, a többit igény szerint kérje le.
+### 2. kihívás: Teljesítmény nagy dokumentumoknál
+**Probléma**: A renderelés lelassul több száz annotációval.  
+**Megoldás**: Használjon lazy loading‑et – csak a jelenlegi nézetben látható annotációkat töltse be, a többit igény szerint kérje le.
 
-### Kihívás 3: Platformközi kompatibilitás
-**Problem**: A megjegyzések különböző PDF megjelenítőkben eltérően jelennek meg.  
-**Solution**: Tartsuk magunkat a szabványos PDF megjegyzéstípusokhoz (kiemelés, aláhúzás, áthúzás stb.) és teszteljük az Adobe Acrobat, Foxit és a PDF.js segítségével.
+### 3. kihívás: Kereszt‑platform kompatibilitás
+**Probléma**: Az annotációk különböző PDF‑nézőkben másként jelennek meg.  
+**Megoldás**: Maradjon a szabványos PDF annotációtípusoknál (highlight, underline, strikeout, stb.) és tesztelje az Adobe Acrobat, Foxit és PDF.js nézőkkel.
 
-### Kihívás 4: Felhasználói jogosultságkezelés
-**Problem**: Szükség van arra, hogy korlátozzuk, ki adhat hozzá vagy szerkeszthet bizonyos megjegyzéseket.  
-**Solution**: Tárolja a jogosultsági metaadatokat minden megjegyzésnél, és ellenőrizze őket, mielőtt bármilyen műveletet végrehajtana.
+### 4. kihívás: Felhasználói jogosultságkezelés
+**Probléma**: Szükség van arra, hogy korlátozzuk, ki adhat hozzá vagy szerkeszthet bizonyos annotációkat.  
+**Megoldás**: Tároljon jogosultsági metaadatokat minden annotációval együtt, és ellenőrizze ezeket a művelet végrehajtása előtt.
 
 ## Elérhető oktatóanyagok
 
-### [PDF-ek megjegyzése Java-ban a GroupDocs.Highlight használatával: Átfogó útmutató](./annotate-pdfs-groupdocs-highlight-java/)
-Kezdje itt, ha újonc a szöveges megjegyzések terén. Ez az útmutató lefedi a PDF kiemelés alapjait gyakorlati példákkal, amelyeket azonnal megvalósíthat. Megtanulja a beállítást, az alapvető megjegyzés létrehozást, és a felhasználói interakciók kezelését.
+### [Annotáljon PDF‑eket Java‑ban a GroupDocs.Highlight segítségével: Átfogó útmutató](./annotate-pdfs-groupdocs-highlight-java/)
+Kezdje itt, ha újonc a szöveges annotációkban. Ez az oktatóanyag lefedi a PDF kiemelés alapjait gyakorlati példákkal, amelyeket azonnal alkalmazhat. Megtanulja a beállítást, az alap annotációk létrehozását, és a felhasználói interakciók kezelését.
 
-### [Hogyan adjon kereshető szöveges megjegyzéseket PDF-ekhez a GroupDocs.Annotation for Java használatával](./add-search-text-annotations-pdf-groupdocs-java/)
-Emelje a megjegyzési képességeit a következő szintre kereshető szöveges megjegyzésekkel. Ideális dokumentumkezelő rendszerek építéséhez, ahol a felhasználóknak gyorsan kell megtalálniuk a megjegyzett tartalmat. Tartalmaz fejlett keresési funkciókat és indexelési technikákat.
+### [Hogyan adjon kereshető szöveg‑annotációkat PDF‑ekhez a GroupDocs.Annotation for Java használatával](./add-search-text-annotations-pdf-groupdocs-java/)
+Emelje annotációs képességeit a következő szintre kereshető szöveg‑annotációkkal. Ideális dokumentumkezelő rendszerekhez, ahol a felhasználóknak gyorsan kell megtalálniuk az annotált tartalmat. Tartalmaz fejlett keresési funkciókat és indexelési technikákat.
 
-### [Java PDF áthúzott megjegyzések a GroupDocs-szal: Átfogó útmutató](./java-pdf-strikeout-annotations-groupdocs/)
-Mesteri szinten sajátítsa el az áthúzott megjegyzések művészetét a dokumentumváltozások nyomon követéséhez. Elengedhetetlen jogi munkafolyamatokhoz, szerkesztési folyamatokhoz és verziókezelő rendszerekhez. Tanulja meg, hogyan őrizze meg a megjegyzés történetét és kezelje a komplex dokumentumrevíziókat.
+### [Java PDF áthúzási annotációk a GroupDocs‑szal: Átfogó útmutató](./java-pdf-strikeout-annotations-groupdocs/)
+Mesteri szintre emeli az áthúzási annotációkat a dokumentumváltozások nyomon követéséhez. Alapvető jogi munkafolyamatokhoz, szerkesztői folyamatokhoz és verziókezelő rendszerekhez. Tanulja meg, hogyan őrizheti meg az annotációk történetét és kezelheti a komplex dokumentumrevíziókat.
 
 ### [Java PDF szövegcsere útmutató a GroupDocs.Annotation segítségével](./java-pdf-text-replacement-groupdocs-annotation/)
-Építsen együttműködő szerkesztési funkciókat szövegcsere megjegyzésekkel. Ez az útmutató bemutatja, hogyan javasolhat változtatásokat, kezelheti a jóváhagyási munkafolyamatokat, és megőrizheti a dokumentum integritását az áttekintési folyamat során.
+Építsen együttműködő szerkesztési funkciókat szövegcsere‑annotációkkal. Ez az oktatóanyag megmutatja, hogyan javasolhat változtatásokat, kezelheti az jóváhagyási munkafolyamatokat, és megőrizheti a dokumentum integritását a felülvizsgálat során.
 
-### [Java szöveg áthúzott megjegyzés útmutató a GroupDocs.Annotation használatával](./java-text-strikeout-annotation-groupdocs/)
-Kifejezetten a szövegszintű áthúzott funkcióra fókuszál. Kiváló olyan alkalmazásokhoz, amelyeknek pontos szövegjelölési képességekre van szükségük, beleértve a helyesírás-ellenőrzőket, tartalommoderálási eszközöket és szerkesztői rendszereket.
+### [Java szöveg‑áthúzási annotáció útmutató a GroupDocs.Annotation használatával](./java-text-strikeout-annotation-groupdocs/)
+Kifejezetten a szövegszintű áthúzási funkcióra fókuszál. Ideális alkalmazásokhoz, amelyek precíz szövegjelölési képességeket igényelnek, például helyesírás-ellenőrzők, tartalommoderálási eszközök és szerkesztői rendszerek.
 
-## Legjobb gyakorlatok Java szöveges megjegyzésekhez
+## Legjobb gyakorlatok Java szöveg‑annotációkhoz
 
 ### Teljesítményoptimalizálás
-- **Kötegelt megjegyzés műveletek** a fájl I/O csökkentése érdekében.  
-- **Dokumentumpéldányok gyorsítótárazása**, ha ugyanazt a PDF-et gyakran érintik.  
-- **Állítsa be a JVM heap méretét** nagy fájlokhoz, és ahol lehetséges, használjon streaming API-kat.  
-- **Rendszeresen tisztítsa meg az elárvult megjegyzéseket**, hogy a fájlméret alacsony maradjon.
+- **Kötegelt annotációs műveletek** a fájl‑I/O csökkentéséhez.  
+- **Dokumentum‑példányok gyorsítótárazása**, ha ugyanazt a PDF‑et gyakran használják.  
+- **Állítsa be a JVM heap méretét** nagy fájlokhoz, és ahol lehetséges, használjon streaming API‑kat.  
+- **Rendszeresen tisztítsa meg az elárvult annotációkat**, hogy alacsony maradjon a fájlméret.
 
 ### Felhasználói élmény szempontok
 - Mutasson **vizuális visszajelzést** (pl. ideiglenes átfedés) a felhasználó szövegkijelölése közben.  
 - Biztosítson **billentyűparancsokat** (Ctrl+H a kiemeléshez, Ctrl+U az aláhúzáshoz).  
 - Valósítsa meg a **visszavonás/újra** funkciót, hogy a felhasználók gyorsan javíthassák a hibákat.  
-- Jelenítsen meg **tooltippeket** a szerző nevével és időbélyeggel, amikor az egér fölé viszi.
+- Jelenítsen meg **tooltip‑eket** szerzői névvel és időbélyeggel, ha az egér fölé viszi.
 
 ### Kód szervezési tippek
-- Hozzon létre egy **annotation factory java** osztályt, amely előre konfigurált megjegyzésobjektumokat ad vissza.  
+- Hozzon létre egy **annotation factory java** osztályt, amely előre konfigurált annotációobjektumokat ad vissza.  
 - Használjon **konfigurációs objektumokat** a keménykódolt színek vagy átlátszósági értékek helyett.  
-- A fájlműveleteket **try‑with‑resources** blokkba helyezze, hogy a stream-ek biztosan záródjanak.  
-- Logolja minden megjegyzés műveletet audit nyomvonalak és könnyebb hibakeresés érdekében.
+- Csomagolja a fájlműveleteket **try‑with‑resources**‑ba, hogy biztosítsa az adatfolyamok lezárását.  
+- Naplózza minden annotációs műveletet audit‑nyomvonalak és könnyebb hibakeresés érdekében.
 
-## Kezdés: Amire szüksége lesz
+## Kezdés: amire szüksége lesz
 
 - **Java Development Kit** (JDK 8 vagy újabb)  
 - **GroupDocs.Annotation for Java** (legújabb verzió)  
-- Alapvető ismeretek a **Java Swing** vagy **JavaFX** használatáról, ha UI-t tervez.  
+- Alapvető ismeretek a **Java Swing**‑ről vagy **JavaFX**‑ről, ha UI‑t szeretne építeni  
 - Maven vagy Gradle a függőségkezeléshez  
 
-Minden hivatkozott oktatóanyag lépésről‑lépésre tartalmaz beállítási útmutatót, így a semmiből is elkezdhet, még ha újonc is a GroupDocs használatában.
+Minden hivatkozott oktatóanyag lépésről‑lépésre tartalmaz beállítási útmutatót, így akár a nulláról is elkezdheti, ha újonc a GroupDocs‑ban.
 
 ## Gyakori beállítási problémák hibaelhárítása
 
 - **Cannot resolve GroupDocs.Annotation dependencies** – Ellenőrizze, hogy Maven/Gradle tárolóbeállításai tartalmazzák a GroupDocs tároló URL‑jét.  
-- **Annotation not visible in PDF viewer** – Győződjön meg róla, hogy a megjegyzés hozzáadása után meghívja a `save()` metódust a dokumentumon, és támogatott megjegyzéstípust használ.  
-- **Memory errors with large documents** – Növelje a JVM heap méretét (`-Xmx2g` vagy nagyobb) és dolgozza fel a PDF-et stream‑ekben, a teljes fájl memóriába betöltése helyett.
+- **Annotation not visible in PDF viewer** – Győződjön meg róla, hogy a dokumentumon meghívja a `save()`‑t az annotáció hozzáadása után, és támogatott annotációtípust használ.  
+- **Memory errors with large documents** – Növelje a JVM heap‑et (`-Xmx2g` vagy nagyobb) és a PDF‑et stream‑ekben dolgozza fel a teljes fájl betöltése helyett.
 
-## Következő lépések a tutorialok elvégzése után
+## Következő lépések a tutorialok befejezése után
 
-- Fedezze fel a **approval workflows**-t, amelyek zárolják a megjegyzéseket, amíg a lektor jóvá nem hagyja.  
-- Integrálja a **PDF.js**-t, hogy a megjegyzéseket közvetlenül a webböngészőkben jelenítse meg.  
-- Építsen **szerver‑oldali kötegelt feldolgozást**, amely automatikusan ugyanazt a kiemelést alkalmazza sok dokumentumra.  
-- Tervezzen **egyedi megjegyzéstípusokat** a domain‑specifikus felhasználási esetekhez (pl. orvosi jelölések).
+- Fedezze fel a **approval workflows**‑t, amelyek lezárják az annotációkat, amíg a lektor alá nem írja őket.  
+- Integrálja a **PDF.js**‑t, hogy a annotációkat közvetlenül a webböngészőkben jelenítse meg.  
+- Építsen **server‑side batch processing**‑t, amely automatikusan ugyanazt a kiemelést alkalmazza sok dokumentumra.  
+- Tervezzen **custom annotation types**‑t domain‑specifikus felhasználási esetekhez (pl. orvosi markup).
 
 ## További források
 
@@ -133,25 +197,29 @@ Minden hivatkozott oktatóanyag lépésről‑lépésre tartalmaz beállítási 
 
 ## Gyakran ismételt kérdések
 
-**Q:** Kombinálhatok kiemelést és aláhúzást egyetlen megjegyzésben?  
-**A:** Nem, a PDF specifikációk különálló megjegyzéstípusokként kezelik őket, ezért két külön objektumot kell létrehozni.
+**Q: Kombinálhatok kiemelést és aláhúzást egyetlen annotációban?**  
+A: Nem, a PDF specifikációk külön annotációtípusként kezelik őket, ezért két külön objektumot kell létrehozni.
 
-**Q:** Hogyan tároljam, ki hozta létre az egyes megjegyzéseket?  
-**A:** Használja a `setAuthor(String)` metódust a megjegyzés létrehozásakor, vagy csatoljon egyedi metaadatot a megjegyzés `setCustomData()` API‑jával.
+**Q: Hogyan tárolom, ki hozta létre az egyes annotációkat?**  
+A: Használja a `setAuthor(String)` metódust az annotáció létrehozásakor, vagy csatoljon egyedi metaadatot az annotáció `setCustomData()` API‑jával.
 
-**Q:** Lehetséges programozottan eltávolítani az összes kiemelést egy PDF-ből?  
-**A:** Igen – iteráljon a dokumentum megjegyzésein, szűrje a `Highlight` típusúakat, és hívja meg a `delete()` metódust mindegyiken.
+**Q: Lehet programozottan eltávolítani az összes kiemelést egy PDF‑ből?**  
+A: Igen – iteráljon a dokumentum annotációin, szűrje a `Highlight` típusúakat, és hívja meg a `delete()`‑t mindegyiken.
 
-**Q:** Támogatja a GroupDocs a titkosított PDF-eket?  
-**A:** Teljes mértékben. Adja meg a jelszót a dokumentum megnyitásakor, és a könyvtár átláthatóan kezeli a visszafejtést.
+**Q: Támogatja a GroupDocs a titkosított PDF‑eket?**  
+A: Teljes mértékben. Adja meg a jelszót a dokumentum megnyitásakor, a könyvtár átlátszó módon kezeli a dekódolást.
 
-**Q:** Mi a legjobb módja a megjegyzés renderelés tesztelésének különböző megjelenítőkön?  
-**A:** Mentse el a megjegyzett PDF-et, és nyissa meg Adobe Acrobat Reader, Foxit Reader, valamint egy böngésző‑alapú megjelenítőben, például PDF.js-ben, hogy megerősítse a konzisztens megjelenést.
-
----
-
-**Utoljára frissítve:** 2026-03-08  
-**Tesztelve:** GroupDocs.Annotation for Java (legújabb kiadás)  
-**Szerző:** GroupDocs  
+**Q: Mi a legjobb módja az annotációk megjelenésének tesztelésére különböző nézőkben?**  
+A: Mentse el az annotált PDF‑et, és nyissa meg az Adobe Acrobat Reader, Foxit Reader és egy böngésző‑alapú néző, például a PDF.js segítségével, hogy megerősítse a konzisztens megjelenést.
 
 ---
+
+**Legutóbb frissítve:** 2026-09-20  
+**Tesztelve a következővel:** GroupDocs.Annotation for Java (legújabb kiadás)  
+**Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [PDF annotációk létrehozása Java‑ban a GroupDocs.Annotation segítségével](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Tiszta PDF létrehozása Java‑ban: aláhúzási annotációk a GroupDocs‑szal](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [Hogyan adjunk áthúzási annotációkat PDF‑ekhez Java‑ban – Teljes GroupDocs útmutató](/annotation/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/)

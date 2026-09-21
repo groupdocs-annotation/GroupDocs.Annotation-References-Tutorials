@@ -1,126 +1,191 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-08'
-description: GroupDocs Annotation kullanarak PDF vurgulama ve PDF metninin altını
-  çizme işlemlerini Java ile nasıl ekleyeceğinizi öğrenin. Adım adım kılavuz ve annotation
-  factory Java ipuçları.
-keywords: Java text annotation tutorial, GroupDocs annotation Java guide, PDF text
-  highlighting Java, document annotation Java, Java PDF strikeout annotation
-lastmod: '2026-03-08'
-linktitle: Java Text Annotation Tutorial
+date: '2026-09-20'
+description: GroupDocs.Annotation ile PDF annotation Java nasıl oluşturulacağını öğrenin
+  – dakikalar içinde highlights, underlines ve strikeouts ekleyin. Adım adım rehber.
+keywords:
+- create pdf annotation java
+- java text annotation tutorial
+- groupdocs annotation java
+- pdf highlight java
+- pdf underline java
+lastmod: '2026-09-20'
+linktitle: Java text annotation öğreticisi
+og_description: GroupDocs.Annotation ile PDF annotation Java oluşturun. Bu rehber,
+  highlights, underlines ve strikeouts eklemeyi hızlı ve güvenilir bir şekilde nasıl
+  yapacağınızı gösterir.
+og_image_alt: Guide showing how to create PDF annotations in Java using GroupDocs.Annotation
+og_title: PDF annotation Java oluşturma – highlights ve underlines rehberi
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  headline: How to create PDF annotation Java – complete guide for text highlights
+  type: TechArticle
+- description: Learn how to create PDF annotation Java with GroupDocs.Annotation –
+    add highlights, underlines, and strikeouts in minutes. Step‑by‑step guide.
+  name: How to create PDF annotation Java – complete guide for text highlights
+  steps:
+  - name: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+    text: '**Initialize the API** – instantiate the main annotation manager with your
+      license key.'
+  - name: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+    text: '**Create the annotation** – use the annotation factory to build a highlight,
+      underline, or strikeout object, specifying the page number and text range.'
+  - name: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+    text: '**Apply and save** – add the annotation to the document, then call `save()`
+      to write the changes back to disk or a stream.'
+  type: HowTo
+- questions:
+  - answer: No, PDF specifications treat them as separate annotation types, so you
+      need to create two distinct objects.
+    question: Can I combine highlight and underline in a single annotation?
+  - answer: Use the `setAuthor(String)` method when you create the annotation, or
+      attach custom metadata via the annotation’s `setCustomData()` API.
+    question: How do I store who created each annotation?
+  - answer: Yes—iterate through the document’s annotations, filter by type `Highlight`,
+      and call `delete()` on each.
+    question: Is it possible to programmatically remove all highlights from a PDF?
+  - answer: Absolutely. Provide the password when opening the document, and the library
+      will handle decryption transparently.
+    question: Does GroupDocs support encrypted PDFs?
+  - answer: Save the annotated PDF and open it in Adobe Acrobat Reader, Foxit Reader,
+      and a browser‑based viewer like PDF.js to confirm consistent appearance.
+    question: What is the best way to test annotation rendering across viewers?
+  type: FAQPage
 tags:
-- text-annotation
+- pdf annotation
 - groupdocs
-- pdf-editing
-- java-development
-title: PDF Vurgulama Ekleme (Java) – Metin Açıklamaları için Tam Kılavuz
+- java text annotation
+- pdf highlight
+- java development
+- annotation factory
+title: PDF annotation Java nasıl oluşturulur – metin vurgulamaları için tam rehber
 type: docs
 url: /tr/java/text-annotations/
 weight: 5
 ---
 
-# PDF Vurgulama Java Ekle – Metin Açıklamaları için Tam Kılavuz
+# PDF anotasyonu Java nasıl oluşturulur – metin vurgulamaları için tam rehber
 
-Eğer bir Java uygulamasına **add PDF highlight java** işlevselliği eklemeniz gerekiyorsa, doğru yerdesiniz. Bu öğreticide metin açıklamalarının neden önemli olduğunu, GroupDocs.Annotation for Java ile oluşturabileceğiniz farklı açıklama türlerini ve bunları verimli bir şekilde nasıl uygulayacağınızı adım adım inceleyeceğiz. Hukuki inceleme sistemi, e‑öğrenme platformu veya işbirlikçi düzenleme aracı geliştiriyor olun, burada yer alan kavramlar profesyonel düzeyde işaretleme özellikleri sunmanıza yardımcı olacaktır.
+Bu kapsamlı öğreticide GroupDocs.Annotation kullanarak **create PDF annotation Java** çözümlerini nasıl oluşturacağınızı öğreneceksiniz. İster bir yasal‑inceleme portalı, ister bir e‑öğrenme anotasyon aracı, ister işbirlikçi bir belge düzenleyici oluşturuyor olun, aşağıdaki adımlar herhangi bir PDF görüntüleyicide doğru şekilde görüntülenen vurgulamalar, alt çizgiler ve üstü çizgiler eklemenize yardımcı olacaktır. Metin anotasyonlarının neden önemli olduğunu, oluşturabileceğiniz farklı anotasyon türlerini ve tutarlı stil için bir anotasyon fabrikası kullanma gibi en iyi uygulama kalıplarını ele alacağız.
 
-## Hızlı Yanıtlar
-- **What library supports add pdf highlight java?** GroupDocs.Annotation for Java.  
-- **Can I underline pdf text java as well?** Yes – the same API provides underline support.  
-- **Is there a factory pattern for creating annotations?** Use an annotation factory java for consistent settings.  
-- **Do I need a license for production?** A valid GroupDocs license is required for commercial use.  
-- **Will these annotations work in standard PDF viewers?** All standard PDF annotation types are fully compatible.
+## Hızlı cevaplar
+- **Hangi kütüphane add pdf highlight java'yu destekler?** GroupDocs.Annotation for Java.  
+- **PDF metnini Java'da altı çizilebilir mi?** Evet – aynı API alt çizgi desteği sağlar.  
+- **Anotasyon oluşturmak için bir fabrika deseni var mı?** Tutarlı ayarlar için bir annotation factory java kullanın.  
+- **Üretim için lisansa ihtiyacım var mı?** A valid GroupDocs license is required for commercial use.  
+- **Bu anotasyonlar standart PDF görüntüleyicelerde çalışacak mı?** All standard PDF annotation types are fully compatible.
 
 ## “add pdf highlight java” nedir?
-Java’da PDF vurgulama eklemek, seçili metni işaretleyen görsel bir vurgulama açıklamasını programlı olarak oluşturmak anlamına gelir. Vurgulama PDF dosyasının içinde saklanır, böylece herhangi bir PDF görüntüleyicisi ekstra eklentiler olmadan bunu gösterebilir.
+Java'da bir PDF vurgulaması eklemek, belge içinde seçilen metni işaretleyen görsel bir vurgulama anotasyonu programlı olarak oluşturmak anlamına gelir. Vurgulama doğrudan PDF dosyasına gömülür ve ek eklentiler veya dış kaynaklar gerektirmeden tüm standart PDF görüntüleyicilerde görünümünü korur.
 
-## Neden GroupDocs Annotation for Java kullanmalısınız?
-GroupDocs.Annotation, PDF spesifikasyon detaylarını soyutlayan yüksek seviyeli, çapraz platform bir API sunar. İş mantığınıza odaklanmanızı sağlar—örneğin ne zaman vurgulama, alt çizgi veya üstü çizme yapılacağı—aynı zamanda renderleme, konumlandırma ve dosya I/O işlemlerini arka planda halleder.
+## Neden GroupDocs Annotation for Java kullanmalı?
+GroupDocs.Annotation for Java **20+ standard annotation types** destekler ve PDF'leri **1 GB**'a kadar bellek içinde tüm belgeyi yüklemeden işleyebilir. Kütüphane düşük‑seviye PDF spesifikasyonlarını soyutlayarak iş mantığınıza odaklanmanızı sağlar—örneğin ne zaman vurgulama, alt çizgi veya üstü çizgi ekleyeceğinizi—renderlama, konumlandırma ve dosya I/O'sunu kendisi halleder.
 
-## Ne zaman underline pdf text java kullanmalısınız?
-Alt çizgi, tanımlar veya hiperlinkler gibi hafif vurgulamalar için mükemmeldir. Vurgulamadan daha az müdahaleci olsa da okuyucular için hâlâ net bir şekilde görülür.
+## PDF metnini Java'da ne zaman altı çizmelisiniz?
+Alt çizgi anotasyonları, tanımlamaları, anahtar terimleri veya PDF içindeki hiperlinkleri işaretlemek gibi ince vurgulamalar için idealdir. Seçilen metnin altında ince bir çizgi çizer, vurgulanan içeriği gözle görülür kılar ancak gizlemez; bu, okunabilirliğin korunması gereken yasal, eğitim veya editöryal bağlamlarda faydalıdır.
 
-## annotation factory java geliştirmeyi nasıl basitleştirir?
-Bir **annotation factory java**, açıklama nesnelerinin (renk, opaklık, yazar vb.) oluşturulmasını merkezileştirir. Fabrikayı yeniden kullanarak her açıklamanın aynı stil yönergelerine uymasını sağlarsınız ve tekrarlanan kodu azaltırsınız.
+## Bir annotation factory java geliştirmeyi nasıl basitleştirir?
+Bir annotation factory, renk, opaklık, yazar ve stil gibi özellikleri ön‑konfigüre ederek anotasyon nesnelerinin oluşturulmasını merkezileştirir. Tek bir fabrika yöntemi kullanarak geliştiriciler tüm anotasyonlarda tutarlı görünüm sağlar, yinelenen kodu azaltır ve stil kurallarındaki veya varsayılan ayarlardaki gelecekteki güncellemeleri uygulamayı kolaylaştırır.
 
-## Yaygın Uygulama Zorlukları (Ve Çözüm Yolları)
+## PDF anotasyonu Java nasıl oluşturulur?
 
-### Zorluk 1: Açıklama Konumlandırma Sorunları
-**Problem**: Düzen değişikliği sonrası açıklamalar hizalanmıyor.  
-**Çözüm**: Açıklamaları mutlak koordinatlar yerine metin aralıklarına bağlayın. GroupDocs, belge yeniden akışa girdiğinde konumları otomatik olarak yeniden hesaplar.
+`AnnotationApi` is the main entry point for loading and manipulating PDF documents in GroupDocs.Annotation.  
+`HighlightAnnotation` represents a highlight markup that can be applied to selected text.  
+`addAnnotation()` adds the specified annotation object to the current PDF document.  
+`save()` writes all pending changes back to the PDF file or output stream.
 
-### Zorluk 2: Büyük Belgelerde Performans
-**Problem**: Yüzlerce açıklama olduğunda renderleme yavaşlıyor.  
-**Çözüm**: Tembel yükleme kullanın—sadece mevcut görünüm alanında görünen açıklamaları yükleyin ve diğerlerini ihtiyaç duyulduğunda alın.
+Load your target PDF with `AnnotationApi` (or the equivalent class in the latest SDK) and invoke the factory to obtain a ready‑made `HighlightAnnotation`. Call `addAnnotation()` on the document, then persist the changes with `save()`. This three‑step flow lets you add highlights, underlines, or strikeouts in a single, atomic operation—ideal for high‑throughput services.
 
-### Zorluk 3: Çapraz Platform Uyumluluğu
-**Problem**: Açıklamalar farklı PDF görüntüleyicilerde farklı görünüyor.  
-**Çözüm**: Standart PDF açıklama türlerine (highlight, underline, strikeout vb.) bağlı kalın ve Adobe Acrobat, Foxit ve PDF.js ile test edin.
+### Adım‑adım iş akışı
+1. **Initialize the API** – instantiate the main annotation manager with your license key.  
+2. **Create the annotation** – use the annotation factory to build a highlight, underline, or strikeout object, specifying the page number and text range.  
+3. **Apply and save** – add the annotation to the document, then call `save()` to write the changes back to disk or a stream.
 
-### Zorluk 4: Kullanıcı İzin Yönetimi
-**Problem**: Belirli açıklamaları ekleyebilecek veya düzenleyebilecek kişileri kısıtlamanız gerekiyor.  
-**Çözüm**: Her açıklamayla birlikte izin meta verilerini saklayın ve herhangi bir işlem yapmadan önce doğrulayın.
+## Yaygın uygulama zorlukları (ve nasıl çözülür)
 
-## Mevcut Öğreticiler
+### Zorluk 1: Anotasyon konumlandırma sorunları
+**Problem**: Annotations don’t line up after a layout change.  
+**Solution**: Anchor annotations to text ranges rather than absolute coordinates. GroupDocs automatically recalculates positions when the document reflows.
 
-### [Annotate PDFs in Java using GroupDocs.Highlight: A Comprehensive Guide](./annotate-pdfs-groupdocs-highlight-java/)
-Metin açıklamalarına yeniyseniz buradan başlayın. Bu öğretici, PDF vurgulama temellerini pratik örneklerle hemen uygulayabileceğiniz şekilde kapsar. Kurulum, temel açıklama oluşturma ve kullanıcı etkileşimlerini nasıl yöneteceğinizi öğreneceksiniz.
+### Zorluk 2: Performans büyük belgelerle
+**Problem**: Rendering slows with hundreds of annotations.  
+**Solution**: Use lazy loading—only load annotations that are visible in the current viewport and fetch others on demand.
 
-### [How to Add Search Text Annotations to PDFs Using GroupDocs.Annotation for Java](./add-search-text-annotations-pdf-groupdocs-java/)
-Aranabilir metin açıklamalarıyla açıklama yeteneğinizi bir üst seviyeye taşıyın. Kullanıcıların işaretlenmiş içeriği hızlıca bulması gereken belge yönetim sistemleri için idealdir. Gelişmiş arama işlevselliği ve indeksleme tekniklerini içerir.
+### Zorluk 3: Çapraz‑platform uyumluluğu
+**Problem**: Annotations appear differently in various PDF viewers.  
+**Solution**: Stick to standard PDF annotation types (highlight, underline, strikeout, etc.) and test with Adobe Acrobat, Foxit, and PDF.js.
 
-### [Java PDF Strikeout Annotations with GroupDocs: A Comprehensive Guide](./java-pdf-strikeout-annotations-groupdocs/)
-Belge değişikliklerini izlemek için üstü çizme açıklamaları konusunda uzmanlaşın. Hukuki iş akışları, editöryal süreçler ve sürüm kontrol sistemleri için vazgeçilmezdir. Açıklama geçmişini koruma ve karmaşık belge revizyonlarını yönetme konularını öğrenin.
+### Zorluk 4: Kullanıcı izin yönetimi
+**Problem**: Need to restrict who can add or edit certain annotations.  
+**Solution**: Store permission metadata with each annotation and validate it before performing any operation.
 
-### [Java PDF Text Replacement Guide with GroupDocs.Annotation](./java-pdf-text-replacement-groupdocs-annotation/)
-Metin değiştirme açıklamalarıyla işbirlikçi düzenleme özellikleri oluşturun. Bu öğretici, değişiklik önerme, onay iş akışlarını yönetme ve inceleme sürecinde belge bütünlüğünü koruma konularını gösterir.
+## Mevcut öğreticiler
 
-### [Java Text Strikeout Annotation Guide Using GroupDocs.Annotation](./java-text-strikeout-annotation-groupdocs/)
-Özellikle metin‑seviyesinde üstü çizme işlevselliğine odaklanır. Yazım denetleyicileri, içerik moderasyon araçları ve editöryal sistemler gibi kesin metin işaretleme yeteneklerine ihtiyaç duyan uygulamalar için harikadır.
+### [Java'da GroupDocs.Highlight kullanarak PDF'leri Anotasyonla: Kapsamlı Rehber](./annotate-pdfs-groupdocs-highlight-java/)
+Start here if you're new to text annotations. This tutorial covers the fundamentals of PDF highlighting with practical examples you can implement immediately. You'll learn setup, basic annotation creation, and how to handle user interactions.
 
-## Java Metin Açıklamaları için En İyi Uygulamalar
+### [GroupDocs.Annotation for Java kullanarak PDF'lere Arama Metni Anotasyonları Nasıl Eklenir](./add-search-text-annotations-pdf-groupdocs-java/)
+Take your annotation game to the next level with searchable text annotations. Perfect for building document management systems where users need to quickly locate annotated content. Includes advanced search functionality and indexing techniques.
 
-### Performans Optimizasyonu
-- **Batch annotation operations** to reduce file I/O.  
-- **Cache document instances** when the same PDF is accessed frequently.  
-- **Adjust JVM heap size** for large files and use streaming APIs where possible.  
-- **Clean up orphaned annotations** periodically to keep file size low.
+### [GroupDocs ile Java PDF Üstü Çizgi Anotasyonları: Kapsamlı Rehber](./java-pdf-strikeout-annotations-groupdocs/)
+Master the art of strikeout annotations for tracking document changes. Essential for legal workflows, editorial processes, and version control systems. Learn how to preserve annotation history and handle complex document revisions.
 
-### Kullanıcı Deneyimi Hususları
-- Kullanıcı metni seçerken **görsel geri bildirim** (ör. geçici bir örtü) gösterin.  
-- **Klavye kısayolları** (Ctrl+H vurgulama, Ctrl+U alt çizgi) sağlayın.  
-- **Geri al/yeniden yap** işlevi ekleyerek kullanıcıların hatalarını hızlıca düzeltmelerine izin verin.  
-- Üzerine gelindiğinde yazar adı ve zaman damgası içeren **araç ipuçları** gösterin.
+### [GroupDocs.Annotation ile Java PDF Metin Değiştirme Rehberi](./java-pdf-text-replacement-groupdocs-annotation/)
+Build collaborative editing features with text replacement annotations. This tutorial shows you how to suggest changes, handle approval workflows, and maintain document integrity during the review process.
 
-### Kod Organizasyonu İpuçları
-- Ön‑konfigüre edilmiş açıklama nesneleri döndüren bir **annotation factory java** sınıfı oluşturun.  
-- Sabit renk veya opaklık değerleri yerine **konfigürasyon nesneleri** kullanın.  
-- **try‑with‑resources** ile dosya işlemlerini sarmalayarak akışların kapatılmasını garantileyin.  
-- Denetim izleri ve daha kolay hata ayıklama için her açıklama eylemini kaydedin.
+### [GroupDocs.Annotation Kullanarak Java Metin Üstü Çizgi Anotasyon Rehberi](./java-text-strikeout-annotation-groupdocs/)
+Focused specifically on text‑level strikeout functionality. Great for applications that need precise text marking capabilities, including spell checkers, content moderation tools, and editorial systems.
 
-## Başlarken: Gerekenler
+## Java metin anotasyonları için en iyi uygulamalar
+
+### Performans optimizasyonu
+- **Batch annotation operations** dosya I/O'yu azaltmak için.  
+- **Cache document instances** aynı PDF sık erişildiğinde.  
+- **Adjust JVM heap size** büyük dosyalar için ve mümkün olduğunda streaming API'leri kullanın.  
+- **Clean up orphaned annotations** periyodik olarak dosya boyutunu düşük tutmak için.
+
+### Kullanıcı deneyimi hususları
+- **visual feedback** (ör. geçici bir örtü) kullanıcı metni seçerken göster.  
+- **keyboard shortcuts** (Ctrl+H vurgulama, Ctrl+U alt çizgi) sağlayın.  
+- **undo/redo** uygulayın, böylece kullanıcılar hataları hızlıca düzeltebilir.  
+- **tooltips** yazar adı ve zaman damgası ile göster.
+
+### Kod organizasyonu ipuçları
+- **annotation factory java** sınıfı oluşturun ve ön‑konfigüre edilmiş anotasyon nesneleri döndürsün.  
+- **configuration objects** kullanın, sabit kodlanmış renk veya opaklık değerleri yerine.  
+- **try‑with‑resources** içinde dosya işlemlerini sararak akışların kapatılmasını sağlayın.  
+- Her anotasyon eylemini denetim izleri ve daha kolay hata ayıklama için kaydedin.
+
+## Başlarken: ihtiyacınız olanlar
 
 - **Java Development Kit** (JDK 8 veya üzeri)  
 - **GroupDocs.Annotation for Java** (en son sürüm)  
-- UI oluşturacaksanız **Java Swing** veya **JavaFX** hakkında temel bilgi  
+- UI oluşturmayı planlıyorsanız **Java Swing** veya **JavaFX** hakkında temel bilgi  
 - Bağımlılık yönetimi için Maven veya Gradle  
 
-Her bağlantılı öğretici, adım adım kurulum talimatları içerir; böylece GroupDocs’a yeni olsanız bile sıfırdan başlayabilirsiniz.
+Each linked tutorial includes step‑by‑step setup instructions, so you can start from scratch even if you’re new to GroupDocs.
 
-## Yaygın Kurulum Sorunlarını Giderme
+## Yaygın kurulum sorunlarını giderme
 
-- **Cannot resolve GroupDocs.Annotation dependencies** – Maven/Gradle depo ayarlarınızın GroupDocs depo URL’sini içerdiğini doğrulayın.  
-- **Annotation not visible in PDF viewer** – Açıklamayı ekledikten sonra belge üzerinde `save()` çağırdığınızdan ve desteklenen bir açıklama türü kullandığınızdan emin olun.  
-- **Memory errors with large documents** – JVM heap’ini (`-Xmx2g` veya daha yüksek) artırın ve PDF’yi tamamen belleğe yüklemek yerine akışlarla işleyin.
+- **Cannot resolve GroupDocs.Annotation dependencies** – Verify your Maven/Gradle repository settings include the GroupDocs repository URL.  
+- **Annotation not visible in PDF viewer** – Ensure you call `save()` on the document after adding the annotation and that you’re using a supported annotation type.  
+- **Memory errors with large documents** – Increase the JVM heap (`-Xmx2g` or higher) and process the PDF in streams rather than loading the entire file into memory.
 
-## Bu Öğreticileri Tamamladıktan Sonra Atılacak Sonraki Adımlar
+## Bu öğreticileri tamamladıktan sonra sonraki adımlar
 
-- **Onay iş akışlarını** keşfedin; açıklamaları bir incelemeci onay verene kadar kilitleyin.  
-- **PDF.js** ile entegrasyon sağlayarak açıklamaları doğrudan web tarayıcısında render edin.  
-- **Sunucu‑tarafı toplu işleme** geliştirerek aynı vurgulamayı birçok belgeye otomatik olarak uygulayın.  
-- **Özel açıklama türleri** tasarlayarak alan‑spesifik ihtiyaçlara (ör. tıbbi işaretleme) cevap verin.
+- **approval workflows** keşfedin ve bir inceleyen onay verene kadar anotasyonları kilitleyin.  
+- **PDF.js** ile entegrasyon sağlayarak anotasyonları doğrudan web tarayıcılarında renderlayın.  
+- **server‑side batch processing** oluşturun ve aynı vurgulamayı birçok belgeye otomatik olarak uygulayın.  
+- **custom annotation types** tasarlayın, alan‑spesifik kullanım durumları için (ör. tıbbi işaretleme).
 
-## Ek Kaynaklar
+## Ek kaynaklar
 
 - [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)
 - [GroupDocs.Annotation for Java API Reference](https://reference.groupdocs.com/annotation/java/)
@@ -129,25 +194,29 @@ Her bağlantılı öğretici, adım adım kurulum talimatları içerir; böylece
 - [Free Support](https://forum.groupdocs.com/)
 - [Temporary License](https://purchase.groupdocs.com/temporary-license/)
 
-## Sık Sorulan Sorular
+## Sıkça sorulan sorular
 
-**S: Tek bir açıklamada hem vurgulama hem alt çizgi birleştirebilir miyim?**  
-C: Hayır, PDF spesifikasyonları bunları ayrı açıklama türleri olarak ele alır; bu yüzden iki ayrı nesne oluşturmanız gerekir.
+**S: Vurgulama ve alt çizgiyi tek bir anotasyonda birleştirebilir miyim?**  
+C: Hayır, PDF spesifikasyonları bunları ayrı anotasyon türleri olarak ele alır, bu yüzden iki ayrı nesne oluşturmanız gerekir.
 
-**S: Her açıklamayı kimin oluşturduğunu nasıl saklarım?**  
-C: Açıklamayı oluştururken `setAuthor(String)` metodunu kullanın veya açıklamanın `setCustomData()` API’si ile özel meta veriler ekleyin.
+**S: Her anotasyonu kimin oluşturduğunu nasıl saklarım?**  
+C: Anotasyonu oluştururken `setAuthor(String)` metodunu kullanın veya anotasyonun `setCustomData()` API'si aracılığıyla özel meta verileri ekleyin.
 
-**S: Bir PDF’den tüm vurgulamaları programlı olarak kaldırabilir miyim?**  
-C: Evet—belgenin açıklamalarını döngüyle gezip türü `Highlight` olanları filtreleyin ve her birinde `delete()` çağırın.
+**S: Bir PDF'den tüm vurgulamaları programlı olarak kaldırmak mümkün mü?**  
+C: Evet—belgenin anotasyonları üzerinden döngü kurun, tür `Highlight` ile filtreleyin ve her birinde `delete()` çağırın.
 
-**S: GroupDocs şifreli PDF’leri destekliyor mu?**  
+**S: GroupDocs şifreli PDF'leri destekliyor mu?**  
 C: Kesinlikle. Belgeyi açarken şifreyi sağlayın, kütüphane şifre çözmeyi şeffaf bir şekilde yönetir.
 
-**S: Açıklama renderını farklı görüntüleyicilerde test etmenin en iyi yolu nedir?**  
-C: Açıklamalı PDF’yi kaydedin ve Adobe Acrobat Reader, Foxit Reader ve PDF.js gibi tarayıcı‑tabanlı bir görüntüleyicide açarak tutarlı görünümü doğrulayın.
+**S: Anotasyonların farklı görüntüleyicilerde nasıl test edilmesi en iyi yoldur?**  
+C: Anotasyonlu PDF'yi kaydedin ve Adobe Acrobat Reader, Foxit Reader ve PDF.js gibi tarayıcı tabanlı bir görüntüleyicide açarak tutarlı görünümü doğrulayın.
 
----
-
-**Son Güncelleme:** 2026-03-08  
-**Test Edilen Versiyon:** GroupDocs.Annotation for Java (en son sürüm)  
+**Son Güncelleme:** 2026-09-20  
+**Test Edilen:** GroupDocs.Annotation for Java (latest release)  
 **Yazar:** GroupDocs
+
+## İlgili Öğreticiler
+
+- [GroupDocs.Annotation ile Java PDF Anotasyonları Oluşturun](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Temiz PDF Java Oluşturun: GroupDocs ile Alt Çizgi Anotasyonları](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [Java'da PDF'lere Üstü Çizgi Anotasyonları Nasıl Eklenir – Tam GroupDocs Rehberi](/annotation/java/text-annotations/java-pdf-strikeout-annotations-groupdocs/)

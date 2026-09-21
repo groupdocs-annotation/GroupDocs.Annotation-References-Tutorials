@@ -1,69 +1,129 @@
 ---
 categories:
 - Document Processing
-date: '2026-04-01'
-description: GroupDocs.Annotation का उपयोग करके .NET में बिना टिप्पणी के थंबनेल बनाना
-  सीखें। यह गाइड एनोटेशन को छिपाने, टिप्पणी पूर्वावलोकन हटाने और साफ़ PDF पूर्वावलोकन
-  बनाने के बारे में बताता है।
+date: '2026-09-20'
+description: GroupDocs.Annotation का उपयोग करके .NET में PDF टिप्पणियों को हटाना और
+  साफ़ थंबनेल बनाना सीखें। यह गाइड दिखाता है कि एनोटेशन को कैसे छुपाएँ, टिप्पणी‑रहित
+  प्रीव्यू बनाएँ, और पेशेवर PDF थंबनेल उत्पन्न करें।
 keywords:
-- how to generate thumbnails
-- how to hide annotations
-- remove comments preview
-- document preview without comments
-- clean pdf preview
-lastmod: '2026-04-01'
-linktitle: टिप्पणियों के बिना पूर्वावलोकन उत्पन्न करें
+- remove pdf comments
+- hide pdf annotations
+- file explorer pdf thumbnail
+- render pdf pages images
+- pdf to png thumbnail
+lastmod: '2026-09-20'
+linktitle: टिप्पणियों के बिना प्रीव्यू बनाएं
+og_description: GroupDocs.Annotation के साथ .NET में PDF टिप्पणियों को हटाएँ और साफ़
+  थंबनेल बनाएँ। एनोटेशन को छुपाने, फ़ॉर्मेट चुनने, और प्रदर्शन को अनुकूलित करने के
+  लिए चरण‑दर‑चरण निर्देशों का पालन करें।
+og_image_alt: Guide showing clean PDF thumbnail generation in .NET using GroupDocs.Annotation
+og_title: .NET में PDF टिप्पणियों को हटाना और थंबनेल बनाना
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-20'
+  description: Learn how to remove PDF comments and generate clean thumbnails in .NET
+    using GroupDocs.Annotation. This guide shows how to hide annotations, create comment‑free
+    previews, and produce professional PDF thumbnails.
+  headline: How to remove PDF comments and generate thumbnails in .NET
+  type: TechArticle
+- description: Learn how to remove PDF comments and generate clean thumbnails in .NET
+    using GroupDocs.Annotation. This guide shows how to hide annotations, create comment‑free
+    previews, and produce professional PDF thumbnails.
+  name: How to remove PDF comments and generate thumbnails in .NET
+  steps:
+  - name: Initialize the annotator
+    text: '`Annotator` is the main entry point in GroupDocs.Annotation for loading
+      and processing documents. The `Annotator` object loads the source file. The
+      `using` block guarantees that all unmanaged resources are released once we’re
+      done.'
+  - name: Configure preview options
+    text: '`PreviewOptions` defines how each page is rendered, including format, DPI,
+      and output stream. Here we tell the library where to store each page’s image.
+      The lambda receives the page number and returns a writable `FileStream`.'
+  - name: Choose format and pages
+    text: PNG delivers crisp thumbnails, but you can switch to JPEG if file size is
+      a bigger concern. Selecting a subset of pages reduces processing time—perfect
+      for thumbnail galleries that only need the first few pages.
+  - name: Disable rendering of comments
+    text: '`RenderComments` is a boolean flag that tells the renderer whether to include
+      annotation comment layers in the output. **This line is the key to “how to hide
+      annotations.”** Setting `RenderComments` to `false` strips out all comment layers,
+      giving you a clean PDF preview.'
+  - name: Generate the preview images
+    text: The library processes the document and writes the images to the locations
+      you defined earlier.
+  type: HowTo
+- questions:
+  - answer: Yes. It supports PDF, DOCX, PPTX, XLSX, common image types, and many OpenDocument
+      formats.
+    question: Is GroupDocs.Annotation for .NET compatible with all document formats?
+  - answer: Absolutely. You can change `PreviewFormat`, set image dimensions, DPI,
+      and choose specific pages to render.
+    question: Can I customize the look of the generated previews?
+  - answer: GroupDocs.Annotation offers collaborative annotation features. The preview
+      generation can be used to create clean views that hide all user comments.
+    question: Does the library support multi‑user collaboration?
+  - answer: The community and support team are active on the **[support forum](https://forum.groupdocs.com/c/annotation/10)**
+      where you can ask questions and share experiences.
+    question: Where can I get help if I run into issues?
+  - answer: Yes, you can download a full‑function trial **[full‑function trial download](https://releases.groupdocs.com/)**
+      to test the preview generation capabilities before purchasing.
+    question: Is there a free trial available?
+  type: FAQPage
 second_title: GroupDocs.Annotation .NET API
 tags:
-- document-preview
-- pdf-thumbnails
-- groupdocs
-- dotnet
-title: .NET में थंबनेल कैसे उत्पन्न करें – साफ़ PDF पूर्वावलोकन
+- remove pdf comments
+- pdf thumbnail
+- groupdocs annotation
+- dotnet preview
+title: .NET में PDF टिप्पणियों को हटाना और थंबनेल बनाना
 type: docs
 url: /hi/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-# .NET में थंबनेल कैसे जनरेट करें – साफ़ PDF प्रीव्यूज़
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
+
+# PDF टिप्पणियों को हटाने और .NET में थंबनेल बनाने का तरीका
 
 ## परिचय
 
-क्या आपको कभी दस्तावेज़ व्यूअर, फ़ाइल एक्सप्लोरर, या कंटेंट‑मैनेजमेंट सिस्टम के लिए **how to generate thumbnails** बनाने की ज़रूरत पड़ी है, जबकि छवियों को किसी भी उपयोगकर्ता नोट्स से मुक्त रखना है? आप अकेले नहीं हैं। कई .NET डेवलपर्स को यह समस्या आती है जब वे ऐसे दस्तावेज़ प्रीव्यू बनाने की कोशिश करते हैं जो एनोटेशन और कमेंट्स को छुपाते हैं।
-
-इस ट्यूटोरियल में हम **GroupDocs.Annotation for .NET** का उपयोग करके साफ़ PDF प्रीव्यू बनाने के सटीक चरणों से गुजरेंगे। आप देखेंगे कि कैसे एनोटेशन को छुपाया जाए, कमेंट प्रीव्यू को हटाया जाए, और पेशेवर‑दिखावट वाले थंबनेल जनरेट किए जाएँ जो गैलरी, डैशबोर्ड, या किसी भी UI में पूरी तरह फिट हों जहाँ एक अव्यवस्थित‑रहित स्नैपशॉट आवश्यक हो।
+यदि आपको **PDF टिप्पणियों को हटाना** है जबकि दस्तावेज़ व्यूअर, फ़ाइल एक्सप्लोरर, या कंटेंट‑मैनेजमेंट सिस्टम के लिए थंबनेल बनाना है, तो आप सही जगह पर आए हैं। कई .NET डेवलपर्स को साफ़ प्रीव्यू बनाने में दिक्कत होती है जो उपयोगकर्ता नोट्स और एनोटेशन को छुपाते हैं। इस ट्यूटोरियल में हम **GroupDocs.Annotation for .NET** का उपयोग करके टिप्पणी‑रहित PDF थंबनेल बनाने के सटीक चरणों को देखेंगे। आप सीखेंगे कि एनोटेशन को कैसे छुपाएँ, आउटपुट फ़ॉर्मेट कैसे कॉन्फ़िगर करें, और पेशेवर‑दिखावट वाली इमेज़ कैसे बनाएँ जो गैलरी, डैशबोर्ड या किसी भी UI में पूरी तरह फिट हो जहाँ एक साफ़‑सुथरा स्नैपशॉट आवश्यक हो।
 
 ## त्वरित उत्तर
-
-- **कौन सा लाइब्रेरी कमेंट‑फ्री थंबनेल बनाता है?** GroupDocs.Annotation for .NET  
-- **कौन सी प्रॉपर्टी एनोटेशन को डिसेबल करती है?** `RenderComments = false`  
-- **क्या मैं इमेज फ़ॉर्मेट चुन सकता हूँ?** हाँ – PNG, JPEG, BMP, आदि `PreviewFormat` के माध्यम से  
-- **क्या प्रोडक्शन के लिए लाइसेंस चाहिए?** एक कमर्शियल लाइसेंस आवश्यक है; परीक्षण के लिए एक टेम्पररी लाइसेंस काम करता है।  
-- **क्या यह केवल .NET के लिए है?** Works with .NET Framework, .NET Core, और .NET 5/6+.
+- **कौन सा लाइब्रेरी टिप्पणी‑रहित थंबनेल बनाता है?** GroupDocs.Annotation for .NET  
+- **कौन सी प्रॉपर्टी एनोटेशन को निष्क्रिय करती है?** `RenderComments = false`  
+- **क्या मैं इमेज़ फ़ॉर्मेट चुन सकता हूँ?** हाँ – PNG, JPEG, BMP आदि `PreviewFormat` के माध्यम से  
+- **उत्पादन के लिए लाइसेंस चाहिए?** एक वाणिज्यिक लाइसेंस आवश्यक है; परीक्षण के लिए एक अस्थायी लाइसेंस काम करता है।  
+- **क्या यह केवल .NET के लिए है?** .NET Framework, .NET Core, और .NET 5/6+ के साथ काम करता है।
 
 ## टिप्पणी‑रहित थंबनेल जनरेशन क्या है?
 
-टिप्पणियों के बिना थंबनेल जनरेशन का मतलब है प्रत्येक पेज की एक विज़ुअल स्नैपशॉट बनाना **बिना** किसी भी मार्कअप, नोट्स, या सहयोगी एनोटेशन के जो मूल फ़ाइल में जोड़े गए हो सकते हैं। परिणाम एक साफ़, स्थिर छवि है जो दस्तावेज़ की वास्तविक सामग्री को दर्शाती है—सार्वजनिक‑फेसिंग पोर्टल, कानूनी अभिलेखागार, या किसी भी स्थिति के लिए आदर्श जहाँ आंतरिक टिप्पणी छिपी रहनी चाहिए।
+टिप्पणी‑रहित थंबनेल जनरेशन का अर्थ है प्रत्येक पेज का विज़ुअल स्नैपशॉट **बिना** किसी मार्कअप, नोट या सहयोगी एनोटेशन के जो मूल फ़ाइल में जोड़े गए हों। परिणामस्वरूप एक साफ़, स्थिर इमेज़ मिलती है जो दस्तावेज़ की वास्तविक सामग्री को दर्शाती है—सार्वजनिक‑फेसिंग पोर्टल, कानूनी अभिलेखागार, या किसी भी स्थिति में आदर्श जहाँ आंतरिक टिप्पणी छुपी रहनी चाहिए।
 
 ## प्रीव्यू बनाते समय एनोटेशन को क्यों छुपाएँ?
 
-- **प्रोफेशनल लुक:** अंतिम उपयोगकर्ता केवल दस्तावेज़ की सामग्री देखते हैं, न कि रिव्यू की बातचीत।  
-- **सुरक्षा और गोपनीयता:** संवेदनशील कमेंट्स आंतरिक रहते हैं।  
-- **परफॉर्मेंस:** कम लेयर्स रेंडर करने से इमेज निर्माण तेज़ होता है।  
-- **संगतता:** थंबनेल प्रिंटेड या एक्सपोर्टेड वर्ज़न से मेल खाते हैं जो भी कमेंट्स को हटाते हैं।
+आपको प्रीव्यू को छुपाना चाहिए ताकि वह पेशेवर, सुरक्षित और तेज़ रहे। कम लेयर्स रेंडर करने से प्रोसेसिंग समय घटता है, संवेदनशील टिप्पणी सुरक्षित रहती है, और थंबनेल अंतिम प्रिंट या एक्सपोर्टेड संस्करण से मेल खाता है जिसमें भी टिप्पणी नहीं होती।
+
+- **पेशेवर लुक:** अंतिम उपयोगकर्ता केवल दस्तावेज़ की सामग्री देखता है, समीक्षा की बातचीत नहीं।  
+- **सुरक्षा और गोपनीयता:** संवेदनशील टिप्पणियाँ आंतरिक रहती हैं।  
+- **प्रदर्शन:** कम लेयर्स रेंडर करने से इमेज़ निर्माण तेज़ होता है।  
+- **संगतता:** थंबनेल प्रिंट या एक्सपोर्टेड संस्करणों से मेल खाते हैं जो भी टिप्पणी नहीं दिखाते।
 
 ## पूर्वापेक्षाएँ
 
 ### 1. GroupDocs.Annotation for .NET स्थापित करें
-पैकेज आधिकारिक वितरण पेज से **[here](https://releases.groupdocs.com/annotation/net/)** प्राप्त करें या NuGet के माध्यम से स्थापित करें। सुनिश्चित करें कि आपका प्रोजेक्ट समर्थित .NET संस्करण को टार्गेट करता है।
+आधिकारिक वितरण पेज से पैकेज **[official distribution page](https://releases.groupdocs.com/annotation/net/)** प्राप्त करें या NuGet के माध्यम से इंस्टॉल करें। सुनिश्चित करें कि आपका प्रोजेक्ट समर्थित .NET संस्करण को टार्गेट करता है।
 
 ### 2. लाइसेंस प्राप्त करें
-प्रोडक्शन उपयोग के लिए एक कमर्शियल लाइसेंस आवश्यक है। एक **[यहाँ](https://purchase.groupdocs.com/buy)** से खरीदें या एक टेम्पररी इवैल्यूएशन लाइसेंस **[यहाँ](https://purchase.groupdocs.com/temporary-license/)** अनुरोध करें।
+उत्पादन उपयोग के लिए एक वाणिज्यिक लाइसेंस आवश्यक है। आप **[purchase page](https://purchase.groupdocs.com/buy)** से खरीद सकते हैं या अस्थायी मूल्यांकन लाइसेंस **[temporary evaluation license page](https://purchase.groupdocs.com/temporary-license/)** के लिए अनुरोध कर सकते हैं।
 
 ### 3. .NET ज्ञान
-आपको C# बेसिक्स, फ़ाइल I/O, और रिसोर्स मैनेजमेंट के लिए `using` स्टेटमेंट्स का उपयोग करने में सहज होना चाहिए।
+आपको C# की बुनियादी समझ, फ़ाइल I/O, और `using` स्टेटमेंट्स का उपयोग करके रिसोर्स मैनेजमेंट का ज्ञान होना चाहिए।
 
-## नेमस्पेस इम्पोर्ट करें
+## नेमस्पेस आयात करें
 
 ```csharp
 using System;
@@ -73,16 +133,23 @@ using System.Text;
 using GroupDocs.Annotation.Options;
 ```
 
-## स्टेप‑बाय‑स्टेप गाइड: साफ़ डॉक्यूमेंट प्रीव्यू जनरेट करें
+## चरण‑दर‑चरण गाइड: साफ़ दस्तावेज़ प्रीव्यू बनाना
 
-### स्टेप 1: Annotator को इनिशियलाइज़ करें
+### चरण 1: Annotator को इनिशियलाइज़ करें
+
+`Annotator` GroupDocs.Annotation में मुख्य एंट्री पॉइंट है जो दस्तावेज़ को लोड और प्रोसेस करता है।  
+`Annotator` ऑब्जेक्ट स्रोत फ़ाइल को लोड करता है। `using` ब्लॉक यह सुनिश्चित करता है कि सभी अनमैनेज्ड रिसोर्सेज़ काम समाप्त होने पर रिलीज़ हो जाएँ।
+
 ```csharp
 using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
 {
 ```
-`Annotator` ऑब्जेक्ट स्रोत फ़ाइल को लोड करता है। `using` ब्लॉक यह गारंटी देता है कि सभी अनमैनेज्ड रिसोर्सेज़ रिलीज़ हो जाएँ जब हम काम समाप्त कर लें।
 
-### स्टेप 2: प्रीव्यू विकल्प कॉन्फ़िगर करें
+### चरण 2: प्रीव्यू विकल्प कॉन्फ़िगर करें
+
+`PreviewOptions` निर्धारित करता है कि प्रत्येक पेज कैसे रेंडर होगा, जिसमें फ़ॉर्मेट, DPI, और आउटपुट स्ट्रीम शामिल हैं।  
+यहाँ हम लाइब्रेरी को बताते हैं कि प्रत्येक पेज की इमेज़ कहाँ स्टोर करनी है। लैम्ब्डा पेज नंबर लेता है और एक लिखने योग्य `FileStream` लौटाता है।
+
 ```csharp
     PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
     {
@@ -90,90 +157,101 @@ using (Annotator annotator = new Annotator("annotated.pdf"_DOCX))
         return File.Create(pagePath);
     });
 ```
-यहाँ हम लाइब्रेरी को बताते हैं कि प्रत्येक पेज की इमेज कहाँ स्टोर करनी है। लैम्ब्डा पेज नंबर लेता है और एक writable `FileStream` रिटर्न करता है।
 
-### स्टेप 3: फ़ॉर्मेट और पेजेज़ चुनें
+### चरण 3: फ़ॉर्मेट और पेज चुनें
+
+PNG स्पष्ट थंबनेल देता है, लेकिन यदि फ़ाइल आकार अधिक महत्वपूर्ण है तो आप JPEG में स्विच कर सकते हैं। पेजों का उपसमुच्चय चुनने से प्रोसेसिंग समय घटता है—थंबनेल गैलरी के लिए आदर्श जहाँ केवल पहले कुछ पेज चाहिए होते हैं।
+
 ```csharp
     previewOptions.PreviewFormat = PreviewFormats.PNG;
     previewOptions.PageNumbers = new int[] { 1, 2, 3, 4, 5, 6 };
 ```
-PNG स्पष्ट थंबनेल देता है, लेकिन यदि फ़ाइल साइज बड़ी चिंता है तो आप JPEG में स्विच कर सकते हैं। पेजेज़ का एक उपसमुच्चय चुनने से प्रोसेसिंग टाइम कम हो जाता है—पहले कुछ पेजेज़ की आवश्यकता वाले थंबनेल गैलरी के लिए परफेक्ट।
 
-### स्टेप 4: कमेंट्स का रेंडरिंग डिसेबल करें
+### चरण 4: टिप्पणियों का रेंडरिंग निष्क्रिय करें
+
+`RenderComments` एक बूलियन फ़्लैग है जो रेंडरर को बताता है कि आउटपुट में एनोटेशन टिप्पणी लेयर्स शामिल करनी हैं या नहीं।  
+**यह लाइन “एनोटेशन को कैसे छुपाएँ” का मुख्य भाग है।** `RenderComments` को `false` सेट करने से सभी टिप्पणी लेयर्स हट जाती हैं, और आपको एक साफ़ PDF प्रीव्यू मिलता है।
+
 ```csharp
     previewOptions.RenderComments = false;
 ```
-**यह लाइन “how to hide annotations” का मुख्य हिस्सा है।** `RenderComments = false` सेट करने से सभी कमेंट लेयर्स हट जाते हैं, जिससे आपको एक साफ़ PDF प्रीव्यू मिलता है।
 
-### स्टेप 5: प्रीव्यू इमेजेज़ जनरेट करें
+### चरण 5: प्रीव्यू इमेज़ जनरेट करें
+
+लाइब्रेरी दस्तावेज़ को प्रोसेस करती है और पहले परिभाषित स्थानों पर इमेज़ लिखती है।
+
 ```csharp
     annotator.Document.GeneratePreview(previewOptions);
 }
 ```
-लाइब्रेरी दस्तावेज़ को प्रोसेस करती है और इमेजेज़ को उन लोकेशन्स पर लिखती है जो आपने पहले परिभाषित किए थे।
 
-## डॉक्यूमेंट प्रीव्यू जनरेशन के लिए बेस्ट प्रैक्टिसेज
+## दस्तावेज़ प्रीव्यू जनरेशन के सर्वोत्तम अभ्यास
 
-- **थंबनेल के लिए रिसाइज़ करें:** PNG जनरेट करने के बाद, तेज़ UI लोडिंग के लिए उन्हें लगभग 200 × 300 px पर रिसाइज़ करने पर विचार करें।  
-- **बड़े फ़ाइलों को बैच में प्रोसेस करें:** शुरू में केवल पहले कुछ पेजेज़ जनरेट करें, फिर आवश्यकता अनुसार बाकी बनाएं।  
-- **हमेशा `using` में रैप करें:** उचित मेमोरी क्लीनअप की गारंटी देता है, विशेषकर कई डॉक्यूमेंट्स को हैंडल करते समय।  
-- **एरर हैंडलिंग जोड़ें:** `FileNotFoundException`, `InvalidOperationException`, और लाइसेंसिंग एरर्स को कैच करके अपने ऐप को मजबूत रखें।
+- **थंबनेल के लिए रिसाइज़ करें:** PNG जनरेट करने के बाद उन्हें लगभग 200 × 300 px पर रिसाइज़ करने पर UI लोडिंग तेज़ होती है।  
+- **बड़े फ़ाइलों को बैच में प्रोसेस करें:** पहले कुछ पेज़ जनरेट करें, फिर आवश्यकता अनुसार बाकी बनाएँ।  
+- **हमेशा `using` में रखें:** कई दस्तावेज़ों को हैंडल करते समय मेमोरी क्लीनअप सुनिश्चित करता है।  
+- **एरर हैंडलिंग जोड़ें:** `FileNotFoundException`, `InvalidOperationException`, और लाइसेंस एरर को कैच करके एप्लिकेशन को मजबूत बनाएं।
 
 ## सामान्य समस्याएँ और ट्रबलशूटिंग
 
-- **कोई इमेज नहीं दिख रही:** आउटपुट फ़ोल्डर मौजूद है और ऐप के पास राइट परमिशन हैं, यह सत्यापित करें।  
-- **ब्लरी थंबनेल:** DPI बढ़ाने के लिए `previewOptions.Dpi = 150;` सेट करें (कोड में नहीं दिखाया गया है ताकि मूल ब्लॉक अपरिवर्तित रहे)।  
-- **बड़े PDFs पर आउट‑ऑफ‑मेमोरी एरर:** पेजेज़ को एक-एक करके प्रोसेस करें, या बैकग्राउंड वर्कर में async API का उपयोग करें।  
-- **लाइसेंस नहीं मिला:** `Annotator` बनाने से पहले `License` ऑब्जेक्ट लोड है, यह सुनिश्चित करें।
+- **कोई इमेज़ नहीं दिख रही:** आउटपुट फ़ोल्डर मौजूद है और एप्लिकेशन को लिखने की अनुमति है, यह जाँचें।  
+- **धुंधले थंबनेल:** DPI बढ़ाने के लिए `previewOptions.Dpi = 150;` सेट करें (कोड ब्लॉक को मूल रूप में रखने के लिए यहाँ नहीं दिखाया गया)।  
+- **बड़े PDFs पर मेमोरी त्रुटि:** पेज‑दर‑पेज प्रोसेस करें, या बैकग्राउंड वर्कर में async API उपयोग करें।  
+- **लाइसेंस नहीं मिला:** `Annotator` बनाने से पहले `License` ऑब्जेक्ट लोड किया गया है, यह सुनिश्चित करें।
 
-## परफ़ॉर्मेंस ऑप्टिमाइज़ेशन टिप्स
+## प्रदर्शन अनुकूलन टिप्स
 
-- **एक साथ कई डॉक्यूमेंट्स को बैच करें:** एक कलेक्शन पर लूप करें और संभव हो तो एक ही `Annotator` इंस्टेंस को रीउस करें।  
-- **ऐसिंक जनरेशन:** प्रीव्यू क्रिएशन को बैकग्राउंड सर्विस पर ऑफलोड करें ताकि UI रिस्पॉन्सिव रहे।  
-- **परिणाम कैश करें:** जनरेटेड थंबनेल को CDN या लोकल कैश में स्टोर करें ताकि वही फ़ाइल दोबारा प्रोसेस न करनी पड़े।  
-- **सही फ़ॉर्मेट चुनें:** PNG लॉस‑लेस क्वालिटी के लिए, JPEG छोटे फ़ाइलों के लिए जब डॉक्यूमेंट में कई इमेजेज़ हों।
+- **एक साथ कई दस्तावेज़ प्रोसेस करें:** संभव हो तो एक ही `Annotator` इंस्टेंस को पुन: उपयोग करें।  
+- **Async जनरेशन:** प्रीव्यू निर्माण को बैकग्राउंड सर्विस पर ऑफ़लोड करें ताकि UI रिस्पॉन्सिव रहे।  
+- **परिणाम कैश करें:** जनरेटेड थंबनेल को CDN या लोकल कैश में स्टोर करें ताकि समान फ़ाइल को दोबारा प्रोसेस न करना पड़े।  
+- **सही फ़ॉर्मेट चुनें:** PNG लॉस‑लेस क्वालिटी के लिए, JPEG छोटे फ़ाइलों के लिए जब दस्तावेज़ में कई इमेज़ हों।
 
-## समर्थित डॉक्यूमेंट फ़ॉर्मेट्स
+## समर्थित दस्तावेज़ फ़ॉर्मेट
 
-GroupDocs.Annotation for .NET निम्नलिखित के लिए प्रीव्यू जनरेट कर सकता है:
+GroupDocs.Annotation for .NET **30+** इनपुट और आउटपुट फ़ॉर्मेट को सपोर्ट करता है, जिससे PDFs, Office फ़ाइलें, इमेज़, और OpenDocument मानकों के लिए प्रीव्यू जनरेट किया जा सकता है।
 
 - **PDF** – सबसे सामान्य उपयोग केस।  
-- **Microsoft Office** – DOCX, XLSX, PPTX, और उनके लेगेसी समकक्ष।  
-- **Images** – TIFF, JPEG, PNG, BMP (स्कैन किए गए डॉक्यूमेंट्स के लिए उपयोगी)।  
-- **OpenDocument** – ODT, ODS, ODP, और अन्य ओपन स्टैंडर्ड्स।
+- **Microsoft Office** – DOCX, XLSX, PPTX, और उनके लेगेसी संस्करण।  
+- **Images** – TIFF, JPEG, PNG, BMP (स्कैन किए गए दस्तावेज़ों के लिए उपयोगी)।  
+- **OpenDocument** – ODT, ODS, ODP, और अन्य ओपन मानक।
 
-## कमेंट‑फ्री प्रीव्यू जनरेशन कब उपयोग करें
+## कब टिप्पणी‑रहित प्रीव्यू जनरेशन का उपयोग करें
 
-- **पब्लिक पोर्टल्स** जहाँ आंतरिक रिव्यू नोट्स छिपे रहने चाहिए।  
-- **आर्काइव ब्राउज़र्स** जो एक साफ़ थंबनेल ग्रिड दिखाते हैं।  
-- **प्रिंट‑रेडी वर्कफ़्लो** जिन्हें प्रिंटर को भेजने से पहले अंतिम लुक दिखाना आवश्यक है।  
-- **क्वालिटी‑कंट्रोल चेक्स** जहाँ आप “with comments” बनाम “without comments” वर्ज़न की तुलना करते हैं।
+टिप्पणी‑रहित प्रीव्यू जनरेशन उन सार्वजनिक पोर्टलों के लिए आदर्श है जहाँ आंतरिक समीक्षा नोट्स छुपे रहने चाहिए, आर्काइव ब्राउज़र में साफ़ थंबनेल ग्रिड दिखाने के लिए, प्रिंट‑रेडी वर्कफ़्लो में अंतिम रूप दिखाने से पहले, और क्वालिटी‑कंट्रोल चेक्स में जहाँ आप टिप्पणी वाले और बिना टिप्पणी वाले संस्करणों की तुलना करते हैं।
 
 ## निष्कर्ष
 
-अब आप जानते हैं **how to generate thumbnails** .NET में जबकि एनोटेशन और कमेंट्स को पूरी तरह हटाते हुए। `RenderComments = false` सेट करके आपको साफ़, प्रोफेशनल PDF प्रीव्यू मिलते हैं जो किसी भी UI में पूरी तरह फिट होते हैं। प्रीव्यू फ़ॉर्मेट, पेज चयन, और इमेज डाइमेंशन को अपने विशेष परिदृश्य के अनुसार अनुकूलित करना याद रखें, और हमेशा लाइसेंसिंग और एरर केस को ग्रेसफुली हैंडल करें। इन चरणों के साथ, आपका एप्लिकेशन तेज़, अव्यवस्थित‑रहित डॉक्यूमेंट थंबनेल प्रदान करेगा जो यूज़र एक्सपीरियंस को बेहतर बनाता है।
+अब आप जानते हैं **कैसे PDF टिप्पणियों को हटाएँ और .NET में थंबनेल बनाएँ** जबकि पूरी तरह से एनोटेशन को हटाया जाए। `RenderComments = false` सेट करके आप साफ़, पेशेवर PDF प्रीव्यू प्राप्त करते हैं जो किसी भी UI में पूरी तरह फिट होते हैं। प्रीव्यू फ़ॉर्मेट, पेज चयन, और इमेज़ डाइमेंशन को अपने परिदृश्य के अनुसार अनुकूलित करें, और लाइसेंसिंग व एरर केस को हमेशा संभालें। इन चरणों से आपका एप्लिकेशन तेज़, क्लटर‑फ्री दस्तावेज़ थंबनेल प्रदान करेगा जो उपयोगकर्ता अनुभव को बेहतर बनाता है।
 
 ## अक्सर पूछे जाने वाले प्रश्न
 
-**Q: क्या GroupDocs.Annotation for .NET सभी डॉक्यूमेंट फ़ॉर्मेट्स के साथ संगत है?**  
-A: हाँ। यह PDF, DOCX, PPTX, XLSX, सामान्य इमेज टाइप्स, और कई OpenDocument फ़ॉर्मेट्स को सपोर्ट करता है।
+**Q: क्या GroupDocs.Annotation for .NET सभी दस्तावेज़ फ़ॉर्मेट के साथ संगत है?**  
+A: हाँ। यह PDF, DOCX, PPTX, XLSX, सामान्य इमेज़ प्रकार, और कई OpenDocument फ़ॉर्मेट को सपोर्ट करता है।
 
-**Q: क्या मैं जनरेटेड प्रीव्यूज़ का लुक कस्टमाइज़ कर सकता हूँ?**  
-A: बिल्कुल। आप `PreviewFormat` बदल सकते हैं, इमेज डाइमेंशन, DPI सेट कर सकते हैं, और रेंडर करने के लिए विशिष्ट पेजेज़ चुन सकते हैं।
+**Q: क्या मैं जनरेटेड प्रीव्यू की लुक कस्टमाइज़ कर सकता हूँ?**  
+A: बिल्कुल। आप `PreviewFormat` बदल सकते हैं, इमेज़ डाइमेंशन, DPI सेट कर सकते हैं, और विशिष्ट पेज़ चुन सकते हैं।
 
-**Q: क्या लाइब्रेरी मल्टी‑यूज़र कोलैबोरेशन सपोर्ट करती है?**  
-A: GroupDocs.Annotation सहयोगी एनोटेशन फीचर्स प्रदान करता है। प्रीव्यू जनरेशन का उपयोग सभी यूज़र कमेंट्स को छुपाते हुए क्लीन व्यू बनाने के लिए किया जा सकता है।
+**Q: क्या लाइब्रेरी मल्टी‑यूज़र कोलैबोरेशन को सपोर्ट करती है?**  
+A: GroupDocs.Annotation सहयोगी एनोटेशन फीचर प्रदान करता है। प्रीव्यू जनरेशन का उपयोग करके आप सभी उपयोगकर्ता टिप्पणियों को छुपाते हुए साफ़ व्यू बना सकते हैं।
 
-**Q: यदि मैं समस्याओं का सामना करता हूँ तो मदद कहाँ मिल सकती है?**  
-A: कम्युनिटी और सपोर्ट टीम **[सपोर्ट फ़ोरम](https://forum.groupdocs.com/c/annotation/10)** पर सक्रिय हैं जहाँ आप प्रश्न पूछ सकते हैं और अनुभव साझा कर सकते हैं।
+**Q: यदि मुझे समस्याएँ आती हैं तो मदद कहाँ से मिल सकती है?**  
+A: समुदाय और सपोर्ट टीम **[support forum](https://forum.groupdocs.com/c/annotation/10)** पर सक्रिय हैं जहाँ आप प्रश्न पूछ सकते हैं और अनुभव साझा कर सकते हैं।
 
 **Q: क्या कोई फ्री ट्रायल उपलब्ध है?**  
-A: हाँ, आप खरीदारी से पहले प्रीव्यू जनरेशन क्षमताओं को टेस्ट करने के लिए एक फुल‑फ़ंक्शन ट्रायल **[यहाँ](https://releases.groupdocs.com/)** डाउनलोड कर सकते हैं।
+A: हाँ, आप पूरी‑फ़ंक्शन ट्रायल **[full‑function trial download](https://releases.groupdocs.com/)** डाउनलोड करके प्रीव्यू जनरेशन क्षमताओं को परीक्षण कर सकते हैं।
 
----
+**Last Updated:** 2026-09-20  
+**Tested With:** GroupDocs.Annotation for .NET (latest release)  
+**Author:** GroupDocs
 
-**अंतिम अपडेट:** 2026-04-01  
-**परीक्षित संस्करण:** GroupDocs.Annotation for .NET (latest release)  
-**लेखक:** GroupDocs  
+## संबंधित ट्यूटोरियल
 
----
+- [Generate Document Previews Without Comments in .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
+- [Create PDF Thumbnail with GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
+- [How to Remove PDF Annotations C# – GroupDocs.Annotation Guide](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
