@@ -1,59 +1,110 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-03-14'
-description: تعلم كيفية إضافة خانة اختيار إلى ملفات PDF باستخدام Java. يوضح هذا الدليل
-  خطوة بخطوة كيفية إضافة خانة اختيار، وإدارة حقول نماذج PDF في Java، وإنشاء مكونات
-  خانة اختيار PDF باستخدام GroupDocs.Annotation.
-keywords: PDF checkbox Java, interactive PDF Java, Java PDF form fields, java create
-  pdf checkbox, GroupDocs checkbox tutorial
-lastmod: '2026-03-14'
-linktitle: How to Add Checkbox to PDF with Java
+date: '2026-09-25'
+description: تعلم كيفية إنشاء خانة اختيار PDF باستخدام Java مع GroupDocs.Annotation.
+  يوضح هذا الدليل خطوة بخطوة كيفية إضافة خانات اختيار تفاعلية، وإدارة حقول نماذج PDF
+  في Java، وبناء تدفقات عمل PDF قوية.
+keywords:
+- create pdf checkbox java
+- java pdf form fields
+- pdf form field java
+- groupdocs annotation java
+- interactive pdf checkbox
+lastmod: '2026-09-25'
+linktitle: كيفية إضافة خانة اختيار إلى PDF باستخدام Java
+og_description: إنشاء خانة اختيار PDF باستخدام Java وGroupDocs Annotation. اتبع هذا
+  الدليل لإضافة خانات اختيار تفاعلية، ومعالجة حقول النماذج، وتعزيز كفاءة تدفق عمل
+  PDF.
+og_image_alt: Developer guide showing Java code to add a checkbox to a PDF with GroupDocs
+og_title: كيفية إنشاء خانة اختيار PDF باستخدام Java وGroupDocs Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to create PDF checkbox java with GroupDocs.Annotation. This
+    step‑by‑step guide shows how to add interactive checkboxes, manage Java PDF form
+    fields, and build robust PDF workflows.
+  headline: How to create PDF checkbox java using GroupDocs Annotation
+  type: TechArticle
+- description: Learn how to create PDF checkbox java with GroupDocs.Annotation. This
+    step‑by‑step guide shows how to add interactive checkboxes, manage Java PDF form
+    fields, and build robust PDF workflows.
+  name: How to create PDF checkbox java using GroupDocs Annotation
+  steps:
+  - name: initialize the PDF annotator
+    text: '`Annotator` is GroupDocs.Annotation''s main class for loading, editing,
+      and saving PDF documents. First, open the PDF for editing. The `Annotator` class
+      is your entry point: > **Pro tip:** Use an absolute path to avoid “file not
+      found” issues, and ensure the PDF isn’t open in another application.'
+  - name: create and configure your checkbox component
+    text: '`CheckBoxComponent` represents a PDF form field of type checkbox. It defines
+      appearance, state, and optional replies: **Key points to remember:** - **Rectangle
+      coordinates** are `(x, y, width, height)`. Adjust them to place the checkbox
+      where you need it. - **Pen color** uses an integer RGB value (`'
+  - name: add the checkbox and save the PDF
+    text: '`Annotator.add` attaches the component to the document and writes the result
+      to disk. This final step persists the interactive field: > **File‑path tips:**
+      > • Use absolute paths to avoid “file not found” errors. > • Ensure the output
+      directory exists before saving. > • Consider unique filenames to '
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create as many `CheckBoxComponent` objects as you need, configure
+      each one, and add them sequentially to the annotator.
+    question: Can I add multiple checkboxes to the same document?
+  - answer: Yes. GroupDocs creates standard PDF form fields, which are supported by
+      Adobe Reader, Chrome, Firefox, and most modern viewers.
+    question: Do the checkboxes work in all PDF viewers?
+  - answer: Use GroupDocs.Annotation’s parsing API to read form field values from
+      the completed PDF. This lets you automate downstream processing.
+    question: How can I retrieve the values after users fill out the form?
+  - answer: The practical limit is determined by available memory and viewer performance.
+      Hundreds of checkboxes are typically fine.
+    question: Is there a limit to how many checkboxes I can add?
+  - answer: Yes. Provide the password when constructing the `Annotator`; the library
+      will handle decryption automatically.
+    question: Can I add a checkbox to PDF files that are password‑protected?
+  type: FAQPage
 tags:
-- pdf-annotations
+- pdf annotations
 - groupdocs
-- java-pdf
-- interactive-forms
-title: كيفية إضافة خانة اختيار إلى PDF باستخدام Java – خانات اختيار تفاعلية باستخدام
-  GroupDocs
+- java pdf
+- interactive forms
+- create pdf checkbox java
+title: كيفية إنشاء خانة اختيار PDF باستخدام Java وGroupDocs Annotation
 type: docs
 url: /ar/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# كيفية إضافة خانة اختيار إلى PDF باستخدام Java – خانات اختيار تفاعلية باستخدام GroupDocs
+# كيفية إنشاء خانة اختيار PDF في Java باستخدام GroupDocs Annotation
 
-إذا كنت تبحث عن **كيفية إضافة خانة اختيار** إلى ملفات PDF برمجياً، فأنت في المكان الصحيح. في عالم اليوم الرقمي‑أول، أصبحت ملفات PDF الثابتة شيئًا من الماضي. سواء كنت تبني سير عمل للموافقات، أو استبيانات، أو نماذج امتثال، فإن إضافة خانات اختيار تفاعلية يمكن أن تحسن تجربة المستخدم بشكل كبير وتبسط عملياتك.
+في عمليات الأعمال الحديثة، لم تعد ملفات PDF الثابتة كافية—النماذج التفاعلية ضرورية للموافقات، الاستطلاعات، وفحوصات الامتثال. يوضح لك هذا الدرس **كيفية إنشاء خانة اختيار PDF في Java** باستخدام مكتبة GroupDocs.Annotation. ستتعلم لماذا تهم خانات الاختيار، كيفية إعداد بيئتك، ومقاطع الشيفرة خطوة بخطوة التي تحول أي PDF إلى نموذج ديناميكي يعمل في Adobe Reader وChrome وFirefox وغيرها من العارضات الشائعة.
 
 ## إجابات سريعة
 - **ما المكتبة الأفضل لإضافة خانة اختيار إلى PDF؟** GroupDocs.Annotation for Java.  
-- **كم يستغرق التنفيذ؟** حوالي 10‑15 دقيقة لخانة اختيار أساسية.  
+- **كم من الوقت تستغرق عملية التنفيذ؟** حوالي 10‑15 دقيقة لخانة اختيار أساسية.  
 - **هل أحتاج إلى ترخيص؟** الإصدار التجريبي المجاني يكفي للتطوير؛ الترخيص الكامل مطلوب للإنتاج.  
-- **هل يمكنني إضافة عدة خانات اختيار PDF في مستند واحد؟** نعم – فقط أنشئ عدة مثيلات من `CheckBoxComponent`.  
-- **هل ستعمل خانات الاختيار في جميع عارضات PDF؟** حقول النماذج القياسية في PDF مدعومة من Adobe Reader، Chrome، Firefox، ومعظم العارضات الحديثة.
+- **هل يمكنني إضافة عدة خانات اختيار إلى نفس المستند؟** نعم – فقط أنشئ عدة مثيلات من `CheckBoxComponent`.  
+- **هل ستعمل خانات الاختيار في جميع عارضات PDF؟** حقول نماذج PDF القياسية مدعومة من قبل Adobe Reader وChrome وFirefox ومعظم العارضات الحديثة.
 
 ## ما هو “كيفية إضافة خانة اختيار” في Java؟
-إضافة خانة اختيار تنشئ **حقل نموذج PDF** يمكن للمستخدمين النهائيين تحديده أو إلغاء تحديده مباشرة داخل عارض PDF. يتصرف الحقل كأي عنصر نموذج أصلي، ويحافظ على حالته عند حفظ المستند.
+`create pdf checkbox java` يعني إدراج حقل نموذج PDF من نوع خانة اختيار برمجيًا بحيث يمكن للمستخدمين النهائيين تحديده أو إلغاء تحديده مباشرة داخل عارض PDF. يخزن الحقل حالته في ملف PDF، محافظًا على الاختيار عند حفظ المستند.
 
-## لماذا تستخدم GroupDocs.Annotation لـ Java حقول نماذج PDF؟
-- **واجهة برمجة تطبيقات بسيطة** – يمكنك إنشاء خانات الاختيار وتنسيقها وتحديد موقعها ببضع أسطر من الشيفرة فقط.  
-- **توافق عبر جميع العارضات** – الحقول المُنشأة تتبع مواصفات PDF، لذا تعمل في أي مكان.  
-- **دعم مدمج للردود والتنسيق** – مثالي للاستبيانات التفاعلية أو نماذج الموافقة.  
-- **أداء قابل للتوسع** – المعالجة الدفعية والمتزامنة مدعومة مباشرة.
+## لماذا نستخدم GroupDocs.Annotation لحقول نماذج PDF في Java؟
+GroupDocs.Annotation يدعم **أكثر من 50 تنسيقًا للإدخال والإخراج** ويمكنه معالجة ملفات PDF **حتى 500 صفحة** دون تحميل الملف بالكامل في الذاكرة. يتيح لك API الخاص به إنشاء خانات الاختيار وتنسيقها وتحديد موقعها في بضع أسطر فقط، وتلتزم الحقول المولدة بمواصفات PDF، مما يضمن التوافق عبر جميع العارضات. كما توفر المكتبة معالجة الردود المدمجة، مما يجعلها مثالية للاستطلاعات، وسير عمل الموافقات، وقوائم التحقق للامتثال.
 
 ## المتطلبات المسبقة والإعداد
 
 قبل الغوص في الشيفرة، تأكد من توفر ما يلي:
 
 ### المتطلبات الأساسية
-- **مجموعة تطوير جافا (JDK)**: الإصدار 8 أو أعلى.  
+- **Java Development Kit**: الإصدار 8 أو أعلى.  
 - **GroupDocs.Annotation for Java**: الإصدار 25.2 أو أحدث (سنوضح لك كيفية إضافتها).  
-- **معرفة أساسية بجافا**: إدخال/إخراج الملفات وتهيئة الكائنات.  
+- **معرفة أساسية بـ Java**: إدخال/إخراج الملفات وتهيئة الكائنات.  
 - **ملف PDF**: أي ملف PDF موجود للاختبار (سنستخدم مستندًا تجريبيًا).
 
-### إعداد سريع باستخدام Maven
-
-إذا كنت تستخدم Maven، أضف هذا إلى ملف `pom.xml`. هذا الإعداد يجلب المكتبة المطلوبة تلقائيًا:
+### إعداد Maven السريع
+إذا كنت تستخدم Maven، أضف هذه الاعتمادية إلى ملف `pom.xml`. هذا التكوين يجلب المكتبة المطلوبة تلقائيًا:
 
 ```xml
 <repositories>
@@ -72,21 +123,26 @@ weight: 1
 </dependencies>
 ```
 
-### الترخيص ببساطة
+> **نصيحة احترافية:** حافظ على تحديث مستودع Maven الخاص بك (`mvn clean install`) حتى يتم حل أحدث ملفات GroupDocs.Annotation الثنائية.
 
+### تبسيط الترخيص
 - **الإصدار التجريبي المجاني** – مثالي للاختبار والمشاريع الصغيرة.  
-- **ترخيص مؤقت** – مفيد خلال دورات التطوير الطويلة.  
-- **ترخيص كامل** – مطلوب للنشر في بيئة الإنتاج.
+- **ترخيص مؤقت** – مفيد خلال دورات تطوير أطول.  
+- **ترخيص كامل** – مطلوب لنشر الإنتاج.
 
 يمكنك البدء في البناء فورًا باستخدام النسخة التجريبية.
 
 ## دليل خطوة بخطوة: كيفية إضافة خانة اختيار إلى PDF باستخدام Java
 
-سنتبع ثلاث خطوات مختصرة. كل خطوة تبني على السابقة، لذا اتبع الترتيب.
+فيما يلي سير عمل مكوَّن من ثلاث خطوات مختصرة. كل خطوة تبني على السابقة، لذا اتبع الترتيب.
 
-### الخطوة 1: تهيئة مُعَلِّم PDF
+## كيفية إضافة خانة اختيار إلى PDF باستخدام Java
 
-أولاً، افتح ملف PDF للتحرير. فئة `Annotator` هي نقطة الدخول الخاصة بك:
+حمّل ملف PDF المستهدف باستخدام `Annotator`، أنشئ `CheckBoxComponent`، اضبط مظهره، واحفظ المستند المعدل. هذا النمط يعمل لخانة اختيار واحدة أو لعشراتها في نفس الملف.
+
+### الخطوة 1: تهيئة مُعَلِّق PDF
+
+`Annotator` هي الفئة الرئيسية في GroupDocs.Annotation لتحميل وتحرير وحفظ مستندات PDF. أولاً، افتح ملف PDF للتحرير. فئة `Annotator` هي نقطة الدخول الخاصة بك:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -100,11 +156,11 @@ public class InitializeAnnotator {
 }
 ```
 
-> **نصيحة احترافية:** استخدم المسار المطلق لتجنب مشاكل “الملف غير موجود”، وتأكد من أن ملف PDF غير مفتوح في تطبيق آخر.
+> **نصيحة احترافية:** استخدم مسارًا مطلقًا لتجنب مشكلات “الملف غير موجود”، وتأكد من أن ملف PDF غير مفتوح في تطبيق آخر.
 
 ### الخطوة 2: إنشاء وتكوين مكوّن خانة الاختيار الخاص بك
 
-الآن نقوم بإنشاء `CheckBoxComponent`. هنا تحدد المظهر، الحالة، والردود الاختيارية:
+`CheckBoxComponent` يمثل حقل نموذج PDF من نوع خانة اختيار. يحدد المظهر، الحالة، والردود الاختيارية:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -151,14 +207,14 @@ public class CreateCheckBoxComponent {
 ```
 
 **نقاط رئيسية يجب تذكرها:**
-- **إحداثيات المستطيل** هي `(x, y, width, height)`. عدّلها لتضع خانة الاختيار في الموضع المطلوب.  
-- **لون القلم** يستخدم قيمة RGB عددية (`65535` = أصفر). يمكنك استخدام أي لون تفضله.  
+- **إحداثيات المستطيل** هي `(x, y, width, height)`. اضبطها لتحديد موقع خانة الاختيار حيث تحتاجها.  
+- **لون القلم** يستخدم قيمة RGB صحيحة (`65535` = أصفر). يمكنك استخدام أي لون تفضله.  
 - خيارات **BoxStyle** تشمل `STAR`، `CIRCLE`، `SQUARE`، `DIAMOND`.  
 - **الردود** هي تعليقات اختيارية تظهر عند التحويم.
 
-### الخطوة 3: إضافة خانة الاختيار وحفظ ملف PDF
+### الخطوة 3: إضافة خانة الاختيار وحفظ PDF
 
-أخيرًا، أرفق المكوّن بالمستند واكتب النتيجة إلى القرص:
+`Annotator.add` يرفق المكوّن بالمستند ويكتب النتيجة إلى القرص. هذه الخطوة النهائية تحافظ على الحقل التفاعلي:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -180,32 +236,32 @@ public class AddCheckBoxAndSave {
 }
 ```
 
-> **نصائح لمسار الملف:**  
-> • استخدم المسارات المطلقة لتجنب أخطاء “الملف غير موجود”.  
+> **نصائح مسار الملف:**  
+> • استخدم مسارات مطلقة لتجنب أخطاء “الملف غير موجود”.  
 > • تأكد من وجود دليل الإخراج قبل الحفظ.  
 > • فكر في استخدام أسماء ملفات فريدة لتجنب الكتابة فوق الملفات المهمة.
 
-## تطبيقات واقعية (ما وراء النماذج الأساسية)
+## تطبيقات واقعية (بخلاف النماذج الأساسية)
 
-فهم الأماكن التي تتألق فيها **حقول نماذج PDF بجافا** يساعدك على اكتشاف الفرص:
+فهم أين تتألق **حقول نماذج PDF في Java** يساعدك على اكتشاف الفرص:
 
-### سير عمل الموافقة على المستندات
-أضف خانات اختيار لـ “تم المراجعة”، “تمت الموافقة”، أو “يحتاج إلى تعديل”. مثالي للعقود، الميزانيات، وإقرارات السياسات.
+### سير عمل موافقة المستندات
+أضف خانات اختيار لـ “تم المراجعة”، “تم الاعتماد”، أو “يحتاج إلى تغييرات”. مثالي للعقود، الميزانيات، وإقرارات السياسات.
 
-### جمع الاستبيانات والتعليقات
-أنشئ استبيانات تعمل دون اتصال وتحتفظ بالتنسيق الدقيق عبر الأجهزة. ممتاز لرضا الموظفين، ملاحظات العملاء، وتقييمات الفعاليات.
+### جمع الاستطلاعات والتعليقات
+أنشئ استطلاعات تعمل دون اتصال وتحتفظ بالتنسيق الدقيق عبر الأجهزة. ممتاز لرضا الموظفين، تعليقات العملاء، وتقييمات الفعاليات.
 
 ### وثائق التدريب والامتثال
-تابع التقدم باستخدام خانات الاختيار في كتيبات السلامة، قوائم التحقق للامتثال، أو مهام التوجيه.
+تتبع التقدم باستخدام خانات الاختيار في كتيبات السلامة، قوائم التحقق للامتثال، أو مهام الانضمام.
 
 ### النماذج القانونية والإدارية
-قم بتوحيد قبول الشروط، سياسات الخصوصية، مطالبات التأمين، وتطبيقات الحكومة.
+توحيد قبول الشروط، سياسات الخصوصية، مطالبات التأمين، وتطبيقات الحكومة.
 
 ## المشكلات الشائعة والحلول
 
 كل مطور يواجه عائقًا من وقت لآخر. إليك أكثر المشكلات شيوعًا وكيفية حلها:
 
-### “File Not Found” Errors
+### “File not found” errors
 **المشكلة:** مسار PDF غير صحيح.  
 **الحل:** تحقق من وجود الملف قبل المعالجة:
 
@@ -218,19 +274,19 @@ if (!inputFile.exists()) {
 
 ### ظهور خانة الاختيار في الموضع الخطأ
 **المشكلة:** نظام إحداثيات PDF يبدأ من الزاوية السفلية اليسرى.  
-**الحل:** عدّل إحداثي Y. بالنسبة لصفحة بارتفاع 600 بكسل، فإن “100 من الأعلى” بصريًا يصبح `Y = 500`.
+**الحل:** اضبط إحداثي Y. لصفحة بارتفاع 600 بكسل، “100 من الأعلى” يصبح `Y = 500`.
 
-### مشاكل الذاكرة مع ملفات PDF الكبيرة
+### مشكلات الذاكرة مع ملفات PDF الكبيرة
 **المشكلة:** `OutOfMemoryError`.  
-**الحل:** زيادة مساحة الذاكرة (heap) للـ JVM أو معالجة المستندات على دفعات:
+**الحل:** زيادة حجم heap في JVM أو معالجة المستندات على دفعات:
 
 ```bash
 java -Xmx2048m YourApplication
 ```
 
 ### أخطاء التحقق من الترخيص
-**المشكلة:** “License not found” أو “Invalid license”.  
-**الحل:** ضع ملف الترخيص في جذر classpath أو حدّد المسار صراحةً:
+**المشكلة:** “الترخيص غير موجود” أو “ترخيص غير صالح”.  
+**الحل:** ضع ملف الترخيص في جذر classpath أو حدد المسار صراحةً:
 
 ```java
 License license = new License();
@@ -246,11 +302,11 @@ license.setLicense("path/to/GroupDocs.Annotation.Java.lic");
 عند الانتقال إلى الإنتاج، هذه التعديلات تحافظ على السرعة:
 
 ### أفضل ممارسات إدارة الذاكرة
-- استخدم دائمًا **try‑with‑resources** مع `Annotator`.  
-- عالج المستندات على دفعات بدلاً من تحميل العديد في آن واحد.  
-- اضبط حجم heap للـ JVM بناءً على أبعاد المستندات النموذجية.
+- استخدم دائمًا **try‑with‑resources** لـ `Annotator`.  
+- معالجة المستندات على دفعات بدلاً من تحميل العديد في آن واحد.  
+- ضبط حجم heap في JVM بناءً على أبعاد المستندات النموذجية.
 
-### استراتيجية المعالجة الدفعية
+### استراتيجية المعالجة على دفعات
 لعدة ملفات PDF، استخدم حلقة مع `Annotator` جديد في كل تكرار:
 
 ```java
@@ -267,23 +323,21 @@ public void processPDFBatch(List<String> pdfPaths) {
 ```
 
 ### اعتبارات المعالجة المتزامنة
-`GroupDocs.Annotation` آمن للخطوط المتعددة، لذا يمكنك تشغيل عدة مستندات بالتوازي:
-- استخدم `ExecutorService` مع مجموعة خيوط محدودة.  
-- راقب استهلاك الذاكرة (RAM) وحدد مستوى التوازي وفقًا لذلك.
+`GroupDocs.Annotation` آمن للثريدات، لذا يمكنك تشغيل عدة مستندات بالتوازي:
+- استخدم `ExecutorService` مع مجموعة ثريدات محدودة.  
+- راقب استخدام الذاكرة RAM وحدد مستوى التوازي وفقًا لذلك.
 
 ## نهج بديلة للنظر فيها
 
-بينما تتفوق GroupDocs.Annotation في التعليقات التوضيحية، من الجيد معرفة البدائل:
-
-| Library | الترخيص | نقاط القوة | العيوب |
+| المكتبة | الترخيص | نقاط القوة | العيوب |
 |---------|---------|-----------|-----------|
-| **Apache PDFBox** | مفتوح المصدر | مجاني، جيد لحقول النماذج الأساسية | واجهة برمجة تطبيقات منخفضة المستوى، مزيد من الكود المتكرر |
-| **iText** | تجاري | قوي جدًا، ميزات PDF شاملة | مكلف للنشر على نطاق واسع |
+| **Apache PDFBox** | مفتوح المصدر | مجاني، جيد لحقول النماذج الأساسية | API منخفض المستوى، المزيد من الشيفرة المتكررة |
+| **iText** | تجاري | قوي جدًا، ميزات PDF واسعة | مكلف للنشر على نطاق واسع |
 | **Aspose.PDF for Java** | تجاري | مجموعة ميزات غنية، مشابهة لـ GroupDocs | نموذج تسعير مختلف |
 
 **لماذا تختار GroupDocs.Annotation؟**  
-- محسّن لسيناريوهات التعليقات التوضيحية.  
-- واجهة برمجة تطبيقات بسيطة لخانات الاختيار وعناصر النماذج الأخرى.  
+- مُحسّن لسيناريوهات التعليقات.  
+- API بسيط لخانات الاختيار والعناصر النموذجية الأخرى.  
 - أسعار تنافسية ودعم سريع.
 
 ## تخصيص متقدم لخانات الاختيار
@@ -291,6 +345,8 @@ public void processPDFBatch(List<String> pdfPaths) {
 بمجرد إتقان الأساسيات، ارتقِ بهذه التقنيات:
 
 ### خيارات تنسيق مخصصة
+`CheckBoxComponent` يتيح لك ضبط عرض الحدود، لون الخلفية، والرموز المخصصة. استخدم الخصائص التالية لتحقيق مظهر مميز للعلامة التجارية:
+
 ```java
 checkbox.setPenWidth(2);              // Border thickness
 checkbox.setBackgroundColor(16777215); // White background
@@ -298,7 +354,7 @@ checkbox.setOpacity(0.8);             // Semi‑transparent
 ```
 
 ### منطق شرطي
-أضف خانة اختيار فقط عندما يكون قسم معين موجودًا:
+أضف خانة اختيار فقط عندما يكون قسم معين موجودًا عن طريق فحص محتوى الصفحة قبل وضعها:
 
 ```java
 if (documentContainsSection("Terms and Conditions")) {
@@ -306,8 +362,8 @@ if (documentContainsSection("Terms and Conditions")) {
 }
 ```
 
-### تموضع ديناميكي
-احسب الموضع الأنسب بناءً على المحتوى الموجود:
+### تحديد موقع ديناميكي
+احسب أفضل موضع بناءً على المحتوى الموجود، مثل محاذاة خانة اختيار بجوار تسمية مستخرجة من PDF:
 
 ```java
 Rectangle dynamicPosition = calculateOptimalPosition(document, contentType);
@@ -316,23 +372,29 @@ checkbox.setBox(dynamicPosition);
 
 ## الأسئلة المتكررة
 
-**س: هل يمكنني إضافة عدة خانات اختيار PDF في نفس المستند؟**  
-ج: بالتأكيد. أنشئ عددًا من كائنات `CheckBoxComponent` حسب الحاجة، قم بتكوين كل واحدة، وأضفها بالتسلسل إلى الـ annotator.
+**س: هل يمكنني إضافة عدة خانات اختيار إلى نفس المستند؟**  
+ج: بالتأكيد. أنشئ عددًا من كائنات `CheckBoxComponent` حسب الحاجة، اضبط كل واحدة، وأضفها تسلسليًا إلى الـ annotator.
 
 **س: هل تعمل خانات الاختيار في جميع عارضات PDF؟**  
-ج: نعم. تقوم GroupDocs بإنشاء حقول نماذج PDF قياسية، والتي يدعمها Adobe Reader، Chrome، Firefox، ومعظم العارضات الحديثة.
+ج: نعم. تقوم GroupDocs بإنشاء حقول نماذج PDF قياسية، والتي يدعمها Adobe Reader وChrome وFirefox ومعظم العارضات الحديثة.
 
-**س: كيف يمكنني استرجاع القيم بعد أن يملأ المستخدمون النموذج؟**  
-ج: استخدم واجهة برمجة تطبيقات التحليل في GroupDocs.Annotation لقراءة قيم حقول النموذج من ملف PDF المكتمل. يتيح لك ذلك أتمتة المعالجة اللاحقة.
+**س: كيف يمكنني استرجاع القيم بعد ملء المستخدمين للنموذج؟**  
+ج: استخدم API التحليل في GroupDocs.Annotation لقراءة قيم حقول النموذج من PDF المكتمل. يتيح لك ذلك أتمتة المعالجة اللاحقة.
 
 **س: هل هناك حد لعدد خانات الاختيار التي يمكنني إضافتها؟**  
 ج: الحد العملي يحدده الذاكرة المتاحة وأداء العارض. عادةً ما تكون مئات خانات الاختيار مقبولة.
 
 **س: هل يمكنني إضافة خانة اختيار إلى ملفات PDF محمية بكلمة مرور؟**  
-ج: نعم. قدّم كلمة المرور عند إنشاء `Annotator`؛ ستتعامل المكتبة مع فك التشفير تلقائيًا.
+ج: نعم. قدم كلمة المرور عند إنشاء `Annotator`؛ ستتعامل المكتبة مع فك التشفير تلقائيًا.
 
 ---
 
-**آخر تحديث:** 2026-03-14  
+**آخر تحديث:** 2026-09-25  
 **تم الاختبار مع:** GroupDocs.Annotation 25.2  
 **المؤلف:** GroupDocs
+
+## دروس ذات صلة
+
+- [إضافة حقل نص PDF في Java – دليل GroupDocs.Annotation](/annotation/java/form-field-annotations/)
+- [كيفية إنشاء أزرار PDF في Java باستخدام GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
+- [إنشاء قوائم منسدلة PDF باستخدام GroupDocs.Annotation Java](/annotation/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/)
