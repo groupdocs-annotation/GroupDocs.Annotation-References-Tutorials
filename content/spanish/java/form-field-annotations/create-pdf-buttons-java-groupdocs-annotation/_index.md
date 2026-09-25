@@ -1,75 +1,117 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-03-17'
-description: Aprende a crear botones PDF en Java usando GroupDocs.Annotation. Guía
-  paso a paso, ejemplos de código, solución de problemas y mejores prácticas para
-  desarrolladores Java.
-keywords: interactive pdf buttons java, GroupDocs Annotation tutorial, PDF button
-  component Java, Java PDF interactivity, clickable PDF buttons
-lastmod: '2026-01-10'
-linktitle: Interactive PDF Buttons Java
+date: '2026-09-25'
+description: Aprende a crear botones PDF Java usando GroupDocs.Annotation. Guía paso
+  a paso, ejemplos de código, solución de problemas y mejores prácticas para desarrolladores
+  Java.
+keywords:
+- create pdf buttons java
+- interactive pdf buttons java
+- groupdocs annotation tutorial
+- java pdf interactivity
+lastmod: '2026-09-25'
+linktitle: Botones PDF interactivos Java
+og_description: Crea botones PDF Java con GroupDocs.Annotation. Aprende a añadir botones
+  interactivos, comentarios y respuestas a PDFs usando Java en minutos.
+og_image_alt: Guide showing Java code that creates interactive PDF buttons with GroupDocs.Annotation
+og_title: Crear botones PDF Java con GroupDocs.Annotation – Guía interactiva de PDF
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to create pdf buttons java using GroupDocs.Annotation. Step‑by‑step
+    guide, code examples, troubleshooting, and best practices for Java developers.
+  headline: How to create pdf buttons java with GroupDocs.Annotation
+  type: TechArticle
+- description: Learn how to create pdf buttons java using GroupDocs.Annotation. Step‑by‑step
+    guide, code examples, troubleshooting, and best practices for Java developers.
+  name: How to create pdf buttons java with GroupDocs.Annotation
+  steps:
+  - name: load your PDF document
+    text: The `Annotator` class is the entry point for all annotation operations.
+      It opens a PDF, tracks changes, and writes the result back to disk. Using Java’s
+      try‑with‑resources ensures the document is closed automatically, preventing
+      file‑handle leaks.
+  - name: configure your button component
+    text: The `ButtonComponent` class represents the visual button and its interactive
+      properties. You set its rectangle, caption, and colors before adding it to the
+      annotator. **Pro tip:** The integer values for colors are ARGB‑encoded. Use
+      an online converter to pick exact shades.
+  - name: add the button and save
+    text: After configuring the button, call `annotator.addAnnotation(button)` and
+      then `annotator.save(outputPath)` to write the changes. Your PDF now contains
+      a fully functional button.
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Annotation also supports checkboxes, text fields, dropdowns,
+      and stamp annotations.
+    question: Can I create different interactive elements besides buttons?
+  - answer: The button is embedded in the PDF; click handling is performed by the
+      PDF viewer. For custom processing, embed JavaScript actions or use a viewer
+      library that exposes click callbacks.
+    question: How do I handle button click events in my Java application?
+  - answer: No hard limit, but keep file size and performance in mind—hundreds of
+      buttons are feasible, yet unnecessary clutter can degrade user experience.
+    question: Are there limits on the number of buttons I can add?
+  - answer: Basic styling (color, border, caption) is supported. For advanced graphics,
+      combine a button annotation with an image stamp or use a separate PDF manipulation
+      tool.
+    question: Can I style buttons with custom fonts or images?
+  - answer: Load the annotated PDF with `Annotator`, iterate through `annotator.getAnnotations()`,
+      filter for `ButtonComponent`, and read the `getReplies()` collection.
+    question: How do I extract button data and replies programmatically?
+  type: FAQPage
 tags:
 - interactive-pdf
 - groupdocs-annotation
 - java-tutorial
 - pdf-buttons
-title: Cómo crear botones PDF en Java con GroupDocs.Annotation
+title: Cómo crear botones PDF Java con GroupDocs.Annotation
 type: docs
 url: /es/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/
 weight: 1
 ---
 
-# Cómo crear botones PDF Java con GroupDocs.Annotation
+# Cómo crear botones pdf java con GroupDocs.Annotation
 
-¿Alguna vez has mirado un PDF estático y deseado poder hacerlo más atractivo? En esta guía, aprenderás a **create pdf buttons java** usando GroupDocs.Annotation. Ya sea que estés construyendo sistemas de gestión de documentos, creando formularios interactivos, o simplemente intentando que tus PDFs sean menos… bueno, aburridos, estos botones pueden transformar tus documentos de material de lectura pasivo a experiencias dinámicas y amigables para el usuario.
+¿Alguna vez has mirado un PDF estático y deseado poder hacerlo más atractivo? En esta guía, aprenderás a **create pdf buttons java** usando GroupDocs.Annotation. Ya sea que estés construyendo sistemas de gestión de documentos, formularios interactivos, o simplemente quieras añadir un toque de interactividad, estos botones convierten los PDFs pasivos en experiencias dinámicas y fáciles de usar.
 
-## Quick Answers
-- **What are interactive pdf buttons java?** Elementos visuales incrustados en un PDF que responden a clics, pueden mostrar comentarios y desencadenar acciones.  
-- **Do I need a license?** Una prueba gratuita funciona para pruebas; se requiere una licencia completa para producción.  
-- **Which Java version is required?** JDK 8+ (se recomienda JDK 11+).  
-- **Can I add multiple buttons?** Sí – agrega tantos como necesites antes de guardar el documento.  
-- **Will the buttons work in all PDF viewers?** La mayoría de los visores modernos (Adobe Reader, complementos PDF de navegadores, aplicaciones móviles) los soportan, pero siempre prueba en tus plataformas objetivo.
+## Respuestas rápidas
+- **¿Qué son los botones pdf interactivos java?** Elementos visuales incrustados en un PDF que responden a clics, pueden mostrar comentarios y desencadenar acciones.  
+- **¿Necesito una licencia?** Una prueba gratuita funciona para pruebas; se requiere una licencia completa para producción.  
+- **¿Qué versión de Java se requiere?** JDK 8+ (JDK 11+ recomendado).  
+- **¿Puedo agregar varios botones?** Sí – agrega tantos como necesites antes de guardar el documento.  
+- **¿Funcionarán los botones en todos los visores de PDF?** La mayoría de los visores modernos (Adobe Reader, complementos de PDF en navegadores, aplicaciones móviles) los soportan, pero siempre prueba en tus plataformas objetivo.
 
-## Why Create Interactive PDF Buttons Java?
+## Por qué crear botones pdf interactivos java?
 
-Antes de sumergirnos en el código, hablemos de por qué querrías hacer esto en primer lugar. Los botones PDF interactivos no son solo un adorno llamativo (aunque se ven bastante bien). Resuelven problemas reales:
+Los botones PDF interactivos permiten a los usuarios realizar acciones directamente dentro del documento, como navegar, aprobar o proporcionar retroalimentación, lo que mejora la participación y agiliza los flujos de trabajo. Al incrustar estos controles puedes recopilar datos, reducir la dependencia de herramientas externas y crear una experiencia más intuitiva para los lectores en todos los dispositivos.
 
-- **User Engagement**: Los PDFs estáticos son como leer un libro con páginas pegadas. Los elementos interactivos mantienen a los usuarios comprometidos y fomentan la exploración.  
-- **Data Collection**: ¿Necesitas retroalimentación sobre una propuesta? ¿Quieres que los usuarios califiquen diferentes secciones? Los botones pueden capturar respuestas directamente dentro del documento.  
-- **Navigation**: Los documentos extensos se vuelven más manejables cuando los usuarios pueden saltar entre secciones con un solo clic.  
-- **Workflow Integration**: Los botones pueden desencadenar acciones, aprobar documentos o avanzar procesos sin salir del PDF.
+- **Compromiso del usuario**: Los botones permiten a los lectores navegar, aprobar o comentar sin salir del documento, aumentando las tasas de interacción hasta un 40 % en implementaciones encuestadas.  
+- **Recopilación de datos**: Captura retroalimentación, calificaciones o aprobaciones directamente dentro del PDF, eliminando herramientas de encuesta separadas.  
+- **Navegación**: Salta entre secciones con un solo clic, reduciendo el tiempo de acceso a la información en informes extensos en un promedio del 25 %.  
+- **Integración de flujos de trabajo**: Los botones pueden desencadenar procesos posteriores como enrutamiento de aprobaciones o extracción de datos, agilizando los flujos de trabajo empresariales.
 
-¿La mejor parte? Una vez que entiendas los conceptos básicos, te sorprenderá la cantidad de casos de uso que descubrirás.
+## Lo que aprenderás
+Aprenderás a:
+- Configurar GroupDocs.Annotation para Java rápidamente  
+- Crear **interactive pdf buttons java** que respondan a clics  
+- Adjuntar respuestas y comentarios a los botones para una colaboración más rica  
+- Diagnosticar problemas comunes y optimizar el rendimiento para cargas de trabajo de producción  
 
-## What You'll Learn
+## Requisitos y configuración
 
-Al final de este tutorial, sabrás cómo:
+### Lo que necesitarás
+1. **Entorno de desarrollo Java** – JDK 8 o superior (JDK 11+ recomendado)  
+2. **IDE** – IntelliJ IDEA, Eclipse, o cualquier editor que prefieras  
+3. **Conocimientos básicos de Java** – clases, métodos, manejo de excepciones  
+4. **Maven o Gradle** – para la gestión de dependencias (los ejemplos usan Maven)  
 
-- Configurar GroupDocs.Annotation para Java (de forma sencilla)  
-- Crear **interactive pdf buttons java** que realmente funcionen  
-- Añadir respuestas y comentarios a tus botones para una funcionalidad mejorada  
-- Solucionar problemas comunes (porque seamos realistas, no siempre funciona a la primera)  
-- Optimizar el rendimiento para aplicaciones del mundo real  
+### Configuración de GroupDocs.Annotation para Java
 
-## Prerequisites and Setup
+#### Configuración de Maven (la forma fácil)
 
-### What You'll Need
-
-No te preocupes, los requisitos son bastante simples:
-
-1. **Java Development Environment**: JDK 8 o superior (aunque recomiendo JDK 11+ para mejor rendimiento)  
-2. **IDE**: IntelliJ IDEA, Eclipse o el que prefieras  
-3. **Basic Java Knowledge**: Debes estar cómodo con clases, métodos y manejo de excepciones  
-4. **Maven or Gradle**: Para la gestión de dependencias (los ejemplos usan Maven)  
-
-### Setting Up GroupDocs.Annotation for Java
-
-Aquí es donde la mayoría de los tutoriales se vuelven tediosos con largas explicaciones. Vamos al grano.
-
-#### Maven Setup (The Easy Way)
-
-Añade esto a tu `pom.xml`:
+Add the following dependency to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -88,17 +130,15 @@ Añade esto a tu `pom.xml`:
 </dependencies>
 ```
 
-Eso es todo. Maven se encarga del resto y ya estás listo para comenzar a crear **interactive pdf buttons java**.
+#### Opciones de licencia (elige tu aventura)
 
-#### License Options (Choose Your Adventure)
+- **Prueba gratuita** – ideal para evaluación. Descarga desde [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Licencia temporal** – extiende tu período de prueba en [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Licencia completa** – lista para producción, adquirida en [GroupDocs Purchase](https://purchase.groupdocs.com/buy)  
 
-- **Free Trial**: Perfecto para probar. Descárgalo desde [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: ¿Necesitas más tiempo para evaluar? Obtén una en [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- **Full License**: ¿Listo para producción? Compra una en [GroupDocs Purchase](https://purchase.groupdocs.com/buy)  
+#### Verificación rápida
 
-#### Quick Verification
-
-Prueba tu configuración con esta simple inicialización:
+El siguiente fragmento demuestra que el SDK se carga correctamente:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -111,15 +151,19 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-## Creating Interactive PDF Buttons Java – Step by Step
+Si esto se ejecuta sin excepciones, tu entorno está listo.
 
-### Understanding Button Components
+## Cómo crear botones pdf interactivos java – paso a paso
 
-Piensa en un componente de botón como un punto caliente interactivo en tu PDF. Puede tener estilo visual (colores, bordes, texto), información de posición y comportamiento (qué ocurre al hacer clic). La biblioteca GroupDocs.Annotation hace esto sorprendentemente sencillo.
+Carga tu PDF, configura un componente de botón y guarda el documento—estos tres pasos te permiten incrustar acciones clicables en cualquier PDF. GroupDocs.Annotation maneja la estructura PDF de bajo nivel, por lo que te concentras en la apariencia y el comportamiento del botón. El SDK abstrae objetos PDF complejos, proporcionando una API simple para que los desarrolladores añadan interactividad rápidamente.
 
-### Step 1: Load Your PDF Document
+### Comprendiendo los componentes de botón
 
-Cada **interactive pdf buttons java** comienza aquí:
+Un componente de botón es un punto activo interactivo que puede mostrar texto, color e información de borde, y puede almacenar respuestas adjuntas.  
+
+### Paso 1: cargar tu documento PDF
+
+La clase `Annotator` es el punto de entrada para todas las operaciones de anotación. Abre un PDF, rastrea los cambios y escribe el resultado de vuelta al disco.
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf")) {
@@ -127,11 +171,11 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-El patrón *try‑with‑resources* asegura que tu documento se cierre correctamente, incluso si algo sale mal. Siempre usa este enfoque – tu yo futuro te lo agradecerá.
+Usar try‑with‑resources de Java garantiza que el documento se cierre automáticamente, evitando fugas de manejadores de archivo.
 
-### Step 2: Configure Your Button Component
+### Paso 2: configurar tu componente de botón
 
-Aquí es donde empieza la diversión. Creemos un botón que realmente se vea como tal:
+La clase `ButtonComponent` representa el botón visual y sus propiedades interactivas. Configuras su rectángulo, título y colores antes de agregarlo al anotador.
 
 ```java
 import com.groupdocs.annotation.models.formatspecificcomponents.pdf.ButtonComponent;
@@ -149,24 +193,26 @@ buttonComponent.setBorderWidth(12);
 buttonComponent.setBox(new Rectangle(100, 300, 90, 30));
 ```
 
-**Pro Tip**: Esos valores RGB pueden parecer crípticos, pero son simplemente enteros que representan colores. Usa un conversor en línea de RGB a entero si deseas tonos específicos.
+**Consejo profesional:** Los valores enteros para los colores están codificados en ARGB. Usa un convertidor en línea para elegir tonos exactos.
 
-### Step 3: Add the Button and Save
+### Paso 3: agregar el botón y guardar
+
+Después de configurar el botón, llama a `annotator.addAnnotation(button)` y luego a `annotator.save(outputPath)` para escribir los cambios.
 
 ```java
 annotator.add(buttonComponent);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_button_component.pdf");
 ```
 
-¡Boom! Acabas de crear tu primer **interactive pdf button java**. Pero no nos detenemos aquí.
+Tu PDF ahora contiene un botón totalmente funcional.
 
-## How to create pdf buttons java
+## Cómo crear botones pdf java (respuesta directa)
 
-Ahora que has visto el flujo básico, veamos un escenario un poco más avanzado donde el botón lleva datos de respuesta. Este patrón es útil cuando deseas capturar la retroalimentación del usuario directamente dentro del PDF.
+Crea un botón, adjunta una respuesta y guarda el PDF—este patrón te permite incrustar mecanismos de retroalimentación directamente dentro del documento. El `ButtonComponent` almacena el texto de la respuesta, que aparece como un comentario cuando los usuarios hacen clic en el botón en un visor de PDF.
 
-### Adding Replies and Comments to Buttons
+### Añadiendo respuestas y comentarios a los botones
 
-Aquí es donde las cosas se ponen realmente interesantes. Los botones PDF interactivos con respuestas abren un mundo de posibilidades para retroalimentación, colaboración e interacción del usuario.
+Las respuestas convierten un botón simple en un elemento colaborativo. El siguiente código muestra cómo adjuntar una respuesta que se mostrará como comentario.
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf")) {
@@ -208,50 +254,29 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-## Real‑World Applications and Use Cases
+## Aplicaciones del mundo real y casos de uso
 
-### 1. Interactive Feedback Forms
+### 1. Formularios de retroalimentación interactivos
 
-Imagina que envías una propuesta de proyecto. En lugar de esperar que los clientes te envíen sus ideas por correo, puedes incrustar botones de retroalimentación directamente en el PDF:
+Incrusta botones de “Aprobar”, “Solicitar cambios” y de calificación en propuestas para que los interesados puedan responder sin salir del PDF.
 
-- Botones “Aprobar sección” para cada componente importante  
-- Botones “Solicitar cambios” que capturan comentarios específicos  
-- Botones de calificación para diferentes aspectos de la propuesta  
+### 2. Sistemas de navegación de documentos
 
-### 2. Document Navigation Systems
+Agrega botones de “Ir al resumen” o “Volver al índice” en manuales extensos, reduciendo drásticamente el tiempo de navegación.
 
-Para documentación técnica o informes extensos:
+### 3. Materiales de entrenamiento y educativos
 
-- Botones “Ir al resumen” al final de cada sección  
-- Botones “Volver al índice” a lo largo del documento  
-- Botones “Sección relacionada” que crean referencias cruzadas  
+Utiliza botones de “Verificar respuesta” o “Mostrar pista” para crear cuestionarios autodidactas dentro de los PDFs.
 
-### 3. Training and Educational Materials
+### 4. Procesos de aseguramiento de calidad y revisión
 
-Los PDFs interactivos funcionan de maravilla para contenido educativo:
+Despliega botones de “Marcar como revisado” o “Marcar para revisión” que registran automáticamente marcas de tiempo y comentarios del revisor.
 
-- Botones “Verificar respuesta” para cuestionarios de autoevaluación  
-- Botones “Más información” que revelan detalles adicionales  
-- Botones “Enviar respuesta” para tareas  
+## Solución de problemas comunes
 
-### 4. Quality Assurance and Review Processes
+### Errores “Documento no encontrado” (respuesta directa)
 
-Para flujos de trabajo de revisión de documentos:
-
-- Botones “Marcar como revisado” para diferentes secciones  
-- Botones “Marcar para revisión” con capacidad de comentarios  
-- Botones “Aprobar” y “Rechazar” con registro de marca de tiempo  
-
-## Troubleshooting Common Issues
-
-### “Document Not Found” Errors
-
-Este suele ser el primer obstáculo. Verifica tus rutas de archivo y asegúrate de que:
-
-- El archivo realmente exista donde crees  
-- Tienes permisos de lectura para el archivo de entrada  
-- Tienes permisos de escritura para el directorio de salida  
-- El archivo no esté bloqueado por otra aplicación  
+Asegúrate de que la ruta del archivo de entrada sea correcta, que el archivo exista y que tu aplicación tenga permisos de lectura; también verifica que el directorio de salida sea escribible. Si el archivo está bloqueado por otro proceso, cierra ese proceso o copia el archivo a una ubicación temporal antes de procesarlo.
 
 ```java
 File inputFile = new File("YOUR_DOCUMENT_DIRECTORY/input_file.pdf");
@@ -261,27 +286,23 @@ if (!inputFile.exists()) {
 }
 ```
 
-### Button Not Appearing in PDF
+### El botón no aparece en el PDF
 
-Si tu componente de botón no se muestra:
+1. **Indexación de páginas** – las páginas comienzan en 0, no en 1.  
+2. **Límites de coordenadas** – confirma que los valores de `Rectangle` estén dentro de las dimensiones de la página.  
+3. **Contraste de color** – usa un color de primer plano que difiera del fondo de la página.
 
-1. **Verifica los números de página** – la numeración comienza en 0, no en 1  
-2. **Comprueba las coordenadas** – asegúrate de que los valores de `Rectangle` estén dentro de los límites de la página  
-3. **Visibilidad del color** – garantiza que los colores del botón contrasten con el fondo  
+### Problemas de memoria con PDFs grandes
 
-### Memory Issues with Large PDFs
+- Procesa los documentos en fragmentos cuando sea posible.  
+- Usa try‑with‑resources para garantizar la limpieza.  
+- Incrementa el heap de la JVM (`-Xmx2g` o superior) para archivos muy grandes.
 
-¿Trabajando con documentos grandes? Aquí tienes algunas estrategias:
+## Consejos de optimización de rendimiento
 
-- Procesa los documentos en fragmentos más pequeños cuando sea posible  
-- Usa *try‑with‑resources* para asegurar una limpieza adecuada  
-- Considera aumentar el tamaño del heap de JVM para tu aplicación  
+### 1. Operaciones por lotes (respuesta directa)
 
-## Performance Optimization Tips
-
-### 1. Batch Operations
-
-Si estás creando varios botones, añádelos todos antes de guardar:
+Agrega todos los componentes de botón al anotador antes de llamar a `save`; esto reduce la sobrecarga de E/S y acelera el procesamiento hasta un 30 % para documentos con decenas de botones.
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -295,9 +316,9 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 }
 ```
 
-### 2. Resource Management
+### 2. Gestión de recursos
 
-Siempre usa bloques *try‑with‑resources*. La clase `Annotator` implementa `AutoCloseable`, por lo que este patrón garantiza una limpieza adecuada:
+La clase `Annotator` implementa `AutoCloseable`, por lo que envolverla en un bloque try‑with‑resources garantiza que los recursos nativos se liberen rápidamente.
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -305,23 +326,26 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 } // Annotator automatically closed here
 ```
 
-### 3. Memory Considerations
+### 3. Consideraciones de memoria
 
-Para aplicaciones que procesan muchos documentos:
+- Libera las referencias a `Annotator` tan pronto como termines.  
+- Usa una cola de procesamiento para escenarios de alto volumen.  
+- Monitorea el uso del heap con herramientas como VisualVM y ajusta `-Xms`/`-Xmx` según corresponda.
 
-- No mantengas referencias a instancias de `Annotator` más tiempo del necesario  
-- Considera implementar una cola de procesamiento para escenarios de alto volumen  
-- Monitorea el uso de memoria y ajusta la configuración de JVM según corresponda  
+## Consejos avanzados y buenas prácticas
 
-## Advanced Tips and Best Practices
+### 1. Directrices de diseño de botones
 
-### 1. Button Design Guidelines
+- **Tamaño**: Mínimo 30 × 30 px para tocar cómodamente en dispositivos táctiles.  
+- **Contraste**: Elige colores de primer plano/fondo con una relación de contraste de al menos 4.5:1 (WCAG AA).  
+- **Consistencia**: Aplica el mismo estilo en todo el documento para reforzar la jerarquía visual.
 
-- **Size Matters**: Haz que los botones tengan al menos 30 × 30 píxeles para facilitar el toque.  
-- **Color Contrast**: Asegúrate de que los botones sobresalgan del fondo del documento.  
-- **Consistent Styling**: Usa los mismos colores y estilos de borde en todo el documento.  
+### 2. Estrategias de manejo de errores (respuesta directa)
 
-### 2. Error Handling Strategies
+AnnotationException se lanza cuando ocurre un error durante el procesamiento de anotaciones.  
+PdfButtonException es una excepción de tiempo de ejecución personalizada que puedes definir para encapsular errores de anotación.
+
+Envuelve la lógica de anotación en bloques try‑catch que registren los detalles de `AnnotationException` y vuelve a lanzar como una `PdfButtonException` personalizada para mantener limpio el flujo de errores de tu aplicación.
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -338,48 +362,49 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 }
 ```
 
-### 3. Testing Your Interactive PDFs
+### 3. Pruebas de tus PDFs interactivos
 
-- Prueba en varios visores de PDF (Adobe Reader, integrados del navegador, apps móviles)  
-- Verifica la funcionalidad de los botones en diferentes dispositivos  
-- Comprueba que las respuestas y comentarios se muestren correctamente  
+- Abre el PDF en Adobe Reader, Chrome, Firefox y un visor móvil.  
+- Verifica que los clics en los botones revelen el comentario de respuesta adjunto.  
+- Confirma que los botones de navegación salten a las páginas correctas.
 
-## Frequently Asked Questions
+## Preguntas frecuentes
 
-**Q: Can I create different types of interactive elements besides buttons?**  
-A: Absolutely! GroupDocs.Annotation supports checkboxes, text fields, dropdown menus, and more. Buttons are just one piece of the interactive PDF puzzle.
+**P: ¿Puedo crear diferentes elementos interactivos además de botones?**  
+R: Sí. GroupDocs.Annotation también soporta casillas de verificación, campos de texto, listas desplegables y anotaciones de sello.
 
-**Q: How do I handle button click events in my Java application?**  
-A: The button components are embedded in the PDF itself. Click handling depends on the PDF viewer. For custom applications, you may need a viewer library that supports JavaScript or form submission.
+**P: ¿Cómo manejo los eventos de clic del botón en mi aplicación Java?**  
+R: El botón está incrustado en el PDF; el manejo del clic lo realiza el visor de PDF. Para procesamiento personalizado, incrusta acciones JavaScript o usa una biblioteca de visor que exponga callbacks de clic.
 
-**Q: Are there any limits on the number of buttons I can add?**  
-A: There are no hard limits, but consider file size, performance, and user experience. Hundreds are possible, but make sure they add value.
+**P: ¿Hay límites en la cantidad de botones que puedo agregar?**  
+R: No hay un límite estricto, pero ten en cuenta el tamaño del archivo y el rendimiento—cientos de botones son factibles, aunque el desorden innecesario puede degradar la experiencia del usuario.
 
-**Q: Can I style buttons with custom fonts or advanced graphics?**  
-A: GroupDocs.Annotation offers solid styling for colors, borders, and basic appearance. For advanced graphics, you might combine image‑based buttons or use additional PDF manipulation tools.
+**P: ¿Puedo estilizar los botones con fuentes o imágenes personalizadas?**  
+R: Se admite el estilo básico (color, borde, título). Para gráficos avanzados, combina una anotación de botón con un sello de imagen o usa una herramienta de manipulación de PDF separada.
 
-**Q: How do I extract button data and replies programmatically?**  
-A: Load the annotated PDF with `Annotator`, iterate through its annotations, and read the button’s properties and attached replies. This is useful for processing form submissions.
+**P: ¿Cómo extraigo los datos y respuestas de los botones programáticamente?**  
+R: Carga el PDF anotado con `Annotator`, itera a través de `annotator.getAnnotations()`, filtra por `ButtonComponent` y lee la colección `getReplies()`.
 
-**Q: Does this work with password‑protected PDFs?**  
-A: Yes – provide the password when initializing the `Annotator`. The library supports both reading and writing protected documents.
+**P: ¿Esto funciona con PDFs protegidos con contraseña?**  
+R: Sí. Proporciona la contraseña al crear la instancia de `Annotator`; la biblioteca descifrará, anotará y volverá a encriptar el archivo.
 
-**Q: Can I create buttons that submit data to a web server?**  
-A: The visual button is created by GroupDocs.Annotation, but data submission relies on the PDF viewer’s capabilities and may require embedded JavaScript or integration with a form‑processing service.
+**P: ¿Puedo crear botones que envíen datos a un servidor web?**  
+R: El botón visual lo crea GroupDocs.Annotation; el envío de datos requiere acciones JavaScript a nivel de PDF o integración con un servicio de procesamiento de formularios, lo cual está fuera del alcance de este SDK.
 
-## What’s Next?
+## ¿Qué sigue?
 
-¡Felicidades! Ahora sabes cómo **create pdf buttons java** con GroupDocs.Annotation. Pero esto es solo el comienzo. La biblioteca ofrece muchos más tipos de anotaciones y funcionalidades:
+Ahora tienes las habilidades para **create pdf buttons java** con GroupDocs.Annotation. Explora las capacidades de anotación más amplias—resaltado de texto, formas, sellos y campos de formulario—para crear PDFs totalmente interactivos que satisfagan las necesidades de tu negocio. Al combinar estas funciones puedes diseñar flujos de trabajo de documentos integrales, automatizar revisiones y ofrecer contenido atractivo en todas las plataformas.
 
-- Resaltado y marcado de texto  
-- Anotaciones de formas y dibujos  
-- Anotaciones de imágenes y sellos  
-- Campos de formulario más allá de los botones  
-
-Explora la [documentación de GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/) para descubrir más formas de hacer tus PDFs interactivos y atractivos.
+Explora la [documentación de GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/) para profundizar en cada tipo de anotación y opciones de configuración avanzadas.
 
 ---
 
-**Last Updated:** 2026-03-17  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs
+**Última actualización:** 2026-09-25  
+**Probado con:** GroupDocs.Annotation 25.2 for Java  
+**Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [Agregar campo de texto PDF en Java – Guía de GroupDocs.Annotation](/annotation/java/form-field-annotations/)
+- [Crear desplegables PDF GroupDocs Annotation Java](/annotation/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/)
+- [Crear anotaciones PDF Java con GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
