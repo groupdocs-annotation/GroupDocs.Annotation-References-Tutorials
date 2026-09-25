@@ -1,76 +1,108 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: Tanulja meg, hogyan használja a try‑with‑resources Java‑t a annotált
-  dokumentumok meghatározott oldalainak mentéséhez a GroupDocs.Annotation segítségével.
-  Tartalmaz Spring Boot dokumentumszolgáltatás példát.
-keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
-  document annotation tutorial, selective PDF page saving Java, extract annotated
-  pages
-lastmod: '2026-03-14'
-linktitle: Save Specific Pages Java Annotation
+date: '2026-09-25'
+description: Ismerje meg, hogyan menthet konkrét PDF oldalakat try resources használatával
+  Java-ban a GroupDocs.Annotation segítségével. Tartalmaz Spring Boot szolgáltatás
+  példát és teljesítmény tippeket.
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: Konkrét oldalak mentése Java Annotation
+og_description: Ismerje meg, hogyan menthet konkrét PDF oldalakat try resources használatával
+  Java-ban a GroupDocs.Annotation segítségével. Lépésről lépésre útmutató, teljesítmény
+  tippek és Spring Boot integráció.
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: Hogyan menthetünk konkrét PDF oldalakat try resources használatával Java-ban
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
 tags:
+- save specific pdf pages
 - groupdocs
-- java-annotation
-- document-processing
-- pdf-manipulation
-title: Try‑with‑resources Java – Speciális oldalak mentése megjegyzett dokumentumokból
+- java annotation
+- document processing
+- pdf manipulation
+title: Hogyan menthetünk konkrét PDF oldalakat try resources használatával Java-ban
 type: docs
 url: /hu/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# Hogyan menthetünk meghatározott oldalakat a megjegyzett dokumentumokból Java-ban
+# Hogyan mentse el a specifikus PDF oldalakat a megjegyzett dokumentumokból Java-ban
+
+Amikor egy nagy, megjegyzett fájlból kell **specifikus PDF oldalakat** menteni, a Java *try with resources* mintázatának a GroupDocs.Annotation-nal való használata biztonságos, memóriahatékony megoldást nyújt. Ez az útmutató bemutatja, hogyan állítsa be a könyvtárat, hogyan vonjon ki egy oldaltartományt, és hogyan integrálja a logikát egy Spring Boot szolgáltatásba – miközben a kódja tiszta marad és az erőforrások megfelelően felszabadulnak.
 
 ## Bevezetés
 
-Valaha is úgy érezted, hogy óriási megjegyzett dokumentumok között süllyedsz, miközben csak néhány konkrét oldalra van szükséged? A **try with resources java** segítségével hatékonyan kinyerheted a szükséges oldalakat a GroupDocs.Annotation használatával. Legyen szó jogi szerződésekről, műszaki kézikönyvekről vagy kutatási anyagokról, csak a releváns oldalak kinyerése csökkenti a tárhelyigényt, felgyorsítja a feldolgozást és rendezetté teszi a munkafolyamatot.
+`Annotator` a GroupDocs.Annotation fő osztálya, amely betölti a dokumentumot, és módszereket biztosít a megjegyzések kezeléséhez és mentéséhez.  
+Sok üzleti helyzetben – jogi szerződések, műszaki kézikönyvek vagy kutatási dolgozatok – gyakran csak néhány olyan oldalra van szükség, amely a releváns megjegyzéseket tartalmazza. Csak ezeknek az oldalaknak a kinyerése akár 96 %-kal is csökkentheti a tárolási költségeket, felgyorsíthatja a további feldolgozást, és segít a megfelelőségben, ha csak a megengedett szakaszokat osztja meg.
 
-Ebben az útmutatóban mindent áttekintünk – a könyvtár beállításától a fejlett teljesítménytrükkökig, amelyek segítenek, hogy Java‑alkalmazásod zökkenőmentesen fusson.
-
-**Mit fogsz elsajátítani a végére:**
-- A GroupDocs.Annotation beállítása a Java‑projektedben (helyes módon)
-- Szelektív oldalmentés megvalósítása tiszta, karbantartható kóddal
-- Gyakori csapdák elkerülése, amelyek a legtöbb fejlesztőt meglepik
-- Teljesítményoptimalizálás nagy dokumentumok feldolgozásához
-- Problémák elhárítása, mielőtt fejfájássá válnának
+**Amit a végére elsajátít:**  
+- A GroupDocs.Annotation Java verziójának telepítése és licencelése  
+- `try with resources` használata az oldaltartomány biztonságos mentéséhez  
+- Nagy PDF-ek kezelése alacsony memóriaigénnyel  
+- A logika beágyazása egy Spring Boot dokumentum‑szolgáltatásba  
+- Gyakori hibák elhárítása, például a zárolt fájlok és a memória‑hiány hibák
 
 ## Gyors válaszok
-- **Mit csinál a “try with resources java”?** Automatikusan bezárja az Annotator‑t, megakadályozva a fájlzárolásokat és a memória‑szivárgásokat.  
-- **Melyik könyvtár kezeli az oldal‑tartomány mentését?** A `GroupDocs.Annotation` biztosítja a `SaveOptions`‑t a `setFirstPage`/`setLastPage` metódusokkal.  
-- **Használhatom Spring Boot szolgáltatásban?** Igen – lásd a “Spring Boot Document Service Integration” szekciót.  
-- **Szükség van licencre?** Fejlesztéshez egy ingyenes próba elegendő; termeléshez teljes licenc szükséges.  
-- **Biztonságos nagy PDF‑ek (1000+ oldal) esetén?** Használd a `load‑only‑annotated‑pages` és a kötegelt feldolgozást a memóriahasználat alacsonyan tartásához.
 
-## Miért mentünk csak bizonyos oldalakat? (Valós példák)
+- **Mi csinál a “try with resources java”?** Automatikusan bezárja a `Annotator`‑t, megakadályozva a fájlzárolásokat és a memória‑szivárgásokat.  
+- **Melyik könyvtár kezeli az oldaltartomány mentését?** A `GroupDocs.Annotation` biztosítja a `SaveOptions`‑t a `setFirstPage`/`setLastPage` beállításokkal. A `SaveOptions` lehetővé teszi a kimeneti beállítások megadását, például az oldaltartományt és azt, hogy csak a megjegyzéseket tartalmazza‑e.  
+- **Használhatom ezt egy Spring Boot szolgáltatásban?** Igen – lásd a “Spring Boot dokumentum‑szolgáltatás integráció” szekciót.  
+- **Szükségem van licencre?** Egy ingyenes próba verzió fejlesztéshez elegendő; a termeléshez teljes licenc szükséges.  
+- **Biztonságos nagy PDF-ek (1000+ oldal) esetén?** Használja a load‑only‑annotated‑pages és a kötegelt feldolgozást a memóriahasználat alacsonyan tartásához.
 
-Mielőtt a technikai részbe merülnénk, nézzük meg, miért kulcsfontosságú ez a funkció:
+## Mi az a specifikus PDF oldalak mentése?
 
-**Tárhelyhatékonyság**: Egy 500 oldalas kézikönyv, amelynek csak 20 oldalán vannak megjegyzések? Miért mentenéd az összes 500 oldalt, ha a releváns 20-at kinyerheted, és 96 %-kal csökkentheted a fájlméretet?
+A **specifikus PDF oldalak mentése** művelet egy meghatározott oldaltartományt nyer ki a forrásdokumentumból, miközben megőrzi az adott oldalakon lévő összes megjegyzést. Egy új, kisebb PDF-et hoz létre, amely csak a kiválasztott oldalakat tartalmazza, ami ideális célzott megosztáshoz vagy archiváláshoz.
 
-**Gyorsabb feldolgozás**: A kisebb fájlok gyorsabb feltöltést, letöltést és feldolgozást jelentenek. Felhasználóid (és a szervereid) hálásak lesznek.
+## Miért használjunk try with resources‑t az oldalak mentéséhez?
 
-**Jobb felhasználói élmény**: Senki sem akar több száz oldalon görgetni a megjegyzett részek megtalálásához. Adj nekik pontosan azt, amire szükségük van.
-
-**Megfelelőség és biztonság**: Szabályozott iparágakban előfordulhat, hogy csak a dokumentum bizonyos részeit oszthatod meg. A szelektív mentés megkönnyíti a megfelelőséget.
+A `try with resources` használata garantálja, hogy a `Annotator` példány a blokk végén el legyen dobva. Ez a determinisztikus takarítás megakadályozza a gyakori „a fájl zárolva van” kivételt, és a JVM halomhasználatát kiszámíthatóvá teszi – különösen fontos, ha több tucat nagy PDF-et dolgoz fel párhuzamosan.
 
 ## Előkövetelmények és beállítás
 
-### Amire szükséged lesz
+### Amire szüksége lesz
 
-- **Java Development Kit (JDK)**: 8-as vagy újabb verzió (JDK 11+ ajánlott)  
-- **Maven vagy Gradle**: A függőségkezeléshez  
-- **GroupDocs.Annotation for Java**: 25.2 vagy újabb verzió  
-- **Alapvető Java ismeretek**: Fájl‑I/O és OOP megértése  
+- **JDK 8+** (JDK 11+ ajánlott)  
+- **Maven** vagy **Gradle** a függőségkezeléshez  
+- **GroupDocs.Annotation for Java** — 25.2 vagy újabb verzió (támogat 50+ formátumot)  
+- Alapvető ismeretek a Java I/O‑ról és OOP‑ról  
 
 ### A GroupDocs.Annotation for Java beállítása
 
 #### Maven konfiguráció
 
-Add hozzá a `pom.xml`‑hez (hidd el, a másolás‑beillesztés a barátod itt):
+Adja hozzá a függőséget a `pom.xml`‑hez (a másolás‑beillesztés itt a barátja):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -85,11 +117,13 @@ Add hozzá a `pom.xml`‑hez (hidd el, a másolás‑beillesztés a barátod itt
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### Gradle beállítás (ha a Gradle csapat tagja vagy)
+#### Gradle beállítás (ha a Gradle‑t részesíti előnyben)
 
-```gradle
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -100,32 +134,34 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### Licenc beszerzése
+### A licenc beszerzése
 
-A legtöbb tutorial nem említi: **kezd a ingyenes próba verzióval**. Komolyan. Ne bonyolítsd túl a dolgot.
+Kezdje az ingyenes próba verzióval, majd szükség szerint váltson át egy ideiglenes vagy teljes licencre:
 
-- **Ingyenes próba**: Tökéletes teszteléshez és fejlesztéshez – szerezd meg a [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) oldalról  
-- **Ideiglenes licenc**: Ha több időre van szükséged a kiértékeléshez, kérj egy [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Teljes licenc**: Production környezethez? [Purchase here](https://purchase.groupdocs.com/buy)
+- **Ingyenes próba:** Tökéletes teszteléshez és fejlesztéshez – szerezze meg a [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) oldalról  
+- **Ideiglenes licenc:** Több időre van szüksége a kiértékeléshez? Szerezzen [ideiglenes licencet](https://purchase.groupdocs.com/temporary-license/)  
+- **Teljes licenc:** Készen áll a termelésre? [Vásároljon itt](https://purchase.groupdocs.com/buy)
 
-Pro tipp: A próba verzió korlátozásokkal rendelkezik, de bőven elegendő a tutorial követéséhez és egy proof‑of‑concept elkészítéséhez.
+> **Pro tipp:** A próba verzió csak néhány fejlett funkciót távolít el, ami több mint elegendő az útmutató követéséhez és egy koncepció bizonyításához.
 
-## A try with resources java használata szelektív oldalmentéshez
+## Hogyan működik a try with resources Java-ban?
 
-Most, hogy a környezet készen áll, nézzük meg, hogyan teszi a **try with resources java** az oldal‑tartomány műveletet biztonságossá és tömörre. A minta biztosítja, hogy az `Annotator` példány automatikusan felszabaduljon, ezáltal megszűnik a fájlzárolás és a memóriahasználat rendezett marad.
+`try` `with` `resources` automatikusan meghívja a `close()`‑t minden olyan objektumon, amely implementálja az `AutoCloseable`‑t a blokk végén. Ha egy `Annotator` példányt ebbe a szerkezetbe helyezi, a könyvtár felszabadítja a fájlkezelőket és törli a belső puffereket extra kód nélkül, ezzel kiküszöbölve a fennmaradó zárolások kockázatát.
 
-## Alapvető megvalósítás: meghatározott oldal‑tartományok mentése
+## Alapvető megvalósítás: specifikus oldaltartományok mentése
 
-### Az egyszerű megközelítés (Kezdj itt)
+### A `Annotator` definíciója
 
-Kezdjük a legegyszerűbb implementációval. Ez a 90 %-os esetekhez elegendő:
+`Annotator` a GroupDocs.Annotation fő osztálya a megjegyzett dokumentumok betöltéséhez, szerkesztéséhez és mentéséhez. Módszereket biztosít a megjegyzések eléréséhez, az oldalak módosításához és az eredmények exportálásához.
 
-#### 1. lépés: Fájlútvonal‑kezelés beállítása
+### 1. lépés: fájl‑útvonal segédeszközök beállítása
 
-Először hozz létre egy segédosztályt a fájlútvonalak kezelésére (később megköszönöd, amikor át kell állítanod a könyvtárakat):
+Hozzon létre egy kis segédprogramot, amely konzisztensen építi fel a kimeneti útvonalakat:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -134,14 +170,16 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**Miért ez a megközelítés?** Központosítja a fájlútvonal‑logikát, és könnyebbé teszi a tesztelést. A `FilenameUtils` használata automatikusan megőrzi az eredeti fájlkiterjesztést.
+Centralizing path logic makes it easy to change directories later and keeps your code testable.
 
-#### 2. lépés: Oldaltartomány mentés implementálása
+### 2. lépés: oldaltartomány mentésének megvalósítása
 
-Itt történik a varázslat:
+Az alábbi kódrészlet mutatja a lényeges logikát. `try with resources`‑t használ a takarítás garantálásához:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -159,17 +197,17 @@ public class SaveSpecificPageRange {
     }
 }
 ```
+```
 
-**Mi történik itt:**
-- Egy **try‑with‑resources java** blokkot (`try ( … )`) használunk, így az `Annotator` automatikusan bezáródik, elkerülve a fájlzárolási problémákat.  
-- A `setFirstPage(2)` és `setLastPage(4)` határozza meg a befoglaló tartományt (2‑4. oldalak).  
-- A tartomány **befoglaló** mindkét végén – ez a rész sok fejlesztőt meglep.
+- A `setFirstPage(2)` és a `setLastPage(4)` egy **inkluzív** tartományt definiál (2‑4. oldalak).  
+- A `Annotator` automatikusan bezáródik, amikor a blokk kilép, megakadályozva a fájlzárolási problémákat.
 
-### Fejlett fájlútvonal‑konfiguráció
+### Haladó fájl‑útvonal konfiguráció
 
-Production alkalmazásokhoz rugalmasabb útvonalkezelésre lesz szükség:
+Termelés esetén dinamikus elnevezésre lehet szükség:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -188,32 +226,34 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-Most már automatikusan generálhatsz például `contract_pages_2-4.pdf` nevű fájlokat.
+Most a kimeneti fájl például `contract_pages_2-4.pdf` néven lesz elnevezve, ami egyértelművé teszi, hogy mely oldalakat nyerték ki.
 
-## Gyakori csapdák és elkerülésük módjai
+## Gyakori buktatók és azok elkerülése
 
-### Csapda #1: Oldal‑index zavar
+### Buktató #1: oldalkezdés zavar
 
-**Probléma**: Feltételezed, hogy az oldalszámok 0‑tól indulnak (nem így van a GroupDocs.Annotation‑ban).
-
-**Megoldás**: Az oldalszámozás 1‑től kezdődik, akárcsak a valós dokumentumokban. Az 1. oldal az első oldal, nem a 0.
+**Probléma:** Az oldalszámok 0‑tól kezdődnek.  
+**Megoldás:** A GroupDocs.Annotation oldalszámozása 1‑től indul, ami megegyezik a PDF‑olvasókban láthatóval.
 
 ```java
+// ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
 saveOptions.setFirstPage(0);
 
 // Right - this starts from the actual first page
 saveOptions.setFirstPage(1);
 ```
+```
 
-### Csapda #2: Erőforrás‑szivárgás
+### Buktató #2: erőforrás-szivárgás
 
-**Probléma**: Elfelejted megfelelően lezárni az Annotator‑t, ami fájlzároláshoz és memória‑szivárgáshoz vezet.
-
-**Megoldás**: Mindig használj **try‑with‑resources java**‑t vagy explicit lezárást:
+**Probléma:** A `Annotator` bezárásának elhagyása zárolt fájlokhoz vezet.  
+**Megoldás:** Mindig csomagolja a `Annotator`‑t egy `try with resources` blokkba, vagy hívja meg explicit módon a `close()`‑t.
 
 ```java
+// ```java
 // Good - automatic resource management
 try (final Annotator annotator = new Annotator(inputFile)) {
     // your code here
@@ -230,14 +270,15 @@ try {
     }
 }
 ```
+```
 
-### Csapda #3: Érvénytelen oldal‑tartományok
+### Buktató #3: érvénytelen oldaltartományok
 
-**Probléma**: Olyan tartományt adsz meg, amely nem létezik a dokumentumban.
-
-**Megoldás**: Előbb validáld a tartományokat:
+**Probléma:** Olyan tartomány megadása, amely meghaladja a dokumentum oldalszámát.  
+**Megoldás:** A mentés előtt ellenőrizze a tartományt a `annotator.getDocumentInfo().getPagesCount()` segítségével.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
         // Get document info to check page count
@@ -261,14 +302,16 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
 ## Teljesítményoptimalizálási tippek
 
-### Memóriakezelés nagy dokumentumoknál
+### Memóriakezelés nagy dokumentumok esetén
 
-Nagy dokumentumok (100 + oldal) esetén a memóriahasználat kulcsfontosságú:
+Nagy, 100+ oldalas PDF-ek feldolgozásakor engedélyezze a csak megjegyzett oldalak betöltését a halom alacsonyan tartásához:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
         // Configure for lower memory usage
@@ -289,17 +332,19 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**Fő optimalizációs stratégiák**
-- `setLoadOnlyAnnotatedPages(true)` csökkenti a memória‑lábnyomot.  
-- `setAnnotationsOnly(true)` egy könnyű fájlt hoz létre, amely csak a megjegyzés‑réteget tartalmazza.  
-- Ha sok fájlt kell feldolgozni, dolgozz kötegekben.
+Kulcsstratégiák:
+- A `setLoadOnlyAnnotatedPages(true)` csökkenti a memóriahasználatot, csak a megjegyzéseket tartalmazó oldalakat betöltve.  
+- A `setAnnotationsOnly(true)` könnyűsúlyú fájlt hoz létre, amely csak a megjegyzésréteget tárolja.  
+- A kötegelt feldolgozás fix szálkészlettel megakadályozza a rendszer erőforrásainak kimerülését.
 
-### Tömeges feldolgozás több dokumentummal
+### Több dokumentum kötegelt feldolgozása
 
-Production környezetben, ahol sok dokumentumot kell kezelni:
+Nagy áteresztőképességű esetekben dolgozza fel a fájlokat kötegekben:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
@@ -314,14 +359,16 @@ public class BatchPageRangeSaver {
     }
 }
 ```
+```
 
 ## Integráció népszerű keretrendszerekkel
 
-### Spring Boot dokumentumszolgáltatás integráció
+### Spring Boot dokumentum‑szolgáltatás integráció
 
-Egy egyszerű Spring Boot szolgáltatás oldal‑tartomány mentéshez (vedd észre a **spring boot document service** kifejezést):
+Az alábbi egy minimális Spring Boot szolgáltatás, amely PDF-et fogad, kinyeri az oldaltartományt, és a új fájlt byte‑tömbként adja vissza.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -351,14 +398,18 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
+
+A szolgáltatás konstruktor‑injekciót használ az `AnnotatorFactory`‑hez, így a vezérlő vékony és tesztelhető marad.
 
 ## Gyakorlati alkalmazások és felhasználási esetek
 
-### Jogdokumentum‑feldolgozás
+### Jogi dokumentumfeldolgozás
 
-Ügyvédi irodák gyakran kell, hogy egy szerződés vagy bírósági dokumentum meghatározott részeit nyerjék ki:
+A jogi irodáknak gyakran csak a felülvizsgált záradékokat kell megosztaniuk. Ezeknek az oldalaknak a kinyerése csökkenti a bizalmas szakaszok felfedésének kockázatát.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
         // Group consecutive pages for efficient processing
@@ -372,12 +423,14 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
 ### Oktatási tartalomkezelés
 
-Tanárok, akik a tankönyvek bizonyos fejezeteit szeretnék kinyerni a diákok feladataihoz:
+A tanárok csak a feladathoz szükséges megjegyzett fejezeteket tudják kinyerni, ezáltal csökkentve a letöltési méretet és javítva a fókuszt.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -391,12 +444,14 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
-### Minőségbiztosítási felülvizsgálatok
+### Minőség‑biztosítási felülvizsgálatok
 
-Csak a megjegyzésekkel ellátott oldalakat kivonva a fókuszált revízióhoz:
+A QA csapatok elkülöníthetik a felülvizsgáló megjegyzésekkel ellátott oldalakat, ezáltal gyorsabb iterációs ciklusokat biztosítva.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
@@ -418,30 +473,30 @@ public class QAReviewExtractor {
     }
 }
 ```
+```
 
 ## Legjobb gyakorlatok összefoglalása
 
-1. **Mindig validáld a bemeneti paramétereket** – ellenőrizd a oldal‑tartományokat a feldolgozás előtt.  
-2. **Használj try‑with‑resources java‑t** – megakadályozza az erőforrás‑szivárgásokat és a fájlzárolásokat.  
-3. **Implementálj megfelelő hibakezelést** – ne engedd, hogy egy rossz fájl leállítsa az egész köteget.  
-4. **Vedd figyelembe a memóriahasználatot** – nagy dokumentumoknál alkalmazd a `setLoadOnlyAnnotatedPages(true)`‑t.  
-5. **Tesztelj különböző fájltípusokkal** – PDF, Word, PowerPoint viselkedése eltérő lehet.  
-6. **Figyeld a teljesítményt** – ellenőrizd a feldolgozási időket és a memóriahasználatot production környezetben.
+1. **Ellenőrizze az oldalszámokat** a mentési művelet meghívása előtt.  
+2. **Mindig használja a `try with resources`‑t**, hogy garantálja a `Annotator` bezárását.  
+3. **Engedélyezze a `setLoadOnlyAnnotatedPages(true)`‑t** nagy PDF-ek esetén a memóriahasználat kontrollálásához.  
+4. **Tesztelje a támogatott formátumokban** – a GroupDocs.Annotation több mint 50 bemeneti és kimeneti típust kezel, beleértve a PDF, DOCX, XLSX, PPTX és képfájlokat.  
+5. **Figyelje a JVM halmot** és szükség szerint állítsa be a `-Xmx`‑et a kötegelt feladatokhoz.
 
 ## Gyakori problémák hibaelhárítása
 
-### Probléma: “File is locked” hiba
+### Probléma: „A fájl zárolva van” hiba
 
-**Tünetek**: Kivétel dobódik mentéskor, fájlzárolásra hivatkozva.  
+**Tünetek:** Kivétel jelenik meg a `save()` során, amely egy zárolt fájlt említ.  
+**Okok:**  
+- Egy korábbi `Annotator` példány nem lett bezárva.  
+- A fájl egy másik alkalmazásban nyitva van.  
+- Nem elegendő fájlrendszer‑jogosultság.  
 
-**Okok**:  
-- Az Annotator nem lett megfelelően lezárva egy korábbi műveletből.  
-- A fájl még nyitva van egy másik alkalmazásban.  
-- Nem elegendő jogosultság.  
-
-**Megoldások**:
+**Megoldás:** Győződjön meg arról, hogy minden `Annotator` `try with resources`‑ba van csomagolva, és ellenőrizze az operációs rendszer szintű fájlzárolásokat.
 
 ```java
+// ```java
 // Ensure proper cleanup
 try (final Annotator annotator = new Annotator(inputFile)) {
     // ... your code ...
@@ -456,61 +511,71 @@ if (!file.getParentFile().canWrite()) {
     throw new IllegalArgumentException("Cannot write to output directory");
 }
 ```
+```
 
-### Probléma: Memória‑hiány (Out of Memory) hibák
+### Probléma: memória‑hiány hibák
 
-**Tünetek**: `OutOfMemoryError` nagy dokumentumok feldolgozásakor.  
+**Tünetek:** `OutOfMemoryError` nagy PDF-ek feldolgozásakor.  
+**Megoldások:**  
+1. Növelje a JVM halom méretét (`-Xmx2g` vagy nagyobb).  
+2. Használja a `setLoadOnlyAnnotatedPages(true)` és `setAnnotationsOnly(true)` beállításokat.  
+3. A dokumentumokat kisebb kötegekben dolgozza fel.
 
-**Megoldások**:  
-1. Növeld a JVM heap méretét, pl. `-Xmx2g`.  
-2. Használd a korábban bemutatott optimalizált betöltési opciókat.  
-3. Dolgozz kisebb kötegekben.
+### Probléma: a megjegyzések nem maradnak meg
 
-### Probléma: Megjegyzések nem maradnak meg
-
-**Tünetek**: A kimeneti fájl nem tartalmazza az eredeti megjegyzéseket.  
-
-**Megoldás**: Győződj meg róla, hogy nem távolítod el a megjegyzéseket:
+**Tünetek:** A kimeneti fájl nem tartalmazza az eredeti megjegyzéseket.  
+**Megoldás:** Ne kapcsolja be véletlenül a `setAnnotationsOnly(false)`‑t; tartsa az alapértelmezettet a megjegyzések megőrzéséhez.
 
 ```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
+```
 
 ## Gyakran ismételt kérdések
 
-**Q: Menthetek nem egymást követő oldalakat (pl. 1., 3., 7.)?**  
-A: Közvetlenül egyetlen művelettel nem. Külön mentéseket kell futtatnod minden tartományra, vagy utólag össze kell kombinálnod az eredményeket.
+**K: Menthetek nem egymást követő oldalakat (pl. 1, 3, 7)?**  
+V: Egyetlen `SaveOptions` hívással nem. Futtasson külön mentéseket minden tartományra, majd utána egyesítse az eredményeket.
 
-**Q: Működik jelszóval védett dokumentumokkal?**  
-A: Igen, de a jelszót meg kell adnod az `Annotator` létrehozásakor: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+**K: Működik ez jelszóval védett dokumentumok esetén?**  
+V: Igen – adja meg a jelszót a `Annotator` létrehozásakor: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
-**Q: Mely fájlformátumok támogatottak?**  
-A: PDF, Microsoft Word, Excel, PowerPoint és még sok más. A teljes listáért nézd meg a [official documentation](https://docs.groupdocs.com/annotation/java/) oldalt.
+**K: Milyen fájlformátumok támogatottak?**  
+V: PDF, Microsoft Word, Excel, PowerPoint és még sok más. A teljes listáért tekintse meg a [hivatalos dokumentációt](https://docs.groupdocs.com/annotation/java/).
 
-**Q: Menthetek csak a megjegyzéseket az eredeti tartalom nélkül?**  
-A: Természetesen – állítsd be a `saveOptions.setAnnotationsOnly(true)`‑t, így csak a megjegyzés‑réteg marad meg.
+**K: Menthetek csak a megjegyzéseket az eredeti tartalom nélkül?**  
+V: Természetesen – állítsa be a `saveOptions.setAnnotationsOnly(true)`‑t, hogy csak a megjegyzéseket tartalmazó fájlt hozza létre.
 
-**Q: Hogyan kezelem a nagyon nagy dokumentumokat (1000+ oldal)?**  
-A: Használd a `setLoadOnlyAnnotatedPages(true)`‑t, dolgozz darabokban, és fontold meg a JVM heap növelését.
+**K: Hogyan kezeljem a nagyon nagy dokumentumokat (1000+ oldal)?**  
+V: Használja a `setLoadOnlyAnnotatedPages(true)`‑t, dolgozza fel darabokban, és fontolja meg a JVM halom méretének növelését.
 
-**Q: Van mód előnézetet mutatni az oldalak mentése előtt?**  
-A: A GroupDocs.Annotation elsősorban a feldolgozásra fókuszál, nem a megjelenítésre, de lekérdezheted a dokumentum információit (oldalszám, megjegyzés‑helyek), hogy eldönthesd, mely tartományokat érdemes kinyerni.
+**K: Van mód az oldalak előnézetére a mentés előtt?**  
+V: A GroupDocs.Annotation a feldolgozásra koncentrál, de a `annotator.getDocumentInfo()` segítségével lekérdezheti az oldalszámot és a megjegyzéshelyeket, hogy eldöntse, mely tartományokat kell kinyerni.
 
-## Források
+## További források
 
-- **Dokumentáció**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API referencia**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **Letöltés**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Licenc vásárlás**: [License Options](https://purchase.groupdocs.com/buy)  
-- **Ingyenes próba**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Ideiglenes licenc**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Támogatás**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+- Dokumentáció: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- Hivatalos dokumentáció: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- API referencia: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- Letöltés: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- GroupDocs kiadások: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- Licenc opciók: [License Options](https://purchase.groupdocs.com/buy)  
+- Vásárlás itt: [Purchase here](https://purchase.groupdocs.com/buy)  
+- Ingyenes próba: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- Ideiglenes licenc: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- Támogatás: [Community Forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Utoljára frissítve:** 2026-03-14  
-**Tesztelve:** GroupDocs.Annotation 25.2 (Java)  
+**Utoljára frissítve:** 2026-09-25  
+**Tesztelve ezzel:** GroupDocs.Annotation 25.2 (Java)  
 **Szerző:** GroupDocs
+
+## Kapcsolódó oktatóanyagok
+
+- [PDF méretének csökkentése Java-val a GroupDocs.Annotation segítségével – Teljes útmutató](/annotation/java/document-saving/)
+- [Megjegyzett PDF mentése a GroupDocs Java és Azure Blob használatával](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)
+- [Jelszóval védett PDF betöltése a GroupDocs.Annotation Java-val](/annotation/java/advanced-features/load-password-protected-pdf-groupdocs-annotation-java/)

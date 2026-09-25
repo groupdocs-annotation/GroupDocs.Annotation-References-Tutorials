@@ -1,67 +1,103 @@
 ---
-title: "Try with resources Java – Save Specific Pages from Annotated Documents"
-linktitle: "Save Specific Pages Java Annotation"
-description: "Learn how to use try with resources java to save specific pages from annotated documents with GroupDocs.Annotation. Includes spring boot document service example."
-keywords: "save specific pages Java annotation, GroupDocs annotation page range, Java document annotation tutorial, selective PDF page saving Java, extract annotated pages"
-weight: 1
-url: "/java/document-saving/groupdocs-annotation-java-save-specific-page-range/"
-date: "2026-03-14"
-lastmod: "2026-03-14"
-categories: ["Java Development"]
-tags: ["groupdocs", "java-annotation", "document-processing", "pdf-manipulation"]
+categories:
+- Java Development
+date: '2026-09-25'
+description: Learn how to save specific pdf pages using try resources in Java with
+  GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+images:
+- /java/document-saving/groupdocs-annotation-java-save-specific-page-range/og-image.png
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: Save Specific Pages Java Annotation
+og_description: Learn how to save specific pdf pages using try resources in Java with
+  GroupDocs.Annotation. Step-by-step guide, performance tips, and Spring Boot integration.
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: How to save specific pdf pages with try resources in Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
+tags:
+- save specific pdf pages
+- groupdocs
+- java annotation
+- document processing
+- pdf manipulation
+title: How to save specific pdf pages with try resources in Java
 type: docs
+url: /java/document-saving/groupdocs-annotation-java-save-specific-page-range/
+weight: 1
 ---
 
-# How to Save Specific Pages from Annotated Documents in Java
+# How to save specific pdf pages from annotated documents in Java
+
+When you need to **save specific pdf pages** from a large, annotated file, using Java’s *try with resources* pattern together with GroupDocs.Annotation gives you a safe, memory‑efficient solution. This tutorial shows you how to set up the library, extract a page range, and integrate the logic into a Spring Boot service—all while keeping your code clean and your resources properly released.
 
 ## Introduction
 
-Ever found yourself drowning in massive annotated documents when you only need a few specific pages? With **try with resources java**, you can efficiently extract just the pages you need using GroupDocs.Annotation. Whether you're handling legal contracts, technical manuals, or research papers, pulling out only the relevant pages saves storage, speeds up processing, and keeps your workflow tidy.
+`Annotator` is the primary class in GroupDocs.Annotation that loads a document and provides methods for annotation handling and saving.  
+In many business scenarios—legal contracts, technical manuals, or research papers—you often only need a handful of pages that contain the relevant annotations. Extracting just those pages reduces storage costs by up to 96 %, speeds up downstream processing, and helps you stay compliant by sharing only the permitted sections.
 
-In this guide, we'll walk through everything you need to know – from setting up the library to advanced performance tricks that keep your Java application running smoothly.
+**What you’ll master by the end of this guide:**
+- Installing and licensing GroupDocs.Annotation for Java  
+- Using `try with resources` to safely save a page range  
+- Handling large PDFs with low memory overhead  
+- Embedding the logic in a Spring Boot document‑service  
+- Troubleshooting common pitfalls such as locked files and out‑of‑memory errors  
 
-**What you'll master by the end:**
-- Setting up GroupDocs.Annotation in your Java project (the right way)
-- Implementing selective page saving with clean, maintainable code
-- Avoiding common pitfalls that trip up most developers
-- Optimizing performance for large document processing
-- Troubleshooting issues before they become headaches
-
-## Quick Answers
-- **What does “try with resources java” do?** It automatically closes the Annotator, preventing file locks and memory leaks.  
-- **Which library handles page‑range saving?** `GroupDocs.Annotation` provides `SaveOptions` with `setFirstPage`/`setLastPage`.  
-- **Can I use this in a Spring Boot service?** Yes – see the “Spring Boot Document Service Integration” section.  
+## Quick answers
+- **What does “try with resources java” do?** It automatically closes the `Annotator`, preventing file locks and memory leaks.  
+- **Which library handles page‑range saving?** `GroupDocs.Annotation` provides `SaveOptions` with `setFirstPage`/`setLastPage`. `SaveOptions` lets you specify output settings such as page range and whether to include annotations only.  
+- **Can I use this in a Spring Boot service?** Yes – see the “Spring Boot document service integration” section.  
 - **Do I need a license?** A free trial works for development; a full license is required for production.  
-- **Is it safe for large PDFs (1000+ pages)?** Use load‑only‑annotated‑pages and batch processing to keep memory usage low.
+- **Is it safe for large PDFs (1000+ pages)?** Use load‑only‑annotated‑pages and batch processing to keep memory usage low.  
 
-## Why Save Specific Pages? (Real-World Context)
+## What is save specific pdf pages?
+The **save specific pdf pages** operation extracts a defined page interval from a source document while preserving all annotations on those pages. It creates a new, smaller PDF that contains only the selected pages, which is ideal for targeted sharing or archival.
 
-Before jumping into the technical stuff, let's talk about why this feature is a game‑changer:
+## Why use try resources for page saving?
+Using `try with resources` guarantees that the `Annotator` instance is disposed as soon as the block ends. This deterministic cleanup prevents the common “file is locked” exception and keeps the JVM’s heap footprint predictable—especially important when processing dozens of large PDFs in parallel.
 
-**Storage Efficiency**: A 500‑page manual with annotations on just 20 pages? Why save all 500 when you can extract the relevant 20 and cut your file size by 96 %?
+## Prerequisites and setup
 
-**Faster Processing**: Smaller files mean faster uploads, downloads, and processing. Your users (and your servers) will thank you.
+### What you’ll need
+- **JDK 8+** (JDK 11+ recommended)  
+- **Maven** or **Gradle** for dependency management  
+- **GroupDocs.Annotation for Java** — version 25.2 or later (supports 50+ formats)  
+- Basic familiarity with Java I/O and OOP  
 
-**Better User Experience**: Nobody wants to scroll through hundreds of pages to find the annotated sections. Give them exactly what they need.
+### Setting up GroupDocs.Annotation for Java
 
-**Compliance and Security**: In regulated industries, you might only be allowed to share specific sections of documents. Selective saving makes compliance easier.
-
-## Prerequisites and Setup
-
-### What You'll Need
-
-- **Java Development Kit (JDK)**: Version 8 or higher (JDK 11+ recommended)  
-- **Maven or Gradle**: For dependency management  
-- **GroupDocs.Annotation for Java**: Version 25.2 or later  
-- **Basic Java knowledge**: Understanding of file I/O and OOP  
-
-### Setting Up GroupDocs.Annotation for Java
-
-#### Maven Configuration
-
-Add this to your `pom.xml` (trust me, copy‑paste is your friend here):
+#### Maven configuration
+Add the dependency to your `pom.xml` (copy‑paste is your friend here):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -76,11 +112,12 @@ Add this to your `pom.xml` (trust me, copy‑paste is your friend here):
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### Gradle Setup (If You're Team Gradle)
-
-```gradle
+#### Gradle setup (if you prefer Gradle)
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -91,32 +128,32 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### Getting Your License Sorted
+### Getting your license sorted
+Start with the free trial, then move to a temporary or full license as needed:
 
-Here's what most tutorials won't tell you: **start with the free trial**. Seriously. Don't overcomplicate things.
+- **Free trial:** Perfect for testing and development – grab it from [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary license:** Need more time to evaluate? Get a [temporary license](https://purchase.groupdocs.com/temporary-license/)  
+- **Full license:** Ready for production? [Purchase here](https://purchase.groupdocs.com/buy)  
 
-- **Free Trial**: Perfect for testing and development - grab it from [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: Need more time to evaluate? Get a [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Full License**: Ready to go production? [Purchase here](https://purchase.groupdocs.com/buy)
+> **Pro tip:** The trial version removes only a few advanced features, which is more than enough to follow this tutorial and build a proof of concept.
 
-Pro tip: The trial version has some limitations, but it's more than enough to follow this tutorial and build a proof of concept.
+## How does try with resources work in Java?
 
-## Using try with resources java for selective page saving
+`try` `with` `resources` automatically calls `close()` on any object that implements `AutoCloseable` at the end of the block. When you wrap an `Annotator` instance in this construct, the library releases file handles and clears internal buffers without any extra code, eliminating the risk of lingering locks.
 
-Now that the environment is ready, let’s see how **try with resources java** makes the page‑range operation safe and concise. The pattern ensures the `Annotator` instance is disposed automatically, which eliminates file‑lock headaches and keeps memory usage tidy.
+## Core implementation: saving specific page ranges
 
-## Core Implementation: Saving Specific Page Ranges
+### The `Annotator` definition anchor
+`Annotator` is GroupDocs.Annotation’s primary class for loading, editing, and saving annotated documents. It provides methods to access annotations, modify pages, and export results.
 
-### The Basic Approach (Start Here)
+### Step 1: set up file‑path utilities
 
-Let's start with the simplest possible implementation. This is what 90 % of use cases need:
-
-#### Step 1: Set Up File Path Management
-
-First, create a utility class for handling file paths (you'll thank me later when you need to change directories):
+Create a small helper that builds output paths consistently:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -125,14 +162,16 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**Why this approach?** It keeps your file‑path logic centralized and makes testing easier. Using `FilenameUtils` ensures you preserve the original file extension automatically.
+Centralizing path logic makes it easy to change directories later and keeps your code testable.
 
-#### Step 2: Implement Page Range Saving
+### Step 2: implement page‑range saving
 
-Here's where the magic happens:
+The following snippet shows the essential logic. It uses `try with resources` to guarantee cleanup:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -150,17 +189,17 @@ public class SaveSpecificPageRange {
     }
 }
 ```
+```
 
-**What’s happening here:**
-- We use a **try‑with‑resources java** block (`try ( … )`) so the `Annotator` is closed automatically, eliminating file‑lock problems.  
-- `setFirstPage(2)` and `setLastPage(4)` define our inclusive range (pages 2‑4).  
-- The range is **inclusive** on both ends – a detail that trips up many developers.
+- `setFirstPage(2)` and `setLastPage(4)` define an **inclusive** range (pages 2‑4).  
+- The `Annotator` is closed automatically when the block exits, preventing file‑lock issues.  
 
-### Advanced File Path Configuration
+### Advanced file‑path configuration
 
-For production applications, you’ll want more flexible path handling:
+For production you may want dynamic naming:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -179,32 +218,32 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-Now you can generate names like `contract_pages_2-4.pdf` automatically.
+Now the output file will be named something like `contract_pages_2-4.pdf`, making it clear which pages were extracted.
 
-## Common Pitfalls and How to Avoid Them
+## Common pitfalls and how to avoid them
 
-### Pitfall #1: Page Index Confusion
-
-**The Problem**: Assuming page numbers start from 0 (they don’t in GroupDocs.Annotation).
-
-**The Solution**: Page numbering starts from 1, just like in real documents. Page 1 is the first page, not page 0.
+### Pitfall #1: page‑index confusion
+**Problem:** Assuming page numbers start at 0.  
+**Solution:** Page numbering in GroupDocs.Annotation starts at 1, matching what users see in PDF viewers.
 
 ```java
+// ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
 saveOptions.setFirstPage(0);
 
 // Right - this starts from the actual first page
 saveOptions.setFirstPage(1);
 ```
+```
 
-### Pitfall #2: Resource Leaks
-
-**The Problem**: Forgetting to close the Annotator properly, leading to file locks and memory leaks.
-
-**The Solution**: Always use **try‑with‑resources java** or explicit closing:
+### Pitfall #2: resource leaks
+**Problem:** Forgetting to close `Annotator` leads to locked files.  
+**Solution:** Always wrap the `Annotator` in a `try with resources` block or call `close()` explicitly.
 
 ```java
+// ```java
 // Good - automatic resource management
 try (final Annotator annotator = new Annotator(inputFile)) {
     // your code here
@@ -221,14 +260,14 @@ try {
     }
 }
 ```
+```
 
-### Pitfall #3: Invalid Page Ranges
-
-**The Problem**: Specifying page ranges that don’t exist in the document.
-
-**The Solution**: Validate your ranges first:
+### Pitfall #3: invalid page ranges
+**Problem:** Specifying a range that exceeds the document’s page count.  
+**Solution:** Validate the range against `annotator.getDocumentInfo().getPagesCount()` before saving.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
         // Get document info to check page count
@@ -252,14 +291,15 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
-## Performance Optimization Tips
+## Performance optimization tips
 
-### Memory Management for Large Documents
-
-When dealing with large documents (100 + pages), memory usage becomes important:
+### Memory management for large documents
+When processing PDFs with 100 + pages, enable loading‑only‑annotated pages to keep the heap low:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
         // Configure for lower memory usage
@@ -280,17 +320,18 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**Key optimization strategies**
-- `setLoadOnlyAnnotatedPages(true)` reduces the memory footprint.  
-- `setAnnotationsOnly(true)` creates a lightweight file that contains only the annotation layer.  
-- Process documents in batches if you have many files.
+Key strategies:
+- `setLoadOnlyAnnotatedPages(true)` reduces memory usage by loading only pages that contain annotations.  
+- `setAnnotationsOnly(true)` creates a lightweight file that stores just the annotation layer.  
+- Batch processing with a fixed thread pool avoids exhausting system resources.
 
-### Batch Processing Multiple Documents
-
-For production scenarios where you’re processing many documents:
+### Batch processing multiple documents
+For high‑throughput scenarios, process files in batches:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
@@ -305,14 +346,15 @@ public class BatchPageRangeSaver {
     }
 }
 ```
+```
 
-## Integration with Popular Frameworks
+## Integration with popular frameworks
 
-### Spring Boot Document Service Integration
-
-Here's a simple Spring Boot service for page‑range saving (note the **spring boot document service** wording):
+### Spring Boot document service integration
+Below is a minimal Spring Boot service that receives a PDF, extracts a page range, and returns the new file as a byte array.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -342,14 +384,17 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
 
-## Practical Applications and Use Cases
+The service uses constructor injection for the `AnnotatorFactory`, keeping the controller thin and testable.
 
-### Legal Document Processing
+## Practical applications and use cases
 
-Law firms often need to extract specific sections of contracts or court documents:
+### Legal document processing
+Law firms often need to share only the clauses that have been reviewed. Extracting those pages reduces the risk of exposing confidential sections.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
         // Group consecutive pages for efficient processing
@@ -363,12 +408,13 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
-### Educational Content Management
-
-Teachers extracting specific chapters from textbooks for student assignments:
+### Educational content management
+Teachers can pull out only the annotated chapters students need for an assignment, cutting down on download size and improving focus.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -382,12 +428,13 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
-### Quality Assurance Reviews
-
-Extracting only the pages with review comments for focused revision:
+### Quality‑assurance reviews
+QA teams can isolate pages with reviewer comments, enabling faster iteration cycles.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
@@ -409,30 +456,28 @@ public class QAReviewExtractor {
     }
 }
 ```
+```
 
-## Best Practices Summary
+## Best practices summary
+1. **Validate page numbers** before invoking the save operation.  
+2. **Always use `try with resources`** to guarantee that `Annotator` is closed.  
+3. **Enable `setLoadOnlyAnnotatedPages(true)`** for large PDFs to keep memory usage under control.  
+4. **Test across supported formats**—GroupDocs.Annotation handles over 50 input and output types, including PDF, DOCX, XLSX, PPTX, and image files.  
+5. **Monitor JVM heap** and adjust `-Xmx` as needed for batch jobs.  
 
-1. **Always validate input parameters** – check page ranges before processing.  
-2. **Use try‑with‑resources java** – prevents resource leaks and file‑locking issues.  
-3. **Implement proper error handling** – don’t let one bad file crash your entire batch.  
-4. **Consider memory usage** – use `setLoadOnlyAnnotatedPages(true)` for large docs.  
-5. **Test with various file types** – PDFs, Word, PowerPoint may behave differently.  
-6. **Monitor performance** – keep an eye on processing times and memory in production.
+## Troubleshooting common issues
 
-## Troubleshooting Common Issues
+### Issue: “File is locked” error
+**Symptoms:** An exception mentioning a locked file appears during `save()`.  
+**Causes:**  
+- A previous `Annotator` instance wasn’t closed.  
+- The file is open in another application.  
+- Insufficient file‑system permissions.  
 
-### Issue: “File is locked” Error
-
-**Symptoms**: Exception thrown when trying to save, mentioning file locks.  
-
-**Causes**:  
-- Annotator not properly closed from a previous operation.  
-- File still open in another application.  
-- Insufficient permissions.  
-
-**Solutions**:
+**Solution:** Ensure every `Annotator` is wrapped in `try with resources` and verify OS‑level file locks.
 
 ```java
+// ```java
 // Ensure proper cleanup
 try (final Annotator annotator = new Annotator(inputFile)) {
     // ... your code ...
@@ -447,61 +492,69 @@ if (!file.getParentFile().canWrite()) {
     throw new IllegalArgumentException("Cannot write to output directory");
 }
 ```
+```
 
-### Issue: Out of Memory Errors
-
-**Symptoms**: `OutOfMemoryError` when processing large documents.  
-
-**Solutions**:  
-1. Increase JVM heap size, e.g., `-Xmx2g`.  
-2. Use the optimized loading options shown earlier.  
+### Issue: Out‑of‑memory errors
+**Symptoms:** `OutOfMemoryError` when processing large PDFs.  
+**Solutions:**  
+1. Increase JVM heap (`-Xmx2g` or higher).  
+2. Use `setLoadOnlyAnnotatedPages(true)` and `setAnnotationsOnly(true)`.  
 3. Process documents in smaller batches.
 
-### Issue: Annotations Not Preserved
-
-**Symptoms**: Output file doesn’t contain the original annotations.  
-
-**Solution**: Ensure you’re not stripping annotations:
+### Issue: Annotations not preserved
+**Symptoms:** Output file lacks the original markup.  
+**Solution:** Do not enable `setAnnotationsOnly(false)` inadvertently; keep the default to retain annotations.
 
 ```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
+```
 
-## Frequently Asked Questions
+## Frequently asked questions
 
-**Q: Can I save non‑consecutive pages (like pages 1, 3, 7)?**  
-A: Not directly with a single operation. You need to run separate saves for each range or combine the results afterward.
+**Q: Can I save non‑consecutive pages (e.g., 1, 3, 7)?**  
+A: Not with a single `SaveOptions` call. Run separate saves for each range and merge the results afterward.
 
 **Q: Does this work with password‑protected documents?**  
-A: Yes, but you must provide the password when creating the `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+A: Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
 **Q: What file formats are supported?**  
-A: PDF, Microsoft Word, Excel, PowerPoint, and many others. Check the [official documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+A: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
 
 **Q: Can I save just the annotations without the original content?**  
-A: Absolutely – set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only file.
+A: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only file.
 
 **Q: How do I handle very large documents (1000+ pages)?**  
-A: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider increasing the JVM heap.
+A: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider increasing the JVM heap size.
 
 **Q: Is there a way to preview pages before saving?**  
-A: GroupDocs.Annotation focuses on processing rather than viewing, but you can retrieve document info (page count, annotation locations) to help decide which ranges to extract.
+A: GroupDocs.Annotation focuses on processing, but you can retrieve page count and annotation locations via `annotator.getDocumentInfo()` to decide which ranges to extract.
 
-## Resources
+## Additional resources
 
-- **Documentation**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **Download**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Purchase**: [License Options](https://purchase.groupdocs.com/buy)  
-- **Free Trial**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Support**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+- Documentation: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- Official documentation: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- API reference: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- Download: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- GroupDocs releases: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- License options: [License Options](https://purchase.groupdocs.com/buy)  
+- Purchase here: [Purchase here](https://purchase.groupdocs.com/buy)  
+- Free trial: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- Temporary license: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- Support: [Community Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Last Updated:** 2026-03-14  
+**Last Updated:** 2026-09-25  
 **Tested With:** GroupDocs.Annotation 25.2 (Java)  
 **Author:** GroupDocs
+
+## Related Tutorials
+
+- [Reduce PDF Size Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)
+- [Save Annotated PDF using GroupDocs Java & Azure Blob](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)
+- [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/)

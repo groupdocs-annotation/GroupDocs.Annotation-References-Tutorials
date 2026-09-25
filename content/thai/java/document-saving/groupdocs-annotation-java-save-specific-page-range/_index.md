@@ -1,75 +1,107 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: เรียนรู้วิธีใช้ try‑with‑resources ใน Java เพื่อบันทึกหน้าที่ระบุจากเอกสารที่มีการทำหมายเหตุด้วย
-  GroupDocs.Annotation รวมถึงตัวอย่างบริการเอกสาร Spring Boot.
-keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
-  document annotation tutorial, selective PDF page saving Java, extract annotated
-  pages
-lastmod: '2026-03-14'
-linktitle: Save Specific Pages Java Annotation
+date: '2026-09-25'
+description: เรียนรู้วิธีบันทึกหน้าที่ต้องการของ pdf โดยใช้ try resources ใน Java
+  กับ GroupDocs.Annotation. รวมตัวอย่างบริการ Spring Boot และเคล็ดลับประสิทธิภาพ
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: บันทึกหน้าที่เฉพาะ Java Annotation
+og_description: เรียนรู้วิธีบันทึกหน้าที่ต้องการของ pdf โดยใช้ try resources ใน Java
+  กับ GroupDocs.Annotation. คู่มือแบบขั้นตอน, เคล็ดลับประสิทธิภาพ, และการรวมกับ Spring
+  Boot
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: วิธีบันทึกหน้าที่ต้องการของ pdf ด้วย try resources ใน Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
 tags:
+- save specific pdf pages
 - groupdocs
-- java-annotation
-- document-processing
-- pdf-manipulation
-title: ลองใช้ resources Java – บันทึกหน้าที่เฉพาะจากเอกสารที่มีคำอธิบาย
+- java annotation
+- document processing
+- pdf manipulation
+title: วิธีบันทึกหน้าที่ต้องการของ pdf ด้วย try resources ใน Java
 type: docs
 url: /th/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# วิธีการบันทึกหน้าเฉพาะจากเอกสารที่มีการทำ Annotation ใน Java
+# วิธีบันทึกหน้าที่เฉพาะจากเอกสารที่มีการคอมเมนต์ใน PDF ด้วย Java
 
-## คำนำ
+เมื่อคุณต้องการ **บันทึกหน้าที่เฉพาะของ PDF** จากไฟล์ที่มีการคอมเมนต์ขนาดใหญ่ โดยใช้รูปแบบ *try with resources* ของ Java ร่วมกับ GroupDocs.Annotation จะให้วิธีแก้ที่ปลอดภัยและประหยัดหน่วยความจำ บทแนะนำนี้จะแสดงวิธีตั้งค่าห้องสมุด การดึงช่วงหน้า และการรวมตรรกะเข้าไปในบริการ Spring Boot — ทั้งหมดนี้โดยรักษาโค้ดให้สะอาดและจัดการทรัพยากรอย่างถูกต้อง
 
-เคยรู้สึกว่าตัวเองต้องจัดการกับเอกสารที่มีการทำ Annotation จำนวนมหาศาล แต่จริง ๆ แล้วต้องการแค่บางหน้าบางหน้าเท่านั้นหรือไม่? ด้วย **try with resources java** คุณสามารถดึงเอาเฉพาะหน้าที่ต้องการได้อย่างมีประสิทธิภาพโดยใช้ GroupDocs.Annotation ไม่ว่าคุณจะทำงานกับสัญญากฎหมาย คู่มือเทคนิค หรือบทความวิจัย การดึงเฉพาะหน้าที่เกี่ยวข้องจะช่วยประหยัดพื้นที่เก็บข้อมูล เร่งความเร็วการประมวลผล และทำให้กระบวนการทำงานของคุณเป็นระเบียบมากขึ้น
+## บทนำ
 
-ในคู่มือนี้ เราจะพาคุณผ่านทุกขั้นตอนที่คุณต้องรู้ – ตั้งแต่การตั้งค่าไลบรารีจนถึงเทคนิคการเพิ่มประสิทธิภาพขั้นสูงที่ทำให้แอปพลิเคชัน Java ของคุณทำงานได้อย่างราบรื่น
+`Annotator` คือคลาสหลักใน GroupDocs.Annotation ที่โหลดเอกสารและให้เมธอดสำหรับการจัดการคอมเมนต์และการบันทึก  
+ในหลายสถานการณ์ทางธุรกิจ—สัญญากฎหมาย คู่มือเทคนิค หรือเอกสารวิจัย—คุณมักต้องการเพียงไม่กี่หน้าที่มีคอมเมนต์ที่เกี่ยวข้อง การสกัดเฉพาะหน้าดังกล่าวช่วยลดค่าใช้จ่ายการจัดเก็บได้ถึง 96 % เร่งความเร็วการประมวลผลต่อไปและช่วยให้คุณปฏิบัติตามกฎระเบียบโดยการแชร์เฉพาะส่วนที่อนุญาตเท่านั้น
 
-**สิ่งที่คุณจะเชี่ยวชาญเมื่ออ่านจบ:**
-- การตั้งค่า GroupDocs.Annotation ในโปรเจกต์ Java ของคุณ (วิธีที่ถูกต้อง)
-- การบันทึกหน้าแบบเลือกเฉพาะด้วยโค้ดที่สะอาดและดูแลได้ง่าย
-- การหลีกเลี่ยงข้อผิดพลาดทั่วไปที่ทำให้นักพัฒนาส่วนใหญ่พลาด
-- การเพิ่มประสิทธิภาพการทำงานสำหรับการประมวลผลเอกสารขนาดใหญ่
-- การแก้ไขปัญหาก่อนที่มันจะกลายเป็นอาการเจ็บปวด
+**สิ่งที่คุณจะเชี่ยวชาญเมื่อจบคู่มือนี้:**  
+- การติดตั้งและการขอใบอนุญาต GroupDocs.Annotation สำหรับ Java  
+- การใช้ `try with resources` เพื่อบันทึกช่วงหน้าอย่างปลอดภัย  
+- การจัดการ PDF ขนาดใหญ่ด้วยการใช้หน่วยความจำน้อย  
+- การฝังตรรกะลงในบริการเอกสารของ Spring Boot  
+- การแก้ไขปัญหาทั่วไป เช่น ไฟล์ที่ถูกล็อกและข้อผิดพลาด out‑of‑memory  
 
-## คำตอบสั้น ๆ
-- **“try with resources java” ทำอะไร?** มันปิด `Annotator` โดยอัตโนมัติ ป้องกันการล็อกไฟล์และการรั่วไหลของหน่วยความจำ  
-- **ไลบรารีใดที่จัดการการบันทึกช่วงหน้า?** `GroupDocs.Annotation` มี `SaveOptions` พร้อม `setFirstPage`/`setLastPage`  
-- **ฉันสามารถใช้ในบริการ Spring Boot ได้หรือไม่?** ใช่ – ดูส่วน “Spring Boot Document Service Integration”  
-- **ต้องมีลิขสิทธิ์หรือไม่?** เวอร์ชันทดลองฟรีใช้ได้สำหรับการพัฒนา; ต้องมีลิขสิทธิ์เต็มสำหรับการใช้งานจริง  
-- **ปลอดภัยสำหรับ PDF ขนาดใหญ่ (1000+ หน้า) หรือไม่?** ใช้ `load‑only‑annotated‑pages` และการประมวลผลเป็นชุดเพื่อให้การใช้หน่วยความจำต่ำ
+## คำตอบอย่างรวดเร็ว
 
-## ทำไมต้องบันทึกหน้าเฉพาะ? (บริบทในโลกจริง)
+- **คำสั่ง “try with resources java” ทำอะไร?** มันจะปิด `Annotator` โดยอัตโนมัติ ป้องกันการล็อกไฟล์และการรั่วไหลของหน่วยความจำ.  
+- **ไลบรารีใดที่จัดการการบันทึกช่วงหน้า?** `GroupDocs.Annotation` มี `SaveOptions` พร้อมเมธอด `setFirstPage`/`setLastPage`. `SaveOptions` ให้คุณกำหนดการตั้งค่าการส่งออก เช่น ช่วงหน้าและว่าจะรวมคอมเมนต์เท่านั้นหรือไม่.  
+- **ฉันสามารถใช้สิ่งนี้ในบริการ Spring Boot ได้หรือไม่?** ใช่ – ดูส่วน “Spring Boot document service integration”  
+- **ฉันต้องการใบอนุญาตหรือไม่?** เวอร์ชันทดลองฟรีใช้ได้สำหรับการพัฒนา; ต้องมีใบอนุญาตเต็มสำหรับการใช้งานจริง.  
+- **ปลอดภัยสำหรับ PDF ขนาดใหญ่ (1000+ หน้า) หรือไม่?** ใช้การโหลดเฉพาะหน้าที่มีคอมเมนต์และการประมวลผลเป็นชุดเพื่อให้การใช้หน่วยความจำน้อยลง.  
 
-ก่อนจะลงลึกด้านเทคนิค มาพูดถึงเหตุผลที่ฟีเจอร์นี้เป็นเกม‑เชนเจอร์กันดีกว่า:
+## การบันทึกหน้าที่เฉพาะของ PDF คืออะไร?
 
-**ประหยัดพื้นที่จัดเก็บ**: คู่มือ 500 หน้า ที่มี Annotation เพียง 20 หน้า? ทำไมต้องบันทึกทั้ง 500 หน้าเมื่อคุณสามารถดึง 20 หน้าที่เกี่ยวข้องและลดขนาดไฟล์ลงได้ 96 %?
+การทำงาน **save specific pdf pages** จะสกัดช่วงหน้าที่กำหนดจากเอกสารต้นฉบับโดยคงคอมเมนต์ทั้งหมดบนหน้าดังกล่าวไว้ มันสร้าง PDF ใหม่ที่มีขนาดเล็กกว่า ซึ่งมีเพียงหน้าที่เลือกเท่านั้น เหมาะสำหรับการแชร์หรือเก็บรักษาแบบเจาะจง.
 
-**การประมวลผลที่เร็วขึ้น**: ไฟล์ขนาดเล็กหมายถึงการอัปโหลด ดาวน์โหลด และประมวลผลที่เร็วกว่า ผู้ใช้ของคุณ (และเซิร์ฟเวอร์ของคุณ) จะขอบคุณคุณ
+## ทำไมต้องใช้ try with resources สำหรับการบันทึกหน้า?
 
-**ประสบการณ์ผู้ใช้ที่ดีกว่า**: ไม่มีใครอยากเลื่อนดูหลายร้อยหน้าเพื่อหาส่วนที่มี Annotation ให้พวกเขาได้สิ่งที่ต้องการโดยตรง
-
-**การปฏิบัติตามกฎระเบียบและความปลอดภัย**: ในอุตสาหกรรมที่มีการควบคุม คุณอาจได้รับอนุญาตให้แชร์เฉพาะส่วนของเอกสารเท่านั้น การบันทึกแบบเลือกทำให้การปฏิบัติตามกฎง่ายขึ้น
+การใช้ `try with resources` รับประกันว่าอินสแตนซ์ `Annotator` จะถูกทำลายทันทีเมื่อบล็อกสิ้นสุด การทำความสะอาดแบบกำหนดนี้ป้องกันข้อยกเว้น “file is locked” ที่พบบ่อยและทำให้ขนาด heap ของ JVM คาดเดาได้ — สิ่งสำคัญโดยเฉพาะเมื่อประมวลผล PDF ขนาดใหญ่หลายสิบไฟล์พร้อมกัน.
 
 ## ข้อกำหนดเบื้องต้นและการตั้งค่า
 
-### สิ่งที่คุณต้องมี
+### สิ่งที่คุณต้องการ
 
-- **Java Development Kit (JDK)**: เวอร์ชัน 8 หรือสูงกว่า (แนะนำ JDK 11+)  
-- **Maven หรือ Gradle**: สำหรับการจัดการ dependencies  
-- **GroupDocs.Annotation for Java**: เวอร์ชัน 25.2 หรือใหม่กว่า  
-- **ความรู้พื้นฐานของ Java**: เข้าใจการทำ I/O ของไฟล์และ OOP  
+- **JDK 8+** (แนะนำ JDK 11+)  
+- **Maven** หรือ **Gradle** สำหรับการจัดการ dependencies  
+- **GroupDocs.Annotation for Java** — เวอร์ชัน 25.2 หรือใหม่กว่า (รองรับรูปแบบกว่า 50)  
+- ความคุ้นเคยพื้นฐานกับ Java I/O และ OOP  
 
-### การตั้งค่า GroupDocs.Annotation for Java
+### การตั้งค่า GroupDocs.Annotation สำหรับ Java
 
 #### การกำหนดค่า Maven
 
-เพิ่มส่วนนี้ลงในไฟล์ `pom.xml` ของคุณ (คัดลอก‑วางเลย):
+เพิ่ม dependency นี้ลงในไฟล์ `pom.xml` ของคุณ (คัดลอก‑วางได้เลยที่นี่):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -84,11 +116,13 @@ weight: 1
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### การตั้งค่า Gradle (ถ้าคุณเป็นทีม Gradle)
+#### การตั้งค่า Gradle (หากคุณชอบ Gradle)
 
-```gradle
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -99,32 +133,34 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### การจัดการลิขสิทธิ์ของคุณ
+### การจัดการใบอนุญาตของคุณ
 
-นี่คือสิ่งที่บทแนะนำส่วนใหญ่ไม่ได้บอกคุณ: **เริ่มต้นด้วยเวอร์ชันทดลองฟรี** จริง ๆ อย่าให้เรื่องนี้ซับซ้อนเกินไป
+เริ่มต้นด้วยเวอร์ชันทดลองฟรี แล้วเปลี่ยนไปใช้ใบอนุญาตชั่วคราวหรือเต็มตามความต้องการ:
 
-- **Free Trial**: เหมาะสำหรับการทดสอบและพัฒนา – ดาวน์โหลดได้จาก [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: ต้องการเวลาประเมินเพิ่ม? รับ [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Full License**: พร้อมใช้งานจริง? [Purchase here](https://purchase.groupdocs.com/buy)
+- **Free trial:** เวอร์ชันทดลองฟรี เหมาะสำหรับการทดสอบและพัฒนา – ดาวน์โหลดจาก [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary license:** ต้องการเวลาประเมินเพิ่ม? รับ [temporary license](https://purchase.groupdocs.com/temporary-license/)  
+- **Full license:** พร้อมสำหรับการใช้งานจริง? [Purchase here](https://purchase.groupdocs.com/buy)  
 
-เคล็ดลับ: เวอร์ชันทดลองมีข้อจำกัดบางอย่าง แต่เพียงพอสำหรับทำตามบทเรียนนี้และสร้าง proof of concept
+> **Pro tip:** เวอร์ชันทดลองจะลบเพียงฟีเจอร์ขั้นสูงบางอย่าง ซึ่งเพียงพอสำหรับทำตามบทแนะนำนี้และสร้าง proof of concept
 
-## การใช้ try with resources java สำหรับการบันทึกหน้าแบบเลือก
+## try with resources ทำงานอย่างไรใน Java?
 
-เมื่อสภาพแวดล้อมพร้อมแล้ว มาดูว่า **try with resources java** ทำให้การทำงานกับช่วงหน้าเป็นเรื่องปลอดภัยและกระชับอย่างไร รูปแบบนี้ทำให้ `Annotator` ถูกทำลายโดยอัตโนมัติ ลดปัญหาไฟล์ล็อกและทำให้การใช้หน่วยความจำเป็นระเบียบ
+`try` `with` `resources` จะเรียก `close()` โดยอัตโนมัติบนอ็อบเจ็กต์ที่ implements `AutoCloseable` เมื่อบล็อกสิ้นสุด เมื่อคุณห่อหุ้มอินสแตนซ์ `Annotator` ด้วยโครงสร้างนี้ ไลบรารีจะปล่อยไฟล์แฮนด์เลและล้างบัฟเฟอร์ภายในโดยไม่ต้องเขียนโค้ดเพิ่มเติม ลดความเสี่ยงของการล็อกไฟล์ที่ค้างอยู่
 
-## การทำงานหลัก: การบันทึกช่วงหน้าที่เฉพาะ
+## การนำไปใช้หลัก: การบันทึกช่วงหน้าที่เฉพาะ
 
-### วิธีพื้นฐาน (เริ่มต้นที่นี่)
+### จุดอ้างอิงการกำหนด `Annotator`
 
-เริ่มต้นด้วยการทำงานที่ง่ายที่สุด ซึ่งครอบคลุมกรณีการใช้งาน 90 %:
+`Annotator` คือคลาสหลักของ GroupDocs.Annotation สำหรับการโหลด แก้ไข และบันทึกเอกสารที่มีคอมเมนต์ มันให้เมธอดเพื่อเข้าถึงคอมเมนต์ แก้ไขหน้า และส่งออกผลลัพธ์
 
-#### ขั้นตอนที่ 1: ตั้งค่าการจัดการเส้นทางไฟล์
+### ขั้นตอน 1: ตั้งค่าเครื่องมือช่วยจัดการเส้นทางไฟล์
 
-ก่อนอื่นให้สร้างคลาสยูทิลิตี้สำหรับจัดการเส้นทางไฟล์ (คุณจะขอบคุณฉันเมื่อต้องเปลี่ยนโฟลเดอร์)
+สร้าง helper เล็ก ๆ ที่สร้างเส้นทางไฟล์ผลลัพธ์อย่างสม่ำเสมอ:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -133,14 +169,16 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**ทำไมต้องใช้วิธีนี้?** มันทำให้ตรรกะของเส้นทางไฟล์อยู่ศูนย์กลางเดียวและทำให้การทดสอบง่ายขึ้น การใช้ `FilenameUtils` จะช่วยรักษานามสกุลไฟล์เดิมโดยอัตโนมัติ
+การรวมศูนย์ตรรกะของเส้นทางทำให้เปลี่ยนไดเรกทอรีได้ง่ายในภายหลังและทำให้โค้ดทดสอบได้ง่าย
 
-#### ขั้นตอนที่ 2: ทำการบันทึกช่วงหน้า
+### ขั้นตอน 2: ดำเนินการบันทึกช่วงหน้า
 
-นี่คือจุดที่เวทมนตร์เกิดขึ้น:
+โค้ดตัวอย่างต่อไปนี้แสดงตรรกะสำคัญ ใช้ `try with resources` เพื่อรับประกันการทำความสะอาด:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -158,17 +196,17 @@ public class SaveSpecificPageRange {
     }
 }
 ```
+```
 
-**สิ่งที่เกิดขึ้น:**
-- เราใช้บล็อก **try‑with‑resources java** (`try ( … )`) เพื่อให้ `Annotator` ปิดโดยอัตโนมัติ ลดปัญหาไฟล์ล็อก  
-- `setFirstPage(2)` และ `setLastPage(4)` กำหนดช่วงรวม (หน้า 2‑4)  
-- ช่วงนี้ **รวม** ทั้งสองขอบ – รายละเอียดที่ทำให้นักพัฒนาหลายคนสับสน
+- `setFirstPage(2)` และ `setLastPage(4)` กำหนดช่วง **รวม** (หน้าที่ 2‑4).  
+- `Annotator` จะถูกปิดโดยอัตโนมัติเมื่อบล็อกสิ้นสุด ป้องกันปัญหาไฟล์ล็อก.
 
 ### การกำหนดค่าเส้นทางไฟล์ขั้นสูง
 
-สำหรับแอปพลิเคชันระดับผลิต คุณอาจต้องการการจัดการเส้นทางที่ยืดหยุ่นมากขึ้น:
+สำหรับการใช้งานจริงคุณอาจต้องการตั้งชื่อแบบไดนามิก:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -187,32 +225,34 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-ตอนนี้คุณสามารถสร้างชื่อไฟล์เช่น `contract_pages_2-4.pdf` ได้โดยอัตโนมัติ
+ตอนนี้ไฟล์ผลลัพธ์จะมีชื่อเช่น `contract_pages_2-4.pdf` ทำให้ชัดเจนว่าหน้าใดถูกสกัด
 
 ## ข้อผิดพลาดทั่วไปและวิธีหลีกเลี่ยง
 
-### ข้อผิดพลาด #1: ความสับสนเรื่องดัชนีหน้า
+### ปัญหา #1: ความสับสนเรื่องดัชนีหน้า
 
-**ปัญหา**: สมมติว่าหน้าตั้งต้นจาก 0 (จริง ๆ แล้วไม่ใช่ใน GroupDocs.Annotation)
-
-**วิธีแก้**: การนับหน้าเริ่มจาก 1 เหมือนในเอกสารจริง หน้า 1 คือหน้าที่แรก ไม่ใช่หน้า 0
+**Problem:** สมมติว่าหมายเลขหน้าเริ่มที่ 0.  
+**Solution:** การนับหน้าของ GroupDocs.Annotation เริ่มที่ 1 ตรงกับที่ผู้ใช้เห็นในโปรแกรมดู PDF.
 
 ```java
+// ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
 saveOptions.setFirstPage(0);
 
 // Right - this starts from the actual first page
 saveOptions.setFirstPage(1);
 ```
+```
 
-### ข้อผิดพลาด #2: การรั่วไหลของทรัพยากร
+### ปัญหา #2: การรั่วไหลของทรัพยากร
 
-**ปัญหา**: ลืมปิด `Annotator` อย่างถูกต้อง ทำให้ไฟล์ล็อกและหน่วยความจำรั่วไหล
-
-**วิธีแก้**: ใช้ **try‑with‑resources java** เสมอหรือปิดด้วยตนเอง:
+**Problem:** ลืมปิด `Annotator` ทำให้ไฟล์ถูกล็อก.  
+**Solution:** ห่อ `Annotator` เสมอในบล็อก `try with resources` หรือเรียก `close()` อย่างชัดเจน.
 
 ```java
+// ```java
 // Good - automatic resource management
 try (final Annotator annotator = new Annotator(inputFile)) {
     // your code here
@@ -229,14 +269,15 @@ try {
     }
 }
 ```
+```
 
-### ข้อผิดพลาด #3: ช่วงหน้าที่ไม่ถูกต้อง
+### ปัญหา #3: ช่วงหน้าที่ไม่ถูกต้อง
 
-**ปัญหา**: ระบุช่วงหน้าที่ไม่มีอยู่ในเอกสาร
-
-**วิธีแก้**: ตรวจสอบความถูกต้องของช่วงก่อนดำเนินการ:
+**Problem:** ระบุช่วงที่เกินจำนวนหน้าของเอกสาร.  
+**Solution:** ตรวจสอบความถูกต้องของช่วงโดยอ้างอิงจาก `annotator.getDocumentInfo().getPagesCount()` ก่อนบันทึก.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
         // Get document info to check page count
@@ -260,14 +301,16 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
-## เคล็ดลับการเพิ่มประสิทธิภาพการทำงาน
+## เคล็ดลับการเพิ่มประสิทธิภาพ
 
 ### การจัดการหน่วยความจำสำหรับเอกสารขนาดใหญ่
 
-เมื่อทำงานกับเอกสารขนาดใหญ่ (100 + หน้า) การใช้หน่วยความจำเป็นสิ่งสำคัญ:
+เมื่อประมวลผล PDF ที่มีหน้า 100 + หน้า ให้เปิดการโหลดเฉพาะหน้าที่มีคอมเมนต์เพื่อให้ heap ต่ำ:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
         // Configure for lower memory usage
@@ -288,17 +331,18 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**กลยุทธ์การเพิ่มประสิทธิภาพหลัก**
-- `setLoadOnlyAnnotatedPages(true)` ลดขนาดหน่วยความจำที่ใช้  
-- `setAnnotationsOnly(true)` สร้างไฟล์ที่มีเพียงเลเยอร์ Annotation เท่านั้น  
-- ประมวลผลเอกสารเป็นชุดหากต้องจัดการไฟล์หลายไฟล์
+- `setLoadOnlyAnnotatedPages(true)` ลดการใช้หน่วยความจำโดยโหลดเฉพาะหน้าที่มีคอมเมนต์เท่านั้น.  
+- `setAnnotationsOnly(true)` สร้างไฟล์ที่มีน้ำหนักเบาซึ่งเก็บเฉพาะเลเยอร์คอมเมนต์.  
+- การประมวลผลเป็นชุดด้วย thread pool คงที่ช่วยหลีกเลี่ยงการใช้ทรัพยากรระบบจนเต็ม.
 
-### การประมวลผลเป็นชุดหลายเอกสาร
+### การประมวลผลหลายเอกสารเป็นชุด
 
-สำหรับสถานการณ์การผลิตที่ต้องประมวลผลเอกสารจำนวนมาก:
+สำหรับสถานการณ์ที่ต้องการ throughput สูง ให้ประมวลผลไฟล์เป็นชุด:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
@@ -313,14 +357,16 @@ public class BatchPageRangeSaver {
     }
 }
 ```
+```
 
-## การรวมกับเฟรมเวิร์กยอดนิยม
+## การรวมเข้ากับเฟรมเวิร์กยอดนิยม
 
-### การรวมกับ Spring Boot Document Service
+### การรวมบริการเอกสาร Spring Boot
 
-นี่คือตัวอย่างบริการ Spring Boot อย่างง่ายสำหรับการบันทึกช่วงหน้า (สังเกตคำว่า **spring boot document service**)
+ด้านล่างเป็นบริการ Spring Boot ขั้นต่ำที่รับ PDF สกัดช่วงหน้า และคืนไฟล์ใหม่เป็นอาร์เรย์ของไบต์.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -350,14 +396,18 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
 
-## การใช้งานจริงและกรณีศึกษา
+บริการนี้ใช้ constructor injection สำหรับ `AnnotatorFactory` ทำให้ controller มีขนาดเล็กและทดสอบได้ง่าย.
+
+## การประยุกต์ใช้งานและกรณีตัวอย่าง
 
 ### การประมวลผลเอกสารทางกฎหมาย
 
-สำนักงานกฎหมายมักต้องดึงส่วนเฉพาะของสัญญาหรือเอกสารศาล:
+บริษัทกฎหมายมักต้องการแชร์เฉพาะข้อที่ได้รับการตรวจสอบ การสกัดหน้าดังกล่าวช่วยลดความเสี่ยงของการเปิดเผยส่วนที่เป็นความลับ.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
         // Group consecutive pages for efficient processing
@@ -371,12 +421,14 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
 ### การจัดการเนื้อหาการศึกษา
 
-ครูผู้สอนดึงบทเฉพาะจากตำราเพื่อมอบหมายงานให้กับนักเรียน:
+ครูสามารถดึงเฉพาะบทที่มีคอมเมนต์ที่นักเรียนต้องการสำหรับการมอบหมายงาน ลดขนาดการดาวน์โหลดและเพิ่มความสนใจ.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -390,12 +442,14 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
-### การตรวจสอบคุณภาพ
+### การตรวจสอบคุณภาพ (QA) 
 
-ดึงเฉพาะหน้าที่มีคอมเมนต์รีวิวเพื่อการแก้ไขที่มุ่งเน้น:
+ทีม QA สามารถแยกหน้าที่มีคอมเมนต์ของผู้ตรวจสอบ ทำให้รอบการทำซ้ำเร็วขึ้น.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
@@ -417,30 +471,30 @@ public class QAReviewExtractor {
     }
 }
 ```
+```
 
-## สรุปแนวปฏิบัติที่ดีที่สุด
+## สรุปแนวทางปฏิบัติที่ดีที่สุด
 
-1. **ตรวจสอบพารามิเตอร์อินพุตเสมอ** – ตรวจสอบช่วงหน้าให้ถูกต้องก่อนประมวลผล  
-2. **ใช้ try‑with‑resources java** – ป้องกันการรั่วไหลของทรัพยากรและปัญหาไฟล์ล็อก  
-3. **จัดการข้อผิดพลาดอย่างเหมาะสม** – อย่าให้ไฟล์ที่มีปัญหาเดียวทำให้แบตช์ทั้งหมดล่ม  
-4. **คำนึงถึงการใช้หน่วยความจำ** – ใช้ `setLoadOnlyAnnotatedPages(true)` สำหรับเอกสารขนาดใหญ่  
-5. **ทดสอบกับหลายประเภทไฟล์** – PDF, Word, PowerPoint อาจทำงานแตกต่างกัน  
-6. **ตรวจสอบประสิทธิภาพ** – เฝ้าดูเวลาในการประมวลผลและการใช้หน่วยความจำในสภาพการผลิต
+1. **ตรวจสอบหมายเลขหน้า** ก่อนเรียกใช้การบันทึก.  
+2. **ใช้ `try with resources` เสมอ** เพื่อรับประกันว่า `Annotator` จะถูกปิด.  
+3. **เปิดใช้งาน `setLoadOnlyAnnotatedPages(true)`** สำหรับ PDF ขนาดใหญ่เพื่อควบคุมการใช้หน่วยความจำ.  
+4. **ทดสอบบนรูปแบบที่รองรับทั้งหมด** — GroupDocs.Annotation รองรับรูปแบบเข้าและออกกว่า 50 ประเภท รวมถึง PDF, DOCX, XLSX, PPTX, และไฟล์รูปภาพ.  
+5. **ตรวจสอบ heap ของ JVM** และปรับ `-Xmx` ตามความต้องการสำหรับงานเป็นชุด.  
 
 ## การแก้ไขปัญหาที่พบบ่อย
 
 ### ปัญหา: ข้อผิดพลาด “File is locked”
 
-**อาการ**: เกิด Exception ขณะพยายามบันทึก โดยระบุว่าไฟล์ถูกล็อก  
+**Symptoms:** มีข้อยกเว้นที่กล่าวถึงไฟล์ที่ถูกล็อกปรากฏระหว่าง `save()`  
+**Causes:**  
+- อินสแตนซ์ `Annotator` ก่อนหน้ายังไม่ได้ปิด.  
+- ไฟล์เปิดอยู่ในแอปพลิเคชันอื่น.  
+- สิทธิ์การเข้าถึงไฟล์ระบบไม่เพียงพอ.  
 
-**สาเหตุ**:  
-- `Annotator` ไม่ได้ปิดอย่างถูกต้องจากการทำงานก่อนหน้า  
-- ไฟล์ยังเปิดอยู่ในแอปพลิเคชันอื่น  
-- สิทธิ์ไม่เพียงพอ  
-
-**วิธีแก้**:
+**Solution:** ตรวจสอบให้แน่ใจว่า `Annotator` ทุกตัวห่อหุ้มใน `try with resources` และตรวจสอบการล็อกไฟล์ระดับ OS.
 
 ```java
+// ```java
 // Ensure proper cleanup
 try (final Annotator annotator = new Annotator(inputFile)) {
     // ... your code ...
@@ -455,61 +509,71 @@ if (!file.getParentFile().canWrite()) {
     throw new IllegalArgumentException("Cannot write to output directory");
 }
 ```
+```
 
-### ปัญหา: Out of Memory Errors
+### ปัญหา: ข้อผิดพลาด Out‑of‑memory
 
-**อาการ**: `OutOfMemoryError` ขณะประมวลผลเอกสารขนาดใหญ่  
+**Symptoms:** `OutOfMemoryError` เมื่อประมวลผล PDF ขนาดใหญ่.  
+**Solutions:**  
+1. เพิ่ม heap ของ JVM (`-Xmx2g` หรือสูงกว่า).  
+2. ใช้ `setLoadOnlyAnnotatedPages(true)` และ `setAnnotationsOnly(true)`.  
+3. ประมวลผลเอกสารเป็นชุดเล็กลง.
 
-**วิธีแก้**:  
-1. เพิ่มขนาด heap ของ JVM เช่น `-Xmx2g`  
-2. ใช้ตัวเลือกการโหลดที่ปรับแต่งตามที่แสดงไว้ก่อนหน้า  
-3. ประมวลผลเอกสารเป็นชุดเล็ก ๆ
+### ปัญหา: คอมเมนต์ไม่ถูกเก็บไว้
 
-### ปัญหา: Annotation ไม่ถูกเก็บไว้
-
-**อาการ**: ไฟล์ผลลัพธ์ไม่มี Annotation ดั้งเดิม  
-
-**วิธีแก้**: ตรวจสอบว่าคุณไม่ได้ลบ Annotation ออกโดยไม่ได้ตั้งใจ:
+**Symptoms:** ไฟล์ผลลัพธ์ไม่มีเครื่องหมายคอมเมนต์เดิม.  
+**Solution:** อย่าเปิด `setAnnotationsOnly(false)` โดยบังเอิญ; ให้ใช้ค่าเริ่มต้นเพื่อคงคอมเมนต์ไว้.
 
 ```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
+```
 
 ## คำถามที่พบบ่อย
 
-**ถาม: ฉันสามารถบันทึกหน้าที่ไม่ต่อเนื่อง (เช่น หน้า 1, 3, 7) ได้หรือไม่?**  
-ตอบ: ไม่ได้โดยตรงในหนึ่งการดำเนินการ คุณต้องทำการบันทึกแยกแต่ละช่วงแล้วรวมผลลัพธ์ภายหลัง
+**Q: ฉันสามารถบันทึกหน้าที่ไม่ต่อเนื่อง (เช่น 1, 3, 7) ได้หรือไม่?**  
+A: ไม่สามารถทำได้ด้วยการเรียก `SaveOptions` ครั้งเดียว ให้บันทึกแยกแต่ละช่วงแล้วรวมผลลัพธ์ภายหลัง.
 
-**ถาม: ฟีเจอร์นี้ทำงานกับเอกสารที่มีรหัสผ่านหรือไม่?**  
-ตอบ: ใช่ แต่คุณต้องระบุรหัสผ่านเมื่อสร้าง `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`
+**Q: วิธีนี้ทำงานกับเอกสารที่มีการป้องกันด้วยรหัสผ่านหรือไม่?**  
+A: ใช่ — ให้ใส่รหัสผ่านเมื่อสร้าง `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
-**ถาม: รองรับรูปแบบไฟล์ใดบ้าง?**  
-ตอบ: PDF, Microsoft Word, Excel, PowerPoint และอื่น ๆ อีกมาก ตรวจสอบ [เอกสารอย่างเป็นทางการ](https://docs.groupdocs.com/annotation/java/) เพื่อดูรายการเต็ม
+**Q: รองรับรูปแบบไฟล์ใดบ้าง?**  
+A: PDF, Microsoft Word, Excel, PowerPoint, และอื่น ๆ อีกมากมาย ดูที่ [official documentation](https://docs.groupdocs.com/annotation/java/) เพื่อดูรายการเต็ม.
 
-**ถาม: ฉันสามารถบันทึกเฉพาะ Annotation โดยไม่รวมเนื้อหาต้นฉบับได้หรือไม่?**  
-ตอบ: แน่นอน – ตั้งค่า `saveOptions.setAnnotationsOnly(true)` เพื่อสร้างไฟล์ที่มีเฉพาะ Annotation
+**Q: ฉันสามารถบันทึกเฉพาะคอมเมนต์โดยไม่รวมเนื้อหาต้นฉบับได้หรือไม่?**  
+A: แน่นอน — ตั้งค่า `saveOptions.setAnnotationsOnly(true)` เพื่อสร้างไฟล์ที่มีเฉพาะคอมเมนต์.
 
-**ถาม: จะจัดการกับเอกสารขนาดใหญ่มาก (1000+ หน้า) อย่างไร?**  
-ตอบ: ใช้ `setLoadOnlyAnnotatedPages(true)` ประมวลผลเป็นชิ้นส่วน และพิจารณาเพิ่ม heap ของ JVM
+**Q: ฉันจะจัดการกับเอกสารขนาดใหญ่มาก (1000+ หน้า) อย่างไร?**  
+A: ใช้ `setLoadOnlyAnnotatedPages(true)`, ประมวลผลเป็นชิ้นส่วน, และพิจารณาเพิ่มขนาด heap ของ JVM.
 
-**ถาม: มีวิธีพรีวิวหน้าก่อนบันทึกหรือไม่?**  
-ตอบ: GroupDocs.Annotation เน้นการประมวลผลมากกว่าการแสดงผล แต่คุณสามารถดึงข้อมูลเอกสาร (จำนวนหน้า, ตำแหน่ง Annotation) เพื่อช่วยตัดสินใจช่วงที่ต้องดึงได้
+**Q: มีวิธีดูตัวอย่างหน้าก่อนบันทึกหรือไม่?**  
+A: GroupDocs.Annotation มุ่งเน้นการประมวลผล, แต่คุณสามารถดึงจำนวนหน้าและตำแหน่งคอมเมนต์ผ่าน `annotator.getDocumentInfo()` เพื่อกำหนดช่วงที่ต้องการสกัดได้.
 
-## แหล่งข้อมูล
+## แหล่งข้อมูลเพิ่มเติม
 
-- **Documentation**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **Download**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Purchase**: [License Options](https://purchase.groupdocs.com/buy)  
-- **Free Trial**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Support**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+- เอกสาร: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- เอกสารอย่างเป็นทางการ: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- อ้างอิง API: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- ดาวน์โหลด: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- การปล่อยของ GroupDocs: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- ตัวเลือกใบอนุญาต: [License Options](https://purchase.groupdocs.com/buy)  
+- ซื้อที่นี่: [Purchase here](https://purchase.groupdocs.com/buy)  
+- เวอร์ชันทดลองฟรี: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- ใบอนุญาตชั่วคราว: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- สนับสนุน: [Community Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**อัปเดตล่าสุด:** 2026-03-14  
-**ทดสอบกับ:** GroupDocs.Annotation 25.2 (Java)  
+**อัปเดตล่าสุด:** 2026-09-25  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.2 (Java)  
 **ผู้เขียน:** GroupDocs
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [ลดขนาด PDF ด้วย Java และ GroupDocs.Annotation – คู่มือเต็ม](/annotation/java/document-saving/)  
+- [บันทึก PDF ที่มีคอมเมนต์โดยใช้ GroupDocs Java & Azure Blob](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)  
+- [โหลด PDF ที่ป้องกันด้วยรหัสผ่านโดยใช้ GroupDocs.Annotation Java](/annotation/java/advanced-features/)

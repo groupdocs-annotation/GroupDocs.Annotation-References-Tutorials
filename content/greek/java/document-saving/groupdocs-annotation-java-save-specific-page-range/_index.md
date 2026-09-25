@@ -1,75 +1,106 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: Μάθετε πώς να χρησιμοποιείτε το try‑with‑resources της Java για να αποθηκεύετε
-  συγκεκριμένες σελίδες από επισημασμένα έγγραφα με το GroupDocs.Annotation. Περιλαμβάνει
-  παράδειγμα υπηρεσίας εγγράφων Spring Boot.
-keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
-  document annotation tutorial, selective PDF page saving Java, extract annotated
-  pages
-lastmod: '2026-03-14'
-linktitle: Save Specific Pages Java Annotation
+date: '2026-09-25'
+description: Μάθετε πώς να αποθηκεύσετε συγκεκριμένες σελίδες pdf χρησιμοποιώντας
+  try resources στη Java με GroupDocs.Annotation. Περιλαμβάνει παράδειγμα υπηρεσίας
+  Spring Boot και συμβουλές απόδοσης.
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: Αποθήκευση Συγκεκριμένων Σελίδων Java Annotation
+og_description: Μάθετε πώς να αποθηκεύσετε συγκεκριμένες σελίδες pdf χρησιμοποιώντας
+  try resources στη Java με GroupDocs.Annotation. Οδηγός βήμα προς βήμα, συμβουλές
+  απόδοσης και ενσωμάτωση Spring Boot.
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: Πώς να αποθηκεύσετε συγκεκριμένες σελίδες pdf με try resources στη Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
 tags:
+- save specific pdf pages
 - groupdocs
-- java-annotation
-- document-processing
-- pdf-manipulation
-title: Δοκιμάστε με πόρους Java – Αποθήκευση συγκεκριμένων σελίδων από επισημασμένα
-  έγγραφα
+- java annotation
+- document processing
+- pdf manipulation
+title: Πώς να αποθηκεύσετε συγκεκριμένες σελίδες pdf με try resources στη Java
 type: docs
 url: /el/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# Πώς να Αποθηκεύσετε Συγκεκριμένες Σελίδες από Ανασκοπημένα Έγγραφα σε Java
+# Πώς να αποθηκεύσετε συγκεκριμένες σελίδες pdf από σχολιασμένα έγγραφα σε Java
+
+Όταν χρειάζεται να **αποθηκεύσετε συγκεκριμένες σελίδες pdf** από ένα μεγάλο, σχολιασμένο αρχείο, η χρήση του προτύπου *try with resources* της Java μαζί με το GroupDocs.Annotation σας παρέχει μια ασφαλή, αποδοτική σε μνήμη λύση. Αυτό το tutorial σας δείχνει πώς να ρυθμίσετε τη βιβλιοθήκη, να εξάγετε ένα εύρος σελίδων και να ενσωματώσετε τη λογική σε μια υπηρεσία Spring Boot — όλα ενώ διατηρείτε τον κώδικά σας καθαρό και τους πόρους σας σωστά απελευθερωμένους.
 
 ## Εισαγωγή
 
-Έχετε βρεθεί ποτέ να πνίγεστε σε τεράστια ανασκοπημένα έγγραφα όταν χρειάζεστε μόνο μερικές συγκεκριμένες σελίδες; Με το **try with resources java**, μπορείτε να εξάγετε αποδοτικά ακριβώς τις σελίδες που χρειάζεστε χρησιμοποιώντας το GroupDocs.Annotation. Είτε διαχειρίζεστε νομικά συμβόλαια, τεχνικά εγχειρίδια ή ερευνητικές εργασίες, η εξαγωγή μόνο των σχετικών σελίδων εξοικονομεί χώρο αποθήκευσης, επιταχύνει την επεξεργασία και διατηρεί τη ροή εργασίας σας οργανωμένη.
+`Annotator` είναι η κύρια κλάση στο GroupDocs.Annotation που φορτώνει ένα έγγραφο και παρέχει μεθόδους για διαχείριση και αποθήκευση σχολίων.  
+Σε πολλές επιχειρηματικές περιπτώσεις—νομικές συμβάσεις, τεχνικά εγχειρίδια ή ερευνητικές εργασίες—συχνά χρειάζεστε μόνο λίγες σελίδες που περιέχουν τα σχετικά σχόλια. Η εξαγωγή μόνο αυτών των σελίδων μειώνει το κόστος αποθήκευσης έως και 96 %, επιταχύνει την επεξεργασία downstream και σας βοηθά να παραμείνετε συμμορφωμένοι μοιράζοντας μόνο τα επιτρεπόμενα τμήματα.
 
-**Τι θα μάθετε μέχρι το τέλος:**
-- Ρύθμιση του GroupDocs.Annotation στο έργο Java (με τον σωστό τρόπο)  
-- Υλοποίηση αποθήκευσης επιλεγμένων σελίδων με καθαρό, συντηρήσιμο κώδικα  
-- Αποφυγή κοινών παγίδων που παρενοχλούν τους περισσότερους προγραμματιστές  
-- Βελτιστοποίηση απόδοσης για επεξεργασία μεγάλων εγγράφων  
-- Επίλυση προβλημάτων πριν γίνουν ενοχλητικά  
+**Τι θα μάθετε μέχρι το τέλος αυτού του οδηγού:**  
+- Εγκατάσταση και αδειοδότηση του GroupDocs.Annotation για Java  
+- Χρήση του `try with resources` για ασφαλή αποθήκευση εύρους σελίδων  
+- Διαχείριση μεγάλων PDF με χαμηλό φορτίο μνήμης  
+- Ενσωμάτωση της λογικής σε μια υπηρεσία εγγράφων Spring Boot  
+- Επίλυση κοινών προβλημάτων όπως κλειδωμένα αρχεία και σφάλματα έλλειψης μνήμης  
 
-## Γρήγορες Απαντήσεις
-- **Τι κάνει το “try with resources java”;** Κλείνει αυτόματα το Annotator, αποτρέποντας κλειδώσεις αρχείων και διαρροές μνήμης.  
-- **Ποια βιβλιοθήκη διαχειρίζεται την αποθήκευση περιοχής σελίδων;** Η `GroupDocs.Annotation` παρέχει `SaveOptions` με `setFirstPage`/`setLastPage`.  
-- **Μπορώ να το χρησιμοποιήσω σε υπηρεσία Spring Boot;** Ναι – δείτε την ενότητα “Spring Boot Document Service Integration”.  
-- **Χρειάζομαι άδεια;** Μια δωρεάν δοκιμή λειτουργεί για ανάπτυξη· απαιτείται πλήρης άδεια για παραγωγή.  
-- **Είναι ασφαλές για μεγάλα PDF (1000+ σελίδες);** Χρησιμοποιήστε `load‑only‑annotated‑pages` και επεξεργασία σε παρτίδες για χαμηλή χρήση μνήμης.  
+## Σύντομες απαντήσεις
+- **Τι κάνει το “try with resources java”;** Κλείνει αυτόματα το `Annotator`, αποτρέποντας κλειδώματα αρχείων και διαρροές μνήμης.  
+- **Ποια βιβλιοθήκη διαχειρίζεται την αποθήκευση εύρους σελίδων;** Η `GroupDocs.Annotation` παρέχει `SaveOptions` με `setFirstPage`/`setLastPage`. Το `SaveOptions` σας επιτρέπει να καθορίσετε ρυθμίσεις εξόδου όπως το εύρος σελίδων και αν θα συμπεριληφθούν μόνο τα σχόλια.  
+- **Μπορώ να το χρησιμοποιήσω σε υπηρεσία Spring Boot;** Ναι – δείτε την ενότητα “Spring Boot document service integration”.  
+- **Χρειάζομαι άδεια;** Η δωρεάν δοκιμή λειτουργεί για ανάπτυξη· απαιτείται πλήρης άδεια για παραγωγή.  
+- **Είναι ασφαλές για μεγάλα PDF (1000+ σελίδες);** Χρησιμοποιήστε τη φόρτωση μόνο σχολιασμένων σελίδων και επεξεργασία σε παρτίδες για να κρατήσετε τη χρήση μνήμης χαμηλή.  
 
-## Γιατί να Αποθηκεύσετε Συγκεκριμένες Σελίδες; (Πραγματικό Πλαίσιο)
+## Τι είναι η αποθήκευση συγκεκριμένων σελίδων pdf;
 
-Πριν βουτήξουμε στην τεχνική πλευρά, ας δούμε γιατί αυτή η δυνατότητα είναι καθοριστική:
+Η λειτουργία **save specific pdf pages** εξάγει ένα καθορισμένο διάστημα σελίδων από ένα πηγαίο έγγραφο διατηρώντας όλα τα σχόλια σε αυτές τις σελίδες. Δημιουργεί ένα νέο, μικρότερο PDF που περιέχει μόνο τις επιλεγμένες σελίδες, κάτι ιδανικό για στοχευμένη κοινοποίηση ή αρχειοθέτηση.
 
-**Αποδοτικότητα Αποθήκευσης**: Ένα εγχειρίδιο 500 σελίδων με σημειώσεις μόνο σε 20 σελίδες; Γιατί να αποθηκεύσετε όλες τις 500 όταν μπορείτε να εξάγετε τις 20 σχετικές και να μειώσετε το μέγεθος του αρχείου κατά 96 %;
+## Γιατί να χρησιμοποιήσετε try with resources για την αποθήκευση σελίδων;
 
-**Ταχύτερη Επεξεργασία**: Τα μικρότερα αρχεία σημαίνουν ταχύτερα ανέβασμα, λήψη και επεξεργασία. Οι χρήστες σας (και οι διακομιστές σας) θα το εκτιμήσουν.
+Η χρήση του `try with resources` εγγυάται ότι η παρουσία `Annotator` διαγράφεται αμέσως μόλις λήξει το μπλοκ. Αυτός ο καθοριστικός καθαρισμός αποτρέπει την κοινή εξαίρεση “file is locked” και διατηρεί το αποτύπωμα της στοίβας της JVM προβλέψιμο—ιδιαίτερα σημαντικό όταν επεξεργάζεστε δεκάδες μεγάλα PDF παράλληλα.
 
-**Καλύτερη Εμπειρία Χρήστη**: Κανείς δεν θέλει να κυλήσει μέσα από εκατοντάδες σελίδες για να βρει τις σημειωμένες ενότητες. Δώστε τους ακριβώς ό,τι χρειάζονται.
+## Προαπαιτούμενα και ρύθμιση
 
-**Συμμόρφωση και Ασφάλεια**: Σε ρυθμιζόμενους κλάδους, μπορεί να επιτρέπεται η κοινή χρήση μόνο συγκεκριμένων τμημάτων εγγράφων. Η επιλεκτική αποθήκευση διευκολύνει τη συμμόρφωση.
-
-## Προαπαιτούμενα και Ρύθμιση
-
-### Τι Θα Χρειαστεί
-
-- **Java Development Kit (JDK)**: Έκδοση 8 ή νεότερη (συνιστάται JDK 11+)  
-- **Maven ή Gradle**: Για διαχείριση εξαρτήσεων  
-- **GroupDocs.Annotation for Java**: Έκδοση 25.2 ή νεότερη  
-- **Βασικές γνώσεις Java**: Κατανόηση I/O αρχείων και OOP  
+### Τι θα χρειαστείτε
+- **JDK 8+** (συνιστάται JDK 11+)  
+- **Maven** ή **Gradle** για διαχείριση εξαρτήσεων  
+- **GroupDocs.Annotation for Java** — έκδοση 25.2 ή νεότερη (υποστηρίζει 50+ μορφές)  
+- Βασική εξοικείωση με Java I/O και OOP  
 
 ### Ρύθμιση του GroupDocs.Annotation για Java
 
-#### Maven Configuration
+#### Διαμόρφωση Maven
 
-Προσθέστε αυτό στο `pom.xml` (εμπιστευτείτε με, η αντιγραφή‑επικόλληση είναι φίλος σας εδώ):
+Προσθέστε την εξάρτηση στο `pom.xml` σας (η αντιγραφή‑επικόλληση είναι χρήσιμη εδώ):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -84,11 +115,13 @@ weight: 1
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### Gradle Setup (Αν Είστε Ομάδα Gradle)
+#### Ρύθμιση Gradle (αν προτιμάτε Gradle)
 
-```gradle
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -99,32 +132,34 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### Τακτοποίηση της Άδειας
+### Απόκτηση της άδειας
 
-Αυτό που οι περισσότεροι οδηγοί δεν λένε: **ξεκινήστε με τη δωρεάν δοκιμή**. Σοβαρά. Μην περιπλέκετε τα πράγματα.
+Ξεκινήστε με τη δωρεάν δοκιμή, μετά προχωρήστε σε προσωρινή ή πλήρη άδεια ανάλογα με τις ανάγκες.
 
-- **Δωρεάν Δοκιμή**: Ιδανική για δοκιμές και ανάπτυξη – αποκτήστε την από [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
-- **Προσωρινή Άδεια**: Χρειάζεστε περισσότερο χρόνο αξιολόγησης; Πάρτε μια [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Πλήρης Άδεια**: Έτοιμοι για παραγωγή; [Αγοράστε εδώ](https://purchase.groupdocs.com/buy)
+- **Δωρεάν δοκιμή:** Ιδανική για δοκιμές και ανάπτυξη – κατεβάστε την από [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Προσωρινή άδεια:** Χρειάζεστε περισσότερο χρόνο για αξιολόγηση; Αποκτήστε μια [temporary license](https://purchase.groupdocs.com/temporary-license/)  
+- **Πλήρης άδεια:** Έτοιμοι για παραγωγή; [Purchase here](https://purchase.groupdocs.com/buy)  
 
-Συμβουλή: Η δοκιμαστική έκδοση έχει κάποιους περιορισμούς, αλλά είναι περισσότερο από αρκετή για να ακολουθήσετε αυτόν τον οδηγό και να δημιουργήσετε ένα proof of concept.
+> **Συμβουλή:** Η δοκιμαστική έκδοση αφαιρεί μόνο μερικές προχωρημένες λειτουργίες, κάτι που είναι περισσότερο από αρκετό για να ακολουθήσετε αυτό το tutorial και να δημιουργήσετε ένα proof of concept.
 
-## Χρήση του try with resources java για επιλεκτική αποθήκευση σελίδων
+## Πώς λειτουργεί το try with resources στη Java;
 
-Τώρα που το περιβάλλον είναι έτοιμο, ας δούμε πώς το **try with resources java** κάνει την λειτουργία περιοχής σελίδων ασφαλή και σύντομη. Το πρότυπο εξασφαλίζει ότι η παρουσία `Annotator` κλείνει αυτόματα, εξαλείφοντας τα προβλήματα κλειδώματος αρχείων και διατηρώντας τη μνήμη οργανωμένη.
+Το `try` `with` `resources` καλεί αυτόματα το `close()` σε οποιοδήποτε αντικείμενο που υλοποιεί το `AutoCloseable` στο τέλος του μπλοκ. Όταν τυλίγετε μια παρουσία `Annotator` σε αυτή τη δομή, η βιβλιοθήκη απελευθερώνει τους χειριστές αρχείων και καθαρίζει εσωτερικές μνήμες χωρίς επιπλέον κώδικα, εξαλείφοντας τον κίνδυνο παραμένων κλειδωμάτων.
 
-## Κύρια Υλοποίηση: Αποθήκευση Συγκεκριμένων Περιοχών Σελίδων
+## Κύρια υλοποίηση: αποθήκευση συγκεκριμένων εύρους σελίδων
 
-### Η Βασική Προσέγγιση (Ξεκινήστε Εδώ)
+### Η άγκυρα ορισμού `Annotator`
 
-Ας ξεκινήσουμε με την πιο απλή υλοποίηση. Αυτό καλύπτει το 90 % των περιπτώσεων χρήσης:
+`Annotator` είναι η κύρια κλάση του GroupDocs.Annotation για φόρτωση, επεξεργασία και αποθήκευση σχολιασμένων εγγράφων. Παρέχει μεθόδους για πρόσβαση σε σχόλια, τροποποίηση σελίδων και εξαγωγή αποτελεσμάτων.
 
-#### Βήμα 1: Διαχείριση Διαδρομών Αρχείων
+### Βήμα 1: ρύθμιση βοηθητικών λειτουργιών διαδρομής αρχείων
 
-Πρώτα, δημιουργήστε μια βοηθητική κλάση για τη διαχείριση διαδρομών αρχείων (θα το ευχαριστήσετε αργότερα όταν χρειαστεί να αλλάξετε καταλόγους):
+Δημιουργήστε έναν μικρό βοηθό που δημιουργεί διαδρομές εξόδου με συνέπεια:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -133,14 +168,16 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**Γιατί αυτή η προσέγγιση;** Κρατά τη λογική των διαδρομών αρχείων κεντρικά και διευκολύνει τις δοκιμές. Η χρήση του `FilenameUtils` διασφαλίζει ότι διατηρείτε αυτόματα την αρχική επέκταση του αρχείου.
+Η κεντρικοποίηση της λογικής διαδρομών καθιστά εύκολο το μεταγενέστερο αλλαγή καταλόγων και διατηρεί τον κώδικά σας δοκιμαστικό.
 
-#### Βήμα 2: Υλοποίηση Αποθήκευσης Περιοχής Σελίδων
+### Βήμα 2: υλοποίηση αποθήκευσης εύρους σελίδων
 
-Εδώ συμβαίνει η μαγεία:
+Το παρακάτω απόσπασμα δείχνει τη βασική λογική. Χρησιμοποιεί `try with resources` για να εγγυηθεί τον καθαρισμό:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -158,17 +195,17 @@ public class SaveSpecificPageRange {
     }
 }
 ```
+```
 
-**Τι συμβαίνει εδώ:**
-- Χρησιμοποιούμε ένα **try‑with‑resources java** μπλοκ (`try ( … )`) ώστε το `Annotator` να κλείνει αυτόματα, εξαλείφοντας προβλήματα κλειδώματος αρχείων.  
-- `setFirstPage(2)` και `setLastPage(4)` ορίζουν την περιεκτική περιοχή (σελίδες 2‑4).  
-- Η περιοχή είναι **συμπεριλαμβανομένης** και των δύο άκρων – μια λεπτομέρεια που μπερδεύει πολλούς προγραμματιστές.
+- `setFirstPage(2)` και `setLastPage(4)` ορίζουν ένα **συμπεριλαμβανόμενο** εύρος (σελίδες 2‑4).  
+- Το `Annotator` κλείνει αυτόματα όταν το μπλοκ ολοκληρωθεί, αποτρέποντας προβλήματα κλειδώματος αρχείων.
 
-### Προηγμένη Διαμόρφωση Διαδρομής Αρχείου
+### Προχωρημένη διαμόρφωση διαδρομής αρχείων
 
-Για εφαρμογές παραγωγής, θα θέλετε πιο ευέλικτη διαχείριση διαδρομών:
+Για παραγωγή μπορεί να θέλετε δυναμική ονομασία:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -187,32 +224,34 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-Τώρα μπορείτε να δημιουργείτε ονόματα όπως `contract_pages_2-4.pdf` αυτόματα.
+Τώρα το αρχείο εξόδου θα ονομάζεται κάτι όπως `contract_pages_2-4.pdf`, καθιστώντας σαφές ποιες σελίδες εξήχθησαν.
 
-## Συνηθισμένες Παγίδες και Πώς να τις Αποφύγετε
+## Συνηθισμένα προβλήματα και πώς να τα αποφύγετε
 
-### Παγίδα #1: Σύγχυση Δεικτών Σελίδας
+### Παγίδα #1: σύγχυση δεικτών σελίδας
 
-**Το Πρόβλημα**: Υποθέτετε ότι οι αριθμοί σελίδων ξεκινούν από 0 (δεν είναι στην GroupDocs.Annotation).
-
-**Η Λύση**: Η αρίθμηση σελίδων ξεκινά από 1, όπως στα πραγματικά έγγραφα. Η σελίδα 1 είναι η πρώτη, όχι η σελίδα 0.
+**Πρόβλημα:** Υποθέτετε ότι οι αριθμοί σελίδων ξεκινούν από 0.  
+**Λύση:** Η αρίθμηση σελίδων στο GroupDocs.Annotation ξεκινά από 1, ταιριάζοντας με αυτό που βλέπουν οι χρήστες στους προβολείς PDF.
 
 ```java
+// ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
 saveOptions.setFirstPage(0);
 
 // Right - this starts from the actual first page
 saveOptions.setFirstPage(1);
 ```
+```
 
-### Παγίδα #2: Διαρροές Πόρων
+### Παγίδα #2: διαρροές πόρων
 
-**Το Πρόβλημα**: Ξεχάτε να κλείσετε το Annotator σωστά, οδηγώντας σε κλειδώματα αρχείων και διαρροές μνήμης.
-
-**Η Λύση**: Πάντα χρησιμοποιείτε **try‑with‑resources java** ή κλείσιμο με ρητό τρόπο:
+**Πρόβλημα:** Η παράλειψη κλεισίματος του `Annotator` οδηγεί σε κλειδωμένα αρχεία.  
+**Λύση:** Πάντα τυλίξτε το `Annotator` σε ένα μπλοκ `try with resources` ή καλέστε το `close()` ρητά.
 
 ```java
+// ```java
 // Good - automatic resource management
 try (final Annotator annotator = new Annotator(inputFile)) {
     // your code here
@@ -229,14 +268,15 @@ try {
     }
 }
 ```
+```
 
-### Παγίδα #3: Μη Έγκυρες Περιοχές Σελίδων
+### Παγίδα #3: μη έγκυρα εύρη σελίδων
 
-**Το Πρόβλημα**: Ορίζετε περιοχές σελίδων που δεν υπάρχουν στο έγγραφο.
-
-**Η Λύση**: Επικυρώστε πρώτα τις περιοχές:
+**Πρόβλημα:** Καθορισμός εύρους που υπερβαίνει τον αριθμό σελίδων του εγγράφου.  
+**Λύση:** Επικυρώστε το εύρος έναντι του `annotator.getDocumentInfo().getPagesCount()` πριν την αποθήκευση.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
         // Get document info to check page count
@@ -260,14 +300,16 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
-## Συμβουλές Βελτιστοποίησης Απόδοσης
+## Συμβουλές βελτιστοποίησης απόδοσης
 
-### Διαχείριση Μνήμης για Μεγάλα Έγγραφα
+### Διαχείριση μνήμης για μεγάλα έγγραφα
 
-Όταν επεξεργάζεστε μεγάλα έγγραφα (100 + σελίδες), η χρήση μνήμης γίνεται κρίσιμη:
+Κατά την επεξεργασία PDF με 100 + σελίδες, ενεργοποιήστε τη φόρτωση μόνο σχολιασμένων σελίδων για να κρατήσετε τη στοίβα χαμηλή:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
         // Configure for lower memory usage
@@ -288,17 +330,19 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**Κύριες στρατηγικές βελτιστοποίησης**
-- `setLoadOnlyAnnotatedPages(true)` μειώνει το αποτύπωμα μνήμης.  
-- `setAnnotationsOnly(true)` δημιουργεί ένα ελαφρύ αρχείο που περιέχει μόνο το στρώμα σημειώσεων.  
-- Επεξεργαστείτε έγγραφα σε παρτίδες αν έχετε πολλά αρχεία.
+Κύριες στρατηγικές:
+- `setLoadOnlyAnnotatedPages(true)` μειώνει τη χρήση μνήμης φορτώνοντας μόνο τις σελίδες που περιέχουν σχόλια.  
+- `setAnnotationsOnly(true)` δημιουργεί ένα ελαφρύ αρχείο που αποθηκεύει μόνο το επίπεδο σχολίων.  
+- Η επεξεργασία σε παρτίδες με σταθερό thread pool αποτρέπει την εξάντληση των πόρων του συστήματος.
 
-### Επεξεργασία Πολλών Εγγράφων σε Παρτίδες
+### Επεξεργασία σε παρτίδες πολλαπλών εγγράφων
 
-Για σενάρια παραγωγής όπου επεξεργάζεστε πολλά έγγραφα:
+Για σενάρια υψηλής απόδοσης, επεξεργαστείτε αρχεία σε παρτίδες:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
@@ -313,14 +357,16 @@ public class BatchPageRangeSaver {
     }
 }
 ```
+```
 
-## Ενσωμάτωση με Δημοφιλή Frameworks
+## Ενσωμάτωση με δημοφιλή πλαίσια
 
-### Spring Boot Document Service Integration
+### Ενσωμάτωση υπηρεσίας εγγράφων Spring Boot
 
-Ακολουθεί ένα απλό Spring Boot service για αποθήκευση περιοχής σελίδων (σημειώστε τη διατύπωση **spring boot document service**):
+Παρακάτω υπάρχει μια ελάχιστη υπηρεσία Spring Boot που λαμβάνει ένα PDF, εξάγει ένα εύρος σελίδων και επιστρέφει το νέο αρχείο ως byte array.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -350,14 +396,18 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
 
-## Πρακτικές Εφαρμογές και Περιπτώσεις Χρήσης
+Η υπηρεσία χρησιμοποιεί injection κατασκευής για το `AnnotatorFactory`, διατηρώντας τον ελεγκτή ελαφρύ και δοκιμαστικό.
 
-### Επεξεργασία Νομικών Εγγράφων
+## Πρακτικές εφαρμογές και περιπτώσεις χρήσης
 
-Οι νομικές εταιρείες συχνά χρειάζονται να εξάγουν συγκεκριμένα τμήματα συμβάσεων ή δικαστικών εγγράφων:
+### Επεξεργασία νομικών εγγράφων
+
+Τα νομικά γραφεία συχνά χρειάζονται να μοιραστούν μόνο τις ρήτρες που έχουν ελεγχθεί. Η εξαγωγή αυτών των σελίδων μειώνει τον κίνδυνο αποκάλυψης εμπιστευτικών τμημάτων.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
         // Group consecutive pages for efficient processing
@@ -371,12 +421,14 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
-### Διαχείριση Εκπαιδευτικού Περιεχομένου
+### Διαχείριση εκπαιδευτικού περιεχομένου
 
-Καθηγητές που εξάγουν συγκεκριμένα κεφάλαια από βιβλία για εργασίες μαθητών:
+Οι δάσκαλοι μπορούν να εξάγουν μόνο τα σχολιασμένα κεφάλαια που χρειάζονται οι μαθητές για μια εργασία, μειώνοντας το μέγεθος λήψης και βελτιώνοντας τη συγκέντρωση.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -390,12 +442,14 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
-### Ανασκοπήσεις Ποιοτικού Ελέγχου
+### Ανασκοπήσεις διασφάλισης ποιότητας
 
-Εξαγωγή μόνο των σελίδων με σχόλια ελέγχου για εστιασμένη αναθεώρηση:
+Οι ομάδες QA μπορούν να απομονώσουν σελίδες με σχόλια ελεγκτών, επιτρέποντας ταχύτερους κύκλους επανάληψης.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
@@ -417,30 +471,30 @@ public class QAReviewExtractor {
     }
 }
 ```
+```
 
-## Σύνοψη Καλών Πρακτικών
+## Σύνοψη βέλτιστων πρακτικών
 
-1. **Πάντα επικυρώστε τις παραμέτρους εισόδου** – ελέγξτε τις περιοχές σελίδων πριν την επεξεργασία.  
-2. **Χρησιμοποιήστε try‑with‑resources java** – αποτρέπει διαρροές πόρων και κλειδώματα αρχείων.  
-3. **Εφαρμόστε σωστή διαχείριση σφαλμάτων** – μην αφήνετε ένα κακό αρχείο να καταρρεύσει ολόκληρη τη παρτίδα.  
-4. **Λάβετε υπόψη τη χρήση μνήμης** – χρησιμοποιήστε `setLoadOnlyAnnotatedPages(true)` για μεγάλα έγγραφα.  
-5. **Δοκιμάστε με διάφορους τύπους αρχείων** – PDFs, Word, PowerPoint μπορεί να συμπεριφέρονται διαφορετικά.  
-6. **Παρακολουθήστε την απόδοση** – ελέγχετε τους χρόνους επεξεργασίας και τη μνήμη σε παραγωγή.  
+1. **Επικυρώστε τους αριθμούς σελίδων** πριν καλέσετε τη λειτουργία αποθήκευσης.  
+2. **Πάντα χρησιμοποιείτε `try with resources`** για να εγγυηθείτε ότι το `Annotator` κλείνει.  
+3. **Ενεργοποιήστε `setLoadOnlyAnnotatedPages(true)`** για μεγάλα PDF ώστε να διατηρείτε τη χρήση μνήμης υπό έλεγχο.  
+4. **Δοκιμάστε σε όλα τα υποστηριζόμενα μορφότυπα**—το GroupDocs.Annotation υποστηρίζει πάνω από 50 τύπους εισόδου και εξόδου, συμπεριλαμβανομένων PDF, DOCX, XLSX, PPTX και αρχείων εικόνας.  
+5. **Παρακολουθείτε τη στοίβα JVM** και προσαρμόστε το `-Xmx` όπως χρειάζεται για εργασίες σε παρτίδες.  
 
-## Επίλυση Συνηθισμένων Προβλημάτων
+## Επίλυση κοινών προβλημάτων
 
-### Πρόβλημα: Σφάλμα “File is locked”
+### Πρόβλημα: σφάλμα “File is locked”
 
-**Συμπτώματα**: Εξαίρεση κατά την αποθήκευση, με αναφορά σε κλειδώματα αρχείων.  
+**Συμπτώματα:** Μία εξαίρεση που αναφέρει κλειδωμένο αρχείο εμφανίζεται κατά το `save()`.  
+**Αιτίες:**  
+- Μια προηγούμενη παρουσία `Annotator` δεν κλείστηκε.  
+- Το αρχείο είναι ανοιχτό σε άλλη εφαρμογή.  
+- Ανεπαρκή δικαιώματα συστήματος αρχείων.  
 
-**Αιτίες**:  
-- Το Annotator δεν έχει κλείσει σωστά από προηγούμενη λειτουργία.  
-- Το αρχείο είναι ακόμη ανοιχτό σε άλλη εφαρμογή.  
-- Ανεπαρκή δικαιώματα.  
-
-**Λύσεις**:
+**Λύση:** Βεβαιωθείτε ότι κάθε `Annotator` τυλίγεται σε `try with resources` και ελέγξτε τα κλειδώματα αρχείων σε επίπεδο λειτουργικού συστήματος.
 
 ```java
+// ```java
 // Ensure proper cleanup
 try (final Annotator annotator = new Annotator(inputFile)) {
     // ... your code ...
@@ -455,61 +509,69 @@ if (!file.getParentFile().canWrite()) {
     throw new IllegalArgumentException("Cannot write to output directory");
 }
 ```
+```
 
-### Πρόβλημα: Σφάλματα Out of Memory
+### Πρόβλημα: σφάλματα έλλειψης μνήμης
 
-**Συμπτώματα**: `OutOfMemoryError` κατά την επεξεργασία μεγάλων εγγράφων.  
+**Συμπτώματα:** `OutOfMemoryError` κατά την επεξεργασία μεγάλων PDF.  
+**Λύσεις:**  
+1. Αυξήστε τη στοίβα JVM (`-Xmx2g` ή μεγαλύτερη).  
+2. Χρησιμοποιήστε `setLoadOnlyAnnotatedPages(true)` και `setAnnotationsOnly(true)`.  
+3. Επεξεργαστείτε έγγραφα σε μικρότερες παρτίδες.
 
-**Λύσεις**:  
-1. Αυξήστε το μέγεθος heap της JVM, π.χ., `-Xmx2g`.  
-2. Χρησιμοποιήστε τις βελτιστοποιημένες επιλογές φόρτωσης που εμφανίστηκαν νωρίτερα.  
-3. Επεξεργαστείτε τα έγγραφα σε μικρότερες παρτίδες.
+### Πρόβλημα: τα σχόλια δεν διατηρούνται
 
-### Πρόβλημα: Οι Σημειώσεις Δεν Διατηρούνται
-
-**Συμπτώματα**: Το αρχείο εξόδου δεν περιέχει τις αρχικές σημειώσεις.  
-
-**Λύση**: Βεβαιωθείτε ότι δεν αφαιρείτε τις σημειώσεις:
+**Συμπτώματα:** Το αρχείο εξόδου δεν περιέχει την αρχική σήμανση.  
+**Λύση:** Μην ενεργοποιήσετε κατά λάθος το `setAnnotationsOnly(false)`· διατηρήστε την προεπιλογή για να διατηρηθούν τα σχόλια.
 
 ```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
+```
 
-## Συχνές Ερωτήσεις
+## Συχνές ερωτήσεις
 
-**Ε: Μπορώ να αποθηκεύσω μη συνεχόμενες σελίδες (π.χ. σελίδες 1, 3, 7);**  
-Α: Δεν είναι δυνατόν απευθείας με μία λειτουργία. Πρέπει να εκτελέσετε ξεχωριστές αποθηκεύσεις για κάθε περιοχή ή να συνδυάσετε τα αποτελέσματα μετά.
+- **Ε: Μπορώ να αποθηκεύσω μη διαδοχικές σελίδες (π.χ., 1, 3, 7);**  
+  Α: Δεν είναι δυνατόν με μία κλήση `SaveOptions`. Εκτελέστε ξεχωριστές αποθηκεύσεις για κάθε εύρος και συγχωνεύστε τα αποτελέσματα μετά.
 
-**Ε: Λειτουργεί με έγγραφα που είναι προστατευμένα με κωδικό;**  
-Α: Ναι, αλλά πρέπει να παρέχετε τον κωδικό κατά τη δημιουργία του `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+- **Ε: Λειτουργεί αυτό με έγγραφα προστατευμένα με κωδικό;**  
+  Α: Ναι—παρέχετε τον κωδικό κατά τη δημιουργία του `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
-**Ε: Ποιοι τύποι αρχείων υποστηρίζονται;**  
-Α: PDF, Microsoft Word, Excel, PowerPoint και πολλοί άλλοι. Δείτε την [official documentation](https://docs.groupdocs.com/annotation/java/) για την πλήρη λίστα.
+- **Ε: Ποιοι τύποι αρχείων υποστηρίζονται;**  
+  Α: PDF, Microsoft Word, Excel, PowerPoint και πολλοί άλλοι. Δείτε την [official documentation](https://docs.groupdocs.com/annotation/java/) για την πλήρη λίστα.
 
-**Ε: Μπορώ να αποθηκεύσω μόνο τις σημειώσεις χωρίς το αρχικό περιεχόμενο;**  
-Α: Απόλυτα – ορίστε `saveOptions.setAnnotationsOnly(true)` για να δημιουργήσετε αρχείο μόνο με σημειώσεις.
+- **Ε: Μπορώ να αποθηκεύσω μόνο τα σχόλια χωρίς το αρχικό περιεχόμενο;**  
+  Α: Απόλυτα—ορίστε `saveOptions.setAnnotationsOnly(true)` για να δημιουργήσετε ένα αρχείο μόνο με σχόλια.
 
-**Ε: Πώς να διαχειριστώ πολύ μεγάλα έγγραφα (1000+ σελίδες);**  
-Α: Χρησιμοποιήστε `setLoadOnlyAnnotatedPages(true)`, επεξεργαστείτε σε τμήματα και σκεφτείτε την αύξηση του heap της JVM.
+- **Ε: Πώς να διαχειριστώ πολύ μεγάλα έγγραφα (1000+ σελίδες);**  
+  Α: Χρησιμοποιήστε `setLoadOnlyAnnotatedPages(true)`, επεξεργαστείτε σε τμήματα και σκεφτείτε την αύξηση του μεγέθους της στοίβας JVM.
 
-**Ε: Υπάρχει τρόπος να προεπισκοπήσω τις σελίδες πριν την αποθήκευση;**  
-Α: Το GroupDocs.Annotation εστιάζει στην επεξεργασία παρά στην προβολή, αλλά μπορείτε να ανακτήσετε πληροφορίες εγγράφου (αριθμός σελίδων, θέσεις σημειώσεων) για να αποφασίσετε ποιες περιοχές να εξάγετε.
+- **Ε: Υπάρχει τρόπος προεπισκόπησης των σελίδων πριν την αποθήκευση;**  
+  Α: Το GroupDocs.Annotation εστιάζει στην επεξεργασία, αλλά μπορείτε να λάβετε τον αριθμό σελίδων και τις θέσεις σχολίων μέσω `annotator.getDocumentInfo()` για να αποφασίσετε ποια εύρη θα εξάγετε.
 
-## Πόροι
+## Πρόσθετοι πόροι
 
-- **Τεκμηρίωση**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Αναφορά API**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **Λήψη**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Αγορά**: [License Options](https://purchase.groupdocs.com/buy)  
-- **Δωρεάν Δοκιμή**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Προσωρινή Άδεια**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Υποστήριξη**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+- Τεκμηρίωση: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- Επίσημη τεκμηρίωση: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- Αναφορά API: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- Λήψη: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- Εκδόσεις GroupDocs: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- Επιλογές άδειας: [License Options](https://purchase.groupdocs.com/buy)  
+- Αγορά εδώ: [Purchase here](https://purchase.groupdocs.com/buy)  
+- Δωρεάν δοκιμή: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- Προσωρινή άδεια: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- Υποστήριξη: [Community Forum](https://forum.groupdocs.com/c/annotation/)  
 
----
-
-**Τελευταία Ενημέρωση:** 2026-03-14  
-**Δοκιμάστηκε Με:** GroupDocs.Annotation 25.2 (Java)  
+**Τελευταία ενημέρωση:** 2026-09-25  
+**Δοκιμάστηκε με:** GroupDocs.Annotation 25.2 (Java)  
 **Συγγραφέας:** GroupDocs
+
+## Σχετικά μαθήματα
+
+- [Μείωση μεγέθους PDF Java με GroupDocs.Annotation – Πλήρης Οδηγός](/annotation/java/document-saving/)  
+- [Αποθήκευση σχολιασμένου PDF χρησιμοποιώντας GroupDocs Java & Azure Blob](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)  
+- [Φόρτωση PDF με κωδικό πρόσβασης με GroupDocs.Annotation Java](/annotation/java/advanced-features/load-protected-pdf-groupdocs-java/)
