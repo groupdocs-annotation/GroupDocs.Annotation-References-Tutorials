@@ -1,75 +1,99 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: GroupDocs.Annotation을 사용하여 주석이 달린 문서에서 특정 페이지를 저장하기 위해 Java의 try‑with‑resources를
-  사용하는 방법을 배웁니다. Spring Boot 문서 서비스 예제가 포함됩니다.
-keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
-  document annotation tutorial, selective PDF page saving Java, extract annotated
-  pages
-lastmod: '2026-03-14'
-linktitle: Save Specific Pages Java Annotation
+date: '2026-09-25'
+description: GroupDocs.Annotation을 사용하여 Java에서 try resources로 특정 PDF 페이지를 저장하는 방법을
+  배웁니다. Spring Boot 서비스 예제와 성능 팁이 포함됩니다.
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: 특정 페이지 저장 Java Annotation
+og_description: GroupDocs.Annotation을 사용하여 Java에서 try resources로 특정 PDF 페이지를 저장하는
+  방법을 단계별로 안내합니다. 성능 팁 및 Spring Boot 통합도 포함됩니다.
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: Java에서 try resources를 사용하여 특정 PDF 페이지 저장하는 방법
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
 tags:
+- save specific pdf pages
 - groupdocs
-- java-annotation
-- document-processing
-- pdf-manipulation
-title: Java try-with-resources – 주석이 달린 문서에서 특정 페이지 저장
+- java annotation
+- document processing
+- pdf manipulation
+title: Java에서 try resources를 사용하여 특정 PDF 페이지 저장하는 방법
 type: docs
 url: /ko/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# Java에서 주석이 달린 문서의 특정 페이지 저장 방법
+# 주석이 달린 문서에서 특정 PDF 페이지를 Java로 저장하는 방법
+
+대용량의 주석이 달린 파일에서 **특정 PDF 페이지 저장**이 필요할 때, Java의 *try with resources* 패턴과 GroupDocs.Annotation을 함께 사용하면 안전하고 메모리 효율적인 솔루션을 제공한다. 이 튜토리얼에서는 라이브러리 설정, 페이지 범위 추출, 그리고 로직을 Spring Boot 서비스에 통합하는 방법을 보여준다—코드를 깔끔하게 유지하고 리소스를 올바르게 해제하면서.
 
 ## 소개
 
-대용량 주석 문서에서 필요한 몇 페이지만 추출하고 싶을 때가 있나요? **try with resources java**를 사용하면 GroupDocs.Annotation을 통해 필요한 페이지만 효율적으로 추출할 수 있습니다. 법률 계약서, 기술 매뉴얼, 연구 논문 등 어떤 종류의 문서를 다루든, 관련 페이지만 추출하면 저장 공간을 절약하고 처리 속도를 높이며 워크플로우를 깔끔하게 유지할 수 있습니다.
-
-이 가이드에서는 라이브러리 설정부터 Java 애플리케이션을 원활하게 실행하도록 하는 고급 성능 팁까지, 알아야 할 모든 내용을 단계별로 안내합니다.
+`Annotator`는 GroupDocs.Annotation에서 문서를 로드하고 주석 처리 및 저장 메서드를 제공하는 주요 클래스이다.  
+많은 비즈니스 시나리오—법률 계약서, 기술 매뉴얼, 연구 논문 등—에서 관련 주석이 포함된 몇 페이지만 필요할 때가 있다. 해당 페이지만 추출하면 저장 비용을 최대 96 %까지 절감하고, 다운스트림 처리 속도를 높이며, 허가된 섹션만 공유함으로써 규정 준수를 돕는다.
 
 **이 가이드를 마치면 습득하게 될 내용:**
-- Java 프로젝트에 GroupDocs.Annotation을 올바르게 설정하는 방법
-- 깔끔하고 유지보수 가능한 코드로 선택적 페이지 저장 구현
-- 대부분의 개발자가 흔히 겪는 함정을 피하는 방법
-- 대용량 문서 처리 시 성능 최적화
-- 문제 발생을 사전에 방지하는 트러블슈팅 방법
+- GroupDocs.Annotation for Java 설치 및 라이선스 적용  
+- `try with resources`를 사용해 페이지 범위를 안전하게 저장  
+- 낮은 메모리 오버헤드로 대용량 PDF 처리  
+- Spring Boot 문서 서비스에 로직 삽입  
+- 파일 잠금 및 메모리 부족 오류와 같은 일반적인 함정 해결  
 
 ## 빠른 답변
-- **“try with resources java”는 무엇을 하나요?** Annotator를 자동으로 닫아 파일 잠금 및 메모리 누수를 방지합니다.  
-- **어떤 라이브러리가 페이지 범위 저장을 담당하나요?** `GroupDocs.Annotation`이 `SaveOptions`의 `setFirstPage`/`setLastPage`를 제공합니다.  
-- **Spring Boot 서비스에서도 사용할 수 있나요?** 예 – “Spring Boot Document Service Integration” 섹션을 참고하세요.  
-- **라이선스가 필요합니까?** 개발 단계에서는 무료 체험판으로 충분하고, 운영 환경에서는 정식 라이선스가 필요합니다.  
-- **대용량 PDF(1000페이지 이상)에도 안전한가요?** 주석이 있는 페이지만 로드하고 배치 처리를 사용하면 메모리 사용량을 낮출 수 있습니다.
+- **“try with resources java”는 무엇을 하나요?** `Annotator`를 자동으로 닫아 파일 잠금과 메모리 누수를 방지한다.  
+- **어떤 라이브러리가 페이지‑범위 저장을 담당하나요?** `GroupDocs.Annotation`은 `SaveOptions`와 `setFirstPage`/`setLastPage`를 제공한다. `SaveOptions`를 사용해 페이지 범위 및 주석만 포함 여부와 같은 출력 설정을 지정할 수 있다.  
+- **Spring Boot 서비스에서 사용할 수 있나요?** 예 – “Spring Boot 문서 서비스 통합” 섹션을 참고.  
+- **라이선스가 필요합니까?** 개발 단계에서는 무료 체험판으로 충분하고, 프로덕션에서는 정식 라이선스가 필요하다.  
+- **1000페이지 이상의 대용량 PDF에도 안전한가요?** `load‑only‑annotated‑pages`와 배치 처리를 사용하면 메모리 사용량을 낮출 수 있다.  
 
-## 왜 특정 페이지만 저장해야 할까? (실제 사례)
+## 특정 PDF 페이지 저장이란?
+**특정 PDF 페이지 저장** 작업은 원본 문서에서 정의된 페이지 구간을 추출하면서 해당 페이지의 모든 주석을 보존한다. 선택된 페이지만 포함하는 새롭고 작은 PDF가 생성되며, 이는 타깃 공유나 보관에 이상적이다.
 
-기술적인 내용에 들어가기 전에, 이 기능이 왜 중요한지 살펴보겠습니다:
+## 페이지 저장에 try resources를 사용하는 이유
+`try with resources`를 사용하면 블록이 종료되는 즉시 `Annotator` 인스턴스가 해제된다. 이 결정적인 정리는 흔히 발생하는 “파일이 잠김” 예외를 방지하고, 특히 여러 대용량 PDF를 병렬 처리할 때 JVM 힙 사용량을 예측 가능하게 만든다.
 
-**스토리지 효율성**: 500페이지 매뉴얼 중 주석이 달린 페이지가 20페이지만 있다면, 전체 500페이지를 저장할 필요가 없습니다. 필요한 20페이지만 추출하면 파일 크기를 96 % 정도 줄일 수 있습니다.
-
-**처리 속도 향상**: 파일이 작아지면 업로드·다운로드·처리 속도가 빨라집니다. 사용자와 서버 모두에게 이점이 됩니다.
-
-**사용자 경험 개선**: 수백 페이지를 스크롤하며 주석 부분을 찾을 필요가 없습니다. 필요한 부분만 제공하세요.
-
-**규정 준수 및 보안**: 규제 산업에서는 문서의 특정 섹션만 공유하도록 요구될 수 있습니다. 선택적 저장은 컴플라이언스를 쉽게 합니다.
-
-## 사전 준비 및 설정
+## 사전 요구 사항 및 설정
 
 ### 필요 사항
+- **JDK 8+** (권장: JDK 11+)  
+- **Maven** 또는 **Gradle**을 이용한 의존성 관리  
+- **GroupDocs.Annotation for Java** — 버전 25.2 이상 (50개 이상의 포맷 지원)  
+- Java I/O와 OOP에 대한 기본 지식  
 
-- **Java Development Kit (JDK)**: 버전 8 이상 (JDK 11+ 권장)  
-- **Maven 또는 Gradle**: 의존성 관리용  
-- **GroupDocs.Annotation for Java**: 버전 25.2 이상  
-- **기본 Java 지식**: 파일 I/O 및 OOP 이해  
-
-### GroupDocs.Annotation for Java 설정하기
-
-#### Maven 설정
-
-`pom.xml`에 다음을 추가하세요 (복사·붙여넣기가 가장 빠릅니다):
+### Maven 구성
+`pom.xml`에 다음 의존성을 추가한다(복사‑붙여넣기가 편리하다):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -84,11 +108,12 @@ weight: 1
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### Gradle 설정 (Gradle 사용 시)
-
-```gradle
+#### Gradle 설정 (Gradle를 선호하는 경우)
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -99,32 +124,32 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### 라이선스 준비하기
+### 라이선스 설정
+무료 체험판으로 시작한 뒤 필요에 따라 임시 또는 정식 라이선스로 전환한다:
 
-대부분 튜토리얼에서 언급하지 않는 팁: **무료 체험판부터 시작**하세요. 복잡하게 생각할 필요 없습니다.
+- **무료 체험판:** 테스트 및 개발에 적합 – [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)에서 다운로드  
+- **임시 라이선스:** 평가 기간을 연장하고 싶다면 [임시 라이선스](https://purchase.groupdocs.com/temporary-license/)를 받으세요  
+- **정식 라이선스:** 프로덕션 준비가 되었나요? [여기서 구매](https://purchase.groupdocs.com/buy)  
 
-- **무료 체험판**: 테스트 및 개발에 적합 – [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)에서 다운로드  
-- **임시 라이선스**: 평가 기간을 더 늘리고 싶나요? [임시 라이선스](https://purchase.groupdocs.com/temporary-license/)를 받으세요  
-- **정식 라이선스**: 운영 환경 준비가 되셨나요? [구매하기](https://purchase.groupdocs.com/buy)
+> **Pro tip:** 체험판은 몇 가지 고급 기능만 제거하므로 이 튜토리얼을 따라하고 개념 증명을 만드는 데 충분하다.
 
-팁: 체험판에는 일부 제한이 있지만, 이 튜토리얼을 따라가고 개념 증명을 만들기에 충분합니다.
+## Java에서 try with resources는 어떻게 작동하나요?
 
-## try with resources java를 이용한 선택적 페이지 저장
-
-환경이 준비되었으니, **try with resources java**가 페이지 범위 작업을 어떻게 안전하고 간결하게 만드는지 살펴보겠습니다. 이 패턴은 `Annotator` 인스턴스를 자동으로 해제해 파일 잠금 문제를 없애고 메모리 사용을 깔끔하게 유지합니다.
+`try` `with` `resources`는 `AutoCloseable`을 구현한 객체에 대해 블록 종료 시 자동으로 `close()`를 호출한다. `Annotator` 인스턴스를 이 구조로 감싸면 라이브러리가 파일 핸들을 해제하고 내부 버퍼를 정리해 추가 코딩 없이 잠금 위험을 없앤다.
 
 ## 핵심 구현: 특정 페이지 범위 저장
 
-### 기본 접근법 (시작점)
+### `Annotator` 정의 앵커
+`Annotator`는 GroupDocs.Annotation의 핵심 클래스이며, 문서 로드·편집·저장을 담당한다. 주석에 접근하고 페이지를 수정하며 결과를 내보내는 메서드를 제공한다.
 
-가장 간단한 구현부터 시작합니다. 대부분(90 %)의 사용 사례에 충분합니다:
+### 단계 1: 파일 경로 유틸리티 설정
 
-#### 단계 1: 파일 경로 관리 설정
-
-먼저 파일 경로를 처리하는 유틸리티 클래스를 만들세요 (디렉터리를 바꿀 때 큰 도움이 됩니다):
+출력 경로를 일관되게 생성하는 작은 헬퍼를 만든다:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -133,14 +158,16 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**왜 이렇게 할까요?** 파일 경로 로직을 중앙화하면 테스트가 쉬워지고, `FilenameUtils`를 사용해 원본 파일 확장자를 자동으로 유지할 수 있습니다.
+경로 로직을 중앙화하면 디렉터리 변경이 쉬워지고 코드 테스트가 용이해진다.
 
-#### 단계 2: 페이지 범위 저장 구현
+### 단계 2: 페이지 범위 저장 구현
 
-이제 핵심 로직을 보세요:
+다음 스니펫은 핵심 로직을 보여준다. `try with resources`를 사용해 정리 작업을 보장한다:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -150,25 +177,25 @@ public class SaveSpecificPageRange {
         
         try (final Annotator annotator = new Annotator(inputFile)) {
             SaveOptions saveOptions = new SaveOptions();
-            saveOptions.setFirstPage(2);  // Start from page 2
-            saveOptions.setLastPage(4);   // End at page 4
+            saveOptions.setFirstPage(2);  // 페이지 2부터 시작
+            saveOptions.setLastPage(4);   // 페이지 4에서 종료
             
             annotator.save(outputPath, saveOptions);
         }
     }
 }
 ```
+```
 
-**동작 설명:**
-- `try‑with‑resources java` 블록(`try ( … )`)을 사용해 `Annotator`를 자동으로 닫아 파일 잠금 문제를 방지합니다.  
-- `setFirstPage(2)`와 `setLastPage(4)`가 포함 범위(2‑4페이지)를 정의합니다.  
-- 범위는 양쪽 끝 모두 **포함**되며, 이는 많은 개발자가 놓치는 세부 사항입니다.
+- `setFirstPage(2)`와 `setLastPage(4)`는 **포함** 구간을 정의한다(페이지 2‑4).  
+- 블록이 종료될 때 `Annotator`가 자동으로 닫혀 파일 잠금 문제가 방지된다.  
 
 ### 고급 파일 경로 구성
 
-프로덕션 환경에서는 더 유연한 경로 처리가 필요합니다:
+프로덕션에서는 동적 파일명을 원할 수 있다:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -187,38 +214,38 @@ public class FilePathConfiguration {
     }
 }
 ```
-
-이제 `contract_pages_2-4.pdf`와 같은 파일명을 자동으로 생성할 수 있습니다.
-
-## 흔히 겪는 함정과 회피 방법
-
-### 함정 #1: 페이지 인덱스 혼동
-
-**문제**: 페이지 번호가 0부터 시작한다고 가정(실제는 그렇지 않음).  
-
-**해결**: 페이지 번호는 1부터 시작합니다. 페이지 1이 첫 페이지이며, 0은 존재하지 않습니다.
-
-```java
-// Wrong - this tries to start from page 0 (doesn't exist)
-saveOptions.setFirstPage(0);
-
-// Right - this starts from the actual first page
-saveOptions.setFirstPage(1);
 ```
 
-### 함정 #2: 리소스 누수
+이제 출력 파일은 `contract_pages_2-4.pdf`와 같이 명확한 이름이 붙으며, 어떤 페이지가 추출됐는지 바로 알 수 있다.
 
-**문제**: Annotator를 닫지 않아 파일 잠금 및 메모리 누수가 발생.  
+## 일반적인 함정 및 회피 방법
 
-**해결**: 항상 **try‑with‑resources java**를 사용하거나 명시적으로 닫으세요:
+### 함정 #1: 페이지 인덱스 혼동
+**문제:** 페이지 번호가 0부터 시작한다고 가정한다.  
+**해결:** GroupDocs.Annotation의 페이지 번호는 1부터 시작하므로 사용자에게 보이는 번호와 일치한다.
 
 ```java
-// Good - automatic resource management
+// ```java
+// 잘못된 예 - 페이지 0부터 시작하려고 함 (존재하지 않음)
+saveOptions.setFirstPage(0);
+
+// 올바른 예 - 실제 첫 페이지부터 시작
+saveOptions.setFirstPage(1);
+```
+```
+
+### 함정 #2: 리소스 누수
+**문제:** `Annotator`를 닫지 않아 파일이 잠긴다.  
+**해결:** 항상 `try with resources` 블록에 `Annotator`를 넣거나 `close()`를 명시적으로 호출한다.
+
+```java
+// ```java
+// 좋은 예 - 자동 리소스 관리
 try (final Annotator annotator = new Annotator(inputFile)) {
     // your code here
-} // automatically closes
+} // 자동으로 닫힘
 
-// Also acceptable - manual closing
+// 수동 닫기 예시
 Annotator annotator = null;
 try {
     annotator = new Annotator(inputFile);
@@ -229,21 +256,21 @@ try {
     }
 }
 ```
+```
 
-### 함정 #3: 잘못된 페이지 범위
-
-**문제**: 문서에 존재하지 않는 페이지 범위를 지정.  
-
-**해결**: 먼저 범위를 검증하세요:
+### 함정 #3: 잘못된 페이지 범위
+**문제:** 문서 페이지 수를 초과하는 범위를 지정한다.  
+**해결:** 저장 전에 `annotator.getDocumentInfo().getPagesCount()`로 범위를 검증한다.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
-        // Get document info to check page count
+        // 문서 정보를 얻어 페이지 수 확인
         DocumentInfo documentInfo = annotator.getDocument().getDocumentInfo();
         int totalPages = documentInfo.getPageCount();
         
-        // Validate range
+        // 범위 검증
         if (firstPage < 1 || firstPage > totalPages) {
             throw new IllegalArgumentException("First page out of range: " + firstPage);
         }
@@ -260,27 +287,28 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
 ## 성능 최적화 팁
 
 ### 대용량 문서 메모리 관리
-
-100 페이지 이상 문서를 다룰 때는 메모리 사용이 중요합니다:
+100 페이지 이상의 PDF를 처리할 때는 주석이 있는 페이지만 로드하도록 설정해 힙 사용량을 낮춘다:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
-        // Configure for lower memory usage
+        // 메모리 사용량을 낮추기 위한 설정
         LoadOptions loadOptions = new LoadOptions();
-        loadOptions.setLoadOnlyAnnotatedPages(true); // Only load pages with annotations
+        loadOptions.setLoadOnlyAnnotatedPages(true); // 주석이 있는 페이지만 로드
         
         try (final Annotator annotator = new Annotator(inputFile, loadOptions)) {
             SaveOptions saveOptions = new SaveOptions();
             saveOptions.setFirstPage(firstPage);
             saveOptions.setLastPage(lastPage);
             
-            // Optional: Enable compression for smaller output files
-            saveOptions.setAnnotationsOnly(false); // Set to true if you only want annotations
+            // 선택 사항: 작은 출력 파일을 위해 압축 활성화
+            saveOptions.setAnnotationsOnly(false); // 주석만 저장하려면 true로 설정
             
             String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
             annotator.save(outputPath, saveOptions);
@@ -288,17 +316,18 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**핵심 최적화 전략**
-- `setLoadOnlyAnnotatedPages(true)`로 메모리 사용량을 감소시킵니다.  
-- `setAnnotationsOnly(true)`를 사용하면 주석 레이어만 포함된 경량 파일을 생성합니다.  
-- 파일이 많다면 배치 처리로 나눠서 진행하세요.
+핵심 전략:
+- `setLoadOnlyAnnotatedPages(true)`는 주석이 있는 페이지만 로드해 메모리 사용량을 감소시킨다.  
+- `setAnnotationsOnly(true)`는 주석 레이어만 포함하는 경량 파일을 만든다.  
+- 고정 스레드 풀을 이용한 배치 처리로 시스템 자원 고갈을 방지한다.
 
-### 다중 문서 배치 처리
-
-많은 문서를 한 번에 처리해야 하는 프로덕션 시나리오:
+### 여러 문서 배치 처리
+고처리량 시나리오에서는 파일을 배치로 처리한다:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
@@ -307,20 +336,21 @@ public class BatchPageRangeSaver {
                 System.out.println("Successfully processed: " + inputFile);
             } catch (Exception e) {
                 System.err.println("Failed to process " + inputFile + ": " + e.getMessage());
-                // Log the error and continue with next file
+                // 오류를 기록하고 다음 파일로 계속 진행
             }
         }
     }
 }
 ```
+```
 
 ## 인기 프레임워크와의 통합
 
-### Spring Boot Document Service Integration
-
-다음은 페이지 범위 저장을 위한 간단한 Spring Boot 서비스 예시입니다 (※ **spring boot document service** 문구에 주목):
+### Spring Boot 문서 서비스 통합
+아래는 PDF를 받아 페이지 범위를 추출하고 새 파일을 바이트 배열로 반환하는 최소형 Spring Boot 서비스이다.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -350,17 +380,20 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
 
-## 실용적인 적용 사례
+서비스는 `AnnotatorFactory`에 대한 생성자 주입을 사용해 컨트롤러를 얇고 테스트 가능하게 만든다.
+
+## 실용적인 적용 사례 및 사용 예시
 
 ### 법률 문서 처리
-
-법무법인에서는 계약서나 법원 문서의 특정 섹션을 추출해야 할 때가 많습니다:
+법무법인에서는 검토된 조항만 공유해야 할 때가 많다. 해당 페이지만 추출하면 기밀 섹션 노출 위험을 줄일 수 있다.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
-        // Group consecutive pages for efficient processing
+        // 효율적인 처리를 위해 연속된 페이지를 그룹화
         List<PageRange> ranges = groupConsecutivePages(evidencePages);
         
         for (PageRange range : ranges) {
@@ -371,12 +404,13 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
 ### 교육 콘텐츠 관리
-
-교사가 교재의 특정 챕터를 학생 과제용으로 추출할 때:
+교사는 과제에 필요한 주석이 달린 챕터만 추출해 학생에게 제공함으로써 다운로드 용량을 줄이고 집중도를 높일 수 있다.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -390,16 +424,17 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
-### 품질 보증 리뷰
-
-검토 코멘트가 달린 페이지만 추출해 집중적인 수정 작업을 할 때:
+### 품질 보증 검토
+QA 팀은 리뷰어 코멘트가 있는 페이지만 분리해 빠른 반복 사이클을 구현한다.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
-            // Get pages with annotations
+            // 주석이 있는 페이지 가져오기
             List<Integer> annotatedPages = getAnnotatedPageNumbers(annotator);
             
             if (!annotatedPages.isEmpty()) {
@@ -417,36 +452,34 @@ public class QAReviewExtractor {
     }
 }
 ```
+```
 
 ## 모범 사례 요약
-
-1. **입력 파라미터를 항상 검증** – 페이지 범위를 사전에 확인하세요.  
-2. **try‑with‑resources java 사용** – 리소스 누수와 파일 잠금을 방지합니다.  
-3. **적절한 오류 처리 구현** – 하나의 파일 오류가 전체 배치를 중단하지 않게 합니다.  
-4. **메모리 사용 고려** – 대용량 문서는 `setLoadOnlyAnnotatedPages(true)`를 활용하세요.  
-5. **다양한 파일 형식 테스트** – PDF, Word, PowerPoint 등은 동작 방식이 다를 수 있습니다.  
-6. **성능 모니터링** – 운영 환경에서 처리 시간과 메모리를 지속적으로 확인하세요.
+1. **페이지 번호를 검증**한 후 저장 작업을 호출한다.  
+2. **항상 `try with resources`**를 사용해 `Annotator`가 닫히도록 보장한다.  
+3. **대용량 PDF**에는 `setLoadOnlyAnnotatedPages(true)`를 활성화해 메모리 사용량을 제어한다.  
+4. **지원 포맷 전체를 테스트**한다—GroupDocs.Annotation은 PDF, DOCX, XLSX, PPTX 및 이미지 파일 등 50개 이상의 입력·출력 형식을 지원한다.  
+5. **JVM 힙을 모니터링**하고 배치 작업에 맞게 `-Xmx` 옵션을 조정한다.  
 
 ## 일반적인 문제 해결
 
-### 문제: “File is locked” 오류
+### 문제: “파일이 잠김” 오류
+**증상:** `save()` 호출 시 파일이 잠겼다는 예외가 발생한다.  
+**원인:**  
+- 이전 `Annotator` 인스턴스를 닫지 않음.  
+- 파일이 다른 애플리케이션에서 열려 있음.  
+- 파일 시스템 권한 부족.  
 
-**증상**: 저장 시 파일 잠금 관련 예외 발생.  
-
-**원인**:  
-- 이전 작업에서 Annotator가 제대로 닫히지 않음.  
-- 다른 애플리케이션에서 파일이 열려 있음.  
-- 권한 부족.  
-
-**해결책**:
+**해결:** 모든 `Annotator`를 `try with resources`로 감싸고 OS 수준의 파일 잠금을 확인한다.
 
 ```java
-// Ensure proper cleanup
+// ```java
+// 적절한 정리 보장
 try (final Annotator annotator = new Annotator(inputFile)) {
     // ... your code ...
-} // Automatically releases file handles
+} // 자동으로 파일 핸들 해제
 
-// Verify file accessibility before processing
+// 처리 전 파일 접근성 확인
 File file = new File(inputFile);
 if (!file.canRead()) {
     throw new IllegalArgumentException("Cannot read input file: " + inputFile);
@@ -455,61 +488,71 @@ if (!file.getParentFile().canWrite()) {
     throw new IllegalArgumentException("Cannot write to output directory");
 }
 ```
+```
 
 ### 문제: 메모리 부족 오류
-
-**증상**: 대용량 문서 처리 중 `OutOfMemoryError` 발생.  
-
-**해결책**:  
-1. JVM 힙 크기 확대, 예: `-Xmx2g`.  
-2. 앞서 소개한 최적화 로딩 옵션 사용.  
-3. 문서를 더 작은 배치로 나눠 처리.
+**증상:** 대용량 PDF를 처리할 때 `OutOfMemoryError` 발생.  
+**해결:**  
+1. JVM 힙을 늘린다(`-Xmx2g` 이상).  
+2. `setLoadOnlyAnnotatedPages(true)`와 `setAnnotationsOnly(true)`를 사용한다.  
+3. 문서를 더 작은 배치로 나눠 처리한다.
 
 ### 문제: 주석이 보존되지 않음
-
-**증상**: 출력 파일에 원본 주석이 누락됨.  
-
-**해결책**: 주석을 제거하는 옵션을 사용하지 않았는지 확인:
+**증상:** 출력 파일에 원본 마크업이 누락된다.  
+**해결:** `setAnnotationsOnly(false)`가 기본값임을 확인하고, 실수로 `true`로 설정하지 않도록 한다.
 
 ```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
-saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
+saveOptions.setAnnotationsOnly(false); // 콘텐츠와 주석 모두 유지
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
+```
 ```
 
 ## 자주 묻는 질문
 
 **Q: 연속되지 않은 페이지(예: 1, 3, 7)를 저장할 수 있나요?**  
-A: 단일 작업으로는 직접 지원되지 않습니다. 각 범위별로 별도 저장을 수행하거나 결과를 나중에 합쳐야 합니다.
+A: 단일 `SaveOptions` 호출로는 불가능하다. 각 구간을 별도로 저장한 뒤 결과를 병합한다.
 
-**Q: 암호로 보호된 문서에도 적용할 수 있나요?**  
-A: 가능합니다. `Annotator` 생성 시 비밀번호를 제공하면 됩니다: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+**Q: 암호로 보호된 문서에도 작동하나요?**  
+A: 예—`Annotator` 생성 시 비밀번호를 제공하면 된다: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
-**Q: 지원되는 파일 형식은 무엇인가요?**  
-A: PDF, Microsoft Word, Excel, PowerPoint 등 다수. 전체 목록은 [공식 문서](https://docs.groupdocs.com/annotation/java/)를 참고하세요.
+**Q: 지원되는 파일 포맷은 무엇인가요?**  
+A: PDF, Microsoft Word, Excel, PowerPoint 등 다수. 전체 목록은 [공식 문서](https://docs.groupdocs.com/annotation/java/)를 참고.
 
 **Q: 원본 콘텐츠 없이 주석만 저장할 수 있나요?**  
-A: 가능합니다 – `saveOptions.setAnnotationsOnly(true)`를 설정하면 주석 전용 파일이 생성됩니다.
+A: 물론이다—`saveOptions.setAnnotationsOnly(true)`로 주석 전용 파일을 만든다.
 
 **Q: 1000페이지 이상의 초대형 문서는 어떻게 처리하나요?**  
-A: `setLoadOnlyAnnotatedPages(true)`를 사용하고, 문서를 청크 단위로 나눠 처리하며, 필요 시 JVM 힙을 확대하세요.
+A: `setLoadOnlyAnnotatedPages(true)`를 사용하고, 청크 단위로 처리하며, 필요 시 JVM 힙을 증설한다.
 
-**Q: 저장 전에 페이지를 미리볼 수 있나요?**  
-A: GroupDocs.Annotation은 주로 처리에 초점을 맞추므로 직접적인 미리보기 기능은 제공되지 않지만, 문서 정보(페이지 수, 주석 위치 등)를 조회해 추출 범위를 결정할 수 있습니다.
+**Q: 저장 전에 페이지를 미리 볼 수 있는 방법이 있나요?**  
+A: GroupDocs.Annotation은 처리에 중점을 두지만, `annotator.getDocumentInfo()`를 통해 페이지 수와 주석 위치를 조회해 추출 범위를 결정할 수 있다.
 
-## 참고 자료
+## 추가 자료
 
-- **문서**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API 레퍼런스**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **다운로드**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **구매**: [License Options](https://purchase.groupdocs.com/buy)  
-- **무료 체험**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **임시 라이선스**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **지원**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+- 문서: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- 공식 문서: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- API 레퍼런스: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- 다운로드: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- GroupDocs 릴리스: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- 라이선스 옵션: [License Options](https://purchase.groupdocs.com/buy)  
+- 구매: [Purchase here](https://purchase.groupdocs.com/buy)  
+- 무료 체험: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- 임시 라이선스: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- 지원: [Community Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**마지막 업데이트:** 2026-03-14  
+**마지막 업데이트:** 2026-09-25  
 **테스트 환경:** GroupDocs.Annotation 25.2 (Java)  
 **작성자:** GroupDocs
+
+## 관련 튜토리얼
+
+- [Reduce PDF Size Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
+- [Save Annotated PDF using GroupDocs Java & Azure Blob](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)  
+- [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/)
+
+⛔ START YOUR RESPONSE WITH THE FIRST CHARACTER OF THE TRANSLATED CONTENT.

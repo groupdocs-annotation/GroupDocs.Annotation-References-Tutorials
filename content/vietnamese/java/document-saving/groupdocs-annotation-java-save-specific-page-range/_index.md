@@ -1,76 +1,103 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: Tìm hiểu cách sử dụng try‑with‑resources trong Java để lưu các trang
-  cụ thể từ tài liệu đã chú thích bằng GroupDocs.Annotation. Bao gồm ví dụ dịch vụ
-  tài liệu Spring Boot.
-keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
-  document annotation tutorial, selective PDF page saving Java, extract annotated
-  pages
-lastmod: '2026-03-14'
-linktitle: Save Specific Pages Java Annotation
+date: '2026-09-25'
+description: Tìm hiểu cách lưu các trang pdf cụ thể bằng try resources trong Java
+  với GroupDocs.Annotation. Bao gồm ví dụ dịch vụ Spring Boot và các mẹo tối ưu hiệu
+  năng.
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: Lưu các trang cụ thể Java Annotation
+og_description: Tìm hiểu cách lưu các trang pdf cụ thể bằng try resources trong Java
+  với GroupDocs.Annotation. Hướng dẫn chi tiết từng bước, các mẹo tối ưu hiệu năng
+  và tích hợp Spring Boot.
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: Cách lưu các trang pdf cụ thể bằng try resources trong Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
 tags:
+- save specific pdf pages
 - groupdocs
-- java-annotation
-- document-processing
-- pdf-manipulation
-title: Thử với tài nguyên Java – Lưu các trang cụ thể từ tài liệu đã chú thích
+- java annotation
+- document processing
+- pdf manipulation
+title: Cách lưu các trang pdf cụ thể bằng try resources trong Java
 type: docs
 url: /vi/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# Cách Lưu Các Trang Cụ Thể Từ Tài Liệu Được Ghi Chú trong Java
+# Cách lưu các trang pdf cụ thể từ tài liệu đã chú thích trong Java
+
+Khi bạn cần **lưu các trang pdf cụ thể** từ một tệp lớn đã được chú thích, việc sử dụng mẫu *try with resources* của Java cùng với GroupDocs.Annotation cung cấp cho bạn một giải pháp an toàn, tiết kiệm bộ nhớ. Hướng dẫn này sẽ chỉ cho bạn cách thiết lập thư viện, trích xuất một phạm vi trang, và tích hợp logic vào dịch vụ Spring Boot — đồng thời giữ mã nguồn sạch sẽ và tài nguyên được giải phóng đúng cách.
 
 ## Giới thiệu
 
-Bạn đã bao giờ cảm thấy choáng ngợp trước những tài liệu được ghi chú khổng lồ khi chỉ cần một vài trang cụ thể? Với **try with resources java**, bạn có thể hiệu quả trích xuất chỉ những trang cần thiết bằng GroupDocs.Annotation. Dù bạn đang xử lý hợp đồng pháp lý, sách hướng dẫn kỹ thuật hay các bài nghiên cứu, việc chỉ lấy các trang liên quan giúp tiết kiệm dung lượng lưu trữ, tăng tốc xử lý và giữ cho quy trình làm việc gọn gàng.
+`Annotator` là lớp chính trong GroupDocs.Annotation dùng để tải tài liệu và cung cấp các phương thức xử lý và lưu chú thích.  
+Trong nhiều kịch bản kinh doanh—hợp đồng pháp lý, hướng dẫn kỹ thuật, hoặc các bài báo nghiên cứu—bạn thường chỉ cần một vài trang chứa các chú thích liên quan. Việc trích xuất chỉ những trang đó giảm chi phí lưu trữ lên tới 96 %, tăng tốc xử lý downstream, và giúp bạn tuân thủ bằng cách chỉ chia sẻ các phần được phép.
 
-Trong hướng dẫn này, chúng tôi sẽ hướng dẫn bạn mọi thứ cần biết – từ cài đặt thư viện đến các mẹo tối ưu hiệu năng nâng cao giúp ứng dụng Java của bạn chạy mượt mà.
-
-**Bạn sẽ nắm vững sau khi hoàn thành:**
-- Cài đặt GroupDocs.Annotation trong dự án Java của bạn (đúng cách)
-- Triển khai lưu trang chọn lọc với mã sạch, dễ bảo trì
-- Tránh các bẫy phổ biến khiến hầu hết các nhà phát triển gặp rắc rối
-- Tối ưu hiệu năng cho việc xử lý tài liệu lớn
-- Xử lý sự cố trước khi chúng trở thành rắc rối
+**Bạn sẽ thành thạo những gì sau khi hoàn thành hướng dẫn này:**
+- Cài đặt và cấp phép GroupDocs.Annotation cho Java  
+- Sử dụng `try with resources` để lưu an toàn một phạm vi trang  
+- Xử lý PDF lớn với mức tiêu thụ bộ nhớ thấp  
+- Nhúng logic vào dịch vụ tài liệu Spring Boot  
+- Khắc phục các vấn đề thường gặp như tệp bị khóa và lỗi hết bộ nhớ  
 
 ## Câu trả lời nhanh
-- **“try with resources java” làm gì?** Nó tự động đóng Annotator, ngăn chặn khóa tệp và rò rỉ bộ nhớ.  
-- **Thư viện nào xử lý lưu phạm vi trang?** `GroupDocs.Annotation` cung cấp `SaveOptions` với `setFirstPage`/`setLastPage`.  
-- **Tôi có thể sử dụng trong dịch vụ Spring Boot không?** Có – xem phần “Spring Boot Document Service Integration”.  
-- **Tôi có cần giấy phép không?** Bản dùng thử miễn phí đủ cho phát triển; giấy phép đầy đủ cần cho môi trường production.  
-- **Có an toàn cho PDF lớn (hơn 1000 trang) không?** Sử dụng load‑only‑annotated‑pages và xử lý theo lô để giữ mức sử dụng bộ nhớ thấp.
+- **Câu hỏi “try with resources java” làm gì?** Nó tự động đóng `Annotator`, ngăn chặn khóa tệp và rò rỉ bộ nhớ.  
+- **Thư viện nào xử lý việc lưu phạm vi trang?** `GroupDocs.Annotation` cung cấp `SaveOptions` với `setFirstPage`/`setLastPage`. `SaveOptions` cho phép bạn chỉ định các cài đặt đầu ra như phạm vi trang và có bao gồm chỉ chú thích hay không.  
+- **Tôi có thể sử dụng điều này trong dịch vụ Spring Boot không?** Có – xem phần “Spring Boot document service integration”.  
+- **Tôi có cần giấy phép không?** Bản dùng thử miễn phí hoạt động cho phát triển; giấy phép đầy đủ cần thiết cho môi trường production.  
+- **Có an toàn cho PDF lớn (1000+ trang) không?** Sử dụng load‑only‑annotated‑pages và xử lý batch để giữ mức sử dụng bộ nhớ thấp.  
 
-## Tại sao cần lưu các trang cụ thể? (Bối cảnh thực tế)
+## Lưu các trang pdf cụ thể là gì?
+Hoạt động **lưu các trang pdf cụ thể** trích xuất một khoảng trang xác định từ tài liệu nguồn đồng thời giữ lại tất cả các chú thích trên các trang đó. Nó tạo ra một PDF mới, nhỏ hơn, chỉ chứa các trang đã chọn, rất phù hợp cho việc chia sẻ mục tiêu hoặc lưu trữ.
 
-Trước khi đi vào phần kỹ thuật, hãy nói về lý do tính năng này là một bước đột phá:
+## Tại sao nên dùng try resources khi lưu trang?
+Việc sử dụng `try with resources` đảm bảo rằng thể hiện `Annotator` được giải phóng ngay khi khối kết thúc. Việc dọn dẹp quyết định này ngăn chặn ngoại lệ “file is locked” thường gặp và giữ dung lượng heap của JVM dự đoán được — đặc biệt quan trọng khi xử lý hàng chục PDF lớn song song.
 
-**Hiệu quả lưu trữ**: Một cuốn hướng dẫn 500 trang chỉ có ghi chú trên 20 trang? Tại sao phải lưu toàn bộ 500 khi bạn có thể trích xuất 20 trang liên quan và giảm kích thước tệp xuống 96 %?
-
-**Xử lý nhanh hơn**: Tệp nhỏ hơn đồng nghĩa với việc tải lên, tải xuống và xử lý nhanh hơn. Người dùng (và máy chủ) của bạn sẽ cảm ơn.
-
-**Trải nghiệm người dùng tốt hơn**: Không ai muốn cuộn qua hàng trăm trang để tìm các phần được ghi chú. Hãy cung cấp cho họ đúng những gì họ cần.
-
-**Tuân thủ và bảo mật**: Trong các ngành được quy định, bạn có thể chỉ được phép chia sẻ các phần cụ thể của tài liệu. Lưu chọn lọc giúp việc tuân thủ trở nên dễ dàng hơn.
-
-## Yêu cầu trước và Cài đặt
+## Yêu cầu trước và cài đặt
 
 ### Những gì bạn cần
-
-- **Java Development Kit (JDK)**: Phiên bản 8 trở lên (khuyến nghị JDK 11+)
-- **Maven hoặc Gradle**: Để quản lý phụ thuộc
-- **GroupDocs.Annotation for Java**: Phiên bản 25.2 trở lên
-- **Kiến thức Java cơ bản**: Hiểu về I/O tệp và OOP  
+- JDK 8+ (khuyến nghị JDK 11+)
+- Maven hoặc Gradle để quản lý phụ thuộc
+- GroupDocs.Annotation cho Java — phiên bản 25.2 hoặc mới hơn (hỗ trợ hơn 50 định dạng)
+- Kiến thức cơ bản về Java I/O và OOP
 
 ### Cài đặt GroupDocs.Annotation cho Java
 
 #### Cấu hình Maven
-
-Thêm đoạn này vào `pom.xml` của bạn (tin tôi đi, sao chép‑dán là cách nhanh nhất ở đây):
+Thêm phụ thuộc vào `pom.xml` của bạn (sao chép‑dán là cách nhanh nhất ở đây):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -85,11 +112,12 @@ Thêm đoạn này vào `pom.xml` của bạn (tin tôi đi, sao chép‑dán l�
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### Cấu hình Gradle (Nếu bạn là người dùng Gradle)
-
-```gradle
+#### Cài đặt Gradle (nếu bạn thích Gradle)
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -100,32 +128,30 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### Cách lấy giấy phép
+### Cấp phép
+Bắt đầu với bản dùng thử miễn phí, sau đó chuyển sang giấy phép tạm thời hoặc đầy đủ tùy nhu cầu:
 
-Đây là điều hầu hết các hướng dẫn không nói: **bắt đầu với bản dùng thử miễn phí**. Thực sự. Đừng làm phức tạp.
+- **Bản dùng thử:** Hoàn hảo cho việc thử nghiệm và phát triển – tải về từ [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Giấy phép tạm thời:** Cần thêm thời gian để đánh giá? Nhận một [temporary license](https://purchase.groupdocs.com/temporary-license/)  
+- **Giấy phép đầy đủ:** Sẵn sàng cho production? [Purchase here](https://purchase.groupdocs.com/buy)  
 
-- **Bản dùng thử**: Hoàn hảo cho việc thử nghiệm và phát triển - tải về từ [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
-- **Giấy phép tạm thời**: Cần thêm thời gian để đánh giá? Nhận một [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Giấy phép đầy đủ**: Sẵn sàng cho production? [Purchase here](https://purchase.groupdocs.com/buy)
+> **Mẹo:** Phiên bản dùng thử chỉ loại bỏ một vài tính năng nâng cao, đủ để theo dõi tutorial này và xây dựng proof of concept.
 
-Mẹo chuyên nghiệp: Phiên bản dùng thử có một số hạn chế, nhưng vẫn đủ để làm theo hướng dẫn này và xây dựng proof of concept.
+## Try with resources hoạt động như thế nào trong Java?
+`try` `with` `resources` tự động gọi `close()` trên bất kỳ đối tượng nào triển khai `AutoCloseable` khi khối kết thúc. Khi bạn bọc một thể hiện `Annotator` trong cấu trúc này, thư viện sẽ giải phóng các handle tệp và xóa bộ đệm nội bộ mà không cần mã bổ sung, loại bỏ rủi ro khóa tệp tồn tại.
 
-## Sử dụng try with resources java để lưu trang chọn lọc
+## Triển khai cốt lõi: lưu các phạm vi trang cụ thể
 
-Bây giờ môi trường đã sẵn sàng, hãy xem **try with resources java** làm cho thao tác lưu phạm vi trang an toàn và ngắn gọn như thế nào. Mẫu này đảm bảo đối tượng `Annotator` được giải phóng tự động, loại bỏ các vấn đề khóa tệp và giữ cho việc sử dụng bộ nhớ gọn gàng.
+### Mốc định nghĩa `Annotator`
+`Annotator` là lớp chính của GroupDocs.Annotation dùng để tải, chỉnh sửa và lưu tài liệu đã chú thích. Nó cung cấp các phương thức để truy cập chú thích, sửa đổi trang và xuất kết quả.
 
-## Triển khai cốt lõi: Lưu các phạm vi trang cụ thể
-
-### Cách tiếp cận cơ bản (Bắt đầu ở đây)
-
-Hãy bắt đầu với triển khai đơn giản nhất. Đây là những gì 90 % trường hợp sử dụng cần:
-
-#### Bước 1: Thiết lập quản lý đường dẫn tệp
-
-Đầu tiên, tạo một lớp tiện ích để xử lý đường dẫn tệp (bạn sẽ cảm ơn tôi khi cần thay đổi thư mục):
+### Bước 1: thiết lập tiện ích đường dẫn tệp
+Tạo một helper nhỏ để xây dựng đường dẫn đầu ra một cách nhất quán:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -134,14 +160,15 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**Tại sao lại dùng cách này?** Nó giữ logic đường dẫn tệp tập trung và giúp việc kiểm thử dễ dàng hơn. Sử dụng `FilenameUtils` đảm bảo tự động giữ nguyên phần mở rộng tệp gốc.
+Việc tập trung logic đường dẫn giúp dễ dàng thay đổi thư mục sau này và giữ mã nguồn có thể kiểm thử.
 
-#### Bước 2: Triển khai lưu phạm vi trang
-
-Đây là nơi phép thuật diễn ra:
+### Bước 2: triển khai lưu phạm vi trang
+Đoạn mã sau hiển thị logic cốt lõi. Nó sử dụng `try with resources` để đảm bảo dọn dẹp:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -159,17 +186,16 @@ public class SaveSpecificPageRange {
     }
 }
 ```
+```
 
-**Điều gì đang diễn ra ở đây:**
-- Chúng ta sử dụng khối **try‑with‑resources java** (`try ( … )`) để `Annotator` được đóng tự động, loại bỏ các vấn đề khóa tệp.  
-- `setFirstPage(2)` và `setLastPage(4)` xác định phạm vi bao gồm (trang 2‑4).  
-- Phạm vi **bao gồm** cả hai đầu – một chi tiết khiến nhiều nhà phát triển gặp rắc rối.
+- `setFirstPage(2)` và `setLastPage(4)` xác định một phạm vi **bao gồm** (trang 2‑4).  
+- `Annotator` được đóng tự động khi khối kết thúc, ngăn chặn các vấn đề khóa tệp.  
 
 ### Cấu hình đường dẫn tệp nâng cao
-
-Đối với ứng dụng production, bạn sẽ muốn xử lý đường dẫn linh hoạt hơn:
+Trong môi trường production bạn có thể muốn đặt tên động:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -188,32 +214,32 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-Bây giờ bạn có thể tự động tạo tên như `contract_pages_2-4.pdf`.
+Bây giờ tệp đầu ra sẽ có tên như `contract_pages_2-4.pdf`, rõ ràng cho biết các trang đã được trích xuất.
 
-## Các bẫy phổ biến và cách tránh chúng
+## Những lỗi thường gặp và cách tránh
 
-### Bẫy #1: Nhầm lẫn chỉ số trang
-
-**Vấn đề**: Giả sử số trang bắt đầu từ 0 (trong GroupDocs.Annotation không phải như vậy).
-
-**Giải pháp**: Đánh số trang bắt đầu từ 1, giống như trong tài liệu thực. Trang 1 là trang đầu tiên, không phải trang 0.
+### Cạm bẫy #1: nhầm lẫn chỉ số trang
+**Vấn đề:** Giả sử số trang bắt đầu từ 0.  
+**Giải pháp:** Đánh số trang trong GroupDocs.Annotation bắt đầu từ 1, khớp với những gì người dùng thấy trong trình xem PDF.
 
 ```java
+// ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
 saveOptions.setFirstPage(0);
 
 // Right - this starts from the actual first page
 saveOptions.setFirstPage(1);
 ```
+```
 
-### Bẫy #2: Rò rỉ tài nguyên
-
-**Vấn đề**: Quên đóng Annotator đúng cách, dẫn đến khóa tệp và rò rỉ bộ nhớ.
-
-**Giải pháp**: Luôn sử dụng **try‑with‑resources java** hoặc đóng một cách rõ ràng:
+### Cạm bẫy #2: rò rỉ tài nguyên
+**Vấn đề:** Quên đóng `Annotator` dẫn đến tệp bị khóa.  
+**Giải pháp:** Luôn bọc `Annotator` trong khối `try with resources` hoặc gọi `close()` một cách rõ ràng.
 
 ```java
+// ```java
 // Good - automatic resource management
 try (final Annotator annotator = new Annotator(inputFile)) {
     // your code here
@@ -230,14 +256,14 @@ try {
     }
 }
 ```
+```
 
-### Bẫy #3: Phạm vi trang không hợp lệ
-
-**Vấn đề**: Chỉ định phạm vi trang không tồn tại trong tài liệu.
-
-**Giải pháp**: Xác thực phạm vi trước:
+### Cạm bẫy #3: phạm vi trang không hợp lệ
+**Vấn đề:** Chỉ định một phạm vi vượt quá số trang của tài liệu.  
+**Giải pháp:** Xác thực phạm vi dựa trên `annotator.getDocumentInfo().getPagesCount()` trước khi lưu.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
         // Get document info to check page count
@@ -261,14 +287,15 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
 ## Mẹo tối ưu hiệu năng
 
 ### Quản lý bộ nhớ cho tài liệu lớn
-
-Khi xử lý tài liệu lớn (hơn 100 trang), việc sử dụng bộ nhớ trở nên quan trọng:
+Khi xử lý PDF có hơn 100 trang, bật tải chỉ các trang có chú thích để giữ heap thấp:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
         // Configure for lower memory usage
@@ -289,17 +316,18 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**Chiến lược tối ưu chính**
-- `setLoadOnlyAnnotatedPages(true)` giảm lượng bộ nhớ sử dụng.  
-- `setAnnotationsOnly(true)` tạo tệp nhẹ chỉ chứa lớp ghi chú.  
-- Xử lý tài liệu theo lô nếu có nhiều tệp.
+Chiến lược chính:
+- `setLoadOnlyAnnotatedPages(true)` giảm mức sử dụng bộ nhớ bằng cách chỉ tải các trang có chú thích.  
+- `setAnnotationsOnly(true)` tạo tệp nhẹ chỉ lưu lớp chú thích.  
+- Xử lý batch với thread pool cố định tránh cạn kiệt tài nguyên hệ thống.
 
-### Xử lý hàng loạt nhiều tài liệu
-
-Trong các kịch bản production khi bạn xử lý nhiều tài liệu:
+### Xử lý batch nhiều tài liệu
+Trong các kịch bản throughput cao, xử lý tệp theo batch:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
@@ -314,14 +342,15 @@ public class BatchPageRangeSaver {
     }
 }
 ```
+```
 
 ## Tích hợp với các framework phổ biến
 
-### Tích hợp dịch vụ tài liệu Spring Boot
-
-Đây là một dịch vụ Spring Boot đơn giản cho việc lưu phạm vi trang (lưu ý cụm từ **spring boot document service**):
+### Spring Boot document service integration
+Dưới đây là một dịch vụ Spring Boot tối thiểu nhận PDF, trích xuất phạm vi trang và trả về tệp mới dưới dạng mảng byte.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -351,14 +380,17 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
+
+Dịch vụ sử dụng injection qua constructor cho `AnnotatorFactory`, giữ controller gọn nhẹ và dễ kiểm thử.
 
 ## Ứng dụng thực tế và các trường hợp sử dụng
 
 ### Xử lý tài liệu pháp lý
-
-Các công ty luật thường cần trích xuất các phần cụ thể của hợp đồng hoặc tài liệu tòa án:
+Các công ty luật thường cần chia sẻ chỉ các điều khoản đã được xem xét. Việc trích xuất các trang đó giảm nguy cơ lộ các phần bí mật.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
         // Group consecutive pages for efficient processing
@@ -372,12 +404,13 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
 ### Quản lý nội dung giáo dục
-
-Giáo viên trích xuất các chương cụ thể từ sách giáo khoa cho bài tập của học sinh:
+Giáo viên có thể lấy ra chỉ các chương đã chú thích mà học sinh cần cho bài tập, giảm kích thước tải xuống và tăng tập trung.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -391,12 +424,13 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
 ### Đánh giá kiểm soát chất lượng
-
-Chỉ trích xuất các trang có bình luận đánh giá để sửa đổi tập trung:
+Các đội QA có thể cô lập các trang có bình luận của reviewer, giúp vòng lặp nhanh hơn.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
@@ -418,30 +452,28 @@ public class QAReviewExtractor {
     }
 }
 ```
+```
 
-## Tóm tắt các thực hành tốt nhất
-
-1. **Luôn xác thực các tham số đầu vào** – kiểm tra phạm vi trang trước khi xử lý.  
-2. **Sử dụng try‑with‑resources java** – ngăn ngừa rò rỉ tài nguyên và vấn đề khóa tệp.  
-3. **Triển khai xử lý lỗi đúng cách** – không để một tệp lỗi làm sập toàn bộ lô.  
-4. **Xem xét việc sử dụng bộ nhớ** – dùng `setLoadOnlyAnnotatedPages(true)` cho tài liệu lớn.  
-5. **Kiểm thử với nhiều loại tệp** – PDF, Word, PowerPoint có thể hoạt động khác nhau.  
-6. **Giám sát hiệu năng** – theo dõi thời gian xử lý và bộ nhớ trong môi trường production.
+## Tóm tắt các thực tiễn tốt nhất
+1. **Xác thực số trang** trước khi gọi thao tác lưu.  
+2. **Luôn sử dụng `try with resources`** để đảm bảo `Annotator` được đóng.  
+3. **Bật `setLoadOnlyAnnotatedPages(true)`** cho PDF lớn để kiểm soát mức sử dụng bộ nhớ.  
+4. **Kiểm thử trên các định dạng được hỗ trợ** — GroupDocs.Annotation hỗ trợ hơn 50 loại đầu vào và đầu ra, bao gồm PDF, DOCX, XLSX, PPTX và các tệp ảnh.  
+5. **Giám sát heap JVM** và điều chỉnh `-Xmx` khi cần cho các job batch.  
 
 ## Khắc phục các vấn đề thường gặp
 
-### Vấn đề: Lỗi “File is locked”
+### Vấn đề: lỗi “File is locked”
+**Triệu chứng:** Ngoại lệ đề cập tới tệp bị khóa xuất hiện trong `save()`.  
+**Nguyên nhân:**  
+- Một thể hiện `Annotator` trước đó không được đóng.  
+- Tệp đang mở trong ứng dụng khác.  
+- Quyền hệ thống tệp không đủ.  
 
-**Triệu chứng**: Ngoại lệ được ném khi cố gắng lưu, đề cập đến khóa tệp.  
-
-**Nguyên nhân**:  
-- Annotator không được đóng đúng cách từ thao tác trước.  
-- Tệp vẫn mở trong ứng dụng khác.  
-- Quyền không đủ.  
-
-**Giải pháp**:
+**Giải pháp:** Đảm bảo mọi `Annotator` được bọc trong `try with resources` và kiểm tra khóa tệp ở mức OS.
 
 ```java
+// ```java
 // Ensure proper cleanup
 try (final Annotator annotator = new Annotator(inputFile)) {
     // ... your code ...
@@ -456,61 +488,70 @@ if (!file.getParentFile().canWrite()) {
     throw new IllegalArgumentException("Cannot write to output directory");
 }
 ```
+```
 
-### Vấn đề: Lỗi Out of Memory
+### Vấn đề: lỗi Out‑of‑memory
+**Triệu chứng:** `OutOfMemoryError` khi xử lý PDF lớn.  
 
-**Triệu chứng**: `OutOfMemoryError` khi xử lý tài liệu lớn.  
+**Giải pháp:**  
+1. Tăng heap JVM (`-Xmx2g` hoặc cao hơn).  
+2. Sử dụng `setLoadOnlyAnnotatedPages(true)` và `setAnnotationsOnly(true)`.  
+3. Xử lý tài liệu theo batch nhỏ hơn.  
 
-**Giải pháp**:  
-1. Tăng kích thước heap JVM, ví dụ `-Xmx2g`.  
-2. Sử dụng các tùy chọn tải tối ưu đã trình bày ở trên.  
-3. Xử lý tài liệu theo các lô nhỏ hơn.
+### Vấn đề: chú thích không được giữ lại
+**Triệu chứng:** Tệp đầu ra thiếu các đánh dấu gốc.  
 
-### Vấn đề: Ghi chú không được giữ lại
-
-**Triệu chứng**: Tệp đầu ra không chứa các ghi chú gốc.  
-
-**Giải pháp**: Đảm bảo bạn không loại bỏ các ghi chú:
+**Giải pháp:** Không vô tình bật `setAnnotationsOnly(false)`; giữ mặc định để giữ lại chú thích.
 
 ```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
+```
 
 ## Câu hỏi thường gặp
 
-**Q: Tôi có thể lưu các trang không liên tiếp (như trang 1, 3, 7) không?**  
-A: Không thể trực tiếp trong một thao tác duy nhất. Bạn cần thực hiện lưu riêng cho mỗi phạm vi hoặc kết hợp kết quả sau đó.
+**Hỏi:** Tôi có thể lưu các trang không liên tiếp (ví dụ 1, 3, 7) không?  
+**Đáp:** Không thể với một lời gọi `SaveOptions` duy nhất. Cần thực hiện lưu riêng cho mỗi phạm vi và sau đó hợp nhất kết quả.
 
-**Q: Điều này có hoạt động với tài liệu được bảo vệ bằng mật khẩu không?**  
-A: Có, nhưng bạn phải cung cấp mật khẩu khi tạo `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+**Hỏi:** Điều này có hoạt động với tài liệu được bảo vệ bằng mật khẩu không?  
+**Đáp:** Có — cung cấp mật khẩu khi khởi tạo `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
-**Q: Những định dạng tệp nào được hỗ trợ?**  
-A: PDF, Microsoft Word, Excel, PowerPoint và nhiều định dạng khác. Kiểm tra [official documentation](https://docs.groupdocs.com/annotation/java/) để xem danh sách đầy đủ.
+**Hỏi:** Các định dạng tệp nào được hỗ trợ?  
+**Đáp:** PDF, Microsoft Word, Excel, PowerPoint và nhiều định dạng khác. Xem [official documentation](https://docs.groupdocs.com/annotation/java/) để biết danh sách đầy đủ.
 
-**Q: Tôi có thể lưu chỉ các ghi chú mà không có nội dung gốc không?**  
-A: Chắc chắn – đặt `saveOptions.setAnnotationsOnly(true)` để tạo tệp chỉ chứa ghi chú.
+**Hỏi:** Tôi có thể lưu chỉ chú thích mà không có nội dung gốc không?  
+**Đáp:** Chắc chắn — đặt `saveOptions.setAnnotationsOnly(true)` để tạo tệp chỉ chứa chú thích.
 
-**Q: Làm sao để xử lý tài liệu rất lớn (hơn 1000 trang)?**  
-A: Sử dụng `setLoadOnlyAnnotatedPages(true)`, xử lý theo từng phần, và cân nhắc tăng heap JVM.
+**Hỏi:** Làm sao xử lý tài liệu rất lớn (1000+ trang)?  
+**Đáp:** Sử dụng `setLoadOnlyAnnotatedPages(true)`, xử lý theo từng khối, và cân nhắc tăng kích thước heap JVM.
 
-**Q: Có cách nào để xem trước các trang trước khi lưu không?**  
-A: GroupDocs.Annotation tập trung vào xử lý hơn là hiển thị, nhưng bạn có thể lấy thông tin tài liệu (số trang, vị trí ghi chú) để giúp quyết định phạm vi cần trích xuất.
+**Hỏi:** Có cách xem trước các trang trước khi lưu không?  
+**Đáp:** GroupDocs.Annotation tập trung vào xử lý, nhưng bạn có thể lấy số trang và vị trí chú thích qua `annotator.getDocumentInfo()` để quyết định phạm vi cần trích xuất.
 
-## Tài nguyên
-
-- **Documentation**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API Reference**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **Download**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Purchase**: [License Options](https://purchase.groupdocs.com/buy)  
-- **Free Trial**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Support**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+## Tài nguyên bổ sung
+- Tài liệu: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- Tài liệu chính thức: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- Tham chiếu API: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- Tải xuống: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- Các bản phát hành GroupDocs: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- Các tùy chọn giấy phép: [License Options](https://purchase.groupdocs.com/buy)  
+- Mua tại đây: [Purchase here](https://purchase.groupdocs.com/buy)  
+- Dùng thử miễn phí: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- Giấy phép tạm thời: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- Hỗ trợ: [Community Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Cập nhật lần cuối:** 2026-03-14  
-**Đã kiểm tra với:** GroupDocs.Annotation 25.2 (Java)  
+**Cập nhật lần cuối:** 2026-09-25  
+**Đã kiểm thử với:** GroupDocs.Annotation 25.2 (Java)  
 **Tác giả:** GroupDocs
+
+## Các hướng dẫn liên quan
+
+- [Giảm kích thước PDF Java với GroupDocs.Annotation – Hướng dẫn đầy đủ](/annotation/java/document-saving/)  
+- [Lưu PDF đã chú thích bằng GroupDocs Java & Azure Blob](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)  
+- [Tải PDF bảo vệ bằng mật khẩu với GroupDocs.Annotation Java](/annotation/java/advanced-features/)

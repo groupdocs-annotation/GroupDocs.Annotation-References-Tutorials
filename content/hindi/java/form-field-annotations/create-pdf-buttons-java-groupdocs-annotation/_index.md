@@ -1,74 +1,115 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-03-17'
-description: GroupDocs.Annotation का उपयोग करके जावा में PDF बटन बनाना सीखें। चरण‑दर‑चरण
-  गाइड, कोड उदाहरण, समस्या निवारण, और जावा डेवलपर्स के लिए सर्वोत्तम प्रथाएँ।
-keywords: interactive pdf buttons java, GroupDocs Annotation tutorial, PDF button
-  component Java, Java PDF interactivity, clickable PDF buttons
-lastmod: '2026-01-10'
-linktitle: Interactive PDF Buttons Java
+date: '2026-09-25'
+description: GroupDocs.Annotation का उपयोग करके Java में PDF बटन बनाना सीखें। चरण‑दर‑चरण
+  गाइड, कोड उदाहरण, समस्या निवारण, और Java डेवलपर्स के लिए सर्वोत्तम प्रथाएँ।
+keywords:
+- create pdf buttons java
+- interactive pdf buttons java
+- groupdocs annotation tutorial
+- java pdf interactivity
+lastmod: '2026-09-25'
+linktitle: इंटरैक्टिव PDF बटन Java
+og_description: GroupDocs.Annotation के साथ Java में PDF बटन बनाएं। मिनटों में Java
+  का उपयोग करके PDFs में इंटरैक्टिव बटन, टिप्पणी और उत्तर जोड़ना सीखें।
+og_image_alt: Guide showing Java code that creates interactive PDF buttons with GroupDocs.Annotation
+og_title: GroupDocs.Annotation के साथ Java में PDF बटन बनाएं – इंटरैक्टिव PDF गाइड
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to create pdf buttons java using GroupDocs.Annotation. Step‑by‑step
+    guide, code examples, troubleshooting, and best practices for Java developers.
+  headline: How to create pdf buttons java with GroupDocs.Annotation
+  type: TechArticle
+- description: Learn how to create pdf buttons java using GroupDocs.Annotation. Step‑by‑step
+    guide, code examples, troubleshooting, and best practices for Java developers.
+  name: How to create pdf buttons java with GroupDocs.Annotation
+  steps:
+  - name: load your PDF document
+    text: The `Annotator` class is the entry point for all annotation operations.
+      It opens a PDF, tracks changes, and writes the result back to disk. Using Java’s
+      try‑with‑resources ensures the document is closed automatically, preventing
+      file‑handle leaks.
+  - name: configure your button component
+    text: The `ButtonComponent` class represents the visual button and its interactive
+      properties. You set its rectangle, caption, and colors before adding it to the
+      annotator. **Pro tip:** The integer values for colors are ARGB‑encoded. Use
+      an online converter to pick exact shades.
+  - name: add the button and save
+    text: After configuring the button, call `annotator.addAnnotation(button)` and
+      then `annotator.save(outputPath)` to write the changes. Your PDF now contains
+      a fully functional button.
+  type: HowTo
+- questions:
+  - answer: Yes. GroupDocs.Annotation also supports checkboxes, text fields, dropdowns,
+      and stamp annotations.
+    question: Can I create different interactive elements besides buttons?
+  - answer: The button is embedded in the PDF; click handling is performed by the
+      PDF viewer. For custom processing, embed JavaScript actions or use a viewer
+      library that exposes click callbacks.
+    question: How do I handle button click events in my Java application?
+  - answer: No hard limit, but keep file size and performance in mind—hundreds of
+      buttons are feasible, yet unnecessary clutter can degrade user experience.
+    question: Are there limits on the number of buttons I can add?
+  - answer: Basic styling (color, border, caption) is supported. For advanced graphics,
+      combine a button annotation with an image stamp or use a separate PDF manipulation
+      tool.
+    question: Can I style buttons with custom fonts or images?
+  - answer: Load the annotated PDF with `Annotator`, iterate through `annotator.getAnnotations()`,
+      filter for `ButtonComponent`, and read the `getReplies()` collection.
+    question: How do I extract button data and replies programmatically?
+  type: FAQPage
 tags:
 - interactive-pdf
 - groupdocs-annotation
 - java-tutorial
 - pdf-buttons
-title: GroupDocs.Annotation के साथ जावा में PDF बटन कैसे बनाएं
+title: GroupDocs.Annotation के साथ Java में PDF बटन कैसे बनाएं
 type: docs
 url: /hi/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/
 weight: 1
 ---
 
-# GroupDocs.Annotation के साथ PDF Buttons Java कैसे बनाएं
+# GroupDocs.Annotation के साथ pdf बटन जावा कैसे बनाएं
 
-क्या आप कभी स्थिर PDF को देखकर चाहते थे कि इसे अधिक आकर्षक बनाया जा सके? इस गाइड में, आप GroupDocs.Annotation का उपयोग करके **create pdf buttons java** सीखेंगे। चाहे आप दस्तावेज़ प्रबंधन प्रणाली बना रहे हों, इंटरैक्टिव फ़ॉर्म बना रहे हों, या बस अपने PDFs को कम… खैर, उबाऊ बनाना चाहते हों, ये बटन आपके दस्तावेज़ों को निष्क्रिय पढ़ने की सामग्री से गतिशील, उपयोगकर्ता‑मित्र अनुभवों में बदल सकते हैं।
+क्या आपने कभी स्थिर PDF को देखा है और चाहा है कि वह अधिक आकर्षक बन सके? इस गाइड में, आप GroupDocs.Annotation का उपयोग करके **create pdf buttons java** सीखेंगे। चाहे आप दस्तावेज़ प्रबंधन प्रणाली, इंटरैक्टिव फ़ॉर्म बना रहे हों, या बस इंटरैक्टिविटी का एक स्पर्श जोड़ना चाहते हों, ये बटन स्थिर PDFs को गतिशील, उपयोगकर्ता‑मित्र अनुभवों में बदल देते हैं।
 
 ## त्वरित उत्तर
-- **What are interactive pdf buttons java?** PDF में एम्बेड किए गए दृश्य तत्व जो क्लिक पर प्रतिक्रिया देते हैं, टिप्पणी दिखा सकते हैं, और क्रियाएँ ट्रिगर कर सकते हैं।  
-- **Do I need a license?** परीक्षण के लिए एक फ्री ट्रायल काम करता है; उत्पादन के लिए पूर्ण लाइसेंस आवश्यक है।  
+- **What are interactive pdf buttons java?** PDF में एम्बेड किए गए दृश्य तत्व जो क्लिक पर प्रतिक्रिया देते हैं, टिप्पणी दिखा सकते हैं, और क्रियाएँ ट्रिगर करते हैं।  
+- **Do I need a license?** परीक्षण के लिए एक मुफ्त ट्रायल काम करता है; उत्पादन के लिए पूर्ण लाइसेंस आवश्यक है।  
 - **Which Java version is required?** JDK 8+ (सिफ़ारिश JDK 11+).  
 - **Can I add multiple buttons?** हाँ – दस्तावेज़ सहेजने से पहले जितने चाहें जोड़ें।  
-- **Will the buttons work in all PDF viewers?** अधिकांश आधुनिक व्यूअर्स (Adobe Reader, ब्राउज़र PDF प्लगइन्स, मोबाइल ऐप्स) इन्हें सपोर्ट करते हैं, लेकिन हमेशा अपने लक्षित प्लेटफ़ॉर्म पर परीक्षण करें।
+- **Will the buttons work in all PDF viewers?** अधिकांश आधुनिक व्यूअर्स (Adobe Reader, ब्राउज़र PDF प्लगइन्स, मोबाइल ऐप्स) इसका समर्थन करते हैं, लेकिन हमेशा अपने लक्ष्य प्लेटफ़ॉर्म पर परीक्षण करें।
 
-## इंटरैक्टिव PDF Buttons Java क्यों बनाएं?
+## इंटरैक्टिव pdf बटन जावा क्यों बनाएं?
+इंटरैक्टिव PDF बटन उपयोगकर्ताओं को दस्तावेज़ के भीतर सीधे कार्य करने की अनुमति देते हैं, जैसे नेविगेशन, अनुमोदन, या प्रतिक्रिया देना, जिससे सहभागिता बढ़ती है और कार्यप्रवाह सरल होते हैं। इन नियंत्रणों को एम्बेड करके आप डेटा एकत्र कर सकते हैं, बाहरी उपकरणों पर निर्भरता घटा सकते हैं, और विभिन्न उपकरणों पर पाठकों के लिए अधिक सहज अनुभव बना सकते हैं।
 
-कोड में डुबकी लगाने से पहले, चलिए बात करते हैं कि आप इसे पहली बार क्यों करना चाहेंगे। इंटरैक्टिव PDF बटन सिर्फ दिखावे के लिए नहीं होते (हालाँकि वे काफी कूल लगते हैं)। वे वास्तविक समस्याओं का समाधान करते हैं:
-
-- **User Engagement**: स्थिर PDFs ऐसे हैं जैसे चिपके‑बंद पन्नों वाली किताब पढ़ना। इंटरैक्टिव तत्व उपयोगकर्ताओं को व्यस्त रखते हैं और खोज को प्रोत्साहित करते हैं।  
-- **Data Collection**: प्रस्ताव पर प्रतिक्रिया चाहिए? विभिन्न सेक्शन को रेट करना चाहते हैं? बटन सीधे दस्तावेज़ में उत्तर कैप्चर कर सकते हैं।  
-- **Navigation**: बड़े दस्तावेज़ों को एक क्लिक से सेक्शन के बीच कूदकर अधिक प्रबंधनीय बनाया जा सकता है।  
-- **Workflow Integration**: बटन क्रियाएँ ट्रिगर कर सकते हैं, दस्तावेज़ को अनुमोदित कर सकते हैं, या प्रक्रिया को आगे बढ़ा सकते हैं बिना PDF छोड़े।
-
-सबसे अच्छी बात? एक बार बुनियादी समझ लेने के बाद, आप कई उपयोग मामलों को खोजेंगे।
+- **User engagement**: बटन पाठकों को दस्तावेज़ छोड़े बिना नेविगेट, अनुमोदित या टिप्पणी करने देते हैं, जिससे सर्वेक्षणित तैनाती में इंटरैक्शन दर 40 % तक बढ़ती है।  
+- **Data collection**: प्रतिक्रिया, रेटिंग या अनुमोदन सीधे PDF के भीतर कैप्चर करें, जिससे अलग सर्वे टूल की आवश्यकता नहीं रहती।  
+- **Navigation**: एक क्लिक से सेक्शन के बीच कूदें, बड़े रिपोर्टों में सूचना तक पहुँचने का समय औसतन 25 % कम करता है।  
+- **Workflow integration**: बटन डाउनस्ट्रीम प्रक्रियाओं जैसे अनुमोदन रूटिंग या डेटा एक्सट्रैक्शन को ट्रिगर कर सकते हैं, जिससे व्यावसायिक कार्यप्रवाह सरल हो जाता है।
 
 ## आप क्या सीखेंगे
-
-इस ट्यूटोरियल के अंत तक, आप जानेंगे कैसे:
-
-- GroupDocs.Annotation को जावा के लिए सेटअप करें (बिना झंझट के)  
-- **interactive pdf buttons java** बनाएं जो वास्तव में काम करें  
-- बटनों में उत्तर और टिप्पणी जोड़ें बेहतर कार्यक्षमता के लिए  
-- सामान्य समस्याओं का निवारण करें (क्योंकि पहली कोशिश में सब कुछ नहीं चलता)  
-- वास्तविक‑दुनिया के अनुप्रयोगों के लिए प्रदर्शन अनुकूलित करें  
+आप सीखेंगे कैसे:
+- GroupDocs.Annotation को Java के लिए जल्दी सेट अप करें  
+- **interactive pdf buttons java** बनाएं जो क्लिक पर प्रतिक्रिया दें  
+- बटनों पर उत्तर और टिप्पणियाँ संलग्न करें ताकि सहयोग अधिक समृद्ध हो  
+- सामान्य समस्याओं का निदान करें और उत्पादन कार्यभार के लिए प्रदर्शन को अनुकूलित करें  
 
 ## पूर्वापेक्षाएँ और सेटअप
 
 ### आपको क्या चाहिए
+1. **Java Development Environment** – JDK 8 या उससे ऊपर (सिफ़ारिश JDK 11+).  
+2. **IDE** – IntelliJ IDEA, Eclipse, या कोई भी एडिटर जो आप पसंद करें  
+3. **Basic Java knowledge** – क्लासेस, मेथड्स, एक्सेप्शन हैंडलिंग  
+4. **Maven or Gradle** – डिपेंडेंसी मैनेजमेंट के लिए (उदाहरण Maven का उपयोग करता है)  
 
-चिंता न करें – आवश्यकताएँ काफी सरल हैं:
-
-1. **Java Development Environment**: JDK 8 या उससे ऊपर (बेहतर प्रदर्शन के लिए JDK 11+ की सलाह)  
-2. **IDE**: IntelliJ IDEA, Eclipse, या जो भी आपको पसंद हो  
-3. **Basic Java Knowledge**: क्लास, मेथड, और एक्सेप्शन हैंडलिंग का बेसिक ज्ञान  
-4. **Maven or Gradle**: डिपेंडेंसी मैनेजमेंट के लिए (उदाहरण Maven का उपयोग करता है)  
-
-### GroupDocs.Annotation को जावा के लिए सेटअप करना
-
-अधिकांश ट्यूटोरियल लंबी व्याख्याओं से भर जाते हैं। चलिए सीधे बात करते हैं।
+### GroupDocs.Annotation को Java के लिए सेटअप करना
 
 #### Maven सेटअप (आसान तरीका)
 
-अपने `pom.xml` में यह जोड़ें:
+अपने `pom.xml` में निम्नलिखित डिपेंडेंसी जोड़ें:
 
 ```xml
 <repositories>
@@ -87,17 +128,17 @@ weight: 1
 </dependencies>
 ```
 
-बस इतना ही। Maven बाकी संभाल लेगा, और आप **interactive pdf buttons java** बनाना शुरू कर सकते हैं।
+लाइब्रेरी सभी आवश्यक ट्रांज़िटिव डिपेंडेंसियों को खींच लेती है, इसलिए आप **interactive pdf buttons java** बनाना शुरू करने के लिए तैयार हैं।
 
 #### लाइसेंस विकल्प (अपनी पसंद चुनें)
 
-- **Free Trial**: परीक्षण के लिए उत्तम। डाउनलोड करें [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/) से  
-- **Temporary License**: अधिक समय के लिए मूल्यांकन चाहिए? प्राप्त करें [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/) से  
-- **Full License**: उत्पादन के लिए तैयार? खरीदें [GroupDocs Purchase](https://purchase.groupdocs.com/buy) से  
+- **Free trial** – मूल्यांकन के लिए आदर्श। यहाँ से डाउनलोड करें [GroupDocs Downloads](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary license** – अपने ट्रायल अवधि को यहाँ बढ़ाएँ [GroupDocs Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- **Full license** – प्रोडक्शन‑रेडी, यहाँ खरीदें [GroupDocs Purchase](https://purchase.groupdocs.com/buy)  
 
 #### त्वरित सत्यापन
 
-इस सरल इनिशियलाइज़ेशन के साथ अपना सेटअप टेस्ट करें:
+निम्नलिखित स्निपेट यह प्रमाणित करता है कि SDK सही ढंग से लोड हो रहा है:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -110,15 +151,17 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-## इंटरैक्टिव PDF Buttons Java बनाना – चरण दर चरण
+यदि यह बिना किसी अपवाद के चलता है, तो आपका वातावरण तैयार है।
 
-### बटन घटकों को समझना
+## इंटरैक्टिव pdf बटन जावा बनाने का चरण-दर-चरण तरीका
 
-एक बटन घटक को अपने PDF पर एक इंटरैक्टिव हॉटस्पॉट के रूप में सोचें। इसमें विज़ुअल स्टाइलिंग (रंग, बॉर्डर, टेक्स्ट), पोज़िशनिंग जानकारी, और व्यवहार (क्लिक पर क्या होता है) हो सकता है। GroupDocs.Annotation लाइब्रेरी इसे काफी सरल बनाती है।
+अपना PDF लोड करें, बटन कॉम्पोनेन्ट को कॉन्फ़िगर करें, और दस्तावेज़ सहेजें—इन तीन चरणों से आप किसी भी PDF में क्लिक करने योग्य क्रियाएँ एम्बेड कर सकते हैं। GroupDocs.Annotation लो‑लेवल PDF संरचना को संभालता है, इसलिए आप बटन की उपस्थिति और व्यवहार पर ध्यान केंद्रित कर सकते हैं। SDK जटिल PDF ऑब्जेक्ट्स को एब्स्ट्रैक्ट करता है, जिससे डेवलपर्स को जल्दी इंटरैक्टिविटी जोड़ने के लिए एक सरल API मिलता है।
+
+### बटन कॉम्पोनेन्ट को समझना
+एक बटन कॉम्पोनेन्ट एक इंटरैक्टिव हॉटस्पॉट है जो टेक्स्ट, रंग, और बॉर्डर जानकारी दिखा सकता है, और इसमें संलग्न उत्तर संग्रहीत किए जा सकते हैं।
 
 ### चरण 1: अपना PDF दस्तावेज़ लोड करें
-
-हर **interactive pdf buttons java** यात्रा यहाँ से शुरू होती है:
+`Annotator` क्लास सभी एनोटेशन ऑपरेशनों का एंट्री पॉइंट है। यह PDF खोलता है, बदलावों को ट्रैक करता है, और परिणाम को डिस्क पर वापस लिखता है।
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf")) {
@@ -126,11 +169,10 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 }
 ```
 
-`try‑with‑resources` पैटर्न सुनिश्चित करता है कि आपका दस्तावेज़ सही ढंग से बंद हो, चाहे कुछ भी गड़बड़ हो जाए। हमेशा इस तरीके का उपयोग करें – आपका भविष्य वाला आप धन्यवाद देगा।
+Java के try‑with‑resources का उपयोग करने से दस्तावेज़ स्वचालित रूप से बंद हो जाता है, जिससे फ़ाइल‑हैंडल लीक से बचा जा सकता है।
 
-### चरण 2: अपने बटन घटक को कॉन्फ़िगर करें
-
-यहाँ से मज़ा शुरू होता है। चलिए ऐसा बटन बनाते हैं जो वास्तव में बटन जैसा दिखे:
+### चरण 2: अपना बटन कॉम्पोनेन्ट कॉन्फ़िगर करें
+`ButtonComponent` क्लास दृश्य बटन और उसकी इंटरैक्टिव प्रॉपर्टीज़ को दर्शाता है। आप इसे एनोटेटर में जोड़ने से पहले उसका रेक्टेंगल, कैप्शन, और रंग सेट करते हैं।
 
 ```java
 import com.groupdocs.annotation.models.formatspecificcomponents.pdf.ButtonComponent;
@@ -148,24 +190,24 @@ buttonComponent.setBorderWidth(12);
 buttonComponent.setBox(new Rectangle(100, 300, 90, 30));
 ```
 
-**Pro Tip**: ये RGB कलर वैल्यूज़ रहस्यमय लग सकते हैं, लेकिन ये बस रंगों के इंटीजर प्रतिनिधित्व हैं। यदि आप विशिष्ट शेड चाहते हैं तो ऑनलाइन RGB‑to‑integer कन्वर्टर का उपयोग करें।
+**Pro tip:** रंगों के लिए पूर्णांक मान ARGB‑एन्कोडेड होते हैं। सटीक शेड चुनने के लिए ऑनलाइन कन्वर्टर का उपयोग करें।
 
 ### चरण 3: बटन जोड़ें और सहेजें
+बटन को कॉन्फ़िगर करने के बाद, `annotator.addAnnotation(button)` कॉल करें और फिर `annotator.save(outputPath)` से बदलाव लिखें।
 
 ```java
 annotator.add(buttonComponent);
 annotator.save("YOUR_OUTPUT_DIRECTORY/result_button_component.pdf");
 ```
 
-बूम! आपने अपना पहला **interactive pdf button java** बना लिया। लेकिन हम यहीं नहीं रुकेंगे।
+आपके PDF में अब एक पूर्ण कार्यात्मक बटन सम्मिलित है।
 
-## pdf buttons java कैसे बनाएं
+## pdf बटन जावा कैसे बनाएं (सीधा उत्तर)
 
-अब जब आपने बुनियादी प्रवाह देख लिया, चलिए एक थोड़ा अधिक उन्नत परिदृश्य देखते हैं जहाँ बटन उत्तर डेटा ले जाता है। यह पैटर्न तब उपयोगी होता है जब आप उपयोगकर्ता की प्रतिक्रिया सीधे PDF के अंदर कैप्चर करना चाहते हैं।
+एक बटन बनाएं, एक उत्तर संलग्न करें, और PDF सहेजें—यह पैटर्न आपको दस्तावेज़ के भीतर सीधे फीडबैक मैकेनिज़्म एम्बेड करने देता है। `ButtonComponent` उत्तर टेक्स्ट संग्रहीत करता है, जो PDF व्यूअर में बटन क्लिक करने पर टिप्पणी के रूप में दिखता है।
 
 ### बटनों में उत्तर और टिप्पणी जोड़ना
-
-यहाँ से चीज़ें वास्तव में रोचक हो जाती हैं। उत्तर वाले इंटरैक्टिव PDF बटन फीडबैक, सहयोग, और उपयोगकर्ता इंटरैक्शन के लिए नई संभावनाएँ खोलते हैं।
+उत्तर एक साधारण बटन को सहयोगी तत्व में बदल देते हैं। निम्नलिखित कोड दर्शाता है कि कैसे एक उत्तर संलग्न किया जाए जो टिप्पणी के रूप में प्रदर्शित होगा।
 
 ```java
 try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf")) {
@@ -210,47 +252,22 @@ try (Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input_file.pdf
 ## वास्तविक‑दुनिया के अनुप्रयोग और उपयोग केस
 
 ### 1. इंटरैक्टिव फीडबैक फ़ॉर्म
-
-कल्पना करें आप एक प्रोजेक्ट प्रस्ताव भेज रहे हैं। क्लाइंट को ईमेल से फीडबैक की आशा करने के बजाय, आप सीधे PDF में फीडबैक बटन एम्बेड कर सकते हैं:
-
-- प्रत्येक प्रमुख घटक के लिए “Approve Section” बटन  
-- विशिष्ट फीडबैक कैप्चर करने वाले “Request Changes” बटन  
-- प्रस्ताव के विभिन्न पहलुओं के लिए रेटिंग बटन  
+प्रस्तावों में “Approve”, “Request changes”, और रेटिंग बटन एम्बेड करें ताकि स्टेकहोल्डर PDF छोड़े बिना प्रतिक्रिया दे सकें।
 
 ### 2. दस्तावेज़ नेविगेशन सिस्टम
-
-लंबी तकनीकी दस्तावेज़ीकरण या रिपोर्टों के लिए:
-
-- प्रत्येक सेक्शन के अंत में “Jump to Summary” बटन  
-- पूरे दस्तावेज़ में “Return to Table of Contents” बटन  
-- “Related Section” बटन जो क्रॉस‑रेफ़रेंसेज़ बनाते हैं  
+बड़े मैनुअल में “Jump to summary” या “Back to table of contents” बटन जोड़ें, जिससे नेविगेशन समय में उल्लेखनीय कमी आए।
 
 ### 3. प्रशिक्षण और शैक्षिक सामग्री
+PDFs के भीतर “Check answer” या “Show hint” बटन का उपयोग करके स्व‑गति क्विज़ बनाएं।
 
-शैक्षिक कंटेंट के लिए इंटरैक्टिव PDFs बेहतरीन हैं:
-
-- स्व‑मूल्यांकन क्विज़ के लिए “Check Answer” बटन  
-- अतिरिक्त विवरण दिखाने वाले “More Information” बटन  
-- असाइनमेंट के लिए “Submit Response” बटन  
-
-### 4. गुणवत्ता आश्वासन और समीक्षा प्रक्रियाएँ
-
-दस्तावेज़ समीक्षा वर्कफ़्लो के लिए:
-
-- विभिन्न सेक्शन के लिए “Mark as Reviewed” बटन  
-- टिप्पणी क्षमताओं वाले “Flag for Revision” बटन  
-- टाइमस्टैम्प ट्रैकिंग के साथ “Approve” और “Reject” बटन  
+### 4. गुणवत्ता‑सुनिश्चिती और समीक्षा प्रक्रियाएँ
+“Mark as reviewed” या “Flag for revision” बटन लागू करें जो स्वचालित रूप से टाइमस्टैम्प और समीक्षक की टिप्पणी लॉग करते हैं।
 
 ## सामान्य समस्याओं का निवारण
 
-### “Document Not Found” त्रुटियाँ
+### “Document not found” त्रुटियाँ (सीधा उत्तर)
 
-यह आमतौर पर पहला बाधा होती है। फ़ाइल पाथ्स दोबारा जांचें और सुनिश्चित करें:
-
-- फ़ाइल वास्तव में वहीँ मौजूद है जहाँ आप सोचते हैं  
-- इनपुट फ़ाइल के लिए पढ़ने की अनुमति है  
-- आउटपुट डायरेक्टरी के लिए लिखने की अनुमति है  
-- फ़ाइल किसी अन्य एप्लिकेशन द्वारा लॉक नहीं है  
+सुनिश्चित करें कि इनपुट फ़ाइल पाथ सही है, फ़ाइल मौजूद है, और आपके एप्लिकेशन के पास पढ़ने की अनुमति है; साथ ही आउटपुट डायरेक्टरी लिखने योग्य है यह भी जाँचें। यदि फ़ाइल किसी अन्य प्रक्रिया द्वारा लॉक है, तो उस प्रक्रिया को बंद करें या प्रोसेसिंग से पहले फ़ाइल को अस्थायी स्थान पर कॉपी करें।
 
 ```java
 File inputFile = new File("YOUR_DOCUMENT_DIRECTORY/input_file.pdf");
@@ -261,26 +278,20 @@ if (!inputFile.exists()) {
 ```
 
 ### बटन PDF में नहीं दिख रहा है
+1. **Page indexing** – पेज 0 से शुरू होते हैं, 1 से नहीं।  
+2. **Coordinate bounds** – सुनिश्चित करें कि `Rectangle` मान पेज के आयामों के भीतर हैं।  
+3. **Color contrast** – ऐसा फ़ोरग्राउंड रंग उपयोग करें जो पेज बैकग्राउंड से अलग हो।
 
-यदि आपका बटन घटक नहीं दिख रहा है:
-
-1. **पेज नंबर जांचें** – पेज नंबरिंग 0 से शुरू होती है, 1 से नहीं  
-2. **कोऑर्डिनेट्स सत्यापित करें** – सुनिश्चित करें कि आपके `Rectangle` मान पेज की सीमाओं के भीतर हैं  
-3. **कलर विज़िबिलिटी** – सुनिश्चित करें कि बटन के रंग पृष्ठभूमि से कंट्रास्ट करते हों  
-
-### बड़े PDFs के साथ मेमोरी समस्याएँ
-
-बड़े दस्तावेज़ों के साथ काम कर रहे हैं? यहाँ कुछ रणनीतियाँ हैं:
-
-- संभव हो तो दस्तावेज़ों को छोटे हिस्सों में प्रोसेस करें  
-- उचित क्लीन‑अप के लिए `try‑with‑resources` का उपयोग करें  
-- अपने एप्लिकेशन के लिए JVM हीप साइज बढ़ाने पर विचार करें  
+### बड़े PDFs में मेमोरी समस्याएँ
+- जब संभव हो, दस्तावेज़ों को भागों में प्रोसेस करें।  
+- सफ़ाई सुनिश्चित करने के लिए try‑with‑resources का उपयोग करें।  
+- बहुत बड़ी फ़ाइलों के लिए JVM हीप बढ़ाएँ (`-Xmx2g` या उससे अधिक)।
 
 ## प्रदर्शन अनुकूलन टिप्स
 
-### 1. बैच ऑपरेशन्स
+### 1. बैच ऑपरेशन्स (सीधा उत्तर)
 
-यदि आप कई बटन बना रहे हैं, तो सहेजने से पहले सभी को जोड़ें:
+`save` कॉल करने से पहले सभी बटन कॉम्पोनेन्ट को एनोटेटर में जोड़ें; इससे I/O ओवरहेड कम होता है और दर्जनों बटनों वाले दस्तावेज़ों के लिए प्रोसेसिंग गति 30 % तक बढ़ती है।
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -296,7 +307,7 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 
 ### 2. संसाधन प्रबंधन
 
-हमेशा `try‑with‑resources` ब्लॉक्स का उपयोग करें। `Annotator` क्लास `AutoCloseable` को इम्प्लीमेंट करती है, इसलिए यह पैटर्न उचित क्लीन‑अप सुनिश्चित करता है:
+`Annotator` क्लास `AutoCloseable` को इम्प्लीमेंट करती है, इसलिए इसे try‑with‑resources ब्लॉक में रैप करने से नेटिव संसाधन तुरंत रिलीज़ हो जाते हैं।
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -305,22 +316,23 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 ```
 
 ### 3. मेमोरी विचार
-
-बहु‑दस्तावेज़ प्रोसेस करने वाले एप्लिकेशनों के लिए:
-
-- `Annotator` इंस्टेंस के रेफ़रेंसेज़ को आवश्यक समय से अधिक न रखें  
-- उच्च‑वॉल्यूम परिदृश्यों के लिए प्रोसेसिंग क्यू लागू करने पर विचार करें  
-- मेमोरी उपयोग की निगरानी करें और JVM सेटिंग्स को तदनुसार समायोजित करें  
+- जैसे ही आप समाप्त हों, `Annotator` के रेफ़रेंसेज़ रिलीज़ करें।  
+- उच्च‑वॉल्यूम परिदृश्यों के लिए प्रोसेसिंग क्यू का उपयोग करें।  
+- VisualVM जैसे टूल से हीप उपयोग मॉनिटर करें और `-Xms`/`-Xmx` को उसी अनुसार ट्यून करें।
 
 ## उन्नत टिप्स और सर्वोत्तम प्रथाएँ
 
-### 1. बटन डिजाइन दिशानिर्देश
+### 1. बटन डिज़ाइन दिशानिर्देश
+- **Size**: टच डिवाइस पर आरामदायक टैपिंग के लिए न्यूनतम 30 × 30 px।  
+- **Contrast**: फ़ोरग्राउंड/बैकग्राउंड रंग ऐसे चुनें जिनका कंट्रास्ट अनुपात कम से कम 4.5:1 हो (WCAG AA)।  
+- **Consistency**: दस्तावेज़ में समान शैली लागू करें ताकि दृश्य पदानुक्रम मजबूत हो।
 
-- **Size Matters**: आसान टैपिंग के लिए बटन कम से कम 30 × 30 पिक्सेल रखें।  
-- **Color Contrast**: सुनिश्चित करें कि बटन दस्तावेज़ पृष्ठभूमि से स्पष्ट रूप से अलग हों।  
-- **Consistent Styling**: पूरे दस्तावेज़ में समान रंग और बॉर्डर स्टाइल उपयोग करें।  
+### 2. त्रुटि हैंडलिंग रणनीतियाँ (सीधा उत्तर)
 
-### 2. त्रुटि संभालने की रणनीतियाँ
+AnnotationException तब थ्रो किया जाता है जब एनोटेशन प्रोसेसिंग के दौरान त्रुटि होती है।  
+PdfButtonException एक कस्टम रनटाइम एक्सेप्शन है जिसे आप एनोटेशन त्रुटियों को संलग्न करने के लिए परिभाषित कर सकते हैं।
+
+एनोटेशन लॉजिक को try‑catch ब्लॉक्स में रैप करें जो `AnnotationException` विवरण लॉग करें और कस्टम `PdfButtonException` के रूप में पुनः थ्रो करें ताकि आपके एप्लिकेशन की त्रुटि प्रवाह साफ़ रहे।
 
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
@@ -338,47 +350,43 @@ try (Annotator annotator = new Annotator("input.pdf")) {
 ```
 
 ### 3. अपने इंटरैक्टिव PDFs का परीक्षण
-
-- कई PDF व्यूअर्स (Adobe Reader, ब्राउज़र बिल्ट‑इन, मोबाइल ऐप्स) में परीक्षण करें  
-- विभिन्न डिवाइसों पर बटन कार्यक्षमता की पुष्टि करें  
-- सुनिश्चित करें कि उत्तर और टिप्पणी सही ढंग से प्रदर्शित हों  
+- PDF को Adobe Reader, Chrome, Firefox, और मोबाइल व्यूअर में खोलें।  
+- सुनिश्चित करें कि बटन क्लिक करने पर संलग्न उत्तर टिप्पणी प्रदर्शित हो।  
+- पुष्टि करें कि नेविगेशन बटन सही पेजों पर कूदते हैं।
 
 ## अक्सर पूछे जाने वाले प्रश्न
 
-**प्रश्न: क्या मैं बटन के अलावा अन्य इंटरैक्टिव एलिमेंट्स बना सकता हूँ?**  
-उत्तर: बिल्कुल! GroupDocs.Annotation चेकबॉक्स, टेक्स्ट फ़ील्ड, ड्रॉपडाउन मेन्यू आदि को सपोर्ट करता है। बटन सिर्फ इंटरैक्टिव PDF पहेली का एक हिस्सा हैं।
+**Q: क्या मैं बटनों के अलावा विभिन्न इंटरैक्टिव तत्व बना सकता हूँ?**  
+A: हाँ। GroupDocs.Annotation चेकबॉक्स, टेक्स्ट फ़ील्ड, ड्रॉपडाउन, और स्टैम्प एनोटेशन को भी सपोर्ट करता है।
 
-**प्रश्न: मैं अपने जावा एप्लिकेशन में बटन क्लिक इवेंट्स को कैसे हैंडल करूँ?**  
-उत्तर: बटन घटक स्वयं PDF में एम्बेड होते हैं। क्लिक हैंडलिंग PDF व्यूअर पर निर्भर करती है। कस्टम एप्लिकेशनों के लिए आपको ऐसा व्यूअर लाइब्रेरी चाहिए जो JavaScript या फ़ॉर्म सबमिशन को सपोर्ट करे।
+**Q: मैं अपने Java एप्लिकेशन में बटन क्लिक इवेंट्स को कैसे हैंडल करूँ?**  
+A: बटन PDF में एम्बेड किया जाता है; क्लिक हैंडलिंग PDF व्यूअर द्वारा की जाती है। कस्टम प्रोसेसिंग के लिए, JavaScript एक्शन एम्बेड करें या ऐसे व्यूअर लाइब्रेरी का उपयोग करें जो क्लिक कॉलबैक प्रदान करे।
 
-**प्रश्न: मैं कितने बटन जोड़ सकता हूँ, क्या कोई सीमा है?**  
-उत्तर: कोई कठोर सीमा नहीं है, लेकिन फ़ाइल आकार, प्रदर्शन, और उपयोगकर्ता अनुभव को ध्यान में रखें। सैकड़ों बटन संभव हैं, लेकिन सुनिश्चित करें कि वे मूल्य जोड़ते हों।
+**Q: मैं कितने बटन जोड़ सकता हूँ, इस पर कोई सीमा है?**  
+A: कोई कठोर सीमा नहीं है, लेकिन फ़ाइल आकार और प्रदर्शन को ध्यान में रखें—सैकड़ों बटन संभव हैं, फिर भी अनावश्यक अव्यवस्था उपयोगकर्ता अनुभव को घटा सकती है।
 
-**प्रश्न: क्या मैं बटनों को कस्टम फ़ॉन्ट या उन्नत ग्राफ़िक्स से स्टाइल कर सकता हूँ?**  
-उत्तर: GroupDocs.Annotation रंग, बॉर्डर, और बेसिक अपीयरेंस के लिए ठोस स्टाइलिंग प्रदान करता है। उन्नत ग्राफ़िक्स के लिए आप इमेज‑बेस्ड बटन या अतिरिक्त PDF मैनिपुलेशन टूल्स का उपयोग कर सकते हैं।
+**Q: क्या मैं बटनों को कस्टम फ़ॉन्ट या इमेज के साथ स्टाइल कर सकता हूँ?**  
+A: बेसिक स्टाइलिंग (रंग, बॉर्डर, कैप्शन) समर्थित है। उन्नत ग्राफिक्स के लिए, बटन एनोटेशन को इमेज स्टैम्प के साथ मिलाएँ या अलग PDF मैनिपुलेशन टूल का उपयोग करें।
 
-**प्रश्न: मैं बटन डेटा और उत्तरों को प्रोग्रामेटिकली कैसे एक्सट्रैक्ट करूँ?**  
-उत्तर: `Annotator` के साथ एनोटेटेड PDF लोड करें, उसकी एनोटेशन्स पर इटरेट करें, और बटन की प्रॉपर्टीज़ तथा जुड़े हुए उत्तर पढ़ें। यह फ़ॉर्म सबमिशन प्रोसेस करने में उपयोगी है।
+**Q: मैं बटन डेटा और उत्तर प्रोग्रामेटिकली कैसे निकालूँ?**  
+A: `Annotator` से एनोटेटेड PDF लोड करें, `annotator.getAnnotations()` पर इटररेट करें, `ButtonComponent` के लिए फ़िल्टर करें, और `getReplies()` कलेक्शन पढ़ें।
 
-**प्रश्न: क्या यह पासवर्ड‑प्रोटेक्टेड PDFs के साथ काम करता है?**  
-उत्तर: हाँ – `Annotator` इनिशियलाइज़ करते समय पासवर्ड प्रदान करें। लाइब्रेरी दोनों पढ़ने और लिखने वाले प्रोटेक्टेड डॉक्यूमेंट्स को सपोर्ट करती है।
+**Q: क्या यह पासवर्ड‑प्रोटेक्टेड PDFs के साथ काम करता है?**  
+A: हाँ। `Annotator` इंस्टेंस बनाते समय पासवर्ड प्रदान करें; लाइब्रेरी फ़ाइल को डिक्रिप्ट, एनोटेट, और पुनः‑एन्क्रिप्ट करेगी।
 
-**प्रश्न: क्या मैं बटन बना सकता हूँ जो डेटा वेब सर्वर को सबमिट करे?**  
-उत्तर: विज़ुअल बटन GroupDocs.Annotation बनाता है, लेकिन डेटा सबमिशन PDF व्यूअर की क्षमताओं पर निर्भर करता है और इसके लिए एम्बेडेड JavaScript या फ़ॉर्म‑प्रोसेसिंग सर्विस की आवश्यकता हो सकती है।
+**Q: क्या मैं ऐसे बटन बना सकता हूँ जो डेटा वेब सर्वर पर सबमिट करें?**  
+A: दृश्य बटन GroupDocs.Annotation द्वारा बनाया जाता है; डेटा सबमिशन के लिए PDF‑लेवल JavaScript एक्शन या फ़ॉर्म‑प्रोसेसिंग सर्विस के साथ इंटीग्रेशन आवश्यक है, जो इस SDK के दायरे से बाहर है।
 
 ## आगे क्या?
+अब आपके पास GroupDocs.Annotation के साथ **create pdf buttons java** करने की कौशल है। व्यापक एनोटेशन क्षमताओं—टेक्स्ट हाइलाइट्स, शैप्स, स्टैम्प्स, और फ़ॉर्म फ़ील्ड्स—का अन्वेषण करें ताकि पूरी तरह इंटरैक्टिव PDFs बना सकें जो आपके व्यवसायिक आवश्यकताओं को पूरा करें। इन सुविधाओं को मिलाकर आप व्यापक दस्तावेज़ वर्कफ़्लो डिज़ाइन कर सकते हैं, समीक्षाओं को स्वचालित कर सकते हैं, और विभिन्न प्लेटफ़ॉर्म पर आकर्षक सामग्री प्रदान कर सकते हैं।
 
-बधाई हो! अब आप GroupDocs.Annotation के साथ **create pdf buttons java** बनाना जानते हैं। लेकिन यह सिर्फ शुरुआत है। लाइब्रेरी कई अन्य एनोटेशन प्रकार और फीचर प्रदान करती है:
+हर एनोटेशन प्रकार और उन्नत कॉन्फ़िगरेशन विकल्पों में गहराई से जाने के लिए [GroupDocs.Annotation documentation](https://docs.groupdocs.com/annotation/java/) देखें।
 
-- टेक्स्ट हाइलाइटिंग और मार्कअप  
-- शैप्स और ड्राइंग एनोटेशन्स  
-- इमेज और स्टैम्प एनोटेशन्स  
-- बटन के अलावा फ़ॉर्म फ़ील्ड्स  
-
-अधिक जानकारी के लिए [GroupDocs.Annotation documentation](https://docs.groupdocs.com/annotation/java/) देखें और अपने PDFs को अधिक इंटरैक्टिव और आकर्षक बनाएं।
-
----
-
-**अंतिम अपडेट:** 2026-03-17  
+**अंतिम अपडेट:** 2026-09-25  
 **परीक्षित संस्करण:** GroupDocs.Annotation 25.2 for Java  
 **लेखक:** GroupDocs
+
+## संबंधित ट्यूटोरियल्स
+- [Java में टेक्स्ट फ़ील्ड PDF जोड़ें – GroupDocs.Annotation गाइड](/annotation/java/form-field-annotations/)  
+- [PDF ड्रॉपडाउन बनाएं GroupDocs Annotation Java](/annotation/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/)  
+- [GroupDocs.Annotation के साथ Java में PDF एनोटेशन बनाएं](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)

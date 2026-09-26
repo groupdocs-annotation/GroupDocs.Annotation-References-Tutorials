@@ -1,59 +1,110 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-03-14'
-description: Java kullanarak PDF dosyalarına onay kutusu eklemeyi öğrenin. Bu adım‑adım
-  rehber, onay kutusu eklemeyi, Java PDF form alanlarını yönetmeyi ve GroupDocs.Annotation
-  ile PDF onay kutusu bileşenleri oluşturmayı gösterir.
-keywords: PDF checkbox Java, interactive PDF Java, Java PDF form fields, java create
-  pdf checkbox, GroupDocs checkbox tutorial
-lastmod: '2026-03-14'
-linktitle: How to Add Checkbox to PDF with Java
+date: '2026-09-25'
+description: GroupDocs.Annotation ile PDF checkbox java oluşturmayı öğrenin. Bu adım
+  adım rehber, interaktif checkbox eklemeyi, Java PDF form alanlarını yönetmeyi ve
+  sağlam PDF iş akışları oluşturmayı gösterir.
+keywords:
+- create pdf checkbox java
+- java pdf form fields
+- pdf form field java
+- groupdocs annotation java
+- interactive pdf checkbox
+lastmod: '2026-09-25'
+linktitle: Java ile PDF'ye Checkbox Ekleme
+og_description: GroupDocs Annotation ile PDF checkbox java oluşturun. Bu rehberi izleyerek
+  interaktif checkbox ekleyin, form alanlarını yönetin ve PDF iş akışı verimliliğini
+  artırın.
+og_image_alt: Developer guide showing Java code to add a checkbox to a PDF with GroupDocs
+og_title: GroupDocs Annotation kullanarak PDF checkbox java nasıl oluşturulur
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to create PDF checkbox java with GroupDocs.Annotation. This
+    step‑by‑step guide shows how to add interactive checkboxes, manage Java PDF form
+    fields, and build robust PDF workflows.
+  headline: How to create PDF checkbox java using GroupDocs Annotation
+  type: TechArticle
+- description: Learn how to create PDF checkbox java with GroupDocs.Annotation. This
+    step‑by‑step guide shows how to add interactive checkboxes, manage Java PDF form
+    fields, and build robust PDF workflows.
+  name: How to create PDF checkbox java using GroupDocs Annotation
+  steps:
+  - name: initialize the PDF annotator
+    text: '`Annotator` is GroupDocs.Annotation''s main class for loading, editing,
+      and saving PDF documents. First, open the PDF for editing. The `Annotator` class
+      is your entry point: > **Pro tip:** Use an absolute path to avoid “file not
+      found” issues, and ensure the PDF isn’t open in another application.'
+  - name: create and configure your checkbox component
+    text: '`CheckBoxComponent` represents a PDF form field of type checkbox. It defines
+      appearance, state, and optional replies: **Key points to remember:** - **Rectangle
+      coordinates** are `(x, y, width, height)`. Adjust them to place the checkbox
+      where you need it. - **Pen color** uses an integer RGB value (`'
+  - name: add the checkbox and save the PDF
+    text: '`Annotator.add` attaches the component to the document and writes the result
+      to disk. This final step persists the interactive field: > **File‑path tips:**
+      > • Use absolute paths to avoid “file not found” errors. > • Ensure the output
+      directory exists before saving. > • Consider unique filenames to '
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create as many `CheckBoxComponent` objects as you need, configure
+      each one, and add them sequentially to the annotator.
+    question: Can I add multiple checkboxes to the same document?
+  - answer: Yes. GroupDocs creates standard PDF form fields, which are supported by
+      Adobe Reader, Chrome, Firefox, and most modern viewers.
+    question: Do the checkboxes work in all PDF viewers?
+  - answer: Use GroupDocs.Annotation’s parsing API to read form field values from
+      the completed PDF. This lets you automate downstream processing.
+    question: How can I retrieve the values after users fill out the form?
+  - answer: The practical limit is determined by available memory and viewer performance.
+      Hundreds of checkboxes are typically fine.
+    question: Is there a limit to how many checkboxes I can add?
+  - answer: Yes. Provide the password when constructing the `Annotator`; the library
+      will handle decryption automatically.
+    question: Can I add a checkbox to PDF files that are password‑protected?
+  type: FAQPage
 tags:
-- pdf-annotations
+- pdf annotations
 - groupdocs
-- java-pdf
-- interactive-forms
-title: Java ile PDF'ye Onay Kutusu Ekleme – GroupDocs Kullanarak Etkileşimli Onay
-  Kutuları
+- java pdf
+- interactive forms
+- create pdf checkbox java
+title: GroupDocs Annotation kullanarak PDF checkbox java nasıl oluşturulur
 type: docs
 url: /tr/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# Java ile PDF'ye Onay Kutusu Ekleme – GroupDocs Kullanarak Etkileşimli Onay Kutuları
+# GroupDocs Annotation kullanarak PDF onay kutusu java nasıl oluşturulur
 
-Programatik olarak PDF dosyalarına **onay kutusu ekleme** yöntemini arıyorsanız, doğru yerdesiniz. Günümüzün dijital‑öncelikli dünyasında statik PDF'ler geçmişte kaldı. Onay akışları, anketler veya uyumluluk formları oluştururken, etkileşimli onay kutuları kullanıcı deneyimini büyük ölçüde iyileştirir ve süreçlerinizi hızlandırır.
+Modern iş süreçlerinde, statik PDF'ler artık yeterli değil—etkileşimli formlar onaylar, anketler ve uyumluluk kontrolleri için gereklidir. Bu öğretici, GroupDocs.Annotation kütüphanesini kullanarak **PDF onay kutusu java nasıl oluşturulur** gösterir. Onay kutularının neden önemli olduğunu, ortamınızı nasıl kuracağınızı ve herhangi bir PDF'yi Adobe Reader, Chrome, Firefox ve diğer yaygın görüntüleyicilerde çalışan dinamik bir forma dönüştüren adım adım kod parçacıklarını öğreneceksiniz.
 
-## Hızlı Yanıtlar
-- **PDF'ye onay kutusu eklemek için en iyi kütüphane hangisi?** GroupDocs.Annotation for Java.  
+## Hızlı cevaplar
+- **PDF'ye onay kutusu eklemek için en iyi kütüphane nedir?** GroupDocs.Annotation for Java.  
 - **Uygulama ne kadar sürer?** Temel bir onay kutusu için yaklaşık 10‑15 dakika.  
-- **Lisans gerekir mi?** Geliştirme için ücretsiz deneme sürümü yeterlidir; üretim için tam lisans gereklidir.  
-- **Tek bir belgede birden fazla onay kutusu ekleyebilir miyim?** Evet – sadece birden çok `CheckBoxComponent` örneği oluşturun.  
-- **Onay kutuları tüm PDF görüntüleyicilerde çalışır mı?** Standart PDF form alanları Adobe Reader, Chrome, Firefox ve çoğu modern görüntüleyici tarafından desteklenir.
+- **Lisans gerekir mi?** Geliştirme için ücretsiz deneme çalışır; üretim için tam lisans gereklidir.  
+- **Aynı belgeye birden fazla onay kutusu ekleyebilir miyim?** Evet – sadece birden fazla `CheckBoxComponent` örneği oluşturun.  
+- **Onay kutuları tüm PDF görüntüleyicilerinde çalışır mı?** Standart PDF form alanları Adobe Reader, Chrome, Firefox ve çoğu modern görüntüleyici tarafından desteklenir.
 
 ## Java’da “onay kutusu ekleme” nedir?
-Bir onay kutusu eklemek, **PDF form alanı** oluşturur; son kullanıcılar PDF görüntüleyici içinde doğrudan işaretleyebilir veya işaretini kaldırabilir. Alan, belge kaydedildiğinde durumu koruyan yerel bir form öğesi gibi davranır.
+`create pdf checkbox java`, bir PDF görüntüleyicisi içinde doğrudan işaretlenip işareti kaldırılabilen bir onay kutusu tipi PDF form alanını programlı olarak eklemek anlamına gelir. Alan, durumunu PDF dosyasında saklar ve belge kaydedildiğinde seçimi korur.
 
-## Neden GroupDocs.Annotation for Java PDF form alanlarını kullanmalısınız?
-- **Basit API** – sadece birkaç satır kodla onay kutuları oluşturabilir, stil verebilir ve konumlandırabilirsiniz.  
-- **Çapraz‑görüntüleyici uyumluluğu** – oluşturulan alanlar PDF spesifikasyonuna uygun olduğundan her yerde çalışır.  
-- **Yanıt ve stil desteği yerleşik** – etkileşimli anketler veya onay formları için mükemmeldir.  
-- **Ölçeklenebilir performans** – toplu ve eşzamanlı işleme kutudan çıkar çıkmaz desteklenir.
+## Java PDF form alanları için GroupDocs.Annotation neden kullanılmalı?
+GroupDocs.Annotation **50+ giriş ve çıkış formatını** destekler ve **500 sayfaya kadar** PDF'leri tüm dosyayı belleğe yüklemeden işleyebilir. API'si, onay kutularını sadece birkaç satırda oluşturmanıza, stil vermenize ve konumlandırmanıza olanak tanır ve oluşturulan alanlar PDF spesifikasyonuna uyar, çapraz görüntüleyici uyumluluğunu garanti eder. Kütüphane ayrıca yerleşik yanıt işleme sağlar, bu da anketler, onay iş akışları ve uyumluluk kontrol listeleri için idealdir.
 
-## Önkoşullar ve Kurulum
+## Önkoşullar ve kurulum
 
-Kodlamaya başlamadan önce aşağıdakilere sahip olduğunuzdan emin olun:
+Koda geçmeden önce, aşağıdakilere sahip olduğunuzdan emin olun:
 
-### Temel Gereksinimler
-- **Java Development Kit**: Sürüm 8 veya üzeri.  
-- **GroupDocs.Annotation for Java**: Sürüm 25.2 veya sonrası (nasıl ekleneceğini göstereceğiz).  
-- **Temel Java Bilgisi**: Dosya I/O ve nesne başlatma.  
-- **PDF Dosyası**: Test etmek için mevcut bir PDF (örnek belgeyi kullanacağız).
+### Temel gereksinimler
+- **Java Development Kit**: Versiyon 8 veya üzeri.  
+- **GroupDocs.Annotation for Java**: Versiyon 25.2 veya sonrası (nasıl ekleneceğini göstereceğiz).  
+- **Temel Java bilgisi**: Dosya G/Ç ve nesne başlatma.  
+- **PDF dosyası**: Test etmek için mevcut herhangi bir PDF (örnek bir belge kullanacağız).
 
-### Hızlı Maven Kurulumu
-
-Maven kullanıyorsanız, `pom.xml` dosyanıza aşağıdakileri ekleyin. Bu yapılandırma gerekli kütüphaneyi otomatik olarak çeker:
+### Hızlı Maven kurulumu
+Maven kullanıyorsanız, bu bağımlılığı `pom.xml` dosyanıza ekleyin. Bu yapılandırma gerekli kütüphaneyi otomatik olarak çeker:
 
 ```xml
 <repositories>
@@ -72,21 +123,26 @@ Maven kullanıyorsanız, `pom.xml` dosyanıza aşağıdakileri ekleyin. Bu yapı
 </dependencies>
 ```
 
-### Lisans Kolaylığı
+> **Pro ipucu:** Maven deposunu güncel tutun (`mvn clean install`) böylece en son GroupDocs.Annotation ikili dosyaları çözülür.
 
-- **Ücretsiz Deneme** – test ve küçük projeler için idealdir.  
-- **Geçici Lisans** – uzun geliştirme döngülerinde kullanışlıdır.  
-- **Tam Lisans** – üretim dağıtımları için gereklidir.
+### Lisanslama basitleştirildi
+- **Ücretsiz deneme** – test ve küçük projeler için mükemmeldir.  
+- **Geçici lisans** – uzun geliştirme döngülerinde faydalıdır.  
+- **Tam lisans** – üretim dağıtımları için gereklidir.
 
 Deneme sürümüyle hemen geliştirmeye başlayabilirsiniz.
 
-## Adım‑Adım Kılavuz: Java Kullanarak PDF’ye Onay Kutusu Ekleme
+## Adım adım kılavuz: Java kullanarak PDF’ye onay kutusu ekleme
 
-Üç kısa adımda ilerleyeceğiz. Her adım bir öncekinin üzerine inşa edilir, bu yüzden sıralamayı takip edin.
+Aşağıda özlü bir üç adımlı iş akışı bulunmaktadır. Her adım bir önceki üzerine inşa edilir, bu yüzden sırayı takip edin.
 
-### Adım 1: PDF Annotator’ı Başlatma
+## Java kullanarak PDF’ye onay kutusu ekleme
 
-Öncelikle PDF’yi düzenleme amaçlı açın. `Annotator` sınıfı giriş noktanızdır:
+Hedef PDF'yi `Annotator` ile yükleyin, bir `CheckBoxComponent` oluşturun, görünümünü yapılandırın ve değiştirilmiş belgeyi kaydedin. Bu desen tek bir onay kutusu ya da aynı dosyada onlarca onay kutusu için çalışır.
+
+### Adım 1: PDF annotator'ı başlatma
+
+`Annotator`, PDF belgelerini yüklemek, düzenlemek ve kaydetmek için GroupDocs.Annotation'ın ana sınıfıdır. İlk olarak, PDF'yi düzenleme için açın. `Annotator` sınıfı giriş noktanızdır:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -100,11 +156,11 @@ public class InitializeAnnotator {
 }
 ```
 
-> **İpucu:** “dosya bulunamadı” hatalarını önlemek için mutlak yol kullanın ve PDF’nin başka bir uygulamada açık olmadığından emin olun.
+> **Pro ipucu:** “Dosya bulunamadı” sorunlarını önlemek için mutlak yol kullanın ve PDF'nin başka bir uygulamada açık olmadığından emin olun.
 
-### Adım 2: Onay Kutusu Bileşeninizi Oluşturun ve Yapılandırın
+### Adım 2: Onay kutusu bileşeninizi oluşturun ve yapılandırın
 
-Şimdi bir `CheckBoxComponent` oluşturacağız. Görünüm, durum ve isteğe bağlı yanıtları burada tanımlarsınız:
+`CheckBoxComponent`, onay kutusu tipi bir PDF form alanını temsil eder. Görünüm, durum ve isteğe bağlı yanıtları tanımlar:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -150,15 +206,15 @@ public class CreateCheckBoxComponent {
 }
 ```
 
-**Unutulmaması gereken temel noktalar:**
-- **Dikdörtgen koordinatları** `(x, y, genişlik, yükseklik)` şeklindedir. Onay kutusunu istediğiniz yere yerleştirmek için ayarlayın.  
-- **Kalem rengi** bir tamsayı RGB değeri (`65535` = sarı) kullanır. Dilediğiniz rengi seçebilirsiniz.  
+**Hatırlanması gereken önemli noktalar:**
+- **Dikdörtgen koordinatları** `(x, y, width, height)` şeklindedir. Onay kutusunu istediğiniz yere yerleştirmek için ayarlayın.  
+- **Kalem rengi** bir tamsayı RGB değeri (`65535` = sarı) kullanır. Dilediğiniz herhangi bir rengi kullanabilirsiniz.  
 - **BoxStyle** seçenekleri `STAR`, `CIRCLE`, `SQUARE`, `DIAMOND` içerir.  
 - **Replies** (yanıtlar) üzerine gelindiğinde görünen isteğe bağlı yorumlardır.
 
-### Adım 3: Onay Kutusunu Ekleyin ve PDF’yi Kaydedin
+### Adım 3: Onay kutusunu ekleyin ve PDF’yi kaydedin
 
-Son olarak bileşeni belgeye ekleyin ve sonucu diske yazın:
+`Annotator.add`, bileşeni belgeye ekler ve sonucu diske yazar. Bu son adım etkileşimli alanı kalıcı hâle getirir:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -181,33 +237,33 @@ public class AddCheckBoxAndSave {
 ```
 
 > **Dosya yolu ipuçları:**  
-> • “dosya bulunamadı” hatalarını önlemek için mutlak yollar kullanın.  
-> • Kaydetmeden önce çıktı klasörünün var olduğundan emin olun.  
+> • “Dosya bulunamadı” hatalarını önlemek için mutlak yollar kullanın.  
+> • Kaydetmeden önce çıktı dizininin var olduğundan emin olun.  
 > • Önemli dosyaların üzerine yazılmasını önlemek için benzersiz dosya adları düşünün.
 
-## Gerçek‑Dünya Uygulamaları (Temel Formların Ötesinde)
+## Gerçek dünya uygulamaları (temel formların ötesinde)
 
-**java pdf form fields** nerelerde parladığını anlamak, fırsatları fark etmenizi sağlar:
+**java pdf form fields**'ın nerelerde öne çıktığını anlamak, fırsatları fark etmenize yardımcı olur:
 
-### Belge Onay İş Akışları
-“İncelendi”, “Onaylandı” veya “Değişiklik Gerekiyor” gibi onay kutuları ekleyin. Sözleşmeler, bütçeler ve politika onayları için idealdir.
+### Belge onay iş akışları
+“İncelendi”, “Onaylandı” veya “Değişiklik Gerekiyor” için onay kutuları ekleyin. Sözleşmeler, bütçeler ve politika onayları için idealdir.
 
-### Anket ve Geri Bildirim Toplama
-Cihazlar arasında tam format koruması sağlayan çevrim‑dışı anketler oluşturun. Çalışan memnuniyeti, müşteri geri bildirimi ve etkinlik değerlendirmeleri için harikadır.
+### Anket ve geri bildirim toplama
+Cihazlar arasında tam formatı koruyan çevrim dışı anketler oluşturun. Çalışan memnuniyeti, müşteri geri bildirimi ve etkinlik değerlendirmeleri için harikadır.
 
-### Eğitim ve Uyumluluk Belgeleri
-Güvenlik kılavuzları, uyumluluk kontrol listeleri veya işe alım görevlerinde ilerlemeyi izlemek için onay kutuları kullanın.
+### Eğitim ve uyumluluk dokümantasyonu
+Güvenlik kılavuzları, uyumluluk kontrol listeleri veya işe alım görevlerinde onay kutularıyla ilerlemeyi izleyin.
 
-### Hukuki ve İdari Formlar
-Şartların kabulü, gizlilik politikaları, sigorta talepleri ve devlet başvurularının standartlaştırılması için onay kutuları ekleyin.
+### Hukuki ve idari formlar
+Şartların, gizlilik politikalarının, sigorta taleplerinin ve resmi başvuruların kabulünü standartlaştırın.
 
-## Yaygın Sorunlar ve Çözümler
+## Yaygın sorunlar ve çözümler
 
-Her geliştiricinin zaman zaman takıldığı noktalar olur. En sık karşılaşılan problemler ve çözümleri:
+Her geliştirici zaman zaman bir sorunla karşılaşır. İşte en sık karşılaşılan problemler ve çözümleri:
 
-### “Dosya Bulunamadı” Hataları
-**Sorun:** PDF yolu hatalı.  
-**Çözüm:** İşleme başlamadan önce dosyanın varlığını kontrol edin:
+### “Dosya bulunamadı” hataları
+**Problem:** Yanlış PDF yolu.  
+**Solution:** İşleme başlamadan önce dosyanın varlığını doğrulayın:
 
 ```java
 File inputFile = new File("path/to/your/file.pdf");
@@ -216,42 +272,42 @@ if (!inputFile.exists()) {
 }
 ```
 
-### Onay Kutusu Yanlış Konumda Görünüyor
-**Sorun:** PDF koordinat sistemi sol‑alt köşeden başlar.  
-**Çözüm:** Y koordinatını ayarlayın. 600 piksel yüksekliğindeki bir sayfada “üstten 100” görseli `Y = 500` olur.
+### Onay kutusu yanlış konumda görünüyor
+**Problem:** PDF koordinat sistemi sol‑alt köşeden başlar.  
+**Solution:** Y koordinatını ayarlayın. 600 piksel yüksekliğinde bir sayfa için, görsel olarak “üstten 100” `Y = 500` olur.
 
-### Büyük PDF’lerde Bellek Sorunları
-**Sorun:** `OutOfMemoryError`.  
-**Çözüm:** JVM yığın boyutunu artırın veya belgeleri toplu işleyin:
+### Büyük PDF’lerde bellek sorunları
+**Problem:** `OutOfMemoryError`.  
+**Solution:** JVM yığın boyutunu artırın veya belgeleri toplu olarak işleyin:
 
 ```bash
 java -Xmx2048m YourApplication
 ```
 
-### Lisans Doğrulama Hataları
-**Sorun:** “Lisans bulunamadı” veya “Geçersiz lisans”.  
-**Çözüm:** Lisans dosyasını sınıf yolu köküne yerleştirin veya yolu açıkça ayarlayın:
+### Lisans doğrulama hataları
+**Problem:** “License not found” veya “Invalid license”.  
+**Solution:** Lisans dosyasını sınıf yolu köküne yerleştirin veya yolu açıkça ayarlayın:
 
 ```java
 License license = new License();
 license.setLicense("path/to/GroupDocs.Annotation.Java.lic");
 ```
 
-### Onay Kutusu Tıklamalara Yanıt Vermiyor
-**Sorun:** Onay kutusu statik görünüyor.  
-**Çözüm:** Genel bir ek açıklama yerine `CheckBoxComponent` (form alanı) kullandığınızdan emin olun.
+### Onay kutusu tıklamalara yanıt vermiyor
+**Problem:** Onay kutusu statik görünüyor.  
+**Solution:** Genel bir ek açıklama yerine `CheckBoxComponent` (bir form alanı) kullandığınızdan emin olun.
 
-## Performans Optimizasyonu İpuçları
+## Performans optimizasyon ipuçları
 
-Üretime geçerken bu ayarlamalar hızı korur:
+Üretime geçerken, bu ayarlamalar işleri hızlı tutar:
 
-### Bellek Yönetimi En İyi Uygulamaları
-- `Annotator` için **try‑with‑resources** kullanın.  
-- Birçok belgeyi aynı anda yüklemek yerine toplu işleyin.  
+### Bellek yönetimi en iyi uygulamaları
+- `Annotator` için her zaman **try‑with‑resources** kullanın.  
+- Belgeleri bir kerede çok sayıda yüklemek yerine toplu olarak işleyin.  
 - Tipik belge boyutlarına göre JVM yığın boyutunu ayarlayın.
 
-### Toplu İşleme Stratejisi
-Birden fazla PDF için her döngüde yeni bir `Annotator` oluşturun:
+### Toplu işleme stratejisi
+Birden fazla PDF için, her yinelemede yeni bir `Annotator` ile döngü oluşturun:
 
 ```java
 public void processPDFBatch(List<String> pdfPaths) {
@@ -266,40 +322,39 @@ public void processPDFBatch(List<String> pdfPaths) {
 }
 ```
 
-### Eşzamanlı İşleme Dikkat Edilmesi Gerekenler
-`GroupDocs.Annotation` thread‑safe olduğundan belgeleri paralel çalıştırabilirsiniz:
-
+### Eşzamanlı işleme hususları
+`GroupDocs.Annotation` iş parçacığı‑güvenlidir, bu yüzden birkaç belgeyi paralel çalıştırabilirsiniz:
 - Sınırlı bir iş parçacığı havuzu ile `ExecutorService` kullanın.  
-- RAM kullanımını izleyin ve eşzamanlılık seviyesini buna göre sınırlayın.
+- RAM kullanımını izleyin ve eşzamanlılığı buna göre sınırlayın.
 
-## Düşünülebilecek Alternatif Yaklaşımlar
+## Düşünülmesi gereken alternatif yaklaşımlar
 
-GroupDocs.Annotation anotasyonlarda mükemmel olsa da, alternatifleri bilmek faydalıdır:
-
-| Kütüphane | Lisans | Güçlü Yönleri | Zayıf Yönleri |
-|-----------|--------|---------------|---------------|
-| **Apache PDFBox** | Açık‑source | Ücretsiz, temel form alanları için uygun | Düşük seviyeli API, daha fazla kod gerektirir |
+| Kütüphane | Lisans | Güçlü Yönler | Zayıf Yönler |
+|-----------|--------|--------------|--------------|
+| **Apache PDFBox** | Açık kaynak | Ücretsiz, temel form alanları için iyi | Düşük seviyeli API, daha fazla tekrarlama |
 | **iText** | Ticari | Çok güçlü, kapsamlı PDF özellikleri | Büyük dağıtımlar için maliyetli |
-| **Aspose.PDF for Java** | Ticari | Zengin özellik seti, GroupDocs’a benzer | Farklı fiyatlandırma modeli |
+| **Aspose.PDF for Java** | Ticari | Zengin özellik seti, GroupDocs'a benzer | Farklı fiyatlandırma modeli |
 
 **Neden GroupDocs.Annotation seçilmeli?**  
 - Anotasyon senaryoları için optimize edilmiştir.  
-- Onay kutuları ve diğer form öğeleri için basit API.  
+- Onay kutuları ve diğer form öğeleri için sade API.  
 - Rekabetçi fiyatlandırma ve hızlı destek.
 
-## Gelişmiş Onay Kutusu Özelleştirmeleri
+## Gelişmiş onay kutusu özelleştirme
 
-Temelleri kavradıktan sonra bu tekniklerle seviyenizi yükseltin:
+Temelleri kavradıktan sonra, bu tekniklerle seviyenizi yükseltin:
 
-### Özel Stil Seçenekleri
+### Özel stil seçenekleri
+`CheckBoxComponent`, kenar genişliği, arka plan rengi ve özel simgeler ayarlamanıza izin verir. Markalı bir görünüm elde etmek için aşağıdaki özellikleri kullanın:
+
 ```java
 checkbox.setPenWidth(2);              // Border thickness
 checkbox.setBackgroundColor(16777215); // White background
 checkbox.setOpacity(0.8);             // Semi‑transparent
 ```
 
-### Koşullu Mantık
-Belirli bir bölüm mevcutsa onay kutusu ekleyin:
+### Koşullu mantık
+Yerleştirmeden önce sayfa içeriğini inceleyerek belirli bir bölüm mevcutsa onay kutusu ekleyin:
 
 ```java
 if (documentContainsSection("Terms and Conditions")) {
@@ -307,33 +362,39 @@ if (documentContainsSection("Terms and Conditions")) {
 }
 ```
 
-### Dinamik Konumlandırma
-Mevcut içeriğe göre en uygun konumu hesaplayın:
+### Dinamik konumlandırma
+PDF'den çıkarılan bir etikete yan yana hizalayarak mevcut içeriğe göre en iyi konumu hesaplayın:
 
 ```java
 Rectangle dynamicPosition = calculateOptimalPosition(document, contentType);
 checkbox.setBox(dynamicPosition);
 ```
 
-## Sıkça Sorulan Sorular
+## Sıkça sorulan sorular
 
-**S: Aynı belgede birden fazla onay kutusu pdf ekleyebilir miyim?**  
+**S: Aynı belgeye birden fazla onay kutusu ekleyebilir miyim?**  
 C: Kesinlikle. İhtiyacınız kadar `CheckBoxComponent` nesnesi oluşturun, her birini yapılandırın ve sırasıyla annotatora ekleyin.
 
-**S: Onay kutuları tüm PDF görüntüleyicilerde çalışır mı?**  
-C: Evet. GroupDocs standart PDF form alanları oluşturur; Adobe Reader, Chrome, Firefox ve çoğu modern görüntüleyici tarafından desteklenir.
+**S: Onay kutuları tüm PDF görüntüleyicilerinde çalışır mı?**  
+C: Evet. GroupDocs standart PDF form alanları oluşturur; bu alanlar Adobe Reader, Chrome, Firefox ve çoğu modern görüntüleyici tarafından desteklenir.
 
 **S: Kullanıcılar formu doldurduktan sonra değerleri nasıl alabilirim?**  
-C: GroupDocs.Annotation’ın ayrıştırma API’sını kullanarak tamamlanmış PDF’den form alanı değerlerini okuyun. Böylece sonraki işlemleri otomatikleştirebilirsiniz.
+C: Tamamlanmış PDF'den form alanı değerlerini okumak için GroupDocs.Annotation’ın ayrıştırma API'sini kullanın. Bu, sonraki işlemleri otomatikleştirmenizi sağlar.
 
-**S: Kaç onay kutusu ekleyebileceğimde bir sınır var mı?**  
-C: Pratik sınır, mevcut bellek ve görüntüleyici performansına bağlıdır. Yüzlerce onay kutusu genellikle sorunsuz çalışır.
+**S: Ekleyebileceğim onay kutusu sayısında bir limit var mı?**  
+C: Pratik limit, mevcut bellek ve görüntüleyici performansına bağlıdır. Yüzlerce onay kutusu genellikle sorunsuz çalışır.
 
-**S: Şifre korumalı pdf dosyalarına onay kutusu ekleyebilir miyim?**  
-C: Evet. `Annotator` oluştururken şifreyi sağlayın; kütüphane otomatik olarak şifreyi çözer.
+**S: Şifre korumalı PDF dosyalarına onay kutusu ekleyebilir miyim?**  
+C: Evet. `Annotator` oluştururken şifreyi sağlayın; kütüphane otomatik olarak şifre çözümlemesini yapar.
 
 ---
 
-**Son Güncelleme:** 2026-03-14  
-**Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
+**Son güncelleme:** 2026-09-25  
+**Test edilen sürüm:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs
+
+## İlgili Öğreticiler
+
+- [Add Text Field PDF in Java – GroupDocs.Annotation Guide](/annotation/java/form-field-annotations/)
+- [How to Create PDF Buttons Java with GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
+- [Create Pdf Dropdowns Groupdocs Annotation Java](/annotation/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/)

@@ -1,60 +1,110 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-03-14'
-description: Aprende a agregar casillas de verificación a archivos PDF usando Java.
-  Esta guía paso a paso muestra cómo añadir casillas de verificación, gestionar campos
-  de formulario PDF en Java y crear componentes de casilla de verificación PDF con
-  GroupDocs.Annotation.
-keywords: PDF checkbox Java, interactive PDF Java, Java PDF form fields, java create
-  pdf checkbox, GroupDocs checkbox tutorial
-lastmod: '2026-03-14'
-linktitle: How to Add Checkbox to PDF with Java
+date: '2026-09-25'
+description: Aprenda cómo crear un checkbox PDF en Java con GroupDocs Annotation.
+  Esta guía paso a paso muestra cómo agregar checkboxes interactivos, gestionar campos
+  de formulario PDF en Java y crear flujos de trabajo PDF robustos.
+keywords:
+- create pdf checkbox java
+- java pdf form fields
+- pdf form field java
+- groupdocs annotation java
+- interactive pdf checkbox
+lastmod: '2026-09-25'
+linktitle: Cómo agregar un checkbox a PDF con Java
+og_description: Cree un checkbox PDF en Java con GroupDocs Annotation. Siga esta guía
+  para agregar checkboxes interactivos, manejar campos de formulario y mejorar la
+  eficiencia de los flujos de trabajo PDF.
+og_image_alt: Developer guide showing Java code to add a checkbox to a PDF with GroupDocs
+og_title: Cómo crear un checkbox PDF en Java usando GroupDocs Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to create PDF checkbox java with GroupDocs.Annotation. This
+    step‑by‑step guide shows how to add interactive checkboxes, manage Java PDF form
+    fields, and build robust PDF workflows.
+  headline: How to create PDF checkbox java using GroupDocs Annotation
+  type: TechArticle
+- description: Learn how to create PDF checkbox java with GroupDocs.Annotation. This
+    step‑by‑step guide shows how to add interactive checkboxes, manage Java PDF form
+    fields, and build robust PDF workflows.
+  name: How to create PDF checkbox java using GroupDocs Annotation
+  steps:
+  - name: initialize the PDF annotator
+    text: '`Annotator` is GroupDocs.Annotation''s main class for loading, editing,
+      and saving PDF documents. First, open the PDF for editing. The `Annotator` class
+      is your entry point: > **Pro tip:** Use an absolute path to avoid “file not
+      found” issues, and ensure the PDF isn’t open in another application.'
+  - name: create and configure your checkbox component
+    text: '`CheckBoxComponent` represents a PDF form field of type checkbox. It defines
+      appearance, state, and optional replies: **Key points to remember:** - **Rectangle
+      coordinates** are `(x, y, width, height)`. Adjust them to place the checkbox
+      where you need it. - **Pen color** uses an integer RGB value (`'
+  - name: add the checkbox and save the PDF
+    text: '`Annotator.add` attaches the component to the document and writes the result
+      to disk. This final step persists the interactive field: > **File‑path tips:**
+      > • Use absolute paths to avoid “file not found” errors. > • Ensure the output
+      directory exists before saving. > • Consider unique filenames to '
+  type: HowTo
+- questions:
+  - answer: Absolutely. Create as many `CheckBoxComponent` objects as you need, configure
+      each one, and add them sequentially to the annotator.
+    question: Can I add multiple checkboxes to the same document?
+  - answer: Yes. GroupDocs creates standard PDF form fields, which are supported by
+      Adobe Reader, Chrome, Firefox, and most modern viewers.
+    question: Do the checkboxes work in all PDF viewers?
+  - answer: Use GroupDocs.Annotation’s parsing API to read form field values from
+      the completed PDF. This lets you automate downstream processing.
+    question: How can I retrieve the values after users fill out the form?
+  - answer: The practical limit is determined by available memory and viewer performance.
+      Hundreds of checkboxes are typically fine.
+    question: Is there a limit to how many checkboxes I can add?
+  - answer: Yes. Provide the password when constructing the `Annotator`; the library
+      will handle decryption automatically.
+    question: Can I add a checkbox to PDF files that are password‑protected?
+  type: FAQPage
 tags:
-- pdf-annotations
+- pdf annotations
 - groupdocs
-- java-pdf
-- interactive-forms
-title: Cómo agregar casilla de verificación a PDF con Java – Casillas de verificación
-  interactivas usando GroupDocs
+- java pdf
+- interactive forms
+- create pdf checkbox java
+title: Cómo crear un checkbox PDF en Java usando GroupDocs Annotation
 type: docs
 url: /es/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/
 weight: 1
 ---
 
-# Cómo agregar casilla de verificación a PDF con Java – Casillas interactivas usando GroupDocs
+# Cómo crear casilla de verificación PDF en Java usando GroupDocs Annotation
 
-Si buscas **cómo agregar casilla de verificación** a archivos PDF de forma programática, has llegado al lugar correcto. En el mundo digital‑first de hoy, los PDFs estáticos son cosa del pasado. Ya sea que estés creando flujos de aprobación, encuestas o formularios de cumplimiento, agregar casillas interactivas puede mejorar drásticamente la experiencia del usuario y optimizar tus procesos.
+En los procesos empresariales modernos, los PDFs estáticos ya no son suficientes; los formularios interactivos son esenciales para aprobaciones, encuestas y verificaciones de cumplimiento. Este tutorial le muestra **cómo crear casilla de verificación PDF en Java** usando la biblioteca GroupDocs.Annotation. Aprenderá por qué son importantes las casillas, cómo configurar su entorno y fragmentos de código paso a paso que convierten cualquier PDF en un formulario dinámico que funciona en Adobe Reader, Chrome, Firefox y otros visores principales.
 
 ## Respuestas rápidas
-- **¿Qué biblioteca es la mejor para agregar casilla de verificación a pdf?** GroupDocs.Annotation for Java.  
+- **¿Qué biblioteca es la mejor para agregar una casilla de verificación a un PDF?** GroupDocs.Annotation for Java.  
 - **¿Cuánto tiempo lleva la implementación?** Alrededor de 10‑15 minutos para una casilla básica.  
 - **¿Necesito una licencia?** Una prueba gratuita funciona para desarrollo; se requiere una licencia completa para producción.  
-- **¿Puedo agregar múltiples casillas de verificación pdf en un mismo documento?** Sí, solo crea múltiples instancias de `CheckBoxComponent`.  
-- **¿Funcionarán las casillas en todos los visores de PDF?** Los campos de formulario PDF estándar son compatibles con Adobe Reader, Chrome, Firefox y la mayoría de los visores modernos.
+- **¿Puedo agregar múltiples casillas de verificación al mismo documento?** Sí – solo cree varias instancias de `CheckBoxComponent`.  
+- **¿Funcionarán las casillas de verificación en todos los visores de PDF?** Los campos de formulario PDF estándar son compatibles con Adobe Reader, Chrome, Firefox y la mayoría de los visores modernos.
 
-## ¿Qué es “cómo agregar casilla de verificación” en Java?
-Agregar una casilla de verificación crea un **campo de formulario PDF** que los usuarios finales pueden marcar o desmarcar directamente dentro del visor de PDF. El campo se comporta como cualquier elemento de formulario nativo, conservando su estado al guardar el documento.
+## Qué es “how to add checkbox” en Java?
+`create pdf checkbox java` significa insertar programáticamente un campo de formulario PDF de tipo casilla de verificación para que los usuarios finales puedan marcarlo o desmarcarlo directamente dentro de un visor de PDF. El campo guarda su estado en el archivo PDF, preservando la selección cuando el documento se guarda.
 
 ## ¿Por qué usar GroupDocs.Annotation para campos de formulario PDF en Java?
-- **API sencilla** – puedes crear, estilizar y posicionar casillas de verificación con solo unas pocas líneas de código.  
-- **Compatibilidad entre visores** – los campos generados siguen la especificación PDF, por lo que funcionan en cualquier visor.  
-- **Soporte incorporado para respuestas y estilo** – perfecto para encuestas interactivas o formularios de aprobación.  
-- **Rendimiento escalable** – el procesamiento por lotes y concurrente está soportado de forma nativa.
+GroupDocs.Annotation soporta **más de 50 formatos de entrada y salida** y puede procesar PDFs con **hasta 500 páginas** sin cargar todo el archivo en memoria. Su API le permite crear, estilizar y posicionar casillas de verificación en solo unas pocas líneas, y los campos generados siguen la especificación PDF, garantizando compatibilidad entre visores. La biblioteca también ofrece manejo de respuestas incorporado, lo que la hace ideal para encuestas, flujos de trabajo de aprobación y listas de verificación de cumplimiento.
 
 ## Requisitos previos y configuración
 
-Antes de sumergirnos en el código, asegúrate de tener lo siguiente:
+Antes de sumergirnos en el código, asegúrese de tener lo siguiente:
 
 ### Requisitos esenciales
 - **Java Development Kit**: Versión 8 o superior.  
-- **GroupDocs.Annotation for Java**: Versión 25.2 o posterior (te mostraremos cómo agregarlo).  
+- **GroupDocs.Annotation for Java**: Versión 25.2 o posterior (le mostraremos cómo agregarlo).  
 - **Conocimientos básicos de Java**: Entrada/Salida de archivos e inicialización de objetos.  
-- **Archivo PDF**: Cualquier PDF existente para probar (usaremos un documento de ejemplo).
+- **Archivo PDF**: Cualquier PDF existente para probar (usaremos un documento de muestra).
 
-### Configuración rápida con Maven
-
-Si estás usando Maven, agrega esto a tu `pom.xml`. Esta configuración incluye automáticamente la biblioteca requerida:
+### Configuración rápida de Maven
+Si está usando Maven, agregue esta dependencia a su `pom.xml`. Esta configuración incluye automáticamente la biblioteca requerida:
 
 ```xml
 <repositories>
@@ -73,21 +123,26 @@ Si estás usando Maven, agrega esto a tu `pom.xml`. Esta configuración incluye 
 </dependencies>
 ```
 
-### Licenciamiento simplificado
+> **Consejo profesional:** Mantenga su repositorio Maven actualizado (`mvn clean install`) para que se resuelvan los binarios más recientes de GroupDocs.Annotation.
 
+### Licenciamiento simplificado
 - **Prueba gratuita** – perfecta para pruebas y proyectos pequeños.  
 - **Licencia temporal** – útil durante ciclos de desarrollo más largos.  
 - **Licencia completa** – requerida para implementaciones en producción.
 
-Puedes comenzar a desarrollar de inmediato con la versión de prueba.
+Puede comenzar a desarrollar de inmediato con la versión de prueba.
 
-## Guía paso a paso: Cómo agregar casilla de verificación a PDF usando Java
+## Guía paso a paso: cómo agregar una casilla de verificación a PDF usando Java
 
-Recorreremos tres pasos concisos. Cada paso se basa en el anterior, así que sigue el orden.
+A continuación se muestra un flujo de trabajo conciso de tres pasos. Cada paso se basa en el anterior, así que siga el orden.
 
-### Paso 1: Inicializar el anotador PDF
+## Cómo agregar una casilla de verificación a PDF usando Java
 
-Primero, abre el PDF para editar. La clase `Annotator` es tu punto de entrada:
+Cargue el PDF objetivo con `Annotator`, cree un `CheckBoxComponent`, configure su apariencia y guarde el documento modificado. Este patrón funciona para una sola casilla de verificación o para decenas de ellas en el mismo archivo.
+
+### Paso 1: inicializar el anotador PDF
+
+`Annotator` es la clase principal de GroupDocs.Annotation para cargar, editar y guardar documentos PDF. Primero, abra el PDF para editar. La clase `Annotator` es su punto de entrada:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -101,11 +156,11 @@ public class InitializeAnnotator {
 }
 ```
 
-> **Consejo profesional:** Usa la ruta absoluta para evitar problemas de “archivo no encontrado”, y asegúrate de que el PDF no esté abierto en otra aplicación.
+> **Consejo profesional:** Use una ruta absoluta para evitar problemas de “archivo no encontrado”, y asegúrese de que el PDF no esté abierto en otra aplicación.
 
-### Paso 2: Crear y configurar tu componente de casilla de verificación
+### Paso 2: crear y configurar su componente de casilla de verificación
 
-Ahora creamos un `CheckBoxComponent`. Aquí defines la apariencia, el estado y las respuestas opcionales:
+`CheckBoxComponent` representa un campo de formulario PDF de tipo casilla de verificación. Define la apariencia, el estado y respuestas opcionales:
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -152,14 +207,14 @@ public class CreateCheckBoxComponent {
 ```
 
 **Puntos clave a recordar:**
-- **Coordenadas del rectángulo** son `(x, y, width, height)`. Ajústalas para colocar la casilla donde la necesites.  
-- **Color del trazo** usa un valor entero RGB (`65535` = amarillo). Puedes usar cualquier color que desees.  
-- Las opciones de **BoxStyle** incluyen `STAR`, `CIRCLE`, `SQUARE`, `DIAMOND`.  
+- **Coordenadas del rectángulo** son `(x, y, width, height)`. Ajústelos para colocar la casilla donde la necesite.  
+- **Color del lápiz** usa un valor entero RGB (`65535` = amarillo). Puede usar cualquier color que desee.  
+- Opciones de **BoxStyle** incluyen `STAR`, `CIRCLE`, `SQUARE`, `DIAMOND`.  
 - **Replies** son comentarios opcionales que aparecen al pasar el cursor.
 
-### Paso 3: Añadir la casilla y guardar el PDF
+### Paso 3: agregar la casilla de verificación y guardar el PDF
 
-Finalmente, adjunta el componente al documento y escribe el resultado en disco:
+`Annotator.add` adjunta el componente al documento y escribe el resultado en disco. Este paso final persiste el campo interactivo:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -181,35 +236,35 @@ public class AddCheckBoxAndSave {
 }
 ```
 
-> **Consejos sobre rutas de archivo:**  
-> • Usa rutas absolutas para evitar errores de “archivo no encontrado”.  
-> • Asegúrate de que el directorio de salida exista antes de guardar.  
-> • Considera nombres de archivo únicos para evitar sobrescribir archivos importantes.
+> **Consejos de rutas de archivo:**  
+> • Use rutas absolutas para evitar errores de “archivo no encontrado”.  
+> • Asegúrese de que el directorio de salida exista antes de guardar.  
+> • Considere nombres de archivo únicos para evitar sobrescribir archivos importantes.
 
 ## Aplicaciones del mundo real (más allá de los formularios básicos)
 
-Entender dónde brillan los **campos de formulario pdf java** te ayuda a identificar oportunidades:
+Entender dónde brillan los **campos de formulario PDF en Java** le ayuda a identificar oportunidades:
 
-### Flujos de aprobación de documentos
-Agrega casillas para “Revisado”, “Aprobado” o “Necesita cambios”. Ideal para contratos, presupuestos y reconocimientos de políticas.
+### Flujos de trabajo de aprobación de documentos
+Agregue casillas para “Revisado”, “Aprobado” o “Necesita cambios”. Ideal para contratos, presupuestos y reconocimientos de políticas.
 
-### Recopilación de encuestas y retroalimentación
-Crea encuestas compatibles sin conexión que mantengan el formato exacto en todos los dispositivos. Ideal para satisfacción de empleados, retroalimentación de clientes y evaluaciones de eventos.
+### Encuestas y recopilación de comentarios
+Cree encuestas con capacidad offline que mantengan el formato exacto en todos los dispositivos. Excelente para satisfacción de empleados, retroalimentación de clientes y evaluaciones de eventos.
 
 ### Documentación de capacitación y cumplimiento
-Haz seguimiento del progreso con casillas en manuales de seguridad, listas de verificación de cumplimiento o tareas de incorporación.
+Rastree el progreso con casillas en manuales de seguridad, listas de verificación de cumplimiento o tareas de incorporación.
 
 ### Formularios legales y administrativos
-Estandariza la aceptación de términos, políticas de privacidad, reclamaciones de seguros y solicitudes gubernamentales.
+Estandarice la aceptación de términos, políticas de privacidad, reclamaciones de seguros y solicitudes gubernamentales.
 
 ## Problemas comunes y soluciones
 
-Todo desarrollador encuentra un obstáculo de vez en cuando. Aquí están los problemas más frecuentes y cómo solucionarlos:
+Todo desarrollador encuentra algún obstáculo de vez en cuando. Aquí están los problemas más frecuentes y cómo solucionarlos:
 
-### Errores “Archivo no encontrado”
+### Errores de “Archivo no encontrado”
 
 **Problema:** Ruta del PDF incorrecta.  
-**Solución:** Verifica que el archivo exista antes de procesarlo:
+**Solución:** Verifique que el archivo exista antes de procesarlo:
 
 ```java
 File inputFile = new File("path/to/your/file.pdf");
@@ -220,13 +275,13 @@ if (!inputFile.exists()) {
 
 ### La casilla aparece en la posición incorrecta
 
-**Problema:** El sistema de coordenadas del PDF comienza en la esquina inferior‑izquierda.  
-**Solución:** Ajusta la coordenada Y. Para una página de 600 píxeles de alto, un “100 desde la parte superior” visual se convierte en `Y = 500`.
+**Problema:** El sistema de coordenadas del PDF comienza en la esquina inferior izquierda.  
+**Solución:** Ajuste la coordenada Y. Para una página de 600 píxeles de alto, un “100 desde la parte superior” visual se convierte en `Y = 500`.
 
 ### Problemas de memoria con PDFs grandes
 
 **Problema:** `OutOfMemoryError`.  
-**Solución:** Incrementa el heap de la JVM o procesa los documentos por lotes:
+**Solución:** Aumente el heap de la JVM o procese los documentos en lotes:
 
 ```bash
 java -Xmx2048m YourApplication
@@ -235,7 +290,7 @@ java -Xmx2048m YourApplication
 ### Errores de validación de licencia
 
 **Problema:** “License not found” o “Invalid license”.  
-**Solución:** Coloca el archivo de licencia en la raíz del classpath o establece la ruta explícitamente:
+**Solución:** Coloque el archivo de licencia en la raíz del classpath o establezca la ruta explícitamente:
 
 ```java
 License license = new License();
@@ -245,20 +300,19 @@ license.setLicense("path/to/GroupDocs.Annotation.Java.lic");
 ### La casilla no responde a los clics
 
 **Problema:** La casilla parece estática.  
-**Solución:** Asegúrate de estar usando `CheckBoxComponent` (un campo de formulario) en lugar de una anotación genérica.
+**Solución:** Asegúrese de estar usando `CheckBoxComponent` (un campo de formulario) en lugar de una anotación genérica.
 
 ## Consejos de optimización de rendimiento
 
-Cuando pases a producción, estos ajustes mantienen todo ágil:
+Cuando pase a producción, estos ajustes mantienen todo ágil:
 
 ### Mejores prácticas de gestión de memoria
-- Siempre usa **try‑with‑resources** para `Annotator`.  
-- Procesa los documentos por lotes en lugar de cargar muchos a la vez.  
-- Ajusta el tamaño del heap de la JVM según las dimensiones típicas de los documentos.
+- Siempre use **try‑with‑resources** para `Annotator`.  
+- Procese documentos en lotes en lugar de cargar muchos a la vez.  
+- Ajuste el tamaño del heap de la JVM según las dimensiones típicas de los documentos.
 
 ### Estrategia de procesamiento por lotes
-
-Para varios PDFs, itera con un nuevo `Annotator` en cada iteración:
+Para varios PDFs, itere con un nuevo `Annotator` en cada iteración:
 
 ```java
 public void processPDFBatch(List<String> pdfPaths) {
@@ -273,15 +327,12 @@ public void processPDFBatch(List<String> pdfPaths) {
 }
 ```
 
-### Consideraciones para procesamiento concurrente
-
-`GroupDocs.Annotation` es seguro para hilos, por lo que puedes ejecutar varios documentos en paralelo:
-- Usa `ExecutorService` con un pool de hilos limitado.  
-- Monitorea el uso de RAM y limita la concurrencia en consecuencia.
+### Consideraciones de procesamiento concurrente
+`GroupDocs.Annotation` es seguro para hilos, por lo que puede ejecutar varios documentos en paralelo:
+- Use `ExecutorService` con un pool de hilos limitado.  
+- Monitoree el uso de RAM y limite la concurrencia en consecuencia.
 
 ## Enfoques alternativos a considerar
-
-Aunque GroupDocs.Annotation sobresale en anotaciones, es útil conocer las alternativas:
 
 | Biblioteca | Licencia | Fortalezas | Desventajas |
 |------------|----------|------------|-------------|
@@ -291,14 +342,16 @@ Aunque GroupDocs.Annotation sobresale en anotaciones, es útil conocer las alter
 
 **¿Por qué elegir GroupDocs.Annotation?**  
 - Optimizado para escenarios de anotación.  
-- API sencilla para casillas y otros elementos de formulario.  
+- API sencilla para casillas de verificación y otros elementos de formulario.  
 - Precios competitivos y soporte receptivo.
 
 ## Personalización avanzada de casillas de verificación
 
-Una vez que domines lo básico, avanza con estas técnicas:
+Una vez que domine lo básico, mejore con estas técnicas:
 
 ### Opciones de estilo personalizado
+`CheckBoxComponent` le permite establecer el ancho del borde, el color de fondo y iconos personalizados. Use las siguientes propiedades para lograr una apariencia de marca:
+
 ```java
 checkbox.setPenWidth(2);              // Border thickness
 checkbox.setBackgroundColor(16777215); // White background
@@ -306,7 +359,7 @@ checkbox.setOpacity(0.8);             // Semi‑transparent
 ```
 
 ### Lógica condicional
-Agrega una casilla solo cuando exista una sección determinada:
+Agregue una casilla solo cuando exista una sección determinada inspeccionando el contenido de la página antes de colocarla:
 
 ```java
 if (documentContainsSection("Terms and Conditions")) {
@@ -315,7 +368,7 @@ if (documentContainsSection("Terms and Conditions")) {
 ```
 
 ### Posicionamiento dinámico
-Calcula el mejor lugar basado en el contenido existente:
+Calcule el mejor lugar basado en el contenido existente, como alinear una casilla junto a una etiqueta extraída del PDF:
 
 ```java
 Rectangle dynamicPosition = calculateOptimalPosition(document, contentType);
@@ -324,23 +377,29 @@ checkbox.setBox(dynamicPosition);
 
 ## Preguntas frecuentes
 
-**P: ¿Puedo agregar múltiples casillas de verificación pdf en el mismo documento?**  
-R: Absolutamente. Crea tantos objetos `CheckBoxComponent` como necesites, configura cada uno y añádelos secuencialmente al anotador.
+**P: ¿Puedo agregar múltiples casillas de verificación al mismo documento?**  
+R: Absolutamente. Cree tantos objetos `CheckBoxComponent` como necesite, configure cada uno y agréguelos secuencialmente al anotador.
 
-**P: ¿Funcionan las casillas en todos los visores de PDF?**  
+**P: ¿Funcionan las casillas de verificación en todos los visores de PDF?**  
 R: Sí. GroupDocs crea campos de formulario PDF estándar, que son compatibles con Adobe Reader, Chrome, Firefox y la mayoría de los visores modernos.
 
 **P: ¿Cómo puedo obtener los valores después de que los usuarios completen el formulario?**  
-R: Usa la API de análisis de GroupDocs.Annotation para leer los valores de los campos de formulario del PDF completado. Esto te permite automatizar el procesamiento posterior.
+R: Use la API de análisis de GroupDocs.Annotation para leer los valores de los campos de formulario del PDF completado. Esto le permite automatizar el procesamiento posterior.
 
-**P: ¿Existe un límite en la cantidad de casillas que puedo agregar?**  
+**P: ¿Existe un límite de cuántas casillas de verificación puedo agregar?**  
 R: El límite práctico está determinado por la memoria disponible y el rendimiento del visor. Cientos de casillas suelen estar bien.
 
-**P: ¿Puedo agregar casilla de verificación a archivos pdf protegidos con contraseña?**  
-R: Sí. Proporciona la contraseña al crear el `Annotator`; la biblioteca manejará la desencriptación automáticamente.
+**P: ¿Puedo agregar una casilla a archivos PDF protegidos con contraseña?**  
+R: Sí. Proporcione la contraseña al crear el `Annotator`; la biblioteca manejará la desencriptación automáticamente.
 
 ---
 
-**Última actualización:** 2026-03-14  
+**Última actualización:** 2026-09-25  
 **Probado con:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
+
+## Tutoriales relacionados
+
+- [Agregar campo de texto PDF en Java – Guía GroupDocs.Annotation](/annotation/java/form-field-annotations/)
+- [Cómo crear botones PDF en Java con GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
+- [Crear menús desplegables PDF con GroupDocs Annotation Java](/annotation/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/)

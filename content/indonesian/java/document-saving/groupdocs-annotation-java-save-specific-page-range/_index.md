@@ -1,75 +1,103 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: Pelajari cara menggunakan try‑with‑resources di Java untuk menyimpan
-  halaman tertentu dari dokumen yang diberi anotasi dengan GroupDocs.Annotation. Termasuk
-  contoh layanan dokumen Spring Boot.
-keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
-  document annotation tutorial, selective PDF page saving Java, extract annotated
-  pages
-lastmod: '2026-03-14'
-linktitle: Save Specific Pages Java Annotation
+date: '2026-09-25'
+description: Pelajari cara menyimpan halaman pdf tertentu menggunakan try resources
+  di Java dengan GroupDocs.Annotation. Termasuk contoh layanan Spring Boot dan tips
+  kinerja.
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: Simpan Halaman Tertentu Java Annotation
+og_description: Pelajari cara menyimpan halaman pdf tertentu menggunakan try resources
+  di Java dengan GroupDocs.Annotation. Panduan langkah demi langkah, tips kinerja,
+  dan integrasi Spring Boot.
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: Cara menyimpan halaman pdf tertentu dengan try resources di Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
 tags:
+- save specific pdf pages
 - groupdocs
-- java-annotation
-- document-processing
-- pdf-manipulation
-title: Coba dengan sumber daya Java – Simpan Halaman Tertentu dari Dokumen yang Diberi
-  Anotasi
+- java annotation
+- document processing
+- pdf manipulation
+title: Cara menyimpan halaman pdf tertentu dengan try resources di Java
 type: docs
 url: /id/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# Cara Menyimpan Halaman Tertentu dari Dokumen Beranotasi di Java
+# Cara menyimpan halaman pdf tertentu dari dokumen beranotasi di Java
+
+Ketika Anda perlu **menyimpan halaman pdf tertentu** dari file beranotasi yang besar, menggunakan pola *try with resources* Java bersama dengan GroupDocs.Annotation memberikan solusi yang aman dan efisien dalam penggunaan memori. Tutorial ini menunjukkan cara menyiapkan pustaka, mengekstrak rentang halaman, dan mengintegrasikan logika ke dalam layanan Spring Boot — semua sambil menjaga kode tetap bersih dan sumber daya dilepaskan dengan benar.
 
 ## Pendahuluan
 
-Pernah merasa tenggelam dalam dokumen beranotasi yang sangat besar padahal Anda hanya membutuhkan beberapa halaman tertentu? Dengan **try with resources java**, Anda dapat mengekstrak secara efisien hanya halaman yang dibutuhkan menggunakan GroupDocs.Annotation. Baik Anda menangani kontrak hukum, manual teknis, atau makalah penelitian, mengambil hanya halaman yang relevan menghemat penyimpanan, mempercepat proses, dan menjaga alur kerja tetap rapi.
+`Annotator` adalah kelas utama di GroupDocs.Annotation yang memuat dokumen dan menyediakan metode untuk penanganan anotasi serta penyimpanan.  
+Dalam banyak skenario bisnis—kontrak hukum, manual teknis, atau makalah riset—Anda sering hanya membutuhkan beberapa halaman yang berisi anotasi relevan. Mengekstrak hanya halaman‑halaman tersebut mengurangi biaya penyimpanan hingga 96 %, mempercepat pemrosesan selanjutnya, dan membantu Anda tetap patuh dengan hanya membagikan bagian yang diizinkan.
 
-**Apa yang akan Anda kuasai pada akhir tutorial ini:**
-- Menyiapkan GroupDocs.Annotation dalam proyek Java Anda (dengan cara yang tepat)
-- Mengimplementasikan penyimpanan halaman selektif dengan kode yang bersih dan dapat dipelihara
-- Menghindari jebakan umum yang sering membuat pengembang terperangkap
-- Mengoptimalkan kinerja untuk pemrosesan dokumen besar
-- Menyelesaikan masalah sebelum menjadi sakit kepala
+**Apa yang akan Anda kuasai setelah menyelesaikan panduan ini:**
+- Menginstal dan melisensikan GroupDocs.Annotation untuk Java  
+- Menggunakan `try with resources` untuk menyimpan rentang halaman secara aman  
+- Menangani PDF besar dengan overhead memori rendah  
+- Menyematkan logika dalam layanan dokumen Spring Boot  
+- Memecahkan masalah umum seperti file terkunci dan error out‑of‑memory  
 
-## Jawaban Cepat
+## Jawaban cepat
 - **Apa yang dilakukan “try with resources java”?** Secara otomatis menutup `Annotator`, mencegah penguncian file dan kebocoran memori.  
-- **Perpustakaan mana yang menangani penyimpanan rentang halaman?** `GroupDocs.Annotation` menyediakan `SaveOptions` dengan `setFirstPage`/`setLastPage`.  
-- **Bisakah saya menggunakan ini dalam layanan Spring Boot?** Ya – lihat bagian “Integrasi Layanan Dokumen Spring Boot”.  
-- **Apakah saya memerlukan lisensi?** Versi percobaan gratis cukup untuk pengembangan; lisensi penuh diperlukan untuk produksi.  
-- **Apakah aman untuk PDF besar (1000+ halaman)?** Gunakan `load‑only‑annotated‑pages` dan pemrosesan batch untuk menjaga penggunaan memori tetap rendah.
+- **Pustaka mana yang menangani penyimpanan rentang halaman?** `GroupDocs.Annotation` menyediakan `SaveOptions` dengan `setFirstPage`/`setLastPage`. `SaveOptions` memungkinkan Anda menentukan pengaturan output seperti rentang halaman dan apakah hanya menyertakan anotasi.  
+- **Bisakah saya menggunakan ini dalam layanan Spring Boot?** Ya – lihat bagian “Integrasi layanan dokumen Spring Boot”.  
+- **Apakah saya memerlukan lisensi?** Versi percobaan gratis dapat digunakan untuk pengembangan; lisensi penuh diperlukan untuk produksi.  
+- **Apakah aman untuk PDF besar (1000+ halaman)?** Gunakan load‑only‑annotated‑pages dan pemrosesan batch untuk menjaga penggunaan memori tetap rendah.  
 
-## Mengapa Menyimpan Halaman Tertentu? (Konteks Dunia Nyata)
+## Apa itu menyimpan halaman pdf tertentu?
+Operasi **menyimpan halaman pdf tertentu** mengekstrak interval halaman yang ditentukan dari dokumen sumber sambil mempertahankan semua anotasi pada halaman‑halaman tersebut. Ini menghasilkan PDF baru yang lebih kecil yang hanya berisi halaman terpilih, ideal untuk berbagi atau arsip yang terarah.
 
-Sebelum masuk ke hal teknis, mari bahas mengapa fitur ini menjadi pengubah permainan:
+## Mengapa menggunakan try resources untuk penyimpanan halaman?
+Menggunakan `try with resources` menjamin bahwa instance `Annotator` dibuang segera setelah blok selesai. Pembersihan deterministik ini mencegah pengecualian “file terkunci” yang umum dan menjaga jejak memori JVM dapat diprediksi—terutama penting saat memproses puluhan PDF besar secara paralel.
 
-**Efisiensi Penyimpanan**: Manual 500 halaman dengan anotasi hanya pada 20 halaman? Mengapa menyimpan semua 500 ketika Anda dapat mengekstrak 20 halaman relevan dan mengurangi ukuran file hingga 96 %?
+## Prasyarat dan penyiapan
 
-**Pemrosesan Lebih Cepat**: File yang lebih kecil berarti unggahan, unduhan, dan pemrosesan yang lebih cepat. Pengguna Anda (dan server Anda) akan berterima kasih.
-
-**Pengalaman Pengguna Lebih Baik**: Tidak ada yang ingin menggulir ratusan halaman untuk menemukan bagian beranotasi. Berikan mereka tepat apa yang mereka butuhkan.
-
-**Kepatuhan dan Keamanan**: Di industri yang diatur, Anda mungkin hanya diizinkan membagikan bagian tertentu dari dokumen. Penyimpanan selektif memudahkan kepatuhan.
-
-## Prasyarat dan Penyiapan
-
-### Apa yang Anda Butuhkan
-
-- **Java Development Kit (JDK)**: Versi 8 atau lebih tinggi (JDK 11+ disarankan)  
-- **Maven atau Gradle**: Untuk manajemen dependensi  
-- **GroupDocs.Annotation untuk Java**: Versi 25.2 atau lebih baru  
-- **Pengetahuan dasar Java**: Memahami I/O file dan OOP  
+### Apa yang Anda perlukan
+- **JDK 8+** (disarankan JDK 11+)  
+- **Maven** atau **Gradle** untuk manajemen dependensi  
+- **GroupDocs.Annotation untuk Java** — versi 25.2 atau lebih baru (mendukung 50+ format)  
+- Familiaritas dasar dengan Java I/O dan OOP  
 
 ### Menyiapkan GroupDocs.Annotation untuk Java
 
 #### Konfigurasi Maven
-
-Tambahkan ini ke `pom.xml` Anda (percaya saya, copy‑paste sangat membantu di sini):
+Tambahkan dependensi ke `pom.xml` Anda (salin‑tempel saja):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -84,11 +112,12 @@ Tambahkan ini ke `pom.xml` Anda (percaya saya, copy‑paste sangat membantu di s
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### Setup Gradle (Jika Anda Tim Gradle)
-
-```gradle
+#### Pengaturan Gradle (jika Anda lebih suka Gradle)
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -99,32 +128,32 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### Mengatur Lisensi Anda
+### Mengatur lisensi Anda
+Mulailah dengan percobaan gratis, kemudian beralih ke lisensi sementara atau penuh sesuai kebutuhan:
 
-Berikut apa yang kebanyakan tutorial tidak beri tahu: **mulailah dengan versi percobaan gratis**. Serius. Jangan membuatnya terlalu rumit.
+- **Percobaan gratis:** Sempurna untuk pengujian dan pengembangan – dapatkan dari [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Lisensi sementara:** Butuh waktu lebih lama untuk evaluasi? Dapatkan [lisensi sementara](https://purchase.groupdocs.com/temporary-license/)  
+- **Lisensi penuh:** Siap untuk produksi? [Beli di sini](https://purchase.groupdocs.com/buy)  
 
-- **Percobaan Gratis**: Sempurna untuk pengujian dan pengembangan – dapatkan dari [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
-- **Lisensi Sementara**: Butuh lebih banyak waktu untuk evaluasi? Dapatkan [lisensi sementara](https://purchase.groupdocs.com/temporary-license/)  
-- **Lisensi Penuh**: Siap produksi? [Beli di sini](https://purchase.groupdocs.com/buy)
+> **Tip profesional:** Versi percobaan hanya menghilangkan beberapa fitur lanjutan, yang sudah cukup untuk mengikuti tutorial ini dan membangun proof of concept.
 
-Tip profesional: Versi percobaan memiliki beberapa keterbatasan, tetapi cukup untuk mengikuti tutorial ini dan membangun proof of concept.
+## Bagaimana cara kerja try with resources di Java?
 
-## Menggunakan try with resources java untuk penyimpanan halaman selektif
+`try` `with` `resources` secara otomatis memanggil `close()` pada objek apa pun yang mengimplementasikan `AutoCloseable` di akhir blok. Ketika Anda membungkus instance `Annotator` dalam konstruksi ini, pustaka melepaskan handle file dan membersihkan buffer internal tanpa kode tambahan, menghilangkan risiko penguncian yang tertinggal.
 
-Setelah lingkungan siap, mari lihat bagaimana **try with resources java** membuat operasi rentang halaman menjadi aman dan ringkas. Pola ini memastikan instance `Annotator` dibuang secara otomatis, yang menghilangkan masalah penguncian file dan menjaga penggunaan memori tetap rapi.
+## Implementasi inti: menyimpan rentang halaman tertentu
 
-## Implementasi Inti: Menyimpan Rentang Halaman Tertentu
+### Anchor definisi `Annotator`
+`Annotator` adalah kelas utama GroupDocs.Annotation untuk memuat, mengedit, dan menyimpan dokumen beranotasi. Ia menyediakan metode untuk mengakses anotasi, memodifikasi halaman, dan mengekspor hasil.
 
-### Pendekatan Dasar (Mulai Di Sini)
+### Langkah 1: menyiapkan utilitas jalur‑file
 
-Mari mulai dengan implementasi paling sederhana. Ini yang dibutuhkan 90 % kasus penggunaan:
-
-#### Langkah 1: Mengatur Manajemen Path File
-
-Pertama, buat kelas utilitas untuk menangani path file (Anda akan berterima kasih nanti saat harus mengubah direktori):
+Buat helper kecil yang membangun jalur output secara konsisten:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -133,14 +162,16 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**Mengapa pendekatan ini?** Menyimpan logika path file di satu tempat memudahkan pengujian. Menggunakan `FilenameUtils` memastikan ekstensi file asli tetap dipertahankan secara otomatis.
+Memusatkan logika jalur memudahkan perubahan direktori di kemudian hari dan membuat kode Anda lebih mudah diuji.
 
-#### Langkah 2: Implementasikan Penyimpanan Rentang Halaman
+### Langkah 2: mengimplementasikan penyimpanan rentang halaman
 
-Inilah tempat keajaiban terjadi:
+Potongan kode berikut menampilkan logika esensial. Ia menggunakan `try with resources` untuk menjamin pembersihan:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -150,25 +181,25 @@ public class SaveSpecificPageRange {
         
         try (final Annotator annotator = new Annotator(inputFile)) {
             SaveOptions saveOptions = new SaveOptions();
-            saveOptions.setFirstPage(2);  // Start from page 2
-            saveOptions.setLastPage(4);   // End at page 4
+            saveOptions.setFirstPage(2);  // Mulai dari halaman 2
+            saveOptions.setLastPage(4);   // Berakhir di halaman 4
             
             annotator.save(outputPath, saveOptions);
         }
     }
 }
 ```
+```
 
-**Apa yang terjadi di sini:**
-- Kita menggunakan blok **try‑with‑resources java** (`try ( … )`) sehingga `Annotator` ditutup otomatis, menghilangkan masalah penguncian file.  
-- `setFirstPage(2)` dan `setLastPage(4)` mendefinisikan rentang inklusif kami (halaman 2‑4).  
-- Rentang ini **inklusif** di kedua ujung – detail yang sering membuat pengembang bingung.
+- `setFirstPage(2)` dan `setLastPage(4)` mendefinisikan rentang **inklusif** (halaman 2‑4).  
+- `Annotator` ditutup secara otomatis ketika blok berakhir, mencegah masalah penguncian file.  
 
-### Konfigurasi Path File Lanjutan
+### Konfigurasi jalur‑file lanjutan
 
-Untuk aplikasi produksi, Anda akan menginginkan penanganan path yang lebih fleksibel:
+Untuk produksi Anda mungkin menginginkan penamaan dinamis:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -187,68 +218,68 @@ public class FilePathConfiguration {
     }
 }
 ```
-
-Sekarang Anda dapat menghasilkan nama seperti `contract_pages_2-4.pdf` secara otomatis.
-
-## Kesalahan Umum dan Cara Menghindarinya
-
-### Kesalahan #1: Kebingungan Indeks Halaman
-
-**Masalah**: Mengasumsikan nomor halaman dimulai dari 0 (padahal tidak di GroupDocs.Annotation).
-
-**Solusi**: Penomoran halaman dimulai dari 1, sama seperti dokumen sebenarnya. Halaman 1 adalah halaman pertama, bukan halaman 0.
-
-```java
-// Wrong - this tries to start from page 0 (doesn't exist)
-saveOptions.setFirstPage(0);
-
-// Right - this starts from the actual first page
-saveOptions.setFirstPage(1);
 ```
 
-### Kesalahan #2: Kebocoran Sumber Daya
+Sekarang file output akan bernama seperti `contract_pages_2-4.pdf`, sehingga jelas halaman mana yang diekstrak.
 
-**Masalah**: Lupa menutup `Annotator` dengan benar, menyebabkan penguncian file dan kebocoran memori.
+## Kesalahan umum dan cara menghindarinya
 
-**Solusi**: Selalu gunakan **try‑with‑resources java** atau tutup secara eksplisit:
+### Kesalahan #1: kebingungan indeks halaman
+**Masalah:** Menganggap nomor halaman dimulai dari 0.  
+**Solusi:** Penomoran halaman di GroupDocs.Annotation dimulai dari 1, sama seperti yang terlihat di penampil PDF.
 
 ```java
-// Good - automatic resource management
-try (final Annotator annotator = new Annotator(inputFile)) {
-    // your code here
-} // automatically closes
+// ```java
+// Salah - ini mencoba memulai dari halaman 0 (tidak ada)
+saveOptions.setFirstPage(0);
 
-// Also acceptable - manual closing
+// Benar - ini memulai dari halaman pertama yang sebenarnya
+saveOptions.setFirstPage(1);
+```
+```
+
+### Kesalahan #2: kebocoran sumber daya
+**Masalah:** Lupa menutup `Annotator` menyebabkan file terkunci.  
+**Solusi:** Selalu bungkus `Annotator` dalam blok `try with resources` atau panggil `close()` secara eksplisit.
+
+```java
+// ```java
+// Baik - manajemen sumber daya otomatis
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // kode Anda di sini
+} // otomatis menutup
+
+// Juga dapat diterima - penutupan manual
 Annotator annotator = null;
 try {
     annotator = new Annotator(inputFile);
-    // your code here
+    // kode Anda di sini
 } finally {
     if (annotator != null) {
         annotator.dispose();
     }
 }
 ```
+```
 
-### Kesalahan #3: Rentang Halaman Tidak Valid
-
-**Masalah**: Menentukan rentang halaman yang tidak ada dalam dokumen.
-
-**Solusi**: Validasi rentang Anda terlebih dahulu:
+### Kesalahan #3: rentang halaman tidak valid
+**Masalah:** Menentukan rentang yang melebihi jumlah halaman dokumen.  
+**Solusi:** Validasi rentang terhadap `annotator.getDocumentInfo().getPagesCount()` sebelum menyimpan.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
-        // Get document info to check page count
+        // Dapatkan info dokumen untuk memeriksa jumlah halaman
         DocumentInfo documentInfo = annotator.getDocument().getDocumentInfo();
         int totalPages = documentInfo.getPageCount();
         
-        // Validate range
+        // Validasi rentang
         if (firstPage < 1 || firstPage > totalPages) {
-            throw new IllegalArgumentException("First page out of range: " + firstPage);
+            throw new IllegalArgumentException("Halaman pertama di luar jangkauan: " + firstPage);
         }
         if (lastPage < firstPage || lastPage > totalPages) {
-            throw new IllegalArgumentException("Last page out of range: " + lastPage);
+            throw new IllegalArgumentException("Halaman terakhir di luar jangkauan: " + lastPage);
         }
         
         SaveOptions saveOptions = new SaveOptions();
@@ -260,27 +291,28 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
-## Tips Optimasi Kinerja
+## Tips optimalisasi kinerja
 
-### Manajemen Memori untuk Dokumen Besar
-
-Saat menangani dokumen besar (100 + halaman), penggunaan memori menjadi penting:
+### Manajemen memori untuk dokumen besar
+Saat memproses PDF dengan 100 + halaman, aktifkan pemuatan hanya halaman beranotasi untuk menjaga heap tetap rendah:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
-        // Configure for lower memory usage
+        // Konfigurasi untuk penggunaan memori lebih rendah
         LoadOptions loadOptions = new LoadOptions();
-        loadOptions.setLoadOnlyAnnotatedPages(true); // Only load pages with annotations
+        loadOptions.setLoadOnlyAnnotatedPages(true); // Hanya muat halaman dengan anotasi
         
         try (final Annotator annotator = new Annotator(inputFile, loadOptions)) {
             SaveOptions saveOptions = new SaveOptions();
             saveOptions.setFirstPage(firstPage);
             saveOptions.setLastPage(lastPage);
             
-            // Optional: Enable compression for smaller output files
-            saveOptions.setAnnotationsOnly(false); // Set to true if you only want annotations
+            // Opsional: Aktifkan kompresi untuk file output yang lebih kecil
+            saveOptions.setAnnotationsOnly(false); // Set ke true jika hanya ingin anotasi
             
             String outputPath = new FilePathConfiguration().getOutputFilePath(inputFile);
             annotator.save(outputPath, saveOptions);
@@ -288,39 +320,41 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**Strategi optimasi utama**
-- `setLoadOnlyAnnotatedPages(true)` mengurangi jejak memori.  
-- `setAnnotationsOnly(true)` membuat file ringan yang hanya berisi lapisan anotasi.  
-- Proses dokumen secara batch jika Anda memiliki banyak file.
+Strategi kunci:
+- `setLoadOnlyAnnotatedPages(true)` mengurangi penggunaan memori dengan hanya memuat halaman yang berisi anotasi.  
+- `setAnnotationsOnly(true)` menghasilkan file ringan yang hanya menyimpan lapisan anotasi.  
+- Pemrosesan batch dengan thread pool tetap menghindari kehabisan sumber daya sistem.
 
-### Pemrosesan Batch Banyak Dokumen
-
-Untuk skenario produksi yang memproses banyak dokumen:
+### Pemrosesan batch banyak dokumen
+Untuk skenario throughput tinggi, proses file dalam batch:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
             try {
                 savePageRangeWithValidation(inputFile, firstPage, lastPage);
-                System.out.println("Successfully processed: " + inputFile);
+                System.out.println("Berhasil diproses: " + inputFile);
             } catch (Exception e) {
-                System.err.println("Failed to process " + inputFile + ": " + e.getMessage());
-                // Log the error and continue with next file
+                System.err.println("Gagal memproses " + inputFile + ": " + e.getMessage());
+                // Log error dan lanjutkan ke file berikutnya
             }
         }
     }
 }
 ```
+```
 
-## Integrasi dengan Kerangka Kerja Populer
+## Integrasi dengan kerangka kerja populer
 
-### Integrasi Layanan Dokumen Spring Boot
-
-Berikut contoh layanan Spring Boot sederhana untuk penyimpanan rentang halaman (perhatikan istilah **spring boot document service**):
+### Integrasi layanan dokumen Spring Boot
+Berikut contoh layanan Spring Boot minimal yang menerima PDF, mengekstrak rentang halaman, dan mengembalikan file baru sebagai array byte.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -338,7 +372,7 @@ public class DocumentPageRangeService {
             
             return outputPath;
         } catch (Exception e) {
-            throw new DocumentProcessingException("Failed to save page range", e);
+            throw new DocumentProcessingException("Gagal menyimpan rentang halaman", e);
         }
     }
     
@@ -350,17 +384,20 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
 
-## Aplikasi Praktis dan Kasus Penggunaan
+Layanan ini menggunakan injeksi konstruktor untuk `AnnotatorFactory`, menjaga controller tetap tipis dan mudah diuji.
 
-### Pemrosesan Dokumen Hukum
+## Aplikasi praktis dan contoh penggunaan
 
-Firma hukum sering perlu mengekstrak bagian tertentu dari kontrak atau dokumen pengadilan:
+### Pemrosesan dokumen hukum
+Firma hukum sering perlu membagikan hanya klausul yang telah ditinjau. Mengekstrak halaman‑halaman tersebut mengurangi risiko mengungkapkan bagian rahasia.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
-        // Group consecutive pages for efficient processing
+        // Kelompokkan halaman berurutan untuk pemrosesan efisien
         List<PageRange> ranges = groupConsecutivePages(evidencePages);
         
         for (PageRange range : ranges) {
@@ -371,12 +408,13 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
-### Manajemen Konten Pendidikan
-
-Guru mengekstrak bab tertentu dari buku teks untuk tugas siswa:
+### Manajemen konten pendidikan
+Guru dapat mengambil hanya bab beranotasi yang diperlukan siswa untuk tugas, mengurangi ukuran unduhan dan meningkatkan fokus.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -390,16 +428,17 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
-### Review Jaminan Kualitas
-
-Mengekstrak hanya halaman dengan komentar review untuk revisi terfokus:
+### Tinjauan jaminan kualitas
+Tim QA dapat mengisolasi halaman dengan komentar reviewer, memungkinkan siklus iterasi yang lebih cepat.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
-            // Get pages with annotations
+            // Dapatkan halaman dengan anotasi
             List<Integer> annotatedPages = getAnnotatedPageNumbers(annotator);
             
             if (!annotatedPages.isEmpty()) {
@@ -417,99 +456,105 @@ public class QAReviewExtractor {
     }
 }
 ```
-
-## Ringkasan Praktik Terbaik
-
-1. **Selalu validasi parameter input** – periksa rentang halaman sebelum memproses.  
-2. **Gunakan try‑with‑resources java** – mencegah kebocoran sumber daya dan masalah penguncian file.  
-3. **Implementasikan penanganan error yang tepat** – jangan biarkan satu file buruk menghentikan seluruh batch.  
-4. **Pertimbangkan penggunaan memori** – gunakan `setLoadOnlyAnnotatedPages(true)` untuk dokumen besar.  
-5. **Uji dengan berbagai tipe file** – PDF, Word, PowerPoint dapat berperilaku berbeda.  
-6. **Pantau kinerja** – perhatikan waktu pemrosesan dan memori di lingkungan produksi.
-
-## Pemecahan Masalah Isu Umum
-
-### Masalah: Error “File is locked”
-
-**Gejala**: Exception dilempar saat mencoba menyimpan, menyebutkan penguncian file.  
-
-**Penyebab**:  
-- `Annotator` tidak ditutup dengan benar dari operasi sebelumnya.  
-- File masih terbuka di aplikasi lain.  
-- Izin yang tidak memadai.  
-
-**Solusi**:
-
-```java
-// Ensure proper cleanup
-try (final Annotator annotator = new Annotator(inputFile)) {
-    // ... your code ...
-} // Automatically releases file handles
-
-// Verify file accessibility before processing
-File file = new File(inputFile);
-if (!file.canRead()) {
-    throw new IllegalArgumentException("Cannot read input file: " + inputFile);
-}
-if (!file.getParentFile().canWrite()) {
-    throw new IllegalArgumentException("Cannot write to output directory");
-}
 ```
 
-### Masalah: Out of Memory Errors
+## Ringkasan praktik terbaik
+1. **Validasi nomor halaman** sebelum memanggil operasi penyimpanan.  
+2. **Selalu gunakan `try with resources`** untuk menjamin `Annotator` tertutup.  
+3. **Aktifkan `setLoadOnlyAnnotatedPages(true)`** untuk PDF besar agar penggunaan memori tetap terkendali.  
+4. **Uji pada semua format yang didukung**—GroupDocs.Annotation menangani lebih dari 50 tipe input dan output, termasuk PDF, DOCX, XLSX, PPTX, dan file gambar.  
+5. **Pantau heap JVM** dan sesuaikan `-Xmx` sesuai kebutuhan untuk pekerjaan batch.  
 
-**Gejala**: `OutOfMemoryError` saat memproses dokumen besar.  
+## Memecahkan masalah umum
 
-**Solusi**:  
-1. Tingkatkan ukuran heap JVM, misalnya `-Xmx2g`.  
-2. Gunakan opsi pemuatan yang dioptimalkan seperti yang ditunjukkan sebelumnya.  
-3. Proses dokumen dalam batch yang lebih kecil.
+### Masalah: error “File is locked”
+**Gejala:** Pengecualian yang menyebutkan file terkunci muncul saat `save()`.  
+**Penyebab:**  
+- Instance `Annotator` sebelumnya tidak ditutup.  
+- File terbuka di aplikasi lain.  
+- Izin sistem file tidak memadai.  
 
-### Masalah: Anotasi Tidak Terjaga
-
-**Gejala**: File output tidak berisi anotasi asli.  
-
-**Solusi**: Pastikan Anda tidak menghapus anotasi:
+**Solusi:** Pastikan setiap `Annotator` dibungkus dalam `try with resources` dan verifikasi penguncian file pada tingkat OS.
 
 ```java
+// ```java
+// Pastikan pembersihan yang tepat
+try (final Annotator annotator = new Annotator(inputFile)) {
+    // ... kode Anda ...
+} // Otomatis melepaskan handle file
+
+// Verifikasi aksesibilitas file sebelum diproses
+File file = new File(inputFile);
+if (!file.canRead()) {
+    throw new IllegalArgumentException("Tidak dapat membaca file input: " + inputFile);
+}
+if (!file.getParentFile().canWrite()) {
+    throw new IllegalArgumentException("Tidak dapat menulis ke direktori output");
+}
+```
+```
+
+### Masalah: error out‑of‑memory
+**Gejala:** `OutOfMemoryError` saat memproses PDF besar.  
+**Solusi:**  
+1. Tingkatkan heap JVM (`-Xmx2g` atau lebih).  
+2. Gunakan `setLoadOnlyAnnotatedPages(true)` dan `setAnnotationsOnly(true)`.  
+3. Proses dokumen dalam batch yang lebih kecil.
+
+### Masalah: anotasi tidak dipertahankan
+**Gejala:** File output tidak memiliki markup asli.  
+**Solusi:** Jangan secara tidak sengaja mengaktifkan `setAnnotationsOnly(false)`; biarkan default untuk mempertahankan anotasi.
+
+```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
-saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
+saveOptions.setAnnotationsOnly(false); // Simpan konten dan anotasi
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
+```
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**T: Bisakah saya menyimpan halaman yang tidak berurutan (misalnya halaman 1, 3, 7)?**  
-J: Tidak secara langsung dengan satu operasi. Anda perlu menjalankan penyimpanan terpisah untuk tiap rentang atau menggabungkan hasilnya setelahnya.
+**T: Bisakah saya menyimpan halaman tidak berurutan (mis., 1, 3, 7)?**  
+J: Tidak dengan satu panggilan `SaveOptions`. Lakukan penyimpanan terpisah untuk tiap rentang lalu gabungkan hasilnya.
 
 **T: Apakah ini bekerja dengan dokumen yang dilindungi password?**  
-J: Ya, tetapi Anda harus menyediakan password saat membuat `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+J: Ya—berikan password saat membuat `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
 **T: Format file apa saja yang didukung?**  
 J: PDF, Microsoft Word, Excel, PowerPoint, dan banyak lainnya. Lihat [dokumentasi resmi](https://docs.groupdocs.com/annotation/java/) untuk daftar lengkap.
 
 **T: Bisakah saya menyimpan hanya anotasi tanpa konten asli?**  
-J: Tentu – set `saveOptions.setAnnotationsOnly(true)` untuk membuat file hanya berisi anotasi.
+J: Tentu—atur `saveOptions.setAnnotationsOnly(true)` untuk membuat file hanya berisi lapisan anotasi.
 
 **T: Bagaimana menangani dokumen sangat besar (1000+ halaman)?**  
 J: Gunakan `setLoadOnlyAnnotatedPages(true)`, proses dalam potongan, dan pertimbangkan meningkatkan heap JVM.
 
-**T: Apakah ada cara untuk pratinjau halaman sebelum menyimpan?**  
-J: GroupDocs.Annotation fokus pada pemrosesan, bukan penampilan, tetapi Anda dapat mengambil informasi dokumen (jumlah halaman, lokasi anotasi) untuk membantu menentukan rentang yang akan diekstrak.
+**T: Ada cara untuk melihat pratinjau halaman sebelum menyimpan?**  
+J: GroupDocs.Annotation fokus pada pemrosesan, namun Anda dapat mengambil jumlah halaman dan lokasi anotasi melalui `annotator.getDocumentInfo()` untuk memutuskan rentang yang akan diekstrak.
 
-## Sumber Daya
+## Sumber daya tambahan
 
-- **Dokumentasi**: [GroupDocs.Annotation untuk Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **Referensi API**: [Dokumentasi API Lengkap](https://reference.groupdocs.com/annotation/java/)  
-- **Unduhan**: [Rilis Terbaru](https://releases.groupdocs.com/annotation/java/)  
-- **Pembelian**: [Opsi Lisensi](https://purchase.groupdocs.com/buy)  
-- **Percobaan Gratis**: [Coba Sekarang](https://releases.groupdocs.com/annotation/java/)  
-- **Lisensi Sementara**: [Dapatkan Lisensi Evaluasi](https://purchase.groupdocs.com/temporary-license/)  
-- **Dukungan**: [Forum Komunitas](https://forum.groupdocs.com/c/annotation/)
+- Dokumentasi: [GroupDocs.Annotation untuk Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- Dokumentasi resmi: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- Referensi API: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- Unduhan: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- Rilis GroupDocs: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- Opsi lisensi: [License Options](https://purchase.groupdocs.com/buy)  
+- Beli di sini: [Purchase here](https://purchase.groupdocs.com/buy)  
+- Percobaan gratis: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- Lisensi sementara: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- Dukungan: [Community Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Terakhir Diperbarui:** 2026-03-14  
-**Diuji Dengan:** GroupDocs.Annotation 25.2 (Java)  
+**Terakhir diperbarui:** 2026-09-25  
+**Diuji dengan:** GroupDocs.Annotation 25.2 (Java)  
 **Penulis:** GroupDocs
+
+## Tutorial Terkait
+
+- [Reduce PDF Size Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
+- [Save Annotated PDF using GroupDocs Java & Azure Blob](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)  
+- [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/load-password-protected-pdf/)

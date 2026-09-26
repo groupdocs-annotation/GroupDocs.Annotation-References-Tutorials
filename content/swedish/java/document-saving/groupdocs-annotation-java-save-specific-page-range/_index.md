@@ -1,76 +1,101 @@
 ---
 categories:
 - Java Development
-date: '2026-03-14'
-description: Lär dig hur du använder try‑with‑resources i Java för att spara specifika
-  sidor från annoterade dokument med GroupDocs.Annotation. Inkluderar ett exempel
-  på Spring Boot‑dokumenttjänst.
-keywords: save specific pages Java annotation, GroupDocs annotation page range, Java
-  document annotation tutorial, selective PDF page saving Java, extract annotated
-  pages
-lastmod: '2026-03-14'
-linktitle: Save Specific Pages Java Annotation
+date: '2026-09-25'
+description: Lär dig hur du sparar specifika pdf-sidor med try resources i Java med
+  GroupDocs.Annotation. Inkluderar exempel på Spring Boot-tjänst och prestandatips.
+keywords:
+- save specific pdf pages
+- try with resources java
+- remove unused pdf pages
+- use try resources
+lastmod: '2026-09-25'
+linktitle: Spara specifika sidor Java Annotation
+og_description: Lär dig hur du sparar specifika pdf-sidor med try resources i Java
+  med GroupDocs.Annotation. Steg-för-steg-guide, prestandatips och Spring Boot-integration.
+og_image_alt: Guide to saving specific PDF pages in Java using GroupDocs.Annotation
+  and try resources
+og_title: Hur man sparar specifika pdf-sidor med try resources i Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-25'
+  description: Learn how to save specific pdf pages using try resources in Java with
+    GroupDocs.Annotation. Includes Spring Boot service example and performance tips.
+  headline: How to save specific pdf pages with try resources in Java
+  type: TechArticle
+- questions:
+  - answer: Not with a single `SaveOptions` call. Run separate saves for each range
+      and merge the results afterward.
+    question: Can I save non‑consecutive pages (e.g., 1, 3, 7)?
+  - answer: 'Yes—provide the password when constructing the `Annotator`: `new Annotator(inputFile,
+      loadOptions.setPassword("your_password"))`.'
+    question: Does this work with password‑protected documents?
+  - answer: PDF, Microsoft Word, Excel, PowerPoint, and many others. See the [official
+      documentation](https://docs.groupdocs.com/annotation/java/) for the full list.
+    question: What file formats are supported?
+  - answer: Absolutely—set `saveOptions.setAnnotationsOnly(true)` to create an annotation‑only
+      file.
+    question: Can I save just the annotations without the original content?
+  - answer: Use `setLoadOnlyAnnotatedPages(true)`, process in chunks, and consider
+      increasing the JVM heap size.
+    question: How do I handle very large documents (1000+ pages)?
+  type: FAQPage
 tags:
+- save specific pdf pages
 - groupdocs
-- java-annotation
-- document-processing
-- pdf-manipulation
-title: Prova med resurser Java – Spara specifika sidor från annoterade dokument
+- java annotation
+- document processing
+- pdf manipulation
+title: Hur man sparar specifika pdf-sidor med try resources i Java
 type: docs
 url: /sv/java/document-saving/groupdocs-annotation-java-save-specific-page-range/
 weight: 1
 ---
 
-# Så sparar du specifika sidor från annoterade dokument i Java
+# Hur man sparar specifika pdf‑sidor från annoterade dokument i Java
+
+När du behöver **spara specifika pdf‑sidor** från en stor, annoterad fil, ger Java:s *try with resources*-mönster tillsammans med GroupDocs.Annotation en säker, minnes‑effektiv lösning. Denna handledning visar hur du konfigurerar biblioteket, extraherar ett sidintervall och integrerar logiken i en Spring Boot‑tjänst — samtidigt som du håller koden ren och resurserna korrekt frigjorda.
 
 ## Introduktion
 
-Har du någonsin känt dig överväldigad av massiva annoterade dokument när du bara behöver några specifika sidor? Med **try with resources java** kan du effektivt extrahera bara de sidor du behöver med hjälp av GroupDocs.Annotation. Oavsett om du hanterar juridiska kontrakt, tekniska manual eller forskningsartiklar, sparar det att bara ta ut de relevanta sidorna lagringsutrymme, påskyndar bearbetningen och håller ditt arbetsflöde prydligt.
+`Annotator` är den primära klassen i GroupDocs.Annotation som laddar ett dokument och tillhandahåller metoder för hantering och sparande av annotationer.  
+I många affärsscenarier — juridiska kontrakt, tekniska manualer eller forskningsartiklar — behöver du ofta bara ett fåtal sidor som innehåller de relevanta annotationerna. Att extrahera bara dessa sidor minskar lagringskostnaderna med upp till 96 %, snabbar upp efterföljande bearbetning och hjälper dig att följa regelverk genom att endast dela de tillåtna sektionerna.
 
-I den här guiden går vi igenom allt du behöver veta – från att installera biblioteket till avancerade prestandatips som får din Java‑applikation att köra smidigt.
-
-**Vad du kommer att behärska när du är klar:**
-- Installera GroupDocs.Annotation i ditt Java‑projekt (på rätt sätt)
-- Implementera selektiv sid sparning med ren, underhållbar kod
-- Undvika vanliga fallgropar som får de flesta utvecklare att snubbla
-- Optimera prestanda för bearbetning av stora dokument
-- Felsöka problem innan de blir huvudvärk
+**Vad du kommer att behärska i slutet av denna guide:**
+- Installera och licensiera GroupDocs.Annotation för Java  
+- Använda `try with resources` för att säkert spara ett sidintervall  
+- Hantera stora PDF-filer med låg minnesbelastning  
+- Inbädda logiken i en Spring Boot‑dokumenttjänst  
+- Felsöka vanliga fallgropar såsom låsta filer och minnesbristfel  
 
 ## Snabba svar
-- **Vad gör “try with resources java”?** Det stänger automatiskt Annotator, vilket förhindrar fillås och minnesläckor.  
-- **Vilket bibliotek hanterar sparning av sidintervall?** `GroupDocs.Annotation` tillhandahåller `SaveOptions` med `setFirstPage`/`setLastPage`.  
-- **Kan jag använda detta i en Spring Boot‑tjänst?** Ja – se avsnittet “Spring Boot Document Service Integration”.  
+- **Vad gör “try with resources java”?** Det stänger automatiskt `Annotator`, vilket förhindrar låsta filer och minnesläckor.  
+- **Vilket bibliotek hanterar sparande av sidintervall?** `GroupDocs.Annotation` tillhandahåller `SaveOptions` med `setFirstPage`/`setLastPage`. `SaveOptions` låter dig ange utdatainställningar såsom sidintervall och om endast annotationer ska inkluderas.  
+- **Kan jag använda detta i en Spring Boot‑tjänst?** Ja – se avsnittet “Spring Boot document service integration”.  
 - **Behöver jag en licens?** En gratis provversion fungerar för utveckling; en full licens krävs för produktion.  
-- **Är det säkert för stora PDF‑filer (1000+ sidor)?** Använd load‑only‑annotated‑pages och batch‑bearbetning för att hålla minnesanvändningen låg.
+- **Är det säkert för stora PDF‑filer (1000+ sidor)?** Använd `load‑only‑annotated‑pages` och batch‑bearbetning för att hålla minnesanvändningen låg.  
 
-## Varför spara specifika sidor? (Verkliga exempel)
+## Vad är spara specifika pdf‑sidor?
+Operationen **spara specifika pdf‑sidor** extraherar ett definierat sidintervall från ett källdokument samtidigt som alla annotationer på dessa sidor bevaras. Den skapar en ny, mindre PDF som endast innehåller de valda sidorna, vilket är idealiskt för riktad delning eller arkivering.
 
-Innan vi dyker in i den tekniska delen, låt oss prata om varför den här funktionen är en spelväxlare:
-
-**Lagringseffektivitet**: En 500‑sidig manual med annotationer på bara 20 sidor? Varför spara alla 500 när du kan extrahera de relevanta 20 och minska filstorleken med 96 %?
-
-**Snabbare bearbetning**: Mindre filer betyder snabbare uppladdningar, nedladdningar och bearbetning. Dina användare (och dina servrar) kommer att tacka dig.
-
-**Bättre användarupplevelse**: Ingen vill scrolla igenom hundratals sidor för att hitta de annoterade avsnitten. Ge dem exakt det de behöver.
-
-**Efterlevnad och säkerhet**: I reglerade branscher får du kanske bara dela specifika avsnitt av dokument. Selektiv sparning underlättar efterlevnad.
+## Varför använda try‑resources för att spara sidor?
+Att använda `try with resources` garanterar att `Annotator`‑instansen frigörs så snart blocket avslutas. Denna deterministiska städning förhindrar det vanliga “file is locked”-undantaget och håller JVM‑heapens fotavtryck förutsägbart — särskilt viktigt när man bearbetar dussintals stora PDF‑filer parallellt.
 
 ## Förutsättningar och installation
 
 ### Vad du behöver
+- **JDK 8+** (JDK 11+ rekommenderas)  
+- **Maven** eller **Gradle** för beroendehantering  
+- **GroupDocs.Annotation för Java** — version 25.2 eller senare (stödjer 50+ format)  
+- Grundläggande kunskap om Java I/O och OOP  
 
-- **Java Development Kit (JDK)**: Version 8 eller högre (JDK 11+ rekommenderas)  
-- **Maven eller Gradle**: För beroendehantering  
-- **GroupDocs.Annotation för Java**: Version 25.2 eller senare  
-- **Grundläggande Java‑kunskaper**: Förståelse för fil‑I/O och OOP  
-
-### Installera GroupDocs.Annotation för Java
+### Konfigurera GroupDocs.Annotation för Java
 
 #### Maven‑konfiguration
-
-Lägg till detta i din `pom.xml` (tro mig, kopiera‑klistra är din vän här):
+Add the dependency to your `pom.xml` (copy‑paste is your friend here):
 
 ```xml
+<!-- ```xml
 <repositories>
    <repository>
       <id>repository.groupdocs.com</id>
@@ -85,11 +110,12 @@ Lägg till detta i din `pom.xml` (tro mig, kopiera‑klistra är din vän här):
       <version>25.2</version>
    </dependency>
 </dependencies>
+``` -->
 ```
 
-#### Gradle‑inställning (Om du är i Gradle‑teamet)
-
-```gradle
+#### Gradle‑inställning (om du föredrar Gradle)
+```groovy
+// ```gradle
 repositories {
     maven {
         url "https://releases.groupdocs.com/annotation/java/"
@@ -100,32 +126,32 @@ dependencies {
     implementation 'com.groupdocs:groupdocs-annotation:25.2'
 }
 ```
+```
 
-### Få ordning på din licens
+### Skaffa din licens
+Starta med den fria provversionen, gå sedan vidare till en tillfällig eller full licens efter behov:
 
-Här är vad de flesta handledningar inte berättar: **börja med gratis provversion**. På allvar. Gör inte saker mer komplicerade än nödvändigt.
+- **Gratis provversion:** Perfekt för testning och utveckling – hämta den från [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- **Tillfällig licens:** Behöver du mer tid för utvärdering? Skaffa en [temporary license](https://purchase.groupdocs.com/temporary-license/)  
+- **Full licens:** Redo för produktion? [Purchase here](https://purchase.groupdocs.com/buy)  
 
-- **Gratis provversion**: Perfekt för testning och utveckling – hämta den från [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
-- **Tillfällig licens**: Behöver du mer tid för att utvärdera? Skaffa en [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-- **Full licens**: Redo för produktion? [Purchase here](https://purchase.groupdocs.com/buy)
+> **Pro tip:** Provversionen tar bara bort några få avancerade funktioner, vilket är mer än tillräckligt för att följa den här handledningen och bygga ett proof of concept.
 
-Pro‑tips: Provversionen har vissa begränsningar, men den räcker gott för att följa den här handledningen och bygga ett proof of concept.
+## Hur fungerar try‑with‑resources i Java?
 
-## Använda try with resources java för selektiv sidsparning
+`try` `with` `resources` anropar automatiskt `close()` på alla objekt som implementerar `AutoCloseable` när blocket avslutas. När du omsluter en `Annotator`‑instans i detta konstruktion släpper biblioteket filhandtag och rensar interna buffertar utan extra kod, vilket eliminerar risken för kvarvarande lås.
 
-Nu när miljön är klar, låt oss se hur **try with resources java** gör sidintervall‑operationen säker och koncis. Mönstret säkerställer att `Annotator`‑instansen tas bort automatiskt, vilket eliminerar fillås‑problem och håller minnesanvändningen prydlig.
+## Kärnimplementation: spara specifika sidintervall
 
-## Kärnimplementation: Spara specifika sidintervall
+### `Annotator`‑definitionens ankare
+`Annotator` är GroupDocs.Annotation:s primära klass för att ladda, redigera och spara annoterade dokument. Den tillhandahåller metoder för att komma åt annotationer, modifiera sidor och exportera resultat.
 
-### Grundläggande tillvägagångssätt (Börja här)
+### Steg 1: konfigurera fil‑sökvägsverktyg
 
-Låt oss börja med den enklaste möjliga implementationen. Detta är vad 90 % av användningsfallen behöver:
-
-#### Steg 1: Ställ in filvägshantering
-
-Först, skapa en hjälparklass för att hantera filvägar (du kommer att tacka mig senare när du behöver byta katalog):
+Skapa en liten hjälparklass som bygger utdata‑sökvägar konsekvent:
 
 ```java
+// ```java
 import org.apache.commons.io.FilenameUtils;
 
 public class FilePathConfiguration {
@@ -134,14 +160,16 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-**Varför detta tillvägagångssätt?** Det håller din fil‑vägslogik centraliserad och gör testning enklare. Att använda `FilenameUtils` säkerställer att du automatiskt bevarar den ursprungliga filändelsen.
+Att centralisera sökvägslogiken gör det enkelt att ändra kataloger senare och håller koden testbar.
 
-#### Steg 2: Implementera sparning av sidintervall
+### Steg 2: implementera sid‑intervallssparning
 
-Här sker magin:
+Följande kodsnutt visar den grundläggande logiken. Den använder `try with resources` för att garantera städning:
 
 ```java
+// ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.export.SaveOptions;
 
@@ -159,17 +187,17 @@ public class SaveSpecificPageRange {
     }
 }
 ```
+```
 
-**Vad som händer här:**
-- Vi använder ett **try‑with‑resources java**‑block (`try ( … )`) så att `Annotator` stängs automatiskt, vilket eliminerar fillås‑problem.  
-- `setFirstPage(2)` och `setLastPage(4)` definierar vårt inklusiva intervall (sidor 2‑4).  
-- Intervallet är **inklusivt** på båda ändar – en detalj som får många utvecklare att snubbla.
+- `setFirstPage(2)` och `setLastPage(4)` definierar ett **inkluderande** intervall (sidor 2‑4).  
+- `Annotator` stängs automatiskt när blocket avslutas, vilket förhindrar lås‑problem.  
 
-### Avancerad filvägskonfiguration
+### Avancerad fil‑sökvägskonfiguration
 
-För produktionsapplikationer vill du ha mer flexibel väghantering:
+För produktion kan du vilja ha dynamiska namn:
 
 ```java
+// ```java
 public class FilePathConfiguration {
     private final String baseOutputDirectory;
     
@@ -188,32 +216,32 @@ public class FilePathConfiguration {
     }
 }
 ```
+```
 
-Nu kan du automatiskt generera namn som `contract_pages_2-4.pdf`.
+Nu kommer utdatafilen att heta något i stil med `contract_pages_2-4.pdf`, vilket tydligt visar vilka sidor som extraherats.
 
-## Vanliga fallgropar och hur du undviker dem
+## Vanliga fallgropar och hur man undviker dem
 
-### Fallgrop #1: Förvirring kring sidindex
-
-**Problemet**: Att anta att sidnumren börjar från 0 (det gör de inte i GroupDocs.Annotation).
-
-**Lösningen**: Sidnumrering börjar från 1, precis som i riktiga dokument. Sida 1 är den första sidan, inte sida 0.
+### Fallgrop #1: förvirring kring sid‑index
+**Problem:** Anta att sidnummer börjar på 0.  
+**Lösning:** Sidnumrering i GroupDocs.Annotation börjar på 1, vilket matchar vad användare ser i PDF‑visare.
 
 ```java
+// ```java
 // Wrong - this tries to start from page 0 (doesn't exist)
 saveOptions.setFirstPage(0);
 
 // Right - this starts from the actual first page
 saveOptions.setFirstPage(1);
 ```
+```
 
-### Fallgrop #2: Resursläckor
-
-**Problemet**: Glömma att stänga Annotator korrekt, vilket leder till fillås och minnesläckor.
-
-**Lösningen**: Använd alltid **try‑with‑resources java** eller explicit stängning:
+### Fallgrop #2: resurssläpp
+**Problem:** Glömmer att stänga `Annotator` vilket leder till låsta filer.  
+**Lösning:** Omslut alltid `Annotator` i ett `try with resources`‑block eller anropa `close()` explicit.
 
 ```java
+// ```java
 // Good - automatic resource management
 try (final Annotator annotator = new Annotator(inputFile)) {
     // your code here
@@ -230,14 +258,14 @@ try {
     }
 }
 ```
+```
 
-### Fallgrop #3: Ogiltiga sidintervall
-
-**Problemet**: Att ange sidintervall som inte finns i dokumentet.
-
-**Lösningen**: Validera dina intervall först:
+### Fallgrop #3: ogiltiga sidintervall
+**Problem:** Anger ett intervall som överskrider dokumentets sidantal.  
+**Lösning:** Validera intervallet mot `annotator.getDocumentInfo().getPagesCount()` innan du sparar.
 
 ```java
+// ```java
 public void savePageRangeWithValidation(String inputFile, int firstPage, int lastPage) {
     try (final Annotator annotator = new Annotator(inputFile)) {
         // Get document info to check page count
@@ -261,14 +289,15 @@ public void savePageRangeWithValidation(String inputFile, int firstPage, int las
     }
 }
 ```
+```
 
-## Tips för prestandaoptimering
+## Prestandaoptimeringstips
 
 ### Minneshantering för stora dokument
-
-När du hanterar stora dokument (100 + sidor) blir minnesanvändning viktig:
+När du bearbetar PDF‑filer med 100 + sidor, aktivera laddning‑endast‑annoterade‑sidor för att hålla heapen låg:
 
 ```java
+// ```java
 public class OptimizedPageRangeSaver {
     public void saveWithOptimization(String inputFile, int firstPage, int lastPage) {
         // Configure for lower memory usage
@@ -289,17 +318,18 @@ public class OptimizedPageRangeSaver {
     }
 }
 ```
+```
 
-**Viktiga optimeringsstrategier**
-- `setLoadOnlyAnnotatedPages(true)` minskar minnesavtrycket.  
-- `setAnnotationsOnly(true)` skapar en lättviktig fil som bara innehåller annoteringslagret.  
-- Bearbeta dokument i batchar om du har många filer.
+Nyckelstrategier:
+- `setLoadOnlyAnnotatedPages(true)` minskar minnesanvändningen genom att endast ladda sidor med annotationer.  
+- `setAnnotationsOnly(true)` skapar en lättviktig fil som bara lagrar annoteringslagret.  
+- Batch‑bearbetning med en fast trådpool undviker att systemresurserna tar slut.
 
 ### Batch‑bearbetning av flera dokument
-
-För produktionsscenarier där du bearbetar många dokument:
+För hög‑genomströmning, bearbeta filer i batchar:
 
 ```java
+// ```java
 public class BatchPageRangeSaver {
     public void processBatch(List<String> inputFiles, int firstPage, int lastPage) {
         for (String inputFile : inputFiles) {
@@ -314,14 +344,15 @@ public class BatchPageRangeSaver {
     }
 }
 ```
+```
 
 ## Integration med populära ramverk
 
-### Spring Boot Document Service Integration
-
-Här är en enkel Spring Boot‑tjänst för sparning av sidintervall (observera formuleringen **spring boot document service**):
+### Spring Boot‑dokumenttjänst‑integration
+Nedan är en minimal Spring Boot‑tjänst som tar emot en PDF, extraherar ett sidintervall och returnerar den nya filen som en byte‑array.
 
 ```java
+// ```java
 @Service
 public class DocumentPageRangeService {
     
@@ -351,14 +382,17 @@ public class DocumentPageRangeService {
     }
 }
 ```
+```
+
+Tjänsten använder konstruktor‑injektion för `AnnotatorFactory`, vilket håller kontrollern tunn och testbar.
 
 ## Praktiska tillämpningar och användningsfall
 
-### Juridisk dokumenthantering
-
-Advokatbyråer behöver ofta extrahera specifika avsnitt av kontrakt eller domstolsdokument:
+### Juridisk dokumentbehandling
+Advokatbyråer behöver ofta bara dela de klausuler som har granskats. Att extrahera dessa sidor minskar risken för att konfidentiella avsnitt exponeras.
 
 ```java
+// ```java
 public class LegalDocumentProcessor {
     public void extractEvidencePages(String caseFile, List<Integer> evidencePages) {
         // Group consecutive pages for efficient processing
@@ -372,12 +406,13 @@ public class LegalDocumentProcessor {
     }
 }
 ```
+```
 
 ### Hantering av utbildningsinnehåll
-
-Lärare som extraherar specifika kapitel från läroböcker för elevuppgifter:
+Lärare kan plocka ut endast de annoterade kapitlen som eleverna behöver för en uppgift, vilket minskar nedladdningsstorleken och förbättrar fokus.
 
 ```java
+// ```java
 public class EducationalContentExtractor {
     public void createAssignmentPacket(String textbook, int chapterStart, int chapterEnd) {
         try (final Annotator annotator = new Annotator(textbook)) {
@@ -391,12 +426,13 @@ public class EducationalContentExtractor {
     }
 }
 ```
+```
 
 ### Kvalitetssäkringsgranskningar
-
-Extrahera bara de sidor som har granskningskommentarer för fokuserad revision:
+QA‑team kan isolera sidor med granskarkommentarer, vilket möjliggör snabbare itereringscykler.
 
 ```java
+// ```java
 public class QAReviewExtractor {
     public void extractReviewedPages(String document) {
         try (final Annotator annotator = new Annotator(document)) {
@@ -418,30 +454,28 @@ public class QAReviewExtractor {
     }
 }
 ```
+```
 
 ## Sammanfattning av bästa praxis
-
-1. **Validera alltid inmatningsparametrar** – kontrollera sidintervall innan bearbetning.  
-2. **Använd try‑with‑resources java** – förhindrar resursläckor och fillåsningsproblem.  
-3. **Implementera korrekt felhantering** – låt inte en dålig fil krascha hela batchen.  
-4. **Tänk på minnesanvändning** – använd `setLoadOnlyAnnotatedPages(true)` för stora dokument.  
-5. **Testa med olika filtyper** – PDF, Word, PowerPoint kan bete sig olika.  
-6. **Övervaka prestanda** – håll koll på bearbetningstider och minne i produktion.
+1. **Validera sidnummer** innan du anropar spar‑operationen.  
+2. **Använd alltid `try with resources`** för att garantera att `Annotator` stängs.  
+3. **Aktivera `setLoadOnlyAnnotatedPages(true)`** för stora PDF‑filer för att hålla minnesanvändningen under kontroll.  
+4. **Testa över alla stödda format** — GroupDocs.Annotation hanterar över 50 in‑ och utdata‑typer, inklusive PDF, DOCX, XLSX, PPTX och bildfiler.  
+5. **Övervaka JVM‑heapen** och justera `-Xmx` vid behov för batch‑jobb.  
 
 ## Felsökning av vanliga problem
 
 ### Problem: “File is locked”-fel
+**Symptom:** Ett undantag som nämner en låst fil visas under `save()`.  
+**Orsaker:**  
+- En tidigare `Annotator`‑instans stängdes inte.  
+- Filen är öppen i ett annat program.  
+- Otillräckliga filsystembehörigheter.  
 
-**Symptom**: Undantag kastas när du försöker spara, med meddelande om fillås.  
-
-**Orsaker**:
-- Annotator stängdes inte korrekt från en tidigare operation.  
-- Filen är fortfarande öppen i ett annat program.  
-- Otillräckliga behörigheter.  
-
-**Lösningar**:
+**Lösning:** Säkerställ att varje `Annotator` omsluts av `try with resources` och verifiera OS‑nivå lås.
 
 ```java
+// ```java
 // Ensure proper cleanup
 try (final Annotator annotator = new Annotator(inputFile)) {
     // ... your code ...
@@ -456,61 +490,69 @@ if (!file.getParentFile().canWrite()) {
     throw new IllegalArgumentException("Cannot write to output directory");
 }
 ```
+```
 
-### Problem: Out of Memory‑fel
-
-**Symptom**: `OutOfMemoryError` när du bearbetar stora dokument.  
-
-**Lösningar**:
-1. Öka JVM‑heap‑storlek, t.ex. `-Xmx2g`.  
-2. Använd de optimerade laddningsalternativen som visades tidigare.  
+### Problem: Minnesbristfel
+**Symptom:** `OutOfMemoryError` vid bearbetning av stora PDF‑filer.  
+**Lösningar:**  
+1. Öka JVM‑heap (`-Xmx2g` eller högre).  
+2. Använd `setLoadOnlyAnnotatedPages(true)` och `setAnnotationsOnly(true)`.  
 3. Bearbeta dokument i mindre batchar.
 
 ### Problem: Annotationer bevaras inte
-
-**Symptom**: Utdatafilen innehåller inte de ursprungliga annotationerna.  
-
-**Lösning**: Se till att du inte tar bort annotationerna:
+**Symptom:** Utdatafilen saknar den ursprungliga markeringen.  
+**Lösning:** Aktivera inte av misstag `setAnnotationsOnly(false)`; behåll standardinställningen för att behålla annotationer.
 
 ```java
+// ```java
 SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationsOnly(false); // Keep both content and annotations
 saveOptions.setFirstPage(firstPage);
 saveOptions.setLastPage(lastPage);
 ```
+```
 
 ## Vanliga frågor
 
-**Q: Kan jag spara icke‑konsekutiva sidor (t.ex. sidor 1, 3, 7)?**  
-A: Inte direkt med en enda operation. Du måste köra separata sparningar för varje intervall eller kombinera resultaten efteråt.
+**Q: Kan jag spara icke‑konsekutiva sidor (t.ex. 1, 3, 7)?**  
+A: Inte med ett enda `SaveOptions`‑anrop. Kör separata sparningar för varje intervall och slå sedan ihop resultaten.
 
 **Q: Fungerar detta med lösenordsskyddade dokument?**  
-A: Ja, men du måste ange lösenordet när du skapar `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
+A: Ja — ange lösenordet när du konstruerar `Annotator`: `new Annotator(inputFile, loadOptions.setPassword("your_password"))`.
 
 **Q: Vilka filformat stöds?**  
-A: PDF, Microsoft Word, Excel, PowerPoint och många fler. Se den [officiella dokumentationen](https://docs.groupdocs.com/annotation/java/) för hela listan.
+A: PDF, Microsoft Word, Excel, PowerPoint och många andra. Se den [official documentation](https://docs.groupdocs.com/annotation/java/) för hela listan.
 
 **Q: Kan jag spara bara annotationerna utan originalinnehållet?**  
-A: Absolut – sätt `saveOptions.setAnnotationsOnly(true)` för att skapa en fil som bara innehåller annotationer.
+A: Absolut — sätt `saveOptions.setAnnotationsOnly(true)` för att skapa en fil som endast innehåller annotationer.
 
 **Q: Hur hanterar jag mycket stora dokument (1000+ sidor)?**  
-A: Använd `setLoadOnlyAnnotatedPages(true)`, bearbeta i delar och överväg att öka JVM‑heapen.
+A: Använd `setLoadOnlyAnnotatedPages(true)`, bearbeta i delar och överväg att öka JVM‑heapens storlek.
 
 **Q: Finns det ett sätt att förhandsgranska sidor innan sparning?**  
-A: GroupDocs.Annotation fokuserar på bearbetning snarare än visning, men du kan hämta dokumentinformation (sidantal, annoteringspositioner) för att hjälpa dig bestämma vilka intervall som ska extraheras.
+A: GroupDocs.Annotation fokuserar på bearbetning, men du kan hämta sidantal och annoteringspositioner via `annotator.getDocumentInfo()` för att besluta vilka intervall som ska extraheras.
 
-## Resurser
+## Ytterligare resurser
 
-- **Dokumentation**: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
-- **API‑referens**: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
-- **Nedladdning**: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
-- **Köp**: [License Options](https://purchase.groupdocs.com/buy)  
-- **Gratis provversion**: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
-- **Tillfällig licens**: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
-- **Support**: [Community Forum](https://forum.groupdocs.com/c/annotation/)
+- Dokumentation: [GroupDocs.Annotation for Java Docs](https://docs.groupdocs.com/annotation/java/)  
+- Officiell dokumentation: [official documentation](https://docs.groupdocs.com/annotation/java/)  
+- API‑referens: [Complete API Documentation](https://reference.groupdocs.com/annotation/java/)  
+- Nedladdning: [Latest Releases](https://releases.groupdocs.com/annotation/java/)  
+- GroupDocs‑releases: [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)  
+- Licensalternativ: [License Options](https://purchase.groupdocs.com/buy)  
+- Köp här: [Purchase here](https://purchase.groupdocs.com/buy)  
+- Gratis provversion: [Try It Now](https://releases.groupdocs.com/annotation/java/)  
+- Tillfällig licens: [Get Evaluation License](https://purchase.groupdocs.com/temporary-license/)  
+- Support: [Community Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Senast uppdaterad:** 2026-03-14  
+**Senast uppdaterad:** 2026-09-25  
 **Testat med:** GroupDocs.Annotation 25.2 (Java)  
 **Författare:** GroupDocs
+
+## Relaterade handledningar
+
+- [Reduce PDF Size Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
+- [Save Annotated PDF using GroupDocs Java & Azure Blob](/annotation/java/document-loading/download-annotate-azure-blob-groupdocs-java/)  
+- [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/load-password-protected-pdf-groupdocs-java/)
