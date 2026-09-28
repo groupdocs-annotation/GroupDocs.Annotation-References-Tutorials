@@ -82,10 +82,6 @@ url: /id/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cara menghapus komentar PDF dan menghasilkan thumbnail di .NET
 
 ## Pendahuluan
@@ -249,9 +245,3 @@ A: Ya, Anda dapat mengunduh percobaan fungsi penuh **[full‑function trial down
 - [Hasilkan Pratinjau Dokumen Tanpa Komentar di .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [Buat Thumbnail PDF dengan GroupDocs.Annotation untuk .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [Cara Menghapus Anotasi PDF C# – Panduan GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -80,10 +80,6 @@ url: /zh/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何在 .NET 中删除 PDF 注释并生成缩略图
 
 ## 介绍
@@ -247,8 +243,3 @@ A: 是的，您可以下载完整功能的试用版 **[完整功能试用下载]
 - [在 .NET 中生成无批注的文档预览](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [使用 GroupDocs.Annotation for .NET 创建 PDF 缩略图](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [如何删除 PDF 批注（C#）– GroupDocs.Annotation 指南](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -83,10 +83,6 @@ url: /nl/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hoe PDF-opmerkingen te verwijderen en miniaturen te genereren in .NET
 
 ## Introductie
@@ -252,9 +248,3 @@ A: Ja, je kunt een volledige proefversie downloaden **[full‑function trial dow
 - [Documentpreviews zonder opmerkingen genereren in .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [PDF-miniatuur maken met GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [Hoe PDF-annotaties verwijderen C# – GroupDocs.Annotation gids](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

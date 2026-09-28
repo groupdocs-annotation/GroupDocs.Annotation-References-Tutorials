@@ -82,10 +82,6 @@ url: /pl/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Jak usunąć komentarze PDF i generować miniatury w .NET
 
 ## Wprowadzenie
@@ -249,8 +245,3 @@ A: Tak, możesz pobrać pełną wersję próbną **[full‑function trial downlo
 - [Generowanie podglądów dokumentów bez komentarzy w .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [Tworzenie miniatur PDF przy użyciu GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [Jak usunąć adnotacje PDF w C# – przewodnik GroupDocs.Annotation](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

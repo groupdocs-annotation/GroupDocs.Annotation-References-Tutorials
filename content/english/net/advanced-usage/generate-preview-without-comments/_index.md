@@ -84,10 +84,6 @@ url: /net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # How to remove PDF comments and generate thumbnails in .NET
 
 ## Introduction
@@ -253,9 +249,3 @@ A: Yes, you can download a full‑function trial **[full‑function trial downlo
 - [Generate Document Previews Without Comments in .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [Create PDF Thumbnail with GroupDocs.Annotation for .NET](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [How to Remove PDF Annotations C# – GroupDocs.Annotation Guide](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -80,10 +80,6 @@ url: /ko/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF 주석을 제거하고 .NET에서 썸네일 생성하는 방법
 
 ## 소개
@@ -247,9 +243,3 @@ A: 예, 구매 전에 미리보기 생성 기능을 테스트할 수 있는 전�
 - [주석 없는 문서 미리보기 생성 (.NET)](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [GroupDocs.Annotation for .NET으로 PDF 썸네일 만들기](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [PDF 주석 제거 방법 C# – GroupDocs.Annotation 가이드](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

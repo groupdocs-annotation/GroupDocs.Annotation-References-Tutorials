@@ -82,10 +82,6 @@ url: /tr/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF yorumlarını kaldırma ve .NET'te küçük resimler oluşturma
 
 ## Giriş
@@ -249,9 +245,3 @@ C: Evet, satın almadan önce ön izleme oluşturma yeteneklerini test etmek iç
 - [Yorum Olmadan .NET'te Belge Ön İzlemeleri Oluşturma](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [GroupDocs.Annotation for .NET ile PDF Küçük Resmi Oluşturma](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [PDF Açıklamaları Nasıl Kaldırılır C# – GroupDocs.Annotation Rehberi](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

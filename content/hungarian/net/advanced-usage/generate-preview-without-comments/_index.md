@@ -83,10 +83,6 @@ url: /hu/net/advanced-usage/generate-preview-without-comments/
 weight: 14
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hogyan távolítsuk el a PDF megjegyzéseket és generáljunk miniatűröket .NET-ben
 
 ## Bevezetés
@@ -250,8 +246,3 @@ A: Igen, letölthet egy teljes funkcionalitású próbaverziót **[full‑functi
 - [Dokumentum előnézetek generálása megjegyzések nélkül .NET-ben](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [PDF miniatűr létrehozása a GroupDocs.Annotation for .NET segítségével](/annotation/net/advanced-usage/generate-document-pages-preview/)
 - [Hogyan távolítsuk el a PDF annotációkat C#‑ben – GroupDocs.Annotation útmutató](/annotation/net/annotation-management/remove-annotations-groupdocs-annotation-dotnet/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
