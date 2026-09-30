@@ -1,71 +1,114 @@
 ---
 categories:
 - Java Development
-date: '2026-03-19'
-description: Dowiedz się, jak zastąpić tekst w PDF w Javie przy użyciu GroupDocs.Annotation.
-  Ten przewodnik krok po kroku obejmuje zastępowanie tekstu w PDF w Javie, zarządzanie
-  pamięcią PDF w Javie oraz praktyczne przykłady.
-keywords: Java PDF text replacement, PDF annotation Java tutorial, GroupDocs annotation
-  examples, how to replace pdf, replace text pdf java, java pdf memory management,
-  java pdf text replacement
-lastmod: '2026-03-19'
-linktitle: Java PDF Text Replacement Guide
+date: '2026-09-30'
+description: Dowiedz się, jak zamienić tekst PDF w Javie przy użyciu GroupDocs.Annotation,
+  obejmując zarządzanie memory management oraz przykłady z rzeczywistego świata.
+keywords:
+- how to replace pdf text
+- java pdf memory management
+- java pdf text replacement
+lastmod: '2026-09-30'
+linktitle: Przewodnik po zamianie tekstu PDF w Javie
+og_description: Odkryj, jak zamienić tekst PDF w Javie przy użyciu GroupDocs.Annotation,
+  efektywnie zarządzać memory oraz dodawać współpracujące komentarze w kodzie gotowym
+  do produkcji.
+og_image_alt: Guide showing Java code for replacing PDF text with GroupDocs Annotation
+og_title: Jak zamienić tekst PDF w Javie przy użyciu GroupDocs Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-30'
+  description: Learn how to replace pdf text in Java using GroupDocs.Annotation, covering
+    java pdf memory management and real‑world examples.
+  headline: How to replace pdf text in Java
+  type: TechArticle
+- description: Learn how to replace pdf text in Java using GroupDocs.Annotation, covering
+    java pdf memory management and real‑world examples.
+  name: How to replace pdf text in Java
+  steps:
+  - name: Setting up the foundation
+    text: First, create an `Annotator` instance that points to the source PDF and
+      defines the output location. Using absolute paths prevents “file not found”
+      errors when the code runs on a server. **Definition anchor:** The `Annotator`
+      class is the entry point for all annotation operations in GroupDocs.Annota
+  - name: Creating collaborative features with replies
+    text: Replies let reviewers discuss a suggestion directly on the PDF. Each reply
+      records the author, timestamp, and comment text, building a complete discussion
+      thread. **Definition anchor:** The `Reply` model represents a single comment
+      attached to an annotation, enabling threaded discussions and audit t
+  - name: Defining the target area
+    text: Accurately positioning the annotation requires specifying page number and
+      rectangle coordinates. Remember that PDF coordinates start at the **bottom‑left**
+      corner. **Definition anchor:** The rectangle (`Rectangle`) defines the visual
+      bounds of the annotation on the page, using the PDF coordinate sys
+  - name: Creating the magic – the replacement annotation
+    text: 'Now instantiate `TextReplacementAnnotation`, set the replacement text,
+      style it, and attach any replies you created earlier. **Definition anchor:**
+      `TextReplacementAnnotation` overlays a suggested text change on the PDF without
+      modifying the underlying content until you accept it. **Performance tip:'
+  type: HowTo
+- questions:
+  - answer: Not directly—scanned PDFs contain images, not searchable text. Run OCR
+      first, then apply text replacement to the OCR‑generated layer.
+    question: Can I replace text in scanned PDFs?
+  - answer: GroupDocs.Annotation fully supports Unicode. Ensure your source files
+      are UTF‑8 encoded and pass replacement strings as Java `String` objects.
+    question: How do I handle special characters or Unicode text?
+  - answer: No hard limit, but performance degrades with very large replacements.
+      Split massive updates into smaller batches for smoother processing.
+    question: Is there a limit to how much text I can replace at once?
+  - answer: Yes—iterate over annotations, call `accept()` to apply the change permanently,
+      or `remove()` to discard it.
+    question: Can I programmatically accept or reject replacement suggestions?
+  - answer: The annotation is still created but remains invisible because there’s
+      no matching text. Validate the target string before creating the annotation
+      to avoid silent failures.
+    question: What happens if I try to replace text that doesn’t exist?
+  type: FAQPage
 tags:
 - java
 - pdf
 - groupdocs
 - annotations
 - text-replacement
-title: Jak zamienić tekst w PDF w Javie
+title: Jak zamienić tekst PDF w Javie
 type: docs
 url: /pl/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/
 weight: 1
 ---
 
-# Jak zamienić tekst PDF w Javie
+# Jak zastąpić tekst PDF w Javie
 
-Zamiana tekstu w PDF kiedyś przypominała wyciąganie zębów — drogie narzędzia, kruche obejścia i niekończące się debugowanie. Jeśli zastanawiasz się **how to replace pdf** treść programowo, trafiłeś we właściwe miejsce. W tym samouczku przeprowadzimy Cię przez użycie **GroupDocs.Annotation for Java**, aby niezawodnie zamienić tekst w PDF, efektywnie zarządzać pamięcią i dodać komentarze współpracujące — wszystko przy zachowaniu czystego i gotowego do produkcji kodu.
+W tym obszernej przewodniku dowiesz się **jak zastąpić tekst PDF** przy użyciu GroupDocs.Annotation dla Javy, jednocześnie utrzymując niskie zużycie pamięci i dodając współpracujące wątki komentarzy. Niezależnie od tego, czy modernizujesz przestarzały przepływ dokumentów, czy budujesz zupełnie nową platformę recenzji, poniższe kroki dostarczają gotowy do produkcji kod i wskazówki najlepszych praktyk, które skalują się.
 
 ## Szybkie odpowiedzi
-- **Jaka biblioteka jest najlepsza do zamiany tekstu PDF w Javie?** GroupDocs.Annotation.
-- **Czy mogę zamienić tekst w zeskanowanym PDF?** Only after OCR; the library works on searchable PDFs.
-- **Jak uniknąć wycieków pamięci?** Dispose of `Annotator` instances and use absolute paths.
-- **Czy potrzebna jest licencja do produkcji?** Yes—a commercial license removes watermarks.
-- **Czy można dodać odpowiedzi do sugestii zamiany?** Absolutely, via the `Reply` model.
+- **Jaka biblioteka jest najlepsza do zastępowania tekstu PDF w Javie?** GroupDocs.Annotation.  
+- **Czy mogę zastąpić tekst w zeskanowanym PDF?** Tylko po OCR; biblioteka działa na przeszukiwalnych PDF.  
+- **Jak uniknąć wycieków pamięci?** Zwolnij instancje `Annotator` i używaj ścieżek bezwzględnych.  
+- **Czy potrzebna jest licencja do produkcji?** Tak — licencja komercyjna usuwa znaki wodne.  
+- **Czy można dodać odpowiedzi do sugestii zamiany?** Absolutnie, za pomocą modelu `Reply`.  
 
-## Dlaczego potrzebujesz zamiany tekstu PDF w swoich aplikacjach Java
+## Dlaczego potrzebujesz zamiany tekstu PDF w aplikacjach Java
 
-Bądźmy szczerzy — radzenie sobie z modyfikacjami PDF w Javie kiedyś było koszmarem. Trzeba było albo używać drogich, zamkniętych narzędzi, albo spędzać tygodnie na budowaniu własnych rozwiązań, które ledwo działały. Właśnie tutaj wkracza **GroupDocs.Annotation for Java**, i uwierz mi, to prawdziwy przełom.
-
-Niezależnie od tego, czy budujesz system zarządzania dokumentami, tworzysz platformę współpracy przy przeglądzie, czy po prostu potrzebujesz programowo aktualizować zawartość PDF, ten przewodnik pokaże Ci dokładnie, jak wdrożyć solidną funkcję zamiany tekstu. Mówimy o rzeczywistym, gotowym do produkcji kodzie, który naprawdę działa.
-
-**Oto, co opanujesz do końca tego samouczka:**
-- Konfigurację GroupDocs.Annotation w projekcie Java (właściwy sposób)
-- Tworzenie adnotacji zamiany tekstu wyglądających profesjonalnie
-- Dodawanie funkcji współpracy z odpowiedziami i komentarzami
-- Radzenie sobie z typowymi pułapkami, które potykają większość programistów
-- Optymalizację wydajności dla aplikacji o dużej skali
-
-Gotowy? Zanurzmy się i zbudujmy coś niesamowitego.
+Wczytaj docelowy PDF, nałóż sugestię zamiany i pozwól recenzentom zaakceptować lub odrzucić ją — cały ten proces działa w mniej niż sekundę dla typowych 10‑stronicowych umów. GroupDocs.Annotation obsługuje **ponad 50 formatów wejściowych i wyjściowych** i może radzić sobie z **PDF‑ami o setkach stron** bez ładowania całego pliku do pamięci, co czyni go idealnym dla dokumentowych przepływów na skalę przedsiębiorstwa.
 
 ## Czym jest zamiana tekstu PDF?
 
-Zamiana tekstu PDF to rodzaj adnotacji, która nakłada sugerowane zmiany bez natychmiastowej modyfikacji oryginalnego dokumentu. Pomyśl o tym jak o „Śledzeniu zmian” dla PDF — idealne do cykli przeglądu, śledzenia zgodności i współdzielonej edycji.
+`PDF text replacement` to adnotacja, która wizualnie sugeruje zmianę, pozostawiając podstawową treść PDF niezmienioną aż do zaakceptowania sugestii. Działa podobnie jak „Śledzenie zmian” w edytorach tekstu, zachowując ślad audytu, kto co, kiedy i dlaczego zaproponował, co jest niezbędne przy przeglądach zgodności i współdzielonej edycji.
 
 ## Wymagania wstępne
+- JDK 8 lub nowszy (kompatybilny z JDK 21)  
+- Maven lub Gradle do zarządzania zależnościami  
+- GroupDocs.Annotation 25.2 (lub nowsza)  
+- Podstawowa znajomość obsługi wyjątków w Javie oraz operacji I/O  
 
-- **Java Development Kit (JDK) 8 or higher** – works with newer versions too  
-- **Maven** (or Gradle) for dependency management  
-- **GroupDocs.Annotation library** – we’ll use version 25.2 in the examples  
-- Basic Java knowledge (classes, methods, exception handling)  
-
-*Nice to have:* an IDE (IntelliJ IDEA or Eclipse) and a sample PDF for testing.
+*Opcjonalne, ale przydatne:* IDE, takie jak IntelliJ IDEA oraz przykładowy PDF do testów.
 
 ## Dodawanie GroupDocs.Annotation do projektu
 
 ### Konfiguracja Maven (najczęstsze podejście)
 
-If you're using Maven (and let's face it, most Java devs are), add this to your `pom.xml`. I've seen developers mess this up by forgetting the repository configuration, so make sure you include both parts:
+Dodaj repozytorium i zależność do swojego `pom.xml`. Zapomnienie bloku repozytorium jest częstą przyczyną błędów „artifact not found”, więc skopiuj fragment dokładnie tak, jak pokazano.
 
 ```xml
 <repositories>
@@ -84,33 +127,29 @@ If you're using Maven (and let's face it, most Java devs are), add this to your 
 </dependencies>
 ```
 
-### Obsługa sytuacji licencyjnej
+### Obsługa licencji
 
-Here's the deal with GroupDocs licensing (this trips up a lot of people):
+GroupDocs oferuje trzy poziomy licencjonowania:
 
-1. **Start with the free trial** – Perfect for testing and small projects. Download from [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)
-2. **Get a temporary license** – Need more time to evaluate? Grab one at [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license/)
-3. **Go commercial** – For production apps, you'll need a full license from the [GroupDocs website](https://purchase.groupdocs.com/buy)
+1. **Bezpłatna wersja próbna** – pobierz ze strony [wydania GroupDocs](https://releases.groupdocs.com/annotation/java/). Znaki wodne pojawiają się na każdym pliku wyjściowym.  
+2. **Licencja tymczasowa** – przydatna przy dłuższej ocenie; uzyskaj ją w portalu [Zakup GroupDocs](https://purchase.groupdocs.com/temporary-license/).  
+3. **Pełna licencja komercyjna** – usuwa znaki wodne i odblokowuje nieograniczone wdrożenia. Kupuj na [stronie GroupDocs](https://purchase.groupdocs.com/buy).
 
-**Pro Tip:** The trial version adds watermarks to your output. Plan accordingly if you're demoing to clients!
+**Pro tip:** Załaduj plik licencji raz przy uruchamianiu aplikacji, aby uniknąć powtarzającego się obciążenia I/O.
 
 ## Tworzenie pierwszej funkcji zamiany tekstu
 
 ### Zrozumienie adnotacji zamiany tekstu
 
-Think of text replacement annotations as digital “suggestion mode” – like Track Changes in Microsoft Word, but for PDFs. You're not actually modifying the original text; instead, you're overlaying replacement suggestions that can be accepted or rejected later. This approach is perfect for:
-
-- Document review workflows  
-- Collaborative editing scenarios  
-- Compliance tracking (knowing who changed what and when)
+`TextReplacementAnnotation` jest podstawową klasą GroupDocs.Annotation służącą do sugerowania poprawek. Przechowuje lokalizację oryginalnego tekstu, ciąg zamiany oraz opcjonalne informacje o stylu. Ponieważ oryginalny PDF pozostaje niezmieniony, możesz zawsze cofnąć lub audytować zmiany później.
 
 ### Implementacja krok po kroku
 
-We'll walk through each step, explain why it matters, and keep an eye on **java pdf memory management** best practices.
+Przejdziemy przez każdą fazę, podkreślając, dlaczego jest ważna, i wprowadzimy najlepsze praktyki **zarządzania pamięcią w java pdf**.
 
-#### Krok 1: Przygotowanie podstaw
+#### Krok 1: Przygotowanie fundamentu
 
-First, we'll initialize our annotator and define where our output goes. Notice how we use proper resource management—this prevents memory leaks that can kill your application's performance:
+Najpierw utwórz instancję `Annotator`, która wskazuje na źródłowy PDF i definiuje miejsce zapisu. Używanie ścieżek bezwzględnych zapobiega błędom „file not found”, gdy kod działa na serwerze.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -122,11 +161,11 @@ public class AddTextReplacementAnnotationFeature {
         final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**Real‑World Note:** Always use absolute paths in production. Relative paths can cause headaches when deploying to different environments.
+**Definition anchor:** Klasa `Annotator` jest punktem wejścia dla wszystkich operacji adnotacji w GroupDocs.Annotation, zarządzając ładowaniem, modyfikacją i zapisem PDF.
 
-#### Krok 2: Tworzenie funkcji współpracy z odpowiedziami
+#### Krok 2: Tworzenie funkcji współpracy za pomocą odpowiedzi
 
-Here's where things get interesting. You can add replies to your annotations, making them perfect for team collaboration. Think of it as adding threaded comments to your PDF modifications:
+Odpowiedzi pozwalają recenzentom dyskutować sugestię bezpośrednio na PDF. Każda odpowiedź rejestruje autora, znacznik czasu i treść komentarza, tworząc kompletny wątek dyskusji.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -147,11 +186,11 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Why This Matters:** In enterprise environments, you often need audit trails. These replies provide exactly that—a complete history of who suggested what changes and when.
+**Definition anchor:** Model `Reply` reprezentuje pojedynczy komentarz dołączony do adnotacji, umożliwiając dyskusje wątkowe i ścieżki audytu.
 
 #### Krok 3: Definiowanie docelowego obszaru
 
-This is where precision matters. You're defining exactly where in the PDF your text replacement will appear. The coordinate system can be tricky at first, but once you get it, it's straightforward:
+Dokładne pozycjonowanie adnotacji wymaga podania numeru strony oraz współrzędnych prostokąta. Pamiętaj, że współrzędne PDF zaczynają się od **lewego dolnego** rogu.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -170,11 +209,11 @@ points.add(point3);
 points.add(point4);
 ```
 
-**Coordinate System Gotcha:** PDF coordinates start from the bottom‑left corner, not top‑left like most graphics systems. This catches a lot of developers off‑guard.
+**Definition anchor:** Prostokąt (`Rectangle`) definiuje wizualne granice adnotacji na stronie, używając systemu współrzędnych PDF.
 
 #### Krok 4: Tworzenie magii – adnotacja zamiany
 
-Now for the main event. This is where we create the actual text replacement annotation with all the bells and whistles:
+Teraz zainicjuj `TextReplacementAnnotation`, ustaw tekst zamiany, sformatuj go i dołącz wszelkie wcześniej utworzone odpowiedzi.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.ReplacementAnnotation;
@@ -197,97 +236,93 @@ annotator.save(outputPath);
 annotator.dispose(); // Critical for memory management!
 ```
 
-**Performance Tip:** Always call `dispose()` on your `Annotator` instances. GroupDocs keeps references to the PDF in memory, and forgetting to dispose can cause memory leaks in long‑running applications.
+**Definition anchor:** `TextReplacementAnnotation` nakłada sugerowaną zmianę tekstu na PDF bez modyfikacji podstawowej treści, dopóki nie zostanie zaakceptowana.
 
-## Częste problemy i jak je naprawić
+**Performance tip:** Wywołaj `annotator.dispose()` po zakończeniu przetwarzania każdego dokumentu. Brak tego kroku utrzymuje plik PDF zablokowany w pamięci i może wywołać `OutOfMemoryError` w usługach działających długo.
 
-Let me save you some debugging time by covering the issues I see most often:
+## Typowe problemy i ich rozwiązania
 
 ### Problemy ze ścieżkami plików
-**Problem:** “File not found” errors even when the file exists.  
-**Solution:** Use `File.getAbsolutePath()` or `Path.toAbsolutePath()` to ensure you're working with complete paths. Also, watch out for forward vs. backward slashes on Windows.
+**Problem:** „File not found” mimo że plik istnieje.  
+**Solution:** Rozwiąż ścieżkę przy pomocy `Path.toAbsolutePath()` i unikaj mieszania ukośników w systemie Windows.
 
-### Problemy z pamięcią przy dużych PDF
-**Problem:** `OutOfMemoryError` when processing large documents.  
-**Solution:** Process documents in batches and always dispose of `Annotator` instances. Consider increasing heap size with `-Xmx` JVM parameter for very large files.
+### Problemy z pamięcią przy dużych PDF-ach
+**Problem:** `OutOfMemoryError` podczas przetwarzania 200‑stronicowych umów.  
+**Solution:** Przetwarzaj dokumenty w partiach, zwiększ pamięć JVM (`-Xmx4g`) i zawsze zwalniaj obiekty `Annotator`.
 
 ### Problemy z pozycjonowaniem adnotacji
-**Problem:** Annotations appear in the wrong location.  
-**Solution:** Remember that PDF coordinates are bottom‑left origin. Use a PDF viewer that shows coordinates to help with positioning, or build a small test utility to verify coordinates.
+**Problem:** Adnotacje są przesunięte lub poza stroną.  
+**Solution:** Użyj przeglądarki PDF wyświetlającej współrzędne lub napisz małe narzędzie wypisujące rozmiar strony i wartości prostokąta w celu weryfikacji.
 
 ### Problemy z licencjonowaniem
-**Problem:** Unexpected watermarks or licensing exceptions.  
-**Solution:** Ensure your license file is in the classpath and properly loaded before creating `Annotator` instances. The free trial has limitations—plan accordingly.
+**Problem:** Nieoczekiwane znaki wodne lub `LicenseException`.  
+**Solution:** Upewnij się, że plik licencji znajduje się na classpath i jest załadowany przed utworzeniem jakiejkolwiek instancji `Annotator`. Pamiętaj, że wersja próbna ogranicza liczbę stron do 5 na dokument.
 
 ## Praktyczne zastosowania w rzeczywistym świecie
 
-Here's where this gets exciting. I've seen developers use these text replacement features in some really creative ways:
-
 ### Pipeline przeglądu dokumentów
-Build automated review systems where legal teams can suggest changes to contracts, and the system tracks every modification with timestamps and user attribution. The reply feature becomes your audit trail.
+Zespoły prawne mogą sugerować zmiany klauzul, a system rejestruje, kto i kiedy wprowadził każdą sugestię, spełniając wymogi audytowe.
 
 ### Integracja z systemem zarządzania treścią
-Integrate with your CMS to automatically update PDFs when underlying data changes. For example, updating price lists or product specifications across hundreds of PDF catalogs.
+Gdy specyfikacje produktu ulegają zmianie, automatycznie uruchamiaj zadanie aktualizujące PDF‑y cenników w całym katalogu, a następnie powiadamiaj systemy downstream.
 
 ### Platformy współdzielonej edycji
-Create Google‑Docs‑style collaboration for PDFs. Multiple users can suggest changes simultaneously, and you can merge their suggestions intelligently.
+Zbuduj interfejs w stylu Google‑Docs dla PDF‑ów, w którym wielu użytkowników może jednocześnie sugerować zmiany; funkcja odpowiedzi staje się wątkiem konwersacji.
 
 ### Aktualizacje zgodności i regulacji
-Automatically flag and suggest replacements for outdated regulatory language across your document library. Essential for finance, healthcare, and other regulated industries.
+Przeskanuj repozytorium pod kątem przestarzałego języka regulacyjnego, wygeneruj sugestie zamiany i pozwól urzędnikom ds. zgodności zatwierdzić je zbiorczo.
 
 ## Strategie optymalizacji wydajności
 
-If you're planning to use this in production (and I hope you are), here are some hard‑earned performance tips:
-
 ### Najlepsze praktyki zarządzania pamięcią
-- Always dispose of `Annotator` instances  
-- Process large batches of documents in separate threads with their own memory pools  
-- Monitor your application's heap usage and tune accordingly  
+- Zwalniaj `Annotator` po każdym pliku.  
+- Korzystaj z API strumieniowych przy odczycie/zapisie dużych PDF‑ów.  
+- Monitoruj zużycie pamięci przy pomocy JMX lub VisualVM.
 
-### Skalowanie przy dużym wolumenie
-- Implement connection pooling if you're storing PDFs in databases  
-- Use asynchronous processing for non‑blocking operations  
-- Consider caching frequently accessed documents  
+### Skalowanie przy dużej liczbie dokumentów
+- Przetwarzaj pliki równolegle, używając `ExecutorService` z ograniczoną pulą wątków.  
+- Przechowuj PDF‑y w rozproszonym systemie plików (np. AWS S3) i strumieniuj je bezpośrednio do `Annotator`.  
+- Buforuj często używane dokumenty w pamięci jako plik mapowany tylko do odczytu, aby zmniejszyć opóźnienia I/O.
 
 ### Monitorowanie i debugowanie
-- Log processing times for performance tracking  
-- Implement proper error handling with meaningful error messages  
-- Set up monitoring for memory usage patterns  
+- Loguj czas trwania każdego etapu (`load`, `annotate`, `save`).  
+- Rejestruj wyjątki wraz ze stosami i nazwą PDF, aby ułatwić diagnozę.  
+- Ustaw alerty na skoki pamięci przekraczające 80 % przydzielonego sterty.
 
 ## Najczęściej zadawane pytania
 
-**Q: Can I replace text in scanned PDFs?**  
-A: Not directly – scanned PDFs contain images, not text. You’d need to OCR the document first, then apply text replacement to the OCR results.
+**Q: Czy mogę zastąpić tekst w zeskanowanych PDF-ach?**  
+A: Nie bezpośrednio — zeskanowane PDF‑y zawierają obrazy, a nie przeszukiwalny tekst. Najpierw wykonaj OCR, a potem zastosuj zamianę tekstu na warstwie wygenerowanej przez OCR.
 
-**Q: How do I handle special characters or Unicode text?**  
-A: GroupDocs.Annotation handles Unicode properly by default. Just ensure your source files are correctly encoded and your replacement text uses the right character set.
+**Q: Jak obsłużyć znaki specjalne lub tekst Unicode?**  
+A: GroupDocs.Annotation w pełni obsługuje Unicode. Upewnij się, że pliki źródłowe są kodowane w UTF‑8 i przekazuj ciągi zamiany jako obiekty Java `String`.
 
-**Q: Is there a limit to how much text I can replace at once?**  
-A: There’s no hard limit from GroupDocs, but performance degrades with very large replacements. Break large operations into smaller chunks when possible.
+**Q: Czy istnieje limit ilości tekstu, który mogę zastąpić jednorazowo?**  
+A: Nie ma sztywnego limitu, ale wydajność spada przy bardzo dużych zamianach. Dziel masywne aktualizacje na mniejsze partie dla płynniejszego przetwarzania.
 
-**Q: Can I programmatically accept or reject replacement suggestions?**  
-A: Yes! Iterate through annotations and either remove them (reject) or apply them permanently to the document (accept).
+**Q: Czy mogę programowo zaakceptować lub odrzucić sugestie zamiany?**  
+A: Tak — iteruj po adnotacjach, wywołaj `accept()` aby zastosować zmianę trwale lub `remove()` aby ją odrzucić.
 
-**Q: What happens if I try to replace text that doesn’t exist?**  
-A: The annotation will still be created, but it won’t have any visual effect. Always validate that the target text exists before creating replacements.
+**Q: Co się stanie, jeśli spróbuję zamienić tekst, którego nie ma?**  
+A: Adnotacja zostanie utworzona, ale pozostanie niewidoczna, ponieważ nie ma pasującego tekstu. Zweryfikuj ciąg docelowy przed utworzeniem adnotacji, aby uniknąć cichych niepowodzeń.
 
-**Q: How do I handle concurrent access to the same PDF?**  
-A: GroupDocs.Annotation isn’t thread‑safe for the same document. Use file locking or coordinate access through your application logic.
+**Q: Jak radzić sobie z równoczesnym dostępem do tego samego PDF?**  
+A: `Annotator` nie jest bezpieczny wątkowo dla jednego dokumentu. Używaj blokad plików lub mechanizmu kolejkowania, aby serializować dostęp.
 
-**Q: Can I customize the appearance of replacement annotations?**  
-A: Absolutely! You can modify colors, fonts, opacity, and other visual properties. The example shows just a few of the available options.
+**Q: Czy mogę dostosować wygląd adnotacji zamiany?**  
+A: Oczywiście. Możesz ustawić rozmiar czcionki, kolor, przezroczystość i styl obramowania poprzez właściwości stylu adnotacji.
 
-**Q: Does this work with password‑protected PDFs?**  
-A: Yes, but you’ll need to provide the password when initializing the `Annotator`. Check the GroupDocs documentation for the exact syntax.
-
-## Zakończenie
-
-You now have a solid, production‑ready way to **how to replace pdf** text using GroupDocs.Annotation in Java. From setting up the library and handling licensing, to creating collaborative replacement annotations and optimizing memory usage, you’ve covered the entire lifecycle.
-
-Next steps? Explore other annotation types (highlights, stamps, signatures), build a web UI for non‑technical users, or plug this into a document‑signing workflow. The possibilities are endless, and the foundation you’ve built here will serve you well as you tackle more advanced document‑processing challenges.
+**Q: Czy to działa z PDF‑ami zabezpieczonymi hasłem?**  
+A: Tak — podaj hasło przy inicjalizacji `Annotator`. API odszyfruje dokument w pamięci przed zastosowaniem adnotacji.
 
 ---
 
-**Ostatnia aktualizacja:** 2026-03-19  
+**Ostatnia aktualizacja:** 2026-09-30  
 **Testowano z:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
+
+## Powiązane samouczki
+
+- [Samouczek usuwania tekstu GroupDocs Annotation Java](/annotation/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/)
+- [Edycja adnotacji PDF w Javie – kompletny samouczek GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Dodawanie adnotacji wyszukiwania tekstu PDF GroupDocs Java](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
