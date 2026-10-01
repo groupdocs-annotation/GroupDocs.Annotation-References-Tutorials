@@ -89,9 +89,6 @@ url: /pl/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # Tworzenie podświetleń PDF w Javie: kompletny przewodnik po podświetlaniu PDF
 
@@ -434,9 +431,3 @@ A: GroupDocs.Annotation udostępnia metody enumeracji do odczytu metadanych (aut
 - [Edytuj anotacje PDF w Javie — kompletny samouczek GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Załaduj anotacje PDF w Javie — kompletny przewodnik zarządzania GroupDocs Annotation](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [Dodaj strzałkę PDF w Javie — kompletny samouczek GroupDocs](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

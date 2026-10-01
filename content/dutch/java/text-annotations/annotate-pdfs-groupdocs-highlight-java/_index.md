@@ -88,9 +88,6 @@ url: /nl/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # Maak PDF-highlights java: volledige gids voor het markeren van PDF's
 
@@ -437,9 +434,3 @@ A: GroupDocs.Annotation biedt enumeratiemethoden om metadata (auteur, aanmaakdat
 - [PDF‑annotaties bewerken Java - Complete GroupDocs‑tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [PDF‑annotaties laden Java - Complete GroupDocs‑annotatie‑beheergids](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Pijl‑PDF toevoegen in Java – Complete GroupDocs‑tutorial](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

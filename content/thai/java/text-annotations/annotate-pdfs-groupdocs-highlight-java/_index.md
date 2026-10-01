@@ -86,9 +86,6 @@ url: /th/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # สร้างไฮไลท์ PDF ด้วย Java: คู่มือฉบับสมบูรณ์สำหรับการไฮไลท์ PDF
 
@@ -441,8 +438,3 @@ A: GroupDocs.Annotation provides enumeration methods to read metadata (author, c
 - [แก้ไข Annotation PDF ด้วย Java - คู่มือครบวงจรของ GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [โหลด Annotation PDF ด้วย Java - คู่มือการจัดการ Annotation ของ GroupDocs อย่างครบถ้วน](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [เพิ่มลูกศรใน PDF ด้วย Java – คู่มือครบวงจรของ GroupDocs](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -88,9 +88,6 @@ url: /hi/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # PDF हाइलाइट्स जावा बनाना: PDFs को हाइलाइट करने के लिए पूर्ण गाइड
 
@@ -446,8 +443,3 @@ A: GroupDocs.Annotation एनोटेशन मेटाडेटा (ले�
 - [PDF एनोटेशन संपादित करें Java - पूर्ण GroupDocs ट्यूटोरियल](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [PDF एनोटेशन लोड करें Java - पूर्ण GroupDocs एनोटेशन मैनेजमेंट गाइड](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Java में एरो PDF जोड़ें – पूर्ण GroupDocs ट्यूटोरियल](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

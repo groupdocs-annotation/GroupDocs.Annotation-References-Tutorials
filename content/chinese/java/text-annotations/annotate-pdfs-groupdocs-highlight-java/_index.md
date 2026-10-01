@@ -84,9 +84,6 @@ url: /zh/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # 使用 Java 创建 PDF 高亮：完整指南
 
@@ -433,9 +430,3 @@ A: GroupDocs.Annotation 提供枚举方法读取元数据（作者、创建日�
 - [编辑 PDF 注释 Java - 完整 GroupDocs 教程](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [加载 PDF 注释 Java - 完整 GroupDocs 注释管理指南](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [在 Java 中添加箭头 PDF – 完整 GroupDocs 教程](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

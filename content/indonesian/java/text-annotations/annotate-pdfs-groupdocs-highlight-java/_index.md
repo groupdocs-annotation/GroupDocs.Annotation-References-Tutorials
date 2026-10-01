@@ -88,9 +88,6 @@ url: /id/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # Buat Sorotan PDF Java: panduan lengkap untuk menyorot PDF
 
@@ -432,8 +429,3 @@ A: GroupDocs.Annotation menyediakan metode enumerasi untuk membaca metadata (pen
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/) – Tutorial lengkap GroupDocs tentang Mengedit Anotasi PDF Java  
 - [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/) – Panduan lengkap Manajemen Anotasi PDF Java GroupDocs  
 - [Add Arrow PDF in Java – Complete GroupDocs Tutorial](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/) – Tutorial lengkap GroupDocs tentang Menambahkan Panah PDF di Java  
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

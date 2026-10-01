@@ -84,9 +84,6 @@ url: /ja/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # PDFハイライト作成 Java：PDFハイライトの完全ガイド
 
@@ -442,8 +439,3 @@ A: GroupDocs.Annotation はメタデータ（作成者、作成日、コメン�
 - [Edit PDF Annotations Java - 完全な GroupDocs チュートリアル](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [Load PDF Annotations Java - 完全な GroupDocs アノテーション管理ガイド](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Add Arrow PDF in Java – 完全な GroupDocs チュートリアル](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

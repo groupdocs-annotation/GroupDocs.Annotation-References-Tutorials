@@ -86,9 +86,6 @@ url: /ar/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # إنشاء تمييزات PDF في Java: دليل كامل لتظليل ملفات PDF
 
@@ -436,8 +433,3 @@ public class AnnotationTemplates {
 - [تحرير تعليقات PDF Java - دليل GroupDocs الكامل](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [تحميل تعليقات PDF Java - دليل إدارة تعليقات GroupDocs الكامل](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [إضافة سهم PDF في Java – دليل GroupDocs الكامل](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
