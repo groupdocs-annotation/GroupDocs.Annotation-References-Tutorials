@@ -87,9 +87,6 @@ url: /cs/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # Vytvoření zvýraznění PDF v Javě: kompletní průvodce zvýrazňováním PDF
 
@@ -436,8 +433,3 @@ A: GroupDocs.Annotation poskytuje metody enumerace pro čtení metadat (autor, d
 - [Upravit PDF anotace v Javě – Kompletní GroupDocs tutoriál](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Načíst PDF anotace v Javě – Kompletní průvodce správou GroupDocs Annotation](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [Přidat šipku do PDF v Javě – Kompletní GroupDocs tutoriál](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

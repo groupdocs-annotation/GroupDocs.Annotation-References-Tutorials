@@ -88,9 +88,6 @@ url: /tr/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # PDF vurgularını Java ile oluşturma: PDF'leri vurgulamak için eksiksiz rehber
 
@@ -445,8 +442,3 @@ C: GroupDocs.Annotation, meta verileri (yazar, oluşturma tarihi, yorum metni vb
 - [PDF Anotasyonlarını Düzenle Java - Tam GroupDocs Öğreticisi](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [PDF Anotasyonlarını Yükle Java - Tam GroupDocs Annotation Yönetim Rehberi](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [Java'da Ok PDF Ekle – Tam GroupDocs Öğreticisi](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -89,9 +89,6 @@ url: /de/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # PDF‑Highlights in Java erstellen: vollständiger Leitfaden zum Hervorheben von PDFs
 
@@ -431,8 +428,3 @@ A: GroupDocs.Annotation bietet Enumerations‑Methoden zum Auslesen von Metadate
 - [PDF‑Anmerkungen in Java bearbeiten – vollständiges GroupDocs‑Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [PDF‑Anmerkungen in Java laden – vollständiger GroupDocs‑Annotation‑Management‑Leitfaden](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [Pfeil‑PDF in Java hinzufügen – vollständiges GroupDocs‑Tutorial](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -89,9 +89,6 @@ url: /fr/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
 
 # Créer des surlignages PDF en Java : guide complet pour mettre en évidence les PDF
 
@@ -442,8 +439,3 @@ R : GroupDocs.Annotation fournit des méthodes d'énumération pour lire les mé
 - [Modifier les annotations PDF Java - Tutoriel complet GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Charger les annotations PDF Java - Guide complet de gestion des annotations GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [Ajouter une flèche PDF en Java – Tutoriel complet GroupDocs](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
