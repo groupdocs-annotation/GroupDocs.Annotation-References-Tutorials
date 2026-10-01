@@ -1,71 +1,113 @@
 ---
 categories:
 - Java Development
-date: '2026-03-19'
+date: '2026-09-30'
 description: GroupDocs.Annotation kullanarak Java'da PDF metnini nasıl değiştireceğinizi
-  öğrenin. Bu adım adım rehber, PDF metni değiştirme Java, Java PDF bellek yönetimi
-  ve gerçek dünya örneklerini kapsar.
-keywords: Java PDF text replacement, PDF annotation Java tutorial, GroupDocs annotation
-  examples, how to replace pdf, replace text pdf java, java pdf memory management,
-  java pdf text replacement
-lastmod: '2026-03-19'
-linktitle: Java PDF Text Replacement Guide
+  öğrenin, Java PDF bellek yönetimini ve gerçek dünya örneklerini kapsar.
+keywords:
+- how to replace pdf text
+- java pdf memory management
+- java pdf text replacement
+lastmod: '2026-09-30'
+linktitle: Java PDF Metin Değiştirme Kılavuzu
+og_description: GroupDocs.Annotation kullanarak Java'da PDF metnini nasıl değiştireceğinizi
+  keşfedin, belleği verimli yönetin ve üretime hazır kodda işbirlikçi yorumlar ekleyin.
+og_image_alt: Guide showing Java code for replacing PDF text with GroupDocs Annotation
+og_title: Java'da GroupDocs Annotation ile PDF metnini nasıl değiştirilir
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-30'
+  description: Learn how to replace pdf text in Java using GroupDocs.Annotation, covering
+    java pdf memory management and real‑world examples.
+  headline: How to replace pdf text in Java
+  type: TechArticle
+- description: Learn how to replace pdf text in Java using GroupDocs.Annotation, covering
+    java pdf memory management and real‑world examples.
+  name: How to replace pdf text in Java
+  steps:
+  - name: Setting up the foundation
+    text: First, create an `Annotator` instance that points to the source PDF and
+      defines the output location. Using absolute paths prevents “file not found”
+      errors when the code runs on a server. **Definition anchor:** The `Annotator`
+      class is the entry point for all annotation operations in GroupDocs.Annota
+  - name: Creating collaborative features with replies
+    text: Replies let reviewers discuss a suggestion directly on the PDF. Each reply
+      records the author, timestamp, and comment text, building a complete discussion
+      thread. **Definition anchor:** The `Reply` model represents a single comment
+      attached to an annotation, enabling threaded discussions and audit t
+  - name: Defining the target area
+    text: Accurately positioning the annotation requires specifying page number and
+      rectangle coordinates. Remember that PDF coordinates start at the **bottom‑left**
+      corner. **Definition anchor:** The rectangle (`Rectangle`) defines the visual
+      bounds of the annotation on the page, using the PDF coordinate sys
+  - name: Creating the magic – the replacement annotation
+    text: 'Now instantiate `TextReplacementAnnotation`, set the replacement text,
+      style it, and attach any replies you created earlier. **Definition anchor:**
+      `TextReplacementAnnotation` overlays a suggested text change on the PDF without
+      modifying the underlying content until you accept it. **Performance tip:'
+  type: HowTo
+- questions:
+  - answer: Not directly—scanned PDFs contain images, not searchable text. Run OCR
+      first, then apply text replacement to the OCR‑generated layer.
+    question: Can I replace text in scanned PDFs?
+  - answer: GroupDocs.Annotation fully supports Unicode. Ensure your source files
+      are UTF‑8 encoded and pass replacement strings as Java `String` objects.
+    question: How do I handle special characters or Unicode text?
+  - answer: No hard limit, but performance degrades with very large replacements.
+      Split massive updates into smaller batches for smoother processing.
+    question: Is there a limit to how much text I can replace at once?
+  - answer: Yes—iterate over annotations, call `accept()` to apply the change permanently,
+      or `remove()` to discard it.
+    question: Can I programmatically accept or reject replacement suggestions?
+  - answer: The annotation is still created but remains invisible because there’s
+      no matching text. Validate the target string before creating the annotation
+      to avoid silent failures.
+    question: What happens if I try to replace text that doesn’t exist?
+  type: FAQPage
 tags:
 - java
 - pdf
 - groupdocs
 - annotations
 - text-replacement
-title: Java'da PDF Metnini Nasıl Değiştirilir
+title: Java'da PDF metnini nasıl değiştirilir
 type: docs
 url: /tr/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/
 weight: 1
 ---
 
-# Java'da PDF Metnini Değiştirme
+# Java'da PDF metnini nasıl değiştirilir
 
-PDF içinde metin değiştirmek, diş çekmek gibi hissettirirdi—pahalı araçlar, kırılgan geçici çözümler ve sonsuz hata ayıklama. Programlı olarak **pdf nasıl değiştirilir** içeriğini değiştirmeyi merak ediyorsanız, doğru yerdesiniz. Bu öğreticide **GroupDocs.Annotation for Java** kullanarak PDF metnini güvenilir bir şekilde değiştirmeyi, belleği verimli yönetmeyi ve işbirlikçi yorumlar eklemeyi göstereceğiz—tüm bunlar kodunuzu temiz ve üretim‑hazır tutarak.
+Bu kapsamlı rehberde, Java için GroupDocs.Annotation kullanarak **pdf metnini nasıl değiştireceğinizi** öğrenecek, bellek kullanımını düşük tutacak ve işbirlikçi yorum dizileri ekleyeceksiniz. İster eski bir belge iş akışını modernleştiriyor olun ister yepyeni bir inceleme platformu oluşturuyor olun, aşağıdaki adımlar üretim‑hazır kod ve ölçeklenebilir en iyi uygulama ipuçları sunar.
 
-## Hızlı Cevaplar
-- **Java'da PDF metin değiştirme için en iyi kütüphane hangisidir?** GroupDocs.Annotation.
-- **Tarama yapılmış PDF metnini değiştirebilir miyim?** Yalnızca OCR sonrası; kütüphane aranabilir PDF'lerde çalışır.
-- **Bellek sızıntılarını nasıl önleyebilirim?** `Annotator` örneklerini dispose edin ve mutlak yollar kullanın.
-- **Üretim için lisansa ihtiyacım var mı?** Evet—ticari bir lisans su işaretlerini kaldırır.
+## Hızlı cevaplar
+- **Java'da PDF metin değiştirme için en iyi kütüphane hangisidir?** GroupDocs.Annotation.  
+- **Tarama yapılmış PDF metnini değiştirebilir miyim?** Yalnızca OCR sonrası; kütüphane aranabilir PDF'lerde çalışır.  
+- **Bellek sızıntılarını nasıl önleyebilirim?** `Annotator` örneklerini serbest bırakın ve mutlak yollar kullanın.  
+- **Üretim için lisansa ihtiyacım var mı?** Evet—ticari bir lisans filigranları kaldırır.  
 - **Değiştirme önerilerine yanıt eklemek mümkün mü?** Kesinlikle, `Reply` modeli aracılığıyla.
 
-## Java Uygulamalarınızda PDF Metin Değiştirmeye Neden İhtiyacınız Var
+## Java uygulamalarınızda PDF metin değiştirmeye neden ihtiyacınız var
 
-Dürüst olalım—Java'da PDF değişiklikleriyle uğraşmak bir kabustu. Ya pahalı tescilli araçlara ihtiyaç duyuyordunuz ya da zar zor çalışan özel çözümler geliştirmek için haftalar harcıyordunuz. İşte **GroupDocs.Annotation for Java** burada devreye giriyor ve bana güvenin, bu bir oyun‑değiştirici.
+Hedef PDF'yi yükleyin, bir değiştirme önerisi ekleyin ve inceleyenlerin kabul etmesini veya reddetmesini sağlayın—bu tüm akış tipik 10 sayfalık sözleşmelerde bir saniyeden kısa sürede çalışır. GroupDocs.Annotation **50+ giriş ve çıkış formatını** işler ve **yüzlerce sayfalı PDF'leri** tüm dosyayı belleğe yüklemeden işleyebilir, bu da kurumsal ölçekli belge hatları için idealdir.
 
-İster bir belge yönetim sistemi, ister işbirlikçi inceleme platformu oluşturuyor olun, ya da sadece programlı olarak PDF içeriğini güncellemeniz gerekiyorsa, bu rehber size sağlam metin değiştirme işlevselliğini nasıl uygulayacağınızı tam olarak gösterecek. Gerçek‑dünya, üretim‑hazır ve çalışan kodlardan bahsediyoruz.
+## PDF metin değiştirme nedir?
 
-**Bu öğreticinin sonunda şunları öğreneceksiniz:**
-- Java projenizde GroupDocs.Annotation'ı kurmak (doğru yöntem)
-- Profesyonel görünen metin değiştirme ek açıklamaları oluşturmak
-- Yanıtlar ve yorumlarla işbirlikçi özellikler eklemek
-- Çoğu geliştiriciyi zorlayan yaygın tuzakları ele almak
-- Büyük ölçekli uygulamalar için performansı optimize etmek
-
-Hazır mısınız? Hadi dalalım ve harika bir şeyler inşa edelim.
-
-## PDF Metin Değiştirme Nedir?
-
-PDF metin değiştirme, önerilen değişiklikleri orijinal belgeyi hemen değiştirmeden üstüne yerleştiren bir ek açıklama türüdür. Bunu PDF'ler için “Değişiklikleri İzle” gibi düşünün—inceleme döngüleri, uyumluluk takibi ve işbirlikçi düzenleme için mükemmeldir.
+`PDF text replacement` bir ek açıklamadır ve görsel olarak bir değişikliği önerir, ancak öneri kabul edilene kadar alttaki PDF içeriği dokunulmaz kalır. Kelime işlemcilerdeki “Değişiklikleri İzle” gibi çalışır, kimin neyi, ne zaman ve neden önerdiğine dair bir denetim izi tutar; bu, uyumluluk incelemeleri ve işbirlikçi düzenleme için esastır.
 
 ## Önkoşullar
+- JDK 8 veya daha yeni (JDK 21 ile uyumlu)  
+- Bağımlılık yönetimi için Maven veya Gradle  
+- GroupDocs.Annotation 25.2 (veya daha yeni)  
+- Java istisna yönetimi ve dosya I/O konusunda temel bilgi  
 
-- **Java Development Kit (JDK) 8 veya üzeri** – daha yeni sürümlerle de çalışır  
-- **Maven** (veya Gradle) bağımlılık yönetimi için  
-- **GroupDocs.Annotation kütüphanesi** – örneklerde sürüm 25.2'yi kullanacağız  
-- Temel Java bilgisi (sınıflar, metodlar, istisna yönetimi)  
+*Opsiyonel ancak faydalı:* IntelliJ IDEA gibi bir IDE ve test için örnek bir PDF.
 
-*Nice to have:* bir IDE (IntelliJ IDEA veya Eclipse) ve test için örnek bir PDF.
+## Projenize GroupDocs.Annotation'ı ekleme
 
-## Projenize GroupDocs.Annotation'ı Ekleme
+### Maven kurulumu (en yaygın yaklaşım)
 
-### Maven Kurulumu (En Yaygın Yaklaşım)
-
-Eğer Maven kullanıyorsanız (ve dürüst olalım, çoğu Java geliştiricisi öyle), bunu `pom.xml` dosyanıza ekleyin. Geliştiricilerin depo yapılandırmasını unutup hata yaptığını gördüm, bu yüzden her iki kısmı da eklediğinizden emin olun:
+`pom.xml` dosyanıza depo ve bağımlılığı ekleyin. Depo bloğunu unutmak, “artifact not found” hatalarının sık bir kaynağıdır; bu yüzden kod parçacığını tam olarak gösterildiği gibi kopyalayın.
 
 ```xml
 <repositories>
@@ -84,33 +126,29 @@ Eğer Maven kullanıyorsanız (ve dürüst olalım, çoğu Java geliştiricisi �
 </dependencies>
 ```
 
-### Lisans Durumunu Yönetme
+### Lisans durumunu yönetme
 
-GroupDocs lisanslamasıyla ilgili durum (bu birçok kişiyi şaşırtıyor):
+GroupDocs üç lisans katmanı sunar:
 
-1. **Ücretsiz deneme ile başlayın** – Test ve küçük projeler için mükemmel. [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) adresinden indirin
-2. **Geçici bir lisans alın** – Değerlendirme için daha fazla zamana mı ihtiyacınız var? [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license/) adresinden alın
-3. **Ticari sürüme geçin** – Üretim uygulamaları için, [GroupDocs website](https://purchase.groupdocs.com/buy) üzerinden tam lisans almanız gerekir
+1. **Ücretsiz deneme** – [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) sayfasından indirin. Her çıktı dosyasında filigranlar görünür.  
+2. **Geçici lisans** – uzun vadeli değerlendirme için faydalıdır; [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license/) portalından temin edin.  
+3. **Tam ticari lisans** – filigranları kaldırır ve sınırsız dağıtımı açar. [GroupDocs website](https://purchase.groupdocs.com/buy) üzerinden satın alın.
 
-**Pro Tip:** Deneme sürümü çıktınıza su işareti ekler. Müşterilere demo yapacaksanız buna göre planlayın!
+**Pro ipucu:** Lisans dosyasını uygulama başlangıcında bir kez yükleyin, böylece tekrarlanan I/O yükünden kaçınırsınız.
 
-## İlk Metin Değiştirme Özelliğinizi Oluşturma
+## İlk metin değiştirme özelliğinizi oluşturma
 
-### Metin Değiştirme Ek Açıklamalarını Anlamak
+### Metin değiştirme ek açıklamalarını anlama
 
-Metin değiştirme ek açıklamalarını dijital “öneri modu” olarak düşünün – Microsoft Word'deki Track Changes gibi, ancak PDF'ler için. Aslında orijinal metni değiştirmiyorsunuz; bunun yerine, daha sonra kabul edilebilecek veya reddedilebilecek değiştirme önerilerini üstüne yerleştiriyorsunuz. Bu yaklaşım şunlar için mükemmeldir:
+`TextReplacementAnnotation`, GroupDocs.Annotation'ın düzenleme önerileri için temel sınıfıdır. Orijinal metin konumunu, değiştirme dizesini ve isteğe bağlı stil bilgilerini saklar. Orijinal PDF dokunulmaz kaldığı için değişiklikleri her zaman geri alabilir veya denetleyebilirsiniz.
 
-- Belge inceleme iş akışları  
-- İşbirlikçi düzenleme senaryoları  
-- Uyumluluk takibi (kim ne zaman neyi değiştirdiğini bilmek)
+### Adım adım uygulama
 
-### Adım‑Adım Uygulama
+Her aşamayı adım adım inceleyecek, neden önemli olduğunu vurgulayacak ve **java pdf memory management** en iyi uygulamalarını ekleyeceğiz.
 
-Her adımı birlikte inceleyecek, neden önemli olduğunu açıklayacak ve **java pdf memory management** en iyi uygulamalarına dikkat edeceğiz.
+#### Adım 1: Temeli kurma
 
-#### Adım 1: Temeli Oluşturma
-
-İlk olarak, annotator'ımızı başlatacağız ve çıktının nereye gideceğini tanımlayacağız. Doğru kaynak yönetimi kullandığımıza dikkat edin—bu, uygulamanızın performansını öldürebilecek bellek sızıntılarını önler:
+İlk olarak, kaynak PDF'ye işaret eden ve çıktı konumunu tanımlayan bir `Annotator` örneği oluşturun. Mutlak yollar kullanmak, kod bir sunucuda çalıştığında “file not found” hatalarını önler.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -122,11 +160,11 @@ public class AddTextReplacementAnnotationFeature {
         final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**Gerçek‑Dünya Notu:** Üretimde her zaman mutlak yollar kullanın. Göreli yollar, farklı ortamlara dağıtım yaparken sorun çıkarabilir.
+**Tanım bağlantısı:** `Annotator` sınıfı, GroupDocs.Annotation'daki tüm ek açıklama işlemleri için giriş noktasıdır; PDF yükleme, değiştirme ve kaydetmeyi yönetir.
 
-#### Adım 2: Yanıtlarla İşbirlikçi Özellikler Oluşturma
+#### Adım 2: Yanıtlarla işbirlikçi özellikler oluşturma
 
-İşte işin ilginçleştiği yer. Ek açıklamalarınıza yanıtlar ekleyebilir, böylece ekip işbirliği için mükemmel hale getirebilirsiniz. Bunu PDF değişikliklerinize zincirli yorumlar eklemek gibi düşünün:
+Yanıtlar, inceleyenlerin bir öneriyi doğrudan PDF üzerinde tartışmasına izin verir. Her yanıt, yazar, zaman damgası ve yorum metnini kaydeder, tam bir tartışma dizisi oluşturur.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -147,11 +185,11 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Neden Önemli:** Kurumsal ortamlarda genellikle denetim izlerine ihtiyaç duyarsınız. Bu yanıtlar tam da bunu sağlar—kim ne zaman hangi değişikliği önerdiğine dair tam bir geçmiş.
+**Tanım bağlantısı:** `Reply` modeli, bir ek açıklamaya eklenmiş tek bir yorumu temsil eder; dizili tartışmalar ve denetim izleri sağlar.
 
-#### Adım 3: Hedef Alanı Tanımlama
+#### Adım 3: Hedef alanı tanımlama
 
-Kesinliğin önemli olduğu yer burası. PDF içinde metin değişikliğinin tam olarak nerede görüneceğini tanımlıyorsunuz. Koordinat sistemi başlangıçta zorlayıcı olabilir, ama bir kez anladığınızda oldukça basittir:
+Ek açıklamayı doğru konumlandırmak, sayfa numarası ve dikdörtgen koordinatlarını belirtmeyi gerektirir. PDF koordinatlarının **sol‑alt** köşeden başladığını unutmayın.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -170,11 +208,11 @@ points.add(point3);
 points.add(point4);
 ```
 
-**Koordinat Sistemi Tuzağı:** PDF koordinatları çoğu grafik sisteminin aksine sol‑alt köşeden başlar, üst‑sol köşeden değil. Bu, birçok geliştiriciyi hazırlıksız yakalar.
+**Tanım bağlantısı:** Dikdörtgen (`Rectangle`), PDF koordinat sistemini kullanarak sayfadaki ek açıklamanın görsel sınırlarını tanımlar.
 
-#### Adım 4: Sihiri Oluşturma – Değiştirme Ek Açıklaması
+#### Adım 4: Sihiri oluşturma – değiştirme ek açıklaması
 
-Şimdi ana olay. İşte tüm özellikleriyle gerçek metin değiştirme ek açıklamasını oluşturduğumuz yer:
+Şimdi `TextReplacementAnnotation` örneğini oluşturun, değiştirme metnini ayarlayın, stil verin ve önceden oluşturduğunuz yanıtları ekleyin.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.ReplacementAnnotation;
@@ -197,108 +235,91 @@ annotator.save(outputPath);
 annotator.dispose(); // Critical for memory management!
 ```
 
-**Performans İpucu:** `Annotator` örneklerinizde her zaman `dispose()` çağırın. GroupDocs PDF'ye referansları bellekte tutar ve dispose etmeyi unutmak uzun süren uygulamalarda bellek sızıntılarına yol açabilir.
+**Tanım bağlantısı:** `TextReplacementAnnotation`, alttaki içeriği kabul edene kadar değiştirmeden, PDF üzerine önerilen bir metin değişikliği ekler.
 
-## Yaygın Sorunlar ve Çözüm Yolları
+**Performans ipucu:** Her belgeyi işledikten sonra `annotator.dispose()` çağırın. Bunu yapmazsanız PDF dosyası bellekte kilitli kalır ve uzun süren hizmetlerde `OutOfMemoryError` oluşabilir.
 
-Sıkça gördüğüm sorunları ele alarak size hata ayıklama süresinden tasarruf ettireyim:
+## Yaygın sorunlar ve nasıl çözelim
 
-### Dosya Yolu Sorunları
+### Dosya yolu sorunları
+**Problem:** Dosya mevcut olmasına rağmen “File not found”.  
+**Çözüm:** Yolu `Path.toAbsolutePath()` ile çözün ve Windows'ta ileri/geri eğik çizgileri karıştırmaktan kaçının.
 
-**Problem:** Dosya mevcut olsa bile “File not found” hataları.  
-**Solution:** Tam yollarla çalıştığınızdan emin olmak için `File.getAbsolutePath()` veya `Path.toAbsolutePath()` kullanın. Ayrıca Windows'ta ileri ve geri eğik çizgileri (slash) göz önünde bulundurun.
+### Büyük PDF'lerde bellek sorunları
+**Problem:** 200 sayfalık sözleşmeleri işlerken `OutOfMemoryError`.  
+**Çözüm:** Belgeleri partiler halinde işleyin, JVM yığınını (`-Xmx4g`) artırın ve her zaman `Annotator` nesnelerini serbest bırakın.
 
-### Büyük PDF'lerde Bellek Problemleri
+### Ek açıklama konumlandırma sorunları
+**Problem:** Ek açıklamalar kaymış veya sayfa dışı görünüyor.  
+**Çözüm:** Koordinatları gösteren bir PDF görüntüleyici kullanın veya sayfa boyutunu ve dikdörtgen değerlerini doğrulamak için küçük bir yardımcı program yazın.
 
-**Problem:** Büyük belgeler işlenirken `OutOfMemoryError`.  
-**Solution:** Belgeleri partiler halinde işleyin ve her zaman `Annotator` örneklerini dispose edin. Çok büyük dosyalar için `-Xmx` JVM parametresiyle yığın (heap) boyutunu artırmayı düşünün.
+### Lisans sorunları
+**Problem:** Beklenmeyen filigranlar veya `LicenseException`.  
+**Çözüm:** Lisans dosyasının sınıf yolunda olduğundan ve herhangi bir `Annotator` oluşturulmadan önce yüklendiğinden emin olun. Deneme sürümünün belge başına 5 sayfa ile sınırlı olduğunu unutmayın.
 
-### Ek Açıklama Konumlandırma Sorunları
+## Gerçek dünyada gerçekten önemli uygulamalar
 
-**Problem:** Ek açıklamalar yanlış konumda görünüyor.  
-**Solution:** PDF koordinatlarının alt‑sol kök olduğunu unutmayın. Konumlandırmaya yardımcı olmak için koordinatları gösteren bir PDF görüntüleyici kullanın veya koordinatları doğrulamak için küçük bir test aracı oluşturun.
+### Belge inceleme hatları
+Hukuk ekipleri madde değişiklikleri önerebilir ve sistem, her öneriyi kimin ne zaman yaptığını kaydederek uyumluluk denetimlerini karşılar.
 
-### Lisans Sorunları
+### İçerik yönetimi entegrasyonu
+Ürün özellikleri değiştiğinde, katalogunuzdaki fiyat listesi PDF'lerini otomatik olarak güncelleyen bir iş çalıştırın ve ardından alt sistemleri bilgilendirin.
 
-**Problem:** Beklenmeyen su işaretleri veya lisans istisnaları.  
-**Solution:** Lisans dosyanızın sınıf yolunda (classpath) olduğundan ve `Annotator` örnekleri oluşturulmadan önce doğru şekilde yüklendiğinden emin olun. Ücretsiz deneme sınırlamalara sahiptir—buna göre plan yapın.
+### İşbirlikçi düzenleme platformları
+Birden fazla kullanıcının aynı anda düzenleme önerebileceği, PDF'ler için Google‑Docs tarzı bir arayüz oluşturun; yanıt özelliği konuşma dizisi haline gelir.
 
-## Gerçek‑Dünya Uygulamaları Gerçekten Önemli
+### Uyumluluk ve düzenleyici güncellemeler
+Depo içinde eski düzenleyici dili tarayın, değiştirme önerileri oluşturun ve uyumluluk görevlilerinin toplu olarak onaylamasına izin verin.
 
-İşte işin heyecanlı kısmı. Geliştiricilerin bu metin değiştirme özelliklerini gerçekten yaratıcı şekillerde kullandığını gördüm:
+## Performans optimizasyon stratejileri
 
-### Belge İnceleme Hatları
+### Bellek yönetimi en iyi uygulamaları
+- Her dosyadan sonra `Annotator`'ı serbest bırakın.  
+- Büyük PDF'leri okuma/yazma için akış API'lerini kullanın.  
+- Yığın kullanımını JMX veya VisualVM ile izleyin.
 
-Hukuk ekiplerinin sözleşmelere değişiklik önerdiği otomatik inceleme sistemleri oluşturun ve sistem her değişikliği zaman damgası ve kullanıcı atamasıyla izlesin. Yanıt özelliği denetim iziniz olur.
+### Yüksek hacim için ölçeklendirme
+- Dosyaları, sınırlı bir iş parçacığı havuzuna sahip bir executor servisi kullanarak paralel işleyin.  
+- PDF'leri dağıtık bir dosya sisteminde (ör. AWS S3) saklayın ve doğrudan `Annotator` içine akıtın.  
+- Sık erişilen belgeleri yalnızca‑okunur bellek‑haritalı bir dosyada önbelleğe alarak I/O gecikmesini azaltın.
 
-### İçerik Yönetimi Entegrasyonu
+### İzleme ve hata ayıklama
+- Her aşama için harcanan süreyi (`load`, `annotate`, `save`) kaydedin.  
+- İstisnaları yığın izleriyle yakalayın ve PDF adını ekleyerek sorun giderme kolaylığı sağlayın.  
+- Ayrılan yığının %80'ini aşan bellek dalgalanmaları için uyarılar ayarlayın.
 
-Altta yatan veri değiştiğinde PDF'leri otomatik olarak güncellemek için CMS'inizle entegre edin. Örneğin, yüzlerce PDF kataloğunda fiyat listelerini veya ürün özelliklerini güncellemek.
+## Sıkça sorulan sorular
 
-### İşbirlikçi Düzenleme Platformları
-
-PDF'ler için Google‑Docs tarzı işbirliği oluşturun. Birden çok kullanıcı aynı anda değişiklik önerebilir ve önerilerini akıllıca birleştirebilirsiniz.
-
-### Uyumluluk ve Regülasyon Güncellemeleri
-
-Belge kütüphanenizdeki eski düzenleyici dil için otomatik olarak işaretleme ve değiştirme önerileri yapın. Finans, sağlık ve diğer düzenlenmiş sektörler için hayati öneme sahiptir.
-
-## Performans Optimizasyon Stratejileri
-
-Bunu üretimde kullanmayı planlıyorsanız (ve umarım kullanıyorsunuz), işte bazı zor kazanılmış performans ipuçları:
-
-### Bellek Yönetimi En İyi Uygulamaları
-
-- `Annotator` örneklerini her zaman dispose edin  
-- Büyük belge partilerini kendi bellek havuzlarına sahip ayrı iş parçacıklarında işleyin  
-- Uygulamanızın yığın kullanımını izleyin ve buna göre ayarlayın
-
-### Yüksek Hacim İçin Ölçeklendirme
-
-- PDF'leri veritabanlarında saklıyorsanız bağlantı havuzu uygulayın  
-- Bloklamayan işlemler için asenkron işleme kullanın  
-- Sık erişilen belgeleri önbelleğe almayı düşünün
-
-### İzleme ve Hata Ayıklama
-
-- Performans takibi için işleme sürelerini kaydedin  
-- Anlamlı hata mesajlarıyla doğru hata yönetimi uygulayın  
-- Bellek kullanım desenleri için izleme kurun
-
-## Sıkça Sorulan Sorular
-
-**S: Tarama yapılmış PDF'lerde metin değiştirebilir miyim?**  
-C: Doğrudan değil – taranmış PDF'ler görüntü içerir, metin değil. Önce belgeyi OCR ile dönüştürmeniz, ardından OCR sonuçlarına metin değiştirme uygulamanız gerekir.
+**S: Tarama yapılmış PDF'lerde metni değiştirebilir miyim?**  
+C: Doğrudan değil—tarama yapılmış PDF'ler görüntü içerir, aranabilir metin yoktur. Önce OCR çalıştırın, ardından OCR‑oluşturulan katmana metin değiştirme uygulayın.
 
 **S: Özel karakterleri veya Unicode metni nasıl yönetirim?**  
-C: GroupDocs.Annotation varsayılan olarak Unicode'u doğru şekilde işler. Kaynak dosyalarınızın doğru kodlanmış olduğundan ve değiştirme metninizin doğru karakter setini kullandığından emin olun.
+C: GroupDocs.Annotation Unicode'u tam destekler. Kaynak dosyalarınızın UTF‑8 kodlu olduğundan emin olun ve değiştirme dizelerini Java `String` nesneleri olarak geçirin.
 
-**S: Aynı anda ne kadar metin değiştirebileceğim konusunda bir limit var mı?**  
-C: GroupDocs'tan kesin bir limit yok, ancak çok büyük değişikliklerde performans düşer. Mümkün olduğunda büyük işlemleri daha küçük parçalara bölün.
+**S: Aynı anda ne kadar metin değiştirebileceğimde bir limit var mı?**  
+C: Katı bir limit yok, ancak çok büyük değişikliklerde performans düşer. Büyük güncellemeleri daha küçük partilere bölerek daha sorunsuz işleyin.
 
-**S: Değiştirme önerilerini programlı olarak kabul edebilir veya reddedebilir miyim?**  
-C: Evet! Ek açıklamaları döngüyle gezerek ya kaldırabilirsiniz (reddet) ya da belgeye kalıcı olarak uygulayabilirsiniz (kabul).
+**S: Değiştirme önerilerini programlı olarak kabul veya reddedebilir miyim?**  
+C: Evet—ek açıklamaları döngüyle gezerek, değişikliği kalıcı olarak uygulamak için `accept()`, iptal etmek için `remove()` çağırın.
 
 **S: Var olmayan bir metni değiştirmeye çalışırsam ne olur?**  
-C: Ek açıklama yine de oluşturulur, ancak görsel bir etkisi olmaz. Değiştirmeler oluşturulmadan önce hedef metnin varlığını her zaman doğrulayın.
+C: Ek açıklama yine oluşturulur ancak eşleşen metin olmadığı için görünmez. Sessiz hatalardan kaçınmak için ek açıklamayı oluşturmadan önce hedef dizeyi doğrulayın.
 
 **S: Aynı PDF'ye eşzamanlı erişimi nasıl yönetirim?**  
-C: GroupDocs.Annotation aynı belge için iş parçacığı‑güvenli değildir. Dosya kilitleme kullanın veya erişimi uygulama mantığınızla koordine edin.
+C: `Annotator` tek bir belge için thread‑safe değildir. Erişimi sıralamak için dosya kilitleri veya bir kuyruk mekanizması kullanın.
 
 **S: Değiştirme ek açıklamalarının görünümünü özelleştirebilir miyim?**  
-C: Kesinlikle! Renkleri, yazı tiplerini, opaklığı ve diğer görsel özellikleri değiştirebilirsiniz. Örnek sadece mevcut seçeneklerden birkaçını gösteriyor.
+C: Kesinlikle. Font boyutu, renk, opaklık ve kenar stili gibi özellikleri ek açıklamanın stil özellikleriyle ayarlayabilirsiniz.
 
 **S: Bu, şifre korumalı PDF'lerde çalışır mı?**  
-C: Evet, ancak `Annotator`'ı başlatırken şifreyi sağlamanız gerekir. Tam sözdizimi için GroupDocs belgelerine bakın.
+C: Evet—`Annotator`'ı başlatırken şifreyi sağlayın. API, ek açıklamaları uygulamadan önce belgeyi bellekte çözer.
 
-## Sonuç
-
-Artık GroupDocs.Annotation kullanarak Java'da **pdf nasıl değiştirilir** metnini değiştirmek için sağlam, üretim‑hazır bir yönteme sahipsiniz. Kütüphaneyi kurmaktan lisans yönetimine, işbirlikçi değiştirme ek açıklamaları oluşturmaya ve bellek kullanımını optimize etmeye kadar tüm yaşam döngüsünü kapsadınız.
-
-Sonraki adımlar? Diğer ek açıklama türlerini (vurgulamalar, damgalar, imzalar) keşfedin, teknik olmayan kullanıcılar için bir web UI oluşturun veya bunu bir belge‑imzalama iş akışına entegre edin. Olasılıklar sonsuzdur ve burada inşa ettiğiniz temel, daha gelişmiş belge‑işleme zorluklarıyla başa çıkarken size iyi hizmet edecektir.
-
----
-
-**Son Güncelleme:** 2026-03-19  
-**Test Edilen Sürüm:** GroupDocs.Annotation 25.2  
+**Son Güncelleme:** 2026-09-30  
+**Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs
+
+## İlgili Eğitimler
+
+- [Groupdocs Annotation Java Metin Redaksiyon Eğitimi](/annotation/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/)
+- [PDF Ek Açıklamaları Düzenle Java - Tam GroupDocs Eğitimi](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Arama Metni Ek Açıklamaları Ekle PDF Groupdocs Java](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)

@@ -1,22 +1,76 @@
 ---
 categories:
 - Java Development
-date: '2026-03-19'
-description: تعلم كيفية استبدال نص PDF في Java باستخدام GroupDocs.Annotation. يغطي
-  هذا الدليل خطوة بخطوة استبدال نص PDF في Java، إدارة ذاكرة PDF في Java، وأمثلة من
-  الواقع.
-keywords: Java PDF text replacement, PDF annotation Java tutorial, GroupDocs annotation
-  examples, how to replace pdf, replace text pdf java, java pdf memory management,
-  java pdf text replacement
-lastmod: '2026-03-19'
-linktitle: Java PDF Text Replacement Guide
+date: '2026-09-30'
+description: تعلم كيفية استبدال نص PDF في Java باستخدام GroupDocs.Annotation، مع تغطية
+  إدارة ذاكرة PDF في Java وأمثلة من الواقع.
+keywords:
+- how to replace pdf text
+- java pdf memory management
+- java pdf text replacement
+lastmod: '2026-09-30'
+linktitle: دليل استبدال نص PDF في Java
+og_description: اكتشف كيفية استبدال نص PDF في Java باستخدام GroupDocs.Annotation،
+  وإدارة الذاكرة بفعالية، وإضافة تعليقات تعاونية في كود جاهز للإنتاج.
+og_image_alt: Guide showing Java code for replacing PDF text with GroupDocs Annotation
+og_title: كيفية استبدال نص PDF في Java باستخدام GroupDocs Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-30'
+  description: Learn how to replace pdf text in Java using GroupDocs.Annotation, covering
+    java pdf memory management and real‑world examples.
+  headline: How to replace pdf text in Java
+  type: TechArticle
+- description: Learn how to replace pdf text in Java using GroupDocs.Annotation, covering
+    java pdf memory management and real‑world examples.
+  name: How to replace pdf text in Java
+  steps:
+  - name: Setting up the foundation
+    text: First, create an `Annotator` instance that points to the source PDF and
+      defines the output location. Using absolute paths prevents “file not found”
+      errors when the code runs on a server. **Definition anchor:** The `Annotator`
+      class is the entry point for all annotation operations in GroupDocs.Annota
+  - name: Creating collaborative features with replies
+    text: Replies let reviewers discuss a suggestion directly on the PDF. Each reply
+      records the author, timestamp, and comment text, building a complete discussion
+      thread. **Definition anchor:** The `Reply` model represents a single comment
+      attached to an annotation, enabling threaded discussions and audit t
+  - name: Defining the target area
+    text: Accurately positioning the annotation requires specifying page number and
+      rectangle coordinates. Remember that PDF coordinates start at the **bottom‑left**
+      corner. **Definition anchor:** The rectangle (`Rectangle`) defines the visual
+      bounds of the annotation on the page, using the PDF coordinate sys
+  - name: Creating the magic – the replacement annotation
+    text: 'Now instantiate `TextReplacementAnnotation`, set the replacement text,
+      style it, and attach any replies you created earlier. **Definition anchor:**
+      `TextReplacementAnnotation` overlays a suggested text change on the PDF without
+      modifying the underlying content until you accept it. **Performance tip:'
+  type: HowTo
+- questions:
+  - answer: Not directly—scanned PDFs contain images, not searchable text. Run OCR
+      first, then apply text replacement to the OCR‑generated layer.
+    question: Can I replace text in scanned PDFs?
+  - answer: GroupDocs.Annotation fully supports Unicode. Ensure your source files
+      are UTF‑8 encoded and pass replacement strings as Java `String` objects.
+    question: How do I handle special characters or Unicode text?
+  - answer: No hard limit, but performance degrades with very large replacements.
+      Split massive updates into smaller batches for smoother processing.
+    question: Is there a limit to how much text I can replace at once?
+  - answer: Yes—iterate over annotations, call `accept()` to apply the change permanently,
+      or `remove()` to discard it.
+    question: Can I programmatically accept or reject replacement suggestions?
+  - answer: The annotation is still created but remains invisible because there’s
+      no matching text. Validate the target string before creating the annotation
+      to avoid silent failures.
+    question: What happens if I try to replace text that doesn’t exist?
+  type: FAQPage
 tags:
 - java
 - pdf
 - groupdocs
 - annotations
 - text-replacement
-title: كيفية استبدال نص PDF في جافا
+title: كيفية استبدال نص PDF في Java
 type: docs
 url: /ar/java/text-annotations/java-pdf-text-replacement-groupdocs-annotation/
 weight: 1
@@ -24,48 +78,34 @@ weight: 1
 
 # كيفية استبدال نص PDF في Java
 
-كان استبدال النص داخل ملف PDF يبدو كعملية صعبة—أدوات مكلفة، حلول هشة، وتصحيح أخطاء لا ينتهي. إذا كنت تتساءل **how to replace pdf** محتوى برمجياً، فقد وصلت إلى المكان الصحيح. في هذا الدرس سنستعرض استخدام **GroupDocs.Annotation for Java** لاستبدال نص PDF بشكل موثوق، إدارة الذاكرة بفعالية، وإضافة تعليقات تعاونية—كل ذلك مع الحفاظ على نظافة الكود وجاهزيته للإنتاج.
+في هذا الدليل الشامل ستتعلم **كيفية استبدال نص PDF** باستخدام GroupDocs.Annotation للغة Java، مع الحفاظ على استهلاك الذاكرة منخفضًا وإضافة سلاسل تعليقات تعاونية. سواءً كنت تقوم بتحديث سير عمل المستندات القديم أو تبني منصة مراجعة جديدة تمامًا، فإن الخطوات أدناه توفر لك شفرة جاهزة للإنتاج ونصائح أفضل الممارسات التي تتوسع.
 
 ## إجابات سريعة
 - **ما هي المكتبة الأفضل لاستبدال نص PDF في Java؟** GroupDocs.Annotation.  
-- **هل يمكنني استبدال نص PDF الممسوح ضوئياً؟** فقط بعد OCR؛ المكتبة تعمل على ملفات PDF القابلة للبحث.  
-- **كيف أتجنب تسرب الذاكرة؟** تخلص من كائنات `Annotator` واستخدم المسارات المطلقة.  
+- **هل يمكنني استبدال نص PDF الممسوح ضوئيًا؟** فقط بعد OCR؛ المكتبة تعمل على ملفات PDF القابلة للبحث.  
+- **كيف أتجنب تسرب الذاكرة؟** تخلص من كائنات `Annotator` واستخدم مسارات مطلقة.  
 - **هل أحتاج إلى ترخيص للإنتاج؟** نعم—ترخيص تجاري يزيل العلامات المائية.  
-- **هل يمكن إضافة ردود على اقتراحات الاستبدال؟** بالتأكيد، عبر نموذج `Reply`.
+- **هل من الممكن إضافة ردود على اقتراحات الاستبدال؟** بالتأكيد، عبر نموذج `Reply`.
 
 ## لماذا تحتاج إلى استبدال نص PDF في تطبيقات Java الخاصة بك
-
-لنكن صادقين—التعامل مع تعديل ملفات PDF في Java كان كالكابوس. إما تحتاج إلى أدوات مملوكة مكلفة أو تقضي أسابيع في بناء حلول مخصصة بالكاد تعمل. هنا يأتي دور **GroupDocs.Annotation for Java**، وثق بي، إنه مغير للعبة.
-
-سواءً كنت تبني نظام إدارة مستندات، أو تنشئ منصة مراجعة تعاونية، أو تحتاج فقط إلى تحديث محتوى PDF برمجياً، سيوضح لك هذا الدرس كيفية تنفيذ وظيفة استبدال نص قوية. نتحدث عن كود حقيقي جاهز للإنتاج يعمل فعلياً.
-
-**ما ستتمكن من إتقانه بنهاية هذا الدرس:**
-- إعداد GroupDocs.Annotation في مشروع Java الخاص بك (بالطريقة الصحيحة)  
-- إنشاء تعليقات استبدال نص تبدو احترافية  
-- إضافة ميزات تعاونية مع الردود والتعليقات  
-- التعامل مع المشكلات الشائعة التي تعيق معظم المطورين  
-- تحسين الأداء لتطبيقات ذات نطاق واسع  
-
-مستعد؟ هيا نغوص ونبني شيئًا رائعًا.
+حمّل ملف PDF المستهدف، وضع اقتراح استبدال، ودع المراجعين يقبلون أو يرفضون ذلك—هذا التدفق الكامل يعمل في أقل من ثانية لعقود مكوّنة من 10 صفحات عادةً. تقوم GroupDocs.Annotation بمعالجة **أكثر من 50 تنسيقًا للمدخلات والمخرجات** ويمكنها التعامل مع **ملفات PDF مئات الصفحات** دون تحميل الملف بالكامل إلى الذاكرة، مما يجعلها مثالية لأنابيب المستندات على مستوى المؤسسات.
 
 ## ما هو استبدال نص PDF؟
-
-استبدال نص PDF هو نوع من التعليقات التوضيحية التي تضع التغييرات المقترحة فوق المستند دون تعديل المستند الأصلي فورًا. فكر فيه كـ “تتبع التغييرات” لملفات PDF—مثالي لدورات المراجعة، تتبع الامتثال، والتحرير التعاوني.
+`PDF text replacement` هو تعليق يقترح بصريًا تغييرًا مع ترك محتوى PDF الأساسي دون تعديل حتى يتم قبول الاقتراح. يعمل مثل “Track Changes” في معالجات النصوص، محافظًا على سجل تدقيق يوضح من اقترح ماذا ومتى ولماذا، وهو أمر أساسي لمراجعات الامتثال والتحرير التعاوني.
 
 ## المتطلبات المسبقة
+- JDK 8 أو أحدث (متوافق مع JDK 21)  
+- Maven أو Gradle لإدارة التبعيات  
+- GroupDocs.Annotation 25.2 (أو أحدث)  
+- إلمام أساسي بمعالجة الاستثناءات في Java وإدخال/إخراج الملفات  
 
-- **Java Development Kit (JDK) 8 أو أعلى** – يعمل مع الإصدارات الأحدث أيضًا  
-- **Maven** (أو Gradle) لإدارة التبعيات  
-- **مكتبة GroupDocs.Annotation** – سنستخدم الإصدار 25.2 في الأمثلة  
-- معرفة أساسية بـ Java (الفئات، الطرق، معالجة الاستثناءات)  
+*اختياري لكن مفيد:* بيئة تطوير متكاملة مثل IntelliJ IDEA وعينة PDF للاختبار.
 
-*مفيد أن يكون لديك:* بيئة تطوير (IntelliJ IDEA أو Eclipse) وعينة PDF للاختبار.
+## الحصول على GroupDocs.Annotation في مشروعك
 
-## إضافة GroupDocs.Annotation إلى مشروعك
+### إعداد Maven (النهج الأكثر شيوعًا)
 
-### إعداد Maven (الطريقة الأكثر شيوعًا)
-
-إذا كنت تستخدم Maven (وبصراحة، معظم مطوري Java يستخدمونه)، أضف هذا إلى ملف `pom.xml`. لقد رأيت مطورين يخطئون بنسيان تكوين المستودع، لذا تأكد من تضمين الجزأين:
+أضف المستودع والاعتماد إلى ملف `pom.xml` الخاص بك. نسيان كتلة المستودع هو سبب شائع لأخطاء “artifact not found”، لذا انسخ المقتطف بالضبط كما هو موضح.
 
 ```xml
 <repositories>
@@ -84,32 +124,29 @@ weight: 1
 </dependencies>
 ```
 
-### التعامل مع وضع الترخيص
+### التعامل مع حالة الترخيص
 
-هذا هو الوضع مع ترخيص GroupDocs (يُسبب إرباكًا للكثيرين):
+تقدم GroupDocs ثلاث مستويات ترخيص:
 
-1. **ابدأ بالنسخة التجريبية المجانية** – مثالية للاختبار والمشاريع الصغيرة. حمّل من [GroupDocs releases](https://releases.groupdocs.com/annotation/java/)
-2. **احصل على ترخيص مؤقت** – تحتاج وقتًا أطول للتقييم؟ احصل على واحد من [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license/)
-3. **التحول إلى الترخيص التجاري** – لتطبيقات الإنتاج، ستحتاج إلى ترخيص كامل من [GroupDocs website](https://purchase.groupdocs.com/buy)
+1. **Free trial** – تحميل من صفحة [GroupDocs releases](https://releases.groupdocs.com/annotation/java/) . تظهر العلامات المائية على كل ملف ناتج.  
+2. **Temporary license** – مفيد للتقييم الموسع؛ احصل على واحد عبر بوابة [GroupDocs Purchase](https://purchase.groupdocs.com/temporary-license/).  
+3. **Full commercial license** – يزيل العلامات المائية ويفتح إمكانية النشر غير المحدودة. اشترِ من [GroupDocs website](https://purchase.groupdocs.com/buy).
 
-**نصيحة احترافية:** النسخة التجريبية تضيف علامات مائية إلى الناتج. خطط وفقًا لذلك إذا كنت تعرضها على العملاء!
+**نصيحة احترافية:** حمّل ملف الترخيص مرة واحدة عند بدء تشغيل التطبيق لتجنب عبء الإدخال/الإخراج المتكرر.
 
-## بناء ميزة استبدال النص الأولى الخاصة بك
+## بناء ميزتك الأولى لاستبدال النص
 
 ### فهم تعليقات استبدال النص
 
-فكر في تعليقات استبدال النص كـ “وضع الاقتراح” الرقمي – مثل تتبع التغييرات في Microsoft Word، لكن لملفات PDF. أنت لا تعدل النص الأصلي فعليًا؛ بل تضع اقتراحات استبدال يمكن قبولها أو رفضها لاحقًا. هذا النهج مثالي لـ:
-- سير عمل مراجعة المستندات  
-- سيناريوهات التحرير التعاوني  
-- تتبع الامتثال (معرفة من غير ماذا ومتى)
+`TextReplacementAnnotation` هي الفئة الأساسية في GroupDocs.Annotation لاقتراح التعديلات. تخزن موقع النص الأصلي، وسلسلة الاستبدال، ومعلومات تنسيق اختيارية. لأن ملف PDF الأصلي يبقى دون تعديل، يمكنك دائمًا الرجوع أو تدقيق التغييرات لاحقًا.
 
 ### تنفيذ خطوة بخطوة
 
-سنستعرض كل خطوة، نشرح سبب أهميتها، ونولي اهتمامًا لممارسات **java pdf memory management** المثلى.
+سنستعرض كل مرحلة، نوضح أهميتها، ونضمّن أفضل ممارسات **java pdf memory management**.
 
 #### الخطوة 1: إعداد الأساس
 
-أولاً، سنقوم بتهيئة الـ annotator وتحديد مكان إخراجنا. لاحظ كيف نستخدم إدارة موارد صحيحة—هذا يمنع تسرب الذاكرة الذي قد يقتل أداء تطبيقك:
+أولاً، أنشئ كائن `Annotator` يشير إلى ملف PDF المصدر ويحدد موقع الإخراج. استخدام المسارات المطلقة يمنع أخطاء “file not found” عندما يُشغل الكود على خادم.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -121,11 +158,11 @@ public class AddTextReplacementAnnotationFeature {
         final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**ملاحظة من الواقع:** استخدم دائمًا المسارات المطلقة في الإنتاج. المسارات النسبية قد تسبب مشاكل عند النشر في بيئات مختلفة.
+**مرساة التعريف:** فئة `Annotator` هي نقطة الدخول لجميع عمليات التعليق في GroupDocs.Annotation، وتدير تحميل PDF وتعديله وحفظه.
 
 #### الخطوة 2: إنشاء ميزات تعاونية مع الردود
 
-هنا تصبح الأمور مثيرة. يمكنك إضافة ردود على تعليقاتك، مما يجعلها مثالية للتعاون الجماعي. فكر فيها كإضافة تعليقات متسلسلة إلى تعديلات PDF الخاصة بك:
+تتيح الردود للمراجعين مناقشة اقتراح مباشرة على PDF. كل رد يسجل المؤلف، والطابع الزمني، ونص التعليق، مما يبني سلسلة مناقشة كاملة.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -146,11 +183,11 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**لماذا هذا مهم:** في بيئات الشركات، غالبًا ما تحتاج إلى سجلات تدقيق. هذه الردود توفر ذلك بالضبط—سجل كامل لمن اقترح أي تغييرات ومتى.
+**مرساة التعريف:** نموذج `Reply` يمثل تعليقًا واحدًا مرتبطًا بتعليق، مما يتيح مناقشات متسلسلة وسجلات تدقيق.
 
 #### الخطوة 3: تحديد المنطقة المستهدفة
 
-هنا تكمن الدقة. أنت تحدد بالضبط أين سيظهر استبدال النص في PDF. نظام الإحداثيات قد يكون صعبًا في البداية، لكن بمجرد فهمه يصبح بسيطًا:
+يتطلب وضع التعليق بدقة تحديد رقم الصفحة وإحداثيات المستطيل. تذكر أن إحداثيات PDF تبدأ من الزاوية **السفلية‑اليسرى**.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -169,11 +206,11 @@ points.add(point3);
 points.add(point4);
 ```
 
-**ملاحظة حول نظام الإحداثيات:** إحداثيات PDF تبدأ من الزاوية السفلية اليسرى، وليس العلوية اليسرى كما في معظم أنظمة الرسوم. هذا يفاجئ الكثير من المطورين.
+**مرساة التعريف:** المستطيل (`Rectangle`) يحدد الحدود البصرية للتعليق على الصفحة، باستخدام نظام إحداثيات PDF.
 
 #### الخطوة 4: إنشاء السحر – تعليق الاستبدال
 
-الآن للحدث الرئيسي. هنا نخلق تعليق استبدال النص الفعلي مع جميع الميزات:
+الآن أنشئ كائن `TextReplacementAnnotation`، عيّن نص الاستبدال، قم بتنسيقه، وأرفق أي ردود أنشأتها سابقًا.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.ReplacementAnnotation;
@@ -196,107 +233,93 @@ annotator.save(outputPath);
 annotator.dispose(); // Critical for memory management!
 ```
 
-**نصيحة أداء:** دائمًا استدعِ `dispose()` على كائنات `Annotator`. تحتفظ GroupDocs بمراجع للـ PDF في الذاكرة، ونسيان الاستدعاء قد يسبب تسرب الذاكرة في التطبيقات طويلة الأمد.
+**مرساة التعريف:** `TextReplacementAnnotation` يضع فوق PDF اقتراح تغيير نص دون تعديل المحتوى الأساسي حتى تقبل التغيير.
+
+**نصيحة أداء:** استدعِ `annotator.dispose()` بعد الانتهاء من معالجة كل مستند. عدم القيام بذلك يبقي ملف PDF مقفولًا في الذاكرة وقد يسبب `OutOfMemoryError` في الخدمات طويلة التشغيل.
 
 ## المشكلات الشائعة وكيفية حلها
 
-دعني أوفر لك وقتًا في تصحيح الأخطاء من خلال تغطية المشكلات التي أراها غالبًا:
-
 ### مشكلات مسار الملف
+**Problem:** “File not found” رغم وجود الملف.  
+**Solution:** حل المسار باستخدام `Path.toAbsolutePath()` وتجنب خلط الشرطات المائلة الأمامية والخلفية على Windows.
 
-**المشكلة:** أخطاء “الملف غير موجود” حتى عندما يكون الملف موجودًا.  
-
-**الحل:** استخدم `File.getAbsolutePath()` أو `Path.toAbsolutePath()` لضمان العمل بمسارات كاملة. أيضًا، احذر من الفواصل المائلة للأمام مقابل الخلف على نظام Windows.
-
-### مشاكل الذاكرة مع ملفات PDF الكبيرة
-
-**المشكلة:** `OutOfMemoryError` عند معالجة مستندات كبيرة.  
-
-**الحل:** عالج المستندات على دفعات وتخلص دائمًا من كائنات `Annotator`. فكر في زيادة حجم الذاكرة باستخدام معامل `-Xmx` في JVM للملفات الضخمة جدًا.
+### مشكلات الذاكرة مع ملفات PDF الكبيرة
+**Problem:** `OutOfMemoryError` عند معالجة عقود مكوّنة من 200 صفحة.  
+**Solution:** عالج المستندات على دفعات، زد حجم ذاكرة JVM (`-Xmx4g`)، وتأكد دائمًا من التخلص من كائنات `Annotator`.
 
 ### مشكلات تموضع التعليقات
+**Problem:** التعليقات تظهر مُزاحة أو خارج الصفحة.  
+**Solution:** استخدم عارض PDF يعرض الإحداثيات، أو اكتب أداة صغيرة تطبع حجم الصفحة وقيم المستطيل للتحقق.
 
-**المشكلة:** تظهر التعليقات في الموقع الخطأ.  
-
-**الحل:** تذكر أن إحداثيات PDF تبدأ من الزاوية السفلية اليسرى. استخدم عارض PDF يُظهر الإحداثيات للمساعدة في التموضع، أو أنشئ أداة اختبار صغيرة للتحقق من الإحداثيات.
-
-### مشاكل الترخيص
-
-**المشكلة:** علامات مائية غير متوقعة أو استثناءات ترخيص.  
-
-**الحل:** تأكد من وجود ملف الترخيص في classpath وتحميله بشكل صحيح قبل إنشاء كائنات `Annotator`. النسخة التجريبية لها قيود—خطط وفقًا لذلك.
+### مشكلات الترخيص
+**Problem:** علامات مائية غير متوقعة أو `LicenseException`.  
+**Solution:** تأكد من وجود ملف الترخيص على classpath وتحميله قبل إنشاء أي `Annotator`. تذكر أن نسخة التجربة تقيدك بـ 5 صفحات لكل مستند.
 
 ## تطبيقات واقعية ذات أهمية فعلية
 
-هنا يصبح الأمر مثيرًا. رأيت مطورين يستخدمون ميزات استبدال النص بطرق إبداعية حقًا:
-
 ### خطوط مراجعة المستندات
+يمكن للفرق القانونية اقتراح تغييرات على البنود، ويسجل النظام من قام بكل اقتراح ومتى، مما يلبي تدقيقات الامتثال.
 
-بناء أنظمة مراجعة تلقائية حيث يمكن للفرق القانونية اقتراح تغييرات على العقود، ويتتبع النظام كل تعديل مع طوابع زمنية وإسناد المستخدم. تصبح ميزة الرد سجل التدقيق الخاص بك.
-
-### دمج إدارة المحتوى
-
-دمج مع نظام إدارة المحتوى لتحديث ملفات PDF تلقائيًا عندما تتغير البيانات الأساسية. على سبيل المثال، تحديث قوائم الأسعار أو مواصفات المنتجات عبر مئات كتالوجات PDF.
+### تكامل إدارة المحتوى
+عند تغيير مواصفات المنتج، يتم تشغيل مهمة تلقائيًا لتحديث ملفات PDF لقوائم الأسعار عبر كتالوجك، ثم إشعار الأنظمة التابعة.
 
 ### منصات التحرير التعاوني
+أنشئ واجهة شبيهة بـ Google Docs للـ PDF حيث يمكن لعدة مستخدمين اقتراح تعديلات في وقت واحد؛ تصبح ميزة الرد سلسلة المحادثة.
 
-إنشاء تعاون على نمط Google Docs لملفات PDF. يمكن لعدة مستخدمين اقتراح تغييرات في وقت واحد، ويمكنك دمج اقتراحاتهم بذكاء.
-
-### التحديثات المتعلقة بالامتثال والتنظيم
-
-تحديد تلقائي واقتراح استبدالات للغة تنظيمية قديمة عبر مكتبة المستندات الخاصة بك. أمر أساسي للمالية، الرعاية الصحية، وغيرها من الصناعات المنظمة.
+### الامتثال وتحديثات التنظيم
+امسح مستودعك للبحث عن لغة تنظيمية قديمة، أنشئ اقتراحات استبدال، ودع مسؤولي الامتثال يوافقون عليها جماعيًا.
 
 ## استراتيجيات تحسين الأداء
 
-إذا كنت تخطط لاستخدام هذا في الإنتاج (وأتمنى ذلك)، إليك بعض نصائح الأداء المكتسبة بصعوبة:
-
-### ممارسات إدارة الذاكرة المثلى
-- دائمًا تخلص من كائنات `Annotator`  
-- عالج دفعات كبيرة من المستندات في خيوط منفصلة مع مجموعات الذاكرة الخاصة بها  
-- راقب استخدام الذاكرة في التطبيق واضبط الإعدادات وفقًا لذلك  
+### أفضل ممارسات إدارة الذاكرة
+- تخلص من `Annotator` بعد كل ملف.  
+- استخدم واجهات برمجة تطبيقات البث لقراءة/كتابة ملفات PDF الكبيرة.  
+- راقب استخدام الذاكرة باستخدام JMX أو VisualVM.
 
 ### التحجيم للكمية الكبيرة
-- تنفيذ تجميع الاتصالات إذا كنت تخزن ملفات PDF في قواعد البيانات  
-- استخدم المعالجة غير المتزامنة للعمليات غير الحاجزة  
-- فكر في تخزين مؤقت للمستندات التي يتم الوصول إليها بشكل متكرر  
+- عالج الملفات بشكل متوازي باستخدام خدمة تنفيذ مع مجموعة خيوط محدودة.  
+- خزن ملفات PDF في نظام ملفات موزع (مثل AWS S3) وبثها مباشرة إلى `Annotator`.  
+- خزن المستندات التي يتم الوصول إليها كثيرًا في ملف ذاكرة مقروء فقط لتقليل زمن الاستجابة للـ I/O.
 
-### المراقبة وتصحيح الأخطاء
-- سجل أوقات المعالجة لتتبع الأداء  
-- نفذ معالجة أخطاء مناسبة مع رسائل خطأ ذات معنى  
-- إعداد مراقبة لأنماط استخدام الذاكرة  
+### المراقبة وإزالة الأخطاء
+- سجّل الوقت المستغرق لكل مرحلة (`load`، `annotate`، `save`).  
+- التقط الاستثناءات مع تتبع المكدس وضمّن اسم PDF لتسهيل استكشاف الأخطاء.  
+- أنشئ تنبيهات لارتفاع الذاكرة الذي يتجاوز 80 % من الذاكرة المخصصة.
 
 ## الأسئلة المتكررة
 
 **س: هل يمكنني استبدال النص في ملفات PDF الممسوحة ضوئيًا؟**  
-ج: ليس مباشرةً – ملفات PDF الممسوحة تحتوي على صور، لا نص. تحتاج إلى إجراء OCR على المستند أولاً، ثم تطبيق استبدال النص على نتائج OCR.
+ج: ليس مباشرةً—ملفات PDF الممسوحة تحتوي على صور، ليست نصًا قابلًا للبحث. قم بتشغيل OCR أولاً، ثم طبّق استبدال النص على الطبقة التي تم إنشاؤها بواسطة OCR.
 
 **س: كيف أتعامل مع الأحرف الخاصة أو النص Unicode؟**  
-ج: تتعامل GroupDocs.Annotation مع Unicode بشكل صحيح افتراضيًا. فقط تأكد من أن ملفات المصدر مشفرة بشكل صحيح وأن نص الاستبدال يستخدم مجموعة الأحرف المناسبة.
+ج: يدعم GroupDocs.Annotation Unicode بالكامل. تأكد من أن ملفات المصدر مشفرة بـ UTF‑8 ومرّر سلاسل الاستبدال ككائنات Java `String`.
 
-**س: هل هناك حد لكمية النص التي يمكن استبدالها في مرة واحدة؟**  
-ج: لا يوجد حد صريح من GroupDocs، لكن الأداء يتدهور مع الاستبدالات الكبيرة جدًا. قسم العمليات الكبيرة إلى أجزاء أصغر عندما يكون ذلك ممكنًا.
+**س: هل هناك حد لكمية النص التي يمكن استبدالها مرة واحدة؟**  
+ج: لا حد صريح، لكن الأداء يتدهور مع الاستبدالات الكبيرة جدًا. قسّم التحديثات الضخمة إلى دفعات أصغر لمعالجة أكثر سلاسة.
 
 **س: هل يمكنني قبول أو رفض اقتراحات الاستبدال برمجيًا؟**  
-ج: نعم! قم بالتكرار عبر التعليقات وإما إزالتها (رفض) أو تطبيقها بشكل دائم على المستند (قبول).
+ج: نعم—تجول عبر التعليقات، استدعِ `accept()` لتطبيق التغيير بشكل دائم، أو `remove()` لإلغائه.
 
 **س: ماذا يحدث إذا حاولت استبدال نص غير موجود؟**  
-ج: ستظل التعليق يُنشأ، لكنه لن يكون له أي تأثير بصري. تأكد دائمًا من وجود النص المستهدف قبل إنشاء الاستبدالات.
+ج: يظل التعليق مُنشأً لكنه غير مرئي لأنه لا يوجد نص مطابق. تحقق من صحة السلسلة المستهدفة قبل إنشاء التعليق لتجنب الفشل الصامت.
 
 **س: كيف أتعامل مع الوصول المتزامن إلى نفس ملف PDF؟**  
-ج: لا تكون GroupDocs.Annotation آمنة للخطوط المتعددة لنفس المستند. استخدم قفل الملفات أو نسق الوصول عبر منطق التطبيق الخاص بك.
+ج: `Annotator` غير آمن للمتعدد الخيوط على مستند واحد. استخدم أقفال الملفات أو آلية طابور لتسلسل الوصول.
 
 **س: هل يمكنني تخصيص مظهر تعليقات الاستبدال؟**  
-ج: بالتأكيد! يمكنك تعديل الألوان، الخطوط، الشفافية، وغيرها من الخصائص البصرية. المثال يوضح بعض الخيارات المتاحة فقط.
+ج: بالتأكيد. يمكنك ضبط حجم الخط، اللون، الشفافية، ونمط الحدود عبر خصائص نمط التعليق.
 
 **س: هل يعمل هذا مع ملفات PDF المحمية بكلمة مرور؟**  
-ج: نعم، لكن ستحتاج إلى توفير كلمة المرور عند تهيئة `Annotator`. راجع وثائق GroupDocs للحصول على الصياغة الدقيقة.
+ج: نعم—قدّم كلمة المرور عند تهيئة `Annotator`. سيقوم الـ API بفك تشفير المستند في الذاكرة قبل تطبيق التعليقات.
 
-## الخلاصة
+---
 
-أصبحت الآن تمتلك طريقة قوية وجاهزة للإنتاج **how to replace pdf** النص باستخدام GroupDocs.Annotation في Java. من إعداد المكتبة والتعامل مع الترخيص، إلى إنشاء تعليقات استبدال تعاونية وتحسين استخدام الذاكرة، لقد غطيت دورة الحياة بالكامل.
-
-الخطوات التالية؟ استكشف أنواع تعليقات أخرى (تظليل، طوابع، توقيعات)، أنشئ واجهة ويب للمستخدمين غير التقنيين، أو دمج ذلك في سير عمل توقيع المستندات. الاحتمالات لا حصر لها، والأساس الذي بنيته هنا سيساعدك عندما تواجه تحديات معالجة مستندات أكثر تقدمًا.
-
-**آخر تحديث:** 2026-03-19  
+**آخر تحديث:** 2026-09-30  
 **تم الاختبار مع:** GroupDocs.Annotation 25.2  
 **المؤلف:** GroupDocs
+
+## دروس ذات صلة
+
+- [دورة Groupdocs Annotation Java Text Redaction Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/)
+- [تحرير تعليقات PDF Java - دورة GroupDocs كاملة](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [إضافة تعليقات نصية بحثية PDF Groupdocs Java](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)

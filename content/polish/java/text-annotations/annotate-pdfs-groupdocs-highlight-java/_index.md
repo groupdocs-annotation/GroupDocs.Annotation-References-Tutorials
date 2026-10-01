@@ -1,84 +1,147 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-17'
-description: Dowiedz się, jak tworzyć podświetlenia PDF w Javie przy użyciu GroupDocs.
-  Ten krok po kroku poradnik pokazuje, jak podświetlać PDF w Javie, dodawać komentarze
-  i optymalizować wydajność.
-keywords: Java PDF annotation tutorial, PDF highlighting Java, GroupDocs Java tutorial,
-  annotate PDF programmatically Java, how to highlight text in PDF using Java
-lastmod: '2026-03-17'
-linktitle: Java PDF Annotation Tutorial
+date: '2026-09-30'
+description: Dowiedz się, jak tworzyć PDF highlights w Java przy użyciu GroupDocs.
+  Ten krok‑po‑kroku tutorial pokazuje, jak highlight PDF w Java, dodać comments i
+  optimise performance.
+keywords:
+- create pdf highlights java
+- highlight text pdf java
+- groupdocs annotation java
+- pdf annotation java tutorial
+lastmod: '2026-09-30'
+linktitle: Java PDF annotation tutorial
+og_description: Twórz PDF highlights w Java przy użyciu GroupDocs.Annotation. Postępuj
+  zgodnie z tym krok‑po‑kroku tutorialem, aby dodać highlights, comments i optimise
+  performance w Java.
+og_image_alt: Developer guide illustrating PDF highlight creation using GroupDocs.Annotation
+  for Java
+og_title: Tworzenie PDF highlights w Java – kompletny przewodnik dla programistów
+  Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-30'
+  description: Learn how to create PDF highlights java using GroupDocs. This step‑by‑step
+    tutorial shows how to highlight PDF in Java, add comments, and optimise performance.
+  headline: 'How to create PDF highlights java: complete guide for highlighting PDFs'
+  type: TechArticle
+- description: Learn how to create PDF highlights java using GroupDocs. This step‑by‑step
+    tutorial shows how to highlight PDF in Java, add comments, and optimise performance.
+  name: 'How to create PDF highlights java: complete guide for highlighting PDFs'
+  steps:
+  - name: Initialize your annotator object
+    text: '`Annotator` is the core class in GroupDocs.Annotation that loads a PDF
+      and provides methods to add, edit, and save annotations. **What''s happening
+      here?** - The `Annotator` constructor loads your PDF into memory. - We set an
+      output path where the annotated PDF will be saved. - The input PDF remains '
+  - name: Create interactive replies and comments
+    text: '`Reply` and `Comment` objects enable threaded conversations on a highlight,
+      turning a static annotation into a collaborative discussion. Reply represents
+      a single comment in a thread, while Comment groups replies under a specific
+      annotation. **Why this matters**: In real applications you often need '
+  - name: Define precise highlight coordinates
+    text: '`HighlightAnnotation` is the class that represents a highlight region on
+      a PDF page. HighlightAnnotation defines a rectangular highlight region on a
+      PDF page, specified by a set of points. **Understanding PDF coordinates**: -
+      Origin (0,0) is at the bottom‑left of the page. - X increases to the right'
+  - name: Configure your highlight annotation
+    text: '`HighlightAnnotation` lets you customise colour, opacity, font colour,
+      and page number. **Customization options explained**: - `setBackgroundColor(65535)`:
+      Yellow highlight (RGB integer). - `setOpacity(0.5)`: 50 % transparency keeps
+      the underlying text readable. - `setFontColor(0)`: Black text ensur'
+  - name: Save your annotated PDF
+    text: '`dispose()` releases native resources and finalizes the PDF file. `dispose()`
+      releases native resources and finalizes the PDF file. **Resource management**:
+      The `dispose()` call is crucial—it frees up memory and guarantees all changes
+      are persisted. Always wrap the annotator in a try‑with‑resources '
+  type: HowTo
+- questions:
+  - answer: Absolutely. It integrates with Spring Boot, Servlets, and other Java web
+      frameworks. Expose a REST endpoint that accepts a PDF, applies highlights, and
+      returns the annotated file.
+    question: Can I use GroupDocs.Annotation in web applications?
+  - answer: The library supports Unicode, so you can add comments and messages in
+      any language. Just ensure your Java application uses UTF‑8 encoding.
+    question: How do I handle annotations in different languages?
+  - answer: Performance scales with the number of annotations, but PDF size has a
+      larger impact. For documents with hundreds of highlights, consider lazy loading
+      or pagination to keep memory usage low.
+    question: What's the performance impact of adding many annotations?
+  - answer: Yes. Load a PDF with existing annotations, update properties such as colour
+      or position, and save the updated version. This is ideal for building annotation‑management
+      tools.
+    question: Can I modify existing annotations programmatically?
+  - answer: GroupDocs.Annotation provides enumeration methods to read metadata (author,
+      creation date, comment text, etc.). Export this data to CSV, JSON, or feed it
+      into analytics pipelines.
+    question: How do I extract annotation data for reporting?
+  type: FAQPage
 tags:
-- pdf-annotation
+- pdf annotation
 - groupdocs
-- java-library
-- document-processing
-title: 'Tworzenie podświetleń PDF w Javie: Kompletny przewodnik po podświetlaniu plików
-  PDF'
+- java library
+- document processing
+- create pdf highlights java
+title: Jak tworzyć PDF highlights w Java – kompletny przewodnik po podświetlaniu PDF
 type: docs
 url: /pl/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-# Tworzenie podświetleń PDF w Javie: Kompletny przewodnik po podświetlaniu PDF
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-## Introduction
+# Tworzenie podświetleń PDF w Javie: kompletny przewodnik po podświetlaniu PDF
 
-Czy kiedykolwiek miałeś problem z zarządzaniem opiniami w wielu wersjach dokumentów? Nie jesteś sam. Niezależnie od tego, czy budujesz system zarządzania dokumentami, tworzysz platformę edukacyjną, czy rozwijasz narzędzia współpracy, **create pdf highlights java** może być zaskakująco trudny do wdrożenia od podstaw.
+## Wprowadzenie
 
-Właśnie tutaj z pomocą przychodzi **GroupDocs.Annotation for Java**. Ta potężna biblioteka przekształca skomplikowane zadania anotacji PDF w proste operacje, pozwalając dodawać podświetlenia, komentarze i odpowiedzi bez walki z niskopoziomową manipulacją PDF.
+Czy kiedykolwiek miałeś trudności z zarządzaniem uwagami w wielu wersjach dokumentów? Nie jesteś sam. Niezależnie od tego, czy tworzysz system zarządzania dokumentami, platformę edukacyjną, czy narzędzia współpracy, **create pdf highlights java** może być zaskakująco trudny do wdrożenia od podstaw.
 
-W tym obszernej tutorialu dowiesz się, jak **highlight pdf in java** przy użyciu przykładów z rzeczywistości. Przejdziemy przez wszystko, od podstawowej konfiguracji po zaawansowane techniki podświetlania, a także podzielę się praktycznymi wskazówkami, które zdobyłem wdrażając to w środowiskach produkcyjnych.
+Właśnie tutaj **GroupDocs.Annotation for Java** przychodzi z pomocą. Ta potężna biblioteka przekształca skomplikowane zadania anotacji PDF w proste operacje, pozwalając dodawać podświetlenia, komentarze i odpowiedzi bez walki z niskopoziomową manipulacją PDF.
 
-Oto dokładnie to, czego się nauczysz:
-- Konfigurowanie GroupDocs.Annotation w projekcie Java (właściwy sposób)
-- Tworzenie interaktywnych podświetleń PDF z niestandardowym stylem
-- Dodawanie wątkowanych odpowiedzi i komentarzy do współpracy
-- Radzenie sobie z typowymi pułapkami i optymalizacja wydajności
-- Strategie wdrożenia w rzeczywistych projektach
+W tym obszernej poradniku dowiesz się, jak **highlight pdf in java** przy użyciu przykładów z rzeczywistego świata. Przejdziemy przez wszystko, od podstawowej konfiguracji po zaawansowane techniki podświetlania, a także podzielimy się praktycznymi wskazówkami, które zdobyłem, wdrażając to w środowiskach produkcyjnych.
 
-Gotowy, aby przekształcić swoje PDF‑y w interaktywne, współpracujące dokumenty? Zanurzmy się!
+Oto dokładnie to, co opanujesz:
 
-## Quick Answers
-- **Jaka biblioteka upraszcza podświetlanie PDF w Javie?** GroupDocs.Annotation for Java  
-- **Które zależności Maven dodają tę bibliotekę?** `com.groupdocs:groupdocs-annotation:25.2`  
-- **Czy potrzebna jest licencja do rozwoju?** Darmowa tymczasowa licencja działa w testach; licencja płatna jest wymagana w produkcji.  
+- Konfiguracja GroupDocs.Annotation w projekcie Java (właściwy sposób)  
+- Tworzenie interaktywnych podświetleń PDF z niestandardowym stylowaniem  
+- Dodawanie wątkowanych odpowiedzi i komentarzy dla współpracy  
+- Radzenie sobie z typowymi pułapkami i optymalizacją wydajności  
+- Strategie wdrożeniowe w rzeczywistych projektach  
+
+Gotowy, aby przekształcić swoje PDF-y w interaktywne, współpracujące dokumenty? Zanurzmy się!
+
+## Szybkie odpowiedzi
+- **Jaka biblioteka upraszcza podświetlenia PDF w Javie?** GroupDocs.Annotation for Java.  
+- **Które zależności Maven dodają bibliotekę?** `com.groupdocs:groupdocs-annotation:25.2`.  
+- **Czy potrzebna jest licencja do rozwoju?** Darmowa tymczasowa licencja działa w testach; płatna licencja jest wymagana w produkcji.  
 - **Czy mogę dodać komentarze do podświetleń?** Tak, możesz dołączać odpowiedzi i wątkowane komentarze.  
-- **Jak zarządzać pamięcią przy dużych PDF‑ach?** Używaj try‑with‑resources i wywołuj `dispose()` po zapisaniu.
+- **Jak zarządzać pamięcią przy dużych PDF-ach?** Używaj try‑with‑resources i wywołaj `dispose()` po zapisaniu.
+
+## Jak stworzyć podświetlenia PDF w Javie?
+
+Załaduj docelowy PDF za pomocą `new Annotator(inputPath)` i wywołaj `addAnnotation(highlight)`, a następnie `save(outputPath)`. Annotator jest podstawową klasą, która ładuje dokument PDF i udostępnia metody do dodawania, edytowania i zapisywania anotacji. Ten dwustopniowy proces tworzy podświetlony PDF w kilka sekund, automatycznie obsługuje konwersję współrzędnych i zwalnia zasoby po wywołaniu `dispose()`. Nie jest wymagana ręczna analiza PDF.
+
+## Co to jest create pdf highlights java?
+
+`create pdf highlights java` odnosi się do programowego dodawania anotacji podświetlenia do plików PDF przy użyciu kodu Java, zazwyczaj za pośrednictwem dedykowanej biblioteki takiej jak GroupDocs.Annotation. Proces ten umożliwia automatyczną recenzję, współpracę i wizualne wyróżnienie bez ręcznej edycji.
 
 ## Dlaczego wybrać GroupDocs.Annotation do przetwarzania PDF w Javie?
 
-Zanim przejdziemy do kodu, porozmawiajmy o tym, dlaczego GroupDocs.Annotation wyróżnia się w zatłoczonym polu bibliotek PDF dla Javy. 
-
-**Problem z własnoręcznym tworzeniem anotacji PDF**: Budowanie anotacji PDF od podstaw oznacza radzenie sobie ze złożonymi specyfikacjami PDF, systemami współrzędnych i silnikami renderującymi. Widziałem programistów spędzających tygodnie, aby podstawowe podświetlenie działało konsekwentnie w różnych typach PDF.
-
-**Rozwiązanie GroupDocs.Annotation**: Ta biblioteka ukrywa złożoność, jednocześnie dając precyzyjną kontrolę nad wyglądem i zachowaniem anotacji. To jak posiadanie starszego eksperta PDF w zespole, który już rozwiązał wszystkie przypadki brzegowe.
-
-**Kluczowe korzyści, które docenisz**:
-- Działa z różnymi typami i strukturami PDF
-- Automatycznie obsługuje obliczenia współrzędnych  
-- Obsługuje wiele typów anotacji poza podświetleniami
-- Łączy się płynnie z istniejącymi aplikacjami Java
-- Zapewnia doskonałą dokumentację i wsparcie
+GroupDocs.Annotation obsługuje **ponad 30 typów anotacji** i może przetwarzać PDF-y do **500 MB** bez ładowania całego dokumentu do pamięci. Automatycznie rozwiązuje współrzędne na poziomie stron, zachowuje istniejącą zawartość i oferuje bogate API do stylizacji, komentowania i eksportu danych anotacji.
 
 ## Wymagania wstępne i konfiguracja środowiska
 
 ### Czego będziesz potrzebować
 
-**Środowisko programistyczne**:
-- Java 8 lub wyższa (Java 11+ zalecana dla lepszej wydajności)
-- Maven lub Gradle do zarządzania zależnościami
-- Twoje ulubione IDE (IntelliJ IDEA, Eclipse lub VS Code świetnie się sprawdzają)
-
-**Wymagania wiedzy**:
-- Podstawowa programowanie w Javie (kolekcje, obiekty, I/O plików)
-- Znajomość zależności Maven
-- Zrozumienie systemów współrzędnych (przydatne, ale nie niezbędne)
+- **Środowisko programistyczne**: Java 8+ (zalecane Java 11+), Maven lub Gradle oraz IDE, takie jak IntelliJ IDEA, Eclipse lub VS Code.  
+- **Wymagania wiedzy**: Podstawowa znajomość Javy (kolekcje, obiekty, I/O plików), zarządzanie zależnościami Maven oraz ogólna wiedza o systemach współrzędnych PDF.
 
 ### Instalacja GroupDocs.Annotation dla Javy
 
-Najłatwiejszy sposób na rozpoczęcie to użycie Maven. Dodaj te konfiguracje do pliku `pom.xml`:
+Najłatwiejszy sposób to użycie Maven. Dodaj te konfiguracje do pliku `pom.xml`:
 
 ```xml
 <repositories>
@@ -97,7 +160,7 @@ Najłatwiejszy sposób na rozpoczęcie to użycie Maven. Dodaj te konfiguracje d
 </dependencies>
 ```
 
-**Wskazówka**: Zawsze używaj najnowszej stabilnej wersji. GroupDocs regularnie wydaje aktualizacje z usprawnieniami wydajności i poprawkami błędów.
+**Pro tip**: Zawsze używaj najnowszej stabilnej wersji. GroupDocs regularnie wydaje aktualizacje z poprawkami wydajności i błędów.
 
 ### Konfiguracja licencji (nie pomijaj tego!)
 
@@ -106,15 +169,15 @@ Będziesz potrzebował licencji, aby używać GroupDocs.Annotation w produkcji. 
 **Do rozwoju**: Uzyskaj darmową wersję próbną lub [tymczasową licencję](https://purchase.groupdocs.com/temporary-license/)  
 **Do produkcji**: Kup licencję na [stronie GroupDocs](https://purchase.groupdocs.com/buy)
 
-Tymczasowa licencja jest idealna do testów i rozwoju — zapewnia pełną funkcjonalność bez znaków wodnych.
+Licencja tymczasowa jest idealna do testów i rozwoju — zapewnia pełną funkcjonalność bez znaków wodnych.
 
-## Przewodnik krok po kroku po implementacji
+## Przewodnik krok po kroku
 
 Teraz najciekawsza część — zbudujmy kompletny system anotacji PDF! Przejdziemy przez każdy komponent, wyjaśniając nie tylko co robi kod, ale dlaczego robimy to w ten sposób.
 
-### Krok 1: Zainicjalizuj obiekt Annotator
+### Krok 1: Zainicjalizuj obiekt annotatora
 
-Na początek — musimy stworzyć obiekt `Annotator`, który będzie obsługiwał nasz plik PDF. Traktuj to jak otwarcie PDF w specjalistycznym edytorze rozumiejącym anotacje.
+`Annotator` jest podstawową klasą w GroupDocs.Annotation, która ładuje PDF i udostępnia metody do dodawania, edytowania i zapisywania anotacji.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -124,16 +187,16 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AnnotationOutput.pdf";
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/InputDocument.pdf");
 ```
 
-**Co się tutaj dzieje?**
-- `Annotator` konstruktor ładuje Twój PDF do pamięci.
-- Ustawiamy ścieżkę wyjściową, gdzie zostanie zapisany anotowany PDF.
-- Plik wejściowy pozostaje niezmieniony — tworzymy nową wersję z anotacjami.
+**Co się tutaj dzieje?**  
+- Konstruktor `Annotator` ładuje Twój PDF do pamięci.  
+- Ustawiamy ścieżkę wyjściową, w której zostanie zapisany oznaczony PDF.  
+- Wejściowy PDF pozostaje niezmieniony — tworzymy nową wersję z anotacjami.
 
-**Typowy problem**: Upewnij się, że ścieżki plików są poprawne i katalogi istnieją. Widziałem programistów spędzających godziny na debugowaniu, które okazały się prostymi problemami ze ścieżkami!
+**Typowy problem**: Upewnij się, że ścieżki plików są poprawne i katalogi istnieją. Wielu programistów traci czas na debugowanie prostych problemów ze ścieżkami.
 
 ### Krok 2: Utwórz interaktywne odpowiedzi i komentarze
 
-Tutaj zaczyna się ciekawie. Większość tutoriali o anotacjach PDF pomija tę część, ale odpowiedzi to to, co czyni anotacje naprawdę współpracującymi. Stwórzmy system wątkowanej konwersacji:
+`Reply` i `Comment` umożliwiają wątkowane rozmowy na podświetleniu, zamieniając statyczną anotację w współpracującą dyskusję. `Reply` reprezentuje pojedynczy komentarz w wątku, natomiast `Comment` grupuje odpowiedzi pod konkretną anotacją.
 
 ```java
 import java.util.ArrayList;
@@ -155,18 +218,18 @@ reply2.setRepliedOn(Calendar.getInstance().getTime());
 replies.add(reply2);
 ```
 
-**Dlaczego to ważne**:
-- W rzeczywistych aplikacjach często musisz śledzić, kto co powiedział i kiedy. Ten system odpowiedzi pozwala budować funkcje takie jak:
-  - Wątki komentarzy na podświetlonym tekście
-  - Procesy przeglądu z łańcuchami zatwierdzeń
-  - Ścieżki audytu zmian dokumentu
-  - Środowiska współdzielonej edycji
+**Dlaczego to ważne**: W rzeczywistych aplikacjach często trzeba śledzić, kto co powiedział i kiedy. Ten system odpowiedzi pozwala budować funkcje takie jak:
 
-**Wskazówka z praktyki**: Rozważ przechowywanie informacji o użytkownikach i znaczników czasu w bardziej solidny sposób. W produkcji możesz pobierać je z systemu uwierzytelniania lub bazy danych.
+- Wątki komentarzy na podświetlonym tekście  
+- Procesy przeglądu z łańcuchami zatwierdzeń  
+- Ścieżki audytu zmian dokumentu  
+- Środowiska współdzielonej edycji  
+
+**Wskazówka z praktyki**: Przechowuj informacje o użytkownikach i znaczniki czasu w bazie danych, zamiast polegać na wartościach domyślnych.
 
 ### Krok 3: Zdefiniuj precyzyjne współrzędne podświetlenia
 
-Tutaj dzieje się magia — informujemy bibliotekę dokładnie, gdzie umieścić podświetlenie. System współrzędnych może wydawać się trudny na początku, ale jest dość logiczny:
+`HighlightAnnotation` to klasa reprezentująca obszar podświetlenia na stronie PDF. `HighlightAnnotation` definiuje prostokątny obszar podświetlenia na stronie PDF, określony zestawem punktów.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -180,17 +243,17 @@ points.add(new Point(80, 650));   // Bottom-left corner
 points.add(new Point(240, 650));  // Bottom-right corner
 ```
 
-**Zrozumienie współrzędnych PDF**:
-- Początek (0,0) znajduje się w lewym dolnym rogu strony.
-- X rośnie w prawo, Y rośnie w górę.
-- Punkty definiują prostokątny obszar podświetlenia.
-- Cztery punkty tworzą ramkę wokół docelowego tekstu.
+**Zrozumienie współrzędnych PDF**:  
 
-**Wskazówka**: Użyj przeglądarki PDF z wyświetlaniem współrzędnych, lub zacznij od przybliżonych wartości i dostosuj je na podstawie wyników. Większość przeglądarek PDF może pokazać współrzędne kursora.
+- Punkt początkowy (0,0) znajduje się w lewym dolnym rogu strony.  
+- X rośnie w prawo, Y rośnie w górę.  
+- Cztery punkty tworzą ramkę wokół docelowego tekstu.  
+
+**Wskazówka**: Użyj przeglądarki PDF wyświetlającej współrzędne kursora, lub zacznij od przybliżonych wartości i dopasuj je na podstawie wyników wizualnych.
 
 ### Krok 4: Skonfiguruj swoją anotację podświetlenia
 
-Teraz stworzymy rzeczywistą anotację podświetlenia ze wszystkimi właściwościami wizualnymi. To miejsce, w którym możesz naprawdę dostosować doświadczenie użytkownika:
+`HighlightAnnotation` pozwala dostosować kolor, przezroczystość, kolor czcionki i numer strony.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.HighlightAnnotation;
@@ -209,68 +272,49 @@ highlight.setReplies(replies);
 annotator.add(highlight);
 ```
 
-**Wyjaśnienie opcji dostosowywania**:
-- `setBackgroundColor(65535)`: Żółte podświetlenie (kolor RGB jako liczba całkowita)
-- `setOpacity(0.5)`: 50 % przezroczystości — tekst pozostaje czytelny
-- `setFontColor(0)`: Czarny tekst dla dobrego kontrastu
-- `setPageNumber(0)`: Indeks strony (0 = pierwsza strona)
+**Wyjaśnienie opcji dostosowywania**:  
 
-**Wskazówki dotyczące wyboru koloru**:
-- Żółty (65535) jest klasyczny i nieinwazyjny.
-- Dla ważnych podświetleń, spróbuj pomarańczowego (16753920) lub czerwonego (16711680).
-- Utrzymuj przezroczystość między 0.3‑0.7 dla najlepszej czytelności.
+- `setBackgroundColor(65535)`: Żółte podświetlenie (wartość RGB jako liczba całkowita).  
+- `setOpacity(0.5)`: 50 % przezroczystość utrzymuje czytelność tekstu pod spodem.  
+- `setFontColor(0)`: Czarny tekst zapewnia dobry kontrast.  
+- `setPageNumber(0)`: Indeks strony (0 = pierwsza strona).  
 
-### Krok 5: Zapisz swój anotowany PDF
+**Wskazówki wyboru koloru**:  
 
-Na koniec, zapiszmy naszą pracę i odpowiednio posprzątajmy zasoby:
+- Żółty (65535) jest klasyczny i nieinwazyjny.  
+- Dla ważnych podświetleń wypróbuj pomarańczowy (16753920) lub czerwony (16711680).  
+- Utrzymuj przezroczystość w przedziale 0.3‑0.7 dla najlepszej czytelności.
+
+### Krok 5: Zapisz swój oznaczony PDF
+
+`dispose()` zwalnia zasoby natywne i finalizuje plik PDF. `dispose()` zwalnia zasoby natywne i finalizuje plik PDF.
 
 ```java
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Zarządzanie zasobami**:
-Wywołanie `dispose()` jest kluczowe — zwalnia pamięć i zapewnia, że wszystkie zmiany zostaną prawidłowo zapisane na dysku. Zawsze umieszczaj to w bloku try‑finally lub używaj try‑with‑resources w kodzie produkcyjnym.
+**Zarządzanie zasobami**: Wywołanie `dispose()` jest kluczowe — zwalnia pamięć i gwarantuje, że wszystkie zmiany zostaną zapisane. Zawsze otaczaj annotator blokiem try‑with‑resources lub wywołaj `dispose()` w klauzuli finally.
 
 ## Rozwiązywanie typowych problemów
 
-Pozwól, że podzielę się niektórymi problemami, które napotkałem (i rozwiązałem) pracując z anotacjami PDF w Javie:
+### Problemy ze ścieżkami plików  
+**Objaw**: `FileNotFoundException` lub „Nie można uzyskać dostępu do pliku”.  
+**Rozwiązanie**: Zweryfikuj, czy ścieżki są absolutne lub względne względem katalogu głównego projektu, sprawdź uprawnienia do plików i upewnij się, że katalogi wyjściowe istnieją przed zapisem.
 
-### Problemy ze ścieżkami plików
+### Współrzędne nie pasują do oczekiwanej lokalizacji  
+**Objaw**: Podświetlenia pojawiają się w niewłaściwych miejscach.  
+**Rozwiązanie**: Pamiętaj, że system współrzędnych PDF zaczyna się od lewego dolnego rogu. Różne generatory PDF mogą mieć niewielkie różnice; testuj na przykładowych PDF-ach i dostosowuj w razie potrzeby.
 
-**Objaw**: `FileNotFoundException` lub błędy „Cannot access file”  
-**Rozwiązanie**:
-- Sprawdź, czy ścieżki plików są absolutne lub względne względem katalogu głównego projektu.
-- Sprawdź uprawnienia plików — proces Java potrzebuje dostępu do odczytu/zapisu.
-- Upewnij się, że katalogi wyjściowe istnieją przed zapisem.
+### Problemy z pamięcią przy dużych PDF-ach  
+**Objaw**: `OutOfMemoryError` lub spowolniona wydajność.  
+**Rozwiązanie**: Zwiększ rozmiar sterty JVM (np. `-Xmx2G`), przetwarzaj PDF-y w mniejszych partiach i zawsze wywołuj `dispose()`, aby zwolnić zasoby.
 
-### Współrzędne nie pasują do oczekiwanej lokalizacji
-
-**Objaw**: Podświetlenia pojawiają się w niewłaściwych miejscach  
-**Rozwiązanie**:
-- Pamiętaj, że system współrzędnych PDF zaczyna się od lewego dolnego rogu.
-- Różne generatory PDF mogą mieć drobne różnice.
-- Testuj na przykładowych PDF‑ach i odpowiednio dostosowuj współrzędne.
-
-### Problemy z pamięcią przy dużych PDF‑ach
-
-**Objaw**: `OutOfMemoryError` lub wolna wydajność  
-**Rozwiązanie**:
-- Zwiększ rozmiar sterty JVM, np. `-Xmx2G`.
-- Przetwarzaj PDF‑y w mniejszych partiach.
-- Zawsze wywołuj `dispose()`, aby zwolnić zasoby.
-
-### Kolor nie wyświetla się poprawnie
-
-**Objaw**: Nieprawidłowe kolory podświetleń lub niewidoczne anotacje  
-**Rozwiązanie**:
-- Używaj wartości RGB jako liczb całkowitych, nie ciągów szesnastkowych.
-- Testuj wartości przezroczystości między 0.1 a 0.9.
-- Sprawdź, czy kolory tła i czcionki mają dobry kontrast.
+### Kolor nie wyświetla się poprawnie  
+**Objaw**: Nieprawidłowe kolory podświetleń lub niewidoczne anotacje.  
+**Rozwiązanie**: Używaj wartości całkowitych RGB, nie łańcuchów szesnastkowych. Testuj wartości przezroczystości między 0.1 a 0.9. Zweryfikuj, że kolory tła i czcionki mają dobry kontrast.
 
 ## Najlepsze praktyki optymalizacji wydajności
-
-Po wdrożeniu anotacji PDF w kilku systemach produkcyjnych, oto wskazówki dotyczące wydajności, które naprawdę mają znaczenie:
 
 ### Zarządzanie pamięcią
 
@@ -282,9 +326,9 @@ try (Annotator annotator = new Annotator(inputPath)) {
 } // Automatically disposes resources
 ```
 
-### Strategia przetwarzania wsadowego
+Alokuj annotator wewnątrz bloku try‑with‑resources i zwalniaj go niezwłocznie. Ten wzorzec zapobiega wyciekom pamięci przy przetwarzaniu wielu dokumentów.
 
-Dla wielu PDF‑ów przetwarzaj je kolejno, zamiast ładować wszystkie do pamięci:
+### Strategia przetwarzania wsadowego
 
 ```java
 for (String pdfPath : pdfPaths) {
@@ -297,53 +341,31 @@ for (String pdfPath : pdfPaths) {
 }
 ```
 
+Dla wielu PDF-ów przetwarzaj je kolejno, zamiast ładować wszystkie do pamięci. Takie podejście skaluje się liniowo i utrzymuje niski ślad pamięci JVM.
+
 ### Rozważania dotyczące rozmiaru pliku
 
-- Duże PDF‑y (>10 MB) zużywają więcej pamięci i czasu przetwarzania.
-- Rozważ podzielenie bardzo dużych dokumentów na sekcje.
-- Optymalizuj wejściowe PDF‑y przed anotacją, gdy to możliwe.
+- Duże PDF-y (>10 MB) zużywają więcej pamięci i czasu przetwarzania.  
+- Rozważ podzielenie bardzo dużych dokumentów na sekcje.  
+- Optymalizuj wejściowe PDF-y (kompresuj obrazy, usuń nieużywane obiekty) przed anotacją.
 
 ## Zastosowania w rzeczywistych projektach i przypadki użycia
 
-Oto gdzie anotacje PDF naprawdę błyszczą w praktycznych zastosowaniach:
+### Systemy przeglądu dokumentów  
+Idealne dla umów prawnych, specyfikacji technicznych i dokumentów zgodności. Używaj różnych kolorów podświetleń dla każdego recenzenta, egzekwuj zasady uprawnień i przechowuj metadane anotacji w bazie danych do raportowania.
 
-### Systemy przeglądu dokumentów
+### Platformy edukacyjne  
+Idealne do podświetlania podręczników, opinii o zadaniach i współpracy w nauce. Pozwól studentom zapisywać osobiste anotacje, umożliwiaj nauczycielom dodawanie oficjalnych komentarzy i kontroluj wersje dokumentów w miarę rozwoju programów nauczania.
 
-**Idealny dla**: Umów prawnych, specyfikacji technicznych, dokumentów zgodności  
-**Wdrożenie**:
-- Używaj różnych kolorów podświetleń dla różnych recenzentów.
-- Wdroż uprawnienia użytkowników do dodawania/edycji anotacji.
-- Przechowuj metadane anotacji w bazie danych do raportowania.
+### Procesy zapewnienia jakości  
+Świetne do przeglądów projektów, dokumentacji procesów i kontroli zgodności. Integruj z istniejącymi narzędziami QA, używaj statusu anotacji (otwarte/rozwiązane) do śledzenia i generuj raporty audytowe z danych anotacji.
 
-### Platformy edukacyjne
-
-**Idealny dla**: Podświetlania podręczników, feedbacku zadań, współpracy w nauce  
-**Wdrożenie**:
-- Pozwól studentom zapisywać osobiste anotacje.
-- Umożliw nauczycielom dodawanie oficjalnych komentarzy.
-- Rozważ kontrolę wersji przy aktualizacjach dokumentów.
-
-### Procesy zapewnienia jakości
-
-**Idealny dla**: Przeglądów projektów, dokumentacji procesów, sprawdzania zgodności  
-**Wdrożenie**:
-- Zintegruj z istniejącymi narzędziami QA.
-- Używaj statusu anotacji (otwarte/rozwiązane) do śledzenia.
-- Generuj raporty z danych anotacji.
-
-### Narzędzia współpracy badawczej
-
-**Idealny dla**: Prac akademickich, dokumentacji badawczej, recenzji rówieśniczej  
-**Wdrożenie**:
-- Wdroż funkcje współpracy w czasie rzeczywistym.
-- Pozwól na anonimowe recenzje w razie potrzeby.
-- Eksportuj anotacje do analizy i raportowania.
+### Narzędzia współpracy badawczej  
+Przeznaczone dla prac akademickich, dokumentacji badawczej i recenzji rówieśniczych. Implementuj współpracę w czasie rzeczywistym, obsługuj anonimowe recenzje i eksportuj anotacje do analizy.
 
 ## Zaawansowane wskazówki i najlepsze praktyki
 
 ### Metody pomocnicze obliczania współrzędnych
-
-Stwórz metody pomocnicze do typowych obliczeń współrzędnych:
 
 ```java
 public class AnnotationUtils {
@@ -359,8 +381,6 @@ public class AnnotationUtils {
 ```
 
 ### Szablony anotacji
-
-Stwórz konfigurowalne szablony anotacji:
 
 ```java
 public class AnnotationTemplates {
@@ -379,32 +399,44 @@ public class AnnotationTemplates {
 
 ## Najczęściej zadawane pytania
 
-**P: Czy mogę używać GroupDocs.Annotation w aplikacjach webowych?**  
-O: Oczywiście! Integruje się ze Spring Boot, Servlets i innymi frameworkami webowymi Javy. Możesz udostępniać endpointy REST przyjmujące pliki PDF, nakładające podświetlenia i zwracające anotowany dokument.
+**Q: Czy mogę używać GroupDocs.Annotation w aplikacjach webowych?**  
+A: Absolutnie. Integruje się ze Spring Boot, Servlets i innymi frameworkami Java webowymi. Udostępnij endpoint REST, który przyjmuje PDF, stosuje podświetlenia i zwraca oznaczony plik.
 
-**P: Jak obsługiwać anotacje w różnych językach?**  
-O: Biblioteka obsługuje Unicode, więc możesz dodawać komentarze i wiadomości w dowolnym języku. Upewnij się tylko, że Twoja aplikacja Java używa kodowania UTF‑8.
+**Q: Jak radzić sobie z anotacjami w różnych językach?**  
+A: Biblioteka obsługuje Unicode, więc możesz dodawać komentarze i wiadomości w dowolnym języku. Wystarczy, że Twoja aplikacja Java używa kodowania UTF‑8.
 
-**P: Jaki wpływ na wydajność ma dodawanie wielu anotacji?**  
-O: Wydajność skaluje się wraz z liczbą anotacji, ale rozmiar PDF ma większy wpływ. Dla dokumentów z setkami podświetleń rozważ leniwe ładowanie lub paginację, aby utrzymać niskie zużycie pamięci.
+**Q: Jaki wpływ na wydajność ma dodawanie wielu anotacji?**  
+A: Wydajność skaluje się wraz z liczbą anotacji, ale rozmiar PDF ma większy wpływ. Dla dokumentów z setkami podświetleń rozważ leniwe ładowanie lub paginację, aby utrzymać niskie zużycie pamięci.
 
-**P: Czy mogę modyfikować istniejące anotacje programowo?**  
-O: Tak. Załaduj PDF z istniejącymi anotacjami, zaktualizuj właściwości takie jak kolor czy pozycja i zapisz zaktualizowaną wersję. To idealne rozwiązanie do budowania narzędzi zarządzania anotacjami.
+**Q: Czy mogę programowo modyfikować istniejące anotacje?**  
+A: Tak. Załaduj PDF z istniejącymi anotacjami, zaktualizuj właściwości takie jak kolor czy pozycję i zapisz zaktualizowaną wersję. To idealne rozwiązanie do budowania narzędzi zarządzania anotacjami.
 
-**P: Jak wyodrębnić dane anotacji do raportowania?**  
-O: GroupDocs.Annotation udostępnia metody enumeracji do odczytu metadanych anotacji (autor, data utworzenia, tekst komentarza itp.). Możesz wyeksportować te dane do CSV, JSON lub wprowadzić je do potoków analitycznych.
+**Q: Jak wyodrębnić dane anotacji do raportowania?**  
+A: GroupDocs.Annotation udostępnia metody enumeracji do odczytu metadanych (autor, data utworzenia, tekst komentarza itp.). Eksportuj te dane do CSV, JSON lub włącz je do potoków analitycznych.
 
-## Kluczowe zasoby i dokumentacja
+## Niezbędne zasoby i dokumentacja
 
-- [GroupDocs.Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/) - Kompleksowe przewodniki i odniesienia API  
-- [API Reference](https://reference.groupdocs.com/annotation/java/) - Szczegółowa dokumentacja metod  
-- [Download Latest Version](https://releases.groupdocs.com/annotation/java/) - Zawsze używaj najnowszej stabilnej wersji  
-- [Purchase License](https://purchase.groupdocs.com/buy) - Opcje licencjonowania w produkcji  
-- [Get Temporary License](https://purchase.groupdocs.com/temporary-license/) - Idealna do rozwoju i testów  
-- [Community Support Forum](https://forum.groupdocs.com/c/annotation/) - Uzyskaj pomoc od ekspertów i innych programistów
+- [GroupDocs.Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/) – obszerne przewodniki i odniesienia API  
+- [API Reference](https://reference.groupdocs.com/annotation/java/) – szczegółowa dokumentacja metod  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/) – zawsze używaj najnowszej stabilnej wersji  
+- [Purchase License](https://purchase.groupdocs.com/buy) – opcje licencjonowania produkcyjnego  
+- [Get Temporary License](https://purchase.groupdocs.com/temporary-license/) – idealna do rozwoju i testów  
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation/) – uzyskaj pomoc od ekspertów i innych programistów  
 
 ---
 
-**Ostatnia aktualizacja:** 2026-03-17  
-**Testowano z:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs
+**Last updated:** 2026-09-30  
+**Tested with:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
+
+## Powiązane samouczki
+
+- [Edytuj anotacje PDF w Javie — kompletny samouczek GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Załaduj anotacje PDF w Javie — kompletny przewodnik zarządzania GroupDocs Annotation](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [Dodaj strzałkę PDF w Javie — kompletny samouczek GroupDocs](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

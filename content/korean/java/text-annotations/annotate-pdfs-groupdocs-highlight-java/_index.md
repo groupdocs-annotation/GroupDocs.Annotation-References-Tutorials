@@ -1,82 +1,144 @@
 ---
 categories:
 - Java Tutorials
-date: '2026-03-17'
-description: GroupDocs를 사용하여 Java에서 PDF 하이라이트를 만드는 방법을 배우세요. 이 단계별 튜토리얼은 Java에서 PDF를
-  하이라이트하고, 주석을 추가하며, 성능을 최적화하는 방법을 보여줍니다.
-keywords: Java PDF annotation tutorial, PDF highlighting Java, GroupDocs Java tutorial,
-  annotate PDF programmatically Java, how to highlight text in PDF using Java
-lastmod: '2026-03-17'
-linktitle: Java PDF Annotation Tutorial
+date: '2026-09-30'
+description: GroupDocs를 사용하여 PDF highlights java 만드는 방법을 배워보세요. 이 단계별 튜토리얼에서는 Java에서
+  PDF를 하이라이트하고, comments를 추가하며, optimise performance를 최적화하는 방법을 보여줍니다.
+keywords:
+- create pdf highlights java
+- highlight text pdf java
+- groupdocs annotation java
+- pdf annotation java tutorial
+lastmod: '2026-09-30'
+linktitle: Java PDF annotation 튜토리얼
+og_description: GroupDocs.Annotation을 사용하여 PDF highlights java를 만들세요. 이 단계별 튜토리얼을
+  따라 Java에서 highlights, comments를 추가하고 optimise performance를 수행하세요.
+og_image_alt: Developer guide illustrating PDF highlight creation using GroupDocs.Annotation
+  for Java
+og_title: PDF highlights java 만들기 – Java 개발자를 위한 완전 가이드
+schemas:
+- author: GroupDocs
+  dateModified: '2026-09-30'
+  description: Learn how to create PDF highlights java using GroupDocs. This step‑by‑step
+    tutorial shows how to highlight PDF in Java, add comments, and optimise performance.
+  headline: 'How to create PDF highlights java: complete guide for highlighting PDFs'
+  type: TechArticle
+- description: Learn how to create PDF highlights java using GroupDocs. This step‑by‑step
+    tutorial shows how to highlight PDF in Java, add comments, and optimise performance.
+  name: 'How to create PDF highlights java: complete guide for highlighting PDFs'
+  steps:
+  - name: Initialize your annotator object
+    text: '`Annotator` is the core class in GroupDocs.Annotation that loads a PDF
+      and provides methods to add, edit, and save annotations. **What''s happening
+      here?** - The `Annotator` constructor loads your PDF into memory. - We set an
+      output path where the annotated PDF will be saved. - The input PDF remains '
+  - name: Create interactive replies and comments
+    text: '`Reply` and `Comment` objects enable threaded conversations on a highlight,
+      turning a static annotation into a collaborative discussion. Reply represents
+      a single comment in a thread, while Comment groups replies under a specific
+      annotation. **Why this matters**: In real applications you often need '
+  - name: Define precise highlight coordinates
+    text: '`HighlightAnnotation` is the class that represents a highlight region on
+      a PDF page. HighlightAnnotation defines a rectangular highlight region on a
+      PDF page, specified by a set of points. **Understanding PDF coordinates**: -
+      Origin (0,0) is at the bottom‑left of the page. - X increases to the right'
+  - name: Configure your highlight annotation
+    text: '`HighlightAnnotation` lets you customise colour, opacity, font colour,
+      and page number. **Customization options explained**: - `setBackgroundColor(65535)`:
+      Yellow highlight (RGB integer). - `setOpacity(0.5)`: 50 % transparency keeps
+      the underlying text readable. - `setFontColor(0)`: Black text ensur'
+  - name: Save your annotated PDF
+    text: '`dispose()` releases native resources and finalizes the PDF file. `dispose()`
+      releases native resources and finalizes the PDF file. **Resource management**:
+      The `dispose()` call is crucial—it frees up memory and guarantees all changes
+      are persisted. Always wrap the annotator in a try‑with‑resources '
+  type: HowTo
+- questions:
+  - answer: Absolutely. It integrates with Spring Boot, Servlets, and other Java web
+      frameworks. Expose a REST endpoint that accepts a PDF, applies highlights, and
+      returns the annotated file.
+    question: Can I use GroupDocs.Annotation in web applications?
+  - answer: The library supports Unicode, so you can add comments and messages in
+      any language. Just ensure your Java application uses UTF‑8 encoding.
+    question: How do I handle annotations in different languages?
+  - answer: Performance scales with the number of annotations, but PDF size has a
+      larger impact. For documents with hundreds of highlights, consider lazy loading
+      or pagination to keep memory usage low.
+    question: What's the performance impact of adding many annotations?
+  - answer: Yes. Load a PDF with existing annotations, update properties such as colour
+      or position, and save the updated version. This is ideal for building annotation‑management
+      tools.
+    question: Can I modify existing annotations programmatically?
+  - answer: GroupDocs.Annotation provides enumeration methods to read metadata (author,
+      creation date, comment text, etc.). Export this data to CSV, JSON, or feed it
+      into analytics pipelines.
+    question: How do I extract annotation data for reporting?
+  type: FAQPage
 tags:
-- pdf-annotation
+- pdf annotation
 - groupdocs
-- java-library
-- document-processing
-title: 'Java로 PDF 하이라이트 만들기: PDF 하이라이트 완전 가이드'
+- java library
+- document processing
+- create pdf highlights java
+title: 'PDF highlights java 만드는 방법: PDF 하이라이트를 위한 완전 가이드'
 type: docs
 url: /ko/java/text-annotations/annotate-pdfs-groupdocs-highlight-java/
 weight: 1
 ---
 
-# PDF 하이라이트 만들기 Java: PDF 하이라이트 완전 가이드
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
+
+# PDF 하이라이트 만들기 Java: PDF 하이라이트를 위한 완전 가이드
 
 ## 소개
 
-여러 문서 버전에서 피드백을 관리하는 데 어려움을 겪어본 적이 있나요? 당신만 그런 것이 아닙니다. 문서 관리 시스템을 구축하든, 교육 플랫폼을 만들든, 협업 도구를 개발하든, **create pdf highlights java** 를 처음부터 구현하는 것은 생각보다 까다로울 수 있습니다.
+여러 문서 버전에서 피드백을 관리하는 데 어려움을 겪은 적이 있나요? 당신만 그런 것이 아닙니다. 문서 관리 시스템을 구축하거나 교육 플랫폼을 만들거나 협업 도구를 개발하든, **create pdf highlights java**는 처음부터 구현하기가 생각보다 까다로울 수 있습니다.
 
-바로 여기서 **GroupDocs.Annotation for Java** 가 도움을 줍니다. 이 강력한 라이브러리는 복잡한 PDF 주석 작업을 간단한 작업으로 변환하여 저수준 PDF 조작 없이도 하이라이트, 댓글 및 답글을 추가할 수 있게 해줍니다.
+바로 그때 **GroupDocs.Annotation for Java**가 구원합니다. 이 강력한 라이브러리는 복잡한 PDF 주석 작업을 간단한 작업으로 변환하여, 저수준 PDF 조작 없이도 하이라이트, 댓글, 답글을 추가할 수 있게 해줍니다.
 
-이 포괄적인 튜토리얼에서는 실제 예제를 통해 **highlight pdf in java** 를 수행하는 방법을 알아볼 것입니다. 기본 설정부터 고급 하이라이트 기술까지 모두 단계별로 안내하고, 실제 운영 환경에서 구현하면서 얻은 실용적인 팁도 공유합니다.
+이 포괄적인 튜토리얼에서는 실제 예제를 통해 **highlight pdf in java**를 구현하는 방법을 배웁니다. 기본 설정부터 고급 하이라이트 기법까지, 프로덕션 환경에서 구현하면서 얻은 실용적인 팁도 공유합니다.
 
-다음과 같은 내용을 마스터하게 됩니다:
-- Java 프로젝트에 GroupDocs.Annotation을 설정하는 방법 (올바른 방식)
-- 맞춤 스타일링으로 인터랙티브 PDF 하이라이트 만들기
-- 협업을 위한 스레드형 답글 및 댓글 추가
-- 일반적인 함정 처리 및 성능 최적화
-- 실제 적용 전략
+이 튜토리얼을 통해 마스터하게 될 내용:
 
-PDF를 인터랙티브하고 협업 가능한 문서로 바꿀 준비가 되셨나요? 바로 시작해 보세요!
+- Java 프로젝트에 GroupDocs.Annotation을 올바르게 설정하기  
+- 사용자 정의 스타일로 인터랙티브 PDF 하이라이트 만들기  
+- 협업을 위한 스레드형 답글 및 댓글 추가하기  
+- 흔히 발생하는 문제와 성능 최적화 처리하기  
+- 실무 적용 전략  
+
+PDF를 인터랙티브하고 협업 가능한 문서로 바꿀 준비가 되셨나요? 바로 시작해봅시다!
 
 ## 빠른 답변
-- **Java에서 PDF 하이라이트를 간소화하는 라이브러리는?** GroupDocs.Annotation for Java  
-- **라이브러리를 추가하는 Maven 의존성은?** `com.groupdocs:groupdocs-annotation:25.2`  
-- **개발에 라이선스가 필요합니까?** 테스트용으로는 무료 임시 라이선스가 작동하며, 운영 환경에서는 유료 라이선스가 필요합니다.  
+- **Java에서 PDF 하이라이트를 간소화하는 라이브러리는?** GroupDocs.Annotation for Java.  
+- **어떤 Maven 의존성을 추가하면 라이브러리를 사용할 수 있나요?** `com.groupdocs:groupdocs-annotation:25.2`.  
+- **개발용으로 라이선스가 필요합니까?** 테스트용 무료 임시 라이선스가 작동하며, 프로덕션에서는 유료 라이선스가 필요합니다.  
 - **하이라이트에 댓글을 추가할 수 있나요?** 예, 답글 및 스레드형 댓글을 첨부할 수 있습니다.  
-- **대용량 PDF의 메모리를 어떻게 관리하나요?** try‑with‑resources를 사용하고 저장 후 `dispose()`를 호출하세요.
+- **대용량 PDF의 메모리를 어떻게 관리하나요?** `try‑with‑resources`를 사용하고 저장 후 `dispose()`를 호출합니다.
 
-## 왜 GroupDocs.Annotation for Java PDF 처리 를 선택해야 할까요?
+## Java에서 PDF 하이라이트를 어떻게 만들나요?
 
-코드에 들어가기 전에, 왜 GroupDocs.Annotation이 Java PDF 라이브러리 분야에서 돋보이는지 이야기해 보겠습니다.
+`new Annotator(inputPath)` 로 대상 PDF를 로드하고 `addAnnotation(highlight)` 를 호출한 뒤 `save(outputPath)` 로 저장합니다. `Annotator`는 PDF 문서를 로드하고 주석을 추가·편집·저장하는 메서드를 제공하는 핵심 클래스입니다. 이 두 단계 흐름은 몇 초 만에 하이라이트된 PDF를 생성하고 좌표 변환을 자동으로 처리하며, `dispose()` 호출 시 리소스를 해제합니다. 수동 PDF 파싱이 전혀 필요 없습니다.
 
-**DIY PDF 주석의 문제점**: 처음부터 PDF 주석을 구현하면 복잡한 PDF 사양, 좌표 시스템, 렌더링 엔진을 다루어야 합니다. 기본 하이라이트가 다양한 PDF 유형에서 일관되게 동작하도록 만드는 데 몇 주씩 걸리는 경우를 많이 보았습니다.
+## create pdf highlights java란 무엇인가요?
 
-**GroupDocs.Annotation 솔루션**: 이 라이브러리는 복잡성을 추상화하면서도 주석 외관과 동작에 대한 세밀한 제어를 제공합니다. 마치 모든 엣지 케이스를 이미 해결한 시니어 PDF 전문가가 팀에 있는 것과 같습니다.
+`create pdf highlights java`는 Java 코드를 사용해 전용 라이브러리(예: GroupDocs.Annotation)를 통해 PDF 파일에 하이라이트 주석을 프로그래밍 방식으로 추가하는 것을 의미합니다. 이 과정은 자동화된 검토, 협업 및 시각적 강조를 수동 편집 없이 가능하게 합니다.
 
-**당신이 체감할 주요 장점**:
-- 다양한 PDF 유형 및 구조와 호환
-- 좌표 계산을 자동으로 처리
-- 하이라이트 외에도 다양한 주석 유형 지원
-- 기존 Java 애플리케이션과 원활히 통합
-- 우수한 문서와 지원 제공
+## Java PDF 처리에 GroupDocs.Annotation을 선택해야 하는 이유는?
 
-## 전제 조건 및 환경 설정
+GroupDocs.Annotation은 **30개 이상의 주석 유형**을 지원하고, **500 MB**까지의 PDF를 전체 문서를 메모리에 로드하지 않고 처리할 수 있습니다. 페이지 수준 좌표를 자동으로 해결하고 기존 콘텐츠를 보존하며, 스타일링, 댓글 및 주석 데이터 내보내기를 위한 풍부한 API를 제공합니다.
 
-### 필요 사항
+## 사전 요구 사항 및 환경 설정
 
-**개발 환경**:
-- Java 8 이상 (성능 향상을 위해 Java 11+ 권장)
-- Maven 또는 Gradle을 사용한 의존성 관리
-- 선호하는 IDE (IntelliJ IDEA, Eclipse, VS Code 등) 모두 훌륭하게 작동
+### 준비물
 
-**지식 요구 사항**:
-- 기본 Java 프로그래밍 (컬렉션, 객체, 파일 I/O)
-- Maven 의존성에 대한 이해
-- 좌표 시스템에 대한 이해 (있으면 좋지만 필수는 아님)
+- **개발 환경**: Java 8+ (Java 11+ 권장), Maven 또는 Gradle, IntelliJ IDEA, Eclipse 또는 VS Code와 같은 IDE.  
+- **필요 지식**: 기본 Java(컬렉션, 객체, 파일 I/O), Maven 의존성 관리, PDF 좌표 시스템에 대한 고수준 이해.
 
 ### GroupDocs.Annotation for Java 설치
 
-시작하는 가장 쉬운 방법은 Maven을 이용하는 것입니다. `pom.xml` 파일에 다음 구성을 추가하세요:
+가장 쉬운 방법은 Maven을 이용하는 것입니다. `pom.xml` 파일에 다음 구성을 추가하세요:
 
 ```xml
 <repositories>
@@ -95,24 +157,24 @@ PDF를 인터랙티브하고 협업 가능한 문서로 바꿀 준비가 되셨�
 </dependencies>
 ```
 
-**Pro Tip**: 항상 최신 안정 버전을 사용하세요. GroupDocs는 성능 개선 및 버그 수정을 포함한 업데이트를 정기적으로 릴리스합니다.
+**팁**: 항상 최신 안정 버전을 사용하세요. GroupDocs는 성능 개선 및 버그 수정을 포함한 업데이트를 정기적으로 릴리스합니다.
 
-### 라이선스 설정 (절대 생략 금지!)
+### 라이선스 설정 (절대 건너뛰지 마세요!)
 
-운영 환경에서 GroupDocs.Annotation을 사용하려면 라이선스가 필요합니다. 라이선스를 처리하는 방법은 다음과 같습니다:
+프로덕션에서 GroupDocs.Annotation을 사용하려면 라이선스가 필요합니다. 라이선스를 설정하는 방법은 다음과 같습니다:
 
-**개발용**: 무료 체험 또는 [temporary license](https://purchase.groupdocs.com/temporary-license/)  
-**운영용**: [GroupDocs 웹사이트](https://purchase.groupdocs.com/buy)에서 라이선스 구매
+**개발용**: 무료 체험 또는 [임시 라이선스](https://purchase.groupdocs.com/temporary-license/) 받기  
+**프로덕션용**: [GroupDocs 웹사이트](https://purchase.groupdocs.com/buy)에서 라이선스 구매
 
 임시 라이선스는 테스트 및 개발에 최적이며, 워터마크 없이 전체 기능을 제공합니다.
 
 ## 단계별 구현 가이드
 
-이제 흥미로운 부분—완전한 PDF 주석 시스템을 구축해 보겠습니다! 각 구성 요소를 살펴보면서 코드가 무엇을 하는지, 왜 이렇게 하는지 설명합니다.
+이제 흥미로운 부분—완전한 PDF 주석 시스템을 구축해봅시다! 각 구성 요소를 살펴보면서 코드가 무엇을 하는지뿐 아니라 왜 그렇게 하는지도 설명합니다.
 
-### Step 1: Initialize Your Annotator Object
+### 1단계: annotator 객체 초기화
 
-먼저, PDF 파일을 처리할 `Annotator` 객체를 생성해야 합니다. 이는 주석을 이해하는 특수 편집기에서 PDF를 여는 것과 같습니다.
+`Annotator`는 GroupDocs.Annotation의 핵심 클래스이며 PDF를 로드하고 주석을 추가·편집·저장하는 메서드를 제공합니다.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -122,16 +184,16 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/AnnotationOutput.pdf";
 final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/InputDocument.pdf");
 ```
 
-**여기서 무슨 일이 일어나고 있나요?**
-- `Annotator` 생성자는 PDF를 메모리로 로드합니다.
-- 주석이 추가된 PDF가 저장될 출력 경로를 설정합니다.
-- 입력 PDF는 변경되지 않으며, 새 주석이 추가된 버전을 생성합니다.
+**무슨 일이 일어나나요?**  
+- `Annotator` 생성자는 PDF를 메모리로 로드합니다.  
+- 주석이 적용된 PDF가 저장될 출력 경로를 설정합니다.  
+- 입력 PDF는 변경되지 않으며, 새 주석이 적용된 버전을 생성합니다.
 
-**흔히 놓치는 점**: 파일 경로가 정확하고 디렉터리가 존재하는지 확인하세요. 간단한 경로 문제 때문에 개발자가 몇 시간을 디버깅하는 경우를 많이 보았습니다!
+**자주 발생하는 실수**: 파일 경로가 올바른지, 디렉터리가 존재하는지 확인하세요. 많은 개발자가 간단한 경로 문제에 시간을 낭비합니다.
 
-### Step 2: Create Interactive Replies and Comments
+### 2단계: 인터랙티브 답글 및 댓글 만들기
 
-여기서부터가 흥미로운 부분입니다. 대부분의 PDF 주석 튜토리얼은 이 부분을 건너뛰지만, 답글은 주석을 진정으로 협업 가능하게 만듭니다. 스레드형 대화 시스템을 만들어 보겠습니다:
+`Reply`와 `Comment` 객체는 하이라이트에 스레드형 대화를 가능하게 하여 정적인 주석을 협업 토론으로 변환합니다. `Reply`는 스레드 내 단일 댓글을, `Comment`는 특정 주석 아래의 여러 답글을 그룹화합니다.
 
 ```java
 import java.util.ArrayList;
@@ -153,17 +215,18 @@ reply2.setRepliedOn(Calendar.getInstance().getTime());
 replies.add(reply2);
 ```
 
-**왜 중요한가**: 실제 애플리케이션에서는 누가 언제 무엇을 말했는지 추적해야 할 경우가 많습니다. 이 답글 시스템을 활용하면 다음과 같은 기능을 구현할 수 있습니다:
-- 하이라이트된 텍스트에 대한 댓글 스레드
-- 승인 체인을 포함한 검토 워크플로
-- 문서 변경에 대한 감사 로그
-- 협업 편집 환경
+**왜 중요한가요**: 실제 애플리케이션에서는 누가 언제 무엇을 말했는지 추적해야 할 때가 많습니다. 이 답글 시스템을 활용하면 다음과 같은 기능을 구현할 수 있습니다:
 
-**실제 팁**: 사용자 정보와 타임스탬프를 보다 견고하게 저장하는 것을 고려하세요. 운영 환경에서는 인증 시스템이나 데이터베이스에서 가져올 수 있습니다.
+- 하이라이트된 텍스트에 대한 댓글 스레드  
+- 승인 체인을 포함한 검토 워크플로  
+- 문서 변경에 대한 감사 로그  
+- 협업 편집 환경  
 
-### Step 3: Define Precise Highlight Coordinates
+**실무 팁**: 기본값에 의존하기보다 사용자 정보와 타임스탬프를 데이터베이스에 저장하세요.
 
-여기서 마법이 일어납니다—라이브러리에 하이라이트를 정확히 어디에 배치할지 알려줍니다. 좌표 시스템은 처음엔 복잡해 보일 수 있지만 실제로는 꽤 논리적입니다:
+### 3단계: 정확한 하이라이트 좌표 정의
+
+`HighlightAnnotation`은 PDF 페이지에 하이라이트 영역을 나타내는 클래스입니다. 사각형 영역을 정의하기 위해 점 집합을 사용합니다.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -177,17 +240,17 @@ points.add(new Point(80, 650));   // Bottom-left corner
 points.add(new Point(240, 650));  // Bottom-right corner
 ```
 
-**PDF 좌표 이해**:
-- 원점 (0,0)은 페이지의 왼쪽 하단에 있습니다.
-- X는 오른쪽으로 증가하고, Y는 위쪽으로 증가합니다.
-- 포인트는 사각형 하이라이트 영역을 정의합니다.
-- 네 개의 포인트가 대상 텍스트 주위에 경계 상자를 만듭니다.
+**PDF 좌표 이해하기**:  
 
-**좌표 찾기 팁**: 좌표 표시가 가능한 PDF 뷰어를 사용하거나 대략적인 값으로 시작해 결과에 따라 조정하세요. 대부분의 PDF 뷰어는 커서 좌표를 표시합니다.
+- 원점(0,0)은 페이지 왼쪽 하단에 위치합니다.  
+- X는 오른쪽으로 증가하고, Y는 위쪽으로 증가합니다.  
+- 네 개의 점이 대상 텍스트를 둘러싼 경계 상자를 형성합니다.  
 
-### Step 4: Configure Your Highlight Annotation
+**좌표 찾기 팁**: 커서 좌표를 표시하는 PDF 뷰어를 사용하거나 대략적인 값으로 시작해 시각적 결과에 따라 미세 조정하세요.
 
-이제 실제 하이라이트 주석을 모든 시각적 속성과 함께 생성합니다. 여기서 사용자 경험을 진정으로 맞춤화할 수 있습니다:
+### 4단계: 하이라이트 주석 구성하기
+
+`HighlightAnnotation`을 사용하면 색상, 불투명도, 글꼴 색상 및 페이지 번호를 커스터마이즈할 수 있습니다.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.HighlightAnnotation;
@@ -206,65 +269,52 @@ highlight.setReplies(replies);
 annotator.add(highlight);
 ```
 
-**커스터마이징 옵션 설명**:
-- `setBackgroundColor(65535)`: 노란색 하이라이트 (정수형 RGB 색상)
-- `setOpacity(0.5)`: 50% 투명도—텍스트가 읽기 쉬움
-- `setFontColor(0)`: 좋은 대비를 위한 검은색 텍스트
-- `setPageNumber(0)`: 페이지 인덱스 (0 = 첫 페이지)
+**구성 옵션 설명**:  
 
-**색상 선택 팁**:
-- 노란색 (65535)은 클래식하고 눈에 거슬리지 않습니다.
-- 중요한 하이라이트에는 주황색 (16753920) 또는 빨간색 (16711680)을 시도해 보세요.
-- 가독성을 위해 투명도는 0.3‑0.7 사이로 유지하세요.
+- `setBackgroundColor(65535)`: 노란색 하이라이트(RGB 정수).  
+- `setOpacity(0.5)`: 50 % 투명도로 기본 텍스트 가독성을 유지합니다.  
+- `setFontColor(0)`: 검은색 텍스트로 좋은 대비를 제공합니다.  
+- `setPageNumber(0)`: 페이지 인덱스(0 = 첫 페이지).  
 
-### Step 5: Save Your Annotated PDF
+**색상 선택 팁**:  
 
-마지막으로 작업을 저장하고 리소스를 올바르게 정리합니다:
+- 노란색(65535)은 클래식하고 눈에 거슬리지 않습니다.  
+- 중요한 하이라이트는 주황색(16753920)이나 빨간색(16711680)을 고려하세요.  
+- 가독성을 위해 불투명도는 0.3‑0.7 사이가 가장 좋습니다.
+
+### 5단계: 주석이 적용된 PDF 저장하기
+
+`dispose()`는 네이티브 리소스를 해제하고 PDF 파일을 최종화합니다. `dispose()`는 네이티브 리소스를 해제하고 PDF 파일을 최종화합니다.
 
 ```java
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**리소스 관리**: `dispose()` 호출은 매우 중요합니다—메모리를 해제하고 모든 변경 사항이 디스크에 올바르게 기록되도록 보장합니다. 이를 try‑finally 블록에 포함하거나 운영 코드에서는 try‑with‑resources를 사용하세요.
+**리소스 관리**: `dispose()` 호출은 필수이며, 메모리를 해제하고 모든 변경 사항이 영구 저장되도록 보장합니다. 항상 `try‑with‑resources` 블록으로 감싸거나 `finally` 절에서 `dispose()`를 호출하세요.
 
 ## 일반적인 문제 해결
 
-Java에서 PDF 주석 작업을 하면서 겪었던 (그리고 해결한) 문제들을 공유합니다:
+### 파일 경로 문제  
+**증상**: `FileNotFoundException` 또는 “파일에 접근할 수 없습니다”.  
+**해결**: 경로가 절대인지 프로젝트 루트에 대한 상대인지 확인하고, 파일 권한을 점검하며, 저장 디렉터리가 존재하는지 확인하세요.
 
-### File Path Problems
-**증상**: `FileNotFoundException` 또는 “파일에 접근할 수 없습니다” 오류  
-**해결책**:
-- 파일 경로가 절대 경로나 프로젝트 루트에 상대적인지 확인하세요.
-- 파일 권한을 확인하세요—Java 프로세스에 읽기/쓰기 권한이 필요합니다.
-- 저장하기 전에 출력 디렉터리가 존재하는지 확인하세요.
+### 좌표가 예상 위치와 다름  
+**증상**: 하이라이트가 잘못된 위치에 표시됩니다.  
+**해결**: PDF 좌표 시스템이 왼쪽 하단에서 시작한다는 점을 기억하세요. PDF 생성 도구마다 약간의 차이가 있을 수 있으니 샘플 PDF로 테스트하고 조정하세요.
 
-### Coordinates Don't Match Expected Location
-**증상**: 하이라이트가 잘못된 위치에 표시됨  
-**해결책**:
-- PDF 좌표 시스템이 왼쪽 하단에서 시작한다는 점을 기억하세요.
-- 다른 PDF 생성기는 약간의 차이가 있을 수 있습니다.
-- 샘플 PDF로 테스트하고 좌표를 적절히 조정하세요.
+### 대용량 PDF 메모리 문제  
+**증상**: `OutOfMemoryError` 또는 성능 저하.  
+**해결**: JVM 힙 크기를 늘리세요(예: `-Xmx2G`). PDF를 작은 배치로 처리하고, 항상 `dispose()`를 호출해 리소스를 해제하세요.
 
-### Memory Issues with Large PDFs
-**증상**: `OutOfMemoryError` 또는 성능 저하  
-**해결책**:
-- JVM 힙 크기를 늘리세요, 예: `-Xmx2G`.
-- PDF를 작은 배치로 처리하세요.
-- `dispose()`를 항상 호출하여 리소스를 해제하세요.
-
-### Color Not Displaying Correctly
-**증상**: 잘못된 하이라이트 색상 또는 주석이 보이지 않음  
-**해결책**:
-- RGB 정수값을 사용하고, 16진수 문자열은 사용하지 마세요.
-- 투명도 값을 0.1~0.9 사이로 테스트하세요.
-- 배경색과 글자색의 대비가 충분한지 확인하세요.
+### 색상이 올바르게 표시되지 않음  
+**증상**: 하이라이트 색상이 틀리거나 보이지 않음.  
+**해결**: RGB 정수 값을 사용하고, 0.1‑0.9 사이의 불투명도를 테스트하세요. 배경색과 글꼴색의 대비가 충분한지 확인하세요.
 
 ## 성능 최적화 모범 사례
 
-여러 운영 시스템에 PDF 주석을 구현한 후 실제로 효과가 있었던 성능 팁을 정리했습니다:
+### 메모리 관리
 
-### Memory Management
 ```java
 // Good practice - use try-with-resources when available
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -273,8 +323,9 @@ try (Annotator annotator = new Annotator(inputPath)) {
 } // Automatically disposes resources
 ```
 
-### Batch Processing Strategy
-여러 PDF를 처리할 때는 모두 메모리에 로드하기보다 순차적으로 처리하세요:
+`try‑with‑resources` 블록 안에 annotator를 할당하고 즉시 해제하세요. 이 패턴은 다수의 문서를 처리할 때 메모리 누수를 방지합니다.
+
+### 배치 처리 전략
 
 ```java
 for (String pdfPath : pdfPaths) {
@@ -287,47 +338,31 @@ for (String pdfPath : pdfPaths) {
 }
 ```
 
-### File Size Considerations
-- 대용량 PDF (>10 MB)는 더 많은 메모리와 처리 시간을 소모합니다.
-- 매우 큰 문서는 섹션으로 나누는 것을 고려하세요.
-- 가능하면 주석을 달기 전에 입력 PDF를 최적화하세요.
+여러 PDF를 처리할 때는 모두 메모리에 로드하기보다 순차적으로 처리하세요. 이 접근법은 선형적으로 확장되며 JVM 메모리 사용량을 낮게 유지합니다.
 
-## 실제 적용 사례 및 활용 분야
+### 파일 크기 고려사항
 
-PDF 주석이 실제 애플리케이션에서 빛을 발하는 경우를 살펴봅니다:
+- 10 MB 이상의 대형 PDF는 더 많은 메모리와 처리 시간을 요구합니다.  
+- 매우 큰 문서는 섹션으로 분할하는 것을 고려하세요.  
+- 주석 적용 전에 이미지 압축, 사용되지 않는 객체 제거 등으로 입력 PDF를 최적화하세요.
 
-### Document Review Systems
-**적합 대상**: 법률 계약서, 기술 사양서, 컴플라이언스 문서  
-**구현 팁**:
-- 리뷰어마다 다른 하이라이트 색상 사용.
-- 주석 추가/수정 권한을 사용자에게 부여.
-- 주석 메타데이터를 데이터베이스에 저장하여 보고에 활용.
+## 실제 적용 사례
 
-### Educational Platforms
-**적합 대상**: 교과서 하이라이트, 과제 피드백, 협업 학습  
-**구현 팁**:
-- 학생이 개인 주석을 저장하도록 허용.
-- 교사가 공식 코멘트를 추가하도록 지원.
-- 문서 업데이트를 위한 버전 관리를 고려.
+### 문서 검토 시스템  
+법률 계약서, 기술 사양서, 컴플라이언스 문서에 최적입니다. 리뷰어마다 다른 하이라이트 색상을 사용하고, 권한 규칙을 적용하며, 주석 메타데이터를 데이터베이스에 저장해 보고서를 생성합니다.
 
-### Quality Assurance Workflows
-**적합 대상**: 디자인 리뷰, 프로세스 문서, 컴플라이언스 검사  
-**구현 팁**:
-- 기존 QA 도구와 통합.
-- 주석 상태(열림/해결)를 사용해 추적.
-- 주석 데이터를 기반으로 보고서 생성.
+### 교육 플랫폼  
+교과서 하이라이트, 과제 피드백, 협업 학습에 이상적입니다. 학생이 개인 주석을 저장하고, 교사가 공식 코멘트를 추가하며, 커리큘럼이 진화함에 따라 문서를 버전 관리합니다.
 
-### Collaborative Research Tools
-**적합 대상**: 학술 논문, 연구 문서, 동료 검토  
-**구현 팁**:
-- 실시간 협업 기능 구현.
-- 필요 시 익명 리뷰 허용.
-- 분석 및 보고를 위해 주석을 내보내기.
+### 품질 보증 워크플로  
+디자인 리뷰, 프로세스 문서, 컴플라이언스 체크에 적합합니다. 기존 QA 도구와 통합하고, 주석 상태(열림/해결)를 추적하며, 주석 데이터를 기반으로 감사 보고서를 생성합니다.
+
+### 협업 연구 도구  
+학술 논문, 연구 문서, 피어 리뷰에 활용됩니다. 실시간 협업을 구현하고, 익명 리뷰를 지원하며, 분석을 위해 주석을 내보냅니다.
 
 ## 고급 팁 및 모범 사례
 
-### Coordinate Calculation Helper Methods
-공통 좌표 계산을 위한 유틸리티 메서드를 만들어 보세요:
+### 좌표 계산 헬퍼 메서드
 
 ```java
 public class AnnotationUtils {
@@ -342,8 +377,9 @@ public class AnnotationUtils {
 }
 ```
 
-### Annotation Templates
-재사용 가능한 주석 구성을 만들어 보세요:
+스크린 좌표를 PDF 포인트로 변환하는 유틸리티 메서드를 만들어 보일러플레이트 코드를 줄이고 가독성을 높이세요.
+
+### 주석 템플릿
 
 ```java
 public class AnnotationTemplates {
@@ -360,34 +396,48 @@ public class AnnotationTemplates {
 }
 ```
 
+색상, 불투명도, 작성자와 같은 재사용 가능한 주석 구성을 정의해 애플리케이션 전반에 일관성을 유지하세요.
+
 ## 자주 묻는 질문
 
 **Q: GroupDocs.Annotation을 웹 애플리케이션에서 사용할 수 있나요?**  
-A: 물론입니다! Spring Boot, Servlets 및 기타 Java 웹 프레임워크와 통합됩니다. PDF 파일을 받아 하이라이트를 적용하고 주석이 달린 문서를 반환하는 REST 엔드포인트를 노출할 수 있습니다.
+A: 물론 가능합니다. Spring Boot, Servlets 등 Java 웹 프레임워크와 통합할 수 있습니다. PDF를 받아 하이라이트를 적용하고 주석이 적용된 파일을 반환하는 REST 엔드포인트를 노출하세요.
 
-**Q: 다양한 언어의 주석을 어떻게 처리하나요?**  
-A: 라이브러리는 Unicode를 지원하므로 어떤 언어로든 댓글과 메시지를 추가할 수 있습니다. Java 애플리케이션이 UTF‑8 인코딩을 사용하도록만 하면 됩니다.
+**Q: 다른 언어의 주석을 어떻게 처리하나요?**  
+A: 라이브러리는 Unicode를 지원하므로 어떤 언어든 댓글과 메시지를 추가할 수 있습니다. Java 애플리케이션이 UTF‑8 인코딩을 사용하도록 설정하세요.
 
 **Q: 많은 주석을 추가하면 성능에 어떤 영향을 미치나요?**  
-A: 성능은 주석 수에 비례하지만, PDF 자체 크기가 더 큰 영향을 미칩니다. 수백 개의 하이라이트가 있는 문서의 경우, 메모리 사용량을 낮추기 위해 지연 로딩이나 페이지네이션을 고려하세요.
+A: 성능은 주석 수에 비례하지만 PDF 크기가 더 큰 영향을 줍니다. 수백 개의 하이라이트가 있는 문서는 지연 로딩이나 페이지네이션을 고려해 메모리 사용량을 낮게 유지하세요.
 
 **Q: 기존 주석을 프로그래밍 방식으로 수정할 수 있나요?**  
-A: 예. 기존 주석이 포함된 PDF를 로드한 뒤 색상이나 위치와 같은 속성을 업데이트하고 저장하면 됩니다. 이는 주석 관리 도구를 구축할 때 이상적입니다.
+A: 예, 기존 주석이 포함된 PDF를 로드하고 색상이나 위치와 같은 속성을 업데이트한 뒤 저장하면 됩니다. 이는 주석 관리 도구를 구축할 때 이상적입니다.
 
-**Q: 보고를 위해 주석 데이터를 어떻게 추출하나요?**  
-A: GroupDocs.Annotation은 저자, 생성 날짜, 댓글 텍스트 등 주석 메타데이터를 읽을 수 있는 열거 메서드를 제공합니다. 이 데이터를 CSV, JSON 등으로 내보내거나 분석 파이프라인에 전달할 수 있습니다.
+**Q: 보고서를 위해 주석 데이터를 추출하려면 어떻게 하나요?**  
+A: GroupDocs.Annotation은 저자, 생성 날짜, 댓글 텍스트 등 메타데이터를 열거하는 메서드를 제공합니다. 이 데이터를 CSV, JSON 등으로 내보내거나 분석 파이프라인에 연결하세요.
 
 ## 필수 리소스 및 문서
 
-- [GroupDocs.Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/) - 포괄적인 가이드와 API 레퍼런스  
-- [API Reference](https://reference.groupdocs.com/annotation/java/) - 상세 메서드 문서  
-- [Download Latest Version](https://releases.groupdocs.com/annotation/java/) - 항상 최신 안정 버전을 사용하세요  
-- [Purchase License](https://purchase.groupdocs.com/buy) - 운영 환경 라이선스 옵션  
-- [Get Temporary License](https://purchase.groupdocs.com/temporary-license/) - 개발 및 테스트에 최적  
-- [Community Support Forum](https://forum.groupdocs.com/c/annotation/) - 전문가와 다른 개발자에게 도움 받기  
+- [GroupDocs.Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/) – 포괄적인 가이드와 API 레퍼런스  
+- [API Reference](httpshttps://reference.groupdocs.com/annotation/java/) – 상세 메서드 문서  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/) – 최신 안정 버전을 항상 사용하세요  
+- [Purchase License](https://purchase.groupdocs.com/buy) – 프로덕션 라이선스 옵션  
+- [Get Temporary License](https://purchase.groupdocs.com/temporary-license/) – 개발 및 테스트에 최적  
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation/) – 전문가와 다른 개발자에게 도움받기  
 
 ---
 
-**Last Updated:** 2026-03-17  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**최종 업데이트:** 2026-09-30  
+**테스트 환경:** GroupDocs.Annotation 25.2  
+**작성자:** GroupDocs
+
+## 관련 튜토리얼
+
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
+- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
+- [Add Arrow PDF in Java – Complete GroupDocs Tutorial](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
