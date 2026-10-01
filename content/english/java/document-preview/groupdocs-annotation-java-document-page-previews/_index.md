@@ -489,9 +489,3 @@ public boolean shouldRegeneratePreview(String documentPath, String previewPath) 
 - [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Groupdocs Annotation Java Document Info Extraction](/annotation/java/document-information/groupdocs-annotation-java-document-info-extraction/)
 - [Reduce PDF Size Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
