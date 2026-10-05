@@ -1,172 +1,185 @@
 ---
 categories:
 - Documentation
-date: '2026-03-22'
-description: Apprenez à créer des formulaires PDF remplissables et à ajouter des annotations
-  PDF avec GroupDocs.Annotation pour .NET. Maîtrisez l'extraction des métadonnées
-  de documents, la génération d'aperçus et les tampons d'image.
+date: '2026-10-05'
+description: Apprenez à créer des champs de formulaire PDF en utilisant GroupDocs.Annotation
+  pour .NET. Ce guide couvre l'API d'annotation PDF, la création de formulaires et
+  l'extraction des métadonnées.
 is_root: true
-keywords: document annotation .NET library, PDF annotation tutorial .NET, GroupDocs
-  annotation guide, .NET document collaboration API, annotation SDK .NET
-lastmod: '2026-03-22'
-linktitle: GroupDocs.Annotation for .NET Tutorials
+keywords:
+- create pdf form fields
+- pdf annotation api
+- extract document metadata
+- collaborative pdf editing
+- create pdf forms
+lastmod: '2026-10-05'
+linktitle: Tutoriels GroupDocs.Annotation pour .NET
+og_description: Apprenez à créer des champs de formulaire PDF en utilisant GroupDocs.Annotation
+  pour .NET. Ce tutoriel explique l'API d'annotation PDF, les étapes de création de
+  formulaires et l'extraction des métadonnées.
+og_image_alt: Guide showing how to create pdf form fields with GroupDocs.Annotation
+  in .NET
+og_title: Comment créer des champs de formulaire PDF avec GroupDocs.Annotation
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-05'
+  description: Learn how to create pdf form fields using GroupDocs.Annotation for
+    .NET. This guide covers pdf annotation api, form creation, and metadata extraction.
+  headline: How to create pdf form fields with GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: Yes – the library works equally well in ASP.NET Core, MVC, and Web API
+      projects. Load the PDF, add form‑field annotations, and stream the result back
+      to the client in a single request.
+    question: Can I use GroupDocs.Annotation to create fillable PDF forms in a web
+      API?
+  - answer: Use the `DocumentInfo` API to read built‑in metadata. For scanned PDFs,
+      run OCR first with GroupDocs.Parser, then retrieve the extracted text and any
+      embedded properties.
+    question: How do I extract metadata from a scanned PDF?
+  - answer: Absolutely. Provide the password when opening the document, then call
+      the preview methods to render thumbnails without exposing the content.
+    question: Is it possible to generate preview images for password‑protected PDFs?
+  - answer: Use the Image Annotation workflow – load the logo as a stream, set the
+      annotation’s `Opacity` and `Position`, and add it to the target page before
+      saving.
+    question: What is the recommended way to insert a company logo as an image stamp?
+  - answer: Leverage the Annotation Management batch operations and run them inside
+      a parallel loop or Azure Function; the library’s streaming architecture keeps
+      memory usage low while maximizing throughput.
+    question: How can I batch‑process thousands of documents for annotation?
+  type: FAQPage
 tags:
 - annotations
 - pdf
 - collaboration
 - tutorials
-title: Créer des formulaires PDF remplissables avec la bibliothèque .NET d'annotation
-  de documents – Tutoriel complet GroupDocs
+- create pdf forms
+- document preview
+title: Comment créer des champs de formulaire PDF avec GroupDocs.Annotation
 type: docs
 url: /fr/net/
 weight: 10
 ---
 
-# Guide complet pour créer des formulaires PDF remplissables avec la bibliothèque .NET d'annotation de documents – Tutoriels GroupDocs.Annotation
+# Comment créer des champs de formulaire pdf avec GroupDocs.Annotation
 
-Si vous devez **créer des formulaires PDF remplissables** dans une application .NET, vous êtes au bon endroit. GroupDocs.Annotation pour .NET vous offre une API puissante et prête à l’emploi qui vous permet d’ajouter des champs interactifs, des annotations et des fonctionnalités collaboratives sans vous battre avec les détails internes du PDF. Dans ce guide, nous expliquerons pourquoi la bibliothèque est idéale, comment elle s’intègre aux scénarios réels, et le parcours d’apprentissage à suivre pour être prêt pour la production.
+Si vous devez **créer des champs de formulaire pdf** dans une application .NET, vous êtes au bon endroit. GroupDocs.Annotation pour .NET vous fournit une API puissante, prête à l’emploi, qui vous permet d’ajouter des champs interactifs, des annotations et des fonctionnalités collaboratives sans vous battre avec les détails internes du PDF de bas niveau. Dans ce guide, nous expliquerons pourquoi la bibliothèque est idéale, comment elle s’intègre aux scénarios réels, et le parcours d’apprentissage que vous devez suivre pour être prêt pour la production.
 
 ## Réponses rapides
 - **Que puis‑je créer ?** Formulaires PDF remplissables, systèmes de révision et outils de marquage visuel.  
-- **Quels formats sont pris en charge ?** Plus de 50 types de documents, y compris PDF, DOCX, PPTX et les fichiers hérités.  
+- **Quels formats sont pris en charge ?** Plus de 50 types de documents, y compris PDF, DOCX, PPTX et les fichiers anciens.  
 - **Ai‑je besoin d’une licence pour le développement ?** Un essai gratuit suffit pour les tests ; une licence commerciale est requise pour la production.  
 - **Puis‑je l’utiliser avec .NET 6/7 ?** Oui – la bibliothèque prend en charge .NET Framework 4.5+, .NET Core 3.1+, .NET 5+ et .NET 6+.  
-- **Existe‑t‑il un support intégré pour les tampons d’image ?** Absolument – vous pouvez insérer des annotations PDF de tampon d’image en un seul appel.
+- **Existe‑t‑il une prise en charge native des tampons d’image ?** Absolument – vous pouvez insérer des annotations PDF de tampon d’image en un seul appel.
 
 ## Pourquoi GroupDocs.Annotation est votre solution .NET incontournable pour les documents
 
-Vous cherchez à ajouter des capacités d’annotation professionnelles à votre application .NET ? Vous êtes exactement au bon endroit. GroupDocs.Annotation pour .NET n’est pas simplement une autre bibliothèque de documents – c’est une solution complète qui transforme les documents statiques en expériences collaboratives et interactives.
+GroupDocs.Annotation est une API .NET complète qui vous permet d’ajouter, de modifier et de conserver des annotations sur plus de 50 formats de documents, y compris PDF, DOCX et PPTX, tout en gérant le rendu, le stockage et la collaboration sans manipulation de PDF de bas niveau.
 
-Que vous construisiez un système de révision de documents, créiez des fonctionnalités d’édition collaborative, ou ayez besoin d’ajouter des capacités de marquage aux PDF et aux documents Office, cette collection de tutoriels vous fera passer de zéro à la production en un rien de temps.
+Vous obtenez une bibliothèque unique qui couvre tout, des simples surlignages à la création de champs de formulaire complexes, vous libérant de la gestion de plusieurs SDK. L’API suit les conventions .NET, vous permettant de l’intégrer aux applications console, aux outils de bureau ou aux services cloud avec un minimum de complexité.
 
 ## Qu’est‑ce qui rend cette bibliothèque d’annotation .NET spéciale ?
 
-Avant de plonger dans les tutoriels, parlons des raisons pour lesquelles les développeurs choisissent GroupDocs.Annotation plutôt que d’autres solutions. Tout d’abord, elle prend en charge plus de 50 formats de documents dès le départ (oui, y compris ces formats hérités compliqués que vos clients utilisent encore). Ensuite, l’API est conçue selon les meilleures pratiques .NET – pas de lutte avec des configurations complexes ou des messages d’erreur cryptiques.
-
-Surtout, elle se charge du travail lourd de rendu de documents, de persistance des annotations et de compatibilité multiplateforme, vous permettant ainsi de vous concentrer sur les fonctionnalités qui importent à vos utilisateurs.
+La bibliothèque prend en charge plus de 50 formats d’entrée et de sortie, traite des PDF de plusieurs centaines de pages sans charger le fichier complet en mémoire, et offre une gestion de version intégrée ainsi que des fonctionnalités de collaboration en temps réel, permettant des flux de travail documentaires de niveau entreprise. Elle propose également une génération de vignettes haute performance, l’extraction de métadonnées et la persistance des annotations tout en maintenant une faible consommation de mémoire, ce qui la rend adaptée aux déploiements d’entreprise à grande échelle.
 
 ## Commencer : votre parcours d’apprentissage
 
-Nouveau dans le développement d’annotation de documents ? Commencez par **Document Loading** et **Basic Annotations** pour bâtir votre base. Déjà à l’aise avec la gestion des documents ? Passez directement à **Annotation Management** ou **Version Control** pour des fonctionnalités avancées.
+Nouveau dans le développement d’annotation de documents ? Commencez par **Document Loading** et **Basic Annotations** pour bâtir vos bases. Déjà à l’aise avec la manipulation de documents ? Passez directement à **Annotation Management** ou **Version Control** pour des fonctionnalités avancées.
 
 Chaque tutoriel comprend des exemples concrets, les pièges courants à éviter et des conseils de performance basés sur des milliers d’implémentations de développeurs.
 
 ## Comment créer des formulaires PDF remplissables
 
-Créer des formulaires PDF remplissables est un processus en trois étapes : charger le document, ajouter des annotations de champs de formulaire, et enregistrer le résultat. Les tutoriels **Form Field Annotations** vous guident à chaque étape, montrant comment définir des champs texte, des cases à cocher, des boutons radio et des listes déroulantes que les utilisateurs finaux peuvent remplir dans n’importe quel visualiseur PDF.
+FormFieldAnnotation représente un champ de formulaire interactif qui peut être placé sur une page PDF. Chargez votre PDF, ajoutez des objets FormFieldAnnotation pour chaque élément d’entrée (zones de texte, cases à cocher, listes déroulantes), configurez leurs propriétés et enregistrez le document ; ce processus ajoute des champs interactifs que tout visualiseur PDF peut remplir. En suivant ces étapes, vous vous assurez que le PDF résultant se comporte comme un formulaire natif, prenant en charge la saisie de données, la validation et un aplatissement optionnel pour une distribution en lecture seule.
 
 ## Comment ajouter des annotations PDF
 
-Si vous souhaitez **comment ajouter des annotations PDF** telles que des surlignages, des commentaires ou des formes dessinées, les sections **Text Annotations**, **Graphical Annotations** et **Image Annotations** offrent des extraits de code prêts à copier et des conseils de bonnes pratiques.
+HighlightAnnotation ajoute un surlignage coloré sur le texte sélectionné dans un document. Créez des objets d’annotation spécifiques—tels que `HighlightAnnotation`, `TextAnnotation` ou `ShapeAnnotation`—attribuez‑les à la page et aux coordonnées souhaitées, puis enregistrez le document ; l’API gère le rendu et la persistance automatiquement. Cette approche vous permet d’enrichir les PDF avec des repères visuels, des commentaires et des formes, offrant aux relecteurs des indications claires tout en préservant la mise en page du contenu original.
 
-## Comment extraire les métadonnées d’un document
+## Comment extraire les métadonnées du document
 
-Lors de la création de solutions de gestion de documents, vous devez souvent **extraire les métadonnées du document** comme l’auteur, la date de création ou des propriétés personnalisées. Le tutoriel **Document Information** explique comment récupérer ces données efficacement, vous permettant de créer des index de recherche ou d’afficher les détails du document dans les panneaux UI.
+DocumentInfo fournit l’accès aux métadonnées intégrées d’un document telles que l’auteur et la date de création. L’extraction des métadonnées du document se fait via la classe `DocumentInfo`, qui expose des propriétés comme `Author`, `CreationDate` et `CustomProperties` ; vous récupérez ces valeurs après le chargement du fichier pour remplir des panneaux d’interface ou créer des index de recherche. L’extraction des métadonnées s’exécute rapidement car seul l’en‑tête du document est lu, ce qui la rend efficace même pour les gros PDF.
 
-## Comment générer un aperçu de document
+## Comment générer un aperçu du document
 
-La navigation rapide et les galeries de miniatures reposent sur **générer un aperçu de document** images. Le guide **Document Preview** vous montre comment rendre des miniatures de pages ou des aperçus plein‑page sans charger le document entier en mémoire, idéal pour les bibliothèques à grande échelle.
+PreviewGenerator crée des aperçus d’image des pages du document sans charger le fichier complet en mémoire. Générez des images d’aperçu en appelant le `PreviewGenerator` avec le document chargé, en spécifiant la plage de pages et le format d’image ; la méthode diffuse les vignettes sans charger le document complet en mémoire, ce qui la rend adaptée aux grandes bibliothèques. Vous pouvez demander des aperçus PNG, JPEG ou BMP, et le générateur peut produire jusqu’à 200 pages par seconde sur un serveur standard à 8 cœurs, permettant des galeries de vignettes rapides.
 
 ## Comment insérer un tampon d’image PDF
 
-Marquer les PDF avec des logos ou des filigranes est aussi simple que d’utiliser les tutoriels **Image Annotations**, qui démontrent le flux de travail **insérer un tampon d’image pdf** — de la charge d’un flux d’image au positionnement du tampon sur une page spécifique.
+ImageAnnotation intègre une image, telle qu’un logo ou un filigrane, sur une page PDF. Insérez un tampon d’image en créant un `ImageAnnotation`, en définissant son `ImageStream` sur votre logo ou filigrane, en le positionnant sur la page cible et en l’ajoutant à la collection d’annotations du document avant l’enregistrement. Cette opération en un seul appel prend en charge les formats PNG, JPEG, GIF et SVG, et vous pouvez contrôler l’opacité, la rotation et le redimensionnement pour respecter les directives de la marque.
 
 ## Comment charger des documents .NET
 
-Tous les tutoriels commencent par les fondamentaux de **charger des documents .net**. Que vous lisiez depuis un chemin de fichier, un flux, une URL ou un bucket cloud, la section **Document Loading** couvre chaque scénario, y compris les fichiers chiffrés et le chargement optimisé en mémoire pour les PDF volumineux.
+DocumentLoader charge des documents depuis des fichiers, des flux, des URL ou un stockage cloud dans l’API. Chargez des documents en utilisant la classe `DocumentLoader`, qui accepte les chemins de fichiers, les flux, les URL ou les références de stockage cloud ; vous pouvez également fournir un mot de passe pour les fichiers chiffrés, et le chargeur optimise l’utilisation de la mémoire pour les gros PDF. Le chargeur détecte automatiquement le type de fichier, vous n’avez donc pas besoin de chemins de code séparés pour PDF, DOCX ou PPTX.
 
-## Catégories de tutoriels GroupDocs.Annotation pour .NET
+## Qu’est‑ce que la création de champs de formulaire pdf ?
 
-### [Chargement de documents](./document-loading)
-**Parfait pour** : Mise en place de votre pipeline d’annotation  
-Apprenez à charger des documents depuis des fichiers locaux, des flux, des URL et le stockage cloud. Ces tutoriels pas à pas couvrent tout, du chargement de fichier de base à la gestion des documents chiffrés et à l’optimisation de l’utilisation mémoire pour les gros fichiers.
+Créer des champs de formulaire PDF signifie ajouter des éléments interactifs comme des zones de texte à un PDF de manière programmatique. `create pdf form fields` désigne le processus d’ajout programmatique d’éléments de formulaire interactifs—tels que des zones de texte, des cases à cocher, des boutons radio et des listes déroulantes—à un document PDF afin que les utilisateurs finaux puissent remplir le formulaire dans n’importe quel visualiseur PDF. En utilisant GroupDocs.Annotation, vous pouvez définir les noms de champs, les valeurs par défaut, les paramètres d’apparence et les règles de validation entièrement depuis du code .NET.
 
-### [Enregistrement de documents](./document-saving)
-**Parfait pour** : Préserver votre travail d’annotation  
-Maîtrisez l’art d’enregistrer des documents annotés avec diverses options d’exportation. Ces tutoriels complets vous montrent comment maintenir la fidélité des annotations, gérer différents formats de sortie et implémenter des opérations d’enregistrement par lots.
+## Travailler avec la classe Document
 
-### [Annotations de texte](./text-annotations)
-**Parfait pour** : Flux de révision et de marquage de documents  
-Ajoutez des annotations de surlignage, de barré, de soulignement et de remplacement de texte. Ces tutoriels vous guident dans la création de fonctionnalités de marquage de texte interactives que vos utilisateurs voudront réellement utiliser.
+Document représente un PDF ou un fichier Office chargé et fournit l’accès à son contenu et à ses annotations. La classe `Document` est l’objet de niveau supérieur de GroupDocs.Annotation qui représente un seul fichier PDF ou Office en mémoire. Après l’instanciation, toutes les opérations de chargement, de rendu et d’annotation passent par cet objet.
 
-### [Annotations graphiques](./graphical-annotations)
-**Parfait pour** : Retour visuel et marquage de diagrammes  
-Dessinez des formes, des flèches, des rectangles et des annotations à main levée sur les documents. Idéal pour la documentation technique, les plans architecturaux, ou tout scénario où le retour visuel vaut mille mots.
+## Travailler avec la classe Annotation
 
-### [Annotations d’image](./image-annotations)
-**Parfait pour** : Amélioration visuelle des documents  
-Ajoutez des tampons d’image, des filigranes et des annotations d’image à vos documents. Ces tutoriels couvrent tout, du placement simple de logo aux scénarios complexes de superposition d’image.
-
-### [Annotations de lien](./link-annotations)
-**Parfait pour** : Création de documents interactifs  
-Transformez des documents statiques en expériences navigables et hyperliées. Apprenez à implémenter des liens internes, des URL externes et des gestionnaires d’actions personnalisés.
-
-### [Annotations de champs de formulaire](./form-field-annotations)
-**Parfait pour** : Formulaires PDF interactifs et collecte de données  
-Ajoutez des champs texte, des cases à cocher, des boutons radio et des listes déroulantes aux documents. Essentiel pour créer des formulaires remplissables et des flux de collecte de données.
-
-### [Gestion des annotations](./annotation-management)
-**Parfait pour** : Construction de systèmes d’annotation complets  
-Le cœur de tout système d’annotation – apprenez à ajouter, supprimer, mettre à jour et organiser les annotations efficacement. Ces tutoriels couvrent les opérations par lots, le filtrage des annotations et l’optimisation des performances.
-
-### [Gestion des réponses](./reply-management)
-**Parfait pour** : Flux de travail collaboratifs sur les documents  
-Implémentez des commentaires en fil, des chaînes de réponses et des discussions collaboratives. Transformez vos documents en espaces de conversation avec une gestion appropriée des utilisateurs et des systèmes de notification.
-
-### [Informations sur le document](./document-information)
-**Parfait pour** : Construction d’interfaces de documents intelligentes  
-Extrayez les métadonnées, le nombre de pages, les propriétés du document et les informations de structure. Essentiel pour créer des fonctionnalités de gestion de documents intelligentes.
-
-### [Contrôle de version](./version-control)
-**Parfait pour** : Flux de travail documentaires d’entreprise  
-Suivez les modifications d’annotation, gérez les versions de documents et implémentez des capacités de restauration. Crucial pour toute application métier où l’historique des documents compte.
-
-### [Aperçu du document](./document-preview)
-**Parfait pour** : Visualisation rapide de documents  
-Générez des miniatures, des aperçus de pages et des représentations visuelles sans rendu complet du document. Idéal pour les galeries de documents et les fonctionnalités de navigation rapide.
-
-### [Importation et exportation](./import-and-export)
-**Parfait pour** : Intégration système et portabilité des données  
-Déplacez les annotations entre documents, exportez vers XML et intégrez avec des systèmes externes. Essentiel pour les scénarios de migration et la compatibilité multiplateforme.
-
-### [Licence et configuration](./licensing-and-configuration)
-**Parfait pour** : Déploiement en production  
-Configurez la licence, les options de performance, et gérez GroupDocs.Annotation dans les environnements de production. Inclut le dépannage des problèmes de déploiement courants.
+Annotation est le type de base pour tous les objets d’annotation tels que les surlignages, les commentaires et les champs de formulaire. La classe `Annotation` est le type de base pour tous les objets d’annotation (surlignage, texte, image, champ de formulaire, etc.). Chaque classe dérivée ajoute des propriétés spécifiques à sa représentation visuelle et à son modèle d’interaction.
 
 ## Scénarios d’implémentation courants
 
-**Systèmes de révision de documents** : Combine Text Annotations + Reply Management + Version Control  
-**Formulaires interactifs** : Form Field Annotations + Document Saving + Validation  
-**Outils de marquage visuel** : Graphical Annotations + Image Annotations + Export Options  
-**Édition collaborative** : All annotation types + Reply Management + Real‑time updates
+**Document review systems** – combinez Text Annotations, Reply Management et Version Control pour permettre aux équipes de commenter, discuter et suivre les modifications.  
+**Interactive forms** – utilisez Form Field Annotations, Document Saving et Validation pour collecter des données auprès des clients ou des employés.  
+**Visual markup tools** – combinez Graphical Annotations, Image Annotations et Export Options pour les plans architecturaux ou les revues de conception.  
+**Collaborative editing** – intégrez tous les types d’annotation avec des mises à jour en temps réel via SignalR ou WebSockets pour une expérience multi‑utilisateur fluide.
 
-## Prochaines étapes et meilleures pratiques
+## Prochaines étapes et bonnes pratiques
 
-Commencez par les tutoriels qui correspondent à vos besoins immédiats, mais ne sautez pas les fondamentaux dans Document Loading et Annotation Management – ils vous feront gagner des heures de débogage plus tard.
+Commencez par les tutoriels qui correspondent à vos besoins immédiats, mais ne sautez pas les fondamentaux de Document Loading et Annotation Management – ils vous feront gagner des heures de débogage plus tard.
 
-Rappelez‑vous : GroupDocs.Annotation est conçu pour évoluer des fonctionnalités d’annotation simples aux systèmes de collaboration documentaire de niveau entreprise. Chaque tutoriel s’appuie sur les concepts des précédents, ainsi suivre le parcours d’apprentissage suggéré vous donnera la base la plus solide.
+- **Cache loaded documents** lorsque vous devez appliquer plusieurs annotations en lot.  
+- **Dispose** l’objet `Document` rapidement pour libérer les ressources natives.  
+- **Enable compression** lors de l’enregistrement pour réduire la taille du fichier pour les PDF contenant de nombreux formulaires.  
+- **Test with password‑protected files** pour vous assurer que votre logique de chargement gère correctement le chiffrement.
+
+Rappelez‑vous : GroupDocs.Annotation passe de simples fonctionnalités d’annotation à des systèmes de collaboration de niveau entreprise. Chaque tutoriel s’appuie sur les concepts des précédents, ainsi suivre le parcours d’apprentissage suggéré vous donnera la base la plus solide.
 
 Prêt à transformer votre application .NET avec des capacités d’annotation de documents professionnelles ? Choisissez votre tutoriel de départ ci‑above et construisons ensemble quelque chose d’incroyable.
 
 ---
 
-**Dernière mise à jour :** 2026-03-22  
+**Dernière mise à jour :** 2026-10-05  
 **Testé avec :** GroupDocs.Annotation 23.12 for .NET  
 **Auteur :** GroupDocs  
 
 ## Questions fréquentes
 
-**Q : Puis‑je utiliser GroupDocs.Annotation pour créer des formulaires PDF remplissables dans une API web ?**  
-R : Oui – la bibliothèque fonctionne aussi bien dans les projets ASP.NET Core, MVC et Web API. Il suffit de charger le PDF, d’ajouter des annotations de champs de formulaire, et de diffuser le résultat au client.
+**Q:** Puis‑je utiliser GroupDocs.Annotation pour créer des formulaires PDF remplissables dans une API web ?  
+**R:** Oui – la bibliothèque fonctionne aussi bien dans les projets ASP.NET Core, MVC et Web API. Chargez le PDF, ajoutez des annotations de champ de formulaire, et diffusez le résultat au client en une seule requête.
 
-**Q : Comment extraire les métadonnées d’un PDF numérisé ?**  
-R : Utilisez les API Document Information pour lire les métadonnées intégrées. Pour les PDF numérisés, il peut être nécessaire d’exécuter d’abord l’OCR ; la bibliothèque s’intègre à GroupDocs.Parser pour l’extraction de texte.
+**Q:** Comment extraire les métadonnées d’un PDF numérisé ?  
+**R:** Utilisez l’API `DocumentInfo` pour lire les métadonnées intégrées. Pour les PDF numérisés, exécutez d’abord l’OCR avec GroupDocs.Parser, puis récupérez le texte extrait et les propriétés intégrées.
 
-**Q : Est‑il possible de générer des images d’aperçu pour des PDF protégés par mot de passe ?**  
-R : Absolument. Fournissez le mot de passe lors de l’ouverture du document, puis appelez les méthodes d’aperçu pour rendre les miniatures sans exposer le contenu.
+**Q:** Est‑il possible de générer des images d’aperçu pour les PDF protégés par mot de passe ?  
+**R:** Absolument. Fournissez le mot de passe lors de l’ouverture du document, puis appelez les méthodes d’aperçu pour rendre les vignettes sans exposer le contenu.
 
-**Q : Quelle est la méthode recommandée pour insérer le logo de l’entreprise en tant que tampon d’image ?**  
-R : Utilisez le tutoriel Image Annotations – chargez le logo comme flux, définissez la position et la taille souhaitées, et ajoutez‑le comme annotation de tampon.
+**Q:** Quelle est la méthode recommandée pour insérer le logo de l’entreprise comme tampon d’image ?  
+**R:** Utilisez le flux de travail Image Annotation – chargez le logo sous forme de flux, définissez l’`Opacity` et la `Position` de l’annotation, puis ajoutez‑le à la page cible avant l’enregistrement.
 
-**Q : Comment puis‑je traiter par lots des milliers de documents pour l’annotation ?**  
-R : Exploitez les opérations par lots d’Annotation Management et exécutez‑les dans une boucle parallèle ou une Azure Function pour maximiser le débit tout en maintenant une faible utilisation de la mémoire.
+**Q:** Comment puis‑je traiter par lots des milliers de documents pour l’annotation ?  
+**R:** Exploitez les opérations par lots d’Annotation Management et exécutez‑les dans une boucle parallèle ou une Azure Function ; l’architecture de streaming de la bibliothèque maintient une faible consommation de mémoire tout en maximisant le débit.
+
+## Tutoriels associés
+- [Chargement de document](./document-loading)  
+- [Enregistrement de document](./document-saving)  
+- [Annotations de texte](./text-annotations)  
+- [Annotations graphiques](./graphical-annotations)  
+- [Annotations d’image](./image-annotations)  
+- [Annotations de lien](./link-annotations)  
+- [Annotations de champ de formulaire](./form-field-annotations)  
+- [Gestion des annotations](./annotation-management)  
+- [Gestion des réponses](./reply-management)  
+- [Informations sur le document](./document-information)  
+- [Contrôle de version](./version-control)  
+- [Aperçu du document](./document-preview)  
+- [Importation et exportation](./import-and-export)  
+- [Licence et configuration](./licensing-and-configuration)

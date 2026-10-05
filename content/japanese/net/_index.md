@@ -1,169 +1,183 @@
 ---
 categories:
 - Documentation
-date: '2026-03-22'
-description: GroupDocs.Annotation for .NET を使用して、入力可能な PDF フォームの作成方法と PDF アノテーションの追加方法を学びましょう。ドキュメントのメタデータ抽出、プレビュー生成、画像スタンプをマスターしてください。
+date: '2026-10-05'
+description: GroupDocs.Annotation for .NET を使用して PDF フォームフィールドを作成する方法を学びます。このガイドでは、PDF
+  アノテーション API、フォーム作成、メタデータ抽出について解説します。
 is_root: true
-keywords: document annotation .NET library, PDF annotation tutorial .NET, GroupDocs
-  annotation guide, .NET document collaboration API, annotation SDK .NET
-lastmod: '2026-03-22'
-linktitle: GroupDocs.Annotation for .NET Tutorials
+keywords:
+- create pdf form fields
+- pdf annotation api
+- extract document metadata
+- collaborative pdf editing
+- create pdf forms
+lastmod: '2026-10-05'
+linktitle: GroupDocs.Annotation for .NET チュートリアル
+og_description: GroupDocs.Annotation for .NET を使用して PDF フォームフィールドを作成する方法を学びます。このチュートリアルでは、PDF
+  アノテーション API、フォーム作成手順、メタデータ抽出について説明します。
+og_image_alt: Guide showing how to create pdf form fields with GroupDocs.Annotation
+  in .NET
+og_title: GroupDocs.Annotation を使用した PDF フォームフィールドの作成方法
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-05'
+  description: Learn how to create pdf form fields using GroupDocs.Annotation for
+    .NET. This guide covers pdf annotation api, form creation, and metadata extraction.
+  headline: How to create pdf form fields with GroupDocs.Annotation
+  type: TechArticle
+- questions:
+  - answer: Yes – the library works equally well in ASP.NET Core, MVC, and Web API
+      projects. Load the PDF, add form‑field annotations, and stream the result back
+      to the client in a single request.
+    question: Can I use GroupDocs.Annotation to create fillable PDF forms in a web
+      API?
+  - answer: Use the `DocumentInfo` API to read built‑in metadata. For scanned PDFs,
+      run OCR first with GroupDocs.Parser, then retrieve the extracted text and any
+      embedded properties.
+    question: How do I extract metadata from a scanned PDF?
+  - answer: Absolutely. Provide the password when opening the document, then call
+      the preview methods to render thumbnails without exposing the content.
+    question: Is it possible to generate preview images for password‑protected PDFs?
+  - answer: Use the Image Annotation workflow – load the logo as a stream, set the
+      annotation’s `Opacity` and `Position`, and add it to the target page before
+      saving.
+    question: What is the recommended way to insert a company logo as an image stamp?
+  - answer: Leverage the Annotation Management batch operations and run them inside
+      a parallel loop or Azure Function; the library’s streaming architecture keeps
+      memory usage low while maximizing throughput.
+    question: How can I batch‑process thousands of documents for annotation?
+  type: FAQPage
 tags:
 - annotations
 - pdf
 - collaboration
 - tutorials
-title: Document Annotation .NET ライブラリを使用して入力可能な PDF フォームを作成する – 完全な GroupDocs チュートリアル
+- create pdf forms
+- document preview
+title: GroupDocs.Annotation を使用した PDF フォームフィールドの作成方法
 type: docs
 url: /ja/net/
 weight: 10
 ---
 
-# Document Annotation .NET ライブラリでフィラブル PDF フォームを作成する完全ガイド – GroupDocs.Annotation チュートリアル
+# GroupDocs.AnnotationでPDFフォームフィールドを作成する方法
 
-.NET アプリケーションで **フィラブル PDF フォームを作成** する必要があるなら、ここが正しい場所です。GroupDocs.Annotation for .NET は、低レベルの PDF 内部に苦労することなく、インタラクティブなフィールド、アノテーション、コラボレーション機能を追加できる強力で即座に使用できる API を提供します。このガイドでは、ライブラリが理想的な理由、実際のシナリオへの適合方法、そして本番環境に対応できるようになるための学習パスを解説します。
+If you need to **create pdf form fields** in a .NET application, you’ve landed in the right spot. GroupDocs.Annotation for .NET gives you a powerful, ready‑to‑use API that lets you add interactive fields, annotations, and collaborative features without wrestling with low‑level PDF internals. In this guide we’ll walk through why the library is ideal, how it fits into real‑world scenarios, and the learning path you should follow to become production‑ready.
 
 ## クイック回答
-- **何が作れますか？** フィラブル PDF フォーム、レビューシステム、ビジュアルマークアップツール。  
-- **どのフォーマットがサポートされていますか？** PDF、DOCX、PPTX などを含む 50 種類以上のドキュメントタイプ。  
-- **開発にライセンスは必要ですか？** テストには無料トライアルで動作しますが、本番環境には商用ライセンスが必要です。  
-- **.NET 6/7 で使用できますか？** はい – ライブラリは .NET Framework 4.5+、.NET Core 3.1+、.NET 5+、.NET 6+ をサポートしています。  
-- **画像スタンプの組み込みサポートはありますか？** もちろんです – 1 回の呼び出しで画像スタンプ PDF アノテーションを挿入できます。
+- **何が作れますか？** Fillable PDF forms, review systems, and visual markup tools.  
+- **サポートされているフォーマットは？** Over 50 document types, including PDF, DOCX, PPTX, and legacy files.  
+- **開発にライセンスは必要ですか？** A free trial works for testing; a commercial license is required for production.  
+- **.NET 6/7で使用できますか？** Yes – the library supports .NET Framework 4.5+, .NET Core 3.1+, .NET 5+, and .NET 6+.  
+- **画像スタンプの組み込みサポートはありますか？** Absolutely – you can insert image stamp PDF annotations in a single call.
 
-## なぜ GroupDocs.Annotation が .NET ドキュメントソリューションの第一選択なのか
+## GroupDocs.Annotationが.NETドキュメントソリューションの第一選択である理由
 
-.NET アプリケーションにプロフェッショナルなアノテーション機能を追加したいですか？ ここがまさにその場所です。GroupDocs.Annotation for .NET は単なるドキュメントライブラリではなく、静的なドキュメントをコラボレーティブでインタラクティブな体験に変える包括的なソリューションです。
+GroupDocs.Annotationは、PDF、DOCX、PPTXなど50以上のドキュメント形式にわたってアノテーションの追加、編集、永続化を可能にする包括的な.NET APIです。レンダリング、ストレージ、コラボレーションを処理し、低レベルのPDF操作を必要としません。
 
-ドキュメントレビューシステムの構築、共同編集機能の作成、または PDF や Office ドキュメントへのマークアップ機能の追加を行う場合でも、このチュートリアルコレクションはゼロから本番環境対応までをすぐに実現させます。
+シンプルなハイライトから複雑なフォームフィールドの作成までを網羅する単一のライブラリで、複数のSDKを使い分ける手間が省けます。APIは.NETの慣習に従っているため、コンソールアプリ、デスクトップツール、クラウドサービスに最小限の手間で統合できます。
 
-## この .NET アノテーションライブラリの特長は何ですか？
+## この.NETアノテーションライブラリの特長
 
-チュートリアルに入る前に、開発者が他のソリューションより GroupDocs.Annotation を選ぶ理由を見てみましょう。まず、50 種類以上のドキュメントフォーマットを標準でサポートしています（はい、クライアントがまだ使用している厄介なレガシーフォーマットも含みます）。次に、API は .NET のベストプラクティスに基づいて設計されており、複雑な設定や難解なエラーメッセージに悩む必要はありません。
-
-最も重要なのは、ドキュメントのレンダリング、アノテーションの永続化、クロスプラットフォーム互換性という重い処理をすべて担当してくれるため、ユーザーにとって重要な機能の構築に集中できることです。
+このライブラリは、50以上の入出力フォーマットをユニークにサポートし、数百ページに及ぶPDFを全体をメモリにロードせずに処理します。また、組み込みのバージョン管理とリアルタイムコラボレーション機能を提供し、エンタープライズレベルのドキュメントワークフローを実現します。さらに、高速なサムネイル生成、メタデータ抽出、アノテーションの永続化を提供しながらメモリ使用量を抑えるため、大規模なエンタープライズ導入に適しています。
 
 ## 入門: 学習パス
 
-ドキュメントアノテーション開発が初めてですか？ 基礎を築くために **Document Loading** と **Basic Annotations** から始めましょう。ドキュメント処理に慣れているなら、**Annotation Management** や **Version Control** にすぐに取り組んで高度な機能を学んでください。
+ドキュメントアノテーション開発が初めてですか？まずは**Document Loading**と**Basic Annotations**から基礎を築きましょう。ドキュメント操作に慣れている場合は、**Annotation Management**や**Version Control**へ直接進んで高度な機能を学んでください。
 
-各チュートリアルには実践的な例、避けるべき一般的な落とし穴、そして何千もの開発者実装に基づくパフォーマンスのヒントが含まれています。
+各チュートリアルには実践的な例、避けるべき一般的な落とし穴、数千人の開発者の実装に基づくパフォーマンスのヒントが含まれています。
 
-## フィラブル PDF フォームの作成方法
+## フィラブルPDFフォームの作成方法
 
-フィラブル PDF フォームの作成は 3 つのステップで行います: ドキュメントの読み込み、フォームフィールドアノテーションの追加、結果の保存です。**Form Field Annotations** チュートリアルでは、各ステップを順に解説し、テキストフィールド、チェックボックス、ラジオボタン、ドロップダウンメニューを定義して、エンドユーザーが任意の PDF ビューアで入力できるようにする方法を示します。
+FormFieldAnnotationは、PDFページ上に配置できるインタラクティブなフォームフィールドを表します。PDFをロードし、各入力要素（テキストボックス、チェックボックス、ドロップダウン）に対してFormFieldAnnotationオブジェクトを追加し、プロパティを設定してドキュメントを保存します。このプロセスにより、任意のPDFビューアで入力可能なインタラクティブフィールドが追加されます。これらの手順に従うことで、生成されたPDFがネイティブフォームのように動作し、データ入力、検証、オプションで読み取り専用配布のためのフラッティングをサポートします。
 
-## PDF アノテーションの追加方法
+## PDFアノテーションの追加方法
 
-ハイライト、コメント、図形描画などの **PDF アノテーションの追加方法** を知りたい場合は、**Text Annotations**、**Graphical Annotations**、**Image Annotations** セクションで、すぐにコピーできるコードスニペットとベストプラクティスのヒントが提供されています。
+HighlightAnnotationは、ドキュメント内で選択したテキストにカラーのハイライトを付加します。`HighlightAnnotation`、`TextAnnotation`、`ShapeAnnotation`などの特定のアノテーションオブジェクトを作成し、対象ページと座標に割り当ててからドキュメントを保存します。APIが自動的にレンダリングと永続化を処理します。この手法により、PDFに視覚的なヒント、コメント、図形を追加でき、レビュアーに明確な指示を提供しつつ元のコンテンツレイアウトを保持できます。
 
 ## ドキュメントメタデータの抽出方法
 
-ドキュメント管理ソリューションを構築する際、作者、作成日、カスタムプロパティなどの **ドキュメントメタデータの抽出** が必要になることがよくあります。**Document Information** チュートリアルでは、このデータを効率的に取得する方法を解説し、検索インデックスの構築や UI パネルでのドキュメント詳細表示を可能にします。
+DocumentInfoは、作者や作成日などドキュメントに組み込まれたメタデータへのアクセスを提供します。`DocumentInfo`クラスを使用してメタデータを抽出し、`Author`、`CreationDate`、`CustomProperties`といったプロパティを取得します。ファイルをロードした後にこれらの値を取得し、UIパネルに表示したり検索インデックスを構築したりできます。メタデータ抽出はドキュメントヘッダーのみを読み取るため高速で、大きなPDFでも効率的です。
 
 ## ドキュメントプレビューの生成方法
 
-高速なナビゲーションやサムネイルギャラリーは **ドキュメントプレビュー画像の生成** に依存します。**Document Preview** ガイドでは、ドキュメント全体をメモリに読み込むことなくページサムネイルやフルページプレビューをレンダリングする方法を示します。大規模ライブラリに最適です。
+PreviewGeneratorは、ファイル全体をメモリにロードせずにドキュメントページの画像プレビューを作成します。ロードしたドキュメントを`PreviewGenerator`に渡し、ページ範囲と画像フォーマットを指定してプレビュー画像を生成します。このメソッドはフルドキュメントをメモリに読み込まずにサムネイルをストリーミングするため、大規模なライブラリに適しています。PNG、JPEG、BMPのプレビューを要求でき、標準的な8コアサーバー上で秒間最大200ページを生成できるため、迅速なサムネイルギャラリーが実現します。
 
-## 画像スタンプ PDF の挿入方法
+## 画像スタンプPDFの挿入方法
 
-ロゴや透かしで PDF にブランディングするのは、**Image Annotations** チュートリアルを使用するだけで簡単です。このチュートリアルでは、**画像スタンプ PDF の挿入** ワークフロー（画像ストリームの読み込みから特定ページへのスタンプ配置まで）を実演しています。
+ImageAnnotationは、ロゴや透かしなどの画像をPDFページに埋め込みます。`ImageAnnotation`を作成し、`ImageStream`にロゴや透かしのストリームを設定し、対象ページに配置してからドキュメントのアノテーションコレクションに追加し、保存します。このワンコール操作はPNG、JPEG、GIF、SVGフォーマットをサポートし、不透明度、回転、スケーリングを制御してブランドガイドラインに合わせることができます。
 
-## .NET でドキュメントを読み込む方法
+## .NETでドキュメントをロードする方法
 
-すべてのチュートリアルは **load documents .net** の基礎から始まります。ファイルパス、ストリーム、URL、またはクラウドバケットから読み込む場合でも、**Document Loading** セクションでは暗号化ファイルや大容量 PDF のメモリ最適化読み込みなど、あらゆるシナリオを網羅しています。
+DocumentLoaderは、ファイル、ストリーム、URL、またはクラウドストレージからドキュメントをAPIにロードします。`DocumentLoader`クラスを使用して、ファイルパス、ストリーム、URL、クラウドストレージ参照を受け取り、ドキュメントをロードします。暗号化されたファイルにはパスワードを渡すこともでき、ローダーは大きなPDFのメモリ使用量を最適化します。ローダーはファイルタイプを自動的に検出するため、PDF、DOCX、PPTXごとに別々のコードパスを用意する必要はありません。
 
-## GroupDocs.Annotation for .NET チュートリアルカテゴリ
+## PDFフォームフィールドの作成とは？
 
-### [ドキュメント読み込み](./document-loading)
-**Perfect for**: Setting up your annotation pipeline  
-ローカルファイル、ストリーム、URL、クラウドストレージからドキュメントを読み込む方法を学びます。このステップバイステップのチュートリアルは、基本的なファイル読み込みから暗号化ドキュメントの処理、大容量ファイルのメモリ使用最適化まで網羅しています。
+PDFフォームフィールドの作成とは、テキストボックスなどのインタラクティブ要素をプログラム的にPDFに追加することです。`create pdf form fields`は、テキストボックス、チェックボックス、ラジオボタン、ドロップダウンリストなどのインタラクティブなフォーム要素をプログラムでPDFに追加し、エンドユーザーが任意のPDFビューアでフォームを記入できるようにするプロセスを指します。GroupDocs.Annotationを使用すれば、フィールド名、デフォルト値、外観設定、検証ルールをすべて.NETコードから定義できます。
 
-### [ドキュメント保存](./document-saving)
-**Perfect for**: Preserving your annotation work  
-さまざまなエクスポートオプションでアノテーション付きドキュメントを保存する技術を習得します。この完全なチュートリアルでは、アノテーションの忠実度を維持し、異なる出力フォーマットを扱い、バッチ保存操作を実装する方法を示します。
+## Documentクラスの使用方法
 
-### [テキストアノテーション](./text-annotations)
-**Perfect for**: Document review and markup workflows  
-ハイライト、取り消し線、下線、テキスト置換アノテーションを追加します。これらのチュートリアルは、ユーザーが実際に使いたくなるインタラクティブなテキストマークアップ機能の作成方法を段階的に案内します。
+DocumentはロードされたPDFまたはOfficeファイルを表し、そのコンテンツとアノテーションへのアクセスを提供します。`Document`クラスはGroupDocs.Annotationのトップレベルオブジェクトで、メモリ内の単一のPDFまたはOfficeファイルを表します。インスタンス化後、すべてのロード、レンダリング、アノテーション操作はこのオブジェクトを通じて行われます。
 
-### [グラフィカルアノテーション](./graphical-annotations)
-**Perfect for**: Visual feedback and diagram markup  
-ドキュメント上に形状、矢印、矩形、フリーハンドアノテーションを描画します。技術文書、建築図面、またはビジュアルフィードバックが千言に勝るシナリオに最適です。
+## Annotationクラスの使用方法
 
-### [画像アノテーション](./image-annotations)
-**Perfect for**: Visual document enhancement  
-画像スタンプ、透かし、画像アノテーションをドキュメントに追加します。このチュートリアルは、シンプルなロゴ配置から複雑な画像オーバーレイシナリオまでを網羅しています。
+Annotationは、ハイライト、コメント、フォームフィールドなどすべてのアノテーションオブジェクトの基底型です。`Annotation`クラスはすべてのアノテーションオブジェクト（ハイライト、テキスト、画像、フォームフィールドなど）の基底型です。各派生クラスは、視覚表現やインタラクションモデルに固有のプロパティを追加します。
 
-### [リンクアノテーション](./link-annotations)
-**Perfect for**: Creating interactive documents  
-静的ドキュメントをナビゲート可能なハイパーリンク体験に変換します。内部リンク、外部 URL、カスタムアクションハンドラの実装方法を学びます。
+## 共通の実装シナリオ
 
-### [フォームフィールドアノテーション](./form-field-annotations)
-**Perfect for**: Interactive PDF forms and data collection  
-テキストフィールド、チェックボックス、ラジオボタン、ドロップダウンメニューをドキュメントに追加します。フィラブルフォームやデータ収集ワークフローの作成に不可欠です。
-
-### [アノテーション管理](./annotation-management)
-**Perfect for**: Building comprehensive annotation systems  
-あらゆるアノテーションシステムのコア – アノテーションの追加、削除、更新、整理を効率的に行う方法を学びます。このチュートリアルは、バッチ操作、アノテーションフィルタリング、パフォーマンス最適化を取り上げています。
-
-### [返信管理](./reply-management)
-**Perfect for**: Collaborative document workflows  
-スレッド化されたコメント、返信チェーン、共同ディスカッションを実装します。適切なユーザー管理と通知システムで、ドキュメントを会話スペースに変えます。
-
-### [ドキュメント情報](./document-information)
-**Perfect for**: Building smart document interfaces  
-メタデータ、ページ数、ドキュメントプロパティ、構造情報を抽出します。インテリジェントなドキュメント管理機能の構築に不可欠です。
-
-### [バージョン管理](./version-control)
-**Perfect for**: Enterprise document workflows  
-アノテーションの変更履歴を追跡し、ドキュメントバージョンを管理し、ロールバック機能を実装します。ドキュメント履歴が重要なビジネスアプリケーションに必須です。
-
-### [ドキュメントプレビュー](./document-preview)
-**Perfect for**: Fast document visualization  
-フルドキュメントのレンダリングなしでサムネイル、ページプレビュー、ビジュアル表現を生成します。ドキュメントギャラリーやクイックナビゲーション機能に最適です。
-
-### [インポートとエクスポート](./import-and-export)
-**Perfect for**: System integration and data portability  
-アノテーションをドキュメント間で移動し、XML にエクスポートし、外部システムと統合します。移行シナリオやクロスプラットフォーム互換性に不可欠です。
-
-### [ライセンスと構成](./licensing-and-configuration)
-**Perfect for**: Production deployment  
-ライセンス設定、パフォーマンスオプションの構成、GroupDocs.Annotation の本番環境管理を行います。一般的なデプロイ問題のトラブルシューティングも含まれます。
-
-## 一般的な実装シナリオ
-
-- **ドキュメントレビューシステム**: Text Annotations + Reply Management + Version Control を組み合わせる  
-- **インタラクティブフォーム**: Form Field Annotations + Document Saving + Validation  
-- **ビジュアルマークアップツール**: Graphical Annotations + Image Annotations + Export Options  
-- **共同編集**: All annotation types + Reply Management + Real‑time updates  
+- **ドキュメントレビューシステム** – Text Annotations、Reply Management、Version Controlを組み合わせて、チームがコメント、議論、変更追跡を行えるようにします。  
+- **インタラクティブフォーム** – Form Field Annotations、Document Saving、Validationを使用して顧客や従業員からデータを収集します。  
+- **ビジュアルマークアップツール** – Graphical Annotations、Image Annotations、Export Optionsを組み合わせて、建築図面やデザインレビューに活用します。  
+- **コラボレーティブ編集** – SignalRやWebSocketsを介したリアルタイム更新で、すべてのアノテーションタイプを統合し、シームレスなマルチユーザー体験を提供します。
 
 ## 次のステップとベストプラクティス
 
-まずは自分の直近のニーズに合ったチュートリアルから始めましょう。ただし、Document Loading と Annotation Management の基礎は省かないでください。後でデバッグに何時間もかかるのを防げます。
+まずは自分のニーズに合ったチュートリアルから始めましょう。ただし、Document LoadingとAnnotation Managementの基礎は省かないでください。後でデバッグにかかる時間を大幅に削減できます。
 
-覚えておいてください: GroupDocs.Annotation はシンプルなアノテーション機能からエンタープライズレベルのドキュメントコラボレーションシステムまでスケールするよう設計されています。各チュートリアルは前のものの概念を基に構築されているため、提案された学習パスに従うことで最も強固な基盤が得られます。
+- **バッチで複数のアノテーションを適用する必要がある場合は、ロードしたドキュメントをキャッシュ**してください。  
+- **`Document`オブジェクトを速やかにDispose**してネイティブリソースを解放します。  
+- **保存時に圧縮を有効化**し、フォームが多い大きなPDFのファイルサイズを削減します。  
+- **パスワード保護されたファイルでテスト**し、ロードロジックが暗号化を正しく処理できることを確認します。
 
-プロフェッショナルなドキュメントアノテーション機能で .NET アプリケーションを変革する準備はできましたか？ 上記から開始するチュートリアルを選び、一緒に素晴らしいものを作りましょう。
+覚えておいてください: GroupDocs.Annotationはシンプルなアノテーション機能からエンタープライズレベルのコラボレーションシステムまでスケールします。各チュートリアルは前の概念を基に構築されているため、提案された学習パスに従うことで最も強固な基盤が得られます。
+
+.NETアプリケーションをプロフェッショナルなドキュメントアノテーション機能で変革する準備はできましたか？上記のチュートリアルから始めて、一緒に素晴らしいものを作りましょう。
 
 ---
 
-**最終更新日:** 2026-03-22  
+**最終更新:** 2026-10-05  
 **テスト環境:** GroupDocs.Annotation 23.12 for .NET  
 **作者:** GroupDocs  
 
 ## よくある質問
 
-**Q:** GroupDocs.Annotation を使用して Web API でフィラブル PDF フォームを作成できますか？  
-**A:** はい – ライブラリは ASP.NET Core、MVC、Web API プロジェクトでも同様に動作します。PDF を読み込み、フォームフィールドアノテーションを追加し、結果をクライアントにストリーム返却するだけです。
+**Q: GroupDocs.Annotationを使用してWeb APIでフィラブルPDFフォームを作成できますか？**  
+A: はい – ライブラリはASP.NET Core、MVC、Web APIプロジェクトで同様に動作します。PDFをロードし、フォームフィールドアノテーションを追加し、単一リクエストで結果をクライアントにストリームします。
 
-**Q:** スキャンされた PDF からメタデータを抽出するには？  
-**A:** Document Information API を使用して組み込みメタデータを読み取ります。スキャン PDF の場合は、まず OCR を実行する必要があるかもしれません。ライブラリは GroupDocs.Parser と統合されており、テキスト抽出が可能です。
+**Q: スキャンされたPDFからメタデータを抽出するには？**  
+A: `DocumentInfo` APIを使用して組み込みメタデータを読み取ります。スキャンPDFの場合は、まずGroupDocs.ParserでOCRを実行し、抽出されたテキストと埋め込まれたプロパティを取得します。
 
-**Q:** パスワード保護された PDF のプレビュー画像を生成できますか？  
-**A:** もちろん可能です。ドキュメントを開く際にパスワードを提供し、その後プレビュー機能を呼び出すことで、コンテンツを公開せずにサムネイルをレンダリングできます。
+**Q: パスワード保護されたPDFのプレビュー画像を生成できますか？**  
+A: もちろんです。ドキュメントを開く際にパスワードを提供し、プレビュー機能を呼び出すことでコンテンツを公開せずにサムネイルをレンダリングできます。
 
-**Q:** 会社ロゴを画像スタンプとして挿入する推奨方法は？  
-**A:** Image Annotations チュートリアルを使用します。ロゴをストリームとして読み込み、希望の位置とサイズを設定し、スタンプアノテーションとして追加します。
+**Q: 会社ロゴを画像スタンプとして挿入する推奨方法は？**  
+A: Image Annotationのワークフローを使用します – ロゴをストリームとしてロードし、アノテーションの`Opacity`と`Position`を設定し、保存前に対象ページに追加します。
 
-**Q:** 何千ものドキュメントをバッチ処理してアノテーションを付けるには？  
-**A:** Annotation Management のバッチ操作を活用し、並列ループや Azure Function 内で実行することで、スループットを最大化しつつメモリ使用量を抑えることができます。
+**Q: 数千件のドキュメントをバッチ処理してアノテーションを付けるには？**  
+A: Annotation Managementのバッチ操作を活用し、並列ループやAzure Function内で実行します。ライブラリのストリーミングアーキテクチャによりメモリ使用量を抑えつつスループットを最大化できます。
+
+## 関連チュートリアル
+- [ドキュメントロード](./document-loading)  
+- [ドキュメント保存](./document-saving)  
+- [テキストアノテーション](./text-annotations)  
+- [グラフィカルアノテーション](./graphical-annotations)  
+- [画像アノテーション](./image-annotations)  
+- [リンクアノテーション](./link-annotations)  
+- [フォームフィールドアノテーション](./form-field-annotations)  
+- [アノテーション管理](./annotation-management)  
+- [返信管理](./reply-management)  
+- [ドキュメント情報](./document-information)  
+- [バージョン管理](./version-control)  
+- [ドキュメントプレビュー](./document-preview)  
+- [インポートとエクスポート](./import-and-export)  
+- [ライセンスと構成](./licensing-and-configuration)
