@@ -110,17 +110,13 @@ Displaying a thumbnail or preview of a PDF improves user experience by letting u
 The easiest way to add GroupDocs.Annotation to your project is through NuGet. Here are the three supported methods:
 
 **Option 1: Package Manager Console**  
-```csharp
 ```bash
 Install-Package GroupDocs.Annotation -Version 25.4.0
 ```
-```
 
 **Option 2: .NET CLI**  
-```csharp
 ```bash
 dotnet add package GroupDocs.Annotation --version 25.4.0
-```
 ```
 
 **Option 3: Visual Studio Package Manager UI**  
@@ -142,12 +138,10 @@ GroupDocs.Annotation requires a license for production, but you can start develo
 Create a new console app (or integrate into an existing service) to try out the preview API:
 
 ```csharp
-```csharp
 using System;
 using System.IO;
 using GroupDocs.Annotation;
 using GroupDocs.Annotation.Options;
-```
 ```
 
 > **Definition anchor:** The `Annotator` class is the central entry point of GroupDocs.Annotation, providing methods for loading PDFs, generating previews, and applying annotations.
@@ -160,28 +154,23 @@ using GroupDocs.Annotation.Options;
 Set the input PDF path and the folder where the generated PNG files will be saved. Ensure the output directory exists and is writable.
 
 ```csharp
-```csharp
 var documentPath = @"YOUR_DOCUMENT_DIRECTORY"; // Replace with your document path
 var outputDirectory = @"YOUR_OUTPUT_DIRECTORY/"; // Replace with your desired output directory
-```
 ```
 
 #### How do you initialize the Annotator for preview generation?
 Wrap the `Annotator` instance in a `using` block so resources are released automatically, which prevents memory leaks when processing many documents.
 
 ```csharp
-```csharp
 using (Annotator annotator = new Annotator(documentPath))
 {
     // All our preview generation code goes here
 }
 ```
-```
 
 #### How can you configure preview generation options?
 Create a `PreviewOptions` object, choose `PreviewFormat.Png`, specify the desired page numbers, and optionally set image dimensions.
 
-```csharp
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 {
@@ -192,7 +181,6 @@ PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 previewOptions.PreviewFormat = PreviewFormats.PNG; // Set the format of the previews to PNG.
 previewOptions.PageNumbers = new int[] { 1, 2, 3, 4 }; // Specify which pages to generate previews for.
 ```
-```
 
 > **Definition anchor:** `PreviewOptions` holds all settings that control how each PDF page is rendered to an image, such as format, size, and page selection.
 
@@ -200,15 +188,12 @@ previewOptions.PageNumbers = new int[] { 1, 2, 3, 4 }; // Specify which pages to
 Call `GeneratePreview` on the `Annotator` instance, passing the input file, output folder, and your `PreviewOptions`. The method streams each requested page, writes the PNG files, and returns a list of generated file paths.
 
 ```csharp
-```csharp
 annotator.Document.GeneratePreview(previewOptions); // Generate previews based on configured options.
-```
 ```
 
 ### Complete working example
 Below is a ready‑to‑run method that puts all the pieces together:
 
-```csharp
 ```csharp
 public void GeneratePdfPagePreviews(string pdfPath, string outputDir, int[] pageNumbers)
 {
@@ -227,7 +212,6 @@ public void GeneratePdfPagePreviews(string pdfPath, string outputDir, int[] page
     }
 }
 ```
-```
 
 ## Common issues and how to solve them
 
@@ -235,7 +219,6 @@ public void GeneratePdfPagePreviews(string pdfPath, string outputDir, int[] page
 **Problem:** “Directory not found” or “Access denied” when saving preview images.  
 **Solution:** Verify the output folder exists and grant write permissions, or let the code create it automatically:
 
-```csharp
 ```csharp
 public bool EnsureDirectoryExists(string path)
 {
@@ -255,13 +238,11 @@ public bool EnsureDirectoryExists(string path)
     return true;
 }
 ```
-```
 
 ### Handling invalid page numbers
 **Problem:** Requesting a page that doesn’t exist throws an exception.  
 **Solution:** Retrieve the total page count first and validate the requested range:
 
-```csharp
 ```csharp
 public int[] ValidatePageNumbers(Annotator annotator, int[] requestedPages)
 {
@@ -271,13 +252,11 @@ public int[] ValidatePageNumbers(Annotator annotator, int[] requestedPages)
     return requestedPages.Where(page => page > 0 && page <= maxPages).ToArray();
 }
 ```
-```
 
 ### Memory issues with large PDFs
 **Problem:** Out‑of‑memory errors when processing huge PDFs.  
 **Solution:** Process pages in smaller batches and dispose of each `Annotator` instance promptly:
 
-```csharp
 ```csharp
 public void GeneratePreviewsInBatches(string pdfPath, string outputDir, int[] pageNumbers, int batchSize = 10)
 {
@@ -291,14 +270,12 @@ public void GeneratePreviewsInBatches(string pdfPath, string outputDir, int[] pa
     }
 }
 ```
-```
 
 ## Real‑world implementation scenarios
 
 ### Scenario 1: Document management system
 Generate a first‑page thumbnail automatically when a user uploads a PDF, cache the image, and display it in the file list.
 
-```csharp
 ```csharp
 public void GenerateDocumentThumbnail(string pdfPath, string thumbnailPath)
 {
@@ -316,7 +293,6 @@ public void GenerateDocumentThumbnail(string pdfPath, string thumbnailPath)
     }
 }
 ```
-```
 
 ### Scenario 2: E‑commerce product manuals
 Create previews for the table of contents and key specification pages, then serve them as lightweight JPEGs for faster page loads.
@@ -330,16 +306,13 @@ Show watermarked preview images of selected textbook pages (e.g., every 10th pag
 Process multiple pages in one batch, run the operation asynchronously in web apps, and cache results to avoid duplicate work.
 
 ```csharp
-```csharp
 // Efficient: Single call for multiple pages
 previewOptions.PageNumbers = new int[] { 1, 2, 3, 4, 5 };
 
 // Inefficient: Multiple calls
 // Don't do this in production!
 ```
-```
 
-```csharp
 ```csharp
 public async Task<bool> GeneratePreviewsAsync(string pdfPath, string outputDir, int[] pageNumbers)
 {
@@ -357,9 +330,7 @@ public async Task<bool> GeneratePreviewsAsync(string pdfPath, string outputDir, 
     });
 }
 ```
-```
 
-```csharp
 ```csharp
 public bool PreviewExists(string outputDir, int pageNumber)
 {
@@ -367,21 +338,17 @@ public bool PreviewExists(string outputDir, int pageNumber)
     return File.Exists(previewPath);
 }
 ```
-```
 
 ### Memory management best practices
 Always wrap `Annotator` and any other `IDisposable` objects in `using` statements, and limit the number of concurrent preview jobs.
 
-```csharp
 ```csharp
 using (Annotator annotator = new Annotator(documentPath))
 {
     // Your code here
 } // Automatic disposal happens here
 ```
-```
 
-```csharp
 ```csharp
 private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(3); // Max 3 concurrent operations
 
@@ -398,14 +365,12 @@ public async Task ProcessWithLimiting(string pdfPath, string outputDir, int[] pa
     }
 }
 ```
-```
 
 ## Advanced features and customization
 
 ### How do you control preview image quality?
 Adjust the `Width`, `Height`, and `Resolution` properties in `PreviewOptions` to balance clarity against file size.
 
-```csharp
 ```csharp
 PreviewOptions previewOptions = new PreviewOptions(pageNumber =>
 {
@@ -418,12 +383,10 @@ previewOptions.Width = 800;  // Custom width
 previewOptions.Height = 1000; // Custom height
 previewOptions.PageNumbers = new int[] { 1, 2, 3 };
 ```
-```
 
 ### How can you switch from PNG to JPEG for smaller files?
 `PreviewFormats` is an enumeration that specifies the image format (PNG, JPEG, etc.) for generated previews.  
 
-```csharp
 ```csharp
 // For high-quality previews (larger files)
 previewOptions.PreviewFormat = PreviewFormats.PNG;
@@ -431,12 +394,10 @@ previewOptions.PreviewFormat = PreviewFormats.PNG;
 // For smaller files (web-optimized)
 previewOptions.PreviewFormat = PreviewFormats.JPEG;
 ```
-```
 
 ### How should you handle errors and logging in production?
 Wrap preview calls in try‑catch blocks, log detailed exceptions, and return user‑friendly messages.
 
-```csharp
 ```csharp
 public PreviewGenerationResult GeneratePreviewsWithErrorHandling(
     string pdfPath, string outputDir, int[] pageNumbers)
@@ -486,14 +447,12 @@ public class PreviewGenerationResult
     public int[] GeneratedPages { get; set; }
 }
 ```
-```
 
 ## Testing your pdf page preview generator
 
 ### How do you unit‑test the preview logic?
 Mock the file system, invoke the preview method with a known PDF, and assert that the expected image files are created.
 
-```csharp
 ```csharp
 [Test]
 public void Should_GeneratePreviewsForValidPages()
@@ -511,12 +470,10 @@ public void Should_GeneratePreviewsForValidPages()
     Assert.AreEqual(2, result.GeneratedPages.Length);
 }
 ```
-```
 
 ### How can you benchmark performance under load?
 Use a stopwatch around the preview call, run the method in parallel for many PDFs, and record average execution time and memory usage.
 
-```csharp
 ```csharp
 [Test]
 public void Should_HandleMultipleSimultaneousRequests()
@@ -531,7 +488,6 @@ public void Should_HandleMultipleSimultaneousRequests()
     var completed = Task.WaitAll(tasks.ToArray(), TimeSpan.FromSeconds(30));
     Assert.IsTrue(completed, "All tasks should complete within 30 seconds");
 }
-```
 ```
 
 ## When to use this pdf preview generator
@@ -564,7 +520,6 @@ You now have a complete, production‑ready approach for **pdf page to image** c
 A: Retrieve the document’s `PageCount`, build an integer array covering the full range, and pass it to `PreviewOptions.PageNumbers`.  
 
 ```csharp
-```csharp
 using (Annotator annotator = new Annotator(pdfPath))
 {
     var documentInfo = annotator.Document.GetDocumentInfo();
@@ -573,16 +528,13 @@ using (Annotator annotator = new Annotator(pdfPath))
     // Use allPages in your PreviewOptions
 }
 ```
-```
 
 **Q: Can I control the output image quality and size?**  
 A: Yes. Set `Width`, `Height`, and `Resolution` on `PreviewOptions` to fine‑tune the balance between clarity and file size.  
 
 ```csharp
-```csharp
 previewOptions.Width = 600;   // Custom width in pixels
 previewOptions.Height = 800;  // Custom height in pixels
-```
 ```
 
 **Q: What's the best image format for web applications?**  
@@ -592,12 +544,10 @@ A: PNG offers lossless quality, ideal for detailed previews; JPEG reduces file s
 `LoadOptions` allows you to provide additional settings such as a password when opening a protected PDF.  
 
 ```csharp
-```csharp
 using (Annotator annotator = new Annotator(pdfPath, new LoadOptions { Password = "your_password" }))
 {
     // Generate previews as normal
 }
-```
 ```
 
 **Q: What happens if I specify invalid page numbers?**  
@@ -639,9 +589,3 @@ A: A commercial GroupDocs.Annotation license is required. Options include develo
 - [Generate Document Previews Without Comments in .NET](/annotation/net/document-preview/groupdocs-annotation-net-document-preview-no-comments/)
 - [Get PDF Page Size – Document Metadata Extraction .NET](/annotation/net/document-information/)
 - [GroupDocs.Annotation .NET Tutorial: extract pdf pages](/annotation/net/annotation-management/groupdocs-annotation-dotnet-page-range-management/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
