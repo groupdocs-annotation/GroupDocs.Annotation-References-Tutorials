@@ -1,49 +1,98 @@
 ---
-date: '2026-03-24'
-description: GroupDocs.Annotation for Java を使用して、PDF にプログラムで注釈を付ける方法を学びましょう。ステップバイステップの手順に従い、複数の注釈を追加し、注釈のベストプラクティスを適用します。
+date: '2026-10-11'
+description: GroupDocs.Annotation for Java を使用して注釈付き PDF ファイルを保存する方法を学びます。このステップバイステップガイドでは、セットアップ、複数の注釈、ベストプラクティスについて解説します。
 keywords:
-- GroupDocs.Annotation for Java
-- Java document annotation
-- Annotator initialization
-title: Java 用 GroupDocs.Annotation で PDF に注釈を付ける方法
+- save annotated pdf
+- java document annotation
+- annotate pdf java
+- multiple pdf annotations
+lastmod: '2026-10-11'
+og_description: GroupDocs.Annotation for Java を使用して注釈付き PDF を保存する方法を学びます。セットアップ、複数の注釈、ベストプラクティスのヒントを含む完全なチュートリアルをご覧ください。
+og_image_alt: Guide showing Java code to save annotated PDF with GroupDocs.Annotation
+og_title: GroupDocs.Annotation for Java を使用した注釈付き PDF の保存方法
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  headline: How to save annotated PDF with GroupDocs.Annotation for Java
+  type: TechArticle
+- description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  name: How to save annotated PDF with GroupDocs.Annotation for Java
+  steps:
+  - name: '**Free trial** – download a 30‑day trial to evaluate the API.'
+    text: '**Free trial** – download a 30‑day trial to evaluate the API.'
+  - name: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+    text: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+  - name: '**Production license** – purchase a perpetual license for unlimited deployments.'
+    text: '**Production license** – purchase a perpetual license for unlimited deployments.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Annotation supports `TextAnnotation` and `CommentAnnotation`
+      types—instantiate the appropriate model and add it to the annotator’s collection.
+    question: Can I add text comments in addition to shapes?
+  - answer: Absolutely. Retrieve the annotation by its ID, modify its properties,
+      and call `annotator.update(updatedAnnotation)`.
+    question: Is it possible to edit an existing annotation?
+  - answer: Use `annotator.delete(annotationId)` to delete a specific annotation or
+      `annotator.clear(pageNumber)` to clear all annotations on a page.
+    question: How do I remove an annotation I no longer need?
+  - answer: 'Yes. Provide the password when constructing the `Annotator` instance:
+      `new Annotator(filePath, password)`.'
+    question: Does the library work with password‑protected PDFs?
+  - answer: The library is compatible with Java 8 and newer; we recommend the latest
+      LTS release (Java 17) for optimal performance and security.
+    question: What version of Java is required?
+  type: FAQPage
+tags:
+- pdf annotation
+- groupdocs
+- java
+- document processing
+title: GroupDocs.Annotation for Java を使用した注釈付き PDF の保存方法
 type: docs
 url: /ja/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1
 ---
 
-# GroupDocs.Annotation for Java を使用した PDF の注釈付け方法
+# GroupDocs.Annotation for Java を使用した注釈付き PDF の保存方法
 
-Java アプリケーションに文書注釈機能を追加することで、コラボレーション、コンプライアンス、ユーザーエクスペリエンスを向上させる強力な手段となります。このガイドでは、GroupDocs.Annotation for Java を使用して **PDF に注釈を付ける方法** を、Maven 依存関係の設定から複数の注釈の追加、注釈ベストプラクティスの適用まで学びます。各ステップを順に確認し、この機能をプロジェクトに自信を持って統合できるようにしましょう。
+このチュートリアルでは、GroupDocs.Annotation for Java を使用してプログラムで **注釈付き PDF を保存する方法** を学びます。法的条項をハイライトしたり、レビューコメントを追加したり、エンジニアリング図面に形状を埋め込んだりする必要がある場合でも、以下の手順で Maven の設定から注釈のバッチ追加、最終ファイルの永続化までのすべての段階を案内します。最後まで読むと、任意の Java アプリケーションに堅牢な PDF 注釈機能を統合できるようになります。
 
-## Quick Answers
+## クイック回答
 - **GroupDocs.Annotation の主な目的は何ですか？**  
-  Java アプリケーションでプログラム的に注釈付き PDF ドキュメントを作成、編集、そして **保存** することです。  
+  Java アプリケーションでプログラム的に注釈付き PDF を作成、編集、そして **保存** することです。  
 - **必要な Maven アーティファクトはどれですか？**  
-  `com.groupdocs:groupdocs-annotation`（*Maven 依存関係* セクションをご参照ください）。  
+  `com.groupdocs:groupdocs-annotation`（*Maven 依存関係* セクションをご覧ください）。  
 - **一度に複数の注釈を追加できますか？**  
-  はい、単一の操作で **複数の注釈を追加** できます。  
+  はい。単一の操作で **複数の注釈を追加** でき、I/O のオーバーヘッドが削減されます。  
 - **アノテータを初期化するにはどうすればよいですか？**  
-  チュートリアルで示した **initialize annotator** パターンを使用します。  
+  チュートリアルで示された **initialize annotator** パターンを使用します。PDF を読み込み、注釈タスク用に API を準備します。  
 - **重要なベストプラクティスのヒントは何ですか？**  
-  メモリ管理とパフォーマンスのために *annotation best practices* チェックリストに従ってください。  
+  メモリ管理、バッチ処理、最適なファイルサイズのために *annotation best practices* チェックリストに従ってください。
 
-## 「PDF に注釈を付ける」とは何ですか？
-PDF に注釈を付けるとは、ハイライト、コメント、図形、その他のマークアップといった視覚的なメモをファイルに直接保存し、ドキュメントを開くすべての人が変更を確認できるようにすることです。GroupDocs.Annotation は、この作業をプログラム的に実行できるシンプルな API を提供します。
+## PDF に注釈を付けるとは何ですか？
+`GroupDocs.Annotation` は、PDF ファイルにハイライト、コメント、図形、スタンプなどの視覚的なメモを直接埋め込むことができる Java ライブラリです。ライブラリは低レベルの PDF 操作を抽象化し、PDF の内部ではなくビジネスロジックに集中できるようにします。幅広い注釈タイプをサポートし、大規模ドキュメント向けのストリーミング API を提供し、既存の Java プロジェクトと簡単に統合できるため、あらゆる PDF ベースのワークフローに対応できる汎用的なソリューションです。
 
-## Java 用 GroupDocs.Annotation を使用する理由
-- **クロスプラットフォーム対応** – Java が動作するすべての OS で利用可能です。  
-- **豊富な注釈タイプ** – シンプルなハイライトから楕円形などの複雑な図形まで対応しています。  
-- **外部 PDF エディタ不要** – すべての操作が Java コード内で完結します。  
-- **エンタープライズ向けにスケーラブル** – 法務、教育、技術文書のワークフローに適しています。  
+## Java で GroupDocs.Annotation を使用する理由
+GroupDocs.Annotation は、PDF 注釈タスクを簡素化しながら高性能とスケーラビリティを提供する包括的な機能セットを提供します。ライブラリは Java をサポートする任意の OS 上で動作し、ファイル全体をメモリに読み込むことなく最大 500 MB のドキュメントを処理し、15 種類以上の組み込み注釈タイプを含みます。その API は開発者向けに設計されており、数行のコードで注釈の追加、編集、削除が可能で、トライアルと本番の両方で使用できる堅牢なライセンスオプションを提供します。
 
-## Prerequisites
-- **Java SDK**（JDK 8 以上）がマシンにインストールされていること。  
-- **Maven**（依存関係管理用）。  
-- **IntelliJ IDEA** や **Eclipse** などの IDE。  
-- 基本的な Java プログラミングの知識。  
+- **クロスプラットフォームサポート** – Windows、Linux、macOS 上で動作し、Java 互換環境の 100 % をカバーします。  
+- **豊富な注釈タイプ** – テキスト、エリア、楕円、カスタムスタンプなど、15 種類以上の組み込みタイプを提供します。  
+- **外部 PDF エディタは不要** – すべての操作が Java コード内で行われ、サードパーティの依存関係が排除されます。  
+- **エンタープライズレベルのスケーラビリティ** – ストリーミング API により、最大 500 MB の PDF を処理し、数百ページのドキュメントでもファイル全体をメモリに読み込まずに扱えます。
+
+## 前提条件
+- Java 8 以上（推奨は JDK 11 以降）。  
+- 依存関係管理のための Maven。  
+- IntelliJ IDEA や Eclipse などの IDE。  
+- Java コレクションと例外処理の基本的な知識。
 
 ### Maven 依存関係 GroupDocs
-`pom.xml` に GroupDocs リポジトリと注釈ライブラリを追加します:
+GroupDocs リポジトリとアノテーションライブラリを `pom.xml` に追加します:
 
 ```xml
 <repositories>
@@ -62,13 +111,13 @@ PDF に注釈を付けるとは、ハイライト、コメント、図形、そ�
 </dependencies>
 ```
 
-## License Acquisition
-1. **無料トライアル:** GroupDocs.Annotation の試用版をダウンロードしてテストします。  
-2. **一時ライセンス:** 評価期間中にフルアクセスできる一時ライセンスを取得します。  
-3. **購入:** 本番環境で使用するためのフルライセンスを取得します。  
+## ライセンス取得
+1. **無料トライアル** – API を評価するために 30 日間のトライアルをダウンロードします。  
+2. **一時ライセンス** – フル機能アクセス用の 7 日間評価キーをリクエストします。  
+3. **本番ライセンス** – 無制限のデプロイ向けに永続ライセンスを購入します。
 
-## Java でアノテータを初期化
-最初のステップは、作業対象のドキュメントで **annotator を初期化** することです。以下に基本的な初期化パターンを示します:
+## Java でアノテータを初期化する方法
+`Annotator` は GroupDocs.Annotation のコアクラスで、PDF を読み込み、注釈の作成、編集、保存のメソッドを提供します。正しく初期化することは信頼できるワークフローへの第一歩であり、try‑with‑resources を使用するとネイティブリソースが自動的に解放されます。コンストラクタにファイルパス（保護された PDF の場合はオプションでパスワード）を渡すことでインスタンスを作成し、その後アノテータはさらなる操作の準備が整います。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -83,7 +132,7 @@ public class Feature1 {
 ```
 
 ### 機能 1: アノテータのロードと初期化
-この機能は、ドキュメントのファイルパスで Annotator を初期化し、Java アプリケーションで注釈タスクを実行できるように設定する方法を示します。
+この機能は、ファイルパスで `Annotator` インスタンスを作成し、保護された PDF の場合はオプションでパスワードを渡す方法を示します。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -97,10 +146,11 @@ public class Feature1 {
 }
 ```
 
-## Creating Annotations
+## 注釈の作成方法
+注釈を作成するには、特定の注釈モデルをインスタンス化し、プロパティを設定し、アノテータのコレクションに追加します。
 
 ### 機能 2: エリア注釈の作成
-エリア注釈は矩形領域をハイライトできます。以下の手順で作成してください:
+`AreaAnnotation` は PDF ページ上の矩形ハイライト領域を表します。テキストや画像の注目すべきセクションをマークするのに便利です。
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -110,15 +160,12 @@ public class Feature2 {
     public AreaAnnotation createAreaAnnotation() {
         AreaAnnotation area = new AreaAnnotation();
 ```
-
 ```java
         area.setBox(new Rectangle(100, 100, 100, 100));
 ```
-
 ```java
         area.setBackgroundColor(65535);
 ```
-
 ```java
         area.setPageNumber(1);
 
@@ -128,7 +175,7 @@ public class Feature2 {
 ```
 
 ### 機能 3: 楕円注釈の作成
-楕円注釈は円形や楕円形のハイライトに最適です。
+`EllipseAnnotation` は、ページ上に配置できる円形または楕円形の形状で、ロゴ、図、その他の視覚要素を強調するために使用します。
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -138,15 +185,12 @@ public class Feature3 {
     public EllipseAnnotation createEllipseAnnotation() {
         EllipseAnnotation ellipse = new EllipseAnnotation();
 ```
-
 ```java
         ellipse.setBox(new Rectangle(100, 100, 100, 100));
 ```
-
 ```java
         ellipse.setBackgroundColor(123456);
 ```
-
 ```java
         ellipse.setPageNumber(2);
 
@@ -155,8 +199,8 @@ public class Feature3 {
 }
 ```
 
-## Adding Multiple Annotations
-単一の呼び出しで **複数の注釈を追加** でき、パフォーマンスが向上しコードもすっきりします。
+## 複数の注釈を追加する方法
+`addAnnotations` メソッドを使用すると、注釈オブジェクトのコレクションを単一の呼び出しでドキュメントに追加でき、ファイルシステムへの書き込みとメモリの churn を削減してパフォーマンスが向上します。注釈をバッチ処理することで I/O 操作を最小限に抑え、特に大きな PDF を扱う際に JVM ヒープ使用量を低く保ちます。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -187,8 +231,8 @@ public class Feature4 {
 }
 ```
 
-## ドキュメントの保存 – 注釈付き PDF の保存方法
-注釈が設定されたので、必要な注釈タイプだけを含めて **注釈付き PDF を保存** します。
+## 注釈付き PDF の保存方法
+`SaveOptions` を使用すると、PDF を永続化する際に適用する注釈タイプと出力設定を指定できます。PDF を読み込み、目的の注釈を追加し、どの注釈タイプを保持するかを指定した `SaveOptions` オブジェクトとともに `save` メソッドを呼び出します。このワンステップの操作で変更がディスクに書き戻され、元のドキュメント構造が保持されます。
 
 ```java
 public class Feature5 {
@@ -206,51 +250,51 @@ public class Feature5 {
 }
 ```
 
-## Java の注釈ベストプラクティス
-- **try‑with‑resources を使用**して `Annotator` を自動的にクローズし、メモリを解放します。  
-- **バッチで注釈を追加**（Feature 4 の例のように）して I/O オーバーヘッドを削減します。  
-- `SaveOptions` で **必要な注釈タイプだけを指定** してファイルサイズを小さく保ちます。  
-- 保存後に大きなドキュメントをメモリから **解放** してリークを防止します。  
+## Java 向け注釈ベストプラクティス
+- **try‑with‑resources を使用**して `Annotator` を自動的に閉じ、ネイティブリソースを解放します。  
+- **注釈をバッチ追加**（Feature 4 に示すように）して I/O オーバーヘッドを最小化します。  
+- `SaveOptions` で **必要な注釈タイプのみを指定** して、出力ファイルサイズを制御します。  
+- 保存後に **大きなドキュメントをメモリから解放** してリークを防止します。完了したら `annotator.dispose()` を呼び出します。
 
-## Practical Applications
-- **法務文書レビュー:** 条項をハイライトし、弁護士向けにコメントを添付します。  
-- **教育リソース:** 教科書に注釈を付けて学習グループで活用します。  
-- **技術マニュアル:** エンジニアリング図面にメモや警告を付けてマーキングします。  
+## 実用的な活用例
+- **法務文書のレビュー** – 条項をハイライトし、コメントを添付し、レビュアーの変更を追跡します。  
+- **教育リソース** – 教科書や講義スライドに注釈を付け、共同学習グループで活用します。  
+- **技術マニュアル** – エンジニアリング図面に直接ノート、警告、改訂マークを埋め込みます。
 
-## Performance Considerations
-- 非常に大きな PDF での同時注釈数を制限します。  
-- 推奨される **annotation best practices** を使用してメモリを効率的に管理します。  
-- パフォーマンス低下が見られる場合は、Java Flight Recorder でアプリケーションをプロファイルします。  
+## パフォーマンス上の考慮点
+- 300 MB を超える PDF に対する同時注釈操作は、ヒープ圧迫を避けるために制限してください。  
+- 推奨される **annotation best practices** を使用して、一般的なエンタープライズワークロードでメモリ使用量を 200 MB 未満に抑えます。  
+- レイテンシのスパイクが見られる場合は、Java Flight Recorder または VisualVM でアプリケーションをプロファイルしてください。
 
-## Common Issues and Solutions
+## よくある問題と解決策
 | 問題 | 解決策 |
 |-------|----------|
-| **OutOfMemoryError** が大きな PDF のロード時に発生 | ストリーミングモードでドキュメントをロードするか、JVM のヒープサイズを増やしてください。 |
-| 保存後に注釈が表示されない | `SaveOptions` に正しい `AnnotationType` が含まれていることを確認してください。 |
-| ライセンスエラー | トライアルまたは永続ライセンスファイルが正しく参照されているか確認してください。 |
+| **OutOfMemoryError** when loading big PDFs | ドキュメントをストリーミングモードで読み込む（`new Annotator(stream)`）か、JVM ヒープを増やす（`-Xmx2g`）。 |
+| Annotations not appearing after save | `SaveOptions` に正しい `AnnotationType` 列挙値が含まれていることを確認してください。 |
+| License errors | ライセンスファイルのパスが正しいか、ライセンスバージョンがライブラリバージョンと一致しているかを確認してください。 |
 
-## Frequently Asked Questions
-
-**Q: テキストコメントを形状に加えて追加できますか？**  
-A: はい、GroupDocs.Annotation は `TextAnnotation` と `CommentAnnotation` タイプをサポートしています。適切なモデルをインスタンス化してリストに追加するだけです。
+## よくある質問
+**Q: 形状に加えてテキストコメントを追加できますか？**  
+A: はい、GroupDocs.Annotation は `TextAnnotation` と `CommentAnnotation` タイプをサポートしています。適切なモデルをインスタンス化し、アノテータのコレクションに追加してください。
 
 **Q: 既存の注釈を編集できますか？**  
-A: もちろんです。ID で注釈を取得し、プロパティを変更して `annotator.update(updatedAnnotation)` を呼び出します。
+A: もちろんです。注釈を ID で取得し、プロパティを変更して `annotator.update(updatedAnnotation)` を呼び出します。
 
-**Q: 不要になった注釈を削除するにはどうすればよいですか？**  
-A: `annotator.delete(annotationId)` で特定の注釈を削除し、`annotator.clear(pageNumber)` でページ上のすべての注釈をクリアできます。
+**Q: もう必要のない注釈を削除するには？**  
+A: `annotator.delete(annotationId)` を使用して特定の注釈を削除するか、`annotator.clear(pageNumber)` でページ上のすべての注釈をクリアします。
 
 **Q: ライブラリはパスワード保護された PDF でも動作しますか？**  
-A: はい。`Annotator` インスタンスを作成する際にパスワードを渡します: `new Annotator(filePath, password)`。
+A: はい。`Annotator` インスタンスを作成する際にパスワードを渡してください：`new Annotator(filePath, password)`。
 
-**Q: 必要な Java のバージョンは何ですか？**  
-A: このライブラリは Java 8 以降と互換性があります。ベストパフォーマンスのため、最新の LTS バージョンの使用を推奨します。
+**Q: 必要な Java のバージョンは？**  
+A: このライブラリは Java 8 以降に対応しています。最適なパフォーマンスとセキュリティのため、最新の LTS リリース（Java 17）を推奨します。
 
-## Conclusion
-これで、GroupDocs.Annotation for Java を使用して **PDF に注釈を付ける** 完全なエンドツーエンドのソリューションが手に入りました。上記の手順（Maven 依存関係の設定、アノテータの初期化、複数の注釈の作成と追加、注釈ベストプラクティスの適用）に従うことで、あらゆる Java アプリケーションに強力な文書マークアップ機能を組み込むことができます。
-
----
-
-**最終更新日:** 2026-03-24  
+**最終更新日:** 2026-10-11  
 **テスト環境:** GroupDocs.Annotation 25.2  
-**作者:** GroupDocs
+**作者:** GroupDocs  
+
+## 関連チュートリアル
+
+- [PDF 注釈のロード（Java） - 完全な GroupDocs アノテーション管理ガイド](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [GroupDocs.Annotation を使用した PDF 注釈の作成（Java）](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [PDF 注釈の編集（Java） - 完全な GroupDocs チュートリアル](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

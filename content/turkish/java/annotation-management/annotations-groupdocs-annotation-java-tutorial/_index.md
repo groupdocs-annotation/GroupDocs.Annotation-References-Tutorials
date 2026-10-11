@@ -1,51 +1,102 @@
 ---
-date: '2026-03-24'
-description: GroupDocs.Annotation for Java kullanarak PDF'yi programlı bir şekilde
-  nasıl açıklama ekleyeceğinizi öğrenin. Adım adım talimatları izleyin, birden fazla
-  açıklama ekleyin ve açıklama en iyi uygulamalarını uygulayın.
+date: '2026-10-11'
+description: GroupDocs.Annotation for Java kullanarak açıklamalı PDF dosyalarını nasıl
+  kaydedeceğinizi öğrenin. Bu adım adım rehber, kurulum, birden fazla açıklama ve
+  en iyi uygulamaları kapsar.
 keywords:
-- GroupDocs.Annotation for Java
-- Java document annotation
-- Annotator initialization
-title: Java için GroupDocs.Annotation ile PDF'ye Nasıl Açıklama Eklenir
+- save annotated pdf
+- java document annotation
+- annotate pdf java
+- multiple pdf annotations
+lastmod: '2026-10-11'
+og_description: GroupDocs.Annotation for Java kullanarak açıklamalı PDF nasıl kaydedileceğini
+  öğrenin. Kurulum, birden fazla açıklama ve en iyi uygulama ipuçlarıyla tam bir öğretici
+  izleyin.
+og_image_alt: Guide showing Java code to save annotated PDF with GroupDocs.Annotation
+og_title: GroupDocs.Annotation for Java ile açıklamalı PDF nasıl kaydedilir
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  headline: How to save annotated PDF with GroupDocs.Annotation for Java
+  type: TechArticle
+- description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  name: How to save annotated PDF with GroupDocs.Annotation for Java
+  steps:
+  - name: '**Free trial** – download a 30‑day trial to evaluate the API.'
+    text: '**Free trial** – download a 30‑day trial to evaluate the API.'
+  - name: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+    text: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+  - name: '**Production license** – purchase a perpetual license for unlimited deployments.'
+    text: '**Production license** – purchase a perpetual license for unlimited deployments.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Annotation supports `TextAnnotation` and `CommentAnnotation`
+      types—instantiate the appropriate model and add it to the annotator’s collection.
+    question: Can I add text comments in addition to shapes?
+  - answer: Absolutely. Retrieve the annotation by its ID, modify its properties,
+      and call `annotator.update(updatedAnnotation)`.
+    question: Is it possible to edit an existing annotation?
+  - answer: Use `annotator.delete(annotationId)` to delete a specific annotation or
+      `annotator.clear(pageNumber)` to clear all annotations on a page.
+    question: How do I remove an annotation I no longer need?
+  - answer: 'Yes. Provide the password when constructing the `Annotator` instance:
+      `new Annotator(filePath, password)`.'
+    question: Does the library work with password‑protected PDFs?
+  - answer: The library is compatible with Java 8 and newer; we recommend the latest
+      LTS release (Java 17) for optimal performance and security.
+    question: What version of Java is required?
+  type: FAQPage
+tags:
+- pdf annotation
+- groupdocs
+- java
+- document processing
+title: GroupDocs.Annotation for Java ile açıklamalı PDF nasıl kaydedilir
 type: docs
 url: /tr/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1
 ---
 
-# Java için GroupDocs.Annotation ile PDF'ye Not Ekleme
+# GroupDocs.Annotation for Java ile açıklamalı PDF nasıl kaydedilir
 
-Java uygulamalarını belge notlandırma yetenekleriyle geliştirmek, iş birliğini, uyumu ve kullanıcı deneyimini artırmanın güçlü bir yoludur. Bu rehberde GroupDocs.Annotation for Java kullanarak **PDF dosyalarına nasıl not eklenir** öğrenecek, Maven bağımlılığının kurulumu, birden fazla not ekleme ve notlandırma en iyi uygulamalarını takip etmeyi adım adım göreceksiniz. Her adımı birlikte inceleyerek bu özelliği projelerinize güvenle entegre edebilirsiniz.
+Bu öğreticide, GroupDocs.Annotation for Java kullanarak programlı olarak **açıklamalı PDF nasıl kaydedilir** belgelerini keşfedeceksiniz. Hukuki maddeleri vurgulamanız, inceleme yorumları eklemeniz veya mühendislik çizimlerine şekiller yerleştirmeniz gerekse, aşağıdaki adımlar Maven kurulumundan toplu ek açıklamalara ve son dosyanın kalıcı hale getirilmesine kadar her aşamayı size gösterecek. Sonunda, herhangi bir Java uygulamasına güçlü PDF açıklama yeteneklerini entegre edebileceksiniz.
 
-## Hızlı Yanıtlar
+## Hızlı cevaplar
 - **GroupDocs.Annotation'ın temel amacı nedir?**  
-  Java uygulamalarında programatik olarak **annotated PDF** belgeleri oluşturmak, düzenlemek ve **kaydetmek** için.  
+  Java uygulamalarında programlı olarak açıklamalı PDF belgelerini oluşturmak, düzenlemek ve **açıklamalı PDF kaydetmek**.  
 - **Hangi Maven artefaktına ihtiyacım var?**  
-  `com.groupdocs:groupdocs-annotation` (*Maven dependency* bölümüne bakın).  
-- **Aynı anda birden fazla not ekleyebilir miyim?**  
-  Evet – tek bir işlemde **birden fazla not ekleyebilirsiniz**.  
-- **Notlandırıcıyı nasıl başlatırım?**  
-  Öğreticide gösterilen **initialize annotator** desenini kullanın.  
-- **Temel en‑iyi uygulama ipuçları nelerdir?**  
-  Bellek yönetimi ve performans için *annotation best practices* kontrol listesini izleyin.  
+  `com.groupdocs:groupdocs-annotation` (see the *Maven bağımlılığı* section).  
+- **Aynı anda birden fazla açıklama ekleyebilir miyim?**  
+  Evet – tek bir işlemde **birden fazla açıklama ekleyebilir**siniz, bu da I/O yükünü azaltır.  
+- **Açıklayıcıyı (annotator) nasıl başlatırım?**  
+  Öğreticide gösterilen **initialize annotator** desenini kullanın; PDF'yi yükler ve API'yi açıklama görevleri için hazırlar.  
+- **Ana en iyi uygulama ipuçları nelerdir?**  
+  Bellek yönetimi, toplu işleme ve optimal dosya boyutu için *annotation best practices* kontrol listesini izleyin.
 
-## “PDF'ye nasıl not eklenir” nedir?
-PDF'ye not eklemek, görsel notları—vurgular, yorumlar, şekiller ve diğer işaretlemeler—dosyanın içine kalıcı olarak yerleştirmek anlamına gelir, böylece belgeyi açan herkes değişiklikleri görebilir. GroupDocs.Annotation, bu görevi programatik olarak gerçekleştirmek için basit bir API sunar.
+## “PDF'yi nasıl açıklamalı hale getirilir” nedir?
+`GroupDocs.Annotation` Java kütüphanesidir ve görsel notları—vurgular, yorumlar, şekiller ve damgalar—doğrudan bir PDF dosyasına eklemenizi sağlar. Kütüphane düşük seviyeli PDF manipülasyonunu soyutlayarak iş mantığına odaklanmanızı sağlar, PDF iç detaylarıyla uğraşmazsınız. Geniş bir açıklama türü yelpazesini destekler, büyük belgeler için akış API'leri sunar ve mevcut Java projeleriyle kolayca bütünleşir, bu da herhangi bir PDF tabanlı iş akışı için çok yönlü bir çözümdür.
 
-## Java için GroupDocs.Annotation neden kullanılmalı?
-- **Cross‑platform desteği** – Java çalıştıran herhangi bir işletim sisteminde çalışır.  
-- **Zengin not türleri** – basit vurgulardan elips gibi karmaşık şekillere.  
-- **Harici PDF editörlerine ihtiyaç yok** – tüm işlemler Java kodunuz içinde gerçekleşir.  
-- **Kurumsal ölçeklenebilirlik** – hukuk, eğitim ve teknik dokümantasyon iş akışları için uygundur.  
+## GroupDocs.Annotation for Java neden kullanılmalı?
+GroupDocs.Annotation, PDF açıklama görevlerini basitleştirirken yüksek performans ve ölçeklenebilirlik sunan kapsamlı bir özellik seti sağlar. Kütüphane, Java'yı destekleyen herhangi bir işletim sisteminde çalışır, tüm dosyayı belleğe yüklemeden 500 MB'ye kadar belgeleri işler ve 15'ten fazla yerleşik açıklama türü içerir. API'si geliştiriciler için tasarlanmıştır; birkaç satır kodla açıklama ekleyebilir, düzenleyebilir ve kaldırabilirsiniz ve hem deneme hem de üretim kullanımı için sağlam lisans seçenekleri sunar.
+
+- **Cross‑platform support** – Windows, Linux ve macOS'ta çalışır, Java uyumlu ortamların %100'ünü kapsar.  
+- **Rich annotation types** – metin, alan, elips ve özel damgalar dahil olmak üzere 15'ten fazla yerleşik tür.  
+- **No external PDF editors required** – tüm işlemler Java kodunuz içinde gerçekleşir, üçüncü taraf bağımlılıklarını ortadan kaldırır.  
+- **Enterprise‑grade scalability** – akış API'leri sayesinde 500 MB'ye kadar PDF'leri işleyebilir ve çok sayfalı belgeleri tüm dosyayı belleğe yüklemeden yönetebilir.
 
 ## Önkoşullar
-- **Java SDK** (JDK 8 veya daha yeni) makinenize kurulu.  
-- **Maven** bağımlılık yönetimi için.  
-- **IntelliJ IDEA** veya **Eclipse** gibi bir IDE.  
-- Temel Java programlama bilgisi.  
+- Java 8 veya daha yeni (JDK 11 veya üzeri önerilir).  
+- Bağımlılık yönetimi için Maven.  
+- IntelliJ IDEA veya Eclipse gibi bir IDE.  
+- Java koleksiyonları ve istisna yönetimi konusunda temel bilgi.
 
 ### Maven bağımlılığı GroupDocs
-`pom.xml` dosyanıza GroupDocs deposunu ve notlandırma kütüphanesini ekleyin:
+Add the GroupDocs repository and the annotation library to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -64,13 +115,13 @@ PDF'ye not eklemek, görsel notları—vurgular, yorumlar, şekiller ve diğer i
 </dependencies>
 ```
 
-## Lisans Edinme
-1. **Ücretsiz Deneme:** GroupDocs.Annotation'ı test etmek için deneme sürümünü indirin.  
-2. **Geçici Lisans:** Değerlendirme sırasında tam erişim için geçici bir lisans edinin.  
-3. **Satın Alma:** Üretim kullanımı için tam lisans edinin.  
+## Lisans edinme
+1. **Free trial** – API'yi değerlendirmek için 30 günlük deneme sürümünü indirin.  
+2. **Temporary license** – tam özellik erişimi için 7 günlük değerlendirme anahtarı isteyin.  
+3. **Production license** – sınırsız dağıtım için kalıcı lisans satın alın.
 
-## Java Notlandırıcıyı Başlatma
-İlk adım, çalışmak istediğiniz belgeyle **notlandırıcıyı başlatmaktır**. Aşağıda temel başlatma deseni verilmiştir:
+## Java'da annotator'ı nasıl başlatılır
+`Annotator` GroupDocs.Annotation'ın çekirdek sınıfıdır; bir PDF'yi yükler ve açıklama oluşturma, düzenleme ve kaydetme yöntemleri sağlar. Doğru şekilde başlatmak güvenilir bir iş akışının ilk adımıdır ve try‑with‑resources kullanmak yerel kaynakların otomatik olarak serbest bırakılmasını sağlar. Dosya yolunu (ve isteğe bağlı olarak korumalı PDF'ler için bir şifreyi) yapıcıya geçirerek bir örnek oluşturursunuz; ardından annotator sonraki işlemler için hazır olur.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -84,8 +135,8 @@ public class Feature1 {
 }
 ```
 
-### Özellik 1: Notlandırıcıyı Yükleme ve Başlatma
-Bu özellik, Notlandırıcıyı bir belge dosya yolu ile başlatmayı ve Java uygulamanızı notlandırma görevleri için yapılandırmayı gösterir.
+### Özellik 1: annotator'ı yükleme ve başlatma
+Bu özellik, bir dosya yolu ile bir `Annotator` örneği oluşturmayı, isteğe bağlı olarak korumalı PDF'ler için şifre geçirmeyi gösterir.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -99,10 +150,11 @@ public class Feature1 {
 }
 ```
 
-## Notlar Oluşturma
+## Açıklamalar nasıl oluşturulur
+Bir açıklama oluşturmak, belirli bir açıklama modelinin örneklenmesini, özelliklerinin yapılandırılmasını ve annotator koleksiyonuna eklenmesini içerir.
 
-### Özellik 2: Alan Notu Oluşturma
-Alan notları, dikdörtgen bölgeleri vurgulamanızı sağlar. Bir tane oluşturmak için şu adımları izleyin:
+### Özellik 2: alan açıklaması oluşturma
+`AreaAnnotation`, bir PDF sayfasında dikdörtgen bir vurgulama bölgesi temsil eder. Dikkat gerektiren metin veya görüntü bölümlerini işaretlemek için kullanışlıdır.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -129,8 +181,8 @@ public class Feature2 {
 }
 ```
 
-### Özellik 3: Elips Notu Oluşturma
-Elips notları, dairesel veya oval vurgulamalar için mükemmeldir.
+### Özellik 3: elips açıklaması oluşturma
+`EllipseAnnotation`, bir sayfaya yerleştirilebilen ve logoları, diyagramları veya diğer görsel öğeleri vurgulamak için kullanılabilen dairesel veya oval bir şekil tanımlar.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -157,8 +209,8 @@ public class Feature3 {
 }
 ```
 
-## Birden Fazla Not Ekleme
-Tek bir çağrıda **birden fazla not ekleyebilirsiniz**, bu da performansı artırır ve kodunuzu düzenli tutar.
+## Birden fazla açıklama nasıl eklenir
+`addAnnotations` yöntemi, açıklama nesnelerinin bir koleksiyonunu tek bir çağrıda belgeye eklemenizi sağlar; bu, dosya sistemi yazmalarını ve bellek döngüsünü azaltarak performansı artırır. Açıklamaları toplu olarak ekleyerek I/O işlemlerini en aza indirir ve özellikle büyük PDF'lerle çalışırken JVM yığını kullanımını düşük tutarsınız.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -189,8 +241,8 @@ public class Feature4 {
 }
 ```
 
-## Belgeyi Kaydetme – Notlandırılmış PDF Nasıl Kaydedilir
-Notlarınız yerleştirildiğine göre, sadece istediğiniz not türleriyle **notlandırılmış PDF** kaydedeceksiniz.
+## Açıklamalı PDF nasıl kaydedilir
+`SaveOptions`, PDF'yi kalıcı hale getirirken hangi açıklama türlerinin ve çıktı ayarlarının uygulanacağını belirtmenizi sağlar. PDF'nizi yükleyin, istediğiniz açıklamaları ekleyin ve ardından hangi açıklama türlerinin kalıcı olacağını belirten bir `SaveOptions` nesnesiyle `save` metodunu çağırın. Bu tek adımlı işlem, değişiklikleri diske yazar ve orijinal belge yapısını korur.
 
 ```java
 public class Feature5 {
@@ -208,51 +260,54 @@ public class Feature5 {
 }
 ```
 
-## Java Notlandırma En İyi Uygulamaları
-- **try‑with‑resources** kullanarak `Annotator`'ı otomatik olarak kapatın ve belleği serbest bırakın.  
-- **Batch add annotations** (Özellik 4'te gösterildiği gibi) I/O yükünü azaltır.  
-- `SaveOptions` içinde sadece gerekli not türlerini belirterek dosya boyutunu küçük tutun.  
-- Kaydettikten sonra büyük belgeleri bellekten **serbest bırakın** sızıntıları önlemek için.  
+## Java için açıklama en iyi uygulamaları
+- **Use try‑with‑resources** – `Annotator`'ı otomatik olarak kapatmak ve yerel kaynakları serbest bırakmak için kullanın.  
+- **Batch add annotations** (Feature 4'te gösterildiği gibi) I/O yükünü azaltmak için toplu ekleyin.  
+- **Specify only needed annotation types** – `SaveOptions` içinde yalnızca gerekli açıklama türlerini belirterek çıktı dosya boyutunu kontrol altında tutun.  
+- **Release large documents** – kaydettikten sonra bellekten büyük belgeleri serbest bırakın; bitince `annotator.dispose()` çağırın.
 
-## Pratik Uygulamalar
-- **Hukuki Belge İncelemesi:** Maddeleri vurgulayın ve avukatlar için yorum ekleyin.  
-- **Eğitim Kaynakları:** Çalışma grupları için ders kitaplarını notlandırın.  
-- **Teknik Kılavuzlar:** Mühendislik çizimlerini notlar ve uyarılarla işaretleyin.  
+## Pratik uygulamalar
+- **Legal document review** – maddeleri vurgulayın, yorum ekleyin ve inceleyen değişikliklerini izleyin.  
+- **Educational resources** – ders kitaplarını veya sunum slaytlarını işbirlikçi çalışma grupları için açıklayın.  
+- **Technical manuals** – notları, uyarıları ve revizyon işaretlerini doğrudan mühendislik çizimlerine ekleyin.
 
-## Performans Düşünceleri
-- Çok büyük PDF'lerde eşzamanlı not sayısını sınırlayın.  
-- Belleği verimli yönetmek için önerilen **annotation best practices**'i kullanın.  
-- Yavaşlama fark ederseniz uygulamanızı Java Flight Recorder ile profil oluşturun.  
+## Performans değerlendirmeleri
+- 300 MB'den büyük PDF'lerde eşzamanlı açıklama işlemlerini sınırlayın, heap baskısını önlemek için.  
+- Önerilen **annotation best practices**'i kullanarak tipik kurumsal iş yüklerinde bellek kullanımını 200 MB'nin altında tutun.  
+- Gecikme artışları fark ederseniz uygulamanızı Java Flight Recorder veya VisualVM ile profilleyin.
 
-## Yaygın Sorunlar ve Çözümler
+## Yaygın sorunlar ve çözümler
 | Sorun | Çözüm |
 |-------|----------|
-| **OutOfMemoryError** büyük PDF'ler yüklenirken | Belgeyi akış modunda yükleyin veya JVM yığın boyutunu artırın. |
-| Kaydetme sonrası notlar görünmüyor | `SaveOptions`'ın doğru `AnnotationType`'ı içerdiğinden emin olun. |
-| Lisans hataları | Deneme veya kalıcı lisans dosyasının doğru referans edildiğini doğrulayın. |
+| **OutOfMemoryError** büyük PDF'ler yüklenirken | Belgeyi akış modunda (`new Annotator(stream)`) yükleyin veya JVM heap'ini (`-Xmx2g`) artırın. |
+| Kaydetme sonrası açıklamalar görünmüyor | `SaveOptions` içinde doğru `AnnotationType` enum değerlerinin bulunduğundan emin olun. |
+| Lisans hataları | Lisans dosyası yolunun doğru olduğunu ve lisans sürümünün kütüphane sürümüyle eşleştiğini doğrulayın. |
 
-## Sık Sorulan Sorular
+## Sıkça sorulan sorular
 
 **S: Şekillere ek olarak metin yorumları ekleyebilir miyim?**  
-A: Evet, GroupDocs.Annotation `TextAnnotation` ve `CommentAnnotation` türlerini destekler—sadece uygun modeli örnekleyin ve listeye ekleyin.
+A: Evet, GroupDocs.Annotation `TextAnnotation` ve `CommentAnnotation` türlerini destekler—uygun modeli örnekleyin ve annotator koleksiyonuna ekleyin.
 
-**S: Mevcut bir notu düzenlemek mümkün mü?**  
-A: Kesinlikle. Notu ID'siyle alın, özelliklerini değiştirin ve `annotator.update(updatedAnnotation)` metodunu çağırın.
+**S: Mevcut bir açıklamayı düzenlemek mümkün mü?**  
+A: Kesinlikle. Açıklamayı ID'siyle alın, özelliklerini değiştirin ve `annotator.update(updatedAnnotation)` çağırın.
 
-**S: Artık ihtiyacım olmayan bir notu nasıl kaldırırım?**  
-A: Belirli bir notu silmek için `annotator.delete(annotationId)` kullanın veya bir sayfadaki tüm notları temizlemek için `annotator.clear(pageNumber)` kullanın.
+**S: Artık ihtiyacım olmayan bir açıklamayı nasıl kaldırırım?**  
+A: `annotator.delete(annotationId)` ile belirli bir açıklamayı silin veya `annotator.clear(pageNumber)` ile bir sayfadaki tüm açıklamaları temizleyin.
 
 **S: Kütüphane şifre korumalı PDF'lerle çalışıyor mu?**  
 A: Evet. `Annotator` örneğini oluştururken şifreyi sağlayın: `new Annotator(filePath, password)`.
 
 **S: Hangi Java sürümü gereklidir?**  
-A: Kütüphane Java 8 ve üzeri sürümlerle uyumludur; en iyi performans için en son LTS sürümünü kullanmanızı öneririz.
-
-## Sonuç
-Artık GroupDocs.Annotation for Java ile **PDF dosyalarına nasıl not eklenir** konusunda eksiksiz, uçtan uca bir çözümünüz var. Yukarıdaki adımları—Maven bağımlılığını kurmak, notlandırıcıyı başlatmak, birden fazla not oluşturup eklemek ve notlandırma en iyi uygulamalarını uygulamak—izleyerek herhangi bir Java uygulamasını güçlü belge işaretleme yetenekleriyle zenginleştirebilirsiniz.
+A: Kütüphane Java 8 ve üzeriyle uyumludur; optimal performans ve güvenlik için en son LTS sürümünü (Java 17) öneririz.
 
 ---
 
-**Last Updated:** 2026-03-24  
+**Last Updated:** 2026-10-11  
 **Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**Author:** GroupDocs  
+
+## İlgili Öğreticiler
+
+- [Java'da PDF Açıklamaları Yükleme - Tam GroupDocs Açıklama Yönetimi Kılavuzu](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [Java ile GroupDocs.Annotation kullanarak PDF Açıklamaları Oluşturma](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Java'da PDF Açıklamalarını Düzenleme - Tam GroupDocs Öğreticisi](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

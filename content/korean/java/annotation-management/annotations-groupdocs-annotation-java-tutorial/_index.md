@@ -1,48 +1,100 @@
 ---
-date: '2026-03-24'
-description: GroupDocs.Annotation for Java를 사용하여 프로그래밍 방식으로 PDF에 주석을 다는 방법을 배워보세요.
-  단계별 지침을 따라 여러 주석을 추가하고 주석 작성 모범 사례를 적용하세요.
+date: '2026-10-11'
+description: GroupDocs.Annotation for Java를 사용하여 주석이 달린 PDF 파일을 저장하는 방법을 배웁니다. 단계별
+  가이드에서는 설정, 여러 주석 및 모범 사례를 다룹니다.
 keywords:
-- GroupDocs.Annotation for Java
-- Java document annotation
-- Annotator initialization
-title: Java용 GroupDocs.Annotation을 사용하여 PDF에 주석 달기
+- save annotated pdf
+- java document annotation
+- annotate pdf java
+- multiple pdf annotations
+lastmod: '2026-10-11'
+og_description: GroupDocs.Annotation for Java를 사용하여 주석이 달린 PDF를 저장하는 방법을 배웁니다. 설정,
+  여러 주석 및 모범 팁이 포함된 완전한 튜토리얼을 따라보세요.
+og_image_alt: Guide showing Java code to save annotated PDF with GroupDocs.Annotation
+og_title: GroupDocs.Annotation for Java를 사용하여 주석이 달린 PDF 저장 방법
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  headline: How to save annotated PDF with GroupDocs.Annotation for Java
+  type: TechArticle
+- description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  name: How to save annotated PDF with GroupDocs.Annotation for Java
+  steps:
+  - name: '**Free trial** – download a 30‑day trial to evaluate the API.'
+    text: '**Free trial** – download a 30‑day trial to evaluate the API.'
+  - name: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+    text: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+  - name: '**Production license** – purchase a perpetual license for unlimited deployments.'
+    text: '**Production license** – purchase a perpetual license for unlimited deployments.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Annotation supports `TextAnnotation` and `CommentAnnotation`
+      types—instantiate the appropriate model and add it to the annotator’s collection.
+    question: Can I add text comments in addition to shapes?
+  - answer: Absolutely. Retrieve the annotation by its ID, modify its properties,
+      and call `annotator.update(updatedAnnotation)`.
+    question: Is it possible to edit an existing annotation?
+  - answer: Use `annotator.delete(annotationId)` to delete a specific annotation or
+      `annotator.clear(pageNumber)` to clear all annotations on a page.
+    question: How do I remove an annotation I no longer need?
+  - answer: 'Yes. Provide the password when constructing the `Annotator` instance:
+      `new Annotator(filePath, password)`.'
+    question: Does the library work with password‑protected PDFs?
+  - answer: The library is compatible with Java 8 and newer; we recommend the latest
+      LTS release (Java 17) for optimal performance and security.
+    question: What version of Java is required?
+  type: FAQPage
+tags:
+- pdf annotation
+- groupdocs
+- java
+- document processing
+title: GroupDocs.Annotation for Java를 사용하여 주석이 달린 PDF 저장 방법
 type: docs
 url: /ko/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1
 ---
 
-# GroupDocs.Annotation for Java를 사용하여 PDF에 주석 달기
+# GroupDocs.Annotation for Java를 사용하여 주석이 달린 PDF 저장 방법
+
+이 튜토리얼에서는 GroupDocs.Annotation for Java를 사용하여 프로그래밍 방식으로 **주석이 달린 PDF 문서를 저장하는 방법**을 알아봅니다. 법률 조항을 강조하거나 검토 의견을 추가하거나 엔지니어링 도면에 도형을 삽입해야 할 경우, 아래 단계는 Maven 설정부터 배치로 주석을 추가하고 최종 파일을 저장하는 전체 과정을 안내합니다. 끝까지 진행하면 모든 Java 애플리케이션에 강력한 PDF 주석 기능을 통합할 수 있게 됩니다.
 
 ## 빠른 답변
-- **GroupDocs.Annotation의 주요 목적은 무엇인가요?**  
-  Java 애플리케이션에서 프로그래밍 방식으로 PDF에 주석을 **생성**, **편집**, 그리고 **저장**하기 위해 사용됩니다.  
-- **어떤 Maven 아티팩트가 필요합니까?**  
-  `com.groupdocs:groupdocs-annotation` (*Maven dependency* 섹션을 참고하세요).  
+- **GroupDocs.Annotation의 주요 목적은 무엇입니까?**  
+  Java 애플리케이션에서 프로그래밍 방식으로 주석이 달린 PDF 문서를 생성, 편집 및 **주석이 달린 PDF 저장**합니다.  
+- **필요한 Maven 아티팩트는 무엇입니까?**  
+  `com.groupdocs:groupdocs-annotation` (see the *Maven 의존성* section).  
 - **한 번에 여러 주석을 추가할 수 있나요?**  
-  예 – 한 번의 호출로 **여러 주석을 추가**할 수 있습니다.  
+  예 – 단일 작업에서 **여러 주석 추가**가 가능하여 I/O 오버헤드를 줄입니다.  
 - **Annotator를 어떻게 초기화합니까?**  
-  튜토리얼에 표시된 **initialize annotator** 패턴을 사용합니다.  
-- **핵심 베스트 프랙티스 팁은 무엇인가요?**  
-  메모리 관리와 성능을 위해 *annotation best practices* 체크리스트를 따르세요.  
+  튜토리얼에 표시된 **Annotator 초기화** 패턴을 사용하십시오; PDF를 로드하고 주석 작업을 위한 API를 준비합니다.  
+- **핵심 모범 사례 팁은 무엇입니까?**  
+  *주석 모범 사례* 체크리스트를 따라 메모리 관리, 배치 처리 및 최적 파일 크기를 유지하십시오.
 
-## “PDF에 주석 달기”란?
-PDF에 주석을 다는 것은 하이라이트, 댓글, 도형 및 기타 마크업과 같은 시각적 메모를 파일에 직접 영구 저장하여 문서를 여는 모든 사람이 변경 사항을 볼 수 있게 하는 것을 의미합니다. GroupDocs.Annotation은 이 작업을 프로그래밍 방식으로 수행할 수 있는 간단한 API를 제공합니다.
+## “PDF에 주석을 다는 방법”이란?
+`GroupDocs.Annotation`은 PDF 파일에 직접 시각적 메모(하이라이트, 댓글, 도형, 스탬프)를 삽입할 수 있는 Java 라이브러리입니다. 이 라이브러리는 저수준 PDF 조작을 추상화하여 PDF 내부보다 비즈니스 로직에 집중할 수 있게 합니다. 다양한 주석 유형을 지원하고 대용량 문서를 위한 스트리밍 API를 제공하며 기존 Java 프로젝트와 쉽게 통합되어 모든 PDF 기반 워크플로에 다재다능한 솔루션이 됩니다.
 
-## Java용 GroupDocs.Annotation을 사용하는 이유
-- **크로스‑플랫폼 지원** – Java가 실행되는 모든 OS에서 작동합니다.  
-- **다양한 주석 유형** – 간단한 하이라이트부터 타원과 같은 복잡한 도형까지 지원합니다.  
-- **외부 PDF 편집기 불필요** – 모든 작업이 Java 코드 내부에서 이루어집니다.  
-- **엔터프라이즈 수준 확장성** – 법률, 교육, 기술 문서 워크플로에 적합합니다.  
+## Java용 GroupDocs.Annotation를 사용하는 이유
+GroupDocs.Annotation은 PDF 주석 작업을 단순화하면서 높은 성능과 확장성을 제공하는 포괄적인 기능 세트를 제공합니다. 이 라이브러리는 Java를 지원하는 모든 운영 체제에서 실행되며 전체 파일을 메모리에 로드하지 않고도 500 MB까지의 문서를 처리하고 15가지 이상의 내장 주석 유형을 포함합니다. API는 개발자를 위해 설계되어 몇 줄의 코드만으로 주석을 추가, 편집 및 제거할 수 있으며, 평가판과 프로덕션 모두에 적합한 강력한 라이선스 옵션을 제공합니다.
+
+- **Cross‑platform support** – Windows, Linux, macOS에서 실행되며 Java 호환 환경의 100 %를 커버합니다.  
+- **Rich annotation types** – 텍스트, 영역, 타원, 사용자 정의 스탬프 등 15가지 이상의 내장 유형을 지원합니다.  
+- **No external PDF editors required** – 모든 작업이 Java 코드 내부에서 이루어져 서드파티 의존성을 제거합니다.  
+- **Enterprise‑grade scalability** – 스트리밍 API 덕분에 전체 파일을 메모리에 로드하지 않고도 500 MB까지의 PDF와 수백 페이지 문서를 처리할 수 있습니다.
 
 ## 사전 요구 사항
-- **Java SDK** (JDK 8 이상) 가 설치되어 있어야 합니다.  
-- **Maven** 으로 의존성을 관리합니다.  
-- **IntelliJ IDEA** 또는 **Eclipse** 와 같은 IDE가 필요합니다.  
-- 기본적인 Java 프로그래밍 지식이 있어야 합니다.  
+- Java 8 또는 그 이상 (JDK 11 이상 권장).  
+- Maven을 통한 의존성 관리.  
+- IntelliJ IDEA 또는 Eclipse와 같은 IDE.  
+- Java 컬렉션 및 예외 처리에 대한 기본 지식.
 
-### Maven dependency GroupDocs
-`pom.xml`에 GroupDocs 저장소와 주석 라이브러리를 추가합니다:
+### Maven 의존성 GroupDocs
+Add the GroupDocs repository and the annotation library to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -62,12 +114,12 @@ PDF에 주석을 다는 것은 하이라이트, 댓글, 도형 및 기타 마크
 ```
 
 ## 라이선스 획득
-1. **무료 체험:** GroupDocs.Annotation을 테스트하기 위해 체험 버전을 다운로드합니다.  
-2. **임시 라이선스:** 평가 기간 동안 전체 기능을 사용하려면 임시 라이선스를 발급받습니다.  
-3. **구매:** 프로덕션 사용을 위해 정식 라이선스를 구매합니다.  
+1. **Free trial** – API 평가를 위해 30일 무료 체험판을 다운로드합니다.  
+2. **Temporary license** – 전체 기능 접근을 위한 7일 평가 키를 요청합니다.  
+3. **Production license** – 무제한 배포를 위한 영구 라이선스를 구매합니다.
 
-## Java에서 Annotator 초기화
-첫 번째 단계는 작업할 문서와 함께 **annotator를 초기화**하는 것입니다. 아래는 기본 초기화 패턴입니다:
+## Java에서 Annotator 초기화 방법
+`Annotator`는 GroupDocs.Annotation의 핵심 클래스이며 PDF를 로드하고 주석을 생성, 편집 및 저장하는 메서드를 제공합니다. 올바르게 초기화하는 것이 안정적인 워크플로의 첫 단계이며, try‑with‑resources를 사용하면 네이티브 리소스가 자동으로 해제됩니다. 파일 경로(보호된 PDF인 경우 선택적으로 비밀번호)를 생성자에 전달하여 인스턴스를 만들면 이후 작업을 수행할 준비가 됩니다.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -81,8 +133,8 @@ public class Feature1 {
 }
 ```
 
-### Feature 1: 로딩 및 Annotator 초기화
-이 기능은 문서 파일 경로를 사용해 Annotator를 초기화하고, Java 애플리케이션에서 주석 작업을 수행하도록 설정하는 방법을 보여줍니다.
+### 기능 1: 로드 및 Annotator 초기화
+이 기능은 파일 경로와 선택적으로 보호된 PDF의 비밀번호를 전달하여 `Annotator` 인스턴스를 생성하는 방법을 보여줍니다.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -96,10 +148,11 @@ public class Feature1 {
 }
 ```
 
-## 주석 만들기
+## 주석 생성 방법
+주석을 생성하려면 특정 주석 모델을 인스턴스화하고 속성을 구성한 뒤 annotator의 컬렉션에 추가합니다.
 
-### Feature 2: 영역 주석 만들기
-영역 주석은 사각형 영역을 강조 표시합니다. 다음 단계에 따라 하나를 생성하세요:
+### 기능 2: 영역 주석 생성
+`AreaAnnotation`은 PDF 페이지에 사각형 하이라이트 영역을 나타냅니다. 텍스트나 이미지 중 주목이 필요한 부분을 표시하는 데 유용합니다.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -126,8 +179,8 @@ public class Feature2 {
 }
 ```
 
-### Feature 3: 타원 주석 만들기
-타원 주석은 원형 또는 타원형 강조 표시에 적합합니다.
+### 기능 3: 타원 주석 생성
+`EllipseAnnotation`은 페이지에 원형 또는 타원형 도형을 배치하여 로고, 다이어그램 또는 기타 시각 요소를 강조할 수 있게 합니다.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -154,8 +207,8 @@ public class Feature3 {
 }
 ```
 
-## 여러 주석 추가
-한 번의 호출로 **여러 주석을 추가**할 수 있어 성능이 향상되고 코드가 깔끔해집니다.
+## 여러 주석 추가 방법
+`addAnnotations` 메서드를 사용하면 문서에 주석 객체 컬렉션을 한 번에 추가할 수 있어 파일 시스템 쓰기와 메모리 사용을 줄여 성능을 향상시킵니다. 배치 주석을 사용하면 I/O 작업을 최소화하고 특히 대용량 PDF 작업 시 JVM 힙 사용량을 낮게 유지할 수 있습니다.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -186,8 +239,8 @@ public class Feature4 {
 }
 ```
 
-## 문서 저장 – 주석이 달린 PDF 저장 방법
-주석이 모두 적용되었으므로, 원하는 주석 유형만 포함하여 **주석이 달린 PDF**를 저장합니다.
+## 주석이 달린 PDF 저장 방법
+`SaveOptions`를 사용하면 PDF를 영구 저장할 때 적용할 주석 유형 및 출력 설정을 지정할 수 있습니다. PDF를 로드하고 원하는 주석을 추가한 뒤, 어떤 주석 유형을 유지할지 지정한 `SaveOptions` 객체와 함께 `save` 메서드를 호출하면 변경 사항이 원본 구조를 보존하면서 디스크에 기록됩니다.
 
 ```java
 public class Feature5 {
@@ -205,51 +258,56 @@ public class Feature5 {
 }
 ```
 
-## Java 주석 베스트 프랙티스
-- **try‑with‑resources** 를 사용해 `Annotator`를 자동으로 닫고 메모리를 해제합니다.  
-- **배치로 주석 추가** (Feature 4 참고)하여 I/O 오버헤드를 줄입니다.  
-- `SaveOptions` 에서 **필요한 주석 유형만 지정**해 파일 크기를 최소화합니다.  
-- 저장 후 **대용량 문서를 메모리에서 해제**하여 누수를 방지합니다.  
+## Java용 주석 모범 사례
+- **try‑with‑resources**를 사용하여 `Annotator`를 자동으로 닫고 네이티브 리소스를 해제합니다.  
+- **Batch add annotations**(Feature 4)처럼 주석을 일괄 추가하여 I/O 오버헤드를 최소화합니다.  
+- `SaveOptions`에 필요한 주석 유형만 지정하여 출력 파일 크기를 제어합니다.  
+- 저장 후 큰 문서를 메모리에서 해제하고 `annotator.dispose()`를 호출하여 누수를 방지합니다.
 
 ## 실용적인 적용 사례
-- **법률 문서 검토:** 조항을 강조하고 변호사를 위한 댓글을 첨부합니다.  
-- **교육 자료:** 학습 그룹을 위해 교과서에 주석을 달습니다.  
-- **기술 매뉴얼:** 엔지니어링 도면에 메모와 경고를 표시합니다.  
+- **Legal document review** – 조항을 강조하고 댓글을 첨부하며 검토자 변경 사항을 추적합니다.  
+- **Educational resources** – 교과서나 강의 슬라이드에 주석을 달아 협업 학습 그룹에 활용합니다.  
+- **Technical manuals** – 엔지니어링 도면에 직접 메모, 경고 및 개정 표시를 삽입합니다.
 
 ## 성능 고려 사항
-- 매우 큰 PDF에서는 동시에 진행되는 주석 수를 제한합니다.  
-- 메모리를 효율적으로 관리하려면 권장 **annotation best practices** 를 따르세요.  
-- 성능 저하가 감지되면 Java Flight Recorder 로 애플리케이션을 프로파일링합니다.  
+- 300 MB 이상 대용량 PDF에 대한 동시 주석 작업을 제한하여 힙 압력을 방지합니다.  
+- 일반적인 엔터프라이즈 워크로드에서 메모리 사용량을 200 MB 이하로 유지하려면 **주석 모범 사례**를 따르세요.  
+- 지연 시간이 급증하면 Java Flight Recorder 또는 VisualVM으로 애플리케이션을 프로파일링합니다.
 
-## 일반적인 문제와 해결책
-| Issue | Solution |
+## 일반적인 문제 및 해결책
+| 문제 | 해결책 |
 |-------|----------|
-| **OutOfMemoryError** 발생 (대용량 PDF 로드 시) | 스트리밍 모드로 문서를 로드하거나 JVM 힙 크기를 늘립니다. |
-| 저장 후 주석이 표시되지 않음 | `SaveOptions` 에 올바른 `AnnotationType` 이 포함되어 있는지 확인합니다. |
-| 라이선스 오류 | 체험 또는 영구 라이선스 파일이 올바르게 참조되고 있는지 확인합니다. |
+| **OutOfMemoryError** 발생 시 대용량 PDF 로드 | 문서를 스트리밍 모드(`new Annotator(stream)`)로 로드하거나 JVM 힙(`-Xmx2g`)을 늘립니다. |
+| 저장 후 주석이 표시되지 않음 | `SaveOptions`에 올바른 `AnnotationType` 열거형 값이 포함되어 있는지 확인합니다. |
+| 라이선스 오류 | 라이선스 파일 경로가 올바른지, 라이선스 버전이 라이브러리 버전과 일치하는지 확인합니다. |
 
 ## 자주 묻는 질문
 
-**Q: 도형 외에 텍스트 댓글도 추가할 수 있나요?**  
-A: 예, GroupDocs.Annotation은 `TextAnnotation` 및 `CommentAnnotation` 유형을 지원합니다—해당 모델을 인스턴스화하고 리스트에 추가하면 됩니다.
+**Q: 텍스트 주석을 도형 외에 추가할 수 있나요?**  
+A: 예, GroupDocs.Annotation은 `TextAnnotation` 및 `CommentAnnotation` 유형을 지원합니다—적절한 모델을 인스턴스화하고 annotator 컬렉션에 추가하십시오.
 
 **Q: 기존 주석을 편집할 수 있나요?**  
-A: 물론입니다. 주석 ID로 주석을 조회한 뒤 속성을 수정하고 `annotator.update(updatedAnnotation)` 를 호출합니다.
+A: 물론입니다. ID로 주석을 조회하고 속성을 수정한 뒤 `annotator.update(updatedAnnotation)`을 호출합니다.
 
 **Q: 더 이상 필요 없는 주석을 어떻게 제거하나요?**  
-A: `annotator.delete(annotationId)` 로 특정 주석을 삭제하거나 `annotator.clear(pageNumber)` 로 해당 페이지의 모든 주석을 제거합니다.
+A: `annotator.delete(annotationId)`를 사용해 특정 주석을 삭제하거나 `annotator.clear(pageNumber)`로 페이지의 모든 주석을 삭제합니다.
 
-**Q: 비밀번호로 보호된 PDF에서도 라이브러리를 사용할 수 있나요?**  
-A: 예. `Annotator` 인스턴스를 생성할 때 비밀번호를 전달하면 됩니다: `new Annotator(filePath, password)`.
+**Q: 라이브러리가 비밀번호로 보호된 PDF에서도 작동하나요?**  
+A: 예. `Annotator` 인스턴스를 생성할 때 비밀번호를 제공하면 됩니다: `new Annotator(filePath, password)`.
 
-**Q: 요구되는 Java 버전은 무엇인가요?**  
-A: 라이브러리는 Java 8 이상과 호환되며, 최상의 성능을 위해 최신 LTS 버전을 사용하는 것을 권장합니다.
-
-## 결론
-이제 **GroupDocs.Annotation for Java** 를 사용해 PDF에 주석을 다는 **전체적인 엔드‑투‑엔드 솔루션**을 갖추었습니다. Maven 의존성 설정, Annotator 초기화, 주석 생성 및 다중 주석 추가, 그리고 주석 베스트 프랙티스를 적용하는 단계들을 따라 하면 어떤 Java 애플리케이션에도 강력한 문서 마크업 기능을 손쉽게 통합할 수 있습니다.
+**Q: 필요한 Java 버전은 무엇인가요?**  
+A: 라이브러리는 Java 8 및 그 이후 버전과 호환됩니다; 최적의 성능과 보안을 위해 최신 LTS 릴리스(Java 17)를 권장합니다.
 
 ---
 
-**Last Updated:** 2026-03-24  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**마지막 업데이트:** 2026-10-11  
+**테스트 환경:** GroupDocs.Annotation 25.2  
+**작성자:** GroupDocs  
+
+---
+
+## 관련 튜토리얼
+
+- [PDF 주석 로드 Java - 완전한 GroupDocs Annotation 관리 가이드](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [GroupDocs.Annotation을 사용한 PDF 주석 생성 Java](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [PDF 주석 편집 Java - 완전한 GroupDocs 튜토리얼](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

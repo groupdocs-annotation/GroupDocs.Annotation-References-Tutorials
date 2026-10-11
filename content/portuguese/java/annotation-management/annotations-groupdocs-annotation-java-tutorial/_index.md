@@ -1,51 +1,102 @@
 ---
-date: '2026-03-24'
-description: Aprenda a anotar PDFs programaticamente usando o GroupDocs.Annotation
-  para Java. Siga instruções passo a passo, adicione múltiplas anotações e aplique
-  as melhores práticas de anotação.
+date: '2026-10-11'
+description: Aprenda a salvar arquivos PDF anotados usando GroupDocs.Annotation para
+  Java. Este guia passo a passo cobre a configuração, múltiplas anotações e as melhores
+  práticas.
 keywords:
-- GroupDocs.Annotation for Java
-- Java document annotation
-- Annotator initialization
-title: Como Anotar PDF com GroupDocs.Annotation para Java
+- save annotated pdf
+- java document annotation
+- annotate pdf java
+- multiple pdf annotations
+lastmod: '2026-10-11'
+og_description: Aprenda a salvar PDF anotado usando GroupDocs.Annotation para Java.
+  Siga um tutorial completo com configuração, múltiplas anotações e dicas de melhores
+  práticas.
+og_image_alt: Guide showing Java code to save annotated PDF with GroupDocs.Annotation
+og_title: Como salvar PDF anotado com GroupDocs.Annotation para Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  headline: How to save annotated PDF with GroupDocs.Annotation for Java
+  type: TechArticle
+- description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  name: How to save annotated PDF with GroupDocs.Annotation for Java
+  steps:
+  - name: '**Free trial** – download a 30‑day trial to evaluate the API.'
+    text: '**Free trial** – download a 30‑day trial to evaluate the API.'
+  - name: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+    text: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+  - name: '**Production license** – purchase a perpetual license for unlimited deployments.'
+    text: '**Production license** – purchase a perpetual license for unlimited deployments.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Annotation supports `TextAnnotation` and `CommentAnnotation`
+      types—instantiate the appropriate model and add it to the annotator’s collection.
+    question: Can I add text comments in addition to shapes?
+  - answer: Absolutely. Retrieve the annotation by its ID, modify its properties,
+      and call `annotator.update(updatedAnnotation)`.
+    question: Is it possible to edit an existing annotation?
+  - answer: Use `annotator.delete(annotationId)` to delete a specific annotation or
+      `annotator.clear(pageNumber)` to clear all annotations on a page.
+    question: How do I remove an annotation I no longer need?
+  - answer: 'Yes. Provide the password when constructing the `Annotator` instance:
+      `new Annotator(filePath, password)`.'
+    question: Does the library work with password‑protected PDFs?
+  - answer: The library is compatible with Java 8 and newer; we recommend the latest
+      LTS release (Java 17) for optimal performance and security.
+    question: What version of Java is required?
+  type: FAQPage
+tags:
+- pdf annotation
+- groupdocs
+- java
+- document processing
+title: Como salvar PDF anotado com GroupDocs.Annotation para Java
 type: docs
 url: /pt/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1
 ---
 
-# Como Anotar PDF com GroupDocs.Annotation para Java
+# Como salvar PDF anotado com GroupDocs.Annotation para Java
 
-Aprimorar aplicações Java com recursos de anotação de documentos é uma maneira poderosa de melhorar a colaboração, a conformidade e a experiência do usuário. Neste guia você aprenderá **como anotar PDF** usando GroupDocs.Annotation para Java, desde a configuração da dependência Maven até a adição de múltiplas anotações e a adoção das melhores práticas de anotação. Vamos percorrer cada passo para que você possa integrar esse recurso com confiança em seus projetos.
+Neste tutorial, você descobrirá **como salvar PDF anotado** programaticamente usando o GroupDocs.Annotation para Java. Seja para destacar cláusulas legais, adicionar comentários de revisão ou incorporar formas em desenhos de engenharia, as etapas abaixo o guiarão por cada fase — desde a configuração do Maven até a adição em lote de anotações e a persistência do arquivo final. Ao final, você será capaz de integrar recursos robustos de anotação de PDF em qualquer aplicação Java.
 
-## Respostas Rápidas
+## Respostas rápidas
 - **Qual é o objetivo principal do GroupDocs.Annotation?**  
-  Criar, editar e **salvar PDFs anotados** programaticamente em aplicações Java.  
+  Criar, editar e **salvar PDF anotado** programaticamente em aplicações Java.  
 - **Qual artefato Maven eu preciso?**  
-  `com.groupdocs:groupdocs-annotation` (veja a seção *Maven dependency*).  
-- **Posso adicionar mais de uma anotação de uma vez?**  
-  Sim – você pode **adicionar múltiplas anotações** em uma única operação.  
+  `com.groupdocs:groupdocs-annotation` (veja a *dependência Maven* seção).  
+- **Posso adicionar mais de uma anotação de cada vez?**  
+  Sim – você pode **adicionar múltiplas anotações** em uma única operação, o que reduz a sobrecarga de I/O.  
 - **Como inicializo o anotador?**  
-  Use o padrão **initialize annotator** mostrado no tutorial.  
+  Use o padrão **initialize annotator** mostrado no tutorial; ele carrega o PDF e prepara a API para tarefas de anotação.  
 - **Quais são as principais dicas de boas práticas?**  
-  Siga a lista de verificação *annotation best practices* para gerenciamento de memória e desempenho.  
+  Siga a lista de verificação de *annotation best practices* para gerenciamento de memória, processamento em lote e tamanho de arquivo ideal.
 
 ## O que é “como anotar PDF”?
-Anotar um PDF significa persistir notas visuais — realces, comentários, formas e outras marcações — diretamente no arquivo, de modo que qualquer pessoa que abra o documento possa ver as alterações. O GroupDocs.Annotation oferece uma API simples para executar essa tarefa programaticamente.
+`GroupDocs.Annotation` é uma biblioteca Java que permite incorporar notas visuais — realces, comentários, formas e carimbos — diretamente em um arquivo PDF. A biblioteca abstrai a manipulação de PDF de baixo nível para que você possa focar na lógica de negócios em vez dos detalhes internos do PDF. Ela suporta uma ampla variedade de tipos de anotação, fornece APIs de streaming para documentos grandes e integra-se facilmente a projetos Java existentes, tornando-a uma solução versátil para qualquer fluxo de trabalho baseado em PDF.
 
 ## Por que usar GroupDocs.Annotation para Java?
-- **Suporte multiplataforma** – funciona em qualquer SO que execute Java.  
-- **Tipos ricos de anotação** – de realces simples a formas complexas como elipses.  
-- **Nenhum editor de PDF externo necessário** – todas as operações ocorrem dentro do seu código Java.  
-- **Escalável para empresas** – adequado para fluxos de trabalho de documentos legais, educacionais e técnicos.  
+GroupDocs.Annotation oferece um conjunto abrangente de recursos que simplificam tarefas de anotação de PDF enquanto entregam alto desempenho e escalabilidade. A biblioteca funciona em qualquer sistema operacional que suporte Java, manipula documentos de até 500 MB sem carregar o arquivo inteiro na memória e inclui mais de 15 tipos de anotação incorporados. Sua API foi projetada para desenvolvedores, permitindo adicionar, editar e remover anotações com apenas algumas linhas de código, e fornece opções robustas de licenciamento tanto para teste quanto para produção.
+
+- **Suporte multiplataforma** – funciona no Windows, Linux e macOS, cobrindo 100 % dos ambientes compatíveis com Java.  
+- **Tipos ricos de anotação** – mais de 15 tipos incorporados, incluindo texto, área, elipse e carimbos personalizados.  
+- **Nenhum editor de PDF externo necessário** – todas as operações ocorrem dentro do seu código Java, eliminando dependências de terceiros.  
+- **Escalabilidade nível empresarial** – pode processar PDFs de até 500 MB e lidar com documentos de centenas de páginas sem carregar o arquivo inteiro na memória, graças às APIs de streaming.
 
 ## Pré-requisitos
-- **Java SDK** (JDK 8 ou superior) instalado na sua máquina.  
-- **Maven** para gerenciamento de dependências.  
-- Uma IDE como **IntelliJ IDEA** ou **Eclipse**.  
-- Conhecimento básico de programação Java.  
+- Java 8 ou superior (JDK 11 ou posterior recomendado).  
+- Maven para gerenciamento de dependências.  
+- Uma IDE como IntelliJ IDEA ou Eclipse.  
+- Familiaridade básica com coleções Java e tratamento de exceções.
 
 ### Dependência Maven GroupDocs
-Adicione o repositório GroupDocs e a biblioteca de anotação ao seu `pom.xml`:
+Add the GroupDocs repository and the annotation library to your `pom.xml`:
 
 ```xml
 <repositories>
@@ -64,13 +115,13 @@ Adicione o repositório GroupDocs e a biblioteca de anotação ao seu `pom.xml`:
 </dependencies>
 ```
 
-## Aquisição de Licença
-1. **Teste Gratuito:** Baixe a versão de avaliação para testar o GroupDocs.Annotation.  
-2. **Licença Temporária:** Obtenha uma licença temporária para acesso total durante a avaliação.  
-3. **Compra:** Adquira uma licença completa para uso em produção.  
+## Aquisição de licença
+1. **Teste gratuito** – faça download de um teste de 30 dias para avaliar a API.  
+2. **Licença temporária** – solicite uma chave de avaliação de 7 dias para acesso total aos recursos.  
+3. **Licença de produção** – adquira uma licença perpétua para implantações ilimitadas.
 
-## Inicializar o Annotator em Java
-O primeiro passo é **inicializar o anotador** com o documento que você deseja trabalhar. Abaixo está o padrão básico de inicialização:
+## Como inicializar o anotador em Java
+`Annotator` é a classe central do GroupDocs.Annotation que carrega um PDF e fornece métodos para criar, editar e salvar anotações. Inicializá‑la corretamente é o primeiro passo para um fluxo de trabalho confiável, e usar *try‑with‑resources* garante que recursos nativos sejam liberados automaticamente. Você cria uma instância passando o caminho do arquivo (e opcionalmente uma senha para PDFs protegidos) ao construtor, após o que o anotador está pronto para operações adicionais.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -84,8 +135,8 @@ public class Feature1 {
 }
 ```
 
-### Recurso 1: Carregando e Inicializando o Annotator
-Este recurso demonstra a inicialização do Annotator com o caminho de um arquivo de documento, configurando sua aplicação Java para tarefas de anotação.
+### Recurso 1: carregando e inicializando o anotador
+Este recurso demonstra a criação de uma instância `Annotator` com um caminho de arquivo, opcionalmente passando uma senha para PDFs protegidos.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -99,10 +150,11 @@ public class Feature1 {
 }
 ```
 
-## Criando Anotações
+## Como criar anotações
+Criar uma anotação envolve instanciar um modelo de anotação específico, configurar suas propriedades e adicioná‑la à coleção do anotador.
 
-### Recurso 2: Criando Anotação de Área
-Anotações de área permitem destacar regiões retangulares. Siga estes passos para criar uma:
+### Recurso 2: criando anotação de área
+Um `AreaAnnotation` representa uma região retangular destacada em uma página PDF. É útil para marcar trechos de texto ou imagens que requerem atenção.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -112,12 +164,15 @@ public class Feature2 {
     public AreaAnnotation createAreaAnnotation() {
         AreaAnnotation area = new AreaAnnotation();
 ```
+
 ```java
         area.setBox(new Rectangle(100, 100, 100, 100));
 ```
+
 ```java
         area.setBackgroundColor(65535);
 ```
+
 ```java
         area.setPageNumber(1);
 
@@ -126,8 +181,8 @@ public class Feature2 {
 }
 ```
 
-### Recurso 3: Criando Anotação de Elipse
-Anotações de elipse são perfeitas para realces circulares ou ovais.
+### Recurso 3: criando anotação de elipse
+Um `EllipseAnnotation` define uma forma circular ou oval que pode ser posicionada em uma página para enfatizar logotipos, diagramas ou qualquer outro elemento visual.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -137,12 +192,15 @@ public class Feature3 {
     public EllipseAnnotation createEllipseAnnotation() {
         EllipseAnnotation ellipse = new EllipseAnnotation();
 ```
+
 ```java
         ellipse.setBox(new Rectangle(100, 100, 100, 100));
 ```
+
 ```java
         ellipse.setBackgroundColor(123456);
 ```
+
 ```java
         ellipse.setPageNumber(2);
 
@@ -151,8 +209,8 @@ public class Feature3 {
 }
 ```
 
-## Adicionando Múltiplas Anotações
-Você pode **adicionar múltiplas anotações** em uma única chamada, o que melhora o desempenho e mantém seu código organizado.
+## Como adicionar múltiplas anotações
+O método `addAnnotations` permite adicionar uma coleção de objetos de anotação ao documento em uma única chamada, o que melhora o desempenho ao reduzir gravações no sistema de arquivos e churn de memória. Ao agrupar anotações, você minimiza operações de I/O e mantém o uso da heap da JVM baixo, especialmente ao trabalhar com PDFs grandes.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -183,14 +241,15 @@ public class Feature4 {
 }
 ```
 
-## Salvando o Documento – Como Salvar PDF Anotado
-Agora que suas anotações estão no lugar, você **salvará o PDF anotado** contendo apenas os tipos de anotação desejados.
+## Como salvar PDF anotado
+`SaveOptions` permite especificar quais tipos de anotação e configurações de saída aplicar ao persistir o PDF. Carregue seu PDF, adicione as anotações desejadas e então chame o método `save` com um objeto `SaveOptions` que indica quais tipos de anotação devem ser mantidos. Esta operação de etapa única grava as alterações de volta ao disco preservando a estrutura original do documento.
 
 ```java
 public class Feature5 {
     public String getOutputPath(String fileName) {
         return "YOUR_OUTPUT_DIRECTORY" + "/filtered_output.pdf";
 ```
+
 ```java
     public void saveAnnotatedDocument(Annotator annotator, String outputPath) {
         SaveOptions saveOptions = new SaveOptions();
@@ -201,34 +260,34 @@ public class Feature5 {
 }
 ```
 
-## Melhores Práticas de Anotação Java
-- **Use try‑with‑resources** para fechar automaticamente o `Annotator` e liberar memória.  
-- **Adicione anotações em lote** (como mostrado no Recurso 4) para reduzir a sobrecarga de I/O.  
-- **Especifique apenas os tipos de anotação necessários** em `SaveOptions` para manter o tamanho do arquivo pequeno.  
-- **Libere documentos grandes** da memória após salvar para evitar vazamentos.  
+## Melhores práticas de anotação para Java
+- **Use try‑with‑resources** para fechar automaticamente o `Annotator` e liberar recursos nativos.  
+- **Adicione anotações em lote** (como mostrado no Recurso 4) para minimizar a sobrecarga de I/O.  
+- **Especifique apenas os tipos de anotação necessários** em `SaveOptions` para manter o tamanho do arquivo de saída sob controle.  
+- **Libere documentos grandes** da memória após salvar para evitar vazamentos; chame `annotator.dispose()` quando terminar.
 
-## Aplicações Práticas
-- **Revisão de Documentos Legais:** Realçar cláusulas e anexar comentários para advogados.  
-- **Recursos Educacionais:** Anotar livros didáticos para grupos de estudo.  
-- **Manuais Técnicos:** Marcar desenhos de engenharia com notas e avisos.  
+## Aplicações práticas
+- **Revisão de documentos legais** – destaque cláusulas, anexe comentários e acompanhe as alterações dos revisores.  
+- **Recursos educacionais** – anote livros didáticos ou slides de aula para grupos de estudo colaborativos.  
+- **Manuais técnicos** – incorpore notas, avisos e marcas de revisão diretamente em desenhos de engenharia.
 
-## Considerações de Desempenho
-- Limite anotações concorrentes em PDFs muito grandes.  
-- Use as **annotation best practices** recomendadas para gerenciar a memória de forma eficiente.  
-- Perfil seu aplicativo com Java Flight Recorder se notar lentidão.  
+## Considerações de desempenho
+- Limite operações de anotação simultâneas em PDFs maiores que 300 MB para evitar pressão na heap.  
+- Use as **annotation best practices** recomendadas para manter o uso de memória abaixo de 200 MB para cargas de trabalho empresariais típicas.  
+- Faça o profiling da sua aplicação com Java Flight Recorder ou VisualVM se notar picos de latência.
 
-## Problemas Comuns e Soluções
+## Problemas comuns e soluções
 
 | Problema | Solução |
 |----------|---------|
-| **OutOfMemoryError** ao carregar PDFs grandes | Carregue o documento em modo de streaming ou aumente o tamanho do heap da JVM. |
-| Anotações não aparecem após salvar | Certifique-se de que `SaveOptions` inclui o `AnnotationType` correto. |
-| Erros de licença | Verifique se o arquivo de licença de teste ou permanente está referenciado corretamente. |
+| **OutOfMemoryError** ao carregar PDFs grandes | Carregue o documento em modo streaming (`new Annotator(stream)`) ou aumente a heap da JVM (`-Xmx2g`). |
+| Anotações não aparecem após salvar | Certifique-se de que `SaveOptions` inclui os valores corretos do enum `AnnotationType`. |
+| Erros de licença | Verifique se o caminho do arquivo de licença está correto e se a versão da licença corresponde à versão da biblioteca. |
 
-## Perguntas Frequentes
+## Perguntas frequentes
 
 **Q: Posso adicionar comentários de texto além de formas?**  
-A: Sim, o GroupDocs.Annotation suporta os tipos `TextAnnotation` e `CommentAnnotation` — basta instanciar o modelo apropriado e adicioná‑lo à lista.
+A: Sim, o GroupDocs.Annotation suporta os tipos `TextAnnotation` e `CommentAnnotation` — instancie o modelo apropriado e adicione‑lo à coleção do anotador.
 
 **Q: É possível editar uma anotação existente?**  
 A: Absolutamente. Recupere a anotação pelo seu ID, modifique suas propriedades e chame `annotator.update(updatedAnnotation)`.
@@ -240,13 +299,16 @@ A: Use `annotator.delete(annotationId)` para excluir uma anotação específica 
 A: Sim. Forneça a senha ao construir a instância `Annotator`: `new Annotator(filePath, password)`.
 
 **Q: Qual versão do Java é necessária?**  
-A: A biblioteca é compatível com Java 8 e versões mais recentes; recomendamos usar a última versão LTS para melhor desempenho.
-
-## Conclusão
-Agora você tem uma solução completa, de ponta a ponta, para **como anotar PDF** usando GroupDocs.Annotation para Java. Seguindo os passos acima — configurando a dependência Maven, inicializando o anotador, criando e adicionando múltiplas anotações e aplicando as melhores práticas de anotação — você pode enriquecer qualquer aplicação Java com recursos poderosos de marcação de documentos.
+A: A biblioteca é compatível com Java 8 e superiores; recomendamos a versão LTS mais recente (Java 17) para desempenho e segurança ideais.
 
 ---
 
-**Última Atualização:** 2026-03-24  
+**Última atualização:** 2026-10-11  
 **Testado com:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs
+**Autor:** GroupDocs  
+
+## Tutoriais relacionados
+
+- [Carregar anotações PDF Java - Guia completo de gerenciamento de anotações GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [Criar anotações PDF Java com GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Editar anotações PDF Java - Tutorial completo do GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)

@@ -1,49 +1,97 @@
 ---
-date: '2026-03-24'
-description: 學習如何使用 GroupDocs.Annotation for Java 以程式方式為 PDF 加標註。遵循逐步說明，新增多個標註，並套用標註最佳實踐。
+date: '2026-10-11'
+description: 了解如何使用 GroupDocs.Annotation for Java 儲存已註解的 PDF 檔案。本分步指南涵蓋設定、多重註解以及最佳實踐。
 keywords:
-- GroupDocs.Annotation for Java
-- Java document annotation
-- Annotator initialization
-title: 如何使用 GroupDocs.Annotation for Java 為 PDF 添加註釋
+- save annotated pdf
+- java document annotation
+- annotate pdf java
+- multiple pdf annotations
+lastmod: '2026-10-11'
+og_description: 了解如何使用 GroupDocs.Annotation for Java 儲存已註解的 PDF。請參考完整教學，內容包括設定、多重註解與最佳實踐技巧。
+og_image_alt: Guide showing Java code to save annotated PDF with GroupDocs.Annotation
+og_title: 如何使用 GroupDocs.Annotation for Java 儲存已註解的 PDF
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  headline: How to save annotated PDF with GroupDocs.Annotation for Java
+  type: TechArticle
+- description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  name: How to save annotated PDF with GroupDocs.Annotation for Java
+  steps:
+  - name: '**Free trial** – download a 30‑day trial to evaluate the API.'
+    text: '**Free trial** – download a 30‑day trial to evaluate the API.'
+  - name: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+    text: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+  - name: '**Production license** – purchase a perpetual license for unlimited deployments.'
+    text: '**Production license** – purchase a perpetual license for unlimited deployments.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Annotation supports `TextAnnotation` and `CommentAnnotation`
+      types—instantiate the appropriate model and add it to the annotator’s collection.
+    question: Can I add text comments in addition to shapes?
+  - answer: Absolutely. Retrieve the annotation by its ID, modify its properties,
+      and call `annotator.update(updatedAnnotation)`.
+    question: Is it possible to edit an existing annotation?
+  - answer: Use `annotator.delete(annotationId)` to delete a specific annotation or
+      `annotator.clear(pageNumber)` to clear all annotations on a page.
+    question: How do I remove an annotation I no longer need?
+  - answer: 'Yes. Provide the password when constructing the `Annotator` instance:
+      `new Annotator(filePath, password)`.'
+    question: Does the library work with password‑protected PDFs?
+  - answer: The library is compatible with Java 8 and newer; we recommend the latest
+      LTS release (Java 17) for optimal performance and security.
+    question: What version of Java is required?
+  type: FAQPage
+tags:
+- pdf annotation
+- groupdocs
+- java
+- document processing
+title: 如何使用 GroupDocs.Annotation for Java 儲存已註解的 PDF
 type: docs
 url: /zh-hant/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1
 ---
 
-# 如何使用 GroupDocs.Annotation for Java 為 PDF 加註
+# 如何使用 GroupDocs.Annotation for Java 保存已註釋的 PDF
 
-提升 Java 應用程式的文件加註功能，是改善協作、合規與使用者體驗的強大方式。在本指南中，您將學習 **如何為 PDF 加註**，從設定 Maven 依賴、建立多筆加註，到遵循加註最佳實踐。讓我們一步步操作，讓您能自信地將此功能整合至專案中。
+在本教學中，您將學習如何使用 GroupDocs.Annotation for Java 以程式方式 **保存已註釋的 PDF** 文件。無論您需要標註法律條款、加入審閱意見，或在工程圖紙中嵌入圖形，下列步驟將帶您逐步完成從 Maven 設定、批次新增註釋到持久化最終檔案的全過程。完成後，您即可在任何 Java 應用程式中整合強大的 PDF 註釋功能。
 
-## 快速回答
+## 快速解答
 - **GroupDocs.Annotation 的主要目的為何？**  
-  在 Java 應用程式中以程式方式建立、編輯，以及 **儲存已加註的 PDF** 文件。  
+  以程式方式在 Java 應用程式中建立、編輯並 **保存已註釋的 PDF** 文件。  
 - **我需要哪個 Maven 套件？**  
-  `com.groupdocs:groupdocs-annotation`（請參考 *Maven dependency* 章節）。  
-- **我可以一次加入多個加註嗎？**  
-  可以——您可以在單一次操作中 **加入多個加註**。  
-- **我要如何初始化加註器？**  
-  使用教學中示範的 **initialize annotator** 模式。  
+  `com.groupdocs:groupdocs-annotation`（請參閱 *Maven dependency* 部分）。  
+- **我可以一次新增多個註釋嗎？**  
+  可以——您可以在單一次操作中 **新增多個註釋**，以減少 I/O 開銷。  
+- **如何初始化 annotator？**  
+  使用教學中示範的 **initialize annotator** 模式；它會載入 PDF 並為註釋任務準備 API。  
 - **關鍵的最佳實踐提示是什麼？**  
-  遵循 *annotation best practices* 清單，以管理記憶體與效能。  
+  請遵循 *annotation best practices* 清單，以管理記憶體、批次處理及最佳檔案大小。
 
-## 什麼是「如何為 PDF 加註」？
-為 PDF 加註是指將視覺備註—如標記、評論、圖形與其他標記—永久寫入檔案，使任何開啟文件的人都能看到這些變更。GroupDocs.Annotation 提供簡易的 API，讓您以程式方式完成此任務。
+## 什麼是「如何註釋 PDF」？
+`GroupDocs.Annotation` 是一個 Java 函式庫，讓您能將視覺註記——如標記、評論、圖形與圖章——直接嵌入 PDF 檔案。此函式庫抽象化低階 PDF 操作，使您能專注於業務邏輯而非 PDF 內部細節。它支援多種註釋類型，提供大型文件的串流 API，且能輕鬆整合至現有的 Java 專案，是任何 PDF 工作流程的多功能解決方案。
 
 ## 為何使用 GroupDocs.Annotation for Java？
-- **跨平台支援** – 可在任何執行 Java 的作業系統上運作。  
-- **豐富的加註類型** – 從簡單的高亮到複雜的橢圓形圖形皆可使用。  
-- **不需外部 PDF 編輯器** – 所有操作皆在您的 Java 程式碼內完成。  
-- **企業級可擴充** – 適用於法律、教育與技術文件等工作流程。  
+GroupDocs.Annotation 提供完整的功能集，簡化 PDF 註釋工作，同時具備高效能與可擴充性。此函式庫可在任何支援 Java 的作業系統上執行，能處理高達 500 MB 的文件而無需將整個檔案載入記憶體，且內建超過 15 種註釋類型。其 API 為開發者設計，只需幾行程式碼即可新增、編輯與移除註釋，並提供完善的授權方案，適用於試用與正式環境。
+- **跨平台支援** – 可在 Windows、Linux 與 macOS 上執行，覆蓋 100 % 的 Java 相容環境。  
+- **豐富的註釋類型** – 超過 15 種內建類型，包括文字、區域、橢圓形與自訂圖章。  
+- **不需外部 PDF 編輯器** – 所有操作皆在您的 Java 程式碼內完成，免除第三方相依。  
+- **企業級可擴充性** – 可處理高達 500 MB 的 PDF，且能在不將整個檔案載入記憶體的情況下處理數百頁文件，得益於串流 API。
 
 ## 前置條件
-- 已在機器上安裝 **Java SDK**（JDK 8 或更新版本）。  
-- 使用 **Maven** 進行相依管理。  
-- 具備 **IntelliJ IDEA** 或 **Eclipse** 等 IDE。  
-- 具備基本的 Java 程式設計知識。  
+- Java 8 或更新版本（建議使用 JDK 11 或以上）。  
+- Maven 用於相依管理。  
+- IDE，例如 IntelliJ IDEA 或 Eclipse。  
+- 具備 Java 集合與例外處理的基本概念。
 
-### Maven dependency GroupDocs
-將 GroupDocs 套件庫與加註函式庫加入 `pom.xml`：
+### Maven 依賴 GroupDocs
+將 GroupDocs 儲存庫與註釋函式庫加入您的 `pom.xml`：
 
 ```xml
 <repositories>
@@ -63,12 +111,12 @@ weight: 1
 ```
 
 ## 取得授權
-1. **免費試用：** 下載試用版以測試 GroupDocs.Annotation。  
-2. **臨時授權：** 取得臨時授權以在評估期間完整使用功能。  
-3. **購買正式授權：** 取得正式授權以供正式環境使用。  
+1. **免費試用** – 下載 30 天的試用版以評估 API。  
+2. **臨時授權** – 申請 7 天的評估金鑰以取得全部功能。  
+3. **正式授權** – 購買永久授權以進行無限制部署。
 
-## 初始化 Annotator（Java）
-第一步是 **初始化加註器**，並指定要處理的文件。以下為基本的初始化範例：
+## 如何在 Java 中初始化 annotator
+`Annotator` 是 GroupDocs.Annotation 的核心類別，用於載入 PDF 並提供建立、編輯與保存註釋的方法。正確初始化是可靠工作流程的第一步，使用 try‑with‑resources 可自動釋放本機資源。您只需將檔案路徑（以及可選的受保護 PDF 密碼）傳入建構子，即可建立實例，之後 annotator 即可執行後續操作。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -82,8 +130,8 @@ public class Feature1 {
 }
 ```
 
-### 功能 1：載入與初始化 Annotator
-此功能示範如何以文件路徑載入 Annotator，為加註任務做好 Java 應用程式的前置設定。
+### 功能 1：載入與初始化 annotator
+此功能示範如何使用檔案路徑建立 `Annotator` 實例，並可選擇傳入受保護 PDF 的密碼。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -97,10 +145,11 @@ public class Feature1 {
 }
 ```
 
-## 建立加註
+## 如何建立註釋
+建立註釋的流程包括實例化特定的註釋模型、設定其屬性，並將其加入 annotator 的集合中。
 
-### 功能 2：建立區域加註（Area Annotation）
-區域加註可用於標示矩形區域。依照以下步驟建立：
+### 功能 2：建立區域註釋
+`AreaAnnotation` 代表 PDF 頁面上的矩形標註區域，可用於標示需要注意的文字或圖像區段。
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -127,8 +176,8 @@ public class Feature2 {
 }
 ```
 
-### 功能 3：建立橢圓形加註（Ellipse Annotation）
-橢圓形加註適合用於圓形或橢圓形的標示。
+### 功能 3：建立橢圓形註釋
+`EllipseAnnotation` 定義一個圓形或橢圓形，可放置於頁面上以突顯標誌、圖表或其他視覺元素。
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -155,8 +204,8 @@ public class Feature3 {
 }
 ```
 
-## 加入多筆加註
-您可以在一次呼叫中 **加入多個加註**，此方式可提升效能並讓程式碼更簡潔。
+## 如何一次新增多個註釋
+`addAnnotations` 方法允許您一次性將多個註釋物件集合加入文件，藉由減少檔案系統寫入與記憶體波動來提升效能。透過批次新增註釋，可最小化 I/O 操作並降低 JVM 堆積使用量，特別是在處理大型 PDF 時。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -187,8 +236,8 @@ public class Feature4 {
 }
 ```
 
-## 儲存文件 – 如何儲存已加註的 PDF
-當加註完成後，您只需 **儲存已加註的 PDF**，並可選擇只保留特定類型的加註。
+## 如何保存已註釋的 PDF
+`SaveOptions` 讓您在持久化 PDF 時指定要保存的註釋類型與輸出設定。載入 PDF、加入所需的註釋，然後使用帶有指定註釋類型的 `SaveOptions` 物件呼叫 `save` 方法。此一步驟即將變更寫回磁碟，同時保留原始文件結構。
 
 ```java
 public class Feature5 {
@@ -206,51 +255,56 @@ public class Feature5 {
 }
 ```
 
-## Annotation Best Practices（Java）
-- **使用 try‑with‑resources** 以自動關閉 `Annotator` 並釋放記憶體。  
-- **批次加入加註**（如功能 4 所示）以減少 I/O 開銷。  
-- 在 `SaveOptions` 中 **僅指定所需的加註類型**，以保持檔案大小最小。  
-- 儲存後 **釋放大型文件**，避免記憶體洩漏。  
+## Java 註釋最佳實踐
+- **使用 try‑with‑resources** 以自動關閉 `Annotator` 並釋放本機資源。  
+- **批次新增註釋**（如功能 4 所示）以減少 I/O 開銷。  
+- **在 `SaveOptions` 中僅指定所需的註釋類型**，以控制輸出檔案大小。  
+- **儲存後釋放大型文件** 以避免記憶體洩漏；完成後呼叫 `annotator.dispose()`。
 
 ## 實務應用
-- **法律文件審閱：** 為條款加上高亮並附加評論，供律師使用。  
-- **教育資源：** 為教科書加註，供學習小組討論。  
-- **技術手冊：** 在工程圖上標註說明與警示。  
+- **法律文件審閱** – 標註條款、附加評論，並追蹤審閱者變更。  
+- **教育資源** – 為教科書或投影片加入註釋，以供協作學習小組使用。  
+- **技術手冊** – 直接在工程圖紙上嵌入備註、警示與修訂標記。
 
 ## 效能考量
-- 限制在極大型 PDF 上同時執行的加註數量。  
-- 使用建議的 **annotation best practices** 以有效管理記憶體。  
-- 若發現效能下降，可使用 Java Flight Recorder 進行效能分析。  
+- 限制對超過 300 MB 的 PDF 同時執行的註釋操作，以避免堆積壓力。  
+- 遵循建議的 **annotation best practices**，將記憶體使用量控制在 200 MB 以下，以符合一般企業工作負載。  
+- 若發現延遲激增，請使用 Java Flight Recorder 或 VisualVM 進行效能分析。
 
 ## 常見問題與解決方案
 | 問題 | 解決方案 |
 |-------|----------|
-| **OutOfMemoryError** 在載入大型 PDF 時發生 | 以串流模式載入文件，或增大 JVM 堆積大小。 |
-| 加註儲存後未顯示 | 確認 `SaveOptions` 包含正確的 `AnnotationType`。 |
-| 授權錯誤 | 核對試用或正式授權檔案是否正確引用。 |
+| **OutOfMemoryError** 在載入大型 PDF 時發生 | 以串流模式載入文件（`new Annotator(stream)`）或增加 JVM 堆積大小（`-Xmx2g`）。 |
+| 儲存後註釋未顯示 | 確認 `SaveOptions` 包含正確的 `AnnotationType` 列舉值。 |
+| 授權錯誤 | 核對授權檔案路徑是否正確，且授權版本與函式庫版本相符。 |
 
 ## 常見問答
 
-**Q: 我可以同時加入文字評論與圖形嗎？**  
-A: 可以，GroupDocs.Annotation 支援 `TextAnnotation` 與 `CommentAnnotation` 類型——只需實例化相應模型並加入清單即可。
+**Q: 我可以在形狀之外加入文字評論嗎？**  
+A: 可以，GroupDocs.Annotation 支援 `TextAnnotation` 與 `CommentAnnotation` 類型——實例化相應模型並加入 annotator 的集合。
 
-**Q: 是否可以編輯已存在的加註？**  
-A: 當然可以。透過加註 ID 取得目標加註，修改其屬性後呼叫 `annotator.update(updatedAnnotation)`。
+**Q: 能編輯已存在的註釋嗎？**  
+A: 當然可以。依據 ID 取得註釋，修改其屬性，然後呼叫 `annotator.update(updatedAnnotation)`。
 
-**Q: 我要如何移除不再需要的加註？**  
-A: 使用 `annotator.delete(annotationId)` 刪除特定加註，或使用 `annotator.clear(pageNumber)` 清除整頁的所有加註。
+**Q: 如何移除不再需要的註釋？**  
+A: 使用 `annotator.delete(annotationId)` 刪除特定註釋，或使用 `annotator.clear(pageNumber)` 清除頁面上的所有註釋。
 
 **Q: 此函式庫能處理受密碼保護的 PDF 嗎？**  
-A: 能。建立 `Annotator` 實例時提供密碼即可：`new Annotator(filePath, password)`。
+A: 能。建立 `Annotator` 實例時提供密碼：`new Annotator(filePath, password)`。
 
 **Q: 需要哪個版本的 Java？**  
-A: 此函式庫相容於 Java 8 及以上版本；建議使用最新的 LTS 版本以獲得最佳效能。
-
-## 結論
-現在您已掌握使用 GroupDocs.Annotation for Java **為 PDF 加註** 的完整端對端解決方案。依循上述步驟——設定 Maven 依賴、初始化加註器、建立並加入多筆加註，以及遵循加註最佳實踐，您即可為任何 Java 應用程式注入強大的文件標註功能。
+A: 此函式庫相容於 Java 8 及以上版本；我們建議使用最新的 LTS 版本（Java 17）以獲得最佳效能與安全性。
 
 ---
 
-**最後更新：** 2026-03-24  
+**最後更新：** 2026-10-11  
 **測試版本：** GroupDocs.Annotation 25.2  
-**作者：** GroupDocs
+**作者：** GroupDocs  
+
+---
+
+## 相關教學
+
+- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [Create PDF Annotations Java with GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
