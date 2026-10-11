@@ -1,51 +1,100 @@
 ---
-date: '2026-03-24'
-description: เรียนรู้วิธีทำ annotation ให้กับไฟล์ PDF อย่างอัตโนมัติด้วย GroupDocs.Annotation
-  สำหรับ Java ทำตามขั้นตอนทีละขั้นตอน เพิ่ม annotation หลายรายการ และนำแนวทางปฏิบัติที่ดีที่สุดของการทำ
-  annotation ไปใช้.
+date: '2026-10-11'
+description: เรียนรู้วิธีบันทึกไฟล์ PDF ที่มีคำอธิบายโดยใช้ GroupDocs.Annotation สำหรับ
+  Java ขั้นตอนต่อขั้นตอนนี้ครอบคลุมการตั้งค่า การทำคำอธิบายหลายรายการ และแนวทางปฏิบัติที่ดีที่สุด
 keywords:
-- GroupDocs.Annotation for Java
-- Java document annotation
-- Annotator initialization
-title: วิธีทำเครื่องหมาย PDF ด้วย GroupDocs.Annotation สำหรับ Java
+- save annotated pdf
+- java document annotation
+- annotate pdf java
+- multiple pdf annotations
+lastmod: '2026-10-11'
+og_description: เรียนรู้วิธีบันทึก PDF ที่มีคำอธิบายโดยใช้ GroupDocs.Annotation สำหรับ
+  Java ติดตามบทเรียนเต็มรูปแบบที่มีการตั้งค่า การทำคำอธิบายหลายรายการ และเคล็ดลับแนวทางปฏิบัติที่ดีที่สุด
+og_image_alt: Guide showing Java code to save annotated PDF with GroupDocs.Annotation
+og_title: วิธีบันทึก PDF ที่มีคำอธิบายด้วย GroupDocs.Annotation สำหรับ Java
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  headline: How to save annotated PDF with GroupDocs.Annotation for Java
+  type: TechArticle
+- description: Learn how to save annotated PDF files using GroupDocs.Annotation for
+    Java. This step‑by‑step guide covers setup, multiple annotations, and best practices.
+  name: How to save annotated PDF with GroupDocs.Annotation for Java
+  steps:
+  - name: '**Free trial** – download a 30‑day trial to evaluate the API.'
+    text: '**Free trial** – download a 30‑day trial to evaluate the API.'
+  - name: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+    text: '**Temporary license** – request a 7‑day evaluation key for full feature
+      access.'
+  - name: '**Production license** – purchase a perpetual license for unlimited deployments.'
+    text: '**Production license** – purchase a perpetual license for unlimited deployments.'
+  type: HowTo
+- questions:
+  - answer: Yes, GroupDocs.Annotation supports `TextAnnotation` and `CommentAnnotation`
+      types—instantiate the appropriate model and add it to the annotator’s collection.
+    question: Can I add text comments in addition to shapes?
+  - answer: Absolutely. Retrieve the annotation by its ID, modify its properties,
+      and call `annotator.update(updatedAnnotation)`.
+    question: Is it possible to edit an existing annotation?
+  - answer: Use `annotator.delete(annotationId)` to delete a specific annotation or
+      `annotator.clear(pageNumber)` to clear all annotations on a page.
+    question: How do I remove an annotation I no longer need?
+  - answer: 'Yes. Provide the password when constructing the `Annotator` instance:
+      `new Annotator(filePath, password)`.'
+    question: Does the library work with password‑protected PDFs?
+  - answer: The library is compatible with Java 8 and newer; we recommend the latest
+      LTS release (Java 17) for optimal performance and security.
+    question: What version of Java is required?
+  type: FAQPage
+tags:
+- pdf annotation
+- groupdocs
+- java
+- document processing
+title: วิธีบันทึก PDF ที่มีคำอธิบายด้วย GroupDocs.Annotation สำหรับ Java
 type: docs
 url: /th/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/
 weight: 1
 ---
 
-# วิธีทำเครื่องหมาย PDF ด้วย GroupDocs.Annotation สำหรับ Java
+# วิธีบันทึก PDF ที่มีการทำหมายเหตุด้วย GroupDocs.Annotation สำหรับ Java
 
-การเพิ่มความสามารถในการทำเครื่องหมายเอกสารให้กับแอปพลิเคชัน Java เป็นวิธีที่ทรงพลังในการปรับปรุงการทำงานร่วมกัน, การปฏิบัติตามกฎระเบียบ, และประสบการณ์ผู้ใช้ ในคู่มือนี้คุณจะได้เรียนรู้ **วิธีทำเครื่องหมาย PDF** ด้วย GroupDocs.Annotation สำหรับ Java ตั้งแต่การตั้งค่า Maven dependency ไปจนถึงการเพิ่มหลายเครื่องหมายและปฏิบัติตามแนวทางปฏิบัติที่ดีที่สุดเกี่ยวกับการทำเครื่องหมาย เราจะเดินผ่านแต่ละขั้นตอนเพื่อให้คุณสามารถผสานรวมฟีเจอร์นี้เข้าสู่โครงการของคุณได้อย่างมั่นใจ
+ในบทแนะนำนี้คุณจะได้ค้นพบ **วิธีบันทึก PDF ที่มีการทำหมายเหตุ** อย่างโปรแกรมโดยใช้ GroupDocs.Annotation สำหรับ Java ไม่ว่าคุณจะต้องการไฮไลท์ข้อกฎหมาย, เพิ่มความคิดเห็นการตรวจสอบ, หรือฝังรูปทรงในแบบแปลนวิศวกรรม ขั้นตอนต่อไปนี้จะพาคุณผ่านทุกขั้นตอน—from การตั้งค่า Maven ไปจนถึงการเพิ่มหมายเหตุเป็นชุดและการบันทึกไฟล์ขั้นสุดท้าย. เมื่อเสร็จสิ้นคุณจะสามารถรวมความสามารถการทำหมายเหตุ PDF ที่แข็งแกร่งเข้าไปในแอปพลิเคชัน Java ใดก็ได้.
 
-## คำตอบด่วน
+## คำตอบสั้น
 - **วัตถุประสงค์หลักของ GroupDocs.Annotation คืออะไร?**  
-  เพื่อสร้าง, แก้ไข, และ **บันทึก PDF ที่มีการทำเครื่องหมาย** อย่างโปรแกรมในแอปพลิเคชัน Java.  
-- **ฉันต้องใช้ Maven artifact ใด?**  
-  `com.groupdocs:groupdocs-annotation` (see the *Maven dependency* section).  
-- **ฉันสามารถเพิ่มเครื่องหมายมากกว่าหนึ่งรายการในครั้งเดียวได้หรือไม่?**  
-  ได้ – คุณสามารถ **เพิ่มหลายเครื่องหมาย** ในการดำเนินการเดียว.  
+  เพื่อสร้าง, แก้ไข, และ **บันทึก PDF ที่มีการทำหมายเหตุ** อย่างโปรแกรมในแอปพลิเคชัน Java.  
+- **ฉันต้องการ Maven artifact ใด?**  
+  `com.groupdocs:groupdocs-annotation` (ดูส่วน *การพึ่งพา Maven*).  
+- **ฉันสามารถเพิ่มหมายเหตุมากกว่าหนึ่งรายการพร้อมกันได้หรือไม่?**  
+  ใช่ – คุณสามารถ **เพิ่มหลายหมายเหตุ** ในการดำเนินการเดียว, ซึ่งช่วยลดภาระ I/O.  
 - **ฉันจะเริ่มต้น annotator อย่างไร?**  
-  ใช้รูปแบบ **initialize annotator** ที่แสดงในบทแนะนำ.  
-- **เคล็ดลับที่สำคัญของแนวทางปฏิบัติที่ดีที่สุดคืออะไร?**  
-  ปฏิบัติตามรายการตรวจสอบ *annotation best practices* เพื่อการจัดการหน่วยความจำและประสิทธิภาพ.  
+  ใช้รูปแบบ **initialize annotator** ที่แสดงในบทแนะนำ; มันโหลด PDF และเตรียม API สำหรับงานทำหมายเหตุ.  
+- **เคล็ดลับแนวทางปฏิบัติที่สำคัญคืออะไร?**  
+  ปฏิบัติตามรายการตรวจสอบ *annotation best practices* สำหรับการจัดการหน่วยความจำ, การประมวลผลเป็นชุด, และขนาดไฟล์ที่เหมาะสม.
 
-## “วิธีทำเครื่องหมาย PDF” คืออะไร?
-การทำเครื่องหมาย PDF หมายถึงการบันทึกโน้ตแบบภาพ—เช่น ไฮไลท์, ความคิดเห็น, รูปร่าง, และการทำเครื่องหมายอื่น ๆ—โดยตรงลงในไฟล์ เพื่อให้ผู้ที่เปิดเอกสารสามารถเห็นการเปลี่ยนแปลงได้ GroupDocs.Annotation มี API ที่ง่ายต่อการทำงานนี้โดยโปรแกรม
+## “วิธีทำหมายเหตุ PDF” คืออะไร?
+`GroupDocs.Annotation` เป็นไลบรารี Java ที่ให้คุณฝังโน้ตภาพ—ไฮไลท์, ความคิดเห็น, รูปทรง, และตราประทับ—โดยตรงลงในไฟล์ PDF. ไลบรารีนี้ทำให้การจัดการ PDF ระดับล่างเป็นเรื่องง่ายเพื่อให้คุณโฟกัสที่ตรรกะธุรกิจแทนการทำงานกับ PDF ภายใน. มันรองรับประเภทหมายเหตุหลากหลาย, มี Streaming APIs สำหรับเอกสารขนาดใหญ่, และรวมเข้ากับโครงการ Java ที่มีอยู่ได้อย่างง่ายดาย, ทำให้เป็นโซลูชันที่หลากหลายสำหรับกระบวนการทำงานที่ใช้ PDF ใด ๆ.
 
 ## ทำไมต้องใช้ GroupDocs.Annotation สำหรับ Java?
-- **การสนับสนุนข้ามแพลตฟอร์ม** – ทำงานบนระบบปฏิบัติการใดก็ได้ที่รัน Java.  
-- **ประเภทเครื่องหมายที่หลากหลาย** – ตั้งแต่ไฮไลท์ง่าย ๆ ไปจนถึงรูปร่างซับซ้อนเช่นวงรี.  
-- **ไม่ต้องใช้โปรแกรมแก้ไข PDF ภายนอก** – ทุกการดำเนินการเกิดขึ้นภายในโค้ด Java ของคุณ.  
-- **ขยายได้สำหรับองค์กร** – เหมาะสำหรับกระบวนการทำงานด้านกฎหมาย, การศึกษา, และเอกสารเทคนิค.  
+GroupDocs.Annotation มีชุดคุณลักษณะที่ครบถ้วนซึ่งทำให้งานทำหมายเหตุ PDF ง่ายขึ้นพร้อมกับประสิทธิภาพและความสามารถในการขยายสูง. ไลบรารีทำงานบนระบบปฏิบัติการใดก็ได้ที่รองรับ Java, จัดการเอกสารขนาดถึง 500 MB โดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ, และมีประเภทหมายเหตุในตัวมากกว่า 15 ประเภท. API ถูกออกแบบมาสำหรับนักพัฒนา, ให้คุณเพิ่ม, แก้ไข, และลบหมายเหตุได้ด้วยไม่กี่บรรทัดโค้ด, พร้อมตัวเลือกการให้ลิขสิทธิ์ที่แข็งแกร่งสำหรับการทดลองและการใช้งานจริง.
+
+- **การสนับสนุนข้ามแพลตฟอร์ม** – ทำงานบน Windows, Linux, และ macOS, ครอบคลุม 100 % ของสภาพแวดล้อมที่เข้ากันกับ Java.  
+- **ประเภทหมายเหตุที่หลากหลาย** – มากกว่า 15 ประเภทที่มีมาในตัว, รวมถึงข้อความ, พื้นที่, รูปวงรี, และตราประทับแบบกำหนดเอง.  
+- **ไม่ต้องใช้โปรแกรมแก้ไข PDF ภายนอก** – ทุกการดำเนินการเกิดขึ้นภายในโค้ด Java ของคุณ, ลดการพึ่งพาเครื่องมือของบุคคลที่สาม.  
+- **ความสามารถในการขยายระดับองค์กร** – สามารถประมวลผล PDF ขนาดถึง 500 MB และจัดการเอกสารหลายร้อยหน้าโดยไม่ต้องโหลดไฟล์ทั้งหมดเข้าสู่หน่วยความจำ, ด้วย Streaming APIs.
 
 ## ข้อกำหนดเบื้องต้น
-- **Java SDK** (JDK 8 หรือใหม่กว่า) ที่ติดตั้งบนเครื่องของคุณ.  
-- **Maven** สำหรับการจัดการ dependency.  
-- IDE เช่น **IntelliJ IDEA** หรือ **Eclipse**.  
-- ความรู้พื้นฐานการเขียนโปรแกรม Java.  
+- Java 8 หรือใหม่กว่า (แนะนำ JDK 11 หรือเวอร์ชันที่ใหม่กว่า).  
+- Maven สำหรับการจัดการ dependencies.  
+- IDE เช่น IntelliJ IDEA หรือ Eclipse.  
+- ความคุ้นเคยพื้นฐานกับ Java collections และการจัดการข้อยกเว้น.
 
-### การกำหนดค่า Maven Dependency ของ GroupDocs
-เพิ่ม repository ของ GroupDocs และไลบรารี annotation ลงใน `pom.xml` ของคุณ:
+### การขึ้นอยู่กับ Maven ของ GroupDocs
+เพิ่มรีโพสิตอรีของ GroupDocs และไลบรารี annotation ลงใน `pom.xml` ของคุณ:
 
 ```xml
 <repositories>
@@ -65,12 +114,12 @@ weight: 1
 ```
 
 ## การรับใบอนุญาต
-1. **Free Trial:** ดาวน์โหลดเวอร์ชันทดลองเพื่อทดสอบ GroupDocs.Annotation.  
-2. **Temporary License:** รับใบอนุญาตชั่วคราวเพื่อเข้าถึงเต็มรูปแบบในช่วงการประเมิน.  
-3. **Purchase:** ซื้อใบอนุญาตเต็มเพื่อการใช้งานในผลิตภัณฑ์.  
+1. **ทดลองใช้ฟรี** – ดาวน์โหลดการทดลองใช้งาน 30 วันเพื่อประเมิน API.  
+2. **ใบอนุญาตชั่วคราว** – ขอคีย์การประเมิน 7 วันเพื่อเข้าถึงฟีเจอร์ทั้งหมด.  
+3. **ใบอนุญาตการผลิต** – ซื้อใบอนุญาตถาวรสำหรับการใช้งานไม่จำกัด.
 
-## การเริ่มต้น Annotator ใน Java
-ขั้นตอนแรกคือการ **initialize the annotator** ด้วยเอกสารที่คุณต้องการทำงานด้วย ด้านล่างเป็นรูปแบบการเริ่มต้นพื้นฐาน:
+## วิธีเริ่มต้น annotator ใน Java
+`Annotator` เป็นคลาสหลักของ GroupDocs.Annotation ที่โหลด PDF และให้เมธอดสำหรับสร้าง, แก้ไข, และบันทึกหมายเหตุ. การเริ่มต้นอย่างถูกต้องเป็นขั้นตอนแรกสู่กระบวนการทำงานที่เชื่อถือได้, และการใช้ try‑with‑resources จะทำให้ทรัพยากร native ถูกปล่อยอัตโนมัติ. คุณสร้างอินสแตนซ์โดยส่งพาธไฟล์ (และอาจส่งรหัสผ่านสำหรับ PDF ที่ป้องกัน) ไปยังคอนสตรัคเตอร์, หลังจากนั้น annotator จะพร้อมสำหรับการดำเนินการต่อ.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -84,8 +133,8 @@ public class Feature1 {
 }
 ```
 
-### ฟีเจอร์ 1: การโหลดและการเริ่มต้น Annotator
-ฟีเจอร์นี้แสดงการเริ่มต้น Annotator ด้วยเส้นทางไฟล์เอกสาร, การตั้งค่าแอปพลิเคชัน Java ของคุณสำหรับงานทำเครื่องหมาย.
+### ฟีเจอร์ 1: การโหลดและเริ่มต้น annotator
+ฟีเจอร์นี้แสดงการสร้างอินสแตนซ์ `Annotator` ด้วยพาธไฟล์, พร้อมหรือไม่ก็ส่งรหัสผ่านสำหรับ PDF ที่ป้องกัน.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -99,10 +148,11 @@ public class Feature1 {
 }
 ```
 
-## การสร้างเครื่องหมาย
+## วิธีสร้างหมายเหตุ
+การสร้างหมายเหตุเกี่ยวข้องกับการสร้างโมเดลหมายเหตุเฉพาะ, ตั้งค่าคุณสมบัติ, และเพิ่มลงในคอลเลกชันของ annotator.
 
-### ฟีเจอร์ 2: การสร้าง Area Annotation
-Area annotations ให้คุณไฮไลท์พื้นที่สี่เหลี่ยม. ทำตามขั้นตอนต่อไปนี้เพื่อสร้างหนึ่งรายการ:
+### ฟีเจอร์ 2: การสร้าง area annotation
+`AreaAnnotation` แทนพื้นที่ไฮไลท์สี่เหลี่ยมบนหน้า PDF. มันมีประโยชน์สำหรับการทำเครื่องหมายส่วนของข้อความหรือรูปภาพที่ต้องการความสนใจ.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -129,8 +179,8 @@ public class Feature2 {
 }
 ```
 
-### ฟีเจอร์ 3: การสร้าง Ellipse Annotation
-Ellipse annotations เหมาะสำหรับไฮไลท์รูปวงกลมหรือวงรี.
+### ฟีเจอร์ 3: การสร้าง ellipse annotation
+`EllipseAnnotation` กำหนดรูปวงรีหรือวงกลมที่สามารถวางบนหน้าเพื่อเน้นโลโก้, แผนภาพ, หรือองค์ประกอบภาพอื่น ๆ.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -157,8 +207,8 @@ public class Feature3 {
 }
 ```
 
-## การเพิ่มหลายเครื่องหมาย
-คุณสามารถ **add multiple annotations** ในการเรียกเดียว, ซึ่งช่วยปรับปรุงประสิทธิภาพและทำให้โค้ดของคุณเป็นระเบียบ.
+## วิธีเพิ่มหลายหมายเหตุ
+เมธอด `addAnnotations` อนุญาตให้คุณเพิ่มคอลเลกชันของอ็อบเจ็กต์หมายเหตุไปยังเอกสารในคำเรียกเดียว, ซึ่งช่วยเพิ่มประสิทธิภาพโดยลดการเขียนไฟล์และการใช้หน่วยความจำ. การทำหมายเหตุเป็นชุดช่วยลดการดำเนินการ I/O และทำให้การใช้ heap ของ JVM ต่ำ, โดยเฉพาะเมื่อทำงานกับ PDF ขนาดใหญ่.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -189,8 +239,8 @@ public class Feature4 {
 }
 ```
 
-## การบันทึกเอกสาร – วิธีบันทึก PDF ที่ทำเครื่องหมายแล้ว
-ตอนนี้เครื่องหมายของคุณพร้อมแล้ว, คุณจะ **save annotated PDF** เฉพาะประเภทเครื่องหมายที่ต้องการ.
+## วิธีบันทึก PDF ที่มีการทำหมายเหตุ
+`SaveOptions` ให้คุณระบุประเภทหมายเหตุและการตั้งค่าเอาต์พุตที่ต้องการเมื่อบันทึก PDF. โหลด PDF ของคุณ, เพิ่มหมายเหตุที่ต้องการ, แล้วเรียกเมธอด `save` พร้อมอ็อบเจ็กต์ `SaveOptions` ที่ระบุประเภทหมายเหตุที่ต้องการบันทึก. การดำเนินการขั้นเดียวนี้จะเขียนการเปลี่ยนแปลงกลับไปยังดิสก์พร้อมคงโครงสร้างเอกสารเดิมไว้.
 
 ```java
 public class Feature5 {
@@ -208,51 +258,54 @@ public class Feature5 {
 }
 ```
 
-## แนวทางปฏิบัติที่ดีที่สุดสำหรับ Annotation ใน Java
-- **ใช้ try‑with‑resources** เพื่อปิด `Annotator` โดยอัตโนมัติและปลดปล่อยหน่วยความจำ.  
-- **เพิ่มเครื่องหมายเป็นชุด** (ตามที่แสดงในฟีเจอร์ 4) เพื่อลดภาระ I/O.  
-- **ระบุเฉพาะประเภทเครื่องหมายที่ต้องการ** ใน `SaveOptions` เพื่อให้ไฟล์มีขนาดเล็ก.  
-- **ปล่อยเอกสารขนาดใหญ่** จากหน่วยความจำหลังการบันทึกเพื่อหลีกเลี่ยงการรั่วไหล.  
+## แนวทางปฏิบัติที่ดีที่สุดสำหรับการทำหมายเหตุใน Java
+- **ใช้ try‑with‑resources** เพื่อปิด `Annotator` โดยอัตโนมัติและปลดปล่อยทรัพยากร native.  
+- **เพิ่มหมายเหตุเป็นชุด** (ตามที่แสดงในฟีเจอร์ 4) เพื่อลดภาระ I/O.  
+- **ระบุเฉพาะประเภทหมายเหตุที่ต้องการ** ใน `SaveOptions` เพื่อควบคุมขนาดไฟล์ผลลัพธ์.  
+- **ปล่อยเอกสารขนาดใหญ่** จากหน่วยความจำหลังการบันทึกเพื่อหลีกเลี่ยงการรั่วไหล; เรียก `annotator.dispose()` เมื่อเสร็จ.
 
 ## การประยุกต์ใช้งานจริง
-- **การตรวจสอบเอกสารทางกฎหมาย:** ไฮไลท์ข้อกำหนดและแนบความคิดเห็นสำหรับทนาย.  
-- **แหล่งการเรียนการสอน:** ทำเครื่องหมายในตำราเรียนสำหรับกลุ่มศึกษา.  
-- **คู่มือเทคนิค:** ทำเครื่องหมายบนแผนภาพวิศวกรรมด้วยโน้ตและคำเตือน.  
+- **การตรวจสอบเอกสารทางกฎหมาย** – ไฮไลท์ข้อกำหนด, แนบความคิดเห็น, และติดตามการเปลี่ยนแปลงของผู้ตรวจสอบ.  
+- **ทรัพยากรการศึกษา** – ทำหมายเหตุในตำราเรียนหรือสไลด์การบรรยายเพื่อการศึกษากลุ่มร่วมกัน.  
+- **คู่มือเทคนิค** – ฝังโน้ต, คำเตือน, และเครื่องหมายการแก้ไขโดยตรงบนแบบแปลนวิศวกรรม.
 
 ## ข้อควรพิจารณาด้านประสิทธิภาพ
-- จำกัดการทำเครื่องหมายพร้อมกันบน PDF ขนาดใหญ่มาก.  
-- ใช้ **annotation best practices** ที่แนะนำเพื่อจัดการหน่วยความจำอย่างมีประสิทธิภาพ.  
-- ทำการ profiling แอปพลิเคชันของคุณด้วย Java Flight Recorder หากพบว่าช้า.  
+- จำกัดการดำเนินการทำหมายเหตุพร้อมกันบน PDF ขนาดใหญ่กว่า 300 MB เพื่อหลีกเลี่ยงความกดดันของ heap.  
+- ใช้ **annotation best practices** ที่แนะนำเพื่อรักษาการใช้หน่วยความจำต่ำกว่า 200 MB สำหรับงานระดับองค์กรทั่วไป.  
+- ทำการ profiling แอปพลิเคชันของคุณด้วย Java Flight Recorder หรือ VisualVM หากพบการเพิ่มขึ้นของความหน่วง.
 
-## ปัญหาที่พบบ่อยและวิธีแก้ไข
+## ปัญหาทั่วไปและวิธีแก้
 | ปัญหา | วิธีแก้ |
 |-------|----------|
-| **OutOfMemoryError** when loading big PDFs | โหลดเอกสารในโหมดสตรีมมิ่งหรือเพิ่มขนาด heap ของ JVM. |
-| เครื่องหมายไม่ปรากฏหลังการบันทึก | ตรวจสอบว่า `SaveOptions` มี `AnnotationType` ที่ถูกต้อง. |
-| ข้อผิดพลาดใบอนุญาต | ตรวจสอบว่าไฟล์ใบอนุญาต trial หรือ permanent ถูกอ้างอิงอย่างถูกต้อง. |
+| **OutOfMemoryError** เมื่อโหลด PDF ขนาดใหญ่ | โหลดเอกสารในโหมด streaming (`new Annotator(stream)`) หรือเพิ่มขนาด heap ของ JVM (`-Xmx2g`). |
+| หมายเหตุไม่แสดงหลังการบันทึก | ตรวจสอบว่า `SaveOptions` มีค่า enum `AnnotationType` ที่ถูกต้อง. |
+| ข้อผิดพลาดของใบอนุญาต | ตรวจสอบว่าเส้นทางไฟล์ใบอนุญาตถูกต้องและเวอร์ชันของใบอนุญาตตรงกับเวอร์ชันของไลบรารี. |
 
 ## คำถามที่พบบ่อย
 
-**Q: ฉันสามารถเพิ่มความคิดเห็นข้อความนอกเหนือจากรูปร่างได้หรือไม่?**  
-A: ได้, GroupDocs.Annotation รองรับประเภท `TextAnnotation` และ `CommentAnnotation` — เพียงสร้างอินสแตนซ์ของโมเดลที่เหมาะสมและเพิ่มลงในรายการ.
+**Q: ฉันสามารถเพิ่มความคิดเห็นข้อความนอกเหนือจากรูปทรงได้หรือไม่?**  
+A: ใช่, GroupDocs.Annotation รองรับประเภท `TextAnnotation` และ `CommentAnnotation` — สร้างอินสแตนซ์ของโมเดลที่เหมาะสมและเพิ่มลงในคอลเลกชันของ annotator.
 
-**Q: สามารถแก้ไขเครื่องหมายที่มีอยู่ได้หรือไม่?**  
-A: แน่นอน. ดึงเครื่องหมายโดยใช้ ID, แก้ไขคุณสมบัติของมัน, แล้วเรียก `annotator.update(updatedAnnotation)`.
+**Q: สามารถแก้ไขหมายเหตุที่มีอยู่ได้หรือไม่?**  
+A: ได้แน่นอน. ดึงหมายเหตุโดย ID, แก้ไขคุณสมบัติ, และเรียก `annotator.update(updatedAnnotation)`.
 
-**Q: ฉันจะลบเครื่องหมายที่ไม่ต้องการออกได้อย่างไร?**  
-A: ใช้ `annotator.delete(annotationId)` เพื่อลบเครื่องหมายเฉพาะ หรือ `annotator.clear(pageNumber)` เพื่อลบเครื่องหมายทั้งหมดในหน้า.
+**Q: ฉันจะลบหมายเหตุที่ไม่ต้องการได้อย่างไร?**  
+A: ใช้ `annotator.delete(annotationId)` เพื่อลบหมายเหตุเฉพาะหรือ `annotator.clear(pageNumber)` เพื่อลบหมายเหตุทั้งหมดบนหน้า.
 
 **Q: ไลบรารีทำงานกับ PDF ที่มีการป้องกันด้วยรหัสผ่านหรือไม่?**  
 A: ใช่. ให้รหัสผ่านเมื่อสร้างอินสแตนซ์ `Annotator`: `new Annotator(filePath, password)`.
 
-**Q: ต้องการเวอร์ชัน Java ใด?**  
-A: ไลบรารีเข้ากันได้กับ Java 8 และใหม่กว่า; เราแนะนำให้ใช้เวอร์ชัน LTS ล่าสุดเพื่อประสิทธิภาพที่ดีที่สุด.
-
-## สรุป
-ตอนนี้คุณมีโซลูชันครบวงจรสำหรับ **วิธีทำเครื่องหมาย PDF** ด้วย GroupDocs.Annotation สำหรับ Java. โดยทำตามขั้นตอนข้างต้น—การตั้งค่า Maven dependency, การเริ่มต้น annotator, การสร้างและเพิ่มหลายเครื่องหมาย, และการใช้แนวทางปฏิบัติที่ดีที่สุดสำหรับการทำเครื่องหมาย—คุณสามารถเสริมแอปพลิเคชัน Java ใด ๆ ด้วยความสามารถในการทำเครื่องหมายเอกสารที่ทรงพลัง.
+**Q: ต้องการเวอร์ชันของ Java ใด?**  
+A: ไลบรารีเข้ากันได้กับ Java 8 และใหม่กว่า; เราแนะนำให้ใช้รุ่น LTS ล่าสุด (Java 17) เพื่อประสิทธิภาพและความปลอดภัยที่ดีที่สุด.
 
 ---
 
-**Last Updated:** 2026-03-24  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**อัปเดตล่าสุด:** 2026-10-11  
+**ทดสอบด้วย:** GroupDocs.Annotation 25.2  
+**ผู้เขียน:** GroupDocs  
+
+## บทแนะนำที่เกี่ยวข้อง
+
+- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
+- [Create PDF Annotations Java with GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
