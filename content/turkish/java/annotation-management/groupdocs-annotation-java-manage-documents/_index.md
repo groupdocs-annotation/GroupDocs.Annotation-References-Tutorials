@@ -1,56 +1,107 @@
 ---
 categories:
 - Java Development
-date: '2026-03-24'
-description: GroupDocs.Annotation ile Java’da PDF açıklamalarını nasıl yükleyeceğinizi
-  öğrenin. Gerçek dünya senaryolarında Java kullanarak belge açıklamalarını yüklemeyi,
-  kaldırmayı ve optimize etmeyi öğrenin.
-keywords: Java annotation management, document annotation Java, PDF annotation management
-  Java, GroupDocs annotation tutorial, manage annotations Java documents
-lastmod: '2026-03-24'
-linktitle: Load PDF Annotations Java
+date: '2026-10-11'
+description: GroupDocs.Annotation ile pdf annotations java yüklemeyi öğrenin. Java
+  kullanarak gerçek dünya senaryolarında belge anotasyonlarını yüklemeyi, kaldırmayı
+  ve optimize etmeyi öğrenin.
+keywords:
+- load pdf annotations java
+- groupdocs annotation java
+- java pdf annotation management
+- document review java
+- annotation processing java
+lastmod: '2026-10-11'
+linktitle: Yükle PDF Annotations Java
+og_description: GroupDocs.Annotation ile pdf annotations java'yi hızlı bir şekilde
+  yükleyin. Java uygulamalarında annotation replies'ı okumak, filtrelemek ve kaldırmak
+  için bu adım adım öğreticiyi izleyin.
+og_image_alt: Developer guide showing Java code for loading and managing PDF annotations
+  with GroupDocs
+og_title: Load pdf annotations java – GroupDocs Annotation ile tam rehber
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-11'
+  description: Master how to load pdf annotations java with GroupDocs.Annotation.
+    Learn to load, remove, and optimize document annotations using Java in real‑world
+    scenarios.
+  headline: Load pdf annotations java – complete GroupDocs annotation management guide
+  type: TechArticle
+- description: Master how to load pdf annotations java with GroupDocs.Annotation.
+    Learn to load, remove, and optimize document annotations using Java in real‑world
+    scenarios.
+  name: Load pdf annotations java – complete GroupDocs annotation management guide
+  steps:
+  - name: Load test documents with known annotation counts.
+    text: Load test documents with known annotation counts.
+  - name: Verify reply‑removal logic works as expected.
+    text: Verify reply‑removal logic works as expected.
+  - name: Measure memory consumption under load.
+    text: Measure memory consumption under load.
+  - name: Validate that output PDFs retain visual integrity.
+    text: Validate that output PDFs retain visual integrity.
+  type: HowTo
+- questions:
+  - answer: Use `LoadOptions` to specify the document password, e.g., `new LoadOptions("myPassword")`,
+      then pass the options to the `Annotator` constructor.
+    question: How do I handle password‑protected PDF files?
+  - answer: Yes! GroupDocs.Annotation supports Word, Excel, PowerPoint, and many other
+      formats. The API remains consistent across formats.
+    question: Can I process multiple document formats beyond PDF?
+  - answer: There’s no hard limit, but performance depends on available memory. For
+      documents over 100 MB, consider streaming approaches and batch processing.
+    question: What's the maximum document size the library can handle?
+  - answer: The library automatically maintains formatting. After removing replies,
+      call `annotator.update()` to refresh formatting and `annotator.save()` to persist
+      changes.
+    question: How do I preserve annotation formatting when removing replies?
+  - answer: No direct undo exists. Always work on a copy or implement versioning in
+      your application to support roll‑backs.
+    question: Can I undo annotation removal operations?
+  type: FAQPage
 tags:
 - java
 - annotations
 - document-processing
 - groupdocs
 - pdf-management
-title: PDF Açıklamaları Yükleme Java - Tam GroupDocs Açıklama Yönetimi Rehberi
+title: Load pdf annotations java – tam bir GroupDocs annotation yönetim rehberi
 type: docs
 url: /tr/java/annotation-management/groupdocs-annotation-java-manage-documents/
 weight: 1
 ---
 
-# PDF Açıklamaları Java Yükleme: Tam GroupDocs Annotation Yönetim Kılavuzu
+# Load pdf annotations java – tam GroupDocs annotation yönetimi rehberi
 
-Eğer bir belge inceleme sistemi, bir e‑öğrenme platformu veya herhangi bir işbirlikçi düzenleme aracı geliştiriyorsanız, **loading pdf annotations java** göz ardı edilemeyecek temel bir yetenektir. Önümüzdeki birkaç dakikada ihtiyacınız olan her şeyi—açıklamaları yüklemenin temellerinden gelişmiş yanıt‑filtreleme tekniklerine kadar—adım adım inceleyeceğiz, böylece Java uygulamalarınıza hızlı ve güvenilir açıklama özellikleri ekleyebilirsiniz.
+Bir belge inceleme sistemi, bir e‑öğrenme platformu veya herhangi bir işbirlikçi düzenleme aracı geliştiriyorsanız, **load pdf annotations java** göz ardı edilemeyecek temel bir yetenektir. Önümüzdeki birkaç dakikada, açıklamaları yüklemenin temellerinden gelişmiş yanıt‑filtreleme tekniklerine kadar ihtiyacınız olan her şeyi adım adım anlatacağız—böylece Java uygulamalarınıza hızlı ve güvenilir açıklama özellikleri ekleyebilirsiniz.
 
-## Hızlı Yanıtlar
-- **PDF annotations java yüklememe hangi kütüphane izin verir?** GroupDocs.Annotation for Java.  
-- **Denemek için bir lisansa ihtiyacım var mı?** Ücretsiz deneme mevcuttur; ticari kullanım için üretim lisansı gereklidir.  
+## Hızlı cevaplar
+- **Hangi kütüphane bana load pdf annotations java yapmamı sağlar?** GroupDocs.Annotation for Java.  
+- **Denemek için lisansa ihtiyacım var mı?** Ücretsiz deneme mevcuttur; ticari kullanım için üretim lisansı gereklidir.  
 - **Hangi Java sürümü destekleniyor?** JDK 8 ve üzeri.  
-- **Büyük PDF’leri OOM hatası almadan işleyebilir miyim?** Evet—akış seçeneklerini ve doğru kaynak temizlemesini kullanın.  
-- **Sadece belirli yanıtları nasıl kaldırırım?** Yanıt listesini yineleyin, kullanıcıya veya içeriğe göre filtreleyin ve belgeyi güncelleyin.
+- **Büyük PDF'leri OOM hatası almadan işleyebilir miyim?** Evet—akış seçeneklerini ve doğru kaynak temizliğini kullanın.  
+- **Sadece belirli yanıtları nasıl kaldırırım?** Yanıt listesini döngüyle gezerek, kullanıcıya veya içeriğe göre filtreleyin ve belgeyi güncelleyin.  
+- **Şifre korumalı PDF desteği yerleşik mi?** Evet, şifreyi `LoadOptions` aracılığıyla sağlayın.
 
 ## load pdf annotations java nedir?
-Java’da PDF açıklamaları yüklemek, bir PDF dosyasını açmak, içinde gömülü yorum nesnelerini (vurgulamalar, notlar, damgalar, yanıtlar vb.) okumak ve bunları inceleyebileceğiniz, değiştirebileceğiniz veya dışa aktarabileceğiniz Java nesneleri olarak ortaya çıkarmak anlamına gelir. Bu adım, denetim izleri, işbirlikçi incelemeler veya veri çıkarımı gibi açıklama‑odaklı herhangi bir iş akışının temelini oluşturur.
+Loading pdf annotations java, bir PDF dosyasını açmak, gömülü yorum nesnelerini (vurgulamalar, notlar, damgalar, yanıtlar vb.) okumak ve bunları inceleyebileceğiniz, değiştirebileceğiniz veya dışa aktarabileceğiniz Java nesneleri olarak ortaya çıkarmak anlamına gelir. Bu adım, denetim izleri, işbirlikçi incelemeler veya veri çıkarımı gibi herhangi bir açıklama‑odaklı iş akışı için temeldir.
 
-## Neden GroupDocs.Annotation for Java kullanmalıyım?
-GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve daha fazlası üzerinde çalışan birleşik bir API sunar. Karmaşık açıklama yapılarını yönetir, bellek kullanımına ince ayar imkanı verir ve şifre korumalı dosyalar gibi güvenlik özellikleri için yerleşik destek içerir.
+## Neden GroupDocs.Annotation for Java kullanmalı?
+GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve daha fazlası üzerinde çalışan birleşik bir API sunar. Karmaşık açıklama yapılarını yönetir, bellek kullanımında ince ayarlı kontrol sağlar ve şifre korumalı dosyalar gibi güvenlik özellikleri için yerleşik destek içerir. Bu, güvenilir performans, çoklu format uyumluluğu ve sağlam güvenlik gerektiren, geliştirme çabasını düşük tutan kurumsal düzeydeki uygulamalar için uygundur.
 
-## Önkoşullar ve Ortam Kurulumu
+## Önkoşullar ve ortam kurulumu
 
-### İhtiyacınız Olanlar
-- **GroupDocs.Annotation Kütüphanesi** – açıklama işleme için temel bağımlılık  
-- **Java Geliştirme Ortamı** – JDK 8+ ve bir IDE (IntelliJ IDEA veya Eclipse)  
-- **Maven veya Gradle** – bağımlılık yönetimi için  
-- **Mevcut açıklamaları içeren örnek PDF belgeleri** – test amaçlı  
+### Gereksinimler
+- **GroupDocs.Annotation library** – açıklama işleme için temel bağımlılık.  
+- **Java Development Environment** – JDK 8+ ve bir IDE (IntelliJ IDEA veya Eclipse).  
+- **Maven veya Gradle** – bağımlılık yönetimi için.  
+- **Örnek PDF belgeleri** mevcut açıklamalarla test için.  
 
-### GroupDocs.Annotation for Java Kurulumu
+### GroupDocs.Annotation for Java kurulumu
 
-#### Maven Yapılandırması (Önerilen)
+#### Maven yapılandırması (önerilir)
 
-`pom.xml` dosyanıza sorunsuz bağımlılık yönetimi için bu yapılandırmayı ekleyin:
+Bağımlılık yönetimini sorunsuz hale getirmek için `pom.xml` dosyanıza bu yapılandırmayı ekleyin:
 
 ```xml
 <repositories>
@@ -69,33 +120,43 @@ GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve daha fazlası üzerinde ç
 </dependencies>
 ```
 
-**Pro ipucu**: Güvenlik güncellemeleri ve performans iyileştirmeleri için her zaman en son kararlı sürümü kullanın.
+**İpucu**: Güvenlik güncellemeleri ve performans iyileştirmeleri için her zaman en son kararlı sürümü kullanın.
 
-#### Lisans Edinme Stratejisi
-- **Ücretsiz Deneme** – değerlendirme ve küçük projeler için mükemmel  
-- **Geçici Lisans** – geliştirme ve test aşamaları için ideal  
-- **Üretim Lisansı** – ticari uygulamalar için gereklidir  
+#### Lisans edinme stratejisi
+- **Ücretsiz deneme** – değerlendirme ve küçük projeler için idealdir.  
+- **Geçici lisans** – geliştirme ve test aşamaları için idealdir.  
+- **Üretim lisansı** – ticari uygulamalar için gereklidir.  
 
 Kütüphanenin **load pdf annotations java** gereksinimlerinizi karşıladığını doğrulamak için ücretsiz deneme ile başlayın.
 
-## GroupDocs.Annotation ile load pdf annotations java nasıl yapılır
+## GroupDocs.Annotation ile load pdf annotations java nasıl yüklenir
+Loading PDF annotations with GroupDocs.Annotation involves three main steps: first, create a `LoadOptions` instance to specify any required settings like passwords or caching; second, instantiate an `Annotator` with the target file and the load options; third, call `annotator.get()` to retrieve the full list of annotation objects, and finally dispose of the annotator to release resources.
 
-### Açıklama Yükleme Sürecini Anlamak
-Bir belgiden açıklamaları yüklediğinizde, işbirliği öğelerini tanımlayan meta verilere (yorumlar, vurgulamalar, damgalar ve yanıtlar) erişmiş olursunuz. Bu süreç şunlar için kritiktir:
-- **Denetim izleri** – kim ne zaman değişiklik yaptığını izleme  
-- **İşbirliği içgörüleri** – inceleme kalıplarını anlama  
-- **Veri çıkarımı** – raporlama veya analiz için açıklama verilerini çekme  
+`LoadOptions` sınıfı, şifreler ve önbellekleme gibi belge açma parametrelerini yapılandırır.
 
-### Adım‑Adım Uygulama
+### Doğrudan cevap
+Create a `LoadOptions` object (optionally set a password), instantiate an `Annotator` with the target PDF path, call `annotator.get()` to obtain a `List<AnnotationBase>` containing every annotation, and finally invoke `annotator.dispose()` to free native resources. This pattern loads annotations efficiently and prevents memory leaks.
 
-#### 1. Gerekli Sınıfları İçe Aktarın
+### Açıklama yükleme sürecini anlama
+Bir belgelerden açıklamaları yüklediğinizde, işbirlikçi öğeleri tanımlayan meta veriye erişirsiniz—yorumlar, vurgulamalar, damgalar ve yanıtlar. Bu süreç şunlar için kritiktir:
+- **Denetim izleri** – kimin ne zaman hangi değişikliği yaptığını izleyin.  
+- **İşbirliği içgörüleri** – inceleme kalıplarını anlayın.  
+- **Veri çıkarımı** – raporlama veya analiz için açıklama verilerini çekin.
+
+### Adım‑adım uygulama
+
+#### 1. Gerekli sınıfları içe aktarın
+`Annotator` sınıfı, bir belgede açıklamaları okuma, ekleme ve silme yöntemleri sağlar.
+
 ```java
 import com.groupdocs.annotation.Annotator;
 import com.groupdocs.annotation.options.LoadOptions;
 import java.util.List;
 ```
 
-#### 2. Belgenizden Açıklamaları Yükleyin
+#### 2. Belgenizden açıklamaları yükleyin
+`LoadOptions` yükleme davranışını (ör. şifreler) yapılandırmanıza olanak tanır. `Annotator` PDF’nin açıklama katmanını açar. `annotator.get()` tüm açıklamaları bir `List<AnnotationBase>` olarak döndürür. `annotator.dispose()` yerel kaynakları serbest bırakır—büyük dosyalar için esastır.
+
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 LoadOptions loadOptions = new LoadOptions();
@@ -104,31 +165,29 @@ List<AnnotationBase> annotations = annotator.get();
 annotator.dispose();
 ```
 
-**Ne oluyor?**  
-- `LoadOptions`, yükleme davranışını (ör. şifreler) yapılandırmanıza izin verir.  
-- `Annotator`, PDF’nin açıklama katmanını açar.  
-- `annotator.get()` her açıklamayı bir `List<AnnotationBase>` olarak döndürür.  
-- `annotator.dispose()` yerel kaynakları serbest bırakır—büyük dosyalar için hayati öneme sahiptir.  
+#### Bu özelliği ne zaman kullanmalı
+- Her yorumu listeleyen bir **belge inceleme kontrol paneli** oluşturma.  
+- **Uyum raporlaması** için açıklama verilerini dışa aktarma.  
+- Açıklamaları formatlar arasında taşıma (PDF → DOCX vb.).
 
-#### Bu Özelliği Ne Zaman Kullanmalısınız
-- Her yorumu listeleyen bir **belge inceleme panosu** oluştururken.  
-- **Uyumluluk raporlaması** için açıklama verilerini dışa aktarırken.  
-- Açıklamaları formatlar arasında (PDF → DOCX vb.) taşırken.  
+## Gelişmiş özellik: belirli açıklama yanıtlarını kaldırma
 
-## Gelişmiş Özellik: Belirli Açıklama Yanıtlarını Kaldırma
+### Yanıt yönetimi için iş durumu
+İşbirlikçi ortamlarda, açıklama dizileri gürültülü olabilir. Seçici yanıt kaldırma, orijinal yorumu korurken tartışmaları odaklı tutar.
 
-### Yanıt Yönetiminin İş Gereksinimi
-İşbirlikçi ortamlarda açıklama dizileri gürültülü hâle gelebilir. Seçici yanıt kaldırma, tartışmaları odaklı tutarken orijinal yorumu korur.
+### Uygulama rehberi
 
-### Uygulama Kılavuzu
+#### 1. Belge yollarını ayarlayın
+`Annotator`, bir dosya yolu dizesiyle çalışır; aynı zamanda bellek içi işleme için bir `InputStream` de sağlayabilirsiniz.
 
-#### 1. Belge Yollarını Ayarlayın
 ```java
 String inputFilePath = "YOUR_DOCUMENT_DIRECTORY/ANNOTATED_AREA_REPLIES_5.pdf";
 String outputPath = "YOUR_OUTPUT_DIRECTORY/RemovedRepliesOutput.pdf";
 ```
 
-#### 2. Yanıtları Filtreleyip Kaldırın
+#### 2. Yanıtları filtreleyin ve kaldırın
+Döngü, ilk açıklamanın yanıtlarını dolaşır. Yanıt yazarının `"Tom"` ile eşleştiği durumda kaldırılır. `annotator.update()` değiştirilmiş koleksiyonu belgeye yazar. `annotator.save()` temizlenmiş PDF'yi kalıcı hale getirir.
+
 ```java
 LoadOptions loadOptions = new LoadOptions();
 final Annotator annotator = new Annotator(inputFilePath, loadOptions);
@@ -145,13 +204,9 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Açıklama**  
-- Döngü, ilk açıklamanın yanıtları üzerinden yürür.  
-- Yanıt yazarının `"Tom"` ile eşleştiği durumda yanıt kaldırılır.  
-- `annotator.update()` değiştirilmiş koleksiyonu belgeye yazar.  
-- `annotator.save()` temizlenmiş PDF’yi kalıcı hâle getirir.  
+#### Gelişmiş yanıt filtreleme teknikleri
+Kaldırmadan önce tarih aralığı, anahtar kelime veya özel meta veri ile filtreleme yapabilir, gelişmiş denetleme iş akışlarını etkinleştirebilirsiniz.
 
-### Gelişmiş Yanıt Filtreleme Teknikleri
 ```java
 // Remove replies older than 30 days
 Date cutoffDate = new Date(System.currentTimeMillis() - (30L * 24 * 60 * 60 * 1000));
@@ -167,11 +222,11 @@ if (reply.getUser().getRole().equals("temporary_reviewer")) {
 }
 ```
 
-## Gerçek‑Dünya Uygulama Senaryoları
+## Gerçek dünya uygulama senaryoları
 
-### Senaryo 1: Hukuki Belge İnceleme Platformu
-**Zorluk** – Hukuk firmaları, nihai dosyayı teslim etmeden önce ön inceleme yorumlarını temizlemelidir.  
-**Çözüm** – Belgeleri toplu işleyin ve “temporary_reviewer” kullanıcılarından gelen yanıtları ayıklayın:
+### Senaryo 1: hukuk belge inceleme platformu
+**Zorluk** – Hukuk firmaları, son dosyayı teslim etmeden önce ön inceleme yorumlarını temizlemelidir.  
+**Çözüm** – Belgeleri toplu işleyin ve “temporary_reviewer” kullanıcılarının yanıtlarını kaldırın:
 
 ```java
 // Process multiple documents
@@ -181,23 +236,28 @@ for (String docPath : documentPaths) {
 }
 ```
 
-### Senaryo 2: Eğitim İçerik Yönetimi
-**Zorluk** – Öğrenci açıklamaları, dönem sonunda eğitmenin görünümünü kirletir.  
-**Çözüm** – Eğitmen geri bildirimlerini tutun, öğrenci notlarını arşivleyin ve katılım raporları oluşturun.
+### Senaryo 2: eğitim içerik yönetimi
+**Zorluk** – Öğrenci açıklamaları, dönem sonunda eğitmenin görünümünü karıştırır.  
+**Çözüm** – Eğitmen geri bildirimini tutun, öğrenci notlarını arşivleyin ve etkileşim raporları oluşturun.
 
-### Senaryo 3: Kurumsal Uyumluluk Sistemleri
-**Zorluk** – Hassas iç tartışmalar, müşteri‑odaklı PDF’lerden kaldırılmalıdır.  
-**Çözüm** – Rol‑tabanlı filtreler uygulayın ve her kaldırma işlemini denetim‑günlüğüne kaydedin.
+### Senaryo 3: kurumsal uyum sistemleri
+**Zorluk** – Hassas iç tartışmalar, müşteri odaklı PDF'lerden kaldırılmalıdır.  
+**Çözüm** – Rol tabanlı filtreler uygulayın ve her kaldırma eylemini denetim günlüğüne kaydedin.
 
-## Performans En İyi Uygulamaları
+## Performans en iyi uygulamaları
 
-### Bellek Yönetimi Stratejileri
+### Bellek yönetimi stratejileri
+GroupDocs.Annotation, açıklama verilerini akış olarak işler, tam belge yüklemelerinden kaçınır. 200 MB'den büyük PDF'ler için, bellek kullanımını 150 MB altında tutmak amacıyla `LoadOptions.setCacheEnabled(true)` etkinleştirin.
+
 ```java
 // Always Dispose Resources
 try (Annotator annotator = new Annotator(inputFilePath)) {
     // Your annotation processing logic
 } // Automatic resource cleanup
 ```
+
+### Açıklama alımını optimize etme
+Birden fazla okuma için tek bir `Annotator` örneğini yeniden kullanın ve tüm işlemler tamamlandıktan sonra `annotator.dispose()` çağırın.
 
 ```java
 // Process Annotations in Batches
@@ -208,22 +268,27 @@ for (int i = 0; i < annotations.size(); i += batchSize) {
 }
 ```
 
+### I/O yükünü azaltma
+Birçok dosya işlenirken, dosya okumalarını tamponlu bir akışta sarın ve geçici dosya oluşturmayı önlemek için `annotator.save()` ile `SaveOptions.setOverwrite(true)` kullanın.
+
 ```java
 // Use Streaming for Large Files
 LoadOptions options = new LoadOptions();
 options.setPreloadPageCount(1); // Load one page at a time
 ```
 
-### Performans İzleme
-Üretimde şu metrikleri izleyin:
-- **Bellek kullanımı** – açıklama işleme sırasında yığın tüketimi  
-- **İşlem süresi** – yükleme ve filtreleme adımlarının süresi  
-- **Belge boyutu etkisi** – dosya boyutunun gecikmeye etkisi  
-- **Eşzamanlı işlemler** – aynı anda gelen isteklerde yanıt  
+### Performans izleme
+Üretimde aşağıdaki metrikleri izleyin:
+- **Bellek kullanımı** – açıklama işleme sırasında yığın tüketimi.  
+- **İşleme süresi** – yükleme ve filtreleme adımlarının süresi.  
+- **Belge boyutu etkisi** – dosya boyutunun gecikmeye etkisi.  
+- **Eşzamanlı işlemler** – aynı anda gelen isteklerde yanıt.
 
-## Yaygın Sorunlar ve Sorun Giderme
+## Yaygın sorunlar ve sorun giderme
 
-### Sorun 1: “Document Cannot Be Loaded” Hataları
+### Sorun 1: “document cannot be loaded” hataları
+Bu genellikle dosya yolunun hatalı, PDF'nin bozuk veya gerekli şifrenin sağlanmadığı anlamına gelir. Yolu doğrulayın, dosya bütünlüğünü kontrol edin ve şifreyi sağlamak için `LoadOptions` kullanın.
+
 ```java
 try {
     Annotator annotator = new Annotator(inputFilePath);
@@ -237,7 +302,9 @@ try {
 }
 ```
 
-### Sorun 2: Uzun Süre Çalışan Uygulamalarda Bellek Sızıntıları
+### Sorun 2: uzun süren uygulamalarda bellek sızıntıları
+Her belge işlendiğinde mutlaka `annotator.dispose()` çağırdığınızdan emin olun. Toplu işler için, çöp toplama tetiklemek amacıyla `System.gc()` nadiren çağırmayı düşünün.
+
 ```java
 // Use try-with-resources
 try (Annotator annotator = new Annotator(inputFilePath)) {
@@ -245,7 +312,9 @@ try (Annotator annotator = new Annotator(inputFilePath)) {
 } // Automatic cleanup
 ```
 
-### Sorun 3: Büyük Belgelerde Yavaş Performans
+### Sorun 3: büyük belgelerde yavaş performans
+Gerekirse `LoadOptions.setCacheEnabled(true)` ile akış modunu etkinleştirin ve JVM yığın boyutunu artırın. Ayrıca, `LoadOptions.setAnnotationTypes(...)` kullanarak yüklediğiniz açıklama türlerini sınırlayın.
+
 ```java
 // Limit annotation loading scope
 LoadOptions options = new LoadOptions();
@@ -260,16 +329,20 @@ for (int page = 0; page < totalPages; page++) {
 }
 ```
 
-### Sorun 4: Kaldırma Sonrası Tutarsız Açıklama ID’leri
+### Sorun 4: kaldırma sonrası tutarsız açıklama kimlikleri
+Yanıtları sildikten sonra kalan açıklamaları yeniden indekslemek için `annotator.update()` çağırın. Bu, sonraki işlemler için sabit kimlikler sağlar.
+
 ```java
 // Refresh annotation collections after modifications
 annotator.update(annotations);
 annotations = annotator.get(); // Refresh the collection
 ```
 
-## Güvenlik Hususları
+## Güvenlik hususları
 
-### Girdi Doğrulama
+### Girdi doğrulama
+Kötü amaçlı yükleri önlemek için yüklemeden önce dosya uzantılarını ve MIME tiplerini doğrulayın. Güvenilir tespit için `java.nio.file.Files.probeContentType` kullanın.
+
 ```java
 // Validate file paths and user inputs
 if (!isValidFilePath(inputFilePath)) {
@@ -281,23 +354,27 @@ if (!hasPermissionToModify(userId, documentId)) {
 }
 ```
 
-### Denetim Günlüğü
+### Denetim kaydı
+Kullanıcı kimliği, zaman damgası ve belge tanımlayıcısı ile her yükleme, güncelleme ve silme eylemini kaydedin. Bu, çoğu uyum çerçevesinin gereksinimlerini karşılar.
+
 ```java
 // Log annotation operations for compliance
 auditLogger.info("User {} removed {} replies from document {}", 
     userId, removedCount, documentId);
 ```
 
-### Erişim Kontrolü
-Rol‑tabanlı izinleri uygulayın:
-- **Salt‑okunur** – sadece açıklamaları görüntüleme  
-- **Katılımcı** – kendi açıklamalarını ekleme/düzenleme  
-- **Moderatör** – herhangi bir açıklamayı veya yanıtı silme  
-- **Yönetici** – tam kontrol  
+### Erişim kontrolü
+Rol tabanlı izinler uygulayın:
+- **Salt okunur** – sadece açıklamaları görüntüleme.  
+- **Katkıda bulunan** – kendi açıklamalarını ekleme/düzenleme.  
+- **Moderatör** – herhangi bir açıklamayı veya yanıtı silme.  
+- **Yönetici** – tam kontrol.
 
-## Üretim Sistemleri için Gelişmiş İpuçları
+## Üretim sistemleri için gelişmiş ipuçları
 
-### 1. Önbellek Stratejileri Uygulayın
+### 1. Önbellekleme stratejileri uygulama
+Sık erişilen açıklama meta verilerini dağıtık bir önbellekte (ör. Redis) tutarak sıcak belgeler için disk I/O'yu azaltın.
+
 ```java
 // Simple annotation cache
 Map<String, List<AnnotationBase>> annotationCache = new ConcurrentHashMap<>();
@@ -311,7 +388,9 @@ public List<AnnotationBase> getCachedAnnotations(String documentPath) {
 }
 ```
 
-### 2. Asenkron İşleme
+### 2. Asenkron işleme
+Ağır açıklama filtrelemeyi arka plan işçi kuyruğuna (ör. RabbitMQ) devrederek UI'nın yanıt vermesini sağlayın.
+
 ```java
 CompletableFuture<Void> processDocumentAsync(String documentPath) {
     return CompletableFuture.runAsync(() -> {
@@ -320,7 +399,9 @@ CompletableFuture<Void> processDocumentAsync(String documentPath) {
 }
 ```
 
-### 3. Hata Kurtarma Mekanizmaları
+### 3. Hata kurtarma mekanizmaları
+Tüm açıklama çağrılarını, `AnnotationException`'ı özel olarak ele alan ve geçici hataları üç kez tekrarlayan try‑catch bloklarıyla sarın.
+
 ```java
 public boolean processWithRetry(String documentPath, int maxRetries) {
     for (int attempt = 1; attempt <= maxRetries; attempt++) {
@@ -344,9 +425,11 @@ public boolean processWithRetry(String documentPath, int maxRetries) {
 }
 ```
 
-## Açıklama Yönetim Sisteminizin Testi
+## Açıklama yönetim sisteminizi test etme
 
-### Birim Test Çerçevesi
+### Birim test çerçevesi
+JUnit 5'i Mockito ile birlikte kullanarak `Annotator` davranışını taklit edin ve yanıt‑kaldırma mantığının beklendiği gibi çalıştığını doğrulayın.
+
 ```java
 @Test
 public void testAnnotationLoading() {
@@ -366,42 +449,38 @@ public void testAnnotationLoading() {
 }
 ```
 
-### Entegrasyon Testi
-1. Bilinen açıklama sayılarına sahip test belgelerini yükleyin.  
+### Entegrasyon testi
+1. Bilinen açıklama sayısına sahip test belgelerini yükleyin.  
 2. Yanıt‑kaldırma mantığının beklendiği gibi çalıştığını doğrulayın.  
 3. Yük altında bellek tüketimini ölçün.  
-4. Çıktı PDF’lerinin görsel bütünlüğünü koruduğunu onaylayın.
+4. Çıktı PDF'lerinin görsel bütünlüğünü koruduğunu doğrulayın.
 
-## Sık Sorulan Sorular
+## Sıkça sorulan sorular
 
 **S: Şifre korumalı PDF dosyalarını nasıl yönetirim?**  
-C: Belge şifresini belirtmek için `LoadOptions` kullanın:  
-```java
-LoadOptions options = new LoadOptions();
-options.setPassword("your-document-password");
-Annotator annotator = new Annotator(filePath, options);
-```
+C: Belge şifresini belirtmek için `LoadOptions` kullanın, ör. `new LoadOptions("myPassword")`, ardından seçenekleri `Annotator` yapıcısına geçirin.
 
 **S: PDF dışındaki birden fazla belge formatını işleyebilir miyim?**  
 C: Evet! GroupDocs.Annotation, Word, Excel, PowerPoint ve birçok diğer formatı destekler. API, formatlar arasında tutarlı kalır.
 
-**S: Kütüphane hangi maksimum belge boyutunu kaldırabilir?**  
-C: Katı bir sınır yoktur, ancak performans mevcut bellekle ilişkilidir. 100 MB üzerindeki belgeler için akış yaklaşımları ve toplu işleme düşünün.
+**S: Kütüphanenin işleyebileceği maksimum belge boyutu nedir?**  
+C: Katı bir limit yok, ancak performans mevcut belleğe bağlıdır. 100 MB üzerindeki belgeler için akış yöntemlerini ve toplu işleme düşünün.
 
 **S: Yanıtları kaldırırken açıklama biçimlendirmesini nasıl korurum?**  
-C: Kütüphane biçimlendirmeyi otomatik olarak korur. Yanıtları kaldırdıktan sonra `annotator.update()` ile biçimlendirmeyi yenileyin ve `annotator.save()` ile değişiklikleri kalıcı hâle getirin.
+C: Kütüphane biçimlendirmeyi otomatik olarak korur. Yanıtları kaldırdıktan sonra biçimlendirmeyi yenilemek için `annotator.update()` ve değişiklikleri kalıcı kılmak için `annotator.save()` çağırın.
 
 **S: Açıklama kaldırma işlemlerini geri alabilir miyim?**  
-C: Doğrudan bir geri alma yoktur. Her zaman bir kopya üzerinde çalışın veya uygulamanızda sürümleme uygulayarak geri dönüşleri destekleyin.
+C: Doğrudan bir geri alma yoktur. Her zaman bir kopya üzerinde çalışın veya geri dönüşleri desteklemek için uygulamanızda sürümleme uygulayın.
 
 **S: Aynı belgeye eşzamanlı erişimi nasıl yönetirim?**  
-C: Uygulama seviyesinde dosya‑kilitleme mekanizmaları uygulayın. GroupDocs.Annotation yerleşik eşzamanlılık kontrolü sağlamaz.
+C: Uygulama seviyesinde dosya kilitleme mekanizmaları uygulayın. GroupDocs.Annotation yerleşik eşzamanlılık kontrolü sağlamaz.
 
-**S: Yanıt kaldırma ile tüm açıklamayı kaldırma arasındaki fark nedir?**  
-C: Yanıt kaldırma, ana açıklamayı (ör. bir not) tutarken tartışma dizisini temizler. Açıklamayı kaldırmak, tüm nesneyi ve ona bağlı tüm yanıtları siler.
+**S: Yanıtları kaldırmak ile tüm açıklamaları kaldırmak arasındaki fark nedir?**  
+C: Yanıtları kaldırmak, ana açıklamayı (ör. bir not) korurken tartışma dizisini temizler. Açıklamayı kaldırmak, tüm nesneyi, tüm yanıtlar dahil, siler.
 
-**S: Açıklama istatistiklerini (sayı, yazar, tarih) nasıl çıkarırım?**  
-C: Açıklama koleksiyonunu yineleyin ve özellikleri toplayın, örneğin:  
+**S: Açıklama istatistiklerini (sayı, yazarlar, tarihler) nasıl çıkarırım?**  
+C: Açıklama koleksiyonunu döngüyle gezerek özellikleri toplayın, örneğin:
+
 ```java
 Map<String, Integer> authorCounts = annotations.stream()
     .collect(Collectors.groupingBy(
@@ -411,23 +490,33 @@ Map<String, Integer> authorCounts = annotations.stream()
 ```
 
 **S: Açıklamaları dış formatlara (JSON, XML) dışa aktarmanın bir yolu var mı?**  
-C: Yerleşik olmasa da `AnnotationBase` nesnelerini kendiniz serileştirebilir veya kütüphanenin meta veri çıkarma özelliklerini kullanarak özel dışa aktarıcılar oluşturabilirsiniz.
+C: Yerleşik olmasa da, `AnnotationBase` nesnelerini kendiniz serileştirebilir veya kütüphanenin meta veri çıkarma özelliklerini kullanarak özel dışa aktarıcılar oluşturabilirsiniz.
 
-**S: Bozuk veya kısmen hasar görmüş belgelerle nasıl başa çıkılır?**  
-C: Kapsamlı istisna yönetimiyle savunmacı programlama uygulayın. Kütüphane, farklı bozulma türleri için özel istisnalar fırlatır—bunları yakalayın ve kullanıcı dostu geri bildirim sağlayın.
+**S: Bozuk veya kısmen hasar görmüş belgeleri nasıl yönetirim?**  
+C: Kapsamlı istisna yönetimiyle savunmacı programlama uygulayın. Kütüphane, farklı bozulma türleri için belirli istisnalar fırlatır—bunları yakalayın ve kullanıcı dostu geri bildirim sağlayın.
 
-## Ek Kaynaklar
-
-- **Dokümantasyon**: [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)
-- **API Referansı**: [Complete Java API Reference](https://reference.groupdocs.com/annotation/java/)
-- **İndirme Merkezi**: [Latest Library Releases](https://releases.groupdocs.com/annotation/java/)
-- **Ticari Lisanslama**: [Purchase Options](https://purchase.groupdocs.com/buy)
-- **Ücretsiz Deneme**: [Start Your Evaluation](https://releases.groupdocs.com/annotation/java/)
-- **Geliştirme Lisansı**: [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
-- **Topluluk Desteği**: [Developer Forum](https://forum.groupdocs.com/c/annotation/)
+## Ek kaynaklar
+- **Dokümantasyon**: [GroupDocs Annotation Java Documentation](https://docs.groupdocs.com/annotation/java/)  
+- **API referansı**: [Complete Java API Reference](https://reference.groupdocs.com/annotation/java/)  
+- **İndirme merkezi**: [Latest library releases](https://releases.groupdocs.com/annotation/java/)  
+- **Ticari lisanslama**: [Purchase options](https://purchase.groupdocs.com/buy)  
+- **Ücretsiz deneme**: [Start your evaluation](https://releases.groupdocs.com/annotation/java/)  
+- **Geliştirme lisansı**: [Temporary license request](https://purchase.groupdocs.com/temporary-license/)  
+- **Topluluk desteği**: [Developer forum](https://forum.groupdocs.com/c/annotation/)
 
 ---
 
-**Son Güncelleme:** 2026-03-24  
-**Test Edilen Versiyon:** GroupDocs.Annotation 25.2 (Java)  
+**Son güncelleme:** 2026-10-11  
+**Test edilen sürüm:** GroupDocs.Annotation 25.2 (Java)  
 **Yazar:** GroupDocs
+
+```java
+LoadOptions options = new LoadOptions();
+options.setPassword("your-document-password");
+Annotator annotator = new Annotator(filePath, options);
+```
+
+## İlgili Eğitimler
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
+- [Automate Pdf Annotation Extraction Groupdocs Java](/annotation/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/)  
+- [Create PDF Annotations Java – Complete Document Markup Guide](/annotation/java/graphical-annotations/)
