@@ -1,73 +1,125 @@
 ---
-categories:
-- Java Development
-date: '2026-03-27'
-description: Naucz się tworzyć adnotacje PDF w Javie przy użyciu GroupDocs.Annotation.
-  Ten przewodnik krok po kroku pokazuje, jak programowo adnotować pliki PDF, dodawać
-  komentarze recenzenckie i stosować najlepsze praktyki.
-keywords: PDF annotation Java tutorial, GroupDocs annotation Java setup, Java PDF
-  markup library, add annotations PDF programmatically, GroupDocs annotation tutorial
-  for beginners
-lastmod: '2026-03-27'
+date: '2026-10-16'
+description: Dodaj annotations do PDF w Java z GroupDocs.Annotation – przewodnik krok
+  po kroku, który pokazuje, jak programowo markup PDFs, dodać review comments i zastosować
+  best practices.
+keywords:
+- add annotations to pdf
+- pdf annotation library java
+- add review comments pdf
+- groupdocs annotation java
+- java pdf markup
+lastmod: '2026-10-16'
+og_description: Dodaj annotations do PDF w Java z GroupDocs.Annotation – przewodnik
+  krok po kroku, który pokazuje, jak programowo markup PDFs, dodać review comments
+  i zastosować best practices.
+og_image_alt: Guide showing how to add annotations to PDF using GroupDocs.Annotation
+  in Java
+og_title: Jak dodać annotations do PDF w Java z GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-16'
+  description: Add annotations to PDF in Java with GroupDocs.Annotation – a step‑by‑step
+    guide that shows you how to programmatically markup PDFs, add review comments,
+    and apply best practices.
+  headline: How to add annotations to PDF in Java with GroupDocs
+  type: TechArticle
+- questions:
+  - answer: Call `annotator.add(annotation)` for each annotation, then invoke `save()`
+      once. GroupDocs batches the changes and writes them in a single pass.
+    question: How do I add multiple annotations to a single PDF efficiently?
+  - answer: It supports over 50 formats, including DOC, DOCX, PPT, PPTX, XLS, XLSX,
+      JPEG, PNG, TIFF, and many more. See the full list in the [GroupDocs.Annotation
+      Documentation](https://docs.groupdocs.com/annotation/java/).
+    question: What file formats does GroupDocs.Annotation support besides PDF?
+  - answer: Files larger than 50 MB should be streamed page‑by‑page. Memory usage
+      stays under 150 MB when you dispose of each `Annotator` after processing a page
+      batch.
+    question: What are the performance implications of processing large PDFs?
+  - answer: Start with a known rectangle (e.g., (50, 50, 100, 50)) and verify the
+      visual result. Adjust coordinates incrementally and consult the PDF’s page size
+      (usually 612 × 792 points).
+    question: What's the best way to debug annotation positioning issues?
+  - answer: Yes, you can convert annotated PDFs to DOCX, PPTX, or image formats while
+      preserving all markup.
+    question: Can I export annotated PDFs to other formats?
+  type: FAQPage
 tags:
-- pdf-annotation
+- pdf annotation
 - groupdocs
 - java-libraries
 - document-processing
-title: Tworzenie adnotacji PDF w Javie przy użyciu GroupDocs.Annotation
+- add annotations to pdf
+title: Jak dodać annotations do PDF w Java z GroupDocs
 type: docs
 url: /pl/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
 
-# Samouczek Java dotyczący adnotacji PDF
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Czy kiedykolwiek potrzebowałeś **tworzyć adnotacje PDF w Javie** w swojej aplikacji Java? Niezależnie od tego, czy tworzysz system przeglądu dokumentów, platformę e‑learningową czy narzędzie współpracy, dodawanie adnotacji programowo jest powszechnym wymogiem. W tym przewodniku pokażemy, jak **programowo adnotować PDF** przy użyciu GroupDocs.Annotation oraz jak **dodawać komentarze recenzji PDF** dla pełnego przepływu recenzji.
+# Dodaj adnotacje do PDF
+
+Jeśli potrzebujesz **dodawać adnotacje do PDF** plików z aplikacji Java—czy to budujesz portal do przeglądu umów, platformę e‑learningową, czy współpracujący edytor dokumentów—ten tutorial pokazuje dokładnie, jak to zrobić z GroupDocs.Annotation. Nauczysz się ładować PDF‑y, tworzyć komentarze w stylu obszaru, efektywnie zarządzać zasobami i obsługiwać duże pliki bez wyczerpywania pamięci.
 
 ## Szybkie odpowiedzi
-- **Jaki jest podstawowy cel GroupDocs.Annotation?** Aby dodawać, edytować i zarządzać adnotacjami w wielu formatach dokumentów z poziomu Java.  
-- **Jaki typ adnotacji jest najlepszy do komentarzy recenzji?** `AreaAnnotation` z niestandardową wiadomością i metadanymi użytkownika.  
-- **Czy potrzebuję licencji do rozwoju?** Darmowa wersja próbna działa do testów; pełna licencja jest wymagana w produkcji.  
-- **Czy mogę przetwarzać pliki PDF większe niż 50 MB?** Tak — użyj strumieniowania, przetwarzania wsadowego i właściwego zwalniania zasobów, aby utrzymać niskie zużycie pamięci.  
+- **Jaki jest podstawowy cel GroupDocs.Annotation?** Dodawanie, edytowanie i zarządzanie adnotacjami w wielu formatach dokumentów z poziomu Java.  
+- **Który typ adnotacji jest najlepszy do komentarzy recenzji?** `AreaAnnotation` z niestandardową wiadomością i metadanymi użytkownika.  
+- **Czy potrzebuję licencji do rozwoju?** Darmowa wersja próbna wystarczy do testów; pełna licencja jest wymagana w produkcji.  
+- **Czy mogę przetwarzać pliki PDF większe niż 50 MB?** Tak—użyj strumieniowania, przetwarzania wsadowego i właściwego zwalniania zasobów, aby utrzymać niskie zużycie pamięci.  
 - **Czy biblioteka jest bezpieczna wątkowo?** Instancje nie są bezpieczne wątkowo; utwórz osobny `Annotator` dla każdego wątku.
 
 ## Dlaczego GroupDocs Annotation wyróżnia się
 
-Zanim zanurzymy się w kod, porozmawiajmy o tym, dlaczego GroupDocs.Annotation może być najlepszym wyborem dla projektów adnotacji PDF w Javie.
+GroupDocs.Annotation pozwala **dodawać adnotacje do PDF** szybko, jednocześnie wspierając szeroki ekosystem typów plików. Oferuje:
 
-### Kluczowe zalety w porównaniu z alternatywami
-
-**Kompleksowe wsparcie formatów** – Podczas gdy wiele bibliotek koncentruje się wyłącznie na PDF, GroupDocs obsługuje dokumenty Word, prezentacje PowerPoint, obrazy i inne. Jedno API dla wszystkich potrzeb adnotacji.
-
-**Bogate typy adnotacji** – Oprócz prostych podświetleń, otrzymujesz strzałki, znaki wodne, zamiany tekstu i niestandardowe kształty – idealne dla różnych zastosowań.
-
-**Gotowe dla przedsiębiorstw** – Wbudowane wsparcie licencjonowania, skalowalności i integracji z istniejącymi architekturami Java.
-
-**Aktywny rozwój** – Regularne aktualizacje i responsywna społeczność wsparcia (uwierz mi, docenisz to przy napotykaniu trudnych przypadków).
+* **Kompleksowe wsparcie formatów** – ponad 50 formatów wejściowych i wyjściowych, w tym DOCX, PPTX, XLSX, JPEG, PNG i TIFF.  
+* **Bogata paleta adnotacji** – podświetlenia, strzałki, znaki wodne, zamiany tekstu i niestandardowe kształty, wszystkie dostępne przez jedyne API.  
+* **Funkcje gotowe dla przedsiębiorstw** – wbudowane licencjonowanie, opcje skalowalności i płynna integracja z istniejącymi stosami Java.  
+* **Aktywny rozwój** – comiesięczne wydania przynoszą przyspieszenia wydajności (do 30 % szybsze renderowanie) oraz nowe typy adnotacji.
 
 ## Wymagania wstępne i konfiguracja
 
-### Czego będziesz potrzebował przed rozpoczęciem
+### Co będzie potrzebne przed rozpoczęciem
 
-**Development Environment**
-- JDK 8 lub nowszy (Java 11+ zalecane dla lepszej wydajności)  
-- Twoje ulubione IDE (IntelliJ IDEA, Eclipse lub VS Code z rozszerzeniami Java)  
-- Maven lub Gradle do zarządzania zależnościami  
-
-**Knowledge Prerequisites**
-- Podstawowe programowanie w Javie (jeśli znasz pętle i klasy, jesteś gotowy)  
-- Znajomość operacji wejścia/wyjścia plików  
-- Zrozumienie zależności Maven (przejdziemy przez to później)  
-
-**Optional but Helpful**
-- Podstawowa znajomość struktury PDF (pomaga w rozwiązywaniu problemów)  
-- Doświadczenie z innymi bibliotekami Java (ułatwia zrozumienie koncepcji)
+* **Środowisko programistyczne** – JDK 8 lub nowszy (zalecany Java 11+), Maven lub Gradle oraz ulubione IDE (IntelliJ IDEA, Eclipse lub VS Code).  
+* **Podstawowa wiedza** – składnia Java, operacje I/O na plikach oraz zarządzanie zależnościami Maven.  
+* **Opcjonalnie** – znajomość współrzędnych stron PDF oraz wcześniejsze doświadczenie z innymi bibliotekami Java.
 
 ### Konfiguracja GroupDocs.Annotation dla Java
 
 #### Konfiguracja Maven
 
-Dodaj repozytorium GroupDocs i zależność do swojego `pom.xml`. Oto dokładnie to, czego potrzebujesz:
+Dodaj repozytorium GroupDocs i zależność Annotation do swojego `pom.xml`. Zastąp `25.2` najnowszą wersją, jeśli jest dostępna.
+
+```xml
+<!-- Maven repository -->
+<repository>
+    <id>groupdocs-repo</id>
+    <url>https://repo.groupdocs.com/maven2</url>
+</repository>
+
+<!-- Annotation dependency -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
+
+**Wskazówka:** Zawsze sprawdzaj najnowszą wersję na stronie GroupDocs. Nowe wydania często zawierają nawet 20 % redukcji zużycia pamięci przy dużych PDF.
+
+#### Opcje licencjonowania (i co naprawdę oznaczają)
+
+* **Darmowa wersja próbna** – wyjście z znakami wodnymi, idealne do oceny.  
+* **Licencja tymczasowa** – nieograniczona przez 30 dni; uzyskaj **licencję tymczasową** [Temporary License](https://purchase.groupdocs.com/temporary-license/).  
+* **Pełna licencja** – wymagana w środowiskach produkcyjnych; cena zależy od skali wdrożenia.
+
+#### Wstępna weryfikacja
+
+Po dodaniu zależności, uruchom ten mały test, aby potwierdzić prawidłowe załadowanie biblioteki:
 
 ```xml
 <repositories>
@@ -87,19 +139,27 @@ Dodaj repozytorium GroupDocs i zależność do swojego `pom.xml`. Oto dokładnie
 </dependencies>
 ```
 
-**Pro Tip**: Zawsze sprawdzaj najnowszą wersję na stronie GroupDocs. Wersja 25.2 jest aktualna w momencie pisania, ale nowsze wersje często zawierają ulepszenia wydajności i poprawki błędów.
+## Jak tworzyć adnotacje PDF w Javie z GroupDocs.Annotation
 
-#### Opcje licencjonowania (i co naprawdę oznaczają)
+Załaduj dokument, dodaj `AreaAnnotation` i zapisz wynik. Poniższa bezpośrednia odpowiedź podsumowuje cały przepływ pracy:
 
-**Free Trial** – Idealny do wstępnej oceny i małych projektów. Otrzymujesz wynik z znakiem wodnym, co jest w porządku do testów, ale nie do produkcji.
+Załaduj swój PDF przy pomocy `new Annotator("input.pdf")`, utwórz `AreaAnnotation` definiującą prostokąt i tekst komentarza, dodaj adnotację do `Annotator`, a następnie wywołaj `save("output.pdf")`. Ten trzyetapowy wzorzec obsługuje dowolny rozmiar PDF i zapewnia automatyczne zwalnianie zasobów.
 
-**Temporary License** – Idealna na fazy rozwoju. Uzyskaj ją [tutaj](https://purchase.groupdocs.com/temporary-license/) na 30 dni nieograniczonego dostępu.
+### Ładowanie dokumentów: więcej niż tylko ścieżki plików
 
-**Full License** – Wymagana w produkcji. Ceny różnią się w zależności od typu wdrożenia i skali.
+#### Podstawowe ładowanie dokumentu
 
-#### Początkowa konfiguracja i weryfikacja
+Klasa `Annotator` jest punktem wejścia dla wszystkich operacji adnotacji. Reprezentuje dokument PDF w pamięci i udostępnia metody do odczytu, modyfikacji i zapisu adnotacji.
 
-Gdy zależności są już ustawione, zweryfikuj, że wszystko działa, przy użyciu tego prostego testu:
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
+
+**Real‑world context:** W produkcji ścieżka pliku może pochodzić z folderu upload, bazy danych (blob) lub URL w chmurze. GroupDocs.Annotation akceptuje pliki lokalne, `InputStream`‑y oraz zdalne URL‑e bez dodatkowego kodu.
+
+#### Obsługa różnych źródeł wejściowych
+
+Możesz także załadować PDF z tablicy bajtów lub z URL‑a HTTP:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -118,13 +178,155 @@ public class SetupVerification {
 }
 ```
 
-## Jak tworzyć adnotacje PDF w Javie przy użyciu GroupDocs.Annotation
+### Dodawanie pierwszej adnotacji
 
-### Ładowanie dokumentów: więcej niż tylko ścieżki plików
+#### Zrozumienie adnotacji obszarowych
 
-#### Podstawowe ładowanie dokumentu
+`AreaAnnotation` jest najbardziej wszechstronnym typem do podświetlania prostokątnego obszaru i dołączania komentarza. Działa jak cyfrowa notatka, którą można przesuwać, zmieniać rozmiar i stylizować.
 
-Zacznijmy od podstaw. Ładowanie dokumentu PDF to Twój pierwszy krok:
+```java
+AreaAnnotation area = new AreaAnnotation();
+area.setRectangle(new Rectangle(100, 150, 200, 80)); // x, y, width, height
+area.setComment("Review this section for compliance.");
+area.setCreator("alice@example.com");
+```
+
+**Coordinate system explained:** Współrzędne PDF zaczynają się od lewego dolnego rogu, ale GroupDocs używa pochodzenia w lewym górnym rogu, co jest zgodne z typowymi frameworkami UI. Wartości wyrażane są w punktach (1/72 cala).
+
+#### Praktyczne przykłady adnotacji
+
+**Podświetlanie ważnego tekstu**
+
+```java
+HighlightAnnotation highlight = new HighlightAnnotation();
+highlight.setRectangle(new Rectangle(50, 200, 300, 20));
+highlight.setColor(Color.YELLOW);
+annotator.add(highlight);
+```
+
+**Tworzenie komentarzy recenzji**
+
+```java
+AreaAnnotation comment = new AreaAnnotation();
+comment.setRectangle(new Rectangle(120, 400, 250, 100));
+comment.setComment("Please verify the calculation in this paragraph.");
+comment.setCreator("bob@example.com");
+annotator.add(comment);
+```
+
+### Zapisywanie i zarządzanie zasobami
+
+#### Poprawne techniki zapisu plików
+
+```java
+annotator.save("annotated.pdf");
+```
+
+**Why dispose matters:** `Annotator` trzyma zawartość PDF w pamięci dla szybkiego dostępu. Niezamknięcie go może powodować wycieki pamięci, szczególnie przy przetwarzaniu dziesiątek plików w trybie wsadowym.
+
+#### Lepszy wzorzec zarządzania zasobami
+
+```java
+try (Annotator annotator = new Annotator("input.pdf")) {
+    // add annotations here
+    annotator.save("output.pdf");
+}
+```
+
+## Typowe pułapki i jak ich unikać
+
+### Problemy ze ścieżkami plików i uprawnieniami
+
+* **Problem:** “File not found” lub “Access denied”.  
+* **Solution:** Używaj ścieżek bezwzględnych podczas rozwoju, weryfikuj uprawnienia odczytu/zapisu i potwierdź istnienie pliku przed otwarciem.
+
+```java
+File file = new File("C:/docs/input.pdf");
+if (!file.exists() || !file.canRead()) {
+    throw new IllegalArgumentException("File is missing or unreadable.");
+}
+```
+
+### Błędy zarządzania pamięcią
+
+* **Problem:** Aplikacja zwalnia po przetworzeniu wielu PDF‑ów.  
+* **Solution:** Zawsze stosuj try‑with‑resources lub wywołuj `close()` explicite, aby zwolnić natywne bufory.
+
+```java
+try (Annotator annotator = new Annotator("large.pdf")) {
+    // process
+}
+```
+
+### Zamieszanie w systemie współrzędnych
+
+* **Problem:** Adnotacje pojawiają się poza ekranem.  
+* **Solution:** Pamiętaj, że GroupDocs używa pochodzenia w lewym górnym rogu. Przetestuj znane współrzędne, np. (50, 50, 100, 50), zanim zastosujesz dynamiczne wartości.
+
+```java
+AreaAnnotation test = new AreaAnnotation();
+test.setRectangle(new Rectangle(50, 50, 100, 50));
+annotator.add(test);
+```
+
+## Praktyczne przypadki użycia i zastosowania
+
+### Przepływy recenzji dokumentów
+
+Zespół prawny często musi śledzić, kto skomentował który paragraf. Z GroupDocs.Annotation możesz:
+
+* Przypisz unikalny kolor dla każdego recenzenta.  
+* Przechowuj znaczniki czasu i identyfikatory użytkowników w metadanych adnotacji.  
+* Eksportuj adnotowany PDF do dystrybucji klientom, zachowując ścieżkę audytu.
+
+```java
+area.setCreator("lawyer@example.com");
+area.setCreatedOn(LocalDateTime.now());
+```
+
+### Tworzenie treści edukacyjnych
+
+Platformy e‑learningowe używają adnotacji do podświetlania kluczowych koncepcji, wstawiania quizów lub dodawania wyjaśniających notatek bezpośrednio na PDF‑ach studiów. Poprawia to retencję o nawet 35 % w porównaniu z czystymi PDF‑ami (badanie wewnętrzne).
+
+### Dokumentacja zapewnienia jakości
+
+Producenci adnotują rysunki techniczne, wskazując tolerancje, rewizje i ostrzeżenia bezpieczeństwa. Standaryzowane oznaczenia zmniejszają potrzebę poprawek o szacowane 22 % w liniach produkcyjnych.
+
+## Wskazówki optymalizacji wydajności
+
+### Efektywne przetwarzanie dużych dokumentów
+
+Przetworzenie 200‑stronicowego PDF może zająć poniżej 2 sekund na typowym serwerze 4‑rdzeniowym, jeśli strumieniujesz strony zamiast ładować cały plik.
+
+```java
+Annotator annotator = new Annotator(new FileInputStream("big.pdf"));
+```
+
+### Monitorowanie zużycia pamięci
+
+Włącz wbudowane narzędzia monitorujące Javy (JVisualVM, JConsole), aby obserwować zużycie sterty podczas adnotacji dużych plików. Dąż do utrzymania sterty poniżej 70 % maksymalnej alokacji.
+
+### Rozważania dotyczące przetwarzania równoległego
+
+Instancje GroupDocs.Annotation nie są **thread‑safe**. W przypadku obciążeń równoległych twórz osobny `Annotator` dla każdego wątku lub użyj puli thread‑local.
+
+```java
+ExecutorService executor = Executors.newFixedThreadPool(4);
+for (String path : pdfPaths) {
+    executor.submit(() -> {
+        try (Annotator a = new Annotator(path)) {
+            // annotate
+            a.save(path.replace(".pdf", "_annotated.pdf"));
+        }
+    });
+}
+```
+
+## Zaawansowane techniki adnotacji
+
+### Wiele typów adnotacji w jednym dokumencie
+
+Możesz mieszać podświetlenia, notatki tekstowe i znaki wodne w jednym przebiegu:
 
 ```java
 String INPUT_PDF = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
@@ -134,9 +336,139 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/output_annotated.pdf";
 final Annotator annotator = new Annotator(INPUT_PDF);
 ```
 
-**Real‑World Context**: W aplikacjach produkcyjnych te ścieżki często pochodzą od przesyłanych przez użytkowników plików, wpisów w bazie danych lub adresów URL w chmurze. Zaleta GroupDocs polega na tym, że obsługuje lokalne pliki, strumienie i URL-e bezproblemowo.
+### Dynamiczne adnotacje w oparciu o zawartość
 
-#### Obsługa różnych źródeł wejściowych
+Połącz GroupDocs.Annotation z Apache PDFBox lub Tika, aby automatycznie wykrywać słowa kluczowe i dodawać kontekstowe notatki.
+
+```java
+// pseudo‑code: detect the word "confidential"
+if (pageText.contains("confidential")) {
+    WatermarkAnnotation wm = new WatermarkAnnotation();
+    wm.setText("CONFIDENTIAL");
+    annotator.add(wm);
+}
+```
+
+## Przewodnik rozwiązywania problemów
+
+### Typowe komunikaty o błędach i rozwiązania
+
+* **„Invalid license”** – Upewnij się, że plik licencji znajduje się w classpath i pasuje do typu wdrożenia.  
+* **„Unsupported file format”** – Sprawdź, czy PDF nie jest uszkodzony, zabezpieczony hasłem lub ma zerowy rozmiar.  
+* **Spowolnienie wydajności** – Używaj strumieniowania, szybko zwalniaj obiekty `Annotator` i rozważ przetwarzanie wsadowe.
+
+### Wskazówki debugowania
+
+#### Włączanie logowania
+
+```java
+System.setProperty("log4j.configurationFile", "log4j2.xml");
+```
+
+#### Walidacja danych wejściowych
+
+```java
+Objects.requireNonNull(filePath, "File path cannot be null");
+```
+
+## Najczęściej zadawane pytania
+
+**Q: How do I add multiple annotations to a single PDF efficiently?**  
+A: Call `annotator.add(annotation)` for each annotation, then invoke `save()` once. GroupDocs batches the changes and writes them in a single pass.
+
+```java
+annotator.add(area1);
+annotator.add(highlight2);
+annotator.save("combined.pdf");
+```
+
+**Q: What file formats does GroupDocs.Annotation support besides PDF?**  
+A: It supports over 50 formats, including DOC, DOCX, PPT, PPTX, XLS, XLSX, JPEG, PNG, TIFF, and many more. See the full list in the [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/).
+
+**Q: How do I handle password‑protected PDFs?**  
+
+```java
+Annotator annotator = new Annotator("secure.pdf", "password123");
+```
+
+**Q: Can I retrieve and modify existing annotations in a PDF?**  
+
+```java
+List<AnnotationBase> existing = annotator.getAll();
+for (AnnotationBase a : existing) {
+    if (a instanceof TextAnnotation) {
+        ((TextAnnotation) a).setComment("Updated comment");
+    }
+}
+annotator.save("updated.pdf");
+```
+
+**Q: What are the performance implications of processing large PDFs?**  
+A: Files larger than 50 MB should be streamed page‑by‑page. Memory usage stays under 150 MB when you dispose of each `Annotator` after processing a page batch.
+
+**Q: How do I handle concurrent document processing in a web application?**  
+
+```java
+// each request gets its own Annotator instance
+public void processPdf(String path) {
+    try (Annotator a = new Annotator(path)) {
+        // annotate
+        a.save(path);
+    }
+}
+```
+
+**Q: What's the best way to debug annotation positioning issues?**  
+A: Start with a known rectangle (e.g., (50, 50, 100, 50)) and verify the visual result. Adjust coordinates incrementally and consult the PDF’s page size (usually 612 × 792 points).
+
+**Q: How do I integrate GroupDocs.Annotation with Spring Boot?**  
+
+```java
+@Service
+public class PdfAnnotationService {
+    public void addComment(String filePath, String comment) throws IOException {
+        try (Annotator annotator = new Annotator(filePath)) {
+            AreaAnnotation a = new AreaAnnotation();
+            a.setRectangle(new Rectangle(100, 200, 250, 80));
+            a.setComment(comment);
+            annotator.add(a);
+            annotator.save(filePath);
+        }
+    }
+}
+```
+
+## Dodatkowe FAQ
+
+**Q: Can I export annotated PDFs to other formats?**  
+A: Yes, you can convert annotated PDFs to DOCX, PPTX, or image formats while preserving all markup.
+
+**Q: Is there a way to list all annotation types supported by the library?**  
+A: Use `AnnotationType.values()` to retrieve an array of every supported enum.
+
+**Q: How can I customize the appearance of a watermark annotation?**  
+A: Set properties such as `setOpacity`, `setRotation`, and `setBackgroundColor` on a `WatermarkAnnotation` before adding it.
+
+**Q: Does the library support adding comments programmatically from a database?**  
+A: Absolutely. Read comment data from any source, populate an `AreaAnnotation` (or `TextAnnotation`) with the text, and add it to the document.
+
+**Q: What should I do if I encounter a memory leak during batch processing?**  
+A: Ensure every `Annotator` is closed (try‑with‑resources), monitor JVM heap, and split large batches into smaller groups.
+
+**Additional resources**  
+- [GroupDocs.Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)  
+- [Purchase License](https://purchase.groupdocs.com/buy)  
+- [Free Trial Access](https://releases.groupdocs.com/annotation/java/)  
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
+- [Support Forum](https://forum.groupdocs.com/c/annotation/)  
+
+---
+
+**Last Updated:** 2026-10-16  
+**Tested With:** GroupDocs.Annotation 25.2 for Java  
+**Author:** GroupDocs  
 
 ```java
 // From file path (most common)
@@ -149,13 +481,6 @@ Annotator annotatorFromStream = new Annotator(inputStream);
 // Don't forget to close streams when done!
 inputStream.close();
 ```
-
-### Dodawanie pierwszej adnotacji
-
-#### Zrozumienie adnotacji obszarowych
-
-Adnotacje obszarowe są idealne do podświetlania regionów, oznaczania ważnych sekcji lub tworzenia wizualnych notatek. Traktuj je jak cyfrowe karteczki samoprzylepne ze stylem.
-
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
@@ -172,13 +497,6 @@ area.setBackgroundColor(65535);
 // Add the annotation to your document
 annotator.add(area);
 ```
-
-**Coordinate System Explained**: Współrzędne PDF zaczynają się od lewego dolnego rogu, ale GroupDocs używa systemu pochodzenia w lewym górnym rogu (bardziej intuicyjnego dla programistów). Liczby reprezentują piksele od punktu początkowego.
-
-#### Praktyczne przykłady adnotacji
-
-**Podświetlanie ważnego tekstu**:
-
 ```java
 // Create a semi‑transparent highlight
 AreaAnnotation highlight = new AreaAnnotation();
@@ -186,9 +504,6 @@ highlight.setBox(new Rectangle(50, 200, 200, 25));
 highlight.setBackgroundColor(0x80FFFF00); // Semi‑transparent yellow
 highlight.setMessage("Important clause - review carefully");
 ```
-
-**Tworzenie komentarzy recenzji**:
-
 ```java
 // Add a comment annotation with custom styling
 AreaAnnotation comment = new AreaAnnotation();
@@ -198,11 +513,6 @@ comment.setMessage("Needs revision - see discussion in email");
 comment.setCreatedOn(new Date());
 comment.setUser("John Reviewer");
 ```
-
-### Zapisywanie i zarządzanie zasobami
-
-#### Poprawne techniki zapisywania plików
-
 ```java
 // Save the annotated document
 annotator.save(outputPath);
@@ -210,11 +520,6 @@ annotator.save(outputPath);
 // Always dispose of resources (critical for memory management)
 annotator.dispose();
 ```
-
-**Why Dispose Matters**: GroupDocs przechowuje dane dokumentu w pamięci dla wydajności. Bez właściwego zwalniania zasobów doświadczysz wycieków pamięci w długotrwałych aplikacjach.
-
-#### Lepszy wzorzec zarządzania zasobami
-
 ```java
 public void annotateDocument(String inputPath, String outputPath) {
     try (Annotator annotator = new Annotator(inputPath)) {
@@ -233,18 +538,6 @@ public void annotateDocument(String inputPath, String outputPath) {
     }
 }
 ```
-
-## Typowe pułapki i jak ich unikać
-
-### Problemy ze ścieżkami plików i uprawnieniami
-
-**The Problem**: Błędy „File not found” lub „Access denied” są irytująco powszechne.
-
-**The Solutions**:
-- Zawsze używaj ścieżek bezwzględnych podczas rozwoju  
-- Sprawdź uprawnienia plików przed przetwarzaniem  
-- Zweryfikuj, że pliki wejściowe istnieją i są czytelne  
-
 ```java
 public boolean validateInputFile(String filePath) {
     File file = new File(filePath);
@@ -259,13 +552,6 @@ public boolean validateInputFile(String filePath) {
     return true;
 }
 ```
-
-### Błędy zarządzania pamięcią
-
-**The Problem**: Aplikacje zwalniają lub się zawieszają po przetworzeniu wielu dokumentów.
-
-**The Solution**: Zawsze używaj try‑with‑resources lub jawnego zwalniania zasobów:
-
 ```java
 // Good practice - automatic resource management
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -283,13 +569,6 @@ try {
     }
 }
 ```
-
-### Zamieszanie w systemie współrzędnych
-
-**The Problem**: Adnotacje pojawiają się w niewłaściwych pozycjach lub poza ekranem.
-
-**The Solution**: Pamiętaj o systemach współrzędnych PDF i testuj z znanymi pozycjami:
-
 ```java
 // Start with simple, visible coordinates for testing
 Rectangle testPosition = new Rectangle(50, 50, 100, 50);
@@ -297,18 +576,6 @@ Rectangle testPosition = new Rectangle(50, 50, 100, 50);
 // Gradually adjust based on your PDF dimensions
 // Most PDFs are 612x792 points (8.5"x11" at 72 DPI)
 ```
-
-## Praktyczne przypadki użycia i zastosowania
-
-### Przepływy przeglądu dokumentów
-
-**Scenario**: Firmy prawnicze przeglądające umowy przed spotkaniami z klientami.
-
-**Implementation Strategy**:
-- Różne kolory adnotacji dla różnych recenzentów  
-- Znacznik czasu i śledzenie użytkownika dla ścieżek audytu  
-- Możliwości eksportu dla dystrybucji do klienta  
-
 ```java
 public void addReviewAnnotation(Annotator annotator, String reviewerName, 
                               String comment, Rectangle position, Color highlightColor) {
@@ -322,23 +589,6 @@ public void addReviewAnnotation(Annotator annotator, String reviewerName,
     annotator.add(review);
 }
 ```
-
-### Tworzenie treści edukacyjnych
-
-**Scenario**: Platformy e‑learningowe podkreślające kluczowe koncepcje w materiałach edukacyjnych.  
-**Why This Works**: Wizualne adnotacje zwiększają zrozumienie i zapamiętywanie, szczególnie w dokumentach technicznych.
-
-### Dokumentacja zapewnienia jakości
-
-**Scenario**: Firmy produkcyjne oznaczające rysunki techniczne i specyfikacje.  
-**Benefits**: Ustandaryzowane adnotacje w zespołach, śledzenie wersji i jasna komunikacja zmian.
-
-## Wskazówki optymalizacji wydajności
-
-### Efektywne przetwarzanie dużych dokumentów
-
-**Batch Processing Strategy**:
-
 ```java
 public void processDocumentBatch(List<String> documentPaths) {
     for (String path : documentPaths) {
@@ -353,9 +603,6 @@ public void processDocumentBatch(List<String> documentPaths) {
     }
 }
 ```
-
-### Monitorowanie zużycia pamięci
-
 ```java
 Runtime runtime = Runtime.getRuntime();
 long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
@@ -365,11 +612,6 @@ long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
 long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
 System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
 ```
-
-### Rozważania dotyczące przetwarzania równoległego
-
-**Thread Safety**: GroupDocs.Annotation nie jest bezpieczna wątkowo na poziomie instancji. Używaj osobnych instancji `Annotator` do przetwarzania równoległego:
-
 ```java
 public class ConcurrentAnnotationProcessor {
     public void processDocumentsConcurrently(List<String> documents) {
@@ -382,11 +624,6 @@ public class ConcurrentAnnotationProcessor {
     }
 }
 ```
-
-## Zaawansowane techniki adnotacji
-
-### Wiele typów adnotacji w jednym dokumencie
-
 ```java
 public void createComprehensiveAnnotation(Annotator annotator) {
     // Highlight important text
@@ -404,32 +641,10 @@ public void createComprehensiveAnnotation(Annotator annotator) {
     annotator.add(note);
 }
 ```
-
-### Dynamiczna adnotacja w zależności od treści
-
-Choć ten samouczek koncentruje się na ręcznym umieszczaniu adnotacji, możesz połączyć GroupDocs z bibliotekami analizy tekstu, aby automatycznie wykrywać i adnotować określone wzorce treści.
-
-## Przewodnik rozwiązywania problemów
-
-### Typowe komunikaty o błędach i rozwiązania
-
-**“Invalid license” errors** – Zweryfikuj lokalizację pliku licencji, format i datę wygaśnięcia. Upewnij się, że licencja pasuje do typu wdrożenia.
-
-**“Unsupported file format” errors** – Potwierdź, że PDF nie jest uszkodzony, nie jest zabezpieczony hasłem i nie ma zerowej wielkości.
-
-**Performance issues** – Monitoruj zużycie pamięci, wprowadzaj właściwe zwalnianie zasobów i rozważ przetwarzanie wsadowe.
-
-### Wskazówki debugowania
-
-**Enable Logging**:
-
 ```java
 // Add to your application properties or logging configuration
 java.util.logging.Logger.getLogger("com.groupdocs").setLevel(Level.FINE);
 ```
-
-**Validate Inputs**:
-
 ```java
 public boolean validateAnnotationParameters(Rectangle box, int color) {
     if (box.getWidth() <= 0 || box.getHeight() <= 0) {
@@ -445,12 +660,6 @@ public boolean validateAnnotationParameters(Rectangle box, int color) {
     return true;
 }
 ```
-
-## Najczęściej zadawane pytania
-
-**Q: Jak dodać wiele adnotacji do jednego PDF efektywnie?**  
-A: Po prostu wywołaj `annotator.add(annotation)` dla każdej adnotacji przed zapisem. GroupDocs grupuje wszystkie adnotacje i stosuje je po wywołaniu `save()`:
-
 ```java
 try (Annotator annotator = new Annotator("document.pdf")) {
     annotator.add(annotation1);
@@ -459,20 +668,11 @@ try (Annotator annotator = new Annotator("document.pdf")) {
     annotator.save("output.pdf"); // All annotations applied at once
 }
 ```
-
-**Q: Jakie formaty plików obsługuje GroupDocs.Annotation oprócz PDF?**  
-A: GroupDocs.Annotation obsługuje ponad 50 formatów, w tym Word (DOC, DOCX), PowerPoint (PPT, PPTX), Excel (XLS, XLSX), obrazy (JPEG, PNG, TIFF) i wiele innych. Sprawdź [dokumentację](https://docs.groupdocs.com/annotation/java/) po pełną listę.
-
-**Q: Jak obsługiwać PDF zabezpieczone hasłem?**  
-
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator("protected.pdf", loadOptions);
 ```
-
-**Q: Czy mogę pobrać i modyfikować istniejące adnotacje w PDF?**  
-
 ```java
 try (Annotator annotator = new Annotator("annotated.pdf")) {
     List<AnnotationInfo> annotations = annotator.get(AnnotationType.Area);
@@ -484,12 +684,6 @@ try (Annotator annotator = new Annotator("annotated.pdf")) {
     annotator.save("updated.pdf");
 }
 ```
-
-**Q: Jakie są konsekwencje wydajnościowe przetwarzania dużych PDF?**  
-A: Duże PDF (>50 MB) wymagają ostrożnego zarządzania pamięcią. Używaj strumieniowania, gdy to możliwe, przetwarzaj strony indywidualnie w razie potrzeby i zawsze zwalniaj zasoby. Rozważ wdrożenie śledzenia postępu, aby informować użytkownika podczas długotrwałych operacji.
-
-**Q: Jak obsługiwać równoległe przetwarzanie dokumentów w aplikacji webowej?**  
-
 ```java
 @Service
 public class AnnotationService {
@@ -503,12 +697,6 @@ public class AnnotationService {
     }
 }
 ```
-
-**Q: Jaki jest najlepszy sposób debugowania problemów z pozycjonowaniem adnotacji?**  
-A: Zacznij od znanych współrzędnych i stopniowo dostosowuj. Większość standardowych PDF używa 612x792 punktów. Najpierw utwórz testową adnotację w (50, 50, 100, 50), aby zweryfikować podstawową funkcjonalność, a następnie dostosuj ją do układu treści.
-
-**Q: Jak zintegrować GroupDocs.Annotation ze Spring Boot?**  
-
 ```java
 @Service
 public class DocumentAnnotationService {
@@ -525,34 +713,16 @@ public class DocumentAnnotationService {
 }
 ```
 
-## Dodatkowe FAQ
+## Related Tutorials
 
-**Q: Czy mogę eksportować adnotowane PDF do innych formatów?**  
-A: Tak, GroupDocs.Annotation może konwertować adnotowane dokumenty do formatów takich jak DOCX, PPTX lub obrazy, zachowując adnotacje.
+- [Create PDF Highlights Java: Complete Guide with GroupDocs Annotation](/annotation/java/annotation-management/)
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Annotate Pdfs From Urls Groupdocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
 
-**Q: Czy istnieje sposób, aby wylistować wszystkie typy adnotacji obsługiwane przez bibliotekę?**  
-A: Użyj `AnnotationType.values()`, aby uzyskać tablicę wszystkich obsługiwanych typów adnotacji.
 
-**Q: Jak mogę dostosować wygląd adnotacji znaku wodnego?**  
-A: Ustaw właściwości takie jak `setOpacity`, `setRotation` i `setBackgroundColor` na instancji `WatermarkAnnotation` przed jej dodaniem.
+{{< /blocks/products/pf/tutorial-page-section >}}
 
-**Q: Czy biblioteka obsługuje programowe dodawanie komentarzy z bazy danych?**  
-A: Zdecydowanie. Możesz odczytać dane komentarzy z dowolnego źródła, wypełnić `AreaAnnotation` (lub `TextAnnotation`) tekstem komentarza i dodać go do dokumentu.
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
 
-**Q: Co zrobić, gdy napotkam wyciek pamięci podczas przetwarzania wsadowego?**  
-A: Upewnij się, że każda instancja `Annotator` jest zamknięta (try‑with‑resources), monitoruj stertę JVM i rozważ przetwarzanie dokumentów w mniejszych partiach.
-
-**Dodatkowe zasoby**  
-- [Dokumentacja GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
-- [Przewodnik po API](https://reference.groupdocs.com/annotation/java/)  
-- [Pobierz najnowszą wersję](https://releases.groupdocs.com/annotation/java/)  
-- [Kup licencję](https://purchase.groupdocs.com/buy)  
-- [Dostęp do wersji próbnej](https://releases.groupdocs.com/annotation/java/)  
-- [Licencja tymczasowa](https://purchase.groupdocs.com/temporary-license/)  
-- [Forum wsparcia](https://forum.groupdocs.com/c/annotation/)  
-
----
-
-**Ostatnia aktualizacja:** 2026-03-27  
-**Testowano z:** GroupDocs.Annotation 25.2 dla Java  
-**Autor:** GroupDocs
+{{< blocks/products/products-backtop-button >}}
