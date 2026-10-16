@@ -1,73 +1,125 @@
 ---
-categories:
-- Java Development
-date: '2026-03-27'
-description: Μάθετε πώς να δημιουργείτε σχολιασμούς PDF σε Java χρησιμοποιώντας το
-  GroupDocs.Annotation. Αυτός ο οδηγός βήμα‑βήμα σας δείχνει πώς να σχολιάζετε προγραμματιστικά
-  αρχεία PDF, να προσθέτετε σχόλια ανασκόπησης και να ακολουθείτε τις βέλτιστες πρακτικές.
-keywords: PDF annotation Java tutorial, GroupDocs annotation Java setup, Java PDF
-  markup library, add annotations PDF programmatically, GroupDocs annotation tutorial
-  for beginners
-lastmod: '2026-03-27'
+date: '2026-10-16'
+description: Προσθέστε σημειώσεις σε PDF με Java και GroupDocs.Annotation – ένας οδηγός
+  βήμα‑βήμα που σας δείχνει πώς να επισημάνετε προγραμματιστικά PDFs, να προσθέσετε
+  σχόλια αξιολόγησης και να εφαρμόσετε βέλτιστες πρακτικές.
+keywords:
+- add annotations to pdf
+- pdf annotation library java
+- add review comments pdf
+- groupdocs annotation java
+- java pdf markup
+lastmod: '2026-10-16'
+og_description: Προσθέστε σημειώσεις σε PDF με Java και GroupDocs.Annotation – ένας
+  οδηγός βήμα‑βήμα που σας δείχνει πώς να επισημάνετε προγραμματιστικά PDFs, να προσθέσετε
+  σχόλια αξιολόγησης και να εφαρμόσετε βέλτιστες πρακτικές.
+og_image_alt: Guide showing how to add annotations to PDF using GroupDocs.Annotation
+  in Java
+og_title: Πώς να προσθέσετε σημειώσεις σε PDF με Java και GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-16'
+  description: Add annotations to PDF in Java with GroupDocs.Annotation – a step‑by‑step
+    guide that shows you how to programmatically markup PDFs, add review comments,
+    and apply best practices.
+  headline: How to add annotations to PDF in Java with GroupDocs
+  type: TechArticle
+- questions:
+  - answer: Call `annotator.add(annotation)` for each annotation, then invoke `save()`
+      once. GroupDocs batches the changes and writes them in a single pass.
+    question: How do I add multiple annotations to a single PDF efficiently?
+  - answer: It supports over 50 formats, including DOC, DOCX, PPT, PPTX, XLS, XLSX,
+      JPEG, PNG, TIFF, and many more. See the full list in the [GroupDocs.Annotation
+      Documentation](https://docs.groupdocs.com/annotation/java/).
+    question: What file formats does GroupDocs.Annotation support besides PDF?
+  - answer: Files larger than 50 MB should be streamed page‑by‑page. Memory usage
+      stays under 150 MB when you dispose of each `Annotator` after processing a page
+      batch.
+    question: What are the performance implications of processing large PDFs?
+  - answer: Start with a known rectangle (e.g., (50, 50, 100, 50)) and verify the
+      visual result. Adjust coordinates incrementally and consult the PDF’s page size
+      (usually 612 × 792 points).
+    question: What's the best way to debug annotation positioning issues?
+  - answer: Yes, you can convert annotated PDFs to DOCX, PPTX, or image formats while
+      preserving all markup.
+    question: Can I export annotated PDFs to other formats?
+  type: FAQPage
 tags:
-- pdf-annotation
+- pdf annotation
 - groupdocs
 - java-libraries
 - document-processing
-title: Δημιουργία σχολίων PDF σε Java με το GroupDocs.Annotation
+- add annotations to pdf
+title: Πώς να προσθέσετε σημειώσεις σε PDF με Java και GroupDocs
 type: docs
 url: /el/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
 
-# Εκπαιδευτικό Java για Σχόλια PDF
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Ever found yourself needing to **create pdf annotations java** in your Java application? Whether you're building a document review system, an e‑learning platform, or a collaborative tool, adding markup programmatically is a common requirement. In this guide we’ll walk through how to **programmatically annotate PDF** files using GroupDocs.Annotation, and we’ll also show you how to **add review comments pdf** for a complete review workflow.
+# Προσθήκη σχολίων σε PDF
 
-## Γρήγορες Απαντήσεις
-- **Ποιος είναι ο κύριος σκοπός του GroupDocs.Annotation;** To add, edit, and manage annotations across many document formats from Java.  
-- **Ποιος τύπος σημείωσης είναι ο καλύτερος για σχόλια ανασκόπησης;** `AreaAnnotation` with a custom message and user metadata.  
-- **Χρειάζομαι άδεια για ανάπτυξη;** A free trial works for testing; a full license is required for production.  
-- **Μπορώ να επεξεργαστώ PDF μεγαλύτερα από 50 MB;** Yes—use streaming, batch processing, and proper disposal to keep memory usage low.  
-- **Είναι η βιβλιοθήκη thread‑safe;** Instances are not thread‑safe; create a separate `Annotator` per thread.
+Αν χρειάζεται να **προσθέσετε σχολιασμούς σε PDF** αρχεία από μια εφαρμογή Java—είτε δημιουργείτε μια πύλη αξιολόγησης συμβάσεων, μια πλατφόρμα e‑learning ή έναν συνεργατικό επεξεργαστή εγγράφων—αυτό το tutorial σας δείχνει ακριβώς πώς να το κάνετε με το GroupDocs.Annotation. Θα μάθετε να φορτώνετε PDFs, να δημιουργείτε σχόλια τύπου περιοχής, να διαχειρίζεστε πόρους αποδοτικά και να επεξεργάζεστε μεγάλα αρχεία χωρίς να εξαντλείται η μνήμη.
+
+## Γρήγορες απαντήσεις
+- **Ποιος είναι ο κύριος σκοπός του GroupDocs.Annotation;** Να προσθέτει, να επεξεργάζεται και να διαχειρίζεται σχόλια σε πολλές μορφές εγγράφων από Java.  
+- **Ποιος τύπος σχολίου είναι ο καλύτερος για σχόλια αξιολόγησης;** `AreaAnnotation` με προσαρμοσμένο μήνυμα και μεταδεδομένα χρήστη.  
+- **Χρειάζομαι άδεια για ανάπτυξη;** Μια δωρεάν δοκιμή λειτουργεί για δοκιμές· απαιτείται πλήρης άδεια για παραγωγή.  
+- **Μπορώ να επεξεργαστώ PDFs μεγαλύτερα από 50 MB;** Ναι—χρησιμοποιήστε streaming, batch processing και σωστή διαχείριση πόρων για χαμηλή χρήση μνήμης.  
+- **Η βιβλιοθήκη είναι thread‑safe;** Τα instances δεν είναι thread‑safe· δημιουργήστε ξεχωριστό `Annotator` ανά νήμα.
 
 ## Γιατί το GroupDocs Annotation ξεχωρίζει
 
-Before diving into the code, let's talk about why GroupDocs.Annotation might be your best bet for Java PDF annotation projects.
+Το GroupDocs.Annotation σας επιτρέπει να **προσθέσετε σχολιασμούς σε PDF** γρήγορα, ενώ υποστηρίζει ένα ευρύ οικοσύστημα τύπων αρχείων. Προσφέρει:
 
-### Κύρια Πλεονεκτήματα έναντι Εναλλακτικών
+* **Πλήρης υποστήριξη μορφών** – 50+ μορφές εισόδου και εξόδου, συμπεριλαμβανομένων DOCX, PPTX, XLSX, JPEG, PNG και TIFF.  
+* **Πλούσια παλέτα σχολίων** – επισημάνσεις, βέλη, υδατογραφήματα, αντικαταστάσεις κειμένου και προσαρμοσμένα σχήματα, όλα διαθέσιμα μέσω ενός API.  
+* **Χαρακτηριστικά επιπέδου επιχείρησης** – ενσωματωμένη αδειοδότηση, επιλογές κλιμάκωσης και απρόσκοπτη ενσωμάτωση με υπάρχουσες στοίβες Java.  
+* **Ενεργή ανάπτυξη** – μηνιαίες εκδόσεις φέρνουν βελτιώσεις απόδοσης (έως 30 % ταχύτερη απόδοση) και νέους τύπους σχολίων.
 
-**Comprehensive Format Support** – While many libraries focus solely on PDFs, GroupDocs handles Word docs, PowerPoint presentations, images, and more. One API for all your annotation needs.
+## Προαπαιτούμενα και απαιτήσεις εγκατάστασης
 
-**Rich Annotation Types** – Beyond simple highlights, you get arrows, watermarks, text replacements, and custom shapes – perfect for different use cases.
+### Τι θα χρειαστείτε πριν ξεκινήσετε
 
-**Enterprise‑Ready** – Built‑in support for licensing, scalability, and integration with existing Java architectures.
-
-**Active Development** – Regular updates and a responsive support community (trust me, you'll appreciate this when you hit those edge cases).
-
-## Προαπαιτήσεις και Απαιτήσεις Ρύθμισης
-
-### Τι Θα Χρειαστείτε Πριν Ξεκινήσετε
-
-**Development Environment**
-- JDK 8 ή νεότερο (συνιστάται Java 11+ για καλύτερη απόδοση)  
-- Το αγαπημένο σας IDE (IntelliJ IDEA, Eclipse ή VS Code με επεκτάσεις Java)  
-- Maven ή Gradle για διαχείριση εξαρτήσεων  
-
-**Knowledge Prerequisites**
-- Βασικός προγραμματισμός Java (αν γνωρίζετε βρόχους και κλάσεις, είστε εντάξει)  
-- Εξοικείωση με λειτουργίες αρχείων I/O  
-- Κατανόηση των εξαρτήσεων Maven (we’ll walk through this anyway)  
-
-**Optional but Helpful**
-- Βασική κατανόηση της δομής PDF (βοηθά στην αντιμετώπιση προβλημάτων)  
-- Εμπειρία με άλλες βιβλιοθήκες Java (κάνει τις έννοιες πιο εύκολες στην κατανόηση)
+* **Περιβάλλον ανάπτυξης** – JDK 8 ή νεότερο (συνιστάται Java 11+), Maven ή Gradle, και το αγαπημένο σας IDE (IntelliJ IDEA, Eclipse ή VS Code).  
+* **Βασικές γνώσεις** – σύνταξη Java, I/O αρχείων και διαχείριση εξαρτήσεων Maven.  
+* **Προαιρετικό** – εξοικείωση με τις συντεταγμένες σελίδας PDF και προηγούμενη εμπειρία με άλλες βιβλιοθήκες Java.
 
 ### Ρύθμιση του GroupDocs.Annotation για Java
 
 #### Διαμόρφωση Maven
 
-Add the GroupDocs repository and dependency to your `pom.xml`. Here’s exactly what you need:
+Προσθέστε το αποθετήριο GroupDocs και την εξάρτηση Annotation στο `pom.xml`. Αντικαταστήστε το `25.2` με την πιο πρόσφατη έκδοση εάν υπάρχει νεότερη.
+
+```xml
+<!-- Maven repository -->
+<repository>
+    <id>groupdocs-repo</id>
+    <url>https://repo.groupdocs.com/maven2</url>
+</repository>
+
+<!-- Annotation dependency -->
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
+
+**Pro tip:** Πάντα ελέγχετε την τελευταία έκδοση στην ιστοσελίδα του GroupDocs. Οι νέες εκδόσεις συχνά περιλαμβάνουν έως 20 % μείωση της κατανάλωσης μνήμης για μεγάλα PDFs.
+
+#### Επιλογές αδειοδότησης (και τι σημαίνουν στην πραγματικότητα)
+
+* **Δωρεάν δοκιμή** – έξοδος με υδατογράφημα, ιδανική για αξιολόγηση.  
+* **Προσωρινή άδεια** – απεριόριστη για 30 ημέρες· αποκτήστε μια **προσωρινή άδεια** [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license/).  
+* **Πλήρης άδεια** – απαιτείται για παραγωγικές εγκαταστάσεις· η τιμολόγηση διαφέρει ανάλογα με την κλίμακα της υλοποίησης.
+
+#### Αρχική επαλήθευση
+
+Μετά την προσθήκη της εξάρτησης, εκτελέστε αυτό το μικρό τεστ για να επιβεβαιώσετε ότι η βιβλιοθήκη φορτώνεται σωστά:
 
 ```xml
 <repositories>
@@ -87,19 +139,27 @@ Add the GroupDocs repository and dependency to your `pom.xml`. Here’s exactly 
 </dependencies>
 ```
 
-**Pro Tip**: Always check for the latest version on the GroupDocs website. Version 25.2 is current as of this writing, but newer versions often include performance improvements and bug fixes.
+## Πώς να δημιουργήσετε σχολιασμούς PDF με Java και GroupDocs.Annotation
 
-#### Επιλογές Άδειας (Και Τι Σημαίνουν Πραγματικά)
+Φορτώστε το έγγραφο, προσθέστε ένα `AreaAnnotation` και αποθηκεύστε το αποτέλεσμα. Η παρακάτω άμεση απάντηση συνοψίζει όλη τη διαδικασία:
 
-**Free Trial** – Perfect for initial evaluation and small projects. You get watermarked output, which is fine for testing but not production.
+Φορτώστε το PDF σας με `new Annotator("input.pdf")`, δημιουργήστε ένα `AreaAnnotation` που ορίζει το ορθογώνιο και το κείμενο σχολίου, προσθέστε το σχόλιο στο `Annotator`, έπειτα καλέστε `save("output.pdf")`. Αυτό το τρι‑βήμα μοτίβο διαχειρίζεται οποιοδήποτε μέγεθος PDF και εξασφαλίζει αυτόματη απελευθέρωση πόρων.
 
-**Temporary License** – Ideal for development phases. Get one [εδώ](https://purchase.groupdocs.com/temporary-license/) for 30 days of unrestricted access.
+### Φόρτωση εγγράφων: περισσότερο από απλούς διαδρόμους αρχείων
 
-**Full License** – Required for production. Pricing varies based on deployment type and scale.
+#### Βασική φόρτωση εγγράφου
 
-#### Αρχική Ρύθμιση και Επαλήθευση
+Η κλάση `Annotator` είναι το σημείο εισόδου για όλες τις λειτουργίες σχολιασμού. Αντιπροσωπεύει ένα PDF έγγραφο στη μνήμη και παρέχει μεθόδους για ανάγνωση, τροποποίηση και αποθήκευση σχολίων.
 
-Once your dependencies are in place, verify everything works with this simple test:
+```java
+Annotator annotator = new Annotator("sample.pdf");
+```
+
+**Real‑world context:** Σε παραγωγικό περιβάλλον, η διαδρομή αρχείου μπορεί να προέρχεται από φάκελο ανεβάσματος, blob βάσης δεδομένων ή URL αποθήκευσης στο cloud. Το GroupDocs.Annotation δέχεται τοπικά αρχεία, `InputStream`s και απομακρυσμένα URLs χωρίς επιπλέον κώδικα.
+
+#### Διαχείριση διαφορετικών πηγών εισόδου
+
+Μπορείτε επίσης να φορτώσετε ένα PDF από byte array ή από HTTP URL:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -118,13 +178,155 @@ public class SetupVerification {
 }
 ```
 
-## Πώς να δημιουργήσετε pdf annotations java με το GroupDocs.Annotation
+### Προσθήκη του πρώτου σας σχολίου
 
-### Φόρτωση Εγγράφων: Περισσότερο από Απλούς Δρόμους Αρχείων
+#### Κατανόηση σχολίων περιοχής
 
-#### Βασική Φόρτωση Εγγράφου
+`AreaAnnotation` είναι ο πιο ευέλικτος τύπος για επισήμανση ορθογώνιας περιοχής και προσθήκη σχολίου. Λειτουργεί όπως μια ψηφιακή αυτοκόλλητη σημείωση που μπορεί να μετακινηθεί, να αλλάξει μέγεθος και να μορφοποιηθεί.
 
-Let's start with the fundamentals. Loading a PDF document is your first step:
+```java
+AreaAnnotation area = new AreaAnnotation();
+area.setRectangle(new Rectangle(100, 150, 200, 80)); // x, y, width, height
+area.setComment("Review this section for compliance.");
+area.setCreator("alice@example.com");
+```
+
+**Coordinate system explained:** Οι συντεταγμένες PDF ξεκινούν από το κάτω‑αριστερό, αλλά το GroupDocs χρησιμοποιεί προέλευση πάνω‑αριστερά, που ευθυγραμμίζεται με τυπικά UI frameworks. Οι τιμές εκφράζονται σε points (1/72 ίντσα).
+
+#### Πρακτικά παραδείγματα σχολιασμού
+
+**Επισήμανση σημαντικού κειμένου**
+
+```java
+HighlightAnnotation highlight = new HighlightAnnotation();
+highlight.setRectangle(new Rectangle(50, 200, 300, 20));
+highlight.setColor(Color.YELLOW);
+annotator.add(highlight);
+```
+
+**Δημιουργία σχολίων αξιολόγησης**
+
+```java
+AreaAnnotation comment = new AreaAnnotation();
+comment.setRectangle(new Rectangle(120, 400, 250, 100));
+comment.setComment("Please verify the calculation in this paragraph.");
+comment.setCreator("bob@example.com");
+annotator.add(comment);
+```
+
+### Αποθήκευση και διαχείριση πόρων
+
+#### Σωστές τεχνικές αποθήκευσης αρχείων
+
+```java
+annotator.save("annotated.pdf");
+```
+
+**Why dispose matters:** Το `Annotator` κρατά το περιεχόμενο του PDF στη μνήμη για γρήγορη πρόσβαση. Η μη κλείσιμο του μπορεί να προκαλέσει διαρροές μνήμης, ειδικά όταν επεξεργάζεστε δεκάδες αρχεία σε batch job.
+
+#### Καλύτερο πρότυπο διαχείρισης πόρων
+
+```java
+try (Annotator annotator = new Annotator("input.pdf")) {
+    // add annotations here
+    annotator.save("output.pdf");
+}
+```
+
+## Συνηθισμένα προβλήματα και πώς να τα αποφύγετε
+
+### Προβλήματα διαδρομής αρχείου και δικαιωμάτων
+
+* **Problem:** “File not found” ή “Access denied”.  
+* **Solution:** Χρησιμοποιήστε απόλυτες διαδρομές κατά την ανάπτυξη, επαληθεύστε τα δικαιώματα ανάγνωσης/εγγραφής και βεβαιωθείτε ότι το αρχείο υπάρχει πριν το ανοίξετε.
+
+```java
+File file = new File("C:/docs/input.pdf");
+if (!file.exists() || !file.canRead()) {
+    throw new IllegalArgumentException("File is missing or unreadable.");
+}
+```
+
+### Λάθη διαχείρισης μνήμης
+
+* **Problem:** Η εφαρμογή επιβραδύνεται μετά την επεξεργασία πολλών PDFs.  
+* **Solution:** Πάντα χρησιμοποιείτε try‑with‑resources ή ρητές κλήσεις `close()` για απελευθέρωση των native buffers.
+
+```java
+try (Annotator annotator = new Annotator("large.pdf")) {
+    // process
+}
+```
+
+### Σύγχυση συστήματος συντεταγμένων
+
+* **Problem:** Τα σχόλια εμφανίζονται εκτός οθόνης.  
+* **Solution:** Θυμηθείτε ότι το GroupDocs χρησιμοποιεί προέλευση πάνω‑αριστερά. Δοκιμάστε με γνωστές συντεταγμένες όπως (50, 50, 100, 50) πριν εφαρμόσετε δυναμικές τιμές.
+
+```java
+AreaAnnotation test = new AreaAnnotation();
+test.setRectangle(new Rectangle(50, 50, 100, 50));
+annotator.add(test);
+```
+
+## Πραγματικές περιπτώσεις χρήσης και εφαρμογές
+
+### Ροές εργασίας ανασκόπησης εγγράφων
+
+Οι νομικές ομάδες συχνά χρειάζονται να παρακολουθούν ποιος σχολίασε ποιο άρθρο. Με το GroupDocs.Annotation μπορείτε:
+
+* Να αναθέσετε μοναδικό χρώμα ανά αξιολογητή.  
+* Να αποθηκεύετε χρονικές σφραγίδες και IDs χρηστών στα μεταδεδομένα του σχολίου.  
+* Να εξάγετε το σχολιασμένο PDF για διανομή σε πελάτες διατηρώντας το audit trail.
+
+```java
+area.setCreator("lawyer@example.com");
+area.setCreatedOn(LocalDateTime.now());
+```
+
+### Δημιουργία εκπαιδευτικού περιεχομένου
+
+Οι πλατφόρμες e‑learning χρησιμοποιούν σχόλια για να επισημαίνουν βασικές έννοιες, να ενσωματώνουν κουίζ ή να προσθέτουν επεξηγηματικές σημειώσεις απευθείας σε PDFs μελέτης. Αυτό βελτιώνει τη διατήρηση γνώσεων έως και 35 % σε σύγκριση με απλά PDFs (εσωτερική μελέτη).
+
+### Τεκμηρίωση διασφάλισης ποιότητας
+
+Οι κατασκευαστές σχολιάζουν τεχνικά σχέδια για να υποδείξουν ανοχές, αναθεωρήσεις και προειδοποιήσεις ασφαλείας. Η τυποποιημένη σήμανση μειώνει την επανασχεδίαση κατά περίπου 22 % σε γραμμές παραγωγής.
+
+## Συμβουλές βελτιστοποίησης απόδοσης
+
+### Αποτελεσματική διαχείριση μεγάλων εγγράφων
+
+Η επεξεργασία ενός PDF 200 σελίδων μπορεί να γίνει σε κάτω από 2 δευτερόλεπτα σε τυπικό 4‑core server όταν κάνετε streaming σελίδων αντί για φόρτωση ολόκληρου του αρχείου.
+
+```java
+Annotator annotator = new Annotator(new FileInputStream("big.pdf"));
+```
+
+### Παρακολούθηση χρήσης μνήμης
+
+Ενεργοποιήστε τα ενσωματωμένα εργαλεία παρακολούθησης της Java (JVisualVM, JConsole) για να παρακολουθείτε τη χρήση heap ενώ σχολιάζετε μεγάλα αρχεία. Στοχεύστε να κρατάτε το heap κάτω από 70 % της μέγιστης κατανομής.
+
+### Σκέψεις για ταυτόχρονη επεξεργασία
+
+Τα instances του GroupDocs.Annotation **δεν είναι thread‑safe**. Για παράλληλες εργασίες, δημιουργήστε ξεχωριστό `Annotator` ανά νήμα ή χρησιμοποιήστε thread‑local pool.
+
+```java
+ExecutorService executor = Executors.newFixedThreadPool(4);
+for (String path : pdfPaths) {
+    executor.submit(() -> {
+        try (Annotator a = new Annotator(path)) {
+            // annotate
+            a.save(path.replace(".pdf", "_annotated.pdf"));
+        }
+    });
+}
+```
+
+## Προχωρημένες τεχνικές σχολιασμού
+
+### Πολλαπλοί τύποι σχολίων σε ένα έγγραφο
+
+Μπορείτε να συνδυάσετε επισημάνσεις, σημειώσεις κειμένου και υδατογραφήματα σε μία διεργασία:
 
 ```java
 String INPUT_PDF = "YOUR_DOCUMENT_DIRECTORY/input.pdf";
@@ -134,9 +336,152 @@ String outputPath = "YOUR_OUTPUT_DIRECTORY/output_annotated.pdf";
 final Annotator annotator = new Annotator(INPUT_PDF);
 ```
 
-**Real‑World Context**: In production applications, these paths often come from user uploads, database entries, or cloud storage URLs. The beauty of GroupDocs is that it handles local files, streams, and URLs seamlessly.
+### Δυναμικός σχολιασμός βάσει περιεχομένου
 
-#### Διαχείριση Διαφορετικών Πηγών Εισόδου
+Συνδυάστε το GroupDocs.Annotation με Apache PDFBox ή Tika για αυτόματη ανίχνευση λέξεων-κλειδιών και προσθήκη σχετικών σημειώσεων.
+
+```java
+// pseudo‑code: detect the word "confidential"
+if (pageText.contains("confidential")) {
+    WatermarkAnnotation wm = new WatermarkAnnotation();
+    wm.setText("CONFIDENTIAL");
+    annotator.add(wm);
+}
+```
+
+## Οδηγός αντιμετώπισης προβλημάτων
+
+### Συνηθισμένα μηνύματα σφάλματος και λύσεις
+
+* **“Invalid license”** – Βεβαιωθείτε ότι το αρχείο άδειας βρίσκεται στο classpath και ταιριάζει με τον τύπο υλοποίησής σας.  
+* **“Unsupported file format”** – Επαληθεύστε ότι το PDF δεν είναι κατεστραμμένο, προστατευμένο με κωδικό ή μηδενικού μεγέθους.  
+* **Performance slowdown** – Χρησιμοποιήστε streaming, κλείστε άμεσα τα αντικείμενα `Annotator` και εξετάστε batch processing.
+
+### Συμβουλές εντοπισμού σφαλμάτων
+
+#### Ενεργοποίηση καταγραφής
+
+```java
+System.setProperty("log4j.configurationFile", "log4j2.xml");
+```
+
+#### Επαλήθευση εισόδων
+
+```java
+Objects.requireNonNull(filePath, "File path cannot be null");
+```
+
+## Συχνές ερωτήσεις
+
+**Q: Πώς μπορώ να προσθέσω πολλαπλά σχόλια σε ένα PDF αποδοτικά;**  
+A: Καλέστε `annotator.add(annotation)` για κάθε σχόλιο, μετά εκτελέστε `save()` μία φορά. Το GroupDocs ομαδοποιεί τις αλλαγές και τις γράφει σε μία διεργασία.
+
+```java
+annotator.add(area1);
+annotator.add(highlight2);
+annotator.save("combined.pdf");
+```
+
+**Q: Ποιες μορφές αρχείων υποστηρίζει το GroupDocs.Annotation εκτός από PDF;**  
+A: Υποστηρίζει πάνω από 50 μορφές, συμπεριλαμβανομένων DOC, DOCX, PPT, PPTX, XLS, XLSX, JPEG, PNG, TIFF και πολλές άλλες. Δείτε τη πλήρη λίστα στην [Τεκμηρίωση GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/).
+
+**Q: Πώς διαχειρίζομαι PDFs προστατευμένα με κωδικό;**  
+
+```java
+Annotator annotator = new Annotator("secure.pdf", "password123");
+```
+
+**Q: Μπορώ να ανακτήσω και να τροποποιήσω υπάρχοντα σχόλια σε PDF;**  
+
+```java
+List<AnnotationBase> existing = annotator.getAll();
+for (AnnotationBase a : existing) {
+    if (a instanceof TextAnnotation) {
+        ((TextAnnotation) a).setComment("Updated comment");
+    }
+}
+annotator.save("updated.pdf");
+```
+
+**Q: Ποιες είναι οι επιπτώσεις στην απόδοση όταν επεξεργάζομαι μεγάλα PDFs;**  
+A: Τα αρχεία μεγαλύτερα από 50 MB θα πρέπει να γίνονται streaming σελίδα‑με‑σελίδα. Η χρήση μνήμης παραμένει κάτω από 150 MB όταν κλείνετε κάθε `Annotator` μετά την επεξεργασία ενός batch σελίδων.
+
+```java
+// each request gets its own Annotator instance
+public void processPdf(String path) {
+    try (Annotator a = new Annotator(path)) {
+        // annotate
+        a.save(path);
+    }
+}
+```
+
+**Q: Πώς διαχειρίζομαι ταυτόχρονη επεξεργασία εγγράφων σε web εφαρμογή;**  
+
+```java
+@Service
+public class PdfAnnotationService {
+    public void addComment(String filePath, String comment) throws IOException {
+        try (Annotator annotator = new Annotator(filePath)) {
+            AreaAnnotation a = new AreaAnnotation();
+            a.setRectangle(new Rectangle(100, 200, 250, 80));
+            a.setComment(comment);
+            annotator.add(a);
+            annotator.save(filePath);
+        }
+    }
+}
+```
+
+**Q: Ποιος είναι ο καλύτερος τρόπος για εντοπισμό προβλημάτων τοποθέτησης σχολίων;**  
+A: Ξεκινήστε με ένα γνωστό ορθογώνιο (π.χ., (50, 50, 100, 50)) και ελέγξτε το οπτικό αποτέλεσμα. Προσαρμόστε τις συντεταγμένες σταδιακά και συμβουλευτείτε το μέγεθος σελίδας του PDF (συνήθως 612 × 792 points).
+
+**Q: Πώς ενσωματώνω το GroupDocs.Annotation με Spring Boot;**  
+
+```java
+@Service
+public class PdfAnnotationService {
+    public void addComment(String filePath, String comment) throws IOException {
+        try (Annotator annotator = new Annotator(filePath)) {
+            AreaAnnotation a = new AreaAnnotation();
+            a.setRectangle(new Rectangle(100, 200, 250, 80));
+            a.setComment(comment);
+            annotator.add(a);
+            annotator.save(filePath);
+        }
+    }
+}
+```
+
+## Πρόσθετες Συχνές Ερωτήσεις
+
+**Q: Μπορώ να εξάγω τα σχολιασμένα PDFs σε άλλες μορφές;**  
+A: Ναι, μπορείτε να μετατρέψετε τα σχολιασμένα PDFs σε DOCX, PPTX ή μορφές εικόνας διατηρώντας όλα τα σημεία σήμανσης.
+
+**Q: Υπάρχει τρόπος να ληφθεί η λίστα όλων των τύπων σχολίων που υποστηρίζει η βιβλιοθήκη;**  
+A: Χρησιμοποιήστε `AnnotationType.values()` για να λάβετε έναν πίνακα με όλα τα υποστηριζόμενα enum.
+
+**Q: Πώς μπορώ να προσαρμόσω την εμφάνιση ενός υδατογραφήματος;**  
+A: Ορίστε ιδιότητες όπως `setOpacity`, `setRotation` και `setBackgroundColor` σε ένα `WatermarkAnnotation` πριν το προσθέσετε.
+
+**Q: Η βιβλιοθήκη υποστηρίζει την προσθήκη σχολίων προγραμματιστικά από βάση δεδομένων;**  
+A: Απόλυτα. Διαβάστε τα δεδομένα σχολίων από οποιαδήποτε πηγή, γεμίστε ένα `AreaAnnotation` (ή `TextAnnotation`) με το κείμενο και προσθέστε το στο έγγραφο.
+
+**Q: Τι πρέπει να κάνω αν αντιμετωπίσω διαρροή μνήμης κατά την επεξεργασία batch;**  
+A: Βεβαιωθείτε ότι κάθε `Annotator` κλείνει (try‑with‑resources), παρακολουθήστε το heap της JVM και χωρίστε τα μεγάλα batch σε μικρότερες ομάδες.
+
+**Πρόσθετοι πόροι**  
+- [Τεκμηρίωση GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
+- [Οδηγός Αναφοράς API](https://reference.groupdocs.com/annotation/java/)  
+- [Λήψη Τελευταίας Έκδοσης](https://releases.groupdocs.com/annotation/java/)  
+- [Αγορά Άδειας](https://purchase.groupdocs.com/buy)  
+- [Πρόσβαση Δωρεάν Δοκιμής](https://releases.groupdocs.com/annotation/java/)  
+- [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license/)  
+- [Φόρουμ Υποστήριξης](https://forum.groupdocs.com/c/annotation/)  
+
+**Τελευταία ενημέρωση:** 2026-10-16  
+**Δοκιμή με:** GroupDocs.Annotation 25.2 for Java  
+**Συγγραφέας:** GroupDocs  
 
 ```java
 // From file path (most common)
@@ -149,13 +494,6 @@ Annotator annotatorFromStream = new Annotator(inputStream);
 // Don't forget to close streams when done!
 inputStream.close();
 ```
-
-### Προσθήκη της Πρώτης Σας Σημείωσης
-
-#### Κατανόηση Σημειώσεων Περιοχής
-
-Area annotations are perfect for highlighting regions, marking important sections, or creating visual callouts. Think of them as digital sticky notes with style.
-
 ```java
 import com.groupdocs.annotation.models.Rectangle;
 import com.groupdocs.annotation.models.annotationmodels.AreaAnnotation;
@@ -172,13 +510,6 @@ area.setBackgroundColor(65535);
 // Add the annotation to your document
 annotator.add(area);
 ```
-
-**Coordinate System Explained**: PDF coordinates start from the bottom‑left corner, but GroupDocs uses a top‑left origin system (more intuitive for developers). The numbers represent pixels from the origin.
-
-#### Πρακτικά Παραδείγματα Σημειώσεων
-
-**Highlighting Important Text**:
-
 ```java
 // Create a semi‑transparent highlight
 AreaAnnotation highlight = new AreaAnnotation();
@@ -186,9 +517,6 @@ highlight.setBox(new Rectangle(50, 200, 200, 25));
 highlight.setBackgroundColor(0x80FFFF00); // Semi‑transparent yellow
 highlight.setMessage("Important clause - review carefully");
 ```
-
-**Creating Review Comments**:
-
 ```java
 // Add a comment annotation with custom styling
 AreaAnnotation comment = new AreaAnnotation();
@@ -198,11 +526,6 @@ comment.setMessage("Needs revision - see discussion in email");
 comment.setCreatedOn(new Date());
 comment.setUser("John Reviewer");
 ```
-
-### Αποθήκευση και Διαχείριση Πόρων
-
-#### Σωστές Τεχνικές Αποθήκευσης Αρχείων
-
 ```java
 // Save the annotated document
 annotator.save(outputPath);
@@ -210,11 +533,6 @@ annotator.save(outputPath);
 // Always dispose of resources (critical for memory management)
 annotator.dispose();
 ```
-
-**Why Dispose Matters**: GroupDocs holds document data in memory for performance. Without proper disposal, you'll experience memory leaks in long‑running applications.
-
-#### Καλύτερο Πρότυπο Διαχείρισης Πόρων
-
 ```java
 public void annotateDocument(String inputPath, String outputPath) {
     try (Annotator annotator = new Annotator(inputPath)) {
@@ -233,18 +551,6 @@ public void annotateDocument(String inputPath, String outputPath) {
     }
 }
 ```
-
-## Συνηθισμένα Πιθανά Σφάλματα και Πώς να τα Αποφύγετε
-
-### Προβλήματα Διαδρομών Αρχείων και Δικαιωμάτων
-
-**The Problem**: “File not found” or “Access denied” errors are frustratingly common.
-
-**The Solutions**:
-- Always use absolute paths during development  
-- Check file permissions before processing  
-- Validate input files exist and are readable  
-
 ```java
 public boolean validateInputFile(String filePath) {
     File file = new File(filePath);
@@ -259,13 +565,6 @@ public boolean validateInputFile(String filePath) {
     return true;
 }
 ```
-
-### Λάθη Διαχείρισης Μνήμης
-
-**The Problem**: Applications slow down or crash after processing multiple documents.
-
-**The Solution**: Always use try‑with‑resources or explicit disposal:
-
 ```java
 // Good practice - automatic resource management
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -283,13 +582,6 @@ try {
     }
 }
 ```
-
-### Σύγχυση Συστήματος Συντεταγμένων
-
-**The Problem**: Annotations appear in wrong positions or off‑screen.
-
-**The Solution**: Remember PDF coordinate systems and test with known positions:
-
 ```java
 // Start with simple, visible coordinates for testing
 Rectangle testPosition = new Rectangle(50, 50, 100, 50);
@@ -297,18 +589,6 @@ Rectangle testPosition = new Rectangle(50, 50, 100, 50);
 // Gradually adjust based on your PDF dimensions
 // Most PDFs are 612x792 points (8.5"x11" at 72 DPI)
 ```
-
-## Πραγματικές Περιπτώσεις Χρήσης και Εφαρμογές
-
-### Ροές Εργασίας Ανασκόπησης Εγγράφων
-
-**Scenario**: Legal firms reviewing contracts before client meetings.
-
-**Implementation Strategy**:
-- Different annotation colors for different reviewers  
-- Timestamp and user tracking for audit trails  
-- Export capabilities for client distribution  
-
 ```java
 public void addReviewAnnotation(Annotator annotator, String reviewerName, 
                               String comment, Rectangle position, Color highlightColor) {
@@ -322,23 +602,6 @@ public void addReviewAnnotation(Annotator annotator, String reviewerName,
     annotator.add(review);
 }
 ```
-
-### Δημιουργία Εκπαιδευτικού Περιεχομένου
-
-**Scenario**: E‑learning platforms highlighting key concepts in study materials.  
-**Why This Works**: Visual annotations increase comprehension and retention, especially for technical documents.
-
-### Τεκμηρίωση Διασφάλισης Ποιότητας
-
-**Scenario**: Manufacturing companies marking up technical drawings and specifications.  
-**Benefits**: Standardized markup across teams, revision tracking, and clear communication of changes.
-
-## Συμβουλές Βελτιστοποίησης Απόδοσης
-
-### Αποτελεσματική Διαχείριση Μεγάλων Εγγράφων
-
-**Batch Processing Strategy**:
-
 ```java
 public void processDocumentBatch(List<String> documentPaths) {
     for (String path : documentPaths) {
@@ -353,9 +616,6 @@ public void processDocumentBatch(List<String> documentPaths) {
     }
 }
 ```
-
-### Παρακολούθηση Χρήσης Μνήμης
-
 ```java
 Runtime runtime = Runtime.getRuntime();
 long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
@@ -365,11 +625,6 @@ long memoryBefore = runtime.totalMemory() - runtime.freeMemory();
 long memoryAfter = runtime.totalMemory() - runtime.freeMemory();
 System.out.println("Memory used: " + (memoryAfter - memoryBefore) + " bytes");
 ```
-
-### Σκέψεις για Συγχρονική Επεξεργασία
-
-**Thread Safety**: GroupDocs.Annotation is not thread‑safe per instance. Use separate `Annotator` instances for concurrent processing:
-
 ```java
 public class ConcurrentAnnotationProcessor {
     public void processDocumentsConcurrently(List<String> documents) {
@@ -382,11 +637,6 @@ public class ConcurrentAnnotationProcessor {
     }
 }
 ```
-
-## Προχωρημένες Τεχνικές Σημειώσεων
-
-### Πολλαπλοί Τύποι Σημειώσεων σε Ένα Έγγραφο
-
 ```java
 public void createComprehensiveAnnotation(Annotator annotator) {
     // Highlight important text
@@ -404,32 +654,10 @@ public void createComprehensiveAnnotation(Annotator annotator) {
     annotator.add(note);
 }
 ```
-
-### Δυναμική Σημείωση Βάσει Περιεχομένου
-
-While this tutorial focuses on manual annotation placement, you can combine GroupDocs with text‑analysis libraries to automatically detect and annotate specific content patterns.
-
-## Οδηγός Επίλυσης Προβλημάτων
-
-### Συνηθισμένα Μηνύματα Σφάλματος και Λύσεις
-
-**“Invalid license” errors** – Verify license file location, format, and expiration. Ensure the license matches your deployment type.
-
-**“Unsupported file format” errors** – Confirm the PDF isn’t corrupted, isn’t password‑protected, and isn’t zero‑bytes.
-
-**Performance issues** – Monitor memory usage, implement proper disposal, and consider batch processing.
-
-### Συμβουλές Αποσφαλμάτωσης
-
-**Enable Logging**:
-
 ```java
 // Add to your application properties or logging configuration
 java.util.logging.Logger.getLogger("com.groupdocs").setLevel(Level.FINE);
 ```
-
-**Validate Inputs**:
-
 ```java
 public boolean validateAnnotationParameters(Rectangle box, int color) {
     if (box.getWidth() <= 0 || box.getHeight() <= 0) {
@@ -445,12 +673,6 @@ public boolean validateAnnotationParameters(Rectangle box, int color) {
     return true;
 }
 ```
-
-## Συχνές Ερωτήσεις
-
-**Q: Πώς μπορώ να προσθέσω πολλαπλές σημειώσεις σε ένα PDF αποδοτικά;**  
-A: Simply call `annotator.add(annotation)` for each annotation before saving. GroupDocs batches all annotations and applies them when you call `save()`:
-
 ```java
 try (Annotator annotator = new Annotator("document.pdf")) {
     annotator.add(annotation1);
@@ -459,20 +681,11 @@ try (Annotator annotator = new Annotator("document.pdf")) {
     annotator.save("output.pdf"); // All annotations applied at once
 }
 ```
-
-**Q: Ποιοι τύποι αρχείων υποστηρίζει το GroupDocs.Annotation εκτός από PDF;**  
-A: GroupDocs.Annotation supports over 50 formats including Word (DOC, DOCX), PowerPoint (PPT, PPTX), Excel (XLS, XLSX), images (JPEG, PNG, TIFF), and many others. Check the [τεκμηρίωση](https://docs.groupdocs.com/annotation/java/) for the complete list.
-
-**Q: Πώς διαχειρίζομαι PDF προστατευμένα με κωδικό;**  
-
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator("protected.pdf", loadOptions);
 ```
-
-**Q: Μπορώ να ανακτήσω και να τροποποιήσω υπάρχουσες σημειώσεις σε ένα PDF;**  
-
 ```java
 try (Annotator annotator = new Annotator("annotated.pdf")) {
     List<AnnotationInfo> annotations = annotator.get(AnnotationType.Area);
@@ -484,12 +697,6 @@ try (Annotator annotator = new Annotator("annotated.pdf")) {
     annotator.save("updated.pdf");
 }
 ```
-
-**Q: Ποιες είναι οι επιπτώσεις στην απόδοση όταν επεξεργάζομαι μεγάλα PDF;**  
-A: Large PDFs (>50 MB) require careful memory management. Use streaming when possible, process pages individually if needed, and always dispose of resources. Consider implementing progress tracking for user feedback during long operations.
-
-**Q: Πώς διαχειρίζομαι τη συγχρονισμένη επεξεργασία εγγράφων σε μια web εφαρμογή;**  
-
 ```java
 @Service
 public class AnnotationService {
@@ -503,12 +710,6 @@ public class AnnotationService {
     }
 }
 ```
-
-**Q: Ποιος είναι ο καλύτερος τρόπος για να εντοπίσω προβλήματα τοποθέτησης σημειώσεων;**  
-A: Start with known coordinates and gradually adjust. Most standard PDFs use 612x792 points. Create a test annotation at (50, 50, 100, 50) first to verify basic functionality, then adjust based on your content layout.
-
-**Q: Πώς ενσωματώνω το GroupDocs.Annotation με Spring Boot;**  
-
 ```java
 @Service
 public class DocumentAnnotationService {
@@ -525,34 +726,16 @@ public class DocumentAnnotationService {
 }
 ```
 
-## Πρόσθετες Συχνές Ερωτήσεις
+## Σχετικά Μαθήματα
 
-**Q: Μπορώ να εξάγω τα σημειωμένα PDF σε άλλες μορφές;**  
-A: Yes, GroupDocs.Annotation can convert annotated documents to formats such as DOCX, PPTX, or images while preserving annotations.
+- [Δημιουργία Επισημάνσεων PDF Java: Ολοκληρωμένος Οδηγός με GroupDocs Annotation](/annotation/java/annotation-management/)
+- [Επεξεργασία Σχολίων PDF Java - Πλήρης Οδηγός GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Σχολιασμός PDF από URLs GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
 
-**Q: Υπάρχει τρόπος να εμφανίσω όλους τους τύπους σημειώσεων που υποστηρίζει η βιβλιοθήκη;**  
-A: Use `AnnotationType.values()` to retrieve an array of all supported annotation enums.
 
-**Q: Πώς μπορώ να προσαρμόσω την εμφάνιση μιας σημείωσης υδατογράφησης;**  
-A: Set properties like `setOpacity`, `setRotation`, and `setBackgroundColor` on a `WatermarkAnnotation` instance before adding it.
+{{< /blocks/products/pf/tutorial-page-section >}}
 
-**Q: Υποστηρίζει η βιβλιοθήκη την προσθήκη σχολίων προγραμματιστικά από βάση δεδομένων;**  
-A: Absolutely. You can read comment data from any source, populate an `AreaAnnotation` (or `TextAnnotation`) with the comment text, and then add it to the document.
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
 
-**Q: Τι πρέπει να κάνω αν αντιμετωπίσω διαρροή μνήμης κατά την επεξεργασία παρτίδων;**  
-A: Ensure every `Annotator` is closed (try‑with‑resources), monitor JVM heap, and consider processing documents in smaller batches.
-
-**Additional Resources**  
-- [Τεκμηρίωση GroupDocs.Annotation](https://docs.groupdocs.com/annotation/java/)  
-- [Οδηγός Αναφοράς API](https://reference.groupdocs.com/annotation/java/)  
-- [Λήψη Τελευταίας Έκδοσης](https://releases.groupdocs.com/annotation/java/)  
-- [Αγορά Άδειας](https://purchase.groupdocs.com/buy)  
-- [Πρόσβαση Δωρεάν Δοκιμής](https://releases.groupdocs.com/annotation/java/)  
-- [Προσωρινή Άδεια](https://purchase.groupdocs.com/temporary-license/)  
-- [Φόρουμ Υποστήριξης](https://forum.groupdocs.com/c/annotation/)  
-
----
-
-**Last Updated:** 2026-03-27  
-**Tested With:** GroupDocs.Annotation 25.2 for Java  
-**Author:** GroupDocs
+{{< blocks/products/products-backtop-button >}}

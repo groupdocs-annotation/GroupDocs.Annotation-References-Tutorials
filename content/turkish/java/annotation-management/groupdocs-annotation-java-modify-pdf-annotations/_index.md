@@ -1,93 +1,120 @@
 ---
 categories:
 - Java Development
-date: '2026-03-24'
-description: GroupDocs kullanarak Java’da PDF açıklamalarını nasıl düzenleyeceğinizi
-  öğrenin. Adım adım kod örnekleriyle PDF açıklamalarını yükleme, değiştirme ve yönetme
-  konusunda uzmanlaşın.
-keywords: edit pdf annotations java, modify PDF annotations Java, GroupDocs annotation
-  tutorial, Java document annotation library, PDF collaboration Java
-lastmod: '2026-03-24'
-linktitle: Edit PDF Annotations Java Guide
+date: '2026-10-16'
+description: GroupDocs kullanarak PDF yorumlarını Java'da nasıl düzenleyeceğinizi
+  öğrenin. PDF yorumlarını yükleme, değiştirme ve yönetme konusunda adım adım kod
+  örnekleriyle uzmanlaşın.
+keywords:
+- edit pdf annotations java
+- modify pdf annotations java
+- groupdocs annotation tutorial
+lastmod: '2026-10-16'
+linktitle: PDF Yorumlarını Java ile Düzenleme Kılavuzu
+og_description: GroupDocs.Annotation ile PDF yorumlarını Java'da düzenleyin. PDF yorumlarını
+  verimli bir şekilde yüklemeyi, değiştirmeyi ve kaydetmeyi öğrenin – adım adım kod
+  ve en iyi uygulamalar.
+og_image_alt: Guide showing Java code for editing PDF annotations with GroupDocs.Annotation
+og_title: PDF yorumlarını Java – eksiksiz GroupDocs kılavuzu
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-16'
+  description: Learn how to edit PDF annotations Java using GroupDocs. Master loading,
+    modifying, and managing PDF annotations with step‑by‑step code examples.
+  headline: Edit PDF annotations java – complete GroupDocs tutorial
+  type: TechArticle
+- questions:
+  - answer: Yes, but you’ll need a commercial license. The free trial is perfect for
+      development and testing, but production use requires a paid license. Check the
+      pricing page for current options.
+    question: Can I use GroupDocs.Annotation for Java in commercial projects?
+  - answer: Java 8 is the minimum requirement, but Java 11+ is recommended for better
+      performance and security. The library takes advantage of newer JVM optimizations
+      when available.
+    question: What's the minimum Java version required?
+  - answer: Absolutely! It integrates seamlessly with Spring Boot applications. Just
+      add the Maven dependency and configure it as a Spring bean if needed. Many developers
+      use it in microservices architectures.
+    question: Does GroupDocs.Annotation work with Spring Boot?
+  - answer: Yes, you can handle password‑protected documents by providing the password
+      through `LoadOptions` (see the example above).
+    question: Can I process password‑protected PDFs?
+  - answer: Use streaming approaches and process annotations in batches. Configure
+      your JVM with appropriate heap settings (typically 2‑3× your largest file size)
+      and always call `dispose()` to free resources promptly.
+    question: How do I handle large PDF files without running out of memory?
+  type: FAQPage
 tags:
-- pdf-annotation
-- java-library
-- document-management
+- pdf annotation
+- java library
+- document management
 - groupdocs
-title: PDF Açıklamaları Düzenleme Java - Tam GroupDocs Eğitimi
+- pdf editing
+title: PDF yorumlarını Java ile düzenleme – eksiksiz GroupDocs öğreticisi
 type: docs
 url: /tr/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/
 weight: 1
 ---
 
-# PDF Açıklamaları Düzenleme Java: Tam GroupDocs Öğreticisi
+# PDF açıklamaları java düzenleme: eksiksiz GroupDocs öğreticisi
 
-Uygulamanızda **edit PDF annotations Java** tarzı bir düzenleme mi yapmak istiyorsunuz? İster bir belge inceleme sistemi, ister eğitim platformu ya da işbirlikçi bir çalışma alanı oluşturuyor olun, GroupDocs.Annotation for Java, PDF açıklamalarını programatik olarak yüklemeyi, değiştirmeyi ve yönetmeyi şaşırtıcı derecede kolaylaştırıyor.
+Bu kapsamlı rehberde GroupDocs.Annotation kullanarak **PDF açıklamaları java nasıl düzenlenir** öğreneceksiniz. İster bir belge‑inceleme sistemi, bir e‑öğrenme platformu ya da işbirlikçi bir çalışma alanı oluşturuyor olun, kütüphane sadece birkaç Java satırıyla PDF yorumlarını programlı olarak yüklemenize, değiştirmenize ve yönetmenize olanak tanır. Gerçek‑dünya örnekleri, yaygın tuzaklar ve üretim‑hazır en iyi uygulamalar üzerinden ilerleyecek, böylece sağlam bir açıklama editörünü hızlıca uygulayabilirsiniz.
 
-Bu kapsamlı rehberde, sağlam bir Java PDF açıklama düzenleyicisi oluşturmak için bilmeniz gereken her şeyi öğreneceksiniz. Gerçek dünya örnekleri, kaçınılması gereken yaygın tuzaklar ve hata ayıklamaya harcayacağınız saatleri azaltacak en iyi uygulamaları adım adım inceleyeceğiz.
+## Hızlı cevaplar
+- **PDF açıklamaları java düzenlememe izin veren kütüphane nedir?** GroupDocs.Annotation for Java.  
+- **Bir lisansa ihtiyacım var mı?** Geliştirme için ücretsiz deneme yeterli; üretim için ticari lisans gereklidir.  
+- **Hangi Java sürümü gerekiyor?** Minimum Java 8, önerilen Java 11+.  
+- **Büyük PDF'leri verimli bir şekilde işleyebilir miyim?** Evet—akış seçeneklerini ve doğru kaynak temizliğini kullanın.  
+- **Thread‑safe mi?** Hayır, her iş parçacığı için ayrı bir `Annotator` örneği oluşturun.
 
-## Hızlı Yanıtlar
-- **PDF açıklamaları Java’da düzenlememi sağlayan kütüphane nedir?** GroupDocs.Annotation for Java.  
-- **Lisans gerekli mi?** Geliştirme için ücretsiz deneme sürümü yeterli; üretim ortamı için ticari lisans gerekir.  
-- **Hangi Java sürümü gerekli?** Minimum Java 8, önerilen Java 11+.  
-- **Büyük PDF dosyalarını verimli bir şekilde işleyebilir miyim?** Evet—akış (streaming) seçeneklerini ve doğru kaynak temizlemeyi kullanın.  
-- **Thread‑safe mi?** Hayır, her thread için ayrı bir `Annotator` örneği oluşturun.
+## PDF açıklamaları java düzenleme nedir?
+Java’da PDF açıklamaları düzenlemek, GroupDocs.Annotation kullanarak bir PDF dosyası içindeki yorum nesnelerini programlı olarak okuma, değiştirme, ekleme veya silme anlamına gelir. Bu, manuel UI etkileşimi olmadan otomatik inceleme iş akışlarını mümkün kılar. Kütüphane, yazar, metin, konum ve zaman damgaları gibi açıklama özelliklerine erişmenizi sağlayan zengin bir nesne modeli sunar ve değişiklikleri orijinal ya da yeni bir belgeye geri kaydeder.
 
-## edit pdf annotations java nedir?
-
-Java’da PDF açıklamaları düzenlemek, bir PDF dosyasının içinde yer alan yorum nesnelerine programatik olarak erişmek, değiştirmek, eklemek veya kaldırmak anlamına gelir. GroupDocs.Annotation ile açıklamaları diğer veri yapıları gibi ele alabilirsiniz—özelliklerini okuyabilir, metni güncelleyebilir, yanıtları yönetebilir ve ardından güncellenmiş belgeyi depolamaya kaydedebilirsiniz.
-
-## Neden GroupDocs.Annotation for Java?
-
-Koda geçmeden önce, Java PDF kütüphaneleri arasında GroupDocs.Annotation’ın neden öne çıktığını hızlıca özetleyelim. Sadece açıklamaları gösteren temel PDF okuyucuların aksine, bu kütüphane tam programatik kontrol sunar—birkaç satır kodla açıklama oluşturabilir, değiştirebilir, silebilir ve yönetebilirsiniz.
+## Neden GroupDocs.Annotation for Java'ı seçmelisiniz?
+GroupDocs.Annotation for Java, PDF, Word, Excel ve 50’den fazla diğer format üzerinde tam programatik kontrol sağlar; sadece birkaç kod satırıyla açıklama oluşturma, değiştirme, silme ve yönetme imkanı sunar, dış bağımlılıklar gerektirmez. Yüksek hacimli işleme destekler, güçlü güvenlik özellikleri sunar ve ayrıntılı dokümantasyon ile duyarlı destek sağlar; bu da kurumsal‑düzey uygulamalar için idealdir.
 
 **Değerli avantajlar:**
 - **Sıfır bağımlılık sorunu** – Maven ile kutudan çıkar çıkmaz çalışır  
-- **Format esnekliği** – PDF, Word, Excel ve 50+ diğer formatı destekler  
-- **Kurumsal düzeyde** – Yüksek hacimli belge işleme için tasarlanmıştır  
+- **Format esnekliği** – PDF, Word, Excel ve **50+** diğer formatı destekler  
+- **Kurumsal‑hazır** – Yüksek hacimli belge işleme için tasarlanmıştır  
 - **Aktif geliştirme** – Düzenli güncellemeler ve mükemmel destek  
 
-## Bu Öğreticide Neler Öğreneceksiniz
+## Bu öğreticide öğrenecekleriniz
+Bu rehberin sonunda şu konularda kendinize güveneceksiniz:
 
-Bu rehberin sonunda, aşağıdakileri kendinden emin bir şekilde yapabileceksiniz:
+- Herhangi bir Java projesinde (Maven veya Gradle) GroupDocs.Annotation kurma  
+- Mevcut açıklamaları olan PDF'leri yükleme ve içeriklerini inceleme  
+- **PDF açıklamaları java** programlı olarak özellikleri, metni ve yanıtları değiştirerek düzenleme  
+- Kenar durumları ve yaygın hataları zarif bir şekilde ele alma  
+- Büyük belgeler ve yüksek hacimli işleme için performansı optimize etme  
+- Üretim ortamları için en iyi uygulamaları hayata geçirme  
 
-- Maven veya Gradle ile herhangi bir Java projesine GroupDocs.Annotation kurmak  
-- Mevcut açıklamaları içeren PDF’leri yüklemek ve içeriklerini incelemek  
-- **Edit PDF annotations Java** özelliğiyle özellikleri, metni ve yanıtları programatik olarak değiştirmek  
-- Kenar durumlarını ve yaygın hataları sorunsuz bir şekilde ele almak  
-- Büyük belgeler ve yüksek hacimli işleme için performansı optimize etmek  
-- Üretim ortamları için en iyi uygulamaları hayata geçirmek  
-
-## Önkoşullar ve Ortam Kurulumu
-
+## Önkoşullar ve ortam kurulumu
 Geliştirme ortamınızı hazırlayalım. Endişelenmeyin – bu, çoğu Java kütüphanesinden daha basit.
 
-### Gerekenler
-
-**Temel Gereksinimler:**
-- **Java 8 veya üzeri** (daha iyi performans için Java 11+ önerilir)  
-- **Maven 3.6+** veya Gradle 6+ bağımlılık yönetimi için  
-- **Temel Java bilgisi** – dosya I/O ve koleksiyonlara aşina olmak  
+### İhtiyacınız olanlar
+**Temel gereksinimler**
+- **Java 8 veya üzeri** (daha iyi performans için Java 11+ önerilir)  
+- **Maven 3.6+** veya Gradle 6+ bağımlılık yönetimi için  
+- **Temel Java bilgisi** – dosya I/O ve koleksiyonlar hakkında aşinalık  
 - **Tercih ettiğiniz IDE** – IntelliJ IDEA, Eclipse veya VS Code sorunsuz çalışır  
 
-**Opsiyonel ama faydalı:**
-- Test için mevcut açıklamaları içeren örnek PDF dosyaları  
-- PDF yapısı hakkında temel bilgi (yardımcı olur ancak zorunlu değil)  
+**İsteğe bağlı ancak faydalı**
+- Test için mevcut açıklamaları olan örnek PDF dosyaları  
+- PDF yapısı hakkında temel bilgi (yararlı ama zorunlu değil)  
 
-### Hızlı Ortam Kontrolü
-
-Kodlamaya başlamadan önce, her şeyin hazır olduğundan emin olmak için bu hızlı kontrolü çalıştırın:
+### Hızlı ortam kontrolü
+Kodlamaya başlamadan önce her şeyin hazır olduğundan emin olmak için bu hızlı kontrolü çalıştırın:
 
 ```bash
 java -version  # Should show Java 8+
 mvn -version   # Should show Maven 3.6+
 ```
 
-## GroupDocs.Annotation for Java Kurulumu
+## GroupDocs.Annotation for Java'ı kurma
 
-### Maven Yapılandırması Çok Kolay
-
-GroupDocs.Annotation’ı projenize eklemek basittir. `pom.xml` dosyanıza aşağıdaki snippet’leri ekleyin:
+### Maven yapılandırması basitleştirildi
+GroupDocs.Annotation'ı projenize eklemek oldukça basittir. `pom.xml` dosyanıza şu snippet'leri ekleyin:
 
 ```xml
 <repositories>
@@ -106,17 +133,16 @@ GroupDocs.Annotation’ı projenize eklemek basittir. `pom.xml` dosyanıza aşa�
 </dependencies>
 ```
 
-**İpucu:** Depolarındaki en yeni sürüm numarasını kullanın. Bu yazının yazıldığı tarihte sürüm 25.2 geçerlidir, ancak daha yeni sürümler mevcut olabilir.
+**Pro tip:** Depolarındaki en yeni sürüm numarasını kullanın. Bu yazının yazıldığı tarihte sürüm 25.2’dir, ancak daha yeni sürümler mevcut olabilir.
 
-### Lisans Ayarı (Atlamayın!)
-
+### Lisans kurulumu (bunu atlamayın!)
 GroupDocs.Annotation tam işlevsellik için bir lisans gerektirir. İşte doğru şekilde nasıl yapılacağı:
 
-**Geliştirme Aşaması:** Ücretsiz deneme sürümüyle başlayın – öğrenme ve küçük projeler için idealdir.  
+**Geliştirme aşaması:** Ücretsiz deneme sürümüyle başlayın – öğrenme ve küçük projeler için idealdir.  
 
-**Üretim Hazır:** Ya geçici bir lisans (uzun değerlendirme için harika) ya da tam bir ticari lisans gerekir.  
+**Üretim hazır:** Uzun vadeli değerlendirme için geçici bir lisans ya da tam bir ticari lisans gerekir.  
 
-**Lisans Uygulaması:**
+**Lisans uygulaması:**
 
 ```java
 import com.groupdocs.annotation.License;
@@ -132,20 +158,15 @@ public class InitializeGroupDocs {
 }
 ```
 
-**Yaygın Lisans Sorunları:**
+**Yaygın lisans sorunları**
 - **Dosya bulunamadı hataları:** Lisans dosya yolunu iki kez kontrol edin  
 - **Geçersiz lisans:** Lisansınızın GroupDocs.Annotation sürümünüzle eşleştiğinden emin olun  
-- **Süresi dolmuş lisans:** Geçici lisansların zaman sınırlamaları vardır—gerekirse yenileyin  
+- **Süresi dolmuş lisans:** Geçici lisansların zaman sınırlamaları vardır – gerektiğinde yenileyin  
 
-## Temel Uygulama: Java PDF Açıklama Düzenleyiciniz
+## Temel uygulama: Java PDF açıklama editörünüz
 
-Şimdi heyecanlı kısma gelelim – PDF açıklama düzenleyicinizin sihirli bir şekilde çalışmasını sağlayacak temel işlevselliği inşa edelim.
-
-### Mevcut Açıklamaları Olan Belgeleri Yükleme
-
-Bu, çoğu açıklama iş akışının başlangıç noktasıdır. Bir belge inceleme sistemi ya da işbirliği özelliği ekliyorsanız, sık sık zaten açıklama içeren PDF’lerle çalışmanız gerekir.
-
-**Neden önemli:** Gerçek uygulamalarda nadiren boş PDF’lerle başlarsınız. Kullanıcılar zaman içinde yorum, vurgulama ve not ekler; uygulamanız mevcut açıklamaları tanımalı ve onlarla çalışabilmelidir.
+### Mevcut açıklamaları olan belgeleri yükleme
+`LoadOptions`, GroupDocs.Annotation'ın bir PDF'yi nasıl okuduğunu yapılandırır; bellek kullanımı ve ayrıştırma davranışı üzerinde kontrol sağlar. Bu, çoğu açıklama iş akışının başlangıç noktasıdır. Belge inceleme sistemi ya da işbirliği özellikleri ekliyorsanız, zaten açıklamaları içeren PDF'lerle sık sık çalışmanız gerekir.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -166,16 +187,15 @@ public class LoadDocumentWithAnnotations {
 }
 ```
 
-**Ne oluyor:** `LoadOptions` nesnesi, belgelerin nasıl yükleneceği konusunda ince ayar yapmanızı sağlar. Burada varsayılanları kullanıyoruz, ancak bellek kullanımı, ayrıştırma seçenekleri ve daha fazlasını özel gereksinimlere göre yapılandırabilirsiniz.
+**Burada ne oluyor:** `LoadOptions` nesnesi, belgelerin nasıl yükleneceği konusunda ince ayar yapmanıza olanak tanır. Burada varsayılanları kullansak da, bellek kullanımı, ayrıştırma seçenekleri ve daha fazlasını özel gereksinimler için yapılandırabilirsiniz.
 
-**Gerçek dünya dikkate alınması gerekenler:**
-- **Dosya yolları:** Üretimde dağıtım sorunlarını önlemek için mutlak yollar kullanın  
+**Gerçek‑dünya dikkate alınması gerekenler**
+- **Dosya yolları:** Üretimde mutlak yollar kullanarak dağıtım sorunlarını önleyin  
 - **Hata yönetimi:** Dosya işlemlerini her zaman `try‑catch` bloklarıyla sarın  
-- **Bellek yönetimi:** Büyük PDF’ler için akış (streaming) seçeneklerini değerlendirin  
+- **Bellek yönetimi:** Büyük PDF'ler için akış seçeneklerini değerlendirin  
 
-### Açıklamaları Getirme ve İnceleme
-
-Bir belgeyi yükledikten sonra, değişiklik yapmadan önce mevcut açıklamaları incelemeniz sıkça gerekir. Bu, açıklamaları doğrulamanız, raporlamanız veya seçici olarak değiştirmeniz gereken uygulamalar için kritiktir.
+### Açıklamaları alma ve inceleme
+`AnnotationBase`, kütüphane tarafından döndürülen herhangi bir açıklama türünü temsil eden soyut temel sınıftır. Bir belgeyi yükledikten sonra, değişiklik yapmadan önce mevcut açıklamaları incelemeniz genellikle gerekir. Bu, açıklamaları doğrulamanız, raporlamanız veya seçici olarak değiştirmeniz gereken uygulamalar için kritik öneme sahiptir.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.AnnotationBase;
@@ -202,14 +222,13 @@ public class RetrieveAnnotations {
 
 **Sonuçların anlaşılması:** `get()` metodu, tüm açıklamaları içeren bir `List<AnnotationBase>` döndürür. Her açıklama nesnesi konum, içerik, yazar, oluşturulma tarihi ve ilişkili yanıtlar gibi özellikler barındırır.
 
-**Pratik uygulamalar:**
-- **Denetim izleri:** Kim ne zaman hangi açıklamayı eklemiş takip edin  
+**Pratik uygulamalar**
+- **Denetim izleri:** Kim ne zaman hangi açıklamaları eklemiş takip edin  
 - **İçerik filtreleme:** Paylaşılan belgelerden hassas bilgileri kaldırın  
-- **İstatistikler:** Açıklama kullanımı ve işbirliği desenleri üzerine raporlar oluşturun  
+- **İstatistikler:** Açıklama kullanımı ve işbirliği desenleri üzerine raporlar üretin  
 
-### Açıklama Yanıtlarını Değiştirme
-
-İşbirlikçi ortamlarda en yaygın görevlerden biri açıklama yanıtlarını yönetmektir. Kullanıcılar uygunsuz yanıtları silmek, eski bilgileri güncellemek veya uzun tartışma dizilerini temizlemek isteyebilir.
+### Açıklama yanıtlarını değiştirme
+`AnnotationReply`, bir açıklamaya eklenmiş tek bir yanıtı temsil eder; yazar, metin ve zaman damgası içerir. İşbirlikçi ortamlarda en yaygın görevlerden biri açıklama yanıtlarını yönetmektir. Kullanıcılar uygunsuz yanıtları silmek, eski bilgileri güncellemek ya da uzun tartışma dizilerini temizlemek isteyebilir.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.AnnotationBase;
@@ -232,9 +251,9 @@ public class RemoveReplyFromAnnotation {
 }
 ```
 
-**Öncelikle güvenlik:** Açıklama ve yanıtların varlığını kontrol etmeden değiştirmeye çalışmayın. Yukarıdaki kod, en az bir açıklama ve en az bir yanıt olduğu varsayımını yapar.
+**Güvenlik önceliği:** Açıklama ve yanıtların var olduğunu kontrol etmeden değişiklik yapmaya çalışmayın. Yukarıdaki kod, en az bir açıklama ve en az bir yanıt olduğu varsayımını yapar.
 
-**Daha iyi hata yönetimi yaklaşımı:**
+**Daha iyi hata‑yönetimi yaklaşımı:**
 
 ```java
 if (!annotations.isEmpty() && !annotations.get(0).getReplies().isEmpty()) {
@@ -245,9 +264,8 @@ if (!annotations.isEmpty() && !annotations.get(0).getReplies().isEmpty()) {
 }
 ```
 
-### Değişiklikleri Kaydetme
-
-Her açıklama iş akışının son adımı değişiklikleri kalıcı hâle getirmektir. GroupDocs.Annotation bunu basit bir şekilde sağlar, ancak üretim kullanımı için dikkate alınması gereken önemli noktalar vardır.
+### Değişikliklerinizi kaydetme
+`Annotator.save` bellekteki tüm açıklama değişikliklerini PDF dosyasına yazar. Her açıklama iş akışının son adımı değişikliklerin kalıcı hale getirilmesidir. GroupDocs.Annotation bu süreci basitleştirir, ancak üretim ortamı için önemli hususlar vardır.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.AnnotationBase;
@@ -273,20 +291,17 @@ public class SaveChangesToDocument {
 }
 ```
 
-**Kritik noktalar:**
-- **Her zaman `dispose()` çağırın** – Bellek sızıntılarını önler, yüksek hacimli uygulamalarda özellikle önemlidir  
+**Kritik noktalar**
+- **Her zaman `dispose()` çağırın** – Bellek sızıntılarını önler, özellikle yüksek hacimli uygulamalarda önemlidir  
 - **Farklı çıktı yolları kullanın** – Geliştirme sırasında orijinal dosyalarınızı asla üzerine yazmayın  
-- **Yazma izinlerini kontrol edin** – Uygulamanızın çıktı dizinine yazma erişimi olduğundan emin olun  
+- **Yazma izinlerini kontrol edin** – Uygulamanızın çıktı klasörüne yazma izni olduğundan emin olun  
 
-## Yaygın Sorunlar ve Çözümler
+## Yaygın sorunlar ve çözümler
+Yüzlerce geliştiriciye PDF açıklama özellikleri eklerken aynı problemleri gördüm. İşte en sık karşılaşılan sorunlar ve çözümleri:
 
-Yüzlerce geliştiriciye PDF açıklama özellikleri eklerken aynı sorunların tekrar tekrar ortaya çıktığını gördüm. İşte en sık karşılaşılan problemler ve çözümleri:
-
-### Büyük PDF’lerde Bellek Sorunları
-
-**Sorun:** 50 MB üzerindeki büyük PDF dosyalarını işlerken uygulama bellek yetersizliği yaşıyor.  
-
-**Çözüm:** Akış (streaming) seçeneklerini ve doğru kaynak yönetimini kullanın:
+### Büyük PDF'lerde bellek sorunları
+**Sorun:** Uygulamanız büyük PDF dosyalarını (>50 MB) işlerken bellek tükeniyor.  
+**Çözüm:** Akış seçeneklerini ve doğru kaynak yönetimini kullanın:
 
 ```java
 // Configure load options for large files
@@ -306,10 +321,8 @@ try (Annotator annotator = new Annotator(inputPath, loadOptions)) {
 } // Automatic resource cleanup
 ```
 
-### Açıklama Konum Problemleri
-
+### Açıklama konum sorunları
 **Sorun:** Değişiklik sonrası açıklamalar yanlış konumlarda görünüyor.  
-
 **Çözüm:** Koordinat sistemlerini ve sayfa referanslarını her zaman koruyun:
 
 ```java
@@ -320,20 +333,17 @@ double originalX = annotation.getBox().getX();
 double originalY = annotation.getBox().getY();
 ```
 
-### Performans Darboğazları
-
+### Performans darboğazları
 **Sorun:** Üretim ortamında açıklama işleme yavaşlıyor.  
-
-**Çözümler:**  
-- **Toplu işlemler:** `update()` çağırmadan önce birden çok değişikliği gruplayın  
+**Çözümler**  
+- **Toplu işlemler:** `update()` çağrısından önce birden fazla değişikliği gruplayın  
 - **Seçici yükleme:** Sadece değiştireceğiniz açıklamaları yükleyin  
-- **Bağlantı havuzu:** Birçok dosya işliyorsanız mümkün olduğunca `Annotator` örneklerini yeniden kullanın  
+- **Bağlantı havuzu:** Çok sayıda dosya işliyorsanız, mümkün olduğunca `Annotator` örneklerini yeniden kullanın  
 
-## Üretim Kullanımı için En İyi Uygulamalar
+## Üretim kullanımı için en iyi uygulamalar
 
-### Kaynak Yönetimi
-
-Her zaman try‑with‑resources veya açıkça disposal kullanın:
+### Kaynak yönetimi
+Her zaman try‑with‑resources ya da açıkça `dispose()` kullanın:
 
 ```java
 // Preferred approach
@@ -353,8 +363,7 @@ try {
 }
 ```
 
-### Hata Yönetimi Stratejisi
-
+### Hata yönetimi stratejisi
 Sağlam uygulamalar için kapsamlı hata yönetimi uygulayın:
 
 ```java
@@ -388,10 +397,9 @@ public class RobustAnnotationProcessor {
 }
 ```
 
-## Gerçek Dünya Uygulama Örnekleri
+## Gerçek dünya uygulama örnekleri
 
-### Hukuki Belge İnceleme Sistemi
-
+### Hukuki belge inceleme sistemi
 ```java
 public class LegalDocumentProcessor {
     public boolean processLegalReview(String documentPath, String reviewerName) {
@@ -415,8 +423,7 @@ public class LegalDocumentProcessor {
 }
 ```
 
-### Eğitim Geri Bildirim Platformu
-
+### Eğitim geri bildirim platformu
 ```java
 public class EducationalAnnotationManager {
     public void processStudentSubmission(String submissionPath, String feedbackPath) {
@@ -435,75 +442,69 @@ public class EducationalAnnotationManager {
 }
 ```
 
-## Ek Konular
+## Ek konular
 
-### Şifre Koruması Olan PDF’lerin İşlenmesi
-
+### Şifre korumalı PDF'leri işleme
 ```java
 LoadOptions loadOptions = new LoadOptions();
 loadOptions.setPassword("your-pdf-password");
 ```
 
-### Açıklama Verisinin Dışa Aktarılması
+### Açıklama verilerini dışa aktarma
+GroupDocs.Annotation doğrudan JSON/XML dışa aktarımı sağlamaz, ancak `AnnotationBase` nesnelerini Jackson gibi kütüphanelerle serileştirerek diğer sistemlerle entegrasyon yapabilirsiniz.
 
-GroupDocs.Annotation doğrudan JSON/XML dışa aktarma sağlamaz, ancak `AnnotationBase` nesnelerini Jackson gibi kütüphanelerle serileştirerek diğer sistemlerle entegrasyon yapabilirsiniz.
+### Docker'da dağıtım
+GroupDocs.Annotation konteynerlerde sorunsuz çalışır. Java çalışma zamanını ve yeterli belleği tahsis ettiğinizden emin olun, lisans dosyasını bir volume olarak bağlayın ya da imaj içine dahil edin.
 
-### Docker’da Dağıtım
+### Bulut depolama ile çalışma
+AWS S3, Google Cloud vb. hizmetlerden dosyaları geçici bir yerel yola indirin, GroupDocs ile işleyin, ardından sonucu buluta geri yükleyin. Kütüphane yerel dosya yolları ile çalışır, doğrudan bulut URL'lerini desteklemez.
 
-GroupDocs.Annotation konteynerlerde sorunsuz çalışır. Java runtime ve yeterli bellek tahsis edildiğinden emin olun, lisans dosyasını bir volume olarak bağlayın veya imaj içine dahil edin.
+## Sıkça sorulan sorular
 
-### Bulut Depolama ile Çalışma
-
-AWS S3, Google Cloud vb. hizmetlerden dosyaları geçici bir yerel yola indirin, GroupDocs ile işleyin, ardından sonucu bulut depolamaya geri yükleyin.
-
-## Sık Sorulan Sorular
-
-**S: GroupDocs.Annotation for Java’yı ticari projelerde kullanabilir miyim?**  
-C: Evet, ancak ticari bir lisans gerekir. Ücretsiz deneme geliştirme ve test için idealdir, üretim kullanımı için ücretli lisans şarttır. Güncel seçenekler için fiyatlandırma sayfasına bakın.
+**S: GroupDocs.Annotation for Java'ı ticari projelerde kullanabilir miyim?**  
+C: Evet, ancak ticari bir lisans gerekir. Ücretsiz deneme geliştirme ve test için uygundur, ancak üretim kullanımı için ücretli lisans şarttır. Güncel seçenekler için fiyatlandırma sayfasına bakın.
 
 **S: Minimum Java sürümü nedir?**  
-C: Minimum Java 8, ancak daha iyi performans ve güvenlik için Java 11+ önerilir. Kütüphane, yeni JVM iyileştirmelerinden faydalanır.
+C: Minimum Java 8 gereklidir, ancak daha iyi performans ve güvenlik için Java 11+ önerilir. Kütüphane, mevcut olduğunda yeni JVM iyileştirmelerinden faydalanır.
 
 **S: GroupDocs.Annotation Spring Boot ile çalışır mı?**  
-C: Kesinlikle! Spring Boot uygulamalarıyla sorunsuz entegrasyon sağlar. Maven bağımlılığını ekleyin ve gerekirse bir Spring bean’i olarak yapılandırın. Birçok geliştirici mikroservis mimarilerinde kullanıyor.
+C: Kesinlikle! Spring Boot uygulamalarıyla sorunsuz entegrasyon sağlar. Maven bağımlılığını ekleyin ve gerekirse bir Spring bean olarak yapılandırın. Birçok geliştirici mikroservis mimarilerinde bunu kullanıyor.
 
-**S: Şifre korumalı PDF’leri işleyebilir miyim?**  
-C: Evet, `LoadOptions` üzerinden şifreyi sağlayarak şifre korumalı belgeleri işleyebilirsiniz (yukarıdaki örneğe bakın).
+**S: Şifre korumalı PDF'leri işleyebilir miyim?**  
+C: Evet, `LoadOptions` içinde şifreyi sağlayarak şifre korumalı belgeleri açabilirsiniz (yukarıdaki örneğe bakın).
 
-**S: Büyük PDF dosyalarını bellek tükenmeden nasıl işleyebilirim?**  
-C: Akış yaklaşımları ve toplu işleme kullanın. JVM heap ayarlarını (genellikle en büyük dosyanızın 2‑3 katı) uygun şekilde yapılandırın ve kaynakları zamanında `dispose()` ile serbest bırakın.
+**S: Büyük PDF dosyalarını bellek tükenmeden nasıl işlerim?**  
+C: Akış yaklaşımlarını kullanın ve açıklamaları partiler halinde işleyin. JVM heap ayarlarını (genellikle en büyük dosyanızın 2‑3 katı) uygun şekilde yapılandırın ve kaynakları serbest bırakmak için `dispose()`'ı her zaman çağırın.
 
-**S: Kütüphane çoklu iş parçacığı (thread) için güvenli mi?**  
-C: `Annotator` sınıfı thread‑safe değildir. Eşzamanlı işleme için her thread’e ayrı `Annotator` örnekleri oluşturun veya uygun senkronizasyon uygulayın.
+**S: Kütüphane aynı anda birden çok iş parçacığı için thread‑safe mi?**  
+C: `Annotator` sınıfı thread‑safe değildir. Eşzamanlı işleme için her iş parçacığına ayrı `Annotator` örnekleri oluşturun ya da uygun senkronizasyon sağlayın.
 
-**S: Bozuk bir PDF’yi değiştirmeye çalışırsam ne olur?**  
-C: Bozuk dosyalarla karşılaşıldığında kütüphane bir istisna fırlatır. Hata yönetimi uygulayın ve işlem öncesi PDF doğrulaması yapmayı düşünün.
+**S: Bozuk bir PDF'yi değiştirmeye çalışırsam ne olur?**  
+C: Kütüphane bozuk dosyalarla karşılaştığında bir istisna fırlatır. Her zaman hata yönetimi ekleyin ve işlem öncesi PDF doğrulaması yapmayı düşünün.
 
-**S: Açıklama verisini JSON veya XML’ye çıkarabilir miyim?**  
-C: Kütüphane doğrudan JSON/XML dışa aktarma sunmaz, ancak Java’nın yerleşik serileştirmesi veya Jackson gibi kütüphanelerle kolayca serileştirilebilir.
+**S: Açıklama verilerini JSON veya XML'e çıkarabilir miyim?**  
+C: Kütüphane doğrudan JSON/XML dışa aktarımı sunmaz, ancak açıklama nesnelerini Java’nın yerleşik serileştirmesi ya da Jackson gibi kütüphanelerle kolayca JSON/XML’e dönüştürebilirsiniz.
 
-**S: Bunu bir Docker konteynerinde nasıl dağıtabilirim?**  
-C: Java runtime, yeterli bellek ve lisans dosyasını volume olarak bağlayarak konteyner içinde çalıştırın. Kütüphane konteyner içinde ek bir değişiklik gerektirmez.
+**S: Bunu bir Docker konteynerinde nasıl dağıtırım?**  
+C: Java çalışma zamanını ekleyin, yeterli bellek ayırın ve lisans dosyasını bir volume olarak bağlayın. Kütüphane konteyner içinde ek bir yapılandırma gerektirmeden çalışır.
 
-**S: Bulut depolama (AWS S3, Google Cloud) ile kullanabilir miyim?**  
-C: Evet, ancak dosyayı önce yerel bir yola indirmeniz, işledikten sonra tekrar buluta yüklemeniz gerekir. Kütüphane doğrudan bulut URL’leriyle çalışmaz.
+**S: Bu, bulut depolama (AWS S3, Google Cloud) ile kullanılabilir mi?**  
+C: Evet, ancak dosyayı önce yerel bir yola indirmeniz, ardından işlem yapıp sonucu tekrar buluta yüklemeniz gerekir. Kütüphane doğrudan bulut URL'lerini desteklemez.
 
-## Ek Kaynaklar
+## Kaynaklar
+- [Tam API Referansı](https://reference.groupdocs.com/annotation/java/) – GroupDocs.Annotation Java için detaylı API dokümantasyonu.  
+- [Geliştirici Kılavuzu](https://docs.groupdocs.com/annotation/java/) – Geliştiriciler için adım‑adım rehber.  
+- [Sürüm Notları](https://releases.groupdocs.com/annotation/java/release-notes/) – En son değişiklikler ve sürüm geçmişi.  
+- [GroupDocs Forum](https://forum.groupdocs.com/c/annotation) – Topluluk desteği ve tartışmalar.  
+- [Ücretsiz Destek Portalı](https://helpdesk.groupdocs.com/) – Yardım talepleri için destek.  
+- [GitHub Örnekleri](https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java) – Örnek projeler ve kod snippet'leri.
 
-### Dokümantasyon ve Destek
-
-**GroupDocs.Annotation Dokümantasyonu**  
-- [Tam API Referansı](https://reference.groupdocs.com/annotation/java/) – Tüm sınıflar ve metodlar için kapsamlı API dokümantasyonu  
-- [Geliştirici Kılavuzu](https://docs.groupdocs.com/annotation/java/) – Adım adım öğreticiler ve ileri seviye kullanım örnekleri  
-- [Sürüm Notları](https://releases.groupdocs.com/annotation/java/release-notes/) – En son güncellemeler, hata düzeltmeleri ve yeni özellikler  
-
-**Topluluk ve Destek**  
-- [GroupDocs Forum](https://forum.groupdocs.com/c/annotation) – Sorular ve tartışmalar için aktif topluluk forumu  
-- [Ücretsiz Destek Portalı](https://helpdesk.groupdocs.com/) – Resmi teknik destek (lisans tipine göre yanıt süresi değişir)  
-- [GitHub Örnekleri](https://github.com/groupdocs-annotation/GroupDocs.Annotation-for-Java) – Örnek projeler ve kod snippet’leri  
-
----
-
-**Son Güncelleme:** 2026-03-24  
+**Son Güncelleme:** 2026-10-16  
 **Test Edilen Versiyon:** GroupDocs.Annotation 25.2 for Java  
 **Yazar:** GroupDocs
+
+## İlgili Öğreticiler
+
+- [Java ile PDF Vurguları Oluşturma: GroupDocs Annotation ile Tam Kılavuz](/annotation/java/annotation-management/)  
+- [GroupDocs Java ile PDF Açıklama Çıkarma Otomasyonu](/annotation/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/)  
+- [GroupDocs Annotation Java Metin Kırpma Öğreticisi](/annotation/java/annotation-management/groupdocs-annotation-java-text-redaction-tutorial/)

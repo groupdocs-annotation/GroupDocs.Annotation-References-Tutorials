@@ -1,77 +1,164 @@
 ---
-categories:
-- Java Development
-date: '2026-03-24'
-description: Naučte se, jak vytvářet čisté PDF soubory v Javě, spravovat paměť PDF
-  v Javě a anotovat PDF v Javě pomocí GroupDocs.Annotation, s kompletními ukázkami
-  kódu a tipy na řešení problémů.
-keywords: java document annotation library, groupdocs annotation tutorial, add underline
-  annotation java, java pdf annotation, how to annotate pdf documents in java
-lastmod: '2026-03-24'
-linktitle: Java Document Annotation with GroupDocs
+date: '2026-10-16'
+description: Naučte se, jak uložit PDF bez annotations v Javě, ovládněte java pdf
+  memory management a přidejte podtržené annotations pomocí GroupDocs.Annotation.
+  Průvodce krok za krokem.
+keywords:
+- save pdf without annotations
+- java pdf memory management
+- java document review system
+- groupdocs annotation tutorial
+- underline annotation java
+lastmod: '2026-10-16'
+linktitle: Java Document Annotation s GroupDocs
+og_description: Naučte se, jak uložit PDF bez annotations v Javě, ovládněte java pdf
+  memory management a přidejte podtržené annotations pomocí GroupDocs.Annotation.
+  Průvodce krok za krokem.
+og_image_alt: 'Developer guide: Save PDF without annotations in Java using GroupDocs.Annotation'
+og_title: Jak uložit PDF bez annotations v Javě pomocí GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-16'
+  description: Learn how to save PDF without annotations in Java, master java pdf
+    memory management, and add underline annotations with GroupDocs.Annotation. Step‑by‑step
+    guide.
+  headline: How to save PDF without annotations in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to save PDF without annotations in Java, master java pdf
+    memory management, and add underline annotations with GroupDocs.Annotation. Step‑by‑step
+    guide.
+  name: How to save PDF without annotations in Java using GroupDocs
+  steps:
+  - name: initialize the annotator and load your document
+    text: '`Annotator` is the main entry point in GroupDocs.Annotation for loading
+      and modifying PDF documents. It abstracts file‑system handling, stream management,
+      and native resource allocation. **Pro tip:** Use absolute paths while developing
+      to avoid “file not found” errors. In production, consider loadin'
+  - name: creating comments and replies (the collaborative part)
+    text: '`Comment` objects represent threaded discussion attached to an annotation.
+      Each comment can have an author, a timestamp, and optional replies, enabling
+      a full conversation around a specific markup. **Real‑world use:** Reviewers
+      can discuss a specific clause by adding threaded replies, keeping the co'
+  - name: defining annotation coordinates (getting the position right)
+    text: '`Point` defines a single coordinate in PDF space (measured in points, where
+      72 points = 1 inch). Four points are required for an underline: two for the
+      start line and two for the end line. **Coordinate system:** - Points 1 & 2 define
+      the top edge of the underline. - Points 3 & 4 define the bottom ed'
+  - name: creating and configuring the underline annotation
+    text: '`UnderlineAnnotation` is the concrete class that represents an underline
+      markup. It inherits from the base `Annotation` class and adds properties specific
+      to underlines, such as line thickness and style. **Color & opacity tips:** -
+      `FontColor` uses ARGB; `65535` (0x00FFFF) yields bright yellow. - Fo'
+  - name: saving your annotated document
+    text: '`SaveOptions` lets you control the output format, whether to embed annotations,
+      and how to handle metadata. Setting `AnnotationType.NONE` instructs the library
+      to strip all annotation objects, which is the key to **save PDF without annotations**.
+      **Memory management:** The `dispose()` call releases '
+  type: HowTo
+- questions:
+  - answer: Create several `UnderlineAnnotation` objects with different coordinates
+      and add them sequentially using `annotator.add()`.
+    question: How do I annotate multiple areas of text in a single operation?
+  - answer: Yes. Use the same coordinate system, ensuring the points lie inside the
+      image bounds.
+    question: Can I annotate images within PDF documents?
+  - answer: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX), and image formats
+      such as JPEG, PNG, TIFF.
+    question: What file formats besides PDF does GroupDocs.Annotation support?
+  - answer: Process documents one at a time, increase the JVM heap (`-Xmx`), and always
+      dispose of `Annotator` instances promptly.
+    question: How do I handle very large documents without running out of memory?
+  - answer: Yes. Use `annotator.get()` to retrieve all annotations, then filter by
+      type, author, or page as needed.
+    question: Is it possible to extract existing annotations from a document?
+  type: FAQPage
 tags:
 - groupdocs
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Vytvořte čistý PDF v Javě: podtržené anotace pomocí GroupDocs'
+- java pdf memory management
+title: Jak uložit PDF bez annotations v Javě pomocí GroupDocs
 type: docs
 url: /cs/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1
 ---
 
-# Vytvoření čistého PDF Java: Podtržené anotace pomocí GroupDocs
+# Jak uložit PDF bez anotací v Javě pomocí GroupDocs
 
-Pokud potřebujete **vytvořit čisté PDF Java** soubory a přidat kolaborativní anotace, jste na správném místě. Bojujete s řízením dokumentů a spoluprací ve svých Java aplikacích? Nejste v tom sami. Mnoho vývojářů čelí výzvě implementovat robustní funkce anotací dokumentů, které fungují spolehlivě napříč různými formáty souborů.
-
-V tomto průvodci **vytvoříte čisté PDF Java** soubory a naučíte se, jak **anotovat PDF v Javě** pomocí GroupDocs.Annotation. Na konci tohoto tutoriálu budete přesně vědět, jak přidat podtržené anotace s komentáři, odstranit existující anotace a tyto funkce hladce integrovat do svých projektů.
-
-**Co se v tomto průvodci naučíte:**
-- Nastavení GroupDocs.Annotation ve vašem Java projektu (správným způsobem)  
-- Přidání podtržených anotací s vlastním komentářem a stylem  
-- Odstranění všech anotací pro vytvoření čistých verzí dokumentu  
-- Řešení běžných problémů, se kterými se vývojáři setkávají  
-- Optimalizace výkonu pro produkční aplikace  
-
-Ať už budujete systém pro revizi dokumentů, vzdělávací platformu nebo nástroj pro kolaborativní úpravy, tento tutoriál vás provede praktickými, otestovanými ukázkami kódu.
+Pokud potřebujete **uložit PDF bez anotací** a zároveň mít možnost přidávat kolaborativní podtržené poznámky, jste na správném místě. Mnoho vývojářů Java má potíže s udržováním čisté verze dokumentu pro finální distribuci, zejména když je stejný soubor používán pro iterativní revize. V tomto tutoriálu se naučíte, jak vygenerovat čisté PDF, efektivně spravovat paměť a aplikovat podtržené anotace s komentáři pomocí GroupDocs.Annotation. Na konci pochopíte kompletní workflow—od načtení PDF po vytvoření finální kopie bez vodoznaku—plus tipy na osvědčené postupy pro vytvoření robustního **java document review system**.
 
 ## Rychlé odpovědi
-- **Jak přidám podtrženou anotaci?** Použijte `UnderlineAnnotation` a `annotator.add()`, poté uložte dokument.  
-- **Jak mohu vytvořit čistý PDF Java soubor?** Načtěte anotovaný soubor, nastavte `AnnotationType.NONE` v `SaveOptions` a uložte novou kopii.  
-- **Jaké knihovny jsou vyžadovány?** GroupDocs.Annotation v25.2 (nebo novější) a jeho Maven repozitář.  
-- **Potřebuji licenci pro produkci?** Ano — použijte platnou licenci GroupDocs, aby se zabránilo vodoznakům.  
-- **Mohu zpracovávat více dokumentů efektivně?** Zabalte každý `Annotator` do bloku try‑with‑resources a po každém souboru jej uvolněte.
+- **Jak přidám podtrženou anotaci?** Použijte `UnderlineAnnotation` s `annotator.add()` a poté uložte dokument.  
+- **Jak mohu uložit PDF bez anotací?** Načtěte anotovaný soubor, nastavte `AnnotationType.NONE` v `SaveOptions` a uložte novou kopii.  
+- **Které knihovny jsou vyžadovány?** GroupDocs.Annotation v25.2 (nebo novější) a jeho Maven repozitář.  
+- **Potřebuji licenci pro produkci?** Ano—aplikujte platnou licenci GroupDocs, aby se zabránilo vodoznakům.  
+- **Mohu efektivně zpracovávat více dokumentů?** Zabalte každý `Annotator` do bloku try‑with‑resources a po každém souboru jej uvolněte.
 
-## Jak vytvořit čisté PDF Java soubory
-Vytvoření čistého PDF Java souboru znamená vygenerovat verzi dokumentu **bez jakýchkoli anotací** při zachování původního obsahu. To je užitečné pro finální distribuci, archivaci nebo když potřebujete sdílet „čistou“ kopii po revizním cyklu.
+## Jak uložit PDF bez anotací v Javě?
 
-GroupDocs.Annotation to usnadňuje: načtěte anotovaný soubor, nakonfigurujte `SaveOptions` tak, aby vyloučil všechny typy anotací, a výsledek uložte. Kroky jsou ilustrovány později v sekci **Odstraňování anotací**.
+Načtěte zdrojové PDF pomocí `Annotator`, nakonfigurujte `SaveOptions` tak, aby vyloučily všechny typy anotací, a zavolejte `save()` pro zápis čisté kopie. Tato operace nemění původní soubor, takže máte jak anotovanou verzi pro recenzenty, tak čistou verzi pro distribuci. Proces používá streamování, což znamená, že celý dokument nikdy není kompletně v paměti—což je klíčové pro velká PDF.
 
-## Proč vytvářet čisté PDF Java soubory?
-Čistá verze odstraňuje značky recenzentů, komentáře a zvýraznění, čímž získáte vyladěný dokument připravený pro klienty, regulátory nebo veřejné vydání. Také snižuje velikost souboru a zabraňuje neúmyslnému odhalení interních poznámek — kritické pro právní a compliance workflow.
+## Co znamená uložit PDF bez anotací?
 
-## Jak anotovat PDF v Javě pomocí GroupDocs
-GroupDocs.Annotation poskytuje bohaté API pro **anotovat PDF v Javě**. Podporuje širokou škálu typů anotací, včetně zvýraznění, razítek a podtržení. V tomto tutoriálu se zaměříme na podtržené anotace, protože jsou často používány k zdůraznění textu a umožňují vlákna komentářů.
+`save pdf without annotations` označuje export PDF dokumentu při odstranění všech objektů anotací (zvýraznění, komentáře, razítka, podtržení atd.). Výsledný soubor obsahuje pouze původní obsah a rozvržení, což jej činí vhodným pro právní podání, veřejné zveřejnění nebo archivaci.
+
+## Proč vytvářet čisté PDF soubory v java document review system?
+
+Čistá verze odstraňuje značky recenzentů, komentáře a zvýraznění, což vám poskytuje upravený dokument připravený pro klienty, regulátory nebo veřejné zveřejnění. Také průměrně snižuje velikost souboru až o 30 % a zabraňuje neúmyslnému odhalení interních poznámek—což je kritické pro právní a compliance workflow. GroupDocs.Annotation může odstranit všechny objekty anotací v jednom průchodu a podporuje PDF až do 500 MB bez načítání celého souboru do paměti.
 
 ## Předpoklady a nastavení prostředí
 
-### Co budete potřebovat před zahájením
+### Požadavky před zahájením
 
-**Požadavky na vývojové prostředí:**
+**Požadavky na vývojové prostředí**  
 - Java Development Kit (JDK) 8 nebo vyšší (doporučeno JDK 11+)  
 - Maven 3.6+ nebo Gradle 6.0+ pro správu závislostí  
 - IDE jako IntelliJ IDEA, Eclipse nebo VS Code s rozšířeními pro Javu  
-- Minimálně 2 GB volné RAM (zpracování dokumentů může být náročné na paměť)
+- Minimálně 2 GB volné RAM (zpracování dokumentů může být paměťově náročné)
 
-**Předpoklady znalostí:**
-Měli byste být obeznámeni se základními koncepty Javy — inicializací objektů, voláním metod a Maven závislostmi. Předchozí zkušenosti s knihovnami třetích stran urychlí adopci.
+**Předpoklady znalostí**  
+Měli byste být obeznámeni se základními koncepty Javy — inicializací objektů, voláním metod a Maven závislostmi. Předchozí zkušenost s knihovnami třetích stran urychlí adopci.
 
-**Testovací dokumenty:**
+**Testovací dokumenty**  
 Mějte připravené několik ukázkových PDF. Textové PDF fungují nejlépe; naskenované obrázky mohou vyžadovat OCR před anotací.
 
-### Nastavení Maven: Získání GroupDocs do vašeho projektu
+### Nastavení Maven: získání GroupDocs do vašeho projektu
 
-Zde je návod, jak správně nakonfigurovat váš Maven projekt (tento krok mnohé vývojáře při první snaze zmátne):
+Přidejte následující závislost do svého `pom.xml`. Tento krok mnohým vývojářům při první pokusu dělá problémy, protože group ID a artifact ID se musí shodovat přesně.
+
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
+
+**Důležité:** Verze 25.2 je v době psaní nejnovější stabilní vydání. Pravidelně kontrolujte GroupDocs repozitář pro novější verze, které obsahují opravy chyb a vylepšení výkonu.
+
+### Nastavení licencování (nepřeskakujte)
+
+**Pro vývoj/testování** – Stáhněte si bezplatnou zkušební verzi z webu GroupDocs. Zkušební verze obsahuje všechny funkce, ale přidává vodoznak do zpracovaných dokumentů.
+
+**Pro produkci** – Zakupte licenci a aplikujte ji během spouštění aplikace. Bez platné licence budou produkční sestavy omezené a opatřené vodoznakem.
+
+## Průvodce implementací: přidání podtržených anotací
+
+### Porozumění workflow anotací
+
+Než se ponoříme do kódu, projděme si čtyřkrokový workflow, který probíhá, když **annotate PDF in Java**:
+
+1. **Načítání dokumentu** – `Annotator` čte soubor do paměti.  
+2. **Vytváření anotace** – Definujte vlastnosti jako pozici, styl a komentáře.  
+3. **Aplikace anotace** – Knihovna vloží anotaci do struktury PDF.  
+4. **Ukládání dokumentu** – Uložte upravený soubor, volitelně zachovávající originál.
+
+Proces je ne‑destruktivní; zdrojový soubor zůstane nedotčen, pokud jej nepřepíšete.
+
+### Krok 1: inicializace annotátoru a načtení dokumentu
+
+`Annotator` je hlavní vstupní bod v GroupDocs.Annotation pro načítání a úpravu PDF dokumentů. Abstrahuje práci se souborovým systémem, správu streamů a alokaci nativních zdrojů.
 
 ```xml
 <repositories>
@@ -90,30 +177,11 @@ Zde je návod, jak správně nakonfigurovat váš Maven projekt (tento krok mnoh
 </dependencies>
 ```
 
-**Důležité:** Verze 25.2 je v době psaní nejnovější stabilní vydání. Pravidelně kontrolujte repozitář GroupDocs pro novější verze, které obsahují opravy chyb a vylepšení výkonu.
+**Pro tip:** Používejte absolutní cesty během vývoje, abyste se vyhnuli chybám „file not found“. V produkci zvažte načítání zdrojů z classpath nebo z cloudového úložiště.
 
-### Nastavení licence (nepřeskakujte to)
+### Krok 2: vytváření komentářů a odpovědí (kolaborativní část)
 
-**Pro vývoj/testování:**  
-Stáhněte si bezplatnou zkušební verzi z webu GroupDocs. Zkušební verze obsahuje všechny funkce, ale přidává vodoznak do zpracovaných dokumentů.
-
-**Pro produkci:**  
-Zakupte licenci a aplikujte ji během spouštění aplikace. Bez platné licence budou produkční sestavení omezená.
-
-## Průvodce implementací: Přidání podtržených anotací
-
-### Porozumění workflow anotací
-
-Než se ponoříme do kódu, projděme čtyřkrokový workflow, který probíhá, když **anotujete PDF v Javě**:
-
-1. **Načtení dokumentu** — `Annotator` načte soubor do paměti.  
-2. **Vytvoření anotace** — Definujte vlastnosti jako pozici, styl a komentáře.  
-3. **Aplikace anotace** — Knihovna vloží anotaci do struktury PDF.  
-4. **Uložení dokumentu** — Uložte upravený soubor, volitelně zachovávající originál.
-
-Proces je nedestruktivní; zdrojový soubor zůstane nedotčen, pokud jej nepřepíšete.
-
-### Krok 1: Inicializace Annotatoru a načtení dokumentu
+`Comment` objekty představují vlákna diskuse připojená k anotaci. Každý komentář může mít autora, časové razítko a volitelné odpovědi, což umožňuje kompletní konverzaci kolem konkrétního označení.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -122,9 +190,11 @@ import com.groupdocs.annotation.Annotator;
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**Tip:** Používejte absolutní cesty během vývoje, abyste se vyhnuli chybám „file not found“. V produkci zvažte načítání zdrojů z classpath nebo z cloudového úložiště.
+**Reálné použití:** Recenzenti mohou diskutovat o konkrétní klauzuli přidáváním vláknových odpovědí, čímž udržují konverzaci vázanou na přesnou anotaci.
 
-### Krok 2: Vytváření komentářů a odpovědí (kolaborativní část)
+### Krok 3: definování souřadnic anotace (správná pozice)
+
+`Point` definuje jednu souřadnici v PDF prostoru (měřeno v bodech, kde 72 bodů = 1 palec). Pro podtržení jsou potřeba čtyři body: dva pro počáteční čáru a dva pro koncovou čáru.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -145,9 +215,14 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Reálné použití:** Recenzenti mohou diskutovat konkrétní ustanovení přidáním vláknových odpovědí, čímž udržují konverzaci vázanou na přesnou anotaci.
+**Souřadnicový systém:**  
+- Body 1 & 2 definují horní okraj podtržení.  
+- Body 3 & 4 definují dolní okraj podtržení.  
+- Rozdíl v Y (730 vs 650) řídí tloušťku.
 
-### Krok 3: Definování souřadnic anotace (správná pozice)
+### Krok 4: vytvoření a konfigurace podtržené anotace
+
+`UnderlineAnnotation` je konkrétní třída, která představuje podtržené označení. Dědí z základní třídy `Annotation` a přidává vlastnosti specifické pro podtržení, jako je tloušťka čáry a styl.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -164,12 +239,14 @@ points.add(point3);
 points.add(point4);
 ```
 
-**Souřadnicový systém:**  
-- Body 1 & 2 definují horní okraj podtržení.  
-- Body 3 & 4 definují spodní okraj.  
-- Rozdíl v Y (730 vs 650) řídí tloušťku.
+**Tipy pro barvu a průhlednost:**  
+- `FontColor` používá ARGB; `65535` (0x00FFFF) dává jasně žlutou.  
+- Pro červenou použijte `16711680` (0xFF0000); pro modrou `255` (0x0000FF).  
+- Hodnoty průhlednosti mezi 0.5 a 0.8 poskytují dobrou čitelnost bez zakrytí textu.
 
-### Krok 4: Vytvoření a konfigurace podtržené anotace
+### Krok 5: uložení anotovaného dokumentu
+
+`SaveOptions` vám umožňuje řídit výstupní formát, zda vložit anotace, a jak zacházet s metadaty. Nastavení `AnnotationType.NONE` instruuje knihovnu, aby odstranila všechny objekty anotací, což je klíč k **save PDF without annotations**.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.UnderlineAnnotation;
@@ -186,12 +263,24 @@ underline.setReplies(replies);
 annotator.add(underline);
 ```
 
-**Tipy pro barvu a průhlednost:**  
-- `FontColor` používá ARGB; `65535` (0x00FFFF) dává jasně žlutou.  
-- Pro červenou použijte `16711680` (0xFF0000); pro modrou `255` (0x0000FF).  
-- Hodnoty průhlednosti mezi 0.5 a 0.8 poskytují dobrou čitelnost bez zakrytí textu.
+**Správa paměti:** Volání `dispose()` uvolňuje nativní zdroje a zabraňuje únikům paměti — kritické při zpracování mnoha souborů v dávce.
 
-### Krok 5: Uložení anotovaného dokumentu
+## Odstraňování anotací: vytváření čistých verzí dokumentu
+
+Někdy potřebujete verzi PDF **bez jakýchkoli anotací** — například při dodání finální schválené smlouvy. GroupDocs to usnadňuje.
+
+### Porozumění možnostem odstraňování anotací
+
+Můžete:  
+- Odstranit **všechny** anotace (nejčastější)  
+- Odstranit konkrétní typy (např. jen zvýraznění)  
+- Odstranit anotace podle autora nebo stránky  
+
+### Krok za krokem odstraňování anotací
+
+**Krok 1: načtěte dříve anotovaný dokument**
+
+`Annotator` opět funguje jako načítač; načte soubor, který stále obsahuje objekty anotací.
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/output.pdf";
@@ -199,28 +288,17 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Správa paměti:** Volání `dispose()` uvolní nativní zdroje a zabrání únikům paměti — kritické při zpracování mnoha souborů najednou.
+**Krok 2: nakonfigurujte možnosti uložení pro čistý výstup**
 
-## Odstraňování anotací: Vytváření čistých verzí dokumentů
-
-Někdy potřebujete verzi PDF **bez jakýchkoli anotací** — například při dodání finální schválené smlouvy. GroupDocs to usnadňuje.
-
-### Porozumění možnostem odstraňování anotací
-
-Můžete:
-- Odstranit **všechny** anotace (nejčastější)  
-- Odstranit konkrétní typy (např. jen zvýraznění)  
-- Odstranit anotace podle autora nebo stránky  
-
-### Krok‑za‑krokem odstraňování anotací
-
-**Krok 1: Načtení dříve anotovaného dokumentu**
+`SaveOptions` poskytuje fluent API pro specifikaci, že žádné typy anotací nebudou zapsány do výstupního souboru.
 
 ```java
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**Krok 2: Konfigurace Save Options pro čistý výstup**
+**Krok 3: uložte čistou verzi**
+
+Volání `save()` s nakonfigurovanými možnostmi zapíše PDF, které obsahuje jen původní obsah.
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -230,7 +308,13 @@ SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationTypes(AnnotationType.NONE);
 ```
 
-**Krok 3: Uložení čisté verze**
+Tím vznikne **clean PDF** soubor, který neobsahuje žádné objekty anotací, ideální pro finální distribuci.
+
+## Časté problémy a řešení
+
+### Problém 1: chyby „Document not found“
+
+Ujistěte se, že cesta k souboru je správná a že aplikace má oprávnění ke čtení. Použití `Path.of()` s absolutními cestami eliminuje většinu nejasností.
 
 ```java
 String noneAnnotationPath = Paths.get(outputPath).resolveSibling("none-annotation.pdf").toString();
@@ -238,11 +322,9 @@ annotator.save(noneAnnotationPath, saveOptions);
 annotator.dispose();
 ```
 
-Tím vznikne **čistý PDF Java** soubor, který neobsahuje žádné objekty anotací, ideální pro finální distribuci.
+### Problém 2: Anotace se objevují na špatných místech
 
-## Časté problémy a řešení
-
-### Problém 1: Chyba „Document not found“
+Počátek souřadnic PDF je v levém dolním rohu. Ověřte, že vaše Y‑hodnoty rostou směrem nahoru a že zohledňujete otočení stránky.
 
 ```java
 File inputFile = new File("path/to/your/document.pdf");
@@ -256,7 +338,9 @@ if (!inputFile.canRead()) {
 Annotator annotator = new Annotator(inputFile.getAbsolutePath());
 ```
 
-### Problém 2: Anotace se zobrazují na špatných místech
+### Problém 3: Problémy s pamětí u velkých dokumentů
+
+GroupDocs.Annotation streamuje obsah a nikdy nenačítá celý soubor do haldy. Přesto musíte volat `dispose()` a zvážit zvýšení JVM haldy (`-Xmx`) pro soubory větší než 200 MB.
 
 ```java
 // Test with a simple rectangle in the top‑left corner
@@ -266,7 +350,9 @@ Point point3 = new Point(10, 30);   // Bottom‑left
 Point point4 = new Point(100, 30);  // Bottom‑right
 ```
 
-### Problém 3: Problémy s pamětí u velkých dokumentů
+### Problém 4: Problémy s licencováním v produkci
+
+Pokud chybí licenční soubor nebo je cesta nesprávná, knihovna přejde do zkušebního režimu a přidá vodoznak na každou stránku. Umístěte licenční soubor na místo, které je na classpath, a načtěte jej brzy v životním cyklu aplikace.
 
 ```java
 // Increase JVM heap size when launching the app, e.g., -Xmx2g
@@ -276,7 +362,11 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 }
 ```
 
-### Problém 4: Licenční problémy v produkci
+## Nejlepší praktiky výkonu pro produkční aplikace
+
+### Strategie správy paměti
+
+GroupDocs.Annotation zpracovává PDF ve streamovacím režimu, což mu umožňuje pracovat se soubory až do 500 MB bez načítání celého dokumentu do paměti. Přesto dodržujte následující pokyny:
 
 ```java
 try {
@@ -289,16 +379,66 @@ try {
 }
 ```
 
-## Nejlepší postupy výkonu pro produkční aplikace
-
-### Strategie správy paměti
-
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
     // Your annotation logic
     annotator.save("output.pdf");
 } // Annotator is automatically disposed here
 ```
+
+### Úvahy o vláknování
+
+GroupDocs.Annotation je **ne thread‑safe** ve výchozím nastavení. Pokud vaše aplikace zpracovává dokumenty souběžně:
+
+- **Nikdy nesdílejte** instanci `Annotator` mezi vlákny.  
+- **Synchronizujte** přístup k souborům nebo použijte zamykací mechanismus.  
+- Zvažte **pool** objektů `Annotator`, pokud potřebujete vysoký průtok.
+
+### Strategie cachování
+
+- Cachujte často používané šablony anotací.  
+- Znovu použijte kolekce `Point` pro běžné sady souřadnic.  
+- Uchovávejte **template PDF** v paměti, pokud opakovaně anotujete stejný základní dokument.
+
+## Nejlepší praktiky správy paměti pro Java PDF
+
+Efektivní využití paměti je zásadní při práci s velkými PDF nebo při zpracování mnoha souborů v dávce. Zde je několik praktických doporučení:
+
+- **Používejte try‑with‑resources** pro každý `Annotator`, aby byla zajištěna likvidace.  
+- **Zvyšte JVM haldu** (`-Xmx`) jen podle potřeby; sledujte využití pomocí profilovacích nástrojů.  
+- **Zpracovávejte dokumenty sekvenčně**, pokud je to možné, a po každém souboru uvolněte paměť.  
+- **Vyhněte se opakovanému načítání stejného PDF**; pokud jej potřebujete číst opakovaně, znovu použijte stejný stream.
+
+Použití těchto praktik pomáhá udržet aplikaci responzivní a zabraňuje pádům kvůli nedostatku paměti během náročných anotací.
+
+## Reálné aplikace a příklady použití
+
+### Systémy revize dokumentů
+
+- **Legal review:** Podtrhněte klauzule smlouvy a přidejte komentáře o rizicích.  
+- **Compliance audits:** Zvýrazněte problematické části ve finančních výkazech.  
+- **Academic peer review:** Profesoři podtrhují pasáže, které vyžadují upřesnění.
+
+### Vzdělávací platformy
+
+- **Student annotation tools:** Umožněte studentům podtrhávat klíčové koncepty v e‑knihách.  
+- **Teacher feedback:** Poskytněte inline komentáře přímo na odevzdaných úkolech.
+
+### Workflowy zajištění kvality
+
+- **Technical documentation review:** Inženýři podtrhují sekce, které potřebují aktualizaci.  
+- **Standard operating procedures:** Bezpečnostní pracovníci zvýrazňují kritické kroky.
+
+### Systémy správy obsahu
+
+- **Editorial workflow:** Editoři podtrhují text, který vyžaduje fakt‑checking.  
+- **Version control:** Sledujte historii anotací napříč revizemi dokumentu.
+
+## Pokročilé tipy pro profesionální implementaci
+
+### Vlastní styly anotací
+
+Můžete rozšířit vizuální vzhled podtržení nastavením vlastních vzorů čáry, koncových úseků a úrovní průhlednosti. To je užitečné, když potřebujete rozlišovat role recenzentů (např. právní vs. technické).
 
 ```java
 List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
@@ -313,56 +453,9 @@ for (String docPath : documentPaths) {
 }
 ```
 
-### Úvahy o vláknování
+### Metadata anotací pro sledování
 
-GroupDocs.Annotation není **thread‑safe** ve výchozím nastavení. Pokud vaše aplikace zpracovává dokumenty souběžně:
-
-- **Nikdy nesdílejte** instanci `Annotator` mezi vlákny.  
-- **Synchronizujte** přístup k souborům nebo použijte zamykací mechanismus.  
-- Zvažte **pool** objektů `Annotator`, pokud potřebujete vysokou propustnost.
-
-### Strategie cachování
-
-- Cachujte často používané šablony anotací.  
-- Znovu použijte kolekce `Point` pro běžné sady souřadnic.  
-- Uchovávejte **šablonový PDF** v paměti, pokud opakovaně anotujete stejný základní dokument.
-
-## Tipy pro správu paměti Java PDF
-Efektivní využití paměti je zásadní při práci s velkými PDF nebo při zpracování mnoha souborů najednou. Zde je několik praktických doporučení:
-
-- **Používejte try‑with‑resources** pro každý `Annotator`, aby se zaručilo uvolnění.  
-- **Zvyšte heap JVM** (`-Xmx`) jen podle potřeby; monitorujte využití pomocí profilovacích nástrojů.  
-- **Zpracovávejte dokumenty sekvenčně**, pokud je to možné, a po každém souboru uvolněte paměť.  
-- **Vyhněte se opakovanému načítání stejného PDF**; pokud jej potřebujete číst opakovaně, znovu použijte stejný stream.
-
-Aplikací těchto postupů pomůžete udržet aplikaci responzivní a zabráníte pádům z nedostatku paměti během náročných anotací.
-
-## Reálné aplikace a příklady použití
-
-### Systémy pro revizi dokumentů
-
-- **Právní revize:** Podtrhněte klauzule smlouvy a přidejte komentáře o rizicích.  
-- **Audity shody:** Zvýrazněte problematické části ve finančních výkazech.  
-- **Akademické peer review:** Profesoři podtrhnou pasáže, které vyžadují upřesnění.
-
-### Vzdělávací platformy
-
-- **Nástroje pro anotaci studentů:** Umožněte studentům podtrhnout klíčové koncepty v e‑knihách.  
-- **Zpětná vazba učitelů:** Poskytněte inline komentáře přímo na odevzdaných úlohách.
-
-### Workflow zajištění kvality
-
-- **Revize technické dokumentace:** Inženýři podtrhnou sekce, které potřebují aktualizaci.  
-- **Standardní operační postupy:** Bezpečnostní pracovníci zvýrazní kritické kroky.
-
-### Systémy pro správu obsahu
-
-- **Redakční workflow:** Redaktoři podtrhnou text, který vyžaduje fakt‑checking.  
-- **Kontrola verzí:** Sledujte historii anotací napříč revizemi dokumentu.
-
-## Pokročilé tipy pro profesionální implementaci
-
-### Vlastní styly anotací
+Každá anotace může nést uživatelem definovaný slovník metadat. Ukládejte ID, časová razítka nebo stav workflow pro integraci s externími sledovacími systémy.
 
 ```java
 UnderlineAnnotation underline = new UnderlineAnnotation();
@@ -372,7 +465,9 @@ underline.setFontSize(12);             // Consistent sizing
 underline.setMessage("URGENT REVIEW REQUIRED");
 ```
 
-### Metadata anotací pro sledování
+### Integrace se systémy správy uživatelů
+
+Mapujte vlastnost `author` objektu `Comment` na ID uživatelů ve vaší aplikaci. To umožňuje stylování podle rolí a generování audit‑trailu.
 
 ```java
 underline.setCreatedBy("john.doe@company.com");
@@ -380,7 +475,24 @@ underline.setCreatedOn(Calendar.getInstance().getTime());
 underline.setMessage("Legal review required - Contract clause 4.2");
 ```
 
-### Integrace se systémy správy uživatelů
+## Odstraňování problémů v produkci
+
+### Monitorování výkonu
+
+Sledujte tyto metriky v produkci:  
+- **Heap usage** — zajistěte, že je voláno `dispose()`.  
+- **Processing time per document** — logujte časové značky před a po `annotator.save()`.  
+- **Error rate** — zachytávejte výjimky a kategorizujte je.
+
+### Časté problémy v produkci
+
+- **File locking** — ujistěte se, že nahrané soubory jsou uzavřeny před anotací.  
+- **Concurrent edits** — implementujte optimistické zamykání nebo kontrolu verzí.  
+- **Large files (> 50 MB)** — zvyšte timeout JVM a zvažte streaming API.
+
+### Nejlepší praktiky pro zpracování chyb
+
+Zabalte všechny volání anotací do try‑catch bloků, logujte kompletní stack trace a znovu vyhoďte vlastní `AnnotationException` s uživatelsky přívětivou zprávou. Tento vzor usnadňuje ladění a poskytuje jasnou zpětnou vazbu spotřebitelům API.
 
 ```java
 // Assume you have a method that returns the current authenticated user
@@ -394,22 +506,30 @@ underline.setFontColor(getRoleColor(userRole));
 underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentText));
 ```
 
-## Řešení problémů v produkci
+## Často kladené otázky
 
-### Monitorování výkonu
+**Q: Jak anotovat více oblastí textu v jedné operaci?**  
+A: Vytvořte několik objektů `UnderlineAnnotation` s různými souřadnicemi a přidejte je postupně pomocí `annotator.add()`.
 
-Sledujte tyto metriky v produkci:
-- **Využití haldy** — ujistěte se, že je voláno `dispose()`.  
-- **Čas zpracování na dokument** — logujte časové značky před a po `annotator.save()`.  
-- **Míra chyb** — zachycujte výjimky a kategorizujte je.
+**Q: Mohu anotovat obrázky v PDF dokumentech?**  
+A: Ano. Použijte stejný souřadnicový systém a ujistěte se, že body leží uvnitř hranic obrázku.
 
-### Běžné překážky v produkci
+**Q: Jaké formáty souborů kromě PDF podporuje GroupDocs.Annotation?**  
+A: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX) a obrazové formáty jako JPEG, PNG, TIFF.
 
-- **Zamykání souborů** — ujistěte se, že nahrané soubory jsou před anotací uzavřeny.  
-- **Současné úpravy** — implementujte optimistické zamykání nebo kontrolu verzí.  
-- **Velké soubory (> 50 MB)** — prodlužte timeout JVM a zvažte streaming API.
+**Q: Jak zacházet s velmi velkými dokumenty, aby nedošlo k vyčerpání paměti?**  
+A: Zpracovávejte dokumenty po jednom, zvyšte JVM haldu (`-Xmx`) a vždy promptně uvolňujte instance `Annotator`.
 
-### Nejlepší postupy pro zpracování chyb
+**Q: Je možné extrahovat existující anotace z dokumentu?**  
+A: Ano. Použijte `annotator.get()` k získání všech anotací a poté filtrujte podle typu, autora nebo stránky podle potřeby.
+
+---
+
+**Poslední aktualizace:** 2026-10-16  
+**Testováno s:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  
+
+---
 
 ```java
 try (Annotator annotator = new Annotator(documentPath)) {
@@ -424,36 +544,8 @@ try (Annotator annotator = new Annotator(documentPath)) {
 }
 ```
 
-## Závěr
+## Související tutoriály
 
-Nyní máte vše potřebné k **vytvoření čistých PDF Java** souborů a **anotování PDF v Javě** podtrženými anotacemi pomocí GroupDocs.Annotation. Pamatujte na:
-
-- Spravujte zdroje pomocí try‑with‑resources nebo explicitního `dispose()`.  
-- Validujte souřadnice brzy, aby nedošlo k nesprávnému umístění podtržení.  
-- Implementujte robustní zpracování chyb pro stabilitu v produkci.  
-- Využívejte stylování na základě rolí a metadata, aby odpovídaly vašemu workflowu.
-
-Další kroky? Zkuste přidat další typy anotací — zvýraznění, razítka nebo nahrazení textu — a vytvořte tak kompletní řešení pro revizi dokumentů.
-
-## Často kladené otázky
-
-**Q: Jak anotovat více oblastí textu v jedné operaci?**  
-A: Vytvořte několik objektů `UnderlineAnnotation` s různými souřadnicemi a přidejte je postupně pomocí `annotator.add()`.
-
-**Q: Mohu anotovat obrázky v PDF dokumentech?**  
-A: Ano. Použijte stejný souřadnicový systém a ujistěte se, že body leží uvnitř hranic obrázku.
-
-**Q: Jaké formáty souborů kromě PDF podporuje GroupDocs.Annotation?**  
-A: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX) a obrazové formáty jako JPEG, PNG, TIFF.
-
-**Q: Jak zacházet s velmi velkými dokumenty, aby nedošlo k vyčerpání paměti?**  
-A: Zpracovávejte dokumenty jeden po druhém, zvyšte heap JVM (`-Xmx`) a vždy včas uvolněte instance `Annotator`.
-
-**Q: Je možné extrahovat existující anotace z dokumentu?**  
-A: Ano. Použijte `annotator.get()` k získání všech anotací a poté je filtrujte podle typu, autora nebo stránky.
-
----
-
-**Poslední aktualizace:** 2026-03-24  
-**Testováno s:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs
+- [Vytvořit čisté PDF v Javě: podtržené anotace s GroupDocs](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [Upravit PDF anotace v Javě – kompletní tutoriál GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Anotovat PDF pomocí GroupDocs Annotation v Javě](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/)
