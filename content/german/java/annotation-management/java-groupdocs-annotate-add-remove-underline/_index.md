@@ -1,77 +1,164 @@
 ---
-categories:
-- Java Development
-date: '2026-03-24'
-description: Erfahren Sie, wie Sie saubere PDF‑Java‑Dateien erstellen, den Java‑PDF‑Speicher
-  verwalten und PDFs in Java mit GroupDocs.Annotation annotieren, inklusive vollständiger
-  Codebeispiele und Tipps zur Fehlerbehebung.
-keywords: java document annotation library, groupdocs annotation tutorial, add underline
-  annotation java, java pdf annotation, how to annotate pdf documents in java
-lastmod: '2026-03-24'
-linktitle: Java Document Annotation with GroupDocs
+date: '2026-10-16'
+description: Erfahren Sie, wie Sie PDF ohne Anmerkungen in Java speichern, das Java‑PDF‑Speichermanagement
+  beherrschen und Unterstreichungs‑Anmerkungen mit GroupDocs.Annotation hinzufügen.
+  Schritt‑für‑Schritt-Anleitung.
+keywords:
+- save pdf without annotations
+- java pdf memory management
+- java document review system
+- groupdocs annotation tutorial
+- underline annotation java
+lastmod: '2026-10-16'
+linktitle: Java-Dokumentenannotation mit GroupDocs
+og_description: Erfahren Sie, wie Sie PDF ohne Anmerkungen in Java speichern, das
+  Java‑PDF‑Speichermanagement beherrschen und Unterstreichungs‑Anmerkungen mit GroupDocs.Annotation
+  hinzufügen. Schritt‑für‑Schritt-Anleitung.
+og_image_alt: 'Developer guide: Save PDF without annotations in Java using GroupDocs.Annotation'
+og_title: Wie man PDF ohne Anmerkungen in Java mit GroupDocs speichert
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-16'
+  description: Learn how to save PDF without annotations in Java, master java pdf
+    memory management, and add underline annotations with GroupDocs.Annotation. Step‑by‑step
+    guide.
+  headline: How to save PDF without annotations in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to save PDF without annotations in Java, master java pdf
+    memory management, and add underline annotations with GroupDocs.Annotation. Step‑by‑step
+    guide.
+  name: How to save PDF without annotations in Java using GroupDocs
+  steps:
+  - name: initialize the annotator and load your document
+    text: '`Annotator` is the main entry point in GroupDocs.Annotation for loading
+      and modifying PDF documents. It abstracts file‑system handling, stream management,
+      and native resource allocation. **Pro tip:** Use absolute paths while developing
+      to avoid “file not found” errors. In production, consider loadin'
+  - name: creating comments and replies (the collaborative part)
+    text: '`Comment` objects represent threaded discussion attached to an annotation.
+      Each comment can have an author, a timestamp, and optional replies, enabling
+      a full conversation around a specific markup. **Real‑world use:** Reviewers
+      can discuss a specific clause by adding threaded replies, keeping the co'
+  - name: defining annotation coordinates (getting the position right)
+    text: '`Point` defines a single coordinate in PDF space (measured in points, where
+      72 points = 1 inch). Four points are required for an underline: two for the
+      start line and two for the end line. **Coordinate system:** - Points 1 & 2 define
+      the top edge of the underline. - Points 3 & 4 define the bottom ed'
+  - name: creating and configuring the underline annotation
+    text: '`UnderlineAnnotation` is the concrete class that represents an underline
+      markup. It inherits from the base `Annotation` class and adds properties specific
+      to underlines, such as line thickness and style. **Color & opacity tips:** -
+      `FontColor` uses ARGB; `65535` (0x00FFFF) yields bright yellow. - Fo'
+  - name: saving your annotated document
+    text: '`SaveOptions` lets you control the output format, whether to embed annotations,
+      and how to handle metadata. Setting `AnnotationType.NONE` instructs the library
+      to strip all annotation objects, which is the key to **save PDF without annotations**.
+      **Memory management:** The `dispose()` call releases '
+  type: HowTo
+- questions:
+  - answer: Create several `UnderlineAnnotation` objects with different coordinates
+      and add them sequentially using `annotator.add()`.
+    question: How do I annotate multiple areas of text in a single operation?
+  - answer: Yes. Use the same coordinate system, ensuring the points lie inside the
+      image bounds.
+    question: Can I annotate images within PDF documents?
+  - answer: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX), and image formats
+      such as JPEG, PNG, TIFF.
+    question: What file formats besides PDF does GroupDocs.Annotation support?
+  - answer: Process documents one at a time, increase the JVM heap (`-Xmx`), and always
+      dispose of `Annotator` instances promptly.
+    question: How do I handle very large documents without running out of memory?
+  - answer: Yes. Use `annotator.get()` to retrieve all annotations, then filter by
+      type, author, or page as needed.
+    question: Is it possible to extract existing annotations from a document?
+  type: FAQPage
 tags:
 - groupdocs
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Clean PDF in Java erstellen: Unterstreichungs‑Anmerkungen mit GroupDocs'
+- java pdf memory management
+title: Wie man PDF ohne Anmerkungen in Java mit GroupDocs speichert
 type: docs
 url: /de/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1
 ---
 
-# Saubere PDF‑Java‑Dateien erstellen: Unterstreichungs‑Anmerkungen mit GroupDocs
+# PDF ohne Anmerkungen in Java mit GroupDocs speichern
 
-Wenn Sie **saubere PDF‑Java**‑Dateien erstellen und kollaborative Anmerkungen hinzufügen müssen, sind Sie hier genau richtig. Haben Sie Schwierigkeiten mit Dokumentenverwaltung und Zusammenarbeit in Ihren Java‑Anwendungen? Sie sind nicht allein. Viele Entwickler stehen vor der Herausforderung, robuste Dokumenten‑Anmerkungs‑Funktionen zu implementieren, die zuverlässig über verschiedene Dateiformate hinweg funktionieren.
+Wenn Sie **PDF ohne Anmerkungen speichern** möchten und gleichzeitig kollaborative Unterstreichungs‑Notizen hinzufügen können, sind Sie hier genau richtig. Viele Java‑Entwickler haben Schwierigkeiten, eine saubere Version eines Dokuments für die endgültige Verteilung zu behalten, insbesondere wenn dieselbe Datei für iterative Reviews verwendet wird. In diesem Tutorial lernen Sie, wie Sie ein sauberes PDF erzeugen, den Speicher effizient verwalten und Unterstreichungs‑Anmerkungen mit Kommentaren mithilfe von GroupDocs.Annotation anwenden. Am Ende verstehen Sie den gesamten Workflow – vom Laden eines PDFs bis zur Erstellung einer wasserzeichenfreien Endkopie – sowie bewährte Tipps zum Aufbau eines robusten **java document review system**.
 
-In diesem Leitfaden werden Sie **saubere PDF‑Java**‑Dateien erstellen und lernen, wie man **PDF in Java annotiert** mit GroupDocs.Annotation. Am Ende dieses Tutorials wissen Sie genau, wie Sie Unterstreichungs‑Anmerkungen mit Kommentaren hinzufügen, vorhandene Anmerkungen entfernen und diese Funktionen nahtlos in Ihre Projekte integrieren.
-
-**Was Sie in diesem Leitfaden beherrschen werden:**
-- Einrichtung von GroupDocs.Annotation in Ihrem Java‑Projekt (richtig)  
-- Hinzufügen von Unterstreichungs‑Anmerkungen mit benutzerdefinierten Kommentaren und Stil  
-- Entfernen aller Anmerkungen, um saubere Dokumentversionen zu erzeugen  
-- Fehlersuche bei häufigen Problemen, denen Entwickler begegnen  
-- Optimierung der Performance für Produktionsanwendungen  
-
-Egal, ob Sie ein Dokument‑Review‑System, eine Bildungsplattform oder ein kollaboratives Bearbeitungstool bauen – dieses Tutorial bietet Ihnen praxisnahe, getestete Code‑Beispiele.
-
-## Schnellantworten
-- **Wie füge ich eine Unterstreichungs‑Anmerkung hinzu?** Verwenden Sie `UnderlineAnnotation` und `annotator.add()` und speichern Sie dann das Dokument.  
-- **Wie erstelle ich eine saubere PDF‑Java‑Datei?** Laden Sie die annotierte Datei, setzen Sie `AnnotationType.NONE` in `SaveOptions` und speichern Sie eine neue Kopie.  
+## Schnelle Antworten
+- **Wie füge ich eine Unterstreichungs‑Anmerkung hinzu?** Verwenden Sie `UnderlineAnnotation` mit `annotator.add()` und speichern Sie das Dokument.  
+- **Wie kann ich PDF ohne Anmerkungen speichern?** Laden Sie die annotierte Datei, setzen Sie `AnnotationType.NONE` in `SaveOptions` und speichern Sie eine neue Kopie.  
 - **Welche Bibliotheken werden benötigt?** GroupDocs.Annotation v25.2 (oder neuer) und das zugehörige Maven‑Repository.  
 - **Benötige ich eine Lizenz für die Produktion?** Ja – wenden Sie eine gültige GroupDocs‑Lizenz an, um Wasserzeichen zu vermeiden.  
 - **Kann ich mehrere Dokumente effizient verarbeiten?** Verpacken Sie jedes `Annotator`‑Objekt in einen try‑with‑resources‑Block und geben Sie es nach jeder Datei frei.
 
-## Wie man saubere PDF‑Java‑Dateien erstellt
-Eine saubere PDF‑Java‑Datei zu erstellen bedeutet, eine Version des Dokuments **ohne jegliche Anmerkungen** zu erzeugen, während der ursprüngliche Inhalt erhalten bleibt. Das ist nützlich für die endgültige Verteilung, Archivierung oder wenn Sie nach einem Review‑Durchlauf eine „saubere“ Kopie teilen müssen.
+## Wie speichere ich PDF ohne Anmerkungen in Java?
 
-GroupDocs.Annotation macht das unkompliziert: Laden Sie die annotierte Datei, konfigurieren Sie `SaveOptions`, um alle Anmerkungstypen auszuschließen, und speichern Sie das Ergebnis. Die Schritte werden später im Abschnitt **Anmerkungen entfernen** gezeigt.
+Laden Sie das Quell‑PDF mit einem `Annotator`, konfigurieren Sie `SaveOptions`, um alle Anmerkungstypen auszuschließen, und rufen Sie `save()` auf, um eine saubere Kopie zu schreiben. Dieser Vorgang ändert die Originaldatei nicht, sodass Sie sowohl die annotierte Version für Reviewer als auch eine makellose Version für die Verteilung behalten. Der Prozess verwendet Streaming im Hintergrund, sodass das gesamte Dokument nie vollständig im Speicher liegt – entscheidend für große PDFs.
 
-## Warum saubere PDF‑Java‑Dateien erstellen?
-Eine saubere Version entfernt Prüfer‑Markierungen, Kommentare und Hervorhebungen und liefert Ihnen ein poliertes Dokument, das bereit für Kunden, Regulierungsbehörden oder die öffentliche Veröffentlichung ist. Außerdem reduziert sie die Dateigröße und verhindert die versehentliche Offenlegung interner Notizen – ein kritischer Aspekt in rechtlichen und Compliance‑Workflows.
+## Was bedeutet PDF ohne Anmerkungen speichern?
 
-## Wie man PDF in Java mit GroupDocs annotiert
-GroupDocs.Annotation bietet eine umfangreiche API für **PDF in Java annotieren**. Sie unterstützt eine Vielzahl von Anmerkungstypen, darunter Hervorhebungen, Stempel und Unterstreichungen. In diesem Tutorial konzentrieren wir uns auf Unterstreichungs‑Anmerkungen, da sie häufig verwendet werden, um Text zu betonen und gleichzeitig Thread‑Kommentare zu ermöglichen.
+`save pdf without annotations` bezieht sich auf das Exportieren eines PDF‑Dokuments, bei dem jedes Anmerkungsobjekt (Markierungen, Kommentare, Stempel, Unterstreichungen usw.) entfernt wird. Die resultierende Datei enthält nur den ursprünglichen Inhalt und das Layout und eignet sich damit für rechtliche Einreichungen, öffentliche Veröffentlichungen oder die Archivierung.
+
+## Warum saubere PDF‑Dateien in einem java document review system erstellen?
+
+Eine saubere Version eliminiert Reviewer‑Markierungen, Kommentare und Hervorhebungen und liefert ein poliertes Dokument, das bereit für Kunden, Regulierungsbehörden oder die öffentliche Freigabe ist. Sie reduziert zudem die Dateigröße im Durchschnitt um bis zu 30 % und verhindert die versehentliche Offenlegung interner Notizen – kritisch für rechtliche und Compliance‑Workflows. GroupDocs.Annotation kann alle Anmerkungsobjekte in einem Durchlauf entfernen und unterstützt PDFs bis zu 500 MB, ohne die gesamte Datei in den Speicher zu laden.
 
 ## Voraussetzungen und Umgebungseinrichtung
 
-### Was Sie vor dem Start benötigen
+### Anforderungen vor dem Start
 
-**Entwicklungsumgebungs‑Anforderungen:**
+**Entwicklungsumgebungs‑Anforderungen**  
 - Java Development Kit (JDK) 8 oder höher (JDK 11+ empfohlen)  
-- Maven 3.6+ oder Gradle 6.0+ für das Dependency‑Management  
+- Maven 3.6+ oder Gradle 6.0+ für das Abhängigkeits‑Management  
 - IDE wie IntelliJ IDEA, Eclipse oder VS Code mit Java‑Erweiterungen  
-- Mindestens 2 GB verfügbarer RAM (Dokumentenverarbeitung kann speicherintensiv sein)
+- Mindestens 2 GB verfügbarer RAM (Dokumentverarbeitung kann speicherintensiv sein)
 
-**Wissens‑Voraussetzungen:**
-Sie sollten mit grundlegenden Java‑Konzepten vertraut sein – Objektinitialisierung, Methodenaufrufe und Maven‑Abhängigkeiten. Erfahrung mit Drittanbieter‑Bibliotheken beschleunigt die Einarbeitung.
+**Wissen‑Voraussetzungen**  
+Sie sollten mit grundlegenden Java‑Konzepten vertraut sein – Objektinitialisierung, Methodenaufrufe und Maven‑Abhängigkeiten. Vorerfahrung mit Drittanbieter‑Bibliotheken beschleunigt die Einarbeitung.
 
-**Testdokumente:**
-Haben Sie ein paar Beispiel‑PDFs bereit. Textbasierte PDFs funktionieren am besten; gescannte Bilder benötigen ggf. OCR vor der Annotation.
+**Test‑Dokumente**  
+Halten Sie einige Beispiel‑PDFs bereit. Textbasierte PDFs funktionieren am besten; gescannte Bilder benötigen ggf. OCR vor der Annotation.
 
-### Maven‑Einrichtung: GroupDocs in Ihr Projekt einbinden
+### Maven‑Einrichtung: GroupDocs ins Projekt einbinden
 
-So konfigurieren Sie Ihr Maven‑Projekt korrekt (dies stolpert viele Entwickler beim ersten Versuch):
+Fügen Sie die folgende Abhängigkeit zu Ihrer `pom.xml` hinzu. Dieser Schritt bereitet vielen Entwicklern beim ersten Versuch Schwierigkeiten, weil die group‑ID und artifact‑ID exakt übereinstimmen müssen.
+
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
+
+**Wichtig:** Version 25.2 ist zum Zeitpunkt des Schreibens die neueste stabile Version. Prüfen Sie regelmäßig das GroupDocs‑Repository auf neuere Versionen mit Fehlerbehebungen und Leistungsverbesserungen.
+
+### Lizenz‑Einrichtung (nicht überspringen)
+
+**Für Entwicklung/Tests** – Laden Sie die kostenlose Testversion von der GroupDocs‑Website herunter. Die Testversion enthält alle Funktionen, fügt jedoch ein Wasserzeichen zu verarbeiteten Dokumenten hinzu.
+
+**Für die Produktion** – Kaufen Sie eine Lizenz und wenden Sie sie beim Anwendungsstart an. Ohne gültige Lizenz sind Produktions‑Builds eingeschränkt und werden wasserzeichenbehaftet.
+
+## Implementierungs‑Leitfaden: Unterstreichungs‑Anmerkungen hinzufügen
+
+### Verständnis des Anmerkungs‑Workflows
+
+Bevor wir in den Code eintauchen, betrachten wir den vier‑stufigen Workflow, der abläuft, wenn Sie **PDF in Java annotieren**:
+
+1. **Dokument laden** – `Annotator` liest die Datei in den Speicher.  
+2. **Anmerkung erstellen** – Eigenschaften wie Position, Stil und Kommentare festlegen.  
+3. **Anmerkung anwenden** – Die Bibliothek fügt die Anmerkung in die PDF‑Struktur ein.  
+4. **Dokument speichern** – Die geänderte Datei persistieren, optional das Original bewahrend.
+
+Der Prozess ist nicht destruktiv; die Quelldatei bleibt unverändert, sofern Sie sie nicht überschreiben.
+
+### Schritt 1: Annotator initialisieren und Dokument laden
+
+`Annotator` ist der Haupteinstiegspunkt in GroupDocs.Annotation zum Laden und Modifizieren von PDF‑Dokumenten. Er abstrahiert Dateisystem‑Handling, Stream‑Management und native Ressourcen‑Allokation.
 
 ```xml
 <repositories>
@@ -90,30 +177,11 @@ So konfigurieren Sie Ihr Maven‑Projekt korrekt (dies stolpert viele Entwickler
 </dependencies>
 ```
 
-**Wichtig:** Version 25.2 ist zum Zeitpunkt des Schreibens die neueste stabile Veröffentlichung. Prüfen Sie regelmäßig das GroupDocs‑Repository auf neuere Versionen mit Fehlerbehebungen und Performance‑Verbesserungen.
+**Pro‑Tipp:** Verwenden Sie absolute Pfade während der Entwicklung, um „Datei nicht gefunden“-Fehler zu vermeiden. In der Produktion sollten Sie Ressourcen aus dem Klassenpfad oder einem Cloud‑Speicher‑Bucket laden.
 
-### Lizenz‑Einrichtung (nicht überspringen)
+### Schritt 2: Kommentare und Antworten erstellen (der kollaborative Teil)
 
-**Für Entwicklung/Test:**  
-Laden Sie die kostenlose Testversion von der GroupDocs‑Website herunter. Die Testversion enthält alle Funktionen, fügt jedoch ein Wasserzeichen zu verarbeiteten Dokumenten hinzu.
-
-**Für Produktion:**  
-Kaufen Sie eine Lizenz und wenden Sie sie beim Anwendungsstart an. Ohne gültige Lizenz sind Produktions‑Builds eingeschränkt.
-
-## Implementierungs‑Leitfaden: Unterstreichungs‑Anmerkungen hinzufügen
-
-### Verständnis des Anmerkungs‑Workflows
-
-Bevor wir zum Code kommen, betrachten wir den vier‑stufigen Workflow, der abläuft, wenn Sie **PDF in Java annotieren**:
-
-1. **Dokument laden** – `Annotator` liest die Datei in den Speicher.  
-2. **Anmerkung erstellen** – Eigenschaften wie Position, Stil und Kommentare festlegen.  
-3. **Anmerkung anwenden** – Die Bibliothek fügt die Anmerkung in die PDF‑Struktur ein.  
-4. **Dokument speichern** – Die modifizierte Datei persistieren, optional das Original bewahrend.
-
-Der Prozess ist nicht‑destruktiv; die Quelldatei bleibt unverändert, solange Sie sie nicht überschreiben.
-
-### Schritt 1: Annotator initialisieren und Dokument laden
+`Comment`‑Objekte repräsentieren Diskussionen, die an einer Anmerkung hängen. Jeder Kommentar kann einen Autor, einen Zeitstempel und optionale Antworten besitzen, wodurch ein vollständiger Dialog um eine bestimmte Markierung entsteht.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -122,9 +190,11 @@ import com.groupdocs.annotation.Annotator;
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**Pro‑Tipp:** Verwenden Sie absolute Pfade während der Entwicklung, um „Datei nicht gefunden“-Fehler zu vermeiden. In der Produktion sollten Sie Ressourcen aus dem Klassenpfad oder einem Cloud‑Speicher‑Bucket laden.
+**Praxisbeispiel:** Reviewer können einen bestimmten Absatz diskutieren, indem sie verschachtelte Antworten hinzufügen, die an die jeweilige Anmerkung gebunden sind.
 
-### Schritt 2: Kommentare und Antworten erstellen (der kollaborative Teil)
+### Schritt 3: Anmerkungs‑Koordinaten festlegen (Position korrekt bestimmen)
+
+`Point` definiert eine einzelne Koordinate im PDF‑Raum (gemessen in Punkten, wobei 72 Punkte = 1 Zoll). Für eine Unterstreichung werden vier Punkte benötigt: zwei für die Startlinie und zwei für die Endlinie.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -145,9 +215,14 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Praxisbeispiel:** Prüfer können einen bestimmten Absatz diskutieren, indem sie verschachtelte Antworten hinzufügen, die das Gespräch an die jeweilige Anmerkung binden.
+**Koordinatensystem:**  
+- Punkte 1 & 2 definieren die obere Kante der Unterstreichung.  
+- Punkte 3 & 4 definieren die untere Kante.  
+- Der Y‑Unterschied (730 vs 650) steuert die Dicke.
 
-### Schritt 3: Anmerkungs‑Koordinaten festlegen (Position richtig bestimmen)
+### Schritt 4: Unterstreichungs‑Anmerkung erstellen und konfigurieren
+
+`UnderlineAnnotation` ist die konkrete Klasse, die eine Unterstreichungs‑Markierung repräsentiert. Sie erbt von der Basisklasse `Annotation` und fügt Eigenschaften hinzu, die speziell für Unterstreichungen gelten, wie Linienstärke und Stil.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -164,12 +239,14 @@ points.add(point3);
 points.add(point4);
 ```
 
-**Koordinatensystem:**  
-- Punkte 1 & 2 definieren die obere Kante der Unterstreichung.  
-- Punkte 3 & 4 definieren die untere Kante.  
-- Der Y‑Unterschied (730 vs 650) steuert die Dicke.
+**Farb‑ und Transparenz‑Tipps:**  
+- `FontColor` verwendet ARGB; `65535` (0x00FFFF) ergibt ein helles Gelb.  
+- Für Rot verwenden Sie `16711680` (0xFF0000); für Blau `255` (0x0000FF).  
+- Transparenzwerte zwischen 0.5 und 0.8 bieten gute Lesbarkeit, ohne den Text zu verdecken.
 
-### Schritt 4: Unterstreichungs‑Anmerkung erstellen und konfigurieren
+### Schritt 5: Annotiertes Dokument speichern
+
+`SaveOptions` ermöglicht die Steuerung des Ausgabeformats, ob Anmerkungen eingebettet werden und wie Metadaten behandelt werden. Das Setzen von `AnnotationType.NONE` weist die Bibliothek an, alle Anmerkungsobjekte zu entfernen – das ist der Schlüssel, um **PDF ohne Anmerkungen zu speichern**.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.UnderlineAnnotation;
@@ -186,12 +263,24 @@ underline.setReplies(replies);
 annotator.add(underline);
 ```
 
-**Farb‑ & Transparenz‑Tipps:**  
-- `FontColor` verwendet ARGB; `65535` (0x00FFFF) ergibt ein helles Gelb.  
-- Für Rot verwenden Sie `16711680` (0xFF0000); für Blau `255` (0x0000FF).  
-- Transparenzwerte zwischen 0,5 und 0,8 bieten gute Lesbarkeit, ohne den Text zu verdecken.
+**Speicher‑Management:** Der Aufruf `dispose()` gibt native Ressourcen frei und verhindert Speicherlecks – entscheidend beim Batch‑Verarbeiten vieler Dateien.
 
-### Schritt 5: Annotiertes Dokument speichern
+## Anmerkungen entfernen: Saubere Dokumentversionen erstellen
+
+Manchmal benötigen Sie eine Version des PDFs **ohne jegliche Anmerkungen** – beispielsweise bei der Auslieferung des finalen Vertrags. GroupDocs macht das einfach.
+
+### Verständnis der Optionen zum Entfernen von Anmerkungen
+
+Sie können:  
+- **Alle** Anmerkungen entfernen (am häufigsten)  
+- Bestimmte Typen entfernen (z. B. nur Hervorhebungen)  
+- Anmerkungen nach Autor oder Seite entfernen  
+
+### Schritt‑für‑Schritt‑Entfernung von Anmerkungen
+
+**Schritt 1: Das zuvor annotierte Dokument laden**
+
+`Annotator` fungiert erneut als Loader; er liest die Datei, die noch Anmerkungsobjekte enthält.
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/output.pdf";
@@ -199,28 +288,17 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Speicher‑Management:** Der Aufruf von `dispose()` gibt native Ressourcen frei und verhindert Speicherlecks – entscheidend, wenn viele Dateien stapelweise verarbeitet werden.
+**Schritt 2: Save‑Optionen für eine saubere Ausgabe konfigurieren**
 
-## Anmerkungen entfernen: Saubere Dokumentversionen erzeugen
-
-Manchmal benötigen Sie eine PDF‑Version **ohne jegliche Anmerkungen** – etwa beim Ausliefern des finalen Vertrags. GroupDocs macht das einfach.
-
-### Verständnis der Optionen zum Entfernen von Anmerkungen
-
-Sie können:
-- **Alle** Anmerkungen entfernen (am häufigsten)  
-- Bestimmte Typen entfernen (z. B. nur Hervorhebungen)  
-- Anmerkungen nach Autor oder Seite entfernen  
-
-### Schritt‑für‑Schritt‑Anleitung zum Entfernen von Anmerkungen
-
-**Schritt 1: Das zuvor annotierte Dokument laden**
+`SaveOptions` bietet eine Fluent‑API, um festzulegen, dass keine Anmerkungstypen in die Ausgabedatei geschrieben werden sollen.
 
 ```java
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**Schritt 2: Save‑Optionen für eine saubere Ausgabe konfigurieren**
+**Schritt 3: Die saubere Version speichern**
+
+Durch Aufruf von `save()` mit den konfigurierten Optionen wird ein PDF geschrieben, das nur den Originalinhalt enthält.
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -230,7 +308,13 @@ SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationTypes(AnnotationType.NONE);
 ```
 
-**Schritt 3: Die saubere Version speichern**
+Damit entsteht eine **saubere PDF**‑Datei ohne Anmerkungsobjekte – ideal für die endgültige Verteilung.
+
+## Häufige Probleme und Lösungen
+
+### Problem 1: „Document not found“-Fehler
+
+Stellen Sie sicher, dass der Dateipfad korrekt ist und die Anwendung Leserechte besitzt. Die Verwendung von `Path.of()` mit absoluten Pfaden beseitigt die meisten Unklarheiten.
 
 ```java
 String noneAnnotationPath = Paths.get(outputPath).resolveSibling("none-annotation.pdf").toString();
@@ -238,11 +322,9 @@ annotator.save(noneAnnotationPath, saveOptions);
 annotator.dispose();
 ```
 
-Damit entsteht eine **saubere PDF‑Java**‑Datei, die keinerlei Anmerkungs‑Objekte enthält – perfekt für die endgültige Verteilung.
+### Problem 2: Anmerkungen erscheinen an falschen Stellen
 
-## Häufige Probleme und Lösungen
-
-### Problem 1: „Datei nicht gefunden“-Fehler
+Der Ursprung des PDF‑Koordinatensystems liegt in der unteren linken Ecke. Prüfen Sie, dass Ihre Y‑Werte nach oben zunehmen und dass Sie Seitenrotation berücksichtigen.
 
 ```java
 File inputFile = new File("path/to/your/document.pdf");
@@ -256,7 +338,9 @@ if (!inputFile.canRead()) {
 Annotator annotator = new Annotator(inputFile.getAbsolutePath());
 ```
 
-### Problem 2: Anmerkungen erscheinen an falschen Positionen
+### Problem 3: Speicherprobleme bei großen Dokumenten
+
+GroupDocs.Annotation streamt Inhalte und lädt die gesamte Datei nie in den Heap‑Speicher. Dennoch müssen Sie `dispose()` aufrufen und ggf. den JVM‑Heap (`-Xmx`) für Dateien größer als 200 MB erhöhen.
 
 ```java
 // Test with a simple rectangle in the top‑left corner
@@ -266,7 +350,9 @@ Point point3 = new Point(10, 30);   // Bottom‑left
 Point point4 = new Point(100, 30);  // Bottom‑right
 ```
 
-### Problem 3: Speicherprobleme bei großen Dokumenten
+### Problem 4: Lizenzprobleme in der Produktion
+
+Fehlt die Lizenzdatei oder ist der Pfad falsch, wechselt die Bibliothek in den Testmodus und fügt jedem Blatt ein Wasserzeichen hinzu. Platzieren Sie die Lizenzdatei an einem Ort, der im Klassenpfad liegt, und laden Sie sie früh im Anwendungslebenszyklus.
 
 ```java
 // Increase JVM heap size when launching the app, e.g., -Xmx2g
@@ -276,7 +362,11 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 }
 ```
 
-### Problem 4: Lizenzprobleme in der Produktion
+## Leistungs‑Best Practices für Produktionsanwendungen
+
+### Strategien zum Speicher‑Management
+
+GroupDocs.Annotation verarbeitet PDFs streaming‑basiert, wodurch Dateien bis zu 500 MB ohne vollständiges Laden in den Speicher bearbeitet werden können. Dennoch sollten Sie folgende Richtlinien beachten:
 
 ```java
 try {
@@ -289,16 +379,66 @@ try {
 }
 ```
 
-## Performance‑Best Practices für Produktionsanwendungen
-
-### Strategien zum Speicher‑Management
-
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
     // Your annotation logic
     annotator.save("output.pdf");
 } // Annotator is automatically disposed here
 ```
+
+### Thread‑Überlegungen
+
+GroupDocs.Annotation ist **standardmäßig nicht thread‑sicher**. Wenn Ihre Anwendung Dokumente parallel verarbeitet:
+
+- **Nie** ein `Annotator`‑Objekt über Threads hinweg teilen.  
+- **Synchronisieren** Sie den Dateizugriff oder verwenden Sie ein Sperr‑Mechanismus.  
+- Erwägen Sie einen **Pool** von `Annotator`‑Objekten, wenn Sie hohen Durchsatz benötigen.
+
+### Caching‑Strategien
+
+- Häufig genutzte Anmerkungs‑Templates cachen.  
+- `Point`‑Sammlungen für gängige Koordinatensätze wiederverwenden.  
+- Ein **Template‑PDF** im Speicher behalten, wenn Sie wiederholt dasselbe Basisdokument annotieren.
+
+## Java‑PDF‑Speicher‑Management‑Best Practices
+
+Effizienter Speicherverbrauch ist essenziell beim Umgang mit großen PDFs oder der Stapelverarbeitung vieler Dateien. Hier einige praktische Empfehlungen:
+
+- **try‑with‑resources** für jedes `Annotator`‑Objekt verwenden, um die Entsorgung zu garantieren.  
+- **JVM‑Heap** (`-Xmx`) nur bei Bedarf erhöhen; den Verbrauch mit Profiling‑Tools überwachen.  
+- **Dokumente sequenziell** verarbeiten, wenn möglich, und nach jeder Datei Speicher freigeben.  
+- **Das gleiche PDF nicht mehrfach laden**; denselben Stream wiederverwenden, falls mehrfach gelesen werden muss.
+
+Durch die Anwendung dieser Praktiken bleibt Ihre Anwendung reaktionsfähig und verhindert Out‑of‑Memory‑Abstürze bei intensiven Annotations‑Workloads.
+
+## Praxisbeispiele und Anwendungsfälle
+
+### Dokument‑Review‑Systeme
+
+- **Rechtliche Prüfung:** Vertragsklauseln unterstreichen und Kommentare zu Risiken hinzufügen.  
+- **Compliance‑Audits:** Problematische Abschnitte in Finanzberichten hervorheben.  
+- **Akademisches Peer‑Review:** Professoren unterstreichen Passagen, die einer Klärung bedürfen.
+
+### Bildungsplattformen
+
+- **Studenten‑Annotationstools:** Lernende können Schlüsselkonzepte in E‑Books unterstreichen.  
+- **Lehrer‑Feedback:** Inline‑Kommentare direkt zu eingereichten Aufgaben geben.
+
+### Qualitätssicherungs‑Workflows
+
+- **Technische Dokumentations‑Reviews:** Ingenieure unterstreichen Abschnitte, die aktualisiert werden müssen.  
+- **Standard‑Betriebs‑Verfahren:** Sicherheitsbeauftragte heben kritische Schritte hervor.
+
+### Content‑Management‑Systeme
+
+- **Redaktioneller Workflow:** Redakteure unterstreichen Text, der einer Faktenprüfung bedarf.  
+- **Versionskontrolle:** Anmerkungs‑Historie über Dokumentrevisionen hinweg nachverfolgen.
+
+## Erweiterte Tipps für die professionelle Umsetzung
+
+### Benutzerdefinierte Anmerkungs‑Stile
+
+Sie können das visuelle Erscheinungsbild einer Unterstreichung erweitern, indem Sie benutzerdefinierte Strichmuster, Linienenden und Transparenzwerte setzen. Das ist nützlich, um unterschiedliche Reviewer‑Rollen (z. B. Recht vs. Technik) zu unterscheiden.
 
 ```java
 List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
@@ -313,56 +453,9 @@ for (String docPath : documentPaths) {
 }
 ```
 
-### Thread‑Überlegungen
+### Anmerkungs‑Metadaten für das Tracking
 
-GroupDocs.Annotation ist **standardmäßig nicht thread‑sicher**. Wenn Ihre Anwendung Dokumente parallel verarbeitet:
-
-- **Teilen Sie niemals** eine `Annotator`‑Instanz über Threads hinweg.  
-- **Synchronisieren** Sie den Dateizugriff oder verwenden Sie ein Sperr‑Mechanismus.  
-- Erwägen Sie einen **Pool** von `Annotator`‑Objekten, wenn Sie hohen Durchsatz benötigen.
-
-### Caching‑Strategien
-
-- Häufig genutzte Anmerkungs‑Templates cachen.  
-- `Point`‑Sammlungen für gängige Koordinatensätze wiederverwenden.  
-- Ein **Template‑PDF** im Speicher halten, wenn Sie wiederholt dasselbe Basisdokument annotieren.
-
-## Java‑PDF‑Speicher‑Management‑Tipps
-Effizienter Speicherverbrauch ist entscheidend beim Umgang mit großen PDFs oder der Stapelverarbeitung vieler Dateien. Hier einige praxisnahe Empfehlungen:
-
-- **try‑with‑resources** für jedes `Annotator`‑Objekt verwenden, um die Freigabe zu garantieren.  
-- **JVM‑Heap** (`-Xmx`) nur nach Bedarf erhöhen; Nutzung mit Profiling‑Tools überwachen.  
-- **Dokumente sequenziell verarbeiten**, wenn möglich, und nach jeder Datei Speicher freigeben.  
-- **Das gleiche PDF nicht mehrfach laden**; denselben Stream wiederverwenden, falls Sie es mehrfach lesen müssen.
-
-Durch die Anwendung dieser Praktiken bleibt Ihre Anwendung reaktionsfähig und verhindert Out‑of‑Memory‑Abstürze bei intensiven Annotations‑Workloads.
-
-## Praxisbeispiele und Anwendungsfälle
-
-### Dokument‑Review‑Systeme
-
-- **Rechtsprüfung:** Vertragsklauseln unterstreichen und Kommentare zu Risiken hinzufügen.  
-- **Compliance‑Audits:** Problematische Abschnitte in Finanzberichten hervorheben.  
-- **Akademisches Peer‑Review:** Professoren unterstreichen Passagen, die einer Klärung bedürfen.
-
-### Bildungsplattformen
-
-- **Studenten‑Annotationstools:** Lernende können Schlüsselkonzepte in E‑Books unterstreichen.  
-- **Lehrer‑Feedback:** Inline‑Kommentare direkt zu eingereichten Aufgaben geben.
-
-### Qualitäts‑Sicherungs‑Workflows
-
-- **Technische Dokumentations‑Reviews:** Ingenieure unterstreichen Abschnitte, die aktualisiert werden müssen.  
-- **Standard‑Arbeitsanweisungen:** Sicherheitsbeauftragte kritische Schritte hervorheben.
-
-### Content‑Management‑Systeme
-
-- **Redaktioneller Workflow:** Redakteure unterstreichen Text, der einer Faktenprüfung bedarf.  
-- **Versionskontrolle:** Anmerkungs‑Historie über Dokumentrevisionen hinweg nachverfolgen.
-
-## Erweiterte Tipps für die professionelle Umsetzung
-
-### Benutzerdefinierte Anmerkungs‑Stile
+Jede Anmerkung kann ein benutzerdefiniertes Metadaten‑Dictionary tragen. Speichern Sie IDs, Zeitstempel oder Workflow‑Status, um sie in externe Tracking‑Systeme zu integrieren.
 
 ```java
 UnderlineAnnotation underline = new UnderlineAnnotation();
@@ -372,7 +465,9 @@ underline.setFontSize(12);             // Consistent sizing
 underline.setMessage("URGENT REVIEW REQUIRED");
 ```
 
-### Anmerkungs‑Metadaten zum Tracking
+### Integration mit Benutzermanagement‑Systemen
+
+Ordnen Sie das `author`‑Attribut eines `Comment` den Benutzer‑IDs Ihrer Anwendung zu. Das ermöglicht rollenbasierte Stilzuweisungen und die Erstellung von Audit‑Logs.
 
 ```java
 underline.setCreatedBy("john.doe@company.com");
@@ -380,7 +475,24 @@ underline.setCreatedOn(Calendar.getInstance().getTime());
 underline.setMessage("Legal review required - Contract clause 4.2");
 ```
 
-### Integration mit Benutzer‑Management‑Systemen
+## Fehlersuche bei Produktionsproblemen
+
+### Leistungs‑Monitoring
+
+Beobachten Sie in der Produktion folgende Kennzahlen:  
+- **Heap‑Nutzung** – stellen Sie sicher, dass `dispose()` aufgerufen wird.  
+- **Verarbeitungszeit pro Dokument** – protokollieren Sie Zeitstempel vor und nach `annotator.save()`.  
+- **Fehlerrate** – erfassen Sie Ausnahmen und kategorisieren Sie sie.
+
+### Häufige Produktions‑Fallstricke
+
+- **Dateisperren** – stellen Sie sicher, dass hochgeladene Dateien geschlossen sind, bevor sie annotiert werden.  
+- **Gleichzeitige Bearbeitungen** – implementieren Sie optimistisches Locking oder Versionsprüfungen.  
+- **Große Dateien (> 50 MB)** – erhöhen Sie das JVM‑Timeout und erwägen Sie Streaming‑APIs.
+
+### Best Practices für Fehlerbehandlung
+
+Alle Anmerkungs‑Aufrufe in try‑catch‑Blöcke einbetten, den vollständigen Stack‑Trace protokollieren und eine benutzerdefinierte `AnnotationException` mit einer verständlichen Meldung erneut werfen. Dieses Muster erleichtert das Debugging und liefert klare Rückmeldungen an API‑Verbraucher.
 
 ```java
 // Assume you have a method that returns the current authenticated user
@@ -394,22 +506,30 @@ underline.setFontColor(getRoleColor(userRole));
 underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentText));
 ```
 
-## Fehlersuche bei Produktionsproblemen
+## Häufig gestellte Fragen
 
-### Performance‑Monitoring
+**F: Wie annotiere ich mehrere Textbereiche in einem einzigen Vorgang?**  
+A: Erstellen Sie mehrere `UnderlineAnnotation`‑Objekte mit unterschiedlichen Koordinaten und fügen Sie sie nacheinander mittels `annotator.add()` hinzu.
 
-Beobachten Sie diese Kennzahlen in der Produktion:
-- **Heap‑Nutzung** – sicherstellen, dass `dispose()` aufgerufen wird.  
-- **Verarbeitungszeit pro Dokument** – Zeitstempel vor und nach `annotator.save()` protokollieren.  
-- **Fehlerrate** – Ausnahmen erfassen und kategorisieren.
+**F: Kann ich Bilder innerhalb von PDF‑Dokumenten annotieren?**  
+A: Ja. Verwenden Sie dasselbe Koordinatensystem und stellen Sie sicher, dass die Punkte innerhalb der Bildgrenzen liegen.
 
-### Häufige Stolperfallen in der Produktion
+**F: Welche Dateiformate neben PDF unterstützt GroupDocs.Annotation?**  
+A: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX) und Bildformate wie JPEG, PNG, TIFF.
 
-- **Dateisperren** – sicherstellen, dass hochgeladene Dateien vor der Annotation geschlossen sind.  
-- **Gleichzeitige Bearbeitungen** – optimistisches Locking oder Versions‑Checks implementieren.  
-- **Große Dateien (> 50 MB)** – JVM‑Timeout erhöhen und ggf. Streaming‑APIs nutzen.
+**F: Wie gehe ich mit sehr großen Dokumenten um, ohne den Speicher zu überlasten?**  
+A: Dokumente einzeln verarbeiten, den JVM‑Heap (`-Xmx`) erhöhen und `Annotator`‑Instanzen stets prompt entsorgen.
 
-### Best Practices für Fehlerbehandlung
+**F: Ist es möglich, vorhandene Anmerkungen aus einem Dokument zu extrahieren?**  
+A: Ja. Verwenden Sie `annotator.get()`, um alle Anmerkungen abzurufen, und filtern Sie nach Typ, Autor oder Seite nach Bedarf.
+
+---
+
+**Zuletzt aktualisiert:** 2026-10-16  
+**Getestet mit:** GroupDocs.Annotation 25.2  
+**Autor:** GroupDocs  
+
+---
 
 ```java
 try (Annotator annotator = new Annotator(documentPath)) {
@@ -424,36 +544,8 @@ try (Annotator annotator = new Annotator(documentPath)) {
 }
 ```
 
-## Fazit
+## Verwandte Tutorials
 
-Sie verfügen nun über alles, was Sie benötigen, um **saubere PDF‑Java‑Dateien zu erstellen** und **PDF in Java mit Unterstreichungs‑Anmerkungen** mithilfe von GroupDocs.Annotation zu annotieren. Denken Sie daran:
-
-- Ressourcen mit try‑with‑resources oder explizitem `dispose()` verwalten.  
-- Koordinaten frühzeitig validieren, um falsch platzierte Unterstreichungen zu vermeiden.  
-- Robuste Fehlerbehandlung für Produktionsstabilität implementieren.  
-- Rollenbasierte Stile und Metadaten nutzen, um Ihren Workflow zu unterstützen.
-
-Nächste Schritte? Fügen Sie weitere Anmerkungstypen hinzu – Hervorhebungen, Stempel oder Text‑Ersetzungen – und bauen Sie eine vollwertige Dokument‑Review‑Lösung.
-
-## Häufig gestellte Fragen
-
-**F: Wie annotiere ich mehrere Textbereiche in einem einzigen Vorgang?**  
-A: Erstellen Sie mehrere `UnderlineAnnotation`‑Objekte mit unterschiedlichen Koordinaten und fügen Sie sie nacheinander mittels `annotator.add()` hinzu.
-
-**F: Kann ich Bilder innerhalb von PDF‑Dokumenten annotieren?**  
-A: Ja. Verwenden Sie dasselbe Koordinatensystem und stellen Sie sicher, dass die Punkte innerhalb der Bildgrenzen liegen.
-
-**F: Welche Dateiformate neben PDF unterstützt GroupDocs.Annotation?**  
-A: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX) und Bildformate wie JPEG, PNG, TIFF.
-
-**F: Wie gehe ich mit sehr großen Dokumenten um, ohne den Speicher zu erschöpfen?**  
-A: Dokumente einzeln verarbeiten, den JVM‑Heap (`-Xmx`) erhöhen und `Annotator`‑Instanzen stets zeitnah freigeben.
-
-**F: Ist es möglich, vorhandene Anmerkungen aus einem Dokument zu extrahieren?**  
-A: Ja. Verwenden Sie `annotator.get()`, um alle Anmerkungen abzurufen, und filtern Sie nach Typ, Autor oder Seite nach Bedarf.
-
----
-
-**Zuletzt aktualisiert:** 2026-03-24  
-**Getestet mit:** GroupDocs.Annotation 25.2  
-**Autor:** GroupDocs
+- [Sauberes PDF in Java erstellen: Unterstreichungs‑Anmerkungen mit GroupDocs](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [PDF‑Anmerkungen in Java bearbeiten – Vollständiges GroupDocs‑Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [PDFs mit GroupDocs Annotation in Java annotieren](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/)

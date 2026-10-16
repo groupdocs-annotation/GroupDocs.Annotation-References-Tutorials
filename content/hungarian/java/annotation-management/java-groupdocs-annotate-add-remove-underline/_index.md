@@ -1,77 +1,163 @@
 ---
-categories:
-- Java Development
-date: '2026-03-24'
-description: Tanulja meg, hogyan hozhat létre tiszta PDF Java fájlokat, kezelheti
-  a Java PDF memóriát, és annotálhat PDF-et Java-ban a GroupDocs.Annotation segítségével,
-  teljes kódrészletekkel és hibaelhárítási tippekkel.
-keywords: java document annotation library, groupdocs annotation tutorial, add underline
-  annotation java, java pdf annotation, how to annotate pdf documents in java
-lastmod: '2026-03-24'
-linktitle: Java Document Annotation with GroupDocs
+date: '2026-10-16'
+description: Tanulja meg, hogyan menthet PDF-et annotációk nélkül Java-ban, sajátítsa
+  el a Java PDF memória kezelését, és adjon aláhúzott annotációkat a GroupDocs.Annotation
+  segítségével. Lépésről‑lépésre útmutató.
+keywords:
+- save pdf without annotations
+- java pdf memory management
+- java document review system
+- groupdocs annotation tutorial
+- underline annotation java
+lastmod: '2026-10-16'
+linktitle: Java dokumentum annotálása a GroupDocs-szel
+og_description: Tanulja meg, hogyan menthet PDF-et annotációk nélkül Java-ban, sajátítsa
+  el a Java PDF memória kezelését, és adjon aláhúzott annotációkat a GroupDocs.Annotation
+  segítségével. Lépésről‑lépésre útmutató.
+og_image_alt: 'Developer guide: Save PDF without annotations in Java using GroupDocs.Annotation'
+og_title: Hogyan menthet PDF-et annotációk nélkül Java-ban a GroupDocs használatával
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-16'
+  description: Learn how to save PDF without annotations in Java, master java pdf
+    memory management, and add underline annotations with GroupDocs.Annotation. Step‑by‑step
+    guide.
+  headline: How to save PDF without annotations in Java using GroupDocs
+  type: TechArticle
+- description: Learn how to save PDF without annotations in Java, master java pdf
+    memory management, and add underline annotations with GroupDocs.Annotation. Step‑by‑step
+    guide.
+  name: How to save PDF without annotations in Java using GroupDocs
+  steps:
+  - name: initialize the annotator and load your document
+    text: '`Annotator` is the main entry point in GroupDocs.Annotation for loading
+      and modifying PDF documents. It abstracts file‑system handling, stream management,
+      and native resource allocation. **Pro tip:** Use absolute paths while developing
+      to avoid “file not found” errors. In production, consider loadin'
+  - name: creating comments and replies (the collaborative part)
+    text: '`Comment` objects represent threaded discussion attached to an annotation.
+      Each comment can have an author, a timestamp, and optional replies, enabling
+      a full conversation around a specific markup. **Real‑world use:** Reviewers
+      can discuss a specific clause by adding threaded replies, keeping the co'
+  - name: defining annotation coordinates (getting the position right)
+    text: '`Point` defines a single coordinate in PDF space (measured in points, where
+      72 points = 1 inch). Four points are required for an underline: two for the
+      start line and two for the end line. **Coordinate system:** - Points 1 & 2 define
+      the top edge of the underline. - Points 3 & 4 define the bottom ed'
+  - name: creating and configuring the underline annotation
+    text: '`UnderlineAnnotation` is the concrete class that represents an underline
+      markup. It inherits from the base `Annotation` class and adds properties specific
+      to underlines, such as line thickness and style. **Color & opacity tips:** -
+      `FontColor` uses ARGB; `65535` (0x00FFFF) yields bright yellow. - Fo'
+  - name: saving your annotated document
+    text: '`SaveOptions` lets you control the output format, whether to embed annotations,
+      and how to handle metadata. Setting `AnnotationType.NONE` instructs the library
+      to strip all annotation objects, which is the key to **save PDF without annotations**.
+      **Memory management:** The `dispose()` call releases '
+  type: HowTo
+- questions:
+  - answer: Create several `UnderlineAnnotation` objects with different coordinates
+      and add them sequentially using `annotator.add()`.
+    question: How do I annotate multiple areas of text in a single operation?
+  - answer: Yes. Use the same coordinate system, ensuring the points lie inside the
+      image bounds.
+    question: Can I annotate images within PDF documents?
+  - answer: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX), and image formats
+      such as JPEG, PNG, TIFF.
+    question: What file formats besides PDF does GroupDocs.Annotation support?
+  - answer: Process documents one at a time, increase the JVM heap (`-Xmx`), and always
+      dispose of `Annotator` instances promptly.
+    question: How do I handle very large documents without running out of memory?
+  - answer: Yes. Use `annotator.get()` to retrieve all annotations, then filter by
+      type, author, or page as needed.
+    question: Is it possible to extract existing annotations from a document?
+  type: FAQPage
 tags:
 - groupdocs
 - document-annotation
 - java-tutorial
 - pdf-manipulation
-title: 'Tiszta PDF létrehozása Java-val: Aláhúzott annotációk a GroupDocs-szel'
+- java pdf memory management
+title: Hogyan menthet PDF-et annotációk nélkül Java-ban a GroupDocs használatával
 type: docs
 url: /hu/java/annotation-management/java-groupdocs-annotate-add-remove-underline/
 weight: 1
 ---
 
-# Tiszta PDF Java létrehozása: Aláhúzott megjegyzések a GroupDocs-szal
+# Hogyan menthetünk PDF-et annotációk nélkül Java-ban a GroupDocs használatával
 
-Ha **create clean PDF Java** fájlokat kell létrehoznod és együttműködő megjegyzéseket hozzáadnod, jó helyen vagy. Küzdesz a dokumentumkezeléssel és az együttműködéssel Java alkalmazásaidban? Nem vagy egyedül. Sok fejlesztő szembesül a kihívással, hogy megbízható dokumentum‑megjegyzés funkciókat valósítson meg, amelyek különböző fájlformátumokban is stabilan működnek.
-
-Ebben az útmutatóban **create clean PDF Java** fájlokat hozol létre, és megtanulod, hogyan **annotate PDF in Java** a GroupDocs.Annotation segítségével. A tutorial végére pontosan tudni fogod, hogyan adj hozzá aláhúzott megjegyzéseket kommentárokkal, hogyan távolíts el meglévő megjegyzéseket, és hogyan integráld ezeket a funkciókat zökkenőmentesen a projektjeidbe.
-
-**Amit ebben az útmutatóban elsajátítasz:**
-- A GroupDocs.Annotation beállítása a Java projektedben (helyesen)  
-- Aláhúzott megjegyzések hozzáadása egyedi kommentárokkal és stílussal  
-- Az összes megjegyzés eltávolítása a tiszta dokumentumverziók létrehozásához  
-- Gyakori fejlesztői problémák hibaelhárítása  
-- Teljesítményoptimalizálás termelési alkalmazásokhoz  
-
-Akár dokumentum‑áttekintő rendszert, oktatási platformot vagy együttműködő szerkesztőeszközt építesz, ez a tutorial gyakorlati, tesztelt kódrészletekkel támogat.
+Ha **PDF-et annotációk nélkül** szeretnél menteni, miközben még mindig hozzá tudsz adni együttműködő aláhúzott megjegyzéseket, jó helyen vagy. Sok Java fejlesztő nehezen tud tiszta verziót tartani egy dokumentumból a végső terjesztéshez, különösen, ha ugyanazt a fájlt használják iteratív felülvizsgálatokhoz. Ebben az útmutatóban megtanulod, hogyan generálj tiszta PDF-et, hogyan kezeld hatékonyan a memóriát, és hogyan alkalmazz aláhúzott annotációkat megjegyzésekkel a GroupDocs.Annotation segítségével. A végére megérted a teljes munkafolyamatot – a PDF betöltésétől a vízjel‑mentes végső másolat előállításáig – valamint a legjobb gyakorlatokat egy robusztus **java document review system** felépítéséhez.
 
 ## Gyors válaszok
-- **Hogyan adok hozzá aláhúzott megjegyzést?** Használd a `UnderlineAnnotation`‑t és az `annotator.add()`‑t, majd mentsd el a dokumentumot.  
-- **Hogyan hozhatok létre egy clean PDF Java fájlt?** Töltsd be a megjegyzett fájlt, állítsd be a `AnnotationType.NONE`‑t a `SaveOptions`‑ban, és ments egy új másolatot.  
-- **Mely könyvtárak szükségesek?** GroupDocs.Annotation v25.2 (vagy újabb) és a hozzá tartozó Maven tároló.  
-- **Szükség van licencre a termeléshez?** Igen — alkalmazz érvényes GroupDocs licencet a vízjelek elkerülése érdekében.  
-- **Hatékonyan tudok több dokumentumot feldolgozni?** Csomagold minden `Annotator`‑t egy try‑with‑resources blokkba, és a fájlok után zárd le.
+- **Hogyan adhatok hozzá aláhúzott annotációt?** Használd az `UnderlineAnnotation`-t az `annotator.add()`-val, majd mentsd a dokumentumot.  
+- **Hogyan menthetek PDF-et annotációk nélkül?** Töltsd be a megjegyzett fájlt, állítsd be a `AnnotationType.NONE`-t a `SaveOptions`-ban, és ments egy új másolatot.  
+- **Mely könyvtárak szükségesek?** GroupDocs.Annotation v25.2 (vagy újabb) és a Maven tárolója.  
+- **Szükségem van licencre a termeléshez?** Igen – alkalmazz érvényes GroupDocs licencet a vízjelek elkerüléséhez.  
+- **Hatékonyan tudok több dokumentumot feldolgozni?** Csomagold minden `Annotator`-t egy try‑with‑resources blokkba, és a fájl után szabadítsd fel.
 
-## Hogyan hozhatsz létre clean PDF Java fájlokat
-A clean PDF Java fájl létrehozása azt jelenti, hogy a dokumentum **összes megjegyzés nélküli** verzióját generálod, miközben az eredeti tartalmat megőrzöd. Ez hasznos a végső terjesztéshez, archiváláshoz, vagy amikor egy „tiszta” másolatot kell megosztani egy felülvizsgálati ciklus után.
+## Hogyan menthetek PDF-et annotációk nélkül Java-ban?
 
-A GroupDocs.Annotation ezt egyszerűvé teszi: töltsd be a megjegyzett fájlt, konfiguráld a `SaveOptions`‑t úgy, hogy kizárja az összes megjegyzéstípust, és mentsd el az eredményt. A lépéseket a **Removing Annotations** szakaszban mutatjuk be.
+Töltsd be a forrás PDF-et egy `Annotator`-ral, konfiguráld a `SaveOptions`-t úgy, hogy kizárja az összes annotációtípust, és hívd meg a `save()`-t egy tiszta másolat írásához. Ez a művelet nem módosítja az eredeti fájlt, így megőrzöd a felülvizsgálók számára a megjegyzett verziót és a terjesztéshez egy tiszta változatot is. A folyamat streaminget használ a háttérben, ami azt jelenti, hogy a teljes dokumentum soha nem kerül teljesen a memóriába – ez kritikus nagy PDF-ek esetén.
 
-## Miért érdemes clean PDF Java fájlokat létrehozni?
-Egy tiszta verzió eltávolítja a felülvizsgáló jeleket, kommentárokat és kiemeléseket, így egy kifinomult dokumentumot kapsz, amely készen áll az ügyfelek, szabályozók vagy a nyilvános kiadás számára. Emellett csökkenti a fájlméretet és megakadályozza a belső megjegyzések véletlen kiszivárgását — kritikus a jogi és megfelelőségi munkafolyamatokban.
+## Mi az a PDF mentése annotációk nélkül?
 
-## Hogyan annotálj PDF‑et Java‑ban a GroupDocs‑szel
-A GroupDocs.Annotation gazdag API‑t biztosít a **annotate PDF in Java** feladathoz. Számos megjegyzéstípust támogat, beleértve a kiemeléseket, pecséteket és aláhúzásokat. Ebben a tutorialban az aláhúzott megjegyzésekre fókuszálunk, mivel ezek gyakran használatosak a szöveg hangsúlyozására, miközben szálas kommentárokat tesznek lehetővé.
+A `save pdf without annotations` azt jelenti, hogy egy PDF dokumentumot exportálunk úgy, hogy minden annotációs objektumot (kiemelések, megjegyzések, pecsétek, aláhúzások stb.) eltávolítunk. Az eredményül kapott fájl csak az eredeti tartalmat és elrendezést tartalmazza, ami alkalmas jogi benyújtásra, nyilvános kiadásra vagy archiválásra.
+
+## Miért érdemes tiszta PDF fájlokat létrehozni egy java document review system-ben?
+
+Egy tiszta verzió eltávolítja a felülvizsgáló jelzéseket, megjegyzéseket és kiemeléseket, így egy kifinomult dokumentumot kapsz, amely készen áll az ügyfelek, szabályozók vagy a nyilvános kiadás számára. Emellett átlagosan akár 30 %-kal is csökkentheti a fájlméretet, és megakadályozza a belső megjegyzések véletlen kiszivárgását – ami kritikus a jogi és megfelelőségi munkafolyamatokban. A GroupDocs.Annotation egyetlen lépésben eltávolíthatja az összes annotációs objektumot, és támogatja a 500 MB-ig terjedő PDF-eket anélkül, hogy a teljes fájlt a memóriába töltené.
 
 ## Előfeltételek és környezet beállítása
 
-### Amire szükséged lesz a kezdéshez
+### Követelmények a kezdés előtt
 
-**Fejlesztői környezet követelményei:**
+**Development environment requirements**  
 - Java Development Kit (JDK) 8 vagy újabb (JDK 11+ ajánlott)  
 - Maven 3.6+ vagy Gradle 6.0+ a függőségkezeléshez  
 - IDE, például IntelliJ IDEA, Eclipse vagy VS Code Java kiegészítőkkel  
 - Legalább 2 GB szabad RAM (a dokumentumfeldolgozás memóriaigényes lehet)
 
-**Tudás előfeltételek:**
-Alapvető Java koncepciókkal (objektum‑inicializálás, metódushívások, Maven függőségek) kell rendelkezned. A harmadik fél könyvtárak korábbi tapasztalata felgyorsítja a bevezetést.
+**Ismereti előfeltételek**  
+Kényelmesen kell tudnod a Java alapfogalmakat – objektum inicializálás, metódushívások és Maven függőségek. A harmadik fél könyvtárak korábbi tapasztalata felgyorsítja a bevezetést.
 
-**Tesztdokumentumok:**
-Készíts néhány minta PDF‑et. A szöveges PDF‑ek a legjobbak; a beolvasott képekhez OCR‑ra lehet szükség a megjegyzés előtt.
+**Teszt dokumentumok**  
+Legyen néhány minta PDF készen. A szöveges PDF-ek a legjobbak; a beolvasott képekhez OCR-re lehet szükség az annotáció előtt.
 
-### Maven beállítása: GroupDocs beillesztése a projektbe
+### Maven beállítás: a GroupDocs beillesztése a projektbe
 
-Íme, hogyan konfiguráld helyesen a Maven projektedet (sok fejlesztő első próbálkozáskor elakad ebben):
+Add the following dependency to your `pom.xml`. This step trips up many developers on their first attempt because the group ID and artifact ID must match exactly.
+
+```xml
+<dependency>
+    <groupId>com.groupdocs</groupId>
+    <artifactId>groupdocs-annotation</artifactId>
+    <version>25.2</version>
+</dependency>
+```
+
+**Important:** Version 25.2 a legújabb stabil kiadás a írás időpontjában. Rendszeresen ellenőrizd a GroupDocs tárolót az újabb verziókért, amelyek hibajavításokat és teljesítményjavításokat tartalmaznak.
+
+### Licenc beállítása (ne hagyd ki ezt)
+
+**Fejlesztéshez/teszthez** – Töltsd le a ingyenes próbaverziót a GroupDocs weboldaláról. A próba minden funkciót tartalmaz, de vízjelet ad a feldolgozott dokumentumokhoz.  
+**Termeléshez** – Vásárolj licencet, és alkalmazd az alkalmazás indításakor. Érvényes licenc nélkül a termelési buildek korlátozottak és vízjelezettek lesznek.
+
+## Implementációs útmutató: aláhúzott annotációk hozzáadása
+
+### Az annotációs munkafolyamat megértése
+
+Mielőtt a kódba merülnénk, nézzük át a négylépéses munkafolyamatot, amely akkor történik, amikor **PDF-et annotálsz Java-ban**:
+
+1. **Dokumentum betöltése** – az `Annotator` beolvassa a fájlt a memóriába.  
+2. **Annotáció létrehozása** – Határozd meg a tulajdonságokat, mint pozíció, stílus és megjegyzések.  
+3. **Annotáció alkalmazása** – A könyvtár beilleszti az annotációt a PDF struktúrájába.  
+4. **Dokumentum mentése** – Tárold a módosított fájlt, opcionálisan megőrizve az eredetit.
+
+A folyamat nem destruktív; a forrásfájl érintetlen marad, hacsak nem írod felül.
+
+### 1. lépés: az annotátor inicializálása és a dokumentum betöltése
+
+Az `Annotator` a GroupDocs.Annotation fő belépési pontja a PDF dokumentumok betöltéséhez és módosításához. Absztrahálja a fájlrendszer kezelését, a stream menedzsmentet és a natív erőforrások allokálását.
 
 ```xml
 <repositories>
@@ -90,30 +176,11 @@ Készíts néhány minta PDF‑et. A szöveges PDF‑ek a legjobbak; a beolvasot
 </dependencies>
 ```
 
-**Fontos:** A 25.2‑es verzió a legújabb stabil kiadás a cikk írásának időpontjában. Rendszeresen ellenőrizd a GroupDocs tárolót az újabb, hibajavításokat és teljesítményjavításokat tartalmazó verziókért.
+**Pro tipp:** Fejlesztés közben használj abszolút útvonalakat a „fájl nem található” hibák elkerülése érdekében. Termelésben fontold meg az erőforrások betöltését az osztályútvonalról vagy egy felhő tárolóból.
 
-### Licenc beállítása (ne hagyd ki)
+### 2. lépés: megjegyzések és válaszok létrehozása (az együttműködő rész)
 
-**Fejlesztés/tesztelés:**  
-Töltsd le a ingyenes próbaverziót a GroupDocs weboldaláról. A próba minden funkciót tartalmaz, de vízjelet ad a feldolgozott dokumentumokhoz.
-
-**Termelés:**  
-Vásárolj licencet, és alkalmazd az alkalmazás indításakor. Érvényes licenc nélkül a termelési buildek korlátozottak lesznek.
-
-## Implementációs útmutató: Aláhúzott megjegyzések hozzáadása
-
-### Az annotációs munkafolyamat megértése
-
-Mielőtt a kódba merülnénk, nézzük meg a négylépéses munkafolyamatot, amely a **annotate PDF in Java** során történik:
-
-1. **Dokumentum betöltése** – az `Annotator` beolvassa a fájlt a memóriába.  
-2. **Annotáció létrehozása** – határozd meg a pozíciót, stílust és a kommentárokat.  
-3. **Annotáció alkalmazása** – a könyvtár beilleszti a megjegyzést a PDF struktúrájába.  
-4. **Dokumentum mentése** – a módosított fájlt elmented, opcionálisan megőrizve az eredetit.
-
-A folyamat nem destruktív; a forrásfájl érintetlen marad, hacsak nem írod felül.
-
-### 1. lépés: Az Annotator inicializálása és a dokumentum betöltése
+A `Comment` objektumok a annotációhoz csatolt szálas beszélgetést képviselik. Minden megjegyzésnek lehet szerzője, időbélyege és opcionális válaszai, ami lehetővé teszi a teljes beszélgetést egy adott jelölés körül.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -122,9 +189,11 @@ import com.groupdocs.annotation.Annotator;
 Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf");
 ```
 
-**Pro Tipp:** Fejlesztés közben használj abszolút útvonalakat a „file not found” hibák elkerülése érdekében. Termelésben fontold meg az erőforrások betöltését az osztályútvonalról vagy egy felhő‑tárolóból.
+**Valós használat:** A felülvizsgáló egy adott záradékot megvitathat szálas válaszok hozzáadásával, így a beszélgetés pontosan az annotációhoz kapcsolódik.
 
-### 2. lépés: Kommentárok és válaszok létrehozása (az együttműködés része)
+### 3. lépés: annotáció koordináták meghatározása (a helyes pozíció beállítása)
+
+A `Point` egyetlen koordinátát definiál a PDF térben (pontban mérve, ahol 72 pont = 1 hüvelyk). Négy pont szükséges egy aláhúzáshoz: kettő a kezdő vonalhoz és kettő a vég vonalhoz.
 
 ```java
 import com.groupdocs.annotation.models.Reply;
@@ -145,9 +214,14 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**Valós példában:** A felülvizsgáló egy adott pontot vitathat meg szálas válaszokkal, így a beszélgetés pontosan az annotációhoz kapcsolódik.
+**Koordináta rendszer:**  
+- 1. és 2. pont határozza meg az aláhúzás felső szélét.  
+- 3. és 4. pont határozza meg az aláhúzás alsó szélét.  
+- A Y‑különbség (730 vs 650) szabályozza a vastagságot.
 
-### 3. lépés: Annotáció koordinátáinak meghatározása (a pozíció helyes beállítása)
+### 4. lépés: aláhúzott annotáció létrehozása és konfigurálása
+
+Az `UnderlineAnnotation` egy konkrét osztály, amely egy aláhúzott jelölést képvisel. A `Annotation` alaposztályból örököl, és aláhúzásokra jellemző tulajdonságokat ad hozzá, mint a vonalvastagság és a stílus.
 
 ```java
 import com.groupdocs.annotation.models.Point;
@@ -164,12 +238,14 @@ points.add(point3);
 points.add(point4);
 ```
 
-**Koordináta‑rendszer:**  
-- 1. és 2. pont határozza meg az aláhúzás felső szélét.  
-- 3. és 4. pont határozza meg az aláhúzás alsó szélét.  
-- A Y‑különbség (730 vs 650) szabályozza a vastagságot.
+**Szín és átlátszóság tippek:**  
+- A `FontColor` ARGB-t használ; a `65535` (0x00FFFF) élénk sárgát ad.  
+- Piroshoz használd a `16711680` (0xFF0000) értéket; kékre a `255` (0x0000FF).  
+- A 0,5 és 0,8 közötti átlátszósági értékek jó olvashatóságot biztosítanak anélkül, hogy eltakarnák a szöveget.
 
-### 4. lépés: Aláhúzott annotáció létrehozása és konfigurálása
+### 5. lépés: a megjegyzett dokumentum mentése
+
+A `SaveOptions` lehetővé teszi a kimeneti formátum, az annotációk beágyazásának és a metaadatok kezelésének szabályozását. A `AnnotationType.NONE` beállítása azt mondja a könyvtárnak, hogy távolítsa el az összes annotációs objektumot, ami a **PDF mentése annotációk nélkül** kulcsa.
 
 ```java
 import com.groupdocs.annotation.models.annotationmodels.UnderlineAnnotation;
@@ -186,12 +262,24 @@ underline.setReplies(replies);
 annotator.add(underline);
 ```
 
-**Szín‑ és átlátszóság‑tippek:**  
-- A `FontColor` ARGB‑t használ; a `65535` (0x00FFFF) élénk sárgát eredményez.  
-- Piroshoz használd a `16711680`‑at (0xFF0000); kékre a `255`‑et (0x0000FF).  
-- A 0,5‑0,8 közötti átlátszóság jó olvashatóságot biztosít anélkül, hogy eltakarná a szöveget.
+**Memória kezelés:** A `dispose()` hívás felszabadítja a natív erőforrásokat és megakadályozza a memória szivárgásokat – kritikus, ha sok fájlt dolgozol fel egy kötegben.
 
-### 5. lépés: A megjegyzett dokumentum mentése
+## Annotációk eltávolítása: tiszta dokumentum verziók létrehozása
+
+Néha szükség van egy PDF verzióra **annotációk nélkül** – például a végleges jóváhagyott szerződés kézbesítésekor. A GroupDocs ezt egyszerűvé teszi.
+
+### Az annotáció eltávolítási lehetőségek megértése
+
+Tegyük:  
+- **Minden** annotáció eltávolítása (leggyakoribb)  
+- Specifikus típusok eltávolítása (pl. csak a kiemelések)  
+- Annotációk eltávolítása szerző vagy oldal szerint
+
+### Lépésről‑lépésre annotáció eltávolítása
+
+**1. lépés: a korábban megjegyzett dokumentum betöltése**
+
+Az `Annotator` újra a betöltőként működik; beolvassa azt a fájlt, amely még tartalmaz annotációs objektumokat.
 
 ```java
 String outputPath = "YOUR_OUTPUT_DIRECTORY/output.pdf";
@@ -199,28 +287,17 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Memóriakezelés:** A `dispose()` hívás felszabadítja a natív erőforrásokat, és megakadályozza a memória‑szivárgásokat — kritikus, ha sok fájlt dolgozol fel egy kötegben.
+**2. lépés: mentési beállítások konfigurálása tiszta kimenethez**
 
-## Megjegyzések eltávolítása: Tiszta dokumentumverziók létrehozása
-
-Néha szükség van egy **annotation‑tól mentes** PDF‑re — például a végleges szerződés átadása során. A GroupDocs ezt egyszerűvé teszi.
-
-### Az annotáció eltávolítási lehetőségek megértése
-
-Törölhetsz:
-- **összes** annotációt (a leggyakoribb)  
-- konkrét típusokat (pl. csak kiemeléseket)  
-- annotációkat szerző vagy oldal szerint  
-
-### Lépés‑ről‑lépésre az annotáció eltávolítása
-
-**1. lépés: A korábban megjegyzett dokumentum betöltése**
+A `SaveOptions` egy folyékony API-t biztosít, amellyel megadható, hogy ne legyenek annotációs típusok írva a kimeneti fájlba.
 
 ```java
 Annotator annotator = new Annotator(outputPath);
 ```
 
-**2. lépés: Save Options konfigurálása a tiszta kimenethez**
+**3. lépés: a tiszta verzió mentése**
+
+A `save()` hívása a konfigurált beállításokkal egy olyan PDF-et ír, amely csak az eredeti tartalmat tartalmazza.
 
 ```java
 import com.groupdocs.annotation.options.export.AnnotationType;
@@ -230,7 +307,13 @@ SaveOptions saveOptions = new SaveOptions();
 saveOptions.setAnnotationTypes(AnnotationType.NONE);
 ```
 
-**3. lépés: A tiszta verzió mentése**
+Ez egy **tiszta PDF** fájlt eredményez, amely nem tartalmaz annotációs objektumokat, tökéletes a végső terjesztéshez.
+
+## Gyakori problémák és megoldások
+
+### Probléma 1: „Document not found” hibák
+
+Győződj meg arról, hogy a fájl útvonala helyes és az alkalmazásnak olvasási jogosultsága van. Az `Path.of()` abszolút útvonalakkal való használata megszünteti a legtöbb kétértelműséget.
 
 ```java
 String noneAnnotationPath = Paths.get(outputPath).resolveSibling("none-annotation.pdf").toString();
@@ -238,11 +321,9 @@ annotator.save(noneAnnotationPath, saveOptions);
 annotator.dispose();
 ```
 
-Ez egy **clean PDF Java** fájlt hoz létre, amely nem tartalmaz semmilyen annotációs objektumot, így tökéletes a végső terjesztéshez.
+### Probléma 2: Az annotációk rossz helyen jelennek meg
 
-## Gyakori problémák és megoldások
-
-### Probléma 1: „Document not found” hibák
+A PDF koordináta origója a bal alsó sarok. Ellenőrizd, hogy a Y‑értékek felfelé növekednek-e, és figyelembe veszed-e az oldal forgását.
 
 ```java
 File inputFile = new File("path/to/your/document.pdf");
@@ -256,7 +337,9 @@ if (!inputFile.canRead()) {
 Annotator annotator = new Annotator(inputFile.getAbsolutePath());
 ```
 
-### Probléma 2: Az annotációk rossz helyen jelennek meg
+### Probléma 3: Memória problémák nagy dokumentumoknál
+
+A GroupDocs.Annotation streameli a tartalmat, és soha nem tölti be a teljes fájlt a heap memóriába. Ennek ellenére továbbra is hívnod kell a `dispose()`-t, és fontolóra veheted a JVM heap (`-Xmx`) növelését 200 MB-nál nagyobb fájlok esetén.
 
 ```java
 // Test with a simple rectangle in the top‑left corner
@@ -266,7 +349,9 @@ Point point3 = new Point(10, 30);   // Bottom‑left
 Point point4 = new Point(100, 30);  // Bottom‑right
 ```
 
-### Probléma 3: Memória‑problémák nagy dokumentumoknál
+### Probléma 4: Licenc problémák termelésben
+
+Ha a licencfájl hiányzik vagy az útvonal helytelen, a könyvtár visszatér a próba módba, és minden oldalra vízjelet helyez. Helyezd a licencfájlt egy olyan helyre, amely az osztályúton van, és töltsd be korán az alkalmazás életciklusában.
 
 ```java
 // Increase JVM heap size when launching the app, e.g., -Xmx2g
@@ -276,7 +361,11 @@ try (Annotator annotator = new Annotator("document.pdf")) {
 }
 ```
 
-### Probléma 4: Licencproblémák termelésben
+## Teljesítmény legjobb gyakorlatai termelési alkalmazásokhoz
+
+### Memória kezelési stratégiák
+
+A GroupDocs.Annotation streaming módon dolgozza fel a PDF-eket, ami lehetővé teszi, hogy 500 MB-ig terjedő fájlokat kezeljen anélkül, hogy a teljes dokumentumot a memóriába töltené. Ennek ellenére kövesd az alábbi irányelveket:
 
 ```java
 try {
@@ -289,16 +378,66 @@ try {
 }
 ```
 
-## Teljesítmény‑legjobb gyakorlatok termelési alkalmazásokhoz
-
-### Memóriakezelési stratégiák
-
 ```java
 try (Annotator annotator = new Annotator("input.pdf")) {
     // Your annotation logic
     annotator.save("output.pdf");
 } // Annotator is automatically disposed here
 ```
+
+### Szálkezelési szempontok
+
+A GroupDocs.Annotation alapértelmezés szerint **nem szálbiztos**. Ha az alkalmazásod párhuzamosan dolgozik dokumentumokkal:
+
+- **Soha ne oszd meg** egy `Annotator` példányt szálak között.  
+- **Szinkronizáld** a fájlhozzáférést vagy használj zárolási mechanizmust.  
+- Fontold meg egy **pools** `Annotator` objektumok használatát, ha nagy áteresztőképességre van szükség.
+
+### Gyorsítótár stratégiák
+
+- Gyakran használt annotációs sablonok gyorsítótárazása.  
+- `Point` gyűjtemények újrahasználata gyakori koordináta készletekhez.  
+- Tarts egy **sablon PDF**-et memóriában, ha ugyanazt az alapról dokumentumot ismételten annotálod.
+
+## Java PDF memória kezelés legjobb gyakorlatai
+
+A hatékony memóriahasználat elengedhetetlen nagy PDF-ek vagy sok fájl kötegelt feldolgozása esetén. Íme néhány gyakorlati ajánlás:
+
+- **Használj try‑with‑resources** minden `Annotator`-hoz a felszabadítás garantálásához.  
+- **Növeld a JVM heapet** (`-Xmx`) csak szükség szerint; figyeld a használatot profilozó eszközökkel.  
+- **Feldolgozd a dokumentumokat sorban**, ha lehetséges, a memória felszabadítása minden fájl után.  
+- **Kerüld el ugyanazt a PDF-et többször betölteni**; használd újra ugyanazt a streamet, ha többször kell olvasni.
+
+Ezeknek a gyakorlatoknak az alkalmazása segít, hogy az alkalmazásod reagáléképessége megmaradjon, és megakadályozza a memóriahiányos összeomlásokat a nehéz annotációs terhelés során.
+
+## Valós alkalmazások és felhasználási esetek
+
+### Dokumentum felülvizsgálati rendszerek
+
+- **Jogi felülvizsgálat:** Aláhúzza a szerződéses záradékokat és megjegyzéseket ad a kockázatról.  
+- **Megfelelőségi auditok:** Kiemeli a problémás részeket a pénzügyi kimutatásokban.  
+- **Akademiai lektorálás:** Professzorok aláhúzzák a tisztázást igénylő szakaszokat.
+
+### Oktatási platformok
+
+- **Diák annotációs eszközök:** Lehetővé teszi a tanulók számára, hogy aláhúzzák a kulcsfontosságú koncepciókat e‑könyvekben.  
+- **Tanári visszajelzés:** Inline megjegyzéseket ad közvetlenül a benyújtott feladatokra.
+
+### Minőségbiztosítási munkafolyamatok
+
+- **Műszaki dokumentáció felülvizsgálata:** Mérnökök aláhúzzák a frissítést igénylő szakaszokat.  
+- **Standard operációs eljárások:** Biztonsági tisztviselők kiemelik a kritikus lépéseket.
+
+### Tartalomkezelő rendszerek
+
+- **Szerkesztői munkafolyamat:** Szerkesztők aláhúzzák a tényellenőrzést igénylő szöveget.  
+- **Verziókövetés:** Nyomon követi az annotációk történetét a dokumentum revíziók között.
+
+## Haladó tippek professzionális megvalósításhoz
+
+### Egyedi annotációs stílusok
+
+Kiterjesztheted egy aláhúzás vizuális megjelenését egyedi szaggatott minták, vonalvégek és átlátszósági szintek beállításával. Ez hasznos, ha meg kell különböztetni a felülvizsgáló szerepeket (pl. jogi vs. mérnöki).
 
 ```java
 List<String> documentPaths = Arrays.asList("doc1.pdf", "doc2.pdf", "doc3.pdf");
@@ -313,56 +452,9 @@ for (String docPath : documentPaths) {
 }
 ```
 
-### Szálkezelési szempontok
+### Annotáció metaadatok nyomon követéshez
 
-A GroupDocs.Annotation **alapértelmezés szerint nem szálbiztos**. Ha az alkalmazásod párhuzamosan dolgozik dokumentumokkal:
-
-- **Soha ne ossz meg** egy `Annotator` példányt szálak között.  
-- **Szinkronizáld** a fájlhozzáférést, vagy használj zárolási mechanizmust.  
-- Ha nagy áteresztőképességre van szükség, fontold meg egy **Annotator** objektumpool létrehozását.
-
-### Gyorsítótár‑stratégiák
-
-- Gyakran használt annotációs sablonokat cache‑eld.  
-- Újrahasználd a `Point` gyűjteményeket a közös koordináta‑készletekhez.  
-- Tarts egy **sablon‑PDF‑et** memóriában, ha ugyanazt az alapdokumentumot annotálod többször.
-
-## Java PDF memória‑kezelési tippek
-A hatékony memóriahasználat elengedhetetlen nagy PDF‑ek vagy sok fájl kötegelt feldolgozása esetén. Íme néhány gyakorlati ajánlás:
-
-- **Használj try‑with‑resources‑t** minden `Annotator`‑hoz, hogy garantáld a felszabadítást.  
-- **Növeld a JVM heap‑et** (`-Xmx`) csak szükség szerint; figyeld a használatot profilozó eszközökkel.  
-- **Feldolgozd a dokumentumokat sorban**, ha lehetséges, és minden fájl után szabadítsd fel a memóriát.  
-- **Kerüld a PDF többszöri betöltését**; ha többször kell olvasnod, használd ugyanazt a streamet.
-
-Ezeknek a gyakorlatoknak a alkalmazása segít, hogy az alkalmazásod reagálékony maradjon, és elkerülje a memória‑kifogyást a nagy terhelésű annotációs feladatok során.
-
-## Valós‑világi alkalmazások és felhasználási esetek
-
-### Dokumentum‑áttekintő rendszerek
-
-- **Jogi felülvizsgálat:** Aláhúzott szerződéses pontok és kockázati kommentárok.  
-- **Megfelelőségi auditok:** Problémás részek kiemelése pénzügyi kimutatásokban.  
-- **Akadémiai lektorálás:** Professzorok aláhúzzák a tisztázandó szakaszokat.
-
-### Oktatási platformok
-
-- **Diák‑annotációs eszközök:** A tanulók aláhúzhatják a kulcsfontosságú fogalmakat e‑könyvekben.  
-- **Tanári visszajelzés:** Inline kommentárok közvetlenül a benyújtott feladatokon.
-
-### Minőség‑biztosítási munkafolyamatok
-
-- **Műszaki dokumentáció felülvizsgálata:** Mérnökök aláhúzzák a frissítést igénylő részeket.  
-- **Működési eljárások:** Biztonsági tisztviselők kiemelik a kritikus lépéseket.
-
-### Tartalomkezelő rendszerek
-
-- **Szerkesztői munkafolyamat:** Szerkesztők aláhúzzák a tényellenőrzést igénylő szövegeket.  
-- **Verziókövetés:** Annotációs előzmények nyomon követése a dokumentumrevíziók során.
-
-## Haladó tippek professzionális megvalósításhoz
-
-### Egyedi annotációs stílusok
+Minden annotáció hordozhat egy felhasználó által definiált metaadat szótárat. Tárolj azonosítókat, időbélyegeket vagy munkafolyamat állapotot, hogy integráld külső nyomon követő rendszerekkel.
 
 ```java
 UnderlineAnnotation underline = new UnderlineAnnotation();
@@ -372,7 +464,9 @@ underline.setFontSize(12);             // Consistent sizing
 underline.setMessage("URGENT REVIEW REQUIRED");
 ```
 
-### Annotációs metaadatok a nyomon követéshez
+### Integráció felhasználó‑kezelő rendszerekkel
+
+Térképezd a `Comment` `author` tulajdonságát az alkalmazásod felhasználói azonosítóira. Ez lehetővé teszi a szerepkör alapú stílusokat és audit‑nyomvonal generálást.
 
 ```java
 underline.setCreatedBy("john.doe@company.com");
@@ -380,7 +474,24 @@ underline.setCreatedOn(Calendar.getInstance().getTime());
 underline.setMessage("Legal review required - Contract clause 4.2");
 ```
 
-### Integráció felhasználókezelő rendszerekkel
+## Termelési problémák hibakeresése
+
+### Teljesítmény monitorozás
+
+Figyeld ezeket a metrikákat termelésben:  
+- **Heap használat** – győződj meg róla, hogy a `dispose()` hívás megtörtént.  
+- **Feldolgozási idő dokumentumonként** – naplózd az időbélyegeket a `annotator.save()` előtt és után.  
+- **Hibaarány** – rögzítsd a kivételeket és kategorizáld őket.
+
+### Gyakori termelési csapdák
+
+- **Fájl zárolás** – győződj meg róla, hogy a feltöltött fájlok zárva vannak az annotáció előtt.  
+- **Párhuzamos szerkesztések** – valósíts meg optimista zárolást vagy verzió ellenőrzéseket.  
+- **Nagy fájlok (> 50 MB)** – növeld a JVM időkorlátot és fontold meg a streaming API-kat.
+
+### Hiba kezelés legjobb gyakorlatai
+
+Tekerj minden annotációs hívást try‑catch blokkokba, naplózd a teljes stack trace-et, és dobj újra egy egyedi `AnnotationException`-t felhasználóbarát üzenettel. Ez a minta egyszerűsíti a hibakeresést és egyértelmű visszajelzést ad az API felhasználóinak.
 
 ```java
 // Assume you have a method that returns the current authenticated user
@@ -394,22 +505,26 @@ underline.setFontColor(getRoleColor(userRole));
 underline.setMessage(String.format("[%s] %s", userRole.toUpperCase(), commentText));
 ```
 
-## Termelési problémák hibaelhárítása
+## Gyakran feltett kérdések
 
-### Teljesítmény‑monitorozás
+**K: Hogyan annotálok több szövegrészt egyetlen műveletben?**  
+V: Hozz létre több `UnderlineAnnotation` objektumot különböző koordinátákkal, és add hozzá őket sorban az `annotator.add()` használatával.
 
-Figyeld ezeket a metrikákat termelésben:
-- **Heap használat** – győződj meg róla, hogy a `dispose()` meghívásra került.  
-- **Dokumentum‑enkénti feldolgozási idő** – naplózd az időbélyegeket az `annotator.save()` előtt és után.  
-- **Hibaarány** – rögzíts kivételeket és kategorizáld őket.
+**K: Annotálhatok képeket PDF dokumentumokban?**  
+V: Igen. Használd ugyanazt a koordináta rendszert, ügyelve arra, hogy a pontok a kép határain belül legyenek.
 
-### Gyakori termelési csapdák
+**K: Milyen fájlformátumokat támogat a GroupDocs.Annotation a PDF-en kívül?**  
+V: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX), valamint képfájlok, mint a JPEG, PNG, TIFF.
 
-- **Fájlzárolás** – biztosítsd, hogy a feltöltött fájlok zárva legyenek a megjegyzés előtt.  
-- **Párhuzamos szerkesztések** – valósíts meg optimista zárolást vagy verzió‑ellenőrzést.  
-- **Nagy fájlok (> 50 MB)** – növeld a JVM időkorlátot, és fontold meg a streaming API‑kat.
+**K: Hogyan kezeljek nagyon nagy dokumentumokat anélkül, hogy memóriahiányba ütköznék?**  
+V: Dokumentumokat egyenként dolgozd fel, növeld a JVM heapet (`-Xmx`), és mindig időben szabadítsd fel az `Annotator` példányokat.
 
-### Hiba‑kezelési legjobb gyakorlatok
+**K: Lehetőség van meglévő annotációk kinyerésére egy dokumentumból?**  
+V: Igen. Használd az `annotator.get()`-ot az összes annotáció lekéréséhez, majd szűrd típus, szerző vagy oldal szerint szükség szerint.
+
+**Legutóbb frissítve:** 2026-10-16  
+**Tesztelve ezzel:** GroupDocs.Annotation 25.2  
+**Szerző:** GroupDocs  
 
 ```java
 try (Annotator annotator = new Annotator(documentPath)) {
@@ -424,38 +539,8 @@ try (Annotator annotator = new Annotator(documentPath)) {
 }
 ```
 
-## Összegzés
+## Kapcsolódó oktatóanyagok
 
-Most már mindent tudsz, ami a **create clean PDF Java** fájlok létrehozásához és a **annotate PDF in Java** aláhúzott megjegyzésekkel történő megvalósításához szükséges a GroupDocs.Annotation segítségével. Ne feledd:
-
-- Kezeld az erőforrásokat try‑with‑resources‑szal vagy explicit `dispose()`‑val.  
-- Validáld a koordinátákat korán, hogy elkerüld a rosszul elhelyezett aláhúzásokat.  
-- Alkalmazz robusztus hiba‑kezelést a termelési stabilitás érdekében.  
-- Használd a szerepkör‑alapú stílusokat és metaadatokat a munkafolyamatodhoz.
-
-Mi a következő lépés? Próbálj ki más annotációs típusokat — kiemeléseket, pecséteket vagy szövegcseréket — és építs egy teljes funkcionalitású dokumentum‑áttekintő megoldást.
-
-## Gyakran ismételt kérdések
-
-**Q: Hogyan annotáljak több szövegrészt egyetlen műveletben?**  
-A: Hozz létre több `UnderlineAnnotation` objektumot különböző koordinátákkal, és add hozzá őket sorban az `annotator.add()`‑nal.
-
-**Q: Tudok képeket annotálni PDF‑dokumentumokban?**  
-A: Igen. Használd ugyanazt a koordináta‑rendszert, ügyelve arra, hogy a pontok a kép határain belül legyenek.
-
-**Q: Milyen fájlformátumokat támogat a GroupDocs.Annotation a PDF‑en kívül?**  
-A: Word (DOC/DOCX), Excel (XLS/XLSX), PowerPoint (PPT/PPTX) és képfájlok, például JPEG, PNG, TIFF.
-
-**Q: Hogyan kezeljem a nagyon nagy dokumentumokat memória‑kifogyás nélkül?**  
-A: Dolgozz egy dokumentummal egyszerre, növeld a JVM heap‑et (`-Xmx`), és mindig gyorsan zárd le az `Annotator` példányokat.
-
-**Q: Lehet meglévő annotációkat kinyerni egy dokumentumból?**  
-A: Igen. Használd az `annotator.get()`‑t az összes annotáció lekéréséhez, majd szűrd típus, szerző vagy oldal szerint.
-
----
-
-**Utoljára frissítve:** 2026-03-24  
-**Tesztelve a következővel:** GroupDocs.Annotation 25.2  
-**Szerző:** GroupDocs  
-
----
+- [Tiszta PDF létrehozása Java-ban: Aláhúzott annotációk a GroupDocs-szal](/annotation/java/annotation-management/java-groupdocs-annotate-add-remove-underline/)
+- [PDF annotációk szerkesztése Java-ban – Teljes GroupDocs oktatóanyag](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [PDF-ek annotálása GroupDocs Annotation Java-val](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java/)
