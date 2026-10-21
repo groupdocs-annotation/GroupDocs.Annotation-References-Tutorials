@@ -108,6 +108,22 @@ Create, update, delete, and filter annotations programmatically. You can also at
 
 Load the target PDF with `AnnotationApi.load("sample.pdf")`, instantiate the desired annotation objects (e.g., `HighlightAnnotation`, `TextAnnotation`), set their properties such as color, author, and position, then call `AnnotationApi.save("output.pdf")`. This end‑to‑end flow lets you **create pdf annotations** in just a few lines of Java code while handling large files efficiently.
 
+```java
+// Load a PDF document
+AnnotationApi api = new AnnotationApi();
+api.load("sample.pdf");
+
+// Add a highlight annotation
+HighlightAnnotation highlight = new HighlightAnnotation();
+highlight.setPageNumber(1);
+highlight.setColor(Color.YELLOW);
+highlight.setRect(new Rectangle(100, 100, 200, 120));
+api.addAnnotation(highlight);
+
+// Save the annotated PDF
+api.save("output.pdf");
+```
+
 - **Definition anchor:** `HighlightAnnotation` represents a text‑highlight markup with customizable color and opacity.  
 - **Definition anchor:** `TextAnnotation` adds a comment box attached to a specific location in the document.
 
@@ -141,7 +157,7 @@ Learn how to programmatically insert, position, and customize image annotations 
 
 Create interactive hyperlinks and linked content within your documents using GroupDocs.Annotation's comprehensive link annotation capabilities.
 
-### [Form Field Annotations](./form-field-annotations)
+### [Form field annotations](./form-field-annotations)
 
 Implement interactive form fields including checkboxes, buttons, dropdowns, and text inputs to create fillable documents and forms.
 
