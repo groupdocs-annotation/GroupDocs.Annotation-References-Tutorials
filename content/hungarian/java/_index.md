@@ -1,8 +1,8 @@
 ---
-date: 2026-05-16
-description: Ismerje meg, hogyan lehet PDF Java dokumentumokat annotálni a GroupDocs.Annotation
-  for Java API használatával. Tartalmazza az image annotation java, lépésről‑lépésre
-  útmutatókat és kódrészleteket.
+date: 2026-10-21
+description: Hogyan annotáljunk pdf-et a GroupDocs.Annotation for Java segítségével.
+  Tanulja meg, hogyan adhat hozzá highlights, watermarks, images és egyebeket több
+  mint 50 formátumban.
 is_root: true
 keywords:
 - how to annotate pdf
@@ -11,14 +11,20 @@ keywords:
 - image annotation java
 - create pdf annotations
 - load documents java
+lastmod: 2026-10-21
 linktitle: GroupDocs.Annotation for Java oktatóanyagok
+og_description: Hogyan annotáljunk pdf-et a GroupDocs.Annotation for Java segítségével.
+  Adj hozzá highlights, watermarks, images és egyebeket több mint 50 formátumban néhány
+  másodperc alatt.
+og_image_alt: Guide to annotating PDF files in Java with GroupDocs.Annotation
+og_title: Hogyan annotáljunk pdf-et – Java dokumentum annotációs API útmutató
 schemas:
 - author: GroupDocs
-  dateModified: '2026-05-16'
+  dateModified: '2026-10-21'
   description: Learn how to annotate PDF Java documents using GroupDocs.Annotation
     for Java API. Includes image annotation java, step‑by‑step tutorials and code
     examples.
-  headline: How to Annotate PDF – Java Document Annotation API | GroupDocs.Annotation
+  headline: How to annotate pdf – Java document annotation API | GroupDocs.Annotation
   type: TechArticle
 - questions:
   - answer: PDFs, DOCX, XLSX, PPTX, HTML, images, and more.
@@ -33,133 +39,165 @@ schemas:
   - answer: From the official GroupDocs download page (link below).
     question: Where can I get a trial?
   type: FAQPage
-title: PDF annotálása – Java dokumentum megjegyzés API | GroupDocs.Annotation
+tags:
+- annotate pdf
+- groupdocs annotation
+- java document processing
+- pdf annotation library java
+- image annotation java
+title: Hogyan annotáljunk pdf-et – Java dokumentum annotációs API | GroupDocs.Annotation
 type: docs
 url: /hu/java/
 weight: 10
 ---
 
-# GroupDocs.Annotation for Java - Dokumentum Megjegyzés API Oktatóanyagok
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Ha **hogyan annotáljon PDF** fájlokat Java-ban keres, a GroupDocs.Annotation for Java teljes megoldást nyújt. Ez a hatékony dokumentum annotáció API lehetővé teszi, hogy **annotate PDF Java** dokumentumokat, valamint Word, Excel, PowerPoint, képek és számos más formátumot annotáljon. Az annotációs képességek közvetlen beágyazásával Java alkalmazásaiba együttműködő felülvizsgálati eszközöket, jogi jelölési megoldásokat vagy bármilyen munkafolyamatot építhet, amely gazdag dokumentuminterakciót igényel – anélkül, hogy külső szoftverre támaszkodna.
+# Hogyan annotáljunk pdf – Java dokumentum annotációs API
 
-## Gyors Válaszok
-- **Mit annotálhatok?** PDFs, DOCX, XLSX, PPTX, HTML, képek és egyebek.  
-- **Szükségem van külső eszközökre?** Nem — minden egyetlen JAR-ból fut.  
-- **Milyen annotációtípusok támogatottak?** Szöveges kiemelések, aláhúzások, áthúzások, alakzatok, nyilak, vízjelek, képannotációk, linkek és űrlapmezők.  
-- **Platformfüggetlen?** Igen — bármely Java-t támogató operációs rendszeren működik.  
-- **Hol szerezhetek próba verziót?** Az hivatalos GroupDocs letöltési oldalról (link lent).
+Ha közvetlenül Java-ból szeretne **hogyan annotáljunk pdf** fájlokat, a GroupDocs.Annotation for Java egy komplett, egy‑JAR megoldást kínál. Ez a hatékony dokumentum‑annotációs API lehetővé teszi, hogy megjegyzéseket, kiemeléseket, vízjeleket, képeket és számos egyéb jelölést adjunk PDF‑ekhez, Word, Excel, PowerPoint és kép fájlokhoz – mindezt külső függőségek nélkül. Ezeknek a képességeknek a beágyazása Java‑alkalmazásaiba együttműködő felülvizsgálati eszközöket, jogi jelölési munkafolyamatokat vagy bármilyen olyan forgatókönyvet tesz lehetővé, ahol gazdag dokumentum‑interakcióra van szükség.
 
-## Miért használja a GroupDocs.Annotation for Java-t **annotate PDF Java** fájlokhoz?
+## Gyors válaszok
+- **Mit annotálhatok?** PDFs, DOCX, XLSX, PPTX, HTML, images, and more.  
+- **Szükségem van külső eszközökre?** No—everything runs from a single JAR.  
+- **Milyen annotációs típusok támogatottak?** Text highlights, underlines, strike‑outs, shapes, arrows, watermarks, image annotations, links, and form fields.  
+- **Platformfüggetlen?** Yes—works on any OS with Java support.  
+- **Hol szerezhetek próbaverziót?** From the official GroupDocs download page (link below).
 
-A GroupDocs.Annotation for Java-t akkor kell használnia, ha megbízható, egyetlen JAR megoldásra van szüksége, amely teljes körű PDF annotációs képességeket ad külső függőségek nélkül. Nagy PDF-eket (akár 500 oldalig) kevesebb mint 2 másodperc alatt dolgoz fel, kevesebb mint 150 MB RAM-ot használ, és több mint 50 fájlformátumot támogat, így ideális vállalati szintű felülvizsgálati és jelölési munkafolyamatokhoz.
+## Mi az a PDF annotáció?
+A PDF annotáció a vizuális vagy szöveges jelölés hozzáadásának folyamata – például kiemelések, megjegyzések, alakzatok vagy képek – egy meglévő PDF dokumentumhoz anélkül, hogy megváltoztatná az eredeti tartalmat. Az annotációk külön objektumokként tárolódnak, lehetővé téve a felülvizsgálók számára az együttműködést, a forrásfájl megőrzését, és később a jelölés kinyerését vagy eltávolítását igény szerint.
 
-- **Nulla függőség** – egyetlen JAR egyszerűsíti a telepítést.  
-- **Magas teljesítmény** – egy 500 oldalas PDF-et annotál kevesebb mint 2 másodperc alatt, miközben <150 MB memóriát használ.  
-- **Gazdag funkciókészlet** – az egyszerű megjegyzésektől a komplex grafikus jelölésig, beleértve a **java add watermark** és **java highlight text** képességeket.  
-- **Vállalati szintű licencelés** – rugalmas lehetőségek kereskedelmi projektekhez.  
+## Miért használjuk a GroupDocs.Annotation for Java‑t PDF fájlok annotálásához?
+A GroupDocs.Annotation for Java vállalati szintű teljesítményt nyújt: egy 500 oldalas PDF‑et **2 másodperc** alatt képes feldolgozni, kevesebb mint **150 MB RAM**-ot használ, és **több mint 50 fájlformátumot** támogat. Ez ideálissá teszi nagy áteresztőképességű felülvizsgálati csővezetékekhez, jogi e‑felfedezéshez és bármely olyan alkalmazáshoz, amely gyors, memóriahatékony jelölést igényel.
+- **Nulla külső függőség** – egyetlen JAR egyszerűsíti a telepítést szervereken és konténerekben.  
+- **Magas áteresztőképesség** – nagy PDF‑ek (akár 500 oldal) annotálása 2 másodperc alatt, miközben a memóriahasználat 150 MB alatt marad.  
+- **Gazdag funkciókészlet** – tartalmazza a java add watermark, java highlight text, image annotation java és shape annotation képességeket.  
+- **Platformfüggetlen licenc** – működik Windows, Linux és macOS rendszereken bármely Java 8+ futtatókörnyezettel.
 
-## Alapvető Képességek Áttekintése
+## Alapvető képességek áttekintése
 
-`GroupDocs.Annotation for Java` könyvtár egy Java SDK, amely átfogó API-t biztosít annotációk hozzáadásához, szerkesztéséhez és kezeléséhez **több mint 50 dokumentumformátum** esetén. Lehetővé teszi PDF-ekkel, Office fájlokkal, képekkel és egyebekkel való munkát, mindezt a Java kódon belül.
+A `GroupDocs.Annotation for Java` SDK egységes API‑t biztosít az annotációk hozzáadásához, szerkesztéséhez és kezeléséhez **több mint 50 dokumentumformátum** esetén. Elrejti a lapozás, megjelenítés és tárolás részleteit, így az üzleti logikára koncentrálhat.
 
-### Hogyan **annotate PDF Java** dokumentumokat használja a GroupDocs.Annotation-nal
-`AnnotationApi` osztály olyan metódusokat biztosít, mint a `load` a dokumentum megnyitásához és a `save` az annotált fájl írásához.  
-`HighlightAnnotation` egy szöveges kiemelés jelölést képvisel testreszabható színnel és átlátszósággal.  
-`TextAnnotation` egy megjegyzésdobozot ad hozzá a dokumentum egy helyéhez.
+### Hogyan annotáljunk PDF Java dokumentumokat a GroupDocs.Annotation segítségével
 
-Az API egyszerű munkafolyamatot kínál: betölti a dokumentumot, létrehozza az annotáció objektumot, beállítja a megjelenését, és elmenti az eredményt. Megadhat színeket, szerzőneveket és pozíciókat, a könyvtár automatikusan kezeli az oldalszámozást és a renderelést. Minta kódok a kapcsolódó oktatóanyagokban találhatók, hogy bemutassák az egyes lépéseket.
+`AnnotationApi` az összes annotációs művelet belépési pontja.  
 
-### Kép annotáció Java – Grafika hozzáadása a dokumentumokhoz
-Beágyazhat raszteres vagy vektorgrafikus képeket annotációként, pontosan elhelyezheti őket, és akár külső erőforrásokra is hivatkozhat. Ideális márkaépítéshez, vízjelekhez vagy vizuális megjegyzésekhez.
+**Definition anchor:** `AnnotationApi` az elsődleges osztály, amely betölti, módosítja és menti a dokumentumokat annotációkkal a GroupDocs.Annotation for Java-ban.  
 
-### Annotációk hozzáadása Java – Alap szöveges és grafikus jelölés
-Az egyszerű kiemelésektől a komplex alakzatokig a könyvtár egységes modellt kínál minden annotációtípushoz, így könnyű váltani a szöveges és a grafikus jelölés között ugyanabban a dokumentumban.
+Betölt egy dokumentumot, létrehozza az annotációs objektumokat, beállítja azok megjelenését, majd elmenti az eredményt. A könyvtár automatikusan kezeli az oldalkoordinátákat, a méretezést és a megjelenítést.
 
-### Dokumentumok betöltése Java – Hatékony dokumentum beolvasás
-A GroupDocs.Annotation támogatja a betöltést helyi fájlokból, adatfolyamokból, felhőtárolókból (Amazon S3, Azure Blob), URL-ekből és FTP szerverekről. Ez a rugalmasság biztosítja, hogy **load documents java** bármely forrásból betölthesse, amelyet az alkalmazása használ.
+### Image annotation java – grafika hozzáadása a dokumentumokhoz
 
-### Annotációkezelés Java – Az annotáció életciklusának irányítása
-Programozottan létrehozhat, frissíthet, törölhet és szűrhet annotációkat. Egyedi metaadatokat is csatolhat, szerzői információkat állíthat be, és biztonsági szabályokat érvényesíthet.
+Beágyazhat raszter vagy vektor képeket annotációként, pontosan elhelyezheti őket, és akár külső erőforrásokra is hivatkozhat. Ez ideális a márkaépítéshez, vízjelekhez vagy vizuális megjegyzésekhez.
 
-## Hogyan annotáljon PDF-et Java-val a GroupDocs.Annotation segítségével?
+### Add annotations java – alapvető szöveges és grafikus jelölés
 
-`AnnotationApi` osztály olyan metódusokat biztosít, mint a `load` a dokumentum megnyitásához és a `save` az annotált fájl írásához.  
-`HighlightAnnotation` egy szöveges kiemelés jelölést képvisel testreszabható színnel és átlátszósággal.  
-`TextAnnotation` egy megjegyzésdobozot ad hozzá a dokumentum egy helyéhez.
+Az egyszerű kiemelésektől a komplex alakzatokig a könyvtár egységes modellt kínál minden annotációs típushoz, megkönnyítve a szöveges és grafikus jelölések közti váltást ugyanabban a dokumentumban.
 
-Töltse be a cél PDF-et a `AnnotationApi.load("sample.pdf")` segítségével, hozza létre a kívánt annotáció objektumokat (pl. `HighlightAnnotation`, `TextAnnotation`), állítsa be a tulajdonságokat, mint szín, szerző és pozíció, majd hívja a `AnnotationApi.save("output.pdf")`-t. Ez az vég‑től‑végig folyamat lehetővé teszi, hogy **create pdf annotations** csak néhány Java kódsorral, miközben hatékonyan kezeli a nagy fájlokat.
+### Load documents java – hatékony dokumentum betöltés
 
-## GroupDocs.Annotation for Java Oktatóanyagok
+A GroupDocs.Annotation támogatja a betöltést helyi fájlokból, adatfolyamokból, felhő tárolóból (Amazon S3, Azure Blob), URL‑ekből és FTP‑szerverekről. Ez a rugalmasság biztosítja, hogy **load documents java** bármely forrásból betölthesse, amelyet az alkalmazása használ.
 
-### [Licencelés és Konfiguráció](./licensing-and-configuration)
-Learn how to set up licenses, configure GroupDocs.Annotation options, and integrate the library into your Java projects with complete code examples.
+### Annotation management java – az annotáció életciklusának kezelése
 
-### [Dokumentum Betöltés](./document-loading)
-Discover multiple methods for loading documents into GroupDocs.Annotation from various sources including local storage, streams, cloud platforms (Amazon S3, Azure), URLs, and FTP servers.
+Programozottan hozhat létre, frissíthet, törölhet és szűrhet annotációkat. Egyedi metaadatokat is csatolhat, beállíthatja a szerző információkat, és érvényesítheti a biztonsági szabályokat.
 
-### [Dokumentum Mentés](./document-saving)
-Master techniques for saving annotated documents with various output options, formats, and optimization settings for your Java applications.
+## Hogyan annotáljunk PDF-et Java-val a GroupDocs.Annotation segítségével?
 
-### [Szöveges Annotációk](./text-annotations)
-Implement text highlighting, underline, strikeout, replacement, and redaction annotations with complete Java code examples and customization options.
+Töltse be a cél PDF‑et a `AnnotationApi.load("sample.pdf")` segítségével, hozza létre a kívánt annotációs objektumokat (pl. `HighlightAnnotation`, `TextAnnotation`), állítsa be azok tulajdonságait, mint szín, szerző és pozíció, majd hívja meg a `AnnotationApi.save("output.pdf")`-t. Ez az vég‑végi folyamat lehetővé teszi, hogy **create pdf annotations** csak néhány Java‑kódsorral készítsen, miközben hatékonyan kezeli a nagy fájlokat.
+- **Definition anchor:** `HighlightAnnotation` egy szöveges kiemelés jelölést képvisel, amely testreszabható színnel és átlátszósággal rendelkezik.  
+- **Definition anchor:** `TextAnnotation` egy megjegyzésdobozot ad hozzá, amely a dokumentum egy adott helyéhez van csatolva.
 
-### [Grafikus Annotációk](./graphical-annotations)
-Add professional shapes, arrows, polygons, distance measurements and other graphical elements to documents with precise control over appearance and positioning.
+## GroupDocs.Annotation for Java oktatóanyagok
 
-### [Kép Annotációk](./image-annotations)
-Learn how to programmatically insert, position, and customize image annotations from both local and remote sources in different document formats.
+### [Licenc és konfiguráció](./licensing-and-configuration)
 
-### [Link Annotációk](./link-annotations)
-Create interactive hyperlinks and linked content within your documents using GroupDocs.Annotation's comprehensive link annotation capabilities.
+Ismerje meg, hogyan állíthat be licenceket, konfigurálhatja a GroupDocs.Annotation beállításait, és integrálhatja a könyvtárat Java‑projektjeibe teljes kódrészletekkel.
 
-### [Űrlapmező Annotációk](./form-field-annotations)
-Implement interactive form fields including checkboxes, buttons, dropdowns, and text inputs to create fillable documents and forms.
+### [Dokumentum betöltése](./document-loading)
+
+Fedezze fel a dokumentumok betöltésének több módszerét a GroupDocs.Annotation-ba különböző forrásokból, beleértve a helyi tárolót, adatfolyamokat, felhőplatformokat (Amazon S3, Azure), URL‑eket és FTP‑szervereket.
+
+### [Dokumentum mentése](./document-saving)
+
+Mesteri technikákat tanuljon a jelölt dokumentumok mentéséhez különböző kimeneti opciókkal, formátumokkal és optimalizálási beállításokkal Java‑alkalmazásaihoz.
+
+### [Szöveges annotációk](./text-annotations)
+
+Valósítsa meg a szövegkiemelést, aláhúzást, áthúzást, cserét és redakciós annotációkat teljes Java‑kódrészletekkel és testreszabási lehetőségekkel.
+
+### [Grafikus annotációk](./graphical-annotations)
+
+Adjon hozzá professzionális alakzatokat, nyilakat, sokszögeket, távolságméréseket és egyéb grafikus elemeket a dokumentumokhoz a megjelenés és elhelyezés pontos szabályozásával.
+
+### [Kép annotációk](./image-annotations)
+
+Ismerje meg, hogyan szúrhat be, helyezhet el és testreszabhat kép‑annotációkat programozottan helyi és távoli forrásokból különböző dokumentumformátumokban.
+
+### [Link annotációk](./link-annotations)
+
+Hozzon létre interaktív hiperhivatkozásokat és összekapcsolt tartalmakat dokumentumaiban a GroupDocs.Annotation átfogó link‑annotációs képességeivel.
+
+### [Űrlapmező annotációk](./form-field-annotations)
+
+Valósítsa meg az interaktív űrlapmezőket, beleértve a jelölőnégyzeteket, gombokat, legördülő listákat és szövegbeviteli mezőket, hogy kitölthető dokumentumokat és űrlapokat hozzon létre.
 
 ### [Annotációkezelés](./annotation-management)
-Master the full annotation lifecycle with tutorials on adding, removing, updating, and filtering annotations programmatically in your Java applications.
+
+Mesteri módon kezelje az annotáció teljes életciklusát olyan oktatóanyagokkal, amelyek a hozzáadásra, eltávolításra, frissítésre és szűrésre fókuszálnak programozottan Java‑alkalmazásaiban.
 
 ### [Válaszkezelés](./reply-management)
-Implement collaborative document review with threaded comments, replies, and user‑based discussion capabilities in your document workflows.
 
-### [Dokumentum Információk](./document-information)
-Access and utilize document metadata, page metrics, content information, and format details to enhance your document processing applications.
+Valósítsa meg az együttműködő dokumentum‑felülvizsgálatot szálas megjegyzésekkel, válaszokkal és felhasználó‑alapú beszélgetési lehetőségekkel dokumentumfolyamataiban.
 
-### [Dokumentum Előnézet](./document-preview)
-Generate high‑quality document previews with and without annotations, control preview resolution, and create custom document viewing experiences.
+### [Dokumentum információk](./document-information)
 
-### [Haladó Funkciók](./advanced-features)
-Complete tutorials for implementing advanced annotation capabilities, customizations, and specialized features with GroupDocs.Annotation for Java.
+Érje el és használja a dokumentum metaadatait, oldalmetrikáit, tartalmi információkat és formátum részleteket, hogy javítsa dokumentumfeldolgozó alkalmazásait.
 
-## Kezdjen el dolgozni a GroupDocs.Annotation for Java-val
+### [Dokumentum előnézet](./document-preview)
 
-Töltse le a [legújabb verziót](https://releases.groupdocs.com/annotation/java/) vagy kezdje el a [ingyenes próba](https://releases.groupdocs.com/annotation/java/) verzióval, hogy felfedezze a GroupDocs.Annotation for Java teljes képességeit.
+Generáljon magas minőségű dokumentum előnézeteket annotációkkal és anélkül, szabályozza az előnézet felbontását, és hozzon létre egyedi dokumentum‑megtekintési élményeket.
 
-## Gyakran Ismételt Kérdések
+### [Haladó funkciók](./advanced-features)
 
-**K:** Használhatom a GroupDocs.Annotation-t kereskedelmi Java alkalmazásban?  
-**V:** Igen. A kereskedelmi licenc szükséges a termeléshez, és egy ingyenes próba elérhető értékeléshez.
+Teljes oktatóanyagok a haladó annotációs képességek, testreszabások és speciális funkciók megvalósításához a GroupDocs.Annotation for Java-val.
 
-**K:** Támogatja a könyvtár a jelszóval védett PDF-eket?  
-**V:** Teljesen. Megadhatja a jelszót a dokumentum betöltésekor, és minden annotációs funkció elérhető marad.
+## Kezdje el a GroupDocs.Annotation for Java használatát
+
+Töltse le a [legújabb verziót](https://releases.groupdocs.com/annotation/java/) vagy kezdje el a [ingyenes próbaverziót](https://releases.groupdocs.com/annotation/java/) a GroupDocs.Annotation for Java teljes képességeinek felfedezéséhez.
+
+## Gyakran ismételt kérdések
+
+**K:** Használhatom a GroupDocs.Annotation‑t kereskedelmi Java‑alkalmazásban?  
+**V:** Igen. Kereskedelmi licenc szükséges a termelési használathoz, és ingyenes próbaverzió elérhető értékeléshez.
+
+**K:** Támogatja a könyvtár a jelszóval védett PDF‑eket?  
+**V:** Teljes mértékben. A dokumentum betöltésekor megadhatja a jelszót, és minden annotációs funkció elérhető marad.
 
 **K:** Mely Java verziók támogatottak?  
-**V:** Az API működik Java 8 és újabb verziókkal, beleértve a Java 11, 17 és későbbi LTS kiadásokat.
+**V:** Az API Java 8 és újabb verziókkal működik, beleértve a Java 11, 17 és későbbi LTS kiadásokat.
 
 **K:** Hogyan kezeljem hatékonyan a nagy PDF fájlokat?  
-**V:** Használja a streaming betöltési beállításokat, és engedélyezze a dokumentum optimalizálását mentéskor a memóriafogyasztás csökkentése érdekében.
+**V:** Használja a streaming betöltési opciókat, és engedélyezze a dokumentum optimalizálását mentéskor a memóriafogyasztás csökkentése érdekében.
 
 **K:** Lehetséges programozottan testreszabni az annotációk megjelenését?  
-**V:** Igen. Minden annotációtípus rendelkezik szín, átlátszóság, vonalvastagság, betűstílus stb. tulajdonságokkal.
+**V:** Igen. Minden annotációs típus tulajdonságokat biztosít a szín, átlátszóság, vonalvastagság, betűstílus és egyéb beállításokhoz.
+
+## Kapcsolódó oktatóanyagok
+
+- [PDF annotálása Java-val a GroupDocs Annotation dokumentum betöltésével](/annotation/java/document-loading/)
+- [Java PDF szöveg annotáció: Kereshető kiemelések hozzáadása a GroupDocs-szal](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
+- [Teljes útmutató – Hogyan mentse el a jelölt PDF-et a GroupDocs.Annotation for Java-val](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
 ---
 
-**Legutóbb frissítve:** 2026-05-16  
-**Tesztelve a következővel:** GroupDocs.Annotation for Java 23.12 (legújabb a írás időpontjában)  
+**Utoljára frissítve:** 2026-10-21  
+**Tesztelve:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
 **Szerző:** GroupDocs
 
-## Kapcsolódó Oktatóanyagok
-
-- [PDF Java annotálása a GroupDocs Annotation Dokumentum Betöltéssel](/annotation/java/document-loading/)
-- [Java PDF Szöveg Annotáció: Kereshető kiemelések hozzáadása a GroupDocs-szal](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
-- [Teljes útmutató – Hogyan mentse az annotált PDF-et a GroupDocs.Annotation for Java használatával](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

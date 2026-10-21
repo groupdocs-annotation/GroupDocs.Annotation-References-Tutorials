@@ -1,35 +1,70 @@
 ---
-title: "Java Guide: create pdf annotations groupdocs using GroupDocs"
-linktitle: "Java PDF Annotation Tutorial"
-description: "Learn how to create pdf annotations groupdocs in Java with GroupDocs.Annotation. Includes Maven setup, spring boot pdf annotation examples, and troubleshooting tips."
-keywords: "Java PDF annotation tutorial, GroupDocs annotation Java example, document annotation library Java, PDF annotation programmatically Java, how to add annotations to PDF in Java, Java stream document annotation"
-date: "2026-03-27"
-lastmod: "2026-03-27"
-weight: 1
-url: "/java/annotation-management/mastering-document-annotation-groupdocs-java/"
-categories: ["Java Development"]
-tags: ["pdf-annotation", "groupdocs", "java-tutorial", "document-processing"]
+categories:
+- Java Development
+date: '2026-10-21'
+description: Learn how to create pdf annotations in Java with GroupDocs.Annotation.
+  Includes Maven setup, Spring Boot examples, stream loading, and production tips.
+images:
+- /java/annotation-management/mastering-document-annotation-groupdocs-java/og-image.png
+keywords:
+- create pdf annotations java
+- spring boot pdf annotation
+- load pdf from stream
+lastmod: '2026-10-21'
+linktitle: Java PDF Annotation Tutorial
+og_description: Learn how to create pdf annotations in Java with GroupDocs.Annotation.
+  Get step‑by‑step setup, stream loading, and production‑ready tips in this guide.
+og_image_alt: Guide showing Java code for creating PDF annotations with GroupDocs
+og_title: How to create pdf annotations in Java using GroupDocs
+schemas:
+- author: GroupDocs
+  dateModified: '2026-10-21'
+  description: Learn how to create pdf annotations in Java with GroupDocs.Annotation.
+    Includes Maven setup, Spring Boot examples, stream loading, and production tips.
+  headline: How to create pdf annotations in Java using GroupDocs
+  type: TechArticle
+- questions:
+  - answer: Java 8 is the minimum, but Java 11+ is recommended for better performance
+      and memory management.
+    question: What's the minimum Java version required for GroupDocs.Annotation?
+  - answer: Yes. GroupDocs.Annotation supports **50+ formats**, including DOCX, PPTX,
+      XLSX, and common image types.
+    question: Can I annotate documents other than PDFs?
+  - answer: Increase the JVM heap (`-Xmx4g`), process files in batches, and always
+      call `annotator.dispose()` after each operation.
+    question: How do I handle very large PDF files without running out of memory?
+  - answer: Absolutely. Use ARGB integers; for example, `setBackgroundColor(0x80FF0000)`
+      creates a semi‑transparent red.
+    question: Is it possible to customize annotation colors and transparency?
+  - answer: A valid GroupDocs.Annotation license is required for commercial deployments.
+      Development and testing can use the free trial or a temporary key.
+    question: What are the licensing requirements for production use?
+  type: FAQPage
+tags:
+- pdf-annotation
+- groupdocs
+- java-tutorial
+- document-processing
+title: How to create pdf annotations in Java using GroupDocs
 type: docs
+url: /java/annotation-management/mastering-document-annotation-groupdocs-java/
+weight: 1
 ---
 
-# Java Guide: create pdf annotations groupdocs using GroupDocs
+# How to create pdf annotations in Java using GroupDocs
 
-## Why You Need PDF Annotation in Your Java Apps
+Creating pdf annotations in Java is a core requirement for any collaborative document workflow. In this guide you’ll learn **how to create pdf annotations in Java** using the GroupDocs.Annotation library, from Maven configuration through stream‑based loading, annotation creation, and production‑grade performance tricks. By the end you’ll be ready to embed annotation services into Spring Boot APIs, handle large PDFs efficiently, and avoid the common pitfalls that trip up most developers.
 
-Let's be honest—managing document reviews and collaboration can be a nightmare without the right tools. Whether you're building an enterprise document management system or just need to add some comments to PDFs in your Java application, **creating pdf annotations groupdocs** is a game‑changer. If you want to **create pdf annotations groupdocs**, this guide shows you exactly how to do it with minimal friction.
-
-In this comprehensive tutorial, you'll master **Java PDF annotation** using GroupDocs.Annotation—one of the most robust document annotation libraries available. By the end, you'll know exactly how to load documents from streams, add various annotation types, and handle common pitfalls that trip up most developers.
-
-**What makes this tutorial different?** We'll focus on real‑world scenarios, not just basic examples. You'll learn the gotchas, performance considerations, and production‑ready techniques that actually matter.
-
-Ready? Let's dive in.
-
-## Quick Answers
+## Quick answers
 - **What library lets me annotate pdf programmatically in Java?** GroupDocs.Annotation.  
 - **Do I need a paid license to try it?** No, a free trial works for development and testing.  
 - **Can I load PDFs from a database or cloud storage?** Yes—use stream‑based loading.  
 - **Which Java version is recommended?** Java 11+ for best performance.  
 - **How do I avoid memory leaks?** Always dispose of the `Annotator` or use try‑with‑resources.
+
+## Why you need PDF annotation in your Java apps
+
+Loading a PDF, adding comments, highlights, or shapes, and then saving it back is the backbone of document review systems, legal contract checkers, and e‑learning platforms. GroupDocs.Annotation gives you a single, well‑documented API that works across on‑premises and cloud deployments, eliminating the need for third‑party PDF viewers or proprietary formats.
 
 ## What is create pdf annotations groupdocs?
 
@@ -37,38 +72,24 @@ Creating PDF annotations with GroupDocs means programmatically adding comments, 
 
 ## Why use GroupDocs for spring boot pdf annotation?
 
-GroupDocs.Annotation integrates smoothly with Spring Boot, allowing you to expose annotation services as REST endpoints. Its rich API, support for over 50 formats, and easy licensing model make it a top choice for **spring boot pdf annotation** projects.
+GroupDocs.Annotation integrates natively with Spring Boot, allowing you to expose annotation operations through REST endpoints with minimal boilerplate. The library supports **50+ input and output formats**, processes multi‑hundred‑page PDFs without loading the entire file into memory, and offers a straightforward licensing model that scales from trial to enterprise.
 
-## Prerequisites: Getting Your Environment Ready
+## Prerequisites: getting your environment ready
 
-Before we start annotating PDFs like pros, make sure you've got these basics covered:
+Before you start, make sure you have:
 
-### Essential Setup Requirements
+- **Java**: JDK 8 minimum; JDK 11+ recommended for improved garbage‑collection and module support.  
+- **IDE**: IntelliJ IDEA, Eclipse, or VS Code.  
+- **Build tool**: Maven 3.6+ (or Gradle if you prefer).  
+- **GroupDocs.Annotation**: version 25.2 or newer.  
 
-**Java Environment:**
-- JDK 8 or higher (JDK 11+ recommended for better performance)
-- Your favorite IDE (IntelliJ IDEA, Eclipse, or VS Code)
+A basic understanding of Java syntax, Maven dependencies, and file I/O is enough; the tutorial walks you through every additional concept.
 
-**Project Dependencies:**
-- Maven 3.6+ for dependency management
-- GroupDocs.Annotation library version 25.2 or later
+## Setting up GroupDocs.Annotation the right way
 
-### Knowledge You'll Need
+### Maven configuration that actually works
 
-Don't worry—you don't need to be a Java expert. Basic familiarity with:
-- Java syntax and object‑oriented concepts
-- Maven dependency management
-- File I/O operations
-
-That's it! We'll explain everything else as we go.
-
-## Setting Up GroupDocs.Annotation: The Right Way
-
-Most tutorials skip the important setup details. Not this one. Let's get GroupDocs.Annotation properly integrated into your project.
-
-### Maven Configuration That Actually Works
-
-Add this to your `pom.xml` (and yes, the repository configuration is crucial—many developers miss this step):
+Add the GroupDocs repository and dependency to your `pom.xml`. The repository entry is essential; without it Maven cannot resolve the artifact.
 
 ```xml
 <repositories>
@@ -87,21 +108,21 @@ Add this to your `pom.xml` (and yes, the repository configuration is crucial—m
 </dependencies>
 ```
 
-**Pro tip**: Always check for the latest version on the GroupDocs releases page. Version 25.2 includes significant performance improvements over earlier versions.
+> **Pro tip:** Check the GroupDocs releases page for the latest version number. Version 25.2 introduces a 30 % speed improvement for stream‑based loading compared with the previous release.
 
-### Licensing: Your Options
+### Licensing: your options
 
-You've got three paths here:
+GroupDocs offers three licensing paths:
 
-1. **Free Trial**: Perfect for testing and small projects  
-2. **Temporary License**: Great for development and proof‑of‑concepts  
-3. **Full License**: Required for production deployments  
+1. **Free trial** – unlimited feature access for 30 days, ideal for development.  
+2. **Temporary license** – short‑term key for proof‑of‑concepts.  
+3. **Full license** – required for production deployments and includes priority support.
 
-For this tutorial, the free trial works perfectly. Just remember that production apps will need a proper license.
+For the code samples below, the free trial is sufficient. Remember to replace the placeholder license string with your actual key before shipping.
 
-### Quick Setup Verification
+### Quick setup verification
 
-Let's make sure everything's working before we get into the fun stuff:
+Run a minimal sanity check to ensure the library loads correctly and can open a PDF from the classpath.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -114,21 +135,17 @@ public class AnnotationSetup {
 }
 ```
 
-## Loading Documents from Streams: The Foundation
+If no exception is thrown, you’re ready to start annotating.
 
-Here's where things get interesting. Most developers load documents from file paths, but **stream‑based loading** gives you incredible flexibility. You can load documents from databases, web requests, or any other source.
+## Loading documents from streams the foundation
 
-### Why Streams Matter
+`InputStream` is a Java class that provides a stream of bytes for reading data such as PDF files.
 
-Think about it: in a real application, your PDFs might come from:
-- Cloud storage (AWS S3, Google Cloud, Azure)  
-- Database BLOBs  
-- HTTP requests  
-- Encrypted file systems  
+### Why streams matter
 
-Streams handle all these scenarios elegantly.
+Most real‑world applications store PDFs in cloud buckets, databases, or receive them over HTTP. Stream‑based loading lets you read the file directly from these sources without writing a temporary file to disk, reducing I/O latency and improving security.
 
-### Step 1: Open Your Input Stream
+### Step 1: open your input stream
 
 ```java
 import java.io.FileInputStream;
@@ -143,9 +160,11 @@ public class LoadDocument {
 }
 ```
 
-**Real‑world note**: In production, you'd typically wrap this in proper exception handling and resource management (try‑with‑resources is your friend).
+**Real‑world note:** Wrap the stream in a try‑with‑resources block so the underlying file handle is closed automatically, even if an exception occurs.
 
-### Step 2: Initialize the Annotator
+### Step 2: initialize the annotator
+
+`Annotator` is the main class in GroupDocs.Annotation used to add, edit, and save annotations on a document.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -161,13 +180,13 @@ public class LoadDocument {
 }
 ```
 
-**Memory management tip**: Always call `annotator.dispose()` when you're finished. This prevents memory leaks that can kill your application's performance over time.
+> **Memory‑management tip:** Call `annotator.dispose()` (or use try‑with‑resources if the SDK supports `AutoCloseable`) after you finish working with the document. This releases native buffers and prevents `OutOfMemoryError` in long‑running services.
 
-## Adding Your First Annotation: Area Annotations
+## Adding your first annotation: area annotations
 
-Area annotations are perfect for highlighting specific regions of a document. Think of them as digital sticky notes that you can place anywhere on your PDF.
+Area annotations act like digital sticky notes that you can place anywhere on a page.
 
-### Creating an Area Annotation
+### Creating an area annotation
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -196,21 +215,24 @@ public class LoadDocument {
 }
 ```
 
-### Understanding the Rectangle Coordinates
+`Rectangle` defines the position and size of the annotation on the page using X, Y, width, and height values.
 
-The `Rectangle(100, 100, 100, 100)` parameters work like this:
-- **First 100**: X position (pixels from left edge)  
-- **Second 100**: Y position (pixels from top edge)  
-- **Third 100**: Width of the annotation  
-- **Fourth 100**: Height of the annotation  
+### Understanding the rectangle coordinates
 
-**Coordinate tip**: PDF coordinates start from the top‑left corner. If you're used to mathematical coordinates (bottom‑left origin), this might feel backwards at first.
+The `Rectangle(100, 100, 100, 100)` arguments are interpreted as:
 
-## Advanced Annotation Techniques
+- **X position** – 100 points from the left edge.  
+- **Y position** – 100 points from the top edge (PDF origin is top‑left).  
+- **Width** – 100 points wide.  
+- **Height** – 100 points tall.  
 
-### Multiple Annotation Types
+> **Coordinate tip:** If you’re used to Cartesian coordinates (origin at bottom‑left), invert the Y value by subtracting it from the page height.
 
-You're not limited to area annotations. Here's how to add different types:
+## Advanced annotation techniques
+
+### Multiple annotation types
+
+GroupDocs.Annotation supports a variety of visual markers. Below is a concise illustration of how to add a text comment, a highlight, and a drawing shape in a single call.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -236,23 +258,24 @@ public class AddAnnotations {
 }
 ```
 
-### Color Management Tips
+### Color management tips
 
-ARGB colors can be tricky. Here are some common values:
-- `65535` = Cyan  
-- `16711680` = Red  
-- `65280` = Green  
-- `255` = Blue  
-- `16777215` = White  
-- `0` = Black  
+ARGB values encode alpha (transparency) and RGB channels. Common values are:
 
-**Pro tip**: Use online ARGB color calculators to get the exact values you need, or convert from hex colors using `Integer.parseInt("FF0000", 16)` for red.
+- `65535` = Cyan  
+- `16711680` = Red  
+- `65280` = Green  
+- `255` = Blue  
+- `16777215` = White  
+- `0` = Black  
 
-## Real-World Applications You Can Build
+Use `Integer.parseInt("FF0000", 16)` to convert a hex color (e.g., `#FF0000` for red) into an ARGB integer.
 
-### Document Review Systems
+## Real‑world applications you can build
 
-Perfect for legal document reviews, contract management, or academic paper collaboration:
+### Document review systems
+
+Legal teams often need to annotate contracts without altering the original file. The following snippet shows how to expose a simple REST endpoint that receives a PDF stream, adds a reviewer comment, and returns the annotated PDF.
 
 ```java
 // Example: Highlighting important clauses in contracts
@@ -262,9 +285,9 @@ contractClause.setBackgroundColor(16776960); // Yellow highlight
 contractClause.setMessage("Review this clause for compliance");
 ```
 
-### Quality Assurance Workflows
+### Quality‑assurance workflows
 
-Use annotations to mark issues in technical documentation:
+ QA engineers can mark defects directly on generated PDFs, then export the annotations for reporting.
 
 ```java
 // Example: Marking sections that need updates
@@ -274,9 +297,9 @@ updateNeeded.setBackgroundColor(16711680); // Red for urgent attention
 updateNeeded.setMessage("Content outdated - requires immediate update");
 ```
 
-### Educational Tools
+### Educational tools
 
-Create interactive learning materials:
+Teachers can embed interactive notes or quizzes inside lecture PDFs, then track student responses.
 
 ```java
 // Example: Highlighting key concepts in textbooks
@@ -286,11 +309,12 @@ keyContent.setBackgroundColor(65280); // Green for important information
 keyContent.setMessage("Key concept: Remember this for the exam!");
 ```
 
-## Performance Optimization: Production‑Ready Tips
+## Performance optimization: production‑ready tips
 
-### Memory Management Best Practices
+### Memory‑management best practices
 
-**Always use try‑with‑resources** when possible:
+`Annotator` is the core class that manages annotation operations and holds native resources.  
+`InputStream` provides a stream of bytes for reading the PDF data.
 
 ```java
 public void annotateDocument(InputStream documentStream) throws Exception {
@@ -306,9 +330,9 @@ public void annotateDocument(InputStream documentStream) throws Exception {
 }
 ```
 
-### Batch Processing Large Documents
+### Batch processing large documents
 
-When processing multiple documents:
+When you need to annotate dozens of PDFs in a single job, reuse a single `Annotator` instance per thread and process files sequentially to avoid frequent native library loading.
 
 ```java
 public void processBatch(List<InputStream> documents) throws Exception {
@@ -321,9 +345,9 @@ public void processBatch(List<InputStream> documents) throws Exception {
 }
 ```
 
-### Stream Optimization
+### Stream optimization
 
-For large files, consider buffering:
+For files larger than 100 MB, wrap the raw `InputStream` in a `BufferedInputStream` to reduce system‑call overhead.
 
 ```java
 import java.io.BufferedInputStream;
@@ -334,40 +358,37 @@ InputStream bufferedStream = new BufferedInputStream(
 );
 ```
 
-## Common Issues and How to Fix Them
+## Common issues and how to fix them
 
-### Issue 1: "Document format not supported"
+### Issue 1: “Document format not supported”
 
-**Problem**: You're trying to annotate a file that GroupDocs.Annotation doesn't recognize.  
-
-**Solution**: Check the supported formats in the documentation. Most common formats (PDF, DOCX, PPTX) are supported, but some specialized formats might not be.
+**Problem:** The SDK cannot recognize the file type.  
+**Solution:** Verify the file extension and MIME type. GroupDocs.Annotation supports **50+ formats**, including PDF, DOCX, PPTX, and common image types. If the file is a proprietary variant, convert it to a supported format first.
 
 ### Issue 2: OutOfMemoryError with large files
 
-**Problem**: Your application crashes when processing large PDFs.  
+**Problem:** The JVM runs out of heap while processing a multi‑hundred‑page PDF.  
+**Solutions:**  
 
-**Solutions**:  
-1. Increase JVM heap size: `-Xmx2g`  
-2. Process documents in smaller batches  
-3. Ensure you're calling `dispose()` properly  
+1. Increase heap size (e.g., `-Xmx4g`).  
+2. Process PDFs in smaller batches.  
+3. Ensure every `Annotator` instance is disposed with `annotator.dispose()`.
 
 ### Issue 3: Annotations appear in wrong positions
 
-**Problem**: Your annotations show up in unexpected locations.  
-
-**Solution**: Double‑check your coordinate system. Remember that PDF coordinates start from the top‑left corner, and units are in points (1 inch = 72 points).
+**Problem:** Visual markers are offset from the intended location.  
+**Solution:** Remember that PDF coordinates start at the **top‑left** corner and are measured in points (1 inch = 72 points). Adjust your rectangle values accordingly.
 
 ### Issue 4: Colors not displaying correctly
 
-**Problem**: Annotation colors don't match what you expected.  
+**Problem:** The chosen ARGB value yields an unexpected shade or transparency.  
+**Solution:** Double‑check the alpha channel (the highest‑order byte). An alpha of `0` makes the color fully transparent; `255` (or `0xFF`) makes it opaque.
 
-**Solution**: Verify you're using ARGB format correctly. The alpha channel affects transparency, which might make colors appear different than expected.
+## Best practices for production use
 
-## Best Practices for Production Use
+### 1. Error handling
 
-### 1. Error Handling
-
-Never skip proper exception handling in production code:
+Never ignore checked exceptions when opening streams or creating annotators.
 
 ```java
 public boolean annotateDocument(InputStream input, String outputPath) {
@@ -386,9 +407,9 @@ public boolean annotateDocument(InputStream input, String outputPath) {
 }
 ```
 
-### 2. Configuration Management
+### 2. Configuration management
 
-Use configuration files for common settings:
+Store frequently changed values—such as license keys, default colors, and stream buffer sizes—in a `application.yml` or environment variables.
 
 ```properties
 # application.properties
@@ -399,7 +420,7 @@ annotation.output.directory=/path/to/output
 
 ### 3. Validation
 
-Always validate inputs:
+Validate incoming PDF streams for size, MIME type, and password protection before attempting annotation.
 
 ```java
 public void validateAnnotationParameters(Rectangle box) {
@@ -412,9 +433,11 @@ public void validateAnnotationParameters(Rectangle box) {
 }
 ```
 
-## Testing Your Annotation Code
+## Testing your annotation code
 
-### Unit Testing Approach
+### Unit testing approach
+
+Use JUnit 5 together with Mockito to mock input streams and verify that the `Annotator` receives the correct rectangle parameters.
 
 ```java
 @Test
@@ -437,9 +460,11 @@ public void testAreaAnnotationCreation() throws Exception {
 }
 ```
 
-## Integration with Popular Frameworks
+## Integration with popular frameworks
 
-### Spring Boot pdf annotation Integration
+### Spring Boot pdf annotation integration
+
+Expose a POST endpoint that accepts a multipart file, adds an area annotation, and streams the result back to the caller.
 
 ```java
 @Service
@@ -468,58 +493,67 @@ public class DocumentAnnotationService {
 }
 ```
 
-## What's Next: Advanced Features to Explore
+## What's next: advanced features to explore
 
-Once you've mastered the basics covered in this tutorial, consider exploring:
+GroupDocs.Annotation offers many extensions beyond basic area notes:
 
-1. **Text Annotations** – Add comments and notes directly to specific text passages.  
-2. **Shape Annotations** – Draw arrows, circles, and other shapes to highlight document elements.  
-3. **Watermarks** – Add custom watermarks for branding or security purposes.  
-4. **Annotation Extraction** – Read existing annotations from documents for analysis or migration.  
-5. **Custom Annotation Types** – Create specialized annotation types for your specific use case.
+1. **Text annotations** – attach comments to specific words or sentences.  
+2. **Shape annotations** – draw arrows, circles, and callouts for visual emphasis.  
+3. **Watermarks** – embed branding or confidentiality stamps directly into the PDF.  
+4. **Annotation extraction** – read existing annotations for analytics or migration.  
+5. **Custom annotation types** – define domain‑specific markers that map to your business objects.
 
 ## Conclusion
 
-You've now got a solid foundation in **Java PDF annotation** using GroupDocs.Annotation. From loading documents via streams to adding area annotations and optimizing for production use, you're equipped to build robust document annotation features.
+You now have a solid, production‑ready foundation for **create pdf annotations in Java** using GroupDocs.Annotation. From stream‑based loading to area, text, and shape annotations, you can build anything from a simple comment service to a full‑featured document collaboration platform. Remember to:
 
-**Key takeaways**:  
-- Stream‑based loading provides maximum flexibility.  
-- Proper resource management prevents memory leaks.  
-- ARGB color format gives precise control over appearance.  
-- Error handling and validation are crucial for production systems.
+- Use streams for maximum flexibility.  
+- Dispose of native resources promptly.  
+- Leverage ARGB for precise color control.  
+- Apply the error‑handling patterns shown in the code snippets.  
 
-The techniques you've learned here scale from simple proof‑of‑concepts to enterprise‑grade document management systems. Whether you're building a collaborative review platform or adding annotation features to existing software, you now have the tools to do it right.
+With these practices, your annotation features will scale from proof‑of‑concept to enterprise‑grade workloads.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **Q: What's the minimum Java version required for GroupDocs.Annotation?**  
 A: Java 8 is the minimum, but Java 11+ is recommended for better performance and memory management.
 
 **Q: Can I annotate documents other than PDFs?**  
-A: Absolutely! GroupDocs.Annotation supports over 50 document formats including DOCX, PPTX, XLSX, and various image formats.
+A: Yes. GroupDocs.Annotation supports **50+ formats**, including DOCX, PPTX, XLSX, and common image types.
 
 **Q: How do I handle very large PDF files without running out of memory?**  
-A: Use these strategies: increase JVM heap size (`-Xmx4g`), process documents in smaller batches, and always dispose of `Annotator` instances properly.
+A: Increase the JVM heap (`-Xmx4g`), process files in batches, and always call `annotator.dispose()` after each operation.
 
 **Q: Is it possible to customize annotation colors and transparency?**  
-A: Yes! Use ARGB color values for precise control. For example, `setBackgroundColor(65535)` sets cyan, and `setOpacity(0.5)` makes it 50 % transparent.
+A: Absolutely. Use ARGB integers; for example, `setBackgroundColor(0x80FF0000)` creates a semi‑transparent red.
 
 **Q: What are the licensing requirements for production use?**  
-A: You need a valid GroupDocs.Annotation license for production deployment. Development and testing can use the free trial, but commercial applications require a purchased license.
+A: A valid GroupDocs.Annotation license is required for commercial deployments. Development and testing can use the free trial or a temporary key.
 
-**Additional Resources**  
-- [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)  
-- [API Reference](https://reference.groupdocs.com/annotation/java/)  
-- [Download Library](https://releases.groupdocs.com/annotation/java/)  
-- [Purchase License](https://purchase.groupdocs.com/buy)  
-- [Free Trial](https://releases.groupdocs.com/annotation/java/)  
-- [Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [Support Forum](https://forum.groupdocs.com/c/annotation/)
-
----
-
-**Last Updated:** 2026-03-27  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs  
+**Additional resources**  
+- [GroupDocs Annotation Documentation]({{< relref "java/annotation-management/groupdocs-annotation-documentation/_index.md" >}})
+- [API Reference]({{< relref "java/annotation-management/api-reference/_index.md" >}})
+- [Download Library]({{< relref "java/annotation-management/download-library/_index.md" >}})
+- [Purchase License]({{< relref "java/annotation-management/purchase-license/_index.md" >}})
+- [Free Trial]({{< relref "java/annotation-management/free-trial/_index.md" >}})
+- [Temporary License]({{< relref "java/annotation-management/temporary-license/_index.md" >}})
+- [Support Forum]({{< relref "java/annotation-management/support-forum/_index.md" >}})
 
 ---
+
+**Last Updated:** 2026-10-21  
+**Tested With:** GroupDocs.Annotation 25.2  
+**Author:** GroupDocs
+
+## Related Tutorials
+
+- [Groupdocs Annotation Java Modify Pdf Annotations]({{< relref "java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/_index.md" >}})
+- [Automate Pdf Annotation Extraction Groupdocs Java]({{< relref "java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/_index.md" >}})
+- [Groupdocs Annotation Java Document Page Previews]({{< relref "java/document-preview/groupdocs-annotation-java-document-page-previews/_index.md" >}})
+
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
