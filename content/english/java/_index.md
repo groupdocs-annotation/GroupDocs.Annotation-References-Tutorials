@@ -129,56 +129,43 @@ api.save("output.pdf");
 
 ## GroupDocs.Annotation for Java tutorials
 
-### [Licensing and Configuration](./licensing-and-configuration)
-
+### [Licensing and Configuration]({{< relref "licensing-and-configuration" >}})
 Learn how to set up licenses, configure GroupDocs.Annotation options, and integrate the library into your Java projects with complete code examples.
 
-### [Document Loading](./document-loading)
-
+### [Document Loading]({{< relref "document-loading" >}})
 Discover multiple methods for loading documents into GroupDocs.Annotation from various sources including local storage, streams, cloud platforms (Amazon S3, Azure), URLs, and FTP servers.
 
-### [Document Saving](./document-saving)
-
+### [Document Saving]({{< relref "document-saving" >}})
 Master techniques for saving annotated documents with various output options, formats, and optimization settings for your Java applications.
 
-### [Text Annotations](./text-annotations)
-
+### [Text Annotations]({{< relref "text-annotations" >}})
 Implement text highlighting, underline, strikeout, replacement, and redaction annotations with complete Java code examples and customization options.
 
-### [Graphical Annotations](./graphical-annotations)
-
+### [Graphical Annotations]({{< relref "graphical-annotations" >}})
 Add professional shapes, arrows, polygons, distance measurements and other graphical elements to documents with precise control over appearance and positioning.
 
-### [Image Annotations](./image-annotations)
-
+### [Image Annotations]({{< relref "image-annotations" >}})
 Learn how to programmatically insert, position, and customize image annotations from both local and remote sources in different document formats.
 
-### [Link Annotations](./link-annotations)
-
+### [Link Annotations]({{< relref "link-annotations" >}})
 Create interactive hyperlinks and linked content within your documents using GroupDocs.Annotation's comprehensive link annotation capabilities.
 
-### [Form field annotations](./form-field-annotations)
-
+### [Form field annotations]({{< relref "form-field-annotations" >}})
 Implement interactive form fields including checkboxes, buttons, dropdowns, and text inputs to create fillable documents and forms.
 
-### [Annotation Management](./annotation-management)
-
+### [Annotation Management]({{< relref "annotation-management" >}})
 Master the full annotation lifecycle with tutorials on adding, removing, updating, and filtering annotations programmatically in your Java applications.
 
-### [Reply Management](./reply-management)
-
+### [Reply Management]({{< relref "reply-management" >}})
 Implement collaborative document review with threaded comments, replies, and user‑based discussion capabilities in your document workflows.
 
-### [Document Information](./document-information)
-
+### [Document Information]({{< relref "document-information" >}})
 Access and utilize document metadata, page metrics, content information, and format details to enhance your document processing applications.
 
-### [Document Preview](./document-preview)
-
+### [Document Preview]({{< relref "document-preview" >}})
 Generate high‑quality document previews with and without annotations, control preview resolution, and create custom document viewing experiences.
 
-### [Advanced Features](./advanced-features)
-
+### [Advanced Features]({{< relref "advanced-features" >}})
 Complete tutorials for implementing advanced annotation capabilities, customizations, and specialized features with GroupDocs.Annotation for Java.
 
 ## Get started with GroupDocs.Annotation for Java
@@ -204,9 +191,9 @@ Download the [latest version](https://releases.groupdocs.com/annotation/java/) o
 
 ## Related tutorials
 
-- [Annotate PDF Java with GroupDocs Annotation Document Loading](/annotation/java/document-loading/)
-- [Java PDF Text Annotation: Add Searchable Highlights with GroupDocs](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
-- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+- [Annotate PDF Java with GroupDocs Annotation Document Loading]({{< relref "/annotation/java/document-loading/" >}})
+- [Java PDF Text Annotation: Add Searchable Highlights with GroupDocs]({{< relref "/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/" >}})
+- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java]({{< relref "/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/" >}})
 
 ---
 

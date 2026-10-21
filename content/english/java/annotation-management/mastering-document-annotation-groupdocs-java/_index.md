@@ -287,7 +287,7 @@ contractClause.setMessage("Review this clause for compliance");
 
 ### Quality‑assurance workflows
 
-QA engineers can mark defects directly on generated PDFs, then export the annotations for reporting.
+ QA engineers can mark defects directly on generated PDFs, then export the annotations for reporting.
 
 ```java
 // Example: Marking sections that need updates
@@ -532,13 +532,13 @@ A: Absolutely. Use ARGB integers; for example, `setBackgroundColor(0x80FF0000)` 
 A: A valid GroupDocs.Annotation license is required for commercial deployments. Development and testing can use the free trial or a temporary key.
 
 **Additional resources**  
-- [GroupDocs Annotation Documentation]({{< relref "annotation/java/annotation-management/groupdocs-annotation-documentation/_index.md" >}})
-- [API Reference]({{< relref "annotation/java/annotation-management/api-reference/_index.md" >}})
-- [Download Library]({{< relref "annotation/java/annotation-management/download-library/_index.md" >}})
-- [Purchase License]({{< relref "annotation/java/annotation-management/purchase-license/_index.md" >}})
-- [Free Trial]({{< relref "annotation/java/annotation-management/free-trial/_index.md" >}})
-- [Temporary License]({{< relref "annotation/java/annotation-management/temporary-license/_index.md" >}})
-- [Support Forum]({{< relref "annotation/java/annotation-management/support-forum/_index.md" >}})
+- [GroupDocs Annotation Documentation]({{< relref "java/annotation-management/groupdocs-annotation-documentation/_index.md" >}})
+- [API Reference]({{< relref "java/annotation-management/api-reference/_index.md" >}})
+- [Download Library]({{< relref "java/annotation-management/download-library/_index.md" >}})
+- [Purchase License]({{< relref "java/annotation-management/purchase-license/_index.md" >}})
+- [Free Trial]({{< relref "java/annotation-management/free-trial/_index.md" >}})
+- [Temporary License]({{< relref "java/annotation-management/temporary-license/_index.md" >}})
+- [Support Forum]({{< relref "java/annotation-management/support-forum/_index.md" >}})
 
 ---
 
@@ -548,9 +548,9 @@ A: A valid GroupDocs.Annotation license is required for commercial deployments. 
 
 ## Related Tutorials
 
-- [Groupdocs Annotation Java Modify Pdf Annotations]({{< relref "annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/_index.md" >}})
-- [Automate Pdf Annotation Extraction Groupdocs Java]({{< relref "annotation/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/_index.md" >}})
-- [Groupdocs Annotation Java Document Page Previews]({{< relref "annotation/java/document-preview/groupdocs-annotation-java-document-page-previews/_index.md" >}})
+- [Groupdocs Annotation Java Modify Pdf Annotations]({{< relref "java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/_index.md" >}})
+- [Automate Pdf Annotation Extraction Groupdocs Java]({{< relref "java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/_index.md" >}})
+- [Groupdocs Annotation Java Document Page Previews]({{< relref "java/document-preview/groupdocs-annotation-java-document-page-previews/_index.md" >}})
 
 
 {{< /blocks/products/pf/tutorial-page-section >}}
