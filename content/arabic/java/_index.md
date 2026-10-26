@@ -1,7 +1,7 @@
 ---
-date: 2026-05-16
-description: تعلم كيفية التعليق على مستندات PDF Java باستخدام GroupDocs.Annotation
-  for Java API. يتضمن image annotation java، دروسًا خطوة بخطوة وأمثلة على الشيفرة.
+date: 2026-10-21
+description: كيفية التعليق على pdf باستخدام GroupDocs.Annotation لـ Java. تعلم إضافة
+  التظليل، العلامات المائية، الصور والمزيد عبر أكثر من 50 تنسيقًا.
 is_root: true
 keywords:
 - how to annotate pdf
@@ -10,14 +10,19 @@ keywords:
 - image annotation java
 - create pdf annotations
 - load documents java
-linktitle: دروس GroupDocs.Annotation for Java
+lastmod: 2026-10-21
+linktitle: دروس GroupDocs.Annotation لـ Java
+og_description: كيفية التعليق على pdf باستخدام GroupDocs.Annotation لـ Java. أضف التظليل،
+  العلامات المائية، الصور، والمزيد عبر أكثر من 50 تنسيقًا في ثوانٍ.
+og_image_alt: Guide to annotating PDF files in Java with GroupDocs.Annotation
+og_title: دليل كيفية التعليق على pdf – واجهة برمجة تطبيقات التعليق على المستندات Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-05-16'
+  dateModified: '2026-10-21'
   description: Learn how to annotate PDF Java documents using GroupDocs.Annotation
     for Java API. Includes image annotation java, step‑by‑step tutorials and code
     examples.
-  headline: How to Annotate PDF – Java Document Annotation API | GroupDocs.Annotation
+  headline: How to annotate pdf – Java document annotation API | GroupDocs.Annotation
   type: TechArticle
 - questions:
   - answer: PDFs, DOCX, XLSX, PPTX, HTML, images, and more.
@@ -32,15 +37,25 @@ schemas:
   - answer: From the official GroupDocs download page (link below).
     question: Where can I get a trial?
   type: FAQPage
-title: كيفية التعليق على PDF – Java Document Annotation API | GroupDocs.Annotation
+tags:
+- annotate pdf
+- groupdocs annotation
+- java document processing
+- pdf annotation library java
+- image annotation java
+title: كيفية التعليق على pdf – واجهة برمجة تطبيقات التعليق على المستندات Java | GroupDocs.Annotation
 type: docs
 url: /ar/java/
 weight: 10
 ---
 
-# GroupDocs.Annotation for Java - دروس API لتعليقات المستند
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-إذا كنت تبحث عن **كيفية التعليق على PDF** في Java، فإن GroupDocs.Annotation for Java يقدم حلاً كاملاً. هذه واجهة برمجة تطبيقات تعليقات المستند القوية تتيح لك **التعليق على PDF Java** بالإضافة إلى ملفات Word وExcel وPowerPoint والصور والعديد من الصيغ الأخرى. من خلال دمج قدرات التعليق مباشرةً في تطبيقات Java الخاصة بك، يمكنك بناء أدوات مراجعة تعاونية، حلول وضع العلامات القانونية، أو أي سير عمل يتطلب تفاعلًا غنيًا مع المستندات—دون الاعتماد على برامج خارجية.
+# كيفية التعليق على ملفات PDF – Java document annotation API
+
+If you need to **how to annotate pdf** files directly from Java, GroupDocs.Annotation for Java gives you a complete, single‑JAR solution. This powerful document annotation API lets you add comments, highlights, watermarks, images, and many other markup types to PDFs, Word, Excel, PowerPoint, and image files—all without external dependencies. Embedding these capabilities into your Java applications enables collaborative review tools, legal markup workflows, or any scenario where rich document interaction is required.
 
 ## إجابات سريعة
 - **ما الذي يمكنني التعليق عليه؟** PDFs, DOCX, XLSX, PPTX, HTML, images, and more.  
@@ -49,116 +64,142 @@ weight: 10
 - **هل هو متعدد المنصات؟** Yes—works on any OS with Java support.  
 - **أين يمكنني الحصول على نسخة تجريبية؟** From the official GroupDocs download page (link below).
 
-## لماذا تستخدم GroupDocs.Annotation for Java لت **التعليق على PDF Java** الملفات؟
+## ما هو التعليق على ملفات PDF؟
 
-يجب عليك استخدام GroupDocs.Annotation for Java عندما تحتاج إلى حل موثوق، JAR واحد يضيف قدرات تعليقات PDF كاملة دون تبعيات خارجية. يعالج ملفات PDF الكبيرة (حتى 500 صفحة) في أقل من ثانيتين، يستهلك أقل من 150 MB RAM، ويدعم أكثر من 50 صيغة ملف، مما يجعله مثالياً لسير عمل المراجعة والتمييز على مستوى المؤسسات.
+PDF annotation is the process of adding visual or textual markup—such as highlights, comments, shapes, or images—to an existing PDF document without altering the original content. Annotations are stored as separate objects, allowing reviewers to collaborate, preserve the source file, and later extract or remove the markup as needed.
 
-- **بدون تبعيات** – a single JAR simplifies deployment.  
-- **أداء عالي** – can annotate a 500‑page PDF in under 2 seconds while using <150 MB memory.  
-- **مجموعة ميزات غنية** – from simple comments to complex graphical markup, including **java add watermark** and **java highlight text** capabilities.  
-- **ترخيص جاهز للمؤسسات** – flexible options for commercial projects.  
+## لماذا تستخدم GroupDocs.Annotation for Java للتعليق على ملفات PDF؟
+
+GroupDocs.Annotation for Java delivers enterprise‑grade performance: it can process a 500‑page PDF in under **2 seconds**, uses less than **150 MB RAM**, and supports **over 50 file formats**. This makes it ideal for high‑throughput review pipelines, legal e‑discovery, and any application that demands fast, memory‑efficient markup.
+
+- **لا توجد تبعيات خارجية** – a single JAR simplifies deployment across servers and containers.  
+- **سرعة عالية** – annotate large PDFs (up to 500 pages) in under 2 seconds while staying under 150 MB memory.  
+- **مجموعة ميزات غنية** – includes java add watermark, java highlight text, image annotation java, and shape annotation capabilities.  
+- **ترخيص متعدد المنصات** – works on Windows, Linux, and macOS with any Java 8+ runtime.
 
 ## نظرة عامة على القدرات الأساسية
 
-مكتبة `GroupDocs.Annotation for Java` هي Java SDK توفر API شاملة لإضافة، تحرير، وإدارة التعليقات عبر **over 50 document formats**. تمكنك من العمل مع PDFs، ملفات Office، الصور، والمزيد، كل ذلك من داخل كود Java الخاص بك.
+The `GroupDocs.Annotation for Java` SDK provides a unified API for adding, editing, and managing annotations across **over 50 document formats**. It abstracts away pagination, rendering, and storage concerns, letting you focus on business logic.
 
-### كيفية **التعليق على PDF Java** المستندات باستخدام GroupDocs.Annotation
-فئة `AnnotationApi` توفر طرقًا مثل `load` لفتح مستند و`save` لكتابة الملف المعلق.  
-`HighlightAnnotation` تمثل تظليل نصي قابل للتخصيص من حيث اللون والشفافية.  
-`TextAnnotation` يضيف صندوق تعليق مرتبط بموقع في المستند.  
+### كيفية التعليق على مستندات PDF Java باستخدام GroupDocs.Annotation
 
-توفر الـ API سير عمل بسيط: تحميل المستند، إنشاء كائن تعليق، ضبط مظهره، ثم حفظ النتيجة. يمكنك تحديد الألوان، أسماء المؤلفين، والمواقع، وتتعامل المكتبة مع ترقيم الصفحات والتصيير تلقائيًا. يتضمن الشيفرة النموذجية في الدروس المرتبطة لتوضيح كل خطوة.
+`AnnotationApi` is the entry point for all annotation operations.  
 
-### تعليقات الصور Java – إضافة رسومات إلى مستنداتك
-يمكنك تضمين صور نقطية أو متجهة كتعليقات، وضعها بدقة، وحتى ربطها بموارد خارجية. هذا مثالي للعلامات التجارية، العلامات المائية، أو التعليقات البصرية.
+**مرساة التعريف:** `AnnotationApi` is the primary class that loads, modifies, and saves documents with annotations in GroupDocs.Annotation for Java.  
 
-### إضافة تعليقات Java – العلامات النصية والرسومية الأساسية
-من التظليل البسيط إلى الأشكال المعقدة، توفر المكتبة نموذجًا موحدًا لجميع أنواع التعليقات، مما يسهل الانتقال بين التعليقات النصية والرسومية في نفس المستند.
+You load a document, create annotation objects, configure their appearance, and save the result. The library automatically handles page coordinates, scaling, and rendering.
 
-### تحميل المستندات Java – استيعاب المستندات بكفاءة
-يدعم GroupDocs.Annotation التحميل من ملفات محلية، تدفقات، تخزين سحابي (Amazon S3, Azure Blob)، URLs، وخوادم FTP. هذه المرونة تضمن أنك يمكن أن **load documents java** من أي مصدر يستخدمه تطبيقك.
+### التعليق على الصور في Java – إضافة رسومات إلى مستنداتك
 
-### إدارة التعليقات Java – التحكم في دورة حياة التعليق
-إنشاء، تحديث، حذف، وتصفية التعليقات برمجيًا. يمكنك أيضًا إرفاق بيانات تعريف مخصصة، ضبط معلومات المؤلف، وتطبيق سياسات الأمان.
+You can embed raster or vector images as annotations, position them precisely, and even link them to external resources. This is ideal for branding, watermarks, or visual comments.
 
-## كيفية التعليق على PDF باستخدام Java و GroupDocs.Annotation؟
+### إضافة تعليقات في Java – العلامات النصية والرسومية الأساسية
 
-فئة `AnnotationApi` توفر طرقًا مثل `load` لفتح مستند و`save` لكتابة الملف المعلق.  
-`HighlightAnnotation` تمثل تظليل نصي قابل للتخصيص من حيث اللون والشفافية.  
-`TextAnnotation` يضيف صندوق تعليق مرتبط بموقع في المستند.  
+From simple highlights to complex shapes, the library offers a unified model for all annotation types, making it easy to switch between text and graphical markup in the same document.
 
-حمّل ملف PDF المستهدف باستخدام `AnnotationApi.load("sample.pdf")`، أنشئ كائنات التعليق المطلوبة (مثل `HighlightAnnotation`, `TextAnnotation`)، اضبط الخصائص مثل اللون، المؤلف، والموقع، ثم استدعِ `AnnotationApi.save("output.pdf")`. هذا التدفق الشامل يتيح لك **create pdf annotations** في بضع أسطر من كود Java مع معالجة فعّالة للملفات الكبيرة.
+### تحميل المستندات في Java – استيعاب المستندات بكفاءة
+
+GroupDocs.Annotation supports loading from local files, streams, cloud storage (Amazon S3, Azure Blob), URLs, and FTP servers. This flexibility ensures you can **load documents java** from any source your application uses.
+
+### إدارة التعليقات في Java – التحكم في دورة حياة التعليق
+
+Create, update, delete, and filter annotations programmatically. You can also attach custom metadata, set author information, and enforce security policies.
+
+## كيفية التعليق على ملفات PDF باستخدام Java وGroupDocs.Annotation؟
+
+Load the target PDF with `AnnotationApi.load("sample.pdf")`, instantiate the desired annotation objects (e.g., `HighlightAnnotation`, `TextAnnotation`), set their properties such as color, author, and position, then call `AnnotationApi.save("output.pdf")`. This end‑to‑end flow lets you **create pdf annotations** in just a few lines of Java code while handling large files efficiently.
+
+- **مرساة التعريف:** `HighlightAnnotation` represents a text‑highlight markup with customizable color and opacity.  
+- **مرساة التعريف:** `TextAnnotation` adds a comment box attached to a specific location in the document.
 
 ## دروس GroupDocs.Annotation for Java
 
-### [التراخيص والتهيئة](./licensing-and-configuration)
-تعلم كيفية إعداد التراخيص، تكوين خيارات GroupDocs.Annotation، وتكامل المكتبة في مشاريع Java مع أمثلة شاملة للكود.
+### [الترخيص والتكوين](./licensing-and-configuration)
 
-### [تحميل المستند](./document-loading)
-اكتشف طرقًا متعددة لتحميل المستندات إلى GroupDocs.Annotation من مصادر مختلفة بما في ذلك التخزين المحلي، التدفقات، المنصات السحابية (Amazon S3, Azure)، URLs، وخوادم FTP.
+Learn how to set up licenses, configure GroupDocs.Annotation options, and integrate the library into your Java projects with complete code examples.
 
-### [حفظ المستند](./document-saving)
-إتقان تقنيات حفظ المستندات المعلقة مع خيارات إخراج متعددة، صيغ، وإعدادات تحسين لتطبيقات Java الخاصة بك.
+### [تحميل المستندات](./document-loading)
 
-### [تعليقات النص](./text-annotations)
-تنفيذ تظليل النص، التسطير، الشطب، الاستبدال، وتعليقات الحجب مع أمثلة شاملة لكود Java وخيارات تخصيص.
+Discover multiple methods for loading documents into GroupDocs.Annotation from various sources including local storage, streams, cloud platforms (Amazon S3, Azure), URLs, and FTP servers.
+
+### [حفظ المستندات](./document-saving)
+
+Master techniques for saving annotated documents with various output options, formats, and optimization settings for your Java applications.
+
+### [تعليقات نصية](./text-annotations)
+
+Implement text highlighting, underline, strikeout, replacement, and redaction annotations with complete Java code examples and customization options.
 
 ### [تعليقات رسومية](./graphical-annotations)
-إضافة أشكال احترافية، أسهم، مضلعات، قياسات المسافة وعناصر رسومية أخرى إلى المستندات مع تحكم دقيق في المظهر والموضع.
 
-### [تعليقات الصور](./image-annotations)
-تعلم كيفية إدراج، وضع، وتخصيص تعليقات الصور برمجيًا من مصادر محلية وعن بُعد في صيغ مستندات مختلفة.
+Add professional shapes, arrows, polygons, distance measurements and other graphical elements to documents with precise control over appearance and positioning.
 
-### [تعليقات الروابط](./link-annotations)
-إنشاء روابط تشعبية تفاعلية ومحتوى مرتبط داخل مستنداتك باستخدام قدرات تعليقات الروابط الشاملة في GroupDocs.Annotation.
+### [تعليقات صور](./image-annotations)
 
-### [تعليقات حقول النماذج](./form-field-annotations)
-تنفيذ حقول نماذج تفاعلية تشمل مربعات الاختيار، الأزرار، القوائم المنسدلة، ومدخلات النص لإنشاء مستندات ونماذج قابلة للملء.
+Learn how to programmatically insert, position, and customize image annotations from both local and remote sources in different document formats.
+
+### [تعليقات روابط](./link-annotations)
+
+Create interactive hyperlinks and linked content within your documents using GroupDocs.Annotation's comprehensive link annotation capabilities.
+
+### [تعليقات حقول النموذج](./form-field-annotations)
+
+Implement interactive form fields including checkboxes, buttons, dropdowns, and text inputs to create fillable documents and forms.
 
 ### [إدارة التعليقات](./annotation-management)
-إتقان دورة حياة التعليق بالكامل مع دروس حول إضافة، إزالة، تحديث، وتصفية التعليقات برمجيًا في تطبيقات Java الخاصة بك.
+
+Master the full annotation lifecycle with tutorials on adding, removing, updating, and filtering annotations programmatically in your Java applications.
 
 ### [إدارة الردود](./reply-management)
-تنفيذ مراجعة مستندات تعاونية مع تعليقات متسلسلة، ردود، وقدرات مناقشة تعتمد على المستخدم في سير عمل المستندات.
+
+Implement collaborative document review with threaded comments, replies, and user‑based discussion capabilities in your document workflows.
 
 ### [معلومات المستند](./document-information)
-الوصول إلى بيانات تعريف المستند، مقاييس الصفحات، معلومات المحتوى، وتفاصيل الصيغة لتعزيز تطبيقات معالجة المستندات الخاصة بك.
+
+Access and utilize document metadata, page metrics, content information, and format details to enhance your document processing applications.
 
 ### [معاينة المستند](./document-preview)
-إنشاء معاينات مستندات عالية الجودة مع أو بدون تعليقات، التحكم في دقة المعاينة، وإنشاء تجارب عرض مستند مخصصة.
 
-### [الميزات المتقدمة](./advanced-features)
-دروس كاملة لتطبيق قدرات تعليقات متقدمة، تخصيصات، وميزات متخصصة مع GroupDocs.Annotation for Java.
+Generate high‑quality document previews with and without annotations, control preview resolution, and create custom document viewing experiences.
+
+### [ميزات متقدمة](./advanced-features)
+
+Complete tutorials for implementing advanced annotation capabilities, customizations, and specialized features with GroupDocs.Annotation for Java.
 
 ## ابدأ مع GroupDocs.Annotation for Java
 
-حمّل [أحدث نسخة](https://releases.groupdocs.com/annotation/java/) أو ابدأ مع [نسخة تجريبية مجانية](https://releases.groupdocs.com/annotation/java/) لاستكشاف كامل إمكانيات GroupDocs.Annotation for Java.
+حمّل [أحدث نسخة](https://releases.groupdocs.com/annotation/java/) أو ابدأ باستخدام [نسخة تجريبية مجانية](https://releases.groupdocs.com/annotation/java/) لاستكشاف جميع إمكانيات GroupDocs.Annotation for Java.
 
 ## الأسئلة المتكررة
 
 **س:** هل يمكنني استخدام GroupDocs.Annotation في تطبيق Java تجاري؟  
-**ج:** نعم. يتطلب الترخيص التجاري للاستخدام في الإنتاج، وتتوفر نسخة تجريبية مجانية للتقييم.
+**ج:** نعم. A commercial license is required for production use, and a free trial is available for evaluation.
 
 **س:** هل تدعم المكتبة ملفات PDF محمية بكلمة مرور؟  
-**ج:** بالتأكيد. يمكنك توفير كلمة المرور عند تحميل المستند، وتظل جميع ميزات التعليق متاحة.
+**ج:** بالتأكيد. You can provide the password when loading the document, and all annotation features remain available.
 
 **س:** ما إصدارات Java المدعومة؟  
-**ج:** تعمل الـ API مع Java 8 وما فوق، بما في ذلك Java 11، 17، والإصدارات LTS اللاحقة.
+**ج:** الواجهة تعمل مع Java 8 وما بعده، بما في ذلك Java 11 و17 وإصدارات LTS اللاحقة.
 
-**س:** كيف يمكنني التعامل مع ملفات PDF الكبيرة بكفاءة؟  
-**ج:** استخدم خيارات التحميل المتدفقة وفعل تحسين المستند أثناء الحفظ لتقليل استهلاك الذاكرة.
+**س:** كيف يمكنني معالجة ملفات PDF الكبيرة بكفاءة؟  
+**ج:** استخدم خيارات التحميل المتدفقة وتمكين تحسين المستند أثناء الحفظ لتقليل استهلاك الذاكرة.
 
-**س:** هل يمكن تخصيص مظهر التعليقات برمجيًا؟  
-**ج:** نعم. كل نوع من التعليقات يكشف عن خصائص للون، الشفافية، سمك الخط، نمط الخط، وأكثر.
-
----
-
-**آخر تحديث:** 2026-05-16  
-**تم الاختبار مع:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
-**المؤلف:** GroupDocs
+**س:** هل يمكن تخصيص مظهر التعليقات برمجياً؟  
+**ج:** نعم. Every annotation type exposes properties for color, opacity, line thickness, font style, and more.
 
 ## دروس ذات صلة
 
-- [تعليق PDF Java مع تحميل مستندات GroupDocs Annotation](/annotation/java/document-loading/)
-- [تعليق نص PDF Java: إضافة تظليل قابل للبحث باستخدام GroupDocs](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
+- [التعليق على PDF Java مع تحميل مستندات GroupDocs Annotation](/annotation/java/document-loading/)
+- [تعليق نص PDF في Java: إضافة تظليل قابل للبحث مع GroupDocs](/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
 - [الدليل الكامل - كيفية حفظ PDF معلق باستخدام GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+
+---
+
+**آخر تحديث:** 2026-10-21  
+**تم الاختبار مع:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
+**المؤلف:** GroupDocs
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
