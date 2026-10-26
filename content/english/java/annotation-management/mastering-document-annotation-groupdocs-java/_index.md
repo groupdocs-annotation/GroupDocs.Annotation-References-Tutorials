@@ -532,13 +532,13 @@ A: Absolutely. Use ARGB integers; for example, `setBackgroundColor(0x80FF0000)` 
 A: A valid GroupDocs.Annotation license is required for commercial deployments. Development and testing can use the free trial or a temporary key.
 
 **Additional resources**  
-- [GroupDocs Annotation Documentation]({{< relref "java/annotation-management/groupdocs-annotation-documentation/_index.md" >}})
-- [API Reference]({{< relref "java/annotation-management/api-reference/_index.md" >}})
-- [Download Library]({{< relref "java/annotation-management/download-library/_index.md" >}})
-- [Purchase License]({{< relref "java/annotation-management/purchase-license/_index.md" >}})
-- [Free Trial]({{< relref "java/annotation-management/free-trial/_index.md" >}})
-- [Temporary License]({{< relref "java/annotation-management/temporary-license/_index.md" >}})
-- [Support Forum]({{< relref "java/annotation-management/support-forum/_index.md" >}})
+- [GroupDocs Annotation Documentation](https://docs.groupdocs.com/annotation/java/)
+- [API Reference](https://reference.groupdocs.com/annotation/java/)
+- [Download Library](https://releases.groupdocs.com/annotation/java/)
+- [Purchase License](https://purchase.groupdocs.com/buy)
+- [Free Trial](https://releases.groupdocs.com/annotation/java/)
+- [Temporary License](https://purchase.groupdocs.com/temporary-license/)
+- [Support Forum](https://forum.groupdocs.com/c/annotation)
 
 ---
 
@@ -548,12 +548,6 @@ A: A valid GroupDocs.Annotation license is required for commercial deployments. 
 
 ## Related Tutorials
 
-- [Groupdocs Annotation Java Modify Pdf Annotations]({{< relref "java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/_index.md" >}})
-- [Automate Pdf Annotation Extraction Groupdocs Java]({{< relref "java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/_index.md" >}})
-- [Groupdocs Annotation Java Document Page Previews]({{< relref "java/document-preview/groupdocs-annotation-java-document-page-previews/_index.md" >}})
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
+- [Groupdocs Annotation Java Modify Pdf Annotations](/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Automate Pdf Annotation Extraction Groupdocs Java](/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/)
+- [Groupdocs Annotation Java Document Page Previews](/java/document-preview/groupdocs-annotation-java-document-page-previews/)
