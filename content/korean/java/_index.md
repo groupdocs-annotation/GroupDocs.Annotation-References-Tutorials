@@ -49,10 +49,6 @@ url: /ko/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF에 주석 달기 – Java 문서 주석 API
 
 If you need to **PDF에 주석 달기** files directly from Java, GroupDocs.Annotation for Java gives you a complete, single‑JAR solution. This powerful document annotation API lets you add comments, highlights, watermarks, images, and many other markup types to PDFs, Word, Excel, PowerPoint, and image files—all without external dependencies. Embedding these capabilities into your Java applications enables collaborative review tools, legal markup workflows, or any scenario where rich document interaction is required.
@@ -196,8 +192,3 @@ Download the [latest version](https://releases.groupdocs.com/annotation/java/) o
 **마지막 업데이트:** 2026-10-21  
 **테스트 환경:** GroupDocs.Annotation for Java 23.12 (작성 시 최신 버전)  
 **작성자:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

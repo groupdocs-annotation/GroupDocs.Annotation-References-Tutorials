@@ -51,10 +51,6 @@ url: /hu/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hogyan annotáljunk pdf – Java dokumentum annotációs API
 
 Ha közvetlenül Java-ból szeretne **hogyan annotáljunk pdf** fájlokat, a GroupDocs.Annotation for Java egy komplett, egy‑JAR megoldást kínál. Ez a hatékony dokumentum‑annotációs API lehetővé teszi, hogy megjegyzéseket, kiemeléseket, vízjeleket, képeket és számos egyéb jelölést adjunk PDF‑ekhez, Word, Excel, PowerPoint és kép fájlokhoz – mindezt külső függőségek nélkül. Ezeknek a képességeknek a beágyazása Java‑alkalmazásaiba együttműködő felülvizsgálati eszközöket, jogi jelölési munkafolyamatokat vagy bármilyen olyan forgatókönyvet tesz lehetővé, ahol gazdag dokumentum‑interakcióra van szükség.
@@ -196,8 +192,3 @@ Töltse le a [legújabb verziót](https://releases.groupdocs.com/annotation/java
 **Utoljára frissítve:** 2026-10-21  
 **Tesztelve:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
 **Szerző:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

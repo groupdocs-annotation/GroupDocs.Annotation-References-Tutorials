@@ -47,10 +47,6 @@ url: /zh/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何使用 Java 文档注释 API 对 PDF 进行标注
 
 如果您需要直接从 Java **how to annotate pdf** 文件，GroupDocs.Annotation for Java 为您提供完整的单 JAR 解决方案。此强大的文档注释 API 让您可以向 PDF、Word、Excel、PowerPoint 和图像文件添加评论、高亮、 水印、图像以及许多其他标记类型——无需外部依赖。将这些功能嵌入您的 Java 应用程序，可实现协作审阅工具、法律标注工作流或任何需要丰富文档交互的场景。
@@ -194,8 +190,3 @@ GroupDocs.Annotation 支持从本地文件、流、云存储（Amazon S3、Azure
 **最后更新：** 2026-10-21  
 **测试环境：** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
 **作者：** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

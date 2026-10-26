@@ -49,10 +49,6 @@ url: /hi/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF को कैसे एनोटेट करें – जावा दस्तावेज़ एनोटेशन API
 
 यदि आपको जावा से सीधे PDF फ़ाइलों को **how to annotate pdf** करने की आवश्यकता है, तो GroupDocs.Annotation for Java आपको एक पूर्ण, सिंगल‑JAR समाधान प्रदान करता है। यह शक्तिशाली दस्तावेज़ एनोटेशन API आपको टिप्पणी, हाइलाइट, वॉटरमार्क, छवियां, और कई अन्य मार्कअप प्रकार PDF, Word, Excel, PowerPoint, और इमेज फ़ाइलों में जोड़ने की अनुमति देता है—बिना किसी बाहरी निर्भरताओं के। इन क्षमताओं को अपने जावा एप्लिकेशन में एम्बेड करने से सहयोगी रिव्यू टूल, कानूनी मार्कअप वर्कफ़्लो, या किसी भी परिदृश्य में जहाँ समृद्ध दस्तावेज़ इंटरैक्शन आवश्यक है, सक्षम होते हैं।
@@ -159,8 +155,3 @@ GroupDocs.Annotation for Java की पूरी क्षमताओं क�
 **अंतिम अपडेट:** 2026-10-21  
 **परीक्षण किया गया:** GroupDocs.Annotation for Java 23.12 (लेखन के समय नवीनतम)  
 **लेखक:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

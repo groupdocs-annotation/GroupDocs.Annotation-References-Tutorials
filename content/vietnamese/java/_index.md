@@ -49,10 +49,6 @@ url: /vi/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cách chú thích pdf – API chú thích tài liệu Java
 
 Nếu bạn cần **cách chú thích pdf** trực tiếp từ Java, GroupDocs.Annotation for Java cung cấp cho bạn một giải pháp hoàn chỉnh, chỉ gồm một tệp JAR duy nhất. API chú thích tài liệu mạnh mẽ này cho phép bạn thêm bình luận, đánh dấu, watermarks, hình ảnh và nhiều loại đánh dấu khác vào PDFs, Word, Excel, PowerPoint và các tệp hình ảnh — tất cả mà không cần phụ thuộc bên ngoài. Nhúng các khả năng này vào ứng dụng Java của bạn cho phép tạo công cụ xem xét cộng tác, quy trình làm việc chú thích pháp lý, hoặc bất kỳ kịch bản nào yêu cầu tương tác tài liệu phong phú.
@@ -172,8 +168,3 @@ Tải xuống [phiên bản mới nhất](https://releases.groupdocs.com/annotat
 **Cập nhật lần cuối:** 2026-10-21  
 **Kiểm tra với:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
 **Tác giả:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -49,10 +49,6 @@ url: /java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # How to annotate pdf – Java document annotation API
 
 If you need to **how to annotate pdf** files directly from Java, GroupDocs.Annotation for Java gives you a complete, single‑JAR solution. This powerful document annotation API lets you add comments, highlights, watermarks, images, and many other markup types to PDFs, Word, Excel, PowerPoint, and image files—all without external dependencies. Embedding these capabilities into your Java applications enables collaborative review tools, legal markup workflows, or any scenario where rich document interaction is required.
@@ -129,43 +125,43 @@ api.save("output.pdf");
 
 ## GroupDocs.Annotation for Java tutorials
 
-### [Licensing and Configuration]({{< relref "licensing-and-configuration" >}})
+### [Licensing and Configuration](./licensing-and-configuration)
 Learn how to set up licenses, configure GroupDocs.Annotation options, and integrate the library into your Java projects with complete code examples.
 
-### [Document Loading]({{< relref "document-loading" >}})
+### [Document Loading](./document-loading)
 Discover multiple methods for loading documents into GroupDocs.Annotation from various sources including local storage, streams, cloud platforms (Amazon S3, Azure), URLs, and FTP servers.
 
-### [Document Saving]({{< relref "document-saving" >}})
+### [Document Saving](./document-saving)
 Master techniques for saving annotated documents with various output options, formats, and optimization settings for your Java applications.
 
-### [Text Annotations]({{< relref "text-annotations" >}})
+### [Text Annotations](./text-annotations)
 Implement text highlighting, underline, strikeout, replacement, and redaction annotations with complete Java code examples and customization options.
 
-### [Graphical Annotations]({{< relref "graphical-annotations" >}})
+### [Graphical Annotations](./graphical-annotations)
 Add professional shapes, arrows, polygons, distance measurements and other graphical elements to documents with precise control over appearance and positioning.
 
-### [Image Annotations]({{< relref "image-annotations" >}})
+### [Image Annotations](./image-annotations)
 Learn how to programmatically insert, position, and customize image annotations from both local and remote sources in different document formats.
 
-### [Link Annotations]({{< relref "link-annotations" >}})
+### [Link Annotations](./link-annotations)
 Create interactive hyperlinks and linked content within your documents using GroupDocs.Annotation's comprehensive link annotation capabilities.
 
-### [Form field annotations]({{< relref "form-field-annotations" >}})
+### [Form field annotations](./form-field-annotations)
 Implement interactive form fields including checkboxes, buttons, dropdowns, and text inputs to create fillable documents and forms.
 
-### [Annotation Management]({{< relref "annotation-management" >}})
+### [Annotation Management](./annotation-management)
 Master the full annotation lifecycle with tutorials on adding, removing, updating, and filtering annotations programmatically in your Java applications.
 
-### [Reply Management]({{< relref "reply-management" >}})
+### [Reply Management](./reply-management)
 Implement collaborative document review with threaded comments, replies, and user‑based discussion capabilities in your document workflows.
 
-### [Document Information]({{< relref "document-information" >}})
+### [Document Information](./document-information)
 Access and utilize document metadata, page metrics, content information, and format details to enhance your document processing applications.
 
-### [Document Preview]({{< relref "document-preview" >}})
+### [Document Preview](./document-preview)
 Generate high‑quality document previews with and without annotations, control preview resolution, and create custom document viewing experiences.
 
-### [Advanced Features]({{< relref "advanced-features" >}})
+### [Advanced Features](./advanced-features)
 Complete tutorials for implementing advanced annotation capabilities, customizations, and specialized features with GroupDocs.Annotation for Java.
 
 ## Get started with GroupDocs.Annotation for Java
@@ -200,8 +196,3 @@ Download the [latest version](https://releases.groupdocs.com/annotation/java/) o
 **Last Updated:** 2026-10-21  
 **Tested With:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
 **Author:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

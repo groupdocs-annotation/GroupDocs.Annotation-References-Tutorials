@@ -49,10 +49,6 @@ url: /es/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cómo anotar pdf – API de anotación de documentos Java
 
 Si necesitas **cómo anotar pdf** directamente desde Java, GroupDocs.Annotation for Java te ofrece una solución completa en un solo JAR. Esta potente API de anotación de documentos permite agregar comentarios, resaltados, marcas de agua, imágenes y muchos otros tipos de marcado a PDFs, Word, Excel, PowerPoint y archivos de imagen, todo sin dependencias externas. Incorporar estas capacidades en tus aplicaciones Java habilita herramientas de revisión colaborativa, flujos de trabajo de marcado legal o cualquier escenario donde se requiera interacción rica con documentos.
@@ -197,8 +193,3 @@ Descarga la [última versión](https://releases.groupdocs.com/annotation/java/) 
 **Última actualización:** 2026-10-21  
 **Probado con:** GroupDocs.Annotation for Java 23.12 (última versión al momento de escribir)  
 **Autor:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
