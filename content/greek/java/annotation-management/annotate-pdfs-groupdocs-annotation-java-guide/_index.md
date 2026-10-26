@@ -55,11 +55,6 @@ type: docs
 url: /el/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Προσθήκη σχολίων σε PDF
 
 Αν χρειάζεται να **προσθέσετε σχολιασμούς σε PDF** αρχεία από μια εφαρμογή Java—είτε δημιουργείτε μια πύλη αξιολόγησης συμβάσεων, μια πλατφόρμα e‑learning ή έναν συνεργατικό επεξεργαστή εγγράφων—αυτό το tutorial σας δείχνει ακριβώς πώς να το κάνετε με το GroupDocs.Annotation. Θα μάθετε να φορτώνετε PDFs, να δημιουργείτε σχόλια τύπου περιοχής, να διαχειρίζεστε πόρους αποδοτικά και να επεξεργάζεστε μεγάλα αρχεία χωρίς να εξαντλείται η μνήμη.
@@ -731,11 +726,3 @@ public class DocumentAnnotationService {
 - [Δημιουργία Επισημάνσεων PDF Java: Ολοκληρωμένος Οδηγός με GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Επεξεργασία Σχολίων PDF Java - Πλήρης Οδηγός GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Σχολιασμός PDF από URLs GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

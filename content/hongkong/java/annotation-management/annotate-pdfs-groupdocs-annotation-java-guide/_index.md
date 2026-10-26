@@ -51,11 +51,6 @@ type: docs
 url: /zh-hant/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 為 PDF 添加註釋
 
 如果您需要 **在 Java 應用程式中為 PDF 檔案添加註釋**——無論是建構合約審核入口、電子學習平台，或是協作文件編輯器——本教學將示範如何使用 GroupDocs.Annotation 完成此工作。您將學會載入 PDF、建立區域型註釋、有效管理資源，並在處理大型檔案時避免記憶體耗盡。
@@ -712,11 +707,3 @@ public class DocumentAnnotationService {
 - [Create PDF Highlights Java: Complete Guide with GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Annotate Pdfs From Urls Groupdocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

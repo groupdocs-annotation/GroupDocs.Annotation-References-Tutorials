@@ -55,11 +55,6 @@ type: docs
 url: /ar/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # إضافة تعليقات توضيحية إلى PDF
 
 If you need to **إضافة تعليقات توضيحية إلى PDF** files from a Java application—whether you’re building a contract‑review portal, an e‑learning platform, or a collaborative document editor—this tutorial shows you exactly how to do it with GroupDocs.Annotation. You’ll learn to load PDFs, create area‑style comments, manage resources efficiently, and handle large files without exhausting memory.
@@ -718,11 +713,3 @@ public class DocumentAnnotationService {
 - [إنشاء تظليل PDF باستخدام Java: دليل كامل مع GroupDocs Annotation](/annotation/java/annotation-management/)
 - [تحرير تعليقات PDF باستخدام Java - دليل كامل من GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [تعليق ملفات PDF من عناوين URL باستخدام GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

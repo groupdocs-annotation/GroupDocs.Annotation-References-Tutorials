@@ -53,11 +53,6 @@ type: docs
 url: /ko/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF에 주석 추가
 
 If you need to **PDF에 주석 추가** files from a Java application—whether you’re building a contract‑review portal, an e‑learning platform, or a collaborative document editor—this tutorial shows you exactly how to do it with GroupDocs.Annotation. You’ll learn to load PDFs, create area‑style comments, manage resources efficiently, and handle large files without exhausting memory.
@@ -712,10 +707,3 @@ public class DocumentAnnotationService {
 - [PDF 하이라이트 만들기 Java: GroupDocs Annotation 완전 가이드](/annotation/java/annotation-management/)
 - [PDF 주석 편집 Java - 완전 GroupDocs 튜토리얼](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [URL에서 PDF 주석 달기 GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

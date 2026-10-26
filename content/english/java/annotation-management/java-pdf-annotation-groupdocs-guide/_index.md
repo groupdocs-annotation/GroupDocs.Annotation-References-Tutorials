@@ -522,9 +522,3 @@ A: Absolutely. You can customize opacity, border styles, text properties, and ev
 - [Add Arrow PDF in Java – Complete GroupDocs Tutorial](/annotation/java/graphical-annotations/annotate-pdf-arrows-groupdocs-java/)
 - [Add Checkbox Annotations Pdf Groupdocs Java](/annotation/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/)
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

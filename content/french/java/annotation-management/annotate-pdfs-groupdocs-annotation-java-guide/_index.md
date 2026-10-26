@@ -55,11 +55,6 @@ type: docs
 url: /fr/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Ajouter des annotations à un PDF
 
 Si vous devez **ajouter des annotations à PDF** depuis une application Java — que vous construisiez un portail de révision de contrats, une plateforme d’e‑learning ou un éditeur de documents collaboratif — ce tutoriel vous montre exactement comment le faire avec GroupDocs.Annotation. Vous apprendrez à charger des PDF, créer des commentaires de type zone, gérer les ressources efficacement et traiter de gros fichiers sans épuiser la mémoire.
@@ -718,11 +713,3 @@ public class DocumentAnnotationService {
 - [Créer des surlignages PDF Java : guide complet avec GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Modifier les annotations PDF Java – Tutoriel complet GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Annoter des PDF depuis des URLs GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

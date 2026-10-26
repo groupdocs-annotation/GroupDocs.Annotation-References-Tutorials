@@ -55,11 +55,6 @@ type: docs
 url: /hi/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF में एनोटेशन जोड़ें
 
 यदि आपको Java एप्लिकेशन से **PDF में एनोटेशन जोड़ने** की आवश्यकता है—चाहे आप एक कॉन्ट्रैक्ट‑रिव्यू पोर्टल, एक ई‑लर्निंग प्लेटफ़ॉर्म, या एक सहयोगी दस्तावेज़ संपादक बना रहे हों—यह ट्यूटोरियल आपको GroupDocs.Annotation के साथ इसे कैसे करना है, बिल्कुल दिखाता है। आप PDFs लोड करना, एरिया‑स्टाइल टिप्पणी बनाना, संसाधनों को कुशलतापूर्वक प्रबंधित करना, और बड़ी फ़ाइलों को मेमोरी समाप्त किए बिना संभालना सीखेंगे।
@@ -718,11 +713,3 @@ public class DocumentAnnotationService {
 - [PDF हाइलाइट्स बनाएं Java: GroupDocs Annotation के साथ पूर्ण गाइड](/annotation/java/annotation-management/)
 - [PDF एनोटेशन संपादित करें Java - पूर्ण GroupDocs ट्यूटोरियल](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [GroupDocs Java से URLs से PDFs एनोटेट करें](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

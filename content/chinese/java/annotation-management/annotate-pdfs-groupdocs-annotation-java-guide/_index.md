@@ -53,11 +53,6 @@ type: docs
 url: /zh/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 为 PDF 添加批注
 
 如果您需要从 Java 应用程序 **向 PDF 文件添加批注**——无论是构建合同审查门户、电子学习平台，还是协作文档编辑器——本教程将向您展示如何使用 GroupDocs.Annotation 完成此操作。您将学习加载 PDF、创建区域样式评论、有效管理资源，并在不耗尽内存的情况下处理大文件。
@@ -712,11 +707,3 @@ public class DocumentAnnotationService {
 - [使用 GroupDocs Annotation 创建 PDF 高亮 Java：完整指南](/annotation/java/annotation-management/)
 - [编辑 PDF 批注 Java - 完整 GroupDocs 教程](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [从 URL 批注 PDF Groupdocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -55,11 +55,6 @@ type: docs
 url: /vi/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Thêm chú thích vào PDF
 
 Nếu bạn cần **thêm chú thích vào PDF** từ một ứng dụng Java—cho dù bạn đang xây dựng một cổng thông tin xem xét hợp đồng, một nền tảng e‑learning, hoặc một trình soạn thảo tài liệu cộng tác—hướng dẫn này sẽ cho bạn thấy cách thực hiện chính xác với GroupDocs.Annotation. Bạn sẽ học cách tải PDF, tạo các bình luận dạng khu vực, quản lý tài nguyên hiệu quả và xử lý các tệp lớn mà không làm cạn kiệt bộ nhớ.
@@ -718,11 +713,3 @@ public class DocumentAnnotationService {
 - [Tạo điểm nổi bật PDF Java: Hướng dẫn đầy đủ với GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Chỉnh sửa chú thích PDF Java - Hướng dẫn đầy đủ của GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Chú thích PDF từ URL GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

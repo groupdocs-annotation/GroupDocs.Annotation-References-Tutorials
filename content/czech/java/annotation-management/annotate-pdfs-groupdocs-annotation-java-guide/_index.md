@@ -55,11 +55,6 @@ type: docs
 url: /cs/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Přidat anotace do PDF
 
 Pokud potřebujete **přidávat anotace do PDF** souborů z Java aplikace—ať už vytváříte portál pro revizi smluv, e‑learningovou platformu nebo kolaborativní editor dokumentů—tento tutoriál vám přesně ukáže, jak to provést pomocí GroupDocs.Annotation. Naučíte se načítat PDF, vytvářet komentáře ve stylu oblasti, efektivně spravovat zdroje a zpracovávat velké soubory, aniž byste vyčerpali paměť.
@@ -718,11 +713,3 @@ public class DocumentAnnotationService {
 - [Vytvoření zvýraznění PDF v Javě: Kompletní průvodce s GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Úprava PDF anotací v Javě – Kompletní tutoriál GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Anotace PDF z URL pomocí GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

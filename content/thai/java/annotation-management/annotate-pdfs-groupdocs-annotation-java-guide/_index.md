@@ -53,11 +53,6 @@ type: docs
 url: /th/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # เพิ่มคำอธิบายลงใน PDF
 
 หากคุณต้องการ **add annotations to PDF** จากแอปพลิเคชัน Java — ไม่ว่าคุณกำลังสร้างพอร์ทัลการตรวจสอบสัญญา, แพลตฟอร์ม e‑learning, หรือโปรแกรมแก้ไขเอกสารแบบร่วมมือ — บทแนะนำนี้จะแสดงให้คุณเห็นวิธีทำด้วย GroupDocs.Annotation อย่างละเอียด คุณจะได้เรียนรู้การโหลด PDF, สร้างคอมเมนต์แบบพื้นที่, จัดการทรัพยากรอย่างมีประสิทธิภาพ, และจัดการไฟล์ขนาดใหญ่โดยไม่ทำให้หน่วยความจำหมด
@@ -714,10 +709,3 @@ public class DocumentAnnotationService {
 - [สร้างไฮไลท์ PDF ด้วย Java: คู่มือครบถ้วนกับ GroupDocs Annotation](/annotation/java/annotation-management/)
 - [แก้ไขคำอธิบาย PDF ด้วย Java - บทแนะนำครบถ้วนของ GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [ทำคำอธิบาย PDF จาก URL ด้วย GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -55,11 +55,6 @@ type: docs
 url: /id/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Tambahkan anotasi ke PDF
 
 Jika Anda perlu **menambahkan anotasi ke PDF** dari aplikasi Java—baik Anda sedang membangun portal tinjauan kontrak, platform e‑learning, atau editor dokumen kolaboratif—tutorial ini menunjukkan secara tepat cara melakukannya dengan GroupDocs.Annotation. Anda akan belajar memuat PDF, membuat komentar bergaya area, mengelola sumber daya secara efisien, dan menangani file besar tanpa menghabiskan memori.
@@ -730,11 +725,3 @@ public class DocumentAnnotationService {
 - [Buat Sorotan PDF Java: Panduan Lengkap dengan GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Edit Anotasi PDF Java - Tutorial Lengkap GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Anotasi PDF Dari URL Groupdocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -55,11 +55,6 @@ type: docs
 url: /sv/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Lägg till annotationer i PDF
 
 Om du behöver **lägga till annotationer i PDF**‑filer från en Java‑applikation—oavsett om du bygger en kontraktsgranskningsportal, en e‑learning‑plattform eller en samarbetsdokumentredigerare—så visar den här handledningen exakt hur du gör det med GroupDocs.Annotation. Du kommer att lära dig att läsa in PDF‑filer, skapa områdes‑stils kommentarer, hantera resurser effektivt och hantera stora filer utan att tömma minnet.
@@ -716,10 +711,3 @@ public class DocumentAnnotationService {
 - [Skapa PDF‑markeringar Java: Komplett guide med GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Redigera PDF‑annotationer Java – Komplett GroupDocs‑handledning](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Annotera PDF‑filer från URL:er GroupDocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

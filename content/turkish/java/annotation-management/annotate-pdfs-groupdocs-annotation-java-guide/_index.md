@@ -55,11 +55,6 @@ type: docs
 url: /tr/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF'ye açıklama ekleyin
 
 Java uygulamasından **PDF'ye açıklama eklemeniz** gerektiğinde—sözleşme inceleme portalı, e‑öğrenme platformu veya ortak belge düzenleyici oluşturuyor olsanız da—bu öğretici, GroupDocs.Annotation ile bunu nasıl yapacağınızı adım adım gösterir. PDF'leri nasıl yükleyeceğinizi, alan‑stili yorumlar oluşturmayı, kaynakları verimli yönetmeyi ve büyük dosyaları bellek tüketimini zorlamadan işlemeyi öğreneceksiniz.
@@ -718,11 +713,3 @@ public class DocumentAnnotationService {
 - [Create PDF Highlights Java: Complete Guide with GroupDocs Annotation](/annotation/java/annotation-management/)
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Annotate Pdfs From Urls Groupdocs Java](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
-
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}
