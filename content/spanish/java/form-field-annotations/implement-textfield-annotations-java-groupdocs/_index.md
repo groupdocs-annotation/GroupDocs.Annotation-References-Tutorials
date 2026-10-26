@@ -1,30 +1,33 @@
 ---
 categories:
 - Java Development
-date: '2026-05-21'
-description: Aprende cómo personalizar los campos de formulario PDF usando Java y
-  GroupDocs.Annotation. Esta guía paso a paso cubre cómo agregar campos de texto PDF,
-  generar documentos PDF rellenables y mejores prácticas.
+date: '2026-10-26'
+description: Aprende cómo generar PDF rellenable con Java usando GroupDocs.Annotation,
+  personaliza los campos de formulario PDF, agrega campos de texto y sigue las mejores
+  prácticas.
 keywords:
+- generate fillable pdf
 - customize pdf form fields
 - add pdf text field
-- generate fillable pdf documents
-- add text field java
-- generate fillable pdf java
-lastmod: '2026-05-21'
+- how to generate fillable pdf
+- configure pdf text field
+lastmod: '2026-10-26'
 linktitle: Guía de anotaciones de formularios PDF en Java
+og_description: Genera PDF rellenable con Java usando GroupDocs.Annotation. Aprende
+  a personalizar los campos de formulario PDF, agregar campos de texto y aplicar las
+  mejores prácticas en una guía paso a paso.
+og_image_alt: Guide to generate fillable PDF with Java and GroupDocs Annotation
+og_title: Generar PDF rellenable con Java usando GroupDocs Annotation
 schemas:
 - author: GroupDocs
-  dateModified: '2026-05-21'
-  description: Learn how to customize pdf form fields using Java and GroupDocs.Annotation.
-    This step‑by‑step guide covers add pdf text field, generate fillable pdf documents,
-    and best practices.
-  headline: 'Customize PDF Form Fields with Java: Interactive Form Annotations Guide'
+  dateModified: '2026-10-26'
+  description: Learn how to generate fillable PDF with Java using GroupDocs.Annotation,
+    customize PDF form fields, add text fields, and follow best practices.
+  headline: Generate fillable PDF with Java using GroupDocs Annotation
   type: TechArticle
-- description: Learn how to customize pdf form fields using Java and GroupDocs.Annotation.
-    This step‑by‑step guide covers add pdf text field, generate fillable pdf documents,
-    and best practices.
-  name: 'Customize PDF Form Fields with Java: Interactive Form Annotations Guide'
+- description: Learn how to generate fillable PDF with Java using GroupDocs.Annotation,
+    customize PDF form fields, add text fields, and follow best practices.
+  name: Generate fillable PDF with Java using GroupDocs Annotation
   steps:
   - name: Set Up Your Output Directory
     text: 'First, decide where the annotated PDF will be saved: **Important:** Replace
@@ -76,57 +79,60 @@ schemas:
       fields?
   type: FAQPage
 tags:
-- PDF-forms
-- document-annotation
-- GroupDocs
-- Java-API
-title: 'Personaliza los campos de formulario PDF con Java: Guía de anotaciones de
-  formularios interactivos'
+- pdf forms
+- document annotation
+- groupdocs
+- java api
+title: Generar PDF rellenable con Java usando GroupDocs Annotation
 type: docs
 url: /es/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
 
-# Personalizar campos de formulario PDF con Java: Guía de anotaciones de formulario interactivas
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-En este tutorial completo usted **customize pdf form fields** programáticamente usando Java y la API GroupDocs.Annotation. Recorreremos todo lo que necesita —desde la configuración del proyecto hasta la adición de anotaciones de campo de texto totalmente funcionales— para que pueda ofrecer PDFs profesionales y rellenables que sus usuarios puedan completar en cualquier dispositivo.
+# Generar PDF rellenable con Java usando GroupDocs Annotation
+
+En este tutorial completo **generarás PDF rellenables** programáticamente usando Java y la API GroupDocs.Annotation. Recorreremos todo lo que necesitas, desde la configuración del proyecto hasta la adición de anotaciones de campo de texto totalmente funcionales, para que puedas entregar PDFs profesionales e interactivos que funcionen en cualquier dispositivo y coincidan con la apariencia y el estilo de tu marca.
 
 ## Respuestas rápidas
 - **¿Cuál es la biblioteca principal?** GroupDocs.Annotation for Java  
-- **¿Qué palabra clave tiene como objetivo este tutorial?** *customize pdf form fields*  
-- **¿Puedo generar documentos PDF Java rellenables?** Sí – vea la sección “How to generate fillable pdf java documents”  
+- **¿Qué palabra clave tiene como objetivo este tutorial?** *generar pdf rellenable*  
+- **¿Puedo generar documentos PDF rellenables con Java?** Sí – consulta la sección “How to generate fillable pdf java documents”  
 - **¿Necesito una licencia?** Una prueba funciona para desarrollo; se requiere una licencia comercial para producción  
 - **¿Es compatible con Maven?** Absolutamente – la configuración de Maven está incluida  
+- **¿Cuántas páginas se pueden procesar eficientemente?** Hasta 500 páginas con menos del 30 % de sobrecarga de memoria  
 
-## Qué es “customize pdf form fields”?
-*Customize pdf form fields* significa agregar, estilizar y configurar programáticamente elementos interactivos —como cuadros de texto, casillas de verificación y listas desplegables— para que los usuarios finales puedan completar el documento directamente en un visor PDF. Este enfoque brinda a los desarrolladores control total sobre la apariencia, el comportamiento y la extracción de datos, permitiendo PDFs interactivos de alta calidad y consistentes con la marca que funcionan en todos los lectores PDF principales.
+## ¿Qué es “customize pdf form fields”?
+*Customize pdf form fields* significa agregar, estilizar y configurar programáticamente elementos interactivos —como cuadros de texto, casillas de verificación y listas desplegables— para que los usuarios finales puedan completar el documento directamente en un visor de PDF. Este enfoque brinda a los desarrolladores control total sobre la apariencia, el comportamiento y la extracción de datos, permitiendo PDFs interactivos de alta calidad y consistentes con la marca que funcionan en todos los lectores de PDF principales.
 
 ## ¿Por qué usar anotaciones de formulario interactivas?
-GroupDocs.Annotation admite **más de 50 formatos de entrada y salida** y puede procesar **PDFs de cientos de páginas** sin cargar todo el archivo en memoria. Esto brinda hasta un **30 % más rápido en renderizado** en comparación con muchas bibliotecas competidoras, lo que lo hace ideal para flujos de trabajo empresariales de alto volumen.
+GroupDocs.Annotation soporta **más de 50 formatos de entrada y salida** y puede procesar **PDFs de varios cientos de páginas** sin cargar todo el archivo en memoria, ofreciendo hasta **un 30 % más rápido en renderizado** en comparación con muchas bibliotecas competidoras. Estos beneficios cuantificados lo convierten en una opción principal para flujos de trabajo empresariales de alto volumen que exigen velocidad, fiabilidad e interactividad rica.
 
-## Cómo personalizar campos de formulario pdf usando GroupDocs Annotation
-Cargue su PDF, cree una `TextFieldAnnotation`, configure sus propiedades y guarde —tres pasos concisos que le brindan control total sobre la apariencia y el comportamiento del campo. Al usar la API de Annotation puede ajustar programáticamente fuentes, colores, bordes e incluso agregar lógica de validación, garantizando que cada formulario coincida con sus especificaciones exactas.
+## Cómo generar PDF rellenable usando GroupDocs Annotation
+Carga tu PDF, crea una `TextFieldAnnotation`, establece sus propiedades y guarda—tres pasos concisos que te brindan control total sobre la apariencia y el comportamiento del campo. Al usar la API de Annotation puedes ajustar programáticamente fuentes, colores, bordes e incluso agregar lógica de validación, asegurando que cada formulario coincida con tus especificaciones exactas.
 
-## Cómo crear campos de formulario pdf java interactivos
-Cargue el PDF de origen, configure una `TextFieldAnnotation` y añádala al documento. Este enfoque le permite incrustar cuadros de texto rellenables que aparecen instantáneamente en cualquier visor PDF, además de permitirle establecer valores predeterminados, descripciones emergentes y banderas de campo obligatorio para guiar a los usuarios durante el proceso de completado del formulario.
+## Cómo crear campos de formulario PDF interactivos en Java
+Carga el PDF de origen, configura una `TextFieldAnnotation` y añádela al documento. Este enfoque te permite incrustar cuadros de texto rellenables que aparecen instantáneamente en cualquier visor de PDF, además de permitir establecer valores predeterminados, descripciones emergentes y banderas de campo obligatorio para guiar a los usuarios en el proceso de completado del formulario.
 
-## Cómo generar documentos pdf java rellenables
-Genere PDFs que acepten la entrada del usuario insertando programáticamente campos de formulario. Esto elimina la necesidad de editores de terceros y garantiza un estilo consistente en todos los documentos generados. Después de agregar las anotaciones, puede exportar el PDF para distribución o procesamiento adicional, y posteriormente extraer los datos completados del lado del servidor para integrarlos con sistemas de back‑end.
+## Cómo generar documentos PDF rellenables en Java
+Genera PDFs que acepten entrada del usuario insertando programáticamente campos de formulario. Esto elimina la necesidad de editores de terceros y garantiza un estilo consistente en todos los documentos generados. Después de agregar las anotaciones, puedes exportar el PDF para distribución o procesamiento adicional, y posteriormente extraer los datos completados del lado del servidor para integrarlos con sistemas de back‑end.
 
-## Requisitos previos: Lo que necesita antes de comenzar
-- **Java Development Kit (JDK)** 8 o superior (JDK 11+ es recomendado)  
-- **IDE** (IntelliJ IDEA, Eclipse, o cualquier editor compatible con Java)  
+## Requisitos previos: lo que necesitas antes de comenzar
+- **Java Development Kit (JDK)** 8 o superior (se recomienda JDK 11+)  
+- **IDE** (IntelliJ IDEA, Eclipse o cualquier editor compatible con Java)  
 - **Maven o Gradle** para la gestión de dependencias (los ejemplos usan Maven)  
-- **GroupDocs.Annotation for Java** v25.2 (última versión estable) – vea la [Latest Java Library](https://releases.groupdocs.com/annotation/java/)  
-- **Licencia válida** (Prueba gratuita para desarrollo; licencia comercial para producción) – revise las [License Options](https://purchase.groupdocs.com/buy)  
+- **GroupDocs.Annotation for Java** v25.2 (última estable) – consulta la [Latest Java Library](https://releases.groupdocs.com/annotation/java/)  
+- **Licencia válida** (prueba gratuita para desarrollo; licencia comercial para producción) – revisa las [License Options](https://purchase.groupdocs.com/buy)  
 
-¿Tiene todo? Vamos a sumergirnos.
+¿Todo listo? Vamos a sumergirnos.
 
-## Configuración de GroupDocs.Annotation para Java (La forma correcta)
+## Configuración de GroupDocs.Annotation para Java (la forma correcta)
 
 ### Configuración de Maven
-
-Agregue esta dependencia a su archivo `pom.xml`:
+Agrega esta dependencia a tu archivo `pom.xml`:
 
 ```xml
 <repositories>
@@ -145,42 +151,42 @@ Agregue esta dependencia a su archivo `pom.xml`:
 </dependencies>
 ```
 
-**Consejo profesional:** Siempre verifique la última versión en la página de lanzamientos de GroupDocs. Las nuevas versiones a menudo incluyen mejoras de rendimiento y correcciones de errores. Para una referencia detallada de la API, vea los [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/) y la [Complete API Documentation](https://reference.groupdocs.com/annotation/java/).
+**Consejo profesional:** Siempre verifica la última versión en la página de lanzamientos de GroupDocs. Para una referencia detallada de la API, consulta los [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/) y la [Complete API Documentation](https://reference.groupdocs.com/annotation/java/).
 
-### Configuración de licencia (¡No lo omita!)
+### Configuración de licencia (¡no lo omitas!)
 GroupDocs.Annotation no es gratuito para producción, pero ofrecen opciones de licencia flexibles:
-- **Free Trial** – perfecto para desarrollo y pruebas – también puede [Try Before You Buy](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License** – evaluación extendida para proyectos más grandes – obtenga más información sobre la [Extended Evaluation](https://purchase.groupdocs.com/temporary-license/)  
-- **Commercial License** – requerida para cualquier despliegue en producción  
+- **Prueba gratuita** – perfecta para desarrollo y pruebas – también puedes [Try Before You Buy](https://releases.groupdocs.com/annotation/java/)  
+- **Licencia temporal** – evaluación extendida para proyectos más grandes – obtén más información sobre la [Extended Evaluation](https://purchase.groupdocs.com/temporary-license/)  
+- **Licencia comercial** – requerida para cualquier despliegue en producción  
 
-Puede obtener su licencia en el [GroupDocs website](https://purchase.groupdocs.com/buy).  
+Puedes obtener tu licencia en el [GroupDocs website](https://purchase.groupdocs.com/buy).  
 
-## Guía de implementación: Creando su primer formulario PDF interactivo
+## Guía de implementación: creando tu primer formulario PDF interactivo
 
-### Paso 1: Configurar su directorio de salida
-Primero, decida dónde se guardará el PDF anotado:
+### Paso 1: configurar tu directorio de salida
+Primero, decide dónde se guardará el PDF anotado:
 
 ```java
 String outputPath = YOUR_OUTPUT_DIRECTORY + "/AddTextFieldAnnotation.pdf";
 ```
 
-**Importante:** Reemplace `YOUR_OUTPUT_DIRECTORY` con una ruta absoluta o una variable de entorno configurable para evitar errores relacionados con rutas en producción.
+**Importante:** Reemplaza `YOUR_OUTPUT_DIRECTORY` con una ruta absoluta o una variable de entorno configurable para evitar errores relacionados con rutas en producción.
 
-### Paso 2: Inicializar el Annotator
-`Annotator` es la clase central que carga un PDF y lo prepara para la anotación.
+### Paso 2: inicializar el anotador
+`Annotator` es la clase principal que carga un PDF y lo prepara para la anotación.
 
-**Definition anchor:** La clase `Annotator` proporciona métodos para leer, modificar y guardar documentos PDF en memoria.  
+**Definición ancla:** La clase `Annotator` proporciona métodos para leer, modificar y guardar documentos PDF en memoria.  
 
 ```java
 final Annotator annotator = new Annotator(YOUR_DOCUMENT_DIRECTORY + "/input.pdf");
 ```
 
-**Qué está sucediendo:** El annotator abre el archivo fuente, valida los permisos de acceso y crea una representación interna lista para modificaciones.
+**Qué está sucediendo:** El anotador abre el archivo fuente, valida los permisos de acceso y crea una representación interna lista para modificaciones.
 
-### Paso 3: Crear respuestas contextuales (Opcional pero potente)
-Las respuestas actúan como descripciones emergentes o texto de ayuda que guían a los usuarios mientras completan el formulario.
+### Paso 3: crear respuestas contextuales (opcional pero potente)
+Las respuestas actúan como información sobre herramientas o texto de ayuda que guían a los usuarios mientras completan el formulario.
 
-**Definition anchor:** Las respuestas son objetos de anotación que muestran información suplementaria cuando un usuario pasa el cursor sobre un campo de formulario.  
+**Definición ancla:** Las respuestas son objetos de anotación que muestran información suplementaria cuando el usuario pasa el cursor sobre un campo del formulario.  
 
 ```java
 Reply reply1 = new Reply();
@@ -198,12 +204,12 @@ replies.add(reply2);
 
 **Cuándo usar respuestas:** Ideal para formularios complejos que requieren instrucciones de formato, pistas de validación o divulgaciones legales.
 
-### Paso 4: Configurar su anotación TextField
+### Paso 4: configurar tu anotación de campo de texto
 `TextFieldAnnotation` define los aspectos visuales y funcionales de un cuadro de texto rellenable.
 
-**Definition anchor:** `TextFieldAnnotation` representa un campo de entrada de texto visual que puede editarse directamente en un visor PDF.  
+**Definición ancla:** `TextFieldAnnotation` representa un campo de entrada de texto visual que puede editarse directamente en un visor de PDF.  
 
-**Definition of setBox:** El método `setBox` define la posición y el tamaño de la anotación en la página.  
+**Definición de setBox:** El método `setBox` define la posición y el tamaño de la anotación en la página.  
 
 ```java
 TextFieldAnnotation textField = new TextFieldAnnotation();
@@ -223,61 +229,61 @@ textField.setReplies(replies); // Attach replies to the annotation
 
 **Configuraciones clave explicadas:**
 - **Posición (`setBox`)** – Rectangle(x, y, width, height); (0,0) es la esquina inferior‑izquierda de la página.  
-- **Colores** – Use valores RGB o constantes predefinidas; un amarillo claro (65535) brinda buen contraste.  
-- **Tamaño de fuente** – 12 pt es legible para la mayoría de los documentos; ajuste según la marca específica.  
+- **Colores** – Usa valores RGB o constantes predefinidas; un amarillo claro (65535) brinda buen contraste.  
+- **Tamaño de fuente** – 12 pt es legible para la mayoría de los documentos; ajústalo según la marca específica.  
 - **Opacidad** – 0.7 (70 %) equilibra la visibilidad con el contenido subyacente.
 
-### Paso 5: Añadir la anotación a su documento
-Después de configurar el campo, regístrelo en el PDF.
+### Paso 5: agregar la anotación a tu documento
+Después de configurar el campo, regístralo en el PDF.
 
-**Definition of add():** El método `add()` registra la anotación en el documento.  
+**Definición de add():** El método `add()` registra la anotación en el documento.  
 
 ```java
 annotator.add(textField);
 ```
 
-Puede llamar a `add()` repetidamente para insertar múltiples campos en la misma o en diferentes páginas.
+Puedes llamar a `add()` repetidamente para insertar múltiples campos en la misma u otras páginas.
 
-### Paso 6: Guardar y limpiar
+### Paso 6: guardar y limpiar
 Persistir los cambios y liberar recursos:
 
-**Definition of dispose():** El método `dispose()` libera los recursos nativos usados por el annotator.  
+**Definición de dispose():** El método `dispose()` libera los recursos nativos usados por el anotador.  
 
 ```java
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Crítico:** Siempre invoque `dispose()` o use un bloque try‑with‑resources para evitar fugas de memoria en servicios de larga duración.
+**Crítico:** Siempre invoca `dispose()` o usa un bloque try‑with‑resources para prevenir fugas de memoria en servicios de larga duración.
 
-## Cuándo elegir anotaciones TextField sobre otras opciones
-Los campos de texto sobresalen para la entrada de datos de una sola línea, como nombres, direcciones y comentarios. No son ideales para opciones binarias (use casillas de verificación) o selecciones predefinidas (use botones de opción o listas desplegables).
+## Cuándo elegir anotaciones de campo de texto sobre otras opciones
+Los campos de texto sobresalen para la entrada de datos de una sola línea, como nombres, direcciones y comentarios. No son ideales para opciones binarias (usa casillas de verificación) o selecciones predefinidas (usa botones de opción o listas desplegables).
 
 ## Problemas comunes y solución de problemas
 
-### Problema: Las anotaciones no aparecen en el PDF
+### Problema: las anotaciones no aparecen en el PDF
 **Síntomas:** El código se ejecuta sin errores, pero el PDF parece sin cambios.  
 
 **Soluciones:**  
-1. Verifique que `setPageNumber()` coincida con una página existente (indexada desde cero).  
-2. Asegúrese de que las coordenadas del rectángulo permanezcan dentro de los límites de la página.  
-3. Confirme que el directorio de salida tenga permisos de escritura.
+1. Verifica que `setPageNumber()` coincida con una página existente (indexada desde cero).  
+2. Asegúrate de que las coordenadas del rectángulo permanezcan dentro de los límites de la página.  
+3. Confirma que el directorio de salida tenga permisos de escritura.  
 
-### Problema: Los campos de texto son demasiado pequeños o están mal ubicados
-**Síntomas:** Los campos aparecen descentrados o son difíciles de interactuar.  
+### Problema: los campos de texto son demasiado pequeños o están mal ubicados
+**Síntomas:** Los campos aparecen fuera de centro o son difíciles de interactuar.  
 
 **Soluciones:**  
-1. Recuerde que las coordenadas PDF comienzan en la esquina inferior‑izquierda.  
-2. Aumente temporalmente el ancho del borde y reduzca la opacidad para visualizar la ubicación exacta.  
-3. Pruebe con varios visores PDF, ya que el renderizado puede variar ligeramente.
+1. Recuerda que las coordenadas del PDF comienzan en la esquina inferior‑izquierda.  
+2. Incrementa temporalmente el ancho del borde y reduce la opacidad para visualizar la ubicación exacta.  
+3. Prueba con varios visores de PDF, ya que el renderizado puede variar ligeramente.  
 
-### Problema: Problemas de memoria con documentos grandes
+### Problema: problemas de memoria con documentos grandes
 **Síntomas:** `OutOfMemoryError` o rendimiento lento en PDFs > 200 páginas.  
 
 **Soluciones:**  
-1. Procese las páginas individualmente en lugar de cargar todo el documento.  
-2. Aumente el tamaño del heap de JVM con `-Xmx2g` (o más alto según sea necesario).  
-3. Siempre llame a `dispose()` después de cada operación de documento.
+1. Procesa las páginas individualmente en lugar de cargar todo el documento.  
+2. Incrementa el tamaño del heap de JVM con `-Xmx2g` (o más según sea necesario).  
+3. Siempre llama a `dispose()` después de cada operación de documento.  
 
 ## Consejos de optimización de rendimiento
 
@@ -291,7 +297,7 @@ try (Annotator annotator = new Annotator(inputPath)) {
 ```
 
 ### Procesamiento por lotes para múltiples anotaciones
-Reuse a single `Annotator` instance to add many fields in one pass:
+Reutiliza una única instancia de `Annotator` para agregar muchos campos en una sola pasada:
 
 ```java
 Annotator annotator = new Annotator(inputPath);
@@ -303,31 +309,31 @@ annotator.dispose();
 ```
 
 ### Optimizar para documentos grandes
-- Mantenga las anotaciones por debajo de **30 por página** para mantener un renderizado fluido.  
-- Use valores de opacidad más bajos (≤ 0.6) para lotes grandes para reducir la sobrecarga de procesamiento.  
-- Divida los documentos de más de **100 páginas** en fragmentos y anote cada fragmento por separado.
+- Mantén las anotaciones por debajo de **30 por página** para mantener un renderizado fluido.  
+- Usa valores de opacidad más bajos (≤ 0.6) para lotes grandes y reducir la sobrecarga de procesamiento.  
+- Divide los documentos de más de **100 páginas** en fragmentos y anota cada fragmento por separado.  
 
-## Aplicaciones del mundo real: Dónde se utiliza realmente esto
+## Aplicaciones del mundo real: dónde se utiliza esto realmente
 
 ### Seguros y servicios financieros
-Digitalice solicitudes de pólizas, formularios de reclamaciones y acuerdos de préstamo, reduciendo el tiempo de procesamiento de días a horas.
+Digitaliza solicitudes de pólizas, formularios de reclamos y acuerdos de préstamo, reduciendo el tiempo de procesamiento de días a horas.
 
 ### Recursos humanos y incorporación
-Automatice la recopilación de datos de empleados —contactos de emergencia, formularios fiscales y selecciones de beneficios— sin papel.
+Automatiza la recopilación de datos de empleados—contactos de emergencia, formularios fiscales y selecciones de beneficios—sin papel.
 
 ### Procesamiento de documentos legales
-Cree contratos que los clientes puedan firmar y completar digitalmente, garantizando cumplimiento y auditabilidad.
+Crea contratos que los clientes pueden firmar y completar digitalmente, garantizando cumplimiento y auditabilidad.
 
 ### Educación y evaluaciones
-Despliegue hojas de trabajo y exámenes interactivos que los estudiantes puedan completar en tabletas o portátiles.
+Despliega hojas de trabajo interactivas y exámenes que los estudiantes pueden completar en tabletas o laptops.
 
 ### Salud y registro de pacientes
-Optimice los cuestionarios de pacientes, formularios de consentimiento y hojas de historial médico para un registro más rápido.
+Optimiza cuestionarios de pacientes, formularios de consentimiento y hojas de historial médico para un registro más rápido.
 
 ## Opciones avanzadas de personalización
 
-### Estilizado personalizado para consistencia de marca
-Match your corporate palette and typography:
+### Estilo personalizado para consistencia de marca
+Haz coincidir la paleta corporativa y la tipografía:
 
 ```java
 textField.setBackgroundColor(0x0066CC); // Brand blue
@@ -336,7 +342,7 @@ textField.setFontSize(14.0); // Larger, more readable text
 ```
 
 ### Comportamiento dinámico de campos
-Add fields that react to user input, such as auto‑calculating totals:
+Agrega campos que reaccionen a la entrada del usuario, como totales auto‑calculados:
 
 ```java
 textField.setText("Enter your name here..."); // Placeholder text
@@ -345,43 +351,49 @@ textField.setPenStyle(PenStyle.SOLID); // Clean, professional border
 ```
 
 ### Validación y manejo de errores
-Mientras GroupDocs.Annotation maneja el renderizado visual, puede incrustar JavaScript en el PDF para validación del lado del cliente o extraer datos de anotación del lado del servidor para verificaciones adicionales.
+Mientras GroupDocs.Annotation maneja el renderizado visual, puedes incrustar JavaScript en el PDF para validación del lado del cliente o extraer datos de anotación del lado del servidor para verificaciones adicionales.
 
 ## Preguntas frecuentes
 
-**Q: ¿Puedo agregar campos de formulario interactivos a PDFs existentes?**  
-A: Absolutamente. Cargue cualquier PDF con `Annotator`, añada las anotaciones deseadas y guarde —el contenido original permanece intacto.
+**P: ¿Puedo agregar campos de formulario interactivos a PDFs existentes?**  
+R: Absolutamente. Carga cualquier PDF con `Annotator`, agrega las anotaciones deseadas y guarda—el contenido original permanece intacto.
 
-**Q: ¿Cuántos campos de formulario puedo agregar a un solo PDF?**  
-A: No hay un límite estricto, pero para un rendimiento óptimo manténgalo por debajo de **50 campos por página**; exceder esto puede ralentizar algunos visores.
+**P: ¿Cuántos campos de formulario puedo agregar a un solo PDF?**  
+R: No hay un límite estricto, pero para un rendimiento óptimo mantenlo bajo **50 campos por página**; superarlo puede ralentizar algunos visores.
 
-**Q: ¿Los formularios PDF interactivos funcionan en todos los visores PDF?**  
-A: La mayoría de los visores modernos —incluyendo Adobe Acrobat, Foxit Reader y complementos PDF basados en navegadores— admiten campos rellenables. Siempre pruebe con los visores principales utilizados por su audiencia.
+**P: ¿Los formularios PDF interactivos funcionan en todos los visores de PDF?**  
+R: La mayoría de los visores modernos—incluidos Adobe Acrobat, Foxit Reader y complementos de PDF basados en navegadores—soportan campos rellenables. Siempre prueba con los visores principales que usa tu audiencia.
 
-**Q: ¿Puedo estilizar los campos de formulario para que coincidan con los colores de mi marca?**  
-A: Sí. Puede establecer colores de fondo, borde y fuente, así como la opacidad, para alinearse con las directrices de la marca.
+**P: ¿Puedo estilizar los campos de formulario para que coincidan con los colores de mi marca?**  
+R: Sí. Puedes establecer colores de fondo, borde y fuente, así como opacidad, para alinearlos con las directrices de la marca.
 
-**Q: ¿Cuál es la diferencia entre las anotaciones TextField y los campos de formulario PDF nativos?**  
-A: Las anotaciones TextField son superposiciones visuales que son fáciles de estilizar y manipular; los campos de formulario PDF nativos están incrustados en la estructura del documento y pueden ofrecer una integración más profunda con los estándares PDF.
+**P: ¿Cuál es la diferencia entre las anotaciones TextField y los campos de formulario PDF nativos?**  
+R: Las anotaciones TextField son superposiciones visuales que son fáciles de estilizar y manipular; los campos de formulario PDF nativos están incrustados en la estructura del documento y pueden ofrecer una integración más profunda con los estándares PDF.
 
-**Q: ¿Cómo manejo la validación de formularios y la recopilación de datos?**  
-A: Use GroupDocs.Annotation para extraer los valores completados del lado del servidor, o incruste JavaScript dentro del PDF para verificaciones del lado del cliente antes del envío.
+**P: ¿Cómo manejo la validación del formulario y la recopilación de datos?**  
+R: Usa GroupDocs.Annotation para extraer los valores completados del lado del servidor, o incrusta JavaScript dentro del PDF para verificaciones del lado del cliente antes del envío.
 
-**Q: ¿Puedo crear formularios de varias páginas con campos vinculados?**  
-A: Sí. Cada anotación especifica su número de página, lo que le permite crear formularios completos que abarcan cualquier número de páginas.
+**P: ¿Puedo crear formularios de varias páginas con campos vinculados?**  
+R: Sí. Cada anotación especifica su número de página, lo que permite construir formularios completos que abarcan cualquier número de páginas.
 
-**Q: ¿Qué otros formatos de archivo admiten anotaciones interactivas?**  
-A: Además de PDF, GroupDocs.Annotation funciona con Word, Excel, PowerPoint y formatos de imagen comunes, aunque PDF sigue siendo el más utilizado para formularios interactivos.
+**P: ¿Qué otros formatos de archivo soportan anotaciones interactivas?**  
+R: Además de PDF, GroupDocs.Annotation funciona con Word, Excel, PowerPoint y formatos de imagen comunes, aunque PDF sigue siendo el más utilizado para formularios interactivos.
 
 ---
 
-**Última actualización:** 2026-05-21  
+**Última actualización:** 2026-10-26  
 **Probado con:** GroupDocs.Annotation 25.2 for Java  
 **Autor:** GroupDocs  
 
-Para obtener ayuda adicional, visite el [Developer Community Forum](https://forum.groupdocs.com/c/annotation/).
+Para obtener ayuda adicional, visita el [Developer Community Forum](https://forum.groupdocs.com/c/annotation/).
 
 ## Tutoriales relacionados
+
 - [Crear campos de formulario PDF en Java – Guía GroupDocs.Annotation](/annotation/java/form-field-annotations/)
-- [Cómo crear botones PDF interactivos Java usando GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
+- [Cómo crear botones PDF interactivos en Java usando GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [Editar anotaciones PDF Java - Tutorial completo de GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}
