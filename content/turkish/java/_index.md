@@ -49,10 +49,6 @@ url: /tr/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDF'ye nasıl açıklama eklenir – Java belge açıklama API'si
 
 Java'dan doğrudan **pdf'ye nasıl açıklama eklenir** dosyalarına ihtiyacınız varsa, GroupDocs.Annotation for Java size eksiksiz, tek‑JAR çözümü sunar. Bu güçlü belge açıklama API'si, PDF, Word, Excel, PowerPoint ve görüntü dosyalarına yorumlar, vurgular, filigranlar, resimler ve birçok başka işaretleme türü eklemenizi sağlar—tüm bunlar dış bağımlılıklar olmadan. Bu yetenekleri Java uygulamalarınıza entegre etmek, işbirlikçi inceleme araçları, yasal işaretleme iş akışları veya zengin belge etkileşimi gerektiren herhangi bir senaryoyu mümkün kılar.
@@ -163,8 +159,3 @@ GroupDocs.Annotation for Java'nin tam yeteneklerini keşfetmek için [en son sü
 **Son Güncelleme:** 2026-10-21  
 **Test Edilen Sürüm:** GroupDocs.Annotation for Java 23.12 (yazım zamanındaki en son sürüm)  
 **Yazar:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

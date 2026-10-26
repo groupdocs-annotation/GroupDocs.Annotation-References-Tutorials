@@ -51,10 +51,6 @@ url: /el/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Πώς να σχολιάσετε pdf – Java document annotation API
 
 Αν χρειάζεστε **πώς να σχολιάσετε pdf** αρχεία απευθείας από Java, το GroupDocs.Annotation for Java σας προσφέρει μια ολοκληρωμένη, μονο‑JAR λύση. Αυτό το ισχυρό document annotation API σας επιτρέπει να προσθέτετε σχόλια, επισημάνσεις, υδατογραφήματα, εικόνες και πολλούς άλλους τύπους σήμανσης σε PDF, Word, Excel, PowerPoint και αρχεία εικόνας—όλα χωρίς εξωτερικές εξαρτήσεις. Η ενσωμάτωση αυτών των δυνατοτήτων στις Java εφαρμογές σας επιτρέπει εργαλεία συνεργατικής ανασκόπησης, ροές εργασίας νομικής σήμανσης ή οποιοδήποτε σενάριο όπου απαιτείται πλούσια αλληλεπίδραση με έγγραφα.
@@ -199,8 +195,3 @@ weight: 10
 **Τελευταία ενημέρωση:** 2026-10-21  
 **Δοκιμάστηκε με:** GroupDocs.Annotation for Java 23.12 (τελευταία έκδοση τη στιγμή της συγγραφής)  
 **Συγγραφέας:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -47,10 +47,6 @@ url: /zh-hant/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何註解 PDF – Java 文件註解 API
 
 如果您需要直接從 Java **如何註解 PDF** 檔案，GroupDocs.Annotation for Java 為您提供完整的單一 JAR 解決方案。這個強大的文件註解 API 讓您能在 PDF、Word、Excel、PowerPoint 以及影像檔案中加入評論、標記、浮水印、圖片等多種標註類型——全部不需外部相依性。將這些功能嵌入您的 Java 應用程式，可實現協作審閱工具、法律標註工作流程，或任何需要豐富文件互動的情境。
@@ -195,8 +191,3 @@ GroupDocs.Annotation 支援從本機檔案、串流、雲端儲存（Amazon S3�
 **最後更新：** 2026-10-21  
 **測試環境：** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
 **作者：** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

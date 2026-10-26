@@ -49,10 +49,6 @@ url: /ja/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # PDFに注釈を付ける方法 – Java ドキュメント注釈 API
 
 Java から直接 PDF ファイルに **PDFに注釈を付ける方法** が必要な場合、GroupDocs.Annotation for Java は完全なシングル JAR ソリューションを提供します。この強力なドキュメント注釈 API を使用すると、コメント、ハイライト、透かし、画像など、さまざまなマークアップを PDF、Word、Excel、PowerPoint、画像ファイルに追加でき、外部依存関係は不要です。これらの機能を Java アプリケーションに組み込むことで、共同レビュー ツール、法務マークアップ ワークフロー、またはリッチなドキュメント操作が必要なあらゆるシナリオを実現できます。
@@ -196,8 +192,3 @@ GroupDocs.Annotation for Java を使用した高度な注釈機能、カスタ�
 **最終更新日:** 2026-10-21  
 **テスト環境:** GroupDocs.Annotation for Java 23.12 (執筆時点での最新バージョン)  
 **作者:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

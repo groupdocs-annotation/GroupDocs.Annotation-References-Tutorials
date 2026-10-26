@@ -49,10 +49,6 @@ url: /ar/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # كيفية التعليق على ملفات PDF – Java document annotation API
 
 If you need to **how to annotate pdf** files directly from Java, GroupDocs.Annotation for Java gives you a complete, single‑JAR solution. This powerful document annotation API lets you add comments, highlights, watermarks, images, and many other markup types to PDFs, Word, Excel, PowerPoint, and image files—all without external dependencies. Embedding these capabilities into your Java applications enables collaborative review tools, legal markup workflows, or any scenario where rich document interaction is required.
@@ -198,8 +194,3 @@ Complete tutorials for implementing advanced annotation capabilities, customizat
 **آخر تحديث:** 2026-10-21  
 **تم الاختبار مع:** GroupDocs.Annotation for Java 23.12 (latest at time of writing)  
 **المؤلف:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

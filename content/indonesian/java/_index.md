@@ -51,10 +51,6 @@ url: /id/java/
 weight: 10
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cara memberi anotasi pdf – Java document annotation API
 
 Jika Anda perlu **cara memberi anotasi pdf** secara langsung dari Java, GroupDocs.Annotation for Java memberikan solusi lengkap dalam satu JAR. API anotasi dokumen yang kuat ini memungkinkan Anda menambahkan komentar, sorotan, watermark, gambar, dan banyak jenis markup lainnya ke PDF, Word, Excel, PowerPoint, dan file gambar—semua tanpa ketergantungan eksternal. Menyematkan kemampuan ini ke dalam aplikasi Java Anda memungkinkan alat tinjauan kolaboratif, alur kerja markup hukum, atau skenario apa pun yang memerlukan interaksi dokumen yang kaya.
@@ -199,8 +195,3 @@ Unduh [versi terbaru](https://releases.groupdocs.com/annotation/java/) atau mula
 **Terakhir Diperbarui:** 2026-10-21  
 **Diuji Dengan:** GroupDocs.Annotation for Java 23.12 (terbaru pada saat penulisan)  
 **Penulis:** GroupDocs
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
