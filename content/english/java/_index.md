@@ -191,9 +191,9 @@ Download the [latest version](https://releases.groupdocs.com/annotation/java/) o
 
 ## Related tutorials
 
-- [Annotate PDF Java with GroupDocs Annotation Document Loading]({{< relref "/annotation/java/document-loading/" >}})
-- [Java PDF Text Annotation: Add Searchable Highlights with GroupDocs]({{< relref "/annotation/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/" >}})
-- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java]({{< relref "/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/" >}})
+- [Annotate PDF Java with GroupDocs Annotation Document Loading](/java/document-loading/)
+- [Java PDF Text Annotation: Add Searchable Highlights with GroupDocs](/java/text-annotations/add-search-text-annotations-pdf-groupdocs-java/)
+- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
 
 ---
 
