@@ -1,30 +1,33 @@
 ---
 categories:
 - Java Development
-date: '2026-05-21'
-description: Pelajari cara menyesuaikan bidang form pdf menggunakan Java dan GroupDocs.Annotation.
-  Panduan langkah demi langkah ini mencakup menambahkan bidang teks pdf, menghasilkan
-  dokumen pdf yang dapat diisi, dan praktik terbaik.
+date: '2026-10-26'
+description: Pelajari cara membuat PDF yang dapat diisi dengan Java menggunakan GroupDocs.Annotation,
+  menyesuaikan bidang formulir PDF, menambahkan bidang teks, dan mengikuti praktik
+  terbaik.
 keywords:
+- generate fillable pdf
 - customize pdf form fields
 - add pdf text field
-- generate fillable pdf documents
-- add text field java
-- generate fillable pdf java
-lastmod: '2026-05-21'
-linktitle: Panduan Anotasi Form PDF Java
+- how to generate fillable pdf
+- configure pdf text field
+lastmod: '2026-10-26'
+linktitle: Panduan Anotasi Formulir PDF Java
+og_description: Buat PDF yang dapat diisi dengan Java menggunakan GroupDocs.Annotation.
+  Pelajari cara menyesuaikan bidang formulir PDF, menambahkan bidang teks, dan menerapkan
+  praktik terbaik dalam panduan langkah demi langkah.
+og_image_alt: Guide to generate fillable PDF with Java and GroupDocs Annotation
+og_title: Buat PDF yang dapat diisi dengan Java menggunakan GroupDocs Annotation
 schemas:
 - author: GroupDocs
-  dateModified: '2026-05-21'
-  description: Learn how to customize pdf form fields using Java and GroupDocs.Annotation.
-    This step‑by‑step guide covers add pdf text field, generate fillable pdf documents,
-    and best practices.
-  headline: 'Customize PDF Form Fields with Java: Interactive Form Annotations Guide'
+  dateModified: '2026-10-26'
+  description: Learn how to generate fillable PDF with Java using GroupDocs.Annotation,
+    customize PDF form fields, add text fields, and follow best practices.
+  headline: Generate fillable PDF with Java using GroupDocs Annotation
   type: TechArticle
-- description: Learn how to customize pdf form fields using Java and GroupDocs.Annotation.
-    This step‑by‑step guide covers add pdf text field, generate fillable pdf documents,
-    and best practices.
-  name: 'Customize PDF Form Fields with Java: Interactive Form Annotations Guide'
+- description: Learn how to generate fillable PDF with Java using GroupDocs.Annotation,
+    customize PDF form fields, add text fields, and follow best practices.
+  name: Generate fillable PDF with Java using GroupDocs Annotation
   steps:
   - name: Set Up Your Output Directory
     text: 'First, decide where the annotated PDF will be saved: **Important:** Replace
@@ -76,56 +79,59 @@ schemas:
       fields?
   type: FAQPage
 tags:
-- PDF-forms
-- document-annotation
-- GroupDocs
-- Java-API
-title: 'Sesuaikan Bidang Form PDF dengan Java: Panduan Anotasi Form Interaktif'
+- pdf forms
+- document annotation
+- groupdocs
+- java api
+title: Buat PDF yang dapat diisi dengan Java menggunakan GroupDocs Annotation
 type: docs
 url: /id/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
 
-# Sesuaikan Bidang Form PDF dengan Java: Panduan Anotasi Form Interaktif
+{{< blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/pf/main-container >}}
+{{< blocks/products/pf/tutorial-page-section >}}
 
-Dalam tutorial komprehensif ini Anda akan **menyesuaikan bidang form pdf** secara programatis menggunakan Java dan GroupDocs.Annotation API. Kami akan membahas semua yang Anda perlukan—dari penyiapan proyek hingga menambahkan anotasi bidang teks yang berfungsi penuh—sehingga Anda dapat menghasilkan PDF yang dapat diisi secara profesional yang dapat diselesaikan pengguna pada perangkat apa pun.
+# Buat PDF yang dapat diisi dengan Java menggunakan GroupDocs Annotation
+
+Dalam tutorial komprehensif ini Anda akan **menghasilkan PDF yang dapat diisi** secara programatis menggunakan Java dan API GroupDocs.Annotation. Kami akan membahas semua yang Anda perlukan—dari penyiapan proyek hingga menambahkan anotasi bidang teks yang berfungsi penuh—sehingga Anda dapat menghasilkan PDF profesional dan interaktif yang bekerja di perangkat apa pun dan sesuai dengan tampilan serta nuansa merek Anda.
 
 ## Jawaban Cepat
 - **Apa perpustakaan utama?** GroupDocs.Annotation for Java  
-- **Kata kunci apa yang ditargetkan tutorial ini?** *customize pdf form fields*  
+- **Kata kunci apa yang ditargetkan tutorial ini?** *generate fillable pdf*  
 - **Bisakah saya menghasilkan dokumen PDF Java yang dapat diisi?** Ya – lihat bagian “How to generate fillable pdf java documents”  
-- **Apakah saya memerlukan lisensi?** Versi percobaan dapat digunakan untuk pengembangan; lisensi komersial diperlukan untuk produksi  
-- **Apakah kompatibel dengan Maven?** Tentu saja – konfigurasi Maven disertakan  
+- **Apakah saya memerlukan lisensi?** Trial dapat digunakan untuk pengembangan; lisensi komersial diperlukan untuk produksi  
+- **Apakah kompatibel dengan Maven?** Tentu—konfigurasi Maven disertakan  
+- **Berapa banyak halaman yang dapat diproses secara efisien?** Hingga 500 halaman dengan penggunaan memori kurang dari 30 %
 
 ## Apa itu “customize pdf form fields”?
-*Customize pdf form fields* berarti menambahkan, menata, dan mengonfigurasi elemen interaktif secara programatis—seperti text boxes, checkboxes, dan dropdowns—sehingga pengguna akhir dapat mengisi dokumen langsung di penampil PDF. Pendekatan ini memberi pengembang kontrol penuh atas tampilan, perilaku, dan ekstraksi data, memungkinkan PDF interaktif berkualitas tinggi yang konsisten dengan merek dan berfungsi di semua pembaca PDF utama.
+*Customize pdf form fields* berarti menambahkan, menata, dan mengonfigurasi elemen interaktif secara programatis—seperti kotak teks, kotak centang, dan dropdown—sehingga pengguna akhir dapat mengisi dokumen langsung di penampil PDF. Pendekatan ini memberi pengembang kontrol penuh atas tampilan, perilaku, dan ekstraksi data, memungkinkan PDF interaktif berkualitas tinggi yang konsisten dengan merek dan berfungsi di semua pembaca PDF utama.
 
-## Mengapa Menggunakan Anotasi Form Interaktif?
-GroupDocs.Annotation mendukung **50+ format input dan output** dan dapat memproses **PDF beratus‑ratus halaman** tanpa memuat seluruh file ke memori. Ini menghasilkan hingga **30 % rendering lebih cepat** dibandingkan banyak perpustakaan pesaing, menjadikannya ideal untuk alur kerja perusahaan dengan volume tinggi.
+## Mengapa menggunakan anotasi formulir interaktif?
+GroupDocs.Annotation mendukung **lebih dari 50 format input dan output** dan dapat memproses **PDF berukuran ratusan halaman** tanpa memuat seluruh file ke memori, memberikan hingga **30 % rendering lebih cepat** dibandingkan banyak pustaka pesaing. Manfaat terukur ini menjadikannya pilihan utama untuk alur kerja perusahaan berskala besar yang menuntut kecepatan, keandalan, dan interaktivitas kaya.
 
-## Cara menyesuaikan bidang form pdf menggunakan GroupDocs Annotation
-Muat PDF Anda, buat `TextFieldAnnotation`, atur propertinya, dan simpan—tiga langkah singkat yang memberi Anda kontrol penuh atas tampilan dan perilaku bidang. Dengan menggunakan Annotation API Anda dapat menyesuaikan font, warna, border, dan bahkan menambahkan logika validasi secara programatis, memastikan setiap form sesuai dengan spesifikasi tepat Anda.
+## Cara menghasilkan pdf yang dapat diisi menggunakan GroupDocs Annotation
+Muat PDF Anda, buat `TextFieldAnnotation`, atur propertinya, dan simpan—tiga langkah singkat yang memberi Anda kontrol penuh atas tampilan dan perilaku bidang. Dengan menggunakan Annotation API, Anda dapat secara programatis menyesuaikan font, warna, batas, dan bahkan menambahkan logika validasi, memastikan setiap formulir sesuai dengan spesifikasi tepat Anda.
 
-## Cara membuat bidang form pdf java interaktif
-Muat PDF sumber, konfigurasikan `TextFieldAnnotation`, dan tambahkan ke dokumen. Pendekatan ini memungkinkan Anda menyematkan kotak teks yang dapat diisi yang muncul secara instan di penampil PDF mana pun, sekaligus memungkinkan Anda mengatur nilai default, tooltip, dan flag bidang wajib untuk memandu pengguna melalui proses pengisian form.
+## Cara membuat bidang formulir pdf java interaktif
+Muat PDF sumber, konfigurasikan `TextFieldAnnotation`, dan tambahkan ke dokumen. Pendekatan ini memungkinkan Anda menyematkan kotak teks yang dapat diisi yang muncul secara instan di penampil PDF apa pun, sekaligus memungkinkan Anda mengatur nilai default, tooltip, dan tanda bidang wajib untuk memandu pengguna melalui proses pengisian formulir.
 
 ## Cara menghasilkan dokumen pdf java yang dapat diisi
-Hasilkan PDF yang menerima input pengguna dengan menyisipkan bidang form secara programatis. Ini menghilangkan kebutuhan editor pihak ketiga dan menjamin konsistensi styling di semua dokumen yang dihasilkan. Setelah anotasi ditambahkan, Anda dapat mengekspor PDF untuk distribusi atau pemrosesan lebih lanjut, dan kemudian mengekstrak data yang diisi di sisi server untuk integrasi dengan sistem back‑end.
+Hasilkan PDF yang menerima input pengguna dengan menyisipkan bidang formulir secara programatis. Ini menghilangkan kebutuhan editor pihak ketiga dan menjamin gaya konsisten di semua dokumen yang dihasilkan. Setelah anotasi ditambahkan, Anda dapat mengekspor PDF untuk distribusi atau pemrosesan lebih lanjut, dan kemudian mengekstrak data yang telah diisi di sisi server untuk integrasi dengan sistem back‑end.
 
-## Prasyarat: Apa yang Anda Butuhkan Sebelum Memulai
-
+## Prasyarat: apa yang Anda butuhkan sebelum memulai
 - **Java Development Kit (JDK)** 8 atau lebih tinggi (JDK 11+ disarankan)  
-- **IDE** (IntelliJ IDEA, Eclipse, atau editor Java‑compatible lainnya)  
+- **IDE** (IntelliJ IDEA, Eclipse, atau editor Java‑compatible apa pun)  
 - **Maven atau Gradle** untuk manajemen dependensi (contoh menggunakan Maven)  
-- **GroupDocs.Annotation for Java** v25.2 (latest stable) – lihat [Latest Java Library](https://releases.groupdocs.com/annotation/java/)  
-- **Valid License** (Free trial for development; commercial license for production) – review the [License Options](https://purchase.groupdocs.com/buy)  
+- **GroupDocs.Annotation for Java** v25.2 (stabil terbaru) – lihat [Latest Java Library](https://releases.groupdocs.com/annotation/java/)  
+- **Lisensi yang valid** (Trial gratis untuk pengembangan; lisensi komersial untuk produksi) – tinjau [License Options](https://purchase.groupdocs.com/buy)  
 
 Sudah siap? Mari kita mulai.
 
-## Menyiapkan GroupDocs.Annotation untuk Java (Cara yang Benar)
+## Menyiapkan GroupDocs.Annotation untuk Java (cara yang tepat)
 
 ### Konfigurasi Maven
-
 Tambahkan dependensi ini ke file `pom.xml` Anda:
 
 ```xml
@@ -145,47 +151,42 @@ Tambahkan dependensi ini ke file `pom.xml` Anda:
 </dependencies>
 ```
 
-**Pro tip:** Selalu periksa versi terbaru di halaman rilis GroupDocs. Rilis baru biasanya menyertakan peningkatan performa dan perbaikan bug. Untuk referensi API lengkap, lihat [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/) dan [Complete API Documentation](https://reference.groupdocs.com/annotation/java/).
+**Tip pro:** Selalu periksa versi terbaru di halaman rilis GroupDocs. Untuk referensi API detail, lihat [GroupDocs Annotation Java Docs](https://docs.groupdocs.com/annotation/java/) dan [Complete API Documentation](https://reference.groupdocs.com/annotation/java/).
 
-### Pengaturan Lisensi (Jangan Lewatkan Ini!)
+### Pengaturan lisensi (jangan lewatkan ini!)
+GroupDocs.Annotation tidak gratis untuk produksi, tetapi mereka menawarkan opsi lisensi fleksibel:
+- **Free trial** – sempurna untuk pengembangan dan pengujian – Anda juga dapat [Try Before You Buy](https://releases.groupdocs.com/annotation/java/)  
+- **Temporary license** – evaluasi diperpanjang untuk proyek yang lebih besar – pelajari lebih lanjut tentang [Extended Evaluation](https://purchase.groupdocs.com/temporary-license/)  
+- **Commercial license** – diperlukan untuk setiap penerapan produksi  
 
-GroupDocs.Annotation tidak gratis untuk produksi, tetapi mereka menawarkan opsi lisensi yang fleksibel:
+Anda dapat memperoleh lisensi Anda dari [situs GroupDocs](https://purchase.groupdocs.com/buy).  
 
-- **Free Trial** – sempurna untuk pengembangan dan pengujian – Anda juga dapat [Try Before You Buy](https://releases.groupdocs.com/annotation/java/)  
-- **Temporary License** – evaluasi diperpanjang untuk proyek yang lebih besar – pelajari lebih lanjut tentang [Extended Evaluation](https://purchase.groupdocs.com/temporary-license/)  
-- **Commercial License** – diperlukan untuk setiap penyebaran produksi  
+## Panduan implementasi: membuat formulir PDF interaktif pertama Anda
 
-Anda dapat memperoleh lisensi Anda dari [GroupDocs website](https://purchase.groupdocs.com/buy).  
-
-## Panduan Implementasi: Membuat Form PDF Interaktif Pertama Anda
-
-### Langkah 1: Siapkan Direktori Output Anda
-
-Pertama, tentukan di mana PDF yang telah dianotasi akan disimpan:
+### Langkah 1: siapkan direktori output Anda
+Pertama, tentukan di mana PDF beranotasi akan disimpan:
 
 ```java
 String outputPath = YOUR_OUTPUT_DIRECTORY + "/AddTextFieldAnnotation.pdf";
 ```
 
-**Penting:** Ganti `YOUR_OUTPUT_DIRECTORY` dengan path absolut atau variabel lingkungan yang dapat dikonfigurasi untuk menghindari kesalahan terkait path di produksi.
+**Penting:** Ganti `YOUR_OUTPUT_DIRECTORY` dengan jalur absolut atau variabel lingkungan yang dapat dikonfigurasi untuk menghindari kesalahan terkait jalur di produksi.
 
-### Langkah 2: Inisialisasi Annotator
-
+### Langkah 2: inisialisasi annotator
 `Annotator` adalah kelas inti yang memuat PDF dan menyiapkannya untuk anotasi.
 
-**Definition anchor:** Kelas `Annotator` menyediakan metode untuk membaca, memodifikasi, dan menyimpan dokumen PDF di memori.  
+**Definition anchor:** Kelas `Annotator` menyediakan metode untuk membaca, memodifikasi, dan menyimpan dokumen PDF dalam memori.  
 
 ```java
 final Annotator annotator = new Annotator(YOUR_DOCUMENT_DIRECTORY + "/input.pdf");
 ```
 
-**What’s happening:** Annotator membuka file sumber, memvalidasi izin akses, dan membuat representasi internal yang siap untuk dimodifikasi.
+**Apa yang terjadi:** Annotator membuka file sumber, memvalidasi izin akses, dan membuat representasi internal yang siap untuk modifikasi.
 
-### Langkah 3: Buat Balasan Kontekstual (Opsional Namun Kuat)
+### Langkah 3: buat balasan kontekstual (opsional namun kuat)
+Balasan berfungsi seperti tooltip atau teks bantuan yang memandu pengguna saat mengisi formulir.
 
-Balasan berfungsi seperti tooltip atau teks bantuan yang memandu pengguna saat mereka mengisi form.
-
-**Definition anchor:** Replies adalah objek anotasi yang menampilkan informasi tambahan ketika pengguna mengarahkan kursor ke bidang form.  
+**Definition anchor:** Balasan adalah objek anotasi yang menampilkan informasi tambahan ketika pengguna mengarahkan kursor ke bidang formulir.  
 
 ```java
 Reply reply1 = new Reply();
@@ -201,15 +202,14 @@ replies.add(reply1);
 replies.add(reply2);
 ```
 
-**When to use replies:** Ideal untuk form kompleks yang memerlukan instruksi format, petunjuk validasi, atau pengungkapan hukum.
+**Kapan menggunakan balasan:** Ideal untuk formulir kompleks yang memerlukan instruksi format, petunjuk validasi, atau pengungkapan hukum.
 
-### Langkah 4: Konfigurasikan Anotasi TextField Anda
-
+### Langkah 4: konfigurasikan anotasi bidang teks Anda
 `TextFieldAnnotation` mendefinisikan aspek visual dan fungsional dari kotak teks yang dapat diisi.
 
 **Definition anchor:** `TextFieldAnnotation` mewakili bidang input teks visual yang dapat diedit langsung di penampil PDF.  
 
-**Definition of setBox:** Metode `setBox` menentukan posisi dan ukuran anotasi pada halaman.  
+**Definisi setBox:** Metode `setBox` menentukan posisi dan ukuran anotasi pada halaman.  
 
 ```java
 TextFieldAnnotation textField = new TextFieldAnnotation();
@@ -227,74 +227,67 @@ textField.setPenWidth((byte)3); // Pen width
 textField.setReplies(replies); // Attach replies to the annotation
 ```
 
-**Key settings explained:**
-- **Position (`setBox`)** – Rectangle(x, y, width, height); (0,0) adalah sudut kiri‑bawah halaman.  
-- **Colors** – Gunakan nilai RGB atau konstanta yang telah ditentukan; kuning terang (65535) memberikan kontras yang baik.  
-- **Font size** – 12 pt dapat dibaca pada kebanyakan dokumen; sesuaikan untuk branding spesifik.  
+**Pengaturan kunci dijelaskan:**
+- **Posisi (`setBox`)** – Rectangle(x, y, width, height); (0,0) adalah sudut kiri‑bawah halaman.  
+- **Warna** – Gunakan nilai RGB atau konstanta yang telah ditentukan; kuning muda (65535) memberikan kontras yang baik.  
+- **Ukuran font** – 12 pt dapat dibaca untuk kebanyakan dokumen; sesuaikan untuk merek tertentu.  
 - **Opacity** – 0.7 (70 %) menyeimbangkan visibilitas dengan konten di bawahnya.
 
-### Langkah 5: Tambahkan Anotasi ke Dokumen Anda
+### Langkah 5: tambahkan anotasi ke dokumen Anda
+Setelah mengonfigurasi bidang, daftarkan ke PDF.
 
-Setelah bidang dikonfigurasi, daftarkan ke PDF.
-
-**Definition of add():** Metode `add()` mendaftarkan anotasi ke dokumen.  
+**Definisi add():** Metode `add()` mendaftarkan anotasi ke dokumen.  
 
 ```java
 annotator.add(textField);
 ```
 
-Anda dapat memanggil `add()` berulang kali untuk menyisipkan banyak bidang pada halaman yang sama atau berbeda.
+Anda dapat memanggil `add()` berulang kali untuk menyisipkan beberapa bidang pada halaman yang sama atau berbeda.
 
-### Langkah 6: Simpan dan Bersihkan
+### Langkah 6: simpan dan bersihkan
+Simpan perubahan dan lepaskan sumber daya:
 
-Persist perubahan dan lepaskan sumber daya:
-
-**Definition of dispose():** Metode `dispose()` melepaskan sumber daya native yang digunakan oleh annotator.  
+**Definisi dispose():** Metode `dispose()` melepaskan sumber daya native yang digunakan oleh annotator.  
 
 ```java
 annotator.save(outputPath);
 annotator.dispose();
 ```
 
-**Critical:** Selalu panggil `dispose()` atau gunakan blok try‑with‑resources untuk mencegah kebocoran memori pada layanan yang berjalan lama.
+**Kritis:** Selalu panggil `dispose()` atau gunakan blok try‑with‑resources untuk mencegah kebocoran memori pada layanan yang berjalan lama.
 
-## Kapan Memilih Anotasi TextField daripada Opsi Lain
+## Kapan memilih anotasi bidang teks dibandingkan opsi lain
+Bidang teks unggul untuk entri data satu baris seperti nama, alamat, dan komentar. Mereka tidak ideal untuk pilihan biner (gunakan kotak centang) atau pilihan yang telah ditentukan (gunakan tombol radio atau dropdown).
 
-Text field sangat cocok untuk entri data satu baris seperti nama, alamat, dan komentar. Mereka tidak ideal untuk pilihan biner (gunakan checkbox) atau pilihan pra‑definisi (gunakan radio button atau dropdown).
+## Masalah umum & pemecahan masalah
 
-## Masalah Umum & Pemecahan Masalah
+### Masalah: anotasi tidak muncul di PDF
+**Gejala:** Kode berjalan tanpa error, tetapi PDF tampak tidak berubah.  
 
-### Masalah: Anotasi Tidak Muncul di PDF
-
-**Symptoms:** Kode berjalan tanpa error, tetapi PDF tampak tidak berubah.  
-
-**Solutions:**  
+**Solusi:**  
 1. Verifikasi `setPageNumber()` cocok dengan halaman yang ada (indeks nol).  
-2. Pastikan koordinat rectangle berada dalam batas halaman.  
-3. Pastikan direktori output memiliki izin menulis.
+2. Pastikan koordinat persegi panjang berada dalam batas halaman.  
+3. Pastikan direktori output memiliki izin menulis.  
 
-### Masalah: Text Field Terlalu Kecil atau Salah Posisi
+### Masalah: bidang teks terlalu kecil atau salah tempat
+**Gejala:** Bidang muncul tidak berpusat atau sulit untuk berinteraksi.  
 
-**Symptoms:** Bidang muncul tidak terpusat atau sulit berinteraksi.  
+**Solusi:**  
+1. Ingat koordinat PDF dimulai dari kiri‑bawah.  
+2. Sementara tingkatkan lebar batas dan turunkan opacity untuk memvisualisasikan penempatan tepat.  
+3. Uji dengan beberapa penampil PDF, karena rendering dapat sedikit berbeda.  
 
-**Solutions:**  
-1. Ingat bahwa koordinat PDF dimulai dari kiri‑bawah.  
-2. Tingkatkan lebar border sementara dan turunkan opacity untuk memvisualisasikan penempatan tepat.  
-3. Uji dengan beberapa penampil PDF, karena rendering dapat sedikit berbeda.
+### Masalah: masalah memori dengan dokumen besar
+**Gejala:** `OutOfMemoryError` atau kinerja lambat pada PDF > 200 halaman.  
 
-### Masalah: Masalah Memori dengan Dokumen Besar
-
-**Symptoms:** `OutOfMemoryError` atau kinerja lambat pada PDF > 200 halaman.  
-
-**Solutions:**  
+**Solusi:**  
 1. Proses halaman secara individual daripada memuat seluruh dokumen.  
 2. Tingkatkan ukuran heap JVM dengan `-Xmx2g` (atau lebih tinggi sesuai kebutuhan).  
-3. Selalu panggil `dispose()` setelah setiap operasi dokumen.
+3. Selalu panggil `dispose()` setelah setiap operasi dokumen.  
 
-## Tips Optimasi Kinerja
+## Tips optimasi kinerja
 
-### Praktik Terbaik Manajemen Sumber Daya
-
+### Praktik terbaik manajemen sumber daya
 ```java
 // Good: Use try-with-resources pattern
 try (Annotator annotator = new Annotator(inputPath)) {
@@ -303,9 +296,8 @@ try (Annotator annotator = new Annotator(inputPath)) {
 } // Automatic cleanup
 ```
 
-### Pemrosesan Batch untuk Banyak Anotasi
-
-Gunakan satu instance `Annotator` untuk menambahkan banyak bidang dalam satu pass:
+### Pemrosesan batch untuk banyak anotasi
+Gunakan satu instance `Annotator` untuk menambahkan banyak bidang dalam satu kali proses:
 
 ```java
 Annotator annotator = new Annotator(inputPath);
@@ -316,33 +308,31 @@ annotator.save(outputPath);
 annotator.dispose();
 ```
 
-### Optimalkan untuk Dokumen Besar
-
-- Jaga anotasi di bawah **30 per halaman** untuk mempertahankan rendering yang mulus.  
+### Optimalkan untuk dokumen besar
+- Pertahankan anotasi di bawah **30 per halaman** untuk menjaga rendering yang mulus.  
 - Gunakan nilai opacity lebih rendah (≤ 0.6) untuk batch besar guna mengurangi beban pemrosesan.  
-- Bagi dokumen lebih dari **100 halaman** menjadi beberapa bagian dan anotasi tiap bagian secara terpisah.
+- Bagi dokumen lebih dari **100 halaman** menjadi bagian‑bagian dan anotasi setiap bagian secara terpisah.  
 
-## Aplikasi Dunia Nyata: Di Mana Ini Sebenarnya Digunakan
+## Aplikasi dunia nyata: dimana ini sebenarnya digunakan
 
-### Asuransi & Layanan Keuangan
+### Asuransi & layanan keuangan
 Digitalisasi aplikasi polis, formulir klaim, dan perjanjian pinjaman, memotong waktu proses dari hari menjadi jam.
 
-### Sumber Daya Manusia & Onboarding
+### Sumber daya manusia & onboarding
 Otomatisasi pengumpulan data karyawan—kontak darurat, formulir pajak, dan pilihan manfaat—tanpa kertas.
 
-### Pemrosesan Dokumen Hukum
-Buat kontrak yang dapat ditandatangani dan diisi secara digital, memastikan kepatuhan dan auditabilitas.
+### Pemrosesan dokumen hukum
+Buat kontrak yang dapat ditandatangani dan diisi secara digital oleh klien, memastikan kepatuhan dan auditabilitas.
 
-### Pendidikan & Penilaian
+### Pendidikan & penilaian
 Sebarkan lembar kerja interaktif dan lembar ujian yang dapat diselesaikan siswa pada tablet atau laptop.
 
-### Kesehatan & Penerimaan Pasien
-Permudah kuesioner pasien, formulir persetujuan, dan lembar riwayat medis untuk proses check‑in yang lebih cepat.
+### Kesehatan & pendaftaran pasien
+Permudah kuesioner pasien, formulir persetujuan, dan lembar riwayat medis untuk pendaftaran lebih cepat.
 
-## Opsi Kustomisasi Lanjutan
+## Opsi kustomisasi lanjutan
 
-### Gaya Kustom untuk Konsistensi Merek
-
+### Gaya khusus untuk konsistensi merek
 Sesuaikan palet perusahaan dan tipografi Anda:
 
 ```java
@@ -351,9 +341,8 @@ textField.setFontColor(0xFFFFFF); // White text
 textField.setFontSize(14.0); // Larger, more readable text
 ```
 
-### Perilaku Field Dinamis
-
-Tambahkan bidang yang bereaksi terhadap input pengguna, seperti menghitung total otomatis:
+### Perilaku bidang dinamis
+Tambahkan bidang yang bereaksi terhadap input pengguna, seperti menghitung total secara otomatis:
 
 ```java
 textField.setText("Enter your name here..."); // Placeholder text
@@ -361,46 +350,50 @@ textField.setOpacity(0.8); // Slightly more prominent
 textField.setPenStyle(PenStyle.SOLID); // Clean, professional border
 ```
 
-### Validasi dan Penanganan Kesalahan
+### Validasi dan penanganan error
+Sementara GroupDocs.Annotation menangani rendering visual, Anda dapat menyematkan JavaScript dalam PDF untuk validasi sisi klien atau mengekstrak data anotasi di sisi server untuk pemeriksaan lebih lanjut.
 
-Meskipun GroupDocs.Annotation menangani rendering visual, Anda dapat menyematkan JavaScript di PDF untuk validasi sisi klien atau mengekstrak data anotasi di sisi server untuk pemeriksaan lebih lanjut.
+## Pertanyaan yang sering diajukan
 
-## Pertanyaan yang Sering Diajukan
-
-**Q: Dapatkah saya menambahkan bidang form interaktif ke PDF yang sudah ada?**  
+**Q: Bisakah saya menambahkan bidang formulir interaktif ke PDF yang ada?**  
 A: Tentu saja. Muat PDF apa pun dengan `Annotator`, tambahkan anotasi yang diinginkan, dan simpan—konten asli tetap tidak berubah.
 
-**Q: Berapa banyak bidang form yang dapat saya tambahkan ke satu PDF?**  
+**Q: Berapa banyak bidang formulir yang dapat saya tambahkan ke satu PDF?**  
 A: Tidak ada batas keras, tetapi untuk kinerja optimal pertahankan di bawah **50 bidang per halaman**; melebihi ini dapat memperlambat beberapa penampil.
 
-**Q: Apakah form PDF interaktif bekerja di semua penampil PDF?**  
+**Q: Apakah formulir PDF interaktif berfungsi di semua penampil PDF?**  
 A: Sebagian besar penampil modern—termasuk Adobe Acrobat, Foxit Reader, dan plugin PDF berbasis browser—mendukung bidang yang dapat diisi. Selalu uji dengan penampil utama yang digunakan audiens Anda.
 
-**Q: Dapatkah saya menata bidang form agar sesuai dengan warna merek saya?**  
-A: Ya. Anda dapat mengatur warna latar, border, dan font, serta opacity, agar selaras dengan pedoman merek.
+**Q: Bisakah saya menata bidang formulir agar sesuai dengan warna merek saya?**  
+A: Ya. Anda dapat mengatur warna latar belakang, batas, dan font, serta opacity, untuk menyesuaikan dengan pedoman merek.
 
-**Q: Apa perbedaan antara anotasi TextField dan bidang form PDF native?**  
-A: Anotasi TextField adalah lapisan visual yang mudah ditata dan dimanipulasi; bidang form PDF native terintegrasi dalam struktur dokumen dan mungkin menawarkan integrasi lebih dalam dengan standar PDF.
+**Q: Apa perbedaan antara anotasi TextField dan bidang formulir PDF native?**  
+A: Anotasi TextField adalah lapisan visual yang mudah ditata dan dimanipulasi; bidang formulir PDF native tersemat dalam struktur dokumen dan dapat menawarkan integrasi lebih dalam dengan standar PDF.
 
-**Q: Bagaimana cara menangani validasi form dan pengumpulan data?**  
-A: Gunakan GroupDocs.Annotation untuk mengekstrak nilai yang diisi di sisi server, atau sematkan JavaScript di PDF untuk pemeriksaan sisi klien sebelum pengiriman.
+**Q: Bagaimana cara menangani validasi formulir dan pengumpulan data?**  
+A: Gunakan GroupDocs.Annotation untuk mengekstrak nilai yang diisi di sisi server, atau sematkan JavaScript dalam PDF untuk pemeriksaan sisi klien sebelum pengiriman.
 
-**Q: Dapatkah saya membuat form multi‑halaman dengan bidang yang terhubung?**  
-A: Ya. Setiap anotasi menentukan nomor halamannya, memungkinkan Anda membangun form komprehensif yang melintasi sejumlah halaman berapa pun.
+**Q: Bisakah saya membuat formulir multi‑halaman dengan bidang yang terhubung?**  
+A: Ya. Setiap anotasi menentukan nomor halamannya, memungkinkan Anda membangun formulir komprehensif yang mencakup sejumlah halaman berapa pun.
 
 **Q: Format file apa lagi yang mendukung anotasi interaktif?**  
-A: Selain PDF, GroupDocs.Annotation bekerja dengan Word, Excel, PowerPoint, dan format gambar umum, meskipun PDF tetap yang paling banyak digunakan untuk form interaktif.
+A: Selain PDF, GroupDocs.Annotation bekerja dengan Word, Excel, PowerPoint, dan format gambar umum, meskipun PDF tetap yang paling banyak digunakan untuk formulir interaktif.
 
 ---
 
-**Terakhir Diperbarui:** 2026-05-21  
-**Diuji Dengan:** GroupDocs.Annotation 25.2 for Java  
+**Terakhir Diperbarui:** 2026-10-26  
+**Diuji Dengan:** GroupDocs.Annotation 25.2 untuk Java  
 **Penulis:** GroupDocs  
 
 Untuk bantuan tambahan, kunjungi [Developer Community Forum](https://forum.groupdocs.com/c/annotation/).
 
-## Tutorial Terkait
+## Tutorial terkait
 
 - [Buat Bidang Form PDF di Java – Panduan GroupDocs.Annotation](/annotation/java/form-field-annotations/)
 - [Cara Membuat Tombol PDF Interaktif Java Menggunakan GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [Edit Anotasi PDF Java - Tutorial Lengkap GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+
+{{< /blocks/products/pf/tutorial-page-section >}}
+{{< /blocks/products/pf/main-container >}}
+{{< /blocks/products/pf/main-wrap-class >}}
+{{< blocks/products/products-backtop-button >}}

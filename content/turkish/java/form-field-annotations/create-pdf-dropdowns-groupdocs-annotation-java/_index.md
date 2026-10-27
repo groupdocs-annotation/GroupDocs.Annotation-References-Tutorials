@@ -1,34 +1,36 @@
 ---
 categories:
 - Java PDF Development
-date: '2026-08-19'
-description: GroupDocs.Annotation kullanarak Java'da pdf dropdown list oluşturmayı
-  öğrenin. Bu rehber, kurulum, kod akışı, sorun giderme, performans ipuçları ve interactive
-  PDF forms için en iyi uygulamaları kapsar.
+date: '2026-10-26'
+description: GroupDocs.Annotation ile Java'da java pdf dropdown list oluşturmayı öğrenin.
+  step‑by‑step setup, code examples ve performance tips for interactive PDF forms
+  takip edin.
+images:
+- /java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/og-image.png
 keywords:
-- create pdf dropdown list
-- java pdf form fields
+- java pdf dropdown list
+- how to create pdf dropdown
+- configure pdf dropdown options
 - groupdocs annotation dropdown
 - interactive pdf forms java
-- pdf form field library
-lastmod: '2026-08-19'
+lastmod: '2026-10-26'
 linktitle: Java PDF Dropdown Öğreticisi
-og_description: GroupDocs.Annotation ile Java'da pdf dropdown list oluşturun. step‑by‑step
-  kurulum, kod örnekleri ve interactive PDF forms için performans ipuçlarını izleyin.
+og_description: GroupDocs.Annotation ile java pdf dropdown list oluşturun. Bu rehber,
+  setup, code ve performance tips for interactive PDF forms konularında size yol gösterir.
 og_image_alt: 'Developer guide: create pdf dropdown list in Java using GroupDocs.Annotation'
-og_title: Java'da GroupDocs ile pdf dropdown list oluşturma
+og_title: GroupDocs ile java pdf dropdown list oluşturun – step by step
 schemas:
 - author: GroupDocs
-  dateModified: '2026-08-19'
-  description: Learn how to create pdf dropdown list in Java using GroupDocs.Annotation.
+  dateModified: '2026-10-26'
+  description: Learn how to create a java pdf dropdown list in Java using GroupDocs.Annotation.
     This guide covers setup, code flow, troubleshooting, performance tips, and best
     practices for interactive PDF forms.
-  headline: How to create pdf dropdown list in Java with GroupDocs
+  headline: How to create a java pdf dropdown list with GroupDocs
   type: TechArticle
-- description: Learn how to create pdf dropdown list in Java using GroupDocs.Annotation.
+- description: Learn how to create a java pdf dropdown list in Java using GroupDocs.Annotation.
     This guide covers setup, code flow, troubleshooting, performance tips, and best
     practices for interactive PDF forms.
-  name: How to create pdf dropdown list in Java with GroupDocs
+  name: How to create a java pdf dropdown list with GroupDocs
   steps:
   - name: initialize the annotator
     text: '`Annotator` is the core class that loads a document and provides methods
@@ -73,39 +75,41 @@ tags:
 - groupdocs
 - forms
 - annotations
-title: Java'da GroupDocs ile pdf dropdown list oluşturma
+title: GroupDocs ile java pdf dropdown list nasıl oluşturulur
 type: docs
 url: /tr/java/form-field-annotations/create-pdf-dropdowns-groupdocs-annotation-java/
 weight: 1
 ---
 
-# Java ile GroupDocs kullanarak pdf açılır liste oluşturma
+# GroupDocs ile java pdf açılır liste nasıl oluşturulur
 
-Java'da **create pdf dropdown list** oluşturmak, etkileşimli PDF'ler geliştiren herkes için yaygın bir gereksinimdir—anketler, sipariş formları veya onay iş akışları olsun. Bu öğreticide GroupDocs.Annotation'ı kullanarak PDF'lerinize açılır liste bileşenleri eklemeyi, seçenekleri dinamik olarak yapılandırmayı ve büyük belgeleri verimli bir şekilde işlemeyi öğreneceksiniz. Ortam kurulumundan üretim‑hazır en iyi uygulamalara kadar her adımı adım adım göstereceğiz, böylece düşük‑seviye PDF iç detaylarıyla uğraşmadan sağlam, etkileşimli formlar sunabilirsiniz.
+Bu öğreticide, GroupDocs.Annotation kullanarak Java'da **java pdf açılır liste oluşturmayı** öğreneceksiniz. Anket alanına, sipariş‑form seçicisine veya onay iş akışı açılır menüsüne ihtiyacınız olsun, aşağıdaki adımlar ortam kurulumundan üretim‑hazır en iyi uygulamalara kadar her şeyi kapsar, böylece düşük‑seviye PDF iç yapılarına girmeden etkileşimli form alanları ekleyebilirsiniz.
 
 ## Hızlı cevaplar
-- **Java PDF'lerine açılır liste eklemek için en iyi kütüphane hangisidir?** GroupDocs.Annotation, PDF form alanlarını oluşturmak ve yönetmek için özlü bir Java API'si sağlar.  
-- **Geliştirme için lisansa ihtiyacım var mı?** Ücretsiz deneme sürümü test için çalışır; ticari kullanım için üretim lisansı gereklidir.  
-- **Açılır listeyi sayfanın istediğim bir yerine konumlandırabilir miyim?** Evet – PDF koordinatlarıyla (köşe alt‑sol) `setBox` metodunu kullanın.  
+- **Java PDF'lerde açılır menü eklemek için en iyi kütüphane hangisidir?** GroupDocs.Annotation, PDF form alanlarını oluşturmak ve yönetmek için özlü bir Java API'si sağlar.  
+- **Geliştirme için lisansa ihtiyacım var mı?** Ücretsiz deneme test için çalışır; ticari kullanım için üretim lisansı gereklidir.  
+- **Açılır menüyü sayfanın istediğim bir yerine konumlandırabilir miyim?** Evet – PDF koordinatlarıyla (orijin alt‑sol) `setBox` metodunu kullanın.  
 - **Büyük PDF'lerde bellek sorunlarından nasıl kaçınırım?** `try‑with‑resources` kullanın, dosyaları tek tek işleyin ve gerekirse JVM yığınını artırın.  
 - **Seçenekleri bir veritabanından yüklemek mümkün mü?** Kesinlikle – `setOptions` çağırmadan önce seçenek listesini dinamik olarak doldurun.
 
-## create pdf dropdown list nedir?
-Bir **create pdf dropdown list** işlemi, PDF'ye HTML `<select>` öğesine benzer şekilde seçilebilir bir alan ekler ve son kullanıcıların önceden tanımlanmış bir kümeden bir değer seçmesine olanak tanır. Bu etkileşimli öğe doğrudan PDF dosyasına kaydedilir, böylece ek betikler olmadan standart‑uyumlu herhangi bir görüntüleyicide çalışır.
+## PDF açılır liste oluşturma nedir?
+Java pdf açılır liste, kullanıcıların önceden tanımlanmış bir kümeden bir değer seçmesine izin veren bir PDF alanıdır; HTML `<select>` öğesine benzer. Alan doğrudan PDF içinde depolanır, bu yüzden ek betikler veya sunucu‑tarafı işleme gerek kalmadan standart‑uyumlu herhangi bir görüntüleyicide çalışır.
 
-## PDF açılır listeleri için GroupDocs neden tercih edilmeli?
-GroupDocs.Annotation, yüksek hacimli, kurumsal‑düzey belge işleme için tasarlanmıştır. **50+ giriş ve çıkış formatını** destekler, **1.000 sayfaya kadar** PDF'leri tüm dosyayı belleğe yüklemeden işleyebilir ve açılır listeler oluşturmak için **tek‑satır API** sunar. Bu ölçülebilir yetenekler, **create pdf dropdown list** kullanım senaryosu için güvenilir bir seçim olmasını sağlar.
+## PDF açılır listeleri için neden GroupDocs tercih edilmeli?
+GroupDocs.Annotation, PDF açılır listeleri için en iyi seçimdir çünkü 50'den fazla giriş ve çıkış formatını destekler ve tüm dosyayı belleğe yüklemeden 1.000 sayfaya kadar PDF'leri işleyebilir. Tek satır API'si, sadece birkaç çağrıyla açılır menüler eklemenizi sağlar ve kurumsal‑düzeyde performans ve güvenilirlik sunar.
 
 ## Önkoşullar ve kurulum
 
 ### Gerekenler
+Modern bir Java geliştirme ortamına ihtiyacınız var:
+
 - **Java Development Kit (JDK)** – sürüm 8 veya daha yeni; uzun vadeli destek için JDK 11+ önerilir.  
 - **Maven** – bağımlılık yönetimi için (Gradle da çalışır, ancak Maven gösterilmektedir).  
 - **IDE** – IntelliJ IDEA, Eclipse veya Java uzantılarına sahip VS Code.  
 - **Temel Java bilgisi** – sınıflar, nesneler ve `try‑with‑resources` yapısına aşina olmak.
 
 ### Maven yapılandırması
-Projenize GroupDocs.Annotation eklemek için aşağıdakileri `pom.xml` dosyanıza ekleyin:
+GroupDocs.Annotation'ı projenize eklemek için aşağıdakini `pom.xml` dosyanıza ekleyin:
 
 ```xml
 <repositories>
@@ -127,18 +131,18 @@ Projenize GroupDocs.Annotation eklemek için aşağıdakileri `pom.xml` dosyanı
 **Pro ipucu**: Her zaman GroupDocs web sitesinde en son sürümü kontrol edin. Eski sürümler uyumluluk sorunlarına ve eksik özelliklere yol açabilir.
 
 ### Lisans kurulumu
-**Öğrenme/test için:**
-1. Ücretsiz deneme sürümünü [GroupDocs Free Trial](https://releases.groupdocs.com/annotation/java/) adresinden indirin  
-2. Deneme sürümü filigran içerir ancak tam işlevselliği sunar.
+**Öğrenme/test için:**  
+1. Ücretsiz denemeyi [GroupDocs Free Trial](https://releases.groupdocs.com/annotation/java/) adresinden indirin  
+2. Deneme sürümü filigran içerir ancak tam işlevsellik sağlar.
 
-**Üretim için:**
+**Üretim için:**  
 - Kalıcı lisanslar için [Purchase Page](https://purchase.groupdocs.com/buy) adresini ziyaret edin.  
 - Üretimde test mi gerekiyor? [Temporary License](https://purchase.groupdocs.com/temporary-license/) alın.
 
-Kütüphaneyi ayrıca [Download Center](https://releases.groupdocs.com/annotation/java/) adresinden indirebilirsiniz. Daha fazla detay için [API Reference](https://reference.groupdocs.com/annotation/java/) adresine bakın. Ek dokümantasyon [GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/) adresinde mevcuttur. Satın alma seçeneklerini [Purchase Options](https://purchase.groupdocs.com/buy) adresinde inceleyin. Özellikleri değerlendirmek için [Free Trial](https://releases.groupdocs.com/annotation/java/) deneyin. Yardım almak için [Support Forum](https://forum.groupdocs.com/c/annotation/) adresini ziyaret edin.
+Kitaplığı ayrıca [Download Center](https://releases.groupdocs.com/annotation/java/) üzerinden indirebilirsiniz. Daha fazla ayrıntı için [API Reference](https://reference.groupdocs.com/annotation/java/) sayfasına bakın. Ek belgeler [GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/) adresinde mevcuttur. Satın alma seçeneklerini [Purchase Options](https://purchase.groupdocs.com/buy) adresinde keşfedin. Özellikleri değerlendirmek için [Free Trial](https://releases.groupdocs.com/annotation/java/) deneyin. Yardım için [Support Forum](https://forum.groupdocs.com/c/annotation/) adresine gidin.
 
 ## Temel başlatma deseni
-`GroupDocs.Annotation for Java`, PDF ve diğer belge türlerine programlı olarak ek açıklamalar ve etkileşimli form alanları eklemeyi sağlayan bir kütüphanedir. `Annotator` sınıfı, bir belgeyi yükleyen ve ek açıklamaları oluşturma, düzenleme ve kaydetme metodlarını sağlayan temel bileşendir. İşte tüm GroupDocs işlemlerinde kullanacağınız temel:
+`GroupDocs.Annotation for Java`, PDF ve diğer belge türlerine programlı olarak açıklama ve etkileşimli form alanları eklemeyi sağlayan bir kütüphanedir. `Annotator` sınıfı, bir belgeyi yükleyen ve açıklamaları oluşturma, düzenleme ve kaydetme metodlarını sağlayan temel bileşendir. İşte tüm GroupDocs işlemlerinde kullanacağınız temel:
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -149,25 +153,25 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 
 **Bu desenin önemi**: `try‑with‑resources` ifadesi annotator'ı otomatik olarak kapatır, bellek sızıntılarını önler – PDF kütüphaneleriyle çalışırken yaygın bir sorundur.
 
-## Java PDF'lerine nasıl açılır liste eklenir
-`new Annotator("input.pdf")` ile PDF'nizi yükleyin, bir açılır liste alanı oluşturun, seçeneklerini ayarlayın, `setBox` ile konumlandırın ve sonunda belgeyi kaydedin. Bu özlü akış, sadece birkaç API çağrısıyla **create pdf dropdown list** öğeleri oluşturmanızı sağlar, kodunuzu temiz ve sürdürülebilir tutar.
+## Java PDF'lerine nasıl açılır menü eklenir
+PDF'nizi `new Annotator("input.pdf")` ile yükleyin, bir açılır menü alanı oluşturun, seçeneklerini ayarlayın, `setBox` ile konumlandırın ve sonunda belgeyi kaydedin. Bu özlü akış, **pdf açılır liste oluşturma** öğelerini sadece birkaç API çağrısı ile yapmanızı sağlar, kodunuzu temiz ve sürdürülebilir tutar.
 
 ## Performans ve format desteği
-GroupDocs, **50+ giriş ve çıkış formatını** destekleyen özel bir ek açıklama motoru sunar, form alanları için basit bir Java API'si sağlar ve büyük belgeleri tüm dosyayı belleğe yüklemeden işler, bu da PDF açılır listeleri oluşturmak için idealdir. Performans ölçütleri, standart bir sunucuda 500 sayfalık PDF'nin 10 saniyeden kısa sürede işlendiğini gösterir.
+GroupDocs, **50+** giriş ve çıkış formatını destekleyen özel bir açıklama motoru sunar, form alanları için basit bir Java API'si sağlar ve tüm dosyayı belleğe yüklemeden büyük belgeleri işler, bu da PDF açılır listeleri oluşturmak için idealdir. Performans ölçütleri, standart bir sunucuda 500 sayfalık PDF'nin 10 saniyeden kısa sürede işlendiğini gösterir.
 
-## Açılır liste bileşenlerini anlamak
-PDF açılır liste bileşeni, temelde kullanıcılara önceden tanımlanmış bir seçenek listesi sunan bir form alanıdır. Bunu bir HTML `<select>` öğesi gibi düşünün, ancak doğrudan PDF belgesine gömülüdür.
+## Açılır menü bileşenlerini anlamak
+PDF açılır menü bileşeni, temelde kullanıcılara önceden tanımlanmış bir seçenek listesi sunan bir form alanıdır. HTML `<select>` öğesine benzer, ancak doğrudan PDF belgesine gömülüdür.
 
-**Ortak kullanım senaryoları:**  
+**Yaygın kullanım senaryoları:**  
 - Kayıt formlarında ülke/eyalet seçimi  
 - Sipariş formlarında ürün kategorileri  
 - İş akışı belgelerinde durum güncellemeleri  
 - Geri bildirim anketlerinde puan ölçekleri
 
-## İlk açılır listenizi oluşturma
+## İlk açılır menünüzü oluşturma
 
 ### Adım 1: annotator'ı başlatma
-`Annotator`, bir belgeyi yükleyen ve ek açıklamaları oluşturma, düzenleme ve kaydetme metodlarını sağlayan temel sınıftır. Belge işlemcinizi kurarak başlayın:
+`Annotator`, bir belgeyi yükleyen ve açıklamaları oluşturma, düzenleme ve kaydetme metodlarını sağlayan temel sınıftır. Belge işleyicinizi kurarak başlayın:
 
 ```java
 try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pdf")) {
@@ -177,16 +181,16 @@ try (final Annotator annotator = new Annotator("YOUR_DOCUMENT_DIRECTORY/input.pd
 
 **Önemli not**: `"YOUR_DOCUMENT_DIRECTORY/input.pdf"` ifadesini PDF dosyanızın gerçek yolu ile değiştirin. Yaygın bir hata, farklı dizinlerden çalıştırıldığında kırılan göreli yollar kullanmaktır.
 
-### Adım 2: açılır liste bileşenini oluşturma
-`Dropdown`, PDF'de seçilebilir bir liste alanını temsil eden nesnedir. Boş bir açılır liste bileşeni oluşturmak ilk yapı taşıdır:
+### Adım 2: açılır menü bileşenini oluşturma
+`Dropdown`, PDF içinde seçilebilir bir liste alanını temsil eden nesnedir. Boş bir açılır menü bileşeni oluşturmak ilk yapı taşıdır:
 
 ```java
 // Create a new DropdownComponent object
 dropdownComponent = new DropdownComponent();
 ```
 
-### Adım 3: açılır liste seçeneklerini yapılandırma
-`setOptions`, açılır liste alanında görünen seçilebilir öğeleri atar. Her bir seçeneği temsil eden bir dize listesi geçirebilirsiniz:
+### Adım 3: açılır menü seçeneklerini yapılandırma
+`setOptions`, açılır menü alanında görünecek seçilebilir öğeleri atar. Her bir seçeneği temsil eden string listesi geçirebilirsiniz:
 
 ```java
 dropdownComponent.setOptions(new ArrayList<>(Arrays.asList("Item1", "Item2", "Item3")));
@@ -204,20 +208,20 @@ dropdownComponent.setOptions(new ArrayList<>(Arrays.asList(
 )));
 ```
 
-### Adım 4: açılır listeyi konumlandırma ve boyutlandırma
-`setBox`, bir PDF sayfasındaki form alanının dikdörtgen alanını (konum ve boyut) tanımlar. PDF koordinatları alt‑sol köşeden başlar (HTML'nin üst‑sol köşeden başlamasından farklıdır). Dolayısıyla `(100, 100)` alt‑sol köşeden 100 birim sağa ve 100 birim yukarı demektir.
+### Adım 4: açılır menüyü konumlandırma ve boyutlandırma
+`setBox`, PDF sayfasındaki bir form alanının dikdörtgen alanını (konum ve boyut) tanımlar. PDF koordinatları alt‑sol köşeden başlar (HTML üst‑sol başlar). Dolayısıyla `(100, 100)` alt‑sol köşeden 100 birim sağa ve 100 birim yukarı demektir.
 
 ```java
 dropdownComponent.setBox(new Rectangle(100, 100, 50, 20)); // x, y, width, height
 ```
 
 **Boyutlandırma ipuçları**:  
-- Genişlik, en uzun seçenek metninizi sığdırmalıdır.  
-- 20‑25 puan yüksekliği genellikle standart metin için iyidir.  
-- Belgenizde en iyi görünüme ulaşmak için farklı değerlerle test edin.
+- Genişlik, en uzun seçenek metninizi sığdıracak kadar olmalı.  
+- 20‑25 puan yükseklik genellikle standart metin için iyidir.  
+- Belgenizde en iyi görününeni bulmak için farklı değerlerle test edin.
 
 ### Adım 5: ekleme ve kaydetme
-Son olarak, açılır listenizi belgeye entegre edin ve değişiklikleri kalıcı hale getirin. Geliştirme sırasında her zaman farklı bir dosya adıyla kaydedin, böylece orijinal dosyanın üzerine yazmazsınız.
+Son olarak, açılır menüyü belgeye entegre edin ve değişiklikleri kalıcı hale getirin. Geliştirme sırasında her zaman farklı bir dosya adıyla kaydedin, böylece orijinal dosyanın üzerine yazmazsınız.
 
 ```java
 annotator.add(dropdownComponent);
@@ -226,7 +230,7 @@ annotator.save("YOUR_DOCUMENT_DIRECTORY/output.pdf");
 ```
 
 ## Tam çalışan örnek
-İşte **create pdf dropdown list** iş akışını baştan sona gösteren, eksiksiz ve çalıştırılabilir bir örnek:
+Başlangıçtan sona **pdf açılır liste oluşturma** iş akışını gösteren tam, çalıştırılabilir bir örnek burada bir araya getirilmiştir:
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -263,11 +267,11 @@ public class PDFDropdownExample {
 }
 ```
 
-## Yaygın tuzaklar ve nasıl önlenir
+## Yaygın tuzaklar ve nasıl kaçınılır
 
 ### Sorun 1: “File not found” hataları
-**Problem**: Kodunuz dosya mevcut olmasına rağmen `FileNotFoundException` fırlatıyor.  
-**Solution**: Dosya yolunun mutlak olduğundan veya çalışma dizinine göre doğru çözüldüğünden emin olun ve uygulamanın okuma izinlerine sahip olduğunu kontrol edin.
+**Problem**: Dosya mevcut olmasına rağmen kodunuz `FileNotFoundException` fırlatıyor.  
+**Çözüm**: Dosya yolunun mutlak olduğundan veya çalışma dizinine göre doğru çözüldüğünden emin olun ve uygulamanın okuma izinlerine sahip olduğunu kontrol edin.
 
 ```java
 // Instead of relative paths like this:
@@ -278,21 +282,21 @@ new Annotator(System.getProperty("user.dir") + "/documents/input.pdf")
 // Or use Path.resolve() for more robust path handling
 ```
 
-### Sorun 2: Açılır liste yanlış konumda görünüyor
-**Problem**: Açılır listeniz PDF'de beklenmedik bir yerde görünüyor.  
-**Root cause**: PDF koordinat sistemi karışıklığı.  
-**Solution**: PDF'lerde (0,0) noktasının alt‑sol olduğunu unutmayın. Koordinatları gösteren bir görüntüleyici kullanın, daha büyük Y değerleriyle başlayın ve yavaşça aşağı doğru ayarlayın.
+### Sorun 2: Açılır menü yanlış konumda görünüyor
+**Problem**: Açılır menünüz PDF'de beklenmedik bir yerde görünüyor.  
+**Temel neden**: PDF koordinat sistemi karışıklığı.  
+**Çözüm**: PDF'lerde (0,0) alt‑sol olduğunu unutmayın. Koordinatları gösteren bir görüntüleyici kullanın, daha büyük Y değerleriyle başlayın ve yavaşça aşağı doğru ayarlayın.
 
-### Sorun 3: Lisans‑ile ilgili çalışma zamanı hataları
+### Sorun 3: Lisansla ilgili çalışma zamanı hataları
 **Problem**: Kod geliştirme ortamında çalışıyor ancak üretimde lisans hatalarıyla başarısız oluyor.  
-**Quick fixes**:  
+**Hızlı çözümler**:  
 1. Lisans dosyanızın sınıf yolunda (classpath) olduğundan emin olun.  
 2. Lisans son tarihlerini kontrol edin.  
-3. Lisansın dağıtım ortamınıza (geliştirme vs. üretim) uygun olduğundan emin olun (lisanslar farklıdır).
+3. Lisansın dağıtım ortamınıza (geliştirme vs. üretim) uygun olduğundan emin olun.
 
 ### Sorun 4: Büyük PDF'lerde bellek sorunları
-**Problem**: Büyük belgeler işlenirken `OutOfMemoryError`.  
-**Solutions**: `try‑with‑resources` desenini kullanın, dosyaları tek tek işleyin ve gerektiğinde JVM yığın boyutunu (`-Xmx`) artırın.
+**Problem**: Büyük belgeleri işlerken `OutOfMemoryError`.  
+**Çözümler**: `try‑with‑resources` desenini titizlikle kullanın – doğru temizlik sağlar. Toplu işleme için, birden fazla PDF'i aynı anda yüklemek yerine dosyaları tek tek işleyin. Dosya boyutlarınıza bağlı olarak JVM yığın boyutunu (`-Xmx`) artırmanız da gerekebilir.
 
 ```java
 // Set JVM memory parameters
@@ -305,7 +309,6 @@ new Annotator(System.getProperty("user.dir") + "/documents/input.pdf")
 ## Gerçek dünya uygulama örnekleri
 
 ### Örnek 1: çalışan geri bildirim formu
-
 ```java
 public void createFeedbackForm(String inputPdf, String outputPdf) {
     try (final Annotator annotator = new Annotator(inputPdf)) {
@@ -333,7 +336,7 @@ public void createFeedbackForm(String inputPdf, String outputPdf) {
 ```
 
 ### Örnek 2: dinamik seçenekli sipariş formu
-Bu örnek, açılır liste seçeneklerini bir veritabanından nasıl doldurabileceğinizi gösterir:
+Bu örnek, açılır menü seçeneklerini bir veritabanından nasıl doldurabileceğinizi gösterir:
 
 ```java
 public void createOrderForm(String inputPdf, List<String> products) {
@@ -359,7 +362,7 @@ public void createOrderForm(String inputPdf, List<String> products) {
 ## Performans optimizasyon ipuçları
 
 ### Bellek yönetimi
-Birden fazla PDF veya büyük belgeler işlenirken bellek yönetimi kritik hâle gelir:
+Birden fazla PDF veya büyük belgeler işlenirken bellek yönetimi kritik hale gelir:
 
 ```java
 // Good: Process documents one at a time
@@ -393,7 +396,7 @@ public void processBatch(List<String> pdfFiles, int batchSize) {
 ```
 
 ### Önbellekleme hususları
-Benzer belgeleri tekrar tekrar işliyorsanız, lisans örneği gibi yeniden kullanılabilir nesneleri önbelleğe alın ve mümkün olduğunda aynı `Annotator` yapılandırmasını yeniden kullanın:
+Benzer belgeleri tekrar tekrar işliyorsanız, lisans örneği gibi yeniden kullanılabilir nesneleri önbelleğe alın ve mümkün olduğunca aynı `Annotator` yapılandırmasını yeniden kullanın:
 
 ```java
 // Cache dropdown configurations
@@ -412,16 +415,16 @@ public DropdownComponent createStandardDropdown(String type, Rectangle position)
 
 ## İleri teknikler
 
-### Açılır listeleri stilize etme
-GroupDocs.Annotation görsel özelleştirmeden çok işlevselliğe odaklansa da, açılır liste alanının yazı tipi boyutu, renk ve kenarlık özelliklerini ayarlayarak görünümünü etkileyebilirsiniz.
+### Açılır menüleri stil verme
+GroupDocs.Annotation görsel özelleştirmeden çok işlevselliğe odaklansa da, açılır menü alanının yazı tipi boyutu, renk ve kenar özelliklerini ayarlayarak görünümünü etkileyebilirsiniz.
 
 ```java
 dropdownComponent.setBox(new Rectangle(100, 100, 150, 30)); // Wider for better readability
 // The library handles font and color based on PDF defaults
 ```
 
-### Koşullu açılır liste oluşturma
-Bazen açılır listelere yalnızca belirli koşullar altında (ör. kullanıcı rolüne göre) ihtiyaç duyarsınız. Açılır liste bileşenini oluşturup ekleyip eklemeyeceğinize karar vermek için standart Java `if` ifadelerini kullanın.
+### Koşullu açılır menü oluşturma
+Bazen açılır menülere sadece belirli koşullar altında (ör. kullanıcı rolüne göre) ihtiyaç duyarsınız. Açılır menü bileşenini oluşturup ekleyip eklemeyeceğinize karar vermek için standart Java `if` ifadelerini kullanın.
 
 ```java
 public void addConditionalDropdowns(Annotator annotator, DocumentType docType) {
@@ -434,7 +437,7 @@ public void addConditionalDropdowns(Annotator annotator, DocumentType docType) {
 ```
 
 ### Form doğrulama ile entegrasyon
-GroupDocs açılır liste oluşturmayı yönetirken, oluşturma sonrası PDF'leri doğrulamak isteyebilirsiniz—gerekli alanların doldurulduğundan, seçeneklerin izin verilen aralıkta olduğundan ve belgenin iş kurallarınıza uygun olduğundan emin olun.
+GroupDocs açılır menü oluşturmayı yönetirken, oluşturduktan sonra PDF'leri doğrulamak isteyebilirsiniz—gerekli alanların doldurulduğunu, seçeneklerin izin verilen aralıkta olduğunu ve belgenin iş kurallarınıza uygun olduğunu kontrol edin.
 
 ```java
 public boolean validateDropdownsAdded(String pdfPath) {
@@ -458,8 +461,8 @@ Logger.getLogger("com.groupdocs").setLevel(Level.DEBUG);
 ```
 
 ### Yaygın istisna mesajları ve çözümleri
-| Exception | Muhtemel neden | Çözüm |
-|-----------|----------------|-------|
+| İstisna | Muhtemel neden | Çözüm |
+|-----------|--------------|----------|
 | `FileNotFoundException` | Yanlış dosya yolu | Mutlak yollar kullanın veya göreli yol mantığını doğrulayın |
 | `InvalidLicenseException` | Lisans sorunları | Lisans dosyasının konumunu ve son tarihini kontrol edin |
 | `OutOfMemoryError` | Büyük dosya işleme | JVM yığın boyutunu artırın veya toplu olarak işleyin |
@@ -489,10 +492,10 @@ public void testDropdownCreation() {
 }
 ```
 
-## Üretim dağıtımı hususları
+## Üretim dağıtım hususları
 
 ### Hata yönetimi stratejisi
-Üretim ortamları için istisnaları yakalayıp günlükleyerek, yığın izlerini son kullanıcılara göstermeden sağlam bir hata yönetimi uygulayın:
+Üretim ortamları için sağlam bir hata yönetimi uygulayın; istisnaları yakalayın ve günlükleyin, ancak yığın izlerini son kullanıcılara göstermeyin:
 
 ```java
 public class PDFDropdownService {
@@ -518,7 +521,7 @@ public class PDFDropdownService {
 ```
 
 ### Konfigürasyon yönetimi
-Açılır liste seçeneklerini ve diğer yapılandırılabilir değerleri dış dosya (property) veya veritabanında saklayın, böylece uygulamayı yeniden derlemeden güncelleyebilirsiniz:
+Açılır menü seçeneklerini ve diğer yapılandırılabilir değerleri dışarıdaki özellik dosyalarında veya bir veritabanında saklayın; böylece uygulamayı yeniden derlemeden güncelleyebilirsiniz.
 
 ```yaml
 # dropdown-config.yml
@@ -532,82 +535,87 @@ dropdowns:
 ```
 
 ## Ek kaynaklar
-- **[Official Documentation](https://docs.groupdocs.com/annotation/java/)** – kapsamlı kılavuzlar ve API referansları  
-- **[GroupDocs Documentation](https://docs.groupdocs.com/annotation/java/)** – ayrıntılı kullanım örnekleri  
-- **[API Reference](https://reference.groupdocs.com/annotation/java/)** – tam metod imzaları ve parametreler  
-- **[Community Forum](https://forum.groupdocs.com/c/annotation/)** – diğer geliştiricilerden yardım alın  
-- **[GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/)** – resmi destek kanalı  
-- **[Sample Projects](https://github.com/groupdocs-annotation)** – gerçek dünya uygulama örnekleri  
-- **[Download Center](https://releases.groupdocs.com/annotation/java/)** – en son kütüphane sürümlerini edinin  
+- **[Resmi Dokümantasyon](https://docs.groupdocs.com/annotation/java/)** – kapsamlı kılavuzlar ve API referansları  
+- **[GroupDocs Dokümantasyonu](https://docs.groupdocs.com/annotation/java/)** – detaylı kullanım örnekleri  
+- **[API Referansı](https://reference.groupdocs.com/annotation/java/)** – tam metod imzaları ve parametreler  
+- **[Topluluk Forumu](https://forum.groupdocs.com/c/annotation/)** – diğer geliştiricilerden yardım alın  
+- **[GroupDocs Destek Forumu](https://forum.groupdocs.com/c/annotation/)** – resmi destek kanalı  
+- **[Örnek Projeler](https://github.com/groupdocs-annotation)** – gerçek dünya uygulama örnekleri  
+- **[İndirme Merkezi](https://releases.groupdocs.com/annotation/java/)** – en son kütüphane sürümlerini edinin  
+
+- **[Java'da PDF Metin Alanı Ekle – GroupDocs.Annotation Kılavuzu](/annotation/java/form-field-annotations/)** – metin alanlarını nasıl ekleyeceğinizi öğrenin.  
+- **[Java ile PDF Düğmeleri Oluşturma – GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)** – düğme açıklamaları için kılavuz.  
+- **[Java ile PDF Yükleme – GroupDocs Annotation: Belge Yükleme Kılavuzu](/annotation/java/document-loading/)** – PDF'leri yükleme talimatları.  
 
 ## Sonuç ve sonraki adımlar
 
-Tebrikler! Artık GroupDocs.Annotation for Java kullanarak etkileşimli PDF formlarına **açılır liste ekleme** konusunda uzmanlaştınız. Temel kurulumdan ileri düzey optimizasyon tekniklerine kadar her şeyi öğrendiniz; bu bilgiler üretim ortamlarında size çok fayda sağlayacak.
+Tebrikler! Artık GroupDocs.Annotation for Java kullanarak etkileşimli PDF formlarına **java pdf açılır liste ekleme** konusunda uzmanlaştınız. Temel kurulumdan ileri seviye performans ayarlarına kadar her şeyi öğrendiniz ve üretim kullanımı için sağlam bir temel edindiniz.
 
 ### Temel çıkarımlar
-- **Kurulum basittir**: Maven entegrasyonu ve lisanslama, çoğu PDF kütüphanesinden daha kolaydır.  
-- **API sezgiseldir**: Tasarım, aşina olduğunuz Java konvansiyonlarını izler, öğrenme eğrisini azaltır.  
+- **Kurulum basittir**: Maven entegrasyonu ve lisanslama, çoğu PDF kütüphanesinden daha basittir.  
+- **API sezgiseldir**: Tasarım, tanıdık Java konvansiyonlarını izler, öğrenme eğrisini azaltır.  
 - **Performans önemlidir**: Doğru kaynak yönetimi, çok sayfalı PDF'lerde bile bellek sorunlarını önler.  
 - **Test kritik**: PDF'lerinizi farklı görüntüleyicilerde doğrulayarak tutarlı davranışı garantileyin.
 
-### Sırada ne var?
-Artık **create pdf dropdown list** iş akışını kavradığınıza göre, aşağıdaki ilgili özellikleri keşfetmeyi düşünün:
-1. **Metin alanı ek açıklamaları** – serbest biçimli kullanıcı girdisini yakalar.  
-2. **Onay kutusu bileşenleri** – ikili seçimleri etkinleştirir.  
+### Sıradaki adımlar
+Artık **java pdf açılır liste** iş akışını kavradığınıza göre, aşağıdaki ilgili özellikleri keşfetmeyi düşünün:
+1. **Metin alanı açıklamaları** – serbest biçimli kullanıcı girdisini yakalar.  
+2. **Onay kutusu bileşenleri** – boolean seçimleri etkinleştirir.  
 3. **İmza alanları** – PDF içinde doğrudan yasal onayları destekler.  
-4. **Filigran ekleme** – belgelerinizi logo veya gizlilik uyarılarıyla markalar.  
+4. **Filigran ekleme** – belgelerinizi logo veya gizlilik bildirimleriyle markalar.  
 5. **Belge karşılaştırma** – bir formun farklı sürümleri arasındaki değişiklikleri izler.
 
-### Daha da ilerlemeye hazır mısınız?
+### Bir üst seviyeye geçmeye hazır mısınız?
 GroupDocs uzmanlığınızı derinleştirmek için bu kaynaklara göz atın:
-- **[Official Documentation](https://docs.groupdocs.com/annotation/java/)** – kapsamlı kılavuzlar ve API referansları  
-- **[Community Forum](https://forum.groupdocs.com/c/annotation/)** – diğer geliştiricilerden yardım alın  
-- **[Sample Projects](https://github.com/groupdocs-annotation)** – gerçek dünya uygulama örnekleri  
 
-Unutmayın, herhangi bir teknolojiyi ustalaşmanın en iyi yolu onunla bir şey inşa etmektir. Ekibiniz için basit bir geri bildirim formu ile başlayın, ardından API'ye alıştıkça daha karmaşık alanlar ekleyin.
+- **[Resmi Dokümantasyon](https://docs.groupdocs.com/annotation/java/)** – kapsamlı kılavuzlar ve API referansları  
+- **[Topluluk Forumu](https://forum.groupdocs.com/c/annotation/)** – diğer geliştiricilerden yardım alın  
+- **[Örnek Projeler](https://github.com/groupdocs-annotation)** – gerçek dünya uygulama örnekleri  
 
-Sorularınız mı var ya da sorunlarla mı karşılaştınız? GroupDocs topluluğu son derece yardımcıdır ve dokümantasyon gerçekten okunabilir (biliyorum, geliştirici araçları için nadir!).  
+Unutmayın, herhangi bir teknolojiyi ustalaşmanın en iyi yolu onunla bir şeyler inşa etmektir. Ekibiniz için basit bir geri bildirim formu ile başlayın, ardından API'ye alıştıkça daha karmaşık alanlar ekleyin.
+
+Sorularınız mı var ya da sorunlarla mı karşılaşıyorsunuz? GroupDocs topluluğu son derece yardımcıdır ve dokümantasyon gerçekten okunabilir (biliyorum, bir geliştirici aracı için nadir bir durum!).
 
 Kodlamaktan keyif alın, ve PDF'leriniz sonsuza dek etkileşimli olsun! 🚀
 
 ## Sıkça sorulan sorular
 
 ### GroupDocs.Annotation for Java tam olarak nedir?
-`GroupDocs.Annotation for Java`, PDF'ler dahil olmak üzere belgelere çeşitli ek açıklama türleri eklemenizi sağlayan kapsamlı bir kütüphanedir. Statik belgeleri etkileşimli hâle getiren bir araç seti gibi düşünün – PDF yapısının karmaşık iç detaylarını anlamadan açılır listeler, metin alanları, onay kutuları, imzalar ve daha fazlasını ekleyebilirsiniz.
+`GroupDocs.Annotation for Java`, PDF'ler dahil olmak üzere belgelere çeşitli açıklama türleri eklemenizi sağlayan kapsamlı bir kütüphanedir. Statik belgeleri etkileşimli hâle getiren bir araç seti olarak düşünün – PDF yapısının karmaşık iç detaylarını anlamadan açılır menüler, metin alanları, onay kutuları, imzalar ve daha fazlasını ekleyebilirsiniz.
 
-### Mevcut projemde GroupDocs kurulumu ne kadar zor?
-Oldukça basit! Maven kullanıyorsanız, sadece depo ve bağımlılığı `pom.xml` dosyanıza eklemeniz yeterlidir. Tüm kurulum yaklaşık beş dakika sürer. En zor kısmı genellikle lisans yapılandırmasını doğru yapmak olur, ancak dokümantasyon adım adım size rehberlik eder.
+### Mevcut projemde GroupDocs'u kurmak ne kadar zor?
+Oldukça basittir! Maven kullanıyorsanız, sadece depo ve bağımlılığı `pom.xml` dosyanıza eklemeniz yeterlidir. Tüm kurulum yaklaşık beş dakika sürer. En zor kısmı genellikle lisans yapılandırmasını doğru yapmak, ancak dokümantasyon adım adım sizi yönlendirir.
 
 ### GroupDocs'u PDF dışındaki dosya formatları için kullanabilir miyim?
 Kesinlikle! GroupDocs, Word belgeleri, Excel elektronik tabloları, PowerPoint sunumları ve çeşitli görüntü formatları dahil geniş bir format yelpazesini destekler. API formatlar arasında tutarlı kalır, bu yüzden PDF'ler için öğrendikten sonra aynı desenleri başka yerlerde de kolayca uygulayabilirsiniz.
 
-### Açılır listem yanlış konumda görünüyorsa ne yapmalıyım?
-Bu genellikle koordinat sistemi karışıklığıdır. PDF'lerin alt‑sol köken kullandığını (web sayfalarının üst‑sol köken kullandığı gibi) unutmayın. Daha büyük Y değerleriyle başlayın ve aşağı doğru ilerleyin. Birçok PDF görüntüleyici seçili nesnelerin tam koordinatlarını gösterebilir—konumlandırmayı ince ayarlamak için bunu kullanın.
+### Açılır menüm yanlış konumda görünüyorsa ne yapmalıyım?
+Bu genellikle koordinat sistemi karışıklığıdır. PDF'lerin alt‑sol köken kullandığını (web sayfalarının üst‑sol kullandığı gibi) unutmayın. Daha büyük Y değerleriyle başlayın ve yavaşça aşağı doğru ilerleyin. Birçok PDF görüntüleyici, seçilen nesnelerin tam koordinatlarını gösterebilir—konumlamayı ince ayarlamak için bunu kullanın.
 
 ### Tam lisans olmadan uygulamamı test etmenin bir yolu var mı?
-Evet! GroupDocs, tüm işlevselliği içeren ücretsiz bir deneme sürümü sunar. Tek sınırlama, işlenen belgelerin filigranlı olmasıdır. Bu, geliştirme ve test için mükemmeldir – üretim lisansı satın almadan önce her şeyin çalıştığını doğrulayabilirsiniz.
+Evet! GroupDocs, tüm işlevselliği içeren ücretsiz bir deneme sunar. Tek sınırlama, işlenen belgelerin filigranlı olmasıdır. Bu, geliştirme ve test için mükemmeldir – üretim lisansı satın almadan önce her şeyin çalıştığını doğrulayabilirsiniz.
 
 ### Büyük PDF dosyalarını bellek tükenmeden nasıl yönetirim?
 Harika bir soru! `try‑with‑resources` desenini titizlikle kullanın – doğru temizlik sağlar. Toplu işleme için, birden fazla PDF'i aynı anda yüklemek yerine dosyaları tek tek işleyin. Dosya boyutlarınıza bağlı olarak JVM yığın boyutunu (`-Xmx`) artırmanız da gerekebilir.
 
-### Açılır listelerin görünümünü özelleştirebilir miyim?
-GroupDocs, görsel özelleştirmeden çok işlevselliğe odaklanır. Açılır listeler PDF'nin varsayılan stilini devralır. Ancak, boyut ve konumu kesin olarak kontrol edebilirsiniz. Yoğun görsel özelleştirme gerekiyorsa, daha özel PDF kütüphanelerine bakmanız gerekebilir, ancak varsayılan stil çoğu iş uygulaması için yeterlidir.
+### Açılır menülerin görünümünü özelleştirebilir miyim?
+GroupDocs, görsel özelleştirmeden çok işlevselliğe odaklanır. Açılır menüler PDF'nin varsayılan stilini devralır. Ancak, boyut ve konumu kesin olarak kontrol edebilirsiniz. Yoğun görsel özelleştirme gerekiyorsa, daha özel PDF kütüphanelerine bakmanız gerekebilir, ancak varsayılan stil çoğu iş uygulaması için yeterlidir.
 
 ### Takıldığımda yardım almanın en iyi yolu nedir?
-[GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/) son derece aktif ve yardımcıdır. Topluluk, hızlı yanıt veren kullanıcılar ve GroupDocs personelinden oluşur. Ayrıca, dokümantasyonları gerçekten iyidir (biliyorum, geliştirici araçları için şaşırtıcı!), bu yüzden önce oraya bakın.
+[GroupDocs Support Forum](https://forum.groupdocs.com/c/annotation/) son derece aktif ve yardımcıdır. Topluluk, hızlı yanıt veren kullanıcılar ve GroupDocs personelinden oluşur. Ayrıca, dokümantasyonları gerçekten iyidir (biliyorum, bir geliştirici aracı için şaşırtıcı!), bu yüzden önce oraya bakın.
 
 ### Bilmem gereken lisans tuzakları var mı?
-Dikkat etmeniz gereken ana nokta, geliştirme ve üretim lisansları arasındaki farktır. Lisansınızın dağıtım ortamınıza (geliştirme vs. üretim) uygun olduğundan emin olun. Geçici lisanslar test için harikadır ancak son tarihleri vardır – üretimde sürpriz yaşamayın!
+Dikkat etmeniz gereken en önemli şey, geliştirme ve üretim lisansları arasındaki farktır. Lisansınızın dağıtım ortamınıza (geliştirme vs. üretim) uygun olduğundan emin olun. Geçici lisanslar test için harikadır ancak son tarihleri vardır – üretimde hazırlıksız yakalanmayın!
 
 ### GroupDocs, iText gibi diğer PDF kütüphaneleriyle nasıl karşılaştırılır?
-GroupDocs, ek açıklamalar ve form alanlarına daha çok odaklanırken, iText genel amaçlı bir PDF oluşturma/manipülasyon kütüphanesidir. GroupDocs, ek açıklama görevleri için daha basit bir API'ye sahiptir ancak düşük seviyeli PDF oluşturma konusunda daha az esneklik sunar. Eğer esas olarak mevcut PDF'lere etkileşimli öğeler ekliyorsanız, GroupDocs genellikle daha iyi bir seçimdir.
+GroupDocs, açıklama ve form alanlarına daha çok odaklanırken, iText genel amaçlı bir PDF oluşturma/işleme kütüphanesidir. GroupDocs, açıklama görevleri için daha basit bir API'ye sahiptir ancak düşük seviyeli PDF oluşturma konusunda daha az esneklik sunar. Öncelikle mevcut PDF'lere etkileşimli öğeler ekliyorsanız, GroupDocs genellikle daha iyi bir seçimdir.
 
-**Son Güncelleme:** 2026-08-19  
-**Test Edilen:** GroupDocs.Annotation 25.2  
+**Son Güncelleme:** 2026-10-26  
+**Test Edilen Versiyon:** GroupDocs.Annotation 25.2  
 **Yazar:** GroupDocs
 
-## İlgili Öğreticiler
+## İlgili Eğitimler
 
-- [Java'da PDF Metin Alanı Ekle – GroupDocs.Annotation Kılavuzu](/annotation/java/form-field-annotations/)  
-- [Java ile PDF Düğmeleri Oluşturma – GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)  
-- [Java ile PDF Yükleme – GroupDocs Annotation: Belge Yükleme Kılavuzu](/annotation/java/document-loading/)
+- [Java Groupdocs Annotation ile PDF Düğmeleri Oluşturma](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
+- [Java Groupdocs ile PDF Onay Kutusu Açıklamaları Ekleme](/annotation/java/form-field-annotations/add-checkbox-annotations-pdf-groupdocs-java/)
+- [Java ile PDF Form Alanlarını Özelleştirme: Etkileşimli Form Açıklamaları Kılavuzu](/annotation/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/)
