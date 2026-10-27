@@ -51,11 +51,6 @@ type: docs
 url: /zh-hant/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何在 Java 中使用 GroupDocs PDF 創建註釋
 
 如果你曾感受到手動 PDF 審閱拖慢了工作效率，你並不孤單。學習 **how to create annotation** 讓你能將視覺回饋、品牌標誌和測量工具直接注入 PDF，將靜態檔案變成互動協作畫布。無論你是在構建文件管理系統、電子學習平台，或是法律審核工作流程，程式化的註釋都能加快審閱週期、減少人工錯誤，並讓 PDF 保持精緻外觀。
@@ -225,8 +220,3 @@ A: 大多數行動閱讀器支援標準註釋，但仍需測試其可見性與�
 - [Java 文字註釋教學 - PDF 文件編輯完整指南](/annotation/java/text-annotations/)
 - [編輯 PDF 註釋 Java - 完整 GroupDocs 教學](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [載入 PDF 註釋 Java - 完整 GroupDocs 註釋管理指南](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

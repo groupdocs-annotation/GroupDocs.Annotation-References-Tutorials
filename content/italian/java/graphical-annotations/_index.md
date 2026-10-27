@@ -52,11 +52,6 @@ type: docs
 url: /it/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Come creare annotazione in Java con GroupDocs PDF
 
 Se hai mai sentito che le revisioni manuali dei PDF rallentano la produttività, non sei solo. Imparare **come creare annotazione** in Java ti consente di inserire feedback visivi, branding e strumenti di misurazione direttamente nei tuoi PDF, trasformando un file statico in una tela di collaborazione interattiva. Che tu stia costruendo un sistema di gestione documentale, un portale e‑learning o un flusso di lavoro di revisione legale, l'annotazione programmatica accelera i cicli di revisione, riduce gli errori umani e mantiene i PDF dall'aspetto curato.
@@ -227,8 +222,3 @@ A: Le annotazioni standard sono supportate dalla maggior parte dei visualizzator
 - [Tutorial annotazione testo Java - Guida completa per la modifica di documenti PDF](/annotation/java/text-annotations/)
 - [Modifica annotazioni PDF Java - Tutorial completo GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Carica annotazioni PDF Java - Guida completa alla gestione delle annotazioni GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

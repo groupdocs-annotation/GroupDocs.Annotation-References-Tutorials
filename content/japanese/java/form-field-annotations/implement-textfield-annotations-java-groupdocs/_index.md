@@ -84,11 +84,6 @@ type: docs
 url: /ja/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java と GroupDocs Annotation を使用して入力可能な PDF を生成する
 
 この包括的なチュートリアルでは、Java と GroupDocs.Annotation API を使用して **入力可能な PDF** ドキュメントをプログラムで生成します。プロジェクトのセットアップから完全に機能するテキストフィールド注釈の追加まで、デバイスを問わずブランドの外観と感覚に合わせたプロフェッショナルでインタラクティブな PDF を提供できるようにすべてをご案内します。
@@ -389,8 +384,3 @@ A: Beyond PDF, GroupDocs.Annotation works with Word, Excel, PowerPoint, and comm
 - [Java で PDF フォームフィールドを作成 – GroupDocs.Annotation ガイド](/annotation/java/form-field-annotations/)
 - [Java でインタラクティブ PDF ボタンを作成する方法 – GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [PDF 注釈の編集 Java - 完全な GroupDocs チュートリアル](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

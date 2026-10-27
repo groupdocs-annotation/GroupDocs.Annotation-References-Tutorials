@@ -88,11 +88,6 @@ type: docs
 url: /vi/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Tạo PDF có thể điền vào bằng Java sử dụng GroupDocs Annotation
 
 Trong hướng dẫn toàn diện này, bạn sẽ **tạo PDF có thể điền vào** một cách lập trình bằng Java và API GroupDocs.Annotation. Chúng tôi sẽ hướng dẫn mọi thứ bạn cần—từ thiết lập dự án đến việc thêm các chú thích trường văn bản hoạt động đầy đủ—để bạn có thể cung cấp các PDF chuyên nghiệp, tương tác, hoạt động trên bất kỳ thiết bị nào và phù hợp với giao diện thương hiệu của bạn.
@@ -392,8 +387,3 @@ A: Ngoài PDF, GroupDocs.Annotation hoạt động với Word, Excel, PowerPoint
 - [Tạo trường biểu mẫu PDF trong Java – Hướng dẫn GroupDocs.Annotation](/annotation/java/form-field-annotations/)
 - [Cách tạo nút PDF tương tác trong Java bằng GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [Chỉnh sửa chú thích PDF Java - Hướng dẫn đầy đủ của GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

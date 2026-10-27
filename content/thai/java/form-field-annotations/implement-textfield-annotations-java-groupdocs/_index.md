@@ -86,11 +86,6 @@ type: docs
 url: /th/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # สร้าง PDF ที่สามารถกรอกข้อมูลได้ด้วย Java โดยใช้ GroupDocs Annotation
 
 ในบทแนะนำที่ครอบคลุมนี้ คุณจะ **generate fillable PDF** เอกสารโดยใช้ Java และ GroupDocs.Annotation API เราจะอธิบายทุกขั้นตอนที่คุณต้องการ—ตั้งแต่การตั้งค่าโปรเจกต์จนถึงการเพิ่ม annotation ของฟิลด์ข้อความที่ทำงานเต็มรูปแบบ—เพื่อให้คุณสามารถสร้าง PDF เชิงโต้ตอบระดับมืออาชีพที่ทำงานบนอุปกรณ์ใดก็ได้และสอดคล้องกับรูปลักษณ์และสไตล์ของแบรนด์ของคุณ
@@ -387,8 +382,3 @@ A: นอกจาก PDF, GroupDocs.Annotation ทำงานกับ Word, E
 - [สร้างฟิลด์ฟอร์ม PDF ใน Java – คู่มือ GroupDocs.Annotation](/annotation/java/form-field-annotations/)
 - [วิธีสร้างปุ่ม PDF Interactive ด้วย Java โดยใช้ GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [แก้ไข PDF Annotations Java - คอร์สเต็ม GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

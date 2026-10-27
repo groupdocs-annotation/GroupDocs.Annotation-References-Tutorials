@@ -51,11 +51,6 @@ type: docs
 url: /zh/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 如何在 Java 中使用 GroupDocs PDF 创建批注
 
 如果你曾感到手动 PDF 审阅拖慢了生产力，你并不孤单。学习 **如何创建批注** 在 Java 中可以将视觉反馈、品牌标识和测量工具直接注入 PDF，使静态文件变成交互式协作画布。无论你是在构建文档管理系统、电子学习平台，还是法律审阅工作流，编程批注都能加快审阅周期，降低人为错误，并保持 PDF 的精致外观。
@@ -226,8 +221,3 @@ A: 大多数移动查看器支持标准批注，但仍需测试其可见性和�
 - [Java 文本批注教程 - PDF 文档编辑完整指南](/annotation/java/text-annotations/)
 - [编辑 PDF 批注 Java - 完整 GroupDocs 教程](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [加载 PDF 批注 Java - 完整 GroupDocs 批注管理指南](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

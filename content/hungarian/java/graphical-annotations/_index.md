@@ -53,11 +53,6 @@ type: docs
 url: /hu/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Hogyan hozhatunk létre annotációt Java-ban a GroupDocs PDF segítségével
 
 Ha valaha úgy érezted, hogy a kézi PDF-ellenőrzések lelassítják a termelékenységet, nem vagy egyedül. A **hogyan hozhatunk létre annotációt** Java-ban megtanulása lehetővé teszi, hogy vizuális visszajelzéseket, márkázást és mérőeszközöket injektálj közvetlenül a PDF-ekbe, így egy statikus fájlt interaktív együttműködési vászonná alakítva. Akár dokumentumkezelő rendszert, e‑learning portált vagy jogi felülvizsgálati munkafolyamatot építesz, a programozott annotáció felgyorsítja az ellenőrzési ciklusokat, csökkenti az emberi hibákat, és a PDF-jeid kifogástalanul néznek ki.
@@ -224,8 +219,3 @@ A: A szabványos annotációk a legtöbb mobil olvasóban támogatottak, de mind
 - [Java szöveg annotációs oktatóanyag – Teljes útmutató PDF dokumentumszerkesztéshez](/annotation/java/text-annotations/)  
 - [PDF annotációk szerkesztése Java - Teljes GroupDocs oktatóanyag](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [PDF annotációk betöltése Java - Teljes GroupDocs annotáció menedzsment útmutató](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

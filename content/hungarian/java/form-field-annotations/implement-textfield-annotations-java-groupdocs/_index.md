@@ -88,11 +88,6 @@ type: docs
 url: /hu/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Kitöltésre alkalmas PDF generálása Java-val a GroupDocs Annotation segítségével
 
 Ebben az átfogó bemutatóban **kitöltésre alkalmas PDF** dokumentumokat hozunk létre programozottan Java és a GroupDocs.Annotation API használatával. Lépésről lépésre végigvezetünk minden szükséges teendőn – a projekt beállításától a teljes funkcionalitású szövegmező‑annotációk hozzáadásáig – hogy professzionális, interaktív PDF-eket tudj szállítani, amelyek minden eszközön működnek és megfelelnek a márkád megjelenésének és hangulatának.
@@ -393,8 +388,3 @@ További segítségért látogass el a [Developer Community Forum](https://forum
 - [PDF űrlapmezők létrehozása Java‑ban – GroupDocs.Annotation útmutató](/annotation/java/form-field-annotations/)  
 - [Interaktív PDF gombok létrehozása Java‑val a GroupDocs.Annotation segítségével](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)  
 - [PDF annotációk szerkesztése Java‑ban – Teljes GroupDocs bemutató](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

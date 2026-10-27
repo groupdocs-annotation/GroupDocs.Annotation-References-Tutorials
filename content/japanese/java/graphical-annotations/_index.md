@@ -51,11 +51,6 @@ type: docs
 url: /ja/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # JavaでGroupDocs PDFを使用して注釈を作成する方法
 
 手動でのPDFレビューが生産性を低下させていると感じたことがあるなら、あなたは一人ではありません。Javaで**注釈の作成方法**を学ぶことで、視覚的なフィードバックやブランディング、測定ツールをPDFに直接埋め込むことができ、静的なファイルをインタラクティブなコラボレーションキャンバスに変えることができます。ドキュメント管理システム、eラーニングポータル、法務レビューのワークフローを構築する場合でも、プログラムによる注釈はレビューサイクルを高速化し、人為的ミスを減らし、PDFを洗練された状態に保ちます。
@@ -226,8 +221,3 @@ A: 標準的な注釈はほとんどのモバイルビューアでサポート�
 - [Javaテキスト注釈チュートリアル - PDF文書編集の完全ガイド](/annotation/java/text-annotations/)
 - [PDF注釈の編集（Java） - 完全なGroupDocsチュートリアル](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [PDF注釈の読み込み（Java） - 完全なGroupDocs注釈管理ガイド](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

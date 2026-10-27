@@ -52,11 +52,6 @@ type: docs
 url: /cs/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Jak vytvořit anotaci v Javě s GroupDocs PDF
 
 Pokud jste někdy měli pocit, že ruční kontrola PDF snižuje produktivitu, nejste sami. Naučit se **jak vytvořit anotaci** v Javě vám umožní vložit vizuální zpětnou vazbu, branding a měřící nástroje přímo do vašich PDF, čímž proměníte statický soubor na interaktivní plátno pro spolupráci. Ať už budujete systém pro správu dokumentů, e‑learningový portál nebo workflow pro právní revize, programová anotace urychluje cykly revizí, snižuje lidské chyby a udržuje vaše PDF vypadat profesionálně.
@@ -227,8 +222,3 @@ A: Standard annotations are supported on most mobile viewers, but always test fo
 - [Java Text Annotation Tutorial - Complete Guide for PDF Document Editing](/annotation/java/text-annotations/)
 - [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

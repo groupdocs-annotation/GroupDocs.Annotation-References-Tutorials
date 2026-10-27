@@ -88,11 +88,6 @@ type: docs
 url: /hi/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # फ़िलेबल PDF जावा के साथ GroupDocs Annotation का उपयोग करके जनरेट करें
 
 इस व्यापक ट्यूटोरियल में आप जावा और GroupDocs.Annotation API का उपयोग करके प्रोग्रामेटिकली **फ़िलेबल PDF** दस्तावेज़ जनरेट करेंगे। हम आपको प्रोजेक्ट सेटअप से लेकर पूर्ण कार्यात्मक टेक्स्ट‑फ़ील्ड एनोटेशन जोड़ने तक सब कुछ दिखाएंगे—ताकि आप किसी भी डिवाइस पर काम करने वाले, आपके ब्रांड की लुक और फ़ील से मेल खाने वाले प्रोफ़ेशनल, इंटरैक्टिव PDFs प्रदान कर सकें।
@@ -392,8 +387,3 @@ A: PDF के अलावा, GroupDocs.Annotation Word, Excel, PowerPoint, औ
 - [जावा में PDF फ़ॉर्म फ़ील्ड्स बनाएं – GroupDocs.Annotation गाइड](/annotation/java/form-field-annotations/)
 - [GroupDocs.Annotation का उपयोग करके जावा में इंटरैक्टिव PDF बटन कैसे बनाएं](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [PDF एनोटेशन जावा - पूर्ण GroupDocs ट्यूटोरियल](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

@@ -52,11 +52,6 @@ type: docs
 url: /ar/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # كيفية إنشاء تعليقات توضيحية في Java باستخدام GroupDocs PDF
 
 إذا شعرت يومًا أن مراجعات PDF اليدوية تُبطئ الإنتاجية، فأنت لست وحدك. تعلم **how to create annotation** في Java يتيح لك إدخال ملاحظات بصرية، وعلامات تجارية، وأدوات قياس مباشرةً في ملفات PDF الخاصة بك، محولًا ملفًا ثابتًا إلى لوحة تفاعلية للتعاون. سواءً كنت تبني نظام إدارة مستندات، أو بوابة تعلم إلكتروني، أو سير عمل مراجعة قانونية، فإن التعليقات البرمجية تُسرّع دورات المراجعة، وتقلل الأخطاء البشرية، وتحافظ على مظهر ملفات PDF مصقولًا.
@@ -227,8 +222,3 @@ weight: 6
 - [دليل تعليقات النص في Java - دليل كامل لتعديل مستندات PDF](/annotation/java/text-annotations/)  
 - [تحرير تعليقات PDF في Java - دليل GroupDocs كامل](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [تحميل تعليقات PDF في Java - دليل إدارة تعليقات GroupDocs كامل](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

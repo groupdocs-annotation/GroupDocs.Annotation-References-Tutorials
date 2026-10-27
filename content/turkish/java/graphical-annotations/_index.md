@@ -53,11 +53,6 @@ type: docs
 url: /tr/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java ile GroupDocs PDF'de açıklama oluşturma
 
 Manuel PDF incelemelerinin verimliliği düşürdüğünü hissettiyseniz, yalnız değilsiniz. Java’da **açıklama oluşturmayı** öğrenmek, PDF’lerinize görsel geri bildirim, marka öğeleri ve ölçüm araçları eklemenizi sağlar ve statik bir dosyayı etkileşimli bir iş birliği tuvali haline getirir. Belge yönetim sistemi, e‑öğrenme portalı veya yasal inceleme iş akışı oluşturuyor olun, programatik açıklamalar inceleme döngülerini hızlandırır, insan hatasını azaltır ve PDF’lerinizin profesyonel görünmesini sağlar.
@@ -228,8 +223,3 @@ A: Standart açıklamalar çoğu mobil görüntüleyicide desteklenir, ancak gö
 - [Java Metin Açıklaması Öğreticisi - PDF Belge Düzenleme İçin Tam Kılavuz](/annotation/java/text-annotations/)
 - [PDF Açıklamalarını Düzenle Java - Tam GroupDocs Öğreticisi](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [PDF Açıklamalarını Yükle Java - Tam GroupDocs Açıklama Yönetimi Kılavuzu](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

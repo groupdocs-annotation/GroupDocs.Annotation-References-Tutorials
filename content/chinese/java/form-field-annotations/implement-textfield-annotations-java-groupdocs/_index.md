@@ -84,11 +84,6 @@ type: docs
 url: /zh/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # 使用 Java 和 GroupDocs Annotation 生成可填写的 PDF
 
 在本完整教程中，您将使用 Java 和 GroupDocs.Annotation API **generate fillable PDF** 文档。我们将逐步演示从项目设置到添加完整功能的文本字段注释的全部过程，帮助您交付在任何设备上均可使用、且符合品牌外观与体验的专业交互式 PDF。
@@ -387,8 +382,3 @@ A: 除 PDF 外，GroupDocs.Annotation 还支持 Word、Excel、PowerPoint 以及
 - [在 Java 中创建 PDF 表单字段 – GroupDocs.Annotation 指南](/annotation/java/form-field-annotations/)
 - [使用 GroupDocs.Annotation 在 Java 中创建交互式 PDF 按钮](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [编辑 PDF 注释 Java - 完整 GroupDocs 教程](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

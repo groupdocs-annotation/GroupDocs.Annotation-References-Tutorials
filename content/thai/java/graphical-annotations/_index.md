@@ -52,11 +52,6 @@ type: docs
 url: /th/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # วิธีสร้าง annotation ใน Java ด้วย GroupDocs PDF
 
 หากคุณเคยรู้สึกว่าการตรวจสอบ PDF ด้วยมือทำให้ประสิทธิภาพการทำงานลดลง คุณไม่ได้อยู่คนเดียว การเรียนรู้ **วิธีสร้าง annotation** ใน Java จะช่วยให้คุณแทรกฟีดแบ็กแบบภาพ, การสร้างแบรนด์, และเครื่องมือวัดโดยตรงลงใน PDF ของคุณ ทำให้ไฟล์ที่เป็นคงที่กลายเป็นผ้าใบการทำงานร่วมกันแบบโต้ตอบ ไม่ว่าคุณจะสร้างระบบจัดการเอกสาร, พอร์ทัลการเรียนรู้ออนไลน์, หรือกระบวนการตรวจสอบกฎหมาย การทำ annotation ด้วยโปรแกรมจะเร่งรอบการตรวจสอบ, ลดข้อผิดพลาดของมนุษย์, และทำให้ PDF ของคุณดูเรียบหรู
@@ -221,8 +216,3 @@ A: Annotation มาตรฐานได้รับการสนับสน
 - [บทเรียน Java Text Annotation - คู่มือครบสำหรับการแก้ไขเอกสาร PDF](/annotation/java/text-annotations/)  
 - [แก้ไข PDF Annotations Java - บทเรียนครบของ GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [โหลด PDF Annotations Java - คู่มือการจัดการ Annotation ของ GroupDocs ครบ](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

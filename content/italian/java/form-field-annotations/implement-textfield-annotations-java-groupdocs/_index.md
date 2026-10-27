@@ -88,11 +88,6 @@ type: docs
 url: /it/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Genera PDF compilabile con Java usando GroupDocs Annotation
 
 In questo tutorial completo **genererai PDF compilabili** programmaticamente usando Java e l'API GroupDocs.Annotation. Ti guideremo passo passo su tutto ciò che ti serve—dalla configurazione del progetto all'aggiunta di annotazioni di campo di testo completamente funzionali—così potrai fornire PDF professionali e interattivi che funzionano su qualsiasi dispositivo e corrispondono all'aspetto e allo stile del tuo brand.
@@ -390,8 +385,3 @@ Per ulteriore assistenza, visita il [Developer Community Forum](https://forum.gr
 - [Creare campi modulo PDF in Java – Guida GroupDocs.Annotation](/annotation/java/form-field-annotations/)
 - [Come creare pulsanti PDF interattivi in Java usando GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [Modificare le annotazioni PDF in Java - Tutorial completo GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

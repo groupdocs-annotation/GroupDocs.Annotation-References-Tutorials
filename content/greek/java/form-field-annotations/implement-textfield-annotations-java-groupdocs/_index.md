@@ -88,11 +88,6 @@ type: docs
 url: /el/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Δημιουργία PDF με δυνατότητα συμπλήρωσης με Java χρησιμοποιώντας το GroupDocs Annotation
 
 Σε αυτό το ολοκληρωμένο tutorial θα **δημιουργήσετε PDF με δυνατότητα συμπλήρωσης** προγραμματιστικά χρησιμοποιώντας τη Java και το GroupDocs.Annotation API. Θα σας καθοδηγήσουμε βήμα-βήμα σε όλα όσα χρειάζεστε — από τη ρύθμιση του έργου μέχρι την προσθήκη πλήρως λειτουργικών σχολίων πεδίου κειμένου — ώστε να μπορείτε να παραδίδετε επαγγελματικά, διαδραστικά PDF που λειτουργούν σε οποιαδήποτε συσκευή και ταιριάζουν με την εμφάνιση και το στυλ της μάρκας σας.
@@ -389,8 +384,3 @@ A: Εκτός από PDF, το GroupDocs.Annotation λειτουργεί με Wo
 - [Δημιουργία πεδίων φόρμας PDF σε Java – Οδηγός GroupDocs.Annotation](/annotation/java/form-field-annotations/)
 - [Πώς να δημιουργήσετε διαδραστικά κουμπιά PDF σε Java χρησιμοποιώντας το GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [Επεξεργασία PDF Annotations Java - Πλήρης οδηγός GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

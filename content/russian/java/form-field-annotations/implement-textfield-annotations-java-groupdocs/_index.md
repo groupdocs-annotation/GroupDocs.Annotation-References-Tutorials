@@ -87,11 +87,6 @@ type: docs
 url: /ru/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Создание заполняемого PDF с помощью Java и GroupDocs Annotation
 
 В этом полном руководстве вы **создавать заполняемый PDF** документы программно, используя Java и API GroupDocs.Annotation. Мы пройдём всё, что вам нужно — от настройки проекта до добавления полностью функциональных аннотаций текстовых полей — чтобы вы могли предоставлять профессиональные интерактивные PDF, работающие на любом устройстве и соответствующие фирменному стилю.
@@ -392,8 +387,3 @@ textField.setPenStyle(PenStyle.SOLID); // Clean, professional border
 - [Создание полей формы PDF в Java – Руководство GroupDocs.Annotation](/annotation/java/form-field-annotations/)
 - [Как создать интерактивные кнопки PDF на Java с помощью GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [Редактирование аннотаций PDF на Java — Полное руководство GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

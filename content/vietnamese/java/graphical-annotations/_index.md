@@ -52,11 +52,6 @@ type: docs
 url: /vi/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cách tạo chú thích trong Java với GroupDocs PDF
 
 Nếu bạn từng cảm thấy việc xem xét PDF thủ công làm giảm năng suất, bạn không đơn độc. Học **how to create annotation** trong Java cho phép bạn chèn phản hồi trực quan, thương hiệu và công cụ đo lường trực tiếp vào PDF của mình, biến một tệp tĩnh thành một canvas hợp tác tương tác. Dù bạn đang xây dựng hệ thống quản lý tài liệu, cổng học trực tuyến, hay quy trình xem xét pháp lý, việc chú thích bằng chương trình giúp tăng tốc vòng xét duyệt, giảm lỗi con người và giữ cho PDF của bạn luôn được trình bày chuyên nghiệp.
@@ -219,8 +214,3 @@ A: Các chú thích tiêu chuẩn được hỗ trợ trên hầu hết các tr�
 - [Hướng dẫn Chú Thích Văn Bản Java - Hướng Dẫn Toàn Diện cho Việc Chỉnh Sửa Tài Liệu PDF](/annotation/java/text-annotations/)  
 - [Chỉnh sửa Chú Thích PDF Java - Hướng Dẫn Toàn Diện của GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)  
 - [Tải Chú Thích PDF Java - Hướng Dẫn Quản Lý Chú Thích Toàn Diện của GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

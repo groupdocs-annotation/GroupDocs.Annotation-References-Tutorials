@@ -53,11 +53,6 @@ type: docs
 url: /id/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Cara membuat anotasi di Java dengan GroupDocs PDF
 
 Jika Anda pernah merasa bahwa peninjauan PDF secara manual memperlambat produktivitas, Anda tidak sendirian. Mempelajari **cara membuat anotasi** di Java memungkinkan Anda menyuntikkan umpan balik visual, branding, dan alat pengukuran langsung ke dalam PDF Anda, mengubah file statis menjadi kanvas kolaborasi interaktif. Baik Anda membangun sistem manajemen dokumen, portal e‑learning, atau alur kerja peninjauan hukum, anotasi programatik mempercepat siklus peninjauan, mengurangi kesalahan manusia, dan membuat PDF Anda tetap tampak profesional.
@@ -228,8 +223,3 @@ Butuh bantuan untuk memulai atau mengalami masalah? Komunitas dan dokumentasi Gr
 - [Tutorial Anotasi Teks Java - Panduan Lengkap untuk Pengeditan Dokumen PDF](/annotation/java/text-annotations/)
 - [Edit Anotasi PDF Java - Tutorial Lengkap GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [Muat Anotasi PDF Java - Panduan Manajemen Anotasi GroupDocs Lengkap](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

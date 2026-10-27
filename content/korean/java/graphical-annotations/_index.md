@@ -51,11 +51,6 @@ type: docs
 url: /ko/java/graphical-annotations/
 weight: 6
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Java와 GroupDocs PDF에서 주석 생성 방법
 
 If you’ve ever felt that manual PDF reviews drag down productivity, you’re not alone. Learning **주석 생성 방법** in Java lets you inject visual feedback, branding, and measurement tools directly into your PDFs, turning a static file into an interactive collaboration canvas. Whether you’re building a document‑management system, an e‑learning portal, or a legal‑review workflow, programmatic annotation speeds up review cycles, reduces human error, and keeps your PDFs looking polished.
@@ -226,8 +221,3 @@ A: Standard annotations are supported on most mobile viewers, but always test fo
 - [Java 텍스트 주석 튜토리얼 - PDF 문서 편집을 위한 완전 가이드](/annotation/java/text-annotations/)
 - [PDF 주석 편집 Java - 완전한 GroupDocs 튜토리얼](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
 - [PDF 주석 로드 Java - 완전한 GroupDocs Annotation 관리 가이드](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}

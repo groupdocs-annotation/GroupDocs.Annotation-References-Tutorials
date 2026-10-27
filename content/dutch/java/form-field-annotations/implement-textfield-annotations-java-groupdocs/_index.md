@@ -88,11 +88,6 @@ type: docs
 url: /nl/java/form-field-annotations/implement-textfield-annotations-java-groupdocs/
 weight: 1
 ---
-
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-
 # Genereer invulbare PDF met Java met GroupDocs Annotation
 
 In deze uitgebreide tutorial **genereer je invulbare PDF**-documenten programmatisch met Java en de GroupDocs.Annotation API. We lopen alles door wat je nodig hebt — van projectopzet tot het toevoegen van volledig functionele tekstveld‑annotaties — zodat je professionele, interactieve PDF's kunt leveren die op elk apparaat werken en passen bij de uitstraling van je merk.
@@ -392,8 +387,3 @@ Voor extra hulp, bezoek het [Developer Community Forum](https://forum.groupdocs.
 - [PDF‑formulier‑velden maken in Java – GroupDocs.Annotation‑gids](/annotation/java/form-field-annotations/)
 - [Interactieve PDF‑knoppen maken in Java met GroupDocs.Annotation](/annotation/java/form-field-annotations/create-pdf-buttons-java-groupdocs-annotation/)
 - [PDF‑annotaties bewerken Java - Complete GroupDocs‑tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/products-backtop-button >}}
