@@ -1,17 +1,20 @@
 ---
 categories:
 - Java Development
-date: '2026-06-21'
-description: 了解如何在 Java 中注释 PDF 文件，包括使用 GroupDocs.Annotation 处理受密码保护的 PDF。此分步指南涵盖设置、安全、批量处理和最佳实践。
+date: '2026-11-01'
+description: 了解如何在 Java 中对 PDF 文件进行批注，包括处理受密码保护的 PDF，使用 GroupDocs.Annotation。本分步指南涵盖设置、安全、批量处理和最佳实践。
 keywords:
 - how to annotate pdf
 - password protected pdf java
 - groupdocs annotation java
-lastmod: '2026-06-21'
-linktitle: Java 文档注释库指南
+lastmod: '2026-11-01'
+linktitle: Java 文档批注库指南
+og_description: 了解如何在 Java 中对 PDF 文件进行批注，包括处理受密码保护的 PDF，使用 GroupDocs.Annotation。遵循分步设置、安全提示、批量处理和最佳实践。
+og_image_alt: Guide showing Java code to annotate password‑protected PDF using GroupDocs.Annotation
+og_title: 如何在 PDF 上添加批注 – 使用 GroupDocs 的受保护 Java 指南
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-21'
+  dateModified: '2026-11-01'
   description: Learn how to annotate PDF files in Java, including password protected
     PDF Java handling, using GroupDocs.Annotation. This step‑by‑step guide covers
     setup, security, batch processing, and best practices.
@@ -34,34 +37,35 @@ tags:
 - pdf-annotation
 - java-library
 - security
-title: 如何注释 PDF – 使用 GroupDocs 的受保护 PDF Java 指南
+- groupdocs
+title: 如何在 PDF 上添加批注 – 使用 GroupDocs 的受保护 PDF Java 指南
 type: docs
 url: /zh/java/advanced-features/groupdocs-annotation-java-password-documents/
 weight: 1
 ---
 
-# 如何在受保护的 PDF 上进行注释 – 使用 GroupDocs 的 Java 指南
+# 如何注释 PDF – 受保护的 PDF Java 指南 与 GroupDocs
 
-如果您正在构建需要处理敏感 PDF 的 Java 应用程序，您需要一种可靠的方法来**how to annotate pdf**受密码保护的文件。在本综合教程中，我们将指导您加载密码加密的 PDF，添加各种专业注释，并在保存结果时保留或更新文档的安全性。所有这些都使用 GroupDocs.Annotation for Java 完成，该库抽象了加密层，让您专注于业务逻辑。
+如果您正在构建一个必须处理敏感 PDF 的 Java 应用程序，您需要一种可靠的方法来 **how to annotate pdf** 文件，这些文件受密码保护。在本综合教程中，我们将指导您加载密码加密的 PDF，添加各种专业注释，并在保存结果时保留或更新文档的安全性。所有这些都使用 GroupDocs.Annotation for Java 完成，该库抽象了加密层，让您专注于业务逻辑。
 
 ## 快速答案
 - **什么库可以让我在 Java 中注释受保护的 PDF？** GroupDocs.Annotation for Java  
 - **我需要生产环境的许可证吗？** 是的 – 商业许可证会移除水印和使用限制  
-- **推荐使用哪个 JDK 版本？** Java 11+（Java 8 也可用，但 11+ 性能更佳）  
-- **我可以一次处理多个文件吗？** 可以，使用后面展示的批处理或异步模式  
+- **推荐使用哪个 JDK 版本？** Java 11+（Java 8 可用，但 11+ 性能更佳）  
+- **我可以一次处理多个文件吗？** 可以，使用后面示例的批处理或异步模式  
 - **代码是线程安全的吗？** 为每个请求创建一个新的 `Annotator`；实例不共享  
 
-## 什么是“annotate protected pdf java”？
-**“Annotate protected pdf java”** 是在 Java 环境中打开密码加密的 PDF，以编程方式添加注释、突出显示或形状，然后在保存文件时保留或更新其安全设置的过程。此工作流实现了安全协作、审计追踪以及符合合规要求的文档处理。
+## 什么是 “annotate protected pdf java”？
+“annotate protected pdf java” 意味着在 Java 中打开密码加密的 PDF，添加注释或高亮，然后在保存时保留或更新其安全性。此工作流实现了安全协作、审计追踪以及合规友好的处理，使团队能够在不泄露原始密码的情况下处理敏感文档。
 
 ## 为什么选择 GroupDocs.Annotation 作为您的 Java 文档注释库？
-GroupDocs.Annotation 专为企业级 PDF 操作而构建。它支持 **50+ 种输入和输出格式**，能够在不将整个文件加载到内存的情况下处理数百页的 PDF，并提供内置的加密处理。该库还提供 **线程安全的批处理 API**、详细的错误代码，以及针对云部署的 **99.9% 可用性 SLA**，使其成为关键任务应用的可靠选择。
+GroupDocs.Annotation 提供企业级 PDF 注释，内置加密支持，支持超过 50 种输入和输出格式，并使用不到 150 MB 内存处理数百页文件。它提供线程安全的批处理 API、详细的错误码，以及云部署的 99.9 % 正常运行时间 SLA，是关键 Java 应用的可靠选择。
 
-## 前置条件（请勿跳过此部分）
+## 前置条件（不要跳过此部分）
 
-- **JDK：** 8 或更高（推荐使用 Java 11+）  
+- **JDK：** 8 或更高（推荐 Java 11+）  
 - **构建工具：** Maven（Gradle 也可）  
-- **IDE：** IntelliJ IDEA、Eclipse 或您偏好的任何 Java IDE  
+- **IDE：** IntelliJ IDEA、Eclipse 或您喜欢的任何 Java IDE  
 - **知识要求：** Java 基础、Maven 基础、文件 I/O  
 
 *可选但有帮助：* 熟悉 PDF 内部结构以及之前使用注释框架的经验。
@@ -90,7 +94,7 @@ GroupDocs.Annotation 专为企业级 PDF 操作而构建。它支持 **50+ 种�
 </dependencies>
 ```
 
-**技巧提示：** 在生产环境中锁定到特定版本；避免使用可能导致破坏性更改的版本范围。
+**技巧提示：** 在生产环境中固定到特定版本；避免使用可能导致破坏性更改的版本范围。
 
 ### 许可证设置（突破试用限制）
 
@@ -113,8 +117,11 @@ public class GroupDocsSetup {
 
 ## 核心实现：安全文档处理
 
-### 如何注释受保护的 pdf java – 加载密码保护的文档
-`Annotator` 是 GroupDocs.Annotation 中用于打开和修改 PDF 文档的主要类。通过将密码传递给 `Annotator` 构造函数来加载加密的 PDF。库会自动在内存中解密文件，密码永不触及文件系统。
+### 如何注释受保护的 PDF Java – 加载密码保护的文档
+`Annotator` 是主要类，用于在透明处理加密的同时打开、修改和保存 PDF 文件。  
+通过使用文件路径和文档密码创建 `Annotator` 实例来加载密码保护的 PDF；库会在内存中解密内容，而不会将密码写入磁盘。随后您会获得一个 `Document` 对象进行操作，确保原始加密保持完整，直到您显式使用新密码保存为止。
+
+**定义锚点：** `Annotator` 是主要类，用于在透明处理加密的同时打开、修改和保存 PDF 文件。
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -144,11 +151,11 @@ public class SecureDocumentLoader {
 
 **常见问题与解决方案**  
 - *密码错误*：在处理前进行验证。  
-- *文件未找到*：检查文件是否存在以及权限。  
+- *文件未找到*：检查是否存在以及权限。  
 - *内存压力*：使用 try‑with‑resources（见后文）。
 
 ### 添加专业区域注释
-`AreaAnnotation` 表示矩形注释，例如 PDF 页面上的高亮或评论。创建 `AreaAnnotation` 对象，设置其矩形坐标，选择颜色，并将其附加到目标页面。
+`AreaAnnotation` 表示矩形标记，如高亮、评论或形状，放置在 PDF 页面上。创建 `AreaAnnotation` 对象，设置矩形坐标，选择颜色，并将其附加到目标页面。
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -187,11 +194,11 @@ public class AnnotationProcessor {
 
 **定位技巧**  
 - 坐标从左上角 (0,0) 开始。  
-- 测量单位为点 (1 pt = 1/72 英寸)。  
+- 测量单位为点 (1 pt = 1/72 in)。  
 - 在不同页面尺寸上测试，以确保位置一致。
 
 ### 安全文档保存（生产就绪）
-`save` 将修改后的文档写入磁盘，并可以应用新密码进行加密。完成注释后，如果想重新加密文档，请使用新密码调用 `save`。也可以保持原密码不变。
+`save` 方法将修改后的 PDF 写入磁盘，并可选地应用新密码进行加密。您可以保持原始密码不变，或在调用 `save` 时提供新密码。
 
 ```java
 import java.nio.file.Files;
@@ -224,7 +231,7 @@ public class SecureDocumentSaver {
 }
 ```
 
-## 完整工作示例（可复制粘贴）
+## 完整可运行示例（复制粘贴即可）
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -286,18 +293,18 @@ public class CompleteAnnotationExample {
 }
 ```
 
-## 实际使用案例（此功能的最佳体现）
+## 实际使用案例（此功能的亮点）
 
-- **法律审查系统** – 突出显示条款，添加评论，并保留审计追踪。  
+- **法律审查系统** – 高亮条款，添加评论，并保留审计轨迹。  
 - **医学影像** – 在保持 HIPAA 合规的同时注释 X 光片或报告。  
 - **金融文档分析** – 标记贷款申请或审计报告中的关键章节。  
-- **教育内容** – 教师和学生在不更改原始文件的情况下向 PDF 添加注释。  
-- **工程设计审查** – 团队安全地对蓝图和 CAD 导出文件进行注释。
+- **教育内容** – 教师和学生在不更改原始文件的情况下为 PDF 添加注释。  
+- **工程设计审查** – 团队安全地为蓝图和 CAD 导出文件添加注释。  
 
-## 性能与最佳实践（请勿跳过）
+## 性能与最佳实践（不要跳过）
 
 ### 内存管理（生产关键）
-GroupDocs.Annotation 流式处理 PDF 页面，即使是 500 页的文件，内存使用也保持在 **150 MB** 以下。始终在 `finally` 块中关闭 `Annotator`。
+`Annotator` 实现了 `AutoCloseable`，可在 try‑with‑resources 中使用，以确保正确释放文件句柄。GroupDocs.Annotation 流式处理 PDF 页面，即使是 500 页文件，内存使用也保持在 **150 MB** 以下。始终在 `finally` 块中关闭 `Annotator`。
 
 ```java
 // Good: Automatic resource management
@@ -315,7 +322,7 @@ public void processDocumentSafely(String inputPath, String password) {
 ```
 
 ### 批处理优化
-`AnnotatorFactory` 为批量操作高效创建 `Annotator` 实例。循环处理文件列表时，复用单个 `AnnotatorFactory` 以降低对象创建开销。
+`AnnotatorFactory` 高效创建并缓存 `Annotator` 实例以用于批量操作。在循环中处理文件列表，复用单个 `AnnotatorFactory` 可降低对象创建开销。
 
 ```java
 public void processBatchDocuments(List<DocumentInfo> documents) {
@@ -339,7 +346,7 @@ public void processBatchDocuments(List<DocumentInfo> documents) {
 ```
 
 ### Web 应用的异步处理
-将注释工作卸载到单独的线程池；向客户端返回作业 ID 并轮询完成状态。
+`ExecutorService` 可以并行运行注释任务，返回供客户端轮询的作业标识符。将注释工作卸载到单独的线程池；向客户端返回作业 ID 并轮询完成状态。
 
 ```java
 import java.util.concurrent.CompletableFuture;
@@ -359,7 +366,7 @@ public CompletableFuture<String> processDocumentAsync(String inputPath, String p
 ## 高级安全考虑
 
 ### 安全文件处理（从内存中清除密码）
-将密码存储在 `char[]` 中，使用后擦除数组，且绝不记录原始值。
+`char[]` 用于存储密码，以便使用后可以从内存中清除，且原始密码永不记录。
 
 ```java
 public class SecureFileHandler {
@@ -383,8 +390,8 @@ public class SecureFileHandler {
 }
 ```
 
-### 审计日志（合规准备）
-`ILogger` 是用于记录注释操作和错误的接口。使用内置的 `ILogger` 接口捕获谁在何时对何文档进行注释，然后将日志写入安全存储。
+### 审计日志（合规就绪）
+`ILogger` 接口允许您插入自定义日志提供程序，以捕获注释操作和错误。使用内置的 `ILogger` 实现记录谁在何时注释了什么，然后将日志写入安全存储。
 
 ```java
 import java.util.logging.Logger;
@@ -399,33 +406,32 @@ public class AuditLogger {
 }
 ```
 
-## 故障排查指南（当出现问题时）
-本节提供针对使用 GroupDocs.Annotation 时最常见问题的简明指导，帮助您快速定位根因并实施有效修复。
+## 故障排查指南（出现问题时）
 
-| 问题 | 常见原因 | 快速解决方案 |
-|------|----------|--------------|
+| Issue | Typical cause | Quick fix |
+|-------|---------------|-----------|
 | **密码无效** | 密码错误或编码问题 | 去除空格，确保 UTF‑8 编码 |
 | **文件未找到** | 路径不正确或缺少权限 | 使用绝对路径，验证读取权限 |
 | **内存泄漏** | 未调用 `dispose()` | 始终在 `finally` 中调用 `annotator.dispose()` |
-| **注释位置错误** | 混淆点和像素 | 记住 1 pt = 1/72 英寸；在示例页面上测试 |
-| **加载缓慢** | 文件过大或 PDF 结构复杂 | 预处理，增大 JVM 堆内存，使用流式 API |
+| **注释位置错误** | 混淆点和像素 | 记住 1 pt = 1/72 in；在示例页面上测试 |
+| **加载缓慢** | 文件过大或 PDF 结构复杂 | 预处理，增大 JVM 堆，使用流式 API |
 
 ## 常见问题
 
 **Q:** *我可以注释使用 AES‑256 加密的 PDF 吗？*  
-**A:** 是的。只要提供正确的密码，GroupDocs.Annotation 支持标准的 PDF 加密，包括 AES‑256。
+**A:** 可以。GroupDocs.Annotation 支持标准 PDF 加密，包括 AES‑256，只要您提供正确的密码。
 
 **Q:** *我需要商业许可证用于生产吗？*  
-**A:** 当然需要。试用版会添加水印并限制处理量。商业许可证会移除这些限制。
+**A:** 必须。试用版会添加水印并限制处理量，商业许可证会移除这些限制。
 
-**Q:** *将密码以明文存储是否安全？*  
-**A:** 绝不安全。请使用安全保管库或环境变量，并在使用后清除密码字符数组（参见安全文件处理示例）。
+**Q:** *将密码明文存储是否安全？*  
+**A:** 绝不。请使用安全保管库或环境变量，并在使用后清除密码 `char[]` 数组（参见安全文件处理示例）。
 
 **Q:** *我可以并发处理多少文档？*  
-**A:** 这取决于服务器资源。常见做法是将并发数限制为 CPU 核心数，并监控堆内存使用情况。
+**A:** 取决于服务器资源。常见做法是将并发数限制为 CPU 核心数，并监控堆内存使用。
 
-**Q:** *我可以将其集成到像 SharePoint 这样的文档管理系统吗？*  
-**A:** 可以。将文件从 SharePoint 流式传输到 Annotator，处理后再写回，保持相同的安全模型。
+**Q:** *我能将其集成到像 SharePoint 这样的文档管理系统吗？*  
+**A:** 可以。将文件从 SharePoint 流式传入 Annotator，处理后再写回，保持相同的安全模型。
 
 ## 其他资源
 
@@ -435,16 +441,16 @@ public class AuditLogger {
 - [购买商业许可证](https://purchase.groupdocs.com/buy)  
 - [获取免费试用版](https://releases.groupdocs.com/annotation/java/)  
 - [请求临时许可证](https://purchase.groupdocs.com/temporary-license/)  
-- [社区支持论坛](https://forum.groupdocs.com/c/annotation/)
+- [社区支持论坛](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**最后更新：** 2026-06-21  
-**已测试：** GroupDocs.Annotation 25.2  
+**最后更新：** 2026-11-01  
+**测试版本：** GroupDocs.Annotation 25.2  
 **作者：** GroupDocs
 
 ## 相关教程
 
-- [使用 GroupDocs.Annotation Java 加载受密码保护的 PDF](/annotation/java/advanced-features/)  
+- [使用 GroupDocs.Annotation Java 加载密码保护的 PDF](/annotation/java/advanced-features/)  
 - [使用 GroupDocs.Annotation Java 创建审阅评论 PDF](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)  
 - [使用 GroupDocs.Annotation 的页面范围保存 Java – 完整指南](/annotation/java/document-saving/)

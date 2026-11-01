@@ -1,19 +1,25 @@
 ---
 categories:
 - Java Development
-date: '2026-06-21'
+date: '2026-11-01'
 description: Erfahren Sie, wie Sie PDF‑Dateien in Java annotieren, einschließlich
-  password protected PDF Java handling, mit GroupDocs.Annotation. Diese Schritt‑für‑Schritt‑Anleitung
-  behandelt Setup, Security, batch processing und best practices.
+  der Verarbeitung passwortgeschützter PDFs, mit GroupDocs.Annotation. Diese Schritt‑für‑Schritt‑Anleitung
+  behandelt Einrichtung, Sicherheit, Batch‑Verarbeitung und bewährte Methoden.
 keywords:
 - how to annotate pdf
 - password protected pdf java
 - groupdocs annotation java
-lastmod: '2026-06-21'
-linktitle: Java Dokumenten‑Annotations‑Bibliothek Leitfaden
+lastmod: '2026-11-01'
+linktitle: Leitfaden zur Java‑Dokument‑Annotationsbibliothek
+og_description: Erfahren Sie, wie Sie PDF‑Dateien in Java annotieren, einschließlich
+  der Handhabung passwortgeschützter PDFs, mit GroupDocs.Annotation. Folgen Sie der
+  Schritt‑für‑Schritt‑Einrichtung, Sicherheitstipps, Batch‑Verarbeitung und bewährten
+  Methoden.
+og_image_alt: Guide showing Java code to annotate password‑protected PDF using GroupDocs.Annotation
+og_title: Wie man PDFs annotiert – geschützte Java‑Anleitung mit GroupDocs
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-21'
+  dateModified: '2026-11-01'
   description: Learn how to annotate PDF files in Java, including password protected
     PDF Java handling, using GroupDocs.Annotation. This step‑by‑step guide covers
     setup, security, batch processing, and best practices.
@@ -36,43 +42,44 @@ tags:
 - pdf-annotation
 - java-library
 - security
-title: Wie man PDF annotiert – Geschützte PDF Java Anleitung mit GroupDocs
+- groupdocs
+title: Wie man PDFs annotiert – Geschützte PDF‑Java‑Anleitung mit GroupDocs
 type: docs
 url: /de/java/advanced-features/groupdocs-annotation-java-password-documents/
 weight: 1
 ---
 
-# Wie man PDF annotiert – Geschützte PDF Java Anleitung mit GroupDocs
+# Wie man PDF annotiert – geschützte PDF Java‑Leitfaden mit GroupDocs
 
-Wenn Sie eine Java‑Anwendung entwickeln, die mit sensiblen PDFs arbeiten muss, benötigen Sie eine zuverlässige Methode, **wie man PDF annotiert** Dateien, die durch Passwörter geschützt sind. In diesem umfassenden Tutorial führen wir Sie durch das Laden passwortverschlüsselter PDFs, das Hinzufügen verschiedener professioneller Annotationen und das Speichern des Ergebnisses, wobei die Sicherheit des Dokuments erhalten oder aktualisiert wird. All dies geschieht mit GroupDocs.Annotation für Java, einer Bibliothek, die die Verschlüsselungsebene abstrahiert und Ihnen ermöglicht, sich auf die Geschäftslogik zu konzentrieren.
+Wenn Sie eine Java‑Anwendung entwickeln, die mit sensiblen PDFs arbeiten muss, benötigen Sie eine zuverlässige Methode, **wie man PDF annotiert** Dateien, die durch Passwörter geschützt sind. In diesem umfassenden Tutorial führen wir Sie durch das Laden passwortverschlüsselter PDFs, das Hinzufügen verschiedener professioneller Anmerkungen und das Speichern des Ergebnisses, wobei die Sicherheit des Dokuments erhalten oder aktualisiert wird. All dies geschieht mit GroupDocs.Annotation für Java, einer Bibliothek, die die Verschlüsselungsebene abstrahiert und Ihnen ermöglicht, sich auf die Geschäftslogik zu konzentrieren.
 
 ## Schnelle Antworten
-- **Welche Bibliothek ermöglicht das Annotieren geschützter PDFs in Java?** GroupDocs.Annotation for Java  
-- **Brauche ich eine Lizenz für die Produktion?** Ja – eine kommerzielle Lizenz entfernt Wasserzeichen und Nutzungslimits  
-- **Welche JDK-Version wird empfohlen?** Java 11+ (Java 8 funktioniert, aber 11+ bietet bessere Leistung)  
-- **Kann ich viele Dateien gleichzeitig verarbeiten?** Ja, verwenden Sie Batch‑ oder asynchrone Muster, die später gezeigt werden  
+- **Welche Bibliothek ermöglicht mir das Annotieren geschützter PDFs in Java?** GroupDocs.Annotation für Java  
+- **Benötige ich eine Lizenz für die Produktion?** Ja – eine kommerzielle Lizenz entfernt Wasserzeichen und Nutzungslimits  
+- **Welche JDK‑Version wird empfohlen?** Java 11+ (Java 8 funktioniert, aber 11+ bietet bessere Performance)  
+- **Kann ich viele Dateien gleichzeitig verarbeiten?** Ja, verwenden Sie die später gezeigten Batch‑ oder asynchronen Muster  
 - **Ist der Code thread‑sicher?** Erstellen Sie pro Anfrage einen neuen `Annotator`; Instanzen werden nicht geteilt  
 
-## Was ist „annotate protected pdf java“?
-**„Annotate protected pdf java“** ist der Vorgang, ein passwortverschlüsseltes PDF in einer Java‑Umgebung zu öffnen, programmgesteuert Notizen, Hervorhebungen oder Formen hinzuzufügen und die Datei anschließend zu speichern, wobei die Sicherheitseinstellungen erhalten oder aktualisiert werden. Dieser Workflow ermöglicht sichere Zusammenarbeit, Prüfpfade und compliance‑freundliche Dokumentenverarbeitung.
+## Was bedeutet „annotate protected pdf java“?
+„Annotate protected pdf java“ bedeutet, ein passwortverschlüsseltes PDF in Java zu öffnen, Notizen oder Hervorhebungen hinzuzufügen und es zu speichern, wobei die Sicherheit erhalten oder aktualisiert wird. Dieser Workflow ermöglicht sichere Zusammenarbeit, Prüfpfade und compliance‑freundliche Handhabung, sodass Teams an sensiblen Dokumenten arbeiten können, ohne das ursprüngliche Passwort offenzulegen.
 
-## Warum GroupDocs.Annotation als Ihre Java‑Dokumenten‑Annotierungsbibliothek wählen?
-GroupDocs.Annotation ist speziell für unternehmensweite PDF‑Manipulation konzipiert. Es unterstützt **50+ Eingabe‑ und Ausgabeformate**, kann mehrseitige PDFs verarbeiten, ohne die gesamte Datei in den Speicher zu laden, und bietet integrierte Verschlüsselungs‑Handling‑Funktionen. Die Bibliothek stellt zudem **thread‑sichere Batch‑APIs**, detaillierte Fehlercodes und ein **99,9 % Uptime‑SLA** für cloud‑gehostete Deployments bereit – ein solider Kandidat für mission‑kritische Anwendungen.
+## Warum GroupDocs.Annotation als Java‑Dokument‑Annotierungsbibliothek wählen?
+GroupDocs.Annotation bietet Unternehmens‑PDF‑Annotationen mit integrierter Verschlüsselungsunterstützung, unterstützt über 50 Eingabe‑ und Ausgabeformate und verarbeitet mehrseitige Dateien mit weniger als 150 MB Speicher. Es bietet thread‑sichere Batch‑APIs, detaillierte Fehlercodes und ein SLA von 99,9 % Verfügbarkeit für Cloud‑Deployments, was es zu einer zuverlässigen Wahl für geschäftskritische Java‑Anwendungen macht.
 
-## Voraussetzungen (Nicht überspringen)
+## Voraussetzungen (nicht überspringen)
 
 - **JDK:** 8 oder höher (Java 11+ empfohlen)  
 - **Build‑Tool:** Maven (Gradle funktioniert ebenfalls)  
-- **IDE:** IntelliJ IDEA, Eclipse oder jede bevorzugte Java‑IDE  
+- **IDE:** IntelliJ IDEA, Eclipse oder jede andere bevorzugte Java‑IDE  
 - **Kenntnisse:** Java‑Grundlagen, Maven‑Basics, Datei‑I/O  
 
 *Optional aber hilfreich:* Vertrautheit mit PDF‑Interna und vorherige Erfahrung mit Annotations‑Frameworks.
 
-## Einrichtung von GroupDocs.Annotation für Java
+## GroupDocs.Annotation für Java einrichten
 
-### Maven‑Konfiguration (Der richtige Weg)
+### Maven‑Konfiguration (der richtige Weg)
 
-Fügen Sie das Repository und die Abhängigkeit zu Ihrer `pom.xml` hinzu. Dieser genaue Block muss unverändert bleiben:
+Fügen Sie das Repository und die Abhängigkeit zu Ihrer `pom.xml` hinzu. Dieser Block muss exakt unverändert bleiben:
 
 ```xml
 <repositories>
@@ -92,9 +99,9 @@ Fügen Sie das Repository und die Abhängigkeit zu Ihrer `pom.xml` hinzu. Dieser
 </dependencies>
 ```
 
-**Pro Tipp:** In der Produktion auf eine bestimmte Version festlegen; Versionsbereiche vermeiden, die zu Breaking Changes führen könnten.
+**Pro‑Tipp:** In der Produktion auf eine feste Version festlegen; Versionsbereiche vermeiden, die zu Breaking Changes führen können.
 
-### Lizenzsetup (Um die Trial‑Einschränkungen zu umgehen)
+### Lizenz‑Setup (um die Trial‑Beschränkungen zu umgehen)
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -113,10 +120,13 @@ public class GroupDocsSetup {
 }
 ```
 
-## Kernimplementierung: Sichere Dokumentenverarbeitung
+## Kernimplementierung: sichere Dokumentenverarbeitung
 
-### Wie man protected pdf java annotiert – Laden passwortgeschützter Dokumente
-`Annotator` ist die Hauptklasse in GroupDocs.Annotation, die zum Öffnen und Modifizieren von PDF‑Dokumenten verwendet wird. Laden Sie das verschlüsselte PDF, indem Sie das Passwort an den `Annotator`‑Konstruktor übergeben. Die Bibliothek entschlüsselt die Datei automatisch im Speicher, sodass das Passwort nie das Dateisystem berührt.
+### Wie man geschützte PDF Java annotiert – Laden passwortgeschützter Dokumente
+`Annotator` ist die Hauptklasse, die PDF‑Dokumente öffnet, modifiziert und speichert, während sie die Verschlüsselung behandelt.  
+Laden Sie ein passwortgeschütztes PDF, indem Sie eine `Annotator`‑Instanz mit dem Dateipfad und dem Dokumenten‑Passwort erstellen; die Bibliothek entschlüsselt den Inhalt im Speicher, ohne das Passwort auf die Festplatte zu schreiben. Anschließend erhalten Sie ein `Document`‑Objekt, mit dem Sie arbeiten können, wobei die ursprüngliche Verschlüsselung intakt bleibt, bis Sie explizit mit einem neuen Passwort speichern.
+
+**Definitionsanker:** `Annotator` ist die primäre Klasse, die PDF‑Dateien öffnet, modifiziert und speichert, während sie die Verschlüsselung transparent handhabt.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -150,7 +160,7 @@ public class SecureDocumentLoader {
 - *Speicherbelastung*: try‑with‑resources verwenden (siehe später).
 
 ### Hinzufügen professioneller Flächen‑Annotationen
-`AreaAnnotation` repräsentiert eine rechteckige Annotation wie eine Hervorhebung oder einen Kommentar auf einer PDF‑Seite. Erzeugen Sie ein `AreaAnnotation`‑Objekt, setzen Sie die Rechteckkoordinaten, wählen Sie eine Farbe und fügen Sie es der gewünschten Seite hinzu.
+`AreaAnnotation` stellt eine rechteckige Markierung dar, z. B. eine Hervorhebung, einen Kommentar oder eine Form, die auf einer PDF‑Seite platziert wird. Erstellen Sie ein `AreaAnnotation`‑Objekt, setzen Sie die Rechteckkoordinaten, wählen Sie eine Farbe und fügen Sie es der gewünschten Seite hinzu.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -189,11 +199,11 @@ public class AnnotationProcessor {
 
 **Positionierungstipps**  
 - Koordinaten beginnen oben‑links (0,0).  
-- Messungen erfolgen in Punkten (1 pt = 1/72 in).  
+- Maße sind in Punkten (1 pt = 1/72 in).  
 - Auf verschiedenen Seitengrößen testen, um konsistente Platzierung sicherzustellen.
 
-### Sicheres Speichern von Dokumenten (Produktionsbereit)
-`save` schreibt das modifizierte Dokument auf die Festplatte und kann ein neues Passwort für die Verschlüsselung anwenden. Wenn Sie das Annotieren abgeschlossen haben, rufen Sie `save` mit einem neuen Passwort auf, falls Sie das Dokument erneut verschlüsseln möchten. Sie können das ursprüngliche Passwort auch unverändert lassen.
+### Sicheres Dokument‑Speichern (produktionsreif)
+Die `save`‑Methode schreibt das modifizierte PDF auf die Festplatte und wendet optional ein neues Passwort für die Verschlüsselung an. Sie können das ursprüngliche Passwort unverändert lassen oder beim Aufruf von `save` ein neues übergeben.
 
 ```java
 import java.nio.file.Files;
@@ -226,7 +236,7 @@ public class SecureDocumentSaver {
 }
 ```
 
-## Vollständiges funktionierendes Beispiel (Kopier‑ und Einfüge‑bereit)
+## Vollständiges funktionierendes Beispiel (copy‑paste bereit)
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -288,18 +298,18 @@ public class CompleteAnnotationExample {
 }
 ```
 
-## Praxisbeispiele (Wo das wirklich glänzt)
+## Praxisbeispiele (wo das wirklich glänzt)
 
-- **Rechtliche Prüfsysteme** – Klauseln hervorheben, Kommentare hinzufügen und ein Prüfprotokoll führen.  
-- **Medizinische Bildgebung** – Röntgenaufnahmen oder Berichte annotieren und HIPAA‑Konformität wahren.  
+- **Rechtliche Prüfungs‑Systeme** – Klauseln hervorheben, Kommentare hinzufügen und einen Prüfpfad führen.  
+- **Medizinische Bildgebung** – Röntgenaufnahmen oder Berichte annotieren und dabei HIPAA‑konform bleiben.  
 - **Finanzdokumenten‑Analyse** – Schlüsselabschnitte in Kreditanträgen oder Prüfberichten markieren.  
-- **Bildungsinhalte** – Lehrer und Schüler fügen PDFs Notizen hinzu, ohne das Original zu verändern.  
+- **Bildungsinhalte** – Lehrende und Lernende fügen PDFs Notizen hinzu, ohne das Original zu verändern.  
 - **Ingenieur‑Design‑Review** – Teams annotieren Blaupausen und CAD‑Exporte sicher.
 
-## Leistung & bewährte Praktiken (Nicht überspringen)
+## Leistung & bewährte Methoden (nicht überspringen)
 
-### Speicherverwaltung (Kritisch für die Produktion)
-GroupDocs.Annotation streamt PDF‑Seiten, sodass der Speicherverbrauch selbst bei 500‑Seiten‑Dateien unter **150 MB** bleibt. Schließen Sie den `Annotator` immer in einem `finally`‑Block.
+### Speicherverwaltung (kritisch für die Produktion)
+`Annotator` implementiert `AutoCloseable` und kann daher in try‑with‑resources verwendet werden, um die ordnungsgemäße Freigabe von Dateihandles sicherzustellen. GroupDocs.Annotation streamt PDF‑Seiten, sodass der Speicherverbrauch selbst bei 500‑seitigen Dateien unter **150 MB** bleibt. Schließen Sie den `Annotator` immer in einem `finally`‑Block.
 
 ```java
 // Good: Automatic resource management
@@ -316,8 +326,8 @@ public void processDocumentSafely(String inputPath, String password) {
 }
 ```
 
-### Optimierung der Batch‑Verarbeitung
-`AnnotatorFactory` erzeugt `Annotator`‑Instanzen effizient für Batch‑Operationen. Verarbeiten Sie eine Dateiliste in einer Schleife und nutzen Sie ein einziges `AnnotatorFactory`‑Objekt, um den Overhead der Objekterstellung zu reduzieren.
+### Batch‑Verarbeitungs‑Optimierung
+`AnnotatorFactory` erstellt und cached `Annotator`‑Instanzen effizient für Batch‑Operationen. Verarbeiten Sie eine Dateiliste in einer Schleife und nutzen Sie ein einzelnes `AnnotatorFactory`‑Objekt, um den Overhead der Objekterstellung zu reduzieren.
 
 ```java
 public void processBatchDocuments(List<DocumentInfo> documents) {
@@ -341,7 +351,7 @@ public void processBatchDocuments(List<DocumentInfo> documents) {
 ```
 
 ### Asynchrone Verarbeitung für Web‑Anwendungen
-Verlagern Sie die Annotations‑Arbeit in einen separaten Thread‑Pool; geben Sie dem Client eine Job‑ID zurück und pollen Sie den Abschluss.
+`ExecutorService` kann Annotations‑Aufgaben parallel ausführen und einen Job‑Identifier für das Client‑Polling zurückgeben. Lagern Sie die Annotations‑Arbeit in einen separaten Thread‑Pool aus; geben Sie dem Client eine Job‑ID und pollen Sie den Abschluss.
 
 ```java
 import java.util.concurrent.CompletableFuture;
@@ -361,7 +371,7 @@ public CompletableFuture<String> processDocumentAsync(String inputPath, String p
 ## Erweiterte Sicherheitsüberlegungen
 
 ### Sicherer Dateiumgang (Passwörter aus dem Speicher löschen)
-Speichern Sie Passwörter in einem `char[]`, löschen Sie das Array nach Gebrauch und protokollieren Sie den Rohwert niemals.
+`char[]` wird verwendet, um Passwörter zu speichern, sodass sie nach Gebrauch aus dem Speicher gelöscht werden können, und das rohe Passwort wird nie protokolliert.
 
 ```java
 public class SecureFileHandler {
@@ -385,8 +395,8 @@ public class SecureFileHandler {
 }
 ```
 
-### Audit‑Logging (Compliance‑bereit)
-`ILogger` ist ein Interface zum Protokollieren von Annotations‑Aktionen und Fehlern. Verwenden Sie das integrierte `ILogger`‑Interface, um festzuhalten, wer was wann annotiert hat, und schreiben Sie die Logs in einen sicheren Speicher.
+### Audit‑Logging (compliance‑bereit)
+Das `ILogger`‑Interface ermöglicht das Einbinden benutzerdefinierter Logging‑Provider, um Annotations‑Aktionen und Fehler zu erfassen. Verwenden Sie die integrierte `ILogger`‑Implementierung, um festzuhalten, wer was wann annotiert hat, und schreiben Sie die Logs in einen sicheren Speicher.
 
 ```java
 import java.util.logging.Logger;
@@ -401,52 +411,51 @@ public class AuditLogger {
 }
 ```
 
-## Fehlersuch‑Leitfaden (Wenn etwas schiefgeht)
-Dieser Abschnitt bietet knappe Anleitungen zu den häufigsten Problemen, die bei der Arbeit mit GroupDocs.Annotation auftreten können, und hilft Ihnen, Ursachen schnell zu identifizieren und wirksame Lösungen anzuwenden.
+## Fehlersuch‑Leitfaden (wenn etwas schiefgeht)
 
 | Problem | Typische Ursache | Schnelle Lösung |
-|---------|------------------|-----------------|
+|-------|---------------|-----------|
 | **Ungültiges Passwort** | Falsches Passwort oder falsche Kodierung | Leerzeichen entfernen, UTF‑8‑Kodierung sicherstellen |
-| **Datei nicht gefunden** | Falscher Pfad oder fehlende Berechtigung | Absolute Pfade verwenden, Leserechte prüfen |
-| **Speicherleck** | `dispose()` wird nicht aufgerufen | Immer `annotator.dispose()` im `finally`‑Block aufrufen |
-| **Fehlplatzierte Annotation** | Verwechslung von Punkten und Pixeln | Denke daran, 1 pt = 1/72 in; auf Beispielseiten testen |
-| **Langsames Laden** | Große Dateien oder komplexe PDFs | Vorausverarbeiten, JVM‑Heap erhöhen, Streaming‑APIs nutzen |
+| **Datei nicht gefunden** | Falscher Pfad oder fehlende Berechtigung | Absolute Pfade verwenden, Lese‑Rechte prüfen |
+| **Speicherleck** | `dispose()` nicht aufgerufen | Immer `annotator.dispose()` im `finally`‑Block aufrufen |
+| **Annotation falsch platziert** | Verwechslung von Punkten und Pixeln | 1 pt = 1/72 in beachten; auf Beispielseiten testen |
+| **Langsames Laden** | Große Dateien oder komplexe PDFs | Vorverarbeiten, JVM‑Heap erhöhen, Streaming‑APIs nutzen |
 
 ## Häufig gestellte Fragen
 
-**Q:** *Kann ich PDFs annotieren, die AES‑256‑Verschlüsselung verwenden?*  
-**A:** Ja. GroupDocs.Annotation unterstützt die Standard‑PDF‑Verschlüsselung, einschließlich AES‑256, solange Sie das korrekte Passwort bereitstellen.
+**F:** *Kann ich PDFs annotieren, die AES‑256‑Verschlüsselung verwenden?*  
+**A:** Ja. GroupDocs.Annotation unterstützt die gängige PDF‑Verschlüsselung, einschließlich AES‑256, sofern das korrekte Passwort bereitgestellt wird.
 
-**Q:** *Brauche ich eine kommerzielle Lizenz für die Produktion?*  
+**F:** *Benötige ich eine kommerzielle Lizenz für die Produktion?*  
 **A:** Absolut. Die Testversion fügt Wasserzeichen hinzu und begrenzt die Verarbeitung. Eine kommerzielle Lizenz entfernt diese Beschränkungen.
 
-**Q:** *Ist es sicher, Passwörter im Klartext zu speichern?*  
-**A:** Nie. Verwenden Sie sichere Tresore oder Umgebungsvariablen und löschen Sie Passwort‑Char‑Arrays nach Gebrauch (siehe Beispiel zum sicheren Dateiumgang).
+**F:** *Ist es sicher, Passwörter im Klartext zu speichern?*  
+**A:** Nie. Verwenden Sie sichere Tresore oder Umgebungsvariablen und löschen Sie `char[]`‑Passwort‑Arrays nach Gebrauch (siehe Beispiel zum sicheren Dateiumgang).
 
-**Q:** *Wie viele Dokumente kann ich gleichzeitig verarbeiten?*  
+**F:** *Wie viele Dokumente kann ich gleichzeitig verarbeiten?*  
 **A:** Das hängt von Ihren Serverressourcen ab. Ein gängiges Muster ist, die Parallelität auf die Anzahl der CPU‑Kerne zu begrenzen und den Heap‑Verbrauch zu überwachen.
 
-**Q:** *Kann ich das mit einem Dokumenten‑Management‑System wie SharePoint integrieren?*  
-**A:** Ja. Streamen Sie Dateien von SharePoint in den Annotator und schreiben Sie das Ergebnis zurück, wobei das gleiche Sicherheitsmodell beibehalten wird.
+**F:** *Kann ich das mit einem Dokumenten‑Management‑System wie SharePoint integrieren?*  
+**A:** Ja. Streamen Sie Dateien von SharePoint in den Annotator und schreiben Sie das Ergebnis zurück, wobei das gleiche Sicherheitsmodell erhalten bleibt.
 
 ## Zusätzliche Ressourcen
 
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
-- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)  
-- [Purchase Commercial License](https://purchase.groupdocs.com/buy)  
-- [Get Free Trial Version](https://releases.groupdocs.com/annotation/java/)  
-- [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [Community Support Forum](https://forum.groupdocs.com/c/annotation/)
+- [GroupDocs.Annotation für Java Dokumentation](https://docs.groupdocs.com/annotation/java/)  
+- [Vollständiger API‑Referenzleitfaden](https://reference.groupdocs.com/annotation/java/)  
+- [Neueste Version herunterladen](https://releases.groupdocs.com/annotation/java/)  
+- [Kommerzielle Lizenz erwerben](https://purchase.groupdocs.com/buy)  
+- [Kostenlose Testversion erhalten](https://releases.groupdocs.com/annotation/java/)  
+- [Temporäre Lizenz anfordern](https://purchase.groupdocs.com/temporary-license/)  
+- [Community‑Support‑Forum](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Zuletzt aktualisiert:** 2026-06-21  
+**Zuletzt aktualisiert:** 2026-11-01  
 **Getestet mit:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
 
 ## Verwandte Tutorials
 
-- [Load Password Protected PDF with GroupDocs.Annotation Java](/annotation/java/advanced-features/)
-- [Create Review Comments PDF using GroupDocs.Annotation Java](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
-- [Page Range Saving Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)
+- [Passwortgeschütztes PDF mit GroupDocs.Annotation Java laden](/annotation/java/advanced-features/)  
+- [Review‑Kommentare PDF mit GroupDocs.Annotation Java erstellen](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)  
+- [Seitenbereich‑Speicherung Java mit GroupDocs.Annotation – Komplett‑Leitfaden](/annotation/java/document-saving/)
