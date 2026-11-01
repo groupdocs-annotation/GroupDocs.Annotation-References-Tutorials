@@ -109,6 +109,10 @@ Load the document, define the pages you need, configure compression, and save. F
 `AnnotationApi` is the primary entry point for all annotation operations in GroupDocs.Annotation.  
 You obtain it by creating an `AnnotationApi` instance with your license key.
 
+```java
+AnnotationApi api = new AnnotationApi("YOUR_LICENSE_KEY");
+```
+
 ### Step 2: define the page range
 Specify the exact pages you want to keep. For example, pages 1‑5 and 10‑12 cover the most‑relevant sections in a legal contract.
 
@@ -243,9 +247,9 @@ By mastering **save selected pdf pages** with GroupDocs.Annotation, you can deli
 
 ## Related tutorials
 
-- [Page Range Saving Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
-- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
-- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
+- [Page Range Saving Java with GroupDocs.Annotation – Complete Guide]([Page Range Saving Java with GroupDocs.Annotation – Complete Guide]({{< relref "annotation/java/document-saving/_index.md" >}}))  
+- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide]([Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide]({{< relref "annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/_index.md" >}}))  
+- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java]([Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java]({{< relref "annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/_index.md" >}}))
 
 {{< /blocks/products/pf/backtop-button >}}
 

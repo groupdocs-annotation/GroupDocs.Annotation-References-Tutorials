@@ -120,6 +120,22 @@ Typical usage pattern:
 2. Create a `HighlightAnnotation`, set its `rectangle` coordinates (page number, X/Y offsets, width, height), and optionally customize color and opacity.  
 3. Add the annotation via `annotationApi.add(highlight)` and persist the result with `annotationApi.save("output.pdf")`.
 
+```java
+// Load a PDF document
+AnnotationApi annotationApi = new AnnotationApi();
+annotationApi.load("input.pdf");
+
+// Create a highlight annotation
+HighlightAnnotation highlight = new HighlightAnnotation();
+highlight.setPageNumber(1);
+highlight.setRectangle(new Rectangle(100, 100, 200, 20));
+highlight.setColor(Color.YELLOW);
+
+// Add and save
+annotationApi.add(highlight);
+annotationApi.save("output.pdf");
+```
+
 This approach guarantees that the highlight conforms to the PDF specification and appears correctly in all major viewers.
 
 ## Common challenges and solutions
@@ -142,19 +158,19 @@ Our tutorial collection is organized by complexity and use case, making it easy 
 
 ### Essential PDF annotation tutorials
 
-- [Add and Remove Underline Annotations in Java using GroupDocs: A Comprehensive Guide](./java-groupdocs-annotate-add-remove-underline/)
-- [Annotate PDFs with GroupDocs.Annotation for Java: A Complete Guide](./annotate-pdfs-groupdocs-annotation-java-guide/)
-- [How to Annotate PDFs in Java Using GroupDocs.Annotation](./java-pdf-annotation-groupdocs-java/)
-- [Complete Guide: Using GroupDocs.Annotation for Java to Create and Manage Annotations](./annotations-groupdocs-annotation-java-tutorial/)
-- [Master Annotation Management in Java: Comprehensive Guide with GroupDocs.Annotation](./groupdocs-annotation-java-manage-documents/)
-- [Master GroupDocs.Annotation for Java: Edit PDF Annotations Efficiently](./groupdocs-annotation-java-modify-pdf-annotations/)
-- [Automate PDF Annotation Extraction with GroupDocs for Java: A Comprehensive Guide](./automate-pdf-annotation-extraction-groupdocs-java/)
-- [Master Text Redaction in PDFs Using GroupDocs.Annotation Java API: A Comprehensive Guide](./groupdocs-annotation-java-text-redaction-tutorial/)
-- [How to Remove Annotations from PDFs Using GroupDocs.Annotation Java API](./groupdocs-annotation-java-remove-pdf-annotations/)
-- [How to Annotate PDFs from URLs Using GroupDocs.Annotation for Java | Tutorial on Document Annotation Management](./annotate-pdfs-from-urls-groupdocs-java/)
-- [How to Remove Replies by ID in Java Using GroupDocs.Annotation API](./java-groupdocs-annotation-remove-replies-by-id/)
-- [Complete Guide to Java PDF Annotation Using GroupDocs: Enhance Collaboration and Document Management](./java-pdf-annotation-groupdocs-guide/)
-- [Mastering Document Annotation in Java: A Comprehensive Guide Using GroupDocs.Annotation](./mastering-document-annotation-groupdocs-java/)
+- [Add and Remove Underline Annotations in Java using GroupDocs: A Comprehensive Guide]({{< relref "java-groupdocs-annotate-add-remove-underline" >}})
+- [Annotate PDFs with GroupDocs.Annotation for Java: A Complete Guide]({{< relref "annotate-pdfs-groupdocs-annotation-java-guide" >}})
+- [How to Annotate PDFs in Java Using GroupDocs.Annotation]({{< relref "java-pdf-annotation-groupdocs-java" >}})
+- [Complete Guide: Using GroupDocs.Annotation for Java to Create and Manage Annotations]({{< relref "annotations-groupdocs-annotation-java-tutorial" >}})
+- [Master Annotation Management in Java: Comprehensive Guide with GroupDocs.Annotation]({{< relref "groupdocs-annotation-java-manage-documents" >}})
+- [Master GroupDocs.Annotation for Java: Edit PDF Annotations Efficiently]({{< relref "groupdocs-annotation-java-modify-pdf-annotations" >}})
+- [Automate PDF Annotation Extraction with GroupDocs for Java: A Comprehensive Guide]({{< relref "automate-pdf-annotation-extraction-groupdocs-java" >}})
+- [Master Text Redaction in PDFs Using GroupDocs.Annotation Java API: A Comprehensive Guide]({{< relref "groupdocs-annotation-java-text-redaction-tutorial" >}})
+- [How to Remove Annotations from PDFs Using GroupDocs.Annotation Java API]({{< relref "groupdocs-annotation-java-remove-pdf-annotations" >}})
+- [How to Annotate PDFs from URLs Using GroupDocs.Annotation for Java | Tutorial on Document Annotation Management]({{< relref "annotate-pdfs-from-urls-groupdocs-java" >}})
+- [How to Remove Replies by ID in Java Using GroupDocs.Annotation API]({{< relref "java-groupdocs-annotation-remove-replies-by-id" >}})
+- [Complete Guide to Java PDF Annotation Using GroupDocs: Enhance Collaboration and Document Management]({{< relref "java-pdf-annotation-groupdocs-guide" >}})
+- [Mastering Document Annotation in Java: A Comprehensive Guide Using GroupDocs.Annotation]({{< relref "mastering-document-annotation-groupdocs-java" >}})
 
 ### Advanced annotation management
 
