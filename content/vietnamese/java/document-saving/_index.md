@@ -81,11 +81,6 @@ url: /vi/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Lưu các trang PDF đã chọn với GroupDocs.Annotation cho Java
 
 Giảm kích thước PDF trong các ứng dụng Java là một thách thức thường gặp, đặc biệt khi bạn cần **save selected pdf pages** đồng thời giữ nguyên các chú thích và duy trì hiệu năng cao. Trong hướng dẫn này, bạn sẽ khám phá tại sao việc lưu theo phạm vi trang chọn lọc lại quan trọng, GroupDocs.Annotation giúp thực hiện dễ dàng như thế nào, và cách kết hợp nó với **spring boot document saving** và **java document versioning** để có các giải pháp mạnh mẽ, sẵn sàng cho môi trường sản xuất. Dù bạn đang xây dựng nền tảng rà soát pháp lý, cổng thông tin giáo dục, hay quy trình làm việc dựa trên tuân thủ, các kỹ thuật dưới đây sẽ giúp tệp tin gọn nhẹ mà không làm mất độ chính xác của chú thích.
@@ -244,12 +239,3 @@ Bằng cách thành thạo **save selected pdf pages** với GroupDocs.Annotatio
 - [Page Range Saving Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
 - [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

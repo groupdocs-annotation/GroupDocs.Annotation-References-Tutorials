@@ -79,11 +79,6 @@ url: /th/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # บันทึกหน้า PDF ที่เลือกด้วย GroupDocs.Annotation สำหรับ Java
 
 การลดขนาด PDF ในแอปพลิเคชัน Java เป็นความท้าทายที่พบบ่อย โดยเฉพาะเมื่อคุณต้อง **บันทึกหน้า PDF ที่เลือก** พร้อมคง annotation ไว้และรักษาประสิทธิภาพสูง ในคู่มือนี้คุณจะได้เรียนรู้ว่าการบันทึกช่วงหน้าที่เลือกมีความสำคัญอย่างไร GroupDocs.Annotation ทำให้เรื่องนี้ง่ายขึ้นอย่างไร และจะผสานกับ **spring boot document saving** และ **java document versioning** เพื่อสร้างโซลูชันที่พร้อมใช้งานในระดับผลิตจริง ไม่ว่าคุณจะสร้างแพลตฟอร์มตรวจสอบกฎหมาย พอร์ทัลการศึกษา หรือเวิร์กโฟลว์ที่ต้องปฏิบัติตามข้อกำหนด เทคนิคต่อไปนี้จะช่วยให้ไฟล์มีขนาดเบาลงโดยไม่สูญเสียความแม่นยำของ annotation
@@ -242,12 +237,3 @@ GroupDocs.Annotation ทำงานได้ทันทีกับ Spring Boo
 - [Page Range Saving Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
 - [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

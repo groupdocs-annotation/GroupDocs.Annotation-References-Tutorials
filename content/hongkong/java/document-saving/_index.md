@@ -79,11 +79,6 @@ url: /zh-hant/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # 使用 GroupDocs.Annotation for Java 保存選取的 PDF 頁面
 
 Reducing PDF size in Java applications is a frequent challenge, especially when you need to **保存選取的 PDF 頁面** while preserving annotations and maintaining high performance. In this guide you’ll discover why selective page‑range saving matters, how GroupDocs.Annotation makes it easy, and how to combine it with **Spring Boot 文件儲存** and **Java 文件版本控制** for robust, production‑ready solutions. Whether you’re building a legal review platform, an educational portal, or a compliance‑driven workflow, the techniques below will keep files lean without sacrificing annotation fidelity.
@@ -235,12 +230,3 @@ By mastering **保存選取的 PDF 頁面** with GroupDocs.Annotation, you can d
 - [Page Range Saving Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
 - [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

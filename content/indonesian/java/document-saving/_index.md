@@ -81,11 +81,6 @@ url: /id/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Simpan halaman PDF terpilih dengan GroupDocs.Annotation untuk Java
 
 Mengurangi ukuran PDF dalam aplikasi Java adalah tantangan yang sering dihadapi, terutama ketika Anda perlu **save selected pdf pages** sambil mempertahankan anotasi dan kinerja tinggi. Dalam panduan ini Anda akan menemukan mengapa penyimpanan rentang halaman selektif penting, bagaimana GroupDocs.Annotation mempermudahnya, dan cara menggabungkannya dengan **spring boot document saving** dan **java document versioning** untuk solusi yang kuat dan siap produksi. Baik Anda membangun platform tinjauan hukum, portal edukasi, atau alur kerja yang berfokus pada kepatuhan, teknik di bawah ini akan membuat file tetap ringan tanpa mengorbankan keakuratan anotasi.
@@ -236,12 +231,3 @@ Dengan menguasai **save selected pdf pages** menggunakan GroupDocs.Annotation, A
 - [Penyimpanan Rentang Halaman Java dengan GroupDocs.Annotation – Panduan Lengkap](/annotation/java/document-saving/)  
 - [Muat Anotasi PDF Java - Panduan Manajemen GroupDocs Annotation Lengkap](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Panduan Lengkap - Cara Menyimpan PDF yang Dianotasi dengan GroupDocs.Annotation untuk Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -81,11 +81,6 @@ url: /pl/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Zapisz wybrane strony PDF przy użyciu GroupDocs.Annotation dla Javy
 
 Zmniejszanie rozmiaru PDF w aplikacjach Java jest częstym wyzwaniem, szczególnie gdy trzeba **zapisz wybrane strony pdf** zachowując adnotacje i utrzymując wysoką wydajność. W tym przewodniku dowiesz się, dlaczego oszczędzanie wybranych zakresów stron ma znaczenie, jak GroupDocs.Annotation ułatwia to zadanie oraz jak połączyć to z **spring boot document saving** i **java document versioning** dla solidnych, gotowych do produkcji rozwiązań. Niezależnie od tego, czy tworzysz platformę do przeglądu prawnego, portal edukacyjny, czy przepływ pracy oparty na zgodności, poniższe techniki pozwolą utrzymać pliki w lekkiej formie bez utraty integralności adnotacji.
@@ -237,12 +232,3 @@ Opanowując **zapis wybranych stron pdf** z GroupDocs.Annotation, możesz dostar
 - [Zapisywanie zakresu stron w Java z GroupDocs.Annotation – Kompletny przewodnik](/annotation/java/document-saving/)  
 - [Ładowanie adnotacji PDF w Java – Kompletny przewodnik zarządzania GroupDocs Annotation](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Kompletny przewodnik – Jak zapisać oznaczony PDF przy użyciu GroupDocs.Annotation dla Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

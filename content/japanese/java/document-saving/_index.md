@@ -79,11 +79,6 @@ url: /ja/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # GroupDocs.Annotation for Java を使用した選択した PDF ページの保存
 
 Java アプリケーションで PDF のサイズを削減することは頻繁に直面する課題であり、特に **save selected pdf pages** を実行しながら注釈を保持し、高いパフォーマンスを維持する必要がある場合に重要です。このガイドでは、選択的ページ範囲保存がなぜ重要か、GroupDocs.Annotation がどのように簡単に実現できるか、そして **spring boot document saving** と **java document versioning** を組み合わせて堅牢な本番対応ソリューションを構築する方法を紹介します。法務レビュー・教育ポータル・コンプライアンス主導のワークフローを構築する場合でも、以下の手法でファイルを軽量化し、注釈の忠実性を犠牲にしません。
@@ -238,12 +233,3 @@ A: 完全に可能です – ドキュメントコレクションを反復処理
 - [Java でページ範囲保存 – GroupDocs.Annotation 完全ガイド](/annotation/java/document-saving/)  
 - [Java で PDF 注釈をロード - 完全な GroupDocs Annotation 管理ガイド](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [完全ガイド - GroupDocs.Annotation for Java で注釈付き PDF を保存する方法](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

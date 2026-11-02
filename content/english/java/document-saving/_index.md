@@ -83,11 +83,6 @@ url: /java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Save selected pdf pages with GroupDocs.Annotation for Java
 
 Reducing PDF size in Java applications is a frequent challenge, especially when you need to **save selected pdf pages** while preserving annotations and maintaining high performance. In this guide you’ll discover why selective page‑range saving matters, how GroupDocs.Annotation makes it easy, and how to combine it with **spring boot document saving** and **java document versioning** for robust, production‑ready solutions. Whether you’re building a legal review platform, an educational portal, or a compliance‑driven workflow, the techniques below will keep files lean without sacrificing annotation fidelity.
@@ -247,15 +242,6 @@ By mastering **save selected pdf pages** with GroupDocs.Annotation, you can deli
 
 ## Related tutorials
 
-- [Page Range Saving Java with GroupDocs.Annotation – Complete Guide]([Page Range Saving Java with GroupDocs.Annotation – Complete Guide]({{< relref "annotation/java/document-saving/_index.md" >}}))  
-- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide]([Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide]({{< relref "annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/_index.md" >}}))  
-- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java]([Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java]({{< relref "annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/_index.md" >}}))
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}
+- [Page Range Saving Java with GroupDocs.Annotation – Complete Guide]({{< relref "groupdocs-annotation-java-save-specific-page-range" >}})  
+- [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide]({{< relref "groupdocs-annotation-java-manage-documents" >}})  
+- [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java]({{< relref "annotations-groupdocs-annotation-java-tutorial" >}})

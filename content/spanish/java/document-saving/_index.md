@@ -81,11 +81,6 @@ url: /es/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Guardar páginas PDF seleccionadas con GroupDocs.Annotation para Java
 
 Reducir el tamaño de los PDF en aplicaciones Java es un desafío frecuente, especialmente cuando necesitas **save selected pdf pages** mientras preservas las anotaciones y mantienes un alto rendimiento. En esta guía descubrirás por qué es importante guardar rangos de páginas selectivas, cómo GroupDocs.Annotation lo facilita y cómo combinarlo con **spring boot document saving** y **java document versioning** para soluciones robustas y listas para producción. Ya sea que estés construyendo una plataforma de revisión legal, un portal educativo o un flujo de trabajo impulsado por cumplimiento, las técnicas a continuación mantendrán los archivos ligeros sin sacrificar la fidelidad de las anotaciones.
@@ -244,12 +239,3 @@ Al dominar **save selected pdf pages** con GroupDocs.Annotation, puede ofrecer P
 - [Guardado de rango de páginas Java con GroupDocs.Annotation – Guía completa](/annotation/java/document-saving/)  
 - [Cargar anotaciones PDF Java - Guía completa de gestión de GroupDocs Annotation](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Guía completa - Cómo guardar PDF anotado con GroupDocs.Annotation para Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

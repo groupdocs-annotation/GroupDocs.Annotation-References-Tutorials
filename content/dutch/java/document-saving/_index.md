@@ -81,11 +81,6 @@ url: /nl/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Opslaan van geselecteerde pdf-pagina's met GroupDocs.Annotation voor Java
 
 Het verkleinen van PDF-grootte in Java-toepassingen is een veelvoorkomende uitdaging, vooral wanneer je **save selected pdf pages** moet uitvoeren terwijl je annotaties behoudt en hoge prestaties handhaaft. In deze gids ontdek je waarom selectief opslaan van paginabereiken belangrijk is, hoe GroupDocs.Annotation het eenvoudig maakt, en hoe je het kunt combineren met **spring boot document saving** en **java document versioning** voor robuuste, productieklare oplossingen. Of je nu een juridisch beoordelingsplatform, een educatief portaal of een compliance‑gedreven workflow bouwt, de onderstaande technieken houden bestanden slank zonder concessies te doen aan de annotatie‑fidelity.
@@ -236,12 +231,3 @@ Door **save selected pdf pages** onder de knie te krijgen met GroupDocs.Annotati
 - [Paginabereik opslaan Java met GroupDocs.Annotation – Complete gids](/annotation/java/document-saving/)  
 - [PDF-annotaties laden Java - Complete GroupDocs Annotation Management gids](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Complete gids - Hoe een geannoteerde PDF opslaan met GroupDocs.Annotation voor Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

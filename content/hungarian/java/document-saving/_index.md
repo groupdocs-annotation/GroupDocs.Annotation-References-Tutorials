@@ -82,11 +82,6 @@ url: /hu/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Kiválasztott PDF oldalak mentése a GroupDocs.Annotation for Java segítségével
 
 A PDF méretének csökkentése Java alkalmazásokban gyakori kihívás, különösen akkor, amikor **kiválasztott PDF oldalakat** kell menteni, miközben megőrzik a megjegyzéseket és magas teljesítményt biztosítanak. Ebben az útmutatóban megtudja, miért fontos a szelektív oldaltartomány mentése, hogyan könnyíti meg ezt a GroupDocs.Annotation, és hogyan kombinálható a **spring boot document saving** és a **java document versioning** robusztus, termelésre kész megoldásokkal. Akár jogi felülvizsgálati platformot, oktatási portált vagy megfelelőségi folyamatot épít, az alábbi technikák segítenek a fájlok karcsúsításában anélkül, hogy a megjegyzések pontosságát feláldoznák.
@@ -237,12 +232,3 @@ A **save selected pdf pages** a GroupDocs.Annotation segítségével való elsaj
 - [Oldaltartomány mentés Java-val a GroupDocs.Annotation – Teljes útmutató](/annotation/java/document-saving/)  
 - [PDF annotációk betöltése Java - Teljes GroupDocs Annotation kezelési útmutató](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Teljes útmutató - Hogyan mentse a megjegyzett PDF-et a GroupDocs.Annotation for Java segítségével](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

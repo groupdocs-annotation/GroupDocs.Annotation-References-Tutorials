@@ -79,11 +79,6 @@ url: /zh/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # 使用 GroupDocs.Annotation for Java 保存选定的 PDF 页面
 
 在 Java 应用程序中减小 PDF 大小是一个常见的挑战，尤其是当您需要 **保存选定的 PDF 页面** 并保持注释完整且保持高性能时。在本指南中，您将了解为何选择性页面范围保存很重要，GroupDocs.Annotation 如何简化此过程，以及如何将其与 **spring boot document saving** 和 **java document versioning** 结合，以实现稳健的生产就绪解决方案。无论您是在构建法律审查平台、教育门户，还是合规驱动的工作流，下面的技术都能在不牺牲注释保真度的前提下，使文件保持精简。
@@ -234,12 +229,3 @@ A: 完全可以——遍历文档集合，为每个文档设置单独的 `SaveOp
 - [使用 GroupDocs.Annotation 的 Java 页面范围保存 – 完整指南](/annotation/java/document-saving/)  
 - [加载 PDF 注释 Java - 完整的 GroupDocs 注释管理指南](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [完整指南 - 如何使用 GroupDocs.Annotation for Java 保存带注释的 PDF](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

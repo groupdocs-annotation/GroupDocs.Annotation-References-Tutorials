@@ -80,11 +80,6 @@ url: /ar/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # حفظ صفحات PDF المحددة باستخدام GroupDocs.Annotation للـ Java
 
 تقليل حجم PDF في تطبيقات Java هو تحدٍ شائع، خاصة عندما تحتاج إلى **حفظ صفحات PDF المحددة** مع الحفاظ على التعليقات التوضيحية وأداء عالي. في هذا الدليل ستكتشف لماذا يعتبر حفظ نطاق الصفحات الانتقائي مهمًا، وكيف يجعل GroupDocs.Annotation ذلك سهلًا، وكيفية دمجه مع **spring boot document saving** و**java document versioning** للحصول على حلول قوية جاهزة للإنتاج. سواء كنت تبني منصة مراجعة قانونية، أو بوابة تعليمية، أو سير عمل مدفوع بالامتثال، فإن التقنيات أدناه ستحافظ على خفة الملفات دون التضحية بدقة التعليقات.
@@ -239,12 +234,3 @@ GroupDocs.Annotation يعمل جاهزًا مع Spring Boot، Jakarta EE، وMic
 - [حفظ نطاق الصفحات Java باستخدام GroupDocs.Annotation – دليل كامل](/annotation/java/document-saving/)  
 - [تحميل تعليقات PDF Java - دليل كامل لإدارة GroupDocs Annotation](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [دليل كامل - كيفية حفظ PDF مع تعليقات باستخدام GroupDocs.Annotation للـ Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

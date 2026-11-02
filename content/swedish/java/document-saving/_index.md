@@ -81,11 +81,6 @@ url: /sv/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Spara valda pdf-sidor med GroupDocs.Annotation för Java
 
 Att minska PDF‑storlek i Java‑applikationer är en vanlig utmaning, särskilt när du behöver **spara valda pdf‑sidor** samtidigt som du bevarar annotationer och upprätthåller hög prestanda. I den här guiden kommer du att upptäcka varför selektivt sparande av sidintervall är viktigt, hur GroupDocs.Annotation gör det enkelt, och hur du kombinerar det med **spring boot document saving** och **java document versioning** för robusta, produktionsklara lösningar. Oavsett om du bygger en plattform för juridisk granskning, en utbildningsportal eller ett efterlevnadsdrivet arbetsflöde, kommer teknikerna nedan att hålla filerna smala utan att kompromissa med annotationernas integritet.
@@ -236,12 +231,3 @@ Genom att behärska **spara valda pdf‑sidor** med GroupDocs.Annotation kan du 
 - [Spara sidintervall Java med GroupDocs.Annotation – Komplett guide](/annotation/java/document-saving/)  
 - [Ladda PDF‑annotationer Java – Komplett guide för GroupDocs Annotation‑hantering](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Komplett guide – Hur man sparar annoterad PDF med GroupDocs.Annotation för Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

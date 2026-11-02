@@ -81,11 +81,6 @@ url: /tr/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Seçili PDF sayfalarını GroupDocs.Annotation for Java ile kaydet
 
 Reducing PDF size in Java applications is a frequent challenge, especially when you need to **save selected pdf pages** while preserving annotations and maintaining high performance. In this guide you’ll discover why selective page‑range saving matters, how GroupDocs.Annotation makes it easy, and how to combine it with **spring boot document saving** and **java document versioning** for robust, production‑ready solutions. Whether you’re building a legal review platform, an educational portal, or a compliance‑driven workflow, the techniques below will keep files lean without sacrificing annotation fidelity.
@@ -235,12 +230,3 @@ GroupDocs.Annotation ile **save selected pdf pages** konusunu ustalaştırarak, 
 - [Java ile Sayfa Aralığı Kaydetme – GroupDocs.Annotation – Tam Kılavuz](/annotation/java/document-saving/)  
 - [PDF Ek Açıklamaları Yükleme Java - Tam GroupDocs Annotation Yönetim Kılavuzu](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Tam Kılavuz - GroupDocs.Annotation for Java ile Ek Açıklamalı PDF Nasıl Kaydedilir](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

@@ -80,11 +80,6 @@ url: /ko/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # GroupDocs.Annotation for Java를 사용하여 선택한 PDF 페이지 저장
 
 Java 애플리케이션에서 PDF 크기를 줄이는 것은 흔한 과제이며, 특히 **선택한 PDF 페이지 저장**을 하면서 주석을 보존하고 높은 성능을 유지해야 할 때 더욱 그렇습니다. 이 가이드에서는 선택적 페이지 범위 저장이 왜 중요한지, GroupDocs.Annotation이 이를 어떻게 쉽게 해주는지, 그리고 **spring boot document saving** 및 **java document versioning**과 결합하여 견고하고 프로덕션 준비된 솔루션을 만드는 방법을 알아봅니다. 법률 검토 플랫폼, 교육 포털, 혹은 규정 준수 기반 워크플로우를 구축하든, 아래 기술을 통해 파일을 가볍게 유지하면서 주석 정확성을 유지할 수 있습니다.
@@ -238,12 +233,3 @@ A: 물론입니다 – 문서 컬렉션을 순회하면서 각 문서에 개별 
 - [Java용 페이지 범위 저장 – 완전 가이드](/annotation/java/document-saving/)  
 - [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

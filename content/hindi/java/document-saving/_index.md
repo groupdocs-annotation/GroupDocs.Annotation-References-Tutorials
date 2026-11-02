@@ -81,11 +81,6 @@ url: /hi/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # चयनित PDF पृष्ठों को GroupDocs.Annotation for Java के साथ सहेजें
 
 Java अनुप्रयोगों में PDF आकार को कम करना अक्सर एक चुनौती होती है, विशेष रूप से जब आपको **save selected pdf pages** को एनोटेशन बनाए रखते हुए और उच्च प्रदर्शन बनाए रखते हुए सहेजना हो। इस गाइड में आप जानेंगे कि चयनात्मक पृष्ठ‑रेंज सहेजना क्यों महत्वपूर्ण है, GroupDocs.Annotation इसे कैसे आसान बनाता है, और इसे **spring boot document saving** और **java document versioning** के साथ कैसे संयोजित किया जाए ताकि मजबूत, प्रोडक्शन‑तैयार समाधान मिल सके। चाहे आप एक कानूनी समीक्षा प्लेटफ़ॉर्म, एक शैक्षिक पोर्टल, या अनुपालन‑आधारित वर्कफ़्लो बना रहे हों, नीचे दी गई तकनीकें फ़ाइलों को हल्का रखेंगी बिना एनोटेशन की सटीकता से समझौता किए।
@@ -237,12 +232,3 @@ GroupDocs.Annotation के साथ **save selected pdf pages** में म�
 - [GroupDocs.Annotation के साथ Java में पृष्ठ रेंज सहेजना – पूर्ण गाइड](/annotation/java/document-saving/)
 - [PDF एनोटेशन लोड करें Java - पूर्ण GroupDocs Annotation प्रबंधन गाइड](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)
 - [पूर्ण गाइड - GroupDocs.Annotation for Java के साथ एनोटेटेड PDF कैसे सहेजें](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}

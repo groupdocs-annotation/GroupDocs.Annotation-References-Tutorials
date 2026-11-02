@@ -82,11 +82,6 @@ url: /ru/java/document-saving/
 weight: 4
 ---
 
-{{< blocks/products/pf/main-wrap-class >}}
-{{< blocks/products/pf/main-container >}}
-{{< blocks/products/pf/tutorial-page-section >}}
-{{< blocks/products/pf/backtop-button >}}
-
 # Сохранение выбранных страниц PDF с помощью GroupDocs.Annotation для Java
 
 Сокращение размера PDF в Java‑приложениях — частая задача, особенно когда необходимо **save selected pdf pages** при сохранении аннотаций и высокой производительности. В этом руководстве вы узнаете, почему важно сохранять выбранный диапазон страниц, как GroupDocs.Annotation упрощает этот процесс и как сочетать его с **spring boot document saving** и **java document versioning** для надёжных, готовых к продакшену решений. Независимо от того, создаёте ли вы платформу юридического обзора, образовательный портал или рабочий процесс, ориентированный на соответствие требованиям, представленные техники позволят уменьшить файлы без потери точности аннотаций.
@@ -245,12 +240,3 @@ A: Абсолютно – пройдитесь по коллекции доку�
 - [Page Range Saving Java with GroupDocs.Annotation – Complete Guide](/annotation/java/document-saving/)  
 - [Load PDF Annotations Java - Complete GroupDocs Annotation Management Guide](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Complete Guide - How to Save Annotated PDF with GroupDocs.Annotation for Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)
-
-{{< /blocks/products/pf/backtop-button >}}
-
-{{< /blocks/products/pf/tutorial-page-section >}}
-
-{{< /blocks/products/pf/main-container >}}
-{{< /blocks/products/pf/main-wrap-class >}}
-
-{{< blocks/products/products-backtop-button >}}
