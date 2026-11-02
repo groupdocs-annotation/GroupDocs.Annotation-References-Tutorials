@@ -457,6 +457,5 @@ public class AuditLogger {
 
 ## Related tutorials
 
-- [Load Password Protected PDF with GroupDocs.Annotation Java]({{< relref "/annotation/java/advanced-features/" >}})
-- [Create Review Comments PDF using GroupDocs.Annotation Java]({{< relref "/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/" >}})
-- [Page Range Saving Java with GroupDocs.Annotation – Complete Guide]({{< relref "/annotation/java/document-saving/" >}})
+- [Create Review Comments PDF using GroupDocs.Annotation Java](/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Page Range Saving Java with GroupDocs.Annotation – Complete Guide](/java/document-saving/groupdocs-annotation-java-save-specific-page-range/)
