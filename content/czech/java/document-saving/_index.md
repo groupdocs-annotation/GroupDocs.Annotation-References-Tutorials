@@ -1,43 +1,54 @@
 ---
 categories:
 - Java Development
-date: '2026-06-26'
-description: Zjistěte, jak zmenšit PDF soubor v Javě pomocí GroupDocs.Annotation,
-  s tipy na ukládání dokumentů ve Spring Boot, strategiemi verzování a optimalizací
-  výkonu.
+date: '2026-11-01'
+description: Zjistěte, jak uložit vybrané stránky PDF pomocí GroupDocs.Annotation
+  v Javě, využívající ukládání dokumentů ve spring boot, maximální kompresi PDF a
+  verzování pro optimální výkon.
 keywords:
+- save selected pdf pages
+- flatten pdf annotations
+- maximum pdf compression
+- how to compress pdf
 - reduce pdf size java
 - spring boot document saving
-- java document versioning
-lastmod: '2026-06-26'
+lastmod: '2026-11-01'
 linktitle: Tutoriály pro ukládání dokumentů
+og_description: Uložte vybrané stránky PDF pomocí GroupDocs.Annotation pro Java. Tento
+  průvodce ukazuje ukládání dokumentů ve spring boot, maximální kompresi PDF a techniky
+  verzování ke snížení velikosti souboru a zlepšení výkonu.
+og_image_alt: 'Developer guide: Save selected PDF pages with GroupDocs.Annotation
+  in Java'
+og_title: Uložte vybrané stránky PDF pomocí GroupDocs.Annotation pro Java
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-26'
-  description: Learn how to reduce PDF size Java using GroupDocs.Annotation, with
-    spring boot document saving tips, versioning strategies, and performance optimization.
-  headline: Reduce PDF Size Java with GroupDocs.Annotation – Complete Guide
+  dateModified: '2026-11-01'
+  description: Learn how to save selected pdf pages with GroupDocs.Annotation in Java,
+    using spring boot document saving, maximum pdf compression, and versioning for
+    optimal performance.
+  headline: Save selected pdf pages with GroupDocs.Annotation for Java
   type: TechArticle
-- description: Learn how to reduce PDF size Java using GroupDocs.Annotation, with
-    spring boot document saving tips, versioning strategies, and performance optimization.
-  name: Reduce PDF Size Java with GroupDocs.Annotation – Complete Guide
+- description: Learn how to save selected pdf pages with GroupDocs.Annotation in Java,
+    using spring boot document saving, maximum pdf compression, and versioning for
+    optimal performance.
+  name: Save selected pdf pages with GroupDocs.Annotation for Java
   steps:
   - name: Initialize the Annotation API
     text: '`AnnotationApi` is the primary entry point for all annotation operations
       in GroupDocs.Annotation. You obtain it by creating an `AnnotationApi` instance
       with your license key.'
-  - name: Define the Page Range
+  - name: Define the page range
     text: Specify the exact pages you want to keep. For example, pages 1‑5 and 10‑12
       cover the most‑relevant sections in a legal contract.
-  - name: Configure Save Options
+  - name: Configure save options
     text: '`SaveOptions` lets you set compression level, output format, and whether
       to flatten annotations. Setting `compressionLevel` to `Maximum` often yields
       the biggest size drop.'
-  - name: Execute the Save Operation
+  - name: Execute the save operation
     text: Call the `save` method with the source document, the configured `SaveOptions`,
       and an output stream. The API writes only the selected pages, applying compression
       on the fly.
-  - name: Clean Up Resources
+  - name: Clean up resources
     text: After saving, invoke `close()` on the document object to release file handles
       and help the garbage collector reclaim memory.
   type: HowTo
@@ -48,7 +59,7 @@ schemas:
   - answer: Yes – add version metadata to the filename (e.g., `Report_v3_2024-11-02.pdf`)
       or store it in custom PDF properties before invoking the save method.
     question: Can I combine page range saving with java document versioning?
-  - answer: PDF retains 100 % of annotation features; DOCX and XPS preserve most,
+  - answer: PDF retains 100 % of annotation features; DOCX and XPS preserve most,
       but may drop interactive elements like sticky notes.
     question: What formats support full annotation fidelity?
   - answer: Use `Runtime.getRuntime().totalMemory()` and `freeMemory()` before and
@@ -59,163 +70,170 @@ schemas:
     question: Is batch saving of multiple documents with different page ranges possible?
   type: FAQPage
 tags:
-- annotations
-- document-processing
-- pdf-handling
-- java-tutorials
-title: Zmenšení PDF souboru v Javě pomocí GroupDocs.Annotation – Kompletní průvodce
+- save selected pdf pages
+- GroupDocs.Annotation
+- Java PDF processing
+- spring boot document saving
+- pdf compression
+title: Uložte vybrané stránky PDF pomocí GroupDocs.Annotation pro Java
 type: docs
 url: /cs/java/document-saving/
 weight: 4
 ---
 
-# Zmenšení velikosti PDF v Javě pomocí GroupDocs.Annotation – Kompletní průvodce
+# Uložení vybraných stránek PDF pomocí GroupDocs.Annotation pro Java
 
-Zmenšování velikosti PDF v Java aplikacích je častou výzvou, zejména když potřebujete zachovat anotace a udržet vysoký výkon. V tomto průvodci se dozvíte, jak **reduce pdf size java** pomocí GroupDocs.Annotation, proč je důležité ukládání vybraných rozsahů stránek, a jak to zkombinovat s **spring boot document saving** a **java document versioning** pro robustní, produkčně připravená řešení. Ať už budujete platformu pro právní revizi, vzdělávací portál nebo workflow řízené shodou, níže uvedené techniky vám pomohou udržet soubory úsporné bez ztráty věrnosti anotací.
+Reducing PDF size in Java applications is a frequent challenge, especially when you need to **save selected pdf pages** while preserving annotations and maintaining high performance. In this guide you’ll discover why selective page‑range saving matters, how GroupDocs.Annotation makes it easy, and how to combine it with **spring boot document saving** and **java document versioning** for robust, production‑ready solutions. Whether you’re building a legal review platform, an educational portal, or a compliance‑driven workflow, the techniques below will keep files lean without sacrificing annotation fidelity.
 
 ## Rychlé odpovědi
-- **What is reduce pdf size java?** Jedná se o praxi exportování pouze nezbytných stránek nebo komprese obsahu v PDF za účelem snížení velikosti souboru při zachování anotací.  
-- **Why choose GroupDocs.Annotation for Java?** Nabízí vestavěné ukládání rozsahu stránek, více než 30 výstupních formátů a až 70 % snížení velikosti u typických dokumentů.  
-- **Can I use it with Spring Boot?** Ano – API se hladce integruje se službami Spring Boot, což umožňuje asynchronní koncové body pro ukládání dokumentů.  
-- **How does java document versioning help?** Vkládání metadat verze do názvů souborů nebo vlastností dokumentu umožňuje týmům sledovat změny a vyhnout se konfliktům.  
-- **What performance tricks keep memory low?** Zpracování pomocí streamů, selektivní načítání a explicitní uvolňování objektů dokumentu snižují zatížení haldy JVM.
+- **Co je uložení vybraných stránek PDF?** Jedná se o praxi exportování pouze potřebných stránek z PDF, aplikování komprese a zachování anotací.  
+- **Proč zvolit GroupDocs.Annotation pro Java?** Knihovna nabízí vestavěné ukládání rozsahu stránek, více než 30 výstupních formátů a až 70 % snížení velikosti u typických dokumentů.  
+- **Mohu jej použít se Spring Boot?** Ano – API se hladce integruje se službami Spring Boot, což umožňuje asynchronní koncové body pro ukládání dokumentů.  
+- **Jak pomáhá správa verzí dokumentů v Javě?** Vložení metadat verze do názvů souborů nebo PDF vlastností umožňuje týmům sledovat změny a předcházet konfliktům.  
+- **Jaké triky pro výkon udržují nízkou paměť?** Zpracování pomocí streamů, selektivní načítání a explicitní uvolňování objektů dokumentu snižují zátěž haldy JVM.
 
-## Co je Reduce PDF Size Java?
-**Reduce PDF size Java** je sada technik – jako výběr rozsahu stránek, komprese a konverze formátu – aplikovaných v Java kódu k zmenšení PDF souborů při zachování podstatného obsahu a anotací. Extrahováním pouze stránek, které obsahují relevantní informace, a agresivní kompresí obrázků a fontů mohou vývojáři často snížit velikost souboru na polovinu nebo méně, což zlepšuje dobu stahování a snižuje náklady na úložiště.
+## Co je uložení vybraných stránek PDF?
+**Uložení vybraných stránek PDF** znamená extrahování pouze stránek, které určíte, z PDF, volitelně kompresi obrázků a fontů, a zápis výsledku do nového souboru. Tento přístup může zmenšit velikost souboru na polovinu nebo více, přičemž zachová všechny anotace, což je nezbytné pro rychlé stahování a nižší náklady na úložiště.
 
-## Proč používat GroupDocs.Annotation pro Javu?
-GroupDocs.Annotation podporuje **30+ vstupních a výstupních formátů** a může **zmenšit PDF až o 70 %**, pokud povolíte ukládání rozsahu stránek v kombinaci s kompresí. Knihovna automaticky zachovává anotace, takže není potřeba vlastní post‑processing. Jeho API je navrženo pro snadnou integraci a nabízí vysoce‑úrovňové metody, které abstrahují nízko‑úrovňovou manipulaci s PDF, přičemž vám stále poskytují detailní kontrolu nad úrovněmi komprese a výběrem stránek.
+## Jak uložit vybrané stránky PDF pomocí GroupDocs.Annotation?
+Load the document, define the pages you need, configure compression, and save. First, open the source PDF with `AnnotationApi`. Then specify the desired page numbers, set `SaveOptions` with maximum compression and optional flattening, and finally invoke the `save` method providing an output stream. This concise five‑step process works in plain Java applications as well as Spring Boot microservices.
 
-## Požadavky
-- Java 17 nebo novější
-- Maven nebo Gradle build systém
-- GroupDocs.Annotation pro Javu (stáhnout z oficiálního webu)
-- Volitelně: Spring Boot 3.x pro REST integraci
+### Krok 1: inicializace Annotation API
+`AnnotationApi` je hlavní vstupní bod pro všechny operace s anotacemi v GroupDocs.Annotation.  
+Získáte jej vytvořením instance `AnnotationApi` s vaším licenčním klíčem.
 
-## Jak zmenšit PDF v Javě pomocí ukládání rozsahu stránek?
-Načtěte dokument, definujte potřebné stránky, nastavte kompresi a uložte. Následující kroky vás provedou procesem bez jakýchkoli bloků kódu, aby byl průvodce snadno čitelný a lze jej zkopírovat do IDE.
+### Krok 2: definování rozsahu stránek
+Určete přesné stránky, které chcete zachovat. Například stránky 1‑5 a 10‑12 pokrývají nejrelevantnější části v právní smlouvě.
 
-### Krok 1: Inicializace Annotation API
-`AnnotationApi` je hlavní vstupní bod pro všechny operace s anotacemi v GroupDocs.Annotation. Získáte jej vytvořením instance `AnnotationApi` s vaším licenčním klíčem.
-
-### Krok 2: Definice rozsahu stránek
-Určete přesné stránky, které chcete zachovat. Například stránky 1‑5 a 10‑12 pokrývají nejrelevantnější části právní smlouvy.
-
-### Krok 3: Konfigurace možností uložení
+### Krok 3: konfigurace možností uložení
 `SaveOptions` vám umožňuje nastavit úroveň komprese, výstupní formát a zda zploštit anotace. Nastavení `compressionLevel` na `Maximum` často přináší největší úsporu velikosti.
 
-### Krok 4: Provedení operace uložení
-Zavolejte metodu `save` se zdrojovým dokumentem, nakonfigurovanými `SaveOptions` a výstupním streamem. API zapíše pouze vybrané stránky a aplikuje kompresi za běhu.
+### Krok 4: provedení operace uložení
+Zavolejte metodu `save` se zdrojovým dokumentem, nakonfigurovanými `SaveOptions` a výstupním streamem. API zapíše pouze vybrané stránky a během toho aplikuje kompresi.
 
-### Krok 5: Vyčištění prostředků
+### Krok 5: vyčištění prostředků
 Po uložení zavolejte `close()` na objektu dokumentu, aby se uvolnily souborové handly a pomohlo se garbage collectoru uvolnit paměť.
 
-## Inteligentní ukládání rozsahu stránek (page range saving java)
-Selektivní ukládání stránek je základem **reduce pdf size java**. Místo exportu celého souboru – někdy stovek stránek – cílíte pouze na stránky, které obsahují anotace nebo požadovaný obsah uživatele. Tato technika může snížit velikost souboru o **50 %–70 %**, zejména u hustých PDF s mnoha grafikami.
+## Proč používat GroupDocs.Annotation pro Java?
+GroupDocs.Annotation supports **30+ input and output formats** and can **shrink PDFs by up to 70 %** when you enable page‑range saving combined with maximum compression. The library automatically preserves annotation fidelity, so you don’t need custom post‑processing. Its high‑level API abstracts low‑level PDF manipulation while still giving fine‑grained control over compression levels and page selection.
+
+## Požadavky
+- Java 17 nebo novější  
+- Systém sestavení Maven nebo Gradle  
+- GroupDocs.Annotation pro Java (stáhněte z oficiálního webu)  
+- Volitelné: Spring Boot 3.x pro REST integraci  
+
+## Chytré ukládání rozsahu stránek (page range saving java)
+
+Selective page saving is the cornerstone of **save selected pdf pages**. Instead of exporting the whole file—sometimes hundreds of pages—you target only the pages that contain annotations or user‑requested content. This technique can cut file size by **50 %–70 %**, especially for dense PDFs with many graphics.
 
 ### Reálný příklad
-Smlouva o 300 stránkách s anotacemi na stránkách 12‑15 a 200‑205 může být zmenšena z 45 MB na méně než 12 MB uložením pouze těch šesti stránek.
+A 300‑page contract with annotations on pages 12‑15 and 200‑205 can be reduced from 45 MB to under 12 MB by saving just those six pages.
 
-## Integrace s verzovacím systémem (java document versioning)
-**Java document versioning** znamená připojení identifikátorů verzí (např. `v1.3`, časová razítka, ID autorů) k každému uloženému souboru. GroupDocs.Annotation vám umožní vložit vlastní vlastnosti přímo do PDF metadat, což zajišťuje, že každý zúčastněný vidí přesnou verzi, kterou kontroluje.
+## Integrace správy verzí (java document versioning)
+
+**Java document versioning** means attaching version identifiers (e.g., `v1.3`, timestamps, author IDs) to each saved file. GroupDocs.Annotation lets you embed custom properties directly into the PDF metadata, ensuring every stakeholder sees the exact version they’re reviewing.
 
 ### Jak to funguje
-- Použijte `DocumentProperty` k přidání polí `Version`, `Author` a `SavedOn`.
-- Zahrňte řetězec verze do výstupního názvu souboru, např. `Contract_v2_2024-09-15.pdf`.
-- Uložte stejná metadata do vaší databáze pro auditní stopy.
+- Use `DocumentProperty` to add `Version`, `Author`, and `SavedOn` fields.  
+- Include the version string in the output filename, like `Contract_v2_2024-09-15.pdf`.  
+- Store the same metadata in your database for audit trails.
 
-## Co je Spring Boot Document Saving?
-**Spring boot document saving** označuje zpřístupnění logiky ukládání dokumentů jako RESTful koncového bodu v mikroservisu Spring Boot. Koncový bod přijímá PDF, volitelné parametry rozsahu stránek a vrací zmenšený soubor nebo URL pro stažení. Využitím asynchronního zpracování požadavků a podpory streamování v Springu můžete obsluhovat velké PDF bez blokování vláken, což poskytuje responzivní zážitek koncovým uživatelům.
+## Co je ukládání dokumentů ve Spring Boot?
+**Spring boot document saving** refers to exposing document‑saving logic as a RESTful endpoint within a Spring Boot microservice. The endpoint receives a PDF, optional page‑range parameters, and returns the reduced file or a download URL. By leveraging Spring’s asynchronous request handling and streaming support, you can serve large PDFs without blocking threads, providing a responsive experience for end‑users.
 
-## Jak funguje Java Document Versioning?
-Java document versioning funguje tak, že programově aktualizuje metadata dokumentu před každým uložením. Nastavíte vlastnosti jako `Version` a `LastModified`, poté soubor uložíte. Tento přístup zaručuje, že každý uložený PDF nese svou vlastní historii verzí, což umožňuje snadný návrat a audit. Přidání časové značky jako `SavedOn` dále upřesňuje, kdy byla každá verze vytvořena, což je cenné pro zprávy o shodě.
+## Jak funguje správa verzí dokumentů v Javě?
+Java document versioning works by programmatically updating document metadata before each save. You set properties like `Version` and `LastModified`, then persist the file. This approach guarantees every saved PDF carries its own version history, enabling easy rollback and audit. Adding a timestamp property such as `SavedOn` further clarifies when each version was created, which is valuable for compliance reporting.
 
 ## Tipy pro optimalizaci výkonu
 
 ### Správa paměti
-- **Stream Processing**: Používejte `InputStream`/`OutputStream` k vyhnutí se načítání celého PDF do RAM.  
-- **Selective Loading**: Načtěte pouze stránky, které plánujete uložit; GroupDocs.Annotation může otevřít dokument v režimu „partial“.  
-- **Explicit Disposal**: Po každé operaci zavolejte `document.close()`, aby se rychle uvolnily nativní zdroje.
+- **Stream processing**: Use `InputStream`/`OutputStream` to avoid loading the whole PDF into RAM.  
+- **Selective loading**: Load only the pages you plan to save; GroupDocs.Annotation can open a document in “partial” mode.  
+- **Explicit disposal**: Call `document.close()` after each operation to free native resources promptly.
 
 ### Optimalizace velikosti souboru
-- **Compression Settings**: Nastavte `SaveOptions.compressionLevel` na `Maximum` pro nejmenší soubory.  
-- **Format Selection**: Když je velikost PDF stále vysoká, zvažte export do **XPS** nebo **DOCX**, které mohou být až o 30 % menší u dokumentů s velkým množstvím textu.  
-- **Annotation Flattening**: Pro finální verze zploštěte anotace do obsahu stránky, čímž odstraníte nadbytečné vrstvy anotací a snížíte velikost.
+- **Compression settings**: Set `SaveOptions.compressionLevel` to `Maximum` for the smallest files.  
+- **Format selection**: When PDF size is still high, consider exporting to **XPS** or **DOCX**, which can be up to 30 % smaller for text‑heavy documents.  
+- **Annotation flattening**: For final releases, flatten annotations into the page content to eliminate extra annotation layers and reduce size.
 
 ## Běžné scénáře ukládání a řešení
 
-### Scénář 1: Právní revize dokumentu
-Právníci potřebují pouze anotované klauzule. Použijte ukládání rozsahu stránek k extrahování stránek 30‑45, vložte metadata verze a doručte soubor o velikosti 5 MB místo původních 25 MB.
+### Scénář 1: revize právních dokumentů
+Lawyers need only the annotated clauses. Use page‑range saving to extract pages 30‑45, embed version metadata, and deliver a 5‑MB file instead of a 25‑MB original.
 
-### Scénář 2: Technická dokumentace
-Inženýři anotují diagramy v 200‑stránkové specifikaci. Uložením pouze stránek s diagramy a kompresí obrázků můžete udržet distribuovaný PDF pod 10 MB, což se pohodlně vejde do většiny systémů pro správu verzí.
+### Scénář 2: technická dokumentace
+Engineers annotate diagrams across a 200‑page spec. By saving only the diagram pages and compressing images, you can keep the distributed PDF under 10 MB, which fits comfortably in most source‑control systems.
 
-### Scénář 3: Vzdělávací obsah
-Učitelé anotují přednáškové snímky. Exportujte anotované snímky jako samostatný PDF a použijte maximální kompresi, aby byly rychlé stahování na mobilních zařízeních.
+### Scénář 3: vzdělávací obsah
+Teachers annotate lecture slides. Export the annotated slides as a separate PDF, applying maximum compression to ensure fast downloads on mobile devices.
 
-### Scénář 4: Audity shody
-Auditoři vyžadují kompletní, neměnný záznam. Uložte celý dokument se všemi anotacemi, vložte kryptografický hash do metadat a uložte verzovaný soubor v zabezpečeném úložišti.
+### Scénář 4: audity souladu
+Auditors require a complete, immutable trail. Save the full document with all annotations, embed a cryptographic hash in the metadata, and store the versioned file in a secure repository.
 
-## Řešení běžných problémů při ukládání
+## Řešení běžných problémů s ukládáním
 
-### Problém: Anotace zmizí po uložení
-**Direct Answer**: K tomu dochází, když zvolený výstupní formát nepodporuje určité typy anotací. Přepněte na PDF nebo před uložením převedete nepodporované anotace na podporované ekvivalenty.
+### Problém: anotace zmizí po uložení
+**Direct answer:** This happens when the chosen output format doesn’t support certain annotation types. Switch to PDF, or convert unsupported annotations to supported equivalents before saving.
 
-### Problém: Pomalý výkon ukládání
-**Direct Answer**: Velké PDF s mnoha anotacemi mohou být náročné na CPU. Povolit asynchronní zpracování ve Spring Boot, použít thread pool a sledovat haldu JVM pomocí `Runtime.getRuntime().freeMemory()`.
+### Problém: pomalý výkon ukládání
+**Direct answer:** Large PDFs with many annotations can be CPU‑intensive. Enable asynchronous processing in Spring Boot, use a thread pool, and monitor JVM heap with `Runtime.getRuntime().freeMemory()`.
 
-### Problém: Nekonzistentní formátování napříč prohlížeči
-**Direct Answer**: Různé PDF prohlížeče renderují anotace odlišně. Testujte s Adobe Acrobat, Foxit a pluginy PDF v prohlížečích, poté upravte `SaveOptions` (např. nastavte `renderMode` na `Standard`) pro dosažení konzistentních výsledků.
+### Problém: nekonzistentní formátování napříč prohlížeči
+**Direct answer:** Different PDF viewers render annotations differently. Test with Adobe Acrobat, Foxit, and browser PDF plugins, then adjust `SaveOptions` (e.g., set `renderMode` to `Standard`) to achieve consistent results.
 
-### Problém: Konflikty ve verzovacím systému
-**Direct Answer**: Používejte atomické zápisy souborů – zapisujte do dočasného souboru a po úspěšném dokončení uložení jej přejmenujte na finální verzi souboru.
+### Problém: konflikty ve správě verzí
+**Direct answer:** Use atomic file writes—write to a temporary file, then rename it to the final versioned filename once the save completes successfully.
 
 ## Nejlepší postupy pro produkční systémy
-- **Always Implement Robust Error Handling** – Zachytávejte `IOException`, `LicenseException` a `AnnotationException`, abyste poskytli uživateli jasnou zpětnou vazbu.  
-- **Expose Progress Callbacks** – Ve Spring Boot vraťte `DeferredResult`, který streamuje procenta postupu zpět klientovi.  
-- **Test with Real‑World Document Sizes** – Simulujte 200‑stránkové PDF s vysokým rozlišením obrázků, abyste ověřili, že využití paměti zůstane pod 500 MB.  
-- **Implement Backup Strategies** – Nejprve zapište zmenšený PDF do staging složky; pokud operace uspěje, přesuňte jej do produkčního adresáře.  
-- **Log Compression Ratios** – Ukládejte před/po velikosti souborů do logů, abyste sledovali účinnost vaší strategie snižování velikosti.
+
+- **Always implement robust error handling** – Catch `IOException`, `LicenseException`, and `AnnotationException` to provide clear user feedback.  
+- **Expose progress callbacks** – In Spring Boot, return a `DeferredResult` that streams progress percentages back to the client.  
+- **Test with real‑world document sizes** – Simulate 200‑page PDFs with high‑resolution images to verify memory usage stays below 500 MB.  
+- **Implement backup strategies** – Write the reduced PDF to a staging folder first; if the operation succeeds, move it to the production directory.  
+- **Log compression ratios** – Store before/after file sizes in logs to monitor the effectiveness of your size‑reduction strategy.
 
 ## Integrace s moderními Java frameworky
-GroupDocs.Annotation funguje out‑of‑the‑box se Spring Boot, Jakarta EE a Micronaut. Když vytváříte mikroservisu, vystavte koncový bod `/documents/save`, který přijímá JSON payloady obsahující `pageRanges` a `versionInfo`. Použijte `CompletableFuture` v Javě k asynchronnímu spuštění úlohy uložení a poté aktualizujte stavovou tabulku ve vaší databázi, jakmile je soubor uložen.
+
+GroupDocs.Annotation works out‑of‑the‑box with Spring Boot, Jakarta EE, and Micronaut. When you build a microservice, expose a `/documents/save` endpoint that accepts JSON payloads containing `pageRanges` and `versionInfo`. Use Java’s `CompletableFuture` to run the save task asynchronously, then update a status table in your database once the file is stored.
 
 ## Často kladené otázky
 
-**Q: Jak povolit ukládání rozsahu stránek v Javě ve Spring Boot službě?**  
-A: Injektujte bean `AnnotationApi`, nakonfigurujte `SaveOptions` s požadovaným rozsahem stránek a vystavte `@PostMapping`, který asynchronně spustí uložení.
+**Q: How do I enable page range saving java in a Spring Boot service?**  
+A: Inject the `AnnotationApi` bean, configure `SaveOptions` with the desired page range, and expose a `@PostMapping` that triggers the save asynchronously.
 
-**Q: Mohu kombinovat ukládání rozsahu stránek s java document versioning?**  
-A: Ano – přidejte metadata verze do názvu souboru (např. `Report_v3_2024-11-02.pdf`) nebo je uložte do vlastních PDF vlastností před voláním metody `save`.
+**Q: Can I combine page range saving with java document versioning?**  
+A: Yes – add version metadata to the filename (e.g., `Report_v3_2024-11-02.pdf`) or store it in custom PDF properties before invoking the save method.
 
-**Q: Jaké formáty podporují plnou věrnost anotací?**  
-A: PDF zachovává 100 % funkcí anotací; DOCX a XPS zachovávají většinu, ale mohou ztratit interaktivní prvky jako lepicí poznámky.
+**Q: What formats support full annotation fidelity?**  
+A: PDF retains 100 % of annotation features; DOCX and XPS preserve most, but may drop interactive elements like sticky notes.
 
-**Q: Jak mohu sledovat využití paměti během velkých ukládání?**  
-A: Použijte `Runtime.getRuntime().totalMemory()` a `freeMemory()` před a po operaci, nebo integrujte VisualVM/YourKit pro profilování v reálném čase.
+**Q: How can I monitor memory usage during large saves?**  
+A: Use `Runtime.getRuntime().totalMemory()` and `freeMemory()` before and after the operation, or integrate VisualVM/YourKit for real‑time profiling.
 
-**Q: Je možné hromadné ukládání více dokumentů s různými rozsahy stránek?**  
-A: Rozhodně – projděte svou kolekci dokumentů, nastavte pro každý individuální `SaveOptions` a provádějte ukládání paralelně pomocí `ExecutorService`.
+**Q: Is batch saving of multiple documents with different page ranges possible?**  
+A: Absolutely – iterate over your document collection, set individual `SaveOptions` for each, and execute the saves in parallel using `ExecutorService`.
 
 ## Zdroje
+
 - [Uložení konkrétního rozsahu stránek s GroupDocs.Annotation pro Java: Kompletní průvodce](./groupdocs-annotation-java-save-specific-page-range/)  
 - [Dokumentace GroupDocs.Annotation pro Java](https://docs.groupdocs.com/annotation/java/)  
 - [Reference API GroupDocs.Annotation pro Java](https://reference.groupdocs.com/annotation/java/)  
 - [Stáhnout GroupDocs.Annotation pro Java](https://releases.groupdocs.com/annotation/java/)  
 - [Fórum GroupDocs.Annotation](https://forum.groupdocs.com/c/annotation)  
 - [Bezplatná podpora](https://forum.groupdocs.com/)  
-- [Dočasná licence](https://purchase.groupdocs.com/temporary-license/)
+- [Dočasná licence](https://purchase.groupdocs.com/temporary-license/)  
 
 ## Závěr
-Ovládnutím **reduce pdf size java** s GroupDocs.Annotation můžete poskytovat úsporné PDF s bohatými anotacemi, které se rychle načítají, spotřebovávají méně úložiště a bez problémů se integrují s **spring boot document saving** pipeline a **java document versioning** strategiemi. Použijte techniku selektivního rozsahu stránek, dolaďte kompresi a řiďte se seznamem nejlepších postupů, abyste vytvořili spolehlivé a výkonné pracovní postupy s dokumenty.
 
----
+By mastering **save selected pdf pages** with GroupDocs.Annotation, you can deliver lean, annotation‑rich PDFs that load quickly, consume less storage, and integrate seamlessly with **spring boot document saving** pipelines and **java document versioning** strategies. Apply the selective page‑range technique, tune compression, and follow the best‑practice checklist to build reliable, high‑performance document workflows.
 
-**Last Updated:** 2026-06-26  
-**Tested With:** GroupDocs.Annotation for Java 23.12  
-**Author:** GroupDocs
+**Poslední aktualizace:** 2026-11-01  
+**Testováno s:** GroupDocs.Annotation for Java 23.12  
+**Autor:** GroupDocs
 
 ## Související tutoriály
+
 - [Ukládání rozsahu stránek v Javě s GroupDocs.Annotation – Kompletní průvodce](/annotation/java/document-saving/)  
 - [Načtení PDF anotací v Javě – Kompletní průvodce správou GroupDocs Annotation](/annotation/java/annotation-management/groupdocs-annotation-java-manage-documents/)  
 - [Kompletní průvodce – Jak uložit anotovaný PDF s GroupDocs.Annotation pro Java](/annotation/java/annotation-management/annotations-groupdocs-annotation-java-tutorial/)

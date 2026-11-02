@@ -1,19 +1,24 @@
 ---
 categories:
 - Java Development
-date: '2026-06-21'
+date: '2026-11-01'
 description: Pelajari cara menandai file PDF dalam Java, termasuk penanganan PDF Java
-  yang dilindungi kata sandi, menggunakan GroupDocs.Annotation. Panduan langkah demi
-  langkah ini mencakup penyiapan, keamanan, pemrosesan batch, dan praktik terbaik.
+  yang dilindungi kata sandi, menggunakan GroupDocs.Annotation. Panduan step‑by‑step
+  ini mencakup pengaturan, keamanan, batch processing, dan praktik terbaik.
 keywords:
 - how to annotate pdf
 - password protected pdf java
 - groupdocs annotation java
-lastmod: '2026-06-21'
+lastmod: '2026-11-01'
 linktitle: Panduan Perpustakaan Anotasi Dokumen Java
+og_description: Pelajari cara menandai file PDF dalam Java, termasuk penanganan PDF
+  yang dilindungi kata sandi, dengan GroupDocs.Annotation. Ikuti pengaturan step‑by‑step,
+  tips keamanan, batch processing, dan praktik terbaik.
+og_image_alt: Guide showing Java code to annotate password‑protected PDF using GroupDocs.Annotation
+og_title: Cara menandai PDF – panduan Java terproteksi dengan GroupDocs
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-21'
+  dateModified: '2026-11-01'
   description: Learn how to annotate PDF files in Java, including password protected
     PDF Java handling, using GroupDocs.Annotation. This step‑by‑step guide covers
     setup, security, batch processing, and best practices.
@@ -36,43 +41,44 @@ tags:
 - pdf-annotation
 - java-library
 - security
-title: Cara Menandai PDF – Panduan PDF Java yang Dilindungi dengan GroupDocs
+- groupdocs
+title: Cara Menandai PDF – Panduan Java PDF Terproteksi dengan GroupDocs
 type: docs
 url: /id/java/advanced-features/groupdocs-annotation-java-password-documents/
 weight: 1
 ---
 
-# Cara Menandai PDF – Panduan PDF Dilindungi Java dengan GroupDocs
+# Cara memberi anotasi PDF – panduan PDF terlindungi Java dengan GroupDocs
 
-Jika Anda membangun aplikasi Java yang harus bekerja dengan PDF sensitif, Anda memerlukan cara yang andal untuk **menandai pdf** yang dilindungi dengan kata sandi. Dalam tutorial komprehensif ini kami akan memandu Anda memuat PDF yang dienkripsi dengan kata sandi, menambahkan berbagai anotasi profesional, dan menyimpan hasilnya sambil mempertahankan atau memperbarui keamanan dokumen. Semua ini dilakukan dengan GroupDocs.Annotation untuk Java, sebuah pustaka yang mengabstraksi lapisan enkripsi dan memungkinkan Anda fokus pada logika bisnis.
+Jika Anda membangun aplikasi Java yang harus bekerja dengan PDF sensitif, Anda memerlukan cara yang andal untuk **how to annotate pdf** file yang dilindungi oleh kata sandi. Dalam tutorial komprehensif ini kami akan memandu Anda melalui pemuatan PDF yang dienkripsi dengan kata sandi, menambahkan berbagai anotasi profesional, dan menyimpan hasilnya sambil mempertahankan atau memperbarui keamanan dokumen. Semua ini dilakukan dengan GroupDocs.Annotation untuk Java, sebuah perpustakaan yang mengabstraksi lapisan enkripsi dan memungkinkan Anda fokus pada logika bisnis.
 
 ## Jawaban Cepat
-- **Apa pustaka yang memungkinkan saya menandai PDF yang dilindungi di Java?** GroupDocs.Annotation for Java  
-- **Apakah saya memerlukan lisensi untuk produksi?** Ya – lisensi komersial menghilangkan watermark dan batas penggunaan  
-- **Versi JDK mana yang direkomendasikan?** Java 11+ (Java 8 masih dapat digunakan tetapi 11+ memberikan kinerja lebih baik)  
-- **Bisakah saya memproses banyak file sekaligus?** Ya, gunakan pola batch atau asinkron yang ditunjukkan nanti  
-- **Apakah kode ini thread‑safe?** Buat `Annotator` baru per permintaan; instance tidak dibagikan  
+- **Perpustakaan apa yang memungkinkan saya memberi anotasi PDF terlindungi di Java?** GroupDocs.Annotation for Java  
+- **Apakah saya memerlukan lisensi untuk produksi?** Yes – a commercial license removes watermarks and usage caps  
+- **Versi JDK mana yang direkomendasikan?** Java 11+ (Java 8 works but 11+ gives better performance)  
+- **Bisakah saya memproses banyak file sekaligus?** Yes, use batch or asynchronous patterns shown later  
+- **Apakah kode tersebut thread‑safe?** Create a new `Annotator` per request; instances are not shared  
 
 ## Apa itu “annotate protected pdf java”?
-**“Annotate protected pdf java”** adalah proses membuka PDF yang dienkripsi dengan kata sandi dalam lingkungan Java, secara program menambahkan catatan, sorotan, atau bentuk, dan kemudian menyimpan file sambil mempertahankan atau memperbarui pengaturan keamanannya. Alur kerja ini memungkinkan kolaborasi aman, jejak audit, dan penanganan dokumen yang mematuhi regulasi.
+“Annotate protected pdf java” berarti membuka PDF yang dienkripsi dengan kata sandi di Java, menambahkan catatan atau sorotan, dan menyimpannya sambil mempertahankan atau memperbarui keamanannya. Alur kerja ini memungkinkan kolaborasi aman, jejak audit, dan penanganan yang ramah kepatuhan, memungkinkan tim bekerja pada dokumen sensitif tanpa mengungkapkan kata sandi asli.
 
-## Mengapa Memilih GroupDocs.Annotation sebagai Pustaka Anotasi Dokumen Java Anda?
-GroupDocs.Annotation dibangun khusus untuk manipulasi PDF tingkat perusahaan. Ia mendukung **lebih dari 50 format input dan output**, dapat memproses PDF beratus‑ratus halaman tanpa memuat seluruh file ke memori, dan menawarkan penanganan enkripsi bawaan. Pustaka ini juga menyediakan **API batch yang thread‑safe**, kode kesalahan terperinci, dan **SLA uptime 99,9 %** untuk penyebaran di cloud, menjadikannya pilihan solid untuk aplikasi misi‑kritikal.
+## Mengapa memilih GroupDocs.Annotation sebagai perpustakaan anotasi dokumen Java Anda?
+GroupDocs.Annotation menyediakan anotasi PDF tingkat perusahaan dengan dukungan enkripsi bawaan, menangani lebih dari 50 format input dan output serta memproses file beratus‑ratus halaman dengan penggunaan memori kurang dari 150 MB. Ini menawarkan API batch yang thread‑safe, kode error terperinci, dan SLA uptime 99,9 % untuk penyebaran cloud, menjadikannya pilihan andal untuk aplikasi Java yang misi‑kritis.
 
-## Prasyarat (Jangan Lewatkan Bagian Ini)
+## Prasyarat (jangan lewati bagian ini)
 
 - **JDK:** 8 atau lebih tinggi (Java 11+ direkomendasikan)  
-- **Alat Build:** Maven (Gradle juga dapat)  
-- **IDE:** IntelliJ IDEA, Eclipse, atau IDE Java lain yang Anda sukai  
-- **Pengetahuan:** Dasar-dasar Java, dasar-dasar Maven, I/O file  
+- **Build tool:** Maven (Gradle juga dapat)  
+- **IDE:** IntelliJ IDEA, Eclipse, atau IDE Java apa pun yang Anda suka  
+- **Knowledge:** Dasar-dasar Java, dasar-dasar Maven, file I/O  
 
-*Opsional namun membantu:* familiaritas dengan internal PDF dan pengalaman sebelumnya dengan kerangka kerja anotasi.
+*Opsional tetapi membantu:* familiaritas dengan internal PDF dan pengalaman sebelumnya dengan kerangka kerja anotasi.
 
 ## Menyiapkan GroupDocs.Annotation untuk Java
 
-### Konfigurasi Maven (Cara yang Benar)
+### Konfigurasi Maven (cara yang tepat)
 
-Tambahkan repositori dan dependensi ke `pom.xml` Anda. Blok ini harus tetap tidak berubah:
+Tambahkan repositori dan dependensi ke `pom.xml` Anda. Blok tepat ini harus tetap tidak berubah:
 
 ```xml
 <repositories>
@@ -92,9 +98,9 @@ Tambahkan repositori dan dependensi ke `pom.xml` Anda. Blok ini harus tetap tida
 </dependencies>
 ```
 
-**Pro Tip:** Tetapkan versi spesifik di produksi; hindari rentang versi yang dapat memperkenalkan perubahan yang merusak.
+**Tips pro:** Tetapkan ke versi spesifik di produksi; hindari rentang versi yang dapat memperkenalkan perubahan yang merusak.
 
-### Pengaturan Lisensi (Melewati Batasan Trial)
+### Penyiapan Lisensi (mengatasi batasan trial)
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -113,10 +119,13 @@ public class GroupDocsSetup {
 }
 ```
 
-## Implementasi Inti: Pemrosesan Dokumen Aman
+## Implementasi Inti: pemrosesan dokumen aman
 
-### Cara menandai pdf yang dilindungi java – Memuat Dokumen yang Dilindungi Kata Sandi
-`Annotator` adalah kelas utama di GroupDocs.Annotation yang digunakan untuk membuka dan memodifikasi dokumen PDF. Muat PDF terenkripsi dengan memberikan kata sandi ke konstruktor `Annotator`. Pustaka secara otomatis mendekripsi file di memori, sehingga kata sandi tidak pernah menyentuh sistem file.
+### Cara memberi anotasi PDF terlindungi Java – memuat dokumen yang dilindungi kata sandi
+`Annotator` adalah kelas utama yang membuka, memodifikasi, dan menyimpan dokumen PDF sambil menangani enkripsi.  
+Muat PDF yang dilindungi kata sandi dengan membuat instance `Annotator` menggunakan jalur file dan kata sandi dokumen; perpustakaan mendekripsi konten di memori tanpa menulis kata sandi ke disk. Anda kemudian memperoleh objek `Document` untuk bekerja, memastikan enkripsi asli tetap utuh hingga Anda secara eksplisit menyimpan dengan kata sandi baru.
+
+**Definition anchor:** `Annotator` adalah kelas utama yang membuka, memodifikasi, dan menyimpan file PDF sambil menangani enkripsi secara transparan.
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -144,13 +153,8 @@ public class SecureDocumentLoader {
 }
 ```
 
-**Masalah Umum & Solusi**  
-- *Kata sandi salah*: validasi sebelum memproses.  
-- *File tidak ditemukan*: periksa keberadaan dan izin.  
-- *Tekanan memori*: gunakan try‑with‑resources (lihat nanti).
-
-### Menambahkan Anotasi Area Profesional
-`AreaAnnotation` mewakili anotasi persegi panjang seperti sorotan atau komentar pada halaman PDF. Buat objek `AreaAnnotation`, atur koordinat persegiannya, pilih warna, dan lampirkan ke halaman yang diinginkan.
+### Menambahkan anotasi area profesional
+`AreaAnnotation` mewakili markup persegi panjang seperti sorotan, komentar, atau bentuk yang ditempatkan pada halaman PDF. Buat objek `AreaAnnotation`, atur koordinat persegi panjangnya, pilih warna, dan lampirkan ke halaman yang diinginkan.
 
 ```java
 import com.groupdocs.annotation.models.Rectangle;
@@ -192,8 +196,8 @@ public class AnnotationProcessor {
 - Pengukuran dalam poin (1 pt = 1/72 in).  
 - Uji pada ukuran halaman yang berbeda untuk memastikan penempatan konsisten.
 
-### Penyimpanan Dokumen Aman (Siap Produksi)
-`save` menulis dokumen yang telah dimodifikasi ke disk dan dapat menerapkan kata sandi baru untuk enkripsi. Setelah selesai menandai, panggil `save` dengan kata sandi baru jika Anda ingin mengenkripsi ulang dokumen. Anda juga dapat mempertahankan kata sandi asli tanpa perubahan.
+### Penyimpanan dokumen aman (siap produksi)
+Metode `save` menulis PDF yang dimodifikasi ke disk dan secara opsional menerapkan kata sandi baru untuk enkripsi. Anda dapat mempertahankan kata sandi asli tidak berubah atau memberikan kata sandi baru saat memanggil `save`.
 
 ```java
 import java.nio.file.Files;
@@ -226,7 +230,7 @@ public class SecureDocumentSaver {
 }
 ```
 
-## Contoh Kerja Lengkap (Siap Salin‑Tempel)
+## Contoh kerja lengkap (siap salin‑tempel)
 
 ```java
 import com.groupdocs.annotation.Annotator;
@@ -288,18 +292,18 @@ public class CompleteAnnotationExample {
 }
 ```
 
-## Kasus Penggunaan Dunia Nyata (Di Mana Ini Benar‑benar Bersinar)
+## Kasus penggunaan dunia nyata (di mana ini benar‑benar bersinar)
 
-- **Sistem Review Hukum** – Sorot klausul, tambahkan komentar, dan pertahankan jejak audit.  
-- **Pencitraan Medis** – Anotasi sinar‑X atau laporan sambil tetap mematuhi HIPAA.  
-- **Analisis Dokumen Keuangan** – Tandai bagian kunci dalam aplikasi pinjaman atau laporan audit.  
-- **Konten Pendidikan** – Guru dan siswa menambahkan catatan ke PDF tanpa mengubah aslinya.  
-- **Review Desain Teknik** – Tim menandai blueprint dan ekspor CAD secara aman.
+- **Legal review systems** – Sorot klausul, tambahkan komentar, dan pertahankan jejak audit.  
+- **Medical imaging** – Anotasi X‑ray atau laporan sambil tetap mematuhi HIPAA.  
+- **Financial document analysis** – Tandai bagian kunci dalam aplikasi pinjaman atau laporan audit.  
+- **Educational content** – Guru dan siswa menambahkan catatan ke PDF tanpa mengubah yang asli.  
+- **Engineering design review** – Tim memberi anotasi pada cetak biru dan ekspor CAD secara aman.
 
-## Kinerja & Praktik Terbaik (Jangan Lewatkan Ini)
+## Kinerja & praktik terbaik (jangan lewati ini)
 
-### Manajemen Memori (Kritis untuk Produksi)
-GroupDocs.Annotation melakukan streaming halaman PDF, sehingga penggunaan memori tetap di bawah **150 MB** bahkan untuk file 500‑halaman. Selalu tutup `Annotator` dalam blok `finally`.
+### Manajemen memori (kritikal untuk produksi)
+`Annotator` mengimplementasikan `AutoCloseable`, memungkinkan penggunaan dalam try‑with‑resources untuk memastikan pelepasan handle file yang tepat. GroupDocs.Annotation men-stream halaman PDF, sehingga penggunaan memori tetap di bawah **150 MB** bahkan untuk file 500‑halaman. Selalu tutup `Annotator` dalam blok `finally`.
 
 ```java
 // Good: Automatic resource management
@@ -316,8 +320,8 @@ public void processDocumentSafely(String inputPath, String password) {
 }
 ```
 
-### Optimasi Pemrosesan Batch
-`AnnotatorFactory` membuat instance `Annotator` secara efisien untuk operasi batch. Proses daftar file dalam loop, gunakan satu `AnnotatorFactory` untuk mengurangi overhead pembuatan objek.
+### Optimasi pemrosesan batch
+`AnnotatorFactory` membuat dan menyimpan cache instance `Annotator` secara efisien untuk operasi batch. Proses daftar file dalam loop, menggunakan kembali satu `AnnotatorFactory` untuk mengurangi beban pembuatan objek.
 
 ```java
 public void processBatchDocuments(List<DocumentInfo> documents) {
@@ -340,8 +344,8 @@ public void processBatchDocuments(List<DocumentInfo> documents) {
 }
 ```
 
-### Pemrosesan Asinkron untuk Aplikasi Web
-Alihkan pekerjaan anotasi ke pool thread terpisah; kembalikan ID pekerjaan ke klien dan polling untuk penyelesaian.
+### Pemrosesan asinkron untuk aplikasi web
+`ExecutorService` dapat menjalankan tugas anotasi secara paralel, mengembalikan identifier pekerjaan untuk polling klien. Alihkan pekerjaan anotasi ke thread pool terpisah; kembalikan job ID ke klien dan polling untuk penyelesaian.
 
 ```java
 import java.util.concurrent.CompletableFuture;
@@ -358,10 +362,10 @@ public CompletableFuture<String> processDocumentAsync(String inputPath, String p
 }
 ```
 
-## Pertimbangan Keamanan Lanjutan
+## Pertimbangan keamanan lanjutan
 
-### Penanganan File Aman (Bersihkan Kata Sandi dari Memori)
-Simpan kata sandi dalam `char[]`, bersihkan array setelah digunakan, dan jangan pernah mencatat nilai mentahnya.
+### Penanganan file aman (bersihkan kata sandi dari memori)
+`char[]` digunakan untuk menyimpan kata sandi sehingga dapat dibersihkan dari memori setelah penggunaan, dan kata sandi mentah tidak pernah dicatat.
 
 ```java
 public class SecureFileHandler {
@@ -385,8 +389,8 @@ public class SecureFileHandler {
 }
 ```
 
-### Pencatatan Audit (Siap Kepatuhan)
-`ILogger` adalah antarmuka untuk mencatat tindakan anotasi dan kesalahan. Gunakan antarmuka `ILogger` bawaan untuk menangkap siapa yang menandai apa dan kapan, lalu tulis log ke penyimpanan yang aman.
+### Pencatatan audit (siap kepatuhan)
+Antarmuka `ILogger` memungkinkan Anda memasang penyedia logging khusus untuk menangkap tindakan anotasi dan error. Gunakan implementasi `ILogger` bawaan untuk merekam siapa yang memberi anotasi apa dan kapan, kemudian tulis log ke penyimpanan aman.
 
 ```java
 import java.util.logging.Logger;
@@ -401,52 +405,51 @@ public class AuditLogger {
 }
 ```
 
-## Panduan Pemecahan Masalah (Saat Sesuatu Salah)
-Bagian ini memberikan panduan singkat untuk masalah paling umum yang mungkin Anda temui saat bekerja dengan GroupDocs.Annotation, membantu Anda cepat mengidentifikasi penyebab dan menerapkan perbaikan yang efektif.
+## Panduan pemecahan masalah (ketika terjadi kesalahan)
 
-| Masalah | Penyebab Umum | Solusi Cepat |
-|---------|---------------|--------------|
-| **Kata Sandi Tidak Valid** | Kata sandi salah atau encoding | Potong spasi, pastikan encoding UTF‑8 |
-| **File Tidak Ditemukan** | Path salah atau izin tidak cukup | Gunakan path absolut, verifikasi hak baca |
-| **Memory Leak** | Tidak memanggil `dispose()` | Selalu panggil `annotator.dispose()` di `finally` |
-| **Penempatan Anotasi Salah** | Kebingungan antara poin dan piksel | Ingat 1 pt = 1/72 in; uji pada halaman contoh |
-| **Loading Lambat** | File besar atau PDF kompleks | Pre‑process, tingkatkan heap JVM, gunakan API streaming |
+| Issue | Typical cause | Quick fix |
+|-------|---------------|-----------|
+| **Kata sandi tidak valid** | Kata sandi salah atau enkoding | Potong spasi, pastikan enkoding UTF‑8 |
+| **File tidak ditemukan** | Jalur tidak benar atau izin hilang | Gunakan jalur absolut, verifikasi hak baca |
+| **Kebocoran memori** | Tidak memanggil `dispose()` | Selalu panggil `annotator.dispose()` di `finally` |
+| **Penempatan anotasi salah** | Membingungkan poin vs. piksel | Ingat 1 pt = 1/72 in; uji pada halaman contoh |
+| **Pemuat lambat** | File besar atau PDF kompleks | Pra‑proses, tingkatkan heap JVM, gunakan API streaming |
 
-## Pertanyaan yang Sering Diajukan
+## Pertanyaan yang sering diajukan
 
-**Q:** *Bisakah saya menandai PDF yang menggunakan enkripsi AES‑256?*  
-**A:** Ya. GroupDocs.Annotation mendukung enkripsi PDF standar, termasuk AES‑256, selama Anda menyediakan kata sandi yang benar.
+**Q:** *Bisakah saya memberi anotasi PDF yang menggunakan enkripsi AES‑256?*  
+**A:** Ya. GroupDocs.Annotation mendukung enkripsi PDF standar, termasuk AES‑256, selama Anda memberikan kata sandi yang benar.
 
 **Q:** *Apakah saya memerlukan lisensi komersial untuk produksi?*  
 **A:** Tentu saja. Versi trial menambahkan watermark dan membatasi pemrosesan. Lisensi komersial menghilangkan batasan tersebut.
 
 **Q:** *Apakah aman menyimpan kata sandi dalam teks biasa?*  
-**A:** Tidak pernah. Gunakan vault aman atau variabel lingkungan, dan bersihkan array char kata sandi setelah penggunaan (lihat contoh Penanganan File Aman).
+**A:** Tidak pernah. Gunakan vault aman atau variabel lingkungan, dan bersihkan array `char[]` kata sandi setelah penggunaan (lihat contoh Penanganan File Aman).
 
 **Q:** *Berapa banyak dokumen yang dapat saya proses secara bersamaan?*  
-**A:** Tergantung pada sumber daya server Anda. Pola umum adalah membatasi konkurensi sesuai jumlah core CPU dan memantau penggunaan heap.
+**A:** Itu tergantung pada sumber daya server Anda. Pola umum adalah membatasi konkurensi ke jumlah inti CPU dan memantau penggunaan heap.
 
 **Q:** *Bisakah saya mengintegrasikan ini dengan sistem manajemen dokumen seperti SharePoint?*  
-**A:** Ya. Stream file dari SharePoint ke Annotator dan tulis kembali hasilnya, mempertahankan model keamanan yang sama.
+**A:** Ya. Stream file dari SharePoint ke dalam Annotator dan tulis kembali hasilnya, mempertahankan model keamanan yang sama.
 
-## Sumber Daya Tambahan
+## Sumber daya tambahan
 
-- [GroupDocs.Annotation for Java Documentation](https://docs.groupdocs.com/annotation/java/)  
-- [Complete API Reference Guide](https://reference.groupdocs.com/annotation/java/)  
-- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)  
-- [Purchase Commercial License](https://purchase.groupdocs.com/buy)  
-- [Get Free Trial Version](https://releases.groupdocs.com/annotation/java/)  
-- [Request Temporary License](https://purchase.groupdocs.com/temporary-license/)  
-- [Community Support Forum](https://forum.groupdocs.com/c/annotation/)
+- [Dokumentasi GroupDocs.Annotation untuk Java](https://docs.groupdocs.com/annotation/java/)  
+- [Panduan Referensi API Lengkap](https://reference.groupdocs.com/annotation/java/)  
+- [Unduh Versi Terbaru](https://releases.groupdocs.com/annotation/java/)  
+- [Beli Lisensi Komersial](https://purchase.groupdocs.com/buy)  
+- [Dapatkan Versi Trial Gratis](https://releases.groupdocs.com/annotation/java/)  
+- [Minta Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)  
+- [Forum Dukungan Komunitas](https://forum.groupdocs.com/c/annotation/)  
 
 ---
 
-**Terakhir Diperbarui:** 2026-06-21  
+**Terakhir Diperbarui:** 2026-11-01  
 **Diuji Dengan:** GroupDocs.Annotation 25.2  
 **Penulis:** GroupDocs
 
-## Tutorial Terkait
+## Tutorial terkait
 
-- [Muat PDF yang Dilindungi Kata Sandi dengan GroupDocs.Annotation Java](/annotation/java/advanced-features/)
+- [Muat PDF Dilindungi Kata Sandi dengan GroupDocs.Annotation Java](/annotation/java/advanced-features/)
 - [Buat Komentar Review PDF menggunakan GroupDocs.Annotation Java](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
 - [Penyimpanan Rentang Halaman Java dengan GroupDocs.Annotation – Panduan Lengkap](/annotation/java/document-saving/)
