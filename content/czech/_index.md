@@ -1,26 +1,25 @@
 ---
 additionalTitle: GroupDocs API references
-date: 2026-08-04
-description: Naučte se, jak používat API pro anotaci dokumentů k přidávání anotací
-  PDF, Word, Excel a PowerPoint v aplikacích .NET a Java. Podrobné tutoriály krok
-  za krokem pokrývají zvýraznění textu, komentáře, tvary a funkce spolupráce.
+date: 2026-11-13
+description: Zjistěte, jak Document annotation API přidává zvýraznění, komentáře a
+  tvary do PDF, Word, Excel a PowerPoint v .NET a Java. Krok za krokem tutoriály pokrývají
+  načítání, anotaci, ukládání a spolupráci s více než 50 formáty dokumentů.
 keywords:
 - document annotation API
 - PDF annotation
 - Java annotation library
 - collaborative review
 - .NET annotation
-lastmod: 2026-08-04
-linktitle: Průvodci vývojářů GroupDocs.Annotation
-og_description: API pro anotaci dokumentů vám umožní rychle přidávat anotace PDF,
-  Word, Excel a PowerPoint. Naučte se, jak integrovat zvýraznění, komentáře a tvary
-  v aplikacích .NET a Java.
+lastmod: 2026-11-13
+linktitle: GroupDocs.Annotation vývojářské příručky
+og_description: Document annotation API vám umožňuje rychle přidávat zvýraznění, komentáře
+  a tvary do PDF, Word, Excel a PowerPoint. Objevte tutoriály pro .NET a Java, podporu
+  cloudu a vysoce výkonné vykreslování.
 og_image_alt: Guide showing how to annotate PDFs and Office documents using GroupDocs.Annotation
-og_title: API pro anotaci dokumentů – přidávejte zvýraznění, komentáře a tvary v .NET
-  a Java
+og_title: Document annotation API – tutoriály a příklady SDK
 schemas:
 - author: GroupDocs
-  dateModified: '2026-08-04'
+  dateModified: '2026-11-13'
   description: Learn how to use the document annotation API to add PDF, Word, Excel
     & PowerPoint annotations in .NET and Java applications. Step‑by‑step tutorials
     cover text markup, comments, shapes, and collaboration features.
@@ -45,42 +44,42 @@ tags:
 - GroupDocs.Annotation
 - .NET annotation
 - Java annotation
-title: API pro anotaci dokumentů | tutoriály a příklady SDK GroupDocs.Annotation
+title: Document annotation API – tutoriály a příklady SDK
 type: docs
 url: /cs/
 weight: 11
 ---
 
-# Průvodce vývojáře GroupDocs.Annotation – API pro anotaci dokumentů
+# API pro anotaci dokumentů – tutoriály a příklady SDK
 
-V tomto průvodci objevíte, jak **document annotation API** umožňuje vložit bohaté funkce anotací—jako zvýraznění, komentáře a tvary—přímo do PDF, Word, Excel, PowerPoint a mnoha dalších typů souborů. Ať už vytváříte kolaborativní portál pro recenze, vzdělávací aplikaci nebo workflow pro právní dokumenty, API vám poskytuje konzistentní, výkonný způsob práce s anotacemi v prostředích .NET i Java.
+V tomto průvodci objevíte, jak **document annotation API** umožňuje vložit bohaté funkce anotací—jako zvýraznění, komentáře a tvary—přímo do PDF, Word, Excel, PowerPoint a mnoha dalších typů souborů. Ať už vytváříte kolaborativní portál pro revize, vzdělávací aplikaci nebo workflow pro právní dokumenty, API vám poskytuje konzistentní, vysoce výkonný způsob práce s anotacemi v .NET i Java prostředích.
 
 ## Rychlé odpovědi
-- **Co dělá document annotation API?** Umožňuje vývojářům přidávat, upravovat a spravovat anotace napříč více než 50 formáty dokumentů bez externích závislostí.  
+- **Co dělá API pro anotaci dokumentů?** Umožňuje vývojářům přidávat, upravovat a spravovat anotace napříč více než 50 formáty dokumentů bez externích závislostí.  
 - **Které platformy jsou podporovány?** .NET (Framework, Core, .NET 5/6) a Java (jakýkoli JDK 8+).  
 - **Potřebuji licenci pro vývoj?** K dispozici je bezplatná zkušební verze; licence je vyžadována pro produkční použití.  
 - **Mohu anotovat PDF a soubory Office stejným kódem?** Ano—jedno sjednocené API zpracovává PDF, Word, Excel, PowerPoint, obrázky, HTML a další.  
 - **Je možné nasazení do cloudu?** Rozhodně—běží na Windows, Linux, macOS, Dockeru nebo jakékoli cloudové službě.
 
-## Co je document annotation API?
+## Co je API pro anotaci dokumentů?
 
-Document annotation API je cross‑platform SDK pro přidávání, úpravu a odstraňování anotací v dokumentech. Podporuje více než 50 formátů—včetně PDF, Word, Excel, PowerPoint, obrázků a HTML—takže můžete pracovat s jedním objektovým modelem a vyhnout se kódu specifickému pro formát, přičemž zachovává věrnost rozvržení a metadata.
+**document annotation API** je cross‑platform SDK, které umožňuje přidávat, upravovat a odstraňovat anotace v dokumentech. Podporuje více než 50 formátů—včetně PDF, Word, Excel, PowerPoint, obrázků a HTML—takže můžete pracovat s jedním objektovým modelem a vyhnout se kódu specifickému pro formát, přičemž zachovává věrnost rozvržení a metadata. Tento sjednocený přístup snižuje čas vývoje až o 70 % ve srovnání se stavěním samostatných obslužných modulů pro každý typ souboru.
 
 ## Proč zvolit GroupDocs.Annotation?
 
-GroupDocs.Annotation vyniká tím, že zpracovává anotace pro více než 50 typů souborů—včetně PDF, Word, Excel, PowerPoint a obrázků—bez jakýchkoli externích závislostí, jako je Adobe Reader nebo Microsoft Office. Jeho vysoce výkonný renderovací engine zpracuje dokumenty s několika stovkami stránek za méně než sekundu na standardních serverech a vestavěné kolaborační nástroje umožňují více uživatelům přidávat vlákna komentářů v reálném čase.
+GroupDocs.Annotation vyniká tím, že zpracovává anotace pro více než 50 typů souborů—včetně PDF, Word, Excel, PowerPoint a obrázků—bez jakýchkoli externích závislostí, jako je Adobe Reader nebo Microsoft Office. Jeho vysoce výkonný renderovací engine zpracuje dokumenty s několika stovkami stránek za méně než sekundu na standardních serverech a vestavěné nástroje pro spolupráci umožňují více uživatelům přidávat vlákna komentářů v reálném čase.
 
-- **Formátová nezávislost** – Jedno API funguje s více než 50 typy dokumentů, od PDF po Excel tabulky.  
-- **Bohaté typy anotací** – Textové značky, grafické tvary, komentáře a kolaborační vlákna odpovědí jsou všechny vestavěné.  
+- **Nezávislost na formátu** – Jedno API funguje s více než 50 typy dokumentů, od PDF po Excel tabulky.  
+- **Bohaté typy anotací** – Textové značky, grafické tvary, komentáře a kolaborativní vlákna odpovědí jsou všechny vestavěné.  
 - **Žádné externí závislosti** – Není potřeba Adobe Reader, Office ani jiné nástroje třetích stran.  
-- **Vysoce výkonný rendering** – Nastavitelná kvalita a rozlišení pro rychlé generování náhledů.  
-- **Cross‑platform podpora** – Bez problémů běží na Windows, Linux, macOS, Dockeru nebo v serverless prostředích.
+- **Vysoce výkonný rendering** – Nastavitelná kvalita a rozlišení pro rychlé generování náhledů; typické 300‑stránkové PDF se renderují za 0,8 sekundy na 2 CPU VM.  
+- **Podpora napříč platformami** – Bez problémů běží na Windows, Linux, macOS, Dockeru nebo v serverless prostředích.
 
 ## Hlavní případy použití
-- **Workflow revize dokumentů** – Umožněte recenzentům přidávat komentáře a schvalovat změny v reálném čase.  
+- **Workflow revize dokumentů** – Umožňuje recenzentům přidávat komentáře a schvalovat změny v reálném čase.  
 - **Vzdělávací aplikace** – Učitelé mohou zvýrazňovat studijní materiál a poskytovat zpětnou vazbu přímo v dokumentu.  
 - **Zpracování právních dokumentů** – Označujte klauzule, přidávejte poznámky a sledujte revize smluv.  
-- **Zdravotnická dokumentace** – Zvýrazňujte kritické informace o pacientech při zachování souladu s HIPAA.  
+- **Zdravotnická dokumentace** – Zvýrazněte kritické informace o pacientovi při zachování souladu s HIPAA.  
 - **Stavebnictví a inženýrství** – Anotujte plány, schémata a technické výkresy s přesnými měřeními.
 
 ## Začínáme s .NET
@@ -88,74 +87,73 @@ Výkonná anotace dokumentů pro .NET aplikace
 
 Integrujte komplexní možnosti anotací do svých C# a .NET projektů pomocí našeho bohatého API.
 
-[Prozkoumat .NET tutoriály](./net/)
+[Explore .NET Tutorials](./net/)
 
 ### Základní .NET tutoriály
-- [**Načítání dokumentu**](./net/document-loading) - Načtěte dokumenty ze souborů, streamů, URL a cloudového úložiště
-- [**Typy anotací**](./net/text-annotations) - Implementujte textové, grafické, formulářové a obrázkové anotace
-- [**Ukládání dokumentu**](./net/document-saving) - Uložte anotované dokumenty s různými možnostmi výstupu
-- [**Správa anotací**](./net/annotation-management) - Přidávejte, aktualizujte, odstraňujte a filtrujte anotace programově
-- [**Funkce spolupráce**](./net/reply-management) - Implementujte vlákna komentářů a kolaborativní revizi
+- [**Document Loading**](./net/document-loading) - Načtěte dokumenty ze souborů, streamů, URL a cloudového úložiště
+- [**Annotation Types**](./net/text-annotations) - Implementujte textové, grafické, formulářové a obrázkové anotace
+- [**Document Saving**](./net/document-saving) - Uložte anotované dokumenty s různými možnostmi výstupu
+- [**Annotation Management**](./net/annotation-management) - Přidávejte, aktualizujte, odstraňujte a filtrujte anotace programově
+- [**Collaboration Features**](./net/reply-management) - Implementujte vlákna komentářů a kolaborativní revizi
 
 ### Pokročilé .NET funkce
-- [**Náhled dokumentu**](./net/document-preview) - Generujte náhledy dokumentu s vlastní rozlišením
-- [**Formulářová pole**](./net/form-field-annotations) - Vytvořte interaktivní komponenty formulářů
-- [**Analýza dokumentu**](./net/document-information) - Extrahujte metadata a informace o stránkách
-- [**Možnosti licencování**](./net/licensing-and-configuration) - Implementujte a nakonfigurujte licencování
+- [**Document Preview**](./net/document-preview) - Generujte náhledy dokumentů s vlastní rozlišením
+- [**Form Fields**](./net/form-field-annotations) - Vytvořte interaktivní formulářové komponenty
+- [**Document Analysis**](./net/document-information) - Extrahujte metadata a informace o stránkách
+- [**Licensing Options**](./net/licensing-and-configuration) - Implementujte a konfigurujte licencování
 
 ## Začínáme s Java
 Java SDK pro anotaci dokumentů
 
 Přidejte komplexní možnosti anotací do Java aplikací pomocí našeho platformně nezávislého API.
 
-[Prozkoumat Java tutoriály](./java/)
+[Explore Java Tutorials](./java/)
 
 ### Základní Java tutoriály
-- [**Načítání dokumentu**](./java/document-loading) - Různé metody načítání dokumentů včetně integrace cloudového úložiště
-- [**Textové anotace**](./java/text-annotations) - Zvýrazňování, podtržení, přeškrtnutí a nahrazování textu
-- [**Grafické anotace**](./java/graphical-annotations) - Přidávejte šipky, tvary a měření
-- [**Obrázkové anotace**](./java/image-annotations) - Vkládejte a přizpůsobujte obrázky v dokumentech  
-- [**Správa anotací**](./java/annotation-management) - Kompletní správa životního cyklu anotací
+- [**Document Loading**](./java/document-loading) - Různé metody načítání dokumentů včetně integrace cloudového úložiště
+- [**Text Annotations**](./java/text-annotations) - Zvýrazňování, podtržení, přeškrtnutí a nahrazení textu
+- [**Graphical Annotations**](./java/graphical-annotations) - Přidávejte šipky, tvary a měření
+- [**Image Annotations**](./java/image-annotations) - Vkládejte a přizpůsobujte obrázky v dokumentech  
+- [**Annotation Management**](./java/annotation-management) - Kompletní správa životního cyklu anotací
 
 ### Pokročilé Java funkce
-- [**Náhled dokumentu**](./java/document-preview) - Generujte vysoce kvalitní miniatury a náhledy
-- [**Nástroje spolupráce**](./java/reply-management) - Implementujte vlákna komentářů a odpovědí
-- [**Informace o dokumentu**](./java/document-information) - Přistupujte k metadatům dokumentu a jeho struktuře
-- [**Pokročilé funkce**](./java/advanced-features) - Specializované možnosti anotací a optimalizace
-- [**Možnosti konfigurace**](./java/licensing-and-configuration) - Přizpůsobte chování a výkon anotací
+- [**Document Preview**](./java/document-preview) - Generujte vysoce kvalitní miniatury a náhledy
+- [**Collaboration Tools**](./java/reply-management) - Implementujte vlákna komentářů a odpovědí
+- [**Document Information**](./java/document-information) - Přistupujte k metadatům a struktuře dokumentu
+- [**Advanced Features**](./java/advanced-features) - Specializované možnosti anotací a optimalizace
+- [**Configuration Options**](./java/licensing-and-configuration) - Přizpůsobte chování a výkon anotací
 
 ## Jak to vyzkoušet ještě dnes
 
-AnnotationConfig je konfigurační třída používaná k nastavení licenčního klíče a globálních nastavení SDK. Chcete‑li vyzkoušet document annotation API ihned, stáhněte si bezplatnou zkušební verzi z webu GroupDocs, přidejte balíček NuGet (pro .NET) nebo Maven závislost (pro Java) do svého projektu a inicializujte AnnotationConfig s vaším licenčním klíčem. Přiložené ukázkové projekty demonstrují načtení souboru, přidání zvýraznění a uložení anotovaného dokumentu během několika řádků kódu.
+Stáhněte si bezplatnou zkušební verzi, přidejte NuGet balíček (pro .NET) nebo Maven závislost (pro Java) a poté inicializujte SDK pomocí vašeho licenčního klíče. Třída `AnnotationConfig` konfiguruje globální nastavení a registruje licenci. Poté můžete načíst soubor, přidat zvýraznění a uložit anotovaný dokument během několika řádků kódu.
 
 ### Bezplatná zkušební verze
 Začněte s bezplatnou zkušební verzí a prozkoumejte všechny funkce před zakoupením.  
-[Stáhnout zkušební verzi](https://releases.groupdocs.com/annotation/)
+[Download Trial](https://releases.groupdocs.com/annotation/)
 
-### Dokumentace API
+### API dokumentace
 Podrobné reference API pro všechny podporované platformy.  
-[Procházet referenci API](https://reference.groupdocs.com/annotation/)
+[Browse API Reference](https://reference.groupdocs.com/annotation/)
 
 ## Často kladené otázky
 
-**Q: Mohu použít document annotation API v komerčním produktu?**  
-A: Ano. Pro produkční nasazení je vyžadována platná licence GroupDocs a bezplatná zkušební verze je k dispozici pro vyhodnocení.
+**Q: Mohu použít API pro anotaci dokumentů v komerčním produktu?**  
+A: Ano. Pro produkční nasazení je vyžadována platná licence GroupDocs a k vyhodnocení je k dispozici bezplatná zkušební verze.
 
-**Q: Podporuje API PDF soubory chráněné heslem?**  
+**Q: Podporuje API PDF chráněné heslem?**  
 A: Rozhodně. Heslo můžete zadat při otevírání dokumentu a všechny operace anotací fungují transparentně.
 
 **Q: Které verze .NET jsou kompatibilní?**  
 A: SDK podporuje .NET Framework 4.5+, .NET Core 3.1+, .NET 5 a .NET 6+.
 
-**Q: Jak API zpracovává velké soubory?**  
-`Document.OptimizeResources()` je metoda, která uvolňuje kešovaná data a snižuje využití paměti během operací anotací.  
-Streamuje obsah a nabízí metody optimalizující paměť, jako je `Document.OptimizeResources()`, aby bylo využití paměti nízké.
+**Q: Jak API pracuje s velkými soubory?**  
+A: `Document.OptimizeResources()` uvolňuje kešovaná data a snižuje využití paměti během operací anotací. Streamuje obsah a nabízí metody optimalizující paměť, jako je `Document.OptimizeResources()`, aby udržela nízké využití paměti i u souborů o velikosti několika gigabajtů.
 
 **Q: Existuje vestavěná podpora pro cloudové úložiště?**  
-A: Ano. Dokumenty můžete načítat a ukládat přímo z Amazon S3, Azure Blob Storage, Google Cloud Storage a dalších poskytovatelů cloudu.
+A: Ano. Můžete načítat a ukládat dokumenty přímo z Amazon S3, Azure Blob Storage, Google Cloud Storage a dalších poskytovatelů cloudu.
 
 ---
 
-**Poslední aktualizace:** 2026-08-04  
-**Testováno s:** GroupDocs.Annotation 23.11 pro .NET & Java  
+**Poslední aktualizace:** 2026-11-13  
+**Testováno s:** GroupDocs.Annotation 23.11 pro .NET a Java  
 **Autor:** GroupDocs

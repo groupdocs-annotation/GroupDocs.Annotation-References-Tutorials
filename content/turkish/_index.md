@@ -1,26 +1,26 @@
 ---
 additionalTitle: GroupDocs API references
-date: 2026-08-04
-description: Document annotation API'yi kullanarak .NET ve Java uygulamalarında PDF,
-  Word, Excel ve PowerPoint ek açıklamaları eklemeyi öğrenin. Step‑by‑step tutorials,
-  text markup, comments, shapes ve collaboration features konularını kapsar.
+date: 2026-11-13
+description: Document annotation API'nin PDF'ler, Word, Excel ve PowerPoint'e .NET
+  ve Java'da nasıl vurgulama, yorum ve şekil eklediğini öğrenin. Adım adım öğreticiler,
+  yükleme, açıklama ekleme, kaydetme ve 50'den fazla belge formatında iş birliği yapmayı
+  kapsar.
 keywords:
 - document annotation API
 - PDF annotation
 - Java annotation library
 - collaborative review
 - .NET annotation
-lastmod: 2026-08-04
+lastmod: 2026-11-13
 linktitle: GroupDocs.Annotation geliştirici kılavuzları
-og_description: Document annotation API, PDF, Word, Excel ve PowerPoint ek açıklamalarını
-  hızlı bir şekilde eklemenizi sağlar. .NET ve Java uygulamalarında highlights, comments
-  ve shapes nasıl entegre edileceğini öğrenin.
+og_description: Document annotation API, PDF'ler, Word, Excel ve PowerPoint'e hızlıca
+  vurgulama, yorum ve şekil eklemenizi sağlar. .NET ve Java öğreticilerini, bulut
+  desteğini ve yüksek performanslı renderlamayı keşfedin.
 og_image_alt: Guide showing how to annotate PDFs and Office documents using GroupDocs.Annotation
-og_title: Document annotation API – .NET ve Java'da highlights, comments ve shapes
-  ekleyin
+og_title: Document annotation API – öğreticiler ve SDK örnekleri
 schemas:
 - author: GroupDocs
-  dateModified: '2026-08-04'
+  dateModified: '2026-11-13'
   description: Learn how to use the document annotation API to add PDF, Word, Excel
     & PowerPoint annotations in .NET and Java applications. Step‑by‑step tutorials
     cover text markup, comments, shapes, and collaboration features.
@@ -45,50 +45,52 @@ tags:
 - GroupDocs.Annotation
 - .NET annotation
 - Java annotation
-title: Document annotation API | GroupDocs.Annotation öğreticileri ve SDK örnekleri
+title: Document annotation API – öğreticiler ve SDK örnekleri
 type: docs
 url: /tr/
 weight: 11
 ---
 
-# GroupDocs.Annotation Geliştirici Kılavuzu - Belge Açıklama API'si
+# Belge açıklama API'si – öğreticiler ve SDK örnekleri
 
-Bu kılavuzda, **document annotation API**'nin PDF, Word, Excel, PowerPoint ve birçok diğer dosya türüne doğrudan zengin açıklama özellikleri—örneğin vurgulamalar, yorumlar ve şekiller—eklemenizi nasıl sağladığını keşfedeceksiniz. İster işbirlikçi bir inceleme portalı, ister eğitim uygulaması ya da yasal belge iş akışı oluşturuyor olun, API hem .NET hem de Java ortamlarında açıklamalarla çalışmak için tutarlı, yüksek performanslı bir yol sunar.
+Bu rehberde, **document annotation API**'nin PDF, Word, Excel, PowerPoint ve birçok diğer dosya türüne doğrudan vurgulamalar, yorumlar ve şekiller gibi zengin açıklama özelliklerini yerleştirmenizi nasıl sağladığını keşfedeceksiniz. İşbirlikçi bir inceleme portalı, eğitim uygulaması veya yasal belge iş akışı oluşturuyor olsanız da, API .NET ve Java ortamlarında açıklamalarla çalışmak için tutarlı ve yüksek performanslı bir yol sunar.
 
-## Hızlı Yanıtlar
-- **document annotation API ne yapar?** Geliştiricilerin dış bağımlılıklar olmadan 50+ belge formatı üzerinde açıklama eklemesine, düzenlemesine ve yönetmesine olanak tanır.  
+## Hızlı cevaplar
+- **Document annotation API ne yapar?** Geliştiricilerin dış bağımlılıklar olmadan 50+ belge formatı üzerinde açıklama eklemesine, düzenlemesine ve yönetmesine olanak tanır.  
 - **Hangi platformlar destekleniyor?** .NET (Framework, Core, .NET 5/6) ve Java (herhangi bir JDK 8+).  
 - **Geliştirme için lisansa ihtiyacım var mı?** Ücretsiz deneme mevcuttur; üretim kullanımı için lisans gereklidir.  
-- **PDF'leri ve Office dosyalarını aynı kodla açıklayabilir miyim?** Evet—tek bir birleşik API PDF'leri, Word, Excel, PowerPoint, görüntüleri, HTML ve daha fazlasını işler.  
+- **PDF'leri ve Office dosyalarını aynı kodla açıklayabilir miyim?** Evet—tek bir birleşik API PDF'leri, Word, Excel, PowerPoint, görüntüler, HTML ve daha fazlasını işler.  
 - **Bulut dağıtımı mümkün mü?** Kesinlikle—Windows, Linux, macOS, Docker veya herhangi bir bulut hizmetinde çalıştırabilirsiniz.
 
-## document annotation API nedir?
-document annotation API, belgelerde açıklama eklemek, düzenlemek ve kaldırmak için çapraz platform bir SDK'dır. PDF, Word, Excel, PowerPoint, görüntüler ve HTML dahil olmak üzere 50'den fazla formatı destekler—bu sayede tek bir nesne modeliyle çalışabilir ve format‑özel koddan kaçınırken, düzen bütünlüğü ve meta verileri koruyabilirsiniz.
+## Document annotation API nedir?
+
+**document annotation API**, belgelerde açıklama ekleme, düzenleme ve kaldırma sağlayan çapraz platform bir SDK'dır. PDF, Word, Excel, PowerPoint, görüntüler ve HTML dahil 50'den fazla formatı destekler; böylece tek bir nesne modeliyle çalışabilir ve format‑özel koddan kaçınarak düzen bütünlüğü ve meta verileri koruyabilirsiniz. Bu birleşik yaklaşım, her dosya türü için ayrı işleyiciler oluşturmak yerine geliştirme süresini %70'e kadar azaltır.
 
 ## Neden GroupDocs.Annotation'ı seçmelisiniz?
-GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve görüntüler dahil 50'den fazla dosya türü için açıklamaları dış bağımlılıklar (Adobe Reader veya Microsoft Office gibi) olmadan işlediği için öne çıkar. Yüksek performanslı render motoru, standart sunucularda çok sayfalı belgeleri bir saniyeden kısa sürede işler ve yerleşik işbirliği araçları, birden fazla kullanıcının gerçek zamanlı olarak zincirli yorumlar eklemesine olanak tanır.
 
-- **Format bağımsızlığı** – Tek bir API PDF'lerden Excel elektronik tablolara kadar 50'den fazla belge türüyle çalışır.  
+GroupDocs.Annotation, PDF, Word, Excel, PowerPoint ve görüntüler dahil 50'den fazla dosya türü için açıklamaları, Adobe Reader veya Microsoft Office gibi dış bağımlılıklar olmadan işlediği için öne çıkar. Yüksek performanslı renderleme motoru, standart sunucularda çok sayfalı belgeleri bir saniyeden kısa sürede işler ve yerleşik işbirliği araçları, birden fazla kullanıcının gerçek zamanlı olarak zincirli yorumlar eklemesine olanak tanır.
+
+- **Format bağımsızlığı** – Tek bir API, PDF'lerden Excel elektronik tablolara kadar 50+ belge türüyle çalışır.  
 - **Zengin açıklama türleri** – Metin işaretleme, grafik şekiller, yorumlar ve işbirlikçi yanıt zincirleri hepsi yerleşiktir.  
 - **Harici bağımlılık yok** – Adobe Reader, Office veya diğer üçüncü taraf araçlara ihtiyaç yok.  
-- **Yüksek performanslı render** – Hızlı ön izleme oluşturma için ayarlanabilir kalite ve çözünürlük.  
+- **Yüksek performanslı renderleme** – Hızlı ön izleme oluşturma için ayarlanabilir kalite ve çözünürlük; tipik 300 sayfalık PDF'ler 2 CPU VM'de 0.8 saniyede renderlanır.  
 - **Çapraz platform desteği** – Windows, Linux, macOS, Docker veya sunucusuz ortamlarda sorunsuz çalışır.
 
-## Birincil kullanım senaryoları
+## Ana kullanım senaryoları
 - **Belge inceleme iş akışları** – İnceleyenlerin gerçek zamanlı olarak yorum eklemesini ve değişiklikleri onaylamasını sağlar.  
-- **Eğitim uygulamaları** – Öğretmenler çalışma materyalini vurgulayabilir ve doğrudan belgede geri bildirim sağlayabilir.  
-- **Hukuki belge işleme** – Maddeleri işaretleyebilir, not ekleyebilir ve sözleşmelerde revizyonları izleyebilir.  
-- **Sağlık hizmetleri dokümantasyonu** – HIPAA uyumluluğunu korurken kritik hasta bilgilerini vurgular.  
-- **İnşaat & mühendislik** – Planları, şemaları ve teknik çizimleri hassas ölçümlerle açıklayabilirsiniz.
+- **Eğitim uygulamaları** – Öğretmenler, çalışma materyalini vurgulayabilir ve doğrudan belgede geri bildirim sağlayabilir.  
+- **Yasal belge işleme** – Maddeleri işaretleyebilir, not ekleyebilir ve sözleşmelerde revizyonları izleyebilir.  
+- **Sağlık hizmetleri belgeleri** – HIPAA uyumluluğunu korurken kritik hasta bilgilerini vurgular.  
+- **İnşaat ve mühendislik** – Planları, şemaları ve teknik çizimleri hassas ölçümlerle açıklayabilirsiniz.
 
 ## .NET ile Başlarken
-.NET uygulamaları için güçlü belge açıklama
+Güçlü belge açıklama için .NET uygulamaları
 
-C# ve .NET projelerinize kapsamlı açıklama yeteneklerini özellik‑zengin API'mizle entegre edin.
+C# ve .NET projelerinize kapsamlı açıklama yeteneklerini, özellik‑zengin API'mizle entegre edin.
 
 [Explore .NET Tutorials](./net/)
 
-### Temel .NET eğitimleri
+### Temel .NET öğreticileri
 - [**Document Loading**](./net/document-loading) - Belgeleri dosyalardan, akışlardan, URL'lerden ve bulut depolamadan yükleyin
 - [**Annotation Types**](./net/text-annotations) - Metin, grafik, form ve görüntü açıklamalarını uygulayın
 - [**Document Saving**](./net/document-saving) - Açıklamalı belgeleri çeşitli çıktı seçenekleriyle kaydedin
@@ -108,7 +110,7 @@ Platform‑bağımsız API'mizle Java uygulamalarına kapsamlı açıklama yeten
 
 [Explore Java Tutorials](./java/)
 
-### Temel Java eğitimleri
+### Temel Java öğreticileri
 - [**Document Loading**](./java/document-loading) - Bulut depolama entegrasyonu dahil olmak üzere belgeleri yüklemenin çeşitli yöntemleri
 - [**Text Annotations**](./java/text-annotations) - Vurgulama, alt çizgi, üstü çizme ve metin değiştirme
 - [**Graphical Annotations**](./java/graphical-annotations) - Oklar, şekiller ve ölçümler ekleyin
@@ -123,35 +125,36 @@ Platform‑bağımsız API'mizle Java uygulamalarına kapsamlı açıklama yeten
 - [**Configuration Options**](./java/licensing-and-configuration) - Açıklama davranışı ve performansını özelleştirin
 
 ## Bugün nasıl deneyebilirsiniz
-AnnotationConfig, SDK için lisans anahtarını ve genel ayarları belirlemek amacıyla kullanılan yapılandırma sınıfıdır. document annotation API'yi hemen denemek için GroupDocs web sitesinden ücretsiz denemeyi indirin, projenize NuGet paketi (.NET için) veya Maven bağımlılığını (Java için) ekleyin ve AnnotationConfig'i lisans anahtarınızla başlatın. İçerilen örnek projeler, bir dosya yüklemeyi, vurgulama eklemeyi ve açıklamalı belgeyi birkaç satır kodla kaydetmeyi gösterir.
+
+Ücretsiz deneme sürümünü yükleyin, .NET için NuGet paketini veya Java için Maven bağımlılığını ekleyin, ardından SDK'yı lisans anahtarınızla başlatın. `AnnotationConfig` sınıfı genel ayarları yapılandırır ve lisansı kaydeder. Bundan sonra bir dosya yükleyebilir, bir vurgulama ekleyebilir ve sadece birkaç satır kodla açıklamalı belgeyi kaydedebilirsiniz.
 
 ### Ücretsiz deneme
 Satın almadan önce tüm özellikleri keşfetmek için ücretsiz deneme ile başlayın.  
 [Download Trial](https://releases.groupdocs.com/annotation/)
 
-### API dokümantasyonu
+### API belgeleri
 Desteklenen tüm platformlar için ayrıntılı API referansları.  
 [Browse API Reference](https://reference.groupdocs.com/annotation/)
 
 ## Sıkça Sorulan Sorular
-**S:** document annotation API'yi ticari bir üründe kullanabilir miyim?  
-**C:** Evet. Üretim dağıtımları için geçerli bir GroupDocs lisansı gereklidir ve değerlendirme için ücretsiz deneme mevcuttur.
 
-**S:** API şifre korumalı PDF'leri destekliyor mu?  
-**C:** Kesinlikle. Belgeyi açarken şifreyi sağlayabilirsiniz ve tüm açıklama işlemleri şeffaf şekilde çalışır.
+**Q: Document annotation API'yi ticari bir üründe kullanabilir miyim?**  
+**A:** Evet. Üretim dağıtımları için geçerli bir GroupDocs lisansı gereklidir ve değerlendirme için ücretsiz deneme mevcuttur.
 
-**S:** Hangi .NET sürümleri uyumludur?  
-**C:** SDK .NET Framework 4.5+, .NET Core 3.1+, .NET 5 ve .NET 6+ sürümlerini destekler.
+**Q: API şifre korumalı PDF'leri destekliyor mu?**  
+**A:** Kesinlikle. Belgeyi açarken şifreyi sağlayabilirsiniz ve tüm açıklama işlemleri şeffaf bir şekilde çalışır.
 
-**S:** API büyük dosyaları nasıl yönetir?  
-`Document.OptimizeResources()` açıklama işlemleri sırasında önbellekteki verileri serbest bırakan ve bellek kullanımını azaltan bir yöntemdir.  
-İçeriği akış olarak işler ve bellek kullanımını düşük tutmak için `Document.OptimizeResources()` gibi bellek‑optimizasyon yöntemleri sunar.
+**Q: Hangi .NET sürümleri uyumludur?**  
+**A:** SDK, .NET Framework 4.5+, .NET Core 3.1+, .NET 5 ve .NET 6+ sürümlerini destekler.
 
-**S:** Bulut depolama hizmetleri için yerleşik destek var mı?  
-**C:** Evet. Belgeleri doğrudan Amazon S3, Azure Blob Storage, Google Cloud Storage ve diğer bulut sağlayıcılarından yükleyebilir ve kaydedebilirsiniz.
+**Q: API büyük dosyaları nasıl yönetir?**  
+**A:** `Document.OptimizeResources()` önbelleğe alınmış verileri serbest bırakır ve açıklama işlemleri sırasında bellek kullanımını azaltır. İçeriği akış olarak işler ve `Document.OptimizeResources()` gibi bellek‑optimizasyon yöntemleri sunarak çok‑gigabayt dosyalarda bile bellek kullanımını düşük tutar.
+
+**Q: Bulut depolama hizmetleri için yerleşik destek var mı?**  
+**A:** Evet. Belgeleri doğrudan Amazon S3, Azure Blob Storage, Google Cloud Storage ve diğer bulut sağlayıcılarından yükleyebilir ve kaydedebilirsiniz.
 
 ---
 
-**Son güncelleme:** 2026-08-04  
-**Test edildi:** GroupDocs.Annotation 23.11 for .NET & Java  
+**Son güncelleme:** 2026-11-13  
+**Test edilen sürüm:** GroupDocs.Annotation 23.11 for .NET & Java  
 **Yazar:** GroupDocs
