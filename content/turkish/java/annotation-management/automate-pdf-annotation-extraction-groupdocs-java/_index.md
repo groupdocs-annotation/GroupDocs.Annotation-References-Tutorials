@@ -1,35 +1,36 @@
 ---
 categories:
 - Java Development
-date: '2026-08-14'
-description: GroupDocs.Annotation for Java kullanarak pdf açıklamaları java nasıl
-  çıkarılacağını öğrenin. Spring Boot entegrasyonu, adım adım kod, sorun giderme ve
-  performans ipuçları içerir.
+date: '2026-11-13'
+description: GroupDocs.Annotation ile pdf açıklamaları Java nasıl çıkarılacağını öğrenin.
+  Bu rehber kurulum, Java kodu, performans ipuçları ve işleme için Spring Boot entegrasyonunu
+  kapsar.
+images:
+- /java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/og-image.png
 keywords:
 - extract pdf annotations java
 - spring boot pdf annotations
 - groupdocs annotation java
 - java pdf processing
 - document automation
-lastmod: '2026-08-14'
-linktitle: PDF Açıklama Çıkarma Java Kılavuzu
-og_description: GroupDocs.Annotation kullanarak pdf açıklamaları java nasıl çıkarılacağını
-  öğrenin. Bu adım adım öğretici, kurulum, kod, performans ipuçları ve hızlı, güvenilir
-  açıklama işleme için Spring Boot entegrasyonunu gösterir.
+lastmod: '2026-11-13'
+linktitle: PDF Açıklama Çıkarma Java Rehberi
+og_description: GroupDocs.Annotation ile pdf açıklamaları Java – kurulum, Java kodu,
+  performans ipuçları ve işleme için Spring Boot entegrasyonunu kapsayan bir rehber.
 og_image_alt: 'GroupDocs tutorial: extract PDF annotations in Java'
-og_title: GroupDocs ile pdf açıklamaları java çıkarma – hızlı kılavuz
+og_title: GroupDocs ile pdf açıklamaları Java çıkarma – tam rehber
 schemas:
 - author: GroupDocs
-  dateModified: '2026-08-14'
+  dateModified: '2026-11-13'
   description: Learn how to extract pdf annotations java using GroupDocs.Annotation
     for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
     and performance tips.
-  headline: Extract pdf annotations java with GroupDocs – quick guide
+  headline: Extract pdf annotations java with GroupDocs – full guide
   type: TechArticle
 - description: Learn how to extract pdf annotations java using GroupDocs.Annotation
     for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
     and performance tips.
-  name: Extract pdf annotations java with GroupDocs – quick guide
+  name: Extract pdf annotations java with GroupDocs – full guide
   steps:
   - name: '**Free trial** – full functionality for evaluation.'
     text: '**Free trial** – full functionality for evaluation.'
@@ -63,40 +64,40 @@ tags:
 - spring boot pdf annotations
 - document automation
 - PDF processing
-title: GroupDocs ile pdf açıklamaları java çıkarma – hızlı kılavuz
+title: GroupDocs ile pdf açıklamaları Java çıkarma – tam rehber
 type: docs
 url: /tr/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/
 weight: 1
 ---
 
-# GroupDocs ile pdf açıklamalarını java çıkarma – hızlı kılavuz
+# GroupDocs ile pdf ek açıklamaları java çıkarma – tam rehber
 
-Bu kapsamlı öğreticide, GroupDocs.Annotation kütüphanesini kullanarak **extract pdf annotations java** nasıl yapılacağını keşfedeceksiniz. İster inceleme yorumlarını, vurguları ya da PDF'lerden özel işaretlemeleri çekmeniz gerekse, burada gösterilen çözüm manuel, hataya açık görevi temiz, otomatik bir iş akışına dönüştürür ve tek bir dosyadan binlerce belgeye ölçeklenir.
+Bu kapsamlı öğreticide GroupDocs.Annotation kütüphanesini kullanarak **extract pdf annotations java** nasıl yapılacağını öğreneceksiniz. İster gözden geçiren yorumları, vurgulamaları ya da PDF'lerden özel işaretlemeleri çekmeniz gerekse, burada gösterilen çözüm manuel, hata yapmaya meyilli bir görevi temiz, otomatik bir iş akışına dönüştürür ve tek bir dosyadan binlerce belgeye ölçeklenir.
 
 ## Hızlı cevaplar
-- **extract pdf annotations java** ne anlama geliyor?** Java kodu kullanarak bir PDF dosyasından her yorum, vurgulama, damga ve diğer işaretlemeleri programlı olarak okuma eylemidir.  
-- **Bir lisansa ihtiyacım var mı?** Geliştirme için ücretsiz deneme çalışır; üretim dağıtımları için ticari lisans gereklidir.  
-- **Bunu Spring Boot ile kullanabilir miyim?** Evet – kılavuz, kullanıma hazır bir Spring Boot servis bean'i içerir.  
-- **Hangi Java sürümü gerekiyor?** Minimum JDK 8'dir; JDK 11+ daha iyi performans ve modern dil özellikleri sağlar.  
-- **Büyük PDF'ler için hızlı mı?** Akış ve toplu işleme ile 100 sayfadan fazla PDF'yi bellek kullanımını 200 MB'nin altında tutarak işleyebilirsiniz.
+- **“extract pdf annotations java” ne demektir?** Java kodu kullanarak bir PDF dosyasındaki her yorum, vurgulama, damga ve diğer işaretlemeleri programlı olarak okumaktır.  
+- **Lisans gerekli mi?** Geliştirme için ücretsiz deneme yeterlidir; üretim ortamları için ticari lisans gerekir.  
+- **Bunu Spring Boot ile kullanabilir miyim?** Evet – kılavuzda kullanıma hazır bir Spring Boot servis bean’i bulunmaktadır.  
+- **Hangi Java sürümü gereklidir?** Minimum JDK 8; JDK 11+ daha iyi performans ve modern dil özellikleri sunar.  
+- **Büyük PDF'ler için hızlı mı?** Akış ve toplu işleme sayesinde 100 sayfalı PDF'leri bellek kullanımını 200 MB altında tutarak işleyebilirsiniz.
 
 ## extract pdf annotations java nedir?
-**Extract pdf annotations java**, bir PDF belgesini Java API'siyle tarama, her açıklama nesnesini (yorumlar, vurgulamalar, damgalar vb.) bulma ve tür, içerik, sayfa numarası ve yazar gibi meta verilerini alma sürecidir. Bu, otomatik inceleme hatları, analiz panoları veya işaretlemenin diğer sistemlere aktarımını mümkün kılar.
+**extract pdf annotations java** süreci, bir PDF belgesini Java API'siyle tarar, her ek açıklama nesnesini (yorumlar, vurgulamalar, damgalar vb.) bulur ve tür, içerik, sayfa numarası ve yazar gibi meta verilerini alır. Bu, otomatik inceleme hatları, analiz panoları veya işaretlemelerin diğer sistemlere aktarımı için olanak tanır.
 
 ## Java için GroupDocs.Annotation neden kullanılmalı?
-GroupDocs.Annotation, PDF, Word, Excel ve PowerPoint dosyalarında **30+ açıklama türü** destekler ve akış motoru 500 sayfalık bir PDF'yi 250 MB'den az RAM kullanarak işleyebilir. API formatlar arasında tutarlıdır, kurumsal düzeyde performans sunar ve özel ticari destek ile birlikte gelir.
+GroupDocs.Annotation, PDF, Word, Excel ve PowerPoint dosyalarında **30+ ek açıklama türünü** destekler ve akış motoru 500 sayfalık bir PDF'yi 250 MB'den az RAM ile işleyebilir. API formatlar arasında tutarlıdır, kurumsal düzeyde performans sunar ve özel ticari destekle birlikte gelir.
 
-## Bunun önemi nedir
-Açıklama çıkarımını otomatikleştirmek saatlerce süren manuel kopyala‑yapıştır işlemlerini ortadan kaldırır, transkripsiyon hatalarını azaltır ve veri odaklı içgörüler sağlar—örneğin inceleme yorumlarının duygu analizi veya özet raporların otomatik oluşturulması gibi. Hukuk, finans, eğitim veya PDF incelemelerine dayanan herhangi bir alandaki ekipler ölçülebilir bir verimlilik artışı elde eder.
+## Neden önemli
+Ek açıklama çıkarımını otomatikleştirmek, saatler süren manuel kopyala‑yapıştır işlemlerini ortadan kaldırır, transkripsiyon hatalarını azaltır ve veri odaklı içgörüler elde edilmesini sağlar—örneğin yorumların duygu analizi veya özet raporların otomatik oluşturulması. Hukuk, finans, eğitim gibi PDF incelemelerine dayanan ekipler ölçülebilir bir verimlilik artışı sağlar.
 
 ## Önkoşullar ve kurulum gereksinimleri
 
-Başlamadan önce ortamınızın aşağıdakileri karşıladığından emin olun:
+Başlamadan önce ortamınızın aşağıdaki koşulları karşıladığından emin olun:
 
 ### Temel önkoşullar
 - **Java Development Kit (JDK)** 8 veya daha yeni (JDK 11+ geliştirilmiş çöp toplama ve API uyumluluğu için önerilir).  
 - **Maven 3.6+** bağımlılık yönetimi için.  
-- Kullanımını rahat hissettiğiniz bir IDE (IntelliJ IDEA, Eclipse veya VS Code).  
+- Kullanımınıza uygun bir IDE (IntelliJ IDEA, Eclipse veya VS Code).  
 
 ### Bilgi gereksinimleri
 - Temel Java sözdizimi ve try‑with‑resources desenine aşinalık.  
@@ -104,18 +105,18 @@ Başlamadan önce ortamınızın aşağıdakileri karşıladığından emin olun
 
 ### Sistem gereksinimleri
 - En az **2 GB RAM** (büyük PDF'ler için 4 GB+ önerilir).  
-- Akış sırasında oluşturulan geçici dosyalar için yeterli disk alanı.
+- Akış sırasında oluşturulan geçici dosyalar için yeterli disk alanı.  
 
 Bu önkoşullar, kütüphanenin modern Java özelliklerinden yararlanmasını sağlarken bellek tüketimini düşük tutar.
 
 ## Java için GroupDocs.Annotation kurulumu
 
-Kütüphaneyi projenize eklemek sadece birkaç satır alır, ancak birçok geliştiricinin gözden kaçırdığı birkaç detay vardır.
+Kütüphaneyi projenize eklemek sadece birkaç satır kod gerektirir, ancak birçok geliştiricinin gözden kaçırdığı birkaç detay vardır.
 
 ### Maven yapılandırması
-`pom.xml` dosyanıza aşağıdaki depo ve bağımlılık girdilerini ekleyin. Depo URL'si kritiktir; bunu atlamak Maven'ın paketi bulamamasına neden olur.
+`pom.xml` dosyanıza aşağıdaki depo ve bağımlılık girişlerini ekleyin. Depo URL'si kritiktir; eksik bırakılırsa Maven paketi bulamaz.
 
-You can find the Maven repository at [Maven repository](https://releases.groupdocs.com/annotation/java/).
+Maven deposunu şu adreste bulabilirsiniz: [Maven repository](https://releases.groupdocs.com/annotation/java/).
 
 ```xml
 <repositories>
@@ -134,14 +135,14 @@ You can find the Maven repository at [Maven repository](https://releases.groupdo
 </dependencies>
 ```
 
-**Pro tip:** En yeni kararlı sürümü (ör. 25.2) kullandığınızdan emin olun, böylece en yeni açıklama‑işleme iyileştirmelerinden faydalanırsınız.
+**Pro ipucu:** En yeni kararlı sürümü (ör. 25.2) kullandığınızdan emin olun; böylece en yeni ek açıklama‑işleme iyileştirmelerinden faydalanırsınız.
 
 ### Lisans kurulum seçenekleri
 Kütüphaneyi etkinleştirmenin üç yolu vardır:
 
 1. **Ücretsiz deneme** – değerlendirme için tam işlevsellik.  
 2. **Geçici lisans** – daha derin testler için deneme süresini uzatır.  
-3. **Ticari lisans** – herhangi bir üretim ortamı için gereklidir.
+3. **Ticari lisans** – herhangi bir üretim ortamı için gereklidir.  
 
 Lisans dosyasını hızlıca uygulayın:
 
@@ -152,7 +153,7 @@ license.setLicense("path/to/your/license.lic");
 ```
 
 ### Proje başlatma
-`Annotator` sınıfı, bir belgede açıklama verilerine erişmek için birincil giriş noktasıdır. Aşağıdaki kod parçacığı, bir `Annotator` örneği oluşturmak için önerilen deseni gösterir. try‑with‑resources bloğu, tüm yerel kaynakların serbest bırakılmasını garanti eder ve bir dizi belgeyi ard arda işlerken yaygın olan bellek sızıntılarını önler.
+`Annotator` sınıfı, bir belgede ek açıklama verilerine erişmek için birincil giriş noktasıdır. try‑with‑resources bloğu, birçok belgeyi ardışık işlediğinizde yaygın olan bellek sızıntılarını önleyerek tüm yerel kaynakların serbest bırakılmasını garanti eder.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -166,10 +167,10 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 
 ## Adım adım uygulama rehberi
 
-Aşağıda PDF'den açıklamaları çıkarmak için tam iş akışı yer alıyor. Her adım, kısa bir açıklama ve ardından ihtiyacınız olan tam kodu içerir.
+Aşağıda PDF'den ek açıklamaları çıkarmak için tam iş akışı yer almaktadır. Her adım kısa bir açıklama ve ihtiyacınız olan tam kodu içerir.
 
 ### PDF belgesini nasıl yüklersiniz ve doğrularsınız?
-`InputStream`, bir dosya gibi bir kaynaktan bayt akışı sağlar ve kütüphanenin PDF'yi tamamen belleğe yüklemeden okumasına izin verir. PDF'nizi bir `InputStream` içine yükleyin ve `Annotator` örneğini oluşturun. İsteğe bağlı `hasAnnotations()` kontrolü, işaretleme içermeyen belgeler için daha fazla işleme atlayarak CPU döngülerini tasarruf ettirir.
+`InputStream`, bir dosya gibi bir kaynaktan bayt akışı sağlar ve kütüphanenin PDF'yi tamamen belleğe yüklemeden okumasına imkan verir. PDF'nizi bir `InputStream` içine yükleyin ve `Annotator` örneğini oluşturun. Opsiyonel `hasAnnotations()` kontrolü, işaretleme içermeyen belgeler için sonraki adımları atlayarak CPU döngülerini tasarruf ettirir.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -186,15 +187,15 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 }
 ```
 
-### Belgeden tüm açıklamaları nasıl alırsınız?
-`Annotation` nesneleri, PDF'den çıkarılan yorumlar, vurgulamalar veya damgalar gibi bireysel işaretleme öğelerini temsil eder. `annotator.get()` çağrısı, dosyada bulunan her açıklama nesnesini içeren bir `List<Annotation>` döndürür. Liste, tür, sayfa numarası, yazar ve ham içerik gibi bilgileri içerir.
+### Belgeden tüm ek açıklamaları nasıl alırsınız?
+`Annotation` nesneleri, PDF'den çıkarılan yorum, vurgulama veya damga gibi bireysel işaretleme öğelerini temsil eder. `annotator.get()` çağrısı, dosyada bulunan her ek açıklama nesnesini içeren bir `List<Annotation>` döndürür. Liste, tür, sayfa numarası, yazar ve ham içerik gibi bilgileri içerir.
 
 ```java
 List<AnnotationBase> annotations = annotator.get();
 ```
 
-### Alınan açıklamaları nasıl işleyip analiz edersiniz?
-`HighlightAnnotation` vurgulanmış bir metin bölgesini, `TextAnnotation` ise belgeye eklenmiş bir yorum veya notu temsil eder. Listeyi yineleyin ve her açıklamayı somut alt sınıfına göre (ör. `HighlightAnnotation`, `TextAnnotation`) işleyin. Türüne göre filtreleme, ilgilendiğiniz verilere odaklanmanızı sağlar.
+### Alınan ek açıklamaları nasıl işleyip analiz edersiniz?
+`HighlightAnnotation` vurgulanmış metin bölgesini, `TextAnnotation` ise belgeye eklenmiş bir yorum veya notu temsil eder. Listeyi döngüye alıp her ek açıklamayı somut alt sınıfına göre (ör. `HighlightAnnotation`, `TextAnnotation`) işleyin. Türüne göre filtreleme, sadece ilgilendiğiniz veriye odaklanmanızı sağlar.
 
 ```java
 Iterator<AnnotationBase> items = annotations.iterator();
@@ -211,7 +212,7 @@ while (items.hasNext()) {
 ```
 
 ### Doğru kaynak temizliğini nasıl sağlarsınız?
-try‑with‑resources yapısı, `Annotator` ve altında yatan akışları otomatik olarak kapatır; bu, birçok PDF'yi işleyen uzun‑çalışan hizmetler için esastır.
+try‑with‑resources kullanarak, `Annotator` `AutoCloseable` arayüzünü uygular ve bir istisna oluşsa bile `close()` metodunun çağrılmasını garanti eder; bu da yerel bellek sızıntılarını ve dosya tanıtıcı tükenmesini önler. Bu desen kod okunabilirliğini artırır ve Java'da kaynak yönetimi için en iyi uygulamalara uygundur.
 
 ```java
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
@@ -221,10 +222,10 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 
 ## Yaygın sorunlar ve çözümler
 
-### Sorun 1: PDF işaretleme gösterse de “Açıklama bulunamadı”
-Bazı PDF oluşturucular yorumları standart açıklama nesneleri yerine **form alanları** olarak saklar. Bunlara erişmek için form alanlarını açıklama olarak değerlendiren `LoadOptions` bayrağını etkinleştirin.
+### Sorun 1: PDF işaretleme gösterse de “Ek açıklama bulunamadı”
+Bazı PDF oluşturucular yorumları **form alanları** olarak saklar, standart ek açıklama nesneleri yerine. Bunlara erişmek için form alanlarını ek açıklama olarak değerlendiren `LoadOptions` bayrağını etkinleştirin.
 
-`LoadOptions`, bir belgenin nasıl yükleneceğini özelleştirmenizi sağlar; form alanlarını açıklama olarak ele almayı da içeren bayrakları içerir.
+`LoadOptions`, bir belgenin nasıl yükleneceğini özelleştirmenizi sağlar; form alanlarını ek açıklama olarak ele almayı da içerir.
 
 ```java
 // Try different annotation types
@@ -237,7 +238,7 @@ for (AnnotationType type : AnnotationType.values()) {
 ```
 
 ### Sorun 2: Büyük PDF'leri işlerken OutOfMemoryError
-Büyük dosyalar varsayılan JVM yığınına sığmayabilir. Bunu, sayfaları toplu olarak işleyerek ve gerektiğinde `-Xmx2g` (veya daha yüksek) ile yığını artırarak hafifletebilirsiniz.
+Büyük dosyalar varsayılan JVM yığınını aşabilir. Sayfaları toplu olarak işleyerek ve gerektiğinde `-Xmx2g` (veya daha yüksek) ile yığını artırarak bu sorunu hafifletin.
 
 ```java
 // Set JVM options: -Xmx4g -XX:+UseG1GC
@@ -251,18 +252,18 @@ for (int i = 0; i < annotations.size(); i += batchSize) {
 }
 ```
 
-### Sorun 3: ASCII olmayan karakterlerde bozuk metin
-Özel karakter içeren dillerde oluşturulan açıklamalar, bayt dizilerini stringe dönüştürürken açık UTF‑8 işleme gerektirir.
+### Sorun 3: ASCII olmayan karakterler için bozuk metin
+Özel karakter içeren ek açıklamalar, bayt dizilerini string'e dönüştürürken açıkça UTF‑8 işlenmezse bozulur.
 
 ```java
 // When reading file paths or annotation content
 String content = new String(annotation.getMessage().getBytes(), StandardCharsets.UTF_8);
 ```
 
-## Performans iyileştirme ipuçları
+## Performans optimizasyon ipuçları
 
-### Büyük PDF dosyalarını akışla nasıl işleyebilirsiniz?
-`Annotator`, bir `InputStream` ile doğrudan çalışabilir; bu sayede tüm dosyanın belleğe yüklenmesine gerek kalmaz.
+### Büyük PDF dosyalarını nasıl akışla işleyebilirsiniz?
+`Annotator`, bir `InputStream` ile doğrudan çalışabilir; bu sayede dosyanın tamamını belleğe yüklemek zorunda kalmazsınız. Bu yaklaşım yığın tüketimini azaltır ve RAM'den daha büyük dosyaları işleme imkanı verir. Akış sayesinde verileri ağ kaynaklarından veya bulut depolamadan ara geçici dosyalar olmadan da aktarabilirsiniz.
 
 ```java
 // Instead of loading entire document into memory
@@ -274,7 +275,7 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 ```
 
 ### Belge yoğun iş yükleri için JVM'i nasıl ayarlarsınız?
-Çöp toplayıcıyı (`-XX:+UseG1GC`) ayarlayın ve toplu işlemler sırasında gecikmeyi düşük tutmak için yığını (`-Xmx4g`) artırın.
+Çöp toplayıcıyı (`-XX:+UseG1GC`) ayarlayın ve yığını (`-Xmx4g`) artırın; bu, toplu işlemler sırasında gecikmeyi düşük tutar. Bu ayarlar duraklama sürelerini azaltır ve aynı anda birden çok büyük PDF'nin çıkarımını sorunsuz bir şekilde gerçekleştirir.
 
 ```
 -Xmx4g                    # Increase heap size
@@ -282,10 +283,8 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 -XX:MaxGCPauseMillis=200  # Minimize GC pauses
 ```
 
-### Birçok belge için açıklama çıkarımını paralelleştirebilir misiniz?
-Java’nın `ForkJoinPool`'unu kullanarak çıkarım görevlerini eşzamanlı çalıştırın; aynı zamanda tek bir `Annotator` fabrikasını yeniden kullanarak ek yükü en aza indirin.
-
-`ForkJoinPool`, birçok küçük görevi paralel olarak verimli bir şekilde yürüten bir Java eşzamanlılık çerçevesidir.
+### Birçok belge için ek açıklama çıkarımını nasıl paralelleştirirsiniz?
+`ForkJoinPool`, birçok küçük görevi paralel olarak verimli bir şekilde çalıştıran bir Java eşzamanlılık çerçevesidir. Her çıkarım görevini bir `RecursiveAction` olarak gönderdiğinizde, havuz işleri CPU çekirdekleri arasında dengeler, verimliliği maksimize ederken her görevi hafif tutar. Tek bir `Annotator` fabrikasını yeniden kullanmak da ek yükü azaltır.
 
 ```java
 List<Path> pdfFiles = Files.list(Paths.get("documents/"))
@@ -295,10 +294,10 @@ List<Path> pdfFiles = Files.list(Paths.get("documents/"))
 pdfFiles.parallelStream().forEach(this::extractAnnotations);
 ```
 
-## Gerçek dünya uygulamaları ve kullanım durumları
+## Gerçek dünya uygulamaları ve kullanım senaryoları
 
 ### Belge inceleme otomasyonu hukuk ekiplerine nasıl fayda sağlar?
-Hukuk firmaları genellikle onlarca inceleme yorumu içeren sözleşmeler alır. Bu yorumları otomatik olarak çıkararak, izleme, analiz ve raporlama için bir dava‑yönetim sistemine besleyebilirsiniz.
+Hukuk firmaları sözleşmelerde onlarca yorum alır. Bu yorumları otomatik olarak çıkararak bir dava‑yönetim sistemine besleyebilir, izleme, analiz ve raporlama yapabilirsiniz.
 
 ```java
 // Extract and categorize reviewer feedback
@@ -311,7 +310,7 @@ reviewerComments.forEach((reviewer, comments) -> {
 ```
 
 ### Eğitim platformları öğrenci vurgulamalarını nasıl analiz edebilir?
-Dijital ders kitaplarından vurgulamaları çıkarmak, hangi bölümlerin en çok vurgulandığını gösteren panolar oluşturmanıza olanak tanır ve müfredat iyileştirmelerine yön verir.
+Dijital ders kitaplarından vurgulamaları çıkarmak, hangi bölümlerin en çok vurgulandığını gösteren panolar oluşturmanıza olanak tanır; bu da müfredat iyileştirmelerine yön verir.
 
 ```java
 // Analyze annotation patterns
@@ -323,7 +322,7 @@ System.out.println("Student made " + highlightCount + " highlights");
 ```
 
 ### Kalite güvencesi geri bildirimi PDF raporlarından nasıl yakalanır?
-QA mühendisleri test raporlarını kusur notlarıyla işaretler. Otomatik çıkarım, bu notları bir kusur‑takip aracına toplar ve manuel girişi ortadan kaldırır.
+QA mühendisleri test raporlarına hata notları ekler. Otomatik çıkarım bu notaları bir hata‑takip aracına toplar, manuel giriş ihtiyacını ortadan kaldırır.
 
 ```java
 // Filter critical issues marked with specific annotation types
@@ -332,9 +331,9 @@ List<AnnotationBase> criticalIssues = annotations.stream()
     .collect(Collectors.toList());
 ```
 
-## Spring boot pdf açıklamaları entegrasyonu
+## Spring boot pdf ek açıklamaları entegrasyonu
 
-Bir mikroservis oluşturuyorsanız, çıkarım mantığını bir Spring servis bean'ine sarın. Aşağıdaki bean, bağımlılık enjeksiyonu, istisna yönetimi ve JSON‑kodlu açıklama verilerini dönen bir REST uç noktasını gösterir.
+Mikroservis geliştiriyorsanız, çıkarım mantığını bir Spring servis bean'ine sarın. Aşağıdaki bean, bağımlılık enjeksiyonu, istisna yönetimi ve JSON‑kodlu ek açıklama verisini dönen bir REST uç noktasını gösterir.
 
 ```java
 @Service
@@ -353,30 +352,30 @@ public class AnnotationExtractionService {
 }
 ```
 
-Bu hizmeti bir yük dengeleyicinin arkasına dağıtın ve dakikada binlerce isteği işlemek için yatay olarak ölçeklendirin.
+Bu servisi bir yük dengeleyicinin arkasına yerleştirin ve dakikada binlerce isteği karşılayacak şekilde yatay olarak ölçeklendirin.
 
 ## Alternatif yaklaşımlar ve ne zaman kullanılmalı
-GroupDocs.Annotation en kapsamlı çözümü sunsa da, daha hafif bir kütüphanenin yeterli olabileceği senaryolar vardır:
+GroupDocs.Annotation en kapsamlı çözümü sunsa da, daha hafif bir kütüphane yeterli olabilecek senaryolar vardır:
 
-- **Apache PDFBox** – basit metin çıkarımı için iyidir ancak tam açıklama meta verileri eksiktir.  
-- **iText 7** – açıklamaları okumaktan çok oluşturmakta iyidir.
+- **Apache PDFBox** – basit metin çıkarımı için iyi ancak tam ek açıklama meta verisine sahip değildir.  
+- **iText 7** – ek açıklamaları okumaktan çok oluşturmakta iyidir.  
 
-**GroupDocs ile kalınması gereken durumlar:** Karmaşık açıklama türleri (ör. kauçuk damga, mürekkep), kurumsal‑düzey performans veya birden çok belge formatı için birleşik API ihtiyacınız varsa.
+**GroupDocs ile kalınması gereken durumlar:** Karmaşık ek açıklama türleri (ör. kauçuk damga, mürekkep), kurumsal‑düzey performans veya birden çok belge formatı için birleşik API gerektiğinde.
 
 ## Kurumsal uygulamalar için entegrasyon desenleri
 
-### Açıklama çıkarımı için mikroservis mimarisini nasıl tasarlamalısınız?
-Çıkarma mantığını durumsuz bir REST veya gRPC uç noktası olarak ortaya koyun. Hizmeti konteynerleştirilmiş tutun, sağlık kontrollerini yapılandırın ve asenkron toplu işleme için bir mesaj kuyruğu (ör. RabbitMQ) kullanın. Bu desen yüksek kullanılabilirlik ve kolay yatay ölçeklendirme sağlar.
+### Ek açıklama çıkarımı için mikroservis mimarisini nasıl tasarlamalısınız?
+Çıkarma mantığını durum‑sız bir REST veya gRPC uç noktası olarak sunun. Servisi konteynerleştirin, sağlık kontrolleri yapılandırın ve asenkron toplu işleme için bir mesaj kuyruğu (ör. RabbitMQ) kullanın. Bu desen yüksek kullanılabilirlik ve kolay yatay ölçeklendirme sağlar.
 
 ## Sıkça sorulan sorular
 
-**S: GroupDocs.Annotation için gereken minimum Java sürümü nedir?**  
-C: Minimum JDK 8'dir, ancak daha iyi performans ve modern dil özellikleri için JDK 11+ önerilir.
+**S: GroupDocs.Annotation için minimum Java sürümü nedir?**  
+C: Minimum JDK 8 gerekir, ancak JDK 11+ performans ve modern dil özellikleri açısından önerilir.
 
-**S: PDF dışındaki formatlardan açıklama çıkarabilir miyim?**  
-C: Evet. GroupDocs.Annotation ayrıca Word (.docx), Excel (.xlsx), PowerPoint (.pptx) ve çeşitli görüntü formatlarından açıklamaları okur.
+**S: PDF dışındaki formatlardan ek açıklama çıkarabilir miyim?**  
+C: Evet. GroupDocs.Annotation Word (.docx), Excel (.xlsx), PowerPoint (.pptx) ve çeşitli görüntü formatlarından da ek açıklamaları okuyabilir.
 
-**S: Şifre korumalı PDF'leri nasıl yönetirim?**  
+**S: Şifre korumalı PDF'leri nasıl ele alırım?**  
 C: `Annotator` yapıcısına şifreyi içeren bir `LoadOptions` nesnesi geçirin.
 
 ```java
@@ -385,11 +384,11 @@ loadOptions.setPassword("your-password");
 Annotator annotator = new Annotator(inputStream, loadOptions);
 ```
 
-**S: 100 sayfalık PDF'lerde bellek kullanımını düşük tutmak için hangi stratejiler uygulanmalı?**  
+**S: 100 sayfalık PDF'lerde bellek kullanımını düşük tutmak için hangi stratejiler uygulanır?**  
 C: Akış (`InputStream`) kullanın, sayfaları parçalar halinde işleyin ve JVM yığınını (`-Xmx2g` veya daha yüksek) artırın. Toplu işleme ayrıca başlatma maliyetlerini amorti eder.
 
-**S: PDF işaretleme gösterse de neden boş bir açıklama listesi alıyorum?**  
-C: Bazı PDF'ler yorumları form alanları olarak saklar veya standart olmayan açıklama alt‑türlerini kullanır. Bu öğeleri açıklama olarak değerlendirmek için `LoadOptions` bayrağını etkinleştirin veya `FormField` nesnelerini ayrı ayrı yineleyin.
+**S: PDF işaretleme gösterse de neden boş bir ek açıklama listesi alabiliyorum?**  
+C: Bazı PDF'ler yorumları form alanları olarak saklar veya standart olmayan ek açıklama alt‑türlerini kullanır. Bu öğeleri ek açıklama olarak değerlendirmek için `LoadOptions` bayrağını etkinleştirin veya `FormField` nesnelerini ayrı ayrı döngüleyin.
 
 ## Kaynaklar ve ek okuma
 
@@ -402,11 +401,11 @@ C: Bazı PDF'ler yorumları form alanları olarak saklar veya standart olmayan a
 
 ---
 
-**Last Updated:** 2026-08-14  
-**Tested With:** GroupDocs.Annotation 25.2  
-**Author:** GroupDocs
+**Son Güncelleme:** 2026-11-13  
+**Test Edilen:** GroupDocs.Annotation 25.2  
+**Yazar:** GroupDocs
 
-## İlgili Öğreticiler
+## İlgili öğreticiler
 
 - [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
 - [Create PDF Annotations Java with GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)

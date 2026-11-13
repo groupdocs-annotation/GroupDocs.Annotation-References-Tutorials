@@ -1,35 +1,37 @@
 ---
 categories:
 - Java Development
-date: '2026-08-14'
-description: Naučte se, jak extrahovat anotace PDF v Javě pomocí GroupDocs.Annotation
-  pro Javu. Obsahuje integraci se Spring Boot, krok‑po‑kroku kód, řešení problémů
-  a tipy na výkon.
+date: '2026-11-13'
+description: Zjistěte, jak extrahovat anotace PDF v Java pomocí GroupDocs.Annotation.
+  Tento průvodce pokrývá nastavení, kód v Java, tipy pro výkon a integraci se Spring
+  Boot pro zpracování.
+images:
+- /java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/og-image.png
 keywords:
 - extract pdf annotations java
 - spring boot pdf annotations
 - groupdocs annotation java
 - java pdf processing
 - document automation
-lastmod: '2026-08-14'
-linktitle: Průvodce extrahováním anotací PDF v Javě
-og_description: Naučte se, jak extrahovat anotace PDF v Javě pomocí GroupDocs.Annotation.
-  Tento krok‑po‑kroku tutoriál ukazuje nastavení, kód, tipy na výkon a integraci se
-  Spring Boot pro rychlé a spolehlivé zpracování anotací.
+lastmod: '2026-11-13'
+linktitle: Průvodce extrahováním anotací PDF v Java
+og_description: Zjistěte, jak extrahovat anotace PDF v Java pomocí GroupDocs.Annotation.
+  Tento průvodce pokrývá nastavení, kód v Java, tipy pro výkon a integraci se Spring
+  Boot pro zpracování.
 og_image_alt: 'GroupDocs tutorial: extract PDF annotations in Java'
-og_title: Extrahování anotací PDF v Javě pomocí GroupDocs – rychlý průvodce
+og_title: Extrahování anotací PDF v Java pomocí GroupDocs – úplný průvodce
 schemas:
 - author: GroupDocs
-  dateModified: '2026-08-14'
+  dateModified: '2026-11-13'
   description: Learn how to extract pdf annotations java using GroupDocs.Annotation
     for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
     and performance tips.
-  headline: Extract pdf annotations java with GroupDocs – quick guide
+  headline: Extract pdf annotations java with GroupDocs – full guide
   type: TechArticle
 - description: Learn how to extract pdf annotations java using GroupDocs.Annotation
     for Java. Includes Spring Boot integration, step‑by‑step code, troubleshooting,
     and performance tips.
-  name: Extract pdf annotations java with GroupDocs – quick guide
+  name: Extract pdf annotations java with GroupDocs – full guide
   steps:
   - name: '**Free trial** – full functionality for evaluation.'
     text: '**Free trial** – full functionality for evaluation.'
@@ -63,15 +65,15 @@ tags:
 - spring boot pdf annotations
 - document automation
 - PDF processing
-title: Extrahování anotací PDF v Javě pomocí GroupDocs – rychlý průvodce
+title: Extrahování anotací PDF v Java pomocí GroupDocs – úplný průvodce
 type: docs
 url: /cs/java/annotation-management/automate-pdf-annotation-extraction-groupdocs-java/
 weight: 1
 ---
 
-# Extrahování anotací PDF v Javě s GroupDocs – rychlý průvodce
+# Extrahování anotací PDF v Javě pomocí GroupDocs – kompletní průvodce
 
-V tomto komplexním tutoriálu se dozvíte, jak **extract pdf annotations java** pomocí knihovny GroupDocs.Annotation. Ať už potřebujete získat komentáře recenzentů, zvýraznění nebo vlastní značky z PDF, řešení zde ukázané promění ruční, náchylný na chyby úkol na čistý, automatizovaný pracovní tok, který škáluje od jednoho souboru po tisíce dokumentů.
+V tomto komplexním tutoriálu se naučíte, jak **extrahovat anotace PDF v Javě** pomocí knihovny GroupDocs.Annotation. Ať už potřebujete získat komentáře recenzentů, zvýraznění nebo vlastní značky z PDF, řešení zde ukázané promění manuální, náchylný na chyby úkol na čistý, automatizovaný workflow, který škáluje od jednoho souboru po tisíce dokumentů.
 
 ## Rychlé odpovědi
 - **Co znamená “extract pdf annotations java”?** Jedná se o programové čtení každého komentáře, zvýraznění, razítka a dalších značek z PDF souboru pomocí Java kódu.  
@@ -80,21 +82,21 @@ V tomto komplexním tutoriálu se dozvíte, jak **extract pdf annotations java**
 - **Jaká verze Javy je požadována?** Minimální je JDK 8; JDK 11+ poskytuje lepší výkon a moderní jazykové funkce.  
 - **Je to rychlé pro velké PDF?** Pomocí streamování a dávkového zpracování můžete zpracovávat PDF s více než 100 stránkami při využití paměti pod 200 MB.
 
-## Co je extract pdf annotations java?
-**Extract pdf annotations java** je proces skenování PDF dokumentu pomocí Java API, vyhledání každého objektu anotace (komentáře, zvýraznění, razítka atd.) a získání jeho metadat, jako je typ, obsah, číslo stránky a autor. To umožňuje automatizované revizní pipeline, analytické dashboardy nebo migraci značek do jiných systémů.
+## Co je extrahování anotací PDF v Javě?
+Proces **extrahování anotací PDF v Javě** prohledá PDF dokument pomocí Java API, najde každý objekt anotace (komentáře, zvýraznění, razítka atd.) a získá jeho metadata, jako je typ, obsah, číslo stránky a autor. To umožňuje automatizované revizní pipeline, analytické dashboardy nebo migraci značek do jiných systémů.
 
 ## Proč použít GroupDocs.Annotation pro Javu?
-GroupDocs.Annotation podporuje **30+ typů anotací** napříč PDF, Word, Excel a PowerPoint soubory a jeho streamingový engine dokáže zpracovat 500‑stránkový PDF s využitím méně než 250 MB RAM. API je konzistentní napříč formáty, nabízí výkonnost na úrovni podniku a přichází s dedikovanou komerční podporou.
+GroupDocs.Annotation podporuje **30+ typů anotací** napříč soubory PDF, Word, Excel a PowerPoint a jeho streamingový engine dokáže zpracovat 500‑stránkový PDF s využitím méně než 250 MB RAM. API je konzistentní napříč formáty, nabízí výkonnost na úrovni podniku a je doplněno dedikovanou komerční podporou.
 
 ## Proč je to důležité
-Automatizace extrakce anotací eliminuje hodiny ručního kopírování a vkládání, snižuje chyby při přepisu a odemyká datově řízené poznatky – například sentimentální analýzu komentářů recenzentů nebo automatické generování souhrnných zpráv. Týmy v právu, financích, vzdělávání nebo v jakémkoli oboru, který se spoléhá na revizi PDF, získají měřitelný nárůst produktivity.
+Automatizace extrakce anotací eliminuje hodiny manuálního kopírování‑vkládání, snižuje chyby při přepisu a odemyká datově řízené poznatky – například sentimentální analýzu komentářů recenzentů nebo automatické generování souhrnných zpráv. Týmy v právu, financích, vzdělávání nebo v jakémkoli oboru, který se spoléhá na revize PDF, získají měřitelný nárůst produktivity.
 
 ## Předpoklady a požadavky na nastavení
 
-Před zahájením ověřte, že vaše prostředí splňuje následující:
+Před začátkem ověřte, že vaše prostředí splňuje následující:
 
 ### Základní předpoklady
-- **Java Development Kit (JDK)** 8 nebo novější (JDK 11+ doporučeno pro vylepšenou garbage‑collection a kompatibilitu API).  
+- **Java Development Kit (JDK)** 8 nebo novější (JDK 11+ doporučeno pro vylepšenou správu paměti a kompatibilitu API).  
 - **Maven 3.6+** pro správu závislostí.  
 - IDE, se kterou jste pohodlní (IntelliJ IDEA, Eclipse nebo VS Code).  
 
@@ -113,9 +115,9 @@ Tyto předpoklady zajišťují, že knihovna může využívat moderní funkce J
 Získání knihovny do vašeho projektu zabere jen několik řádků, ale existuje několik detailů, které mnoho vývojářů přehlíží.
 
 ### Maven konfigurace
-Přidejte následující repozitář a závislosti do vašeho `pom.xml`. URL repozitáře je kritická; její vynechání způsobí, že Maven nenajde balíček.
+Přidejte následující repozitář a závislosti do vašeho `pom.xml`. URL repozitáře je kritická; pokud ji vynecháte, Maven nebude schopen balíček najít.
 
-Můžete najít Maven repozitář na [Maven repozitář](https://releases.groupdocs.com/annotation/java/).
+You can find the Maven repository at [Maven repository](https://releases.groupdocs.com/annotation/java/).
 
 ```xml
 <repositories>
@@ -139,11 +141,11 @@ Můžete najít Maven repozitář na [Maven repozitář](https://releases.groupd
 ### Možnosti nastavení licence
 Máte tři možnosti, jak aktivovat knihovnu:
 
-1. **Free trial** – plná funkčnost pro hodnocení.  
-2. **Temporary license** – prodlužuje zkušební období pro podrobnější testování.  
-3. **Commercial license** – vyžadována pro jakékoli produkční prostředí.
+1. **Bezplatná zkušební verze** – plná funkčnost pro hodnocení.  
+2. **Dočasná licence** – prodlužuje zkušební období pro podrobnější testování.  
+3. **Komerční licence** – vyžadována pro jakékoli produkční prostředí.
 
-Rychle použijte licenční soubor:
+Rychle aplikujte licenční soubor:
 
 ```java
 // For temporary or commercial licenses
@@ -152,7 +154,7 @@ license.setLicense("path/to/your/license.lic");
 ```
 
 ### Inicializace projektu
-Třída `Annotator` je hlavním vstupním bodem pro přístup k datům anotací v dokumentu. Následující úryvek ukazuje doporučený vzor pro vytvoření instance `Annotator`. Blok try‑with‑resources zajišťuje uvolnění všech nativních zdrojů, čímž předchází únikům paměti, které jsou běžné při zpracování mnoha dokumentů po sobě.
+Třída `Annotator` je hlavním vstupním bodem pro přístup k datům anotací v dokumentu. Blok try‑with‑resources zajišťuje uvolnění všech nativních zdrojů, čímž zabraňuje únikům paměti, které jsou běžné při zpracování mnoha dokumentů po sobě.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -166,10 +168,10 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 
 ## Průvodce implementací krok za krokem
 
-Níže je kompletní workflow pro extrakci anotací z PDF. Každý krok obsahuje stručné vysvětlení následované přesným kódem, který potřebujete.
+Níže je kompletní workflow pro extrahování anotací z PDF. Každý krok obsahuje stručné vysvětlení následované přesným kódem, který potřebujete.
 
 ### Jak načíst a ověřit PDF dokument?
-`InputStream` poskytuje bytový tok ze zdroje, jako je soubor, což umožňuje knihovně číst PDF bez úplného načtení do paměti. Načtěte své PDF do `InputStream` a vytvořte instanci `Annotator`. Volitelná kontrola `hasAnnotations()` může přeskočit další zpracování dokumentů, které neobsahují žádné značky, čímž šetří CPU cykly.
+`InputStream` poskytuje bajtový tok ze zdroje, jako je soubor, což umožňuje knihovně číst PDF bez úplného načtení do paměti. Načtěte své PDF do `InputStream` a vytvořte instanci `Annotator`. Volitelná kontrola `hasAnnotations()` může přeskočit další zpracování dokumentů, které neobsahují žádné značky, čímž šetří CPU cykly.
 
 ```java
 String inputFile = "YOUR_DOCUMENT_DIRECTORY/document.pdf";
@@ -194,7 +196,7 @@ List<AnnotationBase> annotations = annotator.get();
 ```
 
 ### Jak zpracovat a analyzovat získané anotace?
-`HighlightAnnotation` označuje zvýrazněnou oblast textu, zatímco `TextAnnotation` představuje komentář nebo poznámku připojenou k dokumentu. Procházejte seznam a zpracovávejte každou anotaci podle její konkrétní podtřídy (např. `HighlightAnnotation`, `TextAnnotation`). Filtrování podle typu vám umožní soustředit se na data, která vás zajímají.
+`HighlightAnnotation` označuje zvýrazněnou oblast textu, zatímco `TextAnnotation` představuje komentář nebo poznámku připojenou k dokumentu. Procházejte seznam a zpracovávejte každou anotaci podle její konkrétní podtřídy (např. `HighlightAnnotation`, `TextAnnotation`). Filtrování podle typu vám umožní zaměřit se na data, která vás zajímají.
 
 ```java
 Iterator<AnnotationBase> items = annotations.iterator();
@@ -211,7 +213,7 @@ while (items.hasNext()) {
 ```
 
 ### Jak zajistit správné uvolnění zdrojů?
-Konstrukce try‑with‑resources automaticky uzavře `Annotator` a všechny podkladové streamy, což je nezbytné pro dlouho běžící služby zpracovávající mnoho PDF.
+Použitím try‑with‑resources `Annotator` implementuje `AutoCloseable`, což zaručuje, že `close()` bude zavoláno i při výskytu výjimky, čímž se předchází únikům nativní paměti a vyčerpání souborových handle. Tento vzor také zjednodušuje čitelnost kódu a odpovídá osvědčeným postupům pro správu zdrojů v Javě.
 
 ```java
 try (final InputStream inputStream = new FileInputStream(inputFile)) {
@@ -221,10 +223,10 @@ try (final InputStream inputStream = new FileInputStream(inputFile)) {
 
 ## Časté problémy a řešení
 
-### Problém 1: “No annotations found” i když PDF obsahuje značky
+### Problém 1: “Nenalezeny žádné anotace”, i když PDF zobrazuje značky
 Některé PDF tvůrci ukládají komentáře jako **formulářová pole** místo standardních objektů anotací. Pro jejich přístup povolte příznak `LoadOptions`, který zachází s formulářovými poli jako s anotacemi.
 
-`LoadOptions` vám umožňuje přizpůsobit, jak je dokument načten, včetně příznaků, které zacházejí s formulářovými poli jako s anotacemi.
+`LoadOptions` vám umožňuje přizpůsobit způsob načítání dokumentu, včetně příznaků, které zacházejí s formulářovými poli jako s anotacemi.
 
 ```java
 // Try different annotation types
@@ -252,7 +254,7 @@ for (int i = 0; i < annotations.size(); i += batchSize) {
 ```
 
 ### Problém 3: Poškozený text pro ne‑ASCII znaky
-Anotace vytvořené v jazycích se speciálními znaky vyžadují explicitní zpracování UTF‑8 při konverzi bytových polí na řetězce.
+Anotace vytvořené v jazycích se speciálními znaky vyžadují explicitní zpracování UTF‑8 při převodu bajtových polí na řetězce.
 
 ```java
 // When reading file paths or annotation content
@@ -262,7 +264,7 @@ String content = new String(annotation.getMessage().getBytes(), StandardCharsets
 ## Tipy pro optimalizaci výkonu
 
 ### Jak můžete streamovat zpracování velkých PDF souborů?
-`Annotator` může pracovat přímo s `InputStream`, čímž se vyhýbá načítání celého souboru do paměti.
+`Annotator` může pracovat přímo s `InputStream`, čímž se vyhýbá načítání celého souboru do paměti. Tento přístup snižuje spotřebu haldy a umožňuje zpracování souborů větších než dostupná RAM. Streamováním můžete také přenášet data ze síťových zdrojů nebo cloudového úložiště bez mezilehlých dočasných souborů.
 
 ```java
 // Instead of loading entire document into memory
@@ -274,7 +276,7 @@ try (InputStream stream = Files.newInputStream(Paths.get(filePath))) {
 ```
 
 ### Jak nastavit JVM pro dokumentově náročné úlohy?
-Upravte garbage collector (`-XX:+UseG1GC`) a zvýšte haldu (`-Xmx4g`), aby se udržela nízká latence během dávkových operací.
+Upravte garbage collector (`-XX:+UseG1GC`) a zvýšte haldu (`-Xmx4g`), aby se během dávkových operací udržela nízká latence. Tato nastavení snižují dobu pozastavení a poskytují dostatek paměti pro simultánní extrakci více velkých PDF, což zajišťuje plynulý průtok.
 
 ```
 -Xmx4g                    # Increase heap size
@@ -283,9 +285,7 @@ Upravte garbage collector (`-XX:+UseG1GC`) a zvýšte haldu (`-Xmx4g`), aby se u
 ```
 
 ### Jak můžete paralelizovat extrakci anotací pro mnoho dokumentů?
-Využijte Java `ForkJoinPool` k souběžnému spouštění úloh extrakce, přičemž opakovaně použijete jedinou `Annotator` továrnu pro minimalizaci režie.
-
-`ForkJoinPool` je Java framework pro souběžnost, který efektivně spouští mnoho malých úloh paralelně.
+`ForkJoinPool` je Java framework pro souběžnost, který efektivně spouští mnoho malých úkolů paralelně. Odesláním každého úkolu extrakce jako `RecursiveAction` pool vyvažuje práci napříč CPU jádry, maximalizuje průtok a udržuje každý úkol lehký. Opětovné použití jedné továrny `Annotator` dále minimalizuje režii.
 
 ```java
 List<Path> pdfFiles = Files.list(Paths.get("documents/"))
@@ -311,7 +311,7 @@ reviewerComments.forEach((reviewer, comments) -> {
 ```
 
 ### Jak mohou vzdělávací platformy analyzovat zvýraznění studentů?
-Extrahování zvýraznění z digitálních učebnic vám umožní vytvořit dashboardy, které ukazují, které sekce jsou nejčastěji zdůrazňovány, což informuje o vylepšeních učebních osnov.
+Extrahování zvýraznění z digitálních učebnic vám umožní vytvořit dashboardy, které ukazují, které sekce jsou nejčastěji zdůrazňovány, což napomáhá zlepšování učebních osnov.
 
 ```java
 // Analyze annotation patterns
@@ -322,8 +322,8 @@ long highlightCount = annotations.stream()
 System.out.println("Student made " + highlightCount + " highlights");
 ```
 
-### Jak je zachycena zpětná vazba zajištění kvality z PDF zpráv?
-QA inženýři anotují testovací zprávy poznámkami o defektech. Automatizovaná extrakce agreguje tyto poznámky do nástroje pro sledování defektů, čímž eliminuje ruční zadávání.
+### Jak se zachytává zpětná vazba kvality z PDF zpráv?
+QA inženýři anotují testovací zprávy poznámkami o defektech. Automatizovaná extrakce tyto poznámky agreguje do nástroje pro sledování defektů, čímž eliminuje ruční zadávání.
 
 ```java
 // Filter critical issues marked with specific annotation types
@@ -353,21 +353,21 @@ public class AnnotationExtractionService {
 }
 ```
 
-Nasazujte tuto službu za load balancer a horizontálně škálujte pro zpracování tisíců požadavků za minutu.
+Nasazujte tuto službu za load balancer a horizontálně škálujte, aby zvládla tisíce požadavků za minutu.
 
 ## Alternativní přístupy a kdy je použít
 
 Zatímco GroupDocs.Annotation nabízí nejkompletnější řešení, existují scénáře, kde může stačit lehčí knihovna:
 
-- **Apache PDFBox** – vhodný pro jednoduchou extrakci textu, ale postrádá kompletní metadata anotací.  
+- **Apache PDFBox** – vhodný pro jednoduchý extrahování textu, ale postrádá kompletní metadata anotací.  
 - **iText 7** – vyniká při vytváření anotací spíše než při jejich čtení.
 
-**Kdy zůstat u GroupDocs:** Potřebujete podporu pro komplexní typy anotací (např. gumové razítko, inkoust), výkonnost na úrovni podniku nebo jednotné API napříč více formáty dokumentů.
+**Kdy zůstat u GroupDocs:** Potřebujete podporu pro komplexní typy anotací (např. gumové razítko, inkoust), výkonnost na úrovni podniku nebo jednotné API napříč různými formáty dokumentů.
 
 ## Integrační vzory pro podnikové aplikace
 
 ### Jak navrhnout mikroservisní architekturu pro extrakci anotací?
-Zveřejněte logiku extrakce jako stateless REST nebo gRPC endpoint. Udržujte službu kontejnerizovanou, nakonfigurujte health checky a použijte zprávovou frontu (např. RabbitMQ) pro asynchronní dávkové zpracování. Tento vzor zajišťuje vysokou dostupnost a snadné horizontální škálování.
+Zveřejněte logiku extrakce jako stateless REST nebo gRPC endpoint. Udržujte službu kontejnerizovanou, nakonfigurujte health checky a použijte frontu zpráv (např. RabbitMQ) pro asynchronní dávkové zpracování. Tento vzor zajišťuje vysokou dostupnost a snadné horizontální škálování.
 
 ## Často kladené otázky
 
@@ -375,7 +375,7 @@ Zveřejněte logiku extrakce jako stateless REST nebo gRPC endpoint. Udržujte s
 A: Minimální je JDK 8, ale JDK 11+ je doporučeno pro lepší výkon a moderní jazykové funkce.
 
 **Q: Mohu extrahovat anotace i z jiných formátů než PDF?**  
-A: Ano. GroupDocs.Annotation také čte anotace z Word (.docx), Excel (.xlsx), PowerPoint (.pptx) a několika formátů obrázků.
+A: Ano. GroupDocs.Annotation také čte anotace z Word (.docx), Excel (.xlsx), PowerPoint (.pptx) a několika obrazových formátů.
 
 **Q: Jak zacházet s PDF chráněnými heslem?**  
 A: Předávejte objekt `LoadOptions` s heslem do konstruktoru `Annotator`.
@@ -390,27 +390,25 @@ Annotator annotator = new Annotator(inputStream, loadOptions);
 A: Používejte streamování (`InputStream`), zpracovávejte stránky po částech a zvyšte haldu JVM (`-Xmx2g` nebo vyšší). Dávkové zpracování také amortizuje náklady na inicializaci.
 
 **Q: Proč mohu získat prázdný seznam anotací, i když PDF zobrazuje značky?**  
-A: Některé PDF ukládají komentáře jako formulářová pole nebo používají nestandardní podtypy anotací. Povolte příznak `LoadOptions`, aby se tyto prvky zacházelo jako anotace, nebo iterujte samostatně přes objekty `FormField`.
+A: Některé PDF ukládají komentáře jako formulářová pole nebo používají nestandardní podtypy anotací. Povolte příznak `LoadOptions`, aby se tyto prvky zacházelo jako s anotacemi, nebo iterujte samostatně přes objekty `FormField`.
 
 ## Zdroje a další čtení
 
-- [Maven repozitář](https://releases.groupdocs.com/annotation/java/)
-- [Dokumentace](https://docs.groupdocs.com/annotation/java/)
-- [Průvodce API referencí](https://reference.groupdocs.com/annotation/java/)
-- [Stáhnout nejnovější verzi](https://releases.groupdocs.com/annotation/java/)
-- [Komerční licencování](https://purchase.groupdocs.com/buy)
-- [Přístup k bezplatné zkušební verzi](https://releases.groupdocs.com/annotation/java/)
-- [Žádost o dočasnou licenci](https://purchase.groupdocs.com/temporary-license/)
-- [Komunitní fórum podpory](https://forum.groupdocs.com/c/annotation-java)
+- [Documentation](https://docs.groupdocs.com/annotation/java/)
+- [API Reference Guide](https://reference.groupdocs.com/annotation/java/)
+- [Download Latest Version](https://releases.groupdocs.com/annotation/java/)
+- [Commercial Licensing](https://purchase.groupdocs.com/buy)
+- [Temporary License Request](https://purchase.groupdocs.com/temporary-license/)
+- [Community Support Forum](https://forum.groupdocs.com/c/annotation-java)
 
 ---
 
-**Poslední aktualizace:** 2026-08-14  
+**Poslední aktualizace:** 2026-11-13  
 **Testováno s:** GroupDocs.Annotation 25.2  
 **Autor:** GroupDocs
 
 ## Související tutoriály
 
-- [Načíst PDF v Javě s GroupDocs Annotation: Průvodce načítáním dokumentu](/annotation/java/document-loading/)
-- [Vytvořit PDF anotace v Javě s GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
-- [Upravit PDF anotace v Javě – Kompletní tutoriál GroupDocs](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
+- [Load PDF Java with GroupDocs Annotation: Document Loading Guide](/annotation/java/document-loading/)
+- [Create PDF Annotations Java with GroupDocs.Annotation](/annotation/java/annotation-management/annotate-pdfs-groupdocs-annotation-java-guide/)
+- [Edit PDF Annotations Java - Complete GroupDocs Tutorial](/annotation/java/annotation-management/groupdocs-annotation-java-modify-pdf-annotations/)
