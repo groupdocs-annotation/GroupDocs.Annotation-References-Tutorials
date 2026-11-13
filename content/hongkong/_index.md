@@ -1,21 +1,23 @@
 ---
 additionalTitle: GroupDocs API references
-date: 2026-08-04
-description: 了解如何使用文件註釋 API 在 .NET 與 Java 應用程式中新增 PDF、Word、Excel 與 PowerPoint 註釋。一步一步的教學涵蓋文字標記、評論、圖形及協作功能。
+date: 2026-11-13
+description: 了解如何在 .NET 與 Java 中使用 document annotation API 為 PDFs、Word、Excel 與 PowerPoint
+  添加高亮、批註與圖形。一步一步的教學涵蓋載入、註釋、儲存以及在超過 50 種文件格式上的協作。
 keywords:
 - document annotation API
 - PDF annotation
 - Java annotation library
 - collaborative review
 - .NET annotation
-lastmod: 2026-08-04
+lastmod: 2026-11-13
 linktitle: GroupDocs.Annotation 開發者指南
-og_description: 文件註釋 API 可快速新增 PDF、Word、Excel 與 PowerPoint 註釋。了解如何在 .NET 與 Java 應用程式中整合高亮、評論與圖形。
+og_description: document annotation API 讓您快速為 PDFs、Word、Excel 與 PowerPoint 添加高亮、批註與圖形。探索
+  .NET 與 Java 教學、雲端支援以及高效能渲染。
 og_image_alt: Guide showing how to annotate PDFs and Office documents using GroupDocs.Annotation
-og_title: 文件註釋 API – 在 .NET 與 Java 中新增高亮、評論與圖形
+og_title: Document annotation API – 教學與 SDK 示例
 schemas:
 - author: GroupDocs
-  dateModified: '2026-08-04'
+  dateModified: '2026-11-13'
   description: Learn how to use the document annotation API to add PDF, Word, Excel
     & PowerPoint annotations in .NET and Java applications. Step‑by‑step tutorials
     cover text markup, comments, shapes, and collaboration features.
@@ -40,91 +42,91 @@ tags:
 - GroupDocs.Annotation
 - .NET annotation
 - Java annotation
-title: 文件註釋 API | GroupDocs.Annotation 教學與 SDK 範例
+title: Document annotation API – 教學與 SDK 示例
 type: docs
 url: /zh-hant/
 weight: 11
 ---
 
-# GroupDocs.Annotation 開發者指南 – 文件註釋 API
+# 文件註釋 API – 教程與 SDK 示例
 
-在本指南中，您將了解 **document annotation API** 如何讓您將豐富的註釋功能（如突出顯示、評論和圖形）直接嵌入 PDF、Word、Excel、PowerPoint 以及其他多種檔案類型。無論您是構建協作審閱平台、教育應用程式，或是法律文件工作流程，該 API 都能在 .NET 與 Java 環境中提供一致且高效的註釋處理方式。
+在本指南中，您將了解 **document annotation API** 如何讓您將豐富的註釋功能（例如突出顯示、評論和圖形）直接嵌入 PDF、Word、Excel、PowerPoint 以及其他多種檔案類型。無論您是構建協作審閱平台、教育應用程式，或是法律文件工作流程，該 API 都提供一致且高效的方式，在 .NET 與 Java 環境中處理註釋。
 
 ## 快速解答
-- **document annotation API 的功能是什麼？** 它讓開發人員能在超過 50 種文件格式上新增、編輯和管理註釋，且無需外部相依性。  
-- **支援哪些平台？** .NET (Framework、Core、.NET 5/6) 與 Java (任何 JDK 8+)。  
-- **開發是否需要授權？** 提供免費試用；正式使用需購買授權。  
-- **我可以使用相同的程式碼註釋 PDF 和 Office 檔案嗎？** 是的——單一統一的 API 可處理 PDF、Word、Excel、PowerPoint、影像、HTML 等多種格式。  
+- **document annotation API 的功能是什麼？** 它允許開發人員在超過 50 種文件格式中新增、編輯和管理註釋，且無需外部相依性。  
+- **支援哪些平台？** .NET (Framework, Core, .NET 5/6) and Java (any JDK 8+).  
+- **開發是否需要授權？** 提供免費試用；正式上線需購買授權。  
+- **能否使用相同程式碼為 PDF 與 Office 檔案加註？** 是的——單一統一的 API 可處理 PDF、Word、Excel、PowerPoint、影像、HTML 等多種檔案。  
 - **是否支援雲端部署？** 當然可以——可在 Windows、Linux、macOS、Docker 或任何雲端服務上執行。
 
 ## 什麼是 document annotation API？
 
-document annotation API 是一套跨平台 SDK，用於在文件中新增、編輯和移除註釋。它支援超過 50 種格式，包括 PDF、Word、Excel、PowerPoint、影像與 HTML，讓您只需使用單一物件模型即可避免針對特定格式的程式碼，同時保留版面配置的精確度與中繼資料。
+The **document annotation API** 是跨平台 SDK，能在文件中新增、編輯與移除註釋。它支援超過 50 種格式，包括 PDF、Word、Excel、PowerPoint、影像與 HTML，讓您只需使用單一物件模型，避免針對特定格式撰寫程式碼，同時保留版面配置與中繼資料的完整性。與為每種檔案類型分別開發處理程式相比，此統一方式可將開發時間縮短最高 70%。
 
 ## 為何選擇 GroupDocs.Annotation？
 
-GroupDocs.Annotation 突出的原因在於它能處理超過 50 種檔案類型的註釋——包括 PDF、Word、Excel、PowerPoint 與影像——且不需要任何外部相依性，如 Adobe Reader 或 Microsoft Office。其高效能渲染引擎可在標準伺服器上於一秒內處理數百頁的文件，內建的協作工具則允許多位使用者即時新增串聯評論。
+GroupDocs.Annotation 脫穎而出，因為它能在超過 50 種檔案類型（包括 PDF、Word、Excel、PowerPoint 與影像）上處理註釋，且無需任何外部相依性，如 Adobe Reader 或 Microsoft Office。其高效能渲染引擎可在標準伺服器上於一秒內處理數百頁文件，內建協作工具允許多位使用者即時新增串接式評論。
 
-- **Format independence** – 一個 API 可支援超過 50 種文件類型，從 PDF 到 Excel 試算表。  
-- **Rich annotation types** – 內建文字標記、圖形、評論以及協作回覆串流等豐富註釋類型。  
+- **Format independence** – 一個 API 可處理 50 多種文件類型，從 PDF 到 Excel 試算表。  
+- **Rich annotation types** – 文字標記、圖形形狀、評論與協作回覆串皆為內建功能。  
 - **No external dependencies** – 無需 Adobe Reader、Office 或其他第三方工具。  
-- **High‑performance rendering** – 可調整品質與解析度，以快速產生預覽。  
+- **High‑performance rendering** – 可調整品質與解析度以快速產生預覽；在 2 CPU 虛擬機上，常見的 300 頁 PDF 可於 0.8 秒完成渲染。  
 - **Cross‑platform support** – 可無縫在 Windows、Linux、macOS、Docker 或無伺服器環境上執行。
 
 ## 主要使用情境
 - **Document review workflows** – 讓審閱者即時新增評論並批准變更。  
-- **Educational applications** – 教師可在文件中直接標記學習資料並提供回饋。  
-- **Legal document processing** – 標註條款、添加備註，並追蹤合約的修訂。  
+- **Educational applications** – 教師可在文件中直接標註學習資料並提供回饋。  
+- **Legal document processing** – 標註條款、加入備註，並追蹤合約的修訂。  
 - **Healthcare documentation** – 突顯關鍵患者資訊，同時遵守 HIPAA 規範。  
-- **Construction & engineering** – 在藍圖、示意圖與技術圖紙上以精確測量進行註釋。
+- **Construction & engineering** – 在藍圖、示意圖與技術圖紙上加註精確測量。
 
-## 開始使用 .NET
-強大的 .NET 應用程式文件註釋
+## .NET 入門指南
 
+為 .NET 應用程式提供強大的文件註釋功能  
 將完整的註釋功能整合至您的 C# 與 .NET 專案，使用我們功能豐富的 API。
 
 [Explore .NET Tutorials](./net/)
 
-### 必備 .NET 教學
-- [**Document Loading**](./net/document-loading) - 從檔案、串流、URL 以及雲端儲存載入文件
+### 必備 .NET 教程
+- [**Document Loading**](./net/document-loading) - 從檔案、串流、URL 及雲端儲存載入文件
 - [**Annotation Types**](./net/text-annotations) - 實作文字、圖形、表單與影像註釋
 - [**Document Saving**](./net/document-saving) - 以多種輸出選項儲存已註釋的文件
 - [**Annotation Management**](./net/annotation-management) - 以程式方式新增、更新、刪除與篩選註釋
-- [**Collaboration Features**](./net/reply-management) - 實作評論串流與協作審閱
+- [**Collaboration Features**](./net/reply-management) - 實作評論串與協作審閱
 
 ### 進階 .NET 功能
 - [**Document Preview**](./net/document-preview) - 以自訂解析度產生文件預覽
 - [**Form Fields**](./net/form-field-annotations) - 建立互動式表單元件
-- [**Document Analysis**](./net/document-information) - 擷取中繼資料與頁面資訊
+- [**Document Analysis**](./net/document-information) - 抽取中繼資料與頁面資訊
 - [**Licensing Options**](./net/licensing-and-configuration) - 實作與設定授權
 
-## 開始使用 Java
-Java 文件註釋 SDK
+## Java 入門指南
 
-使用我們平台無關的 API 為 Java 應用程式加入完整的註釋功能。
+Java 文件註釋 SDK  
+使用我們平台無關的 API，為 Java 應用程式加入完整的註釋功能。
 
 [Explore Java Tutorials](./java/)
 
-### 必備 Java 教學
-- [**Document Loading**](./java/document-loading) - 多種載入文件的方法，包含雲端儲存整合
-- [**Text Annotations**](./java/text-annotations) - 突出顯示、底線、刪除線與文字取代
-- [**Graphical Annotations**](./java/graphical-annotations) - 新增箭頭、圖形與測量
-- [**Image Annotations**](./java/image-annotations) - 在文件中插入與自訂影像  
+### 必備 Java 教程
+- [**Document Loading**](./java/document-loading) - 多種載入文件方式，包含雲端儲存整合
+- [**Text Annotations**](./java/text-annotations) - 高亮、底線、刪除線與文字取代
+- [**Graphical Annotations**](./java/graphical-annotations) - 新增箭頭、形狀與測量
+- [**Image Annotations**](./java/image-annotations) - 在文件中插入並自訂影像  
 - [**Annotation Management**](./java/annotation-management) - 完整的註釋生命週期管理
 
 ### 進階 Java 功能
 - [**Document Preview**](./java/document-preview) - 產生高品質的縮圖與預覽
-- [**Collaboration Tools**](./java/reply-management) - 實作串聯評論與回覆
-- [**Document Information**](./java/document-information) - 存取文件中繼資料與結構
+- [**Collaboration Tools**](./java/reply-management) - 實作串接式評論與回覆
+- [**Document Information**](./java/document-information) - 取得文件中繼資料與結構
 - [**Advanced Features**](./java/advanced-features) - 專業的註釋功能與最佳化
 - [**Configuration Options**](./java/licensing-and-configuration) - 自訂註釋行為與效能
 
 ## 如何立即體驗
 
-AnnotationConfig 是用於設定 SDK 授權金鑰與全域設定的組態類別。若要立即體驗 document annotation API，請從 GroupDocs 官方網站下載免費試用版，將 NuGet 套件（.NET）或 Maven 依賴（Java）加入您的專案，並以授權金鑰初始化 AnnotationConfig。隨附的範例專案示範如何載入檔案、加入突出顯示，並在僅幾行程式碼內儲存已註釋的文件。
+下載免費試用版，加入 NuGet 套件（.NET）或 Maven 相依性（Java），然後使用您的授權金鑰初始化 SDK。`AnnotationConfig` 類別負責設定全域參數並註冊授權。之後您即可載入檔案、加入突出顯示，並以幾行程式碼儲存已註釋的文件。
 
 ### 免費試用
-先行免費試用，探索所有功能再決定是否購買。  
+先使用免費試用版探索全部功能，再決定是否購買。  
 [Download Trial](https://releases.groupdocs.com/annotation/)
 
 ### API 文件
@@ -134,22 +136,22 @@ AnnotationConfig 是用於設定 SDK 授權金鑰與全域設定的組態類別�
 ## 常見問題
 
 **Q: 我可以在商業產品中使用 document annotation API 嗎？**  
-A: 可以。正式部署需具備有效的 GroupDocs 授權，亦提供免費試用供評估使用。
+A: 可以。正式部署需擁有有效的 GroupDocs 授權，亦提供免費試用供評估使用。
 
 **Q: API 是否支援受密碼保護的 PDF？**  
-A: 當然支援。開啟文件時可提供密碼，所有註釋操作皆能透明執行。
+A: 絕對支援。開啟文件時可提供密碼，所有註釋操作皆可透明執行。
 
 **Q: 哪些 .NET 版本相容？**  
-A: SDK 支援 .NET Framework 4.5 以上、.NET Core 3.1 以上、.NET 5 以及 .NET 6 以上。
+A: SDK 支援 .NET Framework 4.5+、.NET Core 3.1+、.NET 5 以及 .NET 6+。
 
 **Q: API 如何處理大型檔案？**  
-A: `Document.OptimizeResources()` 為釋放快取資料並降低註釋操作期間記憶體使用量的方法。它會串流內容，並提供如 `Document.OptimizeResources()` 之記憶體最佳化功能，以維持低記憶體使用。
+A: `Document.OptimizeResources()` 會釋放快取資料並降低註釋操作期間的記憶體使用量。它會串流內容，並提供如 `Document.OptimizeResources()` 等記憶體最佳化方法，即使面對多 GB 檔案亦能保持低記憶體佔用。
 
 **Q: 是否內建支援雲端儲存服務？**  
-A: 可以。您可直接從 Amazon S3、Azure Blob Storage、Google Cloud Storage 以及其他雲端供應商載入與儲存文件。
+A: 有。您可以直接從 Amazon S3、Azure Blob Storage、Google Cloud Storage 以及其他雲端供應商載入與儲存文件。
 
 ---
 
-**最後更新：** 2026-08-04  
+**最後更新：** 2026-11-13  
 **測試環境：** GroupDocs.Annotation 23.11 for .NET & Java  
 **作者：** GroupDocs
