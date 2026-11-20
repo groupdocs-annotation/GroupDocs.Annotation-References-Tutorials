@@ -1,17 +1,24 @@
 ---
 categories:
 - Java Development
-date: '2026-06-26'
-description: 了解如何使用 GroupDocs.Annotation Java 載入受密碼保護的 PDF、旋轉 PDF、加入自訂字型、擷取 PDF 中繼資料，並為企業應用程式優化效能。
+date: '2026-11-20'
+description: 了解如何使用 GroupDocs.Annotation Java 載入 PDF，包括受密碼保護的檔案、旋轉 PDF 頁面、加入自訂字型、擷取
+  PDF 中繼資料，以及為企業應用程式優化效能。
 keywords:
-- load password protected pdf
-- add custom fonts pdf
-- extract pdf metadata java
-lastmod: '2026-06-26'
+- how to load pdf
+- rotate pdf pages
+- extract pdf metadata
+- save pdf with password
+- set pdf password
+lastmod: '2026-11-20'
 linktitle: 進階功能教學
+og_description: 了解如何使用 GroupDocs.Annotation Java 載入 PDF，處理受密碼保護的檔案、旋轉頁面、加入自訂字型，並為企業應用程式擷取中繼資料。
+og_image_alt: Guide to load password protected PDF with GroupDocs.Annotation Java,
+  rotate pages, add fonts, extract metadata
+og_title: 如何安全載入 PDF（使用 GroupDocs.Annotation Java）
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-26'
+  dateModified: '2026-11-20'
   description: Learn how to load password protected PDF with GroupDocs.Annotation
     Java, rotate PDFs, add custom fonts, extract PDF metadata, and optimize performance
     for enterprise applications.
@@ -64,129 +71,105 @@ schemas:
       date?
   type: FAQPage
 tags:
-- GroupDocs
-- Document Annotation
-- Advanced Features
-- Java Tutorial
-title: 使用 GroupDocs.Annotation Java 載入受密碼保護的 PDF
+- GroupDocs.Annotation
+- Java PDF annotation
+- password protected PDF
+- PDF rotation
+- custom fonts
+title: 如何安全載入 PDF（使用 GroupDocs.Annotation Java）
 type: docs
 url: /zh-hant/java/advanced-features/
 weight: 16
 ---
 
-# 載入受密碼保護的 PDF（使用 GroupDocs.Annotation Java）— 高級功能
+# 如何安全地使用 GroupDocs.Annotation Java 載入 PDF
 
-準備好在您的 Java 應用程式中釋放文件註釋的全部潛能了嗎？您已掌握基礎，現在是時候**載入受密碼保護的 PDF**檔案，同時利用 GroupDocs.Annotation for Java 提供的最強大高級功能。本指南將示範如何處理加密文件、旋轉 PDF、加入自訂字型、有效管理記憶體，以及擷取中繼資料——全部以對話式、逐步說明的方式，讓複雜概念易於理解。
+在本指南中，您將學習 **如何載入 PDF** 使用 GroupDocs.Annotation Java，包括受密碼保護的檔案、旋轉頁面、加入自訂字型、擷取中繼資料，以及為企業應用程式優化效能。您將獲得清晰的逐步說明，說明這些進階功能的重要性以及如何在實際專案中有效實作。
 
 ## 快速解答
-- **如何載入受密碼保護的 PDF？** 使用 `AnnotationConfig.setPassword("yourPassword")` 在開啟文件前設定密碼。  
+- **如何載入受密碼保護的 PDF？** 在開啟文件之前使用 `AnnotationConfig.setPassword("yourPassword")`。  
 - **我可以在 Java 中旋轉 PDF 嗎？** 可以——對任意頁面呼叫 `document.rotate(pageNumber, rotationAngle)`。  
 - **管理大型 PDF 記憶體的最佳方法是什麼？** 在 `AnnotationConfig` 中啟用延遲載入，並在使用後釋放 `Annotation` 物件。  
-- **如何為註釋加入自訂字型？** 在建立文字註釋前，使用 `annotationConfig.addFont("/path/to/font.ttf")` 註冊字型。  
-- **是否支援擷取中繼資料？** 當然可以——使用 `document.getDocumentInfo()` 讀取標題、作者、建立日期等資訊。  
+- **如何為註解加入自訂字型？** 在建立文字註解之前，使用 `annotationConfig.addFont("/path/to/font.ttf")` 註冊字型。  
+- **是否支援擷取中繼資料？** 當然可以——使用 `document.getDocumentInfo()` 讀取標題、作者、建立日期等資訊。
+
+## 如何使用 GroupDocs.Annotation Java 載入 PDF？
+
+`AnnotationConfig` 是用來儲存文件密碼與自訂字型等設定的配置物件。`AnnotationApi` 提供載入與操作文件的 API 方法。您可以透過建立帶有密碼的 `AnnotationConfig`、初始化 `AnnotationApi`，再呼叫 `loadDocument` 取得 `Document` 物件來載入 PDF。此過程會解密檔案，並提供完整的註解、旋轉頁面、加入字型、擷取中繼資料以及可選的以新密碼儲存的功能。
 
 ## 什麼是「載入受密碼保護的 PDF」？
-載入受密碼保護的 PDF 意味著提供正確的密碼，使函式庫能解密檔案，讓您在不暴露原始安全性的情況下閱讀、註釋與儲存。於 GroupDocs.Annotation for Java 中，您只需在開啟文件前以密碼設定 `AnnotationConfig`，即可確保工作流程順暢且安全，保護敏感內容，同時啟用完整的註釋功能。
 
-## 為何使用旋轉、自訂字型與記憶體管理等高級功能？
-這些高級功能讓您能將註釋體驗調整至專業標準：旋轉頁面可修正掃描文件的方向問題，自訂字型確保註釋符合品牌形象，記憶體節省技巧則讓伺服器能處理數百頁而不會耗盡 RAM。它們共同提升使用者滿意度，將處理時間縮短最高可達 40 %，並協助您遵守安全政策。
+`Loading a password‑protected PDF`（載入受密碼保護的 PDF）表示提供正確的密碼讓函式庫能解密檔案。解密後，文件會變成一般的 `Document` 物件，您可以閱讀、註解、旋轉頁面、嵌入自訂字型以及擷取中繼資料。此方式在保持原始安全性的同時，透過 GroupDocs.Annotation 提供完整的編輯功能。
+
+## 為何使用旋轉、自訂字型與記憶體管理等進階功能？
+
+進階功能讓您校正文件方向、維持品牌一致性，並降低資源使用。旋轉可修正掃描頁面，自訂字型確保註解符合企業風格，延遲載入則可將多百頁 PDF 的記憶體使用量降低最高達 70 %。這些功能共同提升使用者體驗，將處理時間縮短約 40 %，並協助您遵守安全政策。
+
+## 什麼使這些功能屬於「進階」？
+
+這些功能被視為進階，因為它們超越了基本的標註與評論。它們允許您操作頁面版面、嵌入專有字型，並透過僅載入必要頁面來最佳化記憶體。GroupDocs.Annotation 支援超過 **50 種輸入與輸出格式**，且能在 **五秒** 內處理 **500 頁 PDF**，提供企業級的速度與安全性。
 
 ## 前置條件
 - **GroupDocs.Annotation for Java**（建議使用最新版本）  
-- **Java Development Kit** 8 或以上  
-- 具備 GroupDocs.Annotation 核心概念的基本熟悉度  
+- **Java Development Kit** 8 版或以上  
+- 具備 GroupDocs.Annotation 核心概念的基本了解  
 - 範例 PDF 檔案，至少包含一個受密碼保護的文件  
 
 ## 如何使用 GroupDocs.Annotation Java 載入受密碼保護的 PDF
-使用 GroupDocs.Annotation for Java 載入受密碼保護的 PDF 包含三個明確步驟：以文件密碼設定引擎、透過 API 開啟檔案，然後在儲存結果前套用所需的任何高級功能。此方法確保安全解密、效能高效，並完整掌控註釋行為，同時讓程式碼保持簡潔且易於維護。
 
-### 步驟 1：以文件密碼設定註釋引擎
-`AnnotationConfig` 為核心設定物件，儲存文件密碼、自訂字型與延遲載入等設定。建立實例後呼叫 `setPassword` 並傳入正確的字串。
+使用 GroupDocs.Annotation for Java 載入受密碼保護的 PDF 包含三個明確步驟：以文件密碼設定引擎、透過 API 開啟檔案，然後在儲存結果前套用所需的任何進階功能。此方法確保安全的解密、有效的處理，以及對註解行為的完整控制，同時讓程式碼保持簡潔且易於維護。
+
+### 步驟 1：以文件密碼設定註解引擎
+`AnnotationConfig` 是儲存文件密碼、自訂字型與延遲載入選項等設定的核心配置物件。建立實例後，呼叫 `setPassword` 並傳入正確的字串。
 
 ### 步驟 2：開啟文件並驗證存取權限
-`AnnotationApi` 是所有註釋操作的入口點。將已設定好的 `AnnotationConfig` 傳入 `AnnotationApi.loadDocument` 時，函式庫會嘗試解密檔案。若密碼正確，會回傳 `Document` 物件；否則拋出 `AuthenticationException`。
+`AnnotationApi` 是所有註解操作的入口點。當您將已配置的 `AnnotationConfig` 傳入 `AnnotationApi.loadDocument` 時，函式庫會嘗試解密檔案。若密碼正確，會回傳 `Document` 物件；否則拋出 `AuthenticationException`。
 
-### 步驟 3：套用高級功能（旋轉、自訂字型、擷取中繼資料）
+### 步驟 3：套用進階功能（旋轉、自訂字型、擷取中繼資料）
 `Document` 代表記憶體中的單一 PDF。您現在可以呼叫其方法：
-
 - **旋轉頁面** – `document.rotate(pageNumber, rotationAngle)` 可將任意頁面旋轉 90°、180° 或 270°。  
-- **加入自訂字型** – `annotationConfig.addFont("/path/to/font.ttf")` 註冊可在註釋樣式中引用的 TrueType 字型。  
-- **擷取中繼資料** – `document.getDocumentInfo()` 回傳包含標題、作者、建立日期及自訂中繼資料等欄位的 `DocumentInfo` 物件。
+- **加入自訂字型** – `annotationConfig.addFont("/path/to/font.ttf")` 註冊可在註解樣式中引用的 TrueType 字型。  
+- **擷取中繼資料** – `document.getDocumentInfo()` 會回傳包含標題、作者、建立日期以及自訂中繼資料等欄位的 `DocumentInfo` 物件。
 
-### 步驟 4：安全儲存已註釋的文件
-`SaveOptions` 允許您在儲存文件時指定輸出設定，例如密碼保護。完成修改後，呼叫 `document.save("output.pdf", SaveOptions.create().setPassword("newPassword"))` 以保留變更，同時保持檔案受保護。
+### 步驟 4：安全地儲存已註解的文件
+`SaveOptions` 讓您在儲存文件時指定輸出設定，例如密碼保護。完成修改後，呼叫 `document.save("output.pdf", SaveOptions.create().setPassword("newPassword"))` 以在保持檔案受保護的同時寫入變更。
 
-## 這些功能為何稱為「高級」？
-這些功能超越單純的標註。它們讓您自訂視覺樣式、操作頁面版面、優化大規模工作負載的效能，並實施嚴格的安全控制——全部無需撰寫自訂 PDF 解析程式碼。GroupDocs.Annotation 支援 **50+ 輸入與輸出格式**，且在一般伺服器上可於 **5 秒** 內處理 **500 頁 PDF**，提供企業級的速度與可靠性。
+## 常見問題與解決方案
+- **字型載入問題** – 確認字型檔案路徑正確、應用程式可讀取該檔案，且字型授權允許嵌入。  
+- **密碼驗證失敗** – 確保密碼完全符合儲存的內容（區分大小寫），且 PDF 未使用不支援的加密演算法。  
+- **效能瓶頸** – 啟用延遲載入、以較小的頁面範圍處理文件，並盡可能重複使用 `AnnotationConfig` 實例。  
+- **記憶體問題** – 使用後釋放 `Annotation` 物件，並考慮以串流方式處理大型 PDF，而非一次載入全部至記憶體。
 
-## 主要高級功能概覽
+## 常見問答
 
-### 文件操作與安全性
-企業應用程式常需處理加密 PDF。GroupDocs.Annotation 內建密碼處理功能，讓您在不暴露原始內容的情況下載入、註釋並重新加密文件。函式庫亦支援數位憑證解密，提供在高度受規範環境中的彈性。
+**Q: 我可以註解同時受密碼保護且以數位憑證加密的 PDF 嗎？**  
+A: 可以。於開啟文件前透過 `AnnotationConfig` 提供密碼（或憑證資訊），函式庫會自動處理解密。
 
-### 視覺自訂與呈現
-自訂字型與樣式選項讓您將註釋與企業品牌保持一致。您可定義字型族、大小、顏色與不透明度，確保每則評論在所有文件中皆呈現專業且一致的外觀。
+**Q: 如何在不影響文件其他頁面的情況下旋轉特定頁面？**  
+A: 在 `Document` 物件上使用 `rotate(pageNumber, rotationAngle)` 方法，指定目標頁面與所需角度（90°、180° 或 270°）。
 
-### 效能最佳化
-影像品質控制與延遲載入可降低記憶體使用量。啟用 `annotationConfig.setLazyLoading(true)` 後，僅會將您互動的頁面載入 RAM，對於數百頁的檔案，可將峰值記憶體消耗降低最高 **70 %**。
+**Q: 建議的加入自訂字型以供註解文字的方式是什麼？**  
+A: 在建立任何文字註解之前，使用 `annotationConfig.addFont("/path/to/font.ttf")` 註冊字型檔，然後在註解樣式設定中引用該字型名稱。
 
-### 高級篩選與管理
-API 提供強大的篩選機制：您可依類型、作者、建立日期或自訂標籤查詢註釋。這讓您輕鬆建構僅顯示最相關評論的儀表板，提升大型專案中的使用者生產力。
+**Q: 在處理大量註解的大型 PDF 時，如何降低記憶體使用量？**  
+A: 啟用延遲載入、使用後釋放 `Annotation` 物件，並考慮以較小的頁面範圍處理文件，而非一次載入整個檔案。
 
-## 高級功能的常見使用情境
-
-### 企業文件管理
-大型組織常需處理受密碼保護且需自訂品牌的文件。高級功能可實現安全且符合品牌的註釋工作流程，滿足嚴格的合規標準。
-
-### 法律與合規應用
-律師事務所需要精確的文件處理，包括旋轉掃描的證物頁面與使用法院認可的自訂字型註釋。高級篩選功能協助律師快速依律師或日期定位評論。
-
-### 教育與培訓平台
-講師可加入機構專屬字型並旋轉頁面以修正掃描錯誤，同時延遲載入確保平台在千名學生使用時仍保持回應。
-
-### 內容管理系統
-CMS 整合受惠於快速且記憶體效率高的處理，使編輯者能直接在網頁介面內註釋 PDF，且不會拖慢網站速度。
+**Q: 是否能擷取 PDF 的中繼資料，如作者、標題與建立日期？**  
+A: 可以。呼叫 `document.getDocumentInfo()` 以取得包含標準中繼資料欄位的 `DocumentInfo` 物件。
 
 ## 可用教學
 
-### [使用 GroupDocs.Annotation Java 安全處理文件：載入與註釋受密碼保護的文件](./groupdocs-annotation-java-password-documents/)
+### [使用 GroupDocs.Annotation Java 的安全文件處理：載入與註解受密碼保護的文件](./groupdocs-annotation-java-password-documents/)
 
-了解如何使用 GroupDocs.Annotation for Java 安全地載入、註釋與儲存受密碼保護的文件。提升您 Java 應用程式的文件安全性。
+了解如何使用 GroupDocs.Annotation for Java 安全地載入、註解與儲存受密碼保護的文件。提升您 Java 應用程式中的文件安全性。
 
-本教學涵蓋企業級應用所需的關鍵安全功能，包括正確的密碼處理、安全的文件載入，以及在受保護檔案中維持註釋完整性。
+本教學涵蓋企業級應用所需的關鍵安全功能，包括正確的密碼處理、安全的文件載入，以及在受保護檔案中維持註解完整性。
 
-## 效能最佳化技巧
+## 效能優化技巧
 
-使用高級功能時，請留意以下效能考量：
-
-- **記憶體管理** – 自訂字型與影像品質最佳化可能增加記憶體使用。監控應用程式的記憶體消耗，特別是在處理大型文件或同時執行多項操作時。  
-- **處理效能** – 文件旋轉與影像最佳化等功能會增加計算負擔。對常用文件實施快取策略，並使用批次處理執行多文件操作。  
-- **資源載入** – 有效載入自訂字型與外部資源。盡可能使用延遲載入，並快取在不同文件間重複使用的資源。  
-
-## 常見問題排除
-
-### 字型載入問題
-若自訂字型未正確顯示，請確認字型檔案可存取且已取得適當授權。檢查檔案路徑，並確保在文件處理開始前已載入字型。
-
-### 密碼驗證失敗
-處理受密碼保護的文件時，請確保正確處理編碼，且密碼在應用程式中安全傳遞。使用不同的保護等級測試，以確保相容性。
-
-### 效能瓶頸
-若使用高級功能時處理速度緩慢，請考慮對大型文件實施漸進式載入，並根據具體使用需求調整影像品質設定。
-
-### 記憶體問題
-高級功能可能消耗大量記憶體。請實作正確的資源釋放模式，並考慮將大型文件批次分成較小的區塊處理，以避免記憶體溢位。
-
-## 高級功能實作最佳實踐
-
-- **安全第一** – 絕不可將密碼以明文儲存，且始終使用安全的傳輸方式傳遞驗證資料。  
-- **使用者體驗** – 高級功能應提升而非複雜化使用者體驗。對複雜功能採用漸進式揭露，並在處理過程中提供明確回饋。  
-- **錯誤處理** – 針對高級功能必須具備健全的錯誤處理。實作完整的例外處理，並提供具意義的錯誤訊息以協助排除問題。  
-- **測試策略** – 建立完整的測試套件，涵蓋各種文件類型、加密等級與邊緣案例，以確保可靠性。  
-
-## 後續步驟
-
-現在您已了解如何**載入受密碼保護的 PDF**檔案，並探索了旋轉、自訂字型、記憶體管理與中繼資料擷取等功能，已可開始構建符合複雜企業需求的高階文件處理應用程式。先從受密碼保護的文件教學入手，然後依專案需求試驗其他高級功能。
+- **記憶體管理** – 自訂字型與影像品質優化可能增加記憶體使用量。請監控應用程式的記憶體消耗，特別是在處理大型文件或同時執行多項操作時。  
+- **處理效率** – 文件旋轉與影像優化等功能會產生額外的計算負擔。對常存取的文件實施快取策略，並使用批次處理執行多文件操作。  
+- **資源載入** – 有效載入自訂字型與外部資源。盡可能使用延遲載入，並快取在不同文件間重複使用的資源。
 
 ## 其他資源
 
@@ -197,31 +180,14 @@ CMS 整合受惠於快速且記憶體效率高的處理，使編輯者能直接�
 - [免費支援](https://forum.groupdocs.com/)
 - [臨時授權](https://purchase.groupdocs.com/temporary-license/)
 
-## 常見問答
+## 相關教學
 
-**Q: 我可以同時註釋受密碼保護且以數位憑證加密的 PDF 嗎？**  
-A: 可以。於開啟文件前透過 `AnnotationConfig` 提供密碼（或憑證憑證）; 函式庫會自動處理解密。
-
-**Q: 我如何在不影響文件其他頁面的情況下旋轉特定頁面？**  
-A: 在 `Document` 物件上使用 `rotate(pageNumber, rotationAngle)` 方法，指定目標頁面與所需角度（90°、180° 或 270°）。
-
-**Q: 建議的方式是什麼來為註釋文字加入自訂字型？**  
-A: 在建立任何文字註釋前，使用 `annotationConfig.addFont("/path/to/font.ttf")` 註冊字型檔，然後在註釋樣式設定中引用該字型名稱。
-
-**Q: 如何在處理大量註釋的大型 PDF 時降低記憶體使用？**  
-A: 啟用延遲載入，使用後釋放 `Annotation` 物件，並考慮將文件分成較小的頁面範圍處理，而非一次載入整個檔案。
-
-**Q: 是否可以擷取 PDF 的中繼資料，例如作者、標題與建立日期？**  
-A: 可以。呼叫 `document.getDocumentInfo()` 取得包含標準中繼資料欄位的 `DocumentInfo` 物件。
+- [使用 GroupDocs 註解受保護 PDF Java – 完整指南](/annotation/java/advanced-features/groupdocs-annotation-java-password-documents/)
+- [使用 GroupDocs Annotation 註解 PDF Java – 文件載入](/annotation/java/document-loading/)
+- [如何註解 PDF – 從 URL 載入 PDF Java 完整指南](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
 
 ---
 
-**最後更新：** 2026-06-26  
-**測試環境：** GroupDocs.Annotation for Java（最新版本）  
-**作者：** GroupDocs  
-
-## 相關教學
-
-- [使用 GroupDocs 註釋受保護 PDF Java – 完整指南](/annotation/java/advanced-features/groupdocs-annotation-java-password-documents/)
-- [使用 GroupDocs Annotation 註釋 PDF（Java）文件載入](/annotation/java/document-loading/)
-- [如何註釋 PDF – 從 URL 載入 PDF（Java）完整指南](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
+**最後更新:** 2026-11-20  
+**測試環境:** GroupDocs.Annotation for Java (latest release)  
+**作者:** GroupDocs
