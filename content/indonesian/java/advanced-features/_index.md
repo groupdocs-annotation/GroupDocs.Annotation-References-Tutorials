@@ -1,19 +1,27 @@
 ---
 categories:
 - Java Development
-date: '2026-06-26'
-description: Pelajari cara memuat PDF yang dilindungi kata sandi dengan GroupDocs.Annotation
-  Java, rotate PDFs, add custom fonts, extract PDF metadata, dan mengoptimalkan kinerja
-  untuk aplikasi perusahaan.
+date: '2026-11-20'
+description: Pelajari cara memuat PDF dengan GroupDocs.Annotation Java, termasuk file
+  yang dilindungi kata sandi, memutar halaman PDF, menambahkan font khusus, mengekstrak
+  metadata PDF, dan mengoptimalkan kinerja untuk aplikasi perusahaan.
 keywords:
-- load password protected pdf
-- add custom fonts pdf
-- extract pdf metadata java
-lastmod: '2026-06-26'
+- how to load pdf
+- rotate pdf pages
+- extract pdf metadata
+- save pdf with password
+- set pdf password
+lastmod: '2026-11-20'
 linktitle: Tutorial Fitur Lanjutan
+og_description: Pelajari cara memuat PDF dengan GroupDocs.Annotation Java, menangani
+  file yang dilindungi kata sandi, memutar halaman, menambahkan font khusus, dan mengekstrak
+  metadata untuk aplikasi perusahaan.
+og_image_alt: Guide to load password protected PDF with GroupDocs.Annotation Java,
+  rotate pages, add fonts, extract metadata
+og_title: Cara memuat PDF dengan GroupDocs.Annotation Java secara aman
 schemas:
 - author: GroupDocs
-  dateModified: '2026-06-26'
+  dateModified: '2026-11-20'
   description: Learn how to load password protected PDF with GroupDocs.Annotation
     Java, rotate PDFs, add custom fonts, extract PDF metadata, and optimize performance
     for enterprise applications.
@@ -66,34 +74,43 @@ schemas:
       date?
   type: FAQPage
 tags:
-- GroupDocs
-- Document Annotation
-- Advanced Features
-- Java Tutorial
-title: Muat PDF yang Dilindungi Kata Sandi dengan GroupDocs.Annotation Java
+- GroupDocs.Annotation
+- Java PDF annotation
+- password protected PDF
+- PDF rotation
+- custom fonts
+title: Cara memuat PDF dengan GroupDocs.Annotation Java secara aman
 type: docs
 url: /id/java/advanced-features/
 weight: 16
 ---
 
-# Muat PDF yang Dilindungi Kata Sandi dengan GroupDocs.Annotation Java – Fitur Lanjutan
+# Cara memuat PDF dengan GroupDocs.Annotation Java secara aman
 
-Siap untuk membuka potensi penuh anotasi dokumen dalam aplikasi Java Anda? Anda telah menguasai dasar-dasarnya, dan kini saatnya **memuat PDF yang dilindungi kata sandi** sambil memanfaatkan fitur lanjutan paling kuat yang ditawarkan GroupDocs.Annotation untuk Java. Panduan ini menunjukkan cara menangani dokumen terenkripsi, memutar PDF, menambahkan font khusus, mengelola memori secara efisien, dan mengekstrak metadata—semua dalam gaya percakapan langkah‑demi‑langkah yang memudahkan pemahaman konsep kompleks.
+Dalam panduan ini Anda akan belajar **cara memuat PDF** dengan GroupDocs.Annotation Java, termasuk file yang dilindungi kata sandi, memutar halaman, menambahkan font khusus, mengekstrak metadata, dan mengoptimalkan kinerja untuk aplikasi perusahaan. Anda akan mendapatkan panduan langkah‑demi‑langkah yang jelas yang menunjukkan mengapa kemampuan lanjutan ini penting dan bagaimana mengimplementasikannya secara efisien dalam proyek dunia nyata.
 
 ## Jawaban Cepat
 - **Bagaimana cara memuat PDF yang dilindungi kata sandi?** Gunakan `AnnotationConfig.setPassword("yourPassword")` sebelum membuka dokumen.  
 - **Apakah saya dapat memutar PDF di Java?** Ya—panggil `document.rotate(pageNumber, rotationAngle)` pada halaman mana pun.  
 - **Apa cara terbaik untuk mengelola memori untuk PDF besar?** Aktifkan lazy loading di `AnnotationConfig` dan buang objek `Annotation` setelah digunakan.  
 - **Bagaimana cara menambahkan font khusus ke anotasi?** Daftarkan font dengan `annotationConfig.addFont("/path/to/font.ttf")` sebelum membuat anotasi teks.  
-- **Apakah ekstraksi metadata didukung?** Tentu—gunakan `document.getDocumentInfo()` untuk membaca judul, penulis, tanggal pembuatan, dan lainnya.  
+- **Apakah ekstraksi metadata didukung?** Tentu—gunakan `document.getDocumentInfo()` untuk membaca judul, penulis, tanggal pembuatan, dan lainnya.
+
+## Cara memuat PDF dengan GroupDocs.Annotation Java?
+
+`AnnotationConfig` adalah objek konfigurasi yang menyimpan pengaturan seperti kata sandi dokumen dan font khusus. `AnnotationApi` menyediakan metode API untuk memuat dan memanipulasi dokumen. Anda memuat PDF dengan membuat `AnnotationConfig` dengan kata sandi, menginisialisasi `AnnotationApi`, dan memanggil `loadDocument` untuk mendapatkan objek `Document`. Ini mendekripsi file dan memberikan akses penuh untuk memberi anotasi, memutar halaman, menambahkan font, mengekstrak metadata, dan secara opsional menyimpan dengan kata sandi baru.
 
 ## Apa itu “memuat PDF yang dilindungi kata sandi”?
 
-Memuat PDF yang dilindungi kata sandi berarti menyediakan kata sandi yang benar sehingga perpustakaan dapat mendekripsi file, memungkinkan Anda membaca, menganotasi, dan menyimpannya tanpa mengungkap keamanan asli. Di GroupDocs.Annotation untuk Java Anda melakukan ini dengan mengonfigurasi `AnnotationConfig` dengan kata sandi sebelum membuka dokumen, memastikan alur kerja yang mulus dan aman yang melindungi konten sensitif sambil mengaktifkan kemampuan anotasi penuh.
+`Loading a password‑protected PDF` berarti memberikan kata sandi yang benar sehingga perpustakaan dapat mendekripsi file. Setelah didekripsi, dokumen menjadi objek `Document` biasa yang dapat Anda baca, beri anotasi, putar halaman, sematkan font khusus, dan ekstrak metadata. Pendekatan ini menjaga keamanan asli tetap utuh sambil memungkinkan kemampuan pengeditan penuh melalui GroupDocs.Annotation.
 
-## Mengapa Menggunakan Fitur Lanjutan seperti Rotasi, Font Kustom, dan Manajemen Memori?
+## Mengapa menggunakan fitur lanjutan seperti rotasi, font khusus, dan manajemen memori?
 
-Kemampuan lanjutan ini memungkinkan Anda menyesuaikan pengalaman anotasi sesuai standar profesional: memutar halaman memperbaiki masalah orientasi dari dokumen yang dipindai, font kustom menjaga anotasi tetap sesuai merek, dan teknik penghematan memori memungkinkan server Anda menangani ratusan halaman tanpa kehabisan RAM. Bersama-sama, mereka meningkatkan kepuasan pengguna, mengurangi waktu pemrosesan hingga 40 %, dan membantu Anda tetap mematuhi kebijakan keamanan.
+Fitur lanjutan memungkinkan Anda memperbaiki orientasi dokumen, mempertahankan konsistensi merek, dan menjaga penggunaan sumber daya tetap rendah. Rotasi memperbaiki halaman yang dipindai, font khusus memastikan anotasi sesuai dengan gaya perusahaan, dan lazy loading mengurangi konsumsi RAM hingga 70 % untuk PDF dengan ratusan halaman. Bersama-sama, mereka meningkatkan pengalaman pengguna, mengurangi waktu pemrosesan sekitar 40 %, dan membantu Anda tetap mematuhi kebijakan keamanan.
+
+## Apa yang membuat fitur ini “Lanjutan”?
+
+Kemampuan ini dianggap lanjutan karena melampaui penyorotan dan komentar dasar. Mereka memungkinkan Anda memanipulasi tata letak halaman, menyematkan font kepemilikan, dan mengoptimalkan memori dengan memuat hanya halaman yang diperlukan. GroupDocs.Annotation mendukung lebih dari **50 format input dan output** dan dapat memproses **PDF 500‑halaman** dalam waktu kurang dari **lima detik**, memberikan kecepatan dan keamanan tingkat perusahaan.
 
 ## Prasyarat
 - **GroupDocs.Annotation for Java** (versi terbaru disarankan)  
@@ -101,57 +118,47 @@ Kemampuan lanjutan ini memungkinkan Anda menyesuaikan pengalaman anotasi sesuai 
 - Pemahaman dasar tentang konsep inti GroupDocs.Annotation  
 - File PDF contoh, termasuk setidaknya satu dokumen yang dilindungi kata sandi  
 
-## Cara Memuat PDF yang Dilindungi Kata Sandi dengan GroupDocs.Annotation Java
+## Cara memuat PDF yang dilindungi kata sandi dengan GroupDocs.Annotation Java
 
-Memuat PDF yang dilindungi kata sandi dengan GroupDocs.Annotation untuk Java melibatkan tiga langkah jelas: mengonfigurasi mesin dengan kata sandi dokumen, membuka file melalui API, dan kemudian menerapkan fitur lanjutan yang Anda butuhkan sebelum menyimpan hasilnya. Pendekatan ini memastikan dekripsi yang aman, pemrosesan yang efisien, dan kontrol penuh atas perilaku anotasi sambil menjaga kode Anda tetap ringkas dan mudah dipelihara.
+Memuat PDF yang dilindungi kata sandi dengan GroupDocs.Annotation untuk Java melibatkan tiga langkah jelas: mengonfigurasi mesin dengan kata sandi dokumen, membuka file melalui API, dan kemudian menerapkan fitur lanjutan yang Anda butuhkan sebelum menyimpan hasilnya. Pendekatan ini memastikan dekripsi yang aman, pemrosesan yang efisien, dan kontrol penuh atas perilaku anotasi sambil menjaga kode Anda ringkas dan mudah dipelihara.
 
-### Langkah 1: Konfigurasikan Mesin Anotasi dengan Kata Sandi Dokumen  
-`AnnotationConfig` adalah objek konfigurasi pusat yang menyimpan pengaturan seperti kata sandi dokumen, font khusus, dan opsi lazy‑loading. Buat instance dan panggil `setPassword` dengan string yang tepat.
+### Langkah 1: Konfigurasikan Mesin Anotasi dengan Kata Sandi Dokumen
+`AnnotationConfig` adalah objek konfigurasi pusat yang menyimpan pengaturan seperti kata sandi dokumen, font khusus, dan opsi lazy‑loading. Buat sebuah instance dan panggil `setPassword` dengan string yang benar.
 
-### Langkah 2: Buka Dokumen dan Verifikasi Akses  
-`AnnotationApi` adalah titik masuk untuk semua operasi anotasi. Ketika Anda melewatkan `AnnotationConfig` yang telah dikonfigurasi ke `AnnotationApi.loadDocument`, perpustakaan akan mencoba mendekripsi file. Jika kata sandi cocok, Anda akan menerima objek `Document`; jika tidak, `AuthenticationException` akan dilempar.
+### Langkah 2: Buka Dokumen dan Verifikasi Akses
+`AnnotationApi` adalah titik masuk untuk semua operasi anotasi. Ketika Anda memberikan `AnnotationConfig` yang telah dikonfigurasi ke `AnnotationApi.loadDocument`, perpustakaan akan mencoba mendekripsi file. Jika kata sandi cocok, Anda akan menerima objek `Document`; jika tidak, `AuthenticationException` akan dilempar.
 
-### Langkah 3: Terapkan Fitur Lanjutan (Rotasi, Font Kustom, Metadata)  
-`Document` mewakili satu PDF dalam memori. Anda kini dapat memanggil metodenya:
-
+### Langkah 3: Terapkan Fitur Lanjutan (Rotasi, Font Khusus, Metadata)
+`Document` mewakili satu PDF dalam memori. Anda sekarang dapat memanggil metodenya:
 - **Rotasi halaman** – `document.rotate(pageNumber, rotationAngle)` memutar halaman apa pun sebesar 90°, 180°, atau 270°.  
-- **Tambahkan font kustom** – `annotationConfig.addFont("/path/to/font.ttf")` mendaftarkan font TrueType yang dapat direferensikan dalam gaya anotasi.  
+- **Menambahkan font khusus** – `annotationConfig.addFont("/path/to/font.ttf")` mendaftarkan font TrueType yang dapat direferensikan dalam gaya anotasi.  
 - **Ekstrak metadata** – `document.getDocumentInfo()` mengembalikan objek `DocumentInfo` yang berisi bidang seperti judul, penulis, tanggal pembuatan, dan metadata khusus.
 
-### Langkah 4: Simpan Dokumen yang Dianotasi dengan Aman  
-`SaveOptions` memungkinkan Anda menentukan pengaturan output seperti perlindungan kata sandi saat menyimpan dokumen. Setelah modifikasi, panggil `document.save("output.pdf", SaveOptions.create().setPassword("newPassword"))` untuk menyimpan perubahan sambil tetap melindungi file.
+### Langkah 4: Simpan Dokumen yang Dianotasi dengan Aman
+`SaveOptions` memungkinkan Anda menentukan pengaturan output seperti perlindungan kata sandi saat menyimpan dokumen. Setelah modifikasi, panggil `document.save("output.pdf", SaveOptions.create().setPassword("newPassword"))` untuk menyimpan perubahan sambil menjaga file tetap terlindungi.
 
-## Apa yang Membuat Fitur Ini “Lanjutan”?
+## Masalah umum dan solusi
+- **Masalah memuat font** – Verifikasi bahwa jalur file font benar, file dapat dibaca oleh aplikasi, dan lisensi font mengizinkan penyematan.  
+- **Kegagalan autentikasi kata sandi** – Pastikan kata sandi diberikan persis seperti yang disimpan (case‑sensitive) dan PDF tidak menggunakan algoritma enkripsi yang tidak didukung.  
+- **Bottleneck kinerja** – Aktifkan lazy loading, proses dokumen dalam rentang halaman yang lebih kecil, dan gunakan kembali instance `AnnotationConfig` bila memungkinkan.  
+- **Masalah memori** – Buang objek `Annotation` setelah digunakan dan pertimbangkan streaming PDF besar alih-alih memuat seluruhnya ke memori.
 
-Kemampuan ini melampaui penyorotan sederhana. Mereka memungkinkan Anda menyesuaikan gaya visual, memanipulasi tata letak halaman, mengoptimalkan kinerja untuk beban kerja berskala besar, dan menegakkan kontrol keamanan ketat—semua tanpa menulis kode parsing PDF khusus. GroupDocs.Annotation mendukung **lebih dari 50 format input dan output** dan dapat memproses **PDF 500 halaman** dalam waktu kurang dari **5 detik** pada server tipikal, memberikan kecepatan dan keandalan tingkat perusahaan.
+## Pertanyaan yang Sering Diajukan
 
-## Ikhtisar Fitur Lanjutan Utama
+**Q: Bisakah saya memberi anotasi pada PDF yang sekaligus dilindungi kata sandi dan dienkripsi dengan sertifikat digital?**  
+A: Ya. Berikan kata sandi (atau kredensial sertifikat) melalui `AnnotationConfig` sebelum membuka dokumen; perpustakaan akan menangani dekripsi secara otomatis.
 
-### Manipulasi Dokumen dan Keamanan  
-Aplikasi perusahaan sering perlu bekerja dengan PDF terenkripsi. GroupDocs.Annotation menyediakan penanganan kata sandi bawaan, memungkinkan Anda memuat, menganotasi, dan mengenkripsi kembali dokumen tanpa mengungkap konten mentah. Perpustakaan ini juga mendukung dekripsi sertifikat digital, memberi fleksibilitas untuk lingkungan yang sangat diatur.
+**Q: Bagaimana cara memutar halaman tertentu tanpa memengaruhi sisa dokumen?**  
+A: Gunakan metode `rotate(pageNumber, rotationAngle)` pada objek `Document`, dengan menentukan halaman target dan sudut yang diinginkan (90°, 180°, atau 270°).
 
-### Kustomisasi Visual dan Presentasi  
-Font khusus dan opsi styling memungkinkan Anda menyelaraskan anotasi dengan identitas merek perusahaan. Anda dapat menentukan keluarga font, ukuran, warna, dan opasitas, memastikan setiap komentar terlihat profesional dan konsisten di semua dokumen.
+**Q: Apa cara yang disarankan untuk menambahkan font khusus untuk teks anotasi?**  
+A: Daftarkan file font dengan `annotationConfig.addFont("/path/to/font.ttf")` sebelum membuat anotasi teks apa pun, lalu referensikan nama font dalam pengaturan gaya anotasi.
 
-### Optimasi Kinerja  
-Kontrol kualitas gambar dan lazy loading menjaga penggunaan memori tetap rendah. Ketika Anda mengaktifkan `annotationConfig.setLazyLoading(true)`, hanya halaman yang Anda interaksikan yang dimuat ke RAM, yang mengurangi konsumsi memori puncak hingga **70 %** untuk file beratus‑ratus halaman.
+**Q: Bagaimana saya dapat mengurangi penggunaan memori saat memproses PDF besar dengan banyak anotasi?**  
+A: Aktifkan lazy loading, buang objek `Annotation` setelah digunakan, dan pertimbangkan memproses dokumen dalam rentang halaman yang lebih kecil daripada memuat seluruh file sekaligus.
 
-### Penyaringan dan Manajemen Lanjutan  
-API menawarkan mekanisme penyaringan kuat: Anda dapat menanyakan anotasi berdasarkan tipe, penulis, tanggal pembuatan, atau tag khusus. Ini memudahkan pembuatan dasbor yang menampilkan hanya komentar paling relevan, meningkatkan produktivitas pengguna dalam proyek besar.
-
-## Kasus Penggunaan Umum untuk Fitur Lanjutan
-
-### Manajemen Dokumen Perusahaan  
-Organisasi besar sering harus menangani dokumen yang dilindungi kata sandi dengan persyaratan branding khusus. Fitur lanjutan memungkinkan alur kerja anotasi yang aman dan sesuai merek yang memenuhi standar kepatuhan ketat.
-
-### Aplikasi Hukum dan Kepatuhan  
-Firma hukum memerlukan penanganan dokumen yang presisi, termasuk rotasi exhibit yang dipindai dan font khusus untuk anotasi yang disetujui pengadilan. Penyaringan lanjutan membantu pengacara dengan cepat menemukan komentar berdasarkan pengacara atau tanggal.
-
-### Platform Pendidikan dan Pelatihan  
-Instruktur dapat menambahkan font institusi dan memutar halaman untuk memperbaiki kesalahan pemindaian, sementara lazy loading memastikan platform tetap responsif untuk ribuan mahasiswa.
-
-### Sistem Manajemen Konten  
-Integrasi CMS mendapat manfaat dari pemrosesan cepat dan hemat memori, memungkinkan editor menganotasi PDF langsung dalam UI web tanpa memperlambat situs.
+**Q: Apakah memungkinkan mengekstrak metadata PDF seperti penulis, judul, dan tanggal pembuatan?**  
+A: Ya. Panggil `document.getDocumentInfo()` untuk mengambil objek `DocumentInfo` yang berisi bidang metadata standar.
 
 ## Tutorial yang Tersedia
 
@@ -163,34 +170,9 @@ Tutorial ini mencakup fitur keamanan penting yang Anda perlukan untuk aplikasi t
 
 ## Tips Optimasi Kinerja
 
-- **Manajemen Memori** – Font kustom dan optimasi kualitas gambar dapat meningkatkan penggunaan memori. Pantau konsumsi memori aplikasi Anda, terutama saat memproses dokumen besar atau menangani banyak operasi bersamaan.  
-- **Efisiensi Pemrosesan** – Fitur seperti rotasi dokumen dan optimasi gambar melibatkan beban komputasi tambahan. Terapkan strategi caching untuk dokumen yang sering diakses dan gunakan pemrosesan batch untuk operasi banyak dokumen.  
-- **Pemuat Sumber Daya** – Muat font kustom dan sumber daya eksternal secara efisien. Gunakan lazy loading bila memungkinkan dan cache sumber daya yang digunakan kembali di berbagai dokumen.  
-
-## Memecahkan Masalah Umum
-
-### Masalah Memuat Font  
-Jika font khusus tidak ditampilkan dengan benar, pastikan file font dapat diakses dan memiliki lisensi yang tepat untuk aplikasi Anda. Periksa jalur file dan pastikan font dimuat sebelum proses dokumen dimulai.
-
-### Kegagalan Otentikasi Kata Sandi  
-Saat bekerja dengan dokumen yang dilindungi kata sandi, pastikan Anda menangani enkoding dengan benar dan kata sandi dikirim secara aman melalui aplikasi Anda. Uji dengan berbagai tingkat perlindungan untuk menjamin kompatibilitas.
-
-### Bottleneck Kinerja  
-Jika Anda mengalami pemrosesan lambat dengan fitur lanjutan, pertimbangkan menerapkan pemuatan progresif untuk dokumen besar dan mengoptimalkan pengaturan kualitas gambar sesuai kebutuhan spesifik Anda.
-
-### Masalah Memori  
-Fitur lanjutan dapat memakan banyak memori. Terapkan pola pembuangan yang tepat untuk sumber daya dokumen dan pertimbangkan memproses batch dokumen besar dalam potongan lebih kecil untuk menghindari kelebihan memori.
-
-## Praktik Terbaik untuk Implementasi Fitur Lanjutan
-
-- **Keamanan Utama** – Jangan pernah menyimpan kata sandi dalam teks biasa dan selalu gunakan metode transmisi aman untuk data otentikasi.  
-- **Pengalaman Pengguna** – Fitur lanjutan harus meningkatkan, bukan mempersulit, pengalaman pengguna. Terapkan pengungkapan progresif untuk fitur kompleks dan berikan umpan balik yang jelas selama operasi pemrosesan.  
-- **Penanganan Kesalahan** – Penanganan kesalahan yang kuat sangat penting dengan fitur lanjutan. Terapkan penanganan pengecualian yang komprehensif dan sediakan pesan kesalahan yang bermakna untuk pemecahan masalah.  
-- **Strategi Pengujian** – Buat rangkaian tes menyeluruh yang mencakup berbagai tipe dokumen, tingkat enkripsi, dan kasus tepi untuk memastikan keandalan.  
-
-## Langkah Selanjutnya
-
-Setelah Anda mempelajari cara **memuat PDF yang dilindungi kata sandi** dan mengeksplorasi rotasi, font khusus, manajemen memori, serta ekstraksi metadata, Anda siap membangun aplikasi pemrosesan dokumen canggih yang memenuhi persyaratan perusahaan yang kompleks. Mulailah dengan tutorial dokumen yang dilindungi kata sandi, lalu bereksperimen dengan kemampuan lanjutan lainnya yang sesuai dengan kebutuhan proyek Anda.
+- **Manajemen memori** – Font khusus dan optimasi kualitas gambar dapat meningkatkan penggunaan memori. Pantau konsumsi memori aplikasi Anda, terutama saat memproses dokumen besar atau menangani banyak operasi bersamaan.  
+- **Efisiensi pemrosesan** – Fitur seperti rotasi dokumen dan optimasi gambar melibatkan beban komputasi tambahan. Terapkan strategi caching untuk dokumen yang sering diakses dan gunakan pemrosesan batch untuk operasi banyak dokumen.  
+- **Pemuat sumber daya** – Muat font khusus dan sumber daya eksternal secara efisien. Gunakan lazy loading bila memungkinkan dan cache sumber daya yang digunakan kembali di berbagai dokumen.
 
 ## Sumber Daya Tambahan
 
@@ -201,29 +183,14 @@ Setelah Anda mempelajari cara **memuat PDF yang dilindungi kata sandi** dan meng
 - [Dukungan Gratis](https://forum.groupdocs.com/)
 - [Lisensi Sementara](https://purchase.groupdocs.com/temporary-license/)
 
-## Pertanyaan yang Sering Diajukan
-
-**Q: Dapatkah saya menganotasi PDF yang sekaligus dilindungi kata sandi dan dienkripsi dengan sertifikat digital?**  
-A: Ya. Berikan kata sandi (atau kredensial sertifikat) melalui `AnnotationConfig` sebelum membuka dokumen; perpustakaan akan menangani dekripsi secara otomatis.
-
-**Q: Bagaimana cara memutar halaman tertentu tanpa memengaruhi sisa dokumen?**  
-A: Gunakan metode `rotate(pageNumber, rotationAngle)` pada objek `Document`, dengan menentukan halaman target dan sudut yang diinginkan (90°, 180°, atau 270°).
-
-**Q: Apa cara yang direkomendasikan untuk menambahkan font khusus untuk teks anotasi?**  
-A: Daftarkan file font dengan `annotationConfig.addFont("/path/to/font.ttf")` sebelum membuat anotasi teks apa pun, lalu referensikan nama font dalam pengaturan gaya anotasi.
-
-**Q: Bagaimana saya dapat mengurangi penggunaan memori saat memproses PDF besar dengan banyak anotasi?**  
-A: Aktifkan lazy loading, buang objek `Annotation` setelah digunakan, dan pertimbangkan memproses dokumen dalam rentang halaman yang lebih kecil daripada memuat seluruh file sekaligus.
-
-**Q: Apakah memungkinkan mengekstrak metadata PDF seperti penulis, judul, dan tanggal pembuatan?**  
-A: Ya. Panggil `document.getDocumentInfo()` untuk mengambil objek `DocumentInfo` yang berisi bidang metadata standar.
-
-**Terakhir Diperbarui:** 2026-06-26  
-**Diuji Dengan:** GroupDocs.Annotation for Java (rilis terbaru)  
-**Penulis:** GroupDocs  
-
 ## Tutorial Terkait
 
-- [anotasi pdf terlindungi java – Panduan Lengkap dengan GroupDocs](/annotation/java/advanced-features/groupdocs-annotation-java-password-documents/)
-- [Anotasi PDF Java dengan GroupDocs Annotation Memuat Dokumen](/annotation/java/document-loading/)
+- [menganotasi pdf terlindungi java – Panduan Lengkap dengan GroupDocs](/annotation/java/advanced-features/groupdocs-annotation-java-password-documents/)
+- [Menganotasi PDF Java dengan GroupDocs Annotation Memuat Dokumen](/annotation/java/document-loading/)
 - [Cara Menganotasi PDF – Memuat PDF dari URL Java Panduan Lengkap](/annotation/java/annotation-management/annotate-pdfs-from-urls-groupdocs-java/)
+
+---
+
+**Terakhir Diperbarui:** 2026-11-20  
+**Diuji Dengan:** GroupDocs.Annotation untuk Java (rilis terbaru)  
+**Penulis:** GroupDocs
